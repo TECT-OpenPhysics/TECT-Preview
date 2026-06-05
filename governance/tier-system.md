@@ -76,7 +76,7 @@ Each claim lists ≥1 grade; ESTIMATOR additionally must state
 |---|---|
 | ANALYTIC | proof by derivation |
 | EXACT | closed-form arithmetic / exact identity |
-| EXECUTED | script run with persisted artefact (`runs/<claim-id>/…`) |
+| EXECUTED | script run with persisted artefact (`claims/<ID>/runs/…`) |
 | ESTIMATOR | estimator result; error-bound status mandatory |
 | INHERITED | inherited from another claim; breaks with its source |
 | CONDITIONAL | holds under stated assumptions |

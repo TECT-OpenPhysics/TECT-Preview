@@ -23,8 +23,9 @@ Changelog:
         same date/version columns as documents (naming §5 uniform-visibility).
   1.1.1 (2026-06-05) skip git-ignored build/ area (PDF build artefacts are not catalogued).
   1.1.2 (2026-06-05) two-date parsing extended to .pdf (note PDFs now live beside sources).
+  1.1.3 (2026-06-05) run artefacts relocated into the claim package (claims/<ID>/runs/); top-level runs/ branch removed.
 """
-__version__ = "1.1.2"
+__version__ = "1.1.3"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-06-05"
 
@@ -71,6 +72,8 @@ def classify(rel: str) -> str:
         return "claim-card"
     if p.startswith("claims/") and "/notes/" in p:
         return "proof-note"
+    if p.startswith("claims/") and "/runs/" in p:
+        return "run-artefact"
     if p.startswith("claims/"):
         return "registry" if p.endswith("GATES.md") else "claim-card"
     if p.startswith("theory/") and "synthesis" in p.lower():
@@ -81,8 +84,6 @@ def classify(rel: str) -> str:
         return "archive-script"
     if p.startswith("archive/legacy/artefacts/"):
         return "archive-artefact"
-    if p.startswith("runs/"):
-        return "run-artefact"
     if p.startswith("codes/"):
         return "code"
     if p.startswith("verification/"):
@@ -119,11 +120,6 @@ def claim_links():
             for ev in card.get("legacy_evidence", []):
                 if isinstance(ev, str) and ev.startswith("archive/"):
                     links.setdefault(ev, set()).add(cid)
-    for d in (REPO / "runs").iterdir() if (REPO / "runs").exists() else []:
-        if d.is_dir():
-            for f in d.rglob("*"):
-                if f.is_file():
-                    links.setdefault(str(f.relative_to(REPO)).replace("\\", "/"), set()).add(d.name)
     return links
 
 
@@ -158,7 +154,7 @@ def scan():
                 first = hf.group(1)
             if hc:
                 cur = hc.group(1)
-        if rel.startswith("runs/") and f.suffix == ".json" and first is None:
+        if "/runs/" in rel and f.suffix == ".json" and first is None:
             try:
                 j = json.loads(data.decode("utf-8"))
                 d = j.get("date") or j.get("generated")

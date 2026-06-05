@@ -10,7 +10,7 @@ Proposition A holds as a conditional theorem within the hypothesis pair $\{\math
 
 Theorem-grade only within the named hypothesis pair. Not a whole-Reading-H statement: the full selection claim stays at T5 pending STEP-5B.
 
-**Notes**: M1 re-validated 2026-06-05: 166/166 asserts pass; STALE-ARTEFACT finding on archived Math437 JSON (pre-repair verdict string, numerics identical) recorded in runs/B2-PROPA-HLAYER/260605-migration-revalidation/summary.json. H-LAYER and H-A0 transcribed verbatim into claims/GATES.md from Math437 v1.2. Migration-clean: no legacy: pointers remain.
+**Notes**: M1 re-validated 2026-06-05: 166/166 asserts pass; STALE-ARTEFACT finding on archived Math437 JSON (pre-repair verdict string, numerics identical) recorded in claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/summary.json. H-LAYER and H-A0 transcribed verbatim into claims/GATES.md from Math437 v1.2. Migration-clean: no legacy: pointers remain.
 
 ## Dependencies and hypotheses
 
@@ -42,7 +42,7 @@ A counterexample within the H-layer class violating Proposition A, or failure of
 
 Status: **AVAILABLE**. Command: `cd archive/legacy/scripts && python Math437_step5_class_closure.py && python Math440_audit_secondwave_recheck.py`.
 
-Expected: claims 91/91 then claims 75/75 (both exit 0); numerics match archived artefacts within rel_tol 1e-9 (note: archived Math437 JSON carries a pre-repair verdict string; canonical fresh artefact in runs/B2-PROPA-HLAYER/260605-migration-revalidation/)
+Expected: claims 91/91 then claims 75/75 (both exit 0); numerics match archived artefacts within rel_tol 1e-9 (note: archived Math437 JSON carries a pre-repair verdict string; canonical fresh artefact in claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/)
 
 ## No-overclaim
 

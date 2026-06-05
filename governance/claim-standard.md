@@ -18,7 +18,7 @@ claims/<ID>/
 ```
 
 The claim folder is the full verification package in one place: card +
-machine state + proof notes. Run artefacts stay in `runs/<ID>/` (size), shared
+machine state + proof notes. Run artefacts stay in `claims/<ID>/runs/` (size), shared
 code in `codes/` (reuse), migrated originals in `archive/legacy/` (immutable);
 all are linked from the card.
 

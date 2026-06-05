@@ -10,7 +10,7 @@ The production kernel $K(q)=\mu^2+Y(q^2-q_0^2)^2$ with Brazovskii shell mass $r_
 
 CLOSED@CANONICAL-NOTE-SET (2026-06 legacy snapshot). A convention-integrity closure, not a physics theorem.
 
-**Notes**: M1 re-validated 2026-06-05: 111/111 self-test asserts pass in a fresh environment; archived artefacts reproduced exactly (runs/A1-KERNEL-CONV/260605-migration-revalidation/). Migration-clean: no legacy: pointers remain.
+**Notes**: M1 re-validated 2026-06-05: 111/111 self-test asserts pass in a fresh environment; archived artefacts reproduced exactly (claims/A1-KERNEL-CONV/runs/260605-migration-revalidation/). Migration-clean: no legacy: pointers remain.
 
 ## Dependencies and hypotheses
 

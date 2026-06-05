@@ -5,6 +5,382 @@ not pillar counts.
 
 ---
 
+## [B5-AddA-v1.2] Verdict-#11 repairs + H-KBAL lift theorem (unconditional amplitudes) — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #11 archived**: AddA v1.1 = PASS as repaired
+  T4+ support; official basis = c_R = 4 sqrt(14) route; three stale spots
+  flagged: (i) section-1 28/13 + "astronomically weak" remnant,
+  (ii) section-5 sanity check still using 28/13 and the withdrawn 7.9e16
+  ratio, (iii) footer "ANALYTIC (both routes)" overstatement — ALL
+  REPAIRED (evidence grade now split ANALYTIC / PROVISIONAL-CITED).
+- **NEW: H-KBAL LIFT THEOREM** — for ARBITRARY positive amplitudes:
+  sum_{t!=0} w^2 <= 64 sqrt(7) lam^2 I^2 sqrt(n) log^2(2n) + O(lam^2 I^2)
+  (amplitude-dyadic classes; per-class operator interpolation; bilinear
+  energy E(A,B) <= sqrt(E(A)E(B)) machine-verified; Minkowski; tail
+  absorption). **kappa-balance is no longer load-bearing** — it affects
+  constants, not the architecture. Measured worst unbalanced ratio 0.03
+  (powerlaw/exp/two-scale) vs theorem ceiling 2929: amplitude conspiracies
+  cannot beat sqrt(n) polylog scaling; unbalanced profiles in fact reduce
+  the ratio.
+- Ledger threshold UNCHANGED (1.59e5, sharp-constant balanced route);
+  lift-constant sharpening registered as follow-up.
+- AddA note v1.2 re-issue (FORM-CHECK PASS, Overfull 0); script v1.10.0
+  (170/170). **B5 = T4+ . Residual = {H-ADM} + DR-2 + constant
+  follow-ups. STEP-5B remains OPEN.**
+
+## [B5-AddA-v1.1] Verdict-#10 repairs: exponent 20/9 (catch #7); 7.9e16 withdrawn; dichotomy program registered — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #10 archived**: AddA v1.0 = PARTIAL PASS.
+  c_R = 4 sqrt(14) ACCEPTED at theorem grade (official ledger threshold
+  n <= 1.59e5 at the anchor under H-KBAL). The 28/13 incidence exponent
+  REJECTED — **operator-caught arithmetic slip (verify-loop catch #7)**:
+  the correct pair-cap/AS crossover is r1 = (NL/2)^{2/9}, exponent 20/9.
+- **Repairs (operator choices A + C)**: exponent fixed to 20/9 with a
+  numerical dyadic self-check (ratio 1.1 at N = 4096); the 7.9e16 reach
+  WITHDRAWN; repaired provisional reach 2.2e10 (conservative c = 30),
+  excluded from ledger thresholds until the Aronov-Sharir constant is
+  pinned; verified closure condition restated with the sqrt-n route
+  (mode separation >~ 5e-3).
+- **NEW dichotomy program (the better-method search)**: DR-1 (no small
+  doubling on circles — proved in substance by the fiber rigidity of the
+  universal single-circle theorem) + DR-2 (sphere Freiman-type structure
+  dichotomy — OPEN, multi-turn designated attack) => would force the
+  sharp O(N^2 polylog) unconditionally, bypassing open incidence
+  conjectures.
+- AddA note v1.1 re-issue (FORM-CHECK PASS, Overfull 0); script v1.9.1
+  (167/167). **B5 = T4+ (theorem-supported) per the verdict-#10 ledger.
+  STEP-5B remains OPEN.**
+
+## [B5-AddA] Rectangle-constant closure: operator-derived c_R = 4 sqrt(14); incidence route 28/13; conditional closure — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #9 archived**: v2.0 = PASS as major strengthened
+  T4. The operator SUPPLIED the theorem-grade derivation c_R = 4 sqrt(14)
+  (sum p^3 <= 7 N^3 via triple count + thin class; Cauchy-Schwarz
+  interpolation) and the Route-A/Route-B closure analysis — archived with
+  attribution in the AddA note (CLAUDE.md section-4 discipline).
+- **Operator derivation VERIFIED**: sum p^3 <= 7N^3 and the interpolation
+  hold on all configs; region n <= 1.59e5 at the anchor (operator quoted
+  1.58e5 — reproduced).
+- **NEW INCIDENCE ROUTE (this session)**: stereographic projection maps
+  carriers to plane circles EXACTLY (residuals 1e-30); planar
+  Aronov-Sharir-type rich-circle bounds + the pair cap give
+  sum_C p_C^2 = O(N^{28/13} polylog) — exponent 2.154 < 5/2 — pushing the
+  theorem-grade reach to **7.9e16 modes at the anchor** (eleven orders
+  beyond the sqrt-n route).
+- **CONDITIONAL CLOSURE registered**: STEP-5B holds under named
+  {H-KBAL (kappa-balance), H-ADM (n <= n_adm)} for ANY n_adm < 7.9e16 —
+  operator packing form: mode separation >~ 1e-8 suffices. Sharp O(n^2)
+  conjecture pre-registered (measured growth exponents 2.04/2.06/2.08 on
+  rand/ring/coax; falsification gate: exponent >= 2.3).
+- New AddA note rectangle-constant-closure-260605-v1.0 (.tex.txt + PDF,
+  FORM-CHECK PASS, Overfull 0); script v1.9.0 (166/166). LaTeX catch:
+  raw math in the banner title broke text-mode \title — reworded.
+- **Tier: T4 with TIER PROPOSAL submitted (T5, or T6 CONDITIONAL on
+  {H-KBAL, H-ADM}) — decision is the operator's. STEP-5B: residual is now
+  CONDITIONALITY ONLY.**
+
+## [B5-v2.0] MAJOR: rectangle reformulation; triple-count R=O(n^{5/2}); coaxial H*-repair; region ~2.2e6 — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #8 archived**: v1.9 = PASS as major strengthened
+  T4; two audit requests: (i) prove height coincidences cannot create
+  hidden carrier multiplicity, (ii) amplitude-weighted coaxial bound.
+- **Coaxial lemma REPAIRED (H*-explicit)**: the v1.9 uniqueness step now
+  carries the height-sum multiplicity H*(c). AP-HEIGHT AUDIT with FORCED
+  coincidences (m=3/5/7 stacks): off-axis carriers stay at 4 ordered pairs
+  (H*=1) — the in-plane reflection condition separates cluster pairs;
+  K decreases with m (9.25/8.75/8.54); random-amplitude stack K=8.31.
+- **RECTANGLE REFORMULATION THEOREM**: off-diagonal carrier energy =
+  weighted count of rectangles inscribed in sphere circles (two antipodal
+  pairs = two diameters); diagonal <= 8I^2 unconditional; split exact to
+  1e-15.
+- **TRIPLE-COUNT THEOREM**: three points determine at most one circle =>
+  sum_C k_C^3 = O(n^3); dyadic optimization => **R = O(n^{5/2})
+  UNCONDITIONAL** (extremal profile forced to richness <= sqrt(n)).
+- **sqrt(n) corollary**: kappa-balanced K(n) <= 8 + c_R sqrt(n) (c_R
+  measured ~4) => closed region upgraded THREE ORDERS OF MAGNITUDE:
+  ~2.2e6 / 5.3e4 / 2.8e3 modes at I = 4e-4 / 1e-3 / 2e-3 (K-budget 5972
+  at the anchor).
+- Note v2.0 MAJOR re-issue (FORM-CHECK PASS, Overfull 0); script v1.8.0
+  (155/155). **Tier stays T4 (T5-candidacy flagged). STEP-5B remains
+  OPEN** on the extreme-n corner + first-principles c_R.
+
+## [B5-v1.9] Antipodal-carrier partition; nu*=mu_C; coaxial-class closure; G1'''-AE sharpened to p_0 — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #7 archived**: v1.8 = PASS as major strengthened
+  T4; flagged (i) footer no-overclaim still carrying 'anomalous-block
+  sub-check is open' (conflicts with the v1.8 discharge) and (ii) the
+  section-6 (alpha) stale 'residual is exactly G1-prime thin-spread' —
+  both REPAIRED in v1.9.
+- **Antipodal-carrier partition theorem**: every ordered pair (u,v),
+  u+v != 0, is an antipodal pair of exactly ONE circle (centre (u+v)/2);
+  the pair set partitions; Phi_s = Psi_{C_s}; l1/l2 reconstructions
+  machine-exact (1e-12/1e-15).
+- **Identity nu* = mu_C**: the transversality parameter equals the
+  max-points-on-a-circle parameter (shifted-shell overlaps ARE circles) —
+  the Lemma-E route and the circle route are governed by one parameter.
+- **Coaxial-class closure theorem**: off-axis carriers of coaxial unions
+  hold <= 2 unordered antipodal pairs (reflected-circle intersection <= 2;
+  coincidence forces on-axis centre); equal-radius +/-z mirror carrier
+  sits at s = 0 (excluded); K <= 30 absolute, measured 9.40/10.73.
+  **The pre-registered suspected-hard class is CLOSED.**
+- **Honest falsification record**: H-GEN(2) (naive thin-carrier hypothesis
+  for arbitrary multi-circle unions) is FALSE — 10 ordered pairs observed
+  on a non-cluster carrier of ring8+ring10+rand6; K stays < 32 throughout.
+  **G1'''-AE sharpened to: bound the carrier-richness p_0(P) class-wide.**
+- Verify-loop catch #6: first mirror-pair test config degenerate
+  (duplicate points: ring(pi-0.7) == -ring(0.7) at n=10); rebuilt with
+  phase offset + nondegeneracy assert.
+- Note v1.9 re-issue (FORM-CHECK PASS, Overfull 0); script v1.7.1
+  (145/145). **Tier stays T4 (T5-candidacy flagged). STEP-5B remains
+  OPEN** on the p_0 corner.
+
+## [B5-v1.8] Position-space structure; universal single-circle theorem (K=14 sharp); G1'''-AE = discrete sphere L^4 — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #6 archived**: v1.7 = PASS as a major
+  strengthened T4; flagged the Gershgorin-led section-4 statement —
+  section 4 REWRITTEN around the structural floor (Gershgorin demoted to
+  superseded auxiliary route, retained as route history/cross-check).
+- **Position-space structure**: P = multiplication by F(x) = phi_n(x), so
+  W = lam(F^2 - 2I) is a multiplication operator and D + W >= D_0 holds
+  POINTWISE. **Nambu/anomalous objection DISCHARGED**: real scalar order
+  parameter => single real symmetric Hessian (Math427 K-hat); no
+  independent pairing block exists at this scope.
+- **Parseval reformulation**: sum_{t!=0} w^2 = lam^2(<F^4> - 4I^2) —
+  G1'''-AE IS the discrete sphere L^4-extension problem (Stein-Tomas
+  exponent q = 4 at d = 3; curvature = circle-fiber rigidity). MC-verified
+  0.5%/7.5%.
+- **UNIVERSAL SINGLE-CIRCLE THEOREM (sharp)**: any amplitudes, any n, any
+  height on one circle: sum_{t!=0} w^2 <= 14 lam^2 I_c^2, by fiber
+  enumeration (top-top/bottom-bottom <= 2 ordered pairs -> 4 I_c^2;
+  cross <= 4 -> 8 I_c^2; two axial -> 2 I_c^2). Equal-amplitude rings
+  attain 14 - 18/n: constant SHARP. The equal-amplitude caveat of the
+  ring family is REMOVED; all single-circle patterns are closed.
+- **Coaxial falsification probe** (pre-registered): K = 9.9/10.4/10.7 at
+  2x8/16/32 — bounded; supports absolute-K, NOT a proof.
+- Note v1.8 re-issue (FORM-CHECK PASS, Overfull 0); script v1.6.0
+  (132/132). **Tier stays T4 (T5-candidacy flagged). STEP-5B remains OPEN**
+  on the multi-circle corner (G1'''-AE).
+
+## [B5-v1.7] P^2-representation theorem: structural spectral floor closes G1''-M4; N_max x46 — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #5 archived**: B5 v1.6 = PASS as strengthened T4;
+  STEP-5B not closed; Reading-H selection unchanged (T5). Two flagged stale
+  sentences (section 1 "two named gaps"; section 5 "thin-spread remaining")
+  repaired in the v1.7 re-issue.
+- **Structural theorem (the key)**: $W = \lambda'(P^2 - 2I\,\mathrm{Id})$,
+  $P = \sum_u A_u S_u = P^\dagger$ — the matched transfer weights are
+  exactly the off-diagonal coefficients of $\lambda' P^2$ and the $t=0$
+  coefficient $2\lambda' I$ is exactly the dressing $\hat r - r_R$ (the
+  Lemma-C' l1 identity was this structure in disguise). Hence
+  $D + W = D_0 + \lambda' P^2 \ge D_0 > 0$ UNCONDITIONALLY and
+  $X \ge -a_0$, $a_0 = 2\lambda' I/\hat r \approx 0.021$ at the anchor —
+  n-free, pattern-free. **Gershgorin obsolete; G1''-M4 CLOSED BY STRUCTURE.**
+- Machine verification (script v1.5.0, 126/126): P^2 identity exact
+  (mismatch 0 over all transfers; t=0 = 2I to 1e-12); spectral floor holds
+  on every adversarial finite section (rings near-sharp -0.0123 vs -0.0207;
+  composites; near-coincident pairs; 75-dim stressed section) — sections can
+  only falsify the floor, and none does.
+- **Enlarged closed region**: N_max(I) = 12133/3017/746/115/27 at
+  I = 1e-4..2e-3 (vs 62/31/16/6/3 Gershgorin: x46 at the production anchor).
+- **Residual reduced to a single gap**: G1'''-AE — class-wide weighted
+  sphere additive-energy bound sum w^2 <= K (lam I)^2 on the corner
+  {n > N_max(I), non-transversal, non-ring}; G-DEC demoted to sub-route.
+  Anomalous-block scope sub-check registered (devil's-advocate delta).
+- Note v1.7 re-issue (FORM-CHECK PASS, Overfull 0); **tier stays T4 with
+  T5-candidacy flagged for operator. STEP-5B remains OPEN.**
+
+## [B5-v1.6] STEP-5B closing sweep: G2 bookkeeping closed; glue l2 theorem; row route refuted (registered negative result) — 2026-06-05
+
+- **Operator directive**: "prove in order through to closing" (row -> glue -> G2).
+- **Lemma F** (collar heavy-mass bound, provable bilinear constant
+  $2\lambda'I(\kappa+\nu_S^{\ne})$): the on-pattern rows $k=-u$ genuinely see
+  $2n$ on-shell partners; their MASS is n-free by the diagonal/off-diagonal
+  centre split.
+- **Registered NEGATIVE result**: the row/collar-ladder route FAILS $a<1$ at
+  production $I$ with the provable constant ($a_{\rm prov}=2.20/4.68$ at
+  $n=12/24$). Verify-loop catch #4 (collar functional included the $c=0$
+  centre) and catch #5 (the exploratory $\sqrt{\nu}$ ladder constant was NOT
+  a theorem — caught by the devil's-advocate pass BEFORE registration; with
+  the rigorous constant the certificate fails). G1''(row) reduced to the
+  $\mathrm{tr}\,X^4$ additive-energy ($E_4$) moment problem = designated
+  attack **G1''-M4**.
+- **G2 CLOSED at second-cumulant bookkeeping level**: Lemma H (sextic
+  $\varepsilon_4 = 60vnI/\lambda' \le 0.16$ on the closed region), Lemma I
+  ($\sigma$-channel completeness, exact to $10^{-12}$), Lemma J (two-shell
+  denominator floor $\times 1.70$).
+- **Composite-glue l2 theorem**: $\nu_{\rm cross} \le 4$ (distinct circles);
+  certificate validated (measured 9.27 vs certificate 34.23). Residual
+  G-DEC = decomposition existence.
+- Note v1.6 re-issue (FORM-CHECK PASS, Overfull 0, PDF beside source);
+  script `beyond_layer_gershgorin_bound.py` v1.4.4 (111/111 asserts);
+  artefact refreshed. **Tier stays T4. STEP-5B remains OPEN** — residual =
+  G1''-M4 + G-DEC; any tier action requires operator sign-off.
+
+## [Claim-Package] Run artefacts moved into claim packages; banner-loss caught and restored — 2026-06-05
+
+- **Operator design decision**: `runs/` relocated into the claim package —
+  `claims/<ID>/runs/<YYMMDD>-<descriptive-tag>/` — completing the package
+  principle (card + status + notes + runs in one folder; code stays shared in
+  `codes/`). The original size rationale for a separate top-level `runs/` is
+  void since large binaries are git-ignored wherever they live. 16 artefact
+  files moved (A1/B1/B2/B5); 25 reference files swept; policies
+  (claim-standard §1, verification-standard §4, naming §6), catalog v1.1.3,
+  producing script v1.3.1, .gitignore patterns updated; top-level `runs/`
+  retired.
+- **Three path-consistency note re-issues** (current versions cite artefact
+  paths): B1 record → v1.1, B2 record → v1.4, B5 reduction → v1.5; superseded
+  versions keep the OLD paths (historical record) with forward pointers.
+- **Verify-loop catch #3 (process)**: the B5 re-issue's anchor assert exposed
+  that the v1.2–v1.4 revision-history entries had been silently LOST by
+  assert-less banner edits in earlier re-issues; the v1.5 banner restores the
+  full cumulative history from the CHANGELOG record. Lesson recorded: banner
+  edits in re-issues must use asserted anchors (no silent .replace).
+- No tier changes; linter PASS; all generated surfaces in sync.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [STEP-5B/Ring-Theorem] Exact ring-family closed form; G1''(ring) canonical-family CLOSED — 2026-06-05
+
+- **Third operator verdict archived**: B5 v1.3 = "PASS as strengthened T4";
+  footer staleness flagged (54/54, pre-Lemma-E residual) — repaired in v1.4.
+- **Ring-family proposition PROVEN** [B5-BEYOND-LAYER-BOUND v1.4]: for the
+  canonical equal-amplitude two-ring pattern (regular n-gon at height z plus
+  antipodal image), the five-orbit decomposition of the transfer set gives
+  the EXACT closed form **c_ring(n) = 14 - 18/n (n even) / 8 - 6/n (n odd)**,
+  both < 14, any height (theta-independent orbit combinatorics) — verified
+  to 1e-10 at n = 7..64 (script v1.3.0, 94/94 asserts). Structure: even n
+  carries exactly two heavy axial transfers t = (0,0,±2z) with w = lam I
+  (the n-fold collapse of antipodal same-ring pairs); odd n has NO axial
+  resonance (c < 8). The earlier hand count missed the even-n antipodal
+  index-shift collapse (e_{k+n/2} = -e_k => cross transfers carry 4A^2) —
+  found by exact orbit enumeration.
+- **Residual now**: G1''(row) (heavy-transfer row count for transversal
+  patterns) + G1''(glue) (general decomposition; subsumes ring
+  amplitude/tilt generality) + G2 (vertex bookkeeping). STEP-5B stays OPEN;
+  B5 stays T4; no tier action on B1/B2.
+- Note v1.4 re-issued (FORM-CHECK PASS, Overfull 0, PDF beside source;
+  v1.3 superseded, kept).
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [STEP-5B/Additive-Energy] Lemma E n-free split; transversal corollary; batch-1 signed — 2026-06-05
+
+- **Second operator verdict archived**: "B2-PROPA-HLAYER migration v1.3 =
+  PASS" — batch-1 ledger rows SIGNED; "B5 v1.2 = PASS as T4 reduction";
+  G1' attack directed.
+- **Lemma E (sphere additive energy, rigorous)** [B5-BEYOND-LAYER-BOUND
+  v1.3]: writing w_t/lam = (f*f)(t), AM-GM over energy quadruples
+  x+y = x'+y' with the diagonal/off-diagonal split gives
+  **sum_t |w_t|^2 <= 4 lam^2 I^2 (phi + nu*)**, phi = n sum A^4/I^2
+  (participation, = 1 for equal spread), nu* = max nonzero discrete-translate
+  overlap of Qhat. n enters ONLY through nu*.
+- **Transversal n-FREE corollary**: for nu* <= 4, phi <= 1 (random shells
+  measure nu* = 2, c_meas = 7.5–7.75 <= 12): margin ratios **131x/16x/2x**
+  at I = 4e-4/1e-3/2e-3 — modulo the G1''(row) heavy-transfer row count.
+- **Ring/degenerate family separated** (nu* ~ n there via the vertical
+  antipodal displacement): c(n) measured 11.75 -> 13.72 saturating over
+  n = 8..64, <= 16; designated route = rotation-orbit decomposition
+  (G1'b proposition).
+- **Verify loop catch #2**: the v1.2.0 circle count included the c = 0
+  diagonal (nu = 2n everywhere); failed transversal asserts exposed it;
+  corrected in v1.2.1 (69/69). Template gained the corollary theorem env
+  (one-place extension per the standard-LaTeX rule).
+- Residual now: G1''(row) + G1'b(ring) + G1''(glue) + G2. STEP-5B stays
+  OPEN; B5 stays T4; no tier action on B1/B2. Note v1.3 re-issued
+  (FORM-CHECK PASS; Overfull 1 -> 0 via display split; PDF beside source).
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [Operator-Review] B1 migration PASS; B5 confirmed T4; consistency re-issue v1.2 — 2026-06-05
+
+- **Operator review verdict archived**: "B1-RH-ENUM migration = PASS"
+  (evidence chain migration-clean and reproducible; 167/167) — migration
+  batch-2 ledger rows signed; "B5 / STEP-5B Gershgorin reduction = T4 valid
+  reduction, not closure" — tier T4 confirmed; "remaining blockers sharply
+  reduced to G1' + G2"; Reading-H selection stays T5 CLOSED@ESTIMATOR-GRADE.
+- **Two documentation defects flagged by the review, repaired in the v1.2
+  consistency re-issue** [B5-BEYOND-LAYER-BOUND]: (i) section 1 still said
+  "registered at T3" — now "registered at T4 because Lemmas A/B/C'/D and the
+  closed-region theorem are now derived"; (ii) section 5 still carried the
+  v1.0 sentence "calibrated boxes are stated regions, not derived caps" —
+  now "the v1.0 boxes are DERIVED within the closed-region theorem; the
+  non-derived residual is the thin-spread regime n > n_max(I), recorded as
+  G1'". No mathematical change; v1.1 superseded, kept; FORM-CHECK PASS,
+  Overfull 0, PDF re-issued beside source.
+- Next mathematical target (operator-confirmed): **G1'** — the n-free l2
+  theorem sum_t |w_t|^2 <= c (lam I)^2 (ring evidence c ~ 13.5) plus a
+  second-moment spectral bound; then **G2** vertex-bookkeeping completeness
+  (O(w_4) sextic transfers, two-shell cross transfers, sigma-inhomogeneity
+  channel).
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [STEP-5B/Closed-Region] Matching lemmas + derived n_max(I) region; B5 promoted T3->T4 — 2026-06-05
+
+- **G1 attack landed** [B5-BEYOND-LAYER-BOUND v1.1]: Lemma C' (transfer
+  matching — |w_t| <= 2 lam I, multiplicity <= 2n, exact ordered-pair l1
+  identity sum|w_t| <= lam(4S^2-2I), equality on rings to 1e-12) and Lemma D
+  (l2 mass <= 8n (lam I)^2) are rigorous and pattern-independent.
+  **Closed-region theorem DERIVED**: STEP-5B holds for every admissible
+  single-shell pattern with n <= n_max(I) = **62/31/16/6/3** at
+  I = 1e-4/2e-4/4e-4/1e-3/2e-3 (a <= 0.75); the v1.0 calibrated boxes are
+  superseded by derivation (12-mode box now a theorem, margin ratio >= 13).
+- **Residual narrowed to G1'** (thin-spread, n > n_max(I)) **+ G2**: measured
+  l2 mass is n-UNIFORM on adversarial rings (12.9–13.5 (lam I)^2 at
+  n = 16/24/32 vs the 8n bound — 19x slack and growing) — recorded as the
+  designated-attack signal: an n-free l2 theorem (c ~ 14) + a second-moment
+  spectral bound would close G1'.
+- **Verification loop caught an author error**: the v1.1.0 l1 assert with
+  constant 2S^2 FAILED on every config; ring measurements matched the
+  corrected identity exactly — fixed in script v1.1.1 (54/54 asserts) and
+  recorded as DA exhibit alpha' in the note and card.
+- **B5 promoted T3 -> T4** (claim-standard §5: DA >= 3 with verdicts +
+  quantitative sanity in card and note). STEP-5B gate stays OPEN; no tier
+  action on B1/B2. Note v1.1 re-issued (FORM-CHECK PASS, Overfull 0, PDF
+  beside source; v1.0 superseded, kept).
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [STEP-5B/Reduction] Pattern-generic Gershgorin reduction registered at T3 — 2026-06-05
+
+- **New claim B5-BEYOND-LAYER-BOUND (T3 proof sketch)** [serving gate STEP-5B;
+  soft-supports B1-RH-ENUM, B2-PROPA-HLAYER]: two rigorous pattern-independent
+  lemmas — (A) Gershgorin–Schur row bound ||X|| ≤ W_l1(P)·g(r̂) with the
+  two-term envelope g, (B) second-order log-det envelope
+  |δF_off| ≤ tr X²/(4V(1−a)) with the isotropic trace identity
+  tr X²/V = Σ_t |w_t|² J(|t|) — reduce STEP-5B to the explicit bound
+  |δF_off(P)| ≤ W_l1² J_max/(4(1−a)) plus exactly two named gaps:
+  **G1** (class-wide weighted-ℓ¹ cap over the threat region) and
+  **G2** (vertex bookkeeping completeness: sextic transfers, two-shell cross
+  terms, σ-inhomogeneity channel).
+- **Numerical certification at the anchor** (`codes/vacuum/
+  beyond_layer_gershgorin_bound.py` v1.0.1, 20/20 asserts; artefact under
+  `runs/B5-BEYOND-LAYER-BOUND/260605-gershgorin-reduction/`): Math434-audit
+  calibration reproduced (row terms to ≤4e-6; ||X|| ≤ 3.1e-3); J(|t|) table
+  with grid-refinement drift <6e-6 and analytic shell-estimate bracket;
+  calibrated boxes n_res=12: margin ratio **18.2×** at I=4e-4, 2.2× at
+  I=1e-3; LAM second order = margin/64,000.
+- **Honest scope**: STEP-5B stays OPEN (gate annotated, no closure claimed);
+  no tier action on B1/B2; calibrated boxes are stated regions, not derived
+  caps — G1 is the genuine remaining mathematics.
+- Note (FORM-CHECK PASS; Overfull 7→0 in-session via tabularx/url fixes; PDF
+  beside source): `claims/B5-BEYOND-LAYER-BOUND/notes/
+  beyond-layer-gershgorin-reduction-260605-v1.0.tex.txt`.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
 ## [Migration-2] Enumerated-reading chain migrated; B1-RH-ENUM migration-clean (167/167) — 2026-06-05
 
 - **Migration batch 2** (plan phase M1) [B1-RH-ENUM; supports H-LAYER of

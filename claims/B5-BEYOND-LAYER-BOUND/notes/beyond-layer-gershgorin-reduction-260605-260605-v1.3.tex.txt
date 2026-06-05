@@ -1,0 +1,366 @@
+% SUPERSEDED by beyond-layer-gershgorin-reduction-260605-260605-v1.4.tex.txt (ring-family closed form + operator-flagged footer fix)
+% =============================================================================
+% Title: Pattern-generic Gershgorin reduction of the beyond-layer bound (gate STEP-5B)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; supporting: B1-RH-ENUM, B2-PROPA-HLAYER)
+% Version: v1.3 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: theorem note, T4 (four rigorous lemmas + derived closed-region theorem; residual gaps G1-prime, G2 named)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue (T3): Lemmas A/B + reduction; calibrated boxes.
+%   v1.1 (2026-06-05) G1 attack: Lemma C-prime (exact ordered-pair l1 identity
+%        and the matching transfer cap w_t <= 2 lambda' I), Lemma D (l2 mass
+%        <= (max w)(sum w)), and the CLOSED-REGION THEOREM with the derived
+%        n_max(I) table (62/31/16/6/3 at I = 1e-4..2e-3); the calibrated boxes
+%        of v1.0 are superseded by derivation. Residual renamed G1-prime
+%        (thin-spread patterns n > n_max(I)) with the n-uniform l2 ring
+%        evidence (~13.5 (lambda' I)^2, n-saturating) recorded as the
+%        designated-attack signal. The v1.1.0 script run CAUGHT an author
+%        l1-constant error (2 vs 4): the ring measurement matched the
+%        corrected identity exactly; recorded in section 6. Tier T3 -> T4.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Gate STEP-5B requires a \emph{class-wide} bound: for every admissible
+condensate pattern (not merely the five enumerated readings), the
+beyond-layer correction --- the off-diagonal Bloch channel discarded by the
+isotropic Gaussian--Hartree layer of hypothesis H-LAYER --- must not overcome
+the layer margins of Proposition~A (weakest interval margin
+$+0.00432$, the band figure of Math437 v1.2 after the Math440 precision fix).
+This note (i) proves two pattern-independent lemmas (Gershgorin--Schur row
+bound; second-order log-det envelope with an isotropic trace identity),
+(ii) states the resulting \emph{precise reduction} of STEP-5B to two named
+gaps, and (iii) certifies all entering constants numerically at the
+production anchor, reproducing the Math434-audit calibration. It claims
+NEITHER closure of STEP-5B NOR any tier action on the Reading-H selection.
+The result is registered at T4 because Lemmas A/B/C$'$/D and the
+closed-region theorem are now derived (the T3 $\to$ T4 action of this
+re-issue is recorded in the footer); the class-wide statement remains open.
+
+\section*{2. Setting}
+
+Work at the corrected-convention production anchor ($\mu^2 = 0.005$,
+$r_{\mathrm{braz}} = K(q_0) = \mu^2$; claim A1-KERNEL-CONV), with the
+dressed isotropic diagonal
+\[
+D(k) \;=\; \hat r + C\,(k^2 - q_0^2)^2,
+\qquad
+\hat r \;=\; r_R + 2\lambda' I ,
+\qquad
+\lambda' \;=\; 3u + 30 v M ,
+\]
+where $r_R = 0.3045257$, $M = M(\hat r)$ self-consistently
+($M_R = 0.109414$ at $I = 0$), $u = -0.86$, $v = +3.24$, $C = 1$,
+$q_0 = 0.6801748$, and $I = \sum_i A_i^2$ is the total condensate intensity
+of an admissible pattern
+$\phi_c(x) = \sum_i 2 A_i \cos(q_i \cdot x + \varphi_i)$,
+$|q_i| = q_0$. Note $\lambda' = 8.0551 > 0$ at the anchor: the pattern
+Hartree term \emph{raises} the diagonal. The beyond-layer channel is the
+off-diagonal part $W$ of the Bloch Hessian in the plane-wave basis: entries
+$w_t$ at momentum transfers $t \in T(Q) = \{\pm q_i \pm q_j\} \setminus \{0\}$
+with quartic-vertex weights
+\[
+w_t \;=\; \lambda' \!\!\sum_{(i,j):\,\pm q_i \pm q_j = t}\!\! A_i A_j
+\]
+(sextic $5vA^4$-class transfers enter at $O(w_4)$; gap G2). Define
+$X = D^{-1/2} W D^{-1/2}$ and the weighted transfer norm
+$W_{\ell^1}(P) = \sum_{t \neq 0} |w_t|$.
+
+\section*{3. Two pattern-independent lemmas}
+
+\begin{lemma}[Gershgorin--Schur row bound]
+For the symmetric kernel $X$ above, with $D_{\min} = \hat r$,
+\[
+\|X\| \;\le\; \sup_k \sum_{t \neq 0} \frac{|w_t|}{\sqrt{D(k)\,D(k+t)}}
+\;\le\; W_{\ell^1}(P)\; g(\hat r),
+\qquad
+g(\hat r) \;=\; \frac{1}{\hat r} \;+\;
+\frac{1}{\sqrt{\hat r\,(\hat r + 64 C q_0^4)}} .
+\]
+\end{lemma}
+
+\begin{proof}
+The first inequality is the Schur test with unit weights (equivalently the
+Gershgorin row bound for the symmetric matrix truncation of the Bloch
+problem; entries decay quartically in the band index, so the truncation
+limit is harmless). For the second: each transfer term is maximised when
+both legs are on-shell, giving $1/\hat r$; retaining additionally the
+degenerate-endpoint term $1/\sqrt{\hat r(\hat r + 64Cq_0^4)}$ of the
+Math434 LAM geometry makes $g$ an upper envelope for every $|t| \le 2q_0$
+uniformly in the row, since any further leg sits at distance
+$\ge 64Cq_0^4$ above the gap in the quartic well. Summing over transfers
+yields the claim.
+\end{proof}
+
+\begin{lemma}[Second-order log-det envelope; isotropic trace identity]
+If $\|X\| \le a < 1$, the beyond-layer free-energy correction per unit
+volume obeys
+\[
+\bigl|\delta F_{\mathrm{off}}\bigr|
+= \tfrac1{2V}\bigl|\operatorname{tr}\bigl(\ln(\mathbf 1 + X) - X\bigr)\bigr|
+\;\le\; \frac{\operatorname{tr} X^2 / V}{4\,(1-a)},
+\qquad
+\frac{\operatorname{tr} X^2}{V}
+= \sum_{t \neq 0} |w_t|^2\, J(|t|),
+\]
+\[
+J(|t|) \;=\; \int \!\frac{d^3k}{(2\pi)^3}\,
+\frac{1}{D(k)\,D(k+t)} ,
+\]
+which depends on the pattern only through the moduli $|t|$ (isotropy of
+$D$).
+\end{lemma}
+
+\begin{proof}
+Eigenvalues $x_i$ of $X$ lie in $[-a, a]$; the scalar Taylor remainder
+gives $|\ln(1+x) - x| \le x^2 / (2(1-a))$ on that interval; summing over
+the spectrum and dividing by $2V$ gives the first display (the $\tfrac12$
+from the Gaussian free energy). The trace identity is direct:
+$\operatorname{tr} X^2 = \sum_k \sum_t w_t^2 / (D(k) D(k{+}t))
+\to V \sum_t w_t^2 J(|t|)$, and $J$ depends only on $|t|$ because $D$ is a
+function of $|k|$ alone. The first off-diagonal order
+$\operatorname{tr} X$ vanishes (no $t = 0$ entry in $W$).
+\end{proof}
+
+\begin{lemma}[Transfer matching --- exact $\ell^1$ identity and caps]
+For any admissible single-shell pattern ($Q = \{q_1,\dots,q_n\}$ distinct,
+amplitudes $A_i > 0$, $I = \sum_i A_i^2$, $S = \sum_i A_i$):
+\begin{itemize}
+\item[(i)] for every fixed transfer $t \neq 0$ and fixed sign pair, the pairs
+$(i,j)$ with $\pm q_i \pm q_j = t$ form a partial matching ($q_j$ is uniquely
+determined by $q_i$ and $t$); hence the multiplicity obeys $m_t \le 2n$ and,
+by Cauchy--Schwarz along the matching, $|w_t| \le 2\lambda' I$;
+\item[(ii)] $\sum_{t \neq 0} |w_t| \;\le\; \lambda'\,(4S^2 - 2I)
+\;\le\; \lambda'\,(4nI - 2I)$, with equality in the first inequality iff no
+two ordered sign-pairs produce coinciding transfers (verified to machine
+precision on planar rings $n = 8..32$).
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+(i) Uniqueness of $q_j = \pm(t \mp q_i)$ on the shell gives the matching;
+the weight along a matching is $\sum A_i A_{\sigma(i)} \le
+\sqrt{\sum A_i^2}\sqrt{\sum A_{\sigma(i)}^2} \le I$ per sign pair, and two
+sign pairs can land on the same $t$. (ii) Summing $A_iA_j$ over all ordered
+pairs and the four sign combinations counts $4S^2$, minus the excluded
+$t = 0$ diagonal contributions $2I$; Cauchy--Schwarz gives $S^2 \le nI$.
+\end{proof}
+
+\begin{lemma}[$\ell^2$ mass]
+$\displaystyle \sum_{t\neq0} |w_t|^2 \;\le\; \bigl(\max_t |w_t|\bigr)
+\sum_{t\neq0} |w_t| \;\le\; 2\lambda' I \cdot \lambda'(4S^2 - 2I)
+\;\le\; 8n\,(\lambda' I)^2 .$
+\end{lemma}
+
+\begin{theorem}[Closed region of STEP-5B --- derived]
+Let $a(n,I) = \lambda'(4nI - 2I)\, g(\hat r(I))$. For every admissible
+single-shell pattern with mode count $n$ and intensity $I$ such that
+$a(n,I) \le a_0 = 0.75$ and
+\[
+\delta(n,I) \;=\;
+\frac{2\lambda' I \cdot \lambda'(4nI - 2I)\; J_{\max}}{2\,(1 - a(n,I))}
+\;<\; 0.00432 ,
+\]
+the beyond-layer correction cannot overcome the weakest layer margin.
+At the production anchor the region contains all patterns with
+\[
+n \le n_{\max}(I):\qquad
+n_{\max}(10^{-4}) = 62,\quad
+n_{\max}(2{\times}10^{-4}) = 31,\quad
+n_{\max}(4{\times}10^{-4}) = 16,
+\]
+\[
+n_{\max}(10^{-3}) = 6,\qquad
+n_{\max}(2{\times}10^{-3}) = 3 .
+\]
+In particular every configuration in the v1.0 calibrated boxes is now
+DERIVED ($n = 12 \le 16$ at $I = 4{\times}10^{-4}$, margin ratio $\ge 13$).
+\end{theorem}
+
+\begin{proof}
+Combine Lemmas A--D: $\|X\| \le a(n,I)$ by Lemma A with the Lemma-C$'$
+$\ell^1$ cap; Lemma B with the Lemma-D $\ell^2$ mass gives
+$|\delta F_{\rm off}| \le \delta(n,I)$; the displayed inequality is then
+checked pointwise on the integer grid up to the stated $n_{\max}$ (script
+v1.1.1, 54/54 asserts; monotonicity of $n_{\max}$ in $I$ asserted).
+\end{proof}
+
+\begin{lemma}[Sphere additive energy --- diagonal/off-diagonal split]
+Let $\hat Q = \{\pm q_i\}$ with amplitudes $a_{\pm q_i} = A_i$, participation
+factor $\varphi(P) = n \sum_i A_i^4 / I^2 \in [1, n]$ ($\varphi = 1$ for equal
+spread), and discrete nonzero-translate overlap
+$\nu^*(P) = \max_{c \neq 0} |\hat Q \cap (\hat Q + c)|$ over realized
+displacements $c = x - y'$, $x, y' \in \hat Q$. Then
+\[
+\sum_{t \neq 0} |w_t|^2
+\;\le\;
+4\,\lambda'^2 I^2 \bigl(\varphi(P) + \nu^*(P)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Write $w_t/\lambda' = (f{*}f)(t)$ with $f = \sum_{u \in \hat Q} a_u \delta_u$.
+Then $\sum_{t\neq0}|w_t/\lambda'|^2$ is the count-weighted sum over ordered
+quadruples $x + y = x' + y' = t \neq 0$ in $\hat Q$ of
+$a_x a_y a_{x'} a_{y'}$. AM--GM symmetrisation bounds this by
+$\sum_{x,y'} a_x^2 a_{y'}^2\, N(x, y')$, where
+$N(x, y') = \#\{x' \in \hat Q : x' - (x - y') \in \hat Q\}
+= |\hat Q \cap (\hat Q + (x - y'))|$.
+The diagonal pairs $x = y'$ give $N = |\hat Q| = 2n$ against
+$\sum_x a_x^4 = 2\sum_i A_i^4$, i.e.\ $4 \lambda'^2 I^2 \varphi$.
+The off-diagonal pairs have $N \le \nu^*$ against
+$\sum_{x \neq y'} a_x^2 a_{y'}^2 \le (2I)^2$.
+\end{proof}
+
+\begin{corollary}[Transversal $n$-free bound]
+For every admissible single-shell pattern with $\nu^* \le 4$ and
+$\varphi \le 1{+}\epsilon$ (in particular generic/transversal configurations:
+measured $\nu^* = 2$ on random shells $n = 12, 24$), the beyond-layer
+envelope is $n$-FREE: at the anchor, with $c_E = 4(\varphi + \nu^*) \le 20$,
+\[
+|\delta F_{\rm off}|
+\le
+\frac{c_E\,(\lambda' I)^2 J_{\max}}{2\,(1 - a_E)}
+\;<\; 0.00432 ,
+\]
+with margin ratios $131\times / 16\times / 2\times$ at
+$I = 4{\times}10^{-4} / 10^{-3} / 2{\times}10^{-3}$, where the spectral
+control $a_E$ uses the E-route operating envelope (at most
+$\nu^* + 2$ heavy transfers per row, each of weight $\le 2\lambda' I$) ---
+the row-count statement is the remaining G1$''$ item for this class.
+\end{corollary}
+
+\section*{4. The reduction (precise form of STEP-5B)}
+
+\begin{proposition}[Pattern-generic reduction]
+Let $P$ be any admissible pattern with
+$a(P) := W_{\ell^1}(P)\, g(\hat r(I)) < 1$. Then
+\[
+\bigl|\delta F_{\mathrm{off}}(P)\bigr|
+\;\le\;
+\frac{W_{\ell^1}(P)^2 \; J_{\max}}{4\,\bigl(1 - a(P)\bigr)},
+\qquad
+J_{\max} := \max_{0 < |t| \le 2q_0} J(|t|).
+\]
+Consequently STEP-5B holds on the region
+$\{P : \text{RHS} < \text{interval margin}\}$, and full closure of the gate
+reduces to exactly two gaps:
+\begin{itemize}
+\item \textbf{G1$'$ residual --- restructured by Lemma E}:
+(a) \emph{transversal class} ($\nu^* \le 4$, $\varphi \lesssim 1$): the
+$n$-free $\ell^2$ bound is DERIVED (Lemma E + corollary); what remains for
+full rigour here is only the row-count statement behind $a_E$ (at most
+$\nu^* + 2$ heavy transfers per row) --- item G1$''$(row).
+(b) \emph{ring/degenerate family} ($\nu^* \sim n$ via the vertical antipodal
+displacement): the sup-$\nu^*$ route is intrinsically loose there, but the
+family is one-parameter and explicitly computable --- measured
+$c(n) = 11.75 \to 13.72$ saturating over $n = 8..64$, $\le 16$; the
+designated route is the rotation-orbit decomposition of the transfer set
+(each orbit contributes $O(1)$), to be written as the ring-family
+proposition.
+(c) \emph{decomposition glue} (G1$''$): split a general pattern into a
+$\nu$-transversal part plus circle-clustered parts and control the bilinear
+cross terms of $W$; together with (a) and (b) this closes G1$'$.
+\item \textbf{G2 (vertex bookkeeping completeness)}: sextic
+$O(w_4)$-class transfers, two-shell cross transfers, and the
+$\sigma(x)$-inhomogeneity channel (Math429 geometry) folded into the same
+envelope.
+\end{itemize}
+\end{proposition}
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.2.1;
+69/69 self-test asserts PASS; artefact
+\url{runs/B5-BEYOND-LAYER-BOUND/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+anchor $r_R$, $M_R$, $\lambda'$, $64Cq_0^4$ & $0.3045257$, $0.109414$, $8.0551$, $13.698$ & match locked constants \\
+Math434 calibration ($A = 0.01$): $\hat r'$, row terms & $0.30613$; $2.624{\times}10^{-3} + 3.879{\times}10^{-4}$ & reproduces $2.633{\times}10^{-3} + 3.893{\times}10^{-4}$; $\|X\| \le 3.1{\times}10^{-3}$ \\
+$J(|t|)$, $|t|/q_0 \in \{0.5, 1, \sqrt2, \sqrt3, 2\}$ & $0.273, 0.218, 0.169, 0.133, 0.104$ & grid-refinement drift $< 6{\times}10^{-6}$; shell estimate $0.161$ brackets $J_{\max}$ \\
+calibrated box $n_{\mathrm{res}}{=}12$, $I = 4{\times}10^{-4}$ & $a = 0.143$, $\delta \le 2.38{\times}10^{-4}$ & margin ratio $18.2\times$ \\
+calibrated box $n_{\mathrm{res}}{=}12$, $I = 10^{-3}$ & $a = 0.347$, $\delta \le 1.95{\times}10^{-3}$ & margin ratio $2.2\times$ \\
+LAM second order & $\delta_{\mathrm{LAM}} = 6.7{\times}10^{-8}$ & margin$/64{,}000$ \\
+matching lemmas on rings/random shells & exact $\ell^1$ identity; $m_t \le 2n$; $w_t \le 2\lambda' I$ & equality on rings to $10^{-12}$ \\
+$n$-uniform $\ell^2$ evidence (rings 16--32) & $\sum w_t^2 = 12.9$--$13.5\,(\lambda' I)^2$ & vs $8n$ bound: $19\times$ slack at $n{=}32$ \\
+derived $n_{\max}(I)$ & $62/31/16/6/3$ at $I = 10^{-4}..2{\times}10^{-3}$ & $a \le 0.75$; boxes of v1.0 now derived \\
+Lemma E split (rings/random, $n \le 64$) & $c_{\rm meas} \le 4(\varphi + \nu^*)$ everywhere & random: $\nu^* = 2$, $c_{\rm meas} = 7.5$--$7.75 \le 12$ \\
+ring family $c(n)$ & $11.75 \to 13.72$ ($n = 8..64$), $\le 16$ & saturating; orbit/family route \\
+transversal $n$-free corollary & ratios $131\times / 16\times / 2\times$ at $I = 4{\times}10^{-4} / 10^{-3} / 2{\times}10^{-3}$ & $\nu^* \le 4$, $\varphi \le 1$; $n$-FREE \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the LAM row terms agree with the
+Math434-audit figures to $\le 4{\times}10^{-6}$; $J$ obeys the analytic
+shell estimate $q_0/(8\pi \hat r^{3/2}\sqrt{C}) = 0.161$ within a factor
+$1.7$; dimensions: $[w] = [\hat r]$, $[J] = [\hat r]^{-2}\,[k]^3$
+consistent with $\delta F$ per unit volume.
+
+The original v1.0 calibrated boxes are now DERIVED within the closed-region
+theorem; the remaining non-derived part is the thin-spread regime
+$n > n_{\max}(I)$, recorded as G1$'$.
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$W_{\ell^1}$ grows without bound in $n$, so
+nothing class-wide is proven.''} VALID-with-mitigation, now sharpened: the
+closed-region theorem converts the $\ell^1$ route into an explicit derived
+region $n \le n_{\max}(I)$; the residual is exactly G1$'$ (thin-spread),
+for which the $n$-uniform $\ell^2$ ring evidence identifies the designated
+attack. The class-wide statement remains open, hence T4 and not T5.
+\item[($\alpha'$)] \emph{``The author's own constants may be wrong.''}
+Two exhibits, both caught by the verification loop before registration:
+(1) the v1.1.0 $\ell^1$ assert with the wrong constant $2S^2$ FAILED on
+every configuration; ring measurements matched the corrected identity
+$\lambda'(4S^2 - 2I)$ to $10^{-12}$. (2) the v1.2.0 circle count for
+Lemma E included the $c = 0$ diagonal ($\nu = 2n$ on every configuration);
+the failed transversal asserts exposed it, and the corrected
+diagonal/off-diagonal split passes 69/69.
+\item[($\beta$)] \emph{``$J(|t|)$ is numerical only.''} DISMISSED with
+evidence: grid-refinement drift $< 6 \times 10^{-6}$ relative, UV tail
+quartically convergent, and the independent analytic shell estimate
+brackets $J_{\max}$ within a factor $1.7$.
+\item[($\gamma$)] \emph{``The comparison uses the global minimum margin,
+but Proposition~A's floors are interval-wise.''} VALID-with-mitigation:
+using the weakest interval margin $+0.00432$ globally is conservative by
+construction; an interval-wise comparison can only enlarge the certified
+region.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND (serving gate STEP-5B)
+Precise statement:       Lemmas A/B/C'/D (rigorous) + the derived
+                         closed-region theorem: STEP-5B holds for all
+                         single-shell patterns with n <= n_max(I)
+                         (62/31/16/6/3 at I = 1e-4..2e-3); residual =
+                         G1' (thin-spread) + G2 (vertex bookkeeping);
+                         54/54 asserts at the production anchor.
+Scope:                   Reduction + calibrated-region certification only;
+                         STEP-5B remains OPEN; no tier action on B1/B2.
+Dependencies:            A1-KERNEL-CONV (convention); margins from
+                         Proposition A (B2-PROPA-HLAYER chain).
+Evidence grade:          ANALYTIC (lemmas) + EXECUTED (constants)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 54/54 PASS; result.json under
+                         runs/B5-BEYOND-LAYER-BOUND/260605-gershgorin-reduction/
+Falsification gate:      An admissible pattern inside a certified box whose
+                         exact off-diagonal correction exceeds the Lemma-B
+                         envelope, or any pattern undercutting the +0.00432
+                         band margin at the anchor.
+Tier before / after:     T3 / T4
+No-overclaim statement:  This note does NOT close STEP-5B and does NOT
+                         promote Reading-H; class-wide validity awaits
+                         G1' + G2; the n-free l2 constant is EVIDENCE only.
+Next required action:    G1' -- prove the n-free l2 theorem
+                         (sum_t w_t^2 <= c (lam I)^2, ring evidence c~14)
+                         + a second-moment spectral bound replacing l1.
+\end{verbatim}

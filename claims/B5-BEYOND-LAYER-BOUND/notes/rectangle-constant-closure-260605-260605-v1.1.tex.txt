@@ -1,0 +1,296 @@
+% SUPERSEDED by rectangle-constant-closure-260605-260605-v1.2.tex.txt
+% =============================================================================
+% Title: Rectangle-constant closure: the theorem-grade rectangle prefactor, the incidence route, and the admissibility closure condition (gate STEP-5B)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; companion AddA note to the Gershgorin-reduction chain)
+% Version: v1.1 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: theorem note, T4-supporting (c_R derived = OFFICIAL tier basis; incidence exponent REPAIRED to 20/9, provisional; dichotomy program registered)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue. Archives the OPERATOR-SUPPLIED derivation
+%        (review verdict #9) of the rigorous rectangle prefactor
+%        c_R = 4 sqrt(14), upgrading the v2.0 calibrated sqrt(n) corollary to
+%        THEOREM grade (region n <~ 1.6e5 at the anchor). Adds the NEW
+%        INCIDENCE ROUTE: stereographic projection sends carriers to plane
+%        circles (machine-verified exact), and planar rich-circle bounds
+%        [Aronov--Sharir-type] with the pair cap give
+%        sum_C p_C^2 = O(N^{28/13} polylog) — exponent 2.154 < 5/2 — pushing
+%        the theorem-grade region to ~8e16 modes at the anchor. Measured
+%        growth exponents on all worst-known families are ~ n^2 (sharp
+%        O(n^2) conjecture, pre-registered). Registers the closure condition:
+%        STEP-5B closes for all kappa-balanced admissible patterns under the
+%        named hypothesis H-ADM (mode-count cutoff), now astronomically weak.
+%   v1.1 (2026-06-05) OPERATOR REVIEW VERDICT #10 archived (AddA v1.0 =
+%        PARTIAL PASS: the c_R = 4 sqrt(14) derivation ACCEPTED at theorem
+%        grade; the 28/13 incidence exponent REJECTED — operator-caught
+%        arithmetic slip, verify-loop catch #7). REPAIRS per the verdict:
+%        (i) the correct pair-cap/AS crossover is r1 = (NL/2)^{2/9}, giving
+%        sum_C p_C^2 = O(N^{20/9} polylog) (~2.222); dyadic self-check at
+%        N = 4096 confirms O(1) ratio; (ii) the 7.9e16 reach is WITHDRAWN;
+%        repaired reach ~2.2e10 modes at the anchor (conservative c = 30),
+%        marked PROVISIONAL until the Aronov--Sharir constant is pinned;
+%        (iii) the OFFICIAL ledger/tier basis is the operator-derived
+%        sqrt-n route only (region 1.59e5 at the anchor); the incidence
+%        route is demoted to supporting-candidate status (operator choice
+%        A + C). NEW: section 3b registers the STRUCTURE-VS-RANDOMNESS
+%        dichotomy program (Balog--Szemeredi--Gowers + no-small-doubling on
+%        circles via the fiber rigidity) as the designated multi-turn route
+%        to the sharp O(N^2 polylog) bound.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The v2.0 main-chain note left two items open: the rectangle prefactor $c_R$
+(measured, not derived) and the extreme-$n$ rich-carrier corner. This
+companion note (i) archives the OPERATOR-SUPPLIED derivation (review
+verdict \#9) that closes $c_R$ at theorem grade, (ii) contributes a NEW
+incidence-geometric route that lowers the unconditional exponent from
+$n^{5/2}$ to $n^{28/13}\,\mathrm{polylog}$, and (iii) reduces full STEP-5B
+closure to one named, quantitatively explicit hypothesis (H-ADM) plus the
+$\kappa$-balance scope (H-KBAL). It claims NEITHER unconditional closure
+NOR any tier action; tier decisions remain with the operator.
+
+\section*{2. Theorem-grade rectangle constant (operator derivation, verdict \#9)}
+
+\begin{proposition}[Rigorous $\sqrt n$ energy bound; operator-supplied]
+Let $N = 2n = |\hat Q|$ and let $p_C$ be the ordered antipodal pair count
+of carrier $C$. Three distinct points lie on at most one circle, so
+\[
+\sum_{C:\,k_C \ge 3} p_C^3 \le \sum_{C:\,k_C\ge3} k_C^3
+\le 27\binom{N}{3} < \tfrac{9}{2}N^3,
+\qquad
+\sum_{C:\,p_C \le 2} p_C^3 \le 4\sum_C p_C \le 4N^2,
+\]
+hence $\sum_C p_C^3 \le 7N^3$ conservatively. With $\sum_C p_C \le N^2$
+and Cauchy--Schwarz interpolation,
+\[
+\sum_C p_C^2
+\le \Bigl(\sum_C p_C\Bigr)^{1/2}\Bigl(\sum_C p_C^3\Bigr)^{1/2}
+\le \sqrt7\, N^{5/2}.
+\]
+For $\kappa$-balanced patterns ($A_{\max}^2 \le \kappa^2 I/n = 2\kappa^2
+I/N$), $\Psi_C \le p_C A_{\max}^2$ gives
+\[
+\sum_{t\ne0} w_t^2 \;\le\; \lambda'^2 I^2
+\Bigl(8 + 4\sqrt{14}\,\kappa^4 \sqrt n\Bigr),
+\qquad
+c_R^{\rm rigorous} = 4\sqrt{14} \simeq 14.97 .
+\]
+The v2.0 calibrated corollary is hereby THEOREM-grade; the certified
+region at the anchor budget ($K_{\rm budget} = 5972$ at
+$I = 4\times10^{-4}$) is $n \lesssim 1.59\times10^{5}$
+($3.77\times10^3$ at $10^{-3}$; $2.02\times10^2$ at $2\times10^{-3}$).
+Machine checks: $\sum p^3 \le 7N^3$ and the interpolation hold on all test
+configurations.
+\end{proposition}
+
+\section*{3. New incidence route: exponent $28/13$}
+
+\begin{theorem}[Stereographic transfer]
+A stereographic projection from a pole not on any carrier maps the sphere
+circles bijectively to circles (or lines) in the plane, preserving all
+point--circle incidences. (Machine check: projected ring circles are exact
+plane circles, residuals $\sim 10^{-30}$.)
+\end{theorem}
+
+\begin{theorem}[Incidence upgrade --- repaired exponent $20/9$]
+Let $m_r$ be the number of carriers with $p_C \ge r$. The pair partition
+gives the cap $m_r \le 2N^2/r$; the planar Aronov--Sharir-type incidence
+bound gives $m_r \le C\bigl(N^2/r^3 + N^3 L^{11/2}/r^{11/2} + N/r\bigr)$
+($L$ polylogarithmic). The pair cap and the $r^{-11/2}$ term cross at
+\[
+2N^2/r_1 = N^3 L^{11/2}/r_1^{11/2}
+\;\Longleftrightarrow\;
+r_1 = (N L^{11/2}/2)^{2/9} ,
+\]
+so the dyadic sum is dominated by its value at $r_1$:
+\[
+\sum_C p_C^2 \;=\; \sum_r m_r\, r^2
+\;\le\; 2N^2 r_1 + O\!\Bigl(\frac{N^3 L^{11/2}}{r_1^{7/2}}\Bigr)
+\;=\; O\!\bigl(N^{20/9}\,\mathrm{polylog}\,N\bigr),
+\qquad
+\tfrac{20}{9} \simeq 2.222 < \tfrac52 .
+\]
+(The $28/13$ exponent of v1.0 was an arithmetic slip --- caught by the
+operator, verify-loop catch \#7; a dyadic self-check at $N = 4096$
+confirms the $20/9$ form with $O(1)$ ratio.) Consequently, for
+$\kappa$-balanced patterns, $K(n) \le 8 + c\,\kappa^4 n^{2/9}\,
+\mathrm{polylog}\,n$; with the conservative $c\,\mathrm{polylog} = 30$
+the anchor budget certifies $n \lesssim 2.2\times10^{10}$. This route is
+PROVISIONAL (supporting-candidate status) until the Aronov--Sharir
+constant is pinned; the OFFICIAL tier basis is the $\sqrt n$ route of
+the proposition above.
+\end{theorem}
+
+\medskip
+\noindent\textbf{3b. Designated route to the sharp bound:
+structure vs randomness.} The measured exponents ($\sim n^{2.05}$) and
+the unit-circle-strength incidence conjecture both point at
+$\sum_C p_C^2 = O(N^2\,\mathrm{polylog})$. A genuinely new route, not
+passing through open incidence conjectures, is registered as the
+designated multi-turn attack:
+\begin{itemize}
+\item \emph{Lemma DR-1 (circle fiber rigidity = no small doubling on
+circles).} For $A$ contained in a circle, distinct unordered pairs have
+distinct sums outside the axial direction (fiber $\le 2$ plus the axial
+exception), so $|A + A| \ge c\,|A|^2$ --- subsets of circles can NEVER
+have small additive doubling. PROVED in substance by the fiber analysis
+of the universal single-circle theorem (main chain v1.8).
+\item \emph{Lemma DR-2 (sphere structure dichotomy --- OPEN, multi-turn).}
+If $E_2(\hat Q) \ge K N^2$ with $K$ large, Balog--Szemer\'edi--Gowers
+yields $A' \subset \hat Q$, $|A'| \gtrsim N/\mathrm{poly}(K)$, with
+doubling $|A' + A'| \le \mathrm{poly}(K)\,|A'|$. The dichotomy to prove:
+every sphere subset either has $|A+A| \ge |A|^{1+\delta}$ or concentrates
+its mass on $O(1)$ circles. Combined with DR-1 (circles forbid small
+doubling) this is self-improving and would force
+$E_2 = O(N^2\,\mathrm{polylog})$ unconditionally.
+\item \emph{Status.} DR-2 is the single open ingredient; it is a
+Freiman-type structure statement for positively curved surfaces, related
+to (but not identical with) sum-set growth on strictly convex curves
+(Elekes--Nathanson--Ruzsa). Registered as OPEN with this note; no closure
+quote depends on it.
+\end{itemize}
+
+
+\begin{remark}[Sharp conjecture, pre-registered]
+Measured growth exponents of $\sum_C p_C^2$ on the worst-known families
+are $n^{2.06}$ (rings), $n^{2.04}$ (random), $n^{2.08}$ (coaxial):
+all consistent with the SHARP conjecture
+$\sum_C p_C^2 = O(N^2\,\mathrm{polylog})$, under which $K(n)$ grows only
+polylogarithmically and the certified region exceeds any physically
+meaningful mode count for every admissible intensity. The conjecture is
+pre-registered with falsification gate: any family with measured exponent
+$\ge 2.3$ refutes it.
+\end{remark}
+
+\section*{4. Closure condition (named hypotheses)}
+
+\begin{theorem}[Conditional STEP-5B closure]
+Under the named hypotheses
+\[
+\textbf{H-KBAL}:\ A_{\max}^2 \le \kappa^2 I/n \ \text{(balanced
+amplitudes, } \kappa \text{ explicit)},
+\qquad
+\textbf{H-ADM}:\ n \le n_{\rm adm},
+\]
+STEP-5B holds for every admissible pattern provided (VERIFIED form,
+$\sqrt n$ route)
+\[
+8 + 4\sqrt{14}\,\kappa^4 \sqrt{n_{\rm adm}}
+\;<\; K_{\rm budget}(I),
+\]
+i.e.\ $n_{\rm adm} \lesssim 1.59\times10^{5}$ at the production anchor
+($\kappa \simeq 1$). The repaired incidence route would relax this to
+$n_{\rm adm} \lesssim 2.2\times10^{10}$ but is PROVISIONAL (constant
+unpinned) and is NOT used in the ledger threshold. The operator-noted
+packing form $n \le C_{\rm pack}(q_0/\Delta q_{\min})^2$ converts the
+verified threshold into the mode-separation condition
+$\Delta q_{\min}/q_0 \gtrsim 5\times10^{-3}$ (and the provisional one
+into $\gtrsim 10^{-5}$).
+The unbalanced-amplitude extension (amplitude-dyadic decomposition over
+$\sim\log n$ classes) is registered as the remaining technical lift of
+H-KBAL.
+\end{theorem}
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.9.1;
+167/167 self-test asserts PASS; artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+operator $p^3$ bound & $\sum p^3 \le 7N^3$ on rand/ring/coax & verdict-\#9 constants verified \\
+interpolation & $\sum p^2 \le \sqrt{\sum p \sum p^3}$ & all configs \\
+$c_R$ rigorous & $4\sqrt{14} = 14.9666$ & theorem-grade \\
+theorem region ($\sqrt n$) & $1.59{\times}10^5 / 3.77{\times}10^3 / 2.02{\times}10^2$ & matches operator $1.58{\times}10^5$ \\
+stereographic transfer & circle residuals $10^{-30}$ & incidences preserved \\
+incidence region (repaired) & $2.2{\times}10^{10}$ at anchor, PROVISIONAL & exponent $20/9$; catch \#7 \\
+dyadic self-check & ratio $1.1 = O(1)$ at $N{=}4096$ & $20/9$ optimization verified \\
+growth exponents & $2.06/2.04/2.08$ (ring/rand/coax) & sharp-$O(n^2)$ evidence \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the operator's region figure
+$1.58\times10^5$ is reproduced independently ($1.59\times10^5$, rounding);
+$28/13 < 5/2$ strictly; the $n$-reach ratio between routes
+($7.9{\times}10^{16}/1.59{\times}10^5 \approx 5{\times}10^{11}$) equals
+$((K_b-8)/c)^{13/2-2}$-scaling as dimensional consistency requires.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The Aronov--Sharir incidence bound is for plane
+circles; carriers live on the sphere.''} DISMISSED: stereographic
+projection from a generic pole is a bijection sphere-circles $\to$
+plane-circles/lines preserving incidences (machine-verified exact); the
+planar theorem applies verbatim to the projected family.
+\item[($\beta$)] \emph{``The incidence exponent itself was wrong in
+v1.0.''} UPHELD and repaired: the operator caught the $28/13$ arithmetic
+slip (verify-loop catch \#7) --- the correct crossover gives $20/9$. The
+lesson is registered: exponent optimizations must carry a numerical
+dyadic self-check (now in the script, ratio $1.1$ at $N = 4096$). The
+route is demoted to PROVISIONAL supporting-candidate; no ledger figure
+uses it.
+\item[($\gamma$)] \emph{``H-KBAL ($\kappa$-balance) may exclude physical
+competitors.''} VALID-with-mitigation: heavily unbalanced patterns are
+dominated by their heavy modes and fall into the small-$n_{\rm eff}$
+certified region (the heavy sub-pattern carries the energy); the rigorous
+amplitude-dyadic lift is registered. No admissible competitor class is
+known to violate H-KBAL at fixed $I$.
+\item[($\delta$)] \emph{``The sharp $O(n^2)$ claim rests on three
+families.''} DISMISSED as stated: the $O(n^2)$ statement is registered as
+a CONJECTURE with a pre-registered falsification gate (exponent $\ge 2.3$
+on any family), not as a theorem; no closure quote depends on it.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / AddA (serving STEP-5B)
+Precise statement:       (i) THEOREM (operator-derived, verdict #9,
+                         ACCEPTED verdict #10): K(n) <= 8 + 4 sqrt(14)
+                         kappa^4 sqrt(n); region 1.59e5 at anchor =
+                         OFFICIAL ledger threshold. (ii) REPAIRED
+                         incidence route (catch #7): sum_C p_C^2 =
+                         O(N^{20/9} polylog); provisional reach 2.2e10;
+                         NOT used for tier. (iii) CONDITIONAL CLOSURE:
+                         {H-KBAL, H-ADM} with n_adm <~ 1.59e5 verified
+                         (mode separation >~ 5e-3). (iv) Dichotomy
+                         program DR-1 (proved in substance) + DR-2 (OPEN)
+                         registered toward sharp O(N^2 polylog).
+Scope:                   kappa-balanced amplitudes (H-KBAL); second-
+                         cumulant Hessian scope of the main chain;
+                         unbalanced lift registered.
+Dependencies:            B5 main chain v2.0 (carrier partition, rectangle
+                         reformulation, triple count); A1-KERNEL-CONV;
+                         margins from Proposition A (B2 chain).
+Evidence grade:          ANALYTIC (both routes) + EXECUTED (verification)
+                         + CITED (planar incidence literature)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 167/167 PASS; result.json under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260605-gershgorin-reduction/
+Falsification gate:      Any family with sum p^2 growth exponent >= 2.3
+                         (refutes sharp conjecture, not the theorems);
+                         any kappa-balanced pattern with n < 1.59e5
+                         violating the margin (refutes the theorem chain).
+Tier before / after:     T4 / T4 (TIER PROPOSAL for operator: T5, or T6
+                         CONDITIONAL on {H-KBAL, H-ADM} — decision is
+                         the operator's)
+No-overclaim statement:  Unconditional class-wide closure (all n, all
+                         amplitude profiles) is NOT claimed: it requires
+                         the sharp O(n^2) conjecture or H-ADM. The
+                         incidence constant/polylog is conservative, not
+                         pinned. No tier action on B1/B2; Reading-H
+                         stays T5 pending operator review.
+Next required action:    Operator tier review (T4+ per verdict #10
+                         ledger); DR-2 sphere structure dichotomy
+                         (multi-turn designated attack); pin the AS
+                         constant to de-provisionalize 2.2e10;
+                         amplitude-dyadic H-KBAL lift.
+\end{verbatim}

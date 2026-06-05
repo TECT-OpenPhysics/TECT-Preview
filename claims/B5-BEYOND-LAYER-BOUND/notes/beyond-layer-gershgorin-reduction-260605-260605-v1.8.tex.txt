@@ -1,0 +1,808 @@
+% SUPERSEDED by beyond-layer-gershgorin-reduction-260605-260605-v1.9.tex.txt
+% =============================================================================
+% Title: Pattern-generic Gershgorin reduction of the beyond-layer bound (gate STEP-5B)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; supporting: B1-RH-ENUM, B2-PROPA-HLAYER)
+% Version: v1.8 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: theorem note, T4 (position-space multiplication structure; universal single-circle theorem K=14 sharp; Nambu objection discharged; residual = G1'''-AE = discrete sphere L^4 problem)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue (T3): Lemmas A/B + reduction; calibrated boxes.
+%   v1.1 (2026-06-05) G1 attack: Lemma C-prime (exact ordered-pair l1 identity
+%        and the matching transfer cap w_t <= 2 lambda' I), Lemma D (l2 mass
+%        <= (max w)(sum w)), and the CLOSED-REGION THEOREM with the derived
+%        n_max(I) table (62/31/16/6/3 at I = 1e-4..2e-3); the calibrated boxes
+%        of v1.0 are superseded by derivation. Residual renamed G1-prime
+%        (thin-spread patterns n > n_max(I)) with the n-uniform l2 ring
+%        evidence (~13.5 (lambda' I)^2, n-saturating) recorded as the
+%        designated-attack signal. The v1.1.0 script run CAUGHT an author
+%        l1-constant error (2 vs 4): the ring measurement matched the
+%        corrected identity exactly; recorded in section 6. Tier T3 -> T4.
+%   v1.2 (2026-06-05) consistency re-issue per the OPERATOR REVIEW VERDICT
+%        ("T4 valid reduction, not closure"): section-1 tier sentence and the
+%        section-5 boxes-now-derived sentence repaired. No mathematical change.
+%   v1.3 (2026-06-05) G1-prime attack: Lemma E (sphere additive energy,
+%        diagonal/off-diagonal split) sum_t w_t^2 <= 4 lambda'^2 I^2
+%        (phi + nu*); transversal n-free corollary (ratios 131x/16x/2x);
+%        ring family separated onto the orbit route; residual restructured to
+%        G1''(row) + G1'b + G1''(glue). Verify-loop catch #2 (the v1.2.0
+%        circle count included the c = 0 diagonal). Script v1.2.1, 69/69.
+%   v1.4 (2026-06-05) G1''(ring) CLOSED for the canonical family: exact
+%        closed forms c_ring(n) = 14 - 18/n (even) / 8 - 6/n (odd) < 14 via
+%        the five-orbit decomposition (the missing hand-count piece was the
+%        even-n antipodal index-shift collapse); operator-flagged v1.3 footer
+%        staleness repaired. Script v1.3.0, 94/94.
+%   v1.5 (2026-06-05) path-consistency re-issue (run artefacts moved into the
+%        claim package: runs/<ID>/ -> claims/<ID>/runs/) AND banner
+%        restoration: the v1.2-v1.4 revision-history entries were silently
+%        lost by assert-less banner edits in earlier re-issues — exposed by
+%        this re-issue's failed anchor assert (verify-loop catch #3) and
+%        restored here from the CHANGELOG record. No mathematical change.
+%   v1.6 (2026-06-05) closing sweep: Lemma F (collar heavy-mass bound with
+%        the PROVABLE bilinear constant) + REGISTERED NEGATIVE RESULT (the
+%        row/collar-ladder route FAILS a < 1 at production I with the
+%        provable constant: verify-loop catch #5 — the exploratory
+%        sqrt(nu) constant of the first scan was NOT a theorem and was
+%        caught by the devil's-advocate pass before registration; catch #4:
+%        the first collar functional included the c = 0 centre, masking the
+%        on-pattern rows k = -u that genuinely see 2n on-shell partners);
+%        G1''(row) reduced to the tr X^4 additive-energy (E_4) moment
+%        problem, registered as the designated attack G1''-M4. G2
+%        bookkeeping CLOSED at second-cumulant level (Lemma H sextic
+%        eps_4 <= 0.16 on the closed region; Lemma I sigma-channel
+%        completeness, exact to 1e-12; Lemma J two-shell denominator floor
+%        x1.70). Composite-glue l2 theorem (nu_cross <= 4) with validated
+%        certificate (measured 9.27 <= 34.23). Script v1.4.4, 111/111.
+%   v1.7 (2026-06-05) P^2-REPRESENTATION THEOREM (the structural key):
+%        W = lambda'(P^2 - 2I Id) with P = sum_u A_u S_u self-adjoint, so
+%        D + W = D_0 + lambda' P^2 >= D_0 > 0 UNCONDITIONALLY and the
+%        spectrum of X is bounded below by -a_0, a_0 = 2 lambda' I / r_hat
+%        (~0.021 at the anchor) -- n-FREE and PATTERN-FREE. The Gershgorin
+%        a < 1 problem VANISHES; gap G1''-M4 (spectral control) is CLOSED
+%        BY STRUCTURE; the v1.6 registered negative result stands as the
+%        route history that motivated the structural theorem. Enlarged
+%        closed region N_max(I) = 12133/3017/746/115/27 at
+%        I = 1e-4/2e-4/4e-4/1e-3/2e-3 (vs 62/31/16/6/3). Residual reduces
+%        to the class-wide weighted sphere additive-energy bound (G1'''-AE)
+%        on the corner {n > N_max(I), non-transversal, non-ring}, with
+%        G-DEC as its decomposition sub-route. OPERATOR REVIEW VERDICT #5
+%        archived: v1.6 = PASS as strengthened T4; the two flagged stale
+%        sentences (section 1 'two named gaps'; section 5 'thin-spread
+%        remaining') are repaired in this re-issue. Script v1.5.0, 126/126.
+%   v1.8 (2026-06-05) OPERATOR REVIEW VERDICT #6 archived (v1.7 = PASS as a
+%        major strengthened T4; flagged: section 4 still led with the
+%        Gershgorin-conditional statement). Section 4 REWRITTEN around the
+%        structural floor (Gershgorin demoted to superseded auxiliary
+%        route). POSITION-SPACE STRUCTURE: P = multiplication by
+%        F(x) = phi_n(x), so W = lambda'(F^2 - 2I) is a multiplication
+%        operator and D + W >= D_0 holds POINTWISE; the Nambu/anomalous
+%        objection (v1.7 delta) is DISCHARGED — the order parameter is a
+%        real scalar with a single real symmetric Hessian (Math427 K-hat).
+%        PARSEVAL: sum_{t!=0} w^2 = lambda'^2(<F^4> - 4I^2): G1'''-AE IS
+%        the discrete sphere L^4-extension problem (Stein-Tomas exponent
+%        q = 4 at d = 3; curvature = circle-fiber rigidity). UNIVERSAL
+%        SINGLE-CIRCLE THEOREM: any amplitudes, any n, any height:
+%        sum_{t!=0} w^2 <= 14 lambda'^2 I_c^2, SHARP (equal-amplitude rings
+%        approach 14); the equal-amplitude caveat of the ring family is
+%        REMOVED. Coaxial-pair probe K ~ 10.7 bounded (pre-registered
+%        falsification probe; supports absolute K). Script v1.6.0, 132/132.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Gate STEP-5B requires a \emph{class-wide} bound: for every admissible
+condensate pattern (not merely the five enumerated readings), the
+beyond-layer correction --- the off-diagonal Bloch channel discarded by the
+isotropic Gaussian--Hartree layer of hypothesis H-LAYER --- must not overcome
+the layer margins of Proposition~A (weakest interval margin
+$+0.00432$, the band figure of Math437 v1.2 after the Math440 precision fix).
+This note (i) proves two pattern-independent lemmas (Gershgorin--Schur row
+bound; second-order log-det envelope with an isotropic trace identity),
+(ii) reduces STEP-5B to the remaining weighted additive-energy gap
+G1$'''$-AE on an extreme corner of pattern space (the spectral-control gap
+G1$''$-M4 is CLOSED BY STRUCTURE by the $P^2$-representation theorem below;
+G2 bookkeeping is CLOSED at second-cumulant level), and (iii) certifies all
+entering constants numerically at the production anchor, reproducing the
+Math434-audit calibration. It claims
+NEITHER closure of STEP-5B NOR any tier action on the Reading-H selection.
+The result is registered at T4 because Lemmas A/B/C$'$/D and the
+closed-region theorem are now derived (the T3 $\to$ T4 action of this
+re-issue is recorded in the footer); the class-wide statement remains open.
+
+\section*{2. Setting}
+
+Work at the corrected-convention production anchor ($\mu^2 = 0.005$,
+$r_{\mathrm{braz}} = K(q_0) = \mu^2$; claim A1-KERNEL-CONV), with the
+dressed isotropic diagonal
+\[
+D(k) \;=\; \hat r + C\,(k^2 - q_0^2)^2,
+\qquad
+\hat r \;=\; r_R + 2\lambda' I ,
+\qquad
+\lambda' \;=\; 3u + 30 v M ,
+\]
+where $r_R = 0.3045257$, $M = M(\hat r)$ self-consistently
+($M_R = 0.109414$ at $I = 0$), $u = -0.86$, $v = +3.24$, $C = 1$,
+$q_0 = 0.6801748$, and $I = \sum_i A_i^2$ is the total condensate intensity
+of an admissible pattern
+$\phi_c(x) = \sum_i 2 A_i \cos(q_i \cdot x + \varphi_i)$,
+$|q_i| = q_0$. Note $\lambda' = 8.0551 > 0$ at the anchor: the pattern
+Hartree term \emph{raises} the diagonal. The beyond-layer channel is the
+off-diagonal part $W$ of the Bloch Hessian in the plane-wave basis: entries
+$w_t$ at momentum transfers $t \in T(Q) = \{\pm q_i \pm q_j\} \setminus \{0\}$
+with quartic-vertex weights
+\[
+w_t \;=\; \lambda' \!\!\sum_{(i,j):\,\pm q_i \pm q_j = t}\!\! A_i A_j
+\]
+(sextic $5vA^4$-class transfers enter at $O(w_4)$; gap G2). Define
+$X = D^{-1/2} W D^{-1/2}$ and the weighted transfer norm
+$W_{\ell^1}(P) = \sum_{t \neq 0} |w_t|$.
+
+\section*{3. Two pattern-independent lemmas}
+
+\begin{lemma}[Gershgorin--Schur row bound]
+For the symmetric kernel $X$ above, with $D_{\min} = \hat r$,
+\[
+\|X\| \;\le\; \sup_k \sum_{t \neq 0} \frac{|w_t|}{\sqrt{D(k)\,D(k+t)}}
+\;\le\; W_{\ell^1}(P)\; g(\hat r),
+\qquad
+g(\hat r) \;=\; \frac{1}{\hat r} \;+\;
+\frac{1}{\sqrt{\hat r\,(\hat r + 64 C q_0^4)}} .
+\]
+\end{lemma}
+
+\begin{proof}
+The first inequality is the Schur test with unit weights (equivalently the
+Gershgorin row bound for the symmetric matrix truncation of the Bloch
+problem; entries decay quartically in the band index, so the truncation
+limit is harmless). For the second: each transfer term is maximised when
+both legs are on-shell, giving $1/\hat r$; retaining additionally the
+degenerate-endpoint term $1/\sqrt{\hat r(\hat r + 64Cq_0^4)}$ of the
+Math434 LAM geometry makes $g$ an upper envelope for every $|t| \le 2q_0$
+uniformly in the row, since any further leg sits at distance
+$\ge 64Cq_0^4$ above the gap in the quartic well. Summing over transfers
+yields the claim.
+\end{proof}
+
+\begin{lemma}[Second-order log-det envelope; isotropic trace identity]
+If $\|X\| \le a < 1$, the beyond-layer free-energy correction per unit
+volume obeys
+\[
+\bigl|\delta F_{\mathrm{off}}\bigr|
+= \tfrac1{2V}\bigl|\operatorname{tr}\bigl(\ln(\mathbf 1 + X) - X\bigr)\bigr|
+\;\le\; \frac{\operatorname{tr} X^2 / V}{4\,(1-a)},
+\qquad
+\frac{\operatorname{tr} X^2}{V}
+= \sum_{t \neq 0} |w_t|^2\, J(|t|),
+\]
+\[
+J(|t|) \;=\; \int \!\frac{d^3k}{(2\pi)^3}\,
+\frac{1}{D(k)\,D(k+t)} ,
+\]
+which depends on the pattern only through the moduli $|t|$ (isotropy of
+$D$).
+\end{lemma}
+
+\begin{proof}
+Eigenvalues $x_i$ of $X$ lie in $[-a, a]$; the scalar Taylor remainder
+gives $|\ln(1+x) - x| \le x^2 / (2(1-a))$ on that interval; summing over
+the spectrum and dividing by $2V$ gives the first display (the $\tfrac12$
+from the Gaussian free energy). The trace identity is direct:
+$\operatorname{tr} X^2 = \sum_k \sum_t w_t^2 / (D(k) D(k{+}t))
+\to V \sum_t w_t^2 J(|t|)$, and $J$ depends only on $|t|$ because $D$ is a
+function of $|k|$ alone. The first off-diagonal order
+$\operatorname{tr} X$ vanishes (no $t = 0$ entry in $W$).
+\end{proof}
+
+\begin{lemma}[Transfer matching --- exact $\ell^1$ identity and caps]
+For any admissible single-shell pattern ($Q = \{q_1,\dots,q_n\}$ distinct,
+amplitudes $A_i > 0$, $I = \sum_i A_i^2$, $S = \sum_i A_i$):
+\begin{itemize}
+\item[(i)] for every fixed transfer $t \neq 0$ and fixed sign pair, the pairs
+$(i,j)$ with $\pm q_i \pm q_j = t$ form a partial matching ($q_j$ is uniquely
+determined by $q_i$ and $t$); hence the multiplicity obeys $m_t \le 2n$ and,
+by Cauchy--Schwarz along the matching, $|w_t| \le 2\lambda' I$;
+\item[(ii)] $\sum_{t \neq 0} |w_t| \;\le\; \lambda'\,(4S^2 - 2I)
+\;\le\; \lambda'\,(4nI - 2I)$, with equality in the first inequality iff no
+two ordered sign-pairs produce coinciding transfers (verified to machine
+precision on planar rings $n = 8..32$).
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+(i) Uniqueness of $q_j = \pm(t \mp q_i)$ on the shell gives the matching;
+the weight along a matching is $\sum A_i A_{\sigma(i)} \le
+\sqrt{\sum A_i^2}\sqrt{\sum A_{\sigma(i)}^2} \le I$ per sign pair, and two
+sign pairs can land on the same $t$. (ii) Summing $A_iA_j$ over all ordered
+pairs and the four sign combinations counts $4S^2$, minus the excluded
+$t = 0$ diagonal contributions $2I$; Cauchy--Schwarz gives $S^2 \le nI$.
+\end{proof}
+
+\begin{lemma}[$\ell^2$ mass]
+$\displaystyle \sum_{t\neq0} |w_t|^2 \;\le\; \bigl(\max_t |w_t|\bigr)
+\sum_{t\neq0} |w_t| \;\le\; 2\lambda' I \cdot \lambda'(4S^2 - 2I)
+\;\le\; 8n\,(\lambda' I)^2 .$
+\end{lemma}
+
+\begin{theorem}[Closed region of STEP-5B --- derived]
+Let $a(n,I) = \lambda'(4nI - 2I)\, g(\hat r(I))$. For every admissible
+single-shell pattern with mode count $n$ and intensity $I$ such that
+$a(n,I) \le a_0 = 0.75$ and
+\[
+\delta(n,I) \;=\;
+\frac{2\lambda' I \cdot \lambda'(4nI - 2I)\; J_{\max}}{2\,(1 - a(n,I))}
+\;<\; 0.00432 ,
+\]
+the beyond-layer correction cannot overcome the weakest layer margin.
+At the production anchor the region contains all patterns with
+\[
+n \le n_{\max}(I):\qquad
+n_{\max}(10^{-4}) = 62,\quad
+n_{\max}(2{\times}10^{-4}) = 31,\quad
+n_{\max}(4{\times}10^{-4}) = 16,
+\]
+\[
+n_{\max}(10^{-3}) = 6,\qquad
+n_{\max}(2{\times}10^{-3}) = 3 .
+\]
+In particular every configuration in the v1.0 calibrated boxes is now
+DERIVED ($n = 12 \le 16$ at $I = 4{\times}10^{-4}$, margin ratio $\ge 13$).
+\end{theorem}
+
+\begin{proof}
+Combine Lemmas A--D: $\|X\| \le a(n,I)$ by Lemma A with the Lemma-C$'$
+$\ell^1$ cap; Lemma B with the Lemma-D $\ell^2$ mass gives
+$|\delta F_{\rm off}| \le \delta(n,I)$; the displayed inequality is then
+checked pointwise on the integer grid up to the stated $n_{\max}$ (script
+v1.1.1, 54/54 asserts; monotonicity of $n_{\max}$ in $I$ asserted).
+\end{proof}
+
+\begin{lemma}[Sphere additive energy --- diagonal/off-diagonal split]
+Let $\hat Q = \{\pm q_i\}$ with amplitudes $a_{\pm q_i} = A_i$, participation
+factor $\varphi(P) = n \sum_i A_i^4 / I^2 \in [1, n]$ ($\varphi = 1$ for equal
+spread), and discrete nonzero-translate overlap
+$\nu^*(P) = \max_{c \neq 0} |\hat Q \cap (\hat Q + c)|$ over realized
+displacements $c = x - y'$, $x, y' \in \hat Q$. Then
+\[
+\sum_{t \neq 0} |w_t|^2
+\;\le\;
+4\,\lambda'^2 I^2 \bigl(\varphi(P) + \nu^*(P)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Write $w_t/\lambda' = (f{*}f)(t)$ with $f = \sum_{u \in \hat Q} a_u \delta_u$.
+Then $\sum_{t\neq0}|w_t/\lambda'|^2$ is the count-weighted sum over ordered
+quadruples $x + y = x' + y' = t \neq 0$ in $\hat Q$ of
+$a_x a_y a_{x'} a_{y'}$. AM--GM symmetrisation bounds this by
+$\sum_{x,y'} a_x^2 a_{y'}^2\, N(x, y')$, where
+$N(x, y') = \#\{x' \in \hat Q : x' - (x - y') \in \hat Q\}
+= |\hat Q \cap (\hat Q + (x - y'))|$.
+The diagonal pairs $x = y'$ give $N = |\hat Q| = 2n$ against
+$\sum_x a_x^4 = 2\sum_i A_i^4$, i.e.\ $4 \lambda'^2 I^2 \varphi$.
+The off-diagonal pairs have $N \le \nu^*$ against
+$\sum_{x \neq y'} a_x^2 a_{y'}^2 \le (2I)^2$.
+\end{proof}
+
+\begin{corollary}[Transversal $n$-free bound]
+For every admissible single-shell pattern with $\nu^* \le 4$ and
+$\varphi \le 1{+}\epsilon$ (in particular generic/transversal configurations:
+measured $\nu^* = 2$ on random shells $n = 12, 24$), the beyond-layer
+envelope is $n$-FREE: at the anchor, with $c_E = 4(\varphi + \nu^*) \le 20$,
+\[
+|\delta F_{\rm off}|
+\le
+\frac{c_E\,(\lambda' I)^2 J_{\max}}{2\,(1 - a_E)}
+\;<\; 0.00432 ,
+\]
+with margin ratios $131\times / 16\times / 2\times$ at
+$I = 4{\times}10^{-4} / 10^{-3} / 2{\times}10^{-3}$, where the spectral
+control $a_E$ uses the E-route operating envelope (at most
+$\nu^* + 2$ heavy transfers per row, each of weight $\le 2\lambda' I$) ---
+the row-count statement is the remaining G1$''$ item for this class.
+\end{corollary}
+
+\begin{proposition}[Ring family --- exact closed form]
+For the canonical degenerate family (equal-amplitude two-ring pattern: a
+regular $n$-gon at height $z = q_0\cos\theta$ together with its antipodal
+image, $A_i^2 = I/n$, any $\theta \in (0, \pi/2)$),
+\[
+\sum_{t \neq 0} |w_t|^2
+=
+c_{\rm ring}(n)\,(\lambda' I)^2,
+\qquad
+c_{\rm ring}(n)
+=
+\begin{cases}
+14 - 18/n, & n \text{ even},\\[2pt]
+8 - 6/n, & n \text{ odd},
+\end{cases}
+\]
+so $c_{\rm ring}(n) < 14$ for every $n$. In particular the saturation
+observed numerically ($11.75 \to 13.72$ over $n = 8..64$) is exact.
+\end{proposition}
+
+\begin{proof}
+Write $e_k = (\cos\theta_k, \sin\theta_k)$, $\theta_k = 2\pi k/n$. The
+transfer set decomposes into five rotation orbits, each with constant weight
+(all verified exactly by enumeration, $10^{-10}$, $n = 7..64$):
+\begin{itemize}
+\item[O1] (\emph{$n$ even only}) heavy axial $t = (0, 0, \pm 2z)$: every
+same-ring pair $(k, k{+}n/2)$ has $e_k + e_{k+n/2} = 0$, so ALL $n$ ordered
+pairs collapse onto one transfer per ring: $w = \lambda' n A^2 = \lambda' I$;
+two transfers contribute $2(\lambda' I)^2$.
+\item[O2] same-ring generic chord ($d \neq 0, n/2$): only the two orders of
+one pair reach a given $t$, $w = 2\lambda' A^2$; $2n(n/2 - 1)$ transfers
+(even) contribute $(4 - 8/n)(\lambda' I)^2$.
+\item[O3] same-ring $d = 0$ ($t = \pm 2u_k$): $w = \lambda' A^2$, $2n$
+transfers, $(2/n)(\lambda' I)^2$.
+\item[O4] cross-ring generic ($t_z = 0$): for $n$ even the antipodal index
+shift $e_{k+n/2} = -e_k$ doubles the representation count
+($u_i - u_j = u_{j+n/2} - u_{i+n/2}$), so $w = 4\lambda' A^2$ on
+$n(n/2 - 1)$ transfers: $(8 - 16/n)(\lambda' I)^2$; for $n$ odd there is no
+shift, $w = 2\lambda' A^2$ on $n(n - 1)$ transfers: $(4 - 4/n)(\lambda'I)^2$.
+\item[O5] (\emph{$n$ even only}) cross-ring $d = n/2$
+($t = 2\rho e_k$, self-paired): $w = 2\lambda' A^2$, $n$ transfers,
+$(4/n)(\lambda' I)^2$.
+\end{itemize}
+Summing: even $2 + (4 - 8/n) + 2/n + (8 - 16/n) + 4/n = 14 - 18/n$; odd
+$(4 - 8/n + 4/n)_{\rm O2,O3\ analogues} + (4 - 4/n) = 8 - 6/n$. Each collapse
+statement is elementary regular-polygon geometry (uniqueness of chord
+representations); the orbit combinatorics is independent of $\theta$ because
+the heights only label the orbits and never merge them ($z \neq 0$).
+\end{proof}
+
+\begin{lemma}[Collar heavy-mass bound --- provable constant]
+Let $P$ be $\kappa$-balanced ($\max_i A_i \le \kappa\sqrt{I/n}$). For any row
+momentum $k$ and collar width $\delta \in (0, 2.1]$, with
+$S_\delta := \{p : \bigl||p| - q_0\bigr| < \delta q_0\}$ and
+$\nu_S^{\ne}(\delta) := \max_{c \ne 0} |\hat Q \cap (c + S_\delta)|$,
+\[
+\sum_{t \in T:\, k + t \in S_\delta} w_t
+\;\le\;
+2\lambda' I \bigl(\kappa + \nu_S^{\ne}(\delta)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Each $w_t = \lambda' \sum_{(u,v):\, u+v = t} A_u A_v$ over ordered matched
+pairs; summing over heavy $t$ gives the pair sum over
+$E = \{(u,v) : u + v \in (-k + S_\delta)\}$. The centre family
+$c_u = -k - u$ isolates the single possible $c_u = 0$ term ($u = -k \in \hat
+Q$), whose mass is $A_{-k} \sum_v A_v \le \kappa\sqrt{I/n}\,\sqrt{4nI} =
+2\kappa I$ --- the on-pattern rows $k = -u$ genuinely see all $2n$ partners
+(every $v \in \hat Q$ is on-shell), but their \emph{mass} is $n$-free. For
+$c_u \ne 0$ both bipartite degrees obey $\deg(u) = |\hat Q \cap (c_u +
+S_\delta)| \le \nu_S^{\ne}(\delta)$ and $\deg(v) \le \nu_S^{\ne}(\delta)$,
+so the bilinear Cauchy--Schwarz bound gives $\sqrt{\nu 2I}\sqrt{\nu 2I}/
+\ldots \le 2I\nu_S^{\ne}(\delta)$. Multiply by $\lambda'$.
+\end{proof}
+
+\medskip
+\noindent\textbf{Registered negative result (row route).} Applying Lemma~F
+over the collar ladder $\delta \in \{0.05, 0.1, 0.2, 0.4, 0.8, 2.1\}$ (the
+last rung exhausts all transfers, $|t| \le 2q_0$, so no $\ell^1$ remainder
+survives) yields the row certificate
+$a_{\rm prov}(P) = \sum_j 2\lambda' I (1 + \nu_j)/\sqrt{\hat r D_j}$. At the
+production anchor $I = 4 \times 10^{-4}$ this gives $a_{\rm prov} = 2.20$
+($n = 12$) and $4.68$ ($n = 24$): \emph{the Gershgorin/collar-ladder row
+route cannot certify $a < 1$ in the thin-spread regime with any constant
+this proof can currently supply}. The exploratory $\sqrt{\nu}$-constant scan
+(which would certify $a < 1$ up to $n \approx 30$) is NOT a theorem ---
+verify-loop catch \#5, caught by the devil's-advocate pass before
+registration. The scan values are retained in the artefact only as the
+bound \emph{shape} the moment route must reproduce.
+
+\medskip
+\noindent\textbf{Designated attack G1$''$-M4 (fourth moment).} Since
+$\|X\|^{2m} \le \operatorname{tr} X^{2m}$ per volume, and $m = 1$ is Lemma~E,
+the next rung is $m = 2$:
+$\operatorname{tr} X^4 = \sum w_{t_1}w_{t_2}w_{t_3}w_{t_4}\,
+\mathcal{J}_4$ over closed transfer quadruples $t_1 + t_2 + t_3 + t_4 = 0$,
+controlled by the four-fold additive energy
+$E_4(\hat Q) = \#\{\text{realized closed quadruples}\}$. Transversality
+($\nu^* \le 4$) caps $E_4 = O(n^2\,\mathrm{poly}(\nu^*))$ against the
+generic $(2n)^3$, which is exactly the $n$-free gain the row route lacks.
+This is a multi-turn theorem and is registered as the single remaining
+mathematical gap of G1$''$(row).
+
+\begin{lemma}[Sextic-vertex envelope ($\varepsilon_4$)]
+On the closed region of the theorem above ($n \le n_{\max}(I)$, hence
+$nI \le 6.2 \times 10^{-3}$), the sextic vertex $6v$ contributes to any
+matched transfer weight at most a multiplicative correction
+$\varepsilon_4 = 60\,v\,n I/\lambda' \le 0.16$ relative to the quartic
+channel, so all sextic-class transfers fold into the Lemma-B envelope as a
+factor $(1 + \varepsilon_4)$.
+\end{lemma}
+
+\begin{lemma}[$\sigma$-channel completeness]
+The $\sigma(x)$-inhomogeneity vertex (Math429 geometry) enters the
+off-diagonal operator $W$ only through the matched second-cumulant
+combination already counted in $\lambda' = 3u + 30vM$; the identity is
+exact (machine-verified to $10^{-12}$ against the Bloch coupling spectrum).
+No additional transfer class exists at second-cumulant order.
+\end{lemma}
+
+\begin{lemma}[Two-shell suppression]
+Transfers coupling the $q_0$ shell to the second BCC shell $q_1$ see the
+denominator floor $D \ge \hat r + C(q_1^2 - q_0^2)^2 = 0.5186 = 1.70\,\hat
+r$ at the anchor, so each cross-shell leg carries an extra factor
+$\le 1/\sqrt{1.70}$ inside Lemma~A/B envelopes; the certified margins
+absorb this with the stated factor.
+\end{lemma}
+
+\begin{theorem}[Composite glue at the $\ell^2$ level]
+Let $P = \bigsqcup_\alpha P_\alpha$ be a cluster decomposition with
+pairwise cross-overlap $\nu_{\rm cross} := \max_{\alpha \ne \beta}
+\max_{c \ne 0} |\hat Q_\alpha \cap (\hat Q_\beta + c)| \le 4$ (distinct
+circles meet any translate sphere pair in at most $4$ points). Then
+\[
+\operatorname{tr} X^2(P)
+\;\le\;
+\sum_\alpha \operatorname{tr} X^2(P_\alpha)
+\;+\;
+\sum_{\alpha \ne \beta} 4\lambda'^2 I_\alpha I_\beta
+\bigl(\varphi_{\alpha\beta} + \nu_{\rm cross}\bigr) J_{\max},
+\]
+with the within-cluster terms supplied exactly (ring closed forms) or by
+Lemma~E. The certificate is validated on a ring--ring--random composite:
+measured $c = 9.27$ against certificate $34.23$.
+\end{theorem}
+
+\begin{theorem}[$P^2$-representation and structural spectral floor]
+Let $P := \sum_{u \in \hat Q} A_u S_u$, where $S_u$ is the shift
+$(S_u f)(k) = f(k+u)$ and $A_{-u} = A_u > 0$. Then $P = P^\dagger$ and the
+off-diagonal transfer operator of the second-cumulant Bloch Hessian obeys
+the exact operator identity
+\[
+W \;=\; \lambda'\bigl(P^2 - 2I\,\mathrm{Id}\bigr),
+\]
+i.e.\ the matched transfer weights $w_t = \lambda' \sum_{u+v=t} A_uA_v$ are
+precisely the off-diagonal coefficients of $\lambda' P^2$, and the $t = 0$
+coefficient $2\lambda' I$ is precisely the diagonal Hartree dressing
+$\hat r - r_R$. Consequently, with
+$D_0(k) := r_R + C(k^2 - q_0^2)^2 > 0$:
+\[
+D + W \;=\; D_0 + \lambda' P^2 \;\ge\; D_0 \;>\; 0
+\qquad\text{(unconditional, every admissible pattern, every $n$)},
+\]
+and the spectrum of $X = D^{-1/2} W D^{-1/2}$ is bounded below by
+\[
+X \;\ge\; -\,a_0,
+\qquad
+a_0 \;:=\; \sup_k \frac{2\lambda' I}{D(k)} \;=\; \frac{2\lambda' I}{\hat r},
+\]
+which is $n$-free and pattern-free ($a_0 = 0.0207$ at $I = 4\times10^{-4}$;
+$a_0 = 0.0502$ at $I = 10^{-3}$).
+\end{theorem}
+
+\begin{proof}
+$P^\dagger = \sum_u A_u S_{-u} = P$ by the symmetry of $\hat Q$ and
+$A_{-u} = A_u$. Expanding $P^2 = \sum_{u,v} A_uA_v S_{u+v}$ collects, for
+each $t \ne 0$, exactly the ordered matched pairs defining $w_t/\lambda'$,
+and at $t = 0$ the coefficient $\sum_u A_u^2 = 2I$ --- the identity is
+coefficient-wise exact (machine cross-check: max mismatch $0$ over all
+realized transfers; the $\ell^1$ identity $\lambda'(4S^2 - 2I)$ of
+Lemma~C$'$ is this structure in $\ell^1$ disguise). For the floor, for any
+$f$ with $g := D^{-1/2} f$:
+\[
+\frac{\langle f, (1{+}X) f\rangle}{\|f\|^2}
+= \frac{\langle g, (D_0 + \lambda' P^2)\, g\rangle}{\langle g, D g\rangle}
+\;\ge\; \inf_k \frac{D_0(k)}{D(k)}
+= 1 - \sup_k \frac{2\lambda' I}{D(k)} = 1 - \frac{2\lambda' I}{\hat r},
+\]
+using $\lambda' > 0$ and $P^2 \ge 0$. The supremum is attained on shell.
+\end{proof}
+
+\begin{corollary}[Envelope with the structural floor]
+For every admissible pattern, $\log(1+x) \ge x - x^2/(2(1-a_0))$ holds on
+the entire spectrum of $X$, hence
+\[
+\bigl|\delta F_{\mathrm{off}}(P)\bigr|
+\;\le\;
+\frac{\operatorname{tr} X^2 / V}{4\,(1 - a_0)}
+=
+\frac{\sum_t w_t^2\, J(|t|)}{4\,(1 - a_0)} .
+\]
+The Gershgorin row condition $a(P) < 1$ is no longer needed anywhere in the
+chain; gap G1$''$-M4 (spectral control in the thin-spread regime) is
+\textbf{CLOSED BY STRUCTURE}. The v1.6 registered negative result (the
+row/collar-ladder route fails with its provable constant) stands as the
+route history that motivated this theorem.
+\end{corollary}
+
+\begin{corollary}[Enlarged closed region]
+Combining the corollary with the general $\ell^2$ mass bound (Lemma~D,
+$\sum_t w_t^2 \le 8n(\lambda' I)^2$) gives STEP-5B on
+$n \le N_{\max}(I)$ with
+\[
+N_{\max}(I) = \Bigl\lfloor \tfrac{4(1-a_0)\,m}{8(\lambda' I)^2 J_{\max}}
+\Bigr\rfloor
+= 12133 / 3017 / 746 / 115 / 27
+\quad\text{at } I = 10^{-4}/2{\times}10^{-4}/4{\times}10^{-4}/10^{-3}/2{\times}10^{-3},
+\]
+($m = 0.00432$ the weakest interval margin), versus $62/31/16/6/3$ for the
+superseded Gershgorin route --- a $\times 46$ enlargement at the production
+anchor. Transversal patterns remain covered $n$-free (Lemma~E corollary,
+now with $(1-a_0)$); the canonical ring family remains covered exactly.
+\end{corollary}
+
+\begin{remark}[Robustness under G2 corrections]
+The sextic class enters multiplicatively within the certified region
+(Lemma~H, $\varepsilon_4 \le 0.16$), shifting the floor at most to
+$a_0(1+\varepsilon_4) \le 0.025$ at the anchor; the $\sigma$-channel adds
+no new transfer class (Lemma~I); two-shell legs are suppressed (Lemma~J).
+The floor statement is at the same second-cumulant bookkeeping scope as the
+whole note (the Nambu/anomalous block is inside the Math427--434 five-reading
+bookkeeping that calibrates $X$; its independent re-verification is listed
+in section~6).
+\end{remark}
+
+\begin{lemma}[Position-space representation]
+In position space $P$ is multiplication by the condensate profile
+$F(x) = \phi_n(x) = \sum_{u \in \hat Q} A_u e^{iux}$ (real), so the
+$P^2$-representation reads
+\[
+W \;=\; \lambda'\bigl(F(x)^2 - 2I\bigr), \qquad
+D + W \;=\; D_0 \;+\; \lambda' F(x)^2 ,
+\]
+a \emph{multiplication operator} added to $D_0$: the floor
+$D + W \ge D_0$ holds pointwise, which is the elementary form of the
+structural theorem. This also \textbf{discharges the anomalous-block
+objection} ($\delta$ of section~6): the TECT order parameter is a real
+scalar field; its second-cumulant fluctuation operator is the single real
+symmetric Hessian $\hat K[\phi_n] = \hat r_{\rm eff} + C(q^2-q_0^2)^2 +
+(3u + 30vM)\phi_n^2 + \ldots$ (Math427 structure) --- there is no
+independent Nambu/pairing block at this scope; the $\pm k$ Bloch pairing is
+already encoded in the symmetric $\hat Q$ with $A_{-u} = A_u$.
+\end{lemma}
+
+\begin{proposition}[Parseval reformulation of G1$'''$-AE]
+$\sum_{t \ne 0} w_t^2 = \lambda'^2\bigl(\langle F^4\rangle - 4I^2\bigr)$,
+where $\langle\cdot\rangle$ is the spatial average. Hence the remaining
+gap G1$'''$-AE is exactly the \emph{discrete sphere $L^4$-extension
+inequality} $\langle F^4 \rangle \le K\, I^2$ for sphere-supported
+trigonometric sums --- the Stein--Tomas exponent $q = 2(d+1)/(d-1) = 4$
+at $d = 3$. The mechanism that keeps $K$ finite on all certified families
+is sphere curvature: a sum $u + v = s$ confines the pair to the circle
+$C_s = S \cap (s - S)$, and a fixed sum on a circle pins the unordered
+pair (fiber rigidity), up to the axial exceptions quantified below.
+(Machine check: the identity holds to MC accuracy $0.5\%$/$7.5\%$ on
+random/ring test patterns.)
+\end{proposition}
+
+\begin{theorem}[Universal single-circle bound --- sharp constant $14$]
+Let all pattern points lie on ONE circle $C \subset S$ (any height, any
+$n$, arbitrary positive amplitudes, $I_c = \sum_i A_i^2$). Then
+\[
+\sum_{t \ne 0} w_t^2 \;\le\; 14\,\lambda'^2 I_c^2 ,
+\]
+and the constant is sharp: the equal-amplitude ring family attains
+$14 - 18/n \to 14$.
+\end{theorem}
+
+\begin{proof}
+Write $\hat C = C \cup (-C)$ (top/bottom copies). Sum fibers
+$\{(\hat u,\hat v): \hat u + \hat v = t\}$ classify as: (i) top--top or
+bottom--bottom with $t$ non-axial: a fixed sum on a circle determines the
+unordered pair (two ordered pairs) --- by $(\sum_{\le 2} a)^2 \le
+2\sum a^2$, their total is $\le 2(\sum_{\rm top} A^2)^2 +
+2(\sum_{\rm bot} A^2)^2 = 4I_c^2$; (ii) top--bottom and bottom--top
+combined: difference fibers on a circle carry $\le 4$ ordered pairs (the
+$(d,m) \sim (-d, m+n)$ index identification plus ordering), total
+$\le 4 \cdot 2 I_c^2 = 8I_c^2$; (iii) the two axial transfers
+$t = \pm 2z\hat z$ (present for antipodally-paired angle sets, e.g.\ even
+equal-angle rings): $\Phi_{\pm} \le I_c$ each by Cauchy--Schwarz, total
+$\le 2I_c^2$. Summing: $4 + 8 + 2 = 14$. Sharpness from the exact ring
+closed form $c_{\rm ring}(n) = 14 - 18/n$ (five-orbit proposition above),
+whose orbit masses saturate (i)--(iii) asymptotically. Machine
+verification: $8$ random-amplitude/height/$n$ circles give
+$K \le 12.23$; the $n = 64$ equal-amplitude ring gives $13.7187$.
+\end{proof}
+
+\begin{remark}[Consequences and the remaining hard class]
+(a) The equal-amplitude caveat of the ring-family proposition is REMOVED:
+single-circle patterns are closed universally, so the residual corner
+excludes all of them. (b) The suspected-hard class for the absolute-$K$
+conjecture --- coaxial circle pairs, whose sumset concentrates on an
+annulus (many realized circles through point pairs) --- was probed as a
+pre-registered falsification test: $K = 9.9 / 10.4 / 10.7$ at
+$2{\times}8 / 2{\times}16 / 2{\times}32$, bounded (supporting evidence,
+NOT a proof). (c) The corner therefore consists of high-$n$,
+multi-circle, non-transversal patterns without a $\nu_{\rm cross} \le 4$
+decomposition --- exactly the configurations where the discrete $L^4$
+problem is open.
+\end{remark}
+
+\section*{4. The reduction (precise form of STEP-5B)}
+
+\begin{proposition}[Pattern-generic reduction --- structural form]
+For every admissible pattern $P$,
+\[
+\bigl|\delta F_{\mathrm{off}}(P)\bigr|
+\;\le\;
+\frac{\sum_t w_t^2\, J(|t|)}{4\,\bigl(1 - a_0\bigr)},
+\qquad
+a_0 = \frac{2\lambda' I}{\hat r}
+\quad (\text{structural floor; } a_0 = 0.0207 \text{ at } I = 4{\times}10^{-4}),
+\]
+with NO pattern-dependent spectral condition: the floor is unconditional.
+Consequently STEP-5B holds wherever
+$\sum_t w_t^2 J(|t|) < 4(1-a_0)\, m$ ($m$ the applicable margin), and the
+full gate reduces to the single class-wide $\ell^2$-mass question
+G1$'''$-AE of the Parseval proposition.
+\end{proposition}
+
+\begin{remark}[Superseded auxiliary route]
+The original Gershgorin reduction (rows $a(P) := W_{\ell^1}(P)\,
+g(\hat r) < 1$ and the envelope with $(1 - a(P))$) remains valid where it
+applies but is SUPERSEDED by the structural form above: the v1.6
+registered negative result showed its provable row constants cannot reach
+the thin-spread regime, and the structural floor makes the condition
+unnecessary. It is retained in section~3 as route history and as an
+independent cross-check on the certified boxes.
+\end{remark}
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.6.0;
+132/132 self-test asserts PASS; artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+anchor $r_R$, $M_R$, $\lambda'$, $64Cq_0^4$ & $0.3045257$, $0.109414$, $8.0551$, $13.698$ & match locked constants \\
+Math434 calibration ($A = 0.01$): $\hat r'$, row terms & $0.30613$; $2.624{\times}10^{-3} + 3.879{\times}10^{-4}$ & reproduces $2.633{\times}10^{-3} + 3.893{\times}10^{-4}$; $\|X\| \le 3.1{\times}10^{-3}$ \\
+$J(|t|)$, $|t|/q_0 \in \{0.5, 1, \sqrt2, \sqrt3, 2\}$ & $0.273, 0.218, 0.169, 0.133, 0.104$ & grid-refinement drift $< 6{\times}10^{-6}$; shell estimate $0.161$ brackets $J_{\max}$ \\
+calibrated box $n_{\mathrm{res}}{=}12$, $I = 4{\times}10^{-4}$ & $a = 0.143$, $\delta \le 2.38{\times}10^{-4}$ & margin ratio $18.2\times$ \\
+calibrated box $n_{\mathrm{res}}{=}12$, $I = 10^{-3}$ & $a = 0.347$, $\delta \le 1.95{\times}10^{-3}$ & margin ratio $2.2\times$ \\
+LAM second order & $\delta_{\mathrm{LAM}} = 6.7{\times}10^{-8}$ & margin$/64{,}000$ \\
+matching lemmas on rings/random shells & exact $\ell^1$ identity; $m_t \le 2n$; $w_t \le 2\lambda' I$ & equality on rings to $10^{-12}$ \\
+$n$-uniform $\ell^2$ evidence (rings 16--32) & $\sum w_t^2 = 12.9$--$13.5\,(\lambda' I)^2$ & vs $8n$ bound: $19\times$ slack at $n{=}32$ \\
+derived $n_{\max}(I)$ & $62/31/16/6/3$ at $I = 10^{-4}..2{\times}10^{-3}$ & $a \le 0.75$; boxes of v1.0 now derived \\
+Lemma E split (rings/random, $n \le 64$) & $c_{\rm meas} \le 4(\varphi + \nu^*)$ everywhere & random: $\nu^* = 2$, $c_{\rm meas} = 7.5$--$7.75 \le 12$ \\
+ring family $c(n)$ & EXACT: $14 - 18/n$ (even), $8 - 6/n$ (odd) & closed form verified $10^{-10}$, $n = 7..64$ \\
+transversal $n$-free corollary & ratios $131\times / 16\times / 2\times$ at $I = 4{\times}10^{-4} / 10^{-3} / 2{\times}10^{-3}$ & $\nu^* \le 4$, $\varphi \le 1$; $n$-FREE \\
+row route, provable constant & $a_{\rm prov} = 2.20 / 4.68$ at $n = 12 / 24$ & $> 1$: NEGATIVE result, route refuted \\
+G2 trio (Lemmas H/I/J) & $\varepsilon_4 \le 0.16$; $\sigma$ exact $10^{-12}$; floor $\times 1.70$ & bookkeeping closed on region \\
+composite glue & measured $c = 9.27$ vs certificate $34.23$ & $\nu_{\rm cross} = 1 \le 4$ on test composite \\
+$P^2$ identity & max mismatch $0$ over all transfers & $t{=}0$ coefficient $= 2I$ exactly \\
+spectral floor (sections) & min-eig $\ge -a_0$ on rings/composites/near-pairs & stressed section dim $75$: $-0.0034 \ge -0.0207$ \\
+$N_{\max}(I)$ structural & $12133/3017/746/115/27$ & vs Gershgorin $62/31/16/6/3$ \\
+Parseval identity & MC dev $0.5\%$ / $7.5\%$ (rand12/ring16) & $\sum w^2 = \lambda'^2(\langle F^4\rangle - 4I^2)$ \\
+single-circle universal & $K \le 12.23$ (8 random draws); $13.7187$ at ring$_{64}$ & constant $14$ SHARP \\
+coaxial AE probe & $K = 9.9/10.4/10.7$ at $2{\times}8/16/32$ & bounded; pre-registered probe \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the LAM row terms agree with the
+Math434-audit figures to $\le 4{\times}10^{-6}$; $J$ obeys the analytic
+shell estimate $q_0/(8\pi \hat r^{3/2}\sqrt{C}) = 0.161$ within a factor
+$1.7$; dimensions: $[w] = [\hat r]$, $[J] = [\hat r]^{-2}\,[k]^3$
+consistent with $\delta F$ per unit volume.
+
+The original v1.0 calibrated boxes are now DERIVED within the closed-region
+theorem. The original thin-spread residual has been sharpened to
+G1$'''$-AE $+$ G-DEC (sub-route), with G1$''$-M4 closed by structure and G2
+bookkeeping closed at second-cumulant level; the certified territory is
+$n \le N_{\max}(I)$ $\cup$ transversal $\cup$ rings $\cup$ glued
+composites.
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$W_{\ell^1}$ grows without bound in $n$, so
+nothing class-wide is proven.''} VALID-with-mitigation, now sharpened: the
+closed-region theorem converts the $\ell^1$ route into an explicit derived
+region $n \le n_{\max}(I)$; the residual is exactly G1$'$ (thin-spread),
+for which the $n$-uniform $\ell^2$ ring evidence identifies the designated
+attack. The class-wide statement remains open, hence T4 and not T5.
+\item[($\alpha'$)] \emph{``The author's own constants may be wrong.''}
+Two exhibits, both caught by the verification loop before registration:
+(1) the v1.1.0 $\ell^1$ assert with the wrong constant $2S^2$ FAILED on
+every configuration; ring measurements matched the corrected identity
+$\lambda'(4S^2 - 2I)$ to $10^{-12}$. (2) the v1.2.0 circle count for
+Lemma E included the $c = 0$ diagonal ($\nu = 2n$ on every configuration);
+the failed transversal asserts exposed it, and the corrected
+diagonal/off-diagonal split passes 69/69. (3) catch \#4: the first v1.4.x
+collar functional included the $c = 0$ centre ($\nu = 2n$ on every
+configuration); the on-pattern rows $k = -u$ explain the genuine $2n$
+count, and the mass split of Lemma~F resolves it. (4) catch \#5: the
+exploratory $\sqrt{\nu}$ ladder constant was caught by this self-test
+BEFORE registration; the provable constant FAILS, and the failure is
+registered as a negative result rather than silently dropped.
+\item[($\delta$)] \emph{``The $P^2$ identity might hold for the code's
+$W$ but not for the physical Bloch Hessian (anomalous/Nambu block,
+pair-channel vertex).''} DISCHARGED in v1.8 (was VALID-with-mitigation in
+v1.7): the order parameter is a REAL scalar field; the second-cumulant
+fluctuation operator is the single real symmetric Hessian
+$\hat K[\phi_n]$ of Math427, and $W$ is the multiplication operator
+$\lambda'(\phi_n^2 - \langle\phi_n^2\rangle)$ --- there is no
+independent pairing block at this scope. The position-space lemma makes
+the floor pointwise and manifest.
+\item[($\varepsilon$)] \emph{``A finite-section check cannot verify an
+operator-norm statement.''} DISMISSED with the correct logic direction:
+compressions can only RAISE the minimum eigenvalue, so sections cannot
+prove the floor --- but they can FALSIFY it. Seven adversarial sections
+(rings at the axial resonance, composites, near-coincident pairs, a
+$75$-dimensional stressed section) all sit ABOVE $-a_0$, with ring
+sections approaching it ($-0.0123$ vs $-0.0207$): the floor is consistent
+and near-sharp on the known worst family. The PROOF of the floor is the
+quadratic-form argument, not the sections.
+\item[($\zeta$)] \emph{``With $G1''$-M4 closed, why is the gate still
+open?''} Because the envelope still requires the $\ell^2$ mass
+$\sum w_t^2$, and its class-wide $n$-free bound (G1$'''$-AE) is exactly
+the corner left open; no closure is claimed.
+\item[($\eta$)] \emph{``The Parseval identity check is Monte Carlo with
+$7.5\%$ deviation on rings --- weak.''} VALID-with-mitigation: the
+identity itself is two lines of algebra (Parseval applied to $F^2$); the
+MC is a smoke test against implementation error, slow to converge on
+rings because near-degenerate transfer directions equidistribute slowly
+in a finite box. The exact transfer-sum side is already verified to
+$10^{-12}$ against the orbit closed forms.
+\item[($\beta$)] \emph{``$J(|t|)$ is numerical only.''} DISMISSED with
+evidence: grid-refinement drift $< 6 \times 10^{-6}$ relative, UV tail
+quartically convergent, and the independent analytic shell estimate
+brackets $J_{\max}$ within a factor $1.7$.
+\item[($\gamma$)] \emph{``The comparison uses the global minimum margin,
+but Proposition~A's floors are interval-wise.''} VALID-with-mitigation:
+using the weakest interval margin $+0.00432$ globally is conservative by
+construction; an interval-wise comparison can only enlarge the certified
+region.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND (serving gate STEP-5B)
+Precise statement:       P^2/position-space structure: W = lam(F^2 - 2I)
+                         multiplication operator; D + W >= D_0 pointwise;
+                         floor a_0 n-free => G1''-M4 CLOSED BY STRUCTURE;
+                         Nambu objection DISCHARGED (real scalar).
+                         PARSEVAL: sum w^2 = lam^2(<F^4> - 4I^2):
+                         G1'''-AE = discrete sphere L^4 extension
+                         (Stein-Tomas q=4, d=3). UNIVERSAL SINGLE-CIRCLE
+                         THEOREM: sum w^2 <= 14 lam^2 I_c^2, SHARP.
+                         N_max(I) = 12133/3017/746/115/27. Plus v1.6
+                         stack (closed region, transversal n-free, glue
+                         l2, G2 closed). 132/132 asserts.
+Scope:                   Second-cumulant bookkeeping scope (= Math434
+                         calibration scope); anomalous-block objection
+                         discharged (real scalar, single Hessian).
+                         STEP-5B remains OPEN on the corner
+                         {n > N_max(I), non-transversal, multi-circle
+                         without nu_cross<=4 decomposition}: G1'''-AE.
+                         Equal-amplitude caveat on circles REMOVED.
+Dependencies:            A1-KERNEL-CONV (convention); margins from
+                         Proposition A (B2-PROPA-HLAYER chain).
+Evidence grade:          ANALYTIC (theorem + lemmas) + EXECUTED
+                         (identity/floor/region machine-verified) +
+                         NEGATIVE (row route, stands as route history)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 132/132 PASS; result.json under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260605-gershgorin-reduction/
+Falsification gate:      Any admissible-pattern section with min-eig below
+                         -a_0 (would refute the floor and the P^2
+                         identity); any pattern in the certified territory
+                         whose exact correction exceeds the envelope; any
+                         pattern undercutting the +0.00432 band margin.
+Tier before / after:     T4 / T4 (T5-candidacy flagged for operator:
+                         the single remaining gap is G1'''-AE on an
+                         extreme corner)
+No-overclaim statement:  This note does NOT close STEP-5B: the corner
+                         {n > N_max(I), non-transversal, non-ring} needs
+                         the class-wide additive-energy bound. No tier
+                         action on B1/B2; Reading-H stays T5. The floor
+                         theorem's scope is second-cumulant bookkeeping;
+                         the anomalous-block sub-check is open.
+Next required action:    G1'''-AE as discrete sphere L^4 problem:
+                         multi-circle incidence bound (or G-DEC
+                         decomposition sub-route); coaxial probe is the
+                         pre-registered falsification class; then
+                         operator review for closure assessment.
+\end{verbatim}

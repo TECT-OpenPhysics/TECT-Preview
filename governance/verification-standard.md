@@ -11,7 +11,7 @@ $$
 $$
 
 Concretely: claim card (`claims/<ID>/`), proof note (`theory/sector-X/`),
-script(s) (`codes/` or `verification/`), artefacts (`runs/<ID>/result.json`),
+script(s) (`codes/` or `verification/`), artefacts (`claims/<ID>/runs/result.json`),
 and the reproduction block on the card.
 
 ## 2. One-command reproduction
@@ -30,7 +30,7 @@ STATUS: PASS
 ASSERTS: 101/101
 MAX_ERROR: 3.2e-08
 FALSIFICATION_GATE: NOT FIRED
-ARTEFACT: runs/B1-RH-ENUM/result.json
+ARTEFACT: claims/B1-RH-ENUM/runs/result.json
 ```
 
 or on failure:
@@ -39,7 +39,7 @@ or on failure:
 CLAIM: B1-RH-ENUM
 STATUS: FAIL
 FAILED_GATE: HEX_EXACT_WICK_NEGATIVE_MARGIN
-COUNTEREXAMPLE: runs/B1-RH-ENUM/hex_case_017.json
+COUNTEREXAMPLE: claims/B1-RH-ENUM/runs/hex_case_017.json
 ```
 
 Exit code 0 iff STATUS PASS. `run_all_claims.py` iterates over every claim with
@@ -60,7 +60,7 @@ Exit code 0 iff STATUS PASS. `run_all_claims.py` iterates over every claim with
 ## 4. Run recording
 
 Every script that produces evidence writes
-`runs/<claim-id>/<YYMMDD>-<descriptive-tag>/result.json` containing: config,
+`claims/<ID>/runs/<YYMMDD>-<descriptive-tag>/result.json` containing: config,
 constants check, per-step time series where applicable, summary, seeds,
 environment, **the producing scripts' `__version__` values (+ git commit when
 available)**, and per-assert pass/fail with expected/actual values. Runs are

@@ -1,0 +1,144 @@
+% =============================================================================
+% Title: Proposition-A evidence-chain migration and re-validation record (migration batch 1)
+% Claim: B2-PROPA-HLAYER (supporting: A1-KERNEL-CONV; B1-RH-ENUM partial)
+% Version: v1.4 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: verification record (no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05, .md) first issue: migration batch-1 record.
+%   v1.1 (2026-06-05, .tex.txt) format re-issue per the note-format decision
+%        (naming-and-versioning.md section 3): proof notes are LaTeX fragments
+%        (.tex.txt) for math fidelity, legacy-corpus uniformity, and direct
+%        PDF builds. Content identical to v1.0 up to formatting.
+%   v1.2 (2026-06-05) table-width compliance re-issue: re-validation table
+%        converted to tabularx (width-bounded, mandatory per naming section 3);
+%        long repository paths set with \url{} so lines break at separators.
+%        7 Overfull-hbox warnings in the v1.1 build eliminated. Content
+%        identical to v1.1 up to layout.
+%   v1.3 (2026-06-05) standard-form compliance re-issue: banner fields
+%        normalised to the machine-checked schema (% Title: added; % Claim:
+%        field order); no body change. First note validated by
+%        build_note_pdf v1.1.0 FORM-CHECK.
+%   v1.4 (2026-06-05) path-consistency re-issue: run artefacts moved into the
+%        claim package (runs/<ID>/ -> claims/<ID>/runs/); no other change.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note is the permanent record of migration batch 1 (plan phase M1,
+\url{governance/migration-plan.md} \S 4 priority 1): the evidence chain of
+claims \texttt{A1-KERNEL-CONV}, \texttt{B1-RH-ENUM} (partial), and
+\texttt{B2-PROPA-HLAYER} was copied verbatim from the frozen legacy repository
+into \texttt{archive/legacy/} and re-validated by full re-execution. This note
+makes no new mathematical claim and performs no tier action; it is citable as
+the re-validation evidence for the cards above.
+
+\section*{2. What was migrated}
+
+23 files (11 notes, 7 scripts, 5 run artefacts) covering theory tags Math426
+(+AddA/AddB), Math435 (v1.0--v1.1), Math437 (v1.0--v1.2), Math440, Math441,
+Math442, plus the three import-dependency modules Math374 / Math400-AddE /
+Math424-AddA (script-only). Layout: \url{archive/legacy/}\{\url{notes/<Tag>/}, \url{scripts/}, \url{artefacts/<Tag>/}\}; per-file original paths in
+\url{archive/MIGRATION-LEDGER.md}; per-tag lookup in
+\url{archive/legacy/INDEX.md}.
+
+\section*{3. Re-validation results}
+
+Fresh environment: python 3.12, numpy 2.2.6.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{} Y l l Y @{}}
+\toprule
+Script & Asserts & Runtime & Artefact comparison \\
+\midrule
+\url{Math426_g4_kernel_reconciliation.py} & 10/10 & 0.4 s & identical, rel.\ tol.\ $10^{-9}$ \\
+\url{Math435_g6_corrected_variable_cascade.py} & 101/101 & 3.5 s & identical, rel.\ tol.\ $10^{-9}$ \\
+\url{Math437_step5_class_closure.py} & 91/91 & 1.2 s & numerics identical; 2 verdict-string diffs (\S 4) \\
+\url{Math440_audit_secondwave_recheck.py} & 75/75 & 37.8 s & identical, rel.\ tol.\ $10^{-9}$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Total: \textbf{277/277 asserts PASS}. Fresh artefacts:
+\url{claims/A1-KERNEL-CONV/runs/260605-migration-revalidation/},
+\url{claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/}. After the
+archive per-tag reorganisation, \url{Math426_g4_kernel_reconciliation.py}
+was re-executed from the new \url{archive/legacy/scripts/} location (10/10
+PASS), confirming the flat script directory remains runnable.
+
+\section*{4. Finding F-1 (STALE-ARTEFACT, no numeric impact)}
+
+The archived legacy artefact \url{artefacts/Math437/step5_class_closure.json}
+predates the R1 repair of the Math440/Math441 audit cycle: its
+\texttt{claims[90]} verdict string is the v1.0-era wording (``Region-I
+positivity + Lemma-B dip bound + $\Delta_0$ penalty''), while the migrated
+script (repaired, v1.1 four-interval proof) emits ``I$'$ all-positivity +
+band/Region-II anchor-only $P_B$ floors; $\Delta_0$ demoted to comfort
+margin''. All numeric fields are identical within $10^{-9}$. Consequence: the
+fresh artefact under \url{claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/}
+is canonical for TSv2 citation; the archived JSON remains as historical
+record. Process lesson: migration batches MUST re-run scripts rather than
+trust stored artefacts (binding via \url{governance/migration-plan.md}
+\S 3, M1).
+
+\section*{5. Hypothesis transcription}
+
+H-LAYER and H-A0 were transcribed verbatim from Math437 v1.2 \S Hypotheses
+into \url{claims/GATES.md}. The transcription makes explicit that the
+H-LAYER beyond-layer residual \emph{is} gate STEP-5B --- the designated
+gateway for any whole-Reading-H T6 discussion.
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Re-execution in the same ecosystem is not independent
+verification.''} VALID with mitigation: the asserts are the original authors'
+self-tests, so this re-run certifies reproducibility, not correctness.
+Independent correctness evidence for the chain is the dual-audit record
+(Math440 + Math441, different agents) migrated alongside. External
+reproduction becomes possible exactly because of this migration; CI
+re-execution on the GitHub runner adds an environment-independent check.
+\item[($\beta$)] \emph{``One stale artefact suggests others.''} VALID: treated
+as a class, not an instance --- the re-run-don't-trust rule is binding for
+every future batch, and any artefact cited without a fresh re-run is
+non-citable (\url{governance/verification-standard.md} \S 4).
+\item[($\gamma$)] \emph{``Archive copies could drift from the frozen legacy
+originals.''} DISMISSED: the legacy repository is frozen read-only (M0);
+copies are byte-identical at migration time, recorded in the ledger, and
+git-tracked from the first public commit --- any later divergence is visible
+in history.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the four assert totals
+($10+101+91+75 = 277$) and the $10^{-9}$ comparison tolerance were checked
+against the comparison-script output; runtimes are $O(1$--$40\,\mathrm{s})$,
+consistent with the scripts' loop sizes.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER (supporting record; also
+                         A1-KERNEL-CONV, B1-RH-ENUM partial)
+Precise statement:       Migration batch-1 evidence chain migrated verbatim
+                         and re-validated by full re-execution (277/277).
+Scope:                   Reproducibility of the migrated chain only; no new
+                         mathematical claim; no tier action.
+Dependencies:            archive/legacy/ batch-1 file set (ledger 2026-06-05).
+Evidence grade:          EXECUTED
+Reproduction command:    cd archive/legacy/scripts &&
+                         python Math426_g4_kernel_reconciliation.py &&
+                         python Math435_g6_corrected_variable_cascade.py &&
+                         python Math437_step5_class_closure.py &&
+                         python Math440_audit_secondwave_recheck.py
+Expected output:         10/10, 101/101, 91/91, 75/75 asserts PASS; exit 0;
+                         JSONs match archived artefacts within rel_tol 1e-9
+                         (Math437: numerics only, see Section 4)
+Falsification gate:      Any assert failure or artefact mismatch beyond
+                         tolerance on re-execution.
+Tier before / after:     A1 T5 / T5 ; B1 T5 / T5 ; B2 T6 / T6 (no change)
+No-overclaim statement:  Re-execution certifies reproducibility, not
+                         correctness; Reading-H remains T5; STEP-5B open.
+Next required action:    Migration batch 2 (Math431-HEX chain +
+                         Math427/428-432/434/436) for B1 cleanness.
+\end{verbatim}

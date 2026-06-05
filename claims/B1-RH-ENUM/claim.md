@@ -10,7 +10,7 @@ $\Delta F[\mathcal R]=F_{\rm TECT}[\mathcal R]-F_{\rm TECT}[\mathcal R_H]>0$ for
 
 CLOSED@ESTIMATOR-GRADE within enumerated ensembles at the corrected canonical operating point. No claim over the full admissible class (STEP-5B open); no controlled error bound (ESTIMATOR-UPGRADE open).
 
-**Notes**: Estimator error bound: uncontrolled; upgrade tracked by ESTIMATOR-UPGRADE (GAP-2 instance). Migration batch 2 re-validated 2026-06-05: 167/167 asserts across the eight enumerated-reading scripts (LAM/HEX/FCC races, Bloch log-det, inhomogeneous Wick, dense surface, two-shell ensemble, LAM/HEX exact-Wick brackets); all regenerated artefacts identical to archive within 1e-9 (runs/B1-RH-ENUM/260605-migration-revalidation/). Migration-clean: no legacy: pointers remain.
+**Notes**: Estimator error bound: uncontrolled; upgrade tracked by ESTIMATOR-UPGRADE (GAP-2 instance). Migration batch 2 re-validated 2026-06-05: 167/167 asserts across the eight enumerated-reading scripts (LAM/HEX/FCC races, Bloch log-det, inhomogeneous Wick, dense surface, two-shell ensemble, LAM/HEX exact-Wick brackets); all regenerated artefacts identical to archive within 1e-9 (claims/B1-RH-ENUM/runs/260605-migration-revalidation/). Migration-clean: no legacy: pointers remain.
 
 ## Dependencies and hypotheses
 
@@ -71,7 +71,7 @@ the first TSv2 tier action on this claim.
   PASS**, all regenerated JSONs identical to archive within 1e-9, zero
   stale-artefact findings. Reproduction AVAILABLE (8-script chain;
   Math434/436 checkpoint-resumable). **Migration-clean.** Batch record:
-  `claims/B1-RH-ENUM/notes/enumerated-readings-migration-revalidation-260605-v1.0.tex.txt`.
+  `claims/B1-RH-ENUM/notes/enumerated-readings-migration-revalidation-260605-260605-v1.1.tex.txt`.
 
 ## Next required action
 

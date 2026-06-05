@@ -1,0 +1,222 @@
+% SUPERSEDED by beyond-layer-gershgorin-reduction-260605-260605-v1.1.tex.txt (G1 attack: Lemmas C-prime/D + closed-region theorem; T3 -> T4)
+% =============================================================================
+% Title: Pattern-generic Gershgorin reduction of the beyond-layer bound (gate STEP-5B)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; supporting: B1-RH-ENUM, B2-PROPA-HLAYER)
+% Version: v1.0 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: theorem note, T3 proof sketch (two rigorous lemmas + precise reduction; gaps G1, G2 named)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Gate STEP-5B requires a \emph{class-wide} bound: for every admissible
+condensate pattern (not merely the five enumerated readings), the
+beyond-layer correction --- the off-diagonal Bloch channel discarded by the
+isotropic Gaussian--Hartree layer of hypothesis H-LAYER --- must not overcome
+the layer margins of Proposition~A (weakest interval margin
+$+0.00432$, the band figure of Math437 v1.2 after the Math440 precision fix).
+This note (i) proves two pattern-independent lemmas (Gershgorin--Schur row
+bound; second-order log-det envelope with an isotropic trace identity),
+(ii) states the resulting \emph{precise reduction} of STEP-5B to two named
+gaps, and (iii) certifies all entering constants numerically at the
+production anchor, reproducing the Math434-audit calibration. It claims
+NEITHER closure of STEP-5B NOR any tier action on the Reading-H selection:
+the result is registered at T3 (proof sketch with named gaps).
+
+\section*{2. Setting}
+
+Work at the corrected-convention production anchor ($\mu^2 = 0.005$,
+$r_{\mathrm{braz}} = K(q_0) = \mu^2$; claim A1-KERNEL-CONV), with the
+dressed isotropic diagonal
+\[
+D(k) \;=\; \hat r + C\,(k^2 - q_0^2)^2,
+\qquad
+\hat r \;=\; r_R + 2\lambda' I ,
+\qquad
+\lambda' \;=\; 3u + 30 v M ,
+\]
+where $r_R = 0.3045257$, $M = M(\hat r)$ self-consistently
+($M_R = 0.109414$ at $I = 0$), $u = -0.86$, $v = +3.24$, $C = 1$,
+$q_0 = 0.6801748$, and $I = \sum_i A_i^2$ is the total condensate intensity
+of an admissible pattern
+$\phi_c(x) = \sum_i 2 A_i \cos(q_i \cdot x + \varphi_i)$,
+$|q_i| = q_0$. Note $\lambda' = 8.0551 > 0$ at the anchor: the pattern
+Hartree term \emph{raises} the diagonal. The beyond-layer channel is the
+off-diagonal part $W$ of the Bloch Hessian in the plane-wave basis: entries
+$w_t$ at momentum transfers $t \in T(Q) = \{\pm q_i \pm q_j\} \setminus \{0\}$
+with quartic-vertex weights
+\[
+w_t \;=\; \lambda' \!\!\sum_{(i,j):\,\pm q_i \pm q_j = t}\!\! A_i A_j
+\]
+(sextic $5vA^4$-class transfers enter at $O(w_4)$; gap G2). Define
+$X = D^{-1/2} W D^{-1/2}$ and the weighted transfer norm
+$W_{\ell^1}(P) = \sum_{t \neq 0} |w_t|$.
+
+\section*{3. Two pattern-independent lemmas}
+
+\begin{lemma}[Gershgorin--Schur row bound]
+For the symmetric kernel $X$ above, with $D_{\min} = \hat r$,
+\[
+\|X\| \;\le\; \sup_k \sum_{t \neq 0} \frac{|w_t|}{\sqrt{D(k)\,D(k+t)}}
+\;\le\; W_{\ell^1}(P)\; g(\hat r),
+\qquad
+g(\hat r) \;=\; \frac{1}{\hat r} \;+\;
+\frac{1}{\sqrt{\hat r\,(\hat r + 64 C q_0^4)}} .
+\]
+\end{lemma}
+
+\begin{proof}
+The first inequality is the Schur test with unit weights (equivalently the
+Gershgorin row bound for the symmetric matrix truncation of the Bloch
+problem; entries decay quartically in the band index, so the truncation
+limit is harmless). For the second: each transfer term is maximised when
+both legs are on-shell, giving $1/\hat r$; retaining additionally the
+degenerate-endpoint term $1/\sqrt{\hat r(\hat r + 64Cq_0^4)}$ of the
+Math434 LAM geometry makes $g$ an upper envelope for every $|t| \le 2q_0$
+uniformly in the row, since any further leg sits at distance
+$\ge 64Cq_0^4$ above the gap in the quartic well. Summing over transfers
+yields the claim.
+\end{proof}
+
+\begin{lemma}[Second-order log-det envelope; isotropic trace identity]
+If $\|X\| \le a < 1$, the beyond-layer free-energy correction per unit
+volume obeys
+\[
+\bigl|\delta F_{\mathrm{off}}\bigr|
+= \tfrac1{2V}\bigl|\operatorname{tr}\bigl(\ln(\mathbf 1 + X) - X\bigr)\bigr|
+\;\le\; \frac{\operatorname{tr} X^2 / V}{4\,(1-a)},
+\qquad
+\frac{\operatorname{tr} X^2}{V}
+= \sum_{t \neq 0} |w_t|^2\, J(|t|),
+\]
+\[
+J(|t|) \;=\; \int \!\frac{d^3k}{(2\pi)^3}\,
+\frac{1}{D(k)\,D(k+t)} ,
+\]
+which depends on the pattern only through the moduli $|t|$ (isotropy of
+$D$).
+\end{lemma}
+
+\begin{proof}
+Eigenvalues $x_i$ of $X$ lie in $[-a, a]$; the scalar Taylor remainder
+gives $|\ln(1+x) - x| \le x^2 / (2(1-a))$ on that interval; summing over
+the spectrum and dividing by $2V$ gives the first display (the $\tfrac12$
+from the Gaussian free energy). The trace identity is direct:
+$\operatorname{tr} X^2 = \sum_k \sum_t w_t^2 / (D(k) D(k{+}t))
+\to V \sum_t w_t^2 J(|t|)$, and $J$ depends only on $|t|$ because $D$ is a
+function of $|k|$ alone. The first off-diagonal order
+$\operatorname{tr} X$ vanishes (no $t = 0$ entry in $W$).
+\end{proof}
+
+\section*{4. The reduction (precise form of STEP-5B)}
+
+\begin{proposition}[Pattern-generic reduction]
+Let $P$ be any admissible pattern with
+$a(P) := W_{\ell^1}(P)\, g(\hat r(I)) < 1$. Then
+\[
+\bigl|\delta F_{\mathrm{off}}(P)\bigr|
+\;\le\;
+\frac{W_{\ell^1}(P)^2 \; J_{\max}}{4\,\bigl(1 - a(P)\bigr)},
+\qquad
+J_{\max} := \max_{0 < |t| \le 2q_0} J(|t|).
+\]
+Consequently STEP-5B holds on the region
+$\{P : \text{RHS} < \text{interval margin}\}$, and full closure of the gate
+reduces to exactly two gaps:
+\begin{itemize}
+\item \textbf{G1 (weighted resonant $\ell^1$ cap)}: a class-wide bound on
+$W_{\ell^1}(P)$ over the threat region. The Hartree self-penalty
+($\hat r = r_R + 2\lambda' I$) is self-limiting but insufficient alone
+($a \to 6{+}$ as $I \to \infty$ at fixed mode count); the cap must combine
+(i) the layer's own large-$I$ positivity (Math424 brackets confine the
+threat region to bounded $I$) and (ii) shell-resonance combinatorics
+limiting how much $\ell^1$ weight can sit at small denominators.
+\item \textbf{G2 (vertex bookkeeping completeness)}: sextic
+$O(w_4)$-class transfers, two-shell cross transfers, and the
+$\sigma(x)$-inhomogeneity channel (Math429 geometry) folded into the same
+envelope.
+\end{itemize}
+\end{proposition}
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.0.1;
+20/20 self-test asserts PASS; artefact
+\url{runs/B5-BEYOND-LAYER-BOUND/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+anchor $r_R$, $M_R$, $\lambda'$, $64Cq_0^4$ & $0.3045257$, $0.109414$, $8.0551$, $13.698$ & match locked constants \\
+Math434 calibration ($A = 0.01$): $\hat r'$, row terms & $0.30613$; $2.624{\times}10^{-3} + 3.879{\times}10^{-4}$ & reproduces $2.633{\times}10^{-3} + 3.893{\times}10^{-4}$; $\|X\| \le 3.1{\times}10^{-3}$ \\
+$J(|t|)$, $|t|/q_0 \in \{0.5, 1, \sqrt2, \sqrt3, 2\}$ & $0.273, 0.218, 0.169, 0.133, 0.104$ & grid-refinement drift $< 6{\times}10^{-6}$; shell estimate $0.161$ brackets $J_{\max}$ \\
+calibrated box $n_{\mathrm{res}}{=}12$, $I = 4{\times}10^{-4}$ & $a = 0.143$, $\delta \le 2.38{\times}10^{-4}$ & margin ratio $18.2\times$ \\
+calibrated box $n_{\mathrm{res}}{=}12$, $I = 10^{-3}$ & $a = 0.347$, $\delta \le 1.95{\times}10^{-3}$ & margin ratio $2.2\times$ \\
+LAM second order & $\delta_{\mathrm{LAM}} = 6.7{\times}10^{-8}$ & margin$/64{,}000$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the LAM row terms agree with the
+Math434-audit figures to $\le 4{\times}10^{-6}$; $J$ obeys the analytic
+shell estimate $q_0/(8\pi \hat r^{3/2}\sqrt{C}) = 0.161$ within a factor
+$1.7$; dimensions: $[w] = [\hat r]$, $[J] = [\hat r]^{-2}\,[k]^3$
+consistent with $\delta F$ per unit volume.
+
+The CALIBRATED boxes are stated regions, not derived caps --- deriving the
+cap is exactly G1.
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$W_{\ell^1}$ grows without bound in the mode
+number $n$, so the reduction proves nothing class-wide.''}
+VALID-with-mitigation: this is precisely gap G1, registered rather than
+hidden. Mitigations already in hand: the threat region has bounded $I$
+(layer positivity brackets), the Hartree term raises $\hat r$ with $I$,
+and thin-spread patterns lose resonance gain in the layer functional
+itself (competition-closure generic-phase principle); none of these is yet
+assembled into a theorem, hence T3.
+\item[($\beta$)] \emph{``$J(|t|)$ is numerical only.''} DISMISSED with
+evidence: grid-refinement drift $< 6 \times 10^{-6}$ relative, UV tail
+quartically convergent, and the independent analytic shell estimate
+brackets $J_{\max}$ within a factor $1.7$.
+\item[($\gamma$)] \emph{``The comparison uses the global minimum margin,
+but Proposition~A's floors are interval-wise.''} VALID-with-mitigation:
+using the weakest interval margin $+0.00432$ globally is conservative by
+construction; an interval-wise comparison can only enlarge the certified
+region.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND (serving gate STEP-5B)
+Precise statement:       Lemmas A/B (rigorous) reduce STEP-5B to the
+                         explicit bound |dF_off| <= W_l1^2 Jmax/(4(1-a))
+                         with gaps G1 (class-wide W_l1 cap) and G2
+                         (vertex bookkeeping) named; constants certified
+                         at the production anchor (20/20 asserts).
+Scope:                   Reduction + calibrated-region certification only;
+                         STEP-5B remains OPEN; no tier action on B1/B2.
+Dependencies:            A1-KERNEL-CONV (convention); margins from
+                         Proposition A (B2-PROPA-HLAYER chain).
+Evidence grade:          ANALYTIC (lemmas) + EXECUTED (constants)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 20/20 PASS; result.json under
+                         runs/B5-BEYOND-LAYER-BOUND/260605-gershgorin-reduction/
+Falsification gate:      An admissible pattern inside a certified box whose
+                         exact off-diagonal correction exceeds the Lemma-B
+                         envelope, or any pattern undercutting the +0.00432
+                         band margin at the anchor.
+Tier before / after:     (new claim) -- / T3
+No-overclaim statement:  This note does NOT close STEP-5B and does NOT
+                         promote Reading-H; class-wide validity awaits G1+G2.
+Next required action:    G1 -- assemble the I-cap (layer positivity) with
+                         shell-resonance combinatorics into a W_l1 theorem.
+\end{verbatim}

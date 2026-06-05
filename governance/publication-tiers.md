@@ -24,7 +24,7 @@ derivation rules — never by parallel copies.
   - English-only.
   - No claim text stronger than its registered tier.
   - Large binaries excluded by `.gitignore`; numerical evidence is preserved as
-    JSON (`runs/<claim-id>/result.json`) plus the script that regenerates it.
+    JSON (`claims/<ID>/runs/result.json`) plus the script that regenerates it.
   - `CLAIMS.md` and any future generated index are derived files; their
     generators are in `verification/scripts/`; hand-editing is a defect.
 

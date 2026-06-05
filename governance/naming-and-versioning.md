@@ -129,7 +129,7 @@ different mechanism, because code is imported and executed:
   lineage anchor and never changes (same semantics as the document two-date
   rule).
 - **Results are immutable**: a run is never edited — a new run gets a new
-  `runs/<claim-id>/<YYMMDD>-<descriptive-tag>/` folder. Every artefact records
+  `claims/<ID>/runs/<YYMMDD>-<descriptive-tag>/` folder. Every artefact records
   the producing scripts' `__version__` values (and git commit when available),
   so result → code-version → code-history is a complete provenance chain
   (`governance/verification-standard.md` §4).
@@ -144,7 +144,7 @@ different mechanism, because code is imported and executed:
 
 ## 6. Runs
 
-`runs/<claim-id>/<YYMMDD>-<descriptive-tag>/result.json` (+ git-ignored bulk
+`claims/<ID>/runs/<YYMMDD>-<descriptive-tag>/result.json` (+ git-ignored bulk
 files). The folder name's claim ID must exist; the tag is descriptive English
 words (e.g. `260605-migration-revalidation`), never a bare internal code.
 

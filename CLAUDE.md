@@ -48,7 +48,7 @@ status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
   (≥3 concrete objections, each DISMISSED/VALID-with-mitigation/UPHELD) and
   respect for the T7 prohibition list (GOVERNANCE.md §5).
 - Every numerical claim needs a reproducible script + self-test asserts + JSON
-  artefact under `runs/<claim-id>/` before it is cited as evidence.
+  artefact under `claims/<ID>/runs/` before it is cited as evidence.
 
 ## 4. Commit discipline
 

@@ -20,4 +20,4 @@ folder structure). `archive/legacy/INDEX.md` is the per-tag lookup table.
 
 Nothing here is edited — ever. Corrections happen in `theory/` notes or claim
 cards that cite these files. Fresh re-validation artefacts live under
-`runs/<claim-id>/`, never here.
+`claims/<ID>/runs/`, never here.

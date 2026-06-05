@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|
 | Math426 | G4 kernel-convention reconciliation + AddA + AddB | `scripts/Math426_g4_kernel_reconciliation.py` | `artefacts/Math426/g4_kernel_reconciliation.json` | A1 | batch 1 (2026-06-05) |
 | Math435 | G6 corrected-variable recomputation cascade v1.0, v1.1 | `scripts/Math435_g6_corrected_variable_cascade.py` | `artefacts/Math435/g6_corrected_cascade.json`, `sweep_checkpoint.json` | A1 | batch 1 (2026-06-05) |
-| Math437 | Step-5 pattern-universal restoration (isotropic layer) v1.0, v1.1, v1.2 | `scripts/Math437_step5_class_closure.py` | `artefacts/Math437/step5_class_closure.json` (STALE-ARTEFACT: pre-repair verdict string; numerics valid — canonical fresh artefact in `runs/B2-PROPA-HLAYER/260605-migration-revalidation/`) | B1, B2 | batch 1 (2026-06-05) |
+| Math437 | Step-5 pattern-universal restoration (isotropic layer) v1.0, v1.1, v1.2 | `scripts/Math437_step5_class_closure.py` | `artefacts/Math437/step5_class_closure.json` (STALE-ARTEFACT: pre-repair verdict string; numerics valid — canonical fresh artefact in `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/`) | B1, B2 | batch 1 (2026-06-05) |
 | Math440 | §15.5 consolidated audit, second wave (PARTIAL) v1.0 | `scripts/Math440_audit_secondwave_recheck.py` | `artefacts/Math440/audit_recheck.json` | B2 | batch 1 (2026-06-05) |
 | Math441 | F10 second-look of Math437 v1.1 repair (PARTIAL) v1.0 | — | — | B2 | batch 1 (2026-06-05) |
 | Math442 | F10 closure: Math437 v1.2 CERTIFIED v1.0 | — | — | B1, B2 | batch 1 (2026-06-05) |
@@ -38,4 +38,4 @@ python Math440_audit_secondwave_recheck.py      # claims 75/75
 
 (Scripts write their JSON output to a `Runs/` directory relative to the
 current working directory; compare against `artefacts/` and the canonical
-fresh artefacts under `runs/<claim-id>/260605-migration-revalidation/`.)
+fresh artefacts under `claims/<ID>/runs/260605-migration-revalidation/`.)

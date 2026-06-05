@@ -20,7 +20,7 @@ What is claimed and what is explicitly not claimed (pinned scope string for T5).
 
 ## Evidence
 
-Grades + pointers (theory note, scripts, `runs/<ID>/...`, `legacy:` paths).
+Grades + pointers (theory note, scripts, `claims/<ID>/runs/...`, `legacy:` paths).
 
 ## Falsifier
 

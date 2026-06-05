@@ -30,11 +30,10 @@ The operating principle of this repository:
 | `GOVERNANCE.md` | Operating constitution (tiers, gates, registration rules) | P1 |
 | `REVIEWING.md` | How to review or attack TECT in 30 minutes | P1 |
 | `governance/` | Detailed binding policies | P1 |
-| `claims/` | One folder per claim: card + `status.json` + working proof notes (`notes/`) — the verification package | P1 |
+| `claims/` | One folder per claim: card + `status.json` + proof notes (`notes/`) + run artefacts (`runs/`) — the complete verification package | P1 |
 | `theory/` | Layer-2 synthesis: consolidated sector expositions citing claim IDs at registered tiers | P1 |
 | `verification/` | Claim linter, verification scripts, tests | P1 |
 | `codes/` | Numerical codes by domain (vacuum, topology, gravity, flavor, cosmology) | P1 |
-| `runs/` | Run artefacts (JSON results tracked; large binaries ignored) | P1 |
 | `predictions/` | Prediction ledger with input-freeze protocol | P1 |
 | `negative-results/` | Registry of failed branches and retracted claims | P1 |
 | `reviews/` | External review rounds and errata | P1 |
