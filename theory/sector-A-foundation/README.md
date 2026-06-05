@@ -1,5 +1,7 @@
-# sector-A-foundation
+# sector-A-foundation — synthesis
 
-Microscopic foundation - fields, kernel, regularisation, counterterms, PDE well-posedness.
+Microscopic foundation.
 
-Notes follow `governance/naming-and-versioning.md` §3 and carry the §6 result footer.
+This folder holds the consolidated `<descriptive-slug>-synthesis-<YYMMDD>-vN.M.md` documents for the sector
+(see `theory/README.md`). Working proof notes live on the claim cards:
+`claims/<ID>/notes/`. No synthesis document exists yet for this sector.

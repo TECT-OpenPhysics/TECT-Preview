@@ -30,8 +30,11 @@ status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
   incidents). After writing, verify from the shell: file size + tail + linter
   (`python -c "import json,..."` for JSON).
 - Never create files at the repository root beyond the canonical set
-  (README, GOVERNANCE, ROADMAP, REVIEWING, CLAIMS, CHANGELOG, CLAUDE.md,
-  .gitignore).
+  (README, GOVERNANCE, ROADMAP, REVIEWING, CLAIMS, CATALOG, CHANGELOG,
+  CLAUDE.md, .gitignore).
+- `CATALOG.md` + `verification/catalog.json` are generated — never hand-edit.
+  Regenerate with `python verification/scripts/build_catalog.py` after any
+  file add/move/version; CI checks sync.
 
 ## 3. Claim-first discipline
 

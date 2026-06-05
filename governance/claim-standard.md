@@ -9,8 +9,17 @@ claims/<ID>/
   claim.md      # human-readable card (statement, scope, falsifier, history,
                 # devil's-advocate section, no-overclaim statement)
   status.json   # machine-readable single source of truth
+  notes/        # working proof notes for this claim, versioned re-issue
+                # (<descriptive-slug>-<YYMMDD-first>[-<YYMMDD-this-version>]-
+                #  v<major>.<minor>.md; two-date rule from v1.1; all versions
+                #  kept; naming-and-versioning.md §3)
   (optional) assumptions.md, proof-sketch.md — for large cards
 ```
+
+The claim folder is the full verification package in one place: card +
+machine state + proof notes. Run artefacts stay in `runs/<ID>/` (size), shared
+code in `codes/` (reuse), migrated originals in `archive/legacy/` (immutable);
+all are linked from the card.
 
 `CLAIMS.md` at the root is **generated** from all `status.json` files by
 `verification/scripts/lint_claims.py --render`. Hand-editing is forbidden.
@@ -18,6 +27,9 @@ claims/<ID>/
 ## 2. Claim IDs
 
 - Format: `<Sector><n>-<SLUG>` (e.g. `B1-RH-ENUM`). Uppercase, hyphenated.
+- Slugs SHOULD be fully descriptive English words (`B5-BEYOND-LAYER-BOUND`,
+  not `B5-S5B`) so the ID is readable standalone; the 2026-06-05 seeded IDs
+  are grandfathered.
 - **Immutable once issued.** Never renumbered, never reused — including after
   refutation (the ID lives on in `negative-results/`).
 - Before creating an ID, check existence: `ls claims/ | grep '^<Sector>'`.

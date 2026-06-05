@@ -8,23 +8,23 @@
   "legacy_pillar": [],
   "tier_legacy": null,
   "legacy_evidence": [
-    "archive/legacy/Docs/math/TECT-Math426-G4-Kernel-Convention-Reconciliation.tex.txt",
-    "archive/legacy/Docs/math/TECT-Math426-AddA-Audit-Acceptance-Body-Corrections-G1prime-Spec.tex.txt",
-    "archive/legacy/Docs/math/TECT-Math426-AddB-ThirdPass-Body-Summaries-and-AddE-Citation-Rule.tex.txt",
-    "archive/legacy/Docs/math/TECT-Math435-G6-Corrected-Variable-Recomputation-Cascade-260604-v1.1.tex.txt",
-    "archive/legacy/Codes/supplementary/Math426_g4_kernel_reconciliation.py",
-    "archive/legacy/Codes/supplementary/Math435_g6_corrected_variable_cascade.py",
-    "archive/legacy/Runs/math/Math426/g4_kernel_reconciliation.json",
-    "archive/legacy/Runs/math/Math435/g6_corrected_cascade.json"
+    "archive/legacy/notes/Math426/TECT-Math426-G4-Kernel-Convention-Reconciliation.tex.txt",
+    "archive/legacy/notes/Math426/TECT-Math426-AddA-Audit-Acceptance-Body-Corrections-G1prime-Spec.tex.txt",
+    "archive/legacy/notes/Math426/TECT-Math426-AddB-ThirdPass-Body-Summaries-and-AddE-Citation-Rule.tex.txt",
+    "archive/legacy/notes/Math435/TECT-Math435-G6-Corrected-Variable-Recomputation-Cascade-260604-v1.1.tex.txt",
+    "archive/legacy/scripts/Math426_g4_kernel_reconciliation.py",
+    "archive/legacy/scripts/Math435_g6_corrected_variable_cascade.py",
+    "archive/legacy/artefacts/Math426/g4_kernel_reconciliation.json",
+    "archive/legacy/artefacts/Math435/g6_corrected_cascade.json"
   ],
   "t7_candidate": false,
   "reproduction": {
-    "command": "cd archive/legacy/Codes/supplementary && python Math426_g4_kernel_reconciliation.py && python Math435_g6_corrected_variable_cascade.py",
+    "command": "cd archive/legacy/scripts && python Math426_g4_kernel_reconciliation.py && python Math435_g6_corrected_variable_cascade.py",
     "expected": "claims: 10/10 PASS then claims: 101/101 PASS (both exit 0); regenerated JSONs match archived artefacts within rel_tol 1e-9",
     "status": "AVAILABLE"
   },
   "last_review": "2026-06-05",
-  "notes": "M1 re-validated 2026-06-05: 111/111 self-test asserts pass in a fresh environment; archived artefacts reproduced exactly (runs/A1-KERNEL-CONV/260605-m1-reval/). Migration-clean: no legacy: pointers remain.",
+  "notes": "M1 re-validated 2026-06-05: 111/111 self-test asserts pass in a fresh environment; archived artefacts reproduced exactly (runs/A1-KERNEL-CONV/260605-migration-revalidation/). Migration-clean: no legacy: pointers remain.",
   "id": "A1-KERNEL-CONV",
   "title": "Production-kernel convention and G6 recomputation cascade",
   "sector": "A",

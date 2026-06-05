@@ -60,9 +60,11 @@ Exit code 0 iff STATUS PASS. `run_all_claims.py` iterates over every claim with
 ## 4. Run recording
 
 Every script that produces evidence writes
-`runs/<claim-id>/<YYMMDD>-<tag>/result.json` containing: config, constants
-check, per-step time series where applicable, summary, seeds, environment, and
-per-assert pass/fail with expected/actual values. Large binaries are
+`runs/<claim-id>/<YYMMDD>-<descriptive-tag>/result.json` containing: config,
+constants check, per-step time series where applicable, summary, seeds,
+environment, **the producing scripts' `__version__` values (+ git commit when
+available)**, and per-assert pass/fail with expected/actual values. Runs are
+immutable: corrections produce a new run folder, never an edit. Large binaries are
 git-ignored; the JSON plus the script must suffice to regenerate them. A run
 cited as evidence without its JSON artefact is not citable.
 
@@ -98,7 +100,26 @@ long-running numerical verification runs nightly or on demand, with artefacts
 uploaded. The README badge reflecting CI status is part of the public
 verification surface.
 
-## 8. External review interface
+## 8. Derived catalog — the "no primary database" rule
+
+The repository needs database-grade querying (every artefact with versions,
+dates, claim links, lifecycle) but MUST NOT acquire a second source of truth.
+Binding rule: any catalog/index/database over the corpus is a **derived
+index** generated from the files (+ `claims/*/status.json` + git history) and
+is disposable — if wrong, delete and regenerate. Authoritative stores other
+than the files and git are forbidden (this is the same single-source-of-truth
+principle that generates `CLAIMS.md` and `BY-CLAIM.md`, and it removes the
+legacy mirror-drift failure class by construction).
+
+Implementation: `verification/scripts/build_catalog.py` emits `CATALOG.md`
+(human view, grouped by artefact kind) and `verification/catalog.json`
+(machine twin: path, kind, claim links, theory tag, two-date fields, version,
+lifecycle incl. SUPERSEDED detection, size, sha256/12). Regenerate after any
+file add/move/version bump; CI runs `--check`. The JSON loads directly into
+pandas/SQLite for ad-hoc queries; if the corpus outgrows JSON (>10^4 entries),
+the generator may emit SQLite instead — the derived-index rule is unchanged.
+
+## 9. External review interface
 
 `REVIEWING.md` is the entry point. Review rounds are archived under
 `reviews/<YYYY-MM-DD>-<reviewer-or-topic>/` with: what was reviewed (commit

@@ -16,3 +16,10 @@ def test_claims_md_in_sync():
     r = subprocess.run([sys.executable, str(LINT), "--render", "--check"],
                        capture_output=True, text=True)
     assert r.returncode == 0, r.stdout + r.stderr
+
+
+def test_catalog_in_sync():
+    cat = REPO / "verification" / "scripts" / "build_catalog.py"
+    r = subprocess.run([sys.executable, str(cat), "--check"],
+                       capture_output=True, text=True)
+    assert r.returncode == 0, r.stdout + r.stderr

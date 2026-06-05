@@ -17,15 +17,20 @@
    `archive/MIGRATION-LEDGER.md` with a disposition. Files never migrated will
    eventually get a terminal disposition (`DROPPED` or `COLD-ARCHIVE`) so that
    the ledger converges to a complete account of the legacy corpus.
-4. **Traceability is two-way.** Archive copies keep original filenames; new
-   notes cite their archive sources; the ledger links both directions.
+4. **Traceability is two-way.** Archive copies keep original filenames and
+   live in the per-tag layout `archive/legacy/{notes/<TheoryTag>/, scripts/,
+   artefacts/<TheoryTag>/}` (all versions of a tag together; scripts flat so
+   sibling imports stay runnable). The ORIGINAL legacy path of every file is
+   recorded in its ledger row; `archive/legacy/INDEX.md` is the per-tag
+   lookup table. New notes cite their archive sources; the ledger links both
+   directions.
 
 ## 2. Dispositions
 
 | Disposition | Meaning |
 |---|---|
-| MIGRATED-VERBATIM | copied to `archive/legacy/<path>`; cited as evidence as-is |
-| REWRITTEN | modernised into `theory/...` (Markdown+LaTeX, TSv2 footer); archive copy kept |
+| MIGRATED-VERBATIM | copied verbatim into the per-tag layout under `archive/legacy/`; cited as evidence as-is |
+| REWRITTEN | modernised into `claims/<ID>/notes/...` (Markdown+LaTeX, TSv2 footer); archive copy kept |
 | SUPERSEDED | content replaced by a newer TECT result; archive copy kept for history |
 | DROPPED | not carried forward (reason recorded) |
 | COLD-ARCHIVE | retained only in the frozen legacy repo; no copy here |

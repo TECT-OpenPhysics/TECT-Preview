@@ -5,23 +5,30 @@ Dispositions: MIGRATED-VERBATIM / REWRITTEN / SUPERSEDED / DROPPED /
 COLD-ARCHIVE. A claim is migration-clean when its `legacy_evidence` has no
 unresolved `legacy:` pointer.
 
-## M1 batch 1 — Sector-B evidence chain (2026-06-05)
+**Target layout** (since 2026-06-05 reorganisation): migrated files live under
+`archive/legacy/` in the per-tag layout — `notes/<TheoryTag>/` (all versions
+together), `scripts/` (flat, runnable as-is), `artefacts/<TheoryTag>/`. The
+"Legacy path" column below records the ORIGINAL path in the legacy repository;
+the target is determined by file kind + tag. Lookup table:
+`archive/legacy/INDEX.md`.
+
+## Migration batch 1 — Sector-B evidence chain (plan phase M1, 2026-06-05)
 
 Re-validation: all four §6.3.8 verification scripts re-run in a fresh sandbox
 environment (python 3.12, numpy 2.2.6) — **277/277 self-test asserts PASS**;
 regenerated JSONs match archived artefacts within rel_tol $10^{-9}$
-(`runs/A1-KERNEL-CONV/260605-m1-reval/`, `runs/B2-PROPA-HLAYER/260605-m1-reval/`).
+(`runs/A1-KERNEL-CONV/260605-migration-revalidation/`, `runs/B2-PROPA-HLAYER/260605-migration-revalidation/`).
 One finding: **STALE-ARTEFACT** — the archived Math437 `step5_class_closure.json`
 predates the R1 repair (v1.0-era verdict string; numerics identical); the fresh
 artefact under `runs/` is canonical for TSv2 citation. Convention check: all
 items are themselves the corrected-convention ($r_{\rm braz}=K(q_0)=\mu^2$)
 lineage — no stale-convention content. Sign-off: migration directed in-session
 2026-06-05; **formal operator sign-off for B2-feeding rows: PENDING**.
+Batch record note: `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-v1.0.md`.
 
-All targets are under `archive/legacy/` at the original relative path; all
-dispositions in this batch are MIGRATED-VERBATIM.
+All dispositions in this batch are MIGRATED-VERBATIM.
 
-| Legacy path | Consuming claims | Re-validation | Sign-off |
+| Legacy path (original) | Consuming claims | Re-validation | Sign-off |
 |---|---|---|---|
 | `Docs/math/TECT-Math426-G4-Kernel-Convention-Reconciliation.tex.txt` | A1 | script re-run 10/10 | n/a (T5) |
 | `Docs/math/TECT-Math426-AddA-Audit-Acceptance-Body-Corrections-G1prime-Spec.tex.txt` | A1 | chain addendum (text) | n/a (T5) |
@@ -53,8 +60,9 @@ dispositions in this batch are MIGRATED-VERBATIM.
 |---|---|---|---|
 | Ledger seeding | legacy `Docs/status/TOE-FACT-SHEET.md` (snapshot 2026-06-05, Math442 state) | 17 claim cards under `claims/`, translated per `governance/tier-system.md` §4 | 2026-06-05 |
 | Hypothesis transcription | Math437 v1.2 §Hypotheses | H-LAYER, H-A0 verbatim entries in `claims/GATES.md` | 2026-06-05 |
+| Archive reorganisation | flat original-path mirror | per-tag layout (`notes/<Tag>/`, `scripts/`, `artefacts/<Tag>/`) + `INDEX.md`; all card paths updated; scripts re-verified runnable post-move (10/10) | 2026-06-05 |
 
-## M1 queue (updated)
+## Migration queue (plan phase M1; updated 2026-06-05)
 
 1. ~~Sector-B chain (Math426/435/437/440/441/442 + scripts + JSONs)~~ — **DONE
    (batch 1)**. A1, B2 migration-clean; B1 partially resolved.

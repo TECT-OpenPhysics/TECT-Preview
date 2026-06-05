@@ -14,6 +14,8 @@ jobs:
         run: python verification/scripts/lint_claims.py
       - name: Check CLAIMS.md is in sync
         run: python verification/scripts/lint_claims.py --render --check
+      - name: Check catalog is in sync
+        run: python verification/scripts/build_catalog.py --check
       - name: Run verification tests
         run: |
           pip install pytest

@@ -24,8 +24,8 @@ CLOSED@ESTIMATOR-GRADE within enumerated ensembles at the corrected canonical op
 Grades: ESTIMATOR, EXECUTED. Evidence pointers (`archive/...` = migrated + re-validated; `legacy:` = pending):
 
 - `legacy:Math431-HEX chain (enumerated-ensemble estimator tables; M1 migration pending)`
-- `archive/legacy/Docs/math/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`
-- `archive/legacy/Docs/math/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt`
+- `archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`
+- `archive/legacy/notes/Math442/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt`
 
 Legacy pillar(s): none · Legacy tier label: T5 CLOSED@ESTIMATOR-GRADE (legacy scale)
 
@@ -52,6 +52,7 @@ the first TSv2 tier action on this claim.
 - 2026-06-05 — Seeded from the legacy `TOE-FACT-SHEET.md` snapshot (last
   theory tag Math442), translated per `governance/tier-system.md` §4.
 - 2026-06-05 — Partial M1 resolution: Math437 v1.2 / Math442 pointers resolved to archive. Math431-HEX estimator chain remains `legacy:` — NOT migration-clean.
+- 2026-06-05 — Archive reorganised to per-tag layout; resolved paths updated.
 
 ## Next required action
 
