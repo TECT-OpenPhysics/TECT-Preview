@@ -1,0 +1,656 @@
+{
+ "theory_tag": "Math440",
+ "date": "2026-06-05",
+ "role": "independent-auditor recheck (Section 15.5)",
+ "constants": {
+  "u": -0.86,
+  "v": 3.24,
+  "r": 0.005,
+  "q0": 0.6801747616,
+  "r_R": 0.30452570866744433,
+  "M_R": 0.10941432918723439,
+  "M_c": 0.026543209876543204,
+  "M_plus": 0.051071995662105595,
+  "dip_stated": 0.008520554698216732,
+  "dip_clean": 0.00504921759894325
+ },
+ "findings": {
+  "F1": "Region-I boundary defect: rhat0 < 0 on (M_c, M_+); repaired by penalty_bound_at_Mp",
+  "F2": "Lemma-2 kappa>=0 premise false on (M_-, M_c); stated constant survives (coupled worst ~0.00439); clean auditor bound |u|^3/(12 v^2)",
+  "F5": "Math438 m31=432 record-not-assert (6.3.8 gap); independently confirmed here"
+ },
+ "claims": [
+  {
+   "name": "wick_4_p2s",
+   "expected": 6,
+   "actual": 6,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "wick_4_s2",
+   "expected": 3,
+   "actual": 3,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "wick_6_p4s",
+   "expected": 15,
+   "actual": 15,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "wick_6_p2s2",
+   "expected": 45,
+   "actual": 45,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "wick_6_s3",
+   "expected": 15,
+   "actual": 15,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "ueff_identity",
+   "expected": -0.4614799999999999,
+   "actual": -0.4614799999999999,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": "u_eff = u + 10 v M from independent Wick bookkeeping"
+  },
+  {
+   "name": "kappahat_identity",
+   "expected": -0.019381305999999997,
+   "actual": -0.019381305999999997,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": "kappa-hat = <psiKpsi> + 3uM + 15vM^2 (on-shell)"
+  },
+  {
+   "name": "no_odd_t_terms_at_layer",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "structural: odd dphi moments vanish; decomposition complete at the isotropic layer"
+  },
+  {
+   "name": "M_plus",
+   "expected": 0.051071995662105595,
+   "actual": 0.051071995662105595,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Mc",
+   "expected": 0.02654320987654321,
+   "actual": 0.026543209876543204,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "ueff_Mp_closed",
+   "expected": 0.794732659452221,
+   "actual": 0.7947326594522216,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "dip_stated",
+   "expected": 0.008520554698216732,
+   "actual": 0.008520554698216732,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "dip_clean_auditor",
+   "expected": 0.00504921759894325,
+   "actual": 0.00504921759894325,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "|u|^3/(12 v^2): auditor closed-form coupled bound, valid for ALL M <= |u|/(5v) WITHOUT the kappa>=0 premise"
+  },
+  {
+   "name": "Mplus_below_u_over_5v",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "M_+ = 0.051072 < |u|/(5v) = 0.053086: the clean bound covers the whole sub-M_+ range"
+  },
+  {
+   "name": "rhat0_negative_at_Mc",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "rhat0(M_c) = -0.0292407 < 0: the note's Region-I 'all coefficients positive' claim FAILS on (M_c, M_+) and Lemma-2's 'kappa-hat >= 0' FAILS on (M_-, M_c) -- finding F1/F2"
+  },
+  {
+   "name": "rhat0_min_value",
+   "expected": -0.02924074074074073,
+   "actual": -0.029240740740740727,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "min over M of rhat0 = r - 3u^2/(20v), at M = M_c exactly"
+  },
+  {
+   "name": "coupled_worst_dip",
+   "recorded": {
+    "value": 0.004393014544268575,
+    "at_M": 0.0
+   },
+   "detail": "sup over M of the honest (kappa-hat = rhat0(M)) worst dip",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "value": 0.004393014544268575,
+    "at_M": 0.0
+   }
+  },
+  {
+   "name": "coupled_dip_below_clean_bound",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "0.004393 <= 0.005049"
+  },
+  {
+   "name": "coupled_dip_below_stated_bound",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "0.004393 <= 0.008521: the STATED Lemma-2 constant survives although its kappa>=0 justification does not"
+  },
+  {
+   "name": "worst_dip_at_M_zero_neighborhood",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "worst at M = 0.00000 (hand prediction: M = 0, value ~ 0.004393)"
+  },
+  {
+   "name": "worst_dip_hand_value",
+   "expected": 0.004393,
+   "actual": 0.004393014544268575,
+   "tol": 0.0002,
+   "passed": true,
+   "detail": "auditor hand sample at M = 0 (cubic critical point)"
+  },
+  {
+   "name": "band_dip_below_9p3e-4",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "(M_c, M_+) band worst dip 9.249e-04 <= 9.26e-4 (hand bound |rhat0(Mc)|^{3/2}/(3 sqrt v))"
+  },
+  {
+   "name": "penalty_bound_at_Mc",
+   "expected": 0.0092199,
+   "actual": 0.0092198664169368,
+   "tol": 5e-06,
+   "passed": true,
+   "detail": "DeltaF0(r_c) >= this (DeltaI >= M_c (r_c - r_R); anchors only)"
+  },
+  {
+   "name": "penalty_bound_at_Mp",
+   "expected": 0.005246,
+   "actual": 0.0052459635246063716,
+   "tol": 5e-06,
+   "passed": true,
+   "detail": "DeltaF0(m_+) >= this (DeltaI >= M_+ (m_+ - r_R); anchors only)"
+  },
+  {
+   "name": "regionII_penalty_beats_stated_dip",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "0.009220 > 0.008521 (margin 1.082x) -- hand-rigorous Region-II closure WITHOUT numerical Delta0"
+  },
+  {
+   "name": "midband_penalty_beats_band_dip",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "0.005246 > 9.249e-04 (margin 5.7x) -- hand-rigorous repair of the Region-I boundary defect F1"
+  },
+  {
+   "name": "regionII_penalty_beats_coupled_dip",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "0.009220 > 0.004393 (margin 2.10x)"
+  },
+  {
+   "name": "auditor_gap_anchors",
+   "recorded": {
+    "r_R": 0.30998298366469235,
+    "M_R": 0.11008907766665683
+   },
+   "detail": "independent GL-log quadrature",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "r_R": 0.30998298366469235,
+    "M_R": 0.11008907766665683
+   }
+  },
+  {
+   "name": "auditor_rR_within_scheme_envelope",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "auditor gap 0.309983 vs production 0.304526 -- the recorded measure-convention systematic class (Math437 H-A0)"
+  },
+  {
+   "name": "auditor_r_c",
+   "recorded": 24.354518432542168,
+   "detail": "M_aud(r_c) = 43/1620",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": 24.354518432542168
+  },
+  {
+   "name": "auditor_rc_near_Math437",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "auditor r_c = 24.3545 vs Math437 24.3531"
+  },
+  {
+   "name": "auditor_Delta0",
+   "recorded": 0.12647294280349325,
+   "detail": "independent-quadrature Region-II inf",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": 0.12647294280349325
+  },
+  {
+   "name": "auditor_Delta0_vs_Math437",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "auditor Delta0 = 0.126473 vs Math437 0.126465 (scheme envelope; checklist item 1d)"
+  },
+  {
+   "name": "auditor_Delta0_exceeds_PB",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "full Delta0 >> the hand floor, as expected"
+  },
+  {
+   "name": "auditor_A0_zero_at_gap",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dF0(gap) = 0.00e+00"
+  },
+  {
+   "name": "flank_sign_argument",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dPsi/dm = (1/2) M'(m) [rhat0(M(m)) - m] > 0 on m > r_R: right flank monotone INCREASING, analytically"
+  },
+  {
+   "name": "hexB_p2_0",
+   "expected": 6,
+   "actual": 6,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p2_onshell",
+   "expected": 2,
+   "actual": 2,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p2_sqrt3",
+   "expected": 2,
+   "actual": 2,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p2_2q0",
+   "expected": 1,
+   "actual": 1,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p4_0",
+   "expected": 90,
+   "actual": 90,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p4_onshell",
+   "expected": 60,
+   "actual": 60,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p4_sqrt3_48_not_44",
+   "expected": 48,
+   "actual": 48,
+   "tol": 0,
+   "passed": true,
+   "detail": "the corrected value; the 44 error class = misreading N((-1,-2)) = 3 as 7 (auditor reproduced then fixed it by hand)"
+  },
+  {
+   "name": "hexB_p4_2q0",
+   "expected": 34,
+   "actual": 34,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p2_sum",
+   "expected": 36,
+   "actual": 36,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_p4_sum",
+   "expected": 1296,
+   "actual": 1296,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "hexB_class_totals",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "class-resolved p4 totals: {16: 6, 4: 204, 7: 192, 13: 48, 0: 90, 1: 360, 3: 288, 12: 36, 9: 72}"
+  },
+  {
+   "name": "m438_shell_counts",
+   "expected": [
+    12,
+    6,
+    24
+   ],
+   "actual": [
+    12,
+    6,
+    24
+   ],
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m438_m31_110x3_200",
+   "expected": 144,
+   "actual": 144,
+   "tol": 0,
+   "passed": true,
+   "detail": "independent exact integer enumeration (no FFT)"
+  },
+  {
+   "name": "m438_m31_110x3_211",
+   "expected": 432,
+   "actual": 432,
+   "tol": 0,
+   "passed": true,
+   "detail": "the Math438 boxed integer, independently confirmed; NOTE: the production script only asserts |m31|>0.5 and RECORDS 432 -- Math440 finding F5 (6.3.8 assert-coverage gap)"
+  },
+  {
+   "name": "m438_m211_110x2_200_211",
+   "expected": 192,
+   "actual": 192,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m438_c2_shell3",
+   "expected": 13.9279236,
+   "actual": 13.927923574736955,
+   "tol": 5e-06,
+   "passed": true,
+   "detail": "n3 (r_R + 4 C q0^4) closed form"
+  },
+  {
+   "name": "m438_phi2_identities",
+   "expected": [
+    12,
+    2,
+    24
+   ],
+   "actual": [
+    12,
+    2,
+    24
+   ],
+   "tol": 0,
+   "passed": true,
+   "detail": "<Phi_s^2> = 2 n_s = signed count"
+  },
+  {
+   "name": "m435_rstar",
+   "expected": 0.057067901234567904,
+   "actual": 0.05706790123456789,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_J_LAM",
+   "expected": 0.9,
+   "actual": 0.9,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_J_HEX",
+   "expected": 0.6617647058823529,
+   "actual": 0.6617647058823529,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_J_FCC",
+   "expected": 0.729,
+   "actual": 0.729,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_J_BCC",
+   "expected": 0.5752840909090909,
+   "actual": 0.5752840909090909,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_disc_LAM",
+   "expected": 24.0336,
+   "actual": 24.0336,
+   "tol": 1e-09,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_disc_HEX",
+   "expected": 5197.608,
+   "actual": 5197.607999999999,
+   "tol": 1e-07,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_disc_FCC",
+   "expected": 30359.5776,
+   "actual": 30359.577599999993,
+   "tol": 1e-06,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_disc_BCC",
+   "expected": 182821.536,
+   "actual": 182821.536,
+   "tol": 1e-05,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_offset_shift",
+   "expected": 0.2140336473,
+   "actual": 0.2140336473068255,
+   "tol": 1e-09,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_xi_corrected",
+   "expected": 2.46512,
+   "actual": 2.4651226237950676,
+   "tol": 0.0001,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m435_xi_ratio",
+   "expected": 1.8505508,
+   "actual": 1.8505508252704674,
+   "tol": 1e-06,
+   "passed": true,
+   "detail": "retired form = corrected / (4 q0^2); dimension L^3 vs L"
+  },
+  {
+   "name": "m435_gap_identity",
+   "expected": 0.30452570866744433,
+   "actual": 0.30452570866747025,
+   "tol": 5e-09,
+   "passed": true,
+   "detail": "hand gap-identity closure at the certified anchors"
+  },
+  {
+   "name": "m436_cou2",
+   "expected": 0.00080550728,
+   "actual": 0.0008055072796999183,
+   "tol": 2e-09,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_w1",
+   "expected": 0.00162073,
+   "actual": 0.0016207345593998365,
+   "tol": 2e-08,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_ws3",
+   "expected": 0.00161879,
+   "actual": 0.0016187905593998365,
+   "tol": 2e-08,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_w2",
+   "expected": 0.00081102,
+   "actual": 0.0008110152796999183,
+   "tol": 2e-08,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_rhat_argmin",
+   "expected": 0.3093733,
+   "actual": 0.30937333234564385,
+   "tol": 5e-06,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_gersh",
+   "expected": 0.07874,
+   "actual": 0.07874172672317133,
+   "tol": 2e-05,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_c2_smallA",
+   "expected": 0.913577126,
+   "actual": 0.913577126002333,
+   "tol": 1e-09,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_rowsum_p2",
+   "expected": 30,
+   "actual": 30,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "m436_rowsum_p4",
+   "expected": 1206,
+   "actual": 1206,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  }
+ ]
+}

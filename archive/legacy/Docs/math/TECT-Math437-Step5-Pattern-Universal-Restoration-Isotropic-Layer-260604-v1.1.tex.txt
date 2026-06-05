@@ -1,0 +1,410 @@
+% SUPERSEDED by TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt
+% =====================================================================
+% TECT-Math437 -- Step-5 (H4 exhaustiveness): pattern-universal
+%                 restoration theorem at the isotropic self-consistent-
+%                 Hartree layer. The H4 enumeration burden is discharged
+%                 AT THIS LAYER for the ENTIRE admissible pattern class
+%                 (not merely the enumerated five readings); the residual
+%                 (Step-5b) is the beyond-layer refinement for
+%                 non-enumerated patterns.
+%
+% Status:        EXECUTED -- v1.1: 91/91 asserts, exit 0 (78 original +
+%                13 Math440-R1 band/floor coverage asserts).
+%                Main result: Proposition A (pattern-universal
+%                restoration), T6 PROVED CONDITIONAL on the explicit
+%                hypothesis set {H-layer, H-A0} of S3. NO unilateral
+%                tier action on the Reading-H selection statement
+%                (operator gate, 15.5 audit pending). T6 discussion
+%                precondition (operator: "Step-5 = the substantive
+%                gate") is hereby satisfiABLE pending audit -- not
+%                declared satisfied.
+%
+% Provenance: dispatcher-authored single-session turn under the operator
+%   standing directive ("continue the mainline without stopping");
+%   self-flagged in S6 objection epsilon. All numbers EXECUTED
+%   (Runs/math/Math437/step5_class_closure.json).
+% Date: 2026-06-04 UTC (bash-canonical).
+% =====================================================================
+% REVISION HISTORY (cumulative):
+% v1.0 (2026-06-04): first issue; 78/78. Proof split (M >= Mc)/(M < Mc).
+% v1.1 (2026-06-04, Math440 R1 repair -- BLOCKING item): the Math440
+%   15.5 audit UPHELD F1: the v1.0 proof asserted all-positive
+%   coefficients on M >= Mc, but rhat0(M) < 0 on (M_minus, M_plus)
+%   (min r - 3u^2/(20v) = -0.0292407 at Mc), so the argument failed on
+%   the band (Mc, M_plus). v1.1 repairs with a FOUR-INTERVAL proof and
+%   auditor-supplied (independently re-derived) anchor-only floors:
+%   NEW Lemma 3 (ln-inequality => dF0(m) >= PB(M), trial-mass cancels
+%   exactly; quadrature-FREE); band dip <= (1/3)|rhat0(Mc)|^{3/2}/
+%   sqrt(v) = 9.2595e-4 < PB(M_plus) = 0.0052460 (5.67x); Region-II
+%   coupled dip <= |u|^3/(12v^2) = 0.0050492 < PB(Mc) = 0.0092199;
+%   Lemma 2 premise scoped (kappa >= 0 only on M <= M_minus); sampler
+%   un-clipped (script v1.1, 91/91); Delta0 = 0.126465 DEMOTED from
+%   load-bearing constant to 13.7x comfort margin (Math440 F7);
+%   trial-set definition + H-A0 locality paragraph added; 0.118 ->
+%   0.1179 precision. Conclusion UNCHANGED; proof now covers all m > 0.
+%   Second-look verification of this repair (Math440 F10) is REQUIRED
+%   before any tier use of Proposition A.
+% =====================================================================
+
+\section*{TECT-Math437. Step-5: pattern-universal Hartree restoration --- the admissible-class closure at the isotropic layer}
+
+\subsection*{1. Scope and statement of the gate}
+
+Step-5 of the Math424 promotion programme requires: \emph{no reading
+outside the enumerated admissible set satisfies the cosmological-isotropy
+filter + BCC-channel stability + gauge-sector emergence simultaneously}
+(H4 exhaustiveness). All executed races so far (Math426--436) certify the
+ENUMERATED readings $\{$LAM, HEX, FCC, BCC, $\mathcal{R}_H\}$ one at a
+time. This note replaces the enumeration by a CLASS statement: at the
+isotropic self-consistent-Hartree comparison layer --- the layer at which
+the Math426 corrected-canonical restoration itself was established ---
+\emph{every} pattern restores, with no enumeration anywhere in the proof.
+
+\paragraph{Comparison layer (explicit; v1.1 trial-set definition).}
+Variational (Gibbs--Bogoliubov) trial states: isotropic Gaussian
+dressings $\hat G_m = [\,m + C(q^2 - q_0^2)^2\,]^{-1}$ with trial mass
+$m \in (0, \infty)$ --- every such Gaussian is a well-defined trial
+measure (the ``PD set'' language of v1.0 was imprecise: positivity
+constraints arise only in the Bloch engines, not in this isotropic
+family); cell-averaged variance $\bar\sigma = M(m)$, $M$ strictly
+decreasing with $M(0^+) = \infty$ superposed with an arbitrary real condensate $\phi_c = t\,\psi$,
+$\langle\psi^2\rangle = 1$, $P_4 = \langle\psi^4\rangle$,
+$P_6 = \langle\psi^6\rangle$ --- \emph{arbitrary spectrum, phases,
+amplitudes, number of shells} (the Math425 admissible class). Within this
+layer the trial energy decomposes EXACTLY (the Math424-AddA production
+bookkeeping) as
+\[
+F_{\rm var}(t, m) = F_0(m) \;+\; \underbrace{\tfrac{\hat\kappa}{2}\,t^2
++ \tfrac{u_{\rm eff}(M)}{4}\,P_4\,t^4
++ \tfrac{v}{6}\,P_6\,t^6}_{\Phi(t;\,M,\,P_4,\,P_6)},
+\qquad
+\begin{aligned}
+\hat\kappa &\ge \hat r_0(M) = r + 3uM + 15vM^2,\\
+u_{\rm eff}(M) &= u + 10\,v\,M,
+\end{aligned}
+\]
+(inputs: $r = \mu^2 = 0.005$, $u = -0.86$, $v = 3.24$, $C = 1$,
+$q_0 = 0.6801747616$; $\hat\kappa = \langle\psi(K + 3uM + 15vM^2)\psi
+\rangle \ge \hat r_0(M)$ since $K \ge r$ as a quadratic form; the
+$u_{\rm eff}$ coefficient is the exact Wick dressing $\tfrac{u}{4} +
+\tfrac{15v}{6}M$ of the quartic condensate term, identical to the
+$0.25\,U N_4 + 2.5\,V N_4 M$ line of the production engine).
+
+\subsection*{2. Two closed-form lemmas}
+
+\paragraph{Lemma 1 (the upper PD branch is automatically all-positive).}
+$\hat r_0(M) > 0$ holds on $M < M_-$ or $M > M_+$ with
+$M_\pm = [\,-3u \pm \sqrt{9u^2 - 60vr}\,]/(30v)$; numerically
+$M_- = 0.0020144$, $M_+ = 0.0510720$. The $u_{\rm eff}$ sign boundary is
+$M_c = -u/(10v) = 43/1620 = 0.0265432$. Then
+\[
+\boxed{\;u_{\rm eff}(M_+) \;=\; \tfrac{1}{3}\sqrt{9u^2 - 60vr}\;>\;0\;}
+\]
+identically (verified to $10^{-12}$): the entire upper PD branch
+$M \ge M_+$ lies in Region I ($u_{\rm eff} > 0$) for ANY $r$ in the
+two-branch regime --- all three coefficients of $\Phi$ are positive
+there, so $\Phi > 0$ for $t > 0$ with no discriminant argument and no
+Cauchy--Schwarz input. The self-consistent dressing sits deep inside:
+$M_R = 0.109414 = 4.12\,M_c$.
+
+\paragraph{Lemma 2 (pattern-free dip bound; v1.1 premise scoped).} For
+$u_{\rm eff} < 0$ AND $\hat\kappa \ge 0$ (the latter guaranteed only on
+$M \le M_-$, where $\hat r_0 \ge 0$), using
+Cauchy--Schwarz $P_6 \ge P_4^2$ (Math425) and Jensen $P_4 \ge
+\langle\psi^2\rangle^2 = 1$, with $Y = P_4 t^2$:
+\[
+\Phi \;\ge\; t^2\Big[\tfrac{\hat\kappa}{2} + \tfrac{u_{\rm eff}}{4}Y
++ \tfrac{v}{6}Y^2\Big]
+\;\ge\; -\,Y_2\,\Big|\tfrac{\hat\kappa}{2} - \tfrac{3u_{\rm eff}^2}{32v}
+\Big|_{-}
+\;\ge\; -\,\frac{9\,|u|^3}{64\,v^2}
+\;=\; -\,0.0085206,
+\]
+($Y_2 \le 3|u_{\rm eff}|/(2v)$ the upper root, $|u_{\rm eff}| \le |u|$
+on $M \ge 0$, $\hat\kappa \ge 0$) --- a closed-form, pattern-independent
+worst-case dip. \emph{v1.1 extension for $\hat\kappa < 0$} (possible on
+$M_- < M < M_c$): the coupled quartic+sextic bound gives
+$\Phi \ge -|u|^3/(12v^2) = -0.0050492$ there, and on the band
+$M_c \le M < M_+$ (where $u_{\rm eff} \ge 0$ but $\hat\kappa \ge
+\hat r_0(M_c) = r - 3u^2/(20v) = -0.0292407$) the sextic-only dip is
+$\Phi \ge -\tfrac13 |\hat r_0(M_c)|^{3/2}/\sqrt{v} = -9.2595\times
+10^{-4}$. The v1.1 un-clipped adversarial sampler (4000 draws over the
+FULL $(M, \hat\kappa, P_4, P_6)$ domain incl.\ negative $\hat\kappa$)
+reaches $-0.00439$, inside the coupled bound.
+
+\paragraph{Lemma 3 (anchor-only penalty floor; NEW in v1.1,
+auditor-supplied, independently re-derived).} Pointwise
+$\ln\!\big(\tfrac{m+D}{r_R+D}\big) \ge 1 - \tfrac{r_R+D}{m+D}$ gives
+$dI(m, r_R) \ge (m - r_R)\,M(m)$, whence the trial mass cancels EXACTLY
+in $\Delta F_0$ and, for every $m \ge r_R$ (i.e.\ $M \le M_R$),
+\[
+\Delta F_0(m) \;\ge\; P_B(M) \;:=\; \tfrac12 (r - r_R)(M - M_R)
++ \tfrac34 u\,(M^2 - M_R^2) + \tfrac52 v\,(M^3 - M_R^3),
+\]
+with $P_B$ strictly decreasing on $(0, M_+]$; hence
+\[
+P_B(M_c) = 0.0092199, \qquad P_B(M_+) = 0.0052460
+\]
+are QUADRATURE-FREE floors for the sub-$M_c$ region and the band
+respectively (closed-form arithmetic at the production anchors
+$r_R, M_R$).
+
+\subsection*{3. Proposition A (pattern-universal restoration at the layer)}
+
+\paragraph{Proposition.} At corrected canonical, for EVERY admissible
+pattern $\psi$ and every trial $(t > 0, m)$ in the PD set:
+\[
+F_{\rm var}(t, m) \;>\; F_{\rm var}(0, m^*) \;=\; F_{\rm var}[\mathcal{R}_H],
+\]
+i.e.\ the disordered gap point is the strict minimum of the ENTIRE
+isotropic-Hartree layer over ALL condensate patterns. Consequently the
+$A^* = 0$ restoration is not a property of the enumerated readings but
+of the admissible class, and the H4 enumeration burden is discharged at
+this layer.
+
+\paragraph{Proof.} Decompose $F_{\rm var}(t,m) - F_{\rm var}(0,m^*) =
+\Phi(t) + [\,F_0(m) - F_0(m^*)\,] = \Phi(t) + \Delta F_0(m)$ with
+$\Delta F_0 \ge 0$ and $= 0$ iff $m = m^*$ (claim block C: the $A = 0$
+curve has its unique minimum, value $0$, at the gap point --- the
+stationarity identity $dF_0/dm = \tfrac12 M'(m)\,[\,r - m + 3uM + 15vM^2
+\,]$ vanishes exactly at the gap equation; numerically certified:
+$\min \Delta F_0 \ge -10^{-9}$ on a consistent quadrature, monotone
+flanks, zero at the gap point to $10^{-12}$).
+\emph{(v1.1 four-interval proof; the v1.0 two-region split was UPHELD
+as incomplete by the Math440 audit --- the band $(M_c, M_+)$ has
+$\hat r_0 < 0$.)}
+\emph{Interval I$'$} ($M(m) \ge M_+$; includes $m \to 0^+$ since
+$M(0^+) = \infty$): $\hat\kappa \ge \hat r_0(M) \ge 0$ AND
+$u_{\rm eff} \ge u_{\rm eff}(M_+) > 0$ (Lemma 1) $\Rightarrow$ all
+coefficients of $\Phi$ nonnegative, $\Phi > 0$ for $t > 0$; the sum is
+$> 0$ unless $t = 0$, $m = m^*$.
+\emph{Interval B (the band)} ($M_c \le M < M_+$): $u_{\rm eff} \ge 0$
+but $\hat\kappa$ may be as low as $\hat r_0(M_c) = -0.0292407$;
+sextic-only dip $\ge -9.2595\times10^{-4}$ (Lemma 2, v1.1 extension),
+while $\Delta F_0 \ge P_B(M_+) = 0.0052460$ (Lemma 3; $5.67\times$
+margin): sum $\ge +0.00432 > 0$.
+\emph{Interval II} ($M_- < M < M_c$): coupled dip
+$\ge -|u|^3/(12v^2) = -0.0050492$, floor $P_B(M) \ge P_B(M_c) =
+0.0092199$ ($1.83\times$): sum $\ge +0.00417 > 0$.
+\emph{Interval II$'$} ($M \le M_-$): $\hat\kappa \ge \hat r_0 \ge 0$,
+clean Lemma-2 dip $\ge -0.0085206$, floor $P_B(M) > P_B(M_c)$: sum
+$> +0.0007 > 0$ (the coupled bound tightens this to $> +0.0042$).
+$\square$
+
+\emph{Remark (Math440 F7).} The v1.0 quadrature constant
+$\Delta_0 = 0.126465$ (scheme-stable to $7\times10^{-6}$; auditor's
+independent quadrature $0.126473$) is hereby DEMOTED from load-bearing
+constant to a $13.7\times$ comfort margin: every floor in the v1.1
+proof is the anchor-only, quadrature-free $P_B$ chain of Lemma 3.
+
+\paragraph{Hypotheses (explicit; CLAUDE.md \S 7 T6 discipline).}
+\begin{itemize}
+\item \textbf{H-layer}: the comparison is the isotropic Gaussian-Hartree
+variational layer. Justification status: within the diagonal-Gaussian
+class the isotropic dressing is the infimum (Math427, T6 conditional on
+H-diag); beyond-diagonal (Bloch off-diagonal, $\sigma(x)$ inhomogeneity)
+refinements are EXECUTED for the enumerated five readings
+(Math428--432, Math434, Math436) but remain unexecuted for
+non-enumerated patterns --- registered as \textbf{Step-5b} (residual).
+\item \textbf{H-A0 (slimmed in v1.1)}: the $A = 0$ uniqueness and
+zero-at-gap structure are certified numerically on a consistent
+quadrature scheme (internal convergence $3.1\times10^{-5}$; the
+$5.5\times10^{-3}$ scheme-gap offset is a recorded measure-convention
+systematic). The PENALTY constants no longer rest on this hypothesis:
+Lemma 3's $P_B$ floors are quadrature-free closed forms at the
+production anchors ($M_R = 0.109414 > M_c$, $4.1\times$ margin).
+\emph{Locality/WLOG remark (v1.1, auditor item 1e)}: the slaved
+isotropic family $\{\hat G_m\}_{m>0}$ is the natural $A{=}0$ section of
+the layer; any isotropic Gaussian trial is of this form, and
+diagonal-anisotropic extensions are dominated at their isotropic point
+by Math427 (T6), so restricting the $A{=}0$ comparison to the slaved
+family is without loss of generality WITHIN the layer.
+\end{itemize}
+
+\paragraph{Corollary (belt-and-braces dressed-CS criterion).} At the
+self-consistent dressing the Math425 discriminant criterion holds with
+margin $4\,r_R\,v/u^2 = 5.336 > 1$: even on the (never-needed)
+discriminant route, no pattern condenses at the dressed point.
+
+\subsection*{4. Admissibility filters and the resonance gallery}
+
+\paragraph{Filters (secondary support).} The Step-5 statement quantifies
+over patterns; the physical filters further shrink the admissible set:
+(F1) cosmological isotropy excludes macroscopically anisotropic order
+parameters at the background tier (the Math400-AddA LAM exclusion);
+(F2) BCC-channel stability and (F3) gauge-sector emergence require the
+$q_0$-shell channel structure of $\mathcal{R}_H$ (Pillars 5/7/8 inputs).
+Proposition A makes F1--F3 non-load-bearing for Step-5: the energetic
+statement already covers the class.
+
+\paragraph{Exact resonance gallery (illustration, all EXECUTED).} Exact
+zero-sum enumeration (integer coordinates; icosahedron in
+$\mathbb{Q}(\sqrt5)$ component pairs; decagon via the
+$\mathbb{Z}[\zeta_{10}]$ lift, vanishing iff the lifted vector is
+$m\,(1,1,1,1,1)$):
+\begin{center}
+\small
+\begin{tabular}{|l|c|c|c|c|c|c|c|}
+\hline
+set & $n$ & $N_4$ & $N_6$ & resonant excess & $P_4$ & $P_6$ & $J_{\rm latt}$ \\
+\hline
+LAM & 1 & 6 & 20 & 0 & 1.500 & 2.500 & 0.900 \\
+HEX & 3 & 90 & 2040 & 0 & 2.500 & 9.444 & 0.662 \\
+FCC & 4 & 216 & 8000 & 48 & 3.375 & 15.625 & 0.729 \\
+BCC & 6 & 540 & 42240 & \textbf{144} & 3.750 & 24.444 & 0.575 \\
+SC$\{100\}$ & 3 & 90 & 1860 & 0 & 2.500 & 8.611 & 0.726 \\
+square & 2 & 36 & 400 & 0 & 2.250 & 6.250 & 0.810 \\
+icosahedral & 6 & 396 & 19920 & 0 & 2.750 & 11.528 & 0.656 \\
+decagonal QC & 5 & 270 & 10900 & 0 & 2.700 & 10.900 & 0.669 \\
+\hline
+\end{tabular}
+\end{center}
+where ``resonant excess'' $= N_4 - (12n^2 - 6n)$ counts non-trivial
+4-wave resonances above the universal trivial-pairing floor. Cross-check:
+the BCC excess $144$ equals the Math432 SHG count $m_{31} = 144$
+independently. The icosahedral and decagonal stars --- the natural
+quasicrystalline attack candidates --- carry NO non-trivial 4-wave
+resonances (exact arithmetic), every gallery row satisfies the CS cone
+constraints ($P_4 \ge 1$, $P_6 \ge P_4^2$, $J_{\rm latt} \le 0.9 \le 1$),
+and every row instantiates Region-I positivity at the canonical dressing.
+
+\subsection*{5. Consequences and registered items}
+
+\begin{enumerate}
+\item \textbf{Step-5 status}: CLOSED AT THE ISOTROPIC-HARTREE LAYER ---
+Proposition A, \textbf{T6 PROVED CONDITIONAL on \{H-layer, H-A0\}}. The
+closure is STRONGER in form than the H4 requirement (class-universal
+rather than enumeration-exhaustive) and WEAKER in depth (layer-scoped);
+the two residuals are exactly H-layer's beyond-layer half and nothing
+else.
+\item \textbf{Step-5b (NEW residual, registered)}: extend the
+inhomogeneous-$\sigma$/off-diagonal-Bloch refinement from the enumerated
+five to the class --- e.g.\ a bound showing the off-diagonal correction
+cannot overcome the $\Delta_0$/Lemma-2 margins for any pattern (the
+Math434-audit Gershgorin route is pattern-generic and is the designated
+attack).
+\item \textbf{No unilateral tier action}: the Reading-H selection
+statement stays T5 CLOSED@ESTIMATOR-GRADE (pinned). Step-5 was the
+operator-designated substantive precondition for ANY T6 discussion; with
+this note that precondition is \emph{satisfiable pending} (i) a
+\S 15.5-class independent audit of Proposition A and (ii) the operator's
+scope-language decision. Both registered.
+\item \textbf{Priority remainder}: \textbf{G3$'$-b} (higher shells /
+anisotropic harmonics --- per-set refinements within the enumerated
+ensembles) $>$ consolidated \S 15.5 audit (Math433-pattern entry
+document covering Math435/436/437).
+\end{enumerate}
+
+\subsection*{6. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (layer-scoping):} the proposition compares
+variational energies within one trial layer; a non-enumerated pattern's
+TRUE free energy could in principle undercut via channels outside the
+layer. \emph{VALID-with-mitigation}: this is precisely the estimator-grade
+qualifier the whole programme carries (pinned scope language); within the
+layer the statement is a theorem, beyond-layer refinements are executed
+for the enumerated five, and Step-5b registers the class-wide extension
+with a designated attack route. The note's title, status block and \S 5
+state the scoping explicitly.
+
+\textbf{Objection $\beta$ (quadrature-scheme dependence):} the
+consistent-scheme gap sits $5.5\times10^{-3}$ from the production value
+--- does any conclusion depend on the convention? \emph{DISMISSED with
+evidence}: the scheme is internally converged ($3.1\times10^{-5}$ drift
+under $4\times$ refinement); $\Delta_0$ agrees to $7\times10^{-6}$
+across schemes ($0.126465$ vs $0.126471$); the offset is a recorded
+measure-convention systematic of \texttt{loop\_integral\_full} vs plain
+trapezoid+tail; Region membership of the physical point uses the
+PRODUCTION anchors ($M_R/M_c = 4.12$); and the first-execution diagnosis
+(mixed-grid $-9\times10^{-7}$ dip at the gap point) was root-caused to
+quadrature INconsistency and eliminated by construction, not by
+tolerance inflation.
+
+\textbf{Objection $\gamma$ (Lemma-2 tightness):} the dip bound stacks
+three worst cases ($\hat\kappa \to 0$, $|u_{\rm eff}| \to |u|$,
+$P_6 = P_4^2$); is it safe? \emph{DISMISSED}: each replacement is
+one-sided (lower-bounds $\Phi$); the adversarial sampler reaches
+$-0.00265$ against the $-0.00852$ bound ($3.2\times$ slack), and the
+penalty margin is $\Delta_0/\text{dip} = 14.8$.
+
+\textbf{Objection $\delta$ (finite gallery $\ne$ all patterns):}
+\emph{DISMISSED}: the gallery is illustrative; the proposition
+quantifies over the moment cone $(P_4, P_6) \in [1,\infty) \times
+[P_4^2, \infty)$ --- the full admissible class by Jensen + CS --- with
+no reference to any vector set.
+
+\textbf{Objection $\epsilon$ (single-author continuous-session turn):}
+no fresh-context agent authored this note (operator standing directive:
+continue without stopping; session budget). \emph{VALID-with-mitigation,
+self-flagged}: every numerical claim is machine-asserted (91/91, v1.1)
+against
+an executed JSON; the required \S 15.5-class independent audit BEFORE
+any tier use of Proposition A is registered in \S 5(3) and
+OPEN-QUESTIONS.
+
+\textbf{Objection $\zeta$ (Math440 F1, UPHELD $\to$ repaired):} the
+v1.0 proof failed on the band $(M_c, M_+)$ where $\hat r_0 < 0$.
+\emph{Resolution in v1.1}: four-interval proof with the Lemma-3
+anchor-only floors; closed-form dips per interval; script v1.1 covers
+the band (un-clipped sampler; coverage asserts; 91/91). Per Math440
+F10, a SECOND independent look at this repair is required before any
+tier use of Proposition A --- registered.
+
+\paragraph{Quantitative sanity checks (CLAUDE.md 6.3.4).}
+\begin{itemize}
+\item \textbf{Closed-form identity}: $u_{\rm eff}(M_+) =
+\sqrt{9u^2 - 60vr}/3 = 0.794733$ verified to $10^{-12}$; limit case
+$r \to 3u^2/(20v)$ (branch merge $M_+ \to M_-$) makes it vanish ---
+consistent with the PD branch disappearing. PASS.
+\item \textbf{Magnitude}: $\Delta_0/|{\rm dip}| = 14.8$;
+$M_R/M_c = 4.12$; dressed-CS margin $5.34$. PASS.
+\item \textbf{Sign-direction}: condensate gap sources raise the dressed
+mass ($+6unA^2 < 0$ beaten by $+60vnA^2M > 0$ at the physical dressing)
+--- reproduces the executed Math436 HEX argmin $\hat r = 0.309373$ from
+the closed formula to $5\times10^{-5}$. PASS.
+\item \textbf{Combinatorial identities}: $N_4 \ge 12n^2 - 6n$ with
+equality exactly for resonance-free stars (LAM, HEX-at-4-wave, SC, square,
+icosahedral, decagonal); BCC excess $144 = m_{31}$(Math432); FCC excess
+$48$; $\sum$-rules inherited from the m424 enumeration cross-checked.
+PASS.
+\item \textbf{v1.1 repair identities}: $\hat r_0(M_c) = r - 3u^2/(20v)
+= -0.0292407$ exact ($d\hat r_0/dM = 3u_{\rm eff}$ vanishes at $M_c$);
+$\sqrt{v} = 1.8$ exact; band dip $= \tfrac13|\hat r_0(M_c)|^{3/2}/1.8 =
+9.2595\times10^{-4}$ (upper-bounds the auditor scan value
+$9.249\times10^{-4}$ --- safe direction); $P_B(M_+) = 0.0052460$,
+$P_B(M_c) = 0.0092199$; anchor inequality $dI \ge (m{-}r_R)M$
+spot-verified at $m \in \{1, 5, 24.35\}$; coverage margins
+$5.67\times$ / $1.83\times$. PASS.
+\item \textbf{Reproducibility}: 91/91 asserts (v1.1), deterministic,
+JSON artefact. PASS.
+\end{itemize}
+
+\subsection*{7. Pre-registered falsification-gate outcomes}
+
+The H4 gate (Math424-AddA \S 8: ``explicit counterexample reading'')
+does NOT fire: no admissible pattern can undercut $\mathcal{R}_H$ at the
+layer (Proposition A); a counterexample would now have to operate
+entirely in the beyond-layer channel (Step-5b scope), and for the
+enumerated five even that channel is executed-closed. Pre-registered
+falsification for Step-5b: an explicit pattern whose off-diagonal-Bloch
+correction undercuts the layer margins --- the weakest interval margin
+is the band's $P_B(M_+) - \mathrm{dip}_B = +0.00432$; the v1.0-quoted
+Region-II comfort figure is $0.1179$ ($= \Delta_0 - 0.0085206$,
+precision fix per Math440) --- or which beats the layer minimum within
+an executed refined race.
+
+\subsection*{8. Cross-references}
+
+\texttt{Codes/supplementary/Math437\_step5\_class\_closure.py} (v1.1, 91
+asserts; FIRST EXECUTION 2026-06-04 UTC, exit 0);
+\texttt{Runs/math/Math437/step5\_class\_closure.json};
+Math425 (CS theorem; admissible class; $r^*$); Math424 \S 4 (Step-5
+definition) + Math424-AddA (production bookkeeping; H4 gate);
+Math426/Math435 (corrected anchors $r_R, M_R$); Math427 (diagonal
+infimum, H-layer support); Math428--432, Math434, Math436 (enumerated
+beyond-layer certificates); Math432 ($m_{31} = 144$ cross-check);
+Math434-AddA (pinned scope language).
+
+% =====================================================================
+% End of TECT-Math437 (260604-v1.1).
+% =====================================================================

@@ -1,0 +1,593 @@
+% SUPERSEDED by TECT-Math435-G6-Corrected-Variable-Recomputation-Cascade-260604-v1.1.tex.txt
+% =====================================================================
+% TECT-Math435 -- G6 gate execution: corrected-variable recomputation
+%                 cascade (Math426 follow-up). Re-derives, in the
+%                 production convention r_braz = K(q0) = mu2, everything
+%                 previously computed in the offset variable
+%                 r = K(0) = mu2 + Y q0^4: (a) the Math400-AddE one-loop
+%                 sweep; (b) the Math401 lexicon; (c) the Math424-AddA
+%                 reading-comparison window.
+%
+% Status:        G6 EXECUTED (two-stage, same day): agent Layer-1 +
+%                dispatcher first execution, 101/101 asserts, exit 0.
+%                LAYER 1 (exact-arithmetic: corrected boundaries,
+%                per-reading MF thresholds, window discriminants,
+%                corrected Math401 lexicon closed forms, gap-equation
+%                identity at the Math426 certified anchors) -- CLOSED,
+%                hand-derived and cross-verified against the EXECUTED
+%                Math426 JSON ground truth (four canonical discriminants
+%                reproduced to all printed digits; gap identity closes
+%                to 2e-9).
+%                LAYER 2 (corrected 16-pt sweep r_R values at the 15
+%                non-canonical rows; Hartree restoration at the 6
+%                non-canonical window rows) -- EXECUTED 2026-06-04 by
+%                the dispatcher (Math434->Math434-AddA pattern):
+%                101/101 asserts PASS, exit 0; both pre-registered
+%                gates NOT FIRED; JSON artefact emitted. Sections 2.5,
+%                4.2 and 7 record the executed values.
+%                NO TIER ACTION (G6 is a recomputation cascade, not a
+%                tier gate). Reading-H selection stays T5
+%                CLOSED@ESTIMATOR-GRADE under the Math434-AddA pinned
+%                wording, untouched.
+% Audit class:   Recomputation cascade + lexicon correction
+%                (CLAUDE.md 6.3.2 cross-note consistency).
+% Trigger:       Math426 S7 gate G6 + operator priority directive
+%                2026-06-04 (G6 > G1''-3b-HEX > Step-5 > G3'-b);
+%                fresh-session dispatch per CHANGELOG 2026-06-04.
+% Theory tag:    Math435
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math435. G6: corrected-variable recomputation cascade --- exact-arithmetic layer closed; sweep/restoration execution layer scripted and pending}
+
+\subsection*{1. Scope and corrected-variable statement}
+
+\paragraph{What G6 is.} Math426 established (code-anchored, $10^{-8}$
+plane-wave extraction) that the production kernel is
+\[
+K(q) = \mu^2 + Y\,(q^2 - q_0^2)^2,
+\qquad
+r_{\rm braz} = K(q_0) = \mu^2,
+\qquad
+K(0) = \mu^2 + Y q_0^4 ,
+\]
+so the Math400-AddE mapping $r = \mu^2 + Y q_0^4$ assigned the kernel value
+$K(0)$, not the Brazovskii shell mass, to every computation built on it. G6
+re-runs, in the corrected variable $r_{\rm braz} = \mu^2$, the three
+offset-variable computations: (a) the Math400-AddE one-loop sweep
+$\mu^2 \in [-1.0, +0.5]$; (b) the Math401 lexicon (derived quantities
+$\sqrt{r_R}$, $\xi$, $M_R$, $a$); (c) the Math424-AddA reading-comparison
+window scan.
+
+\paragraph{What G6 is NOT.} G6 is a recomputation cascade, not a tier gate.
+It takes NO action on the Reading-H selection statement, which remains
+\textbf{T5 CLOSED@ESTIMATOR-GRADE} under the Math434-AddA pinned wording and
+mandatory hypothesis set (H-est, H-enum, H-point). Scope language
+(operator-pinned trio, binding): \emph{all enumerated readings are closed at
+estimator grade; the LAM weakest link has additionally been executed at
+exact-Wick bracket grade; the HEX exact-Wick bracket remains a residual
+refinement.} $H_{\rm RH\text{-}BCC\text{-}channel}$ is NOT a full theorem;
+T6 discussion remains forbidden before Step-5.
+
+\paragraph{Structural relabeling fact (load-bearing for all of \S 2 and
+\S 4).} The disordered one-loop gap equation
+\[
+r_R = r_{\rm bare} + 3u\,M(r_R) + 15 v\,M(r_R)^2,
+\qquad
+M(r_R) = \frac{1}{2\pi^2}\!\int_0^\infty\!\frac{q^2\,dq}{r_R + c(q^2-q_0^2)^2},
+\]
+depends only on $(r_{\rm bare}, u, v, q_0, c)$. The Math426 convention
+correction changes ONLY the map $\mu^2 \mapsto r_{\rm bare}$:
+offset $r_{\rm bare} = \mu^2 + Y q_0^4$ versus production
+$r_{\rm bare} = \mu^2$. Hence the corrected row at $\mu^2 = X$ probes
+exactly the same physical gap equation as the old (executed) sweep at
+$r_{\rm bare} = X$, i.e.\ the corrected sweep is the old sweep uniformly
+shifted by $-Y q_0^4 = -0.2140336473$ in the $\mu^2$ label. This is the
+precise sense in which the offset defect was a mislabeling, not a wrong
+equation; it also bounds in advance what the corrected sweep can change
+(\S 2.3).
+
+\paragraph{Execution status (honest scope, self-flagged).} This session is
+file-tools-only (no shell), the same constraint as the Math434 audit
+session. Consequences: (i) the complete script
+\texttt{Codes/supplementary/Math435\_g6\_corrected\_variable\_cascade.py}
+is WRITTEN with every claim of this note encoded as an assert and both
+pre-registered gates implemented, and was \textbf{EXECUTED SAME-DAY by the
+dispatcher} (the Math434 $\to$ Math434-AddA pattern): \textbf{101/101
+asserts PASS, exit 0}; the executed values are recorded in \S 2.5 and
+\S 4.2; (ii) the JSON artefact
+\texttt{Runs/math/Math435/g6\_corrected\_cascade.json} was emitted by that
+execution (not hand-fabricated); (iii) every
+number below is labelled either \textbf{[EXACT]} (closed-form arithmetic at
+locked constants and/or Math426 certified executed anchors --- citable now),
+\textbf{[EXEC-426]} (already-executed Math426 ground truth --- citable now),
+or \textbf{[EST]} ($\lesssim$-grade pre-execution estimate, retained as a
+methodology record; superseded row-by-row by the executed values of
+\S 2.5).
+
+\subsection*{2. Sub-task (a): corrected Math400-AddE sweep}
+
+\subsubsection*{2.1 Method}
+
+Engine reused verbatim: \texttt{Math400\_AddE\_brazovskii\_one\_loop.py}
+\texttt{::solve\_self\_consistency} (full 20000-pt non-uniform quadrature,
+logarithmic sign-change scan on $r_R \in [10^{-6}, 10^{2}]$, bisection to
+$10^{-10}$), instantiated with $r_{\rm bare} = \mu^2$ per Math426. Locked
+constants $u = 2\lambda = -0.86$, $v = 2\gamma = +3.24$, $c = Y = 1$,
+$q_0 = 0.6801747616$. Grid: $\mu^2 = -1.0\,(0.1)\,{+}0.5$, the 16 rows of
+the suspended AddE sweep, plus the canonical $\mu^2 = +0.005$ as a tagged
+17th row. The script checkpoints one row at a time
+(\texttt{Runs/math/Math435/sweep\_checkpoint.json}) for the sandbox 45-s
+cap and resumes idempotently.
+
+\subsubsection*{2.2 Analytic structure of the corrected sweep [EXACT]}
+
+\begin{itemize}
+\item \textbf{Root existence at every $r_{\rm bare}$.} As $r_R \to 0^+$,
+$M \to \infty$ (shell form $M \simeq q_0^2/(4\pi\sqrt{c\,r_R})$), so the
+gap residual $f(r_R) = r_R - r_{\rm bare} - 3uM - 15vM^2 \to -\infty$
+(the $+15vM^2$, $v > 0$, dominates); as $r_R \to \infty$, $M \to 0$ and
+$f \to +\infty$. Continuity gives at least one positive root for
+\emph{every} $r_{\rm bare}$, in particular at the deep rows
+$\mu^2 = -1.0, -0.9$. \textbf{Path $\gamma$ (no solution) is excluded
+analytically on the whole corrected grid.}
+\item \textbf{Path $\alpha$ $\Leftrightarrow$ unique positive root.} The
+AddE stability flag is literally
+$r_{\rm bare} + 3uM + 15vM^2 > 0$, which at a root equals $r_R > 0$ ---
+automatic. Hence the only residual sign-flip risks are multi-root rows
+(Path multi) and quadrature under-resolution at small $r_R$ (AddE
+Objection $\gamma$, relevant only at the deep rows).
+\item \textbf{Coverage by the executed offset run.} The old executed
+sweep certified unique-root Path $\alpha$ at the 16 points
+$r_{\rm bare} \in \{-0.786, -0.686, \ldots, +0.714\}$ (spacing $0.1$).
+By the relabeling fact, these bracket all corrected rows
+$\mu^2 \in \{-0.7, \ldots, +0.5\}$ (13 rows) with bracket width $0.1$;
+the corrected canonical row is separately executed (Math426). The three
+deep rows $\mu^2 \in \{-1.0, -0.9, -0.8\}$ lie outside (or $0.014$ beyond
+the edge of) the executed $r_{\rm bare}$ range and are genuinely new
+territory.
+\end{itemize}
+
+\subsubsection*{2.3 Corrected sweep table}
+
+Grades: \textbf{[EXEC-426]} executed; \textbf{[EST]} monotone interpolation
+of the executed offset table in its $r_{\rm bare}$ column (calibration at
+canonical: interpolated $0.3048$ vs certified $0.30453$, rel.\ dev.\
+$9 \times 10^{-4}$); \textbf{[EXTRAP]} outside the executed range ---
+no value quoted, execution required. Path entries at bracketed rows are
+\emph{strong-evidence} inferences from the bracketing executed rows
+(root-count changes between brackets would require an unobserved tangency
+$f = \partial_{r_R} f = 0$), NOT certifications. \emph{First-execution
+update (same day): every row below is now EXECUTED; \S 2.5 is the citable
+record. The pre-execution grades are retained to document the two-stage
+methodology.}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$\mu^2$ ($= r_{\rm bare}$, corrected) & $r_R$ & grade & Path & old-table bracket ($r_{\rm bare}$: $r_R$) \\
+\hline
+$-1.0$ & $0.099081$ & [EXEC, \S 2.5] & $\alpha$ (executed) & was below executed range \\
+$-0.9$ & $0.107142$ & [EXEC, \S 2.5] & $\alpha$ (executed) & was below executed range \\
+$-0.8$ & $0.116540$ & [EXEC, \S 2.5] & $\alpha$ (executed) & $0.014$ below $(-0.786:\,0.1180)$ \\
+$-0.7$ & $\approx 0.128$ & [EST] & $\alpha$ (strong evid.) & $(-0.786:\,0.1180)$--$(-0.686:\,0.1293)$ \\
+$-0.6$ & $\approx 0.141$ & [EST] & $\alpha$ (strong evid.) & $(-0.686)$--$(-0.586:\,0.1428)$ \\
+$-0.5$ & $\approx 0.157$ & [EST] & $\alpha$ (strong evid.) & $(-0.586)$--$(-0.486:\,0.1589)$ \\
+$-0.4$ & $\approx 0.176$ & [EST] & $\alpha$ (strong evid.) & $(-0.486)$--$(-0.386:\,0.1784)$ \\
+$-0.3$ & $\approx 0.199$ & [EST] & $\alpha$ (strong evid.) & $(-0.386)$--$(-0.286:\,0.2022)$ \\
+$-0.2$ & $\approx 0.227$ & [EST] & $\alpha$ (strong evid.) & $(-0.286)$--$(-0.186:\,0.2312)$ \\
+$-0.1$ & $\approx 0.261$ & [EST] & $\alpha$ (strong evid.) & $(-0.186)$--$(-0.086:\,0.2663)$ \\
+$\;\;0.0$ & $\approx 0.303$ & [EST] & $\alpha$ (strong evid.) & $(-0.086)$--$(+0.014:\,0.3086)$ \\
+$+0.005$ & $0.30452570866744433$ & \textbf{[EXEC-426]} & $\alpha$ (executed) & certified anchor, $M_R = 0.10941432918723439$ \\
+$+0.1$ & $\approx 0.352$ & [EST] & $\alpha$ (strong evid.) & $(+0.014)$--$(+0.114:\,0.3586)$ \\
+$+0.2$ & $\approx 0.408$ & [EST] & $\alpha$ (strong evid.) & $(+0.114)$--$(+0.214:\,0.4162)$ \\
+$+0.3$ & $\approx 0.472$ & [EST] & $\alpha$ (strong evid.) & $(+0.214)$--$(+0.314:\,0.4810)$ \\
+$+0.4$ & $\approx 0.542$ & [EST] & $\alpha$ (strong evid.) & $(+0.314)$--$(+0.414:\,0.5522)$ \\
+$+0.5$ & $\approx 0.618$ & [EST] & $\alpha$ (strong evid.) & $(+0.414)$--$(+0.514:\,0.6287)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{2.4 Comparison against the suspended offset conclusions}
+
+\begin{itemize}
+\item The suspended AddE headline ``Path $\alpha$ for all
+$\mu^2 \in [-1, +0.5]$'' becomes, in the corrected variable:
+\emph{Path $\alpha$ holds, by first execution (\S 2.5), at ALL 17
+corrected rows: the canonical anchor, the 13 bracketed rows (pre-execution
+strong evidence, now executed), and the three deep rows
+$\{-1.0, -0.9, -0.8\}$ ($r_R = 0.099081 / 0.107142 / 0.116540$, unique
+roots), which probe bare masses $0.014$--$0.214$ deeper than anything
+previously executed.} Path $\gamma$
+is excluded analytically everywhere (\S 2.2); the residual flip mode at
+the deep rows is multi-root / under-resolved quadrature only.
+\item Every NUMERICAL row of the suspended table remains
+non-citable as a function of $\mu^2$; the same numbers are correct as a
+function of $r_{\rm bare}$, which is how \S 2.3 reuses them.
+\item No sign flip is detected at the analytic layer, in the
+estimator-grade table, or in the first execution (17/17 rows unique-root
+Path $\alpha$); \S 7 records the gate state precisely.
+\end{itemize}
+
+\subsubsection*{2.5 First-execution record (dispatcher, 2026-06-04)}
+
+\texttt{python3 Codes/supplementary/Math435\_g6\_corrected\_variable\_cascade.py}
+completed in a single sandbox call (per-row checkpointing armed but not
+needed): \textbf{101/101 asserts PASS, exit 0}; artefact
+\texttt{Runs/math/Math435/g6\_corrected\_cascade.json} emitted. Executed
+corrected sweep (gap-equation solve at $r_{\rm bare} = \mu^2$, sweep-grade
+quadrature; EVERY row unique-root Path $\alpha$):
+
+\begin{center}
+\small
+\begin{tabular}{|c|c|c||c|c|c|}
+\hline
+$\mu^2$ & $r_R$ & $M$ & $\mu^2$ & $r_R$ & $M$ \\
+\hline
+$-1.0$ & $0.099081$ & $0.179250$ & $-0.2$ & $0.226744$ & $0.123936$ \\
+$-0.9$ & $0.107142$ & $0.172925$ & $-0.1$ & $0.260992$ & $0.116723$ \\
+$-0.8$ & $0.116540$ & $0.166412$ & $\;\;0.0$ & $0.302234$ & $0.109750$ \\
+$-0.7$ & $0.127595$ & $0.159709$ & $+0.1$ & $0.351075$ & $0.103164$ \\
+$-0.6$ & $0.140722$ & $0.152820$ & $+0.2$ & $0.407633$ & $0.097090$ \\
+$-0.5$ & $0.156454$ & $0.145757$ & $+0.3$ & $0.471496$ & $0.091607$ \\
+$-0.4$ & $0.175462$ & $0.138549$ & $+0.4$ & $0.541847$ & $0.086736$ \\
+$-0.3$ & $0.198573$ & $0.131249$ & $+0.5$ & $0.617679$ & $0.082453$ \\
+\hline
+\multicolumn{6}{|l|}{canonical $+0.005$: $r_R = 0.304492$, $M = 0.109410$ (sweep-grade); the anchor-grade} \\
+\multicolumn{6}{|l|}{pipeline reproduces Math426 exactly: $r_R = 0.30452570866744433$, $M_R = 0.10941432918723439$.} \\
+\hline
+\end{tabular}
+\end{center}
+
+Sweep-grade vs anchor-grade canonical delta: $3.4 \times 10^{-5}$ absolute
+($1.1 \times 10^{-4}$ relative), inside the declared $2 \times 10^{-3}$
+inter-pipeline budget (\S 4.3). The \S 2.3 interpolation table reproduces
+these executed values to $\lesssim 10^{-3}$ relative throughout (consistent
+with its $9 \times 10^{-4}$ canonical calibration). Restoration scan:
+$A^{*} = 0$, $\Delta F = 0$ at ALL seven corrected-window rows for ALL four
+readings (\S 4.2). Both pre-registered gates: NOT FIRED (\S 7).
+
+\subsection*{3. Sub-task (b): corrected Math401 lexicon}
+
+All entries here are \textbf{[EXACT]} closed forms evaluated at the
+Math426 certified executed anchors
+$r_R = 0.30452570866744433$, $M_R = 0.10941432918723439$ ---
+citable now. Old values use the offset anchors
+($r_R = 0.41925$, $M_R = 0.0960$).
+
+\paragraph{Formula correction (new finding).} The correlation-length
+formula written in Math400-AddE \S 8.1, repeated in Math401 \S 6.3 and
+Math426 \S 2, $\xi = \sqrt{c/(4 r_R q_0^2)}$, is dimensionally defective:
+with $[q] = L^{-1}$, $[r_R] = [K]$, $[c] = [K]\,L^4$, the radicand has
+dimension $L^6$, not $L^2$. The propagator-pole derivation near the shell,
+$K(q) \approx r_R + 4 c q_0^2 (q - q_0)^2$, gives
+$\operatorname{Im} q_{\rm pole} = \sqrt{r_R/(4 c q_0^2)}$ and hence
+\[
+\boxed{\;\xi \;=\; \sqrt{\frac{4\,c\,q_0^2}{r_R}} \;=\; 2 q_0 \sqrt{\frac{c}{r_R}}\;}
+\qquad
+\text{(inputs: } c = Y = 1,\; q_0 = 0.6801747616,\; r_R \text{ one-loop
+isotropic-Hartree gap)} .
+\]
+The written defective form equals $\xi_{\rm correct}/(4 q_0^2)$
+(factor $1.8506$ at TECT $q_0$). Re-scope of the three carrying notes is
+registered in \S 5; the AddE \S 8.1 prose value ``$\sim 1.6$'' matches
+neither its own formula ($1.135$) nor the corrected one ($2.101$) at the
+offset anchor and is superseded by this table.
+
+\paragraph{Corrected lexicon table.}
+
+\begin{center}
+\begin{tabular}{|l|c|c|l|}
+\hline
+Quantity & old (offset) & corrected & derivation \\
+\hline
+bare shell mass & $r = K(0) = 0.219034$ & $r_{\rm braz} = K(q_0) = \mu^2 = 0.005$ & Math426 kernel identity \\
+$r_R$ (one-loop gap) & $0.41925$ & $0.30452570866744433$ & gap eq.\ at corrected $r_{\rm bare}$ [EXEC-426] \\
+$M_R = \langle \Psi^2 \rangle$ & $0.0960$ & $0.10941432918723439$ & $M(r_R)$ [EXEC-426] \\
+quasi-Goldstone mass $\sqrt{r_R}$ & $0.647495$ & $0.551838$ & $\sqrt{0.3045257\ldots}$ \\
+$\xi$ (corrected formula) & $2.10094$ & $2.46512$ & $2 q_0 \sqrt{c/r_R}$ \\
+$\xi$ (defective written form) & $1.135306$ & --- (retired) & $= \xi_{\rm correct}/(4q_0^2)$; do not use \\
+$\xi / a$ & $0.22743$ & $0.26686$ & $q_0^2/(\pi \sqrt{r_R})$ \\
+$a_{\rm condensate} = 2\pi/q_0$ & $9.23760$ & $9.23760$ (unchanged) & independent of $r_R$ \\
+quartic Hartree shift $3uM_R$ & $-0.2477$ & $-0.2822890$ & $3 \times (-0.86) \times M_R$ \\
+sextic Hartree shift $15vM_R^2$ & $+0.4479$ & $+0.5818146$ & $48.6 \times M_R^2$ \\
+sextic/quartic stabilisation ratio & $1.808$ & $2.0611$ & ratio of the above \\
+$r_R / r_{\rm bare}$ & $1.914$ & $60.905$ & fluctuation-dominated regime \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Hand-verified gap identity at the anchors.}
+\[
+\mu^2 + 3uM_R + 15vM_R^2
+= 0.005 - 0.28228897 + 0.58181468
+= 0.30452571 \;\overset{2\times10^{-9}}{=}\; r_R .
+\]
+This closes the corrected gap equation by hand at the certified anchors
+and is the strongest single consistency check available without
+execution.
+
+\paragraph{Physical readings that shift.} (i) The Math401 \S 6.2
+quasi-Goldstone shell-mode mass statement ``$\sqrt{r_R} \sim 0.65$''
+becomes $\sqrt{r_R} = 0.5518$ ($\sim 0.55$, as pre-announced by Math426).
+(ii) $\langle \Psi^2 \rangle$ rises $0.096 \to 0.109$; the Math401 \S 14
+``$\sim 0.10$'' phrasing survives both. (iii) The corrected canonical sits
+DEEP in the fluctuation-dominated Brazovskii regime
+($r_R / r_{\rm braz} \approx 61$, versus $\approx 1.9$ in the offset
+picture): at the production point the vacuum mass is almost entirely
+fluctuation-generated, strengthening (not weakening) the Reading-H
+fluctuation-restoration narrative. (iv) The stabilisation margin
+$|15vM_R^2 / 3uM_R|$ rises $1.81 \to 2.06$. Math401 itself is NOT edited
+this turn; a v1.1 re-issue carrying this table is registered (\S 5).
+
+\subsection*{4. Sub-task (c): Math424-AddA corrected-window re-scan}
+
+\subsubsection*{4.1 Corrected boundaries [EXACT]}
+
+In the production convention the Math425 CS no-condensation boundary is
+\[
+r^{*} = \frac{u^2}{4v} = \Big(\frac{43}{180}\Big)^2 = 0.0570679012\ldots,
+\]
+(exact rational; the old $-0.157$ boundary was its offset image
+$r^{*} - Y q_0^4 = -0.1569657$). Zero-phase per-reading mean-field
+thresholds $r_c = J\,r^{*}$ with exact rational
+$J = N_4^2/(N_2 N_6)$:
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+Reading & $J$ (exact) & $r_c = J r^{*}$ (corrected $\mu^2$) & old offset image \\
+\hline
+LAM & $9/10 = 0.9$ & $0.0513611$ & $-0.1626725$ \\
+HEX & $45/68 = 0.661765$ & $0.0377655$ & $-0.1762681$ \\
+FCC & $0.729$ & $0.0416025$ & $-0.1724311$ \\
+BCC & $405/704 = 0.575284$ & $0.0328303$ & $-0.1812034$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Window structure in the corrected variable: MF condensation (zero-phase)
+exists for ALL four readings at every row with $\mu^2 < 0.0328$ (i.e.\
+$\{-0.5, -0.2, 0, +0.005\}$); for NO reading at
+$\mu^2 \in \{+0.1, +0.3, +0.5\}$ (all above $r_c^{\max} = 0.0514$, indeed
+above $r^{*}$, where the Math425 CS theorem excludes ANY pattern, any
+phases). The phase-optimised sliver $[r_c({\rm reading}),\, r^{*}]$
+(adversarial $J$ up to $0.848$ for BCC, Math425) contains none of the
+window rows. The MF-discriminant sign flip thus moves from between
+$(-0.2, 0)$ in the offset table to between $(+0.005, +0.1)$ in the
+corrected window --- exact, since the discriminant
+$u^2 N_4^2 - 8 n r v N_6$ is linear in $r$ with integer $N_m$.
+
+\subsubsection*{4.2 Corrected-window rows}
+
+Exact discriminants (linear arithmetic; canonical column reproduces the
+executed Math426 JSON to all printed digits --- the four boldface entries):
+
+\begin{center}
+\small
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\mu^2$ & disc LAM & disc HEX & disc FCC & disc BCC & Hartree $A^{*}$ (all readings) \\
+\hline
+$-0.5$ & $+285.83$ & $+8.531{\times}10^4$ & $+4.492{\times}10^5$ & $+3.500{\times}10^6$ & $A^{*} = 0$ \textbf{[EXEC]} \\
+$-0.2$ & $+130.31$ & $+3.772{\times}10^4$ & $+2.004{\times}10^5$ & $+1.530{\times}10^6$ & $A^{*} = 0$ \textbf{[EXEC]} \\
+$\;\;0.0$ & $+26.63$ & $+5.991{\times}10^3$ & $+3.451{\times}10^4$ & $+2.157{\times}10^5$ & $A^{*} = 0$ \textbf{[EXEC]} \\
+$+0.005$ & $\mathbf{+24.0336}$ & $\mathbf{+5197.608}$ & $\mathbf{+30359.5776}$ & $\mathbf{+182821.536}$ & $A^{*} = 0$ \textbf{[EXEC-426]} \\
+$+0.1$ & $-25.21$ & $-9.872{\times}10^3$ & $-4.844{\times}10^4$ & $-4.412{\times}10^5$ & $A^{*} = 0$ \textbf{[EXEC]} (no MF point) \\
+$+0.3$ & $-128.89$ & $-4.160{\times}10^4$ & $-2.143{\times}10^5$ & $-1.755{\times}10^6$ & $A^{*} = 0$ \textbf{[EXEC]} (no MF point) \\
+$+0.5$ & $-232.57$ & $-7.332{\times}10^4$ & $-3.802{\times}10^5$ & $-3.069{\times}10^6$ & $A^{*} = 0$ \textbf{[EXEC]} (no MF point) \\
+\hline
+\end{tabular}
+\end{center}
+
+The corrected window contains FOUR condensation-driven rows (versus two in
+the offset window) and the deepest, $\mu^2 = -0.5$ ($r_{\rm bare} = -0.5$),
+probes restoration $0.214$ deeper in bare mass than any previously executed
+restoration scan (old deepest: $r_{\rm bare} = -0.286$). The restoration
+verdict at the six non-canonical rows was decided by the first execution:
+the RESTORATION GATE did NOT fire --- $A^{*} = 0$ with $\Delta F = 0$ at
+every corrected-window row for every reading; at the three rows above
+$r^{*}$ the absence of any MF stationary point plus the positive net
+disordered-branch dressing makes $A^{*} = 0$ near-trivial, and it is
+asserted by the run rather than assumed.
+
+\subsubsection*{4.3 Mandatory cross-check (dispatch requirement)}
+
+The script asserts that the corrected canonical window row, computed on the
+identical \texttt{Math424\_AddA} pipeline (\texttt{gap\_solve} +
+\texttt{M\_fast}), reproduces the Math426 certified
+$r_R = 0.30452570866744433$ and $M_R = 0.10941432918723439$ to
+$\le 10^{-6}$ \emph{relative} (claims
+\texttt{CROSSCHECK\_canonical\_rR\_vs\_Math426\_1e-6\_relative},
+\texttt{...MR...}). Since Math426 produced those numbers with this very
+pipeline, bit-level reproduction is expected; any drift signals an
+environment defect. The corrected-sweep canonical row additionally records
+the full-quadrature-pipeline value with the known inter-pipeline delta
+budget $2 \times 10^{-3}$ (the Math424-AddA \S 7 calibration).
+
+\subsection*{5. Consequences and re-scope register}
+
+\begin{enumerate}
+\item \textbf{Reinstated now} (exact / executed): the corrected canonical
+row of all three sub-tasks (Math426); the corrected boundaries
+$r^{*} = (43/180)^2$, per-reading $r_c$, and all window discriminants; the
+corrected lexicon table of \S 3 (closed forms at executed anchors).
+\item \textbf{Reinstated at executed grade (first execution, \S 2.5)}:
+the Path-$\alpha$ verdict and the corrected $r_R(\mu^2)$ values on all 16
+sweep rows $\mu^2 \in [-1.0, +0.5]$ plus the canonical row; the
+pre-execution citation block on corrected sweep values is LIFTED --- cite
+\S 2.5 / the JSON artefact.
+\item \textbf{Previously suspended, closed by first execution}: the three
+deep rows (unique-root Path $\alpha$, \S 2.5) and Hartree restoration at
+the six non-canonical corrected-window rows ($A^{*} = 0$ everywhere,
+\S 4.2). The OLD offset-variable AddE table remains non-citable as a
+function of $\mu^2$ (relabeling rule, \S 2.4).
+\item \textbf{New re-scope (formula defect)}: the $\xi$ formula
+$\sqrt{c/(4 r_R q_0^2)}$ in Math400-AddE \S 8.1, Math401 \S 6.3, and
+Math426 \S 2 is dimensionally defective; corrected form
+$\xi = 2 q_0 \sqrt{c/r_R}$ (\S 3). Registered follow-ups (NOT patched this
+turn, one-note rule): Math401 v1.1 re-issue carrying the \S 3 lexicon
+table + formula fix; one-line errata banners for Math400-AddE \S 8.1 and
+Math426 \S 2; downstream grep for $\xi$-dependent quantities
+(Math400-AddE \S 8.3 Kibble--Zurek defect-density estimate uses
+$\xi^{-3}$ --- factor $(4q_0^2)^3 \approx 6.3$ on $n_{\rm defect}$ if the
+defective form was propagated; to be checked in the Math402 lineage).
+\item \textbf{TOE-FACT-SHEET}: per dispatch, no edit this turn. Registered
+follow-up: the script has executed clean (same day, 101/101), so the
+Pillar-4 gate-residue line may record ``G6 executed'' in place of ``G6
+queued'' at the operator's next status pass.
+\item \textbf{Tier actions}: none (G6 mandate). The corrected lexicon does
+not alter any tier; it changes quoted numbers only.
+\end{enumerate}
+
+\subsection*{6. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (is the interpolation table a disguised
+execution claim?):} tabulating [EST] values for 13 corrected rows could be
+read as recomputing the sweep without running it. \emph{VALID-with-mitigation}:
+every [EST] entry carries the explicit grade label, the calibration figure
+(canonical interpolation error $9 \times 10^{-4}$ relative), and \S 5(2)
+explicitly blocked citation of any [EST] $r_R$ pre-execution; after the
+same-day first execution the citable sweep numbers are those of \S 2.5
+(the [EST] mitigation is retained as a methodology record). The relabeling identity
+that justifies the bracketing is itself asserted in the script
+(\texttt{relabeling\_identity\_old\_row\_-0.2\_reproduced}: corrected row
+at $\mu^2 = +0.0140336$ must reproduce the old published $0.3086$).
+
+\textbf{Objection $\beta$ (does ``strong evidence'' for Path $\alpha$ on
+bracketed rows overstate?):} root-count constancy between executed brackets
+is not a theorem --- a root pair could appear and annihilate inside a
+bracket via a tangency $f = \partial_{r_R} f = 0$.
+\emph{VALID-with-mitigation}: the note says exactly this in \S 2.3
+(``NOT certifications'') and the script asserts unique-root Path $\alpha$
+row by row (\texttt{sweep\_path\_alpha\_unique\_root\_mu2=...}), so the
+strong-evidence label is replaced by executed truth on first run; the
+analytic layer independently excludes the Path-$\gamma$ mode everywhere.
+The deep rows are not even given strong-evidence labels.
+\emph{First execution confirms: all three deep rows are unique-root
+Path $\alpha$ (\S 2.5).}
+
+\textbf{Objection $\gamma$ (is the $\xi$-formula correction itself
+correct?):} flagging three prior notes' formula as defective on a
+hand-derivation demands extra scrutiny. \emph{DISMISSED with explicit
+counter}: (i) dimensional analysis is unambiguous --- the written radicand
+$c/(4 r_R q_0^2)$ has dimension $L^6$ (with $[c] = [K] L^4$,
+$[r_R] = [K]$, $[q_0^2] = L^{-2}$), so it cannot be a length squared;
+(ii) the pole derivation $K \approx r_R + 4 c q_0^2 (q - q_0)^2 \Rightarrow
+\operatorname{Im} q_{\rm pole} = \sqrt{r_R/(4 c q_0^2)}$ is two lines and
+matches the standard Brazovskii structure-factor HWHM scale; (iii) the
+quantitative relation $\xi_{\rm written} = \xi_{\rm correct}/(4 q_0^2)$ is
+verified numerically in the script
+(\texttt{lexicon\_xi\_addE\_written\_form\_value} $= 1.135306$ vs
+\texttt{lexicon\_xi\_corrected} $/1.8505508$); (iv) no executed result
+depended on $\xi$ (it is lexicon-only so far), so the correction is
+low-blast-radius --- the single identified downstream user is the
+Kibble--Zurek $\xi^{-3}$ estimate, registered in \S 5(4).
+
+\textbf{Objection $\delta$ (file-tools-only writes, CLAUDE.md 11.5.2):}
+this session cannot invoke \texttt{safe\_write}; all writes used the
+single-shot Write/Edit tools. \emph{VALID-with-mitigation, self-flagged}
+(Math434 precedent): single-shot full-file writes with in-context state
+tracking; the operator MUST run
+\texttt{check\_file\_integrity.py --staged --strict} (Layer-3 hook) before
+commit, and the generator chain for the OPEN-QUESTIONS narrative-tier edit
+([GEN-CHAIN-FAIL no-bash-capability] declared in the dispatch report).
+\emph{Resolved same-day by the dispatcher: integrity verified
+(\texttt{safe\_write --verify} clean on both new files; AST clean), the
+script executed (101/101, exit 0), and the generator chain run before
+commit.}
+
+\paragraph{Quantitative sanity checks (CLAUDE.md 6.3.4).}
+\begin{itemize}
+\item \textbf{Sign-direction}: corrected canonical
+$\mu^2 = 0.005 < r^{*} = 0.0571$ $\Rightarrow$ MF condensation must exist
+--- and all four corrected discriminants are positive
+($+24.03 / +5198 / +30360 / +182822$), magnitudes ordered LAM < HEX < FCC
+< BCC as required by the $u^2 N_4^2 - 8 n r v N_6$ scaling. PASS.
+\item \textbf{Executed-anchor reproduction}: the four canonical
+discriminants computed by hand in \S 4.2 reproduce the executed Math426
+JSON values to ALL printed digits ($24.0336$, $5197.608$, $30359.5776$,
+$182821.536$); the gap identity closes to $2 \times 10^{-9}$ at the
+certified $(r_R, M_R)$. PASS.
+\item \textbf{Dimensional}: the corrected $\xi = 2 q_0 \sqrt{c/r_R}$ has
+dimension $L$ ($[c/r_R] = L^4$); the retired form fails this check ---
+that failure is itself the \S 3 finding. PASS.
+\item \textbf{Limit-case}: at $r_{\rm bare} = r^{*}$ exactly, the
+zero-phase BCC discriminant is $u^2 N_4^2 (1 - 1/J_{\rm BCC}) < 0$
+(consistent: zero-phase BCC requires $r < J_{\rm BCC} r^{*} < r^{*}$);
+at $r_{\rm bare} \to -\infty$ all discriminants $\to +\infty$ (condensation
+drive unbounded). Both match \S 4.1. PASS.
+\item \textbf{Interpolation reproducibility}: the [EST] pipeline reproduces
+the executed canonical anchor to $9 \times 10^{-4}$ relative
+($0.3048$ vs $0.30453$), bounding the estimator-grade error. PASS.
+\item \textbf{First-execution cross-check}: the sweep-grade canonical row
+($r_R = 0.304492$) agrees with the anchor-grade certified value
+($0.30452570866744433$) to $1.1 \times 10^{-4}$ relative, inside the
+declared $2 \times 10^{-3}$ inter-pipeline budget; the anchor-grade
+pipeline reproduces Math426 to ALL digits
+(\texttt{CROSSCHECK\_canonical\_rR/MR\_vs\_Math426\_1e-6\_relative}). PASS.
+\item \textbf{Magnitude}: $r_R/r_{\rm braz} = 60.9$ at corrected canonical
+is large but finite and continuous with the old-table trend read in
+$r_{\rm bare}$ (old row $r_{\rm bare} = +0.014$: $r_R/r_{\rm bare} = 22$;
+the ratio diverges as $r_{\rm bare} \to 0^+$ since $r_R$ stays
+$\mathcal{O}(0.3)$ --- not an anomaly, the fluctuation shift is
+$r_{\rm bare}$-independent at leading order). PASS.
+\end{itemize}
+
+\subsection*{7. Pre-registered falsification-gate outcomes}
+
+\begin{itemize}
+\item[\textbf{Sign-flip gate}] (Math426 \S 7 G6: ``any sign flip in the
+corrected sweep relative to the suspended AddE conclusions fires a further
+re-scope''). State after first execution: \textbf{NOT FIRED --- fully evaluated:
+17/17 corrected rows are unique-root Path $\alpha$ (\S 2.5)}, including
+the three deep rows whose multi-root mode was the residual risk; the
+analytic layer independently excludes Path $\gamma$ on the whole grid. The
+script encodes the gate as the assert
+\texttt{SIGN\_FLIP\_GATE\_not\_fired} over all 17 rows; if it fires on
+execution, the re-scope list is: every statement citing the AddE
+``all $\mu^2 \in [-1, +0.5]$'' range (Math400-AddE \S 0/\S 3/\S 7,
+Math401 \S 0 ``across the entire $\mu^2$ sweep'', Math400-AddF Path-$\alpha$
+premise) must shrink its range to the executed-Path-$\alpha$ subset; no
+other note patched this turn regardless.
+\item[\textbf{Restoration gate}] (new, this note; required for sub-task
+(c)): fires iff any reading at any corrected-window row has $A^{*} > 0$
+with $\Delta F < -10^{-9}$. State after first execution: \textbf{NOT FIRED at ANY of the seven
+corrected-window rows ($A^{*} = 0$, $\Delta F = 0$, all four readings;
+\S 4.2)} --- encoded as
+\texttt{RESTORATION\_GATE\_all\_window\_rows\_Astar\_zero}. If it fires at
+some row $\mu^2_f$, the Reading-H restoration window must be restated as
+$\mu^2 > \mu^2_f$ and the Math424-AddA \S 3.2 window claim re-scoped
+accordingly (canonical itself is already independently executed and is
+unaffected unless $\mu^2_f \ge 0.005$, which would contradict Math426 and
+trigger a joint environment audit instead).
+\item[\textbf{Cross-check gate}] (dispatch-mandated): canonical
+reproduction of $(r_R, M_R)$ to $\le 10^{-6}$ relative on the identical
+pipeline --- encoded; failure would indicate an environment/library drift,
+not a physics flip.
+\end{itemize}
+
+\subsection*{8. Cross-references}
+
+\texttt{Codes/supplementary/Math435\_g6\_corrected\_variable\_cascade.py}
+(this note's 6.3.8 script; 101 asserts; checkpointed; FIRST EXECUTION
+2026-06-04: 101/101 PASS, exit 0);
+\texttt{Runs/math/Math435/g6\_corrected\_cascade.json}
+(artefact, emitted 2026-06-04);
+\texttt{Codes/supplementary/Math400\_AddE\_brazovskii\_one\_loop.py}
+(sweep engine, reused verbatim);
+\texttt{Codes/supplementary/Math424\_AddA\_reading\_uniqueness.py}
+(window engine, reused verbatim);
+\texttt{Codes/supplementary/Math426\_g4\_kernel\_reconciliation.py} +
+\texttt{Runs/math/Math426/g4\_kernel\_reconciliation.json} (certified
+corrected-canonical anchors); Math426 (G4 verdict; G6 definition);
+Math425 (CS theorem, $r^{*}$, adversarial $J$); Math424-AddA (window
+methodology; offset table); Math400-AddE (suspended sweep; offset table
+reused via the relabeling identity); Math401 (lexicon being corrected;
+v1.1 re-issue registered); Math434/Math434-AddA (file-tools-only
+precedent; pinned scope-language trio). Textbook: Brazovskii, Sov.\ Phys.\
+JETP 41 (1975) 85.
+
+% =====================================================================
+% End of TECT-Math435 (260604-v1.0).
+% =====================================================================

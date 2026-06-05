@@ -1,0 +1,119 @@
+{
+ "theory_tag": "Math426",
+ "date": "2026-06-04",
+ "kernel": {
+  "K_q0_measured": 0.004999999967749949,
+  "K_zero_measured": 0.21903364726382557,
+  "r_braz_corrected": 0.005,
+  "addE_mapped_r": 0.2190336473068255,
+  "Z_eff": -0.9252754126352337
+ },
+ "corrected": {
+  "threshold": 0.08761492698756086,
+  "J_BCC": 0.5752840909090909,
+  "r_R": 0.30452570866744433,
+  "M": 0.10941432918723439
+ },
+ "hartree_corrected_canonical": {
+  "LAM": {
+   "dF_min": 0.0,
+   "A_star": 0.0,
+   "r_hat": null,
+   "mf_discriminant": 24.0336
+  },
+  "HEX": {
+   "dF_min": 0.0,
+   "A_star": 0.0,
+   "r_hat": null,
+   "mf_discriminant": 5197.607999999999
+  },
+  "FCC": {
+   "dF_min": 0.0,
+   "A_star": 0.0,
+   "r_hat": null,
+   "mf_discriminant": 30359.577599999993
+  },
+  "BCC": {
+   "dF_min": 0.0,
+   "A_star": 0.0,
+   "r_hat": null,
+   "mf_discriminant": 182821.536
+  }
+ },
+ "claims": [
+  {
+   "name": "on_grid_mode_is_q0",
+   "expected": 0.6801747616,
+   "actual": 0.6801747616,
+   "tol": 1e-12,
+   "passed": true
+  },
+  {
+   "name": "K(q0)_measured_equals_mu2",
+   "expected": 0.005,
+   "actual": 0.004999999967749949,
+   "tol": 1e-08,
+   "passed": true
+  },
+  {
+   "name": "K(0)_equals_AddE_mapped_r",
+   "expected": 0.2190336473068255,
+   "actual": 0.21903364726382557,
+   "tol": 1e-08,
+   "passed": true
+  },
+  {
+   "name": "K(1.5q0)_matches_brazovskii_form",
+   "expected": 0.3394275739169148,
+   "actual": 0.3394275738846643,
+   "tol": 1e-08,
+   "passed": true
+  },
+  {
+   "name": "corrected_threshold_4rv_u2",
+   "expected": 0.08759,
+   "actual": 0.08761492698756086,
+   "tol": 0.0001,
+   "passed": true
+  },
+  {
+   "name": "MF_condensation_EXISTS_corrected",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "J_BCC=0.5753 > 0.0876"
+  },
+  {
+   "name": "Math425_theorem_does_not_bite_at_canonical_production",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "r_braz=0.005 < r*=0.057068"
+  },
+  {
+   "name": "corrected_gap_unique_positive_root",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "r_R=0.30452570866744433"
+  },
+  {
+   "name": "corrected_r_R_value",
+   "expected": 0.32,
+   "actual": 0.30452570866744433,
+   "tol": 0.05,
+   "passed": true
+  },
+  {
+   "name": "hartree_restoration_at_corrected_canonical",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "Reading H must still be the Hartree-level global minimum"
+  }
+ ]
+}

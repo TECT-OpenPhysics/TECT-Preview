@@ -10,7 +10,7 @@ $\Delta F[\mathcal R]=F_{\rm TECT}[\mathcal R]-F_{\rm TECT}[\mathcal R_H]>0$ for
 
 CLOSED@ESTIMATOR-GRADE within enumerated ensembles at the corrected canonical operating point. No claim over the full admissible class (STEP-5B open); no controlled error bound (ESTIMATOR-UPGRADE open).
 
-**Notes**: Estimator error bound: uncontrolled; upgrade tracked by ESTIMATOR-UPGRADE (GAP-2 instance).
+**Notes**: Estimator error bound: uncontrolled; upgrade tracked by ESTIMATOR-UPGRADE (GAP-2 instance). Partial M1 resolution 2026-06-05: Math437 v1.2 / Math442 pointers resolved to archive; Math431-HEX estimator chain still legacy: (claim NOT migration-clean; capped accordingly).
 
 ## Dependencies and hypotheses
 
@@ -21,11 +21,11 @@ CLOSED@ESTIMATOR-GRADE within enumerated ensembles at the corrected canonical op
 
 ## Evidence
 
-Grades: ESTIMATOR, EXECUTED. Legacy evidence pointers (resolve per `governance/migration-plan.md`):
+Grades: ESTIMATOR, EXECUTED. Evidence pointers (`archive/...` = migrated + re-validated; `legacy:` = pending):
 
-- `legacy:Math431-HEX chain`
-- `legacy:Math437 v1.2 (F10-REPAIR RESOLVED)`
-- `legacy:Math442 (operator verdict 2026-06-05)`
+- `legacy:Math431-HEX chain (enumerated-ensemble estimator tables; M1 migration pending)`
+- `archive/legacy/Docs/math/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`
+- `archive/legacy/Docs/math/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt`
 
 Legacy pillar(s): none · Legacy tier label: T5 CLOSED@ESTIMATOR-GRADE (legacy scale)
 
@@ -51,6 +51,7 @@ the first TSv2 tier action on this claim.
 
 - 2026-06-05 — Seeded from the legacy `TOE-FACT-SHEET.md` snapshot (last
   theory tag Math442), translated per `governance/tier-system.md` §4.
+- 2026-06-05 — Partial M1 resolution: Math437 v1.2 / Math442 pointers resolved to archive. Math431-HEX estimator chain remains `legacy:` — NOT migration-clean.
 
 ## Next required action
 

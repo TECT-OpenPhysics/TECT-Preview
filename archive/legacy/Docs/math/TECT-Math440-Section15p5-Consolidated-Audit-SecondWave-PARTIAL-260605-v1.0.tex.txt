@@ -1,0 +1,664 @@
+% =====================================================================
+% TECT-Math440 -- Section-15.5 CONSOLIDATED INDEPENDENT AUDIT of the
+%                 second wave (Math435 / Math436 / Math437 / Math438;
+%                 entry document Math439 v1.1).  Fresh-context auditor,
+%                 DIFFERENT agent from all wave authors (CLAUDE.md
+%                 15.5 / 6.3.2 binding).  The auditor takes NO tier
+%                 action; tier movement is the operator's decision.
+%
+% Verdict:       AUDIT-PARTIAL.
+%                Checklist (1) Proposition-A proof audit: ONE UPHELD
+%                finding (F1: Region-I boundary defect -- the written
+%                proof of Math437 Proposition A is INCOMPLETE on the
+%                trial band M(m) in (M_c, M_+), where the worst-case
+%                quadratic coefficient is NEGATIVE and Lemma 1 does not
+%                apply).  The CONCLUSION of Proposition A survives: the
+%                auditor supplies a hand-rigorous, anchor-only repair
+%                (closed-form penalty floors +0.0052460 / +0.0092199
+%                vs band/coupled dips <= 9.3e-4 / 0.00504922).  Until
+%                the repair is incorporated (Math437 v1.1), the
+%                T6-conditional grade of S1 is NOT certified by this
+%                audit.  Checklist (2)(3)(4)(5)(6): no UPHELD; several
+%                VALID-with-mitigation documentation repairs.
+% Provenance:    fresh-context independent auditor session, FILE TOOLS
+%                ONLY (no shell -- declared in S1; Math434/Math435
+%                precedent).  Every number asserted here is either
+%                (a) exact closed-form hand arithmetic re-derived by
+%                the auditor, or (b) an executed value quoted from the
+%                wave JSONs with the source labelled.  The companion
+%                script Math440_audit_secondwave_recheck.py is WRITTEN,
+%                NOT YET EXECUTED; no output of it is cited.
+% Date: 2026-06-05 UTC (environment-canonical; bash `date -u`
+%   unavailable in this session -- 11.5.3.1 deviation self-flagged
+%   in S5).
+% =====================================================================
+
+\section*{TECT-Math440. \S 15.5 consolidated independent audit of the second wave (Math435--438) --- AUDIT-PARTIAL}
+
+\subsection*{1. Mandate, entry document, independence, execution constraint}
+
+\paragraph{Mandate.} Consolidated \S 15.5 / \S 6.3.2 independent audit of
+the 2026-06-04 second wave, dispatched by the operator with entry
+document \textbf{Math439 v1.1} and the six-item pre-registered attack
+checklist of its \S 5 (binding order).  The audited candidate statements
+are S1 (Math437 Proposition A, the T6-conditional candidate), S2
+(conformance of all wave documents to the operator-pinned scope wording,
+Math439 v1.1 \S 1a), and S3 (gate-ledger confirmation for
+G6 / G1$''$-3b / G3$'$-b(i,ii)).
+
+\paragraph{Independence statement.} This auditor is a fresh-context
+agent that authored NONE of Math435--439, none of their scripts, and
+none of the prior chain (Math424--434).  All re-derivations below were
+performed from the primary sources without consulting the authors'
+intermediate working.
+
+\paragraph{Execution constraint (declared).} This session has file
+tools only --- no shell.  Consequences: (i) the companion verification
+script \texttt{Codes/supplementary/Math440\_audit\_secondwave\_recheck.py}
+is WRITTEN with full self-test asserts but NOT EXECUTED; none of its
+outputs are cited; (ii) every number asserted in this note is exact
+hand arithmetic at the locked constants
+($u = -0.86$, $v = 3.24$, $r = \mu^2 = 0.005$, $C = 1$,
+$q_0 = 0.6801747616$) and the Math426 certified anchors
+($r_R = 0.30452570866744433$, $M_R = 0.10941432918723439$), or an
+executed value quoted from the four wave JSONs with its source
+labelled; (iii) the single checklist item that REQUIRES execution (the
+1(d) independent-quadrature $\Delta_0$ recomputation) is delivered as a
+written independent-quadrature routine (auditor-own Gauss--Legendre
+log-substitution scheme, NOT the authors' \texttt{M\_qg}/trapz grid)
+plus a hand-rigorous closed-form floor that makes the audit conclusion
+independent of its execution; first execution is registered as debt D1
+(\S 6).
+
+\subsection*{2. Checklist findings}
+
+\subsubsection*{2.1 Item (1): Math437 Proposition-A proof audit --- ONE UPHELD (F1), one VALID-with-mitigation defect class (F2), remainder DISMISSED}
+
+\paragraph{(1a) Exact Wick decomposition --- DISMISSED (verified
+correct and complete at the layer).}  Independent re-derivation: for
+$\phi = \phi_c + \delta\phi$, $\phi_c = t\psi$, $\delta\phi$ Gaussian
+with \emph{uniform} cell variance $M$, Wick counting gives
+$\overline{\langle\phi^4\rangle} = P_4 t^4 + 6Mt^2 + 3M^2$ and
+$\overline{\langle\phi^6\rangle} = P_6 t^6 + 15 P_4 t^4 M + 45 t^2 M^2
++ 15 M^3$.  Collecting powers of $t$:
+$t^2$-coefficient $= \tfrac12[\langle\psi K\psi\rangle + 3uM + 15vM^2]
+= \hat\kappa/2$ with $\hat\kappa \ge \hat r_0(M)$ since
+$K(q) \ge K(q_0) = r$; $t^4$-coefficient
+$= \tfrac{P_4}{4}(u + 10vM)$, confirming $u_{\rm eff} = u + 10vM$ and
+the production line $0.25\,U N_4 + 2.5\,V N_4 M$
+(\texttt{Math424\_AddA\_reading\_uniqueness.py::dF\_reading},
+re-checked at source); $t^6$-coefficient $= \tfrac{v}{6}P_6$.
+\textbf{No odd-$t$ channel exists at the isotropic layer}: the
+Hamiltonian is even in $\phi$ and odd Gaussian moments vanish, so a
+nonzero $\langle\psi^3\rangle$ (HEX/BCC three-wave resonance) produces
+NO $t^3$ term; the resonant $\langle\phi_c^2\,\delta\sigma\rangle$
+channels require $\sigma(x)$ inhomogeneity, which is beyond-layer
+(Step-5b) by construction --- the single most important check of this
+audit, and it PASSES.  The closed form
+$u_{\rm eff}(M_+) = u + 10vM_+ = \tfrac13\sqrt{9u^2 - 60vr}$ is an
+exact algebraic identity (auditor re-derivation: substitute
+$M_+ = [-3u + \sqrt{9u^2-60vr}]/(30v)$; the $3u$ cancels).  DISMISSED.
+
+\paragraph{(1b) FINDING F1 --- UPHELD: the Region-I positivity step of
+the Proposition-A proof is invalid on the band
+$M(m) \in (M_c, M_+)$.}  The proof (Math437 \S 3) asserts: ``\emph{Region
+I} ($M(m) \ge M_c$): $\Phi > 0$ by Lemma 1 (all coefficients
+positive)''.  Lemma 1, however, establishes all-positive coefficients
+only on $M \ge M_+ = 0.0510720$, where $\hat r_0(M) > 0$ AND
+$u_{\rm eff}(M) > 0$.  On the band
+\[
+M \in (M_c,\, M_+) = (0.0265432,\ 0.0510720),
+\qquad
+\hat r_0(M) < 0,\quad
+\min_M \hat r_0 = r - \tfrac{3u^2}{20v} = -0.0292407 \ \text{at}\ M_c,
+\]
+the worst-case quadratic coefficient $\hat\kappa = \hat r_0(M)$
+(attained by on-shell patterns, $\langle\psi K\psi\rangle = r$) is
+NEGATIVE, so $\Phi$ can dip below zero for such trials and the
+``sum $> 0$ unless $t = 0$'' conclusion does not follow from Lemma 1
+there.  These trials are legitimate members of the layer (the isotropic
+Gaussian $\hat G_m$ is positive-definite for every $m > 0$, and
+$M(m)$ sweeps all of $(0,\infty)$); the note's undefined qualifier
+``in the PD set'' cannot exclude them without silently excising exactly
+the band where condensation danger lives (and the executed Math436 HEX
+grid independently EXHIBITS this band's instability: its three
+\texttt{not\_PD} Bloch points all sit at $M = 0.4\,M_R = 0.0438 < M_+$,
+where $m_H^2 = \hat r_0(0.0438) = -0.0148 < 0$).  The Math437 script
+provides NO claim covering worst-case positivity on the band (its
+gallery Region-I checks use $\hat\kappa = r_R$, the value at the
+canonical dressing only).  \textbf{UPHELD: the written proof is
+incomplete; the T6-conditional grade of S1 is not certified as
+issued.}
+
+\paragraph{F1 repair (auditor-supplied, hand-rigorous, anchor-only) ---
+the CONCLUSION of Proposition A survives.}  Two closed-form pieces:
+
+(i) \emph{Band dip floor.}  On the band $u_{\rm eff} > 0$, so dropping
+the positive quartic term,
+$\Phi \ge \tfrac{\hat r_0}{2}t^2 + \tfrac v6 t^6 \ge
+-\tfrac{|\hat r_0|^{3/2}}{3\sqrt v}$, hence uniformly on the band
+\[
+\Phi \;\ge\; -\,\frac{|\hat r_0(M_c)|^{3/2}}{3\sqrt v}
+\;=\; -\,\frac{(0.0292407)^{3/2}}{3\sqrt{3.24}}
+\;=\; -\,9.26\times10^{-4}.
+\]
+
+(ii) \emph{Band penalty floor (the $m_+$/$r_c$ cancellation).}  With
+$\Delta I = \int_{r_R}^{m} M(s)\,ds \ge M(m)\,(m - r_R)$ ($M$
+decreasing) the boundary terms $\tfrac12 M_b\,(m_b - r_R) +
+\tfrac12(r - m_b)M_b = \tfrac12 M_b (r - r_R)$ cancel the unknown
+boundary mass $m_b$ exactly, giving the anchor-only floor
+\[
+\Delta F_0(m_b) \;\ge\;
+\tfrac12 (r - r_R)(M_b - M_R) + \tfrac{3u}{4}(M_b^2 - M_R^2)
++ \tfrac{5v}{2}(M_b^3 - M_R^3)
+\]
+for the boundary with $M(m_b) = M_b$.  Evaluated at the certified
+anchors: $M_b = M_+$ gives $0.00873749 + 0.00603923 - 0.00953071 =
+\boxed{+0.0052460}$; $M_b = M_c$ gives $0.01241099 + 0.00726719 -
+0.01045827 = \boxed{+0.0092199}$.  The right flank of $\Delta F_0$ is
+monotone INCREASING for all $m > r_R$ by the sign argument
+$\tfrac{d\Delta F_0}{dm} = \tfrac12 M'(m)\,[\hat r_0(M(m)) - m]$ with
+$M' < 0$ and $\hat r_0(M(m)) < m$ (for $m > r_R$: $M(m) < M_R$, and on
+$[M_c, M_R]$ $\hat r_0$ is increasing with $\hat r_0(M_R) = r_R < m$ by
+the gap identity; on $[0, M_c]$ $\hat r_0 \le r = 0.005 \ll m$) --- so
+the floors hold on the ENTIRE band $m \in [m_+, r_c]$ and the entire
+Region II $m \ge r_c$ respectively, with no quadrature input.
+Band closure: $0.0052460 > 9.26\times10^{-4}$, margin
+$\mathbf{5.67\times}$.
+
+\paragraph{(1c) FINDING F2 --- VALID-with-mitigation: Lemma 2's stated
+premise ``$\hat\kappa \ge 0$'' is false on $(M_-, M_c) \subset$ Region
+II; the stated CONSTANT survives.}  Lemma 2's chain uses
+$Y_2 \le 3|u_{\rm eff}|/(2v)$ and the $\hat\kappa \to 0$ worst case ---
+both of which fail when $\hat\kappa < 0$, which occurs for worst-case
+patterns whenever $M \in (M_-, M_c) = (0.0020144, 0.0265432)$, a
+sub-band of Region II.  The note's adversarial sampler
+(\texttt{Math437\_step5\_class\_closure.py} \S E, line
+\texttt{kap = max(R + 3*U*M + 15*V*M*M, 0.0)}) CLIPS $\hat\kappa$ at
+zero and therefore cannot probe the true worst case --- the quoted
+``$3.2\times$ sampler slack'' is measured against a sampler that
+replicates the same blind spot.  \emph{Mitigation (auditor closed
+form)}: with the M-coupled honest worst case
+$h_M(Y) = \tfrac{\hat r_0(M)}{2}Y + \tfrac{u_{\rm eff}(M)}{4}Y^2 +
+\tfrac v6 Y^3$ (valid lower envelope for all patterns: where the
+bracket is negative, $\Phi = t^2 g(Y) \ge Y g(Y) = h_M(Y)$ using
+$t^2 \le Y$ from $P_4 \ge 1$ and $P_6 \ge P_4^2$), group
+$h_M = \tfrac r2 Y + Y\big[\tfrac{3|u|}{8}M - \tfrac{15v}{8}M^2\big]
+- \tfrac{|u|}{4}YZ + \tfrac v6 YZ^2$ with $Z = Y + \tfrac{15}{2}M$;
+for $M \le |u|/(5v) = 0.0530864$ (which contains $[0, M_+]$ entirely,
+$M_+ = 0.0510720 < 0.0530864$) the square bracket is $\ge 0$, and on
+the negative range of the factor $[\tfrac v6 Z - \tfrac{|u|}{4}]$,
+$Y \le Z$ gives
+\[
+h_M(Y) \;\ge\; Z^2\Big[\tfrac v6 Z - \tfrac{|u|}{4}\Big]
+\;\ge\; -\,\frac{|u|^3}{12\,v^2} \;=\; -\,0.0050492
+\;\;<\;\; \frac{9|u|^3}{64 v^2} = 0.0085206
+\]
+(minimum of the cubic at $Z = |u|/v$).  So the honest coupled worst
+dip is bounded by $0.0050492$, BELOW the stated Lemma-2 constant: the
+stated bound is conservative-but-true while its stated derivation is
+not.  Hand samples of the exact coupled cubic critical points:
+$D(0) = 0.004393$ (the global worst, at $M = 0$ where
+$u_{\rm eff} = u$ and $\hat\kappa = r$), $D(M_-) = 0.003992$,
+$D(0.005) = 0.003435$, $D(M_c) = 0.000926$ --- monotone decreasing in
+$M$, all under both constants.  Region-II closure with the F1(ii)
+floor: $0.0092199 > 0.0085206$ (margin $1.082\times$ against the
+stated constant) and $0.0092199 > 0.0050492$ (margin $1.83\times$
+against the clean auditor constant).  \emph{Required mitigation}: the
+Lemma-2 text must replace ``$\hat\kappa \ge 0$'' with the case-honest
+derivation (or cite the coupled bound above), and the sampler must
+allow $\hat\kappa = \hat r_0(M) < 0$.
+
+\paragraph{(1d) $\Delta_0$ recomputation --- VALID-with-mitigation
+(hand floor verified now; independent quadrature pending execution,
+debt D1).}  Without shell, the auditor delivers three layers:
+(i) the F1(ii) closed-form floor $\Delta F_0(r_c) \ge 0.0092199$ ---
+anchor-only, no quadrature, sufficient on its own to close Region II
+against both dip constants (this REMOVES the audit's hard dependence
+on the numerical $\Delta_0$); (ii) an exact monotonicity bracket on the
+implied log-integral: the JSON value $\Delta_0 = 0.12646500381964418$
+together with the scheme anchors ($r_{Rq} = 0.310015$,
+$M_{Rq} = 0.11009302$, $r_c = 24.3531$; all from
+\texttt{Runs/math/Math437/step5\_class\_closure.json}) implies
+$\Delta I = I(r_c) - I(r_{Rq}) = 0.8722$, which the auditor's exact
+bracket $M_c (r_c - r_{Rq}) \le \Delta I \le M_{Rq}(r_c - r_{Rq})$
+confines to $[0.638,\ 2.631]$ --- consistent (necessary, not
+sufficient); (iii) the independent quadrature routine (Gauss--Legendre
+on $q = q_0 e^{s}$, $N = 4096$, analytic tail; NOT the authors'
+\texttt{M\_qg} trapz grid) is written into the companion script with
+the assert window $|\Delta_0^{\rm aud} - 0.126465| < 2\times10^{-3}$
+(scheme envelope) --- execution debt D1.  The scheme-systematic
+handling in Math437 \S 6-$\beta$ (offset $5.5\times10^{-3}$
+gap-location, $\Delta_0$ stable to $5.6\times10^{-6}$ across schemes
+--- the note's ``$7\times10^{-6}$'' is a conservative round of the JSON
+delta $|0.12647058 - 0.12646500| = 5.6\times10^{-6}$) is internally
+consistent and honestly disclosed.  DISMISSED-at-floor /
+execution-pending-at-value.
+
+\paragraph{(1e) H-A0 slaved family --- VALID-with-mitigation.}  The
+layer is DEFINED over the one-parameter family
+$\hat G_m = [m + C(q^2-q_0^2)^2]^{-1}$.  A reviewer may object that
+``the ENTIRE isotropic-Hartree layer'' should include arbitrary
+isotropic Gaussian kernels $G(q)$, whose larger trial class can only
+LOWER the competing infimum.  The repair is one paragraph: because the
+interaction is local, the Gaussian stationarity condition forces a
+momentum-independent self-energy, so for every fixed $(t,\psi)$ the
+infimum over all isotropic Gaussians is attained inside the $m$-family
+--- the extension is WLOG.  This locality/WLOG remark is absent from
+the note and must be added (it is standard, but in a T6-candidate
+statement the hypothesis chain must be explicit).  Uniqueness
+certification of the $A = 0$ curve: the auditor's analytic flank-sign
+argument (F1 repair) now derives the monotone flanks WITHOUT the grid,
+strengthening claim C; the grid window $[2\times10^{-3}, 39]$ plus
+analytic tails is adequate.
+
+\paragraph{Secondary precision notes (item 1).}  (i) The note's
+``the sum is $\ge 0.118 > 0$'' over-rounds $0.126465 - 0.008521 =
+0.117944$; the \S 7 falsification floor ``$< -0.118$'' inherits it ---
+should read $0.1179$ (trivial magnitude, but T6-candidate text must
+not round up a safety margin).  (ii) ``$\Delta_0 = 14.8\times$ dip'':
+$0.126465/0.0085206 = 14.842$ --- correct.
+
+\subsubsection*{2.2 Item (2): layer-boundary language sweep --- DISMISSED (clean), two precision flags}
+
+Every pattern-universality sentence in Math437 (\S 0 header, \S 1
+scope, \S 3 Proposition, \S 5(1), \S 7) carries the
+isotropic-Hartree-layer scope in the same sentence or title; Step-5b
+correctly registers the beyond-layer half; the \S 6-$\alpha$ objection
+states the scoping honestly.  Math439 v1.1 \S 1/\S 1a conform to the
+operator-pinned wording verbatim.  Flags: (a) the Proposition's
+``every trial $(t>0, m)$ in the PD set'' leaves ``PD set'' UNDEFINED
+--- under the only consistent reading (all $m > 0$) finding F1
+applies; under the alternative reading ($\hat r_0 > 0$ branches) the
+``ENTIRE layer / ALL patterns'' wording would overstate by excising the
+dangerous band --- either way a repair is required (define the trial
+set as $m > 0$ and adopt the F1 repair); (b) the $0.118$ rounding
+(\S 2.1).
+
+\subsubsection*{2.3 Item (3): Math436 HEX exact-Wick bracket --- DISMISSED on substance; one VALID-with-mitigation wording finding (F4)}
+
+\paragraph{Combinatorics (independent re-derivation).}  The auditor
+re-derived the full $p_2$ map by hand ($p_2(0) = 6$; on-shell/
+$\sqrt3$/$2q_0$ classes $= 2/2/1$; $\sum = 36$) and the $p_4$ values by
+hand convolution $p_4 = p_2 * p_2$ over the 19-point $p_2$ support:
+$p_4(0) = 36 + 6\cdot4 + 6\cdot4 + 6\cdot1 = 90$; on-shell
+$= 12 + 30 + 12 + 6 = 60$; $2q_0$ $= 6 + 12 + 8 + 8 = 34$;
+$\sqrt3$-class $= 12 + 12 + 20 + 4 = \mathbf{48}$.  Notably, the
+auditor's FIRST hand pass produced 44 by the same error class as the
+original agent --- misreading $N\big((1,-1)-(2,1)\big) =
+N\big((-1,-2)\big) = 1 - 2 + 4 = 3$ (in-support, contributing
+$2\times2$) as out-of-support --- before correcting; \textbf{48 is
+CONFIRMED}, the mid-execution correction $44 \to 48$ was right and
+necessary, and the class-resolved totals
+$\{0{:}90, 1{:}360, 3{:}288, 4{:}204, 7{:}192, 9{:}72, 12{:}36,
+13{:}48, 16{:}6\}$ sum to $6^4$ with per-class multiplicity 6
+throughout (consistency verified).  The Gershgorin row sums
+$30 = 36 - 6$ and $1206 = 1296 - 90$ are class-split-independent as
+claimed.
+
+\paragraph{Hand-bound block at the argmin (re-derived).}  At
+$(A, M) = (0.01, M_R)$: $\mathrm{cou2} = (3u + 30vM_R)A^2 =
+8.0551\times10^{-4}$, $\mathrm{cou4} = 5vA^4 = 1.62\times10^{-7}$;
+$w_1 = 2\,\mathrm{cou2} + 60\,\mathrm{cou4} = 1.62075\times10^{-3}$,
+$w_{\sqrt3} = 2\,\mathrm{cou2} + 48\,\mathrm{cou4} =
+1.61880\times10^{-3}$, $w_2 = \mathrm{cou2} + 34\,\mathrm{cou4} =
+8.1102\times10^{-4}$ --- all reproduce the note;
+$\hat r = r_R + 6unA^2 + 60vnA^2M_R + 5vN_4A^4 = 0.3093734$ (note
+$0.3093733$, JSON $0.30937333$ --- $4\times10^{-8}$ from the
+\texttt{M\_fast} layer, inside the declared $5\times10^{-5}$);
+$\|X\|_{\rm Gersh} \le (30\,\mathrm{cou2} + 1206\,\mathrm{cou4})/\hat r
+= 0.024361/0.309373 = 7.874\times10^{-2}$, with the executed sup
+$4.5749\times10^{-2}$ (JSON \texttt{xnorm}) under it.  The small-$A$
+identity $c_2 = n r_R = 3\times0.30452570866744433 = 0.913577126$
+exact.  The magnitude ordering LAM/HEX/FCC at $A = 0.01$ matches
+$n r_R A^2 = 3.05/9.14/12.2 \times 10^{-5}$ against the executed
+$3.17/9.53/12.6\times10^{-5}$.  DISMISSED.
+
+\paragraph{Three-wave-resonance channel.}  The structural answer
+(band-limited torus-FFT cell averages of $\sigma$-monomials, Nyquist
+guard: support cut $N \le 12$ has max axis index 4, $k_{\max}(\sigma^3)
+= 12 < 24$; auditor re-checked the axis-index bound by direct
+inspection of the Loeschian ball) includes all resonant cross-terms by
+construction; the two-sided $|{\rm bracket} - {\rm off2}| =
+3.176\times10^{-7} \le 2\times10^{-5}$ gate (JSON
+\texttt{argmin\_corr\_vs\_margin}) bounds the total remainder at
+margin$/300$.  The metric-defect double leg is methodologically sound:
+the replica minimum $+9.486768603217552\times10^{-5}$ matches the
+Math431 JSON value digit-for-digit (auditor compared both files), the
+corrected-metric and exact-anchored minima
+($+9.500744\times10^{-5}$, $+9.532966\times10^{-5}$) are confirmed in
+the rows, and the argmin impact $+1.40\times10^{-7}$ is
+verdict-neutral in the safe direction.  DISMISSED.
+
+\paragraph{FINDING F4 --- VALID-with-mitigation: the ``at every point of
+the Math431 HEX grid'' / ``negatives over $9\times6$ grid: 0'' wording
+silently excludes three non-PD points.}  The executed JSON contains
+\texttt{not\_PD: true} rows at $(A, M/M_R) \in \{(0.01, 0.4),
+(0.02, 0.4), (0.04, 0.4)\}$; the negatives count is taken over the 51
+PD points (script line \texttt{neg = [r for r in rows if not
+r.get("not\_PD") ...]}).  The same convention appears in the executed
+LAM run (5 \texttt{not\_PD} rows in
+\texttt{Runs/math/Math434/lam\_exact\_wick\_bracket.json}) and was not
+flagged by the Math434 audit.  The physics defence is sound --- a
+non-PD $(A, M)$ pair is not a valid Gaussian trial and cannot furnish a
+counterexample --- but a closure note must SAY so.  \emph{Required
+mitigation}: one clause in Math436 \S 1/\S 4 (``51 of 54 grid points
+are PD trials; the 3 non-PD points at $M = 0.4\,M_R$, $A \le 0.04$ are
+outside the variational domain and are excluded, as in the executed LAM
+run''), plus the same clause retrofitted to the Math434-AddA record.
+Side observation: the non-PD points sit exactly in the
+$M < M_+$ band of finding F1 ($\hat r_0(0.4\,M_R) = -0.0148 < 0$) ---
+the Bloch grid independently corroborates the band's physical reality.
+
+\subsubsection*{2.4 Item (4): Math438 engine and scan audit --- DISMISSED on substance; two VALID-with-mitigation findings (F5, F6)}
+
+\paragraph{Exact moments (independent hand enumeration).}
+$m_{31}^{\{110\}^3\{211\}}$: by cubic symmetry $= 24 \times c_3$ with
+$c_3 = \#\{$ordered $\{110\}$-triples summing to $(2,1,1)\}
+= \sum_a p_2^{110}\big((2,1,1) - a\big)$; the auditor's full hand
+enumeration gives $c_3 = 4+4+4+2+2+1+1 = 18$, hence
+$m_{31} = 24\times18 = \mathbf{432}$ --- confirmed.
+$m_{31}^{\{110\}^3\{200\}} = 6 \times (4\cdot4 + 4\cdot2) =
+6\times24 = \mathbf{144}$ --- confirmed, matching Math432/Math437
+independently.  The JSON records $431.9999999999997$ /
+$143.99999999999991$ / $191.9999999999999$ (grid-exact to
+$10^{-13}$).  $\langle\Phi_s^2\rangle = 2n_s$ identities (12/2/24) are
+definitionally exact and asserted.  $c_2^{(3)} = n_3(r_R + 4Cq_0^4)
+= 12\times(0.30452571 + 0.85613459) = 13.9279$ closed form confirmed
+($K_3 = r + 4Cq_0^4 = 0.8611346$; the small-$A$ quadratic coefficient
+at the dressed point is $K_3 + 3uM_R + 15vM_R^2 = K_3 - r + r_R$ by the
+gap identity --- bookkeeping verified).  The Math432 regression lock:
+Math438's $5.536189\times10^{-4}$ vs Math432's executed
+$5.53618914620484\times10^{-4}$ --- agreement to SEVEN significant
+digits (the note's ``five digits'' under-claims).  DISMISSED.
+
+\paragraph{FINDING F5 --- VALID-with-mitigation (\S 6.3.8
+assert-coverage gap): the boxed integer $m_{31} = 432$ is RECORDED, not
+ASSERTED.}  The Math438 note boxes $m_{31}^{\{110\}^3\{211\}} = 432$ as
+a headline exact fact, and the CHANGELOG/EVIDENCE-INDEX propagate it;
+but the production script asserts only
+\texttt{abs(m31\_13) > 0.5} and \texttt{record}s the value (likewise
+144 and 192 are record-only).  Under \S 6.3.8 (``Asserts MUST cover
+every numerical claim in the Math note''), this is a compliance gap ---
+benign here because the JSON record carries the explicit value and this
+audit independently confirms it, but the assert must be added
+(\texttt{claim("m31\_110x3\_211", 432, m31\_13, 1e-9)} and siblings) in
+the next touch of the script.
+
+\paragraph{FINDING F6 --- VALID-with-mitigation (mitigation-chain
+circularity caveat): Math438 \S 5-$\alpha$ cites the Math437 layer
+theorem as one of four scan-coarseness mitigations.}  That mitigation
+leg inherits finding F1 until Math437 is repaired.  The other three
+legs (per-shell analytic small-$A$ bounds $c_2 = n r_R$ /
+$c_2^{(3)} = 13.93$; sextic dominance at large $A$; reproduction of the
+established records at the minima) are independent of Math437 and
+stand; the auditor additionally notes that the F1 repair (\S 2.1)
+restores the fourth leg.  The scan itself ($135 + 24$ points,
+refinement drifts margin$/1823$ and margin$/21$ at the extrema,
+Nyquist guards asserted per cut/grid) is coarse but honestly scoped
+(``estimator-grade qualifier mandatory'') --- no negative was found and
+the minima land on the analytically protected small-$A$ corner exactly
+as in Math430/432.  The refine drift at the anisotropic minimum
+(margin$/21$) is the thinnest convergence margin in the wave; it is
+disclosed in the note.  DISMISSED-as-scoped with the two mitigations
+above.
+
+\subsubsection*{2.5 Item (5): Math435 relabeling identity and citation lift --- DISMISSED (all exact-layer numbers hand-reproduced)}
+
+(i) \emph{Relabeling identity}: the disordered gap equation depends on
+$\mu^2$ only through $r_{\rm bare}$; the Math426 correction changes only
+the map ($\mu^2$ vs $\mu^2 + Yq_0^4$), so the corrected sweep is the
+old sweep shifted by $-Yq_0^4 = -0.2140336473$ ($q_0^4$ re-computed by
+the auditor) --- structurally exact.  Numerical spot check from the
+EXECUTED \S 2.5 table: linear interpolation of the corrected rows
+($\mu^2 = 0.0$: $r_R = 0.302234$; $+0.005$: $0.304492$) to
+$\mu^2 = +0.0140336$ gives $0.30857$, reproducing the old published
+$r_{\rm bare} = +0.014$ row ($0.3086$) --- the in-script relabeling
+assert is consistent.  The lift logic is moreover belt-and-braces: all
+17 corrected rows were executed directly (101/101).
+(ii) \emph{$\xi$ formula}: dimensional analysis confirmed
+($[c] = [K]L^4$ makes the written radicand $L^6$); the pole derivation
+$K \approx r_R + 4cq_0^2(q-q_0)^2 \Rightarrow \xi = 2q_0\sqrt{c/r_R}$
+re-derived; $\xi = 2(0.6801747616)\sqrt{1/0.30452571} = 2.46512$
+confirmed; ratio to the retired form $4q_0^2 = 1.8505508$ confirmed;
+the old-anchor value $2.10094$ and the retired-form value $1.135306$
+cross-check ($1.135306 \times 1.8505508 = 2.1009$).
+(iii) \emph{Exact boundaries}: $r^* = u^2/(4v) = (43/180)^2 =
+0.0570679$; $J$ rationals $9/10$, $45/68$, $0.729$, $405/704$ all
+re-derived from the integer $N_m$; the four canonical discriminants
+hand-reproduce the executed Math426 values to all printed digits
+($u^2N_4^2 - 8nrvN_6$: $26.6256 - 2.592 = 24.0336$;
+$5990.76 - 793.152 = 5197.608$; $34506.7776 - 4147.2 = 30359.5776$;
+$215667.36 - 32845.824 = 182821.536$); the gap identity closes at the
+certified anchors at the auditor's hand precision
+($0.005 - 0.28228897 + 0.58181468 = 0.30452571$); the window sign-flip
+between $+0.005$ and $+0.1$ is exact (linear in $r$); the v1.1
+documentation split (\S 2.3 methodology archive vs \S 2.5 sole citable)
+is the correct post-audit form.  DISMISSED.
+
+\subsubsection*{2.6 Item (6): forbidden-phrase sweep over Math435--439 --- DISMISSED (clean, two-sided)}
+
+Grep over both versions of all five notes: every occurrence of ``full
+theorem'' / ``T6/T7'' is in explicit NEGATION (``is NOT a full
+theorem'', ``T6/T7 have NOT been reached''); no ``unconditional'',
+``rigorous(ly)'', ``establishes'', ``global minimum'',
+``fully exact-Wick closed (all readings)'' anywhere; ``FULLY
+DISCHARGED'' is used only of the G1$''$-3b refinement GATE (a gate can
+be discharged; this is not a tier word) and ``CLOSED-PASS'' only of
+executed gates --- both conform to the prior operator-confirmed ledger
+vocabulary.  The Math439 v1.1 \S 1a block reproduces the
+operator-pinned wording verbatim (the word ``proves'' inside it is the
+operator's own pinned sentence, carrying its conditional qualifiers).
+Under-claim check (two-sided): Math438's ``five digits'' regression is
+a 7-digit agreement (noted, harmless); no recorded grade is understated
+elsewhere.  CLEAN.
+
+\subsection*{3. Cross-cutting findings (outside the checklist)}
+
+\begin{enumerate}
+\item \textbf{F7 (constructive): the audit repair makes claim D
+quadrature-light.}  The F1(ii) anchor-only floors close Region II
+($0.0092199 > 0.0085206$) and the F1 band ($0.0052460 >
+9.26\times10^{-4}$) with NO numerical $\Delta_0$; the full
+$\Delta_0 = 0.126465$ then becomes a comfort margin
+($13.7\times$ the floor) rather than a load-bearing constant.
+Incorporating this in Math437 v1.1 reduces the H-A0 hypothesis to the
+$A = 0$ uniqueness/flank structure --- which the auditor's flank-sign
+argument now derives analytically as well.  The hypothesis set
+\{H-layer, H-A0\} should be re-stated accordingly on repair.
+\item \textbf{F8 (margin honesty)}: after repair the binding Region-II
+margin is $1.082\times$ (anchor floor vs stated dip constant) or
+$1.83\times$ (vs the clean coupled constant) --- far thinner than the
+advertised $14.8\times$, which compares the un-floored $\Delta_0$
+against the dip.  Both statements are true; the repaired note should
+display BOTH so the reader sees the rigorous-floor margin, not only the
+numerical-quadrature margin.
+\item \textbf{F9 (date-stamp note)}: Math436's script docstring carries
+2026-06-05 (KST) against the note's 2026-06-04 (UTC) with an explicit
+same-instant disclaimer --- compliant with the \S 11.5.3.1 one-day
+tolerance; no action.
+\item \textbf{F10 (single-author wave)}: Math437/438 are
+dispatcher-authored continuous-session turns, self-flagged; this audit
+is the required different-agent review and discharges that flag for the
+wave \emph{as audited here} --- the F1 repair itself will need either
+operator review or a further independent pass before any tier use of
+S1 (the auditor cannot certify its own repair; \S 6.3.2).
+\end{enumerate}
+
+\subsection*{4. Verdict matrix and overall verdict}
+
+\begin{center}
+\small
+\begin{tabular}{|l|l|l|}
+\hline
+checklist item & verdict & load-bearing? \\
+\hline
+(1a) Wick decomposition / odd channels & DISMISSED (verified) & yes --- holds \\
+(1b) $u_{\rm eff}(M_+)$ closed form & DISMISSED (verified) & yes --- holds \\
+(1b$'$) Region-I boundary (F1) & \textbf{UPHELD} (repair supplied) & \textbf{yes} \\
+(1c) Lemma-2 premise (F2) & VALID-with-mitigation & yes --- constant survives \\
+(1d) $\Delta_0$ (independent) & VALID-with-mitigation (floor closed; quadrature = D1) & de-risked by F7 \\
+(1e) H-A0 family (WLOG remark) & VALID-with-mitigation & minor \\
+(2) layer-language sweep & DISMISSED (2 precision flags) & --- \\
+(3) Math436 HEX bracket & DISMISSED; F4 VALID-with-mitigation & --- \\
+(4) Math438 engine/scan & DISMISSED; F5/F6 VALID-with-mitigation & --- \\
+(5) Math435 relabeling/$\xi$/lift & DISMISSED (all hand-reproduced) & --- \\
+(6) forbidden-phrase sweep & DISMISSED (clean, two-sided) & --- \\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{Overall verdict: \textbf{AUDIT-PARTIAL}.}  One UPHELD on the
+load-bearing item (1) blocks an AUDIT-PASS (dispatch rule; CLAUDE.md
+\S 6.3.5(a)).  The PARTIAL (not FAIL) grading rests on: the
+Proposition-A CONCLUSION survives under the auditor's hand-rigorous,
+anchor-only repair with explicit margins ($5.67\times$ band,
+$1.08\times$--$1.83\times$ Region II); every executed gate ledger item
+(S3: G6, G1$''$-3b, G3$'$-b(i,ii)) is confirmed as recorded; the
+language conformance (S2) is clean.  \textbf{S1 as issued is NOT
+audit-certified at T6-conditional; it becomes certifiable upon the R1
+repair below plus the F10 second-look.}  No tier action is taken or
+implied by this note.
+
+\paragraph{Required repairs (acceptance-gated).}
+\begin{itemize}
+\item \textbf{R1 (Math437 v1.1, blocking for any tier use of S1)}:
+(a) define the trial set explicitly ($m > 0$); (b) replace the \S 3
+two-region proof by the three-region form --- $M \ge M_+$ (Lemma 1),
+$M \in [M_c, M_+)$ (band dip floor $9.26\times10^{-4}$ vs anchor
+penalty floor $0.0052460$), $M < M_c$ (coupled dip bound
+$\le |u|^3/(12v^2) = 0.0050492$, or the stated $0.0085206$ with the
+case-honest derivation, vs anchor penalty floor $0.0092199$); (c) fix
+the Lemma-2 ``$\hat\kappa \ge 0$'' premise and un-clip the adversarial
+sampler; (d) add the H-A0 locality/WLOG paragraph; (e) replace
+``$\ge 0.118$'' by ``$\ge 0.1179$'' (and the \S 7 floor accordingly);
+(f) per F7, restate \{H-layer, H-A0\} with the quadrature-light floors.
+\item \textbf{R2 (Math436 + Math434-AddA wording)}: the F4 non-PD
+clause (one sentence each).
+\item \textbf{R3 (Math438 script)}: F5 asserts for 432/144/192 on next
+touch; F6 caveat note (one line) until R1 lands.
+\item \textbf{D1 (execution debt)}: first execution of
+\texttt{Math440\_audit\_secondwave\_recheck.py} (dispatcher; the
+script asserts every F1/F2 number, the independent-quadrature
+$\Delta_0$, the convolution table, and the m31 integers).
+\end{itemize}
+
+\subsection*{5. Devil's-advocate on this audit (CLAUDE.md 6.3.1 + 6.3.5(a)) and quantitative sanity checks (6.3.4)}
+
+\textbf{Objection $\alpha$ (is F1 a real defect or a reading
+dispute?):} the note's ``PD set'' might have been intended to exclude
+the band.  \emph{DISMISSED with counter}: (i) the term is undefined in
+note and script; (ii) excluding the band would contradict ``the strict
+minimum of the ENTIRE isotropic-Hartree layer over ALL condensate
+patterns'' since every $m > 0$ is a positive-definite isotropic
+Gaussian trial; (iii) the script contains no claim covering the band
+either way; (iv) the executed Math436 Bloch grid exhibits the band's
+instability physically.  Under EITHER reading a repair is required, so
+the UPHELD stands.
+
+\textbf{Objection $\beta$ (the auditor's repair could itself be wrong
+--- no execution).}  \emph{VALID-with-mitigation, self-flagged}: the
+repair uses only (a) one-sided drops of manifestly nonnegative terms,
+(b) the exact cancellation $\tfrac12 M_b(m_b - r_R) + \tfrac12(r -
+m_b)M_b = \tfrac12 M_b(r - r_R)$ (pure algebra, $m_b$ cancels), (c) a
+single cubic minimisation in closed form, and (d) the certified
+anchors; every constant is asserted in the companion script with
+pre-set expected values, and execution debt D1 plus the F10
+second-look are registered BEFORE any tier use.  The arithmetic was
+hand-checked twice with independent groupings (the $0.0052460$ floor
+via $0.00873749 + 0.00603923 - 0.00953071$ and via the
+$\tfrac12(r-r_R)(M_b - M_R)$ form).
+
+\textbf{Objection $\gamma$ (no-shell audit of an execution-heavy wave
+--- is the audit adequate?):} \emph{VALID-with-mitigation}: the
+checklist's execution-dependent surface (Math436/438 engines) was
+audited at the levels available without execution --- independent exact
+combinatorics (hand convolution; hand zero-sum enumeration), closed-form
+bookkeeping identities, JSON-row regression comparisons across files
+(Math431 vs Math436 bit-level; Math432 vs Math438 7-digit), and
+convergence-margin review; the one item the dispatch explicitly tied to
+execution (1d) is covered by the F7 floor plus debt D1.  A re-run of
+the wave engines was NOT performed and is not claimed.
+
+\textbf{Objection $\delta$ (PARTIAL could be too lenient --- an invalid
+proof usually means FAIL):} \emph{DISMISSED with counter}: FAIL is
+reserved for a fired falsification gate or an unrepairable defect; here
+the conclusion is re-established by a strictly stronger (anchor-only)
+argument within the same hypothesis frame, the gate ledger (S3) is
+fully confirmed, and the defect is confined to one note's proof text.
+PARTIAL with blocking repair R1 is the accurate grade; tier language is
+untouched either way.
+
+\paragraph{Quantitative sanity checks (6.3.4).}
+\begin{itemize}
+\item \textbf{Dimensional}: $\xi = 2q_0\sqrt{c/r_R}$ has $[q_0^{-1}
+\cdot q_0^2] = L$ via $[c/r_R] = L^4$ --- PASS (and the retired form's
+$L^3$ failure is the Math435 finding, independently confirmed).
+\item \textbf{Independent-$\Delta_0$ comparison (dispatch-required)}:
+the auditor's anchor-only floor gives $\Delta F_0(r_c) \ge 0.0092199$;
+the executed $\Delta_0 = 0.126465$ (JSON) is $13.7\times$ the floor and
+its implied $\Delta I = 0.8722$ sits inside the exact monotonicity
+bracket $[0.638, 2.631]$ --- consistent at the level achievable without
+execution; the full independent-quadrature value is debt D1 with assert
+window $\pm 2\times10^{-3}$.  PASS-at-floor.
+\item \textbf{Limit case}: at $r \to 3u^2/(20v)$ the band collapses
+($M_- \to M_+ \to M_c$) and both the F1 dip floor and the negativity of
+$\hat r_0(M_c) = r - 3u^2/(20v)$ vanish together --- the repair
+degrades gracefully to Lemma 1 alone.  PASS.
+\item \textbf{Magnitude/sign}: the coupled worst dip $0.004393$ sits at
+$M = 0$ where $u_{\rm eff}$ is most negative and $\hat\kappa = r > 0$
+--- the dip DECREASES as $M$ rises toward $M_c$ ($0.000926$) because
+$|u_{\rm eff}|$ shrinks faster than $\hat\kappa$ goes negative;
+direction verified at four hand samples.  PASS.
+\item \textbf{Conservation/closure cross-check}: $0.126465 -
+0.008521 = 0.117944$ (the corrected ``$0.1179$'' floor);
+$0.126465/0.0085206 = 14.84$; $5197.608 = 0.7396\times8100 -
+793.152$ exact.  PASS.
+\item \textbf{Reproducibility}: every asserted constant of this note is
+encoded with its expected value in the companion script's claim list;
+execution = D1.  DECLARED-PENDING.
+\end{itemize}
+
+\subsection*{6. Registered follow-ups}
+
+\textbf{D1}: dispatcher first execution of
+\texttt{Codes/supplementary/Math440\_audit\_secondwave\_recheck.py}
+(emits \texttt{Runs/math/Math440/audit\_recheck.json}; exit 0
+required); \textbf{R1} Math437 v1.1 re-issue (blocking for S1 tier
+use); \textbf{R2} Math436/Math434-AddA non-PD clause; \textbf{R3}
+Math438 script asserts + F6 caveat; \textbf{F10} second-look at the R1
+repair by the operator or a further fresh agent before any tier use of
+S1.  Ledger updates this turn: CHANGELOG top entry, OPEN-QUESTIONS
+append (Q-2026-06-04-Math424-AddA-PathA-Residual-Gates), EVIDENCE-INDEX
+row, VERSIONS.md row.  TOE-FACT-SHEET untouched (dispatch mandate).
+Generator-chain debt: \texttt{[GEN-CHAIN-FAIL no-bash-capability]} ---
+the operator/dispatcher must run \texttt{generate\_website.py},
+\texttt{generate\_status\_history.py},
+\texttt{verify\_website.py --regen-manifest} before publish
+(Math434/435 precedent).
+
+\subsection*{7. Cross-references}
+
+Entry document: Math439 v1.1 (\S 5 checklist; \S 1a pinned wording).
+Audited: Math435 v1.1 (+\texttt{Runs/math/Math435/g6\_corrected\_cascade.json},
+101 claims); Math436 (+\texttt{Runs/math/Math436/hex\_exact\_wick\_bracket.json},
+49 claims); Math437 (+\texttt{Runs/math/Math437/step5\_class\_closure.json},
+78 claims); Math438 (+\texttt{Runs/math/Math438/g3prime\_b\_multishell\_aniso.json},
+27 claims).  Context anchors: Math426 (corrected constants); Math425
+(CS theorem, $P_6 \ge P_4^2$); Math427 (diagonal-isotropy infimum);
+Math429/430 (anchored protocol); Math431 (HEX estimator target /
+metric-defect subject; \texttt{Runs/math/Math431/g1pp3\_lam\_hex\_fcc.json});
+Math432 (two-shell engine + \texttt{Runs/math/Math432/g3prime\_multishell\_ensemble.json},
+regression source); Math434/Math434-AddA (\S 15.5 precedent; LAM
+execution; \texttt{Runs/math/Math434/lam\_exact\_wick\_bracket.json}).
+This audit: \texttt{Codes/supplementary/Math440\_audit\_secondwave\_recheck.py}
+(WRITTEN, NOT EXECUTED --- debt D1) +
+\texttt{Runs/math/Math440/audit\_recheck.json} (to be emitted by D1).
+CLAUDE.md \S 15.5/\S 6.3.2 (auditor separation), \S 6.3.5(a)
+(self-adversarial), \S 6.3.4 (quantitative sanity), \S 6.3.8
+(script/JSON archival).
+
+% =====================================================================
+% End of TECT-Math440 (260605-v1.0).
+% =====================================================================

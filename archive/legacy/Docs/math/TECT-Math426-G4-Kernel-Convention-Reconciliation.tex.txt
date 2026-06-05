@@ -1,0 +1,243 @@
+% =====================================================================
+% TECT-Math426 -- G4 gate execution and verdict: kernel-convention
+%                 reconciliation between the Math425 CS theorem and the
+%                 Math400-AddF N=64 BCC channel result.
+%                 VERDICT: G4 FIRED and is RESOLVED. The production
+%                 functional (real_backend_pt_bcc_mixed_v3.py::
+%                 shell_free_energy, mirrored by Math374) has kernel
+%                 K(q) = r_eff + Z q^2 + Y q^4 with Z = -2 Y q0^2,
+%                 identically K(q) = mu2 + Y (q^2-q0^2)^2. The
+%                 Brazovskii shell mass is therefore
+%                 r_braz = K(q0) = mu2 = +0.005 at canonical, NOT the
+%                 Math400-AddE-mapped r = mu2 + Y q0^4 = +0.219 (that
+%                 value is K(0)). Consequences: (i) MF condensation
+%                 EXISTS at corrected canonical (all four reading
+%                 discriminants positive) -- Math82-AddH and
+%                 Math400-AddF numerics are CONSISTENT, contradiction
+%                 dissolved; (ii) Math425 theorem re-scoped: its
+%                 no-condensation region in production convention is
+%                 mu2 > u^2/(4v) = 0.0571, which EXCLUDES canonical;
+%                 (iii) Math424-AddA sub-result (a) inverts under the
+%                 production convention; (iv) THE PHYSICS SURVIVES:
+%                 corrected gap equation gives unique r_R = 0.3045 > 0
+%                 and the corrected-canonical Hartree comparison still
+%                 collapses every condensate reading to A* = 0 --
+%                 Reading H is selected by Brazovskii fluctuation
+%                 restoration (the original Brazovskii scenario), not
+%                 by mean-field impossibility.
+%
+% Status:        G4 CLOSED (fired + resolved). AUDIT-event note:
+%                convention-offset defect registered in
+%                NEGATIVE-RESULTS (AUDIT-2026-06-04-G4-Kernel-
+%                Convention-Offset); AUDIT-STATUS banners added to
+%                Math400-AddE, Math424-AddA, Math425. Corrected-
+%                canonical Hartree restoration: T4 STRONG EVIDENCE
+%                (single-shell isotropic-Hartree class, corrected
+%                r_braz). No pillar tier change.
+% Audit class:   Cross-note consistency audit (CLAUDE.md 6.3.2) +
+%                falsification-gate execution (6.3.3).
+% Trigger:       Operator audit of Math425 (2026-06-04): "G4 first" --
+%                G4 designated the mandatory next gate.
+% Theory tag:    Math426
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math426. G4 verdict: kernel-convention offset found and fixed; Math400-AddF reconciled; Reading H survives at the Hartree level}
+
+\subsection*{0. Summary}
+
+G4 asked whether the Math400-AddF $N{=}64$ BCC ``true local min'' is a
+stationary point of the same continuum mean-field functional to which the
+Math425 no-condensation theorem was applied. The answer is NO --- because the
+two referred to DIFFERENT functionals relating by a uniform kernel offset:
+
+\[
+\boxed{
+\begin{aligned}
+&\text{Production kernel (code ground truth):}\quad
+K(q) = (\mu^2 + Yq_0^4) - 2Yq_0^2\,q^2 + Y q^4 \;\equiv\; \mu^2 + Y(q^2-q_0^2)^2,\\[2pt]
+&\text{shell mass } r_{\rm braz} = K(q_0) = \mu^2 = +0.005;\qquad
+K(0) = \mu^2 + Yq_0^4 = +0.219.\\[2pt]
+&\text{Math400-AddE mapping used } r = \mu^2 + Yq_0^4 \text{ as the
+Brazovskii mass} \;\Rightarrow\; \text{uniform } +Yq_0^4 \text{ offset.}
+\end{aligned}}
+\]
+
+Code-anchored proof (10/10 asserts,
+\texttt{Codes/supplementary/Math426\_g4\_kernel\_reconciliation.py};
+artefact \texttt{Runs/math/Math426/g4\_kernel\_reconciliation.json}):
+evaluating the production-faithful \texttt{free\_energy\_canonical} on
+plane waves extracts $K(q_0) = \mu^2$ and $K(0) = \mu^2 + Yq_0^4$ to
+$10^{-8}$, and $K(1.5q_0)$ matches $\mu^2 + Y(q^2-q_0^2)^2$ exactly.
+The $Z = -2Yq_0^2 = -0.9252754$ completion term is explicit in
+\texttt{Math374\_canonical\_BCC\_hessian.py} (header line 21 and
+\texttt{Z\_eff} construction) and in the production
+\texttt{shell\_free\_energy} ($Z$ parameter, $F_{\rm grad}$ term).
+
+\subsection*{1. Consequence table (corrected canonical, $r_{\rm braz} = \mu^2 = 0.005$)}
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+Quantity & AddE-mapped ($r=0.219$) & corrected ($r_{\rm braz}=0.005$) \\
+\hline
+MF condensation threshold $4rv/u^2$ & $3.838$ ($>1$: forbidden) & $0.0876$ ($<J$: ALLOWED) \\
+MF discriminants (LAM/HEX/FCC/BCC) & all negative & $+24$ / $+5198$ / $+30360$ / $+182822$ \\
+Math82-AddH / Math400-AddF BCC states & contradicted & \textbf{CONSISTENT} \\
+Disordered gap solution $r_R$ & $0.4193$ & $0.3045$ (unique, $>0$) \\
+$M_R$ & $0.0960$ & $0.1094$ \\
+Hartree global minimum & $A^*=0$ (trivially) & $A^*=0$ \textbf{(restoration)} \\
+\hline
+\end{tabular}
+\end{center}
+
+The decisive physics: at the corrected canonical point, mean-field
+condensates EXIST for every enumerated reading, and the self-consistent
+Hartree fluctuation terms REMOVE all of them (global minimum back at
+$A^* = 0$, all four readings). Reading H is selected by Brazovskii
+fluctuation restoration --- precisely the mechanism of Brazovskii (1975)
+--- and NOT by mean-field impossibility. The Math400-AddF $N{=}64$ BCC
+state is exactly what Reading H predicts: a genuine mean-field-level local
+channel that the ensemble vacuum supersedes at fluctuation level.
+
+\subsection*{2. Re-scoping of affected notes (AUDIT banners added this commit)}
+
+\begin{itemize}
+\item \textbf{Math400-AddE}: the mapping $r = \mu^2 + Yq_0^4$ conflates
+$K(0)$ with the Brazovskii shell mass. Its qualitative Path-$\alpha$
+verdict SURVIVES under correction (unique $r_R = 0.3045 > 0$ at corrected
+canonical, this note), but every quoted number ($r_R = 0.4193$,
+$M = 0.0960$, the 16-point sweep $r$-column) refers to the offset variable
+and requires re-derivation. AUDIT-STATUS banner added; recomputation
+cascade queued (OPEN-QUESTIONS).
+\item \textbf{Math424-AddA}: sub-result (a) (canonical exact MF inequality)
+holds only in the AddE-mapped variable and INVERTS under the production
+convention; sub-result (b) (Hartree restoration) becomes the load-bearing
+result and is CONFIRMED at the corrected canonical point by this note's
+run. Banner added; quantitative re-scan across the corrected window queued.
+\item \textbf{Math425}: the CS theorem's mathematics is UNAFFECTED (it is
+convention-free); its instantiation at canonical used the offset $r$. In
+production convention the no-condensation region is
+$\mu^2 > u^2/(4v) = 0.0571$, which EXCLUDES the canonical $\mu^2 = 0.005$.
+Canonical-point no-condensation claim RETRACTED; the theorem remains valid
+and useful as stated for $\mu^2 > 0.0571$ and as an exact bound
+$J \le 1$ everywhere (it still excludes ALL condensation, any pattern, for
+$\mu^2 > 0.0571$). Banner added.
+\item \textbf{Math401 / downstream lexicon}: quasi-Goldstone mass
+$\sqrt{r_R}$: $0.65 \to 0.55$; correlation length $\xi = \sqrt{c/(4 r_R q_0^2)}$
+and related numbers shift; lexicon update queued (NOT applied silently).
+\end{itemize}
+
+\subsection*{3. What is now established (honest tier statement)}
+
+\begin{itemize}
+\item Kernel identity $K(q) = \mu^2 + Y(q^2 - q_0^2)^2$ for the production
+functional: code-anchored, exact; $r_{\rm braz} = \mu^2$. (Forensic fact.)
+\item Corrected-canonical Hartree restoration (all four readings
+$A^* = 0$ despite positive MF discriminants): \textbf{T4 STRONG EVIDENCE}
+for Reading-H selection within the single-shell isotropic-Hartree class at
+the corrected operating point --- the operator-audit caveats $H_3$
+(isotropic gap) and multi-shell extension now carry REAL weight (the
+restoration is a fluctuation-level statement, exactly where Attack 2
+applies), so no stronger label is permitted.
+\item Math425 CS theorem: unchanged mathematics, T6 PROVED CONDITIONAL on
+$H_F$, applicability region $\mu^2 > 0.0571$ (production convention).
+\item Axiom $H_{\rm RH\text{-}BCC\text{-}channel}$: NOT promoted; the
+mean-field shortcut is closed off, and the promotion burden now rests
+explicitly on the fluctuation-level gates (G1$'$ extended to canonical,
+G3$'$, Step-5).
+\end{itemize}
+
+\subsection*{4. Gate re-binding (post-G4)}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+G4 & \textbf{CLOSED} (fired + resolved; this note) \\
+G1$'$ anisotropic-Bragg Hartree & EXTENDED: now relevant AT CANONICAL
+(restoration is the load-bearing mechanism there) \\
+G3$'$ Hartree multi-shell ensemble & unchanged, now top-priority with G1$'$ \\
+G2 (phase/amplitude) & CS bound $J \le 1$ still closes it for
+$\mu^2 > 0.0571$; at canonical the question returns at HARTREE level
+(MF level now condenses) \\
+Step-5 exhaustiveness & open (Hartree level) \\
+G5 constants lock & unchanged \\
+G6 (NEW) recomputation cascade & AddE sweep + Math401 lexicon +
+Math424-AddA window re-scan in corrected variable \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{5. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (two legitimate conventions?):} could the AddE
+variable be a legitimate alternative normalisation rather than a defect?
+\emph{DISMISSED}: every numerical anchor of the theory (Math82-AddH,
+Math383 \S 6, Math400-AddF, Math374) evaluates the PRODUCTION kernel; a
+``convention'' that matches no production evidence and shifts the kernel
+uniformly by $+Yq_0^4$ is a mis-mapping, not a choice. The plane-wave
+extraction is unambiguous.
+
+\textbf{Objection $\beta$ (does my corrected Hartree run inherit the same
+class of error?):} \emph{ADDRESSED}: the Math424-AddA machinery is written
+directly in the Brazovskii form $(r_{\rm braz}, c)$; this note instantiates
+it with the code-verified $r_{\rm braz} = \mu^2$. The remaining model risk
+is the declared $H_3$ isotropic-gap truncation --- now explicitly
+load-bearing and assigned to G1$'$ at canonical.
+
+\textbf{Objection $\gamma$ (does AddE's sweep conclusion survive?):} the
+``Path $\alpha$ for all $\mu^2 \in [-1, +0.5]$'' sweep was computed in the
+offset variable; in the corrected variable the same $\mu^2$ row probes a
+different physical point. \emph{UPHELD-as-open}: the corrected sweep is
+QUEUED (G6); only the corrected canonical point is certified here. Until
+then, statements citing AddE sweep rows are suspended.
+
+\subsection*{6. Quantitative sanity checks (CLAUDE.md 6.3.4)}
+
+\textbf{Exactness}: $K(q_0)$ plane-wave extraction matches $\mu^2$ to
+$10^{-8}$ on a spectral grid (machine-precision class). PASS.
+\textbf{Sign-direction}: corrected canonical sits BELOW $r^* = 0.0571$,
+so MF condensation must appear --- and all four discriminants flipped
+positive, magnitudes ordered by $n$ (LAM smallest, BCC largest), matching
+$u^2 N_4^2 - 8 n r v N_6$ scaling. PASS.
+\textbf{Limit-case}: the corrected gap equation at $A = 0$ reproduces the
+dis ordered fixed point with $r_R = 0.3045$, $M = 0.1094$; consistent with
+the AddE-machinery interpolation table (same integrand, different bare
+mass). PASS.
+\textbf{Identity}: $\Delta F(0) = 0$ holds in the corrected runs (inherited
+assert). PASS.
+\textbf{Reproducibility}: 10/10 claims, JSON artefact, deterministic. PASS.
+
+\subsection*{7. Pre-registered falsification gates (updated)}
+
+\begin{itemize}
+\item[G1$'$:] anisotropic-Bragg Hartree AT CANONICAL: if the
+Bragg-anisotropic trial propagator reverses the restoration
+($\Delta F_{\rm BCC} < 0$), Reading-H selection at canonical FAILS at one
+loop and the Math424 Outcome-3 branch activates. This is now THE critical
+open gate.
+\item[G3$'$:] Hartree-level multi-shell ensemble comparison at corrected
+canonical; fires on any dressed channel state with $F < F[\mathcal{R}_H]$.
+\item[G6:] recomputation cascade: corrected AddE sweep; Math401 lexicon
+($\sqrt{r_R} = 0.55$, $\xi$, $M_R = 0.1094$); Math424-AddA corrected-window
+re-scan. Any sign flip in the corrected sweep fires a further re-scope.
+\end{itemize}
+
+\subsection*{8. Cross-references}
+
+\texttt{Codes/pde/real\_backend\_pt\_bcc\_mixed\_v3.py::shell\_free\_energy}
+(production kernel; $Z$ default and $F_{\rm grad}$);
+\texttt{Codes/supplementary/Math374\_canonical\_BCC\_hessian.py} (faithful
+mirror; $Z_{\rm eff} = -2Yq_0^2$);
+\texttt{Codes/supplementary/Math426\_g4\_kernel\_reconciliation.py} +
+\texttt{Runs/math/Math426/g4\_kernel\_reconciliation.json} (10 asserts);
+Math425 (CS theorem; banner); Math424-AddA (banner; Hartree machinery);
+Math400-AddE (banner; mapping defect); Math400-AddF ($N{=}64$; reconciled);
+Math401 (lexicon queue); NEGATIVE-RESULTS
+\texttt{AUDIT-2026-06-04-G4-Kernel-Convention-Offset}; operator audit
+2026-06-04 (G4-first directive). Textbook: Brazovskii, Sov.\ Phys.\ JETP 41
+(1975) 85 (fluctuation-induced restoration and first-order transition).
+
+% =====================================================================
+% End of TECT-Math426.
+% =====================================================================

@@ -5,6 +5,33 @@ not pillar counts.
 
 ---
 
+## [M1/Migration] Sector-B evidence chain migrated + re-validated (277/277 asserts) — 2026-06-05
+
+- **Batch 1 of pull-based migration** (`governance/migration-plan.md` §4 priority 1):
+  23 legacy files (11 notes: Math426+AddA/AddB, Math435 v1.0–v1.1, Math437
+  v1.0–v1.2, Math440, Math441, Math442; 7 scripts incl. 3 import dependencies;
+  5 run JSONs) copied MIGRATED-VERBATIM to `archive/legacy/` at original paths.
+- **Re-validation**: all four verification scripts re-run in a fresh
+  environment — 10/10 (Math426), 101/101 (Math435), 91/91 (Math437),
+  75/75 (Math440) self-test asserts PASS; regenerated JSONs identical to
+  archived artefacts within rel_tol 1e-9. Artefacts:
+  `runs/A1-KERNEL-CONV/260605-m1-reval/`, `runs/B2-PROPA-HLAYER/260605-m1-reval/`.
+- **Finding (STALE-ARTEFACT)**: archived Math437 `step5_class_closure.json`
+  predates the R1 repair (v1.0-era verdict string; numerics identical). Fresh
+  artefact under `runs/` is canonical for TSv2 citation.
+- **Claim updates** [A1-KERNEL-CONV, B1-RH-ENUM, B2-PROPA-HLAYER]: A1 and B2
+  are migration-clean with reproduction **AVAILABLE** (two-script commands +
+  expected outputs on the cards); B1 partially resolved (Math431-HEX chain
+  still `legacy:` — next M1 batch). No tier changes.
+- **H-LAYER / H-A0 transcribed verbatim** into `claims/GATES.md` from Math437
+  v1.2 §Hypotheses (the H-LAYER beyond-layer residual is exactly STEP-5B).
+- Migration ledger: 23 rows added; B2-feeding rows flagged
+  **operator sign-off PENDING** per migration-plan §6.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
 ## [Bootstrap] Repository structure, governance v2.0, seeded claim ledger — 2026-06-05
 
 - Created the P0/P1/P2 three-tier repository layout (`internal/` local-only,

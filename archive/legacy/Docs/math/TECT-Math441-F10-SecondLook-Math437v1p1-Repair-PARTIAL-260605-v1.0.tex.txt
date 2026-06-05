@@ -1,0 +1,500 @@
+% =====================================================================
+% TECT-Math441 -- F10 SECOND-LOOK verification of the Math437 v1.1
+%                 R1 repair (Math440 item F10; CLAUDE.md 6.3.2
+%                 cross-turn second-order audit).  THIRD independent
+%                 set of eyes: neither the Math437 author nor the
+%                 Math440 auditor may certify the repair.  Scope is
+%                 NARROW: the R1 repair only.  NO tier action is taken
+%                 or implied.
+%
+% Verdict:       PARTIAL.
+%                The MATHEMATICAL repair of finding F1 is verified
+%                COMPLETE from scratch: Lemma 3 (ln-inequality =>
+%                anchor-only floor with exact trial-mass cancellation),
+%                the four-interval coverage of all m > 0, both dip
+%                constants (band 9.2595e-4 sextic-only; coupled
+%                |u|^3/(12 v^2) = 0.0050492 covering the COMBINED
+%                negative-quadratic + negative-quartic mechanism on
+%                (0, |u|/(5v)] -- re-derived independently below), and
+%                all margins (5.67x band; 1.83x Region II) are
+%                CONFIRMED with no proof gap.  PARTIAL (not CERTIFIED)
+%                because two named DOCUMENTATION fixes remain: (SL-1)
+%                the v1.1 note attributes the dip value -0.00439 to its
+%                own un-clipped sampler, whose executed JSON records
+%                -0.002626 -- the -0.00439 is the Math440 deterministic
+%                scan value (note-vs-JSON provenance mismatch,
+%                6.3.8-class); (SL-2) the Interval-II'/II margin lines
+%                round +0.0006993 up to "+0.0007" and +0.0041707 up to
+%                "+0.0042" -- true statements via tighter floors, but
+%                the DISPLAYED chains do not support the displayed
+%                roundings (same defect class as the Math440-flagged
+%                0.118 -> 0.1179, which v1.1 fixed elsewhere).
+%                Neither fix touches the proof chain; on landing them
+%                (Math437 v1.2 or operator-approved erratum line) the
+%                repair is certifiable with no residual.
+% Provenance:    fresh-context THIRD agent (authored none of
+%                Math424-440 or their scripts); FILE TOOLS ONLY (no
+%                shell -- declared in S1; Math434/435/440 precedent).
+%                Every number asserted here is exact hand arithmetic at
+%                the locked constants, or an executed value quoted from
+%                Runs/math/Math437/step5_class_closure.json (91/91,
+%                2026-06-04) / Runs/math/Math440/audit_recheck.json
+%                (75/75, 2026-06-05) with its source labelled.  No
+%                script was executed this session.
+% Date: 2026-06-05 UTC (environment-canonical; bash `date -u`
+%   unavailable -- 11.5.3.1 deviation self-flagged in S4).
+% =====================================================================
+
+\section*{TECT-Math441. F10 second-look at the Math437 v1.1 R1 repair --- PARTIAL (mathematical repair verified complete; two named documentation fixes)}
+
+\subsection*{1. Mandate, independence, execution constraint}
+
+\paragraph{Mandate.} Math440 (\S 15.5 consolidated audit, AUDIT-PARTIAL)
+UPHELD finding F1 against Math437 v1.0: the Proposition-A proof was
+incomplete on the trial band $M \in (M_c, M_+)$ where the worst-case
+quadratic coefficient $\hat\kappa = \hat r_0(M) < 0$.  Math440 supplied
+an anchor-only repair route (R1); the authors landed it as Math437
+v1.1 (note + script v1.1, 91/91 executed).  Math440 item F10 requires
+that the repair be verified by a party that is NEITHER the original
+author NOR the Math440 auditor before any tier use of Proposition A.
+This note is that third-party verification.  Scope: the R1 repair
+ONLY (items (a)--(f) of the dispatch).  NO tier action: even a
+CERTIFIED verdict would only make Proposition A \emph{eligible} for
+the operator's T6 discussion.
+
+\paragraph{Independence.} This verifier is a fresh-context agent that
+authored none of Math424--440, none of their scripts, and none of the
+ledgers being updated.  All re-derivations below were performed from
+the primary sources (the v1.1 note, its script and JSON, the Math440
+note, script and JSON) without consulting either author's intermediate
+working.
+
+\paragraph{Execution constraint (declared).} File tools only --- no
+shell.  Consequences: (i) the dispatch's optional re-run of
+\texttt{Math437\_step5\_class\_closure.py} was NOT performed; the
+executed evidence cited is the on-disk JSON
+(\texttt{Runs/math/Math437/step5\_class\_closure.json}: 91 claims,
+0 \texttt{passed:false} rows, grep-verified); (ii) the optional
+spot-check script \texttt{Math441\_f10\_spotcheck.py} was NOT written
+(a script this session could not be executed, and an unexecuted script
+adds no evidence --- Math440 D1 precedent); every check below is exact
+hand arithmetic shown in full; (iii) \texttt{date -u},
+\texttt{safe\_write.py --verify}, the generator-chain, and
+\texttt{sandbox\_commit.sh} are unavailable --- debts listed in \S 4.
+Constants used throughout: $u = -0.86$, $v = 3.24$, $r = 0.005$,
+$r_R = 0.30452570866744433$, $M_R = 0.10941432918723439$,
+$M_c = -u/(10v) = 43/1620 = 0.0265432$, $M_\pm = [-3u \mp
+\sqrt{9u^2 - 60vr}]/(30v)$ giving $M_- = 0.0020144$,
+$M_+ = 0.0510720$.
+
+\subsection*{2. Per-item findings (a)--(f), with re-derivations}
+
+\subsubsection*{(a) Lemma 3 --- CONFIRMED (re-derived from scratch)}
+
+\paragraph{(a-1) The ln-inequality and its direction.}  For $x > 0$,
+$\ln x \ge 1 - 1/x$ with equality iff $x = 1$ (concavity of $\ln$ at
+$x = 1$).  With $x = (m + D)/(r_R + D) > 0$ for all $m > 0$,
+$D = C(q^2 - q_0^2)^2 \ge 0$:
+\[
+\ln\frac{m+D}{r_R+D} \;\ge\; 1 - \frac{r_R+D}{m+D}
+\;=\; \frac{m - r_R}{m+D}
+\quad\text{pointwise in } q,\ \text{for ALL } m > 0
+\]
+--- the inequality is sign-correct for $m < r_R$ as well (both sides
+negative there; the bound is unconditional).  Integrating against
+$q^2\,dq/(2\pi^2)$:
+\[
+dI(m, r_R) \;\ge\; (m - r_R)\,M(m). \tag{$\ast$}
+\]
+\emph{Scoping check (dispatch (a)(i))}: the v1.1 statement scopes the
+floor to $m \ge r_R$ ($M \le M_R$).  The inequality itself holds for
+all $m > 0$; the scoping governs only where $P_B > 0$ is useful.
+Verified application map: Intervals B, II, II$'$ all have
+$M < M_+ = 0.05107 < M_R = 0.10941$, i.e.\ $m > m_+ > r_R$ --- ALL
+$P_B$ applications are inside the stated scope, and \textbf{no
+interval with $M > M_R$ relies on $P_B$} (Interval I$'$ uses Lemma-1
+all-positivity plus $\Delta F_0 \ge 0$, not $P_B$).  Consistent.
+
+\paragraph{(a-2) The cancellation algebra (dispatch (a)(ii)).}
+Substituting $(\ast)$ into
+$\Delta F_0(m) = \tfrac12 dI + \tfrac12[(r-m)M - (r-r_R)M_R]
++ \tfrac34 u(M^2 - M_R^2) + \tfrac52 v(M^3 - M_R^3)$:
+\[
+\tfrac12(m - r_R)M + \tfrac12(r - m)M \;=\; \tfrac12 M\,(r - r_R)
+\]
+--- the trial mass $m$ cancels EXACTLY.  Surviving terms:
+\[
+\Delta F_0(m) \;\ge\; P_B(M) = \tfrac12(r - r_R)(M - M_R)
++ \tfrac34 u\,(M^2 - M_R^2) + \tfrac52 v\,(M^3 - M_R^3).
+\]
+Exactly the three terms displayed in v1.1 Lemma 3.  CONFIRMED.
+
+\paragraph{(a-3) $P_B$ monotonicity on $(0, M_+]$ (dispatch (a)(iii)).}
+$P_B'(M) = \tfrac12(r - r_R) + \tfrac32 uM + \tfrac{15}{2}vM^2$ is an
+upward parabola with vertex at $M = -\tfrac{3u/2}{15v} = M_c$
+(interior, where $P_B'$ is MINIMAL); its maximum on $[0, M_+]$ is at
+an endpoint: $P_B'(0) = \tfrac12(0.005 - 0.3045257) = -0.1497629$ and
+$P_B'(M_+) = -0.1497629 - 0.0658829 + 0.0633829 = -0.1522629$ --- both
+negative, so $P_B' < 0$ throughout: \textbf{$P_B$ strictly decreasing
+on $(0, M_+]$} (matches the executed sweep's
+$\max dP_B/dM = -1.4976\times10^{-1}$).  Hence on B
+($[M_c, M_+)$): $P_B(M) > P_B(M_+)$; on II ($(M_-, M_c)$):
+$P_B(M) > P_B(M_c)$; on II$'$ ($M \le M_-$): $P_B(M) \ge P_B(M_-) >
+P_B(M_c)$.  All three usages in the v1.1 proof are direction-correct.
+
+\paragraph{(a-4) Numeric floors (dispatch (a)(iv)) --- independent
+hand recomputation.}
+$P_B(M_+)$: term-by-term $+0.0087375 + 0.0060392 - 0.0095308 =
+0.0052460$ (executed: $0.0052459635246063716$; hand delta
+$1\times10^{-9}$).  $P_B(M_c)$: $+0.0124110 + 0.0072672 - 0.0104583 =
+0.0092199$ (executed: $0.0092198664169368$; hand delta
+$5\times10^{-9}$).  Both CONFIRMED.  Also computed for \S 2(d):
+$P_B(M_-) = +0.0160845 + 0.0077190 - 0.0106096 = 0.0131939$.
+
+\subsubsection*{(b) Four-interval coverage --- CONFIRMED}
+
+$M(m)$ is strictly decreasing ($\partial_m$ of the integrand is
+negative), $M(0^+) = \infty$ (on-shell $q = q_0$ singularity:
+$\int dq/[m + 4Cq_0^2(q-q_0)^2] \sim \pi/(2q_0\sqrt{Cm})$), and
+$M(\infty) = 0$: a strictly decreasing bijection $(0,\infty) \to
+(0,\infty)$.  The $M$-intervals $\{M \ge M_+\} \cup [M_c, M_+) \cup
+(M_-, M_c) \cup \{M \le M_-\}$ partition $(0,\infty)$ with each
+boundary point in exactly one piece --- \textbf{no gap, no double
+counting}; via the dictionary this covers ALL $m \in (0, \infty)$,
+with $m \to 0^+$ landing in I$'$ (the note's direction statement is
+correct).  Per-interval coefficient floors: $\hat\kappa \ge
+\hat r_0(M)$ is the pattern-free kernel bound ($K \ge K(q_0) = r$);
+$d\hat r_0/dM = 3u + 30vM = 3\,u_{\rm eff}(M)$ vanishes at $M_c$
+(re-derived; CONFIRMED), negative below / positive above, so
+$\min_{(0,\infty)} \hat r_0 = \hat r_0(M_c) = r - 3u^2/(20v)
+= 0.005 - 2.2188/64.8 = -0.0292407$ exactly --- the band floor used in
+B and the Region-II floor used in II are both the correct one-sided
+minima of $\hat r_0$ over their intervals.  On II$'$, $\hat r_0 \ge 0$
+by definition of $M_-$ (lower PD-branch root), so the
+original-Lemma-2 premise is genuinely restored there.  On I$'$,
+$u_{\rm eff}(M) \ge u_{\rm eff}(M_+) = \tfrac13\sqrt{9u^2 - 60vr} > 0$
+(exact identity re-derived: the $u$ cancels on substitution of $M_+$)
+and $\hat r_0 \ge 0$.  CONFIRMED.
+
+\subsubsection*{(c) Dip bounds --- both CONFIRMED; the coupled bound
+provably covers the COMBINED mechanism}
+
+\paragraph{(c-1) Band sextic-only dip.}  On B, $u_{\rm eff}(M) \ge
+u_{\rm eff}(M_c) = 0$, so the quartic term
+$\tfrac{u_{\rm eff}}{4}P_4t^4 \ge 0$ --- \textbf{genuinely
+nonnegative on the band; dropping it is one-sided-safe} (dispatch
+check PASSES).  With $x = t^2$, $\kappa = \hat r_0(M_c) < 0$, $P_6 \ge
+P_4^2 \ge 1$ (Cauchy--Schwarz [Math425] + Jensen --- the $P_6 \ge 1$
+input is justified by the full chain, dispatch check PASSES):
+$\min_{x \ge 0}[\tfrac{\kappa}{2}x + \tfrac{v}{6}P_6x^3]$ at
+$x_* = \sqrt{|\kappa|/(vP_6)}$ gives
+$-\tfrac{|\kappa|}{3}x_* = -|\kappa|^{3/2}/(3\sqrt{vP_6})$, worst at
+$P_6 = 1$:
+\[
+\Phi \;\ge\; -\frac{|\hat r_0(M_c)|^{3/2}}{3\sqrt v}
+= -\frac{(0.0292407407)^{3/2}}{5.4}
+= -\frac{0.0050001}{5.4} = -9.2595\times10^{-4}
+\]
+($\sqrt{0.02924074} = 0.1709992$; $\sqrt v = 1.8$ exact).  Matches the
+executed $9.259526852\times10^{-4}$.  CONFIRMED.
+
+\paragraph{(c-2) Region-II coupled bound --- full independent
+re-derivation, including the combined-mechanism question.}  Envelope
+reduction: with $Y = P_4t^2$, using $\hat\kappa \ge \hat r_0(M)$ and
+$P_6 \ge P_4^2$,
+$\Phi \ge t^2\,g(Y)$, $g(Y) = \tfrac{\hat r_0}{2} + \tfrac{u_{\rm
+eff}}{4}Y + \tfrac{v}{6}Y^2$; where $g(Y) < 0$, $t^2 \le Y$ (from
+$P_4 \ge 1$) gives $\Phi \ge Y g(Y) = h_M(Y)$; where $g \ge 0$,
+$\Phi \ge 0 \ge \min h_M$.  Exact regrouping with
+$Z = Y + \tfrac{15}{2}M$ (verified term-by-term: the $Y^2$
+coefficients recombine to $\tfrac{u_{\rm eff}}{4}$, the $Y^1$
+coefficients to $\tfrac{\hat r_0}{2}$ --- identity exact):
+\[
+h_M(Y) = \tfrac r2 Y
++ \tfrac{3M}{8}\big(|u| - 5vM\big)\,Y
+- \tfrac{|u|}{4}YZ + \tfrac v6 YZ^2 .
+\]
+For $M \le |u|/(5v) = 2M_c = 0.0530864$ (which contains $(0, M_+]$
+since $M_+ = 0.0510720$) the first two terms are $\ge 0$; dropping
+them and using $0 \le Y \le Z$ on the negative range of
+$[\tfrac v6 Z - \tfrac{|u|}{4}]$:
+\[
+h_M(Y) \;\ge\; Z^2\Big[\tfrac v6 Z - \tfrac{|u|}{4}\Big]
+\;\ge\; -\frac{|u|^3}{12v^2}
+= -\frac{0.636056}{125.9712} = -0.0050492
+\]
+(cubic minimum at $Z_* = |u|/v$).  \textbf{Key point for the dispatch
+question}: the derivation makes NO sign assumption on $\hat r_0(M)$
+--- negative $\hat\kappa$ AND negative $u_{\rm eff}$ enter together
+through the exact regrouping, and the only dropped terms are
+manifestly nonnegative on $M \le |u|/(5v)$.  Therefore
+$|u|^3/(12v^2)$ \textbf{provably dominates the COMBINED dip} (both
+mechanisms simultaneously) on the whole of Interval II (indeed on
+$(0, M_+]$), not merely a quartic-only worst case.  No residual gap.
+Executed corroboration: Math440's dense honest-worst-case scan
+($\hat\kappa = \hat r_0(M)$ exactly, 2001 $M$-points)
+records \texttt{coupled\_worst\_dip} $= 0.004393$ at $M = 0$
+--- under the constant with $1.15\times$ slack.  CONFIRMED.
+
+\paragraph{(c-3, finding SL-1) Sampler-value provenance mismatch in
+the v1.1 prose.}  The v1.1 Lemma-2 paragraph states: ``The v1.1
+un-clipped adversarial sampler (4000 draws over the FULL
+$(M, \hat\kappa, P_4, P_6)$ domain incl.\ negative $\hat\kappa$)
+reaches $-0.00439$, inside the coupled bound.''  The EXECUTED JSON of
+that exact sampler
+(\texttt{step5\_class\_closure.json::LemmaB\_worst\_sampled}) records
+$\mathbf{-0.002626496}$.  The value $-0.00439$ is the Math440
+deterministic-scan figure
+(\texttt{audit\_recheck.json::coupled\_worst\_dip} $= 0.004393$ at
+$M = 0$; 2001$\times$240001 grid) --- a DIFFERENT computation in a
+DIFFERENT file.  Both numbers are true and both sit inside the
+coupled bound, so no physics conclusion changes; but the sentence
+misattributes the deeper value to Math437's own sampler (whose
+log-uniform $P_4$ draws rarely probe the $P_4 \to 1$, $M \to 0$ worst
+corner) --- a note-vs-JSON evidence mismatch of the \S 6.3.8 class,
+and it overstates the sampler's adversarial reach.  Secondary: the
+sampler fixes $\hat\kappa = \hat r_0(M)$ (the correct adversarial
+slice) rather than sampling $\hat\kappa$ as a free coordinate, so
+``over the FULL $(M, \hat\kappa, \ldots)$ domain'' over-describes.
+\textbf{Named fix}: one sentence --- e.g.\ ``the v1.1 un-clipped
+sampler reaches $-0.00263$ (4000 draws); the Math440 dense
+honest-worst-case scan reaches $-0.00439$ at $M = 0$ --- both inside
+the coupled bound.''  The un-clipping itself (R1(c) second half) IS
+correctly executed in the script (\texttt{kap = R + 3*U*M +
+15*V*M*M}, no \texttt{max(...,0)}; verified at source).
+
+\subsubsection*{(d) Margins --- arithmetic CONFIRMED; one
+rounding-direction finding (SL-2)}
+
+Band: $P_B(M_+)/\mathrm{dip}_B = 0.0052460/0.00092595 = 5.666$
+(``$5.67\times$'' --- correct); sum $0.0052460 - 0.0009260 =
++0.0043200$ (note's ``$\ge +0.00432$'' --- correct, rounded DOWN,
+safe).  Interval II: applicable dip $=$ the coupled constant
+$0.0050492$ (per (c-2) it provably covers the combined mechanism
+there); $P_B(M_c)/0.0050492 = 1.826$ (``$1.83\times$'' --- correct);
+sum $+0.0041707$ (note's ``$\ge +0.00417$'' --- correct, safe).
+Interval II$'$: dip $0.0085206$ (premise $\hat\kappa \ge 0$ genuinely
+holds there --- the v1.1 premise scoping is the correct repair of
+Math440 F2), floor displayed as $P_B(M) > P_B(M_c)$.
+
+\paragraph{Finding SL-2 (rounding direction in the II$'$ line).}  The
+note writes ``sum $> +0.0007 > 0$ (the coupled bound tightens this to
+$> +0.0042$)''.  From the DISPLAYED floor $P_B(M_c) = 0.0092199$:
+$0.0092199 - 0.0085206 = +0.0006993$ and $0.0092199 - 0.0050492 =
++0.0041707$ --- the displayed chains support ``$> +0.00069$'' and
+``$> +0.00417$'', NOT the printed ``$+0.0007$'' / ``$+0.0042$'' (both
+rounded UP, the unsafe direction; the same defect class as the
+Math440-flagged $0.118 \to 0.1179$, which v1.1 fixed in \S 7).  Both
+printed statements are nevertheless TRUE via the tighter II$'$ floor
+$P_B(M_-) = 0.0131939$ (this note, \S 2(a-4)): sums $\ge +0.0046733$
+--- so this is a defective displayed justification, not a false
+claim.  \textbf{Named fix}: print ``$> +0.00069$'' / ``$> +0.00417$''
+(or display the $P_B(M_-)$ floor).  No proof impact.
+
+\subsubsection*{(e) Script D2 block --- CONFIRMED at source + JSON;
+no shell re-run this session}
+
+Read at source: the D2 block adds 13 entries (12 claims + 1 record),
+consistent with $78 \to 91$: \texttt{rhat0\_Mc\_exact} (closed form,
+tol $10^{-12}$), \texttt{rhat0\_stationary\_at\_Mc}
+($d\hat r_0/dM = 3u_{\rm eff}$ at $M_c$), \texttt{band\_dip\_closed\_form}
+(tol $10^{-12}$), \texttt{PB\_at\_Mplus} / \texttt{PB\_at\_Mc} (tol
+$10^{-12}$), \texttt{PB\_decreasing\_on\_0\_Mplus} (400-point sweep of
+the closed-form $P_B'$), three \texttt{anchor\_ln\_ineq\_m\{1,5,24.353\}}
+spots (all in the applied regime $m > r_R$; JSON margins
+$0.0583 \ge 0.0486$ / $0.2616 \ge 0.1956$ / $0.8722 \ge 0.6382$),
+\texttt{band\_covered}, \texttt{dip\_clean\_coupled\_bound} (tol
+$10^{-12}$), \texttt{regionII\_covered},
+\texttt{Delta0\_demoted} (record), and the REPLACED un-clipped
+\texttt{LemmaB\_adversary\_within\_bound} + \texttt{LemmaB\_worst\_sampled}.
+The asserts cover dispatch items (a)--(d) as required.  JSON evidence:
+91 \texttt{"name"} rows, ZERO \texttt{"passed": false} rows
+(grep-verified) --- 91/91 stands.  No shell: re-run NOT performed; the
+on-disk JSON (dated 2026-06-04) is the executed evidence.  Cosmetic
+observation SL-3: \texttt{regionII\_covered} tests
+$\mathrm{DIP\_CLEAN} + \mathrm{DIP\_BAND} < P_B(M_c)$ ($0.0059752 <
+0.0092199$) --- a strictly HARDER inequality than the proof uses
+(the band constant is double-counted on top of the coupled constant,
+which already contains the $\hat\kappa < 0$ mechanism); harmless
+(safe direction) but the proof's actual inequality is
+$0.0050492 < 0.0092199$; a comment line would prevent a reader from
+inferring the proof needs the sum.  No fix required.
+
+\subsubsection*{(f) Language --- CLEAN}
+
+Grep sweep of v1.1 for upgrade vocabulary: single hit of
+``established'' refers to the Math426 historical result, not
+Proposition A; no ``unconditional'' / ``rigorous'' / ``global
+minimum'' / ``T7''.  Status block remains ``T6 PROVED CONDITIONAL on
+\{H-layer, H-A0\}'' with the explicit hypothesis paragraph
+(\S 3) --- H-A0 correctly SLIMMED (the penalty constants no longer
+rest on it; Lemma-3 floors are quadrature-free) per Math440 F7;
+layer scoping present in title/\S 1/\S 3/\S 5/\S 6-$\alpha$;
+F10-pending wording present in THREE places (header status block,
+revision banner, \S 6-$\zeta$); ``satisfiABLE pending --- not declared
+satisfied'' retained.  The repair does NOT upgrade the claim.  CLEAN.
+
+\subsection*{3. Verdict and required fixes}
+
+\paragraph{Verdict: \textbf{PARTIAL}.}  The mathematical content of
+the R1 repair is verified COMPLETE by independent re-derivation: F1 is
+closed --- Lemma 3 is sound (inequality direction, cancellation,
+monotonicity, numerics all confirmed); the four intervals cover all
+$m > 0$ with correct per-interval coefficient floors; both dip
+constants are correct AND the coupled constant provably covers the
+combined negative-$\hat\kappa$ + negative-$u_{\rm eff}$ mechanism on
+Interval II (the dispatch's residual-gap question is answered in the
+negative: NO residual gap); all margins check; the executed script
+evidence (91/91) matches the proof's load-bearing constants to
+$10^{-12}$; the language does not overstate.  PARTIAL rather than
+CERTIFIED because two NAMED documentation fixes remain inside the
+audited sub-items:
+
+\begin{itemize}
+\item \textbf{SL-1 (sub-item (c); one sentence)}: correct the sampler
+attribution --- v1.1's own un-clipped sampler reached $-0.00263$
+(its JSON); $-0.00439$ is the Math440 scan value and must be cited as
+such (and ``FULL $(M,\hat\kappa,\ldots)$ domain'' $\to$ ``worst-case
+$\hat\kappa = \hat r_0(M)$ slice'').
+\item \textbf{SL-2 (sub-item (d); two numbers)}: II$'$ margins
+``$+0.0007$'' / ``$+0.0042$'' $\to$ ``$+0.00069$'' / ``$+0.00417$''
+(or display the $P_B(M_-) = 0.0131939$ floor, under which both
+printed roundings become supported).
+\end{itemize}
+
+Neither fix touches the proof chain, the constants, the script, or
+the JSON.  Upon landing them (Math437 v1.2, or an operator-approved
+erratum line in the ledger), this verifier's assessment of the
+MATHEMATICAL repair stands as: F1 closed, no new gaps.  Cosmetic
+observation SL-3 (\S 2(e)) requires no action.  \textbf{NO tier
+action is taken or implied}: per the dispatch semantics, even full
+certification only makes Proposition A \emph{eligible} for the
+operator's T6 discussion; the eligibility decision and any
+scope-language decision remain with the operator.
+
+\subsection*{4. Devil's-advocate on this verification (CLAUDE.md
+6.3.1 + 6.3.5(a)) and quantitative sanity checks (6.3.4)}
+
+\textbf{Objection $\alpha$ (third-look without execution --- is
+JSON-reading enough?):} the verifier did not re-run the 91-assert
+script; a corrupted or stale JSON could fool a file-only check.
+\emph{VALID-with-mitigation}: (i) every LOAD-BEARING constant was
+re-derived by hand from the locked inputs, independent of both JSONs
+(the JSONs serve as corroboration, not source); (ii) the JSON was
+grep-verified for zero \texttt{passed:false} rows and its claim
+values matched the hand values to $10^{-9}$ or better; (iii) the one
+place where prose and JSON DISAGREE was caught precisely because the
+hand-vs-JSON cross-check was performed (finding SL-1) --- evidence the
+method has teeth; (iv) a fresh execution remains available to the
+dispatcher at zero risk (deterministic seed 437).
+
+\textbf{Objection $\beta$ (is PARTIAL too harsh for prose-only
+defects?):} both findings are documentation-grade; the dispatch's
+CERTIFIED branch allows ``cosmetic observations''.  \emph{DISMISSED
+with counter}: SL-1 is not cosmetic under the repo's own standard ---
+a note sentence attributing a numerical value to a computation whose
+executed artefact records a different value is exactly the
+\S 6.3.8 note-vs-evidence mismatch class, and SL-2 is the exact
+defect class Math440 flagged as a required repair elsewhere in the
+same note (0.118 $\to$ 0.1179) --- consistency demands the same
+treatment.  PARTIAL with two named one-line fixes is the accurate
+grade; it certifies the mathematics while refusing to wave through
+the prose class that the parent audit had just flagged.
+
+\textbf{Objection $\gamma$ (could the coupled bound's envelope step
+hide a gap when $g(Y) \ge 0$ but $\Phi$ still dips?):}
+\emph{DISMISSED with counter}: $\Phi \ge t^2 g(Y)$ holds for all
+trials (one-sided replacements only); if $g(Y) \ge 0$ then $\Phi \ge
+0 \ge \min_{Y' \ge 0} h_M(Y')$ since $h_M(0) = 0$; if $g(Y) < 0$ then
+$\Phi \ge Yg(Y) = h_M(Y) \ge \min h_M$.  The two cases exhaust
+$Y \ge 0$ and both land above the same constant.  No gap.
+
+\textbf{Objection $\delta$ (interval-boundary strictness: does the
+proof's strict ``$> 0$'' survive at the seams?):}
+\emph{DISMISSED with counter}: on B/II/II$'$ the sum is bounded below
+by strictly positive constants ($+0.00432$ / $+0.00417$ /
+$+0.00069$), uniform over the closed pieces; on I$'$, $t > 0$ gives
+$\Phi \ge \tfrac v6 P_6 t^6 > 0$ strictly, and $t = 0$, $m \ne m^*$
+gives $\Delta F_0 > 0$ by the claim-C uniqueness --- which is
+explicitly inside the stated H-A0 hypothesis, so no hidden
+unconditional claim is smuggled in.
+
+\paragraph{Quantitative sanity checks (6.3.4) --- this verifier's own
+recomputations.}
+\begin{itemize}
+\item $P_B(M_+) = 0.0087375 + 0.0060392 - 0.0095308 =
+\mathbf{0.0052460}$ (executed $0.0052459635$; $\delta \sim 10^{-9}$).
+PASS.
+\item $P_B(M_c) = 0.0124110 + 0.0072672 - 0.0104583 =
+\mathbf{0.0092199}$ (executed $0.0092198664$; $\delta \sim
+5\times10^{-9}$).  PASS.
+\item Band dip $= (0.0292407)^{3/2}/5.4 = 0.0050001/5.4 =
+\mathbf{9.2595\times10^{-4}}$ (executed $9.2595269\times10^{-4}$).
+PASS.
+\item Coupled dip constant $= 0.86^3/(12\cdot3.24^2) =
+0.636056/125.9712 = \mathbf{0.0050492}$ (executed $0.0050492176$).
+PASS.
+\item Lemma-2 (II$'$) constant $= 9\cdot0.636056/671.8464 =
+\mathbf{0.0085206}$.  PASS.
+\item Magnitude/ordering: $0.004393$ (honest worst, executed) $<
+0.0050492 < 0.0085206 < P_B(M_c) = 0.0092199$; band: $9.25\times
+10^{-4}$ (scan) $\le 9.26\times10^{-4}$ (bound) $< P_B(M_+) =
+0.0052460$.  All inequality chains direction-consistent.  PASS.
+\item Limit case: $r \to 3u^2/(20v)$ makes $\hat r_0(M_c) \to 0$, the
+band dip $\to 0$, and $M_\pm \to M_c$ (band collapses) --- the
+four-interval proof degrades gracefully to Lemma 1 + Lemma 2.  PASS.
+\item Sign-direction: $P_B' < 0$ means a HIGHER trial variance $M$
+(closer to the gap point's $M_R$) costs LESS penalty --- correct
+physics (the gap point is the minimum); and $\hat r_0$ minimal at
+$M_c$ where $u_{\rm eff} = 0$ --- the most dangerous variance is
+where the quartic stabiliser switches off.  Both directions sensible.
+PASS.
+\item Reproducibility: load-bearing constants asserted at tol
+$10^{-12}$ in the executed v1.1 script (91/91, deterministic seed);
+this note adds no unexecuted numerics.  PASS (no-shell re-run debt
+declared).
+\end{itemize}
+
+\paragraph{Session debts (no-shell).}  D-441-1: optional fresh re-run
+of \texttt{Math437\_step5\_class\_closure.py} (zero-risk
+corroboration; not required for this verdict --- the 2026-06-04 JSON
+is the evidence).  D-441-2: generator-chain
+(\texttt{generate\_website.py} + \texttt{generate\_status\_history.py}
++ \texttt{verify\_website.py --regen-manifest}) ---
+\texttt{[GEN-CHAIN-FAIL no-bash-capability]}, operator/dispatcher must
+run before publish (Math434/435/440 precedent).  D-441-3: the \S 3
+atomic commit (\texttt{sandbox\_commit.sh}) cannot be issued from this
+session; the file set for the commit is listed in the final report.
+D-441-4: \texttt{date -u} unavailable; the 2026-06-05 stamp is
+environment-canonical (\S 11.5.3.1 deviation, Math440 precedent).
+Ledger-sync observation (outside narrow scope, flagged for the
+dispatcher): at verification time the v1.1 re-issue itself had NO
+CHANGELOG entry and NO VERSIONS.md row (Math437 listed at v1.0 only)
+--- the Math441 ledger updates of this turn record both the repair
+and this second look in one pass; the missing v1.1-landing entry
+should be regularised by the dispatcher if a separate entry is
+preferred.
+
+\subsection*{5. Cross-references}
+
+Verified subject: Math437 v1.1
+(\texttt{Docs/math/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.1.tex.txt})
++ \texttt{Codes/supplementary/Math437\_step5\_class\_closure.py} (v1.1,
+91 asserts; D2 block = the repair) +
+\texttt{Runs/math/Math437/step5\_class\_closure.json} (91/91 executed
+2026-06-04; zero failed rows).  Parent audit: Math440 v1.0 (\S 2.1
+F1/F2 + repair route R1; F10 mandate) +
+\texttt{Codes/supplementary/Math440\_audit\_secondwave\_recheck.py} +
+\texttt{Runs/math/Math440/audit\_recheck.json} (75/75 executed
+2026-06-05 --- debt D1 discharged; source of the $0.004393$ /
+$9.249\times10^{-4}$ scan values cited here).  Anchors: Math426
+($r_R$, $M_R$); Math425 (CS $P_6 \ge P_4^2$); Math424-AddA (production
+bookkeeping).  Discipline: CLAUDE.md \S 6.3.2 (different-agent
+second-order audit --- this note is the third independent set of
+eyes), \S 6.3.5(a) (self-adversarial), \S 6.3.4 (quantitative
+sanity), \S 6.3.8 (note-vs-evidence matching --- the SL-1 class),
+\S 15.6 (dispatch template compliance).
+
+% =====================================================================
+% End of TECT-Math441 (260605-v1.0).
+% =====================================================================

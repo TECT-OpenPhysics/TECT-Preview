@@ -1,0 +1,27 @@
+{
+  "claim": "A1-KERNEL-CONV",
+  "kind": "M1 migration re-validation",
+  "date": "2026-06-05",
+  "scripts": [
+    {
+      "script": "archive/legacy/Codes/supplementary/Math426_g4_kernel_reconciliation.py",
+      "asserts": "10/10 PASS",
+      "runtime_s": 0.42,
+      "artefact_comparison": "fresh JSON identical to archived g4_kernel_reconciliation.json within rel_tol 1e-9"
+    },
+    {
+      "script": "archive/legacy/Codes/supplementary/Math435_g6_corrected_variable_cascade.py",
+      "asserts": "101/101 PASS",
+      "runtime_s": 3.5,
+      "artefact_comparison": "fresh JSON identical to archived g6_corrected_cascade.json within rel_tol 1e-9",
+      "gates": "sign-flip pass; restoration pass"
+    }
+  ],
+  "verdict": "RE-VALIDATED: 111/111 asserts pass; archived artefacts reproduced exactly",
+  "environment": {
+    "python": "3.12 (sandbox re-run)",
+    "numpy": "2.2.6",
+    "platform": "linux-x86_64"
+  },
+  "legacy_source": "TECT2/Contents snapshot 2026-06-05 (pre-freeze)"
+}

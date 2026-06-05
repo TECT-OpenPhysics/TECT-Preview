@@ -1,0 +1,27 @@
+{
+  "claim": "B2-PROPA-HLAYER",
+  "kind": "M1 migration re-validation",
+  "date": "2026-06-05",
+  "scripts": [
+    {
+      "script": "archive/legacy/Codes/supplementary/Math437_step5_class_closure.py",
+      "asserts": "91/91 PASS",
+      "runtime_s": 1.2,
+      "artefact_comparison": "fresh JSON numerically identical (rel_tol 1e-9); 2 string diffs in claims[90] verdict text",
+      "finding": "STALE-ARTEFACT: archived step5_class_closure.json predates the R1 repair (v1.0-era verdict string 'Region-I positivity + Lemma-B dip bound + Delta0 penalty'); the on-disk script is the repaired v1.1 four-interval version ('I-prime all-positivity + band/Region-II anchor-only PB floors; Delta0 demoted to comfort margin'). All numeric content identical; fresh artefact stored here is canonical for TSv2 citation."
+    },
+    {
+      "script": "archive/legacy/Codes/supplementary/Math440_audit_secondwave_recheck.py",
+      "asserts": "75/75 PASS",
+      "runtime_s": 37.8,
+      "artefact_comparison": "fresh JSON identical to archived audit_recheck.json within rel_tol 1e-9"
+    }
+  ],
+  "verdict": "RE-VALIDATED: 166/166 asserts pass; one stale-artefact finding recorded (no numeric impact)",
+  "environment": {
+    "python": "3.12 (sandbox re-run)",
+    "numpy": "2.2.6",
+    "platform": "linux-x86_64"
+  },
+  "legacy_source": "TECT2/Contents snapshot 2026-06-05 (pre-freeze)"
+}

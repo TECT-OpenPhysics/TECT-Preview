@@ -23,8 +23,12 @@ status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
 - After any change under `claims/`, run the linter; a session may not end with
   a failing linter.
 - New files: single-shot full-content writes. Edits to existing tracked files:
-  prefer full-file rewrite or anchor-based replacement; verify the file parses
-  after writing (`python -c "import json,..."` for JSON, linter for claims).
+  **full-file rewrite via the shell (heredoc), never tool-layer in-place
+  edits** — on 2026-06-05 three tool-layer edits/overwrites of existing files
+  produced stale/truncated filesystem views (GATES.md, CHANGELOG.md,
+  MIGRATION-LEDGER.md; same defect class as the legacy §11.5.2 truncation
+  incidents). After writing, verify from the shell: file size + tail + linter
+  (`python -c "import json,..."` for JSON).
 - Never create files at the repository root beyond the canonical set
   (README, GOVERNANCE, ROADMAP, REVIEWING, CLAIMS, CHANGELOG, CLAUDE.md,
   .gitignore).
@@ -50,6 +54,9 @@ git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit ...
 ```
 
 One logical change set per commit; the commit message references claim IDs.
+Git runs on the operator's Windows side only (the sandbox mount blocks the
+unlink operations git requires); the AI provides the exact PowerShell command
+block at session end.
 
 ## 5. Honesty contract
 

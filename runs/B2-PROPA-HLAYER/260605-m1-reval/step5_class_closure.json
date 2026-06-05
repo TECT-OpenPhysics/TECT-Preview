@@ -1,0 +1,912 @@
+{
+ "theory_tag": "Math437",
+ "date": "2026-06-04",
+ "constants": {
+  "u": -0.86,
+  "v": 3.24,
+  "r": 0.005,
+  "q0": 0.6801747616,
+  "rstar": 0.05706790123456789,
+  "Mc": 0.026543209876543204,
+  "M_minus": 0.0020144240909808326,
+  "M_plus": 0.051071995662105595,
+  "dip_bound": 0.008520554698216732,
+  "r_R": 0.30452570866744433,
+  "M_R": 0.10941432918723439,
+  "r_c": 24.35312477983301
+ },
+ "claims": [
+  {
+   "name": "rstar_exact",
+   "expected": 0.057067901234567904,
+   "actual": 0.05706790123456789,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "PD_disc",
+   "expected": 5.6844,
+   "actual": 5.684399999999999,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "9u^2-60vr"
+  },
+  {
+   "name": "M_minus",
+   "expected": 0.0020144240909808326,
+   "actual": 0.0020144240909808326,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "M_plus",
+   "expected": 0.051071995662105595,
+   "actual": 0.051071995662105595,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Mc_exact_43_over_1620",
+   "expected": 0.02654320987654321,
+   "actual": 0.026543209876543204,
+   "tol": 1e-15,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "upper_branch_in_RegionI",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "M_+ = 0.0510720 > -u/10v = 0.0265432"
+  },
+  {
+   "name": "ueff_Mp_closed_form",
+   "expected": 0.794732659452221,
+   "actual": 0.7947326594522216,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "u_eff(M_+) = sqrt(9u^2-60vr)/3 -- positive for ANY r in the two-branch regime: upper PD branch is ALWAYS Region I"
+  },
+  {
+   "name": "LemmaB_dip_bound",
+   "expected": 0.0085206,
+   "actual": 0.008520554698216732,
+   "tol": 1e-06,
+   "passed": true,
+   "detail": "9|u|^3/(64 v^2)"
+  },
+  {
+   "name": "dressed_CS_margin",
+   "expected": 5.3361995461466725,
+   "actual": 5.3361995461466725,
+   "tol": 1e-09,
+   "passed": true,
+   "detail": "4 r_R v/u^2 >> 1: CS no-condensation criterion holds at the self-consistent dressing even where positivity is not used"
+  },
+  {
+   "name": "gap_rR",
+   "expected": 0.30452570866744433,
+   "actual": 0.30452570866744433,
+   "tol": 5e-09,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "gap_MR",
+   "expected": 0.10941432918723439,
+   "actual": 0.10941432918723439,
+   "tol": 2e-05,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "MR_in_RegionI",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "M_R = 0.109414 > 0.026543"
+  },
+  {
+   "name": "Math436_rhat_argmin_reproduced",
+   "expected": 0.30937333234566977,
+   "actual": 0.30937333234564385,
+   "tol": 5e-05,
+   "passed": true,
+   "detail": "HEX argmin dressed mass from the gap-source formula"
+  },
+  {
+   "name": "gap_scheme_offset_bounded",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "coarse-_QG scheme gap 0.310015 vs production 0.304526: offset 5.49e-03 (scheme-internal layer; converges under refinement -- next claims)"
+  },
+  {
+   "name": "MRq_consistent",
+   "recorded": 0.11009302285221874,
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": 0.11009302285221874
+  },
+  {
+   "name": "scheme_internally_converged",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "coarse vs 4x-refined scheme gap: 0.310015 vs 0.309984 (internal drift 3.1e-05)"
+  },
+  {
+   "name": "scheme_vs_production_systematic",
+   "recorded": {
+    "gap_offset": 0.005458692489332395,
+    "M_at_rR_scheme": 0.11089449401639727,
+    "M_at_rR_production": 0.10941432918723439
+   },
+   "detail": "measure-convention delta of loop_integral_full vs plain trapz+tail; scheme-internal layer structure unaffected; load-bearing Region claims use PRODUCTION anchors",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "gap_offset": 0.005458692489332395,
+    "M_at_rR_scheme": 0.11089449401639727,
+    "M_at_rR_production": 0.10941432918723439
+   }
+  },
+  {
+   "name": "A0_layer_nonnegative",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min dF0 = 3.749e-07 (consistent quadrature)"
+  },
+  {
+   "name": "A0_zero_at_gap",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dF0(gap) = 0.000e+00"
+  },
+  {
+   "name": "A0_monotone_flanks",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dF0 decreasing then increasing (unique minimum)"
+  },
+  {
+   "name": "r_c_RegionII_boundary",
+   "recorded": 24.35312477983301,
+   "detail": "M_qg(r_c) = 43/1620",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": 24.35312477983301
+  },
+  {
+   "name": "Mc_at_rc",
+   "expected": 0.026543209876543204,
+   "actual": 0.026543209876543204,
+   "tol": 2e-09,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "Delta0_exceeds_dip",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "inf RegionII dF0 = 0.12647 > 1.5 x dip 0.00852"
+  },
+  {
+   "name": "Delta0_RegionII",
+   "recorded": 0.12646500381964418,
+   "detail": "at boundary r_c: 0.12647",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": 0.12646500381964418
+  },
+  {
+   "name": "Delta0_refined_stable",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "refined-scheme inf RegionII dF0 = 0.12647"
+  },
+  {
+   "name": "Delta0_refined",
+   "recorded": {
+    "r_c2": 24.353914625890294,
+    "d0_min2": 0.12647057797745276
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "r_c2": 24.353914625890294,
+    "d0_min2": 0.12647057797745276
+   }
+  },
+  {
+   "name": "rhat0_Mc_exact",
+   "expected": -0.029240740740740737,
+   "actual": -0.029240740740740727,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "= r - 9u^2/(40v) + 9u^2/(108.. ) closed-form band minimum"
+  },
+  {
+   "name": "rhat0_stationary_at_Mc",
+   "expected": 0.0,
+   "actual": -4.440892098500626e-16,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "d rhat0/dM = 3(u + 10vM) vanishes exactly at Mc"
+  },
+  {
+   "name": "band_dip_closed_form",
+   "expected": 0.0009259526852124812,
+   "actual": 0.0009259526852124812,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "(1/3)|rhat0(Mc)|^{3/2}/sqrt(v); rhat0(Mc) = r - 3u^2/(20v) exact; this closed form UPPER-bounds the auditor scan value 9.249e-4 (P6 >= 1 stiffens the sextic - safe direction)"
+  },
+  {
+   "name": "PB_at_Mplus",
+   "expected": 0.0052459635246063716,
+   "actual": 0.0052459635246063716,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "anchor-only penalty floor at the band's right edge"
+  },
+  {
+   "name": "PB_at_Mc",
+   "expected": 0.0092198664169368,
+   "actual": 0.0092198664169368,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": "anchor-only penalty floor at the band's left edge / Region-II edge"
+  },
+  {
+   "name": "PB_decreasing_on_0_Mplus",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "max dPB/dM = -1.4976e-01"
+  },
+  {
+   "name": "anchor_ln_ineq_m1.0",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dI=0.058348 >= (m-rR)M=0.048562"
+  },
+  {
+   "name": "anchor_ln_ineq_m5.0",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dI=0.261592 >= (m-rR)M=0.195570"
+  },
+  {
+   "name": "anchor_ln_ineq_m24.353",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dI=0.872212 >= (m-rR)M=0.638179"
+  },
+  {
+   "name": "band_covered",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "band dip 9.259527e-04 < PB(M+) = 5.245964e-03 (margin 5.67x)"
+  },
+  {
+   "name": "dip_clean_coupled_bound",
+   "expected": 0.005049217598943249,
+   "actual": 0.00504921759894325,
+   "tol": 1e-12,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "regionII_covered",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "dip(coupled 5.049218e-03 + kappa-part 9.259527e-04) < PB(Mc) = 9.219866e-03"
+  },
+  {
+   "name": "Delta0_demoted",
+   "recorded": {
+    "Delta0": 0.126465,
+    "role": "comfort margin 13.7x"
+   },
+   "detail": "Math440 F7: load-bearing floor is now the anchor-only PB chain",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "Delta0": 0.126465,
+    "role": "comfort margin 13.7x"
+   }
+  },
+  {
+   "name": "LemmaB_adversary_within_bound",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "worst sampled dip -0.002626 vs coupled+band bound -0.005975 (v1.1 un-clipped sampler)"
+  },
+  {
+   "name": "LemmaB_worst_sampled",
+   "recorded": -0.002626496244678208,
+   "detail": "4000 adversarial (M,P4,P6) draws",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": -0.002626496244678208
+  },
+  {
+   "name": "gallery_LAM_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=1.5000"
+  },
+  {
+   "name": "gallery_LAM_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=2.5000 >= P4^2=2.2500 (J_latt=0.9000)"
+  },
+  {
+   "name": "gallery_LAM_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=6 >= 12n^2-6n=6 (excess = resonant)"
+  },
+  {
+   "name": "gallery_LAM_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_LAM",
+   "recorded": {
+    "n": 1,
+    "N4": 6,
+    "N6": 20,
+    "N4_resonant_excess": 0,
+    "P4": 1.5,
+    "P6": 2.5,
+    "J_latt": 0.9
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 1,
+    "N4": 6,
+    "N6": 20,
+    "N4_resonant_excess": 0,
+    "P4": 1.5,
+    "P6": 2.5,
+    "J_latt": 0.9
+   }
+  },
+  {
+   "name": "LAM_N4_matches_m424",
+   "expected": 6,
+   "actual": 6,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "LAM_N6_matches_m424",
+   "expected": 20,
+   "actual": 20,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "gallery_HEX_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=2.5000"
+  },
+  {
+   "name": "gallery_HEX_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=9.4444 >= P4^2=6.2500 (J_latt=0.6618)"
+  },
+  {
+   "name": "gallery_HEX_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=90 >= 12n^2-6n=90 (excess = resonant)"
+  },
+  {
+   "name": "gallery_HEX_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_HEX",
+   "recorded": {
+    "n": 3,
+    "N4": 90,
+    "N6": 2040,
+    "N4_resonant_excess": 0,
+    "P4": 2.5,
+    "P6": 9.444444444444445,
+    "J_latt": 0.6617647058823529
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 3,
+    "N4": 90,
+    "N6": 2040,
+    "N4_resonant_excess": 0,
+    "P4": 2.5,
+    "P6": 9.444444444444445,
+    "J_latt": 0.6617647058823529
+   }
+  },
+  {
+   "name": "HEX_N4_matches_m424",
+   "expected": 90,
+   "actual": 90,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "HEX_N6_matches_m424",
+   "expected": 2040,
+   "actual": 2040,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "gallery_FCC_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=3.3750"
+  },
+  {
+   "name": "gallery_FCC_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=15.6250 >= P4^2=11.3906 (J_latt=0.7290)"
+  },
+  {
+   "name": "gallery_FCC_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=216 >= 12n^2-6n=168 (excess = resonant)"
+  },
+  {
+   "name": "gallery_FCC_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_FCC",
+   "recorded": {
+    "n": 4,
+    "N4": 216,
+    "N6": 8000,
+    "N4_resonant_excess": 48,
+    "P4": 3.375,
+    "P6": 15.625,
+    "J_latt": 0.729
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 4,
+    "N4": 216,
+    "N6": 8000,
+    "N4_resonant_excess": 48,
+    "P4": 3.375,
+    "P6": 15.625,
+    "J_latt": 0.729
+   }
+  },
+  {
+   "name": "FCC_N4_matches_m424",
+   "expected": 216,
+   "actual": 216,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "FCC_N6_matches_m424",
+   "expected": 8000,
+   "actual": 8000,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "gallery_BCC_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=3.7500"
+  },
+  {
+   "name": "gallery_BCC_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=24.4444 >= P4^2=14.0625 (J_latt=0.5753)"
+  },
+  {
+   "name": "gallery_BCC_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=540 >= 12n^2-6n=396 (excess = resonant)"
+  },
+  {
+   "name": "gallery_BCC_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_BCC",
+   "recorded": {
+    "n": 6,
+    "N4": 540,
+    "N6": 42240,
+    "N4_resonant_excess": 144,
+    "P4": 3.75,
+    "P6": 24.444444444444443,
+    "J_latt": 0.5752840909090909
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 6,
+    "N4": 540,
+    "N6": 42240,
+    "N4_resonant_excess": 144,
+    "P4": 3.75,
+    "P6": 24.444444444444443,
+    "J_latt": 0.5752840909090909
+   }
+  },
+  {
+   "name": "BCC_N4_matches_m424",
+   "expected": 540,
+   "actual": 540,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "BCC_N6_matches_m424",
+   "expected": 42240,
+   "actual": 42240,
+   "tol": 0,
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "name": "BCC_resonant_excess_is_144",
+   "expected": 144,
+   "actual": 144,
+   "tol": 0,
+   "passed": true,
+   "detail": "= the Math432 m31 4-wave SHG count, independent cross-check"
+  },
+  {
+   "name": "gallery_SC100_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=2.5000"
+  },
+  {
+   "name": "gallery_SC100_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=8.6111 >= P4^2=6.2500 (J_latt=0.7258)"
+  },
+  {
+   "name": "gallery_SC100_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=90 >= 12n^2-6n=90 (excess = resonant)"
+  },
+  {
+   "name": "gallery_SC100_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_SC100",
+   "recorded": {
+    "n": 3,
+    "N4": 90,
+    "N6": 1860,
+    "N4_resonant_excess": 0,
+    "P4": 2.5,
+    "P6": 8.61111111111111,
+    "J_latt": 0.7258064516129032
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 3,
+    "N4": 90,
+    "N6": 1860,
+    "N4_resonant_excess": 0,
+    "P4": 2.5,
+    "P6": 8.61111111111111,
+    "J_latt": 0.7258064516129032
+   }
+  },
+  {
+   "name": "gallery_SQUARE_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=2.2500"
+  },
+  {
+   "name": "gallery_SQUARE_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=6.2500 >= P4^2=5.0625 (J_latt=0.8100)"
+  },
+  {
+   "name": "gallery_SQUARE_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=36 >= 12n^2-6n=36 (excess = resonant)"
+  },
+  {
+   "name": "gallery_SQUARE_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_SQUARE",
+   "recorded": {
+    "n": 2,
+    "N4": 36,
+    "N6": 400,
+    "N4_resonant_excess": 0,
+    "P4": 2.25,
+    "P6": 6.25,
+    "J_latt": 0.81
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 2,
+    "N4": 36,
+    "N6": 400,
+    "N4_resonant_excess": 0,
+    "P4": 2.25,
+    "P6": 6.25,
+    "J_latt": 0.81
+   }
+  },
+  {
+   "name": "gallery_ICOSA_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=2.7500"
+  },
+  {
+   "name": "gallery_ICOSA_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=11.5278 >= P4^2=7.5625 (J_latt=0.6560)"
+  },
+  {
+   "name": "gallery_ICOSA_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=396 >= 12n^2-6n=396 (excess = resonant)"
+  },
+  {
+   "name": "gallery_ICOSA_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_ICOSA",
+   "recorded": {
+    "n": 6,
+    "N4": 396,
+    "N6": 19920,
+    "N4_resonant_excess": 0,
+    "P4": 2.75,
+    "P6": 11.527777777777779,
+    "J_latt": 0.6560240963855422
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 6,
+    "N4": 396,
+    "N6": 19920,
+    "N4_resonant_excess": 0,
+    "P4": 2.75,
+    "P6": 11.527777777777779,
+    "J_latt": 0.6560240963855422
+   }
+  },
+  {
+   "name": "gallery_QC10_P4_ge_1",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P4=2.7000"
+  },
+  {
+   "name": "gallery_QC10_CS",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "P6=10.9000 >= P4^2=7.2900 (J_latt=0.6688)"
+  },
+  {
+   "name": "gallery_QC10_N4_ge_trivial",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "N4=270 >= 12n^2-6n=270 (excess = resonant)"
+  },
+  {
+   "name": "gallery_QC10_RegionI_positive",
+   "expected": true,
+   "actual": true,
+   "tol": 0,
+   "passed": true,
+   "detail": "min Phi = 1.523e-09 (all-positive coefficients)"
+  },
+  {
+   "name": "gallery_QC10",
+   "recorded": {
+    "n": 5,
+    "N4": 270,
+    "N6": 10900,
+    "N4_resonant_excess": 0,
+    "P4": 2.7,
+    "P6": 10.9,
+    "J_latt": 0.6688073394495413
+   },
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": {
+    "n": 5,
+    "N4": 270,
+    "N6": 10900,
+    "N4_resonant_excess": 0,
+    "P4": 2.7,
+    "P6": 10.9,
+    "J_latt": 0.6688073394495413
+   }
+  },
+  {
+   "name": "Step5_verdict",
+   "recorded": "Step-5 layer closure HOLDS (v1.1 four-interval proof): I-prime all-positivity + band/Region-II anchor-only floors PB(M) vs closed-form dips + A=0 uniqueness; Delta0 demoted to comfort margin; pattern-universal",
+   "detail": "",
+   "passed": true,
+   "tol": null,
+   "expected": null,
+   "actual": "Step-5 layer closure HOLDS (v1.1 four-interval proof): I-prime all-positivity + band/Region-II anchor-only floors PB(M) vs closed-form dips + A=0 uniqueness; Delta0 demoted to comfort margin; pattern-universal"
+  }
+ ]
+}

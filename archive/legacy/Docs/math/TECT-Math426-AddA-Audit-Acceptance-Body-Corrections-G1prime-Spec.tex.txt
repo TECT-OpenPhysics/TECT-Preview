@@ -1,0 +1,167 @@
+% =====================================================================
+% TECT-Math426-AddA -- Operator audit acceptance for Math426 (G4 verdict
+%                      ACCEPTED: "a correction that must be accepted") and the
+%                      operator-directed BODY corrections to Math425 and
+%                      Math424-AddA (banners alone deemed insufficient;
+%                      stale assertion sentences fixed in the text).
+%                      Also fixes the residual offset-variable boundary
+%                      (mu^2* = -0.156966) wherever it still ASSERTED
+%                      scope: the production-convention region is
+%                      mu^2 > u^2/(4v) = 0.0570679. Records the G1'
+%                      dispatch specification (anisotropic-Bragg Hartree
+%                      AT CANONICAL) as the next mainline gate.
+%
+% Status:        AUDIT-ACCEPTANCE + body-correction archive. No new
+%                physics claims; no pillar tier change. Corrected-
+%                canonical Reading-H selection remains T4 STRONG
+%                EVIDENCE (single-shell isotropic-Hartree class).
+% Audit class:   Operator audit response (Math423/Math425 pattern).
+% Trigger:       Operator audit of Math426 (2026-06-04): verdict
+%                "Math426 is a mandatory correction"; directive section 8
+%                (body-text corrections beyond banners) + section 9
+%                priority table (G1' > G3' > G6 > Step-5).
+% Theory tag:    Math426-AddA
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math426-AddA. Math426 audit acceptance; body corrections applied; G1$'$ dispatch specification}
+
+\subsection*{0. Operator audit verdicts (archived in substance)}
+
+The operator's review of Math426 (2026-06-04) ACCEPTS the G4 verdict in
+full: the kernel-convention offset is real ($r = \mu^2 + Yq_0^4$ is
+$K(0)$, not the shell mass $r_{\rm braz} = K(q_0) = \mu^2$); the Math425
+canonical no-condensation claim is retracted in the production
+convention; the corrected physics is Brazovskii fluctuation restoration
+(the claim ``Reading H already wins at mean-field level'' is retracted;
+``Reading H wins via Brazovskii fluctuation restoration'' is the new
+correct statement --- operator's closing verdict, Korean original in the
+conversational layer, rendered in English here per OUTPUT_LANGUAGE_POLICY);
+corrected-canonical Reading-H selection = T4 STRONG EVIDENCE,
+single-shell isotropic-Hartree class; tier reductions are a RESTORATION
+of correct convention, not a regression. Directive section 8: banners are
+insufficient --- stale body sentences must be corrected directly.
+
+\paragraph{Second adversarial pass (operator, same day).} A repeat
+hostile review UPHOLDS the verdict and narrows the binding phrasing to:
+\[
+\boxed{
+\begin{aligned}
+&\text{Reading H survives at corrected canonical Hartree level,}\\
+&\text{but } H_{\rm RH\text{-}BCC\text{-}channel} \text{ is still not a theorem.}
+\end{aligned}}
+\]
+Confirmed items: (i) the shell-mass identification $r_{\rm braz} =
+K(q_0) = \mu^2$ is adversarially sound (Brazovskii instability is judged
+at the $q_0$ shell, not at $q = 0$); (ii) the Math425 canonical
+retraction is correct; (iii) Math400-AddF and Reading H are reconciled;
+(iv) the live attack is exactly G1$'$ (isotropic gap may overestimate the
+ordered free energy) --- if the anisotropic-Bragg bound fails, Reading-H
+selection can break at corrected-canonical one-loop level. This note's
+\S 2 dispatch specification is the registered response.
+
+\subsection*{1. Body corrections applied (this commit; global-replacement discipline)}
+
+\begin{itemize}
+\item \textbf{Math425} (10 sites): title de-claimed (``G2 closed at
+canonical'' removed); new \S 0bis ``Corrected Math425 status'' inserted
+with the operator's exact corrected statement ($r_{\rm braz} = \mu^2$;
+applicability $\mu^2 > 0.0570679$; canonical claim RETRACTED); \S 1 boxed
+region corrected ($\mu^2 > r^*$, production convention; old
+$\mu^{2*} = -0.156966$ and margin $3.838$ marked as offset-variable
+images); corollary (i), \S 3 gate-table rows (G2, G1), \S 4 axiom-residue
+region, \S 5 P3 description, \S 8 G1$'$ scope (now AT CANONICAL) all
+corrected. Remaining occurrences of the old numbers exist only inside
+explicit ``superseded'' disclaimers (audit-historical references).
+\item \textbf{Math424-AddA} (3 sites): \S 6 $\beta$-objection text
+corrected (CS closure region $\mu^2 > 0.0571$; corrected canonical sits
+below it; Hartree-level settlement); \S 8 G1$'$ re-scoped AT CANONICAL;
+new \S 5bis ``Corrected canonical reading selection'' inserted with the
+operator's exact statement ($A^*_{\rm LAM} = A^*_{\rm HEX} = A^*_{\rm FCC}
+= A^*_{\rm BCC} = 0$ at $r_{\rm braz} = 0.005$, $r_R = 0.3045$,
+$M_R = 0.1094$; sub-result (a) offset-variable only; (b) load-bearing).
+\item \textbf{OPEN-QUESTIONS}: the 2026-06-04 Math425 update block's
+``G2 CLOSED for all $\mu^2 > -0.157$'' corrected inline to the
+production-convention region with supersession marker.
+\end{itemize}
+
+Post-patch verification: global re-grep finds the deprecated boundary
+only inside supersession disclaimers; \texttt{safe\_write --verify} clean
+on all touched files.
+
+\subsection*{2. G1$'$ dispatch specification (next mainline gate; operator priority 1)}
+
+Required theorem (operator's formulation, Math425 audit \S 4 + Math426
+audit \S 6):
+\[
+\inf_{\hat r,\;\Sigma^{\rm Bragg}_{\mathcal R}}
+F^{\rm anisotropic}_{\rm var}\big[\mathcal R;\,A,\,\hat r,\,\Sigma^{\rm Bragg}_{\mathcal R}\big]
+\;\ge\;
+F_{\rm var}[\mathcal R_H]
+\qquad
+\forall\,\mathcal R \in \{\text{LAM},\text{HEX},\text{FCC},\text{BCC}\},
+\;\forall A,
+\]
+at the corrected canonical point $r_{\rm braz} = \mu^2 = 0.005$, with the
+trial inverse propagator
+\[
+G^{-1}_{\mathcal R}(q) = \hat r + c\,(q^2 - q_0^2)^2
++ \Sigma^{\rm Bragg}_{\mathcal R}(q; A)
+\]
+allowed to soften (or stiffen) anisotropically at the $2n$ Bragg
+directions of the reading. Minimal honest implementation: a two-parameter
+trial family per reading (Bragg-cone mass $\hat r_B$ with angular width
+$w$, ring mass $\hat r$ elsewhere), variational over $(\hat r, \hat r_B,
+w, A)$, Gibbs--Bogoliubov bound on both sides. FAILURE MODE registered in
+advance: if the anisotropic family lowers any condensate branch below
+$F[\mathcal R_H]$, Reading-H selection at canonical FAILS at one loop and
+the Math424 Outcome-3 branch activates (per Math426 \S 7 G1$'$).
+Companion gates queued behind it: G3$'$ (Hartree multi-shell ensemble),
+G6 (corrected recomputation cascade: AddE sweep, Math401 lexicon
+$\sqrt{r_R}\,0.65 \to 0.55$, $\xi$, Math424-AddA window), Step-5
+exhaustiveness. Tier re-judgement of P5/P7/P8 only after these.
+
+\subsection*{3. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{Objection $\alpha$:} editing audited notes' bodies risks
+obscuring what was originally claimed. \emph{DISMISSED-with-procedure}:
+every correction preserves the original statement inside an explicit
+supersession disclaimer or banner; CHANGELOG + NEGATIVE-RESULTS carry the
+full audit trail; nothing is silently rewritten.
+
+\textbf{Objection $\beta$:} the corrected-canonical restoration result
+(T4) currently rests on the SAME isotropic-Hartree machinery whose
+adequacy G1$'$ questions --- circularity risk if G1$'$ is judged by the
+same tool. \emph{VALID-with-design}: the G1$'$ dispatch (\S 2) enlarges
+the variational family on the ORDERED side only, which can only LOWER the
+ordered bound --- i.e.\ the test is adversarial against the current
+conclusion by construction. No circularity.
+
+\textbf{Objection $\gamma$:} the operator's exact LaTeX blocks were
+inserted verbatim; if a later recomputation (G6) shifts $r_R = 0.3045$ or
+$M_R = 0.1094$, the inserted numbers go stale. \emph{VALID-with-gate}:
+these numbers carry the Math426 JSON artefact as provenance; G6 is
+pre-registered to sweep and update them; any drift fires a lexicon patch,
+not a silent edit.
+
+\subsection*{4. Quantitative sanity check (CLAUDE.md 6.3.4)}
+
+Consistency arithmetic: production region boundary $u^2/(4v) =
+0.86^2/12.96 = 0.0570679$; corrected canonical margin $4\mu^2 v/u^2 =
+4(0.005)(3.24)/0.7396 = 0.0876 < 1$ (condensation allowed) --- matches
+Math426 claims (10/10 asserts, JSON artefact). The patched texts quote
+exactly these values. PASS. No new numerical claims are introduced in
+this note beyond those already covered by the Math426 script asserts.
+
+\subsection*{5. Cross-references}
+
+Math426 (parent verdict; script + JSON); Math425 + Math424-AddA (patched
+this commit); NEGATIVE-RESULTS AUDIT-2026-06-04-G4-Kernel-Convention-
+Offset; OPEN-QUESTIONS Q-2026-06-04 (priority: G1$'$ > G3$'$ > G6 >
+Step-5); operator audits of Math424-AddA, Math425, Math426 (conversational
+layer, archived in substance across Math425 \S 0, Math426 \S 0, this
+note \S 0).
+
+% =====================================================================
+% End of TECT-Math426-AddA.
+% =====================================================================

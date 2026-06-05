@@ -17,9 +17,9 @@ exist here. Last updated: 2026-06-05.
 
 | Gate | Statement | Status | Source |
 |---|---|---|---|
-| **STEP-5B** | Beyond-layer class-wide bound (admissible-class exhaustiveness step; pattern-generic Gershgorin attack designated). **The gateway for any whole-Reading-H T6 discussion.** | OPEN — top priority | legacy: Math442 operator verdict, 2026-06-05 |
+| **STEP-5B** | Beyond-layer class-wide bound (admissible-class exhaustiveness step; pattern-generic Gershgorin attack designated). **The gateway for any whole-Reading-H T6 discussion.** | OPEN — top priority | `archive/legacy/Docs/math/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt` |
 | **G3PB-III** | G3′-b(iii): higher-shell / anisotropic harmonic dominance — AddF ratio extraction | OPEN — priority 2 | legacy: Math442 |
-| **G1PP-3B-HEX** | G1″-3b-HEX exact-Wick bracket (HEX competitor margin) | CLOSED within H-layer scope — Math437 v1.2 F10-REPAIR RESOLVED, verified by dual audit | legacy: Math437/440/441/442 |
+| **G1PP-3B-HEX** | G1″-3b-HEX exact-Wick bracket (HEX competitor margin) | CLOSED within H-layer scope — Math437 v1.2 F10-REPAIR RESOLVED, verified by dual audit | `archive/legacy/Docs/math/` Math437 v1.2 / Math440 / Math441 / Math442 |
 | **ESTIMATOR-UPGRADE** | GAP-2 instance for Reading-H: estimator-grade $\Delta F$ → controlled error bound | OPEN | legacy: Math4xx estimator chain |
 | **ROBUSTNESS-MU2** | Open-neighbourhood robustness of the selection result in $\mu^2$ around $\mu^2=0.005$ | OPEN | governance draft §15 |
 | **H-SUPPRESSION-DISCHARGE** | Discharge of the (H-suppression) hypothesis (full TECT-Hessian + Wetterich projection + negative-eigenvalue derivation) | OPEN | legacy: Pillar-2 record |
@@ -31,8 +31,8 @@ exist here. Last updated: 2026-06-05.
 
 | Hypothesis | Statement | Discharge path |
 |---|---|---|
-| **H-LAYER** | Restriction to the H-layer class as defined in the legacy Math437 chain. Precise statement to be transcribed verbatim during M1 migration of the Prop-A chain. | STEP-5B (beyond-layer bound) |
-| **H-A0** | The A0 hypothesis as named in the legacy Math437/Math442 certification. Precise statement to be transcribed verbatim during M1 migration. | Prop-A chain migration + dedicated discharge note |
+| **H-LAYER** | Transcribed from Math437 v1.2 §Hypotheses (`archive/legacy/Docs/math/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`): the comparison is the **isotropic Gaussian–Hartree variational layer**. Within the diagonal-Gaussian class the isotropic dressing is the infimum (Math427, T6 conditional on H-diag); beyond-diagonal refinements (Bloch off-diagonal, $\sigma(x)$ inhomogeneity) are EXECUTED for the five enumerated readings (Math428–432, Math434, Math436) but remain unexecuted for non-enumerated patterns — that residual is exactly STEP-5B. | STEP-5B (beyond-layer class-wide bound) |
+| **H-A0** | Transcribed from Math437 v1.2 §Hypotheses (slimmed in v1.1): the $A=0$ uniqueness and zero-at-gap structure are certified numerically on a consistent quadrature scheme (internal convergence $3.1\times10^{-5}$; the $5.5\times10^{-3}$ scheme-gap offset is a recorded measure-convention systematic). PENALTY constants do **not** rest on this hypothesis: Lemma 3's $P_B$ floors are quadrature-free closed forms at the production anchors ($M_R=0.109414>M_c$, $4.1\times$ margin). | Quadrature-scheme unification of the recorded offset systematic, or an analytic $A=0$ uniqueness proof |
 | **H-SUPPRESSION** | Suppression hypothesis of the kinematic-Lorentz theorem (legacy PC-3C form). | H-SUPPRESSION-DISCHARGE |
 | **H-LEGACY-CHAIN** | The cited legacy evidence chain is sound as recorded; TSv2 re-validation pending (migration plan M1/M2). Carried by every legacy-translated T6 entry until its pointers are migration-clean. | `governance/migration-plan.md` M2 |
 | **H-CP2-BUNDLE-DATA** | The three-patch Čech bundle data on $\mathbb{CP}^2$ as constructed in legacy Math162/Math167. | M1 migration + re-verification of cocycle closure |
@@ -42,3 +42,10 @@ exist here. Last updated: 2026-06-05.
 OPEN → CLOSED (with closing evidence + date) or RETIRED (statement absorbed
 elsewhere; pointer mandatory). Closing a gate never silently promotes a claim;
 promotions follow `governance/claim-standard.md` §5.
+
+## History
+
+- 2026-06-05 — Registry created (bootstrap).
+- 2026-06-05 — M1 batch 1: H-LAYER / H-A0 placeholder entries replaced by
+  verbatim transcriptions from Math437 v1.2; STEP-5B and G1PP-3B-HEX source
+  pointers resolved to `archive/legacy/` paths.
