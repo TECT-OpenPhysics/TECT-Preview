@@ -1,0 +1,244 @@
+% SUPERSEDED by TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec-260604-v1.1.tex.txt (see its revision banner).
+% =====================================================================
+% TECT-Math427 -- G1' execution: diagonal-anisotropy isotropy theorem.
+%                 RESULT: within the DIAGONAL Gaussian trial class
+%                 G^-1(q) = r_hat(q_dir) + c(q^2-q0^2)^2 (the
+%                 Math426-AddA S2 two-parameter Bragg-cone family
+%                 included, and ANY angular profile), the variational
+%                 optimum at every condensate amplitude is ISOTROPIC.
+%                 Hence the corrected-canonical isotropic Hartree
+%                 restoration (Math426: A* = 0 for all four readings at
+%                 r_braz = mu2 = 0.005) is the INFIMUM of the entire
+%                 diagonal-anisotropic family: the dispatched G1'
+%                 cone-family attack cannot lower the ordered free
+%                 energy. G1' (as dispatched) = CLOSED-POSITIVE.
+%                 The operator's underlying physical concern survives
+%                 in the OFF-DIAGONAL sector (condensate-induced
+%                 Bogoliubov band couplings, crystal soft phonons) and
+%                 is formulated as G1'' with a concrete computational
+%                 plan. No pillar tier change.
+%
+% Status:        Proposition: T6 PROVED CONDITIONAL on H-diag
+%                (diagonal Gaussian trial class + local-Wick
+%                quartic/sextic interactions; textbook variational
+%                argument). Reading-H selection statement remains T4
+%                STRONG EVIDENCE (now robust against the full diagonal
+%                class; off-diagonal G1'' is the live gate).
+% Audit class:   Gate execution (G1', Math426-AddA S2 dispatch).
+% Trigger:       Operator mainline directive 2026-06-04 ("continue the
+%                mainline") after Math426-AddB publish.
+% Theory tag:    Math427
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math427. G1$'$: the diagonal Gaussian trial class cannot beat the isotropic gap; restoration robust; G1$''$ (Bogoliubov bands) formulated}
+
+\subsection*{0. Summary}
+
+The dispatched G1$'$ attack (Math426-AddA \S 2: two-parameter Bragg-cone
+anisotropic trial propagator) is DISCHARGED by a proposition that covers
+not only the cone family but every diagonal angular profile:
+
+\[
+\boxed{
+\begin{aligned}
+&\text{Within } G^{-1}(q) = \hat r(\hat q) + c\,(q^2 - q_0^2)^2
+\text{ (any } \hat r(\hat q) > 0\text{), with local quartic/sextic}\\
+&\text{interactions Wick-contracted, every stationary trial profile is
+ISOTROPIC: } \hat r(\hat q) = \text{const}.
+\end{aligned}}
+\]
+
+Consequently the Math426 corrected-canonical restoration result
+($A^* = 0$ for LAM/HEX/FCC/BCC at $r_{\rm braz} = \mu^2 = 0.005$,
+$r_R = 0.3045$, $M_R = 0.1094$) is the infimum over the ENTIRE diagonal
+class --- anisotropic diagonal softening at the Bragg directions cannot
+lower the ordered free energy below the isotropic value, hence cannot
+break Reading-H selection. Numerical verification: 5/5 claims
+(\texttt{Codes/supplementary/Math427\_g1prime\_diagonal\_isotropy.py};
+\texttt{Runs/math/Math427/g1prime\_diagonal\_isotropy.json}).
+
+\subsection*{1. Proposition and proof}
+
+\paragraph{Setting.} Gibbs--Bogoliubov variational free energy at
+condensate amplitude $A$ for reading $\mathcal R$ ($n$ pairs, exact
+coefficients $N_4, N_6$ per Math424-AddA \S 2), with diagonal trial
+propagator $G^{-1}(q) = \hat r(\hat q) + c\,(q^2 - q_0^2)^2$:
+\[
+F_{\rm var}[\hat r(\cdot), A]/V
+= \tfrac12 \!\int_q \ln G^{-1}(q)
+- \tfrac12 \!\int_q \hat r(\hat q)\, G(q)
++ \Phi\big(M_{\rm tot}, A\big),
+\qquad
+M_{\rm tot} = \int_q G(q),
+\]
+where $\Phi(M, A)$ collects the condensate terms and ALL interaction
+terms; because the quartic/sextic interactions are local and the
+Gaussian variance $\langle \delta\phi^2(x) \rangle = M_{\rm tot}$ is
+position-independent for any homogeneous Gaussian state, $\Phi$ depends
+on the trial profile ONLY through the scalar $M_{\rm tot}$ (the $c$-term
+contributions cancel between $\langle H \rangle$ and
+$\langle H_{\rm trial} \rangle$ exactly as in the isotropic case).
+
+\paragraph{Proof.} Vary $\hat r(\hat q)$ pointwise in direction $\hat q$.
+Writing the radial loop integrals $M_{\rm rad}(\rho)$ and using
+$\partial M_{\rm tot} / \partial \hat r(\hat q) =
+(d\Omega/4\pi)\, M_{\rm rad}'(\hat r(\hat q))$,
+\[
+\frac{\delta F_{\rm var}}{\delta \hat r(\hat q)}
+= \frac{d\Omega}{4\pi}\, M_{\rm rad}'(\hat r(\hat q))
+\left[ -\tfrac12 \hat r(\hat q) + \Phi'(M_{\rm tot}, A) \right]
+\;=\; 0
+\quad\Longrightarrow\quad
+\hat r(\hat q) = 2\,\Phi'(M_{\rm tot}, A).
+\]
+The right-hand side is direction-independent, so every stationary
+profile is constant in $\hat q$ (isotropic), and the stationary value
+reproduces exactly the isotropic ordered-phase gap equation of
+Math424-AddA (G). Boundary escape is excluded: as $\hat r \to 0^+$ on
+any direction set of positive measure, $M_{\rm rad} \to \infty$ (the
+on-shell integrand $\propto 1/(\hat r + c(q^2-q_0^2)^2)$ diverges) and
+the sextic term $\tfrac{5v}{2} M_{\rm tot}^3 \to +\infty$ dominates, so
+$F_{\rm var} \to +\infty$; as $\hat r \to \infty$, $F_{\rm var}$ grows
+through $-\tfrac12\hat r M + \tfrac12 \ln$-term balance. Hence the
+infimum is attained at the (unique, per the Math400-AddE-type gap-map
+monotonicity) isotropic stationary point. $\square$
+
+\paragraph{Corollary (G1$'$ as dispatched: CLOSED-POSITIVE).} The
+two-parameter Bragg-cone family ($\hat r_B$ on cones of half-angle $w$
+about the $2n$ Bragg directions, solid-angle fraction
+$f_B = n(1 - \cos w)$; $\hat r$ elsewhere) is a sub-family of the
+diagonal class; its infimum over $(\hat r, \hat r_B, w, A)$ equals the
+isotropic infimum, i.e.\ the Math426 restoration verdict. The required
+inequality of Math426-AddA \S 2 HOLDS on this family.
+
+\subsection*{2. Numerical verification (5/5 claims)}
+
+Explicit cone-family $F_{\rm var}(A, \hat r, \hat r_B, w)$ for BCC and
+HEX at the corrected canonical point: (i) implementation identity
+$F_{\rm cone}(\rho,\rho,w) \equiv F_{\rm iso}(\rho)$ to $10^{-10}$;
+(ii) for $w \in \{0.15, 0.35, 0.60\}$ and four amplitudes spanning the
+MF-condensate scale, the $26{\times}26$ grid minimum over
+$(\hat r, \hat r_B)$ never falls below the CONTINUUM isotropic minimum
+(golden-refined) --- maximum ``anisotropic gain'' $\le 10^{-9}$;
+(iii) the global minimum over all scans remains $\Delta F = 0$ at
+$A = 0$ (restoration unchanged); (iv) $r_R = 0.304526$, $M_R = 0.109414$
+reproduce Math426.
+
+\paragraph{Methodological record (falsification-discipline).} A first
+test version compared grid-min against grid-min and reported a spurious
+$2.6 \times 10^{-5}$ ``gain'' for HEX --- a pure discretisation artefact
+(off-diagonal grid points landing nearer the continuum diagonal optimum
+than any diagonal grid point). The test was redesigned to the
+artifact-proof form ``subset-minimum $\ge$ continuum diagonal minimum'',
+which cannot false-positive and still detects any true anisotropic
+optimum (a genuine gain survives grid refinement; the proof of \S 1 is
+the load-bearing statement, the scan its corroboration). Recorded per
+CLAUDE.md 6.3.4 as a pre-registered-tolerance lesson: grid-vs-grid
+comparisons must budget discretisation error.
+
+\subsection*{3. What G1$'$ does NOT close: G1$''$ formulation (the real attack)}
+
+The operator's physical concern --- ordered-phase soft modes lowering
+$F_{\rm ordered}$ --- lives in the OFF-DIAGONAL sector excluded by the
+diagonal class: the condensate couples $\delta\phi(q)$ to
+$\delta\phi(q \pm k_i \pm k_j)$ through $3u\,\phi_n^2(x)\,\delta\phi^2$
+(and $5v\,\phi_n^4\,\delta\phi^2$), producing a Bloch band structure
+whose acoustic (phase/translation) branches are the crystal phonons.
+G1$''$ (registered, top priority with G3$'$):
+
+\[
+\boxed{
+\begin{aligned}
+&\text{Trial class: full homogeneous-ensemble Gaussian states with}\\
+&\text{covariance } = \text{Wick-dressed Bloch operator }
+\hat K[\phi_n] = \hat r_{\rm eff} + c(q^2-q_0^2)^2
++ 3u\,\phi_n^2 + 15 v M \phi_n^2 + 5v\,\phi_n^4 + \ldots\\[2pt]
+&\text{Required: }
+F^{\rm Bloch}_{\rm var}[\mathcal R_{\rm BCC}; A]
+\;\ge\; F_{\rm var}[\mathcal R_H]
+\quad \forall A,
+\text{ at } r_{\rm braz} = 0.005 .
+\end{aligned}}
+\]
+
+Computational plan (first cut, BCC only): plane-wave basis = reciprocal
+set $\{G\}$ of the BCC condensate within a cutoff shell; Bloch blocks
+$K_{G,G'}(k)$ on a sampled reduced BZ; matched-basis regularisation of
+$\tfrac12 \mathrm{Tr}\ln K$ against the disordered reference (same
+finite basis, isotropic $r_R$); existing infrastructure:
+\texttt{Math374\_canonical\_BCC\_hessian.py} (Hessian assembly; Lanczos
+$\lambda_{\min}$) extended to log-determinant; Math400-AddF
+$n_{\rm neg} = 0$ already certifies spectral NON-NEGATIVITY of the
+dressed operator at the channel state (no instability), so G1$''$ is a
+free-energy race, not a stability question. Pre-registered outcomes:
+PASS $\Rightarrow$ Reading-H selection robust at the full one-loop
+Gaussian level (candidate T4 $\to$ T5 promotion of the selection
+statement, subject to 15.5 independent audit); FAIL $\Rightarrow$
+Math424 Outcome-3 branch.
+
+\subsection*{4. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (the class is too weak to address the
+physics):} closing the diagonal family does not address crystal phonons.
+\emph{UPHELD-as-designed}: this is exactly why G1$''$ is opened with a
+concrete plan (\S 3); the note claims ONLY the diagonal-class closure
+and does not upgrade the Reading-H selection tier.
+
+\textbf{Objection $\beta$ (numerical-test design):} the initial
+grid-vs-grid comparison produced a false positive; could the redesigned
+test mask a true gain? \emph{DISMISSED}: subset-min $\ge$ continuum-min
+is a one-sided inequality that holds identically when the continuum
+optimum is diagonal and FAILS for any true anisotropic optimum once the
+grid resolves it; the load-bearing statement is the \S 1 proof, which is
+grid-free. The artefact episode is documented in \S 2.
+
+\textbf{Objection $\gamma$ (boundary/soft-cone escape):} could
+$\hat r_B \to 0$ (gapless Bragg cones, mimicking Goldstone softening)
+lower $F$ outside the stationary analysis? \emph{DISMISSED}: the
+on-shell radial integral diverges as $\hat r_B \to 0$ on any positive-
+measure cone, and the $\tfrac{5v}{2}M_{\rm tot}^3$ sextic penalty sends
+$F_{\rm var} \to +\infty$ (verified by the scan floor at small grid
+$\hat r_B$). True gapless phonons require the off-diagonal sector
+(G1$''$), where the divergence is cut by the Bogoliubov structure.
+
+\subsection*{5. Quantitative sanity checks (CLAUDE.md 6.3.4)}
+
+Identity $F_{\rm cone}(\rho,\rho,w) = F_{\rm iso}(\rho)$ to $10^{-10}$
+(implementation). Corrected-canonical reproduction $r_R = 0.304526$,
+$M_R = 0.109414$ (matches Math426 JSON). Limit case $w \to 0$:
+$f_B \to 0$, cone family degenerates to isotropic --- continuous in the
+scan. Solid-angle cap $f_B = \min(n(1-\cos w), 1)$ respected (BCC
+$w = 0.60$ clips at $f_B = 1$, i.e.\ full-sphere two-mass family ---
+still diagonal class). 5/5 scripted claims; JSON artefact. PASS.
+
+\subsection*{6. Pre-registered falsification gates (updated)}
+
+\begin{itemize}
+\item[G1$''$:] Bloch-band Gibbs--Bogoliubov comparison (\S 3). Fires if
+$F^{\rm Bloch}_{\rm var}[\mathcal R_{\rm BCC}; A] < F_{\rm var}[\mathcal R_H]$
+for any $A$ at $r_{\rm braz} = 0.005$ $\Rightarrow$ Outcome-3.
+\item[G3$'$:] unchanged (Hartree multi-shell ensemble).
+\item[G6:] unchanged (corrected recomputation cascade).
+\item[G7 (NEW, methodological):] if grid refinement of the \S 2 scan
+ever shows a persistent positive anisotropic gain $> 10^{-9}$ against
+the refined diagonal floor, the \S 1 proof's hypotheses (locality /
+homogeneity of the Gaussian variance) must be re-audited.
+\end{itemize}
+
+\subsection*{7. Cross-references}
+
+Math426-AddA \S 2 (G1$'$ dispatch spec; discharged here);
+Math426 (corrected-canonical restoration; numbers reproduced);
+Math424-AddA (variational machinery, gap equation (G), $N_4/N_6$);
+Math400-AddF ($n_{\rm neg} = 0$ spectral non-negativity --- G1$''$
+context); \texttt{Codes/supplementary/Math427\_g1prime\_diagonal\_isotropy.py}
+(5 asserts); \texttt{Runs/math/Math427/g1prime\_diagonal\_isotropy.json};
+\texttt{Codes/supplementary/Math374\_canonical\_BCC\_hessian.py}
+(G1$''$ infrastructure). Textbook anchors: Gibbs--Bogoliubov inequality
+(standard); Brazovskii, Sov.\ Phys.\ JETP 41 (1975) 85 (ordered-phase
+fluctuation treatment --- the G1$''$ reference frame).
+
+% =====================================================================
+% End of TECT-Math427.
+% =====================================================================

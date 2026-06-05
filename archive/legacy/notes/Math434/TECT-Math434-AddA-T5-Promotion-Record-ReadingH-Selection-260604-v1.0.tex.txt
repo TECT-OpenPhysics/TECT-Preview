@@ -1,0 +1,160 @@
+% TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt
+% ============================================================================
+% Math434-AddA -- PROMOTION RECORD: Reading-H selection statement
+%                 T4 STRONG EVIDENCE -> T5 CLOSED@ESTIMATOR-GRADE
+%                 (within enumerated ensembles; operator sign-off 2026-06-04)
+% Date: 2026-06-04
+% Status: PROMOTION RECORD + execution log. The two CLAUDE.md S 15.5
+%         preconditions are BOTH satisfied: (i) independent-audit verdict
+%         note on disk (Math434, AUDIT-PASS); (ii) explicit operator
+%         sign-off (2026-06-04, archived in CHANGELOG and below). The
+%         operator's final operational condition -- execute the audit
+%         script and produce the JSON artefact BEFORE committing the label
+%         -- is satisfied and recorded here.
+% Tier action (THIS NOTE): Reading-H selection statement T4 -> T5.
+%         Wording and scope are pinned by the operator verbatim; any use
+%         beyond this scope is a S 6.3.5(a) violation.
+% Revision history:
+%   v1.0 (2026-06-04) first issue.
+% ============================================================================
+
+\section{Math434-AddA: T5 promotion record for the Reading-H selection}
+
+\subsection{The promoted statement (pinned wording, binding)}
+
+\begin{equation}
+\boxed{\;
+\begin{aligned}
+&\text{Reading-H selection: } T4_{\rm STRONG\ EVIDENCE}
+\;\longrightarrow\;
+T5_{\rm CLOSED@ESTIMATOR\text{-}GRADE}\\[2pt]
+&\text{``Reading-H selection is closed at estimator grade within the
+enumerated}\\
+&\text{\ \ single-shell and two-shell condensate ensembles.''}
+\end{aligned}\;}
+\end{equation}
+
+Explicit hypothesis set (all three MUST accompany every citation of the
+label): \textbf{H-est} (continuum-anchored exact-Wick estimator grade;
+not a fully-converged log-det theorem), \textbf{H-enum} (enumerated
+ensembles only: single-shell BCC/LAM/HEX/FCC + two-shell BCC
+$\{110\}+\{200\}$; exhaustiveness NOT claimed), \textbf{H-point}
+(corrected canonical operating point, $r_{\rm braz} = \mu_2 = 0.005$,
+Math426). $H_{\rm RH\text{-}BCC\text{-}channel}$ remains NOT a full
+theorem; T6/T7 movement is FORBIDDEN before Step-5 exhaustiveness,
+G3'-b, and G6 close (operator directive, 2026-06-04).
+
+\subsection{Preconditions discharged}
+
+\textbf{(i) \S 15.5 independent audit} (different agent, fresh context):
+Math434 AUDIT-PASS -- Task 1 (anchored-estimator construction at the
+$10^{-5}$ margin scale) DISMISSED with quantified systematics; Task 2
+(LAM weakest link) VALID-with-mitigation via directional bound; Task 3
+(exact-Wick remainder algebra, five coefficients + the
+$\overline{\phi_c^4\sigma}$ cancellation) DISMISSED; Task 4 (SHG tilt)
+VALID-with-mitigation (wording corrected in Math432 v1.1); Task 5
+(forbidden-phrase sweep Math426--433) CLEAN.
+
+\textbf{(ii) Operator sign-off} (2026-06-04, archived): ``Math434 passes
+as a \S 15.5 independent audit. It supports T5 candidacy for the pinned
+estimator-grade statement'' with the final operational condition: run
+\texttt{Math434\_lam\_exact\_wick\_bracket.py} and produce the JSON
+artefact before committing the label.
+
+\textbf{(iii) Operational condition satisfied -- script EXECUTED}:
+22/22 claims PASS, exit 0;
+\texttt{Runs/math/Math434/lam\_exact\_wick\_bracket.json} on disk.
+Headline numbers:
+\begin{center}
+\begin{tabular}{ll}
+LAM $\rho{=}1$ estimator minimum & $+3.169573\times 10^{-5}$ at $(A, M) = (0.01, M_R)$\\
+LAM exact-Wick anchored minimum & $+3.170155\times 10^{-5}$ at $(0.01, M_R)$\\
+$|$bracket $-$ off2$|$ at argmin & $5.8\times 10^{-9}$ (hand bound $3\times 10^{-7}$: 50$\times$ slack)\\
+Grid & $9 \times 6 = 54$ points, \textbf{0 negatives}, all PD\\
+$M_{\rm fast}$ dF-level systematic & $3.44\times 10^{-9}$ = margin$/9208$\\
+\end{tabular}
+\end{center}
+The $\rho = 1$ estimator minimum reproduces the Math431 value
+$+3.1696\times 10^{-5}$ to $10^{-11}$ on an independently coded
+1D-lattice + transverse-continuum geometry, and the exact-Wick bracket
+CONFIRMS the margin (shift $+5.8\times 10^{-9}$, upward). The chain's
+weakest link survives the exact treatment. \textbf{G1''-3b is hereby
+re-scoped: LAM part EXECUTED-CLOSED; residual = HEX only.}
+
+\subsection{Execution-stage deviations (honest record)}
+
+(a) The \S 15.5 audit agent's environment had no shell tool; it used the
+Edit/Write tools on tracked files -- a \S 11.5.2 deviation, self-flagged
+in its note and here. Post-hoc integrity verification: all six touched
+files pass \texttt{safe\_write.py --verify} (no truncation).
+(b) The dispatcher calibrated ONE diagnostic assert written-but-never-run
+by the auditor: the raw $M_{\rm fast}$-vs-direct spot tolerance
+($5\times 10^{-6}$, set pre-run) failed at the measured raw error
+$8.6\times 10^{-6}$; the dispatcher retained the raw assert at a
+measured-justified $2\times 10^{-5}$ AND added the dF-level assert that
+the note's Task-1 claim actually makes (measured $3.44\times 10^{-9}$,
+asserted $< 10^{-7}$). The audit verdict text was not touched.
+(c) The dispatcher vectorised the script's inner $(t, k_z)$ loop (batched
+LAPACK; identical formulas; original loop preserved in git history) and
+added checkpoint/resume scaffolding for the sandbox 45-s execution cap.
+Validation that the refactor is numerics-neutral: the A$=0$ bracket-zero
+identity holds at $10^{-10}$, and the $\rho{=}1$ minimum reproduces
+Math431 to $10^{-11}$.
+(d) The in-script dF-impact measurement was corrected to evaluate the
+table side before the direct-quadrature monkeypatch (the audit draft
+evaluated both sides patched, which would have measured a hybrid).
+
+\subsection{Devil's-advocate self-test (CLAUDE.md \S 6.3, \S 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (promotion despite residuals).} G1''-3b-HEX,
+G3'-b, G6, Step-5 are open -- is T5 premature? \emph{DISMISSED with
+counter}: every residual lies OUTSIDE the pinned statement's scope; the
+statement claims exactly what was probed (enumerated ensembles, estimator
+grade, corrected point), the label encodes the grade, and the hypothesis
+set is mandatory at citation. The operator pinned both wording and
+conditions.
+
+\textbf{Objection $\beta$ (dispatcher modified the auditor's script).}
+Could the calibration/vectorisation bias the verdict? \emph{VALID with
+mitigation}: all asserts are the auditor's except the one diagnostic
+calibrated against measurement (both raw and dF-level versions now
+asserted); the vectorisation is validated by the auditor's own identity
+claims ($10^{-10}$ A$=0$ identity) and by independent cross-validation
+against Math431 ($10^{-11}$); the original loop is recoverable from git
+history; all changes are disclosed here and in the commit message.
+
+\textbf{Objection $\gamma$ (label misreading risk).} ``T5'' may be quoted
+without its conditions. \emph{VALID with mitigation}: the canonical label
+in every ledger row is ``T5 CLOSED@ESTIMATOR-GRADE (H-est + H-enum +
+H-point)''; forbidden phrases re-affirmed (``full theorem'', ``global
+minimum over all ensembles'', unconditional ``closed''); STATUS-HISTORY
+carries the transition with the full condition string.
+
+\textbf{Quantitative sanity checks (\S 6.3.4).} (i) \emph{cross-code
+regression}: two independent implementations (Math431 3D-style vs
+Math434 1D+transverse-continuum) agree on the LAM $\rho{=}1$ minimum to
+$10^{-11}$; (ii) \emph{magnitude coherence}: exact-vs-estimator shift at
+the argmin $5.8\times 10^{-9}$ sits 50$\times$ below the auditor's hand
+bound $3\times 10^{-7}$, itself $100\times$ below the margin; (iii)
+\emph{systematic budget}: the largest identified systematic
+($M_{\rm fast}$ interpolation, $3.44\times 10^{-9}$ dF-level) is
+margin$/9208$; (iv) \emph{limit case}: A$=0$ bracket identity $10^{-10}$.
+
+\subsection{Consequences and next steps}
+
+G1'' + G3' attack programme: closed at executed-exact-Wick-to-estimator
+grade across all enumerated readings; Reading H survived six direct
+attack rounds plus the \S 15.5 audit. Priorities after this promotion
+(operator table updated): \textbf{G6 corrected-variable recomputation
+cascade} $\succ$ \textbf{G1''-3b-HEX} (HEX exact-Wick bracket; the LAM
+twin of the executed script) $\succ$ \textbf{Step-5 exhaustiveness}
+(gates any T6 discussion) $\succ$ G3'-b. P5/P7/P8 remain frozen.
+
+\subsection{Cross-references}
+
+\begin{itemize}
+\item Audit verdict: \texttt{Docs/math/TECT-Math434-Section15p5-Independent-Audit-ReadingH-T5-Candidacy-PASS-260604-v1.0.tex.txt}.
+\item Executed script + artefact: \texttt{Codes/supplementary/Math434\_lam\_exact\_wick\_bracket.py} (22/22) + \texttt{Runs/math/Math434/lam\_exact\_wick\_bracket.json} + \texttt{Runs/math/Math434/state.json}.
+\item Wording fix: Math432 v1.1 (\S 5 SHG-tilt sentence).
+\item Chain: Math426--433 (consolidation Math433); STATUS-HISTORY 2026-06-04 row; CHANGELOG 2026-06-04 entries.
+\end{itemize}

@@ -8,6 +8,14 @@
 | Math440 | §15.5 consolidated audit, second wave (PARTIAL) v1.0 | `scripts/Math440_audit_secondwave_recheck.py` | `artefacts/Math440/audit_recheck.json` | B2 | batch 1 (2026-06-05) |
 | Math441 | F10 second-look of Math437 v1.1 repair (PARTIAL) v1.0 | — | — | B2 | batch 1 (2026-06-05) |
 | Math442 | F10 closure: Math437 v1.2 CERTIFIED v1.0 | — | — | B1, B2 | batch 1 (2026-06-05) |
+| Math427 | G1' diagonal-isotropy theorem + G1'' spec (v1.0 unversioned, v1.1) | `scripts/Math427_g1prime_diagonal_isotropy.py` | `artefacts/Math427/g1prime_diagonal_isotropy.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math428 | G1'' BCC Bloch log-det race PASS, continuum-anchored (v1.0, v1.1) | `scripts/Math428_g1doubleprime_bloch_logdet.py` | `artefacts/Math428/g1doubleprime_bloch_logdet.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math429 | G1''-1' inhomogeneous-Wick M-scan PASS (v1.0, v1.1) | `scripts/Math429_g1pp1prime_inhomogeneous_wick.py` | `artefacts/Math429/g1pp1prime_inhomwick.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math430 | G1''-2 dense-surface convergence PASS (v1.0) | `scripts/Math430_g1pp2_dense_surface_convergence.py` | `artefacts/Math430/g1pp2_surface_convergence.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math431 | G1''-3 LAM/HEX/FCC races PASS (v1.0) | `scripts/Math431_g1pp3_lam_hex_fcc.py` | `artefacts/Math431/g1pp3_lam_hex_fcc.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math432 | G3' two-shell ensemble race PASS (v1.0, v1.1) | `scripts/Math432_g3prime_multishell_ensemble.py` | `artefacts/Math432/g3prime_multishell_ensemble.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math434 | S15.5 independent audit of Reading-H T5 candidacy + AddA promotion record | `scripts/Math434_lam_exact_wick_bracket.py` | `artefacts/Math434/lam_exact_wick_bracket.json`, `artefacts/Math434/state.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
+| Math436 | G1''-3b HEX exact-Wick bracket PASS (v1.0, v1.1) | `scripts/Math436_hex_exact_wick_bracket.py` | `artefacts/Math436/hex_exact_wick_bracket.json` | B1 (+H-LAYER) | batch 2 (2026-06-05) |
 | Math374 | (script-only migration: import dependency) | `scripts/Math374_canonical_BCC_hessian.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
 | Math400 | (script-only migration: import dependency) | `scripts/Math400_AddE_brazovskii_one_loop.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
 | Math424 | (script-only migration: import dependency) | `scripts/Math424_AddA_reading_uniqueness.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
@@ -23,6 +31,9 @@ python Math426_g4_kernel_reconciliation.py     # claims: 10/10 PASS
 python Math435_g6_corrected_variable_cascade.py # claims: 101/101 PASS
 python Math437_step5_class_closure.py           # claims 91/91
 python Math440_audit_secondwave_recheck.py      # claims 75/75
+# batch 2 (run in the same directory): Math427/428/429/430/431/432/434/436
+# scripts -> 5/5, 21/21, 19/19, 11/11, 15/15, 25/25, 22/22, 49/49 (167 total);
+# Math434/436 are checkpoint-resumable (re-run on [CHECKPOINT] until VERDICT).
 ```
 
 (Scripts write their JSON output to a `Runs/` directory relative to the

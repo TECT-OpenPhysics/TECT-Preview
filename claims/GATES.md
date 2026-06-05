@@ -20,7 +20,7 @@ exist here. Last updated: 2026-06-05.
 | **STEP-5B** | Beyond-layer class-wide bound (admissible-class exhaustiveness step; pattern-generic Gershgorin attack designated). **The gateway for any whole-Reading-H T6 discussion.** | OPEN — top priority | `archive/legacy/notes/Math442/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt` |
 | **G3PB-III** | G3′-b(iii): higher-shell / anisotropic harmonic dominance — AddF ratio extraction | OPEN — priority 2 | legacy: Math442 |
 | **G1PP-3B-HEX** | G1″-3b-HEX exact-Wick bracket (HEX competitor margin) | CLOSED within H-layer scope — Math437 v1.2 F10-REPAIR RESOLVED, verified by dual audit | `archive/legacy/notes/` Math437 v1.2 / Math440 / Math441 / Math442 |
-| **ESTIMATOR-UPGRADE** | GAP-2 instance for Reading-H: estimator-grade $\Delta F$ → controlled error bound | OPEN | legacy: Math4xx estimator chain |
+| **ESTIMATOR-UPGRADE** | GAP-2 instance for Reading-H: estimator-grade $\Delta F$ → controlled error bound | OPEN | `archive/legacy/notes/` Math427–Math436 enumerated-reading chain (migrated batch 2) |
 | **ROBUSTNESS-MU2** | Open-neighbourhood robustness of the selection result in $\mu^2$ around $\mu^2=0.005$ | OPEN | governance draft §15 |
 | **H-SUPPRESSION-DISCHARGE** | Discharge of the (H-suppression) hypothesis (full TECT-Hessian + Wetterich projection + negative-eigenvalue derivation) | OPEN | legacy: Pillar-2 record |
 | **CP-UNITARITY** | CP structure and unitarity completion of the per-generation quantum-consistency closure | OPEN | legacy: Pillar-7 record |
@@ -51,3 +51,6 @@ promotions follow `governance/claim-standard.md` §5.
   pointers resolved to `archive/legacy/` paths.
 - 2026-06-05 — Archive per-tag reorganisation: source pointers updated to
   `archive/legacy/notes/<Tag>/` layout.
+- 2026-06-05 — Migration batch 2: the H-LAYER justification chain and the
+  estimator chain (Math427–432, Math434+AddA, Math436) migrated and
+  re-validated (167/167); ESTIMATOR-UPGRADE source pointer resolved.

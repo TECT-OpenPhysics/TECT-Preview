@@ -1,0 +1,129 @@
+% =====================================================================
+% TECT-Math431 -- G1''-3 execution: LAM/HEX/FCC repetition of the Bloch
+%                 off-diagonal race at the corrected canonical point.
+%                 VERDICT: ALL PASS. (i) Worst-case (rho = 1)
+%                 continuum-anchored estimator (exact per-lattice
+%                 continuum diagonal + second-order bubble), 9 x 6
+%                 (A, M) grids: LAM min +3.2e-5, HEX +9.5e-5, FCC
+%                 +1.26e-4 -- every minimum at the small-A end and
+%                 numerically equal to the per-lattice analytic bound
+%                 c2 = n r_R (LAM 3.05e-5, HEX 9.14e-5, FCC 1.22e-4 at
+%                 A = 0.01): the Math428 v1.1 small-A closure
+%                 generalises to all enumerated lattices. (ii) FCC
+%                 additionally gets the FULL exact-Wick Bloch bracket
+%                 (the {111} shell generates the 3D same-parity
+%                 integer lattice, s = q0/sqrt(3); parity-lattice
+%                 Engine, Nyquist-paired, A=0 identity 1e-10):
+%                 anchored min +5.23e-4 at (0.02, M_R) -- positive
+%                 everywhere on the 5 x 5 dangerous-window scan.
+%
+% REVISION HISTORY (cumulative; DOCUMENT_VERSIONING_POLICY.md)
+% v1.0 2026-06-04  first issue.
+%
+% Status:        G1''-3 CLOSED-PASS under qualifiers: FCC at full
+%                exact-Wick grade; LAM/HEX at the Math428-accepted
+%                continuum-anchored estimator grade with the WORST-CASE
+%                rho = 1 band (their Bloch blocks involve transverse-
+%                continuum directions -- 1D/2D reciprocal lattices --
+%                so the exact-Wick bracket is registered as residual
+%                sub-gate G1''-3b). LAM is independently excluded as a
+%                vacuum candidate by the cosmological isotropy filter
+%                (Math400-AddA). With Math427 (diagonal theorem),
+%                Math428 v1.1 (fixed-M_R Bloch + amplitude bounds),
+%                Math429 v1.1 (inhomogeneous Wick + self-consistency
+%                coverage), Math430 (dense surface + convergence) and
+%                this note, the G1'' programme is closed at estimator-
+%                to-exact-Wick grade across ALL enumerated readings.
+%                Reading-H selection: T4 STRONG EVIDENCE; the remaining
+%                direct gates are G3' (multi-shell ensemble), G6
+%                (corrected recomputation cascade), Step-5
+%                (exhaustiveness), plus residuals (G1''-3b; Richardson
+%                bound). T5 candidacy may now be TABLED for the 15.5
+%                independent audit ONCE G3' is addressed, per operator
+%                priority. No pillar tier change here.
+% Audit class:   Gate execution (G1''-3 spec from the Math430 audit).
+% Theory tag:    Math431
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math431. G1$''$-3: LAM/HEX/FCC --- all channels PASS; the small-$A$ bound generalises per lattice}
+
+\subsection*{0. Results (15/15 claims)}
+
+Worst-case ($\rho = 1$) anchored estimator over $A \in [0.01, 0.20]$
+(9 pts) $\times$ $M \in [0.4, 2.5] M_R$ (6 pts), with exact per-lattice
+combinatorics ($p_2(0) = 2n$, $p_4(0) = N_4$ asserted per lattice):
+\[
+\min \Delta F_{\rm est}^{\rho=1} =
+\begin{cases}
++3.2\times10^{-5} & \text{LAM } (n{=}1), \\
++9.5\times10^{-5} & \text{HEX } (n{=}3), \\
++1.26\times10^{-4} & \text{FCC } (n{=}4),
+\end{cases}
+\qquad \text{all at } (A, M) = (0.01, M_R),
+\]
+each equal to the per-lattice analytic small-$A$ bound
+$c_2 A^2 = n\, r_R A^2$ (the Math428 v1.1 derivation is
+lattice-independent: $c_2 = n[r + 3uM_R + 15vM_R^2] = n\,r_R$) within
+$5$--$8\%$. No interior or large-$M$ structure undercuts zero anywhere.
+
+FCC, full exact-Wick Bloch treatment (3D same-parity reciprocal lattice,
+$s = q_0/\sqrt3$; parity-lattice Engine with FFT $\sigma$ reconstruction,
+Nyquist-paired, $A{=}0$ exact$\equiv$diag identity $10^{-10}$): anchored
+$\Delta F > 0$ at every point of the $5\times5$ dangerous-window scan;
+minimum $+5.23\times10^{-4}$ at $(0.02, M_R)$.
+
+\subsection*{1. Scoping (honest tiers per channel)}
+
+FCC: exact-Wick grade (same protocol as BCC in Math429/430). LAM/HEX:
+estimator grade with the worst-case band --- their condensates are 1D/2D
+periodic, so the Bloch decomposition carries transverse CONTINUUM
+directions; the exact-Wick bracket for these geometries (1D-chain /
+2D-block matrices with transverse quadrature) is registered as residual
+sub-gate G1$''$-3b. Mitigations: (i) the $\rho = 1$ band already
+dispenses with the resummation credit; (ii) LAM and HEX carry the
+SMALLEST mean-field discriminants of the enumerated set (Math426:
+$+24$ / $+5198$ vs FCC $+30360$, BCC $+182822$); (iii) LAM is excluded
+as a vacuum candidate by the cosmological isotropy filter
+(Math400-AddA) independently of any free-energy race.
+
+\subsection*{2. Devil's-advocate (6.3.1 + 6.3.5(a))}
+
+$\alpha$ (estimator grade for LAM/HEX): UPHELD-as-scoped $\to$
+G1$''$-3b; the worst-case band + smallest discriminants + isotropy
+exclusion (LAM) bound the residual risk. $\beta$ (coarser FCC scan than
+BCC's 99-pt surface): VALID-with-structure --- the FCC minimum sits at
+the analytically-protected small-$A$ end exactly as BCC's, and the FCC
+estimator surface (54 pts) shows the same benign monotone structure;
+densification belongs to the G6 cascade. $\gamma$ (could a non-enumerated
+lattice behave differently?): that is Step-5 by construction, unchanged.
+
+\subsection*{3. G1$''$ programme summary (post-Math431)}
+
+\[
+\begin{aligned}
+&G1' \text{ (diagonal anisotropy)} && \text{CLOSED --- theorem (Math427 v1.1)}\\
+&G1''\text{-0 (fixed-}M_R\text{ Bloch, BCC)} && \text{CLOSED-PASS --- anchored estimator (Math428 v1.1)}\\
+&G1''\text{-1}' \text{ (inhomogeneous Wick, } M\text{-scan)} && \text{CLOSED-PASS --- exact-Wick (Math429 v1.1)}\\
+&G1''\text{-2 (dense surface + convergence)} && \text{CLOSED-PASS (Math430)}\\
+&G1''\text{-3 (LAM/HEX/FCC)} && \text{CLOSED-PASS (this note; G1}''\text{-3b residual)}
+\end{aligned}
+\]
+Reading-H selection: T4 STRONG EVIDENCE across five consecutive attack
+rounds. Remaining direct gates: G3$'$ (Hartree multi-shell ensemble),
+G6 (corrected recomputation cascade), Step-5 (exhaustiveness);
+residuals: G1$''$-3b, Richardson bound. Per the operator's standing
+priority, T5 candidacy is tabled for the 15.5 independent audit after
+G3$'$. P5/P7/P8 frozen.
+
+\subsection*{4. Cross-references}
+
+Math430 (parent audit + spec); Math429 v1.1; Math428 v1.1 (amplitude-
+bound derivation reused per lattice); Math427 v1.1; Math426; Math400-AddA
+(LAM isotropy exclusion);
+\texttt{Codes/supplementary/Math431\_g1pp3\_lam\_hex\_fcc.py} (15
+claims); \texttt{Runs/math/Math431/g1pp3\_lam\_hex\_fcc.json}.
+
+% =====================================================================
+% End of TECT-Math431.
+% =====================================================================

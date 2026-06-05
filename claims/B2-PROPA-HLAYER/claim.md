@@ -66,6 +66,9 @@ the first TSv2 tier action on this claim.
 - 2026-06-05 — Batch record re-issued v1.2 (table-width compliance, Overfull 7->0)
   then v1.3 (standard-form banner; FORM-CHECK PASS); PDF now lives beside the
   source in `notes/`; `build/` area retired.
+- 2026-06-05 — Migration batch 2: the H-LAYER justification chain (Math427
+  isotropic-dressing infimum; Math428–432/434/436 enumerated-reading
+  refinements) is now in `archive/legacy/` and re-validated (167/167).
 
 ## Next required action
 

@@ -1,0 +1,267 @@
+% TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt
+% ============================================================================
+% Math432 -- G3' EXECUTION: two-shell BCC condensate ensemble race
+%            {110} + {200} under the anchored exact-Wick protocol
+% Date: 2026-06-04
+% Status: G3' (two-shell enumerated reading) CLOSED-PASS under the mandatory
+%         estimator qualifier (continuum-anchored exact-Wick Gibbs--Bogoliubov
+%         estimator, D3 reciprocal basis, cut-12/48^3 with cut-20/64^3
+%         convergence spot-checks). NOT a theorem; NOT full multi-shell
+%         exhaustiveness (residual G3'-b registered).
+% Tier action: NONE here. Per the pre-registered outcome, PASS sends the
+%         Reading-H selection statement (T4) to the CLAUDE.md \S 15.5
+%         independent-audit gate for T5 candidacy. Tier moves remain frozen
+%         until that audit.
+% Dependencies: Math424-AddA (gap solver, continuum tadpole/log-det),
+%         Math426 (kernel convention r_braz = mu2 = 0.005), Math427 (G1'
+%         diagonal isotropy theorem), Math428 v1.1 (anchored estimator +
+%         analytic amplitude bounds), Math429 v1.1 (exact inhomogeneous
+%         Wick), Math430 (dense-surface convergence), Math431 (G1''-3),
+%         Math400-AddF (N=64 channel states -- physical target).
+% Audit: operator adversarial review PASS (2026-06-04, archived in
+%        CHANGELOG); Math434 \S 15.5 independent audit Task-4 = VALID-with-
+%        mitigation (wording corrected in this v1.1).
+% Verification: Codes/supplementary/Math432_g3prime_multishell_ensemble.py
+%         (25/25 claims) + Runs/math/Math432/g3prime_multishell_ensemble.json
+% Revision history:
+%   v1.0 (2026-06-04) first issue (explicit-v1.0 rule, CLAUDE.md \S 4.5).
+%   v1.1 (2026-06-04) \S 5 A2*-estimate sentence corrected per the Math434
+%        \S 15.5 independent-audit Task-4 finding (operator-approved wording,
+%        2026-06-04): the classical-tilt formula O(|u| m31 A1^3 / 2c2^(2))
+%        <~ 0.025 UNDERSTATES the per-row optimum at large A1 -- the audit
+%        bracketing gives |A2_opt| ~ 0.065 +/- 0.015 at A1 = 0.14 (negative
+%        branch, sextic/Wick-dressed, driven by the quartic cross-stiffness
+%        (3u/2) m22 A1^2 overwhelming c2^(2) for A1 >~ 0.112). The corrected
+%        statement: per-row optimum EMPIRICALLY BRACKETED inside the scanned
+%        box, |A2_opt| <~ 0.08. Conclusion (0 negatives; PASS) unaffected --
+%        JSON rows show interior bracketing at every A1; box never clipped.
+% ============================================================================
+
+\section{Math432: G3' two-shell ensemble race --- \{110\}+\{200\} CLOSED-PASS}
+
+\subsection{Dispatch context}
+
+The G1'' programme (Math427--Math431) closed the single-shell enumerated
+readings at estimator-to-exact-Wick grade. The operator-registered G3'
+question (OPEN-QUESTIONS, 2026-06-04) shifts the attack from single-shell
+readings to \emph{multi-shell / higher-harmonic ensembles}: can a condensate
+enriched with second-harmonic content beat the disordered Reading-H
+reference at the Gaussian variational level? The dispatch spec fixes the
+minimal ensemble as the first two BCC shells,
+\begin{equation}
+\phi_c(\mathbf{x}) \;=\; A_1 \sum_{\mathbf{k} \in \{110\}} e^{i\mathbf{k}\cdot\mathbf{x}}
+\;+\; A_2 \sum_{\mathbf{k} \in \{200\}} e^{i\mathbf{k}\cdot\mathbf{x}},
+\qquad |\mathbf{k}_{\{110\}}| = q_0,\quad |\mathbf{k}_{\{200\}}| = \sqrt{2}\,q_0,
+\end{equation}
+with the D3 reciprocal lattice unchanged, per-shell amplitudes $(A_1, A_2)$
+scanned together with the variational mass $M$, and the anchored exact-Wick
+protocol of Math429/430 applied verbatim. Outcomes were pre-registered
+(CLAUDE.md \S 6.3.3): FAIL $\Leftrightarrow$ some scanned $(A_1, A_2, M)$ has
+anchored $\Delta F < 0$ confirmed at both cut-12/$48^3$ and cut-20/$64^3$
+$\Rightarrow$ Math424 Outcome-3; PASS $\Leftrightarrow$ all points positive
+with convergence margins exceeding the last-step drift $\Rightarrow$ T5
+candidacy of the Reading-H selection statement proceeds to the \S 15.5
+independent audit.
+
+\subsection{Why G3' is structurally dangerous: the SHG resonance}
+
+The two shells are coupled by an exact 4-wave resonance: with
+$\mathbf{k}_1 = (1,1,0)$, $\mathbf{k}_2 = (1,0,1)$, $\mathbf{k}_3 = (0,-1,-1)$
+(all in the first shell, units $s = q_0/\sqrt{2}$) and
+$\mathbf{k}_4 = (2,0,0)$ in the second shell,
+$\mathbf{k}_1 + \mathbf{k}_2 + \mathbf{k}_3 - \mathbf{k}_4 = 0$. Consequently
+the cross moment
+\begin{equation}
+m_{31} \;=\; \big\langle \varphi_1^3\,\varphi_2 \big\rangle \;=\; 144
+\qquad (\text{exact; } 4 \text{ unordered shell-1 triples} \times 3! \times 6
+\text{ shell-2 partners})
+\end{equation}
+is nonzero, so the free energy contains the second-harmonic-generation (SHG)
+tilt $u\,m_{31} A_1^3 A_2$ at classical level: \emph{the single-shell BCC
+point is not stationary in the two-shell space}. The optimal $A_2^*$ is
+strictly nonzero for every $A_1 > 0$, and the enriched ensemble is
+guaranteed to undercut the single-shell BCC channel at equal $A_1$. The G1''
+chain never probed this direction; G3' asks whether the enrichment can
+reach below the disordered reference itself. The remaining structural
+constants are $m_{22} = \langle \varphi_1^2 \varphi_2^2\rangle = 96$,
+$\langle \varphi_2^4 \rangle = 90$, and the kernel value on the second
+shell,
+\begin{equation}
+K_2 \;=\; r_{\rm braz} + C\,(2q_0^2 - q_0^2)^2 \;=\; \mu_2 + C\,q_0^4
+\;=\; 0.219034,
+\end{equation}
+numerically identical to $K(0)$ -- the \{200\} shell sits as far off the
+$q_0$ sphere (in kernel units) as the homogeneous mode, which is the
+Math426 convention cross-check.
+
+\subsection{Protocol}
+
+Identical to Math429/430 with the condensate generalised: Bloch operator on
+the exact D3 basis (cut $|G|^2 \le 12$, basis 87; the \{200\} shell is
+in-basis, $|G|^2 = 4$),
+\begin{equation}
+K^{(k)}_{GG'} = \big[m_H^2 + C(|k+G|^2 - q_0^2)^2\big]\delta_{GG'}
++ (3u + 30vM)\,\widehat{\phi_c^2}(G-G') + 5v\,\widehat{\phi_c^4}(G-G'),
+\end{equation}
+$m_H^2 = r + 3uM + 15vM^2$, with $\widehat{\phi_c^2},\ \widehat{\phi_c^4}$
+extracted by forward FFT of the band-limited grid fields (exact by the
+Nyquist guard $3 \times 6 = 18 < 24$; verified max imaginary part
+$< 10^{-9}$). Exact inhomogeneous Wick remainder with
+$\sigma(\mathbf{x})$ the Bloch Green diagonal (FFT-reconstructed), all cell
+averages exact on $48^3$. Classical sector
+\begin{equation}
+F_{\rm cl} = r\,n_1 A_1^2 + K_2\, n_2 A_2^2
++ \tfrac{u}{4}\,\langle\phi_c^4\rangle + \tfrac{v}{6}\,\langle\phi_c^6\rangle,
+\qquad n_1 = 6,\ n_2 = 3,
+\end{equation}
+with all condensate moments exact grid means. Anchored estimator as in
+Math430: $\Delta F_{\rm anc} = \Delta F^{\rm cont}_{\rm diag} +
+\big(F_{\rm exact} - F^{\rm basis}_{\rm diag}\big)$, reference = disordered
+optimum $(A_1 = A_2 = 0,\ M = M_R)$, $r_R = 0.30453$, $M_R = 0.10941$.
+
+\subsection{Results (25/25 scripted claims)}
+
+\textbf{Scan.} $A_1 \in \{0.01, \ldots, 0.14\}$ (8) $\times\ A_2 \in
+\{-0.12, \ldots, +0.12\}\setminus\{0\}$ (10, both signs) $\times\ M \in
+\{0.7, 1.0, 1.4\} M_R$ (3), plus the pure-\{200\} column ($A_1 = 0$): 244
+points, all positive-definite, \textbf{0 negatives}. Minimum
+$+5.536 \times 10^{-4}$ at $(A_1, A_2, M) = (0.01, +0.015, M_R)$.
+
+\textbf{Zoom.} Local refinement at the argmin: minimum
+$+2.302 \times 10^{-4}$ at $(0.01, +0.005, M_R)$ -- the $A_2 \to 0$,
+$A_1 \to 0$ corner, reproducing the two-shell small-amplitude bound (below)
+to 3.9\%. The surface rises in every direction away from the disordered
+point; there is no two-shell valley.
+
+\textbf{Tilt (non-stationarity) confirmed.} At $(A_1, M) = (0.0856, M_R)$:
+$\Delta F_{\rm anc}(A_2 = +0.03) = +0.0395$ vs
+$\Delta F_{\rm anc}(A_2 = -0.03) = +0.0225$ -- the SHG tilt is active
+($|\Delta| \approx 0.017$, far above numerical noise) and the favorable
+branch is $A_2 < 0$ at this point: the classical quartic tilt
+$u\,m_{31}A_1^3 A_2$ (favoring $A_2 > 0$ for $u < 0$) is overridden by the
+sextic and Wick-dressed cross moments. Both branches remain positive
+everywhere scanned.
+
+\textbf{Convergence (cut-12/$48^3$ vs cut-20/$64^3$, basis 87 vs 201).}
+Argmin: $+0.000230 \to +0.000230$ (drift $< 10^{-6}$, $\ge 100\times$
+margin separation); dangerous mixed points $(0.01, \pm 0.015, M_R)$:
+drift $\le 2\times 10^{-6}$ vs margins $+5.5\times 10^{-4}$; legacy
+single-shell anchor $(0.0856, 0, 0.7M_R)$: $+0.023450 \to +0.022142$,
+identical to the Math430 record. This is the cleanest convergence
+separation in the G1''/G3' series because the minimum sits in the
+small-amplitude regime where the bracket is nearly converged already.
+
+\subsection{Two-shell small-amplitude bound}
+
+The Math428 v1.1 small-$A$ derivation is shell-additive at quadratic order
+(shells are orthogonal; the SHG cross term is cubic in amplitudes):
+\begin{equation}
+\Delta F_{\rm est} = c_2^{(1)} A_1^2 + c_2^{(2)} A_2^2
++ O(A^3_{\rm mixed}, A^4), \qquad
+c_2^{(s)} = n_s\big[r_R + C(k_s^2 - q_0^2)^2\big],
+\end{equation}
+giving $c_2^{(1)} = 6\,r_R = 1.8272$ (Math428 v1.1, unchanged) and
+$c_2^{(2)} = 3\,(r_R + C q_0^4) = 1.5557$, verified numerically to 2.7\% at
+$A_2 = 0.01$ (claim \texttt{smallA2\_bound\_10pct}). Every off-sphere shell
+$s \ge 2$ carries the strictly positive stiffness excess
+$n_s\,C(k_s^2-q_0^2)^2$: at quadratic order \emph{no} harmonic enrichment
+direction is soft. The danger is confined to the low-order SHG tilt, which
+the scan bounds directly. The classical-tilt estimate $A_2^* =
+O(|u| m_{31} A_1^3 / 2c_2^{(2)})$ is valid only at small $A_1$; at large
+$A_1$ the per-row optimum is sextic/Wick-dressed rather than purely
+classical-quartic (the quartic cross-stiffness $(3u/2)\,m_{22} A_1^2$
+overwhelms $c_2^{(2)}$ for $A_1 \gtrsim 0.112$), reaching
+$|A_2^{\rm opt}| \approx 0.065 \pm 0.015$ on the negative branch at
+$A_1 = 0.14$ (Math434 \S 15.5 audit, Task 4). The per-row optimum is
+empirically bracketed inside the scanned box, $|A_2^{\rm opt}| \lesssim
+0.08$, at every scanned $A_1$ (interior bracketing; box never clipped),
+and the free-energy gain it produces never approaches the disordered
+baseline.
+
+\subsection{Devil's-advocate self-test (CLAUDE.md \S 6.3, \S 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (ensemble coverage).} Only two shells; shells
+$\ge 3$, incommensurate wavevectors, and quasicrystalline ensembles are
+unscanned. \emph{VALID with mitigation}: at quadratic order every
+off-sphere shell is stiff ($c_2^{(3)} = 12\,[r_R + 4Cq_0^4] = 13.93$ for
+\{211\} -- an order of magnitude above $c_2^{(1)}$, with stiffness growing
+as $(k_s^2 - q_0^2)^2$); the unique structurally dangerous low-order
+channel (the SHG resonance) is probed directly. Residual registered as
+G3'-b(i): shells $\ge 3$ at large amplitude (sextic-dominance argument of
+Math428 v1.1 \S 3bis extends but has not been re-derived for mixed shells).
+
+\textbf{Objection $\beta$ (phase restriction).} The ansatz is real-even
+with a single isotropic $A_2$ across the three \{200\} cosine pairs;
+anisotropic per-axis second harmonics (tetragonal SHG) and generic relative
+phases are unscanned. \emph{VALID with mitigation}: the physical target
+(Math400-AddF N=64 BCC channel) is cubic-symmetric, forcing an isotropic
+second harmonic; the sign scan $\pm A_2$ captures both extremes of the
+single SHG phase channel. Residual registered as G3'-b(ii).
+
+\textbf{Objection $\gamma$ (estimator grade).} The anchored estimator is
+not a fully-converged log-det (recurring Math428--431 objection).
+\emph{VALID with qualifier}: the verdict language carries the mandatory
+estimator qualifier; mitigation is quantitative -- argmin drift
+$< 10^{-6}$ vs margin $2.3\times 10^{-4}$ ($\ge 100\times$), the strongest
+separation in the series.
+
+\textbf{Quantitative sanity checks (\S 6.3.4).}
+(i) \emph{Magnitude/regression}: $K_2 = 0.219034$ independently reproduces
+the Math426 kernel forensics value $K(0) = 0.219$; $\langle\varphi_1^6\rangle
+= 42240 = N_6$ and $\langle\varphi_1^4\rangle = 540 = N_4$ reproduce the
+Math424/428 constants; $m_{31} = 144$ matches the analytic count.
+(ii) \emph{Limit case}: the $A_2 = 0$ slice reproduces the Math430 race to
+$10^{-7}$ (claims \texttt{math430\_regression\_*}); $A_1 = A_2 = 0$
+diagonal-exact identity to $10^{-10}$; continuum reference zero to
+$10^{-9}$.
+(iii) \emph{Small-amplitude consistency}: zoom minimum $+2.302\times10^{-4}$
+vs analytic $c_2^{(1)} A_1^2 + c_2^{(2)} A_2^2 = 2.216 \times 10^{-4}$
+(3.9\%, consistent with the $O(A^4)$ and tilt corrections); scan minimum
+$+5.536\times10^{-4}$ vs $5.33\times10^{-4}$ (3.9\%).
+(iv) \emph{Sign-direction physics}: the tilt asymmetry is nonzero (SHG
+active) and its favorable sign at the probe point is set by the
+sextic/Wick-dressed moments overriding the classical quartic -- both
+directions positive, so the conclusion is sign-robust.
+
+\subsection{Verdict and consequences}
+
+\begin{equation}
+\boxed{\;\text{G3' (two-shell \{110\}+\{200\} ensemble): CLOSED-PASS under
+the continuum-anchored exact-Wick estimator.}\;}
+\end{equation}
+The pre-registered FAIL gate did not fire: no scanned $(A_1, A_2, M)$ point
+is negative at cut-12/$48^3$, and all convergence spot-checks remain
+positive at cut-20/$64^3$ with drift at least two orders below the local
+margins in the minimum region. Per the pre-registered PASS outcome, the
+Reading-H selection statement (currently T4 STRONG EVIDENCE) now proceeds
+to the CLAUDE.md \S 15.5 independent-audit gate for T5 candidacy;
+\emph{no tier action is taken in this note}. Reading H has now survived
+six consecutive attack rounds (Math427, 428 v1.1, 429 v1.1, 430, 431, 432).
+
+\textbf{Residuals registered.} G3'-b(i) shells $\ge 3$ / mixed-shell
+sextic dominance; G3'-b(ii) anisotropic per-axis second harmonics;
+G3'-b(iii) extraction of the actual \{200\}/\{110\} amplitude ratio from
+the Math400-AddF N=64 L-BFGS-B states (desirable cross-check; low priority
+since the entire scanned $(A_1, A_2)$ plane is positive). All low-risk;
+none blocks the \S 15.5 audit.
+
+\textbf{Priority after G3'} (operator table, updated): \textbf{\S 15.5
+independent audit of the Reading-H selection statement} (now unblocked)
+$\succ$ G6 (corrected-variable recomputation cascade) $\succ$ G1''-3b
+(LAM/HEX exact-Wick transverse-continuum bracket) $\succ$ Step-5
+exhaustiveness $\succ$ G3'-b. P5/P7/P8 remain frozen.
+
+\subsection{Cross-references}
+
+\begin{itemize}
+\item Script: \texttt{Codes/supplementary/Math432\_g3prime\_multishell\_ensemble.py}
+      (25/25 claims, exit 0).
+\item JSON: \texttt{Runs/math/Math432/g3prime\_multishell\_ensemble.json}.
+\item Protocol: Math429 v1.1 (exact Wick), Math430 (anchored dense surface),
+      Math428 v1.1 (small-$A$ bound), Math431 (per-lattice generalisation).
+\item Convention: Math426 ($r_{\rm braz} = \mu_2$; $K(0) = 0.219$
+      cross-check).
+\item Physical target: Math400-AddF (N=64 channel states).
+\item Dispatch: OPEN-QUESTIONS G3' spec (2026-06-04); CHANGELOG
+      [Audit-Verdict/Session-Handoff] 2026-06-04.
+\end{itemize}

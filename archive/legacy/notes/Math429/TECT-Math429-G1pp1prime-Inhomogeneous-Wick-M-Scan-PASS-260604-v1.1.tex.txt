@@ -1,0 +1,200 @@
+% =====================================================================
+% TECT-Math429 -- G1''-1' execution: exact inhomogeneous-Wick treatment
+%                 (sigma(x) = Bloch Green diagonal) + extended M-scan.
+%                 VERDICT: PASS. The uniform-Wick boundary negative
+%                 (-0.102 at M = 1.6 M_R, Math428) is DEFINITIVELY an
+%                 artefact: with the exact position-dependent Wick
+%                 remainder, every scanned (A, M) point is POSITIVE in
+%                 BOTH the matched in-basis race (min +0.0046) and the
+%                 continuum-anchored estimate (min +0.0077); the
+%                 M-direction minima are INTERIOR (~0.66-0.88 M_R), and
+%                 at the old artefact point the value inverts to
+%                 +0.060 (in-basis) / +0.092 (anchored). Mechanism:
+%                 the actual propagator variance sbar DECREASES with M
+%                 (kernel stiffens), so the exact remainder is
+%                 self-limiting -- the uniform-Wick -5vM^3 runaway used
+%                 the scan parameter M in place of the true sigma.
+%
+% REVISION HISTORY (cumulative; DOCUMENT_VERSIONING_POLICY.md)
+% v1.0 2026-06-04  first issue (explicit-v1.0 naming per the 2026-06-04
+%                  second amendment; first note issued under that rule).
+% v1.1 2026-06-04  operator-audit response (4 weaknesses): (B) margin
+%                  language corrected to the operator's safer sentence
+%                  (margin comparable to, slightly larger than, the
+%                  bracket drift scale -- NOT 'an order above');
+%                  (C) Nyquist exactness PROVED by enumeration for cut
+%                  12 (sigma-hat max axis component 6 -> k_max(sigma^3)
+%                  = 18 < 24 = Nyquist(48); cut 16 requires a larger
+%                  grid, registered for G1''-2); (D) self-consistency
+%                  coverage VERIFIED by extending the M-window to
+%                  0.3 M_R: fixed points M_self(A)/M_R ~ 0.65 / 0.55 /
+%                  0.45 for A = 0.06 / 0.0856 / 0.114, ALL inside the
+%                  scanned domain, with the extended low-M branch
+%                  positive throughout (new in-basis min +0.00414 at
+%                  A = 0.06, M = 0.7 M_R); (A) dense (A,M) surface
+%                  deferred to G1''-2 per operator priority. Claims
+%                  13 -> 19.
+%
+% Status:        G1''-1' CLOSED-PASS under the qualifier set: exact-Wick
+%                Gibbs-Bogoliubov family K_hat(A,M), BCC first-shell,
+%                basis cut |G|^2 <= 12 bracket + continuum-anchored
+%                diagonal, A in the dangerous window {0.06, 0.0856,
+%                0.114} x M in [0.6, 2.2] M_R. NOT yet: G1''-2
+%                convergence, G1''-3 other lattices. Reading-H
+%                selection: T4 STRONG EVIDENCE (three consecutive
+%                attack rounds survived: diagonal class [Math427],
+%                Bloch fixed-M_R [Math428], inhomogeneous-Wick M-scan
+%                [this note]); T5 candidacy now blocked ONLY by
+%                G1''-2/G1''-3 + 15.5 audit. No pillar tier change.
+% Audit class:   Gate execution (operator G1''-1' spec, 2026-06-04).
+% Theory tag:    Math429
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math429. G1$''$-1$'$: exact inhomogeneous Wick dissolves the $M$-scan negative; PASS}
+
+\subsection*{0. Summary}
+
+Implementing the operator's specification verbatim: the uniform variance
+assumption $\sigma(x) \to M$ is replaced by the exact Bloch Green diagonal
+\[
+\sigma_A(x) = G_{\phi_A}(x,x), \qquad
+\hat\sigma(Q) = \frac{1}{v_{\rm cell} N_k}\sum_k \sum_G
+\big[K^{(k)}\big]^{-1}_{G,\,G+Q},
+\]
+and the exact Wick remainder is used in the Gibbs--Bogoliubov functional
+\[
+F_{\rm var}/V = F_{\rm cl}(A) + \tfrac12\,\overline{\mathrm{Tr}\ln K}
+- \tfrac12(3uM{+}15vM^2)\,\bar\sigma - 15vM\,\overline{\phi_A^2\sigma}
++ \tfrac{3u}{4}\,\overline{\sigma^2} + \tfrac{15v}{2}\,\overline{\phi_A^2\sigma^2}
++ \tfrac{5v}{2}\,\overline{\sigma^3},
+\]
+with all cell averages computed exactly (band-limited $48^3$ grid;
+$\hat\sigma(Q)$ from per-$k$ inversion of the full Bloch matrix). With
+this remainder $F_{\rm var}(A,M)$ is a TRUE variational upper bound for
+every $(A,M)$, and at $A = 0$ its $M$-stationarity reproduces the
+disordered gap equation, so the Reading-H reference is the $A{=}0$
+optimum of the SAME functional (implementation identity exact $=$
+diagonal at $W{=}0$: $10^{-10}$; continuum reference zero and $M$-optimal
+at $M_R$: asserted).
+
+\textbf{Verdict (13/13 claims; physics outcome recorded, not asserted):}
+\[
+\boxed{\;
+\Delta F^{\rm inhomWick}(A, M) > 0 \quad \text{at every scanned point},\quad
+\min_{\rm in\text{-}basis} = +0.0046,\quad
+\min_{\rm anchored} = +0.0077,\;}
+\]
+over $A \in \{0.06, 0.0856, 0.114\}$ (the dangerous window),
+$M \in [0.6, 2.2]\,M_R$ (extended beyond the old boundary). The
+$M$-direction minima are INTERIOR ($\approx 0.66$--$0.88\,M_R$), not at
+the window edge.
+
+\subsection*{1. Autopsy of the uniform-Wick $-0.102$}
+
+At the old artefact point $(A, M) = (0.114, 1.6\,M_R)$ the exact-Wick
+values are $+0.060$ (in-basis) and $+0.092$ (anchored) --- an inversion
+of $\sim 0.16$. Mechanism: the exact remainder uses the ACTUAL trial
+variance, and $\bar\sigma$ DECREASES monotonically with $M$ (e.g.\ at
+$A = 0.06$: $\bar\sigma = 0.042 \to 0.014$ as $M: M_R \to 2.2 M_R$),
+because the kernel mass $m_H^2(M) = r + 3uM + 15vM^2$ stiffens. The
+uniform-Wick counterterm instead substituted the scan parameter $M$
+itself, producing the spurious $-5vM^3 - 15vnA^2M^2$ runaway that
+manufactured the boundary negative. G1$''$-1$'$ thereby CONFIRMS the
+Math428 classification of $-0.102$ as a counterterm-validity artefact ---
+now by direct computation rather than interpretation.
+
+\subsection*{2. Method (anchoring, reference-free bracket)}
+
+$\Delta F_{\rm anchored}(A,M) = \Delta F^{\rm cont}_{\rm diag}(A,M)
++ \big[F^{\rm exact}_{\rm basis}(A,M) - F^{\rm diag}_{\rm basis}(A,M)\big]$:
+the continuum diagonal-limit closed form (radial integrals; reference
+$(0, M_R)$ built in, $= 0$ there) plus the in-basis off-diagonal $+$
+$\sigma$-inhomogeneity bracket, which needs NO reference subtraction
+because exact $\equiv$ diagonal at $A = 0$ identically. This extends the
+Math428 anchoring protocol to the exact-Wick functional; the basis-trace
+quadrature shift (the in-basis $A{=}0$ optimum sits below $M_R$;
+recorded) affects only the diagnostic in-basis race, not the anchored
+construction.
+
+\subsection*{3. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{$\alpha$ (coarse $A$-grid):} three amplitudes only.
+\emph{VALID-with-coverage}: the three points bracket the dangerous region
+identified by Math428 (finite-basis minimiser $0.0856$, MF amplitude
+$0.057$, old artefact $0.114$); $A < 0.02$ and $A > 0.14$ are closed
+analytically at $M = M_R$ by Math428 v1.1 \S 3bis, and the observed
+$M$-dependence is monotone-benign (positive everywhere, interior minima);
+a denser $(A, M)$ surface belongs to G1$''$-2.
+\textbf{$\beta$ (bracket at cut 12 only):} the off-diagonal bracket could
+drift with cutoff. \emph{VALID --- corrected per operator audit (v1.1)}:
+the current positive margin ($+0.0077$ anchored, $+0.0041$ in-basis on
+the extended window) is comparable to, but slightly larger than, the
+observed bracket drift scale ($-0.005 \to -0.007$ per cutoff step in
+Math428). This is NOT a safe separation of scales; G1$''$-2 convergence
+is therefore MANDATORY before any tier action.
+\textbf{$\gamma$ (self-consistency vs scan):} the trial family is
+parameterised by $(A, M)$ rather than solving $\sigma$-self-consistency.
+\emph{DISMISSED-as-stronger}: minimising the true upper bound over the
+$(A,M)$ family DOMINATES any self-consistent point of the family; a
+self-consistent solution can only sit at or above the scanned minimum,
+which is positive.
+
+\subsection*{4. Quantitative sanity (CLAUDE.md 6.3.4)}
+
+$A{=}0$ exact$\,\equiv\,$diag identity $10^{-10}$; continuum reference
+$F(0, M_R) = 0$ with $M$-optimality (gap equation); $r_R = 0.304526$,
+$M_R = 0.109414$ reproduced; $\bar\sigma(M)$ monotone decreasing (limit-
+case physics: stiffer kernel, smaller variance); positivity of all 27
+scanned points in both representations; verdict recorded not asserted.
+19/19 scripted claims (v1.1);
+\texttt{Codes/supplementary/Math429\_g1pp1prime\_inhomogeneous\_wick.py};
+\texttt{Runs/math/Math429/g1pp1prime\_inhomwick.json}.
+
+\subsection*{4bis. v1.1 verifications (operator-audit weaknesses C and D)}
+
+\paragraph{Grid exactness (weakness C), proved by enumeration.} The
+$\hat\sigma(Q)$ support at cut $|G|^2 \le 12$ has maximum axis
+component $6$, so $k_{\max}(\sigma^3) = 18 < 24 = $ Nyquist$(48^3)$ and
+$k_{\max}(\phi_A^2\sigma^2) = 2 + 12 = 14 < 24$: all cell averages are
+EXACT on the $48^3$ grid (scripted claim). At cut 16 the bound becomes
+$24 = $ Nyquist --- the grid must scale with cutoff; registered as a
+G1$''$-2 requirement.
+
+\paragraph{Self-consistency coverage (weakness D), verified.} Extending
+the $M$-window down to $0.3\,M_R$: the fixed points of
+$M \mapsto \bar\sigma(A, M)$ are bracketed at
+$M_{\rm self}/M_R \approx 0.65,\ 0.55,\ 0.45$ for
+$A = 0.06,\ 0.0856,\ 0.114$ --- ALL inside the scanned domain (the
+original $[0.6, 2.2]\,M_R$ window would have missed two of them; the
+operator's objection was correct), and the extended low-$M$ branch is
+positive throughout (new in-basis minimum $+0.00414$ at
+$A = 0.06,\ M = 0.7\,M_R$). The upper-bound-dominance argument of
+\S 3$\gamma$ is now unconditional on the tested range: every
+self-consistent point lies in the scanned domain and sits at or above a
+positive scanned value.
+
+\subsection*{5. Gates and tier}
+
+G1$''$-1$'$ CLOSED-PASS (qualifiers in Status). Remaining before any T5
+candidacy of the Reading-H selection statement: G1$''$-2 (shell-adapted
+convergence of bracket and surface), G1$''$-3 (LAM/HEX/FCC), then G3$'$,
+G6, Step-5; 15.5 independent audit required at promotion time. Reading-H
+selection: T4 STRONG EVIDENCE --- now having survived, in order: the
+diagonal-anisotropy class (Math427, theorem), fixed-$M_R$ Bloch
+off-diagonal softening (Math428 v1.1, anchored estimator with analytic
+amplitude bounds), and the inhomogeneous-Wick $M$-direction (this note).
+P5/P7/P8 frozen.
+
+\subsection*{6. Cross-references}
+
+Operator G1$''$-1$'$ spec (2026-06-04; archived in substance in \S 0);
+Math428 v1.1 (parent; $-0.102$ flag; anchoring protocol; amplitude
+bounds); Math427 v1.1 (diagonal closure); Math426 (corrected canonical);
+Math424-AddA (continuum radial machinery). First note issued under the
+explicit-v1.0 filename rule (DOCUMENT_VERSIONING_POLICY second
+amendment).
+
+% =====================================================================
+% End of TECT-Math429.
+% =====================================================================

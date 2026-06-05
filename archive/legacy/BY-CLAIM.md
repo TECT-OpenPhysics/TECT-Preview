@@ -26,9 +26,21 @@ Reproduction: `cd archive/legacy/scripts && python Math426_g4_kernel_reconciliat
 
 ## B1-RH-ENUM — Reading-H selection within enumerated condensate ensembles  (T5)
 
+- `archive/legacy/notes/Math427/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec-260604-v1.1.tex.txt`
+- `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt`
+- `archive/legacy/notes/Math429/TECT-Math429-G1pp1prime-Inhomogeneous-Wick-M-Scan-PASS-260604-v1.1.tex.txt`
+- `archive/legacy/notes/Math430/TECT-Math430-G1pp2-Dense-Surface-Convergence-PASS-260604-v1.0.tex.txt`
+- `archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt`
+- `archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt`
+- `archive/legacy/notes/Math434/TECT-Math434-Section15p5-Independent-Audit-ReadingH-T5-Candidacy-PASS-260604-v1.0.tex.txt`
+- `archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt`
+- `archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt`
 - `archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`
 - `archive/legacy/notes/Math442/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt`
-- UNRESOLVED `legacy:Math431-HEX chain (enumerated-ensemble estimator tables; M1 migration pending)`
+- `archive/legacy/scripts/ (8 enumerated-reading verification scripts, Math427-Math436)`
+- `archive/legacy/artefacts/ (per-tag archived run JSONs incl. Math434/Math436 checkpoint states)`
+
+Reproduction: `cd archive/legacy/scripts && python Math427_g1prime_diagonal_isotropy.py && python Math428_g1doubleprime_bloch_logdet.py && python Math429_g1pp1prime_inhomogeneous_wick.py && python Math430_g1pp2_dense_surface_convergence.py && python Math431_g1pp3_lam_hex_fcc.py && python Math432_g3prime_multishell_ensemble.py && python Math434_lam_exact_wick_bracket.py && python Math436_hex_exact_wick_bracket.py`
 
 ## B2-PROPA-HLAYER — Proposition A as a conditional theorem on {H-LAYER, H-A0}  (T6)
 

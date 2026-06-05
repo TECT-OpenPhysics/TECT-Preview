@@ -6,7 +6,7 @@
 
 Generated: 2026-06-05
 
-**118 artefacts** · superseded versions kept: 6 · machine-readable twin: `verification/catalog.json`
+**161 artefacts** · superseded versions kept: 11 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -17,9 +17,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `8f3e8b3fdc49` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `87535d45fddf` |
-| `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `9bb46befcf59` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `b662cbf897b0` |
-| `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `1372937b73a2` |
+| `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `0cfffaa8bd07` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `dce98888fd9e` |
+| `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `17b64b4d5194` |
 | `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `44d6d0e0c731` |
 | `claims/B3-BCC-STRUCT/claim.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `3164a060ce35` |
 | `claims/B3-BCC-STRUCT/status.json` | B3-BCC-STRUCT | — | — | — | ACTIVE | `e22335660613` |
@@ -56,6 +56,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
+| `claims/B1-RH-ENUM/notes/enumerated-readings-migration-revalidation-260605-v1.0.pdf` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | v1.0 | ACTIVE | `fc8f24a66936` |
+| `claims/B1-RH-ENUM/notes/enumerated-readings-migration-revalidation-260605-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | v1.0 | ACTIVE | `167f12303e28` |
 | `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.1 | SUPERSEDED | `318e68be1aef` |
 | `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.2.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.2 | SUPERSEDED | `e037afe0c505` |
 | `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.3.pdf` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.3 | ACTIVE | `97b9f8f44900` |
@@ -69,8 +71,22 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/legacy/notes/Math426/TECT-Math426-AddA-Audit-Acceptance-Body-Corrections-G1prime-Spec.tex.txt` | A1-KERNEL-CONV | — | — | — | ACTIVE | `84137b74fd69` |
 | `archive/legacy/notes/Math426/TECT-Math426-AddB-ThirdPass-Body-Summaries-and-AddE-Citation-Rule.tex.txt` | A1-KERNEL-CONV | — | — | — | ACTIVE | `873bd99b7464` |
 | `archive/legacy/notes/Math426/TECT-Math426-G4-Kernel-Convention-Reconciliation.tex.txt` | A1-KERNEL-CONV | — | — | — | ACTIVE | `a16557ebc848` |
+| `archive/legacy/notes/Math427/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec-260604-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.1 | ACTIVE | `f09b109efc92` |
+| `archive/legacy/notes/Math427/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec.tex.txt` | — | — | — | — | SUPERSEDED | `78e59c85a319` |
+| `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.1 | ACTIVE | `875e3115fb8a` |
+| `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored.tex.txt` | — | — | — | — | SUPERSEDED | `d140975d87e5` |
+| `archive/legacy/notes/Math429/TECT-Math429-G1pp1prime-Inhomogeneous-Wick-M-Scan-PASS-260604-v1.0.tex.txt` | — | 2026-06-04 | 2026-06-04 | v1.0 | SUPERSEDED | `96fc3a9f4ec9` |
+| `archive/legacy/notes/Math429/TECT-Math429-G1pp1prime-Inhomogeneous-Wick-M-Scan-PASS-260604-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.1 | ACTIVE | `a1f972d1cd94` |
+| `archive/legacy/notes/Math430/TECT-Math430-G1pp2-Dense-Surface-Convergence-PASS-260604-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.0 | ACTIVE | `5a7d82124e6e` |
+| `archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.0 | ACTIVE | `48c280bedc1e` |
+| `archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.0.tex.txt` | — | 2026-06-04 | 2026-06-04 | v1.0 | SUPERSEDED | `7fccf2753dc0` |
+| `archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.1 | ACTIVE | `58445d7cac0e` |
+| `archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.0 | ACTIVE | `aad749166b73` |
+| `archive/legacy/notes/Math434/TECT-Math434-Section15p5-Independent-Audit-ReadingH-T5-Candidacy-PASS-260604-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.0 | ACTIVE | `7f0e8a28b6d0` |
 | `archive/legacy/notes/Math435/TECT-Math435-G6-Corrected-Variable-Recomputation-Cascade-260604-v1.0.tex.txt` | — | 2026-06-04 | 2026-06-04 | v1.0 | SUPERSEDED | `d2d7f0b23764` |
 | `archive/legacy/notes/Math435/TECT-Math435-G6-Corrected-Variable-Recomputation-Cascade-260604-v1.1.tex.txt` | A1-KERNEL-CONV | 2026-06-04 | 2026-06-04 | v1.1 | ACTIVE | `17f2164ce5bf` |
+| `archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.0.tex.txt` | — | 2026-06-04 | 2026-06-04 | v1.0 | SUPERSEDED | `26c636a2c671` |
+| `archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | v1.1 | ACTIVE | `fe9fb74a0a88` |
 | `archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.0.tex.txt` | — | 2026-06-04 | 2026-06-04 | v1.0 | SUPERSEDED | `22bf83724030` |
 | `archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.1.tex.txt` | — | 2026-06-04 | 2026-06-04 | v1.1 | SUPERSEDED | `0304ef4cb5b2` |
 | `archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt` | B1-RH-ENUM, B2-PROPA-HLAYER | 2026-06-04 | 2026-06-04 | v1.2 | ACTIVE | `aca70d836787` |
@@ -86,7 +102,15 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py` | — | — | — | — | ACTIVE | `33bf54023ec9` |
 | `archive/legacy/scripts/Math424_AddA_reading_uniqueness.py` | — | — | — | — | ACTIVE | `e9c7d8d80eea` |
 | `archive/legacy/scripts/Math426_g4_kernel_reconciliation.py` | A1-KERNEL-CONV | — | — | — | ACTIVE | `79e9d21dd1ff` |
+| `archive/legacy/scripts/Math427_g1prime_diagonal_isotropy.py` | — | — | — | — | ACTIVE | `79f3a95bb79e` |
+| `archive/legacy/scripts/Math428_g1doubleprime_bloch_logdet.py` | — | — | — | — | ACTIVE | `c6e4956545f4` |
+| `archive/legacy/scripts/Math429_g1pp1prime_inhomogeneous_wick.py` | — | — | — | — | ACTIVE | `e0c4a726f9df` |
+| `archive/legacy/scripts/Math430_g1pp2_dense_surface_convergence.py` | — | — | — | — | ACTIVE | `2815410990c3` |
+| `archive/legacy/scripts/Math431_g1pp3_lam_hex_fcc.py` | — | — | — | — | ACTIVE | `6d40aebd06c8` |
+| `archive/legacy/scripts/Math432_g3prime_multishell_ensemble.py` | — | — | — | — | ACTIVE | `5203b0bb58d1` |
+| `archive/legacy/scripts/Math434_lam_exact_wick_bracket.py` | — | — | — | — | ACTIVE | `b5faa8676c1e` |
 | `archive/legacy/scripts/Math435_g6_corrected_variable_cascade.py` | A1-KERNEL-CONV | — | — | — | ACTIVE | `355ee9f3a972` |
+| `archive/legacy/scripts/Math436_hex_exact_wick_bracket.py` | — | — | — | — | ACTIVE | `41558d66ce1e` |
 | `archive/legacy/scripts/Math437_step5_class_closure.py` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `d476b14c1468` |
 | `archive/legacy/scripts/Math440_audit_secondwave_recheck.py` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `0eb386380f8e` |
 
@@ -95,8 +119,18 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `archive/legacy/artefacts/Math426/g4_kernel_reconciliation.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `7f03d242de31` |
+| `archive/legacy/artefacts/Math427/g1prime_diagonal_isotropy.json` | — | — | — | — | ACTIVE | `8eedae058790` |
+| `archive/legacy/artefacts/Math428/g1doubleprime_bloch_logdet.json` | — | — | — | — | ACTIVE | `367569deb4a8` |
+| `archive/legacy/artefacts/Math429/g1pp1prime_inhomwick.json` | — | — | — | — | ACTIVE | `6b4ada86900e` |
+| `archive/legacy/artefacts/Math430/g1pp2_surface_convergence.json` | — | — | — | — | ACTIVE | `baa44e67b39c` |
+| `archive/legacy/artefacts/Math431/g1pp3_lam_hex_fcc.json` | — | — | — | — | ACTIVE | `a3fb1b49eba5` |
+| `archive/legacy/artefacts/Math432/g3prime_multishell_ensemble.json` | — | — | — | — | ACTIVE | `0e88a1f2e1aa` |
+| `archive/legacy/artefacts/Math434/lam_exact_wick_bracket.json` | — | — | — | — | ACTIVE | `f5626d49dcfd` |
+| `archive/legacy/artefacts/Math434/state.json` | — | — | — | — | ACTIVE | `3a0c46ff7dcc` |
 | `archive/legacy/artefacts/Math435/g6_corrected_cascade.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `f32c0ab4987a` |
 | `archive/legacy/artefacts/Math435/sweep_checkpoint.json` | — | — | — | — | ACTIVE | `6692d6538e6b` |
+| `archive/legacy/artefacts/Math436/hex_exact_wick_bracket.json` | — | — | — | — | ACTIVE | `069e5fc38649` |
+| `archive/legacy/artefacts/Math436/state.json` | — | — | — | — | ACTIVE | `a4141cb83f39` |
 | `archive/legacy/artefacts/Math437/step5_class_closure.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `7ea097c8967e` |
 | `archive/legacy/artefacts/Math440/audit_recheck.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `2bd9a49f14d4` |
 
@@ -107,6 +141,15 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `runs/A1-KERNEL-CONV/260605-migration-revalidation/g4_kernel_reconciliation.json` | A1-KERNEL-CONV | 2026-06-04 | 2026-06-04 | — | ACTIVE | `7f03d242de31` |
 | `runs/A1-KERNEL-CONV/260605-migration-revalidation/g6_corrected_cascade.json` | A1-KERNEL-CONV | 2026-06-04 | 2026-06-04 | — | ACTIVE | `f32c0ab4987a` |
 | `runs/A1-KERNEL-CONV/260605-migration-revalidation/summary.json` | A1-KERNEL-CONV | 2026-06-05 | 2026-06-05 | — | ACTIVE | `89aba59bea20` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/g1doubleprime_bloch_logdet.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `367569deb4a8` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/g1pp1prime_inhomwick.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `6b4ada86900e` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/g1pp2_surface_convergence.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `baa44e67b39c` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/g1pp3_lam_hex_fcc.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `a3fb1b49eba5` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/g1prime_diagonal_isotropy.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `8eedae058790` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/g3prime_multishell_ensemble.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `0e88a1f2e1aa` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/hex_exact_wick_bracket.json` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | — | ACTIVE | `069e5fc38649` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/lam_exact_wick_bracket.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `f5626d49dcfd` |
+| `runs/B1-RH-ENUM/260605-migration-revalidation/summary.json` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | — | ACTIVE | `7eb81432d602` |
 | `runs/B2-PROPA-HLAYER/260605-migration-revalidation/audit_recheck.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `2bd9a49f14d4` |
 | `runs/B2-PROPA-HLAYER/260605-migration-revalidation/step5_class_closure.json` | B2-PROPA-HLAYER | 2026-06-04 | 2026-06-04 | — | ACTIVE | `5db00cd0f578` |
 | `runs/B2-PROPA-HLAYER/260605-migration-revalidation/summary.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `461bb94f9dd3` |
@@ -152,10 +195,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `bf39f02682e6` |
-| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `431271b7082d` |
-| `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `4fe7ed38ecfb` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `565e259ef4d3` |
+| `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `bbac87cbd3df` |
+| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `2b9f1071d158` |
+| `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `2b74d5a8d888` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `5722e11c91c0` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `f4f9aad4c36b` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 
@@ -175,7 +218,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `9f208b13e74e` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `472509246751` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `67961fc570cc` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d6e925fd5c9d` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `c6375e3bd80d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |

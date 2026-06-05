@@ -1,0 +1,505 @@
+% TECT-Math434-Section15p5-Independent-Audit-ReadingH-T5-Candidacy-PASS-260604-v1.0.tex.txt
+% ============================================================================
+% Math434 -- CLAUDE.md 15.5 INDEPENDENT AUDIT of the Reading-H attack chain
+%            (Math426 -> 432; entry document Math433). Auditor: a DIFFERENT
+%            agent from the chain author, dispatched by the operator
+%            2026-06-04 with a pinned attack-priority order.
+% Date: 2026-06-04
+% Candidate statement under audit (operator-pinned wording):
+%   "Reading-H selection is closed at estimator grade within the enumerated
+%    single-shell and two-shell condensate ensembles."
+% VERDICT: AUDIT-PASS (no UPHELD on attack tasks 1-4; forbidden-phrase
+%          sweep finds no uncorrected overclaim). Three VALID-with-
+%          mitigation findings and one registered refinement are attached;
+%          they sit INSIDE the estimator-grade / enumerated-ensemble scope
+%          that the candidate statement already concedes.
+% TIER ACTION: NONE IN THIS NOTE. Per the dispatch mandate, this note
+%          records the verdict ONLY; any T4 -> T5 movement is decided by
+%          the operator after reading this note.
+% Execution constraint (honest scope, 15.6 item 5): this audit session had
+%          NO shell-execution capability (file tools only). Consequences:
+%          (a) attack task 2 was closed by route (b) -- a rigorous
+%              directional bound, hand-verified arithmetic -- at the
+%              binding argmin; the route-(a) numerical script
+%              Codes/supplementary/Math434_lam_exact_wick_bracket.py is
+%              WRITTEN but NOT YET EXECUTED (no JSON artefact exists yet;
+%              none is cited as evidence);
+%          (b) the 11.5.2 atomic-write helper could not be invoked (it is
+%              Bash-only); all writes used single-shot tool writes with
+%              read-back verification. This deviation is SELF-FLAGGED here
+%              and in the CHANGELOG entry; the operator must run
+%              check_file_integrity.py / the pre-commit hook (Layer 3)
+%              before committing.
+% Revision history:
+%   v1.0 (2026-06-04) first issue (explicit-v1.0 rule, CLAUDE.md 4.5).
+% ============================================================================
+
+\section{Math434: \S 15.5 independent audit --- verdict AUDIT-PASS}
+
+\subsection{Mandate, independence, and method}
+
+The operator dispatched this audit 2026-06-04 with a pinned attack order:
+(1) the anchored-estimator construction at the $10^{-5}$ margin scale;
+(2) the LAM weakest link (G1$''$-3b geometry) --- the chain minimum
+$+3.17\times 10^{-5}$; (3) independent re-derivation of the exact-Wick
+remainder algebra; (4) the Math432 SHG tilt bound; (5) a forbidden-phrase
+sweep over Math426--433. The auditor read the seven chain notes, the five
+verification scripts (Math428/429/430/431/432), the Math424-AddA helper
+module, and the primary JSON artefacts, and re-derived the load-bearing
+algebra independently before forming any verdict. Every formula quoted
+below was re-derived by the auditor, not transcribed.
+
+Constants throughout (chain convention, Math426): $u = -0.86$, $v = 3.24$,
+$q_0 = 0.6801747616$, $C = 1$, $r_{\rm braz} = \mu_2 = 0.005$; disordered
+reference $r_R = 0.304526$, $M_R = 0.109414$.
+
+\subsection{Task 3 (taken first; it underpins tasks 1--2): exact-Wick
+remainder algebra --- DISMISSED (independently confirmed)}
+
+\textbf{Re-derivation.} For $F[\phi] = \frac12\int\phi K_0\phi
++ \frac{u}{4}\int\phi^4 + \frac{v}{6}\int\phi^6$, Gaussian reference with
+covariance $G = \hat K^{-1}$, $\sigma(x) = G(x,x)$, condensate $\phi_c$,
+the Gibbs--Bogoliubov functional is
+$F_{\rm var} = \frac12\,\overline{\operatorname{Tr}\ln \hat K} + F_{\rm cl}[\phi_c]
++ \langle H_{\rm int}\rangle - \frac12\operatorname{Tr}[(\hat K - K_0)\hat K^{-1}]/V$
+with trial kernel $\hat K = m_H^2 + C(q^2-q_0^2)^2 + (3u+30vM)\phi_c^2
++ 5v\phi_c^4$, $m_H^2 = r + 3uM + 15vM^2$. Wick moments:
+$\langle\phi^4\rangle = \phi_c^4 + 6\phi_c^2\sigma + 3\sigma^2$,
+$\langle\phi^6\rangle = \phi_c^6 + 15\phi_c^4\sigma + 45\phi_c^2\sigma^2
++ 15\sigma^3$. Collecting per cell-average:
+\begin{align*}
+\overline{\phi_c^2\sigma}:&\quad \tfrac{6u}{4} - \tfrac{3u}{2} - 15vM
+= -15vM \qquad\checkmark\ (\text{script: } -15vM\,\texttt{p2s})\\
+\overline{\sigma^2}:&\quad \tfrac{3u}{4} \qquad\checkmark\\
+\overline{\phi_c^4\sigma}:&\quad \tfrac{15v}{6} - \tfrac{5v}{2} = 0
+\qquad\checkmark\ (\text{correctly ABSENT from the scripts})\\
+\overline{\phi_c^2\sigma^2}:&\quad \tfrac{45v}{6} = \tfrac{15v}{2}
+\qquad\checkmark\\
+\overline{\sigma^3}:&\quad \tfrac{15v}{6} = \tfrac{5v}{2}\qquad\checkmark\\
+\bar\sigma:&\quad -\tfrac12(3uM + 15vM^2)\qquad\checkmark
+\end{align*}
+All five remainder coefficients of Math429 \S 0 (and the identical blocks
+in the Math430/431/432 engines) are confirmed coefficient-by-coefficient;
+the exact cancellation of the $\overline{\phi_c^4\sigma}$ term is a
+non-trivial cross-check the chain implementation passes. (i) Upper-bound
+property: standard Gibbs--Bogoliubov for any positive-definite $\hat K$;
+positivity is enforced per-$k$ by the \texttt{slogdet} sign guard in every
+engine. \emph{Caveat (recorded, not a defect)}: on a FINITE basis/k-mesh the
+inequality holds for the basis-projected theory; transfer to the continuum
+is exactly what the anchoring protocol (task 1) addresses. (ii) $A = 0$
+identity: with $W = 0$, $\sigma$ uniform, the remainder reduces to
+$-\frac12(3uM{+}15vM^2)M_t + \frac{3u}{4}M_t^2 + \frac{5v}{2}M_t^3$ and
+$M$-stationarity reproduces the disordered gap equation; the auditor
+additionally verified $\partial\,\mathrm{rem}/\partial M_t = 0$ at
+$(A{=}0, M{=}M_t{=}M_R)$ exactly (term-pair cancellation), which is the
+structural reason the anchored construction is first-order protected
+against small $M_t$ errors (used in task 1c below). (iii) The diagonal
+closed form's substitutions $\overline{\phi_c^2\sigma}\to 2nA^2M_t$,
+$\overline{\phi_c^2\sigma^2}\to 2nA^2M_t^2$ are the correct uniform-$\sigma$
+limits. \textbf{Verdict: DISMISSED} --- the remainder algebra is correct.
+
+\subsection{Task 1: anchored-estimator construction at the $10^{-5}$
+scale --- DISMISSED, with two VALID-with-mitigation sub-findings}
+
+\textbf{(1a) Decomposition identity and reference consistency.} The
+anchored object is
+\[
+\Delta F_{\rm anc}(A,M) = \big[F^{\rm cont}_{\rm diag}(A,M)
+- F^{\rm cont}_{\rm diag}(0,M_R)\big]
++ \big[F^{\rm basis}_{\rm exact}(A,M) - F^{\rm basis}_{\rm diag}(A,M)\big].
+\]
+Because $F_{\rm exact}\equiv F_{\rm diag}$ at $A=0$ identically (verified at
+$10^{-10}$ in every gate), the EXACT identity
+$\Delta F_{\rm true} = \Delta F^{\rm cont}_{\rm diag}
++ [F^{\rm cont}_{\rm exact} - F^{\rm cont}_{\rm diag}]$ holds, and the
+anchored estimator differs from $\Delta F_{\rm true}$ ONLY by the
+continuum-vs-basis error of the BRACKET --- a single, clean substitution.
+Both bracket members are evaluated on the same functional, the same
+\texttt{den} arrays, the same k-mesh, the same remainder structure; the
+continuum anchor (\texttt{F\_diag\_cont\_rel}) is the same functional in the
+diagonal limit with the $(0, M_R)$ reference built in
+(\texttt{continuum\_ref\_zero} at $10^{-9}$ in all gates). DISMISSED.
+
+\textbf{(1c) Diagonal/off-diagonal boundary: no double-count, no omission.}
+Auditor code-level check: the diagonal of the Bloch coupling is
+$W_{ii} = \mathrm{cou2}\,p_2(0) + \mathrm{cou4}\,p_4(0)
+= \mathrm{cou2}\cdot 2n + \mathrm{cou4}\cdot N_4$, and the diagonal closed
+form uses $\hat r = m_H^2 + \mathrm{cou2}\cdot 2n + \mathrm{cou4}\cdot N_4$
+--- IDENTICAL. The bracket therefore isolates exactly (off-diagonal
+log-det shift) $+$ ($\sigma$-inhomogeneity remainder difference); the
+diagonal enters once (continuum) and the basis diagonal is common to both
+bracket members. DISMISSED.
+
+\textbf{Residual systematics at the $10^{-5}$ scale (quantified).}
+(i) Bracket basis-truncation: covered by the chain's own c12$\to$c20
+convergence data ($<10^{-6}$ at the argmins; decelerating drift with
+3--10$\times$ margins mid-region). (ii) \texttt{M\_fast} interpolation in
+the continuum anchor: 480-point geomspace log-interp; auditor estimate of
+the local interpolation error $O(10^{-6})$ in $M_t$, FIRST-ORDER PROTECTED
+in $\Delta F$ by the $\partial\,\mathrm{rem}/\partial M_t = 0$ stationarity
+at the reference (task 3.ii) and by reference cancellation (same table
+feeds $M_R$); net effect estimated $\lesssim 10^{-6}$ ---
+\emph{VALID-with-mitigation}: registered as a one-line scripted check
+(replace \texttt{M\_fast} by direct quadrature at the LAM argmin and
+difference; included in the pending Math434 script). (iii) \texttt{dI}
+tail: the analytic $1/q^2$ tail term is included; the next-order residual
+is $O(2q_0^2/q_{\max}^2)$ relative $\approx 4\times 10^{-9}$ at the LAM
+argmin --- negligible (hand-verified: $(\hat r' - r_R)/(Cq_{\max})/(2\pi^2)
+= 1.61\times10^{-3}/27.2/19.74 = 3.0\times10^{-6}$ is the included tail;
+its own correction is three decades smaller). DISMISSED.
+
+\textbf{(1b) The resummation-ratio calibration and the $\rho = 1$
+``worst case'' label --- VALID-with-mitigation.} Auditor norm analysis
+(full derivation in task 2): for off-diagonal $W$ with zero diagonal,
+$X = D^{-1/2} W D^{-1/2}$, $\operatorname{Tr} X = 0$, $\|X\| < 1$,
+\[
+\operatorname{Tr}\ln(I{+}X) \;\ge\; \frac{1}{1-\|X\|}
+\Big({-\tfrac12\operatorname{Tr}X^2}\Big)
+\qquad\Longrightarrow\qquad \rho_{\rm exact} \le \frac{1}{1-\|X\|}.
+\]
+Hence $\rho = 1$ is a rigorous worst case ONLY where $\|X\| \ll 1$. At the
+binding small-$A$ argmins this holds ($\|X\| \approx 3\times10^{-3}$ at the
+LAM argmin, see task 2), so the chain's $\rho = 1$ bands ARE conservative
+exactly where the minima live. At BCC mid-amplitude ($W/\hat r \sim 0.3$
+per Math428), $(1-\|X\|)^{-1}$ can reach $\approx 1.4$, so the ``worst
+case'' label there was an overstatement --- \emph{mitigation: the BCC
+mid-amplitude region was subsequently computed at TRUE exact-Wick grade
+(Math429/430), superseding the $\rho$-band question for BCC entirely; for
+LAM/HEX mid-amplitude the label imprecision is absorbed by the G1$''$-3b
+residual and by the refinement registered in \S 4 below.} The calibration
+measurement itself ($\rho_{16} = 0.416$, $\rho_{20} = 0.414$, stability
+asserted) is sound as an in-basis measurement; the chain's own v1.1
+language (``estimator PASS, not a theorem'') correctly scopes it.
+
+\subsection{Task 2: LAM weakest link / G1$''$-3b --- VALID-with-mitigation
+(route (b) directional bound; argmin certified by hand; per-point
+mid-amplitude verification delegated to the written-but-unexecuted script)}
+
+\textbf{Setting.} LAM condensate $\phi_c = 2A\cos(q_0 z)$; 1D reciprocal
+lattice $G_m = m q_0\hat z$; shell convolution counts $p_2(0)=2$,
+$p_2(\pm2)=1$; $p_4(0)=6=N_4$, $p_4(\pm2)=4$, $p_4(\pm4)=1$ (auditor
+re-enumeration). The Bloch matrix at $(k_\perp, k_z)$ is tridiagonal-like
+on each parity chain with nearest coupling
+$w = \mathrm{cou2}\,p_2(2) + \mathrm{cou4}\,p_4(2)$,
+$\mathrm{cou2} = (3u+30vM)A^2$, $\mathrm{cou4} = 5vA^4$. At the Math431
+argmin $(A, M) = (0.01, M_R)$:
+\[
+3u + 30vM_R = -2.58 + 10.635 = 8.055,\quad
+w = 8.055\times10^{-4} + 6.5\times10^{-7} = 8.061\times10^{-4},
+\]
+\[
+\hat r' = r_R + 2\,\mathrm{cou2} + 6\,\mathrm{cou4}
+= 0.304526 + 0.001611 + 10^{-6} = 0.306138 .
+\]
+
+\textbf{Degenerate geometry.} The only doubly-on-shell coupled pair is
+$p_z = \pm q_0$ at $k_\perp = 0$ (the Brazovskii shell-doubling resonance
+on the odd-$m$ chain, coupled by the $2q_0$ condensate harmonic) ---
+auditor derivation: on-shell + on-shell for a $\Delta p_z = 2q_0$ pair
+forces the midpoint condition $k_\perp = 0$, $p_z = \mp q_0$.
+
+\textbf{Norm bound (Gershgorin on $X = D^{-1/2}WD^{-1/2}$).} For an
+on-shell row, the neighbours sit at $\hat r' + 16Cq_0^2(q_0 \pm p_z)^2$;
+the row sum is maximised at the degenerate endpoint:
+\[
+\|X\| \le \frac{w}{\hat r'} + \frac{w}{\sqrt{\hat r'(\hat r' + 64Cq_0^4)}}
++ O(w_4)
+= 2.633\times10^{-3} + 3.893\times10^{-4} + O(10^{-6})
+\le 3.1\times10^{-3},
+\]
+using $64Cq_0^4 = 13.70$, $\sqrt{0.30614\times 14.006} = 2.071$.
+
+\textbf{Log-det excess beyond second order.} With
+$\ln(1+x) \ge x - \frac{x^2}{2(1-a)}$ for $|x|\le a<1$ and
+$\operatorname{Tr}X = 0$,
+\[
+\big|\,\text{exact off-diag log-det} - \text{2nd order}\,\big|
+\le \frac{\|X\|}{1-\|X\|}\,|\mathrm{off2}| \le 0.0031\,|\mathrm{off2}| .
+\]
+Bubble bound (Cauchy--Schwarz, exact): $B(Q) \le B(0) = -M'(\hat r')$;
+shell-approximation $-M'(\hat r') \approx \frac{q_0}{8\pi\sqrt C}\,
+\hat r'^{-3/2} = 0.160$; conservative $B(0) \le 0.2$. Then
+\[
+|\mathrm{off2}| \le \tfrac14\cdot 2w^2 B(0)
+= \tfrac12 (8.061\times10^{-4})^2\times 0.2 = 6.5\times 10^{-8},
+\]
+so the log-det excess is $\le 2\times10^{-10}$, and even discarding the
+estimator's own off2 and re-adding the full exact bracket can shift the
+result downward by at most $6.6\times10^{-8}$.
+
+\textbf{$\sigma$-inhomogeneity remainder (the piece the $\rho$-estimator
+omits entirely --- the auditor's principal new finding).} The Math431
+LAM/HEX estimator contains ONLY the log-det bubble; the exact-Wick bracket
+also contains the remainder difference from $\sigma(z) = \bar\sigma
++ \delta\sigma(z)$, $\delta\sigma = 2\hat\sigma_2\cos 2q_0 z + \cdots$,
+entering at the SAME order $O(A^4)$ as off2. Auditor bounds at the argmin:
+$|\hat\sigma_2| \le w\,B(2q_0)/(1-\|X\|) \le 1.62\times10^{-4}$;
+$\overline{\delta\sigma^2} \le 2\hat\sigma_2^2(1+\epsilon)
+\le 5.3\times10^{-8}$; the mean-shift channel is FIRST-ORDER PROTECTED by
+the task-3 stationarity ($\partial\,\mathrm{rem}/\partial\sigma_{\rm unif}
+= 0$ at the reference up to $O(A^2, M_t{-}M_R)$ prefactors), contributing
+$\lesssim 10^{-9}$; the $\delta\sigma$-quadratic block
+$\big[\tfrac{3u}{4} + \tfrac{15v}{2}\bar\sigma\big]\overline{\delta\sigma^2}
++ \cdots$ has total magnitude $\le 2\times10^{-7}$ (dominant term
+$\tfrac{15v}{2}\bar\sigma\,\overline{\delta\sigma^2} \approx 1.4\times
+10^{-7}$, and it is POSITIVE; the only negative leading piece is
+$\tfrac{3u}{4}\overline{\delta\sigma^2} \approx -3.4\times10^{-8}$);
+cubic and $\phi_c^2$-weighted pieces $\le 10^{-9}$.
+
+\textbf{Directional bound at the argmin (hand-verified arithmetic):}
+\[
+\boxed{\;\big|\Delta F^{\rm exact\,bracket}_{\rm LAM}
+- \Delta F^{\rho=1}_{\rm est, LAM}\big|_{(0.01,\,M_R)}
+\;\le\; 6.6\times10^{-8} + 2\times10^{-7} \;\lesssim\; 3\times10^{-7}
+\;\ll\; 3.17\times10^{-5}. \;}
+\]
+The LAM chain minimum SURVIVES the exact-Wick treatment at the argmin with
+two decades of headroom. Small-$A$ scaling: margin $\approx c_2 A^2$
+($c_2 = n\,r_R$, independently re-derived below), corrections
+$\le \kappa A^4 + O(A^6)$ with $\kappa \approx 17$ (auditor scaling), so
+the headroom ratio is $\approx 56 A^2$: $0.0056$ at $A = 0.01$, still
+$< 0.25$ for $A \lesssim 0.066$.
+
+\textbf{What is NOT closed in this turn (honest scope).} For LAM/HEX
+mid-amplitude points ($A \gtrsim 0.07$) the correction bound grows to the
+same order as the quadratic margin scale, the per-point estimator values
+were not persisted in the Math431 JSON (only minima), and the auditor had
+no execution capability; the per-point certification
+(estimator value $-$ correction bound $> 0$ at every scanned point) is
+delegated to the WRITTEN script
+\texttt{Codes/supplementary/Math434\_lam\_exact\_wick\_bracket.py}
+(self-test asserts + JSON emission per 6.3.8; NOT YET EXECUTED; no
+numerical output from it is cited anywhere in this note). \emph{Why this
+does not break the candidate statement}: the statement is pinned at
+ESTIMATOR grade --- the certified object at LAM/HEX is the $\rho = 1$
+estimator, which IS positive at every probed point (Math431, 15/15
+scripted) --- and the exact-Wick gap is exactly the pre-registered
+G1$''$-3b residual that the statement's grade qualifier concedes. The
+auditor's contribution is to CERTIFY exactness-adequacy at the binding
+argmin (where the chain's headline minimum lives) and to sharpen
+G1$''$-3b into a concrete per-point bound-verification spec.
+\textbf{Verdict: VALID-with-mitigation} (mitigation = argmin directional
+bound above + grade qualifier + sharpened G1$''$-3b spec + ready-to-run
+script).
+
+\textbf{Independent confirmation of the lattice-independent small-$A$
+bound} (used as the margin floor): expanding the anchored estimator at
+$A \to 0$, $M = M_R$, with $\tfrac12\,dI' = \tfrac12 M_R\,d\hat r$ and the
+remainder's $M_t$-stationarity,
+\[
+c_2 = n\big[r + 3uM_R + 30vM_R^2 - 15vM_R^2\big] = n\,r_R
+\qquad (\text{auditor re-derivation; matches Math428 v1.1 \S 3bis}),
+\]
+and the two-shell version $c_2^{(2)} = n_2[K_2 + 3uM_R + 15vM_R^2]
+= n_2(r_R + Cq_0^4) = 1.5557$ (matches Math432).
+
+\subsection{Task 4: SHG tilt bound (Math432 \S 5) ---
+VALID-with-mitigation}
+
+\textbf{Finding.} The Math432 estimate $A_2^* = O(|u| m_{31} A_1^3 /
+2c_2^{(2)}) \lesssim 0.025$ describes only the CLASSICAL quartic-tilt
+response and understates the actual displacement: auditor analysis of the
+quartic cross-stiffness $\tfrac{3u}{2} m_{22} A_1^2 = -123.8\,A_1^2$ shows
+it EXCEEDS $c_2^{(2)} = 1.5557$ for $A_1 \gtrsim 0.112$, i.e.\ at large
+$A_1$ the bare quadratic restoring force in $A_2$ is overwhelmed and the
+optimum is set by the sextic cross-moments, not by the quoted formula.
+The Math432 JSON data confirm: at $A_1 = 0.14$, $M = M_R$, the scanned
+$A_2$-profile is $0.1556\,(-0.12)$, $0.1201\,(-0.08)$, $0.1309\,(-0.05)$,
+$0.1552\,(-0.03)$, $0.1831\,(-0.015)$, $0.2682\,(+0.015)$, rising further
+for $A_2 > 0$: the per-row optimum sits near $A_2 \approx -0.065 \pm
+0.015$, i.e.\ $|A_2^{\rm opt}| \approx 2.6\times$ the quoted $0.025$, on
+the NEGATIVE branch (consistent with Math432's own tilt-sign observation
+that the sextic/Wick-dressed moments override the classical quartic).
+\textbf{However the load-bearing conclusion is unaffected}: at every
+scanned $A_1$ row the $|A_2| = 0.12$ boundary values strictly exceed
+interior values (auditor-checked at $A_1 = 0.12$ and $0.14$; e.g.\
+$A_1{=}0.12$: $0.1066$ at $-0.12$ vs $0.0670$ at $-0.05$), so the scanned
+box BRACKETS the per-row optimum --- the optimum does not exit the box
+anywhere in the danger window, and all values are positive (0 negatives
+in 244 + zoom points; auditor grep of the JSON: zero matches for negative
+\texttt{dF\_anchored}). Beyond-box closure ($|A_2| > 0.12$, mixed-shell
+sextic dominance) is correctly REGISTERED OPEN as G3$'$-b(i), not claimed.
+\emph{Mitigation required}: Math432 \S 5's $A_2^*$ sentence should be
+re-worded at its next versioned re-issue (v1.1) to ``the per-row optimum
+is bracketed interior to the scanned box (empirically $|A_2^{\rm opt}|
+\lesssim 0.08$, sextic-driven, negative branch); the classical-tilt
+formula $O(|u|m_{31}A_1^3/2c_2^{(2)})$ applies only at small $A_1$''.
+This is a wording defect, not a result defect. \textbf{Verdict:
+VALID-with-mitigation.}
+
+\subsection{Task 5: forbidden-phrase sweep (Math426--433) --- no
+uncorrected overclaim}
+
+Sweep patterns (per CLAUDE.md \S 7 forbidden list + \S 15.6 item 6):
+\emph{rigorous closure, global minimum over all ensembles, essentially
+proved, almost closed, near closure, unconditional closure/theorem,
+establishes, first confirmed, production-grade, exhaustive over all,
+unique vacuum, fully closed}, plus all uses of \emph{T5} and
+\emph{theorem}. Findings:
+\begin{itemize}
+\item ZERO hits for the hard-forbidden phrases in Math428--433.
+\item All 17 ``T5'' occurrences are candidacy-framed (``T5 candidacy'',
+      ``tabled for the 15.5 audit'', ``tier moves frozen''); none uses T5
+      as a status.
+\item ``theorem'' occurrences: either references to the Math427 v1.1
+      Proposition (T6 PROVED CONDITIONAL on the named H-diag hypothesis
+      set --- compliant) or explicit negations (``NOT a theorem'',
+      Math428 v1.1 / Math432). Minor observation (DISMISSED-level): the
+      Math431 \S 3 summary line ``CLOSED --- theorem (Math427 v1.1)'' and
+      the Math429 \S 5 shorthand ``(Math427, theorem)'' omit the
+      ``conditional'' qualifier in-line; the cross-reference resolves to
+      the note that carries the hypotheses, so no reader can be misled
+      about the tier. Cosmetic tightening optional at next re-issue.
+\item ``global minimum'' (Math426 line 89/96; Math427 \S 2): scoped uses
+      --- ``Hartree global minimum'' (within the defined Hartree family)
+      and ``global minimum over all scans'' (scan-domain). Neither claims
+      ensemble-exhaustive minimality; H-enum in Math433 \S 5 explicitly
+      disclaims exhaustiveness. Acceptable.
+\item The candidate statement itself (Math433 \S 2) carries the estimator
+      qualifier and the enumeration scope verbatim. Compliant.
+\end{itemize}
+\textbf{Verdict: sweep clean; no uncorrected overclaim.}
+
+\subsection{Per-task verdict table and overall verdict}
+
+\begin{center}
+\begin{tabular}{llp{7.2cm}}
+Task & Verdict & Basis \\
+\hline
+1 (anchor construction) & DISMISSED & exact decomposition identity;
+reference/boundary consistency code-verified; residual systematics
+quantified $\lesssim 10^{-6}$; two sub-findings VALID-with-mitigation
+(\texttt{M\_fast} check registered; $\rho{=}1$ label imprecise at
+mid-amplitude, superseded for BCC by exact-Wick gates) \\
+2 (LAM weakest link) & VALID-with-mitigation & directional bound: exact
+bracket within $3\times10^{-7}$ of the estimator at the argmin
+($\ll 3.17\times10^{-5}$ margin); mid-amplitude per-point check delegated
+to written script; gap sits inside the pre-registered G1$''$-3b residual
+and the estimator-grade qualifier \\
+3 (Wick algebra) & DISMISSED & all five coefficients independently
+re-derived and confirmed; $\overline{\phi_c^4\sigma}$ cancellation
+confirmed; upper-bound and $A{=}0$ identities confirmed \\
+4 (SHG tilt) & VALID-with-mitigation & $A_2^*$ formula understates
+displacement at large $A_1$ (wording defect, v1.1 re-issue recommended);
+load-bearing conclusion confirmed by interior bracketing in the JSON
+data; beyond-box correctly registered open (G3$'$-b(i)) \\
+5 (phrase sweep) & CLEAN & no uncorrected overclaim; two cosmetic
+shorthand observations \\
+\end{tabular}
+\end{center}
+
+\textbf{OVERALL VERDICT: AUDIT-PASS} --- no UPHELD on tasks 1--4; sweep
+clean. The candidate statement, AT ITS PINNED WORDING (estimator grade,
+enumerated ensembles), withstands the adversarial re-derivation. The LAM
+$+3.17\times10^{-5}$ weakest link SURVIVES at its argmin with
+$\ge 100\times$ headroom against the exact-Wick correction bound; its
+mid-amplitude exactness remains within the conceded G1$''$-3b residual,
+now sharpened into a concrete verification spec. \emph{No tier action is
+taken in this note; T4 $\to$ T5 movement is the operator's decision after
+reading this verdict (dispatch mandate; CLAUDE.md \S 15.5).}
+
+\subsection{Devil's-advocate self-test on THIS AUDIT (CLAUDE.md \S 6.3.1
++ 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (the auditor's Gershgorin norm could miss a
+non-row-localised soft direction of $X$).} Gershgorin bounds the spectral
+radius by the max row sum; for the LAM chain this is tight near the
+degenerate $2\times2$ block, but could long-range products of
+moderately-sized entries produce $\|X\|$ above the row bound?
+\emph{DISMISSED with counter}: for symmetric $X$,
+$\|X\| \le \max_m \sum_{m'} |X_{mm'}|$ is unconditional
+(Gershgorin/Schur); no structure assumption is used. The bound was
+evaluated at the global supremum over $(k_\perp, k_z)$ including the
+degenerate point; off-shell rows have strictly smaller sums entrywise.
+
+\textbf{Objection $\beta$ (the $\sigma$-remainder bound used the
+first-order $\hat\sigma_2 = w B(2q_0)$ with an $(1-\|X\|)^{-1}$ dressing
+--- is the dressing argument airtight?).} \emph{VALID-with-mitigation}:
+the dressing factor was applied as a Neumann-series envelope on
+$K^{-1} - D^{-1}$; a fully rigorous statement needs the same
+$D^{-1/2}\cdot D^{-1/2}$ sandwich applied to the off-diagonal element
+integrals, which introduces at worst an additional $O(1)$ geometric
+factor on a quantity that is $10^{2}$ below the margin. Mitigation: the
+written script computes $\hat\sigma_2$ EXACTLY (matrix inversion per
+$(k_\perp, k_z)$), removing the envelope from the final certification;
+the hand bound's two-decade headroom absorbs any $O(1)$ slack.
+
+\textbf{Objection $\gamma$ (auditing the estimator at its own argmin is
+circular --- the EXACT functional's minimum could sit elsewhere).}
+\emph{VALID-with-mitigation}: correct in principle; the auditor's
+small-$A$ scaling (headroom ratio $56A^2$) certifies a NEIGHBOURHOOD of
+the argmin ($A \lesssim 0.066$ at the $25\%$-headroom level), not a
+point; outside it the estimator values rise (they exceed the recorded
+minimum by definition) while the correction bound grows as $A^4$ ---
+the script's per-point check (estimator $-$ bound $> 0$ everywhere)
+is precisely the closure of this objection, and until it runs the gap is
+honestly carried inside G1$''$-3b. The candidate statement's estimator
+grade is unaffected either way.
+
+\textbf{Objection $\delta$ (no-execution session: every number in this
+note is hand arithmetic).} \emph{VALID-with-documentation}: all hand
+arithmetic is elementary (products, square roots, one-line integrals with
+quoted approximations) and reproduced step-by-step above so any reader
+can re-verify in minutes; the 6.3.8 script with asserts covering each
+inequality is on disk awaiting execution; NO claim in this note depends
+on an unexecuted script's output.
+
+\subsection{Quantitative sanity checks (CLAUDE.md \S 6.3.4)}
+
+(i) \emph{Magnitude/limit-case}: the auditor's independent $c_2 = n\,r_R$
+re-derivation gives LAM $c_2 A^2 = 0.304526\times10^{-4}
+= 3.045\times10^{-5}$ at $A = 0.01$ vs the Math431 JSON minimum
+$3.1696\times10^{-5}$ --- ratio $1.041$, consistent with positive
+$O(A^4)$ corrections; an exact match would have been suspicious.
+(ii) \emph{Dimensional/convention regression}: $K_2 = \mu_2 + Cq_0^4
+= 0.005 + 0.214036 = 0.219036$ from the auditor's own $q_0^4$
+($q_0^2 = 0.462638$, $q_0^4 = 0.214034$; rounding-consistent with the
+chain's $0.219034$); reproduces Math426 $K(0)$.
+(iii) \emph{Sign-direction physics}: the off-diagonal second-order term
+is negative-definite ($-\tfrac12\operatorname{Tr}X^2$), i.e.\ off-diagonal
+coupling HELPS the condensate --- the attack direction is correctly
+oriented in the chain scripts and in this audit's bounds.
+(iv) \emph{Exponential/series well-definedness}: $\|X\| \le 3.1\times
+10^{-3} < 1$ at the argmin, so every Neumann/log series used converges
+absolutely; the bound $(1-\|X\|)^{-1} \le 1.0031$ is finite and near 1.
+
+\subsection{Registered refinements (for OPEN-QUESTIONS)}
+
+\begin{enumerate}
+\item \textbf{G1$''$-3b sharpened spec}: run
+      \texttt{Math434\_lam\_exact\_wick\_bracket.py}; required output:
+      per-point (estimator value, correction bound, exact bracket) over
+      the Math431 LAM grid; PASS gate: exact-bracket anchored
+      $\Delta F > 0$ at every point. HEX analogue (2D reciprocal lattice
+      + 1D transverse continuum) follows the same template.
+\item \textbf{\texttt{M\_fast}-interpolation spot check} at the LAM/BCC
+      argmins (direct quadrature vs table; expected $\lesssim 10^{-6}$).
+\item \textbf{Math432 v1.1 wording fix} for the $A_2^*$ sentence
+      (task 4 mitigation).
+\end{enumerate}
+
+\subsection{Cross-references}
+
+\begin{itemize}
+\item Audit entry document: Math433 v1.0 (consolidation; margin table).
+\item Chain notes audited: Math426; Math427 v1.1; Math428 v1.1;
+      Math429 v1.1; Math430 v1.0; Math431 v1.0; Math432 v1.0.
+\item Scripts read and re-derived against:
+      \texttt{Math428\_g1doubleprime\_bloch\_logdet.py},
+      \texttt{Math429\_g1pp1prime\_inhomogeneous\_wick.py},
+      \texttt{Math430\_g1pp2\_dense\_surface\_convergence.py},
+      \texttt{Math431\_g1pp3\_lam\_hex\_fcc.py},
+      \texttt{Math432\_g3prime\_multishell\_ensemble.py},
+      \texttt{Math424\_AddA\_reading\_uniqueness.py}.
+\item JSON artefacts consulted:
+      \texttt{Runs/math/Math431/g1pp3\_lam\_hex\_fcc.json} (LAM minimum,
+      claims), \texttt{Runs/math/Math432/g3prime\_multishell\_ensemble.json}
+      ($A_1 = 0.12/0.14$ rows; zero-negative grep).
+\item NEW (this audit): \texttt{Codes/supplementary/
+      Math434\_lam\_exact\_wick\_bracket.py} (WRITTEN, NOT YET EXECUTED;
+      will emit \texttt{Runs/math/Math434/lam\_exact\_wick\_bracket.json}).
+\item Policy: CLAUDE.md \S 15.5 (this gate), \S 6.3.5(a) (self-adversarial
+      review), \S 6.3.4 (sanity checks), \S 6.3.8 (script/JSON mandate ---
+      satisfied in written form, execution pending), \S 11.5.2
+      (write-discipline deviation self-flagged in the header).
+\end{itemize}

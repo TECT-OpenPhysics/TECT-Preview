@@ -1,0 +1,47 @@
+{
+  "claim": "B1-RH-ENUM",
+  "kind": "Migration batch-2 re-validation",
+  "date": "2026-06-05",
+  "scripts": [
+    {
+      "script": "archive/legacy/scripts/Math427_g1prime_diagonal_isotropy.py",
+      "asserts": "5/5 PASS"
+    },
+    {
+      "script": "archive/legacy/scripts/Math428_g1doubleprime_bloch_logdet.py",
+      "asserts": "21/21 PASS"
+    },
+    {
+      "script": "archive/legacy/scripts/Math429_g1pp1prime_inhomogeneous_wick.py",
+      "asserts": "19/19 PASS"
+    },
+    {
+      "script": "archive/legacy/scripts/Math430_g1pp2_dense_surface_convergence.py",
+      "asserts": "11/11 PASS"
+    },
+    {
+      "script": "archive/legacy/scripts/Math431_g1pp3_lam_hex_fcc.py",
+      "asserts": "15/15 PASS (LAM/HEX/FCC/FCC-exactWick all PASS)"
+    },
+    {
+      "script": "archive/legacy/scripts/Math432_g3prime_multishell_ensemble.py",
+      "asserts": "25/25 PASS"
+    },
+    {
+      "script": "archive/legacy/scripts/Math434_lam_exact_wick_bracket.py",
+      "asserts": "22/22 PASS (checkpoint-resumable; completed in one budget window)"
+    },
+    {
+      "script": "archive/legacy/scripts/Math436_hex_exact_wick_bracket.py",
+      "asserts": "49/49 PASS (checkpoint-resumable; completed in one budget window)"
+    }
+  ],
+  "totals": "167/167 asserts PASS across 8 scripts",
+  "artefact_comparison": "all 8 regenerated JSONs identical to archived legacy artefacts (rel_tol 1e-9, abs_tol 1e-12); zero diffs, zero stale-artefact findings",
+  "environment": {
+    "python": "3.12 (sandbox re-run)",
+    "numpy": "2.2.6",
+    "platform": "linux-x86_64"
+  },
+  "legacy_source": "TECT2/Contents snapshot 2026-06-05 (frozen reference)"
+}

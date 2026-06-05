@@ -54,6 +54,57 @@ All dispositions in this batch are MIGRATED-VERBATIM.
 | `Runs/math/Math437/step5_class_closure.json` | B2 | reproduced within 1e-9; STALE-ARTEFACT verdict string (numerics identical) | PENDING |
 | `Runs/math/Math440/audit_recheck.json` | B2 | reproduced within 1e-9 | PENDING |
 
+## Migration batch 2 — enumerated-reading / estimator chain (plan phase M1, 2026-06-05)
+
+Goal: make `B1-RH-ENUM` migration-clean and ground the H-LAYER justification
+chain. Re-validation: all eight verification scripts re-run fresh (python
+3.12, numpy 2.2.6) — **167/167 self-test asserts PASS** (5+21+19+11+15+25+22+49);
+all regenerated JSONs identical to the archived artefacts within rel_tol
+$10^{-9}$ — **zero diffs, zero stale-artefact findings** (contrast batch 1's
+F-1). Math434/Math436 are checkpoint-resumable by design and completed within
+one budget window on this hardware; their archived `state.json` files are kept
+as provenance. Fresh artefacts:
+`runs/B1-RH-ENUM/260605-migration-revalidation/` (8 JSONs + summary).
+Sign-off: rows feed B1 (T5) directly but also support hypothesis H-LAYER of
+the T6 claim — **operator sign-off: PENDING (H-LAYER)**.
+Batch record note: `claims/B1-RH-ENUM/notes/enumerated-readings-migration-revalidation-260605-v1.0.tex.txt`.
+
+All dispositions in this batch are MIGRATED-VERBATIM.
+
+| Legacy path (original) | Consuming claims | Re-validation | Sign-off |
+|---|---|---|---|
+| `Docs/math/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec.tex.txt` | B1 (audit trail; superseded) | note (text) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec-260604-v1.1.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math427_g1prime_diagonal_isotropy.py` | B1 | re-run 5/5 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math427/g1prime_diagonal_isotropy.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored.tex.txt` | B1 (audit trail; superseded) | note (text) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math428_g1doubleprime_bloch_logdet.py` | B1 | re-run 21/21 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math428/g1doubleprime_bloch_logdet.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math429-G1pp1prime-Inhomogeneous-Wick-M-Scan-PASS-260604-v1.0.tex.txt` | B1 (audit trail; superseded) | note (text) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math429-G1pp1prime-Inhomogeneous-Wick-M-Scan-PASS-260604-v1.1.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math429_g1pp1prime_inhomogeneous_wick.py` | B1 | re-run 19/19 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math429/g1pp1prime_inhomwick.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math430-G1pp2-Dense-Surface-Convergence-PASS-260604-v1.0.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math430_g1pp2_dense_surface_convergence.py` | B1 | re-run 11/11 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math430/g1pp2_surface_convergence.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math431_g1pp3_lam_hex_fcc.py` | B1 | re-run 15/15 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math431/g1pp3_lam_hex_fcc.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.0.tex.txt` | B1 (audit trail; superseded) | note (text) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math432_g3prime_multishell_ensemble.py` | B1 | re-run 25/25 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math432/g3prime_multishell_ensemble.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math434-Section15p5-Independent-Audit-ReadingH-T5-Candidacy-PASS-260604-v1.0.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math434_lam_exact_wick_bracket.py` | B1 | re-run 22/22 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math434/lam_exact_wick_bracket.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+| `Runs/math/Math434/state.json` | B1 | checkpoint state (provenance) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.0.tex.txt` | B1 (audit trail; superseded) | note (text) | PENDING (H-LAYER) |
+| `Docs/math/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt` | B1 (canonical) | note (text) | PENDING (H-LAYER) |
+| `Codes/supplementary/Math436_hex_exact_wick_bracket.py` | B1 | re-run 49/49 PASS | PENDING (H-LAYER) |
+| `Runs/math/Math436/hex_exact_wick_bracket.json` | B1 | reproduced within 1e-9 | PENDING (H-LAYER) |
+
 ## Translation events (not file migrations)
 
 | Event | Source | Result | Date |
@@ -66,8 +117,7 @@ All dispositions in this batch are MIGRATED-VERBATIM.
 
 1. ~~Sector-B chain (Math426/435/437/440/441/442 + scripts + JSONs)~~ — **DONE
    (batch 1)**. A1, B2 migration-clean; B1 partially resolved.
-2. **Math431-HEX estimator chain** (+ Math428–432/434/436 enumerated-reading
-   notes) — required for B1-RH-ENUM migration-cleanness and Packet A.
-3. Math427 (isotropic-dressing infimum, H-LAYER support) — strengthens the
-   H-LAYER justification chain.
-4. T7-candidates: `C2-LORENTZ-EMERGENT`, `C3-EP`, `D3-CHIRALITY`.
+2. ~~Math427–432 / Math434(+AddA) / Math436 enumerated-reading + estimator
+   chain~~ — **DONE (batch 2)**. B1 migration-clean; H-LAYER justification
+   chain grounded; Packet-A evidence complete.
+3. T7-candidates: `C2-LORENTZ-EMERGENT`, `C3-EP`, `D3-CHIRALITY`.

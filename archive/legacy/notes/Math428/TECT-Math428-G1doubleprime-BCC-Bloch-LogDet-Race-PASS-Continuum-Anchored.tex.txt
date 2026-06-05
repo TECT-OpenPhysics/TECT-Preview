@@ -1,0 +1,226 @@
+% SUPERSEDED by TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt (see its revision banner).
+% =====================================================================
+% TECT-Math428 -- G1''-0 direct execution: BCC Bloch/Bogoliubov log-det
+%                 free-energy race at the corrected canonical point.
+%                 VERDICT: PASS (continuum-anchored; both error bands
+%                 positive). Reading-H selection SURVIVES the
+%                 off-diagonal Bloch-band attack at the operator's
+%                 G1''-0 protocol (M = M_R fixed, BCC first).
+%                 FULL ARC DOCUMENTED: the finite matched-basis race
+%                 first returned dF = -7.05e-3 (an apparent FAIL); the
+%                 convergence diagnosis showed the D3 lattice-sum
+%                 quadrature under-resolves the q0 shell, suppressing
+%                 the (exactly computable) isotropic fluctuation
+%                 penalty by ~0.025; anchoring the diagonal part on the
+%                 exact continuum integrals and computing the
+%                 off-diagonal share as the convergent second-order
+%                 bubble (calibrated by the stable in-basis exact/2nd
+%                 ratio 0.415) INVERTS the verdict: dF_est(A) > 0 for
+%                 every amplitude, min +7.3e-4 (calibrated) and
+%                 +6.7e-4 (worst case ratio = 1).
+%
+% Status:        G1''-0: CLOSED-PASS (continuum-anchored estimator;
+%                implementation identities machine-verified 16/16).
+%                Reading-H selection statement remains T4 STRONG
+%                EVIDENCE (now robust against the diagonal class
+%                [Math427] AND the Bloch off-diagonal sector at the
+%                G1''-0 protocol). Residual gates: G1''-1' inhomogeneous
+%                Wick + M-scan; G1''-2 full convergence; G1''-3 other
+%                lattices. No pillar tier change (15.5).
+% Audit class:   Gate execution (operator G1'' direct-verification
+%                design, 2026-06-04).
+% Theory tag:    Math428
+% Date:          2026-06-04
+% =====================================================================
+
+\section*{TECT-Math428. G1$''$-0: BCC Bloch log-det race --- finite-basis artefact diagnosed, continuum-anchored verdict PASS}
+
+\subsection*{0. Summary}
+
+The operator-specified Bloch operator
+\[
+K^{(k)}_{G,G'}(A,M) = \big[m_H^2 + c(|k+G|^2-q_0^2)^2\big]\delta_{GG'}
++ (3u+30vM)A^2\,p_2(G{-}G') + 5vA^4\,p_4(G{-}G'),
+\qquad m_H^2 = r_{\rm braz} + 3uM + 15vM^2,
+\]
+was assembled exactly ($p_2, p_4$ = exact integer convolution counts of the
+BCC shell; $p_2(0)=12$, $p_4(0)=540$ asserted) on the $D_3$ reciprocal
+basis with matched reference $K_H = r_R + c(q^2-q_0^2)^2$ on the identical
+basis/mesh, with the uniform-Wick counterterm
+\[
+C_{\rm unif}(A,M) = \big[-\tfrac{3u}{4}M^2 - 5vM^3 - 15vnA^2M^2\big]
+- \big[-\tfrac{3u}{4}M_R^2 - 5vM_R^3\big]
+\]
+pinned by the EXACT diagonal-reduction identity: dropping off-diagonals
+reproduces the Math424-AddA isotropic $\Delta F$ on the same finite basis
+(verified to $10^{-10}$; the algebra is in Section 1). $A{=}0$ identity
+$\Delta F = 0$ at $10^{-10}$; spectral positivity throughout
+($\lambda_{\min} \approx 0.55$ at the scan minimum --- no soft modes,
+consistent with Math400-AddF $n_{\rm neg}=0$).
+
+\textbf{Verdict (G1$''$-0, $M = M_R$, BCC):}
+\[
+\boxed{\;\Delta F^{\rm Bloch}_{\rm est}(A) > 0 \quad \forall A \in [0.02, 0.14],
+\quad \min = +7.3\times 10^{-4}\ (\text{calibrated}),\;
++6.7\times 10^{-4}\ (\text{worst case})\;}
+\]
+Reading-H selection SURVIVES the off-diagonal Bloch attack at the G1$''$-0
+protocol. The off-diagonal softening is real and sizeable (the operator's
+physical intuition is confirmed: it contributes $\sim -0.021$ at the
+finite-basis minimiser, second-order continuum bubble), but the exactly-
+anchored isotropic penalty ($+0.0227$ there) outweighs it at every
+amplitude.
+
+\subsection*{1. Counterterm derivation (diagonal-reduction pinning)}
+
+Gibbs--Bogoliubov with trial kernel $\hat K_{\phi,M}$ around
+$\phi_A = A\sum_{j=1}^{2n} e^{ik_j x}$ gives
+$F_{\rm var} = F_{\rm cl} + \tfrac12\mathrm{Tr}\ln\hat K + \langle H - H_{\rm trial}\rangle$;
+in the uniform-variance (Hartree) treatment $\sigma(x) \to M$ the remainder
+evaluates to $C_{\rm unif}$ above. Substituting the disordered gap relation
+$r_R = r + 3uM_R + 15vM_R^2$ shows term-by-term agreement with the
+Math424-AddA $\Delta F$ formula; numerically the identity holds to
+$10^{-10}$ on every tested basis. The diagonal of the Bloch matrix is
+exactly the isotropic ordered kernel ($p_2(0) = 2n$, $p_4(0) = N_4$), so
+the OFF-DIAGONAL share is cleanly isolated as
+$\Delta F_{\rm full} - \Delta F_{\rm diag}$.
+
+\subsection*{2. Finite matched-basis race: apparent FAIL and its diagnosis}
+
+Fixed $M = M_R$ scan ($|G_{\rm int}|^2 \le 12$, 87 vectors, $4^3$ shifted
+mesh): $\min_A \Delta F = -7.05\times 10^{-3}$ at $A^* = 0.0856$ ---
+nominally a FAIL by the pre-registered thresholds. Convergence
+decomposition at $(A^*, M_R)$:
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+basis & $\Delta F_{\rm full}$ & $\Delta F_{\rm diag}$ & off-diag share & $\lambda_{\min}$\\
+\hline
+$|G|^2\le 10$ & $-0.00776$ & $-0.00297$ & $-0.00478$ & $0.564$\\
+$|G|^2\le 12$ & $-0.00705$ & $-0.00199$ & $-0.00506$ & $0.553$\\
+$|G|^2\le 16$ & $-0.00353$ & $+0.00301$ & $-0.00654$ & $0.545$\\
+$|G|^2\le 20$ & $-0.00145$ & $+0.00590$ & $-0.00735$ & $0.545$\\
+\hline
+continuum & ? & $\mathbf{+0.02268}$ (exact) & see Sec.~3 & ---\\
+\hline
+\end{tabular}
+\end{center}
+
+$\Delta F_{\rm diag}$ drifts $+0.005$/shell toward its EXACT continuum
+value $+0.02268$ (Math424-AddA radial integrals at
+$\hat r(A^*, M_R) = 1.4836$): the $D_3$ lattice-sum samples the soft
+$|q| \approx q_0$ shell only at lattice points and grossly under-counts
+the positive fluctuation penalty. The finite-basis negative is therefore a
+QUADRATURE ARTEFACT, not physics --- matched-basis internal consistency
+does not imply continuum convergence.
+
+\subsection*{3. Continuum-anchored estimator (primary verdict path)}
+
+\[
+\Delta F_{\rm est}(A) = \underbrace{\Delta F_{\rm diag}^{\rm continuum}(A)}_{\rm exact\ radial\ integrals}
++ \rho \cdot \underbrace{\Big[-\tfrac14 \sum_{Q\neq 0} W(Q)^2\, B(|Q|)\Big]}_{\rm 2nd\text{-}order\ bubble,\ convergent},
+\qquad
+B(|Q|) = \int\!\frac{d^3q}{(2\pi)^3}\, G_d(q)\, G_d(q{+}Q),
+\]
+with $W(Q) = (3u+30vM_R)A^2 p_2(Q) + 5vA^4 p_4(Q)$ and the resummation
+ratio $\rho$ calibrated in-basis (exact vs.\ second order on the SAME
+basis): $\rho = 0.416$ (cut 16), $0.414$ (cut 20) --- stable to $0.5\%$,
+asserted. Worst case $\rho = 1$ (no resummation credit) is also reported.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$A$ & $\Delta F_{\rm diag}^{\rm cont}$ & off-diag$^{(2)}$ & est.\ ($\rho{=}0.415$) & est.\ ($\rho{=}1$)\\
+\hline
+0.02 & $+0.00076$ & $-0.00009$ & $+0.00073$ & $+0.00067$\\
+0.05 & $+0.00515$ & $-0.00310$ & $+0.00386$ & $+0.00205$\\
+0.08 & $+0.01802$ & $-0.01650$ & $+0.01116$ & $+0.00152$\\
+0.11 & $+0.06175$ & $-0.04756$ & $+0.04196$ & $+0.01419$\\
+0.14 & $+0.20189$ & $-0.10289$ & $+0.15909$ & $+0.09900$\\
+\hline
+\end{tabular}
+\end{center}
+
+Both bands are positive for every $A$; minima $+7.3\times 10^{-4}$
+(calibrated) and $+6.7\times 10^{-4}$ ($\rho{=}1$), attained at the
+small-$A$ end where the positive quadratic classical+diagonal term
+dominates the quartic-in-$A$ off-diagonal share by construction.
+
+\subsection*{4. What remains open (registered gates)}
+
+\begin{itemize}
+\item[G1$''$-1$'$:] inhomogeneous-Wick treatment ($\sigma(x)$ from the
+Bloch Green function) and the $M$-scan: under the uniform-Wick counterterm
+the $(A, M)$ scan dips to $-0.102$ AT THE $M$-GRID BOUNDARY ($M = 1.6 M_R$)
+--- recorded as UNTRUSTWORTHY (the counterterm's validity degrades with
+$M - M_R$ and the boundary location signals a family artefact, not a
+stationary point). The clean verdict above is the pre-registered
+$M = M_R$ protocol; G1$''$-1$'$ must redo the $M$ direction with exact
+position-dependent Wick terms.
+\item[G1$''$-2:] full convergence of the matched-basis race itself
+(shell-adapted quadrature replacing the bare $D_3$ sum); the anchored
+estimator predicts the converged race lands at the Section-3 values.
+\item[G1$''$-3:] LAM/HEX/FCC repetition (BCC was the most dangerous
+channel by MF discriminant).
+\end{itemize}
+
+\subsection*{5. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{$\alpha$ (scheme mixing):} anchoring the diagonal on continuum
+integrals while computing off-diagonals in basis mixes regularisations.
+\emph{DISMISSED}: the diagonal anchor evaluates the SAME functional
+exactly (the identity of Section 1 ties the two representations at
+$10^{-10}$); the off-diagonal share is the convergent continuum bubble;
+only the resummation ratio is taken from basis, and the verdict is
+insensitive to it (positive even at $\rho = 1$).
+
+\textbf{$\beta$ (calibration transfer):} the in-basis ratio may not
+transfer to the continuum bubble. \emph{VALID-with-band}: this is exactly
+why the worst-case $\rho = 1$ band is reported; both bands positive.
+A $\rho > 1$ (anti-resummation) would be needed to flip the verdict ---
+excluded by the alternating-sign structure of the expansion
+($W/\hat r \sim 0.3$ at the minimiser) and by both in-basis measurements.
+
+\textbf{$\gamma$ (the discarded $(A,M)$-scan negative):} ignoring the
+$-0.102$ could hide a real instability. \emph{UPHELD-as-gate}: it is NOT
+ignored --- it is recorded, diagnosed (boundary minimum under a
+counterterm outside its validity window), and assigned to G1$''$-1$'$,
+which must close before any tier promotion of the selection statement.
+
+\textbf{$\delta$ (initial FAIL announcement):} the finite-basis FAIL was
+provisionally reported in-session before the convergence diagnosis.
+\emph{Documented}: this note records the full inversion arc; the lesson
+(quadrature-artefact class; anchor the exactly-computable part before
+verdicts) is registered in Section 6 for the recurrence ledger.
+
+\subsection*{6. Quantitative sanity checks (CLAUDE.md 6.3.4)}
+
+Identity checks at $10^{-10}$ (diagonal reduction; $A{=}0$ zero).
+Positivity $\lambda_{\min} \approx 0.55$ everywhere sampled. $r_R = 0.304526$,
+$M_R = 0.109414$ reproduce Math426. Ratio stability $0.416/0.414$.
+Limit case $A \to 0$: est.\ $\to 0^+$ quadratically (diag $\propto A^2$
+positive, off-diag $\propto A^4$) --- table confirms. Sign-direction:
+off-diagonals LOWER $\det$ (e.g.\ $2\times2$: $d_1 d_2 - w^2$), i.e.\ help
+the ordered phase --- the attack direction is correctly implemented and
+still loses. RECURRENCE-CLASS LESSON: matched-basis consistency
+$\neq$ continuum convergence; when one part of a race is exactly
+computable, ANCHOR it before reading off a verdict (candidate addition to
+POSTMORTEM_RECURRENCE_POLICY at next policy edit).
+
+\subsection*{7. Cross-references}
+
+Operator G1$''$ direct-verification spec (2026-06-04, conversational
+layer; archived in substance here); Math427 (G1$'$ diagonal closure;
+G1$''$ formulation); Math426 (corrected canonical $r_{\rm braz} = \mu^2$,
+$r_R$, $M_R$); Math424-AddA (isotropic machinery; $N_4/N_6$; $\Delta F$
+formula); Math400-AddF ($n_{\rm neg} = 0$);
+\texttt{Codes/supplementary/Math428\_g1doubleprime\_bloch\_logdet.py}
+(16/16 claims; BlochEngine; anchored estimator);
+\texttt{Runs/math/Math428/g1doubleprime\_bloch\_logdet.json}.
+Textbook anchors: Brazovskii (1975); Fredrickson--Helfand (1987)
+ordered-phase fluctuation treatment; Gibbs--Bogoliubov inequality.
+
+% =====================================================================
+% End of TECT-Math428.
+% =====================================================================

@@ -5,6 +5,34 @@ not pillar counts.
 
 ---
 
+## [Migration-2] Enumerated-reading chain migrated; B1-RH-ENUM migration-clean (167/167) — 2026-06-05
+
+- **Migration batch 2** (plan phase M1) [B1-RH-ENUM; supports H-LAYER of
+  B2-PROPA-HLAYER]: 32 files — 14 notes (Math427 v1.0/v1.1, Math428 v1.0/v1.1,
+  Math429 v1.0/v1.1, Math430, Math431 LAM/HEX/FCC, Math432 v1.0/v1.1,
+  Math434 §15.5 audit + AddA T5-promotion record, Math436 HEX exact-Wick
+  v1.0/v1.1), 8 verification scripts, 10 artefacts (incl. two checkpoint
+  `state.json` provenance files) — MIGRATED-VERBATIM into the per-tag layout.
+- **Re-validation: 167/167 asserts PASS** (5+21+19+11+15+25+22+49) by fresh
+  re-execution, no legacy checkpoint state used; all 8 regenerated JSONs
+  identical to archive within rel_tol 1e-9 — zero diffs, zero stale-artefact
+  findings (contrast batch 1's F-1). Math434/436 checkpoint-resumable;
+  completed in one budget window here. Fresh artefacts + summary under
+  `runs/B1-RH-ENUM/260605-migration-revalidation/`.
+- **B1-RH-ENUM is migration-clean**: `legacy:` pointer resolved; reproduction
+  **AVAILABLE** (8-script chain with resume note); card/ledger/INDEX updated;
+  ESTIMATOR-UPGRADE gate source resolved to archive. H-LAYER's two
+  justification legs (Math427 infimum; enumerated refinements) now grounded
+  in-archive.
+- Batch record note (standard form, FORM-CHECK PASS, Overfull 0, PDF beside
+  source): `claims/B1-RH-ENUM/notes/enumerated-readings-migration-revalidation-260605-v1.0.tex.txt`.
+- No tier changes: B1 stays T5 CLOSED@ESTIMATOR-GRADE; STEP-5B remains the
+  gateway. Sign-off: batch-2 rows PENDING (H-LAYER) per migration-plan §6.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
 ## [Note-Form] Machine-enforced standard note form; PDFs live beside sources; build/ retired — 2026-06-05
 
 - **Standard note form (binding, `naming-and-versioning.md` §3; authoring

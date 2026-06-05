@@ -1,0 +1,298 @@
+% SUPERSEDED by TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt
+% =====================================================================
+% TECT-Math436 -- G1''-3b-HEX: HEX exact-Wick transverse-continuum
+%                 bracket (2D triangular reciprocal lattice x 1D
+%                 transverse continuum) -- the last residual of the
+%                 G1''-3b refinement. LAM half: EXECUTED-CLOSED
+%                 (Math434/Math434-AddA, 22/22). This note: HEX half.
+%
+% Status:        G1''-3b-HEX EXECUTED -- PASS. 49/49 asserts, exit 0
+%                (two sandbox calls, checkpoint/resume). HEX exact-Wick
+%                anchored dF > 0 at ALL 54 grid points; minimum
+%                +9.532966e-5 at (A, M) = (0.01, M_R), slightly ABOVE
+%                the rho=1 estimator minimum (the anchoring lifts the
+%                margin, same direction as the LAM case).
+%                => G1''-3b FULLY DISCHARGED (LAM + HEX both executed).
+%                NO TIER ACTION (refinement gate). Reading-H selection
+%                stays T5 CLOSED@ESTIMATOR-GRADE under the Math434-AddA
+%                pinned wording; the successor wording of the pinned
+%                scope-language trio is an OPERATOR decision (S5).
+%
+% Provenance (two-stage, self-flagged): the dispatched fresh-context
+%   agent read the canonical sources and WROTE the engine script, then
+%   its session hit the usage limit BEFORE writing the note or
+%   executing. The dispatcher (this session) verified the script,
+%   corrected ONE mis-derived combinatorial assert against independent
+%   exact enumeration (S6 objection delta), executed it (49/49, exit 0),
+%   and authored this note from the JSON artefact. All numbers quoted
+%   below are EXECUTED values from
+%   Runs/math/Math436/hex_exact_wick_bracket.json.
+% Date convention: all stamps 2026-06-04 (UTC, bash-canonical per
+%   CLAUDE.md 11.5.3.1); the script docstring carries the agent's local
+%   2026-06-05 (KST) -- same instant, not a drift defect.
+% =====================================================================
+
+\section*{TECT-Math436. G1$''$-3b-HEX: exact-Wick transverse-continuum bracket --- EXECUTED, PASS; G1$''$-3b fully discharged}
+
+\subsection*{1. Scope}
+
+\paragraph{What this gate is.} Math431 closed G1$''$-3 (LAM/HEX/FCC) at
+worst-case $\rho{=}1$ anchored-estimator grade and registered G1$''$-3b:
+exact-Wick brackets for the two readings whose lattices are not
+3D-same-parity (LAM: 1D lattice $\times$ 2D transverse continuum; HEX: 2D
+lattice $\times$ 1D transverse continuum). The Math434 \S 15.5 audit
+sharpened G1$''$-3b into a per-point bound-verification spec; the LAM half
+was executed in the Math434-AddA turn (22/22; anchored min
+$+3.170155\times10^{-5}$). This note executes the HEX half with the same
+protocol. G1$''$-3b-HEX is a refinement gate: it carries NO tier action.
+
+\paragraph{Statement verified.} For the HEX reading
+$\phi_c(x) = A\sum_{j=1}^{6} e^{i k_j x}$ ($n=3$ pairs, $|k_j| = q_0$,
+$k_1{+}k_2{+}k_3{=}0$, zero-phase, Math424-AddA convention $N_4 = 90$,
+$N_6 = 2040$), at the corrected canonical point
+($r_{\rm braz} = \mu^2 = 0.005$, $r_R = 0.30452570866744433$,
+$M_R = 0.10941432918723439$; Math426/Math435):
+\[
+\Delta F_{\rm exact\text{-}anchored}^{\rm HEX}(A, M) > 0
+\quad\text{at every point of the Math431 HEX grid}
+\]
+$A \in \{0.01, \dots, 0.20\}$ (9 values) $\times\,
+M \in \{0.4, \dots, 2.5\}\,M_R$ (6 values), 54 points, 0 negatives,
+\[
+\boxed{\;\min_{(A,M)} \Delta F_{\rm exact\text{-}anchored}^{\rm HEX}
+= +9.532966\times10^{-5}\ \text{at}\ (0.01,\, M_R)\;}
+\]
+(inputs: production kernel $K(q) = \mu^2 + C(q^2-q_0^2)^2$, $C = Y = 1$,
+$q_0 = 0.6801747616$, $(u, v) = (-0.86, 3.24)$ production couplings,
+basis cut $N_{\rm Loesch} \le 12$, $N_k = 6$ BZ mesh, $n_{kz} = 251$).
+
+\subsection*{2. Geometry and matched basis}
+
+Reciprocal lattice $\Lambda^* = \{m_1 b_1 + m_2 b_2\}$, $b_1 = k_1$,
+$b_2 = k_2$, Gram matrix $g = q_0^2\begin{pmatrix}1 & -1/2\\ -1/2 &
+1\end{pmatrix}$, $|m_1 b_1 + m_2 b_2|^2 = q_0^2 N(m)$ with the Loeschian
+norm $N(m) = m_1^2 - m_1 m_2 + m_2^2$. Basis: all 43 lattice points with
+$N \le 12$; fluctuation momentum $q = k_{2d} + G + k_z\hat z$, $k_{2d}$
+averaged over an $N_k \times N_k = 6^2$ shifted BZ mesh, $k_z$ a 251-node
+trapezoidal continuum integral. The per-$(k_{2d}, k_z)$ Bloch matrix and
+the bracket protocol (exact $-$ diagonal on the SAME quadrature, entrywise
+UV cancellation) are the direct transpose of the executed LAM engine.
+
+\paragraph{Integer shell-convolution counts (exact, asserted).} In
+$(m_1, m_2)$ coordinates the six shell vectors are $\pm(1,0), \pm(0,1),
+\pm(1,1)$. Brute-force enumeration (asserted in-script and reproduced by
+an independent dispatcher snippet):
+\[
+p_2(0) = 6,\quad
+p_2 = 2 / 2 / 1,\qquad
+p_4(0) = N_4 = 90,\quad
+p_4 = 60 / 48 / 34
+\]
+on the on-shell ($N{=}1$) / $\sqrt3 q_0$ ($N{=}3$) / $2q_0$ ($N{=}4$)
+difference classes respectively;
+$\sum_d p_2 = 36 = 6^2$, $\sum_d p_4 = 1296 = 6^4$; class-resolved $p_4$
+totals $\{0{:}\,90,\ 1{:}\,360,\ 3{:}\,288,\ 4{:}\,204,\ 7{:}\,192,\
+9{:}\,72,\ 12{:}\,36,\ 13{:}\,48,\ 16{:}\,6\}$ (sums to $6^4$).
+
+\paragraph{Math431-HEX metric defect (side finding, measured).} The
+Math431 HEX off2 channel evaluated inter-shell distances with the
+EUCLIDEAN integer norm $|Q| = (q_0/2)\sqrt{x^2 + y^2}$ instead of the
+embedding metric $|Q| = (q_0/2)\sqrt{x^2 + 3y^2}$ ($= q_0\sqrt{N}$). This
+script carries BOTH legs: the replica leg reproduces the Math431 row set
+bit-identically (min $+9.486769\times10^{-5}$, matching the Math431 JSON),
+the corrected leg uses the true metric (min $+9.500744\times10^{-5}$).
+Measured impact: $\max_{\rm grid} |\delta(\Delta F)| = 3.65\times10^{-3}$
+(large-$A$ edge), argmin shift $+1.40\times10^{-7}$ --- the Math431
+CLOSED-PASS verdict is UNAFFECTED (its minimum was understated by
+$1.4\times10^{-7}$, in the safe direction at the argmin). An errata
+banner for Math431 \S(HEX) is REGISTERED as an operator follow-up; no
+other note is patched in this turn.
+
+\subsection*{3. Anchored exact-Wick bracket and hand bounds}
+
+Protocol as Math429/430/434: Gibbs--Bogoliubov upper bound with
+$\sigma(x)$ = Bloch--Green diagonal; exact Wick remainder; everything
+anchored to the exactly computable diagonal. The structurally new HEX
+channel relative to LAM is the on-shell THREE-WAVE resonance
+($k_1 + k_2 + k_3 = 0$, $p_2^{\rm on\text{-}shell} = 2 \ne 0$): the
+condensate couples fluctuation legs separated by ONE shell vector. All
+resonant cross-terms (including $\langle\phi_c^2\,\delta\sigma\rangle$,
+absent in LAM) enter EXACTLY through the $48^2$ torus-FFT cell averages
+of $\sigma$-monomials (band-limited: support cut $N \le 12$ has
+$k_{\max}(\sigma^3) = 12 < 24$ = Nyquist; asserted), not through hand
+algebra. Executed hand-bound block at the argmin $(0.01, M_R)$:
+\[
+\hat r = 0.3093733,\quad
+w_1 = 1.62073\times10^{-3},\ w_{\sqrt3} = 1.61879\times10^{-3},\
+w_2 = 0.81102\times10^{-3},
+\]
+\[
+\|X\|_{\rm Gersh} \le \frac{30\,c_2 + 1206\,c_4}{\hat r} = 7.874\times10^{-2}
+\quad(\text{computed sup } 4.575\times10^{-2}\ \checkmark),
+\]
+\[
+B(0) = 0.1460,\qquad
+|{\rm off2}| \le \tfrac14 B(0) \textstyle\sum_{d\ne0} w_d^2\ \checkmark,
+\qquad
+\sigma_{\rm on\text{-}shell} = 1.690\times10^{-4}\ \le\ \text{envelope}
+\ \checkmark,
+\]
+\[
+|\,{\rm bracket} - {\rm off2}\,|_{\rm argmin} = 3.176\times10^{-7}
+\ \le\ 2\times10^{-5}\ \text{(pre-registered two-sided gate)}\ \checkmark .
+\]
+
+\subsection*{4. Results (all EXECUTED; JSON artefact)}
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+quantity & value & location \\
+\hline
+$\rho{=}1$ estimator min (Math431 replica metric) & $+9.486769\times10^{-5}$ & $(0.01, M_R)$ \\
+$\rho{=}1$ estimator min (corrected metric) & $+9.500744\times10^{-5}$ & $(0.01, M_R)$ \\
+\textbf{exact-Wick anchored min} & $\mathbf{+9.532966\times10^{-5}}$ & $(0.01, M_R)$ \\
+negatives over $9\times6$ grid & 0 & --- \\
+$|$bracket $-$ off2$|$ at argmin & $3.176\times10^{-7}$ & $= $ margin$/300$ \\
+$A{=}0$ bracket identity & $-1.6\times10^{-17}$ & exact \\
+small-$A$ bound $c_2 = n\,r_R$ & $0.913577126$ & $3\times r_R$, rel.\ dev.\ $3\times10^{-15}$ \\
+cut $12{\to}16$ drift at argmin & $+2.97\times10^{-8}$ & margin$/3211$ \\
+$N_k\,6{\to}10$ drift at argmin & $-4.1\times10^{-11}$ & negligible \\
+\hline
+\end{tabular}
+\end{center}
+
+The anchored exact minimum sits ABOVE the estimator minimum (the bracket
+$-4.04\times10^{-7}$ is less negative than the $\rho{=}1$ off2
+$-7.22\times10^{-7}$): the HEX margin, like the LAM margin, SURVIVES and
+slightly RISES under the exact treatment. The M\_fast interpolation table
+(Math424-AddA) IS used by this engine; the Math434-protocol spot check at
+the argmin is executed: raw $|M_{\rm direct} - M_{\rm table}| =
+1.01\times10^{-5}$ (gate $2\times10^{-5}$), and the consistent-scheme
+$\Delta F$-level impact after reference-difference cancellation is
+$1.48\times10^{-8}$ = margin$/6432$ (gate $10^{-7}$). Both PASS; this
+also discharges the Math434 open item (b) ``M\_fast spot check at the
+LAM/BCC argmins'' for the HEX channel.
+
+\subsection*{5. Consequences and registered items}
+
+\begin{enumerate}
+\item \textbf{G1$''$-3b FULLY DISCHARGED}: LAM executed (Math434-AddA,
+22/22) $+$ HEX executed (this note, 49/49). Within the enumerated
+single-shell ensembles, every non-BCC reading now carries an executed
+exact-Wick-grade certificate at its dangerous window; FCC was already
+full exact-Wick (Math431); BCC retains its continuum-anchored
+estimator-grade chain (Math428--430) --- unchanged by this gate.
+\item \textbf{Scope-language re-pin = OPERATOR item}: the pinned trio
+ends ``\dots the HEX exact-Wick bracket remains a residual refinement'';
+with HEX executed this clause is discharged. The successor wording is NOT
+set here (Math434-AddA pinning discipline); proposed candidate for the
+operator: ``All enumerated readings are closed at estimator grade; the
+LAM and HEX weakest links have additionally been executed at exact-Wick
+bracket grade; BCC remains continuum-anchored estimator grade.''
+\item \textbf{Math431-HEX metric-defect errata banner}: registered
+(\S 2); verdict-neutral ($+1.4\times10^{-7}$ at argmin, safe direction).
+\item \textbf{No tier action}: Reading-H selection stays
+T5 CLOSED@ESTIMATOR-GRADE (pinned); T6 discussion remains FORBIDDEN
+before Step-5. Priority remainder: \textbf{Step-5 exhaustiveness (the
+substantive T6-discussion gate) $>$ G3$'$-b}.
+\end{enumerate}
+
+\subsection*{6. Devil's-advocate self-test (CLAUDE.md 6.3.1 + 6.3.5(a))}
+
+\textbf{Objection $\alpha$ (is the triangular matched basis at cut 12
+converged?):} \emph{DISMISSED with evidence}: cut $12 \to 16$ and
+$N_k\,6 \to 10$ drifts at the argmin are $2.97\times10^{-8}$ and
+$-4.1\times10^{-11}$ --- 3 to 6 orders below the $9.5\times10^{-5}$
+margin (both $\le$ 10\% pre-registered gates PASS); mid-amplitude cut
+drift $-1.9\times10^{-5}$ at $(0.10, M_R)$ is 3 orders below the local
+$\Delta F$ there.
+
+\textbf{Objection $\beta$ (the HEX three-wave resonance introduces
+remainder channels ABSENT in LAM --- is the LAM-derived bracket algebra
+still complete?):} \emph{DISMISSED by construction}: the $\sigma$-monomial
+cell averages are computed exactly on the band-limited torus FFT
+(Nyquist-safe, asserted), so every resonant cross-term, including the
+on-shell $\langle\phi_c^2\,\delta\sigma\rangle$ channel, is included
+without hand algebra; the on-shell $\hat\sigma$ magnitude
+($1.69\times10^{-4}$) passes its analytic envelope check, and the
+two-sided $|{\rm bracket} - {\rm off2}|$ gate ($3.18\times10^{-7} \le
+2\times10^{-5}$) bounds the total remainder at margin$/300$.
+
+\textbf{Objection $\gamma$ (is the $\rho{=}1$ ``worst case'' label doing
+load-bearing work at mid amplitude?):} \emph{DISMISSED}: the
+certification at every grid point is the EXACT anchored bracket, not the
+estimator; the estimator legs are retained only for Math431 regression
+and metric-defect measurement.
+
+\textbf{Objection $\delta$ (dispatcher claim calibration):} the agent's
+hand-derived $p_4(\sqrt3\text{-class}) = 44$ failed the script's own
+exact enumeration (48) on first execution. \emph{VALID-with-mitigation,
+self-flagged}: the dispatcher verified 48 by an independent brute-force
+snippet (all sibling counts 90/60/34 and both sum rules $6^2$/$6^4$
+confirmed; class-resolved totals in \S 2), corrected the assert AND one
+leaked documentation line (\texttt{ws3\_0}), and re-ran from scratch;
+the load-bearing coupling matrices were always built from the enumerated
+$P_2/P_4$ dictionaries, so NO physics number depended on the wrong
+constant (the Gershgorin row-sum 1206 is class-split-independent).
+
+\textbf{Objection $\epsilon$ (two-stage provenance):} the authoring agent
+hit its usage limit after writing the engine; the dispatcher executed and
+authored the note. \emph{VALID-with-mitigation, self-flagged}: identical
+to the Math434/435 precedent; every quoted number is machine-checked by
+the 49 in-script asserts and the JSON artefact; no chat-only number
+exists.
+
+\paragraph{Quantitative sanity checks (CLAUDE.md 6.3.4).}
+\begin{itemize}
+\item \textbf{Limit case ($A \to 0$)}: $\Delta F \to c_2 A^2$ with
+$c_2 = n\,r_R = 3 \times 0.30452570866744433 = 0.913577126$ reproduced to
+$3\times10^{-15}$ relative; $A{=}0$ bracket $= -1.6\times10^{-17}$. PASS.
+\item \textbf{Sign direction}: anchoring LIFTS the minimum
+($+9.501 \to +9.533 \times10^{-5}$), the same direction as the executed
+LAM case ($+3.1696 \to +3.1702\times10^{-5}$) --- the reference-anchored
+remainder is first-order protected at the disordered stationary point.
+PASS.
+\item \textbf{Magnitude ordering}: executed/estimator minima order as
+LAM $(n{=}1)$ $3.17\times10^{-5}$ $<$ HEX $(n{=}3)$ $9.53\times10^{-5}$
+$<$ FCC $(n{=}4)$ $1.26\times10^{-4}$, matching the per-lattice
+$c_2 = n\,r_R$ scaling at $A = 0.01$. PASS.
+\item \textbf{Dimensional/identity}: $\sum_d p_2 = (2n)^2$,
+$\sum_d p_4 = (2n)^4$ exact; bracket built as exact $-$ diagonal on the
+same quadrature (UV-finite by construction). PASS.
+\item \textbf{Reproducibility}: deterministic checkpoint/resume (two
+sandbox calls); JSON artefact with 49 per-claim records. PASS.
+\end{itemize}
+
+\subsection*{7. Pre-registered falsification-gate outcomes}
+
+\begin{itemize}
+\item[\textbf{PASS branch}] (fires): 0 negatives; anchored min
+$+9.53\times10^{-5}$ at margin$/$drift separation $\ge 300$;
+$\Rightarrow$ \textbf{G1$''$-3b fully discharged}; scope-language re-pin
+registered as operator item; NO tier action.
+\item[\textbf{FAIL branch}] (does not fire): no certified negative
+$\Delta F$ anywhere on the grid.
+\item[\textbf{Metric-defect contingency}] (new, this note): the Math431
+metric defect could in principle have flipped the HEX verdict; measured:
+argmin impact $+1.4\times10^{-7}$ (safe direction), max grid impact
+$3.65\times10^{-3}$ at the large-$A$ edge where margins are
+$\mathcal{O}(10^{-2})$ --- verdict UNAFFECTED; errata banner registered.
+\end{itemize}
+
+\subsection*{8. Cross-references}
+
+\texttt{Codes/supplementary/Math436\_hex\_exact\_wick\_bracket.py} (engine;
+49 asserts; checkpoint/resume; FIRST EXECUTION 2026-06-04 UTC, exit 0);
+\texttt{Runs/math/Math436/hex\_exact\_wick\_bracket.json} (artefact);
+\texttt{Codes/supplementary/Math434\_lam\_exact\_wick\_bracket.py} (LAM
+engine this transposes);
+Math434 \S Task-2 + Math434-AddA (audit spec; LAM execution record;
+pinned scope trio); Math431 + \texttt{Runs/math/Math431/g1pp3\_lam\_hex\_fcc.json}
+(HEX estimator target; metric-defect subject); Math429/Math430 (anchored
+exact-Wick protocol); Math426/Math435 (corrected constants and lexicon);
+Math424-AddA (HEX $N_4 = 90$, $N_6 = 2040$, zero-phase convention).
+
+% =====================================================================
+% End of TECT-Math436 (260604-v1.0).
+% =====================================================================
