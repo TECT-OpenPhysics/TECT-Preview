@@ -6,7 +6,7 @@
 
 Generated: 2026-06-05
 
-**105 artefacts** · superseded versions kept: 3 · machine-readable twin: `verification/catalog.json`
+**118 artefacts** · superseded versions kept: 6 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -15,11 +15,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `e1a7fb6722dd` |
+| `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `8f3e8b3fdc49` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `87535d45fddf` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `9bb46befcf59` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `b662cbf897b0` |
-| `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `ce2d986fb810` |
+| `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `1372937b73a2` |
 | `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `44d6d0e0c731` |
 | `claims/B3-BCC-STRUCT/claim.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `3164a060ce35` |
 | `claims/B3-BCC-STRUCT/status.json` | B3-BCC-STRUCT | — | — | — | ACTIVE | `e22335660613` |
@@ -56,7 +56,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-v1.0.md` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.0 | ACTIVE | `0719bdedfd91` |
+| `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.1 | SUPERSEDED | `318e68be1aef` |
+| `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.2.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.2 | SUPERSEDED | `e037afe0c505` |
+| `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.3.pdf` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.3 | ACTIVE | `97b9f8f44900` |
+| `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.3.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.3 | ACTIVE | `191c847c9225` |
+| `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-v1.0.md` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.0 | SUPERSEDED | `2c8048c91fc6` |
 
 ## Migrated legacy notes (immutable)
 
@@ -118,10 +122,15 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `verification/README.md` | — | — | — | — | ACTIVE | `4004599ab59c` |
+| `verification/README.md` | — | — | — | — | ACTIVE | `5d7efd224fda` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
-| `verification/scripts/build_catalog.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `ebf715708a01` |
+| `verification/scripts/build_catalog.py` | — | 2026-06-05 | 2026-06-05 | v1.1.2 | ACTIVE | `0ae658fd6427` |
+| `verification/scripts/build_note_pdf.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `833576292f13` |
+| `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
 | `verification/scripts/lint_claims.py` | — | 2026-06-05 | 2026-06-05 | v1.2.0 | ACTIVE | `ffcd0336747a` |
+| `verification/scripts/release_check.py` | — | 2026-06-05 | 2026-06-05 | v1.0.3 | ACTIVE | `55223c576195` |
+| `verification/templates/note-preamble.tex` | — | — | — | — | ACTIVE | `7c9f56217cb9` |
+| `verification/templates/note-skeleton.tex.txt` | — | — | — | — | ACTIVE | `6554fcd6dad7` |
 | `verification/tests/test_lint_claims.py` | — | — | — | — | ACTIVE | `6cca26907a46` |
 
 ## Papers (publication layer)
@@ -134,13 +143,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `publish/website/README.md` | — | — | — | — | ACTIVE | `66f4ef59ae88` |
+| `publish/website/README.md` | — | — | — | — | ACTIVE | `94a2cfae6b72` |
+| `publish/website/app.js` | — | — | — | — | ACTIVE | `6bbd321bc04b` |
+| `publish/website/index.html` | — | — | — | — | ACTIVE | `14f9be9af8f8` |
+| `publish/website/style.css` | — | — | — | — | ACTIVE | `87a4b41b5e4d` |
 
 ## Registries and ledgers
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b73841a98c2e` |
+| `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `bf39f02682e6` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `431271b7082d` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `4fe7ed38ecfb` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `565e259ef4d3` |
@@ -151,10 +163,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `governance/claim-standard.md` | — | — | — | — | ACTIVE | `9aa114d86c4d` |
-| `governance/migration-plan.md` | — | — | — | — | ACTIVE | `65d8934d0bfe` |
-| `governance/naming-and-versioning.md` | — | — | — | — | ACTIVE | `76c0e2488dba` |
-| `governance/publication-tiers.md` | — | — | — | — | ACTIVE | `60d143e0298f` |
+| `governance/claim-standard.md` | — | — | — | — | ACTIVE | `de4a63345bee` |
+| `governance/migration-plan.md` | — | — | — | — | ACTIVE | `8391b2c83152` |
+| `governance/naming-and-versioning.md` | — | — | — | — | ACTIVE | `167dd5974b7e` |
+| `governance/publication-tiers.md` | — | — | — | — | ACTIVE | `aa304c1d43ed` |
 | `governance/tier-system.md` | — | — | — | — | ACTIVE | `101d07398c0e` |
 | `governance/verification-standard.md` | — | — | — | — | ACTIVE | `4c2a6677998f` |
 
@@ -163,7 +175,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `9f208b13e74e` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `b05b51fb286d` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `472509246751` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d6e925fd5c9d` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `c6375e3bd80d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -175,10 +187,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `5823ace4c536` |
+| `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
+| `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `0fadcbcf9ea2` |
 | `reviews/README.md` | — | — | — | — | ACTIVE | `ef1a56a7aee1` |
-| `theory/README.md` | — | — | — | — | ACTIVE | `e63c040ff713` |
+| `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |

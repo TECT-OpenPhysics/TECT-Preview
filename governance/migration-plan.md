@@ -30,7 +30,7 @@
 | Disposition | Meaning |
 |---|---|
 | MIGRATED-VERBATIM | copied verbatim into the per-tag layout under `archive/legacy/`; cited as evidence as-is |
-| REWRITTEN | modernised into `claims/<ID>/notes/...` (Markdown+LaTeX, TSv2 footer); archive copy kept |
+| REWRITTEN | modernised into `claims/<ID>/notes/...` (`.tex.txt` fragment, TSv2 footer); archive copy kept |
 | SUPERSEDED | content replaced by a newer TECT result; archive copy kept for history |
 | DROPPED | not carried forward (reason recorded) |
 | COLD-ARCHIVE | retained only in the frozen legacy repo; no copy here |

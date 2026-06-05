@@ -9,10 +9,11 @@ claims/<ID>/
   claim.md      # human-readable card (statement, scope, falsifier, history,
                 # devil's-advocate section, no-overclaim statement)
   status.json   # machine-readable single source of truth
-  notes/        # working proof notes for this claim, versioned re-issue
-                # (<descriptive-slug>-<YYMMDD-first>[-<YYMMDD-this-version>]-
-                #  v<major>.<minor>.md; two-date rule from v1.1; all versions
-                #  kept; naming-and-versioning.md §3)
+  notes/        # working proof notes: LaTeX fragments (.tex.txt), versioned
+                # re-issue (<descriptive-slug>-<YYMMDD-first>[-<YYMMDD-this-
+                #  version>]-v<major>.<minor>.tex.txt; two-date rule from
+                #  v1.1; all versions kept; naming-and-versioning.md §3;
+                #  PDF via build_note_pdf.py)
   (optional) assumptions.md, proof-sketch.md — for large cards
 ```
 
@@ -93,7 +94,7 @@ devil's-advocate section (≥3 concrete objections with verdicts), a quantitativ
 sanity check when numbers are involved, and — for T6→T7 — dual independent
 audit + operator sign-off recorded in the card history.
 
-## 6. Result footer (mandatory at the end of every theory note)
+## 6. Result footer (mandatory at the end of every proof note; a `verbatim` block in `.tex.txt` notes)
 
 ```
 Result ID:               <claim ID>

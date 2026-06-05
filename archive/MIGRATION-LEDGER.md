@@ -24,7 +24,7 @@ artefact under `runs/` is canonical for TSv2 citation. Convention check: all
 items are themselves the corrected-convention ($r_{\rm braz}=K(q_0)=\mu^2$)
 lineage — no stale-convention content. Sign-off: migration directed in-session
 2026-06-05; **formal operator sign-off for B2-feeding rows: PENDING**.
-Batch record note: `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-v1.0.md`.
+Batch record note: `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.3.tex.txt` (+ PDF beside it; v1.0 .md / v1.1 / v1.2 superseded re-issues, all kept).
 
 All dispositions in this batch are MIGRATED-VERBATIM.
 

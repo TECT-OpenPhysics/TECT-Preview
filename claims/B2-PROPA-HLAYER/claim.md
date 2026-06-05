@@ -60,6 +60,12 @@ the first TSv2 tier action on this claim.
   theory tag Math442), translated per `governance/tier-system.md` §4.
 - 2026-06-05 — M1 migration: Math437 v1.0-v1.2 + Math440/441/442 audit chain, scripts, artefacts migrated; re-validated 166/166 asserts. STALE-ARTEFACT finding (archived Math437 JSON predates R1 repair; numerics identical) logged in runs/. H-LAYER/H-A0 transcribed verbatim into GATES.md. Reproduction AVAILABLE. Migration-clean.
 - 2026-06-05 — Archive reorganised to per-tag layout; evidence paths updated. Batch record note issued: `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-v1.0.md`.
+- 2026-06-05 — Note-format decision: batch record re-issued as v1.1 `.tex.txt`
+  (`claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt`);
+  v1.0 `.md` superseded. PDF pipeline verified (`build_note_pdf.py`).
+- 2026-06-05 — Batch record re-issued v1.2 (table-width compliance, Overfull 7->0)
+  then v1.3 (standard-form banner; FORM-CHECK PASS); PDF now lives beside the
+  source in `notes/`; `build/` area retired.
 
 ## Next required action
 

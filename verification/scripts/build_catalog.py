@@ -21,8 +21,10 @@ Changelog:
   1.1.0 (2026-06-05) parse python __version__/__first_issued__/__version_issued__
         headers and run-artefact "date" fields, so code and results carry the
         same date/version columns as documents (naming §5 uniform-visibility).
+  1.1.1 (2026-06-05) skip git-ignored build/ area (PDF build artefacts are not catalogued).
+  1.1.2 (2026-06-05) two-date parsing extended to .pdf (note PDFs now live beside sources).
 """
-__version__ = "1.1.0"
+__version__ = "1.1.2"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-06-05"
 
@@ -38,9 +40,9 @@ REPO = Path(__file__).resolve().parents[2]
 CATALOG_MD = REPO / "CATALOG.md"
 CATALOG_JSON = REPO / "verification" / "catalog.json"
 
-VER_RE = re.compile(r"-(\d{6})(?:-(\d{6}))?-v(\d+)\.(\d+)\.(?:md|tex\.txt|txt)$")
+VER_RE = re.compile(r"-(\d{6})(?:-(\d{6}))?-v(\d+)\.(\d+)\.(?:md|tex\.txt|txt|pdf)$")
 TAG_RE = re.compile(r"(Math\d+)")
-SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache"}
+SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build"}
 SKIP_NAMES = {"CATALOG.md", "catalog.json", ".gitkeep"}
 
 KINDS = [

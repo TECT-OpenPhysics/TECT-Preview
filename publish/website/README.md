@@ -1,7 +1,9 @@
-# publish/website/ — P2 website channel
+# publish/website/ — live-fetch static shell (P2)
 
-Generated from `claims/*/status.json` (single direction P1 -> P2). Rules W1/W2
-in `governance/publication-tiers.md`: every statement maps to a claim ID at its
-registered tier; no page may show a status absent from the generated data.
-Manual edits are limited to layout/narrative wrappers. Generator: to be added
-under `verification/scripts/` (planned: `render_website.py`).
+Three files only: `index.html`, `app.js`, `style.css`. No content lives here:
+at view time the shell fetches the repository's `main` branch
+(`verification/catalog.json` as manifest, `claims/*/status.json`, the Markdown
+registries) and renders with marked + MathJax. Push = the site is current, by
+construction. Rules W1'/W2' and deployment via `.github/workflows/pages.yml`:
+`governance/publication-tiers.md`. Local preview:
+`python -m http.server` here, then open `?repo=owner/name`.

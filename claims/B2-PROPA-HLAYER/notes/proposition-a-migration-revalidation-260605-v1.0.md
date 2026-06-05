@@ -1,3 +1,5 @@
+> SUPERSEDED by proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt (format re-issue; content identical)
+
 # B2-PROPA-HLAYER — M1 batch-1 migration & re-validation record
 
 > **Version**: v1.0 (first issue) · **Issued**: 2026-06-05 · **Status**: verification record (no tier action)

@@ -1,0 +1,27 @@
+% TECT proof-note wrapper preamble (build_note_pdf.py inserts the fragment).
+% Standard-LaTeX-only policy (naming-and-versioning.md §3): every package here
+% ships with TeX Live's required/tools/recommended sets. Notes may use ONLY
+% what this preamble provides; a note needing more extends THIS template (one
+% place), never a per-note preamble.
+\documentclass[11pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,tabularx,booktabs}   % width-bounded tables (mandatory for tables)
+\usepackage[hyphens]{url}              % \url{} breaks long paths at separators
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\setlength{\emergencystretch}{2em}     % last-resort line breaking, no overfull
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}  % wrapping table column
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\title{%%TITLE%%}
+\date{%%DATE%%}
+\author{%%AUTHOR%%}
+\begin{document}
+\maketitle

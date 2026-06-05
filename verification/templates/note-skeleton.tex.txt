@@ -1,0 +1,47 @@
+% =============================================================================
+% Title: <proper human-readable title of the note>
+% Claim: <PRIMARY-CLAIM-ID> (supporting: <other IDs, optional>)
+% Version: v1.0 -- first issued YYYY-MM-DD; this version issued YYYY-MM-DD
+% Status: <theorem note | derivation | verification record | audit> (<tier action or "no tier action">)
+%
+% Revision history (cumulative):
+%   v1.0 (YYYY-MM-DD) first issue.
+% =============================================================================
+% Mandatory structure (naming-and-versioning.md section 3; enforced by
+% build_note_pdf.py): banner fields above; the sections "Purpose and scope",
+% "Devil's-advocate", "Result footer" below; footer inside verbatim.
+% Width-bounded tables only (tabularx + Y columns); long paths in \url{}.
+
+\section*{1. Purpose and scope}
+% What is claimed and what is explicitly NOT claimed; tier action if any.
+
+\section*{2. Statement}
+% \begin{theorem} ... \end{theorem} (or procedure description for records).
+
+\section*{3. Setting and hypotheses}
+% Named hypotheses with claims/GATES.md references.
+
+\section*{4. Proof / derivation / procedure}
+
+\section*{5. Numerical verification}
+% Mandatory when the note contains numbers: script paths, assert counts,
+% artefact paths under runs/<claim>/, tolerances, quantitative sanity check.
+
+\section*{6. Devil's-advocate (three objections minimum)}
+% (alpha)/(beta)/(gamma), each DISMISSED / VALID-with-mitigation / UPHELD.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               <claim ID>
+Precise statement:       <one sentence>
+Scope:                   <pinned scope>
+Dependencies:            <claim IDs / hypotheses>
+Evidence grade:          <grades>
+Reproduction command:    <command or PACKAGE-PENDING>
+Expected output:         <PASS criterion with tolerance>
+Falsification gate:      <condition>
+Tier before / after:     <Tx> / <Ty>
+No-overclaim statement:  <the forbidden stronger reading>
+Next required action:    <step>
+\end{verbatim}

@@ -32,15 +32,37 @@ derivation rules — never by parallel copies.
 
 P2 is **derived** from P1. Two channels, separate folders, separate rules:
 
-### `publish/website/`
+### `publish/website/` — LIVE-FETCH architecture (binding, 2026-06-05)
 
-- Audience: general/scientific public; rendered website content and data.
-- Rule W1: every statement on the website maps to a claim ID at its registered
-  tier; website data files are generated from `claims/*/status.json`
-  (generator to be added under `verification/scripts/`), single direction
-  P1 → P2. Manual website edits are limited to layout/narrative wrappers.
-- Rule W2: no website page may show a tier, count, or status not present in
-  the generated data.
+- Audience: general/scientific public. The website is a **static shell only**
+  (`index.html`, `app.js`, `style.css`): at view time the JavaScript fetches
+  the repository's `main` branch directly
+  (`raw.githubusercontent.com/<owner>/<repo>/main/...`) — the manifest is
+  `verification/catalog.json`, claims render from `claims/*/status.json`,
+  registries/roadmap render from their Markdown sources (marked + MathJax,
+  CDN). **There are no content files in `publish/website/` at all**, hence
+  nothing to regenerate and nothing that can go stale: push = the site is
+  current, by construction (the strongest possible form of the old W1/W2
+  single-source rules).
+- Rule W1′: the shell may not embed any fact, count, tier, or status as a
+  literal — everything displayed is fetched. Shell changes are layout only.
+- Rule W2′: the shell auto-detects `<owner>/<repo>` from the GitHub Pages URL
+  (override: `?repo=owner/name`); it carries no hard-coded repository name.
+- Deployment: `.github/workflows/pages.yml` uploads `publish/website/` via
+  GitHub Actions Pages on every push to `main` (Settings → Pages → Source =
+  GitHub Actions). This fully replaces the legacy website.
+
+### GitHub Wiki — generated snapshot channel
+
+- Wikis cannot fetch at view time, so the wiki is the one surface that is
+  GENERATED: `python verification/scripts/build_wiki.py --repo <owner>/<repo>`
+  emits the pages into a temporary directory (printed; `--out` to choose) (Home, Claims-Ledger, Gate-Registry, Roadmap,
+  Negative-Results, Predictions, Reviewing, Catalog-Summary) from the same
+  sources as everything else. Every page carries an AUTO-GENERATED banner.
+- Hand-editing the wiki is forbidden; regenerate and re-push (publish command
+  in the script docstring). Regenerate whenever the cited sources change —
+  the wiki is a convenience snapshot; the repository and the live site are
+  canonical.
 
 ### `publish/papers/`
 
@@ -67,6 +89,45 @@ P2 is **derived** from P1. Two channels, separate folders, separate rules:
 - Recommended (when remote goes live): protected `main`, CI gate on
   `lint_claims.py`, release tags for Minimal Review Packets and paper freezes;
   Zenodo DOI snapshot per release tag.
+
+## GitHub release procedure (decided 2026-06-05)
+
+**This repository is the public repository.** No curation script copies
+content into the legacy public repo — a one-direction mirror script would
+re-create the legacy mirror-drift failure class (4 mirror trees, snapshot
+discipline, repeated postmortems) that this architecture was built to remove.
+Push = publish.
+
+**Continuity with the legacy public repository — two sanctioned options:**
+
+- **Option SAME-REPO (recommended when repo identity matters — URL, stars,
+  watchers, issues):** on GitHub, rename the legacy default branch to
+  `legacy-archive` (Settings → Branches, or push the old tree to that branch),
+  then push this repository's `main` as the new default branch. The two
+  histories coexist as branches of one repo; the legacy era stays browsable;
+  no mirror machinery exists.
+- **Option NEW-REPO (clean separation):** create a fresh public repository
+  for this tree; the legacy repo gets a final commit with a README banner
+  ("superseded by <new repo>; frozen as legacy archive") and is set to
+  GitHub Archive (read-only). Old links keep working and point forward.
+
+Either way the legacy public repo is never written to again except for the
+archival banner.
+
+**Mandatory pre-push gate:** every push to the public remote is preceded by
+
+```bash
+python verification/scripts/release_check.py
+```
+
+(exit 0 required) which verifies: ledger + catalog sync, the P0 fence (no
+file under `internal/` cited from public surfaces), English-only policy,
+no-overclaim phrase scan, P2-cites-migration-clean-claims rule, and file
+hygiene (NUL/JSON/AST/oversize). CI re-runs the same gate on every push.
+
+**Website continuity:** the legacy website stays frozen with the archival
+banner until `publish/website/` has its generator; the new site then deploys
+from this repository (GitHub Pages), and the old URL gets a forward link.
 
 ## Decision table
 

@@ -5,6 +5,111 @@ not pillar counts.
 
 ---
 
+## [Note-Form] Machine-enforced standard note form; PDFs live beside sources; build/ retired — 2026-06-05
+
+- **Standard note form (binding, `naming-and-versioning.md` §3; authoring
+  skeleton `verification/templates/note-skeleton.tex.txt`)**: banner fields
+  `% Title:` (the PDF title is the proper human-readable title, never the
+  filename), `% Claim:`, `% Version: vN.M -- first issued D1; this version
+  issued D2` (rendered in the PDF date field as "first issued D1 · this
+  version issued D2 · vN.M"), `% Status:`, cumulative revision history;
+  mandatory sections Purpose-and-scope / content / Numerical-verification
+  (when numbers) / Devil's-advocate / Result-footer-in-verbatim.
+- **`build_note_pdf.py` v1.1.0 FORM-CHECK** enforces the form AND cross-checks
+  banner version/dates against the two-date filename (mismatch refuses the
+  build); compiles in a TEMPORARY directory; gates on zero Overfull-hbox;
+  places the PDF **next to its source** (`claims/<ID>/notes/<stem>.pdf`;
+  current version's PDF only — superseded PDFs removed, sources reproducible).
+- **`build/` area retired repo-wide**: LaTeX intermediates never touch the
+  repository; `build_wiki.py` v1.1.0 emits to a temp dir (`--out` override);
+  `.gitignore` build/ entry removed; catalog v1.1.2 parses note-PDF filenames.
+- Batch record re-issued v1.3 (standard-form banner; FORM-CHECK PASS;
+  PDF title/date verified via text extraction) [A1-KERNEL-CONV,
+  B2-PROPA-HLAYER]; v1.2 superseded, all versions kept.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [Publication-Surfaces] Standard-LaTeX table rule; live-fetch website; wiki generator — 2026-06-05
+
+- **Standard LaTeX + width-bounded tables (binding,
+  `naming-and-versioning.md` §3)**: notes compile under the standard template
+  alone (required/tools packages only; per-note preambles forbidden — extend
+  the template); every table is `tabularx{\textwidth}` with wrapping `Y`
+  columns; long paths use `\url{}`; acceptance = ZERO `Overfull \hbox`
+  (`build_note_pdf.py` v1.0.2 prints the count and fails on nonzero).
+  Proven [A1-KERNEL-CONV, B2-PROPA-HLAYER]: batch-1 record v1.1 built with 7
+  overfull boxes → **v1.2 width-compliance re-issue builds with 0**
+  (v1.1 superseded, kept).
+- **Website rebuilt as LIVE-FETCH static shell** (`publish/website/`:
+  index.html + app.js v1.0.1 + style.css; `publication-tiers.md` W1′/W2′):
+  no content files exist — at view time the shell fetches `main` directly
+  (catalog.json manifest → status.json cards, Markdown registries; marked +
+  MathJax). Push = site current, by construction; owner/repo auto-detected
+  from the Pages URL. Deployment workflow `.github/workflows/pages.yml`
+  (Actions Pages) fully replaces the legacy website.
+- **Wiki = the one generated snapshot channel**: `build_wiki.py` v1.0.1 emits
+  8 pages to `build/wiki/` from the same sources, AUTO-GENERATED banners,
+  hand-editing forbidden; publish command in the docstring.
+- Defect caught in-session: `_TEMPLATE` counted as an 18th claim by the wiki
+  generator (and would have been by the site) — fixed in build_wiki v1.0.1 /
+  app.js v1.0.1. release_check v1.0.3 extends the English-only scan to
+  .html/.js/.css.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [Note-Format] Proof notes return to .tex.txt; PDF pipeline; SAME-REPO confirmed — 2026-06-05
+
+- **Operator decisions**: (i) GitHub continuity = SAME-REPO option (legacy
+  default branch → `legacy-archive`; this tree becomes the new `main`);
+  (ii) the bootstrap `.md` choice for proof notes is REVISED — **working proof
+  notes are `.tex.txt` LaTeX body fragments** (`naming-and-versioning.md` §3):
+  full math fidelity (theorem envs, align, refs), uniformity with the ~440-note
+  legacy corpus, and direct PDF builds. **Division of labour**: claim card
+  (.md) = web-readable surface; note (.tex.txt) = formal document; synthesis
+  documents stay .md until they transition to `publish/papers/`.
+- **PDF pipeline shipped and proven**: `verification/templates/note-preamble.tex`
+  + `verification/scripts/build_note_pdf.py` (v1.0.1) wrap a fragment and
+  compile into git-ignored `build/` — the batch-1 record built to PDF (157 KB)
+  in-session.
+- **First versioned re-issue executed end-to-end** [A1-KERNEL-CONV,
+  B2-PROPA-HLAYER]: batch-1 record re-issued as
+  `proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt` (two-date
+  filename); v1.0 `.md` carries the SUPERSEDED forward pointer and is kept;
+  catalog auto-detects the supersession (now 4 superseded versions tracked).
+- Housekeeping: `build_catalog.py` v1.1.1 + `release_check.py` v1.0.2 skip the
+  git-ignored `build/` area; ledger/card references updated; release gate PASS.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
+## [Release-Gate] Publication procedure decided + pre-push gate script — 2026-06-05
+
+- **Decision** (`governance/publication-tiers.md` §GitHub release procedure):
+  this repository IS the public repository — push = publish; **no curation
+  script into the legacy public repo** (a one-direction mirror would re-create
+  the legacy mirror-drift failure class). Continuity options sanctioned:
+  SAME-REPO (legacy default branch renamed `legacy-archive`, this tree pushed
+  as the new `main`; keeps URL/stars/issues) or NEW-REPO (fresh repo; legacy
+  repo archived with a forward banner). Legacy public repo is never written
+  again except the archival banner.
+- **New gate** `verification/scripts/release_check.py` v1.0.1 (mandatory
+  before every push; also a CI step): ledger+catalog sync, P0 fence (no file
+  under `internal/` cited from public surfaces), English-only scan,
+  no-overclaim phrase scan, P2-cites-migration-clean-claims rule, hygiene
+  (NUL/JSON/AST/oversize). First run caught 3 genuine self-defects (stale
+  catalog; over-broad fence; Hangul literal in own regex) — fixed in v1.0.1;
+  gate now PASS.
+- No tier changes; all generated surfaces in sync.
+
+Maintainer: Jusang Lee <jtkor@outlook.com>
+
+---
+
 ## [Code-Versioning] Uniform date+version management extended to code and results — 2026-06-05
 
 - **Operator directive**: everything — documents, code, scripts, results —

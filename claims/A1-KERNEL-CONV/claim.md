@@ -60,6 +60,12 @@ the first TSv2 tier action on this claim.
   theory tag Math442), translated per `governance/tier-system.md` §4.
 - 2026-06-05 — M1 migration: Math426/AddA/AddB + Math435 v1.0/v1.1 chain, scripts, and artefacts migrated to `archive/legacy/`; re-validated 111/111 asserts (fresh env), artefacts identical within 1e-9. Reproduction AVAILABLE. Migration-clean.
 - 2026-06-05 — Archive reorganised to per-tag layout (`notes/<Tag>/`, `scripts/`, `artefacts/<Tag>/`); evidence paths updated; original legacy paths recorded in `archive/MIGRATION-LEDGER.md`. Theory-note record: `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-v1.0.md` (shared batch note).
+- 2026-06-05 — Note-format decision: batch record re-issued as v1.1 `.tex.txt`
+  (`claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt`);
+  v1.0 `.md` superseded. PDF pipeline verified (`build_note_pdf.py`).
+- 2026-06-05 — Batch record re-issued v1.2 (table-width compliance, Overfull 7->0)
+  then v1.3 (standard-form banner; FORM-CHECK PASS); PDF now lives beside the
+  source in `notes/`; `build/` area retired.
 
 ## Next required action
 
