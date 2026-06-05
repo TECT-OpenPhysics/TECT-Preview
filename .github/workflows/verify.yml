@@ -1,0 +1,20 @@
+name: verify
+on:
+  push:
+  pull_request:
+jobs:
+  claims:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lint claim ledger
+        run: python verification/scripts/lint_claims.py
+      - name: Check CLAIMS.md is in sync
+        run: python verification/scripts/lint_claims.py --render --check
+      - name: Run verification tests
+        run: |
+          pip install pytest
+          pytest verification/tests -q

@@ -1,0 +1,33 @@
+# ── P0: internal/ never reaches the repository ──────────────────────────────
+internal/
+
+# ── Large numerical artefacts (results JSON stays tracked) ──────────────────
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+runs/**/logs/
+runs/**/*.log
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ── LaTeX build artefacts (papers) ───────────────────────────────────────────
+publish/papers/**/*.aux
+publish/papers/**/*.bbl
+publish/papers/**/*.blg
+publish/papers/**/*.out
+publish/papers/**/*.synctex.gz
+publish/papers/**/*.toc
+
+# ── OS noise ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
