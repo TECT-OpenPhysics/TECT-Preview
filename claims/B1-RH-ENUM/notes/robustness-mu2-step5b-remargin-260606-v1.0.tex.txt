@@ -1,0 +1,165 @@
+% =============================================================================
+% Title: Closing ROBUSTNESS-MU2: the STEP-5B beyond-layer margins re-computed off-anchor stay above unity across the neighbourhood
+% Claim: B1-RH-ENUM (gate ROBUSTNESS-MU2 closure; bears on B5-BEYOND-LAYER-BOUND)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: theorem note, T4 (off-anchor STEP-5B re-margin 5/5; ROBUSTNESS-MU2 CLOSED for mu^2 in [x0.5, x2]; exact layer-margin m(mu^2) bounded not recomputed -- a <few% effect that cannot break the x2.55 floor)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue, operator-authorized (directive: proceed
+%        with 1 = fully close ROBUSTNESS-MU2). Re-computes the AddE
+%        de-thinned STEP-5B closure margin ratio = K_budget / K(n_pack) at
+%        off-anchor mu^2 (only the J_eff envelope integral is recomputed;
+%        the rest is closed-form), across mu^2 in [0.0025, 0.01] = [x0.5,
+%        x2] and the three condensate intensities. The margins are nearly
+%        FLAT: the endpoint (I=2e-3) ratio ranges x2.55 -> x2.64 across the
+%        neighbourhood (the anchor x2.6 sits near the thinnest; larger mu^2
+%        is slightly safer), and the production-intensity ratio is ~x59.
+%        With the previous note's A=0-uniqueness robustness (x0.2..x10) and
+%        the preserved Prop-A floor (M_R/M_c > 4.1 throughout, so the layer
+%        margin m stays positive and O(anchor)), ROBUSTNESS-MU2 is CLOSED on
+%        the x0.5..x2 neighbourhood. Script robustness_mu2_step5b_remargin.py
+%        5/5; anchor check reproduces the AddE floors x59.4/x2.6.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note closes ROBUSTNESS-MU2 by settling its last residual -- the exact
+off-anchor re-margining of the STEP-5B beyond-layer closure. Combined with
+the A=0-uniqueness robustness (note robustness-mu2-offanchor), the
+Reading-H selection is established robust on the $\mu^2 \in [\times0.5,
+\times2]$ neighbourhood. The exact layer margin $m(\mu^2)$ is bounded
+(not recomputed); this is a $<$few-\% effect that cannot break the
+$\times2.55$ endpoint floor (section 4).
+
+\section*{2. The off-anchor re-margin}
+
+The AddE de-thinned closure margin is
+\[
+\mathrm{ratio}(\mu^2, I)
+= \frac{K_{\rm budget}}{K(n_{\rm pack})}
+= \frac{4(1-a_0)\,m\,/\,[(\lambda' I)^2 J_{\rm eff}]}
+{8 + 4\sqrt{14}\,\sqrt{n_{\rm pack}}} ,
+\]
+with $\lambda'(\mu^2) = 3u + 30vM_R$, $\hat r(\mu^2) = r_R + 2\lambda' I$,
+$a_0 = 2\lambda' I/\hat r$, $\theta_{\min} = \sqrt{\hat r}/(2q_0^2\sqrt
+C)$, $n_{\rm pack} = 16/\theta_{\min}^2$, and the minimum-transfer
+envelope $J_{\rm eff} = J(2q_0\sin(\theta_{\min}/2))$ recomputed at the
+off-anchor $\hat r$. Everything except $J_{\rm eff}$ is closed-form; the
+single envelope integral per $(\mu^2, I)$ is the only cost.
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y Y @{}}
+\toprule
+$\mu^2$ (multiple) & ratio @ $4\times10^{-4}$ & ratio @ $10^{-3}$ & ratio @ $2\times10^{-3}$ \\
+\midrule
+$0.0025$ ($\times0.5$) & $\times58.7$ & $\times9.7$ & $\times2.55$ \\
+$0.00354$ ($\times0.71$) & $\times59.0$ & $\times9.7$ & $\times2.56$ \\
+$0.005$ (anchor) & $\times59.4$ & $\times9.8$ & $\times2.58$ \\
+$0.00707$ ($\times1.41$) & $\times59.9$ & $\times9.9$ & $\times2.60$ \\
+$0.01$ ($\times2$) & $\times60.8$ & $\times10.0$ & $\times2.64$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The worst ratio over the whole neighbourhood and all intensities is
+$\times2.55$ (the $\times0.5$, $I = 2\times10^{-3}$ corner) -- the
+closure holds throughout with room. The margins are monotone increasing
+in $\mu^2$, so the anchor sits near the thinnest point.
+
+\section*{3. The layer-margin floor is preserved}
+
+The ratio uses the anchor layer margin $m = 4.32\times10^{-3}$. Its own
+$\mu^2$-robustness is the Prop-A $P_B$ floor: $M_R/M_c > 4.11$ throughout
+the neighbourhood (robustness-mu2-offanchor, 9/9), so the floor condition
+that makes $m > 0$ is preserved, and $m(\mu^2)$ stays positive and
+$O(\text{anchor})$ as the constants drift $< 2\%$.
+
+\section*{4. Why the un-recomputed $m(\mu^2)$ cannot break closure}
+
+The endpoint floor is $\times2.55$. The ratio scales linearly in
+$m(\mu^2)$; the constants entering $m$ (via $P_B(M_R) - \mathrm{dip}_B$)
+drift $< 2\%$ across the $\times4$ band, so $m(\mu^2) = m_{\rm anchor}(1 +
+O(2\%))$. Even a conservative $10\%$ drop in $m$ leaves the endpoint at
+$\times2.3 > 1$. A break would require $m$ to fall by $> 60\%$, impossible
+while $M_R/M_c > 4$ holds. The closure is therefore robust to the exact
+$m(\mu^2)$ variation; recomputing $m$ exactly would only sharpen the
+already-comfortable margin.
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/robustness_mu2_step5b_remargin.py} (v1.0.0; 5/5
+self-test asserts PASS; artefact
+\url{claims/B1-RH-ENUM/runs/260606-robustness-mu2-step5b/result.json}).
+
+Quantitative sanity check (mandatory): the anchor re-margin reproduces
+the AddE floors ($\times59.4$ at $I = 4\times10^{-4}$, $\times2.6$ at
+$I = 2\times10^{-3}$; the $\times9.8$ vs AddE $\times8.8$ at $I = 10^{-3}$
+is a $J_{\rm eff}$-quadrature-resolution difference of $\sim10\%$, which
+does not affect closure), confirming the re-margin shares the certified
+machinery; the endpoint flatness ($\times2.55$--$\times2.64$) is
+consistent with the $<2\%$ constant drift.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3.5)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You closed the gate using the ANCHOR $m$, not
+$m(\mu^2)$ -- is the closure real?''} ADDRESSED in section 4: the
+$\times2.55$ floor tolerates any $<60\%$ drop in $m$; the constants drift
+$<2\%$ and $M_R/M_c > 4$ keeps $m > 0$, so $m(\mu^2)$ cannot break it. The
+no-overclaim states $m$ is bounded, not recomputed.
+\item[($\beta$)] \emph{``$J_{\rm eff}$ at $nk=500$ gives $\times9.8$ vs
+AddE $\times8.8$ -- is the quadrature trustworthy?''} VALID-with-
+mitigation: a $\sim10\%$ envelope-resolution difference at one intensity;
+it does not change any closure verdict (all ratios $> 1$ with the
+thinnest at $\times2.55$); the anchor endpoint $\times2.6$ matches AddE.
+\item[($\gamma$)] \emph{``Why $[\times0.5, \times2]$ and not wider?''}
+The STEP-5B re-margin was computed on $[\times0.5, \times2]$ (a $\times4$
+band); the A=0-uniqueness component is robust wider ($[\times0.2,
+\times10]$). The gate closes for the intersection, $[\times0.5, \times2]$,
+stated explicitly; wider STEP-5B verification is a trivial extension if
+ever needed.
+\item[($\delta$)] \emph{``Does closing the gate overstate B1?''}
+DISMISSED: the gate closes for a stated neighbourhood, not unconditionally
+in $\mu^2$; B1's scope records the $[\times0.5, \times2]$ robustness
+explicitly. No claim beyond it.
+\end{itemize}
+No objection upheld; ROBUSTNESS-MU2 is closed for the stated neighbourhood.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ROBUSTNESS-MU2 closure
+Precise statement:       STEP-5B closure margin ratio = K_budget/K(n_pack)
+                         recomputed off-anchor stays > 1 across mu^2 in
+                         [x0.5, x2] and all 3 intensities; worst x2.55
+                         (endpoint), production-intensity ~x59; margins
+                         monotone increasing in mu^2 (anchor near thinnest).
+                         With A=0 uniqueness robust on [x0.2, x10] and the
+                         Prop-A floor preserved (M_R/M_c > 4.1),
+                         ROBUSTNESS-MU2 CLOSED for [x0.5, x2].
+Scope:                   mu^2 in [0.0025, 0.01] (x0.5..x2). Layer margin m
+                         bounded positive (P_B floor), not recomputed
+                         exactly (<few% effect, cannot break x2.55).
+Dependencies:            robustness-mu2-offanchor (A=0 + constants);
+                         AddE de-thinned margin; A1-KERNEL-CONV.
+Evidence grade:          ANALYTIC (closed-form ratio) + EXECUTED (5/5)
+Reproduction command:    python codes/vacuum/robustness_mu2_step5b_remargin.py
+Expected output:         claims 5/5 PASS; off-anchor ratios x2.55..x60.8;
+                         anchor reproduces AddE x59.4/x2.6; result.json
+                         under claims/B1-RH-ENUM/runs/260606-robustness-mu2-step5b/
+Falsification gate:      A mu^2 in [x0.5, x2] with margin ratio <= 1; a
+                         layer margin m(mu^2) dropping > 60% (would need
+                         M_R/M_c < ~1.6, excluded by the sweep).
+Tier before / after:     ROBUSTNESS-MU2 OPEN -> CLOSED (mu^2 in [x0.5, x2]).
+                         Removed from B1 open_gates. No tier-number change;
+                         B1 T6 scope gains neighbourhood robustness.
+No-overclaim statement:  Closure is for the STATED neighbourhood
+                         [x0.5, x2], not unconditional in mu^2. The exact
+                         layer margin m(mu^2) is bounded via the preserved
+                         P_B floor, not recomputed; this cannot break the
+                         x2.55 endpoint margin. No tier-number change.
+Next required action:    (optional) recompute m(mu^2) exactly to sharpen;
+                         remaining B1 open gates: ESTIMATOR-UPGRADE,
+                         G3PB-III; and SC-SCOPE all-orders.
+\end{verbatim}

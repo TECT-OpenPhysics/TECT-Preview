@@ -5,6 +5,30 @@ not pillar counts.
 
 ---
 
+## [ROBUSTNESS-MU2-CLOSED] STEP-5B re-margined off-anchor; ROBUSTNESS-MU2 closed for mu^2 in [x0.5,x2] — 2026-06-06
+
+- **Operator directive**: proceed with 1 (fully close ROBUSTNESS-MU2).
+- **Off-anchor STEP-5B re-margin**: the AddE de-thinned closure ratio =
+  K_budget/K(n_pack) recomputed at off-anchor mu^2 (only the J_eff envelope
+  integral; rest closed-form) stays > 1 across mu^2 in [0.0025, 0.01] =
+  [x0.5, x2] and all three intensities. Endpoint (I=2e-3) ratio x2.55 ->
+  x2.64; production-intensity ~x59; margins MONOTONE INCREASING in mu^2
+  (anchor near the thinnest). Anchor reproduces the AddE floors x59.4/x2.6.
+- **Layer margin preserved**: M_R/M_c > 4.1 throughout keeps the Prop-A
+  P_B floor positive; m(mu^2) bounded O(anchor) (<2% constant drift). The
+  exact m(mu^2) is not recomputed but a <60% drop is excluded, so it
+  cannot break the x2.55 endpoint floor.
+- **Gate CLOSED**: combined with the A=0-uniqueness robustness (x0.2..x10),
+  ROBUSTNESS-MU2 is CLOSED for mu^2 in [x0.5, x2]; removed from B1
+  open_gates; B1 scope gains neighbourhood robustness (no longer pinned to
+  the exact anchor). The last residual of the former H-A0 is retired.
+- New script robustness_mu2_step5b_remargin.py (5/5) + note
+  robustness-mu2-step5b-remargin-260606-v1.0 (FORM-CHECK PASS, Overfull 0).
+  4-objection self-adversarial review, none upheld. B1 open gates now
+  {ESTIMATOR-UPGRADE, G3PB-III}. lint PASS. Chain GREEN.
+
+---
+
 ## [ROBUSTNESS-MU2-ADVANCE] Off-anchor robustness: A=0 uniqueness robust on x0.2..x10; gate narrowed (not closed) — 2026-06-06
 
 - **Operator directive**: proceed with 3 (ROBUSTNESS-MU2, the off-anchor

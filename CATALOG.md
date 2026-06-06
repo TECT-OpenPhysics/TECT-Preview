@@ -6,7 +6,7 @@
 
 Generated: 2026-06-06
 
-**283 artefacts** · superseded versions kept: 29 · machine-readable twin: `verification/catalog.json`
+**287 artefacts** · superseded versions kept: 29 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -18,10 +18,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-CONV/LINEAGE.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `c16a9a75d13b` |
 | `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `3f928a41f2cf` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `2292f9db20e7` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `7ccc7920fd97` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `9197e7a4c991` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `609662842feb` |
-| `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `7e56c8c37f0a` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `e7355016c3fc` |
+| `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `07a201533aaa` |
 | `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `aab1dbb61856` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
 | `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `b4ae737eb5d2` |
@@ -96,6 +96,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `3f40353e78a8` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-offanchor-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `2ea687c82cd8` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-offanchor-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `ddf7a1f2e744` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `3b7932103503` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `fe497f3e1d02` |
 | `claims/B1-RH-ENUM/notes/t6-entry-composition-audit-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `87f971acd233` |
 | `claims/B1-RH-ENUM/notes/t6-entry-composition-audit-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `8ac7bf4cee0d` |
 | `claims/B1-RH-ENUM/notes/t6-mainline-session-consolidation-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `b09f027d7b0c` |
@@ -258,6 +260,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/runs/260605-migration-revalidation/lam_exact_wick_bracket.json` | B1-RH-ENUM | 2026-06-04 | 2026-06-04 | — | ACTIVE | `f5626d49dcfd` |
 | `claims/B1-RH-ENUM/runs/260605-migration-revalidation/summary.json` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | — | ACTIVE | `7eb81432d602` |
 | `claims/B1-RH-ENUM/runs/260606-neargap-common-mode/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `3c12a789f907` |
+| `claims/B1-RH-ENUM/runs/260606-robustness-mu2-step5b/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `cf7cdca05941` |
 | `claims/B1-RH-ENUM/runs/260606-robustness-mu2/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `64ab54e07ce0` |
 | `claims/B1-RH-ENUM/runs/260606-useries-checks/result.json` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | — | ACTIVE | `4a333d0f6e92` |
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/audit_recheck.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `2bd9a49f14d4` |
@@ -274,6 +277,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/beyond_layer_gershgorin_bound.py` | — | — | — | — | ACTIVE | `81c5ab7e597e` |
 | `codes/vacuum/ha0_sign_decomposition.py` | — | 2026-06-06 | 2026-06-06 | v1.1.0 | ACTIVE | `f910f99b290d` |
 | `codes/vacuum/neargap_common_mode_repair.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `025ad32b1bb3` |
+| `codes/vacuum/robustness_mu2_step5b_remargin.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `868d27a0f611` |
 | `codes/vacuum/robustness_mu2_sweep.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `bbbee51b552e` |
 | `codes/vacuum/t6_mainline_useries_checks.py` | — | 2026-06-06 | 2026-06-06 | v0.2.0 | ACTIVE | `e97039d7183f` |
 
@@ -316,7 +320,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `6e58b6aecc22` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `92648efe6382` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `41d41081971b` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `f4f9aad4c36b` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `517c2a94fed1` |
@@ -338,8 +342,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `aaf9afe47bfa` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `006792bb774d` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `fe505893020b` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `30dfdc9a9037` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |

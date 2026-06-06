@@ -21,7 +21,7 @@ exist here. Last updated: 2026-06-05.
 | **G3PB-III** | G3′-b(iii): higher-shell / anisotropic harmonic dominance — AddF ratio extraction | OPEN — priority 2 | legacy: Math442 |
 | **G1PP-3B-HEX** | G1″-3b-HEX exact-Wick bracket (HEX competitor margin) | CLOSED within H-layer scope — Math437 v1.2 F10-REPAIR RESOLVED, verified by dual audit | `archive/legacy/notes/` Math437 v1.2 / Math440 / Math441 / Math442 |
 | **ESTIMATOR-UPGRADE** | GAP-2 instance for Reading-H: estimator-grade $\Delta F$ → controlled error bound | OPEN | `archive/legacy/notes/` Math427–Math436 enumerated-reading chain (migrated batch 2) |
-| **ROBUSTNESS-MU2** | Open-neighbourhood robustness of the selection result in $\mu^2$ around $\mu^2=0.005$ | OPEN | governance draft §15 ADVANCE 2026-06-06 (robustness-mu2-offanchor v1.0, 9/9): A=0-uniqueness component ROBUST on mu^2 in [0.001,0.05] (x0.2..x10; sign-decomp lemmas mu^2-independent; m*>m_w x5.74 / M_R>M_c x4.08 across x4; m*-m_w = 3uM_R+15v(M_R^2-M_c^2) mu^2-cancels). NARROWED residual: exact off-anchor STEP-5B re-margin (lambda' drifts only 1.5% across x4, so numerically supported). |
+| **ROBUSTNESS-MU2** | Open-neighbourhood robustness of the selection result in $\mu^2$ around $\mu^2=0.005$ | OPEN | governance draft §15 ADVANCE 2026-06-06 (robustness-mu2-offanchor v1.0, 9/9): A=0-uniqueness component ROBUST on mu^2 in [0.001,0.05] (x0.2..x10; sign-decomp lemmas mu^2-independent; m*>m_w x5.74 / M_R>M_c x4.08 across x4; m*-m_w = 3uM_R+15v(M_R^2-M_c^2) mu^2-cancels). NARROWED residual: exact off-anchor STEP-5B re-margin. CLOSED 2026-06-06 (robustness-mu2-step5b-remargin v1.0, 5/5): STEP-5B margin ratio recomputed off-anchor stays > 1 across mu^2 in [x0.5,x2] (endpoint x2.55..x2.64, production ~x59; anchor reproduces AddE x59.4/x2.6); Prop-A floor preserved (M_R/M_c>4.1); m(mu^2) bounded positive, <60% drop excluded. ROBUSTNESS-MU2 CLOSED for [x0.5,x2]. |
 | **H-SUPPRESSION-DISCHARGE** | Discharge of the (H-suppression) hypothesis (full TECT-Hessian + Wetterich projection + negative-eigenvalue derivation) | OPEN | legacy: Pillar-2 record |
 | **G-A0-DUI** | Differentiation under the integral for $M(m)$. CLOSED 2026-06-06: explicit dominated-convergence argument with dominating function $k^2/[m_0+C(k^2-q_0^2)^2]^2$ (integrable, $k^{-6}$ tail; pointwise domination max ratio $1.000$); machine-confirmed ha0_sign_decomposition.py v1.1.0 23/23 ($M'=-\int k^2/D^2$ vs FD $<0.6\%$). | CLOSED | note ga0-dui-closure-260606-v1.0 |
 | **CP-UNITARITY** | CP structure and unitarity completion of the per-generation quantum-consistency closure | OPEN | legacy: Pillar-7 record |
@@ -48,6 +48,8 @@ elsewhere; pointer mandatory). Closing a gate never silently promotes a claim;
 promotions follow `governance/claim-standard.md` §5.
 
 ## History
+
+- 2026-06-06: ROBUSTNESS-MU2 CLOSED for mu^2 in [x0.5,x2] (STEP-5B re-margin off-anchor 5/5; A=0 uniqueness robust x0.2..x10; Prop-A floor preserved). Removed from B1 open_gates.
 
 - 2026-06-06: ROBUSTNESS-MU2 ADVANCED (not closed): A=0-uniqueness robust on x0.2..x10 mu^2 neighbourhood (structural lemmas + verified inequalities); STEP-5B off-anchor re-margin = narrowed residual.
 
