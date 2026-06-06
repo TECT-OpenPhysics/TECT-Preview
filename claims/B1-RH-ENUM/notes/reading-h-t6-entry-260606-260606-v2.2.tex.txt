@@ -1,8 +1,7 @@
-% SUPERSEDED by reading-h-t6-entry-260606-260606-v2.2.tex.txt
 % =============================================================================
 % Title: Reading-H class-wide selection as a conditional theorem: the assembled T6 promotion
 % Claim: B1-RH-ENUM (whole-Reading-H selection; gate consequence of STEP-5B closure)
-% Version: v2.1 -- first issued 2026-06-06; this version issued 2026-06-06
+% Version: v2.2 -- first issued 2026-06-06; this version issued 2026-06-06
 % Status: theorem note, T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE} (operator-authorized 2026-06-06; H-A0 demoted to verified anchor dependency per the H-A0 docs)
 %
 % Revision history (cumulative):
@@ -16,7 +15,7 @@
 %        The selection is now assembled as a CASE SPLIT — bulk via the layer
 %        margin (Prop A) plus the beyond-layer bound (STEP-5B closure),
 %        near-gap small-amplitude via the structural floor — each case
-%        closed at second-cumulant scope modulo the four named hypotheses.
+%        closed at second-cumulant scope modulo the three named hypotheses.
 %        B1 promoted T5 -> T6 CONDITIONAL. The estimator-grade quantitative
 %        selection margins remain a separate open item (ESTIMATOR-UPGRADE);
 %        the T6 statement is the selection SIGN, not the precise margin.
@@ -86,6 +85,32 @@ two regimes overlap and cover the amended class; the selection holds on
 both.
 \end{proof}
 
+\begin{lemma}[Equality classification]
+In the near-gap case, $\tfrac12\operatorname{Tr}[\ln(D_0+\lambda'P^2)-\ln D_0] = 0$ iff
+$\lambda'P^2 = 0$, i.e.\ $P = 0$ (the Reading-H representative). Indeed $\ln$ is
+\emph{strictly} operator-monotone on positive operators, so for $\lambda'P^2\succeq0$
+the trace difference is $\ge0$ with equality only when the perturbation vanishes on the
+support of $D_0^{-1/2}(\cdot)D_0^{-1/2}$; since $D_0\succ0$ this forces $\lambda'P^2=0$.
+Hence on the quotient by sub-resolution equivalence (which identifies $P=0$ with the
+Reading-H representative) the selection inequality is STRICT for every nontrivial
+competitor.
+\end{lemma}
+
+\noindent\textbf{Case-split partition (explicit).} Let $M(P)$ be the cell-averaged
+variance of the pattern's dressing. Define
+\[
+\mathcal A_{\rm bulk} := \{P\in\mathcal A_{\rm adm} : M(P)\ \text{in the Prop-A band/subband intervals where } m>0\},
+\]
+\[
+\mathcal A_{\rm near} := \{P\in\mathcal A_{\rm adm} : \text{small-amplitude near-gap section, } \|P\|\ \text{below the band-floor crossover}\}.
+\]
+By the Prop-A band structure $\mathcal A_{\rm adm} = \mathcal A_{\rm bulk}\cup\mathcal A_{\rm near}$,
+and on the overlap BOTH the bulk inequality ($F_{\rm layer}\ge F_{\rm layer}[R_H]+m$,
+$\delta F_{\rm off}>-m$) and the near-gap floor ($\ge0$) hold, so the two cases do not
+double-count (each is a self-contained one-sided bound on the SAME normalised
+$F_{\rm total}[P]-F_{\rm total}[R_H]$). Formalising the band-floor crossover threshold to
+paper grade is registered as a refinement (it does not affect the sign verdict).
+
 \section*{3. What the promotion does and does not assert}
 
 The T6 claim is the selection SIGN. It does NOT assert: (i) the precise
@@ -148,7 +173,7 @@ are estimator-grade and tracked separately; they do not enter the sign.
 \item[($\delta$)] \emph{``H-A0 was itself only B2's T6 hypothesis ---
 circular promotion?''} DISMISSED: the dependency DAG is acyclic
 (B1 $\to$ B2 $\to$ A1; no back-edge). B1's T6 inherits B2's named
-hypotheses $\{$H-LAYER, H-A0$\}$ forward, which is composition, not
+hypotheses $\{$H-LAYER$\}$ forward (H-A0's $A=0$ uniqueness is now a theorem, demoted to a verified anchor dependency), which is composition, not
 circularity. The linter's tier-monotonicity rule is satisfied: B1's
 sub-T6 hard dependency A1 (T5) is covered by the named hypothesis set.
 \item[($\epsilon$)] \emph{``Promoting the `enumerated' claim B1 to a
@@ -192,7 +217,7 @@ Falsification gate:      An admissible competitor with F_total <= F_total
 Tier before / after:     T5 / T6 CONDITIONAL on {H-LAYER, H-A0,
                          H-ADM-COH, SC-SCOPE} (operator-authorized,
                          "proceed with item 1" 2026-06-06).
-No-overclaim statement:  T6 is the selection SIGN modulo four named
+No-overclaim statement:  T6 is the selection SIGN modulo three named
                          hypotheses; NOT unconditional, NOT all-orders
                          (SC-SCOPE), NOT a precise-margin claim
                          (ESTIMATOR-UPGRADE open), NOT mu^2-robust

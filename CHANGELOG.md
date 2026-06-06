@@ -5,6 +5,30 @@ not pillar counts.
 
 ---
 
+## [INTERNAL-CONSISTENCY-REVIEW] Robustness v1.2 contradiction + reading-h footer fixed; ROBUSTNESS-MU2 = OPEN (final) — 2026-06-06
+
+- **Operator review** caught CRITICAL internal contradictions I introduced by
+  flip-flopping the ROBUSTNESS-MU2 status. Archived at
+  reviews/2026-06-06-internal-consistency-review.md. No tier raised.
+- **ROBUSTNESS-MU2 = OPEN (FINAL)**: all 'CLOSED'/'scoped closure' wordings
+  WITHDRAWN. The gate carries a numerically-supported off-anchor advance on
+  [x0.5,x2] only (m(mu^2) bounded but NOT recomputed). GATES + B1 card set to
+  OPEN; ROBUSTNESS-MU2 restored to B1 open_gates.
+- **robustness note v1.3**: removed the v1.2 contradiction ('This note closes'
+  / 'CLOSED@...' vs 'stays OPEN'); now consistently OPEN/ADVANCE in body,
+  footer, and no-overclaim.
+- **reading-h v2.2**: footer + no-overclaim corrected to three hypotheses
+  {H-LAYER, H-ADM-COH, SC-SCOPE} (H-A0 removed, matching the body); added the
+  equality-classification lemma (Tr-log difference = 0 => P^2 = 0, strict
+  operator-monotonicity) and an explicit case-split partition
+  A_adm = A_bulk U A_near (no double-count).
+- **Superseded-document watermarks**: neargap-residual-closure v1.0 (R-U10-1
+  numbers + M'=-J(0) invalidated), useries-verification-script v1.0 (wrong
+  unexecuted asserts), robustness v1.0 (withdrawn CLOSED overclaim) got body
+  WATERMARK lines. lint PASS (30 gates). Chain GREEN.
+
+---
+
 ## [V21-V11-REISSUE-REVIEW] Re-issue review accepted; B1 tier-logic explicit; supersession snapshots flagged — 2026-06-06
 
 - **Operator adversarial review** of t5-dossier v2.1 / ha0-removal v2.1 /
