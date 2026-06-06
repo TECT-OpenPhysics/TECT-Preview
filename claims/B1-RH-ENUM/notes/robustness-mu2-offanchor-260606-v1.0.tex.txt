@@ -1,0 +1,165 @@
+% =============================================================================
+% Title: Off-anchor robustness of the A-zero uniqueness inequalities and the load-bearing constants (gate ROBUSTNESS-MU2, partial advance)
+% Claim: B1-RH-ENUM (gate ROBUSTNESS-MU2; also bears on B2-PROPA-HLAYER)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: theorem note, T4 (A=0 uniqueness robust on a x0.2..x10 mu^2 neighbourhood, structural + verified; STEP-5B/layer off-anchor re-margin registered as the narrowed residual; gate NOT closed)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue, operator-authorized (directive: proceed
+%        with 3 = ROBUSTNESS-MU2, the sole off-anchor residual of the former
+%        H-A0). Establishes that the sign-decomposition lemmas L1/L2/L3 are
+%        mu^2-INDEPENDENT in structure, and that the only mu^2-carrying
+%        inputs -- the anchor inequalities m* > m_w and M_R > M_c -- hold
+%        robustly across a wide neighbourhood (m*/m_w > 2 and M_R/M_c > 1.5
+%        on mu^2 in [0.001, 0.05] = [x0.2, x10] of the anchor; min ratios
+%        5.74/4.08 across the x4 band). The mu^2-cancellation identity
+%        m* - m_w = 3u M_R + 15v(M_R^2 - M_c^2) is verified (the margin
+%        depends only on M_R(mu^2), which varies < 2% across x4). The
+%        STEP-5B / layer-margin constants (lambda', M_R) vary smoothly and
+%        monotonically with no sign change. The A=0-uniqueness part of
+%        ROBUSTNESS-MU2 is thereby robust; the EXACT off-anchor
+%        re-margining of the STEP-5B closure remains the narrowed residual
+%        (the gate is NOT closed). Script robustness_mu2_sweep.py 9/9.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The whole Sector-B analysis is pinned to the production anchor
+$\mu^2 = 0.005$; ROBUSTNESS-MU2 asks whether the Reading-H selection
+survives in a $\mu^2$-neighbourhood. This note advances the gate by
+settling its A=0-uniqueness component and bounding the $\mu^2$-variation
+of the constants the remaining components depend on. It does NOT close
+the gate: the exact off-anchor re-margining of the STEP-5B closure is
+registered as the narrowed residual.
+
+\section*{2. Structural $\mu^2$-independence of the sign decomposition}
+
+The lemmas behind the A=0 uniqueness (note ga0-dui-closure) use only:
+$u < 0$, $v > 0$, $M' < 0$ (L1, $\mu^2$-independent), $u_{\rm eff}(M_c) =
+u + 10vM_c = 0$ with $M_c = -u/(10v)$ ($\mu^2$-independent), and the
+closed-form bound of L3. NONE references the specific value of $\mu^2$.
+Hence the sign decomposition holds for every $\mu^2 > 0$ by structure;
+only the two anchor inequalities $m^* > m_w$ and $M_R > M_c$ carry the
+anchor value.
+
+\section*{3. The $\mu^2$-cancellation and the robustness radius}
+
+\begin{proposition}[$\mu^2$ cancels in the margin]
+$m^* - m_w = 3u\,M_R + 15v\,(M_R^2 - M_c^2)$, independent of $\mu^2$
+except through $M_R(\mu^2)$.
+\end{proposition}
+\begin{proof}
+$m^* = \mu^2 + 3uM_R + 15vM_R^2$ (gap equation) and $m_w = \mu^2 +
+15vM_c^2$; subtracting removes $\mu^2$. (Verified to $10^{-6}$ at
+$\mu^2 = 0.0013, 0.005, 0.02$.)
+\end{proof}
+
+\noindent Since $M_R(\mu^2)$ is monotone and varies by $< 2\%$ across the
+$\times4$ band ($0.1097 \to 0.1084$), the margin $m^* - m_w$ is nearly
+flat. Numerically (sweep $\mu^2 \in [0.00125, 0.02]$, $\times0.25$ to
+$\times4$): $m^*/m_w$ ranges $8.37 \to 5.74$ and $M_R/M_c$ ranges
+$4.13 \to 4.08$ -- both comfortably above $1$ throughout. Extending the
+fine sweep, $m^*/m_w > 2$ and $M_R/M_c > 1.5$ hold on
+$\mu^2 \in [0.001, 0.05] = [\times0.2, \times10]$ of the anchor. The
+A=0 uniqueness is therefore robust on an order-of-magnitude neighbourhood.
+
+\section*{4. Constants for the remaining components}
+
+The layer margin (Prop A) and the STEP-5B closure margins depend on
+$\mu^2$ through the dressed constants $\lambda'(\mu^2) = 3u + 30vM_R$ and
+$\hat r(\mu^2)$. Across the $\times4$ band $\lambda'$ decreases smoothly
+and monotonically $8.080 \to 7.957$ (a $1.5\%$ variation, no sign change)
+and $M_R$ by $< 2\%$. A variation this small cannot collapse the STEP-5B
+floors ($\times59.4/\times8.8/\times2.6$ at the anchor) or the layer
+margin; however, the EXACT off-anchor margins are not recomputed here
+(the full beyond-layer machinery is one anchor-intensity per run). This
+is the registered residual: \emph{re-margin the STEP-5B closure on the
+$\mu^2$-neighbourhood}.
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/robustness_mu2_sweep.py} (v1.0.0; 9/9 self-test
+asserts PASS; artefact
+\url{claims/B1-RH-ENUM/runs/260606-robustness-mu2/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+$M_R > M_c$ on $\times4$ band & min ratio $4.08$ & holds throughout \\
+$m^* > m_w$ on $\times4$ band & min ratio $5.74$ & holds throughout \\
+robustness radius ($m^*/m_w>2$, $M_R/M_c>1.5$) & $\mu^2 \in [0.001, 0.05]$ & $\times0.2$ to $\times10$ \\
+$\mu^2$-cancellation identity & exact to $10^{-6}$ & margin $= 3uM_R+15v(M_R^2-M_c^2)$ \\
+$\lambda'$ across $\times4$ & $8.080 \to 7.957$ ($1.5\%$) & smooth, monotone, $> 0$ \\
+anchor reproduces certified & $M_R, m^*$ to $5\times10^{-5}$ & consistency \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): at the anchor the sweep
+reproduces the certified $M_R = 0.109414$ and $m^* = 0.304526$; the
+margin $m^*/m_w = 7.76$ matches the G-A0-VER value, confirming the sweep
+shares the certified calibration.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3.5)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You verified the A=0 inequalities but not the
+actual STEP-5B closure off-anchor -- calling ROBUSTNESS-MU2 `advanced'
+overstates.''} VALID -- and explicitly mitigated: the gate is NOT closed.
+The A=0-uniqueness component is settled (structural + $\times0.2..\times10$
+verification); the STEP-5B/layer re-margin is the registered residual.
+Only that scope is claimed.
+\item[($\beta$)] \emph{``Is the $\times10$ range physically meaningful?''}
+VALID-with-mitigation: the anchor $\mu^2 = r_{\rm braz} = 0.005$ sits at
+the Brazovskii operating point; $[\times0.2, \times10]$ covers the
+physically relevant range comfortably. The radius is measured and
+reported, not assumed.
+\item[($\gamma$)] \emph{``A $1.5\%$ $\lambda'$ variation -- does it bound
+the margin variation?''} VALID-with-mitigation: a $1.5\%$ constant shift
+cannot collapse a $\times2.6$ floor, but the exact margin sensitivity is
+the registered re-margin sub-task; the claim here is `numerically
+supported', not `proven'.
+\item[($\delta$)] \emph{``Could $M'<0$ fail off-anchor?''} DISMISSED:
+L1's dominated-convergence proof (G-A0-DUI) holds for every $m>0$ with no
+$\mu^2$ reference; $M'<0$ is $\mu^2$-independent.
+\end{itemize}
+No objection upheld as a blocker; the honest scope is a PARTIAL advance.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ROBUSTNESS-MU2 partial advance
+Precise statement:       Sign-decomposition lemmas are mu^2-independent;
+                         the anchor inequalities m*>m_w, M_R>M_c hold on
+                         mu^2 in [0.001,0.05] (x0.2..x10), min ratios
+                         5.74/4.08 across x4; m*-m_w = 3uM_R+15v(M_R^2-
+                         M_c^2) (mu^2 cancels); lambda' varies 1.5% across
+                         x4. A=0 uniqueness robust; STEP-5B/layer off-
+                         anchor re-margin = narrowed residual.
+Scope:                   mu^2-neighbourhood of 0.005. A=0-uniqueness
+                         component settled; STEP-5B/layer component
+                         numerically supported, not re-margined.
+Dependencies:            ga0-dui-closure (L1/L2/L3); A1-KERNEL-CONV.
+Evidence grade:          ANALYTIC (mu^2-independence + cancellation) +
+                         EXECUTED (9/9 sweep)
+Reproduction command:    python codes/vacuum/robustness_mu2_sweep.py
+Expected output:         claims 9/9 PASS; ratios table; result.json under
+                         claims/B1-RH-ENUM/runs/260606-robustness-mu2/
+Falsification gate:      A mu^2 in [0.001,0.05] with m* <= m_w or
+                         M_R <= M_c (refutes the radius); a STEP-5B margin
+                         going below 1 off-anchor (would reopen fully).
+Tier before / after:     ROBUSTNESS-MU2 stays OPEN (narrowed): A=0-
+                         uniqueness component robust; STEP-5B re-margin
+                         residual. No tier-number change on B1/B2.
+No-overclaim statement:  The gate is NOT closed. Only the A=0-uniqueness
+                         robustness + constant-smoothness evidence is
+                         claimed; the exact off-anchor STEP-5B margins are
+                         numerically supported (1.5% constant drift), not
+                         recomputed. No tier-number change.
+Next required action:    Re-margin the STEP-5B closure on the mu^2-
+                         neighbourhood (run beyond_layer_gershgorin_bound
+                         at off-anchor mu^2) to fully close ROBUSTNESS-MU2.
+\end{verbatim}

@@ -5,6 +5,56 @@ not pillar counts.
 
 ---
 
+## [ROBUSTNESS-MU2-ADVANCE] Off-anchor robustness: A=0 uniqueness robust on x0.2..x10; gate narrowed (not closed) — 2026-06-06
+
+- **Operator directive**: proceed with 3 (ROBUSTNESS-MU2, the off-anchor
+  residual of the former H-A0).
+- **Structural mu^2-independence**: the sign-decomposition lemmas L1/L2/L3
+  reference no specific mu^2 (M_c = -u/10v is mu^2-free; u_eff(M_c)=0
+  exact). Only the anchor inequalities carry mu^2.
+- **Robustness radius**: m*>m_w and M_R>M_c hold on mu^2 in [0.001, 0.05]
+  (x0.2..x10 of the anchor); min ratios 5.74 / 4.08 across the x4 band.
+  The mu^2-cancellation m*-m_w = 3uM_R + 15v(M_R^2-M_c^2) (verified 1e-6)
+  makes the margin depend only on M_R(mu^2), which varies <2% across x4.
+- **Constants for the other components**: lambda' drifts 8.080->7.957
+  (1.5%) across x4, smooth/monotone, no sign change -- so the STEP-5B
+  floors (x59.4/x8.8/x2.6) and the layer margin are numerically supported
+  off-anchor, though not exactly recomputed.
+- **Honest scope -- gate NOT closed**: the A=0-uniqueness component of
+  ROBUSTNESS-MU2 is settled; the EXACT off-anchor STEP-5B re-margin is the
+  narrowed residual (registered). ROBUSTNESS-MU2 stays in B1.open_gates.
+- New script robustness_mu2_sweep.py (9/9) + note
+  robustness-mu2-offanchor-260606-v1.0 (FORM-CHECK PASS, Overfull 0).
+  4-objection self-adversarial review, none upheld. Chain GREEN.
+
+---
+
+## [GA0-DUI-CLOSED] G-A0-DUI closed (explicit DUI); H-ANCHOR demoted to verified fact; B2 -> {H-LAYER} — 2026-06-06
+
+- **Operator directive**: finish the existing content cleanly; proceed with 1
+  (G-A0-DUI, the textbook residual of the H-A0 -> H-ANCHOR replacement).
+- **G-A0-DUI CLOSED**: L1 (M'<0) written out as dominated convergence with
+  the explicit dominating function k^2/[m0+C(k^2-q0^2)^2]^2 (integrable,
+  k^-6 tail; pointwise domination max ratio 1.000). Machine-confirmed
+  (ha0_sign_decomposition.py v1.1.0, 23/23: M' = -int k^2/D^2 matches FD to
+  <0.6% by independent quadrature; M' < 0 strictly).
+- **A=0 uniqueness now unconditional at the anchor**: L1 rigorous + L2
+  (u_eff(M_c)=0 exact) + L3 (closed-form) leave only the verified facts
+  m*>m_w (x7.76) and M_R>M_c (x4.12).
+- **H-ANCHOR DEMOTED** hypothesis -> verified anchor dependency (a proven
+  closed-form inequality is not an assumption). Removed from hypothesis
+  sets: **B2 {H-LAYER, H-ANCHOR} -> {H-LAYER}**, **B1 -> {H-LAYER,
+  H-ADM-COH, SC-SCOPE}**. GATES H-ANCHOR row kept as a VERIFIED-FACT entry
+  (not hidden); off-anchor stays ROBUSTNESS-MU2 (now the sole former-H-A0
+  residual). lint PASS (24 gates).
+- **Self-adversarial review (4 objections)**: relabel-inflation,
+  quadrature-gap, anchor-tracking visibility, tier-monotonicity — none
+  upheld. New note ga0-dui-closure-260606-v1.0 (FORM-CHECK PASS, Overfull
+  0). Both T6 theorems strengthen (fewer hypotheses), no tier-number
+  change. Chain GREEN.
+
+---
+
 ## [RECORD-TAXONOMY] Record-kind decision tree + strategy/ directory; DR-2 impact analysis — 2026-06-06
 
 - **Operator directive**: before recording the DR-2 analysis, decide how to

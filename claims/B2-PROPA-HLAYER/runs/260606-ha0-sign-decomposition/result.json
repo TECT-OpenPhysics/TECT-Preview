@@ -1,6 +1,6 @@
 {
   "script": "ha0_sign_decomposition.py",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "constants": {
     "M_c": 0.026543209876543204,
     "m_w": 0.03924074074074072,
@@ -80,6 +80,51 @@
       "name": "unique_min_at_mstar",
       "passed": true,
       "detail": "(F_0'(m*) = -1.94e-15 ~ 0: strict global minimum, H-A0 (U)+(Z) as theorem mod G-A0-DUI)"
+    },
+    {
+      "name": "DUI_M_quadrature_matches [m=0.100]",
+      "passed": true,
+      "detail": "(radial quad 0.178711 vs M_fast 0.178518: agree to 0.11% -- independent-quadrature confirmation)"
+    },
+    {
+      "name": "DUI_M_quadrature_matches [m=0.305]",
+      "passed": true,
+      "detail": "(radial quad 0.109628 vs M_fast 0.109414: agree to 0.19% -- independent-quadrature confirmation)"
+    },
+    {
+      "name": "DUI_M_quadrature_matches [m=1.000]",
+      "passed": true,
+      "detail": "(radial quad 0.069115 vs M_fast 0.068891: agree to 0.32% -- independent-quadrature confirmation)"
+    },
+    {
+      "name": "DUI_Mprime_formula_eq_FD [m=0.100]",
+      "passed": true,
+      "detail": "(-int k^2/D^2 = -0.82140 vs FD -0.82172: agree to 0.04%; both < 0 -- formula confirmed)"
+    },
+    {
+      "name": "DUI_Mprime_formula_eq_FD [m=0.305]",
+      "passed": true,
+      "detail": "(-int k^2/D^2 = -0.14953 vs FD -0.15035: agree to 0.55%; both < 0 -- formula confirmed)"
+    },
+    {
+      "name": "DUI_Mprime_formula_eq_FD [m=1.000]",
+      "passed": true,
+      "detail": "(-int k^2/D^2 = -0.02498 vs FD -0.02483: agree to 0.61%; both < 0 -- formula confirmed)"
+    },
+    {
+      "name": "DUI_dominating_integrable",
+      "passed": true,
+      "detail": "(int g_m0 = 2.3628 < inf: k^-6 tail integrable, bounded near shell by m0^-2)"
+    },
+    {
+      "name": "DUI_pointwise_domination",
+      "passed": true,
+      "detail": "(|d D^-1/dm| = D^-2 <= D(m0)^-2 pointwise for m=0.305 >= m0=0.05: max ratio 1.000 <= 1)"
+    },
+    {
+      "name": "DUI_Mprime_strictly_negative",
+      "passed": true,
+      "detail": "(M'(m*) = -int k^2/D^2 < 0 strictly: integrand strictly positive => L1 rigorous, G-A0-DUI CLOSED)"
     }
   ],
   "all_pass": true
