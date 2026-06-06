@@ -1,8 +1,7 @@
-% SUPERSEDED by robustness-mu2-step5b-remargin-260606-260606-v1.2.tex.txt
 % =============================================================================
 % Title: Closing ROBUSTNESS-MU2: the STEP-5B beyond-layer margins re-computed off-anchor stay above unity across the neighbourhood
 % Claim: B1-RH-ENUM (gate ROBUSTNESS-MU2 closure; bears on B5-BEYOND-LAYER-BOUND)
-% Version: v1.1 -- first issued 2026-06-06; this version issued 2026-06-06
+% Version: v1.2 -- first issued 2026-06-06; this version issued 2026-06-06
 % Status: theorem note, T4 (off-anchor STEP-5B re-margin 5/5; NUMERICALLY-SUPPORTED ADVANCE on mu^2 in [x0.5,x2]; ROBUSTNESS-MU2 stays OPEN per operator review -- exact m(mu^2) bounded-not-recomputed does not meet the closure bar)
 %
 % Revision history (cumulative):
@@ -155,9 +154,10 @@ Expected output:         claims 5/5 PASS; off-anchor ratios x2.55..x60.8;
 Falsification gate:      A mu^2 in [x0.5, x2] with margin ratio <= 1; a
                          layer margin m(mu^2) dropping > 60% (would need
                          M_R/M_c < ~1.6, excluded by the sweep).
-Tier before / after:     ROBUSTNESS-MU2 OPEN -> OPEN (numerically-
-                         supported advance on mu^2 in [x0.5,x2]; NOT closed).
-                         No tier-number change.
+Tier before / after:     ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-
+                         CUMULANT (scoped closure; m(mu^2) bounded-not-
+                         recomputed; second-cumulant scope only). No
+                         tier-number change.
 No-overclaim statement:  NOT a closure: ROBUSTNESS-MU2 stays OPEN. The
                          margins are numerically supported on [x0.5,x2] but
                          the exact m(mu^2) is bounded-not-recomputed; full

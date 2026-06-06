@@ -5,6 +5,59 @@ not pillar counts.
 
 ---
 
+## [V21-V11-REISSUE-REVIEW] Re-issue review accepted; B1 tier-logic explicit; supersession snapshots flagged — 2026-06-06
+
+- **Operator adversarial review** of t5-dossier v2.1 / ha0-removal v2.1 /
+  ga0-dui v1.1: prior reinforcements ACCEPTED (scope fences, replacement-vs-
+  discharge, two-sided DUI, anchor-only). Archived at
+  reviews/2026-06-06-v21-v11-reissue-review.md. No tier raised.
+- **B1 tier-logic made explicit** (the key remaining attack): B1's T6
+  consumes B5/STEP-5B as the NAMED HYPOTHESIS H-ADM-COH (scope pin), NOT as
+  a proved unconditional theorem -- keeping B1 (T6) consistent with B5 (T5)
+  under TSv2 §4.4. B1 T6 = 'IF {H-LAYER, H-ADM-COH, SC-SCOPE} then Reading-H
+  selected at second-cumulant scope.' (B1 card no_overclaim updated.)
+- **Supersession snapshots flagged**: ga0-dui v1.1 + ha0-removal v2.1 carry
+  STATUS-UPDATE markers -- their 'ROBUSTNESS-MU2 open' footers are
+  writing-time snapshots, superseded by the scoped closure
+  CLOSED@[x0.5,x2]-2ND-CUMULANT; the LIVE status is the cards + GATES
+  (canonical-source hierarchy), not the note snapshots.
+- **External framing checked**: README/website carry no standalone 'STEP-5B
+  is closed' overclaim. Reconciled master status recorded in the review.
+  lint PASS (30 gates). Chain GREEN. No tier change.
+
+---
+
+## [B1-NEARGAP-USERIES-REVIEW] 11-doc adversarial review: supersession chains explicit; ROBUSTNESS-MU2 scoped closure; M'-audit — 2026-06-06
+
+- **Operator adversarial review** of 11 B1/near-gap/U-series documents,
+  archived at reviews/2026-06-06-b1-nearcap-userires-review.md. Headline:
+  make SUPERSESSION CHAINS explicit; do not cite historical intermediates
+  as current proof sources. No tier raised.
+- **Supersession markers**: neargap-residual-closure v1.0 (R-U10-1 numbers
+  INVALIDATED -- remainder 1.65e-3 not 2.7e-5, protection x2 not x130;
+  near-gap restored by common-mode resolution) and useries-verification-
+  script v1.0 (U14 unexecuted draft, asserts later shown wrong; superseded
+  by triage v0.2.0) marked HISTORICAL. sunset-endpoint-refinement v1.0
+  marked M'-CORRECTION-PENDING.
+- **M'-factor-2 audit (operator-required grep)**: the wrong identity
+  M'(r_hat)=-J(0) (true -J(0)/2) found in 3 notes (the 2 historical +
+  sunset-endpoint); the triage script is already corrected; no other live
+  note carries it.
+- **ROBUSTNESS-MU2 reconciled**: this dedicated robustness review is more
+  specific than the H-A0-docs note -> SCOPED CLOSURE CLOSED@[x0.5,x2]-2ND-
+  CUMULANT (mandatory qualifier: m(mu^2) bounded-not-recomputed; second-
+  cumulant scope only; monotonicity = sampled-sweep). step5b note re-issued
+  v1.2; removed from B1 open_gates.
+- **reading-h-t6-entry v2.1**: hypothesis set updated to {H-LAYER,
+  H-ADM-COH, SC-SCOPE} (H-A0 demoted to verified anchor dependency);
+  selection F[P] >= F[R_H] with equality for the Reading-H representative
+  (strict on the quotient); SC-SCOPE = second-cumulant-only flagged
+  prominently; quantitative margins NOT in the theorem.
+- Remaining per-document reinforcements registered in the review (apply on
+  next advance). lint PASS (30 gates). Chain GREEN. No tier change.
+
+---
+
 ## [HA0-DOCS-REVIEW] H-A0 docs adversarial review; ROBUSTNESS-MU2 re-opened; anchor-only scope hardened — 2026-06-06
 
 - **Operator adversarial review** of ga0-dui-closure + ha0-removal-pathway,

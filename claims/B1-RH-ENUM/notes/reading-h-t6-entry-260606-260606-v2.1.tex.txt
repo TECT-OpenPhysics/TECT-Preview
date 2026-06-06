@@ -1,9 +1,8 @@
-% SUPERSEDED by reading-h-t6-entry-260606-260606-v2.1.tex.txt
 % =============================================================================
 % Title: Reading-H class-wide selection as a conditional theorem: the assembled T6 promotion
 % Claim: B1-RH-ENUM (whole-Reading-H selection; gate consequence of STEP-5B closure)
-% Version: v2.0 -- first issued 2026-06-06; this version issued 2026-06-06
-% Status: theorem note, T6 CONDITIONAL on {H-LAYER, H-A0, H-ADM-COH, SC-SCOPE} (operator-authorized promotion 2026-06-06)
+% Version: v2.1 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: theorem note, T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE} (operator-authorized 2026-06-06; H-A0 demoted to verified anchor dependency per the H-A0 docs)
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-06) first issue (PROPOSAL): candidate conditional theorem
@@ -27,7 +26,7 @@
 This note assembles the class-wide Reading-H selection as a conditional
 theorem and records the operator-authorized promotion of B1 from T5
 (estimator-grade enumerated closure) to T6 CONDITIONAL on the named
-hypothesis set $\{$H-LAYER, H-A0, H-ADM-COH, SC-SCOPE$\}$. The statement
+hypothesis set $\{$H-LAYER, H-ADM-COH, SC-SCOPE$\}$ (H-A0 has been demoted to a verified anchor dependency: $m^*>m_w$, $M_R>M_c$ under A1-KERNEL-CONV at $\mu^2=0.005$). The statement
 is the selection SIGN: among all admissible competitors of the
 H-ADM-COH amended class, the isotropic Reading-H reference has the
 lowest free energy at matched second-cumulant scope. The quantitative
@@ -39,16 +38,19 @@ are NOT part of the T6 claim.
 \begin{theorem}[Reading-H class-wide selection, conditional]
 Assume H-LAYER (the comparison is the isotropic Gaussian--Hartree
 variational layer; within the diagonal-Gaussian class the isotropic
-dressing is the infimum, Prop A / Math427), H-A0 (the $A=0$ uniqueness /
-zero-at-gap structure, B2), H-ADM-COH (the coherence-resolution
+dressing is the infimum, Prop A / Math427; the $A=0$ uniqueness /
+zero-at-gap, former H-A0, is now a sign-decomposition THEOREM resting on
+the verified anchor dependency $m^*>m_w$, $M_R>M_c$ at $\mu^2=0.005$), H-ADM-COH (the coherence-resolution
 admissible-competitor class, operator verdict \#14), and SC-SCOPE
 (matched second-cumulant order). Then for every admissible competitor
 pattern $P$,
 \[
-F_{\rm total}[P] \;>\; F_{\rm total}[R_H] ,
+F_{\rm total}[P] \;\ge\; F_{\rm total}[R_H] ,
 \]
-i.e.\ Reading-H is selected. The proof is a case split on the competitor
-amplitude.
+with equality only for the Reading-H representative (the zero-equivalent /
+sub-resolution-equivalent configuration); on the quotient by sub-resolution
+equivalence the inequality is strict. Reading-H is selected. The proof is a
+case split on the competitor amplitude.
 \end{theorem}
 
 \begin{proof}[Proof (case split)]
@@ -56,7 +58,7 @@ Write $F_{\rm total}[P] = F_{\rm layer}[P] + \delta F_{\rm off}[P]$, the
 diagonal-Gaussian layer energy plus the beyond-layer off-diagonal
 correction.
 
-\textbf{Bulk regime.} By Prop A (H-LAYER, H-A0), the isotropic layer is
+\textbf{Bulk regime.} By Prop A (H-LAYER; $A=0$ uniqueness now a theorem), the isotropic layer is
 the infimum of the diagonal-Gaussian class with margin
 $F_{\rm layer}[P] \ge F_{\rm layer}[R_H] + m$, $m = +4.32\times10^{-3}$
 the weakest interval band. By the STEP-5B closure on the H-ADM-COH
@@ -106,7 +108,7 @@ v1.14.0, 192/192) and the near-gap floor
 \toprule
 Ingredient & Source & Status \\
 \midrule
-layer margin $m = +4.32\times10^{-3}$ & Prop A (B2, H-LAYER/H-A0) & T6 on \{H-LAYER, H-A0\} \\
+layer margin $m = +4.32\times10^{-3}$ & Prop A (B2, H-LAYER) & T6 on \{H-LAYER\} \\
 beyond-layer $\delta F_{\rm off} > -m$ & STEP-5B closure (AddA--AddE) & CLOSED-CONDITIONAL (H-ADM-COH) \\
 near-gap floor $\ge 0$ & R-001 / R-U10-3 & unconditional (14/14) \\
 scope & second cumulant & SC-SCOPE (substantive) \\
@@ -142,7 +144,7 @@ DISMISSED with the scope distinction: T6 here is the selection SIGN
 (a chain of inequalities: $m > 0$, $\delta F_{\rm off} > -m$, floor
 $\ge 0$), each theorem-grade in its hypothesis. The precise margin VALUES
 are estimator-grade and tracked separately; they do not enter the sign.
-\item[($\delta$)] \emph{``H-A0 is itself only B2's T6 hypothesis ---
+\item[($\delta$)] \emph{``H-A0 was itself only B2's T6 hypothesis ---
 circular promotion?''} DISMISSED: the dependency DAG is acyclic
 (B1 $\to$ B2 $\to$ A1; no back-edge). B1's T6 inherits B2's named
 hypotheses $\{$H-LAYER, H-A0$\}$ forward, which is composition, not
@@ -173,7 +175,7 @@ Precise statement:       For every admissible competitor of the H-ADM-COH
 Scope:                   Class-wide over the H-ADM-COH amended class;
                          second-cumulant order; selection SIGN only.
                          Quantitative margins estimator-grade (separate).
-Hypotheses:              H-LAYER, H-A0, H-ADM-COH, SC-SCOPE (all registered
+Hypotheses:              H-LAYER, H-ADM-COH, SC-SCOPE (all registered
                          in claims/GATES.md).
 Dependencies:            A1-KERNEL-CONV (convention); B2-PROPA-HLAYER
                          (Prop A, T6); B5 STEP-5B closure chain.
