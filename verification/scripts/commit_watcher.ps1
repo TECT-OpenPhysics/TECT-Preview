@@ -1,6 +1,8 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.1.1 -- first issued 2026-06-05; this version issued 2026-06-06
+# Version: 1.1.2 -- first issued 2026-06-05; this version issued 2026-06-06
+#   1.1.2 (2026-06-06): git add --all via call operator (the -A token still
+#   mangled to a single-dash pathspec under the operator PowerShell); paths ignored.
 #   1.1.1 (2026-06-06): FIX git add -A splat bug (23 queued commits silently
 #   failed); only move to done/ on commit success (rc=0), else leave in queue.
 #   1.1.0 (2026-06-06): pre-commit JSON-integrity gate (blocks truncated
@@ -42,17 +44,13 @@ function Process-Queue {
         if (-not $req.message -or $req.message.Trim().Length -eq 0) {
             Write-Warning "skip (empty message): $($_.Name)"; return
         }
-        $paths = if ($req.paths) { @($req.paths) } else { @("-A") }
-        # FIX 1.1.1: never splat "-A" as a pathspec (PowerShell mangled it to
-        # pathspec '-' -> git add failed silently for 23 queued commits on
-        # 2026-06-06). Branch explicitly on the stage-all sentinel.
-        if ($paths.Count -eq 1 -and $paths[0] -eq "-A") {
-            git add -A
-        } else {
-            git add -- @paths
-        }
+        # FIX 1.1.2: every queued commit stages the whole tree. Use the
+        # long-form --all via the call operator so PowerShell cannot mangle a
+        # single-dash token into pathspec dash (the v1.0/v1.1.1 bug that
+        # stranded 23+ commits). The req.paths field is intentionally ignored.
+        & git add --all
         if ($LASTEXITCODE -ne 0) {
-            Write-Warning "[commit-watcher] git add failed for $($_.Name); request left in queue."
+            Write-Warning "[commit-watcher] git add --all failed for $($_.Name); request left in queue."
             return
         }
         # PRE-COMMIT INTEGRITY GATE (added 2026-06-06 after the autonomous
@@ -71,7 +69,7 @@ function Process-Queue {
             Write-Warning "[commit-watcher] BLOCKED $($_.Name): invalid JSON staged -> $($bad -join ', '). Fix and re-queue; request left in queue."
             return
         }
-        git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit -m $req.message
+        & git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit -m $req.message
         $rc = $LASTEXITCODE
         if ($rc -eq 0) {
             $stamp = (Get-Date -Format "yyyyMMdd-HHmmss")

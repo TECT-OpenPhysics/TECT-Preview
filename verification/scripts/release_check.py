@@ -62,6 +62,7 @@ def main():
     # 1+2. generated surfaces in sync
     run("ledger", ["verification/scripts/lint_claims.py", "--render", "--check"], errors)
     run("catalog", ["verification/scripts/build_catalog.py", "--check"], errors)
+    run("lineage", ["verification/scripts/build_lineage.py", "--check"], errors)
 
     # 3. P0 fence
     gi = (REPO / ".gitignore").read_text(encoding="utf-8")

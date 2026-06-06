@@ -1,0 +1,149 @@
+% =============================================================================
+% Title: Triage of the U-series verification script: five discrepancies classified, near-gap endpoint protection downgraded
+% Claim: B1-RH-ENUM (autonomous T6-mainline verification triage; gate R-U10-3)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: triage note, AUDIT (classifies 5 script FAILs; one UPHELD blocking the U1 T6 proposal)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue. The U-series verification script
+%        (codes/vacuum/t6_mainline_useries_checks.py) reported 52/57 on its
+%        first execution (it was authored blind, without shell, by the
+%        autonomous session). This note classifies the five FAILs and
+%        records the script's correction to assert true values (now 57/57,
+%        v0.2.0). Headline: R-U10-3 (near-gap endpoint protection) does NOT
+%        clean-pass -- the true margin is x2, not the x100/x130 claimed by
+%        U11 -- so the U1 Reading-H T6-CONDITIONAL proposal stays BLOCKED on
+%        the near-gap small-amplitude regime (confirming the U9
+%        self-audit's UPHELD objection G-U1-SMALLT).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The autonomous session's consolidated verification script ran 52/57 on
+first execution. Five asserts failed. This note classifies each as
+TYPO / ESTIMATE-DISCREPANCY / REAL-ERROR / UPHELD-BLOCKER, records the
+corrected (truth-asserting) script (v0.2.0, 57/57), and propagates the one
+consequential finding to the U1 promotion proposal. No tier action is
+claimed; the U1 proposal is DOWNGRADED to blocked-pending-repair.
+
+\section*{2. The five classifications}
+
+\begin{enumerate}
+\item \textbf{m\_w\_window\_constant --- TYPO (math sound).} The U2/ha0
+note quoted $m_w = 0.005 + 48.6(43/1620)^2 = 0.0392414$; the true value is
+$0.0392407$ (sixth-decimal typo). The script computed $0.0392407$
+correctly. Note corrected; no consequence.
+\item \textbf{Mprime\_equals\_minus\_J0 --- REAL factor-2 error.} U7/U10
+asserted the exact identity $M'(\hat r) = -J(0)$. The finite-difference
+value is $-M' = 0.1452$ against $J(0) = 0.2896$: the true identity is
+$M'(\hat r) = -\tfrac12 J(0)$ (ratio $1.995$). The qualitative content
+($M' < 0$, so intensity dressing softens the kernel) is unaffected; the
+stated \emph{exact} identity is off by $\times2$ and is corrected in the
+script and flagged in U7/U10.
+\item \textbf{U7\_dressed\_ratio (endpoint) --- ESTIMATE discrepancy.}
+U7 quoted the dressed endpoint ratio $\sim1.34$; the true value is
+$1.13$ (downstream of the factor-2 normalisation of item 2). The endpoint
+remains $>1$ (the \texttt{U7\_endpoint\_positive} assert passed): the
+intensity-dressed sunset bound still sits below the composed margin, but
+the quoted figure was optimistic.
+\item \textbf{convention\_remainder\_endpoint --- REAL ($\times60$
+overclaim).} U11 claimed the near-gap convention remainder at
+$I = 2\times10^{-3}$ is $\sim2.7\times10^{-5}$. The self-consistent LAM
+solve gives $1.65\times10^{-3}$ --- about $60\times$ larger. The remainder
+is NOT negligible at the endpoint.
+\item \textbf{remainder vs protection --- UPHELD BLOCKER (R-U10-3).}
+Consequent to item 4: the near-gap protection ratio is
+$\text{gain}\cdot I / \text{remainder} = 3.5\times10^{-3} / 1.65\times
+10^{-3} \approx 2.1$, NOT the $\times100$/$\times130$ claimed by U11. The
+near-gap small-amplitude endpoint is protected by only $\times2$.
+\end{enumerate}
+
+\section*{3. Consequence for the U1 T6 proposal}
+
+The U9 self-audit had UPHELD the objection G-U1-SMALLT (the near-gap
+small-amplitude regime was unverified in the U1 uniform-floor
+composition). U10/U11 claimed to repair it with a $\times130$ margin;
+the triage shows the true endpoint margin is $\times2$. Therefore:
+\[
+\boxed{\begin{array}{c}\text{U1 Reading-H T6-CONDITIONAL proposal: BLOCKED on R-U10-3}\\
+\text{(near-gap endpoint, margin }\times2\text{, not closed comfortably).}\end{array}}
+\]
+This is not a falsification ($\times2 > 1$: the protection holds), but it
+is below the comfort threshold for a tier promotion. The repair options
+are: (i) sharpen the near-gap envelope (the $\times2$ uses the crude
+sup-kernel; a per-transfer kernel should widen it); (ii) restrict the
+amended class's minimum amplitude; (iii) accept a $\times2$-margin
+explicitly-conditional T6 with the thin endpoint flagged. The choice is
+the operator's.
+
+\section*{4. Numerical verification}
+
+Script \url{codes/vacuum/t6_mainline_useries_checks.py} (v0.2.0; 57/57
+asserts PASS after the triage corrections; artefact
+\url{claims/B1-RH-ENUM/runs/260606-useries-checks/result.json}). The five
+corrected asserts now assert the TRUE values (item 1 typo; item 2
+$M' = -J(0)/2$; item 3 ratio $1.13$; item 4 remainder $1.65\times10^{-3}$;
+item 5 protection $\times2.1$), so the script certifies the corrected
+arithmetic rather than the over-optimistic note claims.
+
+Quantitative sanity check (mandatory): the factor-2 of item 2 and the
+$\times60$ of item 4 are independent ($M'$ is a derivative identity; the
+remainder is a self-consistency gap), yet both reduce the SAME endpoint
+margin, which is why the protection collapses from the claimed $\times130$
+to $\times2$; $3.5\times10^{-3}/1.65\times10^{-3} = 2.12$ reproduces the
+boxed figure.
+
+\section*{5. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Asserting the true values just hides the note
+errors behind a green script.''} DISMISSED: the corrections are recorded
+HERE with the original claims and the deltas; the script comments carry
+the TRIAGE tag at each corrected assert; the affected notes (U7/U10/U11)
+are flagged for operator review. Green now means ``arithmetic verified'',
+not ``note claims vindicated''.
+\item[($\beta$)] \emph{``$\times2$ may itself be sup-kernel-crude; the
+true margin could be fine.''} VALID-with-mitigation: precisely why the
+repair option (i) is registered. But a tier promotion cannot rest on an
+un-sharpened $\times2$; the proposal is blocked until the sharper kernel
+is computed, not assumed.
+\item[($\gamma$)] \emph{``The factor-2 identity error might propagate
+further than item 3.''} VALID-with-mitigation: items 2 and 3 are the only
+$M'$-dependent asserts; the composed-margin and floor results do not use
+$M'$ (they use $J(|t|)$ directly). A full $M'$-usage grep is registered as
+a polish item.
+\end{itemize}
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / U-series triage (gate R-U10-3)
+Precise statement:       5 script FAILs classified: 1 TYPO (m_w), 1 REAL
+                         factor-2 (M'=-J(0)/2 not -J(0)), 1 ESTIMATE
+                         (U7 ratio 1.13 not 1.34), 1 REAL x60 overclaim
+                         (remainder 1.65e-3 not 2.7e-5), 1 UPHELD BLOCKER
+                         (near-gap endpoint protection x2 not x100/x130).
+                         Script corrected to assert truth: v0.2.0, 57/57.
+Scope:                   Autonomous-session U-series only; corrections are
+                         arithmetic, not note-body rewrites (operator
+                         review pending on U7/U10/U11).
+Dependencies:            U9 (G-U1-SMALLT), U10/U11 (near-gap), U7 (sunset),
+                         U2 (window), AddC (J machinery).
+Evidence grade:          AUDIT + EXECUTED (57/57 corrected)
+Reproduction command:    python codes/vacuum/t6_mainline_useries_checks.py
+Expected output:         claims 57/57 PASS; result.json under
+                         claims/B1-RH-ENUM/runs/260606-useries-checks/
+Falsification gate:      Any of the five corrected values failing on
+                         re-run; a sharpened near-gap kernel giving margin
+                         < 1 (would falsify the protection, not just block).
+Tier before / after:     B1 unchanged at T5; the U1 T6-CONDITIONAL
+                         PROPOSAL is downgraded to BLOCKED-pending-repair.
+No-overclaim statement:  The near-gap protection HOLDS (x2 > 1) but is too
+                         thin for promotion; this note BLOCKS the U1
+                         proposal, it does not close or falsify anything.
+                         No tier action on B1/B2/B5; Reading-H stays T5.
+Next required action:    Operator: choose the R-U10-3 repair (sharper
+                         kernel / min-amplitude restriction / explicit
+                         x2-conditional T6). Polish: M'-usage grep;
+                         U7/U10/U11 note-body corrections.
+\end{verbatim}

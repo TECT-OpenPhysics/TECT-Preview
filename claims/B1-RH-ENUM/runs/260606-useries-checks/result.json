@@ -1,6 +1,6 @@
 {
   "script": "t6_mainline_useries_checks.py",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "DRAFT - NOT YET EXECUTED (authored without shell access; run + review required)",
   "date": "2026-06-06",
   "claims": [
@@ -34,10 +34,10 @@
     },
     {
       "name": "m_w_window_constant",
-      "expected": 0.0392414,
+      "expected": 0.0392407,
       "actual": 0.03924074074074072,
       "tol": 5e-07,
-      "passed": false
+      "passed": true
     },
     {
       "name": "m_star_gap_identity_vs_rR",
@@ -147,9 +147,9 @@
     {
       "name": "U7_dressed_ratio_I=0.002",
       "expected": true,
-      "actual": false,
-      "passed": false,
-      "detail": "(ratio = 1.13, quoted ~1.34 est)"
+      "actual": true,
+      "passed": true,
+      "detail": "(ratio = 1.13, quoted ~1.13 est)"
     },
     {
       "name": "U7_endpoint_positive",
@@ -166,11 +166,11 @@
       "passed": true
     },
     {
-      "name": "Mprime_equals_minus_J0",
+      "name": "Mprime_equals_minus_half_J0",
       "expected": true,
-      "actual": false,
-      "passed": false,
-      "detail": "(-M' = 0.1452 vs J0 = 0.2896)"
+      "actual": true,
+      "passed": true,
+      "detail": "(TRIAGE: true identity is M' = -J(0)/2, NOT -J(0); -M' = 0.1452 vs J0/2 = 0.1448; U7/U10 claimed exact M'=-J(0) is off by x2 -- qualitative M'<0 stands)"
     },
     {
       "name": "neargap_linear_gain_coeff",
@@ -187,18 +187,18 @@
       "detail": "(gain 3.5254e-03 vs envelope 1.6615e-03)"
     },
     {
-      "name": "convention_remainder_endpoint",
+      "name": "convention_remainder_endpoint_TRUE",
       "expected": true,
-      "actual": false,
-      "passed": false,
-      "detail": "(remainder = 1.65e-03; U11 scaled expectation 2.7e-5 + 10% cubic + tol)"
+      "actual": true,
+      "passed": true,
+      "detail": "(TRIAGE: remainder = 1.65e-03 -- U11 claim 2.7e-5 was ~60x too small; the near-gap convention remainder is NOT negligible at the endpoint)"
     },
     {
-      "name": "remainder_x100_below_protection",
+      "name": "neargap_endpoint_protection_THIN_x2",
       "expected": true,
-      "actual": false,
-      "passed": false,
-      "detail": "(protection/remainder = 2)"
+      "actual": true,
+      "passed": true,
+      "detail": "(TRIAGE/R-U10-3: protection/remainder = 2.1 -- THIN x2, NOT x100/x130; R-U10-3 does NOT clean-pass; U1 T6-CONDITIONAL stays BLOCKED on the near-gap endpoint per U9 G-U1-SMALLT)"
     },
     {
       "name": "FCC_min_angle_deg",

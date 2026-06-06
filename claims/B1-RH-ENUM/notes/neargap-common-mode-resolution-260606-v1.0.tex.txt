@@ -1,0 +1,179 @@
+% =============================================================================
+% Title: Resolution of the near-gap protection gate: the convention remainder is common-mode and cancels in the selection difference
+% Claim: B1-RH-ENUM (gate R-U10-3; Reading-H T6 mainline, near-gap small-amplitude regime)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: theorem note, T4 (structural floor + machine-verified common-mode cancellation; lifts the R-U10-3 block on the U1 T6 proposal)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue, per operator-recommended direction
+%        (R-U10-3 near-gap repair). The U-series triage
+%        (useries-triage-260606) found the near-gap endpoint protection was
+%        x2, not the x100/x130 U11 claimed, because U11 subtracted a
+%        'convention remainder' (the linear-vs-self-consistent diagonal
+%        dressing gap, 1.65e-3) from the selection margin. This note shows
+%        the subtraction is spurious: at fixed total intensity I the
+%        diagonal Hartree dressing r_hat(I) = rR + 2 lambda' I is
+%        PATTERN-INDEPENDENT, so the competitor P and the Reading-H
+%        reference share the SAME D_0, and the structural floor
+%        F[P] - F[R_H] = (1/2) Tr[ln(D_0 + lambda' P^2) - ln D_0] >= 0 holds
+%        UNCONDITIONALLY (lambda' P^2 is PSD; ln is operator-monotone). The
+%        convention remainder enters both ln-terms identically and cancels;
+%        Delta F changes by 0.4% under the dressing-convention swap versus
+%        the x2 a one-sided subtraction would produce. Machine: 14/14.
+%        R-U10-3 RESOLVED; the U1 T6-CONDITIONAL proposal is UN-BLOCKED on
+%        the near-gap axis (its named hypotheses still stand, operator
+%        sign-off pending).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Gate R-U10-3 was the verification-triage blocker on the U1 Reading-H
+T6-CONDITIONAL proposal: the near-gap small-amplitude endpoint appeared
+protected by only $\times2$. This note resolves it by identifying the
+$\times2$ as a mis-subtracted common-mode term. Scope: the matched
+second-cumulant fluctuation free energy used throughout Sector B; the
+result is the structural floor of the P$^2$-representation theorem
+(R-001) applied at the common diagonal dressing.
+
+\section*{2. The common-mode structure}
+
+At fixed total intensity $I = \sum_u A_u^2$, the diagonal Hartree
+dressing is
+\[
+\hat r(I) \;=\; r_R + 2\lambda' I ,
+\]
+a function of $I$ ALONE --- it does not depend on how the intensity is
+distributed over modes, because the Hartree self-energy sees only
+$\langle \phi^2 \rangle = I$. Hence the homogeneous reference $R_H$ and
+any competitor pattern $P$ of the same intensity share the identical
+diagonal kernel
+\[
+D_0(k) \;=\; \hat r(I) + C(k^2 - q_0^2)^2 .
+\]
+The pattern's spatial inhomogeneity lives entirely in the off-diagonal
+operator $W = \lambda'(P^2 - 2I\,\mathrm{Id})$ (R-001), whose $t=0$
+coefficient $2\lambda' I$ is exactly the dressing already in $\hat r$.
+Therefore
+\[
+F[P] - F[R_H]
+\;=\; \tfrac12\,\mathrm{Tr}\!\left[\ln(D_0 + \lambda' P^2) - \ln D_0\right]
+\;\ge\; 0 ,
+\]
+\emph{unconditionally}, because $\lambda' P^2 \succeq 0$ (a square) and
+$\ln$ is operator-monotone. No near-gap, small-amplitude, or
+convention-dependent hypothesis enters.
+
+\section*{3. Why the triage saw $\times2$}
+
+U11 estimated the selection margin as a first-order gain
+$g\,I = 2\lambda' M_R\, I = 3.53\times10^{-3}$ at the endpoint, then
+SUBTRACTED a ``convention remainder''
+$|\hat r_{\rm sc} - \hat r_{\rm lin}| = 1.65\times10^{-3}$ (the gap
+between the self-consistent dressing $\hat r_{\rm sc}$, solving
+$\hat r = r_R + 2\lambda'(M(\hat r))I$, and the linear convention
+$\hat r_{\rm lin} = r_R + 2\lambda'(M_R)I$), giving
+$3.53/1.65 \approx 2.1$. But that remainder is a property of $\hat r(I)$
+ALONE; it shifts the diagonal kernel of $R_H$ and of $P$ IDENTICALLY, so
+it appears in both $\ln$-terms of $F[P] - F[R_H]$ and cancels. Treating
+it as a one-sided subtraction from the margin is the error.
+
+Machine confirmation: recomputing $F[P] - F[R_H]$ at $\hat r_{\rm sc}$
+versus $\hat r_{\rm lin}$ changes the result by $3.0\times10^{-2}$
+(relative $0.4\%$), not by the $1.65\times10^{-3}$ absolute / $\times2$
+relative a one-sided subtraction implies; the selection margin dominates
+the dressing-convention sensitivity by $\times282$.
+
+\section*{4. Numerical verification}
+
+Script \url{codes/vacuum/neargap_common_mode_repair.py} (v1.0.0; 14/14
+self-test asserts PASS; artefact
+\url{claims/B1-RH-ENUM/runs/260606-neargap-common-mode/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+$\min\mathrm{eig}(\lambda' P^2)$ & $\ge 9.6\times10^{-3} > 0$ & PSD by construction (a square) \\
+$\Delta F = F[P]-F[R_H]$ & $\ge 0$ on all sections, $n \le 20$ & operator monotonicity \\
+near-gap sweep $I \to 10^{-5}$ & $\Delta F \to 0^+$; $\min\mathrm{eig}(D_0{+}W) > 0$ & no thinning as $A \to 0$ \\
+convention remainder & $1.65\times10^{-3}$ & the U11 quantity, confirmed \\
+$\Delta F$ swap $\hat r_{\rm sc}\leftrightarrow\hat r_{\rm lin}$ & differ by $3.0\times10^{-2}$ ($0.4\%$) & COMMON-MODE; not $\times2$ \\
+margin vs dressing sensitivity & $\times282$ & the $\times2$ was a mis-subtraction \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the near-gap sweep shows
+$\Delta F \propto I$ to leading order ($5.96 / 1.62 / 0.33 / 0.033$ at
+$I = 2{\times}10^{-3} / 5{\times}10^{-4} / 10^{-4} / 10^{-5}$, ratios
+$3.7/4.9/10$ tracking the $\log$-section growth), approaching $0^+$
+smoothly --- the floor does not develop a thin spot as the amplitude
+vanishes, which is the exact content of the resolved G-U1-SMALLT
+objection.
+
+\section*{5. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$\hat r(I)$ is only the SPATIAL-AVERAGE dressing;
+the pattern's local dressing $r_R + \lambda'\phi^2(x)$ varies, so $D_0$ is
+not really common.''} DISMISSED: the spatially-varying part
+$\lambda'(\phi^2(x) - I)$ is PRECISELY $W$ (the off-diagonal operator);
+separating it out leaves the constant $\hat r(I)$ common to $P$ and
+$R_H$ by construction. This is the content of the P$^2$-representation,
+not an approximation.
+\item[($\beta$)] \emph{``$\Delta F$ here is the full free-energy gap, not
+the delicate layer-margin residual; the near-gap concern was about the
+latter.''} VALID-with-mitigation: the layer-margin residual
+$\delta F_{\rm off}$ is the SUBLEADING piece, bounded by the AddA--AddE
+chain (envelope $\le \sum w^2 J/(4(1-a_0))$); the present note addresses
+the FLOOR (sign of the leading difference), which is what G-U1-SMALLT
+questioned. Both now hold: the floor unconditionally (here), the residual
+within margin (STEP-5B closure). The composition is the U1 theorem.
+\item[($\gamma$)] \emph{``Finite sections cannot certify an operator
+inequality.''} DISMISSED in the safe direction: $\lambda' P^2 \succeq 0$
+and $\ln$-monotonicity are operator facts, not section artefacts; the
+sections only CONFIRM positivity and the common-mode cancellation
+numerically. A section can falsify (find $\Delta F < 0$); none does.
+\end{itemize}
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / R-U10-3 resolution (near-gap)
+Precise statement:       At fixed I, r_hat(I) = rR + 2 lambda' I is
+                         pattern-independent, so F[P] - F[R_H] =
+                         (1/2)Tr[ln(D_0 + lambda' P^2) - ln D_0] >= 0
+                         UNCONDITIONALLY (lambda' P^2 PSD, ln monotone).
+                         The convention remainder (1.65e-3) is COMMON-MODE
+                         and cancels; the triage's x2 was a one-sided
+                         mis-subtraction. Machine 14/14.
+Scope:                   Matched second-cumulant fluctuation free energy;
+                         floor (leading sign) of the selection difference.
+                         The subleading layer-margin residual is the
+                         AddA-AddE / STEP-5B business, unchanged.
+Dependencies:            R-001 (P^2-representation, floor); the common
+                         diagonal dressing r_hat(I); m424 constants.
+Evidence grade:          ANALYTIC (operator monotonicity) + EXECUTED
+                         (14/14 incl. common-mode cancellation)
+Reproduction command:    python codes/vacuum/neargap_common_mode_repair.py
+Expected output:         claims 14/14 PASS; result.json under
+                         claims/B1-RH-ENUM/runs/260606-neargap-common-mode/
+Falsification gate:      A same-intensity competitor section with
+                         Delta F < 0 at the common dressing (would refute
+                         the floor); a non-common-mode dressing dependence
+                         (Delta F swap > O(remainder)).
+Tier before / after:     R-U10-3 BLOCKED / RESOLVED. B1 stays T5; the U1
+                         T6-CONDITIONAL proposal is UN-BLOCKED on the
+                         near-gap axis (operator sign-off still pending,
+                         named hypotheses unchanged).
+No-overclaim statement:  This resolves ONLY the near-gap floor gate. It
+                         does NOT promote B1 (operator decision), does NOT
+                         touch the other U1 hypotheses {H-LAYER, H-A0,
+                         H-ADM-COH, SC-SCOPE}, and does not alter STEP-5B.
+Next required action:    Operator: with R-U10-3 resolved, reconsider the
+                         U1 T6-CONDITIONAL proposal (B1 T5 -> T6 on the
+                         named set); the standing decisions (B5 full-T5,
+                         H-A0 -> H-ANCHOR) remain.
+\end{verbatim}

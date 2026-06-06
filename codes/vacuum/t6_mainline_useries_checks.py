@@ -21,7 +21,7 @@ Exit code 0 iff all claims pass. Runtime target: < 20 s (M_fast/J calls only;
 no sweeps).
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __first_issued__ = "2026-06-06"
 __version_issued__ = "2026-06-06"
 __status__ = "DRAFT - NOT YET EXECUTED (authored without shell access; run + review required)"
@@ -75,7 +75,7 @@ print("S1 G-A0-VER (U2): sign-decomposition window arithmetic")
 M_c = -U / (10.0 * V)
 claim("M_c_exact", 43.0 / 1620.0, M_c, 1e-12)
 m_w = MU2 + 15.0 * V * M_c**2
-claim("m_w_window_constant", 0.0392414, m_w, 5e-7)
+claim("m_w_window_constant", 0.0392407, m_w, 5e-7)  # TRIAGE: note typo 0.0392414->0.0392407 (true)
 m_star_from_gap = MU2 + 3.0 * U * M_R + 15.0 * V * M_R**2
 claim("m_star_gap_identity_vs_rR", rR, m_star_from_gap, 2e-5)
 claim_true("window_margin_x7p7", m_star_from_gap / m_w > 7.0,
@@ -135,7 +135,7 @@ for I in LAM_ANCHORS[1:]:
     u_eff_I = U + 10.0 * V * M_I
     b_u7 = 0.5 * u_eff_I**2 * 2.0 * I * 6.0 * J0 * M_I
     ratio_u7 = composed[I] / b_u7
-    quoted = {1e-3: 3.2, 2e-3: 1.34}[I]
+    quoted = {1e-3: 3.2, 2e-3: 1.13}[I]  # TRIAGE: U7 endpoint est 1.34->1.13 (true); still >1
     claim_true(f"U7_dressed_ratio_I={I:g}", abs(ratio_u7 - quoted) <= 0.15 * quoted,
                f"(ratio = {ratio_u7:.2f}, quoted ~{quoted} est)")
 claim_true("U7_endpoint_positive", composed[2e-3] >
@@ -152,8 +152,9 @@ print("S5 R-U10-3 (U10/U11): near-gap protection first order + convention remain
 # Exact identity M'(r_hat) = -J(0): finite-difference check.
 h = 1e-5
 Mp_fd = (m424.M_fast(r_hat_anchor + h) - m424.M_fast(r_hat_anchor - h)) / (2.0 * h)
-claim_true("Mprime_equals_minus_J0", abs(-Mp_fd - J0) <= 0.02 * J0,
-           f"(-M' = {-Mp_fd:.4f} vs J0 = {J0:.4f})")
+claim_true("Mprime_equals_minus_half_J0", abs(-Mp_fd - 0.5 * J0) <= 0.05 * J0,
+           f"(TRIAGE: true identity is M' = -J(0)/2, NOT -J(0); -M' = {-Mp_fd:.4f} vs J0/2 = {0.5*J0:.4f}; "
+           "U7/U10 claimed exact M'=-J(0) is off by x2 -- qualitative M'<0 stands)")
 # First-order trace gain coefficient ~ 2 lam M_R per unit I (U10 sanity figure 1.76).
 gain_lin = 2.0 * lam * M_R
 claim("neargap_linear_gain_coeff", 1.763, gain_lin, 0.02)
@@ -171,10 +172,13 @@ for _ in range(80):
         break
     rp = rp_new
 remainder_end = abs(rp - (rR + 2.0 * lam * I_end))
-claim_true("convention_remainder_endpoint", remainder_end <= 3.3e-5,
-           f"(remainder = {remainder_end:.2e}; U11 scaled expectation 2.7e-5 + 10% cubic + tol)")
-claim_true("remainder_x100_below_protection", gain_lin * I_end / max(remainder_end, 1e-12) > 100.0,
-           f"(protection/remainder = {gain_lin * I_end / max(remainder_end, 1e-12):.0f})")
+claim_true("convention_remainder_endpoint_TRUE", 1.0e-3 <= remainder_end <= 2.2e-3,
+           f"(TRIAGE: remainder = {remainder_end:.2e} -- U11 claim 2.7e-5 was ~60x too small; the "
+           "near-gap convention remainder is NOT negligible at the endpoint)")
+claim_true("neargap_endpoint_protection_THIN_x2", 1.5 <= gain_lin * I_end / max(remainder_end, 1e-12) <= 3.0,
+           f"(TRIAGE/R-U10-3: protection/remainder = {gain_lin * I_end / max(remainder_end, 1e-12):.1f} -- THIN x2, "
+           "NOT x100/x130; R-U10-3 does NOT clean-pass; U1 T6-CONDITIONAL stays BLOCKED on the near-gap "
+           "endpoint per U9 G-U1-SMALLT)")
 
 print("S6 U8 angle table (exact geometry + theta_min(I))")
 angles = {

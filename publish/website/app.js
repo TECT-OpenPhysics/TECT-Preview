@@ -3,8 +3,9 @@
  * content files: the repo itself is the only source of truth
  * (governance/publication-tiers.md, live-fetch architecture).
  *
- * __version__ 1.0.1 · first issued 2026-06-05 · issued 2026-06-05
+ * __version__ 1.1.0 · first issued 2026-06-05 · issued 2026-06-06
  * 1.0.1: exclude claims/_TEMPLATE from the live ledger (same defect as build_wiki 1.0.1)
+ * 1.1.0: live per-claim Development lineage (LINEAGE.md) + Results-ledger route
  */
 "use strict";
 
@@ -79,6 +80,10 @@ async function viewOverview() {
     <div class="card"><h3>Falsify us</h3>
       <p>Every claim ships its falsification condition and, where available, a
       one-command reproduction. Start at <a href="#/reviewing">Review TECT</a>.</p></div>
+    <div class="card"><h3>Reusable results</h3>
+      <p>Standalone lemmas and theorems harvested from the claims — several are
+      self-contained harmonic-analysis / additive-combinatorics statements.
+      See the <a href="#/results">results ledger</a>.</p></div>
   </div>
   <h2>Claims</h2>${claimsTable(cards)}`;
   typeset();
@@ -144,8 +149,22 @@ async function viewClaim(id) {
      <span class="muted">${esc(c.reproduction.expected || "")}</span></p>
   <h3>No-overclaim</h3><p class="notice">${esc(c.no_overclaim)}</p>
   <h3>Evidence</h3><ul>${ev}</ul>
-  <details><summary>Full card (claims/${esc(id)}/claim.md)</summary>${cardMd}</details>`;
+  <details><summary>Full card (claims/${esc(id)}/claim.md)</summary>${cardMd}</details>
+  <h3>Development lineage</h3>
+  <p class="muted">The ordered theory-development trace for this claim, live from
+     <a href="${BLOB(`claims/${id}/LINEAGE.md`)}"><code>claims/${esc(id)}/LINEAGE.md</code></a>
+     (generated from note banners).</p>
+  <div id="lineage"><p class="muted">Loading lineage…</p></div>`;
   typeset();
+  try {
+    const lin = await fetchText(`claims/${id}/LINEAGE.md`);
+    document.getElementById("lineage").innerHTML =
+      `<details open><summary>development arc + chronological note-lineage</summary>${md(lin)}</details>`;
+    typeset();
+  } catch (e) {
+    document.getElementById("lineage").innerHTML =
+      `<p class="muted">No lineage ledger yet for this claim.</p>`;
+  }
 }
 
 async function mdPage(title, path) {
@@ -179,6 +198,8 @@ const routes = {
   "negative": () => mdPage("Negative-result registry", "negative-results/registry.md"),
   "predictions": () => mdPage("Prediction ledger", "predictions/prediction-ledger.md"),
   "reviewing": () => mdPage("How to review (or attack) TECT", "REVIEWING.md"),
+  "results": () => mdPage("Standalone-publishable results (R-NNN)", "RESULTS-LEDGER.md"),
+  "lineage-policy": () => mdPage("Development-history policy", "governance/development-history.md"),
   "changelog": () => mdPage("Changelog", "CHANGELOG.md"),
 };
 async function route() {

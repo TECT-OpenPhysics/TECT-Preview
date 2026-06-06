@@ -26,11 +26,12 @@ The operating principle of this repository:
 |---|---|---|
 | `CLAIMS.md` | Master claim ledger (auto-generated — start here) | P1 |
 | `CATALOG.md` | Every artefact with versions, dates, claim links (auto-generated) | P1 |
+| `RESULTS-LEDGER.md` | Standalone-publishable results harvested from the claims (curated) | P1 |
 | `ROADMAP.md` | 6-Stage roadmap v2 with exit conditions and current status | P1 |
 | `GOVERNANCE.md` | Operating constitution (tiers, gates, registration rules) | P1 |
 | `REVIEWING.md` | How to review or attack TECT in 30 minutes | P1 |
 | `governance/` | Detailed binding policies | P1 |
-| `claims/` | One folder per claim: card + `status.json` + proof notes (`notes/`) + run artefacts (`runs/`) — the complete verification package | P1 |
+| `claims/` | One folder per claim: card + `status.json` + proof notes (`notes/`) + run artefacts (`runs/`) + development lineage (`LINEAGE.md`, generated; `lineage-narrative.md`, curated) — the complete verification package | P1 |
 | `theory/` | Layer-2 synthesis: consolidated sector expositions citing claim IDs at registered tiers | P1 |
 | `verification/` | Claim linter, verification scripts, tests | P1 |
 | `codes/` | Numerical codes by domain (vacuum, topology, gravity, flavor, cosmology) | P1 |
