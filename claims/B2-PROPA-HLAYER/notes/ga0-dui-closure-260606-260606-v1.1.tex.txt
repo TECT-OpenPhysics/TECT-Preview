@@ -1,8 +1,7 @@
-% SUPERSEDED by ga0-dui-closure-260606-260606-v1.1.tex.txt
 % =============================================================================
 % Title: Closing G-A0-DUI: differentiation under the integral for the slaved variance, and the demotion of H-ANCHOR to a verified anchor fact
 % Claim: B2-PROPA-HLAYER (G-A0-DUI closure; H-ANCHOR demotion; also affects B1-RH-ENUM)
-% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Version: v1.1 -- first issued 2026-06-06; this version issued 2026-06-06
 % Status: theorem note, T4 (DUI made explicit + machine-confirmed 23/23; G-A0-DUI CLOSED; A=0 uniqueness unconditional at the anchor; H-ANCHOR demoted hypothesis -> verified fact)
 %
 % Revision history (cumulative):
@@ -45,18 +44,22 @@ M'(m) \;=\; -\frac{1}{2\pi^2}\int_0^\infty \frac{k^2}{D(k,m)^2}\,dk \;<\; 0 .
 \end{lemma}
 
 \begin{proof}
-Fix $m_0 \in (0, m)$. For $\tilde m \ge m_0$ the partial derivative
-$\partial_{\tilde m} D^{-1} = -D^{-2}$ satisfies the pointwise bound
+Fix $m > 0$ and set $m_0 = m/2$; for $|h| < m/2$ every intermediate value
+$\tilde m \in [m/2, 3m/2]$ satisfies $\tilde m \ge m_0$, so the SAME
+dominator applies on BOTH sides ($h \gtrless 0$), giving two-sided
+differentiability at $m$. For $\tilde m \ge m_0$, $\partial_{\tilde m} D^{-1}
+= -D^{-2}$ satisfies the pointwise bound
 \[
 \Bigl|\partial_{\tilde m} \tfrac{1}{D(k,\tilde m)}\Bigr|
 = \frac{1}{D(k,\tilde m)^2}
 \;\le\; \frac{1}{D(k,m_0)^2}
 \;=:\; \frac{1}{[m_0 + C(k^2-q_0^2)^2]^2} ,
 \]
-and the dominating function $k^2/D(k,m_0)^2$ is integrable on
-$(0,\infty)$: it is bounded by $k^2/m_0^2$ near the shell $k=q_0$ (where
-$D \to m_0$) and decays as $k^2 \cdot (Ck^4)^{-2} = C^{-2}k^{-6}$ as
-$k \to \infty$. By the Leibniz rule under dominated convergence,
+and the dominating function $k^2/D(k,m_0)^2$ is integrable on $(0,\infty)$
+across all three regions: near $k=0$ the denominator is bounded below by a
+positive constant so the integrand is $O(k^2)$; near the shell $k=q_0$ it is
+bounded by $k^2/m_0^2$ (where $D \to m_0$); and as $k \to \infty$ it decays as
+$k^2(Ck^4)^{-2} = C^{-2}k^{-6}$. By the Leibniz rule under dominated convergence,
 differentiation and integration commute, giving the stated $M'$; the
 integrand $k^2/D^2$ is strictly positive, so $M'(m) < 0$ strictly.
 $\square$
@@ -82,7 +85,12 @@ m^* > m_w \;(\times7.76), \qquad M_R > M_c \;(\times4.12),
 \]
 machine-verified in G-A0-VER (14/14). Hence the $A=0$ uniqueness and
 zero-at-gap structure (former H-A0 (U),(Z)) is an UNCONDITIONAL theorem
-at the production anchor $\mu^2 = 0.005$.
+AT THE PRODUCTION ANCHOR $\mu^2 = 0.005$ ONLY (the $\mu^2$-neighbourhood is
+ROBUSTNESS-MU2, OPEN). This is the slaved isotropic $A=0$ section, NOT a
+global H-LAYER closure: H-LAYER remains a named hypothesis of B2/B1, and the
+$A\ne0$ branch / anisotropic perturbations / off-diagonal covariance are
+untouched. Permitted: ``$A=0$ uniqueness is unconditional at the anchor.''
+Forbidden: ``H-LAYER is now unconditional.''
 
 \section*{4. H-ANCHOR demotion}
 
@@ -96,9 +104,13 @@ hypothesis sets of B2 and B1:
 \text{B2}&: \{\text{H-LAYER}, \text{H-ANCHOR}\} \to \{\text{H-LAYER}\},\\
 \text{B1}&: \{\dots, \text{H-ANCHOR}, \dots\} \to \{\text{H-LAYER}, \text{H-ADM-COH}, \text{SC-SCOPE}\}.
 \end{align*}
-The dependency is not hidden: the GATES.md H-ANCHOR row records it as a
-verified anchor fact, and the cards' scope states the anchor inequality
-explicitly. The OFF-ANCHOR extension (the $\mu^2$-neighbourhood) is the
+The dependency is RETAINED, not erased: H-ANCHOR leaves the hypothesis set
+but remains a verified anchor dependency --- $m^* > m_w$ and $M_R > M_c$ under
+A1-KERNEL-CONV at $\mu^2 = 0.005$ --- recorded as a verified-fact row in
+GATES.md and in the B1/B2 card scope. Demoting the hypothesis does NOT hide
+the anchor dependence; the curve-shape quadrature systematic exits the
+uniqueness proof, but the anchor constants remain verified dependencies (this
+is not ``all numerical dependence removed''). The OFF-ANCHOR extension (the $\mu^2$-neighbourhood) is the
 pre-existing ROBUSTNESS-MU2 gate, unchanged: this demotion concerns only
 the production anchor, where the whole Sector-B analysis is pinned.
 

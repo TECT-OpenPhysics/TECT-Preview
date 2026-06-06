@@ -5,6 +5,56 @@ not pillar counts.
 
 ---
 
+## [HA0-DOCS-REVIEW] H-A0 docs adversarial review; ROBUSTNESS-MU2 re-opened; anchor-only scope hardened — 2026-06-06
+
+- **Operator adversarial review** of ga0-dui-closure + ha0-removal-pathway,
+  archived at reviews/2026-06-06-ha0-docs-review.md. Binding: H-A0 discharged
+  AT THE PRODUCTION ANCHOR mu^2=0.005 ONLY; ROBUSTNESS-MU2 OPEN; H-ANCHOR a
+  retained verified anchor fact; full H-LAYER NOT closed.
+- **CORRECTION -- ROBUSTNESS-MU2 RE-OPENED**: the prior [x0.5,x2] closure
+  rested on a bounded-not-recomputed exact m(mu^2), below the adversarial
+  bar. Reclassified to a numerically-supported ADVANCE (gate OPEN; note
+  robustness-mu2-step5b-remargin re-issued v1.1; B1 open_gates restores
+  ROBUSTNESS-MU2).
+- **ga0-dui-closure v1.1**: two-sided differentiability (m0=m/2, |h|<m/2);
+  three-region domination (k->0 O(k^2) / shell / k^-6); prominent anchor-only;
+  H-ANCHOR retained as verified anchor dependency; A=0-unconditional != 
+  H-LAYER-solved; 23/23 = proof audit (carrier = dominated convergence).
+- **ha0-removal-pathway v2.1**: scope-fence banner (replacement not full
+  discharge; anchor-only; A=0 section only; constants retained under
+  A1-KERNEL-CONV); m_c=19.96 is a monotone threshold not an operating mass;
+  G-A0-VER (arithmetic, closed) vs G-A0-DUI (regularity, closed in companion).
+- **B1/B2 cards**: anchor-dependency-retained-as-verified-fact; H-A0 at-anchor-
+  only; ROBUSTNESS-MU2 OPEN. No tier changed anywhere. lint PASS. Chain GREEN.
+
+---
+
+## [B5-ADVERSARIAL-REVIEW] Operator adversarial review archived; scope fences hardened; lift inputs registered; tiers frozen — 2026-06-06
+
+- **Operator adversarial review** of 8 Sector-B documents, archived at
+  reviews/2026-06-06-b5-adversarial-review.md (per-document attack points +
+  required reinforcements + danger ranking + official-status statements).
+  Binding outcome: **no tier raised anywhere**.
+- **B5 stays T5 PINNED-CLOSURE** only under CLOSED@H-ADM-COH-AMENDED-CLASS +
+  second-cumulant scope; T6 forbidden. The 192/192 is an EXECUTED
+  reproducibility package within the pinned scope, separated from physical
+  theorem closure. t5-assignment-dossier re-issued v2.1 with a prominent
+  first-section scope-fence banner (not unrestricted / not all-orders).
+- **SC-SCOPE all-orders lift OPEN** pending four named inputs, now
+  registered as gates: M-ENDPOINT (endpoint dressing variance),
+  GHAT3-Q0 (optional cubic form factor), GHAT4-PERTRANSFER (per-transfer
+  quartic-difference form factor), R-U6-1 (tadpole formal alignment),
+  R-U6-2 (coefficient script). SC-SCOPE row tightened to require them as a
+  JOINT 2nd+3rd-order inequality (sup-kernel endpoint lift FAILS:
+  sunset x0.97, quartic-difference x1.0, tadpole-if-uncancelled x0.53).
+- **DR-2 off critical path**: DR2-SHARE registered as the formal
+  extraction obstruction (research branch).
+- The seven U-series drafts keep their honest tiers (T2/T3/survey); their
+  reinforcements are archived in the review and will apply on next advance.
+- lint PASS (18 claims, 30 gates/hypotheses). Chain GREEN. No tier change.
+
+---
+
 ## [ROBUSTNESS-MU2-CLOSED] STEP-5B re-margined off-anchor; ROBUSTNESS-MU2 closed for mu^2 in [x0.5,x2] — 2026-06-06
 
 - **Operator directive**: proceed with 1 (fully close ROBUSTNESS-MU2).

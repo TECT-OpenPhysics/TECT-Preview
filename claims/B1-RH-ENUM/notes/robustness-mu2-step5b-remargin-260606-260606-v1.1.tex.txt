@@ -1,9 +1,8 @@
-% SUPERSEDED by robustness-mu2-step5b-remargin-260606-260606-v1.1.tex.txt
 % =============================================================================
 % Title: Closing ROBUSTNESS-MU2: the STEP-5B beyond-layer margins re-computed off-anchor stay above unity across the neighbourhood
 % Claim: B1-RH-ENUM (gate ROBUSTNESS-MU2 closure; bears on B5-BEYOND-LAYER-BOUND)
-% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
-% Status: theorem note, T4 (off-anchor STEP-5B re-margin 5/5; ROBUSTNESS-MU2 CLOSED for mu^2 in [x0.5, x2]; exact layer-margin m(mu^2) bounded not recomputed -- a <few% effect that cannot break the x2.55 floor)
+% Version: v1.1 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: theorem note, T4 (off-anchor STEP-5B re-margin 5/5; NUMERICALLY-SUPPORTED ADVANCE on mu^2 in [x0.5,x2]; ROBUSTNESS-MU2 stays OPEN per operator review -- exact m(mu^2) bounded-not-recomputed does not meet the closure bar)
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-06) first issue, operator-authorized (directive: proceed
@@ -23,6 +22,9 @@
 % =============================================================================
 
 \section*{1. Purpose and scope}
+
+\noindent\textbf{Status (operator review 2026-06-06):} this is a NUMERICALLY-SUPPORTED ADVANCE; the exact layer margin $m(\mu^2)$ is bounded, not recomputed, so ROBUSTNESS-MU2 stays OPEN. The 5/5 numerics below stand; the gate-closure claim of v1.0 is withdrawn.
+
 
 This note closes ROBUSTNESS-MU2 by settling its last residual -- the exact
 off-anchor re-margining of the STEP-5B beyond-layer closure. Combined with
@@ -152,14 +154,13 @@ Expected output:         claims 5/5 PASS; off-anchor ratios x2.55..x60.8;
 Falsification gate:      A mu^2 in [x0.5, x2] with margin ratio <= 1; a
                          layer margin m(mu^2) dropping > 60% (would need
                          M_R/M_c < ~1.6, excluded by the sweep).
-Tier before / after:     ROBUSTNESS-MU2 OPEN -> CLOSED (mu^2 in [x0.5, x2]).
-                         Removed from B1 open_gates. No tier-number change;
-                         B1 T6 scope gains neighbourhood robustness.
-No-overclaim statement:  Closure is for the STATED neighbourhood
-                         [x0.5, x2], not unconditional in mu^2. The exact
-                         layer margin m(mu^2) is bounded via the preserved
-                         P_B floor, not recomputed; this cannot break the
-                         x2.55 endpoint margin. No tier-number change.
+Tier before / after:     ROBUSTNESS-MU2 OPEN -> OPEN (numerically-
+                         supported advance on mu^2 in [x0.5,x2]; NOT closed).
+                         No tier-number change.
+No-overclaim statement:  NOT a closure: ROBUSTNESS-MU2 stays OPEN. The
+                         margins are numerically supported on [x0.5,x2] but
+                         the exact m(mu^2) is bounded-not-recomputed; full
+                         closure needs it. No tier-number change.
 Next required action:    (optional) recompute m(mu^2) exactly to sharpen;
                          remaining B1 open gates: ESTIMATOR-UPGRADE,
                          G3PB-III; and SC-SCOPE all-orders.
