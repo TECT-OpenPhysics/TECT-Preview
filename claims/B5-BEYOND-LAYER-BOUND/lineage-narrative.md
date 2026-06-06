@@ -64,3 +64,5 @@ found that the near-gap small-amplitude endpoint protection is ×2, not the
 blocked pending a sharper near-gap kernel. The CLOSED-CONDITIONAL status of
 STEP-5B itself is unaffected (it rests on the floor + admissibility chain, not
 on the near-gap figure).
+
+B5 was subsequently ASSIGNED T4 -> T5 PINNED-CLOSURE (scope CLOSED@H-ADM-COH-AMENDED-CLASS, second-cumulant order; operator-authorized 2026-06-06). The tier is the honest middle: above T4 because the STEP-5B gate is closed (verdict #14) on theorem-grade pillars (P^2-floor, c_R=4√14, single-circle K=14, carrier partition), and below T6 because the assembled chain still contains strong-evidence-grade lemmas (the indistinguishability and cross-reading lemmas), the endpoint margin is thin (×2.6), and the scope is second-cumulant with the third-cumulant endpoint marginal. The unrestricted-class result remains the DR-2 route (research-grade); the all-orders lift is the open SC-SCOPE target. A five-objection self-adversarial review (the binding gate, since the operator had not externally reviewed) upheld no blocker.

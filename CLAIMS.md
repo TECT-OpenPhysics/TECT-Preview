@@ -5,7 +5,7 @@
 
 Generated: 2026-06-06
 
-**18 claims** · T2: 1 · T3: 1 · T4: 4 · T5: 4 · T6: 8 · T7-candidates: 3 · refuted: 0
+**18 claims** · T2: 1 · T3: 1 · T4: 3 · T5: 5 · T6: 8 · T7-candidates: 3 · refuted: 0
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -25,7 +25,7 @@ reproduction commands, and history live on the claim cards.
 | [B2-PROPA-HLAYER](claims/B2-PROPA-HLAYER/claim.md) | Proposition A as a conditional theorem on {H-LAYER, H-A0} | T6 | ACTIVE | ANALYTIC, CONDITIONAL | H-LAYER, H-A0 | STEP-5B |
 | [B3-BCC-STRUCT](claims/B3-BCC-STRUCT/claim.md) | BCC structural selection among tested ordered condensates | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | G3PB-III |
 | [B4-MASS-GAP](claims/B4-MASS-GAP/claim.md) | BCC ground-state uniqueness within the single-mode constraint cone | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
-| [B5-BEYOND-LAYER-BOUND](claims/B5-BEYOND-LAYER-BOUND/claim.md) | Pattern-generic Gershgorin reduction of the beyond-layer bound | T4 | ACTIVE | ANALYTIC, EXECUTED | — | — |
+| [B5-BEYOND-LAYER-BOUND](claims/B5-BEYOND-LAYER-BOUND/claim.md) | Pattern-generic Gershgorin reduction of the beyond-layer bound | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
 
 ## Sector C — Spacetime / Lorentz / Gravity
 

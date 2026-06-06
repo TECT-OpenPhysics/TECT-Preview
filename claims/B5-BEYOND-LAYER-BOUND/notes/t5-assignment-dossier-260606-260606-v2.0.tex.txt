@@ -1,0 +1,154 @@
+% =============================================================================
+% Title: B5 tier assignment to PINNED-CLOSURE: the beyond-layer bound closed within the amended-class second-cumulant scope
+% Claim: B5-BEYOND-LAYER-BOUND (T5 assignment record; gate STEP-5B)
+% Version: v2.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: tier-assignment note, T5 PINNED-CLOSURE scope CLOSED@H-ADM-COH-AMENDED-CLASS (operator-authorized 2026-06-06)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (unit U5): dossier consolidating the
+%        certified material for the T5-CANDIDATE -> T5 decision; NO tier
+%        change performed; operator sign-off requested.
+%   v2.0 (2026-06-06) ASSIGNMENT re-issue, operator-authorized (directive:
+%        proceed with item 2). B5 assigned T4 -> T5 PINNED-CLOSURE with the
+%        mandatory scope string CLOSED@H-ADM-COH-AMENDED-CLASS (second-
+%        cumulant order). Adds the five-objection self-adversarial review
+%        that justifies T5 (not T4, not T6) and pins the honest scope; the
+%        reproduction-package contract; and the tier-monotonicity note. The
+%        operator had not externally reviewed; the self-adversarial review
+%        is therefore the binding gate (CLAUDE.md 6.3.5).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Operator verdict \#14 set B5 = T5-CANDIDATE; this note records the
+operator-authorized assignment to T5 PINNED-CLOSURE. The mandatory TSv2
+scope string is
+\[
+\boxed{\texttt{CLOSED@H-ADM-COH-AMENDED-CLASS}\ (\text{second-cumulant order})}.
+\]
+The closure: within the H-ADM-COH amended competitor class, at matched
+second-cumulant order, the beyond-layer off-diagonal correction is
+bounded below the layer margin for every admissible pattern (STEP-5B
+gate, CLOSED-CONDITIONAL, margins $\times59.4/\times8.8/\times2.6$).
+
+\section*{2. Why T5 (PINNED-CLOSURE), not T4 and not T6}
+
+\textbf{Above T4 (STRONG-EVIDENCE).} T4 is ``numerics + analytic bounds,
+not a theorem.'' B5 is past that: the gate STEP-5B was flipped to
+CLOSED-CONDITIONAL by operator verdict \#14; the closure rests on
+theorem-grade pillars --- the $P^2$-representation floor (R-001,
+operator monotonicity), the operator-derived $c_R = 4\sqrt{14}$, the
+universal single-circle theorem (R-002, $K=14$ sharp), the
+antipodal-carrier partition (R-003) --- assembled into a closure, not a
+collection of evidence.
+
+\textbf{Below T6 (CONDITIONAL-THEOREM).} T6 is a clean theorem under
+named hypotheses. B5 is not yet that: the assembled chain contains
+strong-evidence-grade links (the coherence indistinguishability lemma
+AddC is a T4 analytic-skeleton-plus-machine result; the cross-reading
+constant was machine-bounded then analytically pinned in AddE); the
+endpoint margin is thin ($\times2.6$); the scope is second-cumulant with
+the third-cumulant endpoint marginal (SC-SCOPE). A closure resting on a
+pinned operational scope with mixed-grade internal links is exactly
+PINNED-CLOSURE.
+
+\textbf{Hence T5}, scope pinned to the amended class and second-cumulant
+order, with the reproduction package below.
+
+\section*{3. Reproduction package (TSv2 T5 requirement)}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y @{}}
+\toprule
+Artefact & Status \\
+\midrule
+\url{codes/vacuum/beyond_layer_gershgorin_bound.py} v1.14.0 & 192/192 self-test asserts PASS \\
+run artefact \url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json} & present \\
+note chain (main v2.0; AddA v1.3; AddB; AddC; AddD; AddE) & FORM-CHECK PASS, PDFs beside source \\
+development lineage \url{claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md} & generated, ordered \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Reproduction command: \texttt{python codes/vacuum/beyond\_layer\_gershgorin\_bound.py}
+$\Rightarrow$ claims 192/192 PASS; the closure margins
+$\times59.4/\times8.8/\times2.6$ are emitted across the anchor band.
+
+\section*{4. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3.5; binding gate, no external review this turn)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The closure rests on H-ADM-COH, an operator-
+ADOPTED class amendment, not a proven fact --- is a closure that depends
+on a class choice really T5?''} ADDRESSED by the scope string: T5
+PINNED-CLOSURE explicitly admits an operational scope pin
+(\texttt{CLOSED@\dots}), and H-ADM-COH is that pin, named in the scope
+and registered in GATES.md. The closure is honest within the named
+class; the unrestricted class is the DR-2 route (research-grade), not
+claimed here.
+\item[($\beta$)] \emph{``The endpoint margin is $\times2.6$ and the
+third-cumulant endpoint is marginal --- is the closure solid?''}
+VALID-with-mitigation: the $\times2.6$ floor is theorem-grade within
+second-cumulant (AddE); the third-cumulant marginality is the SC-SCOPE
+pin (second-cumulant order is in the scope string). The all-orders
+endpoint is an open lift, not part of the T5 claim.
+\item[($\gamma$)] \emph{``Does B5 depend on the provisional $20/9$
+incidence route?''} DISMISSED: the closure path uses the operator-
+derived $c_R = 4\sqrt{14}$ (theorem-grade) and the admissibility route;
+the $20/9$ route is a supporting candidate (constant unpinned),
+explicitly EXCLUDED from the closure path (AddA v1.3). No T5 figure
+depends on it.
+\item[($\delta$)] \emph{``Reproduction package?''} SATISFIED: script
+192/192 + run artefact + the note chain (section 3).
+\item[($\epsilon$)] \emph{``Tier monotonicity: B1 (T6) uses B5 ---
+must B5 be $\ge$ T6?''} DISMISSED: B1 does not hard-depend on B5; B1
+carries B5's closure as the NAMED hypothesis H-ADM-COH (a T6 claim may
+rest on a sub-T6 input promoted to a named hypothesis, TSv2 §4.4). The
+DAG is acyclic. B5 at T5 is consistent with B1 at T6.
+\end{itemize}
+
+No objection is UPHELD as a blocker; one DISMISSED-via-scope, one
+VALID-with-mitigation (the second-cumulant/endpoint pin, in the scope
+string), three DISMISSED.
+
+\section*{5. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND (beyond-layer bound)
+Precise statement:       Within the H-ADM-COH amended competitor class at
+                         second-cumulant order, the beyond-layer
+                         off-diagonal correction is bounded below the
+                         layer margin for every admissible pattern
+                         (STEP-5B CLOSED-CONDITIONAL; floors
+                         x59.4/x8.8/x2.6). Closure pillars: P^2 floor
+                         (R-001), c_R = 4 sqrt(14), single-circle K=14
+                         (R-002), carrier partition (R-003), H-ADM-COH
+                         admissibility, indistinguishability lemma.
+Scope (mandatory T5):    CLOSED@H-ADM-COH-AMENDED-CLASS, second-cumulant
+                         order. NOT unrestricted (DR-2 research-grade);
+                         NOT all-orders (SC-SCOPE).
+Dependencies:            A1-KERNEL-CONV (convention); B2-PROPA-HLAYER
+                         (layer margin). Soft: B1 consumes this via
+                         H-ADM-COH.
+Evidence grade:          ANALYTIC (closure pillars) + EXECUTED (192/192)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 192/192 PASS; margins x59.4/x8.8/x2.6.
+Falsification gate:      An admissible amended-class pattern with
+                         beyond-layer correction exceeding the margin; a
+                         section breaking the P^2 floor; loss of the
+                         H-ADM-COH class definition.
+Tier before / after:     T4 (T5-CANDIDATE) / T5 PINNED-CLOSURE
+                         (operator-authorized "proceed with item 2",
+                         2026-06-06).
+No-overclaim statement:  T5 is closure WITHIN the pinned amended-class
+                         second-cumulant scope, resting on a chain with
+                         some T4-grade internal lemmas (hence not T6) and
+                         not unconditional (hence not T7). The
+                         unrestricted-class result is DR-2 (research-
+                         grade); the all-orders lift is open (SC-SCOPE).
+Next required action:    Promotion to T6 would require discharging the
+                         T4-grade lemmas to theorem grade and a clean
+                         conditional-theorem statement; the unrestricted
+                         T7 path is DR-2. Standing decision H-A0 ->
+                         H-ANCHOR remains.
+\end{verbatim}

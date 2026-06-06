@@ -5,6 +5,31 @@ not pillar counts.
 
 ---
 
+## [B5-T5-ASSIGNMENT] Beyond-layer bound assigned T4 -> T5 PINNED-CLOSURE (operator-authorized) — 2026-06-06
+
+- **Operator directive**: proceed with item 2 (B5 full-T5), without an
+  external review this turn — so the self-adversarial review is the binding
+  gate (CLAUDE.md 6.3.5).
+- **Assignment**: B5-BEYOND-LAYER-BOUND T4 -> **T5 PINNED-CLOSURE**, scope
+  **CLOSED@H-ADM-COH-AMENDED-CLASS (second-cumulant order)**. Within the
+  amended class at second-cumulant order the beyond-layer correction is
+  bounded below the layer margin for every admissible pattern (STEP-5B
+  CLOSED-CONDITIONAL; floors x59.4/x8.8/x2.6).
+- **Why T5, not T4 or T6**: above T4 (gate flipped by verdict #14;
+  theorem-grade pillars R-001 P^2-floor / c_R=4 sqrt(14) / R-002 single-
+  circle K=14 / R-003 carrier partition); below T6 (chain has T4-grade
+  lemmas — indistinguishability AddC, cross-reading; endpoint x2.6 thin;
+  SC-SCOPE marginal). PINNED-CLOSURE is the honest middle tier.
+- **Self-adversarial review (5 objections)**: H-ADM-COH scope dependence,
+  endpoint/SC-SCOPE thinness, 20/9-route independence, reproduction
+  package, tier-monotonicity vs B1 — none upheld as blocker.
+- **Reproduction package** (TSv2 T5 requirement): beyond_layer_gershgorin
+  _bound.py v1.14.0 192/192 + run artefact + the AddA-AddE note chain.
+- Note t5-assignment-dossier v2.0 (v1.0 dossier superseded; FORM-CHECK
+  PASS, Overfull 0). lint PASS (18 claims, 22 gates). Chain GREEN.
+
+---
+
 ## [B1-T6-PROMOTION] Reading-H class-wide selection promoted T5 -> T6 CONDITIONAL (operator-authorized) — 2026-06-06
 
 - **Operator directive**: proceed with item 1 (the U1 Reading-H T6 promotion).
