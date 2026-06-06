@@ -1,0 +1,244 @@
+% =============================================================================
+% Title: Second-order audit of the T6-entry composition: the small-amplitude interval question and the named verification item G-U1-SMALLT
+% Claim: B1-RH-ENUM (self-audit of unit U1; Reading-H T6 mainline, unit U9)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: audit note (cross-turn second-order audit of U1 by the same agent, devil's-advocate discipline; one UPHELD objection -> U1 proposal flagged CONDITIONAL on the named item G-U1-SMALLT; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U9:
+%        second-order audit of the U1 entry package). FINDING (UPHELD
+%        objection, self-caught): the U1 composition reads Prop A as
+%        supplying a UNIFORM layer floor 0.00432 against which the
+%        STEP-5B budget is subtracted; but Prop A's floor structure is
+%        INTERVAL-DEPENDENT -- on interval I' (M >= M_+, containing the
+%        gap point) the layer excess vanishes continuously toward the
+%        disordered point (Phi ~ (kappa/2) t^2 with Delta F_0 -> 0 as
+%        m -> m*), so a small-amplitude competitor's layer protection
+%        scales as O(I), not 0.00432, while the certified beyond-layer
+%        envelope scales as O(I^2) with a large class-wide prefactor.
+%        Whether the certified-intensity window sits below the resulting
+%        crossover (where the O(I) floor dominates) or whether the
+%        chain's threat model pins competitors into the band intervals
+%        (where the 0.00432 floor applies) is NOT decidable from the
+%        migrated notes alone: it requires the production-bookkeeping
+%        calibration (which M-interval the certified-I competitors
+%        occupy, and the curvature constant of Delta F_0 at the gap
+%        point). REGISTERED as the named verification item G-U1-SMALLT;
+%        the U1 promotion proposal is hereby flagged CONDITIONAL on its
+%        closure. Candidate resolutions (two routes) are recorded with
+%        the explicit inequalities each must verify. This is the
+%        cross-turn audit discipline operating as intended: the flag is
+%        raised by the author before operator review. PDF build and
+%        linter execution PENDING OPERATOR-SIDE (sandbox shell
+%        unavailable to this agent session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Unit U1 assembled the candidate T6 theorem by composing the Prop-A
+floor with the STEP-5B budget: $\Delta F \ge 0.00432\,(1 - 1/\rho)$.
+This audit re-examines the composition's interval structure and finds
+ONE objection that must be UPHELD pending verification. Per the
+second-order-audit discipline, the finding is recorded with its named
+verification item, and the U1 proposal is flagged accordingly.
+
+\section*{2. The finding}
+
+Prop A's proof is a four-interval decomposition in the trial mass
+($M$-space). The $+0.00432$ figure is the BAND interval's worst-case
+sum (floor $P_B(M_+) = 0.0052460$ minus the sextic-only dip
+$9.2595\times10^{-4}$). But on interval I$'$ ($M \ge M_+$, which
+CONTAINS the gap point $M_R = 0.109414$), the proof gives strict
+positivity with NO uniform margin: all $\Phi$-coefficients are
+positive and $\Delta F_0 \ge 0$, with BOTH vanishing at the disordered
+point ($t = 0$, $m = m^*$). Near that point the layer excess of a
+shell competitor scales as
+\[
+\Delta F_{\rm layer} \;\approx\; \tfrac{\hat\kappa}{2}\,t^2
+\;+\; \Delta F_0(m),
+\qquad \hat\kappa\big|_{M = M_R} = \hat r_0(M_R) = m^* = 0.3045 ,
+\]
+i.e.\ $O(t^2)$, while the certified beyond-layer envelope scales as
+$O(I^2)$ ($w_t \propto \lambda' I$) with the class-wide prefactor.
+If the chain's certified intensities $I$ identify with the competitor
+amplitude scale $t^2$, the comparison at fixed $I$ is
+\[
+\underbrace{\tfrac{m^*}{2}\,I - O(I^2)}_{\text{near-gap layer floor}}
+\quad\text{vs}\quad
+\underbrace{\frac{K(n_{\rm pack})(\lambda' I)^2 J_{\rm eff}}
+{4(1 - a_0)}}_{\text{certified envelope}} ,
+\]
+with crossover $I_\times \approx (m^*/2)\,\big/\,c_{\rm env}$,
+$c_{\rm env} = {\rm envelope}/I^2 \approx 4.3\times10^2$: numerically
+$I_\times \approx 3.5\times10^{-4}$ --- INSIDE the certified window
+$[4\times10^{-4}, 2\times10^{-3}]$. At face value, then, the
+$0.00432\,(1-1/\rho)$ composition does NOT cover near-gap
+small-amplitude competitors at the certified intensities; the U1
+arithmetic is valid only where the band floor is the binding layer
+protection.
+
+\section*{3. Why this may be benign (two candidate resolutions)}
+
+\begin{itemize}
+\item \textbf{Route (a) -- self-consistent slaving + Hessian
+positivity}: physical competitors are evaluated at their
+self-consistent dressing (matched bookkeeping); near the gap point the
+off-diagonal operator enters the HESSIAN, where the $P^2$ theorem
+($D + W = D_0 + \lambda' P^2 \ge D_0 > 0$) protects the quadratic
+order STRUCTURALLY --- the perturbative $O(I^2)$ subtraction is then
+the wrong accounting in this regime (the correction renormalizes the
+positive quadratic form rather than competing with the floor). The
+verification this route requires: a one-page statement that the
+second-order envelope formula's domain of use in the chain excludes
+(or structurally dominates) the near-gap regime, with the
+$P^2$-positivity carrying that regime.
+\item \textbf{Route (b) -- crossover arithmetic with per-pattern
+prefactor}: below the crossover the $O(I)$ floor dominates; at the
+certified intensities the relevant prefactor for SMALL patterns is the
+single-circle $K = 14$ (not the packing-maximal $107$), shrinking
+$c_{\rm env}$ by $\times7.6$ and pushing $I_\times$ to
+$\approx 2.7\times10^{-3} > 2\times10^{-3}$ --- the window closes.
+The verification this route requires: the explicit inequality
+$\tfrac{m^*}{2} I - C_2^{-1}\,O(I^2) > K(n_{\rm eff}(I))\,(\lambda'
+I)^2 J_{\rm eff}/(4(1-a_0))$ across the window, with the $\Delta F_0$
+curvature constant $C_2$ at the gap point (one new certified number)
+and the honest $n_{\rm eff}$ accounting (large-$n$ patterns carry
+larger $K$ but their near-gap layer floor also grows --- the
+$\hat\kappa$ of a large star is bounded below by the same
+$\hat r_0(M)$, so the trade-off must be written carefully).
+\end{itemize}
+
+Either route, if verified, restores the U1 composition with an
+amended proof text (the band arithmetic for the band regime; the
+near-gap statement for the small-amplitude regime). Neither is
+verifiable from the migrated notes alone --- the production
+bookkeeping's calibration of ``certified intensity'' against the
+trial-$(t, m)$ plane is the missing input.
+
+\section*{4. Registered item and the U1 flag}
+
+\begin{itemize}
+\item \textbf{G-U1-SMALLT (named verification item)}: determine the
+layer floor binding at the certified competitor intensities ---
+specifically (i) the calibration $I \leftrightarrow (t, m)$ of the
+production bookkeeping; (ii) the $\Delta F_0$ gap-point curvature
+$C_2$; (iii) whichever of route (a)/(b) the chain's structure
+supports, written as a one-page lemma. Until closed, the U1
+composition's quantifier ``for every pattern of the amended class''
+is UNVERIFIED in the near-gap small-amplitude regime.
+\item \textbf{U1 proposal flag}: the T5 $\to$ T6-CONDITIONAL proposal
+of U1 is hereby amended to CONDITIONAL ON G-U1-SMALLT in addition to
+operator sign-off. The B1 status.json scope/notes are updated in this
+unit's atomic set.
+\item What is NOT affected: B2 (Prop A itself is correct as stated ---
+strict positivity holds; the issue is the COMPOSITION's uniform-floor
+reading); B5 (the STEP-5B closure is a bound on the off-diagonal
+correction and stands within its own scope); the enumerated races
+(estimator-grade, per-pattern, unchanged).
+\end{itemize}
+
+\section*{5. Numerical verification}
+
+The audit's arithmetic is estimate-grade on certified constants:
+$c_{\rm env}({\rm endpoint}) = 1.74\times10^{-3}/(2\times10^{-3})^2
+\approx 434$; $I_\times = (0.3045/2)/434 \approx 3.5\times10^{-4}$;
+route-(b) single-circle variant $c_{\rm env}/7.6 \approx 57$,
+$I_\times \approx 2.7\times10^{-3}$. NO machine asserts executed this
+session; the crossover arithmetic is part of the G-U1-SMALLT item.
+
+Quantitative sanity check (mandatory): consistency --- at the LAM
+equilibrium ($I = 10^{-4}$, below $I_\times$ on either route) the
+artefact's measured $\delta_{\rm LAM} = 6.74\times10^{-8}$ sits five
+orders below the near-gap floor $(m^*/2)\times10^{-4} =
+1.5\times10^{-5}$: the ACTUAL corrections of raced patterns are deep
+inside the safe region, consistent with the audit's claim that the
+issue is the class-wide ENVELOPE's coverage of a regime, not any
+observed counter-behavior; sign-direction --- the audit errs
+conservative throughout (it treats the envelope as attainable, which
+the per-pattern measurements contradict by orders of magnitude);
+limit case --- as $I \to 0$ the floor/envelope ratio diverges, so the
+flag concerns a bounded window, not the structure of the selection.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The audit invents a threat the
+operator-reviewed chain already considered: fourteen verdicts would
+have caught a regime gap.''} VALID-with-mitigation: very possibly ---
+route (a) is likely the chain's implicit structure (the $P^2$ theorem
+was BUILT to protect positivity structurally). But `likely implicit'
+is not a citation: the U1 note COMPOSED two certified statements into
+a new theorem, and the composition's validity in every regime is the
+U1 author's burden, not the chain's. The flag converts an implicit
+assumption into a named verifiable item --- the cost is one page of
+verification; the alternative (an operator or referee finding it) is
+the documented failure mode this discipline exists to prevent.
+\item[($\beta$)] \emph{``The crossover arithmetic mixes
+normalizations: the audit itself admits uncertainty about whether
+certified $I$ equals the trial $t^2$.''} CORRECT --- and that
+uncertainty IS the finding: a composition whose central inequality
+cannot be checked because the two sides' amplitude calibrations are
+not pinned to each other in the migrated record is not
+sign-off-ready. G-U1-SMALLT item (i) is exactly this calibration.
+\item[($\gamma$)] \emph{``Flagging U1 as conditional-on-one-more-item
+after proposing it looks like instability.''} DISMISSED: it is the
+required behavior --- the second-order audit (cross-turn discipline)
+exists to catch precisely this class of defect before operator
+review; the proposal's substance (the assembly chain, the hypothesis
+enumeration, the band-regime arithmetic) stands; one regime's
+coverage is added to the verification queue. An audit trail that
+shows the author catching their own gap is the intended state of the
+record.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / t6-entry-composition-audit
+                         (unit U9; second-order audit of U1)
+Precise statement:       AUDIT FINDING (UPHELD): the U1 composition's
+                         uniform-floor reading of Prop A does not by
+                         itself cover near-gap small-amplitude
+                         competitors at the certified intensities
+                         (interval I' floor is O(I), envelope is
+                         O(I^2) x large prefactor; estimated crossover
+                         I_x ~ 3.5e-4 inside the certified window).
+                         Two candidate resolutions recorded (P^2
+                         structural route; crossover arithmetic with
+                         per-pattern prefactor + C_2 curvature).
+                         NAMED ITEM G-U1-SMALLT registered; the U1
+                         T6-entry proposal is flagged CONDITIONAL on
+                         its closure.
+Scope:                   Audit of the U1 composition only. Prop A
+                         (B2), the STEP-5B closure (B5), and the
+                         enumerated races (B1 T5) are unaffected
+                         within their own scopes.
+Dependencies:            U1 note; Math437 v1.2 interval proof; B5
+                         artefact constants.
+Evidence grade:          AUDIT (estimate-grade crossover arithmetic;
+                         no machine asserts this session).
+Reproduction command:    (part of G-U1-SMALLT) crossover + C_2
+                         arithmetic to be scripted with the U-series
+                         follow-up asserts.
+Expected output:         calibration statement; C_2 value; one of
+                         route (a)/(b) verified; amended U1 proof
+                         text.
+Falsification gate:      G-U1-SMALLT closing with NEITHER route
+                         verifiable (would demote the U1 proposal
+                         from conditional to withdrawn -- honest
+                         negative pre-registered).
+Tier before / after:     No tier action. B1 stays T5; the U1 proposal
+                         stands but now carries the G-U1-SMALLT
+                         condition.
+No-overclaim statement:  The audit does NOT assert the composition
+                         fails -- it asserts the composition is
+                         UNVERIFIED in one regime and names the
+                         verification. The crossover numbers are
+                         estimates. PDF build + linter PENDING
+                         operator-side.
+Next required action:    Close G-U1-SMALLT (production-bookkeeping
+                         calibration + C_2 + route lemma) BEFORE any
+                         operator sign-off on the U1 promotion.
+                         Mainline continues (U10) with this item at
+                         top priority.
+\end{verbatim}

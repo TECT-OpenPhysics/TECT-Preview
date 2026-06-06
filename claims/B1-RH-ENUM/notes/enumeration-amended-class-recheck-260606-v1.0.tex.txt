@@ -1,0 +1,214 @@
+% =============================================================================
+% Title: Enumeration completeness recheck against the amended class: all enumerated readings are admissible, with the decagonal star extremal at the endpoint
+% Claim: B1-RH-ENUM (enumeration vs H-ADM-COH cross-check; Reading-H T6 mainline, unit U8)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: cross-check note, T4-grade on exact geometry (machine asserts for the angle table registered as follow-up; one pre-registered stress-test pattern; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U8: the
+%        five-readings enumeration completeness recheck against the
+%        H-ADM-COH-amended class). Findings: (i) EVERY enumerated and
+%        gallery pattern (LAM, HEX, FCC, BCC, SC{100}, square,
+%        icosahedral, decagonal QC) satisfies the amended-class pairwise
+%        separation >= theta_min at ALL anchor intensities -- the
+%        estimator races and the U1 class theorem compose with NO
+%        coverage gap; (ii) the DECAGONAL star is the extremal in-class
+%        pattern: its 36-degree axis spacing clears theta_min by 4.2%
+%        at the production anchor and by only 0.18% at the I = 2e-3
+%        endpoint -- it sits essentially AT the class boundary there and
+%        is PRE-REGISTERED as the canonical stress-test pattern for the
+%        STEP-5B falsifier set; (iii) k-fold planar stars with spacing
+%        below theta_min (k >= 11-fold at the anchor; 10-fold itself at
+%        intensities slightly above the endpoint) are sea-reclassified
+%        by the amendment -- formalizing why dense angular stars never
+%        appeared as estimator threats; (iv) the boundary is SOFT by the
+%        AddC indistinguishability lemma (crossing it shifts F by
+%        <= c_ind I^2), so the near-boundary position of the decagonal
+%        creates no discontinuity threat. Exact-geometry angle table
+%        with machine asserts registered as follow-up. PDF build and
+%        linter execution PENDING OPERATOR-SIDE (sandbox shell
+%        unavailable to this agent session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The U1 candidate theorem quantifies over the H-ADM-COH-amended class;
+B1's evidence quantifies over the enumerated ensembles. For the two to
+compose without a gap, every enumerated pattern must BE an
+amended-class member (else the races would be evidence about excluded
+objects). This note performs that recheck with exact geometry, and
+extracts the extremal finding. Scope: single-shell readings of the
+enumerated set + the Math437 gallery; the two-shell ensembles inherit
+per-shell (their within-shell stars are from the same list).
+
+\section*{2. The separation table (exact geometry)}
+
+The amended-class criterion: pairwise READING-AXIS separations
+$\ge \theta_{\min}(\hat r) = \sqrt{\hat r}/(2q_0^2\sqrt C)$, with
+$\theta_{\min} = 0.6027 / 0.6131 / 0.6272$ rad at $I = 4{\times}10^{-4}
+/ 10^{-3} / 2{\times}10^{-3}$ ($\hat r = 0.3110 / 0.3206 / 0.33675$).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y @{}}
+\toprule
+Pattern ($n$ axes) & min axis angle (exact) & rad &
+in-class margin (anchor / endpoint) \\
+\midrule
+LAM (1) & --- (single axis) & --- & trivially in-class \\
+square (2) & $90^\circ$ & $1.5708$ & $\times2.61$ / $\times2.50$ \\
+SC$\{100\}$ (3) & $90^\circ$ & $1.5708$ & $\times2.61$ / $\times2.50$ \\
+HEX (3) & $60^\circ$ & $1.0472$ & $\times1.74$ / $\times1.67$ \\
+FCC (4) & $\arccos(1/3) \to$ min $70.53^\circ$ & $1.2310$ &
+$\times2.04$ / $\times1.96$ \\
+BCC (6) & $60^\circ$ & $1.0472$ & $\times1.74$ / $\times1.67$ \\
+icosahedral (6) & $\arctan 2 = 63.43^\circ$ & $1.1071$ &
+$\times1.84$ / $\times1.77$ \\
+decagonal QC (5) & $36^\circ$ & $0.62832$ &
+$\times1.042$ / $\times1.0018$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent ALL patterns are amended-class members at all three anchor
+intensities: the races and the class theorem compose with no coverage
+gap. The two-shell ensembles (Math432) use within-shell stars from this
+list and inherit the verdict per shell (cross-shell separations live in
+the radial direction and are not the angular criterion's object).
+
+\section*{3. The extremal finding and the pre-registered stress test}
+
+The decagonal star is the EXTREMAL in-class pattern: margin
+$\times1.042$ at the anchor, $\times1.0018$ at the endpoint --- it sits
+essentially AT the class boundary at $I = 2\times10^{-3}$
+($0.62832$ vs $0.62716$ rad, $0.18\%$). Consequences:
+\begin{itemize}
+\item \textbf{Stress test (pre-registered)}: the decagonal star at the
+endpoint intensity is the canonical worst-geometry probe for the
+STEP-5B falsifier set --- any future tightening of the chain should be
+exercised on it first. (Energetically it is a WEAK competitor --- the
+Math437 gallery records ZERO non-trivial 4-wave resonances for it ---
+but for the beyond-layer machinery it is the packing-extremal member.)
+\item \textbf{Boundary softness}: the class boundary is not a cliff ---
+the AddC lemma bounds any boundary-crossing restructuring by
+$c_{\rm ind}I^2$ = margin$/\times33$ or better, so the decagonal's
+near-boundary position creates no discontinuity threat to the U1
+theorem.
+\item \textbf{Sea reclassification, formalized}: $k$-fold planar stars
+with axis spacing $\pi/k < \theta_{\min}$ ($k \ge 6$ in-plane axes,
+i.e.\ 12-fold symmetric and denser; at intensities slightly above the
+endpoint even the 10-fold) are NOT class members --- their sub-cutoff
+structure belongs to the Gaussian sea. This formalizes why dense
+angular stars never surfaced as estimator threats in the races: they
+are not independent-reading competitors at the coherence resolution.
+\end{itemize}
+
+\section*{4. Numerical verification}
+
+The table's angle values are EXACT geometry (cube-diagonal
+$\arccos(1/3)$; icosahedral $\arctan2$; planar $k$-fold $\pi/k$);
+$\theta_{\min}(\hat r)$ values are closed-form on certified constants
+($q_0^2 = 0.46264$, $\hat r(I) = r_R + 2\lambda' I$). NO machine
+asserts were executed this session (sandbox shell unavailable); the
+angle table + margins are registered for the shared follow-up script
+(planned addition to codes/vacuum/third\_cumulant\_assessment.py or a
+sibling: exact-geometry asserts to $10^{-12}$, margin table to
+$10^{-6}$, JSON artefact under claims/B1-RH-ENUM/runs/).
+
+Quantitative sanity check (mandatory): dimensional --- $\theta_{\min}$
+is a pure angle (mass/mass$\cdot$length$^{-2}\cdot$... explicitly
+$\sqrt{\hat r}/(2q_0^2\sqrt C)$ with $[\hat r] = [Cq_0^4]$ making the
+ratio dimensionless, the AddB check); consistency --- the anchor
+$\theta_{\min} = 0.6027$ reproduces AddB's $0.603$, and $n_{\rm pack} =
+16/\theta_{\min}^2 = 44.0/42.6/40.7$ reproduces the AddC ``44/43/41''
+to rounding; limit case --- as $I$ grows, $\theta_{\min}$ grows and the
+first casualty of the class is the densest star (decagonal), exactly
+the monotonic behavior a resolution cutoff must have; cross-check ---
+the decagonal endpoint margin $0.62832/0.62716 = 1.00185$ is consistent
+with the quoted $0.18\%$.
+
+\section*{5. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``If the decagonal is only $0.18\%$ inside the
+class at the endpoint, a tiny upward revision of $\theta_{\min}$ (e.g.\
+the criterion-band ambiguity $c_\theta \in [1, \pi]$) EXPELS it --- and
+then the B1 races would include an out-of-class pattern, breaking the
+composition.''} DISMISSED with the composition's actual logic: the U1
+theorem quantifies over the amended class; if a raced pattern exits the
+class under a stricter criterion, the race for it becomes evidence
+about a sea-reclassified configuration --- harmless surplus, not a gap
+(the class theorem never RELIED on the races; U1 made them
+corroboration). The composition requires class members to be COVERED
+by the theorem (they are), not that every raced object stay a member.
+\item[($\beta$)] \emph{``The two-shell inheritance is hand-waved:
+cross-shell angular proximity (a reading on shell 1 nearly parallel to
+a reading on shell 2) could violate the coherence criterion in a way
+the per-shell table misses.''} VALID-with-mitigation: the coherence
+criterion of AddB is built from the TRANSVERSE beat scale on a shell;
+for cross-shell pairs the beat acquires the RADIAL separation $\Delta q
+\ge$ the shell gap, which exceeds $1/\xi$ by construction in the
+two-shell ensembles (Lemma J's $\times1.70$ floor operates at exactly
+this scale) --- nearly-parallel cross-shell readings are resolved
+radially. The formal one-paragraph statement is registered for the
+follow-up script's note companion; until then the two-shell row of this
+recheck is T3.
+\item[($\gamma$)] \emph{``Pre-registering the decagonal as the stress
+test could bias future verification toward a pattern already known to
+be energetically weak (zero 4-wave resonances), creating false
+comfort.''} VALID-with-mitigation: the stress-test role is for the
+BEYOND-LAYER machinery (packing/energy-bound extremality), where
+resonance count is irrelevant; for the LAYER-energetics stress test the
+chain's existing worst cases (BCC's 144 resonant excess; the band
+interval of Prop A) remain the designated probes. The note records both
+roles explicitly so neither substitutes for the other.
+\end{itemize}
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / enumeration-amended-class-recheck
+                         (unit U8)
+Precise statement:       CROSS-CHECK (T4 on exact geometry): every
+                         enumerated/gallery pattern satisfies the
+                         amended-class separation >= theta_min at all
+                         anchor intensities (min margins: decagonal
+                         x1.042 anchor / x1.0018 endpoint; all others
+                         >= x1.67). Races and the U1 class theorem
+                         compose with NO coverage gap. Decagonal QC =
+                         extremal in-class pattern, PRE-REGISTERED as
+                         the beyond-layer stress test. k-fold planar
+                         stars below the cutoff are sea-reclassified.
+Scope:                   Single-shell enumerated set + Math437 gallery;
+                         two-shell ensembles inherit per-shell (the
+                         cross-shell radial-resolution paragraph is T3,
+                         registered).
+Dependencies:            H-ADM-COH (verdict #14), AddB/AddC scales
+                         (theta_min, n_pack), Math437 gallery, U1
+                         entry package.
+Evidence grade:          ANALYTIC (exact geometry) + closed-form
+                         arithmetic on certified constants; machine
+                         asserts NOT executed (registered).
+Reproduction command:    (registered follow-up) angle-table asserts in
+                         the shared U4/U7 script or a sibling under
+                         codes/vacuum/.
+Expected output:         exact angles to 1e-12; theta_min(I) to 1e-6;
+                         margin table; JSON under claims/B1-RH-ENUM/
+                         runs/.
+Falsification gate:      Any enumerated pattern measuring BELOW
+                         theta_min at a certified intensity (would
+                         break the composition and demote this note);
+                         the decagonal stress test exceeding the
+                         STEP-5B envelope (would fire the gate-level
+                         falsifier).
+Tier before / after:     No tier action; B1 stays T5 (T6 proposal of
+                         U1 unchanged, pending operator).
+No-overclaim statement:  The recheck certifies CLASS MEMBERSHIP of the
+                         enumerated set, not any new energetic
+                         statement. The two-shell cross-shell paragraph
+                         is T3 until written. PDF build + linter
+                         PENDING operator-side.
+Next required action:    Machine asserts for the angle table; the
+                         cross-shell radial-resolution paragraph;
+                         mainline continues (U9).
+\end{verbatim}

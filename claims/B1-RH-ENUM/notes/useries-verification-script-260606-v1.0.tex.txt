@@ -1,0 +1,174 @@
+% =============================================================================
+% Title: The consolidated U-series verification script: one draft script covering every machine check registered in units U2 through U12
+% Claim: B1-RH-ENUM (cross-claim verification consolidation; Reading-H T6 mainline, unit U14)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: tooling note (script authored at DRAFT status -- NOT YET EXECUTED; first run + review required before any U-series number is cited as machine-verified; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U14).
+%        This session ran without shell access, so units U2-U12
+%        registered machine checks they could not execute. This unit
+%        consolidates ALL of them into ONE new draft script,
+%        codes/vacuum/t6_mainline_useries_checks.py (v0.1.0, __status__
+%        = "DRAFT - NOT YET EXECUTED"), with self-test asserts per
+%        check and a JSON artefact target under
+%        claims/B1-RH-ENUM/runs/260606-useries-checks/. Coverage:
+%        S1 = G-A0-VER (U2 window arithmetic); S2 = M-ENDPOINT (U7
+%        bracket); S3 = U4/U7 third-cumulant tables (sunset ratios,
+%        dressed couplings, J(0)); S4 = R-U6-2 (stationarity-source
+%        coefficient identity, exact); S5 = R-U10-3 (M' = -J(0)
+%        identity, linear-gain coefficient, endpoint convention
+%        remainder vs the U11 scaling); S6 = U8 angle table (exact
+%        geometry + theta_min(I) + the decagonal extremal margin);
+%        S7 = U12 sharpened-ceiling arithmetic. The script reuses the
+%        production helpers (Math424-AddA gap_solve / M_fast) and the
+%        main chain's J-integral form verbatim. HONESTY: until the
+%        first successful run is reviewed, every U-series number
+%        remains at its note's stated grade (closed-form arithmetic /
+%        estimate); the script's own tolerances encode the expected
+%        values WITH the convexity/cubic allowances the notes flagged.
+%        PDF build and linter execution PENDING OPERATOR-SIDE.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Units U2--U12 registered eleven machine checks across three claims;
+none could be executed in this session (no shell). This unit converts
+the registry into one implementable artifact: a single draft script
+with one section per check, faithful to the production conventions
+(the same m424 helpers and $J$-integral form as the certified
+192/192 suite). Scope: tooling only --- no mathematical content
+beyond the notes' own arithmetic, now encoded as asserts.
+
+\section*{2. Check coverage map}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y @{}}
+\toprule
+Section & Registered check (source unit) & Key asserts \\
+\midrule
+S1 & G-A0-VER (U2) & $M_c = 43/1620$ exact; $m_w = 0.0392414$;
+gap-identity $m^* = r_R$ to $2\times10^{-5}$; window $\times7+$;
+$M_R/M_c > 4$ \\
+S2 & M-ENDPOINT (U7) & $M(\hat r(I)) < M_R$ at all anchors; endpoint
+value inside the U7 bracket with convexity allowance \\
+S3 & U4/U7 tables & $J(0) = 0.290 \pm 0.01$; composed margins;
+frozen-coupling ratios $7.7/2.8/0.97$ ($8\%$ tol); dressed ratios
+$\sim3.2/\sim1.34$ ($15\%$ tol); endpoint positivity \\
+S4 & R-U6-2 (U6) & $3u_{\rm eff}M_R = 3uM_R + 30vM_R^2$ exact
+($10^{-12}$) \\
+S5 & R-U10-3 (U10/U11) & $-M'(\hat r) = J(0)$ to $2\%$ (finite
+difference); linear gain $2\lambda'M_R = 1.763$; endpoint convention
+remainder $\le 3.3\times10^{-5}$; protection/remainder $> 100$ \\
+S6 & U8 angle table & FCC $70.5288^\circ$, icosahedral $63.4349^\circ$
+exact; $\theta_{\min}$ anchors; all eight patterns in-class at all
+$I$; decagonal extremal margin $< 1\%$ at the endpoint \\
+S7 & U12 ceiling & $\log_2 88 = 6.459$; sharpening factor $2.54$;
+monotonicity \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Not covered (deliberately, larger scope): the RES-4 interval sweep
+(its own driver), the U13 $\chi$ spot-check (needs the main script's
+configuration generators --- registered as an extension of that
+suite), the R-U10-3 trace-inequality test on full patterns (needs the
+Bloch machinery --- extension of the main suite), the U12 section-3
+definition check (reads the main script's class conventions ---
+extension there).
+
+\section*{3. Execution contract}
+
+\texttt{python codes/vacuum/t6\_mainline\_useries\_checks.py} ---
+expected: all claims PASS, exit 0, runtime well under the 45 s cap
+(only \texttt{M\_fast}/\texttt{gap\_solve} calls plus two $J$
+quadratures); artefact
+\texttt{claims/B1-RH-ENUM/runs/260606-useries-checks/result.json}.
+FIRST-RUN protocol: review every FAIL (the dressed-ratio tolerances
+encode estimate-grade numbers --- a FAIL there demotes the
+corresponding U-note figure per its own pre-registered gate, it does
+NOT demote the structural lemmas); on full PASS, flip the script's
+\texttt{\_\_status\_\_} and update the U-note grades per their
+footers.
+
+\section*{4. Numerical verification}
+
+This unit IS the verification tooling; it introduces no new numbers
+beyond the notes' own (every assert's expected value cites its source
+unit in the coverage map). Quantitative sanity check (mandatory):
+self-consistency of the assert set --- S4's identity is algebraically
+exact (the two expressions are the same polynomial in $M_R$), so its
+$10^{-12}$ tolerance is a tautology-check of the script's own
+arithmetic, deliberately included as the canary assert (if IT fails,
+the script's environment, not the mathematics, is broken); the S5
+finite-difference step $h = 10^{-5}$ sits four orders below the
+$\hat r$ scale and two above double-precision noise for
+\texttt{M\_fast} --- the standard sweet spot.
+
+\section*{5. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``An unexecuted script can contain trivial
+bugs (typos, API drift) that make this unit's value illusory.''}
+VALID-with-mitigation: certain --- which is why the script carries
+\texttt{\_\_status\_\_ = DRAFT - NOT YET EXECUTED} in its module
+docstring AND this note's banner, the canary assert (S4) isolates
+environment breakage from mathematical failure, and the first-run
+protocol is written into section 3. The alternative (leaving eleven
+checks as prose registrations) is strictly worse for the next
+session.
+\item[($\beta$)] \emph{``Encoding estimate-grade numbers as asserts
+with tolerances risks circularity: the script `verifies' what the
+notes guessed.''} DISMISSED with the design: the asserts' EXPECTED
+values are the notes' arithmetic, but the ACTUAL values come from the
+production helpers (\texttt{M\_fast}, the $J$ quadrature) --- an
+independent computation path; agreement is verification, disagreement
+fires the notes' own pre-registered gates. The dressed-ratio
+tolerances (15\%) are wide precisely because those numbers are
+estimates pending M-ENDPOINT.
+\item[($\gamma$)] \emph{``The script writes its artefact under
+B1/runs although it covers B2 and B5 checks too --- claim-card
+hygiene.''} VALID-with-mitigation: the single-artefact choice keeps
+the first run atomic; on full PASS the per-claim JSON split (B2's S1,
+B5's S3/S4/S7 slices) is a five-line follow-up, registered in the
+first-run protocol. The \texttt{\_\_claims\_\_} header lists all
+three claims explicitly.
+\end{itemize}
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / useries-verification-script
+                         (unit U14)
+Precise statement:       TOOLING: one draft script
+                         (codes/vacuum/t6_mainline_useries_checks.py
+                         v0.1.0, DRAFT - NOT YET EXECUTED)
+                         consolidating the eleven machine checks
+                         registered by units U2-U12, with per-check
+                         asserts, a canary identity, and a JSON
+                         artefact target.
+Scope:                   Tooling; no new mathematics; expected values
+                         cite their source units.
+Dependencies:            m424 production helpers; the main suite's
+                         J-integral form; units U2-U12.
+Evidence grade:          N/A (tooling) -- the script is DRAFT until
+                         first executed and reviewed.
+Reproduction command:    python codes/vacuum/t6_mainline_useries_checks.py
+Expected output:         all claims PASS, exit 0, < 20 s; artefact
+                         claims/B1-RH-ENUM/runs/260606-useries-checks/
+                         result.json. First-run protocol in section 3.
+Falsification gate:      Any S-section FAIL fires the source unit's
+                         own pre-registered gate (table in section 2);
+                         an S4 canary FAIL indicates environment
+                         breakage, not mathematics.
+Tier before / after:     No tier action anywhere.
+No-overclaim statement:  NOTHING is machine-verified by authoring this
+                         script; every U-series number keeps its
+                         note's stated grade until the first reviewed
+                         run. PDF build + linter PENDING operator-side.
+Next required action:    OPERATOR-SIDE (or next shell-capable
+                         session): execute the script, review, flip
+                         __status__, split per-claim artefacts, update
+                         U-note grades per their footers.
+\end{verbatim}

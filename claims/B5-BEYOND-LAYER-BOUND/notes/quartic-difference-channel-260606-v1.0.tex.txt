@@ -1,0 +1,231 @@
+% =============================================================================
+% Title: The quartic-difference channel: completing the third-order inventory, with an honest endpoint-marginal verdict
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE lift, final channel; Reading-H T6 mainline, unit U15)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: assessment note, T2 ESTIMATE (sup-kernel bounds; honest finding: this channel EXCEEDS the cubic sunset and is endpoint-marginal; per-transfer kernel evaluation registered; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U15: the
+%        quartic-difference channel flagged by U4 as the remaining
+%        third-order writeup). Findings: (i) the pattern-dependent part
+%        of the quartic vertex is g_4(x) ~ (5v/2) F^2(x) whose t != 0
+%        Fourier fibers are EXACTLY w_t / lam' (the chain's Parseval
+%        identity) -- the channel rides the SAME transfer set as the
+%        certified second-order budget; (ii) its per-transfer weight
+%        relative to the second-order channel is 12 (5v/2)^2 / lam'^2 *
+%        G4(t) * 4(1-a_0) / J(t) <= ~1.6 under sup-kernels (G4 <=
+%        J(0) M^2; J(t) >= J(2q0)) -- an INFLATION of the certified
+%        budget by <= x2.6, which leaves the anchor comfortable
+%        (x59.4 / 2.6 ~ x22.8) but makes the I = 2e-3 endpoint MARGINAL
+%        (x2.6 / 2.6 ~ x1.0); the inflation ratio is I-independent, so
+%        the verdict tracks the existing margin profile; (iii) the
+%        uniform (t = 0) dressing-shift part of the channel is
+%        reabsorbed by the same normal-ordering / Hartree resummation
+%        logic as U6 (its self-contractions ARE the gap-equation
+%        content); (iv) the third-order channel inventory is now
+%        COMPLETE at estimate grade: cubic sunset (U4/U7, positive at
+%        all anchors pending M-ENDPOINT), tadpole (U6, absent),
+%        quartic-difference (this note, endpoint-marginal under
+%        sup-kernels). The SC-SCOPE lift's endpoint requires
+%        per-transfer kernels for BOTH surviving channels -- registered
+%        as one extension of the U14 draft script. PDF build and linter
+%        execution PENDING OPERATOR-SIDE (sandbox shell unavailable).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+U4 flagged the quartic-vertex second-order channel as the remaining
+third-order writeup. This note supplies it, completing the channel
+inventory for the SC-SCOPE lift. Scope: estimate grade (sup-kernel
+bounds on certified constants); the per-transfer refinement is
+registered, not performed.
+
+\section*{2. The channel}
+
+Expanding the interaction about the condensate, the quartic vertex of
+the fluctuation is $V_4 = \int g_4\,{:}\delta\varphi^4{:}$ with
+\[
+g_4(x) \;=\; \frac{u_{\rm dressed}}{4} \;+\; \frac{5v}{2}\,F(x)^2 ,
+\]
+the $F^2$ piece coming from $(v/6)\binom{6}{4}F^2\delta\varphi^4$.
+Both $\mathcal R_H$ and competitors carry the constant part; the
+DIFFERENCE channel is driven by the pattern-dependent part, whose
+nonzero-transfer Fourier fibers are
+\[
+\widehat{(F^2)}(t)\Big|_{t\ne0} \;=\; \frac{w_t}{\lambda'}
+\]
+(the chain's Parseval identity, main note v1.8) --- the channel rides
+EXACTLY the certified transfer set. Its contribution,
+\[
+\delta F_4^{(t\ne0)} \;=\; -12\,\Bigl(\frac{5v}{2}\Bigr)^{\!2}
+\frac{1}{\lambda'^2}\sum_{t\ne0} w_t^2\;\widehat{G^4}(t) ,
+\qquad \widehat{G^4} = G{*}G{*}G{*}G ,
+\]
+($-\tfrac12\cdot 4! = -12$; normal-ordered pairs), is
+competitor-helping and absent for $\mathcal R_H$ at $t \ne 0$. The
+$t = 0$ (uniform dressing-shift) part has its self-contractions
+resummed by the gap/condensate equations exactly as in U6
+(normal-ordering); its residual is the convention remainder already
+bounded in U11.
+
+\section*{3. Size relative to the certified second-order budget}
+
+Per transfer, the ratio to the second-order weight
+$J(t)/(4(1-a_0))$ is
+\[
+\mathcal R(t) \;=\; 12\,\frac{(5v/2)^2}{\lambda'^2}\,
+\widehat{G^4}(t)\,\frac{4(1-a_0)}{J(t)}
+\;\le\; 12\cdot\frac{65.61}{64.88}\cdot
+\bigl(J(0)M_R^2\bigr)\cdot\frac{3.92}{J(2q_0)}
+\;=\; 12.14 \times 3.47\times10^{-3} \times 37.7
+\;\approx\; 1.59 ,
+\]
+using the Young bound $\widehat{G^4} \le \|G{*}G\|_\infty\,
+\|G{*}G\|_1 = J(0)M^2$ and the worst realized $J(t) \ge J(2q_0) =
+0.104$. The channel therefore INFLATES the certified second-order
+budget by at most $1 + 1.59 \approx \times2.6$ under sup-kernels,
+$I$-independently. Against the hardened margins:
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y @{}}
+\toprule
+& $I = 4{\times}10^{-4}$ & $I = 10^{-3}$ & $I = 2{\times}10^{-3}$ \\
+\midrule
+STEP-5B margin floor & $\times59.4$ & $\times8.8$ & $\times2.6$ \\
+after $\times2.6$ inflation & $\times22.8$ & $\times3.4$ &
+$\times1.0$ (MARGINAL) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{4. Honest verdict and the completed inventory}
+
+\begin{itemize}
+\item This channel EXCEEDS the cubic sunset as the dominant third-
+order threat under sup-kernels (the sunset's endpoint ratio was
+$\sim\times1.34$ dressed; this channel alone consumes the entire
+$\times2.6$ at the endpoint in the worst-kernel reading).
+\item The verdict is a statement about SUP-KERNEL crudeness, not the
+selection: $\widehat{G^4}(t)$ at the realized transfers
+($|t| \ge q_0$-scale) sits below its Young bound, and $J(t)$ at the
+short transfers (where $\widehat{G^4}$ is largest) is $J(0)$-scale
+not $J(2q_0)$ --- the ratio's worst case pairs the two extremes
+incompatibly. The per-transfer evaluation of $\widehat{G^4}(|t|)$ on
+the realized chord set (the same five chords the suite tabulates for
+$J$) is registered as ONE extension of the U14 draft script and is
+expected to reduce $\mathcal R$ substantially at every realized $t$;
+its outcome decides the endpoint.
+\item THIRD-ORDER INVENTORY (complete at estimate grade): cubic
+sunset --- positive at all anchors pending M-ENDPOINT (U4/U7);
+tadpole --- absent identically (U6); quartic-difference ---
+anchor-comfortable, ENDPOINT-MARGINAL pending per-transfer kernels
+(this note). The SC-SCOPE lift at the endpoint requires the
+per-transfer programme for BOTH surviving channels; at the production
+anchor the lift is supported by every channel's estimate.
+\end{itemize}
+
+\section*{5. Numerical verification}
+
+NO machine execution this session. New estimate arithmetic on
+certified constants: $(5v/2)^2 = 65.61$; $\lambda'^2 = 64.88$;
+$J(0)M_R^2 = 3.47\times10^{-3}$; $4(1-a_0) = 3.92$ (anchor) with the
+$I$-independence of $\mathcal R$ noted ($a_0$ varies the ratio by
+$< 8\%$ across the band); the inflation table. Registered: the
+$\widehat{G^4}(|t|)$ chord-set evaluation appended to the U14 script
+(S3 extension) with asserts per chord.
+
+Quantitative sanity check (mandatory): dimensional ---
+$\widehat{G^4}$ carries one more $G$-convolution than
+$\widehat{G^3}$, hence one more $M$-factor in the Young chain
+($J(0)M^2$ vs $J(0)M$), consistent term-by-term; magnitude --- the
+channel's coupling ratio $12(5v/2)^2/\lambda'^2 = 12.14$ exceeds the
+sunset's $u_{\rm eff}^2$-based weight because the sextic coupling
+$v = 3.24$ is large at this operating point --- the finding that the
+QUARTIC channel dominates is therefore not surprising in retrospect
+and is the kind of fact the inventory exists to surface; limit case
+--- at $v \to 0$ the channel's pattern part vanishes ($g_4$ becomes
+constant) and the inventory reduces to the sunset alone,
+consistently; sign-direction --- the channel is competitor-helping
+and is applied against the margin throughout.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Lemma H's sextic fold ($\varepsilon_4 \le
+0.16$) may already count part of this channel --- the inflation could
+double-count.''} VALID-with-mitigation: Lemma H folds the sextic
+VERTEX corrections to the transfer weights ($5vA^4$-class transfers,
+the G2 bookkeeping); this channel is the quartic-vertex-squared
+propagator loop ($\widehat{G^4}$ kernel) --- a different contraction
+topology. The disjointness is asserted here at estimate grade and
+its one-paragraph verification (contraction-topology audit) is folded
+into the registered per-transfer extension.
+\item[($\beta$)] \emph{``The $\times2.6$ inflation multiplies the
+BUDGET, but the realized second-order consumption of actual patterns
+is far below budget --- the inflation framing overstates the
+threat.''} DISMISSED as framing: the inflation is applied to the
+PROVEN bound because that is what a lift must preserve; the note's
+endpoint verdict explicitly says `marginal under sup-kernels,
+per-transfer decides' rather than `fails'. The realized-consumption
+observation is true and is why the per-transfer programme is expected
+to succeed --- recorded in section 4.
+\item[($\gamma$)] \emph{``The reabsorption of the $t = 0$ part leans
+on U6's normal-ordering, which is itself T3.''} CORRECT and tracked:
+the dependency is explicit (U6's R-U6-1 alignment writeup covers
+both vertices --- the normal-ordering statement is vertex-degree-
+agnostic), and this note inherits T2/T3 accordingly. Nothing here is
+graded above its inputs.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / quartic-difference-
+                         channel (unit U15)
+Precise statement:       ESTIMATE (T2): the quartic-difference
+                         channel's t != 0 part rides the certified
+                         transfer set (fibers w_t / lam') with
+                         per-transfer ratio R(t) <= ~1.59 under
+                         sup-kernels => budget inflation <= x2.6,
+                         I-independent: anchor x22.8 / middle x3.4 /
+                         endpoint x1.0 MARGINAL. t = 0 part reabsorbed
+                         (U6 normal-ordering, vertex-degree-agnostic).
+                         THIRD-ORDER INVENTORY COMPLETE at estimate
+                         grade: sunset positive (pending M-ENDPOINT),
+                         tadpole absent, quartic-difference endpoint-
+                         marginal (pending per-transfer G^4).
+Scope:                   SC-SCOPE lift programme; estimate grade;
+                         amended class, three anchors.
+Dependencies:            U4/U6/U7 (channel framework), Parseval
+                         identity (main v1.8), Lemma H disjointness
+                         (asserted, audit registered), certified
+                         constants.
+Evidence grade:          ESTIMATE (T2); machine asserts NOT executed
+                         (registered as U14-script S3 extension).
+Reproduction command:    (registered) G^4(|t|) chord-set evaluation
+                         appended to codes/vacuum/
+                         t6_mainline_useries_checks.py.
+Expected output:         per-chord G^4 values with R(t) < 1 expected
+                         at all realized chords; contraction-topology
+                         audit paragraph; JSON artefact.
+Falsification gate:      Per-transfer R(t) >= 1 at a realized chord
+                         (would mean the lift needs the joint
+                         second+third-order inequality re-derivation
+                         at the endpoint -- honest negative
+                         pre-registered); Lemma-H overlap found in the
+                         topology audit (would require subtracting the
+                         double-count, IMPROVING the verdict).
+Tier before / after:     No tier action; SC-SCOPE remains a named U1
+                         hypothesis, now with its full third-order
+                         landscape mapped.
+No-overclaim statement:  Nothing here lifts SC-SCOPE or threatens the
+                         U1 theorem (second cumulant by hypothesis).
+                         The endpoint x1.0 is a sup-kernel artifact
+                         statement, pre-registered as such. PDF build
+                         + linter PENDING operator-side.
+Next required action:    Per-transfer G^4 chord evaluation (U14-script
+                         extension) + contraction-topology audit; then
+                         the assembled third-order inequality IF the
+                         operator directs the SC-SCOPE lift. Mainline
+                         continues (U16: consolidation).
+\end{verbatim}

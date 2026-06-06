@@ -1,0 +1,286 @@
+% =============================================================================
+% Title: The H-A0 hypothesis audit and its analytic removal pathway: a sign-decomposition proof of A-zero uniqueness modulo one anchor inequality
+% Claim: B2-PROPA-HLAYER (hypothesis H-A0 audit; Reading-H T6 mainline, unit U2)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: removal-pathway note, T3 PROOF SKETCH for the new theorem skeleton (machine verification of the two arithmetic identities registered as follow-up; no tier action; H-A0 row unchanged pending operator review)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U2: H-A0
+%        audit + removal pathway). Contents: (i) exact inventory of what
+%        H-A0 asserts and which parts of the certified chain rest on it;
+%        (ii) a NEW analytic sign-decomposition argument reducing the
+%        A=0 uniqueness + zero-at-gap content of H-A0 to (a) closed-form
+%        monotonicity lemmas and (b) a SINGLE anchor inequality with
+%        x7.8 closed-form margin -- i.e. the numerical-curve-shape
+%        certification (and with it the quadrature-scheme dependence of
+%        the uniqueness statement) becomes REMOVABLE; (iii) what remains
+%        of H-A0 after the reduction (anchor-value provenance = a
+%        dependency, not a hypothesis; the 5.5e-3 scheme-gap offset
+%        exits the load-bearing chain for uniqueness); (iv) the named
+%        residual gap G-A0-DUI (differentiation-under-integral
+%        regularity, textbook) and the registered machine-verification
+%        follow-up. PDF build and linter execution are PENDING
+%        OPERATOR-SIDE (sandbox shell unavailable to this agent
+%        session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+H-A0 is one of the two named hypotheses carrying B2's T6 (Proposition
+A) and one of the four in the Reading-H T6-entry candidate set (unit
+U1). This note audits exactly what H-A0 asserts, then constructs an
+ANALYTIC removal pathway: a sign-decomposition proof of the $A=0$
+uniqueness and zero-at-gap structure that replaces the numerical
+curve-shape certification by closed-form lemmas plus one anchor
+inequality. Scope: the slaved isotropic family $\{\hat G_m\}_{m>0}$ of
+Math437 v1.2 (the natural $A=0$ section of the layer; WLOG within the
+layer per the v1.1 locality remark). No tier action; the GATES.md H-A0
+row is unchanged pending operator review of this pathway.
+
+\section*{2. What H-A0 asserts (audit)}
+
+Per the verbatim GATES.md transcription from Math437 v1.2:
+\begin{enumerate}
+\item \textbf{(U) Uniqueness}: the $A=0$ curve $F_0(m)$ has its unique
+minimum, value $0$ after subtraction, at the gap point $m^*$
+(equivalently: $\Delta F_0(m) = F_0(m) - F_0(m^*) \ge 0$ with equality
+iff $m = m^*$).
+\item \textbf{(Z) Zero-at-gap}: the minimum value is exactly $0$ at the
+gap point (certified to $10^{-12}$), with monotone flanks and
+$\min \Delta F_0 \ge -10^{-9}$ on a consistent quadrature.
+\item \textbf{(S) Scheme status}: certification is numerical on a
+consistent quadrature scheme (internal convergence $3.1\times10^{-5}$);
+the $5.5\times10^{-3}$ scheme-gap offset is a recorded
+measure-convention systematic. The penalty floors $P_B$ are
+quadrature-free closed forms at the production anchors and do NOT rest
+on H-A0.
+\end{enumerate}
+What rests on H-A0 inside the Prop-A proof: exactly the claim-block-C
+step ``$\Delta F_0 \ge 0$, $= 0$ iff $m = m^*$'' that anchors the
+four-interval decomposition. Nothing else does (the $P_B$ floors, the
+dip bounds, and the interval boundaries $M_\pm, M_c$ are closed-form).
+
+\section*{3. The analytic removal pathway (new)}
+
+All symbols as in Math437 v1.2: $r = \mu^2 = 0.005$, $u = -0.86$,
+$v = 3.24$, $M(m) = \int \frac{d^3k}{(2\pi)^3}\,
+\bigl[m + C(k^2 - q_0^2)^2\bigr]^{-1}$ (cell-averaged variance of the
+trial dressing), $M_c = -u/(10v) = 43/1620 = 0.0265432$,
+$u_{\rm eff}(M) = u + 10vM$, and the Math437 stationarity identity
+\[
+\frac{dF_0}{dm} \;=\; \tfrac12\,M'(m)\,g(m),
+\qquad
+g(m) \;:=\; r - m + 3u\,M(m) + 15v\,M(m)^2 ,
+\]
+with $g(m^*) = 0$ being EXACTLY the gap equation.
+
+\begin{lemma}[L1: strict monotonicity of $M$]
+$M'(m) = -\int \frac{d^3k}{(2\pi)^3}\,[m + C(k^2-q_0^2)^2]^{-2} < 0$
+for every $m > 0$. (Differentiation under the integral: for $m \ge m_0
+> 0$ the integrand and its $m$-derivative are dominated by the
+integrable $m_0$-versions --- large-$k$ decay $k^{-2}$ and $k^{-6}$
+respectively in the radial measure; this textbook regularity step is
+the named gap G-A0-DUI below, expected routine.)
+\end{lemma}
+
+\begin{lemma}[L2: $g$ is strictly decreasing wherever $u_{\rm eff}\ge0$]
+$g'(m) = -1 + 3\,u_{\rm eff}(M(m))\,M'(m)$. On the region $M(m) \ge
+M_c$ (equivalently $m \le m_c$ where $M(m_c) = M_c$): $u_{\rm eff} \ge
+0$ and $M' < 0$ give $g'(m) \le -1 < 0$.
+\end{lemma}
+
+\begin{lemma}[L3: $g < 0$ beyond the window, closed-form]
+On $M(m) < M_c$ (i.e.\ $m > m_c$): using $u < 0$ (so $3uM < 0$) and
+$0 \le M < M_c$,
+\[
+g(m) \;<\; r + 15v\,M_c^2 - m \;=\; 0.005 + 48.6\times(43/1620)^2 - m
+\;=\; 0.039241 - m .
+\]
+Hence $g(m) < 0$ for every $m > m_w := 0.039241$.
+\end{lemma}
+
+\begin{theorem}[A-zero uniqueness and zero-at-gap, conditional skeleton]
+Assume (i) L1 (modulo G-A0-DUI), and (ii) the ANCHOR WINDOW INEQUALITY
+$m^* > m_w$. Then $F_0$ is strictly decreasing on $(0, m^*)$ and
+strictly increasing on $(m^*, \infty)$; consequently $\Delta F_0(m) >
+0$ for all $m \ne m^*$ and $\Delta F_0(m^*) = 0$ --- i.e.\ H-A0's (U)
+and (Z) hold as a THEOREM, with no curve-shape numerics.
+\end{theorem}
+
+\begin{proof}
+Since $M(m^*) = M_R > M_c$ (the recorded anchor inequality, $\times4.1$
+margin), $m^* < m_c$. On $(0, m_c]$: L2 gives $g$ strictly decreasing;
+$g(m^*) = 0$ forces $g > 0$ on $(0, m^*)$ and $g < 0$ on $(m^*, m_c]$,
+and in particular $m^*$ is the UNIQUE zero of $g$ on $(0, m_c]$. On
+$(m_c, \infty)$: $m > m_c \ge m^* > m_w$ --- wait, the chain needed is
+$m > m_c$ and $m_c > m_w$; the latter follows from $m_c > m^* > m_w$
+(window inequality) --- so L3 gives $g < 0$ there; no further zero.
+By L1, $\mathrm{sign}(dF_0/dm) = -\mathrm{sign}(g)$: $F_0' < 0$ on
+$(0, m^*)$ and $F_0' > 0$ on $(m^*, \infty)$. Strict global minimum at
+$m^*$, value $0$ after subtraction, monotone flanks. $\square$
+\end{proof}
+
+\noindent\textbf{The anchor window inequality (closed-form arithmetic,
+$\times7.8$).} The gap equation at the production anchors gives
+\[
+m^* \;=\; r + 3u M_R + 15v M_R^2
+\;=\; 0.005 - 2.58\times0.109414 + 48.6\times0.109414^2
+\;=\; 0.304523 ,
+\]
+which reproduces the certified artefact anchor $r_R = 0.3045257$ to
+$5\times10^{-6}$ (the residual is $M_R$ display rounding) --- so $m^* =
+r_R$ identically by the gap equation, and
+\[
+\frac{m^*}{m_w} \;=\; \frac{0.30453}{0.039241} \;=\; 7.76 .
+\]
+The window inequality holds with $\times7.8$ closed-form margin at the
+production anchors.
+
+\section*{4. What remains of H-A0 after the reduction}
+
+\begin{itemize}
+\item \textbf{Removed from the load-bearing chain}: the numerical
+curve-shape certification (monotone flanks, $\min \ge -10^{-9}$,
+zero-at-gap to $10^{-12}$) and with it the SCHEME-DEPENDENCE of the
+uniqueness statement --- the theorem above holds for the exact
+continuum $M(m)$ and verbatim for any fixed quadrature-consistent
+discretization of it (the sign decomposition is structural).
+\item \textbf{Demoted to dependency (not hypothesis)}: the anchor
+values $(r_R, M_R)$ and the inequality $M_R > M_c$ ($\times4.1$,
+already recorded quadrature-free at the anchors). The $5.5\times10^{-3}$
+scheme-gap offset then concerns only the PROVENANCE of the anchor
+calibration (shared with the entire production chain via
+A1-KERNEL-CONV), not the uniqueness/zero-at-gap structure.
+\item \textbf{Named residual gaps}:
+G-A0-DUI --- differentiation-under-integral regularity for $M(m)$
+(textbook dominated convergence; expected routine);
+G-A0-VER --- machine verification of the two new arithmetic identities
+($m_w = r + 15vM_c^2 = 0.039241$ exact; $m^* = r + 3uM_R + 15vM_R^2 =
+r_R$ to anchor precision) by a small self-test script (registered
+follow-up; the agent sandbox shell was unavailable this session, so the
+asserts are NOT yet executed --- the numbers above are exact closed-form
+arithmetic on certified anchor constants, flagged accordingly).
+\end{itemize}
+
+Upon closure of G-A0-DUI + G-A0-VER and operator review, the GATES.md
+H-A0 row can be replaced by the weaker, sharper hypothesis
+``H-ANCHOR: the production anchor pair $(r_R, M_R)$ with $M_R > M_c$''
+--- or absorbed entirely into the A1-KERNEL-CONV dependency --- which
+would shrink the Reading-H T6 hypothesis set of unit U1 from four named
+hypotheses to three plus a convention dependency.
+
+\section*{5. Numerical verification}
+
+No new machine numbers are executed by this note (sandbox shell
+unavailable). The arithmetic content is two exact closed-form
+identities on already-certified constants:
+\[
+m_w = 0.005 + 48.6\,(43/1620)^2 = 0.0392414, \qquad
+m^* = 0.005 - 2.58\,M_R + 48.6\,M_R^2 \big|_{M_R = 0.109414} = 0.304523,
+\]
+to be machine-asserted by the registered G-A0-VER follow-up script
+(planned: codes/vacuum/ha0\_sign\_decomposition.py with self-test
+asserts + JSON artefact under claims/B2-PROPA-HLAYER/runs/). Existing
+certified inputs: $M_R = 0.109414$, $M_c = 43/1620$, $r_R = 0.3045257$
+(artefact claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/
+result.json, field anchor; Math437 v1.2 closed forms).
+
+Quantitative sanity check (mandatory): dimensional --- $g$ and $m$
+carry the same (mass$^2$-like) units as $r$; $m_w$ and $m^*$ are
+directly comparable; magnitude --- $m^*/m_w = 7.76$ and the recorded
+$M_R/M_c = 4.12$ are independent margins and both exceed $4$; limit
+case --- as $r \to 3u^2/(20v)$ (PD branch merge) $M_\pm$ coincide and
+the band disappears, while L3's window constant $r + 15vM_c^2 \to
+3u^2/(20v) + 3u^2/(20v)\cdot\ldots$ stays finite and the decomposition
+degenerates gracefully (the theorem's interval structure collapses
+before its inequalities fail); sign-direction --- dropping $3uM < 0$ in
+L3 is one-sided in the SAFE direction (enlarges $g$, shrinks the
+claimed region), and $u_{\rm eff} \ge 0 \Rightarrow 3u_{\rm eff}M' \le
+0$ likewise only strengthens $g' \le -1$.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The stationarity identity $dF_0/dm =
+\frac12 M'(m) g(m)$ is quoted from Math437, not re-derived here; if it
+carries hidden quadrature dependence the whole pathway inherits it.''}
+VALID-with-mitigation: the identity is the variational chain rule of
+the slaved family ($F_0$ depends on $m$ only through the trial dressing,
+and the envelope derivative collapses to the explicit $m$-dependence),
+recorded in the certified Math437 v1.2 with the gap-equation zero
+verified exactly. The G-A0-VER follow-up will re-derive it symbolically
+alongside the arithmetic asserts; until then the pathway is honestly T3.
+\item[($\beta$)] \emph{``L3's window uses $M < M_c$ but bounds $15vM^2$
+by $15vM_c^2$ --- if $M$ could exceed $M_c$ on $m > m_c$ the bound
+fails.''} DISMISSED: $m > m_c \Rightarrow M(m) < M(m_c) = M_c$ is
+exactly L1's strict monotonicity (the region is DEFINED by the
+inequality); and $M \ge 0$ holds because $M$ is an integral of a
+positive integrand. Both directions of the squeeze are structural.
+\item[($\gamma$)] \emph{``The proof needs $m^* < m_c$ AND $m_c > m_w$;
+the text derives the second from $m_c > m^* > m_w$ --- but is $m^* <
+m_c$ itself certified?''} DISMISSED with the recorded anchor
+inequality: $M(m^*) = M_R = 0.109414 > M_c = 0.0265432$ ($\times4.1$,
+quadrature-free at the anchors per the H-A0 row itself), and L1's
+monotonicity converts it to $m^* < m_c$. The chain $m_c > m^* > m_w$
+then closes with the $\times7.8$ window margin.
+\item[($\delta$)] \emph{``This note could be read as discharging H-A0
+already.''} CORRECT concern, and the note does NOT do that: the status
+is T3 PROOF SKETCH with two named residual gaps (G-A0-DUI textbook
+regularity; G-A0-VER machine asserts not yet executed). The H-A0 row,
+the B2 hypothesis field, and the U1 candidate set are all UNCHANGED;
+the replacement proposal (H-A0 $\to$ H-ANCHOR or absorption into
+A1-KERNEL-CONV) is for operator review after the gaps close.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / ha0-removal-pathway (unit U2)
+Precise statement:       REMOVAL PATHWAY (T3 sketch): H-A0's uniqueness
+                         + zero-at-gap reduce to L1 (M' < 0; textbook
+                         regularity gap G-A0-DUI) + L2 (g' <= -1 on
+                         u_eff >= 0) + L3 (g < 0 for m > m_w = 0.039241,
+                         closed form) + the anchor window inequality
+                         m* = r_R = 0.30453 > m_w (x7.8, closed-form
+                         arithmetic on certified anchors). The
+                         curve-shape numerics and the scheme dependence
+                         of the uniqueness statement become removable;
+                         what remains is anchor-value provenance
+                         (dependency, not hypothesis).
+Scope:                   Slaved isotropic family (A=0 section of the
+                         layer, WLOG within the layer per Math437 v1.1
+                         locality remark); production operating point.
+Dependencies:            Math437 v1.2 stationarity identity + closed
+                         forms (certified, Math442); anchor constants
+                         (A1-KERNEL-CONV provenance); B5 artefact
+                         anchor fields (r_R, M_R).
+Evidence grade:          ANALYTIC SKELETON (T3) -- closed-form
+                         arithmetic on certified constants; machine
+                         asserts NOT yet executed (G-A0-VER registered).
+Reproduction command:    (registered follow-up) python codes/vacuum/
+                         ha0_sign_decomposition.py
+Expected output:         asserts: m_w = 0.0392414 (exact rational
+                         arithmetic); m* identity to 1e-5 of r_R;
+                         m*/m_w > 7; M_R/M_c > 4; JSON artefact under
+                         claims/B2-PROPA-HLAYER/runs/.
+Falsification gate:      m* <= m_w at the anchors (would void the
+                         window); a demonstration that the stationarity
+                         identity fails for the slaved family (would
+                         void the pathway); G-A0-DUI failing (would be
+                         a surprise: textbook dominated convergence).
+Tier before / after:     B2 unchanged at T6 on {H-LAYER, H-A0}; this
+                         note enters at T3. PROPOSED upon gap closure +
+                         operator review: H-A0 -> H-ANCHOR (weaker) or
+                         absorption into A1-KERNEL-CONV.
+No-overclaim statement:  H-A0 is NOT discharged by this note. The
+                         pathway is a T3 skeleton with two named gaps;
+                         no row, tier, or hypothesis field changes. PDF
+                         build + linter execution PENDING operator-side
+                         (sandbox shell unavailable to this agent
+                         session).
+Next required action:    G-A0-VER script (machine asserts + JSON);
+                         G-A0-DUI one-paragraph regularity writeup;
+                         then operator review of the H-A0 -> H-ANCHOR
+                         replacement. Mainline continues: H-LAYER
+                         residual inventory (unit U3).
+\end{verbatim}

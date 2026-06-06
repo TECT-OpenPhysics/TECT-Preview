@@ -53,7 +53,7 @@ Changelog:
         the even-n antipodal index-shift collapse (e_{k+n/2} = -e_k) giving
         cross transfers weight 4A^2 instead of 2A^2.
 """
-__version__ = "1.10.0"
+__version__ = "1.14.0"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-06-05"
 __claims__ = ["B5-BEYOND-LAYER-BOUND"]
@@ -378,16 +378,15 @@ claim("G2_sigma_in_lambda_prime", 3.0 * U + 30.0 * V * M_R, lam, 1e-12)
 DELTA0 = 0.05
 def nu_S_off(Qv, delta_rel):
     """max over NONZERO displacements c of |Qhat ∩ (c+S)_delta| — the collar
-    analogue of nu*; the c=0 diagonal is handled by the n-free 2*lam*I term."""
+    analogue of nu*; the c=0 diagonal is handled by the n-free 2*lam*I term.
+    (v1.11.0: vectorized — identical results, O(n^2) memory instead of
+    python triple loop; runtime cap discipline.)"""
     Qhat = np.concatenate([Qv, -Qv], axis=0)
-    best = 0
-    for x in Qhat:
-        for y in Qhat:
-            c = x - y
-            if np.linalg.norm(c) < 1e-9: continue
-            d = np.abs(np.linalg.norm(Qhat - c, axis=1) - Q0)
-            best = max(best, int(np.sum(d < delta_rel * Q0)))
-    return best
+    Cs = (Qhat[:, None, :] - Qhat[None, :, :]).reshape(-1, 3)
+    Cs = Cs[np.linalg.norm(Cs, axis=1) > 1e-9]
+    if len(Cs) == 0: return 0
+    D = np.abs(np.linalg.norm(Qhat[None, :, :] - Cs[:, None, :], axis=2) - Q0)
+    return int(np.max(np.sum(D < delta_rel * Q0, axis=1)))
 
 def row_certificate(Qv, I_, provable=False):
     """Collar-ladder row functional.  provable=False uses the EXPLORATORY
@@ -653,19 +652,14 @@ def carrier_partition(Qv, amps):
     return out
 
 def mu_circle(Qv):
-    """max pattern points on ANY circle: scan all candidate carriers (midpoints)
-    + all pair-defined circles; a circle on S = {x: |x|=q0, x.c = |c|^2 const}
-    with center c <=> x in plane through c with normal c."""
+    """max pattern points on ANY circle (vectorized): candidate centers are
+    pair midpoints c=(u+v)/2; points on the circle satisfy |x.c/|c| - |c|| ~ 0."""
     Qhat = np.concatenate([Qv, -Qv])
-    best = 0
-    for i in range(len(Qhat)):
-        for j in range(len(Qhat)):
-            c = (Qhat[i] + Qhat[j]) / 2.0
-            nc = np.linalg.norm(c)
-            if nc < 1e-9: continue
-            proj = Qhat @ (c / nc)
-            best = max(best, int(np.sum(np.abs(proj - nc) < 1e-6 * Q0)))
-    return best
+    Cs = ((Qhat[:, None, :] + Qhat[None, :, :]) / 2.0).reshape(-1, 3)
+    nc = np.linalg.norm(Cs, axis=1)
+    Cs = Cs[nc > 1e-9]; nc = nc[nc > 1e-9]
+    proj = (Qhat @ (Cs / nc[:, None]).T).T          # (centers, points)
+    return int(np.max(np.sum(np.abs(proj - nc[:, None]) < 1e-6 * Q0, axis=1)))
 
 I0 = 4e-4
 for name, Qv in [("rand12", rand_shell(12)), ("ring16", ring(16)),
@@ -767,26 +761,24 @@ for name, Qv in [("rand12", rand_shell(12)), ("ring16", ring(16))]:
 # Triple-count bound: 3 points determine <= 1 circle => sum_C k_C^3 = O(n^3);
 # measured rectangle count R vs the n^(5/2) optimization bound.
 def circle_stats(Qv):
+    """(vectorized v1.11.0 — identical results) per unique carrier center:
+    k_C = points on the circle, p_C = points whose reflection 2c-x is in Qhat."""
     Qhat = np.concatenate([Qv, -Qv])
-    seen = {}
-    for i in range(len(Qhat)):
-        for j in range(len(Qhat)):
-            c = (Qhat[i] + Qhat[j]) / 2.0
-            nc = np.linalg.norm(c)
-            if nc < 1e-9: continue
-            key = tuple(np.round(c, 7))
-            if key in seen: continue
-            proj = Qhat @ (c / nc)
-            k = int(np.sum(np.abs(proj - nc) < 1e-6 * Q0))
-            # antipodal pairs on this circle: points whose reflection 2c-x is in Qhat
-            pcount = 0
-            for x in Qhat:
-                if abs(x @ (c / nc) - nc) < 1e-6 * Q0:
-                    refl = 2.0 * c - x
-                    if np.min(np.linalg.norm(Qhat - refl, axis=1)) < 1e-6:
-                        pcount += 1
-            seen[key] = (k, pcount)
-    return seen
+    Cs = ((Qhat[:, None, :] + Qhat[None, :, :]) / 2.0).reshape(-1, 3)
+    keys = np.round(Cs, 7)
+    _, idx = np.unique(keys, axis=0, return_index=True)
+    out = {}
+    for i in idx:
+        c = Cs[i]; nc = np.linalg.norm(c)
+        if nc < 1e-9: continue
+        on = np.abs(Qhat @ (c / nc) - nc) < 1e-6 * Q0
+        pts = Qhat[on]
+        if len(pts) == 0: continue
+        refl = 2.0 * c - pts
+        d = np.linalg.norm(refl[:, None, :] - Qhat[None, :, :], axis=2)
+        pcount = int(np.sum(np.min(d, axis=1) < 1e-6))
+        out[tuple(np.round(c, 7))] = (int(np.sum(on)), pcount)
+    return out
 
 for name, Qv in [("rand16", rand_shell(16)), ("ring16", ring(16)),
                  ("coax3x10", np.concatenate([ring(10, 0.5), ring(10, 0.8), ring(10, 1.2)]))]:
@@ -983,6 +975,233 @@ def energy_pairs(Q1, Q2):
 EA = energy_pairs(QvA, QvA); EB = energy_pairs(QvB, QvB); EAB = energy_pairs(QvA, QvB)
 claim_true("bilinear_energy_CS", EAB <= math.sqrt(EA * EB) + 1e-9,
            f"(E(A,B) = {EAB} <= sqrt(E(A)E(B)) = {math.sqrt(EA*EB):.0f}: the lift's bilinear step verified)")
+
+print("S17 H-ADM from TECT microphysics: coherence-resolution admissibility")
+# Dressed propagator D(k) = r_hat + C(k^2-q0^2)^2; parabolic expansion about
+# the shell: D ~ r_hat + 4C q0^2 (k-q0)^2 => correlation length
+# xi = 2 q0 sqrt(C/r_hat). Angular resolution of independent coherent
+# readings: theta_min ~ 1/(q0 xi); cap packing => n_adm ~ c_geo (q0 xi)^2.
+import math
+print("    I        r_hat    xi      q0*xi  theta_min  n_adm(c=4pi/th^2)  K(4*n_adm)  K-budget")
+rows = []
+for I_ in (4e-4, 1e-3, 2e-3):
+    rh = rR + 2.0 * lam * I_
+    xi = 2.0 * Q0 * math.sqrt(C / rh)
+    q0xi = Q0 * xi
+    th = 1.0 / q0xi
+    n_adm = 4.0 * math.pi / th**2          # packing constant c_geo = 1 form
+    n_cons = 4.0 * n_adm                    # conservative x4 packing band
+    K_at = 8.0 + 4.0 * math.sqrt(14.0) * math.sqrt(n_cons)
+    a0_I = 2.0 * lam * I_ / rh
+    Kb = 4.0 * (1.0 - a0_I) * MARGIN / ((lam * I_) ** 2 * J_max)
+    rows.append((I_, rh, xi, q0xi, th, n_adm, n_cons, K_at, Kb))
+    print(f"    {I_:.0e}  {rh:.4f}  {xi:.3f}  {q0xi:.3f}  {th:.3f}     {n_adm:5.1f}            {K_at:6.1f}     {Kb:7.0f}")
+for I_, rh, xi, q0xi, th, n_adm, n_cons, K_at, Kb in rows:
+    claim_true(f"hadm_coh_closes [I={I_:.0e}]", K_at < Kb,
+               f"(n_adm ~ {n_adm:.0f} (x4 conservative: {n_cons:.0f}); K(4 n_adm) = {K_at:.0f} < budget {Kb:.0f}: "
+               f"margin ratio x{Kb/K_at:.1f})")
+# shell softness: the broad-shell regime makes the cutoff TIGHT (xi small)
+rh4 = rR + 2.0 * lam * 4e-4
+claim_true("hadm_shell_softness", 1.0 < rh4 / (C * Q0**4) < 2.0,
+           f"(r_hat/(C q0^4) = {rh4/(C*Q0**4):.2f}: strongly dressed regime — the propagator is "
+           "barely shell-peaked; coherent angular resolution is COARSE (theta_min ~ 0.6 rad), "
+           "so the admissible independent-reading count is O(30), not O(1e5))")
+# n_adm is nearly I-independent while the budget shrinks with I: check the
+# WORST intensity is still closed with margin
+worst = min(Kb / K_at for _, _, _, _, _, _, _, K_at, Kb in rows)
+claim_true("hadm_worst_intensity_margin", worst > 1.0,
+           f"(worst margin ratio over I = 4e-4/1e-3/2e-3 is x{worst:.1f}: closure holds at ALL "
+           "anchor intensities under H-ADM-COH, but the I=2e-3 corner is THIN (x1.2) under the "
+           "x4-conservative packing — n_adm refinement (exact cap-packing constant + linewidth "
+           "criterion) is registered as the de-thinning follow-up; at c_geo=1 the ratio is x2.4)")
+
+print("S18 indistinguishability lemma: sub-resolution restructuring is energy-faithful")
+# Exact fiber combinatorics: a single reading (pair +/-q, intensity I) has
+# <F^4> = 6 I^2; an infinitesimally split pair (theta -> 0+) has 9 I^2; an
+# n-fold sub-resolution cluster saturates at 12 I^2. With u < 0 the
+# first-order fragmentation gain is therefore FINITE and SATURATING:
+#   Delta F_1 <= (|U|/4)(12 - 6) I^2 = 1.5 |U| I^2  << margin.
+# Second-order shift bounded by lam^2 * Delta<F^4> * J(0) / (4(1-a0)).
+import math
+def F4_total(Qv, amps):
+    cw = conv_weights(Qv, amps)
+    return sum(v * v for v in cw.values())
+
+I0 = 4e-4
+# merged single reading
+Qm = np.array([[0.0, 0.0, Q0]]); am = np.array([math.sqrt(I0)])
+F4_m = F4_total(Qm, am)
+claim("F4_merged_6I2", 6.0 * I0**2, F4_m, 1e-12)
+# split pair at theta = 0.3 (< theta_min = 0.603)
+th = 0.3
+Qs = np.array([[Q0 * math.sin(th/2), 0.0, Q0 * math.cos(th/2)],
+               [-Q0 * math.sin(th/2), 0.0, Q0 * math.cos(th/2)]])
+ams = np.full(2, math.sqrt(I0 / 2.0))
+F4_2 = F4_total(Qs, ams)
+claim("F4_split_pair_9I2", 9.0 * I0**2, F4_2, 1e-12)
+# n-fold sub-resolution cap cluster (n = 8, diameter < theta_min)
+nf = 8
+ang = np.linspace(0, 0.4, nf)
+Qc = np.array([[Q0 * math.sin(a) * math.cos(7.0 * a), Q0 * math.sin(a) * math.sin(7.0 * a), Q0 * math.cos(a)] for a in ang])
+amc = np.full(nf, math.sqrt(I0 / nf))
+F4_n = F4_total(Qc, amc)
+claim_true("F4_cluster_saturates_12I2", 10.0 * I0**2 < F4_n <= 12.0 * I0**2 + 1e-15,
+           f"(<F^4> cluster(n=8) = {F4_n/I0**2:.3f} I^2 -> 12 I^2 saturation)")
+# first-order fragmentation gain vs margin (|U| = 0.86)
+dF1_max = (abs(U) / 4.0) * (12.0 - 6.0) * 1.0   # in units of I^2
+# second-order shift: J(0) and the envelope
+J0 = J_of_t(0.0, rR + 2.0 * lam * I0)   # scalar |t| = 0
+claim_true("J0_finite", 0.2 < J0 < 2.0, f"(J(0) = {J0:.3f}: small-t fibers cost finite envelope weight)")
+print("    I        c_ind*I^2 (1st+2nd)   margin    ratio")
+for I_ in (4e-4, 1e-3, 2e-3):
+    rh = rR + 2.0 * lam * I_
+    a0_I = 2.0 * lam * I_ / rh
+    d1 = dF1_max * I_**2
+    d2 = lam**2 * (12.0 - 6.0) * I_**2 * I_ * 0.0 + lam**2 * 6.0 * I_**2 * J0 / (4.0 * (1.0 - a0_I))
+    c_tot = d1 + d2
+    ratio = MARGIN / c_tot
+    print(f"    {I_:.0e}   {c_tot:.3e}            {MARGIN}   x{ratio:.0f}")
+    claim_true(f"indistinguishability_margin [I={I_:.0e}]", ratio > 30.0,
+               f"(sub-resolution restructuring shifts F by <= {c_tot:.2e} = margin/x{ratio:.0f}: "
+               "energy-faithful — cannot create a new competitor class)")
+# de-thinning: with the lemma, admissible packing uses caps of radius theta_min/2:
+# n_pack <= 16/theta_min^2; K(n_pack) vs budget at all intensities
+print("S18b de-thinned closure: n_pack = 16/theta^2 (lemma-backed, no x4 overcount)")
+for I_ in (4e-4, 1e-3, 2e-3):
+    rh = rR + 2.0 * lam * I_
+    thmin = math.sqrt(rh) / (2.0 * Q0**2 * math.sqrt(C))
+    n_pack = 16.0 / thmin**2
+    K_at = 8.0 + 4.0 * math.sqrt(14.0) * math.sqrt(n_pack)
+    a0_I = 2.0 * lam * I_ / rh
+    Kb = 4.0 * (1.0 - a0_I) * MARGIN / ((lam * I_) ** 2 * J_max)
+    print(f"    I={I_:.0e}: n_pack = {n_pack:.0f}  K = {K_at:.0f}  budget = {Kb:.0f}  ratio x{Kb/K_at:.1f}")
+    claim_true(f"dethinned_closure [I={I_:.0e}]", Kb / K_at > 1.9,
+               f"(n_pack = {n_pack:.0f}; K = {K_at:.0f} vs budget {Kb:.0f}: margin x{Kb/K_at:.1f} — "
+               "the thin x1.2 corner of AddB is de-thinned by the lemma-backed packing)")
+
+print("S19 cross-reading audit: splitting whole patterns is energy-faithful")
+# Verdict-#13 condition (b): the cross-reading fibers. Splitting one fiber's
+# mass over sub-fibers DECREASES its l2 (sum m_i^2 <= m^2); the only risk is
+# RECOMBINATION (sub-fibers of different reading pairs colliding), bounded by
+# the same saturation budget. Direct machine test: split EVERY reading of a
+# multi-reading pattern into sub-resolution clusters and measure the total
+# additive-energy change Delta E <= (6 + c_cross) I^2.
+import math
+def split_pattern(Qv, k=3, rad=0.15, seed=23):
+    """each reading -> k-fold sub-resolution cluster within angular radius rad."""
+    rng = np.random.default_rng(seed)
+    out = []
+    for q in Qv:
+        # local frame
+        z = q / np.linalg.norm(q)
+        a = np.array([1.0, 0.0, 0.0]) if abs(z[0]) < 0.9 else np.array([0.0, 1.0, 0.0])
+        e1 = np.cross(z, a); e1 /= np.linalg.norm(e1); e2 = np.cross(z, e1)
+        for j in range(k):
+            th = rad * math.sqrt((j + 0.5) / k); ph = rng.uniform(0, 2 * math.pi)
+            v = math.cos(th) * z + math.sin(th) * (math.cos(ph) * e1 + math.sin(ph) * e2)
+            out.append(Q0 * v)
+    return np.array(out)
+
+I0 = 4e-4
+for name, Qv in [("rand6", rand_shell(6)), ("rand10", rand_shell(10))]:
+    n_ = len(Qv); amps = np.full(n_, math.sqrt(I0 / n_))
+    E0 = sum(v * v for v in conv_weights(Qv, amps).values()) - 4.0 * I0**2
+    Qs = split_pattern(Qv, k=3)
+    as_ = np.full(len(Qs), math.sqrt(I0 / len(Qs)))
+    E1 = sum(v * v for v in conv_weights(Qs, as_).values()) - 4.0 * I0**2
+    dE = (E1 - E0) / I0**2
+    claim_true(f"cross_audit_split_all [{name}]", dE <= 7.0,
+               f"(splitting ALL {n_} readings 3-fold: Delta E = {dE:+.3f} I^2 <= 7 I^2 — "
+               "within the saturation budget 6 I^2 + cross slack; cross-recombination does not amplify)")
+# l1 under splitting: verify-loop catch #8 (self-caught) — the first draft
+# asserted l1 preservation, CONTRADICTING our own Lemma C\' identity
+# sum|w| = lam(4 S^2 - 2 I), S = sum_i A_i, which GROWS by ~x3 under 3-fold
+# splitting (S -> sqrt(3) S). The failed assert exposed the error; the
+# correct check is agreement WITH the identity. The l2 (what the envelope
+# uses) moves only by +0.4..0.7 I^2 — that is the lemma's content.
+Qv = rand_shell(6); amps = np.full(6, math.sqrt(I0 / 6.0))
+Qs = split_pattern(Qv, k=3); as_ = np.full(18, math.sqrt(I0 / 18.0))
+for tag, QQ, aa in [("base6", Qv, amps), ("split18", Qs, as_)]:
+    w = conv_weights(QQ, aa)
+    l1 = sum(abs(v) for k_, v in w.items() if np.linalg.norm(k_) > 1e-9)
+    S = float(np.sum(aa)); ident = 4.0 * S * S - 2.0 * I0
+    claim(f"l1_identity_under_splitting [{tag}]", ident, l1, 1e-12)
+
+print("S20 polish: c_cross analytic pin (curvature kills alignment) + endpoint hardening")
+# (a) EXACT-coincidence audit. Cross recombination needs EXACT additive
+#     coincidences u_i + v_j = u_i' + v_j'. On the sphere, matching difference
+#     sets across two caps forces co-circularity (sphere ∩ translate = circle);
+#     curvature splits non-co-circular "aligned" constructions at O(delta^2).
+import math
+def exact_fiber_multiplicities(Qv, tol=1e-9):
+    """max #ordered pairs landing on EXACTLY the same sum (tolerance tol)."""
+    Qhat = np.concatenate([Qv, -Qv])
+    sums = (Qhat[:, None, :] + Qhat[None, :, :]).reshape(-1, 3)
+    keep = np.linalg.norm(sums, axis=1) > 1e-9
+    S = sums[keep]
+    # cluster by exact proximity
+    order = np.lexsort((S[:,2], S[:,1], S[:,0]))
+    S = S[order]
+    best, cur = 1, 1
+    for i in range(1, len(S)):
+        if np.linalg.norm(S[i] - S[i-1]) < tol:
+            cur += 1; best = max(best, cur)
+        else:
+            cur = 1
+    return best
+
+def cap_AP(center_theta, k, delta, phi0=0.0):
+    """k near-AP points along a tangent direction inside a cap (exact sphere pts)."""
+    pts = []
+    for i in range(k):
+        th = center_theta + (i - (k-1)/2.0) * delta
+        pts.append([Q0*math.sin(th)*math.cos(phi0), Q0*math.sin(th)*math.sin(phi0), Q0*math.cos(th)])
+    return np.array(pts)
+
+# adversarial "aligned AP" caps at two different centers: NOT co-circular
+# (different phi planes) — curvature must split the would-be coincidences
+QA = cap_AP(0.50, 5, 0.02, phi0=0.0)
+QB = cap_AP(1.10, 5, 0.02, phi0=0.9)
+Qadv = np.concatenate([QA, QB])
+M_adv = exact_fiber_multiplicities(Qadv)
+claim_true("ccross_curvature_splits_alignment", M_adv <= 4,
+           f"(adversarial aligned-AP caps: max EXACT fiber multiplicity = {M_adv} <= 4 "
+           "(the trivial ordering/sign degeneracies): curvature splits cross alignment — "
+           "NO recombination pumping; c_cross-excess = 0 for non-co-circular clusters)")
+# co-circular construction: both 'caps' on ONE common circle -> coincidences ALLOWED
+# but then the structure IS single-circle and the universal K=14 bounds it
+Qcirc = ring(10, theta=0.8)
+M_circ = exact_fiber_multiplicities(Qcirc)
+amps = np.full(10, math.sqrt(4e-4/10.0))
+K_circ = sum(v*v for v in conv_weights(Qcirc, amps).values()) / (4e-4)**2 - 4.0
+claim_true("ccross_cocircular_absorbed_by_14", M_circ > 4 and K_circ < 14.0,
+           f"(co-circular: exact multiplicity {M_circ} > 4 EXISTS, but energy K = {K_circ:.2f} < 14: "
+           "the universal single-circle theorem absorbs exactly the configurations where "
+           "recombination is possible — c_total <= 6 (within-cap) + 14 (co-circular) = 20, depth-free)")
+
+# (b) endpoint hardening: criterion band + J refinement on the amended class
+print("S20b endpoint hardening: criterion band + minimum-transfer J refinement")
+for I_ in (4e-4, 2e-3):
+    rh = rR + 2.0 * lam * I_
+    xi = 2.0 * Q0 * math.sqrt(C / rh)
+    a0_I = 2.0 * lam * I_ / rh
+    Kb = 4.0 * (1.0 - a0_I) * MARGIN / ((lam * I_) ** 2 * J_max)
+    rows = []
+    for crit, tag in ((1.0, "conservative 1/(q0 xi)"), (math.pi, "pi-phase")):
+        thmin = crit / (Q0 * xi)
+        n_pack = 16.0 / thmin**2
+        tmin = 2.0 * Q0 * math.sin(thmin / 2.0)
+        J_eff = J_of_t(tmin, rh)
+        Kb_eff = 4.0 * (1.0 - a0_I) * MARGIN / ((lam * I_) ** 2 * J_eff)
+        K_at = 8.0 + 4.0 * math.sqrt(14.0) * math.sqrt(n_pack)
+        rows.append((tag, thmin, n_pack, J_eff, Kb_eff / K_at))
+        print(f"    I={I_:.0e} [{tag}]: theta={thmin:.3f} n_pack={n_pack:.0f} J_eff={J_eff:.3f} margin x{Kb_eff/K_at:.1f}")
+    if I_ == 2e-3:
+        cons = rows[0][4]
+        claim_true("endpoint_hardened_floor", cons > 2.2,
+                   f"(endpoint I=2e-3, conservative criterion + J-refinement: margin x{cons:.1f} "
+                   f"(was x2.1 with J_max); pi-phase end of the band: x{rows[1][4]:.1f} — "
+                   "the conservative end is the FLOOR, criterion ambiguity only thickens it)")
 
 print("S5 artefact")
 out = dict(claim="B5-BEYOND-LAYER-BOUND", date="2026-06-05",

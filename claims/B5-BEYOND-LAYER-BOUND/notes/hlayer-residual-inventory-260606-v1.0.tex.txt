@@ -1,0 +1,221 @@
+% =============================================================================
+% Title: The H-LAYER residual inventory after the STEP-5B conditional closure: six named items between the amended-class theorem and unconditional
+% Claim: B5-BEYOND-LAYER-BOUND (post-closure residual analysis; Reading-H T6 mainline, unit U3)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: inventory note, T4-grade survey of certified material (no new theorem; no tier action; each residual item carries its honest current tier)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U3:
+%        H-LAYER beyond-diagonal residual inventory). With STEP-5B =
+%        CLOSED-CONDITIONAL (verdict #14 + AddE), the GATES.md framing
+%        "H-LAYER's residual is exactly STEP-5B" is no longer the full
+%        story: this note decomposes the remaining distance between
+%        "isotropic Gaussian-Hartree layer, amended class, second
+%        cumulant, three anchors" and "unconditional Reading-H" into
+%        SIX NAMED ITEMS (RES-1..RES-6), each with its protection in
+%        place, current honest tier, discharge path, and tracking gate.
+%        The decomposition shows that four of the six are already
+%        covered CONDITIONALLY by the existing chain and two (RES-3
+%        unrestricted class, RES-5 matched-order-to-exact conversion)
+%        are the genuine open frontiers, aligning with DR-2 and GAP-2
+%        respectively. PDF build and linter execution are PENDING
+%        OPERATOR-SIDE (sandbox shell unavailable to this agent
+%        session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+GATES.md records H-LAYER's residual as ``exactly STEP-5B.'' With
+STEP-5B flipped to CLOSED-CONDITIONAL, the honest question for the T7
+trajectory is: what EXACTLY remains between the amended-class
+conditional theorem (unit U1) and an unconditional whole-Reading-H
+statement? This note answers by decomposition into six named items.
+No new theorem is proved; every item is assigned its honest current
+tier from material already on disk.
+
+\section*{2. The six named residuals}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y @{}}
+\toprule
+Item & Content and current protection & Honest status / discharge \\
+\midrule
+RES-1 (H-diag closure) & Math427's isotropy-infimum theorem is
+conditional on the DIAGONAL-Gaussian restriction; off-diagonal
+(Bloch) covariance refinements were executed for the enumerated five
+(Math428) and are bounded class-wide ON THE AMENDED CLASS by the B5
+Lemma-B second-order log-det envelope. & Covered conditionally at
+second order (SC-SCOPE); the beyond-second-order log-det remainder
+merges with RES-5. Discharge: a log-det envelope with explicit
+third-order remainder bound. \\
+RES-2 (sigma inhomogeneity) & $\sigma(x)$-inhomogeneous dressing was
+executed for the enumerated five (Math429) and its channel is closed
+in the B5 G2 bookkeeping (Lemma I: $\sigma$-channel completeness,
+exact to $10^{-12}$) on the amended class. & Covered conditionally at
+second cumulant. Discharge: folds into the same SC-SCOPE lift as
+RES-1. \\
+RES-3 (unrestricted class) & The H-ADM-COH amendment quotients out
+sub-resolution structure; energy-faithfulness (AddC, $c_{\rm ind} =
+30.1$; AddE depth-free $c_{\rm total} \le 20$) makes the quotient
+canonical -- every unrestricted pattern has an amended representative
+within $c_{\rm ind}I^2$ of its energy, which is margin$/\times33$ or
+smaller. & The genuine combinatorial frontier: the UNCONDITIONAL
+class-wide energy bound is DR-2 (sphere structure dichotomy),
+assessed research-grade (adjacent to the open circle-incidence
+conjecture). Off the critical path by verdict \#14; the
+publication-strength alternative. \\
+RES-4 (intensity interval) & The margin chain is certified at the
+three anchor intensities $\{4{\times}10^{-4}, 10^{-3},
+2{\times}10^{-3}\}$; in between, every ingredient varies monotonically
+or mildly ($\hat r$ by $<10\%$; budgets monotone in $I$). & Three-point
+certification only. Discharge: an interval-arithmetic sweep of the
+margin chain over $I \in [4{\times}10^{-4}, 2{\times}10^{-3}]$
+(mechanical; registered polish; candidate follow-up script). \\
+RES-5 (matched-order to exact) & All comparisons live at matched
+second-cumulant bookkeeping: the same functional, same order, for
+every state. Converting ``$F^{(2)}[\mathcal P] > F^{(2)}[\mathcal
+R_H]$'' into a statement about EXACT free energies requires either a
+controlled error bound (GAP-2 / ESTIMATOR-UPGRADE machinery) or
+acceptance of the matched-order functional as the selection
+definition (the current pinned scope). The third-cumulant lift
+assessment (unit U4) quantifies the first correction. & The deepest
+analytic frontier; aligns 1:1 with GAP-2. Discharge: third-cumulant
+bound at the anchor (U4 gives the size assessment) + an
+order-remainder envelope, or the GAP-2 controlled-error programme. \\
+RES-6 (sea-sector completeness) & H-ADM-COH reclassifies
+sub-resolution mass into the Gaussian sea; the layer's isotropic
+dressing is the sea accounting. The variational completeness of that
+accounting (no sub-resolution configuration escapes both the reading
+ledger and the sea dressing) is exactly what AddC's lemma certifies at
+second cumulant ($|F[P'] - F[P]| \le c_{\rm ind}I^2$). & Covered
+conditionally; the unconditional form merges with RES-3 (the quotient
+is canonical iff the energy-faithfulness holds class-wide, which the
+AddC/AddE chain gives on the amended scope). \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{3. Structural summary}
+
+\begin{itemize}
+\item \textbf{Conditionally covered now} (by the existing certified
+chain, on the amended class at second cumulant, three anchors): RES-1,
+RES-2, RES-6, and the amended-class core that used to be ``exactly
+STEP-5B.''
+\item \textbf{Mechanical polish}: RES-4 (interval sweep).
+\item \textbf{Genuine open frontiers}: RES-3 (unrestricted class =
+DR-2, research-grade combinatorics) and RES-5 (matched-order to exact
+= GAP-2 analysis). These two are INDEPENDENT axes: closing either one
+alone strengthens the conditional theorem; closing both (plus RES-4)
+is what ``unconditional whole-Reading-H at the operating point'' means.
+\item \textbf{Consequence for the U1 hypothesis set}: H-LAYER$^\flat$
+decomposes as \{layer framing = RES-5 axis\} $\oplus$ \{class
+restriction = RES-3 axis\} $\oplus$ \{order restriction = SC-SCOPE,
+quantified by U4\}; H-ADM-COH is the RES-3 axis's conditional
+discharge. The four-hypothesis set of U1 is therefore irredundant: no
+listed hypothesis is implied by the others.
+\end{itemize}
+
+\section*{4. Numerical verification}
+
+No new machine numbers: every figure quoted (margins, $c_{\rm ind} =
+30.1$, $c_{\rm total} \le 20$, $\times33$ floor, $<10\%$ $\hat r$
+variation, $10^{-12}$ $\sigma$-channel exactness) is already certified
+in the existing artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}
+(script v1.14.0, 192/192) and the migrated Math427--Math429 records.
+
+Quantitative sanity check (mandatory): consistency cross-check of the
+decomposition --- the six items partition the logical distance with no
+overlap double-counted: RES-1/RES-2 are order-limited (their residual
+IS the SC-SCOPE lift), RES-6 reduces to RES-3, leaving exactly three
+independent axes \{RES-3, RES-4, RES-5\}; this matches the U1
+exclusion list one-to-one (unrestricted class, off-anchor intensities,
+third-cumulant order) plus the two standing gates (G3PB-III multishell
+and ROBUSTNESS-MU2 are OPERATING-POINT axes, listed in U1 separately
+and deliberately NOT re-counted here). PASS: no residual named in U1
+is missing from this inventory's union with the U1 operating-point
+list, and vice versa.
+
+\section*{5. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``RES-1's claim that Lemma B covers
+off-diagonal Bloch class-wide is an overreach: Lemma B is a
+second-order envelope, and Math427's H-diag is about the TRIAL CLASS,
+not the correction order.''} VALID-with-mitigation: agreed that the
+two cuts (trial-class vs correction-order) are conceptually distinct;
+the inventory's claim is precisely scoped --- the off-diagonal
+ENERGY CORRECTION is what enters the selection inequality, and that
+correction is what Lemma B bounds at second order on the amended
+class. The trial-class infimum question beyond diagonal-Gaussian
+(could a full-covariance Gaussian trial LOWER a competitor's layer
+value below the Prop-A floor?) is the same mathematical object viewed
+from the variational side, and its beyond-second-order content is
+exactly the RES-5 merger stated in the table. The wording in RES-1
+carries this merger explicitly.
+\item[($\beta$)] \emph{``Calling RES-4 `mechanical' understates it:
+interval arithmetic over the full chain (J integrals, K budgets,
+packing counts) is a real implementation effort.''}
+VALID-with-mitigation: relabeled honestly as mechanical-but-nontrivial;
+the chain's ingredients are smooth in $I$ with certified endpoint
+values and monotone structure, so the sweep is an engineering task
+with no new mathematics --- but it IS a task, registered as a
+candidate follow-up script with its own self-test asserts (not
+executable this session; sandbox shell unavailable).
+\item[($\gamma$)] \emph{``The inventory might lull the programme: four
+of six `covered' sounds like near-closure, a forbidden framing.''}
+DISMISSED with the note's own structure: every `covered' is qualified
+CONDITIONALLY with its exact scope (amended class, second cumulant,
+three anchors), the two open frontiers are labelled research-grade
+(RES-3) and deepest-analytic (RES-5), and no tier action or
+near-closure phrase appears anywhere. The inventory's purpose is
+attack-surface enumeration for T7, not status inflation.
+\end{itemize}
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / hlayer-residual-
+                         inventory (unit U3)
+Precise statement:       INVENTORY (no new theorem): the distance
+                         between the amended-class conditional theorem
+                         and unconditional whole-Reading-H decomposes
+                         into RES-1 (H-diag, merged with RES-5 beyond
+                         2nd order), RES-2 (sigma channel, covered at
+                         2nd cumulant), RES-3 (unrestricted class =
+                         DR-2, research-grade), RES-4 (intensity
+                         interval sweep, mechanical-but-nontrivial),
+                         RES-5 (matched-order to exact = GAP-2,
+                         deepest), RES-6 (sea completeness, reduces to
+                         RES-3). Independent open axes: {RES-3, RES-4,
+                         RES-5}.
+Scope:                   Survey of certified material; honest per-item
+                         tiers; no quantitative claim beyond already-
+                         certified constants.
+Dependencies:            B5 chain (main + AddA-AddE), Math427-Math429
+                         migrated records, unit U1 entry package.
+Evidence grade:          SURVEY of ANALYTIC+EXECUTED material; no new
+                         numbers.
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 192/192 PASS (existing artefact; cited
+                         constants only).
+Falsification gate:      Discovery of a residual axis NOT in the
+                         six-item union (would void the inventory's
+                         completeness claim); demonstration that a
+                         listed 'covered' item is not in fact covered
+                         at its stated scope.
+Tier before / after:     No tier action. B5 stays T5-CANDIDATE; B1/B2
+                         unchanged.
+No-overclaim statement:  'Covered' always means CONDITIONALLY at the
+                         stated scope. Nothing here closes RES-3,
+                         RES-4, or RES-5. PDF build + linter execution
+                         PENDING operator-side (sandbox shell
+                         unavailable to this agent session).
+Next required action:    Unit U4 (SC-SCOPE third-cumulant lift
+                         assessment = the RES-5 quantification);
+                         RES-4 interval-sweep script as a registered
+                         candidate follow-up; DR-2 remains the RES-3
+                         route (research-grade, off critical path).
+\end{verbatim}

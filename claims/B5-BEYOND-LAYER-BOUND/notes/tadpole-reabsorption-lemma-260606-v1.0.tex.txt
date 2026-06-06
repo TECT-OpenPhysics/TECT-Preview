@@ -1,0 +1,230 @@
+% =============================================================================
+% Title: The tadpole reabsorption lemma: normal-ordered cubic vertices in the matched bookkeeping eliminate the tadpole channel identically
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE lift input (c) of unit U4; Reading-H T6 mainline, unit U6)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: lemma note, T3 PROOF SKETCH (structural argument complete at the bookkeeping level; formal alignment writeup + one machine cross-check registered; supersedes the pessimistic tadpole branch of the U4 assessment)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U6: the
+%        load-bearing lift input (c) identified by U4). MAIN RESULT
+%        (sketch): in the matched bookkeeping, every pattern is evaluated
+%        at its self-consistent Hartree optimum; the expansion's cubic
+%        vertex is therefore NORMAL-ORDERED with respect to the dressed
+%        Gaussian, and the Wick theorem for normal-ordered vertices has
+%        no self-contractions: the tadpole channel (9 M^2 G) of the
+%        third-cumulant correction is ABSENT IDENTICALLY -- not bounded,
+%        eliminated by construction. Mechanism verification: the would-be
+%        tadpole linear source 3 M u_eff F is the SAME term that the
+%        layer's condensate stationarity equation already contains (the
+%        Hartree dressing of the quartic acting on the condensate, the
+%        3 u_eff M A line of the production engine) -- including it again
+%        at third order would double-count the resummation. Consequence
+%        for U4: only the SUNSET row of the U4 table survives as the
+%        third-cumulant threat (anchor x7.7, endpoint x0.97 conservative);
+%        the tadpole rows (x4.3 / x1.5 / x0.53) are struck. Registered
+%        residuals: the formal normal-ordering alignment writeup; one
+%        machine cross-check (the 3 u_eff M coefficient against the
+%        certified Math436/Math437 condensate-equation closed forms).
+%        PDF build and linter execution PENDING OPERATOR-SIDE (sandbox
+%        shell unavailable to this agent session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Unit U4 identified the tadpole channel ($9M^2\hat G$ contraction of
+$\langle V_3^2\rangle_c$) as LOAD-BEARING for any SC-SCOPE lift: its
+conservative bound exceeds the endpoint composed margin ($\times0.53$).
+This note shows the channel is eliminated IDENTICALLY by the matched
+bookkeeping's own structure. Scope: the matched bookkeeping of the B5
+chain (per-pattern self-consistent Hartree dressing + per-pattern
+condensate optimization, as executed throughout Math426--Math437 and
+the B5 chain).
+
+\section*{2. The lemma}
+
+\begin{lemma}[Tadpole reabsorption -- sketch]
+In the matched bookkeeping, the third-cumulant correction of any
+competitor pattern is
+\[
+\delta F_3[\mathcal P] \;=\; -\tfrac12\,\langle\, {:}V_3{:}^2 \,
+\rangle_c \;=\; -\tfrac12 \sum_t |\hat g_3(t)|^2\; 6\,\widehat{G^3}(t),
+\]
+i.e.\ the SUNSET channel only: the tadpole contraction $9M^2\hat G(t)$
+is absent identically.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+(i) Matched bookkeeping evaluates each pattern at its self-consistent
+Hartree optimum: the dressed propagator $G$ solves the per-pattern gap
+equation, and the condensate amplitude solves the per-pattern
+stationarity equation, which contains the Hartree-dressed quartic
+source acting on the condensate --- the $3u_{\rm eff}MA$ line of the
+production engine (Math437 \S1: ``identical to the $0.25\,UN_4 +
+2.5\,VN_4M$ line''; the dressed coefficient $u_{\rm eff} = u + 10vM$
+is Lemma 1's object).
+(ii) Expanding the interaction about this optimum, every Gaussian
+self-contraction of a vertex leg either renormalizes the propagator
+(resummed into $G$ by the gap equation) or sources the condensate
+(absorbed by the stationarity equation). Formally: the perturbation
+must be written in terms of vertices NORMAL-ORDERED with respect to the
+dressed Gaussian, $V_3 = \int g_3\,{:}\delta\varphi^3{:}$, because the
+non-normal-ordered pieces are exactly what the self-consistent dressing
+already counted.
+(iii) Wick's theorem for normal-ordered vertices forbids
+self-contractions: $\langle {:}\delta\varphi^3(x){:}\,{:}\delta
+\varphi^3(y){:}\rangle = 3!\,G(x-y)^3 = 6G^3$. The $9M^2G$ term ---
+which arises precisely from one self-contraction at each vertex ---
+does not occur. Equivalently: the would-be tadpole linear source
+$3Mg_3 = 3Mu_{\rm eff}F + O(F^3)$ coincides term-by-term with the
+stationarity-equation source, and re-including it at third order
+double-counts the resummation.
+(iv) The $O(F^3)$ part of $g_3$ (weight $O(I^{3/2})$) generates a
+correction to the stationarity point of relative size $O(I)$; its
+effect on $\delta F_3$ is $O(I^4)$, two orders below the margin scale
+($< 10^{-6}$ at all anchors by the U4 sextic-fiber arithmetic).
+$\square$
+\end{proof}
+
+\section*{3. Consequence for the U4 assessment}
+
+The U4 table's tadpole rows ($\times4.3 / \times1.5 / \times0.53$,
+``if uncancelled'') are STRUCK: the channel does not exist in the
+matched bookkeeping. The surviving third-cumulant threat is the sunset
+alone (conservative ratios $\times7.7 / \times2.8 / \times0.97$).
+The SC-SCOPE lift's endpoint problem therefore reduces to ONE
+refinement axis: the per-transfer sunset-kernel decay + cubic-transfer
+counting (U4 inputs (a)+(b)); input (c) is supplied by this lemma
+(modulo the registered residuals below).
+
+\section*{4. Registered residuals (honest)}
+
+\begin{itemize}
+\item \textbf{R-U6-1 (formal alignment writeup)}: the normal-ordering
+argument is textbook for self-consistent Gaussian expansions; what
+requires the formal page is its alignment with the chain's EXACT
+matched-bookkeeping definitions (which contractions the per-pattern gap
++ stationarity equations resum, written against the Math424-AddA
+production decomposition). T3 until written.
+\item \textbf{R-U6-2 (machine cross-check)}: assert that the
+stationarity-equation source coefficient equals $3u_{\rm eff}M$
+term-by-term against the certified Math436/Math437 closed forms (e.g.\
+reproduce the HEX argmin $\hat r = 0.309373$ chain) --- one small
+script, registered (not executable this session; sandbox shell
+unavailable).
+\item \textbf{Out-of-scope}: nothing here touches the sunset channel,
+whose endpoint refinement remains the open lift item.
+\end{itemize}
+
+\section*{5. Numerical verification}
+
+No new machine numbers. The lemma is structural; the single arithmetic
+statement (the $O(F^3)$ remainder is $O(I^4) < 10^{-6}$) follows from
+the U4 fiber arithmetic ($\langle F^6\rangle = O(I^3)$ scale,
+$116.6\cdot2.5\,I^3\cdot$kernel $< 10^{-6}$ at $I \le 2\times10^{-3}$)
+on certified constants.
+
+Quantitative sanity check (mandatory): consistency --- the struck
+tadpole bound at the endpoint ($5.0\times10^{-3}$) was LARGER than the
+sunset bound ($2.75\times10^{-3}$); had the cancellation gone the other
+way (sunset struck, tadpole surviving) the lift would be dead at the
+endpoint --- the direction matters and is fixed by the contraction
+combinatorics ($6G^3$ = full cross-pairings, no self-contraction;
+$9M^2G$ = the self-contraction pattern), not by magnitude tuning;
+limit case --- for $\mathcal R_H$ ($F = 0$) both channels vanish and
+the lemma is trivially consistent; sign-direction --- removing a
+negative-definite channel can only RAISE competitor free energies,
+i.e.\ the lemma moves the lift in the selection-favorable direction,
+and it does so by construction (no double-resummation), not by
+optimism.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Normal-ordering is a choice of bookkeeping;
+choosing it BECAUSE it kills the dangerous channel is motivated
+reasoning.''} DISMISSED: the choice was made by the chain long before
+U4 --- matched bookkeeping with per-pattern self-consistent dressing IS
+the executed production scheme (Math426--Math437); the lemma merely
+states its third-order consequence. The double-counting argument is
+independent of preference: including both the resummed Hartree source
+AND the raw tadpole contraction counts the same Wick pairing twice,
+which is an error in ANY scheme.
+\item[($\beta$)] \emph{``Competitor patterns in the class-wide
+statement are quantified over, not individually re-optimized --- maybe
+some are evaluated OFF their stationarity point, where the linear term
+does not vanish.''} VALID-with-mitigation: the chain's comparison
+functional evaluates each pattern at its own layer optimum (the races
+optimize $t$ and $m$ per pattern; Prop A quantifies over ALL trials
+$(t,m)$, dominating every off-optimum evaluation from below). For a
+pattern evaluated off-optimum, the residual linear term generates a
+SHIFT whose energy gain is bounded by the second-order expansion of the
+layer functional along the shift direction --- an in-layer move that
+the Prop-A quantification over $(t,m)$ trials already covers for
+amplitude directions, and which for profile directions is an amended-
+class move covered by the class quantification. The formal writeup
+(R-U6-1) will carry this case explicitly.
+\item[($\gamma$)] \emph{``The $O(F^3)$ remainder estimate assumes
+generic fibers; resonant triples (sum landing back on a shell mode)
+have $O(I^{3/2})$ amplitude interfering with the $O(I^{1/2})$ shell
+source --- a cross term of order $O(I^2)$, not $O(I^4)$.''}
+VALID-with-mitigation: the cross term shifts the stationarity SOURCE at
+relative order $O(I)$ (the $F^3$-to-$F$ ratio), so the optimum moves by
+$O(I)$ and the energy by $O(I^2)\times$second-derivative --- which is
+the same order as the second-cumulant terms ALREADY counted in the
+matched functional (the resonant-triple bookkeeping is exactly the
+$N_4$ resonance accounting of the production engine, certified in the
+Math437 gallery). The genuinely third-order remainder is $O(I^4)$ as
+stated; the $O(I^2)$ resonant piece is not new. The R-U6-1 writeup will
+make this two-line accounting explicit.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / tadpole-reabsorption-
+                         lemma (unit U6)
+Precise statement:       LEMMA (T3 sketch): in the matched bookkeeping
+                         the cubic vertex is normal-ordered w.r.t. the
+                         dressed Gaussian; the tadpole channel
+                         (9 M^2 G) of the third-cumulant correction is
+                         ABSENT IDENTICALLY (its linear source
+                         3 M u_eff F is the stationarity-equation
+                         source already resummed). U4's tadpole rows
+                         are struck; the surviving third-cumulant
+                         threat is the sunset alone (x7.7 / x2.8 /
+                         x0.97 conservative).
+Scope:                   Matched bookkeeping of the B5 chain
+                         (per-pattern self-consistent Hartree +
+                         condensate optimization); all anchors.
+Dependencies:            U4 assessment (channel identification +
+                         arithmetic); Math437 Lemma 1 / production
+                         decomposition (u_eff dressing, stationarity
+                         line); Math436 argmin chain (cross-check
+                         target).
+Evidence grade:          ANALYTIC SKETCH (T3); the O(I^4) remainder
+                         line is closed-form on certified constants.
+Reproduction command:    (registered follow-up R-U6-2) script asserting
+                         the 3 u_eff M coefficient against the
+                         Math436/Math437 closed forms.
+Expected output:         coefficient identity to 1e-10; HEX argmin
+                         chain reproduced; JSON artefact under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/.
+Falsification gate:      A matched-bookkeeping derivation exhibiting a
+                         NON-cancelling tadpole remainder at O(I^2) or
+                         larger beyond the resonant accounting (would
+                         demote the lemma and restore U4's pessimistic
+                         branch); R-U6-2 coefficient mismatch.
+Tier before / after:     No tier action. The lemma enters at T3; B5
+                         stays T5-CANDIDATE.
+No-overclaim statement:  The lemma is a SKETCH pending the R-U6-1
+                         alignment writeup and the R-U6-2 machine
+                         cross-check. It does NOT lift SC-SCOPE (the
+                         sunset endpoint refinement remains open) and
+                         does not change any margin, tier, or gate.
+                         PDF build + linter PENDING operator-side.
+Next required action:    R-U6-1 formal writeup; R-U6-2 script; then
+                         the sunset endpoint refinement (per-transfer
+                         kernel + transfer counting) as the single
+                         remaining SC-SCOPE lift item. Mainline
+                         continues (U7).
+\end{verbatim}

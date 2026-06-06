@@ -1,0 +1,227 @@
+% =============================================================================
+% Title: DR-2 incremental lemmas: the diametral-disjointness promotion, the extraction decomposition, and the exact sticking point
+% Claim: B5-BEYOND-LAYER-BOUND (DR-2 unrestricted-class programme, off critical path; Reading-H T6 mainline, unit U13)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: programme note, T3 (two exact lemmas + one conditional dichotomy step + one NAMED OBSTRUCTION; DR-2 remains research-grade and off the critical path; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U13: the
+%        DR-2 seed-lemma formalization invited by the verdict-#14
+%        record). Contents: (L1) DIAMETRAL-DISJOINTNESS PROMOTION
+%        (exact): distinct antipodal pairs of one circle are disjoint
+%        point sets, so a carrier with p_D pattern-pairs contains
+%        EXACTLY 2 p_D pattern points -- a rich carrier IS a rich
+%        pattern circle (the pigeonhole seed's "forces a circle"
+%        upgraded to an exact point-count); (L2) EXTRACTION
+%        DECOMPOSITION (exact bookkeeping): for any circle family, the
+%        additive energy splits into homo-circle internal parts (each
+%        capped by the universal K = 14 theorem) plus a hetero-pair
+%        remainder counted by the same carrier partition one level
+%        down; (L3) DICHOTOMY STEP (conditional): below threshold K
+%        the hetero remainder is K-linear; above it, L1 adjoins a new
+%        >= 2K-point circle to the family. NAMED OBSTRUCTION DR2-SHARE:
+%        point-sharing between adjoined circles breaks the
+%        sum I_s^2 <= I^2 subadditivity that the homo cap needs --
+%        identified as the EXACT sticking point of the elementary
+%        route (consistent with the assessed adjacency to the open
+%        circle-incidence conjecture). DR-2 stays research-grade and
+%        off the critical path; this note's value is the precise
+%        reduction. PDF build and linter execution PENDING
+%        OPERATOR-SIDE (sandbox shell unavailable to this agent
+%        session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Verdict \#14 kept the unrestricted-class closure open via DR-2
+(research-grade, publication-strength alternative) and the DR-2 seed
+lemma (pigeonhole) was registered the same day. This note formalizes
+the seed into an extraction architecture, proving the two exact pieces
+and NAMING the precise obstruction where the elementary route stops.
+Scope: the unrestricted single-shell class (no H-ADM-COH); pure
+combinatorics of the carrier partition; off the critical path by
+verdict \#14.
+
+\section*{2. The lemmas}
+
+\begin{lemma}[L1: diametral-disjointness promotion -- exact]
+On a circle $D$, every point has exactly one antipode (within $D$), so
+distinct antipodal (diametral) pairs of $D$ are DISJOINT two-point
+sets. Hence if a carrier $D$ carries $p_D$ pattern antipodal pairs,
+then $|D \cap P| = 2p_D$ exactly: a carrier rich in pairs IS a pattern
+circle rich in points. In particular the pigeonhole seed ("energy
+$KN^2$ forces a carrier with $\ge K$ pairs") promotes to "forces a
+circle containing $\ge 2K$ pattern points", whose INTERNAL energy the
+universal single-circle theorem caps at $14\lambda'^2 I_D^2$ (any
+amplitudes).
+\end{lemma}
+
+\begin{proof}
+Antipodality on $D$ is the involution $x \mapsto 2c_D - x$; an
+involution without fixed points on $D \setminus \{\text{center
+preimages}\}$ partitions points into disjoint 2-cycles; each pattern
+pair carried by $D$ is one such 2-cycle of pattern points. Disjointness
+and the exact count follow; the cap is the v1.8 universal theorem
+verbatim. $\square$
+\end{proof}
+
+\begin{lemma}[L2: extraction decomposition -- exact bookkeeping]
+Let $\mathcal C = \{C_1, \ldots, C_m\}$ be any family of circles. Call
+an ordered pair $(u, v)$ HOMO if some $C_s \in \mathcal C$ contains
+both $u$ and $v$ with carrier$(u,v) = C_s$, else HETERO. Then, by the
+antipodal-carrier partition (every pair has exactly one carrier),
+\[
+\sum_{t\ne0} w_t^2 \;=\; E^{\rm homo}(\mathcal C) + E^{\rm het}
+(\mathcal C),
+\qquad
+E^{\rm homo}(\mathcal C) \;\le\; 14\,\lambda'^2 \sum_{s=1}^m
+I_{C_s}^2 ,
+\]
+where $I_{C_s}$ is the intensity of the pattern points on $C_s$, and
+$E^{\rm het}$ is the carrier-partition energy of the hetero pairs ---
+the SAME object one level down, restricted to pairs not internal to
+any family member.
+\end{lemma}
+
+\begin{proof}
+The partition is the v1.9 theorem (each pair has exactly one carrier);
+the homo cap is the universal single-circle theorem applied per family
+member to its internal pairs (a pair internal to $C_s$ has $C_s$ as
+its carrier --- both points on $C_s$ and antipodal on it). The split
+is exhaustive and disjoint by definition. $\square$
+\end{proof}
+
+\begin{lemma}[L3: dichotomy step -- conditional]
+Fix a threshold $K$. Either every hetero-pair carrier has
+$p_D^{\rm het} < K$, in which case
+\[
+E^{\rm het} \;\le\; K \cdot \max_D w\text{-mass per pair} \cdot
+(\text{hetero pair }\ell^1) \;\le\; K\,\lambda'^2\,c_{\ell^1}\,I\,S^2
+\text{-form}
+\]
+($\ell^1$-controlled by Lemma C$'$ of the main chain), or some carrier
+$D^*$ has $p_{D^*}^{\rm het} \ge K$, and by L1 $D^*$ contains $\ge 2K$
+pattern points: adjoin $D^*$ to $\mathcal C$, strictly converting its
+internal hetero pairs to homo.
+\end{lemma}
+
+\section*{3. The named obstruction (honest)}
+
+\textbf{DR2-SHARE}: the iteration of L3 grows the family, but family
+members may SHARE pattern points (a point can lie on many circles).
+Then $\sum_s I_{C_s}^2$ is NOT bounded by $I^2$ (subadditivity fails
+under sharing: a point contributing to $k$ circles is counted $k$
+times), so the L2 homo cap degrades with the sharing multiplicity.
+This is the exact sticking point: bounding the maximum point-circle
+sharing within the adjoined rich-circle family is an incidence
+statement of precisely the class assessed research-grade (adjacent to
+the open circle-incidence conjecture --- the verdict-\#14 record's
+assessment, here pinned to a single named quantity:
+$\chi(P) := \max_x \#\{s : x \in C_s,\ |C_s \cap P| \ge 2K\}$).
+The elementary route closes iff $\chi(P) = O({\rm polylog})$
+class-wide; the chain's measured worst families (exponents 2.04--2.08)
+are consistent with bounded $\chi$, which is the pre-registered
+sharp-$O(N^2)$ conjecture seen from the sharing side.
+
+\section*{4. Programme status}
+
+DR-2 remains RESEARCH-GRADE and OFF the critical path (verdict \#14).
+The note's value: the route is now a three-lemma architecture with ONE
+named obstruction (DR2-SHARE), replacing the previous one-line seed.
+Any future attack has its target quantity ($\chi$) and its exact
+failure mode on record.
+
+\section*{5. Numerical verification}
+
+No new machine numbers; L1/L2 are exact structural statements over the
+certified carrier-partition machinery (v1.9: $\ell^1/\ell^2$
+reconstructions exact to $10^{-12}/10^{-15}$). A registered
+spot-check: measure $\chi(P)$ on the chain's worst families (rand,
+ring unions, AP stacks) --- expected $O(1)$, consistent with the
+measured exponents.
+
+Quantitative sanity check (mandatory): consistency --- L1 applied to
+the single-circle case ($m = 1$, all pairs homo) reproduces the
+universal theorem with zero hetero remainder, and applied to the
+two-ring family reproduces the exact $c_{\rm ring}(n)$ accounting
+(the five-orbit pairs are all homo on the two member circles plus the
+axial transfers, which the closed form counts); limit case --- at
+$K > n/2$ no carrier can be rich (L1 would demand $> n$ points) and
+L3's first branch is automatic, recovering the trivial $E \le
+K$-linear bound; sign-direction --- adjoining circles only moves
+energy het $\to$ homo (never creates energy), so the iteration is
+monotone in the bookkeeping, and the obstruction concerns only the
+CAP's growth, stated honestly.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``L3's first branch quotes an l1-controlled
+hetero bound without a sharp constant; as stated it is not yet a
+usable inequality.''} VALID-with-mitigation: correct --- L3 is
+labelled CONDITIONAL and its first branch's constant is deliberately
+schematic (the Lemma-C$'$ $\ell^1$ cap gives A form, but the sharp
+pairing with the per-pair $w$-mass needs the weighted version); the
+note's claim is the ARCHITECTURE plus the exact L1/L2, with L3's
+constant chase as the registered next step IF the operator ever puts
+DR-2 on path.
+\item[($\beta$)] \emph{``The obstruction framing could be wrong: maybe
+the iteration can avoid sharing by choosing disjoint sub-families
+(greedy disjointification).''} VALID-with-mitigation: greedy
+disjointification (keep only point-disjoint rich circles) preserves
+the homo cap but WEAKENS the conversion (pairs internal to a discarded
+rich circle stay het), so the dichotomy no longer terminates --- this
+trade is exactly why the obstruction is genuine and is recorded as
+such; a cleverer selection rule is the open content.
+\item[($\gamma$)] \emph{``Pinning DR-2's difficulty to chi(P) may be
+an over-reduction: the open incidence conjecture has more facets than
+point-circle sharing.''} VALID-with-mitigation: the reduction claim is
+scoped --- "the ELEMENTARY (extraction) route closes iff chi is
+polylog-bounded" --- not that the conjecture equals the chi bound;
+other routes (polynomial method, etc.) are untouched. The scoping is
+in the text.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / dr2-extraction-lemmas
+                         (unit U13)
+Precise statement:       (L1 EXACT) a carrier with p_D pattern pairs
+                         contains exactly 2 p_D pattern points (rich
+                         carrier = rich circle). (L2 EXACT) for any
+                         circle family, E = E_homo + E_het with
+                         E_homo <= 14 lam'^2 sum_s I_{C_s}^2.
+                         (L3 CONDITIONAL) dichotomy: poor carriers =>
+                         K-linear het bound; rich carrier => adjoin a
+                         >= 2K-point circle. NAMED OBSTRUCTION
+                         DR2-SHARE: point-sharing breaks
+                         sum I_s^2 <= I^2; target quantity chi(P)
+                         defined; elementary route closes iff chi =
+                         O(polylog) class-wide.
+Scope:                   Unrestricted single-shell class; pure carrier-
+                         partition combinatorics; OFF critical path
+                         (verdict #14).
+Dependencies:            Carrier partition theorem (v1.9); universal
+                         single-circle theorem (v1.8); Lemma C'
+                         (l1 cap); DR-2 seed record.
+Evidence grade:          ANALYTIC (L1/L2 exact; L3 conditional) at T3.
+Reproduction command:    (registered spot-check) measure chi(P) on the
+                         chain's worst families.
+Expected output:         chi = O(1) on rand/ring/AP families; JSON
+                         under claims/B5-BEYOND-LAYER-BOUND/runs/.
+Falsification gate:      A family with chi growing polynomially AND
+                         energy exponent approaching the sqrt-n
+                         ceiling (would mean the elementary route is
+                         dead AND the sharp conjecture is threatened
+                         -- honest negative pre-registered).
+Tier before / after:     No tier action; DR-2 stays research-grade
+                         off-path; B5 stays T5-CANDIDATE.
+No-overclaim statement:  Nothing here closes or advances the
+                         unrestricted-class gate; L3's constant is
+                         schematic by design. PDF build + linter
+                         PENDING operator-side.
+Next required action:    (only if operator puts DR-2 on path) L3
+                         constant chase + chi spot-check. Mainline
+                         continues (U14).
+\end{verbatim}

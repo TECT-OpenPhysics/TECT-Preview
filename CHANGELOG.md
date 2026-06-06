@@ -5,6 +5,550 @@ not pillar counts.
 
 ---
 
+## [INCIDENT-RESTORE] Sector-B card truncation repaired; subagent write-guard added — 2026-06-06
+
+- **Incident**: the autonomous T6-mainline subagent (no shell access) fell
+  back to tool-layer writes and TRUNCATED all three Sector-B status.json
+  cards mid-string (B1-RH-ENUM, B2-PROPA-HLAYER, B5-BEYOND-LAYER-BOUND).
+  `lint_claims.py` caught it (JSON parse errors) — the backstop worked.
+- **Restoration**: cards rebuilt from `git show HEAD:...` (clean AddA-v1.2
+  base) plus this session's verified AddB-AddE field values. B5 statement
+  (full AddA-AddE chain) recovered intact from the working copy; B5
+  scope/notes/no_overclaim/next_action/open_gates set to the AddE +
+  verdict-#14 verified values (gate CLOSED-CONDITIONAL, B5 T5-CANDIDATE,
+  open_gates cleared). B1/B2 fully restored from HEAD (untouched by AddB-E).
+- **Autonomous U1-U16 notes**: remain on disk as UNVERIFIED DRAFTS (PDFs +
+  linter pending); they did NOT modify the cards after restoration. The
+  U14 draft script runs 52/57 with 5 pre-registered-triage FAILs.
+- **Systemic fix**: CLAUDE.md sec-2 subagent/autonomous-dispatch guard
+  (never dispatch a tracked-file-writing subagent without shell; lacking
+  shell it returns content for the parent to write atomically).
+- Full chain re-verified GREEN: lint PASS, catalog rebuilt, release PASS,
+  pytest 3 passed.
+
+---
+
+## [U16-CONSOLIDATION] Reading-H T6 mainline session consolidation: unit map + decision points + verification queue — 2026-06-06
+
+- **Unit U16 (session cap).** New note
+  `claims/B1-RH-ENUM/notes/t6-mainline-session-consolidation-260606-v1.0.tex.txt`.
+- **Unit map**: U1 (T6-entry assembly, PROPOSED) -> U2 (H-A0 pathway) ->
+  U3 (residual inventory) -> U4 (third-cumulant assessment) -> U5 (B5 T5
+  dossier) -> U6 (tadpole absent) -> U7 (sunset refinement + M-ENDPOINT)
+  -> U8 (enumeration recheck, decagonal extremal) -> U9 (SECOND-ORDER
+  AUDIT: U1 gap UPHELD, G-U1-SMALLT) -> U10 (near-gap protection lemma)
+  -> U11 (residual closure; G-U1-SMALLT -> one machine check) -> U12
+  (log sharpening) -> U13 (DR-2 lemmas + DR2-SHARE) -> U14 (draft
+  verification script) -> U15 (quartic channel; inventory complete).
+- **Three operator decision points**: (1) U1 promotion form (in-place
+  T6-CONDITIONAL vs new B6 card) after R-U10-3 runs clean; (2) B5 full-T5
+  assignment (U5 dossier); (3) H-A0 -> H-ANCHOR replacement after
+  G-A0-DUI/G-A0-VER.
+- **Verification queue, single entry point**: the U14 draft script (plus
+  registered extensions: per-chord G^3/G^4, chi spot-check, U12
+  definition check, RES-4 sweep) AND the operator-side build/lint/catalog
+  /test chain for all session notes (no shell was available this
+  session).
+- **Honest session totals**: no tier moved, no gate flipped, nothing
+  machine-verified; products = one conditional-theorem assembly (flagged
+  by its own second-order audit, repaired, one check from
+  sign-off-ready), two structural lemmas, one sharpened constant, one
+  complete third-order inventory, one named DR-2 obstruction, one draft
+  verification script.
+
+## [B5-QUARTIC-DIFF] Quartic-difference channel: third-order inventory completed; endpoint-marginal under sup-kernels — 2026-06-06
+
+- **Unit U15 of the Reading-H T6 mainline** (the U4-flagged remaining
+  channel). New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/quartic-difference-channel-260606-v1.0.tex.txt`.
+- **Channel**: g_4 ~ (5v/2) F^2; its t != 0 fibers are EXACTLY w_t/lam'
+  (the chain's Parseval identity) — it rides the certified transfer set.
+  Per-transfer ratio to the second-order weight: R(t) <= ~1.59 under
+  sup-kernels (G^4 <= J(0) M^2 Young bound vs worst J(2q0)) => budget
+  inflation <= x2.6, I-independent: **anchor x22.8 / middle x3.4 /
+  endpoint x1.0 MARGINAL**.
+- **Honest reading**: the endpoint verdict is a sup-kernel-crudeness
+  statement (the worst case pairs incompatible extremes); the per-chord
+  G^4 evaluation (registered as a U14-script extension) decides it. The
+  t = 0 part is reabsorbed by the U6 normal-ordering (vertex-degree-
+  agnostic).
+- **Third-order inventory now COMPLETE at estimate grade**: cubic sunset
+  positive at all anchors pending M-ENDPOINT (U4/U7); tadpole absent
+  (U6); quartic-difference endpoint-marginal pending per-transfer G^4
+  (U15). Notably the QUARTIC channel dominates the sunset (large v at
+  this operating point) — the inventory's headline surprise.
+- Lemma-H disjointness asserted at estimate grade (contraction-topology
+  audit registered). T2; no tier action; PDF/linter pending operator-side.
+
+## [U14-VERIFY-SCRIPT] Consolidated U-series verification script (DRAFT, not yet executed) — 2026-06-06
+
+- **Unit U14 of the Reading-H T6 mainline.** New script
+  `codes/vacuum/t6_mainline_useries_checks.py` (v0.1.0, **__status__ =
+  DRAFT - NOT YET EXECUTED** — authored without shell access) + companion
+  note `claims/B1-RH-ENUM/notes/useries-verification-script-260606-v1.0.tex.txt`.
+- **Coverage (one section per registered check)**: S1 G-A0-VER (U2);
+  S2 M-ENDPOINT (U7); S3 U4/U7 third-cumulant tables (J(0), composed
+  margins, frozen + dressed ratios); S4 R-U6-2 coefficient identity
+  (exact canary assert); S5 R-U10-3 (M' = -J(0) finite-difference,
+  linear gain 1.763, endpoint convention remainder <= 3.3e-5,
+  protection/remainder > 100); S6 U8 angle table (exact geometry,
+  theta_min(I), decagonal extremal); S7 U12 ceiling arithmetic.
+- **Honesty contract**: NOTHING is machine-verified by authoring; every
+  U-series number keeps its note's grade until the first reviewed run.
+  First-run protocol written into the note (FAILs fire the source units'
+  own pre-registered gates; the S4 canary isolates environment breakage).
+- Artefact target: `claims/B1-RH-ENUM/runs/260606-useries-checks/`.
+  Reuses m424 production helpers + the main suite's J-integral form
+  verbatim; runtime target < 20 s. No tier action; PDF/linter pending
+  operator-side.
+
+## [B5-DR2-LEMMAS] DR-2 extraction lemmas: rich-carrier promotion (exact) + decomposition + the named obstruction DR2-SHARE — 2026-06-06
+
+- **Unit U13 of the Reading-H T6 mainline** (DR-2 seed formalization;
+  off critical path per verdict #14). New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/dr2-extraction-lemmas-260606-v1.0.tex.txt`.
+- **L1 (EXACT, diametral-disjointness promotion)**: distinct antipodal
+  pairs of one circle are disjoint, so a carrier with p_D pattern pairs
+  contains EXACTLY 2 p_D pattern points — the pigeonhole seed's "forces a
+  circle" upgraded to an exact point count; the rich circle's internal
+  energy is then capped by the universal K = 14 theorem.
+- **L2 (EXACT bookkeeping)**: for any circle family, E = E_homo + E_het
+  via the carrier partition, with E_homo <= 14 lam'^2 sum_s I_{C_s}^2.
+- **L3 (CONDITIONAL dichotomy)**: poor carriers => K-linear het bound
+  (constant schematic, chase registered); rich carrier => adjoin a
+  >= 2K-point circle (strict het -> homo conversion).
+- **NAMED OBSTRUCTION DR2-SHARE**: point-sharing between adjoined circles
+  breaks sum I_s^2 <= I^2 subadditivity — the exact sticking point of the
+  elementary route, pinned to the quantity chi(P) = max point-circle
+  sharing among rich members; the route closes iff chi = O(polylog)
+  class-wide (the sharp-O(N^2) conjecture seen from the sharing side).
+  chi spot-check on the worst families registered (expected O(1)).
+- One in-session LaTeX defect self-caught and fixed (stray end-itemize in
+  section 3 — would have failed FORM-CHECK). No tier action; DR-2 stays
+  research-grade off-path; PDF/linter pending operator-side.
+
+## [B5-LOG-SHARPEN] Dyadic-lift sharpening: log^2 -> log^{3/2} by restoring the count constraint (T3) — 2026-06-06
+
+- **Unit U12 of the Reading-H T6 mainline** (the registered AddA v1.2
+  "sharp-constant unconditional optimization" follow-up). New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/dyadic-lift-log-sharpening-260606-v1.0.tex.txt`.
+- **Theorem (proof fully written, two textbook steps)**: the
+  unconditional-amplitude lift improves to sum w_t^2 <= 64 sqrt7 lam'^2
+  I^2 sqrt(2n) **log^{3/2}(2n)** + O(lam'^2 I^2). Mechanism: the AddA
+  proof discarded sum_j N_j = 2n (bounding each class by N); restoring it
+  via Cauchy-Schwarz + Jensen (power-mean for x^{1/4}) gives
+  sum_j x_j <= I^{1/2} J^{3/8} (2n)^{1/8} — half a log removed.
+- **Numbers at the amended-class scale** (n = 44): x2.54 constant
+  improvement; route n-reach x6.5 (inverse-square in the prefactor).
+  Balanced single-class limit degenerates to NO log (sanity: logs price
+  only genuine multi-scale spread).
+- **Candidate second saving FLAGGED, not asserted**: the class cap
+  alpha_j^2 <= 8 I_j/N_j may admit 4 (lower-end mass bound) — a further
+  x4 IF the script's class-intensity convention permits; routed through
+  the registered definition check (post-catch-#7 discipline).
+- Ledger and critical path UNCHANGED (official threshold stays the
+  balanced route; the amended class needs only n_pack ~ 44). No tier
+  action; machine spot-check registered; PDF/linter pending operator-side.
+
+## [B1-NEARGAP-CLOSE] Near-gap residual closure: convention exactness (x130 floor) + split-alignment identity — 2026-06-06
+
+- **Unit U11 of the Reading-H T6 mainline** — closes R-U10-1 and R-U10-2.
+  New note
+  `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.tex.txt`.
+- **R-U10-1 CLOSED (T4 grade)**: the convention r_hat = r_R + 2 lam' I
+  has its O(I^2) slack bounded by the calibrated quadratic remainder
+  (artefact delta_2nd = 6.7e-8 at I_cal = 1e-4; (I/I_cal)^2 scaling):
+  **2.7e-5 at the endpoint vs ~3.5e-3 linear protection = x130 floor**
+  (x1300 at the anchor). Class-representative via the isotropic response
+  structure (the objection that this re-discovers H-LAYER is addressed:
+  H-LAYER is a tracked hypothesis of the U1 set, not hidden).
+- **R-U10-2 CLOSED (exact algebra)**: tr X = 0 (off-diagonality) makes
+  delta F_off = (1/2V) tr ln(1+X) exactly; insert/remove ln D shows the
+  chain's split [Phi + Delta F_0 + delta F_off] and the lemma's split
+  [Phi + remainder + total trace] are REARRANGEMENTS of the same
+  F[P] - F[R_H] — no double-count, no dropped term. Band intervals use
+  the chain's split (P_B floors); interval I' uses the lemma's
+  (structural positivity).
+- **Consequence**: G-U1-SMALLT reduces to the SINGLE machine check
+  R-U10-3 (spec extended: + endpoint remainder solve + booking exhibit).
+  Upon its execution the U9 flag lifts; the U1 proposal then needs only
+  operator sign-off.
+- No tier action; PDF/linter pending operator-side.
+
+## [B1-NEARGAP-LEMMA] Near-gap protection lemma: operator monotonicity closes the G-U1-SMALLT regime structurally (T3) — 2026-06-06
+
+- **Unit U10 of the Reading-H T6 mainline** — route (a) closure of the U9
+  audit item. New note
+  `claims/B1-RH-ENUM/notes/neargap-protection-lemma-260606-v1.0.tex.txt`.
+- **Lemma (sketch)**: the chain's own identities give D + W = D_0 +
+  lam' P^2 >= D_0 = H_{R_H} (P^2 theorem + the r_hat = r_R + 2 lam' I
+  convention + lam' = 8.0551 > 0 certified); by operator monotonicity of
+  ln: **F_fluct[P] - F_fluct[R_H] >= 0 for every admissible pattern** —
+  the fluctuation sector (diagonal Hartree shift + off-diagonal Bloch
+  TOGETHER) can never help a competitor. With Phi >= 0 on interval I',
+  the near-gap small-amplitude regime is protected STRUCTURALLY; the U9
+  crossover was a bound-level artifact (comparing two bounds, not two
+  energies).
+- **Clarified role of STEP-5B**: the off-diagonal budget matters exactly
+  on the band intervals where the layer proof spends P_B floors against
+  dips — the chain's original threat model; the U1 band arithmetic stands
+  there.
+- **G-U1-SMALLT reduced** (not lifted): R-U10-1 (convention exactness at
+  O(I^2) — the artefact's own second-order calibration sits x2600 below
+  the linear protection at the LAM point), R-U10-2 (layer/beyond-layer
+  split alignment, one page), R-U10-3 (machine check of the trace
+  inequality, registered).
+- Sanity: first-order trace gain ~1.76 I exceeds the U9 floor coefficient
+  0.3045 I — the structural protection is stronger than the floor the
+  audit compared against. T3 sketch; no tier action; PDF/linter pending
+  operator-side.
+
+## [B1-U1-AUDIT] Second-order audit of the T6-entry composition: G-U1-SMALLT registered; U1 proposal flagged CONDITIONAL — 2026-06-06
+
+- **Unit U9 of the Reading-H T6 mainline** — the cross-turn second-order
+  audit of U1, by the author, BEFORE operator review. New note
+  `claims/B1-RH-ENUM/notes/t6-entry-composition-audit-260606-v1.0.tex.txt`.
+- **Finding (one objection UPHELD, self-caught)**: the U1 composition
+  reads Prop A as a UNIFORM 0.00432 floor; but Prop A's floor is
+  interval-dependent — on interval I' (containing the gap point) the
+  layer excess of a near-gap small-amplitude competitor scales as O(I)
+  (kappa-hat/2 ~ m*/2 = 0.152 per unit I), while the certified
+  beyond-layer envelope scales as O(I^2) with class-wide prefactor:
+  estimated crossover I_x ~ 3.5e-4 sits INSIDE the certified window —
+  the band arithmetic does not by itself cover that regime.
+- **Two candidate resolutions recorded**: (a) self-consistent slaving +
+  P^2 Hessian positivity carries the near-gap regime structurally;
+  (b) crossover arithmetic with the per-pattern prefactor (single-circle
+  K = 14 pushes I_x to ~2.7e-3 > window top) + the Delta-F0 gap-point
+  curvature C_2 (one new certified number). Either restores the
+  composition with an amended proof text.
+- **Action taken**: NAMED ITEM **G-U1-SMALLT** registered; the U1
+  T5 -> T6-CONDITIONAL proposal now carries this condition in addition
+  to operator sign-off (B1 status.json scope/notes/next_action updated).
+  Prop A (B2), the STEP-5B closure (B5), and the enumerated races are
+  unaffected within their own scopes.
+- **Honest framing**: the audit does NOT assert the composition fails —
+  it asserts one regime's coverage is UNVERIFIED and names the
+  verification. Estimate-grade crossover numbers; PDF/linter pending
+  operator-side.
+
+## [B1-ENUM-RECHECK] Enumeration completeness recheck vs the amended class: no coverage gap; decagonal extremal — 2026-06-06
+
+- **Unit U8 of the Reading-H T6 mainline.** New note
+  `claims/B1-RH-ENUM/notes/enumeration-amended-class-recheck-260606-v1.0.tex.txt`.
+- **Recheck (exact geometry)**: every enumerated/gallery pattern (LAM,
+  square, SC{100}, HEX, FCC, BCC, icosahedral, decagonal QC) satisfies
+  the H-ADM-COH separation >= theta_min at ALL anchor intensities — the
+  B1 races and the U1 class theorem compose with **no coverage gap**.
+  Min margins: all >= x1.67 except the decagonal (x1.042 anchor).
+- **Extremal finding**: the decagonal star clears theta_min by only
+  **0.18% at the I = 2e-3 endpoint** (0.62832 vs 0.62716 rad) — it sits
+  essentially AT the class boundary and is PRE-REGISTERED as the
+  canonical beyond-layer stress-test pattern. Boundary is soft (AddC:
+  crossing shifts F by <= c_ind I^2).
+- **Sea reclassification formalized**: k-fold planar stars with spacing
+  pi/k < theta_min (12-fold and denser at the anchor) are not class
+  members — why dense angular stars never surfaced as estimator threats.
+- **Honest T3 corner**: two-shell ensembles inherit per-shell; the
+  cross-shell radial-resolution paragraph is registered (Lemma-J scale).
+- Exact-geometry asserts registered for the follow-up script (not
+  executed this session). No tier action; PDF/linter pending operator-side.
+
+## [B5-SUNSET-REFINE] Sunset endpoint refinement: intensity-dressed coupling lifts x0.97 -> ~x1.34 (estimate; M-ENDPOINT registered) — 2026-06-06
+
+- **Unit U7 of the Reading-H T6 mainline** (the single remaining SC-SCOPE
+  lift axis after U6). New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/sunset-endpoint-refinement-260606-v1.0.tex.txt`.
+- **Refinement**: the U4 sunset bound froze the coupling at the
+  production-anchor dressing; each anchor's competitor is dressed at its
+  own r_hat(I) = r_R + 2 lam' I (endpoint: 0.33675). Via the EXACT
+  identity M'(r_hat) = -J(0) (both are the same integral), the endpoint
+  coupling drops u_eff^2 7.21 -> ~5.68 and the kernel M-factor 0.1094 ->
+  ~0.1001: **endpoint sunset ratio x0.97 -> ~x1.34** (and x2.8 -> ~x3.2
+  at 1e-3; anchor unchanged x7.7).
+- **The single missing constant**: M-ENDPOINT = M(0.33675), a-priori
+  bracketed in [0.1001, 0.1094] by the convex/secant sandwich; the bound
+  is monotone across the bracket (worst end reproduces U4's honest
+  x0.97). One quadrature with a one-sided check — registered.
+- **Honest negative finding**: the kernel axis is LOW-YIELD — at shell
+  transfers the sunset kernel sits on the 4-wave resonance phase space
+  and is not parametrically below its Young bound; the lift load is on
+  the coupling (this note) and counting axes.
+- **Lift state after U6+U7**: tadpole ABSENT (U6); sunset positive at
+  all anchors at estimate grade pending M-ENDPOINT. Remaining formal
+  inputs: R-U6-1/R-U6-2, M-ENDPOINT + assembled third-order inequality,
+  quartic-difference channel writeup.
+- T3/estimate; no tier action; PDF/linter pending operator-side.
+
+## [B5-TADPOLE-LEMMA] Tadpole reabsorption lemma: the load-bearing U4 channel is eliminated identically (T3 sketch) — 2026-06-06
+
+- **Unit U6 of the Reading-H T6 mainline** (= lift input (c) of U4). New
+  note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/tadpole-reabsorption-lemma-260606-v1.0.tex.txt`.
+- **Lemma (sketch)**: in the matched bookkeeping every pattern is
+  evaluated at its self-consistent Hartree optimum, so the cubic vertex
+  enters NORMAL-ORDERED w.r.t. the dressed Gaussian; Wick for
+  normal-ordered vertices has no self-contractions: the tadpole channel
+  (9 M^2 G) is **ABSENT IDENTICALLY**. Mechanism: the would-be tadpole
+  linear source 3 M u_eff F coincides term-by-term with the
+  stationarity-equation source already resummed (the 3 u_eff M A line of
+  the production engine) — re-including it double-counts.
+- **Consequence**: U4's tadpole rows (x4.3 / x1.5 / x0.53 "if
+  uncancelled") are STRUCK; the surviving third-cumulant threat is the
+  sunset alone (x7.7 / x2.8 / x0.97 conservative). The SC-SCOPE lift's
+  endpoint problem reduces to ONE axis (per-transfer sunset-kernel decay
+  + cubic-transfer counting).
+- **O(F^3) remainder**: O(I^4) < 1e-6 at all anchors (closed-form on
+  certified constants); the resonant-triple O(I^2) piece is the already-
+  counted N_4 accounting (devil's-advocate gamma).
+- **Registered residuals**: R-U6-1 (formal normal-ordering alignment
+  writeup), R-U6-2 (machine cross-check of the 3 u_eff M coefficient
+  against Math436/Math437 closed forms — script not executed this
+  session).
+- T3 sketch; no tier action; PDF/linter pending operator-side.
+
+## [B5-T5-DOSSIER] B5 tier-assignment dossier: consolidated case for full T5 within the pinned scope — 2026-06-06
+
+- **Unit U5 of the Reading-H T6 mainline** (the verdict-#14 optional item
+  "full T5 assignment for B5 at operator review"). New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/t5-assignment-dossier-260606-v1.0.tex.txt`.
+- **Contents**: pinned statement (amended class, second cumulant, three
+  anchors, hardened floors x59.4 / x2.6); scope fence + constant
+  provenance (no unpinned constant; 20/9 route provisional and unused);
+  margin table; SEVEN pre-registered falsifiers (cumulative union of the
+  chain gates); reproduction contract (192/192, ~27 s); process record
+  (8 verify-loop catches, 14 operator verdicts, 2 registered negative
+  results); TSv2 T5 artefact checklist — all items PRESENT.
+- **Vintage flag (honest)**: the middle-intensity margin x8.8 is the AddD
+  figure (AddE refinement only increases it — floor direction); refresh
+  is a one-line addition to the registered follow-up script.
+- **No tier action**: B5 stays T5-CANDIDATE; the full T5 assignment is
+  PROPOSED for operator sign-off. PDF/linter pending operator-side.
+
+## [B5-3CUM-ASSESS] SC-SCOPE third-cumulant lift assessment: anchor-feasible, ENDPOINT-CRITICAL (T2 estimate) — 2026-06-06
+
+- **Unit U4 of the Reading-H T6 mainline** (= the RES-5 quantification).
+  New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/third-cumulant-lift-assessment-260606-v1.0.tex.txt`.
+- **Channel identification**: the genuinely new third-cumulant channel is
+  the CUBIC SUNSET (g3 = u_eff F + (10v/3) F^3; 6 G^3 contraction) — it is
+  ABSENT for Reading-H (no condensate) and strictly competitor-helping.
+  **Dressed coupling**: u_eff(M_R) = u + 10 v M_R = +2.685 (x9.7 above u^2
+  in square — the bare-coupling estimate is misleadingly optimistic).
+- **Conservative sup-bounds vs the U1 composed margins**: sunset ratios
+  **x7.7 / x2.8 / x0.97** and tadpole-if-uncancelled **x4.3 / x1.5 /
+  x0.53** at I = 4e-4 / 1e-3 / 2e-3: the production anchor is feasible;
+  the **endpoint conservative bounds FAIL** (honest finding, robust in
+  the safe direction per the headroom check).
+- **Lift requirements named**: (a) per-transfer G^3-kernel decay (AddE
+  J_eff analogue), (b) cubic-transfer counting (K(n) analogue),
+  (c) TADPOLE CANCELLATION at matched bookkeeping (load-bearing). Plus
+  the quartic-difference channel's cancellation structure flagged.
+- **Grade**: T2 ESTIMATE; all numbers are closed-form arithmetic on
+  certified constants; machine-assert follow-up script registered (not
+  executed — sandbox shell unavailable). Falsification gates
+  pre-registered, including the honest negative ("SC-SCOPE cannot be
+  lifted at the endpoint by this route").
+- No tier action; the U1 conditional theorem is untouched (it is AT
+  second cumulant by hypothesis). PDF/linter pending operator-side.
+
+## [B5-RES-INVENTORY] H-LAYER residual inventory after the STEP-5B conditional closure: six named items — 2026-06-06
+
+- **Unit U3 of the Reading-H T6 mainline.** New note
+  `claims/B5-BEYOND-LAYER-BOUND/notes/hlayer-residual-inventory-260606-v1.0.tex.txt`.
+- **Decomposition** of the distance between the amended-class conditional
+  theorem and unconditional whole-Reading-H: RES-1 (H-diag / off-diagonal
+  Bloch — covered at 2nd order by Lemma B on the amended class; beyond-2nd
+  merges with RES-5), RES-2 (sigma channel — covered, Lemma I exact),
+  RES-3 (**unrestricted class = DR-2**, research-grade), RES-4 (intensity
+  interval sweep — mechanical-but-nontrivial, follow-up script registered),
+  RES-5 (**matched-order to exact = GAP-2**, deepest analytic frontier),
+  RES-6 (sea completeness — reduces to RES-3 via AddC/AddE
+  energy-faithfulness).
+- **Independent open axes**: {RES-3, RES-4, RES-5}; consistency
+  cross-check against the U1 exclusion list PASSES one-to-one (with
+  G3PB-III / ROBUSTNESS-MU2 as the separately-tracked operating-point
+  axes).
+- **U1 hypothesis-set irredundancy**: no listed hypothesis implied by the
+  others (layer framing / class restriction / order restriction are
+  orthogonal cuts).
+- No new numbers; no tier action; PDF/linter pending operator-side.
+
+## [B2-HA0-PATHWAY] H-A0 audit + analytic removal pathway: sign-decomposition theorem skeleton (T3) — 2026-06-06
+
+- **Unit U2 of the Reading-H T6 mainline.** New note
+  `claims/B2-PROPA-HLAYER/notes/ha0-removal-pathway-260606-v1.0.tex.txt`.
+- **Audit**: H-A0 = (U) A=0 uniqueness + (Z) zero-at-gap, certified
+  numerically on a consistent quadrature; only the claim-block-C step of
+  the Prop-A proof rests on it (P_B floors are quadrature-free).
+- **NEW removal pathway (T3 sketch)**: from the Math437 stationarity
+  identity dF0/dm = (1/2) M'(m) g(m), g(m) = r - m + 3uM + 15vM^2:
+  L1 (M' < 0; textbook regularity = named gap G-A0-DUI), L2 (g' <= -1
+  wherever u_eff >= 0), L3 (g < 0 for m > m_w = r + 15v M_c^2 = 0.039241,
+  closed form), + anchor window inequality m* = r_R = 0.30453 > m_w
+  (**x7.8 closed-form margin**; the gap equation at the anchors
+  reproduces r_R to 5e-6). => F0 strictly decreasing on (0, m*),
+  strictly increasing on (m*, inf): uniqueness + zero-at-gap as a
+  THEOREM skeleton, scheme-free.
+- **Consequence (upon gap closure + operator review)**: H-A0 ->
+  H-ANCHOR (weaker: anchor pair with M_R > M_c) or absorption into
+  A1-KERNEL-CONV; the 5.5e-3 scheme-gap offset exits the load-bearing
+  uniqueness chain; the U1 candidate hypothesis set shrinks.
+- **Named gaps registered**: G-A0-DUI (dominated-convergence paragraph),
+  G-A0-VER (machine asserts for the two arithmetic identities — script
+  not yet executed; sandbox shell unavailable this session).
+- **No tier/row/hypothesis-field change**; PDF/linter pending operator-side.
+
+## [B1-T6-ENTRY] Reading-H T6 entry package: candidate conditional theorem assembled; promotion PROPOSED — 2026-06-06
+
+- **Gate consequence executed**: STEP-5B = CLOSED-CONDITIONAL (verdict #14
+  + AddE) was the registered gateway for the whole-Reading-H T6 discussion;
+  this note opens it. New note
+  `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.tex.txt`.
+- **Candidate T6 theorem (assembled)**: Delta F[P] > 0 for every pattern P
+  of the H-ADM-COH-amended admissible class at mu^2 = 0.005,
+  I in {4e-4, 1e-3, 2e-3}, CONDITIONAL on the complete enumerated set
+  {H-LAYER-flat (beyond-layer residual discharged on the amended class),
+  H-A0, H-ADM-COH, SC-SCOPE (matched second-cumulant bookkeeping)}.
+- **Assembly chain**: Prop-A layer floor (B2, T6; band worst case +0.00432,
+  quadrature-free) + STEP-5B beyond-layer domination (B5; hardened floors
+  x59.4 / x2.6) => composed worst-case margin 0.00432*(1 - 1/2.6) ~
+  **+2.66e-3** at the endpoint floor; +4.25e-3 at the production anchor.
+  The composition is exact arithmetic on certified constants (the B5
+  budget was DEFINED against the Prop-A band margin; same kernel, same
+  bookkeeping order, same anchors).
+- **Explicitly excluded** (no-overclaim): estimator-grade enumerated
+  Delta-F figures (ESTIMATOR-UPGRADE stays OPEN); off-anchor intensities;
+  mu^2 neighbourhood (ROBUSTNESS-MU2); higher shells (G3PB-III);
+  third-cumulant order.
+- **PROPOSAL (operator sign-off required)**: B1 T5 -> T6-CONDITIONAL with
+  the upgraded statement, OR a new card B6-RH-CLASSWIDE at T6-conditional
+  with B1 staying T5. Tier field UNCHANGED by this entry; proposal recorded
+  in B1 status.json scope/notes only.
+- **Honest verification status**: PDF build + linter + catalog runs are
+  PENDING operator-side (agent sandbox shell unavailable this session);
+  no new machine numbers introduced (existing 192/192 artefact cited).
+
+## [B5-AddE] Polish closure: c_cross analytic pin (depth-free) + endpoint hardening (x2.1 -> x2.6 floor) — 2026-06-05
+
+- **Operator directive**: "polish 2 items first".
+- **(a) c_cross ANALYTIC PIN**: exact cross-cap recombination requires the
+  exact identity u_i - u_i' = v_j' - v_j; a shared difference set across
+  two caps forces CO-CIRCULARITY (sphere ∩ translate = circle); curvature
+  splits every non-co-circular alignment at O(delta^2). Machine audit:
+  adversarial aligned-AP caps show exact fiber multiplicity 2 (trivial
+  degeneracies only); the co-circular control shows multiplicity 6 with
+  K = 12.20 < 14 — equal to the sharp 14 - 18/10 EXACTLY (zero slack).
+  The would-be linear-in-depth "alignment pumping" is a finite-tolerance
+  artifact. **c_total <= 6 + 14 = 20 I^2, DEPTH-FREE.**
+- **(b) ENDPOINT HARDENING**: criterion band [1, pi]/(q0 xi) has its
+  conservative end at the current theta_min (quoted margins are FLOORS);
+  amended-class minimum transfer |t| >= 2 q0 sin(theta_min/2) refines the
+  envelope weight to J_eff = 0.256 (anchor) / 0.226 (endpoint):
+  **closure margins x59.4 / x2.6 (floors), band tops x290.9 / x12.7.**
+- New AddE note + PDF (FORM-CHECK PASS, Overfull 0); script v1.14.0
+  (192/192, ~27 s). **No unpinned constant remains in the closure path**
+  (the 20/9 incidence route stays provisional and unused).
+  Gate remains CLOSED-CONDITIONAL; B5 remains T5-CANDIDATE.
+
+## [STEP-5B-CLOSED-CONDITIONAL] Operator verdict #14: gate flipped; B5 = T5-candidate; DR-2 assessed — 2026-06-05
+
+- **OPERATOR VERDICT #14 DELIVERED** (verbatim text supplied in review
+  #14): "H-ADM-COH is accepted as the admissible-competitor definition
+  within the matched second-cumulant B5 scope. AddD v1.0 passes as the
+  closure record... The STEP-5B gate row is flipped to CLOSED-CONDITIONAL
+  with margins 55.6x/8.8x/2.1x. B5 is promoted from T4+ to T5-candidate.
+  Unrestricted-class closure remains open via DR-2..."
+- **GATES.md row flipped**: STEP-5B = CLOSED-CONDITIONAL (the first gate
+  closure of the verification-first repository). B5 card: open_gates
+  cleared; T5-CANDIDATE recorded (TSv2 tier field stays T4 until full
+  tier assignment).
+- **Gate consequence**: the whole-Reading-H T6 discussion OPENS (STEP-5B
+  was its gateway).
+- **DR-2 assessment (operator question)**: seed lemma registered — by
+  pigeonhole, additive energy K N^2 forces a single circle with >= K
+  antipodal pairs (one line, immediate from the carrier partition);
+  combined with the universal single-circle theorem and mu_C = nu* this
+  gives the elementary ceiling K <= c*min(mu_C, sqrt(n) polylog), proven
+  by three independent routes (interpolation, incidence, cluster-CS).
+  FULL DR-2 (unconditional O(N^2)) is research-grade — adjacent to the
+  open circle-incidence conjecture — and is registered as the
+  publication-strength alternative, NOT the critical path.
+
+## [B5-AddD] H-ADM-COH adoption record + cross-reading lemma + assembled STEP-5B closure (DRAFT-CLOSED) — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #13 archived**: AddA v1.3 = PASS (cleaned T4+
+  support); AddC = PASS (T4 indistinguishability lemma); operator DIRECTED
+  the AddD adoption note with its core statement verbatim.
+- **Adoption record (scope-fenced)**: H-ADM-COH = the admissible-competitor
+  definition within the matched second-cumulant B5 scope (NOT a global
+  TECT redefinition); canonical because energy-faithful (AddC).
+- **CROSS-READING LEMMA (verdict-#13 condition (b))**: whole-pattern
+  3-fold splitting changes additive energy by +0.667/+0.400 I^2 (6 and 10
+  readings) — an order BELOW the 6 I^2 saturation budget; fiber splitting
+  lowers per-fiber l2; recombination does not amplify. **Verify-loop
+  catch #8 (self-caught)**: a draft l1-preservation assert CONTRADICTED
+  Lemma C' (l1 must grow as lam(4S^2-2I)); the failed assert exposed it;
+  replaced by exact identity agreement (1e-12 on base + split).
+- **Assembled closure theorem**: STEP-5B holds for the amended class at
+  margins x55.6 / x8.8 / x2.1 (floor + official sqrt-n route + n_pack +
+  AddC lemma + cross lemma; G2 closed; Nambu discharged).
+- **Governance**: status = DRAFT-CLOSED; the GATES row flip and the B5
+  tier action (T5 CANDIDATE proposal) await OPERATOR VERDICT #14.
+- New AddD note + PDF (FORM-CHECK PASS, Overfull 0); script v1.13.1
+  (189/189, ~20 s).
+
+## [B5-AddC] Indistinguishability lemma: sub-resolution restructuring is energy-faithful; de-thinning; AddA v1.3 — 2026-06-05
+
+- **OPERATOR REVIEW VERDICT #12 archived**: AddA v1.2 = PASS (T4+ support;
+  H-KBAL structurally lifted but practically load-bearing for the sharp
+  margin — distinction preserved); AddB = T3 amendment proposal; directed
+  more rigour (indistinguishability lemma) and/or DR-2 review.
+- **EXACT FIBER COMBINATORICS**: single reading <F^4> = 6 I^2; split pair
+  9 I^2; n-fold sub-resolution cluster (12 - 6/n) I^2 — the u < 0
+  fragmentation gain is FINITE and SATURATING (machine: 6/9/11.25 exact).
+- **INDISTINGUISHABILITY LEMMA (T4)**: |F[P'] - F[P]| <= c_ind I^2 with
+  c_ind = 1.5|U| + 6 lam^2 J(0)/(4(1-a0)) = 30.1 (J(0) = 0.290): margin
+  ratios x898/x139/x33 at the three anchor intensities — sub-resolution
+  restructuring cannot create a competitor; **H-ADM-COH upgrades from
+  physical proposal to DERIVED quotient statement** (canonical
+  representative = separations >= theta_min).
+- **De-thinning**: lemma-backed packing n_pack = 16/theta_min^2 = 44/43/41
+  => K ~ 107 vs budgets 5972/927/221: closure margins x55.6/x8.8/x2.1 —
+  the AddB thin corner (x1.2) repaired.
+- **AddA v1.3**: verdict-#12 stale fixes (section-3 heading -> repaired
+  provisional exponent 20/9; footer scope: official sharp threshold =
+  balanced route, arbitrary amplitudes = larger dyadic constant).
+- New AddC note + PDF (FORM-CHECK PASS, Overfull 0); script v1.12.0
+  (185/185, 26.9 s; J_of_t scalar-argument fix). **STEP-5B: awaiting
+  operator sign-off on the lemma-backed H-ADM-COH; DR-2 off the critical
+  path (unconditional alternative).**
+
+## [B5-AddB] H-ADM derived from microphysics (coherence resolution); commit-watcher infrastructure — 2026-06-05
+
+- **H-ADM-COH derivation (T3 PROOF SKETCH + class-amendment proposal)**:
+  the anchor propagator is strongly dressed (r_hat/(C q0^4) = 1.45) =>
+  xi = 2 q0 sqrt(C/r_hat) = 2.44, theta_min = 1/(q0 xi) = 0.603 rad =>
+  independent coherent readings capped at n_adm ~ 35 (x4-conservative:
+  140), nearly I-independent (35/34/32). Sub-resolution splittings
+  reclassify into the Gaussian sea — quantifying the operator's
+  verdict-#9 observation.
+- **Closure consequence**: K(4 n_adm) = 184 < K-budget at ALL anchor
+  intensities — margins x32.4 / x5.1 / x1.2 (I = 2e-3 THIN; de-thinning
+  registered). **STEP-5B is CLOSURE-READY pending operator sign-off on
+  H-ADM-COH** (or the DR-2 unconditional route).
+- New AddB note coherence-admissibility-cutoff-260605-v1.0 (.tex.txt +
+  PDF, FORM-CHECK PASS, Overfull 0); a drafting artifact in DA-beta
+  caught and repaired before registration.
+- **Runtime discipline**: suite hotspots vectorized (nu_S_off, mu_circle,
+  circle_stats): 43 s+ -> 24.5 s (45 s sandbox cap); script v1.11.0,
+  175/175.
+- **Commit-watcher infrastructure (operator directive — auto-commit)**:
+  verification/scripts/commit_watcher.ps1 (Windows-side daemon: polls
+  internal/commit-queue/*.json, commits with maintainer signature,
+  archives to done/, -Once mode, never pushes) + CLAUDE.md section-4
+  amendment (queue-default, CLI fallback). Closes the skipped-commit gap.
+
 ## [B5-AddA-v1.2] Verdict-#11 repairs + H-KBAL lift theorem (unconditional amplitudes) — 2026-06-05
 
 - **OPERATOR REVIEW VERDICT #11 archived**: AddA v1.1 = PASS as repaired

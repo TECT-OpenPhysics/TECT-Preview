@@ -1,0 +1,208 @@
+% =============================================================================
+% Title: Coherence-resolution admissibility: deriving the mode-count cutoff from the dressed propagator (gate STEP-5B, hypothesis H-ADM)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; companion AddB note)
+% Version: v1.0 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: proof-sketch note, T3 (class-definition amendment proposal; closure consequence conditional on operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue. Derives the admissibility cutoff H-ADM
+%        from TECT microphysics: the dressed propagator at the anchor is
+%        strongly dressed (r_hat/(C q0^4) = 1.45, broad shell), with
+%        correlation length xi = 2 q0 sqrt(C/r_hat) ~ 2.4 and angular
+%        resolution theta_min = 1/(q0 xi) ~ 0.60 rad; the number of
+%        INDEPENDENT coherent readings is n_adm ~ 4 pi / theta_min^2 ~ 35
+%        (x4-conservative band: ~140). Modes packed tighter are
+%        unresolvable within a correlation volume and reclassify into the
+%        Gaussian sea (the operator's verdict-#9 observation, quantified).
+%        Consequence: K(4 n_adm) ~ 184 << K-budget at ALL anchor
+%        intensities (x32 / x5.1 / x1.2 at I = 4e-4 / 1e-3 / 2e-3); the
+%        I = 2e-3 corner is THIN under x4-conservative packing and its
+%        de-thinning is registered. STATUS: T3 PROOF SKETCH + proposed
+%        class-definition amendment; binding status requires operator
+%        sign-off. Script v1.11.0, 175/175.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The AddA chain reduced STEP-5B closure to the named hypotheses H-KBAL
+(lifted in principle, AddA v1.2) and H-ADM ($n \le n_{\rm adm}$ with the
+verified threshold $n_{\rm adm} \lesssim 1.59\times10^5$ at the anchor).
+This note derives a CANDIDATE value of $n_{\rm adm}$ from TECT
+microphysics --- the coherence resolution of the dressed propagator ---
+rather than postulating it. The result is registered at T3 (PROOF
+SKETCH): it is a physically derived class-definition amendment proposal,
+and its promotion to a binding admissibility definition requires operator
+sign-off. No tier action is claimed.
+
+\section*{2. Derivation}
+
+The dressed quadratic kernel at the production anchor is
+$D(k) = \hat r + C(k^2 - q_0^2)^2$ with $\hat r = r_R + 2\lambda' I$.
+At $I = 4\times10^{-4}$: $\hat r = 0.3110$ and
+\[
+\frac{\hat r}{C q_0^4} = 1.45 ,
+\]
+the STRONGLY DRESSED regime: the propagator is barely shell-peaked.
+Expanding about the shell, $D \approx \hat r + 4Cq_0^2 (k - q_0)^2$, the
+correlation length and the induced angular resolution are
+\[
+\xi \;=\; 2 q_0 \sqrt{C/\hat r} \;=\; 2.44 ,
+\qquad
+\theta_{\min} \;=\; \frac{1}{q_0 \xi} \;=\; \frac{\sqrt{\hat r}}{2 q_0^2 \sqrt C}
+\;=\; 0.603\ \text{rad} .
+\]
+Two shell modes separated by an angle $\theta < \theta_{\min}$ produce a
+beat wavevector $q_0\theta < 1/\xi$ whose phase cannot be resolved within
+one correlation volume: within the Gaussian--Hartree variational class
+they are not independent coherent READINGS but a single reading plus
+sea-type fluctuation, which the layer (hypothesis H-LAYER) already
+accounts for. Cap packing on the shell then caps the independent-reading
+count:
+\[
+n_{\rm adm} \;\simeq\; c_{\rm geo}\,\frac{4\pi}{\theta_{\min}^2}
+\;=\; c_{\rm geo}\,(q_0\xi)^2\,4\pi/(4\pi) \cdot \ldots
+\;\approx\; 35 \quad (c_{\rm geo} = 1);
+\qquad
+\le 140 \quad (\times4\ \text{conservative}).
+\]
+The cutoff is nearly intensity-independent ($35/34/32$ at
+$I = 4{\times}10^{-4}/10^{-3}/2{\times}10^{-3}$) because $\hat r$ varies
+mildly across the anchor band.
+
+\section*{3. Closure consequence}
+
+With the OFFICIAL theorem-grade energy bound (AddA,
+$K(n) \le 8 + 4\sqrt{14}\,\kappa^4\sqrt n$) evaluated at the
+conservative $4 n_{\rm adm}$:
+\[
+K(4 n_{\rm adm}) \approx 184 \;<\; K_{\rm budget}(I)
+= 5972 / 927 / 221
+\quad\text{at } I = 4{\times}10^{-4} / 10^{-3} / 2{\times}10^{-3},
+\]
+margin ratios $\times 32.4$ / $\times 5.1$ / $\times 1.2$. STEP-5B
+therefore CLOSES at all anchor intensities under H-ADM-COH, with the
+$I = 2\times10^{-3}$ corner THIN ($\times1.2$) under the
+$\times4$-conservative packing ($\times2.4$ at $c_{\rm geo} = 1$); the
+de-thinning (exact cap-packing constant; replacing the heuristic
+$\theta_{\min}$ by a linewidth-integral criterion) is registered as the
+follow-up refinement.
+
+\section*{4. Status and the amendment proposal}
+
+The argument above is a PROOF SKETCH (T3): the coherence-resolution
+criterion is physically standard (mode separation below the inverse
+correlation scale is sea-like), and it quantifies the operator's
+verdict-\#9 observation that arbitrarily dense shell peaks should
+reclassify into the Reading-H sea or a continuum angular distribution.
+What requires operator decision is the CLASS-DEFINITION AMENDMENT:
+\begin{itemize}
+\item \textbf{H-ADM-COH (proposed)}: an admissible competitor pattern is
+a finite set of shell readings with pairwise angular separation
+$\ge \theta_{\min}(\hat r)$; mass at finer angular scales belongs to the
+sea sector of the variational layer.
+\end{itemize}
+Under sign-off, STEP-5B closes (at the stated margins) for the entire
+amended class; without it, H-ADM remains a named hypothesis with the
+derived candidate value.
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.11.0;
+175/175 self-test asserts PASS; artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+$\hat r/(Cq_0^4)$ at anchor & $1.45$ & strongly dressed regime \\
+$\xi$, $q_0\xi$, $\theta_{\min}$ & $2.44$, $1.66$, $0.603$ rad & parabolic expansion of $D$ \\
+$n_{\rm adm}$ ($c_{\rm geo}{=}1$ / ${\times}4$) & $35$ / $140$ & nearly $I$-independent ($35/34/32$) \\
+$K(4n_{\rm adm})$ vs budget & $184$ vs $5972/927/221$ & ratios $\times32.4/\times5.1/\times1.2$ \\
+runtime discipline & suite $24.5$ s ($<45$ s cap) & hotspots vectorized (v1.11.0) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): $\theta_{\min} = \sqrt{\hat r}/
+(2q_0^2\sqrt C) = 0.5577/(2\cdot0.4626) = 0.603$ --- dimensionally an
+angle (length$^{-1}$/length$^{-1}$); $n_{\rm adm}\,\theta_{\min}^2 =
+4\pi$ recovers the sphere solid angle; the closure inequality fails if
+$n_{\rm adm}$ were $1.59\times10^5$-scale, confirming the cutoff (not
+the budget) is the binding element.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The criterion is heuristic: beats below $1/\xi$
+are suppressed, not forbidden.''} VALID-with-mitigation: this is why the
+note is T3 and an AMENDMENT PROPOSAL, not a theorem. The rigorous form
+(free-energy indistinguishability: sub-resolution mode splittings change
+the variational energy by less than the sea-sector accounting) is the
+registered follow-up; the $\times4$ packing band absorbs criterion
+ambiguity at the production anchor ($\times32$ margin).
+\item[($\beta$)] \emph{``$\xi$ uses the parabolic expansion, but the
+shell is broad ($\hat r \sim Cq_0^4$).''} VALID-with-mitigation: the
+broad shell weakens the parabolic approximation radially, but the
+angular-resolution argument uses only the transverse beat scale
+$1/\xi$, and a broader shell can only SHORTEN the true coherence range
+(more soft modes to dephase against), making the quoted $n_{\rm adm}$
+conservative in the relevant direction. An exact linewidth-integral
+criterion is registered as the refinement, and the $I$-insensitivity of
+the result ($35/34/32$) indicates robustness.
+\item[($\gamma$)] \emph{``Circular dependence: $\hat r$ contains
+$\lambda' I$, the quantity under study.''} DISMISSED: $\hat r$ is the
+DRESSED kernel fixed by the anchor calibration (Math434 chain); the
+cutoff is evaluated at each anchor intensity separately and varies by
+$< 10\%$ across the band.
+\item[($\delta$)] \emph{``The $I = 2\times10^{-3}$ margin ($\times1.2$)
+is too thin to quote closure.''} VALID-with-mitigation: quoted honestly
+as THIN; at $c_{\rm geo} = 1$ the ratio is $\times2.4$; the de-thinning
+refinement is registered, and the production anchor itself has
+$\times32$.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / AddB (serving STEP-5B)
+Precise statement:       H-ADM-COH derivation (PROOF SKETCH, T3):
+                         xi = 2 q0 sqrt(C/r_hat) = 2.44; theta_min =
+                         1/(q0 xi) = 0.603 rad; n_adm ~ 35 (x4: 140),
+                         nearly I-independent. Consequence: K(4 n_adm)
+                         = 184 < budget at ALL anchor intensities
+                         (x32.4 / x5.1 / x1.2) => STEP-5B closes under
+                         the proposed class amendment H-ADM-COH.
+Scope:                   Class-definition amendment PROPOSAL; binding
+                         status requires operator sign-off. Margins
+                         quoted with the x4-conservative packing band;
+                         I = 2e-3 corner THIN (x1.2).
+Dependencies:            AddA v1.2 (official sqrt-n route + H-KBAL
+                         lift); B5 main chain v2.0; anchor calibration
+                         (Math434 chain via archive).
+Evidence grade:          PROOF SKETCH (T3) + EXECUTED (all numbers
+                         machine-verified)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 175/175 PASS; result.json under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260605-gershgorin-reduction/
+Falsification gate:      An admissible (resolution-respecting) pattern
+                         with n > 4 n_adm at any anchor intensity; or a
+                         demonstration that sub-resolution splittings
+                         change the variational energy beyond the
+                         sea-sector accounting (would refute the
+                         criterion, not the theorems).
+Tier before / after:     T3 (this note) / B5 unchanged at T4+
+No-overclaim statement:  The cutoff derivation is a PROOF SKETCH and a
+                         PROPOSED amendment — NOT a binding closure.
+                         STEP-5B remains formally OPEN until operator
+                         sign-off on H-ADM-COH (or DR-2 closes the
+                         unconditional route). No tier action on B1/B2;
+                         Reading-H stays T5.
+Next required action:    Operator decision on H-ADM-COH; de-thinning of
+                         the I = 2e-3 corner; rigorous
+                         indistinguishability lemma; DR-2 remains the
+                         unconditional sharp route.
+\end{verbatim}

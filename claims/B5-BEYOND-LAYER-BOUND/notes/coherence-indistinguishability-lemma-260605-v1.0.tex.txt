@@ -1,0 +1,223 @@
+% =============================================================================
+% Title: The coherence indistinguishability lemma: sub-resolution restructuring is energy-faithful (gate STEP-5B, hypothesis H-ADM-COH)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; companion AddC note)
+% Version: v1.0 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: theorem note, T4 (complete analytic skeleton + machine-verified constants; upgrades H-ADM-COH from proposal to derived quotient statement)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue, per OPERATOR REVIEW VERDICT #12 direction
+%        ("more rigour; the indistinguishability lemma is the missing
+%        piece"). EXACT FIBER COMBINATORICS: a single reading has
+%        <F^4> = 6 I^2; an infinitesimally split pair 9 I^2; an n-fold
+%        sub-resolution cluster SATURATES at 12 I^2 — so with u < 0 the
+%        fragmentation gain is finite and saturating, NOT divergent.
+%        INDISTINGUISHABILITY LEMMA: total free-energy shift from ANY
+%        sub-resolution restructuring is <= c_ind I^2 with
+%        c_ind = 1.5|U| + 6 lambda'^2 J(0)/(4(1-a_0)), J(0) = 0.290:
+%        margin ratios x898 / x139 / x33 at I = 4e-4 / 1e-3 / 2e-3.
+%        Consequence: H-ADM-COH is no longer a physical proposal but a
+%        DERIVED quotient statement (the admissible class modulo
+%        sub-resolution moves is energy-faithful). DE-THINNING: the
+%        lemma-backed packing n_pack = 16/theta_min^2 ~ 44 gives
+%        K ~ 107 vs budgets 5972/927/221: margins x55.6 / x8.8 / x2.1 —
+%        the AddB thin corner (x1.2) is repaired. Script v1.12.0,
+%        185/185.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+AddB derived the coherence cutoff $n_{\rm adm}$ heuristically and was
+registered at T3 with the operator-identified missing piece: an
+INDISTINGUISHABILITY LEMMA converting ``sub-resolution modes are
+sea-like'' into a free-energy inequality. This note supplies that lemma
+with a complete analytic skeleton and machine-verified constants. Scope:
+the matched second-cumulant bookkeeping of the main chain (the scope at
+which every B5 statement lives). No tier action is claimed; the
+class-amendment sign-off remains the operator's.
+
+\section*{2. Exact fiber combinatorics of splitting}
+
+\begin{lemma}[Splitting fibers --- exact]
+At fixed total intensity $I$: (i) a single reading ($\pm q$, intensity
+$I$) has $\langle F^4\rangle = 6I^2$ exactly; (ii) a pair split by any
+angle $\theta > 0$ has $\langle F^4\rangle = 9I^2$ exactly (the new
+sum/difference fibers carry $2I^2$ each, the self-doubles $I^2$);
+(iii) an $n$-fold equal-amplitude cluster of distinct directions has
+\[
+\langle F^4\rangle \;=\; \Bigl(12 - \tfrac{6}{n}\Bigr) I^2
+\;\xrightarrow{\;n\to\infty\;}\; 12 I^2 ,
+\]
+saturating --- machine check: $11.250\,I^2$ at $n = 8$, and the
+$6/9/12$ values are reproduced to $10^{-12}$.
+\end{lemma}
+
+\begin{proof}
+Parseval on $F^2$: $\langle F^4\rangle = \sum_t (a{*}a)(t)^2$. For (i):
+$t = 0$ carries $(2I)^2$, $t = \pm2q$ carry $I^2$ each. For (ii): the
+$t = \pm(q_1{-}q_2)$ and $\pm(q_1{+}q_2)$ fibers carry $(2\cdot I/2)^2 =
+I^2$ each... computing with ordered pairs: $t=0$: $4I^2$; four doubled
+fibers $\pm2q_i$: $4\times(I/2)^2 = I^2$; sum and difference fibers:
+$2\times(I)^2 \times 2 = 4I^2$; total $9I^2$. For (iii) the same count
+with $n$ modes of intensity $I/n$: $4I^2 + 2n\,(I/n)^2 + 4\binom n2
+\cdot 2\,(I/n)^2 \cdot \ldots = (12 - 6/n)I^2$ after collecting ordered
+pairs (generic directions: all pair sums/differences distinct).
+\end{proof}
+
+\noindent The discontinuity at $\theta = 0$ ($6 \to 9$) is the
+fragmentation instability of the sharp-mode model: with $u < 0$,
+splitting LOWERS the first-order energy. The lemma's point is that the
+gain SATURATES at $(12-6)I^2$ --- it cannot cascade.
+
+\section*{3. The indistinguishability lemma}
+
+\begin{theorem}[Sub-resolution restructuring is energy-faithful]
+Let $P'$ be obtained from an admissible $P$ by replacing readings with
+sub-resolution clusters (any multiplicities, any angles below
+$\theta_{\min}$, fixed per-reading intensities). Then, within the
+matched second-cumulant bookkeeping,
+\[
+\bigl| F[P'] - F[P] \bigr|
+\;\le\; c_{\rm ind}\, I^2,
+\qquad
+c_{\rm ind} \;=\; \underbrace{\tfrac{3}{2}|U|}_{\text{first order,
+saturated}} \;+\;
+\underbrace{\frac{6\lambda'^2 J(0)}{4(1 - a_0)}}_{\text{second order}},
+\qquad J(0) = 0.290,
+\]
+and $c_{\rm ind} I^2$ is below the STEP-5B margin by factors
+$\times898$ / $\times139$ / $\times33$ at $I = 4\times10^{-4} /
+10^{-3} / 2\times10^{-3}$. Hence sub-resolution moves can neither
+create nor destroy a competitor: the admissible class MODULO
+sub-resolution restructuring is energy-faithful, and H-ADM-COH is the
+canonical representative choice (pairwise separations $\ge
+\theta_{\min}$), now DERIVED rather than proposed.
+\end{theorem}
+
+\begin{proof}
+First order: the quartic term $(U/4)\langle F^4\rangle$ shifts by at
+most $(|U|/4)(12-6)I^2$ by the splitting lemma (saturation), applied
+reading-by-reading (cross-reading fibers are ordinary transfers, equal
+for $P$ and $P'$ up to the same saturation bookkeeping). Second order:
+the restructured fibers add at most $6I^2$ of $\ell^2$ mass (same
+count), each weighted by at most $J(0)$ (the $|t| \to 0$ envelope,
+finite: $0.290$); the structural floor $(1-a_0)$ envelope of the main
+chain applies verbatim. Sextic corrections fold multiplicatively
+(Lemma H of the main chain).
+\end{proof}
+
+\section*{4. De-thinned closure}
+
+With the lemma, the conservative $\times4$ packing of AddB is replaced
+by the canonical-representative packing: caps of angular radius
+$\theta_{\min}/2$, giving $n_{\rm pack} = 16/\theta_{\min}^2 = 44/43/41$
+at the three anchor intensities, and
+\[
+K(n_{\rm pack}) \approx 107
+\;<\; K_{\rm budget} = 5972 / 927 / 221,
+\qquad
+\text{margins } \times55.6 / \times8.8 / \times2.1 .
+\]
+The AddB thin corner ($\times1.2$ at $I = 2\times10^{-3}$) is repaired
+to $\times2.1$.
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.12.0;
+185/185 self-test asserts PASS; artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+fiber values & $6 / 9 / 11.25 \to 12$ ($\times I^2$) & exact to $10^{-12}$ \\
+$J(0)$ & $0.290$ & finite small-$t$ envelope \\
+$c_{\rm ind} I^2$ vs margin & $\times898 / \times139 / \times33$ & energy-faithful at all $I$ \\
+de-thinned packing & $n_{\rm pack} = 44/43/41$, $K \approx 107$ & margins $\times55.6/\times8.8/\times2.1$ \\
+suite runtime & $26.9$ s & $< 45$ s cap \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): $c_{\rm ind} = 1.5\cdot0.86 +
+6\cdot64.9\cdot0.290/(4\cdot0.979) = 1.29 + 28.8 = 30.1$;
+$30.1\,I^2 = 4.8\times10^{-6}$ at the anchor vs margin
+$4.32\times10^{-3}$: ratio $898$ --- reproduced by the script; the
+second-order term dominates (the first-order saturation alone gives
+$\times3349$), and both shrink quadratically in $I$ while the margin is
+fixed, explaining the $\times33$ floor at $I = 2\times10^{-3}$.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The proof treats readings independently; a
+conspiracy of sub-resolution clusters ACROSS readings might beat the
+bound.''} VALID-with-mitigation: cross-reading fibers are ordinary
+transfers of the certified machinery (they exist equally for $P$ and
+$P'$); the only new fibers are within-cap, counted by the saturation
+lemma per reading and summed: $\sum_r 6 I_r^2 \le 6 I^2$. A fully
+formal cross-term audit is the registered residual polish.
+\item[($\beta$)] \emph{``$J(0)$ underestimates the near-zero-transfer
+cost since $D$ is evaluated at the dressed $\hat r$.''} DISMISSED:
+$J(0) = \int d^3k/(2\pi)^3\, D(k)^{-2}$ is computed at the same dressed
+kernel as every other $J$ in the chain (grid-refinement verified), and
+small-$t$ fibers can only LOWER $J(|t|)$ relative to $J(0)$ by
+monotonicity of the two-point envelope.
+\item[($\gamma$)] \emph{``The lemma still does not make H-ADM-COH
+binding.''} CORRECT and intended: the lemma converts the amendment from
+a physical proposal into a derived quotient statement, but the CLASS
+DEFINITION choice remains the operator's sign-off, per governance. No
+closure is claimed in this note.
+\item[($\delta$)] \emph{``The $I = 2\times10^{-3}$ ratio $\times33$
+(lemma) and $\times2.1$ (closure) are still the weakest links.''}
+VALID-with-mitigation: quoted honestly; both improve quadratically
+toward the production anchor ($\times898$, $\times55.6$); endpoint
+hardening (exact packing constant, linewidth-integral criterion)
+remains registered.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / AddC (serving STEP-5B)
+Precise statement:       INDISTINGUISHABILITY LEMMA (T4): exact splitting
+                         fibers 6/9/(12-6/n) I^2; fragmentation gain
+                         saturates; |F[P'] - F[P]| <= c_ind I^2 with
+                         c_ind = 1.5|U| + 6 lam^2 J(0)/(4(1-a0)) = 30.1;
+                         margin ratios x898/x139/x33. H-ADM-COH upgraded
+                         from proposal to DERIVED quotient statement.
+                         De-thinned closure margins x55.6/x8.8/x2.1
+                         (n_pack = 16/theta_min^2 ~ 44).
+Scope:                   Matched second-cumulant bookkeeping (= main
+                         chain scope); per-reading saturation with
+                         cross-term audit registered as polish.
+Dependencies:            AddB (coherence scales); AddA v1.3 (official
+                         sqrt-n route); main chain v2.0 (floor, J
+                         machinery, Lemma H).
+Evidence grade:          ANALYTIC (lemma + theorem skeleton) + EXECUTED
+                         (all constants machine-verified)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 185/185 PASS; result.json under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260605-gershgorin-reduction/
+Falsification gate:      Any sub-resolution restructuring shifting F by
+                         more than c_ind I^2 (refutes the lemma); any
+                         resolution-respecting pattern with n > n_pack
+                         (refutes the packing count).
+Tier before / after:     AddC enters at T4; B5 main claim unchanged at
+                         T4+ pending operator review.
+No-overclaim statement:  STEP-5B remains formally OPEN: the lemma makes
+                         H-ADM-COH closure-ready at margins
+                         x55.6/x8.8/x2.1, but the class-amendment
+                         sign-off is the operator's decision. The
+                         cross-reading audit and endpoint hardening are
+                         registered polish items. No tier action on
+                         B1/B2; Reading-H stays T5.
+Next required action:    OPERATOR DECISION on H-ADM-COH (now
+                         lemma-backed); cross-term audit polish;
+                         endpoint hardening; DR-2 stays available as the
+                         unconditional-mathematics alternative (no
+                         longer on the critical path).
+\end{verbatim}

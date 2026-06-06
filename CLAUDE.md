@@ -29,6 +29,15 @@ status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
   MIGRATION-LEDGER.md; same defect class as the legacy §11.5.2 truncation
   incidents). After writing, verify from the shell: file size + tail + linter
   (`python -c "import json,..."` for JSON).
+- **Subagent / autonomous-dispatch guard (binding from 2026-06-06)**: never
+  dispatch a subagent to mutate tracked files unless it has shell access for
+  atomic writes (`tempfile.mkstemp` + `os.replace`). A subagent without shell
+  falls back to tool-layer Write/Edit, which truncates — on 2026-06-06 an
+  autonomous dispatch truncated all three Sector-B `status.json` cards
+  mid-string. The linter is the backstop (it caught the corruption); the
+  parent session restores from `git show HEAD:...` + re-applies verified
+  field values. If a subagent lacks shell, it MUST return content for the
+  parent to write, not write tracked files itself.
 - Never create files at the repository root beyond the canonical set
   (README, GOVERNANCE, ROADMAP, REVIEWING, CLAIMS, CATALOG, CHANGELOG,
   CLAUDE.md, .gitignore).
@@ -58,8 +67,17 @@ git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit ...
 
 One logical change set per commit; the commit message references claim IDs.
 Git runs on the operator's Windows side only (the sandbox mount blocks the
-unlink operations git requires); the AI provides the exact PowerShell command
-block at session end.
+unlink operations git requires). DEFAULT (2026-06-05 operator directive,
+replacing the manual CLI handoff): the AI writes a commit-request JSON to
+`internal/commit-queue/` at the end of every turn that changes tracked
+files, and the operator-side daemon `verification/scripts/commit_watcher.ps1`
+(run once per session: `.\verification\scripts\commit_watcher.ps1`, or
+`-Once` to drain) performs the commit with the maintainer signature. The
+queue is inside `internal/` (P0 — never reaches history). FALLBACK: if the
+watcher is not running, the AI additionally prints the equivalent one-line
+CLI block. Push remains a manual operator action. This closes the
+skipped-commit gap (code version bumps were occasionally left unrecorded
+when manual paste was skipped).
 
 ## 5. Honesty contract
 

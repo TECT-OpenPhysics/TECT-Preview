@@ -1,0 +1,213 @@
+% =============================================================================
+% Title: B5 tier-assignment dossier: the consolidated case for full T5 within the pinned amended-class scope
+% Claim: B5-BEYOND-LAYER-BOUND (tier dossier for operator review; Reading-H T6 mainline, unit U5)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: dossier note (consolidation of certified material for the T5-CANDIDATE -> T5 decision; NO tier change performed; operator sign-off required)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U5: the
+%        verdict-#14 optional item "full T5 assignment for B5 at operator
+%        review"). One-page-equivalent dossier: pinned statement, complete
+%        hypothesis/scope fence, margin table (post-AddE floors), the full
+%        falsifier set, the reproduction contract, the verify-loop catch
+%        record (8 in-session catches), and the per-tier artefact
+%        checklist against the TSv2 T5 requirements. PDF build and linter
+%        execution PENDING OPERATOR-SIDE (sandbox shell unavailable to
+%        this agent session).
+% =============================================================================
+
+\section*{1. Purpose}
+
+Operator verdict \#14 set B5 = T5-CANDIDATE and listed the full T5
+assignment as an operator-review item. This dossier consolidates the
+decision inputs in one place. No tier change is performed here.
+
+\section*{2. Pinned statement (the T5 object)}
+
+\begin{quote}
+\textbf{Statement (pinned scope).} Within the matched second-cumulant
+B5 bookkeeping, for every pattern of the H-ADM-COH-amended admissible
+competitor class, at the anchor intensities $I \in \{4{\times}10^{-4},
+10^{-3}, 2{\times}10^{-3}\}$ and the production operating point
+($\mu^2 = 0.005$, A1-KERNEL-CONV convention), the beyond-layer
+off-diagonal correction obeys
+\[
+\bigl|\delta F_{\rm off}(\mathcal P)\bigr|
+\;\le\; \frac{K(n_{\rm pack})\,(\lambda' I)^2\,J_{\rm eff}}{4(1 - a_0)}
+\;<\; m_{\rm STEP\text{-}5B} = 0.00432 ,
+\]
+with hardened margin floors $\times59.4$ (anchor) and $\times2.6$
+(endpoint), band tops $\times290.9$ / $\times12.7$.
+\end{quote}
+
+\section*{3. Scope fence and hypothesis accounting}
+
+\begin{itemize}
+\item \textbf{Class}: H-ADM-COH-amended (operator-adopted, verdict
+\#14); canonical quotient by the AddC energy-faithfulness
+($c_{\rm ind} = 30.1$; ratios $\times898/\times139/\times33$) with the
+AddE depth-free pin ($c_{\rm total} \le 20$). Unrestricted class
+remains OPEN (DR-2, research-grade).
+\item \textbf{Order}: matched second cumulant; G2 bookkeeping closed at
+this level (Lemmas H/I/J; sextic fold $\varepsilon_4 \le 0.16$). The
+third-cumulant landscape is quantified in the U4 assessment
+(anchor-feasible, endpoint-critical) and is OUTSIDE this statement.
+\item \textbf{Hypothesis fields}: the claim card carries NO named
+hypotheses --- the conditionality lives in the CLASS DEFINITION
+(H-ADM-COH, adopted) and the ORDER fence (SC-SCOPE), both stated in the
+scope string, per the verdict-\#14 bookkeeping. The 20/9 incidence
+route remains PROVISIONAL and UNUSED; no unpinned constant is in the
+closure path.
+\item \textbf{Constant provenance}: official $\sqrt n$ route with the
+operator-derived theorem-grade $c_R = 4\sqrt{14}$ (verdict \#9/\#10);
+H-KBAL structurally lifted ($64\sqrt7\,\sqrt n\log^2$ unconditional-
+amplitude theorem); packing $n_{\rm pack} = 16/\theta_{\min}^2 =
+44/43/41$; $J_{\rm eff} = 0.256/0.226$ (AddE refinement);
+$a_0 = 2\lambda' I/\hat r$ ($P^2$ structural floor).
+\end{itemize}
+
+\section*{4. Margin table (post-AddE, certified)}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y @{}}
+\toprule
+& $I = 4{\times}10^{-4}$ & $I = 10^{-3}$ & $I = 2{\times}10^{-3}$ \\
+\midrule
+closure margin (floor) & $\times59.4$ & $\times8.8$ (AddD) & $\times2.6$ \\
+criterion-band top & $\times290.9$ & --- & $\times12.7$ \\
+energy-faithfulness ratio & $\times898$ & $\times139$ & $\times33$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{5. Falsifier set (pre-registered, cumulative)}
+
+(i) An amended-class pattern inside a certified box whose exact
+off-diagonal Bloch correction exceeds the Lemma-B envelope; (ii) any
+pattern undercutting the $+0.00432$ band margin at the anchor; (iii) a
+sub-resolution restructuring shifting $F$ by more than $c_{\rm ind}I^2$
+(refutes AddC); (iv) a resolution-respecting pattern with $n >
+n_{\rm pack}$ (refutes the packing count); (v) a non-co-circular
+cluster pair with exact fiber multiplicity $> 4$ (refutes the AddE
+curvature pin); (vi) an amended-class transfer with $J(|t|) >
+J_{\rm eff}$ (refutes the refinement); (vii) violation of the
+$\ell^1$ identity $\lambda'(4S^2 - 2I)$ under splitting (Lemma C$'$).
+
+\section*{6. Reproduction contract}
+
+\texttt{python codes/vacuum/beyond\_layer\_gershgorin\_bound.py}
+(v1.14.0): expected \texttt{claims 192/192 PASS}, exit 0, $\sim$27 s;
+artefact \url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}
+with the key fields: adversarial exact multiplicity 2; co-circular
+$K = 12.20 < 14$ (zero-slack absorption); $J_{\rm eff}$ 0.256/0.226;
+hardened margins $\times59.4/\times2.6$.
+
+\section*{7. Process record (verify-loop catches and audits)}
+
+Eight in-session verify-loop catches are documented across the chain
+(\#1 $\ell^1$ constant; \#2 $c{=}0$ diagonal contamination; \#3
+banner-loss; \#4 $c{=}0$ centre; \#5 unproven $\sqrt\nu$ constant; \#6
+degenerate mirror config; \#7 operator-caught $28/13 \to 20/9$
+exponent; \#8 draft assert contradicting Lemma C$'$) plus 14 operator
+review verdicts --- the audit density supporting reproducibility-grade
+confidence. The registered negative result (row/collar-ladder route
+fails $a < 1$ at production $I$) is on record in the chain.
+
+\section*{8. TSv2 T5 artefact checklist}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y @{}}
+\toprule
+T5 requirement & Status \\
+\midrule
+Pinned scope string on the card & PRESENT (section 3 fence = the card
+scope) \\
+Closed within the pinned scope & YES per verdict \#14 (gate row
+CLOSED-CONDITIONAL) + AddE polish (no unpinned constant) \\
+Reproduction command + expected output & AVAILABLE (section 6;
+192/192) \\
+Falsifiers pre-registered & SEVEN (section 5) \\
+Devil's-advocate records & in every chain note (main v1.x--v2.0,
+AddA--AddE) \\
+Negative results registered & row-route refutation; H-GEN(2)
+falsification --- both honest, on record \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section*{9. Numerical verification}
+
+No new numbers: every figure is quoted from the existing certified
+artefact (192/192) and the AddC/AddD/AddE notes. Quantitative sanity
+check (mandatory): cross-table consistency --- the dossier margin table
+reproduces AddE's hardened floors and AddD's middle figure exactly; the
+falsifier set is the union of the falsification gates of the chain
+notes with no member dropped (checked one-to-one against the AddC,
+AddD, AddE footers and the card falsifier string); the checklist
+contains no item marked PRESENT without a disk pointer.
+
+\section*{10. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A dossier that consolidates only the
+favorable material is advocacy, not review input.''} DISMISSED by
+contents: the dossier includes the registered negative results (row
+route, H-GEN(2)), the thin endpoint ($\times2.6$ floor flagged), the
+PROVISIONAL-and-unused status of the incidence route, the U4
+endpoint-critical finding (which bounds what the T5 scope must NOT be
+read to imply), and the open unrestricted class.
+\item[($\beta$)] \emph{``The middle-intensity margin ($\times8.8$) was
+not re-derived after AddE's $J_{\rm eff}$ refinement --- the table
+mixes AddD and AddE vintages.''} VALID-with-mitigation: correct and
+labelled in the table (`(AddD)'); the AddE refinement only INCREASES
+the middle margin (smaller $J_{\rm eff}$ at larger minimum transfer),
+so quoting the AddD figure is the floor direction; the refreshed middle
+number is a one-line addition to the registered follow-up script.
+\item[($\gamma$)] \emph{``T5 assignment while the reproduction script
+was not re-run THIS session is premature.''} VALID-with-mitigation:
+the artefact cited is the canonical v1.14.0 result.json produced and
+operator-reviewed on 2026-06-05; nothing in the chain changed since;
+the dossier introduces no new numbers. The operator may of course
+condition the assignment on a fresh re-run (the contract in section 6
+makes that a single command).
+\end{itemize}
+
+\section*{11. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / t5-assignment-dossier
+                         (unit U5)
+Precise statement:       DOSSIER (no new mathematics): consolidated
+                         decision inputs for the T5-CANDIDATE -> T5
+                         assignment -- pinned statement, scope fence,
+                         post-AddE margin table, seven pre-registered
+                         falsifiers, reproduction contract (192/192),
+                         process record (8 catches, 14 verdicts), TSv2
+                         T5 artefact checklist (all PRESENT).
+Scope:                   Amended class; matched second cumulant; three
+                         anchor intensities; production operating
+                         point. Exactly the card scope string.
+Dependencies:            The full B5 chain (main v1.0-v2.0 +
+                         AddA v1.0-1.3 + AddB-AddE) and verdicts
+                         #1-#14.
+Evidence grade:          CONSOLIDATION of ANALYTIC + EXECUTED material.
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 192/192 PASS (~27 s); key fields per
+                         section 6.
+Falsification gate:      The seven-item set of section 5 (cumulative
+                         union of the chain gates).
+Tier before / after:     B5 = T5-CANDIDATE before and after this note.
+                         PROPOSED: full T5 assignment -- OPERATOR
+                         SIGN-OFF REQUIRED.
+No-overclaim statement:  The dossier performs NO tier action and adds
+                         NO new result. T5 is scoped exactly to the
+                         pinned statement; it does NOT imply anything
+                         at third cumulant (U4), on the unrestricted
+                         class (DR-2), or off the anchor intensities.
+                         PDF build + linter PENDING operator-side.
+Next required action:    OPERATOR DECISION on the T5 assignment
+                         (optionally conditioned on a fresh 192/192
+                         re-run). Mainline continues (U6+).
+\end{verbatim}

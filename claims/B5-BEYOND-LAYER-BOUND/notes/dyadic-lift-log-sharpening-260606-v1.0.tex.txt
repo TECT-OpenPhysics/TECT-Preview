@@ -1,0 +1,214 @@
+% =============================================================================
+% Title: Sharpening the amplitude-dyadic lift: the discarded count constraint removes half a logarithm
+% Claim: B5-BEYOND-LAYER-BOUND (H-KBAL lift constant sharpening; Reading-H T6 mainline, unit U12)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: sharpening note, T3 (two-line Hoelder/Jensen argument, fully written; one CANDIDATE additional saving flagged conditional on a definition check; machine spot-check registered; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U12: the
+%        registered "sharp-constant unconditional optimization" follow-up
+%        of the AddA v1.2 H-KBAL lift). MAIN RESULT: the lift's proof
+%        discards the total-count constraint sum_j N_j = 2n (it bounds
+%        each class by N); restoring it via Cauchy-Schwarz + the
+%        power-mean (Jensen) inequality replaces log^2(2n) by
+%        log^{3/2}(2n) in the unconditional-amplitude theorem:
+%        sum w_t^2 <= 64 sqrt7 lam'^2 I^2 sqrt(2n) log^{3/2}(2n) +
+%        O(lam'^2 I^2). At the amended-class scale (n ~ 44) this is a
+%        x2.5 numerical improvement of the unconditional constant (and
+%        a x6.5 extension of the route's n-reach, since K ~ c sqrt n).
+%        SECOND (CANDIDATE) saving flagged: the per-class amplitude cap
+%        alpha_j^2 <= 8 I_j / N_j may admit 4 in place of 8 under the
+%        dyadic-class definition A in (a/2, a] (lower-end mass bound
+%        gives a^2 <= 4 (sum_class A^2)/N_j) -- a further x4 on the
+%        constant IF the class-intensity convention permits; flagged
+%        CONDITIONAL on the script's definition (verification
+%        registered, not asserted). Ledger and critical path UNCHANGED
+%        (the official threshold remains the balanced route; the
+%        amended class needs only n_pack ~ 44). PDF build and linter
+%        execution PENDING OPERATOR-SIDE (sandbox shell unavailable to
+%        this agent session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+AddA v1.2's amplitude-dyadic lift made H-KBAL structurally
+non-load-bearing at the honest cost $64\sqrt7\,\sqrt n\,\log^2(2n)$,
+with the sharp-constant optimization registered as follow-up. This
+note delivers the first sharpening: half a logarithm, by a two-line
+restoration of a constraint the original proof discarded. Scope: the
+unconditional-amplitude theorem only; the official ledger (balanced
+route) and the amended-class closure are untouched.
+
+\section*{2. The sharpened theorem}
+
+\begin{theorem}[Amplitude-dyadic lift, log-sharpened]
+For arbitrary positive amplitudes (no balance hypothesis),
+\[
+\sum_{t \ne 0} w_t^2
+\;\le\;
+64\sqrt7\;\lambda'^2 I^2\, \sqrt{2n}\, \log^{3/2}(2n)
+\;+\; O(\lambda'^2 I^2).
+\]
+\end{theorem}
+
+\begin{proof}
+Identical to AddA v1.2 up to the class assembly: with $x_j :=
+\sqrt{I_j\,N_j^{1/4}}$ the per-class-pair bound factorizes,
+$\|w^{jk}\|_{\ell^2_t} \le \lambda'\,8\,7^{1/4}\,x_j x_k$, so by
+Minkowski
+\[
+\|w\|_{\ell^2_t} \;\le\; \lambda'\,8\,7^{1/4}\Bigl(\sum_{j \le J} x_j
+\Bigr)^{\!2},
+\qquad
+\|w\|_{\ell^2_t}^2 \;\le\; 64\sqrt7\,\lambda'^2 \Bigl(\sum_{j\le J}
+x_j\Bigr)^{\!4} .
+\]
+The original proof bounded $\sum x_j$ by Cauchy--Schwarz against the
+trivial $N_j \le N$, paying $J^2$ inside the fourth power. Instead,
+keep BOTH constraints $\sum_j I_j = I$ and $\sum_j N_j = 2n$:
+\[
+\sum_{j \le J} x_j
+\;=\; \sum_{j\le J} I_j^{1/2} N_j^{1/8}
+\;\overset{\rm CS}{\le}\;
+\Bigl(\sum_j I_j\Bigr)^{\!1/2}\Bigl(\sum_j N_j^{1/4}\Bigr)^{\!1/2}
+\;\overset{\rm Jensen}{\le}\;
+I^{1/2}\,\bigl[J^{3/4}(2n)^{1/4}\bigr]^{1/2}
+\;=\; I^{1/2} J^{3/8} (2n)^{1/8} ,
+\]
+using the concavity of $x \mapsto x^{1/4}$ (power mean:
+$\sum_{j=1}^J N_j^{1/4} \le J\,(\sum N_j / J)^{1/4} =
+J^{3/4}(2n)^{1/4}$). Raising to the fourth power gives
+$(\sum x_j)^4 \le I^2\,J^{3/2}\sqrt{2n}$ with $J = \log_2(2n) + O(1)$;
+the tail classes are absorbed exactly as before. $\square$
+\end{proof}
+
+\noindent At the amended-class scale $n = 44$: $\log_2(88) = 6.46$,
+$\log^2 = 41.7$ vs $\log^{3/2} = 16.4$ --- a $\times2.54$ improvement
+of the unconditional constant; since the route's reach scales as the
+inverse SQUARE of the prefactor in $K(n) \le 8 + c\sqrt n$, the
+$n$-reach of the unconditional route extends by $\times6.5$.
+
+\section*{3. The candidate second saving (flagged, not asserted)}
+
+The per-class amplitude cap enters squared twice. With the dyadic
+class $A \in (2^{-j-1}a_0,\, 2^{-j}a_0]$ and class point count $N_j$:
+the LOWER end gives $\sum_{\rm class} A^2 \ge N_j\,(2^{-j-1}a_0)^2$,
+i.e.\ $(2^{-j}a_0)^2 \le 4\,(\sum_{\rm class}A^2)/N_j$, so the cap
+reads $\alpha_j^2 \le 4\,I_j^{\rm class}/N_j$ where $I_j^{\rm class} =
+\sum_{\rm class}A^2$. The AddA proof uses $\alpha_j^2 \le 8I_j/N_j$;
+whether the extra factor $2$ is a convention difference (class
+intensity $2I_j$ vs $I_j$; signed-mode vs reading counting) or slack
+is decidable only against the script's definitions. IF the $4$ is
+available in the proof's convention, the prefactor improves
+$64\sqrt7 \to 16\sqrt7$ (a further $\times4$). FLAGGED as a
+definition-check item for the registered machine spot-check; NOT
+asserted here.
+
+\section*{4. Ledger and scope impact}
+
+None on the critical path: the OFFICIAL ledger threshold remains the
+balanced sharp-constant route ($1.59\times10^5$); the amended-class
+closure needs only $n_{\rm pack} \approx 44$, where every route has
+orders of slack. The sharpening's value is (i) robustness of the
+unconditional-amplitude statement (its reach was the binding figure if
+the amendment were ever revisited), (ii) record hygiene (the honest
+constant should be the best simply-provable one).
+
+\section*{5. Numerical verification}
+
+NO machine execution this session (sandbox shell unavailable). The
+proof's two new steps are textbook inequalities (Cauchy--Schwarz;
+Jensen for $x^{1/4}$); the numerical comparisons ($41.7$ vs $16.4$ at
+$n = 44$; $\times2.54$; reach $\times6.5$) are closed-form arithmetic.
+The registered machine spot-check: re-run the AddA v1.2 unbalanced-
+profile measurements against the sharpened bound (the measured worst
+ratio $0.03$ was against the $\log^2$ ceiling $2929$; the sharpened
+ceiling at the same configuration is $\sim1153$, ratio $\sim0.08$ ---
+still two orders of slack) and execute the section-3 definition check.
+
+Quantitative sanity check (mandatory): limit case --- for a single
+occupied class ($J_{\rm occ} = 1$, the balanced case) the sharpened
+assembly degenerates to $\sum x_j = x_1 = \sqrt{I (2n)^{1/4}}$ and the
+bound reproduces the balanced $\sqrt n$ scaling with NO log at all,
+consistent with the balanced route (the logs price only genuine
+multi-scale amplitude spread); monotonicity --- $\log^{3/2} <
+\log^2$ for all $n \ge 1$ ($\log_2(2n) \ge 1$), so the sharpening is
+an improvement everywhere, never a trade; dimension --- the bound
+remains $\lambda'^2 I^2 \times$ dimensionless count factors, as it
+must.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The Jensen step needs $J$ = the number of
+OCCUPIED classes; the proof's $J = \log_2(2n) + O(1)$ counts
+admissible indices. If occupied classes were fewer the original CS was
+already tight there.''} DISMISSED in the favorable direction: Jensen
+with the occupied count $J_{\rm occ} \le J$ only IMPROVES the bound
+($J_{\rm occ}^{3/4} \le J^{3/4}$); quoting $J$ is the worst case. The
+sharpening is uniform.
+\item[($\beta$)] \emph{``Minkowski-then-fourth-power may itself be the
+lossy step; perhaps a direct $\ell^2$ assembly beats both versions and
+the half-log fight is moot.''} VALID-with-mitigation: plausible --- a
+direct assembly (orthogonality of transfer supports across well-
+separated class pairs, or a $TT^*$ argument) is the natural next
+optimization and is registered; it would supersede, not contradict,
+this note. The half-log is what is PROVABLE today in two lines on the
+existing architecture.
+\item[($\gamma$)] \emph{``The section-3 candidate ($8 \to 4$) is the
+kind of constant-fiddling that caused catch \#7 (the 28/13 slip);
+flagging it at all risks premature use.''} DISMISSED by the handling:
+the candidate is explicitly NOT asserted, carries its decision
+criterion (the script's class-intensity convention), and is routed
+through the registered machine check before any use --- exactly the
+post-catch-\#7 discipline. The theorem of section 2 does not depend
+on it.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / dyadic-lift-log-
+                         sharpening (unit U12)
+Precise statement:       THEOREM (T3, proof fully written): the
+                         unconditional-amplitude lift improves to
+                         sum w_t^2 <= 64 sqrt7 lam'^2 I^2 sqrt(2n)
+                         log^{3/2}(2n) + O(lam'^2 I^2) -- half a log
+                         removed by restoring sum_j N_j = 2n via
+                         CS + Jensen (x2.54 at n = 44; route n-reach
+                         x6.5). CANDIDATE further x4 (8 -> 4 in the
+                         class cap) flagged conditional on a
+                         definition check; NOT asserted.
+Scope:                   Unconditional-amplitude route only; official
+                         ledger (balanced route) and amended-class
+                         closure unchanged.
+Dependencies:            AddA v1.2 lift architecture (classes,
+                         per-class interpolation, bilinear CS, tail
+                         absorption -- all reused verbatim).
+Evidence grade:          ANALYTIC (two textbook steps) at T3 pending
+                         the registered machine spot-check.
+Reproduction command:    (registered) extend the AddA unbalanced-
+                         profile measurements to the sharpened
+                         ceiling + the section-3 definition check.
+Expected output:         measured/ceiling ratio ~0.08 (two orders of
+                         slack preserved); definition-check verdict
+                         on the 8-vs-4; JSON under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/.
+Falsification gate:      A configuration violating the log^{3/2}
+                         ceiling (would refute the two-line argument
+                         -- not expected: both steps are inequalities
+                         with stated convexity directions); the
+                         definition check resolving 8-vs-4 either way
+                         is NOT a falsification (the candidate is
+                         conditional by construction).
+Tier before / after:     No tier action; B5 stays T5-CANDIDATE.
+No-overclaim statement:  The section-3 x4 is a flagged candidate, not
+                         a result. The sharpening does not change any
+                         closure margin (the amended class operates at
+                         n ~ 44 with orders of slack on every route).
+                         PDF build + linter PENDING operator-side.
+Next required action:    Machine spot-check + definition check
+                         (registered); optional direct-l2-assembly
+                         optimization (registered). Mainline continues
+                         (U13).
+\end{verbatim}

@@ -3,7 +3,7 @@
   "date": "2026-06-05",
   "script": {
     "name": "beyond_layer_gershgorin_bound.py",
-    "version": "1.10.0"
+    "version": "1.14.0"
   },
   "anchor": {
     "mu2": 0.005,
@@ -1303,8 +1303,162 @@
       "actual": true,
       "passed": true,
       "detail": "(E(A,B) = 480 <= sqrt(E(A)E(B)) = 1154: the lift's bilinear step verified)"
+    },
+    {
+      "name": "hadm_coh_closes [I=4e-04]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(n_adm ~ 35 (x4 conservative: 138); K(4 n_adm) = 184 < budget 5972: margin ratio x32.4)"
+    },
+    {
+      "name": "hadm_coh_closes [I=1e-03]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(n_adm ~ 34 (x4 conservative: 134); K(4 n_adm) = 181 < budget 927: margin ratio x5.1)"
+    },
+    {
+      "name": "hadm_coh_closes [I=2e-03]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(n_adm ~ 32 (x4 conservative: 128); K(4 n_adm) = 177 < budget 221: margin ratio x1.2)"
+    },
+    {
+      "name": "hadm_shell_softness",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(r_hat/(C q0^4) = 1.45: strongly dressed regime \u2014 the propagator is barely shell-peaked; coherent angular resolution is COARSE (theta_min ~ 0.6 rad), so the admissible independent-reading count is O(30), not O(1e5))"
+    },
+    {
+      "name": "hadm_worst_intensity_margin",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(worst margin ratio over I = 4e-4/1e-3/2e-3 is x1.2: closure holds at ALL anchor intensities under H-ADM-COH, but the I=2e-3 corner is THIN (x1.2) under the x4-conservative packing \u2014 n_adm refinement (exact cap-packing constant + linewidth criterion) is registered as the de-thinning follow-up; at c_geo=1 the ratio is x2.4)"
+    },
+    {
+      "name": "F4_merged_6I2",
+      "expected": 9.600000000000001e-07,
+      "actual": 9.6e-07,
+      "tol": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "F4_split_pair_9I2",
+      "expected": 1.44e-06,
+      "actual": 1.44e-06,
+      "tol": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "F4_cluster_saturates_12I2",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(<F^4> cluster(n=8) = 11.250 I^2 -> 12 I^2 saturation)"
+    },
+    {
+      "name": "J0_finite",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(J(0) = 0.290: small-t fibers cost finite envelope weight)"
+    },
+    {
+      "name": "indistinguishability_margin [I=4e-04]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(sub-resolution restructuring shifts F by <= 4.81e-06 = margin/x898: energy-faithful \u2014 cannot create a new competitor class)"
+    },
+    {
+      "name": "indistinguishability_margin [I=1e-03]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(sub-resolution restructuring shifts F by <= 3.10e-05 = margin/x139: energy-faithful \u2014 cannot create a new competitor class)"
+    },
+    {
+      "name": "indistinguishability_margin [I=2e-03]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(sub-resolution restructuring shifts F by <= 1.30e-04 = margin/x33: energy-faithful \u2014 cannot create a new competitor class)"
+    },
+    {
+      "name": "dethinned_closure [I=4e-04]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(n_pack = 44; K = 107 vs budget 5972: margin x55.6 \u2014 the thin x1.2 corner of AddB is de-thinned by the lemma-backed packing)"
+    },
+    {
+      "name": "dethinned_closure [I=1e-03]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(n_pack = 43; K = 106 vs budget 927: margin x8.8 \u2014 the thin x1.2 corner of AddB is de-thinned by the lemma-backed packing)"
+    },
+    {
+      "name": "dethinned_closure [I=2e-03]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(n_pack = 41; K = 103 vs budget 221: margin x2.1 \u2014 the thin x1.2 corner of AddB is de-thinned by the lemma-backed packing)"
+    },
+    {
+      "name": "cross_audit_split_all [rand6]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(splitting ALL 6 readings 3-fold: Delta E = +0.667 I^2 <= 7 I^2 \u2014 within the saturation budget 6 I^2 + cross slack; cross-recombination does not amplify)"
+    },
+    {
+      "name": "cross_audit_split_all [rand10]",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(splitting ALL 10 readings 3-fold: Delta E = +0.400 I^2 <= 7 I^2 \u2014 within the saturation budget 6 I^2 + cross slack; cross-recombination does not amplify)"
+    },
+    {
+      "name": "l1_identity_under_splitting [base6]",
+      "expected": 0.0088,
+      "actual": 0.008799999999999995,
+      "tol": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "l1_identity_under_splitting [split18]",
+      "expected": 0.027999999999999994,
+      "actual": 0.027999999999999862,
+      "tol": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ccross_curvature_splits_alignment",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(adversarial aligned-AP caps: max EXACT fiber multiplicity = 2 <= 4 (the trivial ordering/sign degeneracies): curvature splits cross alignment \u2014 NO recombination pumping; c_cross-excess = 0 for non-co-circular clusters)"
+    },
+    {
+      "name": "ccross_cocircular_absorbed_by_14",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(co-circular: exact multiplicity 6 > 4 EXISTS, but energy K = 12.20 < 14: the universal single-circle theorem absorbs exactly the configurations where recombination is possible \u2014 c_total <= 6 (within-cap) + 14 (co-circular) = 20, depth-free)"
+    },
+    {
+      "name": "endpoint_hardened_floor",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(endpoint I=2e-3, conservative criterion + J-refinement: margin x2.6 (was x2.1 with J_max); pi-phase end of the band: x12.7 \u2014 the conservative end is the FLOOR, criterion ambiguity only thickens it)"
     }
   ],
-  "passed": 170,
-  "total": 170
+  "passed": 192,
+  "total": 192
 }

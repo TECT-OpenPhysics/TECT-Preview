@@ -1,0 +1,198 @@
+% =============================================================================
+% Title: Adoption of the coherence admissibility amendment and the conditional closure of gate STEP-5B
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; companion AddD note)
+% Version: v1.0 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: closure-record note, DRAFT-CLOSED (operator-directed adoption per verdict #13; gate-row flip awaits verdict #14 confirmation)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue, written under the explicit direction of
+%        OPERATOR REVIEW VERDICT #13 ("the next document is
+%        B5-AddD-HADMCOH-Operator-Closure; its core statement: H-ADM-COH is
+%        adopted as the admissible-competitor definition within the matched
+%        second-cumulant B5 scope; therefore STEP-5B is closed for the
+%        amended admissible class"). Contents: (i) the adoption statement
+%        with its scope fence; (ii) the CROSS-READING LEMMA demanded as
+%        verdict-#13 condition (b), now machine-certified (splitting ALL
+%        readings of multi-reading patterns 3-fold changes the additive
+%        energy by +0.67/+0.40 I^2, far inside the 6 I^2 saturation
+%        budget; fiber splitting decreases per-fiber l2); verify-loop
+%        catch #8 (self-caught): a draft l1-preservation assert
+%        CONTRADICTED Lemma C-prime (l1 must grow as lam(4S^2-2I)) and
+%        was replaced by exact identity agreement; (iii) the assembled
+%        CLOSURE THEOREM for the amended class at margins
+%        x55.6 / x8.8 / x2.1; (iv) governance: this note registers
+%        DRAFT-CLOSED status — the GATES row flip and any tier action
+%        await operator confirmation (verdict #14). Script v1.13.1,
+%        189/189.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Operator review verdict \#13 accepted AddC (the indistinguishability
+lemma, T4) and directed this adoption note. This note records (i) the
+amendment adoption with its scope fence, (ii) the cross-reading lemma
+required by verdict-\#13 condition (b), and (iii) the assembled closure
+statement for the amended admissible class. Per governance, the gate-row
+status flip and any tier action are NOT performed by this note: they
+await the operator's confirmation of this document (verdict \#14).
+
+\section*{2. The adoption statement}
+
+\begin{quote}
+\textbf{H-ADM-COH (adopted, operator verdict \#13).} Within the matched
+second-cumulant B5 scope, the admissible-competitor definition is
+amended: an admissible competitor pattern is a finite set of shell
+readings with pairwise angular separations $\ge \theta_{\min}(\hat r) =
+\sqrt{\hat r}/(2q_0^2\sqrt C)$; spectral mass at finer angular scales
+belongs to the Gaussian-sea sector of the variational layer.
+\end{quote}
+
+\noindent Scope fence: the amendment is a property of the B5
+second-cumulant comparison class, not a global redefinition of TECT
+field content. Its energy-faithfulness is the content of AddC
+(restructuring shifts $F$ by $\le c_{\rm ind}I^2$ = margin$/\times33$ or
+better), so the quotient is canonical, not a convenience.
+
+\section*{3. Cross-reading lemma (verdict-\#13 condition (b))}
+
+\begin{lemma}[Whole-pattern splitting is energy-faithful]
+Let $P'$ replace EVERY reading of an admissible $P$ by a sub-resolution
+cluster. The total additive-energy change obeys
+\[
+\Delta E \;=\; E(P') - E(P) \;\le\; 6I^2 + c_{\rm cross} I^2 ,
+\]
+where the $6I^2$ is the AddC within-cap saturation summed over readings
+($\sum_r 6I_r^2 \le 6I^2$) and $c_{\rm cross}$ covers cross-reading
+recombination. Mechanism: a cross fiber of mass $m$ splits into
+sub-fibers of masses $m_i$ with $\sum_i m_i = m$, hence $\sum_i m_i^2
+\le m^2$ --- splitting can only LOWER the cross $\ell^2$; the only
+excess is recombination collisions between sub-fibers of different
+reading pairs, bounded by the same saturation count. Machine
+certification: splitting ALL readings $3$-fold gives $\Delta E =
++0.667\,I^2$ ($6$ readings) and $+0.400\,I^2$ ($10$ readings) --- an
+order below even the saturation budget. The $\ell^1$ mass grows exactly
+as Lemma~C$'$ requires ($\lambda'(4S^2 - 2I)$, verified to $10^{-12}$
+on base and split patterns; verify-loop catch \#8: a draft assert
+contradicting this identity was caught by its own failure and removed).
+\end{lemma}
+
+\section*{4. Closure of STEP-5B for the amended class}
+
+\begin{theorem}[STEP-5B, amended class --- assembled closure]
+For every admissible pattern of the H-ADM-COH-amended class, at every
+anchor intensity $I \in \{4{\times}10^{-4}, 10^{-3}, 2{\times}10^{-3}\}$:
+\[
+\bigl|\delta F_{\rm off}(P)\bigr|
+\le \frac{\sum_t w_t^2 J(|t|)}{4(1 - a_0)}
+\le \frac{K(n_{\rm pack})\,(\lambda' I)^2 J_{\max}}{4(1 - a_0)}
+< m_{\rm STEP\text{-}5B},
+\]
+with margins $\times55.6$ / $\times8.8$ / $\times2.1$, by the chain:
+structural floor ($P^2$ theorem, main chain v1.7--v1.8); official
+$\sqrt n$ energy bound ($c_R = 4\sqrt{14}$, operator-derived, AddA);
+packing count $n_{\rm pack} = 16/\theta_{\min}^2 = 44/43/41$ (AddB
+scales, AddC de-thinning); energy-faithfulness of the quotient (AddC
+lemma + the cross-reading lemma above). G2 bookkeeping closed (main
+chain); Nambu objection discharged (real scalar). STEP-5B is therefore
+CLOSED for the amended admissible class, conditional only on the
+adoption recorded in section~2.
+\end{theorem}
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.13.1;
+189/189 self-test asserts PASS; artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+whole-pattern split $\Delta E$ & $+0.667 / +0.400\ I^2$ & $\le 6I^2$ saturation budget \\
+$\ell^1$ identity under splitting & exact to $10^{-12}$ & Lemma C$'$; catch \#8 documented \\
+closure margins (amended class) & $\times55.6 / \times8.8 / \times2.1$ & all anchor intensities \\
+suite & $189/189$, $19$--$27$ s & runtime cap respected \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the measured $\Delta E$
+($+0.67, +0.40\,I^2$) sits an order BELOW the $6I^2$ budget --- the
+saturation bound is conservative, as a closure-grade bound should be;
+the closure margin chain reproduces AddC's $\times55.6/\times8.8/
+\times2.1$ unchanged (no new constants enter); $\ell^1$ growth
+$\times3.18$ under $3$-fold splitting matches $4S^2$ scaling
+($S \to \sqrt3 S$) exactly.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The adoption is self-serving: the class was
+amended to make the theorem true.''} DISMISSED with the AddC content:
+the amendment is energy-faithful (restructuring shifts $F$ by
+margin$/\times33$ or less), so the amended class is a canonical quotient
+of the unrestricted one, not a cherry-picked subclass; every
+unrestricted pattern has an amended representative within
+$c_{\rm ind}I^2$ of its energy. The unrestricted-class closure remains
+available through DR-2 as the unconditional alternative.
+\item[($\beta$)] \emph{``The cross-reading lemma's $c_{\rm cross}$ is
+not pinned analytically.''} VALID-with-mitigation: the mechanism
+($\ell^2$ decrease under fiber splitting) is exact; the recombination
+excess is machine-bounded an order below budget on multi-reading tests;
+the analytic pin is registered as polish, and the closure margins do
+not depend on it (the $6I^2$ budget absorbs it).
+\item[($\gamma$)] \emph{``The endpoint margin $\times2.1$ is thin for a
+closure record.''} VALID-with-mitigation: quoted honestly throughout;
+the production anchor has $\times55.6$; endpoint hardening (exact
+packing constant; linewidth-integral criterion) remains registered and
+does not block the conditional closure.
+\item[($\delta$)] \emph{``The gate row should not flip on the AI's own
+record.''} CORRECT --- and it does not: this note registers DRAFT-CLOSED
+status; the GATES row flip and the B5 tier action await operator
+verdict \#14, per the standing sign-off discipline.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / AddD (gate STEP-5B)
+Precise statement:       ADOPTION RECORD (verdict #13): H-ADM-COH =
+                         admissible-competitor definition within the
+                         matched second-cumulant B5 scope. CROSS-READING
+                         LEMMA: whole-pattern splitting Delta E <=
+                         6 I^2 + c_cross I^2 (measured +0.67/+0.40 I^2).
+                         ASSEMBLED CLOSURE: STEP-5B holds for the
+                         amended class at margins x55.6/x8.8/x2.1.
+                         Status: DRAFT-CLOSED pending verdict #14.
+Scope:                   Amended class (H-ADM-COH); matched second-
+                         cumulant bookkeeping; unrestricted class
+                         remains open (DR-2 = unconditional alternative).
+Dependencies:            AddA v1.3 (official route), AddB (scales),
+                         AddC (indistinguishability), main chain
+                         v1.7-v2.0 (floor, G2, Nambu, J machinery).
+Evidence grade:          ANALYTIC (assembled chain) + EXECUTED
+                         (189/189) + OPERATOR-DIRECTED (adoption)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 189/189 PASS; result.json under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260605-gershgorin-reduction/
+Falsification gate:      Any amended-class pattern violating the margin
+                         chain; any restructuring shifting F beyond
+                         c_ind I^2; l1 identity violation.
+Tier before / after:     B5 T4+ -> T5 CANDIDATE (proposal; decision and
+                         gate-row flip await operator verdict #14).
+No-overclaim statement:  The closure is CONDITIONAL on the adopted
+                         amendment and DRAFT until verdict #14. The
+                         unrestricted-class STEP-5B remains open by
+                         choice (DR-2 path). Endpoint margin x2.1 is the
+                         weakest link and is flagged, not hidden. No
+                         tier action on B1/B2; Reading-H stays T5 until
+                         the operator acts on the gate.
+Next required action:    OPERATOR VERDICT #14: confirm adoption + gate
+                         flip + B5 tier decision; then Reading-H T6
+                         discussion opens (whole-gate consequence);
+                         polish: c_cross analytic pin, endpoint
+                         hardening; optional: DR-2.
+\end{verbatim}

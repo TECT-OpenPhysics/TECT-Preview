@@ -1,0 +1,250 @@
+% =============================================================================
+% Title: The near-gap protection lemma: operator monotonicity closes the G-U1-SMALLT regime structurally
+% Claim: B1-RH-ENUM (closure of the U9 audit item G-U1-SMALLT, route (a); Reading-H T6 mainline, unit U10)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: lemma note, T3 PROOF SKETCH (core step textbook operator monotonicity; two named alignment residuals R-U10-1/R-U10-2; G-U1-SMALLT reduced from OPEN REGIME to two one-page writeups; no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U10:
+%        closing the U9 audit item G-U1-SMALLT by route (a)). MAIN
+%        RESULT (sketch): within the chain's stated convention
+%        (D = D_0 + 2 lam' I + W with D_0 = r_R + C(k^2-q0^2)^2 the
+%        Reading-H Hessian and W = lam'(P^2 - 2I)), the competitor's
+%        FULL fluctuation Hessian satisfies D + W = D_0 + lam' P^2 >=
+%        D_0, and by operator monotonicity of ln,
+%        F_fluct[P] - F_fluct[R_H] = (1/2V) tr[ln(D_0 + lam' P^2) -
+%        ln D_0] >= 0 for EVERY admissible pattern -- the fluctuation
+%        sector (diagonal Hartree shift + off-diagonal Bloch channel
+%        TOGETHER) can NEVER help a competitor relative to Reading-H.
+%        Combined with Phi >= 0 on interval I' (all coefficients
+%        positive), the near-gap small-amplitude regime flagged by U9
+%        is protected STRUCTURALLY, with no margin arithmetic: the
+%        envelope-vs-O(I)-floor crossover of U9 compares two bounds,
+%        not two energies -- the energies themselves cannot cross.
+%        The U1 band arithmetic covers the remaining regimes (where
+%        the P_B floors and dips live). G-U1-SMALLT is REDUCED to two
+%        named one-page residuals: R-U10-1 (exactness of the
+%        r_hat = r_R + 2 lam' I convention as matched bookkeeping --
+%        the O(I^2) self-consistent dressing shift) and R-U10-2
+%        (alignment of the layer/beyond-layer split with the total-
+%        trace inequality). PDF build and linter execution PENDING
+%        OPERATOR-SIDE (sandbox shell unavailable to this agent
+%        session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Unit U9 (second-order audit of U1) registered G-U1-SMALLT: the U1
+composition's coverage of near-gap small-amplitude competitors at the
+certified intensities was unverified, with route (a) (structural
+protection) and route (b) (crossover arithmetic) as candidate
+resolutions. This note executes route (a). Scope: the chain's stated
+convention (B5 main note v2.0, Setting): $D(k) = \hat r + C(k^2 -
+q_0^2)^2$, $\hat r = r_R + 2\lambda' I$, $r_R = 0.3045257$ fixed,
+$\lambda' = 8.0551 > 0$ certified, $W = \lambda'(P^2 - 2I\,{\rm Id})$
+(the $P^2$-representation theorem, main chain v1.7--v1.8).
+
+\section*{2. The lemma}
+
+\begin{lemma}[Near-gap protection -- sketch]
+For every admissible pattern $\mathcal P$ of intensity $I$, within the
+chain's stated convention, the competitor's full fluctuation Hessian
+obeys
+\[
+H_{\mathcal P} \;=\; D + W \;=\; D_0 + \lambda' P^2 \;\ge\; D_0
+\;=\; H_{\mathcal R_H},
+\qquad
+D_0 = r_R + C(k^2 - q_0^2)^2 ,
+\]
+and therefore, by the operator monotonicity of $\ln$ on positive
+operators,
+\[
+F_{\rm fluct}[\mathcal P] - F_{\rm fluct}[\mathcal R_H]
+\;=\; \frac{1}{2V}\,\operatorname{tr}\!\bigl[\ln(D_0 + \lambda' P^2)
+- \ln D_0\bigr] \;\ge\; 0 .
+\]
+The fluctuation sector --- diagonal Hartree shift ($+2\lambda' I$) and
+off-diagonal Bloch channel ($W$'s off-diagonal part) TOGETHER --- can
+never lower a competitor below $\mathcal R_H$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+$D = D_0 + 2\lambda' I\,{\rm Id}$ by the convention; $W = \lambda'(P^2
+- 2I\,{\rm Id})$ by the $P^2$ theorem; adding gives the exact identity
+$D + W = D_0 + \lambda' P^2$ (this is the chain's own display, v1.7).
+$P$ is self-adjoint (multiplication by the real field $F(x)$, v1.8),
+so $P^2 \ge 0$; $\lambda' > 0$ is certified at the anchor band. Hence
+$H_{\mathcal P} \ge D_0 > 0$. Operator monotonicity of $\ln$
+($A \ge B > 0 \Rightarrow \ln A \ge \ln B$, Loewner) gives
+$\operatorname{tr}\ln H_{\mathcal P} \ge \operatorname{tr}\ln D_0$,
+and the Gaussian fluctuation free energy is $+\tfrac1{2V}
+\operatorname{tr}\ln(\text{Hessian})$. $\square$
+\end{proof}
+
+\section*{3. Consequence: G-U1-SMALLT closes at the regime level}
+
+The U9 crossover ($O(I)$ floor vs $O(I^2)$ envelope) compared two
+BOUNDS; the lemma shows the underlying ENERGIES cannot cross in the
+fluctuation sector at all. The competitor's total matched excess
+decomposes as
+\[
+\Delta F[\mathcal P] \;=\;
+\underbrace{\Phi(t)}_{\ge 0 \text{ on I}'}
+\;+\; \underbrace{\Delta F_0\text{-type layer excursion}}_{\ge 0}
+\;+\; \underbrace{F_{\rm fluct}[\mathcal P] -
+F_{\rm fluct}[\mathcal R_H]}_{\ge 0 \text{ (this lemma)}} ,
+\]
+so on interval I$'$ (all $\Phi$ coefficients positive; contains the
+gap point) EVERY term is nonnegative and the selection cannot flip ---
+no margin needed. The role of the STEP-5B bound is thereby clarified
+to exactly the chain's original threat model: on the BAND/sub-band
+intervals, where the layer proof spends the $P_B$ floors against the
+dips, the off-diagonal correction must not consume the residual
+$+0.00432$ --- and there the U1 composed arithmetic stands as written.
+The U9 estimated crossover inside the certified window is thus an
+artifact of bounding the protected sector instead of using its
+positivity.
+
+\section*{4. Named residuals (honest)}
+
+\begin{itemize}
+\item \textbf{R-U10-1 (convention exactness)}: $\hat r = r_R +
+2\lambda' I$ with FIXED $r_R$ treats the pattern's Hartree shift
+linearly; the competitor's self-consistent $M(\hat r)$ feeds back into
+$\lambda'$ and the sub-leading dressing at $O(I^2)$. One page: show
+the feedback is either part of the matched bookkeeping's definition
+(in which case the identity is exact by convention) or bounded by the
+already-certified $\lambda'$-calibration band (the artefact's
+lam\_calibration block measures exactly this at the LAM point:
+$\delta_{\rm second\ order} = 6.7\times10^{-8}$).
+\item \textbf{R-U10-2 (split alignment)}: the lemma's inequality is
+for the TOTAL fluctuation trace; the chain's layer/beyond-layer split
+books the diagonal $2\lambda' I$ shift inside the layer's $F_0(\hat
+r)$-excursion and the off-diagonal inside $\delta F_{\rm off}$. One
+page: verify no piece of the trace is double-counted or dropped when
+the split is reassembled (the v1.7 identity is the algebra; the page
+is bookkeeping).
+\item \textbf{R-U10-3 (machine check, registered)}: numerically
+verify $\operatorname{tr}[\ln(D_0 + \lambda' P^2) - \ln D_0] \ge 0$ on
+test patterns and that its small-$I$ expansion reproduces (diagonal
+gain) $-$ (off-diagonal $w^2 J$ form) term-by-term --- one small
+script (not executable this session; sandbox shell unavailable).
+\end{itemize}
+Upon R-U10-1/R-U10-2 (two pages) the U9 flag lifts and the U1 proposal
+returns to ``operator sign-off required'' only.
+
+\section*{5. Numerical verification}
+
+No new machine numbers. The lemma is structural; its inputs
+($\lambda' = 8.0551 > 0$; the $P^2$ identity; $r_R$) are certified in
+the existing artefact (192/192). The small-$I$ consistency target for
+R-U10-3: first order of the trace $= \lambda'\,\langle F^2\rangle\,
+M(r_R)$-form $= 2\lambda' I M_R$-scale $\approx 1.76\,I$ --- linear
+and positive, dominating the $O(I^2)$ off-diagonal at all certified
+intensities (at $I = 2\times10^{-3}$: $3.5\times10^{-3}$ vs the
+$1.7\times10^{-3}$ envelope), consistent with the positivity.
+
+Quantitative sanity check (mandatory): limit case --- at $I \to 0$,
+$P \to 0$ and the inequality degenerates to equality (the competitor
+IS $\mathcal R_H$), as it must; sign-direction --- $\lambda' > 0$ is
+the load-bearing sign (``pattern Hartree RAISES the diagonal,'' a
+certified artefact claim with its own assert); had $\lambda' < 0$ the
+lemma would fail and the U9 flag would stand --- the lemma's validity
+is pinned to a machine-asserted sign, not an assumption; consistency
+--- the first-order trace coefficient $\approx 1.76$ per unit $I$
+exceeds the U9 floor coefficient $m^* = 0.3045$ per unit $I$: the
+structural protection is STRONGER than the layer floor the U9 audit
+was comparing against, explaining why the bound-level crossover was
+an artifact.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The lemma proves the fluctuation sector
+never helps competitors --- but then why does the chain bound
+$|\delta F_{\rm off}|$ at all? If the total is positive, STEP-5B was
+unnecessary.''} DISMISSED: the two statements protect DIFFERENT
+regimes. On the band intervals the layer proof itself goes NEGATIVE
+in places (the dips) and survives by the $P_B$ floors --- there the
+decomposition books the diagonal Hartree gain inside the layer
+excursion, and the residual question is whether the off-diagonal
+piece (which is genuinely sign-indefinite within the split) can eat
+the remaining $+0.00432$; that is STEP-5B and it was needed. The
+lemma adds the complementary statement for the regime where the
+floors vanish. Both are necessary; neither subsumes the other.
+\item[($\beta$)] \emph{``Operator monotonicity needs $D_0 + \lambda'
+P^2$ and $D_0$ to act on the same space with the trace difference
+well-defined (the operators are unbounded; $\operatorname{tr}\ln$ is
+formal).''} VALID-with-mitigation: per unit volume the difference of
+the two $\operatorname{tr}\ln$'s is the standard regularized
+log-determinant ratio, finite because $\lambda' P^2$ is bounded
+(multiplication by $\lambda'(F^2)$, $\|F\|_\infty^2 \le 4S^2$ finite
+for finite patterns) and relatively trace-class against $D_0^{-1}$
+decay ($k^{-4}$); the chain's own Lemma B manipulates exactly this
+object. The one-paragraph regularization statement folds into
+R-U10-2.
+\item[($\gamma$)] \emph{``R-U10-1 could be where the problem hides:
+if the $r_R$-fixed convention is only first-order, the identity
+$D + W = D_0 + \lambda' P^2$ with $D_0 = H_{R_H}$ is approximate and
+the positivity could fail at $O(I^2)$ --- the very order of the
+threat.''} VALID-with-mitigation --- this is exactly why R-U10-1 is
+named rather than waved through: the artefact's own second-order
+calibration ($\delta_{\rm second\ order} = 6.7\times10^{-8}$ at the
+LAM point, versus the protected linear gain $\sim 1.76 I = 1.8\times
+10^{-4}$ there) measures the feedback at $\times2600$ below the
+protection at the calibration point, strongly indicating the
+convention's slack is harmless; the one-page writeup must make that
+class-wide. Until then the lemma is T3 and the U9 flag stands in
+REDUCED form (two pages, not an open regime).
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / neargap-protection-lemma
+                         (unit U10; closes U9's G-U1-SMALLT route (a))
+Precise statement:       LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >=
+                         D_0 = H_{R_H} (chain identity + lam' > 0
+                         certified) => by operator monotonicity of ln,
+                         F_fluct[P] - F_fluct[R_H] >= 0 for every
+                         admissible pattern: the fluctuation sector
+                         never helps competitors. With Phi >= 0 on
+                         interval I', the near-gap small-amplitude
+                         regime is protected structurally; the U9
+                         crossover was a bound-level artifact.
+                         G-U1-SMALLT reduced to R-U10-1 (convention
+                         exactness, one page) + R-U10-2 (split
+                         alignment, one page) + R-U10-3 (machine
+                         check, registered).
+Scope:                   The chain's stated convention (v2.0 Setting);
+                         all certified intensities; amended class.
+Dependencies:            P^2-representation theorem (main chain
+                         v1.7-v1.8); lam' > 0 (artefact assert);
+                         U9 audit (the item being closed); Prop A
+                         interval I' structure.
+Evidence grade:          ANALYTIC SKETCH (T3; core step = textbook
+                         Loewner monotonicity).
+Reproduction command:    (registered R-U10-3) small script verifying
+                         the trace inequality + small-I expansion on
+                         test patterns.
+Expected output:         trace difference >= 0 on all test patterns;
+                         first-order coefficient ~ 2 lam' M_R; JSON
+                         under claims/B1-RH-ENUM/runs/.
+Falsification gate:      lam' <= 0 anywhere on the certified band
+                         (contradicts a certified assert); an O(I^2)
+                         convention-feedback term exceeding the linear
+                         protection class-wide (would void R-U10-1 and
+                         restore the U9 flag in full).
+Tier before / after:     No tier action. B1 stays T5. The U1 proposal
+                         condition G-U1-SMALLT is REDUCED (not yet
+                         lifted): operator sign-off still required,
+                         now with two one-page residuals in queue.
+No-overclaim statement:  The lemma is a T3 sketch; the regularization
+                         and convention-exactness pages are named, not
+                         assumed. The U9 flag is reduced, NOT removed.
+                         PDF build + linter PENDING operator-side.
+Next required action:    R-U10-1 + R-U10-2 writeups (one page each);
+                         R-U10-3 script; then the U1 proposal returns
+                         to operator-decision-only. Mainline continues
+                         (U11).
+\end{verbatim}

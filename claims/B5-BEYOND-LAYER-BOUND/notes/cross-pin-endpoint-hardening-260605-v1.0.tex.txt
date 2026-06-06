@@ -1,0 +1,193 @@
+% =============================================================================
+% Title: Polish closure: the analytic cross-recombination pin and endpoint hardening (gate STEP-5B, post-closure quality items)
+% Claim: B5-BEYOND-LAYER-BOUND (serving gate STEP-5B; companion AddE note)
+% Version: v1.0 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: theorem note, T4 (both verdict-#14 polish items closed analytically + machine-verified)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue, per operator directive ("polish 2 items
+%        first"). (a) C_CROSS ANALYTIC PIN: exact cross-cap recombination
+%        requires exact additive coincidences; on the sphere a shared
+%        difference set across two caps forces co-circularity
+%        (sphere ∩ translate = circle), and curvature splits every
+%        non-co-circular alignment at O(delta^2) — machine audit:
+%        adversarial aligned-AP caps show max EXACT fiber multiplicity 2
+%        (trivial degeneracies only), while the co-circular control shows
+%        multiplicity 6 with energy K = 12.20 < 14 (absorbed by the
+%        universal single-circle theorem). Hence the energy-faithfulness
+%        constant is DEPTH-FREE: c_total <= 6 (within-cap saturation)
+%        + 14 (co-circular) = 20. (b) ENDPOINT HARDENING: the criterion
+%        band [1, pi]/(q0 xi) has its conservative end at the CURRENT
+%        theta_min (ambiguity only thickens margins); the amended-class
+%        minimum transfer |t| >= 2 q0 sin(theta_min/2) gives J_eff < J_max
+%        (0.226 vs 0.273 at the endpoint), lifting the I = 2e-3 closure
+%        margin from x2.1 to x2.6 (floor), with the band reaching x12.7
+%        and the production anchor at x59.4. Script v1.14.0, 192/192.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Operator verdict \#14 flipped gate STEP-5B to CLOSED-CONDITIONAL and left
+two polish items: the analytic pin of the cross-recombination constant
+$c_{\rm cross}$ and the hardening of the thin endpoint margin
+($\times2.1$ at $I = 2\times10^{-3}$). This note closes both. Scope:
+matched second-cumulant B5 bookkeeping, as everywhere in the chain.
+
+\section*{2. The analytic cross-recombination pin}
+
+\begin{theorem}[Curvature pins $c_{\rm cross}$ --- depth-free]
+Let $P'$ refine the readings of an admissible $P$ into sub-resolution
+clusters. Cross-cluster recombination --- two distinct ordered pairs
+$(\hat u_i, \hat v_j) \ne (\hat u_{i'}, \hat v_{j'})$ from cap pair
+$(r, r')$ landing on the SAME transfer --- requires the exact vector
+identity $\hat u_i - \hat u_{i'} = \hat v_{j'} - \hat v_j$. If a
+nontrivial family of such identities holds, the two cap point-sets share
+a difference set, i.e.\ one is a translate of the other within the
+sphere; since $S \cap (S + w)$ is a circle, BOTH cap sets lie on one
+common circle. Therefore: (i) for non-co-circular clusters the exact
+recombination count is the trivial ordering/sign degeneracy ($\le 4$
+ordered) and the cross $\ell^2$ is EXACTLY preserved under splitting;
+(ii) co-circular clusters are precisely the configurations covered by
+the universal single-circle theorem ($K = 14$, sharp, any amplitudes).
+Consequently the energy-faithfulness constant of the AddC/AddD chain is
+depth-free:
+\[
+\Delta E \;\le\; \underbrace{6I^2}_{\text{within-cap saturation}}
+\;+\; \underbrace{14 I^2}_{\text{co-circular, absorbed}}
+\;=\; 20\,I^2 ,
+\]
+with no dependence on cluster depth $k$ or alignment engineering.
+\end{theorem}
+
+\noindent Machine audit: adversarial aligned-AP caps (5+5 points, two
+distinct cap planes) show max EXACT fiber multiplicity $2$; the
+co-circular control (one circle) shows multiplicity $6$ with measured
+$K = 12.20 < 14$. The would-be ``alignment pumping'' of cross energy
+(which grows linearly in depth $k$ for ROUNDED coincidences) is an
+artifact of finite tolerance: at exact arithmetic, curvature splits the
+fibers at $O(\delta^2)$, and the free-energy functional matches
+transfers exactly.
+
+\section*{3. Endpoint hardening}
+
+\begin{proposition}[Criterion band and the $J$-refinement]
+(i) The resolution criterion $\theta_{\min} = c_\theta/(q_0\xi)$ with
+$c_\theta \in [1, \pi]$ has its closure-relevant CONSERVATIVE end at
+$c_\theta = 1$ (the current choice): larger $c_\theta$ shrinks the
+admissible class and thickens every margin, so the quoted margins are
+FLOORS with respect to criterion ambiguity. (ii) Amended-class patterns
+have pairwise separations $\ge \theta_{\min}$, hence all transfers obey
+$|t| \ge 2q_0\sin(\theta_{\min}/2)$, and the envelope weight improves
+from $J_{\max} = 0.273$ to $J_{\rm eff} = J(2q_0\sin(\theta_{\min}/2))$:
+$0.256$ at the production anchor, $0.226$ at the endpoint. The closure
+margins become
+\[
+\times59.4 \quad (I = 4\times10^{-4}),
+\qquad
+\times2.6 \quad (I = 2\times10^{-3},\ \text{floor}),
+\]
+with the $\pi$-phase end of the band at $\times290.9$ and $\times12.7$
+respectively.
+\end{proposition}
+
+\section*{4. Consequence for the closure record}
+
+Both verdict-\#14 polish items are closed: the AddD closure margins are
+now $\times59.4 / \times2.6$ (floor) at the two band-edge intensities,
+the constant chain is depth-free and analytic throughout, and no machine
+constant in the closure path remains unpinned except the PROVISIONAL
+$20/9$ incidence route (which the closure does not use).
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} (v1.14.0;
+192/192 self-test asserts PASS; artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+adversarial exact multiplicity & $2$ & trivial degeneracies only \\
+co-circular control & multiplicity $6$; $K = 12.20 < 14$ & absorbed by single-circle theorem \\
+$c_{\rm total}$ & $\le 20$, depth-free & analytic pin \\
+$J_{\rm eff}$ (anchor / endpoint) & $0.256$ / $0.226$ & vs $J_{\max} = 0.273$ \\
+hardened margins & $\times59.4$ / $\times2.6$ (floors) & band tops $\times290.9$ / $\times12.7$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the endpoint improvement ratio
+$2.6/2.1 = 1.24$ is close to $J_{\max}/J_{\rm eff} = 0.273/0.226 = 1.21$
+(small residual from rounding in the $n_{\rm pack}$ floor), dimensionally
+a pure ratio as required; the co-circular control's $K = 12.20$ obeys the
+sharp bound $14 - 18/n = 12.20$ at $n = 10$ EXACTLY, confirming the
+absorption argument with zero slack.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Near-coincident fibers (split by $O(\delta^2)$)
+still interact through the smooth $J(|t|)$ envelope, even if exact
+recombination vanishes.''} DISMISSED with the chain's own structure: the
+$\ell^2$ energy $\sum_t w_t^2$ counts EXACT fibers (Parseval is exact);
+the envelope $J$ weights each fiber separately and $J$ is bounded by
+$J_{\rm eff} < J_{\max}$ on every realized transfer — near-coincidence
+affects neither count nor weight beyond what is already bounded.
+\item[($\beta$)] \emph{``The criterion-band argument inverts the burden:
+maybe the TRUE resolution scale is below $1/(q_0\xi)$, enlarging the
+class.''} VALID-with-mitigation: $1/(q_0\xi)$ is the standard coherence
+estimate (beat phase $\sim 1$ over one correlation length); a criterion
+BELOW it would assert that two modes whose beat cannot complete even one
+radian within a correlation volume are independently resolvable, which
+contradicts the indistinguishability lemma's energy-faithfulness
+(restructuring at that scale shifts $F$ by margin$/\times33$ or less —
+the physics cannot tell them apart). The honest floor stands at
+$c_\theta = 1$.
+\item[($\gamma$)] \emph{``The endpoint floor $\times2.6$ still depends
+on the $\times4$-free packing count $16/\theta_{\min}^2$.''} DISMISSED:
+$16/\theta^2$ IS the conservative cap-packing bound
+($2/(1-\cos(\theta/2)) \approx 16/\theta^2$ to $0.7\%$ at these angles,
+machine-checked in AddC); no looser constant enters.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / AddE (gate STEP-5B)
+Precise statement:       (a) c_cross ANALYTIC PIN (depth-free): exact
+                         recombination forces co-circularity; curvature
+                         splits all other alignments; c_total <= 20 I^2.
+                         (b) ENDPOINT HARDENING: criterion band has its
+                         conservative end at the current theta_min;
+                         J-refinement (J_eff = 0.256/0.226) lifts the
+                         closure margins to x59.4 / x2.6 (floors), band
+                         tops x290.9 / x12.7.
+Scope:                   Matched second-cumulant B5 bookkeeping; amended
+                         class of verdict #14.
+Dependencies:            AddC/AddD (lemma + closure record); universal
+                         single-circle theorem (main chain v1.8); J
+                         machinery (main chain).
+Evidence grade:          ANALYTIC (both pins) + EXECUTED (192/192)
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 192/192 PASS; result.json under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260605-gershgorin-reduction/
+Falsification gate:      A non-co-circular cluster pair with exact fiber
+                         multiplicity > 4 (refutes the curvature pin);
+                         an amended-class transfer with J(|t|) > J_eff
+                         (refutes the refinement).
+Tier before / after:     AddE enters at T4; B5 remains T5-CANDIDATE
+                         (verdict #14); gate remains CLOSED-CONDITIONAL.
+No-overclaim statement:  The polish strengthens the closed gate's
+                         margins; it does NOT change the conditional
+                         character of the closure (amended class), nor
+                         any tier. The 20/9 incidence route stays
+                         provisional and unused. Unrestricted class
+                         remains open (DR-2, research-grade).
+Next required action:    Mainline: Reading-H T6 discussion (gate
+                         consequence). Optional: DR-2; full T5
+                         assignment for B5 at operator review.
+\end{verbatim}

@@ -1,0 +1,287 @@
+% =============================================================================
+% Title: Third-cumulant lift assessment for the SC-SCOPE hypothesis: the cubic sunset channel is anchor-subdominant but endpoint-critical under conservative bounds
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE quantification; Reading-H T6 mainline, unit U4)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: assessment note, T2 ESTIMATE (order-of-magnitude bounds with dressed coupling; ALL numbers pending machine verification -- registered follow-up script; honest finding includes a conservative-bound FAILURE at the endpoint)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U4:
+%        SC-SCOPE third-cumulant lift assessment = the RES-5
+%        quantification of unit U3). Main findings: (i) the genuinely
+%        NEW third-cumulant channel for the selection comparison is the
+%        CUBIC SUNSET (cubic vertex squared, 6 G^3 contraction) -- it is
+%        ABSENT for Reading-H (no condensate => no cubic vertex) and
+%        strictly competitor-helping (second-order corrections lower F);
+%        (ii) the dressed cubic coupling is u_eff(M_R) = u + 10 v M_R =
+%        +2.685, a factor ~3.1 above |u| in amplitude (~9.7 in square)
+%        -- the bare-coupling estimate is misleadingly optimistic;
+%        (iii) with the conservative sup-kernel bound 6 J(0) M_R the
+%        sunset is margin-subdominant at the production anchor (x7.7)
+%        and at I = 1e-3 (x2.8) but EXCEEDS the composed margin at the
+%        I = 2e-3 endpoint (x0.97) -- the SC-SCOPE lift at the endpoint
+%        REQUIRES sharper machinery (per-transfer J3 decay + cubic-
+%        transfer counting), not just sup-bounds; (iv) the tadpole-
+%        dressed channel (9 G(0)^2 G contraction) is LOAD-BEARING:
+%        unless its matched-bookkeeping cancellation is proven, its
+%        conservative bound also exceeds the endpoint margin (x0.53).
+%        All numbers are closed-form arithmetic on certified constants,
+%        ESTIMATE grade, pending the registered machine-verification
+%        script. PDF build and linter execution are PENDING
+%        OPERATOR-SIDE (sandbox shell unavailable to this agent
+%        session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The U1 candidate theorem carries SC-SCOPE (matched second-cumulant
+bookkeeping) as a named hypothesis; unit U3 identified its lift as the
+RES-5 frontier. This note assesses WHAT the third-cumulant order adds:
+which new channels appear, their dressed couplings, and their size at
+the three anchor intensities relative to the U1 composed margins. The
+output is an honest feasibility map for the lift, NOT a lift: every
+bound below is a conservative sup-kernel ESTIMATE on certified
+constants, pending machine verification.
+
+\section*{2. The new channels at third order}
+
+At second cumulant the fluctuation correction is governed by
+$W = \lambda'(F^2 - 2I)$ (multiplication; the $P^2$ theorem). Expanding
+the interaction about the condensate $F$ to the next cumulant order,
+the fluctuation Hamiltonian acquires the CUBIC vertex
+\[
+V_3 \;=\; \int g_3(x)\,\delta\varphi^3(x), \qquad
+g_3(x) \;=\; u_{\rm eff}(M)\,F(x) \;+\; \tfrac{10v}{3}F(x)^3 ,
+\]
+where the dressing $u \to u_{\rm eff}(M) = u + 10vM$ arises from the
+Gaussian contraction of the $F\,\delta\varphi^5$ sextic term
+($vF\delta\varphi^5 \to 10vG(0)\,F\delta\varphi^3$, $G(0) = M$) ---
+exactly the same dressing as the condensate quartic. At the anchor
+dressing $M = M_R = 0.109414$:
+\[
+u_{\rm eff}(M_R) \;=\; -0.86 + 32.4\times0.109414 \;=\; +2.6850 ,
+\qquad u_{\rm eff}^2 = 7.209 ,
+\]
+a factor $9.7$ ABOVE $u^2 = 0.7396$: the bare-coupling estimate is
+misleadingly optimistic and is not used below.
+
+The third-cumulant free-energy contribution of $V_3$ is
+\[
+\delta F_3 \;=\; -\tfrac12 \,\langle V_3^2\rangle_c
+\;=\; -\tfrac12 \sum_t |\hat g_3(t)|^2\,
+\bigl[\,6\,\widehat{G^3}(t) + 9\,M^2\,\hat G(t)\,\bigr] ,
+\]
+with $\widehat{G^3} = G{*}G{*}G$ (the sunset kernel) and the $9M^2\hat
+G$ piece the tadpole-dressed channel. Two structural facts:
+\begin{itemize}
+\item \textbf{One-sidedness}: $\delta F_3 \le 0$ always (second-order
+perturbation lowers the free energy) and $\delta F_3[\mathcal R_H] = 0$
+(no condensate $\Rightarrow g_3 \equiv 0$): the cubic channel can ONLY
+help competitors. It is therefore the exactly relevant threat to the
+selection margin.
+\item \textbf{Tadpole status}: at the variational stationary point the
+$9M^2\hat G$ piece pairs with the condensate-equation counterterm (the
+$3G(0)g_3$ effective linear source that the Hartree-dressed gap/
+condensate equations absorb); whether this cancellation survives the
+MATCHED bookkeeping for non-stationary competitor evaluations is a
+statement that must be PROVEN for the lift --- it is load-bearing (see
+section 4).
+\end{itemize}
+
+\section*{3. Conservative size bounds (ESTIMATE grade)}
+
+Kernel sup-bounds on certified constants: $\widehat{G^3}(t) =
+\int (G{*}G)(k)\,G(t-k) \le \sup_s(G{*}G)(s)\cdot\int G = J(0)\,M_R$
+with $J(0) = 0.290$ (monotone envelope, AddC) and $\int G = M(\hat r)
+\le M_R$ (safe direction: $\hat r > m^*$); $\hat G(t) \le G_{\max} =
+1/\hat r = 3.215$. Parseval: $\sum_t |\hat g_3(t)|^2 = \langle g_3^2
+\rangle \approx u_{\rm eff}^2\,\langle F^2\rangle = u_{\rm eff}^2\,2I$
+(the $F^3$ and cross terms contribute $\le 15\%$ at the endpoint,
+$\le 3\%$ at the anchor; folded as headroom, see sanity check).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y @{}}
+\toprule
+Quantity & $I = 4{\times}10^{-4}$ & $I = 10^{-3}$ & $I = 2{\times}10^{-3}$ \\
+\midrule
+sunset bound $\tfrac12 u_{\rm eff}^2 2I \cdot 6J(0)M_R$ &
+$5.49\times10^{-4}$ & $1.37\times10^{-3}$ & $2.75\times10^{-3}$ \\
+composed U1 margin $0.00432(1 - 1/\rho)$ &
+$4.25\times10^{-3}$ & $3.83\times10^{-3}$ & $2.66\times10^{-3}$ \\
+ratio (sunset) & $\times7.7$ & $\times2.8$ & $\times0.97$ (FAILS) \\
+tadpole bound $\tfrac12 u_{\rm eff}^2 2I \cdot 9M_R^2 G_{\max}$ &
+$9.99\times10^{-4}$ & $2.50\times10^{-3}$ & $5.00\times10^{-3}$ \\
+ratio (tadpole, if uncancelled) & $\times4.3$ & $\times1.5$ &
+$\times0.53$ (FAILS) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent ($\rho$ = the hardened/recorded STEP-5B margin ratios
+$59.4 / 8.8 / 2.6$; the middle uses the AddD figure since AddE quoted
+the two band edges.)
+
+\section*{4. Honest verdict and the lift requirements}
+
+\begin{itemize}
+\item \textbf{Production anchor}: the third-cumulant cubic channel is
+margin-subdominant under conservative sup-bounds ($\times7.7$ sunset;
+$\times4.3$ tadpole-if-uncancelled). The SC-SCOPE lift at the anchor
+looks FEASIBLE by the present route.
+\item \textbf{Endpoint $I = 2\times10^{-3}$}: the conservative bounds
+FAIL ($\times0.97$ / $\times0.53$). This does NOT mean the selection
+fails there --- it means sup-kernel estimates are too crude at the
+endpoint, and the lift REQUIRES the chain's sharper machinery:
+(a) per-transfer decay $\widehat{G^3}(|t|)$ evaluated on the realized
+cubic transfers (which obey $|t| \ge q_0$-scale separations on the
+amended class, where $\widehat{G^3}$ is far below its sup --- the same
+refinement that AddE's $J_{\rm eff}$ delivered at second order);
+(b) cubic-transfer counting (the analogue of the $K(n)$ energy bound:
+$\hat g_3$ is supported on $O(n)$ first-shell modes plus $O(n^2)$
+$F^3$-fibers with $I^{3/2}$-suppressed weights, so the Parseval mass
+overcounts the J-weighted sum);
+(c) the TADPOLE CANCELLATION statement at matched bookkeeping ---
+load-bearing: without it the lift fails at $I \ge 10^{-3}$ within
+$\times1.5$.
+\item \textbf{One more channel flagged}: the quartic-vertex
+second-order channel ($\langle(\delta\varphi^4)^2\rangle$-type,
+present for BOTH $\mathcal R_H$ and competitors) contributes to the
+DIFFERENCE only through its $F$-dependent dressing; its matched-order
+cancellation structure must be written out in the lift (registered as
+part of the same follow-up).
+\end{itemize}
+
+The assessment sharpens SC-SCOPE from a formal bookkeeping fence into
+a quantified hypothesis: its lift is a real (not cosmetic) programme
+whose anchor-feasibility is supported and whose endpoint requires
+exactly three named technical inputs.
+
+\section*{5. Numerical verification}
+
+ALL numbers in this note are ESTIMATE-grade closed-form arithmetic on
+certified constants ($u = -0.86$, $v = 3.24$, $M_R = 0.109414$,
+$J(0) = 0.290$, $\hat r = 0.3110$, margins $59.4/8.8/2.6$, band floor
+$0.00432$) from the existing artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}
+and the AddC/AddE notes. NO machine asserts have been executed for the
+new combinations (sandbox shell unavailable this session); the
+follow-up script is registered (planned:
+codes/vacuum/third\_cumulant\_assessment.py, with self-test asserts for
+every table entry and a JSON artefact under
+claims/B5-BEYOND-LAYER-BOUND/runs/).
+
+Quantitative sanity check (mandatory): dimensional --- $\delta F_3 \sim
+({\rm coupling})^2 \times ({\rm field}^2) \times ({\rm kernel})$ with
+the kernel $J(0)M_R$ carrying the two-loop measure, matching the
+free-energy-density units of the margin; magnitude --- the headroom
+check: the neglected $\hat g_3$ pieces are the cross term
+$2|u_{\rm eff}|\cdot\tfrac{10v}{3}\langle F^4\rangle \le 2\cdot2.685
+\cdot10.8\cdot12I^2$ and the $F^3$ square $\le 116.6\cdot\langle
+F^6\rangle$ with $\langle F^6\rangle = O(I^3)$; at $I = 2\times10^{-3}$
+these total $\le 15\%$ of the leading $u_{\rm eff}^2\,2I$ term --- the
+quoted endpoint ratio $0.97$ would tighten to $\sim0.84$ with them
+included, NOT loosen (the failure finding is robust in the safe
+direction); limit case --- as $I \to 0$ every third-cumulant bound
+vanishes linearly in $I$ while the margin is fixed, recovering the
+trivial low-intensity limit; sign-direction --- $\delta F_3 \le 0$ for
+competitors and $= 0$ for $\mathcal R_H$ is the dangerous direction and
+is treated as such (the bound is applied AGAINST the margin, never in
+its favor).
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The dressed coupling $u_{\rm eff}(M_R)$ might
+itself be wrong for the cubic vertex: the sextic contraction count
+$10vG(0)$ deserves a derivation, not an analogy to the quartic
+dressing.''} VALID-with-mitigation: the count is
+$\binom{5}{2}\cdot$(pairings)$\,vF\delta\varphi^5 \to 10vM\,F\delta
+\varphi^3$, the same Wick combinatorics as the certified condensate
+quartic dressing ($u_{\rm eff} = u + 10vM$ appears verbatim in Math437
+Lemma 1); the follow-up script will verify the coefficient by symbolic
+Wick enumeration. Until then the note is T2 ESTIMATE and says so.
+\item[($\beta$)] \emph{``The endpoint FAILURE of the conservative bound
+could be an artifact of double conservatism: sup-kernel AND full
+Parseval mass AND uncancelled tadpole stacked together.''} DISMISSED
+as an objection to the note's claim --- because the note CLAIMS exactly
+this: the finding is `conservative bounds fail at the endpoint, hence
+the lift requires the sharper machinery (a)/(b)/(c)', not `the
+selection fails at the endpoint'. The stacking is deliberate: it
+identifies which refinements are load-bearing. The one-sided headroom
+check (sanity section) confirms the failure direction is robust to the
+neglected terms.
+\item[($\gamma$)] \emph{``Comparing $\delta F_3$ against the COMPOSED
+U1 margin double-penalizes: the second-cumulant beyond-layer budget
+already consumed $1/\rho$ of the floor; maybe the right comparison is
+against the full $0.00432$.''} VALID-with-mitigation: both comparisons
+are reported by construction (against the full floor the endpoint
+sunset ratio is $0.00432/2.75\times10^{-3} = \times1.57$ --- still
+thin); the composed-margin comparison is the correct one for the U1
+theorem as stated (the budgets must COEXIST), while the full-floor
+comparison is the right one if the lift re-derives a joint
+second+third-order budget in one inequality. The follow-up lift should
+do the latter; the assessment flags both.
+\item[($\delta$)] \emph{``$\int G = M(\hat r)$ was bounded by $M_R =
+M(m^*)$ using $\hat r > m^*$; verify the direction.''} DISMISSED:
+$\hat r = 0.3110 > m^* = 0.3045$ and $M$ is strictly decreasing
+(unit U2, L1), so $M(\hat r) < M(m^*) = M_R$ --- the substitution
+ENLARGES the bound (safe direction).
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / third-cumulant-lift-
+                         assessment (unit U4)
+Precise statement:       ESTIMATE (T2): the new third-cumulant channel
+                         is the cubic sunset with DRESSED coupling
+                         u_eff(M_R) = +2.685 (x9.7 above u^2 in
+                         square); conservative sup-bounds give
+                         sunset/margin ratios x7.7 / x2.8 / x0.97 and
+                         tadpole-if-uncancelled x4.3 / x1.5 / x0.53 at
+                         I = 4e-4 / 1e-3 / 2e-3: anchor-feasible,
+                         ENDPOINT-CRITICAL. Lift requirements named:
+                         (a) per-transfer G^3-kernel decay, (b) cubic-
+                         transfer counting, (c) tadpole cancellation at
+                         matched bookkeeping (load-bearing).
+Scope:                   SC-SCOPE quantification only; no lift is
+                         performed; no change to any theorem, tier, or
+                         margin. Amended class, three anchors.
+Dependencies:            U1 composed margins; AddC (J(0)), AddE
+                         (hardened ratios); Math437 closed forms
+                         (u_eff dressing); U2 L1 (monotonicity, for
+                         one bound direction); certified anchor
+                         constants.
+Evidence grade:          ESTIMATE (T2) -- closed-form arithmetic on
+                         certified constants; machine asserts NOT yet
+                         executed (follow-up script registered).
+Reproduction command:    (registered follow-up) python codes/vacuum/
+                         third_cumulant_assessment.py
+Expected output:         asserts for every table entry (u_eff, kernel
+                         sups, six ratios) + JSON artefact under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/.
+Falsification gate:      Machine verification contradicting any table
+                         entry by > 5% (would demote the assessment);
+                         a proof that the tadpole channel does NOT
+                         cancel at matched bookkeeping AND a sharp
+                         per-transfer bound still exceeding the
+                         endpoint margin (would mean SC-SCOPE cannot
+                         be lifted at the endpoint by this route --
+                         honest negative pre-registered).
+Tier before / after:     No tier action. SC-SCOPE remains a named
+                         hypothesis of the U1 candidate set; this note
+                         quantifies it.
+No-overclaim statement:  Nothing here lifts SC-SCOPE or threatens the
+                         U1 conditional theorem (which is AT second
+                         cumulant by hypothesis). The endpoint bound
+                         failure is a statement about the crudeness of
+                         sup-estimates, pre-registered honestly, NOT a
+                         counterexample. All numbers pending machine
+                         verification. PDF build + linter PENDING
+                         operator-side (sandbox shell unavailable).
+Next required action:    Follow-up script (machine asserts); then the
+                         three named lift inputs (a)/(b)/(c) as
+                         separate units if the operator directs the
+                         SC-SCOPE lift; mainline continues with U5 (B5
+                         full-T5 dossier).
+\end{verbatim}

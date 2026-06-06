@@ -1,0 +1,247 @@
+% =============================================================================
+% Title: Sunset endpoint refinement, part 1: the intensity-dressed cubic coupling and the single missing constant
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE lift, sunset axis; Reading-H T6 mainline, unit U7)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: refinement note, T3 (one NAMED missing machine constant M-ENDPOINT; estimate-grade improved endpoint ratio x0.97 -> ~x1.34 conditional on it; plus an honest negative finding on the kernel axis)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue (Reading-H T6 mainline, unit U7: the
+%        single remaining SC-SCOPE lift axis after U6). Contents:
+%        (i) INTENSITY-DRESSED COUPLING: the U4 table used u_eff(M_R)
+%        with M_R = M(m*) at the production dressing; at the endpoint
+%        the dressed mass is r_hat(2e-3) = r_R + 2 lam' I = 0.3367 and
+%        M(0.3367) < M_R strictly (monotonicity), reducing u_eff^2 by
+%        ~21% (linear-response estimate via the EXACT identity
+%        M'(r_hat) = -J(0)); combined with the M-factor in the kernel
+%        this lifts the endpoint sunset ratio from x0.97 to ~x1.34 --
+%        CONDITIONAL on one new certified number, M(0.3367), registered
+%        as the named constant M-ENDPOINT (the convexity of M makes the
+%        linearization an UNDER-estimate of M, so x1.34 is estimate-
+%        grade, not a proven floor, until M-ENDPOINT is machine-
+%        evaluated with a one-sided check); (ii) HONEST NEGATIVE
+%        finding on the kernel axis: at shell transfers |t| = q0 the
+%        sunset kernel G*G*G sits on the 4-wave resonance phase space
+%        (three on-shell momenta can sum to an on-shell vector), so it
+%        is NOT parametrically below the Young bound J(0) M -- the
+%        kernel axis yields at most O(1) improvement and the refinement
+%        load falls on the coupling (this note) and counting axes.
+%        PDF build and linter execution PENDING OPERATOR-SIDE (sandbox
+%        shell unavailable to this agent session).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+After U6 the SC-SCOPE lift's endpoint problem is the sunset channel
+alone (conservative ratio $\times0.97$ at $I = 2\times10^{-3}$). This
+note delivers the first refinement: the intensity-dressed coupling,
+which the U4 table conservatively froze at the production-anchor value.
+Scope: estimate-grade until the single named constant below is
+machine-certified.
+
+\section*{2. The intensity-dressed coupling}
+
+The U4 bound used $u_{\rm eff}(M_R)$ with $M_R = M(m^*) = 0.109414$ at
+the production dressing $m^* = 0.3045$. But the sunset of a competitor
+at intensity $I$ is evaluated at ITS dressed kernel,
+\[
+\hat r(I) \;=\; r_R + 2\lambda' I :
+\qquad
+\hat r(2{\times}10^{-3}) \;=\; 0.30453 + 2\times8.0551\times0.002
+\;=\; 0.33675 ,
+\]
+and the coupling dressing uses $M(\hat r(I))$, which is STRICTLY BELOW
+$M_R$ by the monotonicity of $M$ (unit U2, L1). Linear-response
+estimate via the EXACT identity $M'(m)\big|_{m=\hat r} = -J(0)$ (both
+sides are $-\int [\,\hat r + C(k^2-q_0^2)^2\,]^{-2}$; $J(0) = 0.290$ is
+certified at the chain's dressed kernel):
+\[
+M(0.33675) \;\approx\; M_R - 0.290\times(0.33675 - 0.30453)
+\;=\; 0.10941 - 0.00934 \;=\; 0.10007 ,
+\]
+\[
+u_{\rm eff} \;\approx\; -0.86 + 32.4\times0.10007 \;=\; 2.382 ,
+\qquad u_{\rm eff}^2 = 5.675 \quad (-21\%\ \text{vs U4}) .
+\]
+The endpoint sunset bound becomes
+\[
+\tfrac12\,u_{\rm eff}^2\,(2I)\cdot 6J(0)\,M(0.33675)
+\;=\; \tfrac12\times5.675\times0.004\times6\times0.290\times0.10007
+\;=\; 1.977\times10^{-3} ,
+\]
+against the composed endpoint margin $2.658\times10^{-3}$:
+\[
+\boxed{\ \text{ratio} \;\approx\; \times1.34
+\quad (\text{vs } \times0.97 \text{ in U4})\ }
+\]
+--- POSITIVE, i.e.\ the conservative endpoint failure of U4 is
+removed by the correct intensity dressing, CONDITIONAL on the single
+constant below.
+
+\paragraph{The named missing constant (M-ENDPOINT).} $M$ is CONVEX
+($M''(m) = 2\int[m+D]^{-3} > 0$), so the linearization UNDER-estimates
+$M(0.33675)$ and hence UNDER-estimates $u_{\rm eff}$: the $\times1.34$
+is an estimate, not a proven floor. The proven version requires ONE new
+machine number: $M(0.33675)$ evaluated with a one-sided convergence
+check (a single quadrature; the convex/secant sandwich $M_R - 0.290
+\,\Delta \le M(0.33675) \le M_R$ brackets it a priori in
+$[0.1001, 0.1094]$, and the bound is monotone in it --- the WORST case
+$M = M_R$ reproduces U4's $\times0.97$, the estimate $0.1001$ gives
+$\times1.34$). Registered as M-ENDPOINT with the follow-up script.
+
+\section*{3. Honest negative finding: the kernel axis}
+
+U4 listed lift input (a) ``per-transfer $\widehat{G^3}$ decay.'' At the
+dominant transfers $|t| = q_0$ (the shell modes carrying $\hat g_3$'s
+mass), the sunset kernel $\widehat{G^3}(t) = \int\!\!\int G(k_1)G(k_2)
+G(t - k_1 - k_2)$ is supported on configurations with all three
+internal momenta near the shell --- and three on-shell momenta CAN sum
+to an on-shell vector (the 4-wave resonance geometry of the production
+$N_4$ accounting). The kernel at $|t| = q_0$ is therefore NOT
+parametrically below its Young bound $J(0)\,M$; the resonance phase
+space saturates a finite fraction of it. CONSEQUENCE (recorded so the
+programme does not chase a dead end): the kernel axis contributes at
+most an $O(1)$ factor; the lift's quantitative load is carried by the
+coupling axis (this note) and, if a further factor is needed, the
+counting axis (the $\hat g_3$ mass distribution over transfers ---
+note that for a competitor with $n$ readings the per-transfer weight is
+$u_{\rm eff}^2\,2I/n$-scale while the J-weighted sum re-concentrates,
+so counting helps only for structured subfamilies; assessed LOW-YIELD).
+
+\section*{4. State of the SC-SCOPE lift after U6 + U7}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y @{}}
+\toprule
+Channel / axis & $I = 4{\times}10^{-4}$ & $I = 10^{-3}$ &
+$I = 2{\times}10^{-3}$ \\
+\midrule
+tadpole (U6) & \multicolumn{3}{c}{ABSENT identically (lemma sketch)} \\
+sunset, U4 conservative & $\times7.7$ & $\times2.8$ & $\times0.97$ \\
+sunset, intensity-dressed (U7) & $\times7.7$ (unchanged) &
+$\sim\times3.2$ (est.) & $\sim\times1.34$ (est., M-ENDPOINT pending) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent (The $I = 10^{-3}$ entry uses $\hat r(10^{-3}) = 0.3206$,
+$M \approx 0.1047$, $u_{\rm eff}^2 \approx 6.18$: bound $1.20\times
+10^{-3}$ vs $3.83\times10^{-3}$.) If M-ENDPOINT lands inside its
+convex/secant bracket, the third-cumulant landscape is positive at all
+three anchors at estimate grade --- making the SC-SCOPE lift to third
+order a FEASIBLE registered programme (formal inputs remaining:
+R-U6-1/R-U6-2 from U6; M-ENDPOINT + the assembled third-order
+inequality from this note; the quartic-difference channel writeup from
+U4).
+
+\section*{5. Numerical verification}
+
+NO machine numbers were executed this session (sandbox shell
+unavailable). New estimate-grade arithmetic on certified constants:
+$\hat r(I)$ values ($0.33675$, $0.3206$), the linear-response $M$
+estimates ($0.10007$, $0.1047$), the dressed couplings ($2.382$,
+$2.486$), the bounds ($1.977\times10^{-3}$, $1.20\times10^{-3}$), the
+ratios ($\times1.34$, $\times3.2$). All to be machine-asserted by the
+registered follow-up script (planned: codes/vacuum/
+third\_cumulant\_assessment.py, shared with U4, plus the M-ENDPOINT
+quadrature with a one-sided refinement check).
+
+Quantitative sanity check (mandatory): dimensional --- $\hat r(I) =
+r_R + 2\lambda' I$ adds mass$^2$-like quantities consistently
+($\lambda' I$ carries the dressing's units as everywhere in the chain);
+identity check --- $M'(\hat r) = -J(0)$ is exact by construction (both
+are the same integral), so the linear-response step introduces no new
+kernel object; bracket check --- the convex/secant sandwich
+$[0.1001, 0.1094]$ has width $9\%$ of the central value and the
+endpoint ratio is monotone across it ($\times1.34 \to \times0.97$),
+so M-ENDPOINT decides the sign of the refinement claim cleanly ---
+exactly why it is registered as THE missing constant; sign-direction
+--- using the smaller $M$ reduces BOTH the coupling and the kernel,
+both in the bound-shrinking direction, and both reductions are real
+physics (stronger dressing at higher intensity), not bookkeeping.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The composed margin denominator should also
+be re-evaluated at the endpoint dressing --- maybe it shrinks too,
+cancelling the gain.''} DISMISSED: the composed margin
+$0.00432(1-1/2.6)$ is built from the Prop-A floor (anchor closed
+forms, $I$-independent) and the AddE-hardened STEP-5B ratio at
+$I = 2\times10^{-3}$ --- BOTH already evaluated at the endpoint's own
+dressed kernel in the certified chain. No constant in the denominator
+was frozen at the production anchor; the asymmetry the U7 refinement
+fixes existed only in the U4 numerator.
+\item[($\beta$)] \emph{``The linearization uses $M'(\hat r) = -J(0)$
+with $J(0)$ certified at ONE dressing; across $[0.3045, 0.3367]$ the
+slope varies, and convexity makes the estimate non-conservative.''}
+VALID-with-mitigation --- and this is the note's own central caveat:
+the $\times1.34$ is labelled estimate-grade everywhere, the convexity
+direction is stated, the a-priori bracket is supplied, and the proven
+version is reduced to ONE registered machine number (M-ENDPOINT) whose
+worst-bracket value reproduces U4's honest $\times0.97$. Nothing is
+claimed beyond the bracket.
+\item[($\gamma$)] \emph{``The resonance argument in section 3 is
+qualitative; declaring the kernel axis low-yield without computing
+$\widehat{G^3}(q_0)$ might discard a real factor.''}
+VALID-with-mitigation: the finding is registered as an
+honest-direction assessment (it can only make the programme MORE
+conservative --- it discourages reliance on an unverified
+improvement); the M-ENDPOINT follow-up script can evaluate
+$\widehat{G^3}(q_0)$ alongside at negligible extra cost, and if a real
+factor exists it strengthens the lift beyond this note's claims.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / sunset-endpoint-
+                         refinement (unit U7)
+Precise statement:       REFINEMENT (T3, estimate-grade): the sunset
+                         bound's coupling must be dressed at each
+                         anchor's own r_hat(I) = r_R + 2 lam' I; via
+                         the exact identity M'(r_hat) = -J(0), the
+                         endpoint coupling drops u_eff^2 7.209 ->
+                         ~5.675 and the kernel M-factor 0.1094 ->
+                         ~0.1001, lifting the endpoint sunset ratio
+                         x0.97 -> ~x1.34 (and x2.8 -> ~x3.2 at 1e-3).
+                         CONDITIONAL on the named constant M-ENDPOINT
+                         = M(0.33675), a-priori bracketed in
+                         [0.1001, 0.1094]. HONEST NEGATIVE: the kernel
+                         axis is low-yield (4-wave resonance phase
+                         space saturates the Young bound at shell
+                         transfers).
+Scope:                   SC-SCOPE lift programme, sunset axis;
+                         estimate-grade pending M-ENDPOINT.
+Dependencies:            U4 (channel + arithmetic), U6 (tadpole
+                         absent), U2 L1 (monotonicity/convexity of M),
+                         certified constants (J(0), r_R, lam', M_R,
+                         AddE margins).
+Evidence grade:          ESTIMATE (T3 structure + T2 numbers); machine
+                         asserts NOT executed (registered).
+Reproduction command:    (registered follow-up) python codes/vacuum/
+                         third_cumulant_assessment.py  (shared with
+                         U4; adds M-ENDPOINT quadrature + optional
+                         G^3(q0) evaluation)
+Expected output:         M(0.33675) inside [0.1001, 0.1094] with
+                         one-sided refinement check; all U7 table
+                         entries asserted; JSON artefact under
+                         claims/B5-BEYOND-LAYER-BOUND/runs/.
+Falsification gate:      M-ENDPOINT outside its convex/secant bracket
+                         (would indicate an error in the certified
+                         inputs or in L1); the assembled third-order
+                         inequality failing at any anchor after
+                         M-ENDPOINT lands (honest negative for the
+                         lift, pre-registered).
+Tier before / after:     No tier action; B5 stays T5-CANDIDATE.
+No-overclaim statement:  The x1.34 endpoint ratio is ESTIMATE-GRADE
+                         (convexity direction stated; worst-bracket
+                         reproduces x0.97). Nothing here lifts
+                         SC-SCOPE; the U1 theorem is untouched. PDF
+                         build + linter PENDING operator-side.
+Next required action:    M-ENDPOINT machine evaluation + the shared
+                         U4/U7 assert script; then the assembled
+                         third-order inequality note (the actual lift
+                         candidate) if the operator directs it.
+                         Mainline continues (U8).
+\end{verbatim}

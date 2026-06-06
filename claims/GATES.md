@@ -17,7 +17,7 @@ exist here. Last updated: 2026-06-05.
 
 | Gate | Statement | Status | Source |
 |---|---|---|---|
-| **STEP-5B** | Beyond-layer class-wide bound (admissible-class exhaustiveness step; pattern-generic Gershgorin attack designated). **The gateway for any whole-Reading-H T6 discussion.** Progress 2026-06-05 (claim B5-BEYOND-LAYER-BOUND, **T4**): Lemmas A/B/C'/D rigorous; **closed-region theorem DERIVED** — holds for all single-shell patterns with $n \le n_{\max}(I)$ (62/31/16/6/3 at $I=10^{-4}..2{\times}10^{-3}$). Residual after AddA v1.2 (verdict #11): **{H-ADM} + DR-2 only — H-KBAL structurally LIFTED** (unconditional-amplitude theorem $64\sqrt7\,I^2\sqrt n\log^2$; kappa-balance now affects constants only; ledger threshold $1.59{\times}10^5$ keeps the sharp-constant balanced form). Previously: **conditionality {H-KBAL, H-ADM} with the VERIFIED threshold $n_{\rm adm}\lesssim1.59{\times}10^5$** (sqrt-n route official; 20/9 incidence route provisional at $2.2{\times}10^{10}$, constant unpinned; 7.9e16 withdrawn; DR-2 dichotomy = designated route to sharp $O(N^2)$). Previously: **conditionality only — named {H-KBAL, H-ADM}** ($c_R=4\sqrt{14}$ THEOREM-grade by operator derivation; incidence route $O(N^{28/13})$ pushes the reach to $7.9{\times}10^{16}$ modes at the anchor — ANY admissibility cutoff below that closes the gate; sharp $O(n^2)$ conjecture pre-registered with measured exponents 2.04--2.08). Previously: **extreme-$n$ rich-carrier corner only** ($n\gtrsim10^6$ at anchor; $\kappa$-balanced $\sqrt n$ rectangle corollary closes everything below: $R=O(n^{5/2})$ unconditional via triple count; coaxial lemma $H^*$-explicit after the verdict-#8 audit) + first-principles $c_R$. Previously: **the carrier-richness bound $p_0(P)$** (antipodal-carrier partition exact; $\nu^*=\mu_C$ one-parameter identity; COAXIAL CLASS CLOSED $K\le30$; single-circle universal $K=14$ sharp; H-GEN(2) falsified honestly). Previously: **G1'''-AE as the discrete sphere $L^4$-extension problem** (Stein--Tomas $q=4$, $d=3$; Parseval: $\sum w^2=\lambda'^2(\langle F^4\rangle-4I^2)$); corner narrowed to high-$n$ multi-circle non-transversal patterns (UNIVERSAL single-circle theorem $K=14$ sharp removes ALL single-circle patterns, any amplitudes; Nambu objection DISCHARGED — real scalar, $W$ = multiplication operator). Previously: **G1'''-AE only** — the class-wide weighted sphere additive-energy bound $\sum w_t^2 \le K(\lambda'I)^2$ on the extreme corner {$n>N_{\max}(I)$, non-transversal, non-ring} (G-DEC demoted to sub-route). **G1''-M4: CLOSED BY STRUCTURE** ($P^2$-representation theorem, v1.7: $W=\lambda'(P^2-2I)$, $D+W\ge D_0>0$ unconditional, spectral floor $a_0=2\lambda'I/\hat r$ n-free — Gershgorin obsolete; enlarged region $N_{\max}(I)=12133/3017/746/115/27$ vs $62/31/16/6/3$). **G2: CLOSED at second-cumulant bookkeeping level** (sextic $\varepsilon_4\le0.16$; $\sigma$-channel exact; two-shell floor $\times1.70$). Transversal $n$-free + ring exact + glue $\ell^2$ all stand. **G1'b ring family: CLOSED for the canonical equal-amplitude two-ring family** — exact $c_{\rm ring}(n)=14-18/n$ (even) / $8-6/n$ (odd) $<14$, five-orbit proof, verified $10^{-10}$ at $n=7..64$. | OPEN — top priority | `archive/legacy/notes/Math442/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt` |
+| **STEP-5B** | Beyond-layer class-wide bound (admissible-class exhaustiveness step; pattern-generic Gershgorin attack designated). **The gateway for any whole-Reading-H T6 discussion.** Progress 2026-06-05 (claim B5-BEYOND-LAYER-BOUND, **T4**): Lemmas A/B/C'/D rigorous; **closed-region theorem DERIVED** — holds for all single-shell patterns with $n \le n_{\max}(I)$ (62/31/16/6/3 at $I=10^{-4}..2{\times}10^{-3}$). Residual after AddD: **verdict-#14 confirmation only — the adoption record is WRITTEN (operator-directed per verdict #13), the cross-reading lemma is certified, and the assembled closure holds at x55.6/x8.8/x2.1; gate-row flip + B5 tier action await the confirmation**. Previously: **operator sign-off on the now LEMMA-BACKED H-ADM-COH (indistinguishability: sub-resolution restructuring shifts F by $\le c_{\rm ind}I^2$ = margin/x33+ everywhere; de-thinned closure margins x55.6/x8.8/x2.1)** — DR-2 off the critical path. Previously: **operator sign-off on H-ADM-COH (derived: $n_{\rm adm}\approx35$, margins x32.4/x5.1/x1.2 — CLOSURE-READY) OR DR-2** — H-ADM now DERIVED from the dressed propagator's coherence resolution (T3 sketch, class-amendment proposal). Previously: **{H-ADM} + DR-2 only — H-KBAL structurally LIFTED** (unconditional-amplitude theorem $64\sqrt7\,I^2\sqrt n\log^2$; kappa-balance now affects constants only; ledger threshold $1.59{\times}10^5$ keeps the sharp-constant balanced form). Previously: **conditionality {H-KBAL, H-ADM} with the VERIFIED threshold $n_{\rm adm}\lesssim1.59{\times}10^5$** (sqrt-n route official; 20/9 incidence route provisional at $2.2{\times}10^{10}$, constant unpinned; 7.9e16 withdrawn; DR-2 dichotomy = designated route to sharp $O(N^2)$). Previously: **conditionality only — named {H-KBAL, H-ADM}** ($c_R=4\sqrt{14}$ THEOREM-grade by operator derivation; incidence route $O(N^{28/13})$ pushes the reach to $7.9{\times}10^{16}$ modes at the anchor — ANY admissibility cutoff below that closes the gate; sharp $O(n^2)$ conjecture pre-registered with measured exponents 2.04--2.08). Previously: **extreme-$n$ rich-carrier corner only** ($n\gtrsim10^6$ at anchor; $\kappa$-balanced $\sqrt n$ rectangle corollary closes everything below: $R=O(n^{5/2})$ unconditional via triple count; coaxial lemma $H^*$-explicit after the verdict-#8 audit) + first-principles $c_R$. Previously: **the carrier-richness bound $p_0(P)$** (antipodal-carrier partition exact; $\nu^*=\mu_C$ one-parameter identity; COAXIAL CLASS CLOSED $K\le30$; single-circle universal $K=14$ sharp; H-GEN(2) falsified honestly). Previously: **G1'''-AE as the discrete sphere $L^4$-extension problem** (Stein--Tomas $q=4$, $d=3$; Parseval: $\sum w^2=\lambda'^2(\langle F^4\rangle-4I^2)$); corner narrowed to high-$n$ multi-circle non-transversal patterns (UNIVERSAL single-circle theorem $K=14$ sharp removes ALL single-circle patterns, any amplitudes; Nambu objection DISCHARGED — real scalar, $W$ = multiplication operator). Previously: **G1'''-AE only** — the class-wide weighted sphere additive-energy bound $\sum w_t^2 \le K(\lambda'I)^2$ on the extreme corner {$n>N_{\max}(I)$, non-transversal, non-ring} (G-DEC demoted to sub-route). **G1''-M4: CLOSED BY STRUCTURE** ($P^2$-representation theorem, v1.7: $W=\lambda'(P^2-2I)$, $D+W\ge D_0>0$ unconditional, spectral floor $a_0=2\lambda'I/\hat r$ n-free — Gershgorin obsolete; enlarged region $N_{\max}(I)=12133/3017/746/115/27$ vs $62/31/16/6/3$). **G2: CLOSED at second-cumulant bookkeeping level** (sextic $\varepsilon_4\le0.16$; $\sigma$-channel exact; two-shell floor $\times1.70$). Transversal $n$-free + ring exact + glue $\ell^2$ all stand. **G1'b ring family: CLOSED for the canonical equal-amplitude two-ring family** — exact $c_{\rm ring}(n)=14-18/n$ (even) / $8-6/n$ (odd) $<14$, five-orbit proof, verified $10^{-10}$ at $n=7..64$. | **CLOSED-CONDITIONAL** (OPERATOR VERDICT #14, 2026-06-05: "H-ADM-COH is accepted as the admissible-competitor definition within the matched second-cumulant B5 scope. AddD v1.0 passes as the closure record for STEP-5B on the amended admissible class. The STEP-5B gate row is flipped to CLOSED-CONDITIONAL with margins 55.6x/8.8x/2.1x. B5 is promoted from T4+ to T5-candidate. Unrestricted-class closure remains open via DR-2, and cross-reading analytic pin plus endpoint hardening remain polish items.") | `archive/legacy/notes/Math442/TECT-Math442-F10-Closure-Math437v1p2-CERTIFIED-260605-v1.0.tex.txt` |
 | **G3PB-III** | G3′-b(iii): higher-shell / anisotropic harmonic dominance — AddF ratio extraction | OPEN — priority 2 | legacy: Math442 |
 | **G1PP-3B-HEX** | G1″-3b-HEX exact-Wick bracket (HEX competitor margin) | CLOSED within H-layer scope — Math437 v1.2 F10-REPAIR RESOLVED, verified by dual audit | `archive/legacy/notes/` Math437 v1.2 / Math440 / Math441 / Math442 |
 | **ESTIMATOR-UPGRADE** | GAP-2 instance for Reading-H: estimator-grade $\Delta F$ → controlled error bound | OPEN | `archive/legacy/notes/` Math427–Math436 enumerated-reading chain (migrated batch 2) |
@@ -127,6 +127,57 @@ promotions follow `governance/claim-standard.md` §5.
   no longer load-bearing (verified: worst unbalanced ratio 0.03 vs ceiling
   2929); ledger threshold unchanged. Residual = {H-ADM} + DR-2 (sharp
   route) + constant-sharpening follow-ups. STEP-5B remains OPEN.
+- 2026-06-05 — AddB (coherence-admissibility-cutoff-260605-v1.0, script
+  v1.11.0, 175/175): H-ADM DERIVED from microphysics — xi = 2.44,
+  theta_min = 0.603 rad, n_adm ~ 35 (x4: 140), nearly I-independent;
+  K(4 n_adm) = 184 < budget at ALL anchor intensities (x32.4/x5.1/x1.2;
+  I=2e-3 thin). T3 PROOF SKETCH + proposed class amendment H-ADM-COH —
+  STEP-5B is CLOSURE-READY pending operator sign-off (or DR-2). Suite
+  vectorized to 24.5 s. Commit-watcher infrastructure added (operator
+  directive).
+- 2026-06-05 — OPERATOR REVIEW VERDICT #12: AddA v1.2 PASS (T4+); AddB =
+  T3 amendment proposal; directed: indistinguishability lemma (AddC) /
+  DR-2 review.
+- 2026-06-05 — AddC (coherence-indistinguishability-lemma-260605-v1.0,
+  script v1.12.0, 185/185): EXACT splitting fibers 6/9/(12-6/n) I^2 —
+  fragmentation gain SATURATES; |F[P']-F[P]| <= c_ind I^2 = margin/x898/
+  x139/x33 — sub-resolution restructuring ENERGY-FAITHFUL; H-ADM-COH
+  upgraded proposal -> DERIVED quotient statement; de-thinned closure
+  margins x55.6/x8.8/x2.1 (thin corner repaired). AddA v1.3 stale fixes.
+  STEP-5B: awaiting operator sign-off on the lemma-backed amendment.
+- 2026-06-05 — OPERATOR REVIEW VERDICT #13: AddA v1.3 PASS; AddC PASS (T4);
+  operator DIRECTED the AddD adoption note with its core statement.
+- 2026-06-05 — AddD (hadmcoh-adoption-step5b-closure-260605-v1.0, script
+  v1.13.1, 189/189): adoption record (scope-fenced) + CROSS-READING LEMMA
+  (verdict-#13 condition (b): whole-pattern splitting Delta E = +0.67/
+  +0.40 I^2, an order below the 6 I^2 budget; catch #8 self-caught: draft
+  l1 assert contradicted Lemma C' and was replaced by exact identity
+  checks) + assembled closure theorem (margins x55.6/x8.8/x2.1).
+  STATUS: DRAFT-CLOSED — gate-row flip + B5 tier action (T5 candidate)
+  await OPERATOR VERDICT #14.
+- 2026-06-05 — OPERATOR VERDICT #14 DELIVERED (verbatim text supplied in
+  the review): H-ADM-COH accepted; AddD passes as the closure record;
+  GATE ROW FLIPPED to CLOSED-CONDITIONAL (margins x55.6/x8.8/x2.1);
+  B5 promoted T4+ -> T5-CANDIDATE; unrestricted class stays OPEN via
+  DR-2; polish items: c_cross analytic pin, endpoint hardening.
+- 2026-06-05 — DR-2 seed lemma registered (one-line pigeonhole): if
+  sum_C p_C^2 >= K N^2 with sum_C p_C <= N^2 then max_C p_C >= K — energy
+  K N^2 forces a single circle with >= K antipodal pairs; combined with
+  the universal single-circle theorem (K=14 sharp) and mu_C = nu*, this
+  yields K <= c*min(mu_C, sqrt(n) polylog) as the elementary-method
+  ceiling. Full DR-2 (unconditional O(N^2)) assessed RESEARCH-GRADE
+  (adjacent to the open circle-incidence conjecture); registered as the
+  publication-strength alternative, NOT on the critical path.
+- 2026-06-05 — AddE (cross-pin-endpoint-hardening-260605-v1.0, script
+  v1.14.0, 192/192): BOTH verdict-#14 polish items CLOSED. (a) c_cross
+  ANALYTIC PIN: exact recombination forces co-circularity; curvature
+  splits all other alignments (adversarial audit: exact multiplicity 2);
+  co-circular absorbed by the universal K=14 (control: 12.20 = 14-18/10
+  exact, zero slack) => c_total <= 20 I^2 DEPTH-FREE. (b) ENDPOINT
+  HARDENING: amended-class minimum transfer gives J_eff = 0.256/0.226;
+  closure margins lifted to x59.4 / x2.6 FLOORS (criterion band tops
+  x290.9 / x12.7). No unpinned constant remains in the closure path.
+  Next mainline: Reading-H T6 discussion.
 - 2026-06-05 — Second operator verdict: B2 migration v1.3 PASS (batch-1 rows
   signed); G1' attack directed. B5 v1.3: Lemma E additive-energy split +
   transversal n-free corollary; residual restructured to G1''(row) + G1'b +

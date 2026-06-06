@@ -1,0 +1,333 @@
+% =============================================================================
+% Title: Reading-H T6 entry package: the candidate conditional theorem, its complete hypothesis set, and the assembly chain
+% Claim: B1-RH-ENUM (whole-Reading-H T6 mainline; gate consequence of STEP-5B = CLOSED-CONDITIONAL)
+% Version: v1.0 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: promotion-analysis note, PROPOSAL (B1 T5 -> T6-CONDITIONAL proposed; operator sign-off required; NO tier field change performed)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue, opening the Reading-H T6 mainline per the
+%        operator directive following OPERATOR VERDICT #14 (STEP-5B flipped
+%        to CLOSED-CONDITIONAL). The dispatch specified the filename stem
+%        reading-h-t6-entry-260605; the actual issue date is 2026-06-06, so
+%        the filename carries 260606 per the date-stamp discipline (filename
+%        date = issue date). Contents: (i) the candidate T6 theorem
+%        statement for the whole-Reading-H selection, CONDITIONAL on the
+%        named hypothesis set {H-LAYER (residual discharged on the amended
+%        class), H-A0, H-ADM-COH, SC-SCOPE}; (ii) the complete enumerated
+%        hypothesis registry with tracking locations; (iii) the assembly
+%        chain Prop-A (B2) + STEP-5B closure (B5 AddD/AddE) => class-wide
+%        positivity with explicit composed margin; (iv) what the T6
+%        statement does NOT include (estimator-grade Delta-F figures,
+%        off-anchor intensities, mu^2-neighbourhood, third-cumulant order);
+%        (v) the proposal record: B1 T5 -> T6-CONDITIONAL, operator
+%        sign-off required. PDF build and linter execution are PENDING
+%        OPERATOR-SIDE (the sandbox shell was unavailable to this agent
+%        session; flagged honestly here and in the session handoff).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Operator verdict \#14 flipped gate STEP-5B to CLOSED-CONDITIONAL
+(margins $\times59.4$ / $\times2.6$ floors after AddE), and STEP-5B was
+the registered ``gateway for any whole-Reading-H T6 discussion''
+(claims/GATES.md, ROADMAP Stage 2). This note opens that discussion by
+assembling the candidate conditional theorem, enumerating its COMPLETE
+hypothesis set with tracking locations, and recording the promotion
+proposal. Per governance (no self-promotion), the B1 tier field is NOT
+changed by this note: the proposal awaits operator sign-off.
+
+\section*{2. The candidate T6 theorem}
+
+\begin{quote}
+\textbf{Candidate Theorem (Reading-H selection, conditional).} At the
+corrected canonical operating point $r_{\rm braz} = \mu^2 = 0.005$, for
+every pattern $\mathcal P$ in the H-ADM-COH-amended admissible
+competitor class, at the certified anchor intensities
+$I \in \{4{\times}10^{-4},\,10^{-3},\,2{\times}10^{-3}\}$,
+\[
+\Delta F[\mathcal P] \;=\; F_{\rm TECT}[\mathcal P]
+- F_{\rm TECT}[\mathcal R_H] \;>\; 0 ,
+\]
+CONDITIONAL on the hypothesis set
+$\{\text{H-LAYER}^{\flat},\ \text{H-A0},\ \text{H-ADM-COH},\
+\text{SC-SCOPE}\}$ enumerated in section~3, where
+H-LAYER$^{\flat}$ denotes the layer hypothesis with its beyond-layer
+residual DISCHARGED on the amended class by the STEP-5B closure.
+\end{quote}
+
+\noindent Assembly chain (every link on disk and operator-reviewed):
+\begin{enumerate}
+\item \textbf{Layer-level positivity (B2, T6 on \{H-LAYER, H-A0\}).}
+Proposition A (Math437 v1.2, certified by Math442 dual audit + operator
+sign-off): for every admissible pattern and every PD trial,
+$F_{\rm var}(t,m) > F_{\rm var}(0,m^*) = F_{\rm var}[\mathcal R_H]$,
+with the four-interval quadrature-free floor chain giving the worst-case
+band margin $+0.00432$ (intervals: $+0.00432$ / $+0.00417$ / $+0.00467$;
+the binding one is the band).
+\item \textbf{Beyond-layer domination (B5 chain, STEP-5B
+CLOSED-CONDITIONAL, verdict \#14 + AddE polish).} For every pattern of
+the H-ADM-COH-amended class, at the three anchor intensities,
+\[
+\bigl|\delta F_{\rm off}(\mathcal P)\bigr|
+\;\le\; \frac{K(n_{\rm pack})\,(\lambda' I)^2\,J_{\rm eff}}{4(1-a_0)}
+\;\le\; \frac{m_{\rm band}}{2.6}
+\qquad (m_{\rm band} = 0.00432;\ \text{floor at } I = 2{\times}10^{-3}),
+\]
+with the production anchor at $m_{\rm band}/59.4$ (AddE hardened floors;
+band tops $\times290.9$ / $\times12.7$).
+\item \textbf{Composition.} For every amended-class $\mathcal P$ at the
+certified intensities,
+\[
+\Delta F[\mathcal P]
+\;\ge\; m_{\rm band} - \frac{m_{\rm band}}{2.6}
+\;=\; m_{\rm band}\Bigl(1 - \frac{1}{2.6}\Bigr)
+\;=\; 0.00432 \times 0.6154
+\;\simeq\; +2.66\times10^{-3} \;>\; 0 ,
+\]
+i.e.\ the composed worst-case margin is $\sim62\%$ of the layer floor at
+the thinnest certified endpoint, and $\ge 0.00432\,(1-1/59.4) \simeq
++4.25\times10^{-3}$ at the production anchor.
+\end{enumerate}
+
+\noindent The composition is valid because the two links live at the
+SAME bookkeeping order (matched second-cumulant; SC-SCOPE below), the
+same dressed kernel and anchor calibration (A1-KERNEL-CONV convention;
+$\hat r$, $\lambda' = 8.0551$, $J$ machinery shared), and the STEP-5B
+budget $m_{\rm STEP\text{-}5B}$ was DEFINED against the Prop-A band
+margin $+0.00432$ throughout the B5 chain (artefact field
+\texttt{anchor.margin} $= 0.00432$).
+
+\section*{3. The complete hypothesis set (registry)}
+
+Every hypothesis the candidate theorem rests on, with its tracking
+location and discharge path. Nothing is hidden in the assembly.
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y @{}}
+\toprule
+Hypothesis & Content (binding form) & Tracking / discharge \\
+\midrule
+H-LAYER$^{\flat}$ & The comparison layer is the isotropic
+Gaussian--Hartree variational layer; its beyond-diagonal residual
+(formerly ``unexecuted for non-enumerated patterns'') is DISCHARGED on
+the amended class by the STEP-5B closure. The superscript $\flat$ marks
+exactly this discharged form: what remains of H-LAYER is the layer
+framing itself (Gaussian--Hartree variational comparison as the
+free-energy bookkeeping), not the beyond-layer exhaustiveness. &
+claims/GATES.md (H-LAYER row); residual was STEP-5B (now
+CLOSED-CONDITIONAL, verdict \#14); the layer-framing remainder is
+inventoried in the companion residual note (next unit). \\
+H-A0 & $A=0$ uniqueness and zero-at-gap structure certified numerically
+on a consistent quadrature ($3.1\times10^{-5}$ internal convergence;
+$5.5\times10^{-3}$ scheme-gap offset recorded as a measure-convention
+systematic). Penalty floors $P_B$ are quadrature-free and do NOT rest on
+it. & claims/GATES.md (H-A0 row); discharge = quadrature-scheme
+unification or an analytic $A=0$ uniqueness proof (audit note planned as
+a separate unit). \\
+H-ADM-COH & Amended admissible-competitor definition (verdict \#14):
+finite reading sets with pairwise separations
+$\ge \theta_{\min}(\hat r) = \sqrt{\hat r}/(2q_0^2\sqrt C)$;
+sub-resolution mass belongs to the Gaussian sea. Energy-faithful by the
+AddC indistinguishability lemma ($c_{\rm ind} = 30.1$; ratios
+$\times898/\times139/\times33$) and depth-free by the AddE cross pin
+($c_{\rm total} \le 20$). & claims/GATES.md STEP-5B row (verdict \#14
+verbatim); B5 notes AddB/AddC/AddD/AddE; unrestricted-class discharge =
+DR-2 (research-grade, off critical path). \\
+SC-SCOPE & Matched second-cumulant bookkeeping: every B5 bound and the
+Prop-A comparison live at second-cumulant order with sextic corrections
+folded multiplicatively (Lemma H, $\varepsilon_4 \le 0.16$ on the closed
+region); third-cumulant vertex terms are NOT bounded class-wide. &
+B5 main chain (G2 closed at this level, Lemmas H/I/J); the
+third-cumulant lift assessment is registered as a follow-up unit. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent Additionally the theorem inherits the standing convention
+dependency A1-KERNEL-CONV (production-kernel convention, T5) and the
+anchor calibration provenance (Math434 chain via archive) --- these are
+DEPENDENCIES, not hypotheses: they fix the operating point at which the
+statement is made, and the statement is scoped to that point.
+
+\section*{4. What the candidate T6 statement does NOT include}
+
+For the no-overclaim record, the following are explicitly OUTSIDE the
+candidate theorem and remain tracked by their own gates:
+\begin{itemize}
+\item \textbf{Estimator-grade $\Delta F$ figures} (B1's enumerated-race
+values): the class-wide positivity above does not certify the NUMERICAL
+$\Delta F$ values of the enumerated races beyond estimator grade;
+ESTIMATOR-UPGRADE (GAP-2 instance) stays OPEN. Note the logical
+direction: the enumerated races are now corroborating evidence for a
+statement whose load-bearing chain is Prop-A + STEP-5B, both
+analytic-with-certified-constants.
+\item \textbf{Off-anchor intensities}: the STEP-5B margin chain is
+certified at $I \in \{4{\times}10^{-4}, 10^{-3}, 2{\times}10^{-3}\}$;
+intermediate intensities inherit plausibility from the monotone
+structure of the chain ($K$ budgets shrink, $c_{\rm ind} I^2$ grows
+quadratically) but are not separately certified. An interval-arithmetic
+sweep is a registered polish item.
+\item \textbf{$\mu^2$-neighbourhood}: ROBUSTNESS-MU2 stays OPEN; the
+statement is pinned to $\mu^2 = 0.005$.
+\item \textbf{Higher shells / anisotropic harmonics}: G3PB-III stays
+OPEN (single-shell amended class plus the two-shell floor Lemma J at
+$\times1.70$; the general multi-shell statement is not part of this
+theorem).
+\item \textbf{Third-cumulant order}: SC-SCOPE fences the bookkeeping;
+the lift assessment is a follow-up unit.
+\end{itemize}
+
+\section*{5. Numerical verification}
+
+No NEW machine numbers are introduced by this note. Every constant used
+is already certified in the existing artefact
+\url{claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json}
+(script \url{codes/vacuum/beyond_layer_gershgorin_bound.py} v1.14.0,
+192/192 self-test asserts PASS) and in the migrated Prop-A record
+(\url{archive/legacy/notes/Math437/...v1.2}, floors $P_B(M_+) =
+0.0052460$, $P_B(M_c) = 0.0092199$, band sum $+0.00432$; Math442
+certification). The single new arithmetic step is the composition
+\[
+0.00432\,(1 - 1/2.6) = 0.00432 \times 0.61538 = 2.658\times10^{-3},
+\qquad
+0.00432\,(1 - 1/59.4) = 4.247\times10^{-3},
+\]
+which is exact closed-form arithmetic on certified constants.
+
+Quantitative sanity check (mandatory): dimensional --- both sides of the
+composition are free-energy densities in the same canonical units as the
+$+0.00432$ band margin (pure subtraction, no unit mixing); magnitude ---
+the composed endpoint margin $2.66\times10^{-3}$ is 62\% of the layer
+floor, consistent with $1/2.6 = 0.385$ being subtracted; limit case ---
+as the STEP-5B margin ratio $\to \infty$ the composed bound recovers the
+full Prop-A floor $+0.00432$, and at ratio $= 1$ it degenerates to $0$
+(the composition fails exactly when the gate margin is exhausted, as it
+must); sign-direction --- $\delta F_{\rm off}$ enters with absolute
+value, so the bound holds whether the beyond-layer correction helps or
+hurts the competitor.
+
+\section*{6. Devil's-advocate (three objections; CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The composition double-counts or mis-aligns
+the two margins: Prop-A's $+0.00432$ is a layer-level floor at the
+variational comparison, while the STEP-5B budget was tuned against the
+same number --- is the subtraction legitimate?''}
+DISMISSED with the chain's own construction: the B5 budget
+$m_{\rm STEP\text{-}5B}$ was DEFINED as the Prop-A band margin from the
+first note of the chain (artefact \texttt{anchor.margin} $= 0.00432$),
+precisely so that ``$|\delta F_{\rm off}| < m_{\rm STEP\text{-}5B}$''
+means ``the beyond-layer correction cannot exhaust the layer floor.''
+The subtraction $m(1 - 1/\rho)$ with $\rho$ the certified margin ratio
+is the intended composition, at matched bookkeeping order, same kernel,
+same anchors. No constant is used twice in the same inequality.
+\item[($\beta$)] \emph{``H-LAYER is listed as discharged ($\flat$), but
+the amendment H-ADM-COH redefined the class --- so the discharge holds
+only on the amended class, and quietly promoting that to `H-LAYER
+discharged' is an overclaim.''}
+VALID-with-mitigation: agreed, and the note's notation is built around
+exactly this point --- H-LAYER$^{\flat}$ is defined as ``discharged ON
+THE AMENDED CLASS,'' the amendment itself is a separate listed
+hypothesis (H-ADM-COH), and the candidate theorem quantifies over the
+amended class only. The unrestricted-class statement remains OPEN (DR-2,
+research-grade) and is excluded from the theorem by construction. The
+residual inventory between ``amended-class conditional'' and
+``unconditional'' is the next unit's content.
+\item[($\gamma$)] \emph{``The thin endpoint: at $I = 2\times10^{-3}$ the
+composed margin rests on the $\times2.6$ FLOOR, which itself rests on
+the criterion-band conservative end and the $n_{\rm pack} =
+16/\theta_{\min}^2$ packing constant. A T6 entry on a $\times2.6$ link
+is fragile.''}
+VALID-with-mitigation: quoted honestly --- the endpoint is the weakest
+certified link and is flagged as such here and in AddE; the band top at
+that intensity is $\times12.7$ and the production anchor floor is
+$\times59.4$. The T6-conditional tier does not require margin comfort,
+only a valid conditional proof with explicit hypotheses; the thinness is
+a robustness concern tracked by the registered interval-sweep polish,
+not a gap in the conditional chain.
+\item[($\delta$)] \emph{``B1's evidence grade is ESTIMATOR + EXECUTED;
+promoting B1 to T6 on the strength of B2 + B5 changes what the claim IS
+(from enumerated races to class-wide selection) --- a tier change
+disguised as a statement change.''}
+VALID-with-mitigation: correct that the T6 object is a STRONGER
+statement than the original enumerated-race claim; this is why the note
+proposes the promotion as an explicit operator decision with the new
+statement text supplied (section 7), rather than editing the tier in
+place. If the operator prefers, the alternative bookkeeping is a NEW
+claim card (e.g.\ B6-RH-CLASSWIDE) holding the conditional theorem at
+T6 while B1 stays T5 for the enumerated races; both options are workable
+and the choice is the operator's. This note records the proposal in
+status.json scope/notes ONLY.
+\end{itemize}
+
+\section*{7. Proposal record (operator decision required)}
+
+\begin{itemize}
+\item \textbf{Proposed action}: B1-RH-ENUM tier T5 $\to$
+T6-CONDITIONAL, with the statement upgraded to the candidate theorem of
+section 2 and the hypothesis field set to
+\{H-LAYER$^{\flat}$, H-A0, H-ADM-COH, SC-SCOPE\} (the latter two to be
+added as named-hypothesis rows in claims/GATES.md upon sign-off).
+\item \textbf{Alternative}: a new claim card B6-RH-CLASSWIDE at
+T6-CONDITIONAL carrying the assembled theorem; B1 stays T5 for the
+enumerated-race content. (Operator's choice; the assembly chain is
+identical either way.)
+\item \textbf{Not proposed}: any change to B2 (stays T6 on
+\{H-LAYER, H-A0\}), B5 (stays T5-CANDIDATE per verdict \#14), or any
+gate row.
+\end{itemize}
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / reading-h-t6-entry (mainline)
+Precise statement:       CANDIDATE T6 THEOREM (assembled, proposal):
+                         Delta F[P] > 0 for every pattern P of the
+                         H-ADM-COH-amended admissible class at
+                         mu^2 = 0.005, I in {4e-4, 1e-3, 2e-3},
+                         CONDITIONAL on {H-LAYER-flat, H-A0,
+                         H-ADM-COH, SC-SCOPE}. Composed worst-case
+                         margin = 0.00432*(1 - 1/2.6) ~ +2.66e-3
+                         (endpoint floor); +4.25e-3 at the anchor.
+Scope:                   Amended class only; three certified anchor
+                         intensities; operating point pinned;
+                         second-cumulant bookkeeping. Estimator-grade
+                         enumerated Delta-F figures NOT upgraded
+                         (ESTIMATOR-UPGRADE stays OPEN).
+Dependencies:            B2-PROPA-HLAYER (T6: Prop A), B5 chain
+                         (STEP-5B CLOSED-CONDITIONAL, verdict #14 +
+                         AddE), A1-KERNEL-CONV, anchor calibration.
+Evidence grade:          ANALYTIC (assembly of certified links) --
+                         no new machine numbers; one exact arithmetic
+                         composition on certified constants.
+Reproduction command:    python codes/vacuum/beyond_layer_gershgorin_bound.py
+Expected output:         claims 192/192 PASS (existing artefact cited;
+                         no new script introduced by this note).
+Falsification gate:      Any amended-class pattern with Delta F <= 0 at
+                         a certified intensity; failure of any cited
+                         link (Prop-A floor chain, STEP-5B margin
+                         chain) under audit; discovery that the B5
+                         budget and the Prop-A floor are NOT the same
+                         m_band = 0.00432 (would break the
+                         composition).
+Tier before / after:     B1 stays T5 (tier field UNCHANGED by this
+                         note). PROPOSED: T5 -> T6-CONDITIONAL
+                         (or new card B6-RH-CLASSWIDE at T6-COND.) --
+                         OPERATOR SIGN-OFF REQUIRED.
+No-overclaim statement:  This is a PROPOSAL note. No tier, gate, or
+                         hypothesis row is changed by it. The theorem
+                         is conditional and scope-fenced; the
+                         unrestricted class, off-anchor intensities,
+                         mu^2 neighbourhood, higher shells, and
+                         third-cumulant order are all explicitly
+                         excluded. PDF build + linter execution are
+                         PENDING OPERATOR-SIDE (sandbox shell
+                         unavailable to this agent session).
+Next required action:    OPERATOR DECISION on the promotion form
+                         (in-place T6-CONDITIONAL vs new B6 card);
+                         then: H-A0 removal-pathway audit, H-LAYER
+                         residual inventory, SC-SCOPE third-cumulant
+                         lift assessment (registered as the next
+                         units).
+\end{verbatim}
