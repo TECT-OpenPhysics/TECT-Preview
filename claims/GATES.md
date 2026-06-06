@@ -32,6 +32,8 @@ exist here. Last updated: 2026-06-05.
 | Hypothesis | Statement | Discharge path |
 |---|---|---|
 | **H-LAYER** | Transcribed from Math437 v1.2 §Hypotheses (`archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`): the comparison is the **isotropic Gaussian–Hartree variational layer**. Within the diagonal-Gaussian class the isotropic dressing is the infimum (Math427, T6 conditional on H-diag); beyond-diagonal refinements (Bloch off-diagonal, $\sigma(x)$ inhomogeneity) are EXECUTED for the five enumerated readings (Math428–432, Math434, Math436) but remain unexecuted for non-enumerated patterns — that residual is exactly STEP-5B. | STEP-5B (beyond-layer class-wide bound) |
+| **H-ADM-COH** | Coherence-resolution admissibility amendment (operator verdict #14, 2026-06-05): an admissible competitor pattern is a finite set of shell readings with pairwise angular separations $\ge \theta_{\min}(\hat r)=\sqrt{\hat r}/(2q_0^2\sqrt C)$; spectral mass at finer scales belongs to the Gaussian-sea sector. Energy-faithful (coherence indistinguishability lemma, AddC: restructuring shifts $F$ by $\le c_{\rm ind}I^2$ = margin/$\times33$+); this is the class on which STEP-5B is CLOSED-CONDITIONAL. | Unrestricted-class closure via DR-2 (research-grade), or an all-amplitude indistinguishability proof |
+| **SC-SCOPE** | Second-cumulant bookkeeping scope: the whole Sector-B fluctuation analysis is at matched second-cumulant order (the $P^2$-representation, the layer comparison, STEP-5B). Substantive, not a formality: the third-cumulant endpoint corrections (sunset + quartic-difference, U4/U15) are marginal ($\times0.97$/$\times1.0$ under sup-kernels at $I=2\times10^{-3}$). The selection SIGN holds at this scope; the all-orders lift is open. | Per-transfer (not sup) third-cumulant kernels at the endpoint, or a scope-independent positivity argument |
 | **H-A0** | Transcribed from Math437 v1.2 §Hypotheses (slimmed in v1.1): the $A=0$ uniqueness and zero-at-gap structure are certified numerically on a consistent quadrature scheme (internal convergence $3.1\times10^{-5}$; the $5.5\times10^{-3}$ scheme-gap offset is a recorded measure-convention systematic). PENALTY constants do **not** rest on this hypothesis: Lemma 3's $P_B$ floors are quadrature-free closed forms at the production anchors ($M_R=0.109414>M_c$, $4.1\times$ margin). | Quadrature-scheme unification of the recorded offset systematic, or an analytic $A=0$ uniqueness proof |
 | **H-SUPPRESSION** | Suppression hypothesis of the kinematic-Lorentz theorem (legacy PC-3C form). | H-SUPPRESSION-DISCHARGE |
 | **H-LEGACY-CHAIN** | The cited legacy evidence chain is sound as recorded; TSv2 re-validation pending (migration plan M1/M2). Carried by every legacy-translated T6 entry until its pointers are migration-clean. | `governance/migration-plan.md` M2 |
@@ -44,6 +46,8 @@ elsewhere; pointer mandatory). Closing a gate never silently promotes a claim;
 promotions follow `governance/claim-standard.md` §5.
 
 ## History
+
+- 2026-06-06: registered **H-ADM-COH** and **SC-SCOPE** as named hypotheses for the B1 Reading-H class-wide T6-CONDITIONAL promotion (operator-authorized).
 
 - 2026-06-05 — Registry created (bootstrap).
 - 2026-06-05 — Migration batch 1 (plan phase M1): H-LAYER / H-A0 placeholder entries replaced by

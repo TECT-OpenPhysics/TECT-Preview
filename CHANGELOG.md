@@ -5,6 +5,35 @@ not pillar counts.
 
 ---
 
+## [B1-T6-PROMOTION] Reading-H class-wide selection promoted T5 -> T6 CONDITIONAL (operator-authorized) — 2026-06-06
+
+- **Operator directive**: proceed with item 1 (the U1 Reading-H T6 promotion).
+- **Promotion**: B1-RH-ENUM T5 -> **T6 CONDITIONAL on {H-LAYER, H-A0,
+  H-ADM-COH, SC-SCOPE}**. Statement: Reading-H is selected among all
+  admissible competitors of the H-ADM-COH amended class at second-cumulant
+  scope (the selection SIGN). Proof = CASE SPLIT — bulk via the layer
+  margin (Prop A, m=+4.32e-3) + beyond-layer bound (STEP-5B closure, floors
+  x59.4/x8.8/x2.6); near-gap small-amplitude via the structural floor
+  (R-001/R-U10-3, unconditional, 14/14).
+- **Registrations**: H-ADM-COH and SC-SCOPE added to claims/GATES.md as
+  named hypotheses (linter requires registration). STEP-5B removed from
+  B1.open_gates (CLOSED-CONDITIONAL; its condition H-ADM-COH now a named
+  hypothesis). Tier-monotonicity satisfied (A1 sub-T6 dep covered by named
+  hypotheses); lint PASS (18 claims, 22 gates/hypotheses).
+- **Self-adversarial review (5 objections)**: case-split consistency,
+  SC-SCOPE substantiveness, ESTIMATOR-UPGRADE, H-A0 non-circularity,
+  enumerated-scope — none UPHELD as blocker (2 dismissed, 3
+  valid-with-mitigation as named hypotheses / open items).
+- **Honest scope**: T6 is the SIGN, not unconditional, not all-orders
+  (SC-SCOPE substantive: third-cumulant endpoint marginal), not
+  precise-margin (ESTIMATOR-UPGRADE open), not mu^2-robust
+  (ROBUSTNESS-MU2 open). Unrestricted class = DR-2 (research-grade).
+- New note reading-h-t6-entry-260606-260606-v2.0 (v1.0 PROPOSAL
+  superseded; FORM-CHECK PASS, Overfull 0). B1 card/narrative updated.
+  Chain GREEN.
+
+---
+
 ## [R-U10-3-RESOLVED] Near-gap protection gate resolved: the convention remainder is common-mode — 2026-06-06
 
 - **Operator-recommended direction**: repair R-U10-3 (the near-gap blocker

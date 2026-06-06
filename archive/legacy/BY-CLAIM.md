@@ -24,7 +24,7 @@ listed so migration debt is visible per claim.
 
 Reproduction: `cd archive/legacy/scripts && python Math426_g4_kernel_reconciliation.py && python Math435_g6_corrected_variable_cascade.py`
 
-## B1-RH-ENUM — Reading-H selection within enumerated condensate ensembles  (T5)
+## B1-RH-ENUM — Reading-H selection within enumerated condensate ensembles  (T6)
 
 - `archive/legacy/notes/Math427/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec-260604-v1.1.tex.txt`
 - `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt`

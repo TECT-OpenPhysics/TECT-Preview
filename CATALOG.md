@@ -6,7 +6,7 @@
 
 Generated: 2026-06-06
 
-**267 artefacts** · superseded versions kept: 26 · machine-readable twin: `verification/catalog.json`
+**269 artefacts** · superseded versions kept: 27 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -18,10 +18,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-CONV/LINEAGE.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `c16a9a75d13b` |
 | `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `3f928a41f2cf` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `2292f9db20e7` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `54c76ae55cc3` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `411f911efba0` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `609662842feb` |
-| `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `5e406ca1601a` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `8040e1e6382f` |
+| `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `af65dcf45507` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `41044da10913` |
 | `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `588963d52bc9` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
 | `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `ea6d77ccad91` |
@@ -90,8 +90,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/neargap-protection-lemma-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `97b3e90f889d` |
 | `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `ae14d63d5222` |
 | `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `9e88ccb7d2ce` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `a4aefa229414` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `0342c430c8cd` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `328f58312bef` |
-| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `c058b5748d8c` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `3f40353e78a8` |
 | `claims/B1-RH-ENUM/notes/t6-entry-composition-audit-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `87f971acd233` |
 | `claims/B1-RH-ENUM/notes/t6-entry-composition-audit-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `8ac7bf4cee0d` |
 | `claims/B1-RH-ENUM/notes/t6-mainline-session-consolidation-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `b09f027d7b0c` |
@@ -273,7 +275,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/scripts/build_lineage.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `575129490f51` |
 | `verification/scripts/build_note_pdf.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `833576292f13` |
 | `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
-| `verification/scripts/commit_watcher.ps1` | — | — | — | — | ACTIVE | `b6e61a0b69df` |
+| `verification/scripts/commit_watcher.ps1` | — | — | — | — | ACTIVE | `34d2f2ba3ad4` |
 | `verification/scripts/lint_claims.py` | — | 2026-06-05 | 2026-06-05 | v1.2.0 | ACTIVE | `ffcd0336747a` |
 | `verification/scripts/release_check.py` | — | 2026-06-05 | 2026-06-05 | v1.0.3 | ACTIVE | `cf66a004e994` |
 | `verification/templates/note-preamble.tex` | — | — | — | — | ACTIVE | `0fb413c1bdd0` |
@@ -300,9 +302,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
-| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `18151dbd03d1` |
+| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `6e58b6aecc22` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `7c65dda876ca` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `ba31be2946aa` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `f4f9aad4c36b` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 
@@ -323,8 +325,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `1b373f25b1dc` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `fa94f50817a8` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `0798682321dc` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `78bc184de369` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `f8ff43230c04` |
