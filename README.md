@@ -27,6 +27,7 @@ The operating principle of this repository:
 | `CLAIMS.md` | Master claim ledger (auto-generated — start here) | P1 |
 | `CATALOG.md` | Every artefact with versions, dates, claim links (auto-generated) | P1 |
 | `RESULTS-LEDGER.md` | Standalone-publishable results harvested from the claims (curated) | P1 |
+| `strategy/` | Non-tier-bearing strategy / analysis / decision-rationale notes (route planning, impact studies) | P1 |
 | `ROADMAP.md` | 6-Stage roadmap v2 with exit conditions and current status | P1 |
 | `GOVERNANCE.md` | Operating constitution (tiers, gates, registration rules) | P1 |
 | `REVIEWING.md` | How to review or attack TECT in 30 minutes | P1 |

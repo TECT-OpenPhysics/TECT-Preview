@@ -6,6 +6,7 @@
  * __version__ 1.1.0 · first issued 2026-06-05 · issued 2026-06-06
  * 1.0.1: exclude claims/_TEMPLATE from the live ledger (same defect as build_wiki 1.0.1)
  * 1.1.0: live per-claim Development lineage (LINEAGE.md) + Results-ledger route
+ * 1.1.1: strategy/ route (non-tier-bearing analysis notes)
  */
 "use strict";
 
@@ -199,6 +200,7 @@ const routes = {
   "predictions": () => mdPage("Prediction ledger", "predictions/prediction-ledger.md"),
   "reviewing": () => mdPage("How to review (or attack) TECT", "REVIEWING.md"),
   "results": () => mdPage("Standalone-publishable results (R-NNN)", "RESULTS-LEDGER.md"),
+  "strategy": () => mdPage("Strategy & analysis notes", "strategy/INDEX.md"),
   "lineage-policy": () => mdPage("Development-history policy", "governance/development-history.md"),
   "changelog": () => mdPage("Changelog", "CHANGELOG.md"),
 };

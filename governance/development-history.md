@@ -74,8 +74,61 @@ the claim's tier or the gate state.
 - `CLAIMS.md` is the current-state ledger. `LINEAGE.md` is the path that led to
   the current state. `RESULTS-LEDGER.md` is the reusable harvest from that path.
 
+## 7. Record taxonomy: where each kind of record goes (binding from 2026-06-06)
+
+Records are classified by FUNCTION, not by topic. The decision tree (apply
+top-down; the first match wins):
+
+1. **Does it establish / advance / refute a specific claim's status (tier or
+   gate)?** -> `claims/<ID>/notes/<slug>-<dates>-vN.M.tex.txt` (a TIER-BEARING
+   PROOF NOTE: versioned, immutable, FORM-CHECK + PDF, reproduction package;
+   feeds `claims/<ID>/LINEAGE.md`). This is "theory progression" -- the only
+   record kind that can move a tier or flip a gate.
+2. **Is it a reusable theorem/technique extracted from a claim?** -> a row in
+   `RESULTS-LEDGER.md` (curated; points back to the proof note).
+3. **Is it a refutation / dead branch / retraction?** -> `negative-results/registry.md`.
+4. **Is it a binding rule / process?** -> `governance/`.
+5. **Is it forward-looking STRATEGY / ANALYSIS / decision-rationale that does
+   NOT change any claim's status?** -> `strategy/<slug>-<YYMMDD>.md`
+   (NON-tier-bearing; see below). Examples: route/attack-program planning,
+   impact or dependency analyses ("if X were proven, what becomes
+   unnecessary"), tradeoff studies, prioritisation rationale.
+6. **Is it the development trace itself?** -> generated `claims/<ID>/LINEAGE.md`
+   (auto; never hand-written).
+
+### 7.1 The `strategy/` directory (NEW, non-tier-bearing)
+
+- **Purpose**: capture the REASONING that steers theory direction without
+  itself proving anything. A strategy note may CITE claims, gates, and
+  results by ID, and may recommend a tier action, but it NEVER performs one
+  and NEVER appears in a claim's tier/hypothesis fields.
+- **Format**: Markdown (`.md`, English-only). Lighter than proof notes -- no
+  PDF, no FORM-CHECK, no reproduction package. Light inline math is fine.
+- **Naming**: `strategy/<descriptive-slug>-<YYMMDD>.md` (first-issue date).
+  Strategy notes are LIVING documents: they may be updated in place (atomic
+  writes only) with an internal `## Revisions` log, because -- unlike proof
+  notes -- they are not citable-at-version immutable artefacts. If a strategy
+  analysis HARDENS into a claim, it graduates to a `claims/<ID>/notes/` proof
+  note and the strategy note points to it.
+- **Index**: `strategy/INDEX.md` lists every strategy note with one-line
+  purpose + the claims/gates it bears on. Curated.
+- **Separation guarantee**: strategy notes are NOT parsed by
+  `build_lineage.py` (lineage stays pure theory-progression) and carry no
+  tier semantics. The release gate's English-only check still applies.
+
+### 7.2 Why this matters
+
+The operator observation (2026-06-06): theory-progression notes and
+strategic/meta records were accumulating together, blurring "what was proven"
+with "what we were thinking about doing." Keeping `claims/<ID>/notes/`
+exclusively tier-bearing -- and routing all non-tier-bearing reasoning to
+`strategy/` -- preserves the verification-first invariant that a claim's
+LINEAGE shows only steps that actually moved its status.
+
 ## 6. History
 
+- 2026-06-06: §7 record taxonomy + `strategy/` directory added (route
+  non-tier-bearing strategy/analysis records out of `claims/<ID>/notes/`).
 - 2026-06-06: created after the operator observed that the note pile had lost
   its before/after legibility. `build_lineage.py` v1.0.0; `RESULTS-LEDGER.md`
   seeded with R-001..R-009 (the B5 STEP-5B arc); B5/B1/B2 narratives written.

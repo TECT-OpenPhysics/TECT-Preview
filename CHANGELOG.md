@@ -5,6 +5,28 @@ not pillar counts.
 
 ---
 
+## [RECORD-TAXONOMY] Record-kind decision tree + strategy/ directory; DR-2 impact analysis — 2026-06-06
+
+- **Operator directive**: before recording the DR-2 analysis, decide how to
+  separate theory-progression records from other (strategy/meta) records.
+- **Policy (governance/development-history.md §7)**: records classified by
+  FUNCTION via a top-down decision tree. Tier-bearing PROOF NOTES (the only
+  records that move a tier/gate) stay in claims/<ID>/notes/ and feed
+  LINEAGE; reusable results -> RESULTS-LEDGER; refutations ->
+  negative-results/; rules -> governance/; and forward-looking
+  STRATEGY/ANALYSIS that changes no claim status -> the NEW strategy/
+  directory (non-tier-bearing, .md, not parsed by build_lineage.py, so the
+  LINEAGE stays pure theory-progression).
+- **strategy/** created with INDEX.md + the first note
+  dr2-impact-analysis-260606.md: what an unconditional DR-2 bound would
+  subsume (the H-ADM-COH admissibility ladder + H-KBAL lift + 20/9 route +
+  conditional N_max region) vs. what survives (R-001 floor, Prop A layer
+  margin, near-gap floor, SC-SCOPE, and R-002/3/4 which DR-2 is BUILT FROM).
+  Conclusion: DR-2 = optional unconditional-upgrade track, NOT critical path.
+- README registers strategy/. Chain GREEN.
+
+---
+
 ## [HA0-TO-HANCHOR] H-A0 replaced by H-ANCHOR via the sign-decomposition theorem (operator-authorized) — 2026-06-06
 
 - **Operator directive**: proceed with item 3 (H-A0 -> H-ANCHOR).

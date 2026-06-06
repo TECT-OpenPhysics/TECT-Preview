@@ -6,7 +6,7 @@
 
 Generated: 2026-06-06
 
-**275 artefacts** · superseded versions kept: 29 · machine-readable twin: `verification/catalog.json`
+**277 artefacts** · superseded versions kept: 29 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -299,8 +299,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `publish/website/README.md` | — | — | — | — | ACTIVE | `94a2cfae6b72` |
-| `publish/website/app.js` | — | — | — | — | ACTIVE | `5960d368e438` |
-| `publish/website/index.html` | — | — | — | — | ACTIVE | `1b713b2fbae4` |
+| `publish/website/app.js` | — | — | — | — | ACTIVE | `39282490fce4` |
+| `publish/website/index.html` | — | — | — | — | ACTIVE | `ea593760e18c` |
 | `publish/website/style.css` | — | — | — | — | ACTIVE | `87a4b41b5e4d` |
 
 ## Registries and ledgers
@@ -313,13 +313,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `385063d064e8` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `f4f9aad4c36b` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
+| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `517c2a94fed1` |
 
 ## Governance policies
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `governance/claim-standard.md` | — | — | — | — | ACTIVE | `a754753e6496` |
-| `governance/development-history.md` | — | — | — | — | ACTIVE | `651a1ec2bb73` |
+| `governance/development-history.md` | — | — | — | — | ACTIVE | `4264bbdb8791` |
 | `governance/migration-plan.md` | — | — | — | — | ACTIVE | `8391b2c83152` |
 | `governance/naming-and-versioning.md` | — | — | — | — | ACTIVE | `3cfcede1b9ac` |
 | `governance/publication-tiers.md` | — | — | — | — | ACTIVE | `fbd6ff2c40e7` |
@@ -331,11 +332,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `db6578b07999` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `9da1c1d247aa` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `3f3db0b6c6d6` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
-| `README.md` | — | — | — | — | ACTIVE | `f8ff43230c04` |
+| `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
 | `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `ed4e3e0da2cf` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
@@ -348,6 +349,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
 | `reviews/README.md` | — | — | — | — | ACTIVE | `ef1a56a7aee1` |
+| `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
