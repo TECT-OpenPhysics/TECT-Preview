@@ -1,0 +1,86 @@
+{
+  "script": "ha0_sign_decomposition.py",
+  "version": "1.0.0",
+  "constants": {
+    "M_c": 0.026543209876543204,
+    "m_w": 0.03924074074074072,
+    "m_star": 0.30452570866744433,
+    "M_R": 0.10941432918723439,
+    "m_c": 19.96089275314113,
+    "ratio_anchor": 7.760447507334592,
+    "ratio_MR_Mc": 4.122121239146971
+  },
+  "claims": [
+    {
+      "name": "M_c_closed_form",
+      "passed": true,
+      "detail": "(M_c = -u/(10v) = 0.0265432 = 43/1620)"
+    },
+    {
+      "name": "m_w_window",
+      "passed": true,
+      "detail": "(m_w = mu2 + 15 v M_c^2 = 0.0392407)"
+    },
+    {
+      "name": "gap_equation_g_at_mstar",
+      "passed": true,
+      "detail": "(g(m*) = 2.59e-14 ~ 0; m* = 0.304526)"
+    },
+    {
+      "name": "H_ANCHOR_mstar_gt_mw",
+      "passed": true,
+      "detail": "(m* = 0.30453 > m_w = 0.03924: ratio x7.76)"
+    },
+    {
+      "name": "anchor_MR_gt_Mc",
+      "passed": true,
+      "detail": "(M_R = 0.109414 > M_c = 0.026543: ratio x4.12)"
+    },
+    {
+      "name": "L1_Mprime_negative",
+      "passed": true,
+      "detail": "(max M' over [0.020,0.609] = -5.24e-02 < 0)"
+    },
+    {
+      "name": "m_c_above_mstar",
+      "passed": true,
+      "detail": "(m_c = 19.9609 > m* = 0.3045; M(m_c)=M_c)"
+    },
+    {
+      "name": "m_c_above_mw",
+      "passed": true,
+      "detail": "(m_c = 19.9609 > m_w = 0.0392: needed for the L3 chain)"
+    },
+    {
+      "name": "L2_g_decreasing_on_window",
+      "passed": true,
+      "detail": "(max g' on (0,m_c] = -1.0033 < 0; u_eff>=0, M'<0)"
+    },
+    {
+      "name": "L3_closed_form_bound",
+      "passed": true,
+      "detail": "(g(m) < m_w - m for all m > m_c: e.g. g(19.981)=-20.0101 < -19.9416)"
+    },
+    {
+      "name": "L3_g_negative_beyond_window",
+      "passed": true,
+      "detail": "(g < 0 for m > m_c since m_c > m_w; max = -20.0101)"
+    },
+    {
+      "name": "F0prime_neg_below_mstar",
+      "passed": true,
+      "detail": "(F_0' < 0 on (0,m*): max = -1.61e-03)"
+    },
+    {
+      "name": "F0prime_pos_above_mstar",
+      "passed": true,
+      "detail": "(F_0' > 0 on (m*,inf): min = 1.43e-03)"
+    },
+    {
+      "name": "unique_min_at_mstar",
+      "passed": true,
+      "detail": "(F_0'(m*) = -1.94e-15 ~ 0: strict global minimum, H-A0 (U)+(Z) as theorem mod G-A0-DUI)"
+    }
+  ],
+  "all_pass": true
+}

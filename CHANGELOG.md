@@ -5,6 +5,32 @@ not pillar counts.
 
 ---
 
+## [HA0-TO-HANCHOR] H-A0 replaced by H-ANCHOR via the sign-decomposition theorem (operator-authorized) — 2026-06-06
+
+- **Operator directive**: proceed with item 3 (H-A0 -> H-ANCHOR).
+- **Sign-decomposition theorem (G-A0-VER CLOSED, 14/14)**: F_0'(m) =
+  (1/2)M'(m)g(m) with M'<0 (L1), g strictly decreasing on the window M>=M_c
+  (L2), g < m_w - m beyond it (L3, m_c=19.96), unique zero g(m*)=0 (to
+  1e-14) => unique minimum at m*. Anchor inequalities m*>m_w (x7.76) and
+  M_R>M_c (x4.12) verified closed-form. So H-A0's A=0 uniqueness + zero-at-
+  gap is a THEOREM modulo the single anchor inequality and textbook DUI.
+- **Replacement executed**: H-A0 -> H-ANCHOR (m* > m_w, closed-form) +
+  G-A0-DUI (DUI regularity, textbook). H-ANCHOR is strictly weaker than
+  H-A0; the quadrature-scheme curve-shape certification and the 5.5e-3
+  scheme systematic EXIT the load-bearing chain. B2 hyps {H-LAYER, H-A0}
+  -> {H-LAYER, H-ANCHOR}; B1 hyps update H-A0 -> H-ANCHOR. Both T6
+  theorems strengthen (weaker hypothesis); no tier-number change.
+- **Registrations**: H-ANCHOR (hypothesis) + G-A0-DUI (gate, textbook) in
+  GATES.md; H-A0 row marked REPLACED. lint PASS (18 claims, 24 gates).
+- **Self-adversarial review (5 objections)**: G-A0-DUI textbook-ness,
+  m*-as-fact, H-ANCHOR-genuinely-weaker, no-T6-break, mu^2-robustness —
+  none upheld.
+- New script ha0_sign_decomposition.py (14/14) + run artefact; note
+  ha0-removal-pathway v2.0 (v1.0 superseded); R-011 in results ledger.
+  Chain GREEN.
+
+---
+
 ## [B5-T5-ASSIGNMENT] Beyond-layer bound assigned T4 -> T5 PINNED-CLOSURE (operator-authorized) — 2026-06-06
 
 - **Operator directive**: proceed with item 2 (B5 full-T5), without an

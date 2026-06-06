@@ -21,8 +21,8 @@ reproduction commands, and history live on the claim cards.
 
 | Claim | Title | Tier | Lifecycle | Evidence | Hypotheses | Open gates |
 |---|---|---|---|---|---|---|
-| [B1-RH-ENUM](claims/B1-RH-ENUM/claim.md) | Reading-H selection within enumerated condensate ensembles | T6 | ACTIVE | ANALYTIC, EXECUTED | H-LAYER, H-A0, H-ADM-COH, SC-SCOPE | ESTIMATOR-UPGRADE, ROBUSTNESS-MU2, G3PB-III |
-| [B2-PROPA-HLAYER](claims/B2-PROPA-HLAYER/claim.md) | Proposition A as a conditional theorem on {H-LAYER, H-A0} | T6 | ACTIVE | ANALYTIC, CONDITIONAL | H-LAYER, H-A0 | STEP-5B |
+| [B1-RH-ENUM](claims/B1-RH-ENUM/claim.md) | Reading-H selection within enumerated condensate ensembles | T6 | ACTIVE | ANALYTIC, EXECUTED | H-LAYER, H-ANCHOR, H-ADM-COH, SC-SCOPE | ESTIMATOR-UPGRADE, ROBUSTNESS-MU2, G3PB-III |
+| [B2-PROPA-HLAYER](claims/B2-PROPA-HLAYER/claim.md) | Proposition A as a conditional theorem on {H-LAYER, H-A0} | T6 | ACTIVE | ANALYTIC, CONDITIONAL | H-LAYER, H-ANCHOR | STEP-5B |
 | [B3-BCC-STRUCT](claims/B3-BCC-STRUCT/claim.md) | BCC structural selection among tested ordered condensates | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | G3PB-III |
 | [B4-MASS-GAP](claims/B4-MASS-GAP/claim.md) | BCC ground-state uniqueness within the single-mode constraint cone | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
 | [B5-BEYOND-LAYER-BOUND](claims/B5-BEYOND-LAYER-BOUND/claim.md) | Pattern-generic Gershgorin reduction of the beyond-layer bound | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |

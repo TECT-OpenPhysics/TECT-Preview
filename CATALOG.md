@@ -6,7 +6,7 @@
 
 Generated: 2026-06-06
 
-**271 artefacts** · superseded versions kept: 28 · machine-readable twin: `verification/catalog.json`
+**275 artefacts** · superseded versions kept: 29 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -21,11 +21,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `411f911efba0` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `609662842feb` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `af65dcf45507` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `41044da10913` |
-| `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `588963d52bc9` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `caff68b4cc3d` |
+| `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `3915345eeff7` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
-| `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `ea6d77ccad91` |
-| `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `34c4a63de48f` |
+| `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `3a99335a4ad3` |
+| `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `a43ce9f9d5cd` |
 | `claims/B3-BCC-STRUCT/LINEAGE.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `727d416ed6e0` |
 | `claims/B3-BCC-STRUCT/claim.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `3164a060ce35` |
 | `claims/B3-BCC-STRUCT/status.json` | B3-BCC-STRUCT | — | — | — | ACTIVE | `e22335660613` |
@@ -102,8 +102,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/useries-triage-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `01b69469edc0` |
 | `claims/B1-RH-ENUM/notes/useries-verification-script-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `f7cd820c620a` |
 | `claims/B1-RH-ENUM/notes/useries-verification-script-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `7f7995978cd4` |
+| `claims/B2-PROPA-HLAYER/notes/ha0-removal-pathway-260606-260606-v2.0.pdf` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `4f36ade2468c` |
+| `claims/B2-PROPA-HLAYER/notes/ha0-removal-pathway-260606-260606-v2.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `b512cebe3e77` |
 | `claims/B2-PROPA-HLAYER/notes/ha0-removal-pathway-260606-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `02d4eda6a99c` |
-| `claims/B2-PROPA-HLAYER/notes/ha0-removal-pathway-260606-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `9716cbe94300` |
+| `claims/B2-PROPA-HLAYER/notes/ha0-removal-pathway-260606-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `6cf64f6e20da` |
 | `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.1 | SUPERSEDED | `318e68be1aef` |
 | `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.2.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.2 | SUPERSEDED | `e037afe0c505` |
 | `claims/B2-PROPA-HLAYER/notes/proposition-a-migration-revalidation-260605-260605-v1.3.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.3 | SUPERSEDED | `2a3b0e0b9276` |
@@ -256,6 +258,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/audit_recheck.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `2bd9a49f14d4` |
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/step5_class_closure.json` | B2-PROPA-HLAYER | 2026-06-04 | 2026-06-04 | — | ACTIVE | `5db00cd0f578` |
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/summary.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `461bb94f9dd3` |
+| `claims/B2-PROPA-HLAYER/runs/260606-ha0-sign-decomposition/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `d16ec63a1618` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | — | ACTIVE | `705268333be1` |
 
 ## Domain codes
@@ -264,6 +267,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `codes/README.md` | — | — | — | — | ACTIVE | `1a99dfac3bfc` |
 | `codes/vacuum/beyond_layer_gershgorin_bound.py` | — | — | — | — | ACTIVE | `81c5ab7e597e` |
+| `codes/vacuum/ha0_sign_decomposition.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `1b53063ea6fa` |
 | `codes/vacuum/neargap_common_mode_repair.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `025ad32b1bb3` |
 | `codes/vacuum/t6_mainline_useries_checks.py` | — | 2026-06-06 | 2026-06-06 | v0.2.0 | ACTIVE | `e97039d7183f` |
 
@@ -306,7 +310,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `6e58b6aecc22` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `ba31be2946aa` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `385063d064e8` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `f4f9aad4c36b` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 
@@ -327,12 +331,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `3a07ca0dad17` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `c3ea94130d85` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `db6578b07999` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `3f3db0b6c6d6` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `f8ff43230c04` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `61576b217b58` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `ed4e3e0da2cf` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
 
