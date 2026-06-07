@@ -1,0 +1,135 @@
+% =============================================================================
+% Title: SC-SCOPE scope decision: all-orders feasible for I<=1e-3, second-cumulant accepted at the I=2e-3 endpoint
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: DECISION RECORD (operator-authorized 2026-06-07). Capstone of the SC-SCOPE endpoint arc (M-ENDPOINT -> GHAT4-PERTRANSFER -> joint -> joint-pairing). The all-orders third-order lift is FEASIBLE for I<=1e-3; at the I=2e-3 endpoint it is NOT closable by per-transfer/pairing means (paired x0.905) and second-cumulant scope is formally ACCEPTED there. SC-SCOPE remains B1's named second-cumulant hypothesis (tier unchanged). No tier/gate flip beyond this scope acceptance.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Records the operator decision to accept
+%        second-cumulant scope at the I=2e-3 endpoint and consolidates the arc.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This note records the operator-authorized decision (2026-06-07) on the SC-SCOPE
+all-orders endpoint, and consolidates the endpoint arc into one place. SC-SCOPE
+is the named second-cumulant hypothesis of the B1 Reading-H T6 selection; the
+"all-orders lift" is the separate question of whether the third-cumulant
+corrections preserve the selection at every certified intensity. This note does
+not change any tier.
+
+\section*{2. The arc (what was established)}
+
+\begin{itemize}
+\item \textbf{M-ENDPOINT} (scscope-mendpoint-evaluation v1.1): the endpoint
+dressing variance $M(0.33675)=0.10495$ evaluated directly (cross-check $0.61\%$);
+the sunset-axis endpoint is $\times1.13 > 1$ dressed (the U4 $\times0.97$ was a
+frozen-coupling artefact).
+\item \textbf{GHAT4-PERTRANSFER} (scscope-endpoint-joint-assessment v1.0): the
+per-transfer quartic-difference form factor $\widehat{G^4}(t)=(J\!*\!J)(t)$ on the
+realized chords; convention-free shape reduction $0.64$; quartic-difference alone
+$\times1.29 > 1$.
+\item \textbf{Joint endpoint} (same note): the individually-positive channels
+(2nd $\times2.60$, sunset $\times1.13$, quartic $\times1.29$, tadpole $0$) JOINTLY
+over-consume the layer margin by $\times1.32$ $\Rightarrow$ additive joint
+$\times0.757 < 1$.
+\item \textbf{Joint incompatible-pairing} (scscope-joint-pairing v1.0): the
+most-favourable pairing recovers $\times0.757 \to \times0.905$ but not unity; the
+sunset ALONE is $\times1.076$ (near-saturating). Per-transfer/pairing refinements
+are exhausted.
+\end{itemize}
+
+\section*{3. The intensity profile and the decision}
+
+The endpoint obstruction is confined to the thinnest intensity. With the
+recomputed second-order floors $\rho = (\times59.4,\times8.8,\times2.6)$ at
+$I = (4\times10^{-4}, 10^{-3}, 2\times10^{-3})$ and the paired joint inflation
+$1 + 1.87 = 2.87$ (endpoint), the all-orders paired joint ratio is
+\[
+I = 4\times10^{-4}: \;\times20.7,\qquad
+I = 10^{-3}: \;\times3.1,\qquad
+I = 2\times10^{-3}: \;\times0.905 .
+\]
+The all-orders third-order lift is thus FEASIBLE for $I \le 10^{-3}$ and
+obstructed only at the $I = 2\times10^{-3}$ endpoint.
+
+\textbf{Operator decision (2026-06-07):} accept second-cumulant scope at the
+$I = 2\times10^{-3}$ endpoint. The all-orders lift is recorded as feasible for
+$I \le 10^{-3}$; the thinnest endpoint is selected at second-cumulant order. This
+is consistent with -- and already priced into -- the B1 T6 statement, which holds
+at matched second-cumulant order BY THE SC-SCOPE HYPOTHESIS. No tier changes; the
+two non-per-transfer routes (a sharper STEP-5B endpoint floor
+$\rho \gtrsim 3.9$; or a tighter third-cumulant treatment) remain available
+should full all-orders endpoint closure be desired later.
+
+\section*{4. Resulting status}
+
+\begin{itemize}
+\item B1-RH-ENUM: T6 CONDITIONAL on $\{$H-LAYER, H-ADM-COH, SC-SCOPE$\}$ --
+UNCHANGED. SC-SCOPE remains the named second-cumulant hypothesis.
+\item SC-SCOPE all-orders lift: FEASIBLE for $I \le 10^{-3}$; second-cumulant
+ACCEPTED at the $I = 2\times10^{-3}$ endpoint (operator decision). The endpoint
+is no longer an OPEN research action -- it is a recorded scope.
+\item M-ENDPOINT: RESOLVED. GHAT4-PERTRANSFER: per-transfer evaluated.
+ROBUSTNESS-MU2: CLOSED@$[\times0.5,\times2]$-2ND-CUMULANT (earlier this session).
+\end{itemize}
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, 6 code-discipline)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Accepting scope is hiding a failure.''} DISMISSED: the
+failure is fully documented (NG-2026-06-07-scscope-endpoint-joint; the four arc
+notes) with the exact obstruction ($\times0.905$, sunset near-saturating) and the
+named routes to close it. Accepting scope is a recorded decision with a reopening
+path, not a concealment.
+\item[($\beta$)] \emph{``Does the endpoint acceptance weaken B1 T6?''} DISMISSED:
+B1 T6 is second-cumulant BY HYPOTHESIS (SC-SCOPE); the endpoint acceptance is the
+hypothesis, not a new concession.
+\item[($\gamma$)] \emph{``Is the I<=1e-3 feasibility over-claimed?''}
+VALID-with-mitigation: it rests on the cited $R_{\rm sup}$ and the sunset/quartic
+estimates; it is recorded as FEASIBLE (estimate-grade), not PROVED. The endpoint
+negative is the robust part.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- the paired joint ratios
+$\times20.7/\times3.1/\times0.905$ track the second-order floors
+$\times59.4/\times8.8/\times2.6$ divided by the common inflation $2.87$;
+sign-direction -- all third-order channels are costs; limit-case -- at
+$I \le 10^{-3}$ the floor is large enough that the inflation cannot break it,
+consistent with the feasibility statement.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE scope decision (U16)
+Precise statement:       Operator-authorized (2026-06-07): SC-SCOPE all-orders
+                         third-order lift FEASIBLE for I<=1e-3 (paired joint
+                         x3.1 at 1e-3, x20.7 at 4e-4); second-cumulant scope
+                         ACCEPTED at the I=2e-3 endpoint (paired joint x0.905,
+                         not closable by per-transfer/pairing). Capstone of
+                         M-ENDPOINT/GHAT4/joint/pairing.
+Scope:                   SC-SCOPE hypothesis of B1 T6; decision record.
+Dependencies:            scscope-mendpoint-evaluation v1.1; scscope-endpoint-
+                         joint-assessment v1.0; scscope-joint-pairing v1.0;
+                         NG-2026-06-07-scscope-endpoint-joint.
+Evidence grade:          DECISION RECORD over EXECUTED evidence (4 scripts,
+                         all asserts pass).
+Reproduction command:    python codes/vacuum/scscope_joint_pairing.py
+Expected output:         paired endpoint x0.905; feasibility for I<=1e-3.
+Falsification gate:      A STEP-5B endpoint floor rho>~3.9 at I=2e-3 or a tighter
+                         third cumulant (would CLOSE the endpoint all-orders and
+                         supersede the scope acceptance).
+Tier before / after:     No tier change. B1 T6 unchanged. SC-SCOPE: all-orders
+                         FEASIBLE I<=1e-3; 2nd-cumulant ACCEPTED at I=2e-3
+                         endpoint (recorded scope, not an open action).
+No-overclaim statement:  The endpoint is NOT all-orders closed; second-cumulant
+                         scope is accepted there by operator decision. I<=1e-3
+                         feasibility is estimate-grade. B1 T6 selection
+                         unaffected (second-cumulant by hypothesis).
+Next required action:    None required for SC-SCOPE (scope accepted). Optional
+                         reopening: sharper STEP-5B endpoint floor. Mainline
+                         moves to B1 ESTIMATOR-UPGRADE / other sectors.
+\end{verbatim}
+}

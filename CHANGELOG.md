@@ -5,6 +5,51 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE scope decision: all-orders feasible I<=1e-3, 2nd-cumulant accepted at the endpoint] - 2026-06-07
+
+- **Operator decision** (authorized 2026-06-07): accept second-cumulant scope at
+  the I=2e-3 endpoint. The SC-SCOPE all-orders third-order lift is recorded as
+  FEASIBLE for I<=1e-3 (paired joint x3.1 at 1e-3, x20.7 at 4e-4); the thinnest
+  I=2e-3 endpoint is selected at second-cumulant order (per-transfer + pairing
+  exhausted, paired x0.905). Capstone: scscope-scope-decision v1.0 (FORM-CHECK
+  PASS) consolidating M-ENDPOINT -> GHAT4-PERTRANSFER -> joint -> joint-pairing.
+- **No tier change**: B1 T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE}
+  UNCHANGED -- SC-SCOPE is the named second-cumulant hypothesis, so the endpoint
+  acceptance IS the hypothesis. B5 T5 unchanged.
+- **Status recorded**: SC-SCOPE all-orders FEASIBLE for I<=1e-3 / 2nd-cumulant
+  ACCEPTED at I=2e-3 endpoint (GATES.md + B1 card notes). The endpoint is a
+  recorded scope, no longer an open research action. Optional reopening path:
+  STEP-5B endpoint floor rho>~3.9 at I=2e-3.
+- **SC-SCOPE endpoint arc complete this session**: M-ENDPOINT RESOLVED,
+  GHAT4-PERTRANSFER per-transfer evaluated, joint x0.757, joint-pairing x0.905
+  (exhausted), scope accepted. 4 scripts (all asserts pass), 4 notes, 1 honest
+  negative (NG-2026-06-07), R-012/013/014.
+- **Verification**: release-check PASS; pytest 3; FORM-CHECK PASS + OVERFULL 0;
+  doctor READY.
+
+## [SC-SCOPE endpoint: joint incompatible-pairing exhausted] - 2026-06-07
+
+- **Operator directive**: proceed (T-008, the joint incompatible-pairing route).
+  Outcome: carried out; it does NOT close the endpoint -- strengthened honest
+  negative, precisely mapping the obstruction.
+- **Joint pairing** (scscope_joint_pairing.py 4/4, scscope-joint-pairing v1.0):
+  with the maximally-separated peak model (sunset rides J(t) -> small t;
+  quartic-difference R(t) -> t=2q0), max_t[R_s+R_q] = 1.872 < sum of maxima
+  2.435 (pairing helps), but the paired endpoint = rho/(1+1.872) = x0.905 < 1.
+  Because the model is the most favourable, the non-closure is unconditional.
+- **Root cause**: the third-cumulant sunset ALONE is x1.076 at the I=2e-3 corner
+  (near-saturating the x2.6 floor); per-transfer / pairing refinements
+  (M-ENDPOINT, GHAT4-PERTRANSFER, this pairing) are now EXHAUSTED.
+- **Remaining routes (named, non-per-transfer)**: a sharper STEP-5B endpoint
+  floor (rho >~ 3.9 at I=2e-3) OR accept second-cumulant scope at the I=2e-3
+  endpoint. The all-orders lift is FEASIBLE for I<=1e-3 (floor x8.8, paired
+  joint x3.1).
+- **Records**: NG-2026-06-07-scscope-endpoint-joint strengthened;
+  scscope-joint-pairing v1.0 (FORM-CHECK PASS). SC-SCOPE OPEN; B1 T6 UNAFFECTED
+  (SC-SCOPE named hypothesis). No tier/gate flip.
+- **Verification**: release-check PASS; pytest 3; FORM-CHECK PASS + OVERFULL 0;
+  scscope_joint_pairing.py exit 0.
+
 ## [SC-SCOPE ENDPOINT: GHAT4-PERTRANSFER evaluated + joint honest-negative] - 2026-06-07
 
 - **Operator directive**: drive the SC-SCOPE critical path to closure. Outcome:

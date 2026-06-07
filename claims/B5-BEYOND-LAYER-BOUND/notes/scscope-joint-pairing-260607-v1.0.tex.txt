@@ -1,0 +1,149 @@
+% =============================================================================
+% Title: SC-SCOPE endpoint: the joint incompatible-pairing argument is exhausted (strengthened honest negative)
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders lift; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: assessment note; STRENGTHENED HONEST NEGATIVE. The joint incompatible-pairing argument (the path registered by scscope-endpoint-joint-assessment v1.0) recovers only x0.757 -> x0.905 at the I=2e-3 endpoint; even the MOST FAVOURABLE pairing does NOT close it. Root cause: the third-cumulant sunset alone is near-saturating (x1.076). SC-SCOPE all-orders endpoint stays OPEN; per-transfer/pairing refinements are EXHAUSTED; the remaining routes are a larger second-order STEP-5B endpoint floor or accepting second-cumulant scope at the endpoint. B1 T6 UNAFFECTED. No tier/gate flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Tests the joint incompatible-pairing route.
+%        With R_s(t) = R_s_max J(t)/J(0) (sunset, peaks t->0) and R_q(t) =
+%        R_q_max Phi(t)/Phi_max (quartic-difference, peaks t=2q0) -- the
+%        maximally-separated peaks, so a LOWER bound on the true joint inflation
+%        -- max_t[R_s+R_q] = 1.872 < sum of maxima 2.435, giving paired endpoint
+%        x0.905 < 1. Sunset alone x1.076. Honest negative strengthened.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The joint-assessment note (scscope-endpoint-joint-assessment v1.0) found the
+additive endpoint joint at $\times0.757 < 1$ and registered the joint
+incompatible-pairing argument as the route to recover the $\times1.32$ deficit.
+This note carries out that route and reports the outcome: it does NOT close the
+endpoint. Scope: the $I = 2\times10^{-3}$ endpoint; the pairing is evaluated in
+its most favourable form, so the conclusion is robust.
+
+\section*{2. The pairing argument and why it is the best case}
+
+The two surviving third-order channels peak at different transfers: the sunset
+per-transfer cost rides $J(t)$ (largest at small $t$), the quartic-difference
+inflation $R(t) \propto \widehat{G^4}(t)/J(t)$ peaks at $t = 2q_0$
+(scscope\_ghat4\_pertransfer). Modelling
+\[
+R_s(t) = R_{s,\max}\,\frac{J(t)}{J(0)},\qquad
+R_q(t) = R_{q,\max}\,\frac{\Phi(t)}{\Phi_{\max}},
+\qquad R_{s,\max}=1.42,\ R_{q,\max}=1.02,
+\]
+with maximally-separated peaks, the joint inflation is bounded by
+$\max_t[R_s(t)+R_q(t)]$ rather than the additive $R_{s,\max}+R_{q,\max}$. Because
+the peaks are maximally separated, this model gives the SMALLEST possible joint
+max: any true per-transfer structure has peaks no further apart, so the true
+joint inflation is $\ge$ this. Hence a non-closure here is unconditional.
+
+\section*{3. Result: the endpoint still does not close}
+
+Over the realized chords,
+\[
+\max_t[R_s(t)+R_q(t)] = 1.872 \;<\; R_{s,\max}+R_{q,\max} = 2.435
+\]
+(the pairing genuinely helps), but
+\[
+\boxed{\;\text{paired endpoint} = \frac{\rho}{1+\max_t[R_s+R_q]}
+= \frac{2.6}{2.872} = \times0.905 \;<\; 1.\;}
+\]
+The maximum sits at the smallest transfer $t = t_{\min}$, where the sunset is
+near its peak. The root cause is explicit: the sunset ALONE gives
+$\rho/(1+R_{s,\max}) = \times1.076$ -- the third-cumulant sunset already nearly
+saturates the $\times2.6$ second-order floor at the thinnest endpoint, so adding
+even the small-$t$ tail of the quartic-difference ($R_q(t_{\min})=0.63$) pushes
+the joint below unity. This is a structural largeness of the third cumulant at
+$I = 2\times10^{-3}$, not a loose-pairing artefact.
+
+\section*{4. Consequence: per-transfer refinements are exhausted}
+
+The per-transfer programme that resolved M-ENDPOINT (sunset coupling) and
+GHAT4-PERTRANSFER (quartic form factor) and now the joint pairing has been
+carried to completion; it improves the endpoint from the sup-grade $\times1.0$
+inventory to $\times0.905$ but does not reach unity. The SC-SCOPE all-orders
+ENDPOINT therefore does not close by per-transfer/pairing means. The remaining
+routes are genuinely different:
+\begin{itemize}
+\item a LARGER second-order STEP-5B endpoint floor (currently $\rho = 2.6$ at
+$I = 2\times10^{-3}$): if the de-thinned floor were $\gtrsim \times3.9$ the
+paired joint would close ($3.9/2.872 = \times1.36$); this is a B5 STEP-5B
+sharpening, not a third-order task;
+\item or accepting that the all-orders lift holds for $I \le 10^{-3}$ (where the
+floor is $\times8.8$, paired joint $\times3.1$) and the selection at the
+$I = 2\times10^{-3}$ endpoint is at second-cumulant scope.
+\end{itemize}
+
+\section*{5. Impact}
+
+SC-SCOPE stays OPEN at the endpoint; B1 T6 is UNAFFECTED (SC-SCOPE is a named
+hypothesis -- its open status is the tier's explicit condition). The all-orders
+lift is now established as FEASIBLE for $I \le 10^{-3}$ and OBSTRUCTED at the
+$I = 2\times10^{-3}$ endpoint by a genuinely large third cumulant, with the two
+non-per-transfer routes named. M-ENDPOINT, GHAT4-PERTRANSFER and the pairing
+analysis are durable; the negative is a sharp map of the obstruction, not a dead
+end.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, 6 code-discipline)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The sunset model $R_s(t)\propto J(t)$ is unproved.''}
+VALID: it is a model. But it is the MOST FAVOURABLE (maximally separated from the
+quartic peak); a less favourable structure only worsens the joint. The
+non-closure is therefore robust to the model.
+\item[($\beta$)] \emph{``$R_{s,\max}, R_{q,\max}$ inherit the cited estimates.''}
+VALID and bounded: even if $R_{q,\max}\to0$ (quartic-difference fully benign),
+the sunset alone gives $\times1.076$ -- the endpoint margin is intrinsically
+thin, so the verdict (no comfortable closure) does not hinge on the quartic
+estimate.
+\item[($\gamma$)] \emph{``Does this refute the selection at the endpoint?''}
+DISMISSED: it leaves the ALL-ORDERS lift open at the endpoint; the
+second-cumulant selection (the B1 T6 claim) is intact by hypothesis.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- paired $\times0.905$ lies
+between additive $\times0.757$ and unity, as a partial recovery must;
+limit-case -- $R_q\to0$ gives sunset-only $\times1.076$ (consistent with the
+root-cause claim); sign-direction -- all channels are costs (reduce the margin);
+monotonicity -- the combined $R_s+R_q$ decreases from $t_{\min}$ to $2q_0$,
+locating the max at $t_{\min}$ as the table shows.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE joint pairing (U16)
+Precise statement:       Joint incompatible-pairing (most-favourable model):
+                         max_t[R_s(t)+R_q(t)] = 1.872 < sum of maxima 2.435, but
+                         paired endpoint = rho/(1+1.872) = 2.6/2.872 = x0.905 < 1.
+                         Sunset alone x1.076. The SC-SCOPE all-orders endpoint
+                         does NOT close even under the best pairing; per-transfer
+                         refinements are exhausted.
+Scope:                   I=2e-3 endpoint; favourable-pairing model -> lower bound
+                         on the true joint inflation (non-closure unconditional).
+Dependencies:            scscope_ghat4_pertransfer (Phi(t), R_q), scscope_joint_
+                         endpoint (R_s_max, R_q_max, rho); cited estimates.
+Evidence grade:          EXECUTED (scscope_joint_pairing.py 4/4); strengthened
+                         honest negative.
+Reproduction command:    python codes/vacuum/scscope_joint_pairing.py
+Expected output:         joint max 1.872; paired endpoint x0.905; sunset-only
+                         x1.076.
+Falsification gate:      A STEP-5B endpoint floor rho >~ 3.9 at I=2e-3 (would
+                         close the paired joint) or a genuinely tighter third-
+                         cumulant treatment; either CLOSES the endpoint and is
+                         the registered route.
+Tier before / after:     No tier/gate flip. SC-SCOPE: OPEN at the endpoint
+                         (per-transfer/pairing exhausted; x0.905). FEASIBLE for
+                         I<=1e-3. B1 T6 unchanged.
+No-overclaim statement:  Strengthened honest negative: the endpoint does not
+                         close even under the most favourable pairing. The
+                         selection is unaffected (second-cumulant by hypothesis).
+                         Models stated; conclusion robust to them.
+Next required action:    Either a sharper STEP-5B endpoint floor (B5; rho>~3.9 at
+                         I=2e-3) or formal acceptance of second-cumulant scope at
+                         the I=2e-3 endpoint -- an operator decision.
+\end{verbatim}
+}

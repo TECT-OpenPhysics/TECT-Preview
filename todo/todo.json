@@ -55,11 +55,11 @@
     {
       "id": "T-005",
       "title": "Assemble the joint second+third-order endpoint inequality (SC-SCOPE all-orders lift)",
-      "status": "backlog",
+      "status": "done",
       "owner": "unassigned",
       "claim": "B5-BEYOND-LAYER-BOUND",
       "gate": "SC-SCOPE",
-      "note": "BLOCKED on the joint endpoint: scscope_joint_endpoint.py shows 2nd+sunset+quartic jointly x0.757<1 (NG-2026-06-07-scscope-endpoint-joint). Needs T-008 (joint incompatible-pairing) or sharper per-transfer bounds first.",
+      "note": "SUPERSEDED by the 2026-06-07 SC-SCOPE scope decision: 2nd-cumulant accepted at the I=2e-3 endpoint; all-orders feasible for I<=1e-3. Joint inequality not pursued to closure (paired x0.905 exhausted). Reopen only via STEP-5B endpoint floor rho>~3.9.",
       "created": "2026-06-07",
       "updated": "2026-06-07",
       "blocked_by": [
@@ -94,7 +94,7 @@
     {
       "id": "T-008",
       "title": "SC-SCOPE joint incompatible-pairing argument: bound max_t[c_sunset(t)+c_quartic(t)] (sunset peaks small-t, quartic large-t) to recover the x1.32 joint endpoint deficit",
-      "status": "next",
+      "status": "done",
       "owner": null,
       "claim": "B5-BEYOND-LAYER-BOUND",
       "gate": "SC-SCOPE",
@@ -102,7 +102,19 @@
       "created": "2026-06-07",
       "updated": "2026-06-07",
       "blocked_by": []
+    },
+    {
+      "id": "T-009",
+      "title": "SC-SCOPE endpoint decision: sharpen STEP-5B endpoint floor to rho>~3.9 at I=2e-3 (B5) OR accept second-cumulant scope at the I=2e-3 endpoint",
+      "status": "done",
+      "owner": null,
+      "claim": "B5-BEYOND-LAYER-BOUND",
+      "gate": "SC-SCOPE",
+      "note": "Per-transfer + joint-pairing exhausted (paired x0.905). Non-per-transfer routes only. Operator decision: sharper second-order endpoint floor vs accept 2nd-cumulant at the thinnest endpoint (all-orders feasible for I<=1e-3).",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": []
     }
   ],
-  "next_id": 9
+  "next_id": 10
 }
