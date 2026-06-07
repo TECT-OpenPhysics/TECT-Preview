@@ -5,6 +5,24 @@ not pillar counts.
 
 ---
 
+## [commit-watcher v1.2.0: batch-drain fixes the recurring stuck-queue] - 2026-06-07
+
+- **Recurring git problem fixed systemically.** Root cause: commit_watcher.ps1
+  ran `git add --all` + `git commit` PER queued JSON, so with N>1 pending the
+  first commit swept ALL changes and the rest hit "nothing to commit" (exit 1)
+  -> stranded in the queue, messages folded under the oldest (observed
+  2026-06-06 and 2026-06-07, multiple times).
+- **Fix (v1.2.0 BATCH-DRAIN)**: the whole pending queue is staged once and
+  committed as ONE commit with a numbered combined message (per-entry detail
+  stays in CHANGELOG); if there is no staged diff the pending JSONs are moved to
+  done/ with an EMPTYDIFF- marker instead of being stranded; all drained JSONs
+  move to done/ only on commit success. Empty-message and JSON-integrity gates
+  retained.
+- **Docs**: CLAUDE.md §4 and SESSION.md updated -- accumulation is now safe;
+  per-turn draining is a tidiness preference, not a correctness requirement.
+- Tracked-file change only (no claim/tier change). Verified: release-check PASS;
+  pytest 3; doctor READY.
+
 ## [SC-SCOPE scope decision: all-orders feasible I<=1e-3, 2nd-cumulant accepted at the endpoint] - 2026-06-07
 
 - **Operator decision** (authorized 2026-06-07): accept second-cumulant scope at

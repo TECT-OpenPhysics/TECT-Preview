@@ -78,10 +78,13 @@ replacing the manual CLI handoff): the AI writes a commit-request JSON to
 `internal/commit-queue/` at the end of every turn that changes tracked
 files, and the operator-side daemon `verification/scripts/commit_watcher.ps1`
 (run once per session: `.\verification\scripts\commit_watcher.ps1`, or
-`-Once` to drain) performs the commit with the maintainer signature. **Drain
-after EVERY turn that changes files**: the watcher stages all changes per
-queued JSON, so an accumulated queue commits everything under the oldest
-message and scrambles attribution (observed 2026-06-07). The
+`-Once` to drain) performs the commit with the maintainer signature. The
+watcher (v1.2.0+) **BATCH-DRAINS**: an accumulated queue is committed as ONE
+commit with a combined numbered message, and empty-diff leftovers are moved to
+done/ -- so accumulation no longer strands JSONs or scrambles attribution (the
+recurring 2026-06-06/07 failure, now fixed systemically). Draining per turn
+still gives a cleaner 1:1 commit-to-message mapping but is not required for
+correctness. The
 queue is inside `internal/` (P0 — never reaches history). FALLBACK: if the
 watcher is not running, the AI additionally prints the equivalent one-line
 CLI block. Push remains a manual operator action. This closes the

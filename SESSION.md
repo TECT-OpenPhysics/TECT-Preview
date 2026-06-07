@@ -59,9 +59,10 @@ research state lives in the cowork app; it all lives in tracked files here.
    .\verification\scripts\commit_watcher.ps1 -Once      # drain once per turn
    ```
 
-   Drain **after every turn** that changes files — an accumulated queue stages
-   everything under the oldest queued message and scrambles attribution
-   (CLAUDE.md §4).
+   The watcher (v1.2.0+) **batch-drains**: an accumulated queue is committed as
+   ONE combined commit and empty-diff leftovers move to done/, so accumulation
+   is safe. Draining per turn is still tidier (1:1 commit-to-message) but not
+   required for correctness (CLAUDE.md §4).
 
 ---
 

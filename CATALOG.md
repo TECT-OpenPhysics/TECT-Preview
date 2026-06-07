@@ -334,7 +334,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/scripts/build_lineage.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `575129490f51` |
 | `verification/scripts/build_note_pdf.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `833576292f13` |
 | `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
-| `verification/scripts/commit_watcher.ps1` | — | — | — | — | ACTIVE | `34d2f2ba3ad4` |
+| `verification/scripts/commit_watcher.ps1` | — | — | — | — | ACTIVE | `7495831ae646` |
 | `verification/scripts/doctor.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `f98919a116da` |
 | `verification/scripts/lint_claims.py` | — | 2026-06-05 | 2026-06-05 | v1.2.0 | ACTIVE | `ffcd0336747a` |
 | `verification/scripts/release_check.py` | — | 2026-06-05 | 2026-06-05 | v1.0.3 | ACTIVE | `05b356eedb8b` |
@@ -388,15 +388,15 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `62c96cd82c89` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `53ddab023a2b` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `7f54d4c5b1e5` |
-| `CLAUDE.md` | — | — | — | — | ACTIVE | `f17dd3960668` |
+| `CLAUDE.md` | — | — | — | — | ACTIVE | `b8435e52bc62` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
 | `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `99068eabd416` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
-| `SESSION.md` | — | — | — | — | ACTIVE | `8982e85bf57b` |
+| `SESSION.md` | — | — | — | — | ACTIVE | `0266dadcab4d` |
 | `TODO.md` | — | — | — | — | ACTIVE | `c1ee66f05b54` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
