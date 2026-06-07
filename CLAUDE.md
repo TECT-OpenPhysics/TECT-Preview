@@ -11,9 +11,13 @@ is only the session protocol.
 3. `ROADMAP.md` (priority queue)
 4. `CHANGELOG.md` (top entry)
 5. `negative-results/registry.md` (top entries)
+6. `TODO.md` (live task ledger — what is in progress / next)
 
 Then run `date -u +"%Y-%m-%d (%A)"` as the first shell command and emit one
 status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
+
+On a freshly copied workspace, run `python verification/scripts/doctor.py`
+first (readiness gate) and follow `SESSION.md` to resume.
 
 ## 2. Write discipline
 
@@ -40,10 +44,12 @@ status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
   parent to write, not write tracked files itself.
 - Never create files at the repository root beyond the canonical set
   (README, GOVERNANCE, ROADMAP, REVIEWING, CLAIMS, CATALOG, CHANGELOG,
-  CLAUDE.md, .gitignore).
+  RESULTS-LEDGER, TODO, SESSION, CLAUDE.md, requirements.txt, .gitignore).
 - `CATALOG.md` + `verification/catalog.json` are generated — never hand-edit.
   Regenerate with `python verification/scripts/build_catalog.py` after any
   file add/move/version; CI checks sync.
+- `TODO.md` is generated from `todo/todo.json` — never hand-edit; manage with
+  `python verification/scripts/todo.py {list,add,start,done,block,set,render}`.
 
 ## 3. Claim-first discipline
 
@@ -72,7 +78,10 @@ replacing the manual CLI handoff): the AI writes a commit-request JSON to
 `internal/commit-queue/` at the end of every turn that changes tracked
 files, and the operator-side daemon `verification/scripts/commit_watcher.ps1`
 (run once per session: `.\verification\scripts\commit_watcher.ps1`, or
-`-Once` to drain) performs the commit with the maintainer signature. The
+`-Once` to drain) performs the commit with the maintainer signature. **Drain
+after EVERY turn that changes files**: the watcher stages all changes per
+queued JSON, so an accumulated queue commits everything under the oldest
+message and scrambles attribution (observed 2026-06-07). The
 queue is inside `internal/` (P0 — never reaches history). FALLBACK: if the
 watcher is not running, the AI additionally prints the equivalent one-line
 CLI block. Push remains a manual operator action. This closes the
@@ -84,3 +93,21 @@ when manual paste was skipped).
 State multi-turn needs upfront. Label prototype code as prototype. If a proof
 does not close, write the partial result at its honest tier and register the
 obstruction as a named gate — never claim closure that does not hold.
+
+## 6. Code discipline (binding from 2026-06-07)
+
+Full policy: `governance/CODE-DISCIPLINE.md`. Every script under `codes/` and
+`verification/scripts/`:
+
+- **No hardcoded derived numbers** — compute them from the single upstream
+  source; only INPUTS, clearly-labelled test oracles, and tooling thresholds may
+  be literals. (Canonical failure: `MARGIN = 0.00432` pasted instead of
+  recomputed.)
+- **Mandatory adversarial review** before its numbers are cited — sign, factor/
+  convention, units, convergence, hardcode-masking, limit cases — written into
+  the supporting note's devil's-advocate section; invite external review.
+  (Canonical failure: `M' = -J(0)` where the truth is `-J(0)/2`.)
+- **Reproducible + reported** — self-test asserts covering every numerical claim,
+  a JSON artefact under `claims/<ID>/runs/`, standalone `python … ` exits 0, and
+  a chat report stating the file, what it computes, the run command, and the key
+  asserted results so the operator can execute and verify directly.

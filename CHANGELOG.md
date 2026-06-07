@@ -5,6 +5,34 @@ not pillar counts.
 
 ---
 
+## [RESUME-INFRA + CODE-DISCIPLINE] Portable resume system (TODO ledger, doctor, SESSION) + binding code policy - 2026-06-07
+
+- **Operator directive**: (1) binding code discipline -- no hardcoded derived
+  numbers, mandatory adversarial code review, reproducible+reported,
+  external-review-ready; (2) a persistent cowork-manageable TODO + seamless
+  resume on any machine (folder copy + connect cowork), as a PREREQUISITE for
+  multi-person research. No claim-card/tier change this turn (infrastructure).
+- **Persistent task ledger**: todo/todo.json (source) -> TODO.md (generated,
+  root, never hand-edit) via verification/scripts/todo.py
+  (list/add/start/done/block/set/render; --check staleness; --selftest).
+  Seeded T-001..T-007. Replaces the ephemeral per-session cowork task widget,
+  which does not survive a folder copy.
+- **Resume ritual**: SESSION.md (root) -- install (pip install -r
+  requirements.txt = numpy), copy the WHOLE folder (codes/ import
+  archive/legacy/scripts/), connect cowork, run doctor.py, SRP prelude now also
+  reads TODO.md; plus a team-collaboration section.
+- **Readiness gate**: verification/scripts/doctor.py -- interpreter, numpy,
+  canonical files, legacy-constants module, ledger/catalog/lineage/todo sync,
+  optional pdflatex; prints READY / NOT READY + actionable fixes.
+- **requirements.txt**: numpy>=1.24 (everything else is stdlib; pdflatex
+  optional, only for note-PDF FORM-CHECK).
+- **Code policy**: governance/CODE-DISCIPLINE.md (binding). CLAUDE.md: new §6
+  (code discipline), §1 reads TODO.md, §2 canonical-set + TODO.md-generated
+  rule, §4 drain-per-turn.
+- **release_check.py**: + todo --check (TODO.md in sync with todo.json).
+- **Verification**: doctor READY; release-check PASS (ledger/catalog/lineage/
+  todo); pytest 3 passed; todo --selftest PASS; catalog 327.
+
 ## [SC-SCOPE-MENDPOINT + ROBUSTNESS-MU2-MARGIN] M-ENDPOINT evaluated (sunset axis positive) + exact m(mu^2) recomputed (ROBUSTNESS-MU2 closure bar met) - 2026-06-07
 
 - **Operator directive**: advance SC-SCOPE and ROBUSTNESS-MU2. Two

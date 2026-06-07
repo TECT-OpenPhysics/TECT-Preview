@@ -6,7 +6,7 @@
 
 Generated: 2026-06-07
 
-**320 artefacts** · superseded versions kept: 38 · machine-readable twin: `verification/catalog.json`
+**327 artefacts** · superseded versions kept: 38 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -318,8 +318,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/scripts/build_note_pdf.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `833576292f13` |
 | `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
 | `verification/scripts/commit_watcher.ps1` | — | — | — | — | ACTIVE | `34d2f2ba3ad4` |
+| `verification/scripts/doctor.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `f98919a116da` |
 | `verification/scripts/lint_claims.py` | — | 2026-06-05 | 2026-06-05 | v1.2.0 | ACTIVE | `ffcd0336747a` |
-| `verification/scripts/release_check.py` | — | 2026-06-05 | 2026-06-05 | v1.0.3 | ACTIVE | `cf66a004e994` |
+| `verification/scripts/release_check.py` | — | 2026-06-05 | 2026-06-05 | v1.0.3 | ACTIVE | `05b356eedb8b` |
+| `verification/scripts/todo.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `a4f51a5b6ed2` |
 | `verification/templates/note-preamble.tex` | — | — | — | — | ACTIVE | `0fb413c1bdd0` |
 | `verification/templates/note-skeleton.tex.txt` | — | — | — | — | ACTIVE | `2dce540b6619` |
 | `verification/tests/test_lint_claims.py` | — | — | — | — | ACTIVE | `6cca26907a46` |
@@ -355,6 +357,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
+| `governance/CODE-DISCIPLINE.md` | — | — | — | — | ACTIVE | `c08c49155cdf` |
 | `governance/claim-standard.md` | — | — | — | — | ACTIVE | `a754753e6496` |
 | `governance/development-history.md` | — | — | — | — | ACTIVE | `4264bbdb8791` |
 | `governance/migration-plan.md` | — | — | — | — | ACTIVE | `8391b2c83152` |
@@ -368,14 +371,17 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `42a8e7dcc438` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `73d207779794` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `21e8dbf13ee5` |
-| `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
+| `CLAUDE.md` | — | — | — | — | ACTIVE | `f17dd3960668` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
 | `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `ed4e3e0da2cf` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
+| `SESSION.md` | — | — | — | — | ACTIVE | `8982e85bf57b` |
+| `TODO.md` | — | — | — | — | ACTIVE | `47c9e877b58e` |
+| `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
 
@@ -400,4 +406,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `dfe0bfbe1c4f` |
 

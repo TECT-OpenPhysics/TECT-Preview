@@ -1,0 +1,11 @@
+# TECT — Python dependencies for the verification chain and numerical codes.
+# Install:  pip install -r requirements.txt
+#
+# The repository deliberately depends on ONE third-party package; everything
+# else is the Python standard library (json, math, argparse, subprocess, ...).
+numpy>=1.24
+
+# Not pip-installable (optional, only for rebuilding note PDFs via
+# verification/scripts/build_note_pdf.py FORM-CHECK):
+#   - a TeX distribution providing `pdflatex` (e.g. TeX Live / MiKTeX)
+# Research can resume without it; doctor.py reports it as optional.

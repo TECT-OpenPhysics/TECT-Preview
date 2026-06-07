@@ -1,0 +1,89 @@
+{
+  "tasks": [
+    {
+      "id": "T-001",
+      "title": "Flip ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GATES.md + card + CHANGELOG)",
+      "status": "blocked",
+      "owner": "operator",
+      "claim": "B1-RH-ENUM",
+      "gate": "ROBUSTNESS-MU2",
+      "note": "Closure bar MET (robustness-mu2-margin-recompute v1.0, 11/11): exact m(mu^2) recomputed, min 0.945 m_anchor, STEP-5B ratio worst x2.41, J_eff envelope converged. Awaits operator authorization to flip.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": ["operator sign-off"]
+    },
+    {
+      "id": "T-002",
+      "title": "Mark M-ENDPOINT gate RESOLVED (value computed)",
+      "status": "blocked",
+      "owner": "operator",
+      "claim": "B5-BEYOND-LAYER-BOUND",
+      "gate": "M-ENDPOINT",
+      "note": "M(0.33675) = 0.10495 evaluated by direct quadrature (scscope-mendpoint-evaluation v1.0, 11/11); sunset axis positive x1.13. Awaits operator authorization to flip.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": ["operator sign-off"]
+    },
+    {
+      "id": "T-003",
+      "title": "Evaluate GHAT4-PERTRANSFER: per-transfer quartic-difference form factor",
+      "status": "next",
+      "owner": "unassigned",
+      "claim": "B5-BEYOND-LAYER-BOUND",
+      "gate": "GHAT4-PERTRANSFER",
+      "note": "Critical-path SC-SCOPE input. At sup-kernel grade the quartic-difference endpoint is x1.0 (marginal); the per-transfer form factor is load-bearing. Same direct-quadrature strategy that resolved M-ENDPOINT should apply.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": []
+    },
+    {
+      "id": "T-004",
+      "title": "Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)",
+      "status": "backlog",
+      "owner": "unassigned",
+      "claim": "B5-BEYOND-LAYER-BOUND",
+      "gate": "R-U6-1",
+      "note": "SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": []
+    },
+    {
+      "id": "T-005",
+      "title": "Assemble the joint second+third-order endpoint inequality (SC-SCOPE all-orders lift)",
+      "status": "backlog",
+      "owner": "unassigned",
+      "claim": "B5-BEYOND-LAYER-BOUND",
+      "gate": "SC-SCOPE",
+      "note": "Closes SC-SCOPE once M-ENDPOINT (done), GHAT4-PERTRANSFER (T-003) and R-U6-1 (T-004) are in hand; re-assemble as one joint inequality.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": ["T-003", "T-004"]
+    },
+    {
+      "id": "T-006",
+      "title": "De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check",
+      "status": "next",
+      "owner": "unassigned",
+      "claim": "B1-RH-ENUM",
+      "gate": null,
+      "note": "Per 2026-06-07 operator code-discipline policy (governance/CODE-DISCIPLINE.md): scscope_mendpoint_eval.py still pastes MARGIN=0.00432/RHO; import/derive them instead. Add an automated no-hardcoding + self-test + JSON-artefact check.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": []
+    },
+    {
+      "id": "T-007",
+      "title": "ESTIMATOR-UPGRADE: controlled-error quantitative selection margins for B1",
+      "status": "backlog",
+      "owner": "unassigned",
+      "claim": "B1-RH-ENUM",
+      "gate": "ESTIMATOR-UPGRADE",
+      "note": "Promote the estimator-grade selection margins to controlled-error bounds (separate from the T6 sign claim).",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": []
+    }
+  ],
+  "next_id": 8
+}
