@@ -1,0 +1,47 @@
+{
+  "script": "scscope_joint_endpoint.py",
+  "version": "1.0.0",
+  "inputs": {
+    "MARGIN": 0.00432001083939389,
+    "rho": 2.6,
+    "sunset_ratio": 1.13,
+    "R_max": 1.019
+  },
+  "C2": 0.0016615426305361116,
+  "composed": 0.002658468208857779,
+  "C_sunset": 0.0023526267335024593,
+  "C_quartic": 0.0016931119405162976,
+  "total": 0.005707281304554868,
+  "joint_ratio": 0.7569297199256984,
+  "joint_closes": false,
+  "needed_reduction": 1.3211266167460858,
+  "verdict": "SC-SCOPE endpoint joint does NOT close (honest negative); selection unaffected at 2nd-cumulant scope",
+  "claims": [
+    {
+      "name": "composed_consistent",
+      "passed": true,
+      "detail": "(composed = MARGIN(1-1/rho) = MARGIN - C2 = 0.002658)"
+    },
+    {
+      "name": "each_channel_individually_positive",
+      "passed": true,
+      "detail": "(2nd x2.60; sunset x1.13; quartic-diff x1.29 -- each channel alone clears the margin)"
+    },
+    {
+      "name": "joint_verdict_recorded",
+      "passed": true,
+      "detail": "(JOINT endpoint ratio x0.757: JOINT DOES NOT CLOSE -- honest negative)"
+    },
+    {
+      "name": "honest_negative_if_below_one",
+      "passed": true,
+      "detail": "(verdict is reported as found, not forced: joint_closes=False)"
+    },
+    {
+      "name": "closure_requirement_quantified",
+      "passed": true,
+      "detail": "(to close, the SUMMED third+second-order cost must fall by x1.32 -- e.g. a joint incompatible-pairing argument (sunset peaks at small t, quartic-diff at large t) or sharper per-transfer sunset/quartic bounds; otherwise the endpoint stays at second-cumulant scope)"
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,170 @@
+% =============================================================================
+% Title: SC-SCOPE endpoint: per-transfer quartic-difference and the joint inequality (honest negative)
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders lift; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: assessment note; HONEST NEGATIVE. GHAT4-PERTRANSFER per-transfer evaluated (convention-free shape reduction 0.64); the SC-SCOPE second+third-order JOINT endpoint inequality does NOT close (x0.757 < 1) under current bounds; SC-SCOPE stays OPEN; the selection (B1 T6) is UNAFFECTED (second-cumulant by the SC-SCOPE hypothesis); path forward = a joint incompatible-pairing argument or sharper per-transfer bounds. No tier/gate flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. (i) GHAT4-PERTRANSFER: the per-transfer
+%        quartic-difference form factor Ghat4(t)=(J*J)(t) on the realized chord
+%        set, via the convention-free shape factor Phi(t); the realized
+%        reduction is only 0.64 (Ghat4 is broad), so R_max ~ 1.02 -- at the
+%        note-cited R_sup the quartic-difference alone is x1.29 but R_max >= 1
+%        triggers the pre-registered joint re-derivation. (ii) Joint endpoint
+%        inequality: 2nd-order + sunset + quartic-difference jointly consume
+%        x1.32 the layer margin -> joint endpoint x0.757 < 1. SC-SCOPE OPEN.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Operator directive: drive the SC-SCOPE critical path to closure. With M-ENDPOINT
+resolved (sunset axis positive) the two remaining inputs are GHAT4-PERTRANSFER
+(the per-transfer quartic-difference form factor) and the joint
+second+third-order endpoint inequality. This note evaluates both and reports the
+HONEST verdict: the endpoint joint does NOT close under current bounds.
+Scope: the $I = 2\times10^{-3}$ endpoint at the production anchor; estimate-grade
+absolute normalisation, rigorous convention-free shape factors.
+
+\section*{2. GHAT4-PERTRANSFER: the per-transfer quartic-difference form factor}
+
+The quartic-difference channel inflates the certified second-order budget by
+$R(t) = 12\,(5v/2)^2\lambda'^{-2}\,\widehat{G^4}(t)\,4(1-a_0)/J(t)$, with
+$\widehat{G^4} = G\!*\!G\!*\!G\!*\!G = J\!*\!J$. The sup-kernel estimate paired
+the Young ceiling $\widehat{G^4}\le J(0)M^2$ with the floor $J(t)\ge J(2q_0)$
+SIMULTANEOUSLY, giving $R_{\rm sup}\approx1.59$ ($\Rightarrow$ inflation
+$\times2.6$, endpoint $\times1.0$ marginal). That pairing is incompatible. The
+convention-free shape factor
+\[
+\Phi(t) = \frac{\widehat{G^4}(t)}{\widehat{G^4}(0)}\cdot\frac{J(0)}{J(t)}
+\]
+(all measure prefactors and the $J$-normalisation factor-2 cancel) was evaluated
+on the realized chords $t\in[t_{\min}, 2q_0]$ with $\widehat{G^4}(t)=(J\!*\!J)(t)$
+computed by a converged convolution quadrature (grid-stable to $0.00\%$). The
+maximum is at the antipodal transfer $t = 2q_0$:
+\[
+\max_t \Phi(t) = 1.77 \;\ll\; \Phi_{\rm sup} = J(0)/J(2q_0) = 2.77,
+\qquad \text{reduction} = \frac{\max_t\Phi}{\Phi_{\rm sup}} = 0.64 .
+\]
+The incompatible pairing is confirmed (the realized ratio is well below the sup),
+but the reduction is only $0.64$: $\widehat{G^4}$ is broad, falling only to
+$0.64\,\widehat{G^4}(0)$ at $t=2q_0$. Hence the firmed per-transfer ratio is
+\[
+R_{\max} = R_{\rm sup}\cdot 0.64 \approx 1.02 ,
+\]
+which is $\ge 1$ -- precisely the condition the quartic-difference note
+pre-registered as triggering the joint endpoint re-derivation. Taken ALONE the
+quartic-difference endpoint is $\times2.6/(1+R_{\max}) = \times1.29 > 1$;
+$R_{\rm sup}$ is the cited convention-bearing estimate (not recomputed here).
+
+\section*{3. The joint endpoint inequality (the honest negative)}
+
+Each third-order channel clears the endpoint margin INDIVIDUALLY -- second-order
+$\times2.60$, sunset $\times1.13$ (dressed, M-ENDPOINT), quartic-difference
+$\times1.29$ (per-transfer), tadpole $0$ (U6). But all costs draw on the SAME
+layer margin. With $C_2 = \mathrm{MARGIN}/\rho$, composed $=\mathrm{MARGIN}(1-1/\rho)$,
+$C_{\rm sunset} = \text{composed}/1.13$, $C_{\rm quartic} = R_{\max}C_2$,
+$C_{\rm tadpole}=0$ ($\rho=2.6$, $\mathrm{MARGIN}=0.00432$):
+\[
+\boxed{\;\frac{\mathrm{MARGIN}}{C_2 + C_{\rm sunset} + C_{\rm quartic}}
+= \times0.757 \;<\; 1 .\;}
+\]
+The summed second+third-order cost exceeds the layer margin by $\times1.32$. The
+SC-SCOPE all-orders endpoint therefore does NOT close under the current
+(individually positive) bounds. This is an honest negative, registered in
+negative-results.
+
+\section*{4. What closure would require}
+
+The individual-positivity / joint-failure gap ($\times1.32$) is the signature of
+a bound that is still loose at the JOINT level: the sunset bound is largest at
+SMALL transfers (it rides $J(0)M$), the quartic-difference is largest at LARGE
+transfers ($\Phi$ peaks at $t=2q_0$), and the second-order is spread across the
+chord set. A JOINT incompatible-pairing argument -- bounding
+$\max_t[\,c_{\rm sunset}(t) + c_{\rm quartic}(t)\,]$ rather than
+$\max_t c_{\rm sunset} + \max_t c_{\rm quartic}$ -- would recover up to the
+$\times1.32$ deficit, exactly as the single-channel per-transfer argument
+recovered the sup-grade crudeness one level down. Sharper per-transfer sunset and
+quartic bounds (both currently inherit one sup-grade factor) are the alternative.
+Either is a genuine new derivation, registered as the next SC-SCOPE step; neither
+is performed here.
+
+\section*{5. Impact: SC-SCOPE OPEN, selection unaffected}
+
+SC-SCOPE stays OPEN at the endpoint. This does NOT weaken B1's T6 selection,
+which holds at matched second-cumulant order BY THE SC-SCOPE HYPOTHESIS: SC-SCOPE
+is a named hypothesis of B1 T6, not a proved input, so its remaining-open status
+is already priced into the tier. What is now precisely characterised is the
+all-orders ENDPOINT obstruction: a joint $\times1.32$ deficit with an explicit
+path to close it. M-ENDPOINT (resolved) and the GHAT4 per-transfer reduction
+(0.64) are durable advances toward that joint argument.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, 6 code-discipline)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You are over-pessimistic: the channels never all peak
+at one transfer, so the additive joint is too crude.''} CORRECT, and stated in
+\S4: the additive joint is an UPPER bound on the cost; the honest negative is
+that the CURRENT bounds do not close, with the joint incompatible-pairing
+argument named as the route. The note does not claim the endpoint FAILS
+physically, only that it is not yet PROVED.
+\item[($\beta$)] \emph{``$R_{\max}\approx1.02$ leans on the cited
+$R_{\rm sup}=1.59$, an unverified estimate.''} VALID: the convention-free shape
+reduction $0.64$ is rigorous; the absolute $R_{\max}$ inherits $R_{\rm sup}$. If
+$R_{\rm sup}$ is loose the quartic-difference improves, but the sunset
+contribution alone ($C_{\rm sunset}=$ composed$/1.13$) plus $C_2$ already gives
+$\mathrm{MARGIN}/(C_2+C_{\rm sunset}) = \times1.06$ -- so the endpoint is tight
+even before the quartic-difference. The negative is robust to $R_{\rm sup}$.
+\item[($\gamma$)] \emph{``Does this threaten B1 T6?''} DISMISSED: SC-SCOPE is a
+NAMED hypothesis of B1 T6; an open hypothesis is the tier's explicit condition,
+not a refutation.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- the convolution
+$\widehat{G^4}(0)$ is grid-stable to $0.00\%$; ratio -- $J(0)/J(2q_0)=2.77$
+reproduces the note's $2.79$; limit -- as $t\to0$, $\Phi\to1$; sign-direction --
+all third-order channels are competitor-helping (cost, not credit), so they add
+against the margin, the conservative direction; consistency -- each channel
+$>1$ individually yet joint $<1$ is the expected signature of additive bounds on
+a shared budget.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE endpoint joint (U15/U16)
+Precise statement:       GHAT4-PERTRANSFER: per-transfer Ghat4(t)=(J*J)(t) on the
+                         realized chords; convention-free shape reduction
+                         max Phi / Phi_sup = 0.64 (Ghat4 broad), R_max ~ 1.02.
+                         JOINT endpoint: MARGIN / (C2 + C_sunset + C_quartic) =
+                         x0.757 < 1 -- the individually-positive 2nd/sunset/
+                         quartic channels jointly over-consume by x1.32. SC-SCOPE
+                         endpoint does NOT close under current bounds.
+Scope:                   I=2e-3 endpoint, production anchor; shape factors
+                         rigorous, absolute R_sup cited (estimate).
+Dependencies:            sectorb_common (J_of_t, margin_of); scscope-mendpoint-
+                         evaluation v1.1 (sunset x1.13); quartic-difference-
+                         channel v1.0 (R_sup=1.59 cited).
+Evidence grade:          EXECUTED (scscope_ghat4_pertransfer.py 7/7;
+                         scscope_joint_endpoint.py 5/5); honest negative.
+Reproduction command:    python codes/vacuum/scscope_ghat4_pertransfer.py &&
+                         python codes/vacuum/scscope_joint_endpoint.py
+Expected output:         reduction 0.64, R_max 1.02; joint endpoint x0.757 < 1.
+Falsification gate:      A joint incompatible-pairing bound, or sharper
+                         per-transfer sunset/quartic bounds, giving
+                         MARGIN/sum > 1 (would CLOSE the endpoint and is the
+                         registered next step).
+Tier before / after:     No tier/gate flip. GHAT4-PERTRANSFER: per-transfer
+                         evaluated (shape reduction 0.64), endpoint NOT resolved
+                         alone. SC-SCOPE: OPEN (endpoint joint x0.757). B1 T6
+                         unchanged (SC-SCOPE is a named hypothesis).
+No-overclaim statement:  Honest negative: SC-SCOPE does NOT close. Each channel
+                         is individually positive; the joint is not. The
+                         selection is unaffected (second-cumulant by hypothesis).
+                         Absolute R_sup is a cited estimate; the shape reduction
+                         and the joint arithmetic are exact given inputs.
+Next required action:    Joint incompatible-pairing argument (bound
+                         max_t[c_sunset(t)+c_quartic(t)]) OR sharper per-transfer
+                         sunset/quartic bounds; then re-test the joint endpoint.
+\end{verbatim}
+}

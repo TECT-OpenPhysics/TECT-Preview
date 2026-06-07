@@ -5,6 +5,57 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE ENDPOINT: GHAT4-PERTRANSFER evaluated + joint honest-negative] - 2026-06-07
+
+- **Operator directive**: drive the SC-SCOPE critical path to closure. Outcome:
+  rigorous progress + an HONEST NEGATIVE -- SC-SCOPE does NOT close at the
+  endpoint under current bounds. Not forced closed.
+- **GHAT4-PERTRANSFER evaluated** (scscope_ghat4_pertransfer.py 7/7): per-transfer
+  quartic-difference form factor Ghat4(t)=(J*J)(t) on the realized chords via the
+  convention-free shape factor Phi(t); reduction max Phi/Phi_sup = 0.64 (Ghat4 is
+  broad), so R_max ~ R_sup*0.64 ~ 1.02. Quartic-difference ALONE x1.29 > 1, but
+  R_max >= 1 triggers the pre-registered joint re-derivation.
+- **Joint endpoint inequality** (scscope_joint_endpoint.py 5/5): the
+  individually-positive channels (2nd x2.60, sunset x1.13, quartic-difference
+  x1.29, tadpole 0) JOINTLY over-consume the layer margin by x1.32 -> joint
+  endpoint x0.757 < 1. Robust to the cited R_sup (2nd+sunset alone already x1.06).
+- **Honest negative registered**: NG-2026-06-07-scscope-endpoint-joint;
+  scscope-endpoint-joint-assessment v1.0 (FORM-CHECK PASS). SC-SCOPE stays OPEN
+  at the endpoint; **B1 T6 selection UNAFFECTED** (SC-SCOPE is a named
+  hypothesis, its open status is priced into the tier).
+- **Path forward (registered)**: a JOINT incompatible-pairing argument (sunset
+  peaks at small t, quartic-difference at large t, so the joint per-transfer sum
+  is below the sum of maxima) OR sharper per-transfer sunset/quartic bounds.
+- **RESULTS-LEDGER**: R-014 (convention-free per-transfer form-factor reduction
+  method). New scripts: codes/vacuum/scscope_ghat4_pertransfer.py,
+  scscope_joint_endpoint.py (+ JSON artefacts). No tier/gate flip.
+- **Verification**: release-check PASS; pytest 3; FORM-CHECK PASS + OVERFULL 0;
+  both new scripts exit 0.
+
+## [ROBUSTNESS-MU2 CLOSED + M-ENDPOINT RESOLVED] operator-authorized gate flips - 2026-06-07
+
+- **Operator authorization** (reviews/2026-06-07-robustness-close-authorization-review.md):
+  ROBUSTNESS-MU2 may be closed; M-ENDPOINT resolved; SC-SCOPE stays OPEN.
+- **ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT**: GATES.md status flipped +
+  history; removed from B1 open_gates; B1 scope / no_overclaim / next_action /
+  notes updated; claim.md open-gates line updated. Closure evidence:
+  robustness-mu2-margin-recompute v1.1 (exact m(mu^2)=PB(M_+)-DIP_BAND, min
+  0.945 m_anchor, derivative-sign monotonicity certificate min at mu^2=0.0025,
+  full-grid J_eff envelope <0.01%, worst STEP-5B ratio x2.41). Scope:
+  second-cumulant order, three certified intensities, [x0.5,x2]; NOT all-orders.
+- **M-ENDPOINT -> RESOLVED**: GATES.md status flipped; M(0.33675)=0.104953
+  (direct quadrature, ~1% cross-check); sunset axis positive at sign level
+  (x1.13).
+- **SC-SCOPE stays OPEN** on GHAT4-PERTRANSFER + R-U6-1 + the joint
+  second+third-order endpoint inequality (next critical path).
+- **RESULTS-LEDGER**: R-012 (closed-form Prop-A margin recomputation), R-013
+  (direct dressing-variance endpoint evaluation).
+- **TODO**: T-001, T-002 marked done.
+- **B1 tier unchanged** (T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE});
+  ROBUSTNESS-MU2 was an open caveat-gate, not a T6 named hypothesis.
+- **Verification**: CLAIMS.md regenerated (lint); catalog; lineage; todo render;
+  release-check PASS; pytest 3; doctor READY.
+
 ## [SC-SCOPE/ROBUSTNESS v1.1 REINFORCEMENT] M-ENDPOINT certificate + single-J0 conservatism + m(mu^2) monotonicity (operator review 2026-06-07) - 2026-06-07
 
 - **Operator review** (eval summary + per-doc attacks): both advances accepted as

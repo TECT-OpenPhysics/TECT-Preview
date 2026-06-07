@@ -3,31 +3,35 @@
     {
       "id": "T-001",
       "title": "Flip ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GATES.md + card + CHANGELOG)",
-      "status": "blocked",
+      "status": "done",
       "owner": "operator",
       "claim": "B1-RH-ENUM",
       "gate": "ROBUSTNESS-MU2",
       "note": "Closure bar MET (robustness-mu2-margin-recompute v1.0, 11/11): exact m(mu^2) recomputed, min 0.945 m_anchor, STEP-5B ratio worst x2.41, J_eff envelope converged. Awaits operator authorization to flip.",
       "created": "2026-06-07",
       "updated": "2026-06-07",
-      "blocked_by": ["operator sign-off"]
+      "blocked_by": [
+        "operator sign-off"
+      ]
     },
     {
       "id": "T-002",
       "title": "Mark M-ENDPOINT gate RESOLVED (value computed)",
-      "status": "blocked",
+      "status": "done",
       "owner": "operator",
       "claim": "B5-BEYOND-LAYER-BOUND",
       "gate": "M-ENDPOINT",
       "note": "M(0.33675) = 0.10495 evaluated by direct quadrature (scscope-mendpoint-evaluation v1.0, 11/11); sunset axis positive x1.13. Awaits operator authorization to flip.",
       "created": "2026-06-07",
       "updated": "2026-06-07",
-      "blocked_by": ["operator sign-off"]
+      "blocked_by": [
+        "operator sign-off"
+      ]
     },
     {
       "id": "T-003",
       "title": "Evaluate GHAT4-PERTRANSFER: per-transfer quartic-difference form factor",
-      "status": "next",
+      "status": "done",
       "owner": "unassigned",
       "claim": "B5-BEYOND-LAYER-BOUND",
       "gate": "GHAT4-PERTRANSFER",
@@ -55,10 +59,13 @@
       "owner": "unassigned",
       "claim": "B5-BEYOND-LAYER-BOUND",
       "gate": "SC-SCOPE",
-      "note": "Closes SC-SCOPE once M-ENDPOINT (done), GHAT4-PERTRANSFER (T-003) and R-U6-1 (T-004) are in hand; re-assemble as one joint inequality.",
+      "note": "BLOCKED on the joint endpoint: scscope_joint_endpoint.py shows 2nd+sunset+quartic jointly x0.757<1 (NG-2026-06-07-scscope-endpoint-joint). Needs T-008 (joint incompatible-pairing) or sharper per-transfer bounds first.",
       "created": "2026-06-07",
       "updated": "2026-06-07",
-      "blocked_by": ["T-003", "T-004"]
+      "blocked_by": [
+        "T-003",
+        "T-004"
+      ]
     },
     {
       "id": "T-006",
@@ -67,7 +74,7 @@
       "owner": "unassigned",
       "claim": "B1-RH-ENUM",
       "gate": null,
-      "note": "Per 2026-06-07 operator code-discipline policy (governance/CODE-DISCIPLINE.md): scscope_mendpoint_eval.py still pastes MARGIN=0.00432/RHO; import/derive them instead. Add an automated no-hardcoding + self-test + JSON-artefact check.",
+      "note": "MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).",
       "created": "2026-06-07",
       "updated": "2026-06-07",
       "blocked_by": []
@@ -83,7 +90,19 @@
       "created": "2026-06-07",
       "updated": "2026-06-07",
       "blocked_by": []
+    },
+    {
+      "id": "T-008",
+      "title": "SC-SCOPE joint incompatible-pairing argument: bound max_t[c_sunset(t)+c_quartic(t)] (sunset peaks small-t, quartic large-t) to recover the x1.32 joint endpoint deficit",
+      "status": "next",
+      "owner": null,
+      "claim": "B5-BEYOND-LAYER-BOUND",
+      "gate": "SC-SCOPE",
+      "note": "Next critical path after the 2026-06-07 joint honest-negative. Sunset bound largest at small transfers, quartic-difference Phi peaks at t=2q0; the joint per-transfer sum should be below the sum of individual maxima.",
+      "created": "2026-06-07",
+      "updated": "2026-06-07",
+      "blocked_by": []
     }
   ],
-  "next_id": 8
+  "next_id": 9
 }

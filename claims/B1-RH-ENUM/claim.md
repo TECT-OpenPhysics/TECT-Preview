@@ -17,7 +17,7 @@ CLOSED@ESTIMATOR-GRADE within enumerated ensembles at the corrected canonical op
 - Hard dependencies: A1-KERNEL-CONV
 - Hypotheses (registered in `claims/GATES.md`): none
 - Soft dependencies (context only): none
-- Open gates: STEP-5B, G3PB-III, ESTIMATOR-UPGRADE, ROBUSTNESS-MU2
+- Open gates: STEP-5B, G3PB-III, ESTIMATOR-UPGRADE
 
 ## Evidence
 
