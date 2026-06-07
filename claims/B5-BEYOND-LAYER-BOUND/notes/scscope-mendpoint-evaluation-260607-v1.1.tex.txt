@@ -1,0 +1,152 @@
+% =============================================================================
+% Title: M-ENDPOINT evaluation with a convergence certificate and single-J0 conservatism
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE sunset axis; bears on B1-RH-ENUM)
+% Version: v1.1 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical-evaluation note; RESOLVES the M-ENDPOINT gate (the named missing constant M(0.33675), an EXECUTED value cross-checked at the ~1% level); shows the SUNSET-AXIS endpoint is POSITIVE at sign level and certifies the verdict robust to the quadrature envelope; SC-SCOPE remains OPEN on GHAT4-PERTRANSFER + R-U6-1; no tier/gate flip (operator authorizes transitions)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Direct M(0.33675) quadrature; sunset endpoint
+%        x0.97 (frozen, =U4) -> x1.13 (dressed) > 1.
+%   v1.1 (2026-06-07) AUDIT re-issue (operator review 2026-06-07). (a) MARGIN is
+%        now DERIVED from sectorb_common.margin_of (no pasted literal); (b)
+%        M-ENDPOINT carries a provenance + cross-check certificate (cutoffs, n,
+%        analytic tail bound; independent radial trapezoid agrees to 0.61%) and
+%        the sunset verdict is certified robust to the full raw envelope; (c) the
+%        single-J0 convention is shown conservative by a direct J(r_hat(I)) <= J0
+%        table; (d) wording restricted to the SUNSET axis (the U4 marginal
+%        failure was a sunset-axis frozen-coupling artefact; x1.13 is a SIGN
+%        result, not a comfortable margin). SC-SCOPE stays OPEN.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+SC-SCOPE's all-orders lift is gated by four registered inputs (M-ENDPOINT,
+GHAT3-Q0 optional, GHAT4-PERTRANSFER, R-U6-1). This note resolves the first:
+M-ENDPOINT $= M(\hat r(2\times10^{-3})) = M(0.33675)$, the convexity-honest
+endpoint dressing variance. The earlier sunset-endpoint estimate used a
+linear-response slope $M'(\hat r) = -J(0)$ (the correct relation is $-J(0)/2$),
+invalidating the $\times1.34$ figure; here the constant is evaluated DIRECTLY by
+quadrature, so the linearisation does not enter. \textbf{Scope: the SUNSET axis
+only.} This note does not close SC-SCOPE.
+
+\section*{2. The M-ENDPOINT constant with a convergence certificate}
+
+With $M(m) = \frac{1}{2\pi^2}\int_0^\infty k^2/[m + C(k^2 - q_0^2)^2]\,dk$,
+\[
+\boxed{\,M\text{-ENDPOINT} = M(0.33675) = 0.104953\,}\qquad (M_R = 0.109414).
+\]
+\textbf{Provenance / certificate.} The production value (\texttt{M\_fast}) carries
+an analytic tail model. An independent radial trapezoid (cutoff $k_{\max}=60$,
+$n=10^6$ points) gives $0.105589$, agreeing to $0.61\%$; the residual is
+resonance-peak ($k\sim q_0$) quadrature resolution plus tail treatment, not a
+value error. The analytic truncation beyond $k_{\max}$ is bounded by
+$\int_{k_{\max}}^\infty \frac{dk}{2\pi^2 C k^2} = \frac{1}{2\pi^2 C k_{\max}}
+= 8.4\times10^{-4}$. M-ENDPOINT is therefore an EXECUTED constant cross-checked
+at the $\sim1\%$ level (raw multi-resolution envelope $8.5\times10^{-4}$); it is
+NOT claimed as a $0.1\%$ interval constant. The downstream verdict is certified
+robust to this envelope (\S3). $M(0.33675) < M_R$ as monotonicity requires, and
+lies in the corrected bracket $[0.10474, 0.10941]$ (the old $[0.1001,0.1094]$
+used the factor-2 slope). $M(0.32064) = 0.107098$ is the $I=10^{-3}$ companion.
+
+\section*{3. The sunset-axis endpoint sign}
+
+$u_{\rm eff}(M) = u + 10vM$; the matched single-$J_0$ sunset bound and composed
+AddE margin are $b(I) = \tfrac12 u_{\rm eff}(M)^2 (2I)\, 6 J_0 M$ and
+$\mathrm{composed}(I) = \mathrm{MARGIN}(1 - 1/\rho(I))$, with $J_0 = 0.2896$,
+$\mathrm{MARGIN} = 0.004320$ (DERIVED, \S0 of the script), $\rho(2\times10^{-3})
+= 2.6$.
+
+\textbf{Single-$J_0$ conservatism.} $J$ decreases with dressing, so for the
+endpoint intensities $J(\hat r(I)) \le J_0$:
+\[
+J(\hat r(10^{-3})) = 0.2764,\quad J(\hat r(2\times10^{-3})) = 0.2565
+\;\le\; J_0 = 0.2896 .
+\]
+Using the single anchor $J_0$ therefore OVER-estimates the bound, i.e.\ the
+quoted ratios are conservative; the per-dressing-$J$ ratios are larger.
+\[
+\frac{\mathrm{composed}}{b}\Big|_{2\times10^{-3}}:\quad
+\underbrace{\times0.970}_{\text{frozen }M_R\,(=\text{U4})}
+\;\to\;
+\boxed{\underbrace{\times1.13}_{\text{dressed},\,J_0}}
+\;\to\;
+\underbrace{\times1.28}_{\text{dressed, per-}J}\!,
+\]
+and $\times3.02$ at $I = 10^{-3}$. \textbf{Verdict robustness.} Even at
+$M\text{-ENDPOINT}$ plus the full raw envelope (larger $M$ is the worse
+direction) the ratio is $\times1.096 > 1$. So at sign level the SUNSET-AXIS
+endpoint no longer individually fails: the U4 SUNSET-AXIS marginal failure was a
+frozen-coupling artefact. The $\times1.13$ is a SIGN result, NOT a comfortable
+margin -- in the joint inequality the $\sim13\%$ can be consumed by the other
+channels.
+
+\section*{4. What this resolves and what remains}
+
+RESOLVED: M-ENDPOINT (value + certificate) and the sunset axis of the
+third-cumulant endpoint (positive at sign level, robust to the envelope). OPEN:
+the quartic-difference channel (GHAT4-PERTRANSFER; sup-kernel grade $\times1.0$,
+per-transfer form factor load-bearing) and the tadpole alignment (R-U6-1). The
+all-orders lift requires these re-assembled as a joint second+third-order
+inequality. SC-SCOPE remains OPEN; the U4 third-cumulant endpoint is NOT yet
+shown to be an artefact (only its sunset axis is).
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, 6 code-discipline)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You resolved one channel, not SC-SCOPE.''} CONCEDED
+and stated: the ledger is M-ENDPOINT RESOLVED, sunset axis POSITIVE, SC-SCOPE
+OPEN on GHAT4-PERTRANSFER + R-U6-1.
+\item[($\beta$)] \emph{``$\times1.13$ is thin.''} VALID: claimed as a SIGN only;
+\S3 shows the sign survives the full quadrature envelope ($\times1.096$) and the
+per-$J$ ratio is $\times1.28$; the joint-inequality consumption is flagged.
+\item[($\gamma$)] \emph{``$M(0.33675)$ is an executed value, not interval-
+certified.''} VALID and now explicit: cross-checked at $\sim1\%$ (0.61\% method
+agreement; $8.4\times10^{-4}$ tail bound); the VERDICT, not a $0.1\%$ constant,
+is what is certified.
+\item[($\delta$)] \emph{``U4 reproduction proves only consistency with the old
+estimator.''} CONCEDED: the frozen $\times0.970$ is a REGRESSION sanity check;
+the load-bearing content is the direct M-ENDPOINT + dressed formula + the
+single-$J_0$ conservatism justification.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- two quadratures agree to
+0.61\%; limit-case -- frozen-$M_R$ reproduces U4 $\times0.97$ to $<1\%$;
+sign-direction -- $M(\hat r) < M_R$ and $J(\hat r) < J_0$, both lowering the
+sunset bound (selection-protecting); convergence -- analytic tail bound
+$8.4\times10^{-4}$ and the verdict robust to the full envelope.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE sunset axis (M-ENDPOINT)
+Precise statement:       M-ENDPOINT = M(0.33675) = 0.104953 (executed; two
+                         quadratures agree 0.61%; analytic tail bound 8.4e-4).
+                         Single-J0 is conservative (J(r_hat(I)) <= J0). The
+                         sunset-axis endpoint ratio is x1.13 (J0) / x1.28
+                         (per-J) > 1, robust to the envelope (x1.10 worst). The
+                         SUNSET axis of the third-cumulant endpoint is POSITIVE
+                         at sign level.
+Scope:                   Sunset axis only; matched single-J0 convention; second
+                         + third cumulant sunset channel at the certified
+                         intensities. Does NOT close SC-SCOPE.
+Dependencies:            sectorb_common (margin_of, J_of_t); production gap_solve
+                         / M_fast; AddE rho ratios (cited).
+Evidence grade:          EXECUTED (scscope_mendpoint_eval.py v1.1, 12/12) +
+                         independent-quadrature cross-check + verdict-robustness.
+Reproduction command:    python codes/vacuum/scscope_mendpoint_eval.py
+Expected output:         12/12 PASS; M-ENDPOINT=0.10495; dressed endpoint x1.13;
+                         verdict robust x1.10.
+Falsification gate:      M-ENDPOINT outside [0.1047,0.1094]; the dressed endpoint
+                         ratio <= 1 over the envelope.
+Tier before / after:     No tier/gate flip. M-ENDPOINT gate: value RESOLVED
+                         (recommend RESOLVED pending operator sign-off).
+                         SC-SCOPE stays OPEN (GHAT4-PERTRANSFER + R-U6-1).
+No-overclaim statement:  Resolves ONE of three SC-SCOPE channels. Sunset axis
+                         only; the U4 THIRD-CUMULANT endpoint is NOT shown to be
+                         an artefact. x1.13 is a SIGN, not a margin. M-ENDPOINT
+                         is an executed value cross-checked at ~1%, not a 0.1%
+                         interval constant.
+Next required action:    GHAT4-PERTRANSFER (per-transfer quartic form factor);
+                         R-U6-1 (tadpole alignment); then the joint
+                         second+third-order endpoint inequality.
+\end{verbatim}

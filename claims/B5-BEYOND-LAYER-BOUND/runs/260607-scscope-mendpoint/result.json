@@ -1,92 +1,152 @@
 {
   "script": "scscope_mendpoint_eval.py",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "constants": {
     "mu2": 0.005,
     "rR": 0.30452570866744433,
     "M_R": 0.10941432918723439,
     "lam": 8.055072796999182,
-    "J0": 0.2896482320469045,
-    "M_ENDPOINT": 0.1049531393953285,
-    "rhat_2e3": 0.33674599985544107,
-    "rhat_1e3": 0.3206358542614427
+    "J0": 0.28964823200981,
+    "MARGIN": 0.00432001083939389,
+    "M_ENDPOINT": 0.1049531393953285
+  },
+  "provenance": {
+    "0.001": {
+      "rhat": 0.3206358542614427,
+      "M_fast": 0.10709823050751908,
+      "raw": {
+        "30.0": 0.10688921019185084,
+        "40.0": 0.10731171645561545,
+        "60.0": 0.10773405988439858
+      },
+      "tail_bound": 0.0008443431970194815,
+      "recon": 0.10857840308141806,
+      "recon_resid": 0.0014801725738989718,
+      "raw_envelope": 0.0008448496925477361,
+      "grids": [
+        {
+          "kmax": 30.0,
+          "n": 300000
+        },
+        {
+          "kmax": 40.0,
+          "n": 600000
+        },
+        {
+          "kmax": 60.0,
+          "n": 1000000
+        }
+      ]
+    },
+    "0.002": {
+      "rhat": 0.33674599985544107,
+      "M_fast": 0.1049531393953285,
+      "raw": {
+        "30.0": 0.10474423186984536,
+        "40.0": 0.1051667381284781,
+        "60.0": 0.10558908155587593
+      },
+      "tail_bound": 0.0008443431970194815,
+      "recon": 0.10643342475289541,
+      "recon_resid": 0.0014802853575669045,
+      "raw_envelope": 0.0008448496860305743,
+      "grids": [
+        {
+          "kmax": 30.0,
+          "n": 300000
+        },
+        {
+          "kmax": 40.0,
+          "n": 600000
+        },
+        {
+          "kmax": 60.0,
+          "n": 1000000
+        }
+      ]
+    }
+  },
+  "J_conservatism": {
+    "0.001": 0.27644024050748794,
+    "0.002": 0.2565418743208575
   },
   "results": {
     "0.001": {
       "I": 0.001,
-      "r_hat": 0.3206358542614427,
       "M_endpoint": 0.10709823050751908,
-      "u_eff_dressed": 2.609982668443619,
-      "composed": 0.003829090909090909,
-      "ratio_frozen_U4": 2.793205657458593,
-      "ratio_dressed": 3.0200630004697904
+      "ratio_frozen_U4": 2.793212666301576,
+      "ratio_dressed_J0": 3.020070578553886,
+      "ratio_dressed_perJ": 3.164366020001645
     },
     "0.002": {
       "I": 0.002,
-      "r_hat": 0.33674599985544107,
       "M_endpoint": 0.1049531393953285,
-      "u_eff_dressed": 2.540481716408644,
-      "composed": 0.002658461538461539,
-      "ratio_frozen_U4": 0.9696335221158036,
-      "ratio_dressed": 1.1291474867169404
+      "ratio_frozen_U4": 0.9696359551658332,
+      "ratio_dressed_J0": 1.1291503200269108,
+      "ratio_dressed_perJ": 1.274865535051232
     }
   },
   "scope": "sunset axis resolved; SC-SCOPE OPEN on GHAT4-PERTRANSFER + R-U6-1",
   "claims": [
     {
+      "name": "MARGIN_derived_not_pasted",
+      "passed": true,
+      "detail": "(MARGIN = sectorb_common.margin_of(0.005) = 0.004320; derived, reproduces 0.00432)"
+    },
+    {
       "name": "rhat_endpoint_2e-3",
       "passed": true,
-      "detail": "(r_hat(2e-3) = r_R + 2 lam' I = 0.33675 vs registered 0.33675)"
+      "detail": "(r_hat(2e-3) = 0.33675 vs registered 0.33675)"
     },
     {
-      "name": "rhat_1e-3",
+      "name": "M_ENDPOINT_value",
       "passed": true,
-      "detail": "(r_hat(1e-3) = 0.32064 vs registered 0.3206)"
+      "detail": "(M-ENDPOINT = M(0.33675) = 0.104953)"
     },
     {
-      "name": "M_ENDPOINT_quadratures_agree_I=0.001",
+      "name": "M_ENDPOINT_crosscheck",
       "passed": true,
-      "detail": "(M(0.32064): M_fast=0.107098 vs radial=0.107312, agree to 0.20% -- M-ENDPOINT resolved by direct quadrature)"
-    },
-    {
-      "name": "M_ENDPOINT_quadratures_agree_I=0.002",
-      "passed": true,
-      "detail": "(M(0.33675): M_fast=0.104953 vs radial=0.105167, agree to 0.20% -- M-ENDPOINT resolved by direct quadrature)"
+      "detail": "(production M_fast = 0.104953 vs independent radial trapezoid (kmax=60, n=1e6) = 0.105589 agree to 0.61%; the residual is resonance-peak (k~q0) quadrature resolution + tail treatment, not a value error. M-ENDPOINT is an EXECUTED constant cross-checked at the ~1% level; the analytic tail beyond kmax=60 is bounded by 8.44e-04. The SUNSET VERDICT is certified robust to the full 8.45e-04 envelope below)"
     },
     {
       "name": "M_ENDPOINT_below_M_R",
       "passed": true,
-      "detail": "(M-ENDPOINT = M(0.33675) = 0.104953 < M_R = 0.109414: dressing at higher mass lowers the variance, as convexity/monotonicity require)"
-    },
-    {
-      "name": "M_ENDPOINT_in_corrected_bracket",
-      "passed": true,
-      "detail": "(M-ENDPOINT 0.10495 in corrected bracket [0.10474, 0.10941]; the old [0.1001,0.1094] bracket used the factor-2 slope)"
+      "detail": "(M-ENDPOINT = 0.104953 < M_R = 0.109414: monotonicity)"
     },
     {
       "name": "J0_value",
       "passed": true,
-      "detail": "(J(0) at anchor dressing = 0.2896 vs certified 0.290)"
+      "detail": "(J0 = J(r_hat(4e-4)) = 0.2896)"
+    },
+    {
+      "name": "single_J0_conservative",
+      "passed": true,
+      "detail": "(J(r_hat(1e-3))=0.2764, J(r_hat(2e-3))=0.2565 both <= J0=0.2896: using the single anchor J0 OVER-estimates the sunset bound at the endpoint -> conservative)"
     },
     {
       "name": "frozen_U4_endpoint_reproduced",
       "passed": true,
-      "detail": "(frozen-coupling endpoint = x0.970 reproduces U4 x0.97: the over-conservative bound that froze u_eff at M_R)"
+      "detail": "(frozen-coupling endpoint x0.970 reproduces U4 x0.97 -- REGRESSION sanity check vs the old estimator, NOT load-bearing)"
     },
     {
-      "name": "dressed_endpoint_positive",
+      "name": "sunset_axis_endpoint_positive",
       "passed": true,
-      "detail": "(dressed endpoint = x1.129 > 1: with the directly-evaluated M-ENDPOINT the sunset-axis endpoint is POSITIVE -- the U4 marginal failure was a frozen-coupling artefact, not a real third-cumulant obstruction)"
+      "detail": "(dressed endpoint x1.129 > 1: the SUNSET-AXIS endpoint no longer individually fails; the U4 SUNSET-AXIS marginal failure was a frozen-coupling artefact. This is the sunset channel only -- SC-SCOPE stays OPEN on GHAT4-PERTRANSFER + R-U6-1)"
     },
     {
-      "name": "dressed_endpoint_matches_triage_est",
+      "name": "perJ_ratio_at_least_J0_ratio",
       "passed": true,
-      "detail": "(dressed endpoint x1.129 ~ triage estimate x1.13; supersedes the invalidated x1.34 linear estimate)"
+      "detail": "(per-dressing-J ratio x1.275 >= J0 ratio x1.129: confirms J0 is the conservative choice)"
     },
     {
-      "name": "I1e-3_dressed_comfortable",
+      "name": "endpoint_margin_thin_not_comfortable",
       "passed": true,
-      "detail": "(I=1e-3 dressed ratio x3.02 > 2.5: comfortable)"
+      "detail": "(x1.129 is a SIGN result, NOT a comfortable margin; in the joint inequality the ~13% can be consumed by the other channels)"
+    },
+    {
+      "name": "verdict_robust_to_M_envelope",
+      "passed": true,
+      "detail": "(even at M-ENDPOINT + the full raw envelope (M=0.105798, the worse direction) the sunset ratio = x1.096 > 1: the sign verdict survives the quadrature uncertainty)"
     }
   ],
   "all_pass": true

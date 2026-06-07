@@ -1,0 +1,169 @@
+% =============================================================================
+% Title: Exact layer margin across the mu-squared neighbourhood with a monotonicity certificate
+% Claim: B1-RH-ENUM (ROBUSTNESS-MU2 closure bar; bears on B5-BEYOND-LAYER-BOUND)
+% Version: v1.1 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical + closed-form note; recomputes the EXACT layer margin m(mu^2) across [x0.5, x2] with a derivative-sign monotonicity certificate (min at mu^2=0.0025), a full-grid J_eff envelope, and a Prop-A branch-invariance check; the closure bar is MET; gate closure RECOMMENDED pending operator authorization; ROBUSTNESS-MU2 stays OPEN until then (operator authorizes gate transitions)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Closed-form MARGIN(mu^2) recomputed across the
+%        band; min 0.945 m_anchor; STEP-5B ratio worst x2.41; J_eff converged at
+%        the thinnest corner.
+%   v1.1 (2026-06-07) AUDIT re-issue (operator review 2026-06-07). (a) margin_of
+%        / J_of_t imported from sectorb_common (single source); (b) NEW
+%        derivative-sign certificate d m/d mu^2 > 0 on [0.0025,0.01] proving the
+%        minimum is the LEFT endpoint (review priority 3), with the closed-form
+%        DIP_BAND-decreasing piece; (c) NEW J_eff two-resolution envelope across
+%        the WHOLE 5x3 grid (review attack 4); (d) NEW Prop-A branch-invariance
+%        assertion (review attack 5); (e) "three certified intensities" qualifier
+%        retained.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+ROBUSTNESS-MU2 remained OPEN because the layer margin $m$ in the off-anchor
+STEP-5B re-margin was held at its anchor value and only BOUNDED, not recomputed.
+The closure bar requires the exact $m(\mu^2)$ with $m(\mu^2) \ge 0.4\,m_{\rm
+anchor}$ on $[\times0.5,\times2]$ at the three certified intensities, the STEP-5B
+ratio recomputed with the exact margin, and a certified $J_{\rm eff}$ envelope.
+This note supplies all three plus a monotonicity certificate locating the
+minimum and a branch-invariance check. Scope: second-cumulant order, $\mu^2 \in
+[0.0025, 0.01]$, the three certified intensities $\{4\times10^{-4}, 10^{-3},
+2\times10^{-3}\}$.
+
+\section*{2. The layer margin is closed-form in mu-squared}
+
+$\mathrm{MARGIN}(\mu^2) = P_B(M_+(\mu^2)) - \mathrm{DIP}_{\rm BAND}(\mu^2)$ with
+(production convention, bare parameter $R = \mu^2$, gap point $r_R(\mu^2)$,
+$M_R = M(r_R)$):
+\[
+M_+(\mu^2) = \frac{-3u + \sqrt{9u^2 - 60 v\,\mu^2}}{30 v},\qquad
+\hat r_0(M_c) = \mu^2 - \frac{3u^2}{20 v},\qquad
+\mathrm{DIP}_{\rm BAND} = \frac{|\hat r_0(M_c)|^{3/2}}{3\sqrt{v}},
+\]
+\[
+P_B(M) = \tfrac12(\mu^2 - r_R)(M - M_R) + \tfrac34 u(M^2 - M_R^2)
+         + \tfrac52 v(M^3 - M_R^3).
+\]
+This single source (\texttt{sectorb\_common.margin\_of}) reproduces the certified
+anchor: $\mathrm{MARGIN}(0.005) = 0.004320$.
+
+\section*{3. Recomputation and the monotonicity certificate}
+
+On a $61$-point grid over $[0.0025, 0.01]$:
+\[
+\boxed{\,\min m(\mu^2) = 0.004082\ \text{at}\ \mu^2 = 0.0025,\quad
+m(\mu^2) \ge 0.945\,m_{\rm anchor}\,}
+\]
+(the maximum is $0.004802$ at $\mu^2 = 0.01$).
+\textbf{Monotonicity certificate (review priority 3).} The central-difference
+derivative satisfies $\partial_{\mu^2} m(\mu^2) > 0$ at every grid point
+($\min = 9.5\times10^{-2} > 0$), so $m(\mu^2)$ is strictly increasing and the
+minimum is the LEFT endpoint $\mu^2 = 0.0025$, not an interior point. The
+structural reason is closed-form: $\mathrm{DIP}_{\rm BAND}(\mu^2) =
+|\mu^2 - 3u^2/(20v)|^{3/2}/(3\sqrt v)$ decreases monotonically
+($0.001047 \to 0.000699$ as $\mu^2$ rises toward $3u^2/(20v)$, $\hat r_0(M_c)$
+becoming less negative), so $-\mathrm{DIP}_{\rm BAND}$ increases; $P_B(M_+)$
+increases over the grid. The $m(\mu^2) \ge 0.4\,m_{\rm anchor}$ bar is met with
+factor $0.945$.
+
+\section*{4. Prop-A branch invariance}
+
+Across the whole band, $\mathrm{disc} = 9u^2 - 60v\mu^2 > 0$ (minimum $4.7124$
+at $\mu^2 = 0.01$, well above the two-branch threshold $\mu^2 < 0.0342$) and
+$M_+ > M_c$: the same upper PD branch is used throughout $[0.0025, 0.01]$, with
+no branch crossing. The closed-form $M_+$, $P_B$, $\mathrm{DIP}_{\rm BAND}$ are
+thus valid on the entire interval.
+
+\section*{5. STEP-5B ratio (recomputed margin) and the J-eff envelope}
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y Y @{}}
+\toprule
+$\mu^2$ & $m(\mu^2)$ & ratio @ $4\!\times\!10^{-4}$ & ratio @ $10^{-3}$ & ratio @ $2\!\times\!10^{-3}$ \\
+\midrule
+$0.0025$ ($\times0.5$) & $0.004082$ & $\times55.5$ & $\times9.16$ & $\times2.41$ \\
+$0.005$ (anchor)       & $0.004320$ & $\times59.4$ & $\times9.80$ & $\times2.58$ \\
+$0.01$ ($\times2$)     & $0.004802$ & $\times67.5$ & $\times11.15$ & $\times2.93$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+The worst ratio over the neighbourhood and the three certified intensities is
+$\times2.41$ (the $\times0.5$, $I = 2\times10^{-3}$ corner) with the EXACT
+margin. \textbf{$J_{\rm eff}$ envelope (review attack 4).} Across the WHOLE
+$5\times3$ grid, $J_{\rm eff}$ at quadrature resolutions $n_k = 500$ and
+$n_k = 1100$ agree to a maximum relative envelope $< 0.01\%$; the worst STEP-5B
+ratio over the whole grid AND both resolutions is $\times2.41 > 1$. The verdict
+is thus $J_{\rm eff}$-certified everywhere on the grid, not only at the thinnest
+corner.
+
+\section*{6. Closure-bar status}
+
+All conditions met: (i) $m(\mu^2)$ recomputed exactly, $\ge 0.945\,m_{\rm
+anchor}$, minimum located at $\mu^2 = 0.0025$ by the derivative-sign
+certificate; (ii) STEP-5B ratio $> 1$ ($\ge \times2.41$) with the recomputed
+margin at the three certified intensities; (iii) $J_{\rm eff}$ envelope certified
+across the full grid. Remaining qualifier: SCOPE is second-cumulant order. The
+official status stays \textbf{ROBUSTNESS-MU2: OPEN, closure bar met, CLOSE
+RECOMMENDED}; the flip to CLOSED@$[\times0.5,\times2]$-2ND-CUMULANT is
+operator-authorized and is NOT performed by this note.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, 6 code-discipline)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``exact $m(\mu^2)$ but a 61-point grid.''} ADDRESSED: the
+derivative-sign certificate $\partial_{\mu^2} m > 0$ everywhere plus the
+closed-form $\mathrm{DIP}_{\rm BAND}$-decreasing piece prove the minimum is the
+left endpoint; the grid evaluates that minimum, it does not search for it.
+\item[($\beta$)] \emph{``$J_{\rm eff}$ certified only at the thinnest corner.''}
+ADDRESSED in \S5: the two-resolution envelope is now reported across the whole
+$5\times3$ grid ($< 0.01\%$), worst ratio $\times2.41$.
+\item[($\gamma$)] \emph{``branch validity on the band.''} ADDRESSED in \S4:
+$\mathrm{disc} > 0$ and $M_+ > M_c$ throughout; same PD branch.
+\item[($\delta$)] \emph{``this closes the gate.''} DISMISSED: the gate stays
+OPEN; closure is recommended pending operator authorization, second-cumulant
+scope and $[\times0.5,\times2]$ only.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- $\mathrm{MARGIN}(0.005) =
+0.004320$ reproduces the certified $0.00432$; sign-direction -- $m(\mu^2)$
+increasing makes the lower endpoint the worst corner, consistent with the table;
+limit-case -- $\mathrm{disc} > 0$ on the band keeps the two-branch regime;
+convergence -- $J_{\rm eff}$ envelope $< 0.01\%$ over the full grid.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ROBUSTNESS-MU2 exact margin recomputation
+Precise statement:       MARGIN(mu^2) = PB(M_+(mu^2)) - DIP_BAND(mu^2),
+                         closed-form; reproduces 0.00432 at anchor; over
+                         [x0.5,x2] min m = 0.004082 = 0.945 m_anchor at
+                         mu^2=0.0025 (proven the minimum by d m/d mu^2 > 0).
+                         STEP-5B ratio with the recomputed margin: worst x2.41
+                         > 1 at the three certified intensities. J_eff envelope
+                         < 0.01% across the full grid; same PD branch throughout.
+Scope:                   Second-cumulant order; mu^2 in [0.0025,0.01]; the three
+                         certified intensities (not a continuous-intensity claim).
+Dependencies:            sectorb_common (margin_of, J_of_t); Prop-A band floor
+                         (Math437 v1.2/Math440); production gap_solve/M_fast.
+Evidence grade:          EXECUTED (robustness_mu2_margin_recompute.py v1.1, 9/9)
+                         + closed-form anchor validation + derivative certificate.
+Reproduction command:    python codes/vacuum/robustness_mu2_margin_recompute.py
+Expected output:         9/9 PASS; MARGIN(0.005)=0.00432; min m=0.004082 at
+                         mu^2=0.0025; d m/d mu^2 > 0; worst ratio x2.41.
+Falsification gate:      m(mu^2) < 0.4 m_anchor anywhere; d m/d mu^2 <= 0
+                         somewhere (interior minimum); STEP-5B ratio <= 1.
+Tier before / after:     No tier/gate flip. ROBUSTNESS-MU2 closure bar MET;
+                         CLOSE@[x0.5,x2]-2ND-CUMULANT RECOMMENDED pending
+                         operator sign-off. Gate remains OPEN until then.
+No-overclaim statement:  Closure is second-cumulant scope, [x0.5,x2], and the
+                         three certified intensities only. The note supplies the
+                         exact m(mu^2) + monotonicity certificate; it does not
+                         flip the gate. All-orders robustness is SC-SCOPE.
+Next required action:    operator authorization to flip ROBUSTNESS-MU2 ->
+                         CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GATES + card +
+                         CHANGELOG).
+\end{verbatim}
+}

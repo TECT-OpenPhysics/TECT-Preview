@@ -5,6 +5,32 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE/ROBUSTNESS v1.1 REINFORCEMENT] M-ENDPOINT certificate + single-J0 conservatism + m(mu^2) monotonicity (operator review 2026-06-07) - 2026-06-07
+
+- **Operator review** (eval summary + per-doc attacks): both advances accepted as
+  real progress; tiers/gates FROZEN; four priority reinforcements required, all
+  applied as v1.1 re-issues. Archived reviews/2026-06-07-scscope-robustness-advances-review.md.
+- **Code-discipline (2026-06-07 policy) applied**: new single-source
+  codes/vacuum/sectorb_common.py (margin_of/J_of_t/M_radial/RHO; --selftest
+  reproduces 0.00432); the pasted MARGIN=0.00432 in scscope is REMOVED (derived).
+- **scscope_mendpoint_eval.py v1.1 (12/12)** + note v1.1 (supersedes v1.0):
+  M-ENDPOINT convergence certificate (two quadratures 0.61%, analytic tail bound
+  8.4e-4; EXECUTED value cross-checked ~1%, NOT a 0.1% interval constant; verdict
+  robust to the full envelope, x1.10 worst); single-J0 conservatism table
+  J(rhat(I)) <= J0; wording restricted to the SUNSET axis (x1.13 = SIGN not
+  margin; U4 reproduction = regression sanity check).
+- **robustness_mu2_margin_recompute.py v1.1 (9/9)** + note v1.1 (supersedes v1.0):
+  derivative-sign monotonicity certificate (d m/d mu^2 > 0 at all 61 grid points
+  => min at mu^2=0.0025), full-grid J_eff two-resolution envelope (< 0.01%),
+  Prop-A branch invariance (disc>0, M_+>M_c); "three certified intensities"
+  qualifier retained.
+- **No gate/tier flip** (review priority 4): GATES.md M-ENDPOINT / ROBUSTNESS-MU2
+  / SC-SCOPE evidence updated with v1.1 reinforcement + recommendation; status
+  stays OPEN. The build return-code gate caught a self-introduced prose
+  math-char bug (m(mu^2)/J_eff outside math) before commit.
+- **Verification**: sectorb_common selftest PASS; scscope 12/12; robustness 9/9;
+  FORM-CHECK PASS + OVERFULL 0 on both v1.1 notes; release-check PASS; pytest 3.
+
 ## [RESUME-INFRA + CODE-DISCIPLINE] Portable resume system (TODO ledger, doctor, SESSION) + binding code policy - 2026-06-07
 
 - **Operator directive**: (1) binding code discipline -- no hardcoded derived

@@ -1,13 +1,17 @@
 {
   "script": "robustness_mu2_margin_recompute.py",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "anchor": 0.005,
   "m_anchor": 0.00432001083939389,
   "m_min": 0.004082362238401594,
   "m_max": 0.004801932459625172,
   "m_min_over_anchor": 0.9449888877997261,
+  "min_at_mu2": 0.0025,
+  "dmargin_min": 0.09478651747358421,
   "worst_step5b_ratio": 2.4091301386603616,
-  "Jeff_envelope": 6.843304813841732e-07,
+  "Jeff_max_envelope": 7.034535410352371e-07,
+  "worst_ratio_over_envelope": 2.409128484971991,
+  "branch_invariant": true,
   "grid": [
     {
       "mu2": 0.0025,
@@ -47,59 +51,49 @@
   ],
   "claims": [
     {
-      "name": "anchor_Mplus",
-      "passed": true,
-      "detail": "(M_+ = 0.051071996 reproduces Math437 closed form)"
-    },
-    {
-      "name": "anchor_PB_Mplus",
-      "passed": true,
-      "detail": "(PB(M_+) = 0.005245964 reproduces Math437)"
-    },
-    {
-      "name": "anchor_DIP_BAND",
-      "passed": true,
-      "detail": "(DIP_BAND = 0.000925953 reproduces Math437)"
-    },
-    {
       "name": "anchor_margin_reproduces_0.00432",
       "passed": true,
-      "detail": "(MARGIN(0.005) = PB(M_+) - DIP_BAND = 0.004320 ~ 0.00432: closed form validated)"
-    },
-    {
-      "name": "margin_positive_throughout",
-      "passed": true,
-      "detail": "(recomputed m(mu^2) > 0 on the whole band: min = 0.004082)"
+      "detail": "(MARGIN(0.005) = PB(M_+) - DIP_BAND = 0.004320 ~ 0.00432; via sectorb_common, single source)"
     },
     {
       "name": "margin_ge_0.4_anchor",
       "passed": true,
-      "detail": "(min m(mu^2) = 0.004082 >= 0.4 m_anchor = 0.001728: closure-bar m-condition MET; actual ratio min/anchor = 0.945)"
+      "detail": "(min m(mu^2) = 0.004082 >= 0.4 m_anchor = 0.001728; actual ratio min/anchor = 0.945)"
     },
     {
-      "name": "margin_drift_small",
+      "name": "dmargin_dmu2_positive_everywhere",
       "passed": true,
-      "detail": "(total m(mu^2) drift over x4 band = 16.7% of anchor: smooth, no pathology)"
+      "detail": "(d m/d mu^2 > 0 at all 61 grid points: min = 9.4787e-02 > 0 => m(mu^2) strictly increasing => the minimum is the LEFT endpoint mu^2 = 0.0025, NOT an interior point)"
     },
     {
-      "name": "step5b_ratio_gt1_with_recomputed_margin",
+      "name": "min_at_left_endpoint",
       "passed": true,
-      "detail": "(worst STEP-5B ratio over [x0.5,x2] x 3 intensities, using the RECOMPUTED m(mu^2) = x2.41 > 1: closure holds with the exact margin, not the frozen anchor value)"
+      "detail": "(argmin index = 0 (mu^2 = 0.00250): grid minimum at the left endpoint, consistent with the positive-derivative certificate)"
     },
     {
-      "name": "Jeff_envelope_certified",
+      "name": "DIP_BAND_decreasing_closedform",
       "passed": true,
-      "detail": "(J_eff at nk=500 vs nk=1100 agree to 0.0% at the thinnest corner; J_lo=0.22354, J_hi=0.22354)"
+      "detail": "(DIP_BAND decreases monotonically 0.001047 -> 0.000699 as mu^2 rises: the -DIP_BAND contribution to m is exactly increasing)"
     },
     {
-      "name": "verdict_robust_to_Jeff_envelope",
+      "name": "propA_branch_invariant",
       "passed": true,
-      "detail": "(endpoint ratio over the J_eff envelope = [x2.93, x2.93] stays > 1: the closure verdict survives the quadrature uncertainty)"
+      "detail": "(disc = 9u^2-60v mu^2 > 0 (min 4.7124) and M_+ > M_c on the WHOLE band: the same upper PD branch is used throughout [0.0025,0.01]; no branch crossing)"
     },
     {
-      "name": "margin_grid_lipschitz_small",
+      "name": "step5b_ratio_gt1_recomputed_margin",
       "passed": true,
-      "detail": "(max |Delta margin| between adjacent grid points = 1.22e-05; the 61-point grid resolves m(mu^2) to better than 1e-4, so the grid minimum is a certified lower bound)"
+      "detail": "(worst STEP-5B ratio over [x0.5,x2] x the THREE CERTIFIED INTENSITIES, using the RECOMPUTED m(mu^2), = x2.41 > 1: closure holds with the exact margin)"
+    },
+    {
+      "name": "Jeff_envelope_full_grid_certified",
+      "passed": true,
+      "detail": "(max two-resolution J_eff relative envelope over the WHOLE 5x3 grid = 0.00% (< 5%): J_eff is converged everywhere, not only at the thinnest corner)"
+    },
+    {
+      "name": "verdict_robust_full_grid",
+      "passed": true,
+      "detail": "(worst STEP-5B ratio over the whole grid AND both J_eff resolutions = x2.41 > 1: the closure verdict survives the J_eff quadrature uncertainty across the full grid)"
     }
   ],
   "all_pass": true
