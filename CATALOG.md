@@ -6,7 +6,7 @@
 
 Generated: 2026-06-07
 
-**309 artefacts** · superseded versions kept: 37 · machine-readable twin: `verification/catalog.json`
+**312 artefacts** · superseded versions kept: 38 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -18,7 +18,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-CONV/LINEAGE.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `c16a9a75d13b` |
 | `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `3f928a41f2cf` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `2292f9db20e7` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `4a1ed3362f7e` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `49c2e6b36126` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `609662842feb` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `4516c0fbbaa9` |
@@ -88,14 +88,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/neargap-common-mode-resolution-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `f5acb4f24503` |
 | `claims/B1-RH-ENUM/notes/neargap-protection-lemma-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `91a57bf674bb` |
 | `claims/B1-RH-ENUM/notes/neargap-protection-lemma-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `97b3e90f889d` |
-| `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `b6d40b4d2a5e` |
-| `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `7c42117af4d6` |
+| `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `f49a00de0f60` |
+| `claims/B1-RH-ENUM/notes/neargap-residual-closure-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `741c1d03a5e1` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `a4aefa229414` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.0 | SUPERSEDED | `2226790d1a13` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.1.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.1 | ACTIVE | `b7ab5153602c` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.1.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.1 | SUPERSEDED | `38ab0bc0e598` |
-| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.2.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.2 | ACTIVE | `460d5274b645` |
-| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.2.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.2 | ACTIVE | `37630e9256d2` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.2.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.2 | ACTIVE | `e4a94b559912` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.2.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.2 | SUPERSEDED | `41bf0281921b` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.3.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.3 | ACTIVE | `f5f53a1a58c4` |
+| `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-260606-v2.3.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.3 | ACTIVE | `d3bf4f0623da` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `328f58312bef` |
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `3f40353e78a8` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-offanchor-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `2ea687c82cd8` |
@@ -104,8 +106,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.1 | SUPERSEDED | `944601433467` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.2.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.2 | ACTIVE | `355aae563f05` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.2.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.2 | SUPERSEDED | `1426de472e0a` |
-| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.3.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.3 | ACTIVE | `29d3bf3fd4b6` |
-| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.3.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.3 | ACTIVE | `cca218e22757` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.3.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.3 | ACTIVE | `b2fbfcd5b48f` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.3.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.3 | ACTIVE | `c6208a631a48` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `3b7932103503` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `4e049ada99f2` |
 | `claims/B1-RH-ENUM/notes/t6-entry-composition-audit-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `87f971acd233` |
@@ -176,8 +178,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/notes/rectangle-constant-closure-260605-260605-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | v1.3 | ACTIVE | `7eedf239f864` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/rectangle-constant-closure-260605-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | v1.0 | ACTIVE | `500990975d17` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/rectangle-constant-closure-260605-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | v1.0 | SUPERSEDED | `ccbb97d33d39` |
-| `claims/B5-BEYOND-LAYER-BOUND/notes/sunset-endpoint-refinement-260606-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `345c6aee58c7` |
-| `claims/B5-BEYOND-LAYER-BOUND/notes/sunset-endpoint-refinement-260606-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `c45aff6328c8` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/sunset-endpoint-refinement-260606-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `cc4a465d7d34` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/sunset-endpoint-refinement-260606-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `84577b40ce5d` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/t5-assignment-dossier-260606-260606-v2.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `3d6bebdd0702` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/t5-assignment-dossier-260606-260606-v2.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v2.0 | SUPERSEDED | `481b97b77d72` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/t5-assignment-dossier-260606-260606-v2.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v2.1 | ACTIVE | `ebb3cabd4a5b` |
@@ -358,7 +360,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `eda10651b131` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `a4f0f2a36993` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `21e8dbf13ee5` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -379,8 +381,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
 | `reviews/2026-06-06-internal-consistency-review.md` | — | — | — | — | ACTIVE | `a7fed4a96054` |
 | `reviews/2026-06-06-stale-language-followup-review.md` | — | — | — | — | ACTIVE | `6a96e41c925f` |
+| `reviews/2026-06-06-stale-language-round2-review.md` | — | — | — | — | ACTIVE | `74c1d85cdea6` |
 | `reviews/2026-06-06-v21-v11-reissue-review.md` | — | — | — | — | ACTIVE | `b8dc0f01cd31` |
-| `reviews/README.md` | — | — | — | — | ACTIVE | `6e2765a2c06e` |
+| `reviews/README.md` | — | — | — | — | ACTIVE | `f32fb8c20e7f` |
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |

@@ -5,6 +5,34 @@ not pillar counts.
 
 ---
 
+## [STALE-LANGUAGE-ROUND2-REVIEW] Residual closure implications scrubbed (title/section/table/footer) + reading-h v2.3 appendix lemmas - 2026-06-06
+
+- **Operator review** (per-document attack points, no summary) caught residual
+  closure implications surviving in titles, section bodies, tables and footers,
+  plus two functional-analytic gaps in reading-h. Archived at
+  reviews/2026-06-06-stale-language-round2-review.md. No tier changed.
+- **robustness v1.3**: title "Closing ROBUSTNESS-MU2" -> "Advancing
+  ROBUSTNESS-MU2 ... gate stays open"; Section 2 "closure holds throughout" ->
+  "ratio stays above unity but gate OPEN pending exact m(mu^2)"; 5-point sweep
+  marked sampled-trend; Section 3 marked T4 evidence (not an analytic
+  lower-bound theorem).
+- **neargap v1.0**: Section 1 -> historical framing; INVALIDATED fbox atop
+  Section 2 (2.7e-5 / x130 / M'=-J(0) superseded); footer Expected/Falsification
+  -> R-U10-1 invalidated/NA; Section 3 marked algebraic-support-not-final.
+- **sunset v1.0**: Section 4 table cells + bold note -> x3.2/x1.34 INVALIDATED;
+  feasibility -> third-cumulant sign UNDETERMINED; footer precise/bracket/
+  expected/no-overclaim aligned (corrected bracket ~[0.1047,0.1094] under
+  M'=-J(0)/2). Self-caught + fixed a 90-char overfull hbox in the footer.
+- **reading-h re-issued v2.2 -> v2.3** (v2.2 superseded): Appendix A (trace-log
+  equality in the determinant class; trace-class hypotheses explicit; Tr
+  ln(1+A)=0 => A=0 => P^2=0; scheme-independent under minimal subtraction) and
+  Appendix B (sign-invariant covering partition; verdict consumes only the
+  certified overlap M_-<=M_+, exact crossover estimator-grade and
+  verdict-irrelevant). Tier unchanged (T6 conditional); the appendices discharge
+  the two flagged sub-gaps.
+- **Verification**: lint 18/30; catalog 311; lineage; release-check PASS;
+  pytest 3 passed; FORM-CHECK PASS + OVERFULL 0 on all five edited/new notes.
+
 ## [STALE-LANGUAGE-FOLLOWUP-REVIEW] Residual closed-wording + H-A0 footer + status-update banners + sunset factor-2 quarantine - 2026-06-06
 
 - **Operator review** (per-document attack points, no summary) caught residual

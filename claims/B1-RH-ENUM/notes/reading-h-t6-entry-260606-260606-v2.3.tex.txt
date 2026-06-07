@@ -1,8 +1,7 @@
-% SUPERSEDED by reading-h-t6-entry-260606-260606-v2.3.tex.txt
 % =============================================================================
 % Title: Reading-H class-wide selection as a conditional theorem: the assembled T6 promotion
 % Claim: B1-RH-ENUM (whole-Reading-H selection; gate consequence of STEP-5B closure)
-% Version: v2.2 -- first issued 2026-06-06; this version issued 2026-06-06
+% Version: v2.3 -- first issued 2026-06-06; this version issued 2026-06-06
 % Status: theorem note, T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE} (operator-authorized 2026-06-06; H-A0 demoted to verified anchor dependency per the H-A0 docs)
 %
 % Revision history (cumulative):
@@ -20,6 +19,14 @@
 %        B1 promoted T5 -> T6 CONDITIONAL. The estimator-grade quantitative
 %        selection margins remain a separate open item (ESTIMATOR-UPGRADE);
 %        the T6 statement is the selection SIGN, not the precise margin.
+%   v2.3 (2026-06-06) AUDIT re-issue (operator adversarial review):
+%        added Appendix A (trace-log equality in the determinant class --
+%        explicit hypotheses A = D0^{-1/2} lam' P^2 D0^{-1/2} >= 0,
+%        trace-class; Tr ln(1+A)=0 => A=0 => P^2=0; scheme-independent
+%        under finite-order minimal subtraction) and Appendix B
+%        (sign-invariant covering partition formalising the bulk/near-gap
+%        case split). Body equality-lemma and case-split cite the
+%        appendices. No tier change (T6 CONDITIONAL).
 % =============================================================================
 
 \section*{1. Purpose and scope}
@@ -94,7 +101,8 @@ the trace difference is $\ge0$ with equality only when the perturbation vanishes
 support of $D_0^{-1/2}(\cdot)D_0^{-1/2}$; since $D_0\succ0$ this forces $\lambda'P^2=0$.
 Hence on the quotient by sub-resolution equivalence (which identifies $P=0$ with the
 Reading-H representative) the selection inequality is STRICT for every nontrivial
-competitor.
+competitor. Appendix~A states the trace-class hypotheses that make this
+rigorous in the renormalised per-volume setting.
 \end{lemma}
 
 \noindent\textbf{Case-split partition (explicit).} Let $M(P)$ be the cell-averaged
@@ -109,8 +117,9 @@ By the Prop-A band structure $\mathcal A_{\rm adm} = \mathcal A_{\rm bulk}\cup\m
 and on the overlap BOTH the bulk inequality ($F_{\rm layer}\ge F_{\rm layer}[R_H]+m$,
 $\delta F_{\rm off}>-m$) and the near-gap floor ($\ge0$) hold, so the two cases do not
 double-count (each is a self-contained one-sided bound on the SAME normalised
-$F_{\rm total}[P]-F_{\rm total}[R_H]$). Formalising the band-floor crossover threshold to
-paper grade is registered as a refinement (it does not affect the sign verdict).
+$F_{\rm total}[P]-F_{\rm total}[R_H]$). The crossover is formalised as a sign-invariant covering partition in
+Appendix~B; its exact level remains estimator-grade but enters neither
+bound nor the sign verdict.
 
 \section*{3. What the promotion does and does not assert}
 
@@ -189,7 +198,76 @@ evidential basis advance.
 No objection is UPHELD as a blocker; two are DISMISSED, three are
 VALID-with-mitigation (each a named hypothesis or tracked open item).
 
-\section*{6. Result footer}
+\section*{6. Appendix A: trace-log equality in the determinant class}
+
+\begin{lemma}[Trace-log equality, determinant class]
+Let $D_0\succ0$ be the common diagonal Hartree dressing and
+$A := D_0^{-1/2}\,\lambda' P^2\,D_0^{-1/2}$. Assume (H1) $A\succeq0$ and
+(H2) $A$ is trace-class on the renormalised fluctuation space, i.e.\
+$\sum_j a_j<\infty$ for the eigenvalues $\{a_j\}\subset[0,\infty)$ of
+$A$ --- the same finiteness that makes
+$\Delta F=\tfrac12\operatorname{Tr}[\ln(D_0+\lambda'P^2)-\ln D_0]
+=\tfrac12\operatorname{Tr}\ln(\mathbf 1+A)$ finite (certified for the
+admissible class in neargap-common-mode-resolution). Then
+\[
+\operatorname{Tr}\ln(\mathbf 1+A)=\sum_j\ln(1+a_j)=0
+\;\Longrightarrow\; a_j=0\ \forall j \;\Longrightarrow\; A=0,
+\]
+and since $D_0^{-1/2}$ is invertible, $\lambda'P^2=0$, i.e.\ $P=0$.
+\end{lemma}
+
+\begin{proof}
+(H1): $\lambda'>0$, $P^2\succeq0$, and congruence by the self-adjoint
+invertible $D_0^{-1/2}$ preserves positivity, so each $a_j\ge0$. Each
+summand $\ln(1+a_j)\ge0$ with equality iff $a_j=0$. A convergent sum
+(H2) of non-negative terms vanishes iff every term vanishes; hence all
+$a_j=0$ and $A=0$.
+\end{proof}
+
+\noindent\textbf{Renormalisation remark.} If a minimal-subtraction
+counterterm removes the first $n$ Taylor terms, the per-mode integrand is
+the remainder $R_n(a)=\ln(1+a)-\sum_{k=1}^{n}(-1)^{k-1}a^k/k$, with
+$R_n'(a)=(-1)^n a^n/(1+a)$ single-signed and $R_n(0)=0$, so
+$\operatorname{sgn}R_n(a)=(-1)^n$ for $a\ge0$ and $R_n(a)=0$ iff $a=0$.
+Hence any finite-order minimal-subtraction scheme keeps the renormalised
+trace a single-signed sum of per-mode terms vanishing only at $a=0$, and
+the equality classification $\Delta F_{\rm ren}=0\Rightarrow A=0$ is
+scheme-independent. The only hypothesis beyond positivity is (H2)
+trace/determinant-class finiteness, exactly the finiteness already
+certified for $\Delta F$.
+
+\section*{7. Appendix B: sign-invariant covering partition}
+
+\begin{lemma}[Sign-invariant covering partition]
+Let $M(P)$ be the cell-averaged dressing variance of an admissible
+competitor $P\in\mathcal A_{\rm adm}$. Suppose there exist levels
+$M_-\le M_+$ such that: (i) for $M(P)\ge M_-$ the bulk bound holds,
+$F_{\rm layer}[P]\ge F_{\rm layer}[R_H]+m$ with $m>0$ (Prop A) and
+$\delta F_{\rm off}[P]>-m$ (STEP-5B), giving
+$F_{\rm total}[P]>F_{\rm total}[R_H]$; (ii) for $M(P)\le M_+$ the
+near-gap floor holds,
+$\tfrac12\operatorname{Tr}[\ln(D_0+\lambda'P^2)-\ln D_0]\ge0$
+(Appendix A), giving $F_{\rm total}[P]\ge F_{\rm total}[R_H]$. Then
+$\mathcal A_{\rm adm}=\{M\ge M_-\}\cup\{M\le M_+\}$ is a COVER and the
+selection inequality holds class-wide.
+\end{lemma}
+
+\begin{proof}
+When $M_-\le M_+$ the two half-lines cover $\mathbb R$, so every $P$
+satisfies (i) or (ii); both yield $F_{\rm total}[P]\ge F_{\rm total}[R_H]$,
+strict off the sub-resolution quotient by the Appendix-A equality
+classification.
+\end{proof}
+
+\noindent\textbf{Sign-invariance.} The verdict consumes only the overlap
+$M_-\le M_+$: $M_-$ is the smallest variance at which the Prop-A band
+margin $m>0$ is certified, $M_+$ the largest at which the small-amplitude
+floor expansion is controlled; the certified Prop-A / STEP-5B data give
+$M_-\le M_+$. The exact crossover $M_\times\in[M_-,M_+]$ is
+estimator-grade and enters neither bound's validity nor the sign;
+sharpening it to paper grade cannot change the verdict.
+
+\section*{8. Result footer}
 
 \begin{verbatim}
 Result ID:               B1-RH-ENUM (Reading-H class-wide selection)

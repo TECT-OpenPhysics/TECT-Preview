@@ -1,5 +1,5 @@
 % =============================================================================
-% Title: Closing ROBUSTNESS-MU2: the STEP-5B beyond-layer margins re-computed off-anchor stay above unity across the neighbourhood
+% Title: Advancing ROBUSTNESS-MU2: off-anchor STEP-5B re-margin evidence, gate stays open
 % Claim: B1-RH-ENUM (gate ROBUSTNESS-MU2 closure; bears on B5-BEYOND-LAYER-BOUND)
 % Version: v1.3 -- first issued 2026-06-06; this version issued 2026-06-06
 % Status: theorem note, T4 (off-anchor STEP-5B re-margin 5/5; NUMERICALLY-SUPPORTED ADVANCE; ROBUSTNESS-MU2 stays OPEN -- exact m(mu^2) bounded-not-recomputed does not meet the closure bar; all 'CLOSED' wording removed v1.3)
@@ -69,17 +69,13 @@ $0.01$ ($\times2$) & $\times60.8$ & $\times10.0$ & $\times2.64$ \\
 \end{center}
 
 The worst ratio over the whole neighbourhood and all intensities is
-$\times2.55$ (the $\times0.5$, $I = 2\times10^{-3}$ corner) -- the
-closure holds throughout with room. The margins are monotone increasing
-in $\mu^2$, so the anchor sits near the thinnest point.
+$\times2.55$ (the $\times0.5$, $I = 2\times10^{-3}$ corner) -- the STEP-5B off-anchor ratio stays above unity throughout, but ROBUSTNESS-MU2 remains OPEN pending the exact $m(\mu^2)$. The margins increase across the five SAMPLED $\mu^2$ points (a sampled trend, not an interval-certified monotonicity proof), so the anchor sits near the thinnest sampled point.
 
 \section*{3. The layer-margin floor is preserved}
 
 The ratio uses the anchor layer margin $m = 4.32\times10^{-3}$. Its own
 $\mu^2$-robustness is the Prop-A $P_B$ floor: $M_R/M_c > 4.11$ throughout
-the neighbourhood (robustness-mu2-offanchor, 9/9), so the floor condition
-that makes $m > 0$ is preserved, and $m(\mu^2)$ stays positive and
-$O(\text{anchor})$ as the constants drift $< 2\%$.
+the neighbourhood (robustness-mu2-offanchor, 9/9), so the floor condition that makes $m > 0$ is preserved, and $m(\mu^2)$ stays positive and $O(\text{anchor})$ as the constants drift $< 2\%$. This is T4 EVIDENCE that $m(\mu^2)$ stays positive and anchor-order, NOT an analytic lower-bound theorem; a gate closure would require $m(\mu^2) \ge 0.4\,m_{\rm anchor}$ on $[\times0.5,\times2]$ established analytically or by certified interval arithmetic (with a certified $J_{\rm eff}$ envelope).
 
 \section*{4. Robustness reserve under a hypothetical exact $m(\mu^2)$ confirmation}
 

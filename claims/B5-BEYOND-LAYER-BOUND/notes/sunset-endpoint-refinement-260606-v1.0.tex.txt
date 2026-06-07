@@ -123,18 +123,15 @@ $I = 2{\times}10^{-3}$ \\
 \midrule
 tadpole (U6) & \multicolumn{3}{c}{ABSENT identically (lemma sketch)} \\
 sunset, U4 conservative & $\times7.7$ & $\times2.8$ & $\times0.97$ \\
-sunset, intensity-dressed (U7) & $\times7.7$ (unchanged) &
-$\sim\times3.2$ (est.) & $\sim\times1.34$ (est., M-ENDPOINT pending) \\
+sunset, dressed (U7) [INVALID] & $\times7.7$ (unchanged) &
+$\sim\times3.2$ (INVALID) & $\sim\times1.34$ (INVALID) \\
 \bottomrule
 \end{tabularx}
 \end{center}
 
 \noindent (The $I = 10^{-3}$ entry uses $\hat r(10^{-3}) = 0.3206$,
 $M \approx 0.1047$, $u_{\rm eff}^2 \approx 6.18$: bound $1.20\times
-10^{-3}$ vs $3.83\times10^{-3}$.) If M-ENDPOINT lands inside its
-convex/secant bracket, the third-cumulant landscape is positive at all
-three anchors at estimate grade --- making the SC-SCOPE lift to third
-order a FEASIBLE registered programme (formal inputs remaining:
+10^{-3}$ vs $3.83\times10^{-3}$.) \textbf{All U7 intensity-dressed entries ($\sim\times3.2$, $\sim\times1.34$) are INVALIDATED by the factor-2 error $M'=-J(0)\to-J(0)/2$ (Section~2 box) and must NOT be cited.} Until the factor-2 correction is propagated, the third-cumulant landscape sign at $I \ge 10^{-3}$ is UNDETERMINED; the SC-SCOPE lift to third order remains a registered programme conditional on the corrected endpoint (formal inputs remaining:
 R-U6-1/R-U6-2 from U6; M-ENDPOINT + the assembled third-order
 inequality from this note; the quartic-difference channel writeup from
 U4).
@@ -207,11 +204,17 @@ Precise statement:       REFINEMENT (T3, estimate-grade): the sunset
                          INVALIDATED; true -J(0)/2], the
                          endpoint coupling drops u_eff^2 7.209 ->
                          ~5.675 and the kernel M-factor 0.1094 ->
-                         ~0.1001, lifting the endpoint sunset ratio
-                         x0.97 -> ~x1.34 (and x2.8 -> ~x3.2 at 1e-3).
+                         ~0.1001, the OLD candidate ratios x0.97 ->
+                         ~x1.34 (and x2.8 -> ~x3.2 at 1e-3) are
+                         INVALIDATED by the factor-2; the corrected
+                         endpoint needs M-ENDPOINT + a re-derived
+                         bracket and inequality.
                          CONDITIONAL on the named constant M-ENDPOINT
-                         = M(0.33675), a-priori bracketed in
-                         [0.1001, 0.1094]. HONEST NEGATIVE: the kernel
+                         = M(0.33675). The a-priori bracket
+                         [0.1001, 0.1094] used the factor-2 slope;
+                         the corrected lower end is ~0.1047, so the
+                         bracket narrows to ~[0.1047, 0.1094].
+                         HONEST NEGATIVE: the kernel
                          axis is low-yield (4-wave resonance phase
                          space saturates the Young bound at shell
                          transfers).
@@ -227,9 +230,11 @@ Reproduction command:    (registered follow-up) python codes/vacuum/
                          third_cumulant_assessment.py  (shared with
                          U4; adds M-ENDPOINT quadrature + optional
                          G^3(q0) evaluation)
-Expected output:         M(0.33675) inside [0.1001, 0.1094] with
-                         one-sided refinement check; all U7 table
-                         entries asserted; JSON artefact under
+Expected output:         M(0.33675) inside the CORRECTED bracket
+                         (~[0.1047, 0.1094] under M'=-J(0)/2) with a
+                         one-sided refinement check; the U7 table
+                         entries are INVALIDATED pending recompute;
+                         JSON artefact under
                          claims/B5-BEYOND-LAYER-BOUND/runs/.
 Falsification gate:      M-ENDPOINT outside its convex/secant bracket
                          (would indicate an error in the certified
@@ -238,11 +243,11 @@ Falsification gate:      M-ENDPOINT outside its convex/secant bracket
                          M-ENDPOINT lands (honest negative for the
                          lift, pre-registered).
 Tier before / after:     No tier action; B5 stays T5-CANDIDATE.
-No-overclaim statement:  The x1.34 endpoint ratio is ESTIMATE-GRADE
-                         (convexity direction stated; worst-bracket
-                         reproduces x0.97). Nothing here lifts
-                         SC-SCOPE; the U1 theorem is untouched. PDF
-                         build + linter PENDING operator-side.
+No-overclaim statement:  The x1.34 endpoint ratio is INVALIDATED
+                         (factor-2; true M'=-J(0)/2) and must not be
+                         cited; the corrected endpoint is pending
+                         M-ENDPOINT. Nothing here lifts SC-SCOPE; the
+                         U1 theorem is untouched.
 Next required action:    M-ENDPOINT machine evaluation + the shared
                          U4/U7 assert script; then the assembled
                          third-order inequality note (the actual lift
