@@ -28,6 +28,14 @@ not pillar counts.
 - **neargap-residual-closure v1.0**: footer aligned with its HISTORICAL
   watermark - "closes/CLOSED" -> "R-U10-1 INVALIDATED; R-U10-2 RETAINED AS
   ALGEBRAIC SUPPORT pending a line-by-line exhibit".
+- **Completeness follow-up** (operator: check for missed updates): the
+  intermediate flip-flop versions robustness v1.1 and v1.2 carried SUPERSEDED
+  forward-pointers but, unlike v1.0, lacked the withdrawal WATERMARK; their
+  bodies still asserted 'ROBUSTNESS-MU2 is closed' (v1.1) / 'CLOSED@[x0.5,x2]'
+  (v1.2). Added the v1.0-style withdrawal watermark to both. Post-fix
+  invariant: every live 'is closed' / 'CLOSED@' string in claims/ now sits in
+  a watermarked-historical note (robustness v1.0/v1.1/v1.2) or names an
+  explicitly WITHDRAWN claim (ga0-dui v1.1, ha0-removal v2.1 banners).
 - **Verification**: lint 18/30; catalog 308; lineage; release-check PASS;
   pytest 3 passed; FORM-CHECK PASS + OVERFULL 0 on all six edited notes; six
   note PDFs rebuilt.

@@ -100,10 +100,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/reading-h-t6-entry-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `3f40353e78a8` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-offanchor-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `2ea687c82cd8` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-offanchor-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `ddf7a1f2e744` |
-| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.1.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.1 | ACTIVE | `9f8099b846ec` |
-| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.1 | SUPERSEDED | `a5a1d80464da` |
-| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.2.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.2 | ACTIVE | `eb49a5bf75ed` |
-| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.2.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.2 | SUPERSEDED | `1c3314e5ac6a` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.1.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.1 | ACTIVE | `88b5aa4b7a23` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.1 | SUPERSEDED | `944601433467` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.2.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.2 | ACTIVE | `355aae563f05` |
+| `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.2.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.2 | SUPERSEDED | `1426de472e0a` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.3.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.3 | ACTIVE | `29d3bf3fd4b6` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-260606-v1.3.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.3 | ACTIVE | `cca218e22757` |
 | `claims/B1-RH-ENUM/notes/robustness-mu2-step5b-remargin-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `3b7932103503` |
@@ -358,7 +358,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `35bb3d56c12a` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `eda10651b131` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `21e8dbf13ee5` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `660acebde221` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -378,7 +378,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
 | `reviews/2026-06-06-internal-consistency-review.md` | — | — | — | — | ACTIVE | `a7fed4a96054` |
-| `reviews/2026-06-06-stale-language-followup-review.md` | — | — | — | — | ACTIVE | `b518b873320a` |
+| `reviews/2026-06-06-stale-language-followup-review.md` | — | — | — | — | ACTIVE | `6a96e41c925f` |
 | `reviews/2026-06-06-v21-v11-reissue-review.md` | — | — | — | — | ACTIVE | `b8dc0f01cd31` |
 | `reviews/README.md` | — | — | — | — | ACTIVE | `6e2765a2c06e` |
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |

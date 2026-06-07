@@ -83,3 +83,19 @@ pytest 3 passed; FORM-CHECK PASS + OVERFULL-HBOX 0 on all six edited notes
 
 ## Credit
 All defect classes above were reviewer-identified.
+
+## Post-review completeness audit (operator: check for missed updates)
+
+A corpus-wide scan for status-implying paraphrases (not just the literal gate
+name) found the missed update: the intermediate flip-flop versions robustness
+v1.1 and v1.2 carried SUPERSEDED forward-pointers but, unlike v1.0, lacked the
+withdrawal WATERMARK; their bodies still asserted 'ROBUSTNESS-MU2 is closed'
+(v1.1) and 'CLOSED@[x0.5,x2]' (v1.2).
+
+ACTION: added the v1.0-style withdrawal watermark to both (line 2, after the
+forward-pointer). FORM-CHECK PASS + OVERFULL 0 on v1.1/v1.2.
+
+Post-fix invariant (verified): every live `is closed` / `CLOSED@` string in
+claims/ now resides in a watermarked-historical note (robustness
+v1.0/v1.1/v1.2) or names an explicitly WITHDRAWN claim (ga0-dui v1.1,
+ha0-removal v2.1 status-update banners). release-check PASS; catalog 309.
