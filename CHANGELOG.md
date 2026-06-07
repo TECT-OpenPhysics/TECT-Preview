@@ -5,6 +5,32 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE-MENDPOINT + ROBUSTNESS-MU2-MARGIN] M-ENDPOINT evaluated (sunset axis positive) + exact m(mu^2) recomputed (ROBUSTNESS-MU2 closure bar met) - 2026-06-07
+
+- **Operator directive**: advance SC-SCOPE and ROBUSTNESS-MU2. Two
+  numerical+closed-form advances; NO gate/tier flip (operator authorizes
+  transitions; both recorded as dated ADVANCE in claims/GATES.md evidence with
+  explicit recommendations).
+- **SC-SCOPE / M-ENDPOINT** (scscope-mendpoint-evaluation v1.0 +
+  codes/vacuum/scscope_mendpoint_eval.py, 11/11): M-ENDPOINT = M(0.33675) =
+  0.10495 evaluated by DIRECT dressing-variance quadrature (two quadratures
+  agree 0.20%), bypassing the factor-2 linearisation that invalidated the x1.34
+  estimate. The directly-dressed sunset endpoint ratio is x1.13 > 1 (frozen-
+  coupling x0.97 reproduces U4): the U4 marginal failure was a frozen-coupling
+  artefact, not a real third-cumulant obstruction. M-ENDPOINT RESOLVED
+  (recommended); SC-SCOPE stays OPEN on GHAT4-PERTRANSFER + R-U6-1.
+- **ROBUSTNESS-MU2** (robustness-mu2-margin-recompute v1.0 +
+  codes/vacuum/robustness_mu2_margin_recompute.py, 11/11): the EXACT layer
+  margin m(mu^2) = PB(M_+(mu^2)) - DIP_BAND(mu^2) recomputed across [x0.5,x2]
+  (closed form reproduces 0.00432 at the anchor). min m(mu^2) = 0.004082 =
+  0.945 m_anchor (>= 0.4 m_anchor; 16.7% drift over x4); STEP-5B ratio with the
+  RECOMPUTED margin worst x2.41 > 1; J_eff envelope converged (nk 500 vs 1100
+  < 0.1%). The closure bar is MET; CLOSE@[x0.5,x2]-2ND-CUMULANT recommended
+  pending operator sign-off. Gate stays OPEN until authorized.
+- **Verification**: lint 18/30; catalog 320; lineage; release-check PASS;
+  pytest 3 passed; FORM-CHECK PASS + OVERFULL 0 on both new notes; both scripts
+  exit 0 with JSON artefacts under claims/.../runs/.
+
 ## [STALE-LANGUAGE-ROUND2-REVIEW] Residual closure implications scrubbed (title/section/table/footer) + reading-h v2.3 appendix lemmas - 2026-06-06
 
 - **Operator review** (per-document attack points, no summary) caught residual

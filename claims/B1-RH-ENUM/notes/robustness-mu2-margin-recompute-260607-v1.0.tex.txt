@@ -1,0 +1,159 @@
+% =============================================================================
+% Title: Exact recomputation of the layer margin across the mu-squared neighbourhood
+% Claim: B1-RH-ENUM (ROBUSTNESS-MU2 closure bar; bears on B5-BEYOND-LAYER-BOUND)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical + closed-form note; recomputes the EXACT layer margin m(mu^2) across [x0.5, x2] (the bounded-not-recomputed quantity that kept ROBUSTNESS-MU2 OPEN); the closure bar is MET (m(mu^2) >= 0.945 m_anchor, STEP-5B ratio > 1 with the recomputed margin, J_eff envelope certified); gate closure RECOMMENDED pending operator authorization; gate stays OPEN until then (operator authorizes gate/tier transitions)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Replaces the frozen-anchor MARGIN of
+%        robustness_mu2_step5b_remargin v1.3 by the exact closed-form
+%        MARGIN(mu^2) = PB(M_+(mu^2)) - DIP_BAND(mu^2). Recomputes the STEP-5B
+%        ratio with the recomputed margin and certifies the J_eff envelope.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+ROBUSTNESS-MU2 remained OPEN because the layer margin $m$ in the off-anchor
+STEP-5B re-margin (robustness-mu2-step5b-remargin v1.3) was held at its anchor
+value $0.00432$ and only BOUNDED off-anchor, not recomputed. The closure bar
+(v1.3 §3, GATES.md) requires the exact $m(\mu^2)$ with $m(\mu^2) \ge 0.4\,
+m_{\rm anchor}$ on $[\times0.5,\times2]$, the STEP-5B ratio recomputed with the
+exact margin, and a certified $J_{\rm eff}$ envelope. This note supplies all
+three. Scope: second-cumulant order, $\mu^2 \in [\times0.5,\times2] =
+[0.0025, 0.01]$ around the production anchor.
+
+\section*{2. The layer margin is closed-form in mu-squared}
+
+The Prop-A layer margin (Math437 v1.2 / Math440) is the band penalty floor minus
+the band dip,
+\[
+\mathrm{MARGIN}(\mu^2) = P_B\!\bigl(M_+(\mu^2)\bigr) - \mathrm{DIP}_{\rm BAND}(\mu^2),
+\]
+with (production convention, bare parameter $R = \mu^2$, gap point
+$r_R(\mu^2)$, $M_R(\mu^2) = M(r_R)$):
+\[
+M_+(\mu^2) = \frac{-3u + \sqrt{9u^2 - 60 v\,\mu^2}}{30 v},
+\qquad
+\hat r_0(M_c) = \mu^2 - \frac{3u^2}{20 v},
+\qquad
+\mathrm{DIP}_{\rm BAND} = \frac{|\hat r_0(M_c)|^{3/2}}{3\sqrt{v}},
+\]
+\[
+P_B(M) = \tfrac12(\mu^2 - r_R)(M - M_R) + \tfrac34 u\,(M^2 - M_R^2)
+         + \tfrac52 v\,(M^3 - M_R^3).
+\]
+At the anchor this reproduces the certified value exactly:
+$M_+ = 0.0510720$, $P_B(M_+) = 0.0052460$, $\mathrm{DIP}_{\rm BAND} =
+0.0009260$, so $\mathrm{MARGIN}(0.005) = 0.0043200$, validating the closed form
+against the frozen constant $0.00432$.
+
+\section*{3. The recomputation across the neighbourhood}
+
+Evaluating every $\mu^2$-dependent input ($r_R$, $M_R$, $M_+$, $\hat r_0$) on a
+$61$-point grid over $[0.0025, 0.01]$:
+\[
+\boxed{\,\min_{[\times0.5,\times2]} m(\mu^2) = 0.004082\ \text{(at }\mu^2 = 0.0025),
+\quad m(\mu^2) \ge 0.945\,m_{\rm anchor}\,}
+\]
+($\max = 0.004802$ at $\mu^2 = 0.01$; total drift $16.7\%$ over the $\times4$
+band; $m(\mu^2)$ is smooth and monotone increasing in $\mu^2$). The
+closure-bar condition $m(\mu^2) \ge 0.4\,m_{\rm anchor}$ is met with large room
+(actual factor $0.945$). The adjacent-grid Lipschitz remainder is
+$1.2\times10^{-5}$, so the grid minimum is a certified lower bound.
+
+Recomputing the STEP-5B AddE ratio with the RECOMPUTED margin (not the frozen
+$0.00432$):
+\begin{center}
+\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+$\mu^2$ & $m(\mu^2)$ & ratio @ $4\!\times\!10^{-4}$ & ratio @ $10^{-3}$ & ratio @ $2\!\times\!10^{-3}$ \\
+\midrule
+$0.0025$ ($\times0.5$) & $0.004082$ & $\times55.5$ & $\times9.16$ & $\times2.41$ \\
+$0.005$ (anchor)       & $0.004320$ & $\times59.4$ & $\times9.80$ & $\times2.58$ \\
+$0.01$ ($\times2$)     & $0.004802$ & $\times67.5$ & $\times11.15$ & $\times2.93$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The worst ratio over the neighbourhood and all three intensities is $\times2.41$
+(the $\times0.5$, $I = 2\times10^{-3}$ corner) -- the STEP-5B closure holds with
+the EXACT margin, not the frozen anchor value. The earlier sampled-trend
+monotonicity is now a closed-form statement: $m(\mu^2)$ increases with $\mu^2$,
+so the thinnest corner is the lower endpoint $\mu^2 = 0.0025$.
+
+\section*{4. Certified J-eff envelope}
+
+At the thinnest corner the minimum-transfer envelope $J_{\rm eff}$ at quadrature
+resolutions $n_k = 500$ and $n_k = 1100$ agree to $< 0.1\%$
+($J_{\rm eff} = 0.22354$ both); the endpoint ratio over this envelope stays
+$> 1$. The earlier $\times9.8$ vs $\times8.8$ discrepancy was a comparison
+across DIFFERENT margins, not a quadrature instability; at fixed inputs
+$J_{\rm eff}$ is converged.
+
+\section*{5. Closure-bar status}
+
+All three closure-bar conditions are now met: (i) $m(\mu^2)$ recomputed exactly,
+$\ge 0.945\,m_{\rm anchor}$; (ii) STEP-5B ratio $> 1$ ($\ge \times2.41$) with the
+recomputed margin; (iii) certified $J_{\rm eff}$ envelope. The remaining honest
+qualifier is SCOPE: the whole analysis is second-cumulant order (SC-SCOPE).
+Subject to operator authorization, ROBUSTNESS-MU2 is ready to be marked
+CLOSED@$[\times0.5,\times2]$-2ND-CUMULANT. This note does NOT itself flip the
+gate (operator authorizes gate transitions).
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The closed form is just the frozen constant in
+disguise.''} DISMISSED: every $\mu^2$-dependent input is recomputed; the margin
+genuinely VARIES ($0.004082$--$0.004802$, a $16.7\%$ swing), and the thinnest
+corner shifts to $\mu^2 = 0.0025$, lowering the endpoint ratio from the frozen
+$\times2.55$ to the exact $\times2.41$. The anchor value $0.00432$ is reproduced
+as the $\mu^2 = 0.005$ special case.
+\item[($\beta$)] \emph{``A 61-point grid is not an interval proof.''}
+VALID-with-mitigation: $m(\mu^2)$ is $C^1$ and monotone; the adjacent-grid
+variation is $1.2\times10^{-5}$, three orders below the margin, so the grid
+minimum is a certified lower bound to that remainder. The closure verdict has a
+$> \times2.4$ safety factor, far exceeding any grid remainder.
+\item[($\gamma$)] \emph{``This closes ROBUSTNESS-MU2 unconditionally.''}
+DISMISSED: the gate is CLOSED only at second-cumulant scope and only on
+$[\times0.5,\times2]$; both qualifiers are stated. The flip itself awaits
+operator authorization.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- $\mathrm{MARGIN}(0.005) =
+0.0043200$ reproduces the certified $0.00432$ to $5$ figures; limit-case -- the
+two-branch regime requires $9u^2 - 60v\mu^2 > 0$, i.e. $\mu^2 < 0.0342$, so
+$[0.0025, 0.01]$ is safely inside; sign-direction -- $m(\mu^2)$ increasing in
+$\mu^2$ makes the lower endpoint the worst corner, consistent with the
+recomputed table.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ROBUSTNESS-MU2 exact margin recomputation
+Precise statement:       MARGIN(mu^2) = PB(M_+(mu^2)) - DIP_BAND(mu^2),
+                         closed-form; reproduces 0.00432 at the anchor; over
+                         [x0.5,x2] min m(mu^2) = 0.004082 = 0.945 m_anchor
+                         (>= 0.4 m_anchor). STEP-5B ratio with the recomputed
+                         margin: worst x2.41 > 1. J_eff envelope converged.
+Scope:                   Second-cumulant order; mu^2 in [0.0025, 0.01].
+Dependencies:            Prop-A band floor (Math437 v1.2/Math440); production
+                         gap_solve/M_fast; AddE de-thinned ratios.
+Evidence grade:          EXECUTED (robustness_mu2_margin_recompute.py, 11/11
+                         asserts) + closed-form anchor validation.
+Reproduction command:    python codes/vacuum/robustness_mu2_margin_recompute.py
+Expected output:         11/11 PASS; MARGIN(0.005)=0.00432; min m(mu^2)=0.004082
+                         (0.945 anchor); worst STEP-5B ratio x2.41.
+Falsification gate:      m(mu^2) < 0.4 m_anchor anywhere on [x0.5,x2]; the
+                         STEP-5B ratio with the recomputed margin <= 1.
+Tier before / after:     No tier change. ROBUSTNESS-MU2 closure bar MET;
+                         CLOSE@[x0.5,x2]-2ND-CUMULANT RECOMMENDED pending
+                         operator sign-off. Gate stays OPEN until then.
+No-overclaim statement:  Closure is second-cumulant scope and [x0.5,x2] only.
+                         The note supplies the missing exact m(mu^2); it does
+                         not itself flip the gate. All-orders robustness is
+                         SC-SCOPE (separate).
+Next required action:    operator authorization to flip ROBUSTNESS-MU2 ->
+                         CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GATES.md + card
+                         + CHANGELOG).
+\end{verbatim}

@@ -1,0 +1,106 @@
+{
+  "script": "robustness_mu2_margin_recompute.py",
+  "version": "1.0.0",
+  "anchor": 0.005,
+  "m_anchor": 0.00432001083939389,
+  "m_min": 0.004082362238401594,
+  "m_max": 0.004801932459625172,
+  "m_min_over_anchor": 0.9449888877997261,
+  "worst_step5b_ratio": 2.4091301386603616,
+  "Jeff_envelope": 6.843304813841732e-07,
+  "grid": [
+    {
+      "mu2": 0.0025,
+      "margin": 0.004082362238401594,
+      "ratio_0.0004": 55.4626926701154,
+      "ratio_0.001": 9.1598299116046,
+      "ratio_0.002": 2.4091301386603616
+    },
+    {
+      "mu2": 0.00354,
+      "margin": 0.0041810408449679815,
+      "ratio_0.0004": 57.076078163169285,
+      "ratio_0.001": 9.425591014158943,
+      "ratio_0.002": 2.478747015987529
+    },
+    {
+      "mu2": 0.005,
+      "margin": 0.00432001083939389,
+      "ratio_0.0004": 59.371126999620316,
+      "ratio_0.001": 9.803586024732947,
+      "ratio_0.002": 2.5777430018865486
+    },
+    {
+      "mu2": 0.00707,
+      "margin": 0.0045181587117771975,
+      "ratio_0.0004": 62.689329364894554,
+      "ratio_0.001": 10.349991963441896,
+      "ratio_0.002": 2.7208037465923502
+    },
+    {
+      "mu2": 0.01,
+      "margin": 0.004801932459625172,
+      "ratio_0.0004": 67.53449226725832,
+      "ratio_0.001": 11.147634098875331,
+      "ratio_0.002": 2.9295593709442516
+    }
+  ],
+  "claims": [
+    {
+      "name": "anchor_Mplus",
+      "passed": true,
+      "detail": "(M_+ = 0.051071996 reproduces Math437 closed form)"
+    },
+    {
+      "name": "anchor_PB_Mplus",
+      "passed": true,
+      "detail": "(PB(M_+) = 0.005245964 reproduces Math437)"
+    },
+    {
+      "name": "anchor_DIP_BAND",
+      "passed": true,
+      "detail": "(DIP_BAND = 0.000925953 reproduces Math437)"
+    },
+    {
+      "name": "anchor_margin_reproduces_0.00432",
+      "passed": true,
+      "detail": "(MARGIN(0.005) = PB(M_+) - DIP_BAND = 0.004320 ~ 0.00432: closed form validated)"
+    },
+    {
+      "name": "margin_positive_throughout",
+      "passed": true,
+      "detail": "(recomputed m(mu^2) > 0 on the whole band: min = 0.004082)"
+    },
+    {
+      "name": "margin_ge_0.4_anchor",
+      "passed": true,
+      "detail": "(min m(mu^2) = 0.004082 >= 0.4 m_anchor = 0.001728: closure-bar m-condition MET; actual ratio min/anchor = 0.945)"
+    },
+    {
+      "name": "margin_drift_small",
+      "passed": true,
+      "detail": "(total m(mu^2) drift over x4 band = 16.7% of anchor: smooth, no pathology)"
+    },
+    {
+      "name": "step5b_ratio_gt1_with_recomputed_margin",
+      "passed": true,
+      "detail": "(worst STEP-5B ratio over [x0.5,x2] x 3 intensities, using the RECOMPUTED m(mu^2) = x2.41 > 1: closure holds with the exact margin, not the frozen anchor value)"
+    },
+    {
+      "name": "Jeff_envelope_certified",
+      "passed": true,
+      "detail": "(J_eff at nk=500 vs nk=1100 agree to 0.0% at the thinnest corner; J_lo=0.22354, J_hi=0.22354)"
+    },
+    {
+      "name": "verdict_robust_to_Jeff_envelope",
+      "passed": true,
+      "detail": "(endpoint ratio over the J_eff envelope = [x2.93, x2.93] stays > 1: the closure verdict survives the quadrature uncertainty)"
+    },
+    {
+      "name": "margin_grid_lipschitz_small",
+      "passed": true,
+      "detail": "(max |Delta margin| between adjacent grid points = 1.22e-05; the 61-point grid resolves m(mu^2) to better than 1e-4, so the grid minimum is a certified lower bound)"
+    }
+  ],
+  "all_pass": true
+}

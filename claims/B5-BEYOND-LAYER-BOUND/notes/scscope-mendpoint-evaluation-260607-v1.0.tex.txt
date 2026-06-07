@@ -1,0 +1,138 @@
+% =============================================================================
+% Title: Direct evaluation of the M-ENDPOINT constant and the corrected sunset-axis endpoint sign
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE sunset axis; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical-evaluation note; RESOLVES the M-ENDPOINT gate (the named missing constant M(0.33675)); shows the sunset-axis endpoint is POSITIVE with the directly-dressed coupling; SC-SCOPE remains OPEN on GHAT4-PERTRANSFER + R-U6-1; no tier change (operator authorizes gate/tier transitions)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Evaluates M-ENDPOINT = M(0.33675) by direct
+%        dressing-variance quadrature (cross-checked two ways), bypassing the
+%        factor-2 linearisation that invalidated the sunset note's x1.34
+%        estimate. Recomputes the sunset-axis ratio with the directly-dressed
+%        coupling: frozen-coupling x0.97 (reproduces U4) -> dressed x1.13 (> 1).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The SC-SCOPE all-orders lift is gated by four registered inputs (M-ENDPOINT,
+GHAT3-Q0 optional, GHAT4-PERTRANSFER, R-U6-1). This note resolves the first:
+M-ENDPOINT, the convexity-honest dressing variance $M(\hat r(2\times10^{-3}))
+= M(0.33675)$. The sunset-endpoint note estimated the endpoint coupling by a
+linear-response slope and used $M'(\hat r) = -J(0)$, where the correct relation
+is $M'(\hat r) = -J(0)/2$ (useries-triage); the resulting $\times1.34$ estimate
+was invalidated. Here the constant is evaluated DIRECTLY by quadrature, so the
+linearisation -- and the factor-2 error with it -- does not enter. The scope is
+the sunset axis only: this note does not close SC-SCOPE.
+
+\section*{2. The M-ENDPOINT constant}
+
+In the production convention $\hat r(I) = r_R + 2\lambda' I$ with
+$r_R = $ gap point at $\mu^2 = 0.005$, $M_R = M(r_R)$, $\lambda' = 3u + 30vM_R$,
+the dressing variance is the radial integral
+\[
+M(m) = \frac{1}{2\pi^2}\int_0^\infty \frac{k^2}{m + C(k^2 - q_0^2)^2}\,dk .
+\]
+Two independent quadratures (the production \texttt{M\_fast} and a direct radial
+trapezoid) agree to $0.20\%$:
+\[
+\boxed{\,M\text{-ENDPOINT} = M(0.33675) = 0.104953\,}
+\qquad (M_R = 0.109414,\ \hat r(2\times10^{-3}) = 0.33675).
+\]
+The value sits below $M_R$ (the dressing at the higher endpoint mass lowers the
+variance, as monotonicity requires) and inside the corrected convex/secant
+bracket $[0.10474, 0.10941]$ (the old $[0.1001, 0.1094]$ used the factor-2
+slope). $M(0.32064) = 0.107098$ is the $I = 10^{-3}$ companion.
+
+\section*{3. The corrected sunset-axis endpoint sign}
+
+With $u_{\rm eff}(M) = u + 10vM$, the matched single-$J_0$ sunset bound and the
+composed AddE margin are
+\[
+b(I) = \tfrac12\,u_{\rm eff}(M)^2\,(2I)\cdot 6 J_0\,M ,
+\qquad
+\mathrm{composed}(I) = \mathrm{MARGIN}\,\bigl(1 - 1/\rho(I)\bigr) ,
+\]
+with $J_0 = 0.2896$, $\mathrm{MARGIN} = 0.00432$, $\rho(2\times10^{-3}) = 2.6$.
+The frozen-coupling bound (U4) freezes $u_{\rm eff}$ at $M_R$; the physically
+correct endpoint dresses each competitor at its OWN kernel $M(\hat r(I))$:
+\[
+\frac{\mathrm{composed}}{b}\Big|_{I = 2\times10^{-3}} :
+\quad
+\underbrace{\times0.970}_{\text{frozen } M_R\ (=\text{U4})}
+\;\longrightarrow\;
+\boxed{\,\underbrace{\times1.13}_{\text{dressed } M\text{-ENDPOINT}}\,} > 1 .
+\]
+At $I = 10^{-3}$ the dressed ratio is $\times3.02$. Thus, with the
+directly-evaluated M-ENDPOINT, the sunset-axis endpoint is POSITIVE: the U4
+marginal failure ($\times0.97$) was a frozen-coupling artefact, not a real
+third-cumulant obstruction. This supersedes the invalidated $\times1.34$ linear
+estimate; the corrected dressed value is $\times1.13$.
+
+\section*{4. What this resolves and what remains}
+
+RESOLVED: M-ENDPOINT (the named missing constant) and, with it, the sunset axis
+of the third-cumulant endpoint, which is positive at all certified intensities.
+OPEN (SC-SCOPE remains open): the quartic-difference channel
+(GHAT4-PERTRANSFER -- at sup-kernel grade $\times1.0$, per-transfer form factor
+load-bearing) and the tadpole alignment (R-U6-1). The all-orders lift requires
+these re-assembled as a joint second+third-order inequality; this note advances
+one of the three load-bearing channels.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The single-$J_0$ convention hides a kernel
+dependence.''} VALID-with-mitigation: $J_0$ is taken at the anchor dressing to
+match the certified U4/U7 tables (which the script reproduces: frozen endpoint
+$\times0.970$ vs U4 $\times0.97$). Using $J$ at each $\hat r(I)$ would only
+RAISE the dressed ratios (larger $\hat r$ lowers $J$), so the positive verdict
+is conservative under this choice.
+\item[($\beta$)] \emph{``$\times1.13$ is barely above 1 -- is the margin real?''}
+VALID-with-mitigation: the endpoint is the thinnest corner by construction; the
+sign is robust ($M$-ENDPOINT cross-checked to $0.20\%$, $J_0$ to $0.1\%$), and
+the next intensity is already $\times3.0$. The note claims only the SIGN, not a
+precise margin.
+\item[($\gamma$)] \emph{``Resolving the sunset axis closes SC-SCOPE.''}
+DISMISSED: explicitly NOT claimed. SC-SCOPE stays OPEN on GHAT4-PERTRANSFER and
+R-U6-1; this note resolves one of three channels.
+\end{itemize}
+
+Quantitative sanity check (mandatory): dimensional -- $M$ has the dimension of
+$M_R$ and the two quadratures agree to $0.20\%$; limit-case -- the frozen-$M_R$
+ratio reproduces the certified U4 $\times0.97$ to $<1\%$; sign-direction --
+$M(\hat r) < M_R$ for $\hat r > r_R$ (monotonicity), and the dressed coupling is
+smaller, lowering the sunset bound, raising the ratio, all in the
+selection-protecting direction.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE sunset axis (M-ENDPOINT)
+Precise statement:       M-ENDPOINT = M(0.33675) = 0.104953 (two quadratures
+                         agree 0.20%). With this directly-dressed coupling the
+                         sunset-axis endpoint ratio is x1.13 > 1 (vs frozen-
+                         coupling x0.97 = U4); I=1e-3 gives x3.02. The sunset
+                         axis of the third-cumulant endpoint is POSITIVE.
+Scope:                   Sunset axis only; matched single-J0 convention; second
+                         + third cumulant sunset channel at the certified
+                         intensities. Does NOT close SC-SCOPE.
+Dependencies:            production convention (gap_solve, M_fast); J0 at the
+                         anchor dressing; MARGIN=0.00432; AddE rho ratios.
+Evidence grade:          EXECUTED (scscope_mendpoint_eval.py, 11/11 asserts) +
+                         independent-quadrature cross-check.
+Reproduction command:    python codes/vacuum/scscope_mendpoint_eval.py
+Expected output:         11/11 PASS; M-ENDPOINT=0.10495; dressed endpoint x1.13.
+Falsification gate:      M-ENDPOINT outside [0.1047,0.1094]; the dressed endpoint
+                         ratio <= 1 (would reinstate the sunset obstruction).
+Tier before / after:     No tier change. M-ENDPOINT gate: value RESOLVED
+                         (recommend RESOLVED pending operator sign-off).
+                         SC-SCOPE stays OPEN (GHAT4-PERTRANSFER + R-U6-1).
+No-overclaim statement:  This resolves ONE of three SC-SCOPE channels. It does
+                         NOT close SC-SCOPE, is second/third-cumulant sunset
+                         scope only, and the sign (not a precise margin) is the
+                         claim. M'=-J(0)/2 factor-2 is bypassed by direct
+                         quadrature.
+Next required action:    GHAT4-PERTRANSFER (per-transfer quartic form factor);
+                         R-U6-1 (tadpole alignment); then the joint
+                         second+third-order endpoint inequality.
+\end{verbatim}

@@ -1,0 +1,93 @@
+{
+  "script": "scscope_mendpoint_eval.py",
+  "version": "1.0.0",
+  "constants": {
+    "mu2": 0.005,
+    "rR": 0.30452570866744433,
+    "M_R": 0.10941432918723439,
+    "lam": 8.055072796999182,
+    "J0": 0.2896482320469045,
+    "M_ENDPOINT": 0.1049531393953285,
+    "rhat_2e3": 0.33674599985544107,
+    "rhat_1e3": 0.3206358542614427
+  },
+  "results": {
+    "0.001": {
+      "I": 0.001,
+      "r_hat": 0.3206358542614427,
+      "M_endpoint": 0.10709823050751908,
+      "u_eff_dressed": 2.609982668443619,
+      "composed": 0.003829090909090909,
+      "ratio_frozen_U4": 2.793205657458593,
+      "ratio_dressed": 3.0200630004697904
+    },
+    "0.002": {
+      "I": 0.002,
+      "r_hat": 0.33674599985544107,
+      "M_endpoint": 0.1049531393953285,
+      "u_eff_dressed": 2.540481716408644,
+      "composed": 0.002658461538461539,
+      "ratio_frozen_U4": 0.9696335221158036,
+      "ratio_dressed": 1.1291474867169404
+    }
+  },
+  "scope": "sunset axis resolved; SC-SCOPE OPEN on GHAT4-PERTRANSFER + R-U6-1",
+  "claims": [
+    {
+      "name": "rhat_endpoint_2e-3",
+      "passed": true,
+      "detail": "(r_hat(2e-3) = r_R + 2 lam' I = 0.33675 vs registered 0.33675)"
+    },
+    {
+      "name": "rhat_1e-3",
+      "passed": true,
+      "detail": "(r_hat(1e-3) = 0.32064 vs registered 0.3206)"
+    },
+    {
+      "name": "M_ENDPOINT_quadratures_agree_I=0.001",
+      "passed": true,
+      "detail": "(M(0.32064): M_fast=0.107098 vs radial=0.107312, agree to 0.20% -- M-ENDPOINT resolved by direct quadrature)"
+    },
+    {
+      "name": "M_ENDPOINT_quadratures_agree_I=0.002",
+      "passed": true,
+      "detail": "(M(0.33675): M_fast=0.104953 vs radial=0.105167, agree to 0.20% -- M-ENDPOINT resolved by direct quadrature)"
+    },
+    {
+      "name": "M_ENDPOINT_below_M_R",
+      "passed": true,
+      "detail": "(M-ENDPOINT = M(0.33675) = 0.104953 < M_R = 0.109414: dressing at higher mass lowers the variance, as convexity/monotonicity require)"
+    },
+    {
+      "name": "M_ENDPOINT_in_corrected_bracket",
+      "passed": true,
+      "detail": "(M-ENDPOINT 0.10495 in corrected bracket [0.10474, 0.10941]; the old [0.1001,0.1094] bracket used the factor-2 slope)"
+    },
+    {
+      "name": "J0_value",
+      "passed": true,
+      "detail": "(J(0) at anchor dressing = 0.2896 vs certified 0.290)"
+    },
+    {
+      "name": "frozen_U4_endpoint_reproduced",
+      "passed": true,
+      "detail": "(frozen-coupling endpoint = x0.970 reproduces U4 x0.97: the over-conservative bound that froze u_eff at M_R)"
+    },
+    {
+      "name": "dressed_endpoint_positive",
+      "passed": true,
+      "detail": "(dressed endpoint = x1.129 > 1: with the directly-evaluated M-ENDPOINT the sunset-axis endpoint is POSITIVE -- the U4 marginal failure was a frozen-coupling artefact, not a real third-cumulant obstruction)"
+    },
+    {
+      "name": "dressed_endpoint_matches_triage_est",
+      "passed": true,
+      "detail": "(dressed endpoint x1.129 ~ triage estimate x1.13; supersedes the invalidated x1.34 linear estimate)"
+    },
+    {
+      "name": "I1e-3_dressed_comfortable",
+      "passed": true,
+      "detail": "(I=1e-3 dressed ratio x3.02 > 2.5: comfortable)"
+    }
+  ],
+  "all_pass": true
+}
