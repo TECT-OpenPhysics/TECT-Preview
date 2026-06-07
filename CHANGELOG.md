@@ -5,6 +5,33 @@ not pillar counts.
 
 ---
 
+## [STALE-LANGUAGE-FOLLOWUP-REVIEW] Residual closed-wording + H-A0 footer + status-update banners + sunset factor-2 quarantine - 2026-06-06
+
+- **Operator review** (per-document attack points, no summary) caught residual
+  stale wording surviving the internal-consistency round. Archived at
+  reviews/2026-06-06-stale-language-followup-review.md. No tier changed.
+- **reading-h v2.2**: footer hypothesis set -> {H-LAYER, H-ADM-COH, SC-SCOPE}
+  (stale H-A0 removed); footer precise statement strict `>` -> `>=` with
+  "(strict on the sub-resolution quotient)" to match the theorem.
+- **robustness v1.3**: scrubbed ALL residual closure language in prose (section
+  1 "established robust", section 4 title/closing, devil's (gamma)/(delta),
+  final line) -> consistent "numerically-supported off-anchor advance /
+  robustness reserve, NOT a closure; ROBUSTNESS-MU2 remains OPEN".
+- **ga0-dui v1.1 / ha0-removal v2.1**: status-update banners corrected from the
+  obsolete v1.2 "SCOPED CLOSURE" to the live v1.3 "ROBUSTNESS-MU2 OPEN with
+  off-anchor advance".
+- **sunset v1.0**: section 2 hard-quarantined (HISTORICAL/INVALIDATED fbox)
+  because M'(r_hat) = -J(0) is factor-2 wrong (true -J(0)/2); every derived
+  number (u_eff^2, 1.977e-3, x1.34) flagged superseded; identity flagged at
+  section 2/5/6/footer/header; "failure removed" -> "candidate, correction-
+  pending".
+- **neargap-residual-closure v1.0**: footer aligned with its HISTORICAL
+  watermark - "closes/CLOSED" -> "R-U10-1 INVALIDATED; R-U10-2 RETAINED AS
+  ALGEBRAIC SUPPORT pending a line-by-line exhibit".
+- **Verification**: lint 18/30; catalog 308; lineage; release-check PASS;
+  pytest 3 passed; FORM-CHECK PASS + OVERFULL 0 on all six edited notes; six
+  note PDFs rebuilt.
+
 ## [INTERNAL-CONSISTENCY-REVIEW] Robustness v1.2 contradiction + reading-h footer fixed; ROBUSTNESS-MU2 = OPEN (final) — 2026-06-06
 
 - **Operator review** caught CRITICAL internal contradictions I introduced by

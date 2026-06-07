@@ -12,8 +12,10 @@
 %        with M_R = M(m*) at the production dressing; at the endpoint
 %        the dressed mass is r_hat(2e-3) = r_R + 2 lam' I = 0.3367 and
 %        M(0.3367) < M_R strictly (monotonicity), reducing u_eff^2 by
-%        ~21% (linear-response estimate via the EXACT identity
-%        M'(r_hat) = -J(0)); combined with the M-factor in the kernel
+%        ~21% (linear-response estimate via the identity M'(r_hat) =
+%        -J(0) [INVALIDATED: factor-2; true M'(r_hat) = -J(0)/2], so the
+%        x1.34 endpoint number below is correction-pending); combined
+%        with the M-factor in the kernel
 %        this lifts the endpoint sunset ratio from x0.97 to ~x1.34 --
 %        CONDITIONAL on one new certified number, M(0.3367), registered
 %        as the named constant M-ENDPOINT (the convexity of M makes the
@@ -41,6 +43,8 @@ machine-certified.
 
 \section*{2. The intensity-dressed coupling}
 
+\begin{center}\fbox{\parbox{0.95\textwidth}{\small \textbf{HISTORICAL / INVALIDATED (operator review 2026-06-06).} This section uses the identity $M'(\hat r) = -J(0)$, which is wrong by a factor of two; the correct relation is $M'(\hat r) = -J(0)/2$ (useries-triage). Every numerical value derived below ($u_{\rm eff}^2$, the $1.977\times10^{-3}$ endpoint bound, and the $\times1.34$ ratio) is SUPERSEDED and must NOT be cited. The section is retained only as a historical record of the candidate sunset-axis route; the corrected endpoint awaits the M-ENDPOINT machine evaluation.}}\end{center}
+
 The U4 bound used $u_{\rm eff}(M_R)$ with $M_R = M(m^*) = 0.109414$ at
 the production dressing $m^* = 0.3045$. But the sunset of a competitor
 at intensity $I$ is evaluated at ITS dressed kernel,
@@ -52,8 +56,7 @@ at intensity $I$ is evaluated at ITS dressed kernel,
 \]
 and the coupling dressing uses $M(\hat r(I))$, which is STRICTLY BELOW
 $M_R$ by the monotonicity of $M$ (unit U2, L1). Linear-response
-estimate via the EXACT identity $M'(m)\big|_{m=\hat r} = -J(0)$ (both
-sides are $-\int [\,\hat r + C(k^2-q_0^2)^2\,]^{-2}$; $J(0) = 0.290$ is
+estimate via the identity $M'(m)\big|_{m=\hat r} = -J(0)$ [INVALIDATED: factor-2; the correct relation is $M'(\hat r) = -J(0)/2$, see the box above]; $J(0) = 0.290$ is
 certified at the chain's dressed kernel):
 \[
 M(0.33675) \;\approx\; M_R - 0.290\times(0.33675 - 0.30453)
@@ -74,9 +77,10 @@ against the composed endpoint margin $2.658\times10^{-3}$:
 \boxed{\ \text{ratio} \;\approx\; \times1.34
 \quad (\text{vs } \times0.97 \text{ in U4})\ }
 \]
---- POSITIVE, i.e.\ the conservative endpoint failure of U4 is
-removed by the correct intensity dressing, CONDITIONAL on the single
-constant below.
+--- POSITIVE, i.e.\ the conservative endpoint of U4 would be
+lifted by the intensity dressing --- a CANDIDATE, estimate-grade and now
+factor-2 correction-pending --- CONDITIONAL on the single constant below
+and on the $-J(0)/2$ correction.
 
 \paragraph{The named missing constant (M-ENDPOINT).} $M$ is CONVEX
 ($M''(m) = 2\int[m+D]^{-3} > 0$), so the linearization UNDER-estimates
@@ -150,9 +154,7 @@ quadrature with a one-sided refinement check).
 Quantitative sanity check (mandatory): dimensional --- $\hat r(I) =
 r_R + 2\lambda' I$ adds mass$^2$-like quantities consistently
 ($\lambda' I$ carries the dressing's units as everywhere in the chain);
-identity check --- $M'(\hat r) = -J(0)$ is exact by construction (both
-are the same integral), so the linear-response step introduces no new
-kernel object; bracket check --- the convex/secant sandwich
+identity check --- $M'(\hat r) = -J(0)$ is INVALIDATED (factor-2; the true relation is $M'(\hat r) = -J(0)/2$, see section~2), so this linear-response step is part of the SUPERSEDED estimate; bracket check --- the convex/secant sandwich
 $[0.1001, 0.1094]$ has width $9\%$ of the central value and the
 endpoint ratio is monotone across it ($\times1.34 \to \times0.97$),
 so M-ENDPOINT decides the sign of the refinement claim cleanly ---
@@ -201,7 +203,8 @@ Result ID:               B5-BEYOND-LAYER-BOUND / sunset-endpoint-
 Precise statement:       REFINEMENT (T3, estimate-grade): the sunset
                          bound's coupling must be dressed at each
                          anchor's own r_hat(I) = r_R + 2 lam' I; via
-                         the exact identity M'(r_hat) = -J(0), the
+                         the identity M'(r_hat) = -J(0) [factor-2
+                         INVALIDATED; true -J(0)/2], the
                          endpoint coupling drops u_eff^2 7.209 ->
                          ~5.675 and the kernel M-factor 0.1094 ->
                          ~0.1001, lifting the endpoint sunset ratio

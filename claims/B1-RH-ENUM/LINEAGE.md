@@ -45,7 +45,7 @@ ROBUSTNESS-MU2 was then CLOSED for the mu^2 in [x0.5, x2] neighbourhood: the STE
 | 2 | 2026-06-06 | v1.0 | Enumeration completeness recheck against the amended class: all enumerated rea | T4 | v1.0 |
 | 3 | 2026-06-06 | v1.0 | Resolution of the near-gap protection gate: the convention remainder is common | T4 | v1.0 |
 | 4 | 2026-06-06 | v1.0 | The near-gap protection lemma: operator monotonicity closes the G-U1-SMALLT re | T3 | v1.0 |
-| 5 | 2026-06-06 | v1.0 | Closing the near-gap residuals: convention exactness with explicit margins and | T4 | v1.0 |
+| 5 | 2026-06-06 | v1.0 | Closing the near-gap residuals: convention exactness with explicit margins and | — | v1.0 |
 | 6 | 2026-06-06 | v2.2 | Reading-H class-wide selection as a conditional theorem: the assembled T6 prom | T6 | v1.0† → v2.0† → v2.1† → v2.2 |
 | 7 | 2026-06-06 | v1.0 | Off-anchor robustness of the A-zero uniqueness inequalities and the load-beari | T4 | v1.0 |
 | 8 | 2026-06-06 | v1.3 | Closing ROBUSTNESS-MU2: the STEP-5B beyond-layer margins re-computed off-ancho | T4 | v1.0† → v1.1† → v1.2† → v1.3 |
@@ -116,4 +116,4 @@ ROBUSTNESS-MU2 was then CLOSED for the mu^2 in [x0.5, x2] neighbourhood: the STE
 - `runs/260606-robustness-mu2-step5b/`
 - `runs/260606-useries-checks/`
 
-<!-- generated 2026-06-06T08:22:13Z -->
+<!-- generated 2026-06-07T00:05:49Z -->

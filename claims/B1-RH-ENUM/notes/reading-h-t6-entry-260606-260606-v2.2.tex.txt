@@ -193,7 +193,8 @@ VALID-with-mitigation (each a named hypothesis or tracked open item).
 \begin{verbatim}
 Result ID:               B1-RH-ENUM (Reading-H class-wide selection)
 Precise statement:       For every admissible competitor of the H-ADM-COH
-                         amended class, F_total[P] > F_total[R_H] at
+                         amended class, F_total[P] >= F_total[R_H]
+                         (strict on the sub-resolution quotient) at
                          matched second-cumulant scope: Reading-H is
                          selected. Proof = case split (bulk: layer margin
                          Prop A + beyond-layer STEP-5B closure; near-gap:
@@ -214,7 +215,7 @@ Expected output:         192/192 and 14/14 PASS; the inequality chain
 Falsification gate:      An admissible competitor with F_total <= F_total
                          [R_H] (refutes selection); a near-gap section
                          with the floor < 0; loss of any named hypothesis.
-Tier before / after:     T5 / T6 CONDITIONAL on {H-LAYER, H-A0,
+Tier before / after:     T5 / T6 CONDITIONAL on {H-LAYER,
                          H-ADM-COH, SC-SCOPE} (operator-authorized,
                          "proceed with item 1" 2026-06-06).
 No-overclaim statement:  T6 is the selection SIGN modulo three named

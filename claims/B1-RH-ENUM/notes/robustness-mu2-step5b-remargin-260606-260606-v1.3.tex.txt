@@ -30,10 +30,12 @@ This note ADVANCES ROBUSTNESS-MU2 by recomputing the STEP-5B beyond-layer
 margins off-anchor, but does NOT close the gate: the exact layer margin
 $m(\mu^2)$ is bounded positive, not recomputed. Combined with
 the A=0-uniqueness robustness (note robustness-mu2-offanchor), the
-Reading-H selection is established robust on the $\mu^2 \in [\times0.5,
-\times2]$ neighbourhood. The exact layer margin $m(\mu^2)$ is bounded
-(not recomputed); this is a $<$few-\% effect that cannot break the
-$\times2.55$ endpoint floor (section 4).
+off-anchor evidence SUPPORTS robustness of the Reading-H selection on
+the $\mu^2 \in [\times0.5, \times2]$ neighbourhood, pending an exact
+$m(\mu^2)$ recomputation. The exact layer margin $m(\mu^2)$ is bounded
+positive (not recomputed); the $<$few-\% constant drift, if confirmed
+exactly, would leave the $\times2.55$ endpoint floor intact (section~4),
+but this is a robustness reserve, NOT a closure.
 
 \section*{2. The off-anchor re-margin}
 
@@ -79,16 +81,17 @@ the neighbourhood (robustness-mu2-offanchor, 9/9), so the floor condition
 that makes $m > 0$ is preserved, and $m(\mu^2)$ stays positive and
 $O(\text{anchor})$ as the constants drift $< 2\%$.
 
-\section*{4. Why the un-recomputed $m(\mu^2)$ cannot break closure}
+\section*{4. Robustness reserve under a hypothetical exact $m(\mu^2)$ confirmation}
 
 The endpoint floor is $\times2.55$. The ratio scales linearly in
 $m(\mu^2)$; the constants entering $m$ (via $P_B(M_R) - \mathrm{dip}_B$)
 drift $< 2\%$ across the $\times4$ band, so $m(\mu^2) = m_{\rm anchor}(1 +
 O(2\%))$. Even a conservative $10\%$ drop in $m$ leaves the endpoint at
 $\times2.3 > 1$. A break would require $m$ to fall by $> 60\%$, impossible
-while $M_R/M_c > 4$ holds. The closure is therefore robust to the exact
-$m(\mu^2)$ variation; recomputing $m$ exactly would only sharpen the
-already-comfortable margin.
+while $M_R/M_c > 4$ holds. Under a hypothetical exact $m(\mu^2)$
+confirmation the margin would be preserved; this is a robustness
+reserve, NOT a discharge of the gate, which still requires the exact
+$m(\mu^2)$ recomputation.
 
 \section*{5. Numerical verification}
 
@@ -120,15 +123,16 @@ thinnest at $\times2.55$); the anchor endpoint $\times2.6$ matches AddE.
 \item[($\gamma$)] \emph{``Why $[\times0.5, \times2]$ and not wider?''}
 The STEP-5B re-margin was computed on $[\times0.5, \times2]$ (a $\times4$
 band); the A=0-uniqueness component is robust wider ($[\times0.2,
-\times10]$). The gate closes for the intersection, $[\times0.5, \times2]$,
+\times10]$). The off-anchor advance covers the intersection, $[\times0.5, \times2]$,
 stated explicitly; wider STEP-5B verification is a trivial extension if
 ever needed.
-\item[($\delta$)] \emph{``Does closing the gate overstate B1?''}
-DISMISSED: the gate closes for a stated neighbourhood, not unconditionally
-in $\mu^2$; B1's scope records the $[\times0.5, \times2]$ robustness
-explicitly. No claim beyond it.
+\item[($\delta$)] \emph{``Does the off-anchor advance overstate B1?''} DISMISSED: the advance is
+numerically-supported on a stated neighbourhood --- not a closure and
+not unconditional in $\mu^2$; B1 records ROBUSTNESS-MU2 as OPEN with the
+$[\times0.5, \times2]$ evidence. No claim beyond it.
 \end{itemize}
-No objection upheld; ROBUSTNESS-MU2 is closed for the stated neighbourhood.
+No objection invalidates the numerical off-anchor advance, but the gate
+ROBUSTNESS-MU2 remains OPEN pending the exact $m(\mu^2)$ recomputation.
 
 \section*{7. Result footer}
 
