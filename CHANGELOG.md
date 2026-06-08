@@ -5,6 +5,23 @@ not pillar counts.
 
 ---
 
+## [DR-2 residual formalised (Tier-2/3): cross-energy lemma R-021 + Pencil Rigidity/PSM conjecture + reduction] - 2026-06-08
+
+- **Operator-directed Tier-2/3 incorporation** of the external DR-2 research. dr2-pencil-rigidity-reduction
+  v1.0 (B5 research-branch note; FORM-CHECK PASS) + codes/vacuum/dr2_cross_energy_lemma.py (6/6). No tier change.
+- **Tier-3 (R-021, T7)**: cross-energy lemma `E_off(A,B) <= 2 min(|A|^2-|A|,|B|^2-|B|)`, full `E_+ <= 3|A||B|`,
+  via `r_P(w)<=2` for `w!=0`. The verification CAUGHT a constant error in the external research: its
+  `E_+ <= 2|A||B|` mis-applies `r<=2` to the `w=0` diagonal (witness `A=B` great circle: `E_+=720 > 512`);
+  corrected to off-diagonal constant 2 / full constant 3. The qualitative `O(|A||B|)` and the reduction are
+  unaffected.
+- **Tier-2 (T2 CONJECTURE)**: the Pencil Rigidity / Pair-Sum Surface Multiplicity conjecture registered with a
+  pre-registered falsification gate `E_+(Q_N) >= N^{2+delta}`; the reduction `PSM => DR-2` recorded as a T3
+  proof sketch with marked gaps (decomposition existence = the conjecture; per-cluster constant uniformity).
+- **Effect**: the DR2-SHARE residual is sharpened from carrier-richness polylog to ONE named conjecture. DR-2
+  stays OPEN off critical path; B5 T5, B1 T6, H-ADM-COH route all unchanged. Note seeds the independent paper
+  'Additive Energy and Spherical Rectangle Counts on S^2'.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [External DR-2 research reviewed (Math447-469); reduction to Pencil Rigidity/PSM recorded] - 2026-06-08
 
 - **Operator-supplied external research** (Math447-469, ~17k-line autonomous multi-pass DR-2 attack)

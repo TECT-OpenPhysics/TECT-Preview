@@ -1,0 +1,168 @@
+% =============================================================================
+% Title: DR-2 residual formalised: the cross-energy lemma, and the reduction to the Pencil Rigidity / Pair-Sum Surface Multiplicity conjecture
+% Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; research branch, off critical path)
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: RESEARCH-BRANCH note (off critical path) formalising the DR-2 (unrestricted-class sphere additive-energy) residual after the operator-supplied external research (Math447-469). It records three items at honest tiers: (a) the cross-energy lemma -- T7 PROVED, verified (dr2_cross_energy_lemma.py 6/6), WITH a devil's-advocate correction to the external constant (E_+ <= 2|A||B| is off by the w=0 diagonal; corrected to E_off <= 2 min(|A|^2-|A|,|B|^2-|B|), full <= 3|A||B|); (b) the Pencil Rigidity / Pair-Sum Surface Multiplicity (PSM) conjecture -- T2 CONJECTURE with a pre-registered falsification gate; (c) the reduction PSM => DR-2 -- T3 PROOF SKETCH. DR-2 itself stays OPEN, off critical path; NO tier change to B5 (T5) or B1 (T6). The note is the seed for the independent paper "Additive Energy and Spherical Rectangle Counts on S^2".
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Tier-2/Tier-3 incorporation of the external
+%        DR-2 research per strategy/dr2-external-research-assessment-260608.md.
+%        Script codes/vacuum/dr2_cross_energy_lemma.py (6/6); JSON
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-cross-energy-lemma/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+DR-2 is the unrestricted-class sphere additive-energy bound: for every finite
+$Q\subset S^2$, $E_+(Q)\le C\,N^2\log^B N$, the open route to closing STEP-5B
+without the H-ADM-COH amended class. It is OPEN and off the critical path (B5 is
+T5 PINNED-CLOSURE on the amended class; B1 is T6). The operator-supplied external
+research (Math447--469) reduces DR-2 to a single named conjecture. This note
+formalises that residual at honest tiers and registers one verified supporting
+lemma. It changes no tier.
+
+\section*{2. The cross-energy lemma (T7 PROVED) and a correction}
+
+\textbf{Lemma.} Let $A\subset C_1$, $B\subset C_2$ be finite subsets of circles on
+$S^2$. With $r_P(w)=\#\{(p,p')\in P^2:p-p'=w\}$, the off-diagonal cross energy
+$E_{\rm off}(A,B):=E_+(A,B)-|A||B|$ satisfies
+\[
+E_{\rm off}(A,B)\;\le\;2\,\min\!\big(|A|^2-|A|,\ |B|^2-|B|\big),
+\qquad
+E_+(A,B)\;\le\;|A||B|+2\min(|A|^2,|B|^2)\;\le\;3|A||B|.
+\]
+\emph{Proof.} For $w\neq0$, a circle and its translate meet in at most two points,
+so $r_P(w)\le2$. Since $E_+(A,B)=\sum_w r_A(w)r_B(-w)$ and the $w=0$ term is
+$r_A(0)r_B(0)=|A||B|$,
+\[
+E_{\rm off}(A,B)=\sum_{w\neq0}r_A(w)r_B(-w)\le2\sum_{w\neq0}r_A(w)=2(|A|^2-|A|),
+\]
+and symmetrically with $B$. $\square$
+
+\textbf{Correction (devil's-advocate, code-discipline).} The external Pass~4
+states $E_+(A,B)\le2|A||B|$ by applying $r\le2$ to ALL $w$, including $w=0$ where
+$r_P(0)=|P|\not\le2$. This is false for the full energy: the witness
+$A=B=16$ equally-spaced great-circle points has $E_+=720>512=2|A||B|$. The
+corrected bounds above hold: the same witness has $E_{\rm off}=464\le480=
+2(|A|^2-|A|)$. The non-parallel hypothesis of Pass~4 is moreover NOT load-bearing
+-- the $r\le2$ mechanism holds for parallel and non-parallel circles alike
+(verified on all four configurations). The qualitative $E_+(A,B)=O(|A||B|)$ and
+the reduction below are unaffected; only the constant $2\to3$ (full) changes, and
+the cluster-decomposition uses $E_{\rm off}$ with constant $2$.
+
+\section*{3. The Pencil Rigidity / PSM conjecture (T2 CONJECTURE)}
+
+\textbf{Conjecture (Pair-Sum Surface Multiplicity).} There exist $C,B$ such that
+for every finite $Q\subset S^2$ decomposed into its circle-rich part, the
+non-structured circle-pair interaction obeys
+\[
+\sum_{s}\Big(\sum_{\alpha,\beta}r_{\alpha\beta}(s)\Big)^2\le C\,N^2\log^B N,
+\]
+where $r_{\alpha\beta}(s)$ counts pairs $(a\in C_\alpha,b\in C_\beta)$ with
+$a+b=s$. Equivalently (Pencil Rigidity): rich circle pencils sharing a common
+pair-sum surface have $O(\log^B N)$ controlled overlap.
+
+\textbf{Pre-registered falsification gate.} The conjecture (hence DR-2) is
+FALSIFIED by any explicit family $Q_N\subset S^2$ with
+$E_+(Q_N)\ge N^{2+\delta}$ for a fixed $\delta>0$ (super-polylogarithmic additive
+energy). The external research's Pass-27 counterexample audit and the
+Pass-9 no-small-doubling probe found no such family; the single-circle ($K=14$,
+R-002), coaxial ($K\le30$), and rectangle ($R=O(n^{5/2})$, R-007) structured
+classes are all $O(N^2)$ or better, consistent with the conjecture.
+
+\section*{4. The reduction PSM $\Rightarrow$ DR-2 (T3 PROOF SKETCH)}
+
+\textbf{Claim.} The PSM conjecture (equivalently Pencil Rigidity) implies DR-2.
+
+\textbf{Sketch.} Decompose $Q=Q_{\rm thin}\cup Q_{\rm struct}\cup Q_{\rm rich}$.
+(i) The circle-thin part obeys $E_+(Q_{\rm thin})\le L\,N^2$ with $L=\log^B N$
+(few points per circle). (ii) The structured circle-rich part (single circles,
+coaxial pencils) obeys $E_+(Q_{\rm struct})\le C N^2$ by the closed estimates
+R-002/R-003/R-004/R-007. (iii) The remaining non-structured circle-rich
+interaction is exactly the pair-sum surface multiplicity, bounded by $CN^2\log^B
+N$ under PSM. (iv) Cross terms between the three parts are bounded by
+Cauchy--Schwarz, $E_+(X,Y)\le\sqrt{E_+(X)E_+(Y)}$, and by the cross-energy lemma
+of \S2 for circle pairs. Summation gives $E_+(Q)\le C'N^2\log^{B'}N$. $\square$
+
+\textbf{Marked gaps (the T3 obstructions).} OPEN GAP $\alpha$: the existence of
+the controlled decomposition into $O(\log^B N)$ structured clusters $+$ a thin
+remainder is exactly the PSM/Pencil Rigidity conjecture (not independently
+proved). OPEN GAP $\beta$: the uniformity of the per-cluster constants $C_\alpha$
+across the dyadic richness scales (Pass-21) is asserted, not proved. These are
+the residual obstructions that keep DR-2 at T1 OPEN and the reduction at T3.
+
+\section*{5. Status and relation to the repository}
+
+DR-2 stays OPEN, off the critical path. This note (i) corrects and registers the
+cross-energy lemma (T7, R-021), (ii) registers the PSM/Pencil Rigidity conjecture
+(T2) with a falsification gate, and (iii) records the reduction PSM $\Rightarrow$
+DR-2 (T3). The DR2-SHARE residual is thereby sharpened from the loose
+``carrier-richness $\chi(P)=O(\mathrm{polylog})$'' framing to a single named
+additive-combinatorics conjecture. No claim tier moves: B5 stays T5, B1 stays T6,
+and the H-ADM-COH amended-class closure remains the official STEP-5B route. The
+note is the seed for the standalone paper ``Additive Energy and Spherical
+Rectangle Counts on $S^2$''.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is the cross-energy lemma over-claimed at T7?''}
+DISMISSED: the proof is elementary and unconditional ($r\le2$ from circle
+$\cap$ translate $\le2$), and is numerically confirmed on four configurations
+including the structured witness; it is T7 in the same sense as R-002/R-003/R-004.
+The external constant error was caught and corrected here.
+\item[($\beta$)] \emph{``Is registering the conjecture as T2 an over-claim?''}
+DISMISSED: T2 requires only a precise statement, partial evidence, and a
+pre-registered falsification gate -- all present (\S3). It is explicitly a
+CONJECTURE, not a theorem; the reduction (\S4) is T3 with marked gaps.
+\item[($\gamma$)] \emph{``Does any of this move a claim tier?''} DISMISSED: DR-2
+is OPEN, off critical path; B5 stays T5, B1 stays T6. The note formalises a
+residual and registers one supporting lemma; it performs no tier action. The
+external $T7_{\rm conditional\text{-}robust}$ label is NOT adopted.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- the witness $E_+=720$,
+$E_{\rm off}=464\le480$ (within $3.3\%$ of the ceiling), $2|A||B|=512$ violated
+(the correction); sign-direction -- all energies and bounds positive;
+limit-case -- generic non-coincident circle pairs give $E_+=|A||B|$ (diagonal
+only), well under $3|A||B|$; consistency -- $r_{\max}\le2$ on every circle,
+parallel and non-parallel, matching the geometric mechanism.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5 / DR-2 residual formalisation (cross-energy lemma
+                         + PSM conjecture + reduction)
+Precise statement:       (a) T7: E_off(A,B) <= 2 min(|A|^2-|A|,|B|^2-|B|),
+                         E_+(A,B) <= 3|A||B| for A,B on sphere-circles (r<=2 for
+                         w!=0); corrects the external 2|A||B| (off by the w=0
+                         diagonal; witness E_+=720>512). (b) T2: PSM/Pencil
+                         Rigidity conjecture sum_s (sum r_ab(s))^2 <= C N^2 log^B N
+                         + falsification gate E_+(Q_N) >= N^{2+delta}. (c) T3:
+                         PSM => DR-2 (decomposition + Cauchy-Schwarz; gaps
+                         alpha/beta marked).
+Scope:                   DR-2 research branch, off critical path. Sphere-circle
+                         additive energy.
+Dependencies:            R-002/R-003/R-004/R-007 (closed structured estimates);
+                         external research Math447-469 (operator-supplied);
+                         strategy/dr2-external-research-assessment-260608.md.
+Evidence grade:          (a) EXECUTED (dr2_cross_energy_lemma.py 6/6) + analytic;
+                         (b) CONJECTURE; (c) PROOF SKETCH.
+Reproduction command:    python codes/vacuum/dr2_cross_energy_lemma.py
+Expected output:         6/6 PASS; r_max<=2; E_off<=2min(n^2-n); witness E_+=720
+                         falsifies 2|A||B|=512; E_+<=3|A||B|.
+Falsification gate:      An explicit Q_N subset S^2 with E_+(Q_N) >= N^{2+delta}
+                         (delta>0) falsifies PSM and DR-2.
+Tier before / after:     DR-2: OPEN -> OPEN (formalised; reduced to PSM/Pencil
+                         Rigidity). B5: T5 -> T5. B1: T6 -> T6. No tier action.
+No-overclaim statement:  DR-2 is NOT closed. The cross-energy lemma is T7; the
+                         conjecture is T2; the reduction is T3 with marked gaps.
+                         The external T7_conditional-robust label is not adopted;
+                         the external 2|A||B| constant is corrected.
+Next required action:    Prove or disprove the PSM / Pencil Rigidity conjecture
+                         (independent math branch); none required for the TECT
+                         mainline (H-ADM-COH route stands).
+\end{verbatim}
+}
