@@ -1,0 +1,187 @@
+% SUPERSEDED by dr2-lattice-divisor-closure-260608-260608-v1.1.tex.txt
+% =============================================================================
+% Title: DR-2 for the lattice class -- a decoupling-free closure of the sphere
+%        additive-energy bound for momentum-shell lattice points
+% Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: Route A (operator-recommended, self-contained) closure of DR-2 for the
+%   class that actually arises in TECT: lattice points on a sphere (BCC/FCC
+%   momentum shells). Combining Lemma A (R-025, E_+ <= (1+T')N^2, unconditional)
+%   with the classical circle-divisor bound [DIV-CIRC] -- the number of lattice
+%   points on a circle of squared radius R is O_eps(R^eps) -- yields
+%   E_+(Q) <= (1 + C_eps R^eps) N^2 for Q in Z^3 on |x|^2=R, hence
+%   E_+(Q) <=_eps N^{2+eps} for Gauss-typical shells (R ~ N^2). DECOUPLING-FREE:
+%   no Bourgain-Demeter machinery, no R1/R2 residuals. Honest grade: T6 PROVED
+%   CONDITIONAL on [DIV-CIRC] (classical/textbook), Route A; the operator may
+%   elevate to T7 since [DIV-CIRC] is textbook. This closes the ADDITIVE-ENERGY
+%   form of DR-2 for the lattice class only; arbitrary-Q DR-2 stays OPEN, and
+%   whether this discharges H-ADM-COH in B1 (via the DR2-SHARE carrier-richness
+%   equivalence) is an OPERATOR integration decision. NO gate/tier/hypothesis
+%   flip is made here: DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator directive: pursue Route A (bound
+%        T'(Q) for the admissible class) as the safer, self-contained route.
+%        Observation: the TECT DR-2 carrier is BCC momentum-shell lattice points,
+%        for which T' is governed by the divisor bound. Script
+%        codes/vacuum/dr2_lattice_divisor.py (5/5, exact integer arithmetic);
+%        JSON claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-lattice-divisor/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The two general-position routes to DR-2 (decoupling, dr2-cross-scale-induction
+v1.1; and the elementary circle-richness reduction, dr2-circle-richness-reduction
+v1.0) leave the arbitrary-$Q$ problem OPEN: the former cites the hard core of
+Bourgain--Demeter, and the latter reduces DR-2 to bounding the sum-circle
+richness $T'(Q)$, which can be as large as $N$ for adversarial real configurations.
+This note observes that the configurations DR-2 must handle IN TECT are not
+adversarial: they are lattice points on a sphere (BCC/FCC reciprocal-lattice
+momentum shells), and for these $T'(Q)$ is controlled UNCONDITIONALLY by a
+classical divisor bound. The result is Route A, self-contained and
+decoupling-free.
+
+\section*{2. The lattice reduction}
+
+Let $\Lambda\subset\mathbb R^3$ be a fixed lattice (take $\Lambda=\mathbb Z^3$;
+the argument is lattice-independent) and
+\[
+Q\;=\;\Lambda\cap\{x:|x|^2=R\},\qquad N=|Q|.
+\]
+Every sum $m=a+b$ with $a,b\in Q$ lies in $\Lambda+\Lambda=\Lambda$ (an integer
+vector), and the sum-level circle of Lemma A is
+\[
+C_m=\{x:|x|^2=R,\ x\cdot m=\tfrac12|m|^2\}.
+\]
+For $m$ with $r(m)>0$, $\tfrac12|m|^2=R+a\cdot b\in\mathbb Z$, so $C_m$ is the
+intersection of the sphere with a RATIONAL plane: a circle whose $\Lambda$-points
+form a coset of the rank-$2$ sublattice $\Lambda\cap m^\perp$. Writing $|x|^2$ in
+a basis of that sublattice expresses $\#(Q\cap C_m)$ as the number of
+representations of a fixed integer by a positive-definite BINARY QUADRATIC FORM
+of discriminant $O(R)$.
+
+\textbf{[DIV-CIRC] (classical).} The number of lattice points on a circle of
+squared radius $\le R$ -- equivalently the number of representations of an
+integer $n\le R$ by a positive-definite binary quadratic form of discriminant
+$O(R)$ -- is $O_\epsilon(R^\epsilon)$, uniformly. (For $\Lambda=\mathbb Z^2$ this
+is the divisor bound $r_2(n)\ll_\epsilon n^\epsilon$, provable from unique
+factorisation in $\mathbb Z[i]$; the binary-form version follows from the
+divisor bound for ideal norms in the associated order.)
+
+\section*{3. Theorem (lattice DR-2, conditional on [DIV-CIRC])}
+
+\textbf{Theorem.} For $Q=\Lambda\cap\{|x|^2=R\}$, conditional on [DIV-CIRC],
+\[
+\boxed{\,E_+(Q)\;\le\;\big(1+C_\epsilon R^\epsilon\big)N^2\,}.
+\]
+In particular, for Gauss-typical shells $R\asymp N^{2+o(1)}$ (the regime
+$N\gg R^{\delta}$ holds), $E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$ -- DR-2 holds
+for the lattice class, with NO decoupling.
+
+\textbf{Proof.} By Lemma A (R-025), $E_+(Q)\le(1+T'(Q))N^2$ with
+$T'(Q)=\max_{m\neq0}\#(Q\cap C_m)$. Each $C_m$ is a circle on the sphere of
+squared radius $R$, so by \S2 and [DIV-CIRC], $\#(Q\cap C_m)\le
+\#(\Lambda\cap C_m)\le C_\epsilon R^\epsilon$ uniformly in $m$. Hence
+$T'(Q)\le C_\epsilon R^\epsilon$ and the bound follows. For $R\asymp N^2$,
+$R^\epsilon\asymp N^{2\epsilon}$, giving $E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$.
+$\square$
+
+\section*{4. Numerical verification (exact arithmetic)}
+
+dr2\_lattice\_divisor.py (5/5) computes $E_+$ and $T'$ EXACTLY (integers, no
+tolerance) on $\mathbb Z^3$ shells $R=101,\dots,9974$ ($N=168,\dots,2040$):
+
+\begin{center}
+\begin{tabular}{rrrrr}
+$R$ & $N$ & $E_+/N^2$ & $T'$ & $T'/N$ \\ \hline
+101 & 168 & 5.27 & 18 & 0.107 \\
+909 & 504 & 4.93 & 24 & 0.048 \\
+1826 & 672 & 4.10 & 24 & 0.036 \\
+4994 & 1152 & 3.93 & 32 & 0.028 \\
+9974 & 2040 & 3.92 & 48 & 0.024 \\
+\end{tabular}
+\end{center}
+
+The lemma assert $E_+\le(1+T')N^2$ holds on every shell (the proof check on real
+arithmetic data). $T'$ grows sub-linearly: $T'/N$ falls monotonically
+$0.107\to0.024$ and the log--log slope is $0.177$ with the per-point exponent
+$\log T'/\log R$ falling $0.63\to0.42$ -- the signature of $R^{o(1)}$. $E_+/N^2$
+stays $\le5.3$ (energy is $O(N^2)$, the $R^\epsilon$ ceiling is never approached).
+$\mathbb Z^3$ and the FCC sublattice give identical $(N,T',E_+)$ at $R=1826$:
+the mechanism is lattice-independent, so it applies to the BCC/FCC momentum
+shells of TECT.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+Four concrete objections, found before submission:
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is [DIV-CIRC] really uniform over the varying rational
+planes?''} RECORDED as the explicit named hypothesis. The $\mathbb Z^2$ case is
+textbook; the binary-form version is uniform because the forms have discriminant
+$O(R)$ and the representation count is $\ll_\epsilon(n\cdot\mathrm{disc})^\epsilon
+\ll_\epsilon R^\epsilon$. The grade is T6 CONDITIONAL on [DIV-CIRC] precisely so
+this classical input is named, not hidden; the operator may elevate to T7.
+\item[($\beta$)] \emph{``The bound is $R^\epsilon N^2$, which is $N^{2+\epsilon}$
+only when $R\lesssim N^{O(1)}$.''} VALID and scoped: for very empty shells
+($N\ll R^{1/2}$) the $R^\epsilon$ factor is not absorbed, but there the absolute
+energy is small anyway; the DR-2-relevant (Gauss-typical, dominant) shells satisfy
+$R\asymp N^{2+o(1)}$ and are covered. The theorem is stated as $E_+\le(1+C_\epsilon
+R^\epsilon)N^2$ to avoid overclaiming the $N^{2+\epsilon}$ form universally.
+\item[($\gamma$)] \emph{``Does this close DR2-SHARE / discharge H-ADM-COH?''} NOT
+asserted. This closes the ADDITIVE-ENERGY form of DR-2 for the lattice class. The
+STEP-5B carrier richness $\chi(P)$ and $T'$ are both rich-circle quantities and
+are closely related, but their exact equivalence is not established here, so
+whether the lattice closure discharges H-ADM-COH is an OPERATOR integration
+decision. NO gate/tier/hypothesis flip is made.
+\item[($\delta$)] \emph{``Arbitrary-$Q$ DR-2?''} STILL OPEN. This note covers the
+lattice class only; the rich-latitude example (T'=N) shows general $Q$ is not
+reached by this route. The decoupling route (T4+) remains the general-case path.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Exact integer arithmetic (no
+tolerance): the lemma assert $E_+\le(1+T')N^2$ holds on all six shells.
+Magnitude: $E_+/N^2\in[3.9,5.3]$ (bounded, $\ll N$). Growth: $T'/N\to0$
+($0.107\to0.024$), log--log slope $0.177<1$ (sub-polynomial). Limit/consistency:
+$\mathbb Z^3=$FCC at $R=1826$ ($N=672,T'=24$). Direction: $T'\ge1$, all terms
+positive, upper bound.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-026 / DR-2 for the lattice class (Route A)
+Precise statement:       For Q = Lambda cap {|x|^2=R} (Lambda a fixed lattice;
+                         Z^3 / BCC / FCC), conditional on [DIV-CIRC] (lattice
+                         points on a circle of sq-radius <= R number O_eps(R^eps),
+                         classical), E_+(Q) <= (1 + C_eps R^eps) N^2 by Lemma A
+                         (R-025). For Gauss-typical shells R ~ N^2 this is
+                         E_+(Q) <=_eps N^{2+eps} -- DR-2, DECOUPLING-FREE.
+Scope:                   The TECT DR-2 carrier (BCC/FCC momentum-shell lattice
+                         points); additive-energy form of DR-2.
+Dependencies:            Lemma A (R-025, unconditional) + [DIV-CIRC] (classical
+                         divisor bound for lattice points on circles). NO
+                         decoupling, NO PSM conjecture.
+Evidence grade:          T6 PROVED CONDITIONAL on [DIV-CIRC] (textbook number
+                         theory; operator may elevate to T7). Verified exactly
+                         (dr2_lattice_divisor.py 5/5).
+Reproduction command:    python codes/vacuum/dr2_lattice_divisor.py
+Expected output:         5/5 PASS; E_+ <= (1+T')N^2 on all shells; T'/N -> 0
+                         (0.107 -> 0.024); log-log slope 0.177; E_+/N^2 <= 5.3.
+Falsification gate:      A lattice shell with E_+(Q) > (1+T'(Q))N^2 (refutes
+                         Lemma A) or T' growing like N^delta, delta>0 (refutes
+                         [DIV-CIRC]); neither observed.
+Tier before / after:     NEW result for the lattice class: T6 CONDITIONAL on
+                         [DIV-CIRC]. General DR-2 unchanged (T4+). NO flip:
+                         DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+No-overclaim statement:  Closes the additive-energy DR-2 for the LATTICE class
+                         only, conditional on a classical bound. Does NOT close
+                         arbitrary-Q DR-2 and does NOT by itself discharge
+                         H-ADM-COH; the T'-to-chi(P) equivalence and any gate/
+                         hypothesis flip are operator decisions.
+Next required action:    Operator decision: (i) accept [DIV-CIRC] (-> T7) and
+                         (ii) determine whether lattice-class closure + the
+                         carrier-richness equivalence discharges H-ADM-COH in B1.
+\end{verbatim}
+}

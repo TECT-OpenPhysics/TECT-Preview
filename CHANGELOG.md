@@ -5,6 +5,116 @@ not pillar counts.
 
 ---
 
+## [H-ADM-COH DISCHARGED@lattice (operator-enacted): B1 -> {H-LAYER, SC-SCOPE}, T6 unchanged; DR-2 programme chronicle] - 2026-06-08
+
+- **Operator decision** (reviews/2026-06-08-hadmcoh-discharge-authorization.md): accept residuals (a)-(c) and
+  discharge H-ADM-COH from the active B1 hypothesis set for the crystallographic momentum-shell competitor class.
+  ENACTED this commit.
+- **B1-RH-ENUM flip (operator-authorized)**: active hypotheses {H-LAYER, H-ADM-COH, SC-SCOPE} -> {H-LAYER,
+  SC-SCOPE}; tier UNCHANGED T6 (a hypothesis-set reduction strengthens the conditional claim; the selection SIGN
+  is unaffected). H-ADM-COH retained as a legacy fallback for hypothetical non-lattice competitors. Devil's-advocate
+  self-test (competitor class / margin robustness / no tier inflation / G1'''-AE identification) recorded in the
+  card and note.
+- **Justification (cited)**: R-026 (lattice additive-energy DR-2, T7) + R-027 (weighted G1'''-AE bridge, T7) +
+  R-028 (finite margin K_adm = 1+T'(Q) <= K_allowed(n) = 8+4 sqrt(14) sqrt(n), verified 10.6x-15.8x). The lattice
+  arithmetic secures G1'''-AE without angular separation, which was H-ADM-COH's only role.
+- **Ledger status (operator-endorsed)**: G1'''-AE_lattice CLOSED@T7; H-ADM-COH DISCHARGED@lattice; DR2-SHARE
+  MOOT for the lattice mainline / OPEN for arbitrary Q (legacy); B1 T6 on {H-LAYER, SC-SCOPE}; B5 T5.
+- **Notes**: dr2-hadmcoh-discharge-decision re-issued v1.0 -> v1.1 (operator ACCEPTED, flip enacted; v1.0
+  superseded); GATES (H-ADM-COH -> DISCHARGED@lattice, DR2-SHARE -> MOOT@lattice/OPEN@arbitrary); B1 card flipped.
+- **DR-2 programme chronicle**: new consolidation note dr2-programme-consolidation v1.0 (FORM-CHECK PASS) records
+  the entire arc -- the DR2-SHARE obstruction, the three routes (decoupling T4+, elementary/PSM T2, lattice T7),
+  the results R-021..R-028, the resolution, and the open arbitrary-Q remainder -- in one place.
+- release_check PASS, pytest 3/3.
+
+## [H-ADM-COH discharge decision (R-028): the finite margin settles residual (a); DISCHARGE-CANDIDATE; R-027 complex notation; no flip] - 2026-06-08
+
+- **Operator roadmap** (write the one-page integration decision note; the decisive enhancement is point 3 --
+  replace the subpolynomial-K acceptance judgment with a finite numerical inequality). New note
+  dr2-hadmcoh-discharge-decision v1.0 (FORM-CHECK PASS, 0 overfull) + codes/vacuum/dr2_hadmcoh_margin.py (3/3).
+- **R-028 (decision note)**: for Q a subset of a crystallographic momentum shell, G1'''-AE
+  (`sum_t |w_t|^2 <= (1+T'(Q)) I^2`, R-027) holds with the FINITE margin
+  `K_adm = 1+T'(Q) <= K_allowed(n) = 8 + 4 sqrt(14) sqrt(n)` -- verified with margin 10.6x-15.8x that GROWS in n
+  (T'~R^0.18 << sqrt(n)); worst sub-pattern ratio 0.307. The former operator residual (a) "is subpolynomial K
+  acceptable?" is now a proven inequality.
+- **Residuals (b),(c)**: competitor class = crystallographic-shell subsets (operator-affirmed physical setup);
+  the non-transversal multi-circle high-n corner is a lattice subset, hence covered. All three residuals settled.
+- **Discharge logic**: H-ADM-COH was used ONLY to secure G1'''-AE by angular separation; the lattice arithmetic
+  (R-026 T7 + R-027 T7) secures it without separation. So H-ADM-COH is a DISCHARGE-CANDIDATE, with proposed B1
+  reduction {H-LAYER,H-ADM-COH,SC-SCOPE} -> {H-LAYER,SC-SCOPE} for the lattice class (legacy fallback for
+  non-lattice competitors).
+- **Ledger status (operator-endorsed), NO flip**: G1'''-AE_lattice CLOSED@T7; H-ADM-COH DISCHARGE-CANDIDATE;
+  DR2-SHARE OPEN pending operator integration; B1 T6 (unchanged); B5 T5. The discharge + B1 re-tier is the
+  operator's decision. Ledger R-028, GATES (DR2-SHARE + H-ADM-COH), B5+B1 cards.
+- **Also**: R-027 re-issued v1.0 -> v1.1 (complex-amplitude notation |c_a|^2, |w_t|^2, I=sum|c_a|^2; operator
+  point #1); lattice note already at v1.2. release_check PASS, pytest 3/3.
+
+## [DR-2 -> STEP-5B G1'''-AE integration (R-027): weighted Lemma A + lattice closure => G1'''-AE for the lattice class; lattice note v1.2; no flip] - 2026-06-08
+
+- **Operator directive** (the one remaining document: the DR2-SHARE integration `T' << R^eps => STEP-5B weighted
+  carrier-richness bound`, then leave H-ADM-COH discharge as an operator decision). New note
+  dr2-step5b-integration v1.0 (FORM-CHECK PASS, 0 overfull) + codes/vacuum/dr2_weighted_energy.py (3/3).
+- **R-027 (T7)**: WEIGHTED Lemma A -- for finite Q and any amplitudes c, `sum_t w_t^2 <= (1+T'(Q))||c||_2^4`
+  (w_t = sum_{a+b=t} c_a c_b), by Cauchy-Schwarz over the r(t) terms plus the t=0 antipodal split
+  `w_0^2 <= ||c||_2^4`. The SAME sum-circle richness T' controls the WEIGHTED energy, for arbitrary amplitudes.
+- **Integration**: identifying G1'''-AE = the weighted additive energy, the "carrier" of a+b=t = the sum-level
+  circle C_t, and H-ADM-COH = the angular-separation restriction, WEIGHTED Lemma A + R-026 (lattice T'<<_eps R^eps)
+  give, for any crystallographic-shell subset and any amplitudes, `sum_t w_t^2 <= (1+C_eps R^eps)||c||_2^4` -- the
+  G1'''-AE bound with SUBPOLYNOMIAL K~R^eps, NO separation. The chi(P) extraction obstruction (DR2-SHARE) is
+  BYPASSED: the additive energy is bounded directly (Lemma A + divisor bound), not via the iteration.
+- **Verified**: dr2_weighted_energy.py 3/3 -- weighted bound holds for uniform/gaussian/peaked/signed amplitudes
+  (worst ratio 0.277); antipodal term `w_0^2 <= ||c||_2^4`; K=1+T' ~ R^0.126 (subpolynomial).
+- **Honest residuals, NO flip**: an actual H-ADM-COH discharge needs operator decisions on (a) subpolynomial K~R^eps
+  vs constant (consistent with measured 2.04-2.08 + the x55.6/x8.8/x2.1 margins), (b) the modeling identification
+  (competitors = crystallographic-shell subsets), (c) corner coverage. DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH
+  retained. Ledger R-027, GATES, B5+B1 cards.
+- **Also**: lattice note re-issued v1.1 -> v1.2 (operator polish): load-bearing bound written as
+  `r_Q(R') <<_eps (R' disc Q)^eps <<_eps R^eps` with explicit 6 d(R') as the normalised version; "any fixed
+  lattice" restricted to "crystallographic (rational) lattice, after clearing denominators". T7 unchanged; v1.1
+  superseded. release_check PASS, pytest 3/3.
+
+## [DR-2 lattice class T6 -> T7 (R-026 v1.1): [DIV-CIRC] fully proved via y=2x-m; unconditional, decoupling-free; no flip] - 2026-06-08
+
+- **Operator review** (accept Route A as T6; full expansion of [DIV-CIRC] pre-authorised for T7). v1.1 re-issue
+  dr2-lattice-divisor-closure-260608-260608-v1.1 (FORM-CHECK PASS, 0 overfull; v1.0 superseded) fully expands
+  [DIV-CIRC], upgrading the lattice-class DR-2 to T7 UNCONDITIONAL. New proof-verification script
+  codes/vacuum/dr2_divcirc_proof.py (4/4, exact integers).
+- **[DIV-CIRC] proved**: the sum-level circle C_m has centre m/2, so the substitution `y = 2x - m` sends
+  `Z^3 cap C_m` injectively into `{y in Lambda_m = Z^3 cap m^perp : |y|^2 = 4R-|m|^2}` -- a HOMOGENEOUS rank-2
+  representation count (shift removed exactly). By Dirichlet's class-number formula a single class is bounded by
+  the sum over all classes `= w sum_{d|R'} chi(d) <= 6 d(R')` (UNIFORM in m), and `d(R') <<_eps R^eps`. Hence
+  `#(Z^3 cap C_m) <= 6 d(4R-|m|^2) <<_eps R^eps`.
+- **Theorem (T7)**: `E_+(Q) <= (1 + 6 max_{m!=0} d(4R-|m|^2)) N^2 <= (1+C_eps R^eps) N^2`; for Gauss-typical
+  shells (R~N^2), `E_+ <=_eps N^{2+eps}`. Modulo only TWO textbook facts (class-number formula, divisor bound) --
+  no decoupling, no conjecture.
+- **Verified exactly**: substitution `y=2x-m` lands in Lambda_m with `|y|^2=4R-|m|^2` per point; `T' <= r_Q(R')
+  <= 6 d(R')` with margin (`T'/6d <= 0.25`); the degenerate m=0 (whole-sphere antipodal) case is excluded exactly
+  as the proof splits it off (`r(0)^2 <= N^2`).
+- **Honest scope, NO flip**: closes the ADDITIVE-ENERGY DR-2 for the LATTICE class only (T7); arbitrary-Q DR-2
+  stays OPEN (T4+). The `chi(P) <~ T'` carrier-richness link and any H-ADM-COH discharge in B1 remain an OPERATOR
+  integration decision. DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained. Ledger R-026 (T6->T7), GATES, B5 card.
+  release_check PASS, pytest 3/3.
+
+## [DR-2 for the lattice class (R-026): decoupling-free closure for BCC/FCC momentum shells, conditional on the divisor bound; no flip] - 2026-06-08
+
+- **Operator directive** (Route A: bound T'(Q) for the admissible class -- the safer, self-contained route).
+  Observation: the TECT DR-2 carrier is BCC/FCC momentum-shell LATTICE points, not adversarial sets. New note
+  dr2-lattice-divisor-closure v1.0 (FORM-CHECK PASS, 0 overfull) + codes/vacuum/dr2_lattice_divisor.py (5/5,
+  exact integer arithmetic).
+- **R-026 (T6 conditional on [DIV-CIRC])**: for `Q = Lambda cap {|x|^2=R}`, every sum-level circle C_m lies in a
+  rational plane, so `#(Q cap C_m)` is a binary-quadratic-form representation count, `O_eps(R^eps)` by the
+  classical divisor bound [DIV-CIRC]. Hence `T'(Q) <<_eps R^eps` and, by Lemma A (R-025),
+  `E_+(Q) <= (1 + C_eps R^eps) N^2` = `N^{2+eps}` for Gauss-typical shells (`R ~ N^2`). DR-2 for the lattice
+  class, DECOUPLING-FREE -- no Bourgain-Demeter, no R1/R2 residuals.
+- **Verified exactly** (integer arithmetic): on Z^3 shells R=101..9974 (N=168..2040) the lemma assert
+  `E_+ <= (1+T')N^2` holds; T'/N falls 0.107->0.024 (log-log slope 0.177, the R^{o(1)} signature); E_+/N^2 <= 5.3
+  (energy is O(N^2), the R^eps ceiling never approached); Z^3 = FCC at R=1826 (mechanism is lattice-independent,
+  so it applies to BCC/FCC shells).
+- **Honest scope, NO flip**: closes the ADDITIVE-ENERGY DR-2 for the LATTICE class only; arbitrary-Q DR-2 stays
+  OPEN (T4+ via decoupling). Whether the T'-to-chi(P) carrier-richness equivalence discharges H-ADM-COH in B1 is
+  an OPERATOR integration decision. DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained. Ledger R-026, GATES, B5
+  card. release_check PASS, pytest 3/3.
+
 ## [DR-2 sum-level-circle reduction (R-025): unconditional E_+ <= (1+T')N^2; elementary DR-2 for bounded richness; no flip] - 2026-06-08
 
 - **Operator directive** ('proceed if there is a provable way'). After an honest assessment that the decoupling

@@ -1,0 +1,206 @@
+% =============================================================================
+% Title: DR-2 lattice closure mapped onto STEP-5B G1-triple-prime-AE -- the
+%        amplitude bridge and the H-ADM-COH integration analysis
+% Claim: B5-BEYOND-LAYER-BOUND (STEP-5B / DR2-SHARE integration)
+% Version: v1.1 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: the operator-requested DR2-SHARE integration document. It connects the
+%   lattice-class DR-2 closure (R-026, T7) to the STEP-5B requirement G1'''-AE
+%   (the weighted sphere additive-energy bound sum_t w_t^2 <= K(lambda' I)^2) via
+%   an elementary amplitude bridge: WEIGHTED Lemma A, sum_t w_t^2 <= (1+T'(Q))
+%   ||c||_2^4 for any amplitudes c (T7). Combined with R-026 (lattice:
+%   T' <<_eps R^eps), this gives, for ANY subset Q of a crystallographic
+%   momentum shell and ANY amplitudes, sum_t w_t^2 <= (1+C_eps R^eps)||c||_2^4 --
+%   the G1'''-AE bound with a SUBPOLYNOMIAL constant K ~ R^eps, with NO
+%   angular-separation (H-ADM-COH) restriction. Since H-ADM-COH is precisely the
+%   angular-separation admissibility amendment, this is the unrestricted-class
+%   additive-energy bound for the physical (lattice) competitor class. HONEST
+%   RESIDUALS for an actual H-ADM-COH discharge (all operator-level): (i) K is
+%   subpolynomial R^eps, not a fixed constant (consistent with the measured
+%   2.04--2.08 exponents and the x55.6/x8.8/x2.1 margins, but the gate-keeper
+%   confirms the margin survives K~N^eps); (ii) confirmation that competitor
+%   patterns are exactly crystallographic-shell subsets; (iii) the
+%   non-transversal multi-circle high-n corner is a lattice subset, hence
+%   covered. Grades: WEIGHTED Lemma A and the integration bound are T7; the
+%   H-ADM-COH discharge and any B1 tier change are NOT made here -- operator
+%   decision. NO flip: DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator directive: write the DR2-SHARE
+%        integration (T'<<R^eps => STEP-5B weighted carrier-richness bound), then
+%        leave the H-ADM-COH discharge as an operator decision. Script
+%        codes/vacuum/dr2_weighted_energy.py (3/3); JSON
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-weighted-energy/.
+%   v1.1 (2026-06-08) operator review: rewrite WEIGHTED Lemma A in COMPLEX-
+%        amplitude notation (|c_a|^2, |w_t|^2, I=sum_a |c_a|^2) so the bound
+%        sum_t |w_t|^2 <= (1+T'(Q)) I^2 holds verbatim for c_a in C; the
+%        Cauchy-Schwarz proof is amplitude-agnostic. v1.0 superseded.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+R-026 closes the (unweighted) additive-energy DR-2 for the crystallographic
+lattice class at T7. STEP-5B is CLOSED-CONDITIONAL on H-ADM-COH, whose role is
+to make the G1'''-AE corner -- the weighted sphere additive-energy bound -- hold
+by restricting to angularly SEPARATED competitor patterns. This note maps the
+lattice closure onto G1'''-AE through an amplitude bridge and analyses what
+remains for an H-ADM-COH discharge. It introduces no new physics; it is a
+reduction/integration note.
+
+\section*{2. Three identifications}
+
+\textbf{(i) G1'''-AE is a weighted additive energy.} The STEP-5B corner requires
+$\sum_{t}w_t^2\le K(\lambda'I)^2$ with $w_t=\sum_{a+b=t}c_ac_b$ the
+amplitude-weighted representation function of the pattern points $a,b$ on the
+shell and $I=\|c\|_2^2=\sum_a|c_a|^2$. This is the weighted additive energy of the pattern.
+
+\textbf{(ii) The ``carrier'' is the sum-level circle.} A pair $(a,b)$ with
+$a+b=t$ is diametral on its carrier circle of centre $t/2$; that carrier is
+exactly the sum-level circle $C_t=\{x:|x|^2=R,\ x\cdot t=\tfrac12|t|^2\}$ of
+R-025. The carrier occupancy is $\#(Q\cap C_t)$, whose maximum is $T'(Q)$, and
+the extraction-route carrier-richness $\chi(P)$ is the dual incidence quantity
+(rich carriers through a point).
+
+\textbf{(iii) H-ADM-COH is angular separation.} H-ADM-COH admits competitor
+patterns whose pairwise angular separations are $\ge\theta_{\min}(\hat r)$;
+finer-scale mass is assigned to the Gaussian sea. This is the SEPARATED-pattern
+restriction -- the regime in which the additive-energy bound is classically
+easy. Removing H-ADM-COH is the unrestricted (non-separated) problem.
+
+\section*{3. The amplitude bridge (WEIGHTED Lemma A)}
+
+\textbf{Lemma (weighted).} For finite $Q\subset S^2$ and any amplitudes
+$c=(c_a)_{a\in Q}$,
+\[
+\boxed{\ \sum_t |w_t|^2\ \le\ \big(1+T'(Q)\big)\,I^2\ },\qquad
+w_t=\sum_{a+b=t}c_ac_b,\quad I=\sum_a|c_a|^2 .
+\]
+
+\textbf{Proof.} Split $\sum_t |w_t|^2=|w_0|^2+\sum_{t\neq0}|w_t|^2$. For
+$t=0$, $w_0=\sum_{a:-a\in Q}c_ac_{-a}$, so by Cauchy--Schwarz
+$|w_0|\le\sum_a|c_a||c_{-a}|\le\big(\sum_a|c_a|^2\big)^{1/2}\big(\sum_a|c_{-a}|^2\big)^{1/2}=I$,
+i.e.\ $|w_0|^2\le I^2$. For $t\neq0$, Cauchy--Schwarz over the $r(t)$ summands
+gives $|w_t|^2\le r(t)\sum_{a+b=t}|c_a|^2|c_b|^2$, and
+$r(t)\le\#(Q\cap C_t)\le T'(Q)$, so
+\[
+\sum_{t\neq0}|w_t|^2\le T'(Q)\sum_{t\neq0}\sum_{a+b=t}|c_a|^2|c_b|^2
+\le T'(Q)\sum_{a,b}|c_a|^2|c_b|^2=T'(Q)\,I^2 .
+\]
+Adding the two parts gives the bound. $\square$
+
+This is the amplitude-weighted analogue of Lemma A (R-025): the SAME sum-circle
+richness $T'$ controls the weighted energy, for arbitrary amplitudes -- so the
+amplitude degree of freedom of G1'''-AE does not require new geometry.
+
+\section*{4. The integration bound}
+
+\textbf{Theorem.} Let $Q\subseteq\Lambda\cap\{|x|^2=R\}$ be any subset of a
+crystallographic momentum shell, and $c$ any amplitudes. Then
+\[
+\sum_t w_t^2\ \le\ \big(1+6\max_{t\neq0}d(4R-|t|^2)\big)\|c\|_2^4
+\ \le\ \big(1+C_\epsilon R^\epsilon\big)\|c\|_2^4 .
+\]
+Equivalently, $\sum_t |w_t|^2\le K\,I^2$ with $K=1+C_\epsilon R^\epsilon$ --
+the G1'''-AE bound with a SUBPOLYNOMIAL constant, holding for ALL subsets of the
+shell (no angular separation).
+
+\textbf{Proof.} WEIGHTED Lemma A bounds $\sum_t |w_t|^2$ by $(1+T'(Q))I^2$;
+R-026 ([DIV-CIRC]) bounds $T'(Q)\le6\max_{t\neq0}d(4R-|t|^2)\ll_\epsilon
+R^\epsilon$. $\square$
+
+\section*{5. What this means for H-ADM-COH (operator decision)}
+
+The bound of \S4 is exactly the G1'''-AE requirement, established for the
+UNRESTRICTED (non-separated) lattice class. Since H-ADM-COH was the
+angular-separation restriction that secured G1'''-AE, the lattice arithmetic
+REPLACES separation: for the physical (crystallographic-shell) competitor class,
+the weighted additive-energy bound holds without H-ADM-COH. The discharge is
+nonetheless NOT enacted here; three residuals, all operator-level, remain:
+
+\begin{itemize}
+\item[(a)] \emph{Subpolynomial vs constant $K$.} \S4 gives $K=1+C_\epsilon
+R^\epsilon$, not a fixed constant. With $R\asymp N^2$, $K\sim N^{2\epsilon}$
+(measured $K=1+T'$ grows like $R^{0.126}$). This matches the pre-registered
+sharp-$O(N^2)$ conjecture (exponents 2.04--2.08) and is far inside the
+$\times55.6/\times8.8/\times2.1$ margins for the operating $n$, but whether the
+gate accepts a subpolynomial $K$ in place of the constant $K=14$ form is the
+gate-keeper's call.
+\item[(b)] \emph{Modeling identification.} The discharge requires that admissible
+competitor patterns are exactly subsets of the crystallographic momentum shell
+(physical for a lattice field theory); this is an operator modeling
+confirmation, not a mathematical step.
+\item[(c)] \emph{Corner coverage.} The G1'''-AE corner (non-transversal
+multi-circle high-$n$) is a lattice-shell subset, hence covered by \S4; the
+operator confirms no corner escapes the lattice identification.
+\end{itemize}
+
+If (a)--(c) are accepted, H-ADM-COH may be discharged for the lattice class and
+B1's hypothesis set reduced accordingly. This note makes NO such flip:
+DR2-SHARE stays OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``WEIGHTED Lemma A might fail for signed/complex
+amplitudes.''} Checked: the Cauchy--Schwarz proof is amplitude-agnostic;
+verified on uniform, Gaussian, peaked, and signed profiles (worst ratio
+$0.277\le1$, dr2\_weighted\_energy.py 3/3).
+\item[($\beta$)] \emph{``This silently flips H-ADM-COH.''} It does NOT. \S5 lists
+three operator-level residuals and makes no gate/tier/hypothesis change. The
+note's theorems (WEIGHTED Lemma A, the \S4 bound) are T7; the discharge is
+deferred.
+\item[($\gamma$)] \emph{``$K$ is subpolynomial, so this is weaker than the
+constant-$K$ G1'''-AE.''} VALID and recorded as residual (a). A subpolynomial
+$K$ is consistent with the sharp-$O(N^2)$ conjecture and the measured exponents;
+whether it suffices for the margin closure is the operator's call, not a
+mathematical defect of the bound.
+\item[($\delta$)] \emph{``The $\chi(P)$ route is bypassed -- is that legitimate?''}
+YES: the extraction route's $\chi(P)$ obstruction (DR2-SHARE) was internal to one
+proof strategy. The lattice bound proves the additive energy DIRECTLY (Lemma A +
+divisor bound), so the weighted energy is controlled without ever iterating the
+extraction; $\chi(P)$ is not needed. DR2-SHARE (the extraction obstruction) is
+thereby rendered moot FOR THE LATTICE CLASS, though it stays formally OPEN.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} WEIGHTED Lemma A verified
+exactly: $\sum_t w_t^2\le(1+T')\|c\|_2^4$ on shells $R=101,314,561$, four
+amplitude profiles, worst ratio $0.277$. Antipodal term $w_0^2\le\|c\|_2^4$
+checked. Subpolynomial $K$: $1+T'$ grows like $R^{0.126}<R^{0.30}$. Direction:
+upper bound, $\|c\|_2^2=I>0$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-027 / DR-2 -> STEP-5B G1'''-AE integration
+Precise statement:       WEIGHTED Lemma A: for finite Q in S^2 and any
+                         amplitudes c, sum_t w_t^2 <= (1+T'(Q))||c||_2^4,
+                         w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).
+                         With R-026 (lattice T' <<_eps R^eps): for any subset Q
+                         of a crystallographic shell, sum_t w_t^2 <=
+                         (1+C_eps R^eps)||c||_2^4 -- the G1'''-AE bound with
+                         K ~ R^eps, NO angular separation.
+Scope:                   STEP-5B G1'''-AE corner; the DR2-SHARE integration;
+                         the physical (lattice) competitor class.
+Dependencies:            WEIGHTED Lemma A (T7, this note) + R-026 (T7).
+                         Both unconditional modulo textbook number theory.
+Evidence grade:          T7 (weighted Lemma A + integration bound). The
+                         H-ADM-COH discharge is NOT enacted (operator decision,
+                         residuals (a)-(c)).
+Reproduction command:    python codes/vacuum/dr2_weighted_energy.py
+Expected output:         3/3 PASS; sum_t w_t^2 <= (1+T')||c||_2^4 (worst ratio
+                         0.277); w_0^2 <= ||c||_2^4; K=1+T' ~ R^0.126.
+Falsification gate:      Amplitudes c with sum_t w_t^2 > (1+T'(Q))||c||_2^4
+                         (refutes WEIGHTED Lemma A); not observed.
+Tier before / after:     NEW T7 integration result. NO flip: H-ADM-COH retained,
+                         DR2-SHARE OPEN, B5 T5, B1 T6.
+No-overclaim statement:  Establishes the weighted G1'''-AE bound for the lattice
+                         class with subpolynomial K, decoupling-free. Does NOT
+                         discharge H-ADM-COH or change any tier; residuals
+                         (a) subpolynomial-K acceptance, (b) modeling
+                         identification, (c) corner coverage are operator
+                         decisions. Arbitrary-Q (non-lattice) DR-2 stays OPEN.
+Next required action:    Operator: accept/deny residuals (a)-(c); if accepted,
+                         discharge H-ADM-COH for the lattice class and re-tier B1.
+\end{verbatim}
+}

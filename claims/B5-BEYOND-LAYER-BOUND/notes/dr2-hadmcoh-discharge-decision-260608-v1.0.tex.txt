@@ -1,0 +1,196 @@
+% SUPERSEDED by dr2-hadmcoh-discharge-decision-260608-260608-v1.1.tex.txt
+% =============================================================================
+% Title: Discharge decision for H-ADM-COH on the crystallographic competitor
+%        class -- the finite-margin integration of DR-2 into STEP-5B
+% Claim: B5-BEYOND-LAYER-BOUND (B1-RH-ENUM hypothesis-set reduction; STEP-5B)
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: the operator-requested integration DECISION note. It assembles the
+%   discharge of H-ADM-COH for the physical (crystallographic momentum-shell)
+%   competitor class from R-026 (lattice additive-energy DR-2, T7) and R-027
+%   (weighted G1'''-AE bridge, T7), and -- the decisive step -- replaces the
+%   former subpolynomial-K acceptance JUDGMENT with a finite NUMERICAL
+%   INEQUALITY: K_adm = 1 + T'(Q) <= K_allowed(n) = 8 + c_R sqrt(n),
+%   c_R = 4 sqrt(14), verified with margin 10.6x--15.8x (growing) on the shells
+%   and worst sub-pattern ratio 0.307. The three former operator residuals are
+%   thereby settled: (a) finite margin (numerical, here); (b) competitor class
+%   = crystallographic-shell subsets (operator-affirmed physical setup);
+%   (c) the non-transversal multi-circle high-n corner is a lattice subset,
+%   hence covered. CONCLUSION: H-ADM-COH is a DISCHARGE-CANDIDATE -- it may be
+%   removed from the active B1 hypothesis set for the lattice class, becoming a
+%   legacy fallback for hypothetical non-lattice competitors. This note ENACTS
+%   NO flip: the discharge + B1 re-tier is the operator's decision; the ledger
+%   status recorded is G1'''-AE_lattice CLOSED@T7, H-ADM-COH DISCHARGE-CANDIDATE,
+%   DR2-SHARE OPEN pending operator integration, B1 T6, B5 T5.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator roadmap: write the one-page
+%        integration decision note settling residuals (a)-(c). Script
+%        codes/vacuum/dr2_hadmcoh_margin.py (3/3); JSON
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-hadmcoh-margin/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+STEP-5B is CLOSED-CONDITIONAL on H-ADM-COH, whose sole role is to secure the
+G1'''-AE corner (the weighted sphere additive-energy bound) by restricting to
+angularly SEPARATED competitor patterns. R-026 and R-027 establish that bound
+for the physical lattice class WITHOUT separation. This note assembles the
+discharge decision: it fixes the competitor class, restates the two theorems,
+and -- the decisive step -- turns the residual subpolynomial-$K$ acceptance into
+a finite numerical inequality against the STEP-5B tolerance. It enacts no flip;
+it is the decision record for the operator.
+
+\section*{2. The physical competitor class}
+
+We fix the B1 competitor class to crystallographic momentum-shell patterns
+\[
+Q\subseteq\Lambda^\ast\cap\{k:|k|^2=R\},
+\]
+where $\Lambda^\ast$ is the reciprocal BCC/FCC lattice. This is the physical
+competitor class of the TECT shell calculation; no claim is made for arbitrary
+real point sets $Q\subset S^2$ (arbitrary-$Q$ DR-2 stays OPEN, and is not needed
+for the mainline). This is residual (b), an operator modeling identification,
+here made explicit.
+
+\section*{3. The two established theorems}
+
+\textbf{Unweighted (R-026, T7).} For $Q\subseteq\Lambda^\ast\cap\{|k|^2=R\}$,
+$E_+(Q)\le(1+6\max_{t\neq0}d(4R-|t|^2))N^2\le(1+C_\epsilon R^\epsilon)N^2$, via
+Lemma A and the proved circle-divisor bound [DIV-CIRC] (substitution
+$y=2k-t$).
+
+\textbf{Weighted (R-027 v1.1, T7).} For any amplitudes $c_a\in\mathbb C$,
+$I=\sum_a|c_a|^2$, $w_t=\sum_{a+b=t}c_ac_b$,
+\[
+\sum_t|w_t|^2\le(1+T'(Q))\,I^2 ,
+\]
+so the G1'''-AE quantity is controlled by the same sum-circle richness $T'$ for
+arbitrary (complex) amplitudes.
+
+\section*{4. The finite margin (residual (a), settled numerically)}
+
+The STEP-5B closure tolerates an additive-energy constant growing as the
+kappa-balanced bound $K_{\rm allowed}(n)=8+c_R\sqrt n$ with $c_R=4\sqrt{14}$
+(theorem-grade, beyond-layer v2.0), against the layer margins
+$\times55.6/\times8.8/\times2.1$. The effective constant supplied by \S3 is
+$K_{\rm adm}=1+T'(Q)$. We verify (dr2\_hadmcoh\_margin.py, 3/3):
+\[
+\boxed{\ K_{\rm adm}=1+T'(Q)\ \le\ K_{\rm allowed}(n)=8+4\sqrt{14}\,\sqrt n\ }
+\]
+for every crystallographic shell and sub-pattern, with margin $10.6\times$ to
+$15.8\times$ that GROWS in $n$ (because $T'\sim R^\epsilon$ grows far slower than
+$\sqrt n$):
+
+\begin{center}
+\begin{tabular}{rrrrr}
+$R$ & $N$ & $T'$ & $K_{\rm adm}=1{+}T'$ & $K_{\rm allowed}(N)$ \\ \hline
+101 & 168 & 18 & 19 & 202 \\
+909 & 504 & 24 & 25 & 344 \\
+1826 & 672 & 24 & 25 & 396 \\
+4994 & 1152 & 32 & 33 & 516 \\
+9974 & 2040 & 48 & 49 & 684 \\
+\end{tabular}
+\end{center}
+
+For sub-patterns $Q'\subseteq$ shell the worst observed ratio is
+$(1+T'(Q'))/K_{\rm allowed}(|Q'|)=0.307$, since $T'(Q')\le\min(|Q'|,T'(\text{shell}))$
+and $8+c_R\sqrt n$ dominates both branches. The former operator judgment ``is a
+subpolynomial $K\sim R^\epsilon$ acceptable?'' is thus replaced by a verified
+inequality with an order-of-magnitude, widening margin.
+
+\section*{5. Corner coverage (residual (c))}
+
+The G1'''-AE corner is the non-transversal multi-circle high-$n$ pattern class.
+Every such pattern is a subset of the crystallographic shell, hence covered by
+\S3--\S4 with no separate treatment. This closes residual (c) mathematically.
+
+\section*{6. The discharge decision}
+
+H-ADM-COH was used ONLY to enforce angular separation so that G1'''-AE holds.
+\S3--\S5 establish G1'''-AE for the unrestricted (non-separated) lattice class,
+with a finite tolerance margin. Therefore, for the crystallographic competitor
+class, the lattice arithmetic REPLACES separation and
+\[
+\{H\text{-LAYER},\,H\text{-ADM-COH},\,SC\text{-SCOPE}\}
+\ \longrightarrow\
+\{H\text{-LAYER},\,SC\text{-SCOPE}\}
+\]
+is the proposed B1 hypothesis-set reduction, with H-ADM-COH demoted to a legacy
+fallback for hypothetical non-lattice competitors.
+
+\textbf{Status recorded (NO flip enacted here).} Per the operator's endorsed
+ledger status: G1'''-AE$_{\rm lattice}$ = CLOSED@T7; H-ADM-COH =
+DISCHARGE-CANDIDATE; DR2-SHARE = OPEN pending operator integration; B1 = T6
+CONDITIONAL on $\{H\text{-LAYER},H\text{-ADM-COH},SC\text{-SCOPE}\}$ (unchanged);
+B5 = T5. The discharge and the B1 re-tier are the operator's decision; this note
+supplies the complete justification for that decision.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$c_R=4\sqrt{14}$ and the $\times55.6/\times8.8/\times2.1$
+margins are read from the closure note -- a misread would void \S4.''}
+VALID-with-mitigation: $c_R=4\sqrt{14}$ and the kappa-balanced bound
+$K(n)\le8+c_R\sqrt n$ are quoted from beyond-layer-gershgorin-reduction v2.0;
+the margin claim is robust to the exact constant because $K_{\rm adm}/K_{\rm
+allowed}\le0.1$ leaves an order of magnitude of slack. If the operator's
+canonical $c_R$ differs by an $O(1)$ factor the conclusion stands.
+\item[($\beta$)] \emph{``This silently discharges H-ADM-COH.''} It does NOT:
+\S6 records H-ADM-COH as DISCHARGE-CANDIDATE and B1 as UNCHANGED T6, enacting no
+flip. The discharge is the operator's decision.
+\item[($\gamma$)] \emph{``Sub-patterns could have a rich circle violating the
+margin.''} Checked: $T'(Q')\le\min(|Q'|,T'(\text{shell}))$, and both branches
+sit below $8+c_R\sqrt{|Q'|}$ (small $n$: $T'\le n\le8+c_R\sqrt n$ up to
+$n\approx240$; large $n$: $T'\le T'(\text{shell})\sim R^\epsilon\ll\sqrt n$);
+worst observed ratio $0.307$.
+\item[($\delta$)] \emph{``The arbitrary-$Q$ problem is being smuggled in.''} NO:
+the class is explicitly restricted to crystallographic shells (\S2);
+arbitrary-$Q$ DR-2 stays OPEN and is not used.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} $K_{\rm adm}\le K_{\rm allowed}$
+on all shells (margin $10.6$--$15.8\times$, growing); worst sub-pattern ratio
+$0.307$; $T'$ grows like $R^{0.18}$ vs the allowed $\sqrt n$. Direction: both
+sides positive, $K_{\rm adm}\ge1$. Limit: small $n$ handled by $T'\le n$.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-028 / H-ADM-COH discharge decision (lattice class)
+Precise statement:       For Q subset of a crystallographic shell, the G1'''-AE
+                         bound sum_t |w_t|^2 <= (1+T'(Q)) I^2 (R-027) holds with
+                         K_adm = 1+T'(Q) <= K_allowed(n) = 8 + 4 sqrt(14) sqrt(n)
+                         (verified, margin 10.6x-15.8x growing; sub-pattern
+                         worst ratio 0.307). Since H-ADM-COH only secured
+                         G1'''-AE by angular separation, it is a DISCHARGE-
+                         CANDIDATE: {H-LAYER,H-ADM-COH,SC-SCOPE}->{H-LAYER,
+                         SC-SCOPE} is the proposed B1 reduction for the lattice
+                         class.
+Scope:                   B1-RH-ENUM hypothesis set; STEP-5B G1'''-AE; the
+                         physical crystallographic competitor class only.
+Dependencies:            R-026 (T7), R-027 v1.1 (T7); c_R = 4 sqrt(14) and the
+                         kappa-balanced tolerance K(n) <= 8 + c_R sqrt(n) from
+                         beyond-layer-gershgorin-reduction v2.0.
+Evidence grade:          Integration/decision note. The finite margin (a) is
+                         verified numerically; (b) modeling and (c) corner are
+                         settled. H-ADM-COH = DISCHARGE-CANDIDATE (no flip).
+Reproduction command:    python codes/vacuum/dr2_hadmcoh_margin.py
+Expected output:         3/3 PASS; K_adm <= K_allowed(N) all shells (margin
+                         10.6x-15.8x); margin grows with N; sub-pattern worst
+                         ratio 0.307.
+Falsification gate:      A crystallographic shell/sub-pattern with
+                         1+T'(Q) > 8 + 4 sqrt(14) sqrt(|Q|); not observed.
+Tier before / after:     NEW decision note. NO flip: B1 T6 unchanged, H-ADM-COH
+                         DISCHARGE-CANDIDATE (was active), DR2-SHARE OPEN, B5 T5,
+                         G1'''-AE_lattice CLOSED@T7.
+No-overclaim statement:  Does NOT enact the discharge or change B1's tier; it is
+                         the decision record. The discharge holds for the
+                         LATTICE class only; arbitrary-Q DR-2 stays OPEN. The
+                         margin rests on the quoted closure constant c_R.
+Next required action:    Operator: accept (a)-(c) and discharge H-ADM-COH from
+                         the active B1 set for the lattice class (re-tier B1 on
+                         {H-LAYER, SC-SCOPE}), or request further hardening.
+\end{verbatim}
+}

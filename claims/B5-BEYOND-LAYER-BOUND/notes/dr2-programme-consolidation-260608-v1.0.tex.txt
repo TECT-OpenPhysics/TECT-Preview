@@ -1,0 +1,160 @@
+% =============================================================================
+% Title: The DR-2 programme -- a chronicle from the carrier-sharing obstruction
+%        to the H-ADM-COH discharge
+% Claim: B5-BEYOND-LAYER-BOUND (DR-2 programme consolidation; STEP-5B / B1)
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: research-progress chronicle (operator-requested). Records the entire
+%   DR-2 arc in one place: the named obstruction (DR2-SHARE), the three routes
+%   attempted (decoupling / elementary-PSM / lattice), the results R-021..R-028
+%   with honest tiers, the resolution (lattice additive-energy DR-2 at T7 plus
+%   the weighted bridge and the finite margin), and the operator-enacted
+%   discharge of H-ADM-COH for the crystallographic lattice class. This is a
+%   narrative consolidation, not a new theorem; it makes NO independent claim
+%   beyond the cited results. Final state: G1'''-AE_lattice CLOSED@T7; H-ADM-COH
+%   DISCHARGED@lattice; DR2-SHARE MOOT@lattice / OPEN@arbitrary-Q; B1 T6 on
+%   {H-LAYER, SC-SCOPE}; B5 T5.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator request: organise the whole DR-2
+%        progression as a research-progress chronicle for convenience.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This note chronicles the DR-2 programme end-to-end. DR-2 is the unrestricted
+sphere additive-energy bound $E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$, the route
+to removing the angular-separation hypothesis H-ADM-COH from the B1 selection
+proof. The chronicle records what was tried, what failed, what closed, and at
+what tier, so the programme's logic is auditable from one place. It introduces
+no new result; every claim is cited to its result-ledger entry.
+
+\section*{2. The obstruction: DR2-SHARE}
+
+The elementary (extraction) route (dr2-extraction-lemmas v1.0) reduces the
+additive energy of a competitor pattern to a sum over ``carrier'' circles: the
+homogeneous part is capped per circle (universal $K=14$), and the dichotomy
+adjoins rich circles. The sticking point, DR2-SHARE, is that adjoined circles
+SHARE points, so $\sum_s I_{C_s}^2\le I^2$ fails and the cap degrades with the
+sharing multiplicity $\chi(P)=\max_x\#\{$rich carriers through $x\}$. The
+elementary route closes iff $\chi=O(\mathrm{polylog})$ class-wide -- an
+incidence statement adjacent to a hard open conjecture.
+
+\section*{3. Three routes}
+
+\textbf{(I) Decoupling.} Bourgain--Demeter $\ell^2$-decoupling at $p=4$, $d=3$
+gives $E_+\lesssim_\epsilon N^{2+\epsilon}$ for $\delta$-separated $Q$ (R-022,
+separated case T6 conditional). The non-separated case needs an
+induction-on-scales: the affine-invariance of additive energy (R-023, T7) plus
+a decoupling-iteration inequality (R-024). Two corrections were forced by audit
+(the false torus identity $\|f_\theta\|_4^4=E_+(Q_\theta)$, repaired via the
+Besicovitch mean $M(|f_Q|^4)=E_+(Q)$; the ``exact paraboloid'' overclaim,
+softened to $C^2$-perturbation stability). The honest residual is two cited
+ingredients (local-to-global averaging; multi-scale $\epsilon$-bookkeeping --
+the hard core of decoupling), so the arbitrary-$Q$ decoupling route rests at
+T4+ STRONG EVIDENCE.
+
+\textbf{(II) Elementary / PSM.} The external research reduces DR-2 to the
+Pencil Rigidity / Pair-Sum Surface Multiplicity conjecture (T2), via the
+cross-energy lemma (R-021, T7 -- which also corrected the external constant
+$2|A||B|$ to $2\min(\cdot)$). This is a sound conditional reduction, not a
+closure.
+
+\textbf{(III) Lattice (Route A) -- the one that closed.} The competitor
+patterns in TECT are not adversarial: they are BCC/FCC reciprocal-lattice
+momentum-shell points. The sum-level-circle lemma $E_+(Q)\le(1+T'(Q))N^2$
+(R-025, T7 unconditional) reduces DR-2 to the sum-circle richness $T'$. For
+lattice shells, the substitution $y=2x-t$ (the sum-circle centre is $t/2$)
+sends $\mathbb Z^3\cap C_t$ injectively into
+$\{y\in\Lambda_t:|y|^2=4R-|t|^2\}$, a homogeneous rank-2 representation count
+$\le6\,d(4R-|t|^2)\ll_\epsilon R^\epsilon$ by the Dirichlet class-number
+formula (uniform). Hence $E_+(Q)\le(1+C_\epsilon R^\epsilon)N^2$ for any
+crystallographic-shell subset (R-026, T7 UNCONDITIONAL modulo textbook number
+theory; decoupling-free).
+
+\section*{4. The results ledger (chronological)}
+
+\begin{center}
+\begin{tabular}{lll}
+ID & Result & Tier \\ \hline
+R-021 & Sphere-circle cross-energy bound (corrected constant) & T7 \\
+R-022 & DR-2 via $\ell^2$-decoupling (separated / unrestricted) & T6 cond / T4+ \\
+R-023 & Affine-invariance of additive energy & T7 \\
+R-024 & Decoupling-iteration inequality (Besicovitch-repaired) & T4+ \\
+R-025 & Sum-level-circle bound $E_+\le(1+T')N^2$ & T7 \\
+R-026 & DR-2 for the lattice class ([DIV-CIRC] proved) & T7 \\
+R-027 & Weighted G1$'''$-AE bridge $\sum|w_t|^2\le(1+T')I^2$ & T7 \\
+R-028 & H-ADM-COH discharge decision (finite margin) & enacted \\
+\end{tabular}
+\end{center}
+
+\section*{5. The resolution and the discharge}
+
+The weighted bridge (R-027, T7): for any complex amplitudes $c$,
+$\sum_t|w_t|^2\le(1+T'(Q))I^2$, $I=\sum_a|c_a|^2$. Identifying the STEP-5B
+corner G1$'''$-AE with this weighted additive energy, R-026 gives, for the
+lattice class, $\sum_t|w_t|^2\le(1+C_\epsilon R^\epsilon)I^2$ -- the G1$'''$-AE
+bound with NO angular separation. The acceptance question ``is a subpolynomial
+$K\sim R^\epsilon$ tolerable?'' was settled (R-028) as the finite inequality
+$K_{\rm adm}=1+T'(Q)\le K_{\rm allowed}(n)=8+4\sqrt{14}\sqrt n$, verified with
+margin $10.6\times$--$15.8\times$ (growing in $n$). Since H-ADM-COH only secured
+G1$'''$-AE by angular separation, the operator (2026-06-08) DISCHARGED it for the
+crystallographic lattice class, reducing the B1 active hypothesis set
+$\{H\text{-LAYER},H\text{-ADM-COH},SC\text{-SCOPE}\}\to\{H\text{-LAYER},SC\text{-SCOPE}\}$
+with B1 tier UNCHANGED T6.
+
+\section*{6. What remains open}
+
+The arbitrary real-point DR-2 ($Q\subset S^2$ not a lattice subset) is NOT
+closed; it rests at T4+ via the decoupling route (residuals R1/R2) and is
+retained only as a legacy fallback. It is not needed for the TECT mainline,
+which uses only the crystallographic lattice class. The PSM conjecture (T2)
+remains an alternative open route.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A chronicle could overstate by blurring the lattice
+closure with the open arbitrary-$Q$ problem.''} Guarded: \S3(III) and \S5 scope
+the closure to the lattice class explicitly, and \S6 keeps arbitrary-$Q$ OPEN.
+\item[($\beta$)] \emph{``It might claim B1 was promoted.''} It does not: B1 tier
+is UNCHANGED T6; only the hypothesis set shrank (a strengthening of the
+conditional, not a tier lift).
+\item[($\gamma$)] \emph{``It might present the decoupling route as closed.''}
+No: R-022/R-024 are recorded at T4+ with the two cited residuals named.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} All numbers are cited to their
+verified result entries: $T'/N\to0$ (R-025/R-026, slope $0.18$); $6d$ bound and
+substitution exact (R-026, dr2\_divcirc\_proof 4/4); weighted bound worst ratio
+$0.277$ (R-027); margin $10.6$--$15.8\times$ (R-028). No new number is asserted.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5 / DR-2 programme consolidation (chronicle)
+Precise statement:       A one-place chronicle of the DR-2 programme: obstruction
+                         (DR2-SHARE, chi(P)); three routes (decoupling T4+,
+                         elementary/PSM T2, lattice T7); results R-021..R-028;
+                         resolution (lattice E_+<=(1+C R^eps)N^2 + weighted
+                         bridge + finite margin) and the operator-enacted
+                         H-ADM-COH discharge for the crystallographic class.
+Scope:                   Narrative consolidation of B5 DR-2; no new claim.
+Dependencies:            R-021..R-028 (each cited at its own tier).
+Evidence grade:          CHRONICLE (no independent result). Final state:
+                         G1'''-AE_lattice CLOSED@T7; H-ADM-COH DISCHARGED@lattice;
+                         DR2-SHARE MOOT@lattice/OPEN@arbitrary; B1 T6 on
+                         {H-LAYER,SC-SCOPE}; B5 T5.
+Reproduction command:    (none -- narrative; the cited results carry the scripts)
+Expected output:         n/a
+Falsification gate:      Any cited result being refuted (would update this
+                         chronicle); none outstanding.
+Tier before / after:     No tier action (chronicle).
+No-overclaim statement:  Records cited results only. The lattice-class DR-2 and
+                         the discharge hold for the crystallographic class;
+                         arbitrary-Q DR-2 stays OPEN. B1 tier UNCHANGED T6.
+Next required action:    Mainline: SC-SCOPE all-orders lift (the remaining B1
+                         lever beyond H-LAYER).
+\end{verbatim}
+}
