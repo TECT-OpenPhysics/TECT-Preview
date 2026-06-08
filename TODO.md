@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 6
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 7
 
 ## Next up
 
@@ -16,8 +16,8 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 6
 - **T-004** Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: R-U6-1)_
   - SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.
   - _updated 2026-06-07_
-- **T-007** ESTIMATOR-UPGRADE: controlled-error quantitative selection margins for B1  _(owner: unassigned; claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
-  - Promote the estimator-grade selection margins to controlled-error bounds (separate from the T6 sign claim).
+- **T-010** ESTIMATOR-UPGRADE finish: extend the curvature-certified controlled-error bound to the two-shell ensemble + dI/amplitude-grid quadrature knobs  _(claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
+  - Single-shell + M-quadrature done (estimator-upgrade-enumerated v1.0). Same method (kappa=dF''(0)>0 + no-condensate at two resolutions) applies; then ESTIMATOR-UPGRADE closure is an operator decision.
   - _updated 2026-06-07_
 
 ## Done (recent)
@@ -33,6 +33,9 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 6
   - _updated 2026-06-07_
 - **T-005** Assemble the joint second+third-order endpoint inequality (SC-SCOPE all-orders lift)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: SC-SCOPE; blocked by: T-003, T-004)_
   - SUPERSEDED by the 2026-06-07 SC-SCOPE scope decision: 2nd-cumulant accepted at the I=2e-3 endpoint; all-orders feasible for I<=1e-3. Joint inequality not pursued to closure (paired x0.905 exhausted). Reopen only via STEP-5B endpoint floor rho>~3.9.
+  - _updated 2026-06-07_
+- **T-007** ESTIMATOR-UPGRADE: controlled-error quantitative selection margins for B1  _(owner: unassigned; claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
+  - Promote the estimator-grade selection margins to controlled-error bounds (separate from the T6 sign claim).
   - _updated 2026-06-07_
 - **T-008** SC-SCOPE joint incompatible-pairing argument: bound max_t[c_sunset(t)+c_quartic(t)] (sunset peaks small-t, quartic large-t) to recover the x1.32 joint endpoint deficit  _(claim: B5-BEYOND-LAYER-BOUND; gate: SC-SCOPE)_
   - Next critical path after the 2026-06-07 joint honest-negative. Sunset bound largest at small transfers, quartic-difference Phi peaks at t=2q0; the joint per-transfer sum should be below the sum of individual maxima.

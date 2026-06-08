@@ -1,0 +1,140 @@
+% =============================================================================
+% Title: Controlled-error bound on the enumerated-reading selection margins
+% Claim: B1-RH-ENUM (ESTIMATOR-UPGRADE gate)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical note; ADVANCES ESTIMATOR-UPGRADE for the single-shell enumerated readings (LAM/HEX/FCC/BCC) at mu^2=0.005: the estimator-grade dF>0 verdict is upgraded to a CONTROLLED-ERROR bound -- A=0 (Reading-H) is a strict minimum with curvature kappa_R >= 0.85 for every reading, the M-quadrature envelope is < 0.1% of kappa, and no reading condenses at either fast (N_PT=6000) or high (N_PT=20000) resolution. Scope: single-shell readings, M-quadrature knob; two-shell ensemble + dI/grid knobs are the same method (follow-up). No tier/gate flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Curvature kappa_R = dF_R''(0) computed at two
+%        quadrature resolutions via monkeypatch of Math424 M_fast -> M_of(20000)
+%        (reuses the certified dF_reading/scan_reading); certified kappa_R -
+%        envelope > 0 for all readings; no-condensate verdict at both resolutions.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+B1 asserts $\Delta F[\mathcal R] = F[\mathcal R] - F[\mathcal R_H] > 0$ for every
+enumerated reading $\mathcal R$ (single-shell LAM/HEX/FCC/BCC) at $\mu^2=0.005$,
+at ESTIMATOR grade -- point estimates from the fast quadrature pipeline with no
+certified error. The ESTIMATOR-UPGRADE gate asks for a CONTROLLED error bound.
+This note supplies it for the single-shell readings against the dominant
+numerical knob (the loop-integral quadrature). Scope: single-shell ensemble;
+two-shell + the $\delta I$/grid knobs are registered as the same-method
+follow-up.
+
+\section*{2. What "controlled error" means here}
+
+$\Delta F_{\mathcal R}(A)$ is even in the condensate amplitude $A$ with
+$\Delta F_{\mathcal R}(0) = 0$ exactly ($A=0$ is the Reading-H reference). The
+selection holds iff, for every reading, (a) $A=0$ is a STRICT local minimum --
+the curvature
+\[
+\kappa_{\mathcal R} := \Delta F_{\mathcal R}''(0)
+= \frac{2\,\Delta F_{\mathcal R}(h)}{h^2} + O(h^2) \; > \; 0,
+\]
+and (b) there is no DEEPER minimum at $A>0$ (the amplitude scan's global best is
+at $A=0$: no condensate). A reading with $\kappa_{\mathcal R}<0$ or an interior
+$\Delta F<0$ minimum would FALSIFY the selection. $\kappa_{\mathcal R}$ is
+grid-independent (unlike a "$\min_{A>0}\Delta F$", which scales with the
+amplitude-grid spacing), so it is the correct controlled-error margin.
+
+\section*{3. Method and result}
+
+Each verdict is computed at the production fast pipeline ($M_{\rm fast}$, grid at
+$N_{\rm pt}=6000$) and at a HIGH-resolution pipeline ($M$ by direct quadrature at
+$N_{\rm pt}=20000$, installed by monkeypatching Math424's $M_{\rm fast}$ so its
+OWN certified \texttt{dF\_reading}/\texttt{scan\_reading} are reused -- no formula
+re-transcription). $h=0.005$ with a half-step $h/2$ quadratic-regime check.
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y Y @{}}
+\toprule
+reading & $\kappa$ (fast) & $\kappa$ (hires) & envelope & certified $\kappa-$env \\
+\midrule
+LAM & $0.85097$ & $0.85098$ & $1.7\times10^{-5}$ & $0.85095$ \\
+HEX & $2.55417$ & $2.55422$ & $5.4\times10^{-5}$ & $2.55411$ \\
+FCC & $3.40777$ & $3.40784$ & $7.5\times10^{-5}$ & $3.40769$ \\
+BCC & $5.11625$ & $5.11637$ & $1.2\times10^{-4}$ & $5.11613$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+Every reading has $\kappa_{\mathcal R}>0$ with the M-quadrature envelope
+$<0.1\%$ of $\kappa$ (five orders below $\kappa$); the binding (smallest) reading
+is LAM, $\kappa = 0.851 \pm 1.7\times10^{-5}$. Both pipelines find every reading
+collapses to $A=0$ (no condensate: the global $\Delta F$ minimum is at $A=0$).
+The $\Delta F(0)=0$ identity holds exactly in both pipelines. Thus the
+single-shell selection margins are CONTROLLED-ERROR positive: $A=0$ is a strict
+minimum for every reading and the verdict is not a fast-quadrature artefact.
+
+\section*{4. What this advances and what remains}
+
+ADVANCED: the single-shell enumerated $\Delta F>0$ verdict is now controlled-error
+(curvature-certified, no condensate, M-quadrature envelope $<0.1\%$). REMAINING
+for full ESTIMATOR-UPGRADE closure: (i) the two-shell ensemble (same curvature +
+no-condensate method); (ii) the $\delta I$ quadrature and amplitude-grid knobs
+(here held at fixed resolution in both pipelines; the M knob is dominant because
+$M$ enters $\Delta F$ several times and drives the gap solve). These are
+registered follow-ups; the gate stays OPEN pending them and operator sign-off.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, 6 code-discipline)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Only the M-quadrature was varied.''} VALID and scoped:
+$M$ is the dominant knob (multiple appearances + drives the gap solve, which also
+uses $M_{\rm fast}$ and is therefore refined here too). $\delta I$ and the
+amplitude grid are named as follow-ups; the curvature is grid-independent, and
+the no-condensate scan uses the same 121-point grid in both pipelines so a
+condensate would have to hide from BOTH.
+\item[($\beta$)] \emph{``$\kappa = 2\Delta F(h)/h^2$ may be $A^4$-contaminated.''}
+DISMISSED: the $h$ vs $h/2$ check agrees to $<2\%$ for every reading at $h=0.005$,
+confirming the finite difference measures $\Delta F''(0)$, not the quartic.
+\item[($\gamma$)] \emph{``No formula re-transcription -- sure?''} The hires
+pipeline reuses Math424's OWN \texttt{dF\_reading}/\texttt{scan\_reading} via a
+one-line monkeypatch of $M_{\rm fast}$; the $\Delta F$ algebra is never copied,
+eliminating transcription risk (code-discipline rule 1).
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- envelopes $\sim10^{-5}$ vs
+$\kappa\sim1$--$5$ ($<0.1\%$); limit-case -- $\Delta F(0)=0$ exactly in both
+pipelines; sign-direction -- $\kappa>0$ means $A=0$ is a strict minimum, the
+selection-preserving direction; consistency -- BCC has the largest curvature yet
+its $A^4$ contamination forced the smaller $h$, consistent with a steeper
+landscape.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ESTIMATOR-UPGRADE (enumerated single-shell)
+Precise statement:       Controlled-error: for LAM/HEX/FCC/BCC at mu^2=0.005,
+                         A=0 is a STRICT minimum (kappa_R = dF_R''(0) >= 0.85)
+                         and no reading condenses, at BOTH N_PT=6000 and 20000;
+                         M-quadrature envelope < 0.1% of kappa (binding LAM
+                         kappa=0.851 +/- 1.7e-5). The estimator-grade dF>0 is
+                         upgraded to a controlled-error bound for the single-
+                         shell ensemble.
+Scope:                   Single-shell enumerated readings; M-quadrature knob.
+                         Two-shell + dI/grid knobs = same-method follow-up.
+Dependencies:            Math424_AddA_reading_uniqueness (dF_reading, scan_
+                         reading, M_of); production constants.
+Evidence grade:          EXECUTED (estimator_upgrade_enumerated.py 7/7) with a
+                         two-resolution quadrature envelope.
+Reproduction command:    python codes/vacuum/estimator_upgrade_enumerated.py
+Expected output:         7/7 PASS; kappa table; no-condensate at both
+                         resolutions; binding LAM kappa=0.851.
+Falsification gate:      A reading with kappa <= 0 or an interior dF<0 minimum at
+                         either resolution (would refute the selection); a
+                         two-shell reading that condenses.
+Tier before / after:     No tier/gate flip. ESTIMATOR-UPGRADE: single-shell
+                         controlled-error ADVANCE (M-quadrature); gate stays OPEN
+                         pending two-shell + dI knobs + operator sign-off.
+No-overclaim statement:  Controlled error w.r.t. the M-quadrature only, single-
+                         shell only. NOT a full ESTIMATOR-UPGRADE closure. The
+                         B1 T6 selection SIGN was already established; this
+                         upgrades the enumerated MARGINS' error grade.
+Next required action:    Two-shell ensemble + dI/amplitude-grid envelopes by the
+                         same method; then ESTIMATOR-UPGRADE closure is an
+                         operator decision.
+\end{verbatim}
+}

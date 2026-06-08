@@ -5,6 +5,28 @@ not pillar counts.
 
 ---
 
+## [ESTIMATOR-UPGRADE: controlled-error enumerated selection margins (single-shell)] - 2026-06-07
+
+- **Operator directive**: T-007 (ESTIMATOR-UPGRADE). Delivered a controlled-error
+  bound on the enumerated single-shell selection margins for B1.
+- **estimator_upgrade_enumerated.py (7/7) + estimator-upgrade-enumerated v1.0
+  (FORM-CHECK PASS)**: the estimator-grade dF>0 verdict is upgraded -- A=0
+  (Reading-H) is a STRICT minimum for every reading (curvature
+  kappa_R = dF_R''(0): LAM 0.851, HEX 2.554, FCC 3.408, BCC 5.116), the
+  M-quadrature envelope (N_PT 6000 vs 20000) is < 0.1% of kappa (binding LAM
+  0.851 +/- 1.7e-5), and no reading condenses at either resolution. The
+  grid-independent curvature is the correct margin (a min-over-A>0 margin would
+  be grid-scale-dependent). Hires pipeline reuses Math424's certified dF via an
+  M-evaluator monkeypatch (no formula re-transcription; code-discipline rule 1).
+- **Scope / remaining**: single-shell readings + M-quadrature only. Two-shell
+  ensemble + dI/amplitude-grid knobs are the same-method follow-up (registered).
+  ESTIMATOR-UPGRADE stays OPEN pending those + operator sign-off; B1 T6 SIGN
+  unchanged (this upgrades the MARGINS' error grade).
+- **RESULTS-LEDGER**: R-015 (curvature-certified controlled-error selection
+  margin method).
+- **Verification**: release-check PASS; pytest 3; FORM-CHECK PASS + OVERFULL 0;
+  script exit 0.
+
 ## [commit-watcher v1.2.0: batch-drain fixes the recurring stuck-queue] - 2026-06-07
 
 - **Recurring git problem fixed systemically.** Root cause: commit_watcher.ps1
