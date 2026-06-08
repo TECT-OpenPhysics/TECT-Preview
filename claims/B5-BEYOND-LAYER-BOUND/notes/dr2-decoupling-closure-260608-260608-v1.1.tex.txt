@@ -1,21 +1,24 @@
-% SUPERSEDED by dr2-decoupling-closure-260608-260608-v1.1.tex.txt
 % =============================================================================
-% Title: DR-2 via l2-decoupling: a corrected conditional route (separated case rigorous, unrestricted case proof-sketch)
+% Title: DR-2 via l2-decoupling: a corrected conditional route, v1.1 with majorant details
 % Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
-% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08 (corrected same-session after operator audit)
-% Status: PROMISING CONDITIONAL ROUTE, NOT a closure. Corrected after an operator critical audit that found a fatal formal error in the first draft. Honest grade: (a) for delta-SEPARATED Q in S^2 the bound E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter l2-decoupling (sphere in R^3, critical exponent p=4), with the additive-energy = L^4 link via the Schwartz MAJORANT (NOT the false torus identity); (b) for ARBITRARY finite Q (the actual DR-2) the bound is T4 STRONG EVIDENCE: the affine-invariance lemma (R-023 -- E_+ EXACTLY affine-invariant, parabolic rescaling unfolds any cap-cluster to a unit-scale config of identical energy) resolves the audit's clustering concern, and extreme-clustering numerics show exponent ~2 uniformly down to 0.05-rad caps; the remaining item is the standard induction-on-scales write-out (Bourgain-Demeter machinery, cited not reproduced); (c) STRONG numerical evidence (exponent ~2 on the sphere vs ~3 flat). NO gate/tier flip: DR2-SHARE stays OPEN, B5 stays T5, B1 stays T6, and H-ADM-COH STAYS in the B1 hypothesis set. R-022 downgraded T6->T4. The bound is N^{2+eps}, NOT the stronger N^2 log^B N.
+% Version: v1.1 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: CORRECTED CONDITIONAL ROUTE NOTE (NOT a closure). Honest grade: (a) for delta-SEPARATED Q in S^2, E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter l2-decoupling (sphere in R^3, critical exponent p=4); the additive-energy = L^4 link is via the Besicovitch mean / Schwartz MAJORANT (NOT the false torus identity), and v1.1 adds Section 2.1 showing the majorant upper bound is GAP-INDEPENDENT (hat-eta >= 0), resolving the operator review's four rigor sub-points; (b) for ARBITRARY finite Q (the actual DR-2), T4 STRONG EVIDENCE -- the affine-invariance lemma (R-023) resolves the clustering concern, full induction-on-scales cited not reproduced. NO gate/tier flip: DR2-SHARE stays OPEN, B5 T5, B1 T6, H-ADM-COH STAYS in the B1 hypothesis set. The bound is N^{2+eps}, NOT N^2 log^B N.
 %
 % Revision history (cumulative):
-%   v1.0 (2026-06-08) first issue, then CORRECTED same-session after operator
-%        audit (reviews/2026-06-08-dr2-decoupling-critical-audit.md). Three fixes:
-%        (1) the E_+ = integral_{[0,1]^3}|f|^4 torus identity was FALSE for
-%        non-integer q in S^2 -- replaced by the Besicovitch limit / Schwartz
-%        majorant; (2) the non-separated multi-scale reduction is now written
-%        (cross-scale step marked OPEN); (3) N^{2+eps} distinguished from
-%        N^2 log^B N. Tier downgraded from the over-claimed T6 PROVED CONDITIONAL
-%        to a separated-T6 / unrestricted split (T3 sketch, then T4 STRONG EVIDENCE after the
-%        affine-invariance lemma R-023). Script
-%        codes/vacuum/dr2_decoupling_exponent.py (4/4) unchanged.
+%   v1.0 (2026-06-08) first issue; the E_+ = integral_{[0,1]^3}|f|^4 torus identity
+%        was FALSE for non-integer q in S^2; corrected same-session after operator
+%        audit (Besicovitch/majorant; multi-scale sketch; N^{2+eps} vs N^2 log^B;
+%        tier split), then lifted to unrestricted-T4 by the affine-invariance lemma
+%        R-023. NOTE (operator 2026-06-08): those same-session in-place edits should
+%        have been versioned re-issues; v1.1 begins proper versioning.
+%   v1.1 (2026-06-08) versioned RE-ISSUE of v1.0. Adds Section 2.1 (majorant
+%        details: the upper bound is gap-independent because hat-eta >= 0,
+%        resolving the operator review's four rigor points); aligns the framing to
+%        a corrected conditional route note. Grades UNCHANGED (separated T6 PROVED
+%        CONDITIONAL / unrestricted T4 STRONG EVIDENCE / DR-2 OPEN / no flip /
+%        H-ADM-COH retained). Scripts dr2_decoupling_exponent.py (4/4),
+%        dr2_affine_invariance.py (4/4) unchanged. Supersedes
+%        dr2-decoupling-closure-260608-v1.0.tex.txt.
 % =============================================================================
 
 \sloppy
@@ -47,6 +50,28 @@ E_+(Q)\;\le\;C\int_{\mathbb R^3}|f_Q(x)|^4\,\eta_R(x)\,dx ,
 because every diagonal quadruple contributes $\widehat\eta\ge1$ and every
 off-diagonal quadruple contributes $\widehat\eta\ge0$. This localised $L^4$
 integral -- not the torus integral -- is the object decoupling bounds.
+
+\section*{2.1. Majorant details (resolving the review's rigor points)}
+
+The \S2 upper bound is robust and GAP-INDEPENDENT. Take $\eta\ge0$ Schwartz with
+$\widehat\eta\ge0$ everywhere and $\widehat\eta(0)=\int\eta\ge1$; with
+$\eta_R(x)=\eta(x/R)$ one has $\widehat{\eta_R}(\xi)=R^3\widehat\eta(R\xi)$, so
+\[
+\int|f_Q|^4\eta_R
+=R^3\!\!\sum_{i,j,k,l}\widehat\eta\big(R(q_i+q_j-q_k-q_l)\big)
+\;\ge\;R^3\,\widehat\eta(0)\,E_+(Q),
+\]
+because the diagonal quadruples contribute $\widehat\eta(0)\ge1$ and every
+off-diagonal term has $\widehat\eta\ge0$, so
+$E_+(Q)\le(R^3\widehat\eta(0))^{-1}\int|f_Q|^4\eta_R$. This answers the review's
+four sub-points: (i) $\eta$ is any nonnegative-Fourier Schwartz bump with
+$\int\eta\ge1$ -- no fine tuning; (ii) the scale is fixed by matching $R$ to the
+decoupling ball, $R\sim\delta^{-1}$ for a $\delta$-neighbourhood of the sphere;
+(iii) uniformity when the minimal sumset gap is small is AUTOMATIC, since the
+off-diagonal terms only add ($\widehat\eta\ge0$), so a small gap cannot weaken the
+bound; (iv) the ball scale is the decoupling scale by construction. The only
+remaining input is decoupling itself (\S3); the separated-case
+majorant-to-decoupling link is therefore clean modulo the cited theorem.
 
 \section*{3. Separated case (T6 PROVED CONDITIONAL on decoupling)}
 

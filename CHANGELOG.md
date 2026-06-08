@@ -5,6 +5,20 @@ not pillar counts.
 
 ---
 
+## [DR-2 decoupling note v1.1 re-issue (proper versioning) + majorant rigor (operator review)] - 2026-06-08
+
+- **Operator review** (reviews/2026-06-08-dr2-decoupling-corrected-reeval.md) accepted the corrected note as a
+  conditional route note and issued a BINDING process correction: do versioned RE-ISSUES, not in-place edits.
+- **Versioning compliance**: re-issued as claims/B5-BEYOND-LAYER-BOUND/notes/dr2-decoupling-closure-260608-
+  260608-v1.1.tex.txt; v1.0 marked SUPERSEDED (forward pointer). Saved to memory (document-versioning rule).
+  References (GATES, B5 card, RESULTS-LEDGER R-022/R-023) updated v1.0 -> v1.1.
+- **v1.1 Section 2.1 (majorant rigor)** resolves the review's four Schwartz-majorant sub-points: the upper
+  bound `E_+ <= C int|f|^4 eta_R` is GAP-INDEPENDENT because `hat-eta >= 0` (off-diagonal terms only add),
+  with `R ~ delta^{-1}` the decoupling ball scale -- so the SEPARATED-case majorant-to-decoupling link is
+  clean modulo the cited theorem. Grades UNCHANGED: separated T6 PROVED CONDITIONAL, unrestricted T4 STRONG
+  EVIDENCE, DR-2 OPEN, NO flip, H-ADM-COH retained.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0 (v1.1); release-check PASS; pytest 3.
+
 ## [DR-2 unrestricted case T3->T4: affine-invariance lemma resolves the clustering concern (still no flip)] - 2026-06-08
 
 - **Operator directive** ('go all the way'). dr2_affine_invariance.py (4/4) + note upgrade. Addresses the
