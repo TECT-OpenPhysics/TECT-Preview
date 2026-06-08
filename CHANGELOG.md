@@ -5,6 +5,23 @@ not pillar counts.
 
 ---
 
+## [ESTIMATOR-UPGRADE knob closure: dI + amplitude-grid + continuum no-condensate + two-shell (0,0) Hessian] - 2026-06-07
+
+- **T-010 advance** (estimator-upgrade-knobs v1.0; codes/vacuum/estimator_upgrade_knobs.py 13/13;
+  claims/B1-RH-ENUM/runs/260607-estimator-upgrade-knobs/result.json). No tier/gate flip.
+- **(ii) knobs closed**: kappa_R moves < 0.1% under dI-grid refinement (6000,50)->(12000,100); the
+  no-condensate verdict is grid-monotone at NG=121/241/481 (unique minimum at A=0). Combined with the
+  M-knob (enumerated v1.0), the single-shell margins are controlled against all three numerical knobs.
+- **(iii) continuum no-condensate**: the grid scan is upgraded to the curvature-chord bound
+  dF(A) >= min(v_i,v_{i+1}) - (1/8) M_i delta^2 > 0 on every A>0 interval for LAM/HEX/FCC/BCC -- a
+  node-free (continuum) guarantee, STRONG-EVIDENCE grade (M_i is a discrete |dF''| estimate).
+- **(i) two-shell (0,0) Hessian**: certified positive-definite with controlled error -- kappa_12=0 by
+  {110}/{200} orthogonality (the m31 coupling is quartic), soft eigenvalue = single-shell BCC curvature
+  5.116, {200} kernel penalty C q0^4=0.214>0. The two-shell GLOBAL no-condensate remains Math432
+  exact-Wick grid evidence (continuum bound over the (A1,A2) surface = named residual; gate stays OPEN).
+- **RESULTS-LEDGER R-016** (multi-knob controlled-error + continuum no-condensate + orthogonal-shell Hessian).
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [ESTIMATOR-UPGRADE single-shell subgate marked controlled-error advanced (operator review)] - 2026-06-07
 
 - **Operator review** (reviews/2026-06-07-estimator-upgrade-and-scscope-acceptance-review.md)

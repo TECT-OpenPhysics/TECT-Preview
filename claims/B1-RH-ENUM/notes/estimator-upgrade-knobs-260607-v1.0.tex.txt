@@ -1,0 +1,184 @@
+% =============================================================================
+% Title: ESTIMATOR-UPGRADE knob closure: dI-quadrature + amplitude-grid envelopes, a curvature-chord continuum no-condensate bound, and the controlled-error two-shell (0,0) Hessian
+% Claim: B1-RH-ENUM (ESTIMATOR-UPGRADE gate)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical note; ADVANCES ESTIMATOR-UPGRADE for the single-shell enumerated readings beyond the M-quadrature knob (closed by estimator-upgrade-enumerated v1.0). This note (i) closes the dI-quadrature and amplitude-grid knobs -- kappa_R moves < 0.1% under dI refinement and the no-condensate verdict is grid-monotone; (ii) upgrades the grid-scan no-condensate to a CONTINUUM curvature-chord lower bound (positive on every A>0 interval for LAM/HEX/FCC/BCC); (iii) certifies the two-shell {110}+{200} (0,0) Hessian is positive-definite with controlled error (diagonal by shell orthogonality; soft eigenvalue = single-shell BCC curvature 5.116; {200} eigenvalue strictly larger). The two-shell GLOBAL no-condensate is the exact-Wick PASS of Math432 (cited grid evidence, not re-derived here). Scope: single-shell ensemble all three numerical knobs + two-shell (0,0) curvature. No tier/gate flip; full ESTIMATOR-UPGRADE closure is an operator decision pending the two-shell global continuum bound.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Follows estimator-upgrade-enumerated v1.0.
+%        Script codes/vacuum/estimator_upgrade_knobs.py (13/13 asserts); JSON
+%        claims/B1-RH-ENUM/runs/260607-estimator-upgrade-knobs/result.json.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The enumerated single-shell selection $\Delta F[\mathcal R] = F[\mathcal R] -
+F[\mathcal R_H] > 0$ ($\mathcal R \in \{$LAM, HEX, FCC, BCC$\}$ at $\mu^2=0.005$)
+was upgraded to a CONTROLLED-ERROR bound against the dominant $M$-quadrature knob
+in estimator-upgrade-enumerated v1.0 (curvature $\kappa_{\mathcal R} = \Delta
+F_{\mathcal R}''(0) \ge 0.85$, no condensate at $N_{\rm pt}=6000$ and $20000$).
+Two numerical knobs and the two-shell ensemble remained. This note closes the two
+residual single-shell knobs, upgrades the no-condensate verdict from a grid
+statement to a continuum one, and certifies the two-shell $(0,0)$ Hessian. Every
+free-energy value is produced by the certified m424 primitives ($\mathtt{dF\_reading}$,
+$\mathtt{dI}$, $\mathtt{gap\_solve}$, $\mathtt{M\_fast}$); the knobs are exercised by
+monkeypatching m424 module globals, never by re-transcribing the free-energy algebra
+(code-discipline rule 1).
+
+\section*{2. The two residual single-shell knobs and the two-shell question}
+
+The free-energy difference uses two quadratures beyond $M$: the loop log-difference
+$\mathtt{dI}(\hat r, r_R)$ (a trapezoid on the grid $\_QG$ from
+$\mathtt{\_grid\_q}(N_{\rm pt}, q_{\max})$) and the amplitude scan that decides
+$\min_{A>0}\Delta F$. The two-shell question is whether the $\{110\}+\{200\}$
+ensemble of Math432 -- in which the cross moment $m_{31}=\langle\phi_1^3\phi_2\rangle
+\neq 0$ makes the single-shell BCC point non-stationary -- preserves the selection.
+
+\section*{3. Method and results}
+
+\textbf{(ii) amplitude-grid + continuum bound.} For each reading the verdict
+$\min_{A>0}\Delta F>0$ holds at $N_G=121/241/481$ and $\Delta F$ is strictly
+increasing on the valid prefix (the unique minimum is $A=0=\mathcal R_H$). The
+"closest approach" $\min_{A>0}\Delta F$ itself scales as $\tfrac12\kappa A_{\rm
+floor}^2 \to 0$ as the grid resolves near $A=0$, so the grid-invariant is the
+binary verdict, not its magnitude. The node-free guarantee is the curvature-chord
+bound: a $C^2$ function deviates below its chord on $[A_i,A_{i+1}]$ by at most
+$\tfrac18 M_i\,\delta^2$ with $M_i$ the local $|\Delta F''|$ from second
+differences, so $\Delta F(A)\ge\min(v_i,v_{i+1})-\tfrac18 M_i\delta^2$.
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y Y @{}}
+\toprule
+reading & $\min_{A>0}\Delta F$ ($N_G{=}481$) & monotone & $M_{\max}$ & continuum lower bound \\
+\midrule
+LAM & $1.17\times10^{-6}$ & yes & $126.0$ & $+8.80\times10^{-7}$ \\
+HEX & $5.84\times10^{-7}$ & yes & $358.3$ & $+4.38\times10^{-7}$ \\
+FCC & $4.76\times10^{-7}$ & yes & $526.8$ & $+3.57\times10^{-7}$ \\
+BCC & $3.38\times10^{-7}$ & yes & $629.0$ & $+2.54\times10^{-7}$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+The continuum lower bound is positive for every reading: no condensate can hide
+between grid nodes. Both the value ($\sim\tfrac12\kappa A^2$) and the dip
+($\sim\tfrac18\kappa\delta^2$) scale as $\delta^2$ near $A=0$, and $\tfrac12 >
+\tfrac18$, so the bound survives the near-origin region.
+
+\textbf{(ii) dI-quadrature knob.} Refining $\_QG$ from $(6000, 50\,q_0)$ to
+$(12000, 100\,q_0)$ moves $\kappa_{\mathcal R}$ by $<0.1\%$ and leaves every
+no-condensate verdict intact.
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} l Y Y Y @{}}
+\toprule
+reading & $\kappa$ ($6000$) & $\kappa$ ($12000$) & $|\Delta\kappa|$ \\
+\midrule
+LAM & $0.850966$ & $0.850970$ & $4.2\times10^{-6}$ \\
+HEX & $2.554165$ & $2.554177$ & $1.3\times10^{-5}$ \\
+FCC & $3.407767$ & $3.407784$ & $1.7\times10^{-5}$ \\
+BCC & $5.116247$ & $5.116273$ & $2.5\times10^{-5}$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+Combined with the $M$-knob envelope of estimator-upgrade-enumerated v1.0, the
+single-shell margins are controlled with respect to all three numerical knobs
+($M$, $\mathtt{dI}$, amplitude grid).
+
+\textbf{(i) two-shell $(0,0)$ Hessian.} For the $\{110\}+\{200\}$ condensate
+$(A_1,A_2)$ the quadratic cross term vanishes: the shells are disjoint, so
+$\langle\phi_1\phi_2\rangle=0$ and the $m_{31}$ coupling
+$U\langle\phi_1^3\phi_2\rangle$ is QUARTIC ($A_1^3 A_2$), absent from the Hessian.
+The Hessian is therefore diagonal, $\kappa_{12}=0$. The soft eigenvalue is the
+single-shell BCC curvature $\kappa_{\rm BCC}=5.116$ (controlled-error; the
+two-shell $F$ at $A_2=0$ is exactly the single-shell BCC $F$). The $\{200\}$
+eigenvalue is strictly larger: that shell sits one octave off the kernel minimum
+and carries a positive penalty $C q_0^4 = 0.214 > 0$. Hence $(0,0)$ is a strict
+two-shell minimum with controlled error. The GLOBAL two-shell no-condensate (the
+$m_{31}$ tilt valley) is the exact-Wick PASS of Math432 (anchored $\Delta F>0$ on
+the $(A_1,A_2,M)$ surface at cut$12/48^3$ and cut$20/64^3$), cited here as grid
+evidence and not re-derived.
+
+\section*{4. What this advances and what remains}
+
+ADVANCED: the single-shell enumerated $\Delta F>0$ verdict is now controlled-error
+against all three numerical knobs and the no-condensate statement is a continuum
+(node-free) one; the two-shell $(0,0)$ Hessian is positive-definite with controlled
+error. REMAINING for full ESTIMATOR-UPGRADE closure: the two-shell GLOBAL
+no-condensate is still grid evidence (Math432 exact-Wick scan), not a continuum
+bound; a curvature-chord or interval bound over the two-shell $(A_1,A_2)$ surface
+would close it. The gate stays OPEN pending that and operator sign-off.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The curvature-chord $M_i$ is a discrete estimate of
+$|\Delta F''|$, not a proven upper bound.''} VALID-with-mitigation: $M_i$ is the
+local second-difference, an $O(\delta^2)$-accurate estimate; the bound is therefore
+controlled-error / STRONG-EVIDENCE grade, not a T7 theorem. Mitigation: $M_i$ is
+grid-stable (the second differences converge as $\delta\to0$) and the bound clears
+zero by a factor $\sim3$ near the origin, so a modest $M$ under-estimate cannot flip
+the sign. Recorded as STRONG-EVIDENCE, not as a proof.
+\item[($\beta$)] \emph{``The two-shell global no-condensate is only cited, not
+re-derived -- the gate cannot close on a citation.''} UPHELD: correct, and it is
+exactly why this note does NOT claim ESTIMATOR-UPGRADE closure. The two-shell
+$(0,0)$ Hessian is new controlled-error content; the global valley remains Math432
+grid evidence. The residual is named in section 4 and the gate stays OPEN.
+\item[($\gamma$)] \emph{``Is the soft two-shell eigenvalue really the single-shell
+BCC curvature?''} DISMISSED: the two-shell free energy restricted to $A_2=0$ is
+identically the single-shell BCC free energy (Math432 reproduces the Math430
+single-shell race at $A_2=0$ to $10^{-7}$), so the $A_1$ curvature at $(0,0)$ is
+$\kappa_{\rm BCC}$ exactly; the script reproduces $5.116$ to $5\times10^{-3}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- $\kappa$ envelopes
+$\sim10^{-5}$ vs $\kappa\sim1$--$5$ ($<0.1\%$); the continuum dip
+$\tfrac18 M\delta^2\sim10^{-7}$ vs value $\sim10^{-6}$; sign-direction -- every
+$\kappa>0$ and every continuum bound $>0$ (the selection-preserving direction);
+limit-case -- $\Delta F(0)=0$ exactly; consistency -- the $\{200\}$ penalty
+$Cq_0^4=0.214>0$ confirms the stiff shell adds curvature, so the soft direction
+$\kappa_{\rm BCC}=5.116$ is the binding two-shell eigenvalue.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ESTIMATOR-UPGRADE knob closure (single-shell)
+Precise statement:       For LAM/HEX/FCC/BCC at mu^2=0.005: (ii) kappa_R moves
+                         < 0.1% under dI-grid refinement (6000,50)->(12000,100)
+                         and the no-condensate verdict is grid-monotone at
+                         NG=121/241/481; (iii) the curvature-chord continuum
+                         lower bound min(v_i,v_{i+1}) - (1/8) M_i delta^2 > 0 on
+                         every A>0 interval (no inter-node condensate); (i) the
+                         two-shell {110}+{200} (0,0) Hessian is positive-definite
+                         (kappa_12=0 by orthogonality; soft eigenvalue kappa_BCC
+                         =5.116; {200} penalty C q0^4=0.214>0). Global two-shell
+                         no-condensate cited from Math432 (grid evidence).
+Scope:                   Single-shell ensemble, all 3 numerical knobs + continuum
+                         no-condensate; two-shell (0,0) curvature only.
+Dependencies:            Math424_AddA_reading_uniqueness (dF_reading, dI,
+                         gap_solve, M_fast); estimator-upgrade-enumerated v1.0
+                         (M-knob); Math432 (two-shell global no-condensate).
+Evidence grade:          EXECUTED (estimator_upgrade_knobs.py 13/13) +
+                         STRONG-EVIDENCE (curvature-chord continuum bound).
+Reproduction command:    python codes/vacuum/estimator_upgrade_knobs.py
+Expected output:         13/13 PASS; continuum lower bounds positive; dI
+                         envelope < 0.1%; two-shell Hessian PD.
+Falsification gate:      A reading with a negative continuum lower bound; a dI
+                         envelope > 0.1% of kappa; a two-shell direction with
+                         non-positive (0,0) curvature; or a Math432 reload with
+                         an anchored dF < 0.
+Tier before / after:     No tier/gate flip. ESTIMATOR-UPGRADE: single-shell knob
+                         closure + continuum no-condensate + two-shell (0,0)
+                         curvature ADVANCE; gate stays OPEN pending the two-shell
+                         global continuum bound + operator sign-off.
+No-overclaim statement:  Controlled error w.r.t. the named numerical knobs and the
+                         two-shell (0,0) curvature only. NOT a full ESTIMATOR-
+                         UPGRADE closure: the two-shell global no-condensate is
+                         cited Math432 grid evidence, not a continuum bound. The
+                         B1 T6 selection SIGN was already established; this
+                         upgrades the enumerated MARGINS' error grade.
+Next required action:    Two-shell global continuum no-condensate bound (curvature
+                         -chord over the (A1,A2) surface); then ESTIMATOR-UPGRADE
+                         closure is an operator decision.
+\end{verbatim}
+}

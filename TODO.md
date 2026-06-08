@@ -17,7 +17,7 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 7
   - SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.
   - _updated 2026-06-07_
 - **T-010** ESTIMATOR-UPGRADE finish: extend the curvature-certified controlled-error bound to the two-shell ensemble + dI/amplitude-grid quadrature knobs  _(claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
-  - Single-shell + M-quadrature done (estimator-upgrade-enumerated v1.0). REMAINING for full closure: (i) two-shell ensemble (same kappa=dF''(0)>0 + no-condensate method); (ii) dI quadrature + amplitude-grid envelopes; (iii) [operator review 2026-06-07, publication-grade] a no-condensate interval/Lipschitz bound dF_R(A)>=0 on each amplitude interval [A_j,A_{j+1}], replacing the grid-scan no-condensate evidence with a continuum guarantee. Then ESTIMATOR-UPGRADE closure is an operator decision.
+  - Knobs (ii) dI-quadrature + amplitude-grid and (iii) curvature-chord continuum no-condensate DONE for the single-shell ensemble (estimator-upgrade-knobs v1.0, 13/13); two-shell {110}+{200} (0,0) Hessian certified PD (controlled-error). REMAINING for full ESTIMATOR-UPGRADE closure: a two-shell GLOBAL no-condensate CONTINUUM bound over the (A1,A2) surface (currently Math432 exact-Wick grid evidence). Then closure is an operator decision.
   - _updated 2026-06-08_
 
 ## Done (recent)
