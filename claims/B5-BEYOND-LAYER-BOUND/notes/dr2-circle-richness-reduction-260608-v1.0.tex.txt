@@ -1,0 +1,185 @@
+% =============================================================================
+% Title: DR-2 sum-level-circle reduction -- an unconditional additive-energy
+%        bound and elementary DR-2 for bounded circle-richness sphere sets
+% Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: A self-contained, UNCONDITIONAL (decoupling-free) result that
+%   sharpens the DR2-SHARE carrier-richness picture. Lemma A proves
+%   E_+(Q) <= (1 + T'(Q)) N^2 for every finite Q in S^2, where T'(Q) is the
+%   maximum occupancy of a proper sum-level circle. Corollary 1: sphere sets
+%   with O(1) sum-circle occupancy satisfy DR-2 (E_+ = O(N^2)) UNCONDITIONALLY
+%   and elementarily -- no decoupling, no PSM conjecture. Corollary 2: the
+%   general DR-2 follows from the circle-richness bound T'(Q) <=_eps N^eps, a
+%   single clean elementary quantity (a SUFFICIENT, not tight, condition). This
+%   does NOT close DR-2: bounding T' for arbitrary Q is the open carrier-richness
+%   problem, and the rich-latitude example shows T' can reach N while E_+ stays
+%   ~3N^2, so T' is potentially stronger than needed. Honest grades: Lemma A and
+%   Corollary 1 are T7 PROVED unconditional; the general bound stays OPEN. NO
+%   gate/tier/hypothesis flip: DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator directive: pursue what is provable.
+%        After an honest assessment that the decoupling route's residual R2
+%        (multi-scale constant control) is the hard core of Bourgain-Demeter and
+%        not reproducible, this note proves the one clean UNCONDITIONAL result
+%        within reach. Script codes/vacuum/dr2_circle_richness.py (5/5, with an
+%        exact-E_+ code-audit gate); JSON
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-circle-richness/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The decoupling route (dr2-cross-scale-induction v1.1) reduces unrestricted DR-2
+to two cited ingredients of Bourgain--Demeter machinery, of which R2 (the
+multi-scale constant control) is the hard core of decoupling itself and is not
+reproducible here. This note steps off that route and proves, UNCONDITIONALLY
+and elementarily, the part that IS provable: an exact reduction of the sphere
+additive energy to a single geometric quantity, the occupancy of sum-level
+circles. It yields elementary DR-2 for a natural class and pins the precise
+obstruction for the rest.
+
+\section*{2. The sum-level circle}
+
+Let $Q\subset S^2$ be finite, $|Q|=N$, and for $m\in\mathbb R^3$ let
+$r(m)=\#\{(a,b)\in Q^2:a+b=m\}$, so that the additive energy is
+$E_+(Q)=\sum_m r(m)^2$ and $\sum_m r(m)=N^2$.
+
+\textbf{Geometric fact.} If $a,b\in S^2$ and $a+b=m$ then
+\[
+a\cdot m=a\cdot(a+b)=|a|^2+a\cdot b=1+a\cdot b,\qquad
+|m|^2=|a|^2+2a\cdot b+|b|^2=2+2a\cdot b,
+\]
+so $a\cdot m=|m|^2/2$, and likewise $b\cdot m=|m|^2/2$. Hence both summands lie
+on the \emph{sum-level circle}
+\[
+C_m:=S^2\cap\{x\in\mathbb R^3:\ x\cdot m=\tfrac12|m|^2\}.
+\]
+For $m\neq0$ this is a proper circle (a plane at distance $|m|/2>0$ from the
+origin meeting $S^2$, nonempty iff $|m|\le2$); for $m=0$ the defining plane
+degenerates to all of $\mathbb R^3$ and $C_0=S^2$.
+
+\section*{3. Lemma A (unconditional)}
+
+\textbf{Lemma A.} For every finite $Q\subset S^2$,
+\[
+\boxed{\,E_+(Q)\;\le\;\big(1+T'(Q)\big)\,N^2\,},\qquad
+T'(Q):=\max_{\substack{m\neq0\\ r(m)>0}}\ \#\big(Q\cap C_m\big).
+\]
+
+\textbf{Proof.} Split $E_+(Q)=r(0)^2+\sum_{m\neq0}r(m)^2$.
+
+\emph{(i) The $m=0$ term.} $r(0)=\#\{(a,b)\in Q^2:a+b=0\}=\#\{a\in Q:-a\in Q\}
+\le N$, so $r(0)^2\le N^2$.
+
+\emph{(ii) The proper terms.} Fix $m\neq0$ with $r(m)>0$. Every pair $(a,b)$
+with $a+b=m$ has $a\in Q\cap C_m$ and $b=m-a$ determined by $a$, so
+$r(m)=\#\{a\in Q\cap C_m:\ m-a\in Q\}\le\#(Q\cap C_m)\le T'(Q)$. Therefore
+\[
+\sum_{m\neq0}r(m)^2\le T'(Q)\sum_{m\neq0}r(m)\le T'(Q)\,N^2.
+\]
+Adding (i) and (ii) gives $E_+(Q)\le N^2+T'(Q)N^2=(1+T'(Q))N^2$. $\square$
+
+The split is sharp and necessary: for $N$ evenly spaced points on a great
+circle the antipodal term contributes $r(0)^2=N^2$ and the proper circles have
+occupancy $T'=2$, so the bound reads $(1+2)N^2=3N^2$ against the exact
+$E_+=2.95\,N^2$ (dr2\_circle\_richness.py: $N^2$ antipodal $+\,2N^2$ proper).
+
+\section*{4. Consequences}
+
+\textbf{Corollary 1 (elementary unconditional DR-2 for bounded richness).} If
+$T'(Q)=O(1)$ then $E_+(Q)=O(N^2)$ -- DR-2 holds with NO decoupling and NO
+conjecture. The script confirms $T'=2$ for both random sphere sets
+($E_+=1.98\,N^2$) and the great circle ($E_+=2.95\,N^2$); these natural classes
+satisfy DR-2 by Lemma A alone.
+
+\textbf{Corollary 2 (reduction of general DR-2).} For arbitrary finite $Q$,
+\[
+T'(Q)\lesssim_\epsilon N^\epsilon\quad\Longrightarrow\quad
+E_+(Q)\lesssim_\epsilon N^{2+\epsilon}\ \ (\text{DR-2}).
+\]
+Thus DR-2 follows from a bound on a single elementary quantity: the maximum
+occupancy of a sum-level circle. This is a concrete realisation of the DR2-SHARE
+``carrier richness'' $\chi(P)$ with an EXACT constant ($1+T'$), sharper than the
+polylog framing.
+
+\textbf{Scope honesty (the condition is sufficient, not tight).} Corollary 2 is
+one-directional. The engineered latitude circle $z=z_0$ has a single rich
+sum-circle ($m^\ast=(0,0,2z_0)$, all $N$ points on it, $r(m^\ast)=N$), so
+$T'=N$, yet $E_+\approx3N^2$ still satisfies DR-2. Hence bounding $T'$ is
+potentially STRONGER than DR-2, and Lemma A does not by itself make the general
+problem easier; it isolates rich sum-circles as the only mechanism by which
+$E_+$ can exceed $O(N^2)$ and supplies the unconditional bound for the rest.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+Four concrete objections, found before submission:
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Does this close DR-2 or advance its tier?''} NO, and
+the note must not be read that way. Lemma A and Corollary 1 are T7 UNCONDITIONAL
+but cover only the bounded-richness class; the unrestricted DR-2 tier is
+UNCHANGED (T4+ via the decoupling route). No gate/tier/hypothesis flip.
+\item[($\beta$)] \emph{``The $m=0$ circle is all of $S^2$, so $T'$ would be $N$
+always, making the bound trivial $N^3$.''} DISMISSED: $m=0$ is excluded from the
+$\max$ defining $T'$ and handled separately in step (i), where
+$r(0)\le N$ gives the additive ``$+1$''. The great-circle check (tight at $3N^2$)
+confirms the split is correct, not a loophole.
+\item[($\gamma$)] \emph{``$T'$ can be $N$ while $E_+$ is $O(N^2)$ (rich
+latitude), so the reduction is vacuous.''} VALID and RECORDED as the scope-honesty
+paragraph: Corollary 2 is sufficient, not tight. Its value is (a) the
+unconditional bound for $T'=O(1)$ sets and (b) pinning rich sum-circles as the
+sole obstruction -- not a claim that $T'\lesssim N^\epsilon$ is equivalent to
+DR-2.
+\item[($\delta$)] \emph{``Is this just the known carrier-richness reduction
+re-labelled?''} PARTIALLY: it makes the carrier-richness concrete (the precise
+quantity $T'$, exact constant $1+T'$, via the sum-circle/involution identity)
+and proves the easy direction rigorously and unconditionally, whereas the prior
+PSM reduction (dr2-pencil-rigidity-reduction v1.0) was a T3 sketch. Whether
+$T'\lesssim N^\epsilon$ is equivalent to the PSM conjecture is NOT asserted here.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Estimator exactness: random
+$E_+=2N^2-N$ verified for $N=16,32,64$. Lemma assert: $E_+\le(1+T')N^2$ holds
+for all four configs (the proof check; a violation would refute Lemma A).
+Limit/tightness: great circle saturates at $3N^2=(1+2)N^2$ (the $m=0$ split is
+necessary). Magnitude/direction: $T'=2$ (random, great circle) $\to8$ (cap grid)
+$\to N$ (rich circle), all $\ge1$, upper bound, all terms positive.
+Reproducibility: $T'$ of random sets stays $2$ for $N=32,64,128$.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-025 / DR-2 sum-level-circle reduction
+Precise statement:       For finite Q in S^2 with N=|Q|, E_+(Q) <= (1+T'(Q))N^2,
+                         where T'(Q) = max occupancy of a proper (m!=0) sum-level
+                         circle C_m = S^2 cap {x.m=|m|^2/2}. Corollary 1: T'=O(1)
+                         => E_+=O(N^2) (DR-2, unconditional). Corollary 2:
+                         T'<=_eps N^eps => E_+ <=_eps N^{2+eps}.
+Scope:                   Unrestricted-class sphere additive energy; the DR2-SHARE
+                         carrier-richness obstruction, made exact.
+Dependencies:            NONE (unconditional; elementary geometry + Cauchy-Schwarz
+                         via max). Decoupling-free and conjecture-free.
+Evidence grade:          Lemma A + Corollary 1: T7 PROVED unconditional (proof
+                         self-tested by the lemma assert). Corollary 2: T7
+                         reduction (valid sufficient condition). General DR-2:
+                         unchanged OPEN.
+Reproduction command:    python codes/vacuum/dr2_circle_richness.py
+Expected output:         5/5 PASS; E_+ <= (1+T')N^2 for every config; T' = 2
+                         (random/great-circle) up to N (rich latitude circle).
+Falsification gate:      A finite Q in S^2 with E_+(Q) > (1+T'(Q))N^2 would
+                         refute Lemma A; not observed (and impossible by proof).
+Tier before / after:     NEW unconditional T7 sub-result; unrestricted DR-2 tier
+                         UNCHANGED (T4+). NO flip. B5 T5, B1 T6, H-ADM-COH
+                         retained, DR2-SHARE OPEN.
+No-overclaim statement:  NOT a DR-2 closure and NOT a tier advance for the
+                         general problem. Lemma A is unconditional but the
+                         reduction (Cor 2) is sufficient, not tight; bounding T'
+                         for arbitrary Q remains the open carrier-richness
+                         problem. No gate/tier/hypothesis action.
+Next required action:    Either bound T'(Q) for arbitrary Q (open; = carrier
+                         richness), or accept the decoupling route's R1+R2 by
+                         operator sign-off. Operator authorises any flip.
+\end{verbatim}
+}

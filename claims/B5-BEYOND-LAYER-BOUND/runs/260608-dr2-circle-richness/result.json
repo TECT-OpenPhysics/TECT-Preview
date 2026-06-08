@@ -1,0 +1,82 @@
+{
+  "script": "dr2_circle_richness.py",
+  "version": "1.0.0",
+  "estimator_exact": true,
+  "lemma": "E_+(Q) <= (1 + T'(Q)) N^2",
+  "rows": {
+    "random": {
+      "N": 64,
+      "E_plus": 8128,
+      "ratio": 1.984375,
+      "T_prime": 2,
+      "bound": 12288,
+      "holds": true
+    },
+    "great_circle": {
+      "N": 64,
+      "E_plus": 12096,
+      "ratio": 2.953125,
+      "T_prime": 2,
+      "bound": 12288,
+      "holds": true
+    },
+    "cap_grid": {
+      "N": 64,
+      "E_plus": 10944,
+      "ratio": 2.671875,
+      "T_prime": 8,
+      "bound": 36864,
+      "holds": true
+    },
+    "rich_small_circle": {
+      "N": 64,
+      "E_plus": 12096,
+      "ratio": 2.953125,
+      "T_prime": 64,
+      "bound": 266240,
+      "holds": true
+    }
+  },
+  "Tprime_scan": [
+    [
+      32,
+      2
+    ],
+    [
+      64,
+      2
+    ],
+    [
+      128,
+      2
+    ]
+  ],
+  "claims": [
+    {
+      "name": "E_plus_estimator_exact",
+      "passed": true,
+      "detail": "(random sphere E_+ = 2N^2 - N exactly for N=16,32,64: estimator exact, the code-audit gate)"
+    },
+    {
+      "name": "lemma_E_plus_le_1plusTprime_Nsq",
+      "passed": true,
+      "detail": "(E_+(Q) <= (1+T'(Q))N^2 holds for EVERY config -- the rigorous proof check; a failure here would refute the lemma)"
+    },
+    {
+      "name": "Tprime_O1_for_unstructured",
+      "passed": true,
+      "detail": "(T' = 2 for random/great-circle (O(1)): by the lemma E_+ <= (1+T')N^2 these sets satisfy DR-2 (E_+ = O(N^2)) UNCONDITIONALLY and elementarily -- no decoupling needed; E_+/N^2 = 1.98/2.95)"
+    },
+    {
+      "name": "Tprime_grows_with_structure",
+      "passed": true,
+      "detail": "(T' climbs with additive structure: unstructured 2 -> grid 8 -> engineered rich latitude circle 64 = N: the circle-richness obstruction is REAL and reaches the max N, so the reduction is non-vacuous. NB the lemma is SUFFICIENT not tight -- the rich circle has T'=N yet E_+ ~ 3.0 N^2, so bounding T' is potentially stronger than DR-2)"
+    },
+    {
+      "name": "Tprime_bounded_in_N_generic",
+      "passed": true,
+      "detail": "(random-set T' stays O(1) as N grows: [(32, 2), (64, 2), (128, 2)]; consistent with E_+ ~ N^2 for generic sphere sets)"
+    }
+  ],
+  "all_pass": true
+}

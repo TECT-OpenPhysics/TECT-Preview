@@ -5,6 +5,25 @@ not pillar counts.
 
 ---
 
+## [DR-2 sum-level-circle reduction (R-025): unconditional E_+ <= (1+T')N^2; elementary DR-2 for bounded richness; no flip] - 2026-06-08
+
+- **Operator directive** ('proceed if there is a provable way'). After an honest assessment that the decoupling
+  route's residual R2 (multi-scale constant control) is the hard core of Bourgain-Demeter and not reproducible,
+  this records the one clean UNCONDITIONAL result within reach. New note dr2-circle-richness-reduction v1.0
+  (FORM-CHECK PASS, 0 overfull) + codes/vacuum/dr2_circle_richness.py (5/5, exact-E_+ audit gate).
+- **R-025 (T7 unconditional)**: for finite Q in S^2, `E_+(Q) <= (1 + T'(Q)) N^2`, where T'(Q) is the maximum
+  occupancy of a proper sum-level circle `C_m = S^2 cap {x.m=|m|^2/2}` -- both summands of a+b=m lie on C_m, and
+  the m=0 antipodal term is split off (r(0)^2 <= N^2). Decoupling-free, conjecture-free. The lemma assert IS the
+  proof check; the great circle saturates the bound at 3N^2 = N^2 antipodal + 2N^2 proper.
+- **Corollary 1 (T7)**: T'=O(1) => E_+=O(N^2). Random and great-circle sets have T'=2, so they satisfy DR-2
+  ELEMENTARILY -- no decoupling, no PSM conjecture.
+- **Corollary 2 (reduction)**: T'<=_eps N^eps => DR-2. The DR2-SHARE carrier-richness chi(P) is now exact (=T').
+  HONEST scope: sufficient, NOT tight -- the engineered rich latitude circle has T'=N yet E_+~3N^2, so bounding
+  T' is potentially stronger than DR-2.
+- **NO closure, NO flip**: the general DR-2 tier is UNCHANGED (T4+ via the decoupling route); only a new
+  unconditional T7 sub-result is added. DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained. Ledger R-025, GATES
+  annotation, B5 card. release_check PASS, pytest 3/3.
+
 ## [DR-2 cross-scale induction v1.1 repair: Besicovitch-mean bridge; v1.0 T5 WITHDRAWN -> T4+; still no flip] - 2026-06-08
 
 - **Operator adversarial audit** (reviews/2026-06-08-dr2-cross-scale-induction-audit.md): v1.0's iteration lemma
