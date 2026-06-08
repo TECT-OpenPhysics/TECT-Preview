@@ -5,6 +5,24 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE endpoint arc closure review: estimate-feasible wording precision] - 2026-06-07
+
+- **Operator review** (reviews/2026-06-07-scscope-endpoint-arc-closure-review.md)
+  endorsed the SC-SCOPE endpoint arc as research-complete (honest negative +
+  scope acceptance) and issued one binding wording directive. No tier/gate change.
+- **Wording precision applied**: every headline "FEASIBLE for I<=1e-3" in
+  scscope-scope-decision v1.0 (title/status/3/4/footer), claims/GATES.md (SC-SCOPE),
+  and the B1 card was qualified to "ESTIMATE-FEASIBLE (estimate-grade, NOT proved)"
+  -- the I<=1e-3 all-orders feasibility rests on the cited R_sup and sunset/quartic
+  estimates, so it is estimate-grade, not proved (the note's devil's-advocate
+  already carried the caveat; the headlines now match).
+- **Framing confirmed**: the endpoint is "not proved under current additive
+  bounds", NOT "physically falsified"; B1 T6 unchanged (SC-SCOPE is its named
+  second-cumulant hypothesis). The negative is robust to R_sup (2nd+sunset alone
+  give x1.06).
+- **Verification**: FORM-CHECK PASS + OVERFULL 0 (scscope-scope-decision v1.0);
+  release-check PASS; pytest 3.
+
 ## [ESTIMATOR-UPGRADE: controlled-error enumerated selection margins (single-shell)] - 2026-06-07
 
 - **Operator directive**: T-007 (ESTIMATOR-UPGRADE). Delivered a controlled-error

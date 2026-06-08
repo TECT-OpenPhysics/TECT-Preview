@@ -100,7 +100,7 @@ An operator adversarial review (2026-06-06; reviews/2026-06-06-b5-adversarial-re
 | 15 | 2026-06-07 | v1.0 | SC-SCOPE endpoint: per-transfer quartic-difference and the joint inequality (h | T6 | v1.0 |
 | 16 | 2026-06-07 | v1.0 | SC-SCOPE endpoint: the joint incompatible-pairing argument is exhausted (stren | T6 | v1.0 |
 | 17 | 2026-06-07 | v1.1 | M-ENDPOINT evaluation with a convergence certificate and single-J0 conservatis | — | v1.0† → v1.1 |
-| 18 | 2026-06-07 | v1.0 | SC-SCOPE scope decision: all-orders feasible for I<=1e-3, second-cumulant acce | — | v1.0 |
+| 18 | 2026-06-07 | v1.0 | SC-SCOPE scope decision: all-orders estimate-feasible for I<=1e-3, second-cumu | — | v1.0 |
 
 † = superseded version (kept on disk, immutable, forward-pointer at top).
 
@@ -201,4 +201,4 @@ An operator adversarial review (2026-06-06; reviews/2026-06-06-b5-adversarial-re
 - `runs/260607-scscope-joint-pairing/`
 - `runs/260607-scscope-mendpoint/`
 
-<!-- generated 2026-06-07T03:43:35Z -->
+<!-- generated 2026-06-08T02:33:54Z -->
