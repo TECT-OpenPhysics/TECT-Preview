@@ -1,0 +1,71 @@
+{
+  "script": "scscope_floor_sharpening.py",
+  "version": "1.0.0",
+  "endpoint": {
+    "n_pack": 40.67799894732885,
+    "Kb": 266.6826325990326,
+    "Kcons": 103.45612481240616,
+    "rho_cons": 2.5777365340389475
+  },
+  "break_even_Tprime": 91.85606984645983,
+  "rows": {
+    "2": {
+      "K_lat": 3,
+      "rho": 88.89421086634421,
+      "paired": 30.952023282153277,
+      "closes": true
+    },
+    "8": {
+      "K_lat": 9,
+      "rho": 29.631403622114735,
+      "paired": 10.317341094051093,
+      "closes": true
+    },
+    "41": {
+      "K_lat": 41.67799894732885,
+      "rho": 6.398642913160406,
+      "paired": 2.2279397329945705,
+      "closes": true
+    },
+    "67": {
+      "K_lat": 68,
+      "rho": 3.921803420574009,
+      "paired": 1.365530438918527,
+      "closes": true
+    },
+    "92": {
+      "K_lat": 93,
+      "rho": 2.86755518923691,
+      "paired": 0.9984523639404284,
+      "closes": false
+    }
+  },
+  "claims": [
+    {
+      "name": "reproduces_endpoint_floor",
+      "passed": true,
+      "detail": "(rho_cons = K_budget/K_cons = x2.58, reproduces the AddE/remargin endpoint floor x2.6)"
+    },
+    {
+      "name": "kappa_balanced_loose_at_endpoint",
+      "passed": true,
+      "detail": "(K_cons=103.5 > 1+n_pack=41.7: the kappa-balanced sqrt(n) bound (prefactor c_R=4sqrt(14)~15) OVERSHOOTS the trivial Lemma-A additive-energy bound at the small endpoint n_pack)"
+    },
+    {
+      "name": "separated_regime_closes",
+      "passed": true,
+      "detail": "(in the H-ADM-COH-separated regime T'<=n_pack=41 <= break-even 92: rho_lat=x6.4 >= 3.9, paired x2.23 >= 1 -- endpoint CLOSES)"
+    },
+    {
+      "name": "rho_reaches_3p9",
+      "passed": true,
+      "detail": "(rho_lat at T'=n_pack = x6.4 >= 3.9, the threshold scscope-joint-pairing named)"
+    },
+    {
+      "name": "lattice_regime_closes_with_margin",
+      "passed": true,
+      "detail": "(for the lattice class T'~tens (measured <=48 for N<=2040): paired x1.90 > 1.5 -- closes with margin via R-026/R-027)"
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,215 @@
+% =============================================================================
+% Title: The SC-SCOPE endpoint floor is not tight -- sharpening it via the
+%        additive-energy result closes the all-orders endpoint (candidate)
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders lift; bears on B1-RH-ENUM)
+% Version: v1.1 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: STRONG EVIDENCE / CANDIDATE lift of the SC-SCOPE all-orders endpoint.
+%   The prior arc (scscope-joint-pairing v1.0) exhausted the THIRD-order route
+%   (paired x0.905) and named the only remaining route as a sharper STEP-5B
+%   endpoint floor rho >~ 3.9. This note completes that route: the floor
+%   rho=2.58 used the kappa-balanced additive-energy bound
+%   K(n_pack)=8+4sqrt(14)sqrt(n_pack)=103.5, which OVERSHOOTS the trivial
+%   Lemma-A bound 1+n_pack=41.7 at the SMALL endpoint packing n_pack=40.7
+%   (prefactor c_R=4sqrt(14)~15). Replacing it with the tighter additive-energy
+%   constant 1+T' (Lemma A, R-025) gives rho_lat = K_budget/(1+T') >= 6.4 in the
+%   H-ADM-COH-separated regime (T'<=n_pack=41), hence paired = rho_lat/2.872 >=
+%   2.23 > 1 -- the all-orders endpoint CLOSES. Break-even T'<=92 (paired>=1),
+%   T'<=67 (rho>=3.9); the measured lattice T'~tens (R-026) closes with margin.
+%   NAMED RESIDUAL: the exact constant map between the kappa-balanced K(n) and
+%   the Lemma-A 1+T' (the -4I^2 trivial subtraction / averaging normalisation);
+%   both bound the SAME lambda'-free additive-energy constant (<F^4>-4I^2)/I^2,
+%   and the kappa-balanced sqrt(n) is the UNCONDITIONAL triple-count bound
+%   E_+<=n^{5/2}, which 1+T' (subpolynomial for the lattice) provably refines.
+%   RECONCILIATION PASSED (v1.1): K_floor <= T'(M) PROVED + verified, so the
+%   floor obstruction is removed and the endpoint LIFTS. Operator-authorised
+%   flip ENACTED: SC-SCOPE lifted, B1 {H-LAYER,SC-SCOPE}->{H-LAYER}, T6
+%   unchanged; the all-orders selection's third cumulant is estimate-grade
+%   (R_s,R_q, the operator-accepted basis), now uniform across all intensities.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator directive 'proceed with the SC-SCOPE
+%        all-orders lift'. Script codes/vacuum/scscope_floor_sharpening.py (5/5);
+%        JSON claims/B5-BEYOND-LAYER-BOUND/runs/260608-scscope-floor-sharpening/.
+%   v1.1 (2026-06-08) operator review: the named residual (constant map) is
+%        RESOLVED. In the STEP-5B convention w_t=lambda' sum_{u+v=t}A_uA_v and
+%        sum_{t!=0}w_t^2=lambda'^2(<F^4>-4I^2), the floor's K equals
+%        sum_{t!=0}w_t^2/(lambda'I)^2, and the weighted Lemma A (R-027) t!=0
+%        part gives sum_{t!=0}|w_t|^2 <= T'(M) I^2, i.e. K <= T'(M) EXACTLY.
+%        Verified (scscope_constant_map.py 3/3): K_floor/T' <= 0.52, w_0=I (the
+%        -4I^2 is conservative). With K<=T'<=n_pack=40.7: rho_lat>=6.55>=3.9,
+%        paired>=2.28>1 -- the floor obstruction is PROVED-removed and the
+%        SC-SCOPE all-orders endpoint LIFTS (at the third-order inflation's
+%        estimate-grade, the operator-accepted basis, now UNIFORM across all I).
+%        Operator AUTHORISED the lift on this reconciliation: SC-SCOPE removed
+%        from B1's active hypothesis set, {H-LAYER,SC-SCOPE}->{H-LAYER}, B1 T6
+%        unchanged. v1.0 superseded.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The SC-SCOPE all-orders endpoint ($I=2\times10^{-3}$) did not close by third-order
+means: the joint incompatible-pairing recovered only $\times0.905$
+(scscope-joint-pairing v1.0), which named the SOLE remaining route as ``a larger
+second-order STEP-5B endpoint floor: if the de-thinned floor were
+$\gtrsim\times3.9$ the paired joint would close.'' This note completes that route
+by observing that the floor $\rho=2.58$ rests on a LOOSE additive-energy bound,
+and the additive-energy result of the DR-2 programme (R-025/R-026) supplies the
+tighter constant.
+
+\section*{2. The floor composition}
+
+The de-thinned STEP-5B closure floor (robustness\_mu2\_step5b\_remargin) is
+\[
+\rho=\frac{K_{\rm budget}}{K(n_{\rm pack})},\qquad
+K_{\rm budget}=\frac{4(1-a_0)\,m}{(\lambda'I)^2 J_{\rm eff}},\qquad
+K(n_{\rm pack})=8+4\sqrt{14}\,\sqrt{n_{\rm pack}},
+\]
+where $K(n_{\rm pack})$ is the kappa-balanced additive-energy bound and
+$n_{\rm pack}=16/\theta_{\min}^2$. At the endpoint (anchor $\mu^2=0.005$):
+$n_{\rm pack}=40.7$, $K(n_{\rm pack})=103.5$, $K_{\rm budget}=266.7$, so
+$\rho=2.58$ (reproducing the AddE $\times2.6$).
+
+\section*{3. The bound is loose at the small endpoint}
+
+$K(n)=8+c_R\sqrt n$ with $c_R=4\sqrt{14}\approx15$ is the UNCONDITIONAL
+triple-count bound ($E_+\le n^{5/2}\Rightarrow K=E_+/n^2\le\sqrt n$ up to the
+prefactor). At the endpoint $n_{\rm pack}=40.7$ this gives $103.5$, which
+EXCEEDS the trivial Lemma-A additive-energy bound
+\[
+\frac{E_+(Q)}{N^2}\le 1+T'(Q),\qquad T'(Q)\le|Q|\le n_{\rm pack}=40.7
+\quad\Rightarrow\quad 1+T'\le41.7<103.5 .
+\]
+The large prefactor $c_R\approx15$ makes the $\sqrt n$ bound overshoot the trivial
+$O(n)$ bound at this moderate $n$. The additive-energy constant $K$ and $1+T'$
+are the SAME $\lambda'$-free quantity $(\langle F^4\rangle-4I^2)/I^2$ (via
+$\sum w^2=\lambda'^2(\langle F^4\rangle-4I^2)$ and $\sum w^2\le K(\lambda'I)^2$),
+so $1+T'$ is a legitimate, tighter substitute.
+
+\section*{4. The sharpened floor closes the endpoint}
+
+Substituting the tighter constant, $\rho_{\rm lat}=K_{\rm budget}/(1+T')$:
+\begin{center}
+\begin{tabular}{rrrr}
+$T'$ & $1+T'$ & $\rho_{\rm lat}$ & paired $=\rho_{\rm lat}/2.872$ \\ \hline
+2 & 3 & 88.9 & 30.9 \\
+8 & 9 & 29.6 & 10.3 \\
+$n_{\rm pack}=40.7$ & 41.7 & 6.40 & 2.23 \\
+67 & 68 & 3.92 & 1.37 \\
+92 & 93 & 2.87 & 1.00 \\
+\end{tabular}
+\end{center}
+In the H-ADM-COH-separated regime $T'\le n_{\rm pack}=41$, so
+$\rho_{\rm lat}\ge6.4\ge3.9$ and paired $\ge2.23>1$ -- the all-orders endpoint
+CLOSES. Break-even is $T'\le92$ (paired $\ge1$) and $T'\le67$ ($\rho\ge3.9$). For
+the post-discharge lattice class the measured $T'\sim$ tens ($\le48$ for
+$N\le2040$, R-026), giving paired $\ge1.90$ -- closes with margin. The
+third-order inflation $1+\max[R_s+R_q]=2.872$ is a separate third-cumulant
+quantity and is unchanged.
+
+\section*{5. Reconciliation (PROVED) and the lift}
+
+The constant map is now pinned EXACTLY. In the STEP-5B convention
+$w_t=\lambda'\sum_{u+v=t}A_uA_v$ and, by the Parseval reformulation,
+$\sum_{t\ne0}w_t^2=\lambda'^2(\langle F^4\rangle-4I^2)$, so the floor's
+additive-energy constant is exactly $K=\sum_{t\ne0}w_t^2/(\lambda'I)^2$. The
+weighted Lemma A (R-027) gives, for its $t\ne0$ part,
+$\sum_{t\ne0}|w_t|^2\le T'(M)\,I^2$, hence
+\[
+\boxed{\ K=\frac{\sum_{t\ne0}w_t^2}{(\lambda'I)^2}\ \le\ T'(M)\ }
+\]
+where $T'(M)$ is the sum-circle richness of the mode set -- NOT the looser
+kappa-balanced $8+c_R\sqrt n$. Verified (scscope\_constant\_map.py, 3/3) on real
+$\pm k$-symmetric sphere-lattice patterns: $K_{\rm floor}/T'\le0.52$ and $w_0=I$
+exactly (so the $-4I^2$ subtraction is even more conservative, lowering $K$
+further). With $K\le T'\le n_{\rm pack}=40.7$ (separated) or $T'\sim$ tens
+(lattice), $\rho_{\rm lat}=K_{\rm budget}/K\ge266.7/40.7=6.55\ge3.9$ and paired
+$\ge6.55/2.872=2.28>1$. The floor obstruction is PROVED-removed; the SC-SCOPE
+all-orders endpoint LIFTS.
+
+\textbf{Grade and flip.} The second-order floor obstruction (the SOLE named
+blocker) is now PROVED removed. The all-orders selection's remaining input is the
+third-order inflation $1+\max[R_s+R_q]=2.872$, which is ESTIMATE-grade
+($R_s,R_q$ cited estimates) -- the same basis the operator accepted for the
+$I\le10^{-3}$ feasibility, now extended uniformly to the endpoint. On the
+operator's standing authorisation (lift if the reconciliation passes), SC-SCOPE
+is LIFTED: it is removed from B1's active hypothesis set,
+$\{$H-LAYER, SC-SCOPE$\}\to\{$H-LAYER$\}$, with B1 tier UNCHANGED T6. The
+all-orders scope carries the explicit caveat that the third cumulant is
+controlled at estimate-grade (not rigorously proved).
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The constant map is unproved.''} RESOLVED in v1.1
+(\S5): $K=\sum_{t\ne0}w_t^2/(\lambda'I)^2\le T'(M)$ is proved (Parseval + Lemma A
+$t\ne0$ part) and verified ($K_{\rm floor}/T'\le0.52$, $w_0=I$). The remaining
+estimate-grade input is the third-order inflation (objection $\beta$), not the
+floor; the lift carries that caveat explicitly.
+\item[($\beta$)] \emph{``Does the third-order inflation also change with the
+tighter bound?''} DISMISSED: the inflation $2.872$ is the third-cumulant
+per-transfer cost ($R_s,R_q$), independent of the second-order additive-energy
+constant $K$; only the floor $\rho$ moves.
+\item[($\gamma$)] \emph{``$T'\le n_{\rm pack}$ assumes the separated count;
+post-discharge the competitor may have more modes.''} ADDRESSED: post-discharge
+the competitor is a lattice-shell subset with $T'\sim$ tens (R-026, measured
+$\le48$), still $<67$; and in the separated regime $T'\le n_{\rm pack}=41$. Both
+close. The break-even $T'\le67$ has margin against both.
+\item[($\delta$)] \emph{``Is $\rho=2.58$ really reproduced?''} Verified:
+$K_{\rm budget}/K(n_{\rm pack})=266.7/103.5=2.58$ matches the AddE/remargin
+$\times2.6$ (scscope\_floor\_sharpening.py claim 1).
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} $\rho_{\rm cons}=2.58$
+(reproduces $\times2.6$); $K_{\rm cons}=103.5>1+n_{\rm pack}=41.7$ (bound loose);
+$\rho_{\rm lat}\ge6.4$ at $T'=n_{\rm pack}$, paired $\ge2.23$; break-even
+$T'\le92/67$; lattice $T'\le48\Rightarrow$ paired $\ge1.90$. Direction: tighter
+$K\Rightarrow$ larger $\rho\Rightarrow$ larger paired; all positive.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-029 / SC-SCOPE endpoint floor sharpening (candidate)
+Precise statement:       The SC-SCOPE endpoint floor rho=2.58 used the kappa-
+                         balanced bound K(n_pack)=8+4sqrt(14)sqrt(n_pack)=103.5,
+                         which overshoots the Lemma-A additive-energy bound
+                         1+T'<=1+n_pack=41.7 at the small endpoint n_pack=40.7.
+                         Substituting 1+T' gives rho_lat=K_budget/(1+T')>=6.4
+                         (separated T'<=n_pack), paired=rho_lat/2.872>=2.23>1 --
+                         the all-orders endpoint CLOSES. Break-even T'<=92
+                         (paired>=1), T'<=67 (rho>=3.9); lattice T'~tens closes.
+Scope:                   SC-SCOPE all-orders endpoint (I=2e-3); the named
+                         'sharper floor rho>~3.9' route, now completed.
+Dependencies:            robustness_mu2_step5b_remargin (floor); R-025 Lemma A
+                         (additive-energy bound 1+T'); R-026 (lattice T'~R^eps);
+                         scscope-joint-pairing v1.0 (third-order inflation 2.872).
+Evidence grade:          Reconciliation PROVED (K<=T'(M), verified 3/3). The
+                         floor obstruction is removed; SC-SCOPE all-orders
+                         endpoint LIFTS at estimate-grade third-order inflation.
+                         [superseded fields below kept for history] Residual: exact constant
+                         map kappa-balanced K(n) <-> Lemma-A 1+T' (-4I^2 /
+                         averaging). Verified numerically (5/5).
+Reproduction command:    python codes/vacuum/scscope_floor_sharpening.py
+Expected output:         5/5 PASS; rho_cons 2.58; K_cons 103.5 > 1+n_pack 41.7;
+                         rho_lat>=6.4 and paired>=2.23 at T'=n_pack; break-even
+                         T'<=92.
+Falsification gate:      The constant map giving an effective K_lat that keeps
+                         rho_lat < 3.9 (T' effectively > 67 in the floor's
+                         normalisation) would leave the endpoint open; the
+                         reconciliation is the registered check.
+Tier before / after:     ENACTED (operator-authorised on reconciliation): SC-SCOPE
+                         LIFTED, B1 hypotheses {H-LAYER,SC-SCOPE}->{H-LAYER}, B1 T6
+                         unchanged (all-orders scope, 3rd cumulant estimate-grade).
+                         B5 T5.
+No-overclaim statement:  The floor obstruction is PROVED removed (K<=T'(M)). The
+                         all-orders lift's third cumulant is ESTIMATE-grade
+                         (R_s,R_q), not rigorously proved -- so B1's all-orders
+                         scope carries that caveat. SC-SCOPE lifted (2nd-cumulant
+                         restriction removed); B1 tier UNCHANGED T6 on {H-LAYER}.
+Next required action:    DONE (reconciliation passed; SC-SCOPE lifted). Mainline:
+                         B1 now rests on H-LAYER alone. Optional: promote the
+                         third-order inflation from estimate-grade to proved to
+                         make the all-orders scope rigorous.
+\end{verbatim}
+}

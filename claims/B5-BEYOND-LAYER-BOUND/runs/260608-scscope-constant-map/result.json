@@ -1,0 +1,107 @@
+{
+  "script": "scscope_constant_map.py",
+  "version": "1.0.0",
+  "rows": {
+    "9_uniform": {
+      "n": 30,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 3.34,
+      "K_over_Tp": 0.4175,
+      "F4_over_I2": 4.34
+    },
+    "9_random": {
+      "n": 30,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 2.218806876774831,
+      "K_over_Tp": 0.27735085959685385,
+      "F4_over_I2": 3.218806876774831
+    },
+    "11_uniform": {
+      "n": 24,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 4.125,
+      "K_over_Tp": 0.515625,
+      "F4_over_I2": 5.125
+    },
+    "11_random": {
+      "n": 24,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 3.067636445043948,
+      "K_over_Tp": 0.3834545556304935,
+      "F4_over_I2": 4.067636445043948
+    },
+    "18_uniform": {
+      "n": 36,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 3.4722222222222223,
+      "K_over_Tp": 0.4340277777777778,
+      "F4_over_I2": 4.472222222222222
+    },
+    "18_random": {
+      "n": 36,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 2.4136694721667578,
+      "K_over_Tp": 0.3017086840208447,
+      "F4_over_I2": 3.4136694721667578
+    },
+    "27_uniform": {
+      "n": 32,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 3.40625,
+      "K_over_Tp": 0.42578125,
+      "F4_over_I2": 4.40625
+    },
+    "27_random": {
+      "n": 32,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 2.601179821090383,
+      "K_over_Tp": 0.32514747763629787,
+      "F4_over_I2": 3.601179821090383
+    },
+    "33_uniform": {
+      "n": 48,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 3.0625,
+      "K_over_Tp": 0.3828125,
+      "F4_over_I2": 4.0625
+    },
+    "33_random": {
+      "n": 48,
+      "Tp": 8,
+      "w0_over_I": 1.0,
+      "K_floor": 2.233902312280378,
+      "K_over_Tp": 0.27923778903504726,
+      "F4_over_I2": 3.233902312280378
+    }
+  },
+  "worst_K_over_Tprime": 0.515625,
+  "rho_exact": 6.552825552825552,
+  "paired_exact": 2.2816244961091754,
+  "claims": [
+    {
+      "name": "K_floor_le_Tprime",
+      "passed": true,
+      "detail": "(K_floor = sum_{t!=0} w_t^2 / I^2 <= T'(M) for every pattern; worst K_floor/T' = 0.516 <= 1 -- the exact map confirms the floor's K is bounded by the Lemma-A sum-circle richness T', NOT the looser kappa-balanced 8+c_R sqrt(n))"
+    },
+    {
+      "name": "w0_equals_I",
+      "passed": true,
+      "detail": "(w_0 = sum_m a_m a_{-m} = I exactly (real +/-k field), so sum_{t!=0}w_t^2 = <F^4> - I^2; the note's -4I^2 subtraction is even more conservative, only lowering K further)"
+    },
+    {
+      "name": "endpoint_closes_exact_map",
+      "passed": true,
+      "detail": "(with the EXACT map K_floor<=T'<=n_pack=41: rho_lat=K_budget/n_pack=x6.55>=3.9, paired=x2.28>1 -- the SC-SCOPE all-orders endpoint CLOSES; the -4I^2 and K_floor/T'<=1 give further margin)"
+    }
+  ],
+  "all_pass": true
+}

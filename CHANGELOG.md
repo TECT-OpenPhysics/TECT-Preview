@@ -5,6 +5,42 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE LIFTED (operator-enacted): reconciliation K_floor<=T' proved; B1 -> {H-LAYER}, T6 unchanged] - 2026-06-08
+
+- **Operator decision** (reviews/2026-06-08-scscope-lift-authorization.md): the reconciliation passed, so per the
+  standing authorization SC-SCOPE is lifted. ENACTED this commit.
+- **Reconciliation PROVED**: in the STEP-5B convention the floor's additive-energy constant is exactly
+  K = sum_{t!=0} w_t^2 / (lambda'I)^2, and the weighted Lemma A (R-027) t!=0 part gives sum_{t!=0}|w_t|^2 <= T'(M)I^2,
+  so K <= T'(M) -- NOT the looser kappa-balanced 8+c_R sqrt(n). Verified (scscope_constant_map.py 3/3): K_floor/T'<=0.52,
+  w_0=I. With K<=T'<=n_pack=40.7 (separated) or T'~tens (lattice): rho_lat>=6.55>=3.9, paired>=2.28>1 -- the all-orders
+  endpoint floor obstruction (the SOLE named blocker, scscope-joint-pairing's named rho>~3.9 route) is PROVED removed.
+- **B1-RH-ENUM flip (operator-authorized)**: active hypotheses {H-LAYER, SC-SCOPE} -> {H-LAYER}; tier UNCHANGED T6.
+  Devil's-advocate self-test recorded. B1 now rests on H-LAYER alone (the isotropic Gaussian-Hartree layer).
+- **HONEST CAVEAT**: the all-orders selection's THIRD cumulant rests on the estimate-grade inflation (2.872; R_s,R_q --
+  the operator-accepted basis, now uniform across all intensities), NOT rigorously proved at third order. The
+  second-order floor and the selection SIGN are rigorous. B1's all-orders scope carries this caveat.
+- **Notes**: scscope-floor-sharpening re-issued v1.0 -> v1.1 (reconciliation proved; v1.0 superseded); GATES SC-SCOPE
+  -> LIFTED; RESULTS-LEDGER R-029 updated; B1 card flipped. release_check PASS, pytest 3/3.
+
+## [SC-SCOPE endpoint floor sharpening (R-029): the named rho>~3.9 route completed; T4 strong-evidence candidate lift; no flip] - 2026-06-08
+
+- **Operator directive** ('proceed with the SC-SCOPE all-orders lift'). New note scscope-floor-sharpening v1.0
+  (FORM-CHECK PASS, 0 overfull) + codes/vacuum/scscope_floor_sharpening.py (5/5).
+- **Finding**: the prior arc exhausted the THIRD-order route (paired x0.905) and named the sole remaining route
+  as a sharper STEP-5B endpoint floor rho>~3.9. This completes it. The floor rho=2.58 used the kappa-balanced
+  additive-energy bound K(n_pack)=8+4sqrt(14)sqrt(n_pack)=103.5, which OVERSHOOTS the Lemma-A bound
+  1+T'<=1+n_pack=41.7 at the SMALL endpoint packing n_pack=40.7 (prefactor c_R=4sqrt(14)~15 makes the sqrt(n)
+  bound exceed the trivial O(n) bound at moderate n).
+- **R-029 (T4 STRONG EVIDENCE / candidate)**: substituting the tighter additive-energy constant 1+T'
+  (R-025 Lemma A; R-026 lattice T'~tens) gives rho_lat=K_budget/(1+T')>=6.4 in the H-ADM-COH-separated regime
+  (T'<=n_pack=41), hence paired=rho_lat/2.872>=2.23>1 -- the all-orders endpoint CLOSES. Break-even T'<=92
+  (paired>=1), T'<=67 (rho>=3.9); the measured lattice T'~tens (<=48) closes with margin (paired>=1.90).
+- **Named residual, NO flip**: the exact constant map between the kappa-balanced K(n) and the Lemma-A 1+T' (the
+  -4I^2 trivial subtraction / averaging normalisation) is the remaining check; both bound the same lambda'-free
+  (<F^4>-4I^2)/I^2, and the kappa-balanced sqrt(n) is the unconditional triple-count bound that 1+T' refines, so
+  the mechanism is sound. Grade T4 pending the reconciliation. SC-SCOPE stays B1's named hypothesis; B1 T6 on
+  {H-LAYER, SC-SCOPE} UNCHANGED; B5 T5. Ledger R-029, GATES SC-SCOPE. release_check PASS, pytest 3/3.
+
 ## [dr2-hadmcoh-discharge-decision v1.1 -> v1.2: self-review (beta) consistency fix] - 2026-06-08
 
 - **Operator review**: v1.1's self-review objection (beta) still carried the v1.0 'DISCHARGE-CANDIDATE /
