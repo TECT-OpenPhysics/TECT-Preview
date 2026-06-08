@@ -5,6 +5,17 @@ not pillar counts.
 
 ---
 
+## [G3PB-III closure accepted (operator review)] - 2026-06-08
+
+- **Operator review** (reviews/2026-06-08-g3pb3-ratio-closure-review.md) ACCEPTED g3pb3-ratio-closure v1.0:
+  'Accept G3PB-III closure. B1 has no open gates; only named hypotheses remain.' No tier change.
+- **Confirmed honest scope** (all three adversarial points already labelled in the note): the ratio is
+  engine-extracted within the {110}+{200} truncation (AddF N=64 raw not migrated; full higher-shell content
+  = separate G3'-b(i)/(ii)); the closure logic is whole-box continuum no-condensate + physical-trajectory
+  containment, not an exhaustive row search; gate closure does not raise the B1 tier.
+- **State**: B1-RH-ENUM T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE}; open_gates [] (no open gates).
+  Remaining levers = the three named hypotheses.
+
 ## [G3PB-III CLOSED@CROSS-CHECK -- {200}/{110} physical ratio in the no-condensate box; B1 has no open gates] - 2026-06-08
 
 - **Operator-directed closure** ('proceed with G3PB-III'). G3PB-III (G3'-b(iii)): OPEN -> CLOSED@CROSS-CHECK.
