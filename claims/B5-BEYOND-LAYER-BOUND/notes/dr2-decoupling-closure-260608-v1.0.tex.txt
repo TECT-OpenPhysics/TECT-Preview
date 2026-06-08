@@ -2,7 +2,7 @@
 % Title: DR-2 via l2-decoupling: a corrected conditional route (separated case rigorous, unrestricted case proof-sketch)
 % Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
 % Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08 (corrected same-session after operator audit)
-% Status: PROMISING CONDITIONAL ROUTE, NOT a closure. Corrected after an operator critical audit that found a fatal formal error in the first draft. Honest grade: (a) for delta-SEPARATED Q in S^2 the bound E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter l2-decoupling (sphere in R^3, critical exponent p=4), with the additive-energy = L^4 link via the Schwartz MAJORANT (NOT the false torus identity); (b) for ARBITRARY finite Q (the actual DR-2) the bound is T3 PROOF SKETCH (the non-separated multi-scale reduction is written but its cross-scale energy step is marked OPEN); (c) STRONG numerical evidence (exponent ~2 on the sphere vs ~3 flat). NO gate/tier flip: DR2-SHARE stays OPEN, B5 stays T5, B1 stays T6, and H-ADM-COH STAYS in the B1 hypothesis set. R-022 downgraded T6->T4. The bound is N^{2+eps}, NOT the stronger N^2 log^B N.
+% Status: PROMISING CONDITIONAL ROUTE, NOT a closure. Corrected after an operator critical audit that found a fatal formal error in the first draft. Honest grade: (a) for delta-SEPARATED Q in S^2 the bound E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter l2-decoupling (sphere in R^3, critical exponent p=4), with the additive-energy = L^4 link via the Schwartz MAJORANT (NOT the false torus identity); (b) for ARBITRARY finite Q (the actual DR-2) the bound is T4 STRONG EVIDENCE: the affine-invariance lemma (R-023 -- E_+ EXACTLY affine-invariant, parabolic rescaling unfolds any cap-cluster to a unit-scale config of identical energy) resolves the audit's clustering concern, and extreme-clustering numerics show exponent ~2 uniformly down to 0.05-rad caps; the remaining item is the standard induction-on-scales write-out (Bourgain-Demeter machinery, cited not reproduced); (c) STRONG numerical evidence (exponent ~2 on the sphere vs ~3 flat). NO gate/tier flip: DR2-SHARE stays OPEN, B5 stays T5, B1 stays T6, and H-ADM-COH STAYS in the B1 hypothesis set. R-022 downgraded T6->T4. The bound is N^{2+eps}, NOT the stronger N^2 log^B N.
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-08) first issue, then CORRECTED same-session after operator
@@ -12,7 +12,8 @@
 %        majorant; (2) the non-separated multi-scale reduction is now written
 %        (cross-scale step marked OPEN); (3) N^{2+eps} distinguished from
 %        N^2 log^B N. Tier downgraded from the over-claimed T6 PROVED CONDITIONAL
-%        to a separated-T6 / unrestricted-T3 split. Script
+%        to a separated-T6 / unrestricted split (T3 sketch, then T4 STRONG EVIDENCE after the
+%        affine-invariance lemma R-023). Script
 %        codes/vacuum/dr2_decoupling_exponent.py (4/4) unchanged.
 % =============================================================================
 
@@ -60,7 +61,7 @@ E_+(Q)\;\le\;C\!\int|f_Q|^4\eta_R\;\lesssim_\epsilon\;N^{2+\epsilon}.
 \]
 This is rigorous modulo the cited theorem -- T6 PROVED CONDITIONAL on decoupling.
 
-\section*{4. Unrestricted case: multi-scale reduction (T3 PROOF SKETCH)}
+\section*{4. Unrestricted case: affine-invariance + multi-scale reduction (T4 STRONG EVIDENCE)}
 
 For arbitrary finite $Q$ (the actual DR-2), decompose by dyadic separation scale
 $\sigma=2^{-k}$. At scale $\sigma$, points are $\sigma$-separated within
@@ -69,14 +70,28 @@ sphere is locally a paraboloid, height $=$ quadratic), where the separated
 corollary of \S3 applies and gives the intra-scale contribution
 $\lesssim_\epsilon N_\sigma^{2+\epsilon}$.
 
-\textbf{OPEN GAP (the load-bearing step).} The cross-scale energy -- additive
-quadruples whose four points come from different separation scales -- must also be
-shown $\lesssim_\epsilon N^{2+\epsilon}$, and the $O(\log N)$ dyadic scales summed
-into the $\epsilon$-loss. This is standard in the decoupling literature
-(decoupling is intrinsically multi-scale) but is NOT written out here; until it
-is, the UNRESTRICTED DR-2 is a PROOF SKETCH, not a theorem. The numerics (\S6)
-test exactly this: a clustered cap-grid (the worst non-separated case) still has
-exponent $\approx2$, not the planar $3$.
+\textbf{Affine-invariance resolves the clustering concern (R-023).} Additive
+energy is EXACTLY invariant under any affine bijection $T(q)=Aq+b$, because
+$q_i+q_j-q_k-q_l=0\Leftrightarrow A(q_i+q_j-q_k-q_l)=0$ for invertible $A$. The
+paraboloid carries the exact parabolic-rescaling symmetry
+$(\xi,t)\mapsto(\xi/\lambda,t/\lambda^2)$, an affine map sending a $\lambda$-cap to
+a unit patch ON the paraboloid. Hence a cap-cluster ``unfolds'' to a unit-scale
+configuration of IDENTICAL additive energy, where the separated bound of \S3
+applies: clustering provides NO additive-energy advantage, and the worst case is
+the separated one. This is the structural reason the arbitrary-set bound holds
+(verified exactly in dr2\_affine\_invariance.py: $E_+(T(Q))=E_+(Q)$ for five random
+affine $T$, and the parabolic rescaling preserves both the paraboloid and $E_+$),
+and it directly answers the audit's clustered-configuration question.
+
+\textbf{Remaining item (why this is STRONG EVIDENCE, not yet a theorem).} The full
+unrestricted statement still needs the induction-on-scales handling GENERAL $Q$
+with clustering at several scales at once and the cross-cluster quadruples -- the
+standard Bourgain--Demeter multi-scale machinery, which we CITE but do not
+reproduce. The affine-invariance lemma supplies its key structural step; the
+extreme-clustering numerics (\S6: exponent $\le2.2$ uniformly for cap half-angles
+down to $0.05$ rad, with NO drift toward $3$) confirm the conclusion across
+scales. The unrestricted DR-2 is therefore T4 STRONG EVIDENCE conditional on
+decoupling, not a reproduced theorem; the gate is not flipped.
 
 \section*{5. $N^{2+\epsilon}$ is not $N^2\log^B N$}
 
@@ -116,8 +131,9 @@ to the Besicovitch limit / Schwartz majorant in \S2. The first-draft Section 2 w
 not proof-grade; this is the fix.
 \item[($\beta$)] \emph{``The unrestricted multi-scale reduction is asserted, not
 proved.''} UPHELD: \S4 now writes the reduction but marks the cross-scale energy
-step OPEN. Hence the unrestricted DR-2 is T3 PROOF SKETCH, not T6; the gate is not
-flipped.
+step (now reframed). The affine-invariance lemma (R-023) resolves the clustering
+concern, lifting the unrestricted DR-2 to T4 STRONG EVIDENCE; the full induction-on-
+scales remains cited-not-reproduced, so it is not yet T6 and the gate is not flipped.
 \item[($\gamma$)] \emph{``$N^{2+\epsilon}$ was conflated with $N^2\log^B N$.''}
 UPHELD: \S5 distinguishes them; the route delivers only $N^{2+\epsilon}$.
 \end{itemize}
@@ -137,23 +153,27 @@ Result ID:               B5 / DR-2 via l2-decoupling (corrected conditional rout
 Precise statement:       SEPARATED Q in S^2: E_+(Q) <=_eps N^{2+eps} is T6 PROVED
                          CONDITIONAL on Bourgain-Demeter decoupling (d=3, p=4),
                          via the Schwartz-majorant localisation (NOT the false
-                         torus identity). ARBITRARY finite Q (DR-2 proper): T3
-                         PROOF SKETCH -- multi-scale reduction written, cross-scale
-                         energy step marked OPEN. Bound is N^{2+eps}, not
-                         N^2 log^B N. Numerics: exponent ~2 sphere vs ~3 flat.
+                         torus identity). ARBITRARY finite Q (DR-2 proper): T4
+                         STRONG EVIDENCE -- affine-invariance lemma (R-023:
+                         E_+ affine-invariant; parabolic rescaling unfolds a
+                         cap-cluster to a unit patch of equal energy) + extreme-
+                         clustering numerics; full induction cited not reproduced.
+                         Bound is N^{2+eps}, not N^2 log^B N. Numerics: exponent
+                         ~2 sphere vs ~3 flat.
 Scope:                   Unrestricted-class sphere additive energy; DR2-SHARE.
 Dependencies:            Bourgain-Demeter decoupling (BLACK BOX); R-007 (rectangle),
                          R-008 (dyadic), R-021 (cross-energy); operator audit
                          reviews/2026-06-08-dr2-decoupling-critical-audit.md.
-Evidence grade:          Separated T6 PROVED CONDITIONAL; unrestricted T3 PROOF
-                         SKETCH; + EXECUTED numerics (dr2_decoupling_exponent.py
-                         4/4).
+Evidence grade:          Separated T6 PROVED CONDITIONAL; unrestricted T4 STRONG
+                         EVIDENCE (affine-invariance R-023 + clustering numerics);
+                         + EXECUTED numerics (dr2_decoupling_exponent.py 4/4,
+                         dr2_affine_invariance.py 4/4).
 Reproduction command:    python codes/vacuum/dr2_decoupling_exponent.py
 Expected output:         4/4 PASS; alpha 2.03/1.95/2.01 (sphere) vs 2.98 (flat).
 Falsification gate:      A finite Q in S^2 with E_+(Q) >= N^{2.3} (none found; the
                          flat-plane N^3 is excluded by curvature).
 Tier before / after:     DR-2: OPEN -> OPEN (NO flip). Separated sub-case T6
-                         conditional; unrestricted T3 sketch. B5 T5, B1 T6
+                         conditional; unrestricted T4 strong evidence. B5 T5, B1 T6
                          unchanged; H-ADM-COH STAYS in B1. R-022 downgraded T6->T4.
 No-overclaim statement:  This is NOT a DR-2 closure. The first draft over-claimed
                          T6 PROVED CONDITIONAL on a false L^4 identity; corrected

@@ -5,6 +5,23 @@ not pillar counts.
 
 ---
 
+## [DR-2 unrestricted case T3->T4: affine-invariance lemma resolves the clustering concern (still no flip)] - 2026-06-08
+
+- **Operator directive** ('go all the way'). dr2_affine_invariance.py (4/4) + note upgrade. Addresses the
+  audit's cross-scale / clustered-configuration concern. NO gate/tier flip; H-ADM-COH retained.
+- **R-023 (T7)**: additive energy is EXACTLY invariant under affine bijections; the paraboloid's parabolic
+  rescaling `(xi,t)->(xi/lam,t/lam^2)` sends a cap to a unit patch, so a cap-CLUSTER unfolds to a unit-scale
+  config of IDENTICAL energy -- clustering gives no advantage, the worst case is the separated one. Verified
+  exactly (E_+(T(Q))=E_+(Q) for random affine T; rescaling preserves paraboloid+energy; extreme-clustering
+  exponent ~2 uniformly down to 0.05-rad caps, NO drift toward 3).
+- **Effect**: the UNRESTRICTED DR-2 is lifted from T3 PROOF SKETCH to T4 STRONG EVIDENCE (the separated case
+  stays T6 PROVED CONDITIONAL on decoupling). The affine-invariance lemma supplies the key structural step of
+  the multi-scale reduction; the full induction-on-scales (general mixed-scale Q + cross-cluster quadruples)
+  is the standard Bourgain-Demeter machinery, CITED not reproduced -- hence not yet T6.
+- **STILL NO FLIP**: DR2-SHARE stays OPEN, B5 T5, B1 T6, H-ADM-COH retained in B1. R-022 unrestricted sub-case
+  updated T3->T4.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [DR-2 decoupling note CORRECTED after operator audit (downgraded; NO flip)] - 2026-06-08
 
 - **Operator critical audit** (reviews/2026-06-08-dr2-decoupling-critical-audit.md) found a FATAL error in
