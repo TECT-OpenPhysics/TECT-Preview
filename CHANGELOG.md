@@ -5,6 +5,22 @@ not pillar counts.
 
 ---
 
+## [ESTIMATOR-UPGRADE CLOSED@CONTROLLED-ERROR -- bulk-anchored continuum refinement + clean closure] - 2026-06-07
+
+- **Operator-authorized closure** ('close cleanly'). ESTIMATOR-UPGRADE: OPEN -> CLOSED@CONTROLLED-ERROR.
+  B1-RH-ENUM tier UNCHANGED (T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE}); open_gates now [G3PB-III].
+- **Bulk-anchored continuum refinement** (twoshell-anchored-continuum v1.0; twoshell_anchored_continuum.py
+  7/7): the exact anchored two-shell surface at r=0.219 has a 2D curvature-chord continuum lower bound
+  +1.34e-3>0 away from the origin cell (node-free) + an anchored (0,0) PD Hessian covering it -- the
+  exact-Wick no-condensate is CONTINUUM on the whole (A1,A2) domain.
+- **Consolidation** (estimator-upgrade-closure-consolidation v1.0): records the full 5-note chain --
+  single-shell (M/dI/amplitude-grid knobs + curvature-chord continuum) + two-shell {110}+{200} (PD Hessian,
+  diagonal continuum, exact-Wick anchored continuum). Grade STRONG-EVIDENCE (discrete curvature-chord, not
+  interval arithmetic); a T7 interval-arithmetic upgrade is optional.
+- **Closure semantics**: ESTIMATOR-UPGRADE governed the MARGINS' error grade (GAP-2), not the B1 selection
+  SIGN, so the tier is unchanged. RESULTS-LEDGER R-019.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0 (consolidation note); release-check PASS; pytest 3.
+
 ## [Exact-Wick bracket closure accepted (operator review); knobs-note (beta) self-review fix] - 2026-06-07
 
 - **Operator review** (reviews/2026-06-07-exact-wick-bracket-closure-review.md) ACCEPTED

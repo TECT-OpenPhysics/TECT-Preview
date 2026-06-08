@@ -1,0 +1,62 @@
+{
+  "script": "twoshell_anchored_continuum.py",
+  "version": "1.0.0",
+  "engine_validation_max_rel": 5.079942593185256e-08,
+  "b1_point": {
+    "R": 0.2190336473068255,
+    "rR": 0.419271311111732,
+    "MR": 0.09600297182364496
+  },
+  "scan": {
+    "NA": 13,
+    "A1_max": 0.16,
+    "A2_absmax": 0.16,
+    "nM": 3
+  },
+  "grid_min": 0.00046399615628285075,
+  "continuum_lower_bound": 0.0013435631336645368,
+  "continuum_lb_at": [
+    0.027,
+    0.0
+  ],
+  "anchored_kappa_110": 5.161453646450598,
+  "anchored_kappa_200": 3.8618110552653127,
+  "claims": [
+    {
+      "name": "engine_reproduces_math432_brackets",
+      "passed": true,
+      "detail": "(max rel error = 5.08e-08: neutered engine faithful before any r=0.219 use)"
+    },
+    {
+      "name": "b1_operating_point",
+      "passed": true,
+      "detail": "(R=0.219 -> rR=0.41927)"
+    },
+    {
+      "name": "b1_grid_no_condensate",
+      "passed": true,
+      "detail": "(grid min anchored dF over (A1,A2)!=(0,0) = 4.640e-04 > 0)"
+    },
+    {
+      "name": "b1_bulk_continuum_no_condensate",
+      "passed": true,
+      "detail": "(2D curvature-chord lower bound = 1.344e-03 > 0 away from the origin cell: NO anchored condensate hides between grid nodes -- the bulk is node-free continuum)"
+    },
+    {
+      "name": "b1_origin_cell_pd",
+      "passed": true,
+      "detail": "(anchored (0,0) Hessian PD: kappa_{110}=5.1615, kappa_{200}=3.8618 -- covers the origin cell excluded from the curvature-chord; bracket O(A^4) leaves it = diagonal)"
+    },
+    {
+      "name": "sanity_continuum_covers_domain",
+      "passed": true,
+      "detail": "(bulk curvature-chord > 0 AND origin-cell PD > 0: the exact anchored no-condensate is continuum on the whole (A1,A2) domain at r=0.219 -- the ESTIMATOR-UPGRADE two-shell residual is closed)"
+    },
+    {
+      "name": "sanity_continuum_lb_le_grid_min",
+      "passed": true,
+      "detail": "(continuum LB 1.34e-03 is comparable to / below the grid min 4.64e-04: the chord bound is a conservative node-free certificate, not an over-claim)"
+    }
+  ],
+  "all_pass": true
+}

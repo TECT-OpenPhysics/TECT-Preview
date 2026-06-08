@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 7
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 8
 
 ## Next up
 
@@ -16,9 +16,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 7
 - **T-004** Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: R-U6-1)_
   - SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.
   - _updated 2026-06-07_
-- **T-010** ESTIMATOR-UPGRADE finish: extend the curvature-certified controlled-error bound to the two-shell ensemble + dI/amplitude-grid quadrature knobs  _(claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
-  - DONE: single-shell knobs (ii)/(iii)+continuum (estimator-upgrade-knobs v1.0); two-shell (0,0) PD + diagonal global continuum no-condensate at the B1 point r=0.219 (twoshell-continuum-bound v1.0); EXACT-Wick anchored no-condensate at r=0.219 -- min +6.7e-4>0, bracket O(A^4) near origin (twoshell-anchored-bracket v1.0, 7/7). REMAINING (refinement only): a curvature-chord continuum bound on the exact anchored BULK surface (finer exact scan). Then ESTIMATOR-UPGRADE closure is an operator decision.
-  - _updated 2026-06-08_
 
 ## Done (recent)
 
@@ -43,3 +40,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 7
 - **T-009** SC-SCOPE endpoint decision: sharpen STEP-5B endpoint floor to rho>~3.9 at I=2e-3 (B5) OR accept second-cumulant scope at the I=2e-3 endpoint  _(claim: B5-BEYOND-LAYER-BOUND; gate: SC-SCOPE)_
   - Per-transfer + joint-pairing exhausted (paired x0.905). Non-per-transfer routes only. Operator decision: sharper second-order endpoint floor vs accept 2nd-cumulant at the thinnest endpoint (all-orders feasible for I<=1e-3).
   - _updated 2026-06-07_
+- **T-010** ESTIMATOR-UPGRADE finish: extend the curvature-certified controlled-error bound to the two-shell ensemble + dI/amplitude-grid quadrature knobs  _(claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
+  - DONE: single-shell knobs (ii)/(iii)+continuum (estimator-upgrade-knobs v1.0); two-shell (0,0) PD + diagonal global continuum no-condensate at the B1 point r=0.219 (twoshell-continuum-bound v1.0); EXACT-Wick anchored no-condensate at r=0.219 -- min +6.7e-4>0, bracket O(A^4) near origin (twoshell-anchored-bracket v1.0, 7/7). REMAINING (refinement only): a curvature-chord continuum bound on the exact anchored BULK surface (finer exact scan). Then ESTIMATOR-UPGRADE closure is an operator decision.
+  - _updated 2026-06-08_
