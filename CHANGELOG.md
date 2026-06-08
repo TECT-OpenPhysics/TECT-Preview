@@ -5,6 +5,36 @@ not pillar counts.
 
 ---
 
+## [Two-shell global continuum no-condensate at the B1 point + two operating-point corrections] - 2026-06-07
+
+- **Next-round advance** (twoshell-continuum-bound v1.0; codes/vacuum/twoshell_continuum_bound.py 10/10;
+  claims/B1-RH-ENUM/runs/260607-twoshell-continuum-bound/result.json). No tier/gate flip.
+- **Two-shell global no-condensate at the B1 point**: a diagonal-continuum two-shell {110}+{200} evaluator
+  (validated against Math432 to 1.6e-7: moments exact + 4 anchored-minus-bracket anchors) gives, at
+  r_bare=0.219, M-minimised surface min +3.9e-5>0, a 2D curvature-chord continuum lower bound +1.2e-4>0,
+  and a PD (0,0) Hessian -- superseding the Math432 grid citation.
+- **Correction 1 (operating point)**: the previously-cited Math432 two-shell evidence runs at r_bare=0.005
+  (rR=0.3045), NOT the B1 point r_bare=0.219 (rR=0.419). Redone at the B1 point (stiffer, so a fortiori).
+- **Correction 2 (soft direction)**: the soft (0,0) eigenvalue is kappa_{200}=3.86, NOT kappa_BCC({110})
+  =5.116 -- {200} is the SOFTER direction (fewer modes n2=3<n1=6 + dressing). estimator-upgrade-knobs v1.0
+  (uncommitted) corrected in the same change set: status/3(c)/5/footer + the script PART-4 detail strings.
+  The (0,0) Hessian PD conclusion is unchanged (both eigenvalues >0).
+- **Residual**: the exact-Wick off-diagonal bracket continuum bound at r=0.219 (diagonal-continuum only here,
+  strong-evidence); gate stays OPEN. RESULTS-LEDGER R-017.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0 (both notes); release-check PASS; pytest 3.
+
+## [ESTIMATOR-UPGRADE knob-closure note accepted (operator review); section label fix] - 2026-06-07
+
+- **Operator review** (reviews/2026-06-07-estimator-upgrade-knobs-acceptance-review.md) ACCEPTED
+  estimator-upgrade-knobs v1.0 as single-shell knob closure + two-shell (0,0) Hessian advance (NOT full
+  ESTIMATOR-UPGRADE closure). No tier/gate change.
+- **Confirmed honest scope**: the curvature-chord continuum bound is strong-evidence (M_i is a discrete
+  |dF''| estimate, not a theorem-grade analytic upper bound); the two-shell GLOBAL no-condensate remains
+  the named residual (2D (A1,A2) surface bound), gate stays OPEN.
+- **Minor fix**: section-3 Method paragraphs relabelled (a)/(b)/(c) (removed a duplicate '(ii)'); the
+  note's v1.0 banner is unchanged (pre-commit same-session typo fix, not a re-issue). FORM-CHECK re-run PASS.
+- **Next round directed**: two-shell global continuum no-condensate bound over (A1,A2).
+
 ## [ESTIMATOR-UPGRADE knob closure: dI + amplitude-grid + continuum no-condensate + two-shell (0,0) Hessian] - 2026-06-07
 
 - **T-010 advance** (estimator-upgrade-knobs v1.0; codes/vacuum/estimator_upgrade_knobs.py 13/13;

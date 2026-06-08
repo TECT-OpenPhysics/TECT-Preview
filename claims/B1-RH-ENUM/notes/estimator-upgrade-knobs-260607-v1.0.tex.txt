@@ -2,7 +2,7 @@
 % Title: ESTIMATOR-UPGRADE knob closure: dI-quadrature + amplitude-grid envelopes, a curvature-chord continuum no-condensate bound, and the controlled-error two-shell (0,0) Hessian
 % Claim: B1-RH-ENUM (ESTIMATOR-UPGRADE gate)
 % Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
-% Status: numerical note; ADVANCES ESTIMATOR-UPGRADE for the single-shell enumerated readings beyond the M-quadrature knob (closed by estimator-upgrade-enumerated v1.0). This note (i) closes the dI-quadrature and amplitude-grid knobs -- kappa_R moves < 0.1% under dI refinement and the no-condensate verdict is grid-monotone; (ii) upgrades the grid-scan no-condensate to a CONTINUUM curvature-chord lower bound (positive on every A>0 interval for LAM/HEX/FCC/BCC); (iii) certifies the two-shell {110}+{200} (0,0) Hessian is positive-definite with controlled error (diagonal by shell orthogonality; soft eigenvalue = single-shell BCC curvature 5.116; {200} eigenvalue strictly larger). The two-shell GLOBAL no-condensate is the exact-Wick PASS of Math432 (cited grid evidence, not re-derived here). Scope: single-shell ensemble all three numerical knobs + two-shell (0,0) curvature. No tier/gate flip; full ESTIMATOR-UPGRADE closure is an operator decision pending the two-shell global continuum bound.
+% Status: numerical note; ADVANCES ESTIMATOR-UPGRADE for the single-shell enumerated readings beyond the M-quadrature knob (closed by estimator-upgrade-enumerated v1.0). This note (i) closes the dI-quadrature and amplitude-grid knobs -- kappa_R moves < 0.1% under dI refinement and the no-condensate verdict is grid-monotone; (ii) upgrades the grid-scan no-condensate to a CONTINUUM curvature-chord lower bound (positive on every A>0 interval for LAM/HEX/FCC/BCC); (iii) certifies the two-shell {110}+{200} (0,0) Hessian is positive-definite (kappa_12=0 by shell orthogonality; both eigenvalues > 0). CORRECTION (twoshell-continuum-bound v1.0, same change set): the SOFT eigenvalue is kappa_{200}=3.86 NOT 5.116 ({200} is the softer direction -- fewer modes + dressing); and the GLOBAL two-shell no-condensate is established as a diagonal-continuum bound at the B1 point r=0.219 there (the Math432 evidence runs at a DIFFERENT operating point r=0.005). Scope: single-shell ensemble all three numerical knobs + two-shell (0,0) curvature. No tier/gate flip; full ESTIMATOR-UPGRADE closure is an operator decision pending the two-shell global continuum bound (bracket residual).
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-07) first issue. Follows estimator-upgrade-enumerated v1.0.
@@ -37,7 +37,7 @@ ensemble of Math432 -- in which the cross moment $m_{31}=\langle\phi_1^3\phi_2\r
 
 \section*{3. Method and results}
 
-\textbf{(ii) amplitude-grid + continuum bound.} For each reading the verdict
+\textbf{(a) amplitude-grid + continuum bound.} For each reading the verdict
 $\min_{A>0}\Delta F>0$ holds at $N_G=121/241/481$ and $\Delta F$ is strictly
 increasing on the valid prefix (the unique minimum is $A=0=\mathcal R_H$). The
 "closest approach" $\min_{A>0}\Delta F$ itself scales as $\tfrac12\kappa A_{\rm
@@ -64,7 +64,7 @@ between grid nodes. Both the value ($\sim\tfrac12\kappa A^2$) and the dip
 ($\sim\tfrac18\kappa\delta^2$) scale as $\delta^2$ near $A=0$, and $\tfrac12 >
 \tfrac18$, so the bound survives the near-origin region.
 
-\textbf{(ii) dI-quadrature knob.} Refining $\_QG$ from $(6000, 50\,q_0)$ to
+\textbf{(b) dI-quadrature knob.} Refining $\_QG$ from $(6000, 50\,q_0)$ to
 $(12000, 100\,q_0)$ moves $\kappa_{\mathcal R}$ by $<0.1\%$ and leaves every
 no-condensate verdict intact.
 \begin{center}
@@ -84,19 +84,20 @@ Combined with the $M$-knob envelope of estimator-upgrade-enumerated v1.0, the
 single-shell margins are controlled with respect to all three numerical knobs
 ($M$, $\mathtt{dI}$, amplitude grid).
 
-\textbf{(i) two-shell $(0,0)$ Hessian.} For the $\{110\}+\{200\}$ condensate
+\textbf{(c) two-shell $(0,0)$ Hessian.} For the $\{110\}+\{200\}$ condensate
 $(A_1,A_2)$ the quadratic cross term vanishes: the shells are disjoint, so
 $\langle\phi_1\phi_2\rangle=0$ and the $m_{31}$ coupling
 $U\langle\phi_1^3\phi_2\rangle$ is QUARTIC ($A_1^3 A_2$), absent from the Hessian.
-The Hessian is therefore diagonal, $\kappa_{12}=0$. The soft eigenvalue is the
-single-shell BCC curvature $\kappa_{\rm BCC}=5.116$ (controlled-error; the
-two-shell $F$ at $A_2=0$ is exactly the single-shell BCC $F$). The $\{200\}$
-eigenvalue is strictly larger: that shell sits one octave off the kernel minimum
-and carries a positive penalty $C q_0^4 = 0.214 > 0$. Hence $(0,0)$ is a strict
-two-shell minimum with controlled error. The GLOBAL two-shell no-condensate (the
-$m_{31}$ tilt valley) is the exact-Wick PASS of Math432 (anchored $\Delta F>0$ on
-the $(A_1,A_2,M)$ surface at cut$12/48^3$ and cut$20/64^3$), cited here as grid
-evidence and not re-derived.
+The Hessian is therefore diagonal, $\kappa_{12}=0$, with both eigenvalues
+positive. \emph{Correction (twoshell-continuum-bound v1.0, same change set):} at
+the B1 point $r_{\rm bare}=0.219$ the eigenvalues are $\kappa_{\{110\}}=5.16$ and
+$\kappa_{\{200\}}=3.86$; the SOFTER direction is $\{200\}$, not $\{110\}$ --
+despite its kernel penalty $Cq_0^4=0.214>0$, $\{200\}$ has fewer modes
+($n_2=3<n_1=6$) and the dressing nets a lower curvature. Both positive, so
+$(0,0)$ is a strict two-shell minimum. The GLOBAL two-shell no-condensate is
+established as a diagonal-continuum bound at the B1 point in
+twoshell-continuum-bound v1.0; the earlier Math432 evidence runs at a different
+operating point $r=0.005$.
 
 \section*{4. What this advances and what remains}
 
@@ -123,20 +124,20 @@ re-derived -- the gate cannot close on a citation.''} UPHELD: correct, and it is
 exactly why this note does NOT claim ESTIMATOR-UPGRADE closure. The two-shell
 $(0,0)$ Hessian is new controlled-error content; the global valley remains Math432
 grid evidence. The residual is named in section 4 and the gate stays OPEN.
-\item[($\gamma$)] \emph{``Is the soft two-shell eigenvalue really the single-shell
-BCC curvature?''} DISMISSED: the two-shell free energy restricted to $A_2=0$ is
-identically the single-shell BCC free energy (Math432 reproduces the Math430
-single-shell race at $A_2=0$ to $10^{-7}$), so the $A_1$ curvature at $(0,0)$ is
-$\kappa_{\rm BCC}$ exactly; the script reproduces $5.116$ to $5\times10^{-3}$.
+\item[($\gamma$)] \emph{``Which shell is the soft two-shell direction?''}
+The $A_2=0$ slice is the single-shell BCC free energy, so the $\{110\}$ curvature
+at $(0,0)$ is $\kappa_{\rm BCC}\approx5.16$. CORRECTED (twoshell-continuum-bound
+v1.0): the $\{200\}$ direction is SOFTER, $\kappa_{\{200\}}=3.86<5.16$, so the
+binding $(0,0)$ eigenvalue is $3.86$, not $5.116$. Both positive; PD stands.
 \end{itemize}
 
 Quantitative sanity check (mandatory): magnitude -- $\kappa$ envelopes
 $\sim10^{-5}$ vs $\kappa\sim1$--$5$ ($<0.1\%$); the continuum dip
 $\tfrac18 M\delta^2\sim10^{-7}$ vs value $\sim10^{-6}$; sign-direction -- every
 $\kappa>0$ and every continuum bound $>0$ (the selection-preserving direction);
-limit-case -- $\Delta F(0)=0$ exactly; consistency -- the $\{200\}$ penalty
-$Cq_0^4=0.214>0$ confirms the stiff shell adds curvature, so the soft direction
-$\kappa_{\rm BCC}=5.116$ is the binding two-shell eigenvalue.
+limit-case -- $\Delta F(0)=0$ exactly; consistency -- the $\{200\}$ penalty $Cq_0^4=0.214>0$ does NOT
+order the curvatures: the binding $(0,0)$ eigenvalue is $\kappa_{\{200\}}=3.86$
+(twoshell-continuum-bound v1.0).
 
 \section*{6. Result footer}
 
@@ -149,10 +150,12 @@ Precise statement:       For LAM/HEX/FCC/BCC at mu^2=0.005: (ii) kappa_R moves
                          NG=121/241/481; (iii) the curvature-chord continuum
                          lower bound min(v_i,v_{i+1}) - (1/8) M_i delta^2 > 0 on
                          every A>0 interval (no inter-node condensate); (i) the
-                         two-shell {110}+{200} (0,0) Hessian is positive-definite
-                         (kappa_12=0 by orthogonality; soft eigenvalue kappa_BCC
-                         =5.116; {200} penalty C q0^4=0.214>0). Global two-shell
-                         no-condensate cited from Math432 (grid evidence).
+                         two-shell {110}+{200} (0,0) Hessian is positive-
+                         definite (kappa_12=0; both eigenvalues >0). CORRECTED
+                         (twoshell-continuum-bound v1.0): soft eigenvalue =
+                         kappa_{200}=3.86 NOT 5.116; global two-shell no-
+                         condensate = diagonal-continuum bound at B1 r=0.219
+                         (Math432 ran at a different operating point r=0.005).
 Scope:                   Single-shell ensemble, all 3 numerical knobs + continuum
                          no-condensate; two-shell (0,0) curvature only.
 Dependencies:            Math424_AddA_reading_uniqueness (dF_reading, dI,
@@ -182,3 +185,4 @@ Next required action:    Two-shell global continuum no-condensate bound (curvatu
                          closure is an operator decision.
 \end{verbatim}
 }
+

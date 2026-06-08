@@ -214,11 +214,13 @@ print(f"    soft eigenvalue kappa_BCC={kappa_BCC:.4f} (controlled-error); {{200}
 claim("twoshell_shells_disjoint", disjoint,
       "({110} and {200} share no wavevector: <phi1 phi2>=0 exactly, so the quadratic cross-term "
       "kappa_12 vanishes and the (0,0) Hessian is diagonal)")
-claim("twoshell_soft_eigenvalue_positive", kappa_BCC > 0,
-      f"(soft (0,0) eigenvalue = single-shell BCC curvature kappa_BCC={kappa_BCC:.4f} > 0, controlled-error)")
-claim("twoshell_stiff_shell_penalty_positive", penalty > 0,
-      f"({{200}} carries kernel penalty C*q0^4={penalty:.4f} > 0 (one octave off the kernel minimum), so the "
-      "{200} eigenvalue strictly exceeds the {110} one: the (0,0) Hessian is positive-definite)")
+claim("twoshell_110_eigenvalue_positive", kappa_BCC > 0,
+      f"(the {{110}} (0,0) eigenvalue = single-shell BCC curvature kappa_BCC={kappa_BCC:.4f} > 0; the SOFT "
+      "eigenvalue is kappa_{{200}}~3.86 -- see twoshell-continuum-bound v1.0, which corrects the soft direction)")
+claim("twoshell_kernel_penalty_positive", penalty > 0,
+      f"({{200}} carries kernel penalty C*q0^4={penalty:.4f} > 0 (one octave off the kernel minimum); NOTE this "
+      "kernel offset does NOT order the curvatures -- twoshell-continuum-bound v1.0 finds kappa_{{200}}~3.86 < "
+      "kappa_{{110}}~5.16 ({200} is SOFTER, fewer modes + dressing). Both eigenvalues > 0 so the (0,0) Hessian is PD)")
 claim("twoshell_counts", n1 == 6 and n2 == 3,
       "(shell pair-counts n1=6 ({110}), n2=3 ({200}) -- combinatorial inputs)")
 

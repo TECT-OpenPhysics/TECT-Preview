@@ -165,14 +165,14 @@
       "detail": "({110} and {200} share no wavevector: <phi1 phi2>=0 exactly, so the quadratic cross-term kappa_12 vanishes and the (0,0) Hessian is diagonal)"
     },
     {
-      "name": "twoshell_soft_eigenvalue_positive",
+      "name": "twoshell_110_eigenvalue_positive",
       "passed": true,
-      "detail": "(soft (0,0) eigenvalue = single-shell BCC curvature kappa_BCC=5.1162 > 0, controlled-error)"
+      "detail": "(the {110} (0,0) eigenvalue = single-shell BCC curvature kappa_BCC=5.1162 > 0; the SOFT eigenvalue is kappa_{{200}}~3.86 -- see twoshell-continuum-bound v1.0, which corrects the soft direction)"
     },
     {
-      "name": "twoshell_stiff_shell_penalty_positive",
+      "name": "twoshell_kernel_penalty_positive",
       "passed": true,
-      "detail": "({200} carries kernel penalty C*q0^4=0.2140 > 0 (one octave off the kernel minimum), so the {200} eigenvalue strictly exceeds the {110} one: the (0,0) Hessian is positive-definite)"
+      "detail": "({200} carries kernel penalty C*q0^4=0.2140 > 0 (one octave off the kernel minimum); NOTE this kernel offset does NOT order the curvatures -- twoshell-continuum-bound v1.0 finds kappa_{{200}}~3.86 < kappa_{{110}}~5.16 ({200} is SOFTER, fewer modes + dressing). Both eigenvalues > 0 so the (0,0) Hessian is PD)"
     },
     {
       "name": "twoshell_counts",
