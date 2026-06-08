@@ -5,6 +5,21 @@ not pillar counts.
 
 ---
 
+## [ESTIMATOR-UPGRADE single-shell subgate marked controlled-error advanced (operator review)] - 2026-06-07
+
+- **Operator review** (reviews/2026-06-07-estimator-upgrade-and-scscope-acceptance-review.md)
+  accepted estimator-upgrade-enumerated v1.0 and scscope-scope-decision v1.0. No tier change.
+- **ESTIMATOR-UPGRADE**: GATES.md status -> "OPEN (single-shell M-quad subgate: CONTROLLED-ERROR
+  ADVANCED)". The single-shell enumerated margins (LAM/HEX/FCC/BCC, kappa_R>=0.85, binding LAM 0.851)
+  are controlled w.r.t. the dominant M-quadrature knob ONLY -- NOT a full estimator closure. Remaining
+  knobs {two-shell ensemble, dI quadrature, amplitude grid} keep the gate OPEN. The B1 card notes carry
+  the same; ESTIMATOR-UPGRADE remains in open_gates.
+- **T-010 extended**: a no-condensate interval/Lipschitz continuum bound dF_R(A)>=0 on each amplitude
+  interval (replacing the grid-scan no-condensate evidence) registered as a publication-grade follow-up.
+- **SC-SCOPE**: wording (estimate-feasible, NOT proved; scope decision not all-orders closure) accepted;
+  no change required; the operator canonical ledger section is recorded in the review archive.
+- **Verification**: lint render; release-check PASS; pytest 3; catalog/lineage regenerated.
+
 ## [SC-SCOPE endpoint arc closure review: estimate-feasible wording precision] - 2026-06-07
 
 - **Operator review** (reviews/2026-06-07-scscope-endpoint-arc-closure-review.md)
