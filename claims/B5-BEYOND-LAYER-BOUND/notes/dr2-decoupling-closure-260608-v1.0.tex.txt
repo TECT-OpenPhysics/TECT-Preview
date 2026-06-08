@@ -1,174 +1,167 @@
 % =============================================================================
-% Title: DR-2 closed conditional on l2-decoupling: the additive energy of arbitrary finite sphere sets is near-quadratic
+% Title: DR-2 via l2-decoupling: a corrected conditional route (separated case rigorous, unrestricted case proof-sketch)
 % Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
-% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
-% Status: T6 PROVED CONDITIONAL on the Bourgain-Demeter l2-decoupling theorem. The unrestricted-class DR-2 estimate -- E_+(Q) <=_eps N^{2+eps} for EVERY finite Q in S^2 -- follows from l2-decoupling for the sphere/paraboloid in R^3 at the critical exponent p=4 (d=3), via the identity additive-energy = L^4-norm, plus the standard multi-scale reduction to non-separated sets and the R-008 dyadic-amplitude lift for the weighted version. This SUPERSEDES the Pencil Rigidity / Pair-Sum Surface Multiplicity conjecture (dr2-pencil-rigidity-reduction v1.0): PSM is provable via decoupling, not open. The curvature mechanism (height-quadratic => sum-of-squares conservation => rectangle rigidity, R-007) is the reason, and it is sharpened here from the unconditional N^{5/2} (R-007) to N^{2+eps}. Numerically confirmed (dr2_decoupling_exponent.py 4/4): empirical exponent alpha = 2.03/1.95/2.01 for great-circle / sphere-cap-grid / random, vs alpha = 2.98 for the SAME grid kept flat -- a direct curvature demonstration. NO gate/tier flip is performed here: the DR2-SHARE flip and any B5/B1 elevation await operator sign-off. T7-candidate pending a full write-out of the multi-scale reduction or operator acceptance of the cited theorem as textbook-standard.
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08 (corrected same-session after operator audit)
+% Status: PROMISING CONDITIONAL ROUTE, NOT a closure. Corrected after an operator critical audit that found a fatal formal error in the first draft. Honest grade: (a) for delta-SEPARATED Q in S^2 the bound E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter l2-decoupling (sphere in R^3, critical exponent p=4), with the additive-energy = L^4 link via the Schwartz MAJORANT (NOT the false torus identity); (b) for ARBITRARY finite Q (the actual DR-2) the bound is T3 PROOF SKETCH (the non-separated multi-scale reduction is written but its cross-scale energy step is marked OPEN); (c) STRONG numerical evidence (exponent ~2 on the sphere vs ~3 flat). NO gate/tier flip: DR2-SHARE stays OPEN, B5 stays T5, B1 stays T6, and H-ADM-COH STAYS in the B1 hypothesis set. R-022 downgraded T6->T4. The bound is N^{2+eps}, NOT the stronger N^2 log^B N.
 %
 % Revision history (cumulative):
-%   v1.0 (2026-06-08) first issue. Decoupling route to DR-2 (operator directive
-%        (operator directive: try closing DR-2 via decoupling). Script codes/vacuum/dr2_decoupling_exponent.py
-%        (4/4); JSON claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-decoupling-
-%        exponent/. Supersedes the PSM-conjecture framing of
-%        dr2-pencil-rigidity-reduction v1.0 (its cross-energy lemma R-021 stands).
+%   v1.0 (2026-06-08) first issue, then CORRECTED same-session after operator
+%        audit (reviews/2026-06-08-dr2-decoupling-critical-audit.md). Three fixes:
+%        (1) the E_+ = integral_{[0,1]^3}|f|^4 torus identity was FALSE for
+%        non-integer q in S^2 -- replaced by the Besicovitch limit / Schwartz
+%        majorant; (2) the non-separated multi-scale reduction is now written
+%        (cross-scale step marked OPEN); (3) N^{2+eps} distinguished from
+%        N^2 log^B N. Tier downgraded from the over-claimed T6 PROVED CONDITIONAL
+%        to a separated-T6 / unrestricted-T3 split. Script
+%        codes/vacuum/dr2_decoupling_exponent.py (4/4) unchanged.
 % =============================================================================
 
 \sloppy
 \section*{1. Purpose and scope}
 
-DR-2 is the unrestricted-class sphere additive-energy bound: $E_+(Q)\le C
-N^{2+\epsilon}$ (equivalently $N^2\log^B N$) for EVERY finite $Q\subset S^2$, the
-open route to closing STEP-5B without the H-ADM-COH amended class. The external
-research (Math447--469) reduced it to the open Pencil Rigidity / Pair-Sum Surface
-Multiplicity (PSM) conjecture. This note observes that the bound is in fact a
-corollary of a published deep theorem -- Bourgain--Demeter $\ell^2$-decoupling --
-so DR-2 is PROVED CONDITIONAL on that theorem, and PSM is not genuinely open. The
-note imports decoupling as a black box; it does not reprove it.
+DR-2 is the unrestricted-class bound $E_+(Q)\le C\,N^{2+\epsilon}$ for EVERY finite
+$Q\subset S^2$. This note records the $\ell^2$-decoupling route to it, corrected
+after an operator audit. It is NOT a closure: the separated case is rigorous
+conditional on decoupling; the unrestricted case is a proof sketch. No tier or
+gate flip is made.
 
-\section*{2. Additive energy is an $L^4$ norm}
+\section*{2. Additive energy and a localised $L^4$ majorant (corrected)}
 
-For $Q=\{q_1,\dots,q_N\}\subset S^2$ and $f(x)=\sum_{q\in Q}e^{2\pi i\,q\cdot x}$,
+Let $f_Q(x)=\sum_{q\in Q}e^{2\pi i\,q\cdot x}$. The naive torus identity
+$\int_{[0,1]^3}|f_Q|^4=E_+(Q)$ is FALSE: it needs $q\in\mathbb Z^3$, but
+$q\in S^2$ is generally non-integer, so the exponential integral is a
+$\mathrm{sinc}$ product, not a Kronecker $\delta$. The correct statements:
 \[
-\int_{[0,1]^3}|f(x)|^4\,dx
-=\#\{(i,j,k,l):q_i+q_j=q_k+q_l\}
-=E_+(Q).
+E_+(Q)=\lim_{R\to\infty}\frac{1}{|B_R|}\int_{B_R}|f_Q(x)|^4\,dx
+\qquad\text{(Besicovitch mean)},
 \]
-Thus $E_+(Q)=\|f\|_{L^4}^4$ is exactly the quantity the $L^4$ (critical) decoupling
-inequality controls in $d=3$.
-
-\section*{3. The decoupling input (black box)}
-
-\textbf{Theorem (Bourgain--Demeter 2015).} For the truncated paraboloid /
-sphere in $\mathbb R^d$, the $\ell^2$-decoupling inequality holds for
-$2\le p\le p_c=\tfrac{2(d+1)}{d-1}$: partitioning the $\delta$-neighbourhood into
-$\sim\delta^{-(d-1)/2}$ caps $\theta$,
+and, for the upper bound that decoupling controls, take a nonnegative Schwartz
+$\eta$ with $\widehat\eta\ge0$ everywhere and $\widehat\eta\ge1$ on the ball of
+radius equal to the minimal nonzero gap of the sumset $Q+Q$; with
+$\eta_R(x)=R^{3}\eta(Rx)$,
 \[
-\|f\|_{L^p}\;\lesssim_\epsilon\;\delta^{-\epsilon}
-\Big(\sum_\theta\|f_\theta\|_{L^p}^2\Big)^{1/2}.
+E_+(Q)\;\le\;C\int_{\mathbb R^3}|f_Q(x)|^4\,\eta_R(x)\,dx ,
 \]
-For $d=3$ the critical exponent is $p_c=4$ -- exactly the additive-energy
-exponent.
+because every diagonal quadruple contributes $\widehat\eta\ge1$ and every
+off-diagonal quadruple contributes $\widehat\eta\ge0$. This localised $L^4$
+integral -- not the torus integral -- is the object decoupling bounds.
 
-\section*{4. Decoupling $\Rightarrow$ DR-2}
+\section*{3. Separated case (T6 PROVED CONDITIONAL on decoupling)}
 
-\textbf{Separated sets.} Let $Q$ be a $\delta$-separated subset of $S^2$ with
-$N\sim\delta^{-2}$ points (one per cap). Applying $\ell^2$-decoupling at $p=4$ to
-$f=\sum_q e(q\cdot x)$ and unwinding the single-cap $L^4$ norms gives the discrete
-restriction / additive-energy bound
+\textbf{Theorem (Bourgain--Demeter 2015).} For the sphere/paraboloid in
+$\mathbb R^d$, $\ell^2$-decoupling holds for $2\le p\le p_c=\tfrac{2(d+1)}{d-1}$;
+for $d=3$, $p_c=4$.
+
+\textbf{Corollary.} If $Q\subset S^2$ is $\delta$-separated with
+$N\lesssim\delta^{-2}$, apply $\ell^2$-decoupling at $p=4$ to $f_Q$ (one frequency
+per cap) and bound $\S2$'s majorant by the single-cap $L^4$ norms:
 \[
-E_+(Q)=\|f\|_{L^4}^4\;\lesssim_\epsilon\;N^{2+\epsilon}.
+E_+(Q)\;\le\;C\!\int|f_Q|^4\eta_R\;\lesssim_\epsilon\;N^{2+\epsilon}.
 \]
-\textbf{Arbitrary finite sets.} For general $Q$ (no separation), a standard
-dyadic multi-scale decomposition of $Q$ by pairwise separation scale, with
-decoupling applied at each scale and the scales summed, extends the bound to
-$E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$ (the $\epsilon$/$\log^B$ absorbs the
-$O(\log N)$ scales); points clustered below the curvature scale lie on a rescaled
-paraboloid and inherit the same bound. \textbf{Weighted version.} For amplitudes
-$a_q$ (the TECT pattern weights), decoupling controls $\|\sum_q a_q e(q\cdot
-x)\|_{L^4}$; combined with the R-008 dyadic-amplitude lift this yields the
-weighted $\sum_{t\neq0}w_t^2\lesssim_\epsilon(\lambda'I)^2 N^\epsilon$ that
-STEP-5B needs over the unrestricted class. $\square$
+This is rigorous modulo the cited theorem -- T6 PROVED CONDITIONAL on decoupling.
 
-\section*{5. The curvature mechanism, and the sharpening of R-007}
+\section*{4. Unrestricted case: multi-scale reduction (T3 PROOF SKETCH)}
 
-Why the sphere -- not the plane. An additive quadruple $q_1+q_2=q_3+q_4$ has, in
-the height coordinate, $|q_1|^2+|q_2|^2=|q_3|^2+|q_4|^2$ on the unit sphere; with
-the tangential constraint this pins the unordered pair (sum $+$ sum-of-squares
-determine the multiset), so quadruples are rectangles (R-007). On a FLAT plane the
-height constraint is absent and an $N$-point grid has $E_+\sim N^3$. R-007 used
-incidence counting to get the unconditional $E_+=O(N^{5/2})$; decoupling replaces
-incidence by the sharp $L^4$ estimate and improves the exponent to $2+\epsilon$.
+For arbitrary finite $Q$ (the actual DR-2), decompose by dyadic separation scale
+$\sigma=2^{-k}$. At scale $\sigma$, points are $\sigma$-separated within
+$\sigma$-caps; rescale each cap by $\sigma^{-1}$ to a unit paraboloid patch (the
+sphere is locally a paraboloid, height $=$ quadratic), where the separated
+corollary of \S3 applies and gives the intra-scale contribution
+$\lesssim_\epsilon N_\sigma^{2+\epsilon}$.
 
-\textbf{Numerical confirmation} (dr2\_decoupling\_exponent.py, 4/4). Empirical
-growth exponent $\alpha$ ($E_+\sim N^\alpha$, $N=16$--$144$):
-\begin{center}
-\footnotesize
-\begin{tabularx}{\textwidth}{@{} l Y Y Y Y @{}}
-\toprule
-config & great circle & cap grid (sphere) & flat grid (control) & random \\
-\midrule
-$\alpha$ & $2.03$ & $1.95$ & $2.98$ & $2.01$ \\
-\bottomrule
-\end{tabularx}
-\end{center}
-The SAME $(u,v)$ grid has $\alpha=2.98\approx3$ when kept FLAT but
-$\alpha=1.95\approx2$ when lifted to the sphere: the curvature pins the energy
-from $N^3$ to $N^2$, a direct demonstration of the mechanism behind the bound.
+\textbf{OPEN GAP (the load-bearing step).} The cross-scale energy -- additive
+quadruples whose four points come from different separation scales -- must also be
+shown $\lesssim_\epsilon N^{2+\epsilon}$, and the $O(\log N)$ dyadic scales summed
+into the $\epsilon$-loss. This is standard in the decoupling literature
+(decoupling is intrinsically multi-scale) but is NOT written out here; until it
+is, the UNRESTRICTED DR-2 is a PROOF SKETCH, not a theorem. The numerics (\S6)
+test exactly this: a clustered cap-grid (the worst non-separated case) still has
+exponent $\approx2$, not the planar $3$.
 
-\section*{6. TECT consequence (pending operator sign-off)}
+\section*{5. $N^{2+\epsilon}$ is not $N^2\log^B N$}
 
-If accepted, DR-2 PROVED CONDITIONAL on decoupling makes the unrestricted-class
-STEP-5B closure available WITHOUT the H-ADM-COH amended class: the class-wide
-$\sum w^2\lesssim_\epsilon(\lambda'I)^2N^\epsilon$ holds for arbitrary admissible
-patterns. This WOULD allow removing H-ADM-COH from the B1 hypothesis set and
-upgrading the B5/STEP-5B closure from amended-class to unrestricted. \emph{No such
-flip is performed in this note.} The gate/tier action requires operator sign-off
-and a decision on whether the $N^\epsilon$ loss (vs the stated $N^2\log^B N$) and
-the cited multi-scale reduction meet the closure bar.
+Decoupling yields $N^{2+\epsilon}$ for every fixed $\epsilon>0$. This is WEAKER
+than $N^2\log^B N$ ($N^2\log^B N\Rightarrow N^{2+\epsilon}$, not conversely). For
+the TECT application the admissible mode count $n_{\rm adm}$ is finite (R-009), so
+$N^\epsilon$ is a bounded constant; but the unrestricted ASYMPTOTIC theorem must
+state $N^{2+\epsilon}$, and the $N^2\log^B N$ form is a separate (stronger) target
+not delivered here.
 
-\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+\section*{6. Curvature mechanism and numerics (supporting evidence)}
+
+The reason the sphere obeys $N^{2+\epsilon}$ while a flat plane allows $N^3$: an
+additive quadruple has $|q_1|^2+|q_2|^2=|q_3|^2+|q_4|^2$ on the unit sphere, which
+with the tangential constraint pins the unordered pair (rectangle rigidity,
+R-007). R-007 gave the unconditional $N^{5/2}$; decoupling would sharpen it to
+$N^{2+\epsilon}$. Numerically (dr2\_decoupling\_exponent.py, 4/4), the empirical
+growth exponent over $N=16$--$144$ is $2.03/1.95/2.01$ for
+great-circle / sphere-cap-grid / random, versus $2.98$ for the SAME grid kept
+FLAT -- a direct demonstration that curvature pins the energy from $N^3$ to
+$N^2$. This is strong supporting evidence, not a proof.
+
+\section*{7. TECT consequence (none yet)}
+
+No consequence is drawn. IF the unrestricted case is completed (the \S4 cross-scale
+step written), DR-2 would become T6 PROVED CONDITIONAL on decoupling, enabling the
+unrestricted STEP-5B closure and the removal of H-ADM-COH from B1 -- but that is
+explicitly NOT done here. H-ADM-COH STAYS in the B1 hypothesis set; DR2-SHARE
+stays OPEN; B5 stays T5; B1 stays T6.
+
+\section*{8. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
 
 \begin{itemize}
-\item[($\alpha$)] \emph{``You invoke decoupling as a black box.''} VALID and
-declared: decoupling is a published, peer-reviewed theorem (Bourgain--Demeter,
-Annals 2015), so invoking it is legitimate, but this note does NOT reprove it;
-hence T6 PROVED CONDITIONAL, not an unconditional from-scratch T7. The conditional
-hypothesis is a textbook-standard theorem, which is why T7-candidacy is flagged.
-\item[($\beta$)] \emph{``$N^{2+\epsilon}$ is weaker than the stated $N^2\log^B
-N$.''} VALID: decoupling gives $N^{2+\epsilon}$; the $\log^B$ refinement is a
-known separate sharpening. For the TECT application the admissible mode count
-$n_{\rm adm}$ is finite (R-009), so $N^\epsilon$ is a bounded constant; for the
-strictly-unrestricted ($N\to\infty$) statement the $\epsilon$ loss is recorded.
-\item[($\gamma$)] \emph{``Is the arbitrary-set reduction actually valid, or could a
-clustered configuration give $N^3$?''} DISMISSED, and tested: a sub-curvature
-cluster lies on a rescaled paraboloid, still curved, so the height constraint
-still pins quadruples; the cap-grid numerics ($\alpha=1.95$ vs the flat
-$\alpha=2.98$) confirm no $N^3$ growth on the sphere. The multi-scale sum costs
-only $\log N$ scales.
+\item[($\alpha$)] \emph{``The $L^4$ = additive-energy identity was wrong.''}
+UPHELD (operator audit): the torus identity needs integer frequencies; corrected
+to the Besicovitch limit / Schwartz majorant in \S2. The first-draft Section 2 was
+not proof-grade; this is the fix.
+\item[($\beta$)] \emph{``The unrestricted multi-scale reduction is asserted, not
+proved.''} UPHELD: \S4 now writes the reduction but marks the cross-scale energy
+step OPEN. Hence the unrestricted DR-2 is T3 PROOF SKETCH, not T6; the gate is not
+flipped.
+\item[($\gamma$)] \emph{``$N^{2+\epsilon}$ was conflated with $N^2\log^B N$.''}
+UPHELD: \S5 distinguishes them; the route delivers only $N^{2+\epsilon}$.
 \end{itemize}
 
 Quantitative sanity check (mandatory): magnitude -- sphere exponents
-$2.03/1.95/2.01\le2.3$, flat control $2.98\ge2.6$ (gap $1.03$); sign-direction --
-all energies positive and below the flat $N^3$; limit-case -- $d=3$ gives
-$p_c=4=$ the additive-energy exponent, the critical (not sub/supercritical) case;
-consistency -- $E_+/N^2$ for the worst sphere config grows by only $\times1.06$
-over $N=16$--$144$, sub-polynomial as $N^\epsilon$ predicts.
+$2.03/1.95/2.01\le2.3$, flat control $2.98\ge2.6$; sign-direction -- all energies
+positive, sphere below flat; limit-case -- $d=3\Rightarrow p_c=4$, the
+additive-energy exponent (critical, the borderline case decoupling reaches);
+consistency -- the cap-grid (worst non-separated config) shows $\approx N^2$,
+supporting the \S4 sketch but not replacing its missing cross-scale step.
 
-\section*{8. Result footer}
+\section*{9. Result footer}
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B5 / DR-2 closed conditional on l2-decoupling
-Precise statement:       E_+(Q) <=_eps N^{2+eps} for every finite Q in S^2, by
-                         Bourgain-Demeter l2-decoupling for the sphere in R^3 at
-                         the critical exponent p=4 (additive energy = L^4 norm)
-                         + multi-scale reduction (arbitrary sets) + R-008 dyadic
-                         (weighted). Curvature mechanism: height-quadratic =>
-                         sum-of-squares conservation => rectangle rigidity (R-007),
-                         sharpening N^{5/2} -> N^{2+eps}.
-Scope:                   Unrestricted-class sphere additive energy; DR-2 / DR2-SHARE.
-Dependencies:            Bourgain-Demeter l2-decoupling (published, BLACK BOX);
-                         R-007 (rectangle), R-008 (dyadic lift), R-021 (cross-
-                         energy); standard multi-scale reduction (cited).
-Evidence grade:          T6 PROVED CONDITIONAL (on decoupling) + EXECUTED numerics
-                         (dr2_decoupling_exponent.py 4/4, exponent ~2 vs flat ~3).
+Result ID:               B5 / DR-2 via l2-decoupling (corrected conditional route)
+Precise statement:       SEPARATED Q in S^2: E_+(Q) <=_eps N^{2+eps} is T6 PROVED
+                         CONDITIONAL on Bourgain-Demeter decoupling (d=3, p=4),
+                         via the Schwartz-majorant localisation (NOT the false
+                         torus identity). ARBITRARY finite Q (DR-2 proper): T3
+                         PROOF SKETCH -- multi-scale reduction written, cross-scale
+                         energy step marked OPEN. Bound is N^{2+eps}, not
+                         N^2 log^B N. Numerics: exponent ~2 sphere vs ~3 flat.
+Scope:                   Unrestricted-class sphere additive energy; DR2-SHARE.
+Dependencies:            Bourgain-Demeter decoupling (BLACK BOX); R-007 (rectangle),
+                         R-008 (dyadic), R-021 (cross-energy); operator audit
+                         reviews/2026-06-08-dr2-decoupling-critical-audit.md.
+Evidence grade:          Separated T6 PROVED CONDITIONAL; unrestricted T3 PROOF
+                         SKETCH; + EXECUTED numerics (dr2_decoupling_exponent.py
+                         4/4).
 Reproduction command:    python codes/vacuum/dr2_decoupling_exponent.py
 Expected output:         4/4 PASS; alpha 2.03/1.95/2.01 (sphere) vs 2.98 (flat).
-Falsification gate:      A finite Q in S^2 with E_+(Q) >= N^{2.3} (would contradict
-                         the decoupling exponent); none found -- the flat-plane
-                         N^3 is excluded by curvature.
-Tier before / after:     DR-2: OPEN (T1) -> PROVED CONDITIONAL (T6) on decoupling
-                         [RECOMMENDED; gate/tier flip pending operator sign-off].
-                         Supersedes the PSM/Pencil Rigidity conjecture (T2->proved
-                         via decoupling). B5/B1 tiers unchanged in this note.
-No-overclaim statement:  Decoupling is invoked, not reproved (T6 conditional, not
-                         T7). The bound is N^{2+eps}; the log^B form is a separate
-                         known sharpening. NO gate/tier flip is performed; B5 stays
-                         T5 and B1 stays T6 until operator sign-off. The external
-                         T7_conditional-robust label is still not adopted.
-Next required action:    Operator decision: accept decoupling as the DR-2 closure
-                         (flip DR2-SHARE to CLOSED-CONDITIONAL@decoupling; consider
-                         removing H-ADM-COH from B1), or keep as a recommended
-                         conditional result. Optional: write the multi-scale
-                         reduction in full for T7.
+Falsification gate:      A finite Q in S^2 with E_+(Q) >= N^{2.3} (none found; the
+                         flat-plane N^3 is excluded by curvature).
+Tier before / after:     DR-2: OPEN -> OPEN (NO flip). Separated sub-case T6
+                         conditional; unrestricted T3 sketch. B5 T5, B1 T6
+                         unchanged; H-ADM-COH STAYS in B1. R-022 downgraded T6->T4.
+No-overclaim statement:  This is NOT a DR-2 closure. The first draft over-claimed
+                         T6 PROVED CONDITIONAL on a false L^4 identity; corrected
+                         here. Decoupling is invoked not reproved; the unrestricted
+                         case lacks the cross-scale step. No gate/tier/hypothesis
+                         action is taken.
+Next required action:    Write the \S4 cross-scale energy bound (close the multi-
+                         scale reduction); then DR-2 = T6 PROVED CONDITIONAL on
+                         decoupling and operator may consider the DR2-SHARE flip.
 \end{verbatim}
 }

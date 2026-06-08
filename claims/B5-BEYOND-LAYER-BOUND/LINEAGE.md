@@ -101,7 +101,7 @@ An operator adversarial review (2026-06-06; reviews/2026-06-06-b5-adversarial-re
 | 16 | 2026-06-07 | v1.0 | SC-SCOPE endpoint: the joint incompatible-pairing argument is exhausted (stren | T6 | v1.0 |
 | 17 | 2026-06-07 | v1.1 | M-ENDPOINT evaluation with a convergence certificate and single-J0 conservatis | — | v1.0† → v1.1 |
 | 18 | 2026-06-07 | v1.0 | SC-SCOPE scope decision: all-orders estimate-feasible for I<=1e-3, second-cumu | — | v1.0 |
-| 19 | 2026-06-08 | v1.0 | DR-2 closed conditional on l2-decoupling: the additive energy of arbitrary fin | T6 | v1.0 |
+| 19 | 2026-06-08 | v1.0 | DR-2 via l2-decoupling: a corrected conditional route (separated case rigorous | T6 | v1.0 |
 | 20 | 2026-06-08 | v1.0 | DR-2 residual formalised: the cross-energy lemma, and the reduction to the Pen | T7 | v1.0 |
 
 † = superseded version (kept on disk, immutable, forward-pointer at top).
@@ -197,7 +197,7 @@ An operator adversarial review (2026-06-06; reviews/2026-06-06-b5-adversarial-re
 
 ### dr2-decoupling-closure  ·  current `dr2-decoupling-closure-260608-v1.0.tex.txt`
 
-- **v1.0** (2026-06-08) first issue. Decoupling route to DR-2 (operator directive
+- **v1.0** (2026-06-08) first issue, then CORRECTED same-session after operator
 
 ### dr2-pencil-rigidity-reduction  ·  current `dr2-pencil-rigidity-reduction-260608-v1.0.tex.txt`
 
@@ -213,4 +213,4 @@ An operator adversarial review (2026-06-06; reviews/2026-06-06-b5-adversarial-re
 - `runs/260608-dr2-cross-energy-lemma/`
 - `runs/260608-dr2-decoupling-exponent/`
 
-<!-- generated 2026-06-08T08:58:46Z -->
+<!-- generated 2026-06-08T09:07:20Z -->

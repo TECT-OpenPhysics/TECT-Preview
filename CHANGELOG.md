@@ -5,6 +5,23 @@ not pillar counts.
 
 ---
 
+## [DR-2 decoupling note CORRECTED after operator audit (downgraded; NO flip)] - 2026-06-08
+
+- **Operator critical audit** (reviews/2026-06-08-dr2-decoupling-critical-audit.md) found a FATAL error in
+  the prior-entry decoupling closure and three corrections; all UPHELD and actioned. The prior 'T6 PROVED
+  CONDITIONAL' DR-2 closure is RETRACTED. No tier/gate flip is or was performed.
+- **Fix 1 (fatal)**: `E_+ = int_{[0,1]^3}|f|^4` is FALSE -- torus orthogonality needs integer frequencies,
+  but `q in S^2` is non-integer. Corrected (note Section 2) to the Besicovitch mean / Schwartz majorant
+  `E_+ <= C int |f|^4 eta_R`, which is what decoupling controls.
+- **Fix 2**: the non-separated multi-scale reduction (load-bearing for arbitrary `Q`) was omitted; now
+  written (Section 4) with the CROSS-SCALE energy step marked OPEN. So the UNRESTRICTED DR-2 is T3 PROOF
+  SKETCH; only the delta-SEPARATED case is T6 PROVED CONDITIONAL on decoupling.
+- **Fix 3**: `N^{2+eps}` distinguished from `N^2 log^B N` (Section 5); the route delivers `N^{2+eps}`.
+- **Ledger**: R-022 downgraded T6 -> T4; DR2-SHARE annotation corrected (NO flip); B5 stays T5, B1 stays
+  T6, and H-ADM-COH STAYS in the B1 hypothesis set. Numerics (exponent ~2 sphere vs ~3 flat) and the
+  curvature/R-007 mechanism stand as supporting evidence.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [DR-2 closed conditional on l2-decoupling (T6 PROVED CONDITIONAL); pending operator sign-off] - 2026-06-08
 
 - **Operator directive** ('try closing DR-2 via decoupling'). dr2-decoupling-closure v1.0 (B5 note; FORM-CHECK
