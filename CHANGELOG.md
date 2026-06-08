@@ -5,6 +5,15 @@ not pillar counts.
 
 ---
 
+## [scscope-floor-sharpening v1.1 -> v1.2: de-candidate title/status + v_t derivation tidy] - 2026-06-08
+
+- **Operator review**: (1) the title/top-Status still read 'STRONG EVIDENCE / CANDIDATE' inconsistent with the
+  enacted lift; (2) tidy the Section 5 derivation via the intermediate v_t=sum_{u+v=t}A_uA_v (w_t=lambda' v_t) so
+  Lemma A is applied to the lambda'-free v_t and lambda'^2 cancels cleanly in K=sum_{t!=0}w_t^2/(lambda'I)^2<=T'(M).
+- **v1.2 re-issue** (minor bump, FORM-CHECK PASS; v1.1 superseded): both points applied; no result change. Current-
+  pointer refs (R-029, GATES, B1 card, review) bumped to v1.2. Status unchanged: SC-SCOPE LIFTED, B1 T6 on
+  {H-LAYER}; third-cumulant estimate-grade caveat retained. release_check PASS, pytest 3/3.
+
 ## [SC-SCOPE LIFTED (operator-enacted): reconciliation K_floor<=T' proved; B1 -> {H-LAYER}, T6 unchanged] - 2026-06-08
 
 - **Operator decision** (reviews/2026-06-08-scscope-lift-authorization.md): the reconciliation passed, so per the

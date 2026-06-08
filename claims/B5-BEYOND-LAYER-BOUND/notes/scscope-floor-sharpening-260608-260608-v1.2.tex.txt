@@ -1,10 +1,13 @@
-% SUPERSEDED by scscope-floor-sharpening-260608-260608-v1.2.tex.txt
 % =============================================================================
-% Title: The SC-SCOPE endpoint floor is not tight -- sharpening it via the
-%        additive-energy result closes the all-orders endpoint (candidate)
+% Title: SC-SCOPE endpoint floor sharpening -- constant-map reconciliation and
+%        the all-orders endpoint lift
 % Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders lift; bears on B1-RH-ENUM)
-% Version: v1.1 -- first issued 2026-06-08; this version issued 2026-06-08
-% Status: STRONG EVIDENCE / CANDIDATE lift of the SC-SCOPE all-orders endpoint.
+% Version: v1.2 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: SC-SCOPE all-orders endpoint LIFT ENACTED (operator-authorised) after
+%   the constant-map reconciliation. The floor obstruction is removed by
+%   K <= T'(M) (proved + verified); the lift remains ESTIMATE-grade in the
+%   third-cumulant inflation R_s,R_q. B1 active hypotheses {H-LAYER,SC-SCOPE} ->
+%   {H-LAYER}, tier T6 unchanged. (Prior arc context below.)
 %   The prior arc (scscope-joint-pairing v1.0) exhausted the THIRD-order route
 %   (paired x0.905) and named the only remaining route as a sharper STEP-5B
 %   endpoint floor rho >~ 3.9. This note completes that route: the floor
@@ -44,6 +47,11 @@
 %        Operator AUTHORISED the lift on this reconciliation: SC-SCOPE removed
 %        from B1's active hypothesis set, {H-LAYER,SC-SCOPE}->{H-LAYER}, B1 T6
 %        unchanged. v1.0 superseded.
+%   v1.2 (2026-06-08) operator review: (1) title/top-Status de-candidate'd to
+%        the enacted-lift wording; (2) Section 5 derivation tidied via the
+%        intermediate v_t=sum_{u+v=t}A_uA_v (w_t=lambda' v_t), so Lemma A is
+%        applied to the lambda'-free v_t and the lambda'^2 cancels cleanly in K.
+%        No result change. v1.1 superseded.
 % =============================================================================
 
 \sloppy
@@ -113,9 +121,11 @@ quantity and is unchanged.
 The constant map is now pinned EXACTLY. In the STEP-5B convention
 $w_t=\lambda'\sum_{u+v=t}A_uA_v$ and, by the Parseval reformulation,
 $\sum_{t\ne0}w_t^2=\lambda'^2(\langle F^4\rangle-4I^2)$, so the floor's
-additive-energy constant is exactly $K=\sum_{t\ne0}w_t^2/(\lambda'I)^2$. The
-weighted Lemma A (R-027) gives, for its $t\ne0$ part,
-$\sum_{t\ne0}|w_t|^2\le T'(M)\,I^2$, hence
+additive-energy constant is exactly $K=\sum_{t\ne0}w_t^2/(\lambda'I)^2$. Writing
+$v_t=\sum_{u+v=t}A_uA_v$ (so $w_t=\lambda'v_t$), the weighted Lemma A (R-027)
+applied to the $\lambda'$-free $v_t$ gives, for its $t\ne0$ part,
+$\sum_{t\ne0}|v_t|^2\le T'(M)\,I^2$; hence
+$\sum_{t\ne0}|w_t|^2=\lambda'^2\sum_{t\ne0}|v_t|^2\le T'(M)(\lambda'I)^2$ and
 \[
 \boxed{\ K=\frac{\sum_{t\ne0}w_t^2}{(\lambda'I)^2}\ \le\ T'(M)\ }
 \]
