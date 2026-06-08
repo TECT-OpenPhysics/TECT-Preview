@@ -5,6 +5,26 @@ not pillar counts.
 
 ---
 
+## [DR-2 closed conditional on l2-decoupling (T6 PROVED CONDITIONAL); pending operator sign-off] - 2026-06-08
+
+- **Operator directive** ('try closing DR-2 via decoupling'). dr2-decoupling-closure v1.0 (B5 note; FORM-CHECK
+  PASS) + codes/vacuum/dr2_decoupling_exponent.py (4/4). RECOMMENDED closure; NO gate/tier flip performed.
+- **Result (R-022, T6 PROVED CONDITIONAL)**: the unrestricted-class DR-2 bound `E_+(Q) <=_eps N^{2+eps}` for
+  arbitrary finite `Q in S^2` follows from Bourgain-Demeter l2-decoupling for the sphere in R^3 at the
+  critical exponent `p=4` (additive energy = L^4 norm) + multi-scale reduction + R-008 weighted lift. The
+  PSM/Pencil-Rigidity conjecture (dr2-pencil-rigidity-reduction v1.0) is thereby PROVABLE, not open; its
+  cross-energy lemma R-021 stands.
+- **Curvature mechanism + numerics**: height-quadratic => sum-of-squares conservation => rectangle rigidity
+  (R-007), sharpening the unconditional `N^{5/2}` to `N^{2+eps}`. Confirmed: empirical exponent ~2 on the
+  sphere (great-circle/cap-grid/random 2.03/1.95/2.01) vs ~3 for the SAME grid kept flat (2.98) -- a direct
+  curvature demonstration.
+- **Honest scope**: decoupling is INVOKED, not reproved (T6 conditional, not T7); the bound is `N^{2+eps}`
+  (the `log^B` form is a known separate sharpening); the multi-scale reduction is cited. NO DR2-SHARE flip
+  and NO B5/B1 elevation -- RECOMMENDED pending operator sign-off. B5 stays T5, B1 stays T6.
+- **Consequence if signed off**: unrestricted STEP-5B closure becomes available without H-ADM-COH; B1 could
+  drop H-ADM-COH from its hypothesis set. Operator decision.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [DR-2 residual formalised (Tier-2/3): cross-energy lemma R-021 + Pencil Rigidity/PSM conjecture + reduction] - 2026-06-08
 
 - **Operator-directed Tier-2/3 incorporation** of the external DR-2 research. dr2-pencil-rigidity-reduction
