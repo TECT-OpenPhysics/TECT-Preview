@@ -5,6 +5,17 @@ not pillar counts.
 
 ---
 
+## [ESTIMATOR-UPGRADE closure consolidation accepted (operator review) + provenance audit] - 2026-06-07
+
+- **Operator review** (reviews/2026-06-07-estimator-upgrade-closure-consolidation-review.md) ACCEPTED the
+  closure consolidation: 'Accept closure. Move on from ESTIMATOR-UPGRADE.' No tier change.
+- **Provenance audit** (codes/vacuum/consolidation_provenance_audit.py, 12/12): every headline number in
+  estimator-upgrade-closure-consolidation v1.0 is cross-checked against its SOURCE run JSON artefact and
+  matches (binding kappa 0.851; LAM/BCC continuum +8.8e-7/+2.5e-7; diagonal +3.9e-5/+1.2e-4; anchored
+  +6.7e-4/+4.6e-4/bulk +1.3e-3; kappa 5.16/3.86). Addresses review point 3 (independent-audit prompt).
+- **Status confirmed**: ESTIMATOR-UPGRADE CLOSED@CONTROLLED-ERROR (strong-evidence, not T7); B1-RH-ENUM
+  T6 CONDITIONAL unchanged; open_gates [G3PB-III].
+
 ## [ESTIMATOR-UPGRADE CLOSED@CONTROLLED-ERROR -- bulk-anchored continuum refinement + clean closure] - 2026-06-07
 
 - **Operator-authorized closure** ('close cleanly'). ESTIMATOR-UPGRADE: OPEN -> CLOSED@CONTROLLED-ERROR.

@@ -6,7 +6,7 @@
 
 Generated: 2026-06-08
 
-**373 artefacts** · superseded versions kept: 40 · machine-readable twin: `verification/catalog.json`
+**376 artefacts** · superseded versions kept: 40 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -18,7 +18,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-CONV/LINEAGE.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `c16a9a75d13b` |
 | `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `3f928a41f2cf` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `2292f9db20e7` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `10693876e463` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `d0e83774ac85` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `af9e54809945` |
@@ -305,6 +305,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/runs/260606-robustness-mu2-step5b/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `cf7cdca05941` |
 | `claims/B1-RH-ENUM/runs/260606-robustness-mu2/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `64ab54e07ce0` |
 | `claims/B1-RH-ENUM/runs/260606-useries-checks/result.json` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | — | ACTIVE | `4a333d0f6e92` |
+| `claims/B1-RH-ENUM/runs/260607-consolidation-provenance-audit/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `843a2c105543` |
 | `claims/B1-RH-ENUM/runs/260607-estimator-upgrade-enumerated/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `f542695d5c68` |
 | `claims/B1-RH-ENUM/runs/260607-estimator-upgrade-knobs/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `1c5eb03dbc2a` |
 | `claims/B1-RH-ENUM/runs/260607-robustness-mu2-margin-recompute/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `189c0ec458c4` |
@@ -327,6 +328,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `codes/README.md` | — | — | — | — | ACTIVE | `1a99dfac3bfc` |
 | `codes/vacuum/beyond_layer_gershgorin_bound.py` | — | — | — | — | ACTIVE | `81c5ab7e597e` |
+| `codes/vacuum/consolidation_provenance_audit.py` | — | 2026-06-07 | — | v1.0.0 | ACTIVE | `9b40ae3d41c8` |
 | `codes/vacuum/estimator_upgrade_enumerated.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `88ab67c8c1cd` |
 | `codes/vacuum/estimator_upgrade_knobs.py` | — | — | — | — | ACTIVE | `0a2259e16d9f` |
 | `codes/vacuum/ha0_sign_decomposition.py` | — | 2026-06-06 | 2026-06-06 | v1.1.0 | ACTIVE | `f910f99b290d` |
@@ -408,7 +410,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `bde350730db6` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `a525cbec4713` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `f7b79d5f50d4` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `b8435e52bc62` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -437,13 +439,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/2026-06-06-stale-language-round2-review.md` | — | — | — | — | ACTIVE | `74c1d85cdea6` |
 | `reviews/2026-06-06-v21-v11-reissue-review.md` | — | — | — | — | ACTIVE | `b8dc0f01cd31` |
 | `reviews/2026-06-07-estimator-upgrade-and-scscope-acceptance-review.md` | — | — | — | — | ACTIVE | `177d12252c47` |
+| `reviews/2026-06-07-estimator-upgrade-closure-consolidation-review.md` | — | — | — | — | ACTIVE | `a7c5bc09768f` |
 | `reviews/2026-06-07-estimator-upgrade-knobs-acceptance-review.md` | — | — | — | — | ACTIVE | `bf9245082ec8` |
 | `reviews/2026-06-07-exact-wick-bracket-closure-review.md` | — | — | — | — | ACTIVE | `5bfef62cac2d` |
 | `reviews/2026-06-07-robustness-close-authorization-review.md` | — | — | — | — | ACTIVE | `ed7a02c83882` |
 | `reviews/2026-06-07-scscope-endpoint-arc-closure-review.md` | — | — | — | — | ACTIVE | `0f58ff5c0463` |
 | `reviews/2026-06-07-scscope-robustness-advances-review.md` | — | — | — | — | ACTIVE | `6929e7e0d449` |
 | `reviews/2026-06-07-twoshell-continuum-bound-and-corrections-review.md` | — | — | — | — | ACTIVE | `6e9790773c81` |
-| `reviews/README.md` | — | — | — | — | ACTIVE | `a153e95945a0` |
+| `reviews/README.md` | — | — | — | — | ACTIVE | `7566ccdaa037` |
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
