@@ -6,7 +6,7 @@
 
 Generated: 2026-06-08
 
-**376 artefacts** · superseded versions kept: 40 · machine-readable twin: `verification/catalog.json`
+**380 artefacts** · superseded versions kept: 40 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -18,10 +18,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-CONV/LINEAGE.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `c16a9a75d13b` |
 | `claims/A1-KERNEL-CONV/claim.md` | A1-KERNEL-CONV | — | — | — | ACTIVE | `3f928a41f2cf` |
 | `claims/A1-KERNEL-CONV/status.json` | A1-KERNEL-CONV | — | — | — | ACTIVE | `2292f9db20e7` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `d0e83774ac85` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `f7e93265d896` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `af9e54809945` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `0a16acbdd696` |
 | `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `c5f2abb0a0df` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
 | `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `b4ae737eb5d2` |
@@ -90,6 +90,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/notes/estimator-upgrade-enumerated-260607-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `5792261b7f26` |
 | `claims/B1-RH-ENUM/notes/estimator-upgrade-knobs-260607-v1.0.pdf` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `690b6ef3a8b6` |
 | `claims/B1-RH-ENUM/notes/estimator-upgrade-knobs-260607-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `d5f48b6490d4` |
+| `claims/B1-RH-ENUM/notes/g3pb3-ratio-closure-260608-v1.0.pdf` | B1-RH-ENUM | 2026-06-08 | 2026-06-08 | v1.0 | ACTIVE | `cccd8c076cf8` |
+| `claims/B1-RH-ENUM/notes/g3pb3-ratio-closure-260608-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-08 | 2026-06-08 | v1.0 | ACTIVE | `0819bb68bcda` |
 | `claims/B1-RH-ENUM/notes/neargap-common-mode-resolution-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `19d8b82da1ea` |
 | `claims/B1-RH-ENUM/notes/neargap-common-mode-resolution-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `f5acb4f24503` |
 | `claims/B1-RH-ENUM/notes/neargap-protection-lemma-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `91a57bf674bb` |
@@ -312,6 +314,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/runs/260607-twoshell-anchored-bracket/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `fc82da7886e6` |
 | `claims/B1-RH-ENUM/runs/260607-twoshell-anchored-continuum/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `a6426fb5b0c0` |
 | `claims/B1-RH-ENUM/runs/260607-twoshell-continuum-bound/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `af0e47d8d7a6` |
+| `claims/B1-RH-ENUM/runs/260608-g3pb3-ratio-extraction/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `3caa63ce9539` |
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/audit_recheck.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `2bd9a49f14d4` |
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/step5_class_closure.json` | B2-PROPA-HLAYER | 2026-06-04 | 2026-06-04 | — | ACTIVE | `5db00cd0f578` |
 | `claims/B2-PROPA-HLAYER/runs/260605-migration-revalidation/summary.json` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | — | ACTIVE | `461bb94f9dd3` |
@@ -331,6 +334,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/consolidation_provenance_audit.py` | — | 2026-06-07 | — | v1.0.0 | ACTIVE | `9b40ae3d41c8` |
 | `codes/vacuum/estimator_upgrade_enumerated.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `88ab67c8c1cd` |
 | `codes/vacuum/estimator_upgrade_knobs.py` | — | — | — | — | ACTIVE | `0a2259e16d9f` |
+| `codes/vacuum/g3pb3_ratio_extraction.py` | — | 2026-06-08 | — | v1.0.0 | ACTIVE | `d226520bf694` |
 | `codes/vacuum/ha0_sign_decomposition.py` | — | 2026-06-06 | 2026-06-06 | v1.1.0 | ACTIVE | `f910f99b290d` |
 | `codes/vacuum/neargap_common_mode_repair.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `025ad32b1bb3` |
 | `codes/vacuum/robustness_mu2_margin_recompute.py` | — | 2026-06-07 | 2026-06-07 | v1.1.0 | ACTIVE | `c5f78af5d6d5` |
@@ -387,7 +391,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `d500f88a0c4a` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `4224515980a1` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `52cc2044082d` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `cbec7c31ebdc` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `517c2a94fed1` |
@@ -410,12 +414,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `a525cbec4713` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `f7b79d5f50d4` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `542ea219f793` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `34408bc763eb` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `b8435e52bc62` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `9c682144e2f1` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `ba9dc1fd8fc8` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `0266dadcab4d` |

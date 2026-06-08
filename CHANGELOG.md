@@ -5,6 +5,21 @@ not pillar counts.
 
 ---
 
+## [G3PB-III CLOSED@CROSS-CHECK -- {200}/{110} physical ratio in the no-condensate box; B1 has no open gates] - 2026-06-08
+
+- **Operator-directed closure** ('proceed with G3PB-III'). G3PB-III (G3'-b(iii)): OPEN -> CLOSED@CROSS-CHECK.
+  B1-RH-ENUM tier UNCHANGED (T6 CONDITIONAL on {H-LAYER, H-ADM-COH, SC-SCOPE}); open_gates now [] (NONE).
+- **{200}/{110} ratio cross-check** (g3pb3-ratio-closure v1.0; codes/vacuum/g3pb3_ratio_extraction.py 6/6):
+  the physical {200} response A2*(A1)=argmin_{A2,M} dF_anchored at r=0.219 is on the negative (sextic-driven)
+  branch with |A2*|<=0.08, |rho|<=0.57, INSIDE the continuum-certified box |A1|,|A2|<=0.16; dF_anchored>0
+  along the physical-ratio trajectory (A1=0.14 optimum A2*=-0.080 matches Math434's audited -0.065+/-0.015).
+- **Closure logic**: combined with the whole-box exact-Wick continuum no-condensate (twoshell-anchored-
+  continuum v1.0), Reading-H wins at the physical ratio. Scope {110}+{200} truncation (AddF N=64 raw not
+  migrated; ratio from the validated exact engine); higher shells = separate G3'-b(i)/(ii). RESULTS-LEDGER R-020.
+- **Milestone**: B1-RH-ENUM now has NO open gates -- all non-hypothesis gates (STEP-5B, ESTIMATOR-UPGRADE,
+  G3PB-III) are closed; the remaining levers are the three named hypotheses.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [ESTIMATOR-UPGRADE closure consolidation accepted (operator review) + provenance audit] - 2026-06-07
 
 - **Operator review** (reviews/2026-06-07-estimator-upgrade-closure-consolidation-review.md) ACCEPTED the

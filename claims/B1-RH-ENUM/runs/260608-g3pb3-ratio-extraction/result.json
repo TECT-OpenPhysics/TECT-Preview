@@ -1,0 +1,91 @@
+{
+  "script": "g3pb3_ratio_extraction.py",
+  "version": "1.0.0",
+  "engine_validation_max_rel": 5.079942593185256e-08,
+  "b1_point": {
+    "R": 0.2190336473068255,
+    "rR": 0.419271311111732,
+    "MR": 0.09600297182364496
+  },
+  "box": {
+    "A1": 0.16,
+    "A2": 0.16
+  },
+  "rows": [
+    {
+      "A1": 0.06,
+      "A2star": -0.015999999999999986,
+      "rho": -0.26666666666666644,
+      "dF_min": 0.011423227253849581,
+      "in_box": true,
+      "M_over_MR": 0.7
+    },
+    {
+      "A1": 0.08,
+      "A2star": -0.015999999999999986,
+      "rho": -0.19999999999999982,
+      "dF_min": 0.023056700323802644,
+      "in_box": true,
+      "M_over_MR": 0.7
+    },
+    {
+      "A1": 0.1,
+      "A2star": -0.048,
+      "rho": -0.48,
+      "dF_min": 0.043652337852821715,
+      "in_box": true,
+      "M_over_MR": 0.7
+    },
+    {
+      "A1": 0.12,
+      "A2star": -0.064,
+      "rho": -0.5333333333333333,
+      "dF_min": 0.07896410291479404,
+      "in_box": true,
+      "M_over_MR": 0.7
+    },
+    {
+      "A1": 0.14,
+      "A2star": -0.08,
+      "rho": -0.5714285714285714,
+      "dF_min": 0.1397557774737487,
+      "in_box": true,
+      "M_over_MR": 0.7
+    }
+  ],
+  "rho_abs_max": 0.5714285714285714,
+  "A2star_abs_max": 0.08,
+  "claims": [
+    {
+      "name": "engine_validated",
+      "passed": true,
+      "detail": "(max rel error vs Math432 brackets = 5.08e-08)"
+    },
+    {
+      "name": "physical_ratio_in_box",
+      "passed": true,
+      "detail": "(the physical {200} response (A1, A2*(A1)) lies inside the continuum-certified box |A1|,|A2|<=0.16 for every probed A1: the physical operating point is covered by the no-condensate continuum result)"
+    },
+    {
+      "name": "no_condensate_at_physical_ratio",
+      "passed": true,
+      "detail": "(dF_anchored at the physical {200}/{110} ratio (the per-row minimum over A2,M) is > 0 for every A1: Reading-H wins even at the most-favourable secondary-shell response)"
+    },
+    {
+      "name": "ratio_modest_negative_branch",
+      "passed": true,
+      "detail": "(the physical {200} response is on the NEGATIVE branch (sextic-driven, per Math434) with |A2*|_max=0.0800 < 0.16 and |rho|_max=0.571: the {200} shell is suppressed relative to {110}, well interior to the box)"
+    },
+    {
+      "name": "sanity_matches_math434_A1_0p14",
+      "passed": true,
+      "detail": "(A1=0.14 physical A2*=-0.0800 is on the negative branch near Math434's audited per-row optimum A2 ~ -0.065 +/- 0.015)"
+    },
+    {
+      "name": "sanity_continuum_consistency",
+      "passed": true,
+      "detail": "(every per-row min exceeds the diagonal whole-box min 3.9e-5: consistent with the exact-Wick continuum no-condensate of twoshell-anchored-continuum v1.0)"
+    }
+  ],
+  "all_pass": true
+}
