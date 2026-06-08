@@ -34,5 +34,5 @@ branch; it is not needed for the B1 mainline.
 - B1-RH-ENUM/status.json: hypotheses -> {H-LAYER, SC-SCOPE}; scope/falsifier/no_overclaim updated;
   tier UNCHANGED T6 (hypothesis-set reduction strengthens the conditional claim).
 - GATES.md: H-ADM-COH -> DISCHARGED@lattice; DR2-SHARE -> MOOT@lattice / OPEN@arbitrary.
-- dr2-hadmcoh-discharge-decision re-issued v1.0 -> v1.1 (operator ACCEPTED; flip enacted).
+- dr2-hadmcoh-discharge-decision re-issued v1.0 -> v1.1 (operator ACCEPTED; flip enacted) -> v1.2 ((beta) self-review consistency fix).
 - DR-2 programme chronicle written (dr2-programme-consolidation v1.0).

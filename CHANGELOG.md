@@ -5,6 +5,16 @@ not pillar counts.
 
 ---
 
+## [dr2-hadmcoh-discharge-decision v1.1 -> v1.2: self-review (beta) consistency fix] - 2026-06-08
+
+- **Operator review**: v1.1's self-review objection (beta) still carried the v1.0 'DISCHARGE-CANDIDATE /
+  enacting no flip' wording, inconsistent with v1.1's enacted status (banner/Section 6/footer all said enacted).
+- **v1.2 re-issue** (minor bump, FORM-CHECK PASS; v1.1 superseded): (beta) now states the enacted reduction
+  explicitly -- {H-LAYER,H-ADM-COH,SC-SCOPE} -> {H-LAYER,SC-SCOPE}, B1 tier UNCHANGED T6, only the active
+  hypothesis set reduced. No other content change. Current-pointer refs (RESULTS-LEDGER R-028, GATES, B1 card,
+  review archive) bumped to v1.2. Status unchanged: H-ADM-COH DISCHARGED@lattice, B1 T6 on {H-LAYER,SC-SCOPE}.
+  release_check PASS, pytest 3/3.
+
 ## [H-ADM-COH DISCHARGED@lattice (operator-enacted): B1 -> {H-LAYER, SC-SCOPE}, T6 unchanged; DR-2 programme chronicle] - 2026-06-08
 
 - **Operator decision** (reviews/2026-06-08-hadmcoh-discharge-authorization.md): accept residuals (a)-(c) and

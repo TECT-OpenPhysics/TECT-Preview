@@ -1,9 +1,8 @@
-% SUPERSEDED by dr2-hadmcoh-discharge-decision-260608-260608-v1.2.tex.txt
 % =============================================================================
 % Title: Discharge decision for H-ADM-COH on the crystallographic competitor
 %        class -- the finite-margin integration of DR-2 into STEP-5B
 % Claim: B5-BEYOND-LAYER-BOUND (B1-RH-ENUM hypothesis-set reduction; STEP-5B)
-% Version: v1.1 -- first issued 2026-06-08; this version issued 2026-06-08
+% Version: v1.2 -- first issued 2026-06-08; this version issued 2026-06-08
 % Status: the operator-requested integration DECISION note. It assembles the
 %   discharge of H-ADM-COH for the physical (crystallographic momentum-shell)
 %   competitor class from R-026 (lattice additive-energy DR-2, T7) and R-027
@@ -32,6 +31,11 @@
 %        {H-LAYER,H-ADM-COH,SC-SCOPE} -> {H-LAYER,SC-SCOPE}, tier UNCHANGED T6;
 %        H-ADM-COH = DISCHARGED@lattice; DR2-SHARE = MOOT@lattice / OPEN@arbitrary.
 %        v1.0 superseded. Script dr2_hadmcoh_margin.py (3/3).
+%   v1.2 (2026-06-08) operator review: fix the stale self-review objection
+%        (beta), which still carried the v1.0 'DISCHARGE-CANDIDATE / enacting
+%        no flip' wording inconsistent with v1.1's enacted status. Now states
+%        the enacted reduction explicitly. No other content change. v1.1
+%        superseded.
 % =============================================================================
 
 \sloppy
@@ -144,9 +148,11 @@ $K(n)\le8+c_R\sqrt n$ are quoted from beyond-layer-gershgorin-reduction v2.0;
 the margin claim is robust to the exact constant because $K_{\rm adm}/K_{\rm
 allowed}\le0.1$ leaves an order of magnitude of slack. If the operator's
 canonical $c_R$ differs by an $O(1)$ factor the conclusion stands.
-\item[($\beta$)] \emph{``This silently discharges H-ADM-COH.''} It does NOT:
-\S6 records H-ADM-COH as DISCHARGE-CANDIDATE and B1 as UNCHANGED T6, enacting no
-flip. The discharge is the operator's decision.
+\item[($\beta$)] \emph{``This silently discharges H-ADM-COH.''} DISMISSED:
+the discharge is not silent. \S6 records the explicit operator acceptance and
+the enacted hypothesis-set reduction
+$\{H\text{-LAYER},H\text{-ADM-COH},SC\text{-SCOPE}\}\to\{H\text{-LAYER},SC\text{-SCOPE}\}$;
+the B1 tier remains T6, only the active hypothesis set is reduced.
 \item[($\gamma$)] \emph{``Sub-patterns could have a rich circle violating the
 margin.''} Checked: $T'(Q')\le\min(|Q'|,T'(\text{shell}))$, and both branches
 sit below $8+c_R\sqrt{|Q'|}$ (small $n$: $T'\le n\le8+c_R\sqrt n$ up to
