@@ -1,0 +1,37 @@
+{
+  "script": "scscope_joint_correction.py",
+  "version": "1.0.0",
+  "rho_threshold": 9.857461538461529,
+  "joint_at_6p55": 0.9450971528972211,
+  "joint_at_rho_cons": 0.9451638408027973,
+  "joint_at_rho_ver": 1.0256958084050296,
+  "saturation": 1.1299985519407554,
+  "claims": [
+    {
+      "name": "reproduces_original_negative",
+      "passed": true,
+      "detail": "(additive joint at rho=2.6 = x0.757 reproduces the scscope_joint_endpoint x0.757)"
+    },
+    {
+      "name": "additive_saturates",
+      "passed": true,
+      "detail": "(additive joint -> x1.130 as rho->inf (sunset-limited), NOT linear in rho: the pairing formula rho/2.872 was a local approximation, wrong when extrapolated)"
+    },
+    {
+      "name": "conservative_does_not_close",
+      "passed": true,
+      "detail": "(K_floor<=T'<=n_pack=40.7 => rho_lat=6.55 => additive joint x0.945 < 1 -- the floor sharpening alone does NOT close the endpoint under the correct bookkeeping)"
+    },
+    {
+      "name": "verified_ratio_marginal",
+      "passed": true,
+      "detail": "(K_floor=0.52T' (verified on tiny shells) => rho_lat=12.60 => x1.026 -- marginal (<x1.05), too thin and ratio-dependent to claim a lift)"
+    },
+    {
+      "name": "threshold_is_9p85_not_3p9",
+      "passed": true,
+      "detail": "(additive bookkeeping needs rho >= 9.86 (NOT the 3.9 my note used); requires K_floor <= 27.1, i.e. T' <= 27 (or <= 52 with the 0.52 ratio))"
+    }
+  ],
+  "all_pass": true
+}

@@ -1,14 +1,18 @@
-% SUPERSEDED by scscope-floor-sharpening-260608-260608-v1.3.tex.txt
 % =============================================================================
-% Title: SC-SCOPE endpoint floor sharpening -- constant-map reconciliation and
-%        the all-orders endpoint lift
+% Title: SC-SCOPE endpoint floor sharpening -- the reconciliation (proved) and
+%        the endpoint partial advance (LIFT RETRACTED)
 % Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders lift; bears on B1-RH-ENUM)
-% Version: v1.2 -- first issued 2026-06-08; this version issued 2026-06-08
-% Status: SC-SCOPE all-orders endpoint LIFT ENACTED (operator-authorised) after
-%   the constant-map reconciliation. The floor obstruction is removed by
-%   K <= T'(M) (proved + verified); the lift remains ESTIMATE-grade in the
-%   third-cumulant inflation R_s,R_q. B1 active hypotheses {H-LAYER,SC-SCOPE} ->
-%   {H-LAYER}, tier T6 unchanged. (Prior arc context below.)
+% Version: v1.3 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: PARTIAL ADVANCE -- the LIFT is RETRACTED (self-caught error). The
+%   constant-map reconciliation K<=T'(M) (Section 5) is PROVED + verified and
+%   STANDS. But the v1.1/v1.2 LIFT used paired=rho/(1+max[R_s+R_q])=rho/2.872, a
+%   LOCAL approximation at rho=2.6; the physically-correct ADDITIVE bookkeeping
+%   (sunset = ABSOLUTE cost C_sunset=composed/1.13) SATURATES and gives only
+%   x0.945 (conservative K<=T') .. x1.026 (verified 0.52T') at the sharpened
+%   floor -- MARGINAL, NOT a closure (threshold rho>=9.85, not 3.9). The proved
+%   floor sharpening is a real PARTIAL advance (additive joint x0.757 ->
+%   x0.95-1.03). SC-SCOPE RESTORED as a B1 hypothesis: {H-LAYER}->{H-LAYER,
+%   SC-SCOPE}, tier UNCHANGED T6. AUDIT-2026-06-08-scscope-lift-overclaim.
 %   The prior arc (scscope-joint-pairing v1.0) exhausted the THIRD-order route
 %   (paired x0.905) and named the only remaining route as a sharper STEP-5B
 %   endpoint floor rho >~ 3.9. This note completes that route: the floor
@@ -53,6 +57,12 @@
 %        intermediate v_t=sum_{u+v=t}A_uA_v (w_t=lambda' v_t), so Lemma A is
 %        applied to the lambda'-free v_t and the lambda'^2 cancels cleanly in K.
 %        No result change. v1.1 superseded.
+%   v1.3 (2026-06-08) SELF-CAUGHT CORRECTION: the v1.1/v1.2 LIFT is RETRACTED.
+%        paired=rho/2.872 was a local approximation; the additive bookkeeping
+%        (scscope_joint_endpoint) saturates -> x0.945..x1.026 (marginal), not
+%        the claimed x2.28; threshold rho>=9.85 not 3.9 (scscope_joint_correction
+%        .py 5/5). Section 4/5 corrected; the reconciliation K<=T'(M) (Section 5)
+%        STANDS as a partial advance. SC-SCOPE restored to B1. v1.2 superseded.
 % =============================================================================
 
 \sloppy
@@ -96,26 +106,27 @@ are the SAME $\lambda'$-free quantity $(\langle F^4\rangle-4I^2)/I^2$ (via
 $\sum w^2=\lambda'^2(\langle F^4\rangle-4I^2)$ and $\sum w^2\le K(\lambda'I)^2$),
 so $1+T'$ is a legitimate, tighter substitute.
 
-\section*{4. The sharpened floor closes the endpoint}
+\section*{4. The sharpened floor: a partial advance, NOT a closure}
 
-Substituting the tighter constant, $\rho_{\rm lat}=K_{\rm budget}/(1+T')$:
-\begin{center}
-\begin{tabular}{rrrr}
-$T'$ & $1+T'$ & $\rho_{\rm lat}$ & paired $=\rho_{\rm lat}/2.872$ \\ \hline
-2 & 3 & 88.9 & 30.9 \\
-8 & 9 & 29.6 & 10.3 \\
-$n_{\rm pack}=40.7$ & 41.7 & 6.40 & 2.23 \\
-67 & 68 & 3.92 & 1.37 \\
-92 & 93 & 2.87 & 1.00 \\
-\end{tabular}
-\end{center}
-In the H-ADM-COH-separated regime $T'\le n_{\rm pack}=41$, so
-$\rho_{\rm lat}\ge6.4\ge3.9$ and paired $\ge2.23>1$ -- the all-orders endpoint
-CLOSES. Break-even is $T'\le92$ (paired $\ge1$) and $T'\le67$ ($\rho\ge3.9$). For
-the post-discharge lattice class the measured $T'\sim$ tens ($\le48$ for
-$N\le2040$, R-026), giving paired $\ge1.90$ -- closes with margin. The
-third-order inflation $1+\max[R_s+R_q]=2.872$ is a separate third-cumulant
-quantity and is unchanged.
+\textbf{Correction (v1.3).} v1.1/v1.2 here computed the closure as
+$\text{paired}=\rho_{\rm lat}/(1+\max[R_s+R_q])=\rho_{\rm lat}/2.872$ and
+concluded the endpoint LIFTS. That formula's linear-in-$\rho$ growth is only a
+LOCAL approximation at $\rho=2.6$. The physically-correct accounting
+(scscope\_joint\_endpoint) treats the third-cumulant SUNSET as an ABSOLUTE cost
+$C_{\rm sunset}=\text{composed}/1.13$ that does NOT vanish as the second-order
+floor thickens; the joint ratio therefore SATURATES:
+\[
+\text{joint}(\rho)=\frac{\mathrm{MARGIN}}{C_2+C_{\rm sunset}+C_{\rm quartic}}
+\ \xrightarrow{\ \rho\to\infty\ }\ \times1.13 ,
+\]
+NOT linearly. At the sharpened floor ($K\le T'\le n_{\rm pack}=40.7\Rightarrow
+\rho_{\rm lat}=6.55$) the additive joint is only $\times0.945<1$; the verified
+$K\le0.52\,T'$ gives $\rho_{\rm lat}=12.6$ and $\times1.026$ -- MARGINAL. The
+threshold for $\text{joint}>1$ is $\rho\ge9.85$ (i.e. $K\le27$), not the $3.9$
+the lift used (scscope\_joint\_correction.py, 5/5). So the proved floor
+sharpening is a real PARTIAL advance -- it moves the additive endpoint joint
+from $\times0.757$ to $\times0.95$--$1.03$ -- but does NOT cleanly close the
+endpoint.
 
 \section*{5. Reconciliation (PROVED) and the lift}
 
@@ -135,20 +146,22 @@ kappa-balanced $8+c_R\sqrt n$. Verified (scscope\_constant\_map.py, 3/3) on real
 $\pm k$-symmetric sphere-lattice patterns: $K_{\rm floor}/T'\le0.52$ and $w_0=I$
 exactly (so the $-4I^2$ subtraction is even more conservative, lowering $K$
 further). With $K\le T'\le n_{\rm pack}=40.7$ (separated) or $T'\sim$ tens
-(lattice), $\rho_{\rm lat}=K_{\rm budget}/K\ge266.7/40.7=6.55\ge3.9$ and paired
-$\ge6.55/2.872=2.28>1$. The floor obstruction is PROVED-removed; the SC-SCOPE
-all-orders endpoint LIFTS.
+(lattice), $\rho_{\rm lat}=K_{\rm budget}/K\ge266.7/40.7=6.55$. This is a real,
+PROVED sharpening of the second-order floor; but per \S4 it does NOT close the
+endpoint under the correct additive bookkeeping (it is marginal,
+$\times0.95$--$1.03$). The reconciliation $K\le T'(M)$ STANDS; the LIFT does not.
 
-\textbf{Grade and flip.} The second-order floor obstruction (the SOLE named
-blocker) is now PROVED removed. The all-orders selection's remaining input is the
-third-order inflation $1+\max[R_s+R_q]=2.872$, which is ESTIMATE-grade
-($R_s,R_q$ cited estimates) -- the same basis the operator accepted for the
-$I\le10^{-3}$ feasibility, now extended uniformly to the endpoint. On the
-operator's standing authorisation (lift if the reconciliation passes), SC-SCOPE
-is LIFTED: it is removed from B1's active hypothesis set,
-$\{$H-LAYER, SC-SCOPE$\}\to\{$H-LAYER$\}$, with B1 tier UNCHANGED T6. The
-all-orders scope carries the explicit caveat that the third cumulant is
-controlled at estimate-grade (not rigorously proved).
+\textbf{Grade (v1.3 corrected).} The reconciliation $K\le T'(M)$ is PROVED and
+the second-order floor is genuinely sharpened ($\rho:2.58\to6.55$). But \S4
+shows this does NOT close the all-orders endpoint: under the correct additive
+bookkeeping the sunset saturates the joint at $\times1.13$, and at the sharpened
+floor the joint is only $\times0.945$--$1.026$ (marginal). The LIFT claimed in
+v1.1/v1.2 is therefore RETRACTED. SC-SCOPE is RESTORED as a B1 named hypothesis
+($\{$H-LAYER$\}\to\{$H-LAYER, SC-SCOPE$\}$), B1 tier UNCHANGED T6. This note's
+durable content is the PROVED floor sharpening $K\le T'(M)$ and the resulting
+PARTIAL advance ($\times0.757\to\times0.95$--$1.03$); a clean lift needs either
+$\rho\ge9.85$ ($K\le27$, tighter than $n_{\rm pack}=40.7$) or a rigorous
+third-cumulant bound beating the saturating sunset.
 
 \section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
 

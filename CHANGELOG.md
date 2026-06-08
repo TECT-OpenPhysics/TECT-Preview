@@ -5,6 +5,26 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE lift RETRACTED (self-caught): wrong joint bookkeeping; B1 restored to {H-LAYER, SC-SCOPE}, T6] - 2026-06-08
+
+- **Self-caught error** (during the option-3 rigorization): the SC-SCOPE all-orders endpoint LIFT (prior commit)
+  computed closure as paired = rho_lat/(1+max[R_s+R_q]) = rho_lat/2.872, giving x2.28. That joint-PAIRING formula's
+  linear-in-rho scaling is only a LOCAL approximation at rho=2.6.
+- **Correction** (scscope_joint_correction.py 5/5): the physically-correct ADDITIVE bookkeeping
+  (scscope_joint_endpoint) treats the sunset as an ABSOLUTE third-cumulant cost C_sunset=composed/1.13 that does
+  NOT vanish as the second-order floor thickens; the joint ratio SATURATES at x1.13. At the sharpened floor it is
+  only x0.945 (conservative K_floor<=T') .. x1.026 (verified K_floor<=0.52T') -- MARGINAL, not a closure; the
+  threshold is rho>=9.85 (K<=27), not 3.9.
+- **Retraction enacted**: SC-SCOPE RESTORED as a B1 named hypothesis; B1 {H-LAYER} -> {H-LAYER, SC-SCOPE}, tier
+  UNCHANGED T6. negative-results AUDIT-2026-06-08-scscope-lift-overclaim. scscope-floor-sharpening re-issued
+  v1.2 -> v1.3 (lift retracted; the reconciliation K_floor<=T' STANDS as a partial advance); GATES SC-SCOPE
+  LIFT RETRACTED; B1 card + R-029 updated.
+- **What stands**: the PROVED reconciliation K_floor=sum_{t!=0}w_t^2/(lambda'I)^2 <= T'(M) (R-027 t!=0 part) and
+  the floor sharpening (rho 2.58->6.55) are correct and durable; they move the additive endpoint joint from
+  x0.757 to x0.95-1.03 -- a genuine PARTIAL advance toward closing the SC-SCOPE endpoint, but not closure.
+- **Lesson**: run the conservative/established bookkeeping (not a favorable local formula) before claiming a
+  closure -- the adversarial self-review the meta-feedback requires. release_check PASS, pytest 3/3.
+
 ## [scscope-floor-sharpening v1.1 -> v1.2: de-candidate title/status + v_t derivation tidy] - 2026-06-08
 
 - **Operator review**: (1) the title/top-Status still read 'STRONG EVIDENCE / CANDIDATE' inconsistent with the

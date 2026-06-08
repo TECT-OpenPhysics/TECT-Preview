@@ -6,7 +6,7 @@
 
 Generated: 2026-06-08
 
-**445 artefacts** · superseded versions kept: 49 · machine-readable twin: `verification/catalog.json`
+**449 artefacts** · superseded versions kept: 50 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -21,7 +21,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `f7e93265d896` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `8063fd83e58e` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `45f702710cfc` |
 | `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `c5f2abb0a0df` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
 | `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `b4ae737eb5d2` |
@@ -32,7 +32,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B4-MASS-GAP/LINEAGE.md` | B4-MASS-GAP | — | — | — | ACTIVE | `7f4f98e48ede` |
 | `claims/B4-MASS-GAP/claim.md` | B4-MASS-GAP | — | — | — | ACTIVE | `aa64c40953f6` |
 | `claims/B4-MASS-GAP/status.json` | B4-MASS-GAP | — | — | — | ACTIVE | `fb0abca541cb` |
-| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `1c0d900edb34` |
+| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `5123b36f470f` |
 | `claims/B5-BEYOND-LAYER-BOUND/claim.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0d5279bacfa7` |
 | `claims/B5-BEYOND-LAYER-BOUND/lineage-narrative.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `92b7f96ac6eb` |
 | `claims/B5-BEYOND-LAYER-BOUND/status.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `312691c3302b` |
@@ -229,7 +229,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.1 | ACTIVE | `a139ec68ad98` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.1 | SUPERSEDED | `a2a0d9f7bd8a` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.2.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.2 | ACTIVE | `66693b6612bf` |
-| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.2 | ACTIVE | `f9a88d8f54fa` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.2 | SUPERSEDED | `6d38b2849e21` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.3.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.3 | ACTIVE | `e3605e229b72` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.3 | ACTIVE | `c5209d18f96d` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.0 | ACTIVE | `4ec272201d1c` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.0 | SUPERSEDED | `6297dc624553` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-joint-pairing-260607-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `11b4a7fd44ae` |
@@ -371,6 +373,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-weighted-energy/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `24fa967d7374` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260608-scscope-constant-map/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `8b843834efa8` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260608-scscope-floor-sharpening/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `93fa2cfbcf06` |
+| `claims/B5-BEYOND-LAYER-BOUND/runs/260608-scscope-joint-correction/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `580047b9aea0` |
 
 ## Domain codes
 
@@ -399,6 +402,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/scscope_constant_map.py` | — | 2026-06-08 | — | v1.0.0 | ACTIVE | `b1dbf4a07dbe` |
 | `codes/vacuum/scscope_floor_sharpening.py` | — | 2026-06-08 | — | v1.0.0 | ACTIVE | `f13a8dfbfc92` |
 | `codes/vacuum/scscope_ghat4_pertransfer.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `65e0f5bcd2f6` |
+| `codes/vacuum/scscope_joint_correction.py` | — | 2026-06-08 | — | v1.0.0 | ACTIVE | `85d30a5e55a7` |
 | `codes/vacuum/scscope_joint_endpoint.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `76d9eb244777` |
 | `codes/vacuum/scscope_joint_pairing.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `01c772557394` |
 | `codes/vacuum/scscope_mendpoint_eval.py` | — | 2026-06-07 | 2026-06-07 | v1.1.0 | ACTIVE | `abe68ec081f8` |
@@ -449,8 +453,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `d500f88a0c4a` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `5ccc7b0c4b55` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `cbec7c31ebdc` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `72f250fc6726` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `dd0aa6350475` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
 
@@ -472,12 +476,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `de9f347853b5` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `e6cd54c79515` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `a7fb64af24a9` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `16c1bd1ee8bf` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `b8435e52bc62` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `c448a5b711e3` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `af520a99e0c7` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `0266dadcab4d` |

@@ -29,3 +29,25 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 ## History
 
 - 2026-06-05 — Registry seeded from the legacy record during bootstrap.
+
+## AUDIT-2026-06-08-scscope-lift-overclaim
+
+**Type**: AUDIT (self-caught overclaim; result downgraded, not a counterexample).
+
+**Claim withdrawn**: the SC-SCOPE all-orders endpoint LIFT (scscope-floor-sharpening v1.1/v1.2, R-029;
+B1 {H-LAYER,SC-SCOPE}->{H-LAYER}).
+
+**Error**: the lift computed the endpoint closure as paired = rho_lat/(1+max[R_s+R_q]) = rho_lat/2.872 (the
+joint-PAIRING formula). That formula's linear-in-rho scaling is only a LOCAL approximation at rho=2.6. The
+physically-correct ADDITIVE bookkeeping (scscope_joint_endpoint.py) treats the sunset as an ABSOLUTE third-cumulant
+cost C_sunset = composed/1.13, which does NOT vanish as the second-order floor thickens; the joint ratio therefore
+SATURATES at x1.13 rather than growing linearly. Under it the sharpened floor gives x0.945 (conservative K_floor<=T')
+to x1.026 (verified K_floor<=0.52T') -- MARGINAL, not the claimed x2.28; the true threshold is rho>=9.85, not 3.9.
+
+**Disposition**: SC-SCOPE RESTORED as a B1 named hypothesis; B1 {H-LAYER} -> {H-LAYER, SC-SCOPE}, tier UNCHANGED T6.
+The PROVED floor sharpening (K_floor <= T'(M), R-029) stands as a real PARTIAL advance (additive endpoint joint
+x0.757 -> x0.95-1.03). scscope_joint_correction.py 5/5 verifies the corrected bookkeeping.
+
+**Lesson**: run the conservative/established bookkeeping (not a favorable local formula) before claiming a closure.
+This is the adversarial-self-review the meta-feedback requires; it was omitted in the lift and caught during the
+follow-up rigorization.
