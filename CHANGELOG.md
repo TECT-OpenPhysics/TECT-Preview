@@ -5,6 +5,45 @@ not pillar counts.
 
 ---
 
+## [DR-2 cross-scale induction v1.1 repair: Besicovitch-mean bridge; v1.0 T5 WITHDRAWN -> T4+; still no flip] - 2026-06-08
+
+- **Operator adversarial audit** (reviews/2026-06-08-dr2-cross-scale-induction-audit.md): v1.0's iteration lemma
+  RE-USED the FALSE identity `||f_theta||_4^4 = E_+(Q_theta)` (same class as the corrected torus identity) and
+  described the cap rescaling as landing exactly on the paraboloid. Numerics do not replace the missing bridge.
+  Verdict: not T5; repair the lemma; NO flip.
+- **v1.1 re-issue** (dr2-cross-scale-induction -260608-v1.0 -> -260608-260608-v1.1, FORM-CHECK PASS, 0 overfull;
+  v1.0 superseded): the bridge is now the BESICOVITCH MEAN `M(|f_Q|^4)=E_+(Q)`, EXACT for non-integer `q in S^2`
+  (no torus integrality); decoupling is applied on balls B_R and translate-averaged to the mean. The rescaling is
+  softened to a uniformly-curved C^2 graph patch handled by decoupling STABILITY for nondegenerate C^2
+  perturbations (NOT the literal paraboloid).
+- **Two cited residuals** (R1 local-to-global translate-averaging; R2 multi-scale eps-bookkeeping) replace v1.0's
+  single 'cited bookkeeping'. With both cited, the honest grade is **T4+ STRONG EVIDENCE / T5-candidate**;
+  **v1.0's T5 is WITHDRAWN**. R-024 -> T4+; R-022 unrestricted -> T4+.
+- **Code audit** (dr2_decoupling_iteration.py v1.1, 4/4): added an exact-E_+ audit gate (random set `=2N^2-N`
+  exactly) certifying the estimator, and an explicit PROXY-partition caveat (square bins are NOT geodesic
+  delta^{1/2}-caps -> numerics ILLUSTRATIVE, no tier rests on them).
+- **NO flip**: DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained. Ledgers updated (RESULTS-LEDGER R-024/R-022,
+  GATES DR2-SHARE, B5 card). pytest 3/3, release_check PASS.
+- **Meta**: operator binding feedback (stronger adversarial self-review per document; more thorough code audit;
+  do not forget established rules) recorded as memory feedback-tect-thorough-self-review.
+
+## [DR-2 cross-scale induction written (T4->T5); decoupling-iteration inequality R-024; still no flip] - 2026-06-08
+
+- **Operator directive** ('begin the head-on approach' = write the cross-scale induction). New companion note
+  dr2-cross-scale-induction v1.0 (FORM-CHECK PASS) + codes/vacuum/dr2_decoupling_iteration.py (3/3). NO flip.
+- **R-024 (T5)**: the decoupling-iteration inequality `E_+(Q) <=_eps delta^{-eps}(sum_theta sqrt E_+(Q_theta))^2`
+  over delta^{1/2}-caps, DERIVED from l2-decoupling at p=4 + the v1.1 Schwartz majorant; with the R-023 affine
+  rescaling it recurses arbitrary finite Q to the separated base case (-> N^{2+eps}). Numerically consistent:
+  iteration constant K <= 1.94, scale-stable; the cap partition reduces additive structure ~50x.
+- **The cited step**: the tight per-level constant bookkeeping over O(log N) scales (standard Bourgain-Demeter
+  / Bourgain-Guth) keeping the total loss at N^{O(eps)} is CITED, not reproduced -- which is why this is T5,
+  not T6.
+- **Effect**: the UNRESTRICTED DR-2 is lifted T4 STRONG EVIDENCE -> T5 (structurally-complete reduction; the
+  cross-scale energy summation is now written and numerically consistent). R-022 unrestricted sub-case T4->T5.
+- **STILL NO FLIP**: whether T5 + the cited bookkeeping warrants T6 PROVED CONDITIONAL + a DR2-SHARE flip +
+  removing H-ADM-COH from B1 is an operator decision. DR2-SHARE OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0; release-check PASS; pytest 3.
+
 ## [DR-2 decoupling note v1.1 re-issue (proper versioning) + majorant rigor (operator review)] - 2026-06-08
 
 - **Operator review** (reviews/2026-06-08-dr2-decoupling-corrected-reeval.md) accepted the corrected note as a

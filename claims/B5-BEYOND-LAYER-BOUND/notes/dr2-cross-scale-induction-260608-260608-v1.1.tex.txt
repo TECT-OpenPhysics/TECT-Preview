@@ -1,0 +1,254 @@
+% =============================================================================
+% Title: DR-2 cross-scale induction v1.1 -- Besicovitch-mean repair of the
+%        decoupling-iteration energy bound for arbitrary finite sphere sets
+% Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
+% Version: v1.1 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: REPAIR of v1.0 after operator audit (2026-06-08). v1.0's iteration
+%   lemma re-used the FALSE identity ||f_theta||_4^4 = E_+(Q_theta) (the same
+%   class as the torus-identity error corrected in dr2-decoupling-closure v1.1)
+%   and described the cap rescaling as landing "exactly on the paraboloid".
+%   v1.1 replaces the bridge with the BESICOVITCH MEAN M(F)=limsup_R
+%   (1/|B_R|) int_{B_R} F, for which M(|f_Q|^4)=E_+(Q) holds EXACTLY for any
+%   finite Q in S^2 (no integrality needed), and softens the rescaling to a
+%   uniformly-curved C^2 graph patch handled by decoupling STABILITY. The
+%   residual is now stated as TWO cited-not-reproduced ingredients:
+%   (R1) the decoupling-compatible local-to-global (translate-averaging)
+%   passage that turns ball decoupling into the Besicovitch-mean inequality,
+%   bridging the local cap norm to E_+(Q_theta); (R2) the multi-scale
+%   eps-bookkeeping over O(log N) levels. With BOTH cited, the honest grade is
+%   T4+ STRONG EVIDENCE (structural reduction written) and an explicit
+%   T5-candidate pending operator acceptance of R1+R2. v1.0's premature T5 is
+%   WITHDRAWN. NO gate/tier/hypothesis flip: DR2-SHARE OPEN, B5 T5, B1 T6,
+%   H-ADM-COH retained.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Wrote the cross-scale step; iteration lemma
+%        used ||f_theta||_4^4 = E_+(Q_theta) and "parabolic map sends theta to
+%        a unit paraboloid patch"; graded unrestricted DR-2 T4->T5.
+%   v1.1 (2026-06-08) operator-audit repair. (a) Iteration lemma re-derived via
+%        the Besicovitch mean M(|f_Q|^4)=E_+(Q) (exact for non-integer q),
+%        decoupling applied on balls B_R then averaged over translates to the
+%        mean; the false L^4=E_+ identity is removed. (b) Rescaling softened to
+%        "uniformly-curved C^2 graph patch + decoupling stability for
+%        nondegenerate C^2 perturbations", not "exactly the paraboloid".
+%        (c) Residual split into R1 (local-to-global passage) + R2 (multi-scale
+%        bookkeeping). (d) Grade withdrawn T5 -> T4+ (T5-candidate). Script
+%        dr2_decoupling_iteration.py v1.1 (4/4, with an exact-E_+ code-audit
+%        gate and an explicit PROXY-partition caveat: numerics ILLUSTRATIVE).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+dr2-decoupling-closure v1.1 proved DR-2 for $\delta$-separated $Q\subset S^2$
+(T6 conditional on $\ell^2$-decoupling) and left the arbitrary-$Q$
+(non-separated) case at T4, naming the cross-scale energy summation as the
+residual. v1.0 of THIS note attempted that step but its iteration lemma
+re-used the identity $\|f_\theta\|_{L^4}^4=E_+(Q_\theta)$, which is FALSE for
+$q\in S^2$ (the frequencies are not in $\mathbb Z^3$, so $\int_{[0,1]^3}|f|^4$
+is a product of sinc factors, not the additive-energy Kronecker count). v1.1
+repairs the bridge with the Besicovitch mean and re-grades honestly. It remains
+conditional on the same decoupling black box and reproves nothing about
+decoupling itself.
+
+\section*{2. The Besicovitch-mean bridge and the iteration inequality}
+
+\subsection*{2.1 The exact additive-energy identity (no integrality)}
+
+For a finite set $Q\subset\mathbb R^3$ put $f_Q(x)=\sum_{q\in Q}e(q\cdot x)$,
+$e(t)=e^{2\pi i t}$, and define the Besicovitch mean
+\[
+M(F):=\limsup_{R\to\infty}\frac{1}{|B_R|}\int_{B_R}F(x)\,dx .
+\]
+Since $M\big(e(v\cdot x)\big)=\mathbf 1[v=0]$ for every $v\in\mathbb R^3$
+(for $v\neq0$ the oscillatory integral is $O(R^2)$ against the volume
+$\sim R^3$, hence $\to0$; for $v=0$ it is $1$), expanding
+$|f_Q|^4=\sum_{i,j,k,l}e\big((q_i+q_j-q_k-q_l)\cdot x\big)$ gives
+\[
+\boxed{\,M\big(|f_Q|^4\big)=\#\{(i,j,k,l):q_i+q_j=q_k+q_l\}=E_+(Q)\,}
+\]
+EXACTLY, for ANY finite $Q$ -- integer or not. This is the identity v1.0 was
+missing: the additive energy is the Besicovitch mean of $|f_Q|^4$, not a torus
+$L^4$ norm. The same holds cap-wise, $M(|f_\theta|^4)=E_+(Q_\theta)$.
+
+\subsection*{2.2 The iteration lemma}
+
+\textbf{Lemma (Besicovitch--decoupling iteration).} Let $Q\subset S^2$ be
+finite, $\delta>0$, and let $\{\theta\}$ be the partition of $S^2$ into
+$\delta^{1/2}$-caps, $Q_\theta=Q\cap\theta$. Then, conditional on
+$\ell^2$-decoupling at the critical exponent $p=4$,
+\[
+E_+(Q)\;\lesssim_\epsilon\;\delta^{-\epsilon}
+\Big(\sum_\theta E_+(Q_\theta)^{1/2}\Big)^2 .
+\]
+
+\textbf{Derivation.} Bourgain--Demeter $\ell^2$-decoupling is a LOCAL (ball)
+statement: on any ball $B_R$ with $R\sim\delta^{-1}$ and a Schwartz weight
+$w_{B_R}\ge0$ adapted to $B_R$,
+\[
+\|f_Q\|_{L^4(w_{B_R})}\lesssim_\epsilon\delta^{-\epsilon}
+\Big(\sum_\theta\|f_\theta\|_{L^4(w_{B_R})}^2\Big)^{1/2}.
+\]
+Raise to the fourth power and tile $\mathbb R^3$ by translates
+$\{B_R+y\}$ of $B_R$; each translate obeys the same inequality with the same
+constant. Averaging the fourth powers over the translates and exhausting
+$\mathbb R^3$ ($R\to\infty$ through the tiling) sends the local averages to the
+Besicovitch means: the left side to $M(|f_Q|^4)=E_+(Q)$ and each cap term to
+$M(|f_\theta|^4)=E_+(Q_\theta)$. Hence
+$E_+(Q)\lesssim_\epsilon\delta^{-\epsilon}(\sum_\theta E_+(Q_\theta)^{1/2})^2$.
+$\square$
+
+\emph{Cited (not reproduced) step R1.} The decoupling-compatible passage from
+the ball inequality to the Besicovitch-mean inequality -- i.e. that
+translate-averaging the LOCAL cap norms $\|f_\theta\|_{L^4(w_{B_R})}$ yields the
+GLOBAL $E_+(Q_\theta)$ with a uniform constant -- is the standard
+local-to-global argument for decoupling and is invoked here, not reproved. This
+is the honest replacement for v1.0's false one-line identity: the bridge is now
+correct in form (Besicovitch mean) but its decoupling-compatible execution is
+cited.
+
+\textbf{Numerical consistency} (dr2\_decoupling\_iteration.py v1.1, 4/4,
+ILLUSTRATIVE). A code-audit gate first verifies the additive-energy estimator
+is EXACT (a random sphere set has exactly $2N^2-N$ trivial quadruples). On a
+PROXY cap partition (square $(x,y)$ bins, NOT geodesic $\delta^{1/2}$-caps) the
+constant $K=E_+(Q)/(\sum_\theta E_+(Q_\theta)^{1/2})^2$ stays $\le1.94$ and
+scale-stable (within $\times1.25$ across $n=2,4,8$). This is consistency with a
+mild $\delta^{-\epsilon}$ constant, NOT a faithful decoupling test and NOT a
+proof; no tier rests on it.
+
+\section*{3. The induction-on-scales}
+
+\textbf{Base case (separated).} If $Q$ is $\delta^{1/2}$-separated every cap
+holds $\le1$ point, $E_+(Q_\theta)\le1$, so the Lemma gives
+$E_+(Q)\lesssim_\epsilon\delta^{-\epsilon}N^2$; with $\delta\ge N^{-O(1)}$,
+$E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$ (this is v1.1 \S3).
+
+\textbf{Recursion (clustered).} If a cap $\theta$ holds $m_\theta>1$ points,
+$E_+(Q_\theta)$ is a sub-problem on a $\delta^{1/2}$-cap. The additive energy is
+affine-invariant (R-023): for the affine map $T_\theta$ normalising the cap,
+$E_+(Q_\theta)=E_+(T_\theta Q_\theta)$ EXACTLY. The crucial honesty point
+(v1.0 overstated this): $T_\theta\theta$ is a \emph{uniformly-curved $C^2$ graph
+patch}, NOT literally the standard unit paraboloid. What survives is (i) the
+energy is preserved exactly by the affine map, and (ii) $\ell^2$-decoupling is
+STABLE under nondegenerate $C^2$ perturbations of the paraboloid, so the
+decoupling constant for the rescaled patch is uniform. Thus the Lemma applies to
+the rescaled sub-instance with $m_\theta<N$ points, and the recursion proceeds.
+It terminates when every active cap is separated, depth $O(\log N)$ for sets
+with $\ge N^{-O(1)}$ separations.
+
+\section*{4. The two residuals and status}
+
+The cross-scale step is now WRITTEN with a correct bridge, and the grade rests
+on exactly TWO cited-not-reproduced ingredients:
+
+\textbf{Residual R1 (local-to-global).} The decoupling-compatible
+translate-averaging that turns the ball inequality into the Besicovitch-mean
+inequality (\S2.2), i.e. the local cap norm $\to E_+(Q_\theta)$ bridge with a
+uniform constant. Standard for decoupling; cited.
+
+\textbf{Residual R2 (multi-scale bookkeeping).} Summing the inductive bounds
+$E_+(Q_\theta)\lesssim_\epsilon m_\theta^{2+\epsilon}$ over $O(\log N)$ levels
+without the per-level $\delta^{-\epsilon}$ accumulating to $N^{O(1)}$. The
+standard Bourgain--Demeter / Bourgain--Guth organisation (geometric per-level
+$\epsilon_k$, or the fact that $\ell^2$-decoupling is already the multi-scale
+theorem carrying a single $\delta^{-\epsilon}$ at the critical scale) keeps the
+total at $N^{O(\epsilon)}$. Cited, not reproduced.
+
+\textbf{Status.} With R1 and R2 both cited, the unrestricted DR-2 is a
+STRUCTURALLY-COMPLETE reduction whose two remaining ingredients are standard
+decoupling machinery. Honest tier: \textbf{T4+ STRONG EVIDENCE}, and an explicit
+\textbf{T5-candidate} pending operator acceptance of R1+R2 as textbook-standard.
+v1.0's outright T5 is \textbf{WITHDRAWN} (it rested on a false bridge). Whether
+accepting R1+R2 warrants T5 (structural) or, together with the separated
+base, T6 PROVED CONDITIONAL on decoupling and a DR2-SHARE flip, is an OPERATOR
+decision. No flip is made here: DR2-SHARE stays OPEN; B5 T5; B1 T6; H-ADM-COH
+retained.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+Three concrete objections, found before submission:
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The Besicovitch mean fixes the GLOBAL identity, but
+the decoupling RHS carries LOCAL cap norms $\|f_\theta\|_{L^4(w_{B_R})}$; you
+still silently identify those with $E_+(Q_\theta)$.''} VALID and now explicitly
+RECORDED as Residual R1 (\S2.2, \S4). The repair over v1.0 is honesty, not
+elimination: v1.0 asserted a false EXACT identity in one line; v1.1 routes the
+identity through the Besicovitch mean (correct) and flags the
+decoupling-compatible local-to-global passage as the cited step. The grade
+(T4+, not T5/T6) reflects that R1 is cited.
+\item[($\beta$)] \emph{``Decoupling is stated on the paraboloid; $S^2$ and the
+rescaled curved patches are not the paraboloid.''} DISMISSED as an obstruction,
+RECORDED as a hypothesis: Bourgain--Demeter decoupling holds for any compact
+hypersurface with nonvanishing Gaussian curvature, and is stable under
+nondegenerate $C^2$ perturbations; $S^2$ qualifies and the affine-normalised
+caps are uniformly-curved $C^2$ graphs. \S3 now states this rather than the
+v1.0 overclaim ``unit paraboloid patch''. No additional residual is incurred
+beyond the decoupling black box already assumed.
+\item[($\gamma$)] \emph{``The per-level $\delta^{-\epsilon}$ could accumulate
+to $N^{O(1)}$ over $O(\log N)$ levels, destroying $N^{2+\epsilon}$.''} This is
+the SHARP objection and is exactly Residual R2. It is not dismissed: it is the
+reason the grade is T4+/T5-candidate and not T6. The numerics ($K$ scale-stable
+within $\times1.25$) are consistent with a non-accumulating constant but do NOT
+prove it; R2 is the cited Bourgain--Demeter/Bourgain--Guth bookkeeping.
+\item[($\delta$)] \emph{``The numerics could be mistaken for evidence of
+closure.''} GUARDED: the script v1.1 carries an exact-$E_+$ code-audit gate and
+an explicit PROXY-partition caveat (square bins are not geodesic caps); the note
+labels the numerics ILLUSTRATIVE throughout and rests no tier on them.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Magnitude: $K\le1.94$ (mild
+constant) and $\sum_\theta E_+(Q_\theta)\approx2\times10^2\ll
+E_+(Q)\approx10^4$ (the iteration genuinely reduces structure). Sign/direction:
+upper bound, all terms positive. Limit-case: separated $Q$ recovers the v1.1
+base case exactly. Estimator exactness: random $E_+=2N^2-N$ verified for
+$N=16,32,64$ (no binning artefact). Consistency: $K$ stable across cap scales
+matches a mild $\delta^{-\epsilon}$.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5 / DR-2 cross-scale induction v1.1
+                         (Besicovitch-mean repair)
+Precise statement:       For finite Q in S^2, M(|f_Q|^4)=E_+(Q) exactly
+                         (Besicovitch mean; no integrality). Conditional on
+                         l2-decoupling at p=4, the iteration
+                         E_+(Q) <=_eps delta^{-eps}(sum_theta sqrt E_+(Q_theta))^2
+                         follows by ball-decoupling + translate-averaging to
+                         the mean; with the R-023 affine rescaling (caps are
+                         uniformly-curved C^2 graph patches handled by
+                         decoupling stability, NOT the literal paraboloid) it
+                         reduces arbitrary finite Q to the separated base
+                         (-> N^{2+eps}).
+Two cited residuals:     R1 local-to-global translate-averaging (local cap norm
+                         -> E_+(Q_theta), uniform constant); R2 multi-scale
+                         eps-bookkeeping over O(log N) levels -> total N^{O(eps)}.
+Scope:                   Unrestricted-class sphere additive energy; cross-scale
+                         step of DR-2 / DR2-SHARE.
+Dependencies:            l2-decoupling (BLACK BOX) + its standard stability and
+                         local-to-global machinery (R1) + multi-scale
+                         bookkeeping (R2); R-023 (affine-invariance).
+Evidence grade:          DERIVED with a CORRECT bridge (Besicovitch mean),
+                         conditional on decoupling and on two cited standard
+                         ingredients (R1,R2); + ILLUSTRATIVE numerics
+                         (dr2_decoupling_iteration.py v1.1 4/4, proxy partition).
+Reproduction command:    python codes/vacuum/dr2_decoupling_iteration.py
+Expected output:         4/4 PASS (incl. exact-E_+ audit gate); K <= 1.94
+                         scale-stable on the PROXY partition (illustrative).
+Falsification gate:      A finite Q with K growing polynomially in N (would
+                         contradict the decoupling exponent); not observed.
+Tier before / after:     DR-2 unrestricted: v1.0 T5 WITHDRAWN -> T4+ STRONG
+                         EVIDENCE (T5-candidate pending operator acceptance of
+                         R1+R2). NO flip. Separated case stays T6 conditional.
+                         B5 T5, B1 T6, H-ADM-COH retained, DR2-SHARE OPEN.
+No-overclaim statement:  NOT a DR-2 closure, NOT T5-accepted, NOT T6. The
+                         bridge is now correct (Besicovitch mean) but two
+                         standard ingredients (R1,R2) are cited, not reproduced.
+                         Decoupling is invoked, not reproved. No gate/tier/
+                         hypothesis action; operator authorises any flip.
+Next required action:    Operator decision on whether R1+R2 are accepted as
+                         textbook-standard (-> T5 or T6 PROVED CONDITIONAL and a
+                         possible DR2-SHARE flip), or reproduce R1+R2 in full.
+\end{verbatim}
+}

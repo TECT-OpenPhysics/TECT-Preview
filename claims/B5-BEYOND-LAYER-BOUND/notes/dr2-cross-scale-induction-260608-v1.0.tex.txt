@@ -1,0 +1,158 @@
+% SUPERSEDED by dr2-cross-scale-induction-260608-260608-v1.1.tex.txt
+% =============================================================================
+% Title: DR-2 cross-scale induction: the decoupling-iteration energy bound for arbitrary finite sphere sets
+% Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE; unrestricted-class route)
+% Version: v1.0 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: companion to dr2-decoupling-closure v1.1; writes the cross-scale step that v1.1 Section 4 left as the residual. It DERIVES (conditional on Bourgain-Demeter l2-decoupling) the decoupling-iteration inequality E_+(Q) <=_eps delta^{-eps} (sum_theta sqrt(E_+(Q_theta)))^2 over delta^{1/2}-caps, and combines it with the affine-invariance rescaling (R-023) into the induction-on-scales reducing ARBITRARY finite Q to the separated base case. Honest grade: the cross-scale ENERGY SUMMATION and the recursion are now WRITTEN (and the iteration constant is numerically bounded, K <= 1.94 stable across cap scales, dr2_decoupling_iteration.py 3/3); the single CITED-not-reproduced step is the tight geometric eps-bookkeeping that keeps the O(log N) levels at a total N^{O(eps)} loss (standard Bourgain-Demeter/Bourgain-Guth). This lifts the unrestricted DR-2 from T4 to T5 (structurally-complete reduction). NO gate/tier flip is made: whether T5 + the cited bookkeeping warrants T6 PROVED CONDITIONAL and a DR2-SHARE flip is an operator decision. DR2-SHARE stays OPEN, B5 T5, B1 T6, H-ADM-COH retained.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-08) first issue. Operator directive "begin the head-on approach"
+%        (write the cross-scale induction). Script
+%        codes/vacuum/dr2_decoupling_iteration.py (3/3); JSON
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-decoupling-iteration/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+dr2-decoupling-closure v1.1 proved DR-2 for $\delta$-separated $Q\subset S^2$
+(T6 conditional on decoupling) and left the ARBITRARY-$Q$ (non-separated) case at
+T4, with the cross-scale energy summation as the named residual. This note writes
+that step: the decoupling-iteration inequality and the induction-on-scales. It is
+conditional on the same decoupling black box; it does not reprove decoupling, and
+it cites (does not reproduce) the tight multi-scale constant bookkeeping.
+
+\section*{2. The decoupling-iteration inequality}
+
+\textbf{Lemma (iteration).} Let $Q\subset S^2$ be finite, $\delta>0$, and
+$\{\theta\}$ the partition of the sphere into $\delta^{1/2}$-caps; write
+$Q_\theta=Q\cap\theta$. Then, conditional on $\ell^2$-decoupling at $p=4$,
+\[
+E_+(Q)\;\lesssim_\epsilon\;\delta^{-\epsilon}
+\Big(\sum_\theta E_+(Q_\theta)^{1/2}\Big)^2 .
+\]
+\textbf{Derivation.} By the majorant of v1.1 \S2.1, $E_+(Q)\lesssim\int|f_Q|^4
+\eta_R$, $R\sim\delta^{-1}$, $f_Q=\sum_{q\in Q}e(q\cdot x)$, whose Fourier support
+lies on $Q\subset S^2$. Decoupling at $p=4$ for the cap pieces $f_\theta=
+\sum_{q\in Q_\theta}e(q\cdot x)$ gives $\|f_Q\|_{L^4}\lesssim_\epsilon
+\delta^{-\epsilon}(\sum_\theta\|f_\theta\|_{L^4}^2)^{1/2}$, and
+$\|f_\theta\|_{L^4}^4=E_+(Q_\theta)$. Squaring twice yields the inequality.
+$\square$
+
+\textbf{Numerical consistency} (dr2\_decoupling\_iteration.py, 3/3). The constant
+$K=E_+(Q)/(\sum_\theta E_+(Q_\theta)^{1/2})^2$ is $\le1.94$ on great-circle,
+cap-grid and random sets at cap scales $n=2,4,8$, and STABLE across scales
+(within $\times1.25$): the iteration holds with a small, non-blowing-up constant,
+as the $\delta^{-\epsilon}$ factor predicts. The partition also breaks the
+additive structure ($\sum_\theta E_+(Q_\theta)\approx220$ vs $E_+(Q)\approx10^4$
+at $n=8$): the cross-cap quadruples dominate, and the iteration converts them into
+the controlled $(\sum\sqrt{E_\theta})^2$ form.
+
+\section*{3. The induction-on-scales}
+
+\textbf{Base case (separated).} If $Q$ is $\delta^{1/2}$-separated, each cap holds
+$\le1$ point, $E_+(Q_\theta)\le1$, so $\sum_\theta E_+(Q_\theta)^{1/2}\le N$ and the
+Lemma gives $E_+(Q)\lesssim_\epsilon\delta^{-\epsilon}N^2$. With $\delta\sim$
+(minimal separation)$^2\ge N^{-O(1)}$, $\delta^{-\epsilon}\le N^{O(\epsilon)}$, so
+$E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$ -- this is v1.1 \S3.
+
+\textbf{Recursion (clustered).} If some cap $\theta$ holds $m_\theta>1$ points,
+$E_+(Q_\theta)$ is a SUB-problem on a $\delta^{1/2}$-cap. By the affine-invariance
+rescaling (R-023), the parabolic map $T_\theta$ sends $\theta$ to a unit paraboloid
+patch with $E_+(Q_\theta)=E_+(T_\theta Q_\theta)$ -- a FRESH instance of the same
+problem at unit scale with $m_\theta<N$ points. Apply the Lemma to each, recursing.
+The recursion terminates when every active cap is separated (depth $O(\log$
+(dynamic range of separations)$)=O(\log N)$ for sets with $\ge N^{-O(1)}$
+separations; deeper otherwise).
+
+\textbf{The cited step.} Substituting the inductive bound $E_+(Q_\theta)
+\lesssim_\epsilon m_\theta^{2+\epsilon}$ and summing, the naive accumulation gives
+$\delta^{-\epsilon}$ PER LEVEL. The standard Bourgain--Demeter / Bourgain--Guth
+multi-scale organisation (geometric choice of the per-level $\epsilon_k$, or the
+fact that $\ell^2$-decoupling is ALREADY the multi-scale theorem and one
+application at the critical scale carries a single $\delta^{-\epsilon}$) keeps the
+TOTAL loss at $N^{O(\epsilon)}$, yielding $E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$
+for arbitrary finite $Q$. \emph{This bookkeeping is cited, not reproduced here.}
+
+\section*{4. Status}
+
+The cross-scale energy summation (the operator's named residual) is now WRITTEN as
+the decoupling-iteration inequality (\S2, derived conditional on decoupling and
+numerically consistent) plus the affine-invariance recursion (\S3). The single
+remaining cited-not-reproduced ingredient is the tight per-level constant control.
+The unrestricted DR-2 is therefore lifted from T4 to T5 (a structurally-complete
+reduction). It is NOT promoted to T6 here, and NO gate/tier flip is made: whether
+the cited bookkeeping is accepted as textbook-standard (which would make DR-2 = T6
+PROVED CONDITIONAL on decoupling and permit a DR2-SHARE flip + removing H-ADM-COH
+from B1) is an operator decision. DR2-SHARE stays OPEN; B5 T5; B1 T6; H-ADM-COH
+retained.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The iteration inequality is conditional on decoupling.''}
+DECLARED: yes; \S2 derives it FROM decoupling at $p=4$, it is not independent. The
+note never claims to prove decoupling.
+\item[($\beta$)] \emph{``The per-level constant control is not written.''} UPHELD
+and the reason the grade is T5, not T6: the geometric $\epsilon$-bookkeeping over
+$O(\log N)$ levels is cited (Bourgain--Demeter), not reproduced. The iteration
+constant is numerically bounded ($K\le1.94$, scale-stable), which is consistent
+with but not a proof of the rigorous control.
+\item[($\gamma$)] \emph{``Does very small minimal separation break it?''}
+ADDRESSED: when points are closer than $N^{-O(1)}$ the single-scale bound is loose,
+which is exactly why the recursion (R-023 rescaling) is needed; rescaling resets
+the scale so the loss is per-level $O(1)$, not tied to the absolute minimal
+separation. The numerics (K scale-stable) support this; the rigorous summation is
+the cited step.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- $K\le1.94$ (small), and
+$\sum_\theta E_+(Q_\theta)\approx2\times10^2\ll E_+(Q)\approx10^4$ (the iteration
+genuinely reduces); sign-direction -- the inequality is an upper bound, all terms
+positive; limit-case -- separated $Q$ gives the v1.1 \S3 base case exactly;
+consistency -- $K$ stable across cap scales ($\times1.25$) matches the
+$\delta^{-\epsilon}$ prediction of a mild per-level constant.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5 / DR-2 cross-scale induction (decoupling-iteration)
+Precise statement:       Conditional on l2-decoupling at p=4, the iteration
+                         E_+(Q) <=_eps delta^{-eps} (sum_theta sqrt E_+(Q_theta))^2
+                         holds over delta^{1/2}-caps (derived from the v1.1
+                         majorant); with the R-023 rescaling recursion it reduces
+                         arbitrary finite Q to the separated base case
+                         (-> N^{2+eps}). The tight per-level constant bookkeeping
+                         (O(log N) levels -> total N^{O(eps)}) is cited, not
+                         reproduced. Iteration constant numerically bounded
+                         (K <= 1.94, scale-stable).
+Scope:                   Unrestricted-class sphere additive energy; the cross-scale
+                         step of DR-2 / DR2-SHARE.
+Dependencies:            l2-decoupling (BLACK BOX); v1.1 Section 2.1 (majorant);
+                         R-023 (affine-invariance rescaling); standard multi-scale
+                         bookkeeping (CITED).
+Evidence grade:          DERIVED (iteration inequality, conditional on decoupling)
+                         + EXECUTED numerics (dr2_decoupling_iteration.py 3/3)
+                         + CITED (per-level constant control).
+Reproduction command:    python codes/vacuum/dr2_decoupling_iteration.py
+Expected output:         3/3 PASS; K <= 1.94 across configs/scales; partition
+                         reduces additive structure.
+Falsification gate:      A finite Q with K = E_+(Q)/(sum sqrt E_theta)^2 growing
+                         polynomially in N (would contradict the decoupling
+                         exponent); not observed.
+Tier before / after:     DR-2 unrestricted: T4 STRONG EVIDENCE -> T5 (structurally
+                         complete reduction). NO flip. Separated case stays T6
+                         conditional. B5 T5, B1 T6, H-ADM-COH retained, DR2-SHARE
+                         OPEN.
+No-overclaim statement:  NOT a DR-2 closure and NOT T6. The cross-scale step is
+                         written and numerically consistent, but the tight
+                         per-level constant control is cited, not reproduced.
+                         Decoupling is invoked, not reproved. No gate/tier/
+                         hypothesis action.
+Next required action:    Either reproduce the per-level constant bookkeeping in
+                         full (-> T6 PROVED CONDITIONAL, operator may then flip
+                         DR2-SHARE), or accept the cited standard machinery by
+                         operator sign-off.
+\end{verbatim}
+}
