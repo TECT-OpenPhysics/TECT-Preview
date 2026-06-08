@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Exact-Wick bracket closure accepted (operator review); knobs-note (beta) self-review fix] - 2026-06-07
+
+- **Operator review** (reviews/2026-06-07-exact-wick-bracket-closure-review.md) ACCEPTED
+  twoshell-anchored-bracket v1.0: the substantive exact-Wick obstruction is removed; ESTIMATOR-UPGRADE
+  is 'nearly closed' (keep OPEN only for the bulk anchored continuum refinement + operator sign-off).
+  No tier/gate change.
+- **Confirmed honest scope**: the exact anchored bulk is a GRID statement (11x11x3); near-origin is
+  continuum (PD + O(A^4) bracket). 'closed at grid + near-origin continuum grade', not 'fully continuum-proved'.
+- **Point 3 fix**: estimator-upgrade-knobs §5(beta) self-review relabelled to the operator-recommended
+  wording ('the two-shell exact-Wick bulk is still grid-grade; the bracket is evaluated at the B1 point
+  and does not overturn positivity; only the bulk continuum refinement remains'). FORM-CHECK re-run PASS.
+
 ## [Exact-Wick anchored two-shell no-condensate at the B1 point (bracket residual closed)] - 2026-06-07
 
 - **Residual closed** (twoshell-anchored-bracket v1.0; codes/vacuum/twoshell_anchored_bracket.py 7/7;
