@@ -8,3 +8,4 @@ in any claim's tier/hypothesis fields or LINEAGE.
 | Note | Purpose | Bears on |
 |---|---|---|
 | [dr2-impact-analysis-260606.md](dr2-impact-analysis-260606.md) | What an unconditional DR-2 bound would subsume vs. what survives; DR-2 = optional strengthening, not critical path | B5, B1, B2, STEP-5B, R-001..R-011 |
+| [dr2-external-research-assessment-260608.md](dr2-external-research-assessment-260608.md) | Review of operator-supplied external DR-2 research (Math447-469): honest, sound at reduction grade; DR-2 reduces to the Pencil Rigidity / Pair-Sum Surface Multiplicity conjecture; no tier change; incorporation tiers | DR2-SHARE, B5, B1, R-002..R-009 |

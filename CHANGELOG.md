@@ -5,6 +5,26 @@ not pillar counts.
 
 ---
 
+## [External DR-2 research reviewed (Math447-469); reduction to Pencil Rigidity/PSM recorded] - 2026-06-08
+
+- **Operator-supplied external research** (Math447-469, ~17k-line autonomous multi-pass DR-2 attack)
+  reviewed; assessment archived at strategy/dr2-external-research-assessment-260608.md (English-only; the
+  bilingual raw log is NOT tracked). NO tier/gate change.
+- **Devil's-advocate verdict**: honest (never closes DR-2) and sound at reduction grade. The reduction
+  `dichotomy => DR-2` (Cauchy-Schwarz cross-terms + closed circle/coaxial estimates) is valid; the
+  consolidated `Pencil Rigidity => PSM => DR-2` is a clean conditional theorem; the spot-checked Pass-4
+  cross-energy bound `E_+(A,B) <= 2|A||B|` is correct (note: its non-parallel hypothesis is not load-bearing).
+- **Contribution**: the DR2-SHARE residual is sharpened from carrier-richness polylog to a single named
+  conjecture (Pencil Rigidity / Pair-Sum Surface Multiplicity). Much of the early content duplicates
+  R-002..R-009; the new content is the reduction + alternative equivalent conjectures.
+- **Caveats flagged**: the external `T7_conditional-robust` tier label is NOT adopted (repo B5 T5 / B1 T6
+  canonical); the `PROVED` sub-lemmas need per-lemma verification before any RESULTS-LEDGER row.
+- **Strategic alignment**: the research's own decision (DR-2 off mainline; independent math branch;
+  H-ADM-COH + finite coherent capacity = official STEP-5B route) matches the repo. DR2-SHARE stays OPEN,
+  off critical path; annotated with the sharpened residual + pointer. Tier-2 (formal CONJECTURE
+  registration + standalone S^2 additive-energy paper) and Tier-3 (per-lemma verification) recommended
+  for operator decision.
+
 ## [G3PB-III closure accepted (operator review)] - 2026-06-08
 
 - **Operator review** (reviews/2026-06-08-g3pb3-ratio-closure-review.md) ACCEPTED g3pb3-ratio-closure v1.0:
