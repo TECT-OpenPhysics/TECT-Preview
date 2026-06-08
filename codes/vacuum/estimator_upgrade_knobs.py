@@ -27,12 +27,13 @@ Scope of THIS note (T-010 items ii, iii, and the curvature half of i):
   (i)   two-shell (0,0) Hessian:  the {110}+{200} two-shell condensate (A1,A2) has
         a DIAGONAL Hessian at (0,0) -- the quadratic cross term vanishes because
         the shells are disjoint (orthogonal, <phi1 phi2> = 0) and the m31 coupling
-        U <phi1^3 phi2> is QUARTIC (A1^3 A2), absent from the Hessian. The soft
-        eigenvalue is the single-shell BCC curvature kappa_BCC (reproduced here,
-        controlled-error); the {200} eigenvalue is strictly larger because that
-        shell carries a positive kernel penalty C q0^4 > 0 (one octave off the
-        kernel minimum). The GLOBAL two-shell no-condensate (the m31 tilt valley)
-        is NOT re-derived here; it is the exact-Wick PASS of Math432 (cited).
+        U <phi1^3 phi2> is QUARTIC (A1^3 A2), absent from the Hessian. Both
+        eigenvalues are positive (PD). CORRECTION (twoshell-continuum-bound v1.0):
+        the SOFT direction is {200} (kappa~3.86), NOT {110} (kappa~5.16) -- the
+        kernel penalty C q0^4>0 does NOT order the dressed curvatures ({200} has
+        fewer modes + dressing). The GLOBAL two-shell no-condensate is established
+        as a diagonal-continuum bound AT THE B1 POINT r=0.219 in twoshell-
+        continuum-bound v1.0 (the Math432 PASS it cites runs at r=0.005).
 
 Reuse discipline (code-discipline rule 1): every free-energy number comes from
 m424's own dF_reading / dI / gap_solve / M_fast; the dI and amplitude knobs are
@@ -203,12 +204,12 @@ shell2 = [(2,0,0),(-2,0,0),(0,2,0),(0,-2,0),(0,0,2),(0,0,-2)]  # {200}, stiff sh
 n1 = len(shell1) // 2
 n2 = len(shell2) // 2
 disjoint = set(shell1).isdisjoint(set(shell2))             # orthogonality -> kappa_12 = 0
-kappa_BCC = base_kappa["BCC"]                              # soft eigenvalue (controlled-error)
+kappa_BCC = base_kappa["BCC"]                              # {110} eigenvalue ({200} is softer; twoshell-continuum-bound v1.0)
 penalty = C * Q0 ** 4                                       # {200} kernel penalty, one octave out
 twoshell = dict(n1=n1, n2=n2, shells_disjoint=bool(disjoint), kappa_12=0.0,
                 kappa_BCC=kappa_BCC, kernel_penalty_C_q0_4=penalty,
-                math432_global_verdict="PASS (exact-Wick {110}+{200} surface anchored dF>0 at "
-                "cut12/48^3 and cut20/64^3; Runs/math/Math432/g3prime_multishell_ensemble.json)")
+                math432_global_verdict="SUPERSEDED by twoshell-continuum-bound v1.0: the Math432 PASS runs at "
+                "r=0.005 (not the B1 point r=0.219); the two-shell global no-condensate is redone at r=0.219 there.")
 print(f"    n1={n1} ({{110}}) n2={n2} ({{200}}); shells disjoint={disjoint}; kappa_12=0 (orthogonal)")
 print(f"    soft eigenvalue kappa_BCC={kappa_BCC:.4f} (controlled-error); {{200}} penalty C*q0^4={penalty:.4f}>0")
 claim("twoshell_shells_disjoint", disjoint,

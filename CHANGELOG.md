@@ -5,6 +5,23 @@ not pillar counts.
 
 ---
 
+## [Exact-Wick anchored two-shell no-condensate at the B1 point (bracket residual closed)] - 2026-06-07
+
+- **Residual closed** (twoshell-anchored-bracket v1.0; codes/vacuum/twoshell_anchored_bracket.py 7/7;
+  claims/B1-RH-ENUM/runs/260607-twoshell-anchored-bracket/result.json). No tier/gate flip.
+- **Exact-Wick anchored no-condensate at r=0.219**: with the EXACT slogdet engine (Math432 reused by
+  programmatic neuter-import, validated to 5e-8 against its recorded brackets), the anchored two-shell
+  dF = dF_diag + (F_exact - F_diag_basis) has min over (A1,A2)!=(0,0) = +6.7e-4>0; the bracket is O(A^4)
+  near origin (|bracket|(0.005)=3.9e-8) so the anchored (0,0) Hessian = diagonal (kappa_{110}=5.16,
+  kappa_{200}=3.86, PD). The off-diagonal bracket does NOT overturn the no-condensate.
+- **Operator review** (reviews/2026-06-07-twoshell-continuum-bound-and-corrections-review.md): point 1
+  (diagonal != anchored) closed by this note; point 2 (knobs-note §4/footer remnants) fixed -- relabelled
+  to the dedicated two-shell notes + the current bulk-anchored continuum residual; point 3 (M-grid
+  strong-evidence) accepted.
+- **Residual** narrowed to a curvature-chord continuum bound on the exact anchored BULK surface (finer
+  exact scan); the substantive obstruction is removed. RESULTS-LEDGER R-018.
+- **Verification**: FORM-CHECK PASS + OVERFULL 0 (both notes); release-check PASS; pytest 3.
+
 ## [Two-shell global continuum no-condensate at the B1 point + two operating-point corrections] - 2026-06-07
 
 - **Next-round advance** (twoshell-continuum-bound v1.0; codes/vacuum/twoshell_continuum_bound.py 10/10;

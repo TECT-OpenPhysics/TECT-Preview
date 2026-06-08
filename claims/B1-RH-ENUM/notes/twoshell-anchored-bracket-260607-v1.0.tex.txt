@@ -1,0 +1,132 @@
+% =============================================================================
+% Title: Exact-Wick (anchored) two-shell no-condensate at the B1 point: the off-diagonal bracket does not overturn the diagonal result
+% Claim: B1-RH-ENUM (ESTIMATOR-UPGRADE gate)
+% Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
+% Status: numerical note; CLOSES the exact-Wick off-diagonal BRACKET residual of twoshell-continuum-bound v1.0. With the exact slogdet engine (Math432, reused by neuter-import and validated to 5e-8 against its recorded brackets), the anchored two-shell {110}+{200} free energy dF_anchored = dF_diag + (F_exact - F_diag_basis) at the B1 point r_bare=0.219 has min over (A1,A2)!=(0,0) = +6.7e-4 > 0 (no exact-Wick condensate), and near the origin the bracket is O(A^4) (|bracket|(h=0.005)=3.9e-8), so the anchored (0,0) Hessian EQUALS the diagonal one (kappa_{110}=5.16, kappa_{200}=3.86, PD). Grade: exact-Wick no-condensate at GRID + near-origin CONTINUUM. Residual narrowed to a curvature-chord continuum bound on the exact anchored BULK surface (a finer exact scan). No tier/gate flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-07) first issue. Script codes/vacuum/twoshell_anchored_bracket.py
+%        (7/7 asserts); JSON claims/B1-RH-ENUM/runs/260607-twoshell-anchored-
+%        bracket/result.json. Closes the bracket residual named in
+%        twoshell-continuum-bound v1.0.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+twoshell-continuum-bound v1.0 established the two-shell no-condensate at the B1
+point $r_{\rm bare}=0.219$ for the DIAGONAL free energy and named the exact-Wick
+off-diagonal bracket as the residual: the anchored free energy is
+$\Delta F_{\rm anchored}=\Delta F_{\rm diag}+\mathrm{bracket}$ with
+$\mathrm{bracket}=F_{\rm exact}-F_{\rm diag\text{-}basis}$, and the bracket is
+negative, so diagonal positivity does not by itself imply anchored positivity.
+This note evaluates the bracket with the EXACT slogdet engine and settles the
+anchored question.
+
+\section*{2. Engine reuse and validation}
+
+The Math432 exact-Wick engine (slogdet of the dressed Bloch Hessian over a BCC
+$k$-mesh) is REUSED without re-transcription: the legacy script is read,
+truncated before its module-level scan, its $m424$ import path is repointed, and
+the result is imported as a module. The engine reproduces Math432's RECORDED
+brackets at $r=0.005$ to $5\times10^{-8}$ (two anchors), so the reuse is faithful
+before any $r=0.219$ evaluation.
+
+\section*{3. Exact-Wick no-condensate at the B1 point ($r=0.219$)}
+
+Over the Math432 scan domain ($A_1\in[0,0.16]$, $A_2\in[-0.16,0.16]$,
+$M/M_R\in\{0.7,1.0,1.3\}$, $11\times11\times3$):
+\begin{itemize}
+\item \textbf{no exact condensate}: $\min_{(A_1,A_2)\neq(0,0)}\Delta
+F_{\rm anchored}=+6.7\times10^{-4}>0$ (at small $A_1$). The off-diagonal bracket
+does NOT open a sub-Reading-H valley.
+\item \textbf{near origin (continuum)}: the bracket is $O(A^4)$ -- the
+off-diagonal $W\sim$ amplitude$^2$, so $\mathrm{bracket}\sim\mathrm{Tr}[\,\cdot\,]
+\sim W^2\sim A^4$; numerically $|\mathrm{bracket}|(A{=}0.005)=3.9\times10^{-8}$.
+Hence the anchored $(0,0)$ Hessian EQUALS the diagonal one,
+$\kappa_{\{110\}}=5.16$, $\kappa_{\{200\}}=3.86$ (both $>0$): anchored
+positive-definiteness near the origin is a CONTINUUM statement.
+\item \textbf{large amplitude}: $|\mathrm{bracket}|$ grows to $4.4\times10^{-2}$,
+but there $\Delta F_{\rm diag}\sim10^{-1}$, so $\Delta F_{\rm anchored}$ stays
+positive; $|\mathrm{bracket}|$ and $\Delta F_{\rm diag}$ do not subtract uniformly
+(both peak at large $A$, while the thinnest anchored value is at small $A$ where
+the bracket is negligible).
+\end{itemize}
+
+\section*{4. What this closes and what remains}
+
+CLOSED: the exact-Wick (anchored) two-shell no-condensate at the B1 point, at GRID
+grade in the bulk and CONTINUUM grade near the origin (the $O(A^4)$ bracket leaves
+the PD Hessian intact). This settles the physical question the bracket residual
+posed: the off-diagonal correlations do not overturn the selection. REMAINING (a
+refinement): a curvature-chord continuum bound on the exact anchored BULK surface
+(a finer exact scan), to upgrade the bulk from grid to node-free. The gate stays
+OPEN pending that refinement and operator sign-off; the substantive obstruction is
+removed.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The bulk is still a grid statement.''} VALID and named:
+the $11\times11\times3$ exact scan certifies the nodes; a node-free bulk bound
+needs the curvature-chord on the anchored surface (heavier exact scan). The
+near-origin region -- where the diagonal margin is thinnest -- is already
+continuum (PD Hessian, $O(A^4)$ bracket), so the grid-vs-continuum gap is in the
+bulk where the margin is large ($\Delta F_{\rm anchored}\gtrsim6.7\times10^{-4}$).
+\item[($\beta$)] \emph{``Is the neutered engine the same as Math432?''} DISMISSED:
+it reproduces Math432's recorded brackets to $5\times10^{-8}$; the import is the
+SAME source truncated before the scan, not a re-transcription.
+\item[($\gamma$)] \emph{``Could a finer $M$-grid find a negative anchored value?''}
+DISMISSED at strong-evidence grade: the anchored min is at small $A$ where the
+bracket is $O(A^4)\!\sim\!10^{-8}$, so $\Delta F_{\rm anchored}\approx\Delta
+F_{\rm diag}>0$ there irrespective of $M$; the bracket cannot turn the small-$A$
+region negative.
+\end{itemize}
+
+Quantitative sanity check (mandatory): magnitude -- $|\mathrm{bracket}|(h)=
+3.9\times10^{-8}$ vs the curvature scale $\kappa h^2/2\sim6\times10^{-5}$
+($O(A^4)$ confirmed); sign-direction -- the bracket is negative but the anchored
+min $+6.7\times10^{-4}$ is positive; limit-case -- the engine reproduces Math432
+at $r=0.005$ to $5\times10^{-8}$; consistency -- the anchored $(0,0)$ eigenvalues
+$5.16/3.86$ match the diagonal ones of twoshell-continuum-bound v1.0 (the bracket
+does not shift the Hessian).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / exact-Wick anchored two-shell no-condensate
+                         at the B1 point (closes the bracket residual)
+Precise statement:       At r_bare=0.219, the anchored two-shell {110}+{200} free
+                         energy dF_anchored = dF_diag + (F_exact - F_diag_basis)
+                         has min over (A1,A2)!=(0,0) = +6.7e-4 > 0 over the Math432
+                         scan domain (11x11x3); the bracket is O(A^4) near origin
+                         (|bracket|(0.005)=3.9e-8), so the anchored (0,0) Hessian
+                         = diagonal (kappa_{110}=5.16, kappa_{200}=3.86, PD).
+                         Engine reused (Math432 neuter-import) validated to 5e-8.
+Scope:                   Two-shell {110}+{200}, EXACT-Wick anchored free energy,
+                         B1 point. Bulk = grid; near-origin = continuum (PD).
+Dependencies:            Math432 engine (neuter-imported); Math424_AddA (gap/loop);
+                         twoshell-continuum-bound v1.0 (diagonal bound it closes).
+Evidence grade:          EXECUTED (twoshell_anchored_bracket.py 7/7); exact-Wick
+                         grid + near-origin continuum.
+Reproduction command:    python codes/vacuum/twoshell_anchored_bracket.py
+Expected output:         7/7 PASS; min anchored +6.7e-4; |bracket|(h)=3.9e-8;
+                         anchored kappa_{110}=5.16, kappa_{200}=3.86.
+Falsification gate:      An anchored surface point with dF<0 at r=0.219; a bracket
+                         that is NOT O(A^4) near origin; an anchored (0,0) Hessian
+                         that differs from the diagonal one.
+Tier before / after:     No tier/gate flip. ESTIMATOR-UPGRADE: the exact-Wick
+                         two-shell bracket residual is CLOSED (grid + near-origin
+                         continuum); gate stays OPEN pending the bulk anchored
+                         continuum refinement + operator sign-off.
+No-overclaim statement:  Bulk is a GRID statement on the exact anchored surface;
+                         near-origin is continuum (PD, O(A^4) bracket). NOT a
+                         node-free bulk theorem. The substantive bracket
+                         obstruction is removed; a finer exact scan upgrades the
+                         bulk to continuum.
+Next required action:    Curvature-chord continuum bound on the exact anchored bulk
+                         surface (finer exact scan); then ESTIMATOR-UPGRADE closure
+                         is an operator decision.
+\end{verbatim}
+}

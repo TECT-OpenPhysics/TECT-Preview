@@ -2,7 +2,7 @@
 % Title: ESTIMATOR-UPGRADE knob closure: dI-quadrature + amplitude-grid envelopes, a curvature-chord continuum no-condensate bound, and the controlled-error two-shell (0,0) Hessian
 % Claim: B1-RH-ENUM (ESTIMATOR-UPGRADE gate)
 % Version: v1.0 -- first issued 2026-06-07; this version issued 2026-06-07
-% Status: numerical note; ADVANCES ESTIMATOR-UPGRADE for the single-shell enumerated readings beyond the M-quadrature knob (closed by estimator-upgrade-enumerated v1.0). This note (i) closes the dI-quadrature and amplitude-grid knobs -- kappa_R moves < 0.1% under dI refinement and the no-condensate verdict is grid-monotone; (ii) upgrades the grid-scan no-condensate to a CONTINUUM curvature-chord lower bound (positive on every A>0 interval for LAM/HEX/FCC/BCC); (iii) certifies the two-shell {110}+{200} (0,0) Hessian is positive-definite (kappa_12=0 by shell orthogonality; both eigenvalues > 0). CORRECTION (twoshell-continuum-bound v1.0, same change set): the SOFT eigenvalue is kappa_{200}=3.86 NOT 5.116 ({200} is the softer direction -- fewer modes + dressing); and the GLOBAL two-shell no-condensate is established as a diagonal-continuum bound at the B1 point r=0.219 there (the Math432 evidence runs at a DIFFERENT operating point r=0.005). Scope: single-shell ensemble all three numerical knobs + two-shell (0,0) curvature. No tier/gate flip; full ESTIMATOR-UPGRADE closure is an operator decision pending the two-shell global continuum bound (bracket residual).
+% Status: numerical note; ADVANCES ESTIMATOR-UPGRADE for the single-shell enumerated readings beyond the M-quadrature knob (closed by estimator-upgrade-enumerated v1.0). This note (i) closes the dI-quadrature and amplitude-grid knobs -- kappa_R moves < 0.1% under dI refinement and the no-condensate verdict is grid-monotone; (ii) upgrades the grid-scan no-condensate to a CONTINUUM curvature-chord lower bound (positive on every A>0 interval for LAM/HEX/FCC/BCC); (iii) certifies the two-shell {110}+{200} (0,0) Hessian is positive-definite (kappa_12=0 by shell orthogonality; both eigenvalues > 0). CORRECTION (twoshell-continuum-bound v1.0, same change set): the SOFT eigenvalue is kappa_{200}=3.86 NOT 5.116 ({200} is the softer direction -- fewer modes + dressing); and the GLOBAL two-shell no-condensate is established as a diagonal-continuum bound at the B1 point r=0.219 there (the Math432 evidence runs at a DIFFERENT operating point r=0.005). Scope: single-shell ensemble all three numerical knobs + two-shell (0,0) curvature. No tier/gate flip; full ESTIMATOR-UPGRADE closure is an operator decision pending the two-shell exact-Wick bracket bound (twoshell-anchored-bracket v1.0 closes it at grid + near-origin continuum grade; a bulk-anchored continuum refinement remains).
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-07) first issue. Follows estimator-upgrade-enumerated v1.0.
@@ -104,10 +104,12 @@ operating point $r=0.005$.
 ADVANCED: the single-shell enumerated $\Delta F>0$ verdict is now controlled-error
 against all three numerical knobs and the no-condensate statement is a continuum
 (node-free) one; the two-shell $(0,0)$ Hessian is positive-definite with controlled
-error. REMAINING for full ESTIMATOR-UPGRADE closure: the two-shell GLOBAL
-no-condensate is still grid evidence (Math432 exact-Wick scan), not a continuum
-bound; a curvature-chord or interval bound over the two-shell $(A_1,A_2)$ surface
-would close it. The gate stays OPEN pending that and operator sign-off.
+error. REMAINING for full ESTIMATOR-UPGRADE closure: see the dedicated two-shell
+notes -- twoshell-continuum-bound v1.0 (diagonal continuum bound at the B1 point
+$r=0.219$) and twoshell-anchored-bracket v1.0 (the EXACT-Wick anchored
+no-condensate at $r=0.219$, grid + near-origin continuum). The remaining
+refinement is a curvature-chord continuum bound on the exact anchored BULK
+surface. The gate stays OPEN pending that and operator sign-off.
 
 \section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
 
@@ -172,17 +174,20 @@ Falsification gate:      A reading with a negative continuum lower bound; a dI
                          an anchored dF < 0.
 Tier before / after:     No tier/gate flip. ESTIMATOR-UPGRADE: single-shell knob
                          closure + continuum no-condensate + two-shell (0,0)
-                         curvature ADVANCE; gate stays OPEN pending the two-shell
-                         global continuum bound + operator sign-off.
+                         curvature ADVANCE; gate stays OPEN pending the bulk
+                         anchored continuum refinement + operator sign-off (the
+                         exact-Wick bracket is closed: twoshell-anchored-bracket v1.0).
 No-overclaim statement:  Controlled error w.r.t. the named numerical knobs and the
                          two-shell (0,0) curvature only. NOT a full ESTIMATOR-
                          UPGRADE closure: the two-shell global no-condensate is
-                         cited Math432 grid evidence, not a continuum bound. The
+                         established at r=0.219 (twoshell-continuum-bound +
+                         twoshell-anchored-bracket v1.0); the Math432 r=0.005
+                         citation is superseded. The
                          B1 T6 selection SIGN was already established; this
                          upgrades the enumerated MARGINS' error grade.
-Next required action:    Two-shell global continuum no-condensate bound (curvature
-                         -chord over the (A1,A2) surface); then ESTIMATOR-UPGRADE
-                         closure is an operator decision.
+Next required action:    Curvature-chord continuum bound on the exact anchored
+                         BULK surface (the only remaining refinement); then
+                         ESTIMATOR-UPGRADE closure is an operator decision.
 \end{verbatim}
 }
 

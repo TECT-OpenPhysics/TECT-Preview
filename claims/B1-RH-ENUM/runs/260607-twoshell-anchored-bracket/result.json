@@ -1,0 +1,65 @@
+{
+  "script": "twoshell_anchored_bracket.py",
+  "version": "1.0.0",
+  "engine_validation_max_rel": 5.079942593185256e-08,
+  "b1_point": {
+    "R": 0.2190336473068255,
+    "rR": 0.419271311111732,
+    "MR": 0.09600297182364496
+  },
+  "scan": {
+    "nA1": 11,
+    "nA2": 11,
+    "nM": 3,
+    "A1_max": 0.16,
+    "A2_absmax": 0.16
+  },
+  "min_anchored": 0.0006719606555965763,
+  "min_at": [
+    0.016,
+    0.0,
+    1.0
+  ],
+  "max_abs_bracket": 0.043679380280191804,
+  "anchored_kappa_110": 5.161453646450598,
+  "anchored_kappa_200": 3.8618110552653127,
+  "residual": "curvature-chord continuum bound on the exact anchored bulk surface (finer exact scan)",
+  "claims": [
+    {
+      "name": "engine_reproduces_math432_brackets",
+      "passed": true,
+      "detail": "(max rel error = 5.08e-08 over 2 recorded brackets: the neutered engine is faithful)"
+    },
+    {
+      "name": "b1_operating_point",
+      "passed": true,
+      "detail": "(R=0.219 -> rR=0.41927: the B1 point, distinct from Math432's 0.3045)"
+    },
+    {
+      "name": "b1_exact_no_condensate",
+      "passed": true,
+      "detail": "(min exact-Wick anchored dF over (A1,A2)!=(0,0) = 6.720e-04 > 0 at r=0.219: the off-diagonal bracket does NOT open a sub-Reading-H valley -- exact two-shell no-condensate)"
+    },
+    {
+      "name": "bracket_is_O_A4_near_origin",
+      "passed": true,
+      "detail": "(|bracket| at A=h=0.005 is 3.86e-08 << the curvature scale: the bracket is O(A^4), so the anchored (0,0) Hessian equals the diagonal one)"
+    },
+    {
+      "name": "b1_anchored_hessian_pd",
+      "passed": true,
+      "detail": "(anchored (0,0) Hessian positive-definite: kappa_{110}=5.1615, kappa_{200}=3.8618 -- exact no-condensate near the origin, continuum)"
+    },
+    {
+      "name": "sanity_anchored_hessian_matches_diagonal",
+      "passed": true,
+      "detail": "(anchored eigenvalues 5.161/3.862 match the diagonal ones 5.16/3.86 of twoshell-continuum-bound v1.0: the bracket does not shift the (0,0) Hessian)"
+    },
+    {
+      "name": "sanity_bracket_peaks_at_large_A",
+      "passed": true,
+      "detail": "(max|bracket|=4.37e-02 occurs at large A where the diagonal is large; the anchored min 6.72e-04 is at small A where the bracket is negligible -- the two do not subtract uniformly)"
+    }
+  ],
+  "all_pass": true
+}
