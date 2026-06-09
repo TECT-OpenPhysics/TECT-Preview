@@ -5,6 +5,51 @@ not pillar counts.
 
 ---
 
+## [CHANGELOG DB-ization: JSONL source + generated MD view + FTS5 query cache] - 2026-06-09
+
+- **Operator-authorised infrastructure.** CHANGELOG is migrated from a hand-edited file to a GENERATED view of an append-only JSONL source, with a gitignored SQLite FTS5 query cache. Searchable by claim, keyword, and full text.
+- SOURCE `changelog/log.jsonl` (131 entries, oldest-first, append-only); VIEW `CHANGELOG.md` (generated, equals render of the source; byte-verified lossless migration); CACHE `changelog/.cache/changelog.db` (FTS5, rebuildable, gitignored).
+- NEW `verification/scripts/changelog.py` v1.0.0 (render / add / search / build-db / migrate) + `governance/changelog-db.md` (binding design + workflow).
+- Enforcement: `release_check.py` gains the `[changelog]` sync gate (render --check); english-only now scans `.jsonl`; `.cache` skipped in catalog + release_check; `.gitignore` += `changelog/.cache/`. `CLAUDE.md` updated — CHANGELOG is generated, use `changelog.py add`.
+- No binary in git: the SQLite cache is gitignored and rebuilt from the JSONL source. Follow-on: extend the JSONL-source + FTS pattern to `negative-results/` and to note-footer full-text.
+
+## [RES-5 sunset-norm certificate v1.1 (audit re-issue): correction ACCEPTED, RES-5-survival RETRACTED -> RES-5/GAP-2 OPEN; B1 T6 on {H-LAYER}] - 2026-06-09
+
+- **Operator adversarial review 2026-06-09 splits the prior entry.** ACCEPTED: the self-energy/free-energy double-count correction -- the a0-skeleton c a0 ~ 0.002 double-counted a0 (free-energy ratio x response); the certificate quantity is the free-energy ratio |Delta Gamma_2^pd|/Delta F_margin, whose LEADING (sunset) value IS the SC-SCOPE certified joint x1.040 -> x1.13. RETRACTED: the prior entry's "RES-5 survives at STRONG EVIDENCE, thin".
+- **Why retracted**: the screened higher-skeleton tail C_higher <= leading/(1-0.49) ~ 2x leading is SAME-ORDER (screened-finite), NOT sub-dominant. Against the thin SC-SCOPE joint x1.040 the slack is only 1-1/1.040 ~ 3.85% (C_higher must be < 0.040 C_leading); a same-order tail is not bounded into that slack. RES-5/GAP-2 returns to OPEN.
+- New note `res5-sunset-selfenergy-norm-certificate v1.1` (supersedes v1.0) + `codes/vacuum/res5_sunset_norm_map.py` v1.1.0 (4/4; the slack assert now encodes the OPEN conclusion). Negative-results: R-2026-06-09-res5-ca0-doublecount + AUDIT-2026-06-09-res5-survival-overclaim.
+- **No tier flip**: B1-RH-ENUM stays T6 CONDITIONAL on {H-LAYER}. Next mainline: `res5-tail-budget-closure` -- prove the SC-SCOPE-joint -> Delta Gamma_2^pd normalization identity + a quantitative tail budget C_higher < Delta F_margin - C_leading (~0.04 C_leading), small enough for the thin slack. lint PASS, release_check PASS.
+
+## [RES-5 sunset-norm certificate: leading skeleton IS SC-SCOPE (thin), higher skeletons screened; strong evidence (T4)] - 2026-06-09
+
+- **Operator-named normalization map; closes the RES-5 arc onto SC-SCOPE.** SELF-CAUGHT CORRECTION (operator point
+  2): the a0-skeleton c a0 ~ 0.002 double-counted a0 (free-energy ratio x response). NEW note
+  `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-sunset-selfenergy-norm-certificate v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_sunset_norm_map.py` (4/4) + `runs/`.
+- The certificate quantity is |Delta Gamma_2^pd|/Delta F_margin; its LEADING (sunset/2-loop) value IS the SC-SCOPE
+  certified joint = MARGIN/(C2+C_sunset+C_quartic) = x1.040 -> x1.13 (>1: the third cumulant does NOT overturn the
+  selection -- the leading-skeleton certificate, thin). The higher skeletons (l>=3) are screened sub-dominant: the
+  geometric tail <= leading/(1-0.49) ~ x2 via the 2PI screened response (res5-a0-skeleton-sensitivity).
+- **VERDICT**: RES-5 survives the matched-order-to-exact at STRONG EVIDENCE, THIN -- the SAME grade as SC-SCOPE. NEW
+  content vs SC-SCOPE: the 2PI common-mode mechanism + screened-response control of the HIGHER skeletons (this
+  session). RESIDUAL: the rigorous SC-SCOPE-joint -> Delta Gamma_2^pd normalization identity + the higher-skeleton
+  tail bound. No tier flip (B1 T6 on {H-LAYER}; the thin grade matches SC-SCOPE's standing as a named hypothesis).
+  lint PASS (29), release_check PASS.
+
+## [RES-5 a0-skeleton sensitivity: screened gap-response (no amplification); residual = SC-SCOPE skeleton norm (T3)] - 2026-06-09
+
+- **Operator 3-step a0-skeleton programme; steps 1-2 ESTABLISHED.** NEW note
+  `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-a0-skeleton-sensitivity-bound v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_a0_skeleton_sensitivity.py` (4/4) + `runs/`.
+- Linearising the 2PI gap equation: delta G_*^pd = -(1+G K_BS G)^-1 G [lam'(P^2-<P^2>)] G. For the REPULSIVE density
+  channel ||(1+G K_BS G)^-1|| = 1/(1+g) = 0.49 (SCREENED, NOT 1/(1-g)) -- the strong coupling g=1.03>1 does NOT
+  amplify the self-consistent feedback (resolves the ordered-BCC amplification worry). Hence delta G_*^pd =
+  0.49 a0 ||G_*|| = O(a0). 2nd-order term (1/2)g(0.49 a0)^2 = 0.001 negligible.
+- Residual reduced to c = ||Sigma_2^pd||/Delta F_margin * 0.49, where ||Sigma_2^pd|| is the pattern-dependent
+  skeleton self-energy = the SC-SCOPE SUNSET scale (~4%); so c ~ 0.02 and c a0 ~ 0.002 << 1 plausibly. T3; OPEN =
+  the rigorous ||Sigma_2^pd||. No tier flip (B1 T6 on {H-LAYER}). B1 closure <=> the skeleton self-energy norm,
+  with everything else (common-mode mechanism, screened O(a0) response) in hand. lint PASS (29), release_check PASS.
+
 ## [RES-5 2PI common-mode monotonicity: R-U10-3 mechanism extends to the 2PI effective action (T3)] - 2026-06-09
 
 - **Operator-directed** extension of the R-U10-3 common-mode/operator-monotonicity mechanism from the one-loop

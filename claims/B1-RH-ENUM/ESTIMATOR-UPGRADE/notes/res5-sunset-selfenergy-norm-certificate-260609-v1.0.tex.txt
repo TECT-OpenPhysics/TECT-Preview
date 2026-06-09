@@ -1,0 +1,153 @@
+% SUPERSEDED by claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-sunset-selfenergy-norm-certificate-260609-v1.1.tex.txt (audit re-issue 2026-06-09: the RES-5-survival verdict is RETRACTED, RES-5/GAP-2 OPEN; the self-energy/free-energy correction is retained)
+% =============================================================================
+% Title: RES-5 sunset-norm certificate: the leading skeleton IS SC-SCOPE (thin);
+%        higher skeletons screened sub-dominant -- RES-5 strong evidence, thin
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 sunset-norm certificate; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T4 STRONG EVIDENCE (thin). The operator-named normalization map closes
+%   the RES-5 arc onto SC-SCOPE. CORRECTION (self-caught, operator point 2): the
+%   a0-skeleton note's c a0 ~ 0.002 CONFLATED the self-energy norm with the
+%   free-energy ratio; the certificate quantity is the FREE-ENERGY ratio
+%   Delta Gamma_2^pd / Delta F_margin, whose LEADING (sunset) value IS the SC-SCOPE
+%   thin joint x1.04-x1.13, NOT 0.2%. The SC-SCOPE joint > 1 IS the leading-skeleton
+%   certificate (the third cumulant does not overturn the selection); the higher
+%   skeletons are screened sub-dominant (tail <= leading x 1/(1-0.49) ~ x2). RES-5
+%   therefore survives the matched-order-to-exact at STRONG EVIDENCE, THIN -- the
+%   SAME grade as SC-SCOPE. RESIDUAL: the rigorous SC-SCOPE-joint -> Delta Gamma_2^pd
+%   normalization identity + the higher-skeleton tail bound. NOT closed; no tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Self-energy/free-energy correction; the
+%        SC-SCOPE-joint = leading-skeleton certificate; screened higher tail;
+%        STRONG EVIDENCE thin. Grounded by res5_sunset_norm_map.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The a0-skeleton note reduced RES-5 to $|\Delta\Gamma_2^{\rm pd}|\le c\,a_0\,
+\Delta F_{\rm margin}$ and estimated $c\,a_0\sim0.002$. The operator flagged the
+normalization map (the SC-SCOPE quantity is a free-energy difference, not a
+self-energy norm). This certificate corrects that conflation, maps the residual
+onto the SC-SCOPE certified joint, and gives the honest verdict: RES-5 survives at
+the SAME thin grade as SC-SCOPE. Scope: the normalization map; the precise identity
+and the tail bound are the residual.
+
+\section*{2. Correction: the certificate quantity is a free-energy ratio}
+
+The a0-skeleton estimate $c\,a_0\sim0.49\cdot a_0\cdot(\|\Sigma_2^{\rm pd}\|/\Delta
+F_{\rm margin})$ used $\|\Sigma_2^{\rm pd}\|/\Delta F_{\rm margin}\sim0.04$ -- but
+that $0.04$ is the FREE-ENERGY (sunset) ratio, not the SELF-ENERGY norm. The two are
+related by $\Delta\Gamma_2^{\rm pd}=\|\Sigma_2^{\rm pd}\|\,\|\delta G_*^{\rm pd}\|$,
+so quoting the free-energy ratio AND multiplying by $\|\delta G_*^{\rm pd}\|=O(a_0)$
+double-counts the $a_0$. The CERTIFICATE QUANTITY is directly the free-energy ratio
+\[
+\frac{|\Delta\Gamma_2^{\rm pd}|}{\Delta F_{\rm margin}},
+\]
+whose leading (sunset / 2-loop) value is what SC-SCOPE certified -- the THIN joint,
+not $0.2\%$.
+
+\section*{3. The normalization map: the SC-SCOPE joint IS the leading certificate}
+
+SC-SCOPE certified the endpoint joint
+\[
+\mathrm{joint} = \frac{\mathrm{MARGIN}}{C_2 + C_{\rm sunset} + C_{\rm quartic}}
+= \times1.040\ (\text{certified}) \ \longrightarrow\ \times1.13\ (\text{sunset cap}),
+\]
+both $>1$. This is PRECISELY the statement that the third-cumulant (the LEADING 2PI
+skeleton, sunset $+$ quartic) does NOT overturn the one-loop selection: the
+leading $\Delta\Gamma_2^{\rm pd}$ certificate. It is THIN (the joint exceeds unity by
+$4$--$13\%$), sunset-limited.
+
+\section*{4. Higher skeletons: screened sub-dominant}
+
+The $\ell\ge3$ skeletons are bounded by the 2PI screened response
+(res5-a0-skeleton-sensitivity): each is the previous order times the screened factor
+$1/(1+g)=0.49$, so the geometric tail
+\[
+\sum_{\ell\ge3}|\Delta\Gamma_\ell^{\rm pd}|
+\ \le\ |\Delta\Gamma_{2\text{-loop}}^{\rm pd}|\cdot\frac{1}{1-0.49}
+\ \approx\ 2\,|\Delta\Gamma_{2\text{-loop}}^{\rm pd}| .
+\]
+The total skeleton correction is therefore at most $\sim2\times$ the (thin) sunset,
+and the selection survives the matched-order-to-exact with a margin of the same
+thin order as SC-SCOPE.
+
+\section*{5. Verdict and residual}
+
+\textbf{T4 STRONG EVIDENCE (thin).} RES-5 survives the matched-order-to-exact: the
+leading skeleton is the SC-SCOPE joint ($\times1.04$--$\times1.13>1$, certified),
+and the higher skeletons are screened sub-dominant ($\le\times2$ the leading). The
+matched-order-to-exact selection holds at the SAME thin grade as SC-SCOPE.
+\textbf{OPEN (the residual):} (i) the rigorous identity mapping the SC-SCOPE joint
+bookkeeping (layer-margin / cost) to $\Delta\Gamma_2^{\rm pd}/\Delta F_{\rm margin}$
+(the skeleton free-energy ratio); (ii) the rigorous higher-skeleton tail bound
+(the screened-geometric estimate made an inequality). No tier flip: B1-RH-ENUM T6
+CONDITIONAL on $\{$H-LAYER$\}$; the thin grade matches SC-SCOPE's standing as a
+named hypothesis.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The $c\,a_0\sim0.002$ was simply wrong.''} UPHELD and
+corrected: it double-counted $a_0$ (free-energy ratio $\times$ response). The honest
+value is the SC-SCOPE thin joint ($\times1.04$), not $0.2\%$. The session's
+discipline (operator point 2) caught it.
+\item[($\beta$)] \emph{``The SC-SCOPE-joint $\to\Delta\Gamma_2^{\rm pd}$ map is
+asserted, not proved.''} VALID: the two bookkeepings (layer-margin/cost vs
+one-loop-selection/skeleton) coincide structurally (both are the third-cumulant
+correction to the selection), but the exact normalization identity is the residual.
+\item[($\gamma$)] \emph{``Then RES-5 is no better than SC-SCOPE.''}
+PARTLY-UPHELD: the LEADING skeleton is exactly SC-SCOPE (thin); the NEW content is
+the 2PI structure controlling the HIGHER skeletons (common-mode mechanism $+$
+screened response), which SC-SCOPE did not address. RES-5 $=$ SC-SCOPE (leading)
+$+$ screened higher tail (this session).
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{correction} -- $0.002$ was free-energy
+$\times$ response (double-counted $a_0$); \emph{leading} -- SC-SCOPE joint
+$\times1.04$--$1.13>1$; \emph{tail} -- screened geometric $\le\times2$ leading;
+\emph{grade} -- thin, sunset-limited, $=$ SC-SCOPE.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 sunset-norm certificate
+Precise statement:       CORRECTION: the a0-skeleton c a0 ~ 0.002 double-counted a0
+                         (free-energy ratio x response). The certificate quantity is
+                         |Delta Gamma_2^pd|/Delta F_margin; its leading (sunset)
+                         value IS the SC-SCOPE certified joint = MARGIN/(C2+C_sunset+
+                         C_quartic) = x1.040 -> x1.13 (>1: third cumulant does not
+                         overturn the selection). Higher skeletons screened sub-
+                         dominant (tail <= leading/(1-0.49) ~ x2). RES-5 survives the
+                         matched-order-to-exact at STRONG EVIDENCE, THIN -- same
+                         grade as SC-SCOPE. New content vs SC-SCOPE: the 2PI common-
+                         mode + screened-response control of the HIGHER skeletons.
+Scope:                   The normalization map; anchor mu^2. The rigorous identity
+                         and the tail bound are OPEN.
+Dependencies:            res5-a0-skeleton-sensitivity (screened response, corrected
+                         here); res5-higherloop-commonmode-monotonicity (2PI common
+                         mode); SC-SCOPE (the joint x1.04-x1.13); Math424-AddA.
+Evidence grade:          ANALYTIC + EXECUTED (res5_sunset_norm_map.py 4/4) +
+                         INHERITED (SC-SCOPE joint).
+Reproduction command:    python codes/vacuum/res5_sunset_norm_map.py
+Expected output:         SC-SCOPE joint x1.04-x1.13>1; screened tail x1.97; 4/4.
+Falsification gate:      A normalization identity giving Delta Gamma_2^pd/Delta
+                         F_margin >= 1 (selection overturned); or a higher-skeleton
+                         tail NOT screened (g-amplified).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5: matched-order-to-
+                         exact STRONG EVIDENCE thin (= SC-SCOPE leading + 2PI
+                         screened higher tail).
+No-overclaim statement:  This does NOT close RES-5 and does NOT flip B1. It corrects
+                         a self-energy/free-energy conflation, maps the residual onto
+                         the SC-SCOPE thin joint, and adds the 2PI screened control
+                         of the higher skeletons. The grade is THIN (= SC-SCOPE); the
+                         rigorous normalization identity and tail bound remain. B1
+                         stays T6 on {H-LAYER}.
+Next required action:    Prove the SC-SCOPE-joint -> Delta Gamma_2^pd/Delta F_margin
+                         identity and the rigorous screened higher-skeleton tail
+                         bound; then RES-5 -> controlled-error theorem at the thin
+                         (SC-SCOPE) grade.
+\end{verbatim}
+}

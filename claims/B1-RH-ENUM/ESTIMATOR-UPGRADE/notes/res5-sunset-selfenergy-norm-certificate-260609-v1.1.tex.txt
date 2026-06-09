@@ -1,0 +1,182 @@
+% =============================================================================
+% Title: RES-5 sunset-norm certificate, v1.1 (audit re-issue): the self-energy/
+%        free-energy correction stands; the RES-5-survival verdict is RETRACTED.
+%        RES-5/GAP-2 is OPEN -- the screened higher-skeleton tail is SAME-ORDER,
+%        not sub-dominant, and is not bounded into the thin SC-SCOPE slack.
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 sunset-norm certificate; bears on H-LAYER)
+% Version: v1.1 -- supersedes v1.0 (2026-06-09); this version issued 2026-06-09
+% Status: CORRECTION NOTE (no tier action). The 2026-06-09 operator adversarial
+%   review splits v1.0 into an accepted part and a retracted part:
+%     (i) ACCEPTED -- the self-energy/free-energy double-count correction. The
+%         a0-skeleton estimate c a0 ~ 0.002 double-counted a0 (a free-energy ratio
+%         multiplied by a response). The certificate quantity is the free-energy
+%         ratio |Delta Gamma_2^pd| / Delta F_margin directly; its leading (sunset)
+%         value is the SC-SCOPE certified joint x1.040 -> x1.13.
+%     (ii) RETRACTED -- v1.0's "RES-5 survives at STRONG EVIDENCE, thin". The
+%         screened higher-skeleton tail <= leading / (1 - 0.49) ~ 2 x leading is
+%         SAME-ORDER (screened-finite), NOT sub-dominant. Against the thin joint
+%         x1.040 the residual slack is only 1 - 1/1.040 ~ 3.85% of the margin
+%         (equivalently C_higher must be < 0.040 C_leading); a same-order tail is
+%         not bounded into that slack. RES-5/GAP-2 returns to OPEN.
+%   No tier flip: B1-RH-ENUM stays T6 CONDITIONAL on {H-LAYER}. Negative-results:
+%   R-2026-06-09-res5-ca0-doublecount + AUDIT-2026-06-09-res5-survival-overclaim.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue: self-energy/free-energy correction; SC-SCOPE-
+%        joint = leading-skeleton map; screened higher tail; verdict "STRONG
+%        EVIDENCE thin".
+%   v1.1 (2026-06-09) audit re-issue after operator adversarial review: part (i)
+%        retained, part (ii) retracted; RES-5/GAP-2 OPEN; next action set to the
+%        quantitative tail-budget closure (res5-tail-budget-closure). Tier
+%        unchanged (B1 T6 on {H-LAYER}).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This is an audit re-issue of v1.0 following the operator adversarial review of
+2026-06-09. The review accepts the self-energy/free-energy normalization
+correction (Section 2) and retracts the survival verdict (Sections 4--5): the
+higher-skeleton tail bound carried by v1.0 is screened-finite but \emph{same
+order} as the leading skeleton, and is therefore not bounded into the thin
+SC-SCOPE slack. The honest status of RES-5/GAP-2 is OPEN. No tier action; B1
+stays T6 CONDITIONAL on $\{$H-LAYER$\}$.
+
+\section*{2. Correction (ACCEPTED): the certificate quantity is a free-energy ratio}
+
+The a0-skeleton estimate $c\,a_0 \sim 0.49\cdot a_0\cdot(\|\Sigma_2^{\rm pd}\|/
+\Delta F_{\rm margin})$ took $\|\Sigma_2^{\rm pd}\|/\Delta F_{\rm margin}\sim0.04$,
+but that $0.04$ is the FREE-ENERGY (sunset) ratio, not a self-energy norm.
+Because $\Delta\Gamma_2^{\rm pd}=\|\Sigma_2^{\rm pd}\|\,\|\delta G_*^{\rm pd}\|$,
+quoting the free-energy ratio AND multiplying by $\|\delta G_*^{\rm pd}\|=O(a_0)$
+double-counts $a_0$. The certificate quantity is directly
+\[
+\mathcal{R}_{\rm cert}\;=\;\frac{|\Delta\Gamma_2^{\rm pd}|}{\Delta F_{\rm margin}},
+\]
+whose leading (sunset / 2-loop) value is the SC-SCOPE certified joint, NOT
+$0.2\%$. This correction stands and is the accepted content of this note.
+
+\section*{3. The normalization map (leading skeleton; identity still OPEN)}
+
+SC-SCOPE certified the endpoint joint
+\[
+\mathrm{joint}=\frac{\mathrm{MARGIN}}{C_2+C_{\rm sunset}+C_{\rm quartic}}
+=\times1.040\ (\text{certified})\ \longrightarrow\ \times1.13\ (\text{sunset cap}),
+\]
+both $>1$: the third cumulant (the leading 2PI skeleton) does not overturn the
+one-loop selection. Structurally this is the leading-skeleton statement
+$\mathcal{R}_{\rm cert}^{\rm leading}<1$. The exact identity
+$\mathcal{R}_{\rm cert}^{\rm leading}=\mathcal{C}_{\rm SC}$, with
+$\mathcal{C}_{\rm SC}$ the SC-SCOPE $C_{\rm sunset}+C_{\rm quartic}$
+normalization, is asserted from the shared third-cumulant origin but is NOT
+proved here. It is the first residual.
+
+\section*{4. Higher skeletons: screened-finite but SAME ORDER (corrected reading)}
+
+v1.0 called the $\ell\ge3$ tail ``screened sub-dominant''. The 2PI screened
+response (res5-a0-skeleton-sensitivity) bounds each order by the previous times
+$1/(1+g)=0.49$, giving the geometric tail
+\[
+C_{\rm higher}=\sum_{\ell\ge3}|\Delta\Gamma_\ell^{\rm pd}|
+\ \lesssim\ |\Delta\Gamma_{2\text{-loop}}^{\rm pd}|\,\frac{1}{1-0.49}
+\ \approx\ 2\,|\Delta\Gamma_{2\text{-loop}}^{\rm pd}| .
+\]
+This is \emph{screened-finite}, but it is the SAME ORDER as the leading
+skeleton, not a small fraction of it. The selection slack at the thin joint is
+\[
+\frac{\mathrm{MARGIN}-C_{\rm leading}}{\mathrm{MARGIN}}
+=1-\frac{1}{1.040}\approx 3.85\%,
+\qquad
+C_{\rm higher}\ \text{must be}\ <0.040\,C_{\rm leading}.
+\]
+A tail bounded only by $\sim2\,C_{\rm sunset}=O(C_{\rm leading})$ is roughly an
+order of magnitude too large to be admitted into a $3.85\%$ slack. The
+screened-finiteness therefore does NOT establish that the higher skeletons
+respect the thin margin; it only establishes that they do not diverge.
+
+\section*{5. Verdict and residual}
+
+\noindent\textbf{ACCEPTED.} The self-energy/free-energy correction (Section 2):
+the certificate quantity is the free-energy ratio, whose leading value is the
+SC-SCOPE thin joint $\times1.040$--$\times1.13$.
+
+\noindent\textbf{RETRACTED.} v1.0's ``RES-5 survives at STRONG EVIDENCE, thin'':
+the higher-skeleton tail is same-order, not sub-dominant.
+
+\noindent\textbf{RES-5 / GAP-2: OPEN.} What remains:
+\begin{itemize}
+\item the rigorous normalization identity
+$|\Delta\Gamma_{2\text{-loop}}^{\rm pd}|/\Delta F_{\rm margin}=\mathcal{C}_{\rm SC}$
+(layer-margin/cost bookkeeping $\leftrightarrow$ skeleton free-energy ratio);
+\item a quantitative higher-skeleton TAIL BUDGET small enough for the thin slack,
+$C_{\rm higher}<\Delta F_{\rm margin}-C_{\rm leading}$, i.e.\
+$C_{\rm higher}\lesssim0.04\,C_{\rm leading}$ -- NOT the current same-order
+$C_{\rm higher}\lesssim2\,C_{\rm sunset}$.
+\end{itemize}
+No tier flip: B1-RH-ENUM stays T6 CONDITIONAL on $\{$H-LAYER$\}$. The 2PI
+common-mode mechanism and the screened ($1/(1+g)$, not $1/(1-g)$) response are
+real structural gains carried forward; they bound the tail finite but not yet
+thin.
+
+\section*{6. Self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The $c\,a_0\sim0.002$ was wrong.''} UPHELD and corrected
+(Section 2): it double-counted $a_0$. Retracted as
+R-2026-06-09-res5-ca0-doublecount.
+\item[($\beta$)] \emph{``The SC-SCOPE-joint $\to\Delta\Gamma_2^{\rm pd}$ identity
+is asserted, not proved.''} VALID: carried as the first residual (Section 3).
+\item[($\gamma$)] \emph{``The screened tail $\le2\times$ leading does not fit a
+$3.85\%$ slack, so RES-5 does not survive.''} UPHELD (the binding objection): the
+tail is same-order; v1.0's survival verdict is retracted; RES-5/GAP-2 is OPEN; the
+next note must produce a quantitative tail budget
+$C_{\rm higher}\lesssim0.04\,C_{\rm leading}$. Registered as
+AUDIT-2026-06-09-res5-survival-overclaim.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{slack} $=1-1/1.040=0.0385$;
+\emph{current tail bound} $\approx2\,C_{\rm sunset}=O(C_{\rm leading})$;
+\emph{ratio} (tail bound)/(slack budget) $\approx 2C_{\rm sunset}/(0.04\,
+C_{\rm leading})\gg1$ -- the tail is NOT within the slack, so RES-5 is OPEN
+(consistent with the retraction, not with v1.0's survival).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 sunset-norm certificate v1.1 (audit
+                         re-issue)
+Precise statement:       ACCEPTED: the a0-skeleton c a0 ~ 0.002 double-counted a0;
+                         the certificate quantity is |Delta Gamma_2^pd|/Delta
+                         F_margin, leading value = SC-SCOPE joint x1.040->x1.13.
+                         RETRACTED: v1.0's "RES-5 survives STRONG EVIDENCE thin".
+                         The screened higher-skeleton tail <= 2x leading is SAME-
+                         ORDER, not sub-dominant; against the thin joint x1.040 the
+                         slack is ~3.85% (C_higher must be < 0.04 C_leading), which
+                         a same-order tail does not respect. RES-5/GAP-2 = OPEN.
+Scope:                   Correction + honest downgrade. The normalization identity
+                         and a thin-slack tail budget are OPEN.
+Dependencies:            res5-a0-skeleton-sensitivity (screened response); SC-SCOPE
+                         (joint x1.040-x1.13); supersedes v1.0.
+Evidence grade:          ANALYTIC (correction + slack arithmetic) + EXECUTED
+                         (res5_sunset_norm_map.py).
+Reproduction command:    python codes/vacuum/res5_sunset_norm_map.py
+Expected output:         joint x1.040-x1.13>1; tail x1.97 (same-order); slack
+                         0.0385; tail NOT within slack -> RES-5 OPEN; asserts PASS.
+Falsification gate:      A proved tail budget C_higher < 0.04 C_leading (would
+                         re-open the survival route); or a normalization identity
+                         giving the leading ratio >= 1 (selection overturned).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5/GAP-2 OPEN
+                         (downgraded from v1.0's STRONG EVIDENCE thin by operator
+                         adversarial review 2026-06-09).
+No-overclaim statement:  This note CORRECTS a self-energy/free-energy conflation
+                         (accepted) and RETRACTS the survival verdict (RES-5 OPEN).
+                         It does NOT close RES-5 and does NOT flip B1. The 2PI
+                         common-mode + screened response are carried forward as
+                         finite-but-not-thin tail control.
+Next required action:    res5-tail-budget-closure: prove the normalization identity
+                         and a tail budget C_higher < Delta F_margin - C_leading
+                         (~0.04 C_leading); only then can RES-5 -> controlled-error
+                         at the thin SC-SCOPE grade.
+\end{verbatim}
+}

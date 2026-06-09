@@ -1,0 +1,36 @@
+{
+  "script": "res5_a0_skeleton_sensitivity.py",
+  "version": "1.0.0",
+  "rhat": 0.33674599985544107,
+  "lam": 8.055072796999182,
+  "Bd": 0.12827093718689958,
+  "g": 1.0332317367797856,
+  "a0": 0.0956812885730738,
+  "C_G": 0.4918278531220407,
+  "dG_scale": 0.04705872274284533,
+  "second_order": 0.0011440579222252334,
+  "verdict": "gap-equation response screened C_G=1/(1+g)=0.49 (not amplified despite g>1); delta G_*^pd=O(a0) established; 2nd-order negligible; residual = skeleton self-energy norm c (SC-SCOPE sunset scale)",
+  "claims": [
+    {
+      "name": "gap_response_screened_not_amplified",
+      "passed": true,
+      "detail": "(2PI response operator (1+G K_BS G)^-1 has norm 1/(1+g)=0.492 for the REPULSIVE channel (lam'=8.06>0, ||G K_BS G||=g=1.03); SCREENED, not amplified. The strong coupling g>1 does NOT blow up delta G_* because the sign is 1+g, not 1-g -- the same repulsive screening protects the gap-equation response)"
+    },
+    {
+      "name": "deltaG_pd_is_a0_screened",
+      "passed": true,
+      "detail": "(||delta G_*^pd|| <= [1/(1+g)] a0 ||G_*|| = 0.49*0.096 = 0.047 times ||G_*||: O(a0) and screened -- delta G_*^pd = O(a0) ESTABLISHED including self-consistent feedback (resolves the ordered-BCC amplification worry))"
+    },
+    {
+      "name": "second_order_negligible",
+      "passed": true,
+      "detail": "((1/2)||K_BS|| ||delta G_*^pd||^2 ~ (1/2)*1.03*0.047^2 = 0.0011 << first order: the skeleton sensitivity is dominated by the LINEAR term ||Sigma_2^pd|| ||delta G_*^pd||)"
+    },
+    {
+      "name": "residual_is_skeleton_selfenergy_norm",
+      "passed": true,
+      "detail": "(RESIDUAL: c = ||Sigma_2^pd||/Delta F_margin * 0.49; ||Sigma_2^pd|| = the pattern-dependent skeleton self-energy (SC-SCOPE sunset scale, the n=3 ~4% datum). Steps 1-2 (screened a0-response) ESTABLISHED; the skeleton self-energy norm c is the sole remaining quantity -- the SC-SCOPE territory, now with the screened a0-response in hand)"
+    }
+  ],
+  "all_pass": true
+}

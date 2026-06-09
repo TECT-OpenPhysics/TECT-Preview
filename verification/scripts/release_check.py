@@ -34,7 +34,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build"}
+SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build", ".cache"}
 FORBIDDEN = ["essentially proved", "almost closed", "at theorem level",
              "near closure", "conjecturally established"]
 PHRASE_SCOPE = ("claims/", "theory/", "publish/", "README.md", "CLAIMS.md")
@@ -65,6 +65,7 @@ def main():
     run("lineage", ["verification/scripts/build_lineage.py", "--check"], errors)
     run("index", ["verification/scripts/build_index.py", "--check"], errors)
     run("todo", ["verification/scripts/todo.py", "--check"], errors)
+    run("changelog", ["verification/scripts/changelog.py", "render", "--check"], errors)
 
     # 3. P0 fence
     gi = (REPO / ".gitignore").read_text(encoding="utf-8")
@@ -80,7 +81,7 @@ def main():
 
     # 4. English-only
     for f in files():
-        if f.suffix in (".md", ".py", ".json", ".yml", ".txt", ".tex", ".html", ".js", ".css"):
+        if f.suffix in (".md", ".py", ".json", ".jsonl", ".yml", ".txt", ".tex", ".html", ".js", ".css"):
             if HANGUL.search(f.read_text(encoding="utf-8", errors="replace")):
                 errors.append(f"english-only: Hangul found in {f.relative_to(REPO)}")
     print("  [english-only] done")

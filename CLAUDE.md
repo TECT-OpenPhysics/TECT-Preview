@@ -50,6 +50,12 @@ first (readiness gate) and follow `SESSION.md` to resume.
   file add/move/version; CI checks sync.
 - `TODO.md` is generated from `todo/todo.json` — never hand-edit; manage with
   `python verification/scripts/todo.py {list,add,start,done,block,set,render}`.
+- `CHANGELOG.md` is generated from `changelog/log.jsonl` (append-only) — never
+  hand-edit. Add entries with `python verification/scripts/changelog.py add
+  --title ... --date ... --claims ...` (body on stdin); search with
+  `changelog.py search [--claim|--keyword|--text|--fts]`. The query cache
+  `changelog/.cache/changelog.db` is gitignored/rebuildable. Policy:
+  `governance/changelog-db.md`.
 
 ## 3. Claim-first discipline
 
@@ -57,8 +63,9 @@ first (readiness gate) and follow `SESSION.md` to resume.
   "certified", "falsified", tier changes) unless the corresponding claim card
   / registry entry is already written to disk in the same response.
 - One substantive claim-card change per turn; atomic set per accepted result:
-  claim card + `CHANGELOG.md` entry + regenerated `CLAIMS.md` (+
-  `negative-results/` entry if a gate fired) in one commit.
+  claim card + a `changelog.py add` entry (-> `changelog/log.jsonl` + regenerated
+  `CHANGELOG.md`) + regenerated `CLAIMS.md` (+ `negative-results/` entry if a gate
+  fired) in one commit.
 - Tier changes require the devil's-advocate self-test in the claim card
   (≥3 concrete objections, each DISMISSED/VALID-with-mitigation/UPHELD) and
   respect for the T7 prohibition list (GOVERNANCE.md §5).

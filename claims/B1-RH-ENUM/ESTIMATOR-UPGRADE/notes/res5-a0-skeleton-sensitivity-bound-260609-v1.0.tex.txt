@@ -1,0 +1,154 @@
+% =============================================================================
+% Title: RES-5 a0-skeleton sensitivity: the 2PI gap-equation response is screened
+%        (no strong-coupling amplification); the residual is the SC-SCOPE skeleton
+%        self-energy norm
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 a0-skeleton sensitivity; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Executes the operator's 3-step a0-skeleton programme.
+%   STEPS 1-2 ESTABLISHED: linearising the 2PI gap equation, the response operator
+%   (1 + G K_BS G)^-1 has norm 1/(1+g)=0.49 for the REPULSIVE channel -- SCREENED,
+%   NOT amplified despite g=1.03>1 (the 1+g denominator, not 1-g). Hence
+%   delta G_*^pd = O(a0) (= 0.49 a0 ||G_*||) including self-consistent feedback,
+%   resolving the ordered-BCC amplification worry. The 2nd-order term is negligible
+%   (0.001). STEP 3 RESIDUAL: c = ||Sigma_2^pd||/Delta F_margin * 0.49, where
+%   ||Sigma_2^pd|| is the pattern-dependent skeleton self-energy -- the SC-SCOPE
+%   sunset scale (~4%). So c ~ 0.02, c a0 ~ 0.002 << 1 plausibly. Does NOT close
+%   RES-5: the rigorous ||Sigma_2^pd|| is the residual. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Screened gap-response C_G=1/(1+g)=0.49;
+%        delta G_*^pd=O(a0) (no amplification); 2nd-order negligible; the residual
+%        c = SC-SCOPE skeleton norm. Grounded by res5_a0_skeleton_sensitivity.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The 2PI common-mode note reduced RES-5 to the a0-bound $|\Delta\Gamma_2^{\rm pd}|
+\le c\,a_0\,\Delta F_{\rm margin}$, with the constant $c$ from the $\delta G_*^{\rm
+pd}$ sensitivity. The operator named the three steps: linearise the gap equation;
+bound $\delta G_*^{\rm pd}=O(a_0)$; bound the skeleton sensitivity. This note
+carries out steps 1--2 and finds the response SCREENED (resolving the worry that
+$g>1$ amplifies the feedback); step 3 reduces $c$ to the SC-SCOPE skeleton
+self-energy norm. Scope: the screened response; anchor $\mu^2$.
+
+\section*{2. Step 1 -- linearise the 2PI gap equation}
+
+The gap equation $G^{-1}=K_0+\lambda'\mathcal P^2+\Sigma_2[G]$ linearised around the
+common $G_*^{\rm common}(I)$ gives, with $\delta(G^{-1})=-G^{-1}\delta G\,G^{-1}$,
+\[
+\delta G_*^{\rm pd}
+= -\big(1 + G_* K_{\rm BS} G_*\big)^{-1}\,G_*\,\underbrace{\lambda'(\mathcal P^2-\langle\mathcal P^2\rangle)}_{\text{source}=O(a_0)}\,G_*,
+\qquad K_{\rm BS}=\frac{\delta\Sigma_2}{\delta G},
+\]
+where $K_{\rm BS}$ is the Bethe--Salpeter (2PI) kernel and the source is the
+pattern-specific self-energy, $O(a_0)\hat r$.
+
+\section*{3. Step 2 -- the response is SCREENED (no strong-coupling amplification)}
+
+The response operator $(1+G_* K_{\rm BS}G_*)^{-1}$ is where a strong coupling could
+blow up. For the REPULSIVE density channel ($\lambda'=3u_{\rm eff}>0$) the kernel is
+positive, $\|G_* K_{\rm BS} G_*\| = g = \lambda' B_d = 1.03$, so
+\[
+\boxed{\;\big\|(1+G_* K_{\rm BS}G_*)^{-1}\big\| = \frac{1}{1+g}=0.49\quad(\text{SCREENED, not } \tfrac{1}{1-g}).\;}
+\]
+The strong coupling $g>1$ does NOT amplify $\delta G_*$: the sign is $1+g$, not
+$1-g$ -- the SAME repulsive screening that made the susceptibility finite. Hence
+\[
+\|\delta G_*^{\rm pd}\| \le \frac{1}{1+g}\,a_0\,\|G_*\| = 0.49\,a_0\,\|G_*\|
+= O(a_0),
+\]
+ESTABLISHED including the self-consistent feedback. This resolves the ordered-BCC
+amplification worry: at strong coupling the feedback is screened, not divergent.
+
+\section*{4. Step 3 -- the skeleton sensitivity (the residual)}
+
+\[
+|\Delta\Gamma_2^{\rm pd}|
+\le \|\Sigma_2^{\rm pd}\|\,\|\delta G_*^{\rm pd}\|
++ \tfrac12\|K_{\rm BS}\|\,\|\delta G_*^{\rm pd}\|^2,
+\]
+with the second-order term $\tfrac12 g (0.49 a_0)^2 = 0.001$ negligible. The linear
+term dominates: $c = \dfrac{\|\Sigma_2^{\rm pd}\|}{\Delta F_{\rm margin}}\times0.49$,
+where $\|\Sigma_2^{\rm pd}\|$ is the pattern-dependent skeleton self-energy -- the
+SC-SCOPE SUNSET scale (the $n=3$ datum, $\sim4\%$). Thus $c\sim0.02$ and
+$c\,a_0\sim0.002\ll1$ plausibly. The rigorous $\|\Sigma_2^{\rm pd}\|$ (the
+SC-SCOPE sunset self-energy, already computed at the difference level) is the sole
+remaining quantity.
+
+\section*{5. Status}
+
+\textbf{T3 PROOF SKETCH.} Steps 1--2 ESTABLISHED: the gap-equation response is
+screened ($C_G=0.49$), $\delta G_*^{\rm pd}=O(a_0)$ including self-consistent
+feedback -- the strong coupling does NOT amplify. The 2nd-order term is negligible.
+\textbf{OPEN (the residual):} the rigorous skeleton self-energy norm
+$\|\Sigma_2^{\rm pd}\|$ (the constant $c$), which is the SC-SCOPE sunset scale --
+now to be assembled into the $c\,a_0<1$ certificate. No tier flip: B1-RH-ENUM T6
+CONDITIONAL on $\{$H-LAYER$\}$. \textbf{B1 closure} $\Longleftrightarrow$ this
+$\|\Sigma_2^{\rm pd}\|$ bound, with everything else (common-mode mechanism, screened
+$O(a_0)$ response) in hand.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$\|G_* K_{\rm BS} G_*\|=g$ uses the same $g$ -- is the
+screening sign really guaranteed?''} VALID-with-mitigation: the density-channel BS
+kernel inherits the sign of the dressed vertex $\lambda'>0$ (repulsive), giving the
+$1+g$ denominator; an attractive channel would give $1-g$ (instability). The sign
+follows from $u_{\rm eff}>0$, robust. Off-diagonal/anomalous channels are a
+separate check (the exchange block, RES-1b).
+\item[($\beta$)] \emph{``$c\sim0.02$ rests on the SC-SCOPE $\sim4\%$.''} VALID: $c$
+is reduced to the SC-SCOPE sunset self-energy norm, which is established at the
+difference level; the certificate must quote it rigorously, not the round $4\%$.
+But the STRUCTURE (screened $O(a_0)$ response $\times$ skeleton norm) is now fixed.
+\item[($\gamma$)] \emph{``Does this close RES-5?''} DISMISSED: steps 1--2 are
+established; step 3 (the skeleton norm) is the residual. B1 stays T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{screening} -- $1/(1+g)=0.49$ (finite,
+$g>1$); \emph{response} -- $\delta G_*^{\rm pd}=0.49 a_0\|G_*\|=O(a_0)$;
+\emph{2nd order} -- $\tfrac12 g(0.49 a_0)^2=0.001$ negligible; \emph{residual} --
+$c\sim\|\Sigma_2^{\rm pd}\|/\Delta F_{\rm margin}\times0.49$, SC-SCOPE sunset scale;
+\emph{margin} -- $c\,a_0\sim0.002\ll1$ plausibly.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 a0-skeleton sensitivity (screened
+                         response)
+Precise statement:       Linearising the 2PI gap equation, delta G_*^pd =
+                         -(1+G K_BS G)^-1 G [lam'(P^2-<P^2>)] G. For the repulsive
+                         channel ||(1+G K_BS G)^-1|| = 1/(1+g) = 0.49 (SCREENED, not
+                         1/(1-g)), so delta G_*^pd = 0.49 a0 ||G_*|| = O(a0) --
+                         strong coupling g=1.03>1 does NOT amplify the feedback
+                         (resolves the ordered-BCC worry). 2nd-order term 0.001
+                         negligible. Residual: c = ||Sigma_2^pd||/Delta F_margin *
+                         0.49, ||Sigma_2^pd|| = SC-SCOPE sunset scale (~4%); c~0.02,
+                         c a0 ~ 0.002 << 1 plausibly.
+Scope:                   Steps 1-2 (screened a0-response); anchor mu^2. The rigorous
+                         skeleton norm ||Sigma_2^pd|| (step 3) is OPEN.
+Dependencies:            res5-higherloop-commonmode-monotonicity (the 2PI structure);
+                         res5-2pi-resummation-strategy (the screening 1/(1+g));
+                         SC-SCOPE (sunset self-energy); Math424-AddA.
+Evidence grade:          ANALYTIC + EXECUTED (res5_a0_skeleton_sensitivity.py 4/4).
+Reproduction command:    python codes/vacuum/res5_a0_skeleton_sensitivity.py
+Expected output:         C_G=1/(1+g)=0.49; delta G_*^pd=0.47 (x a0); 2nd-order
+                         0.001; 4/4 PASS.
+Falsification gate:      An attractive density channel (would give 1/(1-g), g>1,
+                         amplification); or a skeleton self-energy ||Sigma_2^pd|| so
+                         large that c a0 >= 1.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5: the screened
+                         O(a0) gap-response established; residual reduced to the
+                         SC-SCOPE skeleton self-energy norm.
+No-overclaim statement:  This does NOT close RES-5. Steps 1-2 (screened, O(a0)
+                         response, no amplification) are established; the skeleton
+                         self-energy norm c (step 3) is the residual, = the SC-SCOPE
+                         sunset scale. The c a0 ~ 0.002 estimate uses the round 4%;
+                         the certificate must quote ||Sigma_2^pd|| rigorously. B1
+                         stays T6 on {H-LAYER}.
+Next required action:    Assemble the SC-SCOPE pattern-dependent sunset self-energy
+                         ||Sigma_2^pd|| into c = ||Sigma_2^pd||/Delta F_margin*0.49
+                         and certify c a0 < 1 -- the final RES-5 certificate.
+\end{verbatim}
+}

@@ -43,7 +43,7 @@ CATALOG_JSON = REPO / "verification" / "catalog.json"
 
 VER_RE = re.compile(r"-(\d{6})(?:-(\d{6}))?-v(\d+)\.(\d+)\.(?:md|tex\.txt|txt|pdf)$")
 TAG_RE = re.compile(r"(Math\d+)")
-SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build"}
+SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build", ".cache"}
 SKIP_NAMES = {"CATALOG.md", "catalog.json", ".gitkeep"}
 
 KINDS = [
