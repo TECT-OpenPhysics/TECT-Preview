@@ -1,0 +1,190 @@
+% =============================================================================
+% Title: Discharging H-diag I: the full-covariance Gaussian-Hartree problem,
+%        the condensate-free convexity, and the isolated off-diagonal obstruction
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1 analytic core; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Mainline RES-1 start (operator-directed). FORMULATES
+%   the discharge of H-diag (Math427's diagonal-Gaussian restriction) as a
+%   full-covariance variational problem and PROVES the condensate-free convexity
+%   sub-result, isolating the entire obstruction to the condensate-induced
+%   off-diagonal (G1'') Hessian. Does NOT discharge H-diag: the class-wide
+%   positivity of that off-diagonal Hessian is the marked OPEN GAP (RES-1 proper,
+%   merging with RES-5 beyond second cumulant). No tier flip (B2 T6, B1 T6).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Full-covariance functional F[G]; the diagonal
+%        reduction (Math427); the convexity Phi''=(3/2)u_eff>0 via sextic dressing
+%        of the ATTRACTIVE bare quartic; entropy convexity; the isolated
+%        off-diagonal obstruction. Grounded by hdiag_convexity_probe.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+B1-RH-ENUM rests on the sole hypothesis H-LAYER, whose analytic core is RES-1:
+Math427 proves the isotropic dressing is the variational infimum only within the
+DIAGONAL Gaussian trial class (conditional on H-diag $=$ diagonal covariance $+$
+local Wick); the off-diagonal (condensate-induced Bogoliubov-band, G1$''$) sector
+is the live gate. This note begins the discharge of H-diag by (i) writing the
+variational problem over the FULL covariance operator, (ii) proving rigorously
+that the functional is convex absent the condensate-induced off-diagonal
+coupling, and hence (iii) isolating the entire obstruction to that one coupling.
+No discharge is claimed: step (iii) leaves a named open gap. Scope: second-cumulant
+(Gaussian-Hartree) order, the production anchor $\mu^2 = 5\times10^{-3}$.
+
+\section*{2. The full-covariance variational functional}
+
+For a homogeneous Gaussian trial state with covariance operator $G$ (a positive
+operator on momentum space, $G(q,q')$; the diagonal class is $G(q,q')=G(q)\delta_{qq'}$),
+\[
+\frac{F[G]}{V}
+= \underbrace{\tfrac12\,\mathrm{Tr}\,\ln G^{-1}}_{\text{entropy}}
++ \underbrace{\tfrac12\,\mathrm{Tr}\,[K_0\,G]}_{\text{kinetic (linear)}}
++ \;\Phi[G],
+\qquad K_0(q) = c\,(q^2-q_0^2)^2 ,
+\]
+where $\Phi[G]$ is the interaction (quartic $u$, sextic $v$, condensate $A$). In
+the DIAGONAL class the local quartic/sextic interactions make $\Phi$ depend on the
+trial only through the scalar total variance $M_{\rm tot}=\int_q G(q)$
+(Math427), giving $\Phi_{\rm diag}(M)=\tfrac{3u}{4}M^2+\tfrac{5v}{2}M^3$ after Wick
+reduction, and the stationarity $\hat r(\hat q)=2\Phi'(M_{\rm tot})$ is
+direction-independent $\Rightarrow$ isotropic. Off the diagonal, the condensate
+$A$ (with momentum content on the Bragg shell $|k|=q_0$) couples $G(q,q')$ for
+$q'-q$ a reciprocal-lattice vector -- a periodic-potential / Bogoliubov-band term
+that breaks the ``$\Phi$ depends only on $M_{\rm tot}$'' structure. Call this term
+$\Phi_{\rm od}[G]$.
+
+\section*{3. The condensate-free functional is convex (rigorous)}
+
+\textbf{Lemma (condensate-free convexity).} The functional
+$F_0[G]=\tfrac12\mathrm{Tr}\ln G^{-1}+\tfrac12\mathrm{Tr}[K_0 G]+\Phi_{\rm diag}(M_{\rm tot})$
+(i.e.\ $F[G]$ with $\Phi_{\rm od}$ omitted) is convex on the positive-covariance
+cone at the operating point, and its unique minimiser is the isotropic dressing.
+
+\emph{Proof.} (a) $\tfrac12\mathrm{Tr}\ln G^{-1}=-\tfrac12\mathrm{Tr}\ln G$ is convex
+in $G$ ($-\ln\det$ is operator-convex; per-mode Hessian $\tfrac1{2}G^{-2}>0$,
+verified $\ge 4.6\times10^{-2}$ on the BZ grid). (b) $\tfrac12\mathrm{Tr}[K_0G]$ is
+linear in $G$. (c) $\Phi_{\rm diag}(M_{\rm tot})$ is a convex function of the
+linear functional $M_{\rm tot}[G]$: $\Phi_{\rm diag}''(M)=\tfrac{3u}{2}+15vM
+=\tfrac32(u+10vM)=\tfrac32 u_{\rm eff}$, and at the anchor
+$u_{\rm eff}=u+10vM_R=-0.86+10(3.24)(0.10941)=+2.685>0$, so
+$\Phi_{\rm diag}''=+4.03>0$ and (with $v=3.24>0$) the sextic gives boundary
+coercivity $(5v/2)M^3\to+\infty$. A sum of convex $+$ linear $+$ (convex of linear)
+is convex; coercive $\Rightarrow$ the stationary isotropic point is the unique
+global minimiser. $\square$
+
+This UPGRADES Math427's diagonal ``infimum'' (which invoked a gap-map
+monotonicity) to a convex-unique GLOBAL minimum, and -- crucially -- it holds over
+the FULL covariance cone, not only the diagonal class: $F_0$ is convex in every
+off-diagonal direction as well. Hence the diagonal restriction H-diag is
+unnecessary for $F_0$.
+
+\textbf{Honest subtlety.} The bare quartic is ATTRACTIVE ($u=-0.86<0$, the
+Brazovskii sign); convexity is NOT automatic. It holds because the sextic dressing
+lifts the effective quartic to $u_{\rm eff}=+2.685>0$ at the anchor. Off the
+anchor, $u_{\rm eff}$ could in principle change sign -- this is exactly the
+ROBUSTNESS-MU2 axis (closed $[\times0.5,\times2]$, where $u_{\rm eff}$ stays
+positive), and the convexity statement is anchored accordingly.
+
+\section*{4. The isolated obstruction (the RES-1 residual)}
+
+Since $F=F_0+\Phi_{\rm od}$ and $F_0$ is convex with the isotropic global minimum,
+the ONLY possible source of a lower off-diagonal competitor is the
+condensate-induced term $\Phi_{\rm od}$. Discharging H-diag is therefore
+EQUIVALENT to the Bogoliubov-stability inequality
+\[
+\boxed{\;\mathrm{Hess}\,F\big|_{G_*}\succeq 0
+\iff
+\underbrace{\tfrac12 G_*^{-1}\!\otimes G_*^{-1}}_{\text{entropy curvature (PD)}}
+\;\succeq\;
+-\,\mathrm{Hess}\,\Phi_{\rm od}\big|_{G_*}\;}
+\]
+at the isotropic dressing $G_*$ (and, for a GLOBAL statement, convexity of
+$\Phi_{\rm od}$ or a global enclosure). The entropy curvature is positive-definite
+and large where $G_*$ is small (deep in the gap); the question is whether the
+condensate-induced off-diagonal kernel -- which can open attractive band gaps even
+for repulsive $u_{\rm eff}$ -- is dominated by it. For the five ENUMERATED readings
+this was executed (Math428, the G1$''$ Bogoliubov bands); the CLASS-WIDE positivity
+is the open RES-1 content, and its beyond-second-cumulant part merges with RES-5.
+
+\section*{5. Status and next step}
+
+\textbf{T3 PROOF SKETCH.} Proved: $F_0$ convex (isotropic global min over the full
+covariance cone) at the anchor. Formulated: H-diag discharge $\iff$ the
+condensate-induced off-diagonal Hessian $\mathrm{Hess}\,\Phi_{\rm od}$ is dominated
+by the entropy curvature. \textbf{OPEN GAP (RES-1):} the class-wide positivity of
+$\mathrm{Hess}\,\Phi_{\rm od}|_{G_*}$ (second cumulant), and its beyond-second-order
+extension (RES-5). No tier flip: B2-PROPA-HLAYER T6, B1-RH-ENUM T6 on $\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The bare quartic is attractive ($u<0$); the convexity
+claim is fragile.''} VALID-with-mitigation: stated explicitly in \S3 -- convexity
+rests on $u_{\rm eff}=+2.685>0$ from the sextic dressing at the anchor; the
+off-anchor sign is the ROBUSTNESS-MU2 axis (closed $[\times0.5,\times2]$). The
+Lemma is anchored, not claimed universally in $\mu^2$.
+\item[($\beta$)] \emph{``Isolating the obstruction is not discharging H-diag.''}
+DISMISSED (by design): the note claims T3, proving only the condensate-free
+convexity and reducing the discharge to the boxed Bogoliubov inequality; the
+off-diagonal positivity is the marked OPEN GAP, not a result.
+\item[($\gamma$)] \emph{``A condensate-induced periodic potential opens band gaps
+even for repulsive $u_{\rm eff}$, so $\Phi_{\rm od}$ could lower $F$.''} VALID and
+UNRESOLVED: this is precisely the RES-1 residual. The note does NOT assert
+$\mathrm{Hess}\,\Phi_{\rm od}\succeq 0$ class-wide; it only localises the entire
+risk to this one term, which is the value of the reduction.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{sign} -- bare $u=-0.86<0$ (attractive)
+but $u_{\rm eff}=u+10vM_R=+2.685>0$ (the dressing flips the sign), so
+$\Phi_{\rm diag}''=\tfrac32 u_{\rm eff}=+4.03>0$; \emph{magnitude} -- the entropy
+Hessian $\tfrac12 G^{-2}\ge 4.6\times10^{-2}$ on the BZ grid (positive-definite);
+\emph{limit} -- $(5v/2)M^3\to+\infty$ as $M\to\infty$ ($v=3.24>0$), coercive;
+\emph{consistency} -- the convex global diagonal minimum reproduces the Math427
+isotropic stationary point.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-diag discharge I (RES-1 formulation +
+                         condensate-free convexity)
+Precise statement:       (1) F0[G] = entropy + linear kinetic + Phi_diag(M_tot),
+                         with Phi_diag''=(3/2)u_eff=+4.03>0 (u_eff=+2.685 from the
+                         sextic dressing of the attractive bare u=-0.86) and the
+                         entropy Hessian (1/2)G^-2>0, is CONVEX on the full
+                         covariance cone at the anchor => the isotropic dressing
+                         is its unique GLOBAL minimum (diagonal AND off-diagonal).
+                         (2) Therefore H-diag discharge <=> the condensate-induced
+                         off-diagonal Hessian Hess Phi_od|_G* is dominated by the
+                         entropy curvature (1/2)G*^-1 (x) G*^-1 (Bogoliubov
+                         stability). No discharge claimed.
+Scope:                   Second-cumulant (Gaussian-Hartree) order, anchor mu^2;
+                         the condensate-free convexity is rigorous, the
+                         off-diagonal positivity is OPEN.
+Dependencies:            Math427 (diagonal isotropy infimum); Math424-AddA
+                         (gap_solve, M_fast, U=-0.86, V=+3.24); Math428 (G1''
+                         enumerated); hlayer-residual-inventory (RES-1/RES-5).
+Evidence grade:          ANALYTIC (convexity) + EXECUTED (hdiag_convexity_probe.py
+                         5/5).
+Reproduction command:    python codes/vacuum/hdiag_convexity_probe.py
+Expected output:         u_eff=+2.685>0; Phi''=+4.03>0; entropy Hessian>0; 5/5.
+Falsification gate:      u_eff<=0 at the anchor (would void the convexity), or a
+                         demonstrated off-diagonal competitor with F<F[G*] (would
+                         show Hess Phi_od is NOT dominated -- the residual decided
+                         negatively).
+Tier before / after:     No tier flip. B2 T6, B1 T6 on {H-LAYER} unchanged.
+                         H-diag: restated as the boxed Bogoliubov inequality with
+                         the condensate-free half PROVED (T3 proof sketch).
+No-overclaim statement:  This does NOT discharge H-diag or H-LAYER and does NOT
+                         promote B1. Only the condensate-FREE convexity is proved;
+                         the condensate-induced off-diagonal (G1'') Hessian
+                         positivity is the OPEN RES-1 gap (class-wide), merging
+                         with RES-5 beyond second cumulant. Convexity is anchored
+                         (bare quartic attractive; u_eff>0 via dressing).
+Next required action:    Bound/verify Hess Phi_od|_G* class-wide (the condensate
+                         off-diagonal Bogoliubov Hessian): construct it from the
+                         Bragg-shell condensate coupling, test PSD against the
+                         entropy curvature for a general single-mode pattern.
+\end{verbatim}
+}

@@ -1,0 +1,221 @@
+% =============================================================================
+% Title: RES-4 closure: the STEP-5B layer-closure ratio is positive across the
+%        continuous operating-point intensity interval
+% Claim: B5-BEYOND-LAYER-BOUND (H-LAYER residual RES-4; bears on B1-RH-ENUM)
+% Version: v1.1 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: RES-4 CLOSED@interval (controlled-error, second cumulant, anchor mu^2,
+%   lattice class). The H-LAYER residual inventory (hlayer-residual-inventory
+%   v1.0) listed RES-4 (intensity interval) as the one mechanical-but-nontrivial
+%   residual, certified only at the three anchors {4e-4, 1e-3, 2e-3} and deferred
+%   as a "candidate follow-up script" because the sandbox shell was unavailable
+%   to the authoring session. This note executes that sweep: the STEP-5B closure
+%   ratio rho(I) is strictly monotone decreasing and > 1 throughout
+%   I in [4e-4, 2e-3], so the three-anchor caveat is removed. NO tier flip:
+%   B1 stays T6 CONDITIONAL on {H-LAYER}; this discharges ONE of the three
+%   independent residual axes (RES-4), not H-LAYER itself.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Interval certification of rho(I) over the
+%        operating-point intensity interval via a derivative-sign monotonicity
+%        certificate; closes RES-4 of hlayer-residual-inventory v1.0.
+%   v1.1 (2026-06-09) operator review incorporated (accepted, no B1 tier flip):
+%        new section 6 records the acceptance and the three adversarial points
+%        (controlled-error not formal interval arithmetic; mid-anchor 11%%
+%        J-quadrature discrepancy with the endpoint binding value reproduced to
+%        0.8%%; m as an intensity-independent input). The mid-anchor caveat is
+%        elevated to the footer No-overclaim. Body result unchanged.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The H-LAYER residual inventory (\texttt{hlayer-residual-inventory} v1.0)
+decomposes the distance between the amended-class conditional theorem and
+unconditional whole-Reading-H into six named items, of which three are
+independent open axes: RES-3 (unrestricted class, $=$ DR-2; discharged for the
+crystallographic lattice class by R-026/R-027/R-028), RES-5 (matched-order to
+exact, $=$ GAP-2; ESTIMATOR-UPGRADE CLOSED@controlled-error), and RES-4
+(intensity interval). RES-4 was the one purely mechanical residual: the STEP-5B
+layer-closure margin chain was certified only at the three anchor intensities
+$I \in \{4\times10^{-4}, 10^{-3}, 2\times10^{-3}\}$ (AddE floors
+$\rho = \times59.4 / \times8.8 / \times2.6$), with the in-between interval left
+as a registered candidate follow-up script. This note closes RES-4 by an
+interval certification of $\rho(I)$ over the full operating-point interval. The
+scope is the anchor layer comparison ($\mu^2 = 5\times10^{-3}$), second-cumulant
+order, lattice competitor class -- exactly the scope on which the chain is
+defined; nothing here touches RES-3 or RES-5.
+
+\section*{2. The closure ratio as a function of intensity}
+
+At the anchor $\mu^2$ the gap solution $r_R$, the dressed coupling
+$\lambda' = 3u + 30 v M_R$, and the variance $M_R$ are intensity-independent.
+The STEP-5B layer-closure ratio is
+\[
+\rho(I) \;=\; \frac{K_{\rm b}(I)}{K(I)},\qquad
+K_{\rm b}(I) = \frac{4\,(1-a_0(I))\,m}{(\lambda' I)^2\,J_{\rm eff}(I)},\qquad
+K(I) = 8 + 4\sqrt{14}\,\sqrt{n_{\rm pack}(I)},
+\]
+with $\hat r(I) = r_R + 2\lambda' I$, $a_0(I) = 2\lambda' I/\hat r(I)$,
+$\theta_{\min}(I) = \sqrt{\hat r(I)}/(2 q_0^2\sqrt C)$,
+$n_{\rm pack}(I) = 16/\theta_{\min}^2$, $t_{\min}(I) = 2 q_0\sin(\theta_{\min}/2)$,
+$J_{\rm eff}(I) = J(t_{\min}, \hat r)$, and $m = 4.32\times10^{-3}$ the Prop-A
+bulk layer margin (an INPUT here, intensity-independent by construction; its
+$\mu^2$-robustness is ROBUSTNESS-MU2, separately closed). Every factor is a
+smooth monotone function of $I$: $\hat r$ and $a_0$ increase, $n_{\rm pack}$
+decreases, and $K_{\rm b} \propto (1-a_0)/(I^2 J_{\rm eff})$ decreases, so
+$\rho(I)$ is smooth and monotone decreasing on the interval.
+
+\section*{3. Interval certification (RES-4 closed)}
+
+A $201$-node sweep over $I \in [4\times10^{-4}, 2\times10^{-3}]$ at the anchor
+$\mu^2$ establishes, with self-test asserts:
+\begin{itemize}
+\item \textbf{Anchor reproduction.} $\rho(4\times10^{-4}) = 59.4$,
+$\rho(10^{-3}) = 9.8$, $\rho(2\times10^{-3}) = 2.58$, matching the AddE floors
+$\times59.4 / \times8.8 / \times2.6$ (the mid anchor differs by $\sim 11\%$ from
+the recorded $8.8$ at this $J$-quadrature resolution; the binding endpoint
+reproduces $\times2.6$ to $0.8\%$).
+\item \textbf{Positivity.} $\rho(I) > 1$ at every node; the grid minimum
+$\times2.578$ occurs at the endpoint.
+\item \textbf{Derivative-sign certificate.} $\rho'(I) < 0$ at all $201$ nodes
+($\max_I \rho'(I) = -2.5\times10^{3} < 0$), so $\rho$ is strictly monotone
+decreasing on the continuum and the interval minimum is the ENDPOINT value.
+\item \textbf{Endpoint margin.} $\min_{[4\times10^{-4},2\times10^{-3}]} \rho
+= \rho(2\times10^{-3}) = \times2.578 > 1$, a margin of $\times1.58$ above unity.
+\item \textbf{Grid convergence.} The minimum is identical (to $0.000\%$) at $N=200$
+and $N=100$, so no sub-grid structure is missed.
+\end{itemize}
+\[
+\boxed{\;\rho(I) \ge \rho(2\times10^{-3}) = \times2.58 > 1
+\quad\text{for all } I \in [4\times10^{-4}, 2\times10^{-3}].\;}
+\]
+The three-anchor caveat of RES-4 is removed: the STEP-5B layer closure holds on
+the full operating-point intensity interval, not merely at the sampled points.
+
+\section*{4. Impact: one residual axis discharged, no tier flip}
+
+With RES-4 closed, the operating-point H-LAYER residual is covered on all three
+named axes at controlled-error grade: RES-3 (lattice class, R-026/R-027/R-028),
+RES-4 (this note), RES-5 (ESTIMATOR-UPGRADE controlled-error). This does NOT
+discharge H-LAYER and does NOT flip B1's tier. H-LAYER's analytic core -- the
+isotropic dressing as the diagonal-Gaussian infimum and its beyond-diagonal /
+exact-free-energy content (RES-1 merged with RES-5, the GAP-2 frontier) --
+remains the deep obstruction, and the unrestricted-class axis (RES-3 for
+arbitrary real-point $Q$) remains open off the critical path. B1 stays T6
+CONDITIONAL on $\{$H-LAYER$\}$; this is an increment that narrows the residual
+ledger, not a promotion.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A finite grid does not prove monotonicity between
+nodes.''} VALID-with-mitigation: the certificate is the derivative-sign test
+$\rho'(I)<0$ at all $201$ nodes together with grid convergence ($N{=}200$ vs
+$N{=}100$ identical minimum) and the smoothness of $\rho$ (a composition of
+smooth monotone elementary functions of $I$). This is a controlled-error
+certification at the ROBUSTNESS-MU2 standard, not formal interval arithmetic;
+the note claims exactly that grade. A formal validated-numerics enclosure is a
+registered optional hardening, not required for the controlled-error closure.
+\item[($\beta$)] \emph{``$m = 4.32\times10^{-3}$ is hardcoded; the closure could
+hide an intensity dependence of the bulk margin.''} DISMISSED: $m$ is the Prop-A
+bulk (layer) margin, which by construction is the second-order free-energy gap of
+the dressed layer and does not depend on the beyond-layer intensity $I$ (the
+intensity enters only through $K_{\rm b}, K$). The $\mu^2$-dependence of $m$ is
+the separate ROBUSTNESS-MU2 axis (CLOSED@$[\times0.5,\times2]$). RES-4 is strictly
+the $I$-axis of the beyond-layer ratio at fixed anchor $m$.
+\item[($\gamma$)] \emph{``Does RES-4 closure warrant a B1 promotion?''}
+DISMISSED: no. RES-4 is one of three independent residual axes; the deepest
+(RES-5 / GAP-2, exact free energy) and the full H-LAYER infimum are untouched.
+The note enacts no tier change.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{magnitude} -- the endpoint
+$\times2.578$ reproduces the AddE floor $\times2.6$ to $0.8\%$; \emph{limit} -- as
+$I\to0$, $K_{\rm b}\propto I^{-2}\to\infty$ so $\rho\to\infty$, consistent with
+$\rho(4\times10^{-4})=59.4$; \emph{sign-direction} -- $\rho$ decreases in $I$
+(the endpoint is the thinnest), matching the monotone ordering of the three
+anchors; \emph{dimensional} -- $\rho$ is a dimensionless budget ratio;
+\emph{reproducibility} -- the minimum is grid-stable to $0.000\%$ under doubling.
+
+\section*{6. Operator review and acceptance (2026-06-09)}
+
+The operator reviewed and ACCEPTED this RES-4 closure (no B1 tier flip), with
+three adversarial points, each already reflected in the body and reaffirmed:
+\begin{enumerate}
+\item \emph{Controlled-error, not formal interval arithmetic.} The closure rests
+on a derivative-sign grid certificate $+$ grid convergence $+$ the
+smoothness/monotonicity structure, so the safe ledger label is
+$\mathrm{RES\text{-}4}:\mathrm{CLOSED@controlled\text{-}error}$; a
+$\mathrm{T7}$ formal interval theorem would be an overclaim.
+\item \emph{Mid-anchor discrepancy recorded.} $\rho(10^{-3})=9.8$ differs from the
+recorded floor $8.8$ by $\sim 11\%$ (J-quadrature resolution); the binding
+ENDPOINT $\rho(2\times10^{-3})=2.58$ is reproduced to $0.8\%$, so the verdict is
+unaffected. Now in the footer No-overclaim.
+\item \emph{$m$ is an input.} $m=4.32\times10^{-3}$ is the intensity-independent
+Prop-A bulk layer margin; RES-4 closes the $I$-axis residual only. The analytic
+origin of $m$ (exact free energy, diagonal-Gaussian infimum) remains the
+H-LAYER core.
+\end{enumerate}
+
+\noindent Accepted ledger statement (operator-recommended): at
+$\mu^2=5\times10^{-3}$,
+\[
+\rho(I)=\frac{K_{\rm b}(I)}{K(I)}>0 \ \text{on}\ I\in[4\times10^{-4},2\times10^{-3}],
+\qquad \min_I\rho=\rho(2\times10^{-3})=2.578>1 ,
+\]
+\[
+\mathrm{RES\text{-}4}:\ \mathrm{OPEN}\longrightarrow\mathrm{CLOSED@controlled\text{-}error},
+\]
+at fixed anchor $\mu^2$, second-cumulant order, lattice competitor class; this
+does NOT discharge $H$-LAYER.
+
+\noindent Resulting H-LAYER residual structure (operator):
+$\mathrm{RES\text{-}3}$ closed for the lattice class;
+$\mathrm{RES\text{-}4}$ closed@controlled-error interval;
+$\mathrm{RES\text{-}5/GAP\text{-}2}$ the remaining deep frontier;
+$\mathrm{RES\text{-}1/Prop\text{-}A}$ the H-LAYER analytic core.
+\textbf{Decision: accept RES-4 closure; no B1 tier flip; next mainline
+$= \mathrm{RES\text{-}5/GAP\text{-}2}$ and the Prop-A / H-LAYER analytic core.}
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / H-LAYER RES-4 intensity-interval
+                         closure
+Precise statement:       The STEP-5B layer-closure ratio rho(I)=K_b(I)/K(I) is
+                         strictly monotone decreasing (rho'(I)<0 at all 201
+                         nodes) and rho(I) >= rho(2e-3) = x2.58 > 1 for all
+                         I in [4e-4, 2e-3] at the anchor mu^2=5e-3; the three
+                         AddE anchor floors x59.4/x8.8/x2.6 are reproduced. RES-4
+                         (intensity interval) of the H-LAYER residual inventory
+                         is CLOSED@interval (controlled-error).
+Scope:                   Anchor mu^2, second cumulant, lattice competitor class;
+                         controlled-error interval certification (derivative-sign
+                         + grid convergence), NOT formal interval arithmetic.
+Dependencies:            Math424-AddA (gap_solve, M_fast, U/V/Q0/C); Prop-A bulk
+                         margin m=4.32e-3 (input); AddE anchor floors; hlayer-
+                         residual-inventory v1.0 (RES-4 definition).
+Evidence grade:          EXECUTED (hlayer_res4_intensity_sweep.py 6/6).
+Reproduction command:    python codes/vacuum/hlayer_res4_intensity_sweep.py
+Expected output:         anchors x59.4/x9.8/x2.58; rho>1 on grid; rho'(I)<0 all
+                         nodes; interval min = endpoint x2.578; 6/6 PASS.
+Falsification gate:      A node with rho(I)<=1, or rho'(I)>=0 (non-monotone), or
+                         a refinement revealing min < endpoint, in
+                         I in [4e-4,2e-3] at the anchor mu^2.
+Tier before / after:     No tier flip. B5 T5, B1 T6 on {H-LAYER} unchanged.
+                         RES-4: three-point -> interval CLOSED (controlled-error).
+No-overclaim statement:  RES-4 closure discharges the intensity-interval residual
+                         ONLY. It does NOT discharge H-LAYER (RES-5/GAP-2 +
+                         diagonal-Gaussian infimum remain) and does NOT promote
+                         B1. Controlled-error grade, anchor mu^2, lattice class.
+                         Mid-anchor rho(1e-3)=9.8 differs ~11% from the recorded
+                         8.8 (J-quadrature resolution); the binding endpoint
+                         rho(2e-3)=2.58 is reproduced to 0.8% (operator review
+                         point 2), so the verdict is unaffected.
+Next required action:    RES-5 (matched-order to exact / GAP-2) is the remaining
+                         deep frontier; RES-1 (diagonal-Gaussian infimum, the
+                         Prop-A analytic core) is the H-LAYER discharge target.
+                         Optional: formal validated-numerics enclosure of rho(I).
+\end{verbatim}
+}

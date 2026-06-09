@@ -5,6 +5,89 @@ not pillar counts.
 
 ---
 
+## [RES-1 full operator-norm: formulation + honest RES-5 merge (T3)] - 2026-06-09
+
+- **Operator-directed full-operator-norm step.** HONEST VERDICT: the full worst-direction norm
+  ||E^-1/2 B_od E^-1/2|| < 1 does NOT close at second-cumulant order -- it MERGES with RES-5. NEW note
+  `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-full-operator-norm-formulation v1.0` (named FORMULATION, not
+  certificate, to avoid overclaim) + `codes/vacuum/hdiag_gershgorin_rowsum.py` (3/3) + `runs/`.
+- The off-diagonal Hessian B_od's load-bearing block is the EXCHANGE (Fock) Hessian, whose sign is NOT fixed by
+  u_eff>0 (bare u=-0.86<0 attractive; u_eff=+2.685>0 only via the sextic dressing), so B_od>=0 is not guaranteed and
+  the second-order envelope R_lead does NOT bound the full norm. The Gershgorin diagonal-dominance row-sums ARE
+  additive-energy controlled (R-025/R-026; BCC max row-sum 48<=N E_+), but the analytic exchange-sign input is a
+  beyond-second-cumulant object => merges with RES-5.
+- **Consolidation**: RES-1's off-diagonal axis resolves into (a) second-cumulant / operating-intensity
+  condensate-direction CERTIFIED (R_lead<=0.174, prior), (b) the full worst-direction norm = RES-5-merged. The
+  H-LAYER residual thus consolidates to RES-5 (+ off-anchor robustness); RES-1/RES-3(lattice)/RES-4 are controlled
+  at their stated scopes. No tier flip (B2 T6, B1 T6 on {H-LAYER}). lint PASS (29), release_check PASS.
+
+## [RES-1 constant certificate: condensate-direction off-diagonal ratio < 1 at operating intensity (T4)] - 2026-06-09
+
+- **Operator 4-goal programme** (B_max pin; class-wide diagonal floor; p_4/cross bound; lattice-class ratio). NEW
+  `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-constant-certificate v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/hdiag_offdiag_constant_certificate.py` (5/5) + `runs/`.
+- **Constants pinned**: B_max = B(q0) = 0.218 <= B(0) = 0.299 (bubble J(|Q|,rR), decreasing in |Q|); c_diag =
+  (N/2)rR = 1.827 (Math428 small-A floor); p_4 cross/leading = 0.044 (suppressed by the extra A^2~I/N). Assembled
+  conservative leading class-wide ratio R_lead(I) = (9/4)u_eff^2 B_max E_+ (I/N)/c_diag = 0.035/0.087/0.174 at
+  I=4e-4/1e-3/2e-3, so R_lead <= 0.174 (x5.7 margin) at the operating endpoint; A_op=sqrt(I/N)=0.013 -- the BCC
+  thin point R=0.916 (A=0.08) is OUTSIDE the operating regime (6x larger amplitude), and R=O(A^2)->0.
+- **Honest scope (operator point 4)**: R is the CONDENSATE-DIRECTION ratio (additive-energy Cauchy-Schwarz envelope
+  over Bloch competitors), NOT the full unrestricted worst-direction operator norm (the complete Hessian -- the
+  residual). T4 STRONG EVIDENCE; OPEN = worst-direction Hessian norm + rigorous p_4 (higher additive energies) +
+  off-anchor + RES-5. No tier flip (B2 T6, B1 T6 on {H-LAYER}). H-diag/RES-1 is now a STRONG discharge candidate for
+  the lattice class at the operating intensity. lint PASS (29), release_check PASS.
+
+## [RES-1 advance: off-diagonal Bogoliubov Hessian = additive energy of the Bragg set (T4)] - 2026-06-09
+
+- **Operator-directed next step** (construct + bound Hess Phi_od, certify ||E^-1/2 B_od E^-1/2||<1). NEW note
+  `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-additive-energy v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/hdiag_offdiag_additive_energy.py` (6/6) + `runs/260609-hdiag-offdiag-additive-energy/`.
+- **EXACT identity**: the off-diagonal Bogoliubov weight obeys sum_Q p_2(Q)^2 = E_+ (additive energy of the
+  condensate Bragg set; verified 540=540 for the BCC N=12 {110} shell, p_2(0)=12 reproducing Math428). From
+  Math428 W(Q)=3u_eff A^2 p_2(Q)+5vA^4 p_4(Q), so |Delta F_od| <= (9/4)u_eff^2 A^4 B_max E_+ -- the class-wide
+  off-diagonal Hessian is controlled by R-025 (E_+<=(1+T')N^2) / R-026 (lattice T'<<R^eps), the SAME machinery
+  that discharged H-ADM-COH. With A^2~I/N, R <~ u_eff^2 B_max r_R^-1 I (1+T') (subpolynomial in N).
+- **VERIFIED**: BCC Bogoliubov stability ratio R = |off-diag|/diag < 1 (worst 0.916 at A=0.08) = the operator
+  inequality ||E^-1/2 Hess Phi_od E^-1/2|| < 1, recasting Math428's continuum verdict; small-A R=O(A^2)
+  (0.118 at A=0.02).
+- **T4 STRONG EVIDENCE**. OPEN residual = the constant-pinned class-wide certificate (B_max, rho, diagonal lower
+  bound, full Hessian) + RES-5 beyond second cumulant. No tier flip (B2 T6, B1 T6 on {H-LAYER}). lint PASS (29),
+  release_check PASS.
+
+## [Mainline RES-1 start: H-diag full-covariance formulation + condensate-free convexity (T3)] - 2026-06-09
+
+- **Operator "start!"** -- begin RES-1 (the Prop-A / H-LAYER analytic core). The RES-4 closure note is re-issued
+  v1.0 -> v1.1 recording the operator's acceptance (no B1 tier flip) and elevating the mid-anchor 11% J-quadrature
+  caveat to the footer No-overclaim.
+- **NEW** `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-fullcovariance-formulation v1.0` (PDF FORM-CHECK PASS, 0 overfull)
+  + `codes/vacuum/hdiag_convexity_probe.py` (5/5) + `runs/260609-hdiag-convexity-probe/result.json`. Formulates the
+  discharge of H-diag (Math427's diagonal-Gaussian restriction) over the FULL covariance operator F[G] = entropy +
+  linear kinetic + Phi. Proves the condensate-free convexity: -1/2 Tr ln G convex (entropy Hessian (1/2)G^-2 > 0),
+  kinetic linear, Hartree Phi''=(3/2)u_eff = +4.03 > 0 -- where u_eff = u + 10 v M_R = -0.86 + 3.545 = +2.685 > 0,
+  the sextic DRESSING flipping the ATTRACTIVE bare quartic (u=-0.86) to repulsive. Hence the isotropic dressing is
+  the unique GLOBAL minimum over the full covariance cone ABSENT the condensate coupling.
+- **Isolated obstruction**: H-diag discharge <=> the condensate-induced off-diagonal (G1'') Bogoliubov Hessian
+  Hess Phi_od|_G* is dominated by the entropy curvature (1/2)G*^-1 (x) G*^-1. T3 PROOF SKETCH; OPEN GAP = class-wide
+  off-diagonal positivity (RES-1 proper, merges with RES-5 beyond second cumulant). No tier flip (B2 T6, B1 T6 on
+  {H-LAYER}). lint PASS (29 claims), release_check PASS.
+
+## [H-LAYER RES-4 closed: STEP-5B layer ratio certified across the intensity interval] - 2026-06-09
+
+- **Mainline** (operator: "start the mainline proof"). B1-RH-ENUM rests on the sole hypothesis {H-LAYER}; the
+  H-LAYER residual inventory's three independent open axes are RES-3 (unrestricted class, lattice-discharged via
+  R-026/R-027/R-028), RES-5 (matched-order to exact = GAP-2), and RES-4 (intensity interval). RES-4 was the one
+  mechanical-but-nontrivial residual, certified only at three anchors and deferred as a candidate script for want of
+  a sandbox shell.
+- **NEW** `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/hlayer-res4-intensity-closure v1.0` +
+  `codes/vacuum/hlayer_res4_intensity_sweep.py` (6/6) + `runs/260609-hlayer-res4-intensity-sweep/result.json`:
+  the STEP-5B layer-closure ratio rho(I)=K_b(I)/K(I) is strictly monotone decreasing (derivative-sign certificate
+  rho'(I)<0 at all 201 nodes, max rho'=-2465) and rho(I) >= rho(2e-3) = x2.58 > 1 for all I in [4e-4, 2e-3] at the
+  anchor mu^2; the AddE anchors x59.4/x8.8/x2.6 are reproduced (endpoint to 0.8%); grid-converged. RES-4
+  CLOSED@interval (controlled-error), removing the three-anchor caveat.
+- **No tier flip**: B5 T5, B1 T6 on {H-LAYER} unchanged. RES-4 discharges ONE residual axis; RES-5/GAP-2 + the
+  diagonal-Gaussian infimum (RES-1, the Prop-A analytic core) remain the H-LAYER discharge frontier.
+  lint PASS (29 claims), release_check PASS.
+
 ## [claims sub-proof reorg EXECUTED: notes -> sub-theorem folders (B1/B2/B5)] - 2026-06-09
 
 - **Operator**: "start the move as planned." Executed the `claims-restructure-proposal-260609` taxonomy

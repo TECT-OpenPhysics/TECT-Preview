@@ -111,11 +111,13 @@ def parse_note(path):
 
 def tier_token(footer, claim_tier):
     raw = footer.get("Tier before / after", "")
+    # a note that declares no tier change inherits its claim's tier (marked *),
+    # even if the field mentions other claims' tiers (e.g. "B1 T6 unchanged").
+    if re.search(r"no tier[ /-]?(change|flip|action)|tier unchanged|unchanged", raw, re.I):
+        return f"{claim_tier}*" if claim_tier else "—"
     toks = re.findall(r"\bT[0-7]\b", raw)
     if toks:
         return toks[-1]
-    if re.search(r"no tier(/gate)? (change|flip)|tier unchanged|unchanged", raw, re.I):
-        return f"{claim_tier}*" if claim_tier else "—"
     return "—"
 
 def shorten(s, n=120):

@@ -1,0 +1,207 @@
+% =============================================================================
+% Title: Discharging H-diag II: the off-diagonal Bogoliubov Hessian is the
+%        additive energy of the Bragg set -- RES-1 reduced to the R-026 machinery
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1; bears on B1-RH-ENUM, B5 additive energy)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T4 STRONG EVIDENCE. Executes the operator's recommended next step
+%   (construct + bound Hess Phi_od). PROVES the exact identity sum_Q p_2(Q)^2 =
+%   E_+ (the off-diagonal Hessian weight is the additive energy of the condensate
+%   Bragg set), VERIFIES the BCC Bogoliubov-stability ratio R = |off-diag|/diag =
+%   0.916 < 1 (Math428 recast as ||E^-1/2 B_od E^-1/2|| < 1), and REDUCES the
+%   class-wide off-diagonal stability to the R-025/R-026 additive-energy bound
+%   (the same machinery that discharged H-ADM-COH). Does NOT discharge H-diag:
+%   the constant-pinned class-wide certificate is the residual. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. W(Q)=3u_eff A^2 p_2(Q)+5vA^4 p_4(Q) from
+%        Math428; the identity sum_Q p_2^2 = E_+ (verified 540=540 for BCC);
+%        Lemma-A bound E_+<=(1+T')N^2; BCC R<1; subpolynomial-in-N scaling via
+%        A^2 ~ I/N. Grounded by hdiag_offdiag_additive_energy.py 6/6.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The companion note (hdiag-fullcovariance-formulation) reduced the discharge of
+H-diag to the Bogoliubov-stability inequality
+$\tfrac12 G_*^{-1}\!\otimes G_*^{-1}\succeq -\mathrm{Hess}\,\Phi_{\rm od}|_{G_*}$:
+the condensate-free functional is convex, so the only risk is the
+condensate-induced off-diagonal Hessian. This note executes the operator's
+recommended programme -- construct $\mathrm{Hess}\,\Phi_{\rm od}$ from the
+Bragg-shell coupling and certify the operator-norm domination -- and finds that
+the off-diagonal weight is exactly the ADDITIVE ENERGY of the condensate Bragg
+set, reducing RES-1 to the DR-2 / R-026 machinery. Scope: second-cumulant /
+log-det order, the production anchor; BCC verified, the class-wide certificate
+open.
+
+\section*{2. The off-diagonal Hessian from the Bragg-shell coupling (Math428)}
+
+For a condensate $\phi_A = A\sum_{j=1}^{N} e^{ik_j x}$ ($|k_j|=q_0$), the
+Gibbs--Bogoliubov second-order off-diagonal free-energy share is (Math428 \S3)
+\[
+\Delta F_{\rm od}(A) = -\tfrac14\sum_{Q\neq0} W(Q)^2\, B(|Q|),
+\qquad
+B(|Q|) = \int\!\frac{d^3q}{(2\pi)^3}\,G_d(q)\,G_d(q{+}Q),
+\]
+\[
+W(Q) = (3u + 30vM_R)\,A^2\,p_2(Q) + 5v\,A^4\,p_4(Q)
+      = 3u_{\rm eff}\,A^2\,p_2(Q) + 5v\,A^4\,p_4(Q),
+\]
+where the leading coupling carries the dressed quartic $u_{\rm eff}=u+10vM_R$
+(\S3 of the companion note: $u_{\rm eff}=+2.685>0$) and the PAIR-STRUCTURE FACTOR
+\[
+p_2(Q) = \#\{(i,j):\, k_i + k_j = Q\} .
+\]
+$B(|Q|)>0$ is the convergent bubble (entropy/log-det curvature; $B(0)=-M'(\hat r)$),
+so $\mathrm{Hess}\,\Phi_{\rm od}$ is the negative-definite quadratic form
+$-\tfrac14\sum_Q (\cdot)^2 B$ and the stability inequality is the ratio
+\[
+\boxed{\;R(A) = \frac{|\Delta F_{\rm od}(A)|}{\Delta F_{\rm diag}(A)}
+= \big\|E^{-1/2}\,\mathrm{Hess}\,\Phi_{\rm od}\,E^{-1/2}\big\| < 1.\;}
+\]
+
+\section*{3. The off-diagonal weight IS the additive energy (exact)}
+
+The leading off-diagonal weight is $\propto p_2(Q)$, and its $\ell^2$ mass over
+transfers is, identically,
+\[
+\sum_{Q} p_2(Q)^2
+= \#\{(i,j,k,l):\, k_i + k_j = k_k + k_l\}
+= E_+(\{k_j\}),
+\]
+the ADDITIVE ENERGY of the Bragg set. (Verified for the BCC first shell:
+$N=12$ $\{110\}$-type vectors, $\sum_Q p_2(Q)^2 = 540 = E_+$ by direct quadruple
+count; $p_2(0)=N=12$ reproduces Math428.) Hence
+\[
+|\Delta F_{\rm od}(A)|
+\le \tfrac14 (3u_{\rm eff}A^2)^2\, B_{\max}\sum_{Q\neq0} p_2(Q)^2
++ \text{(quartic)}
+\le \tfrac94 u_{\rm eff}^2 A^4\, B_{\max}\,E_+ ,
+\qquad B_{\max}=\max_{Q\neq0}B(|Q|).
+\]
+The off-diagonal Hessian mass is bounded by the additive energy of the condensate
+momentum set -- the SAME object as the carrier-richness / additive energy of DR-2.
+
+\section*{4. Reduction to the R-025/R-026 machinery (class-wide)}
+
+R-025 (Lemma A) gives $E_+\le(1+T'(\{k_j\}))N^2$ with $T'$ the maximal sum-circle
+occupancy; R-026 gives $T'\ll_\varepsilon R^\varepsilon$ for any crystallographic
+(lattice) shell. (BCC check: $E_+=540\le(1+T')N^2=(1+4)\cdot144=720$, $T'=4$,
+$E_+/N^2=3.75=O(1)$.) The diagonal positive part is $\Delta F_{\rm diag}\ge
+c_2 A^2$ with $c_2 = n\,r_R = \tfrac{N}{2}r_R$ (Math428: $c_2=1.827$ for BCC).
+Imposing the operating-intensity constraint $A^2 \sim I/N$ (fixed condensate
+intensity $I$ spread over $N$ modes),
+\[
+R(A)\ \lesssim\
+\frac{\tfrac94 u_{\rm eff}^2 A^4 B_{\max} E_+}{\tfrac{N}{2} r_R A^2}
+\ \sim\
+\frac{u_{\rm eff}^2\,B_{\max}}{r_R}\,\frac{A^2 E_+}{N}
+\ \sim\
+\frac{u_{\rm eff}^2\,B_{\max}}{r_R}\,\frac{I\,E_+}{N^2}
+\ \lesssim\
+\frac{u_{\rm eff}^2\,B_{\max}}{r_R}\,I\,(1+T') ,
+\]
+using $E_+/N^2\le 1+T'$. For the lattice class $T'\ll_\varepsilon R^\varepsilon$, so
+$R$ is bounded by the operating intensity $I$ times a SUBPOLYNOMIAL-in-$N$ factor:
+the off-diagonal stability is controlled CLASS-WIDE by the additive-energy bound,
+not pattern-by-pattern. This is the same structural mechanism by which R-026
+discharged H-ADM-COH.
+
+\section*{5. BCC verification and status}
+
+Recasting Math428's continuum-anchored verdict as the stability ratio (worst case
+$\rho=1$, no resummation credit):
+\[
+R(0.02){=}0.118,\ R(0.05){=}0.602,\ R(0.08){=}0.916,\ R(0.11){=}0.770,\ R(0.14){=}0.510,
+\]
+so $R<1$ across $[0.02,0.14]$ (worst $0.916$ at $A=0.08$), and the small/large-$A$
+analytic bounds (Math428 \S3bis: $\Delta F\sim c_2 A^2>0$ as $A\to0$;
+sextic-dominated for $A>0.14$) cover all $A\ge0$. The small-$A$ scaling $R=O(A^2)$
+(off-diagonal $O(A^4)$ vs diagonal $O(A^2)$) is confirmed: $R(0.02)=0.118\ll
+R(0.14)=0.510$.
+
+\textbf{T4 STRONG EVIDENCE.} Proved (exact): the off-diagonal weight identity
+$\sum_Q p_2^2=E_+$. Verified: BCC $R<1$. Reduced: class-wide $R\lesssim
+u_{\rm eff}^2 B_{\max} r_R^{-1} I(1+T')$, controlled by R-025/R-026.
+\textbf{OPEN (the residual):} the constant-pinned class-wide certificate
+($B_{\max}$, $\rho$, the diagonal lower constant, and the full -- not leading --
+Hessian) for an unconditional H-diag discharge; and its beyond-second-cumulant
+extension (RES-5). No tier flip: B2-PROPA-HLAYER T6, B1-RH-ENUM T6 on
+$\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$R=0.916$ is thin -- the BCC off-diagonal nearly
+destabilises.''} VALID, documented: $0.916$ is the WORST case $\rho=1$ (no
+resummation); the calibrated $\rho=0.415$ gives a far safer ratio, and the thin
+point is the mid-window $A\approx0.08$, with the $A\to0$ ($R=O(A^2)$) and large-$A$
+(sextic) ends comfortably stable. Thin but $<1$, and the operating amplitude
+$A^2\sim I/N$ is small.
+\item[($\beta$)] \emph{``The identity $\sum p_2^2=E_+$ is exact, but does it
+CONTROL the Hessian with the right constants?''} VALID-with-mitigation: the
+identity and the Lemma-A bound are exact (T7 inputs); the REDUCTION uses
+$B(Q)\le B_{\max}$ and a diagonal lower bound, so the SCALING (subpolynomial in
+$N$, linear in $I$) is robust while the CONSTANT is not yet pinned -- hence T4,
+not a discharge. The leading-$p_2$ truncation drops the $5vA^4 p_4$ term (higher
+order in $A$).
+\item[($\gamma$)] \emph{``This does not discharge H-diag.''} DISMISSED (by
+design): T4 STRONG EVIDENCE; BCC verified $+$ the additive-energy reduction; the
+class-wide constant certificate is the named residual.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{identity} -- $\sum_Q p_2^2=540=E_+$
+exactly (direct quadruple count); \emph{magnitude} -- $E_+/N^2=3.75=O(1)$,
+consistent with R-025 ($\le1+T'=5$); \emph{sign} -- $\Delta F_{\rm od}<0$ (off-diagonal
+LOWERS $F$, the destabilising direction), dominated by $\Delta F_{\rm diag}>0$;
+\emph{limit} -- $R=O(A^2)\to0$ as $A\to0$ ($R(0.02)=0.118$); \emph{consistency} --
+BCC worst $R=0.916<1$ reproduces the Math428 PASS.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-diag discharge II (off-diagonal
+                         Hessian = additive energy; RES-1 reduced to R-026)
+Precise statement:       (1) EXACT: the off-diagonal Bogoliubov weight obeys
+                         sum_Q p_2(Q)^2 = E_+({k_j}) (additive energy of the
+                         Bragg set; verified 540=540 for BCC N=12). (2) Hence
+                         |Delta F_od| <= (9/4) u_eff^2 A^4 B_max E_+, so the
+                         class-wide off-diagonal Hessian is bounded by R-025
+                         (E_+<=(1+T')N^2) / R-026 (lattice T'<<R^eps); with
+                         A^2~I/N, R <~ u_eff^2 B_max r_R^-1 I (1+T') (subpolynomial
+                         in N). (3) VERIFIED: BCC stability ratio R=|off-diag|/diag
+                         < 1 (worst 0.916 at A=0.08), = ||E^-1/2 Hess Phi_od
+                         E^-1/2|| < 1, recasting Math428.
+Scope:                   Second-cumulant / log-det order, anchor mu^2; leading-p_2
+                         coupling; BCC verified, class-wide reduction T4.
+Dependencies:            Math428 (Bloch off-diagonal share, W(Q), B(Q), continuum
+                         table); R-025/R-026 (additive energy E_+<=(1+T')N^2,
+                         lattice T'); companion hdiag-fullcovariance-formulation
+                         (F0 convex, u_eff=+2.685).
+Evidence grade:          ANALYTIC (identity + bound) + EXECUTED
+                         (hdiag_offdiag_additive_energy.py 6/6) + INHERITED
+                         (Math428 continuum table).
+Reproduction command:    python codes/vacuum/hdiag_offdiag_additive_energy.py
+Expected output:         sum p_2^2 = E_+ = 540; E_+<=720; BCC R worst 0.916<1;
+                         R(0.02)=0.118; 6/6 PASS.
+Falsification gate:      A Bragg set with sum_Q p_2^2 != E_+ (would void the
+                         identity); a pattern with R>=1 at the operating intensity
+                         (off-diagonal NOT dominated); or E_+ exceeding (1+T')N^2.
+Tier before / after:     No tier flip. B2 T6, B1 T6 on {H-LAYER} unchanged.
+                         H-diag off-diagonal sector: reduced to an additive-energy
+                         bound, BCC verified (T4 strong evidence).
+No-overclaim statement:  This does NOT discharge H-diag or H-LAYER and does NOT
+                         promote B1. The identity sum p_2^2=E_+ and the Lemma-A
+                         bound are exact; the class-wide off-diagonal DISCHARGE
+                         needs the constants (B_max, rho, diagonal lower bound,
+                         full Hessian) pinned -- the named residual -- plus the
+                         RES-5 beyond-second-cumulant extension. BCC R=0.916 is
+                         the thin worst case.
+Next required action:    Pin B_max and the diagonal lower constant to convert the
+                         subpolynomial reduction into a class-wide certificate;
+                         include the 5vA^4 p_4 sub-leading term; then attempt the
+                         lattice-class H-diag discharge (mirroring the H-ADM-COH
+                         discharge via R-026).
+\end{verbatim}
+}

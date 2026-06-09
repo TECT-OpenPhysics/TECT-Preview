@@ -21,10 +21,14 @@
 |---|---|---|---|---|---|
 | `ha0-removal-pathway` | v2.1 | T6 | A-zero uniqueness + zero-at-gap (H-A0's U,Z) derived as a sign-decomposition theorem: F_0'(m) = (1/2) M'(m) g(m) with M'<0 (L1), g strictly decreasin… | ANALYTIC (sign lemmas + theorem) + EXECUTED (… | Write out G-A0-DUI explicitly (close the textbook residual) to discharge H-ANCHOR toward … |
 
-## Prop-A/  ·  1 proof unit  ·  tier span T6
+## Prop-A/  ·  5 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `hdiag-full-operator-norm-formulation` | v1.0 | T6* | Hess F\|G* = E + B_od; the worst-direction certificate \|\|E^-1/2 B_od E^-1/2\|\|<1 needs the EXCHANGE (Fock) block eigenvalues, whose sign is NOT fixed b… | ANALYTIC (formulation) + EXECUTED (hdiag_gers… | RES-5 (matched-order to exact / GAP-2): the dressed exchange-Hessian eigenvalue bound is … |
+| `hdiag-fullcovariance-formulation` | v1.0 | T6* | (1) F0[G] = entropy + linear kinetic + Phi_diag(M_tot), with Phi_diag''=(3/2)u_eff=+4.03>0 (u_eff=+2.685 from the sextic dressing of the attractive b… | ANALYTIC (convexity) + EXECUTED (hdiag_convex… | Bound/verify Hess Phi_od\|_G* class-wide (the condensate off-diagonal Bogoliubov Hessian):… |
+| `hdiag-offdiag-additive-energy` | v1.0 | T6* | (1) EXACT: the off-diagonal Bogoliubov weight obeys sum_Q p_2(Q)^2 = E_+({k_j}) (additive energy of the Bragg set; verified 540=540 for BCC N=12). (2… | ANALYTIC (identity + bound) + EXECUTED (hdiag… | Pin B_max and the diagonal lower constant to convert the subpolynomial reduction into a c… |
+| `hdiag-offdiag-constant-certificate` | v1.0 | T6* | Constants pinned: B_max=B(q0)=0.218<=B(0)=0.299; c_diag=(N/2)rR=1.827; p_4 cross/leading=0.044 (suppressed by A^2~I/N). Assembled conservative leadin… | ANALYTIC (bound) + EXECUTED (hdiag_offdiag_co… | Bound the full worst-direction Hessian norm (the entropy cross-block) and the higher addi… |
 | `proposition-a-migration-revalidation` | v1.4 | T6 | Migration batch-1 evidence chain migrated verbatim and re-validated by full re-execution (277/277). | EXECUTED | Migration batch 2 (Math431-HEX chain + Math427/428-432/434/436) for B1 cleanness. |
 
-<!-- generated 2026-06-09T03:44:33Z by build_index.py v1.0.0 -->
+<!-- generated 2026-06-09T06:16:05Z by build_index.py v1.0.0 -->

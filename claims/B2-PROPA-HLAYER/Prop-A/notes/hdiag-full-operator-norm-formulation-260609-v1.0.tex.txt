@@ -1,0 +1,176 @@
+% =============================================================================
+% Title: Discharging H-diag IV: the full off-diagonal operator norm -- formulation,
+%        the Gershgorin route, and the merge with RES-5
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1 full-Hessian formulation; bears on B1)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH / FORMULATION. Executes the operator's full-operator-norm
+%   step and reports the HONEST verdict: the full worst-direction norm
+%   ||E^-1/2 B_od E^-1/2||<1 does NOT close at second-cumulant order -- it merges
+%   with RES-5. Reason: B_od's load-bearing block is the EXCHANGE (Fock) Hessian,
+%   whose sign is NOT fixed by u_eff>0 (bare u=-0.86<0 attractive; u_eff>0 only via
+%   the sextic dressing), so B_od>=0 is not guaranteed and the bound needs the
+%   exchange eigenvalues -- a beyond-second-cumulant object. Named FORMULATION, not
+%   certificate (no closure claimed). No tier flip; the RES-1 off-diagonal arc, at
+%   second cumulant + operating intensity, is condensate-direction certified
+%   (R_lead<=0.174, prior note); the full norm is the RES-5 frontier.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Full Hessian E+B_od; the exchange-sign
+%        subtlety; the Gershgorin diagonal-dominance route (row-sums additive-
+%        energy controlled, R-025/R-026); the RES-5 merge. Grounded by
+%        hdiag_gershgorin_rowsum.py 3/3 (+ prior R_lead<=0.174).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope (honest verdict)}
+
+The constant certificate (hdiag-offdiag-constant-certificate) bounded the
+CONDENSATE-DIRECTION ratio $R_{\rm lead}\le0.174$ at the operating intensity and
+named the FULL worst-direction operator norm as the residual. The operator
+directed the next step: construct the complete off-diagonal Hessian and bound
+$\|E^{-1/2}B_{\rm od}E^{-1/2}\|_{\rm op}<1$ for the lattice class. This note
+executes that step and reports the honest verdict: \textbf{the full norm does not
+close at second-cumulant order; it merges with RES-5.} The document is therefore a
+FORMULATION (the Hessian structure $+$ the route $+$ the merge point), not a
+certificate -- naming it a ``certificate'' would overclaim.
+
+\section*{2. The full off-diagonal Hessian}
+
+$\mathrm{Hess}\,F[G_*] = E + B_{\rm od}$, with the entropy curvature
+$E=\tfrac12 G_*^{-1}\!\otimes G_*^{-1}\succ0$ (positive-definite) and the
+interaction Hessian $B_{\rm od}=\mathrm{Hess}\,\Phi|_{G_*}$. In the off-diagonal
+(Bloch, reciprocal-transfer $Q$) sector $B_{\rm od}$ has three parts:
+\begin{itemize}
+\item \textbf{Hartree} -- depends on $G$ only through $M_{\rm tot}=\mathrm{Tr}\,G$,
+hence NO off-diagonal block (convex, $\Phi''_{\rm diag}=\tfrac32u_{\rm eff}>0$,
+companion note);
+\item \textbf{Exchange (Fock)} -- $\propto u_{\rm eff}$ times the off-diagonal
+$\int\!\int G(x,y)^2$ kernel: this is the load-bearing off-diagonal block;
+\item \textbf{Condensate} -- $\propto u_{\rm eff}A^2 p_2(Q)$ (the Math428 $W(Q)$
+source), the additive-energy-weighted coupling.
+\end{itemize}
+The worst-direction certificate $\|E^{-1/2}B_{\rm od}E^{-1/2}\|<1$ is equivalent to
+$E+B_{\rm od}\succeq0$ over ALL off-diagonal $\delta G$, i.e.\ the entropy curvature
+dominating the (possibly negative) exchange block.
+
+\section*{3. Why $u_{\rm eff}>0$ does not suffice (the obstruction)}
+
+The Hartree convexity established that $F_0$ (condensate-free) is convex because
+$\Phi''_{\rm diag}=\tfrac32u_{\rm eff}>0$. But the EXCHANGE block carries the
+opposite sign of the direct term: for a repulsive interaction the Fock exchange is
+ATTRACTIVE. Here the bare quartic is itself attractive ($u=-0.86<0$) and only the
+sextic dressing lifts the EFFECTIVE direct coupling to $u_{\rm eff}=+2.685>0$; the
+exchange block's sign is therefore NOT fixed by $u_{\rm eff}>0$. Consequently
+$B_{\rm od}\succeq0$ is NOT guaranteed, and the second-order envelope $R_{\rm lead}$
+(which uses the bare entropy propagator $E^{-1}$, i.e.\ assumes $E+B_{\rm od}\approx
+E$) does NOT bound the full norm. The full norm requires the exchange-Hessian
+eigenvalues.
+
+\section*{4. The Gershgorin route and what is controlled}
+
+A diagonal-dominance (Gershgorin) certificate would give $E+B_{\rm od}\succeq0$ if,
+per channel $Q$, the entropy curvature dominates the row-sum
+$\sum_{Q'}|B_{\rm od}(Q,Q')|$. The row-sums ARE additive-energy objects: the
+channel overlaps are bounded by the pair multiplicities $p_2$, so
+$\sum_{Q'}|B_{\rm od}(Q,Q')|\lesssim$ (the same $E_+=\sum_Q p_2^2$ controlled by
+R-025/R-026; verified: BCC max row-sum $48\le N E_+$). Thus the COMBINATORIAL part
+of the Gershgorin bound inherits the lattice control already used for STEP-5B
+(Gershgorin reduction) and H-ADM-COH (additive energy). \textbf{The missing input
+is the analytic SIGN/magnitude of the exchange block per channel} -- not a counting
+quantity, but a loop (bubble) integral with a sign, which at the dressed level is a
+beyond-second-cumulant object.
+
+\section*{5. The merge with RES-5}
+
+The exchange-Hessian eigenvalues, and the self-consistent $(E+B_{\rm od})^{-1}$
+resummation, are exactly the corrections that the matched-second-cumulant
+bookkeeping (SC-SCOPE) holds fixed. They live at the same order as RES-5
+(matched-order to exact / GAP-2). Therefore the FULL off-diagonal operator-norm
+certificate MERGES with RES-5: it cannot be closed within the second-cumulant
+scope, and its closure is the same analytic frontier as the rest of H-LAYER's
+deep residual. At second-cumulant order and the operating intensity, the
+condensate-direction response is certified ($R_{\rm lead}\le0.174$, $\times5.7$;
+prior note), which is the strongest statement available at this order.
+
+\section*{6. Status}
+
+\textbf{T3 FORMULATION.} The full off-diagonal Hessian is constructed; the
+Gershgorin combinatorial part is additive-energy controlled (R-025/R-026); the
+analytic obstruction (exchange-block sign, not fixed by $u_{\rm eff}>0$) is
+isolated and shown to MERGE with RES-5. \textbf{OPEN:} the exchange-Hessian
+eigenvalue bound = RES-5. No tier flip: B2 T6, B1 T6 on $\{$H-LAYER$\}$.
+\textbf{Consequence for the H-LAYER ledger:} RES-1's off-diagonal axis is now
+resolved into (a) second-cumulant / operating-intensity: condensate-direction
+CERTIFIED, and (b) the full worst-direction norm: MERGED with RES-5. The H-LAYER
+residual thus consolidates to RES-5 ($+$ off-anchor robustness), with RES-1, RES-3
+(lattice), and RES-4 all controlled at their stated scopes.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You stopped short -- compute the exchange eigenvalues.''}
+VALID, and that is RES-5 by construction: the dressed exchange block is a
+beyond-second-cumulant object (it resums into the matched-order remainder), so it
+cannot be closed within the second-cumulant scope of this programme. Honestly named
+a formulation, not a certificate.
+\item[($\beta$)] \emph{``Then the constant certificate was weaker than it sounded.''}
+PARTLY: the constant certificate bounds the second-order condensate-direction
+response (the physical Bloch competitor), which is the operative quantity for the
+Reading-H selection at matched order; it never claimed the full norm. This note
+makes the boundary explicit.
+\item[($\gamma$)] \emph{``Does anything here threaten B1 T6?''} DISMISSED: B1 is
+T6 CONDITIONAL on $\{$H-LAYER$\}$; H-LAYER is the named hypothesis, and this note
+only sharpens its residual map (RES-1 off-diagonal $\to$ RES-5). No tier moves.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{sign} -- bare $u=-0.86<0$, dressed
+$u_{\rm eff}=+2.685>0$, so the exchange sign is genuinely unfixed by $u_{\rm eff}$;
+\emph{combinatorics} -- BCC Gershgorin max row-sum $48\le NE_+=6480$ (additive-energy
+controlled); \emph{consistency} -- the second-order $R_{\rm lead}\le0.174$ remains
+the operative bound at matched order; \emph{scope} -- exchange eigenvalues are
+beyond second cumulant, the RES-5 order.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-diag discharge IV (full operator-norm
+                         formulation; RES-1 off-diagonal merges with RES-5)
+Precise statement:       Hess F|G* = E + B_od; the worst-direction certificate
+                         ||E^-1/2 B_od E^-1/2||<1 needs the EXCHANGE (Fock) block
+                         eigenvalues, whose sign is NOT fixed by u_eff>0 (bare
+                         u=-0.86<0; u_eff>0 only via sextic dressing). The
+                         Gershgorin row-sums are additive-energy controlled
+                         (R-025/R-026; BCC max row-sum 48<=N E_+), but the
+                         analytic exchange-sign input is a beyond-second-cumulant
+                         object => the full norm MERGES with RES-5. At second
+                         cumulant + operating intensity the condensate-direction
+                         response is certified (R_lead<=0.174, prior).
+Scope:                   Second-cumulant; the full norm is explicitly out of scope
+                         (RES-5). Formulation, not certificate.
+Dependencies:            hdiag-fullcovariance-formulation (F0 convex, u_eff);
+                         hdiag-offdiag-additive-energy (sum p2^2=E_+);
+                         hdiag-offdiag-constant-certificate (R_lead<=0.174);
+                         Math428 (W,B); R-025/R-026.
+Evidence grade:          ANALYTIC (formulation) + EXECUTED
+                         (hdiag_gershgorin_rowsum.py 3/3).
+Reproduction command:    python codes/vacuum/hdiag_gershgorin_rowsum.py
+Expected output:         max row-sum 48<=N E_+; u_bare=-0.86<0<u_eff=2.685; 3/3.
+Falsification gate:      A proof that B_od>=0 follows from u_eff>0 (would close the
+                         norm without RES-5); or an exchange eigenvalue computation
+                         giving ||.||>=1 at operating intensity (would refute the
+                         condensate-direction certificate).
+Tier before / after:     No tier flip. B2 T6, B1 T6 on {H-LAYER} unchanged. RES-1
+                         off-diagonal: full worst-direction norm = RES-5-merged;
+                         second-cumulant condensate-direction certified.
+No-overclaim statement:  The full operator norm is NOT closed; it merges with
+                         RES-5. This note is a formulation isolating the analytic
+                         obstruction (exchange-block sign), not a discharge. B1
+                         stays T6 on {H-LAYER}; the H-LAYER residual consolidates
+                         to RES-5 + off-anchor robustness.
+Next required action:    RES-5 (matched-order to exact / GAP-2): the dressed
+                         exchange-Hessian eigenvalue bound is the same frontier;
+                         attack RES-5 directly (third-cumulant / exact-remainder
+                         envelope) rather than as an isolated off-diagonal sub-task.
+\end{verbatim}
+}
