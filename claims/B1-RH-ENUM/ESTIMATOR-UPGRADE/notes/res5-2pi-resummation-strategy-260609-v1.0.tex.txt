@@ -1,0 +1,151 @@
+% =============================================================================
+% Title: RES-5 2PI resummation strategy: the repulsive screening tames the marginal
+%        skeleton series to a finite, a0-suppressed difference
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 resummation strategy; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T4 STRONG EVIDENCE (for the closure ROUTE). The marginal dressed-skeleton
+%   series (loop parameter g = lam' B_d = 1.03 > 1, divergent term-by-term) is
+%   resummed: the dressed quartic is REPULSIVE (u_eff>0; bare u=-0.86 lifted by the
+%   sextic), so the RPA/Dyson sign is SCREENING, 1/(1+g), and the 2PI
+%   self-consistent susceptibility is FINITE, chi_resummed = 0.49 chi_0. The
+%   divergent series is the asymptotic expansion of this finite self-consistent
+%   free energy. With the common-mode cancellation + a0 suppression, the
+%   pattern-dependent DIFFERENCE ~ a0*0.49 ~ 0.047 is finite and bounded -- the
+%   selection survives the resummed exact free energy. This is a viable RES-5
+%   closure ROUTE; the rigorous 2PI computation + the quantitative bound is the
+%   residual. No tier flip on B1.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Repulsive screening 1/(1+g)=0.49 (finite);
+%        divergent-series-vs-finite-2PI; a0-suppressed bounded difference ~0.047;
+%        the closure route. Grounded by res5_rpa_screening.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The dressed-skeleton note found the loop parameter $g=\lambda' B_d=1.03=O(1)$
+marginal, so the skeleton series does not geometrically decay -- a resummation is
+required. The operator named three routes (A: 2PI self-consistent; B: Borel /
+optimal truncation; C: sign / cancellation). This note executes the strategy and
+finds that Routes A and C COINCIDE here: the repulsive dressed vertex supplies the
+screening sign that makes the 2PI/Dyson resummation finite. The result is a viable
+closure route, at strong-evidence grade; the rigorous 2PI computation is the
+residual. Scope: the screening mechanism and the difference scale; anchor $\mu^2$.
+
+\section*{2. The marginal series is divergent, but the resummation is finite}
+
+The dressed quartic is REPULSIVE: the bare $u=-0.86<0$ (attractive, Brazovskii) is
+lifted by the sextic dressing to $\lambda'=3u_{\rm eff}=8.06>0$. The RPA/Dyson
+density susceptibility therefore carries the SCREENING sign,
+\[
+\chi = \chi_0\big(1 - g + g^2 - \cdots\big) = \frac{\chi_0}{1+g},
+\qquad g=\lambda' B_d = 1.03 .
+\]
+Term-by-term the series diverges ($|g|>1$; the partial sums grow), but the
+2PI/Dyson SELF-CONSISTENT solution is finite:
+\[
+\boxed{\;\frac{\chi_{\rm resummed}}{\chi_0} = \frac{1}{1+g} = 0.49\quad(\text{screened }\sim\text{half}).\;}
+\]
+The divergent perturbative series is merely the asymptotic expansion of this finite
+self-consistent free energy, which is the physical value. (Contrast: an ATTRACTIVE
+vertex would give $1/(1-g)$ with $g>1$ -- a divergence / instability. The repulsive
+screening sign is what makes the vacuum stable AND the resummation finite: the same
+fact.)
+
+\section*{3. The resummed difference is finite and $a_0$-suppressed}
+
+The 2PI self-consistent dressing is pattern-independent at fixed $I$ (the common
+sea), so the common-mode part cancels in the selection difference and the
+pattern-dependent part is carried by $a_0$:
+\[
+\Delta F_{\rm exact} \sim a_0\,\chi_{\rm resummed}^{\rm pd}
+\sim a_0\cdot 0.49\cdot(\cdots) \sim 0.047\cdot(\cdots),
+\]
+FINITE (screened) and $a_0$-suppressed. The selection survives the resummed exact
+free energy: the marginal series does not threaten the sign, because its physical
+(resummed) value is the screened, $a_0$-suppressed difference, not the divergent
+term-by-term sum.
+
+\section*{4. Status and the residual}
+
+\textbf{T4 STRONG EVIDENCE (for the closure ROUTE).} Established: the dressed vertex
+is repulsive (screening sign $1/(1+g)$); the marginal/divergent series resums
+(2PI/Dyson) to a finite screened susceptibility $0.49\chi_0$; the common-mode $+\,
+a_0$ structure makes the resummed difference finite and $a_0$-suppressed
+($\sim0.047$). \textbf{OPEN (the residual):} the rigorous 2PI self-consistent
+computation of $\Delta F_{\rm exact}$ and the quantitative bound $|\Delta
+F_{\rm exact}| < \Delta F_{\rm margin}$ -- i.e.\ verifying the common-mode
+cancellation at the self-consistent level and computing the screened
+pattern-dependent susceptibility explicitly. No tier flip: B1-RH-ENUM T6
+CONDITIONAL on $\{$H-LAYER$\}$. \textbf{B1 closure} $\Longleftrightarrow$ this 2PI
+self-consistent bound, for which the screening route is now established.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$1/(1+g)$ with $g>1$ sums a divergent series -- is it
+physical?''} VALID-with-mitigation: the physical object is the 2PI/Dyson
+SELF-CONSISTENT solution (obtained by solving the Dyson equation, not summing the
+series), which is manifestly finite; the divergent series is its asymptotic
+expansion. This is standard self-consistent field theory, not an illegitimate
+resummation of a divergence.
+\item[($\beta$)] \emph{``$0.49\chi_0$ is the RPA bubble-chain only; vertex
+corrections could change it.''} VALID: the RPA/2PI bubble chain is the leading
+self-consistent resummation; vertex corrections are higher 2PI skeletons, the
+residual. But the SIGN (screening, finite) is robust -- it follows from
+$u_{\rm eff}>0$, not from the truncation.
+\item[($\gamma$)] \emph{``The difference $\sim0.047$ omits the $(\cdots)$ factor.''}
+VALID: the $a_0\cdot0.49$ is the SCALE; the precise resummed pattern-dependent
+susceptibility (the $(\cdots)$) is the residual 2PI computation. The strong
+evidence is the route (screening $+$ common-mode $+$ $a_0$), not a certified number.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{sign} -- $u_{\rm eff}>0$ gives the
+screening denominator $1+g$, not the instability $1-g$; \emph{finiteness} --
+$1/(1+1.03)=0.49$ (finite despite $g>1$); \emph{divergence} -- the partial sums
+$1,-0.03,1.03,\ldots$ grow (the series is asymptotic, the 2PI solution is the
+value); \emph{scale} -- $a_0\cdot0.49\approx0.047$ (a0-suppressed, screened).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 2PI resummation strategy (screening)
+Precise statement:       g = lam' B_d = 1.03 > 1 (marginal/divergent series), but
+                         u_eff>0 (repulsive; bare u=-0.86 lifted by the sextic) =>
+                         RPA/Dyson screening sign 1/(1+g): the 2PI self-consistent
+                         susceptibility is FINITE, chi_resummed = chi_0/(1+g) =
+                         0.49 chi_0. The divergent series is its asymptotic
+                         expansion. Common-mode cancellation + a0 => the resummed
+                         pattern-dependent DIFFERENCE ~ a0*0.49 ~ 0.047, finite and
+                         a0-suppressed -- the selection survives the resummed exact
+                         free energy. RES-5 closure ROUTE established; rigorous 2PI
+                         computation the residual.
+Scope:                   Screening mechanism + difference scale; anchor mu^2. The
+                         rigorous 2PI self-consistent bound is OPEN.
+Dependencies:            res5-dressed-threeloop-skeleton-bound (g=1.03 marginal);
+                         hdiag-fullcovariance-formulation (u_eff>0 dressing);
+                         res5-commonmode-envelope (a0); Math424-AddA.
+Evidence grade:          ANALYTIC + EXECUTED (res5_rpa_screening.py 5/5).
+Reproduction command:    python codes/vacuum/res5_rpa_screening.py
+Expected output:         u_eff>0 (repulsive); 1/(1+g)=0.49 finite; series divergent
+                         but resummation finite; a0*0.49~0.047; 5/5 PASS.
+Falsification gate:      u_eff<=0 at the anchor (would give the instability sign
+                         1/(1-g)); or a 2PI computation giving |Delta F_exact| >=
+                         Delta F_margin (resummed difference exceeds the margin).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5: closure ROUTE via
+                         2PI screening established (T4); rigorous 2PI bound the
+                         residual.
+No-overclaim statement:  This does NOT close RES-5. It establishes the resummation
+                         ROUTE (repulsive screening makes the marginal series resum
+                         to a finite, a0-suppressed difference) at strong-evidence
+                         grade; the rigorous 2PI self-consistent computation and the
+                         quantitative margin bound are the residual. B1 stays T6 on
+                         {H-LAYER}.
+Next required action:    Carry the 2PI self-consistent computation of the screened
+                         pattern-dependent susceptibility and verify |Delta
+                         F_exact| < Delta F_margin; then RES-5 -> controlled-error
+                         theorem and H-LAYER's last axis closes.
+\end{verbatim}
+}

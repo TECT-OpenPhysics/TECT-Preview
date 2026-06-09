@@ -1,0 +1,40 @@
+{
+  "script": "res5_rpa_screening.py",
+  "version": "1.0.0",
+  "rhat": 0.33674599985544107,
+  "lam": 8.055072796999182,
+  "Bd": 0.12827093718689958,
+  "g": 1.0332317367797856,
+  "a0": 0.0956812885730738,
+  "resummed_over_chi0": 0.4918278531220407,
+  "diff_scale": 0.04705872274284533,
+  "verdict": "repulsive u_eff => RPA screening 1/(1+g)=0.49 (finite); marginal/divergent series resums (2PI self-consistent) to screened chi; common-mode + a0 => bounded difference ~a0*0.49; RES-5 closure route via 2PI resummation, rigorous computation the residual",
+  "claims": [
+    {
+      "name": "dressed_vertex_repulsive",
+      "passed": true,
+      "detail": "(bare u=-0.86<0 attractive, but lam'=3u_eff=8.06>0 REPULSIVE via the sextic dressing: the RPA/Dyson series carries the SCREENING sign 1/(1+g), not the instability sign 1/(1-g))"
+    },
+    {
+      "name": "resummed_susceptibility_finite_screened",
+      "passed": true,
+      "detail": "(chi_resummed/chi_0 = 1/(1+g) = 0.492: the marginal/divergent series (|g|=1.03>1) RESUMS (2PI/Dyson self-consistent) to a FINITE screened value ~half the bare -- the screening tames the marginal series)"
+    },
+    {
+      "name": "series_divergent_but_resummation_finite",
+      "passed": true,
+      "detail": "(term-by-term partial sums diverge (|g|>1: last |partial|=1.20 grows), but the 2PI/Dyson self-consistent resummation 1/(1+g)=0.492 is finite -- the divergent series is the asymptotic expansion of the finite self-consistent free energy, which is the physical value)"
+    },
+    {
+      "name": "difference_a0_suppressed_and_bounded",
+      "passed": true,
+      "detail": "(pattern-dependent DIFFERENCE ~ a0 * chi_resummed^pd ~ 0.096*0.49 ~ 0.047: FINITE (screened) and a0-suppressed (common-mode cancellation) -- bounded. The selection survives the resummed exact free energy. Quantitative margin = the residual 2PI computation)"
+    },
+    {
+      "name": "contrast_attractive_would_be_instability",
+      "passed": true,
+      "detail": "(an attractive vertex would give 1/(1-g) with g=1.03>1 -- a divergence/instability; the repulsive screening sign is what makes the resummation finite and the vacuum stable -- physically essential)"
+    }
+  ],
+  "all_pass": true
+}

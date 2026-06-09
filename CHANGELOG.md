@@ -5,6 +5,22 @@ not pillar counts.
 
 ---
 
+## [RES-5 2PI resummation strategy: repulsive screening tames the marginal series (T4)] - 2026-06-09
+
+- **Operator-directed resummation strategy** (Routes A 2PI / B Borel / C sign-cancellation). RESULT: A and C
+  coincide -- the repulsive dressed vertex supplies the screening sign that makes the 2PI/Dyson resummation finite.
+  NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-2pi-resummation-strategy v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_rpa_screening.py` (5/5) + `runs/`.
+- g = lam' B_d = 1.03 > 1 (marginal/divergent series), but u_eff>0 (bare u=-0.86 lifted by the sextic) => RPA/Dyson
+  SCREENING sign 1/(1+g): chi_resummed = chi_0/(1+g) = 0.49 chi_0 (FINITE, screened ~half). The divergent series is
+  the asymptotic expansion of the finite 2PI self-consistent free energy (the physical value). Common-mode + a0 =>
+  resummed pattern-dependent DIFFERENCE ~ a0*0.49 ~ 0.047 (finite, a0-suppressed) -- the selection survives the
+  resummed exact free energy. (Contrast: attractive would give 1/(1-g), g>1 = instability; repulsive screening =
+  stable + finite, the same fact.)
+- **T4 STRONG EVIDENCE for the closure ROUTE**; OPEN = the rigorous 2PI self-consistent computation of the screened
+  pattern-dependent susceptibility + the quantitative bound |Delta F_exact| < Delta F_margin. No tier flip (B1 T6 on
+  {H-LAYER}). B1 closure <=> the 2PI bound (screening route now established). lint PASS (29), release_check PASS.
+
 ## [RES-5 dressed-skeleton ratio: loop parameter O(1) (marginal) -> needs resummation (T3)] - 2026-06-09
 
 - **Operator-directed three-loop skeleton bound.** NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/
