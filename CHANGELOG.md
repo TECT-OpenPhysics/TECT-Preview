@@ -5,6 +5,20 @@ not pillar counts.
 
 ---
 
+## [RES-5 higher-loop residual = 2PI skeleton expansion; sunset the favourable leading (T3)] - 2026-06-09
+
+- **Operator-directed higher-loop common-mode bound.** NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/
+  res5-higherloop-commonmode-bound v1.0` (PDF FORM-CHECK PASS) + `codes/vacuum/res5_higherloop_skeleton.py` (3/3) +
+  `runs/`.
+- **Correct framing**: the dressing r_hat = r_R + 2 lam' I is the SELF-CONSISTENT Hartree resummation, so the RES-5
+  higher-loop residual is the 2PI SKELETON expansion (dressed propagators), NOT bare loops (which double-counted the
+  already-resummed dressing). The LEADING skeleton = sunset (2-loop = SC-SCOPE third cumulant), DIFFERENCE
+  s_3 ~ 4% << 1/2 (favourable, factor ~12 inside the geometric convergence radius).
+- **Closure structure**: with per-loop-order common-mode cancellation, |sum_{l>=3} Delta F_l^pd| <= Delta F_margin
+  sum_l s_l < Delta F_margin if s_l <= s < 1/2 for all l. Base s_3 favourable; the residual is the all-order
+  skeleton domination -- a dedicated 2PI effective-action computation (the genuine frontier). No tier flip (B1 T6
+  on {H-LAYER}). lint PASS (29), release_check PASS.
+
 ## [RES-5 framing correction: one-loop is exact; RES-5 is the loop expansion (T3, self-caught)] - 2026-06-09
 
 - **Self-caught conflation** while attempting the subtracted-susceptibility bound. CORRECTION: the bare

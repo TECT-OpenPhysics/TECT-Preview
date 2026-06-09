@@ -1,0 +1,145 @@
+% =============================================================================
+% Title: RES-5 higher-loop common-mode bound: the residual is the 2PI skeleton
+%        expansion, with SC-SCOPE's sunset as the favourable leading skeleton
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 higher-loop residual; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Frames the genuine RES-5 residual (after the one-loop /
+%   loop-expansion correction) as the 2PI SKELETON expansion: the self-consistent
+%   dressing r_hat = r_R + 2 lam' I already resums Hartree, so the higher-loop
+%   corrections are the dressed-propagator skeleton diagrams, NOT bare loops. The
+%   LEADING skeleton is the sunset (2-loop = SC-SCOPE third cumulant), thin at the
+%   DIFFERENCE level (~4%, common-mode subtracted) -- far inside the geometric
+%   convergence radius 1/2. The residual is the higher-skeleton DIFFERENCE bound
+%   |sum_{l>=3} Delta F_l^pd| < Delta F_margin, a dedicated 2PI computation. Does
+%   NOT close RES-5. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Self-consistent dressing -> 2PI skeleton (not
+%        bare loops); sunset = leading skeleton (~4%, inside radius); the
+%        higher-skeleton residual. Grounded by res5_higherloop_skeleton.py 3/3.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The framing correction (res5-oneloop-loop-disentangling) located RES-5 as the loop
+expansion beyond the exact one-loop. The operator directed bounding the
+higher-loop DIFFERENCE $\big|\sum_{\ell\ge3}\Delta F_\ell^{\rm pd}\big| <
+\Delta F_{\rm margin}$. This note frames that residual correctly -- as the 2PI
+SKELETON expansion -- and records the favourable leading datum. It does NOT close
+the bound. Scope: structural framing $+$ the base skeleton; anchor $\mu^2$.
+
+\section*{2. The residual is the 2PI skeleton expansion, not bare loops}
+
+The dressing
+\[
+\hat r(I) = r_R + 2\lambda' I
+\]
+is the SELF-CONSISTENT Hartree resummation: the leading (tadpole/Hartree) loops are
+already summed into $\hat r$. Therefore the one-loop log-det with $\hat r$ is the
+resummed mean field, and the genuine higher-loop corrections are the 2PI SKELETON
+diagrams built from the DRESSED propagator $G_d=(\,\hat r + c(q^2-q_0^2)^2)^{-1}$ --
+not bare loops. This is why the bare-loop / bare-susceptibility counting was the
+wrong object (it double-counted the already-resummed dressing). The skeleton
+expansion has softer (dressed) propagators and is better-behaved.
+
+\section*{3. The leading skeleton (sunset) is favourable}
+
+The leading 2PI skeleton beyond Hartree--Fock is the SUNSET (2-loop), which is
+exactly SC-SCOPE's third cumulant. At the DIFFERENCE level (common-mode
+subtracted), SC-SCOPE found it thin:
+\[
+s_3 = \frac{|\Delta F_{\rm sunset}^{\rm pd}|}{\Delta F_{\rm margin}}\ \sim\ 4\%
+\quad\ll\quad \tfrac12 \ \ (\text{the geometric convergence radius}).
+\]
+The base skeleton sits a factor $\sim12$ inside the convergence region -- the
+strong common-mode part has cancelled, leaving only the $a_0$-suppressed
+pattern-dependent sunset.
+
+\section*{4. The closure structure and the residual}
+
+With the common-mode cancellation $\Delta F_\ell^{\rm cm}[\mathcal P]
+-\Delta F_\ell^{\rm cm}[\mathcal R_H]=0$ at every loop order $\ell$, the matched-
+order-to-exact margin survives iff the higher-skeleton DIFFERENCE is geometrically
+dominated:
+\[
+\boxed{\;\Big|\sum_{\ell\ge3}\Delta F_\ell^{\rm pd}\Big|
+\le \Delta F_{\rm margin}\sum_{\ell\ge3} s_\ell
+< \Delta F_{\rm margin}\quad\text{if } s_\ell \le s < \tfrac12\ \forall\ell.\;}
+\]
+The base $s_3\sim4\%$ is favourable; the residual is the all-order skeleton
+domination $s_\ell\le s<\tfrac12$. \textbf{This is the genuine RES-5 frontier: a
+dedicated 2PI skeleton computation of the higher-loop DIFFERENCE} -- bounding the
+dressed three-loop and higher skeletons after common-mode subtraction. It is not
+closeable by the elementary means of this session.
+
+\section*{5. Status}
+
+\textbf{T3 PROOF SKETCH.} The residual is correctly framed as the 2PI skeleton
+expansion (self-consistent dressing), with the sunset (SC-SCOPE, $s_3\sim4\%$) as
+the favourable leading skeleton, well inside the convergence radius.
+\textbf{OPEN (the frontier):} the all-order skeleton domination $s_\ell<\tfrac12$
+(the dressed higher-skeleton DIFFERENCE bound) -- a dedicated 2PI computation. No
+tier flip: B1-RH-ENUM T6 CONDITIONAL on $\{$H-LAYER$\}$. \textbf{B1 closure}
+$\Longleftrightarrow$ the higher-skeleton difference bound.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Another reframing, still no bound.''} VALID: this note
+corrects the OBJECT (2PI skeleton, not bare loops) and records the favourable base,
+but does not bound the higher skeletons -- that is the dedicated 2PI residual,
+honestly marked. The reframing is necessary (the bare-loop object was wrong).
+\item[($\beta$)] \emph{``$s_3\sim4\%$ is one datum; the higher $s_\ell$ could
+grow.''} VALID and UNRESOLVED: the base is favourable, but the all-order skeleton
+domination is the residual. The dressed propagators (softer than bare) and the
+common-mode $+\,a_0$ suppression make it plausible, not proved.
+\item[($\gamma$)] \emph{``Does this change B1?''} DISMISSED: it sharpens the
+residual map (2PI skeleton), not any tier. B1 stays T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{dressing} -- $\hat r=r_R+2\lambda'I
+=0.305+0.032=0.337$ (Hartree-resummed); \emph{base} -- $s_3\sim4\%\ll\tfrac12$
+(factor $\sim12$ inside); \emph{structure} -- common-mode cancels per loop order,
+leaving the $a_0$-suppressed pattern-dependent skeleton; \emph{consistency} -- the
+sunset is the leading 2PI skeleton, matching SC-SCOPE's two-loop datum.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 higher-loop common-mode (2PI skeleton)
+Precise statement:       The dressing r_hat = r_R + 2 lam' I is the self-consistent
+                         Hartree resummation, so the RES-5 higher-loop residual is
+                         the 2PI SKELETON expansion (dressed propagators), not bare
+                         loops. The leading skeleton (sunset/2-loop = SC-SCOPE
+                         third cumulant) DIFFERENCE is s_3 ~ 4% << 1/2. Closure:
+                         |sum_{l>=3} Delta F_l^pd| <= Delta F_margin sum s_l < Delta
+                         F_margin if s_l <= s < 1/2 for all l. Base favourable;
+                         all-order skeleton domination is the residual.
+Scope:                   Structural framing + base skeleton; anchor mu^2. The
+                         all-order skeleton bound is OPEN (dedicated 2PI).
+Dependencies:            res5-oneloop-loop-disentangling (the framing); SC-SCOPE
+                         (sunset = leading skeleton, ~4%); res5-commonmode-envelope
+                         (a0); Math424-AddA.
+Evidence grade:          ANALYTIC (framing) + EXECUTED (res5_higherloop_skeleton.py
+                         3/3) + INHERITED (SC-SCOPE s_3).
+Reproduction command:    python codes/vacuum/res5_higherloop_skeleton.py
+Expected output:         r_hat=0.337 (Hartree shift 0.032); s_3~4%<0.5; 3/3 PASS.
+Falsification gate:      A dressed higher skeleton with s_l >= 1/2 (would break the
+                         geometric domination); or a demonstration that the
+                         skeleton expansion is not the right object (e.g. a
+                         non-skeleton contribution at the difference level).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5 residual = the
+                         2PI higher-skeleton difference bound (base s_3~4%
+                         favourable).
+No-overclaim statement:  This does NOT close RES-5. It frames the residual as the
+                         2PI skeleton expansion and records the favourable leading
+                         skeleton (SC-SCOPE ~4%); the all-order skeleton domination
+                         is the dedicated 2PI frontier. B1 stays T6 on {H-LAYER}.
+Next required action:    Compute/bound the dressed three-loop skeleton DIFFERENCE
+                         (the next term after the sunset) and establish the
+                         skeleton-parameter domination s_l < 1/2; this is a
+                         dedicated 2PI effective-action computation.
+\end{verbatim}
+}
