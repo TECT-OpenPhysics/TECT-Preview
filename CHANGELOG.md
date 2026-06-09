@@ -5,6 +5,17 @@ not pillar counts.
 
 ---
 
+## [scscope-floor-sharpening v1.3 -> v1.4: purge residual LIFTED wording; sunset-limited framing] - 2026-06-08
+
+- **Operator review**: v1.3 still carried v1.2 'LIFTED / paired>=2.23 / CLOSES' residues in Section 6, the
+  sanity check, and the footer (Evidence-grade, Expected-output, Tier-before/after, No-overclaim, Next-action),
+  contradicting the v1.3 retraction.
+- **v1.4 re-issue** (FORM-CHECK PASS; v1.3 superseded): all footer/self-review residues purged. Recorded the
+  sunset-limited framing -- the canonical additive joint saturates at x1.13 (sunset C_sunset=composed/1.13,
+  rigorous), so the binding question is the quartic R_max<0.634, NOT the retracted pairing R_s+R_q<5.55. Status
+  unchanged: SC-SCOPE restored, B1 {H-LAYER,SC-SCOPE} T6; reconciliation K<=T'(M) + floor sharpening stand as a
+  proved partial advance. release_check PASS, pytest 3/3.
+
 ## [SC-SCOPE lift RETRACTED (self-caught): wrong joint bookkeeping; B1 restored to {H-LAYER, SC-SCOPE}, T6] - 2026-06-08
 
 - **Self-caught error** (during the option-3 rigorization): the SC-SCOPE all-orders endpoint LIFT (prior commit)

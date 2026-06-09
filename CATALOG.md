@@ -6,7 +6,7 @@
 
 Generated: 2026-06-08
 
-**449 artefacts** · superseded versions kept: 50 · machine-readable twin: `verification/catalog.json`
+**451 artefacts** · superseded versions kept: 51 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -32,7 +32,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B4-MASS-GAP/LINEAGE.md` | B4-MASS-GAP | — | — | — | ACTIVE | `7f4f98e48ede` |
 | `claims/B4-MASS-GAP/claim.md` | B4-MASS-GAP | — | — | — | ACTIVE | `aa64c40953f6` |
 | `claims/B4-MASS-GAP/status.json` | B4-MASS-GAP | — | — | — | ACTIVE | `fb0abca541cb` |
-| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `5123b36f470f` |
+| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `fc28d3bd4900` |
 | `claims/B5-BEYOND-LAYER-BOUND/claim.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0d5279bacfa7` |
 | `claims/B5-BEYOND-LAYER-BOUND/lineage-narrative.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `92b7f96ac6eb` |
 | `claims/B5-BEYOND-LAYER-BOUND/status.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `312691c3302b` |
@@ -231,7 +231,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.2.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.2 | ACTIVE | `66693b6612bf` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.2 | SUPERSEDED | `6d38b2849e21` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.3.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.3 | ACTIVE | `e3605e229b72` |
-| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.3 | ACTIVE | `c5209d18f96d` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.3 | SUPERSEDED | `3cadf7b10ea3` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.4.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.4 | ACTIVE | `0320f42402de` |
+| `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-260608-v1.4.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.4 | ACTIVE | `897516dcecc8` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.0 | ACTIVE | `4ec272201d1c` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-floor-sharpening-260608-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.0 | SUPERSEDED | `6297dc624553` |
 | `claims/B5-BEYOND-LAYER-BOUND/notes/scscope-joint-pairing-260607-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `11b4a7fd44ae` |
@@ -476,12 +478,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `a7fb64af24a9` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `c0f811cfa3f0` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `16c1bd1ee8bf` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `b8435e52bc62` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `af520a99e0c7` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `c4574fbc019d` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `4034dac98df2` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `435416e8bbad` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `0266dadcab4d` |
