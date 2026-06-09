@@ -1,0 +1,32 @@
+{
+  "script": "res5_orderedbcc_parallel.py",
+  "version": "1.0.0",
+  "rhat": 0.33674599985544107,
+  "lam": 8.055072796999182,
+  "Bd": 0.12827093718689958,
+  "g": 1.0332317367797856,
+  "verdict": "leading selection dF^(2)>=0 non-perturbative (operator monotonicity, R-U10-3) -- ordered-BCC error not repeated; but g~1 same strong-coupling regime => screening route CONTINGENT; load-bearing residual = non-perturbative higher-loop common-mode cancellation (necessary not sufficient)",
+  "claims": [
+    {
+      "name": "leading_selection_nonperturbative_positive",
+      "passed": true,
+      "detail": "(lam'P^2=0.0806>=0 PSD; (1/2)[ln(D_0+lam'P^2)-ln D_0]>=0 pointwise (min 4.74e-05) by operator monotonicity => dF^(2)>=0 NON-PERTURBATIVELY for any P -- R_H is the restored state, NOT a mean-field prediction; the ordered-BCC error is not repeated at leading order)"
+    },
+    {
+      "name": "same_strong_coupling_regime",
+      "passed": true,
+      "detail": "(g = lam' B_d = 1.033 ~ 1: the SAME strong-fluctuation regime that failed the ordered BCC; the operator's parallel is apt -- perturbative higher-loop bounds are suspect here)"
+    },
+    {
+      "name": "strong_fluctuations_common_mode",
+      "passed": true,
+      "detail": "(the strong fluctuations live in the common dressed sea D_0(I)=r_hat=0.3367, pattern-independent => they cancel in dF=F[P]-F[R_H] at leading order; the higher-loop common-mode cancellation is the residual)"
+    },
+    {
+      "name": "screening_contingent_residual_sharpened",
+      "passed": true,
+      "detail": "(VERDICT: the screening route is NECESSARY (resummation finite, repulsive) but NOT SUFFICIENT (strong coupling forbids trusting the perturbative higher-loop bound, per the ordered-BCC lesson). The load-bearing RES-5 residual is the NON-PERTURBATIVE higher-loop common-mode cancellation -- the certificate must VERIFY it (operator-monotonicity-type sign structure at higher loops), not assume it)"
+    }
+  ],
+  "all_pass": true
+}

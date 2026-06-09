@@ -9,7 +9,7 @@
 
 **Falsifier.** An admissible competitor of the H-ADM-COH class with F_total <= F_total[R_H]; a near-gap section with the structural floor < 0; or the loss of the sole active named hypothesis {H-LAYER} (for the crystallographic lattice class; H-ADM-COH discharged + SC-SCOPE lifted@THIN-CERTIFIE…
 
-## ESTIMATOR-UPGRADE/  ·  13 proof units  ·  tier span T6
+## ESTIMATOR-UPGRADE/  ·  15 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -22,7 +22,9 @@
 | `res5-commonmode-envelope` | v1.0 | T6* | The matched-order-to-exact remainder sum_{n>=3} Delta F^(n) is common-mode suppressed: r_hat(I)=rR+2 lam' I is pattern-independent, so the common-mod… | ANALYTIC (common-mode structure) + EXECUTED (… | Prove the all-order common-mode split (every F^(n)'s pattern-dependent part is O(a0)) and… |
 | `res5-dressed-threeloop-skeleton-bound` | v1.0 | T6* | The dressed skeleton ratio s_{l+1}/s_l ~ lam' B_d = lam' int G_d^2 = 1.03 = O(1) (marginal). Hence s_4 ~ s_3 * 1.03 ~ s_3 (NOT << s_3): each term ~4%… | ANALYTIC + EXECUTED (res5_dressed_loop_parame… | A dedicated 2PI self-consistent (or Borel / optimal- truncation) RESUMMATION of the dress… |
 | `res5-higherloop-commonmode-bound` | v1.0 | T6* | The dressing r_hat = r_R + 2 lam' I is the self-consistent Hartree resummation, so the RES-5 higher-loop residual is the 2PI SKELETON expansion (dres… | ANALYTIC (framing) + EXECUTED (res5_higherloo… | Compute/bound the dressed three-loop skeleton DIFFERENCE (the next term after the sunset)… |
+| `res5-higherloop-commonmode-monotonicity` | v1.0 | T6* | In the CJT 2PI action Gamma[G;P] = (1/2)Tr ln G^-1 + (1/2)Tr[(K0+lam'P^2)G] + Gamma_2[G], (i) Gamma_2 is a pattern-independent functional; (ii) stati… | ANALYTIC (2PI structure) + EXECUTED (res5_2pi… | Bound c: linearise the 2PI gap equation to get delta G_*^pd = O(a0) rigorously, then boun… |
 | `res5-oneloop-loop-disentangling` | v1.0 | T6* | F_1loop=(1/2)Tr ln(D_0+lam'P^2) is EXACT in the condensate (expansion converges: avg self-energy a0/2=0.048, peak node lam'IN/rhat=0.574<1). The bare… | ANALYTIC + EXECUTED (res5_oneloop_disentangle… | Treat the higher-loop difference directly (the SC-SCOPE two-loop programme extended): bou… |
+| `res5-orderedbcc-parallel` | v1.0 | T6* | RES-5 is in the same strong-fluctuation regime (g=lam' B_d =1.03~1) that failed the ordered BCC. DIFFERENCE: the Reading-H leading selection dF^(2)=(… | ANALYTIC + EXECUTED (res5_orderedbcc_parallel… | The 2PI certificate must establish the higher-loop common-mode cancellation via a sign / … |
 | `res5-susceptibility-ratio-bareroute` | v1.0 | T6* | The bare Gaussian-sea ratio chi^(3)/chi^(2) ~ 4 int G^3/ int G^2 = 9.05 > 1/(2a0) = 5.23, so r_2(bare) = 0.866 > 1/2: the bare-susceptibility geometr… | ANALYTIC + EXECUTED (res5_susceptibility_rati… | Construct the all-order common-mode subtraction explicitly (the connected pattern-depende… |
 | `twoshell-anchored-bracket` | v1.0 | — | At r_bare=0.219, the anchored two-shell {110}+{200} free energy dF_anchored = dF_diag + (F_exact - F_diag_basis) has min over (A1,A2)!=(0,0) = +6.7e-… | EXECUTED (twoshell_anchored_bracket.py 7/7); … | Curvature-chord continuum bound on the exact anchored bulk surface (finer exact scan); th… |
 | `twoshell-continuum-bound` | v1.0 | — | At r_bare=0.219 (B1): the diagonal-continuum two-shell {110}+{200} free energy, M-minimised, has min over (A1,A2)!=(0,0) = +3.9e-5 > 0, a 2D curvatur… | EXECUTED (twoshell_continuum_bound.py 10/10) … | Exact-Wick bracket continuum bound at r=0.219 (the slogdet engine), then ESTIMATOR-UPGRAD… |
@@ -60,4 +62,4 @@
 | `neargap-protection-lemma` | v1.0 | T6* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T6* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-09T09:35:07Z by build_index.py v1.0.0 -->
+<!-- generated 2026-06-09T09:55:27Z by build_index.py v1.0.0 -->

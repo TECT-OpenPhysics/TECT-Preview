@@ -1,0 +1,160 @@
+% =============================================================================
+% Title: RES-5 and the ordered-BCC precedent: the leading selection is
+%        non-perturbatively protected; the screening route is strong-coupling
+%        contingent
+% Claim: B1-RH-ENUM (RES-5 reliability / devil's-advocate; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 / DEVIL'S-ADVOCATE (operator-raised). Addresses the parallel: RES-5
+%   lives in the SAME strong-fluctuation regime (g = lam' B_d = 1.03 ~ 1) that
+%   failed the ordered BCC. DECISIVE DIFFERENCE: the Reading-H leading selection
+%   dF^(2) >= 0 is proven NON-PERTURBATIVELY (operator monotonicity, R-U10-3) -- it
+%   is the fluctuation-restored result, not a mean-field prediction, so the
+%   ordered-BCC error (mean field overturned by the leading fluctuation) is not
+%   repeated at leading order. BUT the parallel has force at HIGHER loops: the
+%   strong coupling makes the screening/RPA argument perturbative -> CONTINGENT.
+%   The load-bearing RES-5 residual is therefore the NON-PERTURBATIVE higher-loop
+%   common-mode cancellation, NOT the screening factor. The screening route
+%   (res5-2pi-resummation-strategy) is reduced to NECESSARY-but-not-sufficient.
+%   No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Ordered-BCC parallel; non-perturbative leading
+%        protection (operator monotonicity); screening-route contingency; the
+%        sharpened residual. Grounded by res5_orderedbcc_parallel.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The operator raised a decisive devil's-advocate point: the reason TECT selected
+Reading-H is that the ordered BCC FAILED -- and RES-5 lives in the same
+strong-fluctuation regime, so is the screening route not the same kind of
+over-optimism that failed the ordered BCC? This note addresses it: it identifies
+the one decisive difference (the leading selection is non-perturbatively proven),
+grants the parallel's force at higher loops, and accordingly reduces the screening
+route to necessary-but-not-sufficient. Scope: the reliability question; anchor $\mu^2$.
+
+\section*{2. The ordered-BCC failure}
+
+The ordered-BCC reading was a MEAN-FIELD prediction (BCC ordered ground state). The
+LEADING (one-loop) fluctuation correction OVERTURNED it -- the Brazovskii
+restoration to disorder -- an $O(1)$ effect that FLIPPED the conclusion
+(NG-2026-legacy-ordered-vacuum). Mean field was qualitatively wrong.
+
+\section*{3. The decisive difference: the leading selection is non-perturbative}
+
+The Reading-H leading selection is NOT a mean-field prediction. It is the one-loop
+result itself, and it is proven NON-PERTURBATIVELY by operator monotonicity
+(R-U10-3 / neargap-common-mode-resolution): at fixed $I$ the dressing
+$D_0(I)=\hat r$ is pattern-independent, and
+\[
+\Delta F^{(2)} = \tfrac12\,\mathrm{Tr}\big[\ln(D_0+\lambda'\mathcal P^2)-\ln D_0\big]\ \ge\ 0
+\quad\text{for ANY competitor }\mathcal P,
+\]
+since $\lambda'\mathcal P^2\succeq0$ and $\ln$ is operator-monotone (verified
+pointwise, $\min\ \tfrac12[\ln(D_0+\lambda'\mathcal P^2)-\ln D_0]=+4.7\times10^{-5}>0$).
+Thus $\mathcal R_H$ IS the fluctuation-restored state, and the strong fluctuations
+live in the COMMON sea $D_0(I)$ and CANCEL at leading order. The ordered-BCC error
+-- a leading fluctuation flipping a mean-field sign -- is structurally NOT repeated.
+
+\section*{4. The parallel's force, granted}
+
+The operator is right where it matters: $g=\lambda' B_d=1.03\sim1$ is the SAME
+strong-fluctuation regime. At HIGHER loops (RES-5) my screening / RPA argument is
+PERTURBATIVE, and the ordered-BCC lesson is precisely that a perturbative bound is
+not to be trusted at strong coupling. The screening factor $1/(1+g)$ shows the
+resummation is FINITE (necessary), but it does NOT establish that the higher-loop
+corrections preserve the common-mode cancellation (sufficient). My screening note's
+confidence is hereby reduced.
+
+\section*{5. The sharpened residual}
+
+\[
+\boxed{\;\text{RES-5 residual} = \text{non-perturbative higher-loop common-mode cancellation}.\;}
+\]
+That is: does the operator-monotonicity-type protection of $\Delta F^{(2)}\ge0$ extend
+to the higher-loop / 2PI level, so that the strong common fluctuations still cancel
+in the difference and only the $a_0$-suppressed pattern-dependent part survives?
+The screening route is NECESSARY (finite resummation) but NOT SUFFICIENT; the
+certificate must VERIFY this higher-loop common-mode cancellation (a sign /
+monotonicity structure at 2PI order), not assume it.
+
+\section*{6. Status}
+
+\textbf{T3 / DEVIL'S-ADVOCATE.} Established: the leading selection is
+non-perturbatively protected (operator monotonicity), so RES-5 is not the
+ordered-BCC error at leading order; but the strong-coupling regime makes the
+screening route contingent. \textbf{OPEN (sharpened):} the non-perturbative
+higher-loop common-mode cancellation. No tier flip: B1-RH-ENUM T6 CONDITIONAL on
+$\{$H-LAYER$\}$. The screening note (res5-2pi-resummation-strategy) is annotated:
+NECESSARY-but-not-sufficient, contingent on this residual.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``So the screening route was over-claimed.''}
+PARTLY-UPHELD: the route is real (the resummation IS finite, repulsive), but its
+sufficiency was over-stated; this note reduces it to necessary-but-not-sufficient
+and names the higher-loop common-mode cancellation as the load-bearing residual.
+The operator's catch is recorded as a confidence reduction.
+\item[($\beta$)] \emph{``Then is Reading-H itself unsafe, like the ordered BCC?''}
+DISMISSED at leading order: $\Delta F^{(2)}\ge0$ is non-perturbative (operator
+monotonicity), so the LEADING selection is safe regardless of fluctuation
+strength. The risk is confined to whether higher loops overturn a
+non-perturbatively-correct leading result -- a strictly weaker worry than the
+ordered-BCC mean-field flip.
+\item[($\gamma$)] \emph{``Does the strong coupling threaten the operator-
+monotonicity proof?''} DISMISSED: operator monotonicity of $\ln$ is exact for any
+PSD $\lambda'\mathcal P^2$, independent of the coupling strength; it is an
+algebraic inequality, not a perturbative estimate.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{non-perturbative} -- $\min\tfrac12[\ln
+(D_0+\lambda'\mathcal P^2)-\ln D_0]=+4.7\times10^{-5}>0$ (operator monotonicity,
+coupling-independent); \emph{regime} -- $g=1.03\sim1$ (same as ordered-BCC failure);
+\emph{structure} -- strong fluctuations in the common $D_0(I)$ (cancel at leading
+order); \emph{logic} -- leading non-perturbative $+$ higher-loop contingent.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 ordered-BCC parallel (reliability)
+Precise statement:       RES-5 is in the same strong-fluctuation regime (g=lam' B_d
+                         =1.03~1) that failed the ordered BCC. DIFFERENCE: the
+                         Reading-H leading selection dF^(2)=(1/2)Tr[ln(D_0+lam'P^2)
+                         -ln D_0]>=0 is NON-PERTURBATIVE (operator monotonicity,
+                         R-U10-3; min +4.7e-5>0), so R_H is the restored state, not
+                         a mean field -- the ordered-BCC error is not repeated at
+                         leading order. But at higher loops the screening/RPA
+                         argument is perturbative => CONTINGENT (the ordered-BCC
+                         lesson). Load-bearing residual: the NON-PERTURBATIVE
+                         higher-loop common-mode cancellation; the screening route
+                         is necessary-but-not-sufficient.
+Scope:                   Reliability / devil's-advocate; anchor mu^2.
+Dependencies:            res5-2pi-resummation-strategy (downgraded here);
+                         neargap-common-mode-resolution (R-U10-3, operator
+                         monotonicity); NG-2026-legacy-ordered-vacuum; Math424-AddA.
+Evidence grade:          ANALYTIC + EXECUTED (res5_orderedbcc_parallel.py 4/4).
+Reproduction command:    python codes/vacuum/res5_orderedbcc_parallel.py
+Expected output:         dF^(2)>=0 pointwise (min +4.7e-5); g=1.03; 4/4 PASS.
+Falsification gate:      A competitor P with dF^(2)<0 (would break operator
+                         monotonicity -- impossible for PSD lam'P^2); or a
+                         higher-loop pattern-dependent O(1) term surviving the
+                         common-mode cancellation (would make RES-5 the ordered-BCC
+                         error at higher loops).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. Screening route reduced
+                         to necessary-but-not-sufficient; residual sharpened to the
+                         non-perturbative higher-loop common-mode cancellation.
+No-overclaim statement:  This does NOT close RES-5 and reduces the screening route's
+                         claim. The leading selection is non-perturbatively safe;
+                         the higher-loop reliability is contingent on the
+                         non-perturbative common-mode cancellation, which the
+                         certificate must VERIFY (not assume). The operator's
+                         ordered-BCC parallel is upheld as a strong-coupling caution.
+Next required action:    The 2PI certificate must establish the higher-loop
+                         common-mode cancellation via a sign / operator-monotonicity
+                         structure at 2PI order (extending R-U10-3), BEFORE the
+                         screened quantitative bound is trusted.
+\end{verbatim}
+}

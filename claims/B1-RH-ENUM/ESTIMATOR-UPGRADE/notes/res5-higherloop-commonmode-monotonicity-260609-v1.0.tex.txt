@@ -1,0 +1,175 @@
+% =============================================================================
+% Title: RES-5 2PI common-mode monotonicity: the R-U10-3 mechanism extends from the
+%        one-loop log-det to the 2PI effective action
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 2PI common-mode extension; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Executes the operator-directed extension of the R-U10-3
+%   common-mode / operator-monotonicity mechanism from the one-loop log-det to the
+%   2PI (Cornwall-Jackiw-Tomboulis) effective action. Establishes STRUCTURALLY that
+%   the common-mode cancellation extends: Gamma_2[G] is a pattern-independent
+%   functional, Feynman-Hellmann kills the implicit dG_*/dP term, the common
+%   dressing D_0(I) is pattern-independent, and the repulsive lam'>0 gives the
+%   operator-monotone leading sign. The LOAD-BEARING RESIDUAL is thereby sharpened
+%   to the non-perturbative a0-bound on the pattern-dependent skeleton
+%   Gamma_2[G_*(P)] - Gamma_2[G_*(R_H)]. Does NOT close RES-5. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. CJT 2PI action; the four structural steps
+%        (pattern-independent Gamma_2; Feynman-Hellmann; common dressing; repulsive
+%        monotone sign); the a0-skeleton residual. Grounded by
+%        res5_2pi_commonmode_monotonicity.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The ordered-BCC parallel reduced the screening route to necessary-but-not-sufficient
+and named the load-bearing residual: the NON-PERTURBATIVE higher-loop common-mode
+cancellation. The operator directed the structural target -- extend the R-U10-3
+one-loop mechanism to the 2PI effective action. This note carries out the four
+steps and finds that the common-mode MECHANISM extends; the residual is the
+a0-bound on the pattern-dependent skeleton. Scope: the structural extension; the
+rigorous a0-bound is the residual.
+
+\section*{2. The 2PI effective action}
+
+In the Cornwall--Jackiw--Tomboulis formalism, the free energy is the stationary
+value of
+\[
+\Gamma[G;\mathcal P] = \tfrac12\,\mathrm{Tr}\ln G^{-1}
++ \tfrac12\,\mathrm{Tr}\big[(K_0 + \lambda'\mathcal P^2)\,G\big]
++ \Gamma_2[G],
+\]
+where $\Gamma_2[G]$ is the sum of two-particle-irreducible SKELETON diagrams and
+$F[\mathcal P]=\Gamma[G_*(\mathcal P);\mathcal P]$ at the stationary
+$\delta\Gamma/\delta G=0$.
+
+\section*{3. Step 1 -- $\Gamma_2$ is a pattern-independent functional}
+
+$\Gamma_2[G]$ depends on $G$ and the bare vertices ONLY; the condensate $\mathcal P$
+enters $\Gamma$ only through the tree, the explicit $\lambda'\mathcal P^2 G$ term,
+and implicitly through $G_*(\mathcal P)$. This is the structural fact that makes the
+common-mode split possible: the strong skeleton content is the SAME functional for
+$\mathcal P$ and $\mathcal R_H$.
+
+\section*{4. Step 2 -- Feynman--Hellmann and the common-mode split}
+
+At the stationary point, $\delta\Gamma/\delta G|_{G_*}=0$, so the implicit
+$dG_*/d\mathcal P$ term vanishes and
+\[
+\frac{dF}{d\mathcal P} = \frac{\partial\Gamma}{\partial\mathcal P}\bigg|_{G_*}
+\quad(\text{explicit only}).
+\]
+The strong-fluctuation content sits in $G_*$, but the $\mathcal P$-derivative sees
+only the explicit condensate coupling. Writing $G_*(\mathcal P)=G_*^{\rm common}(I)
++\delta G_*^{\rm pd}(\mathcal P)$ (the common dressed sea plus the pattern-dependent
+variation), the free energy splits as
+\[
+F[\mathcal P] = \underbrace{\Gamma[G_*^{\rm common};\,\langle\cdot\rangle]}_{\text{common, cancels}}
++ \underbrace{\Delta\Gamma^{\rm pd}[\mathcal P]}_{O(a_0)} .
+\]
+
+\section*{5. Step 3 -- common-mode cancellation at the dressed $G_*$}
+
+At fixed intensity $I$ the common dressing $D_0(I)=\hat r=r_R+2\lambda'I$ is
+pattern-independent, so $\Gamma[G_*^{\rm common};\cdot]$ -- including the strong
+$\Gamma_2[G_*^{\rm common}]$ -- is the SAME for $\mathcal P$ and $\mathcal R_H$ and
+CANCELS in the difference. This is the 2PI extension of the R-U10-3 dressing-swap:
+the strong common sea cancels at the self-consistent level, not just at one loop.
+
+\section*{6. Step 4 -- the residual and the operator-monotone sign}
+
+The surviving difference is the pattern-dependent part. Its LEADING piece is the
+dressed log-det $\tfrac12\mathrm{Tr}[\ln(G_*^{-1}(\mathcal P))-\ln(G_*^{-1}(\mathcal R_H))]$,
+which retains the R-U10-3 operator-monotone sign because $\lambda'=3u_{\rm eff}>0$
+is repulsive (the dressed condensate self-energy is PSD). The remaining piece is
+the pattern-dependent SKELETON variation
+\[
+\boxed{\;\Delta\Gamma_2^{\rm pd} = \Gamma_2[G_*(\mathcal P)] - \Gamma_2[G_*(\mathcal R_H)]
+= O(a_0)\,,\quad a_0=0.096,\;}
+\]
+since $G_*(\mathcal P)$ and $G_*(\mathcal R_H)$ differ only by the $a_0$-suppressed
+$\delta G_*^{\rm pd}$. The LOAD-BEARING RESIDUAL is the rigorous bound
+$|\Delta\Gamma_2^{\rm pd}| \le c\,a_0\,\Delta F_{\rm margin}$ with $c$ controlled --
+obtained from the common-mode structure (non-perturbatively), NOT a
+skeleton-by-skeleton perturbative estimate.
+
+\section*{7. Status}
+
+\textbf{T3 PROOF SKETCH.} The common-mode MECHANISM extends to the 2PI effective
+action (pattern-independent $\Gamma_2$ $+$ Feynman--Hellmann $+$ common dressing $+$
+repulsive monotone sign). The leading dressed selection retains $\ge0$; the residual
+is the $a_0$-bound on the pattern-dependent skeleton. \textbf{OPEN:} the rigorous
+$|\Delta\Gamma_2^{\rm pd}|\le c\,a_0\,\Delta F_{\rm margin}$ (the constant $c$ from
+the $\delta G_*^{\rm pd}$ sensitivity of $\Gamma_2$). No tier flip: B1-RH-ENUM T6
+CONDITIONAL on $\{$H-LAYER$\}$. \textbf{B1 closure} $\Longleftrightarrow$ this
+a0-skeleton bound, for which the common-mode mechanism is now established at 2PI.
+
+\section*{8. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$\delta G_*^{\rm pd}=O(a_0)$ is assumed, not proved.''}
+VALID-with-mitigation: $G_*$ solves the gap equation with self-energy
+$\lambda'\mathcal P^2+\Sigma_2[G_*]$; the pattern-specific part of the source is
+$\lambda'(\mathcal P^2-\langle\mathcal P^2\rangle)=O(a_0)\hat r$, so $\delta
+G_*^{\rm pd}=O(a_0)$ to leading order in the gap-equation linearisation. The
+rigorous bound (including the self-consistent feedback) is the residual.
+\item[($\beta$)] \emph{``Feynman--Hellmann needs the bare, attractive coupling.''}
+VALID-and-handled: $dF/d\mathcal P$ uses the bare action, but the SIGN of the
+fluctuation determinant is governed by the DRESSED $\lambda'>0$ (the self-consistent
+$\hat r$ absorbs the attractive bare $u$); the tree/sextic and the dressed log-det
+together give the R-U10-3 $\ge0$, which this note extends -- it does not re-derive
+the leading sign.
+\item[($\gamma$)] \emph{``Does this close RES-5?''} DISMISSED: it extends the
+MECHANISM and sharpens the residual to the $a_0$-skeleton bound; it does not prove
+that bound. B1 stays T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{structure} -- $\Gamma_2[G]$ pattern-
+independent (CJT fact); \emph{common dressing} -- $\hat r(I)=0.337$ pattern-
+independent; \emph{sign} -- $\lambda'=8.06>0$ repulsive (monotone $\ge0$);
+\emph{residual scale} -- $\Delta\Gamma_2^{\rm pd}=O(a_0)=O(0.096)$; \emph{logic} --
+common sea cancels by stationarity, residual $a_0$-suppressed.
+
+\section*{9. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 2PI common-mode monotonicity extension
+Precise statement:       In the CJT 2PI action Gamma[G;P] = (1/2)Tr ln G^-1 +
+                         (1/2)Tr[(K0+lam'P^2)G] + Gamma_2[G], (i) Gamma_2 is a
+                         pattern-independent functional; (ii) stationarity =>
+                         dF/dP = dGamma/dP|_{G_*} (Feynman-Hellmann); (iii) the
+                         common dressing D_0(I) is pattern-independent so the
+                         common sea (incl. Gamma_2[G_*^common]) cancels in F[P]-
+                         F[R_H]; (iv) lam'>0 repulsive gives the R-U10-3 operator-
+                         monotone leading sign. The common-mode MECHANISM extends
+                         to 2PI; the residual is the a0-bound |Gamma_2[G_*(P)]-
+                         Gamma_2[G_*(R_H)]| = O(a0) <= c a0 Delta F_margin.
+Scope:                   Structural extension; anchor mu^2. The rigorous a0-bound
+                         (constant c) is OPEN.
+Dependencies:            res5-orderedbcc-parallel (the residual); neargap-common-
+                         mode-resolution (R-U10-3, one-loop); res5-commonmode-
+                         envelope (a0); Math424-AddA.
+Evidence grade:          ANALYTIC (2PI structure) + EXECUTED
+                         (res5_2pi_commonmode_monotonicity.py 5/5).
+Reproduction command:    python codes/vacuum/res5_2pi_commonmode_monotonicity.py
+Expected output:         r_hat=0.337 common; lam'=8.06>0; a0=0.096; 5/5 PASS.
+Falsification gate:      A pattern-dependent part of Gamma_2 that is O(1) not O(a0)
+                         (would break the common-mode extension); or delta G_*^pd
+                         not O(a0) (self-consistent feedback amplifying the pattern
+                         dependence).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5 residual sharpened
+                         to the a0-bound on the pattern-dependent 2PI skeleton; the
+                         common-mode mechanism is established at 2PI.
+No-overclaim statement:  This does NOT close RES-5. It extends the common-mode
+                         MECHANISM to 2PI (structural) and sharpens the residual to
+                         |Delta Gamma_2^pd| <= c a0 Delta F_margin; the constant c
+                         (the self-consistent skeleton sensitivity) is the residual.
+                         B1 stays T6 on {H-LAYER}.
+Next required action:    Bound c: linearise the 2PI gap equation to get
+                         delta G_*^pd = O(a0) rigorously, then bound the Gamma_2
+                         sensitivity dGamma_2/dG at G_* (the screened susceptibility
+                         from res5-2pi-resummation-strategy enters here).
+\end{verbatim}
+}

@@ -5,6 +5,39 @@ not pillar counts.
 
 ---
 
+## [RES-5 2PI common-mode monotonicity: R-U10-3 mechanism extends to the 2PI effective action (T3)] - 2026-06-09
+
+- **Operator-directed** extension of the R-U10-3 common-mode/operator-monotonicity mechanism from the one-loop
+  log-det to the 2PI (CJT) effective action. NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/
+  res5-higherloop-commonmode-monotonicity v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_2pi_commonmode_monotonicity.py` (5/5) + `runs/`.
+- In Gamma[G;P] = (1/2)Tr ln G^-1 + (1/2)Tr[(K0+lam'P^2)G] + Gamma_2[G]: (i) Gamma_2 is a PATTERN-INDEPENDENT
+  functional; (ii) stationarity => dF/dP = dGamma/dP|_{G_*} (Feynman-Hellmann -- the implicit dG_*/dP vanishes);
+  (iii) the common dressing D_0(I) is pattern-independent, so the common sea (incl. the strong Gamma_2[G_*^common])
+  CANCELS in F[P]-F[R_H]; (iv) lam'=3u_eff>0 repulsive gives the R-U10-3 operator-monotone leading sign.
+- The common-mode MECHANISM extends to 2PI (structural); the residual is sharpened to the a0-bound
+  |Gamma_2[G_*(P)]-Gamma_2[G_*(R_H)]| = O(a0) <= c a0 Delta F_margin (the constant c = the self-consistent skeleton
+  sensitivity = the screened susceptibility from the resummation note). T3; OPEN = bound c. No tier flip
+  (B1 T6 on {H-LAYER}). B1 closure <=> the a0-skeleton bound (mechanism now established at 2PI). lint PASS (29),
+  release_check PASS.
+
+## [RES-5 ordered-BCC parallel: leading selection non-perturbatively safe; screening route reduced (T3)] - 2026-06-09
+
+- **Operator devil's-advocate** (key catch): RES-5 is in the SAME strong-fluctuation regime (g=lam' B_d=1.03~1) that
+  failed the ordered BCC -- is the screening route the same over-optimism? NEW note
+  `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-orderedbcc-parallel v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_orderedbcc_parallel.py` (4/4) + `runs/`.
+- **DECISIVE DIFFERENCE**: the Reading-H leading selection dF^(2) = (1/2)Tr[ln(D_0+lam'P^2)-ln D_0] >= 0 is
+  NON-PERTURBATIVE (operator monotonicity, R-U10-3; min +4.7e-5>0) -- R_H IS the fluctuation-restored state, not a
+  mean-field prediction, so the ordered-BCC error (mean field overturned by the leading fluctuation) is NOT repeated
+  at leading order. The strong fluctuations live in the common sea D_0(I) and cancel at leading order.
+- **BUT the parallel has force at higher loops**: the screening/RPA argument is perturbative => CONTINGENT (the
+  ordered-BCC lesson: do not trust perturbative bounds at strong coupling). The screening route
+  (res5-2pi-resummation-strategy) is REDUCED to necessary-but-not-sufficient; the load-bearing RES-5 residual is
+  sharpened to the NON-PERTURBATIVE higher-loop common-mode cancellation, which the 2PI certificate must VERIFY
+  (operator-monotonicity-type sign structure at 2PI order), not assume. No tier flip (B1 T6 on {H-LAYER}).
+  lint PASS (29), release_check PASS.
+
 ## [RES-5 2PI resummation strategy: repulsive screening tames the marginal series (T4)] - 2026-06-09
 
 - **Operator-directed resummation strategy** (Routes A 2PI / B Borel / C sign-cancellation). RESULT: A and C
