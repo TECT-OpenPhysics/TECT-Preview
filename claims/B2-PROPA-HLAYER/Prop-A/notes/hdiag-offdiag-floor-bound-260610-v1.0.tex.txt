@@ -1,0 +1,169 @@
+% =============================================================================
+% Title: H-diag (RES-1) off-diagonal floor: the conservative leading stability ratio
+%        R_lead = const(1+K_floor)I is below unity for EVERY enumerated competitor;
+%        the diagonal-Gaussian infimum holds over the enumerated class, parallel to
+%        RES-5 and reducing class-wide to the same R-026 additive-energy machinery
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T4 STRONG EVIDENCE. Overnight step A. Extends the BCC-only constant
+%   certificate to the FULL enumerated competitor class. The off-diagonal Bogoliubov
+%   Hessian weight is the additive energy E_+ (proved, hdiag-offdiag-additive-energy),
+%   so the conservative leading condensate-direction ratio is R_lead(I) = const *
+%   (1+K_floor) * I with const=(9/2)u_eff^2 B_max/rR = 23.22 and K_floor=E_+/N^2-1 --
+%   the SAME K_floor that governs the RES-5 endpoint. R_lead<1 iff K_floor<20.5 at the
+%   I=2e-3 endpoint; EVERY enumerated competitor has K_floor<=12<20.5, so
+%   R_lead<=0.602<1 (the dense 3-shell n=42 is the worst). Hence the diagonal-Gaussian
+%   trial is the infimum over the enumerated class -- H-diag is discharged there.
+%   Class-wide the bound reduces to R-026 (E_+<=(1+C_eps R^eps)N^2), exactly as RES-5.
+%   HONEST grade: R_lead is the CONSERVATIVE LEADING condensate-direction ratio, NOT
+%   the full worst-direction operator norm (the standing OPEN residual); the lattice-
+%   class constant pin + chi(P) link carry the same R-026 residuals as RES-5. No tier
+%   flip: B2/B1 stay T6 CONDITIONAL on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. R_lead = const(1+K_floor)I; all enumerated <0.61;
+%        threshold K_floor<20.5 (RES-5 parallel); R-026 reduction. Grounded by
+%        res1_hdiag_offdiag_floor.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The constant certificate (hdiag-offdiag-constant-certificate) verified the off-diagonal
+leading ratio for BCC only ($R_{\rm lead}=0.174$). This note extends it to the full
+enumerated competitor class and exhibits the parallel with RES-5: H-diag and the RES-5
+endpoint are governed by the SAME additive-energy quantity $K_{\rm floor}$. Scope: the
+$I=2\times10^{-3}$ endpoint; the enumerated crystallographic class; the conservative
+leading condensate-direction ratio (the operator norm is the standing residual). No
+tier action.
+
+\section*{2. The leading ratio in terms of $K_{\rm floor}$}
+
+The off-diagonal Bogoliubov-Hessian weight is the additive energy
+$\sum_Q p_2(Q)^2=E_+$ (proved). The conservative leading condensate-direction ratio is
+\[
+R_{\rm lead}(I)=\frac{9}{4}\,\frac{u_{\rm eff}^2 B_{\max}E_+}{c_{\rm diag}}\,\frac{I}{N},
+\qquad c_{\rm diag}=\tfrac{N}{2}r_R,
+\]
+and since $c_{\rm diag}\propto N$ and $E_+/N^2=1+K_{\rm floor}$,
+\[
+\boxed{\ R_{\rm lead}(I)=\frac{9}{2}\,\frac{u_{\rm eff}^2 B_{\max}}{r_R}\,(1+K_{\rm floor})\,I
+= \mathrm{const}\cdot(1+K_{\rm floor})\,I,\quad \mathrm{const}=23.22.\ }
+\]
+$R_{\rm lead}$ is thus controlled by the SAME $K_{\rm floor}=E_+/N^2-1$ as the RES-5
+endpoint tail. (BCC: $K_{\rm floor}=2.75\Rightarrow R_{\rm lead}=0.174$, reproducing
+the certificate.)
+
+\section*{3. Every enumerated competitor closes}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+competitor & $N$ & $K_{\rm floor}$ & $R_{\rm lead}(2{\times}10^{-3})$ \\
+\midrule
+$\{100\},\{200\}$ & 6  & 1.50  & 0.116 \\
+$\{111\}$         & 8  & 2.38  & 0.157 \\
+$\{110\}$ BCC     & 12 & 2.75  & 0.174 \\
+$\{110\}+\{200\}$ & 18 & 4.50  & 0.255 \\
+$\{110\}+\{200\}+\{211\}$ & 42 & 11.97 & 0.602 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every enumerated competitor has $R_{\rm lead}\le0.602<1$ (the dense 3-shell is the
+worst). The closure condition is
+\[
+R_{\rm lead}<1\ \Longleftrightarrow\ K_{\rm floor}<\frac{1}{\mathrm{const}\cdot I}-1=20.5
+\quad(I=2\times10^{-3}),
+\]
+and the enumerated worst $K_{\rm floor}=12<20.5$. So the diagonal-Gaussian trial is the
+infimum (the off-diagonal full-covariance dressing does not lower the layer value) over
+the enumerated class -- H-diag is discharged there. Off the endpoint $R_{\rm lead}\propto
+I$ shrinks (3-shell $0.602\to0.301$ at $10^{-3}$).
+
+\section*{4. Parallel with RES-5; class-wide reduction to R-026}
+
+H-diag (RES-1) and the RES-5 endpoint are the SAME additive-energy problem viewed twice:
+both reduce to $K_{\rm floor}=E_+/N^2-1$, with thresholds $K_{\rm floor}<20.5$ (RES-1)
+and $<26.2$ (RES-5) -- the enumerated competitors ($K_{\rm floor}\le12$) clear both.
+Class-wide, both reduce to the lattice additive-energy bound R-026
+($E_+\le(1+C_\varepsilon R^\varepsilon)N^2$, T7 modulo textbook NT, decoupling-free) and
+inherit its residuals. H-LAYER's two deepest analytic axes therefore collapse onto one
+machinery.
+
+\section*{5. Verdict}
+
+\noindent\textbf{H-diag (RES-1) is discharged for the enumerated competitor class}
+(STRONG EVIDENCE): $R_{\rm lead}<1$ exactly for every enumerated competitor, so the
+diagonal-Gaussian trial is the infimum there. \textbf{Residuals (unchanged):} (i) the
+full worst-direction operator norm (vs the conservative leading condensate-direction
+$R_{\rm lead}$); (ii) the class-wide constant pin $C_\varepsilon R^\varepsilon$ +
+$\chi(P)\lesssim T'$ link (the same R-026 items as RES-5). No tier flip: B2/B1 stay
+T6 CONDITIONAL on $\{$H-LAYER$\}$; the off-diagonal axis of H-LAYER is discharged for
+the enumerated class, leaving the operator-norm + R-026 residuals.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$R_{\rm lead}$ is only the leading condensate-direction
+ratio, not $\|\cdot\|_{\rm op}$.''} VALID (the standing residual): the conservative
+$R_{\rm lead}<1$ is strong evidence the diagonal trial is the infimum, but the full
+worst-direction operator norm is not bounded here. The $\times1.7$--$8.6$ headroom
+($R_{\rm lead}\le0.6$) is the cushion against the leading-vs-operator gap; a rigorous
+operator-norm bound is the named follow-on.
+\item[($\beta$)] \emph{``The 3-shell $0.602$ is close-ish to 1.''} VALID-with-
+mitigation: $0.602$ is the conservative leading value at the worst (densest) enumerated
+competitor at the worst (endpoint) intensity; it stays below unity with a $\times1.66$
+margin, and shrinks off the endpoint. Denser-than-enumerated patterns are the R-026
+(lattice) / DR-2 (arbitrary-Q) question, identical to RES-5.
+\item[($\gamma$)] \emph{``Does this discharge H-LAYER?''} No -- H-diag/RES-1 is one
+axis of the H-LAYER hypothesis; this discharges it (strong evidence) for the enumerated
+class. H-LAYER also rests on the isotropy-infimum theorem (Math427) and the other RES
+items; this note removes the off-diagonal worry for the actual competitors, not the
+whole hypothesis. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{anchor} $R_{\rm lead}(\text{BCC})=0.174$
+reproduces the certificate; \emph{worst} $0.602<1$ (3-shell, factor $1.66$);
+\emph{threshold} $K_{\rm floor}<20.5$ vs enumerated $\le12$; \emph{scaling}
+$R_{\rm lead}\propto I$ ($0.602\to0.301$ at $10^{-3}$).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-diag (RES-1) off-diagonal floor
+Precise statement:       The off-diag Bogoliubov weight is E_+, so the conservative
+                         leading condensate-direction ratio is R_lead=const(1+K_floor)I,
+                         const=(9/2)u_eff^2 B_max/rR=23.22, K_floor=E_+/N^2-1. R_lead<1
+                         iff K_floor<20.5 at I=2e-3; every enumerated competitor has
+                         K_floor<=12 -> R_lead<=0.602<1 (3-shell worst). Diagonal-
+                         Gaussian is the infimum over the enumerated class (H-diag
+                         discharged there). Same K_floor as RES-5 (threshold 26.2);
+                         class-wide reduces to R-026.
+Scope:                   I=2e-3 endpoint; enumerated crystallographic class; leading
+                         condensate-direction ratio (operator norm = residual).
+Dependencies:            hdiag-offdiag-additive-energy (E_+ identity); hdiag-offdiag-
+                         constant-certificate (B_max, c_diag, BCC R_lead=0.174);
+                         res5-dr2-kappa-bound v1.2 (the K_floor / R-026 parallel).
+Evidence grade:          ANALYTIC + EXACT (K_floor combinatorial) + EXECUTED
+                         (res1_hdiag_offdiag_floor.py 4/4).
+Reproduction command:    python codes/vacuum/res1_hdiag_offdiag_floor.py
+Expected output:         const=23.22; BCC R_lead=0.174; worst enumerated 0.602<1;
+                         threshold K_floor<20.5; 4/4 PASS.
+Falsification gate:      An enumerated competitor with R_lead>=1 (K_floor>20.5); or the
+                         full operator norm exceeding 1 where R_lead<1.
+Tier before / after:     No tier flip. B2/B1 T6 on {H-LAYER}. H-diag/RES-1 off-diagonal
+                         axis DISCHARGED (strong evidence) for the enumerated class;
+                         operator norm + R-026 pin = residuals.
+No-overclaim statement:  STRONG EVIDENCE, not a theorem: R_lead is the conservative
+                         leading condensate-direction ratio, not the worst-direction
+                         operator norm; the lattice-class constant pin + chi link are
+                         R-026 residuals (as RES-5). H-diag is discharged for the
+                         enumerated competitors only; H-LAYER (whole) unchanged. B1/B2
+                         T6.
+Next required action:    The worst-direction operator-norm bound (complete Hessian) and
+                         the R-026 constant pin + chi(P) link (shared with RES-5) are
+                         the residuals to make H-diag a theorem over the lattice class.
+\end{verbatim}
+}

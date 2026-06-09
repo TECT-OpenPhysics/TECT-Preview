@@ -54,3 +54,15 @@ silently reorders mixed-case folders. This was the 2026-06-09 `build_index` cros
 `[index] STALE` incident: B1-RH-ENUM's five mixed-case sub-proof folders ordered
 differently on Windows vs Linux. The commit-time gate caught the symptom; this rule
 (enforced by code review of every generator) prevents the cause.
+
+## 6. Note-PDF enforcement (binding from 2026-06-10)
+
+Every CURRENT Math note (`claims/**/notes/*.tex.txt` whose first line is not
+`% SUPERSEDED`) MUST have a sibling `.pdf` at least as new as its source.
+`verification/scripts/verify_note_pdfs.py` checks this (`--check`/`--strict`) and
+builds missing/stale PDFs (`--build`). ENFORCEMENT is at the commit boundary:
+`commit_watcher.ps1` v1.4.0 runs `--build` before staging, so no note enters
+history without a fresh PDF (operator-side, no sandbox 44s timeout). `release_check`
+and `doctor` report missing PDFs as an advisory `[note-pdf]`. This closes the
+recurring missing-PDF defect the same way the sync gates close stale generated
+surfaces.

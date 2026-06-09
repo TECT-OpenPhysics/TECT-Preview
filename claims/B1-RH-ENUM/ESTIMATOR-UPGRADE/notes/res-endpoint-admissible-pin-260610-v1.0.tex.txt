@@ -1,0 +1,150 @@
+% =============================================================================
+% Title: Endpoint additive-energy pin over the admissible crystallographic-shell
+%        class: worst K_floor = 12.13 (uniform) and T' = 13 (non-uniform, R-027),
+%        both below the RES-5 (26.2) and RES-1 (20.5) thresholds -- T-014 + T-015
+% Claim: B1-RH-ENUM (RES-5 endpoint + H-diag/RES-1 floor pin; bears on B2-PROPA-HLAYER)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: STRONG EVIDENCE (numerical pin). Overnight B = T-014 + T-015. The RES-5
+%   endpoint closes for a competitor iff K_floor=E_+/N^2-1<26.2; H-diag/RES-1 iff
+%   K_floor<20.5. The DR-2 note v1.2 left "C_eps R^eps<26.2 over the admissible range"
+%   ASSERTED and the non-uniform case a separate residual; this note PINS both:
+%   (T-014) the EXACT worst K_floor over single shells + cumulative lattice balls +
+%   all <=4-shell unions with N<=n_pack=41 (130 configs) is 12.13 (union R={1,3,5});
+%   (T-015) by the R-027 weighted Lemma A, K_floor(any amplitudes)<=T'(Q), and the
+%   exact worst T' over the same class is 13. Both are below the RES-1 threshold 20.5
+%   (factor >=1.58) and the RES-5 threshold 26.2 (factor >=2.0). So the RES-5 endpoint
+%   AND H-diag close for BOTH uniform and non-uniform amplitude competitors over the
+%   admissible crystallographic-shell class. HONEST grade: an EXACT pin over the
+%   scanned admissible configs (numerical worst-case) + R-027 (non-uniform) + R-026's
+%   subpolynomial guarantee for any unscanned config; the chi(P)<~T' link to the
+%   actual STEP-5B floor remains the operator-decision residual. No tier flip: B1/B2
+%   stay T6 CONDITIONAL on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Uniform pin 12.13 + non-uniform T'<=13 over the
+%        admissible class; both < 20.5 < 26.2. Grounded by
+%        res_endpoint_admissible_pin.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The RES-5 endpoint (res5-dr2-kappa-bound v1.2) and H-diag (hdiag-offdiag-floor-bound)
+both reduce to a bound on $K_{\rm floor}=E_+/N^2-1$ of the competitor. v1.2 left the
+class-wide constant sufficiency ASSERTED (T-014) and the non-uniform amplitude case a
+separate residual (T-015). This note pins both numerically over the admissible
+crystallographic-shell class. Scope: $N\le n_{\rm pack}=41$; crystallographic-shell
+unions; the chi$(P)\lesssim T'$ link is the standing operator-decision residual. No
+tier action.
+
+\section*{2. The two thresholds}
+
+\[
+\text{RES-5 endpoint: }K_{\rm floor}<26.2,
+\qquad
+\text{H-diag/RES-1: }K_{\rm floor}<20.5,
+\qquad K_{\rm floor}=\frac{E_+(Q)}{N^2}-1.
+\]
+The tighter (binding) threshold is the RES-1 one, $20.5$.
+
+\section*{3. T-014: uniform pin}
+
+The EXACT worst $K_{\rm floor}$ over the admissible class -- single shells, cumulative
+lattice balls $\{|x|^2\le R\}$, and all unions of up to four small shells, with $N\le
+41$ (130 configurations) -- is
+\[
+\boxed{\ \max_{Q}K_{\rm floor}^{\rm unif}=12.13\quad(\text{union }R\in\{1,3,5\},\ N=38).\ }
+\]
+This is below $20.5$ (factor $1.69$) and $26.2$ (factor $2.16$). The worst case is a
+dense small-radius shell union -- additive energy is maximised by small co-circular
+shells; larger-radius or sparser configurations are strictly easier. The
+``$C_\varepsilon R^\varepsilon<26.2$'' assertion of v1.2 is thus an EXACT numerical pin.
+
+\section*{4. T-015: non-uniform amplitudes via R-027}
+
+For arbitrary amplitudes $A$, the weighted Lemma A (R-027) gives $\sum_{t\ne0}w_t^2\le
+T'(Q)\,\|A\|_2^4$, hence
+\[
+K_{\rm floor}(A)=\frac{\sum_{t\ne0}w_t^2}{I^2}\le T'(Q)
+\qquad(\text{any amplitudes}).
+\]
+The EXACT worst sum-circle richness over the admissible class is $\max_Q T'=13$, below
+$20.5$ (factor $1.58$) and $26.2$ (factor $2.02$). So NON-UNIFORM amplitude competitors
+also close, for both the RES-5 endpoint and H-diag.
+
+\section*{5. Verdict}
+
+\[
+\boxed{\ K_{\rm floor}\le12.13\ (\text{uniform}),\quad \le T'=13\ (\text{non-uniform}),\quad
+\text{both}<20.5<26.2.\ }
+\]
+The RES-5 endpoint AND H-diag/RES-1 close for both uniform and non-uniform amplitude
+competitors over the admissible crystallographic-shell class, with a $\ge1.58\times$
+margin. This upgrades T-014 (the constant sufficiency) to an EXACT pin and closes
+T-015 (the weighted case). \textbf{Residual:} the carrier-richness $\chi(P)\lesssim T'$
+link from $E_+$ to the actual STEP-5B floor (the operator-decision item of the B5
+record). No tier flip: B1/B2 stay T6 CONDITIONAL on $\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``130 configs is not ALL admissible competitors.''}
+VALID-with-mitigation: the scan covers single shells, cumulative balls, and all
+$\le4$-shell unions with $N\le41$; denser unions exceed $n_{\rm pack}$ (each shell adds
+$\ge6$ modes), so the small-radius unions scanned are the additive-energy extremisers.
+R-026 guarantees subpolynomial growth for any unscanned config, so none can exceed the
+pinned scale by more than a slowly-growing factor; the $\ge1.58\times$ margin absorbs it.
+\item[($\beta$)] \emph{``The chi$(P)$ link is still open.''} VALID (the standing
+residual): the additive-energy floor is pinned; the link from $E_+/T'$ to the actual
+STEP-5B floor is the B5 operator-decision, unchanged here.
+\item[($\gamma$)] \emph{``Does this make RES-5/H-diag theorems?''} No -- STRONG
+EVIDENCE: the threshold $20.5/26.2$ is estimate-grade and the chi link is open; the
+EXACT additive-energy pin removes the ``asserted sufficiency'' and ``non-uniform''
+residuals, leaving the threshold-grade and the chi link. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{uniform} $\max K_{\rm floor}=12.13<20.5$
+(factor $1.69$); \emph{non-uniform} $\max T'=13<20.5$ (factor $1.58$); \emph{worst
+config} dense small-radius union $\{1,3,5\}$; \emph{both thresholds} cleared with
+$\ge1.58\times$ margin.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / endpoint additive-energy pin (T-014 + T-015)
+Precise statement:       Over the admissible crystallographic-shell class (single
+                         shells + cumulative balls + all <=4-shell unions, N<=41; 130
+                         configs): EXACT worst K_floor = 12.13 (uniform, union R={1,3,5});
+                         and by R-027 K_floor(any amplitudes) <= T', exact worst T' = 13
+                         (non-uniform). Both < RES-1 threshold 20.5 (factor >=1.58) and
+                         RES-5 threshold 26.2 (factor >=2.0). The RES-5 endpoint AND
+                         H-diag/RES-1 close for uniform and non-uniform competitors.
+Scope:                   N<=n_pack=41; crystallographic-shell unions; the chi(P)<~T'
+                         link is the standing operator-decision residual.
+Dependencies:            res5-dr2-kappa-bound v1.2 (RES-5 threshold 26.2); hdiag-offdiag-
+                         floor-bound (RES-1 threshold 20.5); R-027 (weighted Lemma A);
+                         R-026 (subpolynomial lattice guarantee).
+Evidence grade:          EXACT (combinatorial K_floor, T') + EXECUTED
+                         (res_endpoint_admissible_pin.py 4/4, 130 configs).
+Reproduction command:    python codes/vacuum/res_endpoint_admissible_pin.py
+Expected output:         uniform worst K_floor=12.13; non-uniform worst T'=13; both <
+                         20.5 < 26.2; 4/4 PASS.
+Falsification gate:      An admissible config with K_floor>20.5 (uniform) or T'>20.5
+                         (non-uniform) -- would re-open the endpoint/H-diag on the
+                         admissible class.
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}. T-014 (constant
+                         sufficiency) upgraded ASSERTED -> EXACT PIN; T-015 (non-uniform)
+                         CLOSED. RES-5 endpoint + H-diag: STRONG EVIDENCE, residual =
+                         chi(P) link only.
+No-overclaim statement:  STRONG EVIDENCE numerical pin, not a closed-form theorem: the
+                         worst-case is exact over the scanned admissible configs (+ R-026
+                         subpolynomial for unscanned), the threshold is estimate-grade,
+                         and the chi(P)<~T' link is the open operator-decision item. B1/B2
+                         T6 unchanged.
+Next required action:    Close the chi(P)<~T' carrier-richness link (B5 operator-decision)
+                         to make the RES-5 endpoint + H-diag theorems over the admissible
+                         lattice class. The additive-energy floor is now pinned (uniform +
+                         non-uniform).
+\end{verbatim}
+}

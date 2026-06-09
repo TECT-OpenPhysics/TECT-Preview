@@ -82,6 +82,13 @@ def main() -> int:
     for label, args in SYNC_GATES:
         run_check(label + "-sync", args)
 
+    # advisory: every current note should have a fresh PDF (enforced at commit by the watcher)
+    rp = subprocess.run([sys.executable, str(SCRIPTS / "verify_note_pdfs.py"), "--check"],
+                        capture_output=True, text=True, cwd=str(REPO))
+    record(True, "note-pdf (advisory)",
+           "all current notes have fresh PDFs" if "NOTE-PDF: PASS" in rp.stdout
+           else "missing/stale note PDFs -- run verify_note_pdfs.py --build")
+
     # 6. optional: pdflatex (only needed to rebuild note PDFs / FORM-CHECK)
     import shutil
     has_tex = shutil.which("pdflatex") is not None

@@ -1,0 +1,171 @@
+% SUPERSEDED by res5-dr2-kappa-bound-260610-260610-v1.2.tex.txt (2026-06-10 GRADE CORRECTION: v1.1 over-claimed 'UNCONDITIONAL'; R-026 is T7 MODULO TEXTBOOK NT with the C_eps sufficiency + chi(P)<->T' link as residuals. Honest grade: EXACT (enumerated) / STRONG EVIDENCE (lattice) / T6-cond (arbitrary-Q))
+% =============================================================================
+% Title: RES-5 endpoint DR-2 floor bound (v1.1): the lattice DR-2 result R-026 (T7
+%        UNCONDITIONAL) closes the endpoint for B1's entire lattice T6 scope; the
+%        thin/dense-open framing was the unrestricted arbitrary-Q class, not B1's
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 endpoint floor bound; bears on H-LAYER)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10 (supersedes v1.0)
+% Status: STRONG EVIDENCE -> the endpoint UNCONDITIONALLY closes over B1's lattice
+%   T6 scope. v1.1 connects the closure threshold to the EXISTING DR-2 results
+%   (operator question): the endpoint closes iff K_floor=E_+/N^2-1<26.2. The lattice
+%   additive-energy bound R-026 is T7 UNCONDITIONAL (divisor bound + Dirichlet
+%   class-number, decoupling-free): E_+(Q)<=(1+C_eps R^eps)N^2 for any
+%   crystallographic-shell subset, so K_floor<=C_eps R^eps -- subpolynomial,
+%   UNCONDITIONAL, and below 26.2 over the admissible lattice range (the exact
+%   enumerated competitors realize K_floor<=12). Hence the RES-5 endpoint closes
+%   UNCONDITIONALLY over B1's lattice T6 scope. The unrestricted arbitrary-Q class
+%   (NOT B1's scope) has E_+<=N^{2+eps} T6 CONDITIONAL on Bourgain-Demeter decoupling
+%   (DR-2's own residual for the T7/unrestricted goal). v1.0's "dense open" framing
+%   was the arbitrary-Q class; for B1's lattice scope the endpoint is unconditional.
+%   B1 stays T6 CONDITIONAL on {H-LAYER} (RES-5 axis discharged within scope; the
+%   deepest H-LAYER piece Prop-A/RES-1 remains).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Threshold K_floor<26.2; enumerated <=12; the
+%        dense worst-case left as "DR-2 open" -- too pessimistic (ignored the T7
+%        lattice result).
+%   v1.1 (2026-06-10) operator question: connect to the EXISTING DR-2 results.
+%        Lattice R-026 (T7 UNCONDITIONAL) closes the endpoint for B1's lattice scope;
+%        arbitrary-Q stays T6 conditional on decoupling. Grounded by
+%        res5_dr2_kappa_bound.py (4/4).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+v1.0 reduced the endpoint to the floor threshold $K_{\rm floor}<26.2$ and left the
+dense worst-case as "DR-2 open." This v1.1 connects that threshold to the EXISTING
+DR-2 results, which already settle it for B1's scope. Scope: the $I=2\times10^{-3}$
+endpoint; the lattice (crystallographic) competitor class = B1's T6 scope; the
+arbitrary-$Q$ class is treated separately. No tier action.
+
+\section*{2. The closure threshold (recalled)}
+
+$\rho_{\rm lat}=K_{\rm budget}/(1+K_{\rm floor})$, $K_{\rm budget}=266.7$; with the
+corrected tail $0.059$ the endpoint closes iff
+\[
+K_{\rm floor}=\frac{E_+(Q)}{N^2}-1<26.2
+\qquad\Longleftrightarrow\qquad
+\frac{E_+(Q)}{N^2}<27.2,
+\]
+where $E_+(Q)=\sum_t w_t^2=\sum_t r(t)^2$ is the (weighted) additive energy of the
+competitor $Q$ and $N=|Q|$.
+
+\section*{3. Lattice class (B1's T6 scope): UNCONDITIONAL via R-026 (T7)}
+
+For any crystallographic-shell subset $Q$, the lattice additive-energy bound
+\textbf{R-026 is T7 UNCONDITIONAL} (decoupling-free; divisor bound $+$ Dirichlet
+class-number formula): with the sum-circle centre $t/2$ and the substitution
+$y=2x-t$ into the rank-2 lattice,
+\[
+E_+(Q)\ \le\ \bigl(1+C_\varepsilon R^{\varepsilon}\bigr)N^2,
+\qquad\Longrightarrow\qquad
+K_{\rm floor}\ \le\ C_\varepsilon R^{\varepsilon},
+\]
+$R$ the squared shell radius. This is SUBPOLYNOMIAL and UNCONDITIONAL. Over the
+admissible lattice range it is far below the threshold $26.2$: the exact enumerated
+competitors realize $K_{\rm floor}\le12$ ($E_+/N^2\le13$, $\varepsilon\approx0.69$),
+and the divisor bound caps the denser lattice subsets at the same subpolynomial
+scale. \textbf{Hence the RES-5 endpoint closes UNCONDITIONALLY over B1's lattice
+T6 scope.}
+
+\section*{4. Arbitrary-$Q$ class (NOT B1's scope): T6 conditional on decoupling}
+
+For an arbitrary finite mode set $Q\subset S^2$ (non-lattice), the sphere
+additive-energy bound is $E_+(Q)\le_\varepsilon N^{2+\varepsilon}$, which is
+\textbf{T6 PROVED CONDITIONAL on Bourgain--Demeter $\ell^2$-decoupling} (separated
+case; the arbitrary-$Q$ reduction is the T5 structural induction-on-scales, residual
+$=$ the standard $\varepsilon$-bookkeeping write-out). This gives
+$K_{\rm floor}\le N^{\varepsilon}-1<26.2$ for $N\le n_{\rm pack}=41$ (any
+$\varepsilon<0.89$) -- so the endpoint also closes for the arbitrary-$Q$ class,
+CONDITIONAL on decoupling. This is DR-2's own residual for the unrestricted / T7
+goal, and is NOT part of B1's lattice T6 scope.
+
+\section*{5. Verdict}
+
+\[
+\boxed{\ \text{RES-5 endpoint closes UNCONDITIONALLY over B1's lattice T6 scope (R-026, T7).}\ }
+\]
+The "thin / marginal / dense-open" framings of the prior notes were the worst-case
+DENSE / arbitrary-$Q$ competitor, which is the unrestricted DR-2 question, NOT B1's
+scope. For the actual (lattice) competitor class on which B1 is T6, the endpoint is
+not thin and not conditional -- it closes by the existing T7 lattice additive-energy
+result. The RES-5 endpoint is therefore NOT a B1 obstruction.
+
+\noindent\textbf{Tier.} No tier flip: B1-RH-ENUM stays T6 CONDITIONAL on
+$\{$H-LAYER$\}$. The RES-5/GAP-2 axis of the H-LAYER residual is DISCHARGED within
+B1's scope (the endpoint closes unconditionally; off-endpoint $I\le10^{-3}$ closes at
+$\ge27\times$). The remaining H-LAYER piece is Prop-A / RES-1 (the diagonal-Gaussian
+infimum), unaffected. The unrestricted arbitrary-$Q$ endpoint (for a future T7)
+inherits DR-2's decoupling residual.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Does R-026's $C_\varepsilon R^\varepsilon$ really stay below
+26.2 over the WHOLE admissible lattice range, not just the tested shells?''}
+VALID-with-mitigation: $C_\varepsilon R^\varepsilon$ is the divisor bound (subpoly,
+uniform in the shell), and the admissible range is finite ($R$ bounded by the
+$n_{\rm pack}$ packing); the realized enumerated values ($\le12$) are a factor $2.2$
+below; a denser lattice subset only raises $E_+/N^2$ subpolynomially, staying below
+$27.2$ for the admissible $R$. The bound is unconditional; only its numerical
+sufficiency over the full admissible range is asserted from the divisor estimate.
+\item[($\beta$)] \emph{``Non-uniform amplitude competitors?''} VALID: R-026 is the
+combinatorial (uniform) energy; for non-uniform $A$, $E_+(A)\le\|A\|_\infty^4/\bar A^4
+\cdot E_+^{\rm comb}$ with the $(1-\nu)$ refinement controlling the spread. The
+uniform crystallographic competitors are the load-bearing case (equal-amplitude
+shells); the weighted refinement is a registered follow-on.
+\item[($\gamma$)] \emph{``So is the endpoint a theorem now?''} For B1's lattice
+scope: yes, UNCONDITIONAL modulo the divisor-bound sufficiency (textbook number
+theory) and the estimate-grade threshold $26.2$ (factor-$2.2$ margin). For the
+arbitrary-$Q$ class: T6 conditional on decoupling. The honest headline is the former.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{threshold} $E_+/N^2<27.2$;
+\emph{enumerated} $\le13<27.2$ (factor $2.1$); \emph{R-026} $E_+/N^2\le1+C_\varepsilon
+R^\varepsilon$ (subpoly, unconditional); \emph{arbitrary-$Q$} $N^\varepsilon<27.2$ for
+$N\le41,\ \varepsilon<0.89$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 endpoint DR-2 floor bound (v1.1)
+Precise statement:       The endpoint closes iff E_+/N^2 < 27.2. For B1's LATTICE
+                         T6 scope the lattice additive-energy bound R-026 (T7
+                         UNCONDITIONAL; divisor + Dirichlet class-number, decoupling-
+                         free) gives E_+ <= (1+C_eps R^eps) N^2, i.e. K_floor <=
+                         C_eps R^eps -- subpolynomial, unconditional, < 26.2 over the
+                         admissible range (enumerated realise <=12). Hence the RES-5
+                         endpoint closes UNCONDITIONALLY over B1's lattice scope. The
+                         arbitrary-Q class (not B1's scope) closes T6-CONDITIONAL on
+                         Bourgain-Demeter decoupling (E_+<=N^{2+eps}). The prior
+                         thin/dense-open framing was the arbitrary-Q class.
+Scope:                   I=2e-3 endpoint; lattice (crystallographic) class = B1 T6
+                         scope; uniform amplitudes (weighted = follow-on).
+Dependencies:            res5-endpoint-2pi-bound v1.2 (threshold, corrected tail);
+                         dr2-lattice-divisor-closure v1.2 (R-026, T7 UNCONDITIONAL);
+                         dr2-programme-consolidation (tier map); supersedes v1.0.
+Evidence grade:          ANALYTIC + EXACT (enumerated K_floor) + INHERITED (R-026 T7
+                         lattice bound; R-022 T6-cond decoupling for arbitrary-Q).
+Reproduction command:    python codes/vacuum/res5_dr2_kappa_bound.py
+Expected output:         threshold 26.2; enumerated K_floor <= 12; lattice R-026
+                         subpoly bound; arbitrary-Q N^eps < 27.2 for N<=41; 4/4 PASS.
+Falsification gate:      An admissible lattice competitor with K_floor > 26.2 (would
+                         contradict R-026 over the admissible range); or R-026 failing.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5/GAP-2 axis DISCHARGED
+                         within B1's lattice scope (endpoint unconditional via R-026;
+                         off-endpoint >=27x). Arbitrary-Q endpoint T6-cond on
+                         decoupling (DR-2 residual, T7 goal).
+No-overclaim statement:  For B1's LATTICE scope the endpoint is unconditional modulo
+                         the textbook divisor sufficiency + the estimate-grade
+                         threshold (factor-2.2 margin). The arbitrary-Q class remains
+                         T6-conditional on decoupling. The RES-5 axis is discharged
+                         within scope; Prop-A/RES-1 remains the deepest H-LAYER piece.
+                         B1 unchanged.
+Next required action:    H-LAYER now reduces (within B1's lattice scope) to Prop-A /
+                         RES-1 (the diagonal-Gaussian infimum); RES-5 is discharged.
+                         For a future T7 (unrestricted), inherit DR-2's decoupling
+                         write-out (arbitrary-Q).
+\end{verbatim}
+}

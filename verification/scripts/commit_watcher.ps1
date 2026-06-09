@@ -1,6 +1,10 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.3.0 -- first issued 2026-06-05; this version issued 2026-06-09
+# Version: 1.4.0 -- first issued 2026-06-05; this version issued 2026-06-10
+#   1.4.0 (2026-06-10): pre-commit NOTE-PDF build -- run verify_note_pdfs.py
+#     --build before staging, so every CURRENT note enters history with a fresh
+#     PDF (operator-side, no sandbox 44s timeout). Closes the recurring missing-
+#     PDF defect systemically. release_check/doctor report it as an advisory.
 #   1.3.0 (2026-06-09): pre-commit RELEASE gate -- run release_check.py before
 #     every commit; refuse (queue left intact) on failure. Closes the commit-
 #     time enforcement gap: no stale/broken tree can enter history. Portable
@@ -70,6 +74,10 @@ function Process-Queue {
         $items += [pscustomobject]@{ File = $f; Message = $req.message }
     }
     if ($items.Count -eq 0) { return }
+
+    # pre-commit NOTE-PDF build: every current note must enter history with a fresh
+    # PDF. Build missing/stale ones now (operator-side; no sandbox timeout).
+    & python verification/scripts/verify_note_pdfs.py --build | Out-Host
 
     # stage the whole tree once
     & git add --all

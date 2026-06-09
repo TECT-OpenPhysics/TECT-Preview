@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 10
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 2 · Done (recent) 12
 
 ## Next up
 
@@ -18,6 +18,9 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 10
 - **T-004** Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: R-U6-1)_
   - SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.
   - _updated 2026-06-07_
+- **T-016** H-LAYER core: Prop-A / RES-1 (diagonal-Gaussian infimum) -- the deepest remaining H-LAYER axis (RES-5 now EXACT for enumerated / strong-evidence lattice; this is the next mainline)  _(claim: B2-PROPA-HLAYER; gate: RES-1)_
+  - res5-dr2-kappa-bound-v1.2
+  - _updated 2026-06-09_
 
 ## Done (recent)
 
@@ -50,4 +53,10 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 10
   - _updated 2026-06-09_
 - **T-012** Resolve B1/B5 SC-SCOPE chronicle duplicate via Windows-side Remove-Item  _(claim: B1-RH-ENUM)_
   - sandbox cannot unlink; B5 copy canonical; DEFERRED per operator (deletions later)
+  - _updated 2026-06-09_
+- **T-014** RES-5 endpoint full-lattice theorem (1/2): pin C_eps R^eps < 26.2 over the admissible R-range (R-026 constant sufficiency); upgrades the lattice-class endpoint from STRONG EVIDENCE to theorem  _(claim: B1-RH-ENUM; gate: RES-5-ENDPOINT)_
+  - res5-dr2-kappa-bound-v1.2
+  - _updated 2026-06-09_
+- **T-015** RES-5 endpoint full-lattice theorem (2/2): weighted/non-uniform amplitude bridge (R-027) -- include non-uniform amplitude competitors in B1's lattice scope (uniform-only at present)  _(claim: B1-RH-ENUM; gate: RES-5-ENDPOINT)_
+  - res5-dr2-kappa-bound-v1.2
   - _updated 2026-06-09_

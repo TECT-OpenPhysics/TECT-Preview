@@ -5,6 +5,46 @@ not pillar counts.
 
 ---
 
+## [RES-5 arc consolidation (milestone): reduces to the pinned additive-energy floor K_floor; EXACT enumerated / SE lattice / T6-cond arbitrary-Q; single residual = chi(P) link] - 2026-06-10
+
+- **Overnight C -- the milestone.** NEW consolidation note `res5-arc-consolidation v1.0` (FORM-CHECK PASS) recording the full RES-5/GAP-2 arc start-to-finish (12 steps; 3 retracted over-claims).
+- RES-5 (matched-order-to-exact) reduces to the additive-energy floor K_floor=E_+/N^2-1. Endpoint closes iff K_floor<26.2; H-diag/RES-1 iff K_floor<20.5; EXACT worst over the admissible class = 12.13 (uniform) / T'=13 (non-uniform). EXACT for the actual competitors (NOT an independent B1 blocker); STRONG EVIDENCE for the full lattice class (R-026, T7 modulo textbook NT); T6-cond on decoupling for arbitrary-Q.
+- Single residual: the carrier-richness chi(P)<~T' link (B5 operator-decision). Tail corrected 0.047->0.059 (projection negative). Three over-claims retracted en route (survival / SC-SCOPE framing / unconditional-T7). No tier flip (B1/B2 T6 on {H-LAYER}); deepest remaining H-LAYER piece = isotropy-infimum/Prop-A core.
+
+## [Endpoint additive-energy pin (T-014 + T-015): worst K_floor=12.13 (uniform) and T'=13 (non-uniform R-027) over the admissible class; both < RES-1(20.5) and RES-5(26.2)] - 2026-06-10
+
+- **Overnight B (T-014 + T-015).** NEW note `res-endpoint-admissible-pin v1.0` (FORM-CHECK PASS) + `codes/vacuum/res_endpoint_admissible_pin.py` (4/4, 130 configs) + runs/.
+- **T-014 (uniform pin)**: EXACT worst K_floor over the admissible crystallographic-shell class (single shells + cumulative lattice balls + all <=4-shell unions, N<=41) is 12.13 (union R={1,3,5}, N=38) -- < RES-1 threshold 20.5 (x1.69) and RES-5 threshold 26.2 (x2.16). The "C_eps R^eps < 26.2" assertion is now an EXACT numerical pin.
+- **T-015 (non-uniform)**: by R-027, K_floor(any amplitudes) <= T'(Q); EXACT worst T' over the same class is 13 -- < 20.5 (x1.58) and 26.2 (x2.02). NON-UNIFORM amplitude competitors also close.
+- So the RES-5 endpoint AND H-diag/RES-1 close for BOTH uniform and non-uniform competitors over the admissible class (margin >=1.58). Residual reduced to the chi(P)<~T' carrier-richness link (B5 operator-decision). No tier flip (B1/B2 T6 on {H-LAYER}). T-014/T-015 marked done.
+
+## [RES-1 (H-diag) off-diagonal floor: R_lead=const(1+K_floor)I<1 for every enumerated competitor; diagonal-Gaussian infimum over the enumerated class (RES-5 parallel, R-026 reduction)] - 2026-06-10
+
+- **Overnight A.** Extends the BCC-only constant certificate to the FULL enumerated competitor class. NEW note `hdiag-offdiag-floor-bound v1.0` (FORM-CHECK PASS) + `codes/vacuum/res1_hdiag_offdiag_floor.py` (4/4) + runs/.
+- The off-diag Bogoliubov weight is E_+, so R_lead = (9/4)u_eff^2 B_max E_+ (I/N)/c_diag with c_diag=(N/2)rR = const(1+K_floor)I, const=23.22, K_floor=E_+/N^2-1 -- the SAME K_floor as the RES-5 endpoint. R_lead<1 iff K_floor<20.5 at I=2e-3; every enumerated competitor has K_floor<=12 -> R_lead<=0.602<1 (3-shell worst).
+- **Diagonal-Gaussian is the infimum over the enumerated class** -> H-diag/RES-1 discharged there (STRONG EVIDENCE). Class-wide reduces to R-026, exactly as RES-5: H-LAYER's two deepest analytic axes (RES-1 + RES-5) collapse onto one additive-energy machinery.
+- Residuals (unchanged): the full worst-direction operator norm (vs conservative leading) + the R-026 constant pin / chi(P) link. No tier flip (B2/B1 T6 on {H-LAYER}).
+
+## [RES-5 endpoint v1.2 (grade correction): v1.1 over-claimed UNCONDITIONAL; R-026 is T7-modulo-textbook with residual links -- honest grade EXACT(enum)/STRONG-EVIDENCE(lattice)/T6-cond(arbitrary-Q)] - 2026-06-10
+
+- **Operator caught an over-claim (the T7 was not unconditional).** v1.1 stated the endpoint closes "UNCONDITIONALLY over B1's lattice scope via R-026 (T7)". WITHDRAWN.
+- **Honest grade (v1.2)**: (i) ENUMERATED competitors (the actual Reading-H list): EXACT K_floor <= 12 < 26.2 -> endpoint closes RIGOROUSLY (so RES-5 is NOT an independent B1 blocker). (ii) FULL lattice class: STRONG EVIDENCE -- R-026 is T7 *modulo textbook NT* (divisor + Dirichlet class-number, decoupling-free), E_+ <= (1+C_eps R^eps)N^2; residuals = the C_eps R^eps < 26.2 sufficiency over the admissible range (asserted, not pinned) + the carrier-richness chi(P)<~T' link (operator-decision; R-026/R-027 did NOT flip DR2-SHARE; B1 T6, H-ADM-COH retained at issue). (iii) ARBITRARY-Q (not B1's scope): E_+ <= N^{2+eps}, T6 CONDITIONAL on Bourgain-Demeter decoupling.
+- NOT an unconditional theorem. v1.2 supersedes v1.0+v1.1; negative-results GRADE-CORRECTED. No tier flip (B1 T6 on {H-LAYER}; deepest remaining piece = Prop-A/RES-1). FORM-CHECK PASS.
+
+## [RES-5 endpoint v1.1: lattice DR-2 R-026 (T7 UNCONDITIONAL) closes the endpoint over B1's lattice scope; arbitrary-Q stays T6-cond on decoupling] - 2026-06-10
+
+- **Operator question ("hasn't DR-2 been pushed as far as solvable?"): YES, and it strengthens the endpoint.** v1.0 left the dense worst-case as "DR-2 open"; v1.1 connects to the EXISTING DR-2 results.
+- The endpoint closes iff E_+/N^2 < 27.2. The lattice additive-energy bound R-026 is T7 UNCONDITIONAL (divisor bound + Dirichlet class-number, decoupling-free): E_+ <= (1+C_eps R^eps) N^2, so K_floor <= C_eps R^eps -- subpolynomial, unconditional, < 26.2 over the admissible lattice range (enumerated realise <=12). **Hence the RES-5 endpoint closes UNCONDITIONALLY over B1's lattice T6 scope.**
+- The arbitrary-Q (non-lattice) class -- NOT B1's scope -- has E_+ <= N^{2+eps} T6 CONDITIONAL on Bourgain-Demeter decoupling (DR-2's residual for the T7/unrestricted goal). v1.0's "dense open" was this arbitrary-Q class.
+- **RES-5/GAP-2 axis DISCHARGED within B1's lattice scope** (endpoint unconditional via R-026; off-endpoint >=27x). No tier flip (B1 T6 on {H-LAYER}); the deepest remaining H-LAYER piece is now Prop-A/RES-1. v1.1 supersedes v1.0; FORM-CHECK PASS.
+
+## [Note-PDF enforcement: verify_note_pdfs.py + commit_watcher v1.4.0 auto-builds missing note PDFs before commit (systemic)] - 2026-06-10
+
+- **Operator directive (force note PDFs systemically; block the missing-PDF defect).** 14 current notes were found with missing/stale PDFs -> systemic enforcement (parallel to the generated-surface spine).
+- NEW `verification/scripts/verify_note_pdfs.py` (--check / --build / --strict): a note is CURRENT iff its first line is not "% SUPERSEDED"; every current note must have a sibling .pdf at least as new as its source.
+- ENFORCEMENT: `commit_watcher.ps1` v1.4.0 runs `verify_note_pdfs.py --build` BEFORE staging, so every current note enters history with a fresh PDF (operator-side, no sandbox 44s timeout). `release_check` + `doctor` report it as an advisory `[note-pdf]`. Governance: enforcement-spine.md §6.
+- Restart the watcher to load v1.4.0; the first drain builds the 14-PDF backlog automatically.
+
 ## [RES-5 endpoint DR-2 floor bound: endpoint closes for every enumerated competitor (K_floor<=12<<26.2); thin joint was a worst-case-dense artefact; sole residual = DR-2] - 2026-06-10
 
 - **Operator route (DR-2 kappa).** NEW note `res5-dr2-kappa-bound v1.0` (FORM-CHECK PASS) + `codes/vacuum/res5_dr2_kappa_bound.py` (4/4) + runs/.

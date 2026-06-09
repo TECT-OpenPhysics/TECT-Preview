@@ -1,0 +1,160 @@
+% =============================================================================
+% Title: RES-5 endpoint DR-2 floor bound (v1.2, grade-corrected): EXACT closure for
+%        the enumerated competitors; STRONG EVIDENCE for the lattice class via R-026
+%        (T7 modulo textbook NT, with residual links); T6-conditional for arbitrary-Q
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 endpoint floor bound; bears on H-LAYER)
+% Version: v1.2 -- first issued 2026-06-10; this version issued 2026-06-10 (supersedes v1.0, v1.1)
+% Status: GRADE CORRECTION of v1.1. v1.1 over-stated the endpoint as closing
+%   "UNCONDITIONALLY over B1's lattice scope via R-026 (T7)". Honest grade:
+%     (i)  ENUMERATED lattice competitors (the actual Reading-H list, single + multi-
+%          shell up to n_pack): EXACT K_floor <= 12 < 26.2 -> endpoint closes RIGOROUSLY.
+%     (ii) FULL lattice class: STRONG EVIDENCE. R-026 is T7 *modulo textbook number
+%          theory* (divisor bound + Dirichlet class-number) and is DECOUPLING-FREE,
+%          giving E_+ <= (1+C_eps R^eps)N^2; but (a) the C_eps R^eps < 26.2 numerical
+%          sufficiency over the admissible R-range is ASSERTED from the divisor
+%          estimate (not pinned), and (b) the carrier-richness chi(P)<~T' link to the
+%          actual STEP-5B floor is an OPERATOR-DECISION per the B5 record (R-026/R-027
+%          did NOT flip DR2-SHARE; B1 T6, H-ADM-COH retained at issue). So this is
+%          strong evidence, NOT an unconditional theorem.
+%     (iii)ARBITRARY-Q (non-lattice; NOT B1's scope): E_+ <= N^{2+eps}, T6 PROVED
+%          CONDITIONAL on Bourgain-Demeter decoupling.
+%   No tier flip: B1 stays T6 CONDITIONAL on {H-LAYER}. The RES-5/GAP-2 endpoint is
+%   closed EXACTLY for the actual competitors and strong-evidence for the lattice
+%   class; it is NOT an independent B1 blocker, but it is NOT an unconditional theorem.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) threshold K_floor<26.2; enumerated <=12; dense "DR-2 open"
+%        (too pessimistic).
+%   v1.1 (2026-06-10) connected to R-026; OVER-CLAIMED "UNCONDITIONAL" (the
+%        banner/verdict contradicted the note's own divisor-sufficiency hedge).
+%   v1.2 (2026-06-10) GRADE CORRECTION (operator: the T7 was not unconditional): R-026 is
+%        T7 *modulo textbook NT* and its downstream chi(P)<->T' link is an operator-
+%        decision; the C_eps constant sufficiency is asserted not pinned. Honest
+%        grade: EXACT (enumerated) / STRONG EVIDENCE (lattice) / T6-cond (arbitrary-Q).
+%        Grounded by res5_dr2_kappa_bound.py (4/4).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This corrects the grade of v1.1. The endpoint reduces to the floor threshold
+$K_{\rm floor}<26.2$ (Section 2); the honest status against the existing DR-2 results
+is a three-way split (Sections 3--5), NOT the flat "unconditional" of v1.1. Scope:
+the $I=2\times10^{-3}$ endpoint; the lattice competitor class $=$ B1's T6 scope. No
+tier action.
+
+\section*{2. The closure threshold (recalled)}
+
+With the corrected tail $0.059$, the endpoint closes for a competitor $Q$ iff
+\[
+K_{\rm floor}(Q)=\frac{E_+(Q)}{N^2}-1<26.2,
+\qquad E_+(Q)=\sum_{t}w_t^2,\quad N=|Q|.
+\]
+
+\section*{3. Enumerated competitors: EXACT closure (rigorous)}
+
+For the actual Reading-H competitor list (single shells $\{100\},\{200\},\{111\},
+\{110\}$ and multi-shell unions up to $n_{\rm pack}$), the additive energy is an
+EXACT combinatorial count and gives
+\[
+K_{\rm floor}^{\rm enum}\le12.0\ <\ 26.2\quad(\text{factor }\ge2.2),
+\]
+so the endpoint closes RIGOROUSLY for the enumerated competitors. This part is
+unconditional and exact.
+
+\section*{4. Full lattice class: STRONG EVIDENCE via R-026 (not a theorem)}
+
+R-026 (dr2-lattice-divisor-closure) bounds the lattice additive energy,
+\[
+E_+(Q)\le\bigl(1+C_\varepsilon R^{\varepsilon}\bigr)N^2,
+\qquad K_{\rm floor}\le C_\varepsilon R^{\varepsilon},
+\]
+DECOUPLING-FREE, at grade \textbf{T7 MODULO TEXTBOOK NUMBER THEORY} (the divisor
+bound and Dirichlet's class-number formula). Two residuals keep this STRONG EVIDENCE
+rather than a theorem for the endpoint:
+\begin{itemize}
+\item the constant: $C_\varepsilon R^{\varepsilon}<26.2$ over the admissible $R$-range
+is ASSERTED from the divisor estimate (the realized enumerated values $\le12$ are a
+factor $2.2$ below), not pinned to an explicit $C_\varepsilon$;
+\item the link: the carrier-richness $\chi(P)\lesssim T'$ connection from $E_+$ to the
+actual STEP-5B floor is, per the B5 record, an OPERATOR-DECISION -- R-026/R-027 did
+NOT flip DR2-SHARE (B5 stayed T5, B1 T6, H-ADM-COH retained at issue).
+\end{itemize}
+So the full-lattice-class endpoint closure is strong evidence (a subpolynomial,
+decoupling-free, T7-modulo-textbook bound plus the exact enumerated anchor), not an
+unconditional theorem.
+
+\section*{5. Arbitrary-$Q$ (not B1's scope): T6 conditional on decoupling}
+
+For an arbitrary finite $Q\subset S^2$, $E_+\le_\varepsilon N^{2+\varepsilon}$ is T6
+PROVED CONDITIONAL on Bourgain--Demeter $\ell^2$-decoupling (the arbitrary-$Q$
+reduction is the T5 induction-on-scales). This gives $K_{\rm floor}\le N^\varepsilon-1
+<26.2$ for $N\le41$, so the endpoint also closes for arbitrary-$Q$ conditional on
+decoupling -- DR-2's residual for the unrestricted / T7 goal, outside B1's lattice
+scope.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``v1.1 said `unconditional'; is it?''} UPHELD against v1.1
+(operator-caught): R-026 is T7 \emph{modulo textbook NT}, and the $C_\varepsilon$
+sufficiency $+$ the $\chi(P)\!\leftrightarrow\!T'$ link are residuals. The honest
+grade is EXACT (enumerated) / STRONG EVIDENCE (lattice). v1.1's "unconditional"
+banner contradicted its own divisor hedge and is withdrawn.
+\item[($\beta$)] \emph{``So is the endpoint a B1 blocker?''} No -- the actual
+(enumerated) competitors close EXACTLY ($\le12<26.2$), so RES-5 is not an independent
+blocker. But "closed unconditionally over the whole lattice class" is NOT claimed.
+\item[($\gamma$)] \emph{``Non-uniform amplitudes / the $\chi(P)$ link.''} VALID: the
+weighted additive energy (R-027 bridge) and the carrier-richness link carry their own
+residuals; they are operator-decisions in the B5 record, retained here as such.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{threshold} $K_{\rm floor}<26.2$;
+\emph{enumerated} $\le12$ (EXACT, factor $2.2$); \emph{lattice} $C_\varepsilon
+R^\varepsilon$ subpoly (T7-modulo-textbook, decoupling-free, $+$ residual links);
+\emph{arbitrary-$Q$} $N^\varepsilon<27.2$ for $N\le41$ (T6-cond decoupling).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 endpoint DR-2 floor bound (v1.2)
+Precise statement:       Endpoint closes iff K_floor=E_+/N^2-1<26.2. (i) ENUMERATED
+                         competitors: EXACT K_floor<=12<26.2 -> closes rigorously.
+                         (ii) FULL lattice class: STRONG EVIDENCE via R-026 (E_+<=
+                         (1+C_eps R^eps)N^2, T7 MODULO TEXTBOOK NT, decoupling-free) +
+                         exact anchor; residuals = the C_eps<26.2 sufficiency over the
+                         admissible range (asserted) + the chi(P)<~T' link (operator-
+                         decision; R-026/R-027 did NOT flip DR2-SHARE). (iii)
+                         ARBITRARY-Q (not B1's scope): E_+<=N^{2+eps}, T6 CONDITIONAL
+                         on Bourgain-Demeter decoupling. NOT an unconditional theorem.
+Scope:                   I=2e-3 endpoint; lattice class = B1 T6 scope; uniform
+                         amplitudes (weighted = R-027 bridge, own residual).
+Dependencies:            res5-endpoint-2pi-bound v1.2 (threshold, corrected tail);
+                         dr2-lattice-divisor-closure v1.2 (R-026, T7-modulo-textbook);
+                         dr2-programme-consolidation; B5 status.json (DR2-SHARE OPEN).
+                         Supersedes v1.0, v1.1.
+Evidence grade:          EXACT (enumerated K_floor) + STRONG EVIDENCE (lattice, R-026
+                         T7-modulo-textbook + residual links) + INHERITED (R-022
+                         arbitrary-Q T6-cond decoupling).
+Reproduction command:    python codes/vacuum/res5_dr2_kappa_bound.py
+Expected output:         threshold 26.2; enumerated K_floor <= 12 (EXACT); lattice
+                         R-026 subpoly bound (T7-modulo-textbook); 4/4 PASS.
+Falsification gate:      An admissible enumerated competitor with K_floor>26.2; or
+                         R-026's divisor bound failing over the admissible R-range.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5/GAP-2 endpoint:
+                         EXACT for the enumerated competitors; STRONG EVIDENCE for the
+                         lattice class (R-026 T7-modulo-textbook); T6-cond decoupling
+                         for arbitrary-Q. NOT an unconditional theorem (v1.1 corrected).
+No-overclaim statement:  The actual (enumerated) competitors close EXACTLY, so RES-5 is
+                         not an independent B1 blocker; but "unconditionally closed over
+                         the whole lattice class" is NOT claimed -- R-026 is T7 modulo
+                         textbook NT, with the C_eps sufficiency + chi(P) link as
+                         residuals. B1 unchanged (T6 on {H-LAYER}); deepest piece =
+                         Prop-A/RES-1.
+Next required action:    Within B1's scope, H-LAYER now reduces to Prop-A/RES-1 (the
+                         enumerated RES-5 endpoint is exact). To make the full-lattice
+                         endpoint a theorem: pin C_eps R^eps<26.2 over the admissible
+                         range + the chi(P)<~T' link (the B5 operator-decision items).
+\end{verbatim}
+}

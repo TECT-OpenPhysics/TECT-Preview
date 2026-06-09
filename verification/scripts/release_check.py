@@ -64,6 +64,15 @@ def main():
     for label, args in SYNC_GATES:
         run(label, ["verification/scripts/" + args[0]] + list(args[1:]), errors)
 
+    # note-PDF presence/freshness (advisory; enforced by commit_watcher --build)
+    rp = subprocess.run([sys.executable, "verification/scripts/verify_note_pdfs.py", "--check"],
+                        capture_output=True, text=True, cwd=REPO)
+    npass = "NOTE-PDF: PASS" in rp.stdout
+    print(f"  [note-pdf] {'PASS' if npass else 'WARN'}")
+    if not npass:
+        warnings.append("note-pdf: current notes lack fresh PDFs -- commit_watcher --build fixes "
+                        "(or run: python verification/scripts/verify_note_pdfs.py --build)")
+
     # 3. P0 fence
     gi = (REPO / ".gitignore").read_text(encoding="utf-8")
     if not re.search(r"^internal/$", gi, re.M):
