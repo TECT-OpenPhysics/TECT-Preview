@@ -5,6 +5,20 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE programme chronicle: full arc consolidated in one note (as for DR-2)] - 2026-06-09
+
+- **Operator request**: consolidate the entire SC-SCOPE record in one chronicle, in the style of the DR-2 programme
+  consolidation. New note claims/B1-RH-ENUM/notes/scscope-programme-consolidation v1.0 (FORM-CHECK PASS, 0 overfull).
+- **Contents**: the second-cumulant scope and the third-cumulant endpoint obstruction; the per-transfer arc
+  (M-ENDPOINT x1.13, GHAT4 shape 0.64); the joint negative (x0.757) and exhausted pairing (x0.905); the
+  floor-sharpening route (K_floor<=T' PROVED + a SELF-CAUGHT overclaim and its retraction, R-029/AUDIT-2026-06-08);
+  the quartic normalisation certificate (Parseval-pinned convention, R_max=0.385<0.634); the certified joint
+  x1.040-x1.082>1 and its STRUCTURAL thinness (sunset-saturates x1.13, sign-stable); and the operator-enacted
+  LIFTED@THIN-CERTIFIED (B1 {H-LAYER,SC-SCOPE}->{H-LAYER}, T6).
+- **Honest record**: the retracted overclaim is documented openly; the lift is flagged THIN-CERTIFIED (sunset-binding
+  near-critical), not a wide-margin closure. Narrative consolidation, no new claim. Final state: SC-SCOPE
+  LIFTED@THIN-CERTIFIED; B1-RH-ENUM T6 CONDITIONAL on {H-LAYER}; B5 T5. release_check PASS, pytest 3/3.
+
 ## [SC-SCOPE LIFTED@THIN-CERTIFIED (operator-enacted, structural): B1 -> {H-LAYER}, T6] - 2026-06-09
 
 - **Operator decision** (reviews/2026-06-09-scscope-lift-thin-certified.md): on re-examination of the quartic
