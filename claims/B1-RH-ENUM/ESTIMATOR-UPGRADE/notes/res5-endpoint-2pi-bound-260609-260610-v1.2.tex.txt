@@ -1,0 +1,164 @@
+% =============================================================================
+% Title: RES-5 endpoint 2PI bound (v1.2, projection-corrected): the corrected
+%        endpoint tail is 0.059, bracketed by the SC-SCOPE certified joint's
+%        conservative/verified floor; closes ONLY at the verified floor; the sole
+%        rigorous lever is the DR-2 floor kappa (projection route eliminated)
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 endpoint bound; bears on H-LAYER)
+% Version: v1.2 -- first issued 2026-06-09; this version issued 2026-06-10 (supersedes v1.0, v1.1)
+% Status: STRONG EVIDENCE (T4) for endpoint closure at the verified floor; no tier
+%   action. v1.2 fully removes v1.1's residual projection-lever language (v1.1 carried
+%   the corrected banner but stale Section 3/5/7 text -- internally contradictory).
+%   CANONICAL corrections folded in: (i) SC-SCOPE is LIFTED@THIN-CERTIFIED via the
+%   QUARTIC route (Parseval-pinned), B1 T6 on {H-LAYER} alone (v1.1 reconciliation);
+%   (ii) the projection lever chi_proj<=0.82 is ELIMINATED -- direct computation gives
+%   chi_proj=1.25>1 (res5-projection-factor-bound v1.0), and the operator-norm tail
+%   C_G a0=0.047 is corrected UPWARD to f_avg a0=0.059. The corrected tail is bracketed,
+%   slack_proved(0.0385) < 0.059 < slack_verified(0.0758): the endpoint closes ONLY at
+%   the verified floor (23% margin), is OPEN at the conservative floor, and rests SOLELY
+%   on the DR-2 floor kappa route. Off-endpoint (I<=1e-3) closure is unaffected.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Bracketing; verified-floor closure. FRAMING DEFECT
+%        (SC-SCOPE treated as a named hypothesis; floor-unification).
+%   v1.1 (2026-06-10) status reconciliation (SC-SCOPE lifted via quartic; B1 {H-LAYER};
+%        endpoint unifies with DR-2). Defect: a top banner removed the projection lever
+%        but Section 3/5/7 still carried chi_proj<0.82 and the 0.047 tail.
+%   v1.2 (2026-06-10) projection correction folded into the body: projection lever
+%        ELIMINATED throughout; tail corrected to 0.059; verified-floor-only closure;
+%        sole lever = DR-2 kappa. Grounded by res5_endpoint_2pi_bound.py 5/5 and
+%        res5_projection_factor.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+res5-tail-budget-closure localised RES-5 to the $I=2\times10^{-3}$ endpoint. This note
+gives the corrected endpoint status. Two upstream corrections are now folded in:
+SC-SCOPE is LIFTED@THIN-CERTIFIED via the QUARTIC route (B1 is T6 on $\{$H-LAYER$\}$
+alone), and the projection closure lever is ELIMINATED ($\chi_{\rm proj}=1.25>1$,
+res5-projection-factor-bound), with the endpoint tail corrected upward from $0.047$ to
+$0.059$. The endpoint closes ONLY at the verified floor; its sole rigorous lever is the
+DR-2 floor $\kappa$. Scope: the $I=2\times10^{-3}$ endpoint; estimate/verified grade as
+marked. No tier action.
+
+\section*{2. The SC-SCOPE certified joint and its floor input}
+
+The endpoint slack $1-1/\mathrm{joint}$ is set by the SC-SCOPE CERTIFIED joint
+(scscope-quartic-normalisation-certificate), with the floor $\rho_{\rm lat}$ as input:
+\[
+\begin{aligned}
+\text{conservative }(K_{\rm floor}\le T'):&\quad \rho_{\rm lat}=6.55,\ \ \mathrm{joint}=1.040,\ \ \text{slack}=0.0385,\\
+\text{verified }(K_{\rm floor}\le0.52\,T'\ \text{sample}):&\quad \rho_{\rm lat}=12.6,\ \ \mathrm{joint}=1.082,\ \ \text{slack}=0.0758.
+\end{aligned}
+\]
+$K_{\rm floor}\le T'$ is PROVED; the factor below $1$ is realized (Section 4).
+
+\section*{3. The corrected endpoint tail (projection route eliminated)}
+
+The pattern-dependent tail is $C_{\rm higher}/\Delta F_{\rm margin}=f_{\rm avg}\,a_0$,
+where $f(k)=1/(1+\lambda'\chi_0(k))$ is the screened response factor and $f_{\rm avg}$
+is its $w_t^2$-weighted average over the $\{110\}$ modulation transfers. Direct
+computation (res5-projection-factor-bound) shows the bubble $\chi_0(k)$ is
+forward-peaked, so the screening is MAXIMAL at $k=0$ ($f(0)=C_G=0.49$) and WEAKER at
+the $\{110\}$ transfers; hence
+\[
+\chi_{\rm proj}\equiv\frac{f_{\rm avg}}{C_G}=\frac{0.613}{0.492}=1.25>1,
+\qquad
+\boxed{\ C_{\rm higher}=f_{\rm avg}\,a_0=0.059\ }
+\]
+The earlier operator-norm value $C_G a_0=0.047$ was a forward-channel UNDER-estimate;
+$0.059$ is the corrected tail. The projection lever $\chi_{\rm proj}\le0.82$ is
+ELIMINATED (it is $1.25$); there is NO screening-projection closure route.
+
+\section*{4. The floor-$\kappa$ lever (route A): the SOLE remaining lever, DR-2-adjacent}
+
+The only lever tightening the joint from conservative ($\kappa=1$) toward verified is
+$\kappa=K_{\rm floor}/T'$, $K_{\rm floor}=\sum_{t\ne0}w_t^2/I^2$. Two rigorous results:
+\begin{itemize}
+\item[(a)] PROVED refinement (Cauchy-Schwarz $+$ $t=0$ subtraction):
+$K_{\rm floor}\le T'(1-\|A\|_4^4/I^2)\le T'(1-1/n)$.
+\item[(b)] EXACT scan over crystallographic single shells ($n\le42$, uniform): worst
+$\kappa=0.75$ (at $R=4$, $n=6$), correcting the incomplete-sample $0.52$.
+\end{itemize}
+The refinement (a) is weak for dense patterns ($1-1/n\to1$); the tight worst-case
+$\kappa<1$ over the DENSE admissible class is the additive-energy / circle-incidence
+problem $=$ the DR-2 frontier.
+
+\section*{5. Verdict: verified-floor closure only; sole lever DR-2}
+
+\[
+\boxed{\ \text{slack}_{\rm proved}(0.0385)\ <\ \text{tail}\,(0.059)\ <\ \text{slack}_{\rm verified}(0.0758)\ }
+\]
+The endpoint closes at STRONG EVIDENCE ONLY at the verified floor ($\mathrm{tail/slack}
+=0.78$, a $22\%$ margin), and is OPEN at the conservative/proved floor ($0.059>0.0385$).
+There is exactly ONE rigorous lever -- the DR-2 floor $\kappa<\kappa_{\rm needed}\approx
+0.8$ over the dense admissible class. The projection route is eliminated.
+
+\noindent\textbf{Unification.} SC-SCOPE is lifted@thin-certified (quartic-pinned); it
+is NOT a B1 named hypothesis. The RES-5 endpoint's rigorous closure is the DR-2
+additive-energy bound -- the SAME frontier as B1's unrestricted-class question.
+
+\noindent\textbf{Tier.} RES-5/GAP-2: ENDPOINT-LOCALISED $\to$ STRONG EVIDENCE
+(off-endpoint $\ge27\times$; endpoint at the verified floor, $22\%$). No tier flip:
+B1-RH-ENUM stays T6 CONDITIONAL on $\{$H-LAYER$\}$. The rigorous T6 endpoint needs the
+DR-2 $\kappa$ bound (the projection alternative is gone).
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``v1.1 still said $\chi_{\rm proj}<0.82$ in the body.''} UPHELD
+against v1.1: that text is removed here; the canonical value is $\chi_{\rm proj}=1.25$
+and the tail is $0.059$. v1.1 is superseded.
+\item[($\beta$)] \emph{``Does the corrected tail break the verified-floor closure?''}
+DISMISSED: $0.059<0.0758$ still holds ($22\%$ margin); only the conservative floor and
+the projection lever fail. Off-endpoint closure is unaffected.
+\item[($\gamma$)] \emph{``Then nothing is proved at the endpoint.''} ACCEPTED: STRONG
+EVIDENCE only; the sole theorem-grade path is the DR-2 $\kappa<0.8$ bound over the
+dense class, beyond the exact single-shell $0.75$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{bracket} $0.0385<0.059<0.0758$;
+\emph{verified margin} $1-0.059/0.0758=22\%$; \emph{projection} $\chi_{\rm proj}=1.25>
+0.82$ (lever eliminated); \emph{exact scan} worst $\kappa=0.75\le1-1/6=0.83$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 endpoint 2PI bound (v1.2, projection-
+                         corrected)
+Precise statement:       The corrected endpoint tail is f_avg a0 = 0.059 (the
+                         operator-norm C_G a0=0.047 was a forward-channel under-
+                         estimate; chi_proj=1.25>1, res5-projection-factor-bound).
+                         Bracketed: slack_proved(0.0385) < 0.059 < slack_verified
+                         (0.0758) of the SC-SCOPE CERTIFIED joint. Closes at STRONG
+                         EVIDENCE ONLY at the verified floor (22% margin), OPEN at
+                         the conservative floor. The projection lever is ELIMINATED;
+                         the SOLE rigorous lever is the DR-2 floor kappa<~0.8 over the
+                         dense admissible class (exact single-shell worst 0.75;
+                         proved K<=T'(1-||A||_4^4/I^2)).
+Scope:                   I=2e-3 endpoint; STRONG EVIDENCE / verified grade as marked.
+Dependencies:            res5-tail-budget-closure (localisation); scscope-quartic-
+                         normalisation-certificate (certified joint; SC-SCOPE lift);
+                         res5-projection-factor-bound (chi_proj=1.25; tail 0.059);
+                         res5-a0-skeleton-sensitivity (C_G, a0). Supersedes v1.0, v1.1.
+Evidence grade:          ANALYTIC + EXECUTED (res5_endpoint_2pi_bound.py 5/5 +
+                         res5_projection_factor.py 5/5) + INHERITED (certified joint).
+Reproduction command:    python codes/vacuum/res5_endpoint_2pi_bound.py &&
+                         python codes/vacuum/res5_projection_factor.py
+Expected output:         tail 0.059 in [0.0385,0.0758]; tail/slack_verified 0.78;
+                         chi_proj 1.25; exact worst kappa 0.75; 5/5 + 5/5 PASS.
+Falsification gate:      A DR-2 bound proving kappa>=0.8 worst-case (endpoint open at
+                         every floor grade); or the certified joint failing.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5/GAP-2: ENDPOINT-
+                         LOCALISED -> STRONG EVIDENCE; rigorous T6 endpoint pending the
+                         DR-2 kappa bound (projection alternative eliminated).
+No-overclaim statement:  No theorem. SC-SCOPE lifted@thin-certified (not a hypothesis);
+                         projection lever eliminated; tail corrected to 0.059; verified-
+                         floor closure only (22%), conservative floor OPEN. Sole rigorous
+                         residual = DR-2. B1 unchanged (T6 on {H-LAYER}).
+Next required action:    res5-dr2-kappa-bound: a worst-case additive-energy bound
+                         kappa=K_floor/T' < ~0.8 over the dense admissible class (closes
+                         the RES-5 endpoint AND the unrestricted-class B1).
+\end{verbatim}
+}

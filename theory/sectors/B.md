@@ -35,6 +35,7 @@ _None linked to this sector._
 | NG-2026-06-09-res5-bare-susceptibility-ratio | RES-5/GAP-2 closure via the BARE susceptibility-ratio bound  | the bare Gaussian-sea ratio $\chi^{(3)}/\chi^{(2)}\sim 4\int G^3/\int G^2 = 9.05 > 1/(2a_0)=5.23$, so $r_2(\text{bare})=0.866>1/2$; bare rat |
 | R-2026-06-09-res5-ca0-doublecount | RES-5 a0-skeleton estimate $c\,a_0\sim0.002$ (B1) | the estimate took $\ |
 | AUDIT-2026-06-09-res5-survival-overclaim | RES-5 "survives at STRONG EVIDENCE, thin" (B1; certificate v | the higher-skeleton tail bound $C_{\rm higher}\le\text{leading}/(1-0.49)\approx2\times\text{leading}$ is SAME-ORDER (screened-finite), NOT s |
+| F-2026-06-10-res5-projection-route | RES-5 endpoint closure via the pattern projection $\chi_{\rm | the screened response at the BCC $\{110\}$ modulation transfers gives $\chi_{\rm proj}=f_{\rm avg}/C_G=0.613/0.492=1.25>1$ -- the bubble $\c |
 
 ---
 

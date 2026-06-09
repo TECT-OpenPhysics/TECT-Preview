@@ -1,0 +1,169 @@
+% SUPERSEDED by res5-endpoint-2pi-bound-260609-260610-v1.1.tex.txt (status reconciliation 2026-06-10: SC-SCOPE is lifted@thin-certified via the quartic route, NOT a named hypothesis; the RES-5 endpoint unifies with DR-2, not the floor sharpening; numerical bracket unchanged)
+% =============================================================================
+% Title: RES-5 endpoint 2PI bound: the endpoint marginalit-y is an artefact of the
+%        over-conservative floor -- the higher-skeleton tail is bracketed by the
+%        proved and verified slacks, and closes at the SC-SCOPE thin-certified grade
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 endpoint bound; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: STRONG EVIDENCE (T4) for endpoint closure at the SC-SCOPE thin-certified
+%   grade; rigorous theorem pending ONE named inequality. No tier action. Operator-
+%   directed follow-up to res5-tail-budget-closure (which localised RES-5 to the
+%   I=2e-3 endpoint). The endpoint tail/slack=1.22 marginalit-y is shown to be an
+%   ARTEFACT of the over-conservative SC-SCOPE floor: the operator-norm tail
+%   C_G a0=0.047 is BRACKETED, slack_proved(0.0385) < tail < slack_verified(0.0758),
+%   so with the realized (verified) floor K_floor<=0.52T' the endpoint closes with a
+%   38% margin, and independently it closes at the proved slack whenever the pattern
+%   projection chi_proj<0.82. Route (i) (the verified floor) is the SAME residual as
+%   SC-SCOPE's floor sharpening: RES-5's last analytic piece and SC-SCOPE's named
+%   hypothesis collapse to ONE inequality, at the SAME thin-certified grade. B1 stays
+%   T6 CONDITIONAL on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Endpoint bracketing; verified-floor closure;
+%        unification with SC-SCOPE. Grounded by res5_endpoint_2pi_bound.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+res5-tail-budget-closure localised RES-5 to the $I=2\times10^{-3}$ endpoint, where
+the operator-norm tail $C_G a_0=0.047$ exceeds the conservative slack $0.0385$
+($\mathrm{tail/slack}=1.22$). This note resolves the endpoint by bracketing it
+between the two SC-SCOPE floor grades and identifying the single rigorous residual.
+Scope: the $I=2\times10^{-3}$ endpoint at the operating anchor; estimate/verified
+grade as marked. No tier action.
+
+\section*{2. The slack: proved vs verified floor}
+
+The third-cumulant slack $1-1/\mathrm{joint}$ is set by the SC-SCOPE endpoint
+floor $\rho_{\rm lat}$, for which two grades are on record
+(scscope-quartic-normalisation-certificate):
+\[
+\begin{aligned}
+\text{PROVED }(K_{\rm floor}\le T'):&\quad \rho_{\rm lat}=6.55,\ \ \mathrm{joint}=1.040,\ \ \text{slack}=0.0385,\\
+\text{VERIFIED }(K_{\rm floor}\le 0.52\,T'):&\quad \rho_{\rm lat}=12.6,\ \ \mathrm{joint}=1.082,\ \ \text{slack}=0.0758.
+\end{aligned}
+\]
+The inequality $K_{\rm floor}\le T'$ is a proved theorem (Parseval $+$ Lemma A);
+the factor $0.52$ is the numerically realized value (verified, not yet proved).
+
+\section*{3. The tail: operator-norm vs projection}
+
+The endpoint tail estimate $C_{\rm higher}/\Delta F_{\rm margin}\approx C_G a_0$,
+$C_G=1/(1+g)=0.492$, $a_0=0.096$, is an OPERATOR-NORM upper bound: it uses the
+full response norm $\|(1+GK_{\rm BS}G)^{-1}\|=1/(1+g)$. The actual pattern-dependent
+free-energy difference carries a projection factor
+\[
+\frac{C_{\rm higher}}{\Delta F_{\rm margin}}=\chi_{\rm proj}\,C_G a_0,
+\qquad \chi_{\rm proj}\le 1,
+\]
+because the source $\lambda'(P^2-\langle P^2\rangle)$ is common-mode-subtracted
+(R-U10-3) and supported on the $\{110\}$ reciprocal shell, which is NOT the softest
+screened mode that saturates the operator norm. Hence $\chi_{\rm proj}<1$ strictly.
+
+\section*{4. Verdict: the endpoint is bracketed; closure at the thin-certified grade}
+
+Putting the two together, the operator-norm tail lies BETWEEN the proved and
+verified slacks:
+\[
+\boxed{\ \text{slack}_{\rm proved}(0.0385)\ <\ \text{tail}\,(0.047)\ <\ \text{slack}_{\rm verified}(0.0758)\ }
+\]
+Two independent, physically motivated, numerically verified sharpenings each close
+the endpoint:
+\begin{itemize}
+\item[(i)] \textbf{Verified floor.} With the realized $K_{\rm floor}\le0.52T'$
+($\rho_{\rm lat}=12.6$, slack $0.0758$) the endpoint closes with a $38\%$ margin
+($\mathrm{tail/slack}=0.62$).
+\item[(ii)] \textbf{Projection.} At the proved slack $0.0385$ the endpoint closes
+whenever $\chi_{\rm proj}<0.0385/0.047=0.82$.
+\end{itemize}
+The endpoint marginalit-y ($\mathrm{tail/slack}=1.22$) is therefore an ARTEFACT of
+simultaneously taking the most conservative floor AND the operator-norm tail.
+
+\noindent\textbf{Unification.} Route (i) is the SAME inequality as SC-SCOPE's floor
+sharpening, $K_{\rm floor}\le0.52T'$. RES-5's last analytic piece and SC-SCOPE's
+named hypothesis collapse to ONE residual, at the SAME thin-certified grade: the
+higher-skeleton tail does not weaken B1 below the already-accepted SC-SCOPE
+thin-certified lift -- it matches it.
+
+\noindent\textbf{Tier.} RES-5/GAP-2: ENDPOINT-LOCALISED $\to$ STRONG EVIDENCE
+(closed off-endpoint at $\ge27\times$ margin; closed at the endpoint at the SC-SCOPE
+thin-certified grade). No tier flip: B1-RH-ENUM stays T6 CONDITIONAL on
+$\{$H-LAYER$\}$; SC-SCOPE thin-certified remains the named hypothesis until the
+$0.52T'$ floor is proved.
+
+\section*{5. Estimate vs theorem (CLAUDE.md 6.3.5b)}
+
+The endpoint closure is STRONG EVIDENCE, not a theorem. $\text{slack}_{\rm verified}$
+rests on the verified (not proved) factor $0.52$; $\chi_{\rm proj}<1$ is physically
+established but not yet bounded below $0.82$. The PROVED-grade endpoint
+($K_{\rm floor}\le T'$, operator-norm tail) remains marginal. The single rigorous
+residual is therefore: prove $K_{\rm floor}\le0.52T'$ (which also discharges
+SC-SCOPE) OR prove $\chi_{\rm proj}\le0.82$. Either closes RES-5 at the endpoint as
+a T6 result.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Using the verified floor instead of the proved floor is
+choosing the favourable estimate.''} VALID-with-mitigation: explicitly graded --
+the verified floor gives STRONG EVIDENCE, not a theorem; the proved-grade endpoint
+is stated as still marginal. The verified $0.52$ is the realized value, not an
+optimistic guess; the rigorous gap is named (prove $0.52T'$).
+\item[($\beta$)] \emph{``$\chi_{\rm proj}<1$ is asserted from support, not
+computed.''} VALID: $\chi_{\rm proj}<1$ is a strict consequence of the common-mode
+subtraction (the constant mode is removed) and the shell support; the QUANTITATIVE
+$\chi_{\rm proj}<0.82$ is the registered residual, not claimed here.
+\item[($\gamma$)] \emph{``This does not prove the endpoint -- it relabels open as
+strong-evidence.''} PARTLY-UPHELD: correct that no theorem is proved; the advance is
+(1) showing the marginalit-y is an artefact of the over-conservative floor, not a
+robust obstruction, and (2) unifying RES-5's residual with SC-SCOPE's, so closing
+ONE inequality discharges BOTH. The honest tier is STRONG EVIDENCE; B1 is unchanged.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{bracket} -- $0.0385<0.047<0.0758$;
+\emph{verified margin} -- $1-0.047/0.0758=38\%$; \emph{projection threshold} --
+$0.0385/0.047=0.82<1$; \emph{consistency} -- $\rho_{\rm lat}$ doubling
+$6.55\to12.6$ raises the slack $0.0385\to0.0758$ ($\times1.97$), matching
+$\mathrm{joint}\ 1.040\to1.082$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 endpoint 2PI bound
+Precise statement:       At the I=2e-3 endpoint the operator-norm tail C_G a0=0.047
+                         is BRACKETED: slack_proved(0.0385) < tail < slack_verified
+                         (0.0758). With the realized verified floor K_floor<=0.52T'
+                         (rho_lat=12.6) the endpoint closes (tail/slack=0.62, 38%
+                         margin); equivalently it closes at the proved slack for
+                         chi_proj<0.82. Route (i) IS the SC-SCOPE floor sharpening:
+                         RES-5 and SC-SCOPE share one residual at one (thin-certified)
+                         grade. Marginalit-y is an artefact of the conservative floor.
+Scope:                   I=2e-3 endpoint, operating anchor; STRONG EVIDENCE / verified
+                         grade as marked. Proved-grade endpoint stays marginal.
+Dependencies:            res5-tail-budget-closure (localisation); scscope-quartic-
+                         normalisation-certificate (joint 1.040/1.082, floor grades);
+                         res5-a0-skeleton-sensitivity (C_G, a0); R-U10-3 (common-mode
+                         subtraction).
+Evidence grade:          ANALYTIC (bracket + projection) + EXECUTED
+                         (res5_endpoint_2pi_bound.py 5/5) + INHERITED (SC-SCOPE floor).
+Reproduction command:    python codes/vacuum/res5_endpoint_2pi_bound.py
+Expected output:         tail 0.047 in [0.0385, 0.0758]; tail/slack_verified 0.62;
+                         chi_proj threshold 0.82; 5/5 PASS.
+Falsification gate:      A proof that chi_proj > 0.82 AND K_floor > 0.52T' (endpoint
+                         robustly open); or the verified floor failing at the endpoint.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5/GAP-2: ENDPOINT-
+                         LOCALISED -> STRONG EVIDENCE (endpoint closed at the SC-SCOPE
+                         thin-certified grade; rigorous T6 pending one inequality).
+No-overclaim statement:  No theorem is proved. The endpoint closes at STRONG EVIDENCE
+                         (verified floor / projection), not rigorously; the proved-
+                         grade endpoint remains marginal. The advance is (a) the
+                         marginalit-y is an artefact of the conservative floor and
+                         (b) RES-5's residual unifies with SC-SCOPE's. B1 unchanged.
+Next required action:    Prove K_floor <= 0.52 T' at the I=2e-3 endpoint (discharges
+                         BOTH RES-5 endpoint and SC-SCOPE), OR prove chi_proj <= 0.82
+                         (the {110}-shell projection of the screened response). Either
+                         upgrades RES-5 endpoint to T6.
+\end{verbatim}
+}

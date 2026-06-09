@@ -1,0 +1,174 @@
+% =============================================================================
+% Title: RES-5 endpoint DR-2 floor bound: the endpoint closes for every enumerated
+%        crystallographic competitor (K_floor <= 12 << threshold 26.2); the thin
+%        joint was a worst-case-dense artefact; the sole residual is the dense
+%        worst-case additive energy = DR-2
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 endpoint floor bound; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: STRONG EVIDENCE (T4) endpoint closure over the enumerated/lattice class;
+%   DR-2 residual for the general dense class. No tier action. Operator route
+%   (DR-2 kappa). The endpoint closure is governed by the ABSOLUTE K_floor (rho_lat=
+%   K_budget/(1+K_floor)), not kappa: with the corrected tail 0.059 the endpoint
+%   closes iff K_floor < threshold = 26.2. EVERY enumerated crystallographic
+%   competitor has K_floor <= 12.0 (worst = the 3-shell n=42 pattern) << 26.2, so
+%   the endpoint closes for the enumerated/lattice class (B1's T6 scope) with a
+%   factor >= 2.2 margin -- FAR from thin. The thin joint 1.040-1.082 was the
+%   worst-case-DENSE artefact (a hypothetical competitor with K_floor ~ T' ~
+%   n_pack=40.7), NOT the actual competitors. The sole residual is whether a dense
+%   admissible competitor can reach K_floor > 26.2 = the additive-energy/circle-
+%   incidence frontier = DR-2 (B1's unrestricted-class question). The RES-5 endpoint
+%   adds NO new obstruction beyond DR-2. B1 stays T6 CONDITIONAL on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Closure threshold K_floor<26.2; enumerated
+%        competitors all <=12; thin = dense artefact; residual = DR-2. Grounded by
+%        res5_dr2_kappa_bound.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The endpoint's sole remaining lever (res5-endpoint v1.2) is the DR-2 floor: prove
+$\kappa=K_{\rm floor}/T'$ small enough over the dense admissible class. This note
+shows the closure is governed by the ABSOLUTE $K_{\rm floor}$ and that every
+ENUMERATED competitor closes the endpoint with a large margin, isolating the
+residual to the dense worst-case. Scope: the $I=2\times10^{-3}$ endpoint; the
+crystallographic competitor class; estimate-grade threshold, exact $K_{\rm floor}$.
+No tier action.
+
+\section*{2. The closure threshold}
+
+The floor enters the joint through $\rho_{\rm lat}=K_{\rm budget}/(1+K_{\rm floor})$,
+$K_{\rm budget}=266.7$. With the corrected tail $C_{\rm higher}=0.059$
+(res5-projection-factor-bound), the endpoint closes for a competitor iff its slack
+exceeds the tail:
+\[
+\mathrm{joint}>\frac{1}{1-0.059}=1.063
+\ \Longleftrightarrow\ \rho_{\rm lat}>9.8
+\ \Longleftrightarrow\ \boxed{\ K_{\rm floor}<\frac{K_{\rm budget}}{9.8}-1=26.2\ }
+\]
+The endpoint closure is thus a bound on the ABSOLUTE $K_{\rm floor}=\sum_{t\ne0}
+w_t^2/I^2$ of the competitor, not on the ratio $\kappa$.
+
+\section*{3. Every enumerated competitor closes the endpoint}
+
+Exact $K_{\rm floor}$ for the crystallographic competitors (uniform amplitudes):
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+competitor & $n$ & $K_{\rm floor}$ & $T'$ & $\rho_{\rm lat}$ \\
+\midrule
+$\{100\}$            & 6  & 1.50  & 2  & 106.7 \\
+$\{200\}$            & 6  & 1.50  & 2  & 106.7 \\
+$\{111\}$ FCC        & 8  & 2.38  & 4  & 79.0 \\
+$\{110\}$ BCC        & 12 & 2.75  & 4  & 71.1 \\
+$\{110\}+\{200\}$    & 18 & 4.50  & 4  & 48.5 \\
+$\{110\}+\{200\}+\{211\}$ & 42 & 11.97 & 12 & 20.6 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every enumerated competitor has $K_{\rm floor}\le12.0\ll26.2$ (a factor $\ge2.2$ in
+$K_{\rm floor}$, $\rho_{\rm lat}\ge20.6$). The endpoint closes for the ENUMERATED /
+lattice class with a LARGE margin -- it is NOT thin for the actual competitors.
+
+\section*{4. The thin joint was a worst-case-dense artefact}
+
+The thin endpoint joint $1.040$--$1.082$ (slack $0.0385$--$0.0758$) corresponds to a
+hypothetical competitor saturating $K_{\rm floor}\sim T'\sim n_{\rm pack}=40.7$
+($\rho_{\rm lat}\sim6.5$--$12.6$). No enumerated competitor reaches this: their
+$K_{\rm floor}$ is bounded by $12$, two-to-three times below the threshold. The
+"marginal endpoint'' was therefore a property of the worst-case DENSE competitor,
+not of the Reading-H competitor list.
+
+\section*{5. The residual is DR-2}
+
+The only way the endpoint can fail is a DENSE admissible competitor with
+$K_{\rm floor}>26.2$. The proved refinement $K_{\rm floor}\le T'(1-\|A\|_4^4/I^2)\le
+T'(1-1/n)$ allows $K_{\rm floor}$ up to $\sim n_{\rm pack}=40.7$ for a dense $n\sim40$
+pattern (insufficient). Whether the dense admissible class actually contains such a
+pattern is the worst-case additive-energy question -- the circle-incidence frontier,
+$=$ DR-2, $=$ B1's unrestricted-class question. So:
+\[
+\underbrace{K_{\rm floor}^{\rm enum}\le12}_{\text{closes}}\ <\ \underbrace{26.2}_{\text{threshold}}\ <\ \underbrace{K_{\rm floor}^{\rm dense}\le40.7}_{\text{DR-2}} .
+\]
+
+\noindent\textbf{Verdict.} The RES-5 endpoint closes at STRONG EVIDENCE over the
+enumerated/lattice class (exact $K_{\rm floor}\le12$, threshold $26.2$ estimate-grade;
+margin $\ge2.2$ absorbs the estimate uncertainty) -- the SAME class on which B1 is
+T6. The sole residual is the dense worst-case $K_{\rm floor}<26.2$, which is DR-2.
+The RES-5 endpoint therefore adds NO new obstruction: it is rigorous for the lattice
+class and DR-2-gated for the general class, exactly mirroring B1's structure. No tier
+flip: B1-RH-ENUM stays T6 CONDITIONAL on $\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The threshold 26.2 is estimate-grade (joint anchors +
+corrected tail).''} VALID-with-mitigation: the threshold uses the two documented
+joint anchors and the bubble-computed tail; the margin (enumerated $K_{\rm floor}\le12$
+vs $26.2$, factor $2.2$) absorbs a factor-$\sim2$ uncertainty, so the enumerated-class
+closure is robust. A rigorous joint$(\rho_{\rm lat})$ map would upgrade it.
+\item[($\beta$)] \emph{``Is the 3-shell n=42 pattern actually admissible?''} VALID:
+it is included as the densest single-radius-union under $n_{\rm pack}$; its
+$K_{\rm floor}=12$ is the worst over the tested enumerated set. A genuinely dense
+admissible competitor (modes co-circular to raise $T'$) is exactly the DR-2 case,
+not an enumerated shell.
+\item[($\gamma$)] \emph{``So DR-2 is not solved.''} ACCEPTED: it is not. The result
+is that the endpoint REDUCES to DR-2 (not a separate problem) and is comfortable for
+the actual competitors. The thin/marginal framing is downgraded to a worst-case-dense
+artefact. The honest residual is the single DR-2 bound, shared with B1's unrestricted
+class.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{threshold} $K_{\rm budget}/9.8-1=26.2$;
+\emph{enumerated worst} $11.97<26.2$ (factor $2.2$); \emph{dense worst-case} $\le
+n_{\rm pack}=40.7>26.2$; \emph{ordering} $12<26.2<40.7$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 endpoint DR-2 floor bound
+Precise statement:       The endpoint closes (corrected tail 0.059) iff the
+                         competitor's K_floor < 26.2 (= K_budget/rho_need-1,
+                         rho_need=9.8). EXACT K_floor for every enumerated
+                         crystallographic competitor is <= 12.0 (worst: 3-shell
+                         n=42), a factor >=2.2 below the threshold, so the endpoint
+                         closes for the enumerated/lattice class with a large margin
+                         (rho_lat >= 20.6). The thin joint 1.040-1.082 (slack
+                         0.0385-0.0758) is the worst-case-DENSE artefact (K_floor ~
+                         n_pack=40.7), not the actual competitors. Sole residual:
+                         a dense admissible competitor with K_floor > 26.2 = the
+                         additive-energy / circle-incidence frontier = DR-2.
+Scope:                   I=2e-3 endpoint; enumerated crystallographic class; exact
+                         K_floor, estimate-grade threshold. STRONG EVIDENCE.
+Dependencies:            res5-endpoint-2pi-bound v1.2 (corrected tail 0.059, DR-2
+                         lever); res5-projection-factor-bound (tail correction);
+                         scscope-floor-sharpening (K_floor<=T', K_budget); DR-2
+                         (additive-energy frontier).
+Evidence grade:          ANALYTIC (threshold) + EXACT (K_floor combinatorial) +
+                         EXECUTED (res5_dr2_kappa_bound.py 4/4).
+Reproduction command:    python codes/vacuum/res5_dr2_kappa_bound.py
+Expected output:         threshold 26.2; enumerated K_floor <= 12.0; dense worst-case
+                         <= 40.7; ordering 12 < 26.2 < 40.7; 4/4 PASS.
+Falsification gate:      An enumerated competitor with K_floor > 26.2 (endpoint open
+                         on the lattice class); or a rigorous joint(rho) map shifting
+                         the threshold below 12.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5 endpoint: STRONG
+                         EVIDENCE closed over the enumerated/lattice class; DR-2-gated
+                         for the general dense class (= B1's unrestricted-class
+                         frontier).
+No-overclaim statement:  No theorem. The enumerated-class closure is STRONG EVIDENCE
+                         (estimate-grade threshold, exact K_floor, factor-2.2 margin).
+                         DR-2 (dense worst-case) is NOT solved; the result is that the
+                         endpoint REDUCES to DR-2 and is comfortable for the actual
+                         competitors, downgrading the thin/marginal framing to a
+                         worst-case-dense artefact. B1 unchanged.
+Next required action:    DR-2: a worst-case additive-energy bound K_floor < 26.2 over
+                         the dense admissible class (closes both the RES-5 endpoint
+                         and the unrestricted-class B1). The enumerated/lattice class
+                         is already closed.
+\end{verbatim}
+}

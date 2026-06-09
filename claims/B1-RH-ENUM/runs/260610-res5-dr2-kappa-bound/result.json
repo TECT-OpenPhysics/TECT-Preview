@@ -1,0 +1,77 @@
+{
+  "script": "res5_dr2_kappa_bound.py",
+  "version": "1.0.0",
+  "corrected_tail": 0.059,
+  "rho_need": 9.819773796872607,
+  "Kfloor_threshold": 26.159485087623747,
+  "n_pack": 40.7,
+  "worst_enumerated_Kfloor": 11.96938775510204,
+  "rows": [
+    {
+      "name": "{100}",
+      "n": 6,
+      "K": 1.5,
+      "Tp": 2,
+      "rho": 106.67999999999999
+    },
+    {
+      "name": "{200}",
+      "n": 6,
+      "K": 1.5,
+      "Tp": 2,
+      "rho": 106.67999999999999
+    },
+    {
+      "name": "{111}-FCC",
+      "n": 8,
+      "K": 2.375,
+      "Tp": 4,
+      "rho": 79.02222222222223
+    },
+    {
+      "name": "{110}-BCC",
+      "n": 12,
+      "K": 2.75,
+      "Tp": 4,
+      "rho": 71.11999999999999
+    },
+    {
+      "name": "{110}+{200}",
+      "n": 18,
+      "K": 4.5,
+      "Tp": 4,
+      "rho": 48.49090909090909
+    },
+    {
+      "name": "{110}+{200}+{211} (n=42)",
+      "n": 42,
+      "K": 11.96938775510204,
+      "Tp": 12,
+      "rho": 20.563808025177025
+    }
+  ],
+  "verdict": "Endpoint closes for a competitor iff K_floor<26.2. ALL enumerated competitors have K_floor<=12<<26.2 -> endpoint closes RIGOROUSLY (strong-evidence) over the enumerated/lattice class. The thin joint was a worst-case DENSE artefact. Residual: worst-case K_floor<26.2 over the dense admissible class = DR-2/circle-incidence (B1's unrestricted-class frontier). The endpoint adds NO new obstruction. B1 T6 on {H-LAYER}.",
+  "claims": [
+    {
+      "name": "threshold_from_corrected_tail",
+      "passed": true,
+      "detail": "(corrected tail 0.059 closes iff joint>1/(1-0.059)=1.0627 <=> rho>9.82 <=> K_floor < K_budget/rho-1 = 26.2)"
+    },
+    {
+      "name": "enumerated_competitors_close_rigorously",
+      "passed": true,
+      "detail": "(every enumerated crystallographic competitor has K_floor <= 12.0 << threshold 26.2 (factor >= 2.2); the endpoint closes for the enumerated/lattice class with a LARGE margin, far from thin -- the thin joint 1.040-1.082 was the worst-case DENSE artefact, not the actual competitors)"
+    },
+    {
+      "name": "dense_worstcase_exceeds_threshold",
+      "passed": true,
+      "detail": "(the proved bound K_floor<=T'(1-1/n) allows K_floor up to ~40 for a dense n~40 pattern with T'~n_pack -- EXCEEDS the threshold 26.2. So the endpoint is OPEN for hypothetical dense competitors with K_floor>26.2; this is the additive-energy/circle-incidence residual = DR-2)"
+    },
+    {
+      "name": "res5_endpoint_equals_b1_dr2_structure",
+      "passed": true,
+      "detail": "(K_floor: enumerated <= 12.0 < threshold 26.2 < dense worst-case <= 40. The RES-5 endpoint closes RIGOROUSLY for the enumerated/lattice class (B1's T6 scope) and is DR-2-gated for the general dense class -- EXACTLY B1's existing structure. The endpoint adds NO new obstruction beyond DR-2)"
+    }
+  ],
+  "all_pass": true
+}

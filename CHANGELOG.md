@@ -5,6 +5,57 @@ not pillar counts.
 
 ---
 
+## [RES-5 endpoint DR-2 floor bound: endpoint closes for every enumerated competitor (K_floor<=12<<26.2); thin joint was a worst-case-dense artefact; sole residual = DR-2] - 2026-06-10
+
+- **Operator route (DR-2 kappa).** NEW note `res5-dr2-kappa-bound v1.0` (FORM-CHECK PASS) + `codes/vacuum/res5_dr2_kappa_bound.py` (4/4) + runs/.
+- The endpoint closure is governed by the ABSOLUTE K_floor (rho_lat=K_budget/(1+K_floor)), not kappa: with the corrected tail 0.059 it closes iff K_floor < 26.2.
+- **EVERY enumerated crystallographic competitor has K_floor <= 12.0** ({100}/{200}=1.5, {111}=2.4, {110}-BCC=2.75, two-shell=4.5, 3-shell n=42=12.0) << 26.2 (factor >=2.2, rho_lat>=20.6) -> the endpoint closes for the enumerated/lattice class (B1's T6 scope) with a LARGE margin -- NOT thin. The thin joint 1.040-1.082 was the worst-case-DENSE artefact (K_floor~n_pack=40.7), not the actual competitors.
+- **Residual = DR-2**: a dense admissible competitor with K_floor>26.2 (the proved (1-1/n) bound allows ~40, insufficient) is the additive-energy/circle-incidence frontier = B1's unrestricted-class question. The RES-5 endpoint adds NO new obstruction: rigorous (strong evidence) for the lattice class, DR-2-gated for the general class -- mirroring B1's structure.
+- No tier flip (B1 T6 on {H-LAYER}). STRONG EVIDENCE (estimate-grade threshold, exact K_floor).
+
+## [RES-5 endpoint v1.2 (projection-corrected): v1.1 body fixed -- projection lever removed throughout, tail 0.059, verified-floor-only, sole lever DR-2] - 2026-06-10
+
+- **Operator adversarial review**: v1.1 carried the corrected top banner but stale Section 3/5/7 (chi_proj<0.82, tail 0.047) -- internally contradictory. v1.2 removes the projection lever THROUGHOUT the body and folds in the correction. v1.1 superseded (forward-pointer); v1.0 too.
+- **Canonical endpoint status**: tail corrected to f_avg a0 = 0.059 (chi_proj=1.25; res5-projection-factor-bound). Bracketed 0.0385 < 0.059 < 0.0758; closes STRONG EVIDENCE ONLY at the verified floor (22% margin), OPEN at the conservative floor. Projection route ELIMINATED. SOLE rigorous lever = DR-2 floor kappa<~0.8 (exact single-shell worst 0.75; proved K<=T'(1-||A||_4^4/I^2)).
+- SC-SCOPE lifted@thin-certified (quartic); B1 T6 on {H-LAYER}. No tier flip. FORM-CHECK PASS (Overfull 0). Next: res5-dr2-kappa-bound.
+
+## [RES-5 endpoint projection factor: chi_proj=1.25>1 -- projection route ELIMINATED; tail corrected 0.047->0.059; endpoint solely DR-2-gated] - 2026-06-10
+
+- **Operator route (projection, "faster"): HONEST NEGATIVE.** Direct computation of the screened response at the BCC {110} modulation transfers gives chi_proj = f_avg/C_G = 0.613/0.492 = 1.25 > 1 (NOT <=0.82). NEW note `res5-projection-factor-bound v1.0` (FORM-CHECK PASS) + `codes/vacuum/res5_projection_factor.py` (5/5) + runs/.
+- **Mechanism**: the bubble chi0(k) is forward-peaked, so the screening f(k)=1/(1+lam' chi0(k)) is MAXIMAL at k=0 (=C_G=0.49) and WEAKER at the {110} transfers (f=0.57-0.73). The modulation is not in the maximally-screened channel -> screening helps LESS than C_G.
+- **Tail CORRECTION**: the a0-skeleton operator-norm estimate C_G a0=0.047 was a forward-channel under-estimate; corrected to f_avg a0=0.059 (upward by 1.25). The bracket still holds (0.0385<0.059<0.0758): the endpoint closes ONLY at the verified floor (23% margin, was 38%), NOT conservative; off-endpoint (I<=1e-3) closure UNAFFECTED (>=27x margin absorbs 1.25).
+- **Consequence**: the projection lever (res5-endpoint v1.1) is ELIMINATED; the endpoint rests SOLELY on the DR-2 floor kappa route. Registered F-2026-06-10-res5-projection-route. No tier flip (B1 T6 on {H-LAYER}).
+
+## [RES-5 endpoint 2PI bound v1.1 (status-reconciled): SC-SCOPE lifted via quartic not floor; endpoint unifies with DR-2; exact worst kappa=0.75 corrects 0.52] - 2026-06-10
+
+- **v1.1 re-issue (status reconciliation, route B follow-through)**: v1.0 mis-stated SC-SCOPE as a live B1 named hypothesis and unified the RES-5 endpoint with the floor sharpening. Canonically SC-SCOPE is LIFTED@THIN-CERTIFIED via the QUARTIC route (Parseval-pinned R_max=0.385<0.634); B1 T6 on {H-LAYER} alone. v1.0 superseded (forward-pointer).
+- **Numbers unchanged**: tail 0.047 bracketed by slack_proved(0.0385) and slack_verified(0.0758) of the SC-SCOPE CERTIFIED joint; closes at the verified floor (38% margin) or chi_proj<0.82.
+- **Corrected unification**: the floor-kappa lever (K_floor/T') is DR-2-adjacent. Route-A findings folded in + backed in-script: PROVED K<=T'(1-||A||_4^4/I^2) (Cauchy-Schwarz + t=0); EXACT n=6 {200}-shell kappa=0.750 (corrects the incomplete-sample 0.52); worst-case kappa<1 over the dense admissible class = DR-2/circle-incidence frontier. The RES-5 endpoint unifies with B1's DR-2 (unrestricted-class) residual, NOT SC-SCOPE.
+- res5_endpoint_2pi_bound.py 5/5 (claim 5 reframed + exact-kappa assert) + FORM-CHECK PASS / Overfull 0. No tier flip (B1 T6 on {H-LAYER}). Rigorous T6 endpoint pending the DR-2 kappa bound OR chi_proj<=0.82.
+
+## [SC-SCOPE status reconciliation: floor-sharpening v1.6 hypothesis-set was stale; canonical = SC-SCOPE LIFTED@THIN-CERTIFIED via quartic, B1 {H-LAYER}] - 2026-06-10
+
+- **Operator-directed reconciliation (route B).** Discrepancy: `scscope-floor-sharpening v1.6` banner said "SC-SCOPE remains active, B1 T6 on {H-LAYER, SC-SCOPE}" vs `B1 status.json` = {H-LAYER}.
+- **Resolved via the changelog-DB timeline**: 06-08 floor-route lift -> RETRACTED (wrong joint bookkeeping); 06-09 quartic convention PINNED (Parseval ratio 1.0000, R_max=0.385<0.634) -> certified thin -> operator HOLD -> LIFTED@THIN-CERTIFIED enacted (supersedes the retraction AND the HOLD). CANONICAL = B1 status.json + scscope-programme-consolidation v1.0 = SC-SCOPE LIFTED@THIN-CERTIFIED via the QUARTIC route; B1 T6 on {H-LAYER} alone.
+- **Fix**: floor-sharpening v1.6's {H-LAYER, SC-SCOPE} is a SYNCHRONISATION DEFECT (it reflects the retracted FLOOR-only lift, not the later QUARTIC lift) -> reconciliation banner prepended (the floor analysis K<=T' stands; the hypothesis-set line is superseded). No B1 tier/status change (already {H-LAYER}).
+- **Consequence flagged**: `res5-endpoint-2pi-bound v1.0` (written this session) inherited the stale framing -- it treats SC-SCOPE as a live named hypothesis and unifies RES-5 with the FLOOR sharpening. Canonically SC-SCOPE is LIFTED (via quartic); the RES-5 endpoint floor-kappa lever unifies with DR-2, not SC-SCOPE. Needs a v1.1 re-issue.
+- Route-A findings archived (negative-results): PROVED K<=T'(1-||a||_4^4/I^2) (Cauchy-Schwarz + t=0); EXACT complete single-shell scan worst kappa=K/T'=0.75 (corrects the incomplete-sample 0.52); worst-case kappa<1 is additive-energy/circle-incidence-adjacent (= DR-2).
+
+## [RES-5 endpoint 2PI bound: marginalit-y is a conservative-floor artefact; closes at SC-SCOPE thin-certified grade (RES-5 residual unifies with SC-SCOPE)] - 2026-06-09
+
+- **Operator-directed** (follow-up to res5-tail-budget-closure). NEW note `res5-endpoint-2pi-bound v1.0` (FORM-CHECK PASS, Overfull 0) + `codes/vacuum/res5_endpoint_2pi_bound.py` (5/5) + runs/.
+- The endpoint tail/slack=1.22 marginalit-y is an ARTEFACT of the over-conservative floor: the operator-norm tail C_G a0=0.047 is BRACKETED, slack_proved(0.0385) < tail < slack_verified(0.0758).
+- TWO independent verified routes close the endpoint: (i) realized floor K_floor<=0.52T' (rho_lat=12.6, slack 0.0758) -> 38% margin; (ii) pattern projection chi_proj<0.0385/0.047=0.82 (source lam'(P^2-<P^2>) is common-mode-subtracted, {110}-shell supported, not the softest screened mode -> chi_proj<1 strictly).
+- **Unification**: route (i) IS SC-SCOPE's floor sharpening K_floor<=0.52T' -- RES-5's last analytic piece and SC-SCOPE's named hypothesis collapse to ONE inequality at the SAME thin-certified grade. The higher-skeleton tail does not weaken B1 below the accepted SC-SCOPE thin-certified lift; it matches it.
+- **Tier**: RES-5/GAP-2 ENDPOINT-LOCALISED -> STRONG EVIDENCE (closed off-endpoint >=27x; endpoint closed at the SC-SCOPE thin-certified grade). No tier flip (B1 T6 on {H-LAYER}). Estimate-grade. Rigorous T6 residual: prove K_floor<=0.52T' (discharges BOTH) OR chi_proj<=0.82.
+
+## [RES-5 endpoint-localisation accepted (ledger OPEN->ENDPOINT-LOCALISED) + FORM-CHECK PDFs built] - 2026-06-09
+
+- **Operator accepted `res5-tail-budget-closure v1.0` as RES-5 ENDPOINT LOCALISATION** (not closure). `negative-results` AUDIT-2026-06-09-res5-survival-overclaim annotated: RES-5/GAP-2 OPEN -> ENDPOINT-LOCALISED -- tail budget closed@strong-evidence for I<=1e-3 (tail/slack <=0.036, >=27x margin), marginal/estimate-undetermined only at the I=2e-3 endpoint (tail/slack 1.22). B1 unaffected (T6 on {H-LAYER}).
+- **FORM-CHECK PDFs built** (missing earlier this session): `res5-tail-budget-closure v1.0` + `res5-sunset-selfenergy-norm-certificate v1.1`, both FORM-CHECK PASS / Overfull 0, placed beside source. Section headers + the v1.1 banner normalised to standard form ("Purpose and scope" / "Devil's-advocate" / "first issued <date>").
+- Next mainline: `res5-endpoint-2pi-bound` (prove C_higher(2e-3) < 0.0385 Delta F_margin -- ~18% tail tightening or a slightly thicker certified slack).
+- NOTE: the superseded `res5-sunset-selfenergy-norm-certificate v1.0.pdf` remains on disk (sandbox mount blocks unlink); flagged for Windows-side removal.
+
 ## [RES-5 tail-budget closure: higher-skeleton tail fits the thin slack for I<=1e-3; endpoint-marginal at I=2e-3 (RES-5 localised)] - 2026-06-09
 
 - **Operator-directed mainline** (follow-up to certificate v1.1's budget target C_higher < Delta F_margin - C_leading ~ 0.04 Delta F_margin). NEW note `res5-tail-budget-closure v1.0` + `codes/vacuum/res5_tail_budget.py` (5/5) + runs/.
