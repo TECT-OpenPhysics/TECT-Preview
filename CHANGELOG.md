@@ -5,6 +5,23 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE realized quartic R_max~0.385 < 0.634: strong evidence of closure, convention-limited; no lift] - 2026-06-08
+
+- **Operator directive** (certify/reduce the quartic R_max<0.634; shorten the v1.4 header). New script
+  codes/vacuum/scscope_quartic_realized.py (4/4); scscope-floor-sharpening re-issued v1.4 -> v1.5.
+- **Finding**: under the canonical additive bookkeeping the SC-SCOPE endpoint closes at rho_lat=6.55 iff the
+  quartic R_max<0.634 (the sunset is rigorous, caps the joint at x1.13). The prior R_max=1.019 inherited the
+  Young-ceiling estimate R_sup=1.59 ('not recomputed'). Computing the realized
+  R(t)=12(5v/2)^2 lam'^-2 Ghat4(t) 4(1-a0)/J(t) DIRECTLY gives R_max~0.385 << 0.634 -- the Young ceiling was loose
+  by ~2.6x. STRONG EVIDENCE the endpoint closes.
+- **Honest caveat, NO lift**: the absolute Ghat4 normalisation carries a factor-2/(2pi)^3 convention (the
+  'M'=-J(0) vs -J(0)/2' error class), load-bearing here -- the closure survives +50% slack (0.577<0.634) but NOT a
+  full factor 2 (0.769>0.634). The convolution SHAPE is rigorous; only the absolute normalisation is open. So this
+  is STRONG EVIDENCE, NOT a certified lift -- especially after the prior overclaim. SC-SCOPE remains a B1 named
+  hypothesis; B1 T6 on {H-LAYER, SC-SCOPE}. Ledger R-029, GATES, v1.5 (header shortened per operator).
+- **Next**: pin the Ghat4 convention factor to certify (then the endpoint lift would be rigorous). release PASS,
+  pytest 3/3.
+
 ## [scscope-floor-sharpening v1.3 -> v1.4: purge residual LIFTED wording; sunset-limited framing] - 2026-06-08
 
 - **Operator review**: v1.3 still carried v1.2 'LIFTED / paired>=2.23 / CLOSES' residues in Section 6, the

@@ -1,0 +1,33 @@
+{
+  "script": "scscope_quartic_realized.py",
+  "version": "1.0.0",
+  "rhat": 0.33674599985544107,
+  "a0": 0.0956812885730738,
+  "R_max_realized": 0.38459791965544377,
+  "threshold": 0.634,
+  "young_estimate": 1.019,
+  "convention_caveat": "absolute Ghat4 factor-2/(2pi)^3 unpinned; load-bearing",
+  "claims": [
+    {
+      "name": "realized_Rmax_below_threshold",
+      "passed": true,
+      "detail": "(realized R_max=0.3846 < 0.634 (closure threshold at rho_lat=6.55): the Young-ceiling estimate R_sup=1.59 (=> R_max 1.019) was loose by ~2.6x; the direct value closes the endpoint IF the convention is right)"
+    },
+    {
+      "name": "survives_moderate_convention_slack",
+      "passed": true,
+      "detail": "(R_max x1.5 = 0.577 < 0.634: the closure survives a +50% convention slack, but NOT a full factor-2 (0.769 > 0.634) -- so the absolute factor-2/(2pi)^3 convention is the load-bearing residual; this is STRONG EVIDENCE, NOT a certified closure)"
+    },
+    {
+      "name": "convolution_converged",
+      "passed": true,
+      "detail": "(Ghat4 grid-converged to 0.00% -- the SHAPE is rigorous; only the ABSOLUTE normalisation convention is open)"
+    },
+    {
+      "name": "no_lift_claimed",
+      "passed": true,
+      "detail": "(NO SC-SCOPE lift is claimed: the convention factor-2 is load-bearing and unpinned, and the joint is sunset-limited; SC-SCOPE remains a B1 named hypothesis. Strong evidence only.)"
+    }
+  ],
+  "all_pass": true
+}

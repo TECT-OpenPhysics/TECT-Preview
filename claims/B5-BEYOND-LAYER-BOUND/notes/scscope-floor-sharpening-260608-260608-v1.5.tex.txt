@@ -1,40 +1,19 @@
-% SUPERSEDED by scscope-floor-sharpening-260608-260608-v1.5.tex.txt
 % =============================================================================
 % Title: SC-SCOPE endpoint floor sharpening -- the reconciliation (proved) and
 %        the endpoint partial advance (LIFT RETRACTED)
 % Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders lift; bears on B1-RH-ENUM)
-% Version: v1.4 -- first issued 2026-06-08; this version issued 2026-06-08
-% Status: PARTIAL ADVANCE -- the LIFT is RETRACTED (self-caught error). The
-%   constant-map reconciliation K<=T'(M) (Section 5) is PROVED + verified and
-%   STANDS. But the v1.1/v1.2 LIFT used paired=rho/(1+max[R_s+R_q])=rho/2.872, a
-%   LOCAL approximation at rho=2.6; the physically-correct ADDITIVE bookkeeping
-%   (sunset = ABSOLUTE cost C_sunset=composed/1.13) SATURATES and gives only
-%   x0.945 (conservative K<=T') .. x1.026 (verified 0.52T') at the sharpened
-%   floor -- MARGINAL, NOT a closure (threshold rho>=9.85, not 3.9). The proved
-%   floor sharpening is a real PARTIAL advance (additive joint x0.757 ->
-%   x0.95-1.03). SC-SCOPE RESTORED as a B1 hypothesis: {H-LAYER}->{H-LAYER,
-%   SC-SCOPE}, tier UNCHANGED T6. AUDIT-2026-06-08-scscope-lift-overclaim.
-%   The prior arc (scscope-joint-pairing v1.0) exhausted the THIRD-order route
-%   (paired x0.905) and named the only remaining route as a sharper STEP-5B
-%   endpoint floor rho >~ 3.9. This note completes that route: the floor
-%   rho=2.58 used the kappa-balanced additive-energy bound
-%   K(n_pack)=8+4sqrt(14)sqrt(n_pack)=103.5, which OVERSHOOTS the trivial
-%   Lemma-A bound 1+n_pack=41.7 at the SMALL endpoint packing n_pack=40.7
-%   (prefactor c_R=4sqrt(14)~15). Replacing it with the tighter additive-energy
-%   constant 1+T' (Lemma A, R-025) gives rho_lat = K_budget/(1+T') >= 6.4 in the
-%   H-ADM-COH-separated regime (T'<=n_pack=41), hence paired = rho_lat/2.872 >=
-%   2.23 > 1 -- the all-orders endpoint CLOSES. Break-even T'<=92 (paired>=1),
-%   T'<=67 (rho>=3.9); the measured lattice T'~tens (R-026) closes with margin.
-%   NAMED RESIDUAL: the exact constant map between the kappa-balanced K(n) and
-%   the Lemma-A 1+T' (the -4I^2 trivial subtraction / averaging normalisation);
-%   both bound the SAME lambda'-free additive-energy constant (<F^4>-4I^2)/I^2,
-%   and the kappa-balanced sqrt(n) is the UNCONDITIONAL triple-count bound
-%   E_+<=n^{5/2}, which 1+T' (subpolynomial for the lattice) provably refines.
-%   RECONCILIATION PASSED (v1.1): K_floor <= T'(M) PROVED + verified, so the
-%   floor obstruction is removed and the endpoint LIFTS. Operator-authorised
-%   flip ENACTED: SC-SCOPE lifted, B1 {H-LAYER,SC-SCOPE}->{H-LAYER}, T6
-%   unchanged; the all-orders selection's third cumulant is estimate-grade
-%   (R_s,R_q, the operator-accepted basis), now uniform across all intensities.
+% Version: v1.5 -- first issued 2026-06-08; this version issued 2026-06-08
+% Status: PARTIAL ADVANCE. The reconciliation K<=T'(M) is PROVED + verified,
+%   sharpening the second-order floor from rho=2.58 to rho=6.55. The all-orders
+%   endpoint LIFT is RETRACTED (AUDIT-2026-06-08-scscope-lift-overclaim): under
+%   the canonical additive bookkeeping the joint is SUNSET-LIMITED and marginal,
+%   x0.945-x1.026; the binding question is the quartic R_max<0.634 (NOT the
+%   retracted pairing R_s+R_q<5.55). NEW (v1.5): the REALIZED quartic R_max~0.385
+%   computed directly (not the loose Young estimate 1.019) is well below 0.634 --
+%   STRONG EVIDENCE the endpoint closes -- but the absolute Ghat4 normalisation
+%   (factor-2/(2pi)^3 convention) is the load-bearing residual (survives +50%
+%   slack, not x2), so this is NOT a certified lift. SC-SCOPE remains an active B1
+%   hypothesis; B1 T6 on {H-LAYER, SC-SCOPE}.
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-08) first issue. Operator directive 'proceed with the SC-SCOPE
@@ -70,6 +49,12 @@
 %        canonical additive joint saturates at x1.13, so the binding question is
 %        the quartic R_max < 0.634 (not the retracted pairing R_s+R_q<5.55).
 %        v1.3 superseded.
+%   v1.5 (2026-06-08) operator review: (1) shorten the header (purge the long
+%        prior-arc 'CLOSES/paired' context); (2) record the REALIZED quartic
+%        R_max~0.385 (scscope_quartic_realized.py 4/4) -- the Young-ceiling
+%        R_sup=1.59 was loose by ~2.6x; the direct value is < the 0.634 closure
+%        threshold, STRONG EVIDENCE the endpoint closes, modulo the factor-2
+%        Ghat4 convention (load-bearing). NO lift. v1.4 superseded.
 % =============================================================================
 
 \sloppy
@@ -170,6 +155,30 @@ PARTIAL advance ($\times0.757\to\times0.95$--$1.03$); a clean lift needs either
 $\rho\ge9.85$ ($K\le27$, tighter than $n_{\rm pack}=40.7$) or a rigorous
 third-cumulant bound beating the saturating sunset.
 
+\section*{5b. The realized quartic (strong evidence, not certified)}
+
+Under the canonical additive bookkeeping the endpoint closes at
+$\rho_{\rm lat}=6.55$ iff the quartic-difference per-transfer ratio satisfies
+$R_{\max}<0.634$ (the sunset is rigorous and caps the joint at $\times1.13$). The
+prior $R_{\max}=1.019$ inherited the Young-ceiling estimate $R_{\rm sup}=1.59$
+(flagged ``not recomputed''). Evaluating the realized ratio DIRECTLY,
+\[
+R(t)=12\Big(\tfrac{5v}{2}\Big)^2\lambda'^{-2}\,\widehat{G^4}(t)\,
+\frac{4(1-a_0)}{J(t)},\qquad \widehat{G^4}=(J*J)(t),
+\]
+on the endpoint chords (scscope\_quartic\_realized.py, 4/4) gives
+\[
+\boxed{\ R_{\max}^{\rm realized}\approx0.385\ <\ 0.634\ }
+\]
+-- the Young ceiling was loose by $\sim2.6\times$. This is STRONG EVIDENCE that
+the SC-SCOPE all-orders endpoint CLOSES. It is NOT certified: the absolute
+$\widehat{G^4}$ normalisation carries a factor-$2/(2\pi)^3$ convention (the same
+class as the $M'=-J(0)$ vs $-J(0)/2$ slip), which is load-bearing here -- the
+closure survives a $+50\%$ slack ($0.385\times1.5=0.577<0.634$) but NOT a full
+factor $2$ ($0.769>0.634$). The convolution SHAPE is rigorous (grid-converged);
+only the absolute normalisation is open. NO lift is enacted; SC-SCOPE stays a B1
+named hypothesis pending the convention being pinned.
+
 \section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
 
 \begin{itemize}
@@ -245,9 +254,10 @@ No-overclaim statement:  Only the reconciliation K<=T'(M) and the floor
                          all-orders endpoint is NOT closed: the additive joint is
                          marginal (x0.945-1.026) and sunset-limited (saturates
                          x1.13). SC-SCOPE remains a B1 named hypothesis.
-Next required action:    Certify the third-cumulant constants: the binding one is
-                         the quartic R_max (current estimate 1.019); a certified
-                         R_max<0.634 closes the additive joint at rho_lat=6.55.
-                         The rigorous sunset (1.13) caps the joint at x1.13.
+Next required action:    Pin the absolute Ghat4 normalisation (factor-2/(2pi)^3
+                         convention): the REALIZED quartic R_max~0.385 < 0.634
+                         (scscope_quartic_realized.py 4/4) is strong evidence of
+                         closure, load-bearing only on that convention. Pinning it
+                         (survives +50%, not x2) would certify the endpoint lift.
 \end{verbatim}
 }
