@@ -1,0 +1,42 @@
+{
+  "script": "scscope_endpoint_sweep.py",
+  "version": "1.0.0",
+  "I_sweep": {
+    "4.0e-04": 1.125603515485906,
+    "1.0e-03": 1.1043047141167797,
+    "1.5e-03": 1.0758251028658905,
+    "2.0e-03": 1.0403348043663967
+  },
+  "mu2_sweep": {
+    "0.00250": 1.0344402528662076,
+    "0.00354": 1.0369634684420512,
+    "0.00500": 1.0403348043663967,
+    "0.00707": 1.0448046635283457,
+    "0.01000": 1.0505967916811993
+  },
+  "saturation": 1.1299999361493533,
+  "critical_I_approx": 0.0025,
+  "claims": [
+    {
+      "name": "I_band_positive_endpoint_thinnest",
+      "passed": true,
+      "detail": "(joint>1 across I in [4e-4,2e-3] and the endpoint I=2e-3 is the thinnest: {'4e-04': 1.126, '1e-03': 1.104, '2e-03': 1.04}; the certified band is positively closed, binding at the endpoint)"
+    },
+    {
+      "name": "mu2_band_sign_stable",
+      "passed": true,
+      "detail": "(joint>1 across mu^2 in [x0.5,x2] at the endpoint; worst x1.034 -- sign-stable, consistent with ROBUSTNESS-MU2)"
+    },
+    {
+      "name": "structural_sunset_saturation",
+      "passed": true,
+      "detail": "(joint(rho) saturates at x1.130 (=1/(1/1.13)) as rho->inf: the SUNSET caps the joint -- the thinness is a genuine near-critical balance, not a numerical artefact; no floor sharpening can exceed x1.13)"
+    },
+    {
+      "name": "endpoint_below_critical_I",
+      "passed": true,
+      "detail": "(the critical I (joint=1) is ~2.5e-3 > the certified endpoint 2e-3: joint(2.5e-3)=x1.000; the endpoint sits inside the closed region, near the structural boundary)"
+    }
+  ],
+  "all_pass": true
+}

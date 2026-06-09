@@ -5,6 +5,51 @@ not pillar counts.
 
 ---
 
+## [SC-SCOPE LIFTED@THIN-CERTIFIED (operator-enacted, structural): B1 -> {H-LAYER}, T6] - 2026-06-09
+
+- **Operator decision** (reviews/2026-06-09-scscope-lift-thin-certified.md): on re-examination of the quartic
+  certificate, ACCEPT and LIFT SC-SCOPE with a THIN-CERTIFIED flag (supersedes the same-day HOLD). ENACTED.
+- **Structural confirmation** (scscope_endpoint_sweep.py 4/4): the thin closure is a near-critical selection
+  boundary, NOT an artefact. The joint SATURATES at x1.13 (sunset cap) as the floor grows; it is SIGN-STABLE across
+  I (endpoint I=2e-3 thinnest, critical I~2.5e-3 BEYOND it: joint x1.126/x1.104/x1.040 at 4e-4/1e-3/2e-3) and across
+  mu^2 [x0.5,x2] (worst x1.034). Operator robustness points 1-5 met.
+- **B1-RH-ENUM flip (operator-authorized)**: active hypotheses {H-LAYER, SC-SCOPE} -> {H-LAYER}; tier UNCHANGED T6.
+  Justification chain (all proved/certified): K_floor<=T'(M) (R-027); floor rho_lat>=6.55 (proved); sunset x1.13
+  (M-ENDPOINT, rigorous); quartic R_max=0.385<0.634 (CERTIFIED, Parseval-pinned convention); corrected additive
+  joint x1.040-x1.082>1. The earlier x0.945 used the loose Young R_max=1.019.
+- **Honest flag**: LIFTED@THIN-CERTIFIED, sunset-limited near-critical margin (x1.04 worst case). Differs from the
+  retracted 2026-06-08 lift (which used the wrong local pairing formula) -- this uses the corrected additive
+  bookkeeping with all inputs certified and sweep-confirmed structural robustness.
+- **B1 now rests on H-LAYER alone** (the isotropic Gaussian-Hartree layer). Next deepest piece: Prop A
+  (isotropic dressing = diagonal-Gaussian infimum). GATES + R-029 + B1 card + review archived. release PASS, pytest 3/3.
+
+## [Operator decision: HOLD the SC-SCOPE lift; certified (thin) closure retained as record] - 2026-06-09
+
+- **Operator decision**: keep the SC-SCOPE endpoint closure certificate (R-029, scscope-quartic-normalisation-
+  certificate v1.0) as the record, but DO NOT enact the lift -- the certified margin is thin (x1.04 worst case,
+  sunset-binding) and does not warrant flipping the gate.
+- **State (unchanged)**: SC-SCOPE remains a B1 named hypothesis; B1 T6 CONDITIONAL on {H-LAYER, SC-SCOPE}; B5 T5.
+  The certificate (convention pinned by Parseval; R_max=0.385<0.634; conservative joint x1.040-x1.082>1) stands as
+  proved/certified evidence the endpoint closes, available to re-open the lift if the margin is hardened. GATES +
+  R-029 annotated with the HOLD decision. release_check PASS, pytest 3/3.
+
+## [SC-SCOPE quartic convention PINNED (Parseval); endpoint closure CERTIFIED (thin x1.04); lift for operator re-examination] - 2026-06-09
+
+- **Operator directive** (pin the Ghat4 normalisation; if R_max<0.634 certified, re-examine the lift). New note
+  scscope-quartic-normalisation-certificate v1.0 (FORM-CHECK PASS) + codes/vacuum/scscope_quartic_certificate.py (5/5).
+- **Convention pinned**: the factor-2/(2pi)^3 caveat is RESOLVED by Parseval -- (J*J)(0) via the convolution routine
+  equals (2pi^2)^-1 int q^2 J^2 to ratio 1.0000, so the convolution is standard-normalised (no factor-2). With
+  Ghat4=G*G*G*G=J*J (exact) and the Young ceiling holding (ratio 0.27), R_max=0.385<0.634 is CERTIFIED.
+- **Certified closure (thin)**: under the CONSERVATIVE additive bookkeeping (the corrected one, not the retracted
+  pairing formula), the joint = x1.040 (conservative K_floor=T'=n_pack, rho_lat=6.55) .. x1.082 (verified
+  K_floor=0.52T', rho_lat=12.6) > 1 -- the SC-SCOPE all-orders endpoint CLOSES. The certified quartic flips the
+  prior x0.945 (with the loose R_max=1.019). Every input is now proved/certified (K_floor<=T', floor rho>=6.55,
+  sunset x1.13, R_max=0.385, additive bookkeeping).
+- **NO lift, THIN margin**: the closure is thin (x1.04 worst case; the sunset is the binding term). Per the operator
+  instruction the lift is presented for RE-EXAMINATION, not auto-enacted -- especially after the prior overclaim.
+  B1 stays T6 on {H-LAYER, SC-SCOPE}. Also: scscope-floor-sharpening v1.5 -> v1.6 (Section 5 title fix). Ledger
+  R-029, GATES. release_check PASS, pytest 3/3.
+
 ## [SC-SCOPE realized quartic R_max~0.385 < 0.634: strong evidence of closure, convention-limited; no lift] - 2026-06-08
 
 - **Operator directive** (certify/reduce the quartic R_max<0.634; shorten the v1.4 header). New script

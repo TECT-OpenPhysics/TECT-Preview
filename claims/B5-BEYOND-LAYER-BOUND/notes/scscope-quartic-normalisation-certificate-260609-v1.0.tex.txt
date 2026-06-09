@@ -1,0 +1,154 @@
+% =============================================================================
+% Title: SC-SCOPE quartic normalisation certificate -- pinning the Ghat4
+%        convention and the certified endpoint closure
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders endpoint; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: CERTIFICATE. The operator-named residual of scscope-floor-sharpening
+%   v1.5 -- the absolute Ghat4 normalisation (factor-2/(2pi)^3 convention) -- is
+%   PINNED by the Parseval identity: (J*J)(0) via the convolution routine equals
+%   (1/(2pi)^3) int J(q)^2 d^3q to ratio 1.0000, so the convolution is standard-
+%   normalised (no factor-2). With Ghat4=G*G*G*G=J*J (exact) and the Young
+%   ceiling holding (ratio 0.27, no over-count), the realized quartic
+%   R_max=0.385 < 0.634 is CERTIFIED. Under the CONSERVATIVE additive bookkeeping
+%   (the corrected one, not the retracted pairing formula), the certified joint
+%   is x1.040 (conservative K_floor=T'=n_pack, rho_lat=6.55) .. x1.082 (verified
+%   K_floor=0.52T', rho_lat=12.6) > 1 -- the SC-SCOPE all-orders endpoint CLOSES.
+%   The closure is THIN (x1.04 worst case; the sunset is the binding term). NO
+%   lift is enacted here: per the operator's instruction the lift is presented
+%   for RE-EXAMINATION (the operator authorises gate/hypothesis flips). B1 stays
+%   T6 on {H-LAYER, SC-SCOPE} pending that decision.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Operator directive: pin the Ghat4
+%        normalisation; if R_max<0.634 certified, re-examine the lift. Script
+%        codes/vacuum/scscope_quartic_certificate.py (5/5); JSON
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260609-scscope-quartic-certificate/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+scscope-floor-sharpening v1.5 left ONE load-bearing residual for the SC-SCOPE
+endpoint closure: the absolute normalisation of $\widehat{G^4}$ (a
+factor-$2/(2\pi)^3$ convention, flagged as the $M'=-J(0)$ vs $-J(0)/2$ error
+class). This note pins it and reports the certified closure.
+
+\section*{2. The convention is pinned (Parseval)}
+
+The quartic-difference contribution uses $\widehat{G^4}=G*G*G*G=(J*J)(t)$
+(quartic-difference-channel v1.0, exact by associativity, $J=G*G$). The only
+open question is the absolute normalisation of the convolution. By Parseval, with
+the standard Fourier convention,
+\[
+\widehat{G^4}(0)=(J*J)(0)=\frac{1}{(2\pi)^3}\int J(q)^2\,d^3q
+=\frac{1}{2\pi^2}\int_0^\infty q^2J(q)^2\,dq .
+\]
+Computing the left side by the convolution routine and the right side directly
+(scscope\_quartic\_certificate.py),
+\[
+\boxed{\ \frac{(J*J)(0)_{\rm conv}}{(2\pi^2)^{-1}\!\int q^2J^2}=1.0000\ }
+\]
+to four digits. The convolution is therefore STANDARD-normalised; the
+factor-$2/(2\pi)^3$ caveat is resolved. As a cross-check the Young ceiling holds,
+$(J*J)(0)=1.27\times10^{-3}\le J(0)\|J\|_1=4.76\times10^{-3}$ (ratio $0.27$),
+confirming no factor-2 over-count.
+
+\section*{3. Certified $R_{\max}$ and the certified joint}
+
+With the convention pinned, the realized per-transfer ratio
+\[
+R(t)=12\Big(\tfrac{5v}{2}\Big)^2\lambda'^{-2}\,\widehat{G^4}(t)\,\frac{4(1-a_0)}{J(t)}
+\]
+on the endpoint chords gives $R_{\max}=0.385<0.634$ -- CERTIFIED (the Young
+estimate $1.019$ was loose by $\sim2.6\times$). Under the CONSERVATIVE additive
+bookkeeping (the corrected one of scscope-floor-sharpening v1.4, NOT the retracted
+pairing formula),
+\[
+\text{joint}=\frac{\mathrm{MARGIN}}{C_2+C_{\rm sunset}+C_{\rm quartic}},\quad
+C_2=\frac{\mathrm{MARGIN}}{\rho_{\rm lat}},\ \
+C_{\rm sunset}=\frac{\text{composed}}{1.13},\ \
+C_{\rm quartic}=R_{\max}C_2,
+\]
+\[
+\boxed{\ \text{joint}=\times1.040\ (\rho_{\rm lat}=6.55)\ \dots\ \times1.082\
+(\rho_{\rm lat}=12.6)\ >\ 1\ }
+\]
+The certified quartic flips the OLD $\times0.945$ (with the loose $R_{\max}=1.019$)
+to closure. The sunset ($C_{\rm sunset}$, rigorous, M-ENDPOINT $\times1.13$) is
+the binding term; the floor sharpening ($\rho_{\rm lat}\ge6.55$, proved
+$K_{\rm floor}\le T'$) and the certified quartic together cross unity.
+
+\section*{4. Status: certified but THIN -- operator re-examination}
+
+Every ingredient is now proved/certified: (i) $K_{\rm floor}\le T'(M)$ (R-027
+$t\ne0$ part); (ii) the floor $\rho_{\rm lat}\ge6.55$; (iii) the sunset
+$\times1.13$ (M-ENDPOINT); (iv) $R_{\max}=0.385$ (this certificate); (v) the
+conservative additive bookkeeping. The SC-SCOPE all-orders endpoint CLOSES,
+$\text{joint}\ge\times1.040>1$. The closure is THIN ($\times1.04$ in the worst
+case $K_{\rm floor}=T'=n_{\rm pack}$; $\times1.08$ with the verified
+$K_{\rm floor}\le0.52T'$). Per the operator's instruction (``if $R_{\max}<0.634$
+is certified, then the lift can be re-examined''), this note ENACTS NO lift; it
+presents the certificate for the operator's re-examination, given the thin
+margin. B1 stays T6 on $\{$H-LAYER, SC-SCOPE$\}$.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The convention could still be off by 2.''} DISMISSED:
+the Parseval identity $(J*J)(0)=(2\pi^2)^{-1}\!\int q^2J^2$ holds to ratio
+$1.0000$; a factor-2 would show as ratio $2$ or $0.5$. The standard convention is
+pinned, not assumed.
+\item[($\beta$)] \emph{``This repeats the earlier overclaim.''} NO: the earlier
+lift used the LOCAL pairing formula $\rho/2.872$; this uses the CORRECTED
+additive bookkeeping (the one that gave $\times0.945$ before the quartic was
+certified). The certified quartic is what legitimately flips it, and the result
+is presented for operator re-examination, not auto-lifted.
+\item[($\gamma$)] \emph{``$\times1.04$ is too thin to be safe.''} VALID and
+RECORDED: the closure is thin in the worst case; the verified $K_{\rm floor}\le
+0.52T'$ gives $\times1.08$, and any $T'<n_{\rm pack}$ improves it. The thinness is
+flagged for the operator; the sign is positive and every input is certified.
+\end{itemize}
+
+\textbf{Quantitative sanity check.} Parseval ratio $1.0000$; Young ratio $0.27$
+($\le1$); $R_{\max}=0.385<0.634$; joint $\times1.040$ (cons) / $\times1.082$
+(ver) $>1$; OLD $R_{\max}=1.019\Rightarrow\times0.945$ (the certification is what
+flips it). Direction: smaller $R_{\max}\Rightarrow$ smaller $C_{\rm quartic}
+\Rightarrow$ larger joint.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-029 cont. / SC-SCOPE quartic normalisation certificate
+Precise statement:       Ghat4=J*J convolution is standard-normalised (Parseval
+                         (J*J)(0)=(2pi^2)^-1 int q^2 J^2, ratio 1.0000; Young ratio
+                         0.27). Hence R_max=0.385<0.634 CERTIFIED. Conservative
+                         additive joint = x1.040 (rho_lat=6.55) .. x1.082
+                         (rho_lat=12.6) > 1: the SC-SCOPE all-orders endpoint
+                         CLOSES (THIN; sunset-binding).
+Scope:                   SC-SCOPE all-orders endpoint (I=2e-3); the corrected
+                         (additive) bookkeeping; certified.
+Dependencies:            R-027 (K_floor<=T'); proved floor rho_lat>=6.55; sunset
+                         x1.13 (M-ENDPOINT); quartic-difference-channel v1.0
+                         (R(t) formula); Parseval (this note).
+Evidence grade:          CERTIFICATE: convention pinned (Parseval), R_max<0.634
+                         certified, joint > 1 under conservative bookkeeping
+                         (THIN). scscope_quartic_certificate.py 5/5.
+Reproduction command:    python codes/vacuum/scscope_quartic_certificate.py
+Expected output:         5/5; Parseval ratio 1.0000; R_max 0.385<0.634; joint
+                         x1.040(cons)..x1.082(ver).
+Falsification gate:      Parseval ratio != 1 (factor-2 convention), or a tighter
+                         sunset accounting lowering the joint below 1; not
+                         observed.
+Tier before / after:     NO flip enacted. SC-SCOPE endpoint closure CERTIFIED
+                         (thin); presented for operator re-examination of the
+                         lift. B1 T6 on {H-LAYER, SC-SCOPE} unchanged; B5 T5.
+No-overclaim statement:  The closure is THIN (x1.04 worst case) and the lift is
+                         NOT enacted -- it is presented for operator decision per
+                         the standing instruction. Every input is certified, but
+                         the operator authorises the gate flip.
+Next required action:    Operator: re-examine the SC-SCOPE endpoint lift given the
+                         certified (thin) closure. If accepted, SC-SCOPE lifts,
+                         B1 -> {H-LAYER}.
+\end{verbatim}
+}
