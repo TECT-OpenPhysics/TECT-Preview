@@ -9,7 +9,7 @@
 
 **Falsifier.** An admissible competitor of the H-ADM-COH class with F_total <= F_total[R_H]; a near-gap section with the structural floor < 0; or the loss of the sole active named hypothesis {H-LAYER} (for the crystallographic lattice class; H-ADM-COH discharged + SC-SCOPE lifted@THIN-CERTIFIE…
 
-## ESTIMATOR-UPGRADE/  ·  17 proof units  ·  tier span T6
+## ESTIMATOR-UPGRADE/  ·  18 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -28,6 +28,7 @@
 | `res5-orderedbcc-parallel` | v1.0 | T6* | RES-5 is in the same strong-fluctuation regime (g=lam' B_d =1.03~1) that failed the ordered BCC. DIFFERENCE: the Reading-H leading selection dF^(2)=(… | ANALYTIC + EXECUTED (res5_orderedbcc_parallel… | The 2PI certificate must establish the higher-loop common-mode cancellation via a sign / … |
 | `res5-sunset-selfenergy-norm-certificate` | v1.1 | T6* | ACCEPTED: the a0-skeleton c a0 ~ 0.002 double-counted a0; the certificate quantity is \|Delta Gamma_2^pd\|/Delta F_margin, leading value = SC-SCOPE joi… | ANALYTIC (correction + slack arithmetic) + EX… | res5-tail-budget-closure: prove the normalization identity and a tail budget C_higher < D… |
 | `res5-susceptibility-ratio-bareroute` | v1.0 | T6* | The bare Gaussian-sea ratio chi^(3)/chi^(2) ~ 4 int G^3/ int G^2 = 9.05 > 1/(2a0) = 5.23, so r_2(bare) = 0.866 > 1/2: the bare-susceptibility geometr… | ANALYTIC + EXECUTED (res5_susceptibility_rati… | Construct the all-order common-mode subtraction explicitly (the connected pattern-depende… |
+| `res5-tail-budget-closure` | v1.0 | T6* | The higher-skeleton tail budget C_higher < Delta F_margin - C_leading is quantified across the three certified intensities by C_higher/Delta F_margin… | ANALYTIC (scaling) + EXECUTED (res5_tail_budg… | A single rigorous endpoint bound C_higher <= C \|\|F\|\|^2 with C below the slack (genuine 2P… |
 | `twoshell-anchored-bracket` | v1.0 | — | At r_bare=0.219, the anchored two-shell {110}+{200} free energy dF_anchored = dF_diag + (F_exact - F_diag_basis) has min over (A1,A2)!=(0,0) = +6.7e-… | EXECUTED (twoshell_anchored_bracket.py 7/7); … | Curvature-chord continuum bound on the exact anchored bulk surface (finer exact scan); th… |
 | `twoshell-continuum-bound` | v1.0 | — | At r_bare=0.219 (B1): the diagonal-continuum two-shell {110}+{200} free energy, M-minimised, has min over (A1,A2)!=(0,0) = +3.9e-5 > 0, a 2D curvatur… | EXECUTED (twoshell_continuum_bound.py 10/10) … | Exact-Wick bracket continuum bound at r=0.219 (the slogdet engine), then ESTIMATOR-UPGRAD… |
 
@@ -64,4 +65,4 @@
 | `neargap-protection-lemma` | v1.0 | T6* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T6* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-09T11:35:02Z by build_index.py v1.0.0 -->
+<!-- generated 2026-06-09T14:29:59Z by build_index.py v1.0.1 -->

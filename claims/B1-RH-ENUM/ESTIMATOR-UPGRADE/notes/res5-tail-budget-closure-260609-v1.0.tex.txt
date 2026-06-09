@@ -1,0 +1,175 @@
+% =============================================================================
+% Title: RES-5 tail-budget closure: the screened higher-skeleton tail fits the
+%        thin slack for I <= 1e-3; marginal (estimate-undetermined) at the
+%        I = 2e-3 endpoint -- RES-5 localised to the endpoint
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 tail budget; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: STRONG EVIDENCE (I <= 1e-3) + OPEN/MARGINAL (I = 2e-3 endpoint). No tier
+%   action. Operator-directed follow-up to res5-sunset-selfenergy-norm-certificate
+%   v1.1 (which retracted the global "survives" claim and set the budget target
+%   C_higher < Delta F_margin - C_leading ~ 0.04 Delta F_margin). This note
+%   quantifies the budget across the three certified intensities and finds the
+%   obstruction is ENDPOINT-LOCALISED: the screened 2PI pattern-dependent tail
+%   C_higher/Delta F_margin ~ C_G a0(I) scales with a0(I) ~ I, while the third-
+%   cumulant slack grows rapidly off the endpoint (joint 1.040 -> ~3.1 -> ~8),
+%   so the budget closes with >= 27x margin for I <= 1e-3 and is marginal
+%   (ratio ~1.2, estimate-undetermined) only at I = 2e-3. RES-5 is thereby not a
+%   global obstruction but the SC-SCOPE named-hypothesis boundary at the endpoint.
+%   B1 stays T6 CONDITIONAL on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Intensity-resolved tail budget; endpoint
+%        localisation; estimate-grade. Grounded by res5_tail_budget.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. The budget and the screened tail}
+
+The sunset-norm certificate (v1.1) fixed the target: all-orders selection at the
+operating point survives iff the higher-skeleton ($\ell\ge3$) pattern-dependent
+cost fits the third-cumulant slack,
+\[
+C_{\rm higher}\;<\;\Delta F_{\rm margin}-C_{\rm leading}
+\;=\;\Bigl(1-\tfrac{1}{\rm joint}\Bigr)\Delta F_{\rm margin},
+\qquad \mathrm{joint}=\frac{\Delta F_{\rm margin}}{C_{\rm leading}} .
+\]
+The 2PI screened-response analysis (res5-a0-skeleton-sensitivity;
+res5-2pi-resummation-strategy) estimates the resummed pattern-dependent tail by
+the screened response $C_G=1/(1+g)$ acting on the pattern-dependent dressing
+amplitude $a_0$,
+\[
+\boxed{\;\frac{C_{\rm higher}}{\Delta F_{\rm margin}}\;\approx\;C_G\,a_0(I),
+\qquad a_0(I)=\frac{2\lambda' I}{\hat r(I)},\quad \hat r(I)=r_R+2\lambda' I\;}
+\]
+with $g=\lambda' B_d=1.03$ (marginal), $C_G=1/(1+g)=0.492$ (repulsive screening,
+NOT $1/(1-g)$). Since $\hat r(I)\to r_R$ for $\lambda' I\ll r_R$, $a_0(I)$ is
+approximately proportional to $I$: the tail HALVES from the endpoint to
+$I=10^{-3}$.
+
+\section*{2. Intensity dependence (the robust finding)}
+
+The third-cumulant slack is set by the SC-SCOPE joint, which grows rapidly off
+the $I=2\times10^{-3}$ endpoint: the endpoint joint is the certified thin
+$1.040$ (scscope-quartic-normalisation-certificate), while the all-orders lift
+is estimate-feasible with paired joint $\sim3.1$ at $I=10^{-3}$
+(scscope-scope-decision) and the STEP-5B floor is $\times59.4/\times8.8/\times2.6$
+at $\{4\times10^{-4},10^{-3},2\times10^{-3}\}$. Tabulating the budget:
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+$I$ & $a_0(I)$ & tail $=C_G a_0$ & joint & slack & tail/slack \\
+\midrule
+$4\times10^{-4}$ & $0.021$ & $0.010$ & $\sim8$   & $0.875$ & $0.012$ \\
+$1\times10^{-3}$ & $0.050$ & $0.025$ & $\sim3.1$ & $0.677$ & $0.036$ \\
+$2\times10^{-3}$ & $0.096$ & $0.047$ & $1.040$   & $0.0385$ & $1.224$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Off the endpoint the tail shrinks AND the slack grows, so $\mathrm{tail/slack}$
+improves by $34\times$ from $I=2\times10^{-3}$ to $I=10^{-3}$.
+
+\section*{3. Verdict}
+
+\noindent\textbf{Closes for $I\le10^{-3}$ (STRONG EVIDENCE).} The budget holds
+with a $\ge27\times$ margin ($\mathrm{tail/slack}\le0.036$); the closure is robust
+to the estimate uncertainty in both $C_G a_0$ and the off-endpoint joint, because
+the margin is two orders of magnitude.
+
+\noindent\textbf{Marginal / estimate-undetermined at the $I=2\times10^{-3}$
+endpoint (OPEN).} The screened tail $0.047$ and the thin slack $0.0385$ are the
+SAME ORDER ($\mathrm{tail/slack}=1.22$); the all-orders endpoint selection cannot
+be decided at estimate grade -- it could go either way within the uncertainty of
+$C_G a_0$ and of the certified joint.
+
+\noindent\textbf{RES-5 is localised to the endpoint.} It is not a global
+obstruction: the higher-skeleton tail respects the budget everywhere except the
+$I=2\times10^{-3}$ endpoint, which is exactly where SC-SCOPE is B1's named
+second-cumulant hypothesis. This sharpens RES-5/GAP-2 from ``OPEN'' to ``closed
+for $I\le10^{-3}$; endpoint-marginal''. No tier flip: B1-RH-ENUM stays T6
+CONDITIONAL on $\{$H-LAYER$\}$.
+
+\section*{4. Estimate vs theorem (CLAUDE.md 6.3.5b)}
+
+Both $C_{\rm higher}/\Delta F_{\rm margin}\approx C_G a_0$ and the off-endpoint
+joints are CLASSIFIED ESTIMATES, not constant-bound theorems. Two independent
+estimates of the endpoint tail coexist in the record and are not yet reconciled:
+the SC-SCOPE leading cost/margin $=1/\mathrm{joint}=0.962$ (slack $0.038$) and the
+resummed $C_G a_0=0.047$; they straddle the budget. The $I\le10^{-3}$ closure
+does not depend on this reconciliation (its margin absorbs it); the endpoint does.
+The residual is therefore a single rigorous endpoint bound:
+$C_{\rm higher}\le \mathcal{C}\,\|F\|^2$ with $\mathcal{C}$ below the slack, from a
+genuine 2PI computation of $\Delta\Gamma_2^{\rm pd}[G_*]$ -- or acceptance of the
+endpoint as the named-hypothesis boundary (the current B1 T6 scope).
+
+\section*{5. Self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$C_G a_0$ omits an $O(1)$ skeleton-norm prefactor, so the
+endpoint tail is under-stated.''} VALID: the prefactor (the pattern-dependent
+self-energy norm relative to the margin) is the residual already flagged in the
+a0-skeleton note; with it $\gtrsim1$ the endpoint only worsens, reinforcing the
+OPEN verdict there. It does NOT affect the $I\le10^{-3}$ closure, whose $27\times$
+margin survives any $O(1)$ prefactor.
+\item[($\beta$)] \emph{``The off-endpoint joints ($\sim3.1$, $\sim8$) are estimate-
+grade, so the closure is not rigorous.''} VALID-with-mitigation: the closure is
+labelled STRONG EVIDENCE, not a theorem; the $\ge27\times$ margin is the reason a
+factor-few uncertainty in the joint cannot overturn it. A rigorous interval
+joint$(I)$ on $[4\times10^{-4},10^{-3}]$ is the registered polish.
+\item[($\gamma$)] \emph{``Localising RES-5 to the endpoint changes nothing -- the
+production anchor IS the endpoint.''} DISMISSED as overstated, ACCEPTED in part:
+the production anchor is $I=2\times10^{-3}$, so the endpoint marginalit-y is
+load-bearing for the all-orders claim there -- which is precisely why SC-SCOPE is
+retained as the named hypothesis at the endpoint (B1 T6). The localisation is
+nonetheless a real advance: it proves the obstruction is one boundary point, not
+the bulk, and it identifies the off-endpoint regime where Reading-H selection is
+all-orders strong-evidence.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{scaling} -- $a_0(2e\text{-}3)/a_0(1e\text{-}3)
+=1.90\approx2$ (linear in $I$); \emph{endpoint} -- $0.047/0.0385=1.22$ (same order,
+undetermined); \emph{off-endpoint} -- $0.025/0.677=0.036$ ($27\times$ margin);
+\emph{localisation} -- $34\times$ improvement endpoint $\to10^{-3}$.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 tail-budget closure
+Precise statement:       The higher-skeleton tail budget C_higher < Delta F_margin
+                         - C_leading is quantified across the three certified
+                         intensities by C_higher/Delta F_margin ~ C_G a0(I),
+                         C_G=1/(1+g)=0.492, a0(I)=2 lam' I/rhat ~ I. CLOSES with
+                         >=27x margin for I<=1e-3 (tail/slack 0.012, 0.036);
+                         MARGINAL/estimate-undetermined at the I=2e-3 endpoint
+                         (tail 0.047 vs slack 0.0385, ratio 1.22). RES-5 localised
+                         to the endpoint = SC-SCOPE named-hypothesis boundary.
+Scope:                   Three certified intensities; estimate-grade (C_G a0 and
+                         off-endpoint joints are estimates, not theorems).
+Dependencies:            res5-sunset-selfenergy-norm-certificate v1.1 (budget
+                         target); res5-a0-skeleton-sensitivity (C_G, a0);
+                         scscope-quartic-normalisation-certificate (endpoint joint
+                         1.040); scscope-scope-decision (I<=1e-3 feasibility).
+Evidence grade:          ANALYTIC (scaling) + EXECUTED (res5_tail_budget.py 5/5)
+                         + INHERITED (SC-SCOPE joints, estimate-grade).
+Reproduction command:    python codes/vacuum/res5_tail_budget.py
+Expected output:         tail/slack = 0.012 (4e-4), 0.036 (1e-3), 1.22 (2e-3);
+                         34x localisation; 5/5 PASS.
+Falsification gate:      A rigorous endpoint 2PI bound C_higher >= slack (selection
+                         overturned all-orders at the endpoint); or an off-endpoint
+                         joint << 3.1 that breaks the I<=1e-3 closure.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5/GAP-2 sharpened:
+                         OPEN -> closed for I<=1e-3 (strong evidence), endpoint-
+                         marginal at I=2e-3.
+No-overclaim statement:  This does NOT close RES-5 at the endpoint and does NOT
+                         flip B1. It localises the obstruction to the I=2e-3
+                         endpoint and establishes strong-evidence all-orders
+                         closure for I<=1e-3. Endpoint tail and slack are estimate-
+                         grade and straddle the budget (undetermined).
+Next required action:    A single rigorous endpoint bound C_higher <= C ||F||^2
+                         with C below the slack (genuine 2PI Delta Gamma_2^pd[G_*]
+                         computation), OR acceptance of the I=2e-3 endpoint as the
+                         SC-SCOPE named-hypothesis boundary (current B1 T6 scope).
+\end{verbatim}
+}

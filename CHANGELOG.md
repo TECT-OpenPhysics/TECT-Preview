@@ -5,6 +5,13 @@ not pillar counts.
 
 ---
 
+## [RES-5 tail-budget closure: higher-skeleton tail fits the thin slack for I<=1e-3; endpoint-marginal at I=2e-3 (RES-5 localised)] - 2026-06-09
+
+- **Operator-directed mainline** (follow-up to certificate v1.1's budget target C_higher < Delta F_margin - C_leading ~ 0.04 Delta F_margin). NEW note `res5-tail-budget-closure v1.0` + `codes/vacuum/res5_tail_budget.py` (5/5) + runs/.
+- The screened 2PI pattern-dependent tail is C_higher/Delta F_margin ~ C_G a0(I), C_G=1/(1+g)=0.492, a0(I)=2 lam' I/rhat ~ I (halves off the endpoint). The third-cumulant slack grows off the endpoint (joint 1.040 -> ~3.1 -> ~8).
+- **Result**: tail/slack = 0.012 (I=4e-4), 0.036 (I=1e-3), 1.22 (I=2e-3). The budget CLOSES with >=27x margin for I<=1e-3 (STRONG EVIDENCE) and is MARGINAL/estimate-undetermined only at the I=2e-3 endpoint. RES-5 localised to the endpoint = SC-SCOPE named-hypothesis boundary (34x improvement endpoint -> 1e-3).
+- **No tier flip** (B1 T6 on {H-LAYER}). RES-5/GAP-2 sharpened: OPEN -> closed for I<=1e-3 (strong evidence), endpoint-marginal at I=2e-3. Estimate-grade (C_G a0 + off-endpoint joints are estimates). Residual: a single rigorous endpoint 2PI bound below the slack, or accept the endpoint as the named-hypothesis boundary.
+
 ## [Cross-OS index determinism fix: sort proof-unit folders by name, not Path object (Windows case-folding)] - 2026-06-09
 
 - **Root cause of the Windows `release_check [index] STALE` block.** `sorted(dir.iterdir())` sorts `Path` objects; `WindowsPath` compares case-INsensitively while `PosixPath` is case-sensitive. B1-RH-ENUM's five mixed-case sub-proof folders (`ESTIMATOR-UPGRADE`, `ROBUSTNESS-MU2`, `Reading-H`, `enumerated`, `near-gap`) therefore ordered differently on Windows vs Linux -> different `claims/INDEX.md` + `claims/B1-RH-ENUM/INDEX.md` content -> STALE only across OS. The renderer was otherwise deterministic (`norm()` strips the timestamp).
