@@ -1,0 +1,157 @@
+% =============================================================================
+% Title: RES-5 susceptibility-ratio: the bare-ratio route FAILS (strong coupling);
+%        the residual is the common-mode-subtracted susceptibility bound
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 susceptibility-ratio analysis; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 / HONEST NEGATIVE on a route. Evaluates the operator-proposed
+%   bare-ratio bound chi^(k+1)/chi^(k) < 1/(2 a0) ~ 5.2 and finds it FAILS at the
+%   base order: chi^(3)/chi^(2) ~ 4 int G^3/int G^2 = 9.05 > 5.23, so r_2(bare) =
+%   a0*9.05 = 0.866 > 1/2. The Brazovskii sea is strongly fluctuating (bare
+%   ratios int G^(n+1)/int G^n -> 1/r_hat ~ 2.5, growing). This does NOT refute
+%   RES-5: it shows the closure must use the COMMON-MODE-SUBTRACTED (pattern-
+%   dependent) susceptibilities -- the bare common part cancels in the selection
+%   difference (SC-SCOPE measured the subtracted n=3 at ~4%, not the bare 9.05).
+%   The elementary bare-ratio route is ELIMINATED; the genuine residual is the
+%   subtracted-susceptibility bound (a strong-coupling computation). No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Bare chi^(3)/chi^(2)=9.05>5.23 (route fails);
+%        strong-coupling ratios ~1/r_hat; the common-mode-subtraction reframe;
+%        the residual sharpened. Grounded by res5_susceptibility_ratio.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The all-order reduction (res5-allorder-commonmode-bound) gave the closure
+condition $r_k = a_0\,\chi^{(k+1)}/\chi^{(k)} < \tfrac12$, equivalently
+$\chi^{(k+1)}/\chi^{(k)} < 1/(2a_0)\simeq5.2$. The operator directed bounding this
+ratio. This note evaluates it at the base order and reports an HONEST NEGATIVE on
+the BARE-susceptibility route, with the reframe that the closure must use the
+common-mode-subtracted susceptibilities. Scope: the base-order bare ratio and the
+strong-coupling diagnosis; anchor $\mu^2$, operating endpoint.
+
+\section*{2. The bare ratio fails at the base order}
+
+The Gaussian-sea density susceptibilities are $\chi^{(2)}\sim 2\!\int G^2$,
+$\chi^{(3)}\sim 8\!\int G^3$ (leading ring), so
+\[
+\frac{\chi^{(3)}}{\chi^{(2)}} \sim 4\,\frac{\int G^3}{\int G^2} = 9.05
+\quad>\quad \frac{1}{2a_0} = 5.23,
+\qquad
+r_2(\text{bare}) = a_0\cdot 9.05 = 0.866 > \tfrac12.
+\]
+(The combinatorial factor $4$ is cumulant-convention-dependent; even at half this
+value $r_2$ is marginal, and the qualitative conclusion is robust.) The geometric
+domination BREAKS at the base order if the BARE susceptibilities are used.
+
+\section*{3. The sea is strongly fluctuating (the cause)}
+
+The bare ratios grow:
+\[
+\frac{\int G^{n+1}}{\int G^n}\ \xrightarrow{n}\ \frac{1}{\hat r}\approx 2.5,
+\]
+so the bare cumulants increase $\sim(1/\hat r)^n$ -- the Brazovskii sea is
+strongly fluctuating (as expected: Brazovskii is a fluctuation-driven
+first-order transition). A bare-susceptibility geometric bound therefore cannot
+hold; the bare series is asymptotic / strong-coupling.
+
+\section*{4. Reconciliation and the reframe (this does NOT refute RES-5)}
+
+This is consistent with SC-SCOPE's $n=3$ thin endpoint ($\sim4\%$): SC-SCOPE
+measured the pattern-dependent DIFFERENCE
+$\Delta F^{(3)}=F^{(3)}[\mathcal P]-F^{(3)}[\mathcal R_H]$ (common-mode
+subtracted), which is $\sim4\%\ll r_2(\text{bare})=0.866$. The strong common-mode
+part $F^{(n)}_{\rm cm}(D_0)$ cancels in the difference; only the $a_0$-suppressed
+pattern-dependent residual survives. Therefore the closure condition must be
+stated on the SUBTRACTED susceptibilities,
+\[
+r_k = a_0\,\frac{\chi_{\rm pd}^{(k+1)}}{\chi_{\rm pd}^{(k)}} < \tfrac12,
+\qquad
+\chi_{\rm pd}^{(k)} = \chi^{(k)} - \chi^{(k)}_{\rm cm},
+\]
+NOT the bare $\chi^{(k)}$. The bare route is eliminated; bounding the SUBTRACTED
+ratio (after the explicit all-order common-mode subtraction) is the genuine
+residual.
+
+\section*{5. Status and the sharpened residual}
+
+\textbf{T3 / HONEST NEGATIVE on the bare route.} Established: the bare ratio
+$\chi^{(3)}/\chi^{(2)}=9.05>5.23$ fails; the sea is strong-coupling; the closure
+requires the common-mode-subtracted susceptibilities. \textbf{ELIMINATED:} the
+elementary bare-susceptibility geometric bound. \textbf{OPEN (sharpened
+residual):} the bound on the SUBTRACTED ratio
+$\chi_{\rm pd}^{(k+1)}/\chi_{\rm pd}^{(k)}$ -- a strong-coupling computation
+requiring the explicit all-order common-mode subtraction of the Brazovskii sea.
+No tier flip: B1-RH-ENUM T6 CONDITIONAL on $\{$H-LAYER$\}$. This is a genuine
+research frontier, not closeable by elementary susceptibility-ratio bounds.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The factor $4$ is convention-dependent -- maybe the bare
+ratio is actually $<5.2$.''} VALID-with-mitigation: at half the factor the bare
+$r_2\approx0.43$ is marginal ($<\tfrac12$ but no margin), and the
+strong-coupling GROWTH $\int G^{n+1}/\int G^n\to1/\hat r\approx2.5$ is
+convention-INDEPENDENT, so even if $n=3$ were marginal, higher $n$ would breach.
+The bare route is at best marginal and asymptotically fails.
+\item[($\beta$)] \emph{``Then the previous reduction note was wrong.''} PARTIALLY:
+the reduction's STRUCTURE (geometric domination of $r_k$) is correct, but the
+$\chi$ in it must be the SUBTRACTED susceptibility, not the bare one -- this note
+supplies that essential qualification. Not a retraction; a sharpening.
+\item[($\gamma$)] \emph{``Does this refute RES-5 or B1?''} DISMISSED: it
+eliminates one ROUTE (the bare-ratio bound) and sharpens the residual to the
+subtracted-susceptibility bound. B1 stays T6 on $\{$H-LAYER$\}$; no claim is
+withdrawn (none had been made that the bare ratio $<5.2$).
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{magnitude} -- bare
+$\chi^{(3)}/\chi^{(2)}=9.05>5.23$ (fails); \emph{growth} -- $\int G^{n+1}/\int G^n
+=1.32/2.26/2.51\to1/\hat r=2.97$ (strong-coupling, convention-free);
+\emph{consistency} -- SC-SCOPE subtracted $n=3\sim4\%\ll$ bare $0.866$ (confirms
+the subtraction is essential); \emph{sign} -- the bare cumulants are positive and
+growing, so the bare geometric tail diverges -- only the subtraction saves it.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 susceptibility-ratio (bare route
+                         eliminated)
+Precise statement:       The bare Gaussian-sea ratio chi^(3)/chi^(2) ~ 4 int G^3/
+                         int G^2 = 9.05 > 1/(2a0) = 5.23, so r_2(bare) = 0.866 >
+                         1/2: the bare-susceptibility geometric-domination route
+                         FAILS. The bare ratios int G^(n+1)/int G^n -> 1/r_hat ~
+                         2.5 (strong-coupling). The closure must use the COMMON-
+                         MODE-SUBTRACTED susceptibilities chi_pd^(k) (SC-SCOPE's
+                         ~4% n=3 is the subtracted, not bare, value). Bare route
+                         eliminated; the subtracted-ratio bound is the residual.
+Scope:                   Base-order bare ratio + strong-coupling diagnosis; anchor
+                         mu^2, endpoint. Convention factor 4 flagged (growth is
+                         convention-free).
+Dependencies:            res5-allorder-commonmode-bound (the reduction);
+                         neargap-common-mode-resolution (the subtraction
+                         mechanism); SC-SCOPE (subtracted n=3); Math424-AddA.
+Evidence grade:          ANALYTIC + EXECUTED (res5_susceptibility_ratio.py 4/4).
+Reproduction command:    python codes/vacuum/res5_susceptibility_ratio.py
+Expected output:         bare chi3/chi2 = 9.05 > 5.23; r2_bare = 0.866; growth ->
+                         2.5; 4/4 PASS.
+Falsification gate:      A correct cumulant normalisation giving the bare ratio <
+                         5.2 with the growth bounded (would revive the bare route);
+                         or a subtracted-susceptibility bound chi_pd^(k+1)/
+                         chi_pd^(k) < 5.2 (would close RES-5).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5: bare-ratio route
+                         ELIMINATED; residual sharpened to the subtracted-
+                         susceptibility bound (strong-coupling).
+No-overclaim statement:  This eliminates the bare-ratio ROUTE (honest negative);
+                         it does NOT refute RES-5 or B1, and does NOT close RES-5.
+                         The genuine residual -- the common-mode-subtracted
+                         susceptibility bound for the strongly-fluctuating
+                         Brazovskii sea -- is a research-grade strong-coupling
+                         problem. B1 stays T6 on {H-LAYER}.
+Next required action:    Construct the all-order common-mode subtraction explicitly
+                         (the connected pattern-dependent susceptibilities) and
+                         bound chi_pd^(k+1)/chi_pd^(k); this is the genuine RES-5
+                         frontier and warrants a focused effort.
+\end{verbatim}
+}

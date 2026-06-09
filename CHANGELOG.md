@@ -5,6 +5,35 @@ not pillar counts.
 
 ---
 
+## [RES-5 framing correction: one-loop is exact; RES-5 is the loop expansion (T3, self-caught)] - 2026-06-09
+
+- **Self-caught conflation** while attempting the subtracted-susceptibility bound. CORRECTION: the bare
+  chi^(k) ~ int G^k (bare-route note) are the condensate-expansion COEFFICIENTS of the EXACT one-loop log-det
+  F_1loop = (1/2)Tr ln(D_0 + lam'P^2), which converges (avg self-energy a0/2=0.048; peak N^2-node 0.574<1), NOT the
+  loop expansion. The bare-ratio "failure" (chi3/chi2=9.05) does NOT bear on RES-5 -- a category error (one does
+  not expand an exactly-summed quantity). NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/
+  res5-oneloop-loop-disentangling v1.0` (PDF FORM-CHECK PASS) + `codes/vacuum/res5_oneloop_disentangle.py` (3/3) +
+  `runs/`; negative-results NG-2026-06-09 annotated.
+- **Corrected residual map**: RES-5 (matched-order-to-exact) = the LOOP expansion (2-loop+ = sunset and higher);
+  SC-SCOPE third cumulant = the two-loop (~4%, thin); the genuine residual = the higher-loop DIFFERENCE, common-mode
+  + a0 controlled (the SC-SCOPE programme extended via Brazovskii-sea loop resummation). No tier flip (B1 T6 on
+  {H-LAYER}; no claim withdrawn). The devil's-advocate discipline caught the conflation. lint PASS (29),
+  release_check PASS.
+
+## [RES-5 susceptibility-ratio: bare route ELIMINATED (honest negative, T3)] - 2026-06-09
+
+- **Operator-directed bound on chi^(k+1)/chi^(k) < 5.2.** HONEST NEGATIVE: the BARE ratio FAILS. NEW note
+  `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-susceptibility-ratio-bareroute v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_susceptibility_ratio.py` (4/4) + `runs/`; negative-results NG-2026-06-09-res5-bare-susceptibility-ratio.
+- The bare Gaussian-sea ratio chi^(3)/chi^(2) ~ 4 int G^3/int G^2 = 9.05 > 1/(2a0) = 5.23, so r_2(bare) = a0*9.05 =
+  0.866 > 1/2: the bare-susceptibility geometric-domination route BREAKS at the base order. The bare ratios
+  int G^(n+1)/int G^n -> 1/r_hat ~ 2.5 (strong-coupling, growing) -- the Brazovskii sea is strongly fluctuating.
+- **Reconciliation / reframe** (NOT a refutation): SC-SCOPE's n=3 ~4% is the COMMON-MODE-SUBTRACTED (pattern-
+  dependent) difference, not the bare chi^(3)=9.05*chi^(2). The strong common part cancels in the difference; the
+  closure must use chi_pd^(k) (subtracted), not bare. The bare route is ELIMINATED; the subtracted-susceptibility
+  bound (a strong-coupling computation) is the genuine residual. No tier flip (B1 T6 on {H-LAYER}; no claim
+  withdrawn). lint PASS (29), release_check PASS.
+
 ## [RES-5 all-order reduction: closure <=> geometric domination, base x5 inside (T3)] - 2026-06-09
 
 - **Operator all-order 3-goal programme** (the split; the per-order O(a0) bound; the summed series, C_cm<10.4).

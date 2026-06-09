@@ -1,0 +1,150 @@
+% =============================================================================
+% Title: RES-5 framing correction: the one-loop is exact in the condensate; RES-5
+%        is the loop expansion -- the bare-ratio "failure" was a conflation
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 framing correction; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 / FRAMING CORRECTION (self-caught). The bare-route note
+%   (res5-susceptibility-ratio-bareroute) computed chi^(k) ~ int G^k and read
+%   their growth as a RES-5 obstruction. CORRECTION: those chi^(k) are the
+%   condensate-expansion COEFFICIENTS of the EXACT one-loop log-det
+%   F_1loop = (1/2)Tr ln(D_0 + lam'P^2), which converges (peak node self-energy
+%   0.574 < 1) -- the one-loop selection margin Delta F^(2) is EXACT in the
+%   condensate. RES-5 (matched-order-to-exact) is the LOOP expansion (2-loop+ =
+%   sunset and higher), of which SC-SCOPE's third cumulant is the two-loop. The
+%   bare-ratio "failure" did not bear on RES-5. The corrected residual is the
+%   higher-loop DIFFERENCE, common-mode + a0 controlled. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. One-loop exactness + condensate-expansion
+%        convergence (peak 0.574<1); the bare-chi-are-one-loop-coefficients
+%        correction; RES-5 = loop expansion; the corrected residual. Grounded by
+%        res5_oneloop_disentangle.py 3/3. Self-caught conflation.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+While attempting the subtracted-susceptibility bound, a conflation in the
+preceding RES-5 notes was caught and is corrected here: the bare susceptibilities
+$\chi^{(k)}\sim\int G^k$ are NOT the loop expansion -- they are the
+condensate-expansion coefficients of the EXACT one-loop free energy. This note
+disentangles the two expansions, locates RES-5 correctly (the loop expansion), and
+restates the residual. Scope: framing correction; anchor $\mu^2$, endpoint.
+
+\section*{2. The one-loop is exact in the condensate}
+
+The Gaussian (one-loop) free energy in the condensate background is the log-det
+\[
+F_{\rm 1loop}[\mathcal P] = \tfrac12\,\mathrm{Tr}\,\ln\!\big(D_0(I) + \lambda'\mathcal P^2\big),
+\]
+which is SUMMED EXACTLY in the condensate; the selection margin
+$\Delta F^{(2)} = F_{\rm 1loop}[\mathcal P]-F_{\rm 1loop}[\mathcal R_H]$ is therefore
+exact at one-loop. Its condensate expansion
+$\tfrac12\mathrm{Tr}\sum_{k\ge1}\frac{(-1)^{k-1}}{k}(\lambda'\mathcal P^2 D_0^{-1})^k$
+has coefficients $\propto\int G^k$ and converges: the self-energy norm is
+$a_0/2 = \lambda' I/\hat r = 0.048$ on average and $\lambda' I N/\hat r = 0.574 < 1$
+at the $N^2$-enhanced constructive node,
+\[
+\Big\|\lambda'\langle\mathcal P^2\rangle D_0^{-1}\Big\|_{\rm avg}=0.048,
+\qquad
+\Big\|\lambda'\mathcal P^2 D_0^{-1}\Big\|_{\rm node}=0.574<1,
+\]
+so the expansion converges everywhere (even at the node). The growth
+of $\int G^{k+1}/\int G^k\to1/\hat r$ is just the finite radius $\hat r$, NOT a
+divergence.
+
+\section*{3. The bare-ratio "failure" was a conflation}
+
+The bare-route note read $\chi^{(3)}/\chi^{(2)}=9.05$ (a condensate-expansion
+coefficient ratio of the EXACT one-loop) as an all-order RES-5 obstruction. That
+is a category error: the one-loop is exact, so its condensate-expansion
+coefficients carry no RES-5 information -- one does not expand a quantity that is
+computed exactly. The NG-2026-06-09 entry is hereby annotated: the eliminated
+"bare-ratio route" was conflated; it does not constrain RES-5.
+
+\section*{4. RES-5 is the loop expansion (the corrected residual)}
+
+Matched-order-to-exact (RES-5) is the LOOP expansion BEYOND the Gaussian: the
+two-loop (sunset), three-loop, etc. -- the genuine fluctuation interactions. Of
+these:
+\begin{itemize}
+\item the \textbf{two-loop} difference is SC-SCOPE's third cumulant, found thin
+($\sim4\%$, endpoint $\times1.04$);
+\item the \textbf{higher loops} are the residual.
+\end{itemize}
+The common-mode cancellation (the strong common-sea loops cancel in the
+difference) and the $a_0$ suppression of the pattern-dependent part still apply --
+but now correctly to the LOOP-expansion difference, not the condensate expansion.
+The residual is therefore: bound the higher-loop DIFFERENCE
+$\Delta F^{(\ell\text{-loop})}$, $\ell\ge3$, controlled by common-mode $+\,a_0$ --
+the SC-SCOPE programme extended to higher loops, via resummation of the
+strongly-fluctuating Brazovskii sea.
+
+\section*{5. Status}
+
+\textbf{T3 / FRAMING CORRECTION.} The one-loop margin is exact; the bare-ratio
+route was a conflation (does not bear on RES-5); RES-5 is the loop expansion
+(SC-SCOPE two-loop done, higher loops the residual). No tier flip: B1-RH-ENUM T6
+CONDITIONAL on $\{$H-LAYER$\}$. \textbf{Corrected residual:} the higher-loop
+difference bound (common-mode $+\,a_0$ controlled), a dedicated strong-coupling
+loop-resummation problem -- not closeable by the elementary condensate-expansion
+or susceptibility-ratio attempts of this session.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You flip-flopped -- first the bare route failed, now it is
+irrelevant.''} CORRECT and that is the value: the bare-route note's diagnosis (the
+$\chi^{(k)}$ are strong-coupling) was right, but its CONCLUSION (RES-5 obstruction)
+conflated the condensate expansion with the loop expansion. Catching and
+correcting this is the devil's-advocate discipline working, not a defect hidden.
+\item[($\beta$)] \emph{``Is the one-loop really exact?''} YES: a Gaussian (one-loop)
+free energy is a determinant, computed exactly for a fixed background; the
+condensate-expansion convergence (peak $0.574<1$) confirms it is well-defined. The
+genuine non-perturbative content is the loop expansion.
+\item[($\gamma$)] \emph{``Does this change B1's status?''} DISMISSED: no -- it
+corrects the residual MAP (RES-5 = loop expansion), not any tier. B1 stays T6 on
+$\{$H-LAYER$\}$; no claim withdrawn.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{convergence} -- node self-energy
+$0.574<1$ (one-loop expansion converges); \emph{average} -- $a_0/2=0.048$ (weak on
+average); \emph{growth} -- $\int G^{k+1}/\int G^k\to1/\hat r=2.97$ (the finite
+radius, not a divergence); \emph{consistency} -- SC-SCOPE two-loop $\sim4\%$ is the
+genuine RES-5 (loop) datum, far from the spurious bare $9.05$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 one-loop vs loop-expansion disentangling
+Precise statement:       F_1loop=(1/2)Tr ln(D_0+lam'P^2) is EXACT in the condensate
+                         (expansion converges: avg self-energy a0/2=0.048, peak
+                         node lam'IN/rhat=0.574<1). The bare chi^(k)~int G^k are
+                         its condensate-expansion coefficients, NOT the loop
+                         expansion -- the bare-ratio "failure" (chi3/chi2=9.05) was
+                         a conflation. RES-5 = the LOOP expansion (2-loop+);
+                         SC-SCOPE third cumulant = the two-loop (~4%); the residual
+                         is the higher-loop difference (common-mode + a0).
+Scope:                   Framing correction; anchor mu^2, endpoint.
+Dependencies:            res5-susceptibility-ratio-bareroute (corrected here);
+                         SC-SCOPE (two-loop); Math424-AddA.
+Evidence grade:          ANALYTIC + EXECUTED (res5_oneloop_disentangle.py 3/3).
+Reproduction command:    python codes/vacuum/res5_oneloop_disentangle.py
+Expected output:         selfE_avg=0.048, peak node 0.574<1; 3/3 PASS.
+Falsification gate:      A node self-energy >= 1 (one-loop expansion would diverge);
+                         or a demonstration that the loop expansion (not the
+                         condensate expansion) reduces to the bare chi^(k) ratio.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5 residual MAP
+                         corrected: loop expansion (higher loops), not the bare
+                         condensate-expansion ratio. NG-2026-06-09 annotated.
+No-overclaim statement:  This corrects a framing conflation; it does NOT close
+                         RES-5 and does NOT change B1's tier. The corrected
+                         residual (higher-loop difference, common-mode + a0) is a
+                         dedicated strong-coupling loop-resummation problem.
+Next required action:    Treat the higher-loop difference directly (the SC-SCOPE
+                         two-loop programme extended): bound Delta F^(l-loop),
+                         l>=3, via common-mode cancellation + a0 suppression of the
+                         pattern-dependent part; resum the Brazovskii-sea loops.
+\end{verbatim}
+}

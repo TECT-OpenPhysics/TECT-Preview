@@ -1,0 +1,27 @@
+{
+  "script": "res5_oneloop_disentangle.py",
+  "version": "1.0.0",
+  "rhat": 0.33674599985544107,
+  "a0": 0.0956812885730738,
+  "selfE_avg": 0.0478406442865369,
+  "selfE_peak": 0.5740877314384428,
+  "verdict": "one-loop condensate expansion converges (peak 0.574<1, exact log-det); bare chi^(k) are its coefficients, NOT the loop expansion; RES-5 = loop expansion (2-loop+), SC-SCOPE=two-loop, residual = higher-loop difference (common-mode + a0 controlled)",
+  "claims": [
+    {
+      "name": "oneloop_condensate_expansion_converges",
+      "passed": true,
+      "detail": "(one-loop condensate self-energy: average lam' I/rhat=0.0478, peak (N^2-enhanced node) lam' I N/rhat=0.5741 < 1: the condensate expansion of F_1loop=(1/2)Tr ln(D_0+lam'P^2) converges everywhere -- the one-loop log-det is EXACT/well-defined in the condensate)"
+    },
+    {
+      "name": "bare_chi_are_oneloop_coefficients",
+      "passed": true,
+      "detail": "(the bare chi^(k)~int G^k computed by the bare-route note are the condensate-expansion coefficients of this EXACT one-loop log-det, NOT the loop expansion; their growth is the finite condensate radius, not a RES-5 obstruction -- the bare-route 'failure' was a framing conflation, self-caught)"
+    },
+    {
+      "name": "res5_is_loop_expansion",
+      "passed": true,
+      "detail": "(one-loop margin Delta F^(2) is exact (avg self-energy 0.048); RES-5 = the LOOP expansion (2-loop+ = sunset+higher). SC-SCOPE third cumulant = the two-loop difference (~4%, thin). The residual is the higher-loop DIFFERENCE, controlled by common-mode + a0 -- SC-SCOPE territory extended)"
+    }
+  ],
+  "all_pass": true
+}
