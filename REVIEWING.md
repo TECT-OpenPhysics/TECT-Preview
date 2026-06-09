@@ -3,7 +3,23 @@
 This repository is designed to be falsified efficiently. This page tells you
 where the weakest joints are and how to hit them.
 
-## 1. Validate the ledger (1 minute)
+## 1. The map — start here (2 minutes)
+
+```bash
+cat claims/INDEX.md            # the whole theory on one screen
+```
+
+`claims/INDEX.md` is the generated top-down map: the six sectors A–F, every
+claim with its tier, named hypotheses, and open gates, and — for the populated
+claims — its **sub-proofs with proof-unit counts**. Drill into any claim's
+`claims/<ID>/INDEX.md` for the per-proof-unit table: each note's Result ID, its
+current tier, the one-line statement of *what it proves*, its evidence grade,
+and the next required action. From a proof unit, open its note for the full
+argument and the reproduction command. The index is generated from the claim
+cards and the note footers by `verification/scripts/build_index.py`, so it never
+drifts from the record.
+
+## 2. Validate the ledger (1 minute)
 
 ```bash
 python verification/scripts/lint_claims.py
@@ -12,7 +28,7 @@ python verification/scripts/lint_claims.py
 Exit 0 means: every claim card parses, the dependency DAG is acyclic, and no
 claim overstates its tier relative to its dependencies and hypotheses.
 
-## 2. Read `CLAIMS.md` (5 minutes)
+## 3. Read `CLAIMS.md` (5 minutes)
 
 Every claim shows: tier, scope, evidence grade, open gates, and a falsifier.
 The tier vocabulary is in `governance/tier-system.md`. Two readings matter:
@@ -22,7 +38,7 @@ The tier vocabulary is in `governance/tier-system.md`. Two readings matter:
 - Anything at **T6** is a theorem *modulo named hypotheses*. The hypotheses are
   listed on the card. Attacking a hypothesis is attacking the claim.
 
-## 3. Known weakest joints (honest map)
+## 4. Known weakest joints (honest map)
 
 | Joint | Why it is weak | Where |
 |---|---|---|
@@ -30,9 +46,9 @@ The tier vocabulary is in `governance/tier-system.md`. Two readings matter:
 | **Estimator gap (GAP-2)** | Core $\Delta F$ results are estimator-grade without a controlled error bound $\varepsilon_{\rm ctrl}$. | `claims/B1-RH-ENUM` |
 | **Constants firewall (GAP-3)** | No constant is currently PREDICTED. Newton $G$ is a derived *relation* with a matched value — if you find a place where the repository says otherwise, that is a registry defect; please report it. | `claims/C5-NEWTON-G`, `predictions/` |
 | **Sector-D dependence on vacuum selection** | Gauge/matter topology results may depend on Reading-H; their tiers are capped while GAP-1 is open. | `claims/D2-GAUGE-FORCING` |
-| **Origin of $\hbar$** | Classical derivation routes are REFUTED (8 documented failures). The phase-transition programme is T2 conjecture-grade. | `claims/E3-HBAR-ORIGIN`, `negative-results/` |
+| **Origin of $\hbar$** | Classical derivation routes are REFUTED (8 documented failures). The phase-transition programme is T2 conjecture-grade. | `claims/E2-HBAR-ORIGIN`, `negative-results/` |
 
-## 4. How to falsify a specific claim
+## 5. How to falsify a specific claim
 
 Each `claims/<ID>/claim.md` carries a **Falsifier** section, e.g. for Reading-H:
 
@@ -45,13 +61,13 @@ claim is retired to `negative-results/registry.md` with credit. Reproduction
 commands and expected outputs are on the card; environment pinning is in
 `governance/verification-standard.md`.
 
-## 5. Reporting
+## 6. Reporting
 
 Open an issue (once the GitHub mirror is live) or write to the maintainer.
 Review rounds are archived under `reviews/` with verdicts; confirmed defects get
 errata under `reviews/errata/` linked to the claim ID.
 
-## 6. What you should NOT take at face value
+## 7. What you should NOT take at face value
 
 - Legacy evidence pointers (`legacy:` prefix) cite the pre-2026-06 corpus that
   has not yet been re-validated under this governance. Claims resting on them

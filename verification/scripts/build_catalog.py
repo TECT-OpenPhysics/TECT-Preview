@@ -74,6 +74,10 @@ def classify(rel: str) -> str:
         return "proof-note"
     if p.startswith("claims/") and "/runs/" in p:
         return "run-artefact"
+    if p.startswith("claims/") and p.endswith("INDEX.md"):
+        return "registry"
+    if p.startswith("claims/") and "SYNTHESIS" in p:
+        return "synthesis"
     if p.startswith("claims/"):
         return "registry" if p.endswith("GATES.md") else "claim-card"
     if p.startswith("theory/") and "synthesis" in p.lower():

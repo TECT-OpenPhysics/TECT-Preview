@@ -3,13 +3,15 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 8
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 10
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
+- **T-013** Author SYNTHESIS.tex.txt layer: per-sub-proof + claim-level synthesis (the parent 'jong-hap' proof) for B1/B2/B5, citing each sub-proof's notes at their tiers  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - _updated 2026-06-09_
 
 ## Backlog
 
@@ -43,3 +45,9 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 8
 - **T-010** ESTIMATOR-UPGRADE finish: extend the curvature-certified controlled-error bound to the two-shell ensemble + dI/amplitude-grid quadrature knobs  _(claim: B1-RH-ENUM; gate: ESTIMATOR-UPGRADE)_
   - DONE: single-shell knobs (ii)/(iii)+continuum (estimator-upgrade-knobs v1.0); two-shell (0,0) PD + diagonal global continuum no-condensate at the B1 point r=0.219 (twoshell-continuum-bound v1.0); EXACT-Wick anchored no-condensate at r=0.219 -- min +6.7e-4>0, bracket O(A^4) near origin (twoshell-anchored-bracket v1.0, 7/7). REMAINING (refinement only): a curvature-chord continuum bound on the exact anchored BULK surface (finer exact scan). Then ESTIMATOR-UPGRADE closure is an operator decision.
   - _updated 2026-06-08_
+- **T-011** Execute claims sub-proof reorg: move notes into sub-theorem folders + per-sub-proof/claim SYNTHESIS, per the confirmed taxonomy  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - claims-restructure-proposal-260609; tooling ready (build_index/lineage nesting-aware, os.replace moves work); BLOCKED on operator taxonomy confirmation (operator chose 'adjust taxonomy then execute')
+  - _updated 2026-06-09_
+- **T-012** Resolve B1/B5 SC-SCOPE chronicle duplicate via Windows-side Remove-Item  _(claim: B1-RH-ENUM)_
+  - sandbox cannot unlink; B5 copy canonical; DEFERRED per operator (deletions later)
+  - _updated 2026-06-09_

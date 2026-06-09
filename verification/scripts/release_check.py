@@ -63,6 +63,7 @@ def main():
     run("ledger", ["verification/scripts/lint_claims.py", "--render", "--check"], errors)
     run("catalog", ["verification/scripts/build_catalog.py", "--check"], errors)
     run("lineage", ["verification/scripts/build_lineage.py", "--check"], errors)
+    run("index", ["verification/scripts/build_index.py", "--check"], errors)
     run("todo", ["verification/scripts/todo.py", "--check"], errors)
 
     # 3. P0 fence

@@ -96,7 +96,7 @@ PREDICTED with a pre-registered freeze.
 
 **Status**: Higgs/EW scale T4 (`E1-HIGGS-EW`); origin of $\hbar$ — classical
 routes REFUTED (8 failed routes), phase-transition origin programme T2
-(`E3-HBAR-ORIGIN`); cosmological sector T4 programme (`F1-COSMO-DARK-SECTOR`).
+(`E2-HBAR-ORIGIN`); cosmological sector T4 programme (`F1-COSMO-DARK-SECTOR`).
 Prediction ledger seeded in `predictions/prediction-ledger.md` (all entries
 OPEN or SCAFFOLD; none official yet).
 

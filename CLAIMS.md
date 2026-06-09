@@ -5,7 +5,7 @@
 
 Generated: 2026-06-09
 
-**18 claims** · T2: 1 · T3: 1 · T4: 3 · T5: 5 · T6: 8 · T7-candidates: 3 · refuted: 0
+**29 claims** · T1: 11 · T2: 1 · T3: 1 · T4: 3 · T5: 5 · T6: 8 · T7-candidates: 3 · refuted: 0
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -16,6 +16,8 @@ reproduction commands, and history live on the claim cards.
 | Claim | Title | Tier | Lifecycle | Evidence | Hypotheses | Open gates |
 |---|---|---|---|---|---|---|
 | [A1-KERNEL-CONV](claims/A1-KERNEL-CONV/claim.md) | Production-kernel convention and G6 recomputation cascade | T5 | ACTIVE | EXECUTED | — | — |
+| [A2-PDE-WELLPOSED](claims/A2-PDE-WELLPOSED/claim.md) | Well-posedness of the TECT gradient flow and minimisation problem | T1 | ACTIVE | CONDITIONAL | — | — |
+| [A3-RENORMALISATION](claims/A3-RENORMALISATION/claim.md) | Regularisation, counterterms, and continuum limit of $F_{\rm TECT}$ | T1 | ACTIVE | CONDITIONAL | — | — |
 
 ## Sector B — Vacuum / Reading Selection
 
@@ -36,6 +38,7 @@ reproduction commands, and history live on the claim cards.
 | [C3-EP](claims/C3-EP/claim.md) | Equivalence principle via Fermi-frame ODE lemma | T6 (T7-cand.) | ACTIVE | ANALYTIC | H-LEGACY-CHAIN | — |
 | [C4-GRAVITY-1LOOP](claims/C4-GRAVITY-1LOOP/claim.md) | Gravity sector closure at 1-loop | T5 | ACTIVE | ANALYTIC, EXECUTED | — | SCHEME-2LOOP |
 | [C5-NEWTON-G](claims/C5-NEWTON-G/claim.md) | Newton-constant relation (T6/T7-SPLIT management) | T6 | ACTIVE | ANALYTIC, MATCHED | H-LEGACY-CHAIN | GAP-3, PRED-G-FREEZE |
+| [C6-SPACETIME-SIGNATURE](claims/C6-SPACETIME-SIGNATURE/claim.md) | Emergent 3+1 dimensionality and Lorentzian signature | T1 | ACTIVE | CONDITIONAL | — | — |
 
 ## Sector D — Gauge / Matter / Topology
 
@@ -45,6 +48,8 @@ reproduction commands, and history live on the claim cards.
 | [D2-GAUGE-FORCING](claims/D2-GAUGE-FORCING/claim.md) | Gauge-group emergence by flat-Cartan forcing (post-rollback) | T3 | ACTIVE | ANALYTIC | — | — |
 | [D3-CHIRALITY](claims/D3-CHIRALITY/claim.md) | Chirality with protected zeros | T6 (T7-cand.) | ACTIVE | ANALYTIC | H-LEGACY-CHAIN | — |
 | [D4-QUANTUM-CONSISTENCY](claims/D4-QUANTUM-CONSISTENCY/claim.md) | Quantum consistency per generation | T5 | ACTIVE | ANALYTIC | — | CP-UNITARITY |
+| [D5-GENERATIONS](claims/D5-GENERATIONS/claim.md) | Three fermion generations from the defect-bundle topology | T1 | ACTIVE | CONDITIONAL | — | — |
+| [D6-GUT-BREAKING](claims/D6-GUT-BREAKING/claim.md) | SO(10) to Standard-Model symmetry-breaking cascade | T1 | ACTIVE | CONDITIONAL | — | — |
 
 ## Sector E — Spectrum / Couplings / Constants
 
@@ -52,12 +57,18 @@ reproduction commands, and history live on the claim cards.
 |---|---|---|---|---|---|---|
 | [E1-HIGGS-EW](claims/E1-HIGGS-EW/claim.md) | Higgs mechanism, EW scale, GUT embedding | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | GAP-3 |
 | [E2-HBAR-ORIGIN](claims/E2-HBAR-ORIGIN/claim.md) | Origin of hbar: phase-transition programme | T2 | ACTIVE | EXECUTED | — | — |
+| [E3-GAUGE-COUPLINGS](claims/E3-GAUGE-COUPLINGS/claim.md) | Standard-Model gauge couplings and unification | T1 | ACTIVE | CONDITIONAL | — | GAP-3 |
+| [E4-FERMION-MASSES](claims/E4-FERMION-MASSES/claim.md) | Charged-fermion mass spectrum and Yukawa hierarchy | T1 | ACTIVE | CONDITIONAL | — | GAP-3 |
+| [E5-CKM-MIXING](claims/E5-CKM-MIXING/claim.md) | Quark flavour mixing (CKM matrix) | T1 | ACTIVE | CONDITIONAL | — | GAP-3 |
+| [E6-PMNS-NEUTRINO](claims/E6-PMNS-NEUTRINO/claim.md) | Neutrino masses and lepton mixing (PMNS) | T1 | ACTIVE | CONDITIONAL | — | GAP-3 |
 
 ## Sector F — Cosmology / Falsifiability
 
 | Claim | Title | Tier | Lifecycle | Evidence | Hypotheses | Open gates |
 |---|---|---|---|---|---|---|
 | [F1-COSMO-DARK-SECTOR](claims/F1-COSMO-DARK-SECTOR/claim.md) | Cosmological sector programme (Lambda, dark sector) | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | GAP-4 |
+| [F2-BARYOGENESIS](claims/F2-BARYOGENESIS/claim.md) | Matter-antimatter asymmetry (baryogenesis) | T1 | ACTIVE | CONDITIONAL | — | GAP-4 |
+| [F3-INFLATION-CMB](claims/F3-INFLATION-CMB/claim.md) | Primordial cosmology and CMB constraints | T1 | ACTIVE | CONDITIONAL | — | GAP-4 |
 
 ## Reading rules
 

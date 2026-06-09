@@ -12,9 +12,6 @@ _No curated narrative yet. Write `claims/A1-KERNEL-CONV/lineage-narrative.md` (t
 
 ## Chronological note-lineage (auto)
 
-| # | First issued | Cur. | Note (current title) | Status/tier | Versions |
-|---|---|---|---|---|---|
-
 † = superseded version (kept on disk, immutable, forward-pointer at top).
 
 ## Per-note revision history (auto)
@@ -23,4 +20,4 @@ _No curated narrative yet. Write `claims/A1-KERNEL-CONV/lineage-narrative.md` (t
 
 - `runs/260605-migration-revalidation/`
 
-<!-- generated 2026-06-06T02:29:11Z -->
+<!-- generated 2026-06-09T03:43:06Z -->

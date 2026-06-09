@@ -12,11 +12,8 @@ _No curated narrative yet. Write `claims/D2-GAUGE-FORCING/lineage-narrative.md` 
 
 ## Chronological note-lineage (auto)
 
-| # | First issued | Cur. | Note (current title) | Status/tier | Versions |
-|---|---|---|---|---|---|
-
 † = superseded version (kept on disk, immutable, forward-pointer at top).
 
 ## Per-note revision history (auto)
 
-<!-- generated 2026-06-06T02:29:11Z -->
+<!-- generated 2026-06-09T03:43:06Z -->

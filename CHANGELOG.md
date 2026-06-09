@@ -5,6 +5,49 @@ not pillar counts.
 
 ---
 
+## [claims sub-proof reorg EXECUTED: notes -> sub-theorem folders (B1/B2/B5)] - 2026-06-09
+
+- **Operator**: "start the move as planned." Executed the `claims-restructure-proposal-260609` taxonomy
+  (GOVERNANCE sec-2 sub-theorem folders realised physically).
+- **Moves** (184 files via os.replace, 0 unassigned, all flat `notes/` now empty; `runs/` kept at claim level):
+  B5 -> DR-2 (16) / SC-SCOPE (14) / STEP-5B (21) / H-LAYER-AUX (4) / T5-DOSSIER (3);
+  B1 -> Reading-H (7) / ROBUSTNESS-MU2 (7) / near-gap (3) / ESTIMATOR-UPGRADE (6) / enumerated (5);
+  B2 -> Prop-A (4) / H-A0-removal (3) / G-A0-DUI (2). Notes keep their `% Claim:` field (pure relocation, no content edit).
+- **Tooling**: `build_lineage.py` made sub-proof-aware (recursive gather + per-sub-proof grouping; verified no-op on the
+  pre-move flat layout); `build_index.py` main-gate fixed to detect `<sub>/notes/`. Per-claim INDEX + LINEAGE now group
+  by sub-proof; master INDEX shows sub-proof proof-unit counts.
+- **State**: lint PASS (29 claims), CLAIMS/index/lineage/catalog regenerated, release_check PASS (505 artefacts).
+  B1<->B5 chronicle duplicate already resolved (B1 copy gone). NEXT: author the SYNTHESIS.tex.txt layer
+  (per-sub-proof + claim-level synthesis).
+
+## [TOE-completeness audit: ledger 18 -> 29 claims; every pillar + Stage-5 constant homed] - 2026-06-09
+
+- **Operator request**: final check that the claims ladder is the precise, complete TOE decomposition, and add
+  physically-missing content. Audit `governance/toe-completeness-audit-260609.md` maps the six sectors / eleven
+  pillars / ROADMAP stages against the ledger (24-requirement completeness matrix); eleven gaps found.
+- **11 new claim scaffolds** (T1 OPEN, evidence CONDITIONAL, PACKAGE-PENDING, explicit falsifier + no-overclaim):
+  A2-PDE-WELLPOSED, A3-RENORMALISATION (ROADMAP Stage-1 named); C6-SPACETIME-SIGNATURE (P3 dim+signature);
+  D5-GENERATIONS, D6-GUT-BREAKING (families + SO(10)->SM cascade); E3-GAUGE-COUPLINGS, E4-FERMION-MASSES,
+  E5-CKM-MIXING, E6-PMNS-NEUTRINO (P6 SM spectrum, the dominant deficit); F2-BARYOGENESIS, F3-INFLATION-CMB (P11).
+- **Honest status**: all additions are OPEN scaffolds reserving the verification-package slot; no progress claimed.
+  New DAG edges (E3<-D6, E5/E6<-E4, F2<-D4). ROADMAP stale E3-HBAR-ORIGIN -> E2-HBAR-ORIGIN fixed.
+  lint PASS (29 claims, DAG acyclic), CLAIMS/index/lineage/catalog regenerated, release_check PASS.
+
+## [Reviewer-facing comprehensive proof-unit index + claims-restructure proposal] - 2026-06-09
+
+- **Operator request**: a per-proof-unit index (content + meaning + T6/T7 status) for reviewer access, and a
+  structural reorganization of the flat `claims/<ID>/notes` dumps into sub-theorem folders (GOVERNANCE sec-2).
+- **NEW `verification/scripts/build_index.py` (v1.0.0)**: parses the uniform note footers (Result ID / Precise
+  statement / Tier before-after / Evidence grade / Next action) + status.json into a two-level reviewer index --
+  `claims/INDEX.md` (sector -> claim: tier, hypotheses, gates, sub-proof proof-unit counts) + per-claim
+  `claims/<ID>/INDEX.md` (sub-proof -> note-lineage: current tier, what-it-proves, evidence, next action). Wired
+  into `release_check` (`build_index --check`) so it cannot drift; `classify()` gains INDEX.md->registry,
+  SYNTHESIS->synthesis.
+- **`REVIEWING.md`**: new section 1 "The map" (top-down entry) + renumber + fix stale E3-HBAR-ORIGIN->E2-HBAR-ORIGIN.
+- **Proposal** `governance/claims-restructure-proposal-260609.md`: data-derived sub-proof taxonomy (100% coverage,
+  0 unassigned); operator chose "adjust taxonomy then execute" -- physical file moves PENDING taxonomy confirmation
+  (the non-destructive index was built meanwhile and previews the proposed grouping). release_check PASS.
+
 ## [SC-SCOPE programme chronicle: full arc consolidated in one note (as for DR-2)] - 2026-06-09
 
 - **Operator request**: consolidate the entire SC-SCOPE record in one chronicle, in the style of the DR-2 programme
