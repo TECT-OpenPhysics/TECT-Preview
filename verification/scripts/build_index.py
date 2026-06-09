@@ -25,7 +25,11 @@ Regenerate after any notes/ or status.json change:
     python verification/scripts/build_index.py            # write
     python verification/scripts/build_index.py --check     # CI staleness gate
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"  # 1.0.1 (2026-06-09): sort sub-proof folders by name, not by
+#                       Path object -- WindowsPath compares case-insensitively while
+#                       PosixPath is case-sensitive, which reordered mixed-case sub-
+#                       folders (e.g. B1-RH-ENUM) and made the index falsely STALE on
+#                       Windows after Linux generation (cross-OS reproducibility bug).
 
 import os, re, sys, json, tempfile
 from pathlib import Path
@@ -128,7 +132,7 @@ def sub_groups(cid, notes_files):
     """Return ordered list of (subproof_name, [filenames]) using physical folders
     if present, else the provisional prefix taxonomy."""
     cdir = CLAIMS / cid
-    phys = [d for d in sorted(cdir.iterdir()) if d.is_dir() and (d / "notes").exists()]
+    phys = [d for d in sorted(cdir.iterdir(), key=lambda p: p.name) if d.is_dir() and (d / "notes").exists()]
     if phys:
         groups = []
         for d in phys:
@@ -276,7 +280,7 @@ def atomic_write(path: Path, content: str):
 def main():
     check = "--check" in sys.argv
     targets = {CLAIMS / "INDEX.md": master_index()}
-    for d in sorted(CLAIMS.iterdir()):
+    for d in sorted(CLAIMS.iterdir(), key=lambda p: p.name):
         if d.is_dir() and not d.name.startswith("_"):
             has_flat = (d / "notes").exists() and any((d / "notes").glob("*.tex.txt"))
             has_sub = any(d.glob("*/notes/*.tex.txt"))

@@ -37,6 +37,13 @@ research state lives in the cowork app; it all lives in tracked files here.
    python verification/scripts/doctor.py        # prints READY / NOT READY + fixes
    ```
 
+   If it reports a stale generated surface, refresh every one in a single
+   command (the commit watcher enforces the same gate before every commit):
+
+   ```bash
+   python verification/scripts/regen_all.py     # or: doctor.py --fix
+   ```
+
 2. **Session-entry prelude** (CLAUDE.md §1, the AI does this automatically):
    read `GOVERNANCE.md` → `CLAIMS.md` → `ROADMAP.md` → `CHANGELOG.md` (top) →
    `negative-results/registry.md` → **`TODO.md`**, run `date -u`, and emit

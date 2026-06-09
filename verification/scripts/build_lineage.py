@@ -69,7 +69,7 @@ def build_one(cid):
     if (cdir / "notes").exists():
         for q in sorted((cdir / "notes").glob("*.tex.txt")):
             items.append(("", parse_note(q)))
-    for q in sorted(cdir.glob("*/notes/*.tex.txt")):
+    for q in sorted(cdir.glob("*/notes/*.tex.txt"), key=lambda q: q.as_posix()):
         items.append((q.parent.parent.name, parse_note(q)))
     has_sub = any(sp for sp, _ in items)
     notes = [n for _, n in items]

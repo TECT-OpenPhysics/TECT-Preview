@@ -1,6 +1,11 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.2.0 -- first issued 2026-06-05; this version issued 2026-06-07
+# Version: 1.3.0 -- first issued 2026-06-05; this version issued 2026-06-09
+#   1.3.0 (2026-06-09): pre-commit RELEASE gate -- run release_check.py before
+#     every commit; refuse (queue left intact) on failure. Closes the commit-
+#     time enforcement gap: no stale/broken tree can enter history. Portable
+#     because the watcher is a tracked file (unlike .git/hooks). The gate list
+#     is single-sourced in gates.py (doctor + release_check + watcher agree).
 #   1.2.0 (2026-06-07): BATCH-DRAIN (systemic fix for the recurring stuck-queue).
 #     The whole pending queue is now committed as ONE commit with a COMBINED
 #     message, instead of one commit per JSON. Root cause of the recurrence:
@@ -94,6 +99,14 @@ function Process-Queue {
         # leftovers -- move them to done/ (do NOT strand them).
         foreach ($it in $items) { Move-ToDone $it.File "EMPTYDIFF-" }
         Write-Host "[commit-watcher] no staged diff; moved $($items.Count) empty-diff request(s) to done/ (content already committed)."
+        return
+    }
+
+    # pre-commit RELEASE gate (single source: release_check.py = the publication
+    # gate; gate list in gates.py). Refuse to commit a stale/broken tree.
+    & python verification/scripts/release_check.py | Out-Host
+    if ($LASTEXITCODE -ne 0) {
+        Write-Warning "[commit-watcher] BLOCKED: release_check failed (stale generated surface or hygiene/policy error). Queue left intact -- run python verification/scripts/regen_all.py (or fix the reported error), then re-run."
         return
     }
 

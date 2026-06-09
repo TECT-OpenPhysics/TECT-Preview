@@ -44,6 +44,13 @@ def run_check(label, rel_args):
 
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--fix", action="store_true",
+                    help="regenerate all generated surfaces (regen_all.py) before checking")
+    a = ap.parse_args()
+    if a.fix:
+        subprocess.run([sys.executable, str(SCRIPTS / "regen_all.py")], cwd=str(REPO))
     print(f"TECT doctor -- workspace readiness ({REPO})")
 
     # 1. interpreter
@@ -70,11 +77,10 @@ def main() -> int:
            "archive/legacy/scripts present (codes/ imports resolve)" if legacy.exists()
            else "MISSING archive/legacy/scripts -- copy the WHOLE folder, not just claims/")
 
-    # 5. generated ledgers in sync with their sources
-    run_check("ledger-sync", ["lint_claims.py", "--render", "--check"])
-    run_check("catalog-sync", ["build_catalog.py", "--check"])
-    run_check("lineage-sync", ["build_lineage.py", "--check"])
-    run_check("todo-sync", ["todo.py", "--check"])
+    # 5. generated surfaces in sync with their sources (single source: gates.py)
+    from gates import SYNC_GATES
+    for label, args in SYNC_GATES:
+        run_check(label + "-sync", args)
 
     # 6. optional: pdflatex (only needed to rebuild note PDFs / FORM-CHECK)
     import shutil

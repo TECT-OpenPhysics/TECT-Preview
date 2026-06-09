@@ -89,7 +89,7 @@ files, and the operator-side daemon `verification/scripts/commit_watcher.ps1`
 watcher (v1.2.0+) **BATCH-DRAINS**: an accumulated queue is committed as ONE
 commit with a combined numbered message, and empty-diff leftovers are moved to
 done/ -- so accumulation no longer strands JSONs or scrambles attribution (the
-recurring 2026-06-06/07 failure, now fixed systemically). Draining per turn
+recurring 2026-06-06/07 failure, now fixed systemically). The watcher (v1.3.0+) also **gates every commit on `release_check.py`** (gate list single-sourced in `gates.py`): a stale or broken tree is refused with the queue left intact; `regen_all.py` clears staleness. See `governance/enforcement-spine.md`. Draining per turn
 still gives a cleaner 1:1 commit-to-message mapping but is not required for
 correctness. The
 queue is inside `internal/` (P0 — never reaches history). FALLBACK: if the

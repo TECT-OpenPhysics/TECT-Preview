@@ -66,7 +66,7 @@ def load_registry():
 
 def load_cards(errors):
     cards = {}
-    for d in sorted(CLAIMS_DIR.iterdir()):
+    for d in sorted(CLAIMS_DIR.iterdir(), key=lambda p: p.name):
         if not d.is_dir() or d.name.startswith("_"):
             continue
         sj, cm = d / "status.json", d / "claim.md"

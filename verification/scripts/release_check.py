@@ -59,13 +59,10 @@ def main():
     errors, warnings = [], []
     print("RELEASE-CHECK: pre-publication gate")
 
-    # 1+2. generated surfaces in sync
-    run("ledger", ["verification/scripts/lint_claims.py", "--render", "--check"], errors)
-    run("catalog", ["verification/scripts/build_catalog.py", "--check"], errors)
-    run("lineage", ["verification/scripts/build_lineage.py", "--check"], errors)
-    run("index", ["verification/scripts/build_index.py", "--check"], errors)
-    run("todo", ["verification/scripts/todo.py", "--check"], errors)
-    run("changelog", ["verification/scripts/changelog.py", "render", "--check"], errors)
+    # 1+2. generated surfaces in sync (single source: gates.py)
+    from gates import SYNC_GATES
+    for label, args in SYNC_GATES:
+        run(label, ["verification/scripts/" + args[0]] + list(args[1:]), errors)
 
     # 3. P0 fence
     gi = (REPO / ".gitignore").read_text(encoding="utf-8")

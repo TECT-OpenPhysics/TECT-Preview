@@ -5,6 +5,27 @@ not pillar counts.
 
 ---
 
+## [Cross-OS index determinism fix: sort proof-unit folders by name, not Path object (Windows case-folding)] - 2026-06-09
+
+- **Root cause of the Windows `release_check [index] STALE` block.** `sorted(dir.iterdir())` sorts `Path` objects; `WindowsPath` compares case-INsensitively while `PosixPath` is case-sensitive. B1-RH-ENUM's five mixed-case sub-proof folders (`ESTIMATOR-UPGRADE`, `ROBUSTNESS-MU2`, `Reading-H`, `enumerated`, `near-gap`) therefore ordered differently on Windows vs Linux -> different `claims/INDEX.md` + `claims/B1-RH-ENUM/INDEX.md` content -> STALE only across OS. The renderer was otherwise deterministic (`norm()` strips the timestamp).
+- **Fix** (OS-independent sort keys, codepoint-identical on every OS): `key=lambda p: p.name` at build_index.py:131 (sub-folders) + :279 (claim dirs) and lint_claims.py:69; `key=lambda q: q.as_posix()` at build_lineage.py:72. build_index.py -> v1.0.1. No content change on Linux (Path-sort == name-sort there); Windows now renders the committed order.
+- The enforcement spine's commit-time `release_check` gate surfaced this latent portability defect -- the gate working as designed. Recurrence rule recorded in `governance/enforcement-spine.md` §5: generators must never sort bare `Path` objects that feed output order.
+
+## [Enforcement spine: single-source gates + commit-time release gate + regen_all (portable, forget-proof)] - 2026-06-09
+
+- **Operator-authorised hardening** — answers "is the discipline systemic and portable to another machine?". Closes the two holes found in the audit.
+- A. **Single-source gates**: NEW `verification/scripts/gates.py` (`SYNC_GATES` + `REGEN_ORDER`); `doctor.py`, `release_check.py`, `regen_all.py` all import it, so the gate list can no longer drift. `doctor.py` now checks all 7 generated surfaces (added index/changelog/dossier) and gains `--fix`.
+- B. **Commit-time gate**: `commit_watcher.ps1` v1.3.0 runs `release_check.py` before every commit and refuses (queue left intact) on failure. Portable because the watcher is a tracked file, not a `.git/hooks` hook (which a clone does not carry).
+- C. **One-command recovery**: NEW `verification/scripts/regen_all.py` refreshes every generated surface in dependency order (build_catalog last); `doctor.py --fix` wraps it.
+- Docs: `governance/enforcement-spine.md` (canonical), `SESSION.md` recovery note, `CLAUDE.md` pointer. Honest scope: sync/hygiene/policy are gated; COMPLETENESS ("every change carries a CHANGELOG entry") remains discipline — a completeness linter is the next step if wanted.
+
+## [Sector dossiers: generated gather-by-reference per-sector views (theory/sectors/)] - 2026-06-09
+
+- **Operator-authorised (folder-structure decision).** Instead of physically nesting claims under theory/sector-X, the per-sector "one store" is a GENERATED view gathering the orthogonal trees by reference. `claims/` stays flat (IDs encode the sector); no path breakage, no large git mv.
+- NEW `verification/scripts/build_dossier.py` v1.0.0 -> `theory/sectors/INDEX.md` (TOE scorecard) + `theory/sectors/<X>.md` (A-F: synthesis link + claims with tier/hypotheses/gates + predictions + negative results, all by reference) + `governance/sector-dossier.md` (binding design).
+- Enforcement: `release_check.py` gains the `[dossier]` sync gate (build_dossier.py --check); the catalog includes `theory/sectors/*.md`; `REVIEWING.md` links the per-sector entry point.
+- Sources of truth unchanged (status.json / theory READMEs / prediction-ledger / registry). Editing a claim card and re-running the generator refreshes every dossier.
+
 ## [CHANGELOG DB-ization: JSONL source + generated MD view + FTS5 query cache] - 2026-06-09
 
 - **Operator-authorised infrastructure.** CHANGELOG is migrated from a hand-edited file to a GENERATED view of an append-only JSONL source, with a gitignored SQLite FTS5 query cache. Searchable by claim, keyword, and full text.
