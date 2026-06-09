@@ -5,6 +5,36 @@ not pillar counts.
 
 ---
 
+## [RES-5 all-order reduction: closure <=> geometric domination, base x5 inside (T3)] - 2026-06-09
+
+- **Operator all-order 3-goal programme** (the split; the per-order O(a0) bound; the summed series, C_cm<10.4).
+  NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-allorder-commonmode-bound v1.0` (PDF FORM-CHECK PASS) +
+  `codes/vacuum/res5_allorder_commonmode.py` (4/4) + `runs/`.
+- The condensate-perturbation series Delta F = sum_k Delta F^(k), Delta F^(k)~a0^{k-1} chi^(k), has the common-mode
+  (STRONG Brazovskii-fluctuation) part cancel in the selection difference. RES-5 closes iff the geometric ratio
+  r_k = Delta F^(k+1)/Delta F^(k) = a0 chi^(k+1)/chi^(k) <= r < 1/2 for all k (equivalently C_cm < 1/a0 = 10.5).
+  Base r_2 ~ a0 = 0.096 is a factor ~5 below 1/2; C_cm ~ O(1) a factor ~10 below 10.5; IF the all-order domination
+  holds, Delta F_exact >= 0.894 Delta F^(2) > 0.
+- **T3 PROOF SKETCH**; OPEN = the all-order susceptibility-ratio bound chi^(k+1)/chi^(k) (a strong-coupling
+  all-order QFT statement -- the common-mode cancellation removes the strong common part, but the high-order
+  pattern-dependent ratios are unproven). No tier flip (B1 T6 on {H-LAYER}). B1 closure <=> this all-order
+  domination. lint PASS (29), release_check PASS.
+
+## [RES-5/GAP-2 entry: matched-order-to-exact remainder common-mode suppressed by a0 (T3)] - 2026-06-09
+
+- **Operator-directed direct attack on RES-5** (the deepest H-LAYER residual, into which the RES-1 off-diagonal arc
+  merged). NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-commonmode-envelope v1.0` (PDF FORM-CHECK PASS)
+  + `codes/vacuum/res5_commonmode_envelope.py` (4/4) + `runs/`.
+- **Common-mode mechanism** (extending the near-gap R-U10-3 resolution to the bulk): r_hat(I)=rR+2 lam' I is
+  PATTERN-INDEPENDENT, so the leading beyond-second-cumulant correction CANCELS in the difference
+  Delta F^(n)=F^(n)[P]-F^(n)[R_H], leaving O(a0) with a0=2 lam' I/r_hat = 0.021/0.050/0.096 at I=4e-4/1e-3/2e-3.
+  Envelope: Delta F_exact >~ Delta F^(2)(1-a0) >= 0.904 Delta F^(2) > 0 at the operating endpoint (condensate carries
+  only ~10% of the dressing).
+- **Unifies** the prior RES-5-adjacent results under the single control parameter a0: ESTIMATOR-UPGRADE
+  (controlled-error margins), SC-SCOPE (n=3 endpoint thin x1.04 ~ 4%, consistent), exchange-Hessian (RES-1b
+  R_lead<=0.174). T3 PROOF SKETCH; OPEN = all-order common-mode split + the coefficient C + cumulant-series
+  convergence. No tier flip (B1 T6 on {H-LAYER}). lint PASS (29), release_check PASS.
+
 ## [RES-1 full operator-norm: formulation + honest RES-5 merge (T3)] - 2026-06-09
 
 - **Operator-directed full-operator-norm step.** HONEST VERDICT: the full worst-direction norm

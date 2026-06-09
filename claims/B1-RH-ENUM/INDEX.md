@@ -9,7 +9,7 @@
 
 **Falsifier.** An admissible competitor of the H-ADM-COH class with F_total <= F_total[R_H]; a near-gap section with the structural floor < 0; or the loss of the sole active named hypothesis {H-LAYER} (for the crystallographic lattice class; H-ADM-COH discharged + SC-SCOPE lifted@THIN-CERTIFIE…
 
-## ESTIMATOR-UPGRADE/  ·  6 proof units  ·  tier span T6
+## ESTIMATOR-UPGRADE/  ·  8 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -17,6 +17,8 @@
 | `estimator-upgrade-enumerated` | v1.0 | — | Controlled-error: for LAM/HEX/FCC/BCC at mu^2=0.005, A=0 is a STRICT minimum (kappa_R = dF_R''(0) >= 0.85) and no reading condenses, at BOTH N_PT=600… | EXECUTED (estimator_upgrade_enumerated.py 7/7… | Two-shell ensemble + dI/amplitude-grid envelopes by the same method; then ESTIMATOR-UPGRA… |
 | `estimator-upgrade-knobs` | v1.0 | — | For LAM/HEX/FCC/BCC at mu^2=0.005: (ii) kappa_R moves < 0.1% under dI-grid refinement (6000,50)->(12000,100) and the no-condensate verdict is grid-mo… | EXECUTED (estimator_upgrade_knobs.py 13/13) +… | Curvature-chord continuum bound on the exact anchored BULK surface (the only remaining re… |
 | `g3pb3-ratio-closure` | v1.0 | T6* | The physical {200} response A2*(A1)=argmin_{A2,M} dF_anchored at r=0.219 is on the negative branch with \|A2*\|<=0.08, \|rho\|<=0.57, inside the box \|A1\|… | EXECUTED (g3pb3_ratio_extraction.py 6/6). | None for G3PB-III (closed). B1 has no open gates; the remaining levers are the named hypo… |
+| `res5-allorder-commonmode-bound` | v1.0 | T6* | The condensate-perturbation series Delta F = sum_k Delta F^(k), Delta F^(k)~a0^{k-1} chi^(k), has the common-mode (strong-fluctuation) part cancel in… | ANALYTIC (structure + reduction) + EXECUTED (… | Bound the Brazovskii-sea susceptibility ratios chi^(k+1)/chi^(k) (the all-order geometric… |
+| `res5-commonmode-envelope` | v1.0 | T6* | The matched-order-to-exact remainder sum_{n>=3} Delta F^(n) is common-mode suppressed: r_hat(I)=rR+2 lam' I is pattern-independent, so the common-mod… | ANALYTIC (common-mode structure) + EXECUTED (… | Prove the all-order common-mode split (every F^(n)'s pattern-dependent part is O(a0)) and… |
 | `twoshell-anchored-bracket` | v1.0 | — | At r_bare=0.219, the anchored two-shell {110}+{200} free energy dF_anchored = dF_diag + (F_exact - F_diag_basis) has min over (A1,A2)!=(0,0) = +6.7e-… | EXECUTED (twoshell_anchored_bracket.py 7/7); … | Curvature-chord continuum bound on the exact anchored bulk surface (finer exact scan); th… |
 | `twoshell-continuum-bound` | v1.0 | — | At r_bare=0.219 (B1): the diagonal-continuum two-shell {110}+{200} free energy, M-minimised, has min over (A1,A2)!=(0,0) = +3.9e-5 > 0, a 2D curvatur… | EXECUTED (twoshell_continuum_bound.py 10/10) … | Exact-Wick bracket continuum bound at r=0.219 (the slogdet engine), then ESTIMATOR-UPGRAD… |
 
@@ -53,4 +55,4 @@
 | `neargap-protection-lemma` | v1.0 | T6* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T6* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-09T04:08:24Z by build_index.py v1.0.0 -->
+<!-- generated 2026-06-09T07:06:51Z by build_index.py v1.0.0 -->

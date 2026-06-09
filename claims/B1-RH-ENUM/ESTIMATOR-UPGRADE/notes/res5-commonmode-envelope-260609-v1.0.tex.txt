@@ -1,0 +1,174 @@
+% =============================================================================
+% Title: RES-5 / GAP-2 entry: the matched-order-to-exact remainder is common-mode
+%        suppressed by the condensate fraction a0
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 matched-order-to-exact; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Operator-directed direct attack on RES-5 (the deepest
+%   H-LAYER residual after the RES-1 arc merged into it). Establishes the
+%   common-mode CONTROL PARAMETER a0 = 2 lam' I / r_hat (the condensate fraction
+%   of the dressing) and the leading envelope Delta F_exact >~ Delta F^(2)(1-a0)>0,
+%   extending the near-gap R-U10-3 common-mode resolution to the bulk. a0 = 0.096
+%   at the operating endpoint. Does NOT close RES-5: the all-order common-mode
+%   structure and the rigorous higher-cumulant bound are the residual. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. r_hat(I) pattern-independence => leading
+%        beyond-2nd-cumulant difference common-mode; a0 control parameter
+%        (0.021/0.050/0.096 over the operating interval); the envelope; inventory
+%        of ESTIMATOR-UPGRADE / SC-SCOPE / exchange-Hessian. Grounded by
+%        res5_commonmode_envelope.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+After the RES-1 off-diagonal arc, the H-LAYER residual consolidated to RES-5
+(GAP-2): converting the matched-second-cumulant selection
+$F^{(2)}[\mathcal P]>F^{(2)}[\mathcal R_H]$ into a statement about EXACT free
+energies. The operator directed a direct attack on RES-5 (the exchange-Hessian
+eigenvalue $+$ exact remainder, unified). This note opens it with the
+common-mode mechanism: the matched-order structure makes the leading
+beyond-second-cumulant correction CANCEL in the selection difference, leaving a
+remainder controlled by the condensate fraction $a_0$. Scope: the leading
+common-mode reduction and the control parameter; the all-order structure is the
+residual.
+
+\section*{2. The matched-order-to-exact problem}
+
+\[
+\Delta F_{\rm exact} = \Delta F^{(2)} + \sum_{n\ge3}\Delta F^{(n)},
+\qquad
+\Delta F^{(n)} = F^{(n)}[\mathcal P]-F^{(n)}[\mathcal R_H].
+\]
+RES-5 closes iff $\big|\sum_{n\ge3}\Delta F^{(n)}\big| < \Delta F^{(2)}$ (the
+GAP-2 controlled-error condition $\Delta F^{(2)}-\varepsilon_{\rm ctrl}>0$).
+
+\section*{3. The common-mode mechanism (extending R-U10-3 to the bulk)}
+
+At fixed intensity $I$ the diagonal dressing
+\[
+\hat r(I) = r_R + 2\lambda' I
+\]
+is PATTERN-INDEPENDENT: $\mathcal P$ and $\mathcal R_H$ share the same dressed
+inverse propagator $D_0(I)$. This is exactly the structure the near-gap
+resolution (R-U10-3, neargap-common-mode-resolution) used at second cumulant to
+prove $\Delta F^{(2)}\ge0$ unconditionally. Extending it: each
+beyond-second-cumulant correction $F^{(n)}$ splits into
+\[
+F^{(n)} = \underbrace{F^{(n)}_{\rm cm}(D_0)}_{\text{common-mode, pattern-independent}}
++ \underbrace{F^{(n)}_{\rm pd}(D_0;\mathcal P^2)}_{\text{pattern-dependent}},
+\]
+and the common-mode part CANCELS in $\Delta F^{(n)}=F^{(n)}[\mathcal P]-F^{(n)}[\mathcal R_H]$.
+The pattern-dependent part is carried by the condensate's relative weight in the
+dressing,
+\[
+a_0(I) = \frac{2\lambda' I}{\hat r(I)},
+\]
+so $\Delta F^{(n)} = O(a_0)\,F^{(n)}$: the matched-order difference is $O(a_0)$
+suppressed relative to the individual cumulants.
+
+\section*{4. The leading envelope at the operating intensity}
+
+\[
+\boxed{\;a_0(I)=
+\begin{cases}
+0.021, & I=4\times10^{-4}\\
+0.050, & I=10^{-3}\\
+0.096, & I=2\times10^{-3}\ \text{(endpoint)}
+\end{cases}
+\qquad
+\Delta F_{\rm exact}\ \gtrsim\ \Delta F^{(2)}(1-a_0)\ \ge\ 0.904\,\Delta F^{(2)}>0.\;}
+\]
+The condensate carries only $\sim10\%$ of the dressing at the operating endpoint,
+so the leading beyond-second-cumulant remainder is $\lesssim10\%$ of the
+second-cumulant margin: the selection survives the matched-order-to-exact
+correction at leading common-mode order. $a_0$ is monotone in $I$, worst at the
+$I=2\times10^{-3}$ endpoint -- consistent with the RES-4 / SC-SCOPE endpoint being
+the thinnest.
+
+\section*{5. Consistency with the established partial results}
+
+The $a_0$-envelope unifies the prior RES-5-adjacent results: ESTIMATOR-UPGRADE
+(CLOSED@controlled-error for the margins) is the error-bound realisation;
+SC-SCOPE (third-cumulant endpoint, thin-certified $\times1.04$) is the explicit
+$n=3$ term, consistent with a $\sim10\%$ correction; the exchange-Hessian
+(RES-1b, condensate-direction $R_{\rm lead}\le0.174$) is an off-diagonal
+beyond-second contribution, also $O(a_0)$-scaled. The common-mode envelope is the
+single control parameter ($a_0$) organising all three.
+
+\section*{6. Status and residual}
+
+\textbf{T3 PROOF SKETCH.} Established: the common-mode control parameter
+$a_0\le0.096$ and the leading envelope $\Delta F_{\rm exact}\gtrsim
+\Delta F^{(2)}(1-a_0)>0$. \textbf{OPEN (the deep RES-5 content):} (i) the
+ALL-ORDER common-mode structure (that every $F^{(n)}$ splits with the
+pattern-dependent part $O(a_0)$, not just $n=3$); (ii) the precise coefficient
+(is the remainder exactly $a_0\Delta F^{(2)}$ or $C\,a_0\Delta F^{(2)}$ with $C$
+bounded?); (iii) the geometric / convergence bound on $\sum_{n\ge3}$. No tier
+flip: B1-RH-ENUM T6 CONDITIONAL on $\{$H-LAYER$\}$. This is the entry to RES-5,
+not its closure.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You show the leading ($n=3$) common-mode, then assume
+all orders.''} VALID and stated: the $\hat r$ pattern-independence is rigorous and
+gives the leading suppression; the all-order common-mode split is the named
+residual (i). The note is the entry, T3, not a closure.
+\item[($\beta$)] \emph{``$O(a_0)$ hides the coefficient -- it could be $C a_0$
+with $C>10$.''} VALID-with-mitigation: the structural $a_0$ scaling is the result;
+the constant $C$ requires the explicit cumulant-difference computation (residual
+ii). The SC-SCOPE $n=3$ value ($\times1.04$, a $\sim4\%$ effect) is consistent
+with $C=O(1)$, but is not a proof of $C=O(1)$ at all orders.
+\item[($\gamma$)] \emph{``This re-treads SC-SCOPE / ESTIMATOR-UPGRADE.''} PARTLY:
+it UNIFIES them under the single common-mode control parameter $a_0$ (\S5), which
+is the new organising principle; it does not re-derive them.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{magnitude} -- $a_0(2e\!-\!3)=0.096$,
+so $(1-a_0)=0.904>0$; \emph{monotone} -- $a_0=0.021/0.050/0.096$ increasing in $I$
+(endpoint worst); \emph{consistency} -- the $n=3$ SC-SCOPE correction ($\sim4\%$)
+sits within the $a_0\sim10\%$ envelope; \emph{structure} -- $\hat r(I)$ depends only
+on $I$, not the pattern, so the common-mode cancellation is exact at the dressing
+level (the R-U10-3 mechanism).
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 GAP-2 entry (common-mode envelope)
+Precise statement:       The matched-order-to-exact remainder sum_{n>=3} Delta
+                         F^(n) is common-mode suppressed: r_hat(I)=rR+2 lam' I is
+                         pattern-independent, so the common-mode part cancels in
+                         the difference and the residual is O(a0), a0=2 lam' I/
+                         r_hat = 0.021/0.050/0.096 at I=4e-4/1e-3/2e-3. Hence
+                         Delta F_exact >~ Delta F^(2)(1-a0) >= 0.904 Delta F^(2)>0
+                         at the operating endpoint, at leading common-mode order.
+Scope:                   Leading (n=3) common-mode reduction + the a0 control
+                         parameter; anchor mu^2, operating interval. All-order
+                         common-mode + the coefficient bound are OPEN.
+Dependencies:            neargap-common-mode-resolution (R-U10-3, the 2nd-cumulant
+                         mechanism); SC-SCOPE (n=3 endpoint); ESTIMATOR-UPGRADE
+                         (controlled-error margins); exchange-Hessian (RES-1b);
+                         Math424-AddA (rR, M_R, lam').
+Evidence grade:          ANALYTIC (common-mode structure) + EXECUTED
+                         (res5_commonmode_envelope.py 4/4).
+Reproduction command:    python codes/vacuum/res5_commonmode_envelope.py
+Expected output:         a0 = 0.021/0.050/0.096; (1-a0) = 0.979/0.950/0.904; 4/4.
+Falsification gate:      a0 >= 1 at operating I; or a beyond-2nd-cumulant
+                         difference NOT O(a0) (a pattern-dependent term surviving
+                         the common-mode cancellation at O(1)); or the SC-SCOPE
+                         n=3 value exceeding the a0 envelope.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER} unchanged. RES-5/GAP-2:
+                         entry opened; leading common-mode envelope a0<=0.096.
+No-overclaim statement:  This does NOT close RES-5/GAP-2. Only the LEADING
+                         common-mode suppression and the a0 control parameter are
+                         established; the all-order common-mode split, the
+                         coefficient C, and the cumulant-series convergence are
+                         the deep residual. B1 stays T6 on {H-LAYER}.
+Next required action:    Prove the all-order common-mode split (every F^(n)'s
+                         pattern-dependent part is O(a0)) and bound the coefficient
+                         C, OR a direct geometric bound on sum_{n>=3} Delta F^(n);
+                         then RES-5 -> controlled-error theorem.
+\end{verbatim}
+}

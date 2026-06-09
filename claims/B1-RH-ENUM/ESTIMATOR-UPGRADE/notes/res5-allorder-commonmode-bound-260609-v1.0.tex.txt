@@ -1,0 +1,160 @@
+% =============================================================================
+% Title: RES-5 all-order common-mode bound: the closure reduces to a geometric
+%        domination condition, with the base order a factor 5 inside it
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 all-order reduction; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Executes the operator's all-order 3-goal programme and
+%   reports the honest verdict: RES-5 closure REDUCES to the geometric-domination
+%   condition r_k = Delta F^(k+1)/Delta F^(k) <= r < 1/2 on the condensate-
+%   perturbation series, with the base ratio r_2 ~ a0 = 0.096 sitting a factor ~5
+%   below the threshold 1/2 (equivalently the operator's C_cm < 1/a0 = 10.5, with
+%   structural C_cm ~ O(1)). Does NOT close RES-5: the all-order domination (the
+%   Brazovskii-sea susceptibility ratios chi^(k+1)/chi^(k) staying bounded) is the
+%   deep residual -- a strong-coupling all-order bound. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. The condensate-perturbation structure
+%        Delta F^(k) ~ a0^{k-1}; the geometric closure condition r < 1/2; the base
+%        margin (r_2~a0, x5 below; C_cm~O(1), x10 below 10.5); the all-order
+%        domination residual. Grounded by res5_allorder_commonmode.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The RES-5 entry note established the common-mode control parameter $a_0$ and the
+leading envelope. The operator directed the all-order bound (three goals: the
+all-order split; the per-order $O(a_0)$ bound; the summed series with $C_{\rm cm}<10.4$).
+This note executes the programme as a REDUCTION: it shows RES-5 closure is
+equivalent to a geometric-domination condition on the condensate-perturbation
+series, and that the base (measured) order sits a factor $\sim5$ inside the
+closure region. It does NOT close RES-5 -- the all-order domination is the deep
+residual. Scope: the structure and the closure arithmetic; anchor $\mu^2$,
+operating endpoint.
+
+\section*{2. The condensate-perturbation series (goal 1: the split)}
+
+At fixed $I$ the dressing $\hat r(I)$ is pattern-independent, so the exact
+selection difference is a perturbation series in the condensate
+$\lambda'\mathcal P^2 = O(a_0)\,\hat r$ on the common sea $D_0(I)$:
+\[
+\Delta F = \sum_{k\ge2}\Delta F^{(k)},\qquad
+F^{(n)} = \underbrace{F^{(n)}_{\rm cm}(D_0)}_{\text{cancels in }\Delta F^{(n)}}
++ F^{(n)}_{\rm pd}(D_0;\mathcal P^2),\qquad
+\Delta F^{(k)} \sim a_0^{\,k-1}\,\chi^{(k)},
+\]
+where $\chi^{(k)}$ is the $k$-th connected density susceptibility of the common
+sea (pattern-independent). The common-mode part $F^{(n)}_{\rm cm}$ -- which carries
+the STRONG Brazovskii fluctuations -- cancels exactly in the difference; the
+pattern-dependent part enters with one power of $a_0$ per order.
+
+\section*{3. The per-order ratio and the closure condition (goals 2--3)}
+
+Define the geometric ratio
+\[
+r_k = \frac{\Delta F^{(k+1)}}{\Delta F^{(k)}} = a_0\,\frac{\chi^{(k+1)}}{\chi^{(k)}}.
+\]
+\textbf{Reduction.} If $r_k \le r < \tfrac12$ for all $k\ge2$, the geometric tail gives
+\[
+\Big|\sum_{k\ge3}\Delta F^{(k)}\Big| \le \Delta F^{(2)}\,\frac{r}{1-r} < \Delta F^{(2)}
+\quad\Longrightarrow\quad
+\Delta F_{\rm exact} = \Delta F^{(2)}\Big(1-\tfrac{r}{1-r}\Big) > 0,
+\]
+so RES-5 closes. The SUFFICIENT condition is $r<\tfrac12$ (at $r=0.49$ the tail is
+$0.96<1$; at $r=0.51$ it is $1.04>1$). In the operator's form this is
+$C_{\rm cm}\,a_0<1$ with $C_{\rm cm}=\tfrac{1}{a_0}\cdot\tfrac{r}{1-r}$, i.e.\
+$C_{\rm cm}<1/a_0=10.5$.
+
+\section*{4. The base margin}
+
+The base ratio is $r_2 = a_0\,\chi^{(3)}/\chi^{(2)}$. The susceptibility ratio is
+$O(1)$ (SC-SCOPE put the $n=3$ endpoint effect at a few percent, consistent with
+$r_2\sim a_0$, far from $\tfrac12$). Numerically,
+\[
+r_2 \sim a_0 = 0.096 \quad(\text{factor } \sim5 \text{ below } \tfrac12),
+\qquad
+C_{\rm cm}\sim O(1)\quad(\text{factor } \sim10 \text{ below } 10.5),
+\]
+and, IF $r_k\le a_0$ at all orders, $\Delta F_{\rm exact}=\Delta F^{(2)}(1-0.106)=
+0.894\,\Delta F^{(2)}>0$. The condensate-perturbation series starts well inside its
+convergence radius.
+
+\section*{5. Status and the residual}
+
+\textbf{T3 PROOF SKETCH.} Established: the condensate-perturbation structure
+($\Delta F^{(k)}\sim a_0^{k-1}$, common-mode cancellation), the geometric closure
+condition $r<\tfrac12$ ($\Leftrightarrow C_{\rm cm}<10.5$), and the base margin
+($r_2\sim a_0$, factor $\sim5$ inside). \textbf{OPEN (the deep residual):} the
+ALL-ORDER geometric domination $r_k\le r<\tfrac12$, i.e.\ the Brazovskii-sea
+susceptibility ratios $\chi^{(k+1)}/\chi^{(k)}$ stay bounded as $k\to\infty$. This
+is a strong-coupling all-order statement: the common-mode cancellation removes the
+strong COMMON fluctuations, but the pattern-dependent susceptibility ratios at high
+order are not bounded here. No tier flip: B1-RH-ENUM T6 CONDITIONAL on
+$\{$H-LAYER$\}$. \textbf{B1 closure} $\Longleftrightarrow$ this all-order domination.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``You reduced but did not prove the all-order domination.''}
+VALID, by design (T3): the structure, the closure condition, and the base margin
+are established; the all-order $\chi$-ratio bound is the residual -- a genuine
+strong-coupling all-order result, not closeable by the present elementary means.
+\item[($\beta$)] \emph{``$r_2\sim a_0$ assumes $\chi^{(3)}/\chi^{(2)}=O(1)$.''}
+VALID-with-mitigation: SC-SCOPE's $n=3$ thin endpoint (a few percent) supports
+$r_2\sim a_0\sim0.1$, but that is the $n=3$ datum, NOT a proof that
+$\chi^{(k+1)}/\chi^{(k)}=O(1)$ for all $k$. The base margin is real; the
+extrapolation is the residual.
+\item[($\gamma$)] \emph{``Strong Brazovskii fluctuations could blow up the
+high-order $\chi$-ratios.''} VALID and UNRESOLVED: this is precisely the residual.
+The common-mode cancellation is the reason this is even plausible -- it removes the
+strong common part -- but the pattern-dependent ratios are unproven at high order.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{threshold} -- $r/(1-r)<1\iff r<\tfrac12$
+(at $r=0.49\to0.96$, $r=0.51\to1.04$); \emph{base} -- $r_2\sim a_0=0.096$, factor
+$5.2$ below $\tfrac12$; \emph{operator form} -- $C_{\rm cm}<1/a_0=10.5$, structural
+$C_{\rm cm}\sim O(1)$; \emph{envelope} -- $1-a_0/(1-a_0)=0.894>0$ at the base ratio.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 all-order common-mode reduction
+Precise statement:       The condensate-perturbation series Delta F = sum_k Delta
+                         F^(k), Delta F^(k)~a0^{k-1} chi^(k), has the common-mode
+                         (strong-fluctuation) part cancel in the difference. RES-5
+                         closes iff the geometric ratio r_k=Delta F^(k+1)/Delta
+                         F^(k)=a0 chi^(k+1)/chi^(k) satisfies r_k<=r<1/2 for all k
+                         (<=> C_cm<1/a0=10.5). The base r_2~a0=0.096 is a factor
+                         ~5 below 1/2; C_cm~O(1) is a factor ~10 below 10.5. IF
+                         the all-order domination holds, Delta F_exact >=
+                         0.894 Delta F^(2) > 0.
+Scope:                   Structure + closure arithmetic; anchor mu^2, endpoint.
+                         The all-order domination is OPEN.
+Dependencies:            res5-commonmode-envelope (a0 control parameter);
+                         neargap-common-mode-resolution (R-U10-3); SC-SCOPE (n=3
+                         base); Math424-AddA (rR, lam').
+Evidence grade:          ANALYTIC (structure + reduction) + EXECUTED
+                         (res5_allorder_commonmode.py 4/4).
+Reproduction command:    python codes/vacuum/res5_allorder_commonmode.py
+Expected output:         a0=0.096; r<1/2 threshold; base r_2~a0 (x5 below);
+                         C_cm<10.5; envelope 0.894>0; 4/4.
+Falsification gate:      A chi-ratio chi^(k+1)/chi^(k) >= (1/2)/a0 ~ 5.2 at some k
+                         (would push r_k>=1/2 and break the geometric closure); or
+                         a non-perturbative-in-condensate contribution evading the
+                         a0 power counting.
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER} unchanged. RES-5/GAP-2:
+                         reduced to all-order geometric domination r_k<1/2; base
+                         a factor ~5 inside.
+No-overclaim statement:  This does NOT close RES-5/GAP-2. Only the closure
+                         CONDITION (geometric domination r<1/2) and the BASE margin
+                         (r_2~a0, factor ~5 inside) are established; the all-order
+                         susceptibility-ratio bound is the deep residual (a strong-
+                         coupling all-order statement). B1 stays T6 on {H-LAYER}.
+Next required action:    Bound the Brazovskii-sea susceptibility ratios
+                         chi^(k+1)/chi^(k) (the all-order geometric domination),
+                         e.g. via a bubble-iterate / spectral bound on the dressed
+                         density correlations; then RES-5 -> controlled-error
+                         theorem and H-LAYER's last deep axis is controlled.
+\end{verbatim}
+}
