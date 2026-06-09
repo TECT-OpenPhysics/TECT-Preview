@@ -1,0 +1,36 @@
+{
+  "script": "res5_dressed_loop_parameter.py",
+  "version": "1.0.0",
+  "rhat": 0.33674599985544107,
+  "lam": 8.055072796999182,
+  "Md": 0.09702566322379842,
+  "Bd": 0.12827093718689958,
+  "lam_Md": 0.7815487804448227,
+  "lam_Bd": 1.0332317367797856,
+  "s3": 0.04,
+  "s4_est": 0.04132926947119143,
+  "verdict": "dressed loop parameter lam' B_d=1.03=O(1) marginal; s_4~s_3 (ratio~1, not decaying); per-term <1/2 but geometric sum marginal => RES-5 needs resummation (2PI/Borel), not a geometric skeleton bound",
+  "claims": [
+    {
+      "name": "dressed_loop_parameter_O1_marginal",
+      "passed": true,
+      "detail": "(dressed loop parameter lam' B_d = lam' int G_d^2 = 1.033 = O(1), in [0.5,1.5] -- MARGINAL, near the convergence boundary 1; the Brazovskii sea is strongly fluctuating even when dressed)"
+    },
+    {
+      "name": "s4_not_much_less_than_s3",
+      "passed": true,
+      "detail": "(s_4 ~ s_3 * loop_param ~ 0.04*1.03 = 0.041 ~ s_3: the skeleton ratio is ~1, so s_4 is NOT << s_3 -- the difference does NOT geometrically decay; each term stays ~4% but the series ratio is marginal)"
+    },
+    {
+      "name": "per_term_below_half_but_sum_marginal",
+      "passed": true,
+      "detail": "(per-term s_4 ~ 0.041 < 1/2 (each skeleton term is small via a0), BUT with ratio ~1.03~1 the geometric SUM does not converge cleanly -- RES-5 closure needs RESUMMATION, not a geometric bound)"
+    },
+    {
+      "name": "res5_needs_resummation",
+      "passed": true,
+      "detail": "(CONCLUSION: dressed loop parameter O(1) => the skeleton/loop series is MARGINAL (strong-coupling). RES-5 closure requires a 2PI self-consistent / Borel RESUMMATION of the marginal series -- a dedicated QFT effort, NOT an elementary geometric skeleton bound. The per-term a0-smallness is real; the ratio marginality is the genuine strong-coupling frontier)"
+    }
+  ],
+  "all_pass": true
+}

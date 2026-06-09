@@ -1,0 +1,144 @@
+% =============================================================================
+% Title: RES-5 dressed three-loop skeleton: the dressed loop parameter is O(1)
+%        (marginal) -- the skeleton series needs resummation, not a geometric bound
+% Claim: B1-RH-ENUM (RES-5 / GAP-2 dressed-skeleton ratio; bears on H-LAYER)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: T3 PROOF SKETCH. Evaluates the dressed skeleton ratio s_4/s_3 (the
+%   operator's three-loop target) via the robust dressed loop parameter
+%   lam' B_d = lam' int G_d^2 = 1.03 = O(1) -- MARGINAL, at the convergence
+%   boundary. Hence s_4 ~ s_3 (ratio ~1, NOT << s_3): each skeleton term stays
+%   small (~4%, a0/common-mode suppressed) but the series does NOT geometrically
+%   decay. The per-term s_l < 1/2 plausibly holds, but the geometric SUM is
+%   marginal -- this is the Brazovskii strong-fluctuation regime. RES-5 closure
+%   therefore requires a RESUMMATION (2PI self-consistent / Borel), not an
+%   elementary geometric skeleton bound. Does NOT close RES-5. No tier flip.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Dressed loop parameter lam' B_d=1.03 (O(1),
+%        marginal); s_4 ~ s_3 (ratio ~1); the resummation conclusion. Grounded by
+%        res5_dressed_loop_parameter.py 4/4.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The 2PI-skeleton framing (res5-higherloop-commonmode-bound) reduced RES-5 to the
+skeleton domination $s_\ell\le s<\tfrac12$ with the favourable base $s_3\sim4\%$
+(sunset). The operator directed the next term: bound the dressed three-loop
+skeleton ratio $s_4=|\Delta F_{3\text{-loop}}^{\rm pd}|/\Delta F_{\rm margin}$, and
+ideally show $s_4\ll s_3$. This note evaluates the skeleton RATIO via the robust
+dressed loop parameter and reports the honest verdict: the ratio is $O(1)$
+(marginal), so $s_4\sim s_3$ and the geometric domination does not hold -- RES-5
+needs resummation. Scope: the dressed loop parameter; anchor $\mu^2$, endpoint.
+
+\section*{2. The dressed loop parameter is $O(1)$ (marginal)}
+
+The skeleton ratio $s_{\ell+1}/s_\ell$ is the dressed per-loop factor, $\sim
+\lambda'\times(\text{dressed bubble})$. At the operating endpoint
+($\hat r=0.337$, $\lambda'=8.06$):
+\[
+\lambda' M_d = \lambda'\!\int G_d = 0.78,
+\qquad
+\lambda' B_d = \lambda'\!\int G_d^2 = 1.03\ =\ O(1).
+\]
+The dressed loop parameter is $\approx1$ -- MARGINAL, at the convergence boundary.
+This is the Brazovskii strong-fluctuation regime: even with the self-consistent
+dressing, the loop expansion is not controlled by a small parameter.
+
+\section*{3. Consequence: $s_4\sim s_3$, the series does not decay}
+
+\[
+\boxed{\;s_4 \sim s_3\cdot(\lambda' B_d) \sim 0.04\times1.03 \approx 0.041 \sim s_3
+\quad(\text{NOT }\ll s_3).\;}
+\]
+Each skeleton term stays small ($\sim4\%$, from the $a_0$ / common-mode
+suppression of the DIFFERENCE), so the per-term condition $s_\ell<\tfrac12$
+plausibly holds at every order. But the RATIO is $\sim1$, so the terms do NOT
+geometrically decay: the geometric sum $\sum_{\ell\ge3}s_\ell$ with ratio $\sim1$
+is MARGINAL (it does not converge cleanly). The favourable base $s_3$ does not, by
+itself, bound the tail.
+
+\section*{4. RES-5 needs resummation (the honest verdict)}
+
+A dressed loop parameter $O(1)$ means the matched-order-to-exact remainder is a
+MARGINAL strong-coupling series. Its bound cannot come from a geometric
+skeleton-by-skeleton estimate; it requires a RESUMMATION -- the 2PI
+self-consistent effective action carried beyond the sunset, or a Borel / optimal-
+truncation treatment of the marginal series. The per-term $a_0$-smallness (the
+common-mode cancellation) is the reason the problem is not hopeless, but the
+$O(1)$ ratio is the genuine strong-coupling obstruction. \textbf{B1 closure}
+$\Longleftrightarrow$ a controlled resummation of this marginal dressed-skeleton
+series.
+
+\section*{5. Status}
+
+\textbf{T3 PROOF SKETCH.} The dressed loop parameter $\lambda' B_d=1.03=O(1)$ is
+pinned (robust); $s_4\sim s_3$ (ratio $\sim1$, not decaying); per-term
+$s_\ell<\tfrac12$ but the geometric sum is marginal. \textbf{OPEN (the genuine
+frontier):} a 2PI / Borel RESUMMATION of the marginal dressed-skeleton series --
+a dedicated strong-coupling QFT computation, not an elementary geometric bound. No
+tier flip: B1-RH-ENUM T6 CONDITIONAL on $\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$s_4\sim s_3$ is a scaling estimate, not the actual
+three-loop integral.''} VALID: the dressed loop parameter $\lambda' B_d=1.03$ is
+robust (a converged integral), and gives the RATIO; the precise $s_4$ needs the
+actual three-loop skeleton integral, but its SCALE is fixed by the loop parameter,
+so the marginal-ratio conclusion holds at the scaling level.
+\item[($\beta$)] \emph{``Marginal ratio means RES-5 fails.''} DISMISSED: marginal
+($\approx1$) is not $>1$; with the $a_0$-suppressed per-term smallness, the series
+may still sum (optimal truncation / Borel), and the selection has survived at every
+computed order (SC-SCOPE). It means a geometric bound is the wrong tool --
+resummation is needed -- not that RES-5 is false.
+\item[($\gamma$)] \emph{``Does this change B1?''} DISMISSED: it characterises the
+residual (marginal, needs resummation), not any tier. B1 stays T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{magnitude} -- $\lambda' B_d=1.03=O(1)$
+(marginal); \emph{ratio} -- $s_4/s_3\sim\lambda' B_d\sim1$ (not decaying);
+\emph{per-term} -- $s_4\sim0.04<\tfrac12$ (a0-suppressed); \emph{regime} --
+Brazovskii strong fluctuations give an $O(1)$ dressed loop parameter, as expected
+for a fluctuation-driven first-order transition.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / RES-5 dressed three-loop skeleton (loop param)
+Precise statement:       The dressed skeleton ratio s_{l+1}/s_l ~ lam' B_d =
+                         lam' int G_d^2 = 1.03 = O(1) (marginal). Hence s_4 ~ s_3 *
+                         1.03 ~ s_3 (NOT << s_3): each term ~4% (a0-suppressed) but
+                         the series ratio is ~1, so it does not geometrically
+                         decay. Per-term s_l<1/2 plausibly holds; the geometric SUM
+                         is marginal. RES-5 closure needs a 2PI/Borel RESUMMATION
+                         of the marginal dressed-skeleton series, not a geometric
+                         bound.
+Scope:                   Dressed loop parameter (robust) + scaling estimate of s_4;
+                         anchor mu^2, endpoint. The precise three-loop integral and
+                         the resummation are OPEN.
+Dependencies:            res5-higherloop-commonmode-bound (the 2PI framing);
+                         SC-SCOPE (s_3 sunset); Math424-AddA (rR, lam', G_d).
+Evidence grade:          ANALYTIC + EXECUTED (res5_dressed_loop_parameter.py 4/4).
+Reproduction command:    python codes/vacuum/res5_dressed_loop_parameter.py
+Expected output:         lam' M_d=0.78, lam' B_d=1.03 (O(1)); s_4~s_3~0.04; 4/4.
+Falsification gate:      A dressed loop parameter << 1 (would restore the geometric
+                         bound) or >> 1 (would signal a genuine divergence); a
+                         resummation giving |sum_{l>=3}| >= Delta F_margin (would
+                         threaten the selection at exact order).
+Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5: the dressed
+                         skeleton series is MARGINAL (loop param O(1)); closure
+                         needs resummation.
+No-overclaim statement:  This does NOT close RES-5 and does NOT change B1's tier.
+                         It establishes that the dressed-skeleton series is
+                         marginal (loop parameter O(1)) and that geometric bounds
+                         are the wrong tool; a 2PI/Borel resummation is the genuine
+                         residual. The per-term a0-smallness is real; the O(1)
+                         ratio is the strong-coupling frontier.
+Next required action:    A dedicated 2PI self-consistent (or Borel / optimal-
+                         truncation) RESUMMATION of the dressed-skeleton DIFFERENCE
+                         series; this is a major strong-coupling QFT effort, the
+                         genuine H-LAYER/RES-5 closure frontier.
+\end{verbatim}
+}

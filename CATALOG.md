@@ -6,7 +6,7 @@
 
 Generated: 2026-06-09
 
-**547 artefacts** · superseded versions kept: 54 · machine-readable twin: `verification/catalog.json`
+**551 artefacts** · superseded versions kept: 54 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -24,7 +24,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-RENORMALISATION/LINEAGE.md` | A3-RENORMALISATION | — | — | — | ACTIVE | `7dac74dc783a` |
 | `claims/A3-RENORMALISATION/claim.md` | A3-RENORMALISATION | — | — | — | ACTIVE | `06f9f2d35903` |
 | `claims/A3-RENORMALISATION/status.json` | A3-RENORMALISATION | — | — | — | ACTIVE | `9bf455b6fe7f` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `24862cfbef7b` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `59dbe2121423` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `487bec41261c` |
@@ -124,6 +124,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-allorder-commonmode-bound-260609-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `c65531e2592a` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-commonmode-envelope-260609-v1.0.pdf` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `23c93bae713c` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-commonmode-envelope-260609-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `f1f0a1a0f6ec` |
+| `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-dressed-threeloop-skeleton-bound-260609-v1.0.pdf` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `2e34f4acb665` |
+| `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-dressed-threeloop-skeleton-bound-260609-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `55bace31e3e6` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-higherloop-commonmode-bound-260609-v1.0.pdf` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `82970775c5ff` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-higherloop-commonmode-bound-260609-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `7b2334164f7c` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-oneloop-loop-disentangling-260609-v1.0.pdf` | B1-RH-ENUM | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `7193c9b61f2b` |
@@ -419,6 +421,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/runs/260608-g3pb3-ratio-extraction/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `3caa63ce9539` |
 | `claims/B1-RH-ENUM/runs/260609-res5-allorder-commonmode/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `a7019305c420` |
 | `claims/B1-RH-ENUM/runs/260609-res5-commonmode-envelope/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `523e310324fb` |
+| `claims/B1-RH-ENUM/runs/260609-res5-dressed-loop-parameter/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `44ea2b505ee8` |
 | `claims/B1-RH-ENUM/runs/260609-res5-higherloop-skeleton/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `a351d0f7edd6` |
 | `claims/B1-RH-ENUM/runs/260609-res5-oneloop-disentangle/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `5a43efea6d75` |
 | `claims/B1-RH-ENUM/runs/260609-res5-susceptibility-ratio/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `b0424a9d2e9b` |
@@ -480,6 +483,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/neargap_common_mode_repair.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `025ad32b1bb3` |
 | `codes/vacuum/res5_allorder_commonmode.py` | — | — | — | v1.0.0 | ACTIVE | `74268743ba20` |
 | `codes/vacuum/res5_commonmode_envelope.py` | — | — | — | v1.0.0 | ACTIVE | `d3581f72ba20` |
+| `codes/vacuum/res5_dressed_loop_parameter.py` | — | — | — | v1.0.0 | ACTIVE | `72471397bd22` |
 | `codes/vacuum/res5_higherloop_skeleton.py` | — | — | — | v1.0.0 | ACTIVE | `066248703d41` |
 | `codes/vacuum/res5_oneloop_disentangle.py` | — | — | — | v1.0.0 | ACTIVE | `47c64cf45491` |
 | `codes/vacuum/res5_susceptibility_ratio.py` | — | — | — | v1.0.0 | ACTIVE | `eee125358e32` |
@@ -544,11 +548,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `7ea02ae11ed7` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `0b25f91fc1fc` |
+| `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `9571d42310b2` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `51575c45e413` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `34ae92abd508` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `5ce5890a3fc2` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `ccde0b67074a` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `09f70e3caefa` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `181c105f3154` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
@@ -573,7 +577,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `dff7f082874f` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `2dfb901c28fd` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `c4064e62e8a5` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d5631d46416f` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `b8435e52bc62` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |

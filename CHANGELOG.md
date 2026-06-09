@@ -5,6 +5,20 @@ not pillar counts.
 
 ---
 
+## [RES-5 dressed-skeleton ratio: loop parameter O(1) (marginal) -> needs resummation (T3)] - 2026-06-09
+
+- **Operator-directed three-loop skeleton bound.** NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/
+  res5-dressed-threeloop-skeleton-bound v1.0` (PDF FORM-CHECK PASS) + `codes/vacuum/res5_dressed_loop_parameter.py`
+  (4/4) + `runs/`.
+- The dressed skeleton ratio s_{l+1}/s_l ~ lam' B_d = lam' int G_d^2 = 1.03 = O(1) -- MARGINAL, at the convergence
+  boundary (lam' M_d = 0.78). Hence s_4 ~ s_3 * 1.03 ~ s_3 (NOT << s_3): each skeleton term stays small (~4%,
+  a0/common-mode suppressed) but the series ratio ~1 does NOT geometrically decay. Per-term s_l < 1/2 plausibly
+  holds; the geometric SUM is marginal.
+- **HONEST VERDICT**: RES-5 closure requires a 2PI self-consistent / Borel RESUMMATION of the marginal
+  dressed-skeleton series (the Brazovskii strong-fluctuation regime, dressed loop parameter O(1)), NOT an elementary
+  geometric skeleton bound. The per-term a0-smallness is real; the O(1) ratio is the genuine strong-coupling
+  frontier. No tier flip (B1 T6 on {H-LAYER}). B1 closure <=> the resummation. lint PASS (29), release_check PASS.
+
 ## [RES-5 higher-loop residual = 2PI skeleton expansion; sunset the favourable leading (T3)] - 2026-06-09
 
 - **Operator-directed higher-loop common-mode bound.** NEW note `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/
