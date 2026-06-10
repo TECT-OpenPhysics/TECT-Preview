@@ -1,0 +1,212 @@
+% SUPERSEDED by claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-gershgorin-threshold-260610-v1.1.tex.txt (operator review 2026-06-10: full-admissible-class threshold correction + B^cond diagonality lemma)
+% =============================================================================
+% Title: Discharging H-diag V: reducing the full off-diagonal operator-norm
+%        residual to the exchange block alone -- diagonality, triangle budget,
+%        and a single-scalar Gershgorin sufficient condition
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1 full-Hessian operator norm; bears on B1)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T3 PROOF SKETCH / REDUCTION. Sharpens the full-operator-norm formulation
+%   (hdiag-full-operator-norm-formulation v1.0). Three increments, none a closure:
+%   (i) the condensate/bubble block B^cond is DIAGONAL in the channel index Q
+%   (Math428), so its worst-direction operator norm is the max single-channel
+%   ratio; since max_Q p_2(Q)^2 <= sum_Q p_2(Q)^2 = E_+, the constant-certificate
+%   bound R_lead <= 0.174 (which used E_+) is ALSO a worst-direction bound -- the
+%   "condensate-direction only" caveat is removed for this block. (ii) The
+%   triangle inequality on B_od = B^cond + B^exch reduces the full off-diagonal
+%   operator-norm residual to the EXCHANGE (Fock) BLOCK ALONE, with the explicit
+%   budget ||E^-1/2 B^exch E^-1/2|| < 1 - 0.174 = 0.826. (iii) The symmetric-
+%   operator row-sum bound replaces the exchange-Hessian EIGENVALUE spectrum by a
+%   single scalar threshold b_exch < b* = (1-R_lead)/N_exch (N_exch a combinatorial
+%   row count). The residual scalar b_exch (the dressed Fock-bubble magnitude/sign)
+%   is RES-5 and is NOT bounded here. No tier flip: B1/B2 remain T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Diagonality-removes-caveat + triangle exchange
+%        budget 0.826 + Gershgorin single-scalar threshold b* = 0.0486 (BCC).
+%        Grounded by res5_018_offdiag_gershgorin_threshold.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The full-operator-norm formulation note constructed the off-diagonal Hessian
+$\mathrm{Hess}\,F|_{G_*} = E + B_{\rm od}$ and isolated the analytic obstruction
+to the worst-direction certificate $\|E^{-1/2}B_{\rm od}E^{-1/2}\|<1$ as the
+sign of the exchange (Fock) block, naming it a residual that merges with RES-5.
+That note left the residual as a SPECTRAL problem: ``the full norm requires the
+exchange-Hessian eigenvalues.'' This note sharpens the residual in three honest
+steps -- removing the condensate-direction caveat by diagonality, isolating the
+exchange block by the triangle inequality with an explicit budget, and replacing
+the eigenvalue spectrum by a single scalar threshold. None of the three is a
+closure; the scalar that remains is RES-5. Scope: the operating-endpoint anchor
+$\mu^2 = 0.005$; the canonical BCC Bloch competitor for the explicit constants.
+
+\section*{2. Block decomposition (recalled)}
+
+With $E = \tfrac12 G_*^{-1}\!\otimes G_*^{-1}\succ0$ (positive-definite, diagonal
+in the Bloch channel index $Q$) the interaction Hessian splits as
+\[
+B_{\rm od} = B^{\rm cond} + B^{\rm exch},
+\]
+the Hartree part carrying no off-diagonal block. From Math428 the condensate /
+bubble off-diagonal free-energy share is
+\[
+\Delta F_{\rm od}(A) = -\tfrac14\sum_{Q\neq0} W(Q)^2\,B(|Q|),\qquad
+W(Q) = 3u_{\rm eff}A^2 p_2(Q) + 5vA^4 p_4(Q),\quad
+B(|Q|)=\!\int\! G_d(q)G_d(q+Q),
+\]
+a sum of INDEPENDENT channel contributions: $B^{\rm cond}$ is therefore
+\emph{diagonal} in the channel index $Q$. The exchange block $B^{\rm exch}$ is
+genuinely off-diagonal ($Q\neq Q'$); its sign is not fixed by $u_{\rm eff}>0$
+(bare $u=-0.86<0$, $u_{\rm eff}=+2.685>0$ only via the sextic dressing).
+
+\section*{3. Increment (i): diagonality removes the condensate-direction caveat}
+
+The constant certificate (hdiag-offdiag-constant-certificate) bounded the
+condensate-\emph{direction} ratio at the operating endpoint intensity
+$I=2\times10^{-3}$,
+\[
+R_{\rm lead}(I)\ \le\ \frac{9}{4}\,\frac{u_{\rm eff}^2 B_{\max} E_+}{c_{\rm diag}}
+\,\frac{I}{N}\ =\ 0.174,\qquad
+E_+ = \sum_{Q}p_2(Q)^2,\quad c_{\rm diag}=\tfrac{N}{2}r_R,
+\]
+using the FULL additive energy $E_+$ as an envelope, and explicitly flagged that
+this bounded the condensate-compatible direction, not the unrestricted
+worst-direction norm. Because $B^{\rm cond}$ is DIAGONAL in $Q$, its
+worst-direction operator norm is the maximum single-channel ratio,
+\[
+\big\|E^{-1/2}B^{\rm cond}E^{-1/2}\big\|_{\rm op}
+= \max_{Q\neq0}\frac{B(|Q|)\,p_2(Q)^2}{(\text{channel-}Q\ \text{entropy curvature})},
+\]
+whose channel weight is bounded by $\max_{Q}p_2(Q)^2\le\sum_{Q}p_2(Q)^2=E_+$.
+Hence the SAME $E_+$-based bound that produced $R_{\rm lead}\le0.174$ is also an
+upper bound for the worst direction:
+\[
+\boxed{\ \big\|E^{-1/2}B^{\rm cond}E^{-1/2}\big\|_{\rm op}\ \le\ 0.174\ }
+\qquad(\times5.7\ \text{margin, ALL directions}).
+\]
+The diagonal structure removes the ``condensate-direction only'' caveat for the
+condensate block. (For BCC, $\max_{Q\neq0}p_2(Q)^2 = 16 \ll E_+ = 540$, so the
+diagonal worst-direction norm is in fact considerably smaller than $0.174$; the
+boxed bound is the conservative envelope inherited verbatim from the certificate.)
+
+\section*{4. Increment (ii): triangle inequality isolates the exchange block}
+
+By the triangle inequality for the operator norm,
+\[
+\big\|E^{-1/2}B_{\rm od}E^{-1/2}\big\|_{\rm op}
+\ \le\ \big\|E^{-1/2}B^{\rm cond}E^{-1/2}\big\|_{\rm op}
+      + \big\|E^{-1/2}B^{\rm exch}E^{-1/2}\big\|_{\rm op}
+\ \le\ 0.174 + \rho_{\rm exch},
+\]
+with $\rho_{\rm exch}:=\|E^{-1/2}B^{\rm exch}E^{-1/2}\|_{\rm op}$. The full
+off-diagonal norm is therefore $<1$ provided
+\[
+\boxed{\ \rho_{\rm exch}\ <\ 1 - R_{\rm lead}\ =\ 0.826\ }.
+\]
+The residual is now a SINGLE BLOCK norm with an explicit budget, not the full
+Hessian spectrum. The condensate / additive-energy sector -- the Math428 $W(Q)$
+source that carried the original BCC competitor worry -- is fully accounted for
+and consumes only $0.174$ of the unit budget.
+
+\section*{5. Increment (iii): a single-scalar Gershgorin sufficient condition}
+
+For a symmetric operator the norm is bounded by the maximum absolute row sum,
+$\|M\|_{\rm op}\le\max_Q\sum_{Q'}|M_{QQ'}|$. Factoring the exchange row sum into
+a combinatorial count and an analytic magnitude,
+\[
+\rho_{\rm exch}\ \le\ \max_Q\sum_{Q'}\big|[E^{-1/2}B^{\rm exch}E^{-1/2}]_{QQ'}\big|
+\ \le\ N_{\rm exch}\,b_{\rm exch},
+\]
+where $N_{\rm exch}=\max_Q\#\{Q':\,Q-Q'\in\{k_i-k_j\}\}$ is the number of channels
+coupling to $Q$ through the Fock kernel (a pure counting object; $N_{\rm exch}=17$,
+$\le n_{\rm chans}=54$ for BCC) and $b_{\rm exch}=\max_Q|[E^{-1/2}B^{\rm exch}
+E^{-1/2}]|$ is the maximum $E$-normalised exchange entry. The Gershgorin closure
+criterion is then the explicit scalar threshold
+\[
+\boxed{\ b_{\rm exch}\ <\ b_\ast := \frac{1-R_{\rm lead}}{N_{\rm exch}}
+= \frac{0.826}{17} = 0.0486\ }.
+\]
+This REPLACES the exchange-Hessian eigenvalue spectrum by ONE number: if the
+dressed Fock bubble, normalised by the entropy curvature, is below $0.0486$ per
+channel, the full off-diagonal operator norm is $<1$. No eigenvalue computation is
+required to certify closure.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The $N_{\rm exch}$ factor is lossy -- $b_\ast=0.0486$ is
+artificially small.''} VALID, and stated honestly: the tight reduction is the
+\emph{aggregate} budget $\rho_{\rm exch}<0.826$ (Increment ii), which makes no
+per-entry factorisation; the scalar threshold (Increment iii) trades a factor
+$N_{\rm exch}=17$ for a single-number target. Both are recorded; the scalar form
+is a SUFFICIENT condition, not the tight one.
+\item[($\beta$)] \emph{``Diagonality of $B^{\rm cond}$ is asserted from a
+free-energy share $\Delta F_{\rm od}(A)$, not the $\delta G$-Hessian.''}
+PARTLY-VALID: the Math428 share is a sum of independent channel terms
+$\propto W(Q)^2 B(|Q|)$, so the induced $\delta G$-curvature it sources is
+channel-diagonal; the genuinely off-diagonal ($Q\neq Q'$) coupling resides
+entirely in the exchange block, which is exactly the residual carried here. The
+boxed condensate bound is the conservative $E_+$ envelope, robust to this point.
+\item[($\gamma$)] \emph{``Does this flip any tier?''} DISMISSED: it does not. The
+exchange scalar $b_{\rm exch}$ is unbounded here (RES-5), so the full norm is not
+certified; B1 and B2 remain T6 conditional on $\{$H-LAYER$\}$. The note only
+sharpens the residual map (RES-1 off-diagonal $\to$ exchange-block scalar).
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{diagonal bound} --
+$\max_Q p_2(Q)^2 = 16 \le E_+ = 540$ (max $\le$ sum), so the condensate envelope
+$0.174$ bounds the worst direction; \emph{budget} -- $R_{\rm lead}+N_{\rm exch}b_\ast
+= 0.174 + 17\times0.0486 = 1.000$ exactly (unit-budget split, dimensionless);
+\emph{sign} -- bare $u=-0.86<0$, dressed $u_{\rm eff}=+2.685>0$, so $b_{\rm exch}$'s
+sign is genuinely unfixed (RES-5); \emph{margin} -- condensate sector $\times5.7$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-diag discharge V (full off-diagonal
+                         operator-norm residual reduced to the exchange block)
+Precise statement:       Hess F|G* = E + B^cond + B^exch. (i) B^cond is DIAGONAL in
+                         the channel Q (Math428 Delta F_od=-1/4 sum_Q W(Q)^2 B(|Q|)),
+                         so its worst-direction norm <= the E_+-envelope R_lead<=0.174
+                         (max_Q p_2^2=16 <= E_+=540): the condensate-direction caveat
+                         is removed. (ii) Triangle: ||E^-1/2 B_od E^-1/2|| <= 0.174 +
+                         rho_exch, so the full norm is <1 provided rho_exch<1-R_lead=
+                         0.826 -- residual = exchange block alone. (iii) Symmetric
+                         row-sum: rho_exch <= N_exch*b_exch (N_exch=17 BCC), so a
+                         single scalar threshold b_exch < b*=(1-R_lead)/N_exch=0.0486
+                         suffices, REPLACING the exchange-Hessian eigenvalue spectrum.
+Scope:                   Operating endpoint mu^2=0.005; BCC Bloch competitor for the
+                         explicit constants. b_exch (dressed Fock bubble) NOT bounded.
+Dependencies:            hdiag-full-operator-norm-formulation (block decomposition,
+                         exchange-sign obstruction); hdiag-offdiag-constant-certificate
+                         (R_lead<=0.174, E_+, c_diag, B_max); hdiag-offdiag-additive-
+                         energy (sum p_2^2=E_+); Math428 (W,B); res5-chi-link-bypass
+                         (T' pin context).
+Evidence grade:          ANALYTIC (reduction) + EXECUTED
+                         (res5_018_offdiag_gershgorin_threshold.py 5/5).
+Reproduction command:    python codes/vacuum/res5_018_offdiag_gershgorin_threshold.py
+Expected output:         R_lead=0.1740; exchange budget 1-R_lead=0.8260; N_exch=17;
+                         b*=0.0486; 5/5 PASS.
+Falsification gate:      A proof that the condensate block is NOT diagonal in Q (would
+                         break Increment i); or an exchange-bubble computation giving
+                         b_exch >= b* AND rho_exch >= 0.826 at operating intensity
+                         (would refute closure via this route, leaving RES-5 the only
+                         path).
+Tier before / after:     No tier flip. B1 T6, B2 T6 on {H-LAYER} unchanged. RES-1
+                         off-diagonal residual: reduced from the full exchange-Hessian
+                         eigenvalue spectrum to the single scalar b_exch < 0.0486
+                         (aggregate: exchange block norm < 0.826).
+No-overclaim statement:  This does NOT close the full off-diagonal operator norm and
+                         does NOT flip B1/B2. The exchange scalar b_exch is RES-5 and
+                         is not bounded here. The note removes the condensate-direction
+                         caveat (diagonality), isolates the exchange block with an
+                         explicit budget (0.826), and reduces the eigenvalue spectrum
+                         to one scalar threshold (0.0486). B1/B2 stay T6 on {H-LAYER}.
+Next required action:    Bound b_exch (the dressed Fock-bubble magnitude/sign at the
+                         operating intensity) = RES-5 / GAP-2; either via the matched-
+                         order remainder envelope or a sign-definite screened-exchange
+                         argument. That single scalar closes the full off-diagonal norm.
+\end{verbatim}
+}

@@ -1,0 +1,140 @@
+% SUPERSEDED by claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/res5-chi-link-bypass-260610-v1.1.tex.txt (operator review 2026-06-10: weighted Lemma A proof sketch + t=0 footnote + 115/130 scan-count separation)
+% =============================================================================
+% Title: The chi(P) carrier-richness link is bypassed: the WEIGHTED Lemma A (R-027, T7)
+%        bounds the STEP-5B floor by T' directly (any amplitudes), so the additive-
+%        energy pin IS the physical-floor pin -- Residual 1 closed within B1's scope
+% Claim: B1-RH-ENUM (RES-5 endpoint physical-floor link; bears on B5, H-LAYER)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: STRONG EVIDENCE -> the physical STEP-5B floor is pinned (chi(P)-free).
+%   Overnight T-017. The operator verdict listed chi(P)<~T' as Residual 1 (the link
+%   from the additive energy to the actual STEP-5B floor). This note shows it is
+%   BYPASSED: the STEP-5B integration (R-027, dr2-step5b-integration v1.1) proves the
+%   WEIGHTED Lemma A sum_t w_t^2 <= (1+T'(Q))||c||_2^4 for ANY amplitudes c (T7), i.e.
+%   K_floor(c)=sum_{t!=0}w_t^2/I^2 <= T'(Q) for any amplitudes -- the additive-energy ->
+%   STEP-5B-floor link is the weighted Lemma A, NOT chi(P) (the dual extraction-route
+%   incidence quantity). Combined with the admissible pin (max T'=13), the physical
+%   floor is K_floor<=T'<=13<20.5(RES-1)<26.2(RES-5) for ANY amplitudes. So Residual 1
+%   is closed within B1's lattice scope; the EXACT scope upgrades from "additive-energy
+%   combinatorial pin" to "physical STEP-5B floor pin", at the grade {weighted Lemma A
+%   T7} + {exact T' pin}. Remaining: the competitor-class-definition (operator) and
+%   Residual 2 (off-diagonal operator norm, T-018). No tier flip: B1/B2 T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. chi(P) bypassed by R-027; K_floor(c)<=T' verified
+%        for random amplitudes; T'<=13 pin. Grounded by res5_017_chi_bypass.py 3/3.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The operator verdict named two residuals; this note addresses Residual 1, the
+carrier-richness link $\chi(P)\lesssim T'$ from the additive energy to the physical
+STEP-5B floor. The conclusion is that it is BYPASSED -- a proved (T7) weighted bridge
+gives the floor bound directly in terms of $T'$. Scope: B1's lattice T6 scope; any
+amplitudes; the $I=2\times10^{-3}$ endpoint. No tier action.
+
+\section*{2. The weighted Lemma A is the chi(P)-free link}
+
+The STEP-5B floor requires $\sum_t w_t^2\le K(\lambda'I)^2$ with $w_t=\sum_{u+v=t}c_uc_v$.
+The integration note R-027 (dr2-step5b-integration v1.1) proves the WEIGHTED Lemma A
+\[
+\sum_t w_t^2\ \le\ \bigl(1+T'(Q)\bigr)\|c\|_2^4\qquad\text{for ANY amplitudes }c,\qquad(\text{T7}),
+\]
+$T'(Q)=\max_{t\ne0}\#(M\cap C_t)$ the sum-circle richness. Since $w_0=\|c\|_2^2=I$ and the
+floor uses the $t\ne0$ part,
+\[
+\boxed{\ K_{\rm floor}(c)=\frac{\sum_{t\ne0}w_t^2}{I^2}\ \le\ T'(Q)\qquad\text{for ANY amplitudes.}\ }
+\]
+The additive-energy $\to$ STEP-5B-floor connection is THIS weighted bridge. The
+carrier-richness $\chi(P)$ is the DUAL extraction-route incidence quantity; the
+integration route uses $T'$ directly and does NOT invoke $\chi(P)$. (Verified: over 115
+admissible configs $\times$ 3 random amplitude profiles, $K_{\rm floor}(c)-T'\le0$.)
+
+\section*{3. The pin: physical floor $\le13$ for any amplitudes}
+
+The admissible pin (res-endpoint-admissible-pin) gives $\max_Q T'=13$ over the admissible
+crystallographic-shell class. Hence, by the weighted Lemma A,
+\[
+K_{\rm floor}(c)\ \le\ T'(Q)\ \le\ 13\ <\ 20.5\ (\text{RES-1})\ <\ 26.2\ (\text{RES-5})
+\qquad\text{for ANY amplitudes,}
+\]
+i.e. the PHYSICAL STEP-5B floor (not merely the uniform-amplitude additive energy) is
+pinned below both thresholds, $\chi(P)$-free.
+
+\section*{4. Verdict: Residual 1 closed within scope}
+
+\noindent\textbf{Residual 1 ($\chi(P)$ link) is BYPASSED.} The physical STEP-5B floor is
+bounded by $T'$ directly via the weighted Lemma A (R-027, T7), and pinned $\le13$ by the
+admissible scan -- for any amplitudes. So the ``EXACT additive-energy pin'' upgrades to a
+PHYSICAL STEP-5B floor pin within B1's lattice scope, at the grade
+\[
+\{\text{weighted Lemma A }T7\}\ +\ \{\text{exact }T'\text{ pin}\le13\}.
+\]
+\textbf{Remaining (honest):} (a) the competitor-class-definition -- that competitors are
+exactly crystallographic-shell subsets up to $n_{\rm pack}$ (an operator/modeling
+confirmation, the R-027 residual (ii)); (b) Residual 2 -- the off-diagonal worst-direction
+operator norm for H-diag (T-018). The class-wide $T'\le C_\varepsilon R^\varepsilon$ is
+R-026 (T7 modulo textbook NT), but $T'$ is PINNED EXACTLY $\le13$ over the admissible
+range, so that caveat is moot within scope. No tier flip: B1/B2 stay T6 CONDITIONAL on
+$\{$H-LAYER$\}$.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is the weighted Lemma A really T7 and really chi(P)-free?''}
+The note R-027 grades it T7 (an elementary Cauchy-Schwarz / $\ell^1$-$\ell^2$ amplitude
+bridge), and its statement is in $T'$, not $\chi(P)$; the $\chi(P)$ extraction route is a
+SEPARATE (dual) approach. The numerical check confirms $K_{\rm floor}(c)\le T'$ for random
+amplitudes. So Residual 1 is genuinely bypassed, not relabelled.
+\item[($\beta$)] \emph{``So is the floor a theorem now?''} Within B1's lattice scope, the
+floor pin rests on {weighted Lemma A T7} + {exact $T'\le13$ pin} -- high grade, but the
+competitor-class-definition is an operator/modeling item and the threshold ($20.5/26.2$)
+is estimate-grade. So STRONG EVIDENCE for the physical-floor closure, not an unconditional
+theorem. (No ``unconditional'' claim -- the v1.1 lesson.)
+\item[($\gamma$)] \emph{``Does this discharge H-LAYER?''} No -- it closes Residual 1 (the
+$\chi(P)$ link). Residual 2 (operator norm, T-018) and the Prop-A isotropy core remain.
+B1/B2 T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{weighted Lemma A} $\max(K_{\rm floor}(c)-T')
+=0$ over 115 configs $\times$3 random profiles; \emph{pin} $\max T'=13<20.5<26.2$;
+\emph{grade} T7 weighted bridge $+$ exact $T'$ pin; \emph{scope} any amplitudes, lattice
+class.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / chi(P) link bypass (Residual 1)
+Precise statement:       The weighted Lemma A (R-027, T7) gives sum_t w_t^2 <=
+                         (1+T')||c||_2^4 for any amplitudes, i.e. K_floor(c) <= T' --
+                         the additive-energy -> STEP-5B-floor link, chi(P)-free (chi(P)
+                         is the dual extraction-route quantity). With the admissible pin
+                         max T'=13, the physical floor is K_floor<=T'<=13<20.5<26.2 for
+                         ANY amplitudes. Residual 1 (chi(P) link) is BYPASSED; the EXACT
+                         scope upgrades combinatorial -> physical-floor, grade {weighted
+                         Lemma A T7}+{exact T' pin}.
+Scope:                   B1 lattice T6 scope; any amplitudes; I=2e-3. STRONG EVIDENCE.
+Dependencies:            dr2-step5b-integration v1.1 (R-027 weighted Lemma A, T7);
+                         res-endpoint-admissible-pin (max T'=13); res5-dr2-kappa-bound
+                         v1.2; res5-arc-consolidation.
+Evidence grade:          ANALYTIC (weighted Lemma A, R-027 T7) + EXECUTED
+                         (res5_017_chi_bypass.py 3/3, 115 configs x random amplitudes).
+Reproduction command:    python codes/vacuum/res5_017_chi_bypass.py
+Expected output:         K_floor(c)-T' <= 0 (any amplitudes); max T'=13 < 20.5 < 26.2;
+                         chi(P) bypassed; 3/3 PASS.
+Falsification gate:      An amplitude profile with K_floor(c) > T' (would break the
+                         weighted Lemma A); or an admissible config with T' > 13.
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}. Residual 1 (chi(P) link)
+                         CLOSED/bypassed within scope; physical-floor pin via R-027 T7 +
+                         T' pin. Remaining: class-definition + Residual 2 (T-018).
+No-overclaim statement:  STRONG EVIDENCE, not an unconditional theorem: {weighted Lemma A
+                         T7}+{exact T' pin} close the physical floor within scope, but the
+                         competitor-class-definition is an operator item and the threshold
+                         is estimate-grade. chi(P) is genuinely bypassed (the weighted
+                         bridge is in T', not chi(P)). B1/B2 T6 unchanged.
+Next required action:    T-018 (off-diagonal operator norm) and the Prop-A isotropy core
+                         (T-016) are the remaining H-LAYER residuals; the chi(P) link is
+                         removed.
+\end{verbatim}
+}

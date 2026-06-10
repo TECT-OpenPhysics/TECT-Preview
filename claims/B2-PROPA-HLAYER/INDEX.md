@@ -21,7 +21,7 @@
 |---|---|---|---|---|---|
 | `ha0-removal-pathway` | v2.1 | T6 | A-zero uniqueness + zero-at-gap (H-A0's U,Z) derived as a sign-decomposition theorem: F_0'(m) = (1/2) M'(m) g(m) with M'<0 (L1), g strictly decreasin… | ANALYTIC (sign lemmas + theorem) + EXECUTED (… | Write out G-A0-DUI explicitly (close the textbook residual) to discharge H-ANCHOR toward … |
 
-## Prop-A/  ·  6 proof units  ·  tier span T6
+## Prop-A/  ·  8 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -30,6 +30,8 @@
 | `hdiag-offdiag-additive-energy` | v1.0 | T6* | (1) EXACT: the off-diagonal Bogoliubov weight obeys sum_Q p_2(Q)^2 = E_+({k_j}) (additive energy of the Bragg set; verified 540=540 for BCC N=12). (2… | ANALYTIC (identity + bound) + EXECUTED (hdiag… | Pin B_max and the diagonal lower constant to convert the subpolynomial reduction into a c… |
 | `hdiag-offdiag-constant-certificate` | v1.0 | T6* | Constants pinned: B_max=B(q0)=0.218<=B(0)=0.299; c_diag=(N/2)rR=1.827; p_4 cross/leading=0.044 (suppressed by A^2~I/N). Assembled conservative leadin… | ANALYTIC (bound) + EXECUTED (hdiag_offdiag_co… | Bound the full worst-direction Hessian norm (the entropy cross-block) and the higher addi… |
 | `hdiag-offdiag-floor-bound` | v1.0 | T6* | The off-diag Bogoliubov weight is E_+, so the conservative leading condensate-direction ratio is R_lead=const(1+K_floor)I, const=(9/2)u_eff^2 B_max/r… | ANALYTIC + EXACT (K_floor combinatorial) + EX… | The worst-direction operator-norm bound (complete Hessian) and the R-026 constant pin + c… |
+| `hdiag-offdiag-gershgorin-threshold` | v1.1 | T6* | Hess F\|G* = E + B^cond + B^exch. (i) DIAGONALITY LEMMA: Delta F_od = sum_Q f_Q(G_QQ) [independent channels] => B^cond block-diagonal in Q => \|\|B^cond… | ANALYTIC (reduction + diagonality lemma) + EX… | Bound the dressed exchange scalar b_exch(Q) at operating intensity against b_star(Q) = (1… |
+| `isotropy-infimum-core` | v1.1 | T6* | Condensate-free F_0 over the diagonal-Gaussian class. The second variation at G_* is delta^2 F_0 = (1/2) int G_*^-2 (dG)^2 + Phi''_diag (dM_tot)^2. S… | ANALYTIC (exact block-diagonalisation + analy… | Bound the exchange scalar b_exch(Q) at operating intensity (RES-5/GAP-2) -- the single re… |
 | `proposition-a-migration-revalidation` | v1.4 | T6 | Migration batch-1 evidence chain migrated verbatim and re-validated by full re-execution (277/277). | EXECUTED | Migration batch 2 (Math431-HEX chain + Math427/428-432/434/436) for B1 cleanness. |
 
-<!-- generated 2026-06-09T16:34:16Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-10T02:20:02Z by build_index.py v1.0.1 -->

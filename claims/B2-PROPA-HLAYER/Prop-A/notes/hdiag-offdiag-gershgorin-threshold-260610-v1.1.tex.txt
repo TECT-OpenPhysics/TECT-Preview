@@ -1,0 +1,196 @@
+% =============================================================================
+% Title: Discharging H-diag V: reducing the full off-diagonal operator-norm
+%        residual to the exchange block alone -- diagonality, triangle budget,
+%        and a competitor-dependent single-scalar Gershgorin condition
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1 full-Hessian operator norm; bears on B1)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T3 PROOF SKETCH / REDUCTION. Sharpens the full-operator-norm formulation
+%   (hdiag-full-operator-norm-formulation v1.0). Three increments, none a closure:
+%   (i) a DIAGONALITY LEMMA -- the condensate/bubble block B^cond is the second
+%   variation of a free-energy share that is a sum of INDEPENDENT channel terms
+%   (Math428), hence its delta G-Hessian is BLOCK-DIAGONAL in the channel index Q,
+%   so its worst-direction operator norm equals the max single-channel ratio,
+%   bounded by R_lead(Q) (the 'condensate-direction only' caveat is removed).
+%   (ii) The triangle inequality on B_od = B^cond + B^exch reduces the full
+%   off-diagonal operator-norm residual to the EXCHANGE (Fock) BLOCK ALONE, with
+%   the explicit budget rho_exch < 1 - R_lead(Q). (iii) The symmetric-operator
+%   row-sum replaces the exchange-Hessian EIGENVALUE spectrum by a COMPETITOR-
+%   DEPENDENT scalar threshold b_exch(Q) < b_star(Q) = (1-R_lead(Q))/N_exch(Q).
+%   The residual scalar b_exch (dressed Fock-bubble magnitude/sign) is RES-5 and is
+%   NOT bounded here. No tier flip: B1/B2 remain T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Diagonality-removes-caveat + triangle exchange
+%        budget + Gershgorin single-scalar threshold, quoted at the BCC anchor only.
+%   v1.1 (2026-06-10) OPERATOR REVIEW re-issue. (a) FULL-ADMISSIBLE-CLASS correction:
+%        v1.0's R_lead=0.174 is the BCC anchor (K_floor=2.75); via the pinned identity
+%        R_lead=const*(1+K_floor)*I (const=(9/4)u_eff^2 B_max N/c_diag=23.2) the class
+%        values are R_lead^unif=0.609 (K_floor=12.13) and R_lead^nonunif<=0.650 (T'<=13),
+%        margins x1.64/x1.54 (not x5.7), so the binding threshold is b_star^nonunif=0.0206
+%        (not 0.0486). (b) DIAGONALITY LEMMA stated explicitly (free-energy-share-diagonal
+%        => delta G-Hessian block-diagonal). (c) COMPETITOR-DEPENDENT threshold
+%        b_exch(Q)<(1-R_lead(Q))/N_exch(Q) for all Q in the admissible class. Grounded
+%        by res5_018_offdiag_gershgorin_threshold.py v1.2 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The full-operator-norm formulation note constructed the off-diagonal Hessian
+$\mathrm{Hess}\,F|_{G_*} = E + B_{\rm od}$ and isolated the obstruction to the
+worst-direction certificate $\|E^{-1/2}B_{\rm od}E^{-1/2}\|<1$ as the sign of the
+exchange (Fock) block, naming it a SPECTRAL residual (the exchange-Hessian
+eigenvalues). This note sharpens the residual in three honest steps -- a
+diagonality lemma removing the condensate-direction caveat, a triangle inequality
+isolating the exchange block with an explicit budget, and a row-sum bound
+replacing the eigenvalue spectrum by a single competitor-dependent scalar
+threshold. None is a closure; the scalar that remains is RES-5. Scope: the
+operating endpoint anchor $\mu^2=0.005$; the full admissible crystallographic
+competitor class (BCC quoted as the anchor specialisation).
+
+\section*{2. Block decomposition and the diagonality lemma}
+
+With $E = \tfrac12 G_*^{-1}\!\otimes G_*^{-1}\succ0$ (positive-definite, diagonal
+in $Q$) the interaction Hessian splits as $B_{\rm od} = B^{\rm cond} + B^{\rm exch}$,
+the Hartree part carrying no off-diagonal block. From Math428 the condensate/bubble
+off-diagonal free-energy share is
+\[
+\Delta F_{\rm od}(A) = -\tfrac14\sum_{Q\neq0} W(Q)^2\,B(|Q|),\qquad
+W(Q) = 3u_{\rm eff}A^2 p_2(Q) + 5vA^4 p_4(Q),
+\]
+a sum of INDEPENDENT channel contributions.
+
+\textbf{Diagonality lemma.} \emph{If a free-energy share is a sum of independent
+per-channel terms $\sum_Q f_Q(G_{QQ})$, its second variation
+$\delta^2 = \sum_Q f_Q''(G_{QQ})\,(\delta G_{QQ})^2$ has no $Q\neq Q'$ cross term;
+hence the induced $\delta G$-Hessian $B^{\rm cond}$ is block-diagonal in the channel
+index $Q$.} Consequently $\|E^{-1/2}B^{\rm cond}E^{-1/2}\|_{\rm op}=\max_Q$
+(single-channel ratio), a worst-direction (all-directions) statement, NOT merely
+the condensate-direction one. The exchange block $B^{\rm exch}$ is genuinely
+off-diagonal; its sign is not fixed by $u_{\rm eff}>0$ (bare $u=-0.86<0$,
+$u_{\rm eff}=+2.685>0$ via the sextic dressing).
+
+\section*{3. The condensate block over the FULL admissible class}
+
+The constant certificate bounds the single-channel ratio by
+$R_{\rm lead}(Q)$, and the floor identity pins it to the additive-energy floor
+$K_{\rm floor}=E_+/N^2-1$:
+\[
+R_{\rm lead}(Q) = \mathrm{const}\,(1+K_{\rm floor}(Q))\,I,\qquad
+\mathrm{const}=\frac{9}{4}\frac{u_{\rm eff}^2 B_{\max}N}{c_{\rm diag}}=23.2,\quad
+I=2\times10^{-3}.
+\]
+\textbf{Operator-review correction.} v1.0 quoted $R_{\rm lead}=0.174$, which is the
+BCC ANCHOR value ($K_{\rm floor}=2.75$). Over the full admissible class the floor is
+larger (uniform worst $K_{\rm floor}=12.13$, T-014; non-uniform $T'\le13$, T-015):
+\[
+\boxed{\;
+R_{\rm lead}^{\rm BCC}=0.174\,(\times5.7),\quad
+R_{\rm lead}^{\rm unif}=0.609\,(\times1.64),\quad
+R_{\rm lead}^{\rm nonunif}\le0.650\,(\times1.54),\quad \text{all}<1\;}
+\]
+so the condensate block is worst-direction certified $<1$ over the WHOLE class, but
+with margin $\times1.54$, not $\times5.7$.
+
+\section*{4. Triangle inequality and the competitor-dependent threshold}
+
+By the triangle inequality,
+$\|E^{-1/2}B_{\rm od}E^{-1/2}\|_{\rm op}\le R_{\rm lead}(Q) + \rho_{\rm exch}$ with
+$\rho_{\rm exch}=\|E^{-1/2}B^{\rm exch}E^{-1/2}\|_{\rm op}$, so the full norm is $<1$
+provided $\rho_{\rm exch} < 1 - R_{\rm lead}(Q)$ (budget $0.350$ at the binding
+non-uniform point, $0.826$ at the BCC anchor). For a symmetric operator
+$\|M\|_{\rm op}\le\max_Q\sum_{Q'}|M_{QQ'}|$; factoring the exchange row sum as
+$N_{\rm exch}(Q)\,b_{\rm exch}$ ($N_{\rm exch}=\max_Q\#\{Q':Q-Q'\in\{k_i-k_j\}\}$,
+combinatorial; $N_{\rm exch}=17\le n_{\rm chans}=54$ for BCC) gives the
+\textbf{competitor-dependent closure criterion}
+\[
+\boxed{\;b_{\rm exch}(Q)\ <\ b_\ast(Q):=\frac{1-R_{\rm lead}(Q)}{N_{\rm exch}(Q)}
+\quad\forall\,Q\in\mathcal A_{\rm adm}\;}
+\]
+with the explicit values $b_\ast^{\rm BCC}=0.0486$, $b_\ast^{\rm unif}=0.0230$,
+$b_\ast^{\rm nonunif}=0.0206$ (the binding full-class target). The v1.0 single number
+$0.0486$ was the BCC anchor only; the class target is $\sim2.4\times$ tighter. This
+replaces the exchange-Hessian eigenvalue spectrum by one scalar bound per competitor.
+
+\section*{5. What this is / is NOT}
+
+A REDUCTION (T3 formulation), not a closure: $b_{\rm exch}$ (the dressed Fock-bubble
+magnitude/sign) is the RES-5 scalar and is NOT bounded here. The increment over the
+formulation note is that (a) the condensate block is now worst-direction certified
+over the full class (diagonality lemma), (b) the residual is the exchange block ALONE
+with explicit competitor-dependent budget, (c) the eigenvalue spectrum is replaced by
+a single scalar threshold per competitor. No tier flip: B1/B2 remain T6 on
+$\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``v1.0 used the BCC anchor R_lead and over-stated the
+budget.''} UPHELD and corrected (operator review): the full-class margin is
+$\times1.54$ ($R_{\rm lead}^{\rm nonunif}=0.650$), the budget $0.350$, and the
+binding threshold $b_\ast^{\rm nonunif}=0.0206$. The competitor-dependent form is now
+the canonical statement.
+\item[($\beta$)] \emph{``The diagonality of $B^{\rm cond}$ is asserted.''}
+ADDRESSED: \S2 states the diagonality lemma explicitly -- a sum of independent
+per-channel free-energy terms has a block-diagonal $\delta G$-Hessian (no $Q\neq Q'$
+cross term). The genuinely off-diagonal coupling resides entirely in the exchange
+block, the residual carried here.
+\item[($\gamma$)] \emph{``$N_{\rm exch}$ may vary across competitors.''} VALID and
+incorporated: the threshold $b_\ast(Q)=(1-R_{\rm lead}(Q))/N_{\rm exch}(Q)$ is stated
+$\forall Q\in\mathcal A_{\rm adm}$; $N_{\rm exch}=17$ is the BCC value, a combinatorial
+count to be evaluated per competitor (bounded by $n_{\rm chans}$).
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{const} -- $(9/4)u_{\rm eff}^2 B_{\max}
+N/c_{\rm diag}=23.2$ reproduces the operator value; \emph{monotonicity} --
+$R_{\rm lead}$ increases with $K_{\rm floor}$: $0.174<0.609<0.650<1$;
+\emph{threshold} -- tightens correspondingly $0.0486\to0.0206$; \emph{sign} -- bare
+$u=-0.86<0$, dressed $u_{\rm eff}=+2.685>0$, so $b_{\rm exch}$'s sign is genuinely
+unfixed (RES-5).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-diag discharge V (full off-diagonal
+                         operator-norm residual reduced to the exchange block; v1.1
+                         full-admissible-class re-issue)
+Precise statement:       Hess F|G* = E + B^cond + B^exch. (i) DIAGONALITY LEMMA:
+                         Delta F_od = sum_Q f_Q(G_QQ) [independent channels] =>
+                         B^cond block-diagonal in Q => ||B^cond||_op = max-channel
+                         ratio <= R_lead(Q). Class values R_lead^BCC=0.174,
+                         R_lead^unif=0.609, R_lead^nonunif<=0.650, all<1 (margins
+                         x5.7/x1.64/x1.54). (ii) Triangle: ||E^-1/2 B_od E^-1/2|| <=
+                         R_lead(Q) + rho_exch, so full norm <1 provided rho_exch <
+                         1-R_lead(Q) (budget 0.350 binding). (iii) Symmetric row-sum:
+                         rho_exch <= N_exch(Q) b_exch; COMPETITOR-DEPENDENT threshold
+                         b_exch(Q) < b_star(Q) = (1-R_lead(Q))/N_exch(Q), values
+                         b_star = 0.0486(BCC)/0.0230(unif)/0.0206(nonunif binding).
+Scope:                   Operating endpoint mu^2=0.005; full admissible crystallographic
+                         class (BCC = anchor specialisation). b_exch NOT bounded.
+Dependencies:            hdiag-full-operator-norm-formulation (block decomposition);
+                         hdiag-offdiag-constant-certificate (const, B_max, c_diag);
+                         res-endpoint-admissible-pin (T-014 K_floor=12.13 / T-015 T'=13);
+                         hdiag-offdiag-additive-energy (sum p_2^2=E_+); Math428 (W,B).
+Evidence grade:          ANALYTIC (reduction + diagonality lemma) + EXECUTED
+                         (res5_018_offdiag_gershgorin_threshold.py v1.2 5/5).
+Reproduction command:    python codes/vacuum/res5_018_offdiag_gershgorin_threshold.py
+Expected output:         R_lead 0.174/0.609/0.650; b_star 0.0486/0.0230/0.0206;
+                         N_exch=17; 5/5 PASS.
+Falsification gate:      A proof that B^cond is NOT diagonal in Q (breaks the lemma);
+                         or an exchange computation giving b_exch >= b_star^nonunif=
+                         0.0206 at operating intensity for some admissible Q (refutes
+                         closure via this route, leaving RES-5 the only path).
+Tier before / after:     No tier flip. B1 T6, B2 T6 on {H-LAYER}. RES-1 off-diagonal
+                         residual reduced from the exchange-Hessian eigenvalue spectrum
+                         to the competitor-dependent scalar b_exch(Q) < (1-R_lead(Q))/
+                         N_exch(Q), binding full-class target 0.0206.
+No-overclaim statement:  Does NOT close the full off-diagonal operator norm and does
+                         NOT flip B1/B2. The exchange scalar b_exch is RES-5. The
+                         full-class margin is x1.54 (not the BCC x5.7); the binding
+                         threshold is 0.0206 (not 0.0486). B1/B2 stay T6 on {H-LAYER}.
+Next required action:    Bound the dressed exchange scalar b_exch(Q) at operating
+                         intensity against b_star(Q) = (1-R_lead(Q))/N_exch(Q) for the
+                         admissible class (binding target 0.0206) = RES-5 / GAP-2.
+\end{verbatim}
+}

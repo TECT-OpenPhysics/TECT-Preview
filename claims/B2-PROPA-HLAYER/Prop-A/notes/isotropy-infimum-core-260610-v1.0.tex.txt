@@ -1,0 +1,190 @@
+% SUPERSEDED by claims/B2-PROPA-HLAYER/Prop-A/notes/isotropy-infimum-core-260610-v1.1.tex.txt (operator review 2026-06-10: rank-one l=0 operator form + analytic entropy infimum (1/2)rR^2)
+% =============================================================================
+% Title: The isotropy-infimum core of Math427: angular-momentum block-diagonal
+%        Hessian, rotation-invariant interaction, and per-sector curvature
+%        protection of the isotropic dressing
+% Claim: B2-PROPA-HLAYER (Math427 isotropy core; H-LAYER analytic heart; bears on B1)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T4 STRONG EVIDENCE. Strengthens Math427's diagonal-class isotropy theorem
+%   from "the isotropic dressing is the stationary infimum" to "the isotropic
+%   dressing is a STRICT minimum, with the condensate-free Hessian BLOCK-DIAGONAL
+%   in angular momentum and a strictly-positive curvature gap in EVERY sector".
+%   Mechanism (rigorous, exact algebra): the diagonal interaction Phi_diag depends
+%   only on the rotation-invariant total variance M_tot=int G, so its Hessian acts
+%   ONLY on the l=0 (isotropic breathing) sector, where Phi''_diag=(3/2)u_eff>0;
+%   every anisotropic sector l>=1 sees ONLY the strictly-positive entropy Hessian
+%   (1/2)G_*^-2. Isotropy is therefore curvature-protected, not a fine-tuned
+%   stationarity. CONDITIONAL on H-diag (the diagonal-class restriction, =
+%   Math427's standing hypothesis); the off-diagonal extension is reduced (T-018)
+%   to the single exchange scalar b_exch (RES-5). No tier flip: B2 T6, B1 T6 on
+%   {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Angular-momentum block-diagonalisation of the
+%        condensate-free Hessian; per-sector positivity (l=0 interaction-convex,
+%        l>=1 entropy-protected); exact-quadrature verification of the rotation-
+%        invariance mechanism. Grounded by res5_016_isotropy_infimum_core.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Since SC-SCOPE was lifted (2026-06-09), B1-RH-ENUM rests on the SOLE hypothesis
+H-LAYER, whose analytic core is Math427: within the diagonal-Gaussian class the
+isotropic dressing is the variational infimum. The companion note
+(hdiag-fullcovariance-formulation v1.0) proved the condensate-free functional
+$F_0$ convex and isolated the entire residual obstruction to the
+condensate-induced off-diagonal Hessian; T-018
+(hdiag-offdiag-gershgorin-threshold v1.0) reduced that obstruction to a single
+exchange scalar $b_{\rm exch}$. This note completes the DIAGONAL half: it makes
+the isotropy of the infimum a STRICT, curvature-protected statement, exhibiting
+the exact mechanism by which rotation invariance forces the minimiser to be
+isotropic. Scope: the condensate-free functional $F_0$ over the diagonal-Gaussian
+class (H-diag), second-cumulant order, production anchor $\mu^2=5\times10^{-3}$.
+
+\section*{2. The condensate-free functional and its second variation}
+
+For a diagonal homogeneous Gaussian trial $G(q)$,
+\[
+\frac{F_0[G]}{V} = \tfrac12\!\int_q\!\ln G(q)^{-1}
++ \tfrac12\!\int_q\!K_0(q)G(q) + \Phi_{\rm diag}(M_{\rm tot}),\quad
+K_0(q)=c(q^2-q_0^2)^2,\ \ M_{\rm tot}=\!\int_q\!G(q),
+\]
+with $\Phi_{\rm diag}(M)=\tfrac{3u}{4}M^2+\tfrac{5v}{2}M^3$ (Wick reduction;
+Math427). The interaction depends on the trial state ONLY through the scalar
+$M_{\rm tot}$, which is a ROTATION-INVARIANT linear functional of $G$. The second
+variation at the isotropic dressing $G_*(q)=1/(r_R+c(q^2-q_0^2)^2)$ is
+\[
+\delta^2 F_0
+= \tfrac12\!\int_q\! G_*(q)^{-2}\,\delta G(q)^2
+\;+\; \Phi_{\rm diag}''(M_{\rm tot})\,\big(\delta M_{\rm tot}\big)^2,\qquad
+\delta M_{\rm tot}=\!\int_q\!\delta G(q),
+\]
+the entropy contributing the per-mode curvature $\tfrac12 G_*^{-2}>0$, the kinetic
+term being linear (no curvature), and the interaction contributing through
+$\delta M_{\rm tot}$ only.
+
+\section*{3. Angular-momentum block-diagonalisation (the mechanism)}
+
+Expand a diagonal perturbation in spherical harmonics,
+$\delta G(q)=\sum_{l,m} a_{lm}(|q|)\,Y_{lm}(\hat q)$. Because
+$\int Y_{lm}\,d\Omega = \sqrt{4\pi}\,\delta_{l0}\delta_{m0}$, ONLY the $l=0$
+component survives the isotropic integral $\delta M_{\rm tot}$:
+\[
+\delta M_{\rm tot}=\int_q \delta G(q)
+=\frac{1}{(2\pi)^3}\int_0^\infty a_{00}(|q|)\,|q|^2\,d|q|\;\sqrt{4\pi}.
+\]
+By the orthonormality of $\{Y_{lm}\}$ the entropy quadratic form is already
+diagonal in $(l,m)$. Hence the full Hessian is BLOCK-DIAGONAL in angular momentum,
+\[
+\boxed{\ H_{l\ge1} = \tfrac12 G_*^{-2}\quad(\text{entropy only}),\qquad
+H_{l=0} = \tfrac12 G_*^{-2} + \Phi_{\rm diag}''(M_{\rm tot})\,w\ }
+\]
+where $w\ge0$ is the (squared) radial overlap of the $l=0$ mode with $M_{\rm tot}$.
+The rotation-invariant interaction curves ONLY the isotropic breathing sector
+$l=0$; every anisotropic sector $l\ge1$ is interaction-FLAT.
+
+\section*{4. Per-sector positivity (strict minimum)}
+
+\textbf{(a) $l=0$ (breathing).} $\Phi_{\rm diag}''(M)=\tfrac32(u+10vM)=\tfrac32
+u_{\rm eff}$; at the anchor $u_{\rm eff}=u+10vM_R=-0.86+10(3.24)(0.10941)=+2.685$,
+so $\Phi_{\rm diag}''=+4.03>0$. The breathing sector is interaction-convex (the
+sextic dressing lifts the attractive bare quartic $u=-0.86<0$). \textbf{(b)
+$l\ge1$ (anisotropic).} $H_{l\ge1}=\tfrac12 G_*^{-2}$, verified
+$\ge4.64\times10^{-2}>0$ on the Brillouin grid. Both sectors are strictly
+positive, so $G_*$ is a STRICT minimum of $F_0$ within the diagonal class: the
+isotropy of the infimum is protected by a positive curvature gap in EVERY
+angular-momentum sector, not by a balance that could tip to an anisotropic
+competitor. The mechanism is verified by exact Gauss--Legendre quadrature:
+$\int Y_{lm}\,d\Omega = 0$ for $l\in\{1,2,3,4\}$ to machine precision
+($1.8\times10^{-15}$).
+
+\section*{5. What remains (the honest residual)}
+
+This certifies the DIAGONAL half of Math427 (conditional on H-diag) as a strict,
+curvature-protected minimum. Two residuals remain, both already mapped: (i)
+H-diag itself -- the restriction to diagonal covariance -- is Math427's standing
+hypothesis; (ii) the condensate-induced OFF-diagonal Hessian, which
+hdiag-fullcovariance-formulation isolated and T-018 reduced to the single
+exchange scalar $b_{\rm exch}<b_\ast=0.0486$ (the dressed Fock bubble, RES-5).
+Thus H-LAYER's analytic core now reads: the diagonal isotropy infimum is a STRICT
+minimum (this note), and the only obstruction to extending it to the full
+covariance is the exchange scalar (RES-5). No tier flip: B2 T6, B1 T6 on
+$\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$w$ could vanish, killing the $l=0$ interaction term.''}
+DISMISSED for the conclusion: even if the radial overlap $w\to0$ for some $l=0$
+radial profile, that sector RETAINS the entropy floor $\tfrac12 G_*^{-2}>0$; the
+interaction term only ADDS. Strict positivity holds in every sector regardless of
+$w$. (The breathing convexity $\Phi''_{\rm diag}>0$ is the physically operative
+statement against the $M_{\rm tot}$-changing mode.)
+\item[($\beta$)] \emph{``The entropy floor is numerical, not analytic.''}
+VALID-with-mitigation: $\tfrac12 G_*^{-2}=\tfrac12(r_R+c(q^2-q_0^2)^2)^2$ is
+manifestly positive analytically (a square plus $r_R>0$); the grid value
+$4.64\times10^{-2}$ is the minimum over the resolved window, i.e.\ a reported
+lower bound, not the basis of positivity. Tier kept at T4 pending an analytic
+infimum over the full cone (trivial: the infimum is $\tfrac12 r_R^2$ at the gap
+shell $|q|=q_0$).
+\item[($\gamma$)] \emph{``Does this discharge H-LAYER or flip B1?''} DISMISSED: it
+does not. It strengthens the DIAGONAL core (conditional on H-diag) and leaves the
+off-diagonal exchange scalar (RES-5) as the residual. B2 stays T6, B1 stays T6 on
+$\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{mechanism} -- $\Phi_{\rm diag}$
+depends only on the rotation-invariant $M_{\rm tot}$, so its Hessian acts on $l=0$
+alone ($\int Y_{l\ge1}d\Omega=0$ to $1.8\times10^{-15}$); \emph{sign} -- bare
+$u=-0.86<0$ lifted to $u_{\rm eff}=+2.685>0$ by the sextic, $\Phi''_{\rm
+diag}=+4.03>0$; \emph{entropy} -- $\tfrac12 G_*^{-2}\ge4.64\times10^{-2}>0$;
+\emph{consistency} -- the entropy floor matches the fullcovariance note's
+$\ge4.6\times10^{-2}$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / Math427 isotropy-infimum core
+Precise statement:       Condensate-free F_0 over the diagonal-Gaussian class. The
+                         second variation at the isotropic dressing G_* is
+                         delta^2 F_0 = (1/2) int G_*^-2 (dG)^2 + Phi''_diag (dM_tot)^2.
+                         Since Phi_diag depends only on the rotation-invariant
+                         M_tot = int G, and int Y_lm dOmega = 0 for l>=1, the
+                         Hessian is BLOCK-DIAGONAL in angular momentum: H_{l>=1} =
+                         (1/2)G_*^-2 (entropy only); H_{l=0} = (1/2)G_*^-2 +
+                         Phi''_diag*w. Both strictly positive (Phi''_diag=(3/2)u_eff
+                         =4.03>0; entropy floor 4.64e-2>0) => G_* is a STRICT
+                         diagonal minimum; isotropy is curvature-protected per
+                         sector, not fine-tuned.
+Scope:                   Diagonal-Gaussian class (H-diag); second cumulant; anchor
+                         mu^2=0.005. Off-diagonal extension = T-018 exchange scalar.
+Dependencies:            Math427 (diagonal isotropy theorem); hdiag-fullcovariance-
+                         formulation (F_0 convexity, u_eff); hdiag-offdiag-
+                         gershgorin-threshold (T-018, off-diagonal residual =
+                         exchange scalar); Math424-AddA (rR, M_R, u_eff).
+Evidence grade:          ANALYTIC (exact block-diagonalisation) + EXECUTED
+                         (res5_016_isotropy_infimum_core.py 5/5, GL exact quadrature).
+Reproduction command:    python codes/vacuum/res5_016_isotropy_infimum_core.py
+Expected output:         Phi''_diag=4.03>0; entropy floor 4.64e-2>0; <Y_{l>=1}>~2e-15;
+                         5/5 PASS.
+Falsification gate:      An anisotropic (l>=1) diagonal perturbation that lowers F_0
+                         (would require the interaction to curve l>=1, contradicting
+                         rotation invariance of M_tot); or Phi''_diag<=0 at the
+                         anchor (would require u_eff<=0, refuted: u_eff=+2.685).
+Tier before / after:     No tier flip. B2 T6, B1 T6 on {H-LAYER}. Math427 diagonal
+                         core: strengthened from stationary-infimum to STRICT
+                         curvature-protected minimum (T4 strong evidence; analytic
+                         entropy infimum (1/2)r_R^2 trivially upgrades to theorem).
+No-overclaim statement:  This certifies only the DIAGONAL half (conditional on
+                         H-diag) as a strict minimum. It does NOT discharge H-LAYER
+                         and does NOT flip B1/B2. The off-diagonal residual is the
+                         T-018 exchange scalar b_exch<0.0486 (RES-5). H-diag (the
+                         diagonal restriction) remains Math427's standing hypothesis.
+Next required action:    Bound the exchange scalar b_exch at operating intensity
+                         (RES-5/GAP-2) -- the single residual that, with this note
+                         and T-018, would extend the isotropy infimum from the
+                         diagonal class to the full covariance and discharge H-diag.
+\end{verbatim}
+}

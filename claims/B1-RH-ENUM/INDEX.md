@@ -9,7 +9,7 @@
 
 **Falsifier.** An admissible competitor of the H-ADM-COH class with F_total <= F_total[R_H]; a near-gap section with the structural floor < 0; or the loss of the sole active named hypothesis {H-LAYER} (for the crystallographic lattice class; H-ADM-COH discharged + SC-SCOPE lifted@THIN-CERTIFIE…
 
-## ESTIMATOR-UPGRADE/  ·  23 proof units  ·  tier span T6
+## ESTIMATOR-UPGRADE/  ·  24 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -22,6 +22,7 @@
 | `res5-a0-skeleton-sensitivity-bound` | v1.0 | T6* | Linearising the 2PI gap equation, delta G_*^pd = -(1+G K_BS G)^-1 G [lam'(P^2-<P^2>)] G. For the repulsive channel \|\|(1+G K_BS G)^-1\|\| = 1/(1+g) = 0.… | ANALYTIC + EXECUTED (res5_a0_skeleton_sensiti… | Assemble the SC-SCOPE pattern-dependent sunset self-energy \|\|Sigma_2^pd\|\| into c = \|\|Sigm… |
 | `res5-allorder-commonmode-bound` | v1.0 | T6* | The condensate-perturbation series Delta F = sum_k Delta F^(k), Delta F^(k)~a0^{k-1} chi^(k), has the common-mode (strong-fluctuation) part cancel in… | ANALYTIC (structure + reduction) + EXECUTED (… | Bound the Brazovskii-sea susceptibility ratios chi^(k+1)/chi^(k) (the all-order geometric… |
 | `res5-arc-consolidation` | v1.0 | T6* | RES-5 (matched-order-to-exact) reduces to the additive-energy floor K_floor=E_+/N^2-1. Endpoint closes iff K_floor<26.2; H-diag/RES-1 iff K_floor<20.… | CONSOLIDATION of EXACT + STRONG EVIDENCE + T6… | Close the chi(P)<~T' carrier-richness link (B5 operator-decision) + the full off-diagonal… |
+| `res5-chi-link-bypass` | v1.1 | T6* | The weighted Lemma A (R-027, T7) gives sum_t w_t^2 <= (1+T')\|\|c\|\|_2^4 for any amplitudes [proof: Cauchy-Schwarz w_t^2 <= r(t) sum\|c_u\|^2\|c_v\|^2, r(t)… | ANALYTIC (weighted Lemma A proof sketch, R-02… | T-018 (off-diagonal operator norm) and the Prop-A isotropy core (T-016) are the remaining… |
 | `res5-commonmode-envelope` | v1.0 | T6* | The matched-order-to-exact remainder sum_{n>=3} Delta F^(n) is common-mode suppressed: r_hat(I)=rR+2 lam' I is pattern-independent, so the common-mod… | ANALYTIC (common-mode structure) + EXECUTED (… | Prove the all-order common-mode split (every F^(n)'s pattern-dependent part is O(a0)) and… |
 | `res5-dr2-kappa-bound` | v1.2 | T6* | Endpoint closes iff K_floor=E_+/N^2-1<26.2. (i) ENUMERATED competitors: EXACT K_floor<=12<26.2 -> closes rigorously. (ii) FULL lattice class: STRONG … | EXACT (enumerated K_floor) + STRONG EVIDENCE … | Within B1's scope, H-LAYER now reduces to Prop-A/RES-1 (the enumerated RES-5 endpoint is … |
 | `res5-dressed-threeloop-skeleton-bound` | v1.0 | T6* | The dressed skeleton ratio s_{l+1}/s_l ~ lam' B_d = lam' int G_d^2 = 1.03 = O(1) (marginal). Hence s_4 ~ s_3 * 1.03 ~ s_3 (NOT << s_3): each term ~4%… | ANALYTIC + EXECUTED (res5_dressed_loop_parame… | A dedicated 2PI self-consistent (or Borel / optimal- truncation) RESUMMATION of the dress… |
@@ -70,4 +71,4 @@
 | `neargap-protection-lemma` | v1.0 | T6* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T6* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-09T16:42:07Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-10T02:20:02Z by build_index.py v1.0.1 -->

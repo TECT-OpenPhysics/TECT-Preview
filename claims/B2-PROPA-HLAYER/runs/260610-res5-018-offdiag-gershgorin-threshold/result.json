@@ -1,0 +1,59 @@
+{
+  "script": "res5_018_offdiag_gershgorin_threshold.py",
+  "version": "1.2.0",
+  "mu2": 0.005,
+  "rR": 0.30452570866744433,
+  "u_eff": 2.685024265666395,
+  "N": 12,
+  "c_diag": 1.827154252004666,
+  "Eplus": 540,
+  "Tprime": 4,
+  "const": 23.19653943695417,
+  "I": 0.002,
+  "R_lead": {
+    "bcc": 0.17397404577715628,
+    "unif": 0.6091411256144166,
+    "nonunif": 0.6495031042347167
+  },
+  "budget": {
+    "bcc": 0.8260259542228438,
+    "unif": 0.3908588743855834,
+    "nonunif": 0.3504968957652833
+  },
+  "N_exch": 17,
+  "n_chans": 54,
+  "b_star": {
+    "bcc": 0.04858976201310845,
+    "unif": 0.022991698493269614,
+    "nonunif": 0.02061746445678137
+  },
+  "verdict": "T-018 v1.2 full-class re-issue: B^cond diagonal (lemma) => worst-dir norm <= R_lead(Q); class values R_lead 0.174(BCC)/0.609(unif)/0.650(nonunif)<1; triangle => exchange block alone; COMPETITOR-DEPENDENT threshold b_exch(Q)<(1-R_lead(Q))/N_exch(Q), binding full-class target b_star^nonunif=0.0206 (BCC 0.0486 was anchor-only). b_exch is RES-5, not closed. No tier flip.",
+  "claims": [
+    {
+      "name": "cond_block_diagonal_worstdir",
+      "passed": true,
+      "detail": "(DIAGONALITY LEMMA: Delta F_od=sum_Q f_Q(G_QQ) [independent channels] => delta G-Hessian block-diagonal in Q => ||B^cond||_op=max-channel ratio. max_Q p_2^2=16<=E_+=540, so the floor->ratio bound certifies ALL directions. Class values: R_lead^BCC=0.174(x5.7), R_lead^unif=0.609(x1.64), R_lead^nonunif<=0.650(x1.54); all<1)"
+    },
+    {
+      "name": "triangle_residual_exchange_block_classwide",
+      "passed": true,
+      "detail": "(||E^-1/2 B_od E^-1/2|| <= R_lead(Q) + rho_exch; full norm <1 provided rho_exch < 1-R_lead(Q). Budgets: BCC 0.826, uniform 0.391, non-uniform 0.350 -- all >0, so the residual is the EXCHANGE BLOCK alone over the whole admissible class, with the TIGHTEST (non-uniform) budget the binding one)"
+    },
+    {
+      "name": "gershgorin_competitor_dependent_threshold",
+      "passed": true,
+      "detail": "(rho_exch<=N_exch*b_exch (N_exch=17 BCC); COMPETITOR-DEPENDENT threshold b_exch(Q)<b_star(Q)=(1-R_lead(Q))/N_exch(Q). Values: b_star^BCC=0.0486, b_star^unif=0.0230, b_star^nonunif=0.0206 (the BINDING full-class target). The v1.1 single number 0.0486 was the BCC anchor only; the class target is ~2.4x tighter)"
+    },
+    {
+      "name": "residual_is_res5_scalar_not_closed",
+      "passed": true,
+      "detail": "(b_exch=max_Q|E^-1/2 B^exch E^-1/2| is the dressed Fock-bubble magnitude; SIGN unfixed by u_eff>0 (bare u=-0.86<0, u_eff=2.685>0 via dressing), beyond second cumulant => RES-5. T-018 reduces the residual to this scalar; it does NOT bound it. No tier flip: B1/B2 T6 on {H-LAYER})"
+    },
+    {
+      "name": "quantitative_sanity_const_and_class",
+      "passed": true,
+      "detail": "(const=(9/4)u_eff^2 B_max N/c_diag=23.20 reproduces operator 23.22; R_lead monotone in K_floor 0.174<0.609<0.650<1; threshold tightens b_star^nonunif=0.0206<b_star^BCC=0.0486; N_exch=17 combinatorial (<=n_chans=54))"
+    }
+  ],
+  "all_pass": true
+}
