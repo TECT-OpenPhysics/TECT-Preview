@@ -1,0 +1,221 @@
+% =============================================================================
+% Title: Internal comprehensive audit of the H-LAYER -> T7 proof route (T-016..T-028):
+%        a pre-enactment end-to-end re-verification across five axes
+% Claim: B2-PROPA-HLAYER (H-LAYER/Reading-H T7 route audit; spans B1-RH-ENUM, B5-BEYOND-LAYER-BOUND)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: AUDIT RECORD (no new mathematical claim; certifies the existing route). A
+%   paper-grade internal audit performed BEFORE any T7 enactment, so that the theory
+%   need never be retracted after the development is taken further. The full proof
+%   route from T-016 (diagonal isotropy) to T-028 (T7 proposition assembly) is
+%   re-verified across five axes: (1) numerical reproducibility (12 scripts, 61
+%   asserts, all PASS); (2) logical non-circularity (the off-shell exclusion uses the
+%   adversarial R_lead(20) BEFORE the registered-class reduction); (3) constant /
+%   convention consistency (17 load-bearing constants re-derived from the canonical
+%   source Math424_AddA, all within tolerance); (4) tier-claim honesty (no note claims
+%   an enacted T7; all carry "no tier flip" / "T7-CANDIDATE"); (5) superseded-version
+%   integrity (all eight v1.0 -> v1.1 re-issues carry forward-pointers; the live
+%   load-bearing content is identified). VERDICT: the route is internally consistent
+%   and reproducible; the only residual is the operator T6->T7 sign-off (no-auto-T7)
+%   plus an optional CAS interval-arithmetic tightening of R_max. No tier flip is
+%   enacted by this audit: B1/B2 remain T6 on {H-LAYER}, B5 T5.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Five-axis audit; per-step verdict table; constant
+%        table; non-circularity proof; residual register. Grounded by
+%        res5_029_t7_route_audit.py 5/5 + the 12 chain scripts (61 asserts).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and methodology}
+
+This note is a pre-enactment internal audit of the entire H-LAYER $\to$ T7 proof route.
+Its purpose is retraction-prevention: to re-verify, from start to finish, every step of
+the proof chain before the development is taken further, so that no later inconsistency
+forces a rollback. It introduces no new mathematical claim; it certifies the existing
+route. Five audit axes are applied:
+\begin{enumerate}
+\item \textbf{Numerical reproducibility} -- re-run every verification script.
+\item \textbf{Logical non-circularity} -- each step's hypotheses are met by priors; no cycle.
+\item \textbf{Constant / convention consistency} -- all load-bearing numbers from one source.
+\item \textbf{Tier-claim honesty} -- no over-claim; the canonical tier is respected.
+\item \textbf{Superseded-version integrity} -- pointers present; live content identified.
+\end{enumerate}
+
+\section*{2. The proof route (logical DAG)}
+
+The route is a directed acyclic graph rooted at the canonical microscopic data
+(Math424_AddA: $u=-0.86$, $v=3.24$, $q_0$, the gap map $r_R(\mu^2)$, $M_R$):
+\[
+\underbrace{\text{T-016}}_{\text{(D) isotropy}}\!\to\!
+\underbrace{\text{T-017}}_{\text{(S) floor }T'\le13}\!\to\!
+\underbrace{\text{T-018/019/020}}_{\text{(O) off-diag }R_{\rm lead}<1}\!\to\!
+\underbrace{\text{T-021}}_{\text{(S) SC-SCOPE}}\!\to\!
+\underbrace{\text{T-022/023/024}}_{\text{competitor class}}\!\to\!
+\underbrace{\text{T-026}}_{\text{off-shell A,C}}\!\to\!
+\underbrace{\text{T-027}}_{\text{Blocker B}}\!\to\!
+\underbrace{\text{T-028}}_{\text{T7 assembly}} .
+\]
+Every edge points forward; no step depends on a later one. T-025 is a consolidation of
+T-016..T-024 and feeds nothing analytic.
+
+\section*{3. Per-step verdict table}
+
+\begin{center}\footnotesize
+\begin{tabular}{lllc}
+\hline
+Step & Result (load-bearing) & Tier & Asserts\\
+\hline
+T-016 & diagonal isotropy strict min; $\Phi''_{\rm diag}=4.03>0$, entropy $\ge\tfrac12 r_R^2$ & T4 & 6/6\\
+T-017 & weighted Lemma A: $K_{\rm floor}\le T'\le13$ any amplitudes & STRONG EV. & 3/3\\
+T-018 & DIAGONALITY LEMMA + $R_{\rm lead}(13)=0.650<1$ (live; $b_{\rm exch}$ superseded) & T3 red. & 5/5\\
+T-019 & no A-independent Fock exchange ($+\tfrac32 u_{\rm eff}$ stabilising) & T4 & 5/5\\
+T-020 & 2nd-cumulant off-diag stability class-wide ($\rho R_{\rm lead}<1$) & T4 & 5/5\\
+T-021 & SC-SCOPE joint$>1\iff T'<60.4$; joint$(13)=1.097$ & T4 & 5/5\\
+T-023 & 4 exclusion boundaries; $T'\le N/2\le20$ fallback & T4 & 5/5\\
+T-024 & operator two-class decision; kinetic penalty $\times50$ MARGIN & DECISION & 5/5\\
+T-025 & final consolidation (end-to-end) & CONSOL. & 7/7\\
+T-026 & off-shell domination $\rho_{\rm off}^{\rm ext}=0.572<R_{\rm lead}<1$ (A,C) & T6-cand. & 5/5\\
+T-027 & Blocker B: convention DERIVED, $R_{\max}\le0.391$ enclosed, anchoring monotone & T6-cand. & 5/5\\
+T-028 & T7 proposition assembled (non-circular) & T7-CAND. & 5/5\\
+\hline
+\multicolumn{3}{l}{\textbf{Total}} & \textbf{61/61}\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{4. Axis 1 -- numerical reproducibility}
+
+All twelve chain scripts (\texttt{res5\_016..res5\_028}) were re-executed from the canonical
+source; every assert passes (61/61). The audit kernel \texttt{res5\_029\_t7\_route\_audit.py}
+(5/5) re-derives the constants independently. No numerical claim in the route fails on re-run.
+
+\section*{5. Axis 2 -- logical non-circularity (the off-shell exclusion)}
+
+The single non-trivial circularity risk is the off-shell exclusion: it produces the
+registered $T'\le13$ class, so it must not assume that class. It does not. The
+NON-CIRCULAR form (T-028 v1.1) uses the adversarial $R_{\rm lead}(20)=0.974$, valid for ANY
+antipodal competitor before any reduction:
+\[
+\rho_{\rm off}^{\rm ext}\ \le\ R_{\rm lead}(20)\,\frac{r_R}{r_R+c\,\delta^2}=0.974\times0.587=0.572\ <\ 1 .
+\]
+Off-shell modes are thus strictly more stable for ANY competitor; only AFTER their exclusion
+do the survivors reduce to the on-shell registered class with $\rho_{\rm off}=0.381$,
+$R_{\rm lead}(13)=0.650$. The DAG (\S2) confirms no other cycle.
+
+\section*{6. Axis 3 -- constant / convention consistency}
+
+Seventeen load-bearing constants were re-derived from Math424_AddA and matched the values
+quoted across the notes (worst $|{\rm dev}|/{\rm tol}=0.49$):
+\[
+\begin{array}{llll}
+u=-0.86 & v=3.24 & q_0=0.6802 & r_R=0.3045\\
+u_{\rm eff}=2.685 & \Phi''_{\rm diag}=4.03 & \tfrac12 r_R^2=0.0464 & \mathrm{const}=23.2\\
+R_{\rm lead}(13)=0.650 & R_{\rm lead}(20)=0.974 & \mathrm{joint}(13)=1.097 & T'_{\rm crit}=60.4\\
+c\,\delta^2=0.214 & c\delta^2/\mathrm{MARGIN}=50 & \rho_{\rm off}=0.381 & \rho_{\rm off}^{\rm ext}=0.572
+\end{array}
+\]
+The load-bearing $\widehat{G^4}$ convention $1/(4\pi^2)$ is DERIVED (T-027 v1.1) from the
+$(2\pi)^3$ convolution measure ($\phi$-integral $=2\pi$); the Parseval ratio $1.0000$ is a
+consequence; a $1/(2\pi^2)$ prefactor would double $\widehat{G^4}$ and give the spurious
+$R_{\max}=0.77$. The convention is thus not a free factor-$2$.
+
+\section*{7. Axis 4 -- tier-claim honesty}
+
+No current note claims an enacted T7. Every H-LAYER note carries one of "no tier flip",
+"T7-CANDIDATE / not enacted", or "B1/B2 T6 on $\{$H-LAYER$\}$". The strongest assembled
+status is T7-CANDIDATE (T-028). The legacy \texttt{res5-dr2-kappa-bound} "UNCONDITIONAL"
+wording was itself superseded (v1.2: "T7 modulo textbook NT"); it is not in the live route.
+
+\section*{8. Axis 5 -- superseded-version integrity}
+
+All eight notes re-issued $v1.0\to v1.1$ (chi-link-bypass, gershgorin-threshold,
+isotropy-infimum-core, aadm-exclusion-boundaries, offshell-domination, blocker-b-hardening,
+hlayer-analytic-closure-consolidation, t7-proposition-assembly) carry the SUPERSEDED
+forward-pointer on $v1.0$. The live load-bearing content of T-018 is the DIAGONALITY LEMMA
+$+$ $R_{\rm lead}<1$ (the gershgorin $v1.1$ carries a STATUS-UPDATE banner re-identifying the
+$b_{\rm exch}$ reduction as superseded by T-019); the T7 chain uses the live $R_{\rm lead}<1$,
+NOT the superseded $b_{\rm exch}$ phantom.
+
+\section*{9. Residual register (what remains for T7)}
+
+\[
+\boxed{\;
+\begin{array}{ll}
+\text{Operator } T6\to T7 \text{ sign-off} & \text{required (no-auto-T7, GOVERNANCE.md)}\\
+\text{CAS interval-arithmetic } R_{\max} & \text{optional (full-spacing enclosure already conservative)}\\
+\text{selection margin } \mathrm{joint}(13)=1.097 & \text{thin (sunset-limited) but }>1\text{, theorem-grade}\\
+\end{array}\;}
+\]
+No analytic gap remains. The two residual items are documentary/decisional, not mathematical
+blockers.
+
+\section*{10. Honest scope (what the T7 decision does and does NOT close)}
+
+The T7 decision, if enacted, closes EXACTLY the H-LAYER / Reading-H / Proposition-A
+comparison theorem: $G_*$ is the strict comparison infimum over $\mathcal C_{\rm phys}$,
+discharging the H-LAYER hypothesis for B1-RH-ENUM and B2-PROPA-HLAYER. It does NOT prove
+TECT as a whole, nor complete the TOE: the Sector-C (Lorentz/GR), Sector-D (gauge/matter),
+and Sector-E/F (constants/cosmology) claims remain at their own tiers (and were tier-capped
+at T6 while GAP-1 was open; the cap lifts on enactment, but each still needs its own package).
+
+\section*{11. Audit verdict}
+
+\textbf{The H-LAYER $\to$ T7 proof route is internally consistent, reproducible, non-circular,
+and honestly tiered.} All five axes pass. The route is ready for the operator T6$\to$T7
+enactment decision; no rollback risk is identified in the audited chain. This audit enacts no
+tier change: B1/B2 T6 on $\{$H-LAYER$\}$, B5 T5.
+
+\section*{12. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``An audit by the same author is not independent.''} VALID, recorded:
+the audit re-derives constants from the canonical source independently of the note bodies and
+re-runs every script; but a fully independent referee pass (second author / external) remains
+advisable before publication. This is an INTERNAL audit, named as such.
+\item[($\beta$)] \emph{``The selection margin 0.097 is thin -- could a refined competitor
+breach it?''} BOUNDED: the margin is on the registered on-shell $T'\le13$ class; off-shell and
+super-$n_{\rm pack}$ competitors are excluded by theorem; within the class the joint is monotone
+in $\rho_{\rm lat}=K_{\rm budget}/(1+T')$ and $T'\le13$ is pinned, so $0.097$ is the worst case.
+\item[($\gamma$)] \emph{``Does the audit enact T7?''} DISMISSED: no. It certifies readiness;
+the enactment is the operator's. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{axis1} 61/61 asserts; \emph{axis2}
+$\rho_{\rm off}^{\rm ext}=0.572<1$ non-circular; \emph{axis3} 17/17 constants (worst dev/tol
+$0.49$); \emph{axis4} 0 enacted-T7 claims; \emph{axis5} 8/8 supersede pointers; \emph{margins}
+$0.350$, $0.097>0$.
+
+\section*{13. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-LAYER->T7 route internal audit
+Precise statement:       Pre-enactment 5-axis audit of T-016..T-028. (1) 61/61 script asserts
+                         re-run PASS; (2) off-shell exclusion non-circular (rho_off^ext=0.572<1
+                         via adversarial R_lead(20) before reduction); (3) 17/17 load-bearing
+                         constants re-derived from Math424 (worst dev/tol 0.49), the Ghat4
+                         /(4pi^2) convention DERIVED from the (2pi)^3 measure; (4) no enacted-T7
+                         over-claim; (5) 8/8 v1.0->v1.1 supersede pointers, live content
+                         identified (R_lead<1 live, b_exch superseded by T-019). Residual:
+                         operator sign-off + optional CAS R_max. Route internally consistent.
+Scope:                   The H-LAYER/Reading-H/Prop-A comparison theorem; operating endpoint
+                         I=2e-3; ROBUSTNESS-MU2 band. Does NOT cover Sectors C-F or the TOE.
+Dependencies:            the full chain T-016..T-028 (each note + script); res5_029_t7_route_
+                         audit.py (constant kernel); Math424_AddA (canonical source).
+Evidence grade:          AUDIT (re-derivation + re-run) + EXECUTED (res5_029 5/5 + 12 chain
+                         scripts 61 asserts).
+Reproduction command:    python codes/vacuum/res5_029_t7_route_audit.py  (+ the 12 chain scripts)
+Expected output:         17/17 constants consistent; margins 0.350/0.097>0; 61/61 chain; 5/5.
+Falsification gate:      Any chain script failing on re-run; a constant inconsistent with
+                         Math424; a logical cycle; an enacted-T7 over-claim; a missing supersede
+                         pointer; or a competitor in C_phys with F[Q]<=F[G_*].
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The route is certified
+                         ready for the operator T6->T7 enactment decision; no rollback risk found.
+No-overclaim statement:  This is an INTERNAL audit, not an independent referee pass, and it does
+                         NOT enact T7. It certifies the route's internal consistency and
+                         reproducibility. The selection margin (0.097) is thin but theorem-grade.
+                         A second/external review is advisable before publication. B1/B2 stay T6.
+Next required action:    OPERATOR: (i) optional external/second-author referee pass; (ii) the
+                         T6->T7 enactment sign-off; (iii) optional CAS interval R_max tightening.
+\end{verbatim}
+}

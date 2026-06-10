@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 22
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 26
 
 ## Next up
 
@@ -79,4 +79,12 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 22
 - **T-024** T-024: operator decision on off-shell competitors (A_adm primary shell-supported + A_ext adversarial fallback)
   - _updated 2026-06-10_
 - **T-025** T-025: H-LAYER closure Final Consolidation (complete milestone T-016..T-024)
+  - _updated 2026-06-10_
+- **T-026** T-026: off-shell domination theorem (T7 Step 1; Blocker A removed)
+  - _updated 2026-06-10_
+- **T-027** T-027: Blocker B hardening (T7 Step 3; Parseval+R_max+anchoring theorem-grade)
+  - _updated 2026-06-10_
+- **T-028** T-028: T7 proposition assembly (Step 4; residual = operator sign-off)
+  - _updated 2026-06-10_
+- **T-029** T-029: paper-grade internal audit of the H-LAYER->T7 route (5 axes, 61/61, certified)
   - _updated 2026-06-10_

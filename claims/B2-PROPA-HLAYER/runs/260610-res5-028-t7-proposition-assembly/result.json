@@ -1,0 +1,40 @@
+{
+  "script": "res5_028_t7_proposition_assembly.py",
+  "version": "1.1.0",
+  "R_lead_13": 0.6495031042347167,
+  "R_lead_20": 0.9742546563520751,
+  "joint_13": 1.0974481329387382,
+  "rho_off": 0.38142286089347144,
+  "rho_off_ext": 0.5721342913402072,
+  "margin_offdiag": 0.3504968957652833,
+  "margin_select": 0.09744813293873822,
+  "verdict": "T-028 v1.1: T7-target F[Q]>F[G_*] for all C_phys ASSEMBLED. Blocker A NON-CIRCULAR (rho_off^ext=0.572<1 adversarial, before reduction; survivors on-shell T'<=13 rho_off=0.381). Blocker B v1.1 thresholds theorem-grade joint(13)=1.097>1. T7-CANDIDATE: residual = operator sign-off + optional CAS R_max. No tier flip.",
+  "claims": [
+    {
+      "name": "blockerA_offshell_excluded_noncircular",
+      "passed": true,
+      "detail": "(Blocker A (T-026 v1.1), NON-CIRCULAR: even BEFORE reducing to the registered class, resolved off-shell modes obey rho_off^ext <= R_lead(20)*r_R/(r_R+c*delta^2) = 0.974*0.587 = 0.5721 < 1 (adversarial R_lead(20)=0.974). After off-shell exclusion the survivors return to the on-shell registered class: rho_off=0.3814, R_lead(13)=0.650<1. No circularity)"
+    },
+    {
+      "name": "blockerC_onshell_Tprime_le_13",
+      "passed": true,
+      "detail": "(Blocker C corollary (T-026 v1.1): on-shell + packing-bounded + coherence-resolved => T'<=13 (T-014/015 pin); any T'>13 needs off-shell (Blocker A) or super-n_pack (Boundary 2), both excluded)"
+    },
+    {
+      "name": "blockerB_v11_thresholds_theorem_grade",
+      "passed": true,
+      "detail": "(Blocker B (T-027 v1.1): on T'<=13 the thresholds are theorem-grade -- R_lead(13)=0.6495<1 (off-diag stability), joint(13)=x1.0974>1 (SC-SCOPE 3rd cumulant, R_max INTERVAL-ENCLOSED<0.634 with the convention DERIVED from the (2pi)^3 measure, sunset rigorous, anchoring monotone), diagonal isotropy strict min (T-016))"
+    },
+    {
+      "name": "t7_proposition_assembled",
+      "passed": true,
+      "detail": "(T7-PROPOSITION: F[Q]-F[G_*]>0 for all Q in C_phys. Off-shell excluded non-circularly (A, rho_off^ext=0.572<1); on-shell T'<=13 (C); on that class off-diagonal margin 1-R_lead=0.350>0 and selection margin joint-1=0.097>0 (B), both theorem-grade. No external H-LAYER hypothesis)"
+    },
+    {
+      "name": "t7_residual_operator_signoff",
+      "passed": true,
+      "detail": "(HONEST: all three blockers theorem-grade (Blocker B closed in T-027 v1.1: convention DERIVED, R_max INTERVAL-ENCLOSED<=0.391<0.634, anchoring monotone). The residual reduces to (i) an OPTIONAL CAS interval tightening of the already-enclosed R_max and (ii) the OPERATOR sign-off for the B1/B2 T6->T7 flip (no-auto-T7). T7-CANDIDATE, not enacted. No tier flip here)"
+    }
+  ],
+  "all_pass": true
+}

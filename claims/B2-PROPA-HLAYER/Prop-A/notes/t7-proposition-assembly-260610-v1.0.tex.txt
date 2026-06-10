@@ -1,0 +1,148 @@
+% SUPERSEDED by claims/B2-PROPA-HLAYER/Prop-A/notes/t7-proposition-assembly-260610-v1.1.tex.txt (operator T7-ENACTMENT-HELD patch 2026-06-10: Blocker B dep -> v1.1; R_max residual -> optional CAS tightening; add non-circular adversarial rho_off^ext<=0.572<1)
+% =============================================================================
+% Title: The T7 proposition assembled: F[Q] > F[G_*] for all physical competitors,
+%        from the three theorem-grade blockers (off-shell domination, certified
+%        thresholds, on-shell reduction)
+% Claim: B2-PROPA-HLAYER (H-LAYER T7 proposition; consolidates B1-RH-ENUM, B5-BEYOND-LAYER-BOUND)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T7-CANDIDATE (assembled; not enacted). Step 4 of the operator T7-upgrade
+%   sequence: assemble Blockers A, B, C -- now all theorem-grade -- into the
+%   unconditional target proposition. For the full physical competitor class
+%   C_phys (real antipodal, packing-bounded, coherence-resolved patterns at the
+%   operating endpoint), F[Q] > F[G_*] for all Q != G_*, with NO external H-LAYER
+%   hypothesis. Off-shell competitors are excluded by the off-shell domination
+%   theorem (Blocker A, T-026 v1.1); the surviving on-shell competitors have
+%   T'<=13 (Blocker C corollary); on that class the off-diagonal stability
+%   (R_lead(13)=0.650<1) and the selection (joint(13)=x1.097>1, certified
+%   R_max<0.634) are theorem-grade (Blocker B, T-027). T7-CANDIDATE: the residual
+%   items are (i) an OPTIONAL CAS interval tightening of the already interval-enclosed
+%   R_max (T-027 v1.1: convention derived, R_max<=0.391<0.634) and (ii) the operator
+%   sign-off for the B1/B2 T6->T7 flip (no-auto-T7 rule); the R_max convention/interval/anchoring
+%   patch is closed in T-027 v1.1. No tier flip is enacted here.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Assembly of Blockers A/B/C into the T7 target;
+%        T7-CANDIDATE with the two residual items named. Grounded by
+%        res5_028_t7_proposition_assembly.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. The T7 target}
+
+\textbf{Proposition (T7 target).} Let $\mathcal C_{\rm phys}$ be the full physically
+admissible competitor class for the Reading-H comparison: real antipodal condensate
+patterns at the operating endpoint $I=2\times10^{-3}$, packing-bounded
+($\#Q\le n_{\rm pack}$), coherence-resolved (pairwise $\angle\ge\theta_{\min}$). Then
+\[
+F[Q]-F[G_*]>0\qquad\forall\,Q\in\mathcal C_{\rm phys}\setminus\{G_*\},
+\]
+i.e.\ the isotropic Gaussian--Hartree layer $G_*$ is the strict comparison infimum over
+$\mathcal C_{\rm phys}$, with NO external H-LAYER hypothesis.
+
+\section*{2. Assembly from the three theorem-grade blockers}
+
+\textbf{Blocker A (off-shell domination, T-026 v1.1).} Any competitor carrying off-shell
+modes is strictly less favourable: the off-shell Bogoliubov stability ratio
+$\rho_{\rm off}\le R_{\rm lead}\,r_R/(r_R+c\,\delta^2)=0.381<R_{\rm lead}<1$ (corollary of
+the established $R_{\rm lead}<1$ + the off-shell kinetic excess + the mean-field
+convexity). \emph{Hence $\mathcal C_{\rm phys}$ reduces to ON-SHELL (shell-supported)
+competitors.}
+
+\textbf{Blocker C (corollary, T-026 v1.1).} An on-shell, packing-bounded,
+coherence-resolved competitor has $T'(Q)\le13$: any $T'>13$ requires off-shell
+(multi-radius, excluded by A) or super-$n_{\rm pack}$ (excluded by the packing bound).
+\emph{Hence the surviving class is $\{T'\le13\}$.}
+
+\textbf{Blocker B (certified thresholds, T-027).} On the $T'\le13$ class the selection
+margins are theorem-grade:
+\begin{itemize}
+\item diagonal isotropy: $G_*$ is a strict curvature-protected minimum
+($\Phi''_{\rm diag}=4.03>0$, entropy $\ge\tfrac12 r_R^2>0$ analytic; T-016);
+\item off-diagonal stability: $R_{\rm lead}(13)=0.650<1$ (margin $1-R_{\rm lead}=0.350$;
+T-018/020);
+\item selection: $\mathrm{joint}(13)=\times1.097>1$ (margin $0.097$), with the certified
+$R_{\max}\le0.389<0.634$ (Parseval-pinned), the rigorous sunset $S=1.13$, and the
+anchoring $u_{\rm eff}>0$ on $[\times0.5,\times2]$ (T-021/027).
+\end{itemize}
+
+Combining: off-shell excluded $\Rightarrow$ on-shell $T'\le13$ $\Rightarrow$ both the
+off-diagonal margin ($0.350$) and the selection margin ($0.097$) are strictly positive
+and theorem-grade. Therefore $F[Q]-F[G_*]>0$ for every $Q\in\mathcal C_{\rm phys}$.
+
+\section*{3. Status: T7-CANDIDATE, and the two residual items}
+
+\textbf{T7-CANDIDATE.} The T7 target is assembled from three theorem-grade blockers; no
+external H-LAYER hypothesis remains in the statement. The two residual items before an
+enacted T7 are:
+\begin{itemize}
+\item[(i)] \emph{$R_{\max}$ (now interval-enclosed; T-027 v1.1).} The convention is
+DERIVED (the $1/(4\pi^2)$ forced by the $(2\pi)^3$ convolution measure), and
+$R_{\max}\le0.391<0.634$ is INTERVAL-ENCLOSED over $[t_{\min},2q_0]$; the anchoring is
+monotonicity-certified and the sunset rigorous. The only remaining tightening is an
+optional CAS interval-arithmetic bound (the full-spacing enclosure is already
+conservative).
+\item[(ii)] \emph{Operator sign-off.} The B1/B2 $T6\to T7$ tier flip is the operator
+decision (the no-auto-T7 rule, GOVERNANCE.md); this note presents the assembled
+candidate, it does NOT enact the flip.
+\end{itemize}
+No tier flip is enacted here: B1/B2 remain T6 on $\{$H-LAYER$\}$, B5 T5.
+
+\section*{4. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The selection margin $0.097$ is thin.''} ACKNOWLEDGED: on the
+on-shell $T'\le13$ class the joint is $\times1.097$ (sunset-limited); it is comfortable
+relative to the razor-thin off-shell $\times1.026$ (now excluded), but it is the
+genuine operating margin and is recorded as such.
+\item[($\beta$)] \emph{``$\mathcal C_{\rm phys}$ is defined to make the proof work.''}
+PARTLY: $\mathcal C_{\rm phys}$ is the physical class (real, packing-bounded,
+coherence-resolved); off-shell is excluded by a THEOREM (kinetic domination), not by
+fiat; the definition is physically grounded (Brazovskii shell selection).
+\item[($\gamma$)] \emph{``Is this T7?''} HONESTLY NOT YET: it is a T7-CANDIDATE. The
+$R_{\max}$ interval Lipschitz and the operator sign-off remain. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{A} $\rho_{\rm off}=0.381<R_{\rm lead}<1$;
+\emph{C} $T'\le13$; \emph{B} $R_{\rm lead}(13)=0.650<1$, $\mathrm{joint}(13)=\times1.097
+>1$, $R_{\max}\le0.389<0.634$; \emph{margins} off-diagonal $0.350$, selection $0.097$,
+both $>0$.
+
+\section*{5. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / T7 proposition assembly (Step 4)
+Precise statement:       T7-target: F[Q] > F[G_*] for all Q in C_phys (real antipodal,
+                         packing-bounded, coherence-resolved), no external H-LAYER
+                         hypothesis. Assembled: Blocker A (off-shell domination,
+                         rho_off=0.381<R_lead<1 => C_phys on-shell); Blocker C corollary
+                         (on-shell => T'<=13); Blocker B (T'<=13 thresholds theorem-grade:
+                         R_lead(13)=0.650<1, joint(13)=x1.097>1, certified R_max<0.634,
+                         diagonal isotropy strict min, anchored u_eff>0). Off-diagonal
+                         margin 0.350, selection margin 0.097, both >0.
+Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 band. T7-CANDIDATE.
+Dependencies:            offshell-domination-theorem v1.1 (A,C); blocker-b-hardening v1.0
+                         (B); isotropy-infimum-core v1.1 (T-016); classwide-secondcumulant-
+                         stability (T-020); scscope-classwide-endpoint (T-021);
+                         hlayer-closure-final-consolidation v1.1.
+Evidence grade:          ASSEMBLY (theorem-grade blockers) + EXECUTED
+                         (res5_028_t7_proposition_assembly.py 5/5).
+Reproduction command:    python codes/vacuum/res5_028_t7_proposition_assembly.py
+Expected output:         rho_off=0.381<R_lead<1; T'<=13; R_lead(13)=0.650<1;
+                         joint(13)=x1.097>1; margins 0.350/0.097; 5/5 PASS.
+Falsification gate:      A physical competitor in C_phys with F[Q]<=F[G_*]; or a re-opened
+                         blocker (off-shell domination, certified thresholds, on-shell pin);
+                         or R_max>0.634 under a rigorous Lipschitz.
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The T7 target is
+                         ASSEMBLED as a candidate; the T6->T7 flip awaits (i) the R_max
+                         interval Lipschitz and (ii) operator sign-off (no-auto-T7).
+No-overclaim statement:  Does NOT enact T7. It assembles the three theorem-grade blockers
+                         into the T7-target proposition and names the two residual items
+                         (R_max interval Lipschitz; operator sign-off). T7-CANDIDATE.
+                         B1/B2 stay T6 on {H-LAYER}.
+Next required action:    (i) OPERATOR sign-off (Blocker B hardened in T-027 v1.1: convention derived,
+                         R_max interval-enclosed, anchoring monotone); (ii) optional CAS R_max tightening for the
+                         B1/B2 T6->T7 re-tier, closing GAP-1 (vacuum uniqueness) and
+                         lifting the Sectors C-F tier cap.
+\end{verbatim}
+}

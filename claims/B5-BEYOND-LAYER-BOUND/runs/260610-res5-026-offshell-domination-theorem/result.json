@@ -1,0 +1,46 @@
+{
+  "script": "res5_026_offshell_domination_theorem.py",
+  "version": "1.1.0",
+  "rR": 0.30452570866744433,
+  "u_eff": 2.685024265666395,
+  "R_lead_13": 0.6495031042347167,
+  "c_delta2": 0.2140336473068255,
+  "K0_off": 0.5185593559742698,
+  "rho_off": 0.38142286089347144,
+  "ratio_to_Rlead": 1.7028426212138292,
+  "band": {
+    "0.5": 0.38382531642820966,
+    "1.0": 0.38142286089347144,
+    "2.0": 0.3766573433220043
+  },
+  "worst_band": 0.38382531642820966,
+  "verdict": "T-026 v1.1 RIGOROUS: off-shell stability rho_off <= R_lead*r_R/(r_R+c*delta^2) = 0.3814 < R_lead = 0.6495 < 1; off-shell STRICTLY MORE stable than on-shell (x1.70). Inherits established R_lead<1 (T-018/020) + off-shell kinetic excess + mean-field convexity (T-019); NO leading-order estimate. Blocker A closed at theorem grade. Band-robust [x0.5,x2]. No tier flip.",
+  "claims": [
+    {
+      "name": "inherit_onshell_Rlead_below_one",
+      "passed": true,
+      "detail": "(a) on-shell stability R_lead(13)=0.6495<1 ESTABLISHED (T-018/T-020); the condensate off-diagonal coupling |Sigma_cond| <= R_lead*r_R = 0.1978 (B<=B_max, conservative for any transfer))"
+    },
+    {
+      "name": "offshell_kinetic_excess_reduces_ratio",
+      "passed": true,
+      "detail": "(b) off-shell kinetic excess c*delta^2=0.2140>0 => K_0(k_off)=r_R+c*delta^2=0.5186 > r_R=0.3045; the off-shell stability ratio is reduced by r_R/(r_R+c*delta^2)=0.587<1)"
+    },
+    {
+      "name": "meanfield_convexity_stabilising",
+      "passed": true,
+      "detail": "(c) mean-field interaction Hessian = +(3/2)u_eff=4.028>=0 in EVERY direction (T-019 local-functional convexity, Q-independent); it ADDS stability, so the only competing term is the O(I) Sigma_cond bounded in (a))"
+    },
+    {
+      "name": "rigorous_offshell_more_stable",
+      "passed": true,
+      "detail": "(rho_off <= R_lead*r_R/(r_R+c*delta^2) = 0.3814 < R_lead=0.6495 < 1: the off-shell mode is STRICTLY MORE stable than the on-shell mode (x1.70). No leading-order estimate -- inherits R_lead<1 + kinetic excess + convexity. Blocker A closed at theorem grade)"
+    },
+    {
+      "name": "rigorous_robust_band_and_sanity",
+      "passed": true,
+      "detail": "(off-shell rho_off < 1 across [x0.5,x2]: {x0.5:0.3838, x1:0.3814, x2:0.3767}, worst 0.3838<R_lead<1; c*delta^2 mu^2-independent, R_lead<1 established band-wide. Off-shell domination RIGOROUS + robust. Blocker A fully closed; no tier flip (B1/B2 T6))"
+    }
+  ],
+  "all_pass": true
+}

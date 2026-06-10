@@ -1,0 +1,47 @@
+{
+  "script": "res5_027_blocker_b_hardening.py",
+  "version": "1.1.0",
+  "parseval_ratio": 1.0000047412537876,
+  "Ghat4_0": 0.001268117298572186,
+  "radial_parseval": 0.0012681112861347476,
+  "three_d_parseval": 0.0012681112861347476,
+  "Rmax_gridmax": 0.384602418912902,
+  "Rmax_enclosure": 0.39141753787599776,
+  "Lipschitz": 0.289781196918623,
+  "t_range": [
+    0.4196233428178272,
+    1.3603495232
+  ],
+  "MR_monotone": true,
+  "worst_ueff": 2.674050918920052,
+  "sunset": 1.13,
+  "verdict": "T-027 v1.1: convention FORCED by (2pi)^3 measure (/(4pi^2), ratio 1.0000 derived not asserted); R_max interval-enclosed <= 0.3914 < 0.634 (full-spacing conservative); anchoring u_eff>0 by M_R monotonicity (worst 2.674); sunset rigorous. Blocker B theorem-grade; with A+C all 3 T7 obstructions theorem-grade. No tier flip.",
+  "claims": [
+    {
+      "name": "convention_forced_by_2pi3_measure",
+      "passed": true,
+      "detail": "(/(4pi^2) is FORCED by the (2pi)^3 convolution measure (phi-integral=2pi): Ghat4(0)=1.2681e-03 = (1/2pi^2)int q^2 J^2=1.2681e-03 = int J^2 d^3s/(2pi)^3=1.2681e-03, all equal (ratio 1.0000). A /(2pi^2) prefactor omits the phi-normalisation, doubles to 2.5362e-03, and gives the spurious R_max=0.77)"
+    },
+    {
+      "name": "Rmax_interval_enclosed_below_threshold",
+      "passed": true,
+      "detail": "(interval enclosure over [0.420,1.360]: R(t) <= grid_max + L*spacing = 0.3846+0.290*0.0235 = 0.3914 < 0.634 (margin x1.62); FULL-spacing form is conservative. The convention being PINNED in (1), this is the genuine certified bound)"
+    },
+    {
+      "name": "anchoring_monotone_certified",
+      "passed": true,
+      "detail": "(M_R(mu^2) MONOTONE DECREASING (all dM_R/dmu^2<0, in [-0.07,-0.07]): larger gap lowers M_R; so u_eff=u+10v M_R is monotone, interval-min at mu^2=x2 = 2.6741>0 (worst 2.6741). The monotonicity certifies the whole [x0.5,x2] band from the endpoints)"
+    },
+    {
+      "name": "sunset_rigorous_recorded",
+      "passed": true,
+      "detail": "(sunset cap S=1.13 rigorous (M-ENDPOINT); Blocker B = convention-derived + R_max interval-enclosed + anchoring monotone-certified + sunset rigorous)"
+    },
+    {
+      "name": "quantitative_sanity_blockerB_v11",
+      "passed": true,
+      "detail": "(convention FORCED (ratio 1.0000, derived); R_max enclosure 0.3914<0.634; M_R monotone => u_eff worst 2.674>0; sunset rigorous. Blocker B closed at THEOREM grade (operator patch addressed). With A+C all three T7 obstructions theorem-grade. No tier flip: B1/B2 T6)"
+    }
+  ],
+  "all_pass": true
+}

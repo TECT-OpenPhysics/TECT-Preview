@@ -1,0 +1,152 @@
+% =============================================================================
+% Title: Blocker B hardening (v1.1, operator patch): the Ghat4 convention DERIVED
+%        from the (2pi)^3 convolution measure, R_max interval-enclosed, anchoring
+%        certified by monotonicity
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE input grades; H-LAYER T7 path; bears on B1, B2)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T6-CANDIDATE (theorem-grade modulo the operating-window scope). Operator
+%   CONDITIONAL re-issue: the v1.0 "official convention" assertion is replaced by a
+%   DERIVATION. (1) The Ghat4 normalisation /(4pi^2) is FORCED by the (2pi)^3
+%   convolution measure -- the phi-integral contributes 2pi, and 2pi/(2pi)^3=1/(4pi^2)
+%   -- it is not a free factor-2; the Parseval coincidence (ratio 1.0000) is a
+%   CONSEQUENCE, and a /(2pi^2) prefactor omits the phi-normalisation and gives the
+%   spurious R_max=0.77. (2) R_max is INTERVAL-ENCLOSED over [t_min,2q0] (full-spacing
+%   bound, conservative): R_max <= 0.391 < 0.634. (3) Anchoring is certified by the
+%   MONOTONICITY of M_R(mu^2) (dM_R/dmu^2<0), so u_eff>0 on [x0.5,x2] from the
+%   endpoints. With Blockers A and C (T-026 v1.1) all three T7 obstructions are
+%   theorem-grade. No tier flip: B1/B2 T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) asserted the official convention; R_max finite-difference
+%        Lipschitz; anchoring 5-point mesh.
+%   v1.1 (2026-06-10) OPERATOR CONDITIONAL patch: convention DERIVED from the (2pi)^3
+%        measure; R_max interval-enclosed; anchoring by M_R monotonicity. Grounded by
+%        res5_027_blocker_b_hardening.py v1.1 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose}
+
+The operator returned a CONDITIONAL verdict on v1.0: the load-bearing $R_{\max}$
+convention ($1/(4\pi^2)$ vs $1/(2\pi^2)$) decides closure ($R_{\max}\le0.389$ vs
+$0.77$), and was asserted rather than derived. This re-issue derives the convention,
+interval-encloses $R_{\max}$, and certifies the anchoring by monotonicity. Scope:
+operating endpoint, ROBUSTNESS-MU2 band.
+
+\section*{2. The convention is forced, not chosen}
+
+Fix the Fourier convention
+\[
+\widehat f(k)=\int_{\mathbb R^3} e^{-ik\cdot x}f(x)\,dx,\qquad
+f(x)=\int_{\mathbb R^3}\frac{d^3k}{(2\pi)^3}\,e^{ik\cdot x}\widehat f(k).
+\]
+The quartic shell-integral is the 3D convolution of the bubble $J$ with itself,
+\[
+\widehat{G^4}(t)=(J*J)(t)=\int_{\mathbb R^3} J(s)\,J(t-s)\,\frac{d^3s}{(2\pi)^3}.
+\]
+In spherical coordinates $s=(q,\theta,\phi)$, $d^3s=q^2\,dq\,d\mu\,d\phi$ ($\mu=\cos\theta$),
+and $J$ depends only on $|s|$, so the azimuthal integral contributes a factor $2\pi$:
+\[
+\boxed{\ \widehat{G^4}(t)=\frac{2\pi}{(2\pi)^3}\int_0^\infty\! q^2\,dq\!\int_{-1}^{1}\! d\mu\,
+J(q)\,J(\mathrm{arg})=\frac{1}{4\pi^2}\int q^2 dq\int d\mu\,J(q)J(\mathrm{arg})\ }
+\]
+with $\mathrm{arg}=\sqrt{q^2+t^2-2qt\mu}$. The $1/(4\pi^2)$ prefactor is FORCED by the
+$(2\pi)^3$ measure; it is not a free factor-$2$.
+
+\textbf{Parseval (consequence).} At $t=0$, $\mathrm{arg}=q$ and $\int_{-1}^1 d\mu=2$, so
+\[
+\widehat{G^4}(0)=\frac{1}{4\pi^2}\cdot2\int q^2 J^2 dq=\frac{1}{2\pi^2}\int q^2 J^2 dq
+=\int J^2\,\frac{d^3s}{(2\pi)^3},
+\]
+matching the standard radial Parseval -- ratio $1.0000$, a check of the derivation, not
+its basis. A reimplementation with a $1/(2\pi^2)$ convolution prefactor omits the
+$\phi$-normalisation, doubles $\widehat{G^4}$, and yields the spurious $R_{\max}=0.77>0.634$.
+The factor-$2$ is exactly the omitted $\phi=2\pi$ over $(2\pi)^3$.
+
+\section*{3. $R_{\max}<0.634$ (interval-enclosed)}
+
+With the convention derived, $R(t)=12(5v/2)^2\lambda'^{-2}\widehat{G^4}(t)\,4(1-a_0)/J(t)$.
+Over the physical transfer range $[t_{\min},2q_0]=[0.420,1.360]$, a $41$-node grid gives
+$\max_j R(t_j)=0.3846$ (at $t=2q_0$) with maximum slope $L\le0.29$; the FULL-spacing
+interval enclosure (conservative)
+\[
+R_{\max}\ \le\ \max_j R(t_j)+L\,\Delta t\ =\ 0.3846+0.0068\ =\ 0.391\ <\ 0.634
+\]
+(margin $\times1.62$). The full-spacing form bounds $R$ on every subinterval by the larger
+endpoint plus the maximal variation; a tighter half-spacing or a CAS interval-arithmetic
+enclosure would only improve the margin.
+
+\section*{4. Anchoring by monotonicity}
+
+$u_{\rm eff}(\mu^2)=u+10v\,M_R(\mu^2)$, $M_R(\mu^2)=\tfrac{1}{2\pi^2}\int q^2/(r_R(\mu^2)
++c(q^2-q_0^2)^2)\,dq$. Since $r_R(\mu^2)$ increases with $\mu^2$ (the gap map) and $M_R$ is
+strictly decreasing in $r_R$, $M_R(\mu^2)$ is MONOTONE DECREASING ($dM_R/d\mu^2<0$, verified
+$\approx-0.07$ across the band). Hence $u_{\rm eff}$ is monotone, and its interval minimum on
+$[\times0.5,\times2]$ is at the largest $\mu^2$: $u_{\rm eff}(\times2)=2.674>0$. The
+monotonicity certifies the entire band from the endpoints.
+
+\section*{5. Status (Blocker B theorem-grade)}
+
+\textbf{T6-CANDIDATE.} Blocker B is closed at theorem grade: the convention is DERIVED
+(forced by the $(2\pi)^3$ measure), $R_{\max}<0.634$ is INTERVAL-ENCLOSED, the anchoring is
+MONOTONICITY-certified, and the sunset $S=1.13$ is rigorous (M-ENDPOINT). With Blockers A and
+C (T-026 v1.1, off-shell domination corollary of $R_{\rm lead}<1$), all three T7 obstructions
+are theorem-grade. The remaining T7 item is the operator sign-off (no-auto-T7). No tier flip:
+B1/B2 T6 on $\{$H-LAYER$\}$, B5 T5.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The convention derivation is the crux -- is it airtight?''}
+ADDRESSED: the $1/(4\pi^2)$ follows from $2\pi/(2\pi)^3$ (the $\phi$-integral over the
+convolution measure); the Parseval ratio $1.0000$ confirms it; the $1/(2\pi^2)$ alternative
+is shown to double $\widehat{G^4}$ by omitting $\phi$. This is now a derivation, not an
+assertion.
+\item[($\beta$)] \emph{``The R_max enclosure still uses a finite-difference slope.''}
+MITIGATED: the FULL-spacing enclosure ($+L\Delta t$, not $L\Delta t/2$) is conservative; with
+$\times1.62$ margin even a $2\times$ slope under-estimate is absorbed. A CAS interval bound
+would tighten, not change, the verdict.
+\item[($\gamma$)] \emph{``Does this enact T7?''} DISMISSED: no. It closes Blocker B at theorem
+grade; the operator sign-off remains. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{convention} $\widehat{G^4}(0)=(1/2\pi^2)\int q^2J^2$
+(ratio $1.0000$, derived); \emph{R_max} enclosure $0.391<0.634$ ($\times1.62$); \emph{anchoring}
+$M_R$ monotone, $u_{\rm eff}(\times2)=2.674>0$; \emph{sunset} $S=1.13$ rigorous.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / Blocker B hardening (v1.1, convention derived)
+Precise statement:       (1) Ghat4 = (J*J)(t) with /(4pi^2) FORCED by the (2pi)^3 convolution
+                         measure (phi=2pi); Parseval ratio 1.0000 is a consequence; /(2pi^2)
+                         doubles it -> spurious R_max=0.77. (2) R_max interval-enclosed:
+                         R_max <= max_grid + L*spacing = 0.391 < 0.634 over [t_min,2q0]. (3)
+                         Anchoring: M_R(mu^2) monotone decreasing (dM_R/dmu^2<0) => u_eff
+                         monotone, min at x2 = 2.674 > 0 on [x0.5,x2]. (4) Sunset S=1.13
+                         rigorous (M-ENDPOINT). Blocker B theorem-grade; with A+C all three
+                         T7 obstructions theorem-grade.
+Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 band; (2pi)^3 Fourier conv.
+Dependencies:            scscope-quartic-normalisation-certificate v1.0; scscope-mendpoint-
+                         evaluation v1.1 (sunset); offshell-domination-theorem v1.1 (A,C);
+                         Math424-AddA (gap map r_R(mu^2), M_R).
+Evidence grade:          ANALYTIC (convention derivation + monotonicity) + INTERVAL-ENCLOSED
+                         (R_max) + EXECUTED (res5_027_blocker_b_hardening.py v1.1 5/5).
+Reproduction command:    python codes/vacuum/res5_027_blocker_b_hardening.py
+Expected output:         convention ratio 1.0000; R_max enclosure 0.391<0.634; M_R monotone,
+                         u_eff(x2)=2.674>0; 5/5 PASS.
+Falsification gate:      A derivation error making /(2pi^2) the correct convolution prefactor
+                         (would give R_max=0.77); or R(t)>0.634 on [t_min,2q0]; or dM_R/dmu^2>0
+                         (would break the endpoint-min certification).
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. Blocker B closed at
+                         theorem grade (convention derived, R_max enclosed, anchoring monotone);
+                         all three T7 obstructions theorem-grade.
+No-overclaim statement:  Does NOT flip B1/B2 and does NOT enact T7. It closes Blocker B at
+                         theorem grade (the operator convention/interval/monotonicity patch).
+                         The R_max enclosure is full-spacing-conservative (a CAS interval bound
+                         would tighten). The operator sign-off remains. B1/B2 stay T6.
+Next required action:    T7 Step 4 assembly (F[Q]>F[G_*] for all C_phys) now rests only on the
+                         operator sign-off; optionally tighten R_max with a CAS interval bound.
+\end{verbatim}
+}

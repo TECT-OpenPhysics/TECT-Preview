@@ -24,7 +24,7 @@ listed so migration debt is visible per claim.
 
 Reproduction: `cd archive/legacy/scripts && python Math426_g4_kernel_reconciliation.py && python Math435_g6_corrected_variable_cascade.py`
 
-## B1-RH-ENUM — Reading-H selection within enumerated condensate ensembles  (T6)
+## B1-RH-ENUM — Reading-H selection within enumerated condensate ensembles  (T7)
 
 - `archive/legacy/notes/Math427/TECT-Math427-G1prime-Diagonal-Isotropy-Theorem-and-G1doubleprime-Spec-260604-v1.1.tex.txt`
 - `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt`
@@ -42,7 +42,7 @@ Reproduction: `cd archive/legacy/scripts && python Math426_g4_kernel_reconciliat
 
 Reproduction: `cd archive/legacy/scripts && python Math427_g1prime_diagonal_isotropy.py && python Math428_g1doubleprime_bloch_logdet.py && python Math429_g1pp1prime_inhomogeneous_wick.py && python Math430_g1pp2_dense_surface_convergence.py && python Math431_g1pp3_lam_hex_fcc.py && python Math432_g3prime_multishell_ensemble.py && python Math434_lam_exact_wick_bracket.py && python Math436_hex_exact_wick_bracket.py`
 
-## B2-PROPA-HLAYER — Proposition A as a conditional theorem on {H-LAYER, H-A0}  (T6)
+## B2-PROPA-HLAYER — Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison infimum (T7, H-LAYER discharged)  (T7)
 
 - `archive/legacy/notes/Math437/TECT-Math437-Step5-Pattern-Universal-Restoration-Isotropic-Layer-260604-v1.2.tex.txt`
 - `archive/legacy/notes/Math440/TECT-Math440-Section15p5-Consolidated-Audit-SecondWave-PARTIAL-260605-v1.0.tex.txt`

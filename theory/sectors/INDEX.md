@@ -7,7 +7,7 @@ One row per TOE sector. Each dossier gathers that sector's claims, predictions, 
 | Sector | Theme | Claims | Tier profile | Open gates | Predictions |
 |---|---|---|---|---|---|
 | [A](A.md) | foundation | 3 | T5x1 T1x2 | 0 | 0 |
-| [B](B.md) | vacuum | 5 | T6x2 T5x2 T4x1 | 2 | 0 |
+| [B](B.md) | vacuum | 5 | T7x2 T5x2 T4x1 | 1 | 0 |
 | [C](C.md) | spacetime | 6 | T6x4 T5x1 T1x1 | 4 | 1 |
 | [D](D.md) | gauge-matter | 6 | T6x2 T5x1 T3x1 T1x2 | 1 | 0 |
 | [E](E.md) | constants | 6 | T4x1 T2x1 T1x4 | 1 | 0 |

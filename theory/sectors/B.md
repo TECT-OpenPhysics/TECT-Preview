@@ -8,18 +8,18 @@
 
 ## Claims
 
-Tier profile: T6x2 T5x2 T4x1
+Tier profile: T7x2 T5x2 T4x1
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
-| [`B1-RH-ENUM`](../../claims/B1-RH-ENUM/INDEX.md) | T6 | H-LAYER | — | Reading-H selection within enumerated condensate ensembles |
-| [`B2-PROPA-HLAYER`](../../claims/B2-PROPA-HLAYER/INDEX.md) | T6 | H-LAYER | STEP-5B | Proposition A as a conditional theorem on {H-LAYER, H-A0} |
+| [`B1-RH-ENUM`](../../claims/B1-RH-ENUM/INDEX.md) | T7 | A1-KERNEL-CONV | — | Reading-H selection within enumerated condensate ensembles |
+| [`B2-PROPA-HLAYER`](../../claims/B2-PROPA-HLAYER/INDEX.md) | T7 | A1-KERNEL-CONV | — | Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison inf |
 | [`B3-BCC-STRUCT`](../../claims/B3-BCC-STRUCT/INDEX.md) | T4 | — | G3PB-III | BCC structural selection among tested ordered condensates |
 | [`B4-MASS-GAP`](../../claims/B4-MASS-GAP/INDEX.md) | T5 | — | — | BCC ground-state uniqueness within the single-mode constraint cone |
 | [`B5-BEYOND-LAYER-BOUND`](../../claims/B5-BEYOND-LAYER-BOUND/INDEX.md) | T5 | — | — | Pattern-generic Gershgorin reduction of the beyond-layer bound |
 
-**Open named hypotheses (sector union):** H-LAYER  
-**Open gates (sector union):** G3PB-III, STEP-5B
+**Open named hypotheses (sector union):** A1-KERNEL-CONV  
+**Open gates (sector union):** G3PB-III
 
 ## Predictions
 

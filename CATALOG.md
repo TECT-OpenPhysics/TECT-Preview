@@ -6,7 +6,7 @@
 
 Generated: 2026-06-10
 
-**657 artefacts** · superseded versions kept: 64 · machine-readable twin: `verification/catalog.json`
+**673 artefacts** · superseded versions kept: 67 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -24,21 +24,21 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-RENORMALISATION/LINEAGE.md` | A3-RENORMALISATION | — | — | — | ACTIVE | `7dac74dc783a` |
 | `claims/A3-RENORMALISATION/claim.md` | A3-RENORMALISATION | — | — | — | ACTIVE | `06f9f2d35903` |
 | `claims/A3-RENORMALISATION/status.json` | A3-RENORMALISATION | — | — | — | ACTIVE | `9bf455b6fe7f` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `59b73b9953d1` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `8eaf0f326d60` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
-| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `487bec41261c` |
-| `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `eb73ac85c955` |
+| `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `8c2c3af400c3` |
+| `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `61f1e0f6d678` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
 | `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `b4ae737eb5d2` |
-| `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `421c4a78226d` |
+| `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `7fd0d9a200f7` |
 | `claims/B3-BCC-STRUCT/LINEAGE.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `d28b76270774` |
 | `claims/B3-BCC-STRUCT/claim.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `3164a060ce35` |
 | `claims/B3-BCC-STRUCT/status.json` | B3-BCC-STRUCT | — | — | — | ACTIVE | `e22335660613` |
 | `claims/B4-MASS-GAP/LINEAGE.md` | B4-MASS-GAP | — | — | — | ACTIVE | `fd5ef53c698d` |
 | `claims/B4-MASS-GAP/claim.md` | B4-MASS-GAP | — | — | — | ACTIVE | `aa64c40953f6` |
 | `claims/B4-MASS-GAP/status.json` | B4-MASS-GAP | — | — | — | ACTIVE | `fb0abca541cb` |
-| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0b029c99a169` |
+| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ffa90b81610a` |
 | `claims/B5-BEYOND-LAYER-BOUND/claim.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0d5279bacfa7` |
 | `claims/B5-BEYOND-LAYER-BOUND/lineage-narrative.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `92b7f96ac6eb` |
 | `claims/B5-BEYOND-LAYER-BOUND/status.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `312691c3302b` |
@@ -194,6 +194,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/Reading-H/notes/t6-entry-composition-audit-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `8ac7bf4cee0d` |
 | `claims/B1-RH-ENUM/Reading-H/notes/t6-mainline-session-consolidation-260606-v1.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `b09f027d7b0c` |
 | `claims/B1-RH-ENUM/Reading-H/notes/t6-mainline-session-consolidation-260606-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `0e876175ac04` |
+| `claims/B1-RH-ENUM/Reading-H/notes/t7-enactment-record-260610-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `7240fb8e11e0` |
 | `claims/B1-RH-ENUM/enumerated/notes/enumerated-readings-migration-revalidation-260605-260605-v1.1.pdf` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | v1.1 | ACTIVE | `79453ac28ce5` |
 | `claims/B1-RH-ENUM/enumerated/notes/enumerated-readings-migration-revalidation-260605-260605-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | v1.1 | ACTIVE | `f96c4d0a4bd6` |
 | `claims/B1-RH-ENUM/enumerated/notes/enumerated-readings-migration-revalidation-260605-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-05 | 2026-06-05 | v1.0 | SUPERSEDED | `9eaa59731029` |
@@ -249,6 +250,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/proposition-a-migration-revalidation-260605-260605-v1.4.pdf` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.4 | ACTIVE | `0fa51b8ac228` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/proposition-a-migration-revalidation-260605-260605-v1.4.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.4 | ACTIVE | `942ff723a0da` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/proposition-a-migration-revalidation-260605-v1.0.md` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.0 | SUPERSEDED | `2c8048c91fc6` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/t7-proposition-assembly-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `87f2b4734938` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/t7-proposition-assembly-260610-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `2c6f06c3d25c` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/t7-route-internal-audit-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `6ee2e933d19a` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-circle-richness-reduction-260608-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.0 | ACTIVE | `ef9e80a83f43` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-circle-richness-reduction-260608-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.0 | ACTIVE | `5a94a185df81` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-cross-scale-induction-260608-260608-v1.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | 2026-06-08 | v1.1 | ACTIVE | `33e13488e9c4` |
@@ -295,8 +299,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/hlayer-res4-intensity-closure-260609-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-09 | 2026-06-09 | v1.0 | SUPERSEDED | `a8260b661e03` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/hlayer-residual-inventory-260606-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `aadafba713f4` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/hlayer-residual-inventory-260606-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `45b123875798` |
+| `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/offshell-domination-theorem-260610-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `a6eeafeb2fac` |
+| `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/offshell-domination-theorem-260610-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `678421bbd66a` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/offshell-operator-decision-260610-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `357c5f9b0f2c` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/offshell-operator-decision-260610-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `ba6ebea50cff` |
+| `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/blocker-b-hardening-260610-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `70c42ce8a0e6` |
+| `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/blocker-b-hardening-260610-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `2ee5813c1753` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-classwide-endpoint-260610-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `7546f050630b` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-endpoint-joint-assessment-260607-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `8924aa6b5109` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-endpoint-joint-assessment-260607-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `54df8e2d8f00` |
@@ -502,6 +510,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-019-exchange-scalar-identification/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `3eec969d7a1b` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-020-classwide-secondcumulant-stability/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `542603c121ec` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-025-hlayer-final-consolidation/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `566177c010ed` |
+| `claims/B2-PROPA-HLAYER/runs/260610-res5-028-t7-proposition-assembly/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `530d1ec3d279` |
+| `claims/B2-PROPA-HLAYER/runs/260610-res5-029-t7-route-audit/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `b7db984a09a1` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | — | ACTIVE | `705268333be1` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-ghat4-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `bc0c5c38b7df` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-joint-endpoint/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `cb2dc5469315` |
@@ -526,6 +536,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260610-res5-021-scscope-classwide-endpoint/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `d17b401abea3` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260610-res5-023-aadm-exclusion-boundaries/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `6c94ddcc8ce8` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260610-res5-024-offshell-operator-decision/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `7fe93fc789b5` |
+| `claims/B5-BEYOND-LAYER-BOUND/runs/260610-res5-026-offshell-domination-theorem/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `23e4d0081c2a` |
+| `claims/B5-BEYOND-LAYER-BOUND/runs/260610-res5-027-blocker-b-hardening/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `eb2764904d78` |
 
 ## Domain codes
 
@@ -563,6 +575,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/res5_023_aadm_exclusion_boundaries.py` | — | 2026-06-10 | — | v1.1.0 | ACTIVE | `5061274830b2` |
 | `codes/vacuum/res5_024_offshell_operator_decision.py` | — | 2026-06-10 | — | v1.0.0 | ACTIVE | `ce74fb6213f7` |
 | `codes/vacuum/res5_025_hlayer_final_consolidation.py` | — | 2026-06-10 | — | v1.0.0 | ACTIVE | `2261c2e98809` |
+| `codes/vacuum/res5_026_offshell_domination_theorem.py` | — | — | — | v1.1.0 | ACTIVE | `03ed87f40994` |
+| `codes/vacuum/res5_027_blocker_b_hardening.py` | — | — | — | — | ACTIVE | `282a77007a7c` |
+| `codes/vacuum/res5_028_t7_proposition_assembly.py` | — | 2026-06-10 | — | v1.1.0 | ACTIVE | `b670a6ef89b4` |
+| `codes/vacuum/res5_029_t7_route_audit.py` | — | 2026-06-10 | — | v1.0.0 | ACTIVE | `2a9a36e09049` |
 | `codes/vacuum/res5_2pi_commonmode_monotonicity.py` | — | — | — | v1.0.0 | ACTIVE | `99ad3901b944` |
 | `codes/vacuum/res5_a0_skeleton_sensitivity.py` | — | — | — | v1.0.0 | ACTIVE | `b3679d7ff3b9` |
 | `codes/vacuum/res5_allorder_commonmode.py` | — | — | — | v1.0.0 | ACTIVE | `74268743ba20` |
@@ -643,17 +659,17 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
-| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `c63c15a73441` |
+| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `907c689e8b74` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `161e1b169d75` |
-| `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `79e1cbbbc630` |
-| `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `9e14ec1ef7a6` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `5ce5890a3fc2` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `7f3df4613e8a` |
+| `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `1f78d58691ac` |
+| `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `81335be09c8b` |
+| `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `678117b40e43` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `c388de8dc84c` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `fb4110225745` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `8b5fbc9a4817` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `b40ed094025f` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `23f1c34cd4aa` |
 
 ## Governance policies
 
@@ -678,16 +694,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `87c33602017c` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `d34da363e351` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `b4b05dff65f2` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `d784d71ffdf4` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `a26217608d93` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `c91f23a74836` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `6961c8900c54` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `c3e2bbb387f0` |
+| `TODO.md` | — | — | — | — | ACTIVE | `e6098ad75a1d` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -697,7 +713,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `2e530fcf47de` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `ed81afe6ce6f` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -731,10 +747,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
 | `theory/sectors/A.md` | — | — | — | — | ACTIVE | `9a61bb4688b5` |
-| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b7c762779ee0` |
+| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `9aa72954db55` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `6d032ac08f3f` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `9731fa976b30` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `cc103a40e82c` |
 

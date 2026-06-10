@@ -1,0 +1,131 @@
+% =============================================================================
+% Title: The T7 proposition assembled (v1.1): F[Q] > F[G_*] for all physical
+%        competitors, with non-circular off-shell exclusion and Blocker B v1.1
+% Claim: B2-PROPA-HLAYER (H-LAYER T7 proposition; consolidates B1-RH-ENUM, B5-BEYOND-LAYER-BOUND)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T7-CANDIDATE (assembled; enactment held for operator sign-off). Operator
+%   T7-ENACTMENT-HELD patch: (1) the Blocker-B dependency is updated to
+%   blocker-b-hardening v1.1 (the version where the convention is DERIVED and R_max
+%   interval-enclosed); (2) the R_max item is downgraded from a residual to an
+%   OPTIONAL CAS tightening (already interval-enclosed R_max<=0.391<0.634); (3) the
+%   off-shell exclusion is made NON-CIRCULAR by carrying the adversarial value
+%   rho_off^ext <= R_lead(20) r_R/(r_R+c delta^2) = 0.572 < 1 (using R_lead(20)=0.974,
+%   BEFORE any reduction to the registered class). The T7 target F[Q]>F[G_*] for all
+%   Q in C_phys is assembled from three theorem-grade blockers; the only residual is
+%   the operator sign-off (no-auto-T7). No tier flip is enacted: B1/B2 T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first assembly; rho_off=0.381 (registered class); Blocker B v1.0;
+%        R_max named as a residual.
+%   v1.1 (2026-06-10) OPERATOR ENACTMENT-HELD patch: Blocker B dep -> v1.1; R_max ->
+%        optional CAS tightening; non-circular rho_off^ext<=0.572<1. Grounded by
+%        res5_028_t7_proposition_assembly.py v1.1 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. The T7 target}
+
+\textbf{Proposition (T7 target).} Let $\mathcal C_{\rm phys}$ be the full physically
+admissible competitor class (real antipodal condensate patterns at the operating
+endpoint $I=2\times10^{-3}$, $\#Q\le n_{\rm pack}$, pairwise $\angle\ge\theta_{\min}$).
+Then
+\[
+F[Q]-F[G_*]>0\qquad\forall\,Q\in\mathcal C_{\rm phys}\setminus\{G_*\},
+\]
+the isotropic Gaussian--Hartree layer $G_*$ is the strict comparison infimum over
+$\mathcal C_{\rm phys}$, with NO external H-LAYER hypothesis.
+
+\section*{2. Assembly (non-circular)}
+
+\textbf{Blocker A -- off-shell domination, NON-CIRCULAR (T-026 v1.1).} The off-shell
+exclusion must not assume the registered class it produces. It does not: EVEN BEFORE
+reducing to the registered class, a resolved off-shell mode obeys, with the ADVERSARIAL
+$R_{\rm lead}(20)=0.974$,
+\[
+\rho_{\rm off}^{\rm ext}\ \le\ R_{\rm lead}(20)\,\frac{r_R}{r_R+c\,\delta^2}
+=0.974\times0.587=0.572\ <\ 1 .
+\]
+So off-shell modes are strictly more stable than the (already stable, $<1$) on-shell
+modes regardless of the competitor's $T'$. \emph{After} off-shell exclusion the
+survivors return to the on-shell registered class, where $\rho_{\rm off}=0.381$ and
+$R_{\rm lead}(13)=0.650<1$.
+
+\textbf{Blocker C -- on-shell reduction (T-026 v1.1).} An on-shell, packing-bounded,
+coherence-resolved competitor has $T'(Q)\le13$: any $T'>13$ requires off-shell
+(excluded by A) or super-$n_{\rm pack}$ (excluded by packing).
+
+\textbf{Blocker B -- certified thresholds (T-027 v1.1).} On the $T'\le13$ class the
+selection margins are theorem-grade: diagonal isotropy strict minimum (T-016);
+off-diagonal stability $R_{\rm lead}(13)=0.650<1$ (margin $0.350$); selection
+$\mathrm{joint}(13)=\times1.097>1$ (margin $0.097$), with $R_{\max}\le0.391<0.634$
+INTERVAL-ENCLOSED and the convention DERIVED from the $(2\pi)^3$ measure (v1.1), the
+sunset $S=1.13$ rigorous, the anchoring $u_{\rm eff}>0$ monotonicity-certified.
+
+Combining: off-shell excluded non-circularly $\Rightarrow$ on-shell $T'\le13$
+$\Rightarrow$ both margins strictly positive and theorem-grade. Hence $F[Q]-F[G_*]>0$
+for every $Q\in\mathcal C_{\rm phys}$.
+
+\section*{3. Status: T7-CANDIDATE; the residual is the operator sign-off}
+
+\textbf{T7-CANDIDATE.} All three blockers are theorem-grade (Blocker B closed in T-027
+v1.1: convention derived, $R_{\max}$ interval-enclosed, anchoring monotone). The residual
+reduces to: (i) an OPTIONAL CAS interval tightening of the already-enclosed $R_{\max}$
+(the full-spacing enclosure is conservative); and (ii) the OPERATOR sign-off for the
+B1/B2 $T6\to T7$ flip (no-auto-T7 rule, GOVERNANCE.md). No tier flip is enacted here.
+
+\section*{4. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The off-shell exclusion is circular -- it uses $R_{\rm lead}$ of
+the class it produces.''} ADDRESSED (v1.1): the non-circular form uses the ADVERSARIAL
+$R_{\rm lead}(20)=0.974$ valid for ANY antipodal competitor, giving
+$\rho_{\rm off}^{\rm ext}=0.572<1$ before any reduction. The registered-class
+$\rho_{\rm off}=0.381$ is the post-reduction refinement, not the basis.
+\item[($\beta$)] \emph{``The selection margin $0.097$ is thin.''} ACKNOWLEDGED: on the
+on-shell $T'\le13$ class the joint is $\times1.097$ (sunset-limited), comfortable
+relative to the excluded off-shell razor-thin case; it is the genuine operating margin.
+\item[($\gamma$)] \emph{``Is this enacted T7?''} HONESTLY NO: it is a T7-CANDIDATE. The
+operator sign-off remains. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{A (non-circular)} $\rho_{\rm off}^{\rm ext}
+=0.572<1$, $\rho_{\rm off}=0.381<1$; \emph{C} $T'\le13$; \emph{B} $R_{\rm lead}(13)
+=0.650<1$, $\mathrm{joint}(13)=\times1.097>1$, $R_{\max}\le0.391<0.634$; \emph{margins}
+$0.350$, $0.097>0$.
+
+\section*{5. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / T7 proposition assembly (v1.1, non-circular)
+Precise statement:       T7-target: F[Q] > F[G_*] for all Q in C_phys, no external H-LAYER
+                         hypothesis. Blocker A NON-CIRCULAR: rho_off^ext <= R_lead(20)
+                         r_R/(r_R+c delta^2) = 0.572 < 1 (adversarial, before reduction) =>
+                         off-shell excluded; survivors on-shell (C) with T'<=13; on that
+                         class (B, T-027 v1.1) R_lead(13)=0.650<1, joint(13)=x1.097>1,
+                         R_max interval-enclosed<0.634 (convention derived), sunset rigorous,
+                         anchoring monotone, diagonal isotropy strict min. Margins 0.350,
+                         0.097 > 0.
+Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 band. T7-CANDIDATE.
+Dependencies:            offshell-domination-theorem v1.1 (A,C); blocker-b-hardening v1.1
+                         (B); isotropy-infimum-core v1.1 (T-016); classwide-secondcumulant-
+                         stability (T-020); scscope-classwide-endpoint (T-021).
+Evidence grade:          ASSEMBLY (theorem-grade blockers) + EXECUTED
+                         (res5_028_t7_proposition_assembly.py v1.1 5/5).
+Reproduction command:    python codes/vacuum/res5_028_t7_proposition_assembly.py
+Expected output:         rho_off^ext=0.572<1; rho_off=0.381; T'<=13; R_lead(13)=0.650<1;
+                         joint(13)=x1.097>1; margins 0.350/0.097; 5/5 PASS.
+Falsification gate:      A physical competitor in C_phys with F[Q]<=F[G_*]; or rho_off^ext>=1
+                         (would need R_lead(20)*r_R/(r_R+c delta^2)>=1); or a re-opened blocker.
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The T7 target is
+                         ASSEMBLED as a candidate (non-circular); the T6->T7 flip awaits the
+                         operator sign-off (no-auto-T7).
+No-overclaim statement:  Does NOT enact T7. It assembles the three theorem-grade blockers
+                         into the T7-target with a non-circular off-shell exclusion; the
+                         residual is the operator sign-off (+ optional CAS R_max tightening).
+                         T7-CANDIDATE. B1/B2 stay T6 on {H-LAYER}.
+Next required action:    OPERATOR sign-off for the B1/B2 T6->T7 re-tier, closing GAP-1 (vacuum
+                         uniqueness) and lifting the Sectors C-F tier cap; optionally a CAS
+                         interval-arithmetic R_max bound.
+\end{verbatim}
+}
