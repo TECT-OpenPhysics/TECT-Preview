@@ -1,0 +1,140 @@
+% =============================================================================
+% Title: C_full internal scope closure (COMFORTABLE): B1/B2 Reading-H enacted as
+%        T7-SCOPE_{C_full} -- the coherence circle-packing lemma removes the thin
+%        off-diagonal margin
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (C_full internal scope closure; spans B5)
+% Version: v1.2 -- supersedes cfull-internal-scope-closure v1.1 (thin-O); issued 2026-06-10
+% Status: INTERNAL C_FULL SCOPE CLOSURE -- COMFORTABLE. The coherence circle-packing lemma
+%   (coherence-offdiag-comfortable-bound v1.0, res5_036 5/5) proves T'<=floor(2pi/theta_min)=10
+%   uniformly for every admissible competitor, upgrading the off-diagonal margin from the thin
+%   x1.026 of v1.1 to COMFORTABLE x1.96 (R_lead<=0.510<1). The selection boundary now binds
+%   (I_off^coh=3.92e-3 > I_c^sel=2.41e-3), so the C_full operating region is the FULL Step-1
+%   region R (20% headroom), identical robustness to the lattice class. B1/B2 enacted as
+%   T7-SCOPE_{C_full} (the thin-O qualifier removed). EXT is now UNNECESSARY for comfort (stays
+%   T2, optional). G1+G3 CLOSED (G1 now by PROOF); G2 external referee = validation gate. NOT an
+%   unrestricted T7. Grounded by res5_032/033/034/036 (+ res5_035 superseded thin numbers).
+%
+% Revision history (cumulative):
+%   v1.0 cfull-route-consolidation: route complete, awaiting decision.
+%   v1.1 cfull-internal-scope-closure: thin-O enacted (operator accepted thin x1.026 margin,
+%        cap I_off^Cfull=2.053e-3, 2.6% headroom).
+%   v1.2 (2026-06-10) COMFORTABLE: coherence circle-packing lemma T'<=10 => off-diagonal x1.96,
+%        selection-binding, full Step-1 region; thin-O qualifier removed; EXT now optional.
+%        Grounded by res5_036 (5/5).
+% =============================================================================
+
+\sloppy
+\section*{1. The enacted statement (comfortable)}
+
+B1/B2 Reading-H selection is enacted at tier T7 with the competitor class widened to the full
+admissible class $\mathcal C_{\rm full}$, scope-qualified $\mathrm{T7\text{-}SCOPE}_{\mathcal
+C_{\rm full}}$:
+\[
+F[Q]-F[G_*]>0\quad\forall\,Q\in\mathcal C_{\rm full}\setminus\{G_*\},\qquad (I,\mu^2)\in
+\mathcal R,\quad\text{given A1-KERNEL-CONV,}
+\]
+with $\mathcal R=\{0<\mu^2<\mu^2_{\max}=0.0342,\ 0<I<I_c^{\rm sel}(\mu^2)\}$ the FULL Step-1
+selection region. This is NOT an unrestricted T7 (\S5).
+
+\section*{2. Why the region is the full Step-1 region (the coherence upgrade)}
+
+The off-diagonal stability needs $K_{\rm floor}<K_*=20.55$. The coherence circle-packing lemma
+(this round) proves, elementarily and uniformly across $\mathcal R$,
+\[
+K_{\rm floor}\le T'(Q)\le\Bigl\lfloor\frac{2\pi}{\theta_{\min}}\Bigr\rfloor=10
+\quad(\text{every admissible competitor; }\rho\le Q_0,\ \text{pairwise }\ge\theta_{\min}),
+\]
+so $R_{\rm lead}\le23.2\cdot11\cdot I$: at $I=2\times10^{-3}$, $R_{\rm lead}\le0.510$
+($\times1.96$); at $I_c^{\rm sel}=2.41\times10^{-3}$, $R_{\rm lead}\le0.615<1$. The off-diagonal
+cap $I_{\rm off}^{\rm coh}=1/(23.2\cdot11)=3.92\times10^{-3}$ EXCEEDS $I_c^{\rm sel}$, so the
+SELECTION boundary binds and $\mathcal R$ is the full Step-1 region with $20\%$ headroom at the
+operating point. This SUPERSEDES the v1.1 thin margin $\times1.026$ / cap $2.053\times10^{-3}$ /
+$2.6\%$ headroom, which were artefacts of the loose antipodal bound $T'\le N/2\le20$.
+
+\section*{3. The three sectors at enactment (all comfortable)}
+
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\hline
+sector & C\_full status & margin\\
+\hline
+(D) diagonal isotropy & competitor-agnostic (Step 3) & comfortable ($\tfrac12r_R^2,\ \tfrac32u_{\rm eff}>0$)\\
+(O) off-diagonal & coherence lemma $T'\le10$ (this round) & \textbf{comfortable} ($R_{\rm lead}\le0.510$, $\times1.96$)\\
+(S) selection floor & competitor-agnostic (Step 3) & comfortable (joint $1.04$, cap $1.13$)\\
+EXT & strong evidence & T2; \textbf{optional} (no longer needed for comfort)\\
+\hline
+\end{tabular}
+\end{center}
+All three sectors are now comfortable; the off-diagonal is no longer the thin ingredient. The
+sector caveats of v1.1 stand: (D) conditional on T-016 being a global/convex diagonal minimum;
+(S) on $J_{\rm eff},n_{\rm pack}$ worst-case over the full class.
+
+\section*{4. Gate status}
+
+\begin{itemize}
+\item[\textbf{G1}] off-diagonal margin --- \textbf{CLOSED by PROOF} (coherence lemma; comfortable
+$\times1.96$, not merely accepted-thin).
+\item[\textbf{G2}] external referee / reproduction --- OPEN, a validation/publication gate, not an
+internal proof blocker.
+\item[\textbf{G3}] operator sign-off --- \textbf{CLOSED} (enacted $\mathrm{T7\text{-}SCOPE}_{
+\mathcal C_{\rm full}}$).
+\end{itemize}
+EXT (T2) is now an OPTIONAL tightening ($\times1.96\to\times5.4$), not required.
+
+\section*{5. Permitted and forbidden claims}
+
+\noindent\textbf{Permitted:} ``Within the certified operating region $\mathcal R$, Reading-H
+selection holds against all admissible $\mathcal C_{\rm full}$ competitors (given the A1 kernel
+convention), with a comfortable off-diagonal margin.''
+
+\noindent\textbf{Forbidden:} ``Reading-H is globally / unconditionally proven over all intensities
+and all possible competitors.'' Still scope-qualified: within $\mathcal R$, given A1, external
+referee pending.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Does the coherence lemma really hold uniformly?''} Yes --- $2\pi/
+\theta_{\min}\le10.54$ across $\mathcal R$ (res5\_036 scan), so $T'\le10$; the proof uses only
+$\rho\le Q_0$ and pairwise $\ge\theta_{\min}$ (elementary).
+\item[($\beta$)] \emph{``Is the comfortable upgrade an over-correction of the accepted thin
+margin?''} No --- it is strictly stronger and rigorous: the thin $\times1.026$ used the loose
+$T'\le N/2$; the coherence $T'\le10$ is tighter and proved. The enactment is preserved, the margin
+improved.
+\item[($\gamma$)] \emph{``Unrestricted T7?''} No --- \S5; scope-qualified within $\mathcal R$, given
+A1, referee pending.
+\end{itemize}
+
+Quantitative sanity check (mandatory): $T'\le\lfloor2\pi/\theta_{\min}\rfloor=10$ (sup $10.54$);
+adversarial max $8$; $R_{\rm lead}\le0.510$ ($\times1.96$), $\le0.615$ at the selection cap;
+$I_{\rm off}^{\rm coh}=3.92\times10^{-3}>I_c^{\rm sel}=2.41\times10^{-3}$ (selection binds). All
+from res5\_036 (5/5).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 C_full internal scope closure (COMFORTABLE) -- T7-SCOPE_{C_full}
+Precise statement:       Coherence circle-packing lemma (res5_036 5/5): T'<=floor(2pi/theta_min)=10
+                         uniformly for every admissible competitor (lattice + non-lattice) =>
+                         K_floor<=10 => R_lead<=0.510<1 at I_op (x1.96), 0.615 at the selection cap
+                         -- COMFORTABLE. I_off^coh=1/(23.2*11)=3.92e-3 > I_c^sel=2.41e-3 => SELECTION
+                         binds => C_full region = full Step-1 region R (20% headroom). B1/B2 enacted
+                         T7-SCOPE_{C_full} (thin-O qualifier removed). (D)/(S) competitor-agnostic
+                         comfortable. G1 CLOSED by PROOF, G3 CLOSED, G2 (referee) validation gate.
+                         EXT T2 optional (no longer needed). Supersedes v1.1 thin x1.026. Given A1.
+Scope:                   T7-SCOPE_{C_full} within R, given A1; comfortable. External referee pending.
+Dependencies:            res5_036 (coherence lemma), res5_032 (Step 1 R), res5_034 (Step 3 (D)/(S)),
+                         R-025 (K_floor<=T'); supersedes res5_033/035 thin numbers.
+Evidence grade:          PROVED (elementary coherence lemma) + INTERNAL SCOPE CLOSURE + EXECUTED.
+Reproduction command:    python codes/vacuum/res5_036_coherence_offdiag_bound.py
+Expected output:         T'<=10; adversarial max 8; R_lead<=0.510 (x1.96); selection binds; 5/5 PASS.
+Falsifier:               An admissible competitor with a sum-circle of >10 points; theta_min<0.571
+                         in the window; or R_lead>=1 for some (I,mu^2) in R.
+Tier before / after:     B1/B2 T7-SCOPE_{C_full, thin O} -> T7-SCOPE_{C_full} (comfortable). EXT T2
+                         optional. NOT unrestricted T7.
+No-overclaim statement:  Comfortable but scope-qualified (within R, given A1, C_full class). NOT
+                         global/all-intensity/all-competitor. EXT remains a separate optional T2.
+Next required action:    G2 external/second-author referee (validation). EXT optional (further x5.4).
+\end{verbatim}
+}

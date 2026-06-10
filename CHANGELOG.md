@@ -5,6 +5,50 @@ not pillar counts.
 
 ---
 
+## [cfull-internal-scope-closure v1.2 ACCEPTED AS CANONICAL (operator 2026-06-10): T7-SCOPE_{C_full, thin O} -> T7-SCOPE_{C_full} (comfortable). v1.1 superseded. The coherence circle-packing lemma removed the thin margin (off-diagonal x1.026 -> x1.96), restored the full Step-1 region (selection re-binds), and made EXT unnecessary for comfort. RESULTS-LEDGER R-031 upgraded to comfortable; R-032 registers the standalone reusable lemma.] - 2026-06-10
+
+Operator decision 2026-06-10: ACCEPT cfull-internal-scope-closure-260610 v1.2 AS CANONICAL; promote
+T7-SCOPE_{C_full, thin O} -> T7-SCOPE_{C_full} (comfortable); v1.1 superseded. The coherence
+circle-packing lemma (R-032, coherence-offdiag-comfortable-bound v1.0, res5_036 5/5) is the key
+upgrade: T'(Q)<=floor(2pi/theta_min)=10 uniformly for every admissible competitor => K_floor<=10 =>
+R_lead<=0.510<1 (margin x1.96), superseding the thin x1.026 (loose antipodal T'<=N/2 artefact). The
+off-diagonal cap I_off^coh=3.92e-3 exceeds I_c^sel=2.41e-3, so the SELECTION boundary re-binds and the
+C_full region is the FULL Step-1 region R={mu^2 in (0,0.0342), I in (0,I_c^sel(mu^2))} (20% headroom),
+identical robustness to the lattice class. Physical meaning: coherence resolution prevents non-lattice
+competitors from concentrating enough off-diagonal additive energy on any single sum-circle to
+destabilize G_*. EXT (additive-energy extremal, K_floor~3) is no longer needed for comfort -- stays T2
+optional. Falsifier: an admissible (coherence-resolved) competitor with a sum-circle occupancy > 10.
+Permitted claim: "within the certified Step-1 region R, Reading-H selection holds against all
+admissible C_full competitors, given A1, with comfortable off-diagonal margin". Forbidden:
+"unrestricted/global/all-intensity/all-kernel T7". RESULTS-LEDGER R-031 upgraded to comfortable;
+R-032 registers the standalone reusable lemma (sphere sum-circle occupancy via separation). Canonical:
+cfull-internal-scope-closure v1.2. Remaining: G2 external referee on the comfortable version (no-regret).
+
+## [COMFORTABLE UPGRADE (coherence circle-packing lemma, res5_036 5/5): the C_full off-diagonal margin is upgraded from thin x1.026 to COMFORTABLE x1.96, removing the thin margin by ELEMENTARY PROOF (no additive-energy EXT needed). Coherence sep theta_min bounds every sum-circle: T'<=floor(2pi/theta_min)=10 uniformly (adversarial max admissible T'=8). K_floor<=10 => R_lead<=0.510<1 (x1.96); I_off^coh=3.92e-3>I_c^sel=2.41e-3 => SELECTION binds => C_full region = full Step-1 region (20% headroom). B1/B2 -> T7-SCOPE_{C_full} (thin-O qualifier removed). G1 CLOSED by PROOF. EXT now optional T2.] - 2026-06-10
+
+Operator request 2026-06-10: do (b) EXT promotion then (a) referee, as the no-regret order. Honest
+finding: the additive-energy extremal route (EXT) is the sphere additive-energy problem (R-022/R-024,
+T4-T5 conditional on decoupling) -- hard. BUT a stronger ELEMENTARY route removes the thin margin
+without it: the COHERENCE CIRCLE-PACKING LEMMA.
+LEMMA (proved, res5_036 5/5): the admissible class is coherence-resolved (pairwise geodesic >=
+theta_min, n_pack=16/theta_min^2). Any sum-circle C_t (t!=0) is a Euclidean circle of radius
+rho=sqrt(Q0^2-|t|^2/4)<=Q0; points of Q on it are pairwise Euclidean >= 2Q0 sin(theta_min/2), so by
+circle-packing k<=pi/arcsin(d/2rho)<=2pi/theta_min (since rho<=Q0). Hence T'(Q)<=floor(2pi/theta_min)
+=10 UNIFORMLY across the window (sup 2pi/theta_min=10.54), for EVERY admissible competitor lattice and
+non-lattice. Adversarial: max admissible single-ring-pair T'=8 (near-great rings violate coherence --
+antipodal mirror collides at the equator); random T'=2.
+CONSEQUENCE: with R-025 (K_floor<=T'), K_floor<=10 => R_lead<=23.2*11*I = 0.510 at I_op (margin x1.96),
+0.615 at the selection cap I_c^sel=2.41e-3 -- COMFORTABLE. I_off^coh=1/(23.2*11)=3.92e-3 > I_c^sel, so
+the SELECTION boundary binds and the C_full region is the FULL Step-1 region R (20% headroom), identical
+robustness to the lattice class. This SUPERSEDES the thin x1.026 / cap 2.053e-3 / 2.6% of v1.1, an
+artefact of the loose antipodal T'<=N/2<=20. EXT (additive-energy extremal, target K_floor~3, margin
+x5.4) is now UNNECESSARY for comfort -- stays T2 optional.
+LEDGER: B1/B2 status.json scope T7-SCOPE_{C_full, thin O} -> T7-SCOPE_{C_full} (comfortable, thin-O
+qualifier removed; tier T7, lint PASS); GATES.md G1 CLOSED by PROOF (was accept-thin). NEW
+coherence-offdiag-comfortable-bound v1.0 (6 sections, 1 boxed lemma, FORM-CHECK PASS) + res5_036 (5/5)
++ cfull-internal-scope-closure v1.2 (supersedes v1.1) + changelog. (b) achieved by an elementary lemma,
+not the hard EXT. Next: (a) G2 external referee on the comfortable version (no-regret).
+
 ## [cfull-internal-scope-closure v1.1 ACCEPTED AS CANONICAL (operator 2026-06-10): the B1/B2 Reading-H C_full extension enacted as T7-SCOPE_{C_full, thin O} is the canonical closure note. RESULTS-LEDGER R-031 (standalone-publishable C_full milestone). G1+G3 CLOSED, G2 (referee) validation gate, EXT T2 optional. Scope-qualified (thin x1.026, cap 2.053e-3, given A1); NOT unrestricted T7.] - 2026-06-10
 
 Operator decision 2026-06-10: ACCEPT cfull-internal-scope-closure-260610 v1.1 AS CANONICAL closure

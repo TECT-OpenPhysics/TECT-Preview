@@ -1,0 +1,144 @@
+% =============================================================================
+% Title: The coherence circle-packing lemma: an elementary uniform bound
+%        T' <= floor(2 pi / theta_min) that removes the thin off-diagonal margin
+%        and makes the C_full Reading-H closure COMFORTABLE
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (off-diagonal C_full, comfortable; spans B5)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: PROVED (elementary) + EXECUTED. Establishes the coherence-separation circle-packing
+%   lemma: for any coherence-resolved admissible competitor, every sum-circle occupancy is
+%   bounded by T' <= floor(2 pi / theta_min) = 10 uniformly across the certified window. With
+%   R-025 (K_floor <= T') this gives R_lead <= 0.510 < 1 (margin x1.96) at the operating point
+%   and R_lead <= 0.615 < 1 at the selection cap -- a COMFORTABLE off-diagonal margin for the
+%   FULL admissible class (lattice and non-lattice). The off-diagonal cap I_off^coh = 3.92e-3
+%   EXCEEDS the selection cap I_c^sel = 2.41e-3, so the selection boundary binds and the C_full
+%   operating region is the FULL Step-1 region (20% headroom). This SUPERSEDES the thin x1.026
+%   margin of res5_033/035 (an artefact of the loose antipodal bound T' <= N/2 <= 20). The
+%   additive-energy extremal conjecture EXT is now UNNECESSARY for comfort (it stays T2, an
+%   optional further tightening). Grounded by res5_036_coherence_offdiag_bound.py (5/5).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Coherence circle-packing lemma (proved); T'<=10 uniform;
+%        comfortable C_full off-diagonal; selection binds. Grounded by res5_036 (5/5).
+% =============================================================================
+
+\sloppy
+\section*{1. The gap this closes}
+
+The C_full off-diagonal closure (res5\_033/035) rested on the antipodal lemma $T'\le N/2$ with
+the packing $N\le n_{\rm pack}\approx41$, giving $K_{\rm floor}\le20$ and a THIN margin
+$\times1.026$. That bound ignores a stronger constraint already in the admissible-class
+definition: \emph{coherence resolution}. This note proves an elementary uniform bound from
+coherence that is tighter by a factor $\sim2$ and makes the closure comfortable.
+
+\section*{2. The coherence circle-packing lemma}
+
+\noindent\textbf{Setup.} The admissible class is coherence-resolved: any two points of $Q$ are
+geodesically separated by $\ge\theta_{\min}$, the cap-packing bound being $n_{\rm pack}=
+16/\theta_{\min}^2$ (caps of radius $\theta_{\min}/2$). A sum-circle $C_t=\{x:x\cdot t=|t|^2/2\}
+\cap S^2$ ($t\ne0$) is a Euclidean circle of radius $\rho=\sqrt{Q_0^2-|t|^2/4}\le Q_0$.
+
+\noindent\textbf{Lemma.} For every admissible $Q$ and every $t\ne0$,
+\[
+\boxed{\ \#(Q\cap C_t)\ \le\ \Bigl\lfloor\frac{2\pi}{\theta_{\min}}\Bigr\rfloor\ }\qquad\Rightarrow\qquad
+T'(Q)=\max_{t\ne0}\#(Q\cap C_t)\le\Bigl\lfloor\frac{2\pi}{\theta_{\min}}\Bigr\rfloor .
+\]
+
+\noindent\textbf{Proof.} Points of $Q$ on $C_t$ are pairwise geodesically $\ge\theta_{\min}$,
+hence pairwise Euclidean $\ge d:=2Q_0\sin(\theta_{\min}/2)$. If $k$ points lie on a circle of
+radius $\rho$ with pairwise Euclidean distance $\ge d$, then the smallest adjacent gap satisfies
+$2\rho\sin(\pi/k)\ge d$, i.e.\ $k\le\pi/\arcsin\!\bigl(d/(2\rho)\bigr)$. Since $\rho\le Q_0$,
+\[
+\frac{d}{2\rho}\ \ge\ \frac{d}{2Q_0}=\sin\frac{\theta_{\min}}{2}
+\quad\Longrightarrow\quad
+\arcsin\frac{d}{2\rho}\ \ge\ \frac{\theta_{\min}}{2}
+\quad\Longrightarrow\quad
+k\ \le\ \frac{2\pi}{\theta_{\min}} . \qquad\blacksquare
+\]
+
+\noindent The bound is geometric and uniform: it uses only the separation $\theta_{\min}$ and
+$\rho\le Q_0$, with NO lattice / additive / number-theoretic input. It applies identically to
+lattice and non-lattice competitors.
+
+\section*{3. The uniform numerical bound and adversarial check}
+
+Across the certified window $\theta_{\min}\in[0.596,0.637]$, so $2\pi/\theta_{\min}\le10.54$ and
+\[
+T'(Q)\le 10\qquad\text{for every admissible competitor, uniformly on }\mathcal R .
+\]
+Adversarial search (res5\_036): a maximal admissible single-latitude-ring-pair reaches $T'=8<10$
+(near-great rings that would give higher occupancy violate coherence --- the antipodal mirror
+collides near the equator); a random coherence-resolved config has $T'=2$. The bound $10$ is never
+exceeded.
+
+\section*{4. Comfortable off-diagonal; the selection boundary binds}
+
+With R-025 ($K_{\rm floor}\le T'$):
+\[
+K_{\rm floor}\le T'\le10\ \Rightarrow\ R_{\rm lead}=23.2\,(1+K_{\rm floor})\,I\le23.2\cdot11\cdot I .
+\]
+At the operating intensity $I=2\times10^{-3}$, $R_{\rm lead}\le0.510$ (margin $\times1.96$); at the
+selection cap $I_c^{\rm sel}=2.41\times10^{-3}$, $R_{\rm lead}\le0.615<1$. The off-diagonal cap is
+\[
+I_{\rm off}^{\rm coh}=\frac{1}{23.2\cdot11}=3.92\times10^{-3}\ >\ I_c^{\rm sel}=2.41\times10^{-3},
+\]
+so the SELECTION boundary binds (exactly as for the lattice class), and the C_full operating
+region is the FULL Step-1 selection region $\mathcal R$ ($20\%$ headroom at the operating point),
+NOT the thin off-diagonal-bound region ($2.6\%$).
+
+\noindent\textbf{Consequence.} The C_full off-diagonal margin is COMFORTABLE ($\times1.96$), and
+the thin $\times1.026$ of res5\_033/035 is superseded as an artefact of the loose $T'\le N/2$. The
+additive-energy extremal conjecture EXT (target $K_{\rm floor}\sim3$, margin $\times5.4$) is now
+UNNECESSARY for comfort; it remains T2, an optional further tightening.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is $\theta_{\min}$ really the pairwise separation for all of $Q$?''}
+Yes --- the admissible class is coherence-resolved with caps of radius $\theta_{\min}/2$ (centres
+$\ge\theta_{\min}$ apart); $n_{\rm pack}=16/\theta_{\min}^2$ is the matching cap count.
+\item[($\beta$)] \emph{``Could a sum-circle have $\rho>Q_0$ and hold more points?''} No ---
+$\rho=\sqrt{Q_0^2-|t|^2/4}\le Q_0$ always; the great-circle limit ($\rho=Q_0$, $t\to0$) is the
+worst case and gives the bound $2\pi/\theta_{\min}$.
+\item[($\gamma$)] \emph{``Does the bound hold across the whole window?''} Yes --- $2\pi/
+\theta_{\min}\le10.54$ over the certified $(I,\mu^2)$ range (res5\_036 scan), so $T'\le10$
+uniformly; $\theta_{\min}$ grows with $\mu^2,I$, tightening the bound.
+\end{itemize}
+
+Quantitative sanity check (mandatory): $\theta_{\min}=0.627$, $2\pi/\theta_{\min}=10.02$,
+$\lfloor\cdot\rfloor=10$; window sup $10.54\Rightarrow T'\le10$; adversarial max $8$; random $2$;
+$R_{\rm lead}\le0.510$ ($\times1.96$); $I_{\rm off}^{\rm coh}=3.92\times10^{-3}>I_c^{\rm sel}$. All
+from res5\_036 (5/5).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 coherence circle-packing lemma -- comfortable C_full off-diagonal
+Precise statement:       Coherence resolution (pairwise geodesic >= theta_min) bounds every
+                         sum-circle occupancy: T'(Q) <= floor(2pi/theta_min) = 10 uniformly across
+                         the certified window (elementary circle-packing proof; rho<=Q0). With
+                         R-025 (K_floor<=T'): R_lead <= 23.2*11*I = 0.510 at I_op (x1.96), 0.615 at
+                         the selection cap -- COMFORTABLE, for lattice AND non-lattice. I_off^coh=
+                         1/(23.2*11)=3.92e-3 > I_c^sel=2.41e-3 => selection binds => C_full region
+                         = full Step-1 region (20% headroom). Adversarial max admissible T'=8;
+                         random T'=2. Supersedes the thin x1.026 (loose T'<=N/2 artefact).
+Scope:                   Off-diagonal sector for C_full, comfortable. EXT now optional (T2).
+                         Uniform across the certified window R. Elementary (no decoupling / NT).
+Dependencies:            R-025 (K_floor<=T', T7); coherence-resolution admissibility (n_pack=
+                         16/theta_min^2); Step 1 window (I_c^sel); T-018 (R_lead/K* identity).
+Evidence grade:          PROVED (elementary lemma) + EXECUTED (res5_036 5/5).
+Reproduction command:    python codes/vacuum/res5_036_coherence_offdiag_bound.py
+Expected output:         T'<=floor(2pi/theta_min)=10; adversarial max 8; random 2; R_lead<=0.510
+                         (x1.96); selection binds (I_off^coh>I_c^sel); 5/5 PASS.
+Falsifier:               An admissible (coherence-resolved) competitor with a sum-circle of >10
+                         points; or theta_min < 2pi/11 = 0.571 somewhere in the window (would
+                         loosen the bound past 11).
+Tier before / after:     Off-diagonal C_full: thin x1.026 (loose T'<=N/2) -> COMFORTABLE x1.96
+                         (coherence T'<=10), selection-binding. EXT T2 (now optional, not needed).
+No-overclaim statement:  Bounds T' (hence K_floor via R-025) by coherence; comfortable but still
+                         scope-qualified (within R, given A1, C_full competitor class). Not a
+                         global/all-intensity claim. EXT (tight K_floor~3) remains a separate T2.
+Next required action:    Re-enact C_full as COMFORTABLE (supersede the thin-O scope); G2 external
+                         referee (validation). EXT optional.
+\end{verbatim}
+}
