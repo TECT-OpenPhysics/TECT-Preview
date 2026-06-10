@@ -5,6 +5,21 @@ not pillar counts.
 
 ---
 
+## [cfull-internal-scope-closure v1.1 ACCEPTED AS CANONICAL (operator 2026-06-10): the B1/B2 Reading-H C_full extension enacted as T7-SCOPE_{C_full, thin O} is the canonical closure note. RESULTS-LEDGER R-031 (standalone-publishable C_full milestone). G1+G3 CLOSED, G2 (referee) validation gate, EXT T2 optional. Scope-qualified (thin x1.026, cap 2.053e-3, given A1); NOT unrestricted T7.] - 2026-06-10
+
+Operator decision 2026-06-10: ACCEPT cfull-internal-scope-closure-260610 v1.1 AS CANONICAL closure
+note. v1.1 correctly reflects the operator decision (ACCEPT THE THIN OFF-DIAGONAL MARGIN): G1 + G3
+CLOSED, G2 (external referee) a validation/publication gate only, EXT T2 optional. Canonical status:
+the B1/B2 Reading-H C_full extension is enacted as T7-SCOPE_{C_full, thin O} within R_{C_full},
+given A1-KERNEL-CONV. Permitted claim: "within R_{C_full}, Reading-H selection holds against all
+admissible C_full competitors, given A1". Forbidden: "globally/unconditionally proven over all
+intensities and all competitors". Supporting notes (DS-nonlattice-extension v1.0,
+ext-additive-energy-extremal-status v1.0) retained with correction banners pointing to v1.1;
+cfull-route-consolidation v1.0 superseded. RESULTS-LEDGER R-031 records the standalone-publishable
+C_full milestone (extends R-030 lattice -> C_full). EXT stays T2 (do not promote). The roadmap
+(Steps 1-3 + enactment) is internally closed; the only remaining item is G2 external referee
+(validation, not an internal proof blocker).
+
 ## [C_full SCOPE ENACTED (operator 2026-06-10: ACCEPT THE THIN OFF-DIAGONAL MARGIN): B1/B2 Reading-H enacted as T7-SCOPE_{C_full, thin O}. G1 (thin margin) + G3 (sign-off) CLOSED; G2 (referee) validation gate. Competitor class widened lattice -> C_full within R_{C_full}={mu^2 in (0,mu^2_max=0.0342), I in (0,min(I_c^sel,I_off^Cfull))}, I_off^Cfull=1/(23.2*21)=2.053e-3 (off-diagonal cap binds; operating 2e-3 interior, thin 2.6% headroom, NOT Step-1 20%). n_pack<=40.88 across band => N/2<=20<20.55=K* throughout. (D)/(S) competitor-agnostic comfortable; (O) proved thin R_lead<=0.974<1. EXT T2 optional (x5.39). NOT unrestricted T7. res5_035 5/5.] - 2026-06-10
 
 Operator decision 2026-06-10: ACCEPT THE THIN OFF-DIAGONAL MARGIN. The B1/B2 Reading-H selection is

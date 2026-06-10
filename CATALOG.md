@@ -711,12 +711,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `7cd09dc3dc18` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `19b705de53e1` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d784d71ffdf4` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `c91f23a74836` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `3c4674eaace7` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `6961c8900c54` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
@@ -730,7 +730,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `847bf203adf7` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `b40f40d88d05` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
