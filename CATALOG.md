@@ -6,7 +6,7 @@
 
 Generated: 2026-06-10
 
-**638 artefacts** · superseded versions kept: 62 · machine-readable twin: `verification/catalog.json`
+**636 artefacts** · superseded versions kept: 62 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -230,10 +230,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-floor-bound-260610-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `57c2dc16d70e` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-floor-bound-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `6afcd8a95d80` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-gershgorin-threshold-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `a9491f9312c5` |
-| `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-gershgorin-threshold-260610-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `f140e8a3ce4a` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-offdiag-gershgorin-threshold-260610-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `d908431582e6` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/isotropy-infimum-core-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `dc4c6b55ed48` |
-| `claims/B2-PROPA-HLAYER/Prop-A/notes/isotropy-infimum-core-260610-v1.1.pdf` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `ab1128b85b4d` |
-| `claims/B2-PROPA-HLAYER/Prop-A/notes/isotropy-infimum-core-260610-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `4a38de170a1a` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/isotropy-infimum-core-260610-v1.1.pdf` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `721af726e248` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/isotropy-infimum-core-260610-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `f1c81075993f` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/offdiag-exchange-scalar-identification-260610-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `777b9ed8f6b6` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/offdiag-exchange-scalar-identification-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `99c9d3418a6a` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/proposition-a-migration-revalidation-260605-260605-v1.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-05 | 2026-06-05 | v1.1 | SUPERSEDED | `318e68be1aef` |
@@ -486,7 +486,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/runs/260609-hdiag-offdiag-constant-certificate/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `3f771ed1b206` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res1-hdiag-offdiag-floor/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9449baa43028` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-016-isotropy-infimum-core/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `0b634ca25d41` |
-| `claims/B2-PROPA-HLAYER/runs/260610-res5-018-offdiag-gershgorin-threshold/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `962681604053` |
+| `claims/B2-PROPA-HLAYER/runs/260610-res5-018-offdiag-gershgorin-threshold/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `1649872ecc04` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-019-exchange-scalar-identification/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `3eec969d7a1b` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | — | ACTIVE | `705268333be1` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-ghat4-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `bc0c5c38b7df` |
@@ -539,8 +539,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/res1_hdiag_offdiag_floor.py` | — | — | — | v1.0.0 | ACTIVE | `ba74217a1b99` |
 | `codes/vacuum/res5_016_isotropy_infimum_core.py` | — | 2026-06-10 | — | v1.1.0 | ACTIVE | `5235bc2efdf6` |
 | `codes/vacuum/res5_017_chi_bypass.py` | — | — | — | v1.0.0 | ACTIVE | `c3f9fe1e7bdb` |
-| `codes/vacuum/res5_018_offdiag_gershgorin_threshold.py` | — | — | — | — | ACTIVE | `1cb239fe391c` |
+| `codes/vacuum/res5_018_offdiag_gershgorin_threshold.py` | — | — | — | — | ACTIVE | `c3efda3e8475` |
 | `codes/vacuum/res5_019_exchange_scalar_identification.py` | — | — | — | — | ACTIVE | `23ccac1a7536` |
+| `codes/vacuum/res5_020_classwide_secondcumulant_stability.py` | — | — | — | — | ACTIVE | `115ea04f7dab` |
 | `codes/vacuum/res5_2pi_commonmode_monotonicity.py` | — | — | — | v1.0.0 | ACTIVE | `99ad3901b944` |
 | `codes/vacuum/res5_a0_skeleton_sensitivity.py` | — | — | — | v1.0.0 | ACTIVE | `b3679d7ff3b9` |
 | `codes/vacuum/res5_allorder_commonmode.py` | — | — | — | v1.0.0 | ACTIVE | `74268743ba20` |
@@ -656,7 +657,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `3450b14a6be7` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `3df9279e6880` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d34da363e351` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -667,7 +668,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
 | `TODO.md` | — | — | — | — | ACTIVE | `7a1e4962e435` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
-| `tmpq0g3sz4d` | — | — | — | — | ACTIVE | `e3b0c44298fc` |
 
 ## Other tracked files
 
@@ -676,9 +676,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `5e346307e0cd` |
-| `pytest-cache-files-xkzddi6n/v/cache/lastfailed` | — | — | — | — | ACTIVE | `44136fa355b3` |
-| `pytest-cache-files-xkzddi6n/v/cache/nodeids` | — | — | — | — | ACTIVE | `5a341b13be0e` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `b6164ed7e43a` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |

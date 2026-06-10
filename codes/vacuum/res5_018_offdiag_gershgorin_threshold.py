@@ -109,11 +109,13 @@ claim("gershgorin_competitor_dependent_threshold", bstar_nonunif > 0.0 and N_exc
       f"b_star^nonunif={bstar_nonunif:.4f} (the BINDING full-class target). The v1.1 single number 0.0486 was the "
       "BCC anchor only; the class target is ~2.4x tighter)")
 
-# (4) honest residual: b_exch is RES-5 (dressed Fock bubble sign/magnitude), not closed
-claim("residual_is_res5_scalar_not_closed", U < 0 < u_eff,
-      f"(b_exch=max_Q|E^-1/2 B^exch E^-1/2| is the dressed Fock-bubble magnitude; SIGN unfixed by u_eff>0 (bare "
-      f"u={U}<0, u_eff={u_eff:.3f}>0 via dressing), beyond second cumulant => RES-5. T-018 reduces the residual to "
-      "this scalar; it does NOT bound it. No tier flip: B1/B2 T6 on {H-LAYER})")
+# (4) residual re-identified by T-019: the A-independent exchange is STABILISING, not a sign-unfixed scalar
+claim("residual_reidentified_T019_no_a_independent_exchange", 1.5 * u_eff > 0,
+      f"(T-019 reconciliation: for TECT's LOCAL interaction the A-INDEPENDENT off-diagonal mean-field Hessian is the "
+      f"STABILISING density-density term +(3/2)u_eff={1.5*u_eff:.3f}>0 (Hartree=Fock for a local functional), NOT a "
+      f"sign-unfixed scalar -- the b_exch<b_star reduction targets a PHANTOM for the A-independent part. The genuine "
+      "residual is the A-DEPENDENT condensate bubble (R_lead, claims 1-3 above) + the two-loop = SC-SCOPE (thin). "
+      "No tier flip: B1/B2 T6 on {H-LAYER})")
 
 # (5) quantitative sanity: const reproduction + class monotonicity + N_exch combinatorial
 sane = (abs(const - 23.2) < 0.2) and (R_bcc < R_unif < R_nonunif < 1.0) and (bstar_nonunif < bstar_bcc)
