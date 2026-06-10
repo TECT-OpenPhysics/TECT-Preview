@@ -1,0 +1,133 @@
+% SUPERSEDED by cfull-internal-scope-closure-260610-v1.1.tex.txt (operator decision 2026-06-10: ACCEPT THE THIN OFF-DIAGONAL MARGIN; G1/G3 CLOSED; T7-SCOPE_{C_full, thin O} ENACTED)
+% =============================================================================
+% Title: Scope-completion consolidation: the C_full route after Steps 1-3, and the
+%        exact residual gates for an A1-relative unconditional Reading-H T7
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (C_full route consolidation; spans B5)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: CONSOLIDATION STATUS (no tier change). Synthesises the operator-accepted roadmap
+%   Steps 1-3 into the full-class (C_full) route picture and states the EXACT residual gates
+%   for an A1-relative unconditional Reading-H T7. This note does NOT enact that T7: the
+%   enacted tier remains the lattice scope-qualified T7 (B1/B2). The C_full extension is
+%   "route complete with a thin off-diagonal margin, awaiting referee + an operator decision".
+%   EXT remains T2 (operator 2026-06-10). Cites res5_032/033/034 (Steps 1/2/3); introduces no
+%   new numerical claim.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Consolidates Steps 1-3; states the residual gates G1-G3.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose}
+
+Steps 1--3 of the accepted roadmap are complete. This note consolidates them into the route
+toward an A1-relative unconditional Reading-H T7 on the full admissible competitor class
+$\mathcal C_{\rm full}$, and states precisely what remains. It changes no tier.
+
+\section*{2. The C_full route after Steps 1-3}
+
+\begin{center}\footnotesize
+\begin{tabular}{llll}
+\hline
+Ingredient & Step & C\_full status & grade / margin\\
+\hline
+Operating window $(I_c,\mu^2_{\max})$ & 1 & certified region $\mathcal R$ & CERTIFIED WINDOW BOUNDARY\\
+(D) diagonal isotropy & 3 & competitor-agnostic & comfortable ($\tfrac12r_R^2,\ \tfrac32u_{\rm eff}>0$)\\
+(O) off-diagonal & 2 & thin closure (antipodal lemma) & PROVED thin ($\times1.026$)\\
+(S) selection floor & 3 & competitor-agnostic & comfortable (joint $1.04$, cap $1.13$)\\
+EXT (off-diagonal margin) & 2 & strong evidence & T2 ($\times1.026\!\to\!\times6$ if promoted)\\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent What is established: the full $(D)(O)(S)$ decomposition of the Reading-H comparison
+extends from the lattice class to $\mathcal C_{\rm full}$. The diagonal (D) and selection (S)
+sectors are competitor-agnostic (layer/packing properties), so their comfortable margins carry
+over unchanged. The off-diagonal (O) is the only competitor-dependent sector; by the elementary
+antipodal lemma $T'\le N/2$ with R-025 and the packing bound $N\le n_{\rm pack}=40.68$,
+\[
+K_{\rm floor}\le T'\le N/2\le20<20.55=K_*\ \Rightarrow\ R_{\rm lead}<1\quad(\text{margin }\times1.026),
+\]
+for EVERY admissible competitor including non-lattice. The window (Step 1) certifies the
+operating region $\mathcal R$.
+
+\section*{3. The target and its exact residual gates}
+
+\noindent\textbf{Target (A1-relative unconditional Reading-H T7).}
+\[
+F[Q]-F[G_*]>0\quad\forall\,Q\in\mathcal C_{\rm full}\setminus\{G_*\},\qquad
+(I,\mu^2)\in\mathcal R,\quad\text{given A1-KERNEL-CONV.}
+\]
+
+\noindent The route above reduces this to three explicit gates, none of which is a hidden
+analytical obstruction:
+\begin{itemize}
+\item[\textbf{G1}] \emph{Off-diagonal margin.} The C\_full off-diagonal closure is PROVED but
+THIN ($\times1.026$, contingent on $n_{\rm pack}\le41$). Either (a) the operator accepts the thin
+margin for a C\_full statement, or (b) EXT is promoted $T2\to T6/T7$ (a tight $L^2$ additive-energy
+bound $K_{\rm floor}\lesssim3$), upgrading the margin to $\times6$ and removing the $n_{\rm pack}$
+sensitivity.
+\item[\textbf{G2}] \emph{External reproduction (roadmap Step 4).} The dual-audit requirement for a
+T7 of the widened class needs a fully external / second-author referee pass (the standing
+publication item).
+\item[\textbf{G3}] \emph{Operator sign-off.} The no-auto-T7 rule: the tier change from the lattice
+scope-qualified T7 to a C\_full statement requires explicit operator enactment, as for the
+2026-06-10 lattice enactment.
+\end{itemize}
+
+\section*{4. Honest status}
+
+The enacted tier is unchanged: B1/B2 remain at the lattice scope-qualified T7 (the comfortable
+margin). The C\_full extension is \emph{route-complete with a thin off-diagonal margin}: every
+analytical ingredient is in place ((D)/(S) agnostic, (O) thin-proved, window certified), and the
+residual gates G1--G3 are a margin/decision/referee triple, not an open analytical problem. This
+is the honest endpoint of the autonomous roadmap: Steps 1--3 done, Step 4 (referee) external,
+Step 5 (enactment) pending G1--G3.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is this a back-door C\_full T7 enactment?''} No. \S4 states the enacted
+tier is unchanged; G1--G3 are explicitly open. EXT stays T2. No status row is edited.
+\item[($\beta$)] \emph{``Is the thin $\times1.026$ margin really proved, or numerical?''} The
+antipodal lemma is elementary (proved); R-025 is T7; $n_{\rm pack}$ is the coherence-bound
+definition. The margin is thin but the chain is analytic. Its sensitivity to $n_{\rm pack}\le41$
+is the reason G1 offers EXT promotion as the robust alternative.
+\item[($\gamma$)] \emph{``Does any gate hide an analytical obstruction?''} G1 is a margin/decision,
+G2 is referee logistics, G3 is operator sign-off. The only analytical upgrade available (EXT) is
+optional (margin comfort), not required for closure. No hidden obstruction remains on the route.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{window} $I_c=2.41\times10^{-3}$, $\mu^2_{\max}=0.0342$
+(Step 1); \emph{(O)} $R_{\rm lead}\le0.974<1$ ($\times1.026$, Step 2); \emph{(D)/(S)} floor
+$4.64\times10^{-2}>0$, joint $1.040>1$ (Step 3). All cited from res5\_032/033/034.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 C_full route consolidation (roadmap Steps 1-3 synthesis)
+Precise statement:       The full (D)(O)(S) Reading-H decomposition extends to C_full: (D)/(S)
+                         competitor-agnostic (comfortable), (O) thin-closed via antipodal lemma
+                         (R_lead<1, x1.026), window certified (region R). The A1-relative
+                         unconditional Reading-H T7 (F[Q]>F[G_*] for all Q in C_full, (I,mu^2) in
+                         R, given A1) reduces to three NON-analytical gates: G1 off-diagonal
+                         margin (accept thin x1.026 OR promote EXT to x6), G2 external referee,
+                         G3 operator sign-off. No hidden analytical obstruction remains.
+Scope:                   Consolidation of Steps 1-3; no tier change; EXT stays T2; T7 NOT enacted.
+Dependencies:            res5_032 (Step 1 window), res5_033 (Step 2 off-diagonal C_full thin),
+                         res5_034 (Step 3 (D)/(S) agnostic); antipodal lemma; R-025; T-016.
+Evidence grade:          CONSOLIDATION STATUS (synthesis; cites executed Steps 1-3). No new claim.
+Reproduction command:    (cites) python codes/vacuum/res5_032|033|034_*.py
+Expected output:         window I_c=2.41e-3/mu^2_max=0.0342; R_lead<=0.974<1; floor>0, joint>1.
+Falsifier:               Any Step 1-3 result failing; or a gate G1-G3 found to hide an analytical
+                         obstruction (would reopen the route).
+Tier before / after:     No change. Enacted lattice scope-qualified T7 preserved. C_full route
+                         complete with thin off-diagonal margin; A1-relative unconditional T7
+                         pending G1-G3.
+No-overclaim statement:  This does NOT enact a C_full T7. The enacted tier is the lattice
+                         scope-qualified T7. EXT is T2. The C_full statement awaits G1 (margin/
+                         EXT), G2 (referee), G3 (operator sign-off).
+Next required action:    Operator decision on G1 (accept thin margin vs commission EXT promotion);
+                         external referee (G2); then operator enactment (G3) for any C_full tier.
+\end{verbatim}
+}

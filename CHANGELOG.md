@@ -5,6 +5,138 @@ not pillar counts.
 
 ---
 
+## [C_full SCOPE ENACTED (operator 2026-06-10: ACCEPT THE THIN OFF-DIAGONAL MARGIN): B1/B2 Reading-H enacted as T7-SCOPE_{C_full, thin O}. G1 (thin margin) + G3 (sign-off) CLOSED; G2 (referee) validation gate. Competitor class widened lattice -> C_full within R_{C_full}={mu^2 in (0,mu^2_max=0.0342), I in (0,min(I_c^sel,I_off^Cfull))}, I_off^Cfull=1/(23.2*21)=2.053e-3 (off-diagonal cap binds; operating 2e-3 interior, thin 2.6% headroom, NOT Step-1 20%). n_pack<=40.88 across band => N/2<=20<20.55=K* throughout. (D)/(S) competitor-agnostic comfortable; (O) proved thin R_lead<=0.974<1. EXT T2 optional (x5.39). NOT unrestricted T7. res5_035 5/5.] - 2026-06-10
+
+Operator decision 2026-06-10: ACCEPT THE THIN OFF-DIAGONAL MARGIN. The B1/B2 Reading-H selection is
+ENACTED at tier T7 with the competitor class widened from the lattice class to the full admissible
+class C_full, scope-qualified T7-SCOPE_{C_full, thin O}. G1 (off-diagonal margin) CLOSED -- operator
+accepts the thin R_lead<=0.974<1 (x1.026); G3 (operator sign-off) CLOSED -- operator-enacted; G2
+(external referee) remains a validation/publication gate, NOT an internal proof blocker. EXT stays
+T2 (optional margin upgrade x5.39; do NOT promote).
+EXACT SCOPE (operator-required precision): R_{C_full} = {(I,mu^2): 0<mu^2<mu^2_max=3U^2/(20V)=0.0342,
+0<I<min(I_c^sel(mu^2), I_off^Cfull)}. The C_full intensity cap is the UNIVERSAL off-diagonal cap
+I_off^Cfull=1/(23.2*(1+20))=2.053e-3 (antipodal lemma T'<=N/2 + R-025 + packing), which BINDS for
+C_full (< I_c^sel=2.50e-3 at the anchor) -- NOT the Step-1 selection cap 2.41e-3. Operating point
+(2e-3,0.005) interior with THIN 2.6% off-diagonal headroom (explicitly distinct from the Step-1
+selection-window 20%). Verified res5_035_cfull_scope_enactment.py (5/5): n_pack<=40.88 across the
+band so N=floor(n_pack)<=40, N/2<=20<20.55=K* throughout => closure holds over the whole widened mu^2
+band (I_off^Cfull 2.053-2.103e-3). EXT margin corrected x6 -> x5.39 (K_floor~3 => R_lead=0.186).
+SECTOR STATUS at enactment: (D) diagonal isotropy competitor-agnostic comfortable (conditional on
+T-016 global/convex); (O) off-diagonal proved thin (antipodal lemma); (S) selection competitor-
+agnostic comfortable (conditional on Jeff/n_pack worst-case over the full class). PERMITTED claim:
+"within R_{C_full}, Reading-H selection holds against C_full competitors (given A1)". FORBIDDEN:
+"globally/unconditionally proven over all intensities and all competitors".
+LEDGER: B1/B2 status.json scope widened to C_full T7-SCOPE_thin-O (tier stays T7, lint PASS);
+GATES.md G1/G3 CLOSED + G2 + EXT-T2 rows. NEW cfull-internal-scope-closure v1.1 (supersedes
+cfull-route-consolidation v1.0; 7 sections, FORM-CHECK PASS) + res5_035 (5/5) + correction banners on
+ext-status / DS-extension notes (headroom limitation, x5.39, (D)/(S) caveats, EXT-optional). EXT stays
+T2. Roadmap Steps 1-3 + enactment DONE; G2 external referee pending (validation, not blocker).
+
+## [C_full route consolidation (roadmap Steps 1-3 synthesis): the full (D)(O)(S) Reading-H decomposition extends to C_full -- (D)/(S) competitor-agnostic (comfortable), (O) thin-closed via antipodal lemma (R_lead<1, x1.026), window certified. The A1-relative unconditional Reading-H T7 reduces to three NON-analytical gates: G1 off-diagonal margin (accept thin x1.026 OR promote EXT to x6), G2 external referee, G3 operator sign-off. No hidden analytical obstruction. CONSOLIDATION STATUS, no tier change, T7 NOT enacted, EXT stays T2.] - 2026-06-10
+
+Consolidates the operator-accepted roadmap Steps 1-3 into the full-class (C_full) route picture.
+Established: the full (D)(O)(S) decomposition of the Reading-H comparison extends from the lattice
+class to C_full. (D) diagonal isotropy and (S) selection floor are competitor-agnostic (Step 3,
+res5_034) -- layer/packing properties, comfortable margins carry over. (O) off-diagonal is the only
+competitor-dependent sector; the elementary antipodal lemma T'<=N/2 + R-025 (K_floor<=T') + packing
+(N<=n_pack=40.68) give K_floor<=20<20.55=K* => R_lead<1 for every admissible competitor incl
+non-lattice (Step 2, res5_033), THIN margin x1.026. Window certified (Step 1, res5_032): region
+R={mu^2 in (0,mu^2_max=0.0342), I in (0,I_c^sel(mu^2))}, I_c=2.41e-3.
+The A1-relative unconditional Reading-H T7 (F[Q]>F[G_*] for all Q in C_full, (I,mu^2) in R, given
+A1-KERNEL-CONV) reduces to three NON-analytical gates: G1 off-diagonal margin -- accept the thin
+x1.026 OR promote EXT T2->T6/T7 (tight L2 bound K_floor<~3 => x6, removes n_pack sensitivity); G2
+external referee (Step 4, standing publication item); G3 operator sign-off (no-auto-T7). No hidden
+analytical obstruction remains on the route. HONEST STATUS: the enacted tier is UNCHANGED (B1/B2
+remain lattice scope-qualified T7); the C_full extension is route-complete with a thin off-diagonal
+margin, awaiting G1-G3. This note does NOT enact a C_full T7. NEW cfull-route-consolidation v1.0
+(6 sections, FORM-CHECK PASS), synthesis only (cites res5_032/033/034, no new numerical claim). EXT
+stays T2. Roadmap Steps 1-3 DONE; Step 4 external; Step 5 (enactment) pending G1-G3.
+
+## [Step 3 ((D)/(S) non-lattice extension, res5_034 6/6): the diagonal-isotropy (D, T-016) and selection-floor (S, SC-SCOPE joint) sectors are COMPETITOR-AGNOSTIC -- (D) block-diagonal Hessian over spherical harmonics with entropy floor (1/2)r_R^2=4.64e-2>0 + breathing (3/2)u_eff=4.03>0, no lattice input; (S) joint=1.040>1 built from layer+packing (MARGIN/Jeff/n_pack/SUNSET), no competitor structure. Both extend to non-lattice unchanged. With Step 2 (O thin), the full (D)(O)(S) decomposition holds for C_full: (D)/(S) comfortable, (O) thin x1.026. No B1/B2 tier change.] - 2026-06-10
+
+Roadmap Step 3 (res5_034_DS_nonlattice_extension.py 6/6). The (D) diagonal-isotropy and (S)
+selection-floor sectors of the Reading-H comparison are shown COMPETITOR-AGNOSTIC, so they extend
+to the non-lattice class with no modification.
+(D) T-016: the second variation at G_* is d^2F_0 = (1/2) int G_*^-2 (dG)^2 + Phi''_diag (dM_tot)^2,
+block-diagonal in angular momentum since the rotation-invariant interaction Phi_diag(M_tot) curves
+only l=0 (int Y_lm dOmega=0, l>=1). l=0 curvature (1/2)G_*^-2+(3/2)u_eff>0; l>=1 curvature
+(1/2)G_*^-2 >= (1/2)r_R^2 = 4.64e-2 > 0 (analytic infimum at |q|=q0). The spherical-harmonic
+decomposition uses NO lattice input -- a non-lattice competitor is another anisotropic direction dG
+seen by the same positive Hessian; the entropy floor is rotation-invariant. So the strict diagonal
+minimum holds for ANY competitor.
+(S) The SC-SCOPE joint = MARGIN/(C2+composed/SUNSET+RMAX*C2) is built from layer quantities
+(MARGIN, Jeff, SUNSET, RMAX) + coherence packing n_pack (same for all admissible competitors); no
+explicit competitor lattice-structure dependence. joint=1.040>1, structural sunset cap 1.13. Holds
+identically for non-lattice.
+COMBINED with Step 2 (off-diagonal (O) thin closure R_lead<1 x1.026): the full (D)(O)(S)
+decomposition of the Reading-H comparison extends to C_full -- (D)/(S) comfortable
+(competitor-agnostic), (O) thin (x1.026, EXT-upgradable to x6). NEW DS-nonlattice-extension v1.0
+(6 sections, FORM-CHECK PASS) + res5_034 (6/6). No B1/B2 tier change. Residual C_full items: EXT
+margin upgrade (T2), operator decision on the thin off-diagonal margin, external referee (Step 4).
+
+## [Step 2 (EXT status): off-diagonal C_full closure PROVED THIN via elementary antipodal lemma T'<=N/2 + R-025 (K_floor<=T') + packing (N<=n_pack=40.68): K_floor<=20<20.55=K* => R_lead<1 for ALL admissible incl non-lattice (margin x1.026, A_ext fallback). Actual K_floor~1-2.5 (T' up to N/2 a loose proxy) => EXT (K_floor~3) is a MARGIN UPGRADE x1.026->x6, NOT a closure blocker; stays T2 (operator: do not promote). Self-audit correction to res5_031 'lattice strictly worst'. No B1/B2 tier change.] - 2026-06-10
+
+Roadmap Step 2 (res5_033_ext_adversarial_map.py 5/5). The competitor-class widening (lattice ->
+C_full) for the OFF-DIAGONAL sector is resolved more favourably than the strategy note framed it.
+Distinction: T'(Q)=max sum-circle occupancy (L-infinity) vs K_floor=additive-energy floor (L-2),
+K_floor<=T' (R-025).
+ELEMENTARY ANTIPODAL LEMMA (proved): for antipodal Q and t!=0, x in C_t => -x not in C_t, so each
+antipodal pair gives <=1 point to C_t => T'<=N/2. With R-025 and coherence packing N<=n_pack=40.68:
+K_floor<=T'<=N/2<=20 < 20.55=K* => R_lead<=0.974<1 for EVERY admissible competitor incl non-lattice
+(THIN margin x1.026 = the A_ext universal fallback of T-022/T-023). So the off-diagonal C_full
+closure is PROVED, not a conjecture; the lattice restriction (T'<=13 => x1.5) bought only the
+comfortable margin.
+ACTUAL FLOOR: res5_033 maps K_floor across random antipodal (~0.9), latitude-ring antipodal pairs
+(T'=N/2 maximal, K_floor~2.3), rich Z^3 shells (T'~8, K_floor~2.5). T' (up to N/2=20) is a LOOSE
+proxy: the L-2 floor stays ~2.5 even at maximal L-infinity occupancy. EXT ("max K_floor ~3 attained
+in arithmetic subclass") would upgrade the thin x1.026 to comfortable R_lead=0.16 (x6). EXT is a
+MARGIN UPGRADE, NOT a closure blocker; stays T2 (operator 2026-06-10: register, do not promote);
+promotion path = tight L-2 additive-energy bound (Freiman-type). Falsifier: admissible Q with
+K_floor>13.
+SELF-AUDIT (CLAUDE.md 6.3): res5_031's "lattice is THE worst case" headline used the small BCC
+12-shell (K_floor 1.75 excl); rich shells (~2.5) and latitude rings (~2.3) exceed it. Corrected to
+"K_floor ~1-3 across all admissible classes, T' loose proxy". res5_031 per-family asserts stand.
+NEW ext-additive-energy-extremal-status v1.0 (7 sections, FORM-CHECK PASS) + res5_033 (5/5). No
+B1/B2 tier change. Next: Step 3 ((D)/(S) non-lattice).
+
+## [Step 1 v1.1 (operator review 2026-06-10, ACCEPTED AS STEP 1 CLOSURE): window-certification re-issued. (a) unit fix 2.41e-3<3.08e-3; (b) monotonicity upgraded grid->ANALYTIC+INTERVAL: MARGIN inc (DIP_BAND analytic dec + PB 400-pt interval, slope>=0.095), joint dec in I (analytic, denom coeff 1+RMAX-1/SUNSET=0.500>0, C2~I^2), I_c^sel inc in mu^2 (IFT) -> grade CERTIFIED WINDOW BOUNDARY. res5_032 v1.1 6/6. No tier change.] - 2026-06-10
+
+Operator review 2026-06-10 of Step 1 (window-certification v1.0): ACCEPTED AS STEP 1 CLOSURE,
+with two required corrections, both applied in v1.1.
+(1) Unit fix: the sanity comparison read "2.41 < 3.08e-3" (unit mismatch); corrected to
+2.41e-3 < 3.08e-3 (both intensities x1e-3). Mathematical conclusion unchanged (selection binds).
+(2) Monotonicity rigor: v1.0 used a 3-point grid (-> EXECUTED grade). v1.1 upgrades to ANALYTIC
++ 400-point INTERVAL certificate (-> CERTIFIED WINDOW BOUNDARY grade): (M1) MARGIN(mu^2) strictly
+increasing -- DIP_BAND = |rhat0|^1.5/(3 sqrt V) with rhat0=mu^2-3U^2/20V<0 so |rhat0| strictly
+DECREASING (analytic), PB(M_+) interval-certified increasing (400-pt grid, min slope dMARGIN/dmu^2
+>= 0.095 > 0); (M2) joint strictly DECREASING in I -- analytic: with composed=MARGIN-C2 the joint
+denominator D=C2*(1+RMAX-1/SUNSET)+MARGIN/SUNSET has coefficient 1+RMAX-1/SUNSET=0.500>0, so D
+increasing in C2, and C2~I^2 increasing in I (interval-certified); (M3) I_c^sel(mu^2) strictly
+increasing -- implicit function theorem dI_c/dmu^2 = -(d joint/d mu^2)/(d joint/d I)>0 from (M1)/(M2),
+dense-grid verified. Certified object: operating-window boundaries (I_c=2.41e-3, mu^2_max=0.0342);
+certified region R={mu^2 in (0,mu^2_max), I in (0,I_c^sel(mu^2))}, operating point interior.
+RE-ISSUED window-certification-Ic-mu2 v1.1 (7 sections, FORM-CHECK PASS, v1.0 forward-pointer) +
+res5_032 v1.1 (6/6). No tier change; enacted scope-qualified T7 preserved with certified region.
+Remaining blocker: Step 2 EXT (competitor-class widening to C_full).
+
+## [Roadmap ACCEPTED AS CANONICAL (operator 2026-06-10: strategy, no tier widening, EXT stays T2) + Step 1 DONE: window certification. Binding critical intensity I_c=2.41e-3 (SC-SCOPE selection joint=1 at low-mu^2 edge; off-diagonal R_lead=1 at 3.08e-3 looser, so SELECTION binds); operating endpoint I=2e-3 interior at 20% headroom. mu^2 window widened from [x0.5,x2] to physical branch boundary (0, mu^2_max=3U^2/(20V)=0.0342), margin & joint monotone increasing. Both boundaries physical, not proof gaps. No tier change.] - 2026-06-10
+
+Operator decision 2026-06-10: ACCEPT nonlattice-window-scope-completion v1.0 AS CANONICAL
+ROADMAP (no tier widening; EXT register T2, do NOT promote). Proceed Steps 1-3,5 in order.
+
+Roadmap Step 1 DONE (res5_032_window_certification.py 5/5): the enacted Reading-H operating
+window has two physical boundaries. (i) Intensity: the off-diagonal R_lead=1 boundary is
+I_c^off=1/(23.2*14)=3.08e-3 (lattice worst K_floor=13); the SC-SCOPE selection joint=1 boundary
+is I_c^sel=2.41e-3 (low-mu^2 edge) < 3.08e-3, so SELECTION binds. Binding I_c=2.41e-3, monotone
+increasing in mu^2; operating endpoint I=2e-3 interior at 20% headroom. I_c is a physical selection
+phase boundary, not a proof gap. (ii) Mass: the upper PD branch M_+ requires disc=9U^2-60V*mu^2>0,
+i.e. mu^2 < mu^2_max=3U^2/(20V)=0.0342; across (0,mu^2_max) margin>0, joint>1, branch_ok, with
+margin (0.00399->0.00766) and joint (1.032->1.084) monotone INCREASING in mu^2. The mu^2 window
+widens from [x0.5,x2] to (0,mu^2_max)=(x0,x6.85), ceiling = physical branch boundary. Certified
+region R = {mu^2 in (0,mu^2_max), I in (0,I_c^sel(mu^2))}, operating point interior. NEW
+window-certification-Ic-mu2 v1.0 (6 sections, FORM-CHECK PASS) + res5_032 (5/5, result.json). No
+tier change. Next: Step 2 (EXT additive-energy extremal theorem).
+
 ## [Scope-completion strategy toward A1-relative unconditional Reading-H T7: probe res5_031 (5/5) shows the LATTICE is the off-diagonal adversarial WORST case (every non-lattice K_floor~1 << 13 lattice << 20.5 threshold; off-lattice perturbation reduces K_floor), so the enacted lattice T7 dominates non-lattice competitors. Residual to C_full = additive-energy EXTREMAL conjecture (EXT, T2 strong evidence; falsifier K_floor>13), NOT arbitrary-Q DR-2. (I,mu^2) window bounded by PHYSICAL critical I_c~2.5e-3 (R-029), not a proof gap. A1 = definitional floor (standing derive-the-kernel obligation). No tier change to B1/B2.] - 2026-06-10
 
 Operator question 2026-06-10: can the enacted scope-qualified T7 be widened to an A1-relative

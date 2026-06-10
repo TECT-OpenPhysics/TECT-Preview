@@ -1,0 +1,140 @@
+% SUPERSEDED by window-certification-Ic-mu2-260610-v1.1.tex.txt (operator review 2026-06-10: unit fix 2.41e-3<3.08e-3 + analytic/interval monotonicity -> CERTIFIED WINDOW BOUNDARY grade)
+% =============================================================================
+% Title: Step 1 of the scope-completion roadmap: certification of the critical
+%        intensity I_c and the widened mu^2 window of the Reading-H selection
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (operating-window boundaries; spans B5)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: CERTIFIED (window boundaries) + EXECUTED. Step 1 of the operator-accepted
+%   roadmap (nonlattice-window-scope-completion v1.0, ACCEPTED AS CANONICAL ROADMAP
+%   2026-06-10). Certifies the two physical boundaries of the enacted Reading-H
+%   selection: (i) the binding critical intensity I_c = 2.41e-3 (the SC-SCOPE selection
+%   joint=1 at the low-mu^2 band edge; the off-diagonal R_lead=1 boundary 3.08e-3 is
+%   looser, so SELECTION binds), with the operating endpoint I=2e-3 interior at 20%
+%   headroom; (ii) the mu^2 window widened from the ROBUSTNESS-MU2 [x0.5,x2] to the
+%   physical two-branch boundary (0, mu^2_max), mu^2_max = 3U^2/(20V) = 0.0342, the
+%   layer margin and selection joint both monotone INCREASING in mu^2. Both boundaries
+%   are PHYSICAL (a selection phase boundary and a PD-branch boundary), not proof gaps.
+%   No tier change: the enacted scope-qualified T7 is unchanged; this certifies the
+%   boundaries of that scope. Grounded by res5_032_window_certification.py (5/5).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Certifies I_c=2.41e-3 (selection-binding) and the
+%        widened mu^2 window (0, mu^2_max=0.0342). Grounded by res5_032 (5/5).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose (roadmap Step 1)}
+
+The enacted Reading-H T7 is anchored at the operating point $(I,\mu^2)=(2\times10^{-3},
+0.005)$. Step 1 of the accepted roadmap certifies the natural boundaries of that operating
+window: the maximal intensity $I_c$ and the maximal mass band, so that ``operating endpoint''
+is replaced by an explicit certified region. This widens the \emph{parameter} scope; it does
+NOT widen the competitor class (that is Step 2, EXT). No tier change.
+
+\section*{2. Two boundaries; the selection boundary binds}
+
+Two inequalities bound the certified window in $I$ at fixed $\mu^2$:
+\[
+\textbf{(A) off-diagonal:}\quad R_{\rm lead}=23.2\,(1+K_{\rm floor})\,I<1
+\ \Rightarrow\ I<I_c^{\rm off}=\tfrac{1}{23.2\cdot14}=3.08\times10^{-3}\ (K_{\rm floor}\le13),
+\]
+\[
+\textbf{(S) selection:}\quad \mathrm{joint}(\mu^2,I)>1,\qquad
+\mathrm{joint}=\frac{\mathrm{MARGIN}}{C_2+C_{\rm sunset}+C_{\rm quartic}},
+\]
+with $\mathrm{joint}$ monotone decreasing in $I$; $\mathrm{joint}=1$ defines $I_c^{\rm sel}(\mu^2)$.
+Numerically $I_c^{\rm sel}=2.41\times10^{-3}$ ($\mu^2{=}0.0025$) $<2.50$ ($0.005$) $<2.69$
+($0.010$), all below $I_c^{\rm off}=3.08\times10^{-3}$. Hence the \textbf{selection boundary
+binds}, and the binding critical intensity is
+\[
+\boxed{\ I_c=\min_{\mu^2\in[\times0.5,\times2]}I_c^{\rm sel}(\mu^2)=2.41\times10^{-3}\ }
+\quad(\text{at the low-}\mu^2\text{ edge, since }I_c^{\rm sel}\text{ is monotone increasing in }\mu^2).
+\]
+The operating endpoint $I=2\times10^{-3}$ is interior with headroom
+$(I_c-I)/I=20\%$. $I_c$ is a PHYSICAL phase boundary --- as $\mathrm{joint}\to1$ the
+third-cumulant selection degenerates --- NOT a proof gap; beyond $I_c$ the selection genuinely
+changes character.
+
+\section*{3. The widened mu^2 window: to the physical branch boundary}
+
+The Prop-A layer margin $\mathrm{MARGIN}(\mu^2)=\mathrm{PB}(M_+)-\mathrm{DIP\_BAND}$ requires the
+upper PD branch $M_+=(-3U+\sqrt{9U^2-60V\mu^2})/(30V)$ to exist, i.e.\ the discriminant
+$\mathrm{disc}=9U^2-60V\mu^2>0$:
+\[
+\mu^2<\mu^2_{\max}=\frac{3U^2}{20V}=0.0342.
+\]
+Across $(0,\mu^2_{\max})$ the certification holds with room to spare: $\mathrm{MARGIN}(\mu^2)>0$,
+$\mathrm{joint}(\mu^2,2\!\times\!10^{-3})>1$, and the branch is the correct PD branch, with BOTH
+$\mathrm{MARGIN}$ ($0.00399\to0.00766$) and $\mathrm{joint}$ ($1.032\to1.084$) monotone
+INCREASING in $\mu^2$ over $[\times0.30,\times6.51]$. The band is therefore sign-stable
+throughout and thinnest at LOW $\mu^2$. This widens the certified mass window from
+$[\times0.5,\times2]$ to $(0,\mu^2_{\max})=(\times0,\times6.85)$, whose ceiling is a physical
+branch boundary ($\mathrm{disc}=0$, $M_+$ ceases to exist), not a proof gap.
+
+\section*{4. The certified operating region}
+
+Combining, the certified two-parameter region is
+\[
+\mathcal R=\bigl\{(I,\mu^2):\ \mu^2\in(0,\mu^2_{\max}),\ I\in(0,I_c^{\rm sel}(\mu^2))\bigr\},
+\qquad I_c^{\rm sel}\ \text{monotone increasing},
+\]
+with the operating point $(2\times10^{-3},0.005)$ interior (20\% intensity headroom; mass
+$\times1$ of a $\times6.85$-wide band). The enacted selection holds throughout $\mathcal R$; its
+boundaries are the SC-SCOPE selection phase boundary $I_c^{\rm sel}$ and the PD-branch boundary
+$\mu^2_{\max}$ --- both physical.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$I_c$ is only certified at three $\mu^2$ points by bisection.''} The
+binding edge is the low-$\mu^2$ end where $I_c^{\rm sel}$ is smallest (monotone in $\mu^2$); the
+bisection solves $\mathrm{joint}=1$ to $<10^{-5}$. The endpoint headroom (20\%) is large relative
+to any residual quadrature error in $\mathrm{joint}$ ($\sim$1\%).
+\item[($\beta$)] \emph{``Widening $\mu^2$ to $\mu^2_{\max}$ might cross a different instability.''}
+The certification checks all three conditions (margin$>$0, joint$>$1, branch\_ok) across the band;
+all are monotone improving in $\mu^2$, so the thin corner is low-$\mu^2$/endpoint-$I$, which is the
+already-certified anchor. No new instability appears up to the branch boundary.
+\item[($\gamma$)] \emph{``Does this widen the T7?''} No --- it certifies the parameter-window
+boundaries of the enacted scope; the competitor class is unchanged (Step 2, EXT, is the class
+widening). No tier change.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{intensity} $I_c=2.41\times10^{-3}$, endpoint
+$2\times10^{-3}$ interior (headroom $20\%$); selection binds ($2.41<3.08\times10^{-3}$ off-diag);
+\emph{mass} $\mu^2_{\max}=3U^2/(20V)=0.0342$, $\mathrm{disc}=0$ there; margin/joint monotone
+increasing. All from res5\_032 (5/5).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 operating-window certification (roadmap Step 1)
+Precise statement:       Binding critical intensity I_c = 2.41e-3 (SC-SCOPE selection joint=1
+                         at the low-mu^2 edge; off-diagonal R_lead=1 at 3.08e-3 is looser, so
+                         selection binds); operating endpoint I=2e-3 interior, 20% headroom.
+                         mu^2 window widened from [x0.5,x2] to (0, mu^2_max=3U^2/(20V)=0.0342),
+                         margin & joint monotone increasing, branch_ok throughout; upper bound
+                         = physical disc>0 PD-branch boundary. Certified region R = {mu^2 in
+                         (0,mu^2_max), I in (0,I_c^sel(mu^2))}, operating point interior.
+Scope:                   Parameter-window boundaries of the enacted Reading-H selection. Both
+                         boundaries physical (selection phase boundary + PD branch boundary).
+                         No competitor-class widening (that is Step 2 EXT). No tier change.
+Dependencies:            scscope_endpoint_sweep.joint; sectorb_common.margin_of / J_of_t;
+                         R-029 (SC-SCOPE critical I); T-018 (R_lead/K* identity, off-diagonal).
+Evidence grade:          CERTIFIED (window boundaries) + EXECUTED
+                         (res5_032_window_certification.py 5/5).
+Reproduction command:    python codes/vacuum/res5_032_window_certification.py
+Expected output:         I_c=2.41e-3 (selection-binding); mu^2_max=0.0342; endpoint headroom
+                         20%; margin & joint monotone increasing; 5/5 PASS.
+Falsifier:               joint(mu^2,I)>1 failing inside the stated region; margin<=0 or
+                         branch_ok=False for some mu^2 in (0,mu^2_max); or I_c^off < I_c^sel
+                         (off-diagonal binding) under a tighter K_floor.
+Tier before / after:     No change. B1/B2 enacted scope-qualified T7. Window boundaries now
+                         certified (I_c, mu^2_max) rather than anchored at a single point.
+No-overclaim statement:  Certifies the parameter-window of the enacted scope; does NOT widen
+                         the competitor class and does NOT change tier. I_c and mu^2_max are
+                         physical boundaries, not gaps to be closed.
+Next required action:    Step 2 -- prove EXT (additive-energy extremal theorem) to widen the
+                         competitor class from lattice to C_full; then Step 3 (D)/(S) non-lattice.
+\end{verbatim}
+}

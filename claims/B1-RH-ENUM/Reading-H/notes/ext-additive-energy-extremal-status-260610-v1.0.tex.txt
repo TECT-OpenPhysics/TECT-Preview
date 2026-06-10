@@ -1,0 +1,153 @@
+% CORRECTION (operator 2026-06-10): the thin off-diagonal closure does NOT inherit the Step-1 20% headroom; the C_full off-diagonal cap is the UNIVERSAL cap I_off^{C_full}=1/(23.2*(1+20))=2.053e-3 (operating headroom 2.6%, NOT 20%). EXT margin is x5.39 (precise; the body's 'x6' was approximate). Canonical C_full scope + enactment: cfull-internal-scope-closure-260610-v1.1.
+% =============================================================================
+% Title: Step 2 of the scope-completion roadmap: the additive-energy extremal (EXT)
+%        status -- the off-diagonal C_full closure is proved (thin) by the antipodal
+%        lemma; EXT is a margin upgrade (T2), not a closure blocker
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (off-diagonal C_full; EXT conjecture; spans B5)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: MIXED -- (i) the OFF-DIAGONAL stability for the full admissible competitor class
+%   C_full (lattice + non-lattice) is PROVED THIN via the elementary antipodal lemma
+%   T'<=N/2 + R-025 (K_floor<=T') + the coherence packing bound (N<=n_pack=40.68):
+%   K_floor<=N/2<=20<20.55=K* => R_lead<1, margin x1.026 (the A_ext universal fallback);
+%   (ii) the EXT conjecture (the ACTUAL floor K_floor~3 is attained in the arithmetic
+%   subclass) remains T2 CONJECTURE with strong evidence -- it UPGRADES the thin x1.026
+%   margin to a comfortable ~x6, but is NOT a closure blocker. Operator 2026-06-10:
+%   register EXT T2, do NOT promote. No B1/B2 tier change. Includes a self-audit
+%   correction to res5_031. Grounded by res5_033_ext_adversarial_map.py (5/5).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Antipodal lemma (proved); off-diagonal C_full thin
+%        closure (proved); EXT graded T2 (margin upgrade); res5_031 correction. Grounded
+%        by res5_033 (5/5).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose (roadmap Step 2) and the resolved distinction}
+
+Step 2 addresses the competitor-class widening from the lattice Reading-H class to the full
+admissible class $\mathcal C_{\rm full}$ (lattice $+$ non-lattice). The off-diagonal stability
+is the ratio
+\[
+R_{\rm lead}(Q)=23.2\,(1+K_{\rm floor}(Q))\,I,\qquad R_{\rm lead}<1\iff K_{\rm floor}<K_*=20.55,
+\]
+and the analysis turns on \emph{not} conflating two quantities:
+\[
+T'(Q)=\max_{t\ne0}\#(Q\cap C_t)\ \ (\text{$L^\infty$ occupancy}),\qquad
+K_{\rm floor}(Q)=\frac{1}{N^2}\sum_{t\ne0}r(t)^2\ \ (\text{$L^2$ additive-energy floor}),
+\]
+with $K_{\rm floor}\le T'$ unconditionally (R-025: $E_+\le(1+T')N^2$).
+
+\section*{2. The elementary antipodal lemma (proved)}
+
+\noindent\textbf{Lemma.} For any finite antipodal set $Q=-Q$ ($N$ points) and any $t\ne0$,
+$\#(Q\cap C_t)\le N/2$, where $C_t=\{x:x\cdot t=|t|^2/2\}$.
+
+\noindent\textbf{Proof.} If $x\in C_t$ then $(-x)\cdot t=-|t|^2/2\ne|t|^2/2$ (as $t\ne0$), so
+$-x\notin C_t$. Each antipodal pair $\{x,-x\}$ therefore contributes at most one point to
+$C_t$; with $N/2$ pairs, $\#(Q\cap C_t)\le N/2$. $\qquad\blacksquare$
+
+Hence $T'(Q)\le N/2$ for every antipodal competitor, and $K_{\rm floor}\le T'\le N/2$.
+
+\section*{3. The off-diagonal C_full closure is PROVED (thin)}
+
+The admissible class is coherence-resolved, so $N\le n_{\rm pack}=16/\theta^2=40.68$ at the
+operating point. Therefore, for EVERY admissible competitor (lattice OR non-lattice),
+\[
+K_{\rm floor}\le T'\le \frac{N}{2}\le \frac{n_{\rm pack}}{2}=20\;<\;20.55=K_*,
+\qquad\Rightarrow\qquad
+R_{\rm lead}\le 23.2\,(1+20)\,(2\times10^{-3})=0.974<1.
+\]
+This is the A\_ext universal fallback of T-022/T-023: \textbf{the off-diagonal sector for
+$\mathcal C_{\rm full}$ is PROVED}, with a THIN margin $\times1.026$. It is NOT a conjecture.
+The lattice restriction of the enacted T7 ($T'\le13\Rightarrow$ margin $\times1.5$) bought the
+COMFORTABLE margin, not the closure.
+
+\section*{4. The EXT conjecture: a margin upgrade, not a blocker}
+
+The probe res5\_033 maps the ACTUAL floor across the admissible families:
+\begin{center}\footnotesize
+\begin{tabular}{lccc}
+\hline
+family (non-lattice unless noted) & $N$ & $T'$ & $K_{\rm floor}$\\
+\hline
+random antipodal & 20--40 & 2 & $0.85$--$0.93$\\
+latitude-ring antipodal pairs ($T'$ maximal) & 20--40 & $N/2$ (10--20) & $2.05$--$2.27$\\
+rich $\mathbb Z^3$ lattice shells & 30--36 & 8 & $2.34$--$2.47$\\
+\hline
+\end{tabular}
+\end{center}
+The $L^\infty$ occupancy $T'$ reaches its maximum $N/2=20$ (latitude rings) while the $L^2$
+floor $K_{\rm floor}$ stays $\le2.5$: \textbf{$T'$ is a loose proxy for $K_{\rm floor}$}. The
+EXT conjecture --- $\max_{\mathcal C_{\rm full}}K_{\rm floor}$ is attained in the arithmetic
+subclass at $\sim3$ --- would replace the loose bound $K_{\rm floor}\le N/2=20$ by the tight
+$K_{\rm floor}\le3$, upgrading the off-diagonal margin from the thin $\times1.026$ to a
+comfortable
+\[
+R_{\rm lead}\le 23.2\,(1+3)\,(2\times10^{-3})=0.19\quad(\text{margin }\times6).
+\]
+So EXT is a \emph{margin-comfort upgrade}, NOT a closure blocker. Per the operator decision
+(2026-06-10) it remains \textbf{T2 CONJECTURE} (strong evidence; falsifier: an admissible $Q$
+with $K_{\rm floor}>13$); promotion to T6/T7 requires a tight $L^2$ additive-energy bound
+(arithmetic-maximises-energy, a Freiman-type extremal statement).
+
+\section*{5. Self-audit correction to res5_031 (CLAUDE.md 6.3)}
+
+res5\_031's headline ``the lattice is the off-diagonal worst case'' used the SMALL BCC
+12-shell ($K_{\rm floor}=1.75$ excl). The broader map here shows rich lattice shells
+($\sim2.5$) AND latitude-ring antipodal pairs ($\sim2.3$) both EXCEED the 12-shell. The
+honest statement is: $K_{\rm floor}\sim1$--$3$ across ALL admissible classes, far below $K_*$,
+with $T'$ a loose proxy --- NOT ``lattice strictly worst''. res5\_031's per-family asserts
+remain valid; only the comparative headline is corrected.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The thin closure rests on $n_{\rm pack}\le41$.''} VALID and stated:
+$n_{\rm pack}=40.68$ at the operating point and DECREASES with $\mu^2$ (larger $\widehat r$),
+so $N/2\le20<20.55$ holds across the certified window; the $\times1.026$ margin is thin but
+rigorous. EXT removes the thinness.
+\item[($\beta$)] \emph{``Does this widen the enacted T7?''} No --- it proves the off-diagonal
+piece for $\mathcal C_{\rm full}$ (thin), but the full $\mathcal C_{\rm full}$ T7 also needs the
+(D) and (S) sectors for non-lattice (Step 3) and an operator decision on accepting the thin
+off-diagonal margin. No B1/B2 tier change.
+\item[($\gamma$)] \emph{``Is the antipodal lemma circular with R-025?''} No --- the lemma bounds
+$T'$ (occupancy) by elementary geometry; R-025 bounds $K_{\rm floor}$ by $T'$ (additive
+combinatorics). Independent inputs composed.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{lemma} $T'\le N/2$ verified for all families;
+\emph{thin closure} $K_{\rm floor}\le20<20.55$, $R_{\rm lead}\le0.974<1$; \emph{actual}
+$K_{\rm floor}\le2.47$, $R_{\rm lead}\le0.16$ (margin $\times6$). All from res5\_033 (5/5).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 EXT status + off-diagonal C_full thin closure (roadmap Step 2)
+Precise statement:       Antipodal lemma T'<=N/2 (proved, elementary). With R-025 (K_floor<=T')
+                         and packing N<=n_pack=40.68: K_floor<=N/2<=20<20.55=K* => R_lead<1 for
+                         ALL admissible competitors incl non-lattice (THIN x1.026, A_ext
+                         fallback) -- the off-diagonal C_full closure is PROVED, not conjecture.
+                         Actual K_floor~1-2.5 across random/latitude-ring/rich-shell (T' up to
+                         N/2=20 a loose proxy). EXT (max K_floor~3 in arithmetic subclass) is a
+                         MARGIN UPGRADE x1.026->~x6, NOT a closure blocker; stays T2.
+Scope:                   Off-diagonal sector for C_full. (D)/(S) non-lattice = Step 3; thin-margin
+                         acceptance = operator decision. No B1/B2 tier change.
+Dependencies:            antipodal lemma (this note, proved); R-025 (K_floor<=T', T7); T-018
+                         (R_lead/K* identity); T-022/T-023 (A_ext fallback); res5_031 (corrected).
+Evidence grade:          off-diagonal C_full thin closure PROVED (T6, on R-025+packing);
+                         EXT T2 CONJECTURE (strong evidence). EXECUTED (res5_033 5/5).
+Reproduction command:    python codes/vacuum/res5_033_ext_adversarial_map.py
+Expected output:         antipodal lemma T'<=N/2 verified; R_lead<=0.974<1 (C_full thin);
+                         actual K_floor<=2.47 (margin x6); 5/5 PASS.
+Falsifier:               EXT: an admissible Q with K_floor>13. Thin closure: an admissible
+                         antipodal Q with T'>N/2 (would refute the lemma) or N>n_pack.
+Tier before / after:     No B1/B2 change. Antipodal lemma proved; off-diagonal C_full thin
+                         closure proved (T6); EXT T2 (margin upgrade, operator: do not promote).
+No-overclaim statement:  The off-diagonal C_full closure is THIN (x1.026) and rests on
+                         n_pack<=41; the full C_full T7 also needs (D)/(S) non-lattice (Step 3).
+                         EXT is a comfort upgrade, not the closure. No tier widening.
+Next required action:    Step 3 -- extend (D) diagonal isotropy + (S) selection floor to
+                         non-lattice competitors; then operator decision on thin-margin C_full.
+\end{verbatim}
+}

@@ -1,0 +1,153 @@
+% =============================================================================
+% Title: C_full internal scope closure: B1/B2 Reading-H enacted as
+%        T7-SCOPE_{C_full, thin O} (operator decision 2026-06-10)
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (C_full internal scope closure; spans B5)
+% Version: v1.1 -- supersedes cfull-route-consolidation v1.0; issued 2026-06-10
+% Status: INTERNAL C_FULL SCOPE CLOSURE -- operator-enacted thin-margin route. Steps 1-3 of
+%   the accepted roadmap are consolidated. Operator decision 2026-06-10: ACCEPT THE THIN
+%   OFF-DIAGONAL MARGIN -- G1 (off-diagonal margin) CLOSED and G3 (operator sign-off) CLOSED;
+%   the B1/B2 Reading-H selection is ENACTED as T7-SCOPE_{C_full, thin O} within the certified
+%   region R_{C_full}. External referee (G2) remains a validation/publication gate, NOT an
+%   internal proof blocker. EXT remains T2 (optional margin upgrade, x5.39; do not promote).
+%   This is NOT an unrestricted T7. Grounded by res5_032/033/034 (Steps 1-3) +
+%   res5_035_cfull_scope_enactment.py (5/5).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) cfull-route-consolidation: route complete "awaiting referee + decision".
+%   v1.1 (2026-06-10) operator decision ACCEPT THE THIN OFF-DIAGONAL MARGIN: G1/G3 CLOSED,
+%        T7-SCOPE_{C_full, thin O} ENACTED; exact region R_{C_full} with the universal
+%        off-diagonal cap I_off^{C_full}=2.053e-3 (binds, NOT the Step-1 selection cap
+%        2.41e-3); EXT margin corrected x6 -> x5.39; (D)/(S) dependency caveats recorded;
+%        title -> "C_full internal scope closure". Grounded by res5_035 (5/5).
+% =============================================================================
+
+\sloppy
+\section*{1. The enacted statement}
+
+Operator decision 2026-06-10: ACCEPT THE THIN OFF-DIAGONAL MARGIN. The B1/B2 Reading-H selection
+is enacted at tier T7 with the competitor class widened from the lattice class to the full
+admissible class $\mathcal C_{\rm full}$, scope-qualified as $\mathrm{T7\text{-}SCOPE}_{\mathcal
+C_{\rm full},\,\mathrm{thin}\,O}$:
+\[
+F[Q]-F[G_*]>0\quad\forall\,Q\in\mathcal C_{\rm full}\setminus\{G_*\},\qquad (I,\mu^2)\in
+\mathcal R_{\mathcal C_{\rm full}},\quad\text{given A1-KERNEL-CONV.}
+\]
+This is NOT an unrestricted T7 (see \S5).
+
+\section*{2. The certified region (exact scope)}
+
+\[
+\boxed{\ \mathcal R_{\mathcal C_{\rm full}}=\Bigl\{(I,\mu^2):\ 0<\mu^2<\mu^2_{\max},\
+0<I<\min\bigl(I_c^{\rm sel}(\mu^2),\,I_{\rm off}^{\mathcal C_{\rm full}}\bigr)\Bigr\}\ }
+\]
+with $\mu^2_{\max}=3U^2/(20V)=0.0342$ (Step 1) and the universal off-diagonal cap
+\[
+I_{\rm off}^{\mathcal C_{\rm full}}=\frac{1}{23.2\,(1+20)}=2.053\times10^{-3}.
+\]
+For $\mathcal C_{\rm full}$ the OFF-DIAGONAL cap binds ($I_{\rm off}^{\mathcal C_{\rm full}}=2.053
+\times10^{-3}<I_c^{\rm sel}=2.50\times10^{-3}$ at the anchor). The operating point $(I,\mu^2)=
+(2\times10^{-3},0.005)$ is interior, with off-diagonal headroom $(I_{\rm off}^{\mathcal C_{\rm
+full}}-I)/I=2.6\%$ --- THIN and strict. Across the band $n_{\rm pack}\le40.88$, so $N=\lfloor
+n_{\rm pack}\rfloor\le40$ and $N/2\le20<20.55=K_*$ throughout: the closure holds over the whole
+widened $\mu^2$ band ($I_{\rm off}^{\mathcal C_{\rm full}}$ ranging $2.053$--$2.103\times10^{-3}$).
+
+\noindent\textbf{Scope-precision note (operator-required).} $I_c=2.41\times10^{-3}$ (Step 1) is the
+\emph{uniform robustness-band} selection critical intensity on $[\times0.5,\times2]$; the full
+widened band uses the variable boundary $I_c^{\rm sel}(\mu^2)$. For $\mathcal C_{\rm full}$ the
+binding cap is the off-diagonal $I_{\rm off}^{\mathcal C_{\rm full}}=2.053\times10^{-3}$, NOT the
+Step-1 selection cap $2.41\times10^{-3}$: the thin closure does not inherit the Step-1 $20\%$
+headroom.
+
+\section*{3. The three sectors at enactment}
+
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\hline
+sector & C\_full status & margin / verdict\\
+\hline
+(D) diagonal isotropy & competitor-agnostic (Step 3) & comfortable; ACCEPT$^\dagger$\\
+(O) off-diagonal & antipodal lemma + R-025 + packing (Step 2) & PROVED, thin $R_{\rm lead}\le0.974$; ACCEPT\\
+(S) selection floor & competitor-agnostic (Step 3) & comfortable (joint $1.04$); ACCEPT$^\ddagger$\\
+EXT (margin upgrade) & strong evidence & T2; optional ($\times1.026\!\to\!\times5.39$); do not wait\\
+\hline
+\end{tabular}
+\end{center}
+\noindent$^\dagger$ (D) extends conditional on T-016 being a global/convex diagonal-minimum
+statement (not merely a local Hessian check); if T-016 is local, (D) is strict \emph{local}
+diagonal stability. $^\ddagger$ (S) extends provided $J_{\rm eff}$ and $n_{\rm pack}$ are
+worst-case layer/coherence bounds over the full admissible class (as defined).
+
+\section*{4. Gate status}
+
+\begin{itemize}
+\item[\textbf{G1}] off-diagonal margin --- \textbf{CLOSED} (operator accepts the thin
+$R_{\rm lead}\le0.974<1$, $\times1.026$).
+\item[\textbf{G2}] external referee / reproduction --- OPEN, a validation/publication gate, NOT
+an internal proof blocker.
+\item[\textbf{G3}] operator sign-off --- \textbf{CLOSED} (operator-enacted
+$\mathrm{T7\text{-}SCOPE}_{\mathcal C_{\rm full},\,\mathrm{thin}\,O}$).
+\end{itemize}
+EXT is optional: necessary only if the thin margin is later rejected; otherwise it is a T2
+margin-comfort upgrade.
+
+\section*{5. Permitted and forbidden claims}
+
+\noindent\textbf{Permitted:} ``Within the certified operating region $\mathcal R_{\mathcal
+C_{\rm full}}$, Reading-H selection holds against $\mathcal C_{\rm full}$ competitors (given the
+A1 kernel convention).''
+
+\noindent\textbf{Forbidden:} ``Reading-H is globally / unconditionally proven over all intensities
+and all possible competitors.'' The closure is scope-qualified (thin off-diagonal margin; intensity
+cap $2.053\times10^{-3}$; given A1; external referee pending).
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is the thin $\times1.026$ rigorous?''} Yes: antipodal lemma (elementary,
+proved) $+$ R-025 (T7) $+$ packing ($n_{\rm pack}\le40.88$ verified across the band). A strict
+inequality with a thin but rigorous margin closes.
+\item[($\beta$)] \emph{``Does the enactment over-reach the headroom?''} No --- \S2 records the
+$2.6\%$ off-diagonal headroom and the binding cap $2.053\times10^{-3}$ explicitly, distinct from
+the Step-1 $20\%$.
+\item[($\gamma$)] \emph{``Is this unrestricted T7?''} No --- \S5 forbids that claim; the scope is
+$\mathrm{T7\text{-}SCOPE}_{\mathcal C_{\rm full},\,\mathrm{thin}\,O}$, given A1, within
+$\mathcal R_{\mathcal C_{\rm full}}$, external referee pending.
+\end{itemize}
+
+Quantitative sanity check (mandatory): $I_{\rm off}^{\mathcal C_{\rm full}}=1/(23.2\cdot21)=
+2.053\times10^{-3}$; $R_{\rm lead}=23.2(1+20)(2\times10^{-3})=0.974<1$; headroom $2.6\%$;
+$n_{\rm pack}\le40.88\Rightarrow N/2\le20<20.55$; EXT $\times5.39$. All from res5\_035 (5/5).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 C_full internal scope closure -- T7-SCOPE_{C_full, thin O} ENACTED
+Precise statement:       Operator 2026-06-10 ACCEPT THE THIN OFF-DIAGONAL MARGIN. B1/B2 Reading-H
+                         enacted at T7, competitor class widened lattice -> C_full, scope-qualified
+                         T7-SCOPE_{C_full, thin O}: F[Q]>F[G_*] for all Q in C_full, (I,mu^2) in
+                         R_{C_full}={mu^2 in (0,mu^2_max=0.0342), I in (0, min(I_c^sel, I_off^Cfull))},
+                         I_off^Cfull=1/(23.2*21)=2.053e-3 (off-diagonal cap binds). Operating point
+                         interior, thin 2.6% headroom (NOT Step-1 20%). n_pack<=40.88 across band =>
+                         N/2<=20<20.55=K* throughout. (D)/(S) competitor-agnostic comfortable; (O)
+                         proved thin R_lead<=0.974<1. G1+G3 CLOSED; G2 (referee) validation gate.
+                         EXT T2 optional (x5.39). NOT unrestricted T7. Given A1-KERNEL-CONV.
+Scope:                   T7-SCOPE_{C_full, thin O} within R_{C_full}, given A1. External referee
+                         pending. Tier label T7 with C_full scope qualifier + thin-O caveat.
+Dependencies:            res5_032 (Step 1 window), res5_033 (Step 2 antipodal lemma + off-diag),
+                         res5_034 (Step 3 (D)/(S)), res5_035 (enactment numbers); R-025; T-016.
+Evidence grade:          INTERNAL SCOPE CLOSURE (operator-enacted) + EXECUTED (res5_035 5/5).
+Reproduction command:    python codes/vacuum/res5_035_cfull_scope_enactment.py
+Expected output:         I_off^Cfull=2.053e-3 binds; R_lead=0.974<1; headroom 2.6%; n_pack<=40.88;
+                         EXT x5.39; 5/5 PASS.
+Falsifier:               n_pack>41 somewhere in the band (N/2>20 => closure fails); a competitor
+                         with K_floor>N/2 (refutes antipodal lemma); operating point I>=I_off^Cfull.
+Tier before / after:     B1/B2 T7 (lattice scope) -> T7-SCOPE_{C_full, thin O} (C_full scope, thin
+                         off-diagonal). EXT T2. NOT unrestricted T7.
+No-overclaim statement:  Scope-qualified C_full closure: thin off-diagonal margin (x1.026), cap
+                         2.053e-3 (not 2.41e-3), given A1, external referee pending. NOT global/
+                         unconditional. EXT optional T2.
+Next required action:    G2 external/second-author referee (validation). Optional EXT promotion if
+                         the thin margin is later judged insufficient.
+\end{verbatim}
+}

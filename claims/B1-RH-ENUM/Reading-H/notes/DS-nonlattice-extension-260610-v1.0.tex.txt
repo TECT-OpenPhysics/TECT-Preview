@@ -1,0 +1,143 @@
+% CORRECTION (operator 2026-06-10): EXT is an OPTIONAL margin upgrade, NOT a closure blocker; the body's 'C_full awaits EXT + thin-margin decision' is superseded -- the operator ACCEPTED the thin margin (G1/G3 CLOSED). (D) extends conditional on T-016 being a global/convex diagonal-minimum (not merely a local Hessian check); (S) conditional on J_eff and n_pack being worst-case layer/coherence bounds over the full class. Canonical: cfull-internal-scope-closure-260610-v1.1.
+% =============================================================================
+% Title: Step 3 of the scope-completion roadmap: the (D) diagonal-isotropy and (S)
+%        selection-floor sectors are competitor-agnostic and extend to the
+%        non-lattice class unchanged
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (non-lattice (D)/(S) extension; spans B5)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: STRUCTURAL + EXECUTED. Step 3 of the operator-accepted roadmap. Establishes that
+%   the (D) diagonal-isotropy minimum (T-016) and the (S) SC-SCOPE selection floor are
+%   COMPETITOR-AGNOSTIC -- properties of the isotropic layer G_* and the coherence packing
+%   bound, with no dependence on the competitor's lattice structure -- so both extend to the
+%   non-lattice class with NO modification (comfortable margins carry over). Combined with
+%   Step 2 (off-diagonal (O) thin closure for C_full), the full (D)(O)(S) decomposition of the
+%   Reading-H comparison holds for C_full: (D) and (S) comfortable, (O) thin (x1.026,
+%   EXT-upgradable). No B1/B2 tier change. Grounded by res5_034_DS_nonlattice_extension.py (6/6).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. (D)/(S) competitor-agnosticism established; full (D)(O)(S)
+%        decomposition shown to extend to C_full. Grounded by res5_034 (6/6).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose (roadmap Step 3)}
+
+The probe of Steps 1--2 covered the off-diagonal sector (O). Step 3 confirms that the other two
+sectors of the Reading-H comparison decomposition --- (D) diagonal isotropy and (S) selection
+floor --- extend to the non-lattice competitor class. The conclusion is that both are
+\emph{competitor-agnostic}: they depend on the layer $G_*$ and the coherence packing bound, not
+on the competitor's lattice structure, so they carry over unchanged. No tier change.
+
+\section*{2. (D) Diagonal isotropy is competitor-agnostic}
+
+The second variation of the diagonal functional $F_0$ at the isotropic dressing $G_*$ is
+(T-016 / hdiag-fullcovariance-formulation)
+\[
+d^2F_0=\tfrac12\int G_*(q)^{-2}(dG)^2\,d^3q+\Phi''_{\rm diag}\,(dM_{\rm tot})^2,\qquad
+\Phi''_{\rm diag}=\tfrac32u_{\rm eff}.
+\]
+Decomposing an \emph{arbitrary} perturbation $dG(q)=\sum_{lm}a_{lm}(|q|)Y_{lm}(\hat q)$ and using
+$\int Y_{lm}\,d\Omega=0$ for $l\ge1$, the rotation-invariant interaction $\Phi_{\rm diag}(M_{\rm tot})$
+curves ONLY the $l=0$ sector, so the Hessian is block-diagonal:
+\[
+l=0:\ H_0=\tfrac12G_*^{-2}+\tfrac32u_{\rm eff}>0,\qquad
+l\ge1:\ H_l=\tfrac12G_*^{-2}\ge\tfrac12r_R^2=4.64\times10^{-2}>0,
+\]
+the $l\ge1$ infimum analytic at the gap shell $|q|=q_0$. \textbf{This decomposition never
+references the competitor's lattice structure}: a non-lattice competitor is simply another
+anisotropic direction $dG$, seen by the SAME positive block-diagonal Hessian. The entropy floor
+$\tfrac12r_R^2$ is rotation-invariant ($G_*$ isotropic), so it bounds the curvature toward every
+angular direction equally. Hence the strict diagonal minimum $F_{\rm diag}[Q]>F_{\rm diag}[G_*]$
+holds for EVERY competitor, lattice or not.
+
+\section*{3. (S) Selection floor is competitor-agnostic}
+
+The SC-SCOPE selection joint (scscope\_endpoint\_sweep)
+\[
+\mathrm{joint}=\frac{\mathrm{MARGIN}}{C_2+\mathrm{composed}/S_{\rm un}+R_{\max}C_2},\qquad
+\rho=\frac{4(1-a_0)\,\mathrm{MARGIN}}{(\lambda I)^2J_{\rm eff}\,n_{\rm pack}},
+\]
+is built entirely from \emph{layer} quantities --- $\mathrm{MARGIN}$ (Prop-A layer margin),
+$J_{\rm eff}$ (minimum-transfer envelope), $S_{\rm un}$ (sunset cap), $R_{\max}$ (realized
+quartic) --- and the coherence packing bound $n_{\rm pack}$, which is the same for every
+admissible competitor. It carries no explicit dependence on the competitor's additive (lattice)
+structure. Numerically $\mathrm{joint}=1.040>1$ at the operating point, and the structural
+saturation $\mathrm{joint}\to S_{\rm un}=1.13$ as $\rho\to\infty$ is a layer property. Hence
+$\mathrm{joint}>1$ holds identically for non-lattice competitors.
+
+\section*{4. The full (D)(O)(S) decomposition extends to C_full}
+
+Collecting the three sectors for the full admissible class $\mathcal C_{\rm full}$:
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\hline
+sector & C\_full status & margin\\
+\hline
+(D) diagonal isotropy & competitor-agnostic (this note) & comfortable ($\tfrac12r_R^2$, $\tfrac32u_{\rm eff}>0$)\\
+(O) off-diagonal & thin closure (Step 2, res5\_033) & thin ($\times1.026$; EXT $\to\times6$)\\
+(S) selection floor & competitor-agnostic (this note) & comfortable (joint $=1.04$, cap $1.13$)\\
+\hline
+\end{tabular}
+\end{center}
+Thus the full Reading-H comparison decomposition holds for $\mathcal C_{\rm full}$, the ONLY thin
+ingredient being the off-diagonal margin $\times1.026$ (which the EXT conjecture would upgrade to
+$\times6$). No B1/B2 tier change: this records the last structural ingredient of the C\_full route;
+the residual items are the EXT margin upgrade (T2) and the operator decision on accepting the thin
+off-diagonal margin for a C\_full statement.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is (D) really lattice-free, or does the competitor enter the diagonal
+part elsewhere?''} The diagonal functional depends on $G$ only through $M_{\rm tot}=\int G$
+(rotation-invariant) and the per-mode entropy; the competitor's angular positions enter only as
+the \emph{direction} of $dG$, and every direction sees the positive block-diagonal Hessian. No
+lattice input.
+\item[($\beta$)] \emph{``Is (S) truly competitor-agnostic, given the off-diagonal used $K_{\rm
+floor}$?''} The off-diagonal (O) is the competitor-dependent sector (via $K_{\rm floor}$); the
+SELECTION joint (S) is the third-cumulant LAYER balance (MARGIN/Jeff/$n_{\rm pack}$/SUNSET),
+which does not carry $K_{\rm floor}$. The two are distinct sectors; (S) is agnostic.
+\item[($\gamma$)] \emph{``Does this complete the C\_full T7?''} No --- it shows (D)/(S) extend; the
+off-diagonal is thin (Step 2); the C\_full statement still awaits the EXT margin upgrade and an
+operator decision on the thin margin, plus external referee. No tier change.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{(D)} entropy floor $\tfrac12r_R^2=4.64\times10^{-2}>0$,
+breathing $\tfrac32u_{\rm eff}=4.03>0$; \emph{(S)} joint $=1.040>1$, sunset cap $1.130$; both
+competitor-agnostic. All from res5\_034 (6/6).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 (D)/(S) non-lattice extension (roadmap Step 3)
+Precise statement:       (D) diagonal isotropy (T-016): the second variation at G_* is
+                         block-diagonal in angular momentum with l=0 curvature (1/2)G_*^-2+
+                         (3/2)u_eff>0 and l>=1 curvature (1/2)G_*^-2>=(1/2)r_R^2=4.64e-2>0; the
+                         spherical-harmonic decomposition uses no lattice input, so the strict
+                         diagonal minimum holds for ANY competitor (lattice or non-lattice). (S)
+                         selection joint = MARGIN/(C2+composed/SUNSET+RMAX*C2) is built from
+                         layer + coherence-packing quantities (no competitor lattice structure),
+                         joint=1.040>1, sunset cap 1.13; holds identically for non-lattice. Both
+                         (D)/(S) competitor-agnostic => extend to C_full unchanged.
+Scope:                   (D)/(S) sectors for C_full. With Step 2 (O thin), the full (D)(O)(S)
+                         decomposition extends to C_full: (D)/(S) comfortable, (O) thin x1.026.
+                         No B1/B2 tier change.
+Dependencies:            T-016/res5_016 (diagonal isotropy); hdiag-fullcovariance-formulation;
+                         scscope_endpoint_sweep (joint); res5_033 (Step 2 off-diagonal C_full).
+Evidence grade:          STRUCTURAL (competitor-agnosticism) + EXECUTED (res5_034 6/6).
+Reproduction command:    python codes/vacuum/res5_034_DS_nonlattice_extension.py
+Expected output:         entropy floor 4.64e-2>0; breathing 4.03>0; joint 1.040>1; sunset cap
+                         1.130; 6/6 PASS.
+Falsifier:               A competitor entering the diagonal functional beyond M_tot + entropy;
+                         or a selection-joint competitor-structure dependence beyond n_pack.
+Tier before / after:     No change. (D)/(S) competitor-agnostic (extend to C_full); with Step 2
+                         the (D)(O)(S) decomposition holds for C_full (O thin).
+No-overclaim statement:  Records (D)/(S) competitor-agnosticism (structural). Does NOT complete
+                         the C_full T7: the off-diagonal margin is thin (x1.026), and the C_full
+                         statement awaits EXT (margin upgrade) + operator thin-margin decision +
+                         external referee. No tier widening.
+Next required action:    Step 4 external referee; operator decision on thin off-diagonal margin;
+                         optional EXT promotion (margin upgrade). Then Step 5 consolidation.
+\end{verbatim}
+}

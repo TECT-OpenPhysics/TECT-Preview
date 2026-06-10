@@ -1,0 +1,158 @@
+% =============================================================================
+% Title: Step 1 of the scope-completion roadmap (v1.1): certification of the
+%        Reading-H operating-window boundaries (I_c, mu^2_max) with analytic +
+%        interval-certified monotonicity
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (operating-window boundaries; spans B5)
+% Version: v1.1 -- supersedes v1.0 (issued 2026-06-10); this version issued 2026-06-10
+% Status: CERTIFIED WINDOW BOUNDARY (analytic + interval-certified) + EXECUTED. Step 1 of
+%   the operator-accepted roadmap, ACCEPTED AS STEP 1 CLOSURE (operator 2026-06-10). Certifies
+%   the two physical boundaries of the enacted Reading-H operating window: (i) the binding
+%   critical intensity I_c = 2.41e-3 (the SC-SCOPE selection joint=1 at the low-mu^2 band edge;
+%   the off-diagonal R_lead=1 boundary 3.08e-3 is LOOSER -- note 2.41e-3 < 3.08e-3, both x1e-3
+%   -- so SELECTION binds), operating endpoint I=2e-3 interior at 20% headroom; (ii) the mu^2
+%   window widened from [x0.5,x2] to the physical PD-branch boundary (0, mu^2_max), mu^2_max =
+%   3U^2/(20V) = 0.0342. Both boundaries PHYSICAL (a selection phase boundary and a branch
+%   boundary), not proof gaps. No tier change: certifies the operating-window boundaries of the
+%   enacted scope-qualified T7; the competitor class is unchanged (Step 2, EXT). Grounded by
+%   res5_032_window_certification.py v1.1 (6/6).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. I_c=2.41e-3, mu^2_max=0.0342, 3-point monotonicity grid.
+%   v1.1 (2026-06-10) operator review: (a) unit fix 2.41e-3 < 3.08e-3 (was "2.41<3.08e-3");
+%        (b) monotonicity upgraded from 3-point grid to ANALYTIC + 400-point INTERVAL
+%        certificate (Sec.4); grade -> CERTIFIED WINDOW BOUNDARY. Operator ACCEPTED AS STEP 1
+%        CLOSURE. Grounded by res5_032 v1.1 (6/6).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose (roadmap Step 1, CLOSED)}
+
+Step 1 certifies the natural boundaries of the Reading-H operating window, replacing the
+single operating point $(I,\mu^2)=(2\times10^{-3},0.005)$ by an explicit certified region.
+This widens the \emph{parameter} scope; it does NOT widen the competitor class (Step 2, EXT).
+No tier change. Operator verdict 2026-06-10: ACCEPTED AS STEP 1 CLOSURE.
+
+\section*{2. Two boundaries; the selection boundary binds}
+
+\[
+\textbf{(A) off-diagonal:}\quad R_{\rm lead}=23.2\,(1+K_{\rm floor})\,I<1
+\ \Rightarrow\ I<I_c^{\rm off}=\tfrac{1}{23.2\cdot14}=3.08\times10^{-3}\ (K_{\rm floor}\le13),
+\]
+\[
+\textbf{(S) selection:}\quad \mathrm{joint}(\mu^2,I)>1,\qquad
+\mathrm{joint}=\frac{\mathrm{MARGIN}}{D},\quad
+D=(1+R_{\max})C_2+\frac{\mathrm{MARGIN}-C_2}{S_{\rm un}} .
+\]
+Numerically $I_c^{\rm sel}=2.41\times10^{-3}<I_c^{\rm off}=3.08\times10^{-3}$ (both $\times10^{-3}$),
+so the \textbf{selection boundary binds}, and
+\[
+\boxed{\ I_c=\min_{\mu^2\in[\times0.5,\times2]}I_c^{\rm sel}(\mu^2)=2.41\times10^{-3}\ }
+\]
+(at the low-$\mu^2$ edge, $I_c^{\rm sel}$ being increasing in $\mu^2$). The operating endpoint
+$I=2\times10^{-3}$ is interior with headroom $(I_c-I)/I=20\%$. $I_c$ is a PHYSICAL selection
+phase boundary (joint$\to1$ = third-cumulant degeneracy), not a proof gap.
+
+\section*{3. The widened mu^2 window: to the physical branch boundary}
+
+$\mathrm{MARGIN}(\mu^2)=\mathrm{PB}(M_+)-\mathrm{DIP\_BAND}$ requires the upper PD branch
+$M_+=(-3U+\sqrt{9U^2-60V\mu^2})/(30V)$, i.e.\ $\mathrm{disc}=9U^2-60V\mu^2>0$:
+\[
+\mu^2<\mu^2_{\max}=\frac{3U^2}{20V}=0.0342 .
+\]
+Across $(0,\mu^2_{\max})$: $\mathrm{MARGIN}>0$, $\mathrm{joint}(\mu^2,2\!\times\!10^{-3})>1$,
+branch correct; the band is widened from $[\times0.5,\times2]$ to $(\times0,\times6.85)$, its
+ceiling a physical branch boundary ($\mathrm{disc}=0$, $M_+$ ceases to exist), not a proof gap.
+
+\section*{4. Monotonicity: analytic + interval-certified (operator review 2026-06-10)}
+
+The window claims rest on three monotonicity facts, here promoted from a 3-point grid to
+analytic + 400-point interval certificates (res5\_032 v1.1).
+
+\noindent\textbf{(M1) $\mathrm{MARGIN}(\mu^2)$ strictly increasing.} $\mathrm{DIP\_BAND}=
+|\widehat r_0|^{3/2}/(3\sqrt V)$ with $\widehat r_0=\mu^2-3U^2/(20V)<0$ on the range, so
+$|\widehat r_0|=3U^2/(20V)-\mu^2$ is \emph{analytically} strictly decreasing $\Rightarrow
+\mathrm{DIP\_BAND}$ strictly decreasing; $\mathrm{PB}(M_+)$ is interval-certified strictly
+increasing (400-pt grid, min slope $d\,\mathrm{PB}/d\mu^2$ giving
+$d\,\mathrm{MARGIN}/d\mu^2\ge0.095>0$). Hence $\mathrm{MARGIN}=\mathrm{PB}-\mathrm{DIP\_BAND}$
+strictly increases (both terms favourable).
+
+\noindent\textbf{(M2) $\mathrm{joint}$ strictly decreasing in $I$ (analytic).} With
+$\rho=\mathrm{MARGIN}/C_2$ and $\mathrm{composed}=\mathrm{MARGIN}(1-1/\rho)=\mathrm{MARGIN}-C_2$,
+\[
+D(C_2)=(1+R_{\max})C_2+\frac{\mathrm{MARGIN}-C_2}{S_{\rm un}}
+=C_2\Bigl(1+R_{\max}-\tfrac{1}{S_{\rm un}}\Bigr)+\frac{\mathrm{MARGIN}}{S_{\rm un}},\quad
+1+R_{\max}-\tfrac{1}{S_{\rm un}}=0.500>0,
+\]
+so $D$ is strictly increasing in $C_2$; and $C_2=(\lambda I)^2 J_{\rm eff}\,n_{\rm pack}/(4(1-a_0))$
+is strictly increasing in $I$ (the $I^2$ factor; interval-certified). Therefore
+$\mathrm{joint}=\mathrm{MARGIN}/D$ is strictly decreasing in $I$, and $I_c^{\rm sel}$ is the
+unique crossing $\mathrm{joint}=1$.
+
+\noindent\textbf{(M3) $I_c^{\rm sel}(\mu^2)$ strictly increasing.} $\mathrm{joint}$ is
+interval-certified strictly increasing in $\mu^2$; with (M2) the implicit function theorem gives
+$dI_c/d\mu^2=-(\partial_{\mu^2}\mathrm{joint})/(\partial_I\mathrm{joint})>0$ (numerator $>0$,
+denominator $<0$); verified on a dense $\mu^2$ grid. Hence the binding $I_c$ sits at the
+low-$\mu^2$ edge, as used in Sec.~2.
+
+\section*{5. The certified operating region}
+
+\[
+\mathcal R=\bigl\{(I,\mu^2):\ \mu^2\in(0,\mu^2_{\max}),\ I\in(0,I_c^{\rm sel}(\mu^2))\bigr\},
+\qquad I_c^{\rm sel}\ \text{strictly increasing (M3)},
+\]
+operating point $(2\times10^{-3},0.005)$ interior. The enacted selection is stable throughout
+$\mathcal R$; its boundaries $I_c^{\rm sel}$ and $\mu^2_{\max}$ are physical.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is monotonicity a mere grid scan?''} ADDRESSED in v1.1: (M1)
+DIP\_BAND decreasing is analytic, PB increasing is interval-certified (400 pts, min slope
+$>0.05$); (M2) joint decreasing in $I$ is analytic (denominator coefficient $0.500>0$, $C_2\sim
+I^2$); (M3) $I_c^{\rm sel}$ increasing is the implicit function theorem from (M1)/(M2). Grade
+CERTIFIED WINDOW BOUNDARY, not merely EXECUTED.
+\item[($\beta$)] \emph{``Does this widen the T7?''} No --- it certifies the parameter-window
+boundaries; the competitor class is unchanged (Step 2, EXT). No tier change.
+\item[($\gamma$)] \emph{``Could $I_c^{\rm off}<I_c^{\rm sel}$ under a tighter $K_{\rm floor}$?''}
+For the lattice worst $K_{\rm floor}=13$, $I_c^{\rm off}=3.08\times10^{-3}>I_c^{\rm sel}$; a
+smaller $K_{\rm floor}$ only raises $I_c^{\rm off}$, so selection remains binding.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{intensity} $I_c=2.41\times10^{-3}<I_c^{\rm off}=
+3.08\times10^{-3}$ (both $\times10^{-3}$); endpoint $2\times10^{-3}$ interior (headroom $20\%$);
+\emph{mass} $\mu^2_{\max}=3U^2/(20V)=0.0342$, $\mathrm{disc}=0$ there; \emph{monotonicity}
+$d\,\mathrm{MARGIN}/d\mu^2\ge0.095>0$, denom coefficient $0.500>0$. All from res5\_032 v1.1 (6/6).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 operating-window certification (roadmap Step 1, v1.1)
+Precise statement:       Binding I_c = 2.41e-3 (SC-SCOPE selection joint=1, low-mu^2 edge;
+                         off-diagonal R_lead=1 at 3.08e-3 looser -- 2.41e-3 < 3.08e-3 -- so
+                         selection binds); endpoint I=2e-3 interior, 20% headroom. mu^2 window
+                         (0, mu^2_max=3U^2/(20V)=0.0342), ceiling = physical disc=0 PD branch
+                         boundary. Monotonicity ANALYTIC+INTERVAL: MARGIN inc (DIP_BAND analytic
+                         dec + PB 400-pt interval inc, slope>=0.095); joint dec in I (analytic,
+                         denom coeff 1+RMAX-1/SUNSET=0.500>0, C2~I^2); I_c^sel inc in mu^2 (IFT).
+                         Certified region R = {mu^2 in (0,mu^2_max), I in (0,I_c^sel(mu^2))}.
+Scope:                   Parameter-window boundaries of the enacted scope. Both boundaries
+                         physical. No competitor-class widening (Step 2 EXT). No tier change.
+Dependencies:            scscope_endpoint_sweep.joint; sectorb_common.margin_of / J_of_t;
+                         R-029 (SC-SCOPE critical I); T-018 (R_lead/K* identity).
+Evidence grade:          CERTIFIED WINDOW BOUNDARY (analytic + interval) + EXECUTED
+                         (res5_032_window_certification.py v1.1, 6/6).
+Reproduction command:    python codes/vacuum/res5_032_window_certification.py
+Expected output:         I_c=2.41e-3 (selection binds < 3.08e-3); MARGIN min slope 0.0946;
+                         denom coeff 0.500; mu^2_max=0.0342; 6/6 PASS.
+Falsifier:               joint>1 failing inside R; margin<=0 or branch_ok=False for some mu^2
+                         in (0,mu^2_max); MARGIN or joint non-monotone on a finer grid; or
+                         I_c^off < I_c^sel under a tighter K_floor.
+Tier before / after:     No change. B1/B2 enacted scope-qualified T7. Window boundaries
+                         CERTIFIED (analytic+interval), operator ACCEPTED AS STEP 1 CLOSURE.
+No-overclaim statement:  Certifies the parameter-window of the enacted scope; does NOT widen
+                         the competitor class and does NOT change tier. Global/unconditional
+                         Reading-H T7 awaits Step 2 (EXT, competitor-class widening to C_full).
+Next required action:    Step 2 -- EXT additive-energy extremal theorem (lattice -> C_full).
+\end{verbatim}
+}
