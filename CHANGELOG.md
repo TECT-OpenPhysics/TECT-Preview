@@ -5,6 +5,27 @@ not pillar counts.
 
 ---
 
+## [Scope-completion strategy toward A1-relative unconditional Reading-H T7: probe res5_031 (5/5) shows the LATTICE is the off-diagonal adversarial WORST case (every non-lattice K_floor~1 << 13 lattice << 20.5 threshold; off-lattice perturbation reduces K_floor), so the enacted lattice T7 dominates non-lattice competitors. Residual to C_full = additive-energy EXTREMAL conjecture (EXT, T2 strong evidence; falsifier K_floor>13), NOT arbitrary-Q DR-2. (I,mu^2) window bounded by PHYSICAL critical I_c~2.5e-3 (R-029), not a proof gap. A1 = definitional floor (standing derive-the-kernel obligation). No tier change to B1/B2.] - 2026-06-10
+
+Operator question 2026-06-10: can the enacted scope-qualified T7 be widened to an A1-relative
+unconditional Reading-H T7 (close arbitrary non-lattice Q + wider I,mu^2 window)? Assessment +
+probe res5_031_nonlattice_extremal_probe.py (5/5): the off-diagonal R_lead is governed by the
+N-independent ratio const=23.2, R_lead<1 iff K_floor<K*=20.5. Every non-lattice config tested
+(random antipodal, coplanar regular rings, jittered-BCC) has K_floor~0.6-0.95 << 13 (lattice
+admissible) << 20.5; exact-BCC K_floor=1.75 > jittered 0.92, i.e. leaving the lattice REDUCES
+the floor. The lattice is the adversarial WORST case of the off-diagonal mechanism, not an easy
+subcase; the enacted lattice T7 already dominates non-lattice competitors of that mechanism.
+Reframing: the genuine residual to C_full is the additive-energy EXTREMAL conjecture (EXT)
+"K_floor maximised by arithmetic structure" (T2, strong evidence, falsifier K_floor>13 for an
+admissible non-lattice Q), NOT re-opening arbitrary-Q DR-2 (which bounds the lattice/worst case,
+already T7). The (I,mu^2) window is bounded by a physical critical intensity I_c~2.5e-3 (R-029
+SC-SCOPE), a selection phase boundary, not a proof gap; mu^2 widening is a tractable scan.
+A1-KERNEL-CONV is the definitional floor (correct), with a standing derive-the-kernel obligation
+(A1 T5->T7) for the full-theory claim. NEW note nonlattice-window-scope-completion-strategy v1.0
+(8 sections, FORM-CHECK PASS) + res5_031 (5/5, result.json). No tier change; (EXT) registered as
+a T2 conjecture in the note. Recommended path: (1) pin I_c + scan mu^2; (2) prove (EXT) T2->T6/T7;
+(3) extend (D)/(S) to non-lattice; (4) external referee.
+
 ## [T-030 ENACT T7: B1-RH-ENUM + B2-PROPA-HLAYER -> T7 (H-LAYER discharged) in lattice Reading-H domain; operator ACCEPTED AS CANONICAL ENACTMENT RECORD (t7-enactment-record v1.0). Sole named input A1-KERNEL-CONV (T5). CLAIMS.md T6:8->6 T7:0->2; lint PASS. RESULTS-LEDGER R-030. Scope-qualified, NOT full TECT/TOE; external referee standing.] - 2026-06-10
 
 Operator decision 2026-06-10: ACCEPT AS CANONICAL T7 ENACTMENT RECORD. The file

@@ -1,0 +1,192 @@
+% =============================================================================
+% Title: Scope-completion strategy toward A1-relative unconditional Reading-H T7:
+%        the lattice class is the off-diagonal adversarial worst case, the genuine
+%        residual is an additive-energy extremal conjecture, and the (I, mu^2)
+%        window is bounded by a physical critical intensity
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (scope-completion roadmap; spans B5)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: STRATEGY-FRAMEWORK + T2 CONJECTURE (the extremal property). Responds to the
+%   operator question (2026-06-10): can the enacted scope-qualified T7 be widened to an
+%   "A1-relative unconditional" Reading-H T7 by closing (i) arbitrary non-lattice
+%   competitors and (ii) a wider (I, mu^2) window? This note reframes the target with a
+%   numerical probe (res5_031, 5/5): the lattice class is NOT a convenient easy subcase
+%   but the ADVERSARIAL WORST case of the off-diagonal (R_lead) mechanism, so the enacted
+%   lattice T7 already dominates non-lattice competitors of that mechanism. The honest
+%   residual to "C_full" is an additive-energy EXTREMAL conjecture (T2, strong evidence),
+%   not re-opening arbitrary-Q DR-2; the window is bounded by a PHYSICAL critical
+%   intensity I_c ~ 2.5e-3 (R-029), not a proof gap. No tier change to B1/B2.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Reframes the scope-completion target; records the
+%        extremal conjecture (T2) + the window physical boundary + the A1 floor analysis.
+%        Grounded by res5_031_nonlattice_extremal_probe.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. The operator decomposition (accepted) and the question}
+
+The enacted T7 is unconditional in the comparison hypothesis H-LAYER but rests on three
+standing inputs: (1) A1-KERNEL-CONV (the microscopic-theory kernel-convention
+\emph{definition}, T5); (2) the lattice competitor class $\mathcal C_{\rm phys}$ (real
+antipodal crystallographic, packing-bounded, coherence-resolved); (3) the operating window
+$I=2\times10^{-3}$, $\mu^2\in[\times0.5,\times2]$. The operator correctly observes that an
+\emph{absolute} assumption-free T7 is not meaningful --- every theorem about $F_{\rm TECT}$
+is relative to the definition of $F_{\rm TECT}$ --- and proposes the realistic target
+\[
+\textbf{A1-relative unconditional Reading-H T7:}\quad
+F[Q]-F[G_*]>0\ \ \forall\,Q\in\mathcal C_{\rm full}\setminus\{G_*\},
+\]
+$\mathcal C_{\rm full}$ widened to all admissible competitors (lattice and non-lattice),
+over a wider window, keeping only A1. The question: how hard, and by what route?
+
+\section*{2. Ruthless check of the ``raise DR-2 to theorem-grade'' framing}
+
+The operator suggests non-lattice closure ``probably needs DR-2 fallback raised to
+theorem-grade''. This conflates two different roles of the lattice restriction. The
+off-diagonal stability is governed by the single $N$-independent ratio
+\[
+R_{\rm lead}(Q)=\mathrm{const}\,(1+K_{\rm floor}(Q))\,I,\qquad
+\mathrm{const}=\tfrac94 u_{\rm eff}^2 B_{\max}\tfrac{2}{r_R}=23.2,\qquad
+R_{\rm lead}<1\iff K_{\rm floor}<K_*=\tfrac{1}{\mathrm{const}\,I}-1\simeq20.5,
+\]
+where $K_{\rm floor}(Q)=\sum_{t\ne0}(\text{sum-circle occupancy})^2/N^2-1$ is the
+additive-energy floor. DR-2 ($E_+\le_\varepsilon N^{2+\varepsilon}$) bounds $K_{\rm floor}$
+in the \emph{worst} (arithmetic) case. The probe res5\_031 measures $K_{\rm floor}$ directly:
+\begin{center}\footnotesize
+\begin{tabular}{lll}
+\hline
+Configuration (non-lattice unless noted) & $K_{\rm floor}$ & $R_{\rm lead}$\\
+\hline
+random real-antipodal, $N=12\!-\!60$ & $0.75$--$0.95$ & $\sim0.09$ (margin $\times11$)\\
+coplanar regular ring (max symmetry), $N=8\!-\!40$ & $0.62$--$0.93$ & $\sim0.08$\\
+jittered-BCC ($10\%$ off-lattice) & $0.92$ & $\sim0.09$\\
+\emph{exact} BCC (lattice) & $1.75$ & --\\
+admissible lattice class (pinned) & $\le13$ & $\le0.65$\\
+threshold $K_*$ & $20.5$ & $1$\\
+\hline
+\end{tabular}
+\end{center}
+\textbf{Every non-lattice configuration tested has $K_{\rm floor}\sim1\ll13\ll20.5$, and
+perturbing a config OFF the exact lattice REDUCES $K_{\rm floor}$.} The additive-energy
+floor is maximised by exact arithmetic coincidence of sum-circles; a non-lattice config has
+generic (non-degenerate) sum-circles, occupancy $\sim2$, hence $K_{\rm floor}\sim1$.
+
+\noindent\textbf{Conclusion (reframing).} The lattice class is the off-diagonal
+\emph{adversarial worst case}, not an easy subcase. The enacted lattice T7 already covers
+the hardest competitors of the $R_{\rm lead}$ mechanism; generic non-lattice competitors
+are $\times11$ more stable. Re-opening arbitrary-$Q$ DR-2 is the wrong target --- it bounds
+the lattice/worst case, which is \emph{already} T7 for the lattice.
+
+\section*{3. The genuine residual: an additive-energy extremal conjecture (T2)}
+
+What ``$\mathcal C_{\rm full}$'' actually requires is the rigidity/extremal statement
+\[
+\textbf{(EXT)}\qquad
+\max_{Q\in\mathcal C_{\rm full},\,|Q|=N} K_{\rm floor}(Q)\ \text{is attained within the
+arithmetic (lattice) sub-class, and is}\ \le13.
+\]
+(EXT) is the honest bridge from ``lattice T7'' to ``$\mathcal C_{\rm full}$ T7'': if the
+additive-energy floor is maximised by arithmetic structure (a Freiman/Cauchy--Davenport-type
+extremal principle on $S^2$), then no admissible non-lattice competitor exceeds the lattice
+bound and the lattice T7 dominates all of $\mathcal C_{\rm full}$. The probe is STRONG
+EVIDENCE for (EXT); its status is T2 CONJECTURE with the pre-registered falsifier
+\[
+\textbf{Falsifier:}\quad\text{a real-antipodal admissible }Q\text{ with }K_{\rm floor}(Q)>13.
+\]
+This is a tractable additive-combinatorics statement, not the (harder, partly OPEN)
+arbitrary-$Q$ $\ell^2$-decoupling programme.
+
+\section*{4. The (I, mu^2) window is bounded by physics, not by a proof gap}
+
+\textbf{Intensity.} R-029 (SC-SCOPE) records a physical critical intensity
+$I_c\sim2.5\times10^{-3}$ \emph{beyond} the operating endpoint, where the all-orders joint
+flips sign. The honest maximal intensity window is therefore $I\in(0,I_c)$ with
+$I_c\sim2.5\times10^{-3}$ --- a phase boundary of the selection, NOT a gap to be closed.
+Claiming $I\in(0,\infty)$ would be false. \textbf{Mass.} $\mu^2\in[\times0.5,\times2]$ was
+margin-checked (SC-SCOPE worst $\times1.034$); widening it is a tractable scan plus a
+monotonicity argument, with the thin selection margin $0.097$ as the risk to monitor.
+
+\section*{5. The status of A1-KERNEL-CONV (the floor, with a standing obligation)}
+
+A1 is a \emph{definition}, so ``A1-relative unconditional'' is the correct floor: one cannot
+remove the kernel convention without removing the theory. One honesty caveat must not be
+glossed: A1 is T5 (\emph{pinned}, not \emph{derived}). For the comparison theorem this is the
+right floor; for the larger TECT/TOE ambition, ``why this kernel?'' remains a standing
+Sector-A obligation (promote A1 $T5\to T7$ = derive the kernel from the topological/condensate
+structure rather than fixing it by convention). ``It is just a definition'' is correct for the
+present scope and incomplete for the full-theory claim.
+
+\section*{6. Recommended path (honest tiers)}
+
+\begin{enumerate}
+\item \textbf{Cheapest real gain --- pin the window (days).} Set $I_c$ rigorously from the
+SC-SCOPE joint (replace ``$I=2\times10^{-3}$ endpoint'' by ``$I\in(0,I_c)$, $I_c$ certified'');
+scan $\mu^2$ outward with a monotonicity certificate. Removes one scope qualifier honestly;
+no new mathematics.
+\item \textbf{The real theorem --- prove (EXT) (weeks).} Promote the extremal conjecture
+$T2\to T6/T7$: ``the $S^2$ additive-energy floor is maximised by arithmetic structure''. This
+is the single statement that upgrades ``lattice T7'' to ``$\mathcal C_{\rm full}$ T7'' for the
+off-diagonal mechanism. Re-use R-025/R-026 (sum-circle richness, lattice DR-2) as the
+arithmetic-side input.
+\item \textbf{Complete the decomposition for non-lattice --- (D) and (S) (weeks).} The probe
+covers the off-diagonal (O) only; confirm the diagonal isotropy (D, T-016) and the selection
+floor (S) extend to non-lattice (expected easier: less structure, lower energy).
+\item \textbf{External referee (standing).} The publication-grade dual audit.
+\item \textbf{A1-relative consolidation.} Once 1--3 close, restate the theorem on
+$\mathcal C_{\rm full}$, $I\in(0,I_c)$, given A1.
+\end{enumerate}
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The probe is a finite sample; it cannot prove (EXT).''} CORRECT and
+stated: (EXT) is graded T2 CONJECTURE, not a theorem; the probe is STRONG EVIDENCE with a
+pre-registered falsifier ($K_{\rm floor}>13$ for an admissible non-lattice $Q$). No tier
+change is claimed.
+\item[($\beta$)] \emph{``Generic non-lattice is easy, but an exotic high-energy non-lattice
+config might beat the lattice.''} This is exactly what (EXT) must exclude; the probe tests
+random + maximal-symmetry + near-lattice and finds none. The arithmetic-maximises-energy
+heuristic (lattices maximise additive energy) is the expected mechanism; proving it is item 2.
+\item[($\gamma$)] \emph{``Does this widen the enacted T7 now?''} No. B1/B2 stay at the enacted
+scope-qualified T7; this note is a roadmap + a T2 conjecture, not a promotion.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{threshold} $K_*=1/(23.2\cdot2\!\times\!10^{-3})-1
+=20.55$; \emph{worst non-lattice} $K_{\rm floor}=0.95<13<20.55$; \emph{lattice-is-worst}
+exact-BCC $1.75>$ jittered $0.92$; \emph{window} $I_c\sim2.5\times10^{-3}$ (R-029). All from
+res5\_031 (5/5).
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1/B2 scope-completion strategy toward A1-relative unconditional T7
+Precise statement:       The lattice class is the OFF-DIAGONAL adversarial worst case
+                         (R_lead governed by N-indep const=23.2, K*=20.5; every non-lattice
+                         config K_floor~1<<13<<20.5; off-lattice perturbation reduces K_floor),
+                         so the enacted lattice T7 dominates non-lattice competitors of the
+                         R_lead mechanism. Residual to C_full = additive-energy EXTREMAL
+                         conjecture (EXT) "K_floor maximised by arithmetic structure" (T2,
+                         strong evidence; falsifier K_floor>13), NOT arbitrary-Q DR-2. The
+                         (I,mu^2) window is bounded by a PHYSICAL critical I_c~2.5e-3 (R-029),
+                         not a proof gap. A1 is the definitional floor (standing derive-the-
+                         kernel obligation for the full theory).
+Scope:                   Off-diagonal mechanism (probed); (D)/(S) non-lattice extension not
+                         probed. No tier change. B1/B2 stay enacted scope-qualified T7.
+Dependencies:            t7-enactment-record v1.0; R-025/R-026 (sum-circle/lattice DR-2 T7);
+                         R-029 (SC-SCOPE critical I_c); T-016 (D), T-018 (R_lead/K* identity).
+Evidence grade:          STRATEGY + T2 CONJECTURE (EXT) + EXECUTED
+                         (res5_031_nonlattice_extremal_probe.py 5/5).
+Reproduction command:    python codes/vacuum/res5_031_nonlattice_extremal_probe.py
+Expected output:         K*=20.55; non-lattice K_floor 0.6-0.95<<13; exact-BCC 1.75>jittered
+                         0.92; 5/5 PASS.
+Falsifier:               A real-antipodal admissible non-lattice Q with K_floor>13 (refutes
+                         EXT); or a selection margin going negative inside I<I_c, mu^2 widened.
+Tier before / after:     No change. B1/B2 enacted scope-qualified T7. (EXT) registered T2.
+No-overclaim statement:  Reframing + roadmap; NOT a widening of the enacted T7. (EXT) is a
+                         conjecture with strong evidence, not a theorem. Window bounded by
+                         physics. A1 remains the definitional floor.
+Next required action:    (1) pin I_c + scan mu^2 (window); (2) prove (EXT) T2->T6/T7
+                         (the real theorem); (3) extend (D)/(S) to non-lattice; (4) referee.
+\end{verbatim}
+}

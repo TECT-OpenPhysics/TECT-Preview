@@ -1,0 +1,53 @@
+{
+  "script": "res5_031_nonlattice_extremal_probe.py",
+  "version": "1.0.0",
+  "const": 23.19653943695417,
+  "Kstar": 20.554939320106307,
+  "I": 0.002,
+  "rR": 0.30452570866744433,
+  "u_eff": 2.685024265666395,
+  "random_nonlattice": {
+    "12": 0.75,
+    "20": 0.85,
+    "40": 0.925,
+    "60": 0.95
+  },
+  "ring_nonlattice": {
+    "8": 0.625,
+    "16": 0.8125,
+    "24": 0.875,
+    "40": 0.925
+  },
+  "bcc_exact": 1.75,
+  "bcc_jittered": 0.9166666666666667,
+  "worst_nonlattice": 0.95,
+  "verdict": "Lattice is the OFF-DIAGONAL adversarial WORST case: every non-lattice config tested has K_floor~1<<13 (lattice admissible)<<20.5(K*); perturbing off-lattice reduces K_floor. Generic non-lattice R_lead~0.08 (margin x12). The lattice T7 dominates non-lattice competitors of the R_lead mechanism. Residual to C_full = EXTREMAL conjecture (K_floor maximised by arithmetic structure), T2 with strong evidence, NOT arbitrary-Q DR-2. Window bounded by physical I_c~2.5e-3 (R-029), not a proof gap. No tier change.",
+  "claims": [
+    {
+      "name": "threshold_Kstar_about_20p5",
+      "passed": true,
+      "detail": "(const=(9/4)u_eff^2 B_max (2/r_R)=23.20 N-INDEPENDENT; K*=1/(const*I)-1=20.55 is the universal R_lead<1 threshold; lattice admissible K_floor<=13<K*)"
+    },
+    {
+      "name": "random_nonlattice_floor_tiny",
+      "passed": true,
+      "detail": "(random real-antipodal NON-lattice K_floor={12: 0.75, 20: 0.85, 40: 0.93, 60: 0.95}, all<2<<13; R_lead~0.090, margin x11)"
+    },
+    {
+      "name": "structured_nonlattice_floor_tiny",
+      "passed": true,
+      "detail": "(coplanar regular-ring K_floor={8: 0.62, 16: 0.81, 24: 0.88, 40: 0.93}, all<2: even maximal non-lattice symmetry does NOT raise the floor -- sum-circles stay non-degenerate, occupancy~2)"
+    },
+    {
+      "name": "lattice_is_offdiag_worst_case",
+      "passed": true,
+      "detail": "(exact-BCC K_floor=1.75 > jittered-BCC(10%) K_floor=0.92: leaving the lattice REDUCES the additive-energy floor. The floor is maximised by arithmetic coincidence => lattice is the adversarial worst case of the R_lead mechanism, already closed at T'<=13)"
+    },
+    {
+      "name": "quantitative_sanity_extremal_evidence",
+      "passed": true,
+      "detail": "(worst NON-lattice K_floor=0.95<13=lattice admissible<20.6=K*; worst non-lattice R_lead=0.090<0.65=lattice R_lead<1. STRONG EVIDENCE for the extremal conjecture 'K_floor maximised within the arithmetic class'; falsifier: real-antipodal non-lattice with K_floor>13. Probes OFF-DIAGONAL only; (D)/(S) non-lattice extensions not probed; window bounded by physical I_c~2.5e-3)"
+    }
+  ],
+  "all_pass": true
+}
