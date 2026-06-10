@@ -1,0 +1,180 @@
+% =============================================================================
+% Title: Identifying the off-diagonal "exchange scalar": for TECT's local
+%        interaction there is no A-independent attractive Fock exchange -- the
+%        mean-field off-diagonal Hessian is the stabilising density-density term
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1 off-diagonal residual identification; bears on B1)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T4 STRONG EVIDENCE (reframing, not closure). Resolves the identification of
+%   the T-018 "exchange scalar" b_exch. TECT's interaction is LOCAL (contact quartic u
+%   + sextic v), so the mean-field free energy is a LOCAL DENSITY FUNCTIONAL
+%   Phi[G]=int f(M(x)), and its off-diagonal (Q!=0) Hessian is the DIRECT density-
+%   density term f''(M)=(3/2)u_eff>0 -- STABILISING, Q-independent, diagonal in Q. There
+%   is NO A-independent attractive Fock exchange: the full-operator-norm note's
+%   "sign-unfixed exchange" conflated the bare u<0 with the dressed off-diagonal Hessian,
+%   which uses u_eff>0 (for a local functional Hartree=Fock). The genuine off-diagonal
+%   obstruction is therefore (i) the A-DEPENDENT condensate bubble (Math428, O(A^4),
+%   R_lead<=0.650 class-wide, T-018), and (ii) the beyond-mean-field two-loop int-int G^2
+%   exchange = the sunset third cumulant, governed by SC-SCOPE (cap x1.13,
+%   lifted@thin-certified 2026-06-09). The "b_exch" of T-018 is NOT a new unbounded
+%   scalar. Open RES-5 = the class-wide / beyond-mean-field control for non-enumerated
+%   patterns. No tier flip: B1/B2 T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Local-functional off-diagonal Hessian = (3/2)u_eff
+%        (Q-independent, stabilising, verified to 3.6e-10); Math428 A-dependence +
+%        bands-positive-at-rho=1; reframing of the T-018 exchange residual onto
+%        SC-SCOPE. Grounded by res5_019_exchange_scalar_identification.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+T-018 reduced the full off-diagonal operator-norm residual to a scalar
+$b_{\rm exch}(Q)<b_\ast(Q)$, the E-normalised "Fock exchange" entry, inheriting the
+characterisation from hdiag-full-operator-norm-formulation v1.0: "an A-independent
+exchange block whose sign is not fixed by $u_{\rm eff}>0$". This note IDENTIFIES that
+object precisely and shows it is not a new unbounded residual. Scope: the mean-field
+(Gaussian--Hartree) off-diagonal Hessian at the production anchor $\mu^2=5\times10^{-3}$;
+the reconciliation with Math428's explicit Bloch computation. No tier action.
+
+\section*{2. TECT's interaction is local; the mean-field functional is a density functional}
+
+The TECT action carries a CONTACT quartic ($u=-0.86$) and contact sextic ($v=+3.24$).
+At the Gaussian--Hartree level the interaction free energy is the local density
+functional
+\[
+\Phi[G]=\int_x f\big(M(x)\big),\qquad
+f(M)=\tfrac{3u}{4}M^2+\tfrac{5v}{2}M^3,\qquad M(x)=G(x,x),
+\]
+the Wick factors ($\langle\phi^4\rangle=3G^2$, $\langle\phi^6\rangle=15G^3$) already
+counting all contractions. For a contact interaction the exchange (Fock) integral
+$\int\!\!\int\delta(x-y)G(x,y)^2=\int_x G(x,x)^2$ coincides with the direct (Hartree)
+term: Hartree $=$ Fock, with no separate sign-indefinite exchange at mean-field order.
+
+\section*{3. The off-diagonal Hessian is the stabilising density-density term}
+
+Write $M(x)=M+\sum_{Q\neq0}\rho_Q e^{iQx}$, $\rho_Q=\int_q\delta G(q,q{+}Q)$. The second
+variation of the local functional in the off-diagonal sector is
+\[
+\boxed{\;
+\frac{\delta^2\Phi}{\delta\rho_Q\,\delta\rho_{-Q}}
+= f''(M)=\tfrac{3u}{2}+15vM=\tfrac32\big(u+10vM\big)=\tfrac32 u_{\rm eff}
+\quad\text{(INDEPENDENT of }Q\text{)}\; }
+\]
+which at the anchor is $\tfrac32(2.685)=+4.03>0$. Three consequences:
+(a) it is \emph{Q-independent} (verified numerically to $3.6\times10^{-10}$ over
+$Q=1,\dots,7$): a pure density-density coupling, diagonal in $Q$;
+(b) it is \emph{strictly positive} (STABILISING) -- there is NO A-independent
+attractive Fock exchange;
+(c) it equals the $l=0$ breathing-sector curvature of T-016, the same local-functional
+second derivative $f''(M)$ governing both. The full-operator-norm note's "sign not
+fixed by $u_{\rm eff}>0$" conflated the BARE $u=-0.86<0$ with this DRESSED Hessian,
+which carries $u_{\rm eff}=+2.685>0$.
+
+\section*{4. The genuine off-diagonal obstruction (A-dependent + two-loop)}
+
+With the A-independent exchange shown stabilising, the off-diagonal obstruction is two
+already-tracked objects, NOT a new scalar:
+\begin{itemize}
+\item[(i)] \textbf{A-dependent condensate bubble.} Math428's explicit Bloch computation
+gives the off-diagonal share $-\tfrac14\sum_{Q\neq0}W(Q)^2 B(|Q|)$ with
+$W(Q)=(3u+30vM_R)A^2 p_2(Q)+5vA^4 p_4(Q)$, i.e. $O(A^4)$, condensate-induced,
+diagonal in $Q$, and $R_{\rm lead}$-controlled ($\le0.650$ class-wide, T-018). The
+enumerated Bogoliubov bands are POSITIVE even at the no-resummation-credit value
+$\rho=1$ (minimum $+6.7\times10^{-4}$; calibrated $\rho=0.415$ is a further credit).
+\item[(ii)] \textbf{Beyond-mean-field two-loop exchange.} The genuine non-local
+$\int\!\!\int G(x,y)^2$ exchange appears at TWO LOOPS (the fluctuation/sunset
+correction), i.e. the third cumulant -- exactly the SC-SCOPE object, bounded by the
+sunset cap $\times1.13$ and lifted@thin-certified (2026-06-09).
+\end{itemize}
+Thus the T-018 residual is REFRAMED: not "bound an unbounded A-independent
+$b_{\rm exch}$", but "extend (i) the $R_{\rm lead}$ control and (ii) the SC-SCOPE
+two-loop bound class-wide to non-enumerated patterns" -- the open RES-5.
+
+\section*{5. Status and honest residual}
+
+\textbf{T4 STRONG EVIDENCE (reframing).} Established: for the local interaction the
+A-independent off-diagonal Hessian is $+\tfrac32 u_{\rm eff}>0$ (stabilising,
+Q-independent); there is no A-independent attractive Fock exchange. The off-diagonal
+obstruction is the A-dependent $R_{\rm lead}$-controlled bubble (T-018) plus the
+beyond-mean-field two-loop $=$ SC-SCOPE (thin). \textbf{OPEN (RES-5):} the class-wide
+extension of the resummation $\rho$ and the two-loop bound to non-enumerated patterns
+(Math428 verified the five enumerated readings, positive even at $\rho=1$). Anchored:
+$u_{\rm eff}>0$ is the ROBUSTNESS-MU2 fact ($[\times0.5,\times2]$ closed). No tier flip:
+B2 T6, B1 T6 on $\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``This contradicts the full-operator-norm note's exchange
+residual.''} PARTLY: it CORRECTS the identification. The note's "A-independent Fock
+exchange, sign unfixed" is, for a LOCAL functional, the stabilising density-density
+$+\tfrac32 u_{\rm eff}$; the genuine non-local $\int\!\!\int G^2$ exchange is a two-loop
+(SC-SCOPE) object, not mean-field. The reframing is the value: the residual is
+already-tracked (R\_lead + SC-SCOPE), not a new scalar.
+\item[($\beta$)] \emph{``Hartree=Fock only for a strictly contact interaction.''}
+VALID and used: the TECT quartic/sextic are contact; the kinetic $K_0(q)=c(q^2-q_0^2)^2$
+carries the momentum structure but the INTERACTION vertices are local, so the
+mean-field exchange reduces to the local $\int f(M)$. A non-local interaction would
+reinstate a separate Fock term; TECT's does not.
+\item[($\gamma$)] \emph{``Does this close the off-diagonal norm or flip B1?''}
+DISMISSED: no. The class-wide $\rho$ and the two-loop bound for non-enumerated patterns
+remain open (RES-5). This note removes a MIS-identified residual (the A-independent
+exchange) and routes the real one onto SC-SCOPE; it does not close it. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{Q-independence} -- the off-diagonal Hessian
+deviates from $f''(M)$ by $3.6\times10^{-10}$ over $Q=1\ldots7$ (machine zero, the local
+functional gives a pure $|\rho_Q|^2$ form); \emph{sign} -- $f''(M)=\tfrac32 u_{\rm eff}
+=+4.03>0$ (bare $u=-0.86<0$ is irrelevant; the dressed $u_{\rm eff}>0$ enters);
+\emph{consistency} -- equals the T-016 $l=0$ curvature; \emph{Math428} -- off-diagonal
+$O(A^4)$, bands $+6.7\times10^{-4}>0$ at $\rho=1$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / off-diagonal exchange-scalar identification
+Precise statement:       TECT's interaction is LOCAL, so the mean-field free energy is a
+                         density functional Phi=int f(M(x)), f(M)=(3u/4)M^2+(5v/2)M^3. Its
+                         off-diagonal (Q!=0) Hessian is f''(M)=(3/2)u_eff>0, Q-INDEPENDENT
+                         (verified 3.6e-10): the DIRECT density-density term, STABILISING,
+                         NOT an attractive Fock exchange (for a local functional Hartree=
+                         Fock; the note's "sign-unfixed exchange" conflated bare u<0 with
+                         the dressed u_eff>0). The genuine off-diagonal obstruction is (i)
+                         the A-dependent condensate bubble (Math428, O(A^4), R_lead<=0.650
+                         class-wide; bands +6.7e-4>0 at rho=1) and (ii) the beyond-mean-
+                         field two-loop int-int G^2 exchange = sunset = SC-SCOPE (cap x1.13,
+                         lifted@thin-certified). The T-018 b_exch is NOT a new unbounded
+                         scalar.
+Scope:                   Mean-field (Gaussian-Hartree) off-diagonal Hessian; anchor mu^2=
+                         0.005 (u_eff>0 = ROBUSTNESS-MU2). Class-wide rho + two-loop for
+                         non-enumerated patterns = open RES-5.
+Dependencies:            hdiag-full-operator-norm-formulation (the residual this reframes);
+                         hdiag-offdiag-gershgorin-threshold v1.1 (T-018, R_lead<=0.650);
+                         Math428 (explicit Bloch, O(A^4), rho, bands); isotropy-infimum-core
+                         v1.1 (T-016, f''(M) consistency); SC-SCOPE (two-loop sunset).
+Evidence grade:          ANALYTIC (local-functional Hessian) + EXECUTED
+                         (res5_019_exchange_scalar_identification.py 5/5) + INHERITED
+                         (Math428 bands; SC-SCOPE thin closure).
+Reproduction command:    python codes/vacuum/res5_019_exchange_scalar_identification.py
+Expected output:         f''(M)=(3/2)u_eff=4.03>0, Q-independent (dev 3.6e-10); Math428
+                         band min(rho=1)=+6.7e-4; 5/5 PASS.
+Falsification gate:      A non-local exchange term in the MEAN-FIELD functional (would
+                         reinstate a separate Fock block); or f''(M)<=0 at the anchor
+                         (u_eff<=0, refuted: u_eff=+2.685); or a Math428 band <0 at rho=1.
+Tier before / after:     No tier flip. B2 T6, B1 T6 on {H-LAYER}. The off-diagonal residual
+                         is reframed: the A-independent exchange is stabilising (+3/2 u_eff),
+                         the genuine residual is R_lead (T-018) + the two-loop = SC-SCOPE.
+No-overclaim statement:  Does NOT close the off-diagonal operator norm and does NOT flip
+                         B1/B2. It corrects the IDENTIFICATION of the T-018 residual: the
+                         A-independent exchange is stabilising (no residual), the genuine
+                         residual is the A-dependent R_lead-controlled bubble plus the
+                         beyond-mean-field two-loop = SC-SCOPE (thin). Class-wide extension
+                         to non-enumerated patterns is open RES-5. B1/B2 stay T6.
+Next required action:    Extend (i) the R_lead<1 bound and (ii) the SC-SCOPE two-loop
+                         (sunset) thin closure class-wide to non-enumerated admissible
+                         patterns = the open RES-5; the mean-field A-independent sector is
+                         settled (stabilising).
+\end{verbatim}
+}

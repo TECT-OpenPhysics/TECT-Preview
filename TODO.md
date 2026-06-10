@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 15
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 16
 
 ## Next up
 
@@ -66,3 +66,5 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 15
 - **T-018** H-LAYER residual 2 (off-diagonal operator norm): upgrade R_lead<1 (leading condensate-direction ratio) to the full worst-direction ||O_offdiag||_op<1 (complete Bogoliubov Hessian) for H-diag/RES-1.  _(claim: B2-PROPA-HLAYER; gate: OFFDIAG-OPNORM)_
   - hdiag-offdiag-floor-bound
   - _updated 2026-06-09_
+- **T-019** T-019: off-diagonal exchange-scalar identification (no A-independent Fock exchange; reframe b_exch onto R_lead + SC-SCOPE two-loop)
+  - _updated 2026-06-10_

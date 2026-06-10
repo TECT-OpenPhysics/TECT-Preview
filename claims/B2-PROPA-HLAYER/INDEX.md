@@ -21,7 +21,7 @@
 |---|---|---|---|---|---|
 | `ha0-removal-pathway` | v2.1 | T6 | A-zero uniqueness + zero-at-gap (H-A0's U,Z) derived as a sign-decomposition theorem: F_0'(m) = (1/2) M'(m) g(m) with M'<0 (L1), g strictly decreasin… | ANALYTIC (sign lemmas + theorem) + EXECUTED (… | Write out G-A0-DUI explicitly (close the textbook residual) to discharge H-ANCHOR toward … |
 
-## Prop-A/  ·  8 proof units  ·  tier span T6
+## Prop-A/  ·  9 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -32,6 +32,7 @@
 | `hdiag-offdiag-floor-bound` | v1.0 | T6* | The off-diag Bogoliubov weight is E_+, so the conservative leading condensate-direction ratio is R_lead=const(1+K_floor)I, const=(9/2)u_eff^2 B_max/r… | ANALYTIC + EXACT (K_floor combinatorial) + EX… | The worst-direction operator-norm bound (complete Hessian) and the R-026 constant pin + c… |
 | `hdiag-offdiag-gershgorin-threshold` | v1.1 | T6* | Hess F\|G* = E + B^cond + B^exch. (i) DIAGONALITY LEMMA: Delta F_od = sum_Q f_Q(G_QQ) [independent channels] => B^cond block-diagonal in Q => \|\|B^cond… | ANALYTIC (reduction + diagonality lemma) + EX… | Bound the dressed exchange scalar b_exch(Q) at operating intensity against b_star(Q) = (1… |
 | `isotropy-infimum-core` | v1.1 | T6* | Condensate-free F_0 over the diagonal-Gaussian class. The second variation at G_* is delta^2 F_0 = (1/2) int G_*^-2 (dG)^2 + Phi''_diag (dM_tot)^2. S… | ANALYTIC (exact block-diagonalisation + analy… | Bound the exchange scalar b_exch(Q) at operating intensity (RES-5/GAP-2) -- the single re… |
+| `offdiag-exchange-scalar-identification` | v1.0 | T6* | TECT's interaction is LOCAL, so the mean-field free energy is a density functional Phi=int f(M(x)), f(M)=(3u/4)M^2+(5v/2)M^3. Its off-diagonal (Q!=0)… | ANALYTIC (local-functional Hessian) + EXECUTE… | Extend (i) the R_lead<1 bound and (ii) the SC-SCOPE two-loop (sunset) thin closure class-… |
 | `proposition-a-migration-revalidation` | v1.4 | T6 | Migration batch-1 evidence chain migrated verbatim and re-validated by full re-execution (277/277). | EXECUTED | Migration batch 2 (Math431-HEX chain + Math427/428-432/434/436) for B1 cleanness. |
 
-<!-- generated 2026-06-10T02:20:02Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-10T03:09:17Z by build_index.py v1.0.1 -->
