@@ -6,7 +6,7 @@
 
 Generated: 2026-06-10
 
-**636 artefacts** · superseded versions kept: 62 · machine-readable twin: `verification/catalog.json`
+**639 artefacts** · superseded versions kept: 62 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -28,7 +28,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `487bec41261c` |
-| `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `8018c0e1c32a` |
+| `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `2948abb69d8b` |
 | `claims/B2-PROPA-HLAYER/claim.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `9a00d0dd9814` |
 | `claims/B2-PROPA-HLAYER/lineage-narrative.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `b4ae737eb5d2` |
 | `claims/B2-PROPA-HLAYER/status.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `421c4a78226d` |
@@ -219,6 +219,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/H-A0-removal/notes/ha0-removal-pathway-260606-260606-v2.1.tex.txt` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v2.1 | ACTIVE | `55af1d547697` |
 | `claims/B2-PROPA-HLAYER/H-A0-removal/notes/ha0-removal-pathway-260606-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v1.0 | ACTIVE | `02d4eda6a99c` |
 | `claims/B2-PROPA-HLAYER/H-A0-removal/notes/ha0-removal-pathway-260606-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-06 | 2026-06-06 | v1.0 | SUPERSEDED | `6cf64f6e20da` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/classwide-secondcumulant-stability-260610-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `88093dc5871e` |
+| `claims/B2-PROPA-HLAYER/Prop-A/notes/classwide-secondcumulant-stability-260610-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `c2ccfcc58eb3` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-full-operator-norm-formulation-260609-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `6554c1b20a70` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-full-operator-norm-formulation-260609-v1.0.tex.txt` | B2-PROPA-HLAYER | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `75220c2d5e48` |
 | `claims/B2-PROPA-HLAYER/Prop-A/notes/hdiag-fullcovariance-formulation-260609-v1.0.pdf` | B2-PROPA-HLAYER | 2026-06-09 | 2026-06-09 | v1.0 | ACTIVE | `31c9ec1465cb` |
@@ -488,6 +490,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-016-isotropy-infimum-core/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `0b634ca25d41` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-018-offdiag-gershgorin-threshold/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `1649872ecc04` |
 | `claims/B2-PROPA-HLAYER/runs/260610-res5-019-exchange-scalar-identification/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `3eec969d7a1b` |
+| `claims/B2-PROPA-HLAYER/runs/260610-res5-020-classwide-secondcumulant-stability/result.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `542603c121ec` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260605-gershgorin-reduction/result.json` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | — | ACTIVE | `705268333be1` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-ghat4-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `bc0c5c38b7df` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-joint-endpoint/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `cb2dc5469315` |
@@ -625,10 +628,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `c63c15a73441` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `161e1b169d75` |
-| `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `6413f93fb66d` |
+| `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `990cb64069b8` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `34ae92abd508` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `5ce5890a3fc2` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `8fc31935a63a` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `530912927d07` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `8b5fbc9a4817` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
@@ -657,7 +660,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `3df9279e6880` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `91912ccd3a67` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d34da363e351` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -666,7 +669,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `6961c8900c54` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `7a1e4962e435` |
+| `TODO.md` | — | — | — | — | ACTIVE | `3967970bf355` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -676,7 +679,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `b6164ed7e43a` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `3d9a8ff2af3c` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -715,5 +718,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `a73b730325c2` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `78837571eb9f` |
 

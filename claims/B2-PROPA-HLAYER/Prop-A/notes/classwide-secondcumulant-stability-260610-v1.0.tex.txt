@@ -1,0 +1,166 @@
+% =============================================================================
+% Title: Class-wide second-cumulant off-diagonal stability: the Bogoliubov band
+%        criterion rho*R_lead<1 extends Math428's enumerated readings to the whole
+%        admissible crystallographic class
+% Claim: B2-PROPA-HLAYER (H-diag / RES-1 off-diagonal class-wide stability; bears on B1)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T4 STRONG EVIDENCE. Closes the SECOND-CUMULANT off-diagonal Bogoliubov
+%   stability CLASS-WIDE. The band-positivity criterion is exactly rho*R_lead<1; at
+%   the conservative rho=1 (no resummation credit) it reduces to R_lead<1, which T-018
+%   establishes class-wide (R_lead(Q)=const*(1+K_floor(Q))*I <= 23.2*(1+13)*2e-3=0.650
+%   for every admissible competitor, via the K_floor<=T'<=13 pin). Hence rho*R_lead<=
+%   0.650<1 class-wide (margin x1.54), extending Math428's five enumerated readings
+%   (positive bands even at rho=1, min +6.7e-4) to ALL admissible patterns. The
+%   screening resummation rho=1/(1+g)<=1 (g>=0, stable disordered parent) only improves
+%   it (rho*R_lead<=0.32). Anchored: u_eff>0 + g>=0 = ROBUSTNESS-MU2. The beyond-second-
+%   cumulant third cumulant is the SC-SCOPE object (sunset cap x1.13,
+%   lifted@thin-certified 2026-06-09), a thin separate residual; and the competitor
+%   class = crystallographic-shell subsets is an operator/modeling item. No tier flip:
+%   B1/B2 T6 on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Band criterion rho*R_lead<1; rho=1 class-wide
+%        R_lead<=0.650<1 (T-018); screening rho<=1 credit; Math428 enumerated
+%        consistency. Grounded by res5_020_classwide_secondcumulant_stability.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+T-019 reframed the off-diagonal residual onto two already-tracked objects: the
+A-dependent condensate bubble ($R_{\rm lead}$-controlled) and the beyond-mean-field
+two-loop $=$ SC-SCOPE. This note closes the first one CLASS-WIDE at second cumulant.
+Math428 verified the off-diagonal Bogoliubov band positive for five ENUMERATED
+readings; here the verdict is extended to every admissible crystallographic-shell
+competitor through the exact band criterion and the T-018 class bound on $R_{\rm
+lead}$. Scope: second-cumulant off-diagonal stability at the operating endpoint
+$I=2\times10^{-3}$, anchor $\mu^2=5\times10^{-3}$. The third cumulant (SC-SCOPE) is
+separate; the competitor-class definition is an operator item.
+
+\section*{2. The band-positivity criterion}
+
+From Math428 the condensate off-diagonal free-energy share is
+\[
+\Delta F_{\rm est}(A)=\Delta F_{\rm diag}(A)+\rho\Big[-\tfrac14\sum_{Q\neq0}W(Q)^2 B(|Q|)\Big],
+\qquad W(Q)\propto A^2,
+\]
+with $\rho$ the exact/second-order resummation ratio. The Bogoliubov band is positive
+iff $\Delta F_{\rm est}>0$, i.e.\ $\Delta F_{\rm diag}>\rho\cdot\tfrac14\sum W^2 B$:
+\[
+\boxed{\ \Delta F_{\rm est}>0\iff \rho\,R_{\rm lead}<1,\qquad
+R_{\rm lead}=\frac{\tfrac14\sum_{Q\neq0}W^2 B}{\Delta F_{\rm diag}}\ }
+\]
+the band sign is governed by the single product $\rho\,R_{\rm lead}$ (verified: the
+band proxy $1-\rho R_{\rm lead}$ is $>0$ at product $0.5$, $<0$ at $1.5$, $=0$ at $1$).
+
+\section*{3. At $\rho=1$: class-wide reduction to $R_{\rm lead}<1$}
+
+The conservative no-resummation-credit value $\rho=1$ (explicitly reported by Math428)
+gives the criterion $R_{\rm lead}<1$. T-018 pins $R_{\rm lead}$ over the admissible
+class via the floor identity
+\[
+R_{\rm lead}(Q)=\mathrm{const}\,(1+K_{\rm floor}(Q))\,I,\quad
+\mathrm{const}=\tfrac94\tfrac{u_{\rm eff}^2 B_{\max}N}{c_{\rm diag}}=23.2,\quad
+K_{\rm floor}(Q)\le T'(Q)\le13,
+\]
+so for EVERY admissible competitor
+\[
+R_{\rm lead}(Q)\ \le\ 23.2\,(1+13)\,(2\times10^{-3})\ =\ 0.650\ <\ 1
+\qquad(\text{margin }\times1.54).
+\]
+Therefore $\rho\,R_{\rm lead}\le1\cdot0.650<1$ at $\rho=1$: the second-cumulant
+off-diagonal bands are POSITIVE class-wide. This extends Math428's five enumerated
+readings (band min $+6.7\times10^{-4}>0$ at $\rho=1$) to all admissible patterns by
+the same criterion.
+
+\section*{4. The screening resummation is a credit ($\rho\le1$)}
+
+The resummation ratio is $\rho=1/(1+g)$ with $g\ge0$ the screened-response coupling of
+the stable disordered parent (screening, not anti-screening). Hence $\rho\le1$ and the
+$\rho=1$ bound is conservative. With the Math428-consistent $g=1.03$,
+$\rho=0.493$ and $\rho\,R_{\rm lead}\le0.32$ -- a further $\times3$ margin. The
+class-wide stability does not rely on the resummation credit; $\rho=1$ already closes it.
+
+\section*{5. Status and honest residual}
+
+\textbf{T4 STRONG EVIDENCE.} The second-cumulant off-diagonal Bogoliubov stability is
+established CLASS-WIDE: $\rho R_{\rm lead}\le0.650<1$ for every admissible
+crystallographic competitor (at $\rho=1$; the screening $\rho\le1$ improves it).
+\textbf{OPEN (separate residuals):} (i) the beyond-second-cumulant third cumulant
+$=$ SC-SCOPE (sunset cap $\times1.13$, lifted@thin-certified) -- thin but distinct;
+(ii) the competitor-class definition (crystallographic-shell subsets up to
+$n_{\rm pack}$) -- an operator/modeling item. Anchored: $u_{\rm eff}>0$, $g\ge0$
+(ROBUSTNESS-MU2, $[\times0.5,\times2]$ closed). No tier flip: B2 T6, B1 T6 on
+$\{$H-LAYER$\}$.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$\rho\le1$ is assumed, not proved class-wide.''}
+MITIGATED: the load-bearing statement uses $\rho=1$ (Math428's explicit conservative
+value), where the criterion is just $R_{\rm lead}<1$ -- NO assumption on $\rho$. The
+$\rho\le1$ screening claim is only used to note the further $\times3$ margin, not for
+the closure.
+\item[($\beta$)] \emph{``$R_{\rm lead}\le0.650$ is the operating-intensity bound; the
+mid-window (larger $A$) ratio is larger.''} VALID-with-scope: the PHYSICAL competitor
+sits at the operating endpoint ($A_{\rm op}\sim0.013$, small); Math428 separately
+verified positivity across $A$ for the enumerated readings. The class-wide statement is
+made at the operating intensity, where $R_{\rm lead}\le0.650$, which is the relevant
+regime for the Reading-H selection.
+\item[($\gamma$)] \emph{``Does this close H-diag / flip B1?''} DISMISSED: no. It closes
+the SECOND-CUMULANT off-diagonal stability class-wide; the third cumulant (SC-SCOPE) and
+the competitor-class definition remain. B1/B2 stay T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{criterion} -- band sign $=\mathrm{sign}
+(1-\rho R_{\rm lead})$, verified at products $0.5/1.0/1.5$; \emph{class bound} --
+$R_{\rm lead}\le23.2\cdot14\cdot2\times10^{-3}=0.650<1$ ($\times1.54$); \emph{screening}
+-- $\rho=1/(1+1.03)=0.493\le1$, product $0.32$; \emph{consistency} -- Math428 enumerated
+band $+6.7\times10^{-4}>0$ at $\rho=1$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / class-wide second-cumulant off-diagonal
+                         stability (rho*R_lead<1)
+Precise statement:       The off-diagonal Bogoliubov band Delta F_est = Delta F_diag -
+                         rho*(1/4)sum W^2 B is positive iff rho*R_lead<1, R_lead=
+                         [(1/4)sum W^2 B]/Delta F_diag. At rho=1 (no resummation credit)
+                         the criterion is R_lead<1; T-018 gives R_lead(Q)=const*(1+
+                         K_floor(Q))*I <= 23.2*(1+13)*2e-3 = 0.650 < 1 for every
+                         admissible competitor (K_floor<=T'<=13 pin). Hence rho*R_lead<=
+                         0.650<1 class-wide (margin x1.54), extending Math428's five
+                         enumerated readings (band min +6.7e-4 at rho=1) to ALL
+                         admissible crystallographic patterns. Screening rho=1/(1+g)<=1
+                         (g=1.03>=0) improves it (product 0.32).
+Scope:                   Second-cumulant off-diagonal stability; operating endpoint
+                         I=2e-3; anchor mu^2=0.005. Third cumulant = SC-SCOPE (separate);
+                         competitor class = operator item.
+Dependencies:            hdiag-offdiag-gershgorin-threshold v1.1 (T-018, R_lead class
+                         bound); offdiag-exchange-scalar-identification (T-019, residual
+                         reframing); Math428 (band criterion, rho, enumerated bands);
+                         res-endpoint-admissible-pin (T'<=13).
+Evidence grade:          ANALYTIC (band criterion + class bound) + EXECUTED
+                         (res5_020_classwide_secondcumulant_stability.py 5/5) +
+                         INHERITED (Math428 enumerated bands).
+Reproduction command:    python codes/vacuum/res5_020_classwide_secondcumulant_stability.py
+Expected output:         rho*R_lead^class (rho=1) = 0.650 < 1 (margin x1.54); screened
+                         0.32; 5/5 PASS.
+Falsification gate:      An admissible competitor with R_lead>=1 at the operating
+                         intensity (would require K_floor>T'=13, refuted by the pin); or
+                         a Math428 band <0 at rho=1 (refuted: +6.7e-4); or anti-screening
+                         rho>1 (would require g<0, an unstable parent).
+Tier before / after:     No tier flip. B2 T6, B1 T6 on {H-LAYER}. Second-cumulant
+                         off-diagonal stability extended from 5 enumerated readings to
+                         the whole admissible class.
+No-overclaim statement:  Closes only the SECOND-CUMULANT off-diagonal stability
+                         class-wide. Does NOT close H-diag and does NOT flip B1/B2. The
+                         third cumulant (SC-SCOPE, thin) and the competitor-class
+                         definition remain. Anchored (u_eff>0, g>=0 = ROBUSTNESS-MU2).
+Next required action:    The remaining H-diag residual is the beyond-second-cumulant
+                         third cumulant = SC-SCOPE (thin, lifted) extended class-wide,
+                         plus the operator competitor-class definition. With this note
+                         the A-dependent off-diagonal bubble is class-wide stable.
+\end{verbatim}
+}

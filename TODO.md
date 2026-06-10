@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 16
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 17
 
 ## Next up
 
@@ -67,4 +67,6 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 16
   - hdiag-offdiag-floor-bound
   - _updated 2026-06-09_
 - **T-019** T-019: off-diagonal exchange-scalar identification (no A-independent Fock exchange; reframe b_exch onto R_lead + SC-SCOPE two-loop)
+  - _updated 2026-06-10_
+- **T-020** T-020: class-wide second-cumulant off-diagonal stability (rho*R_lead<1; extends Math428 to all admissible)
   - _updated 2026-06-10_

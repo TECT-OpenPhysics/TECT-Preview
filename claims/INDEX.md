@@ -19,7 +19,7 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | Claim | Tier | Hypotheses | Open gates | Sub-proofs (proof-unit count) | Detail |
 |---|---|---|---|---|---|
 | `B1-RH-ENUM` | T6 | H-LAYER | — | ESTIMATOR-UPGRADE (24), ROBUSTNESS-MU2 (3), Reading-H (3), enumerated (4), near-gap (3) | [INDEX](B1-RH-ENUM/INDEX.md) |
-| `B2-PROPA-HLAYER` | T6 | H-LAYER | STEP-5B | G-A0-DUI (1), H-A0-removal (1), Prop-A (9) | [INDEX](B2-PROPA-HLAYER/INDEX.md) |
+| `B2-PROPA-HLAYER` | T6 | H-LAYER | STEP-5B | G-A0-DUI (1), H-A0-removal (1), Prop-A (10) | [INDEX](B2-PROPA-HLAYER/INDEX.md) |
 | `B3-BCC-STRUCT` | T4 | — | G3PB-III | _scaffold (no notes yet)_ | — |
 | `B4-MASS-GAP` | T5 | — | — | _scaffold (no notes yet)_ | — |
 | `B5-BEYOND-LAYER-BOUND` | T5 | — | — | DR-2 (9), H-LAYER-AUX (5), SC-SCOPE (7), STEP-5B (8), T5-DOSSIER (1) | [INDEX](B5-BEYOND-LAYER-BOUND/INDEX.md) |
@@ -65,4 +65,4 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `F2-BARYOGENESIS` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 | `F3-INFLATION-CMB` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 
-<!-- generated 2026-06-10T03:09:17Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-10T04:36:03Z by build_index.py v1.0.1 -->
