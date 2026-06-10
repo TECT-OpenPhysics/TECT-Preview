@@ -1,0 +1,53 @@
+{
+  "script": "res5_021_scscope_classwide_endpoint.py",
+  "version": "1.0.0",
+  "K_budget": 266.6833017374813,
+  "rho_crit": 4.346538461538463,
+  "Tprime_crit": 60.35533001658713,
+  "joint_Tp13_endpoint": 1.0974461534358422,
+  "mu_band": {
+    "0.00250": 1.0952869333878654,
+    "0.00354": 1.096212854933422,
+    "0.00500": 1.0974461534358422,
+    "0.00707": 1.0990747510466568,
+    "0.01000": 1.1011739710370985
+  },
+  "worst_mu_band": 1.0952869333878654,
+  "I_sweep": {
+    "4.0e-04": 1.1285989817275779,
+    "1.0e-03": 1.121448900233609,
+    "1.5e-03": 1.1112023669085436,
+    "2.0e-03": 1.0974461534358422
+  },
+  "S": 1.13,
+  "RMAX": 0.385,
+  "verdict": "T-021: SC-SCOPE 3rd-cumulant endpoint CLASS-WIDE. joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S] (MARGIN cancels); joint>1 <=> rho_lat>4.35 <=> T'<60.4 (K_budget=267 pattern-indep). T-017 T'<=13<60.4 => joint>=x1.0953 class-wide (worst mu^2-band), endpoint thinnest. Inherits thin-certified R_max=0.385 + T-017 pin + competitor-class (operator). STRONG EVIDENCE, no tier flip.",
+  "claims": [
+    {
+      "name": "joint_reduces_to_rho_lat_crit_4p35",
+      "passed": true,
+      "detail": "(certified joint = MARGIN/(C_2+C_sunset+C_quartic); MARGIN CANCELS => joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S], monotone in rho_lat, saturating at S=1.13. joint=1 at rho_crit=4.347; joint(6.55)=x1.0403>1 reproduces the certified endpoint. R_max=0.385 (Parseval-pinned), S=1.13 sunset)"
+    },
+    {
+      "name": "critical_Tprime_above_admissible_pin",
+      "passed": true,
+      "detail": "(rho_lat=K_budget/(1+T'), K_budget=267 pattern-independent (mu^2/I only); joint>1 <=> T'<K_budget/rho_crit-1 = 60.4. The competitor enters ONLY through its additive-energy richness T')"
+    },
+    {
+      "name": "Tprime_pin_closes_classwide",
+      "passed": true,
+      "detail": "(T-017 pins T'<=13 over the admissible class; 13<60.4 => joint(T'=13)=x1.0974>1 at the operating endpoint, margin x4.6 in T'-space. The thin x1.040 lift was the conservative T'=n_pack=40.7 estimate; the actual admissible class gives x1.097)"
+    },
+    {
+      "name": "robust_mu2_band_and_I_sweep",
+      "passed": true,
+      "detail": "(mu^2-band [x0.5,x2] at endpoint, T'=13: worst joint x1.0953>1 (ROBUSTNESS-MU2); I-sweep: endpoint I=2e-3 is the thinnest (x1.0974), rising to x1.1286 at I=4e-4. Class-wide closure holds across the certified band)"
+    },
+    {
+      "name": "quantitative_sanity_scscope_classwide",
+      "passed": true,
+      "detail": "(joint saturates at x1.130=S as rho->inf (sunset cap); monotone (joint(4.0)=x0.990<1<joint(5.0)=x1.015); critical T'=60.4>13 pin. Inherits thin-certified R_max=0.385 + T-017 pin + competitor-class (operator item). No tier flip B1/B2 T6)"
+    }
+  ],
+  "all_pass": true
+}

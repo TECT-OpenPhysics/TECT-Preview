@@ -1,0 +1,199 @@
+% =============================================================================
+% Title: H-LAYER analytic closure: a consolidation of the T-016 to T-021 arc, and
+%        the formalisation of the single remaining operator item (the admissible
+%        competitor class)
+% Claim: B2-PROPA-HLAYER (H-LAYER analytic core; consolidates B1-RH-ENUM, B5-BEYOND-LAYER-BOUND)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: CONSOLIDATION / MILESTONE (no new claim; records the arc). The T-016 to
+%   T-021 arc closes every ANALYTIC H-LAYER residual CLASS-WIDE, at the operating
+%   endpoint and over the ROBUSTNESS-MU2 band. This note gathers the arc in one
+%   place and formalises the single remaining item -- the admissible competitor
+%   class -- as a precise object for operator sign-off. It does NOT flip B1/B2:
+%   those remain T6 on {H-LAYER}; the re-tier is the operator decision, and the
+%   closures inherit thin-certified grades (R_max=0.385, sunset S=1.13) and named
+%   pins (T-017 T'<=13), not re-derived here. Anchored (u_eff>0, g>=0 on
+%   [x0.5,x2]).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Consolidates T-016/017/018/019/020/021;
+%        formalises the admissible competitor class. No new numerical claim;
+%        every figure is cited to its source note + script.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+B1-RH-ENUM (the Reading-H enumerated selection) and B2-PROPA-HLAYER (Proposition A)
+rest, after the SC-SCOPE lift (2026-06-09), on the SOLE hypothesis H-LAYER: the
+isotropic Gaussian--Hartree variational layer is the comparison infimum. H-LAYER's
+open content was STEP-5B -- the beyond-diagonal, beyond-second-cumulant refinements
+for NON-enumerated patterns. The T-016 to T-021 arc closes those refinements
+class-wide. This note is a chronicle + status consolidation (in the style of the
+SC-SCOPE and DR-2 programme consolidations); it introduces no new result and
+formalises the one remaining operator item. Scope: operating endpoint
+$I=2\times10^{-3}$, anchor $\mu^2=5\times10^{-3}$, ROBUSTNESS-MU2 band
+$[\times0.5,\times2]$.
+
+\section*{2. The H-LAYER decomposition}
+
+The isotropic layer is the infimum iff no admissible competitor lowers the free
+energy. The comparison splits into:
+\begin{itemize}
+\item[(D)] \textbf{Diagonal sector} -- is the isotropic dressing the diagonal-class
+minimum? (Math427; H-diag.)
+\item[(O)] \textbf{Off-diagonal sector} -- can an off-diagonal (Bloch) covariance
+lower $F$? (RES-1; the condensate-induced Bogoliubov bands.)
+\item[(S)] \textbf{Selection floor} -- does the STEP-5B layer-margin survive the
+third-cumulant endpoint correction for all competitors? (SC-SCOPE; the additive-
+energy floor $K_{\rm floor}\le T'$.)
+\end{itemize}
+
+\section*{3. The arc (T-016 to T-021)}
+
+\begin{itemize}
+\item[\textbf{T-016}] (isotropy-infimum-core v1.1) \emph{Diagonal (D).} The
+condensate-free Hessian is BLOCK-DIAGONAL in angular momentum: the rotation-invariant
+interaction curves only the $l=0$ breathing sector ($\Phi''_{\rm diag}=\tfrac32
+u_{\rm eff}=+4.03>0$); every $l\ge1$ sector sees the entropy Hessian
+$\tfrac12 G_*^{-2}\ge\tfrac12 r_R^2=4.64\times10^{-2}>0$ (ANALYTIC infimum at the gap
+shell). The isotropic dressing is a STRICT, curvature-protected diagonal minimum.
+\item[\textbf{T-017}] (res5-chi-link-bypass v1.1) \emph{Selection floor (S).} The
+weighted Lemma A (Cauchy--Schwarz, $r(t)\le T'$ for $t\ne0$) gives
+$K_{\rm floor}(c)=\sum_{t\ne0}w_t^2/I^2\le T'(Q)$ for ANY amplitudes -- the
+$\chi(P)$ carrier-richness link is BYPASSED. With the admissible pin $\max_Q T'=13$,
+$K_{\rm floor}\le13<20.5<26.2$ class-wide.
+\item[\textbf{T-018}] (hdiag-offdiag-gershgorin-threshold v1.1) \emph{Off-diagonal
+(O).} The condensate block $B^{\rm cond}$ is DIAGONAL in $Q$ (independent channels),
+so $\|E^{-1/2}B^{\rm cond}E^{-1/2}\|=\max$-channel ratio $=R_{\rm lead}(Q)\le0.650$
+class-wide ($R_{\rm lead}=23.2(1+K_{\rm floor})I$, $K_{\rm floor}\le T'\le13$).
+\item[\textbf{T-019}] (offdiag-exchange-scalar-identification v1.0) \emph{Off-diagonal
+(O).} For TECT's LOCAL interaction there is NO A-independent attractive Fock
+exchange: the mean-field off-diagonal Hessian is the stabilising density-density
+term $+\tfrac32 u_{\rm eff}>0$ (Hartree$=$Fock for a local functional). The genuine
+off-diagonal obstruction is the A-dependent bubble (T-018) + the beyond-mean-field
+two-loop $=$ SC-SCOPE.
+\item[\textbf{T-020}] (classwide-secondcumulant-stability v1.0) \emph{Off-diagonal
+(O).} The Bogoliubov band is positive iff $\rho\,R_{\rm lead}<1$; at $\rho=1$
+(no-credit) this is $R_{\rm lead}<1$, class-wide $\le0.650$ (T-018). The screening
+$\rho\le1$ improves it. Second-cumulant off-diagonal stability is CLASS-WIDE.
+\item[\textbf{T-021}] (scscope-classwide-endpoint v1.0) \emph{Selection floor (S).}
+The certified joint reduces (MARGIN-cancellation) to $\mathrm{joint}(\rho_{\rm lat})$,
+monotone, with $\mathrm{joint}>1\iff\rho_{\rm lat}>4.347\iff T'<60.4$. The pin
+$T'\le13<60.4$ closes the SC-SCOPE third-cumulant endpoint class-wide
+($\mathrm{joint}\ge\times1.095$ over the $\mu^2$-band).
+\end{itemize}
+
+\section*{4. Final analytic status}
+
+\[
+\boxed{\;
+\begin{array}{ll}
+\text{(D) diagonal isotropy} & \text{STRICT minimum, analytic (T-016)}\\
+\text{(O) off-diag, A-independent} & \text{stabilising }+\tfrac32 u_{\rm eff}\text{ (T-019)}\\
+\text{(O) off-diag, A-dependent, 2nd cumulant} & \text{class-wide stable }\rho R_{\rm lead}\le0.650\text{ (T-018,020)}\\
+\text{(S) floor } K_{\rm floor}\le T'\le13 & \text{any amplitudes (T-017)}\\
+\text{(S) SC-SCOPE 3rd cumulant} & \text{class-wide }\mathrm{joint}\ge\times1.095\ (T'<60.4)\text{ (T-021)}\\
+\hline
+\text{remaining} & \text{operator competitor-class definition}
+\end{array}\;}
+\]
+Every analytic H-LAYER residual identified in the arc is closed CLASS-WIDE within
+the admissible crystallographic class, at the operating endpoint, over
+$[\times0.5,\times2]$.
+
+\section*{5. The remaining item, formalised (for operator sign-off)}
+
+The closures quantify over the \emph{admissible competitor class} $\mathcal A_{\rm adm}$.
+Formalised:
+\[
+\mathcal A_{\rm adm}=\Bigl\{\,Q\subset\Lambda\cap\{|x|^2=R\}\ :\
+|Q|\le n_{\rm pack},\ \text{pairwise } \angle(k_i,k_j)\ge\theta_{\min}(\hat r)\,\Bigr\},
+\]
+i.e.\ finite subsets of crystallographic momentum-shell lattice points (rational shell
+$\Lambda\cap\{|x|^2=R\}$), bounded by the packing $n_{\rm pack}=40.7$ and the
+coherence-resolution separation $\theta_{\min}$ (H-ADM-COH, discharged@lattice via
+R-026/R-027/R-028). On $\mathcal A_{\rm adm}$ the sum-circle richness satisfies
+$T'(Q)\le13$ (T-017 pin) and the arc closes. \textbf{The operator item} is the
+COMPLETENESS of $\mathcal A_{\rm adm}$: that every physically relevant B1 Reading-H
+competitor lies in $\mathcal A_{\rm adm}$ (crystallographic, separated, $\le n_{\rm
+pack}$). This is a MODELLING statement, not an analytic estimate; its sign-off (or a
+refined definition) is the operator decision. Its falsification: a physical competitor
+OUTSIDE $\mathcal A_{\rm adm}$ (non-lattice, sub-$\theta_{\min}$, or super-packing)
+that lowers $F$ below the isotropic layer.
+
+\section*{6. Path to a re-tier (operator decision)}
+
+If the operator signs off on $\mathcal A_{\rm adm}$ completeness, the H-LAYER
+hypothesis becomes a PROVED-class statement on $\mathcal A_{\rm adm}$ (analytic
+residuals discharged), and B1/B2 may be re-examined for a tier move from T6
+CONDITIONAL on $\{$H-LAYER$\}$. The re-tier still inherits: (i) the thin-certified
+$R_{\max}=0.385$ (Parseval-pinned quartic) and sunset $S=1.13$; (ii) the T-017
+$T'\le13$ pin; (iii) the anchoring $u_{\rm eff}>0$, $g\ge0$ on $[\times0.5,\times2]$.
+These are STRONG-EVIDENCE / thin-certified, not unconditional theorems, so the
+honest ceiling for B1/B2 after sign-off is a NAMED-HYPOTHESIS-REDUCED T6 (H-LAYER
+$\to$ $\mathcal A_{\rm adm}$-completeness + the inherited grades), NOT an
+unconditional T7. No tier flip is enacted here.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``This claims H-LAYER is closed.''} CALIBRATED: it claims the
+ANALYTIC residuals are class-wide closed; the competitor-class completeness (a
+modelling statement) and the inherited thin grades remain. The status box (\S4)
+separates the closed analytic rows from the remaining operator row.
+\item[($\beta$)] \emph{``The closures are anchored / thin.''} ACKNOWLEDGED: every row
+inherits the operating-endpoint scope and the ROBUSTNESS-MU2 band; SC-SCOPE inherits
+the thin $R_{\max}$ certificate. The consolidation does not upgrade any grade; it
+records them.
+\item[($\gamma$)] \emph{``Does this flip B1/B2?''} DISMISSED: no. \S6 states the
+re-tier is the operator decision and is ceilinged at a hypothesis-reduced T6, not T7.
+B1/B2 stay T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{(D)} $\Phi''_{\rm diag}=4.03>0$, entropy
+$\ge4.64\times10^{-2}$; \emph{(O)} $R_{\rm lead}\le0.650<1$, $+\tfrac32 u_{\rm eff}>0$;
+\emph{(S)} $T'\le13<60.4$, $\mathrm{joint}\ge\times1.095$; \emph{scope} -- operating
+endpoint, $[\times0.5,\times2]$; all figures cited to T-016..T-021.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-LAYER analytic-closure consolidation
+Precise statement:       The T-016..T-021 arc closes every ANALYTIC H-LAYER residual
+                         class-wide: (D) diagonal isotropy strict minimum (T-016); (O)
+                         no A-independent Fock exchange, +3/2 u_eff stabilising (T-019),
+                         A-dependent 2nd-cumulant stability rho*R_lead<=0.650 class-wide
+                         (T-018,020); (S) K_floor<=T'<=13 any amplitudes (T-017), SC-SCOPE
+                         3rd-cumulant endpoint joint>=x1.095 (T'<60.4) class-wide (T-021).
+                         Remaining = operator competitor-class definition: A_adm =
+                         crystallographic-shell subsets, separated, <= n_pack, on which
+                         T'<=13. Completeness of A_adm is a modelling sign-off, not an
+                         analytic estimate.
+Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 [x0.5,x2]. Consolidation
+                         (no new claim). Inherits thin-certified R_max=0.385 + sunset S=1.13
+                         + T-017 pin.
+Dependencies:            isotropy-infimum-core v1.1 (T-016); res5-chi-link-bypass v1.1
+                         (T-017); hdiag-offdiag-gershgorin-threshold v1.1 (T-018);
+                         offdiag-exchange-scalar-identification v1.0 (T-019);
+                         classwide-secondcumulant-stability v1.0 (T-020);
+                         scscope-classwide-endpoint v1.0 (T-021).
+Evidence grade:          CONSOLIDATION (cites executed results T-016..T-021, each 3-6/6).
+Reproduction command:    (per-row) see the cited note's script; this note adds no compute.
+Falsification gate:      A physical B1 competitor OUTSIDE A_adm (non-lattice, sub-theta_min,
+                         or super-n_pack) lowering F below the isotropic layer; or a
+                         re-opened analytic row (any of D/O/S above).
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. Records that the
+                         analytic H-LAYER residuals are class-wide closed; the re-tier is
+                         the operator competitor-class decision, ceilinged at a hypothesis-
+                         reduced T6 (NOT T7).
+No-overclaim statement:  Does NOT flip B1/B2 and does NOT claim unconditional closure. The
+                         analytic residuals are class-wide closed; the competitor-class
+                         completeness (modelling) and the inherited thin-certified grades
+                         (R_max, sunset, T-017 pin, anchoring) remain. B1/B2 stay T6.
+Next required action:    OPERATOR: sign off on (or refine) the admissible competitor class
+                         A_adm completeness. On sign-off, B1/B2 may be re-examined for a
+                         hypothesis-reduced T6 (H-LAYER -> A_adm-completeness + inherited
+                         grades).
+\end{verbatim}
+}

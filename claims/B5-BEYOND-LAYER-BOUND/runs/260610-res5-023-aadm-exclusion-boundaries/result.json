@@ -1,0 +1,43 @@
+{
+  "script": "res5_023_aadm_exclusion_boundaries.py",
+  "version": "1.0.0",
+  "theta_min": 0.6271626708714073,
+  "n_pack": 40.67799894732885,
+  "c_ind": 32.500927819043206,
+  "MARGIN": 0.00432001083939389,
+  "coherence_margin_ratio": 33.22990395417785,
+  "boundaries": {
+    "sub_theta_min": "DERIVED (coherence lemma, x33 endpoint)",
+    "super_n_pack": "DERIVED (spherical packing pigeonhole)",
+    "non_lattice": "MODELLING (crystalline order) + DR-2 decoupling fallback (R-022 T6-cond/R-023 T4)"
+  },
+  "verdict": "T-023: 2 of 3 A_adm exclusion boundaries are physically DERIVED (sub-theta_min coherence-indistinguishability x33; super-n_pack packing); 1 is a MODELLING input (crystalline order, softened by the DR-2 decoupling fallback T'<<N^eps). The operator sign-off reduces to the single crystalline-order assumption. No tier flip (B1/B2 T6, B5 T5).",
+  "claims": [
+    {
+      "name": "boundary1_sub_theta_min_derived",
+      "passed": true,
+      "detail": "(sub-theta_min restructuring |F[P']-F[P]| <= c_ind I^2 = 32.5*0.002^2 = 1.30e-04; MARGIN/shift = x33 (lemma's x33 at the endpoint; x898/x139 at 4e-4/1e-3). Sub-resolution modes are absorbed into the Gaussian sea, NOT distinct competitors -- DERIVED exclusion, not an assumption)"
+    },
+    {
+      "name": "boundary2_super_npack_derived",
+      "passed": true,
+      "detail": "(spherical packing: at most 16/theta_min^2 = 40.7 = n_pack modes fit with pairwise separation >= theta_min; > n_pack modes => a pair < theta_min (pigeonhole) => reduces to Boundary 1. DERIVED exclusion (geometric packing), not an assumption)"
+    },
+    {
+      "name": "boundary3_nonlattice_modelling_with_fallback",
+      "passed": true,
+      "detail": "(non-lattice/arbitrary-Q: the EXACT T'<=13 pin uses R-026 (circle-divisor, T7, lattice-only); arbitrary-Q still carries T'<<_eps N^eps via DR-2 decoupling R-022 (T6 cond. Bourgain-Demeter) / affine-invariance R-023 (T4). So non-lattice is CONTROLLED at a weaker grade, off the critical path. The crystalline-order restriction is the genuine MODELLING input -- the ONE remaining sign-off item -- softened by this fallback)"
+    },
+    {
+      "name": "aadm_signoff_reduced_to_one_assumption",
+      "passed": true,
+      "detail": "(of the 3 A_adm exclusion boundaries, 2 are physically DERIVED (sub-theta_min coherence lemma; super-n_pack packing) and 1 is a MODELLING input (crystalline order, with the decoupling fallback). The operator sign-off therefore reduces from 'is A_adm complete?' to the single 'is the ground state crystalline?' assumption -- a sharpened, smaller object)"
+    },
+    {
+      "name": "quantitative_sanity_aadm",
+      "passed": true,
+      "detail": "(theta_min=0.627 rad in (0.5,0.8); n_pack=40.7; c_ind=32.5; coherence margin x33>33. Two boundaries derived, one modelling+fallback. No tier flip: B1/B2 T6, B5 T5)"
+    }
+  ],
+  "all_pass": true
+}

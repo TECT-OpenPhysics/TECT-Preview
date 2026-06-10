@@ -1,0 +1,155 @@
+% =============================================================================
+% Title: Refining the admissible competitor class A_adm: two of three exclusion
+%        boundaries are physically derived, reducing the operator sign-off to the
+%        single crystalline-order assumption
+% Claim: B5-BEYOND-LAYER-BOUND (A_adm definition; H-LAYER scope; bears on B1, B2)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T4 STRONG EVIDENCE. Examines the three exclusion boundaries of the
+%   admissible competitor class A_adm (sub-theta_min, super-n_pack, non-lattice)
+%   case by case, ahead of the operator completeness sign-off. Two are physically
+%   DERIVED (not assumptions): sub-theta_min modes are absorbed into the Gaussian
+%   sea by the coherence-indistinguishability lemma (|F[P']-F[P]| <= c_ind I^2 =
+%   MARGIN/33 at the endpoint), and super-n_pack configurations reduce to
+%   sub-theta_min by the spherical packing bound (n_pack=16/theta_min^2=40.7). The
+%   third, the non-lattice (crystalline-order) restriction, is the genuine
+%   MODELLING input -- but it is softened: arbitrary-Q competitors still carry a
+%   subpolynomial additive-energy bound T'<<_eps N^eps via DR-2 decoupling
+%   (R-022 T6-cond / R-023 T4), off the critical path. The operator sign-off
+%   therefore reduces from "is A_adm complete?" to the single "is the ground state
+%   crystalline?" assumption. No tier flip: B1/B2 T6 on {H-LAYER}, B5 T5.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Three exclusion boundaries graded; 2 derived,
+%        1 modelling+fallback. Grounded by res5_023_aadm_exclusion_boundaries.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The H-LAYER analytic-closure consolidation (hlayer-analytic-closure-consolidation
+v1.0) reduced the remaining H-LAYER item to the COMPLETENESS of the admissible
+competitor class
+\[
+\mathcal A_{\rm adm}=\Bigl\{\,Q\subset\Lambda\cap\{|x|^2=R\}\ :\
+|Q|\le n_{\rm pack},\ \angle(k_i,k_j)\ge\theta_{\min}\,\Bigr\},
+\]
+flagged as a modelling sign-off. Operator directive (2026-06-10): refine/strengthen
+$\mathcal A_{\rm adm}$ before sign-off by examining each exclusion boundary. This
+note grades the three boundaries; two are physically derived, leaving a single
+modelling assumption. Scope: operating endpoint $I=2\times10^{-3}$, anchor
+$\mu^2=5\times10^{-3}$.
+
+\section*{2. Boundary 1 -- sub-$\theta_{\min}$ (DERIVED)}
+
+The coherence resolution is $\theta_{\min}=\sqrt{\hat r}/(2q_0^2\sqrt C)=0.627$ rad;
+spectral mass at finer angular scales is not resolved as distinct Bragg peaks. The
+coherence-indistinguishability lemma (H-LAYER-AUX, AddC) bounds any sub-resolution
+restructuring $P\to P'$:
+\[
+|F[P']-F[P]|\le c_{\rm ind}I^2,\qquad
+c_{\rm ind}=1.5|U|+\frac{6\lambda'^2 J(0)}{4(1-a_0)}\approx30\text{--}32,\quad J(0)=0.290,
+\]
+so at the endpoint $c_{\rm ind}I^2\le\mathrm{MARGIN}/33$ (ratios $\times898/\times139/
+\times33$ at $I=4\times10^{-4}/10^{-3}/2\times10^{-3}$). A sub-$\theta_{\min}$
+``competitor'' is therefore not a distinct variational object -- it is absorbed into
+the Gaussian-sea sector with a free-energy shift $33\times$ below the selection
+margin. \textbf{Derived exclusion}, not an assumption.
+
+\section*{3. Boundary 2 -- super-$n_{\rm pack}$ (DERIVED)}
+
+By the spherical packing bound, at most $16/\theta_{\min}^2=n_{\rm pack}=40.7$ points
+fit on the shell with pairwise separation $\ge\theta_{\min}$. Any configuration with
+$|Q|>n_{\rm pack}$ MUST contain a pair separated by $<\theta_{\min}$ (pigeonhole),
+which reduces to Boundary 1 (sub-resolution, absorbed into the sea). \textbf{Derived
+exclusion} (geometric packing), not an assumption.
+
+\section*{4. Boundary 3 -- non-lattice (MODELLING, with fallback)}
+
+The exact pin $T'(Q)\le13$ uses the circle-divisor bound R-026 (T7), specific to
+RATIONAL crystallographic shells $\Lambda\cap\{|x|^2=R\}$. A non-lattice (quasiperiodic
+/ incommensurate / arbitrary real-point) condensate is a different variational ansatz.
+This is the genuine \textbf{modelling input}: that the selected ground state is
+CRYSTALLINE. It is, however, softened -- arbitrary-$Q$ competitors are NOT
+uncontrolled: DR-2 decoupling gives $T'(Q)\ll_\varepsilon N^\varepsilon$ via
+Bourgain--Demeter (R-022, T6 conditional) and the affine-invariance / parabolic-
+rescaling argument (R-023, T4), so even a non-lattice competitor carries a
+subpolynomial additive-energy bound (hence $K_{\rm floor}$ control, just not the exact
+$\le13$). The non-lattice case is off the critical path (DR-2 legacy fallback); the
+crystalline-order restriction is the one remaining sign-off assumption.
+
+\section*{5. Verdict}
+
+Of the three $\mathcal A_{\rm adm}$ exclusion boundaries, TWO (sub-$\theta_{\min}$,
+super-$n_{\rm pack}$) are physically DERIVED and ONE (non-lattice) is a modelling input
+with a weaker-grade decoupling fallback. The operator completeness sign-off therefore
+SHARPENS from ``is $\mathcal A_{\rm adm}$ complete?'' to the single, classical question
+``is the selected ground state crystalline?'' -- with the reassurance that even the
+non-crystalline case is additive-energy controlled (just at the conditional DR-2 grade).
+No tier flip: B1/B2 T6 on $\{$H-LAYER$\}$, B5 T5.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The coherence lemma's $c_{\rm ind}$ value drifts (30.1 vs
+32.5).''} IMMATERIAL: both give the endpoint margin ratio $\times33$ (the load-bearing
+number); the $\sim8\%$ spread is $a_0/\lambda'$ precision and does not affect the
+$\times33$ separation from MARGIN.
+\item[($\beta$)] \emph{``Boundary 2 pigeonhole is only a count, not an energy.''}
+VALID-and-sufficient: the pigeonhole shows a super-$n_{\rm pack}$ configuration HAS a
+sub-$\theta_{\min}$ pair, and Boundary 1 then supplies the energy bound. The two
+derived boundaries chain: super-$n_{\rm pack}\Rightarrow$ sub-$\theta_{\min}\Rightarrow$
+sea-absorbed.
+\item[($\gamma$)] \emph{``So is A_adm complete?''} HONESTLY NO -- not unconditionally.
+This note REDUCES the completeness question to the crystalline-order assumption; it does
+not eliminate it. The operator sign-off (or its refinement) remains, now over a single,
+classical, well-understood input. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{Boundary 1} -- $c_{\rm ind}I^2=1.3\times
+10^{-4}$, MARGIN$/$shift $=\times33$; \emph{Boundary 2} -- $n_{\rm pack}=16/\theta_{\min}^2
+=40.7$, $\theta_{\min}=0.627$; \emph{Boundary 3} -- lattice $T'\le13$ (R-026 T7),
+arbitrary-$Q$ $T'\ll N^\varepsilon$ (R-022/R-023); \emph{count} -- 2 derived, 1
+modelling+fallback.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / A_adm exclusion-boundary refinement
+Precise statement:       A_adm = {Q subset crystallographic shell : |Q|<=n_pack,
+                         pairwise angle >= theta_min}. Of its 3 exclusion boundaries:
+                         (1) sub-theta_min -- DERIVED: coherence-indistinguishability
+                         lemma |F[P']-F[P]| <= c_ind I^2 = MARGIN/33 (c_ind~30-32,
+                         theta_min=0.627); sub-resolution modes absorbed into the
+                         Gaussian sea. (2) super-n_pack -- DERIVED: spherical packing
+                         n_pack=16/theta_min^2=40.7, pigeonhole => a pair < theta_min
+                         => reduces to (1). (3) non-lattice -- MODELLING (crystalline
+                         order), softened: arbitrary-Q carries T'<<_eps N^eps via DR-2
+                         decoupling R-022 (T6-cond)/R-023 (T4). Sign-off reduces to the
+                         single 'ground state crystalline?' assumption.
+Scope:                   Operating endpoint I=2e-3; anchor mu^2=0.005.
+Dependencies:            coherence-indistinguishability-lemma v1.0 (c_ind, x33);
+                         hlayer-analytic-closure-consolidation v1.0 (A_adm);
+                         dr2-hadmcoh-discharge-decision (H-ADM-COH/theta_min);
+                         dr2-decoupling-closure (R-022)/dr2-affine-invariance (R-023).
+Evidence grade:          ANALYTIC (boundary grading) + EXECUTED
+                         (res5_023_aadm_exclusion_boundaries.py 5/5).
+Reproduction command:    python codes/vacuum/res5_023_aadm_exclusion_boundaries.py
+Expected output:         theta_min=0.627; n_pack=40.7; c_ind~32, coherence margin x33;
+                         2 derived + 1 modelling; 5/5 PASS.
+Falsification gate:      A sub-theta_min restructuring with |F[P']-F[P]| > MARGIN (breaks
+                         Boundary 1); or > n_pack modes all separated >= theta_min (breaks
+                         the packing); or a NON-crystalline competitor that lowers F below
+                         the isotropic layer AND escapes the DR-2 N^eps additive bound.
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The A_adm sign-off
+                         is sharpened from 3 boundaries to 1 modelling assumption.
+No-overclaim statement:  Does NOT prove A_adm complete and does NOT flip B1/B2. It grades
+                         the 3 exclusion boundaries: 2 derived, 1 modelling (crystalline
+                         order) with a DR-2 decoupling fallback. The completeness sign-off
+                         (now a single classical assumption) remains the operator's.
+Next required action:    OPERATOR: sign off on (or refine) the single remaining
+                         assumption -- that the selected ground state is crystalline
+                         (lattice). The non-crystalline case is the DR-2 off-critical-path
+                         fallback (additive-energy controlled at the conditional grade).
+\end{verbatim}
+}

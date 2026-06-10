@@ -23,20 +23,22 @@
 | `dr2-programme-consolidation` | v1.0 | T5* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
 
-## H-LAYER-AUX/  ·  5 proof units  ·  tier span T5
+## H-LAYER-AUX/  ·  6 proof units  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `aadm-exclusion-boundaries` | v1.0 | T5* | A_adm = {Q subset crystallographic shell : \|Q\|<=n_pack, pairwise angle >= theta_min}. Of its 3 exclusion boundaries: (1) sub-theta_min -- DERIVED: co… | ANALYTIC (boundary grading) + EXECUTED (res5_… | OPERATOR: sign off on (or refine) the single remaining assumption -- that the selected gr… |
 | `coherence-admissibility-cutoff` | v1.0 | T5* | H-ADM-COH derivation (PROOF SKETCH, T3): xi = 2 q0 sqrt(C/r_hat) = 2.44; theta_min = 1/(q0 xi) = 0.603 rad; n_adm ~ 35 (x4: 140), nearly I-independen… | PROOF SKETCH (T3) + EXECUTED (all numbers mac… | Operator decision on H-ADM-COH; de-thinning of the I = 2e-3 corner; rigorous indistinguis… |
 | `coherence-indistinguishability-lemma` | v1.0 | T5* | INDISTINGUISHABILITY LEMMA (T4): exact splitting fibers 6/9/(12-6/n) I^2; fragmentation gain saturates; \|F[P'] - F[P]\| <= c_ind I^2 with c_ind = 1.5\|… | ANALYTIC (lemma + theorem skeleton) + EXECUTE… | OPERATOR DECISION on H-ADM-COH (now lemma-backed); cross-term audit polish; endpoint hard… |
 | `hadmcoh-adoption-step5b-closure` | v1.0 | T5 | ADOPTION RECORD (verdict #13): H-ADM-COH = admissible-competitor definition within the matched second-cumulant B5 scope. CROSS-READING LEMMA: whole-p… | ANALYTIC (assembled chain) + EXECUTED (189/18… | OPERATOR VERDICT #14: confirm adoption + gate flip + B5 tier decision; then Reading-H T6 … |
 | `hlayer-res4-intensity-closure` | v1.1 | T5* | The STEP-5B layer-closure ratio rho(I)=K_b(I)/K(I) is strictly monotone decreasing (rho'(I)<0 at all 201 nodes) and rho(I) >= rho(2e-3) = x2.58 > 1 f… | EXECUTED (hlayer_res4_intensity_sweep.py 6/6). | RES-5 (matched-order to exact / GAP-2) is the remaining deep frontier; RES-1 (diagonal-Ga… |
 | `hlayer-residual-inventory` | v1.0 | T5* | INVENTORY (no new theorem): the distance between the amended-class conditional theorem and unconditional whole-Reading-H decomposes into RES-1 (H-dia… | SURVEY of ANALYTIC+EXECUTED material; no new … | Unit U4 (SC-SCOPE third-cumulant lift assessment = the RES-5 quantification); RES-4 inter… |
 
-## SC-SCOPE/  ·  7 proof units  ·  tier span T5
+## SC-SCOPE/  ·  8 proof units  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `scscope-classwide-endpoint` | v1.0 | T5* | The certified joint MARGIN/(C_2+C_sunset+C_quartic) has MARGIN cancel, giving joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S], monotone in the STEP-5… | ANALYTIC (MARGIN-cancellation + critical-T') … | The remaining H-LAYER item is the operator competitor-class definition (admissible = crys… |
 | `scscope-endpoint-joint-assessment` | v1.0 | T5* | GHAT4-PERTRANSFER: per-transfer Ghat4(t)=(J*J)(t) on the realized chords; convention-free shape reduction max Phi / Phi_sup = 0.64 (Ghat4 broad), R_m… | EXECUTED (scscope_ghat4_pertransfer.py 7/7; s… | Joint incompatible-pairing argument (bound max_t[c_sunset(t)+c_quartic(t)]) OR sharper pe… |
 | `scscope-floor-sharpening` | v1.6 | T5* | PROVED: the floor's additive-energy constant K=sum_{t!=0}w_t^2/(lambda'I)^2 <= T'(M) (reconciliation, scscope_constant_map.py 3/3), sharpening the en… | Reconciliation K<=T'(M) PROVED + verified (3/… | Pin the absolute Ghat4 normalisation (factor-2/(2pi)^3 convention): the REALIZED quartic … |
 | `scscope-joint-pairing` | v1.0 | T5* | Joint incompatible-pairing (most-favourable model): max_t[R_s(t)+R_q(t)] = 1.872 < sum of maxima 2.435, but paired endpoint = rho/(1+1.872) = 2.6/2.8… | EXECUTED (scscope_joint_pairing.py 4/4); stre… | Either a sharper STEP-5B endpoint floor (B5; rho>~3.9 at I=2e-3) or formal acceptance of … |
@@ -64,4 +66,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-09T05:26:09Z by build_index.py v1.0.0 -->
+<!-- generated 2026-06-10T05:13:57Z by build_index.py v1.0.1 -->

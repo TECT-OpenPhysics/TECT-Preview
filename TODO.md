@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 17
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 20
 
 ## Next up
 
@@ -69,4 +69,10 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 17
 - **T-019** T-019: off-diagonal exchange-scalar identification (no A-independent Fock exchange; reframe b_exch onto R_lead + SC-SCOPE two-loop)
   - _updated 2026-06-10_
 - **T-020** T-020: class-wide second-cumulant off-diagonal stability (rho*R_lead<1; extends Math428 to all admissible)
+  - _updated 2026-06-10_
+- **T-021** T-021: SC-SCOPE third-cumulant endpoint class-wide (joint(rho_lat); T'<=13<60.4)
+  - _updated 2026-06-10_
+- **T-022** T-022: H-LAYER analytic-closure consolidation + competitor-class formalisation (milestone)
+  - _updated 2026-06-10_
+- **T-023** T-023: A_adm exclusion-boundary refinement (2/3 derived; sign-off -> crystalline-order assumption)
   - _updated 2026-06-10_
