@@ -1,0 +1,159 @@
+% =============================================================================
+% Title: Refining the admissible competitor class A_adm: four exclusion boundaries,
+%        the lattice-but-off-shell escape (T'=20), and the universal fallback T'<=N/2
+% Claim: B5-BEYOND-LAYER-BOUND (A_adm definition; H-LAYER scope; bears on B1, B2)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: T4 STRONG EVIDENCE. Operator adversarial re-issue. v1.0 listed THREE
+%   exclusion boundaries and concluded the sign-off reduces to "crystalline order".
+%   The operator constructed a LATTICE-but-OFF-SHELL escape competitor (antipodal,
+%   N=40, T'=20>13), which is lattice (not non-lattice) but not a registered single-
+%   shell / shell-union competitor. The sharp pin T'<=13 is therefore CLASS-SPECIFIC,
+%   not a universal antipodal-lattice theorem. v1.1 adds this as Boundary 3 (FOUR
+%   boundaries total) and the UNIVERSAL fallback T'(Q)<=N/2: for any real antipodal
+%   set C_t and C_{-t} are disjoint (t!=0) and antipodal symmetry maps one onto the
+%   other, so 2 T' <= N; with N<=n_pack=40.7 this gives T'<=20, and 20 < 20.5(RES-1)
+%   < 26.2(RES-5) < 60.4(SC-SCOPE) -- the analytic thresholds SURVIVE (RES-1
+%   razor-thin R_lead(20)=0.974). The sign-off thus reduces to CRYSTALLINE +
+%   SHELL-SUPPORTED, not merely crystalline. No tier flip: B1/B2 T6, B5 T5.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Three boundaries; 2 derived, 1 modelling.
+%   v1.1 (2026-06-10) OPERATOR ADVERSARIAL re-issue: Boundary 3 (lattice off-shell
+%        escape T'=20) added; universal fallback T'<=N/2<=20; thresholds survive;
+%        A_adm definition corrected to shell-union + registered; sign-off = crystalline
+%        + shell-supported. Grounded by res5_023_aadm_exclusion_boundaries.py v1.1 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The H-LAYER consolidation reduced the remaining H-LAYER item to the completeness of
+the admissible competitor class $\mathcal A_{\rm adm}$. v1.0 examined three exclusion
+boundaries and concluded the sign-off reduces to ``crystalline order''. The operator
+adversarial review found a LATTICE-but-OFF-SHELL escape that v1.0 did not handle. This
+re-issue corrects the $\mathcal A_{\rm adm}$ definition, adds the missing boundary, and
+records the universal fallback under which the analytic thresholds survive. Scope:
+operating endpoint $I=2\times10^{-3}$.
+
+\section*{2. The corrected $\mathcal A_{\rm adm}$ definition}
+
+\[
+\mathcal A_{\rm adm}=\left\{\,Q\subset\bigcup_{R\in\mathcal R}\!\bigl(\Lambda\cap\{|x|^2=R\}\bigr):
+\begin{array}{l}
+|Q|\le n_{\rm pack},\quad Q=-Q,\\
+\angle(k_i,k_j)\ge\theta_{\min}(\hat r),\\
+Q\text{ a registered crystallographic shell or shell-union competitor}
+\end{array}\right\}.
+\]
+The pin $T'(Q)\le13$ is asserted ONLY on this registered shell / shell-union competitor
+class. For arbitrary antipodal lattice subsets the fallback is only $T'(Q)\le N/2\le20$.
+
+\section*{3. The four exclusion boundaries}
+
+\textbf{Boundary 1 -- sub-$\theta_{\min}$ (DERIVED).} The coherence-indistinguishability
+lemma bounds sub-resolution restructuring, $|F[P']-F[P]|\le c_{\rm ind}I^2=
+\mathrm{MARGIN}/33$ at the endpoint ($c_{\rm ind}\approx30$--$32$, $\theta_{\min}=0.627$);
+sub-$\theta_{\min}$ modes are absorbed into the Gaussian sea.
+
+\textbf{Boundary 2 -- super-$n_{\rm pack}$ (DERIVED).} The spherical packing bound gives
+$\le16/\theta_{\min}^2=n_{\rm pack}=40.7$ separated modes; $>n_{\rm pack}$ forces a pair
+below $\theta_{\min}$ (pigeonhole), reducing to Boundary 1.
+
+\textbf{Boundary 3 -- lattice but off-shell / arbitrary multi-radius subsets
+(FALLBACK-CONTROLLED).} The direct adversarial construction shows the sharp pin
+$T'(Q)\le13$ is NOT a theorem over arbitrary antipodal lattice subsets: there exist
+antipodal lattice sets with
+\[
+N=40,\qquad T'(Q)=20>13.
+\]
+These are not non-lattice; they are lattice-supported but not registered single-shell or
+shell-union crystallographic competitors. However, any real antipodal competitor obeys
+the universal geometric fallback
+\[
+T'(Q)\le\frac{N}{2}
+\]
+(the sum-circles $C_t$ and $C_{-t}$ are disjoint for $t\ne0$, and antipodal symmetry maps
+$Q\cap C_t$ onto $Q\cap C_{-t}$, so $2T'\le N$). With real antipodal symmetry and
+$N\le n_{\rm pack}=40.7$, hence $N\le40$,
+\[
+T'(Q)\le20,\qquad 20<20.5<26.2<60.4 .
+\]
+Thus arbitrary antipodal escape competitors can FALSIFY the sharp $T'\le13$ pin, but they
+do NOT falsify the H-diag (RES-1), RES-5, or SC-SCOPE thresholds, provided the packing
+bound $N\le40$ and real antipodal symmetry are retained. The cost is thinness: at $T'=20$
+the binding RES-1 ratio is $R_{\rm lead}(20)=0.974$ ($\times1.026$), still $<1$; the
+SC-SCOPE joint is $\times1.082$, RES-5 floor $\times1.31$. \emph{Whether such off-shell
+escape competitors are physically admissible in B1/B2 is the remaining operator question.}
+
+\textbf{Boundary 4 -- non-lattice / incommensurate (MODELLING, with fallback).} A
+non-crystalline condensate is a different ansatz: the crystalline-order restriction is the
+genuine modelling input, softened by DR-2 decoupling $T'\ll_\varepsilon N^\varepsilon$
+(R-022 T6-conditional / R-023 T4), off the critical path.
+
+\section*{4. Verdict}
+
+Of the FOUR boundaries: 1 and 2 are physically DERIVED; 3 is FALLBACK-CONTROLLED
+($T'\le N/2\le20$, thresholds survive thinly); 4 is a MODELLING input. The operator
+completeness sign-off therefore reduces to ``the ground state is crystalline AND
+shell-supported'' (a registered shell / shell-union competitor), NOT merely crystalline.
+No tier flip: B1/B2 T6 on $\{$H-LAYER$\}$, B5 T5.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``v1.0 over-claimed by conflating the escape with non-lattice.''}
+UPHELD and corrected: the escape is LATTICE but off-shell (Boundary 3), a distinct case
+v1.0 folded into ``non-lattice''. v1.1 separates them and adds the $T'\le N/2$ fallback.
+\item[($\beta$)] \emph{``$R_{\rm lead}(20)=0.974$ is razor-thin -- RES-1 nearly fails.''}
+ACKNOWLEDGED: the off-shell fallback thins RES-1 to $\times1.026$. It does not break it,
+but the comfortable margins ($\times1.54$ etc.) hold only on the registered $T'\le13$
+class. This is exactly why the shell-supported restriction matters.
+\item[($\gamma$)] \emph{``Does anything flip?''} DISMISSED: no. The thresholds survive
+the fallback; the sign-off is sharpened (crystalline + shell-supported); B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{Boundary 1} $c_{\rm ind}I^2=\mathrm{MARGIN}/33$;
+\emph{Boundary 2} $n_{\rm pack}=40.7$; \emph{Boundary 3} $T'\le N/2\le20$ (verified on
+antipodal samples), $R_{\rm lead}(20)=0.974<1$, joint$(20)=\times1.082$, $20<20.5<26.2<60.4$;
+\emph{Boundary 4} $T'\ll N^\varepsilon$.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / A_adm exclusion-boundary refinement (v1.1)
+Precise statement:       A_adm = {Q subset shell-UNION : |Q|<=n_pack, Q=-Q, angle>=theta_min,
+                         registered shell/shell-union}. FOUR boundaries: (1) sub-theta_min
+                         DERIVED (coherence lemma, MARGIN/33); (2) super-n_pack DERIVED
+                         (packing 40.7, pigeonhole); (3) lattice-OFF-SHELL FALLBACK-
+                         CONTROLLED -- sharp T'<=13 fails (escape N=40,T'=20) but universal
+                         antipodal T'<=N/2<=20 survives all thresholds (20<20.5<26.2<60.4;
+                         RES-1 razor-thin R_lead(20)=0.974); (4) non-lattice MODELLING +
+                         DR-2 decoupling. Sign-off = crystalline + SHELL-SUPPORTED.
+Scope:                   Operating endpoint I=2e-3. Sharp T'<=13 = registered shell/shell-
+                         union class only; fallback T'<=N/2<=20 for arbitrary antipodal.
+Dependencies:            coherence-indistinguishability-lemma v1.0; hlayer-analytic-closure-
+                         consolidation v1.0 (A_adm); res5-chi-link-bypass (T'<=13 pin);
+                         dr2-decoupling-closure (R-022) / dr2-affine-invariance (R-023).
+Evidence grade:          ANALYTIC (4-boundary grading + T'<=N/2 proof) + EXECUTED
+                         (res5_023_aadm_exclusion_boundaries.py v1.1 5/5).
+Reproduction command:    python codes/vacuum/res5_023_aadm_exclusion_boundaries.py
+Expected output:         theta_min=0.627; n_pack=40.7; T'<=N/2 on samples; R_lead(20)=0.974
+                         <1; joint(20)=x1.082; 5/5 PASS.
+Falsification gate:      An antipodal lattice subset with T'>N/2 (breaks the universal
+                         fallback); or N>40 with all pairs >= theta_min (breaks packing);
+                         or an off-shell escape with N<=40 and T'>20 (would need T'>N/2).
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The A_adm sign-off is
+                         sharpened to crystalline + shell-supported; off-shell escapes are
+                         fallback-controlled (T'<=20, RES-1 thin x1.026), not breaking.
+No-overclaim statement:  Does NOT prove A_adm complete and does NOT flip B1/B2. The sharp
+                         T'<=13 pin is class-specific (registered shell/shell-union); the
+                         universal fallback is T'<=N/2<=20, under which the thresholds
+                         survive thinly. The sign-off (crystalline + shell-supported) is
+                         the operator's.
+Next required action:    OPERATOR: decide whether off-shell / arbitrary multi-radius
+                         antipodal lattice subsets are physically admissible B1/B2
+                         competitors. If excluded (shell-supported), the comfortable
+                         T'<=13 margins hold; if admitted, the RES-1 x1.026 fallback binds.
+\end{verbatim}
+}

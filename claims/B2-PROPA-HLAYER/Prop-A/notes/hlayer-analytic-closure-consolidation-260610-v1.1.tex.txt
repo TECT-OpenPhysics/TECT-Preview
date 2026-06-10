@@ -1,0 +1,176 @@
+% =============================================================================
+% Title: H-LAYER analytic closure (v1.1): the T-016 to T-021 arc, the lattice-off-shell
+%        escape and the T'<=N/2 fallback, and the shell-supported competitor sign-off
+% Claim: B2-PROPA-HLAYER (H-LAYER analytic core; consolidates B1-RH-ENUM, B5-BEYOND-LAYER-BOUND)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: CONSOLIDATION / MILESTONE (no new claim; records the arc). The T-016 to
+%   T-021 arc closes every ANALYTIC H-LAYER residual CLASS-WIDE on the registered
+%   admissible class. OPERATOR ADVERSARIAL re-issue: the sharp pin T'<=13 is
+%   CLASS-SPECIFIC (registered shell/shell-union), NOT a universal antipodal-lattice
+%   theorem -- a lattice-but-off-shell escape (antipodal, N=40, T'=20>13) exists. The
+%   universal fallback is T'<=N/2<=20 (since N<=n_pack=40.7), under which the analytic
+%   thresholds SURVIVE (20<20.5(RES-1)<26.2(RES-5)<60.4(SC-SCOPE)) but RES-1 thins to
+%   x1.026. The remaining sign-off is CRYSTALLINE + SHELL-SUPPORTED, not merely
+%   crystalline. No tier flip: B1/B2 T6 on {H-LAYER}, B5 T5.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Consolidates T-016..T-021; single-shell A_adm;
+%        sign-off = crystalline order.
+%   v1.1 (2026-06-10) OPERATOR ADVERSARIAL re-issue: A_adm corrected to shell-UNION +
+%        registered; the lattice-off-shell escape T'=20 + the universal fallback
+%        T'<=N/2<=20 added (Sec.5.1); thresholds survive thinly; sign-off = crystalline
+%        + shell-supported. Cross-ref aadm-exclusion-boundaries v1.1 (Boundary 3).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+After the SC-SCOPE lift, B1-RH-ENUM and B2-PROPA-HLAYER rest on the sole hypothesis
+H-LAYER. The T-016 to T-021 arc closes H-LAYER's analytic residuals (STEP-5B) class-wide
+on the registered admissible class. This note consolidates the arc and -- per the operator
+adversarial review -- records the class-specificity of the $T'\le13$ pin and the universal
+fallback. Scope: operating endpoint $I=2\times10^{-3}$, ROBUSTNESS-MU2 $[\times0.5,\times2]$.
+
+\section*{2. The H-LAYER decomposition}
+
+The isotropic layer is the infimum iff no admissible competitor lowers $F$: the comparison
+splits into (D) the diagonal sector (Math427/H-diag), (O) the off-diagonal Bloch sector
+(RES-1), and (S) the STEP-5B selection floor + SC-SCOPE third cumulant.
+
+\section*{3. The arc (T-016 to T-021)}
+
+\begin{itemize}
+\item[\textbf{T-016}] Diagonal isotropy: STRICT curvature-protected minimum; Hessian
+block-diagonal in angular momentum ($\Phi''_{\rm diag}=\tfrac32 u_{\rm eff}=4.03>0$ at
+$l=0$; entropy $\ge\tfrac12 r_R^2=4.64\times10^{-2}>0$ at $l\ge1$, analytic).
+\item[\textbf{T-017}] Selection floor: weighted Lemma A gives $K_{\rm floor}(c)\le T'(Q)$
+for any amplitudes ($\chi(P)$ bypassed); on the registered class $T'\le13$.
+\item[\textbf{T-018,T-019}] Off-diagonal: $B^{\rm cond}$ diagonal, $R_{\rm lead}\le0.650$
+(registered class); NO A-independent attractive Fock exchange (local functional,
+$+\tfrac32 u_{\rm eff}$ stabilising).
+\item[\textbf{T-020}] Off-diagonal: band positive iff $\rho R_{\rm lead}<1$; at $\rho=1$,
+$R_{\rm lead}\le0.650<1$ -- second-cumulant stability class-wide.
+\item[\textbf{T-021}] SC-SCOPE: joint$(\rho_{\rm lat})>1\iff T'<60.4$; on the registered
+class $T'\le13<60.4$, joint$\ge\times1.095$.
+\end{itemize}
+
+\section*{4. Final analytic status (registered class)}
+
+\[
+\boxed{\;
+\begin{array}{ll}
+\text{(D) diagonal isotropy} & \text{STRICT minimum, analytic (T-016)}\\
+\text{(O) off-diag A-independent} & \text{stabilising }+\tfrac32 u_{\rm eff}\text{ (T-019)}\\
+\text{(O) off-diag A-dependent, 2nd cum.} & \rho R_{\rm lead}\le0.650<1\text{ (T-018,020)}\\
+\text{(S) floor } K_{\rm floor}\le T'\le13 & \text{registered class (T-017)}\\
+\text{(S) SC-SCOPE 3rd cumulant} & \mathrm{joint}\ge\times1.095\ (T'<60.4)\text{ (T-021)}\\
+\hline
+\text{class scope} & \text{registered shell/shell-union; off-shell = fallback (Sec.5.1)}
+\end{array}\;}
+\]
+
+\section*{5. The remaining item, formalised}
+
+The closures quantify over the corrected admissible class
+\[
+\mathcal A_{\rm adm}=\left\{Q\subset\bigcup_{R\in\mathcal R}\!\bigl(\Lambda\cap\{|x|^2=R\}\bigr):
+\begin{array}{l}|Q|\le n_{\rm pack},\ Q=-Q,\ \angle(k_i,k_j)\ge\theta_{\min},\\
+Q\text{ a registered shell/shell-union competitor}\end{array}\right\},
+\]
+on which $T'(Q)\le13$. The operator item is the COMPLETENESS of $\mathcal A_{\rm adm}$: that
+every physically relevant B1 Reading-H competitor is crystalline, shell-supported, separated,
+and $\le n_{\rm pack}$.
+
+\subsection*{5.1 Adversarial-class caveat and fallback bound}
+
+The sharp pin $T'(Q)\le13$ is a registered pin over $\mathcal A_{\rm adm}$; it is NOT a
+theorem over arbitrary antipodal lattice subsets. Indeed there exist antipodal lattice sets
+with
+\[
+N=40,\qquad T'(Q)=20>13,
+\]
+which are lattice-supported but not registered single-shell / shell-union competitors. Any
+real antipodal competitor obeys the universal geometric fallback
+\[
+T'(Q)\le\frac{N}{2}
+\]
+($C_t$ and $C_{-t}$ disjoint for $t\ne0$; antipodal symmetry maps one onto the other, so
+$2T'\le N$). With $N\le n_{\rm pack}=40.7$, hence $N\le40$, $T'(Q)\le20$, and
+\[
+20<20.5\ (\text{RES-1})<26.2\ (\text{RES-5})<60.4\ (\text{SC-SCOPE}).
+\]
+Thus off-shell escape competitors falsify the SHARP $T'\le13$ pin but do NOT falsify the
+H-diag, RES-5, or SC-SCOPE thresholds, provided the packing bound $N\le40$ and real antipodal
+symmetry are retained; the cost is thinness (RES-1 $R_{\rm lead}(20)=0.974$, $\times1.026$;
+SC-SCOPE joint $\times1.082$). Whether such escape competitors are physically admissible in
+B1/B2 is the operator question. (Full grading: aadm-exclusion-boundaries v1.1, Boundary 3.)
+
+\section*{6. Path to a re-tier (operator decision)}
+
+If the operator signs off on $\mathcal A_{\rm adm}$ completeness -- the ground state is
+crystalline AND shell-supported -- the analytic residuals are discharged on
+$\mathcal A_{\rm adm}$ and B1/B2 may be re-examined. The re-tier inherits the thin-certified
+$R_{\max}=0.385$, sunset $S=1.13$, the T-017 pin, and the anchoring; and it must respect the
+off-shell fallback (RES-1 thins to $\times1.026$ if off-shell escapes are admitted). The
+honest ceiling is a NAMED-HYPOTHESIS-REDUCED T6 (H-LAYER $\to$ shell-supported-crystalline
+completeness + inherited grades), NOT an unconditional T7. No tier flip is enacted here.
+
+\section*{7. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``v1.0 implied T'<=13 universally.''} UPHELD and corrected: \S5.1
+records that $T'\le13$ is class-specific and the universal fallback is $T'\le N/2\le20$.
+\item[($\beta$)] \emph{``The thresholds survive the fallback only thinly.''} ACKNOWLEDGED:
+RES-1 thins to $\times1.026$ at $T'=20$. The comfortable margins hold on the registered
+$T'\le13$ class; the shell-supported restriction is what buys them.
+\item[($\gamma$)] \emph{``Does this flip B1/B2?''} DISMISSED: no. \S6 ceilings the re-tier
+at a hypothesis-reduced T6. B1/B2 stay T6 on $\{$H-LAYER$\}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{(D)} $\Phi''_{\rm diag}=4.03>0$, entropy
+$\ge4.64\times10^{-2}$; \emph{(O)} $R_{\rm lead}\le0.650<1$; \emph{(S)} $T'\le13<60.4$,
+joint $\ge\times1.095$; \emph{fallback} $T'\le N/2\le20$, $R_{\rm lead}(20)=0.974<1$,
+$20<20.5<26.2<60.4$.
+
+\section*{8. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / H-LAYER analytic-closure consolidation (v1.1)
+Precise statement:       The T-016..T-021 arc closes every ANALYTIC H-LAYER residual
+                         class-wide on the registered admissible class A_adm = {Q subset
+                         shell-UNION : |Q|<=n_pack, Q=-Q, angle>=theta_min, registered
+                         shell/shell-union}, on which T'<=13. (D) diagonal isotropy strict
+                         minimum (T-016); (O) no A-independent Fock exchange (T-019),
+                         rho*R_lead<=0.650<1 (T-018,020); (S) K_floor<=T'<=13 (T-017),
+                         SC-SCOPE joint>=x1.095 T'<60.4 (T-021). The sharp T'<=13 is
+                         CLASS-SPECIFIC; the universal antipodal fallback is T'<=N/2<=20
+                         (escape N=40,T'=20 exists), under which 20<20.5<26.2<60.4 -- the
+                         thresholds survive (RES-1 thin x1.026). Sign-off = crystalline +
+                         SHELL-SUPPORTED.
+Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 [x0.5,x2]. Registered
+                         class = sharp T'<=13; off-shell = T'<=N/2<=20 fallback.
+Dependencies:            isotropy-infimum-core v1.1 (T-016); res5-chi-link-bypass v1.1
+                         (T-017); hdiag-offdiag-gershgorin-threshold v1.1 (T-018);
+                         offdiag-exchange-scalar-identification v1.0 (T-019);
+                         classwide-secondcumulant-stability v1.0 (T-020);
+                         scscope-classwide-endpoint v1.0 (T-021);
+                         aadm-exclusion-boundaries v1.1 (Boundary 3 + fallback).
+Evidence grade:          CONSOLIDATION (cites executed T-016..T-021, T-023 each 3-6/6).
+Reproduction command:    (per-row) see the cited note's script; this note adds no compute.
+Falsification gate:      A physical B1 competitor outside A_adm (off-shell with T'>20, i.e.
+                         T'>N/2; or non-crystalline escaping the DR-2 N^eps bound) lowering
+                         F below the isotropic layer; or a re-opened analytic row.
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. Analytic residuals
+                         class-wide closed on the registered class; off-shell fallback-
+                         controlled (RES-1 thin); re-tier is the operator competitor-class
+                         decision, ceilinged at hypothesis-reduced T6 (NOT T7).
+No-overclaim statement:  Does NOT flip B1/B2 and does NOT claim unconditional closure. The
+                         sharp T'<=13 is class-specific; the universal fallback T'<=N/2<=20
+                         keeps the thresholds alive thinly. The completeness sign-off
+                         (crystalline + shell-supported) and the inherited thin grades remain.
+Next required action:    OPERATOR: decide whether off-shell / arbitrary multi-radius antipodal
+                         lattice subsets are admissible B1/B2 competitors. Shell-supported =>
+                         comfortable T'<=13 margins; admitted => RES-1 x1.026 fallback binds.
+\end{verbatim}
+}

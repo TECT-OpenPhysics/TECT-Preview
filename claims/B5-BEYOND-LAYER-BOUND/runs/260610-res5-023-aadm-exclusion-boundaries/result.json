@@ -1,42 +1,45 @@
 {
   "script": "res5_023_aadm_exclusion_boundaries.py",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "theta_min": 0.6271626708714073,
   "n_pack": 40.67799894732885,
   "c_ind": 32.500927819043206,
-  "MARGIN": 0.00432001083939389,
   "coherence_margin_ratio": 33.22990395417785,
+  "R_lead_at_Tp20": 0.9742546563520751,
+  "joint_at_Tp20": 1.0818655037108793,
+  "antipodal_fallback_Tp_le_Nhalf": true,
   "boundaries": {
-    "sub_theta_min": "DERIVED (coherence lemma, x33 endpoint)",
-    "super_n_pack": "DERIVED (spherical packing pigeonhole)",
-    "non_lattice": "MODELLING (crystalline order) + DR-2 decoupling fallback (R-022 T6-cond/R-023 T4)"
+    "sub_theta_min": "DERIVED",
+    "super_n_pack": "DERIVED",
+    "lattice_off_shell": "FALLBACK-CONTROLLED (T'<=N/2<=20; thresholds survive, RES-1 x1.026)",
+    "non_lattice": "MODELLING + DR-2 decoupling fallback"
   },
-  "verdict": "T-023: 2 of 3 A_adm exclusion boundaries are physically DERIVED (sub-theta_min coherence-indistinguishability x33; super-n_pack packing); 1 is a MODELLING input (crystalline order, softened by the DR-2 decoupling fallback T'<<N^eps). The operator sign-off reduces to the single crystalline-order assumption. No tier flip (B1/B2 T6, B5 T5).",
+  "verdict": "T-023 v1.1: 4 boundaries. Sharp T'<=13 is CLASS-SPECIFIC (registered shell/shell-union); operator off-shell escape N=40,T'=20 falsifies it but the universal fallback T'<=N/2<=20 survives all thresholds (20<20.5<26.2<60.4; RES-1 razor-thin R_lead(20)=0.9743). Sign-off = crystalline + SHELL-SUPPORTED. No tier flip.",
   "claims": [
     {
       "name": "boundary1_sub_theta_min_derived",
       "passed": true,
-      "detail": "(sub-theta_min restructuring |F[P']-F[P]| <= c_ind I^2 = 32.5*0.002^2 = 1.30e-04; MARGIN/shift = x33 (lemma's x33 at the endpoint; x898/x139 at 4e-4/1e-3). Sub-resolution modes are absorbed into the Gaussian sea, NOT distinct competitors -- DERIVED exclusion, not an assumption)"
+      "detail": "(coherence-indistinguishability |F[P']-F[P]| <= c_ind I^2 = MARGIN/33; sub-resolution absorbed into the Gaussian sea. DERIVED)"
     },
     {
       "name": "boundary2_super_npack_derived",
       "passed": true,
-      "detail": "(spherical packing: at most 16/theta_min^2 = 40.7 = n_pack modes fit with pairwise separation >= theta_min; > n_pack modes => a pair < theta_min (pigeonhole) => reduces to Boundary 1. DERIVED exclusion (geometric packing), not an assumption)"
+      "detail": "(packing 16/theta_min^2=40.7=n_pack; >n_pack => a pair < theta_min (pigeonhole) => Boundary 1. DERIVED)"
     },
     {
-      "name": "boundary3_nonlattice_modelling_with_fallback",
+      "name": "boundary3_offshell_fallback_survives",
       "passed": true,
-      "detail": "(non-lattice/arbitrary-Q: the EXACT T'<=13 pin uses R-026 (circle-divisor, T7, lattice-only); arbitrary-Q still carries T'<<_eps N^eps via DR-2 decoupling R-022 (T6 cond. Bourgain-Demeter) / affine-invariance R-023 (T4). So non-lattice is CONTROLLED at a weaker grade, off the critical path. The crystalline-order restriction is the genuine MODELLING input -- the ONE remaining sign-off item -- softened by this fallback)"
+      "detail": "(LATTICE-but-OFF-SHELL escape (operator: N=40, T'=20>13) FALSIFIES the sharp class pin T'<=13. But the UNIVERSAL antipodal fallback T'<=N/2 holds (C_t,C_-t disjoint => 2T'<=N; verified on samples); with N<=n_pack=40.7 => T'<=20, and 20<20.5(RES-1)<26.2(RES-5)<60.4(SC-SCOPE): R_lead(20)=0.9743<1 (razor-thin x1.026), joint(20)=x1.082>1. FALLBACK-CONTROLLED (thin), not broken)"
     },
     {
-      "name": "aadm_signoff_reduced_to_one_assumption",
+      "name": "boundary4_nonlattice_modelling_with_fallback",
       "passed": true,
-      "detail": "(of the 3 A_adm exclusion boundaries, 2 are physically DERIVED (sub-theta_min coherence lemma; super-n_pack packing) and 1 is a MODELLING input (crystalline order, with the decoupling fallback). The operator sign-off therefore reduces from 'is A_adm complete?' to the single 'is the ground state crystalline?' assumption -- a sharpened, smaller object)"
+      "detail": "(non-lattice/incommensurate: crystalline-order MODELLING input, softened by DR-2 decoupling T'<<_eps N^eps (R-022 T6-cond / R-023 T4). Off the critical path)"
     },
     {
-      "name": "quantitative_sanity_aadm",
+      "name": "signoff_crystalline_AND_shell_supported",
       "passed": true,
-      "detail": "(theta_min=0.627 rad in (0.5,0.8); n_pack=40.7; c_ind=32.5; coherence margin x33>33. Two boundaries derived, one modelling+fallback. No tier flip: B1/B2 T6, B5 T5)"
+      "detail": "(FOUR boundaries: 1,2 DERIVED; 3 FALLBACK-CONTROLLED (T'<=20, RES-1 thin x1.026); 4 MODELLING. The operator sign-off reduces to CRYSTALLINE + SHELL-SUPPORTED (registered shell/shell-union competitor), NOT merely crystalline -- the off-shell escape is lattice but not shell-supported. No tier flip: B1/B2 T6, B5 T5)"
     }
   ],
   "all_pass": true

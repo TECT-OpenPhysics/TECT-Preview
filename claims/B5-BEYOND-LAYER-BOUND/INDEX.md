@@ -27,7 +27,7 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `aadm-exclusion-boundaries` | v1.0 | T5* | A_adm = {Q subset crystallographic shell : \|Q\|<=n_pack, pairwise angle >= theta_min}. Of its 3 exclusion boundaries: (1) sub-theta_min -- DERIVED: co… | ANALYTIC (boundary grading) + EXECUTED (res5_… | OPERATOR: sign off on (or refine) the single remaining assumption -- that the selected gr… |
+| `aadm-exclusion-boundaries` | v1.1 | T5* | A_adm = {Q subset shell-UNION : \|Q\|<=n_pack, Q=-Q, angle>=theta_min, registered shell/shell-union}. FOUR boundaries: (1) sub-theta_min DERIVED (coher… | ANALYTIC (4-boundary grading + T'<=N/2 proof)… | OPERATOR: decide whether off-shell / arbitrary multi-radius antipodal lattice subsets are… |
 | `coherence-admissibility-cutoff` | v1.0 | T5* | H-ADM-COH derivation (PROOF SKETCH, T3): xi = 2 q0 sqrt(C/r_hat) = 2.44; theta_min = 1/(q0 xi) = 0.603 rad; n_adm ~ 35 (x4: 140), nearly I-independen… | PROOF SKETCH (T3) + EXECUTED (all numbers mac… | Operator decision on H-ADM-COH; de-thinning of the I = 2e-3 corner; rigorous indistinguis… |
 | `coherence-indistinguishability-lemma` | v1.0 | T5* | INDISTINGUISHABILITY LEMMA (T4): exact splitting fibers 6/9/(12-6/n) I^2; fragmentation gain saturates; \|F[P'] - F[P]\| <= c_ind I^2 with c_ind = 1.5\|… | ANALYTIC (lemma + theorem skeleton) + EXECUTE… | OPERATOR DECISION on H-ADM-COH (now lemma-backed); cross-term audit polish; endpoint hard… |
 | `hadmcoh-adoption-step5b-closure` | v1.0 | T5 | ADOPTION RECORD (verdict #13): H-ADM-COH = admissible-competitor definition within the matched second-cumulant B5 scope. CROSS-READING LEMMA: whole-p… | ANALYTIC (assembled chain) + EXECUTED (189/18… | OPERATOR VERDICT #14: confirm adoption + gate flip + B5 tier decision; then Reading-H T6 … |
@@ -66,4 +66,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-10T05:13:57Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-10T05:27:50Z by build_index.py v1.0.1 -->
