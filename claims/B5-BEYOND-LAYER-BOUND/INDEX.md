@@ -23,7 +23,7 @@
 | `dr2-programme-consolidation` | v1.0 | T5* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
 
-## H-LAYER-AUX/  ·  6 proof units  ·  tier span T5
+## H-LAYER-AUX/  ·  7 proof units  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -33,6 +33,7 @@
 | `hadmcoh-adoption-step5b-closure` | v1.0 | T5 | ADOPTION RECORD (verdict #13): H-ADM-COH = admissible-competitor definition within the matched second-cumulant B5 scope. CROSS-READING LEMMA: whole-p… | ANALYTIC (assembled chain) + EXECUTED (189/18… | OPERATOR VERDICT #14: confirm adoption + gate flip + B5 tier decision; then Reading-H T6 … |
 | `hlayer-res4-intensity-closure` | v1.1 | T5* | The STEP-5B layer-closure ratio rho(I)=K_b(I)/K(I) is strictly monotone decreasing (rho'(I)<0 at all 201 nodes) and rho(I) >= rho(2e-3) = x2.58 > 1 f… | EXECUTED (hlayer_res4_intensity_sweep.py 6/6). | RES-5 (matched-order to exact / GAP-2) is the remaining deep frontier; RES-1 (diagonal-Ga… |
 | `hlayer-residual-inventory` | v1.0 | T5* | INVENTORY (no new theorem): the distance between the amended-class conditional theorem and unconditional whole-Reading-H decomposes into RES-1 (H-dia… | SURVEY of ANALYTIC+EXECUTED material; no new … | Unit U4 (SC-SCOPE third-cumulant lift assessment = the RES-5 quantification); RES-4 inter… |
+| `offshell-operator-decision` | v1.0 | T5* | DECISION: off-shell/arbitrary-multi-radius antipodal lattice subsets are NOT in the primary A_adm (registered shell/shell-union, T'<=13), justified b… | ANALYTIC (kinetic penalty + two-tier closure)… | OPERATOR (optional): enact the B1/B2 re-tier to hypothesis-reduced T6 on the shell-suppor… |
 
 ## SC-SCOPE/  ·  8 proof units  ·  tier span T5
 
@@ -66,4 +67,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-10T05:27:50Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-10T05:40:13Z by build_index.py v1.0.1 -->

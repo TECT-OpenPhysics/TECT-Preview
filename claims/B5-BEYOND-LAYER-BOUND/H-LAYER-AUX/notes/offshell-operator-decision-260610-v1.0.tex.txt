@@ -1,0 +1,150 @@
+% =============================================================================
+% Title: Operator decision on off-shell competitors: the primary admissible class is
+%        shell-supported (kinetic-penalty justified); off-shell antipodal subsets are
+%        an adversarial extended class controlled by the T'<=N/2 fallback
+% Claim: B5-BEYOND-LAYER-BOUND (H-LAYER competitor-class operator decision; bears on B1, B2)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: OPERATOR DECISION (recorded verdict; no tier flip). Resolves the H-LAYER
+%   competitor-class sign-off raised by the consolidation + the adversarial off-shell
+%   escape. DECISION: off-shell / arbitrary-multi-radius antipodal lattice subsets are
+%   NOT admitted to the PRIMARY admissible class A_adm (registered crystalline
+%   shell/shell-union), justified physically by the kinetic penalty K_0(k)=r_R+
+%   c(|k|^2-q0^2)^2: an off-shell mode at the nearest distinct radius |k|=sqrt(2)q0
+%   costs ~x50 the selection MARGIN, so it cannot be a leading Reading-H competitor.
+%   They ARE admitted to an ADVERSARIAL extended class A_ext (arbitrary antipodal,
+%   N<=n_pack), controlled by the universal fallback T'(Q)<=N/2<=20, under which the
+%   analytic thresholds survive (20<20.5<26.2<60.4) but RES-1 thins to x1.026. Two-tier
+%   closure: comfortable on A_adm (T'<=13), razor-thin fallback on A_ext. B1/B2 T6 on
+%   {H-LAYER}, B5 T5 unchanged.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Operator two-class decision + kinetic-penalty
+%        justification (x50 MARGIN). Grounded by res5_024_offshell_operator_decision.py 5/5.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The H-LAYER analytic closure (T-016 to T-021) holds on the registered admissible class;
+the adversarial review (T-023 v1.1) showed the sharp pin $T'\le13$ is class-specific and
+exhibited a lattice-but-off-shell escape ($N=40$, $T'=20$). This note records the operator
+decision on whether such off-shell competitors are physically admissible, with its physical
+justification. Scope: the Reading-H selection at the operating endpoint $I=2\times10^{-3}$.
+
+\section*{2. The decision}
+
+\textbf{Off-shell / arbitrary-multi-radius antipodal lattice subsets are NOT included in
+the primary admissible class.} The Reading-H comparison is a shell-selected Brazovskii
+comparison: physically relevant Bragg competitors live on the selected soft crystallographic
+shell or on registered shell-union degeneracies. The primary class is
+\[
+\mathcal A_{\rm adm}=\bigl\{\text{registered crystalline shell / shell-union competitors}\bigr\},
+\qquad T'(Q)\le13 .
+\]
+To make the proof adversarially safe, an extended fallback class is also retained:
+\[
+\mathcal A_{\rm ext}=\bigl\{\,Q=-Q,\ \#Q\le n_{\rm pack}\,\bigr\},
+\qquad T'(Q)\le\frac{N}{2}\le20 .
+\]
+
+\section*{3. Physical justification: the kinetic penalty}
+
+The Gaussian-Hartree kinetic kernel is
+\[
+K_0(k)=r_R+c\,(|k|^2-q_0^2)^2,
+\]
+minimised on the soft shell $|k|=q_0$ with $K_0(q_0)=r_R=0.3045$. An off-shell mode at the
+nearest distinct lattice radius $|k|=\sqrt2\,q_0$ carries
+\[
+K_0(\sqrt2\,q_0)-r_R=0.214\ \text{per mode}\ =\ \times50\ \text{the selection MARGIN}\ (0.00432);
+\]
+further radii cost more ($\times3.8$, $\times7.3$ in $K_0$ at $\sqrt3 q_0$, $2q_0$). A
+competitor carrying off-shell modes therefore cannot be a LEADING Reading-H competitor: its
+kinetic cost exceeds the entire selection margin by $\sim50\times$ per off-shell mode.
+Off-shell spectral content is Gaussian-sea / higher-energy / adversarial perturbation, not an
+independent Bragg competitor. Hence shell-supported is the primary physical class.
+
+\section*{4. Two-tier closure}
+
+\[
+\boxed{\;
+\begin{array}{lll}
+\text{Primary } \mathcal A_{\rm adm} & T'\le13 & R_{\rm lead}(13)=0.650,\ \mathrm{joint}=\times1.097\ \text{(comfortable)}\\
+\text{Adversarial } \mathcal A_{\rm ext} & T'\le N/2\le20 & R_{\rm lead}(20)=0.974,\ \mathrm{joint}=\times1.082\ \text{(razor-thin)}
+\end{array}\;}
+\]
+On the primary class the H-LAYER analytic closure is comfortable. On the adversarial class the
+thresholds still hold ($20<20.5<26.2<60.4$), so off-shell escapes cannot break the closure --
+they only thin the RES-1 margin to $\times1.026$. The proof is thus physically primary
+(shell-supported) AND adversarially safe (fallback-controlled).
+
+\section*{5. Status}
+
+\textbf{Operator decision recorded.} The H-LAYER competitor-class sign-off is resolved:
+$\mathcal A_{\rm adm}$ (shell-supported) is the primary physical class; $\mathcal A_{\rm ext}$
+(arbitrary antipodal) is the adversarial fallback. With this, the H-LAYER analytic residuals
+are closed on the primary class (comfortably) and on the adversarial class (thinly). B1/B2 may
+be re-examined for a hypothesis-reduced T6 (H-LAYER $\to$ shell-supported-crystalline
+completeness + inherited thin-certified grades); no tier flip is enacted here. B1/B2 T6 on
+$\{$H-LAYER$\}$, B5 T5.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Excluding off-shell is just an assumption to dodge the escape.''}
+DISMISSED: it is physically justified, not assumed -- the $K_0$ kinetic penalty ($\times50$
+MARGIN per off-shell mode) makes off-shell competitors energetically uncompetitive at leading
+order. And the escape is NOT dodged: it is retained in $\mathcal A_{\rm ext}$ and controlled by
+$T'\le N/2\le20$.
+\item[($\beta$)] \emph{``The adversarial fallback is razor-thin (RES-1 $\times1.026$).''}
+ACKNOWLEDGED: admitting off-shell escapes thins RES-1 to $\times1.026$. This is why the
+primary class is shell-supported (comfortable $\times1.54$); the thin fallback is a
+reviewer-defence layer, not the physical operating point.
+\item[($\gamma$)] \emph{``Does this flip B1/B2?''} DISMISSED: no. It resolves the
+competitor-class sign-off and ceilings any re-tier at a hypothesis-reduced T6. B1/B2 stay T6.
+\end{itemize}
+
+Quantitative sanity check (mandatory): \emph{penalty} -- $K_0(\sqrt2 q_0)-r_R=0.214=\times50$
+MARGIN; \emph{primary} -- $R_{\rm lead}(13)=0.650$, joint $\times1.097$; \emph{adversarial} --
+$R_{\rm lead}(20)=0.974<1$, joint $\times1.082$, $20<20.5<26.2<60.4$.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / operator decision on off-shell competitors
+Precise statement:       DECISION: off-shell/arbitrary-multi-radius antipodal lattice subsets
+                         are NOT in the primary A_adm (registered shell/shell-union, T'<=13),
+                         justified by the kinetic penalty K_0(k)=r_R+c(|k|^2-q0^2)^2: an
+                         off-shell mode at sqrt(2)q0 costs ~x50 MARGIN, so cannot be a leading
+                         Reading-H competitor. They ARE retained in the adversarial A_ext
+                         (Q=-Q, #Q<=n_pack), controlled by T'<=N/2<=20. Two-tier: A_adm
+                         comfortable (R_lead(13)=0.650, joint x1.097); A_ext razor-thin
+                         (R_lead(20)=0.974, joint x1.082); 20<20.5<26.2<60.4 survive.
+Scope:                   Reading-H selection, operating endpoint I=2e-3. A_adm = primary
+                         physical class; A_ext = adversarial fallback.
+Dependencies:            aadm-exclusion-boundaries v1.1 (Boundary 3, fallback T'<=N/2);
+                         hlayer-analytic-closure-consolidation v1.1; res5-chi-link-bypass
+                         (T'<=13); scscope-classwide-endpoint (joint, T'<60.4); Math424-AddA
+                         (K_0 kernel).
+Evidence grade:          ANALYTIC (kinetic penalty + two-tier closure) + EXECUTED
+                         (res5_024_offshell_operator_decision.py 5/5) + OPERATOR DECISION.
+Reproduction command:    python codes/vacuum/res5_024_offshell_operator_decision.py
+Expected output:         off-shell penalty x50 MARGIN; A_adm R_lead(13)=0.650/joint x1.097;
+                         A_ext R_lead(20)=0.974/joint x1.082; 5/5 PASS.
+Falsification gate:      An off-shell competitor whose total free energy (kinetic penalty
+                         included) beats the isotropic layer; or an A_ext set with T'>N/2;
+                         or a physical argument that off-shell modes are NOT kinetically
+                         penalised (would require a flat K_0 off the shell).
+Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The competitor-class
+                         sign-off is resolved: A_adm primary (shell-supported, comfortable),
+                         A_ext adversarial (fallback, thin).
+No-overclaim statement:  Does NOT flip B1/B2. Records the operator two-class decision with its
+                         kinetic-penalty justification. The primary closure is comfortable
+                         (shell-supported); the adversarial fallback is razor-thin but
+                         unbroken. Any re-tier is ceilinged at hypothesis-reduced T6.
+Next required action:    OPERATOR (optional): enact the B1/B2 re-tier to hypothesis-reduced T6
+                         on the shell-supported class, or harden the inherited thin-certified
+                         grades (R_max, sunset, anchoring) for a stronger ceiling.
+\end{verbatim}
+}

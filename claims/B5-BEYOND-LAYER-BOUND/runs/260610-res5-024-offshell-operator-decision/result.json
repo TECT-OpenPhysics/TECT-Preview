@@ -1,0 +1,41 @@
+{
+  "script": "res5_024_offshell_operator_decision.py",
+  "version": "1.0.0",
+  "rR": 0.30452570866744433,
+  "MARGIN": 0.00432001083939389,
+  "offshell_penalty_nearest": 0.21403364730682561,
+  "penalty_over_margin": 49.5447014519193,
+  "R_lead_13": 0.6495031042347167,
+  "R_lead_20": 0.9742546563520751,
+  "joint_13": 1.0974481329387382,
+  "joint_20": 1.0818655037108793,
+  "verdict": "T-024 OPERATOR DECISION: off-shell NOT in primary A_adm (kinetic penalty x50 MARGIN => shell-supported is physical); ADMITTED in adversarial A_ext (T'<=N/2<=20 fallback). Two-tier: A_adm comfortable (R_lead(13)=0.650, joint=x1.097), A_ext razor-thin (R_lead(20)=0.9743, joint=x1.082). Thresholds 20<20.5<26.2<60.4 survive. No tier flip.",
+  "claims": [
+    {
+      "name": "offshell_kinetic_penalty_dominates_margin",
+      "passed": true,
+      "detail": "(K_0(k)=r_R+c(|k|^2-q0^2)^2 is minimised on-shell K_0(q0)=r_R=0.3045; the nearest off-shell radius |k|=sqrt(2)q0 costs K_0-r_R=0.2140 = x50 the selection MARGIN=0.00432. An off-shell mode cannot be a leading Reading-H competitor => shell-supported is the PRIMARY physical class)"
+    },
+    {
+      "name": "Aadm_primary_comfortable",
+      "passed": true,
+      "detail": "(A_adm = registered shell/shell-union, T'<=13: R_lead(13)=0.650<0.7 (x1.54), SC-SCOPE joint(13)=x1.0974>1.09. Comfortable closure on the primary physical class)"
+    },
+    {
+      "name": "Aext_adversarial_fallback_survives",
+      "passed": true,
+      "detail": "(A_ext = {Q=-Q, |Q|<=n_pack}: universal fallback T'<=N/2<=20; 20<20.5(RES-1)<26.2(RES-5)<60.4(SC-SCOPE). R_lead(20)=0.9743<1 (razor-thin x1.026), joint(20)=x1.082>1. The adversarial class does NOT break the thresholds; off-shell escapes are controlled, not admitted as leading competitors)"
+    },
+    {
+      "name": "operator_two_class_decision",
+      "passed": true,
+      "detail": "(OPERATOR DECISION: off-shell NOT in the primary A_adm (kinetic penalty x50 MARGIN); ADMITTED in the adversarial A_ext with the T'<=N/2<=20 fallback. Two-tier closure: A_adm comfortable (R_lead<=0.650), A_ext razor-thin (R_lead(20)=0.974). Adversarially safe + physically primary. No tier flip: B1/B2 T6, B5 T5)"
+    },
+    {
+      "name": "quantitative_sanity_decision",
+      "passed": true,
+      "detail": "(kinetic penalty x50>10; A_adm R_lead(13)=0.650; A_ext R_lead(20)=0.9743 in (0.97,1); joint(20)=x1.082>1; ordering 20<20.5<26.2<60.4. Two-class decision recorded)"
+    }
+  ],
+  "all_pass": true
+}

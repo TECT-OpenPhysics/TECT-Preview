@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 20
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 22
 
 ## Next up
 
@@ -75,4 +75,8 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 20
 - **T-022** T-022: H-LAYER analytic-closure consolidation + competitor-class formalisation (milestone)
   - _updated 2026-06-10_
 - **T-023** T-023: A_adm exclusion-boundary refinement (2/3 derived; sign-off -> crystalline-order assumption)
+  - _updated 2026-06-10_
+- **T-024** T-024: operator decision on off-shell competitors (A_adm primary shell-supported + A_ext adversarial fallback)
+  - _updated 2026-06-10_
+- **T-025** T-025: H-LAYER closure Final Consolidation (complete milestone T-016..T-024)
   - _updated 2026-06-10_

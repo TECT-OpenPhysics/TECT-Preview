@@ -1,0 +1,61 @@
+{
+  "script": "res5_025_hlayer_final_consolidation.py",
+  "version": "1.0.0",
+  "rR": 0.30452570866744433,
+  "u_eff": 2.685024265666395,
+  "MARGIN": 0.00432001083939389,
+  "phi2_diag": 4.027536398499592,
+  "entropy_floor": 0.04636795361970459,
+  "R_lead_13": 0.6495031042347167,
+  "R_lead_20": 0.9742546563520751,
+  "joint_13": 1.0974481329387382,
+  "joint_20": 1.0818655037108793,
+  "Tprime_crit": 60.359171754711944,
+  "offshell_penalty_over_margin": 49.5447014519193,
+  "thresholds": {
+    "RES1": 20.5,
+    "RES5": 26.2,
+    "SCSCOPE": 60.359171754711944,
+    "primary_pin": 13,
+    "adversarial_fallback": 20
+  },
+  "verdict": "T-025 Final Consolidation: H-LAYER analytic residuals closed class-wide on the primary shell-supported class (T'<=13: R_lead=0.650, joint=x1.097) and survive on the adversarial class (T'<=20: R_lead=0.974, joint=x1.082); all below 20.5<26.2<60.4. Competitor-class operator-decided (kinetic penalty x50 MARGIN). No tier flip; B1/B2 T6, ceiling = hypothesis-reduced T6.",
+  "claims": [
+    {
+      "name": "T016_diagonal_isotropy_strict_minimum",
+      "passed": true,
+      "detail": "(Phi''_diag=(3/2)u_eff=4.028>0 (l=0); entropy (1/2)G*^-2 >= (1/2)rR^2=4.6368e-02>0 (l>=1, analytic). Isotropic dressing = strict curvature-protected diagonal minimum)"
+    },
+    {
+      "name": "T017_chi_floor_pinned",
+      "passed": true,
+      "detail": "(weighted Lemma A: K_floor(c) <= T'(Q) any amplitudes; registered-class pin T'<=13 < 20.5(RES-1) < 26.2(RES-5). chi(P) bypassed)"
+    },
+    {
+      "name": "T018_019_offdiag_exchange",
+      "passed": true,
+      "detail": "(R_lead(13)=0.650<1 (condensate block, diagonal); A-independent off-diag = stabilising +(3/2)u_eff=4.028>0 (local functional, no attractive Fock exchange -- T-019 reframing))"
+    },
+    {
+      "name": "T020_second_cumulant_classwide",
+      "passed": true,
+      "detail": "(band positive iff rho*R_lead<1; at rho=1, R_lead(13)=0.650<1 class-wide => second-cumulant off-diagonal stability holds for every registered competitor)"
+    },
+    {
+      "name": "T021_scscope_third_cumulant_classwide",
+      "passed": true,
+      "detail": "(joint(rho_lat) monotone, joint>1 iff T'<60.4; registered T'<=13<60.4 => joint(13)=x1.0974>1 class-wide)"
+    },
+    {
+      "name": "T024_two_class_decision",
+      "passed": true,
+      "detail": "(off-shell kinetic penalty K_0(sqrt2 q0)-r_R=0.214=x50 MARGIN => A_adm shell-supported primary; A_ext fallback T'<=N/2<=20: R_lead(20)=0.9743<1 (x1.026), joint(20)=x1.082>1)"
+    },
+    {
+      "name": "end_to_end_threshold_ordering",
+      "passed": true,
+      "detail": "(PRIMARY T'<=13 and ADVERSARIAL T'<=20 both below all analytic thresholds 20.5(RES-1)<26.2(RES-5)<60.4(SC-SCOPE). Two-tier H-LAYER closure: comfortable on A_adm, razor-thin fallback on A_ext)"
+    }
+  ],
+  "all_pass": true
+}
