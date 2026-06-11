@@ -1,0 +1,83 @@
+% =============================================================================
+% Title: Referee package (DRAFT) -- SC-SCOPE: the second- and third-cumulant endpoint closure of the selection floor
+% Claim: B5-BEYOND-LAYER-BOUND (referee package; pending operator confirmation)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: REFEREE PACKAGE DRAFT -- NOT operator-confirmed. Folder result grade T5 (third-cumulant endpoint, thin-certified). Self-contained
+%   referee-facing assembly for external review; pending the operator-confirmation gate
+%   (governance/reproduction-bundle-policy.md sec.11) before a PUBLISHED bundle is built.
+%   Reproduction: 5 script(s) in this folder's bundle. Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesises the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns the SC-SCOPE programme: the second- and third-cumulant scope of the selection floor and its endpoint closure (sunset and quartic-difference channels). \textbf{Scope:} the all-orders endpoint at $I=2\times10^{-3}$. \textbf{Not claimed:} the closure is thin (sunset-limited, near-critical); it is a near-critical selection boundary, not a comfortable margin.
+
+\section*{2. The result}
+
+The SC-SCOPE third-cumulant joint inequality is positive at the endpoint: each channel (sunset cap $\times1.13$, realized quartic $R_{\max}=0.385<0.634$ with the Parseval-pinned $1/(4\pi^2)$ convolution measure) and their joint with the second-order cost satisfy $\mathrm{joint}>1$. The endpoint sits just below the structural sunset cap; the selection floor closes (thin).
+
+\section*{3. Structure of the argument}
+
+The realized quartic difference is computed directly ($R_{\max}\approx0.385$) and certified $<0.634$ once the convolution normalisation $1/(4\pi^2)$ is DERIVED from the $(2\pi)^3$ measure (Parseval ratio $1.0000$). The sunset channel saturates at $\times1.13$. Assembling the second- and third-order costs against the layer margin gives $\mathrm{joint}>1$ at the endpoint, with the thinness shown structural (sunset-limited) and sign-stable across nearby $(I,\mu^2)$.
+
+\section*{4. Numerical reproduction}
+
+Five scripts reproduce the per-transfer quartic, the floor sharpening, the joint pairing, the M-endpoint evaluation and the quartic normalisation certificate; each carries asserts. Run them from the bundle.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is REVIEW DRAFT, NOT
+operator-confirmed, and the claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the falsifier (footer) is concrete and
+pre-registered, so the claim is refutable by a single explicit construction; and the
+numerical values it cites are reproduced by the folder's scripts (all asserts pass).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE referee
+                         package (DRAFT)
+Precise statement:       At the all-orders endpoint I=2e-3 the SC-SCOPE
+                         third-cumulant joint > 1: realized quartic
+                         R_max=0.385<0.634 (with the Parseval-pinned
+                         1/(4pi^2) convolution measure, ratio 1.0000),
+                         sunset cap x1.13, joint of second+third-order
+                         costs against the layer margin positive (thin,
+                         sunset-limited, near-critical, sign-stable
+                         nearby).
+Scope:                   SC-SCOPE all-orders endpoint selection floor.
+                         Thin (sunset-limited near-critical).
+Evidence grade:          third-cumulant endpoint closure,
+                         thin-certified (T5); EXECUTED (5 scripts PASS).
+Reproduction command:    python
+                         codes/vacuum/scscope_ghat4_pertransfer.py ;
+                         scscope_quartic_certificate.py ;
+                         scscope_joint_pairing.py ; ...
+Falsifier:               a recomputed joint <=1 at the endpoint; or a
+                         convolution-normalisation that doubles Ghat4
+                         (R_max>0.634).
+Tier before / after:     DRAFT referee package; SC-SCOPE endpoint
+                         thin-certified T5. NOT operator-confirmed.
+No-overclaim statement:  the endpoint closes THIN (sunset-limited
+                         near-critical); not a comfortable
+                         all-intensity statement.
+Next required action:    operator review + confirm -> PUBLISHED bundle.
+\end{verbatim}
+}

@@ -5,6 +5,138 @@ not pillar counts.
 
 ---
 
+## [Bundle convention: claim-top-level tier-stamped; main-proof-line classification confirmed] - 2026-06-11
+
+Adopted the claim-top-level tier-stamped bundle convention (build_reproduction_bundle.py v1.4.0): bundles now live at claims/<ID>/bundle/<Result>-<Tier>-<YYMMDD>/ so each tier change yields a tracked bundle (governance/reproduction-bundle-policy.md sec.13). Built the Reading-H C_full PUBLISHED bundle at the new location claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/ (27/27 asserts PASS, digest 774cc08a). Confirmed the main-proof-line classification (theory/main-proof-line.md): five main-line referee packages (Reading-H + Prop-A, DR-2, SC-SCOPE, STEP-5B), and reclassified the seven auxiliary referee DRAFTs (ESTIMATOR-UPGRADE, ROBUSTNESS-MU2, enumerated, near-gap, H-LAYER-AUX, G-A0-DUI, H-A0-removal) as AUXILIARY (DRAFT bundle only, not promoted).
+
+## [Referee packages attach to the MAIN PROOF LINE, not every sub-proof folder (operator insight 2026-06-10). The theory's intermediate results are partly load-bearing, partly auxiliary (robustness/provenance/controlled-error numerics), partly retracted; only the main-line final consolidations the published theorem cites as dependencies get PUBLISHED referee packages. Policy sec.12 + theory/main-proof-line.md (proposal): main line = Reading-H (done) + Prop-A + DR-2 + SC-SCOPE + STEP-5B (K-budget); auxiliary (DRAFT bundle only, no referee package) = ESTIMATOR-UPGRADE, ROBUSTNESS-MU2, enumerated, near-gap, H-LAYER-AUX, G-A0-DUI, H-A0-removal.] - 2026-06-10
+
+Operator insight 2026-06-10 (triggered by seeing a referee package for the T4 ESTIMATOR-UPGRADE):
+referee-review documents should cover only the MAIN PROOF LINE -- the final consolidations the
+published theorem rests on -- not every sub-proof folder, because the intermediate process produces
+results that are partly load-bearing, partly auxiliary, partly retracted. Making all of them referee
+artefacts buries the main line. CORRECT; the earlier per-folder referee-package generation was
+over-generation.
+POLICY sec.12: a PUBLISHED referee package is written for each MAIN-PROOF-LINE result (determined by
+the headline package's Dependencies footer + lemma/step citations); auxiliary/cited/robustness/
+provenance/controlled-error/sub-lemma folders get a DRAFT bundle at most (internal reproduction), NO
+referee package; retracted results go to negative-results. The per-folder coverage is NOT the
+referee-package work list -- theory/main-proof-line.md is.
+MAIN PROOF LINE (from the Reading-H package's load-bearing deps: A1; Lemma 1 sum-circle bound; Lemma 2
+coherence; (D) T-016; (S) SC-SCOPE; K-budget): Reading-H C_full (CONFIRMED v1.1) + Prop-A + DR-2
+(additive-energy Lemma 1) + SC-SCOPE + STEP-5B (K-budget). AUXILIARY (DRAFT bundle only): ESTIMATOR-
+UPGRADE, ROBUSTNESS-MU2, enumerated, near-gap, H-LAYER-AUX, G-A0-DUI, H-A0-removal. The 7 auxiliary
+DRAFTs already written stay as internal consolidation notes, NOT promoted to PUBLISHED. PROPOSAL pending
+operator confirmation of the main-line set (rows 2-5 of theory/main-proof-line.md).
+
+## [ESTIMATOR-UPGRADE referee package v1.1 (operator review 2026-06-10): ACCEPT as T4 DRAFT, HOLD published-bundle confirmation. Patches: (a) explicit 22-script reproduction manifest replaces the ellipsis; (b) SMA-vs-multishell scope-separation sentence (competitor generation = single-shell SMA knobs; validation energy = multi-shell exact off-diagonal engine). Grade held at T4 STRONG EVIDENCE (enumerated scope); NOT T6/T7, NOT C_full; no effect on the T7-SCOPE_C_full canonical closure. PUBLISHED confirm awaits external inspection of the 22-script bundle (code+expected+env+log+hash). Builds 0 overfull. Supersedes v1.0.] - 2026-06-10
+
+Operator review of the first referee-package DRAFT (estimator-upgrade), per the one-by-one cycle.
+VERDICT: ACCEPT AS T4 DRAFT, HOLD PUBLISHED-BUNDLE CONFIRMATION. The document structure is approved as
+a referee-facing draft; the reproduction gate cannot be closed because the bundle's 22 scripts +
+expected outputs + transitive deps + environment + hash are not externally inspectable in chat -- only
+the referee note was uploaded. Grade stays T4 STRONG EVIDENCE within the enumerated-ensemble scope
+(NOT T6/T7, NOT the full C_full selection); no tier promotion; no effect on the canonical
+T7-SCOPE_C_full closure.
+PATCHES (v1.1): (a) the reproduction command's ellipsis is replaced by an explicit manifest of the 22
+scripts (a referee package must not abbreviate its reproduction surface); (b) a sentence separates the
+two scopes that could otherwise read as a conflict -- "the competitor generation uses the single-shell
+SMA knobs, while the validation free energy is evaluated by the multi-shell exact off-diagonal-inclusive
+engine". Banner Status + footer record the T4-DRAFT-ACCEPTED / PUBLISHED-HELD verdict. v1.1 builds
+FORM-CHECK + 0 overfull; v1.0 carries the forward-pointer.
+This sets the review rhythm: operator reviews each DRAFT -> patch to vN.M + record verdict -> operator
+inspects the bundle -> on confirm, build the PUBLISHED bundle. The remaining 10 DRAFTs await review.
+
+## [Referee-package DRAFTs for all 11 mandatory result-bearing sub-proof folders (one-time bulk, tier order, for operator review). B1 (T7): ESTIMATOR-UPGRADE, ROBUSTNESS-MU2, enumerated, near-gap. B2 (T7): Prop-A, G-A0-DUI, H-A0-removal. B5 (T5): DR-2, H-LAYER-AUX, SC-SCOPE, STEP-5B. Each is a self-contained referee-facing synthesis of the folder's headline result with Purpose-and-scope, the result, structure, reproduction, devil's-advocate, footer (falsifier+scope+no-overclaim); all build (FORM-CHECK + 0 overfull); all marked REVIEW DRAFT, NOT operator-confirmed (await the sec.11 gate before PUBLISHED bundles). Reading-H is already the confirmed PUBLISHED template. Legacy-unmigrated C/D claims excluded (no notes).] - 2026-06-10
+
+Operator 2026-06-10: one-time, write the referee-document DRAFT for EVERY result-bearing sub-proof
+folder needing one, in tier order (highest first), to the end, for one-by-one operator review;
+legacy-unmigrated claims excluded. Done: 11 REVIEW DRAFTs created (B1 T7 x4, B2 T7 x3, B5 T5 x4),
+each a self-contained referee synthesis of the folder's headline result (Purpose-and-scope; the
+result statement; structure of the argument; numerical reproduction map; devil's-advocate per
+CLAUDE.md 6.3; Result footer with precise statement, scope, evidence grade, reproduction command,
+falsifier, tier, no-overclaim, next-action). All FORM-CHECK pass and build to PDF with 0 overfull.
+All carry Status "REFEREE PACKAGE DRAFT -- NOT operator-confirmed" and await the operator-
+confirmation gate (governance/reproduction-bundle-policy.md sec.11) before any PUBLISHED bundle is
+built. Reading-H (reading-h-cfull-referee-package v1.1) is already operator-confirmed (the template).
+C/D-sector T5+ claims have no in-repo proof notes (legacy-capped), so no referee package is due.
+Next: operator reviews each DRAFT one by one; on confirm, revise to vN.M, then build the PUBLISHED bundle.
+
+## [Operator-confirmation gate for PUBLISHED bundles (no-auto-PUBLISHED, binding): the integrated referee package must be operator-reviewed and CONFIRMED before its PUBLISHED bundle is built -- the analogue of no-auto-T7. Workflow: write referee package -> validate (PDF 0-overfull + reproduction PASS) -> OPERATOR CONFIRM (revise to vN.M, record operator-confirmed marker) -> build PUBLISHED bundle -> register. Reading-H is the confirmed template (v1.0->3 patches->v1.1->ACCEPT); 9 DRAFT bundles stay internal until their referee docs are written + confirmed. governance/reproduction-bundle-policy.md sec.11.] - 2026-06-10
+
+Operator 2026-06-10: a PUBLISHED bundle should be built only after the referee document is confirmed
+through operator verification. Formalised as the operator-confirmation gate (no-auto-PUBLISHED),
+analogous to no-auto-T7. Per-folder workflow (governance/reproduction-bundle-policy.md sec.11): (1)
+write the integrated referee package; (2) validate (FORM-CHECK + 0-overfull PDF + self-containment +
+reproduction PASS); (3) OPERATOR REVIEW + CONFIRM -- adversarial review, revise to v(N).(M) until
+accepted, record `operator-confirmed <date>` in the package banner + changelog; (4) only then build
+the PUBLISHED bundle around the confirmed package; (5) register + commit. A PUBLISHED bundle whose
+entry lacks the operator-confirmed marker is a coverage defect. Reading-H is the canonical confirmed
+template (written v1.0 -> operator 3 dependency patches -> v1.1 -> ACCEPT -> bundle); its banner now
+records operator-confirmed 2026-06-10. The 9 auto DRAFT bundles remain internal-grade until their
+referee packages are written and operator-confirmed, one folder per increment.
+
+## [Bundle quality: DRAFT/PUBLISHED grades + runtime-file-read dep fix (operator review). (1) BUG FIX: build_reproduction_bundle.py v1.3.0 -- the AST dep resolver missed runtime '.py' file reads (g3pb3_ratio_extraction read_text()s Math432; 2 ESTIMATOR scripts failed in the bundle = not self-contained). Now follows runtime reads transitively + importlib->stdlib. (2) POLICY: auto --folder = DRAFT grade (internal reproduction); PUBLISHED grade requires a purpose-written, validated, self-contained integrated referee package (reading-h-cfull template) as the entry doc; publication-complete needs PUBLISHED. Coverage now reports DRAFT/PUB. Current: 1 PUBLISHED (Reading-H), 10 DRAFT.] - 2026-06-10
+
+Operator review 2026-06-10: (a) a real self-containment bug -- a bundle's scripts that read other
+files at runtime (not via import) were not bundled, so reproduction failed (g3pb3_ratio_extraction
+reads Math432_g3prime_multishell_ensemble.py via read_text(); it + twoshell_anchored_bracket failed
+in the ESTIMATOR bundle, 20/22). (b) the quality point: auto-assembling a folder's internal working
+notes is not first-rate; a bundle must be built around a purpose-written, validated, integrated
+referee document (and then verified), not just dumped.
+FIXES. build_reproduction_bundle.py v1.3.0: resolve_deps now follows runtime "<name>.py" string reads
+(read_text/open of legacy modules) transitively, in addition to imports; importlib added to the stdlib
+set. Verified: ESTIMATOR's Math432 runtime dependency is now caught (25 code deps incl Math432).
+POLICY (governance/reproduction-bundle-policy.md sec.10-11): two bundle grades. DRAFT = auto --folder
+(entry = the folder's internal headline note) -- internal reproduction completeness only. PUBLISHED =
+entry is a hand-written, self-contained, validated integrated referee package (the reading-h-cfull
+template: FORM-CHECK pass + 0-overfull PDF + self-contained + scripts PASS in the bundle). A claim is
+publication-complete only when each result-bearing folder has a PUBLISHED bundle; the per-folder
+workflow is write-referee-package -> validate -> build -> register (one folder per increment).
+bundle_coverage.py reports DRAFT vs PUB and treats doc-only folders (no .py reproduction) as n/a.
+STATE: 1 PUBLISHED (Reading-H), 10 DRAFT (auto), SC-SCOPE partial. The 10 DRAFT bundles are internal-
+grade; the integrated referee packages (the first-rate artefacts) will be written one folder at a time.
+
+## [Reproduction-bundle granularity+threshold policy (binding) + --folder auto-builder + coverage tool + 8 bundles. POLICY: unit = result-bearing sub-proof folder; MANDATORY at claim tier T5+ (T7 included), recommended T4, none <=T3; every R-NNN covered; doc-only folders n/a. TOOLS: build_reproduction_bundle.py v1.1.0 --folder (auto headline-note + union of reproduction scripts); bundle_coverage.py (report/--build). COVERAGE: 13 mandatory B1/B2/B5 folders, 8 bundled (Reading-H, ROBUSTNESS-MU2, enumerated, near-gap, G-A0-DUI, H-A0-removal, STEP-5B, H-LAYER-AUX), 4 heavy GAPs (ESTIMATOR-UPGRADE, Prop-A, DR-2, SC-SCOPE) for operator-side --build (sandbox 44s timeout). C/D claims have no notes yet (legacy-capped, no bundle due).] - 2026-06-10
+
+Operator point: one bundle (Reading-H) is not enough; each sub-proof folder of B1/B2/B5 and each
+T7/T5+ result needs a bundle, and the bundle-requirement threshold must be a policy.
+DECISION (governance/reproduction-bundle-policy.md sec.8-9): unit = the result-bearing sub-proof
+folder (claims/<ID>/<sub>/), reproduced from its headline note (latest non-superseded consolidation/
+highest-tier) + the UNION of reproduction scripts cited by the folder's live notes + transitive deps.
+Threshold gated on the owning claim's tier: T5/T6/T7 -> MANDATORY for every result-bearing folder;
+T4 -> recommended (headline folder); <=T3 -> none; doc-only folders (no numerical-claim scripts) ->
+n/a. Every RESULTS-LEDGER R-NNN must be covered. A T5+ claim is publication-complete only when all its
+folders have current bundles that build.
+TOOLS: build_reproduction_bundle.py v1.1.0 gains --folder (auto-discovers headline + union of scripts;
+0-script folder -> graceful n/a; partial bundles without MANIFEST are resumable). NEW
+bundle_coverage.py -- reports every T5+ folder's bundle status and `--build`s missing mandatory ones.
+COVERAGE NOW: 13 mandatory folders (B1:5, B2:3, B5:5); 8 bundled this session (Reading-H + ROBUSTNESS-MU2
++ enumerated + near-gap + G-A0-DUI + H-A0-removal + STEP-5B + H-LAYER-AUX, all entry scripts PASS);
+4 heavy GAPs (ESTIMATOR-UPGRADE 22 scripts, Prop-A 11, DR-2 8, SC-SCOPE 6) exceed the sandbox 44s/build
+limit -> build operator-side with `python verification/scripts/bundle_coverage.py --build`. C/D-sector
+T5+ claims currently have no in-repo proof notes (legacy-capped) so no bundle is due until their notes land.
+SC-SCOPE has a partial (no-MANIFEST) bundle dir from a timed-out build; the builder now resumes/overwrites it.
+
+## [Reproduction-bundle policy (binding 2026-06-10): the FINAL deliverable of every claim is a self-contained referee reproduction bundle (note + reproducible code + transitive deps + environment + expected-output logs + MANIFEST with sha256/digest + README), generated by verification/scripts/build_reproduction_bundle.py, not hand-assembled. First instance: Reading-H C-full (claims/B1-RH-ENUM/Reading-H/bundle/reading-h-cfull-260610), 23 canonical files, res5_032-036 all PASS (27/27), numpy-only, digest db7386ae. governance/reproduction-bundle-policy.md + ROADMAP per-claim completion criterion.] - 2026-06-10
+
+Operator policy 2026-06-10: make a referee reproduction bundle the final goal of each claim and the
+publish-tier distribution artefact. Rationale (operator): a referee note verifies the mathematical
+structure; the code reproduces the constants/windows/intervals; but "reference code" without
+environment + inputs + expected output + hash is reviewable, not reproducibly verifiable. The bundle
+closes the gap (note + code + environment + expected output + hash/log + README).
+NEW governance/reproduction-bundle-policy.md (binding): mandatory bundle contents table; the reusable
+builder; the version-pin (MANIFEST repo_commit + content-addressable bundle_digest); the per-claim
+completion criterion (a T5+ claim is publication-complete only when its bundle exists, builds with all
+entry scripts PASS, and is registered). NEW verification/scripts/build_reproduction_bundle.py v1.0.1
+-- resolves transitive local imports by AST, mirrors repo-relative paths (so scripts run unchanged with
+the bundle as REPO), runs each entry script (PYTHONDONTWRITEBYTECODE; captures expected/ + result.json),
+emits requirements/environment/README/MANIFEST, excludes __pycache__, exits non-zero if any script fails.
+FIRST BUNDLE: claims/B1-RH-ENUM/Reading-H/bundle/reading-h-cfull-260610 (referee note v1.1 + res5_032-036
++ sectorb_common + Math424_AddA + Math400_AddE; 23 canonical files; all 5 scripts PASS = 27/27 asserts;
+third-party numpy only; bundle_digest db7386ae...; independently re-verified by running res5_036 from the
+bundle root: 5/5 PASS). ROADMAP updated (per-claim completion = reproduction bundle).
+
 ## [Referee package v1.1 (operator review 2026-06-10): three minor dependency patches -- (D) globality caveat (T-016 global/convex vs local Hessian), (S) worst-case-bound caveat (J_eff/n_pack full-class bounds), Lemma 2 proof refined (cyclic-ordering adjacent-gap argument). Builds 0 overfull; res5_032-036 unchanged (27/27 PASS). Supersedes v1.0.] - 2026-06-10
 
 Operator review of reading-h-cfull-referee-package v1.0: ACCEPT (structurally complete) with two

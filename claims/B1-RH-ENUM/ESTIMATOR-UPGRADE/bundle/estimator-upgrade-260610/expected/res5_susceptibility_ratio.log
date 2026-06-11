@@ -1,0 +1,8 @@
+rhat=0.3367, a0=0.0957; intG^n ratios: G2/G=1.322 G3/G2=2.262 G4/G3=2.513
+bare chi^(3)/chi^(2)~4 intG^3/intG^2 = 9.05; threshold 1/(2a0)=5.23; r_2(bare)=a0*bare=0.866
+  [PASS] bare_ratio_exceeds_threshold (bare chi^(3)/chi^(2) = 9.05 > 1/(2a0) = 5.23: the operator's literal bare-ratio bound FAILS; r_2(bare) = a0*9.05 = 0.866 > 1/2 -- geometric domination breaks at the base order if bare susceptibilities are used)
+  [PASS] bare_ratios_strong_coupling (int G^(n+1)/int G^n -> 2.513 ~ 1/rhat = 2.970: the bare cumulant ratios are O(1/rhat) strong-coupling, growing -- the Brazovskii sea is strongly fluctuating)
+  [PASS] scscope_is_subtracted_not_bare (SC-SCOPE n=3 difference ~0.04 << r_2(bare)=0.866: the measured small value is the COMMON-MODE-SUBTRACTED (pattern-dependent) ratio, not the bare chi^(3) -- confirming the closure must use the subtracted susceptibilities, and the bare common part cancels in the difference)
+  [PASS] residual_is_subtracted_bound (HONEST NEGATIVE on the bare route: the genuine RES-5 residual is to bound the COMMON-MODE-SUBTRACTED ratio chi_pd^(k+1)/chi_pd^(k) (after all-order subtraction), a strong-coupling computation -- NOT the elementary bare-ratio bound, which fails)
+
+claims 4/4 PASS

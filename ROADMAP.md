@@ -6,7 +6,10 @@ theory tag Math442) translated into seeded claim cards — see `CLAIMS.md`.
 
 Stages are sequential in their exit conditions but parallel in day-to-day work.
 A stage is closed only when its exit condition is met at the stated tier with a
-verification package.
+verification package. The publication-complete deliverable of each claim is a
+self-contained referee **reproduction bundle** (note + reproducible code + environment
++ expected output + hashes + README), per `governance/reproduction-bundle-policy.md`
+(binding 2026-06-10); reference instance `claims/B1-RH-ENUM/Reading-H/bundle/reading-h-cfull-260610/`.
 
 ---
 

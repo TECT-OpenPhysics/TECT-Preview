@@ -1,0 +1,167 @@
+% =============================================================================
+% Title: The SC-SCOPE programme -- a chronicle from the second-cumulant scope to
+%        the thin-certified endpoint lift
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE all-orders endpoint / STEP-5B third cumulant; bears on B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-09; this version issued 2026-06-09
+% Status: research-progress chronicle (operator-requested, in the style of the
+%   DR-2 programme consolidation). Records the entire SC-SCOPE arc in one place:
+%   the second-cumulant scope hypothesis, the third-cumulant endpoint
+%   obstruction, the per-transfer programme (M-ENDPOINT, GHAT4), the joint
+%   negative and the exhausted pairing, the floor-sharpening route (proved
+%   K<=T', plus a SELF-CAUGHT overclaim and its retraction), the quartic
+%   normalisation certificate (Parseval-pinned convention), and the
+%   operator-enacted LIFT@THIN-CERTIFIED. A narrative consolidation; no new
+%   claim beyond the cited results. Final state: SC-SCOPE LIFTED@THIN-CERTIFIED
+%   (sunset-binding near-critical margin); B1-RH-ENUM T6 CONDITIONAL on {H-LAYER}.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-09) first issue. Operator request: consolidate the SC-SCOPE
+%        record as a chronicle (as for DR-2).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+SC-SCOPE is the named second-cumulant-scope hypothesis of the B1 Reading-H T6
+selection. The ``all-orders lift'' is the question whether the third-cumulant
+corrections preserve the selection at every certified intensity, especially the
+thinnest endpoint $I=2\times10^{-3}$. This note chronicles the programme
+end-to-end, including a self-caught overclaim, so the logic is auditable from one
+place. It introduces no new result; every claim is cited.
+
+\section*{2. The obstruction}
+
+At second-cumulant order the selection holds with STEP-5B floors
+$\times59.4/\times8.8/\times2.6$ at $I=4\times10^{-4}/10^{-3}/2\times10^{-3}$. The
+third cumulant (sunset + quartic-difference, tadpole$=0$) consumes the endpoint
+margin. SC-SCOPE is the hypothesis that the analysis is at matched
+second-cumulant order; the lift would discharge it.
+
+\section*{3. The per-transfer arc and the honest negative}
+
+\textbf{M-ENDPOINT} (scscope-mendpoint-evaluation v1.1): the dressed sunset
+endpoint is $\times1.13>1$ (the sup-grade $\times0.97$ was a frozen-coupling
+artefact). \textbf{GHAT4-PERTRANSFER} (scscope-endpoint-joint-assessment v1.0):
+the quartic-difference shape reduction is $0.64$ (convention-free, rigorous).
+\textbf{Joint endpoint}: the individually-positive channels jointly over-consume
+by $\times1.32\Rightarrow\times0.757$. \textbf{Joint pairing}
+(scscope-joint-pairing v1.0): the most-favourable pairing recovers only
+$\times0.905<1$; per-transfer refinements EXHAUSTED. \textbf{Scope decision}
+(scscope-scope-decision v1.0): second-cumulant scope ACCEPTED at the endpoint;
+all-orders estimate-feasible for $I\le10^{-3}$. The named open route was a
+sharper STEP-5B endpoint floor $\rho\gtrsim3.9$.
+
+\section*{4. The floor-sharpening route -- proved, with a retracted overclaim}
+
+The endpoint floor $\rho=2.58$ used the kappa-balanced additive-energy bound
+$K(n_{\rm pack})=8+4\sqrt{14}\sqrt{n_{\rm pack}}=103.5$, which OVERSHOOTS the
+Lemma-A bound at the small endpoint $n_{\rm pack}=40.7$. The reconciliation
+\[
+K=\frac{\sum_{t\ne0}w_t^2}{(\lambda'I)^2}\le T'(M)
+\]
+(R-027 $t\ne0$ part; Parseval $w_t=\lambda'v_t$) is PROVED + verified
+($K_{\rm floor}/T'\le0.52$), sharpening the floor to $\rho_{\rm lat}\ge6.55$.
+
+\textbf{Self-caught overclaim (R-029, AUDIT-2026-06-08).} An initial lift used
+$\text{paired}=\rho/(1+\max[R_s+R_q])=\rho/2.872$, a LOCAL approximation at
+$\rho=2.6$, concluding $\times2.28$. The physically-correct ADDITIVE bookkeeping
+(the sunset is an absolute cost, the joint saturates) gives only $\times0.945$ at
+$\rho_{\rm lat}=6.55$. The lift was RETRACTED and SC-SCOPE restored; the floor
+sharpening stands as a partial advance ($\times0.757\to\times0.95$--$1.03$).
+
+\section*{5. The quartic normalisation certificate}
+
+The binding question became the quartic $R_{\max}<0.634$ (the sunset is rigorous,
+caps the joint at $\times1.13$). The prior $R_{\max}=1.019$ inherited the loose
+Young ceiling. The realized ratio computed directly,
+$R(t)=12(5v/2)^2\lambda'^{-2}\widehat{G^4}(t)\,4(1-a_0)/J(t)$, gives
+$R_{\max}=0.385$. The absolute $\widehat{G^4}=(J*J)$ normalisation is PINNED by
+Parseval,
+\[
+(J*J)(0)\Big|_{\rm conv}=\frac{1}{2\pi^2}\int_0^\infty q^2J(q)^2\,dq,\qquad
+\text{ratio}=1.0000,
+\]
+resolving the factor-$2/(2\pi)^3$ caveat (Young consistency ratio $0.27$). Hence
+$R_{\max}=0.385<0.634$ is CERTIFIED.
+
+\section*{6. The certified joint and its structural thinness}
+
+Under the CORRECTED additive bookkeeping,
+\[
+\text{joint}=\frac{\mathrm{MARGIN}}{C_2+C_{\rm sunset}+C_{\rm quartic}}
+=\times1.040\ (\rho_{\rm lat}=6.55)\ \dots\ \times1.082\ (\rho_{\rm lat}=12.6)>1.
+\]
+The certified quartic flips the prior $\times0.945$. The closure is THIN, and the
+thinness is STRUCTURAL (scscope\_endpoint\_sweep.py): the joint SATURATES at
+$\times1.13$ (sunset cap) as $\rho\to\infty$, and is sign-stable across $I$ (the
+endpoint $I=2\times10^{-3}$ is the thinnest; the critical $I\approx2.5\times10^{-3}$
+lies BEYOND it) and across $\mu^2\in[\times0.5,\times2]$ (worst $\times1.034$). A
+near-critical selection boundary, not a numerical artefact.
+
+\section*{7. The lift}
+
+On re-examination the operator AUTHORISED the lift @ THIN-CERTIFIED (2026-06-09,
+superseding the same-day HOLD). SC-SCOPE is removed from B1's active hypothesis
+set,
+\[
+\{H\text{-LAYER},SC\text{-SCOPE}\}\longrightarrow\{H\text{-LAYER}\},
+\]
+with B1 tier UNCHANGED T6. The all-orders endpoint selection is now certified
+(sunset rigorous + certified quartic), thin but sign-stable; not estimate-grade.
+
+\section*{8. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``This repeats the retracted lift.''} NO: the retracted
+lift used the local pairing $\rho/2.872$; this uses the CORRECTED additive
+bookkeeping and the CERTIFIED quartic. The retraction is recorded openly
+(AUDIT-2026-06-08).
+\item[($\beta$)] \emph{``$\times1.04$ is too thin.''} It is thin and FLAGGED
+LIFTED@THIN-CERTIFIED; but every input is proved/certified and the closure is
+sign-stable and structural (sunset-saturating).
+\item[($\gamma$)] \emph{``The convention could be off.''} Pinned by Parseval to
+ratio $1.0000$; a factor-2 would show as $2$ or $0.5$.
+\end{itemize}
+
+\textbf{Quantitative sanity check.} All cited: $K_{\rm floor}/T'\le0.52$;
+$\rho_{\rm lat}\ge6.55$; Parseval ratio $1.0000$; $R_{\max}=0.385<0.634$; joint
+$\times1.040$--$\times1.082>1$; sunset saturation $\times1.13$; $\mu^2$-band worst
+$\times1.034$.
+
+\section*{9. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5 / SC-SCOPE programme consolidation (chronicle)
+Precise statement:       Chronicle of SC-SCOPE: the second-cumulant scope, the
+                         third-cumulant endpoint obstruction (sunset/quartic),
+                         the per-transfer arc (M-ENDPOINT x1.13, GHAT4 0.64), the
+                         joint negative (x0.757) and exhausted pairing (x0.905),
+                         the floor sharpening (K<=T' proved; a retracted overclaim
+                         R-029/AUDIT-2026-06-08), the quartic certificate
+                         (Parseval-pinned; R_max=0.385<0.634), the certified joint
+                         x1.040-x1.082>1, and the operator-enacted
+                         LIFTED@THIN-CERTIFIED (B1 {H-LAYER,SC-SCOPE}->{H-LAYER}).
+Scope:                   Narrative consolidation of the SC-SCOPE arc; no new claim.
+Dependencies:            scscope-mendpoint-evaluation v1.1; scscope-endpoint-joint-
+                         assessment v1.0; scscope-joint-pairing v1.0; scscope-scope-
+                         decision v1.0; scscope-floor-sharpening v1.6 (R-029);
+                         scscope-quartic-normalisation-certificate v1.0;
+                         scscope_endpoint_sweep.py 4/4; R-027.
+Evidence grade:          CHRONICLE (no independent result). Final state: SC-SCOPE
+                         LIFTED@THIN-CERTIFIED (sunset-binding); B1 T6 on {H-LAYER}.
+Reproduction command:    (none -- narrative; the cited scripts carry the asserts)
+Expected output:         n/a
+Falsification gate:      A more conservative sunset accounting taking the joint
+                         below 1, or the Parseval ratio departing from 1; neither
+                         observed.
+Tier before / after:     No tier action (chronicle). Records the SC-SCOPE lift
+                         and the B1 hypothesis reduction to {H-LAYER}.
+No-overclaim statement:  The lift is THIN-CERTIFIED (x1.04 worst case), sunset-
+                         limited near-critical -- NOT a wide-margin closure. The
+                         retracted overclaim is recorded openly. B1 tier UNCHANGED
+                         T6 (hypothesis reduction, not a tier lift).
+Next required action:    B1 rests on H-LAYER alone; the deepest remaining piece is
+                         Prop A (isotropic dressing = diagonal-Gaussian infimum).
+\end{verbatim}
+}

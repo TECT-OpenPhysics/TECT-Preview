@@ -1,0 +1,24 @@
+SC-SCOPE / M-ENDPOINT: direct dressing-variance evaluation (v1.1)
+  [PASS] MARGIN_derived_not_pasted (MARGIN = sectorb_common.margin_of(0.005) = 0.004320; derived, reproduces 0.00432)
+    anchor: r_R=0.304526, M_R=0.109414, lam'=8.0551
+  [PASS] rhat_endpoint_2e-3 (r_hat(2e-3) = 0.33675 vs registered 0.33675)
+  [PASS] M_ENDPOINT_value (M-ENDPOINT = M(0.33675) = 0.104953)
+  [PASS] M_ENDPOINT_crosscheck (production M_fast = 0.104953 vs independent radial trapezoid (kmax=60, n=1e6) = 0.105589 agree to 0.61%; the residual is resonance-peak (k~q0) quadrature resolution + tail treatment, not a value error. M-ENDPOINT is an EXECUTED constant cross-checked at the ~1% level; the analytic tail beyond kmax=60 is bounded by 8.44e-04. The SUNSET VERDICT is certified robust to the full 8.45e-04 envelope below)
+  [PASS] M_ENDPOINT_below_M_R (M-ENDPOINT = 0.104953 < M_R = 0.109414: monotonicity)
+  [PASS] J0_value (J0 = J(r_hat(4e-4)) = 0.2896)
+    single-J0 conservatism (J decreases with dressing => J0 is an upper bound):
+      I=1e-03: J(r_hat(I))=0.2764 <= J0=0.2896
+      I=2e-03: J(r_hat(I))=0.2565 <= J0=0.2896
+  [PASS] single_J0_conservative (J(r_hat(1e-3))=0.2764, J(r_hat(2e-3))=0.2565 both <= J0=0.2896: using the single anchor J0 OVER-estimates the sunset bound at the endpoint -> conservative)
+    sunset-axis ratios (composed / bound):
+      I=1e-03: frozen x2.793 -> dressed(J0) x3.020 -> dressed(perJ) x3.164
+      I=2e-03: frozen x0.970 -> dressed(J0) x1.129 -> dressed(perJ) x1.275
+  [PASS] frozen_U4_endpoint_reproduced (frozen-coupling endpoint x0.970 reproduces U4 x0.97 -- REGRESSION sanity check vs the old estimator, NOT load-bearing)
+  [PASS] sunset_axis_endpoint_positive (dressed endpoint x1.129 > 1: the SUNSET-AXIS endpoint no longer individually fails; the U4 SUNSET-AXIS marginal failure was a frozen-coupling artefact. This is the sunset channel only -- SC-SCOPE stays OPEN on GHAT4-PERTRANSFER + R-U6-1)
+  [PASS] perJ_ratio_at_least_J0_ratio (per-dressing-J ratio x1.275 >= J0 ratio x1.129: confirms J0 is the conservative choice)
+  [PASS] endpoint_margin_thin_not_comfortable (x1.129 is a SIGN result, NOT a comfortable margin; in the joint inequality the ~13% can be consumed by the other channels)
+  [PASS] verdict_robust_to_M_envelope (even at M-ENDPOINT + the full raw envelope (M=0.105798, the worse direction) the sunset ratio = x1.096 > 1: the sign verdict survives the quadrature uncertainty)
+    SCOPE: M-ENDPOINT RESOLVED; sunset axis POSITIVE at sign level; SC-SCOPE OPEN
+           on GHAT4-PERTRANSFER (quartic-difference) and R-U6-1 (tadpole).
+
+claims 12/12 PASS

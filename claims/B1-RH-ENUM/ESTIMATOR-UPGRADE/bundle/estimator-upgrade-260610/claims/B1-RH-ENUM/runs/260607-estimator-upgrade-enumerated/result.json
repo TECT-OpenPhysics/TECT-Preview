@@ -1,0 +1,83 @@
+{
+  "script": "estimator_upgrade_enumerated.py",
+  "version": "1.0.0",
+  "mu2": 0.005,
+  "r_bare": 0.2190336473068255,
+  "NPT_fast": 6000,
+  "NPT_hi": 20000,
+  "h1": 0.005,
+  "h2": 0.0025,
+  "readings": {
+    "LAM": {
+      "kappa_fast": 0.8509657014161085,
+      "kappa_hires": 0.8509824940113904,
+      "envelope": 1.679259528186705e-05,
+      "certified": 0.8509489088208266,
+      "quadratic_ok": true
+    },
+    "HEX": {
+      "kappa_fast": 2.5541646196406336,
+      "kappa_hires": 2.554218709762696,
+      "envelope": 5.409012206225583e-05,
+      "certified": 2.5541105295185713,
+      "quadratic_ok": true
+    },
+    "FCC": {
+      "kappa_fast": 3.40776664799185,
+      "kappa_hires": 3.4078412773414497,
+      "envelope": 7.462934959967527e-05,
+      "certified": 3.4076920186422504,
+      "quadratic_ok": true
+    },
+    "BCC": {
+      "kappa_fast": 5.116247464766779,
+      "kappa_hires": 5.1163669118392345,
+      "envelope": 0.00011944707245525876,
+      "certified": 5.116128017694324,
+      "quadratic_ok": true
+    }
+  },
+  "worst_certified_curvature": 0.8509489088208266,
+  "binding_reading": "LAM",
+  "no_condensate_fast": true,
+  "no_condensate_hires": true,
+  "scope": "single-shell enumerated readings; M-quadrature controlled error; two-shell + dI follow-up",
+  "claims": [
+    {
+      "name": "dF0_identity_fast",
+      "passed": true,
+      "detail": "(dF(A=0)=0 exactly in the fast pipeline: 0.00e+00)"
+    },
+    {
+      "name": "dF0_identity_hires",
+      "passed": true,
+      "detail": "(dF(A=0)=0 exactly in the hires pipeline: 0.00e+00)"
+    },
+    {
+      "name": "no_condensate_fast",
+      "passed": true,
+      "detail": "(every reading's global dF minimum is at A=0: no enumerated reading beats Reading-H, fast)"
+    },
+    {
+      "name": "no_condensate_hires",
+      "passed": true,
+      "detail": "(no condensate revealed by the N_PT=20000 refinement either: the verdict is not a fast-quadrature artefact)"
+    },
+    {
+      "name": "curvature_positive_controlled_error",
+      "passed": true,
+      "detail": "(min over readings of [kappa - envelope] = 8.509489e-01 > 0: A=0 is a STRICT minimum for every reading, controlled-error w.r.t. the M-quadrature -- the binding reading is the smallest kappa)"
+    },
+    {
+      "name": "envelope_far_below_curvature",
+      "passed": true,
+      "detail": "(M-quadrature envelope is < 0.1% of kappa for every reading; binding = LAM kappa=8.5097e-01, envelope=1.68e-05)"
+    },
+    {
+      "name": "quadratic_regime_confirmed",
+      "passed": true,
+      "detail": "(kappa(h) vs kappa(h/2) agree to <2% for every reading: the finite difference is the true dF''(0), not A^4 contamination)"
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,79 @@
+% =============================================================================
+% Title: Referee package (DRAFT) -- STEP-5B rectangle-constant closure: the theorem-grade rectangle prefactor
+% Claim: B5-BEYOND-LAYER-BOUND (referee package; pending operator confirmation)
+% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: REFEREE PACKAGE DRAFT -- NOT operator-confirmed. Folder result grade T5/T6 (operator-verdict rectangle constant); the incidence route is provisional. Self-contained
+%   referee-facing assembly for external review; pending the operator-confirmation gate
+%   (governance/reproduction-bundle-policy.md sec.11) before a PUBLISHED bundle is built.
+%   Reproduction: 1 script(s) in this folder's bundle. Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesises the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns the STEP-5B rectangle-constant closure: the theorem-grade prefactor $K(n)$ controlling the layer budget. \textbf{Scope:} the rectangle constant and the official threshold. \textbf{Not claimed:} the alternative $20/9$ incidence route is provisional (constant unpinned) and is not relied upon.
+
+\section*{2. The result}
+
+(i) THEOREM (operator verdicts \#9/\#10): $K(n)\le 8+4\sqrt{14}\,\kappa^4\sqrt{n}$, with $1.59\times10^5$ the OFFICIAL threshold. (ii) The $20/9$ incidence route ($2.2\times10^{10}$) is provisional with an unpinned constant and is recorded but not load-bearing.
+
+\section*{3. Structure of the argument}
+
+The rectangle prefactor is bounded by the closed-form $8+4\sqrt{14}\,\kappa^4\sqrt{n}$ (the operator-verified rectangle theorem), giving the official threshold $1.59\times10^5$ that the layer budget must clear. The incidence-geometry alternative is documented for cross-check but its constant is not pinned, so it is not used in the closure.
+
+\section*{4. Numerical reproduction}
+
+The beyond-layer Gershgorin bound script reproduces the rectangle constant and the $1.59\times10^5$ threshold with asserts; run it from the bundle.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is REVIEW DRAFT, NOT
+operator-confirmed, and the claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the falsifier (footer) is concrete and
+pre-registered, so the claim is refutable by a single explicit construction; and the
+numerical values it cites are reproduced by the folder's scripts (all asserts pass).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / STEP-5B
+                         rectangle-constant referee package (DRAFT)
+Precise statement:       THEOREM (operator verdicts #9/#10): K(n) <= 8
+                         + 4 sqrt(14) kappa^4 sqrt(n); 1.59e5 is the
+                         OFFICIAL threshold for the layer budget. The
+                         20/9 incidence route (2.2e10) is provisional
+                         (constant unpinned) and not load-bearing.
+Scope:                   the STEP-5B rectangle prefactor K(n) and
+                         official threshold. Theorem-grade rectangle
+                         constant.
+Evidence grade:          theorem-grade rectangle constant (T5/T6);
+                         EXECUTED.
+Reproduction command:    python
+                         codes/vacuum/beyond_layer_gershgorin_bound.py
+Falsifier:               a configuration where K(n) exceeds 8+4
+                         sqrt(14) kappa^4 sqrt(n); or the layer budget
+                         failing the 1.59e5 threshold.
+Tier before / after:     DRAFT referee package; rectangle constant
+                         T5/T6. NOT operator-confirmed.
+No-overclaim statement:  the rectangle constant is theorem-grade; the
+                         20/9 incidence route is provisional and not
+                         relied upon.
+Next required action:    operator review + confirm -> PUBLISHED bundle.
+\end{verbatim}
+}

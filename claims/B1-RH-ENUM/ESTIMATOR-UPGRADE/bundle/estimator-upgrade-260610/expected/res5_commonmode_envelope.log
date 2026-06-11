@@ -1,0 +1,11 @@
+anchor: rR=0.30453, M_R=0.10941, lam'=3u_eff=8.05507
+    I        r_hat      a0 = 2 lam' I / r_hat     envelope (1-a0)
+   4e-04   0.31097    0.0207                 0.9793
+   1e-03   0.32064    0.0502                 0.9498
+   2e-03   0.33675    0.0957                 0.9043
+  [PASS] dressing_pattern_independent (r_hat(I)=rR+2 lam' I depends only on I, NOT on the pattern (P or R_H): the common dressing D_0(I) is shared, so the beyond-2nd-cumulant common-mode part CANCELS in the difference -- the near-gap R-U10-3 mechanism extended to the bulk)
+  [PASS] a0_controlled_at_endpoint (a0(2e-3)=0.0957 < 0.3: the condensate carries only ~10% of the dressing, so the pattern-dependent (non-cancelling) beyond-2nd-cumulant difference is O(a0)-suppressed)
+  [PASS] leading_envelope_positive (Delta F_exact >~ Delta F^(2)(1-a0) with (1-a0)=0.979/0.950/0.904 > 0.5 across the operating interval: the leading common-mode envelope keeps the selection margin positive)
+  [PASS] a0_monotone_worst_at_endpoint (a0 monotone increasing in I: worst at the I=2e-3 endpoint (a0=0.0957), consistent with the RES-4 / SC-SCOPE endpoint being the thinnest)
+
+claims 4/4 PASS

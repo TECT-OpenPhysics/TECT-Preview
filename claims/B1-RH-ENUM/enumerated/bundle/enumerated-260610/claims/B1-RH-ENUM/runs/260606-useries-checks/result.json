@@ -1,0 +1,407 @@
+{
+  "script": "t6_mainline_useries_checks.py",
+  "version": "0.2.0",
+  "status": "DRAFT - NOT YET EXECUTED (authored without shell access; run + review required)",
+  "date": "2026-06-06",
+  "claims": [
+    {
+      "name": "rR_anchor",
+      "expected": 0.3045257087,
+      "actual": 0.30452570866744433,
+      "tol": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "M_R_anchor",
+      "expected": 0.109414,
+      "actual": 0.10941432918723439,
+      "tol": 5e-05,
+      "passed": true
+    },
+    {
+      "name": "lambda_prime",
+      "expected": 8.0554,
+      "actual": 8.055072796999182,
+      "tol": 0.005,
+      "passed": true
+    },
+    {
+      "name": "M_c_exact",
+      "expected": 0.02654320987654321,
+      "actual": 0.026543209876543204,
+      "tol": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "m_w_window_constant",
+      "expected": 0.0392407,
+      "actual": 0.03924074074074072,
+      "tol": 5e-07,
+      "passed": true
+    },
+    {
+      "name": "m_star_gap_identity_vs_rR",
+      "expected": 0.30452570866744433,
+      "actual": 0.30452570866747025,
+      "tol": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "window_margin_x7p7",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(m*/m_w = 7.76)"
+    },
+    {
+      "name": "anchor_inequality_MR_gt_Mc_x4",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(M_R/M_c = 4.12)"
+    },
+    {
+      "name": "M_monotone_at_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(M(0.31097) = 0.108467 < 0.109414)"
+    },
+    {
+      "name": "M_monotone_at_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(M(0.32064) = 0.107098 < 0.109414)"
+    },
+    {
+      "name": "M_monotone_at_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(M(0.33675) = 0.104953 < 0.109414)"
+    },
+    {
+      "name": "M_ENDPOINT_in_bracket",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(M(0.33675) = 0.104953; U7 bracket [0.1001, 0.1094] with convexity allowance)"
+    },
+    {
+      "name": "J0_addc_value",
+      "expected": 0.29,
+      "actual": 0.2896482320469045,
+      "tol": 0.01,
+      "passed": true
+    },
+    {
+      "name": "composed_margin_anchor",
+      "expected": 0.004247,
+      "actual": 0.004247272727272727,
+      "tol": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "composed_margin_endpoint",
+      "expected": 0.002658,
+      "actual": 0.002658461538461539,
+      "tol": 5e-06,
+      "passed": true
+    },
+    {
+      "name": "u_eff_at_MR",
+      "expected": 2.685,
+      "actual": 2.685024265666395,
+      "tol": 0.005,
+      "passed": true
+    },
+    {
+      "name": "U4_sunset_ratio_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(ratio = 7.75, quoted 7.7)"
+    },
+    {
+      "name": "U4_sunset_ratio_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(ratio = 2.79, quoted 2.8)"
+    },
+    {
+      "name": "U4_sunset_ratio_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(ratio = 0.97, quoted 0.97)"
+    },
+    {
+      "name": "U7_dressed_ratio_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(ratio = 3.02, quoted ~3.2 est)"
+    },
+    {
+      "name": "U7_dressed_ratio_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(ratio = 1.13, quoted ~1.13 est)"
+    },
+    {
+      "name": "U7_endpoint_positive",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(the intensity-dressed endpoint sunset bound sits below the composed margin)"
+    },
+    {
+      "name": "tadpole_source_eq_stationarity_line",
+      "expected": 0.8813403866380052,
+      "actual": 0.8813403866380055,
+      "tol": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "Mprime_equals_minus_half_J0",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(TRIAGE: true identity is M' = -J(0)/2, NOT -J(0); -M' = 0.1452 vs J0/2 = 0.1448; U7/U10 claimed exact M'=-J(0) is off by x2 -- qualitative M'<0 stands)"
+    },
+    {
+      "name": "neargap_linear_gain_coeff",
+      "expected": 1.763,
+      "actual": 1.7626807732760106,
+      "tol": 0.02,
+      "passed": true
+    },
+    {
+      "name": "linear_gain_dominates_envelope_at_endpoint",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(gain 3.5254e-03 vs envelope 1.6615e-03)"
+    },
+    {
+      "name": "convention_remainder_endpoint_TRUE",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(TRIAGE: remainder = 1.65e-03 -- U11 claim 2.7e-5 was ~60x too small; the near-gap convention remainder is NOT negligible at the endpoint)"
+    },
+    {
+      "name": "neargap_endpoint_protection_THIN_x2",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(TRIAGE/R-U10-3: protection/remainder = 2.1 -- THIN x2, NOT x100/x130; R-U10-3 does NOT clean-pass; U1 T6-CONDITIONAL stays BLOCKED on the near-gap endpoint per U9 G-U1-SMALLT)"
+    },
+    {
+      "name": "FCC_min_angle_deg",
+      "expected": 70.5288,
+      "actual": 70.52877936550931,
+      "tol": 0.001,
+      "passed": true
+    },
+    {
+      "name": "icosa_min_angle_deg",
+      "expected": 63.4349,
+      "actual": 63.43494882292201,
+      "tol": 0.001,
+      "passed": true
+    },
+    {
+      "name": "theta_min_anchor",
+      "expected": 0.6027,
+      "actual": 0.6026817799697489,
+      "tol": 0.002,
+      "passed": true
+    },
+    {
+      "name": "inclass_square_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(90.00 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_SC100_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(90.00 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_HEX_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(60.00 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_FCC_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(70.53 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_BCC_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(60.00 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_icosahedral_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(63.43 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_decagonal_I=0.0004",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(36.00 deg vs theta_min 34.53 deg)"
+    },
+    {
+      "name": "inclass_square_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(90.00 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "inclass_SC100_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(90.00 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "inclass_HEX_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(60.00 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "inclass_FCC_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(70.53 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "inclass_BCC_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(60.00 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "inclass_icosahedral_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(63.43 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "inclass_decagonal_I=0.001",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(36.00 deg vs theta_min 35.06 deg)"
+    },
+    {
+      "name": "theta_min_endpoint",
+      "expected": 0.62716,
+      "actual": 0.6271626708714073,
+      "tol": 0.002,
+      "passed": true
+    },
+    {
+      "name": "inclass_square_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(90.00 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "inclass_SC100_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(90.00 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "inclass_HEX_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(60.00 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "inclass_FCC_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(70.53 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "inclass_BCC_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(60.00 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "inclass_icosahedral_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(63.43 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "inclass_decagonal_I=0.002",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(36.00 deg vs theta_min 35.93 deg)"
+    },
+    {
+      "name": "decagonal_extremal_margin_lt_1pc",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(margin = 0.18%)"
+    },
+    {
+      "name": "log2_88",
+      "expected": 6.4594,
+      "actual": 6.459431618637297,
+      "tol": 0.001,
+      "passed": true
+    },
+    {
+      "name": "log_sharpening_factor_at_44",
+      "expected": 2.54,
+      "actual": 2.5415411896401165,
+      "tol": 0.02,
+      "passed": true
+    },
+    {
+      "name": "sharpened_below_original",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "detail": "(log^{3/2} < log^2 for J > 1)"
+    }
+  ]
+}

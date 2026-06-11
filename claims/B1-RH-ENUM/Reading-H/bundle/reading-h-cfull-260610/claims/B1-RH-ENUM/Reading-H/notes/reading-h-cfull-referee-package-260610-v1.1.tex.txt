@@ -1,0 +1,240 @@
+% =============================================================================
+% Title: Self-contained referee package -- Reading-H vacuum selection over the
+%        full admissible competitor class (T7-SCOPE, given the A1 kernel convention)
+% Claim: B1-RH-ENUM, B2-PROPA-HLAYER (referee package; spans B5)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: REFEREE PACKAGE (self-contained) + EXECUTED. Assembles, in one document an
+%   external referee can read standalone, the complete proof that the isotropic
+%   Gaussian-Hartree layer is the strict comparison minimum of the Reading-H selection
+%   over the full admissible competitor class (lattice and non-lattice), within the
+%   certified operating region, given the A1 kernel convention. Collects the definitions,
+%   the two elementary lemmas (antipodal + coherence circle-packing), the (D)(O)(S)
+%   sector decomposition, the window certification, the numerical reproduction
+%   (res5_032--036), and the honest scope. Grounded by res5_032/033/034/035/036 (all PASS).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first issue. Self-contained assembly of the Reading-H C-full
+%        T7-SCOPE result for external review. Grounded by res5_032--036.
+%   v1.1 (2026-06-10) operator review: (D) globality caveat (Sec.4), (S) worst-case-bound
+%        caveat (Sec.6), Lemma 2 proof refined (cyclic-ordering adjacent-gap argument).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This is a self-contained referee document for one result: within the certified operating
+region, the Reading-H vacuum selection of TECT prefers the isotropic Gaussian-Hartree layer
+$G_*$ over every admissible competitor (lattice and non-lattice), given the A1 microscopic
+kernel convention. It collects every definition, lemma, and numerical check needed to verify
+or attack the result without consulting other files.
+
+\noindent\textbf{Claimed} (tier T7-SCOPE, $\mathcal C_{\rm full}$, comfortable off-diagonal):
+\[
+F[Q]-F[G_*]>0\qquad\forall\,Q\in\mathcal C_{\rm full}\setminus\{G_*\},\quad (I,\mu^2)\in\mathcal R,
+\quad\text{given A1.}
+\]
+\textbf{Not claimed:} no statement is made for intensities outside $\mathcal R$, for the A1
+convention being forced rather than chosen, or for a fully unconditional / all-competitor T7.
+
+\section*{2. The object}
+
+TECT's vacuum-selection functional, restricted to the diagonal Gaussian-Hartree layer, assigns
+to a momentum-space condensate pattern $Q$ (a finite point set on the Brazovskii shell
+$|k|=q_0$, with amplitudes) a free energy $F[Q]$. The reference $G_*$ is the rotation-invariant
+(isotropic) dressing on the shell. The A1 kernel convention fixes the microscopic theory:
+$r_{\rm braz}=K(q_0)=\mu^2$, with the Lagrangian constants $u=-0.86$, $v=3.24$, $q_0=0.6802$,
+the gap point $r_R=r_R(\mu^2)$, and $M_R$ the dressed shell mass.
+
+\noindent\textbf{Admissible class $\mathcal C_{\rm full}$.} A competitor $Q$ is admissible iff it
+is (i) real antipodal, $Q=-Q$; (ii) packing-bounded, $|Q|\le n_{\rm pack}=16/\theta_{\min}^2$;
+(iii) coherence-resolved, any two points geodesically separated by $\ge\theta_{\min}$, where
+$\theta_{\min}=\sqrt{\widehat r}\,/(2q_0^2\sqrt c)$ is the coherent angular resolution
+($\widehat r=r_R+2\lambda I$, $\lambda=3u+30vM_R$, $c$ the gradient stiffness). Crystallographic
+(lattice) shells and arbitrary non-lattice configurations are both admitted. At the operating
+anchor $(I,\mu^2)=(2\times10^{-3},0.005)$, $\theta_{\min}=0.627$ and $n_{\rm pack}=40.68$.
+
+\noindent\textbf{Operating region $\mathcal R$} (Sec.~7): $\mu^2\in(0,\mu^2_{\max})$,
+$I\in(0,I_c^{\rm sel}(\mu^2))$.
+
+\section*{3. The decomposition}
+
+Write $F[Q]-F[G_*]$ as the second variation at $G_*$ plus higher cumulants, split into three
+sectors: (D) the diagonal (isotropy) Hessian; (O) the off-diagonal (condensate / additive)
+Hessian; (S) the third-cumulant selection floor (SC-SCOPE). The result follows from positivity
+of each sector over $\mathcal C_{\rm full}$.
+
+\section*{4. (D) Diagonal isotropy is competitor-agnostic}
+
+The second variation of the diagonal functional $F_0$ at $G_*$ is
+\[
+\delta^2F_0=\tfrac12\!\int G_*(q)^{-2}(\delta G)^2\,d^3q+\Phi''_{\rm diag}\,(\delta M_{\rm tot})^2,
+\qquad \Phi''_{\rm diag}=\tfrac32 u_{\rm eff},
+\]
+with $u_{\rm eff}=u+10vM_R>0$ and $M_{\rm tot}=\int G$. Expanding an arbitrary perturbation
+$\delta G(q)=\sum_{lm}a_{lm}(|q|)Y_{lm}(\hat q)$ and using $\int Y_{lm}\,d\Omega=0$ for $l\ge1$,
+the rotation-invariant interaction $\Phi_{\rm diag}(M_{\rm tot})$ curves only the $l=0$ sector, so
+the Hessian is block-diagonal in angular momentum:
+\[
+l=0:\ \tfrac12 G_*^{-2}+\tfrac32 u_{\rm eff}>0;\qquad
+l\ge1:\ \tfrac12 G_*^{-2}\ge\tfrac12 r_R^2=4.64\times10^{-2}>0,
+\]
+the $l\ge1$ infimum attained analytically at the gap shell $|q|=q_0$. The decomposition uses no
+lattice / additive structure: a non-lattice competitor is merely another direction $\delta G$,
+seen by the same positive block-diagonal Hessian. Hence the diagonal minimum is strict for every
+competitor.
+
+\paragraph{Globality caveat.} The conclusion that the diagonal minimum is strict for every
+competitor uses T-016 as a global/convex diagonal-minimum statement for the Gaussian-Hartree
+diagonal functional. If T-016 is read only as a local Hessian statement, then Sec.~4 proves
+strict local diagonal stability; the global comparison invokes the global convexity component
+of T-016.
+
+\section*{5. (O) Off-diagonal: the elementary closure}
+
+The off-diagonal stability ratio is, with the additive-energy floor
+$K_{\rm floor}(Q)=\sum_{t\ne0}r(t)^2/N^2-1$ ($r(t)=\#\{(a,b)\in Q^2:a+b=t\}$, $N=|Q|$),
+\[
+R_{\rm lead}(Q)=\mathrm{const}\,(1+K_{\rm floor}(Q))\,I,\qquad
+\mathrm{const}=\tfrac94 u_{\rm eff}^2 B_{\max}\tfrac{2}{r_R}=23.2,
+\]
+$N$-independent, and the off-diagonal Hessian is positive iff $R_{\rm lead}<1$, i.e.
+$K_{\rm floor}<K_*=1/(\mathrm{const}\,I)-1\simeq20.5$. Two elementary lemmas bound $K_{\rm floor}$.
+
+\noindent\textbf{Lemma 1 (additive-energy floor $\le$ occupancy).} $K_{\rm floor}(Q)\le T'(Q)$,
+where $T'(Q)=\max_{t\ne0}\#(Q\cap C_t)$ is the maximal occupancy of a proper sum-circle
+$C_t=\{x:x\cdot t=|t|^2/2\}\cap S^2$. (This is the unconditional sum-circle bound
+$E_+(Q)\le(1+T')N^2$; both summands of $a+b=t$ lie on $C_t$.)
+
+\noindent\textbf{Lemma 2 (coherence circle-packing).} For an admissible (coherence-resolved)
+$Q$ and any $t\ne0$, $\#(Q\cap C_t)\le\lfloor 2\pi/\theta_{\min}\rfloor$. \emph{Proof.} $C_t$ is a
+Euclidean circle of radius $\rho=\sqrt{q_0^2-|t|^2/4}\le q_0$. Its $Q$-points are pairwise
+geodesically $\ge\theta_{\min}$, hence pairwise Euclidean $\ge d:=2q_0\sin(\theta_{\min}/2)$.
+Let the $k$ points be cyclically ordered on $C_t$ and let $\Delta_{\min}$ be the smallest
+adjacent angular gap; the gaps sum to $2\pi$, so $\Delta_{\min}\le2\pi/k$. Coherence makes
+every adjacent chord $\ge d$, hence $d\le2\rho\sin(\Delta_{\min}/2)\le2\rho\sin(\pi/k)$,
+giving $k\le\pi/\arcsin(d/2\rho)$. Using $\rho\le q_0$, $d/2\rho\ge\sin(\theta_{\min}/2)$,
+so $\arcsin(d/2\rho)\ge\theta_{\min}/2$ and $k\le2\pi/\theta_{\min}$. $\qquad\blacksquare$
+
+\noindent Across $\mathcal R$, $\theta_{\min}\ge0.596$ so $2\pi/\theta_{\min}\le10.54$ and
+\[
+K_{\rm floor}\le T'\le 10\ \Rightarrow\ R_{\rm lead}\le23.2\cdot11\cdot I\le0.615<1
+\quad(\text{at }I=2\times10^{-3}:\ R_{\rm lead}\le0.510,\ \text{margin }\times1.96).
+\]
+The off-diagonal cap $I_{\rm off}^{\rm coh}=1/(23.2\cdot11)=3.92\times10^{-3}$ exceeds the
+selection cap $I_c^{\rm sel}=2.41\times10^{-3}$, so the selection boundary binds and the operating
+region is the full Step-1 region (Sec.~7). The bound is uniform for lattice and non-lattice; a
+direct adversarial search finds the maximal admissible occupancy is $8<10$.
+
+\section*{6. (S) Selection floor is competitor-agnostic}
+
+The SC-SCOPE third-cumulant survival is governed by the joint ratio
+$\mathrm{joint}=\mathrm{MARGIN}/(C_2+\mathrm{composed}/S_{\rm un}+R_{\max}C_2)$, built from layer
+quantities (the Prop-A margin $\mathrm{MARGIN}$, the minimum-transfer envelope $J_{\rm eff}$, the
+sunset cap $S_{\rm un}=1.13$, the realized quartic $R_{\max}=0.385$) and the coherence packing
+$n_{\rm pack}$ -- the same for every admissible competitor, with no dependence on the competitor's
+additive structure. Numerically $\mathrm{joint}=1.04>1$ at the operating point, with the structural
+cap $\mathrm{joint}\to S_{\rm un}=1.13$. Hence the selection floor is positive for non-lattice
+competitors identically.
+
+\paragraph{Worst-case-bound caveat.} The competitor-agnostic conclusion for (S) assumes that
+$J_{\rm eff}$ and $n_{\rm pack}$ are worst-case layer/coherence bounds over the full
+admissible class $\mathcal C_{\rm full}$, not merely over the crystallographic subclass.
+Under this definition the selection joint carries no competitor-specific additive structure.
+
+\section*{7. Window certification}
+
+The Prop-A margin $\mathrm{MARGIN}(\mu^2)=\mathrm{PB}(M_+)-\mathrm{DIP}$ requires the upper PD
+branch $M_+=(-3u+\sqrt{9u^2-60v\mu^2})/(30v)$, i.e.\ $\mu^2<\mu^2_{\max}=3u^2/(20v)=0.0342$. The
+selection critical intensity $I_c^{\rm sel}(\mu^2)$ solves $\mathrm{joint}=1$; it is monotone
+increasing in $\mu^2$ (implicit function theorem, with $\mathrm{joint}$ decreasing in $I$ --
+analytic, the denominator is linear-increasing in $C_2\sim I^2$ with coefficient
+$1+R_{\max}-1/S_{\rm un}=0.500>0$ -- and increasing in $\mu^2$), with minimum
+$I_c^{\rm sel}=2.41\times10^{-3}$ on $[\times0.5,\times2]$. The certified region is
+\[
+\mathcal R=\bigl\{(I,\mu^2):0<\mu^2<\mu^2_{\max}=0.0342,\ 0<I<I_c^{\rm sel}(\mu^2)\bigr\},
+\]
+with the operating point $(2\times10^{-3},0.005)$ interior (20\% intensity headroom).
+
+\section*{8. The assembled result}
+
+(D) strict diagonal minimum (Sec.~4) $+$ (O) $R_{\rm lead}\le0.510<1$ comfortable (Sec.~5) $+$ (S)
+$\mathrm{joint}>1$ (Sec.~6), all competitor-agnostic or coherence-bounded over $\mathcal C_{\rm
+full}$, within the certified $\mathcal R$ (Sec.~7), give $F[Q]-F[G_*]>0$ for every admissible
+competitor. The sole standing input is the A1 kernel convention (a definition of the microscopic
+theory, not a discharged-able hypothesis). Tier: T7-SCOPE on $\mathcal C_{\rm full}$, comfortable
+off-diagonal margin.
+
+\section*{9. Numerical reproduction}
+
+Each numerical claim is reproduced by a standalone script (sandbox, exit 0 iff all self-test
+asserts pass):
+\begin{center}\footnotesize
+\begin{tabularx}{\linewidth}{@{}lY@{}}
+\hline
+script & checks (expected: all PASS)\\
+\hline
+\texttt{res5\_032\_window\_certification.py} & $I_c=2.41\!\times\!10^{-3}$, $\mu^2_{\max}=0.0342$, monotonicity\\
+\texttt{res5\_033\_ext\_adversarial\_map.py} & antipodal $T'\le N/2$; $K_{\rm floor}\!\sim\!1$--$3$\\
+\texttt{res5\_034\_DS\_nonlattice\_extension.py} & (D)/(S) competitor-agnostic\\
+\texttt{res5\_035\_cfull\_scope\_enactment.py} & region, caps, margins\\
+\texttt{res5\_036\_coherence\_offdiag\_bound.py} & $T'\le10$, $R_{\rm lead}\le0.510$, selection binds\\
+\hline
+\end{tabularx}
+\end{center}
+Run \texttt{python codes/vacuum/res5\_03N\_*.py}; each prints its asserts and exits 0.
+
+\section*{10. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the coherence bound.} Lemma 2 rests on $\rho\le q_0$ and pairwise
+$\ge\theta_{\min}$; both are definitional. A near-great sum-circle that could hold $>10$ points
+forces its antipodal mirror within $<\theta_{\min}$ near the equator, violating admissibility
+(verified: maximal admissible occupancy $8$). To falsify, exhibit an admissible $Q$ with a
+sum-circle of $>10$ points.
+\item[($\beta$)] \emph{Attack the A1 input.} The result is relative to the A1 kernel convention;
+it does not claim A1 is forced. A referee who rejects A1 rejects the theory's definition, not this
+proof.
+\item[($\gamma$)] \emph{Attack the scope.} The claim is confined to $\mathcal R$ and to
+$\mathcal C_{\rm full}$ (real antipodal, packing- and coherence-bounded). It is not a global or
+all-intensity statement; SC-SCOPE has a structural near-critical cap $S_{\rm un}=1.13$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): $K_*=20.55$; coherence bound $T'\le10$ (max admissible $8$);
+$R_{\rm lead}\le0.510$ ($\times1.96$); $I_c^{\rm sel}=2.41\times10^{-3}$; $\mu^2_{\max}=0.0342$;
+entropy floor $4.64\times10^{-2}>0$; joint $1.04>1$. All from res5\_032--036.
+
+\section*{11. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               Reading-H C-full referee package (self-contained)
+Precise statement:       Within R = {mu2 in (0,0.0342), I in (0,I_c^sel(mu2))}, given the A1
+                         kernel convention, F[Q]-F[G*]>0 for every admissible competitor Q
+                         (real antipodal, |Q|<=n_pack=16/theta_min^2, pairwise geodesic
+                         >=theta_min), lattice and non-lattice. Proof: (D) block-diagonal
+                         isotropy Hessian (entropy floor (1/2)r_R^2>0, breathing (3/2)u_eff>0),
+                         competitor-agnostic; (O) Lemma 1 (K_floor<=T') + Lemma 2 (coherence
+                         circle-packing T'<=floor(2pi/theta_min)=10) => R_lead<=23.2*11*I<=0.510
+                         <1 (x1.96), selection binds; (S) joint=1.04>1, layer/packing,
+                         competitor-agnostic. Tier T7-SCOPE on C-full, comfortable off-diagonal.
+Scope:                   C-full competitor class, region R, given A1. NOT global/all-intensity/
+                         unconditional. Off-diagonal comfortable (x1.96); EXT (tight K_floor~3)
+                         is an optional T2 further tightening, not used here.
+Dependencies:            A1 kernel convention (microscopic-theory definition); Lemma 1
+                         (sum-circle bound); Lemma 2 (coherence circle-packing, elementary);
+                         res5_032/033/034/035/036.
+Evidence grade:          REFEREE PACKAGE (self-contained) + EXECUTED (res5_032--036 all PASS).
+Reproduction command:    python codes/vacuum/res5_032_window_certification.py ; res5_033_* ;
+                         res5_034_* ; res5_035_* ; res5_036_coherence_offdiag_bound.py
+Expected output:         each script prints its asserts and exits 0.
+Falsifier:               an admissible Q with a sum-circle occupancy > 10 (breaks Lemma 2); or
+                         F[Q]<=F[G*] for some admissible Q in R; or theta_min<2pi/11=0.571 in R.
+Tier before / after:     standalone assembly of the enacted T7-SCOPE_{C-full} (B1/B2); no tier
+                         change. External-referee package (validation/publication gate G2).
+No-overclaim statement:  Scope-qualified T7 of the Reading-H comparison over C-full, given A1,
+                         within R, comfortable margin. NOT a global / all-competitor /
+                         all-intensity / A1-free claim.
+Next required action:    external / second-author reproduction (run res5_032--036) and review of
+                         Lemmas 1--2 and the (D)/(S) competitor-agnosticism arguments.
+\end{verbatim}
+}

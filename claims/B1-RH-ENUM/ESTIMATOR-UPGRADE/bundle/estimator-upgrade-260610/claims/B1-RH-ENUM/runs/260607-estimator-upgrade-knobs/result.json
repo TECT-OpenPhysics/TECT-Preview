@@ -1,0 +1,194 @@
+{
+  "script": "estimator_upgrade_knobs.py",
+  "version": "1.0.0",
+  "mu2": 0.005,
+  "r_bare": 0.2190336473068255,
+  "rR": 0.419271311111732,
+  "MR": 0.09600297182364496,
+  "grids": [
+    121,
+    241,
+    481
+  ],
+  "dI_hi": [
+    12000,
+    100.0
+  ],
+  "amplitude_grid": {
+    "LAM": {
+      "min_pos": {
+        "121": 1.87778931026295e-05,
+        "241": 4.694179858064788e-06,
+        "481": 1.1735266386728725e-06
+      },
+      "monotone_increasing": true,
+      "valid_nodes": 481
+    },
+    "HEX": {
+      "min_pos": {
+        "121": 9.34324467067168e-06,
+        "241": 2.3355324400913956e-06,
+        "481": 5.838656882222867e-07
+      },
+      "monotone_increasing": true,
+      "valid_nodes": 481
+    },
+    "FCC": {
+      "min_pos": {
+        "121": 7.624504939921896e-06,
+        "241": 1.9058205589023915e-06,
+        "481": 4.7643602101495285e-07
+      },
+      "monotone_increasing": true,
+      "valid_nodes": 481
+    },
+    "BCC": {
+      "min_pos": {
+        "121": 5.414934332024431e-06,
+        "241": 1.3535534143040844e-06,
+        "481": 3.383770872755851e-07
+      },
+      "monotone_increasing": true,
+      "valid_nodes": 481
+    }
+  },
+  "continuum": {
+    "LAM": {
+      "delta": 0.0016607893937611495,
+      "M_max": 125.9527607298272,
+      "continuum_lower_bound": 8.801083155297874e-07,
+      "near0_convex": true,
+      "valid_nodes": 481
+    },
+    "HEX": {
+      "delta": 0.0006763366294852307,
+      "M_max": 358.26133143391104,
+      "continuum_lower_bound": 4.378644251484333e-07,
+      "near0_convex": true,
+      "valid_nodes": 481
+    },
+    "FCC": {
+      "delta": 0.0005291010458000122,
+      "M_max": 526.7801819452997,
+      "continuum_lower_bound": 3.5728880554856733e-07,
+      "near0_convex": true,
+      "valid_nodes": 481
+    },
+    "BCC": {
+      "delta": 0.0003640756746976728,
+      "M_max": 629.0115612793966,
+      "continuum_lower_bound": 2.5376029280233234e-07,
+      "near0_convex": true,
+      "valid_nodes": 481
+    }
+  },
+  "dI_knob": {
+    "LAM": {
+      "kappa_base": 0.8509657014161085,
+      "kappa_hi": 0.8509699334727068,
+      "dkappa": 4.232056598274525e-06,
+      "minpos_base": 1.1735266386728725e-06,
+      "minpos_hi": 1.173532417318927e-06
+    },
+    "HEX": {
+      "kappa_base": 2.5541646196406336,
+      "kappa_hi": 2.5541773228755287,
+      "dkappa": 1.2703234895106164e-05,
+      "minpos_base": 5.838656882222867e-07,
+      "minpos_hi": 5.83868600946061e-07
+    },
+    "FCC": {
+      "kappa_base": 3.40776664799185,
+      "kappa_hi": 3.407783595562081,
+      "dkappa": 1.6947570231184983e-05,
+      "minpos_base": 4.7643602101495285e-07,
+      "minpos_hi": 4.764384052777378e-07
+    },
+    "BCC": {
+      "kappa_base": 5.116247464766779,
+      "kappa_hi": 5.116272893173191,
+      "dkappa": 2.5428406411620585e-05,
+      "minpos_base": 3.383770872755851e-07,
+      "minpos_hi": 3.383788426254567e-07
+    }
+  },
+  "two_shell": {
+    "n1": 6,
+    "n2": 3,
+    "shells_disjoint": true,
+    "kappa_12": 0.0,
+    "kappa_BCC": 5.116247464766779,
+    "kernel_penalty_C_q0_4": 0.2140336473068255,
+    "math432_global_verdict": "SUPERSEDED by twoshell-continuum-bound v1.0: the Math432 PASS runs at r=0.005 (not the B1 point r=0.219); the two-shell global no-condensate is redone at r=0.219 there."
+  },
+  "binding_reading": "LAM",
+  "binding_kappa": 0.8509657014161085,
+  "claims": [
+    {
+      "name": "dF0_identity",
+      "passed": true,
+      "detail": "(dF(A=0)=0 exactly: 0.00e+00)"
+    },
+    {
+      "name": "no_condensate_all_grids",
+      "passed": true,
+      "detail": "(min_{A>0} dF > 0 for every reading at NG=121,241,481: no enumerated reading beats Reading-H on any amplitude grid)"
+    },
+    {
+      "name": "unique_minimum_at_zero",
+      "passed": true,
+      "detail": "(dF strictly increasing on the valid prefix at the finest grid for every reading: the only minimum is A=0 = Reading-H, so the verdict is not an amplitude-grid artefact)"
+    },
+    {
+      "name": "near0_convex_all",
+      "passed": true,
+      "detail": "(dF'' > 0 across the first interior nodes for every reading: consistent with kappa_R>0, A=0 is a strict convex minimum)"
+    },
+    {
+      "name": "continuum_no_condensate",
+      "passed": true,
+      "detail": "(curvature-chord bound min(v_i,v_{i+1}) - (1/8) M_i delta^2 > 0 on every A>0 interval for every reading: no condensate can hide BETWEEN grid nodes -- a continuum statement, not just grid)"
+    },
+    {
+      "name": "dI_kappa_envelope_small",
+      "passed": true,
+      "detail": "(dI-grid refinement moves kappa_R by < 0.1% for every reading: kappa is controlled w.r.t. the dI knob as well as the M knob)"
+    },
+    {
+      "name": "dI_verdict_robust",
+      "passed": true,
+      "detail": "(the no-condensate verdict min_{A>0} dF > 0 survives the refined dI grid for every reading)"
+    },
+    {
+      "name": "twoshell_shells_disjoint",
+      "passed": true,
+      "detail": "({110} and {200} share no wavevector: <phi1 phi2>=0 exactly, so the quadratic cross-term kappa_12 vanishes and the (0,0) Hessian is diagonal)"
+    },
+    {
+      "name": "twoshell_110_eigenvalue_positive",
+      "passed": true,
+      "detail": "(the {110} (0,0) eigenvalue = single-shell BCC curvature kappa_BCC=5.1162 > 0; the SOFT eigenvalue is kappa_{{200}}~3.86 -- see twoshell-continuum-bound v1.0, which corrects the soft direction)"
+    },
+    {
+      "name": "twoshell_kernel_penalty_positive",
+      "passed": true,
+      "detail": "({200} carries kernel penalty C*q0^4=0.2140 > 0 (one octave off the kernel minimum); NOTE this kernel offset does NOT order the curvatures -- twoshell-continuum-bound v1.0 finds kappa_{{200}}~3.86 < kappa_{{110}}~5.16 ({200} is SOFTER, fewer modes + dressing). Both eigenvalues > 0 so the (0,0) Hessian is PD)"
+    },
+    {
+      "name": "twoshell_counts",
+      "passed": true,
+      "detail": "(shell pair-counts n1=6 ({110}), n2=3 ({200}) -- combinatorial inputs)"
+    },
+    {
+      "name": "sanity_kappa_BCC_matches_enumerated",
+      "passed": true,
+      "detail": "(kappa_BCC=5.1162 reproduces estimator-upgrade-enumerated v1.0's 5.116)"
+    },
+    {
+      "name": "sanity_cont_lb_below_minpos",
+      "passed": true,
+      "detail": "(the continuum lower bound is <= the grid min for every reading: the bound is conservative)"
+    }
+  ],
+  "all_pass": true
+}

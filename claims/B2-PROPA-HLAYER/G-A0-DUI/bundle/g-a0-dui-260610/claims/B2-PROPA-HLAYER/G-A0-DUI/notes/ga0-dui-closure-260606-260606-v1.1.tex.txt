@@ -1,0 +1,207 @@
+% STATUS-UPDATE (operator review 2026-06-06; revised 2026-06-06): this note's footer treats ROBUSTNESS-MU2 as OPEN, which AGREES with the current live status. An intermediate v1.2 scoped-closure claim (CLOSED@[x0.5,x2]-2ND-CUMULANT) was WITHDRAWN by operator review; the LIVE status (robustness-mu2-step5b-remargin v1.3) is ROBUSTNESS-MU2 OPEN with a numerically-supported off-anchor advance on [x0.5,x2] (exact m(mu^2) bounded-not-recomputed, does not meet the closure bar). The LIVE status is the claim cards + claims/GATES.md (canonical-source hierarchy). H-A0 = REPLACED by H-ANCHOR + G-A0-DUI at the production anchor mu^2=0.005 ONLY; H-ANCHOR = verified anchor fact under A1-KERNEL-CONV.
+% =============================================================================
+% Title: Closing G-A0-DUI: differentiation under the integral for the slaved variance, and the demotion of H-ANCHOR to a verified anchor fact
+% Claim: B2-PROPA-HLAYER (G-A0-DUI closure; H-ANCHOR demotion; also affects B1-RH-ENUM)
+% Version: v1.1 -- first issued 2026-06-06; this version issued 2026-06-06
+% Status: theorem note, T4 (DUI made explicit + machine-confirmed 23/23; G-A0-DUI CLOSED; A=0 uniqueness unconditional at the anchor; H-ANCHOR demoted hypothesis -> verified fact)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) first issue, operator-authorized (clean finish of the
+%        H-A0 removal, directive: proceed with 1). Writes out the textbook
+%        residual G-A0-DUI -- differentiation under the integral for
+%        M(m) -- as an explicit dominated-convergence argument with a
+%        stated dominating function, machine-confirmed (ha0_sign_
+%        decomposition.py v1.1.0, 23/23: M' = -int k^2/D^2 matches the
+%        finite difference to <0.6%, the dominating function is integrable,
+%        pointwise domination holds, M' < 0 strictly). With L1 now rigorous
+%        and L2/L3 already closed-form, the sign-decomposition theorem for
+%        A=0 uniqueness is UNCONDITIONAL at the production anchor: the only
+%        inputs are the verified closed-form facts m* > m_w (x7.76) and
+%        M_R > M_c (x4.12). H-ANCHOR is therefore DEMOTED from a named
+%        hypothesis to a verified anchor dependency; B2 and B1 drop it from
+%        their hypothesis sets. The off-anchor extension remains the
+%        pre-existing ROBUSTNESS-MU2 gate.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+The H-A0 $\to$ H-ANCHOR replacement left one textbook residual, G-A0-DUI:
+the differentiation-under-integral regularity for $M(m)$ underlying
+Lemma L1 ($M' < 0$). This note writes it out explicitly and closes it,
+then records the consequence: the $A=0$ uniqueness becomes an
+unconditional theorem at the production anchor, so H-ANCHOR demotes from
+a hypothesis to a verified fact.
+
+\section*{2. G-A0-DUI: the explicit argument}
+
+With $D(k,m) = m + C(k^2 - q_0^2)^2$ and the radial reduction
+$M(m) = \frac{1}{2\pi^2}\int_0^\infty \frac{k^2}{D(k,m)}\,dk$:
+
+\begin{lemma}[L1, now unconditional]
+For every $m > 0$, $M$ is differentiable with
+\[
+M'(m) \;=\; -\frac{1}{2\pi^2}\int_0^\infty \frac{k^2}{D(k,m)^2}\,dk \;<\; 0 .
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $m > 0$ and set $m_0 = m/2$; for $|h| < m/2$ every intermediate value
+$\tilde m \in [m/2, 3m/2]$ satisfies $\tilde m \ge m_0$, so the SAME
+dominator applies on BOTH sides ($h \gtrless 0$), giving two-sided
+differentiability at $m$. For $\tilde m \ge m_0$, $\partial_{\tilde m} D^{-1}
+= -D^{-2}$ satisfies the pointwise bound
+\[
+\Bigl|\partial_{\tilde m} \tfrac{1}{D(k,\tilde m)}\Bigr|
+= \frac{1}{D(k,\tilde m)^2}
+\;\le\; \frac{1}{D(k,m_0)^2}
+\;=:\; \frac{1}{[m_0 + C(k^2-q_0^2)^2]^2} ,
+\]
+and the dominating function $k^2/D(k,m_0)^2$ is integrable on $(0,\infty)$
+across all three regions: near $k=0$ the denominator is bounded below by a
+positive constant so the integrand is $O(k^2)$; near the shell $k=q_0$ it is
+bounded by $k^2/m_0^2$ (where $D \to m_0$); and as $k \to \infty$ it decays as
+$k^2(Ck^4)^{-2} = C^{-2}k^{-6}$. By the Leibniz rule under dominated convergence,
+differentiation and integration commute, giving the stated $M'$; the
+integrand $k^2/D^2$ is strictly positive, so $M'(m) < 0$ strictly.
+$\square$
+\end{proof}
+
+\noindent Machine confirmation (independent radial quadrature):
+$M' = -\frac{1}{2\pi^2}\int k^2/D^2$ matches the finite-difference $M'$
+to $0.04$--$0.6\%$ at $m = 0.1, m^*, 1.0$; the dominating-function
+integral is finite ($2.36$ at $m_0 = 0.05$); the pointwise domination
+$D(m^*)^{-2} \le D(m_0)^{-2}$ holds with max ratio $1.000$. G-A0-DUI is
+CLOSED.
+
+\section*{3. Consequence: A-zero uniqueness is unconditional at the anchor}
+
+With L1 now rigorous and L2 ($g' \le -1$ on $M \ge M_c$, closed-form
+since $u_{\rm eff}(M_c) = u + 10vM_c = 0$ exactly) and L3
+($g \le m_w - m$ on $M < M_c$, closed-form since $3uM \le 0$ and
+$15vM^2 \le 15vM_c^2$) already closed-form, the sign-decomposition
+theorem has NO remaining analytic gap. Its only inputs are the two
+verified closed-form anchor facts
+\[
+m^* > m_w \;(\times7.76), \qquad M_R > M_c \;(\times4.12),
+\]
+machine-verified in G-A0-VER (14/14). Hence the $A=0$ uniqueness and
+zero-at-gap structure (former H-A0 (U),(Z)) is an UNCONDITIONAL theorem
+AT THE PRODUCTION ANCHOR $\mu^2 = 0.005$ ONLY (the $\mu^2$-neighbourhood is
+ROBUSTNESS-MU2, OPEN). This is the slaved isotropic $A=0$ section, NOT a
+global H-LAYER closure: H-LAYER remains a named hypothesis of B2/B1, and the
+$A\ne0$ branch / anisotropic perturbations / off-diagonal covariance are
+untouched. Permitted: ``$A=0$ uniqueness is unconditional at the anchor.''
+Forbidden: ``H-LAYER is now unconditional.''
+
+\section*{4. H-ANCHOR demotion}
+
+A hypothesis is an assumption that could fail; $m^* > m_w$ is an
+established closed-form inequality on the anchor constants
+($m^* = r + 3uM_R + 15vM_R^2 = r_R$, $m_w = r + 15vM_c^2$), verified with
+a $\times7.76$ margin. It is therefore a VERIFIED DEPENDENCY, not a
+hypothesis. H-ANCHOR is demoted accordingly and REMOVED from the
+hypothesis sets of B2 and B1:
+\begin{align*}
+\text{B2}&: \{\text{H-LAYER}, \text{H-ANCHOR}\} \to \{\text{H-LAYER}\},\\
+\text{B1}&: \{\dots, \text{H-ANCHOR}, \dots\} \to \{\text{H-LAYER}, \text{H-ADM-COH}, \text{SC-SCOPE}\}.
+\end{align*}
+The dependency is RETAINED, not erased: H-ANCHOR leaves the hypothesis set
+but remains a verified anchor dependency --- $m^* > m_w$ and $M_R > M_c$ under
+A1-KERNEL-CONV at $\mu^2 = 0.005$ --- recorded as a verified-fact row in
+GATES.md and in the B1/B2 card scope. Demoting the hypothesis does NOT hide
+the anchor dependence; the curve-shape quadrature systematic exits the
+uniqueness proof, but the anchor constants remain verified dependencies (this
+is not ``all numerical dependence removed''). The OFF-ANCHOR extension (the $\mu^2$-neighbourhood) is the
+pre-existing ROBUSTNESS-MU2 gate, unchanged: this demotion concerns only
+the production anchor, where the whole Sector-B analysis is pinned.
+
+\section*{5. Numerical verification}
+
+Script \url{codes/vacuum/ha0_sign_decomposition.py} (v1.1.0; 23/23
+self-test asserts PASS, the 9 new G-A0-DUI asserts included; artefact
+\url{claims/B2-PROPA-HLAYER/runs/260606-ha0-sign-decomposition/result.json}).
+
+\begin{center}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{} Y Y Y @{}}
+\toprule
+Quantity & Value & Check \\
+\midrule
+$M' = -\frac{1}{2\pi^2}\int k^2/D^2$ vs FD & agree $0.04$--$0.6\%$ & formula confirmed; both $<0$ \\
+dominating-function integral & $2.36 < \infty$ at $m_0 = 0.05$ & $k^{-6}$ tail integrable \\
+pointwise domination & max ratio $1.000 \le 1$ & $D(m^*)^{-2} \le D(m_0)^{-2}$ \\
+$M'(m^*)$ sign & $<0$ strictly & L1 rigorous, G-A0-DUI CLOSED \\
+$u_{\rm eff}(M_c)$ & $= 0$ exactly & L2 boundary closed-form \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Quantitative sanity check (mandatory): the two independent quadratures
+of $\int k^2/D^2$ (the closed-form $M'$ and the finite-difference of
+$M$) agree to $\le 0.6\%$ -- discretisation level, confirming the
+analytic identity, not asserting an exact numerical match (the rigour is
+the dominated-convergence argument, not the quadrature).
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3.5)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Is removing H-ANCHOR from the hypotheses just
+relabelling to inflate the result?''} DISMISSED: $m^* > m_w$ is a proven
+closed-form inequality (G-A0-VER, $\times7.76$), not an assumption; a
+proven fact is a dependency, not a hypothesis. The theorem stated is
+``$A=0$ uniqueness at $\mu^2 = 0.005$, unconditional'' -- exactly what is
+established; no scope is inflated.
+\item[($\beta$)] \emph{``Is the DUI really closed, or is the $0.6\%$
+quadrature gap a hidden problem?''} DISMISSED: the rigour is the
+dominated-convergence argument (stated dominating function, integrable,
+pointwise domination) -- ANALYTIC, exact. The $0.6\%$ is the agreement of
+two independent numerical quadratures, a CONFIRMATION of the formula, not
+a load-bearing bound.
+\item[($\gamma$)] \emph{``Does dropping H-ANCHOR weaken the honest
+tracking of the anchor dependence?''} VALID-with-mitigation: to keep it
+visible, the GATES.md H-ANCHOR row is retained as a VERIFIED-FACT entry
+(not deleted), and the cards' scope states the inequality; only the
+hypothesis CLASSIFICATION changes. The off-anchor question stays in
+ROBUSTNESS-MU2.
+\item[($\delta$)] \emph{``Tier monotonicity after B2 drops to one
+hypothesis?''} DISMISSED: B2 stays T6 with the single named hypothesis
+H-LAYER; the linter's T6-with-sub-T6-dep rule needs $\ge 1$ named
+hypothesis, satisfied. B1 keeps three named hypotheses.
+\end{itemize}
+No objection upheld as a blocker.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / G-A0-DUI closure + H-ANCHOR demotion
+Precise statement:       L1 (M'<0) proven by dominated convergence with the
+                         dominating function k^2/[m0+C(k^2-q0^2)^2]^2
+                         (integrable; pointwise domination); G-A0-DUI
+                         CLOSED. With L2/L3 closed-form, A=0 uniqueness is
+                         unconditional at mu^2=0.005, resting only on the
+                         verified facts m*>m_w (x7.76), M_R>M_c (x4.12).
+                         H-ANCHOR demoted hypothesis -> verified fact;
+                         removed from B2 and B1 hypothesis sets.
+Scope:                   Production anchor mu^2 = 0.005. Off-anchor =
+                         ROBUSTNESS-MU2 (unchanged).
+Dependencies:            A1-KERNEL-CONV (anchor constants); the gap equation.
+Evidence grade:          ANALYTIC (dominated convergence) + EXECUTED (23/23)
+Reproduction command:    python codes/vacuum/ha0_sign_decomposition.py
+Expected output:         claims 23/23 PASS; M' formula vs FD <0.6%;
+                         dominating integral finite; result.json under
+                         claims/B2-PROPA-HLAYER/runs/260606-ha0-sign-decomposition/
+Falsification gate:      A non-integrable dominating function (would break
+                         the DUI); M' >= 0 somewhere (refutes L1); m* <= m_w
+                         at the anchor (refutes the verified fact).
+Tier before / after:     B2 T6 (hyps {H-LAYER, H-ANCHOR} -> {H-LAYER});
+                         B1 T6 (hyps drop H-ANCHOR -> {H-LAYER, H-ADM-COH,
+                         SC-SCOPE}). No tier-number change; both strengthen.
+No-overclaim statement:  The result is unconditional ONLY at the production
+                         anchor; the mu^2-neighbourhood is ROBUSTNESS-MU2,
+                         open and unchanged. G-A0-DUI is closed analytically;
+                         the numerics confirm, they do not carry the proof.
+                         No tier-number change on B1/B2.
+Next required action:    ROBUSTNESS-MU2 (off-anchor neighbourhood) is now the
+                         sole residual of the former H-A0; SC-SCOPE all-orders
+                         and ESTIMATOR-UPGRADE remain for B1.
+\end{verbatim}

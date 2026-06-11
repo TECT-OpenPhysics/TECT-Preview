@@ -1,0 +1,9 @@
+  tail = C_G a0 = 0.492*0.0957 = 0.0471
+  slack_proved=0.0385 (joint 1.04, rho 6.55);  slack_verified=0.0758 (joint 1.082, rho 12.6)
+  [PASS] tail_bracketed_by_floor_grades (slack_proved 0.0385 < tail 0.0471 < slack_verified 0.0758: the endpoint marginalit-y is an ARTEFACT of the over-conservative floor -- the operator-norm tail sits BETWEEN the proved and verified slacks)
+  [PASS] closes_at_verified_floor (tail/slack_verified = 0.0471/0.0758 = 0.621 < 1: with the realized (verified) floor K_floor<=0.52T' (rho_lat=12.6) the endpoint CLOSES with a 38% margin)
+  [PASS] marginal_at_proved_floor (tail/slack_proved = 1.224 > 1: at the PROVED floor K_floor<=T' the endpoint stays marginal -- this is the rigorous residual)
+  [PASS] projection_threshold_below_one (the operator-norm tail over-estimates by the pattern-projection chi_proj <= 1; the endpoint closes at the PROVED slack whenever chi_proj < slack_proved/tail = 0.817. Since the source lam'(P^2-<P^2>) is common-mode-subtracted and supported on the {110} shell (not the softest screened mode), chi_proj < 1 strictly)
+  [PASS] exact_worst_kappa_075_corrects_sample_052 (EXACT additive energy, n=6 {200} shell: K_floor/T'=0.750 ~ 0.75 -- the complete single-shell scan's worst, CORRECTING the prior incomplete-sample 0.52; kappa=0.750 <= 1-1/n=0.833 confirms the PROVED refinement K<=T'(1-||A||_4^4/I^2). Worst-case kappa<1 over the DENSE admissible class is DR-2/circle-incidence-adjacent, NOT SC-SCOPE -- which is lifted@thin-certified via the quartic route, B1 on {H-LAYER})
+
+claims 5/5 PASS

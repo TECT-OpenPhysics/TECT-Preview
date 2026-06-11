@@ -1,0 +1,49 @@
+{
+  "script": "res5_032_window_certification.py",
+  "version": "1.1.0",
+  "mu2max": 0.03424074074074073,
+  "Ioff": 0.0030788177339901475,
+  "Ic_sel": {
+    "0.0025": 0.002409069746732712,
+    "0.005": 0.00250243565440178,
+    "0.01": 0.002689947098493575
+  },
+  "Ic_binding": 0.002409069746732712,
+  "endpoint_headroom": 0.20453487336635592,
+  "margin_minslope": 0.09455149165017106,
+  "denom_coeff": 0.5000442477876106,
+  "verdict": "Step 1 v1.1 CERTIFIED WINDOW BOUNDARY (analytic+interval): I_c=2.41e-3 (selection binds, <I_c^off=3.08e-3 both x1e-3); endpoint I=2e-3 interior 20%. MARGIN strictly increasing (DIP_BAND analytically decreasing + PB(M_+) 400-pt interval-certified, min slope 0.0946). joint strictly decreasing in I (analytic: denom coeff 1+RMAX-1/SUNSET=0.500>0, C2~I^2) and increasing in mu^2 => I_c^sel increasing (IFT). mu^2 window (0,mu^2_max=0.0342), ceiling=physical disc=0 branch boundary. No tier change.",
+  "claims": [
+    {
+      "name": "selection_binds_unit_correct",
+      "passed": true,
+      "detail": "(I_c^sel=2.409e-03 < I_c^off=3.079e-03 [both x1e-3]: SC-SCOPE selection joint=1 binds before off-diagonal R_lead=1; binding I_c=2.409e-03)"
+    },
+    {
+      "name": "analytic_monotonicity_inputs",
+      "passed": true,
+      "detail": "(ANALYTIC: rhat0(mu^2)=mu^2-3U^2/20V<0 so |rhat0|=3U^2/20V-mu^2 strictly DECREASING => DIP_BAND decreasing; and the joint denominator coefficient 1+RMAX-1/SUNSET=0.500>0 => D strictly increasing in C2 => joint strictly decreasing in I)"
+    },
+    {
+      "name": "margin_increasing_interval_certified",
+      "passed": true,
+      "detail": "(MARGIN strictly increasing: 400-pt grid min forward-diff=7.67e-06>0, min slope dMARGIN/dmu^2=0.0946>0; DIP_BAND analytically decreasing + PB(M_+) interval-certified increasing)"
+    },
+    {
+      "name": "joint_decreasing_in_I",
+      "passed": true,
+      "detail": "(joint strictly decreasing in I over [8e-4,3e-3] (12 pts): 1.113->0.957; C2 strictly increasing (I^2 structural) so the positive-coefficient denominator increases => analytic monotonicity confirmed)"
+    },
+    {
+      "name": "joint_and_Ic_increasing_in_mu2",
+      "passed": true,
+      "detail": "(joint increasing in mu^2 (1.033->1.067); hence by implicit-function-theorem I_c^sel increasing in mu^2 (2.409e-03->2.766e-03), so binding I_c at low-mu^2 edge; endpoint headroom 20%)"
+    },
+    {
+      "name": "mu2_window_to_physical_boundary",
+      "passed": true,
+      "detail": "(margin>0 & joint>1 & branch_ok across (0,mu^2_max==0.0342); disc=0 exactly at mu^2_max (M_+ branch boundary, physical); widened [x0.5,x2]->(x0,x6.85); endpoint I=2e-3<I_c=2.409e-03 interior)"
+    }
+  ],
+  "all_pass": true
+}

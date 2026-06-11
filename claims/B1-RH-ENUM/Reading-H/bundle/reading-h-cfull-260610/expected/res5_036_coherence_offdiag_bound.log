@@ -1,0 +1,8 @@
+  [PASS] circle_packing_primitive (points on C_t (radius rho<=Q0) are pairwise Euclidean >= 2Q0 sin(theta_min/2); k on radius rho => sin(pi/k)>=(Q0/rho)sin(theta_min/2)>=sin(theta_min/2) => k<=2pi/theta_min=10.018, floor=10. theta_min=0.6272)
+  [PASS] uniform_window_bound_Tprime_le_10 (sup 2pi/theta_min over the window = 10.537 => T' <= floor = 10 uniformly across R (all admissible competitors, lattice and non-lattice))
+  [PASS] adversarial_max_admissible_Tprime (max admissible single-latitude-ring-pair T' = 8 (< rigorous bound 10); near-great rings that would give higher occupancy violate coherence -- the antipodal mirror collides near the equator)
+  [PASS] random_coherence_Tprime_tiny (random coherence-resolved antipodal configs have T' = 2 <= 4: generic non-lattice has non-degenerate sum-circles; the lemma bound 10 is far from tight for generic configs)
+  [PASS] comfortable_offdiag_selection_binds (K_floor<=T'<=10 => R_lead<=23.2*(1+10)*I: at I_op=2e-3 R_lead=0.510 (margin x1.96); at the selection cap I_c^sel=2.41e-3 R_lead=0.615<1. I_off^coh=1/(23.2*11)=3.918e-03 > I_c^sel => SELECTION binds => C_full region = FULL Step-1 region (20% headroom), NOT thin (2.6%))
+
+LEMMA: T'<=floor(2pi/theta_min)=10 (adversarial max 8); R_lead<=0.510 (x1.96), selection binds (I_off^coh=3.918e-03>2.410e-03)
+claims 5/5 PASS

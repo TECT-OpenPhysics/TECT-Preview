@@ -1,0 +1,51 @@
+{
+  "script": "res5_035_cfull_scope_enactment.py",
+  "version": "1.0.0",
+  "Ioff_Cfull": 0.002052545155993432,
+  "R_lead_thin": 0.9744,
+  "headroom": 0.026272577996715955,
+  "Kstar": 20.551724137931036,
+  "mu2max": 0.03424074074074073,
+  "npack_band": {
+    "0.001": 40.884241486237386,
+    "0.0015": 40.85840835462148,
+    "0.0025": 40.80678735232425,
+    "0.005": 40.67799894732885,
+    "0.01": 40.4204365069424,
+    "0.02": 39.907810682369266,
+    "0.03": 39.399539735939534
+  },
+  "Nhalf_max": 20.0,
+  "R_lead_ext": 0.1856,
+  "ext_margin": 5.387931034482759,
+  "Ic_sel_anchor": 0.0025024358034133917,
+  "verdict": "Operator-enacted C_full internal scope closure: T7-SCOPE_{C_full, thin O}. I_off^Cfull=1/(23.2*21)=2.053e-3 (universal off-diagonal cap, binds < I_c^sel); operating I_op=2e-3 interior, R_lead=0.974<1, thin headroom 2.6%% (NOT Step-1 20%%). n_pack<=40.88 across the band => N/2<=20<20.55=K* throughout, closure holds over the whole widened mu^2 band. EXT optional (K_floor~3 => x5.39), stays T2. Region R_Cfull={mu^2 in (0,mu^2_max), I in (0,min(I_c^sel,I_off^Cfull))}.",
+  "claims": [
+    {
+      "name": "cfull_offdiag_cap_and_closure",
+      "passed": true,
+      "detail": "(I_off^Cfull=1/(23.2*21)=2.0525e-03; operating I_op=2.0e-3 < it; R_lead=23.2*(1+20)*2e-3=0.9744<1 (THIN). The C_full intensity cap is the universal off-diagonal cap, NOT the Step-1 selection cap 2.41e-3)"
+    },
+    {
+      "name": "cfull_headroom_thin_not_step1",
+      "passed": true,
+      "detail": "(C_full off-diagonal headroom (I_off^Cfull-I_op)/I_op=2.6% -- thin, strict; this is NOT the Step-1 selection-window headroom 20% (I_c=2.41e-3). The thin margin is the recorded scope qualifier)"
+    },
+    {
+      "name": "closure_across_widened_band",
+      "passed": true,
+      "detail": "(n_pack(mu^2) in [39.40,40.88] over the band; N=floor(n_pack)<=40 so N/2<=20<20.55=K* throughout => K_floor<=N/2<=20 and R_lead<1 across the whole widened mu^2 band)"
+    },
+    {
+      "name": "ext_margin_x5p39_optional",
+      "passed": true,
+      "detail": "(EXT optional: K_floor~3 => R_lead=23.2*(1+3)*2e-3=0.1856, margin x5.39 (precise; the earlier 'x6' was approximate). EXT remains T2; enactment does NOT depend on it -- thin closure stands alone)"
+    },
+    {
+      "name": "cfull_region_offdiag_binds",
+      "passed": true,
+      "detail": "(at the anchor mu^2=0.005: I_off^Cfull=2.0525e-03 < I_c^sel=2.5024e-03, so for C_full the OFF-DIAGONAL cap binds; R_Cfull={(I,mu^2): 0<mu^2<mu^2_max=0.0342, 0<I<min(I_c^sel,I_off^Cfull)}, operating point interior)"
+    }
+  ],
+  "all_pass": true
+}

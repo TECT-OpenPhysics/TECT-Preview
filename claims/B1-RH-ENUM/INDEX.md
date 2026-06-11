@@ -9,13 +9,14 @@
 
 **Falsifier.** A physical competitor Q in C_phys with F[Q] <= F[G_*] (kinetic penalty included); or rho_off^ext>=1; or a re-opened blocker (off-shell domination / certified thresholds / on-shell pin); or R_max>0.634 under a rigorous bound. An admissible competitor of the H-ADM-COH class with F…
 
-## ESTIMATOR-UPGRADE/  ·  24 proof units  ·  tier span T7
+## ESTIMATOR-UPGRADE/  ·  25 proof units  ·  tier span T4/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `estimator-upgrade-closure-consolidation` | v1.0 | T7* | The estimator-grade Reading-H selection dF>0 is upgraded to a controlled-error, node-free (continuum) no-condensate statement: single-shell (M, dI, a… | EXECUTED (5 scripts) + STRONG-EVIDENCE (curva… | None for ESTIMATOR-UPGRADE (closed). Optional: a T7 interval-arithmetic upgrade of the cu… |
 | `estimator-upgrade-enumerated` | v1.0 | — | Controlled-error: for LAM/HEX/FCC/BCC at mu^2=0.005, A=0 is a STRICT minimum (kappa_R = dF_R''(0) >= 0.85) and no reading condenses, at BOTH N_PT=600… | EXECUTED (estimator_upgrade_enumerated.py 7/7… | Two-shell ensemble + dI/amplitude-grid envelopes by the same method; then ESTIMATOR-UPGRA… |
 | `estimator-upgrade-knobs` | v1.0 | — | For LAM/HEX/FCC/BCC at mu^2=0.005: (ii) kappa_R moves < 0.1% under dI-grid refinement (6000,50)->(12000,100) and the no-condensate verdict is grid-mo… | EXECUTED (estimator_upgrade_knobs.py 13/13) +… | Curvature-chord continuum bound on the exact anchored BULK surface (the only remaining re… |
+| `estimator-upgrade-referee-package` | v1.1 | T4 | The enumerated Reading-H estimator-grade dF>0 is upgraded to a controlled-error, node-free (continuum) no-condensate statement across all quadrature … | controlled-error continuum no-condensate (T4)… | operator review + confirm -> then build the PUBLISHED bundle. |
 | `g3pb3-ratio-closure` | v1.0 | T7* | The physical {200} response A2*(A1)=argmin_{A2,M} dF_anchored at r=0.219 is on the negative branch with \|A2*\|<=0.08, \|rho\|<=0.57, inside the box \|A1\|… | EXECUTED (g3pb3_ratio_extraction.py 6/6). | None for G3PB-III (closed). B1 has no open gates; the remaining levers are the named hypo… |
 | `res-endpoint-admissible-pin` | v1.0 | T7* | Over the admissible crystallographic-shell class (single shells + cumulative balls + all <=4-shell unions, N<=41; 130 configs): EXACT worst K_floor =… | EXACT (combinatorial K_floor, T') + EXECUTED … | Close the chi(P)<~T' carrier-richness link (B5 operator-decision) to make the RES-5 endpo… |
 | `res5-2pi-resummation-strategy` | v1.0 | T7* | g = lam' B_d = 1.03 > 1 (marginal/divergent series), but u_eff>0 (repulsive; bare u=-0.86 lifted by the sextic) => RPA/Dyson screening sign 1/(1+g): … | ANALYTIC + EXECUTED (res5_rpa_screening.py 5/… | Carry the 2PI self-consistent computation of the screened pattern-dependent susceptibilit… |
@@ -38,12 +39,13 @@
 | `twoshell-anchored-bracket` | v1.0 | — | At r_bare=0.219, the anchored two-shell {110}+{200} free energy dF_anchored = dF_diag + (F_exact - F_diag_basis) has min over (A1,A2)!=(0,0) = +6.7e-… | EXECUTED (twoshell_anchored_bracket.py 7/7); … | Curvature-chord continuum bound on the exact anchored bulk surface (finer exact scan); th… |
 | `twoshell-continuum-bound` | v1.0 | — | At r_bare=0.219 (B1): the diagonal-continuum two-shell {110}+{200} free energy, M-minimised, has min over (A1,A2)!=(0,0) = +3.9e-5 > 0, a 2D curvatur… | EXECUTED (twoshell_continuum_bound.py 10/10) … | Exact-Wick bracket continuum bound at r=0.219 (the slogdet engine), then ESTIMATOR-UPGRAD… |
 
-## ROBUSTNESS-MU2/  ·  3 proof units  ·  tier span —
+## ROBUSTNESS-MU2/  ·  4 proof units  ·  tier span —
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `robustness-mu2-margin-recompute` | v1.1 | — | MARGIN(mu^2) = PB(M_+(mu^2)) - DIP_BAND(mu^2), closed-form; reproduces 0.00432 at anchor; over [x0.5,x2] min m = 0.004082 = 0.945 m_anchor at mu^2=0.… | EXECUTED (robustness_mu2_margin_recompute.py … | operator authorization to flip ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GA… |
 | `robustness-mu2-offanchor` | v1.0 | — | Sign-decomposition lemmas are mu^2-independent; the anchor inequalities m*>m_w, M_R>M_c hold on mu^2 in [0.001,0.05] (x0.2..x10), min ratios 5.74/4.0… | ANALYTIC (mu^2-independence + cancellation) +… | Re-margin the STEP-5B closure on the mu^2- neighbourhood (run beyond_layer_gershgorin_bou… |
+| `robustness-mu2-referee-package` | v1.0 | — | The STEP-5B closure margin K_budget/K(n_pack), recomputed off the production anchor, stays >1 across mu^2 in [x0.5,x2] and all three intensities (wor… | robustness EVIDENCE; EXECUTED (3 scripts PASS… | operator review + confirm -> PUBLISHED bundle. |
 | `robustness-mu2-step5b-remargin` | v1.3 | — | STEP-5B closure margin ratio = K_budget/K(n_pack) recomputed off-anchor stays > 1 across mu^2 in [x0.5, x2] and all 3 intensities; worst x2.55 (endpo… | ANALYTIC (closed-form ratio) + EXECUTED (5/5) | (optional) recompute m(mu^2) exactly to sharpen; remaining B1 open gates: ESTIMATOR-UPGRA… |
 
 ## Reading-H/  ·  12 proof units  ·  tier span T2/T5/T6/T7
@@ -63,21 +65,23 @@
 | `t7-enactment-record` | v1.0 | T5 | B1/B2 promoted T6->T7 (operator sign-off 2026-06-10). Enacted: F[Q]>F[G_*] for all Q in C_phys (lattice Reading-H, operating endpoint, [x0.5,x2]); H-… | ENACTMENT + AUDIT + EXECUTED (lint PASS; res5… | (i) external/second-author referee pass before journal submission; (ii) optional CAS inte… |
 | `window-certification-Ic-mu2` | v1.1 | T7 | Binding I_c = 2.41e-3 (SC-SCOPE selection joint=1, low-mu^2 edge; off-diagonal R_lead=1 at 3.08e-3 looser -- 2.41e-3 < 3.08e-3 -- so selection binds)… | CERTIFIED WINDOW BOUNDARY (analytic + interva… | Step 2 -- EXT additive-energy extremal theorem (lattice -> C_full). |
 
-## enumerated/  ·  4 proof units  ·  tier span T5/T7
+## enumerated/  ·  5 proof units  ·  tier span T5/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `enumerated-readings-migration-revalidation` | v1.1 | T5 | Migration batch-2 evidence chain migrated verbatim and re-validated by full re-execution (167/167). | EXECUTED | STEP-5B beyond-layer class-wide bound. |
+| `enumerated-referee-package` | v1.0 | — | The enumerated-reading evidence chain (migration batch 2) is migrated verbatim and re-validated by full re-execution: 167/167 checks pass; the result… | migration re-validation (167/167 EXECUTED). | operator review + confirm -> PUBLISHED bundle. |
 | `enumeration-amended-class-recheck` | v1.0 | T7* | CROSS-CHECK (T4 on exact geometry): every enumerated/gallery pattern satisfies the amended-class separation >= theta_min at all anchor intensities (m… | ANALYTIC (exact geometry) + closed-form arith… | Machine asserts for the angle table; the cross-shell radial-resolution paragraph; mainlin… |
 | `useries-triage` | v1.0 | T7* | 5 script FAILs classified: 1 TYPO (m_w), 1 REAL factor-2 (M'=-J(0)/2 not -J(0)), 1 ESTIMATE (U7 ratio 1.13 not 1.34), 1 REAL x60 overclaim (remainder… | AUDIT + EXECUTED (57/57 corrected) | Operator: choose the R-U10-3 repair (sharper kernel / min-amplitude restriction / explici… |
 | `useries-verification-script` | v1.0 | T7* | TOOLING: one draft script (codes/vacuum/t6_mainline_useries_checks.py v0.1.0, DRAFT - NOT YET EXECUTED) consolidating the eleven machine checks regis… | N/A (tooling) -- the script is DRAFT until fi… | OPERATOR-SIDE (or next shell-capable session): execute the script, review, flip __status_… |
 
-## near-gap/  ·  3 proof units  ·  tier span T7
+## near-gap/  ·  4 proof units  ·  tier span T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `near-gap-referee-package` | v1.0 | — | R-U10-1's O(I^2) claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity M'=-J(0)/2 not -J(0)); with … | convention-exact closure + retraction record … | operator review + confirm -> PUBLISHED bundle. |
 | `neargap-common-mode-resolution` | v1.0 | T7* | At fixed I, r_hat(I) = rR + 2 lambda' I is pattern-independent, so F[P] - F[R_H] = (1/2)Tr[ln(D_0 + lambda' P^2) - ln D_0] >= 0 UNCONDITIONALLY (lamb… | ANALYTIC (operator monotonicity) + EXECUTED (… | Operator: with R-U10-3 resolved, reconsider the U1 T6-CONDITIONAL proposal (B1 T5 -> T6 o… |
 | `neargap-protection-lemma` | v1.0 | T7* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T7* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-11T02:48:40Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-11T05:19:43Z by build_index.py v1.0.1 -->

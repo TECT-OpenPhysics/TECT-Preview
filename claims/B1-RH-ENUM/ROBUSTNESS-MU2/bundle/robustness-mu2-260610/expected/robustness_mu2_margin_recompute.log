@@ -1,0 +1,21 @@
+ROBUSTNESS-MU2: exact m(mu^2) recomputation across [x0.5, x2] (v1.1)
+  [PASS] anchor_margin_reproduces_0.00432 (MARGIN(0.005) = PB(M_+) - DIP_BAND = 0.004320 ~ 0.00432; via sectorb_common, single source)
+    m(mu^2) over [0.0025,0.01]: min=0.004082 (at mu^2=0.00250), max=0.004802; m_anchor=0.004320
+  [PASS] margin_ge_0.4_anchor (min m(mu^2) = 0.004082 >= 0.4 m_anchor = 0.001728; actual ratio min/anchor = 0.945)
+  [PASS] dmargin_dmu2_positive_everywhere (d m/d mu^2 > 0 at all 61 grid points: min = 9.4787e-02 > 0 => m(mu^2) strictly increasing => the minimum is the LEFT endpoint mu^2 = 0.0025, NOT an interior point)
+  [PASS] min_at_left_endpoint (argmin index = 0 (mu^2 = 0.00250): grid minimum at the left endpoint, consistent with the positive-derivative certificate)
+  [PASS] DIP_BAND_decreasing_closedform (DIP_BAND decreases monotonically 0.001047 -> 0.000699 as mu^2 rises: the -DIP_BAND contribution to m is exactly increasing)
+  [PASS] propA_branch_invariant (disc = 9u^2-60v mu^2 > 0 (min 4.7124) and M_+ > M_c on the WHOLE band: the same upper PD branch is used throughout [0.0025,0.01]; no branch crossing)
+    mu^2      m(mu^2)    ratio@4e-4  ratio@1e-3  ratio@2e-3  (recomputed margin)
+    0.00250  0.004082   x  55.5    x 9.16     x2.41
+    0.00354  0.004181   x  57.1    x 9.43     x2.48
+    0.00500  0.004320   x  59.4    x 9.80     x2.58
+    0.00707  0.004518   x  62.7    x10.35     x2.72
+    0.01000  0.004802   x  67.5    x11.15     x2.93
+  [PASS] step5b_ratio_gt1_recomputed_margin (worst STEP-5B ratio over [x0.5,x2] x the THREE CERTIFIED INTENSITIES, using the RECOMPUTED m(mu^2), = x2.41 > 1: closure holds with the exact margin)
+    J_eff two-resolution envelope across the whole (mu^2, I) grid:
+      max relative J_eff envelope over the grid = 0.000%; worst ratio over both resolutions = x2.41
+  [PASS] Jeff_envelope_full_grid_certified (max two-resolution J_eff relative envelope over the WHOLE 5x3 grid = 0.00% (< 5%): J_eff is converged everywhere, not only at the thinnest corner)
+  [PASS] verdict_robust_full_grid (worst STEP-5B ratio over the whole grid AND both J_eff resolutions = x2.41 > 1: the closure verdict survives the J_eff quadrature uncertainty across the full grid)
+
+claims 9/9 PASS

@@ -1,0 +1,117 @@
+% =============================================================================
+% Title: Referee package (DRAFT) -- the enumerated Reading-H selection margin upgraded to a controlled-error, node-free no-condensate statement
+% Claim: B1-RH-ENUM (referee package; pending operator confirmation)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
+% Status: AUXILIARY (not a main-line referee artefact; cited by the main line, DRAFT
+%   bundle only, NOT promoted to PUBLISHED -- main-proof-line.md, operator-confirmed 2026-06-11).
+%   REFEREE PACKAGE DRAFT -- T4 DRAFT ACCEPTED by operator 2026-06-10; PUBLISHED-bundle
+%   confirmation HELD pending external inspection of the 22-script reproduction bundle
+%   (code + expected outputs + environment + logs + hash). Folder result grade T4 (STRONG
+%   EVIDENCE) within the enumerated-ensemble scope; NOT T6/T7, NOT the C_full selection. Self-contained
+%   referee-facing assembly for external review; pending the operator-confirmation gate
+%   (governance/reproduction-bundle-policy.md sec.11) before a PUBLISHED bundle is built.
+%   Reproduction: 22 script(s) in this folder's bundle. Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review.
+%   v1.1 (2026-06-10) operator review: ACCEPT as T4 draft, HOLD published-bundle confirm.
+%        Patches: (a) explicit 22-script reproduction manifest replaces the ellipsis;
+%        (b) SMA-vs-multishell scope-separation sentence added (Sec.1).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This self-contained referee document concerns the ESTIMATOR-UPGRADE sub-proof of B1-RH-ENUM: the upgrade of the estimator-grade Reading-H selection $\Delta F>0$ to a CONTROLLED-ERROR, node-free (continuum) no-condensate statement, across all numerical quadrature knobs and for a multi-shell ensemble's exact (off-diagonal-inclusive) free energy. \textbf{Scope:} the enumerated competitor ensemble at the operating point; single-shell SMA with the $(M,\delta I,$ amplitude-grid) knobs. The competitor generation uses the single-shell SMA knobs, while the validation free energy is evaluated by the multi-shell exact off-diagonal-inclusive engine. \textbf{Not claimed:} this is not the full $\mathcal C_{\rm full}$ selection (that is the Reading-H package); the folder result is T4 STRONG EVIDENCE, not a theorem.
+
+\section*{2. The result}
+
+For the enumerated Reading-H ensemble, the estimator-grade $\Delta F>0$ is promoted to a node-free no-condensate certificate by combining (a) grid-independent curvature certification at two quadrature resolutions, (b) a curvature-chord interval lower bound $\Delta F\ge\min(v_i,v_{i+1})-\tfrac18 M_i \delta^2$, and (c) a near-reference positive-definite Hessian covering the thin region where the off-diagonal correction is $O(\text{amplitude}^4)$. The exact (slogdet) engine is re-used by neuter-import of a frozen legacy script, validated against its recorded outputs to $5\times10^{-8}$.
+
+\section*{3. Structure of the argument}
+
+(i) The estimator $\Delta F$ is reproduced at two quadrature resolutions and the curvature is certified grid-independent. (ii) The interval lower bound makes the no-condensate conclusion robust to discretisation. (iii) The exact-Wick off-diagonal bracket is shown $O(\text{amplitude}^4)$ near the reference, so it never shifts the $(0,0)$ Hessian, which stays equal to the diagonal one. (iv) A physical secondary-shell ratio is shown to lie interior to a region already certified condensate-free. The knob-completeness (single-shell SMA, amplitude grid, trial mass) is exercised script-by-script.
+
+\section*{4. Numerical reproduction}
+
+The reproduction surface is the following explicit manifest of $22$ scripts (each carries self-test asserts and exits 0 iff all pass); the union covers the controlled-error certification, the knob sweeps, and the frozen-engine neuter-import validation. Run each as \texttt{python <path>}; compare against \texttt{expected/}.
+
+{\footnotesize
+\begin{verbatim}
+codes/vacuum/estimator_upgrade_enumerated.py
+codes/vacuum/estimator_upgrade_knobs.py
+codes/vacuum/g3pb3_ratio_extraction.py
+codes/vacuum/res_endpoint_admissible_pin.py
+codes/vacuum/res5_rpa_screening.py
+codes/vacuum/res5_a0_skeleton_sensitivity.py
+codes/vacuum/res5_allorder_commonmode.py
+codes/vacuum/res5_017_chi_bypass.py
+codes/vacuum/res5_commonmode_envelope.py
+codes/vacuum/res5_dr2_kappa_bound.py
+codes/vacuum/res5_dressed_loop_parameter.py
+codes/vacuum/res5_endpoint_2pi_bound.py
+codes/vacuum/res5_higherloop_skeleton.py
+codes/vacuum/res5_2pi_commonmode_monotonicity.py
+codes/vacuum/res5_oneloop_disentangle.py
+codes/vacuum/res5_orderedbcc_parallel.py
+codes/vacuum/res5_projection_factor.py
+codes/vacuum/res5_sunset_norm_map.py
+codes/vacuum/res5_susceptibility_ratio.py
+codes/vacuum/res5_tail_budget.py
+codes/vacuum/twoshell_anchored_bracket.py
+codes/vacuum/twoshell_continuum_bound.py
+\end{verbatim}
+}
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is REVIEW DRAFT, NOT
+operator-confirmed, and the claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the falsifier (footer) is concrete and
+pre-registered, so the claim is refutable by a single explicit construction; and the
+numerical values it cites are reproduced by the folder's scripts (all asserts pass).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / ESTIMATOR-UPGRADE referee package
+                         (DRAFT)
+Precise statement:       The enumerated Reading-H estimator-grade dF>0
+                         is upgraded to a controlled-error, node-free
+                         (continuum) no-condensate statement across all
+                         quadrature knobs and for the multi-shell exact
+                         free energy, via two-resolution curvature
+                         certification + curvature-chord interval bound
+                         + near-reference PD Hessian + frozen-engine
+                         neuter-import (validated 5e-8).
+Scope:                   enumerated competitor ensemble, operating
+                         point, single-shell SMA knobs. T4 STRONG
+                         EVIDENCE.
+Evidence grade:          controlled-error continuum no-condensate (T4);
+                         EXECUTED (folder scripts PASS).
+Reproduction command:    python codes/vacuum/estimator_upgrade_*.py ;
+                         res_endpoint_admissible_pin.py ; ...
+Falsifier:               an enumerated competitor with dF<=0 surviving
+                         the controlled-error bound; or a knob setting
+                         that flips the curvature certificate.
+Tier before / after:     DRAFT referee package; folder result T4. NOT
+                         operator-confirmed.
+No-overclaim statement:  controlled-error STRONG EVIDENCE within the
+                         enumerated-ensemble scope; not the full C_full
+                         selection, not a theorem.
+Next required action:    operator review + confirm -> then build the
+                         PUBLISHED bundle.
+\end{verbatim}
+}

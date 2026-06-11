@@ -1,0 +1,19 @@
+R-U10-3 repair: near-gap convention remainder is common-mode
+  [PASS] lamP2_PSD [n=6] (min eig(lam P^2) = 9.56e-03 >= 0: positive semidefinite by construction)
+  [PASS] lamP2_PSD [n=10] (min eig(lam P^2) = 1.40e-02 >= 0: positive semidefinite by construction)
+  [PASS] lamP2_PSD [n=14] (min eig(lam P^2) = 1.53e-02 >= 0: positive semidefinite by construction)
+  [PASS] dF_floor_nonneg [n=6] (Delta F = 2.1579e+00 >= 0: F[P] >= F[R_H] at the common dressing)
+  [PASS] dF_floor_nonneg [n=10] (Delta F = 5.8937e+00 >= 0: F[P] >= F[R_H] at the common dressing)
+  [PASS] dF_floor_nonneg [n=14] (Delta F = 1.1295e+01 >= 0: F[P] >= F[R_H] at the common dressing)
+  [PASS] dF_floor_nonneg [n=20] (Delta F = 2.2337e+01 >= 0: F[P] >= F[R_H] at the common dressing)
+small-amplitude near-gap sweep (the G-U1-SMALLT regime)
+  [PASS] smallamp_floor [I=2e-03] (Delta F = 5.958e+00 >= 0; min-eig(D0+W) = 0.3564 > 0)
+  [PASS] smallamp_floor [I=5e-04] (Delta F = 1.622e+00 >= 0; min-eig(D0+W) = 0.3175 > 0)
+  [PASS] smallamp_floor [I=1e-04] (Delta F = 3.325e-01 >= 0; min-eig(D0+W) = 0.3071 > 0)
+  [PASS] smallamp_floor [I=1e-05] (Delta F = 3.344e-02 >= 0; min-eig(D0+W) = 0.3048 > 0)
+common-mode cancellation of the convention remainder
+  [PASS] convention_remainder_value (remainder |r_sc - r_lin| = 1.65e-03: the U11 quantity, confirmed)
+  [PASS] dF_invariant_under_dressing_swap (Delta F at r_sc = 8.3378e+00 vs at r_lin = 8.3082e+00: differ by 3.0e-02 << remainder 1.7e-03 -- the remainder is COMMON-MODE, it shifts both ln-terms identically and does NOT erode the selection margin)
+  [PASS] margin_not_thin (selection margin Delta F = 8.338e+00 dominates the dressing-convention sensitivity 3.0e-02 by x282: the x2 of the triage was the remainder mis-subtracted as if it were one-sided)
+
+claims 14/14 PASS

@@ -1,0 +1,41 @@
+{
+  "script": "hdiag_convexity_probe.py",
+  "version": "1.0.0",
+  "mu2": 0.005,
+  "rR": 0.30452570866744433,
+  "M_R": 0.10941432918723439,
+  "U": -0.86,
+  "V": 3.24,
+  "u_eff": 2.685024265666395,
+  "Phi_pp": 4.027536398499592,
+  "entropy_hess_min": 0.04637450116600321,
+  "verdict": "condensate-free functional convex (diagonal infimum global); off-diagonal condensate Hessian is the RES-1 residual",
+  "claims": [
+    {
+      "name": "repulsive_quartic_u_eff_positive",
+      "passed": true,
+      "detail": "(u_eff = U + 10 V M_R = 2.68502 > 0: dressed quartic repulsive)"
+    },
+    {
+      "name": "diagonal_hartree_convex",
+      "passed": true,
+      "detail": "(Phi''(M) = (3/2) u_eff = 4.02754 > 0: the diagonal interaction is strictly convex in M, so the isotropic stationary point is the UNIQUE diagonal-class minimum, not merely an infimum)"
+    },
+    {
+      "name": "sextic_repulsive_coercive",
+      "passed": true,
+      "detail": "(V = 3.24 > 0: the sextic (5v/2)M^3 -> +infty provides boundary coercivity (Math427 escape exclusion))"
+    },
+    {
+      "name": "entropy_hessian_positive_definite",
+      "passed": true,
+      "detail": "(per-mode entropy Hessian 1/(2G^2) > 0 on the BZ grid: min 4.637e-02 > 0 -- -1/2 Tr ln G is convex in G)"
+    },
+    {
+      "name": "condensate_free_convex_implies_global_diagonal_min",
+      "passed": true,
+      "detail": "(entropy convex + kinetic linear + Hartree convex (u_eff>0,V>0) => F[G] convex ABSENT the condensate off-diagonal coupling => isotropic dressing is the GLOBAL min over the full covariance class in that sector; the ONLY possible non-convexity is the condensate-induced off-diagonal (G1'') Hessian -- the named RES-1 residual)"
+    }
+  ],
+  "all_pass": true
+}

@@ -1,0 +1,128 @@
+% =============================================================================
+% Title: Enumerated-reading evidence-chain migration and re-validation record (migration batch 2)
+% Claim: B1-RH-ENUM (supporting: hypothesis H-LAYER of B2-PROPA-HLAYER)
+% Version: v1.1 -- first issued 2026-06-05; this version issued 2026-06-05
+% Status: verification record (no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-05) first issue, in the standard note form (FORM-CHECK).
+%   v1.1 (2026-06-05) path-consistency re-issue: run artefacts moved into the
+%        claim package (runs/<ID>/ -> claims/<ID>/runs/); no other change.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note is the permanent record of migration batch 2 (plan phase M1):
+the enumerated-reading / estimator evidence chain of claim
+\texttt{B1-RH-ENUM} (Reading-H selection within enumerated condensate
+ensembles, T5 \textsc{closed@estimator-grade}) was copied verbatim from the
+frozen legacy repository into \url{archive/legacy/} and re-validated by full
+re-execution. With this batch \texttt{B1-RH-ENUM} is \emph{migration-clean}
+(no unresolved \texttt{legacy:} pointers). The same chain grounds the
+justification of hypothesis H-LAYER carried by \texttt{B2-PROPA-HLAYER}.
+This note makes no new mathematical claim and performs no tier action.
+
+\section*{2. What was migrated}
+
+32 files: 14 notes (Math427 v1.0/v1.1, Math428 v1.0/v1.1, Math429 v1.0/v1.1,
+Math430 v1.0, Math431 v1.0, Math432 v1.0/v1.1, Math434 \S 15.5 audit + AddA
+T5-promotion record, Math436 v1.0/v1.1), 8 verification scripts, and 10
+archived artefacts (8 result JSONs + the Math434/Math436 checkpoint
+\url{state.json} files, kept as provenance). Layout:
+\url{archive/legacy/}\{\url{notes/<Tag>/}, \url{scripts/},
+\url{artefacts/<Tag>/}\}; original paths per file in
+\url{archive/MIGRATION-LEDGER.md}.
+
+\section*{3. Numerical verification}
+
+Fresh environment: python 3.12, numpy 2.2.6. Every script re-executed from
+scratch (no legacy checkpoint state used).
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{} Y l Y @{}}
+\toprule
+Script & Asserts & Verdict line \\
+\midrule
+\url{Math427_g1prime_diagonal_isotropy.py} & 5/5 & diagonal-isotropy grid minimum nonnegative \\
+\url{Math428_g1doubleprime_bloch_logdet.py} & 21/21 & Bloch log-det race PASS, continuum-anchored, both bands positive \\
+\url{Math429_g1pp1prime_inhomogeneous_wick.py} & 19/19 & anchored exact-Wick $M$-scan stays nonnegative \\
+\url{Math430_g1pp2_dense_surface_convergence.py} & 11/11 & dense surface positive; convergence spots positive \\
+\url{Math431_g1pp3_lam_hex_fcc.py} & 15/15 & LAM / HEX / FCC / FCC-exact-Wick all PASS \\
+\url{Math432_g3prime_multishell_ensemble.py} & 25/25 & two-shell surface positive everywhere \\
+\url{Math434_lam_exact_wick_bracket.py} & 22/22 & LAM exact-Wick anchored positive at every grid point \\
+\url{Math436_hex_exact_wick_bracket.py} & 49/49 & HEX exact-Wick anchored positive at every grid point \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Total: \textbf{167/167 asserts PASS} ($5{+}21{+}19{+}11{+}15{+}25{+}22{+}49$).
+All eight regenerated JSONs are identical to the archived legacy artefacts
+within relative tolerance $10^{-9}$ (absolute $10^{-12}$): \emph{zero diffs,
+zero stale-artefact findings} --- in contrast to batch 1's finding F-1.
+Fresh artefacts: \url{claims/B1-RH-ENUM/runs/260605-migration-revalidation/}
+(8 JSONs + \url{summary.json}).
+
+Quantitative sanity check (mandatory): the assert total was cross-checked
+against the per-script verdict lines ($167$); the comparison script reported
+$0$ numeric and $0$ string differences; runtimes $O(1$--$40\,\mathrm{s})$
+per script, consistent with grid sizes.
+
+\section*{4. Findings}
+
+None. No stale artefacts, no convention drift (all notes are themselves the
+corrected-convention $r_{\mathrm{braz}}=K(q_0)=\mu^2$ lineage), no assert
+failures.
+
+\section*{5. Hypothesis-chain linkage}
+
+H-LAYER (claims/GATES.md) justifies the isotropic Gaussian--Hartree layer by
+(i) the diagonal-isotropy infimum (Math427) and (ii) beyond-diagonal
+refinements EXECUTED for the five enumerated readings (Math428--432, Math434,
+Math436). Both legs are now migrated and re-validated; the unexecuted
+non-enumerated residual remains exactly gate STEP-5B, unchanged by this batch.
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Same-ecosystem re-execution is not independent
+verification.''} VALID with mitigation: the asserts are the original
+authors' self-tests; reproducibility, not correctness, is certified here.
+Independent correctness evidence is the migrated Math434 \S 15.5
+independent-audit note; CI re-execution on the GitHub runner adds an
+environment-independent check.
+\item[($\beta$)] \emph{``Math434/Math436 completed in a single budget window,
+so the checkpoint-resume path went unexercised in this re-validation.''}
+VALID: recorded as a limitation. The resume path is evidenced by the archived
+\url{state.json} provenance files; it is falsifiable at any time by running
+under a tighter budget and observing a correct resume.
+\item[($\gamma$)] \emph{``Enumerated coverage does not establish
+admissible-class exhaustiveness.''} DISMISSED as an objection to this record:
+the record claims migration and reproducibility only. Exhaustiveness is
+exactly the open gate STEP-5B, explicitly out of scope; \texttt{B1-RH-ENUM}
+remains T5 \textsc{closed@estimator-grade}.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B1-RH-ENUM (supporting: H-LAYER of B2-PROPA-HLAYER)
+Precise statement:       Migration batch-2 evidence chain migrated verbatim
+                         and re-validated by full re-execution (167/167).
+Scope:                   Reproducibility of the migrated chain only; no new
+                         mathematical claim; no tier action.
+Dependencies:            archive/legacy/ batch-2 file set (ledger 2026-06-05).
+Evidence grade:          EXECUTED
+Reproduction command:    cd archive/legacy/scripts && python
+                         Math427_... && ... && Math436_... (8-script chain;
+                         full command on the B1-RH-ENUM claim card)
+Expected output:         5/5, 21/21, 19/19, 11/11, 15/15, 25/25, 22/22,
+                         49/49 asserts PASS; JSONs match archive at 1e-9;
+                         Math434/436: re-run on [CHECKPOINT] until VERDICT
+Falsification gate:      Any assert failure or artefact mismatch beyond
+                         tolerance on re-execution.
+Tier before / after:     B1 T5 / T5 (no change)
+No-overclaim statement:  Reproducibility, not correctness; enumerated
+                         ensembles only -- Reading-H stays T5; STEP-5B open.
+Next required action:    STEP-5B beyond-layer class-wide bound.
+\end{verbatim}

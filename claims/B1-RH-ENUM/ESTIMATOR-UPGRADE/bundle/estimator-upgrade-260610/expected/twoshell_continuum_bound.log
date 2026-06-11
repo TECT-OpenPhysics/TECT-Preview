@@ -1,0 +1,16 @@
+PART 0  validation (moments exact + Math432 diagonal anchors at r=0.005)
+  [PASS] moments_exact (m20=12.0 m02=6.0 m40=540.0 m31=144.0 m22=96.0 m04=90.0; m11,m13~0 => {110}/{200} orthogonal)
+  [PASS] math432_operating_point (r=0.005 -> rR=0.304526, MR=0.109414; reproduces Math432's recorded operating point)
+  [PASS] diagonal_validates_vs_math432 (max rel error vs Math432 diagonal (anchored-bracket) = 1.61e-07 over 4 anchors: the re-implementation is faithful)
+PART 1  B1 point r=0.2190 (rR=0.4193 MR=0.0960): M-minimised two-shell surface
+  [PASS] b1_operating_point (r=0.219 -> rR=0.41927; the B1 single-shell operating point, DISTINCT from Math432's 0.3045)
+  [PASS] b1_no_diagonal_condensate (min M-minimised dF over (A1,A2)!=(0,0) = 3.914e-05 > 0: no diagonal two-shell condensate at the B1 point -- supersedes the Math432 r=0.005 citation)
+  2D curvature-chord continuum lower bound (excl origin cell) = 1.209e-04
+  [PASS] b1_continuum_no_condensate (2D curvature-chord lower bound = 1.209e-04 > 0 away from the origin: no inter-node two-shell condensate on the diagonal surface -- continuum, not grid)
+  (0,0) Hessian: kappa_{110}=5.1645  kappa_{200}=3.8620  soft=3.8620
+  [PASS] b1_hessian_pd (both (0,0) eigenvalues positive: kappa_{110}=5.1645, kappa_{200}=3.8620 -- the (0,0) Hessian is positive-definite)
+  [PASS] soft_direction_is_200 (the SOFT direction is {200} (kappa=3.8620) not {110} (kappa=5.1645): the knobs-note's '{200} stiffer, soft=5.116' is CORRECTED -- {200} has fewer modes + dressing nets lower curvature)
+  [PASS] sanity_kappa110_near_BCC (kappa_{110}=5.1645 ~ the single-shell BCC curvature 5.116 at the B1 point: consistent (small offset = fixed-M vs gap-solved protocol))
+  [PASS] sanity_bracket_below_margin (Math432 max|bracket|=7.6e-3 at r=0.005 is the off-diagonal scale; named residual = a bracket continuum bound at r=0.219; the diagonal margin is large away from the origin)
+
+claims 10/10 PASS

@@ -9,10 +9,11 @@
 
 **Falsifier.** An admissible pattern inside a certified box (a(P)<1) whose exact off-diagonal Bloch correction exceeds the Lemma-B envelope; or any pattern undercutting the +0.00432 band margin at the anchor.
 
-## DR-2/  ·  9 proof units  ·  tier span T5/T6
+## DR-2/  ·  10 proof units  ·  tier span T5/T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `dr-2-referee-package` | v1.0 | T7 | For Q=Lambda cap {\|x\|^2=R} (fixed crystallographic lattice), E_+(Q) <= (1+6 max_{m!=0} d(4R-\|m\|^2))N^2 <= (1+C_eps R^eps)N^2, unconditional and decou… | unconditional lattice DR-2 (T7 mod NT); EXECU… | operator review + confirm -> PUBLISHED bundle. |
 | `dr2-circle-richness-reduction` | v1.0 | T5* | For finite Q in S^2 with N=\|Q\|, E_+(Q) <= (1+T'(Q))N^2, where T'(Q) = max occupancy of a proper (m!=0) sum-level circle C_m = S^2 cap {x.m=\|m\|^2/2}. … | Lemma A + Corollary 1: T7 PROVED unconditiona… | Either bound T'(Q) for arbitrary Q (open; = carrier richness), or accept the decoupling r… |
 | `dr2-cross-scale-induction` | v1.1 | T6 | For finite Q in S^2, M(\|f_Q\|^4)=E_+(Q) exactly (Besicovitch mean; no integrality). Conditional on l2-decoupling at p=4, the iteration E_+(Q) <=_eps d… | DERIVED with a CORRECT bridge (Besicovitch me… | Operator decision on whether R1+R2 are accepted as textbook-standard (-> T5 or T6 PROVED … |
 | `dr2-decoupling-closure` | v1.1 | T5* | SEPARATED Q in S^2: E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter decoupling (d=3, p=4), via the Schwartz-majorant localisatio… | Separated T6 PROVED CONDITIONAL; unrestricted… | Write the \S4 cross-scale energy bound (close the multi- scale reduction); then DR-2 = T6… |
@@ -23,24 +24,26 @@
 | `dr2-programme-consolidation` | v1.0 | T5* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
 
-## H-LAYER-AUX/  ·  8 proof units  ·  tier span T5
+## H-LAYER-AUX/  ·  9 proof units  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `aadm-exclusion-boundaries` | v1.1 | T5* | A_adm = {Q subset shell-UNION : \|Q\|<=n_pack, Q=-Q, angle>=theta_min, registered shell/shell-union}. FOUR boundaries: (1) sub-theta_min DERIVED (coher… | ANALYTIC (4-boundary grading + T'<=N/2 proof)… | OPERATOR: decide whether off-shell / arbitrary multi-radius antipodal lattice subsets are… |
 | `coherence-admissibility-cutoff` | v1.0 | T5* | H-ADM-COH derivation (PROOF SKETCH, T3): xi = 2 q0 sqrt(C/r_hat) = 2.44; theta_min = 1/(q0 xi) = 0.603 rad; n_adm ~ 35 (x4: 140), nearly I-independen… | PROOF SKETCH (T3) + EXECUTED (all numbers mac… | Operator decision on H-ADM-COH; de-thinning of the I = 2e-3 corner; rigorous indistinguis… |
 | `coherence-indistinguishability-lemma` | v1.0 | T5* | INDISTINGUISHABILITY LEMMA (T4): exact splitting fibers 6/9/(12-6/n) I^2; fragmentation gain saturates; \|F[P'] - F[P]\| <= c_ind I^2 with c_ind = 1.5\|… | ANALYTIC (lemma + theorem skeleton) + EXECUTE… | OPERATOR DECISION on H-ADM-COH (now lemma-backed); cross-term audit polish; endpoint hard… |
+| `h-layer-aux-referee-package` | v1.0 | T5 | The STEP-5B layer-closure ratio rho(I)=K_b(I)/K(I) is strictly monotone decreasing (rho'(I)<0 at all 201 nodes) and rho(I) >= rho(2e-3) = x2.58 > 1 f… | intensity-band layer-ratio positivity (T5); E… | operator review + confirm -> PUBLISHED bundle. |
 | `hadmcoh-adoption-step5b-closure` | v1.0 | T5 | ADOPTION RECORD (verdict #13): H-ADM-COH = admissible-competitor definition within the matched second-cumulant B5 scope. CROSS-READING LEMMA: whole-p… | ANALYTIC (assembled chain) + EXECUTED (189/18… | OPERATOR VERDICT #14: confirm adoption + gate flip + B5 tier decision; then Reading-H T6 … |
 | `hlayer-res4-intensity-closure` | v1.1 | T5* | The STEP-5B layer-closure ratio rho(I)=K_b(I)/K(I) is strictly monotone decreasing (rho'(I)<0 at all 201 nodes) and rho(I) >= rho(2e-3) = x2.58 > 1 f… | EXECUTED (hlayer_res4_intensity_sweep.py 6/6). | RES-5 (matched-order to exact / GAP-2) is the remaining deep frontier; RES-1 (diagonal-Ga… |
 | `hlayer-residual-inventory` | v1.0 | T5* | INVENTORY (no new theorem): the distance between the amended-class conditional theorem and unconditional whole-Reading-H decomposes into RES-1 (H-dia… | SURVEY of ANALYTIC+EXECUTED material; no new … | Unit U4 (SC-SCOPE third-cumulant lift assessment = the RES-5 quantification); RES-4 inter… |
 | `offshell-domination-theorem` | v1.1 | T5* | rho_off = \|Sigma_cond(k_off)\|/K_0(k_off) <= R_lead*r_R/(r_R+c*delta^2) < R_lead < 1, inheriting (a) on-shell R_lead<1 (T-018/020, \|Sigma_cond\|<=R_lea… | ANALYTIC (corollary of established results) +… | T7 Step 3 (Blocker B): R_max<0.634 certified bound (via the official Parseval-pinned Ghat… |
 | `offshell-operator-decision` | v1.0 | T5* | DECISION: off-shell/arbitrary-multi-radius antipodal lattice subsets are NOT in the primary A_adm (registered shell/shell-union, T'<=13), justified b… | ANALYTIC (kinetic penalty + two-tier closure)… | OPERATOR (optional): enact the B1/B2 re-tier to hypothesis-reduced T6 on the shell-suppor… |
 
-## SC-SCOPE/  ·  9 proof units  ·  tier span T5
+## SC-SCOPE/  ·  10 proof units  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `blocker-b-hardening` | v1.1 | T5* | (1) Ghat4 = (J*J)(t) with /(4pi^2) FORCED by the (2pi)^3 convolution measure (phi=2pi); Parseval ratio 1.0000 is a consequence; /(2pi^2) doubles it -… | ANALYTIC (convention derivation + monotonicit… | T7 Step 4 assembly (F[Q]>F[G_*] for all C_phys) now rests only on the operator sign-off; … |
+| `sc-scope-referee-package` | v1.0 | T5 | At the all-orders endpoint I=2e-3 the SC-SCOPE third-cumulant joint > 1: realized quartic R_max=0.385<0.634 (with the Parseval-pinned 1/(4pi^2) convo… | third-cumulant endpoint closure, thin-certifi… | operator review + confirm -> PUBLISHED bundle. |
 | `scscope-classwide-endpoint` | v1.0 | T5* | The certified joint MARGIN/(C_2+C_sunset+C_quartic) has MARGIN cancel, giving joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S], monotone in the STEP-5… | ANALYTIC (MARGIN-cancellation + critical-T') … | The remaining H-LAYER item is the operator competitor-class definition (admissible = crys… |
 | `scscope-endpoint-joint-assessment` | v1.0 | T5* | GHAT4-PERTRANSFER: per-transfer Ghat4(t)=(J*J)(t) on the realized chords; convention-free shape reduction max Phi / Phi_sup = 0.64 (Ghat4 broad), R_m… | EXECUTED (scscope_ghat4_pertransfer.py 7/7; s… | Joint incompatible-pairing argument (bound max_t[c_sunset(t)+c_quartic(t)]) OR sharper pe… |
 | `scscope-floor-sharpening` | v1.6 | T5* | PROVED: the floor's additive-energy constant K=sum_{t!=0}w_t^2/(lambda'I)^2 <= T'(M) (reconciliation, scscope_constant_map.py 3/3), sharpening the en… | Reconciliation K<=T'(M) PROVED + verified (3/… | Pin the absolute Ghat4 normalisation (factor-2/(2pi)^3 convention): the REALIZED quartic … |
@@ -50,7 +53,7 @@
 | `scscope-quartic-normalisation-certificate` | v1.0 | T5* | Ghat4=J*J convolution is standard-normalised (Parseval (J*J)(0)=(2pi^2)^-1 int q^2 J^2, ratio 1.0000; Young ratio 0.27). Hence R_max=0.385<0.634 CERT… | CERTIFICATE: convention pinned (Parseval), R_… | Operator: re-examine the SC-SCOPE endpoint lift given the certified (thin) closure. If ac… |
 | `scscope-scope-decision` | v1.0 | T5* | Operator-authorized (2026-06-07): SC-SCOPE all-orders third-order lift ESTIMATE-FEASIBLE (estimate-grade, NOT proved) for I<=1e-3 (paired joint x3.1 … | DECISION RECORD over EXECUTED evidence (4 scr… | None required for SC-SCOPE (scope accepted). Optional reopening: sharper STEP-5B endpoint… |
 
-## STEP-5B/  ·  8 proof units  ·  tier span T5/T6
+## STEP-5B/  ·  9 proof units  ·  tier span T5/T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -59,6 +62,7 @@
 | `dyadic-lift-log-sharpening` | v1.0 | T5* | THEOREM (T3, proof fully written): the unconditional-amplitude lift improves to sum w_t^2 <= 64 sqrt7 lam'^2 I^2 sqrt(2n) log^{3/2}(2n) + O(lam'^2 I^… | ANALYTIC (two textbook steps) at T3 pending t… | Machine spot-check + definition check (registered); optional direct-l2-assembly optimizat… |
 | `quartic-difference-channel` | v1.0 | T5* | ESTIMATE (T2): the quartic-difference channel's t != 0 part rides the certified transfer set (fibers w_t / lam') with per-transfer ratio R(t) <= ~1.5… | ESTIMATE (T2); machine asserts NOT executed (… | Per-transfer G^4 chord evaluation (U14-script extension) + contraction-topology audit; th… |
 | `rectangle-constant-closure` | v1.3 | T6 | (i) THEOREM (operator, verdicts #9/#10): K(n) <= 8 + 4 sqrt(14) kappa^4 sqrt(n); 1.59e5 = OFFICIAL threshold. (ii) 20/9 incidence route provisional (… | ANALYTIC: sqrt-n route + H-KBAL lift; PROVISI… | DR-2 sphere structure dichotomy (multi-turn designated attack — the single remaining shar… |
+| `step-5b-referee-package` | v1.0 | T6 | THEOREM (operator verdicts #9/#10): K(n) <= 8 + 4 sqrt(14) kappa^4 sqrt(n); 1.59e5 is the OFFICIAL threshold for the layer budget. The 20/9 incidence… | theorem-grade rectangle constant (T5/T6); EXE… | operator review + confirm -> PUBLISHED bundle. |
 | `sunset-endpoint-refinement` | v1.0 | T5* | REFINEMENT (T3, estimate-grade): the sunset bound's coupling must be dressed at each anchor's own r_hat(I) = r_R + 2 lam' I; via the identity M'(r_ha… | ESTIMATE (T3 structure + T2 numbers); machine… | M-ENDPOINT machine evaluation + the shared U4/U7 assert script; then the assembled third-… |
 | `tadpole-reabsorption-lemma` | v1.0 | T5* | LEMMA (T3 sketch): in the matched bookkeeping the cubic vertex is normal-ordered w.r.t. the dressed Gaussian; the tadpole channel (9 M^2 G) of the th… | ANALYTIC SKETCH (T3); the O(I^4) remainder li… | R-U6-1 formal writeup; R-U6-2 script; then the sunset endpoint refinement (per-transfer k… |
 | `third-cumulant-lift-assessment` | v1.0 | T5* | ESTIMATE (T2): the new third-cumulant channel is the cubic sunset with DRESSED coupling u_eff(M_R) = +2.685 (x9.7 above u^2 in square); conservative … | ESTIMATE (T2) -- closed-form arithmetic on ce… | Follow-up script (machine asserts); then the three named lift inputs (a)/(b)/(c) as separ… |
@@ -69,4 +73,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-10T07:42:35Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-11T04:07:40Z by build_index.py v1.0.1 -->
