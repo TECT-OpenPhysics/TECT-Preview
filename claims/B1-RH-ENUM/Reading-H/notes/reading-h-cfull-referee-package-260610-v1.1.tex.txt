@@ -1,9 +1,8 @@
-% SUPERSEDED by reading-h-cfull-referee-package-260610-v1.1.tex.txt (operator review 2026-06-10: (D) globality + (S) worst-case-bound caveats + Lemma 2 proof refinement)
 % =============================================================================
 % Title: Self-contained referee package -- Reading-H vacuum selection over the
 %        full admissible competitor class (T7-SCOPE, given the A1 kernel convention)
 % Claim: B1-RH-ENUM, B2-PROPA-HLAYER (referee package; spans B5)
-% Version: v1.0 -- first issued 2026-06-10; this version issued 2026-06-10
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10
 % Status: REFEREE PACKAGE (self-contained) + EXECUTED. Assembles, in one document an
 %   external referee can read standalone, the complete proof that the isotropic
 %   Gaussian-Hartree layer is the strict comparison minimum of the Reading-H selection
@@ -16,6 +15,8 @@
 % Revision history (cumulative):
 %   v1.0 (2026-06-10) first issue. Self-contained assembly of the Reading-H C-full
 %        T7-SCOPE result for external review. Grounded by res5_032--036.
+%   v1.1 (2026-06-10) operator review: (D) globality caveat (Sec.4), (S) worst-case-bound
+%        caveat (Sec.6), Lemma 2 proof refined (cyclic-ordering adjacent-gap argument).
 % =============================================================================
 
 \sloppy
@@ -82,6 +83,12 @@ lattice / additive structure: a non-lattice competitor is merely another directi
 seen by the same positive block-diagonal Hessian. Hence the diagonal minimum is strict for every
 competitor.
 
+\paragraph{Globality caveat.} The conclusion that the diagonal minimum is strict for every
+competitor uses T-016 as a global/convex diagonal-minimum statement for the Gaussian-Hartree
+diagonal functional. If T-016 is read only as a local Hessian statement, then Sec.~4 proves
+strict local diagonal stability; the global comparison invokes the global convexity component
+of T-016.
+
 \section*{5. (O) Off-diagonal: the elementary closure}
 
 The off-diagonal stability ratio is, with the additive-energy floor
@@ -102,10 +109,11 @@ $E_+(Q)\le(1+T')N^2$; both summands of $a+b=t$ lie on $C_t$.)
 $Q$ and any $t\ne0$, $\#(Q\cap C_t)\le\lfloor 2\pi/\theta_{\min}\rfloor$. \emph{Proof.} $C_t$ is a
 Euclidean circle of radius $\rho=\sqrt{q_0^2-|t|^2/4}\le q_0$. Its $Q$-points are pairwise
 geodesically $\ge\theta_{\min}$, hence pairwise Euclidean $\ge d:=2q_0\sin(\theta_{\min}/2)$.
-If $k$ points lie on a circle of radius $\rho$ with pairwise distance $\ge d$ then
-$2\rho\sin(\pi/k)\ge d$, i.e.\ $k\le\pi/\arcsin(d/2\rho)$; since $\rho\le q_0$,
-$d/2\rho\ge\sin(\theta_{\min}/2)$, so $\arcsin(d/2\rho)\ge\theta_{\min}/2$ and
-$k\le 2\pi/\theta_{\min}$. $\qquad\blacksquare$
+Let the $k$ points be cyclically ordered on $C_t$ and let $\Delta_{\min}$ be the smallest
+adjacent angular gap; the gaps sum to $2\pi$, so $\Delta_{\min}\le2\pi/k$. Coherence makes
+every adjacent chord $\ge d$, hence $d\le2\rho\sin(\Delta_{\min}/2)\le2\rho\sin(\pi/k)$,
+giving $k\le\pi/\arcsin(d/2\rho)$. Using $\rho\le q_0$, $d/2\rho\ge\sin(\theta_{\min}/2)$,
+so $\arcsin(d/2\rho)\ge\theta_{\min}/2$ and $k\le2\pi/\theta_{\min}$. $\qquad\blacksquare$
 
 \noindent Across $\mathcal R$, $\theta_{\min}\ge0.596$ so $2\pi/\theta_{\min}\le10.54$ and
 \[
@@ -127,6 +135,11 @@ $n_{\rm pack}$ -- the same for every admissible competitor, with no dependence o
 additive structure. Numerically $\mathrm{joint}=1.04>1$ at the operating point, with the structural
 cap $\mathrm{joint}\to S_{\rm un}=1.13$. Hence the selection floor is positive for non-lattice
 competitors identically.
+
+\paragraph{Worst-case-bound caveat.} The competitor-agnostic conclusion for (S) assumes that
+$J_{\rm eff}$ and $n_{\rm pack}$ are worst-case layer/coherence bounds over the full
+admissible class $\mathcal C_{\rm full}$, not merely over the crystallographic subclass.
+Under this definition the selection joint carries no competitor-specific additive structure.
 
 \section*{7. Window certification}
 

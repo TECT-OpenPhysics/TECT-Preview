@@ -5,6 +5,22 @@ not pillar counts.
 
 ---
 
+## [Referee package v1.1 (operator review 2026-06-10): three minor dependency patches -- (D) globality caveat (T-016 global/convex vs local Hessian), (S) worst-case-bound caveat (J_eff/n_pack full-class bounds), Lemma 2 proof refined (cyclic-ordering adjacent-gap argument). Builds 0 overfull; res5_032-036 unchanged (27/27 PASS). Supersedes v1.0.] - 2026-06-10
+
+Operator review of reading-h-cfull-referee-package v1.0: ACCEPT (structurally complete) with two
+mandatory dependency-caveat patches + one proof refinement, applied in v1.1.
+(D) globality caveat (Sec.4): the strict-for-every-competitor conclusion uses T-016 as a
+global/convex diagonal-minimum statement; if T-016 is local-Hessian only, Sec.4 gives strict local
+stability and the global comparison invokes T-016's convexity component.
+(S) worst-case-bound caveat (Sec.6): the competitor-agnostic conclusion assumes J_eff and n_pack are
+worst-case layer/coherence bounds over the full admissible class C_full, not just the crystallographic
+subclass.
+Lemma 2 proof refined: cyclic-ordering adjacent-gap argument (Delta_min<=2pi/k, d<=2 rho sin(Delta_min/2)
+<=2 rho sin(pi/k) => k<=pi/arcsin(d/2rho)<=2pi/theta_min) -- same result, referee-tight inequality
+direction. Core claim unchanged: F[Q]>F[G_*] for all admissible Q in R, given A1; off-diagonal
+comfortable (T'<=10, R_lead<=0.510<1, x1.96). VALIDATED: FORM-CHECK PASS, 0 overfull, PDF 371 KB;
+res5_032-036 unchanged (27/27 asserts PASS). v1.0 superseded (forward-pointer). No tier change.
+
 ## [Self-contained referee package for the Reading-H C-full T7-SCOPE result (reading-h-cfull-referee-package v1.0): single standalone document assembling object + admissible class + the two elementary lemmas (antipodal T'<=N/2, coherence circle-packing T'<=floor(2pi/theta_min)=10 with proofs) + (D)(O)(S) decomposition + window certification + numerical reproduction (res5_032-036) + honest scope/falsifier. VALIDATED: FORM-CHECK PASS, 0 overfull, PDF built; all 5 reproduction scripts PASS (27/27 asserts). For external referee (G2).] - 2026-06-10
 
 Operator request: self-contained referee package + validation. NEW

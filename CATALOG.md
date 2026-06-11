@@ -6,7 +6,7 @@
 
 Generated: 2026-06-11
 
-**713 artefacts** · superseded versions kept: 70 · machine-readable twin: `verification/catalog.json`
+**715 artefacts** · superseded versions kept: 71 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -24,7 +24,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-RENORMALISATION/LINEAGE.md` | A3-RENORMALISATION | — | — | — | ACTIVE | `7dac74dc783a` |
 | `claims/A3-RENORMALISATION/claim.md` | A3-RENORMALISATION | — | — | — | ACTIVE | `06f9f2d35903` |
 | `claims/A3-RENORMALISATION/status.json` | A3-RENORMALISATION | — | — | — | ACTIVE | `9bf455b6fe7f` |
-| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `67e5a1704fce` |
+| `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `296c0f50560b` |
 | `claims/B1-RH-ENUM/claim.md` | B1-RH-ENUM | — | — | — | ACTIVE | `2a3ecbc54655` |
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `ac08c4be7b0a` |
@@ -195,7 +195,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/Reading-H/notes/nonlattice-window-scope-completion-strategy-260610-v1.0.pdf` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `52c57a2e6d1b` |
 | `claims/B1-RH-ENUM/Reading-H/notes/nonlattice-window-scope-completion-strategy-260610-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `9e83b35cf678` |
 | `claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.0.pdf` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `1264b3ad7b8c` |
-| `claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.0 | ACTIVE | `f69f53deba36` |
+| `claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `c74fa8acbd7a` |
+| `claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.1.pdf` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `b6578879279b` |
+| `claims/B1-RH-ENUM/Reading-H/notes/reading-h-cfull-referee-package-260610-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `9d65d1d060f9` |
 | `claims/B1-RH-ENUM/Reading-H/notes/reading-h-t6-entry-260606-260606-v2.0.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.0 | ACTIVE | `a4aefa229414` |
 | `claims/B1-RH-ENUM/Reading-H/notes/reading-h-t6-entry-260606-260606-v2.0.tex.txt` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.0 | SUPERSEDED | `2226790d1a13` |
 | `claims/B1-RH-ENUM/Reading-H/notes/reading-h-t6-entry-260606-260606-v2.1.pdf` | B1-RH-ENUM | 2026-06-06 | 2026-06-06 | v2.1 | ACTIVE | `b7ab5153602c` |
@@ -701,7 +703,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `94de729b5378` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
-| `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `b8ce2bce8a7b` |
+| `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `3aa8b91e56e0` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `81335be09c8b` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `678117b40e43` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `e1a0051c3c01` |
@@ -734,7 +736,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `f29930f623d4` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `54632c6d7cf6` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `6c153dfaf55f` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -753,7 +755,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `a941b7f3a104` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `019a731ab5a1` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
