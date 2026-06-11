@@ -153,45 +153,84 @@ unfixed (RES-5).
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B2-PROPA-HLAYER / H-diag discharge V (full off-diagonal
-                         operator-norm residual reduced to the exchange block; v1.1
+Result ID:                B2-PROPA-HLAYER / H-diag discharge V (full
+                         off-diagonal
+                         operator-norm residual reduced to the exchange
+                         block; v1.1
                          full-admissible-class re-issue)
-Precise statement:       Hess F|G* = E + B^cond + B^exch. (i) DIAGONALITY LEMMA:
-                         Delta F_od = sum_Q f_Q(G_QQ) [independent channels] =>
-                         B^cond block-diagonal in Q => ||B^cond||_op = max-channel
-                         ratio <= R_lead(Q). Class values R_lead^BCC=0.174,
-                         R_lead^unif=0.609, R_lead^nonunif<=0.650, all<1 (margins
-                         x5.7/x1.64/x1.54). (ii) Triangle: ||E^-1/2 B_od E^-1/2|| <=
-                         R_lead(Q) + rho_exch, so full norm <1 provided rho_exch <
-                         1-R_lead(Q) (budget 0.350 binding). (iii) Symmetric row-sum:
-                         rho_exch <= N_exch(Q) b_exch; COMPETITOR-DEPENDENT threshold
-                         b_exch(Q) < b_star(Q) = (1-R_lead(Q))/N_exch(Q), values
-                         b_star = 0.0486(BCC)/0.0230(unif)/0.0206(nonunif binding).
-Scope:                   Operating endpoint mu^2=0.005; full admissible crystallographic
-                         class (BCC = anchor specialisation). b_exch NOT bounded.
-Dependencies:            hdiag-full-operator-norm-formulation (block decomposition);
-                         hdiag-offdiag-constant-certificate (const, B_max, c_diag);
-                         res-endpoint-admissible-pin (T-014 K_floor=12.13 / T-015 T'=13);
-                         hdiag-offdiag-additive-energy (sum p_2^2=E_+); Math428 (W,B).
-Evidence grade:          ANALYTIC (reduction + diagonality lemma) + EXECUTED
-                         (res5_018_offdiag_gershgorin_threshold.py v1.2 5/5).
-Reproduction command:    python codes/vacuum/res5_018_offdiag_gershgorin_threshold.py
-Expected output:         R_lead 0.174/0.609/0.650; b_star 0.0486/0.0230/0.0206;
+Precise statement:        Hess F|G* = E + B^cond + B^exch. (i)
+                         DIAGONALITY LEMMA:
+                         Delta F_od = sum_Q f_Q(G_QQ) [independent
+                         channels] =>
+                         B^cond block-diagonal in Q => ||B^cond||_op =
+                         max-channel
+                         ratio <= R_lead(Q). Class values
+                         R_lead^BCC=0.174,
+                         R_lead^unif=0.609, R_lead^nonunif<=0.650, all<1
+                         (margins
+                         x5.7/x1.64/x1.54). (ii) Triangle:  ||E^-1/2
+                                                           B_od E^-1/2||
+                                                           <=
+                         R_lead(Q) + rho_exch, so full norm <1 provided
+                         rho_exch <
+                         1-R_lead(Q) (budget 0.350 binding). (iii)
+                         Symmetric row-sum:
+                         rho_exch <= N_exch(Q) b_exch;
+                         COMPETITOR-DEPENDENT threshold
+                         b_exch(Q) < b_star(Q) =
+                         (1-R_lead(Q))/N_exch(Q), values
+                         b_star =
+                         0.0486(BCC)/0.0230(unif)/0.0206(nonunif
+                         binding).
+Scope:                    Operating endpoint mu^2=0.005; full admissible
+                         crystallographic
+                         class (BCC = anchor specialisation). b_exch NOT
+                         bounded.
+Dependencies:             hdiag-full-operator-norm-formulation (block
+                         decomposition);
+                         hdiag-offdiag-constant-certificate (const,
+                         B_max, c_diag);
+                         res-endpoint-admissible-pin (T-014
+                         K_floor=12.13 / T-015 T'=13);
+                         hdiag-offdiag-additive-energy (sum p_2^2=E_+);
+                         Math428 (W,B).
+Evidence grade:           ANALYTIC (reduction + diagonality lemma) +
+                         EXECUTED
+                         (res5_018_offdiag_gershgorin_threshold.py v1.2
+                         5/5).
+Reproduction command:     python
+                         codes/vacuum/res5_018_offdiag_gershgorin_threshold.py
+Expected output:          R_lead 0.174/0.609/0.650; b_star
+                         0.0486/0.0230/0.0206;
                          N_exch=17; 5/5 PASS.
-Falsification gate:      A proof that B^cond is NOT diagonal in Q (breaks the lemma);
-                         or an exchange computation giving b_exch >= b_star^nonunif=
-                         0.0206 at operating intensity for some admissible Q (refutes
-                         closure via this route, leaving RES-5 the only path).
-Tier before / after:     No tier flip. B1 T6, B2 T6 on {H-LAYER}. RES-1 off-diagonal
-                         residual reduced from the exchange-Hessian eigenvalue spectrum
-                         to the competitor-dependent scalar b_exch(Q) < (1-R_lead(Q))/
+Falsification gate:       A proof that B^cond is NOT diagonal in Q
+                         (breaks the lemma);
+                         or an exchange computation giving b_exch >=
+                         b_star^nonunif=
+                         0.0206 at operating intensity for some
+                         admissible Q (refutes
+                         closure via this route, leaving RES-5 the only
+                         path).
+Tier before / after:      No tier flip. B1 T6, B2 T6 on {H-LAYER}. RES-1
+                         off-diagonal
+                         residual reduced from the exchange-Hessian
+                         eigenvalue spectrum
+                         to the competitor-dependent scalar b_exch(Q) <
+                         (1-R_lead(Q))/
                          N_exch(Q), binding full-class target 0.0206.
-No-overclaim statement:  Does NOT close the full off-diagonal operator norm and does
-                         NOT flip B1/B2. The exchange scalar b_exch is RES-5. The
-                         full-class margin is x1.54 (not the BCC x5.7); the binding
-                         threshold is 0.0206 (not 0.0486). B1/B2 stay T6 on {H-LAYER}.
-Next required action:    Bound the dressed exchange scalar b_exch(Q) at operating
-                         intensity against b_star(Q) = (1-R_lead(Q))/N_exch(Q) for the
-                         admissible class (binding target 0.0206) = RES-5 / GAP-2.
+No-overclaim statement:   Does NOT close the full off-diagonal operator
+                         norm and does
+                         NOT flip B1/B2. The exchange scalar b_exch is
+                         RES-5. The
+                         full-class margin is x1.54 (not the BCC x5.7);
+                         the binding
+                         threshold is 0.0206 (not 0.0486). B1/B2 stay T6
+                         on {H-LAYER}.
+Next required action:     Bound the dressed exchange scalar b_exch(Q) at
+                         operating
+                         intensity against b_star(Q) =
+                         (1-R_lead(Q))/N_exch(Q) for the
+                         admissible class (binding target 0.0206) =
+                         RES-5 / GAP-2.
 \end{verbatim}
 }

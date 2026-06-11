@@ -22,7 +22,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. Purpose (roadmap Step 2) and the resolved distinction}
+\section*{1. Purpose and scope}
 
 Step 2 addresses the competitor-class widening from the lattice Reading-H class to the full
 admissible class $\mathcal C_{\rm full}$ (lattice $+$ non-lattice). The off-diagonal stability
@@ -123,31 +123,59 @@ $K_{\rm floor}\le2.47$, $R_{\rm lead}\le0.16$ (margin $\times6$). All from res5\
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1/B2 EXT status + off-diagonal C_full thin closure (roadmap Step 2)
-Precise statement:       Antipodal lemma T'<=N/2 (proved, elementary). With R-025 (K_floor<=T')
-                         and packing N<=n_pack=40.68: K_floor<=N/2<=20<20.55=K* => R_lead<1 for
-                         ALL admissible competitors incl non-lattice (THIN x1.026, A_ext
-                         fallback) -- the off-diagonal C_full closure is PROVED, not conjecture.
-                         Actual K_floor~1-2.5 across random/latitude-ring/rich-shell (T' up to
-                         N/2=20 a loose proxy). EXT (max K_floor~3 in arithmetic subclass) is a
-                         MARGIN UPGRADE x1.026->~x6, NOT a closure blocker; stays T2.
-Scope:                   Off-diagonal sector for C_full. (D)/(S) non-lattice = Step 3; thin-margin
-                         acceptance = operator decision. No B1/B2 tier change.
-Dependencies:            antipodal lemma (this note, proved); R-025 (K_floor<=T', T7); T-018
-                         (R_lead/K* identity); T-022/T-023 (A_ext fallback); res5_031 (corrected).
-Evidence grade:          off-diagonal C_full thin closure PROVED (T6, on R-025+packing);
-                         EXT T2 CONJECTURE (strong evidence). EXECUTED (res5_033 5/5).
-Reproduction command:    python codes/vacuum/res5_033_ext_adversarial_map.py
-Expected output:         antipodal lemma T'<=N/2 verified; R_lead<=0.974<1 (C_full thin);
+Result ID:                B1/B2 EXT status + off-diagonal C_full thin
+                         closure (roadmap Step 2)
+Precise statement:        Antipodal lemma T'<=N/2 (proved, elementary).
+                         With R-025 (K_floor<=T')
+                         and packing N<=n_pack=40.68: 
+                                                      K_floor<=N/2<=20<20.55=K*
+                                                      => R_lead<1 for
+                         ALL admissible competitors incl non-lattice
+                         (THIN x1.026, A_ext
+                         fallback) -- the off-diagonal C_full closure is
+                         PROVED, not conjecture.
+                         Actual K_floor~1-2.5 across
+                         random/latitude-ring/rich-shell (T' up to
+                         N/2=20 a loose proxy). EXT (max K_floor~3 in
+                         arithmetic subclass) is a
+                         MARGIN UPGRADE x1.026->~x6, NOT a closure
+                         blocker; stays T2.
+Scope:                    Off-diagonal sector for C_full. (D)/(S)
+                         non-lattice = Step 3; thin-margin
+                         acceptance = operator decision. No B1/B2 tier
+                         change.
+Dependencies:             antipodal lemma (this note, proved); R-025
+                         (K_floor<=T', T7); T-018
+                         (R_lead/K* identity); T-022/T-023 (A_ext
+                         fallback); res5_031 (corrected).
+Evidence grade:           off-diagonal C_full thin closure PROVED (T6,
+                         on R-025+packing);
+                         EXT T2 CONJECTURE (strong evidence). EXECUTED
+                         (res5_033 5/5).
+Reproduction command:     python
+                         codes/vacuum/res5_033_ext_adversarial_map.py
+Expected output:          antipodal lemma T'<=N/2 verified;
+                         R_lead<=0.974<1 (C_full thin);
                          actual K_floor<=2.47 (margin x6); 5/5 PASS.
-Falsifier:               EXT: an admissible Q with K_floor>13. Thin closure: an admissible
-                         antipodal Q with T'>N/2 (would refute the lemma) or N>n_pack.
-Tier before / after:     No B1/B2 change. Antipodal lemma proved; off-diagonal C_full thin
-                         closure proved (T6); EXT T2 (margin upgrade, operator: do not promote).
-No-overclaim statement:  The off-diagonal C_full closure is THIN (x1.026) and rests on
-                         n_pack<=41; the full C_full T7 also needs (D)/(S) non-lattice (Step 3).
-                         EXT is a comfort upgrade, not the closure. No tier widening.
-Next required action:    Step 3 -- extend (D) diagonal isotropy + (S) selection floor to
-                         non-lattice competitors; then operator decision on thin-margin C_full.
+Falsifier:                EXT: an admissible Q with K_floor>13. Thin
+                         closure: an admissible
+                         antipodal Q with T'>N/2 (would refute the
+                         lemma) or N>n_pack.
+Tier before / after:      No B1/B2 change. Antipodal lemma proved;
+                         off-diagonal C_full thin
+                         closure proved (T6); EXT T2 (margin upgrade, operator: 
+                                                                                do
+                                                                                not
+                                                                                promote).
+No-overclaim statement:   The off-diagonal C_full closure is THIN
+                         (x1.026) and rests on
+                         n_pack<=41; the full C_full T7 also needs
+                         (D)/(S) non-lattice (Step 3).
+                         EXT is a comfort upgrade, not the closure. No
+                         tier widening.
+Next required action:     Step 3 -- extend (D) diagonal isotropy + (S)
+                         selection floor to
+                         non-lattice competitors; then operator decision
+                         on thin-margin C_full.
 \end{verbatim}
 }

@@ -136,45 +136,79 @@ $\times1.095$, endpoint thinnest.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE third-cumulant endpoint
+Result ID:                B5-BEYOND-LAYER-BOUND / SC-SCOPE
+                         third-cumulant endpoint
                          class-wide closure
-Precise statement:       The certified joint MARGIN/(C_2+C_sunset+C_quartic) has MARGIN
-                         cancel, giving joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S],
-                         monotone in the STEP-5B floor rho_lat, saturating at S=1.13.
-                         joint>1 iff rho_lat>4.347. With rho_lat=K_budget/(1+T'),
-                         K_budget=266.7 pattern-independent, joint>1 iff T'<60.4. T-017
-                         pins T'<=13 for every admissible competitor, so joint(T'=13)=
-                         x1.097>1 (margin x4.6 in T'); worst over mu^2-band [x0.5,x2] is
-                         x1.095; endpoint I=2e-3 is thinnest. SC-SCOPE 3rd-cumulant
+Precise statement:        The certified joint
+                         MARGIN/(C_2+C_sunset+C_quartic) has MARGIN
+                         cancel, giving
+                         joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S],
+                         monotone in the STEP-5B floor rho_lat,
+                         saturating at S=1.13.
+                         joint>1 iff rho_lat>4.347. With
+                         rho_lat=K_budget/(1+T'),
+                         K_budget=266.7 pattern-independent, joint>1 iff
+                         T'<60.4. T-017
+                         pins T'<=13 for every admissible competitor, so
+                         joint(T'=13)=
+                         x1.097>1 (margin x4.6 in T'); worst over
+                         mu^2-band [x0.5,x2] is
+                         x1.095; endpoint I=2e-3 is thinnest. SC-SCOPE
+                         3rd-cumulant
                          endpoint CLOSES class-wide.
-Scope:                   Operating endpoint I=2e-3, mu^2-band [x0.5,x2]. Inherits
-                         R_max=0.385 (certified) + sunset S=1.13 (rigorous) + T-017 pin.
-Dependencies:            scscope-quartic-normalisation-certificate v1.0 (R_max, joint);
-                         scscope-floor-sharpening v1.6 (rho_lat=K_budget/(1+T'));
-                         res-endpoint-admissible-pin / res5-chi-link-bypass (T'<=13);
-                         scscope-programme-consolidation v1.0 (the lift chronicle).
-Evidence grade:          ANALYTIC (MARGIN-cancellation + critical-T') + EXECUTED
-                         (res5_021_scscope_classwide_endpoint.py 5/5) + INHERITED
+Scope:                    Operating endpoint I=2e-3, mu^2-band
+                         [x0.5,x2]. Inherits
+                         R_max=0.385 (certified) + sunset S=1.13
+                         (rigorous) + T-017 pin.
+Dependencies:             scscope-quartic-normalisation-certificate v1.0
+                         (R_max, joint);
+                         scscope-floor-sharpening v1.6
+                         (rho_lat=K_budget/(1+T'));
+                         res-endpoint-admissible-pin /
+                         res5-chi-link-bypass (T'<=13);
+                         scscope-programme-consolidation v1.0 (the lift
+                         chronicle).
+Evidence grade:           ANALYTIC (MARGIN-cancellation + critical-T') +
+                         EXECUTED
+                         (res5_021_scscope_classwide_endpoint.py 5/5) +
+                         INHERITED
                          (certified R_max, sunset cap).
-Reproduction command:    python codes/vacuum/res5_021_scscope_classwide_endpoint.py
-Expected output:         K_budget=266.7; critical T'=60.4; joint(T'=13)=x1.097;
+Reproduction command:     python
+                         codes/vacuum/res5_021_scscope_classwide_endpoint.py
+Expected output:          K_budget=266.7; critical T'=60.4;
+                         joint(T'=13)=x1.097;
                          mu^2-band worst x1.095; 5/5 PASS.
-Falsification gate:      An admissible competitor with T'>60.4 at the endpoint (would
-                         require violating the T-017 T'<=13 pin); or a re-opened R_max
-                         (>0.634) or sunset cap; or a mu^2 in [x0.5,x2] with joint<=1.
-Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. SC-SCOPE 3rd-
-                         cumulant endpoint extended from the anchor/enumerated to the
+Falsification gate:       An admissible competitor with T'>60.4 at the
+                         endpoint (would
+                         require violating the T-017 T'<=13 pin); or a
+                         re-opened R_max
+                         (>0.634) or sunset cap; or a mu^2 in [x0.5,x2]
+                         with joint<=1.
+Tier before / after:      No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5.
+                         SC-SCOPE 3rd-
+                         cumulant endpoint extended from the
+                         anchor/enumerated to the
                          whole admissible class (T'<=13<60.4).
-No-overclaim statement:  Closes the SC-SCOPE third-cumulant CLASS-WIDE residual (the
-                         last analytic H-LAYER piece) at the operating endpoint, but
-                         INHERITS SC-SCOPE's thin-certified R_max=0.385 + sunset S=1.13
-                         + the T-017 pin, and leaves the operator competitor-class
-                         definition. Does NOT flip B1/B2 (those need the operator sign-off
+No-overclaim statement:   Closes the SC-SCOPE third-cumulant CLASS-WIDE
+                         residual (the
+                         last analytic H-LAYER piece) at the operating
+                         endpoint, but
+                         INHERITS SC-SCOPE's thin-certified R_max=0.385
+                         + sunset S=1.13
+                         + the T-017 pin, and leaves the operator
+                         competitor-class
+                         definition. Does NOT flip B1/B2 (those need the
+                         operator sign-off
                          + standing grades). Anchored (ROBUSTNESS-MU2).
-Next required action:    The remaining H-LAYER item is the operator competitor-class
-                         definition (admissible = crystallographic-shell subsets up to
-                         n_pack). With this note all analytic H-LAYER residuals
-                         (diagonal isotropy, chi(P) floor, off-diag 2nd cumulant,
-                         off-diag exchange, SC-SCOPE 3rd cumulant) are class-wide closed.
+Next required action:     The remaining H-LAYER item is the operator
+                         competitor-class
+                         definition (admissible = crystallographic-shell
+                         subsets up to
+                         n_pack). With this note all analytic H-LAYER
+                         residuals
+                         (diagonal isotropy, chi(P) floor, off-diag 2nd
+                         cumulant,
+                         off-diag exchange, SC-SCOPE 3rd cumulant) are
+                         class-wide closed.
 \end{verbatim}
 }

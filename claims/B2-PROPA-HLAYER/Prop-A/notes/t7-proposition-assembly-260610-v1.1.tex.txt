@@ -23,7 +23,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. The T7 target}
+\section*{1. Purpose and scope: The T7 target}
 
 \textbf{Proposition (T7 target).} Let $\mathcal C_{\rm phys}$ be the full physically
 admissible competitor class (real antipodal condensate patterns at the operating
@@ -97,35 +97,61 @@ $0.350$, $0.097>0$.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B2-PROPA-HLAYER / T7 proposition assembly (v1.1, non-circular)
-Precise statement:       T7-target: F[Q] > F[G_*] for all Q in C_phys, no external H-LAYER
-                         hypothesis. Blocker A NON-CIRCULAR: rho_off^ext <= R_lead(20)
-                         r_R/(r_R+c delta^2) = 0.572 < 1 (adversarial, before reduction) =>
-                         off-shell excluded; survivors on-shell (C) with T'<=13; on that
-                         class (B, T-027 v1.1) R_lead(13)=0.650<1, joint(13)=x1.097>1,
-                         R_max interval-enclosed<0.634 (convention derived), sunset rigorous,
-                         anchoring monotone, diagonal isotropy strict min. Margins 0.350,
+Result ID:                B2-PROPA-HLAYER / T7 proposition assembly
+                         (v1.1, non-circular)
+Precise statement:        T7-target: F[Q] > F[G_*] for all Q in C_phys,
+                         no external H-LAYER
+                         hypothesis. Blocker A NON-CIRCULAR: 
+                                                             rho_off^ext
+                                                             <=
+                                                             R_lead(20)
+                         r_R/(r_R+c delta^2) = 0.572 < 1 (adversarial,
+                         before reduction) =>
+                         off-shell excluded; survivors on-shell (C) with
+                         T'<=13; on that
+                         class (B, T-027 v1.1) R_lead(13)=0.650<1,
+                         joint(13)=x1.097>1,
+                         R_max interval-enclosed<0.634 (convention
+                         derived), sunset rigorous,
+                         anchoring monotone, diagonal isotropy strict
+                         min. Margins 0.350,
                          0.097 > 0.
-Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 band. T7-CANDIDATE.
-Dependencies:            offshell-domination-theorem v1.1 (A,C); blocker-b-hardening v1.1
-                         (B); isotropy-infimum-core v1.1 (T-016); classwide-secondcumulant-
-                         stability (T-020); scscope-classwide-endpoint (T-021).
+Scope:                    Operating endpoint I=2e-3; ROBUSTNESS-MU2
+                         band. T7-CANDIDATE.
+Dependencies:             offshell-domination-theorem v1.1 (A,C);
+                         blocker-b-hardening v1.1
+                         (B); isotropy-infimum-core v1.1 (T-016);
+                         classwide-secondcumulant-
+                         stability (T-020); scscope-classwide-endpoint
+                         (T-021).
 Evidence grade:          ASSEMBLY (theorem-grade blockers) + EXECUTED
                          (res5_028_t7_proposition_assembly.py v1.1 5/5).
-Reproduction command:    python codes/vacuum/res5_028_t7_proposition_assembly.py
-Expected output:         rho_off^ext=0.572<1; rho_off=0.381; T'<=13; R_lead(13)=0.650<1;
-                         joint(13)=x1.097>1; margins 0.350/0.097; 5/5 PASS.
-Falsification gate:      A physical competitor in C_phys with F[Q]<=F[G_*]; or rho_off^ext>=1
-                         (would need R_lead(20)*r_R/(r_R+c delta^2)>=1); or a re-opened blocker.
-Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The T7 target is
-                         ASSEMBLED as a candidate (non-circular); the T6->T7 flip awaits the
+Reproduction command:     python
+                         codes/vacuum/res5_028_t7_proposition_assembly.py
+Expected output:          rho_off^ext=0.572<1; rho_off=0.381; T'<=13;
+                         R_lead(13)=0.650<1;
+                         joint(13)=x1.097>1; margins 0.350/0.097; 5/5
+                         PASS.
+Falsification gate:       A physical competitor in C_phys with
+                         F[Q]<=F[G_*]; or rho_off^ext>=1
+                         (would need R_lead(20)*r_R/(r_R+c delta^2)>=1);
+                         or a re-opened blocker.
+Tier before / after:      No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5.
+                         The T7 target is
+                         ASSEMBLED as a candidate (non-circular); the
+                         T6->T7 flip awaits the
                          operator sign-off (no-auto-T7).
-No-overclaim statement:  Does NOT enact T7. It assembles the three theorem-grade blockers
-                         into the T7-target with a non-circular off-shell exclusion; the
-                         residual is the operator sign-off (+ optional CAS R_max tightening).
+No-overclaim statement:   Does NOT enact T7. It assembles the three
+                         theorem-grade blockers
+                         into the T7-target with a non-circular
+                         off-shell exclusion; the
+                         residual is the operator sign-off (+ optional
+                         CAS R_max tightening).
                          T7-CANDIDATE. B1/B2 stay T6 on {H-LAYER}.
-Next required action:    OPERATOR sign-off for the B1/B2 T6->T7 re-tier, closing GAP-1 (vacuum
-                         uniqueness) and lifting the Sectors C-F tier cap; optionally a CAS
+Next required action:     OPERATOR sign-off for the B1/B2 T6->T7
+                         re-tier, closing GAP-1 (vacuum
+                         uniqueness) and lifting the Sectors C-F tier
+                         cap; optionally a CAS
                          interval-arithmetic R_max bound.
 \end{verbatim}
 }

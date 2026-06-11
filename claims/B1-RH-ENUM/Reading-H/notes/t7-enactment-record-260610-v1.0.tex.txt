@@ -24,7 +24,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. The enactment}
+\section*{1. Purpose and scope: The enactment}
 
 On 2026-06-10 the operator signed off (APPROVED) the promotion of B1-RH-ENUM and
 B2-PROPA-HLAYER from T6 to T7. The enacted proposition is:
@@ -41,7 +41,7 @@ over the ROBUSTNESS-MU2 band $[\times0.5,\times2]$.
 \section*{2. Ledger changes (audited)}
 
 \begin{center}\footnotesize
-\begin{tabular}{lll}
+\begin{tabularx}{\linewidth}{@{}lYl@{}}
 \hline
 File & Change & Verified\\
 \hline
@@ -50,7 +50,7 @@ File & Change & Verified\\
 \texttt{claims/GATES.md} & H-LAYER, GAP-1, GAP-2 $\to$ DISCHARGED@T7; A1-KERNEL-CONV row added & --\\
 \texttt{CLAIMS.md} (generated) & T6: $8\to6$, T7: $0\to2$ & lint PASS\\
 \hline
-\end{tabular}
+\end{tabularx}
 \end{center}
 The ledger linter \texttt{lint\_claims.py} passes (29 claims, 31 registered
 gates/hypotheses). The audit kernel \texttt{res5\_029} re-passes post-enactment (5/5;
@@ -124,33 +124,61 @@ $0.350$, selection $0.097>0$; \emph{non-circular} $\rho_{\rm off}^{\rm ext}=0.57
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1-RH-ENUM / B2-PROPA-HLAYER -- T7 enactment + audit
-Precise statement:       B1/B2 promoted T6->T7 (operator sign-off 2026-06-10). Enacted:
-                         F[Q]>F[G_*] for all Q in C_phys (lattice Reading-H, operating
-                         endpoint, [x0.5,x2]); H-LAYER discharged; sole named input
-                         A1-KERNEL-CONV (T5 kernel-convention definition). Ledger: B1/B2
-                         status.json tier T7, hypotheses {A1-KERNEL-CONV}; GATES.md
-                         H-LAYER/GAP-1/GAP-2 discharged@T7 + A1 row added; CLAIMS.md T6:8->6,
-                         T7:0->2; lint PASS. Audit: internal 5-axis T-029 (61/61 chain,
-                         17/17 constants) + operator adversarial chain; external referee
-                         standing. Scope-qualified DISCHARGED-THEOREM, NOT full TECT/TOE.
-Scope:                   Lattice Reading-H comparison; operating endpoint I=2e-3; [x0.5,x2].
-                         GAP-1/GAP-2 closed in-domain; Sectors C-F cap lifted (not promoted).
-Dependencies:            t7-proposition-assembly v1.1; t7-route-internal-audit v1.0 (res5_029);
-                         the full T-016..T-028 chain; A1-KERNEL-CONV (T5, named input).
-Evidence grade:          ENACTMENT + AUDIT + EXECUTED (lint PASS; res5_029 5/5; 61 chain asserts).
-Reproduction command:    python verification/scripts/lint_claims.py  (+ python codes/vacuum/res5_029_t7_route_audit.py)
-Expected output:         LINT PASS (29 claims); CLAIMS.md T7:2; res5_029 5/5.
-Falsifier:               A physical competitor in C_phys with F[Q]<=F[G_*]; a re-opened blocker;
-                         R_max>0.634 under a rigorous bound; or the A1 kernel convention changing.
-Tier before / after:     B1-RH-ENUM T6->T7; B2-PROPA-HLAYER T6->T7. B5-BEYOND-LAYER-BOUND T5
-                         (supporting package). H-LAYER discharged. NOT full TECT/TOE.
-No-overclaim statement:  Scope-qualified T7 of the Reading-H/H-LAYER/Prop-A comparison theorem
-                         ONLY. Rests on the named definitional input A1-KERNEL-CONV. Dual-audit
-                         met by internal + operator-adversarial; external referee standing.
-                         Sectors C-F and the TOE are NOT closed. Arbitrary-Q OPEN (legacy).
-Next required action:    (i) external/second-author referee pass before journal submission;
-                         (ii) optional CAS interval-arithmetic R_max tightening; (iii) advance
-                         the now-uncapped Sectors C-F on their own packages.
+Result ID:                B1-RH-ENUM / B2-PROPA-HLAYER -- T7 enactment +
+                         audit
+Precise statement:        B1/B2 promoted T6->T7 (operator sign-off
+                         2026-06-10). Enacted:
+                         F[Q]>F[G_*] for all Q in C_phys (lattice
+                         Reading-H, operating
+                         endpoint, [x0.5,x2]); H-LAYER discharged; sole
+                         named input
+                         A1-KERNEL-CONV (T5 kernel-convention definition). Ledger: 
+                                                                                   B1/B2
+                         status.json tier T7, hypotheses
+                         {A1-KERNEL-CONV}; GATES.md
+                         H-LAYER/GAP-1/GAP-2 discharged@T7 + A1 row
+                         added; CLAIMS.md T6:8->6,
+                         T7:0->2; lint PASS. Audit: internal 5-axis
+                         T-029 (61/61 chain,
+                         17/17 constants) + operator adversarial chain;
+                         external referee
+                         standing. Scope-qualified DISCHARGED-THEOREM,
+                         NOT full TECT/TOE.
+Scope:                    Lattice Reading-H comparison; operating
+                         endpoint I=2e-3; [x0.5,x2].
+                         GAP-1/GAP-2 closed in-domain; Sectors C-F cap
+                         lifted (not promoted).
+Dependencies:             t7-proposition-assembly v1.1;
+                         t7-route-internal-audit v1.0 (res5_029);
+                         the full T-016..T-028 chain; A1-KERNEL-CONV
+                         (T5, named input).
+Evidence grade:           ENACTMENT + AUDIT + EXECUTED (lint PASS;
+                         res5_029 5/5; 61 chain asserts).
+Reproduction command:     python verification/scripts/lint_claims.py  (+
+                         python codes/vacuum/res5_029_t7_route_audit.py)
+Expected output:          LINT PASS (29 claims); CLAIMS.md T7:2;
+                         res5_029 5/5.
+Falsifier:                A physical competitor in C_phys with
+                         F[Q]<=F[G_*]; a re-opened blocker;
+                         R_max>0.634 under a rigorous bound; or the A1
+                         kernel convention changing.
+Tier before / after:      B1-RH-ENUM T6->T7; B2-PROPA-HLAYER T6->T7.
+                         B5-BEYOND-LAYER-BOUND T5
+                         (supporting package). H-LAYER discharged. NOT
+                         full TECT/TOE.
+No-overclaim statement:   Scope-qualified T7 of the
+                         Reading-H/H-LAYER/Prop-A comparison theorem
+                         ONLY. Rests on the named definitional input
+                         A1-KERNEL-CONV. Dual-audit
+                         met by internal + operator-adversarial;
+                         external referee standing.
+                         Sectors C-F and the TOE are NOT closed.
+                         Arbitrary-Q OPEN (legacy).
+Next required action:     (i) external/second-author referee pass before
+                         journal submission;
+                         (ii) optional CAS interval-arithmetic R_max
+                         tightening; (iii) advance
+                         the now-uncapped Sectors C-F on their own
+                         packages.
 \end{verbatim}
 }

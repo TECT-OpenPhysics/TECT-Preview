@@ -38,7 +38,7 @@ operating endpoint $I=2\times10^{-3}$.
 \section*{2. The corrected $\mathcal A_{\rm adm}$ definition}
 
 \[
-\mathcal A_{\rm adm}=\left\{\,Q\subset\bigcup_{R\in\mathcal R}\!\bigl(\Lambda\cap\{|x|^2=R\}\bigr):
+\mathcal A_{\rm adm}=\left\{Q\subset\bigcup_{R\in\mathcal R}\!\bigl(\Lambda\cap\{|x|^2=R\}\bigr):
 \begin{array}{l}
 |Q|\le n_{\rm pack},\quad Q=-Q,\\
 \angle(k_i,k_j)\ge\theta_{\min}(\hat r),\\
@@ -121,39 +121,72 @@ antipodal samples), $R_{\rm lead}(20)=0.974<1$, joint$(20)=\times1.082$, $20<20.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B5-BEYOND-LAYER-BOUND / A_adm exclusion-boundary refinement (v1.1)
-Precise statement:       A_adm = {Q subset shell-UNION : |Q|<=n_pack, Q=-Q, angle>=theta_min,
-                         registered shell/shell-union}. FOUR boundaries: (1) sub-theta_min
-                         DERIVED (coherence lemma, MARGIN/33); (2) super-n_pack DERIVED
-                         (packing 40.7, pigeonhole); (3) lattice-OFF-SHELL FALLBACK-
-                         CONTROLLED -- sharp T'<=13 fails (escape N=40,T'=20) but universal
-                         antipodal T'<=N/2<=20 survives all thresholds (20<20.5<26.2<60.4;
-                         RES-1 razor-thin R_lead(20)=0.974); (4) non-lattice MODELLING +
-                         DR-2 decoupling. Sign-off = crystalline + SHELL-SUPPORTED.
-Scope:                   Operating endpoint I=2e-3. Sharp T'<=13 = registered shell/shell-
-                         union class only; fallback T'<=N/2<=20 for arbitrary antipodal.
-Dependencies:            coherence-indistinguishability-lemma v1.0; hlayer-analytic-closure-
-                         consolidation v1.0 (A_adm); res5-chi-link-bypass (T'<=13 pin);
-                         dr2-decoupling-closure (R-022) / dr2-affine-invariance (R-023).
-Evidence grade:          ANALYTIC (4-boundary grading + T'<=N/2 proof) + EXECUTED
-                         (res5_023_aadm_exclusion_boundaries.py v1.1 5/5).
-Reproduction command:    python codes/vacuum/res5_023_aadm_exclusion_boundaries.py
-Expected output:         theta_min=0.627; n_pack=40.7; T'<=N/2 on samples; R_lead(20)=0.974
+Result ID:                B5-BEYOND-LAYER-BOUND / A_adm
+                         exclusion-boundary refinement (v1.1)
+Precise statement:        A_adm = {Q subset shell-UNION : |Q|<=n_pack,
+                         Q=-Q, angle>=theta_min,
+                         registered shell/shell-union}. FOUR boundaries: 
+                                                                         (1)
+                                                                         sub-theta_min
+                         DERIVED (coherence lemma, MARGIN/33); (2)
+                         super-n_pack DERIVED
+                         (packing 40.7, pigeonhole); (3)
+                         lattice-OFF-SHELL FALLBACK-
+                         CONTROLLED -- sharp T'<=13 fails (escape
+                         N=40,T'=20) but universal
+                         antipodal T'<=N/2<=20 survives all thresholds
+                         (20<20.5<26.2<60.4;
+                         RES-1 razor-thin R_lead(20)=0.974); (4)
+                         non-lattice MODELLING +
+                         DR-2 decoupling. Sign-off = crystalline +
+                         SHELL-SUPPORTED.
+Scope:                    Operating endpoint I=2e-3. Sharp T'<=13 =
+                         registered shell/shell-
+                         union class only; fallback T'<=N/2<=20 for
+                         arbitrary antipodal.
+Dependencies:             coherence-indistinguishability-lemma v1.0;
+                         hlayer-analytic-closure-
+                         consolidation v1.0 (A_adm);
+                         res5-chi-link-bypass (T'<=13 pin);
+                         dr2-decoupling-closure (R-022) /
+                         dr2-affine-invariance (R-023).
+Evidence grade:           ANALYTIC (4-boundary grading + T'<=N/2 proof)
+                         + EXECUTED
+                         (res5_023_aadm_exclusion_boundaries.py v1.1
+                         5/5).
+Reproduction command:     python
+                         codes/vacuum/res5_023_aadm_exclusion_boundaries.py
+Expected output:          theta_min=0.627; n_pack=40.7; T'<=N/2 on
+                         samples; R_lead(20)=0.974
                          <1; joint(20)=x1.082; 5/5 PASS.
-Falsification gate:      An antipodal lattice subset with T'>N/2 (breaks the universal
-                         fallback); or N>40 with all pairs >= theta_min (breaks packing);
-                         or an off-shell escape with N<=40 and T'>20 (would need T'>N/2).
-Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. The A_adm sign-off is
-                         sharpened to crystalline + shell-supported; off-shell escapes are
-                         fallback-controlled (T'<=20, RES-1 thin x1.026), not breaking.
-No-overclaim statement:  Does NOT prove A_adm complete and does NOT flip B1/B2. The sharp
-                         T'<=13 pin is class-specific (registered shell/shell-union); the
-                         universal fallback is T'<=N/2<=20, under which the thresholds
-                         survive thinly. The sign-off (crystalline + shell-supported) is
+Falsification gate:       An antipodal lattice subset with T'>N/2
+                         (breaks the universal
+                         fallback); or N>40 with all pairs >= theta_min
+                         (breaks packing);
+                         or an off-shell escape with N<=40 and T'>20
+                         (would need T'>N/2).
+Tier before / after:      No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5.
+                         The A_adm sign-off is
+                         sharpened to crystalline + shell-supported;
+                         off-shell escapes are
+                         fallback-controlled (T'<=20, RES-1 thin
+                         x1.026), not breaking.
+No-overclaim statement:   Does NOT prove A_adm complete and does NOT
+                         flip B1/B2. The sharp
+                         T'<=13 pin is class-specific (registered
+                         shell/shell-union); the
+                         universal fallback is T'<=N/2<=20, under which
+                         the thresholds
+                         survive thinly. The sign-off (crystalline +
+                         shell-supported) is
                          the operator's.
-Next required action:    OPERATOR: decide whether off-shell / arbitrary multi-radius
-                         antipodal lattice subsets are physically admissible B1/B2
-                         competitors. If excluded (shell-supported), the comfortable
-                         T'<=13 margins hold; if admitted, the RES-1 x1.026 fallback binds.
+Next required action:     OPERATOR: decide whether off-shell / arbitrary
+                         multi-radius
+                         antipodal lattice subsets are physically
+                         admissible B1/B2
+                         competitors. If excluded (shell-supported), the
+                         comfortable
+                         T'<=13 margins hold; if admitted, the RES-1
+                         x1.026 fallback binds.
 \end{verbatim}
 }

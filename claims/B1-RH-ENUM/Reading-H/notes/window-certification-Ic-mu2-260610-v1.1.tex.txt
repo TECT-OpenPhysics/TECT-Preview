@@ -3,7 +3,7 @@
 %        Reading-H operating-window boundaries (I_c, mu^2_max) with analytic +
 %        interval-certified monotonicity
 % Claim: B1-RH-ENUM, B2-PROPA-HLAYER (operating-window boundaries; spans B5)
-% Version: v1.1 -- supersedes v1.0 (issued 2026-06-10); this version issued 2026-06-10
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-10 (supersedes v1.0 (issued 2026-06-10); this version issued 2026-06-10)
 % Status: CERTIFIED WINDOW BOUNDARY (analytic + interval-certified) + EXECUTED. Step 1 of
 %   the operator-accepted roadmap, ACCEPTED AS STEP 1 CLOSURE (operator 2026-06-10). Certifies
 %   the two physical boundaries of the enacted Reading-H operating window: (i) the binding
@@ -25,7 +25,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. Purpose (roadmap Step 1, CLOSED)}
+\section*{1. Purpose and scope}
 
 Step 1 certifies the natural boundaries of the Reading-H operating window, replacing the
 single operating point $(I,\mu^2)=(2\times10^{-3},0.005)$ by an explicit certified region.
@@ -52,7 +52,7 @@ so the \textbf{selection boundary binds}, and
 $I=2\times10^{-3}$ is interior with headroom $(I_c-I)/I=20\%$. $I_c$ is a PHYSICAL selection
 phase boundary (joint$\to1$ = third-cumulant degeneracy), not a proof gap.
 
-\section*{3. The widened mu^2 window: to the physical branch boundary}
+\section*{3. The widened $\mu^2$ window: to the physical branch boundary}
 
 $\mathrm{MARGIN}(\mu^2)=\mathrm{PB}(M_+)-\mathrm{DIP\_BAND}$ requires the upper PD branch
 $M_+=(-3U+\sqrt{9U^2-60V\mu^2})/(30V)$, i.e.\ $\mathrm{disc}=9U^2-60V\mu^2>0$:
@@ -127,32 +127,59 @@ $d\,\mathrm{MARGIN}/d\mu^2\ge0.095>0$, denom coefficient $0.500>0$. All from res
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1/B2 operating-window certification (roadmap Step 1, v1.1)
-Precise statement:       Binding I_c = 2.41e-3 (SC-SCOPE selection joint=1, low-mu^2 edge;
-                         off-diagonal R_lead=1 at 3.08e-3 looser -- 2.41e-3 < 3.08e-3 -- so
-                         selection binds); endpoint I=2e-3 interior, 20% headroom. mu^2 window
-                         (0, mu^2_max=3U^2/(20V)=0.0342), ceiling = physical disc=0 PD branch
-                         boundary. Monotonicity ANALYTIC+INTERVAL: MARGIN inc (DIP_BAND analytic
-                         dec + PB 400-pt interval inc, slope>=0.095); joint dec in I (analytic,
-                         denom coeff 1+RMAX-1/SUNSET=0.500>0, C2~I^2); I_c^sel inc in mu^2 (IFT).
-                         Certified region R = {mu^2 in (0,mu^2_max), I in (0,I_c^sel(mu^2))}.
-Scope:                   Parameter-window boundaries of the enacted scope. Both boundaries
-                         physical. No competitor-class widening (Step 2 EXT). No tier change.
-Dependencies:            scscope_endpoint_sweep.joint; sectorb_common.margin_of / J_of_t;
-                         R-029 (SC-SCOPE critical I); T-018 (R_lead/K* identity).
-Evidence grade:          CERTIFIED WINDOW BOUNDARY (analytic + interval) + EXECUTED
+Result ID:                B1/B2 operating-window certification (roadmap
+                         Step 1, v1.1)
+Precise statement:        Binding I_c = 2.41e-3 (SC-SCOPE selection
+                         joint=1, low-mu^2 edge;
+                         off-diagonal R_lead=1 at 3.08e-3 looser --
+                         2.41e-3 < 3.08e-3 -- so
+                         selection binds); endpoint I=2e-3 interior, 20%
+                         headroom. mu^2 window
+                         (0, mu^2_max=3U^2/(20V)=0.0342), ceiling =
+                         physical disc=0 PD branch
+                         boundary. Monotonicity ANALYTIC+INTERVAL: 
+                                                                   MARGIN
+                                                                   inc
+                                                                   (DIP_BAND
+                                                                   analytic
+                         dec + PB 400-pt interval inc, slope>=0.095);
+                         joint dec in I (analytic,
+                         denom coeff 1+RMAX-1/SUNSET=0.500>0, C2~I^2);
+                         I_c^sel inc in mu^2 (IFT).
+                         Certified region R = {mu^2 in (0,mu^2_max), I
+                         in (0,I_c^sel(mu^2))}.
+Scope:                    Parameter-window boundaries of the enacted
+                         scope. Both boundaries
+                         physical. No competitor-class widening (Step 2
+                         EXT). No tier change.
+Dependencies:             scscope_endpoint_sweep.joint;
+                         sectorb_common.margin_of / J_of_t;
+                         R-029 (SC-SCOPE critical I); T-018 (R_lead/K*
+                         identity).
+Evidence grade:           CERTIFIED WINDOW BOUNDARY (analytic +
+                         interval) + EXECUTED
                          (res5_032_window_certification.py v1.1, 6/6).
-Reproduction command:    python codes/vacuum/res5_032_window_certification.py
-Expected output:         I_c=2.41e-3 (selection binds < 3.08e-3); MARGIN min slope 0.0946;
+Reproduction command:     python
+                         codes/vacuum/res5_032_window_certification.py
+Expected output:          I_c=2.41e-3 (selection binds < 3.08e-3);
+                         MARGIN min slope 0.0946;
                          denom coeff 0.500; mu^2_max=0.0342; 6/6 PASS.
-Falsifier:               joint>1 failing inside R; margin<=0 or branch_ok=False for some mu^2
-                         in (0,mu^2_max); MARGIN or joint non-monotone on a finer grid; or
+Falsifier:                joint>1 failing inside R; margin<=0 or
+                         branch_ok=False for some mu^2
+                         in (0,mu^2_max); MARGIN or joint non-monotone
+                         on a finer grid; or
                          I_c^off < I_c^sel under a tighter K_floor.
-Tier before / after:     No change. B1/B2 enacted scope-qualified T7. Window boundaries
-                         CERTIFIED (analytic+interval), operator ACCEPTED AS STEP 1 CLOSURE.
-No-overclaim statement:  Certifies the parameter-window of the enacted scope; does NOT widen
-                         the competitor class and does NOT change tier. Global/unconditional
-                         Reading-H T7 awaits Step 2 (EXT, competitor-class widening to C_full).
-Next required action:    Step 2 -- EXT additive-energy extremal theorem (lattice -> C_full).
+Tier before / after:      No change. B1/B2 enacted scope-qualified T7.
+                         Window boundaries
+                         CERTIFIED (analytic+interval), operator
+                         ACCEPTED AS STEP 1 CLOSURE.
+No-overclaim statement:   Certifies the parameter-window of the enacted
+                         scope; does NOT widen
+                         the competitor class and does NOT change tier.
+                         Global/unconditional
+                         Reading-H T7 awaits Step 2 (EXT,
+                         competitor-class widening to C_full).
+Next required action:     Step 2 -- EXT additive-energy extremal theorem
+                         (lattice -> C_full).
 \end{verbatim}
 }

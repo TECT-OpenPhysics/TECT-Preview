@@ -23,7 +23,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. Purpose}
+\section*{1. Purpose and scope}
 
 This note is the single canonical record of the H-LAYER closure programme. It states the
 proposition, the decomposition, the complete proof chain T-016 to T-024, the two-tier
@@ -81,7 +81,8 @@ The sharp pin $T'\le13$ is class-specific; an adversarial lattice-but-off-shell 
 ($N=40$, $T'=20>13$) exists. The operator decision (offshell-operator-decision v1.0)
 splits the class:
 \[
-\mathcal A_{\rm adm}=\{\text{registered crystalline shell/shell-union}\}\ (T'\le13),\qquad
+\mathcal A_{\rm adm}=\{\text{registered crystalline shell/shell-union}\}\ (T'\le13),\]
+\[
 \mathcal A_{\rm ext}=\{Q=-Q,\ \#Q\le n_{\rm pack}\}\ (T'\le\tfrac{N}{2}\le20).
 \]
 \textbf{Off-shell is excluded from the primary class by the kinetic penalty:} $K_0(k)=r_R+
@@ -146,44 +147,81 @@ $20<20.5<26.2<60.4$.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B2-PROPA-HLAYER / H-LAYER closure Final Consolidation
-Precise statement:       The T-016..T-024 programme closes every ANALYTIC H-LAYER residual
-                         class-wide on the primary shell-supported class A_adm (T'<=13:
-                         R_lead=0.650, joint=x1.097), and the analytic thresholds survive on
-                         the adversarial class A_ext (T'<=N/2<=20: R_lead=0.974, joint=x1.082);
-                         both below RES-1 20.5 < RES-5 26.2 < SC-SCOPE 60.4. Off-shell is
-                         excluded from A_adm by the kinetic penalty (x50 MARGIN per off-shell
-                         mode), retained in A_ext under T'<=N/2. Sectors: (D) diagonal isotropy
-                         strict minimum (T-016); (O) no A-independent Fock exchange + 2nd-
-                         cumulant stability (T-018/019/020); (S) chi(P) floor + SC-SCOPE 3rd
-                         cumulant (T-017/021). Competitor-class operator-decided (T-022/023/024).
-Scope:                   Operating endpoint I=2e-3, ROBUSTNESS-MU2 [x0.5,x2]. Primary =
-                         comfortable; adversarial = thin. Inherits R_max=0.385, sunset 1.13,
+Result ID:                B2-PROPA-HLAYER / H-LAYER closure Final
+                         Consolidation
+Precise statement:        The T-016..T-024 programme closes every
+                         ANALYTIC H-LAYER residual
+                         class-wide on the primary shell-supported class
+                         A_adm (T'<=13:
+                         R_lead=0.650, joint=x1.097), and the analytic
+                         thresholds survive on
+                         the adversarial class A_ext (T'<=N/2<=20: 
+                                                                   R_lead=0.974,
+                                                                   joint=x1.082);
+                         both below RES-1 20.5 < RES-5 26.2 < SC-SCOPE
+                         60.4. Off-shell is
+                         excluded from A_adm by the kinetic penalty (x50
+                         MARGIN per off-shell
+                         mode), retained in A_ext under T'<=N/2. Sectors: 
+                                                                          (D)
+                                                                          diagonal
+                                                                          isotropy
+                         strict minimum (T-016); (O) no A-independent
+                         Fock exchange + 2nd-
+                         cumulant stability (T-018/019/020); (S) chi(P)
+                         floor + SC-SCOPE 3rd
+                         cumulant (T-017/021). Competitor-class
+                         operator-decided (T-022/023/024).
+Scope:                    Operating endpoint I=2e-3, ROBUSTNESS-MU2
+                         [x0.5,x2]. Primary =
+                         comfortable; adversarial = thin. Inherits
+                         R_max=0.385, sunset 1.13,
                          T-017 pin, anchoring.
-Dependencies:            isotropy-infimum-core v1.1; res5-chi-link-bypass v1.1;
-                         hdiag-offdiag-gershgorin-threshold v1.1; offdiag-exchange-scalar-
-                         identification v1.0; classwide-secondcumulant-stability v1.0;
-                         scscope-classwide-endpoint v1.0; hlayer-analytic-closure-consolidation
-                         v1.1; aadm-exclusion-boundaries v1.1; offshell-operator-decision v1.0.
+Dependencies:             isotropy-infimum-core v1.1;
+                         res5-chi-link-bypass v1.1;
+                         hdiag-offdiag-gershgorin-threshold v1.1;
+                         offdiag-exchange-scalar-
+                         identification v1.0;
+                         classwide-secondcumulant-stability v1.0;
+                         scscope-classwide-endpoint v1.0;
+                         hlayer-analytic-closure-consolidation
+                         v1.1; aadm-exclusion-boundaries v1.1;
+                         offshell-operator-decision v1.0.
 Evidence grade:          FINAL CONSOLIDATION + EXECUTED end-to-end
-                         (res5_025_hlayer_final_consolidation.py 7/7) + per-step scripts (3-7/each).
-Reproduction command:    python codes/vacuum/res5_025_hlayer_final_consolidation.py
-Expected output:         phi''=4.03; 13<20.5<26.2; R_lead(13)=0.650; joint(13)=x1.097
-                         (crit T'=60.4); penalty x50; R_lead(20)=0.974; joint(20)=x1.082; 7/7.
-Falsification gate:      A re-opened analytic sector (D/O/S); or an off-shell competitor whose
-                         total free energy (kinetic penalty included) beats the isotropic layer
-                         (Delta F_int^gain > Delta F_kin^offshell); or an A_ext set with T'>N/2.
-Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. Analytic residuals closed
-                         (two-tier); competitor-class operator-decided. Available ceiling on
-                         sign-off = hypothesis-reduced T6 (H-LAYER -> shell-supported-crystalline
+                         (res5_025_hlayer_final_consolidation.py 7/7) +
+                         per-step scripts (3-7/each).
+Reproduction command:     python
+                         codes/vacuum/res5_025_hlayer_final_consolidation.py
+Expected output:          phi''=4.03; 13<20.5<26.2; R_lead(13)=0.650;
+                         joint(13)=x1.097
+                         (crit T'=60.4); penalty x50; R_lead(20)=0.974;
+                         joint(20)=x1.082; 7/7.
+Falsification gate:       A re-opened analytic sector (D/O/S); or an
+                         off-shell competitor whose
+                         total free energy (kinetic penalty included)
+                         beats the isotropic layer
+                         (Delta F_int^gain > Delta F_kin^offshell); or
+                         an A_ext set with T'>N/2.
+Tier before / after:      No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5.
+                         Analytic residuals closed
+                         (two-tier); competitor-class operator-decided.
+                         Available ceiling on
+                         sign-off = hypothesis-reduced T6 (H-LAYER ->
+                         shell-supported-crystalline
                          + inherited thin grades), NOT unconditional T7.
-No-overclaim statement:  Does NOT flip B1/B2 and does NOT claim T7. Records the analytic closure
-                         on the primary class (comfortable) + adversarial class (thin) + the
-                         operator competitor decision. The thin-certified grades (R_max, sunset,
-                         anchoring) and the shell-supported completeness sign-off are inherited,
+No-overclaim statement:   Does NOT flip B1/B2 and does NOT claim T7.
+                         Records the analytic closure
+                         on the primary class (comfortable) +
+                         adversarial class (thin) + the
+                         operator competitor decision. The
+                         thin-certified grades (R_max, sunset,
+                         anchoring) and the shell-supported completeness
+                         sign-off are inherited,
                          not eliminated. B1/B2 stay T6 on {H-LAYER}.
-Next required action:    OPERATOR (optional): enact the hypothesis-reduced-T6 re-tier on the
-                         shell-supported class, or harden the inherited thin-certified grades.
+Next required action:     OPERATOR (optional): enact the
+                         hypothesis-reduced-T6 re-tier on the
+                         shell-supported class, or harden the inherited
+                         thin-certified grades.
                          No analytic H-LAYER gap remains.
 \end{verbatim}
 }

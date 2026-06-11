@@ -3,7 +3,7 @@
 %        T7-SCOPE_{C_full} -- the coherence circle-packing lemma removes the thin
 %        off-diagonal margin
 % Claim: B1-RH-ENUM, B2-PROPA-HLAYER (C_full internal scope closure; spans B5)
-% Version: v1.2 -- supersedes cfull-internal-scope-closure v1.1 (thin-O); issued 2026-06-10
+% Version: v1.2 -- first issued 2026-06-10; this version issued 2026-06-10 (supersedes cfull-internal-scope-closure v1.1 (thin-O); issued 2026-06-10)
 % Status: INTERNAL C_FULL SCOPE CLOSURE -- COMFORTABLE. The coherence circle-packing lemma
 %   (coherence-offdiag-comfortable-bound v1.0, res5_036 5/5) proves T'<=floor(2pi/theta_min)=10
 %   uniformly for every admissible competitor, upgrading the off-diagonal margin from the thin
@@ -24,7 +24,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. The enacted statement (comfortable)}
+\section*{1. Purpose and scope: The enacted statement (comfortable)}
 
 B1/B2 Reading-H selection is enacted at tier T7 with the competitor class widened to the full
 admissible class $\mathcal C_{\rm full}$, scope-qualified $\mathrm{T7\text{-}SCOPE}_{\mathcal
@@ -114,27 +114,48 @@ from res5\_036 (5/5).
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1/B2 C_full internal scope closure (COMFORTABLE) -- T7-SCOPE_{C_full}
-Precise statement:       Coherence circle-packing lemma (res5_036 5/5): T'<=floor(2pi/theta_min)=10
-                         uniformly for every admissible competitor (lattice + non-lattice) =>
-                         K_floor<=10 => R_lead<=0.510<1 at I_op (x1.96), 0.615 at the selection cap
-                         -- COMFORTABLE. I_off^coh=1/(23.2*11)=3.92e-3 > I_c^sel=2.41e-3 => SELECTION
-                         binds => C_full region = full Step-1 region R (20% headroom). B1/B2 enacted
-                         T7-SCOPE_{C_full} (thin-O qualifier removed). (D)/(S) competitor-agnostic
-                         comfortable. G1 CLOSED by PROOF, G3 CLOSED, G2 (referee) validation gate.
-                         EXT T2 optional (no longer needed). Supersedes v1.1 thin x1.026. Given A1.
-Scope:                   T7-SCOPE_{C_full} within R, given A1; comfortable. External referee pending.
-Dependencies:            res5_036 (coherence lemma), res5_032 (Step 1 R), res5_034 (Step 3 (D)/(S)),
-                         R-025 (K_floor<=T'); supersedes res5_033/035 thin numbers.
-Evidence grade:          PROVED (elementary coherence lemma) + INTERNAL SCOPE CLOSURE + EXECUTED.
-Reproduction command:    python codes/vacuum/res5_036_coherence_offdiag_bound.py
-Expected output:         T'<=10; adversarial max 8; R_lead<=0.510 (x1.96); selection binds; 5/5 PASS.
-Falsifier:               An admissible competitor with a sum-circle of >10 points; theta_min<0.571
-                         in the window; or R_lead>=1 for some (I,mu^2) in R.
-Tier before / after:     B1/B2 T7-SCOPE_{C_full, thin O} -> T7-SCOPE_{C_full} (comfortable). EXT T2
+Result ID:                B1/B2 C_full internal scope closure
+                         (COMFORTABLE) -- T7-SCOPE_{C_full}
+Precise statement:        Coherence circle-packing lemma (res5_036 5/5):
+                         T'<=floor(2pi/theta_min)=10
+                         uniformly for every admissible competitor
+                         (lattice + non-lattice) =>
+                         K_floor<=10 => R_lead<=0.510<1 at I_op (x1.96),
+                         0.615 at the selection cap
+                         -- COMFORTABLE. I_off^coh=1/(23.2*11)=3.92e-3 >
+                         I_c^sel=2.41e-3 => SELECTION
+                         binds => C_full region = full Step-1 region R
+                         (20% headroom). B1/B2 enacted
+                         T7-SCOPE_{C_full} (thin-O qualifier removed).
+                         (D)/(S) competitor-agnostic
+                         comfortable. G1 CLOSED by PROOF, G3 CLOSED, G2
+                         (referee) validation gate.
+                         EXT T2 optional (no longer needed). Supersedes
+                         v1.1 thin x1.026. Given A1.
+Scope:                    T7-SCOPE_{C_full} within R, given A1;
+                         comfortable. External referee pending.
+Dependencies:             res5_036 (coherence lemma), res5_032 (Step 1
+                         R), res5_034 (Step 3 (D)/(S)),
+                         R-025 (K_floor<=T'); supersedes res5_033/035
+                         thin numbers.
+Evidence grade:           PROVED (elementary coherence lemma) + INTERNAL
+                         SCOPE CLOSURE + EXECUTED.
+Reproduction command:     python
+                         codes/vacuum/res5_036_coherence_offdiag_bound.py
+Expected output:          T'<=10; adversarial max 8; R_lead<=0.510
+                         (x1.96); selection binds; 5/5 PASS.
+Falsifier:                An admissible competitor with a sum-circle of
+                         >10 points; theta_min<0.571
+                         in the window; or R_lead>=1 for some (I,mu^2)
+                         in R.
+Tier before / after:      B1/B2 T7-SCOPE_{C_full, thin O} ->
+                         T7-SCOPE_{C_full} (comfortable). EXT T2
                          optional. NOT unrestricted T7.
-No-overclaim statement:  Comfortable but scope-qualified (within R, given A1, C_full class). NOT
-                         global/all-intensity/all-competitor. EXT remains a separate optional T2.
-Next required action:    G2 external/second-author referee (validation). EXT optional (further x5.4).
+No-overclaim statement:   Comfortable but scope-qualified (within R,
+                         given A1, C_full class). NOT
+                         global/all-intensity/all-competitor. EXT
+                         remains a separate optional T2.
+Next required action:     G2 external/second-author referee
+                         (validation). EXT optional (further x5.4).
 \end{verbatim}
 }

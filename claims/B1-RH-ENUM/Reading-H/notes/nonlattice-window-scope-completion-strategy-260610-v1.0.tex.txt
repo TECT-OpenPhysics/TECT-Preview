@@ -23,7 +23,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. The operator decomposition (accepted) and the question}
+\section*{1. Purpose and scope: The operator decomposition (accepted) and the question}
 
 The enacted T7 is unconditional in the comparison hypothesis H-LAYER but rests on three
 standing inputs: (1) A1-KERNEL-CONV (the microscopic-theory kernel-convention
@@ -45,9 +45,11 @@ The operator suggests non-lattice closure ``probably needs DR-2 fallback raised 
 theorem-grade''. This conflates two different roles of the lattice restriction. The
 off-diagonal stability is governed by the single $N$-independent ratio
 \[
-R_{\rm lead}(Q)=\mathrm{const}\,(1+K_{\rm floor}(Q))\,I,\qquad
-\mathrm{const}=\tfrac94 u_{\rm eff}^2 B_{\max}\tfrac{2}{r_R}=23.2,\qquad
+\begin{gathered}
+R_{\rm lead}(Q)=\mathrm{const}\,(1+K_{\rm floor}(Q))\,I,\quad
+\mathrm{const}=\tfrac94 u_{\rm eff}^2 B_{\max}\tfrac{2}{r_R}=23.2,\\
 R_{\rm lead}<1\iff K_{\rm floor}<K_*=\tfrac{1}{\mathrm{const}\,I}-1\simeq20.5,
+\end{gathered}
 \]
 where $K_{\rm floor}(Q)=\sum_{t\ne0}(\text{sum-circle occupancy})^2/N^2-1$ is the
 additive-energy floor. DR-2 ($E_+\le_\varepsilon N^{2+\varepsilon}$) bounds $K_{\rm floor}$
@@ -96,7 +98,7 @@ EVIDENCE for (EXT); its status is T2 CONJECTURE with the pre-registered falsifie
 This is a tractable additive-combinatorics statement, not the (harder, partly OPEN)
 arbitrary-$Q$ $\ell^2$-decoupling programme.
 
-\section*{4. The (I, mu^2) window is bounded by physics, not by a proof gap}
+\section*{4. The (I, $\mu^2$) window is bounded by physics, not by a proof gap}
 
 \textbf{Intensity.} R-029 (SC-SCOPE) records a physical critical intensity
 $I_c\sim2.5\times10^{-3}$ \emph{beyond} the operating endpoint, where the all-orders joint
@@ -160,33 +162,56 @@ res5\_031 (5/5).
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1/B2 scope-completion strategy toward A1-relative unconditional T7
-Precise statement:       The lattice class is the OFF-DIAGONAL adversarial worst case
-                         (R_lead governed by N-indep const=23.2, K*=20.5; every non-lattice
-                         config K_floor~1<<13<<20.5; off-lattice perturbation reduces K_floor),
-                         so the enacted lattice T7 dominates non-lattice competitors of the
-                         R_lead mechanism. Residual to C_full = additive-energy EXTREMAL
-                         conjecture (EXT) "K_floor maximised by arithmetic structure" (T2,
-                         strong evidence; falsifier K_floor>13), NOT arbitrary-Q DR-2. The
-                         (I,mu^2) window is bounded by a PHYSICAL critical I_c~2.5e-3 (R-029),
-                         not a proof gap. A1 is the definitional floor (standing derive-the-
+Result ID:                B1/B2 scope-completion strategy toward
+                         A1-relative unconditional T7
+Precise statement:        The lattice class is the OFF-DIAGONAL
+                         adversarial worst case
+                         (R_lead governed by N-indep const=23.2,
+                         K*=20.5; every non-lattice
+                         config K_floor~1<<13<<20.5; off-lattice
+                         perturbation reduces K_floor),
+                         so the enacted lattice T7 dominates non-lattice
+                         competitors of the
+                         R_lead mechanism. Residual to C_full =
+                         additive-energy EXTREMAL
+                         conjecture (EXT) "K_floor maximised by
+                         arithmetic structure" (T2,
+                         strong evidence; falsifier K_floor>13), NOT
+                         arbitrary-Q DR-2. The
+                         (I,mu^2) window is bounded by a PHYSICAL
+                         critical I_c~2.5e-3 (R-029),
+                         not a proof gap. A1 is the definitional floor
+                         (standing derive-the-
                          kernel obligation for the full theory).
-Scope:                   Off-diagonal mechanism (probed); (D)/(S) non-lattice extension not
-                         probed. No tier change. B1/B2 stay enacted scope-qualified T7.
-Dependencies:            t7-enactment-record v1.0; R-025/R-026 (sum-circle/lattice DR-2 T7);
-                         R-029 (SC-SCOPE critical I_c); T-016 (D), T-018 (R_lead/K* identity).
+Scope:                    Off-diagonal mechanism (probed); (D)/(S)
+                         non-lattice extension not
+                         probed. No tier change. B1/B2 stay enacted
+                         scope-qualified T7.
+Dependencies:             t7-enactment-record v1.0; R-025/R-026
+                         (sum-circle/lattice DR-2 T7);
+                         R-029 (SC-SCOPE critical I_c); T-016 (D), T-018
+                         (R_lead/K* identity).
 Evidence grade:          STRATEGY + T2 CONJECTURE (EXT) + EXECUTED
                          (res5_031_nonlattice_extremal_probe.py 5/5).
-Reproduction command:    python codes/vacuum/res5_031_nonlattice_extremal_probe.py
-Expected output:         K*=20.55; non-lattice K_floor 0.6-0.95<<13; exact-BCC 1.75>jittered
+Reproduction command:     python
+                         codes/vacuum/res5_031_nonlattice_extremal_probe.py
+Expected output:          K*=20.55; non-lattice K_floor 0.6-0.95<<13;
+                         exact-BCC 1.75>jittered
                          0.92; 5/5 PASS.
-Falsifier:               A real-antipodal admissible non-lattice Q with K_floor>13 (refutes
-                         EXT); or a selection margin going negative inside I<I_c, mu^2 widened.
-Tier before / after:     No change. B1/B2 enacted scope-qualified T7. (EXT) registered T2.
-No-overclaim statement:  Reframing + roadmap; NOT a widening of the enacted T7. (EXT) is a
-                         conjecture with strong evidence, not a theorem. Window bounded by
+Falsifier:                A real-antipodal admissible non-lattice Q with
+                         K_floor>13 (refutes
+                         EXT); or a selection margin going negative
+                         inside I<I_c, mu^2 widened.
+Tier before / after:      No change. B1/B2 enacted scope-qualified T7.
+                         (EXT) registered T2.
+No-overclaim statement:   Reframing + roadmap; NOT a widening of the
+                         enacted T7. (EXT) is a
+                         conjecture with strong evidence, not a theorem.
+                         Window bounded by
                          physics. A1 remains the definitional floor.
-Next required action:    (1) pin I_c + scan mu^2 (window); (2) prove (EXT) T2->T6/T7
-                         (the real theorem); (3) extend (D)/(S) to non-lattice; (4) referee.
+Next required action:     (1) pin I_c + scan mu^2 (window); (2) prove
+                         (EXT) T2->T6/T7
+                         (the real theorem); (3) extend (D)/(S) to
+                         non-lattice; (4) referee.
 \end{verbatim}
 }

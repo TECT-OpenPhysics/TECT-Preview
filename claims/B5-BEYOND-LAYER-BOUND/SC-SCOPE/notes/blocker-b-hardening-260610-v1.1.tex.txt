@@ -25,7 +25,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. Purpose}
+\section*{1. Purpose and scope}
 
 The operator returned a CONDITIONAL verdict on v1.0: the load-bearing $R_{\max}$
 convention ($1/(4\pi^2)$ vs $1/(2\pi^2)$) decides closure ($R_{\max}\le0.389$ vs
@@ -118,35 +118,60 @@ $M_R$ monotone, $u_{\rm eff}(\times2)=2.674>0$; \emph{sunset} $S=1.13$ rigorous.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B5-BEYOND-LAYER-BOUND / Blocker B hardening (v1.1, convention derived)
-Precise statement:       (1) Ghat4 = (J*J)(t) with /(4pi^2) FORCED by the (2pi)^3 convolution
-                         measure (phi=2pi); Parseval ratio 1.0000 is a consequence; /(2pi^2)
-                         doubles it -> spurious R_max=0.77. (2) R_max interval-enclosed:
-                         R_max <= max_grid + L*spacing = 0.391 < 0.634 over [t_min,2q0]. (3)
-                         Anchoring: M_R(mu^2) monotone decreasing (dM_R/dmu^2<0) => u_eff
-                         monotone, min at x2 = 2.674 > 0 on [x0.5,x2]. (4) Sunset S=1.13
-                         rigorous (M-ENDPOINT). Blocker B theorem-grade; with A+C all three
+Result ID:                B5-BEYOND-LAYER-BOUND / Blocker B hardening
+                         (v1.1, convention derived)
+Precise statement:        (1) Ghat4 = (J*J)(t) with /(4pi^2) FORCED by
+                         the (2pi)^3 convolution
+                         measure (phi=2pi); Parseval ratio 1.0000 is a
+                         consequence; /(2pi^2)
+                         doubles it -> spurious R_max=0.77. (2) R_max
+                         interval-enclosed:
+                         R_max <= max_grid + L*spacing = 0.391 < 0.634
+                         over [t_min,2q0]. (3)
+                         Anchoring:  M_R(mu^2) monotone decreasing
+                                    (dM_R/dmu^2<0) => u_eff
+                         monotone, min at x2 = 2.674 > 0 on [x0.5,x2].
+                         (4) Sunset S=1.13
+                         rigorous (M-ENDPOINT). Blocker B theorem-grade;
+                         with A+C all three
                          T7 obstructions theorem-grade.
-Scope:                   Operating endpoint I=2e-3; ROBUSTNESS-MU2 band; (2pi)^3 Fourier conv.
-Dependencies:            scscope-quartic-normalisation-certificate v1.0; scscope-mendpoint-
-                         evaluation v1.1 (sunset); offshell-domination-theorem v1.1 (A,C);
+Scope:                    Operating endpoint I=2e-3; ROBUSTNESS-MU2
+                         band; (2pi)^3 Fourier conv.
+Dependencies:             scscope-quartic-normalisation-certificate
+                         v1.0; scscope-mendpoint-
+                         evaluation v1.1 (sunset);
+                         offshell-domination-theorem v1.1 (A,C);
                          Math424-AddA (gap map r_R(mu^2), M_R).
-Evidence grade:          ANALYTIC (convention derivation + monotonicity) + INTERVAL-ENCLOSED
-                         (R_max) + EXECUTED (res5_027_blocker_b_hardening.py v1.1 5/5).
-Reproduction command:    python codes/vacuum/res5_027_blocker_b_hardening.py
-Expected output:         convention ratio 1.0000; R_max enclosure 0.391<0.634; M_R monotone,
+Evidence grade:           ANALYTIC (convention derivation +
+                         monotonicity) + INTERVAL-ENCLOSED
+                         (R_max) + EXECUTED
+                         (res5_027_blocker_b_hardening.py v1.1 5/5).
+Reproduction command:     python
+                         codes/vacuum/res5_027_blocker_b_hardening.py
+Expected output:          convention ratio 1.0000; R_max enclosure
+                         0.391<0.634; M_R monotone,
                          u_eff(x2)=2.674>0; 5/5 PASS.
-Falsification gate:      A derivation error making /(2pi^2) the correct convolution prefactor
-                         (would give R_max=0.77); or R(t)>0.634 on [t_min,2q0]; or dM_R/dmu^2>0
+Falsification gate:       A derivation error making /(2pi^2) the correct
+                         convolution prefactor
+                         (would give R_max=0.77); or R(t)>0.634 on
+                         [t_min,2q0]; or dM_R/dmu^2>0
                          (would break the endpoint-min certification).
-Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. Blocker B closed at
-                         theorem grade (convention derived, R_max enclosed, anchoring monotone);
+Tier before / after:      No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5.
+                         Blocker B closed at
+                         theorem grade (convention derived, R_max
+                         enclosed, anchoring monotone);
                          all three T7 obstructions theorem-grade.
-No-overclaim statement:  Does NOT flip B1/B2 and does NOT enact T7. It closes Blocker B at
-                         theorem grade (the operator convention/interval/monotonicity patch).
-                         The R_max enclosure is full-spacing-conservative (a CAS interval bound
-                         would tighten). The operator sign-off remains. B1/B2 stay T6.
-Next required action:    T7 Step 4 assembly (F[Q]>F[G_*] for all C_phys) now rests only on the
-                         operator sign-off; optionally tighten R_max with a CAS interval bound.
+No-overclaim statement:   Does NOT flip B1/B2 and does NOT enact T7. It
+                         closes Blocker B at
+                         theorem grade (the operator
+                         convention/interval/monotonicity patch).
+                         The R_max enclosure is
+                         full-spacing-conservative (a CAS interval bound
+                         would tighten). The operator sign-off remains.
+                         B1/B2 stay T6.
+Next required action:     T7 Step 4 assembly (F[Q]>F[G_*] for all
+                         C_phys) now rests only on the
+                         operator sign-off; optionally tighten R_max
+                         with a CAS interval bound.
 \end{verbatim}
 }

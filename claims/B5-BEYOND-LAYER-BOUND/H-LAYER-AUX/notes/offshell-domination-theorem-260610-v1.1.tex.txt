@@ -29,7 +29,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. Purpose}
+\section*{1. Purpose and scope}
 
 The v1.0 off-shell domination used a leading-order interaction-gain estimate ($C_{\rm int}
 =O(I/N)$ with an $\times30$ margin). The operator directive is to close it completely and
@@ -113,36 +113,64 @@ $\times1.54$; \emph{band} worst $\rho_{\rm off}=0.384<1$.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B5-BEYOND-LAYER-BOUND / off-shell domination theorem (rigorous, v1.1)
-Precise statement:       rho_off = |Sigma_cond(k_off)|/K_0(k_off) <= R_lead*r_R/(r_R+c*delta^2)
-                         < R_lead < 1, inheriting (a) on-shell R_lead<1 (T-018/020,
-                         |Sigma_cond|<=R_lead*r_R via B<=B_max), (b) off-shell kinetic excess
-                         K_0(k_off)=r_R+c*delta^2>r_R, (c) mean-field convexity +(3/2)u_eff>=0
-                         (T-019). rho_off=0.381<0.650<1 (off-shell x1.70 more stable), band-
-                         robust. COROLLARY: T'>13 needs off-shell or super-n_pack (both
-                         excluded) => survivors on-shell T'<=13, RES-1 comfortable x1.54 =>
-                         Blocker C removed. Blockers A and C closed; B (thin grades) remains.
-Scope:                   Lattice competitors; operating endpoint I=2e-3; ROBUSTNESS-MU2 band.
-Dependencies:            hdiag-offdiag-gershgorin-threshold v1.1 + classwide-secondcumulant-
-                         stability (R_lead<1, T-018/020); offdiag-exchange-scalar-
-                         identification (T-019 convexity); offshell-operator-decision (T-024);
-                         aadm-exclusion-boundaries v1.1 (Boundary 2/3); Math424-AddA (K_0,r_R).
-Evidence grade:          ANALYTIC (corollary of established results) + EXECUTED
-                         (res5_026_offshell_domination_theorem.py v1.1 5/5).
-Reproduction command:    python codes/vacuum/res5_026_offshell_domination_theorem.py
-Expected output:         rho_off=0.381 < R_lead(13)=0.650 < 1 (x1.70); band-worst 0.384; 5/5.
-Falsification gate:      An off-shell transfer with B>B_max (impossible, B_max is the max); or
-                         an on-shell competitor with T'>13 (contradicts the T-014/015 pin); or
+Result ID:                B5-BEYOND-LAYER-BOUND / off-shell domination
+                         theorem (rigorous, v1.1)
+Precise statement:        rho_off = |Sigma_cond(k_off)|/K_0(k_off) <=
+                         R_lead*r_R/(r_R+c*delta^2)
+                         < R_lead < 1, inheriting (a) on-shell R_lead<1
+                         (T-018/020,
+                         |Sigma_cond|<=R_lead*r_R via B<=B_max), (b)
+                         off-shell kinetic excess
+                         K_0(k_off)=r_R+c*delta^2>r_R, (c) mean-field
+                         convexity +(3/2)u_eff>=0
+                         (T-019). rho_off=0.381<0.650<1 (off-shell x1.70
+                         more stable), band-
+                         robust. COROLLARY:  T'>13 needs off-shell or
+                                            super-n_pack (both
+                         excluded) => survivors on-shell T'<=13, RES-1
+                         comfortable x1.54 =>
+                         Blocker C removed. Blockers A and C closed; B
+                         (thin grades) remains.
+Scope:                    Lattice competitors; operating endpoint
+                         I=2e-3; ROBUSTNESS-MU2 band.
+Dependencies:             hdiag-offdiag-gershgorin-threshold v1.1 +
+                         classwide-secondcumulant-
+                         stability (R_lead<1, T-018/020);
+                         offdiag-exchange-scalar-
+                         identification (T-019 convexity);
+                         offshell-operator-decision (T-024);
+                         aadm-exclusion-boundaries v1.1 (Boundary 2/3);
+                         Math424-AddA (K_0,r_R).
+Evidence grade:           ANALYTIC (corollary of established results) +
+                         EXECUTED
+                         (res5_026_offshell_domination_theorem.py v1.1
+                         5/5).
+Reproduction command:     python
+                         codes/vacuum/res5_026_offshell_domination_theorem.py
+Expected output:          rho_off=0.381 < R_lead(13)=0.650 < 1 (x1.70);
+                         band-worst 0.384; 5/5.
+Falsification gate:       An off-shell transfer with B>B_max
+                         (impossible, B_max is the max); or
+                         an on-shell competitor with T'>13 (contradicts
+                         the T-014/015 pin); or
                          R_lead>=1 (contradicts T-018/020).
-Tier before / after:     No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5. Blockers A (off-shell
-                         admissibility) and C (adversarial razor-thin margin) closed at theorem
-                         grade (corollary of R_lead<1); Blocker B remains for T7.
-No-overclaim statement:  Does NOT flip B1/B2 and does NOT complete T7. It closes Blockers A and
-                         C rigorously (inheriting established R_lead<1 + kinetic excess +
-                         convexity). Blocker B (R_max/sunset/anchoring -> theorem-grade) remains.
+Tier before / after:      No tier flip. B1/B2 T6 on {H-LAYER}, B5 T5.
+                         Blockers A (off-shell
+                         admissibility) and C (adversarial razor-thin
+                         margin) closed at theorem
+                         grade (corollary of R_lead<1); Blocker B
+                         remains for T7.
+No-overclaim statement:   Does NOT flip B1/B2 and does NOT complete T7.
+                         It closes Blockers A and
+                         C rigorously (inheriting established R_lead<1 +
+                         kinetic excess +
+                         convexity). Blocker B (R_max/sunset/anchoring
+                         -> theorem-grade) remains.
                          B1/B2 stay T6 on {H-LAYER}.
-Next required action:    T7 Step 3 (Blocker B): R_max<0.634 certified bound (via the official
-                         Parseval-pinned Ghat4) + anchoring interval-certificate; then the T7
+Next required action:     T7 Step 3 (Blocker B): R_max<0.634 certified
+                         bound (via the official
+                         Parseval-pinned Ghat4) + anchoring
+                         interval-certificate; then the T7
                          proposition F[Q]>F[G_*] for all Q in C_phys.
 \end{verbatim}
 }

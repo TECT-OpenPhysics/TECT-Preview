@@ -20,7 +20,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. Purpose (roadmap Step 3)}
+\section*{1. Purpose and scope}
 
 The probe of Steps 1--2 covered the off-diagonal sector (O). Step 3 confirms that the other two
 sectors of the Reading-H comparison decomposition --- (D) diagonal isotropy and (S) selection
@@ -110,34 +110,63 @@ competitor-agnostic. All from res5\_034 (6/6).
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1/B2 (D)/(S) non-lattice extension (roadmap Step 3)
-Precise statement:       (D) diagonal isotropy (T-016): the second variation at G_* is
-                         block-diagonal in angular momentum with l=0 curvature (1/2)G_*^-2+
-                         (3/2)u_eff>0 and l>=1 curvature (1/2)G_*^-2>=(1/2)r_R^2=4.64e-2>0; the
-                         spherical-harmonic decomposition uses no lattice input, so the strict
-                         diagonal minimum holds for ANY competitor (lattice or non-lattice). (S)
-                         selection joint = MARGIN/(C2+composed/SUNSET+RMAX*C2) is built from
-                         layer + coherence-packing quantities (no competitor lattice structure),
-                         joint=1.040>1, sunset cap 1.13; holds identically for non-lattice. Both
-                         (D)/(S) competitor-agnostic => extend to C_full unchanged.
-Scope:                   (D)/(S) sectors for C_full. With Step 2 (O thin), the full (D)(O)(S)
-                         decomposition extends to C_full: (D)/(S) comfortable, (O) thin x1.026.
+Result ID:                B1/B2 (D)/(S) non-lattice extension (roadmap
+                         Step 3)
+Precise statement:        (D) diagonal isotropy (T-016): the second
+                         variation at G_* is
+                         block-diagonal in angular momentum with l=0
+                         curvature (1/2)G_*^-2+
+                         (3/2)u_eff>0 and l>=1 curvature
+                         (1/2)G_*^-2>=(1/2)r_R^2=4.64e-2>0; the
+                         spherical-harmonic decomposition uses no
+                         lattice input, so the strict
+                         diagonal minimum holds for ANY competitor
+                         (lattice or non-lattice). (S)
+                         selection joint =
+                         MARGIN/(C2+composed/SUNSET+RMAX*C2) is built
+                         from
+                         layer + coherence-packing quantities (no
+                         competitor lattice structure),
+                         joint=1.040>1, sunset cap 1.13; holds
+                         identically for non-lattice. Both
+                         (D)/(S) competitor-agnostic => extend to C_full
+                         unchanged.
+Scope:                    (D)/(S) sectors for C_full. With Step 2 (O
+                         thin), the full (D)(O)(S)
+                         decomposition extends to C_full:  (D)/(S)
+                                                          comfortable,
+                                                          (O) thin
+                                                          x1.026.
                          No B1/B2 tier change.
-Dependencies:            T-016/res5_016 (diagonal isotropy); hdiag-fullcovariance-formulation;
-                         scscope_endpoint_sweep (joint); res5_033 (Step 2 off-diagonal C_full).
-Evidence grade:          STRUCTURAL (competitor-agnosticism) + EXECUTED (res5_034 6/6).
-Reproduction command:    python codes/vacuum/res5_034_DS_nonlattice_extension.py
-Expected output:         entropy floor 4.64e-2>0; breathing 4.03>0; joint 1.040>1; sunset cap
+Dependencies:             T-016/res5_016 (diagonal isotropy);
+                         hdiag-fullcovariance-formulation;
+                         scscope_endpoint_sweep (joint); res5_033 (Step
+                         2 off-diagonal C_full).
+Evidence grade:           STRUCTURAL (competitor-agnosticism) + EXECUTED
+                         (res5_034 6/6).
+Reproduction command:     python
+                         codes/vacuum/res5_034_DS_nonlattice_extension.py
+Expected output:          entropy floor 4.64e-2>0; breathing 4.03>0;
+                         joint 1.040>1; sunset cap
                          1.130; 6/6 PASS.
-Falsifier:               A competitor entering the diagonal functional beyond M_tot + entropy;
-                         or a selection-joint competitor-structure dependence beyond n_pack.
-Tier before / after:     No change. (D)/(S) competitor-agnostic (extend to C_full); with Step 2
-                         the (D)(O)(S) decomposition holds for C_full (O thin).
-No-overclaim statement:  Records (D)/(S) competitor-agnosticism (structural). Does NOT complete
-                         the C_full T7: the off-diagonal margin is thin (x1.026), and the C_full
-                         statement awaits EXT (margin upgrade) + operator thin-margin decision +
+Falsifier:                A competitor entering the diagonal functional
+                         beyond M_tot + entropy;
+                         or a selection-joint competitor-structure
+                         dependence beyond n_pack.
+Tier before / after:      No change. (D)/(S) competitor-agnostic (extend
+                         to C_full); with Step 2
+                         the (D)(O)(S) decomposition holds for C_full (O
+                         thin).
+No-overclaim statement:   Records (D)/(S) competitor-agnosticism
+                         (structural). Does NOT complete
+                         the C_full T7:  the off-diagonal margin is thin
+                                        (x1.026), and the C_full
+                         statement awaits EXT (margin upgrade) +
+                         operator thin-margin decision +
                          external referee. No tier widening.
-Next required action:    Step 4 external referee; operator decision on thin off-diagonal margin;
-                         optional EXT promotion (margin upgrade). Then Step 5 consolidation.
+Next required action:     Step 4 external referee; operator decision on
+                         thin off-diagonal margin;
+                         optional EXT promotion (margin upgrade). Then
+                         Step 5 consolidation.
 \end{verbatim}
 }

@@ -89,8 +89,8 @@ ROBUSTNESS-MU2 was then CLOSED for the mu^2 in [x0.5, x2] neighbourhood: the STE
 | 7 | 2026-06-10 | v1.0 | Step 2 of the scope-completion roadmap: the additive-energy extremal (EXT) | — | v1.0 |
 | 8 | 2026-06-10 | v1.0 | Scope-completion strategy toward A1-relative unconditional Reading-H T7: | T2 | v1.0 |
 | 9 | 2026-06-10 | v1.0 | T7 enactment record and audit: B1-RH-ENUM and B2-PROPA-HLAYER promoted to | AUDIT | v1.0 |
-| 10 | ? | v | C_full internal scope closure (COMFORTABLE): B1/B2 Reading-H enacted as | — | v† → v |
-| 11 | ? | v | Step 1 of the scope-completion roadmap (v1.1): certification of the | — | v → v1.0† |
+| 10 | 2026-06-10 | v1.1 | Step 1 of the scope-completion roadmap (v1.1): certification of the | — | v1.0† → v1.1 |
+| 11 | ? | v1.2 | C_full internal scope closure (COMFORTABLE): B1/B2 Reading-H enacted as | — | v† → v1.2 |
 
 ### enumerated/
 
@@ -266,16 +266,16 @@ ROBUSTNESS-MU2 was then CLOSED for the mu^2 in [x0.5, x2] neighbourhood: the STE
 
 - **v1.0** (2026-06-10) first issue. Records the B1/B2 T6->T7 enactment, the ledger
 
+### window-certification-Ic-mu2  ·  current `window-certification-Ic-mu2-260610-v1.1.tex.txt`
+
+- **v1.0** (2026-06-10) first issue. I_c=2.41e-3, mu^2_max=0.0342, 3-point monotonicity grid.
+- **v1.1** (2026-06-10) operator review: (a) unit fix 2.41e-3 < 3.08e-3 (was "2.41<3.08e-3");
+
 ### cfull-internal-scope-closure  ·  current `cfull-internal-scope-closure-260610-v1.2.tex.txt`
 
 - **v1.0** (2026-06-10) cfull-route-consolidation: route complete "awaiting referee + decision".
 - **v1.1** (2026-06-10) operator decision ACCEPT THE THIN OFF-DIAGONAL MARGIN: G1/G3 CLOSED,
 - **v1.2** (2026-06-10) COMFORTABLE: coherence circle-packing lemma T'<=10 => off-diagonal x1.96,
-
-### window-certification-Ic-mu2  ·  current `window-certification-Ic-mu2-260610-v1.1.tex.txt`
-
-- **v1.0** (2026-06-10) first issue. Certifies I_c=2.41e-3 (selection-binding) and the
-- **v1.1** (2026-06-10) operator review: (a) unit fix 2.41e-3 < 3.08e-3 (was "2.41<3.08e-3");
 
 ### enumerated-readings-migration-revalidation  ·  current `enumerated-readings-migration-revalidation-260605-260605-v1.1.tex.txt`
 
@@ -345,4 +345,4 @@ ROBUSTNESS-MU2 was then CLOSED for the mu^2 in [x0.5, x2] neighbourhood: the STE
 - `runs/260610-res5-dr2-kappa-bound/`
 - `runs/260610-res5-projection-factor/`
 
-<!-- generated 2026-06-10T14:20:14Z -->
+<!-- generated 2026-06-10T17:08:08Z -->

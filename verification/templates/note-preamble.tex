@@ -4,14 +4,18 @@
 % what this preamble provides; a note needing more extends THIS template (one
 % place), never a per-note preamble.
 \documentclass[11pt]{article}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage{lmodern}        % Type1 scalable fonts (no PK bitmap generation; crisper PDF)
+\usepackage[margin=2.0cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
+\usepackage[strings]{underscore}  % literal _ in text (titles/headings/prose); math subscripts unaffected
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{array,tabularx,booktabs}   % width-bounded tables (mandatory for tables)
 \usepackage[hyphens]{url}              % \url{} breaks long paths at separators
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
-\setlength{\emergencystretch}{2em}     % last-resort line breaking, no overfull
+\setlength{\emergencystretch}{3em}     % last-resort line breaking, no overfull
+\sloppy                                 % prefer loose spacing over overfull boxes
+\makeatletter\g@addto@macro\@verbatim{\footnotesize}\makeatother  % footer/code blocks at footnotesize so reference lines fit
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}  % wrapping table column
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}

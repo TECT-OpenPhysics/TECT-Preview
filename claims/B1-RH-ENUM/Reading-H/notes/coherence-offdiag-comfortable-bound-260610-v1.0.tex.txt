@@ -22,7 +22,7 @@
 % =============================================================================
 
 \sloppy
-\section*{1. The gap this closes}
+\section*{1. Purpose and scope: The gap this closes}
 
 The C_full off-diagonal closure (res5\_033/035) rested on the antipodal lemma $T'\le N/2$ with
 the packing $N\le n_{\rm pack}\approx41$, giving $K_{\rm floor}\le20$ and a THIN margin
@@ -79,7 +79,7 @@ K_{\rm floor}\le T'\le10\ \Rightarrow\ R_{\rm lead}=23.2\,(1+K_{\rm floor})\,I\l
 At the operating intensity $I=2\times10^{-3}$, $R_{\rm lead}\le0.510$ (margin $\times1.96$); at the
 selection cap $I_c^{\rm sel}=2.41\times10^{-3}$, $R_{\rm lead}\le0.615<1$. The off-diagonal cap is
 \[
-I_{\rm off}^{\rm coh}=\frac{1}{23.2\cdot11}=3.92\times10^{-3}\ >\ I_c^{\rm sel}=2.41\times10^{-3},
+I_{\rm off}^{\rm coh}=\tfrac{1}{23.2\cdot11}=3.92\times10^{-3}>I_c^{\rm sel}=2.41\times10^{-3},
 \]
 so the SELECTION boundary binds (exactly as for the lattice class), and the C_full operating
 region is the FULL Step-1 selection region $\mathcal R$ ($20\%$ headroom at the operating point),
@@ -113,32 +113,59 @@ from res5\_036 (5/5).
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B1/B2 coherence circle-packing lemma -- comfortable C_full off-diagonal
-Precise statement:       Coherence resolution (pairwise geodesic >= theta_min) bounds every
-                         sum-circle occupancy: T'(Q) <= floor(2pi/theta_min) = 10 uniformly across
-                         the certified window (elementary circle-packing proof; rho<=Q0). With
-                         R-025 (K_floor<=T'): R_lead <= 23.2*11*I = 0.510 at I_op (x1.96), 0.615 at
-                         the selection cap -- COMFORTABLE, for lattice AND non-lattice. I_off^coh=
-                         1/(23.2*11)=3.92e-3 > I_c^sel=2.41e-3 => selection binds => C_full region
-                         = full Step-1 region (20% headroom). Adversarial max admissible T'=8;
-                         random T'=2. Supersedes the thin x1.026 (loose T'<=N/2 artefact).
-Scope:                   Off-diagonal sector for C_full, comfortable. EXT now optional (T2).
-                         Uniform across the certified window R. Elementary (no decoupling / NT).
-Dependencies:            R-025 (K_floor<=T', T7); coherence-resolution admissibility (n_pack=
-                         16/theta_min^2); Step 1 window (I_c^sel); T-018 (R_lead/K* identity).
-Evidence grade:          PROVED (elementary lemma) + EXECUTED (res5_036 5/5).
-Reproduction command:    python codes/vacuum/res5_036_coherence_offdiag_bound.py
-Expected output:         T'<=floor(2pi/theta_min)=10; adversarial max 8; random 2; R_lead<=0.510
-                         (x1.96); selection binds (I_off^coh>I_c^sel); 5/5 PASS.
-Falsifier:               An admissible (coherence-resolved) competitor with a sum-circle of >10
-                         points; or theta_min < 2pi/11 = 0.571 somewhere in the window (would
+Result ID:                B1/B2 coherence circle-packing lemma --
+                         comfortable C_full off-diagonal
+Precise statement:        Coherence resolution (pairwise geodesic >=
+                         theta_min) bounds every
+                         sum-circle occupancy:  T'(Q) <=
+                                               floor(2pi/theta_min) = 10
+                                               uniformly across
+                         the certified window (elementary circle-packing
+                         proof; rho<=Q0). With
+                         R-025 (K_floor<=T'):  R_lead <= 23.2*11*I =
+                                              0.510 at I_op (x1.96),
+                                              0.615 at
+                         the selection cap -- COMFORTABLE, for lattice
+                         AND non-lattice. I_off^coh=
+                         1/(23.2*11)=3.92e-3 > I_c^sel=2.41e-3 =>
+                         selection binds => C_full region
+                         = full Step-1 region (20% headroom).
+                         Adversarial max admissible T'=8;
+                         random T'=2. Supersedes the thin x1.026 (loose
+                         T'<=N/2 artefact).
+Scope:                    Off-diagonal sector for C_full, comfortable.
+                         EXT now optional (T2).
+                         Uniform across the certified window R.
+                         Elementary (no decoupling / NT).
+Dependencies:             R-025 (K_floor<=T', T7); coherence-resolution
+                         admissibility (n_pack=
+                         16/theta_min^2); Step 1 window (I_c^sel); T-018
+                         (R_lead/K* identity).
+Evidence grade:           PROVED (elementary lemma) + EXECUTED (res5_036
+                         5/5).
+Reproduction command:     python
+                         codes/vacuum/res5_036_coherence_offdiag_bound.py
+Expected output:          T'<=floor(2pi/theta_min)=10; adversarial max
+                         8; random 2; R_lead<=0.510
+                         (x1.96); selection binds (I_off^coh>I_c^sel);
+                         5/5 PASS.
+Falsifier:                An admissible (coherence-resolved) competitor
+                         with a sum-circle of >10
+                         points; or theta_min < 2pi/11 = 0.571 somewhere
+                         in the window (would
                          loosen the bound past 11).
-Tier before / after:     Off-diagonal C_full: thin x1.026 (loose T'<=N/2) -> COMFORTABLE x1.96
-                         (coherence T'<=10), selection-binding. EXT T2 (now optional, not needed).
-No-overclaim statement:  Bounds T' (hence K_floor via R-025) by coherence; comfortable but still
-                         scope-qualified (within R, given A1, C_full competitor class). Not a
-                         global/all-intensity claim. EXT (tight K_floor~3) remains a separate T2.
-Next required action:    Re-enact C_full as COMFORTABLE (supersede the thin-O scope); G2 external
+Tier before / after:      Off-diagonal C_full: thin x1.026 (loose
+                         T'<=N/2) -> COMFORTABLE x1.96
+                         (coherence T'<=10), selection-binding. EXT T2
+                         (now optional, not needed).
+No-overclaim statement:   Bounds T' (hence K_floor via R-025) by
+                         coherence; comfortable but still
+                         scope-qualified (within R, given A1, C_full
+                         competitor class). Not a
+                         global/all-intensity claim. EXT (tight
+                         K_floor~3) remains a separate T2.
+Next required action:     Re-enact C_full as COMFORTABLE (supersede the
+                         thin-O scope); G2 external
                          referee (validation). EXT optional.
 \end{verbatim}
 }

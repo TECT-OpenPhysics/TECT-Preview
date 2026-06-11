@@ -113,37 +113,65 @@ $f_{\rm avg}a_0=0.059\in[0.0385,0.0758]$ (verified-floor closure, $23\%$).
 {\footnotesize
 \begin{verbatim}
 Result ID:               B1-RH-ENUM / RES-5 endpoint projection factor
-Precise statement:       chi_proj = f_avg/C_G = 0.613/0.492 = 1.25 > 1 (not <0.82).
-                         The bubble chi0(k) is forward-peaked, so the screening
-                         f(k)=1/(1+lam' chi0(k)) is maximal at k=0 (=C_G) and weaker
-                         at the {110} modulation transfers (f=0.57-0.73). The
-                         operator-norm tail C_G a0=0.047 is a forward-channel under-
-                         estimate; corrected tail = f_avg a0 = 0.059. The projection
-                         closure lever (chi_proj<=0.82) is ELIMINATED; the endpoint
-                         closes only at the verified floor (0.059<0.0758, 23%),
-                         solely DR-2-gated. Off-endpoint closure unaffected.
-Scope:                   I=2e-3 endpoint; BCC {110} modulation; operating anchor.
-Dependencies:            res5-endpoint-2pi-bound v1.1 (projection lever tested here);
-                         res5-a0-skeleton-sensitivity (C_G, a0, corrected upward);
-                         res5-tail-budget-closure (off-endpoint, unaffected).
-Evidence grade:          ANALYTIC + EXECUTED (res5_projection_factor.py 5/5; direct
-                         bubble integral + {110} additive-energy weights).
+Precise statement:        chi_proj = f_avg/C_G = 0.613/0.492 = 1.25 > 1
+                         (not <0.82).
+                         The bubble chi0(k) is forward-peaked, so the
+                         screening
+                         f(k)=1/(1+lam' chi0(k)) is maximal at k=0
+                         (=C_G) and weaker
+                         at the {110} modulation transfers
+                         (f=0.57-0.73). The
+                         operator-norm tail C_G a0=0.047 is a
+                         forward-channel under-
+                         estimate; corrected tail = f_avg a0 = 0.059.
+                         The projection
+                         closure lever (chi_proj<=0.82) is ELIMINATED;
+                         the endpoint
+                         closes only at the verified floor
+                         (0.059<0.0758, 23%),
+                         solely DR-2-gated. Off-endpoint closure
+                         unaffected.
+Scope:                    I=2e-3 endpoint; BCC {110} modulation;
+                         operating anchor.
+Dependencies:             res5-endpoint-2pi-bound v1.1 (projection lever
+                         tested here);
+                         res5-a0-skeleton-sensitivity (C_G, a0,
+                         corrected upward);
+                         res5-tail-budget-closure (off-endpoint,
+                         unaffected).
+Evidence grade:           ANALYTIC + EXECUTED (res5_projection_factor.py
+                         5/5; direct
+                         bubble integral + {110} additive-energy
+                         weights).
 Reproduction command:    python codes/vacuum/res5_projection_factor.py
-Expected output:         chi0 forward-peaked; f(t)/C_G in [1.15,1.48]; chi_proj=1.25;
-                         corrected tail 0.059 in [0.0385,0.0758]; 5/5 PASS.
-Falsification gate:      A bubble with a 2q0 peak above chi0(0) at the operating
-                         point (would lower chi_proj); or a {110} weight shifted to
+Expected output:          chi0 forward-peaked; f(t)/C_G in [1.15,1.48];
+                         chi_proj=1.25;
+                         corrected tail 0.059 in [0.0385,0.0758]; 5/5
+                         PASS.
+Falsification gate:       A bubble with a 2q0 peak above chi0(0) at the
+                         operating
+                         point (would lower chi_proj); or a {110} weight
+                         shifted to
                          the forward channel.
-Tier before / after:     No tier flip. B1 T6 on {H-LAYER}. RES-5 endpoint: projection
-                         lever ELIMINATED; tail corrected 0.047->0.059; closure
-                         solely via the DR-2 verified floor (23% margin).
-No-overclaim statement:  This is a NEGATIVE for the projection route + an upward tail
-                         correction. The endpoint still closes at the verified floor
-                         but with a thinner margin and one fewer lever. The a0-
-                         skeleton C_G a0 estimate is corrected upward by 1.25. B1
+Tier before / after:      No tier flip. B1 T6 on {H-LAYER}. RES-5
+                         endpoint: projection
+                         lever ELIMINATED; tail corrected 0.047->0.059;
+                         closure
+                         solely via the DR-2 verified floor (23%
+                         margin).
+No-overclaim statement:   This is a NEGATIVE for the projection route +
+                         an upward tail
+                         correction. The endpoint still closes at the
+                         verified floor
+                         but with a thinner margin and one fewer lever.
+                         The a0-
+                         skeleton C_G a0 estimate is corrected upward by
+                         1.25. B1
                          unchanged.
-Next required action:    The endpoint's sole remaining lever is the DR-2 floor kappa
-                         bound (kappa<~0.8 worst-case over the dense admissible
+Next required action:     The endpoint's sole remaining lever is the
+                         DR-2 floor kappa
+                         bound (kappa<~0.8 worst-case over the dense
+                         admissible
                          class). Pursue res5-dr2-kappa-bound.
 \end{verbatim}
 }

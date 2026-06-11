@@ -76,7 +76,7 @@ with a $\ge27\times$ margin; only the $I=2\times10^{-3}$ endpoint is binding.
 \section*{4. Final status}
 
 \begin{center}
-\begin{tabular}{lll}
+\begin{tabularx}{\linewidth}{@{}lYY@{}}
 \toprule
 class & $\max K_{\rm floor}$ & status \\
 \midrule
@@ -84,7 +84,7 @@ enumerated / admissible-pinned & $12.13$ (unif), $T'=13$ (non-unif) & \textbf{EX
 full lattice class & $C_\varepsilon R^\varepsilon$ (R-026) & \textbf{STRONG EVIDENCE} (T7 mod.\ textbook NT) \\
 arbitrary-$Q$ (not B1 scope) & $N^\varepsilon$ (decoupling) & \textbf{T6 CONDITIONAL} (Bourgain--Demeter) \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 For the actual Reading-H competitors the RES-5 endpoint and H-diag close EXACTLY (the
@@ -135,41 +135,72 @@ $\ge27\times$; \emph{corrections} 3 retracted (survival / SC-SCOPE / uncondition
 {\footnotesize
 \begin{verbatim}
 Result ID:               B1-RH-ENUM / RES-5 arc consolidation
-Precise statement:       RES-5 (matched-order-to-exact) reduces to the additive-energy
-                         floor K_floor=E_+/N^2-1. Endpoint closes iff K_floor<26.2;
-                         H-diag/RES-1 iff K_floor<20.5; exact worst over the admissible
-                         crystallographic-shell class = 12.13 (uniform) / T'=13 (non-
-                         uniform, R-027), both below threshold (factor >=1.58). EXACT for
-                         the actual competitors (not an independent B1 blocker); STRONG
-                         EVIDENCE for the full lattice class (R-026, T7 mod. textbook NT);
-                         T6-cond on decoupling for arbitrary-Q. Single residual: chi(P)<~T'
-                         link. Tail corrected 0.047->0.059 (projection negative). Three
+Precise statement:        RES-5 (matched-order-to-exact) reduces to the
+                         additive-energy
+                         floor K_floor=E_+/N^2-1. Endpoint closes iff
+                         K_floor<26.2;
+                         H-diag/RES-1 iff K_floor<20.5; exact worst over
+                         the admissible
+                         crystallographic-shell class = 12.13 (uniform)
+                         / T'=13 (non-
+                         uniform, R-027), both below threshold (factor
+                         >=1.58). EXACT for
+                         the actual competitors (not an independent B1
+                         blocker); STRONG
+                         EVIDENCE for the full lattice class (R-026, T7
+                         mod. textbook NT);
+                         T6-cond on decoupling for arbitrary-Q. Single residual: 
+                                                                                 chi(P)<~T'
+                         link. Tail corrected 0.047->0.059 (projection
+                         negative). Three
                          over-claims retracted en route.
-Scope:                   B1 lattice T6 scope; I=2e-3 endpoint; consolidation (no new
+Scope:                    B1 lattice T6 scope; I=2e-3 endpoint;
+                         consolidation (no new
                          theorem).
-Dependencies:            res5-{entry,susceptibility-ratio,oneloop-disentangling,higherloop,
-                         a0-skeleton,2pi-commonmode,sunset-norm v1.1,tail-budget,endpoint
-                         v1.2,projection-factor,dr2-kappa v1.2}; hdiag-offdiag-floor-bound;
-                         res-endpoint-admissible-pin; R-026/R-027; B5 status.json.
-Evidence grade:          CONSOLIDATION of EXACT + STRONG EVIDENCE + T6-cond material; no
+Dependencies:            
+                         res5-{entry,susceptibility-ratio,oneloop-disentangling,higherloop,
+                         a0-skeleton,2pi-commonmode,sunset-norm
+                         v1.1,tail-budget,endpoint
+                         v1.2,projection-factor,dr2-kappa v1.2};
+                         hdiag-offdiag-floor-bound;
+                         res-endpoint-admissible-pin; R-026/R-027; B5
+                         status.json.
+Evidence grade:           CONSOLIDATION of EXACT + STRONG EVIDENCE +
+                         T6-cond material; no
                          new numbers beyond the cited per-step scripts.
-Reproduction command:    python codes/vacuum/res_endpoint_admissible_pin.py
-Expected output:         worst K_floor 12.13 (uniform) / T' 13 (non-uniform); < 20.5 <
-                         26.2; 4/4 PASS (plus the cited per-step scripts).
-Falsification gate:      An admissible competitor with K_floor>20.5; or the chi(P)<~T'
-                         link failing; or R-026 failing over the admissible range.
-Tier before / after:     No tier action. B1/B2 T6 CONDITIONAL on {H-LAYER}. RES-5/GAP-2:
-                         EXACT (enumerated/pinned) / STRONG EVIDENCE (lattice) / T6-cond
+Reproduction command:     python
+                         codes/vacuum/res_endpoint_admissible_pin.py
+Expected output:          worst K_floor 12.13 (uniform) / T' 13
+                         (non-uniform); < 20.5 <
+                         26.2; 4/4 PASS (plus the cited per-step
+                         scripts).
+Falsification gate:       An admissible competitor with K_floor>20.5; or
+                         the chi(P)<~T'
+                         link failing; or R-026 failing over the
+                         admissible range.
+Tier before / after:      No tier action. B1/B2 T6 CONDITIONAL on
+                         {H-LAYER}. RES-5/GAP-2:
+                         EXACT (enumerated/pinned) / STRONG EVIDENCE
+                         (lattice) / T6-cond
                          (arbitrary-Q). Not an independent B1 blocker.
-No-overclaim statement:  Consolidation only. EXACT is at the additive-energy level
-                         (combinatorial pin); the physical-floor closure is STRONG
-                         EVIDENCE (estimate-grade threshold + open chi(P) link); the
-                         lattice theorem is R-026 (T7 mod. textbook NT); arbitrary-Q is
-                         T6-cond on decoupling. Three over-claims were retracted in the
+No-overclaim statement:   Consolidation only. EXACT is at the
+                         additive-energy level
+                         (combinatorial pin); the physical-floor closure
+                         is STRONG
+                         EVIDENCE (estimate-grade threshold + open
+                         chi(P) link); the
+                         lattice theorem is R-026 (T7 mod. textbook NT);
+                         arbitrary-Q is
+                         T6-cond on decoupling. Three over-claims were
+                         retracted in the
                          ledger. B1/B2 T6 unchanged.
-Next required action:    Close the chi(P)<~T' carrier-richness link (B5 operator-decision)
-                         + the full off-diagonal operator norm (RES-1) to make RES-5 +
-                         H-diag theorems over the admissible lattice class. The deepest
-                         remaining H-LAYER piece is then the isotropy-infimum / Prop-A core.
+Next required action:     Close the chi(P)<~T' carrier-richness link (B5
+                         operator-decision)
+                         + the full off-diagonal operator norm (RES-1)
+                         to make RES-5 +
+                         H-diag theorems over the admissible lattice
+                         class. The deepest
+                         remaining H-LAYER piece is then the
+                         isotropy-infimum / Prop-A core.
 \end{verbatim}
 }
