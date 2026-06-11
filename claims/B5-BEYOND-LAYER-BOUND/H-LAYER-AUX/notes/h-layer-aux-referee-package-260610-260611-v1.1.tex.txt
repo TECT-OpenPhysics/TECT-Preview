@@ -1,0 +1,89 @@
+% =============================================================================
+% Title: Referee package (DRAFT) -- RES-4 closure: the STEP-5B layer-closure ratio is positive and monotone across the intensity band
+% Claim: B5-BEYOND-LAYER-BOUND (referee package; pending operator confirmation)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-11
+% Status: AUXILIARY (not a main-line referee artefact; cited by the main line, DRAFT
+%   bundle only, NOT promoted to PUBLISHED -- main-proof-line.md, operator-confirmed 2026-06-11).
+%   REFEREE PACKAGE DRAFT -- AUXILIARY DRAFT ACCEPTED (operator 2026-06-11); NOT promoted to a main-line published referee package (cited as support only). Folder result grade T5 (intensity-band closure on the layer ratio). Self-contained
+%   referee-facing assembly for external review; pending the operator-confirmation gate
+%   (governance/reproduction-bundle-policy.md sec.11) before a PUBLISHED bundle is built.
+%   Reproduction: 3 script(s) in this folder's bundle. Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesises the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+%   v1.1 (2026-06-11) operator review: AUXILIARY DRAFT ACCEPTED (T5 layer-ratio
+%        positivity, not promoted). Patch: 201-node vs continuum monotonicity caveat;
+%        expected output.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns RES-4 (the H-LAYER-AUX folder): the positivity and monotonicity of the STEP-5B layer-closure ratio across the intensity band. \textbf{Scope:} the layer-closure ratio $\rho(I)=K_b(I)/K(I)$ on $I\in[4\times10^{-4},2\times10^{-3}]$ at the anchor. \textbf{Not claimed:} this is the layer-ratio positivity, an input to STEP-5B, not the full STEP-5B closure.
+
+\section*{2. The result}
+
+The STEP-5B layer-closure ratio $\rho(I)=K_b(I)/K(I)$ is strictly monotone decreasing ($\rho'(I)<0$ at all $201$ nodes) and satisfies $\rho(I)\ge\rho(2\times10^{-3})=\times2.58>1$ for all $I$ in the band at the anchor. The layer therefore closes with a positive ratio across the whole intensity range, binding at the endpoint.
+
+\section*{3. Structure of the argument}
+
+The budget $K_b(I)$ and consumption $K(I)$ are formed from the Gershgorin layer bound and the off-shell operator decision; their ratio is evaluated on a $201$-node intensity grid, its derivative sign checked node-by-node, and the worst (endpoint) value certified $>1$. Monotonicity plus the endpoint value give band-wide positivity. The monotonicity is certified on the $201$-node sweep used by the reproduction script; absent an interval or analytic derivative bound, this is an executed numerical monotonicity certificate, not a continuum analytic monotonicity theorem.
+
+\section*{4. Numerical reproduction}
+
+Three scripts (the Gershgorin layer bound, the RES-4 intensity sweep, the off-shell operator decision) reproduce $\rho'(I)<0$ and $\rho\ge\times2.58$; run them from the bundle. The expected output is $\rho'(I)<0$ at $201/201$ nodes and $\min_I\rho(I)=\times2.58>1$.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is REVIEW DRAFT, NOT
+operator-confirmed, and the claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the falsifier (footer) is concrete and
+pre-registered, so the claim is refutable by a single explicit construction; and the
+numerical values it cites are reproduced by the folder's scripts (all asserts pass).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / H-LAYER-AUX (RES-4)
+                         referee package (DRAFT)
+Precise statement:       The STEP-5B layer-closure ratio
+                         rho(I)=K_b(I)/K(I) is strictly monotone
+                         decreasing (rho'(I)<0 at all 201 nodes) and
+                         rho(I) >= rho(2e-3) = x2.58 > 1 for all I in
+                         [4e-4, 2e-3] at the anchor; the layer closes
+                         with a positive ratio band-wide, binding at
+                         the endpoint.
+Scope:                   layer-closure ratio rho(I) on the intensity
+                         band at the anchor. Input to STEP-5B.
+Evidence grade:          intensity-band layer-ratio positivity (T5);
+                         EXECUTED (3 scripts PASS).
+Expected output:         rho'(I)<0 at 201/201 nodes;
+                         min_I rho(I) = x2.58 > 1.
+Reproduction command:    python
+                         codes/vacuum/beyond_layer_gershgorin_bound.py
+                         ; hlayer_res4_intensity_sweep.py ;
+                         res5_024_offshell_operator_decision.py
+Falsifier:               an intensity in the band where rho(I)<=1, or
+                         where rho'(I)>=0.
+Tier before / after:     DRAFT referee package; RES-4 layer-ratio
+                         positivity T5. AUXILIARY DRAFT ACCEPTED
+                         (2026-06-11); not promoted to published.
+No-overclaim statement:  the layer-ratio positivity across the band; an
+                         input to STEP-5B, not its full closure.
+Next required action:    remain an auxiliary cited lemma (DRAFT bundle
+                         only); not promoted to a published package.
+\end{verbatim}
+}

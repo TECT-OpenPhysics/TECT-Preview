@@ -1,0 +1,112 @@
+% SUPERSEDED by prop-a-referee-package-260610-260611-v1.2.tex.txt (PUBLISHED-BUNDLE CONFIRMED 2026-06-11).
+% =============================================================================
+% Title: Referee package (DRAFT) -- Proposition A: the isotropic Gaussian-Hartree layer is the strict diagonal minimum, and the off-diagonal reduces to the additive-energy floor (class-wide H-LAYER closure)
+% Claim: B2-PROPA-HLAYER (referee package; pending operator confirmation)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-11
+% Status: REFEREE PACKAGE DRAFT -- MAIN-LINE SUPPORTING DRAFT ACCEPTED (operator 2026-06-11); published-bundle confirmation HELD pending 9-script bundle inspection. Folder result grade T6/T7 on the primary shell-supported class A_adm. Self-contained
+%   referee-facing assembly for external review; pending the operator-confirmation gate
+%   (governance/reproduction-bundle-policy.md sec.11) before a PUBLISHED bundle is built.
+%   Reproduction: 9 script(s) in this folder's bundle. Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesises the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+%   v1.1 (2026-06-11) operator review: MAIN-LINE SUPPORTING DRAFT ACCEPTED, published-
+%        bundle HELD. Patches: explicit 9-script manifest (no wildcard); (D) global/convex
+%        globality caveat; (S) one-line joint>1 <=> T'<60.4 derivation; expected output.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns Proposition A (the Prop-A folder of B2-PROPA-HLAYER): that the isotropic Gaussian-Hartree layer $G_*$ is the strict comparison minimum, with the H-LAYER residuals closed class-wide on the primary shell-supported competitor class $\mathcal A_{\rm adm}$ ($T'\le13$). \textbf{Scope:} $\mathcal A_{\rm adm}$ (registered crystalline shell / shell-union, $T'\le13$) at the operating point. \textbf{Not claimed:} the full $\mathcal C_{\rm full}$ comfortable extension is the Reading-H package; here the margin on $\mathcal A_{\rm adm}$ is the comfortable $T'\le13$ one.
+
+\section*{2. The result}
+
+The T-016..T-024 programme closes every ANALYTIC H-LAYER residual class-wide on $\mathcal A_{\rm adm}$: (D) the diagonal Hessian at $G_*$ is block-diagonal in angular momentum with $l\ge1$ curvature $\tfrac12 G_*^{-2}\ge\tfrac12 r_R^2>0$ and $l=0$ adding $\tfrac32 u_{\rm eff}>0$; (O) the off-diagonal reduces to the additive-energy floor with $R_{\rm lead}(13)=0.650<1$; (S) the third-cumulant joint $=\times1.097>1$ with the analytic threshold $T'<60.4$.
+
+\section*{3. Structure of the argument}
+
+(D) An arbitrary perturbation $\delta G$ is decomposed in spherical harmonics; the rotation-invariant interaction curves only $l=0$, so the Hessian is block-diagonal and strictly positive in every sector. The strict diagonal-\emph{minimum} conclusion invokes the global/convex component of T-016; the Hessian computation alone gives local strict stability. (O) The condensate block is diagonal in the channel index (a sum of independent channel terms), so its operator norm is the worst single-channel ratio $R_{\rm lead}=23.2(1+K_{\rm floor})I$, bounded by the floor pin $K_{\rm floor}\le T'\le13$. (S) MARGIN cancels in the certified joint, leaving a function of $\rho_{\rm lat}$ with $\mathrm{joint}>1\iff T'<60.4$; since $T'\le13<60.4$ on $\mathcal A_{\rm adm}$, the joint evaluates to $\mathrm{joint}=\times1.097>1$.
+
+\section*{4. Numerical reproduction}
+
+The nine reproduction scripts (each with self-test asserts, each exiting 0) reproduce the class-wide second-cumulant stability, the Gershgorin row-sums, the diagonal convexity, the off-diagonal additive-energy floor and the constant certificate. The full manifest (no wildcard) is:
+
+\begin{verbatim}
+9 reproduction scripts (codes/vacuum/; each asserts, exits 0):
+  (D) diagonal isotropy / convexity:
+        hdiag_convexity_probe.py
+        res5_016_isotropy_infimum_core.py
+  (O) off-diagonal additive-energy floor + operator norm:
+        hdiag_offdiag_additive_energy.py
+        hdiag_offdiag_constant_certificate.py
+        res1_hdiag_offdiag_floor.py
+        res5_019_exchange_scalar_identification.py
+        hdiag_gershgorin_rowsum.py
+  (S) third-cumulant selection (class-wide):
+        res5_020_classwide_secondcumulant_stability.py
+  route audit:
+        res5_029_t7_route_audit.py
+\end{verbatim}
+
+Run them from the bundle and diff against \texttt{expected/}.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is REVIEW DRAFT, NOT
+operator-confirmed, and the claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the falsifier (footer) is concrete and
+pre-registered, so the claim is refutable by a single explicit construction; and the
+numerical values it cites are reproduced by the folder's scripts (all asserts pass).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / Prop-A referee package
+                         (DRAFT)
+Precise statement:       On the primary shell-supported class A_adm
+                         (T'<=13), the T-016..T-024 programme closes
+                         every analytic H-LAYER residual: (D)
+                         block-diagonal isotropy Hessian (entropy floor
+                         (1/2)r_R^2>0, breathing (3/2)u_eff>0); (O)
+                         off-diagonal = additive-energy floor with
+                         R_lead(13)=0.650<1; (S) third-cumulant
+                         joint=x1.097>1 (analytic threshold T'<60.4).
+Scope:                   A_adm (registered crystalline
+                         shell/shell-union, T'<=13), operating point.
+                         Comfortable margin.
+Evidence grade:          class-wide analytic closure on A_adm (T6/T7);
+                         EXECUTED (9 scripts PASS).
+Expected output:         R_lead(13)=0.650<1; joint=x1.097>1;
+                         T'_threshold=60.4; all 9 scripts PASS.
+Reproduction command:    run the 9 scripts listed in Sec.4
+                         (codes/vacuum/; each exits 0); full manifest
+                         in Sec.4, no wildcard.
+Falsifier:               an A_adm competitor with R_lead>=1 or
+                         joint<=1; or a perturbation breaking the
+                         block-diagonal positivity.
+Tier before / after:     DRAFT referee package; A_adm closure T6/T7.
+                         MAIN-LINE SUPPORTING DRAFT ACCEPTED
+                         (2026-06-11); published-bundle HELD.
+No-overclaim statement:  class-wide closure on A_adm (T'<=13,
+                         comfortable); the full C_full extension is the
+                         Reading-H package.
+Next required action:    inspect 9-script reproduction bundle ->
+                         operator PUBLISHED confirm -> build bundle at
+                         claims/B2-PROPA-HLAYER/bundle/
+                         Prop-A-<Tier>-260611.
+\end{verbatim}
+}

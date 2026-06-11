@@ -1,0 +1,15 @@
+BCC Bragg set: N=12 vectors, |k| in [0.6802,0.6802] (q0=0.6802)
+  [PASS] bragg_on_shell (N=12 {110}-type vectors, all |k|=q0=0.6802: BCC first shell, p_2(0)=N=12 reproduces Math428)
+  [PASS] additive_energy_identity (sum_Q p_2(Q)^2 = 540 = E_+ = #{(i,j,k,l):k_i+k_j=k_k+k_l} = 540: the off-diagonal weight IS the additive energy of the Bragg set)
+  [PASS] p2_zero_is_N (p_2(0) = 12 = N = 12, reproducing Math428's p_2(0)=12)
+  [PASS] lemma_A_bound (E_+=540 <= (1+T')N^2 = (1+4)*144 = 720: R-025 Lemma A holds; T'=4 is the max nonzero pair multiplicity, E_+/N^2 = 3.75)
+    A     diag        off-diag     R=|od|/diag
+   0.02  +0.00076   -0.00009    0.118
+   0.05  +0.00515   -0.00310    0.602
+   0.08  +0.01802   -0.01650    0.916
+   0.11  +0.06175   -0.04756    0.770
+   0.14  +0.20189   -0.10289    0.510
+  [PASS] stability_ratio_below_one (worst Bogoliubov ratio R = |off-diag|/diag = 0.916 < 1 at A=0.08: the entropy/diagonal curvature dominates the off-diagonal bubble => ||E^-1/2 B_od E^-1/2||<1 for BCC; Math428 continuum verdict recast as the operator stability inequality)
+  [PASS] small_A_quadratic_margin (R(0.02)=0.118 << R(0.14)=0.510: off-diag share is O(A^4), diag O(A^2), so R = O(A^2) -> 0 as A->0; the worst point is the mid-window, not the small-A end)
+
+claims 6/6 PASS

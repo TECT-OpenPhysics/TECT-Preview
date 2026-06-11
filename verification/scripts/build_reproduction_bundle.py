@@ -25,7 +25,7 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.4.0"
+__version__ = "1.6.0"
 __first_issued__ = "2026-06-10"
 __version_issued__ = "2026-06-10"
 
@@ -230,10 +230,14 @@ def main():
     # (5) README
     runcmds = "\n".join(f"  python {s}" for s in args.scripts)
     expected = "\n".join(f"  {n}: exit 0, `{runlog[n]['pass_line']}`" for n in runlog)
+    _bn = Path(args.out.rstrip("/")).name
+    grade = "DRAFT (review -- not operator-confirmed)" if "DRAFT" in _bn.upper() else "PUBLISHED (operator-confirmed)"
     readme = f"""# Reproduction bundle -- {args.title or note.stem}
 
 Self-contained referee reproduction bundle (TECT verification-first repository).
 Built {env['built_utc']} with Python {env['python']}, numpy {env['numpy']}.
+
+**Bundle grade:** {grade} -- `{_bn}`.
 
 ## What this verifies
 The note (below) is the proof map; the code reproduces every numerical constant,
@@ -279,6 +283,31 @@ The result is scope-qualified (T7-SCOPE), not an unconditional claim.
         repo_commit="TO BE STAMPED AT PUBLISH (git rev-parse HEAD)",
         bundle_digest=bundle_digest, files=hashes)
     (out/"MANIFEST.json").write_text(json.dumps(manifest, indent=2))
+
+    # (6) post-build durability + integrity self-check (mount-truncation guard, v1.6.0).
+    # Scripts emit run-artefact JSON into the bundle tree; on a network/virtualised
+    # mount these writes can be left unflushed and truncate on call teardown. fsync
+    # every file, then re-parse all JSON/PY; a truncated bundle FAILS the build loudly
+    # rather than shipping silently.
+    for _f in out.rglob("*"):
+        if _f.is_file():
+            try:
+                _fd = os.open(_f, os.O_RDONLY); os.fsync(_fd); os.close(_fd)
+            except OSError:
+                pass
+    _corrupt = []
+    for _f in out.rglob("*"):
+        if _f.suffix == ".json":
+            try: json.loads(_f.read_text())
+            except Exception as _e: _corrupt.append((_f, str(_e)[:60]))
+        elif _f.suffix == ".py":
+            try: ast.parse(_f.read_text())
+            except Exception as _e: _corrupt.append((_f, str(_e)[:60]))
+    if _corrupt:
+        print(f"\nBUNDLE INTEGRITY FAIL ({len(_corrupt)} truncated/corrupt file(s)):")
+        for _f, _e in _corrupt:
+            print(f"  {_f.relative_to(out).as_posix()}: {_e}")
+        return 1
 
     allpass = all(v["exit"] == 0 for v in runlog.values())
     print(f"\nBUNDLE: {args.out}  ({len(files)+1} files, {len(deps)} code deps, "

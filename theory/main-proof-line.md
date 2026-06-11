@@ -13,11 +13,11 @@ res5_032--036.
 
 | # | result | folder | role in the published theorem | status |
 |---|---|---|---|---|
-| 1 | Reading-H C_full | `claims/B1-RH-ENUM/Reading-H` | the comparison theorem (D)(O)(S) + window | **CONFIRMED** (v1.1) |
-| 2 | Prop-A | `claims/B2-PROPA-HLAYER/Prop-A` | (D) diagonal isotropy + (O) class-wide closure (T-016..T-024) | DRAFT v1.0 |
-| 3 | additive-energy / DR-2 | `claims/B5-BEYOND-LAYER-BOUND/DR-2` | Lemma 1: the sum-circle / lattice additive-energy bound (R-025/026) | DRAFT v1.0 |
-| 4 | SC-SCOPE | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE` | (S) the third-cumulant selection floor | DRAFT v1.0 |
-| 5 | K-budget / STEP-5B | `claims/B5-BEYOND-LAYER-BOUND/STEP-5B` | the rectangle constant K(n) the off-diagonal const rests on | DRAFT v1.0 |
+| 1 | Reading-H C_full | `claims/B1-RH-ENUM/Reading-H` | the comparison theorem (D)(O)(S) + window | **PUBLISHED** -- bundle `B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611` |
+| 2 | Prop-A | `claims/B2-PROPA-HLAYER/Prop-A` | (D) diagonal isotropy + (O) class-wide closure (T-016..T-024) | **PUBLISHED** (v1.2, T6) -- bundle `B2-PROPA-HLAYER/bundle/Prop-A-T6-260611` (9/9, 44/44 asserts PASS); scope A_adm T'<=13 |
+| 3 | additive-energy / DR-2 | `claims/B5-BEYOND-LAYER-BOUND/DR-2` | Lemma 1: the sum-circle / lattice additive-energy bound (R-025/026) | DRAFT v1.0 (review pending) |
+| 4 | SC-SCOPE | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE` | (S) the third-cumulant selection floor | DRAFT v1.0 (review pending) |
+| 5 | K-budget / STEP-5B | `claims/B5-BEYOND-LAYER-BOUND/STEP-5B` | the rectangle constant K(n) the off-diagonal const rests on | DRAFT v1.0 (review pending; uses H-LAYER-AUX RES-4 as input) |
 
 (A1-KERNEL-CONV is the named definitional input; it is legacy and has no in-repo
 notes folder yet, so no referee package is due until it is migrated.)
@@ -45,3 +45,10 @@ main-line packages are refined to publication grade, operator-confirmed per resu
 (sec.11 gate), and bundled at `claims/<ID>/bundle/<Result>-<Tier>-<YYMMDD>/` (sec.13).
 The auxiliary folders keep DRAFT bundles only; their referee DRAFTs are marked
 AUXILIARY and are NOT promoted.
+
+**Progress (2026-06-11)**: Reading-H and Prop-A are PUBLISHED. Prop-A v1.2 was
+operator-confirmed after a reconstructed clean-run (9/9 scripts, 44/44 asserts
+PASS) and published as `B2-PROPA-HLAYER/bundle/Prop-A-T6-260611` (T6, scope
+A_adm T'<=13; does NOT independently enact full C_full). The superseded DRAFT
+bundle `Prop-A-DRAFT-260611` is retained pending Windows-side git rm. Remaining
+review queue: STEP-5B (uses H-LAYER-AUX RES-4 input), SC-SCOPE, DR-2.

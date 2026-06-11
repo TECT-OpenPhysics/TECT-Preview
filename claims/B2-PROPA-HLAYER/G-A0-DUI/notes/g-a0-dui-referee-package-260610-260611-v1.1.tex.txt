@@ -1,0 +1,84 @@
+% =============================================================================
+% Title: Referee package (DRAFT) -- G-A0-DUI: differentiation under the integral for the slaved variance, and A=0 uniqueness
+% Claim: B2-PROPA-HLAYER (referee package; pending operator confirmation)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-11
+% Status: AUXILIARY (not a main-line referee artefact; cited by the main line, DRAFT
+%   bundle only, NOT promoted to PUBLISHED -- main-proof-line.md, operator-confirmed 2026-06-11).
+%   REFEREE PACKAGE DRAFT -- AUXILIARY DRAFT ACCEPTED (operator 2026-06-11); NOT promoted to a main-line published referee package (cited as support only). Folder result grade T6/T7 (closed-form + dominated convergence). Self-contained
+%   referee-facing assembly for external review; pending the operator-confirmation gate
+%   (governance/reproduction-bundle-policy.md sec.11) before a PUBLISHED bundle is built.
+%   Reproduction: 1 script(s) in this folder's bundle. Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesises the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+%   v1.1 (2026-06-11) operator review: AUXILIARY DRAFT ACCEPTED (closed lemma, not
+%        promoted). Patch: explicit uniform window lower bound m0>0; expected output.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns G-A0-DUI: the differentiation-under-the-integral justification for the slaved-variance derivative, supporting the $A=0$ (no-condensate) uniqueness. \textbf{Scope:} the slaved-variance derivative $M'(m)$ on the window. \textbf{Not claimed:} only the DUI lemma and its consequence for $A=0$ uniqueness.
+
+\section*{2. The result}
+
+Lemma L1 ($M'(m)<0$) is proven by dominated convergence with the dominating function $k^2/[m_0+C(k^2-q_0^2)^2]^2$, which is integrable and pointwise-dominating; G-A0-DUI is CLOSED. With L2/L3 in closed form, $A=0$ is the unique stationary point.
+
+\section*{3. Structure of the argument}
+
+The variance integral $M(m)=\tfrac1{2\pi^2}\int k^2/D\,dk$ is differentiated under the integral sign; the derivative integrand is dominated by an integrable function independent of $m$ on the window, justifying the interchange (dominated convergence). Hence $M'(m)<0$ pointwise, and the free-energy derivative inherits the sign that forces $A=0$ uniqueness. The dominating lower bound $D(k,m)\ge m_0+C(k^2-q_0^2)^2$ holds uniformly for all $m$ in the certified window with $m_0>0$, which is exactly what makes the dominating function $m$-independent and integrable.
+
+\section*{4. Numerical reproduction}
+
+The sign-decomposition script reproduces $M'<0$ and the $A=0$ uniqueness over the window with self-test asserts; run it from the bundle. The expected output is $M'(m)<0$ on the window and no second $A\neq0$ stationary point.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is REVIEW DRAFT, NOT
+operator-confirmed, and the claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the falsifier (footer) is concrete and
+pre-registered, so the claim is refutable by a single explicit construction; and the
+numerical values it cites are reproduced by the folder's scripts (all asserts pass).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / G-A0-DUI referee package
+                         (DRAFT)
+Precise statement:       L1 (M'(m)<0) is proven by dominated
+                         convergence with dominating function
+                         k^2/[m0+C(k^2-q0^2)^2]^2 (integrable,
+                         pointwise-dominating); G-A0-DUI CLOSED. With
+                         L2/L3 closed-form, A=0 is the unique
+                         stationary point.
+Scope:                   the slaved-variance derivative M'(m) on the
+                         window; A=0 uniqueness.
+Evidence grade:          closed-form + dominated convergence (T6/T7);
+                         EXECUTED.
+Expected output:         M'(m)<0 on the window; no second A!=0
+                         stationary point found/certified.
+Reproduction command:    python codes/vacuum/ha0_sign_decomposition.py
+Falsifier:               a window point where M'(m)>=0; or a second
+                         A!=0 stationary point.
+Tier before / after:     DRAFT referee package; DUI lemma closed.
+                         AUXILIARY DRAFT ACCEPTED (2026-06-11);
+                         not promoted to a published package.
+No-overclaim statement:  the DUI lemma + A=0 uniqueness; not the full
+                         Prop-A comparison.
+Next required action:    remain an auxiliary cited lemma (DRAFT bundle
+                         only); not promoted to a published package.
+\end{verbatim}
+}

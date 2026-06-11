@@ -1,0 +1,35 @@
+{
+  "script": "res1_hdiag_offdiag_floor.py",
+  "version": "1.0.0",
+  "const": 23.224238069514126,
+  "u_eff": 2.685024265666394,
+  "rR": 0.30452570866744433,
+  "B_max": 0.218,
+  "worst_R_lead": 0.6024082976806624,
+  "worst_K": 11.96938775510204,
+  "threshold_K": 20.529231594311696,
+  "verdict": "RES-1 (H-diag) off-diag leading ratio R_lead=const(1+K_floor)I<1 for ALL enumerated competitors (worst 0.604, 3-shell); threshold K_floor<20.5 parallels RES-5 (26.2); class-wide reduces to R-026. STRONG EVIDENCE (conservative leading / condensate-direction; full operator norm + R-026 pin = residuals). Diagonal-Gaussian is the infimum for the enumerated class. B2/B1 T6 unchanged.",
+  "claims": [
+    {
+      "name": "reproduce_bcc_anchor",
+      "passed": true,
+      "detail": "(BCC {110}: K_floor=2.75, R_lead(2e-3)=const*(1+K)*I=0.174 ~ 0.174 -- reproduces the constant certificate, confirming R_lead = const*(1+K_floor)*I with c_diag=(N/2)rR)"
+    },
+    {
+      "name": "all_enumerated_R_lead_below_one",
+      "passed": true,
+      "detail": "(worst enumerated R_lead(2e-3) = 0.602 < 1 (the dense 3-shell n=42, K_floor=12.0); the conservative leading condensate-direction ratio is below unity for EVERY enumerated competitor -> diagonal-Gaussian is the infimum; H-diag discharged for the enumerated class)"
+    },
+    {
+      "name": "res1_threshold_parallels_res5",
+      "passed": true,
+      "detail": "(R_lead<1 iff K_floor < 1/(const I)-1 = 20.5 at I=2e-3; enumerated worst K_floor=12.0<20.5. The SAME K_floor controls RES-1 (threshold 20.5) and RES-5 (threshold 26.2): both close for the enumerated class and reduce class-wide to R-026)"
+    },
+    {
+      "name": "offendpoint_more_stable",
+      "passed": true,
+      "detail": "(R_lead ~ I: the worst (3-shell) drops from 0.602 at 2e-3 to 0.301 at 1e-3 -- like RES-5, RES-1 is most stressed at the endpoint and comfortable off it)"
+    }
+  ],
+  "all_pass": true
+}

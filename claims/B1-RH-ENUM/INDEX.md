@@ -45,7 +45,7 @@
 |---|---|---|---|---|---|
 | `robustness-mu2-margin-recompute` | v1.1 | — | MARGIN(mu^2) = PB(M_+(mu^2)) - DIP_BAND(mu^2), closed-form; reproduces 0.00432 at anchor; over [x0.5,x2] min m = 0.004082 = 0.945 m_anchor at mu^2=0.… | EXECUTED (robustness_mu2_margin_recompute.py … | operator authorization to flip ROBUSTNESS-MU2 -> CLOSED@[x0.5,x2]-2ND-CUMULANT (atomic GA… |
 | `robustness-mu2-offanchor` | v1.0 | — | Sign-decomposition lemmas are mu^2-independent; the anchor inequalities m*>m_w, M_R>M_c hold on mu^2 in [0.001,0.05] (x0.2..x10), min ratios 5.74/4.0… | ANALYTIC (mu^2-independence + cancellation) +… | Re-margin the STEP-5B closure on the mu^2- neighbourhood (run beyond_layer_gershgorin_bou… |
-| `robustness-mu2-referee-package` | v1.0 | — | The STEP-5B closure margin K_budget/K(n_pack), recomputed off the production anchor, stays >1 across mu^2 in [x0.5,x2] and all three intensities (wor… | robustness EVIDENCE; EXECUTED (3 scripts PASS… | operator review + confirm -> PUBLISHED bundle. |
+| `robustness-mu2-referee-package` | v1.1 | — | The STEP-5B closure margin K_budget/K(n_pack), recomputed off the production anchor, stays >1 across mu^2 in [x0.5,x2] and all three intensities (wor… | robustness EVIDENCE; EXECUTED (3 scripts PASS… | inspect 3-script reproduction bundle -> operator PUBLISHED confirm. |
 | `robustness-mu2-step5b-remargin` | v1.3 | — | STEP-5B closure margin ratio = K_budget/K(n_pack) recomputed off-anchor stays > 1 across mu^2 in [x0.5, x2] and all 3 intensities; worst x2.55 (endpo… | ANALYTIC (closed-form ratio) + EXECUTED (5/5) | (optional) recompute m(mu^2) exactly to sharpen; remaining B1 open gates: ESTIMATOR-UPGRA… |
 
 ## Reading-H/  ·  12 proof units  ·  tier span T2/T5/T6/T7
@@ -70,7 +70,7 @@
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `enumerated-readings-migration-revalidation` | v1.1 | T5 | Migration batch-2 evidence chain migrated verbatim and re-validated by full re-execution (167/167). | EXECUTED | STEP-5B beyond-layer class-wide bound. |
-| `enumerated-referee-package` | v1.0 | — | The enumerated-reading evidence chain (migration batch 2) is migrated verbatim and re-validated by full re-execution: 167/167 checks pass; the result… | migration re-validation (167/167 EXECUTED). | operator review + confirm -> PUBLISHED bundle. |
+| `enumerated-referee-package` | v1.1 | — | The enumerated-reading evidence chain (migration batch 2) is migrated verbatim and re-validated by full re-execution: 167/167 checks pass; the result… | migration re-validation (167/167 EXECUTED). | inspect 1-script reproduction bundle (167/167) -> operator PUBLISHED confirm. |
 | `enumeration-amended-class-recheck` | v1.0 | T7* | CROSS-CHECK (T4 on exact geometry): every enumerated/gallery pattern satisfies the amended-class separation >= theta_min at all anchor intensities (m… | ANALYTIC (exact geometry) + closed-form arith… | Machine asserts for the angle table; the cross-shell radial-resolution paragraph; mainlin… |
 | `useries-triage` | v1.0 | T7* | 5 script FAILs classified: 1 TYPO (m_w), 1 REAL factor-2 (M'=-J(0)/2 not -J(0)), 1 ESTIMATE (U7 ratio 1.13 not 1.34), 1 REAL x60 overclaim (remainder… | AUDIT + EXECUTED (57/57 corrected) | Operator: choose the R-U10-3 repair (sharper kernel / min-amplitude restriction / explici… |
 | `useries-verification-script` | v1.0 | T7* | TOOLING: one draft script (codes/vacuum/t6_mainline_useries_checks.py v0.1.0, DRAFT - NOT YET EXECUTED) consolidating the eleven machine checks regis… | N/A (tooling) -- the script is DRAFT until fi… | OPERATOR-SIDE (or next shell-capable session): execute the script, review, flip __status_… |
@@ -79,9 +79,9 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `near-gap-referee-package` | v1.0 | — | R-U10-1's O(I^2) claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity M'=-J(0)/2 not -J(0)); with … | convention-exact closure + retraction record … | operator review + confirm -> PUBLISHED bundle. |
+| `near-gap-referee-package` | v1.1 | — | R-U10-1's O(I^2) claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity M'=-J(0)/2 not -J(0)); with … | convention-exact closure + retraction record … | inspect 1-script reproduction bundle -> operator PUBLISHED confirm. |
 | `neargap-common-mode-resolution` | v1.0 | T7* | At fixed I, r_hat(I) = rR + 2 lambda' I is pattern-independent, so F[P] - F[R_H] = (1/2)Tr[ln(D_0 + lambda' P^2) - ln D_0] >= 0 UNCONDITIONALLY (lamb… | ANALYTIC (operator monotonicity) + EXECUTED (… | Operator: with R-U10-3 resolved, reconsider the U1 T6-CONDITIONAL proposal (B1 T5 -> T6 o… |
 | `neargap-protection-lemma` | v1.0 | T7* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T7* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-11T05:19:43Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-11T06:25:49Z by build_index.py v1.0.1 -->

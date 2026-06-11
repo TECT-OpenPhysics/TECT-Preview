@@ -13,14 +13,14 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `g-a0-dui-referee-package` | v1.0 | — | L1 (M'(m)<0) is proven by dominated convergence with dominating function k^2/[m0+C(k^2-q0^2)^2]^2 (integrable, pointwise-dominating); G-A0-DUI CLOSED… | closed-form + dominated convergence (T6/T7); … | operator review + confirm -> PUBLISHED bundle. |
+| `g-a0-dui-referee-package` | v1.1 | — | L1 (M'(m)<0) is proven by dominated convergence with dominating function k^2/[m0+C(k^2-q0^2)^2]^2 (integrable, pointwise-dominating); G-A0-DUI CLOSED… | closed-form + dominated convergence (T6/T7); … | remain an auxiliary cited lemma (DRAFT bundle only); not promoted to a published package. |
 | `ga0-dui-closure` | v1.1 | T6 | L1 (M'<0) proven by dominated convergence with the dominating function k^2/[m0+C(k^2-q0^2)^2]^2 (integrable; pointwise domination); G-A0-DUI CLOSED. … | ANALYTIC (dominated convergence) + EXECUTED (… | ROBUSTNESS-MU2 (off-anchor neighbourhood) is now the sole residual of the former H-A0; SC… |
 
 ## H-A0-removal/  ·  2 proof units  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `h-a0-removal-referee-package` | v1.0 | — | A-zero uniqueness + zero-at-gap (H-A0's U,Z) derived as a sign-decomposition theorem: F_0'(m)=(1/2)M'(m)g(m) with M'<0 (L1), g strictly decreasing on… | sign-decomposition theorem (T6/T7); EXECUTED. | operator review + confirm -> PUBLISHED bundle. |
+| `h-a0-removal-referee-package` | v1.1 | — | A-zero uniqueness + zero-at-gap (H-A0's U,Z) derived as a sign-decomposition theorem: F_0'(m)=(1/2)M'(m)g(m) with M'<0 (L1), g strictly decreasing on… | sign-decomposition theorem (T6/T7); EXECUTED. | remain an auxiliary cited lemma (DRAFT bundle only); not promoted to a published package. |
 | `ha0-removal-pathway` | v2.1 | T6 | A-zero uniqueness + zero-at-gap (H-A0's U,Z) derived as a sign-decomposition theorem: F_0'(m) = (1/2) M'(m) g(m) with M'<0 (L1), g strictly decreasin… | ANALYTIC (sign lemmas + theorem) + EXECUTED (… | Write out G-A0-DUI explicitly (close the textbook residual) to discharge H-ANCHOR toward … |
 
 ## Prop-A/  ·  15 proof units  ·  tier span T6/T7
@@ -38,9 +38,9 @@
 | `hlayer-closure-final-consolidation` | v1.0 | T7* | The T-016..T-024 programme closes every ANALYTIC H-LAYER residual class-wide on the primary shell-supported class A_adm (T'<=13: R_lead=0.650, joint=… | FINAL CONSOLIDATION + EXECUTED end-to-end (re… | OPERATOR (optional): enact the hypothesis-reduced-T6 re-tier on the shell-supported class… |
 | `isotropy-infimum-core` | v1.1 | T7* | Condensate-free F_0 over the diagonal-Gaussian class. The second variation at G_* is delta^2 F_0 = (1/2) int G_*^-2 (dG)^2 + Phi''_diag (dM_tot)^2. S… | ANALYTIC (exact block-diagonalisation + analy… | Bound the exchange scalar b_exch(Q) at operating intensity (RES-5/GAP-2) -- the single re… |
 | `offdiag-exchange-scalar-identification` | v1.0 | T7* | TECT's interaction is LOCAL, so the mean-field free energy is a density functional Phi=int f(M(x)), f(M)=(3u/4)M^2+(5v/2)M^3. Its off-diagonal (Q!=0)… | ANALYTIC (local-functional Hessian) + EXECUTE… | Extend (i) the R_lead<1 bound and (ii) the SC-SCOPE two-loop (sunset) thin closure class-… |
-| `prop-a-referee-package` | v1.0 | T7 | On the primary shell-supported class A_adm (T'<=13), the T-016..T-024 programme closes every analytic H-LAYER residual: (D) block-diagonal isotropy H… | class-wide analytic closure on A_adm (T6/T7);… | operator review + confirm -> PUBLISHED bundle. |
+| `prop-a-referee-package` | v1.2 | T6 | On the primary shell-supported class A_adm (T'<=13), the T-016..T-024 programme closes every analytic H-LAYER residual: (D) block-diagonal isotropy H… | class-wide analytic closure on A_adm (T6/T7);… | none for this package (PUBLISHED as Prop-A-T6-260611); the full C_full closure is the sep… |
 | `proposition-a-migration-revalidation` | v1.4 | T6 | Migration batch-1 evidence chain migrated verbatim and re-validated by full re-execution (277/277). | EXECUTED | Migration batch 2 (Math431-HEX chain + Math427/428-432/434/436) for B1 cleanness. |
 | `t7-proposition-assembly` | v1.1 | T7* | T7-target: F[Q] > F[G_*] for all Q in C_phys, no external H-LAYER hypothesis. Blocker A NON-CIRCULAR: rho_off^ext <= R_lead(20) r_R/(r_R+c delta^2) =… | ASSEMBLY (theorem-grade blockers) + EXECUTED … | OPERATOR sign-off for the B1/B2 T6->T7 re-tier, closing GAP-1 (vacuum uniqueness) and lif… |
 | `t7-route-internal-audit` | v1.0 | T7* | Pre-enactment 5-axis audit of T-016..T-028. (1) 61/61 script asserts re-run PASS; (2) off-shell exclusion non-circular (rho_off^ext=0.572<1 via adver… | AUDIT (re-derivation + re-run) + EXECUTED (re… | OPERATOR: (i) optional external/second-author referee pass; (ii) the T6->T7 enactment sig… |
 
-<!-- generated 2026-06-11T04:07:40Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-11T07:02:08Z by build_index.py v1.0.1 -->
