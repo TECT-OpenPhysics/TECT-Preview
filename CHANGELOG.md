@@ -5,6 +5,26 @@ not pillar counts.
 
 ---
 
+## [Self-contained referee package for the Reading-H C-full T7-SCOPE result (reading-h-cfull-referee-package v1.0): single standalone document assembling object + admissible class + the two elementary lemmas (antipodal T'<=N/2, coherence circle-packing T'<=floor(2pi/theta_min)=10 with proofs) + (D)(O)(S) decomposition + window certification + numerical reproduction (res5_032-036) + honest scope/falsifier. VALIDATED: FORM-CHECK PASS, 0 overfull, PDF built; all 5 reproduction scripts PASS (27/27 asserts). For external referee (G2).] - 2026-06-10
+
+Operator request: self-contained referee package + validation. NEW
+reading-h-cfull-referee-package-260610 v1.0 -- a single document an external referee can read
+standalone to verify or attack the Reading-H C-full T7-SCOPE result: the object and admissible
+class (real antipodal, |Q|<=n_pack=16/theta_min^2, coherence-resolved >=theta_min, lattice +
+non-lattice); the (D)(O)(S) decomposition; Lemma 1 (K_floor<=T', sum-circle bound) and Lemma 2
+(coherence circle-packing T'<=floor(2pi/theta_min)=10, full elementary proof); the comfortable
+off-diagonal closure R_lead<=0.510<1 (x1.96) with selection binding; (D)/(S) competitor-agnostic;
+window certification (I_c=2.41e-3, mu^2_max=0.0342, region R); the assembled T7-SCOPE result given
+the A1 kernel convention; the numerical reproduction table; the honest scope, devil's-advocate, and
+falsifier (an admissible Q with a sum-circle occupancy > 10).
+VALIDATION: (1) FORM-CHECK PASS (banner, Purpose-and-scope, devil's-advocate, Result footer);
+(2) PDF builds with 0 overfull (370 KB) under the fixed preamble; (3) self-contained -- no proof
+dependency on other notes (cites only the A1 definition, the two in-document lemmas, and the
+reproduction scripts); (4) all 5 reproduction scripts PASS: res5_032 (6/6), res5_033 (5/5),
+res5_034 (6/6), res5_035 (5/5), res5_036 (5/5) = 27/27 asserts. No tier change (standalone assembly
+of the enacted T7-SCOPE_{C-full}). Remaining: external/second-author reproduction (G2). PDF placed
+beside the source.
+
 ## [cfull-internal-scope-closure v1.2 ACCEPTED AS CANONICAL (operator 2026-06-10): T7-SCOPE_{C_full, thin O} -> T7-SCOPE_{C_full} (comfortable). v1.1 superseded. The coherence circle-packing lemma removed the thin margin (off-diagonal x1.026 -> x1.96), restored the full Step-1 region (selection re-binds), and made EXT unnecessary for comfort. RESULTS-LEDGER R-031 upgraded to comfortable; R-032 registers the standalone reusable lemma.] - 2026-06-10
 
 Operator decision 2026-06-10: ACCEPT cfull-internal-scope-closure-260610 v1.2 AS CANONICAL; promote

@@ -46,7 +46,7 @@
 | `robustness-mu2-offanchor` | v1.0 | — | Sign-decomposition lemmas are mu^2-independent; the anchor inequalities m*>m_w, M_R>M_c hold on mu^2 in [0.001,0.05] (x0.2..x10), min ratios 5.74/4.0… | ANALYTIC (mu^2-independence + cancellation) +… | Re-margin the STEP-5B closure on the mu^2- neighbourhood (run beyond_layer_gershgorin_bou… |
 | `robustness-mu2-step5b-remargin` | v1.3 | — | STEP-5B closure margin ratio = K_budget/K(n_pack) recomputed off-anchor stays > 1 across mu^2 in [x0.5, x2] and all 3 intensities; worst x2.55 (endpo… | ANALYTIC (closed-form ratio) + EXECUTED (5/5) | (optional) recompute m(mu^2) exactly to sharpen; remaining B1 open gates: ESTIMATOR-UPGRA… |
 
-## Reading-H/  ·  11 proof units  ·  tier span T2/T5/T6/T7
+## Reading-H/  ·  12 proof units  ·  tier span T2/T5/T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -56,6 +56,7 @@
 | `coherence-offdiag-comfortable-bound` | v1.0 | T2 | Coherence resolution (pairwise geodesic >= theta_min) bounds every sum-circle occupancy: T'(Q) <= floor(2pi/theta_min) = 10 uniformly across the cert… | PROVED (elementary lemma) + EXECUTED (res5_03… | Re-enact C_full as COMFORTABLE (supersede the thin-O scope); G2 external referee (validat… |
 | `ext-additive-energy-extremal-status` | v1.0 | T2 | Antipodal lemma T'<=N/2 (proved, elementary). With R-025 (K_floor<=T') and packing N<=n_pack=40.68: K_floor<=N/2<=20<20.55=K* => R_lead<1 for ALL adm… | off-diagonal C_full thin closure PROVED (T6, … | Step 3 -- extend (D) diagonal isotropy + (S) selection floor to non-lattice competitors; … |
 | `nonlattice-window-scope-completion-strategy` | v1.0 | T2 | The lattice class is the OFF-DIAGONAL adversarial worst case (R_lead governed by N-indep const=23.2, K*=20.5; every non-lattice config K_floor~1<<13<… | STRATEGY + T2 CONJECTURE (EXT) + EXECUTED (re… | (1) pin I_c + scan mu^2 (window); (2) prove (EXT) T2->T6/T7 (the real theorem); (3) exten… |
+| `reading-h-cfull-referee-package` | v1.0 | T7* | Within R = {mu2 in (0,0.0342), I in (0,I_c^sel(mu2))}, given the A1 kernel convention, F[Q]-F[G*]>0 for every admissible competitor Q (real antipodal… | REFEREE PACKAGE (self-contained) + EXECUTED (… | external / second-author reproduction (run res5_032--036) and review of Lemmas 1--2 and t… |
 | `reading-h-t6-entry` | v2.3 | T6 | For every admissible competitor of the H-ADM-COH amended class, F_total[P] >= F_total[R_H] (strict on the sub-resolution quotient) at matched second-… | ANALYTIC (assembled inequalities) + EXECUTED … | SC-SCOPE all-orders lift (third-cumulant endpoint kernels); ESTIMATOR-UPGRADE (controlled… |
 | `t6-entry-composition-audit` | v1.0 | T7* | AUDIT FINDING (UPHELD): the U1 composition's uniform-floor reading of Prop A does not by itself cover near-gap small-amplitude competitors at the cer… | AUDIT (estimate-grade crossover arithmetic; n… | Close G-U1-SMALLT (production-bookkeeping calibration + C_2 + route lemma) BEFORE any ope… |
 | `t6-mainline-session-consolidation` | v1.0 | T7* | CONSOLIDATION (no new mathematics): the U1-U15 unit map, three operator decision points, the single-entry verification queue, and the honest distance… | N/A (map). | Operator-side: run the U14 script + the build/lint/catalog/test chain; then the three dec… |
@@ -79,4 +80,4 @@
 | `neargap-protection-lemma` | v1.0 | T7* | LEMMA (T3 sketch): D + W = D_0 + lam' P^2 >= D_0 = H_{R_H} (chain identity + lam' > 0 certified) => by operator monotonicity of ln, F_fluct[P] - F_fl… | ANALYTIC SKETCH (T3; core step = textbook Loe… | R-U10-1 + R-U10-2 writeups (one page each); R-U10-3 script; then the U1 proposal returns … |
 | `neargap-residual-closure` | v1.0 | T7* | (i) R-U10-1 INVALIDATED: the O(I^2) numerical claims are SUPERSEDED by useries-triage (remainder 1.65e-3 not 2.7e-5; protection x2 not x130; identity… | ANALYTIC (exact algebra) + CALIBRATED (certif… | Execute R-U10-3 (one small script: trace inequality on test patterns + endpoint remainder… |
 
-<!-- generated 2026-06-10T14:20:15Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-11T02:38:53Z by build_index.py v1.0.1 -->
