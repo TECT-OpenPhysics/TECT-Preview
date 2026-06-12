@@ -1,0 +1,14 @@
+=== Lemma NT exhaustive applied-domain check (divisor table to 39896) ===
+  R=  101: N= 168  distinct m!=0:     8964  worst r/6d=0.250  T'=18
+  R=  314: N= 312  distinct m!=0:    34186  worst r/6d=0.250  T'=24
+  R=  909: N= 504  distinct m!=0:    90726  worst r/6d=0.222  T'=24
+  R= 1826: N= 672  distinct m!=0:   185294  worst r/6d=0.250  T'=24
+  R= 4994: N=1152  distinct m!=0:   562132  worst r/6d=0.250  T'=32
+  R= 9974: N=2040  distinct m!=0:  1763674  worst r/6d=0.250  T'=48
+  [PASS] exhaustive_bound_all_sums (r_Q(m) <= 6 d(4R-|m|^2) holds for EVERY one of 2644976 distinct sums m!=0 across all six shells R=101..9974 -- the applied Lemma-NT chain is 100%-machine-verified on its entire domain, not just the richest circle; worst ratio 0.250 at R=101 (r=12, D=104, 6d=48))
+  [PASS] degenerate_D0_exact (every degenerate sum m=2a (D=0) has r_Q(m)=1 exactly: the circle degenerates to y=0, matching the note)
+  [PASS] ramified_corner_covered (24096 ramified-corner instances (odd p: p^2 | |m0|^2, p | D) occur on the applied domain and ALL satisfy the bound (worst ratio 0.119) -- the one analytically cited+outlined case is exhaustively machine-covered where the theorem is actually applied)
+  [PASS] Tprime_cross_consistent (max_m r_Q(m) per shell {101: 18, 314: 24, 909: 24, 1826: 24, 4994: 32, 9974: 48} == dr2_lattice_divisor.py archived T' values -- the two scripts agree on the load-bearing quantity)
+  [PASS] headroom_factor (global worst r/6d = 0.250 < 0.5: the applied domain sits with >= x2 headroom below the Lemma NT ceiling -- the bound is never tight in practice)
+
+claims 5/5 PASS

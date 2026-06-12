@@ -1,0 +1,18 @@
+N        great_circle   cap_grid(sphere)   flat_grid(control)   random
+  16         720( 16)       720( 16)      1936( 16)       496( 16)  
+  36        3780( 36)      3524( 36)     21316( 36)      2556( 36)  
+  64       12096( 64)     10944( 64)    118336( 64)      8128( 64)  
+ 100       29700(100)     25604(100)    448900(100)     19900(100)  
+ 144       61776(144)     52048(144)   1336336(144)     41328(144)  
+
+fitted growth exponent alpha (E_+ ~ N^alpha):
+  great_circle   alpha = 2.026
+  cap_grid       alpha = 1.948
+  flat_grid      alpha = 2.975
+  random         alpha = 2.013
+  [PASS] sphere_configs_quadratic (great_circle=2.03, cap_grid=1.95, random=2.01 all <= 2.3: additive energy on S^2 is N^{2+o(1)}, the Bourgain-Demeter decoupling exponent, NOT N^3)
+  [PASS] flat_control_cubic (flat_grid alpha=2.98 >= 2.6: the SAME (u,v) grid kept FLAT has near-N^3 additive energy -- so the cap_grid's ~N^2 is the curvature pinning quadruples to rectangles, not an artefact)
+  [PASS] curvature_mechanism_gap (flat alpha 2.98 - sphere cap alpha 1.95 = 1.03 >= 0.5: the curvature mechanism (height-quadratic => sum-of-squares conservation => rectangle rigidity, R-007) is directly demonstrated)
+  [PASS] E_over_N2_subpolynomial (E_+/N^2 for the great circle grows by only x1.06 over N=16->144: consistent with the N^eps / polylog correction, not a power of N)
+
+claims 4/4 PASS

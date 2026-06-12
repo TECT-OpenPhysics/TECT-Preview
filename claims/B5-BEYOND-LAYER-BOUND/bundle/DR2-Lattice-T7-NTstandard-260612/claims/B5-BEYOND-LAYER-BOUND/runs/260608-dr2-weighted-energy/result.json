@@ -1,0 +1,122 @@
+{
+  "script": "dr2_weighted_energy.py",
+  "version": "1.0.0",
+  "bound": "sum_t w_t^2 <= (1+T(Q)) ||c||_2^4",
+  "rows": {
+    "101_uniform": {
+      "N": 168,
+      "T_prime": 18,
+      "sumw2": 148680.0,
+      "bound": 536256.0,
+      "ratio": 0.27725563909774437,
+      "holds": true
+    },
+    "101_gaussian": {
+      "N": 168,
+      "T_prime": 18,
+      "sumw2": 55952.7161152633,
+      "bound": 543511.4007465312,
+      "ratio": 0.10294672023146223,
+      "holds": true
+    },
+    "101_peaked": {
+      "N": 168,
+      "T_prime": 18,
+      "sumw2": 16572.9237101171,
+      "bound": 252025.80192442215,
+      "ratio": 0.06575883732367613,
+      "holds": true
+    },
+    "101_signed": {
+      "N": 168,
+      "T_prime": 18,
+      "sumw2": 55592.0,
+      "bound": 536256.0,
+      "ratio": 0.10366690535863468,
+      "holds": true
+    },
+    "314_uniform": {
+      "N": 312,
+      "T_prime": 24,
+      "sumw2": 472824.0,
+      "bound": 2433600.0,
+      "ratio": 0.19428994082840237,
+      "holds": true
+    },
+    "314_gaussian": {
+      "N": 312,
+      "T_prime": 24,
+      "sumw2": 174057.15448463644,
+      "bound": 2153399.149850269,
+      "ratio": 0.08082902535590722,
+      "holds": true
+    },
+    "314_peaked": {
+      "N": 312,
+      "T_prime": 24,
+      "sumw2": 23230.883221065156,
+      "bound": 415484.81200304796,
+      "ratio": 0.0559127134132035,
+      "holds": true
+    },
+    "314_signed": {
+      "N": 312,
+      "T_prime": 24,
+      "sumw2": 193080.0,
+      "bound": 2433600.0,
+      "ratio": 0.07933925049309665,
+      "holds": true
+    },
+    "561_uniform": {
+      "N": 192,
+      "T_prime": 16,
+      "sumw2": 141696.0,
+      "bound": 626688.0,
+      "ratio": 0.2261029411764706,
+      "holds": true
+    },
+    "561_gaussian": {
+      "N": 192,
+      "T_prime": 16,
+      "sumw2": 68859.79658418505,
+      "bound": 594913.2521039932,
+      "ratio": 0.1157476259616891,
+      "holds": true
+    },
+    "561_peaked": {
+      "N": 192,
+      "T_prime": 16,
+      "sumw2": 16991.19412412077,
+      "bound": 229453.2029507269,
+      "ratio": 0.07405080384852804,
+      "holds": true
+    },
+    "561_signed": {
+      "N": 192,
+      "T_prime": 16,
+      "sumw2": 74608.0,
+      "bound": 626688.0,
+      "ratio": 0.11905126633986927,
+      "holds": true
+    }
+  },
+  "K_slope": 0.12576403469877995,
+  "claims": [
+    {
+      "name": "weighted_lemmaA_holds",
+      "passed": true,
+      "detail": "(sum_t w_t^2 <= (1+T')||c||_2^4 for ALL amplitude profiles on ALL shells; worst ratio 0.277 <= 1 -- the proof check for the amplitude bridge)"
+    },
+    {
+      "name": "antipodal_term_bounded",
+      "passed": true,
+      "detail": "(w_0^2 = 1093.29 <= ||c||_2^4 = 100510.62: the t=0 antipodal term, bounded by Cauchy-Schwarz independently of T')"
+    },
+    {
+      "name": "K_subpolynomial",
+      "passed": true,
+      "detail": "(effective constant K=1+T' grows like R^0.126, subpolynomial: the weighted G1'''-AE bound has K ~ R^eps (NOT a fixed constant), consistent with the measured exponents 2.04-2.08; K values [19, 25, 17, 25, 33])"
+    }
+  ],
+  "all_pass": true
+}

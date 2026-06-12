@@ -1,0 +1,16 @@
+  [PASS] E_plus_estimator_exact (random sphere set E_+ = 2N^2 - N exactly for N=16,32,64: the additive-energy estimator is exact, no binning artefact -- the code-audit gate for every E_+ value below)
+config         N    n_side  caps   E_+(Q)    (sum sqrt E_theta)^2   K=LHS/RHS
+great_circle    64      2       6      12096               7789.0   1.553
+great_circle    64      4      14      12096               7281.2   1.661
+great_circle    64      8      30      12096               6244.6   1.937
+cap_grid        64      2       4      10944               8448.0   1.295
+cap_grid        64      4      16      10944               7351.0   1.489
+cap_grid        64      8      36      10944               5830.5   1.877
+random          64      2       4       8128               7935.8   1.024
+random          64      4      15       8128               7214.6   1.127
+random          64      8      38       8128               5691.6   1.428
+  [PASS] iteration_constant_bounded_proxy (ILLUSTRATIVE: on the PROXY square-bin partition, K = E_+(Q)/(sum sqrt E_theta)^2 <= 3 for every config/scale; max K = 1.937. Consistency with the decoupling exponent, NOT a faithful delta^{1/2}-cap test)
+  [PASS] scale_stability_proxy (K within x2 across proxy cap scales n=2,4,8: ['1.55', '1.66', '1.94']; illustrative scale stability)
+  [PASS] partition_reduces_structure (sum_theta E_+(Q_theta) << E_+(Q): the partition breaks cross-cap quadruples -- great_circle:240/12096, cap_grid:224/10944, random:212/8128)
+
+claims 4/4 PASS
