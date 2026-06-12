@@ -1,0 +1,199 @@
+% =============================================================================
+% Title: Referee package -- SC-SCOPE: the second- and third-cumulant endpoint closure of the selection floor
+% Claim: B5-BEYOND-LAYER-BOUND (referee package; MAIN-LINE SUPPORTING DRAFT ACCEPTED)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-12
+% Status: DRAFT ACCEPTED (operator verdict 2026-06-12) -- accepted as the SC-SCOPE
+%   T5 thin-certified endpoint-closure support package; PUBLISHED-BUNDLE confirmation
+%   HELD pending operator 5-script clean-run inspection (policy sec.14: bundle is
+%   packaged only AFTER operator confirmation). The package closes the SC-SCOPE
+%   selection floor at the all-orders endpoint I = 2e-3 (joint > 1, thin,
+%   sunset-limited, near-critical); it is NOT a comfortable all-intensity closure,
+%   does NOT close full STEP-5B by itself, does NOT close admissible-class
+%   exhaustiveness, and does NOT enact the full Reading-H C_full theorem.
+%   No standalone tier promotion.
+%   Reproduction: 5 entry scripts (manifest in Sec. 4). Grounded by the folder's notes.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesised the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+%   v1.1 (2026-06-12) operator verdict: ACCEPTED AS DRAFT (T5 thin-certified endpoint
+%        closure); published-bundle confirmation HELD. Four operator-requested
+%        referee-safety patches applied: (1) full explicit 5-script manifest (the
+%        v1.0 footer ellipsis removed); (2) exact joint assembly formula with all
+%        terms and normalisations (Sec. 3); (3) provenance/derivation of the 0.634
+%        critical threshold (Sec. 3); (4) the vague "sign-stable nearby (I,mu^2)"
+%        replaced by the explicit certified window W_SC with its evidence script
+%        (Sec. 3). AI-side clean-run re-verified 2026-06-12: 5 entry scripts,
+%        33/33 asserts PASS, all exit 0 (7/7, 5/5, 4/4, 12/12, 5/5).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns the SC-SCOPE programme: the second- and third-cumulant scope of the selection floor and its endpoint closure (sunset and quartic-difference channels). \textbf{Scope:} the all-orders endpoint at $I=2\times10^{-3}$, with sign-stability certified only on the explicit window $\mathcal W_{\rm SC}$ of Sec.~3. \textbf{Not claimed:} the closure is thin (sunset-limited, near-critical); it is a near-critical selection boundary, not a comfortable margin. This package does not by itself close full STEP-5B, does not close admissible-class exhaustiveness, and does not enact the full Reading-H $C_{\rm full}$ theorem.
+
+\section*{2. The result}
+
+The SC-SCOPE third-cumulant joint inequality is positive at the endpoint: each channel (sunset cap $\times1.13$, realized quartic $R_{\max}=0.385<0.634$ with the Parseval-pinned $1/(4\pi^2)$ convolution measure, ratio $1.0000$) and their joint with the second-order cost satisfy $\mathrm{joint}>1$ (conservative $\times1.040$, verified-floor $\times1.082$). The endpoint sits just below the structural sunset cap; the selection floor closes (thin).
+
+\section*{3. Structure of the argument}
+
+\paragraph{Joint assembly (patch v1.1-2).} Under the canonical CONSERVATIVE additive
+bookkeeping (scscope-floor-sharpening v1.4 corrected form; NOT the retracted pairing
+formula), with $\Delta F_{\rm margin} = \mathrm{MARGIN} = 4.32\times10^{-3}$ (single
+upstream source \texttt{sectorb\_common.margin\_of}, $\mu^2 = 5\times10^{-3}$),
+\[
+\mathrm{joint}
+=\frac{\mathrm{MARGIN}}{C_2 + C_{\rm sunset} + C_{\rm quartic}},
+\qquad
+C_2=\frac{\mathrm{MARGIN}}{\rho_{\rm lat}},
+\]
+\[
+C_{\rm sunset}=\frac{\mathrm{MARGIN}\,(1-1/\rho_{\rm lat})}{S},
+\qquad
+C_{\rm quartic}=R_{\max}\,C_2,
+\]
+equivalently $\mathrm{joint} = \bigl[(1+R_{\max})/\rho_{\rm lat} + (1-1/\rho_{\rm lat})/S\bigr]^{-1}$,
+with $S = 1.13$ the rigorous sunset cap (M-ENDPOINT $M(0.33675)=0.10495$) and
+$\rho_{\rm lat}$ the STEP-5B layer-floor ratio: conservative
+$\rho_{\rm lat} = K_{\rm budget}/K_{\rm floor} = 266.7/40.7 = 6.55$
+($K_{\rm floor}\le T'\le n_{\rm pack}$), verified $\rho_{\rm lat}=12.6$
+($K_{\rm floor}\le 0.52\,T'$). Evaluating,
+\[
+\boxed{\ \mathrm{joint} = \times1.040\ (\rho_{\rm lat}=6.55)\ \dots\ \times1.082\ (\rho_{\rm lat}=12.6)\ >\ 1.\ }
+\]
+
+\paragraph{Provenance of the $0.634$ threshold (patch v1.1-3).} Setting
+$\mathrm{joint}=1$ at the conservative floor gives the critical quartic ratio
+\[
+R_{\max}^{\rm crit}
+=\rho_{\rm lat}\Bigl(1-\frac{1-1/\rho_{\rm lat}}{S}\Bigr)-1
+=6.55\Bigl(1-\frac{1-1/6.55}{1.13}\Bigr)-1
+= 0.639 .
+\]
+The registered closure gate $0.634$ (first registered in scscope-floor-sharpening
+v1.4 \S5b, machine-checked by \texttt{scscope\_joint\_correction.py} 5/5) rounds this
+critical value DOWN, i.e.\ the registered gate is strictly TIGHTER than the algebraic
+critical value, so $R_{\max}<0.634$ implies closure with safety in the conservative
+direction. The certified $R_{\max}=0.385$ clears the gate with $\times1.65$ headroom;
+the closure survives a $+50\%$ normalisation slack ($0.577<0.634$) but not a full
+factor $2$ ($0.769>0.634$) --- which is why the Parseval pin (ratio $1.0000$,
+derived from the $(2\pi)^3$ convolution measure) is load-bearing and is itself
+machine-certified.
+
+\paragraph{Certified sign-stability window (patch v1.1-4).} The v1.0 phrase
+``sign-stable across nearby $(I,\mu^2)$'' is replaced by the explicit certified window
+\[
+\mathcal W_{\rm SC}
+=\Bigl\{(I,\mu^2):\
+I\in[4\times10^{-4},\,2\times10^{-3}],\ \
+\mu^2\in[0.5,\,2]\times\mu_0^2,\ \mu_0^2=5\times10^{-3}\Bigr\},
+\]
+on which $\mathrm{joint}>1$ holds throughout (evidence:
+\texttt{scscope\_endpoint\_sweep.py} 4/4, run artefact
+\texttt{runs/260609-scscope-endpoint-sweep/}): the $I$-sweep gives
+$\times1.126\,(4\times10^{-4}) \to \times1.104\,(10^{-3}) \to \times1.040\,(2\times10^{-3})$
+(the certified endpoint is the thinnest point of the band and is positively closed;
+the critical boundary $\mathrm{joint}=1$ sits at $I\approx2.5\times10^{-3}$, OUTSIDE
+$\mathcal W_{\rm SC}$); the $\mu^2$-band sweep at the endpoint stays
+$\times1.034$--$\times1.051>1$, consistent with ROBUSTNESS-MU2. No sign-stability
+claim is made outside $\mathcal W_{\rm SC}$. The thinness is structural:
+$\mathrm{joint}(\rho)$ saturates at the sunset cap $\times1.13$ as
+$\rho\to\infty$, so no floor sharpening can exceed it.
+
+\section*{4. Numerical reproduction}
+
+\paragraph{Entry-script manifest (patch v1.1-1; complete, no ellipsis).} Five scripts,
+each with self-test asserts, all exit 0 (AI-side clean-run 2026-06-12, 33/33 asserts
+PASS in total):
+
+\begin{enumerate}
+\item \texttt{codes/vacuum/scscope\_ghat4\_pertransfer.py} (7/7) --- per-transfer
+quartic form factor $\widehat{G^4}(t)=(J*J)(t)$ on the realized chords.
+\item \texttt{codes/vacuum/scscope\_floor\_sharpening.py} (5/5) --- the proved floor
+sharpening $K_{\rm floor}\le T'(M)$ and $\rho_{\rm lat}: 2.58\to6.55$.
+\item \texttt{codes/vacuum/scscope\_joint\_pairing.py} (4/4) --- the most-favourable
+joint incompatible-pairing bound (historical honest-negative reference point).
+\item \texttt{codes/vacuum/scscope\_mendpoint\_eval.py} (12/12) --- M-ENDPOINT
+$M(0.33675)=0.10495$ (two quadratures agree $0.61\%$), the rigorous sunset cap
+$\times1.13$.
+\item \texttt{codes/vacuum/scscope\_quartic\_certificate.py} (5/5) --- the Parseval
+pin (ratio $1.0000$), the certified $R_{\max}=0.385<0.634$, and the certified joint
+$\times1.040$--$\times1.082>1$.
+\end{enumerate}
+
+Supporting (window evidence, cited by Sec.~3): \texttt{codes/vacuum/scscope\_endpoint\_sweep.py}
+(4/4) for $\mathcal W_{\rm SC}$; \texttt{codes/vacuum/scscope\_joint\_correction.py}
+(5/5) for the $0.634$ gate registration. Run them from the bundle and diff against
+\texttt{expected/}.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it, and the precise scope is in the footer. In particular: endpoint + the
+explicit window $\mathcal W_{\rm SC}$ only; no all-intensity claim; no full STEP-5B,
+no exhaustiveness, no full $C_{\rm full}$.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
+registered grade (footer no-overclaim line); the status is DRAFT ACCEPTED (T5
+thin-certified), published-bundle confirmation HELD, and the claim-ledger tier is the
+arbiter. The closure is explicitly flagged THIN and sunset-limited.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
+carries self-test asserts and ships in the folder's bundle with its transitive
+dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
+diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the $0.634$ gate is re-derived from its inputs
+($R^{\rm crit}_{\max} = 6.55(1-(1-1/6.55)/1.13)-1 = 0.639$, registered DOWN to $0.634$,
+safe direction); the joint is re-assembled from its terms
+($[(1+0.385)/6.55+(1-1/6.55)/1.13]^{-1} = 1.040$); the falsifier (footer) is concrete
+and pre-registered; and every numerical value cited is reproduced by the manifest
+scripts (33/33 asserts PASS, exit 0, 2026-06-12 re-run).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE referee
+                         package
+Precise statement:       At the all-orders endpoint I=2e-3 the SC-SCOPE
+                         third-cumulant joint > 1: realized quartic
+                         R_max=0.385<0.634 (Parseval-pinned 1/(4pi^2)
+                         convolution measure, ratio 1.0000), sunset cap
+                         x1.13, joint = MARGIN/(C_2+C_sunset+C_quartic)
+                         = [(1+R_max)/rho + (1-1/rho)/1.13]^-1
+                         = x1.040 (rho_lat=6.55) .. x1.082 (rho_lat=
+                         12.6) > 1 (thin, sunset-limited, near-
+                         critical). Sign-stable on the certified window
+                         W_SC = [4e-4,2e-3] x [0.5,2]mu0^2 only.
+Scope:                   SC-SCOPE all-orders endpoint selection floor +
+                         the explicit window W_SC. Thin (sunset-limited
+                         near-critical). NOT all-intensity; NOT full
+                         STEP-5B; NOT exhaustiveness; NOT full C_full.
+Evidence grade:          third-cumulant endpoint closure,
+                         thin-certified (T5); EXECUTED (5 entry scripts,
+                         33/33 asserts PASS, exit 0).
+Reproduction command:    python
+                         codes/vacuum/scscope_ghat4_pertransfer.py ;
+                         codes/vacuum/scscope_floor_sharpening.py ;
+                         codes/vacuum/scscope_joint_pairing.py ;
+                         codes/vacuum/scscope_mendpoint_eval.py ;
+                         codes/vacuum/scscope_quartic_certificate.py
+Falsifier:               a recomputed joint <=1 at the endpoint; or a
+                         convolution-normalisation that doubles Ghat4
+                         (R_max>0.634); or joint<=1 anywhere in W_SC.
+Tier before / after:     DRAFT ACCEPTED (operator verdict 2026-06-12);
+                         SC-SCOPE endpoint thin-certified T5. No
+                         standalone tier promotion. Published-bundle
+                         confirmation HELD.
+No-overclaim statement:  the endpoint closes THIN (sunset-limited
+                         near-critical); not a comfortable
+                         all-intensity statement; sign-stability is
+                         claimed only on the explicit window W_SC.
+Next required action:    operator inspection + clean-run of the 5-script
+                         manifest -> operator CONFIRM -> ONLY THEN
+                         package PUBLISHED bundle (policy sec.14).
+\end{verbatim}
+}

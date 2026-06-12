@@ -13,6 +13,9 @@ here, without a TECT checkout, and obtain the same PASS lines.
 ## Contents
 - the referee note (proof, self-contained): `claims/B5-BEYOND-LAYER-BOUND/STEP-5B/notes/step-5b-referee-package-260610-260612-v1.2.tex.txt`
   (+ its `.pdf`)
+- the provenance theorem note (operator verdicts #9/#10 archive, imported by the
+  referee note): `claims/B5-BEYOND-LAYER-BOUND/STEP-5B/notes/rectangle-constant-closure-260605-260605-v1.3.tex.txt`
+  (+ its `.pdf`)
 - reproduction code + all transitive local dependencies (repo-relative paths preserved)
 - `expected/` -- captured stdout of each script at build time (the PASS reference)
 - `requirements.txt`, `environment.txt` -- the build environment
