@@ -1,0 +1,235 @@
+% =============================================================================
+% Title: Referee package -- DR-2 for the lattice class: an unconditional, decoupling-free additive-energy bound on the sphere
+% Claim: B5-BEYOND-LAYER-BOUND (referee package; MAIN-LINE SUPPORTING DRAFT ACCEPTED)
+% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-12
+% Status: DRAFT ACCEPTED (operator verdict 2026-06-12) -- accepted as the DR-2
+%   lattice-class support package. Grade: T7-CANDIDATE on the lattice class,
+%   modulo the explicit textbook Lemma NT import + the 7-script clean-run; NOT a
+%   confirmed T7 publication. PUBLISHED-BUNDLE confirmation HELD pending operator
+%   7-script clean-run inspection and the Lemma NT pin (policy sec.14: bundle is
+%   packaged only AFTER operator confirmation). Arbitrary (non-lattice) Q remains
+%   OPEN; the decoupling route remains T4 conditional and is NOT load-bearing;
+%   this package does not by itself close the full Reading-H C_full theorem.
+%   Reproduction: 7 entry scripts (manifest in Sec. 4; 31/31 asserts). Grounded by
+%   the folder's notes (headline: dr2-lattice-divisor-closure v1.2).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesised the folder's
+%        headline result into a self-contained referee document. Awaiting operator confirm.
+%   v1.1 (2026-06-12) operator verdict: ACCEPTED AS DR-2 LATTICE-CLASS DRAFT
+%        (published HELD; grade pinned to T7-candidate mod Lemma NT). Four
+%        operator-requested referee-safety patches applied: (1) full explicit
+%        7-script manifest (v1.0 footer ellipsis removed; manifest corrected --
+%        the v1.0 auto-discovered list dropped dr2_lattice_divisor.py through a
+%        single-line regex artefact and included the integration-layer
+%        dr2_hadmcoh_margin.py, now demoted to supporting); (2) explicit
+%        definitions of E_+(Q), N, r_Q(m), T'(Q) with the Lemma-A chain (Sec. 2);
+%        (3) the circle-to-binary-form reduction y = 2a-m written out, including
+%        the parity constraint y = -m (mod 2) (Sec. 3); (4) Lemma NT stated
+%        precisely with its Dirichlet provenance, the constant relaxed to C_Lambda
+%        (<= 6 once the textbook lemma is imported) in the load-bearing chain, and
+%        the footer carrying the operator's T7-label restriction verbatim (Sec. 3,
+%        Sec. 6). AI-side clean-run 2026-06-12: 7 entry scripts, 31/31 asserts
+%        PASS, all exit 0 (5/5, 4/4, 5/5, 6/6, 3/3, 4/4, 4/4).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This referee document concerns DR-2 (the additive-energy / discrete-restriction bound) for the lattice competitor class. It is a harmonic-analysis / additive-combinatorics result, of interest independently of TECT. \textbf{Scope:} $Q=\Lambda\cap\{|x|^2=R\}$ a fixed crystallographic lattice shell. \textbf{Not claimed:} the arbitrary (non-lattice) $Q$ case remains OPEN (the decoupling-based route is T4 conditional and not load-bearing); this package does not by itself close the full Reading-H $C_{\rm full}$ theorem. \textbf{Grade:} T7-candidate on the lattice class, modulo the explicit textbook Lemma NT (Sec.~3) and the 7-script clean-run; not a confirmed T7 publication until both are pinned.
+
+\section*{2. Definitions and the result}
+
+\paragraph{Definitions (patch v1.1-2).} Let $Q\subset\{|x|^2=R\}$ be finite with
+$N=|Q|$. The additive energy and the sum-representation counts are
+\[
+E_+(Q)=\#\bigl\{(a,b,c,d)\in Q^4:\ a+b=c+d\bigr\},
+\qquad
+r_Q(m)=\#\bigl\{(a,b)\in Q^2:\ a+b=m\bigr\},
+\]
+and the maximal proper sum-circle occupancy is
+$T'(Q)=\max_{m\ne0} r_Q(m)$. Lemma A (sum-circle richness) is the chain
+\[
+E_+(Q)=\sum_m r_Q(m)^2
+\;\le\;
+r_Q(0)^2+T'(Q)\sum_{m\ne0}r_Q(m)
+\;\le\;
+\bigl(1+T'(Q)\bigr)N^2,
+\]
+using $r_Q(0)\le N$ and $\sum_m r_Q(m)=N^2$.
+
+\paragraph{The result.} For $Q=\Lambda\cap\{|x|^2=R\}$ ($\Lambda$ a fixed
+crystallographic lattice, rational after clearing denominators), the additive energy
+obeys
+\[
+E_+(Q)\;\le\;\bigl(1+C_\Lambda \max_{m\ne0} d(4R-|m|^2)\bigr)N^2
+\;\le\;\bigl(1+C_\Lambda C_\varepsilon R^\varepsilon\bigr)N^2,
+\]
+decoupling-free, where $d(\cdot)$ is the divisor function and $C_\Lambda$ is the
+representation constant of Lemma NT below ($C_\Lambda\le6$ once the textbook lemma
+is imported). For Gauss-typical shells $R\sim N^2$ this gives, after redefining
+$\varepsilon$ ($R^\varepsilon\sim N^{2\varepsilon}$), $E_+\le_\varepsilon N^{2+\varepsilon}$.
+
+\section*{3. Structure of the argument}
+
+\paragraph{Circle-to-binary-form reduction (patch v1.1-3).} Fix $m\ne0$ and suppose
+$a+b=m$ with $|a|^2=|b|^2=R$. From $b=m-a$,
+$R=|b|^2=|m|^2-2a\cdot m+|a|^2$ forces $2a\cdot m=|m|^2$. Substituting $y=2a-m$,
+\[
+y\cdot m=2a\cdot m-|m|^2=0,
+\qquad
+|y|^2=4|a|^2-2\,(2a\cdot m)+|m|^2=4R-|m|^2,
+\qquad
+y\equiv -m \pmod 2,
+\]
+and $a\mapsto y$ is injective. Hence $r_Q(m)$ is bounded by the HOMOGENEOUS
+representation count of $D=4R-|m|^2$ on the rank-two lattice section
+$L_m=\{y\in\Lambda_{\rm int}:\ y\cdot m=0\}$ (machine check:
+\texttt{dr2\_divcirc\_proof.py}, substitution exact, injectivity verified).
+
+\paragraph{Lemma NT (textbook import; patch v1.1-4).} \emph{For every rank-two
+lattice section $L_m$ as above, with induced positive-definite integral binary
+quadratic form $q$ of content $g$ and primitive part $q_0$ of discriminant
+$\Delta_0<0$,}
+\[
+r_{L_m}(D)=\#\{y\in L_m:\ |y|^2=D\}
+\;\le\; C_{\rm NT}\,d(D),
+\qquad
+C_{\rm NT}=w(\Delta_0)\le 6,
+\]
+\emph{where $w(\Delta_0)$ is the number of automorphs ($6$ for $\Delta_0=-3$,
+$4$ for $\Delta_0=-4$, $2$ otherwise).} Provenance: $r_{q}(D)=r_{q_0}(D/g)$
+(zero unless $g\mid D$), and Dirichlet's representation formula gives the TOTAL
+count over the full form class group of discriminant $\Delta_0$ as
+$w(\Delta_0)\sum_{d\mid D'}\chi_{\Delta_0}(d)\le w(\Delta_0)\,d(D')\le
+w(\Delta_0)\,d(D)$; a single class's count is at most the total. This is
+textbook material (Dirichlet's class-number/representation formula; e.g.\
+Landau, or Cox, \emph{Primes of the Form $x^2+ny^2$}), but the package treats it
+as an IMPORT: the load-bearing chain is written with the constant $C_\Lambda$,
+and $C_\Lambda\le6$ holds once Lemma NT is cited or proved in the bundle.
+Machine evidence: $r\le 6\,d$ holds on every tested configuration with worst
+ratio $T'/6d=0.25$ (\texttt{dr2\_divcirc\_proof.py} 4/4).
+
+\paragraph{Assembly.} Lemma A + the reduction + Lemma NT give
+$T'(Q)\le C_\Lambda d(4R-|m^*|^2)\ll_\varepsilon R^\varepsilon$ (divisor bound,
+uniform in $m$), hence the stated result --- no $\ell^2$-decoupling is used. The
+conditional decoupling route (\texttt{dr2\_decoupling\_iteration.py} /
+\texttt{dr2\_decoupling\_exponent.py}) is retained as a CROSS-CHECK only and is
+not load-bearing.
+
+\section*{4. Numerical reproduction}
+
+\paragraph{Entry-script manifest (patch v1.1-1; complete, no ellipsis).} Seven
+scripts, each self-contained with self-test asserts, all exit 0 (AI-side clean-run
+2026-06-12, 31/31 asserts PASS in total):
+
+\begin{enumerate}
+\item \texttt{codes/vacuum/dr2\_circle\_richness.py} (5/5) --- Lemma A (sum-circle
+richness) and Corollary 1.
+\item \texttt{codes/vacuum/dr2\_divcirc\_proof.py} (4/4) --- the substitution
+$y=2a-m$ (exact, injective), $T'\le r_{L_m}(4R-|m|^2)\le 6\,d(4R-|m|^2)$, worst
+$T'/6d=0.25$.
+\item \texttt{codes/vacuum/dr2\_lattice\_divisor.py} (5/5) --- lattice-divisor
+scaling: $T'/N$ falls $0.107\to0.024$ across shells; $E_+/N^2\le5.3$.
+\item \texttt{codes/vacuum/dr2\_cross\_energy\_lemma.py} (6/6) --- the bilinear
+cross-energy lemma $E_+(A,B)\le3|A||B|$ and the off-diagonal pencil bound.
+\item \texttt{codes/vacuum/dr2\_weighted\_energy.py} (3/3) --- the weighted Lemma A
+($\sum_t w_t^2\le(1+T')\|c\|_2^4$).
+\item \texttt{codes/vacuum/dr2\_decoupling\_iteration.py} (4/4) --- decoupling-route
+cross-check (NOT load-bearing).
+\item \texttt{codes/vacuum/dr2\_decoupling\_exponent.py} (4/4) --- decoupling-route
+exponent cross-check (NOT load-bearing).
+\end{enumerate}
+
+Supporting / integration-layer (NOT an entry script): \texttt{codes/vacuum/dr2\_hadmcoh\_margin.py}
+--- the H-ADM-COH discharge-decision margin (long-running; belongs to the
+\texttt{dr2-hadmcoh-discharge-decision} integration note, run artefact
+\texttt{runs/260608-dr2-hadmcoh-margin/}); not load-bearing for the lattice-class
+theorem. Manifest correction note: the v1.0 ``7 scripts'' was an auto-discovered
+list that dropped \texttt{dr2\_lattice\_divisor.py} (a single-line regex artefact:
+the headline note lists it on the second line of its reproduction command) and
+included \texttt{dr2\_hadmcoh\_margin.py}; the present manifest is the corrected,
+load-bearing-plus-declared-cross-check set. Run the entry manifest from the bundle
+and diff against \texttt{expected/}.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Attack the scope.} The result is confined to the scope stated in
+Sec.~1; a referee may push that boundary, which is fair --- the package makes no claim
+outside it. In particular: lattice shells only; arbitrary-$Q$ OPEN; decoupling route
+T4 conditional cross-check; no full $C_{\rm full}$ claim.
+\item[($\beta$)] \emph{Attack the tier / over-claim.} The sharpest objection is the
+$6\,d(D)$ representation bound: ``Dirichlet class-number formula'' alone is not a
+citation. ADDRESSED in v1.1 (operator-directed): Lemma NT is stated precisely with
+its provenance, the load-bearing chain uses the relaxed constant $C_\Lambda$, and the
+T7 label is restricted (footer): without the Lemma NT import the package is a T6/T7
+draft, not a confirmed T7 publication. The claim-ledger tier is the arbiter.
+\item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each entry script is
+self-contained (no runtime run-artefact reads --- audited after the SC-SCOPE
+joint\_pairing lesson), carries self-test asserts, and ships in the bundle with its
+transitive dependencies; a referee runs them and diffs against \texttt{expected/}.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the Lemma-A chain is re-derivable from its
+definitions ($\sum_m r_Q(m)=N^2$ exactly; $r_Q(0)\le N$); the substitution identity
+$|2a-m|^2=4R-|m|^2$ is checked exactly on every tested configuration; the worst
+machine ratio $T'/6d=0.25$ leaves a $\times4$ headroom below the Lemma NT ceiling;
+and the falsifier (footer) is concrete and pre-registered (a lattice shell violating
+the divisor bound, or a counterexample to the rank-2 representation count).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / DR-2 lattice-class
+                         referee package
+Precise statement:       For Q=Lambda cap {|x|^2=R} (fixed
+                         crystallographic lattice), with N=|Q|,
+                         E_+(Q)=#{a+b=c+d}, r_Q(m)=#{(a,b):a+b=m},
+                         T'(Q)=max_{m!=0} r_Q(m):
+                         E_+(Q) <= (1+T'(Q))N^2 (Lemma A),
+                         T'(Q) <= C_Lambda max_{m!=0} d(4R-|m|^2)
+                         (y=2a-m reduction + Lemma NT; C_Lambda<=6
+                         once the textbook lemma is imported),
+                         hence E_+(Q) <=_eps R^eps N^2, decoupling-
+                         free; Gauss-typical R~N^2 gives E_+ <=_eps
+                         N^{2+eps} (eps redefined, R^eps~N^{2eps}).
+Scope:                   lattice shells Q=Lambda cap {|x|^2=R} ONLY.
+                         Arbitrary non-lattice Q OPEN; decoupling
+                         route T4 conditional (cross-check, not
+                         load-bearing); not a full C_full closure.
+Evidence grade:          T7-CANDIDATE on the lattice class, modulo
+                         the explicit textbook Lemma NT import +
+                         clean-run. The T7 label applies ONLY to the
+                         lattice-shell class after importing Lemma
+                         NT; without Lemma NT this package is a
+                         T6/T7 draft, NOT a confirmed T7 publication.
+                         EXECUTED (7 entry scripts, 31/31 asserts).
+Reproduction command:    python codes/vacuum/dr2_circle_richness.py ;
+                         codes/vacuum/dr2_divcirc_proof.py ;
+                         codes/vacuum/dr2_lattice_divisor.py ;
+                         codes/vacuum/dr2_cross_energy_lemma.py ;
+                         codes/vacuum/dr2_weighted_energy.py ;
+                         codes/vacuum/dr2_decoupling_iteration.py ;
+                         codes/vacuum/dr2_decoupling_exponent.py
+Falsifier:               a lattice shell with E_+ exceeding the
+                         divisor bound; or a counterexample to the
+                         rank-2 representation count r <= C_NT d(D).
+Tier before / after:     DRAFT ACCEPTED (operator verdict 2026-06-12);
+                         T7-candidate (lattice class) mod Lemma NT.
+                         No standalone tier promotion. Published-
+                         bundle confirmation HELD pending 7-script
+                         clean-run + Lemma NT pin.
+No-overclaim statement:  lattice class only, modulo the explicitly
+                         stated Lemma NT (constant relaxed to
+                         C_Lambda in the load-bearing chain);
+                         arbitrary non-lattice Q is OPEN; the
+                         decoupling route is a non-load-bearing
+                         cross-check.
+Next required action:    operator 7-script clean-run inspection +
+                         Lemma NT pin (citation or in-bundle proof)
+                         -> operator CONFIRM -> ONLY THEN package
+                         PUBLISHED bundle (policy sec.14/15).
+\end{verbatim}
+}

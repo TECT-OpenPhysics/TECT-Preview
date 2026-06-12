@@ -290,3 +290,34 @@ When the result's tier changes, repeat 1-6; the new bundle
 `bundle/` listing is the tier history. Superseded tiers' bundles are retained as
 history; the current bundle is the highest-tier dated one.
 
+## 15. Bundle production ordering: ascending tier, capstone last (binding from 2026-06-12)
+
+Operator directive 2026-06-12 (REVERSING the earlier highest-tier-first practice;
+refined same day: DEPENDENCY ORDER takes precedence over tier): within a claim's
+MAIN PROOF LINE, referee packages and their bundles are produced and reviewed in
+DEPENDENCY-FIRST order -- a package is queued only after every package it depends
+on -- with ASCENDING tier order among packages at the same dependency level, and
+the highest-tier final consolidation/claim LAST.
+
+Rationale: lower-tier support packages are the INPUTS of the higher-tier
+consolidations. Publishing them first means that by the time the highest-tier
+package is reviewed, every support result it cites is already PUBLISHED-BUNDLE
+CONFIRMED, so the final bundle is a true capstone whose dependency chain is fully
+inspected -- rather than a head published over unreviewed supports (the
+highest-first order forced exactly that inversion).
+
+Operational rules:
+
+- Ordering keys, in precedence: (1) DEPENDENCY (topological: supports before
+  the packages that cite them); (2) ascending tier among same-level packages;
+  (3) date. A dependency edge always outranks a tier comparison.
+- The claim's final consolidation / synthesis package (the highest-tier item,
+  e.g. a T7 C_full theorem package) is reviewed and packaged ONLY AFTER all its
+  main-line support packages are PUBLISHED-BUNDLE CONFIRMED.
+- The sec.14.3 packaging order applies unchanged WITHIN each package; this
+  section fixes the order BETWEEN packages.
+- History note: the 2026-06-10/12 cycle ran highest-first (Reading-H C_full T7
+  -> Prop-A T6 -> STEP-5B-Rectangle T6 -> SC-SCOPE T5, with DR-2 T7-mod-NT
+  remaining); this is grandfathered, not re-ordered. The rule binds FUTURE
+  production, starting with the remaining DR-2 package and any subsequent
+  claim-level SYNTHESIS layer (T-013).
