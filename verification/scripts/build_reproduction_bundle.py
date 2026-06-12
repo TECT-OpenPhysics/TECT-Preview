@@ -25,7 +25,7 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.7.0"
+__version__ = "1.8.0"
 __first_issued__ = "2026-06-10"
 __version_issued__ = "2026-06-10"
 
@@ -162,12 +162,11 @@ def main():
     out = REPO/args.out
     if out.exists() and (out/"MANIFEST.json").exists() and not args.force:
         print(f"ERROR: {args.out} already has a complete bundle (MANIFEST.json); use --force to rebuild"); return 1
-    if args.force and (out/"MANIFEST.json").exists():
-        try: (out/"MANIFEST.json").unlink()
-        except Exception: pass
-        for lg in (out/"expected").glob("*.log"):
-            try: lg.unlink()
-            except Exception: pass
+    if args.force and out.exists():
+        # full clean so a re-issue leaves NO orphan (e.g. an old note version). On a
+        # mount that blocks unlink this is a no-op (ignore_errors) and the orphans must
+        # be cleared at the git layer; on a normal FS the rebuild is pristine.
+        shutil.rmtree(out, ignore_errors=True)
     out.mkdir(parents=True, exist_ok=True)  # partial (no MANIFEST) is resumed/overwritten
 
     deps, thirdparty = resolve_deps(args.scripts)

@@ -1,7 +1,7 @@
 # Reproduction bundle -- Prop-A class-wide H-LAYER closure on A_adm (T'<=13), T6 main-line supporting (PUBLISHED)
 
 Self-contained referee reproduction bundle (TECT verification-first repository).
-Built 20260611T070047Z with Python 3.10.12, numpy 2.2.6.
+Built 20260612T023731Z with Python 3.12.10, numpy 2.2.6.
 
 **Bundle grade:** PUBLISHED (operator-confirmed) -- `Prop-A-T6-260611`.
 
@@ -11,7 +11,7 @@ window, interval and sanity check it cites. An external referee can run the code
 here, without a TECT checkout, and obtain the same PASS lines.
 
 ## Contents
-- the referee note (proof, self-contained): `claims/B2-PROPA-HLAYER/Prop-A/notes/prop-a-referee-package-260610-260611-v1.2.tex.txt`
+- the referee note (proof, self-contained): `claims/B2-PROPA-HLAYER/Prop-A/notes/prop-a-referee-package-260610-260611-v1.3.tex.txt`
   (+ its `.pdf`)
 - reproduction code + all transitive local dependencies (repo-relative paths preserved)
 - `expected/` -- captured stdout of each script at build time (the PASS reference)
@@ -48,7 +48,7 @@ your output against `expected/`.
 
 ## Integrity
 Bundle content digest (sha256 over `<sha256>  <path>` lines):
-`37670ac36dad0eecb985fa46e6d8cca8a36b836192a000df27852a79aee4fddf`
+`62ee56083305123bc12b757b13adcae890e4dd60c9b15c624d03c33feb163fea`
 The repository commit that produced this bundle is recorded at publish time in
 `MANIFEST.json:repo_commit`.
 
