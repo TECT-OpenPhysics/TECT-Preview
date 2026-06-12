@@ -46,7 +46,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B1-RH-ENUM/lineage-narrative.md` | B1-RH-ENUM | — | — | — | ACTIVE | `327c90c966a4` |
 | `claims/B1-RH-ENUM/status.json` | B1-RH-ENUM | — | — | — | ACTIVE | `ac08c4be7b0a` |
 | `claims/B2-PROPA-HLAYER/LINEAGE.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `8ded5c4f0984` |
-| `claims/B2-PROPA-HLAYER/bundle/Prop-A-T6-260611/MANIFEST.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `d000dc10b581` |
+| `claims/B2-PROPA-HLAYER/bundle/Prop-A-T6-260611/MANIFEST.json` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `2584afac7013` |
 | `claims/B2-PROPA-HLAYER/bundle/Prop-A-T6-260611/README.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `1057602147df` |
 | `claims/B2-PROPA-HLAYER/bundle/Prop-A-T6-260611/archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `33bf54023ec9` |
 | `claims/B2-PROPA-HLAYER/bundle/Prop-A-T6-260611/archive/legacy/scripts/Math424_AddA_reading_uniqueness.py` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `e9c7d8d80eea` |
