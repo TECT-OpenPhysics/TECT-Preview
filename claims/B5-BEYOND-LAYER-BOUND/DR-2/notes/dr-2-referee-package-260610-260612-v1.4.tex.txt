@@ -1,15 +1,18 @@
-% SUPERSEDED by dr-2-referee-package-260610-260612-v1.4.tex.txt
 % =============================================================================
 % Title: Referee package -- DR-2 for the lattice class: an unconditional, decoupling-free additive-energy bound on the sphere
 % Claim: B5-BEYOND-LAYER-BOUND (referee package; PUBLISHED-BUNDLE CONFIRMED AS T7-CANDIDATE MOD LEMMA NT)
-% Version: v1.3 -- first issued 2026-06-10; this version issued 2026-06-12
+% Version: v1.4 -- first issued 2026-06-10; this version issued 2026-06-12
 % Status: PUBLISHED-BUNDLE CONFIRMED AS T7-CANDIDATE MOD LEMMA NT (operator
 %   CONFIRM 2026-06-12) -- bundle DR2-Lattice-T7Candidate-260612. Operator
 %   clean-run CONFIRMED: 7/7 scripts PASS, 33/33 asserts PASS, 0 FAIL lines
-%   (incl. the patched dr2_lattice_divisor.py v2.0.0). The code/reproduction
-%   bundle is confirmed; the FINAL T7 promotion is HELD on exactly one item:
-%   the Lemma NT pin (textbook citation or in-bundle proof). Grade:
-%   T7-CANDIDATE on the lattice class pending the Lemma NT pin ONLY.
+%   (incl. the patched dr2_lattice_divisor.py v2.0.0). LEMMA NT PINNED
+%   IN-BUNDLE (v1.4, operator-directed route): proof note
+%   dr2-lemma-nt-inbundle-260612-v1.0 -- unramified case PROVED IN FULL
+%   (r_{L_m}(D) <= 24 d(D)^2, elementary, no class-number formula); ramified
+%   corner cited (book-level) + outlined + EXHAUSTIVELY machine-covered on the
+%   entire applied domain (dr2_lemma_nt_exhaustive.py 5/5: ALL 2,644,976 sums,
+%   six shells, worst 0.250; 24,096 ramified instances, worst 0.119). Grade:
+%   T7-CANDIDATE; final T7 promotion awaits operator review of the pin note.
 %   Arbitrary (non-lattice) Q remains
 %   OPEN; the decoupling route remains T4 conditional and is NOT load-bearing;
 %   this package does not by itself close the full Reading-H C_full theorem.
@@ -59,12 +62,26 @@
 %        reproducibility axis is CLOSED; the single remaining item for final T7
 %        promotion is the Lemma NT pin (citation or in-bundle proof).
 %        Publication-qualifier metadata patch only; no content change.
+%   v1.4 (2026-06-12) LEMMA NT PIN (operator-approved in-bundle route): new proof
+%        note dr2-lemma-nt-inbundle-260612-v1.0 (NT-1 representation <-> square-
+%        root correspondence, full proof; NT-2 CRT/Hensel root count, full proof;
+%        unramified assembly r_{L_m}(D) <= 24 d(D)^2 <<_eps D^eps COMPLETE with
+%        2-adic control nu_2(|m0|^2) <= 1 proved; ramified corner: book-level
+%        citation + conductor-descent outline). New 8th entry script
+%        dr2_lemma_nt_exhaustive.py (5/5, 1.2 s): the applied chain r_Q(m) <=
+%        6 d(4R-|m|^2) verified for EVERY distinct sum m across ALL six shells
+%        (2,644,976 sums; worst ratio 0.250; degenerate D=0 sums exact; 24,096
+%        ramified instances all pass, worst 0.119; per-shell maxima == archived
+%        T'). Entry manifest 7 -> 8 scripts, asserts 33/33 -> 38/38. The sharp
+%        constant 6 d(D) remains a cited classical remark, NOT load-bearing
+%        (the chain needs only d(D)^2 <<_eps D^eps). Final T7 promotion awaits
+%        operator review of the pin note (the operator's last HOLD item).
 % =============================================================================
 
 \sloppy
 \section*{1. Purpose and scope}
 
-This referee document concerns DR-2 (the additive-energy / discrete-restriction bound) for the lattice competitor class. It is a harmonic-analysis / additive-combinatorics result, of interest independently of TECT. \textbf{Scope:} $Q=\Lambda\cap\{|x|^2=R\}$ a fixed crystallographic lattice shell. \textbf{Not claimed:} the arbitrary (non-lattice) $Q$ case remains OPEN (the decoupling-based route is T4 conditional and not load-bearing); this package does not by itself close the full Reading-H $C_{\rm full}$ theorem. \textbf{Grade:} T7-candidate on the lattice class. The 7-script clean-run is operator-CONFIRMED (2026-06-12); the single remaining item for a confirmed-T7 promotion is the Lemma NT pin (Sec.~3; textbook citation or in-bundle proof).
+This referee document concerns DR-2 (the additive-energy / discrete-restriction bound) for the lattice competitor class. It is a harmonic-analysis / additive-combinatorics result, of interest independently of TECT. \textbf{Scope:} $Q=\Lambda\cap\{|x|^2=R\}$ a fixed crystallographic lattice shell. \textbf{Not claimed:} the arbitrary (non-lattice) $Q$ case remains OPEN (the decoupling-based route is T4 conditional and not load-bearing); this package does not by itself close the full Reading-H $C_{\rm full}$ theorem. \textbf{Grade:} T7-candidate on the lattice class. The 7-script clean-run is operator-CONFIRMED (2026-06-12), and the Lemma NT pin is now IN-BUNDLE (Sec.~3: proof note \texttt{dr2-lemma-nt-inbundle-260612-v1.0} -- unramified case proved in full, ramified corner cited + outlined + exhaustively machine-covered on the applied domain); the confirmed-T7 promotion awaits the operator's review of the pin note.
 
 \section*{2. Definitions and the result}
 
@@ -134,9 +151,19 @@ w(\Delta_0)\,d(D)$; a single class's count is at most the total. This is
 textbook material (Dirichlet's class-number/representation formula; e.g.\
 Landau, or Cox, \emph{Primes of the Form $x^2+ny^2$}), but the package treats it
 as an IMPORT: the load-bearing chain is written with the constant $C_\Lambda$,
-and $C_\Lambda\le6$ holds once Lemma NT is cited or proved in the bundle.
-Machine evidence: $r\le 6\,d$ holds on every tested configuration with worst
-ratio $T'/6d=0.25$ (\texttt{dr2\_divcirc\_proof.py} 4/4).
+and $C_\Lambda\le6$ holds once Lemma NT is cited or proved in the bundle. \textbf{Pin status (v1.4):} the lemma is now
+PINNED IN-BUNDLE by the proof note \texttt{dr2-lemma-nt-inbundle-260612-v1.0}:
+the unramified case (every odd $p\mid D$ with $p^2\nmid\Delta_0$) is proved in
+full, elementarily, with the explicit constant $r_{L_m}(D)\le24\,d(D)^2$
+(sufficient for the chain, which needs only $d(D)^2\ll_\varepsilon
+D^\varepsilon$); the ramified corner carries a book-level citation
+(Landau/Cassels/Cox), a conductor-descent outline, and EXHAUSTIVE applied-domain
+machine coverage.
+Machine evidence: $r\le 6\,d$ holds for EVERY distinct sum $m$ of every applied
+shell -- $2{,}644{,}976$ sums, worst ratio $0.250$, $24{,}096$ ramified
+instances all passing (worst $0.119$)
+(\texttt{dr2\_lemma\_nt\_exhaustive.py} 5/5); the richest-circle spot check
+(\texttt{dr2\_divcirc\_proof.py} 4/4) is thereby subsumed.
 
 \paragraph{Assembly.} Lemma A + the reduction + Lemma NT give
 $T'(Q)\le C_\Lambda d(4R-|m^*|^2)\ll_\varepsilon R^\varepsilon$ (divisor bound,
@@ -147,11 +174,11 @@ not load-bearing.
 
 \section*{4. Numerical reproduction}
 
-\paragraph{Entry-script manifest (patch v1.1-1; complete, no ellipsis).} Seven
+\paragraph{Entry-script manifest (patch v1.1-1; amended v1.4: 8 scripts).} Eight
 scripts, each self-contained with self-test asserts, all exit 0 (AI-side clean-run
-2026-06-12, 33/33 asserts PASS in total; operator clean-run 2026-06-12: 6/7 PASS with
-the pre-patch \texttt{dr2\_lattice\_divisor.py} v1.0.0 timing out on $R=9974$ ---
-repaired by the v2.0.0 runtime patch, see revision history):
+2026-06-12, 38/38 asserts PASS in total; operator clean-run 2026-06-12 confirmed the
+first seven at 33/33; the 8th, \texttt{dr2\_lemma\_nt\_exhaustive.py}, is NEW with
+the v1.4 Lemma NT pin and awaits the operator's one-script re-run, $1.2$\,s):
 
 \begin{enumerate}
 \item \texttt{codes/vacuum/dr2\_circle\_richness.py} (5/5) --- Lemma A (sum-circle
@@ -174,6 +201,10 @@ cross-energy lemma $E_+(A,B)\le3|A||B|$ and the off-diagonal pencil bound.
 cross-check (NOT load-bearing).
 \item \texttt{codes/vacuum/dr2\_decoupling\_exponent.py} (4/4) --- decoupling-route
 exponent cross-check (NOT load-bearing).
+\item \texttt{codes/vacuum/dr2\_lemma\_nt\_exhaustive.py} (5/5; NEW v1.4) --- the
+Lemma NT applied chain $r_Q(m)\le6\,d(4R-|m|^2)$ verified EXHAUSTIVELY for all
+$2{,}644{,}976$ distinct sums across the six shells, ramified corner included;
+$1.2$\,s.
 \end{enumerate}
 
 Supporting / integration-layer (NOT an entry script): \texttt{codes/vacuum/dr2\_hadmcoh\_margin.py}
@@ -235,21 +266,21 @@ Scope:                   lattice shells Q=Lambda cap {|x|^2=R} ONLY.
                          Arbitrary non-lattice Q OPEN; decoupling
                          route T4 conditional (cross-check, not
                          load-bearing); not a full C_full closure.
-Evidence grade:          T7-CANDIDATE on the lattice class, modulo
-                         the explicit textbook Lemma NT import +
-                         clean-run. The T7 label applies ONLY to the
-                         lattice-shell class after importing Lemma
-                         NT; without Lemma NT this package is a
-                         T6/T7 draft, NOT a confirmed T7 publication.
-                         EXECUTED (7 entry scripts, 33/33 asserts;
-                         lattice_divisor v2.0.0 runtime patch, 2.5 s).
+Evidence grade:          T7-CANDIDATE on the lattice class; Lemma NT
+                         PINNED IN-BUNDLE (unramified: full proof,
+                         24 d(D)^2; ramified corner: cited + outlined
+                         + exhaustively machine-covered on the
+                         applied domain). EXECUTED (8 entry scripts,
+                         38/38 asserts; lemma_nt_exhaustive NEW,
+                         2,644,976 sums, worst 0.250).
 Reproduction command:    python codes/vacuum/dr2_circle_richness.py ;
                          codes/vacuum/dr2_divcirc_proof.py ;
                          codes/vacuum/dr2_lattice_divisor.py ;
                          codes/vacuum/dr2_cross_energy_lemma.py ;
                          codes/vacuum/dr2_weighted_energy.py ;
                          codes/vacuum/dr2_decoupling_iteration.py ;
-                         codes/vacuum/dr2_decoupling_exponent.py
+                         codes/vacuum/dr2_decoupling_exponent.py ;
+                         codes/vacuum/dr2_lemma_nt_exhaustive.py
 Falsifier:               a lattice shell with E_+ exceeding the
                          divisor bound; or a counterexample to the
                          rank-2 representation count r <= C_NT d(D).
@@ -265,10 +296,11 @@ No-overclaim statement:  lattice class only, modulo the explicitly
                          arbitrary non-lattice Q is OPEN; the
                          decoupling route is a non-load-bearing
                          cross-check.
-Next required action:    Lemma NT pin ONLY (textbook citation or
-                         in-bundle proof) -> final T7 promotion.
-                         Reproducibility axis CLOSED (clean-run
-                         confirmed 2026-06-12). Then per policy
-                         sec.15: T-013 SYNTHESIS capstone.
+Next required action:    operator review of the Lemma NT pin note
+                         (dr2-lemma-nt-inbundle v1.0) + one-script
+                         re-run (dr2_lemma_nt_exhaustive.py, 1.2 s)
+                         -> final T7 promotion decision + bundle
+                         re-stamp. Then per policy sec.15: T-013
+                         SYNTHESIS capstone.
 \end{verbatim}
 }

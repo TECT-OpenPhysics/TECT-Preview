@@ -9,17 +9,18 @@
 
 **Falsifier.** An admissible pattern inside a certified box (a(P)<1) whose exact off-diagonal Bloch correction exceeds the Lemma-B envelope; or any pattern undercutting the +0.00432 band margin at the anchor.
 
-## DR-2/  ·  10 proof units  ·  tier span T5/T6/T7
+## DR-2/  ·  11 proof units  ·  tier span T5/T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `dr-2-referee-package` | v1.3 | T7 | For Q=Lambda cap {\|x\|^2=R} (fixed crystallographic lattice), with N=\|Q\|, E_+(Q)=#{a+b=c+d}, r_Q(m)=#{(a,b):a+b=m}, T'(Q)=max_{m!=0} r_Q(m): E_+(Q) <=… | T7-CANDIDATE on the lattice class, modulo the… | Lemma NT pin ONLY (textbook citation or in-bundle proof) -> final T7 promotion. Reproduci… |
+| `dr-2-referee-package` | v1.4 | T7 | For Q=Lambda cap {\|x\|^2=R} (fixed crystallographic lattice), with N=\|Q\|, E_+(Q)=#{a+b=c+d}, r_Q(m)=#{(a,b):a+b=m}, T'(Q)=max_{m!=0} r_Q(m): E_+(Q) <=… | T7-CANDIDATE on the lattice class; Lemma NT P… | operator review of the Lemma NT pin note (dr2-lemma-nt-inbundle v1.0) + one-script re-run… |
 | `dr2-circle-richness-reduction` | v1.0 | T5* | For finite Q in S^2 with N=\|Q\|, E_+(Q) <= (1+T'(Q))N^2, where T'(Q) = max occupancy of a proper (m!=0) sum-level circle C_m = S^2 cap {x.m=\|m\|^2/2}. … | Lemma A + Corollary 1: T7 PROVED unconditiona… | Either bound T'(Q) for arbitrary Q (open; = carrier richness), or accept the decoupling r… |
 | `dr2-cross-scale-induction` | v1.1 | T6 | For finite Q in S^2, M(\|f_Q\|^4)=E_+(Q) exactly (Besicovitch mean; no integrality). Conditional on l2-decoupling at p=4, the iteration E_+(Q) <=_eps d… | DERIVED with a CORRECT bridge (Besicovitch me… | Operator decision on whether R1+R2 are accepted as textbook-standard (-> T5 or T6 PROVED … |
 | `dr2-decoupling-closure` | v1.1 | T5* | SEPARATED Q in S^2: E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter decoupling (d=3, p=4), via the Schwartz-majorant localisatio… | Separated T6 PROVED CONDITIONAL; unrestricted… | Write the \S4 cross-scale energy bound (close the multi- scale reduction); then DR-2 = T6… |
 | `dr2-extraction-lemmas` | v1.0 | T5* | (L1 EXACT) a carrier with p_D pattern pairs contains exactly 2 p_D pattern points (rich carrier = rich circle). (L2 EXACT) for any circle family, E =… | ANALYTIC (L1/L2 exact; L3 conditional) at T3. | (only if operator puts DR-2 on path) L3 constant chase + chi spot-check. Mainline continu… |
 | `dr2-hadmcoh-discharge-decision` | v1.2 | T5* | For Q subset of a crystallographic shell, the G1'''-AE bound sum_t \|w_t\|^2 <= (1+T'(Q)) I^2 (R-027) holds with K_adm = 1+T'(Q) <= K_allowed(n) = 8 + … | Integration/decision note, OPERATOR ACCEPTED.… | DONE (operator accepted, enacted). Mainline: SC-SCOPE all-orders lift is now the sole rem… |
 | `dr2-lattice-divisor-closure` | v1.2 | T5* | For Q = Lambda cap {\|x\|^2=R} (Lambda a fixed crystallographic lattice, rational after clearing denominators), E_+(Q) <= (1 + 6 max_{m!=0} d(4R-\|m\|^2)… | T7 PROVED UNCONDITIONAL (modulo textbook numb… | Operator integration: establish chi(P) <~ T' (the STEP-5B carrier-richness <-> sum-circle… |
+| `dr2-lemma-nt-inbundle` | v1.0 | T7 | (i) UNRAMIFIED (proved in full, elementary): r_{L_m}(D) <= 24 d(D)^2 <<_eps D^eps via NT-1 (primitive reps <-> square roots of Delta_0 mod 4n, fiber … | ANALYTIC (NT-1, NT-2, unramified assembly: co… | operator review of this note -> decide the DR-2 final T7 promotion (and whether the ramif… |
 | `dr2-pencil-rigidity-reduction` | v1.0 | T5* | (a) T7: E_off(A,B) <= 2 min(\|A\|^2-\|A\|,\|B\|^2-\|B\|), E_+(A,B) <= 3\|A\|\|B\| for A,B on sphere-circles (r<=2 for w!=0); corrects the external 2\|A\|\|B\| (off b… | (a) EXECUTED (dr2_cross_energy_lemma.py 6/6) … | Prove or disprove the PSM / Pencil Rigidity conjecture (independent math branch); none re… |
 | `dr2-programme-consolidation` | v1.0 | T5* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
@@ -73,4 +74,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-12T07:41:26Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-12T08:08:23Z by build_index.py v1.0.1 -->

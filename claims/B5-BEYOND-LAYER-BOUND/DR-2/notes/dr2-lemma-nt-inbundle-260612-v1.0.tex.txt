@@ -1,0 +1,264 @@
+% =============================================================================
+% Title: Lemma NT in-bundle: the circle representation bound r_{L_m}(D) <= C d(D) for rank-2 lattice sections
+% Claim: B5-BEYOND-LAYER-BOUND (DR-2 support lemma; the single remaining pin for the DR-2 final T7 promotion)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: IN-BUNDLE PROOF NOTE, operator review pending. Two-tier pin per the
+%   2026-06-12 operator directive (in-bundle proof preferred over bare citation):
+%   (i) the UNRAMIFIED case (every odd prime p | D has p^2 NOT dividing the
+%   section discriminant) is PROVED IN FULL, elementarily, with the explicit
+%   constant r_{L_m}(D) <= 24 d(D)^2 <<_eps D^eps -- no class-number formula,
+%   no composition theory; (ii) the RAMIFIED corner (odd p with p^2 | Delta_0
+%   and p | D) is stated with a conductor-descent proof OUTLINE and a
+%   book-level citation, AND is exhaustively machine-covered on the entire
+%   applied domain (dr2_lemma_nt_exhaustive.py: ALL 2,644,976 distinct sums m
+%   across the six shells R=101..9974 satisfy r_Q(m) <= 6 d(4R-|m|^2); 24,096
+%   ramified instances, worst ratio 0.119; global worst 0.250). The classical
+%   sharp form 6 d(D) (Dirichlet) is retained as a NON-LOAD-BEARING remark.
+%   The DR-2 theorem's conclusion T' <<_eps R^eps needs only d(D)^2 <<_eps D^eps,
+%   so the in-bundle constant is fully sufficient for the chain.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue. Lemma NT-1 (representation <-> square-root
+%        correspondence) and NT-2 (root count) proved in full; unramified
+%        assembly complete with explicit constants; ramified corner cited +
+%        outlined + exhaustively machine-covered on the applied domain; new
+%        exhaustive verification script (5/5 PASS, 1.2 s).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Throughout, $m\in\mathbb Z^3\setminus\{0\}$, $m_0=m/\gcd(m)$ its primitive part,
+and $L_m=\mathbb Z^3\cap m^\perp=L_{m_0}$ the rank-two lattice section. For an
+integer $D\ge1$ write $r_{L_m}(D)=\#\{y\in L_m:\ |y|^2=D\}$ and let $d(\cdot)$
+be the divisor function. The DR-2 lattice theorem uses
+$r_Q(m)\le\#(Q\cap C_m)\le r_{L_m}(4R-|m|^2)$ and needs
+$r_{L_m}(D)\ll_\varepsilon D^\varepsilon$, uniformly in $m$.
+
+\textbf{Lemma NT (two-tier pin).}
+\emph{(i) (Unramified case; PROVED in full below.) Suppose every odd prime
+$p\mid D$ satisfies $p^2\nmid\Delta_0$, where $\Delta_0$ is the discriminant of
+the primitive part of the Gram form of $L_{m_0}$. Then}
+\[
+r_{L_m}(D)\;\le\;24\,d(D)^2\;\ll_\varepsilon\;D^\varepsilon .
+\]
+\emph{(ii) (Ramified corner; citation + outline + exhaustive applied-domain
+machine coverage.) Without the unramified hypothesis the same conclusion
+$r_{L_m}(D)\ll_\varepsilon D^\varepsilon$ holds, with the classical sharp form
+$r_{L_m}(D)\le 6\,d(D)$ (Dirichlet); see Sec.~5.}
+
+\textbf{Scope.} Tier (i) covers the generic situation and is self-contained.
+Tier (ii) is the only imported step; on the APPLIED domain of the DR-2 package
+(all six shells $R=101$--$9974$) it is verified exhaustively by machine for
+every single sum $m$ (Sec.~5), so no applied instance rests on the citation
+alone.
+
+\section*{2. Setup: the section form, content, and 2-adic control}
+
+Fix a basis $(u,v)$ of $L_{m_0}$. The length form
+$q(x,y)=|xu+yv|^2=\alpha x^2+\beta xy+\gamma y^2$ has integer coefficients
+($\alpha=|u|^2$, $\beta=2u\cdot v$, $\gamma=|v|^2$) and discriminant
+\[
+\Delta=\beta^2-4\alpha\gamma=-4\det\!\begin{pmatrix}|u|^2&u\cdot v\\ u\cdot v&|v|^2\end{pmatrix}
+=-4\,\mathrm{covol}(L_{m_0})^2=-4|m_0|^2,
+\]
+since a primitive $m_0$ gives $\mathrm{covol}(\mathbb Z^3\cap m_0^\perp)=|m_0|$.
+Let $g=\gcd(\alpha,\beta,\gamma)$ be the content, $q=g\,q_0$ with $q_0$
+primitive of discriminant $\Delta_0=\Delta/g^2$. Then
+$r_{L_m}(D)=r_{q}(D)=r_{q_0}(D/g)$ (zero unless $g\mid D$), and
+$d(D/g)\le d(D)$, so it suffices to bound $r_{q_0}$.
+
+\textbf{2-adic control (proved).} A primitive $m_0$ has at least one odd
+coordinate, and a case check mod $8$ (one, two, or three odd coordinates give
+$|m_0|^2\equiv$ odd, $2$ or $6$ mod $8$, odd, respectively) shows
+$\nu_2(|m_0|^2)\le1$. Hence $\nu_2(\Delta_0)\le\nu_2(\Delta)\le3$: the prime
+$2$ is uniformly bounded-ramified and contributes only an absolute constant
+below. The ramified/unramified dichotomy is therefore a statement about ODD
+primes only.
+
+\section*{3. Lemma NT-1: representations correspond to square roots of $\Delta_0$}
+
+\textbf{Lemma NT-1.} \emph{Let $q_0$ be a primitive positive-definite integral
+binary form of discriminant $\Delta_0<0$ and $n\ge1$. Let $r^*_{q_0}(n)$ count
+the representations $q_0(a,b)=n$ with $\gcd(a,b)=1$. Then}
+\[
+r^*_{q_0}(n)\;\le\;w(\Delta_0)\cdot N_{\Delta_0}(n),
+\qquad
+N_{\Delta_0}(n)=\#\{s\ \mathrm{mod}\ 2n:\ s^2\equiv\Delta_0\ (\mathrm{mod}\ 4n)\},
+\]
+\emph{where $w(\Delta_0)$ is the number of proper automorphs: $6$ if
+$\Delta_0=-3$, $4$ if $\Delta_0=-4$, $2$ otherwise.}
+
+\emph{Proof.} Let $q_0(a,b)=n$ with $\gcd(a,b)=1$. Choose $c,d\in\mathbb Z$
+with $ad-bc=1$ and set $U=\bigl(\begin{smallmatrix}a&c\\ b&d\end{smallmatrix}\bigr)\in
+SL_2(\mathbb Z)$. Then $(q_0\circ U)(x,y)=nx^2+sxy+ty^2$ for some
+$s,t\in\mathbb Z$ with $s^2-4nt=\Delta_0$, so $s^2\equiv\Delta_0\ (4n)$. The
+completion $(c,d)$ is unique up to $(c,d)\mapsto(c+\lambda a,\,d+\lambda b)$,
+which shifts $s\mapsto s+2\lambda n$: the class $s\bmod 2n$ depends only on the
+representation. This defines $\varphi:\{$primitive representations$\}\to
+\{s\bmod 2n:\ s^2\equiv\Delta_0\ (4n)\}$. If $\varphi(a,b)=\varphi(a',b')$,
+the corresponding $U,U'$ satisfy $q_0\circ U=q_0\circ U'$ (the middle
+coefficient fixes $t=(s^2-\Delta_0)/4n$), so $U'U^{-1}$ is a proper automorph
+of $q_0$ carrying $(a,b)^{\!\top}$ (first column of $U$) to
+$(a',b')^{\!\top}$. A positive-definite form has exactly $w(\Delta_0)$ proper
+automorphs (the classical count via the reduced representative: $\pm I$ always;
+the extra ones only for $\Delta_0=-3,-4$). Hence every fiber of $\varphi$ has
+at most $w(\Delta_0)$ elements. $\square$
+
+\section*{4. Lemma NT-2: counting the square roots, and the unramified assembly}
+
+\textbf{Lemma NT-2.} \emph{For $M\ge1$ and any integer $\Delta$,}
+\[
+\#\{x\bmod M:\ x^2\equiv\Delta\ (\mathrm{mod}\ M)\}
+\;\le\;
+2^{\omega(M)+1}\prod_{p\,\mathrm{odd},\ p\mid\gcd(M,\Delta)} p^{\lfloor\min(\nu_p(\Delta),\nu_p(M))/2\rfloor},
+\]
+\emph{where $\omega$ counts distinct prime factors.}
+
+\emph{Proof.} By CRT it suffices to bound the roots mod $p^k$, $p^k\Vert M$.
+Let $\nu=\min(\nu_p(\Delta),k)$ (with $\nu_p(0)=\infty$). $p$ odd: if $\nu=0$,
+Hensel lifting of the at most $2$ roots mod $p$ gives $\le2$. If $\nu=k$,
+$x^2\equiv0\ (p^k)$ forces $\nu_p(x)\ge\lceil k/2\rceil$: $p^{\lfloor k/2\rfloor}$
+roots. If $0<\nu<k$: solutions require $\nu$ even and $x=p^{\nu/2}u$ with
+$u^2\equiv\Delta/p^\nu\ (p^{k-\nu})$, a unit square: $\le2$ Hensel roots, each
+giving $p^{\nu/2}$ choices of $x$ mod $p^k$ --- total $\le2p^{\nu/2}$. In all
+cases the count is $\le2\,p^{\lfloor\nu/2\rfloor}$. For $p=2$ the same analysis
+with the usual mod-$8$ care gives $\le4\cdot2^{\lfloor\nu/2\rfloor}$, absorbed
+into the leading $2^{\omega(M)+1}$ together with one factor $2$ per odd prime.
+$\square$
+
+\textbf{Unramified corollary (explicit constant).} Suppose every odd $p\mid n$
+has $p^2\nmid\Delta_0$. For odd $p$: $\nu_p(\Delta_0)\le1$, and an odd
+$\nu<k$ admits no solution, so each odd prime contributes $\le2$. For $p=2$:
+$\nu_2(\Delta_0)\le3$ (Sec.~2), contributing $\le4\cdot2^{\lfloor3/2\rfloor}=8$.
+Since $N_{\Delta_0}(n)=\tfrac12\#\{x\bmod4n:\ x^2\equiv\Delta_0\ (4n)\}$
+(the two lifts $s,s+2n$ of each class coincide mod $4n$-condition), we get
+$N_{\Delta_0}(n)\le\tfrac12\cdot8\cdot2^{\omega_{\rm odd}(n)}\le4\,d(n)$, hence
+by NT-1
+\[
+r^*_{q_0}(n)\;\le\;6\cdot4\,d(n)\;=\;24\,d(n).
+\]
+Removing primitivity: every $y$ with $|y|^2=D$ is $y=e\,y_0$ with $y_0$
+primitive and $e^2\mid D$, so
+\[
+r_{q_0}(D)\;=\;\sum_{e^2\mid D} r^*_{q_0}(D/e^2)
+\;\le\;24\sum_{e^2\mid D}d(D/e^2)
+\;\le\;24\,d(D)\cdot\#\{e:\ e^2\mid D\}
+\;\le\;24\,d(D)^2 .
+\]
+With Sec.~2 (content) this proves Lemma NT(i):
+$r_{L_m}(D)\le24\,d(D)^2\ll_\varepsilon D^\varepsilon$. $\square$
+
+\section*{5. The ramified corner: citation, outline, exhaustive applied coverage}
+
+\textbf{Statement (imported).} For odd $p$ with $p^2\mid\Delta_0$ and $p\mid D$
+the same conclusion holds; classically, for every positive-definite integral
+binary form one has the sharp uniform bound $r_{q_0}(D)\le6\,d(D)$
+(Dirichlet's representation formula: the total count over all classes of
+discriminant $\Delta_0$ is $w(\Delta_0)\sum_{d\mid D}\chi_{\Delta_0}(d)$ for
+the fundamental part, extended to non-fundamental discriminants by conductor
+reduction; a single class is at most the total). Book-level sources: Landau,
+\emph{Vorlesungen \"uber Zahlentheorie} (Part IV, representation numbers of
+binary forms); Cassels, \emph{Rational Quadratic Forms} (representation theory
+of binary forms and conductor descent); Cox, \emph{Primes of the Form
+$x^2+ny^2$} (Dirichlet formula, fundamental case).
+
+\textbf{Descent outline (not load-bearing).} Over $\mathbb Z_p$ ($p$ odd,
+$p^2\mid\Delta_0$) diagonalize $q_0\cong\varepsilon_1x^2+\varepsilon_2p^jy^2$,
+$j=\nu_p(\Delta_0)\ge2$, $\varepsilon_i$ units. A representation of $D$ with
+$p\mid D$ and $p\nmid x$ would force $\varepsilon_1x^2\equiv D\ (p)$, fixing
+$x$ mod $p$ up to sign; iterating localizes the count, and extracting
+$x=p x'$ where forced reduces $q_0$ to a form of discriminant $\Delta_0/p^2$
+(conductor descent), terminating in the unramified case of Sec.~4 after
+$\le\nu_p(\Delta_0)/2$ steps with a bounded multiplicative loss per step.
+
+\textbf{Exhaustive applied-domain machine coverage (load-bearing for the
+package).} The new script \texttt{codes/vacuum/dr2\_lemma\_nt\_exhaustive.py}
+(5/5 asserts, $1.2$\,s) verifies the applied chain
+$r_Q(m)\le6\,d(4R-|m|^2)$ for EVERY distinct sum $m\ne0$ of every shell used
+by the DR-2 package: $2{,}644{,}976$ sums across $R=101/314/909/1826/4994/9974$,
+global worst ratio $0.250$; degenerate $D=0$ sums have $r_Q(m)=1$ exactly; the
+$24{,}096$ ramified-corner instances (odd $p$: $p^2\mid|m_0|^2$, $p\mid D$) ALL
+satisfy the bound with worst ratio $0.119$; and the per-shell maxima reproduce
+the archived $T'$ values ($18/24/24/24/32/48$). Thus no instance to which the
+DR-2 theorem is actually applied rests on the citation alone.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The in-bundle constant is $24\,d(D)^2$, but the package
+quotes $6\,d(D)$.''} VALID with mitigation: the DR-2 conclusion needs only
+$T'\ll_\varepsilon R^\varepsilon$, for which $d(D)^2\ll_\varepsilon D^\varepsilon$
+is fully sufficient; the package v1.4 presents the in-bundle-proved form as
+load-bearing and the sharp $6\,d(D)$ as the classical remark. No claim depends
+on the constant $6$.
+\item[($\beta$)] \emph{``The ramified corner is still an import.''} VALID with
+mitigation, by design (operator two-tier directive): the corner is (a) stated
+precisely, (b) outlined, (c) book-level cited, and (d) exhaustively
+machine-verified on the ENTIRE applied domain ($24{,}096$ instances, worst
+$0.119$) --- the only place the citation is load-bearing is the abstract
+uniform statement beyond the applied shells.
+\item[($\gamma$)] \emph{``The $\nu_2(|m_0|^2)\le1$ and covolume $=|m_0|$ steps
+are asserted.''} DISMISSED: both are proved in Sec.~2 (mod-8 case check;
+$\mathbb Z^3=L_{m_0}\oplus\mathbb Z w$ with $w\cdot m_0=1$ for primitive $m_0$
+gives $\mathrm{covol}=|m_0|$), and both are implicitly machine-exercised by the
+exhaustive script across all $2.6$M sections.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} The NT-1 fiber bound is checked
+against the data: worst observed $r_Q(m)/6d=0.250$, i.e.\ a $\times4$ headroom;
+the unramified constant evaluates to $24\,d(D)^2\ge6\,d(D)$ always (the proved
+bound is weaker than the cited sharp one, never stronger --- the safe
+direction); and the exhaustive script's per-shell maxima cross-match the
+independent \texttt{dr2\_lattice\_divisor.py} archived $T'$ values exactly.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / DR-2 Lemma NT
+                         in-bundle pin
+Precise statement:       (i) UNRAMIFIED (proved in full, elementary):
+                         r_{L_m}(D) <= 24 d(D)^2 <<_eps D^eps via
+                         NT-1 (primitive reps <-> square roots of
+                         Delta_0 mod 4n, fiber <= w(Delta_0) <= 6)
+                         + NT-2 (CRT/Hensel root count) + content/
+                         imprimitivity reduction + nu_2(|m0|^2)<=1.
+                         (ii) RAMIFIED corner (odd p^2|Delta_0, p|D):
+                         classical 6 d(D) cited (Landau/Cassels/Cox)
+                         + descent outline + EXHAUSTIVE applied-
+                         domain machine check (2,644,976 sums, all
+                         shells, worst 0.250; 24,096 ramified
+                         instances, worst 0.119).
+Scope:                   rank-2 sections L_m of Z^3 (DR-2 lattice
+                         class). The DR-2 chain needs only
+                         d(D)^2 <<_eps D^eps: tier (i) suffices for
+                         every unramified instance; tier (ii) is
+                         machine-covered on the entire applied
+                         domain.
+Evidence grade:          ANALYTIC (NT-1, NT-2, unramified assembly:
+                         complete proofs) + EXECUTED
+                         (dr2_lemma_nt_exhaustive.py 5/5, 1.2 s) +
+                         CITED (ramified corner, book-level).
+Reproduction command:    python
+                         codes/vacuum/dr2_lemma_nt_exhaustive.py ;
+                         codes/vacuum/dr2_divcirc_proof.py
+Falsifier:               any m, D with r_{L_m}(D) > 24 d(D)^2 in the
+                         unramified case; any applied-domain sum
+                         with r_Q(m) > 6 d(4R-|m|^2); a counter-
+                         example to the NT-1 fiber bound.
+Tier before / after:     supports the DR-2 final T7 decision: the
+                         Lemma NT pin requested by the operator
+                         verdict 2026-06-12 (in-bundle proof route).
+                         No standalone tier; arbiter is the DR-2
+                         package + claim ledger.
+No-overclaim statement:  tier (i) is unconditional and self-
+                         contained; tier (ii) remains an import
+                         beyond the applied domain; the sharp
+                         constant 6 is NOT claimed in-bundle.
+Next required action:    operator review of this note -> decide the
+                         DR-2 final T7 promotion (and whether the
+                         ramified corner's citation suffices or the
+                         conductor descent should be written out).
+\end{verbatim}
+}

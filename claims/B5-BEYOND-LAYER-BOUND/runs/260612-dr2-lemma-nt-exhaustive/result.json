@@ -1,0 +1,51 @@
+{
+  "script": "dr2_lemma_nt_exhaustive.py",
+  "version": "1.0.0",
+  "lemma": "r_Q(m) <= 6 d(4R-|m|^2) for all m!=0 (applied Lemma-NT chain)",
+  "total_sums_checked": 2644976,
+  "worst_ratio": 0.25,
+  "worst_at": [
+    101,
+    12,
+    104,
+    48
+  ],
+  "ramified_instances": 24096,
+  "ramified_worst": 0.11904761904761904,
+  "Tprime_per_shell": {
+    "101": 18,
+    "314": 24,
+    "909": 24,
+    "1826": 24,
+    "4994": 32,
+    "9974": 48
+  },
+  "claims": [
+    {
+      "name": "exhaustive_bound_all_sums",
+      "passed": true,
+      "detail": "(r_Q(m) <= 6 d(4R-|m|^2) holds for EVERY one of 2644976 distinct sums m!=0 across all six shells R=101..9974 -- the applied Lemma-NT chain is 100%-machine-verified on its entire domain, not just the richest circle; worst ratio 0.250 at R=101 (r=12, D=104, 6d=48))"
+    },
+    {
+      "name": "degenerate_D0_exact",
+      "passed": true,
+      "detail": "(every degenerate sum m=2a (D=0) has r_Q(m)=1 exactly: the circle degenerates to y=0, matching the note)"
+    },
+    {
+      "name": "ramified_corner_covered",
+      "passed": true,
+      "detail": "(24096 ramified-corner instances (odd p: p^2 | |m0|^2, p | D) occur on the applied domain and ALL satisfy the bound (worst ratio 0.119) -- the one analytically cited+outlined case is exhaustively machine-covered where the theorem is actually applied)"
+    },
+    {
+      "name": "Tprime_cross_consistent",
+      "passed": true,
+      "detail": "(max_m r_Q(m) per shell {101: 18, 314: 24, 909: 24, 1826: 24, 4994: 32, 9974: 48} == dr2_lattice_divisor.py archived T' values -- the two scripts agree on the load-bearing quantity)"
+    },
+    {
+      "name": "headroom_factor",
+      "passed": true,
+      "detail": "(global worst r/6d = 0.250 < 0.5: the applied domain sits with >= x2 headroom below the Lemma NT ceiling -- the bound is never tight in practice)"
+    }
+  ],
+  "all_pass": true
+}
