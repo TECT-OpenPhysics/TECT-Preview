@@ -22,7 +22,7 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `B2-PROPA-HLAYER` | T7 | A1-KERNEL-CONV | — | G-A0-DUI (2), H-A0-removal (2), Prop-A (15) | [INDEX](B2-PROPA-HLAYER/INDEX.md) |
 | `B3-BCC-STRUCT` | T4 | — | G3PB-III | _scaffold (no notes yet)_ | — |
 | `B4-MASS-GAP` | T5 | — | — | _scaffold (no notes yet)_ | — |
-| `B5-BEYOND-LAYER-BOUND` | T5 | — | — | DR-2 (11), H-LAYER-AUX (9), SC-SCOPE (10), STEP-5B (9), T5-DOSSIER (1) | [INDEX](B5-BEYOND-LAYER-BOUND/INDEX.md) |
+| `B5-BEYOND-LAYER-BOUND` | T5 | — | — | DR-2 (11), H-LAYER-AUX (9), SC-SCOPE (10), STEP-5B (10), T5-DOSSIER (1) | [INDEX](B5-BEYOND-LAYER-BOUND/INDEX.md) |
 
 ## Sector C — Spacetime / Lorentz / Gravity
 
@@ -65,4 +65,4 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `F2-BARYOGENESIS` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 | `F3-INFLATION-CMB` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 
-<!-- generated 2026-06-12T08:08:23Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-12T16:12:04Z by build_index.py v1.0.1 -->

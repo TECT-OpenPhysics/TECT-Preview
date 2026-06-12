@@ -1,0 +1,241 @@
+% SUPERSEDED by tadpole-reabsorption-lemma-260606-260612-v1.2.tex.txt
+% =============================================================================
+% Title: The tadpole reabsorption lemma: normal-ordered cubic vertices in the matched bookkeeping eliminate the tadpole channel identically
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE lift input (c) of unit U4; gate R-U6-1; task T-004)
+% Version: v1.1 -- first issued 2026-06-06; this version issued 2026-06-12
+% Status: PROOF WRITTEN (R-U6-1 formal alignment writeup DELIVERED; R-U6-2
+%   machine cross-check EXECUTED, ru61_tadpole_alignment.py 8/8 PASS).
+%   Upgrades the v1.0 T3 PROOF SKETCH to a written proof via the Wick/Hermite
+%   normal-ordering identity, aligned term-by-term with the production
+%   bookkeeping (Math424-AddA decomposition; Math437 layer functional).
+%   INCLUDES A SELF-CAUGHT CORRECTION of the v1.0 mechanism wording: the naive
+%   "3M g_3 = 3M u_eff F coincides term-by-term with the stationarity source"
+%   is IMPRECISE in the v-line (it over-counts by exactly 15vM^2, the symmetry
+%   factor 2 of the double self-loop); the exact mechanism is the Hermite
+%   identity, and the lemma's CONCLUSION (tadpole channel absent identically)
+%   is unaffected. Tier action: OPERATOR decision (the note itself enacts no
+%   tier or gate change; B5 stays T5).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-06) T3 PROOF SKETCH: structural argument at the bookkeeping
+%        level; residuals R-U6-1 (formal alignment writeup) and R-U6-2 (machine
+%        cross-check) registered; U4 tadpole rows struck conditionally.
+%   v1.1 (2026-06-12) T-004 execution: (i) full formal proof via the Hermite
+%        normal-ordering identity, with the j=0/1/2/3 collections aligned
+%        against the production functional (j=0 reproduces the 0.25U+2.5VM
+%        quartic line EXACTLY; j=1 reproduces the 3uM+15vM^2 gap dressing
+%        EXACTLY; j=3 gives the dressed cubic g_3 = u_eff c + (10v/3)c^3);
+%        (ii) SELF-CAUGHT CORRECTION: v1.0's "3M g_3" mechanism over-counts
+%        the v-line by 15vM^2 (machine-quantified: 0.58181468 at M_R); the
+%        normal-ordering route is the exact statement; (iii) the v1.0
+%        beta/gamma objection cases (off-optimum competitors; resonant O(I^2))
+%        written out (Sec. 5); (iv) R-U6-2 executed: 8/8 asserts PASS
+%        (pairing split 15=6+9 brute-force; Hermite coefficients exact;
+%        j=0/j=1 production alignment vs the independent gap solver,
+%        m_R - r = 0.29952571 reproduced; Lemma-1 boxed identity to 1e-12;
+%        HEX argmin 0.3093733 oracle reproduced; endpoint remainder 4.3e-10
+%        < 1e-6; u_eff(M_R) = 2.685 matches the certified value).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Unit U4 identified the tadpole channel ($9M^2\hat G$ of $\langle V_3^2\rangle_c$)
+as load-bearing for any SC-SCOPE lift. This note proves the channel is absent
+identically in the matched bookkeeping, discharging the v1.0 residuals R-U6-1
+(this writeup) and R-U6-2 (the machine cross-check). \textbf{Scope:} the matched
+bookkeeping of the B5 chain (per-pattern self-consistent Hartree dressing +
+per-pattern condensate optimization, Math426--Math437). \textbf{Not claimed:}
+any change to the sunset channel, any SC-SCOPE margin, any tier or gate.
+
+\section*{2. The normal-ordering identity}
+
+Let $\delta$ be the Gaussian fluctuation with variance $M=\langle\delta^2\rangle$
+and let ${:}\cdot{:}$ denote Wick normal-ordering with respect to it. The
+classical identity
+\[
+\delta^n=\sum_{k\ge0}\binom{n}{2k}(2k-1)!!\,M^k\,{:}\delta^{\,n-2k}{:}
+\]
+(one-line proof: apply $\langle e^{\lambda\delta}\rangle=e^{\lambda^2M/2}$ to
+$e^{\lambda\delta}=e^{\lambda^2M/2}\,{:}e^{\lambda\delta}{:}$ and match powers)
+gives in particular
+$\delta^3=3M{:}\delta{:}+{:}\delta^3{:}$,\quad
+$\delta^4=6M{:}\delta^2{:}+3M^2+{:}\delta^4{:}$,\quad
+$\delta^5=10M{:}\delta^3{:}+15M^2{:}\delta{:}+{:}\delta^5{:}$,\quad
+$\delta^6=15M{:}\delta^4{:}+45M^2{:}\delta^2{:}+15M^3+{:}\delta^6{:}$.
+All coefficients are machine-verified by exact pairing counts
+(\texttt{ru61\_tadpole\_alignment.py}, assert 2).
+
+\section*{3. Exact alignment with the production bookkeeping}
+
+Write $\varphi=c+\delta$ with condensate $c=t\,\psi$, $\langle\psi^2\rangle=1$,
+and expand the interaction $\tfrac u4\varphi^4+\tfrac v6\varphi^6$ by the
+identity above, collecting by the normal-ordered degree $j$:
+
+\textbf{$j=0$ (the layer functional).} The $c^4$ coefficient is
+$\tfrac u4+\binom62\tfrac v6 M\cdot\langle\psi^4\rangle$-normalised
+$=\tfrac u4+\tfrac{5v}{2}M=\tfrac{u_{\rm eff}(M)}4$ with
+$u_{\rm eff}=u+10vM$: EXACTLY the $0.25\,UN_4+2.5\,VN_4M$ line of the
+production engine (Math437 \S1). Machine: assert 3 (equality to $10^{-15}$ at
+$M=M_R$).
+
+\textbf{$j=1$ (the source).} The coefficient of ${:}\delta{:}$ linear in $c$ is
+$3uM+15vM^2$ (from $\delta^3$ and $\delta^5$): EXACTLY the gap/stationarity
+dressing -- at the $A=0$ gap point the production solver gives
+$m_R-r=0.29952571$, reproduced by $3uM_R+15vM_R^2$ to $5\times10^{-7}$
+(assert 4, independent solver). The $c^3$ source is $u_{\rm eff}t^3$ and the
+$c^5$ source the sextic line: together the $j=1$ collection IS
+$\partial\Phi/\partial t$ plus the $\hat\kappa$ dressing, which VANISHES at
+each pattern's own optimum -- the matched bookkeeping's defining property.
+
+\textbf{$j=2$.} The ${:}\delta^2{:}$ collection is the per-pattern gap dressing
+(the production $\texttt{gap\_solve}$ line
+$\hat r=r+3uM+15vM^2+6unA^2+60vnA^2M+5vN_4A^4$); resummed into $G$.
+
+\textbf{$j=3$ (the cubic vertex).} What remains is
+\[
+V_3=g_3\,{:}\delta^3{:},\qquad
+g_3=u_{\rm eff}(M)\,c+\tfrac{10v}{3}\,c^3 ,
+\]
+normal-ordered BY CONSTRUCTION -- not by choice: the non-normal-ordered pieces
+of the cubic are precisely the $j=1$ source already absorbed by stationarity.
+
+\section*{4. The lemma (proof)}
+
+\begin{itemize}
+\item[]\textbf{Lemma (tadpole reabsorption).} \emph{In the matched bookkeeping
+the third-cumulant correction of any competitor pattern is}
+$\delta F_3=-\tfrac12\langle{:}V_3{:}^2\rangle_c
+=-\tfrac12\sum_t|\hat g_3(t)|^2\,6\,\widehat{G^3}(t)$:
+\emph{the sunset channel only; the tadpole contraction $9M^2\hat G$ is absent
+identically.}
+\end{itemize}
+
+\emph{Proof.} By Sec.~3 the residual cubic vertex is ${:}\delta^3{:}$. Wick's
+theorem for normal-ordered insertions forbids self-contractions; the brute-force
+enumeration of the $15$ perfect matchings of the six legs of
+$\langle\delta^3(x)\,\delta^3(y)\rangle$ splits them as $6$ cross-only
+(${=}3!\,G(x{-}y)^3$, the sunset) $+\,9$ containing a self-pair (the
+$9M^2G$ tadpole class) -- assert 1 -- and exactly the $9$ self-pair matchings
+are the ones killed by normal-ordering. Hence
+$\langle{:}\delta^3(x){:}{:}\delta^3(y){:}\rangle=6\,G(x-y)^3$ and the tadpole
+channel does not occur. $\square$
+
+\section*{5. The two v1.0 objection cases, written out}
+
+\textbf{($\beta$) Off-optimum competitors.} The $j=1$ source vanishes at each
+pattern's OWN layer optimum, which is where the chain's comparison functional
+evaluates it (the races optimize $(t,m)$ per pattern; Prop-A quantifies over all
+trials, dominating off-optimum evaluations from below). For a hypothetical
+off-optimum evaluation the residual linear term generates an in-layer shift
+whose energy gain is second-order along the shift direction -- an amplitude
+move inside the Prop-A trial quantification, or a profile move inside the class
+quantification. No tadpole CONTRACTION arises in either case; only the source
+re-appears, and it is dominated as above.
+
+\textbf{($\gamma$) Resonant $O(I^2)$ accounting.} The $O(c^3)$ part of $g_3$
+(weight $\tfrac{10v}{3}t^3$) shifts the stationarity source at relative order
+$(10v/3)t^2/u_{\rm eff}=8.0\times10^{-3}$ at the endpoint ($=O(I)$, assert 8);
+the optimum moves by $O(I)$ and the energy by $O(I^2)\times$curvature -- which
+is the $N_4$ resonance accounting ALREADY inside the matched second-cumulant
+functional (Math437 gallery). The genuinely new remainder is
+$O(I^4)$: $4.3\times10^{-10}<10^{-6}$ at the endpoint (assert 8).
+
+\section*{6. Self-caught correction of the v1.0 mechanism wording}
+
+v1.0 wrote: ``the would-be tadpole linear source $3Mg_3=3Mu_{\rm eff}F$
+coincides term-by-term with the stationarity-equation source.'' This is
+IMPRECISE: with the dressed $g_3$, $3M\,u_{\rm eff}=3uM+30vM^2$, whereas the
+exact $j=1$ source is $3uM+15vM^2$ -- the naive contract-the-dressed-vertex
+route counts the double self-loop twice (symmetry factor $2$), over-counting by
+exactly $15vM^2=0.58181468$ at $M_R$ (assert 6). The CORRECT mechanism is the
+Hermite collection of Sec.~3, in which each self-contraction is counted once
+with its proper factor. The lemma's conclusion is unaffected -- the channel is
+absent either way -- but the v1.0 shorthand would have failed a referee's
+coefficient check, so it is corrected here rather than silently rewritten.
+
+\section*{7. Numerical verification}
+
+\texttt{codes/vacuum/ru61\_tadpole\_alignment.py} (8/8 asserts PASS, exit 0;
+JSON artefact \texttt{runs/260612-ru61-tadpole-alignment/result.json}):
+pairing split $15=6+9$ (brute force); Hermite coefficients exact (integer
+combinatorics + moment closure); $j=0$ quartic $=u_{\rm eff}/4$ to $10^{-15}$;
+$j=1$ source $=m_R-r$ against the independent production gap solver;
+Math437 Lemma-1 boxed identity $u_{\rm eff}(M_+)=\tfrac13\sqrt{9u^2-60vr}$ to
+$10^{-12}$; the $15vM^2$ over-count quantified; the Math436/Math437 HEX argmin
+$\hat r=0.3093733$ reproduced (clearly-labelled oracle); the endpoint remainder
+$4.3\times10^{-10}$; $u_{\rm eff}(M_R)=2.685$ matching the certified value.
+
+Quantitative sanity check (mandatory): direction -- striking a negative-definite
+channel can only raise competitor free energies (selection-favorable), fixed by
+combinatorics, not magnitude tuning; limit case -- for $\mathcal R_H$ ($c=0$)
+both channels vanish and the lemma is trivial; the corrected-vs-naive source
+discrepancy ($15vM^2$) is POSITIVE, i.e.\ the naive shorthand was conservative
+in the dangerous direction (it over-stated what stationarity absorbs), so no
+prior conclusion leaned on the imprecision.
+
+\section*{8. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The Hermite identity is single-mode; the field is a
+continuum with pattern structure.''} DISMISSED: the identity is applied to the
+Gaussian fluctuation field mode-wise with $M$ the cell-averaged variance --
+precisely the production engine's own Wick bookkeeping (Math424-AddA), whose
+$N_4$ lines the $j=0/j=1$ collections reproduce EXACTLY (asserts 3--4); the
+alignment is verified against the engine, not assumed.
+\item[($\beta$)] \emph{``v1.0's mechanism error suggests other coefficients may
+be wrong too.''} VALID with mitigation: that is why v1.1 machine-verifies EVERY
+coefficient it uses (asserts 2--6) including the production cross-checks
+(independent gap solver; Lemma-1 identity; HEX argmin oracle); the one
+imprecision found is documented in Sec.~6, not patched silently.
+\item[($\gamma$)] \emph{``The off-optimum case (Sec.~5$\beta$) leans on Prop-A's
+quantification, which is $\mathcal A_{\rm adm}$-scoped.''} VALID with
+mitigation: for the $C_{\rm full}$ statement the head package's own
+quantification covers the trials; the lemma itself is bookkeeping-level and
+pattern-agnostic -- the only pattern input is WHERE the functional is evaluated,
+and every chain evaluation point is a per-pattern optimum by construction.
+\end{itemize}
+
+\section*{9. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / tadpole-reabsorption-
+                         lemma (unit U6; gate R-U6-1; task T-004)
+Precise statement:       PROOF (was T3 sketch): in the matched
+                         bookkeeping the residual cubic vertex is
+                         normal-ordered by construction (Hermite
+                         collection: j=0 reproduces the 0.25U+2.5VM
+                         line, j=1 the 3uM+15vM^2 gap dressing,
+                         j=3 gives g_3 = u_eff c + (10v/3)c^3); hence
+                         <:d^3::d^3:> = 6G^3 and the tadpole channel
+                         9M^2G is ABSENT IDENTICALLY. U4 tadpole rows
+                         struck; sunset is the sole surviving
+                         third-cumulant threat. SELF-CAUGHT v1.1
+                         correction: the v1.0 "3M g_3" shorthand
+                         over-counts the v-line by 15vM^2; the
+                         Hermite route is the exact mechanism.
+Scope:                   matched bookkeeping of the B5 chain; all
+                         anchors. No change to the sunset channel,
+                         margins, tiers, or gates.
+Evidence grade:          ANALYTIC (written proof) + EXECUTED
+                         (ru61_tadpole_alignment.py 8/8, exit 0).
+                         Residuals R-U6-1 (this writeup) and R-U6-2
+                         (the script) DISCHARGED pending operator
+                         review.
+Reproduction command:    python codes/vacuum/ru61_tadpole_alignment.py
+Falsifier:               a matched-bookkeeping derivation exhibiting a
+                         non-cancelling tadpole remainder at O(I^2) or
+                         larger beyond the resonant accounting; any
+                         coefficient assert failing (8 registered).
+Tier before / after:     lemma upgraded T3 sketch -> written proof;
+                         tier/gate action is the OPERATOR's (B5 stays
+                         T5; R-U6-1 gate flip pending review).
+No-overclaim statement:  does NOT lift SC-SCOPE (the sunset endpoint
+                         refinement remains the open item); does not
+                         change any margin; the off-optimum case rests
+                         on the chain's own quantification structure.
+Next required action:    operator review -> R-U6-1 gate decision; then
+                         T-031 exhaustiveness decision layer.
+\end{verbatim}
+}

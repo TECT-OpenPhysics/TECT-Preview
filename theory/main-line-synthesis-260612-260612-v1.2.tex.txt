@@ -1,8 +1,7 @@
-% SUPERSEDED by main-line-synthesis-260612-260612-v1.2.tex.txt
 % =============================================================================
 % Title: Main-line synthesis: the Reading-H vacuum-selection theorem assembled from the five published referee packages
 % Claim: B1-RH-ENUM / B2-PROPA-HLAYER / B5-BEYOND-LAYER-BOUND (claim-level synthesis layer, T-013; the parent proof document)
-% Version: v1.1 -- first issued 2026-06-12; this version issued 2026-06-12
+% Version: v1.2 -- first issued 2026-06-12; this version issued 2026-06-12
 % Status: PUBLISHED SYNTHESIS NOTE (operator CONFIRM 2026-06-12) -- registered
 %   as Main-Line-Synthesis-T013-260612. No tier change; doc-only (no scripts),
 %   so no reproduction bundle is due. (T-013 capstone, policy sec.15: written LAST, after all
@@ -27,6 +26,14 @@
 %        grade correctly kept at the head's enacted T7-SCOPE_{C_full}, not
 %        inflated. Side directive executed separately: the \boxed display in
 %        the SC-SCOPE referee package re-issued as plain display (style patch).
+%   v1.2 (2026-06-12) PRE-FREEZE METADATA PATCH (operator review): the aggregate
+%        reproduction count quoted in v1.0/v1.1 ("51 entry scripts / 342
+%        asserts") was WRONG -- written without a derivation (a metadata
+%        consistency defect, self-flagged). Corrected to the machine-derived
+%        totals from the five bundle MANIFESTs: 27 entry scripts / 330 asserts
+%        (= 5+9+8+1+4 scripts; 27+44+38+192+29 asserts), with the provenance
+%        table now inline (Sec. 5). Option B of the operator verdict. No
+%        mathematical content touched.
 % =============================================================================
 
 \sloppy
@@ -138,8 +145,15 @@ falsifier listed in the five footers falsifies the composite.
 
 CLOSED by the five packages: the main-line theorem of Sec.~2 at its enacted
 scope; the K-budget threshold; the lattice-class DR-2; the endpoint selection
-floor; reproduction (51 entry scripts / 342 asserts across the five bundles, all
-operator-clean-run-confirmed).
+floor; reproduction: 27 entry scripts / 330 asserts across the five bundles, all
+operator-clean-run-confirmed, derived from the bundle MANIFESTs as
+\[
+\underbrace{5}_{\rm RH}+\underbrace{9}_{\rm PA}+\underbrace{8}_{\rm DR2}
++\underbrace{1}_{\rm 5B}+\underbrace{4}_{\rm SC}=27\ \text{scripts},
+\qquad
+\underbrace{27}_{\rm RH}+\underbrace{44}_{\rm PA}+\underbrace{38}_{\rm DR2}
++\underbrace{192}_{\rm 5B}+\underbrace{29}_{\rm SC}=330\ \text{asserts}.
+\]
 
 REMAINING (separate tracks, registered in the task ledger; none blocks Sec.~2):
 \begin{itemize}
@@ -208,8 +222,10 @@ Scope:                   synthesis layer only -- no new mathematics,
                          exhaustiveness decision layer) are
                          registered as NOT load-bearing for Sec. 2.
 Evidence grade:          SYNTHESIS over five operator-confirmed
-                         PUBLISHED bundles (51 entry scripts, 342
-                         asserts, all clean-run confirmed).
+                         PUBLISHED bundles (27 entry scripts / 330
+                         asserts = 5+9+8+1+4 / 27+44+38+192+29 from
+                         the bundle MANIFESTs, all clean-run
+                         confirmed; v1.2 corrected count).
 Reproduction command:    run the five bundles' entry manifests (see
                          each bundle's README); this note adds no
                          new scripts.

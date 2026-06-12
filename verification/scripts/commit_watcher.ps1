@@ -1,6 +1,14 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.4.0 -- first issued 2026-06-05; this version issued 2026-06-10
+# Version: 1.5.0 -- first issued 2026-06-05; this version issued 2026-06-12
+#   1.5.0 (2026-06-12): commit message passed via temp file + `git commit -F`
+#     instead of inline `-m $msg`. Root cause of the 2026-06-12 failure: a
+#     queued message containing embedded double quotes ('"3M g_3"') broke
+#     PowerShell's native-argument quoting, so git received the message tail
+#     as a PATHSPEC ("error: pathspec ... did not match any file(s)") and the
+#     commit failed with the queue left intact. -F is robust against quotes,
+#     newlines and special characters; the temp file lives inside internal/
+#     (P0, gitignored) and is removed after the attempt.
 #   1.4.0 (2026-06-10): pre-commit NOTE-PDF build -- run verify_note_pdfs.py
 #     --build before staging, so every CURRENT note enters history with a fresh
 #     PDF (operator-side, no sandbox 44s timeout). Closes the recurring missing-
@@ -128,8 +136,15 @@ function Process-Queue {
         }
     }
 
-    & git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit -m $msg
-    if ($LASTEXITCODE -eq 0) {
+    # v1.5.0: pass the message via a temp file (-F). Inline -m breaks when the
+    # message contains double quotes (PowerShell native-arg quoting); -F is
+    # robust against quotes/newlines. Temp file is P0 (inside internal/).
+    $msgFile = Join-Path $queue ".commit-msg.tmp"
+    [System.IO.File]::WriteAllText($msgFile, $msg, (New-Object System.Text.UTF8Encoding($false)))
+    & git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit -F $msgFile
+    $rc = $LASTEXITCODE
+    Remove-Item $msgFile -ErrorAction SilentlyContinue
+    if ($rc -eq 0) {
         foreach ($it in $items) { Move-ToDone $it.File "" }
         $head = $items[0].Message.Substring(0, [Math]::Min(72, $items[0].Message.Length))
         Write-Host "[commit-watcher] committed $($items.Count) change set(s) in one commit: $head..."

@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 27
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 28
 
 ## Next up
 
@@ -13,12 +13,10 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 27
 
 ## Backlog
 
-- **T-004** Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: R-U6-1)_
-  - SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.
-  - _updated 2026-06-07_
 - **T-030** Arbitrary-Q DR-2 (frontier): remove the admissibility cap from Lemma 1's backing; currently T6-conditional on Bourgain-Demeter decoupling. NOT load-bearing for the C_full main theorem (Lemma 2 caps T'<=10 in-class; main-line-synthesis Sec.4b).  _(claim: B5-BEYOND-LAYER-BOUND)_
   - _updated 2026-06-12_
 - **T-031** Full STEP-5B closure decision layer: budget comparison machine-closed (x55.6/x8.8/x2.1-2.6); remaining = admissible-class exhaustiveness operator-decision items (H-ADM-COH adoption record) + backlog lemma R-U6-1 (T-004).  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - Decision dossier DELIVERED 2026-06-12 (step5b-exhaustiveness-decision-support v1.0): D1 H-ADM-COH lattice-class discharge, D2 DR2-SHARE re-scope, D3 B5 tier -- each pre-formulated with status-quo branch; awaiting operator verdicts; then atomic flip set.
   - _updated 2026-06-12_
 
 ## Done (recent)
@@ -32,6 +30,9 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 27
 - **T-003** Evaluate GHAT4-PERTRANSFER: per-transfer quartic-difference form factor  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: GHAT4-PERTRANSFER)_
   - Critical-path SC-SCOPE input. At sup-kernel grade the quartic-difference endpoint is x1.0 (marginal); the per-transfer form factor is load-bearing. Same direct-quadrature strategy that resolved M-ENDPOINT should apply.
   - _updated 2026-06-07_
+- **T-004** Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: R-U6-1)_
+  - PROOF WRITTEN 2026-06-12 (tadpole-reabsorption-lemma v1.1: Hermite normal-ordering alignment + self-caught 15vM^2 mechanism correction; ru61_tadpole_alignment.py 8/8 PASS). R-U6-1/R-U6-2 residuals discharged PENDING OPERATOR REVIEW; gate flip is the operator's.
+  - _updated 2026-06-12_
 - **T-005** Assemble the joint second+third-order endpoint inequality (SC-SCOPE all-orders lift)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: SC-SCOPE; blocked by: T-003, T-004)_
   - SUPERSEDED by the 2026-06-07 SC-SCOPE scope decision: 2nd-cumulant accepted at the I=2e-3 endpoint; all-orders feasible for I<=1e-3. Joint inequality not pursued to closure (paired x0.905 exhausted). Reopen only via STEP-5B endpoint floor rho>~3.9.
   - _updated 2026-06-07_
