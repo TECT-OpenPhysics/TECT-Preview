@@ -49,6 +49,9 @@ AUXILIARY and are NOT promoted.
 **Progress (2026-06-11)**: Reading-H and Prop-A are PUBLISHED. Prop-A v1.2 was
 operator-confirmed after a reconstructed clean-run (9/9 scripts, 44/44 asserts
 PASS) and published as `B2-PROPA-HLAYER/bundle/Prop-A-T6-260611` (T6, scope
-A_adm T'<=13; does NOT independently enact full C_full). The superseded DRAFT
-bundle `Prop-A-DRAFT-260611` is retained pending Windows-side git rm. Remaining
-review queue: STEP-5B (uses H-LAYER-AUX RES-4 input), SC-SCOPE, DR-2.
+A_adm T'<=13; does NOT independently enact full C_full). Per policy sec.14 (2026-06-11) bundles are main-line-only, claim-level, and built
+only post-confirmation (no DRAFT bundle; packaging is the LAST step, followed by
+the final integrity check). All per-sub-folder bundles and the pre-confirmation
+DRAFT bundles are being removed Windows-side; only the two main-line PUBLISHED
+bundles (`Reading-H-cFull-T7-260611`, `Prop-A-T6-260611`) remain. Remaining review
+queue: STEP-5B (uses H-LAYER-AUX RES-4 input), SC-SCOPE, DR-2.

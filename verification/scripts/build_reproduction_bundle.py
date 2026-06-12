@@ -25,7 +25,7 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.6.0"
+__version__ = "1.7.0"
 __first_issued__ = "2026-06-10"
 __version_issued__ = "2026-06-10"
 
@@ -126,6 +126,11 @@ def main():
     ap.add_argument("--result", help="result-name slug for the bundle name (default: sub-folder name)")
     ap.add_argument("--title", default="")
     args = ap.parse_args()
+    if args.tier and args.tier.strip().upper() == "DRAFT":
+        print("ERROR: 'DRAFT' is not a valid bundle tier. Bundles are built only after"
+              " operator confirmation; tag with the result's T-tier (e.g. T6, T7)."
+              " See governance/reproduction-bundle-policy.md sec.14.")
+        return 1
     if args.folder:
         hn, scr = discover_folder(args.folder)
         if hn is None:
@@ -136,7 +141,11 @@ def main():
             parts = args.folder.rstrip("/").split("/")           # claims/<ID>/<sub>
             cid, sub = parts[1], parts[-1]
             result = args.result or sub
-            tier = args.tier or "DRAFT"
+            tier = args.tier
+            if not tier:
+                print("ERROR: --tier is required (the result's confirmed T-tier);"
+                      " bundles are post-confirmation artefacts (policy sec.14).")
+                return 1
             date = time.strftime("%y%m%d", time.gmtime())
             # convention (reproduction-bundle-policy.md sec.13): claim-top-level, tier+date stamped
             args.out = f"claims/{cid}/bundle/{result}-{tier}-{date}"
@@ -231,7 +240,7 @@ def main():
     runcmds = "\n".join(f"  python {s}" for s in args.scripts)
     expected = "\n".join(f"  {n}: exit 0, `{runlog[n]['pass_line']}`" for n in runlog)
     _bn = Path(args.out.rstrip("/")).name
-    grade = "DRAFT (review -- not operator-confirmed)" if "DRAFT" in _bn.upper() else "PUBLISHED (operator-confirmed)"
+    grade = "PUBLISHED (operator-confirmed)"  # policy sec.14: bundles are post-confirmation only
     readme = f"""# Reproduction bundle -- {args.title or note.stem}
 
 Self-contained referee reproduction bundle (TECT verification-first repository).

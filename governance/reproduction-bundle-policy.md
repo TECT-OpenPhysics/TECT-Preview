@@ -83,6 +83,8 @@ reference list). Lower-tier claims SHOULD carry a bundle once they have any nume
 
 ## 8. Granularity and threshold (binding from 2026-06-10)
 
+> **SUPERSEDED IN PART by sec.14 (2026-06-11)**: the per-sub-proof-folder bundle unit is retired. Bundles are MAIN-LINE-ONLY and live only at the claim top level; sub-proof folders keep only their final note.
+
 **Unit = the result-bearing sub-proof folder.** One bundle per
 `claims/<ID>/<sub>/` folder that carries a result, NOT one per claim (too coarse:
 a claim spans several independent sub-results) and NOT one per note (too fine:
@@ -131,6 +133,8 @@ and the coverage report is the completeness gate.
 
 ## 10. Bundle grades: DRAFT vs PUBLISHED (binding from 2026-06-10)
 
+> **SUPERSEDED IN PART by sec.14 (2026-06-11)**: the DRAFT bundle grade is RETIRED. A bundle is produced only after operator confirmation; every bundle is PUBLISHED. Pre-confirmation inspection uses the note + scripts directly, not a packaged bundle.
+
 Auto-assembling a folder's internal working notes is NOT a first-rate referee
 artefact. A bundle has two grades:
 
@@ -162,6 +166,8 @@ checkout of the bundle alone.
 
 ## 11. Workflow per folder -- the operator-confirmation gate (binding from 2026-06-10)
 
+> **SUPERSEDED IN PART by sec.14 (2026-06-11)**: there is no pre-confirmation DRAFT bundle; packaging is the LAST step and is followed by the final integrity check. See sec.14 for the canonical order.
+
 A PUBLISHED bundle is NOT built from an unreviewed referee document. The entry
 referee package must be confirmed by the operator FIRST -- a `no-auto-PUBLISHED`
 rule, the analogue of the `no-auto-T7` sign-off. The per-folder order (T7 first):
@@ -191,6 +197,8 @@ PUBLISHED bundle.
 
 
 ## 12. Main proof line vs auxiliary (binding from 2026-06-10)
+
+> **SUPERSEDED IN PART by sec.14 (2026-06-11)**: auxiliary/cited folders get NO bundle at all (note only); only main-line results are packaged.
 
 A referee package (PUBLISHED) is written for each result on the **MAIN PROOF LINE**
 of the published claim -- the load-bearing final-consolidation documents the
@@ -231,3 +239,54 @@ together rather than scattered across sub-proof folders. The builder
 (`--folder`, or `--note ... --tier <T> --result <slug>`) emits this path by
 default. A superseded tier's bundle is retained (history); the current bundle is
 the highest-tier dated one. MANIFEST `bundle_digest` fixes each.
+
+## 14. Canonical bundle model and packaging order (binding from 2026-06-11; supersedes the DRAFT-grade and per-sub-folder parts of sec.8/10/11/12)
+
+Operator directive 2026-06-11. The bundle is the FINAL packaging of a confirmed
+result; it is produced LAST, once, and then integrity-checked. There is no
+pre-confirmation bundle and no "DRAFT" bundle.
+
+### 14.1 What gets a bundle (main-line only, claim-level only)
+
+- A bundle exists ONLY for a result on the MAIN PROOF LINE (`theory/main-proof-line.md`).
+- A bundle lives ONLY at the claim top level:
+  `claims/<ID>/bundle/<Result>-<Tier>-<YYMMDD>/`.
+- Sub-proof folders (`claims/<ID>/<sub>/`) keep ONLY their final organised note(s)
+  (`.tex.txt` + `.pdf`). They MUST NOT contain a `bundle/` sub-folder.
+- Auxiliary / cited / provenance / sub-lemma folders get NO bundle (note only).
+
+### 14.2 No DRAFT bundle; grade is always PUBLISHED
+
+- The DRAFT bundle grade (old sec.10) is RETIRED. A bundle is never built before
+  operator confirmation.
+- Pre-confirmation inspection is performed on the referee NOTE and its
+  reproduction SCRIPTS directly -- e.g. a clean-repo reconstruction that runs the
+  scripts and checks the PASS lines -- NOT on a packaged bundle.
+- Every bundle's README grade is `PUBLISHED (operator-confirmed)`. The bundle
+  name's `<Tier>` is the result's confirmed T-tier (e.g. `T6`, `T7` for a
+  T7-SCOPE result). The tag `DRAFT` is forbidden;
+  `build_reproduction_bundle.py` rejects it.
+
+### 14.3 Canonical packaging order (bundle is packaged LAST, then checked)
+
+1. WRITE / refine the integrated referee package note (self-contained; honour
+   scope / tier / no-overclaim).
+2. VALIDATE: build its PDF (0 overfull); confirm self-containment; run its
+   reproduction scripts directly to PASS.
+3. OPERATOR REVIEW + CONFIRM. Revise `v<N>.<M>` until confirmed; record
+   `operator-confirmed <date>` in the banner and the changelog. No bundle yet.
+4. ONLY THEN PACKAGE the bundle around the FINAL confirmed note
+   (`build_reproduction_bundle.py --note <confirmed note> --scripts <...> --tier <T>
+   --result <slug>` -> `claims/<ID>/bundle/<Result>-<Tier>-<YYMMDD>/`).
+5. FINAL INTEGRITY CHECK after packaging: the builder's post-build fsync + JSON/PY
+   guard (v1.6.0) must report clean, AND `python verification/scripts/release_check.py`
+   must reach exit 0. This PASS is the last confirmation that the package is sound.
+6. REGISTER (changelog; `main-proof-line.md` PUBLISHED row) and commit.
+
+### 14.4 Tier-change re-packaging (history)
+
+When the result's tier changes, repeat 1-6; the new bundle
+`<Result>-<NewTier>-<YYMMDD>/` is added beside the old one, so the claim-level
+`bundle/` listing is the tier history. Superseded tiers' bundles are retained as
+history; the current bundle is the highest-tier dated one.
+
