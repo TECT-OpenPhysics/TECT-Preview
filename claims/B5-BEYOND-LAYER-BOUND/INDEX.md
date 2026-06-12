@@ -13,7 +13,7 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `dr-2-referee-package` | v1.2 | T7 | For Q=Lambda cap {\|x\|^2=R} (fixed crystallographic lattice), with N=\|Q\|, E_+(Q)=#{a+b=c+d}, r_Q(m)=#{(a,b):a+b=m}, T'(Q)=max_{m!=0} r_Q(m): E_+(Q) <=… | T7-CANDIDATE on the lattice class, modulo the… | operator re-run of the patched dr2_lattice_divisor.py v2.0.0 (other 6 already clean-run P… |
+| `dr-2-referee-package` | v1.3 | T7 | For Q=Lambda cap {\|x\|^2=R} (fixed crystallographic lattice), with N=\|Q\|, E_+(Q)=#{a+b=c+d}, r_Q(m)=#{(a,b):a+b=m}, T'(Q)=max_{m!=0} r_Q(m): E_+(Q) <=… | T7-CANDIDATE on the lattice class, modulo the… | Lemma NT pin ONLY (textbook citation or in-bundle proof) -> final T7 promotion. Reproduci… |
 | `dr2-circle-richness-reduction` | v1.0 | T5* | For finite Q in S^2 with N=\|Q\|, E_+(Q) <= (1+T'(Q))N^2, where T'(Q) = max occupancy of a proper (m!=0) sum-level circle C_m = S^2 cap {x.m=\|m\|^2/2}. … | Lemma A + Corollary 1: T7 PROVED unconditiona… | Either bound T'(Q) for arbitrary Q (open; = carrier richness), or accept the decoupling r… |
 | `dr2-cross-scale-induction` | v1.1 | T6 | For finite Q in S^2, M(\|f_Q\|^4)=E_+(Q) exactly (Besicovitch mean; no integrality). Conditional on l2-decoupling at p=4, the iteration E_+(Q) <=_eps d… | DERIVED with a CORRECT bridge (Besicovitch me… | Operator decision on whether R1+R2 are accepted as textbook-standard (-> T5 or T6 PROVED … |
 | `dr2-decoupling-closure` | v1.1 | T5* | SEPARATED Q in S^2: E_+(Q) <=_eps N^{2+eps} is T6 PROVED CONDITIONAL on Bourgain-Demeter decoupling (d=3, p=4), via the Schwartz-majorant localisatio… | Separated T6 PROVED CONDITIONAL; unrestricted… | Write the \S4 cross-scale energy bound (close the multi- scale reduction); then DR-2 = T6… |
@@ -73,4 +73,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-12T07:24:01Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-12T07:41:26Z by build_index.py v1.0.1 -->
