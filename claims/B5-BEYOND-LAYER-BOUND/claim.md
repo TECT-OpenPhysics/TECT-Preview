@@ -1,6 +1,8 @@
 # B5-BEYOND-LAYER-BOUND — Pattern-generic Gershgorin reduction of the beyond-layer bound
 
-**Tier**: T4 (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-05
+**Tier**: T6 (TSv2; PROVED-CONDITIONAL on H_B5^T6, operator verdicts D1-A/D2-A/D3-A) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-12
+
+> CANONICAL CURRENT STATE: `status.json` (T6 PROVED-CONDITIONAL, label `B5-BeyondLayer-T6Conditional-260612`; dossier `T5-DOSSIER/notes/t6-conditional-assignment-260612-v1.0`). The Statement/Scope prose below is the historical T4-era card retained as record; the header had been stale at T4 since 2026-06-05 (sync defect, fixed at this card edit).
 
 ## Statement
 
@@ -15,7 +17,7 @@ T4: Lemmas A/B/C'/D/E rigorous; closed region n<=n_max(I) DERIVED; transversal n
 ## Dependencies and hypotheses
 
 - Hard dependencies: A1-KERNEL-CONV
-- Hypotheses (registered in `claims/GATES.md`): none
+- Hypotheses (registered in `claims/GATES.md`): H-ENDPOINT-THINNESS-ACCEPTED; H-NONLATTICE-REMAINDER-EXCLUDED (frontier tracked at T-030) — the H_B5^T6 acceptance set (the two scope FACTS, lattice discharge + T-030 exclusion, are recorded in GATES.md / status.json)
 - Soft dependencies (context only): B1-RH-ENUM, B2-PROPA-HLAYER
 - Open gates: STEP-5B
 
@@ -87,3 +89,14 @@ n_max monotone in I asserted; a <= 0.75 at every certified point; 54/54.
 ## Next required action
 
 G1''(row): heavy-transfer row-count theorem for the transversal class; then G1''(glue): transversal+cluster decomposition with bilinear cross-term control (subsumes ring amplitude/tilt generality); then G2 vertex completeness.
+
+
+## Devil's-advocate record (T5 -> T6-CONDITIONAL promotion, 2026-06-12)
+
+Full promotion-grade pass in `T5-DOSSIER/notes/t6-conditional-assignment-260612-v1.0` Sec.4
+(three objections: (alpha) thinness-as-hypothesis -- VALID-with-mitigation, named in
+H_B5^T6, T7 path = harden the sunset; (beta) estimate-grade inflation basis -- ADDRESSED,
+the certified Parseval-pinned joint replaced it on W_SC; (gamma) evidence double-counting
+vs the 2026-06-08 discharge -- DISMISSED, every promotion row is post-T5 evidence).
+Quantitative sanity: the promotion changes no number; all values are published-bundle
+values. Operator verdicts D1-A/D2-A/D3-A (T-031, 2026-06-12).

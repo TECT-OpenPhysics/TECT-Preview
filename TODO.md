@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 28
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 29
 
 ## Next up
 
@@ -14,9 +14,7 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 28
 ## Backlog
 
 - **T-030** Arbitrary-Q DR-2 (frontier): remove the admissibility cap from Lemma 1's backing; currently T6-conditional on Bourgain-Demeter decoupling. NOT load-bearing for the C_full main theorem (Lemma 2 caps T'<=10 in-class; main-line-synthesis Sec.4b).  _(claim: B5-BEYOND-LAYER-BOUND)_
-  - _updated 2026-06-12_
-- **T-031** Full STEP-5B closure decision layer: budget comparison machine-closed (x55.6/x8.8/x2.1-2.6); remaining = admissible-class exhaustiveness operator-decision items (H-ADM-COH adoption record) + backlog lemma R-U6-1 (T-004).  _(claim: B5-BEYOND-LAYER-BOUND)_
-  - Decision dossier DELIVERED 2026-06-12 (step5b-exhaustiveness-decision-support v1.0): D1 H-ADM-COH lattice-class discharge, D2 DR2-SHARE re-scope, D3 B5 tier -- each pre-formulated with status-quo branch; awaiting operator verdicts; then atomic flip set.
+  - OPEN FRONTIER (arbitrary-Q DR-2). D2-A 2026-06-12: DR2-SHARE gate formally rescoped here as NON-LOAD-BEARING for the published C_full head (Lemma 2 caps T'<=10 in-class). Content: BD-conditional T6 (separated Q); PSM conjecture T2; elementary route open.
   - _updated 2026-06-12_
 
 ## Done (recent)
@@ -94,3 +92,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 2 · Done (recent) 28
   - _updated 2026-06-10_
 - **T-029** T-029: paper-grade internal audit of the H-LAYER->T7 route (5 axes, 61/61, certified)
   - _updated 2026-06-10_
+- **T-031** Full STEP-5B closure decision layer: budget comparison machine-closed (x55.6/x8.8/x2.1-2.6); remaining = admissible-class exhaustiveness operator-decision items (H-ADM-COH adoption record) + backlog lemma R-U6-1 (T-004).  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - CLOSED AS DECISION LAYER 2026-06-12: operator verdicts D1-A (lattice H-ADM-COH discharge re-affirmed, residual (a) pinned), D2-A (DR2-SHARE -> T-030 non-load-bearing), D3-A (B5 -> T6 PROVED-CONDITIONAL on H_B5^T6, label B5-BeyondLayer-T6Conditional-260612). Atomic flip set enacted.
+  - _updated 2026-06-12_

@@ -1,0 +1,104 @@
+{
+  "script": "dr2_decoupling_iteration.py",
+  "version": "1.1.0",
+  "estimator_exact": true,
+  "partition": "PROXY square (x,y) bins (NOT geodesic caps)",
+  "rows": {
+    "great_circle_2": {
+      "N": 64,
+      "n_side": 2,
+      "caps": 6,
+      "lhs": 12096,
+      "rhs": 7789.019535674319,
+      "K": 1.5529554065950628
+    },
+    "great_circle_4": {
+      "N": 64,
+      "n_side": 4,
+      "caps": 14,
+      "lhs": 12096,
+      "rhs": 7281.228719487261,
+      "K": 1.6612580741525989
+    },
+    "great_circle_8": {
+      "N": 64,
+      "n_side": 8,
+      "caps": 30,
+      "lhs": 12096,
+      "rhs": 6244.585512873902,
+      "K": 1.937038090848906
+    },
+    "cap_grid_2": {
+      "N": 64,
+      "n_side": 2,
+      "caps": 4,
+      "lhs": 10944,
+      "rhs": 8448.0,
+      "K": 1.2954545454545454
+    },
+    "cap_grid_4": {
+      "N": 64,
+      "n_side": 4,
+      "caps": 16,
+      "lhs": 10944,
+      "rhs": 7351.034983529899,
+      "K": 1.4887699520571172
+    },
+    "cap_grid_8": {
+      "N": 64,
+      "n_side": 8,
+      "caps": 36,
+      "lhs": 10944,
+      "rhs": 5830.520702729933,
+      "K": 1.8770193191966307
+    },
+    "random_2": {
+      "N": 64,
+      "n_side": 2,
+      "caps": 4,
+      "lhs": 8128,
+      "rhs": 7935.795443664114,
+      "K": 1.0242199484223526
+    },
+    "random_4": {
+      "N": 64,
+      "n_side": 4,
+      "caps": 15,
+      "lhs": 8128,
+      "rhs": 7214.5943056675305,
+      "K": 1.1266052747574358
+    },
+    "random_8": {
+      "N": 64,
+      "n_side": 8,
+      "caps": 38,
+      "lhs": 8128,
+      "rhs": 5691.618999492871,
+      "K": 1.4280646685458414
+    }
+  },
+  "K_max": 1.937038090848906,
+  "claims": [
+    {
+      "name": "E_plus_estimator_exact",
+      "passed": true,
+      "detail": "(random sphere set E_+ = 2N^2 - N exactly for N=16,32,64: the additive-energy estimator is exact, no binning artefact -- the code-audit gate for every E_+ value below)"
+    },
+    {
+      "name": "iteration_constant_bounded_proxy",
+      "passed": true,
+      "detail": "(ILLUSTRATIVE: on the PROXY square-bin partition, K = E_+(Q)/(sum sqrt E_theta)^2 <= 3 for every config/scale; max K = 1.937. Consistency with the decoupling exponent, NOT a faithful delta^{1/2}-cap test)"
+    },
+    {
+      "name": "scale_stability_proxy",
+      "passed": true,
+      "detail": "(K within x2 across proxy cap scales n=2,4,8: ['1.55', '1.66', '1.94']; illustrative scale stability)"
+    },
+    {
+      "name": "partition_reduces_structure",
+      "passed": true,
+      "detail": "(sum_theta E_+(Q_theta) << E_+(Q): the partition breaks cross-cap quadruples -- great_circle:240/12096, cap_grid:224/10944, random:212/8128)"
+    }
+  ],
+  "all_pass": true
+}
