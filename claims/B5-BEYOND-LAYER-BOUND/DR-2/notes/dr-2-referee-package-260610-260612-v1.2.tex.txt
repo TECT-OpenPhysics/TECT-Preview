@@ -1,8 +1,7 @@
-% SUPERSEDED by dr-2-referee-package-260610-260612-v1.2.tex.txt
 % =============================================================================
 % Title: Referee package -- DR-2 for the lattice class: an unconditional, decoupling-free additive-energy bound on the sphere
 % Claim: B5-BEYOND-LAYER-BOUND (referee package; MAIN-LINE SUPPORTING DRAFT ACCEPTED)
-% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-12
+% Version: v1.2 -- first issued 2026-06-10; this version issued 2026-06-12
 % Status: DRAFT ACCEPTED (operator verdict 2026-06-12) -- accepted as the DR-2
 %   lattice-class support package. Grade: T7-CANDIDATE on the lattice class,
 %   modulo the explicit textbook Lemma NT import + the 7-script clean-run; NOT a
@@ -11,7 +10,7 @@
 %   packaged only AFTER operator confirmation). Arbitrary (non-lattice) Q remains
 %   OPEN; the decoupling route remains T4 conditional and is NOT load-bearing;
 %   this package does not by itself close the full Reading-H C_full theorem.
-%   Reproduction: 7 entry scripts (manifest in Sec. 4; 31/31 asserts). Grounded by
+%   Reproduction: 7 entry scripts (manifest in Sec. 4; 33/33 asserts). Grounded by
 %   the folder's notes (headline: dr2-lattice-divisor-closure v1.2).
 %
 % Revision history (cumulative):
@@ -32,6 +31,24 @@
 %        the footer carrying the operator's T7-label restriction verbatim (Sec. 3,
 %        Sec. 6). AI-side clean-run 2026-06-12: 7 entry scripts, 31/31 asserts
 %        PASS, all exit 0 (5/5, 4/4, 5/5, 6/6, 3/3, 4/4, 4/4).
+%   v1.2 (2026-06-12) operator clean-run audit: 6/7 scripts PASS (26/26 executed
+%        asserts, 0 FAIL lines) but dr2_lattice_divisor.py TIMED OUT on the
+%        R=9974 (N=2040) shell -- a runtime/self-containment failure of the
+%        verification implementation, NOT a mathematical failure. Operator option
+%        B enacted: the script is re-issued v2.0.0 with the per-distinct-sum
+%        occupancy loop (O(#sums x N), ~2e6 matvecs) replaced by a single
+%        vectorized unique-count pass over all N^2 pair sums, using the exact
+%        identity occupancy(C_m) = r_Q(m) for FULL lattice shells (x.m=|m|^2/2,
+%        |x|^2=R imply |m-x|^2=R with m-x in the lattice/parity class). The
+%        identity is MACHINE-VERIFIED against the retained v1.0.0 reference path
+%        on R=101/314/909 (exact equality of E_+ and T'), and the R=9974 row is
+%        pinned to the archived v1.0.0 values as a clearly-labelled regression
+%        oracle (N=2040, T'=48, E_+=16291944). Runtime: timeout -> 2.5 s total;
+%        asserts 5/5 -> 7/7 (two new: fastpath_equals_reference,
+%        R9974_regression_oracle); all five original claims unchanged in value
+%        (slope 0.177, E_+/N^2 <= 5.27). Entry-manifest totals 31/31 -> 33/33.
+%        Published-bundle confirmation remains HELD pending operator re-run of
+%        the patched script + the Lemma NT pin.
 % =============================================================================
 
 \sloppy
@@ -122,7 +139,9 @@ not load-bearing.
 
 \paragraph{Entry-script manifest (patch v1.1-1; complete, no ellipsis).} Seven
 scripts, each self-contained with self-test asserts, all exit 0 (AI-side clean-run
-2026-06-12, 31/31 asserts PASS in total):
+2026-06-12, 33/33 asserts PASS in total; operator clean-run 2026-06-12: 6/7 PASS with
+the pre-patch \texttt{dr2\_lattice\_divisor.py} v1.0.0 timing out on $R=9974$ ---
+repaired by the v2.0.0 runtime patch, see revision history):
 
 \begin{enumerate}
 \item \texttt{codes/vacuum/dr2\_circle\_richness.py} (5/5) --- Lemma A (sum-circle
@@ -130,8 +149,13 @@ richness) and Corollary 1.
 \item \texttt{codes/vacuum/dr2\_divcirc\_proof.py} (4/4) --- the substitution
 $y=2a-m$ (exact, injective), $T'\le r_{L_m}(4R-|m|^2)\le 6\,d(4R-|m|^2)$, worst
 $T'/6d=0.25$.
-\item \texttt{codes/vacuum/dr2\_lattice\_divisor.py} (5/5) --- lattice-divisor
-scaling: $T'/N$ falls $0.107\to0.024$ across shells; $E_+/N^2\le5.3$.
+\item \texttt{codes/vacuum/dr2\_lattice\_divisor.py} (7/7; v2.0.0 runtime patch) ---
+lattice-divisor scaling: $T'/N$ falls $0.107\to0.024$ across shells $R=101$--$9974$;
+$E_+/N^2\le5.3$. The v1.0.0 occupancy loop timed out on $R=9974$ in referee
+clean-runs; v2.0.0 replaces it by one vectorized unique-count pass via the exact
+full-shell identity $\#(Q\cap C_m)=r_Q(m)$, machine-verified against the retained
+v1.0.0 reference on $R\le909$ and pinned to the archived $R=9974$ values
+($N=2040$, $T'=48$, $E_+=16291944$) as a regression oracle. Runtime $2.5$\,s.
 \item \texttt{codes/vacuum/dr2\_cross\_energy\_lemma.py} (6/6) --- the bilinear
 cross-energy lemma $E_+(A,B)\le3|A||B|$ and the off-diagonal pencil bound.
 \item \texttt{codes/vacuum/dr2\_weighted\_energy.py} (3/3) --- the weighted Lemma A
@@ -206,7 +230,8 @@ Evidence grade:          T7-CANDIDATE on the lattice class, modulo
                          lattice-shell class after importing Lemma
                          NT; without Lemma NT this package is a
                          T6/T7 draft, NOT a confirmed T7 publication.
-                         EXECUTED (7 entry scripts, 31/31 asserts).
+                         EXECUTED (7 entry scripts, 33/33 asserts;
+                         lattice_divisor v2.0.0 runtime patch, 2.5 s).
 Reproduction command:    python codes/vacuum/dr2_circle_richness.py ;
                          codes/vacuum/dr2_divcirc_proof.py ;
                          codes/vacuum/dr2_lattice_divisor.py ;
@@ -228,9 +253,11 @@ No-overclaim statement:  lattice class only, modulo the explicitly
                          arbitrary non-lattice Q is OPEN; the
                          decoupling route is a non-load-bearing
                          cross-check.
-Next required action:    operator 7-script clean-run inspection +
-                         Lemma NT pin (citation or in-bundle proof)
-                         -> operator CONFIRM -> ONLY THEN package
-                         PUBLISHED bundle (policy sec.14/15).
+Next required action:    operator re-run of the patched
+                         dr2_lattice_divisor.py v2.0.0 (other 6
+                         already clean-run PASS) + Lemma NT pin
+                         (citation or in-bundle proof) -> operator
+                         CONFIRM -> ONLY THEN package PUBLISHED
+                         bundle (policy sec.14/15).
 \end{verbatim}
 }

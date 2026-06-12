@@ -1,6 +1,6 @@
 {
   "script": "dr2_lattice_divisor.py",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "theorem": "Q in Z^3 on |x|^2=R => E_+(Q) <= (1+T'(Q))N^2 with T' <<_eps R^eps [DIV-CIRC]",
   "shells": {
     "101": {
@@ -48,6 +48,16 @@
   },
   "loglog_slope": 0.1773233420399372,
   "claims": [
+    {
+      "name": "fastpath_equals_reference",
+      "passed": true,
+      "detail": "(vectorized r_Q-count path reproduces the v1.0.0 occupancy path EXACTLY on R=101/314/909: R=101:(148680==148680,18==18); R=314:(472824==472824,24==24); R=909:(1252728==1252728,24==24) -- the occupancy=r_Q identity for full shells is machine-verified, not argued only)"
+    },
+    {
+      "name": "R9974_regression_oracle",
+      "passed": true,
+      "detail": "(R=9974 fast path: N=2040, T'=48, E_+=16291944 == archived v1.0.0 slow-path values -- the big-shell row is unchanged by the runtime patch)"
+    },
     {
       "name": "lemmaA_holds_on_lattice_shells",
       "passed": true,

@@ -12,9 +12,24 @@ By Lemma A (E_+ <= (1+T')N^2, R-025), E_+(Q) <<_eps R^eps N^2, which is N^{2+eps
 for Gauss-typical shells (R ~ N^2). DECOUPLING-FREE -- Route A.
 
 All arithmetic is EXACT (integers); the lemma assert IS the proof check.
+
+v2.0.0 RUNTIME PATCH (operator clean-run verdict 2026-06-12, option B):
+v1.0.0 timed out on the R=9974 (N=2040) shell in referee clean-runs. Cause: the
+per-distinct-sum occupancy loop (O(#sums x N) matvecs over ~2x10^6 distinct
+sums). Fix: for a FULL lattice shell Q (closed under x |-> m-x on each sum
+circle: x.m=|m|^2/2 and |x|^2=R imply |m-x|^2=R, and m-x stays in the lattice,
+incl. the FCC parity class), the circle occupancy EQUALS the sum-representation
+count r_Q(m) = #{(a,b) in Q^2 : a+b=m}. Hence
+    E_+ = sum_m r_Q(m)^2  and  T' = max_{m!=0} r_Q(m)
+both come from ONE vectorized unique-count pass over all N^2 pair sums (int64
+key encoding), eliminating the occupancy loop entirely. The v1.0.0 slow path is
+KEPT as a reference implementation and the occupancy=r_Q identity is
+machine-verified on the small shells (equivalence cross-check), so the fast
+path is not trusted on argument alone. Realized sums automatically have |m|^2
+even (2a.m = 2R + 2a.b), matching the v1.0.0 parity skip.
 self-test asserts (exit 0 iff all pass).
 """
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __first_issued__ = "2026-06-08"
 __claims__ = ["B5-BEYOND-LAYER-BOUND"]
 
@@ -44,8 +59,8 @@ def lattice_Z3(R):
 def lattice_FCC(R):       # {x in Z^3 : x+y+z even}
     return [p for p in lattice_Z3(R) if (p[0]+p[1]+p[2])%2==0]
 
-def E_and_Tprime(Q):
-    """exact integer additive energy and sum-circle richness T'."""
+def E_and_Tprime_reference(Q):
+    """v1.0.0 slow path (occupancy loop) -- kept as the equivalence oracle."""
     reps=defaultdict(int)
     for ax,ay,az in Q:
         for bx,by,bz in Q:
@@ -54,20 +69,57 @@ def E_and_Tprime(Q):
     Qa=np.array(Q,dtype=np.int64); Tp=0
     for m,_ in reps.items():
         mm=m[0]*m[0]+m[1]*m[1]+m[2]*m[2]
-        if mm==0 or mm%2: continue          # m=0 split off; |m|^2 even for relevant m
+        if mm==0 or mm%2: continue
         n=int(np.count_nonzero(Qa@np.array(m,dtype=np.int64)==mm//2))
         if n>Tp: Tp=n
     return E,Tp
 
+def E_and_Tprime(Q):
+    """v2.0.0 fast path: one vectorized unique-count pass over all pair sums.
+    Exact integer arithmetic; T' = max_{m!=0} r_Q(m) (= circle occupancy for
+    full shells, machine-verified below)."""
+    Qa=np.asarray(Q,dtype=np.int64); n=len(Qa)
+    # pair sums, encoded as a single int64 key (coords of a+b lie in [-2b,2b])
+    b=int(np.abs(Qa).max()); K=4*b+1; off=2*b
+    assert K**3 < 2**62, "key encoding overflow guard"
+    S=(Qa[:,None,:]+Qa[None,:,:]).reshape(-1,3)
+    keys=((S[:,0]+off)*K+(S[:,1]+off))*K+(S[:,2]+off)
+    uk,counts=np.unique(keys,return_counts=True)          # single pass
+    E=int(np.sum(counts.astype(object)**2))               # exact (python ints)
+    zero_key=((0+off)*K+(0+off))*K+(0+off)
+    Tp=int(counts[uk!=zero_key].max())                    # T' = max_{m!=0} r_Q(m)
+    return E,Tp
+
 # Gauss-typical shells (4-free, !=7 mod 8), max-N representatives per band (precomputed)
 SHELLS=[101,314,909,1826,4994,9974]
-print("=== Z^3 lattice shells: Lemma A + T' growth (Route A) ===")
+print("=== Z^3 lattice shells: Lemma A + T' growth (Route A, v2.0.0 fast path) ===")
 print("R       N      E_+/N^2   T'    T'/N    logT'/logR")
 rows={}
 for R in SHELLS:
     Q=lattice_Z3(R); N=len(Q); E,Tp=E_and_Tprime(Q)
     rows[R]=dict(N=N,E_plus=E,T_prime=Tp,ratio=E/(N*N),lemma_ok=bool(E<=(1+Tp)*N*N))
     print(f"{R:5d}  {N:4d}   {E/(N*N):6.3f}   {Tp:3d}   {Tp/N:6.4f}  {math.log(Tp)/math.log(R):.3f}")
+
+# (0a) NEW v2.0.0: fast path == v1.0.0 reference (occupancy = r_Q identity) on small shells
+eq_ok=True; eq_detail=[]
+for R in SHELLS[:3]:
+    Q=lattice_Z3(R)
+    Ef,Tf=E_and_Tprime(Q); Es,Ts=E_and_Tprime_reference(Q)
+    eq_ok &= (Ef==Es and Tf==Ts); eq_detail.append(f"R={R}:({Ef}=={Es},{Tf}=={Ts})")
+claim("fastpath_equals_reference", eq_ok,
+      f"(vectorized r_Q-count path reproduces the v1.0.0 occupancy path EXACTLY on R=101/314/909: "
+      f"{'; '.join(eq_detail)} -- the occupancy=r_Q identity for full shells is machine-verified, "
+      "not argued only)")
+
+# (0b) NEW v2.0.0: regression oracle -- the R=9974 row must reproduce the v1.0.0
+# archived run (claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-lattice-divisor/result.json,
+# computed by the slow path before the runtime patch). CLEARLY-LABELLED TEST ORACLE values.
+ORACLE_9974=dict(N=2040,T_prime=48,E_plus=16291944)
+claim("R9974_regression_oracle",
+      rows[9974]["N"]==ORACLE_9974["N"] and rows[9974]["T_prime"]==ORACLE_9974["T_prime"]
+      and rows[9974]["E_plus"]==ORACLE_9974["E_plus"],
+      f"(R=9974 fast path: N={rows[9974]['N']}, T'={rows[9974]['T_prime']}, E_+={rows[9974]['E_plus']} "
+      "== archived v1.0.0 slow-path values -- the big-shell row is unchanged by the runtime patch)")
 
 # (1) Lemma A holds on EVERY real lattice shell -- the proof check
 claim("lemmaA_holds_on_lattice_shells", all(rows[R]["lemma_ok"] for R in SHELLS),
