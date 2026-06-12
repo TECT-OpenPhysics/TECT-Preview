@@ -16,7 +16,7 @@ res5_032--036.
 | 1 | Reading-H C_full | `claims/B1-RH-ENUM/Reading-H` | the comparison theorem (D)(O)(S) + window | **PUBLISHED** -- bundle `B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611` |
 | 2 | Prop-A | `claims/B2-PROPA-HLAYER/Prop-A` | (D) diagonal isotropy + (O) class-wide closure (T-016..T-024) | **PUBLISHED** (v1.2, T6) -- bundle `B2-PROPA-HLAYER/bundle/Prop-A-T6-260611` (9/9, 44/44 asserts PASS); scope A_adm T'<=13 |
 | 3 | additive-energy / DR-2 | `claims/B5-BEYOND-LAYER-BOUND/DR-2` | Lemma 1: the sum-circle / lattice additive-energy bound (R-025/026) | DRAFT v1.0 (review pending) |
-| 4 | SC-SCOPE | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE` | (S) the third-cumulant selection floor | **DRAFT ACCEPTED** (v1.2, 2026-06-12; T5 thin-certified endpoint closure, window W_SC; operator clean-run audit demoted joint_pairing to supporting/historical -> 4-script entry manifest, 29/29 PASS; published-bundle HELD pending operator confirmation of the amended manifest) |
+| 4 | SC-SCOPE | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE` | (S) the third-cumulant selection floor | **PUBLISHED** (v1.3, T5 thin-certified) -- bundle `B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612` (4/4 entry scripts, 29/29 asserts PASS, operator clean-run CONFIRMED 2026-06-12); endpoint I=2e-3 + window W_SC only; NOT T6/T7, NOT full C_full |
 | 5 | K-budget / STEP-5B | `claims/B5-BEYOND-LAYER-BOUND/STEP-5B` | the rectangle constant K(n) the off-diagonal const rests on | **PUBLISHED** (v1.2, T6) -- bundle `B5-BEYOND-LAYER-BOUND/bundle/STEP-5B-Rectangle-T6-260612` (192/192 asserts PASS, operator clean-run CONFIRMED 2026-06-12); rectangle prefactor + official threshold 1.59e5 only, NOT full STEP-5B closure; uses H-LAYER-AUX RES-4 as input |
 
 (A1-KERNEL-CONV is the named definitional input; it is legacy and has no in-repo
@@ -54,4 +54,4 @@ only post-confirmation (no DRAFT bundle; packaging is the LAST step, followed by
 the final integrity check). All per-sub-folder bundles and the pre-confirmation
 DRAFT bundles are being removed Windows-side; only the two main-line PUBLISHED
 bundles (`Reading-H-cFull-T7-260611`, `Prop-A-T6-260611`) remain. Remaining review
-queue: DR-2 (STEP-5B rectangle-constant package PUBLISHED-BUNDLE CONFIRMED 2026-06-12 as `STEP-5B-Rectangle-T6-260612`; SC-SCOPE package DRAFT ACCEPTED 2026-06-12, published-bundle HELD pending operator 5-script inspection; full STEP-5B budget comparison + admissibility gates remain separately tracked).
+queue: DR-2 only (STEP-5B-Rectangle-T6-260612 and SC-SCOPE-T5-260612 both PUBLISHED-BUNDLE CONFIRMED 2026-06-12; full STEP-5B budget comparison + admissibility gates remain separately tracked).

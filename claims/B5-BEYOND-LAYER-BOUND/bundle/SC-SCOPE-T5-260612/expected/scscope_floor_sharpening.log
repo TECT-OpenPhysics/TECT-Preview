@@ -1,0 +1,18 @@
+n_pack=40.7  K_cons(kappa-bal)=103.5  K_budget=266.7  rho_cons=2.58
+  [PASS] reproduces_endpoint_floor (rho_cons = K_budget/K_cons = x2.58, reproduces the AddE/remargin endpoint floor x2.6)
+  [PASS] kappa_balanced_loose_at_endpoint (K_cons=103.5 > 1+n_pack=41.7: the kappa-balanced sqrt(n) bound (prefactor c_R=4sqrt(14)~15) OVERSHOOTS the trivial Lemma-A additive-energy bound at the small endpoint n_pack)
+
+T'      K_lat=1+T'   rho_lat=Kb/K_lat   paired=rho_lat/2.872   closes?
+   2.0       3.0    x   88.89        x 30.95            YES
+   8.0       9.0    x   29.63        x 10.32            YES
+  40.7      41.7    x    6.40        x  2.23            YES
+  67.0      68.0    x    3.92        x  1.37            YES
+  92.0      93.0    x    2.87        x  1.00            no
+  [PASS] separated_regime_closes (in the H-ADM-COH-separated regime T'<=n_pack=41 <= break-even 92: rho_lat=x6.4 >= 3.9, paired x2.23 >= 1 -- endpoint CLOSES)
+  [PASS] rho_reaches_3p9 (rho_lat at T'=n_pack = x6.4 >= 3.9, the threshold scscope-joint-pairing named)
+  [PASS] lattice_regime_closes_with_margin (for the lattice class T'~tens (measured <=48 for N<=2040): paired x1.90 > 1.5 -- closes with margin via R-026/R-027)
+
+break-even T' (paired=1): 92;  T'<=67 gives rho>=3.9
+RESIDUAL (named): exact constant map kappa-balanced K(n) <-> Lemma-A 1+T' (-4I^2 subtraction / averaging); both bound the same lambda'-free (<F^4>-4I^2)/I^2.
+
+claims 5/5 PASS

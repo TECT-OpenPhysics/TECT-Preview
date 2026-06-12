@@ -1,12 +1,12 @@
-% SUPERSEDED by sc-scope-referee-package-260610-260612-v1.3.tex.txt
 % =============================================================================
 % Title: Referee package -- SC-SCOPE: the second- and third-cumulant endpoint closure of the selection floor
-% Claim: B5-BEYOND-LAYER-BOUND (referee package; MAIN-LINE SUPPORTING DRAFT ACCEPTED)
-% Version: v1.2 -- first issued 2026-06-10; this version issued 2026-06-12
-% Status: DRAFT ACCEPTED (operator verdict 2026-06-12) -- accepted as the SC-SCOPE
-%   T5 thin-certified endpoint-closure support package; PUBLISHED-BUNDLE confirmation
-%   HELD pending operator 5-script clean-run inspection (policy sec.14: bundle is
-%   packaged only AFTER operator confirmation). The package closes the SC-SCOPE
+% Claim: B5-BEYOND-LAYER-BOUND (referee package; PUBLISHED-BUNDLE CONFIRMED)
+% Version: v1.3 -- first issued 2026-06-10; this version issued 2026-06-12
+% Status: PUBLISHED-BUNDLE CONFIRMED (operator CONFIRM 2026-06-12) -- the SC-SCOPE
+%   T5 thin-certified endpoint-closure support package, bundle SC-SCOPE-T5-260612.
+%   Operator inspection: 4/4 entry scripts PASS, 29/29 asserts PASS (clean-run).
+%   Grade is T5 thin-certified -- NOT a T6/T7 promotion and NOT a full C_full
+%   closure (operator ruling). The package closes the SC-SCOPE
 %   selection floor at the all-orders endpoint I = 2e-3 (joint > 1, thin,
 %   sunset-limited, near-critical); it is NOT a comfortable all-intensity closure,
 %   does NOT close full STEP-5B by itself, does NOT close admissible-class
@@ -38,6 +38,12 @@
 %        load-bearing). Entry manifest is now 4 scripts, 29/29 asserts
 %        (7/7, 5/5, 12/12, 5/5) -- matching the operator's clean-run 4/4 PASS.
 %        Published-bundle confirmation remains HELD.
+%   v1.3 (2026-06-12) operator CONFIRM: PUBLISHED-BUNDLE CONFIRMED as
+%        SC-SCOPE-T5-260612 (amended 4-script manifest approved; 4/4 entry
+%        scripts, 29/29 asserts PASS). Publication-qualifier metadata patch only
+%        (status banner, footer tier/next-action lines); no content change.
+%        Operator ruling restated: T5 thin-certified endpoint closure -- no
+%        T6/T7 promotion, no full C_full interpretation.
 % =============================================================================
 
 \sloppy
@@ -154,9 +160,10 @@ outside it, and the precise scope is in the footer. In particular: endpoint + th
 explicit window $\mathcal W_{\rm SC}$ only; no all-intensity claim; no full STEP-5B,
 no exhaustiveness, no full $C_{\rm full}$.
 \item[($\beta$)] \emph{Attack the tier / over-claim.} No prose here is stronger than the
-registered grade (footer no-overclaim line); the status is DRAFT ACCEPTED (T5
-thin-certified), published-bundle confirmation HELD, and the claim-ledger tier is the
-arbiter. The closure is explicitly flagged THIN and sunset-limited.
+registered grade (footer no-overclaim line); the status is PUBLISHED-BUNDLE CONFIRMED
+as a T5 thin-certified support package (bundle SC-SCOPE-T5-260612; NOT a T6/T7
+promotion), and the claim-ledger tier is the arbiter. The closure is explicitly
+flagged THIN and sunset-limited.
 \item[($\gamma$)] \emph{Attack reproduction / self-containment.} Each reproduction script
 carries self-test asserts and ships in the folder's bundle with its transitive
 dependencies (imports and runtime file reads, resolver v1.3.0); a referee runs them and
@@ -204,17 +211,18 @@ Reproduction command:    python
 Falsifier:               a recomputed joint <=1 at the endpoint; or a
                          convolution-normalisation that doubles Ghat4
                          (R_max>0.634); or joint<=1 anywhere in W_SC.
-Tier before / after:     DRAFT ACCEPTED (operator verdict 2026-06-12);
-                         SC-SCOPE endpoint thin-certified T5. No
-                         standalone tier promotion. Published-bundle
-                         confirmation HELD.
+Tier before / after:     PUBLISHED-BUNDLE CONFIRMED (operator CONFIRM
+                         2026-06-12); bundle SC-SCOPE-T5-260612;
+                         T5 thin-certified endpoint support package
+                         (NOT T6/T7; NOT full C_full). No B5 claim-tier
+                         promotion.
 No-overclaim statement:  the endpoint closes THIN (sunset-limited
                          near-critical); not a comfortable
                          all-intensity statement; sign-stability is
                          claimed only on the explicit window W_SC.
-Next required action:    operator confirmation of the amended 4-script
-                         manifest (clean-run already 4/4, 29/29 PASS) ->
-                         operator CONFIRM -> ONLY THEN package PUBLISHED
-                         bundle (policy sec.14).
+Next required action:    none for this package (PUBLISHED). Mainline:
+                         DR-2 referee package; full STEP-5B budget
+                         comparison + admissibility gates remain
+                         separately tracked.
 \end{verbatim}
 }

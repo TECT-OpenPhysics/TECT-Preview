@@ -38,12 +38,12 @@
 | `offshell-domination-theorem` | v1.1 | T5* | rho_off = \|Sigma_cond(k_off)\|/K_0(k_off) <= R_lead*r_R/(r_R+c*delta^2) < R_lead < 1, inheriting (a) on-shell R_lead<1 (T-018/020, \|Sigma_cond\|<=R_lea… | ANALYTIC (corollary of established results) +… | T7 Step 3 (Blocker B): R_max<0.634 certified bound (via the official Parseval-pinned Ghat… |
 | `offshell-operator-decision` | v1.0 | T5* | DECISION: off-shell/arbitrary-multi-radius antipodal lattice subsets are NOT in the primary A_adm (registered shell/shell-union, T'<=13), justified b… | ANALYTIC (kinetic penalty + two-tier closure)… | OPERATOR (optional): enact the B1/B2 re-tier to hypothesis-reduced T6 on the shell-suppor… |
 
-## SC-SCOPE/  ·  10 proof units  ·  tier span T5
+## SC-SCOPE/  ·  10 proof units  ·  tier span T5/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `blocker-b-hardening` | v1.1 | T5* | (1) Ghat4 = (J*J)(t) with /(4pi^2) FORCED by the (2pi)^3 convolution measure (phi=2pi); Parseval ratio 1.0000 is a consequence; /(2pi^2) doubles it -… | ANALYTIC (convention derivation + monotonicit… | T7 Step 4 assembly (F[Q]>F[G_*] for all C_phys) now rests only on the operator sign-off; … |
-| `sc-scope-referee-package` | v1.2 | T5 | At the all-orders endpoint I=2e-3 the SC-SCOPE third-cumulant joint > 1: realized quartic R_max=0.385<0.634 (Parseval-pinned 1/(4pi^2) convolution me… | third-cumulant endpoint closure, thin-certifi… | operator confirmation of the amended 4-script manifest (clean-run already 4/4, 29/29 PASS… |
+| `sc-scope-referee-package` | v1.3 | T7 | At the all-orders endpoint I=2e-3 the SC-SCOPE third-cumulant joint > 1: realized quartic R_max=0.385<0.634 (Parseval-pinned 1/(4pi^2) convolution me… | third-cumulant endpoint closure, thin-certifi… | none for this package (PUBLISHED). Mainline: DR-2 referee package; full STEP-5B budget co… |
 | `scscope-classwide-endpoint` | v1.0 | T5* | The certified joint MARGIN/(C_2+C_sunset+C_quartic) has MARGIN cancel, giving joint(rho_lat)=1/[(1/rho)(1+R_max)+(1-1/rho)/S], monotone in the STEP-5… | ANALYTIC (MARGIN-cancellation + critical-T') … | The remaining H-LAYER item is the operator competitor-class definition (admissible = crys… |
 | `scscope-endpoint-joint-assessment` | v1.0 | T5* | GHAT4-PERTRANSFER: per-transfer Ghat4(t)=(J*J)(t) on the realized chords; convention-free shape reduction max Phi / Phi_sup = 0.64 (Ghat4 broad), R_m… | EXECUTED (scscope_ghat4_pertransfer.py 7/7; s… | Joint incompatible-pairing argument (bound max_t[c_sunset(t)+c_quartic(t)]) OR sharper pe… |
 | `scscope-floor-sharpening` | v1.6 | T5* | PROVED: the floor's additive-energy constant K=sum_{t!=0}w_t^2/(lambda'I)^2 <= T'(M) (reconciliation, scscope_constant_map.py 3/3), sharpening the en… | Reconciliation K<=T'(M) PROVED + verified (3/… | Pin the absolute Ghat4 normalisation (factor-2/(2pi)^3 convention): the REALIZED quartic … |
@@ -73,4 +73,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-12T06:12:57Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-12T06:43:14Z by build_index.py v1.0.1 -->
