@@ -1,8 +1,7 @@
-% SUPERSEDED by sc-scope-referee-package-260610-260612-v1.2.tex.txt
 % =============================================================================
 % Title: Referee package -- SC-SCOPE: the second- and third-cumulant endpoint closure of the selection floor
 % Claim: B5-BEYOND-LAYER-BOUND (referee package; MAIN-LINE SUPPORTING DRAFT ACCEPTED)
-% Version: v1.1 -- first issued 2026-06-10; this version issued 2026-06-12
+% Version: v1.2 -- first issued 2026-06-10; this version issued 2026-06-12
 % Status: DRAFT ACCEPTED (operator verdict 2026-06-12) -- accepted as the SC-SCOPE
 %   T5 thin-certified endpoint-closure support package; PUBLISHED-BUNDLE confirmation
 %   HELD pending operator 5-script clean-run inspection (policy sec.14: bundle is
@@ -12,7 +11,8 @@
 %   does NOT close full STEP-5B by itself, does NOT close admissible-class
 %   exhaustiveness, and does NOT enact the full Reading-H C_full theorem.
 %   No standalone tier promotion.
-%   Reproduction: 5 entry scripts (manifest in Sec. 4). Grounded by the folder's notes.
+%   Reproduction: 4 entry scripts (manifest in Sec. 4; 29/29 asserts). Grounded by
+%   the folder's notes.
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-10) first DRAFT issue for operator review. Synthesised the folder's
@@ -26,6 +26,17 @@
 %        replaced by the explicit certified window W_SC with its evidence script
 %        (Sec. 3). AI-side clean-run re-verified 2026-06-12: 5 entry scripts,
 %        33/33 asserts PASS, all exit 0 (7/7, 5/5, 4/4, 12/12, 5/5).
+%   v1.2 (2026-06-12) operator clean-run audit: scscope_joint_pairing.py FAILED in a
+%        clean checkout (it reads the runtime artefact
+%        runs/260607-scscope-joint-endpoint/result.json, absent from the bundle) --
+%        a reproduction self-containment failure, NOT a mathematical failure (the
+%        load-bearing closure was reproduced by scscope_quartic_certificate.py and
+%        scscope_mendpoint_eval.py). Operator option B enacted: joint_pairing is
+%        DEMOTED from the entry manifest to a supporting/historical artefact
+%        (honest-negative reference for the RETRACTED pairing formula; not
+%        load-bearing). Entry manifest is now 4 scripts, 29/29 asserts
+%        (7/7, 5/5, 12/12, 5/5) -- matching the operator's clean-run 4/4 PASS.
+%        Published-bundle confirmation remains HELD.
 % =============================================================================
 
 \sloppy
@@ -104,29 +115,34 @@ $\rho\to\infty$, so no floor sharpening can exceed it.
 
 \section*{4. Numerical reproduction}
 
-\paragraph{Entry-script manifest (patch v1.1-1; complete, no ellipsis).} Five scripts,
-each with self-test asserts, all exit 0 (AI-side clean-run 2026-06-12, 33/33 asserts
-PASS in total):
+\paragraph{Entry-script manifest (patch v1.1-1, amended v1.2; complete, no ellipsis).}
+Four scripts, each self-contained with self-test asserts, all exit 0 (operator
+clean-run 2026-06-12: 4/4 scripts, 29/29 asserts PASS; AI-side re-run identical):
 
 \begin{enumerate}
 \item \texttt{codes/vacuum/scscope\_ghat4\_pertransfer.py} (7/7) --- per-transfer
 quartic form factor $\widehat{G^4}(t)=(J*J)(t)$ on the realized chords.
 \item \texttt{codes/vacuum/scscope\_floor\_sharpening.py} (5/5) --- the proved floor
 sharpening $K_{\rm floor}\le T'(M)$ and $\rho_{\rm lat}: 2.58\to6.55$.
-\item \texttt{codes/vacuum/scscope\_joint\_pairing.py} (4/4) --- the most-favourable
-joint incompatible-pairing bound (historical honest-negative reference point).
 \item \texttt{codes/vacuum/scscope\_mendpoint\_eval.py} (12/12) --- M-ENDPOINT
 $M(0.33675)=0.10495$ (two quadratures agree $0.61\%$), the rigorous sunset cap
-$\times1.13$.
+$\times1.13$ (dressed endpoint ratio $\times1.129>1$).
 \item \texttt{codes/vacuum/scscope\_quartic\_certificate.py} (5/5) --- the Parseval
 pin (ratio $1.0000$), the certified $R_{\max}=0.385<0.634$, and the certified joint
-$\times1.040$--$\times1.082>1$.
+$\times1.040$--$\times1.082>1$ (the load-bearing closure).
 \end{enumerate}
 
-Supporting (window evidence, cited by Sec.~3): \texttt{codes/vacuum/scscope\_endpoint\_sweep.py}
-(4/4) for $\mathcal W_{\rm SC}$; \texttt{codes/vacuum/scscope\_joint\_correction.py}
-(5/5) for the $0.634$ gate registration. Run them from the bundle and diff against
-\texttt{expected/}.
+Supporting / historical (NOT entry scripts; not load-bearing for the closure):
+\texttt{codes/vacuum/scscope\_joint\_pairing.py} (4/4 in a full checkout) --- the
+most-favourable joint incompatible-pairing bound, an honest-negative reference for
+the RETRACTED pairing formula; it reads the runtime artefacts
+\texttt{runs/260607-scscope-ghat4-pertransfer/result.json} and
+\texttt{runs/260607-scscope-joint-endpoint/result.json} and is therefore not
+self-contained in a bundle that omits them (operator clean-run audit 2026-06-12);
+\texttt{codes/vacuum/scscope\_endpoint\_sweep.py} (4/4) for the $\mathcal W_{\rm SC}$
+window evidence (Sec.~3); \texttt{codes/vacuum/scscope\_joint\_correction.py} (5/5)
+for the $0.634$ gate registration. Run the entry manifest from the bundle and diff
+against \texttt{expected/}.
 
 \section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
 
@@ -150,8 +166,8 @@ Quantitative sanity check (mandatory): the $0.634$ gate is re-derived from its i
 ($R^{\rm crit}_{\max} = 6.55(1-(1-1/6.55)/1.13)-1 = 0.639$, registered DOWN to $0.634$,
 safe direction); the joint is re-assembled from its terms
 ($[(1+0.385)/6.55+(1-1/6.55)/1.13]^{-1} = 1.040$); the falsifier (footer) is concrete
-and pre-registered; and every numerical value cited is reproduced by the manifest
-scripts (33/33 asserts PASS, exit 0, 2026-06-12 re-run).
+and pre-registered; and every numerical value cited is reproduced by the 4-script entry
+manifest (29/29 asserts PASS, exit 0; operator clean-run 2026-06-12 identical).
 
 \section*{6. Result footer}
 
@@ -174,14 +190,16 @@ Scope:                   SC-SCOPE all-orders endpoint selection floor +
                          near-critical). NOT all-intensity; NOT full
                          STEP-5B; NOT exhaustiveness; NOT full C_full.
 Evidence grade:          third-cumulant endpoint closure,
-                         thin-certified (T5); EXECUTED (5 entry scripts,
-                         33/33 asserts PASS, exit 0).
+                         thin-certified (T5); EXECUTED (4 entry scripts,
+                         29/29 asserts PASS, exit 0; operator clean-run
+                         4/4 PASS 2026-06-12).
 Reproduction command:    python
                          codes/vacuum/scscope_ghat4_pertransfer.py ;
                          codes/vacuum/scscope_floor_sharpening.py ;
-                         codes/vacuum/scscope_joint_pairing.py ;
                          codes/vacuum/scscope_mendpoint_eval.py ;
                          codes/vacuum/scscope_quartic_certificate.py
+                         (joint_pairing: supporting/historical only,
+                         requires full-checkout run artefacts)
 Falsifier:               a recomputed joint <=1 at the endpoint; or a
                          convolution-normalisation that doubles Ghat4
                          (R_max>0.634); or joint<=1 anywhere in W_SC.
@@ -193,8 +211,9 @@ No-overclaim statement:  the endpoint closes THIN (sunset-limited
                          near-critical); not a comfortable
                          all-intensity statement; sign-stability is
                          claimed only on the explicit window W_SC.
-Next required action:    operator inspection + clean-run of the 5-script
-                         manifest -> operator CONFIRM -> ONLY THEN
-                         package PUBLISHED bundle (policy sec.14).
+Next required action:    operator confirmation of the amended 4-script
+                         manifest (clean-run already 4/4, 29/29 PASS) ->
+                         operator CONFIRM -> ONLY THEN package PUBLISHED
+                         bundle (policy sec.14).
 \end{verbatim}
 }
