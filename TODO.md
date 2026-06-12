@@ -3,16 +3,13 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 3 · Done (recent) 26
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 27
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-013** Author SYNTHESIS.tex.txt layer: per-sub-proof + claim-level synthesis (the parent 'jong-hap' proof) for B1/B2/B5, citing each sub-proof's notes at their tiers  _(claim: B5-BEYOND-LAYER-BOUND)_
-  - Parent main-line synthesis DONE 2026-06-12 (theory/main-line-synthesis-260612-v1.0, capstone over the 5 PUBLISHED bundles). REMAINING: per-claim SYNTHESIS layers for B1/B2/B5 (one note per turn).
-  - _updated 2026-06-12_
 
 ## Backlog
 
@@ -56,6 +53,9 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 3 · Done (recent) 26
 - **T-012** Resolve B1/B5 SC-SCOPE chronicle duplicate via Windows-side Remove-Item  _(claim: B1-RH-ENUM)_
   - sandbox cannot unlink; B5 copy canonical; DEFERRED per operator (deletions later)
   - _updated 2026-06-09_
+- **T-013** Author SYNTHESIS.tex.txt layer: per-sub-proof + claim-level synthesis (the parent 'jong-hap' proof) for B1/B2/B5, citing each sub-proof's notes at their tiers  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - COMPLETE 2026-06-12: parent capstone PUBLISHED as Main-Line-Synthesis-T013-260612 + three claim-level SYNTHESIS notes issued (claims/<ID>/SYNTHESIS-260612-v1.0).
+  - _updated 2026-06-12_
 - **T-014** RES-5 endpoint full-lattice theorem (1/2): pin C_eps R^eps < 26.2 over the admissible R-range (R-026 constant sufficiency); upgrades the lattice-class endpoint from STRONG EVIDENCE to theorem  _(claim: B1-RH-ENUM; gate: RES-5-ENDPOINT)_
   - res5-dr2-kappa-bound-v1.2
   - _updated 2026-06-09_

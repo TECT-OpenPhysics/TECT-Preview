@@ -1,0 +1,131 @@
+% =============================================================================
+% Title: B2-PROPA-HLAYER claim-level synthesis: Proposition A and the discharge of H-LAYER
+% Claim: B2-PROPA-HLAYER (claim-level SYNTHESIS layer, T-013; taxonomy claims-restructure-proposal-260609)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: SYNTHESIS NOTE -- no new mathematics, no tier change, no gate flip.
+%   Canonical claim state (status.json / CLAIMS.md): T7-SCOPE_{C_full}
+%   (comfortable upgrade 2026-06-10; H-LAYER discharged), hypothesis set
+%   {A1-KERNEL-CONV}, open gates: none. This note maps the claim's sub-proof
+%   units into that state under the parent capstone
+%   Main-Line-Synthesis-T013-260612.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue, alongside the operator CONFIRM of the parent
+%        main-line synthesis. Per policy sec.15 the load-bearing support
+%        (Prop-A) is already PUBLISHED at issue time.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Claim-level synthesis for B2-PROPA-HLAYER. It adds no mathematics; every
+statement carries the unit's registered tier. \textbf{Scope:} the composition
+of B2's units into the canonical claim state. \textbf{Not claimed:} anything
+beyond the enacted scope; in particular Prop-A's own bundle scope is
+$\mathcal A_{\rm adm}$ ($T'\le13$) and the $C_{\rm full}$ statement runs
+through the joint B1/B2 head package, not through Prop-A alone.
+
+\section*{2. The claim and its canonical state}
+
+\textbf{Claim (canonical).} The isotropic Gaussian--Hartree layer is the
+strict comparison infimum: the H-LAYER hypothesis class is DISCHARGED -- every
+analytic H-LAYER residual is closed class-wide on the primary admissible class,
+and the layer comparison enters the Reading-H selection as a theorem, not an
+assumption. Tier: T7-SCOPE$_{C_{\rm full}}$ (jointly with B1, enacted
+2026-06-10); hypothesis: A1-KERNEL-CONV; open gates: none.
+
+\section*{3. Sub-proof unit map (per-unit tier and role)}
+
+\begin{center}
+\scriptsize
+\begin{tabular}{p{0.17\linewidth}p{0.12\linewidth}p{0.30\linewidth}p{0.29\linewidth}}
+\hline
+Unit & Tier & What it contributes & Publication state\\
+\hline
+\texttt{Prop-A/} & T6 & (D) block-diagonal isotropy (entropy floor
+$\tfrac12 r_R^2>0$, breathing $\tfrac32 u_{\rm eff}>0$) + (O) class-wide
+closure on $\mathcal A_{\rm adm}$ ($R_{\rm lead}(13)=0.650<1$, joint
+$=1.097>1$, $T'_{\rm crit}=60.4$); T-016..T-024 chain & PUBLISHED --
+\texttt{Prop-A-T6-260611} (9/9 scripts, 44/44)\\
+\texttt{G-A0-DUI/} & T6/T7-comp. & closed lemma: $M'(m)<0$ by differentiation
+under the integral (dominated convergence) -- supports $A=0$ uniqueness of the
+reference & AUXILIARY (operator-accepted v1.1; candidate fold into Prop-A/A1)\\
+\texttt{H-A0-removal/} & T6/T7-comp. & sign-decomposition theorem
+$F_0'=\tfrac12 M' g$ discharging H-A0's $U,Z$ to H-ANCHOR within the certified
+window (zero-at-gap anchor $g(m_{\rm gap})=0$) & AUXILIARY (operator-accepted
+v1.1; candidate fold into Prop-A/A1)\\
+\hline
+\end{tabular}
+\end{center}
+
+External: the joint B1/B2 head package \texttt{Reading-H-cFull-T7-260611}
+carries the $C_{\rm full}$ extension; Prop-A is its (D)/(O) primary-class
+sub-structure ($\mathcal A_{\rm adm}\subset\mathcal C_{\rm full}$).
+
+\section*{4. Composition and what remains}
+
+Prop-A (T6, PUBLISHED) closes every analytic H-LAYER residual class-wide on
+$\mathcal A_{\rm adm}$ at the operating point via the three sectors (D)/(O)/(S);
+the two $A=0$ lemmas secure the reference-state uniqueness feeding the A1
+convention; the $C_{\rm full}$ statement is enacted at the head. Nothing in
+B2's gate list remains open. Remaining (non-blocking, registered): the operator
+fold-in decision for \texttt{G-A0-DUI}/\texttt{H-A0-removal} into Prop-A or the
+A1 record (cosmetic restructuring); the A1-KERNEL-CONV migration itself
+(claim-A1-side, per main-proof-line.md).
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``B2 is T7-SCOPE but its only published in-claim bundle
+is T6 -- mismatch?''} DISMISSED with explanation: the T7-SCOPE state is the
+JOINT B1/B2 head enactment (Reading-H package); Prop-A's T6 is its
+primary-class sub-structure and was deliberately NOT re-tiered upward
+(operator ruling 2026-06-11: 'T6 NOT T7, does not independently enact full
+C\_full'). The claim-level tier and the unit-level tier answer different
+questions; both are quoted.
+\item[($\beta$)] \emph{``The $A=0$ lemmas might be load-bearing yet only
+operator-accepted drafts.''} VALID with mitigation: they support the A1
+REFERENCE definition (input layer), not the comparison chain; A1 itself is the
+registered hypothesis of both B1 and B2, so their weight is carried by the
+hypothesis declaration, not silently.
+\item[($\gamma$)] \emph{``T-019 history (hdiag\_gershgorin\_rowsum exchange-sign
+framing) was superseded -- does the synthesis cite stale framing?''} DISMISSED:
+the superseded framing was replaced by the res5\_019 local-functional
+reframing ($f''(M)=\tfrac32 u_{\rm eff}>0$) and the bundle carries the
+corrected note (Prop-A v1.3, T-019 supersession note retained as history).
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} The quoted Prop-A load-bearing
+values ($\Phi''_{\rm diag}=4.0275>0$, $\tfrac12 r_R^2=4.6368\times10^{-2}>0$,
+$R_{\rm lead}(13)=0.650<1$, joint$(13)=1.097>1$, $T'_{\rm crit}=60.4$) are the
+operator-confirmed bundle values (9/9, 44/44); margins $0.350$ and $0.097$ are
+positive; the $\mathcal A_{\rm adm}\subset\mathcal C_{\rm full}$ inclusion is
+definitional ($T'\le13$ vs the class cap).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B2-PROPA-HLAYER / claim-level SYNTHESIS (T-013)
+Precise statement:       B2's canonical state (T7-SCOPE_{C_full} given
+                         A1; H-LAYER discharged; gates none) is carried
+                         by the joint B1/B2 head package plus the
+                         PUBLISHED Prop-A-T6-260611 primary-class
+                         sub-structure; G-A0-DUI and H-A0-removal are
+                         auxiliary A=0-reference lemmas feeding A1.
+Scope:                   synthesis layer; no new math, no tier change,
+                         no gate flip.
+Evidence grade:          SYNTHESIS over PUBLISHED + operator-accepted
+                         units.
+Reproduction command:    run the Prop-A bundle entry manifest (9
+                         scripts); head package per its bundle.
+Falsifier:               any falsifier of the cited footers; or a
+                         unit-tier mismatch against INDEX.md.
+Tier before / after:     no change (B2 stays T7-SCOPE_{C_full}; Prop-A
+                         unit stays T6).
+No-overclaim statement:  Prop-A alone does not enact C_full; the
+                         claim-level tier is the joint head enactment.
+Next required action:    operator: optional fold-in decision for the
+                         two A=0 lemmas (cosmetic restructuring).
+\end{verbatim}
+}

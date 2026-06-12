@@ -1,0 +1,136 @@
+% =============================================================================
+% Title: B1-RH-ENUM claim-level synthesis: Reading-H vacuum selection, from the enumerated base to the C_full theorem
+% Claim: B1-RH-ENUM (claim-level SYNTHESIS layer, T-013; taxonomy claims-restructure-proposal-260609)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: SYNTHESIS NOTE -- no new mathematics, no tier change, no gate flip.
+%   Canonical claim state (status.json / CLAIMS.md): T7-SCOPE_{C_full}
+%   (comfortable upgrade 2026-06-10, thin-O qualifier removed), hypothesis set
+%   {A1-KERNEL-CONV}, open gates: none. This note maps how the claim's
+%   sub-proof units compose into that state, citing each at its registered
+%   tier, under the parent capstone Main-Line-Synthesis-T013-260612.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue, alongside the operator CONFIRM of the parent
+%        main-line synthesis. Per policy sec.15 every load-bearing support is
+%        already PUBLISHED at issue time.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Claim-level synthesis for B1-RH-ENUM: the parent document of the claim's
+sub-proof units (taxonomy of \texttt{governance/claims-restructure-proposal-260609.md}).
+It adds no mathematics; every statement carries the unit's registered tier.
+\textbf{Scope:} the composition of B1's units into the canonical claim state.
+\textbf{Not claimed:} anything beyond the head theorem's enacted scope
+(T7-SCOPE$_{C_{\rm full}}$ given A1, window $\mathcal R$); no A1-free, global,
+or all-intensity statement.
+
+\section*{2. The claim and its canonical state}
+
+\textbf{Claim (canonical).} Within
+$\mathcal R=\{\mu^2\in(0,0.0342),\ I\in(0,I_c^{\rm sel}(\mu^2))\}$, given the
+A1 kernel convention, $F[Q]-F[G_*]>0$ for every admissible competitor
+$Q\in\mathcal C_{\rm full}$ (real antipodal, $|Q|\le n_{\rm pack}$, pairwise
+geodesic $\ge\theta_{\min}$). Tier: T7-SCOPE$_{C_{\rm full}}$ (enacted
+2026-06-10, comfortable off-diagonal $\times1.96$); hypothesis: A1-KERNEL-CONV;
+open gates: none.
+
+\section*{3. Sub-proof unit map (per-unit tier and role)}
+
+\begin{center}
+\scriptsize
+\begin{tabular}{p{0.17\linewidth}p{0.10\linewidth}p{0.30\linewidth}p{0.31\linewidth}}
+\hline
+Unit & Tier & What it contributes & Publication state\\
+\hline
+\texttt{Reading-H/} & T7-SCOPE & the HEAD: (D)(O)(S) assembly + window
+certification (res5\_032--036) & PUBLISHED --
+\texttt{Reading-H-cFull-}\newline\texttt{T7-260611} (27/27)\\
+\texttt{enumerated/} & T5 & the numerical base: enumerated single/two-shell
+ensembles, 167/167 asserts, migration re-validated & AUXILIARY (provenance
+record; operator-accepted draft)\\
+\texttt{ESTIMATOR-}\newline\texttt{UPGRADE/} & T4 & controlled-error margins for the
+enumerated estimator (GAP-2 instance) & AUXILIARY (cited, not load-bearing)\\
+\texttt{ROBUSTNESS-}\newline\texttt{MU2/} & closed band & off-anchor robustness:
+$\mu^2\in[\times0.5,\times2]$, worst margin $\times2.55$ & AUXILIARY
+(operator-accepted draft)\\
+\texttt{near-gap/} & aux & convention-exact closure + the self-caught
+$M'=-J(0)/2$ factor-2 retraction & AUXILIARY (operator-accepted draft)\\
+\hline
+\end{tabular}
+\end{center}
+
+External load-bearing inputs (other claims): Prop-A (B2, T6 on
+$\mathcal A_{\rm adm}$) for (D)/(O) on the primary class; DR-2 lattice (B5, T7
+NT-standard) backing Lemma~1; STEP-5B rectangle (B5, T6) for the K-budget;
+SC-SCOPE (B5, T5 thin) for (S). Full per-edge accounting: parent capstone
+Main-Line-Synthesis-T013-260612 Sec.~3--4.
+
+\section*{4. Composition and what remains}
+
+The head package proves (D)(O)(S) competitor-agnostically inside
+$\mathcal C_{\rm full}$; the enumerated base (T5) anchors the numerics; the
+auxiliary units supply robustness, controlled-error and convention-exactness
+corroboration without entering the analytic chain. The claim's canonical tier
+is therefore carried ENTIRELY by the head package plus its named external
+inputs -- consistent with the claim card's empty gate list. Remaining tracks
+touching B1 (none blocking): T-030 (arbitrary-$Q$ DR-2, frontier;
+NOT load-bearing -- Lemma~2 caps $T'\le10$ in-class), T-031 (STEP-5B
+exhaustiveness decision layer, B5-side), T-006 (code de-hardcoding, infra).
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The claim NAME says `enumerated ensembles' but the
+canonical tier is a $C_{\rm full}$ statement.''} VALID with mitigation: the
+claim grew from the enumerated T5 base (2026-06-05) to the $C_{\rm full}$ head
+(2026-06-10); the name is historical. The canonical statement is the
+status.json scope; flagged for an operator rename decision (cosmetic).
+\item[($\beta$)] \emph{``The claim.md header still reads `Tier: T5, last
+review 2026-06-05'.''} VALID -- a SYNC DEFECT, not a status question:
+status.json (T7-SCOPE) is the single source of truth and CLAIMS.md agrees;
+the stale claim.md header is registered here for the next claim-card edit.
+No status is derived from claim.md.
+\item[($\gamma$)] \emph{``Synthesis could smuggle the auxiliary units into the
+load-bearing chain.''} DISMISSED: Sec.~3 marks every auxiliary unit AUXILIARY
+and the analytic chain runs head + external inputs only, exactly as in the
+parent capstone.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} The unit tiers quoted here
+match the generated \texttt{INDEX.md} and the five bundle footers; the head's
+numbers ($R_{\rm lead}=0.510$, joint $\ge1.040$, window $\mu^2<0.0342$) are
+those of the published bundle, reproduced by res5\_032--036 (27/27).
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B1-RH-ENUM / claim-level SYNTHESIS (T-013)
+Precise statement:       B1's canonical state (T7-SCOPE_{C_full} given
+                         A1, window R, gates none) is carried by the
+                         PUBLISHED head package Reading-H-cFull-T7-
+                         260611 plus named external inputs (Prop-A T6,
+                         DR-2 T7-lattice, STEP-5B T6, SC-SCOPE T5);
+                         the in-claim units enumerated/ESTIMATOR-
+                         UPGRADE/ROBUSTNESS-MU2/near-gap are auxiliary
+                         corroboration, not load-bearing.
+Scope:                   synthesis layer; no new math, no tier change,
+                         no gate flip.
+Evidence grade:          SYNTHESIS over PUBLISHED + operator-accepted
+                         units.
+Reproduction command:    run the Reading-H bundle entry manifest
+                         (res5_032--036); auxiliary units per their
+                         own notes.
+Falsifier:               any falsifier of the cited footers; or a
+                         unit-tier mismatch against INDEX.md.
+Tier before / after:     no change (B1 stays T7-SCOPE_{C_full}).
+No-overclaim statement:  nothing beyond the head's enacted scope;
+                         the claim-name/scope drift and the stale
+                         claim.md header are flagged, not papered
+                         over.
+Next required action:    operator: optional claim rename decision +
+                         claim.md header sync at next card edit.
+\end{verbatim}
+}

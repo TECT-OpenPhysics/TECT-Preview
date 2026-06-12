@@ -11,7 +11,7 @@ window, interval and sanity check it cites. An external referee can run the code
 here, without a TECT checkout, and obtain the same PASS lines.
 
 ## Contents
-- the referee note (proof, self-contained): `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/sc-scope-referee-package-260610-260612-v1.3.tex.txt`
+- the referee note (proof, self-contained): `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/sc-scope-referee-package-260610-260612-v1.4.tex.txt`
   (+ its `.pdf`)
 - reproduction code + all transitive local dependencies (repo-relative paths preserved)
 - `expected/` -- captured stdout of each script at build time (the PASS reference)
@@ -38,7 +38,7 @@ your output against `expected/`.
 
 ## Integrity
 Bundle content digest (sha256 over `<sha256>  <path>` lines):
-`9019e79b87f0aadacfec34fe21f8323906e21c1d6489be8989a1abb24946d90a`
+`bca6ca0cd6005ce4c97511fa7980207ef0cc75dce5c511bfd9ea02f4a7592bee`
 The repository commit that produced this bundle is recorded at publish time in
 `MANIFEST.json:repo_commit`.
 

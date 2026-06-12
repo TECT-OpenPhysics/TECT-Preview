@@ -1,0 +1,144 @@
+% =============================================================================
+% Title: B5-BEYOND-LAYER-BOUND claim-level synthesis: the beyond-layer machinery (DR-2, STEP-5B, SC-SCOPE)
+% Claim: B5-BEYOND-LAYER-BOUND (claim-level SYNTHESIS layer, T-013; taxonomy claims-restructure-proposal-260609)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: SYNTHESIS NOTE -- no new mathematics, no tier change, no gate flip.
+%   Canonical claim state (status.json / CLAIMS.md): T5 PINNED-CLOSURE,
+%   scope CLOSED@H-ADM-COH-AMENDED-CLASS (second-cumulant order), no
+%   hypotheses, no open gates. B5 is the MACHINERY claim: it does not state
+%   the vacuum selection itself; it supplies the off-diagonal/selection-floor
+%   inputs that B1/B2's head theorem consumes. Three of its sub-proof units
+%   hold PUBLISHED bundles at tiers ABOVE the claim tier (DR-2 T7-lattice,
+%   STEP-5B T6, SC-SCOPE T5) -- the claim tier is the floor of its weakest
+%   enacted closure, not of its strongest unit.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue, alongside the operator CONFIRM of the parent
+%        main-line synthesis. Per policy sec.15 all three published units are
+%        already operator-confirmed at issue time.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Claim-level synthesis for B5-BEYOND-LAYER-BOUND. It adds no mathematics; every
+statement carries the unit's registered tier. \textbf{Scope:} the composition
+of B5's units into the canonical claim state, and the precise tier relations
+between the T5 claim and its T6/T7 units. \textbf{Not claimed:} the vacuum
+selection itself (that is B1/B2's head), arbitrary non-lattice DR-2, or full
+STEP-5B exhaustiveness beyond the amended-class pin.
+
+\section*{2. The claim and its canonical state}
+
+\textbf{Claim (canonical).} Pattern-generic Gershgorin reduction of the
+beyond-layer bound: within the H-ADM-COH amended competitor class at
+second-cumulant order, the beyond-layer off-diagonal correction is bounded
+below the layer margin (T5 PINNED-CLOSURE; pinned by the operator decision
+record). No hypotheses; no open gates.
+
+\section*{3. Sub-proof unit map (per-unit tier and role)}
+
+\begin{center}
+\scriptsize
+\begin{tabular}{p{0.15\linewidth}p{0.13\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+\hline
+Unit & Tier & What it contributes & Publication state\\
+\hline
+\texttt{DR-2/} & T7 (lattice, std.\ NT) & Lemma~1 backing:
+$E_+(Q)\le_\varepsilon R^\varepsilon N^2$ decoupling-free on lattice shells;
+Lemma NT pinned in-bundle & PUBLISHED --
+\texttt{DR2-Lattice-T7-}\newline\texttt{NTstandard-260612} (8/8, 38/38)\\
+\texttt{STEP-5B/} & T6 & the rectangle prefactor
+$K(n)\le8+4\sqrt{14}\,\kappa^4\sqrt n$ + official threshold
+$n_{\rm adm}\lesssim1.59\times10^5$ & PUBLISHED --
+\texttt{STEP-5B-Rectangle-}\newline\texttt{T6-260612} (192/192)\\
+\texttt{SC-SCOPE/} & T5 thin & the (S) selection floor at the endpoint:
+joint $=\times1.040$--$\times1.082>1$ on $\mathcal W_{\rm SC}$ & PUBLISHED --
+\texttt{SC-SCOPE-}\newline\texttt{T5-260612} (4/4, 29/29)\\
+\texttt{H-LAYER-}\newline\texttt{AUX/} & T5 & RES-4 layer-ratio positivity
+$\rho(I)\ge\times2.58>1$, monotone (201 nodes) -- input to STEP-5B's K-budget &
+AUXILIARY (operator-accepted v1.1)\\
+\texttt{T5-DOSSIER/} & T5 & the assignment dossier pinning the claim tier
+(closure pillars, 192/192) & internal consolidation\\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{4. Composition: why the claim is T5 while its units reach T7}
+
+The claim's statement is the AMENDED-CLASS closure at second-cumulant order --
+an operator-pinned decision-layer statement (H-ADM-COH adoption). Its strongest
+units exceed it: DR-2 is an unconditional lattice-class theorem (independent
+mathematical interest), STEP-5B's rectangle constant is theorem-grade T6, and
+SC-SCOPE certifies the endpoint floor at T5 thin. The claim tier is NOT the
+maximum of its units: it is pinned at the level of the weakest statement the
+CLAIM ITSELF makes (the class-amended, second-cumulant closure), per the
+T5-DOSSIER. Upgrading the claim would require the exhaustiveness decision
+layer (T-031: H-ADM-COH adoption record finalisation + the R-U6-1 backlog
+lemma, T-004), not new analysis -- the budget COMPARISON is already
+machine-closed ($\times55.6/\times8.8/\times2.1$--$2.6$ across the intensity
+band, J-refined endpoint $\times2.6$).
+
+Consumption map (who uses what): B1/B2's head uses Lemma~1 (DR-2 mechanism) +
+Lemma~2 (in-head packing) for (O), SC-SCOPE for (S), STEP-5B for the K-budget;
+H-LAYER-AUX feeds STEP-5B. Per-edge accounting: parent capstone
+Main-Line-Synthesis-T013-260612 Sec.~3--4.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A T5 claim holding a T7 unit invites tier-shopping:
+citing the claim at its unit's tier.''} ADDRESSED: Sec.~4 fixes the rule --
+cite the CLAIM at T5 (its own statement), cite the UNIT at its bundle tier
+(its own statement). The two statements differ; the synthesis exists precisely
+to prevent the conflation.
+\item[($\beta$)] \emph{``SC-SCOPE thinness ($\times1.04$) could silently cap
+the whole B5 machinery.''} VALID with mitigation: the thinness affects only
+the (S) endpoint; the off-diagonal chain (DR-2 + STEP-5B + RES-4) carries
+$\ge\times2.1$ margins everywhere on the band, and the head package consumes
+(S) with the thinness explicitly flagged (parent capstone Sec.~4a).
+\item[($\gamma$)] \emph{``The amended-class pin (H-ADM-COH) is an operator
+decision -- is the claim then 'proved'?''} VALID and intrinsic: T5
+PINNED-CLOSURE is the honest label for exactly this situation (closure WITHIN
+an operator-pinned class definition); the exhaustiveness question is tracked
+as T-031, not hidden.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Cross-unit consistency: the
+STEP-5B rectangle bound at the class size ($K(n_{\rm pack})\le113$) vs the
+measured $K=107$ ($6\%$, safe side); RES-4's $\rho\ge2.58$ vs the sharpened
+floor $\rho_{\rm lat}=6.55$ (consistent: RES-4 predates the $K\le T'$
+sharpening); SC-SCOPE joint $\times1.040$ reproduced from its terms
+$[(1+0.385)/6.55+(1-1/6.55)/1.13]^{-1}$; all three bundle digests verified at
+publication.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / claim-level SYNTHESIS
+                         (T-013)
+Precise statement:       B5's canonical state (T5 PINNED-CLOSURE,
+                         CLOSED@H-ADM-COH-AMENDED-CLASS, gates none)
+                         is the claim's own decision-layer statement;
+                         its sub-proof units hold PUBLISHED bundles at
+                         their own tiers (DR-2 T7-lattice, STEP-5B T6,
+                         SC-SCOPE T5 thin) and are cited at those
+                         tiers by the B1/B2 head. Claim tier != max
+                         unit tier, by design.
+Scope:                   synthesis layer; no new math, no tier change,
+                         no gate flip.
+Evidence grade:          SYNTHESIS over three PUBLISHED bundles +
+                         operator-accepted auxiliaries.
+Reproduction command:    run the three bundles' entry manifests
+                         (8 + 1 + 4 scripts).
+Falsifier:               any falsifier of the cited footers; or a
+                         unit-tier mismatch against INDEX.md.
+Tier before / after:     no change (B5 stays T5 PINNED-CLOSURE).
+No-overclaim statement:  the claim is cited at T5; unit tiers are not
+                         claim tiers; exhaustiveness (T-031) and
+                         arbitrary-Q (T-030) remain open tracks.
+Next required action:    T-031 decision-layer support (R-U6-1 lemma
+                         T-004 first); T-030 as research frontier.
+\end{verbatim}
+}
