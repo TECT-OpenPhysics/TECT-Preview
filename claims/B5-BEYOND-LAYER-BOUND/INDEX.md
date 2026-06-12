@@ -53,7 +53,7 @@
 | `scscope-quartic-normalisation-certificate` | v1.0 | T5* | Ghat4=J*J convolution is standard-normalised (Parseval (J*J)(0)=(2pi^2)^-1 int q^2 J^2, ratio 1.0000; Young ratio 0.27). Hence R_max=0.385<0.634 CERT… | CERTIFICATE: convention pinned (Parseval), R_… | Operator: re-examine the SC-SCOPE endpoint lift given the certified (thin) closure. If ac… |
 | `scscope-scope-decision` | v1.0 | T5* | Operator-authorized (2026-06-07): SC-SCOPE all-orders third-order lift ESTIMATE-FEASIBLE (estimate-grade, NOT proved) for I<=1e-3 (paired joint x3.1 … | DECISION RECORD over EXECUTED evidence (4 scr… | None required for SC-SCOPE (scope accepted). Optional reopening: sharper STEP-5B endpoint… |
 
-## STEP-5B/  ·  9 proof units  ·  tier span T5/T6
+## STEP-5B/  ·  9 proof units  ·  tier span T5/T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -62,7 +62,7 @@
 | `dyadic-lift-log-sharpening` | v1.0 | T5* | THEOREM (T3, proof fully written): the unconditional-amplitude lift improves to sum w_t^2 <= 64 sqrt7 lam'^2 I^2 sqrt(2n) log^{3/2}(2n) + O(lam'^2 I^… | ANALYTIC (two textbook steps) at T3 pending t… | Machine spot-check + definition check (registered); optional direct-l2-assembly optimizat… |
 | `quartic-difference-channel` | v1.0 | T5* | ESTIMATE (T2): the quartic-difference channel's t != 0 part rides the certified transfer set (fibers w_t / lam') with per-transfer ratio R(t) <= ~1.5… | ESTIMATE (T2); machine asserts NOT executed (… | Per-transfer G^4 chord evaluation (U14-script extension) + contraction-topology audit; th… |
 | `rectangle-constant-closure` | v1.3 | T6 | (i) THEOREM (operator, verdicts #9/#10): K(n) <= 8 + 4 sqrt(14) kappa^4 sqrt(n); 1.59e5 = OFFICIAL threshold. (ii) 20/9 incidence route provisional (… | ANALYTIC: sqrt-n route + H-KBAL lift; PROVISI… | DR-2 sphere structure dichotomy (multi-turn designated attack — the single remaining shar… |
-| `step-5b-referee-package` | v1.0 | T6 | THEOREM (operator verdicts #9/#10): K(n) <= 8 + 4 sqrt(14) kappa^4 sqrt(n); 1.59e5 is the OFFICIAL threshold for the layer budget. The 20/9 incidence… | theorem-grade rectangle constant (T5/T6); EXE… | operator review + confirm -> PUBLISHED bundle. |
+| `step-5b-referee-package` | v1.2 | T7 | THEOREM (operator verdicts #9/#10, provenance: rectangle-constant-closure v1.3 S2-S3): for kappa-balanced patterns (H-KBAL: A_max^2 <= kappa^2 I/n), … | theorem-grade rectangle constant (T6 support … | none for this package (PUBLISHED). Mainline: SC-SCOPE and DR-2 referee packages; full STE… |
 | `sunset-endpoint-refinement` | v1.0 | T5* | REFINEMENT (T3, estimate-grade): the sunset bound's coupling must be dressed at each anchor's own r_hat(I) = r_R + 2 lam' I; via the identity M'(r_ha… | ESTIMATE (T3 structure + T2 numbers); machine… | M-ENDPOINT machine evaluation + the shared U4/U7 assert script; then the assembled third-… |
 | `tadpole-reabsorption-lemma` | v1.0 | T5* | LEMMA (T3 sketch): in the matched bookkeeping the cubic vertex is normal-ordered w.r.t. the dressed Gaussian; the tadpole channel (9 M^2 G) of the th… | ANALYTIC SKETCH (T3); the O(I^4) remainder li… | R-U6-1 formal writeup; R-U6-2 script; then the sunset endpoint refinement (per-transfer k… |
 | `third-cumulant-lift-assessment` | v1.0 | T5* | ESTIMATE (T2): the new third-cumulant channel is the cubic sunset with DRESSED coupling u_eff(M_R) = +2.685 (x9.7 above u^2 in square); conservative … | ESTIMATE (T2) -- closed-form arithmetic on ce… | Follow-up script (machine asserts); then the three named lift inputs (a)/(b)/(c) as separ… |
@@ -73,4 +73,4 @@
 |---|---|---|---|---|---|
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 
-<!-- generated 2026-06-11T06:31:52Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-12T04:56:57Z by build_index.py v1.0.1 -->
