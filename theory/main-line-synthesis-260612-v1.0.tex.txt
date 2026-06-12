@@ -1,0 +1,219 @@
+% =============================================================================
+% Title: Main-line synthesis: the Reading-H vacuum-selection theorem assembled from the five published referee packages
+% Claim: B1-RH-ENUM / B2-PROPA-HLAYER / B5-BEYOND-LAYER-BOUND (claim-level synthesis layer, T-013; the parent proof document)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: SYNTHESIS NOTE (T-013 capstone, policy sec.15: written LAST, after all
+%   five main-line packages reached PUBLISHED). This note adds NO new mathematics:
+%   it is the parent ("jong-hap") proof document that assembles the published
+%   theorem from its five PUBLISHED referee packages, makes the dependency DAG
+%   explicit with per-edge tier and scope, performs the honest composite-grade
+%   accounting, and separates the genuinely remaining tracks from the
+%   already-closed ones. Composite grade: T7-SCOPE_{C_full} given A1, within the
+%   certified window R, exactly as enacted by the Reading-H package -- with the
+%   (S) thinness and the endpoint window flagged where they enter.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue, immediately after the fifth package (DR-2)
+%        reached PUBLISHED / T7-CONFIRMED-on-lattice-shells. Per policy sec.15
+%        (dependency-first, capstone last) every cited support is already
+%        operator-confirmed PUBLISHED at issue time.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This is the claim-level synthesis (task T-013): one self-contained map of how the
+published main-line theorem rests on its five PUBLISHED referee packages. It adds
+no new mathematics and enacts no tier change; every load-bearing statement below
+carries the bundle ID, tier, and scope under which it was operator-confirmed.
+\textbf{Scope:} the main proof line of the Reading-H full-class vacuum selection
+(B1/B2), with B5 supplying the off-diagonal machinery. \textbf{Not claimed:}
+anything beyond the composite statement of Sec.~2 -- in particular no global /
+all-intensity / A1-free claim, no arbitrary non-lattice DR-2, and no TECT TOE
+completion.
+
+\section*{2. The theorem being synthesised}
+
+\textbf{Theorem (Reading-H selection over $\mathcal C_{\rm full}$; enacted
+T7-SCOPE).} \emph{Within the certified window
+$\mathcal R=\{\mu^2\in(0,0.0342),\ I\in(0,I_c^{\rm sel}(\mu^2))\}$, given the A1
+kernel convention, every admissible competitor $Q\in\mathcal C_{\rm full}$ (real
+antipodal pattern, $|Q|\le n_{\rm pack}=16/\theta_{\min}^2$, pairwise geodesic
+separation $\ge\theta_{\min}$) satisfies}
+\[
+F[Q]-F[G_*]\;>\;0 .
+\]
+The proof has the three-sector structure (D)(O)(S) of the Reading-H package:
+(D) the block-diagonal isotropy Hessian (entropy floor $\tfrac12 r_R^2>0$,
+breathing $\tfrac32 u_{\rm eff}>0$), competitor-agnostic; (O) the off-diagonal
+bound $R_{\rm lead}\le 23.2\cdot 11\cdot I\le0.510<1$ ($\times1.96$ headroom)
+from Lemma~1 ($K_{\rm floor}\le T'$) and Lemma~2 (coherence circle-packing,
+$T'\le\lfloor2\pi/\theta_{\min}\rfloor=10$); (S) the third-cumulant selection
+floor, $\mathrm{joint}=\times1.04>1$ at the endpoint.
+
+\section*{3. The dependency DAG: five published packages, per-edge tier and scope}
+
+\begin{center}
+\scriptsize
+\begin{tabular}{p{0.14\linewidth}p{0.20\linewidth}p{0.09\linewidth}p{0.21\linewidth}p{0.22\linewidth}}
+\hline
+Package & Bundle & Tier & Scope & Role (edge into the theorem)\\
+\hline
+Reading-H $C_{\rm full}$ &
+\texttt{Reading-H-cFull-}\newline\texttt{T7-260611} & T7-SCOPE &
+$\mathcal C_{\rm full}$, window $\mathcal R$, given A1 &
+the head: (D)(O)(S) assembly + window certification (res5\_032--036)\\
+Prop-A &
+\texttt{Prop-A-}\newline\texttt{T6-260611} & T6 &
+$\mathcal A_{\rm adm}$ (registered shells, $T'\le13$), operating point &
+(D) strict comparison infimum + (O) class-wide closure on the primary class;
+sub-structure of the head ($\mathcal A_{\rm adm}\subset\mathcal C_{\rm full}$)\\
+DR-2 lattice &
+\texttt{DR2-Lattice-T7-}\newline\texttt{NTstandard-260612} & T7 (lattice; std.\ NT import) &
+$Q=\Lambda\cap\{|x|^2=R\}$ &
+Lemma~1 backing: $E_+\le_\varepsilon R^\varepsilon N^2$ decoupling-free; the
+lattice-class confirmation of the sum-circle mechanism\\
+STEP-5B rectangle &
+\texttt{STEP-5B-Rectangle-}\newline\texttt{T6-260612} & T6 &
+rectangle prefactor + official threshold &
+the K-budget: $K(n)\le8+4\sqrt{14}\,\kappa^4\sqrt n$, $n_{\rm adm}\lesssim
+1.59\times10^5$ at the anchor\\
+SC-SCOPE &
+\texttt{SC-SCOPE-}\newline\texttt{T5-260612} & T5 thin &
+endpoint $I=2\times10^{-3}$ + window $\mathcal W_{\rm SC}$ &
+(S): $\mathrm{joint}=\times1.040$--$\times1.082>1$, sunset-limited\\
+\hline
+\end{tabular}
+\end{center}
+
+Named definitional input: A1-KERNEL-CONV ($r_{\rm braz}=K(q_0)=\mu^2$), the
+microscopic-theory convention every package assumes. Numerical base layer:
+B1-enumerated (T5 CLOSED@ESTIMATOR-GRADE, 167/167 asserts) -- corroborating, not
+load-bearing for the analytic chain. The DAG is acyclic; per policy sec.15 the
+supports were published before this capstone.
+
+\section*{4. Composite-grade accounting (honest tier algebra)}
+
+The head label T7-SCOPE$_{C_{\rm full}}$ was enacted by the Reading-H package
+itself (operator-confirmed); this note verifies that the composition is sound:
+
+\textbf{(a) Where the T5/T6 supports enter.} (D) and (O) are proved
+competitor-agnostically IN the head package; Prop-A (T6) strengthens (D)(O) on
+$\mathcal A_{\rm adm}$ and DR-2 (T7) confirms Lemma~1's mechanism on the lattice
+class -- neither weakens the head. The two genuinely load-bearing imports below
+T7 are: (i) \textbf{(S) at T5 thin}: the selection floor closes at
+$\times1.04$--$\times1.08$, sunset-limited, certified on
+$\mathcal W_{\rm SC}$ only -- the head inherits this thinness at the endpoint and
+says so; (ii) \textbf{the K-budget at T6}: the rectangle threshold
+$1.59\times10^5$ vastly clears the class size ($n_{\rm pack}\approx44$--$49$):
+$K(n_{\rm pack})\le 8+4\sqrt{14}\,\kappa^4\sqrt{49}\approx113$, against
+$K_{\rm budget}=5972$ at the anchor ($\times53$; the measured value $K=107$,
+margin $\times55.6$, cross-checks the bound at $\times1.06$ accuracy).
+
+\textbf{(b) Why arbitrary-$Q$ DR-2 is NOT load-bearing.} Within
+$\mathcal C_{\rm full}$, Lemma~2 (coherence circle-packing) caps the sum-circle
+occupancy ELEMENTARILY: $T'\le\lfloor2\pi/\theta_{\min}\rfloor=10$. The
+admissibility constraints ($\theta_{\min}$ separation) do the work that
+unrestricted additive-energy bounds would otherwise have to do; the
+Bourgain--Demeter-conditional arbitrary-$Q$ route is a FRONTIER STRENGTHENING
+(removing the admissibility cap), not a gap in the present theorem.
+
+\textbf{(c) Weakest-link list (explicit).} A1 (definitional input, not proved
+here); (S) thinness $\times1.04$ at the endpoint; the window $\mathcal R$ /
+$\mathcal W_{\rm SC}$ boundaries; Prop-A's full-$\mathcal C_{\rm full}$
+extension running through the head package rather than independently. Any
+falsifier listed in the five footers falsifies the composite.
+
+\section*{5. Track separation: closed vs genuinely remaining}
+
+CLOSED by the five packages: the main-line theorem of Sec.~2 at its enacted
+scope; the K-budget threshold; the lattice-class DR-2; the endpoint selection
+floor; reproduction (51 entry scripts / 342 asserts across the five bundles, all
+operator-clean-run-confirmed).
+
+REMAINING (separate tracks, registered in the task ledger; none blocks Sec.~2):
+\begin{itemize}
+\item \textbf{T-014 arbitrary-$Q$ DR-2} (frontier; T6-conditional on
+Bourgain--Demeter): would remove the admissibility cap from Lemma~1's backing.
+Research-grade open problem; not load-bearing (Sec.~4b).
+\item \textbf{T-015 full STEP-5B closure}: the budget COMPARISON is
+machine-closed ($\times55.6/\times8.8/\times2.1$--$2.6$ across the band); what
+remains is the admissible-class EXHAUSTIVENESS decision layer (H-ADM-COH
+adoption record; operator-decision items per the B5 ledger), plus the named
+backlog lemma R-U6-1 (T-004, tadpole alignment).
+\item \textbf{Beyond this synthesis}: per-claim SYNTHESIS layers for B1/B2/B5
+individually (T-013 continuation, one note per turn); the claim-card tier
+reviews that may follow from the published packages (operator-decision).
+\end{itemize}
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A synthesis can over-claim by composition: T5 inputs
+under a T7-SCOPE head.''} ADDRESSED: Sec.~4a names the only two load-bearing
+sub-T7 imports and shows where their weakness lands (endpoint thinness; T6
+threshold with $\times53$ clearance). The head label is the operator-enacted
+one; this note's accounting narrows, never widens, the claim.
+\item[($\beta$)] \emph{``The DAG could hide a cycle (head cited by a support).''}
+DISMISSED: the five bundles were published in dependency order (sec.15); each
+support's footer cites only sub-results or definitional inputs, never the head;
+verified by reading the five footers (Sec.~3 table).
+\item[($\gamma$)] \emph{``Lemma 2's $T'\le10$ and Prop-A's $T'\le13$ scopes
+differ -- is the (O) chain consistent?''} VALID with clarification: Lemma~2's cap
+is the $\mathcal C_{\rm full}$ admissibility cap used by the head's (O); Prop-A's
+$T'\le13$ is the registered-shell class $\mathcal A_{\rm adm}$ bound used for its
+own (O) closure. Both chains close independently with their own constants; no
+constant is shared across the two scopes.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Cross-package consistency:
+$K(n_{\rm pack})$ predicted by the STEP-5B rectangle bound ($\approx113$ at
+$n=49,\kappa\simeq1$) vs the measured $K=107$ -- agreement to $6\%$, bound on the
+safe side; $R_{\rm lead}=0.510<1$ with $\times1.96$; $\mathrm{joint}\ge1.040>1$;
+$n_{\rm pack}\approx49\ll1.59\times10^5$ ($\times3200$ clearance); all five
+bundle digests verified at publication (sha256, per-file).
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               MAIN-LINE SYNTHESIS (T-013 capstone) --
+                         B1-RH-ENUM / B2-PROPA-HLAYER /
+                         B5-BEYOND-LAYER-BOUND
+Precise statement:       The Reading-H selection theorem (Sec. 2;
+                         T7-SCOPE_{C_full} given A1, window R) is
+                         assembled from five PUBLISHED packages:
+                         Reading-H-cFull-T7-260611 (head),
+                         Prop-A-T6-260611 (D/O on A_adm),
+                         DR2-Lattice-T7-NTstandard-260612 (Lemma 1,
+                         lattice), STEP-5B-Rectangle-T6-260612
+                         (K-budget, 1.59e5), SC-SCOPE-T5-260612
+                         ((S) endpoint floor). DAG acyclic;
+                         composite grade = the head's enacted
+                         T7-SCOPE with (S) thinness and endpoint
+                         window inherited and flagged.
+Scope:                   synthesis layer only -- no new mathematics,
+                         no tier change, no gate flip. Tracks T-014
+                         (arbitrary-Q DR-2) and T-015 (STEP-5B
+                         exhaustiveness decision layer) are
+                         registered as NOT load-bearing for Sec. 2.
+Evidence grade:          SYNTHESIS over five operator-confirmed
+                         PUBLISHED bundles (51 entry scripts, 342
+                         asserts, all clean-run confirmed).
+Reproduction command:    run the five bundles' entry manifests (see
+                         each bundle's README); this note adds no
+                         new scripts.
+Falsifier:               any falsifier of the five cited footers; or
+                         a demonstrated cycle / scope mismatch in
+                         the Sec. 3 DAG.
+Tier before / after:     no change (synthesis layer). Heads stay:
+                         B1 T7-SCOPE_{C_full} (enacted), B5 T5,
+                         B2 T6.
+No-overclaim statement:  this note narrows the published claims by
+                         making every scope explicit; it claims
+                         nothing the five footers do not.
+Next required action:    operator review of this synthesis ->
+                         per-claim SYNTHESIS layers (B1/B2/B5, one
+                         per turn); tracks T-014/T-015 per ledger.
+\end{verbatim}
+}

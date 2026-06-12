@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 26
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 3 · Done (recent) 26
 
 ## Next up
 
@@ -11,13 +11,18 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 26
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
 - **T-013** Author SYNTHESIS.tex.txt layer: per-sub-proof + claim-level synthesis (the parent 'jong-hap' proof) for B1/B2/B5, citing each sub-proof's notes at their tiers  _(claim: B5-BEYOND-LAYER-BOUND)_
-  - _updated 2026-06-09_
+  - Parent main-line synthesis DONE 2026-06-12 (theory/main-line-synthesis-260612-v1.0, capstone over the 5 PUBLISHED bundles). REMAINING: per-claim SYNTHESIS layers for B1/B2/B5 (one note per turn).
+  - _updated 2026-06-12_
 
 ## Backlog
 
 - **T-004** Prove R-U6-1: tadpole formal alignment (matched bookkeeping removes tadpole)  _(owner: unassigned; claim: B5-BEYOND-LAYER-BOUND; gate: R-U6-1)_
   - SC-SCOPE input. Written proof that normal-ordered matched bookkeeping removes the tadpole and competitors are at their own stationarity points.
   - _updated 2026-06-07_
+- **T-030** Arbitrary-Q DR-2 (frontier): remove the admissibility cap from Lemma 1's backing; currently T6-conditional on Bourgain-Demeter decoupling. NOT load-bearing for the C_full main theorem (Lemma 2 caps T'<=10 in-class; main-line-synthesis Sec.4b).  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - _updated 2026-06-12_
+- **T-031** Full STEP-5B closure decision layer: budget comparison machine-closed (x55.6/x8.8/x2.1-2.6); remaining = admissible-class exhaustiveness operator-decision items (H-ADM-COH adoption record) + backlog lemma R-U6-1 (T-004).  _(claim: B5-BEYOND-LAYER-BOUND)_
+  - _updated 2026-06-12_
 
 ## Done (recent)
 
