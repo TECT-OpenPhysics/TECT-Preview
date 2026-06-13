@@ -1,8 +1,7 @@
-% SUPERSEDED by main-line-synthesis-260612-260613-v1.5.tex.txt
 % =============================================================================
 % Title: Main-line synthesis: the Reading-H vacuum-selection theorem assembled from the five published referee packages
 % Claim: B1-RH-ENUM / B2-PROPA-HLAYER / B5-BEYOND-LAYER-BOUND (claim-level synthesis layer, T-013; the parent proof document)
-% Version: v1.4 -- first issued 2026-06-12; this version issued 2026-06-13
+% Version: v1.5 -- first issued 2026-06-12; this version issued 2026-06-13
 % Status: PUBLISHED SYNTHESIS NOTE (operator CONFIRM 2026-06-12) -- registered
 %   as Main-Line-Synthesis-T013-260612. No tier change; doc-only (no scripts),
 %   so no reproduction bundle is due. (T-013 capstone, policy sec.15: written LAST, after all
@@ -49,6 +48,14 @@
 %        The footer tier line is updated; B5 is now T7-SCOPE on the SAME
 %        admissible class as the B1/B2 head. T-030 unrestricted arbitrary-Q
 %        stays OPEN as a frontier strengthening (non-load-bearing here).
+%   v1.5 (2026-06-13) SC-SCOPE CURRENT-STATUS SYNC (operator patch on v1.4): the
+%        Sec.3 dependency row and Sec.4a/4c still cited SC-SCOPE at 'T5 thin,
+%        joint x1.040-x1.082' as the load-bearing import, stale after the sunset
+%        hardening. Updated to SC-SCOPE-SunsetHardened-T6-260612 (joint x2.023
+%        cons / x1.886 worst dressing). The HISTORICAL head accounting is
+%        preserved (the head theorem already closed at the original x1.040>1);
+%        v1.5 distinguishes the historical lower bound from the current
+%        strengthened state. The composite theorem statement is unchanged.
 % =============================================================================
 
 \sloppy
@@ -111,9 +118,10 @@ rectangle prefactor + official threshold &
 the K-budget: $K(n)\le8+4\sqrt{14}\,\kappa^4\sqrt n$, $n_{\rm adm}\lesssim
 1.59\times10^5$ at the anchor\\
 SC-SCOPE &
-\texttt{SC-SCOPE-}\newline\texttt{T5-260612} & T5 thin &
-endpoint $I=2\times10^{-3}$ + window $\mathcal W_{\rm SC}$ &
-(S): $\mathrm{joint}=\times1.040$--$\times1.082>1$, sunset-limited\\
+\texttt{SC-SCOPE-}\newline\texttt{SunsetHardened-}\newline\texttt{T6-260612} &
+T6 (hardened) & endpoint $I=2\times10^{-3}$ + window $\mathcal W_{\rm SC}$ &
+(S): $\mathrm{joint}=\times2.023$ (cons.) / $\times1.886$ (worst dressing)
+$>1$; per-transfer sunset hardening retired the thinness\\
 \hline
 \end{tabular}
 \end{center}
@@ -132,11 +140,14 @@ itself (operator-confirmed); this note verifies that the composition is sound:
 \textbf{(a) Where the T5/T6 supports enter.} (D) and (O) are proved
 competitor-agnostically IN the head package; Prop-A (T6) strengthens (D)(O) on
 $\mathcal A_{\rm adm}$ and DR-2 (T7) confirms Lemma~1's mechanism on the lattice
-class -- neither weakens the head. The two genuinely load-bearing imports below
-T7 are: (i) \textbf{(S) at T5 thin}: the selection floor closes at
-$\times1.04$--$\times1.08$, sunset-limited, certified on
-$\mathcal W_{\rm SC}$ only -- the head inherits this thinness at the endpoint and
-says so; (ii) \textbf{the K-budget at T6}: the rectangle threshold
+class -- neither weakens the head. The load-bearing supports below
+T7 are: (i) \textbf{(S), originally T5 thin, now T6 sunset-hardened}: the head
+theorem already closed with the historical lower bound
+$\mathrm{joint}=\times1.040>1$ on $\mathcal W_{\rm SC}$; the subsequent
+per-transfer sunset hardening (SC-SCOPE-SunsetHardened-T6-260612) strengthened
+this to $\times2.023$ (conservative) / $\times1.886$ (worst dressing), retiring
+the thinness -- the head's $\times1.040$ remains a valid historical lower bound,
+the current state is comfortable; (ii) \textbf{the K-budget at T6}: the rectangle threshold
 $1.59\times10^5$ vastly clears the class size ($n_{\rm pack}\approx44$--$49$):
 $K(n_{\rm pack})\le 8+4\sqrt{14}\,\kappa^4\sqrt{49}\approx113$, against
 $K_{\rm budget}=5972$ at the anchor ($\times53$; the measured value $K=107$,
@@ -148,13 +159,17 @@ occupancy ELEMENTARILY: $T'\le\lfloor2\pi/\theta_{\min}\rfloor=10$. The
 admissibility constraints ($\theta_{\min}$ separation) do the work that
 unrestricted additive-energy bounds would otherwise have to do; the
 Bourgain--Demeter-conditional arbitrary-$Q$ route is a FRONTIER STRENGTHENING
-(removing the admissibility cap), not a gap in the present theorem.
+(removing the admissibility cap), not a gap in the present theorem. This is
+exactly why B5 itself was promoted to T7-SCOPE$_{\rm admissibility\text{-}bounded}$
+(route-3, 2026-06-13): T-030 is non-load-bearing for the admissibility-bounded
+statement.
 
-\textbf{(c) Weakest-link list (explicit).} A1 (definitional input, not proved
-here); (S) thinness $\times1.04$ at the endpoint; the window $\mathcal R$ /
-$\mathcal W_{\rm SC}$ boundaries; Prop-A's full-$\mathcal C_{\rm full}$
-extension running through the head package rather than independently. Any
-falsifier listed in the five footers falsifies the composite.
+\textbf{(c) Weakest-link list (explicit, current).} A1 (definitional input, not
+proved here); the window $\mathcal R$ / $\mathcal W_{\rm SC}$ boundaries;
+Prop-A's full-$\mathcal C_{\rm full}$ extension running through the head package
+rather than independently. (The (S) endpoint thinness is NO LONGER a weak link --
+sunset hardening took the joint to $\times1.886$--$\times2.023$.) Any falsifier
+listed in the cited footers falsifies the composite.
 
 \section*{5. Track separation: closed vs genuinely remaining}
 
@@ -226,10 +241,10 @@ Precise statement:       The Reading-H selection theorem (Sec. 2;
                          Prop-A-T6-260611 (D/O on A_adm),
                          DR2-Lattice-T7-NTstandard-260612 (Lemma 1,
                          lattice), STEP-5B-Rectangle-T6-260612
-                         (K-budget, 1.59e5), SC-SCOPE-T5-260612
+                         (K-budget, 1.59e5), SC-SCOPE-SunsetHardened-T6-260612
                          ((S) endpoint floor). DAG acyclic;
                          composite grade = the head's enacted
-                         T7-SCOPE with (S) thinness and endpoint
+                         T7-SCOPE with (S) now sunset-hardened (joint x1.886-x2.023) and endpoint
                          window inherited and flagged.
 Scope:                   synthesis layer only -- no new mathematics,
                          no tier change, no gate flip. Tracks T-014

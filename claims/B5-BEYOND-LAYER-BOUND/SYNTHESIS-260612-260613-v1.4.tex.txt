@@ -1,8 +1,7 @@
-% SUPERSEDED by SYNTHESIS-260612-260613-v1.4.tex.txt
 % =============================================================================
 % Title: B5-BEYOND-LAYER-BOUND claim-level synthesis: the beyond-layer machinery (DR-2, STEP-5B, SC-SCOPE)
 % Claim: B5-BEYOND-LAYER-BOUND (claim-level SYNTHESIS layer, T-013; taxonomy claims-restructure-proposal-260609)
-% Version: v1.3 -- first issued 2026-06-12; this version issued 2026-06-13
+% Version: v1.4 -- first issued 2026-06-12; this version issued 2026-06-13
 % Status: PUBLISHED SYNTHESIS NOTE (operator CONFIRM 2026-06-12) -- registered
 %   as B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612. No new mathematics, no tier change, no gate flip.
 %   Canonical claim state (status.json / CLAIMS.md, post-T-031 re-tier
@@ -33,6 +32,15 @@
 %        admissible competitors; Attack-4 (T',n)-only audit 6/6). All
 %        current-state statements updated; MANDATORY scope qualifier (NOT
 %        unrestricted arbitrary-Q) carried.
+%   v1.4 (2026-06-13) FULL STALE-TEXT SYNC (operator freeze-block on v1.3): v1.3
+%        synced the banner/Sec.2 but left T6/T5-era text in Sec.1, the Sec.3
+%        unit table (SC-SCOPE T5 thin), Sec.4 (remaining-T7-path), the
+%        devil's-advocate (now-T6-conditional / T5-PINNED-CLOSURE), and the
+%        footer (post-T-031 T6 typo, cited-at-T6-conditional, sunset-hardening
+%        next-action). v1.4 brings ALL of these to the current T7-SCOPE state:
+%        SC-SCOPE row -> SunsetHardened-T6 (joint x2.023 cons / x1.886 worst
+%        dressing); the three current objections (admissibility=scope; A1
+%        definitional; T-030 frontier non-load-bearing); freeze-safe footer.
 % =============================================================================
 
 \sloppy
@@ -41,7 +49,7 @@
 Claim-level synthesis for B5-BEYOND-LAYER-BOUND. It adds no mathematics; every
 statement carries the unit's registered tier. \textbf{Scope:} the composition
 of B5's units into the canonical claim state, and the precise tier relations
-between the claim (now T6-conditional) and its units. \textbf{Not claimed:} the vacuum
+between the claim (now T7-SCOPE$_{\rm admissibility\text{-}bounded}$) and its units. \textbf{Not claimed:} the vacuum
 selection itself (that is B1/B2's head), arbitrary non-lattice DR-2, or full
 STEP-5B exhaustiveness beyond the amended-class pin.
 
@@ -80,9 +88,11 @@ Lemma NT pinned in-bundle & PUBLISHED --
 $K(n)\le8+4\sqrt{14}\,\kappa^4\sqrt n$ + official threshold
 $n_{\rm adm}\lesssim1.59\times10^5$ & PUBLISHED --
 \texttt{STEP-5B-Rectangle-}\newline\texttt{T6-260612} (192/192)\\
-\texttt{SC-SCOPE/} & T5 thin & the (S) selection floor at the endpoint:
-joint $=\times1.040$--$\times1.082>1$ on $\mathcal W_{\rm SC}$ & PUBLISHED --
-\texttt{SC-SCOPE-}\newline\texttt{T5-260612} (4/4, 29/29)\\
+\texttt{SC-SCOPE/} & T6 (sunset-hardened) & the (S) selection floor at the
+endpoint: joint $=\times2.023$ (cons.) / $\times1.886$ (worst dressing) $>1$ on
+$\mathcal W_{\rm SC}$ -- per-transfer sunset hardening retired the thinness &
+PUBLISHED -- \texttt{SC-SCOPE-}\newline\texttt{SunsetHardened-T6-260612}
+(5/5, 39/39)\\
 \texttt{H-LAYER-}\newline\texttt{AUX/} & T5 & RES-4 layer-ratio positivity
 $\rho(I)\ge\times2.58>1$, monotone (201 nodes) -- input to STEP-5B's K-budget &
 AUXILIARY (operator-accepted v1.1)\\
@@ -92,18 +102,24 @@ AUXILIARY (operator-accepted v1.1)\\
 \end{tabular}
 \end{center}
 
-\section*{4. Composition: the claim tier vs its units (updated post-T-031)}
+\section*{4. Composition: the claim tier vs its units (T7-SCOPE, 2026-06-13)}
 
 The claim's statement is the class-scoped closure; its strongest units exceed
-it (DR-2 T7-NTstandard; STEP-5B rectangle T6; SC-SCOPE T5 thin) and are cited
+it where applicable (DR-2 T7-NTstandard; STEP-5B rectangle T6; SC-SCOPE T6 sunset-hardened) and are cited
 at their own tiers. The upgrade path foreseen here (the T-031 exhaustiveness
 decision layer + the R-U6-1 backlog lemma) was EXECUTED on 2026-06-12: R-U6-1/2
 discharged, T-031 verdicts D1-A/D2-A/D3-A enacted, and the claim re-tiered to
-T7-SCOPE on the admissibility-bounded statement, the substantive hypothesis set EMPTIED (the
-budget comparison was already machine-closed at
-$\times55.6/\times8.8/\times2.1$--$2.6$). The remaining T7 path: remove the
-two acceptance hypotheses -- harden the sunset endpoint beyond thin, and close
-T-030.
+T7-SCOPE on the admissibility-bounded statement, the substantive hypothesis set
+EMPTIED (the budget comparison was already machine-closed at
+$\times55.6/\times8.8/\times2.1$--$2.6$). \textbf{The former T7 path has been
+EXECUTED (2026-06-13):} both acceptance hypotheses are disposed --
+H-ENDPOINT-THINNESS-ACCEPTED REMOVED (per-transfer sunset hardening,
+SC-SCOPE-SunsetHardened-T6; endpoint joint $\times1.886$--$\times2.023>1$) and
+H-NONLATTICE-REMAINDER-EXCLUDED reclassified to DEFINITIONAL SCOPE (route-3:
+Lemma 2 caps $T'\le10$ pattern-generically for all admissible competitors,
+$(T',n)$-only Attack-4 audit 6/6). B5 is now T7-SCOPE$_{\rm
+admissibility\text{-}bounded}$; T-030 (unrestricted arbitrary-$Q$) stays OPEN
+as a frontier strengthening, non-load-bearing for B5's canonical statement.
 
 Consumption map (who uses what): B1/B2's head uses Lemma~1 (DR-2 mechanism) +
 Lemma~2 (in-head packing) for (O), SC-SCOPE for (S), STEP-5B for the K-budget;
@@ -113,63 +129,64 @@ Main-Line-Synthesis-T013-260612 Sec.~3--4.
 \section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
 
 \begin{itemize}
-\item[($\alpha$)] \emph{``A claim holding a higher-tier unit invites
-tier-shopping: citing the claim at its unit's tier.''} ADDRESSED: Sec.~4 fixes
-the rule -- cite the CLAIM at its own tier (now T6-conditional), the UNIT at its bundle tier
-(its own statement). The two statements differ; the synthesis exists precisely
-to prevent the conflation.
-\item[($\beta$)] \emph{``SC-SCOPE thinness ($\times1.04$) could silently cap
-the whole B5 machinery.''} VALID with mitigation: the thinness affects only
-the (S) endpoint; the off-diagonal chain (DR-2 + STEP-5B + RES-4) carries
-$\ge\times2.1$ margins everywhere on the band, and the head package consumes
-(S) with the thinness explicitly flagged (parent capstone Sec.~4a).
-\item[($\gamma$)] \emph{``The amended-class pin (H-ADM-COH) is an operator
-decision -- is the claim then 'proved'?''} VALID and intrinsic: T5
-PINNED-CLOSURE is the honest label for exactly this situation (closure WITHIN
-an operator-pinned class definition); the exhaustiveness question is tracked
-as T-031, not hidden.
+\item[($\alpha$)] \emph{``Admissibility hides a hypothesis -- this is really
+T6-conditional.''} ADDRESSED: the $\theta_{\min}$ coherence-resolution
+admissibility is DEFINITIONAL SCOPE (the physical competitor class, fixed by the
+microphysics), not a substantive unproved hypothesis -- exactly as `$\mathcal
+C_{\rm full}$' is the definitional scope of the B1/B2 head's own T7-SCOPE. A
+scoped-T7 with empty substantive conditions is T7-SCOPE, not T6-conditional
+(which requires a NAMED unproved hypothesis; there is now none).
+\item[($\beta$)] \emph{``A1-KERNEL-CONV remains a dependency.''} VALID and
+explicit: A1 is the named DEFINITIONAL input (the kernel convention), carried in
+the scope, identical to the B1/B2 head -- B5 is T7-SCOPE GIVEN A1, a definition,
+not a conditional hypothesis.
+\item[($\gamma$)] \emph{``T-030 is open -- does it conflict with B5 T7-SCOPE?''}
+DISMISSED: T-030 (unrestricted arbitrary-$Q$ DR-2) is a FRONTIER STRENGTHENING
+that removes the admissibility cap; it is non-load-bearing for B5's
+admissibility-bounded statement (route-3, $(T',n)$-only audit). B5 T7-SCOPE and
+T-030 OPEN coexist exactly as B1 T7-SCOPE and the open global/all-intensity
+questions coexist.
 \end{itemize}
 
 \textbf{Quantitative sanity check (mandatory).} Cross-unit consistency: the
 STEP-5B rectangle bound at the class size ($K(n_{\rm pack})\le113$) vs the
-measured $K=107$ ($6\%$, safe side); RES-4's $\rho\ge2.58$ vs the sharpened
-floor $\rho_{\rm lat}=6.55$ (consistent: RES-4 predates the $K\le T'$
-sharpening); SC-SCOPE joint $\times1.040$ reproduced from its terms
-$[(1+0.385)/6.55+(1-1/6.55)/1.13]^{-1}$; all three bundle digests verified at
-publication.
+measured $K=107$ ($6\%$, safe side); $T'\le10$ (Lemma 2) gives
+$R_{\rm lead}=0.510<1$; the sunset-hardened (S) joint is $\times2.023$
+(conservative) / $\times1.886$ (worst mixed dressing) $>1$; all current bundle
+digests verified at publication.
 
 \section*{6. Result footer}
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612
+Result ID:               B5-BEYOND-LAYER-BOUND-Synthesis-T013-260613
                          (PUBLISHED claim-level SYNTHESIS, T-013)
-Precise statement:       B5's canonical state (post-T-031: T6
+Precise statement:       B5's canonical state is
                          T7-SCOPE_{admissibility-bounded} given
-                         A1-KERNEL-CONV, label
-                         B5-BeyondLayer-T7Scope-260613, substantive
-                         hypotheses NONE) is the
-                         claim's own statement; its sub-proof units
-                         hold PUBLISHED bundles at their own tiers
-                         (DR-2 T7-lattice, STEP-5B T6, SC-SCOPE T5
-                         thin) and are cited at those tiers by the
-                         B1/B2 head. Claim tier != max unit tier.
-Scope:                   synthesis layer; no new math, no tier change,
-                         no gate flip.
-Evidence grade:          SYNTHESIS over three PUBLISHED bundles +
+                         A1-KERNEL-CONV (label
+                         B5-BeyondLayer-T7Scope-260613); substantive
+                         hypotheses NONE. Its sub-proof units hold
+                         PUBLISHED bundles at their own tiers (DR-2
+                         T7-lattice, STEP-5B T6, SC-SCOPE T6
+                         sunset-hardened) and are cited at those
+                         tiers. Claim tier != max unit tier.
+Scope:                   admissibility-bounded; NOT unrestricted
+                         arbitrary-Q. Synthesis layer; no new math.
+Evidence grade:          SYNTHESIS over the PUBLISHED bundles +
                          operator-accepted auxiliaries.
-Reproduction command:    run the three bundles' entry manifests
-                         (8 + 1 + 4 scripts).
+Reproduction command:    run the published bundles' entry manifests.
 Falsifier:               any falsifier of the cited footers; or a
                          unit-tier mismatch against INDEX.md.
-Tier before / after:     no change BY THIS NOTE; the claim itself was
-                         re-tiered T5 -> T6-conditional by T-031
-                         (D3-A, 2026-06-12), reflected in this v1.2.
-No-overclaim statement:  the claim is cited at T6-conditional; unit
-                         tiers are not claim tiers; T7 requires
-                         removing the two acceptance hypotheses
-                         (sunset hardening; T-030).
-Next required action:    sunset endpoint hardening (T7 path) and
-                         T-030 frontier, per the active tracks.
+Tier before / after:     B5 T6 PROVED-CONDITIONAL ->
+                         T7-SCOPE_{admissibility-bounded} (route-3
+                         promotion 2026-06-13); this note SYNCS the
+                         synthesis to that state (no tier action here).
+No-overclaim statement:  B5 T7-SCOPE is admissibility-bounded, given
+                         A1-KERNEL-CONV; T-030 remains OPEN as a
+                         frontier strengthening, non-load-bearing for
+                         B5 -- NOT an unrestricted/global/arbitrary-Q
+                         claim.
+Next required action:    none for this synthesis (freeze-clean);
+                         optional claim-card/status sync only.
 \end{verbatim}
 }
