@@ -1,6 +1,6 @@
 # B5-BEYOND-LAYER-BOUND — Pattern-generic Gershgorin reduction of the beyond-layer bound
 
-**Tier**: T6 (TSv2; PROVED-CONDITIONAL on H_B5^T6, operator verdicts D1-A/D2-A/D3-A) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-12
+**Tier**: T7 (TSv2; T7-SCOPE on the admissibility-bounded statement, operator route-3 promotion 2026-06-13; label B5-BeyondLayer-T7Scope-260613) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-13
 
 > CANONICAL CURRENT STATE: `status.json` (T6 PROVED-CONDITIONAL, label `B5-BeyondLayer-T6Conditional-260612`; dossier `T5-DOSSIER/notes/t6-conditional-assignment-260612-v1.0`). The Statement/Scope prose below is the historical T4-era card retained as record; the header had been stale at T4 since 2026-06-05 (sync defect, fixed at this card edit).
 
@@ -17,7 +17,7 @@ T4: Lemmas A/B/C'/D/E rigorous; closed region n<=n_max(I) DERIVED; transversal n
 ## Dependencies and hypotheses
 
 - Hard dependencies: A1-KERNEL-CONV
-- Hypotheses (registered in `claims/GATES.md`): H-NONLATTICE-REMAINDER-EXCLUDED (frontier tracked at T-030) — the sole remaining H_B5^T6 element after the 2026-06-12 sunset-hardening enactment removed H-ENDPOINT-THINNESS-ACCEPTED (SC-SCOPE-SunsetHardened-T6-260612; endpoint joint x2.023/x2.396, comfortable)
+- Hypotheses (registered in `claims/GATES.md`): A1-KERNEL-CONV only (the named DEFINITIONAL input, identical to the B1/B2 head; NOT a conditional proof hypothesis). No substantive conditional hypotheses. Definitional scope: the coherence-resolution admissible class C_adm. H-ENDPOINT-THINNESS-ACCEPTED removed (sunset hardening 2026-06-12); H-NONLATTICE-REMAINDER-EXCLUDED reclassified to definitional scope (route-3 2026-06-13, R-037: Lemma 2 caps T'<=10 for all admissible competitors). MANDATORY SCOPE QUALIFIER: B5 does NOT claim unrestricted arbitrary-Q DR-2; T-030 stays OPEN as a frontier strengthening
 - Soft dependencies (context only): B1-RH-ENUM, B2-PROPA-HLAYER
 - Open gates: STEP-5B
 
@@ -100,3 +100,12 @@ the certified Parseval-pinned joint replaced it on W_SC; (gamma) evidence double
 vs the 2026-06-08 discharge -- DISMISSED, every promotion row is post-T5 evidence).
 Quantitative sanity: the promotion changes no number; all values are published-bundle
 values. Operator verdicts D1-A/D2-A/D3-A (T-031, 2026-06-12).
+
+
+## Tier note (T6-conditional -> T7-SCOPE, route-3 promotion 2026-06-13)
+
+Full record in `T5-DOSSIER/notes/b5-t7scope-assignment-260613-v1.0` (devil's-advocate
+pass: alpha admissibility-is-definitional-scope-not-hypothesis ADDRESSED; beta A1 is a
+definitional input like the head; gamma T-030-open-coexists-with-T7-SCOPE DISMISSED).
+Attack-4 (T',n)-only chain audit discharged (dr2_t030_route3_nonloadbearing.py v1.1.0,
+6/6). B5 = T7-SCOPE_{admissibility-bounded}, NOT unrestricted arbitrary-Q.

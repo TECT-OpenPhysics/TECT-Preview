@@ -1,0 +1,15 @@
+  [PASS] anchor_x1p129_reproduced (S_anchor = composed/bound = x1.129 reproduces the mendpoint x1.129 single-J0 anchor; J0 = 0.2896, M_END = 0.104953, rhat_end = 0.33675)
+  [PASS] two_way_pin_t0 (J_eff(t->0) two ways: convolution 0.11592 == direct 1D 0.11592, ratio 1.00000 -- quadrature/convention pin, no absolute normalisation enters)
+  [PASS] sup_bound_consistency (J_eff(t) <= J0 = 0.2896 on every chord: the realized kernel never exceeds the anchor sup -- max J_eff = 0.1093 at t = 0.420)
+  [PASS] grid_convergence (doubling the loop grids moves the worst-chord J_eff by 0.00% < 1%)
+  [PASS] preregistered_gate_verdict (shape_max = 0.3772 -> S_realized = S_anchor/shape_max = x2.994; gate G3-SUCCESS; per the pre-registration: G1 shape>=1 fail / G2 S<=1.2 immaterial / G3 success)
+
+[STDERR]
+Traceback (most recent call last):
+  File "/sessions/amazing-practical-ritchie/mnt/TECT/claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T7Scope-260613/codes/vacuum/scscope_sunset_pertransfer.py", line 116, in <module>
+    qrun = json.loads((REPO/"claims"/"B5-BEYOND-LAYER-BOUND"/"runs"/"260609-scscope-quartic-certificate"/"result.json").read_text())
+  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/sessions/amazing-practical-ritchie/mnt/TECT/claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T7Scope-260613/claims/B5-BEYOND-LAYER-BOUND/runs/260609-scscope-quartic-certificate/result.json'
