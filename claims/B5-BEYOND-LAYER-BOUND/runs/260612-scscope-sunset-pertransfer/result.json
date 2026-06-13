@@ -1,0 +1,97 @@
+{
+  "script": "scscope_sunset_pertransfer.py",
+  "version": "1.0.0",
+  "S_anchor": 1.1291503200269108,
+  "J0": 0.28964823200981,
+  "J0_end": 0.2565418743206541,
+  "rhat_end": 0.33674599985544107,
+  "M_END": 0.1049531393953285,
+  "t_min": 0.4196233428178272,
+  "chords": [
+    0.4196233428178272,
+    0.4823384215099721,
+    0.5450535002021168,
+    0.6077685788942617,
+    0.6704836575864066,
+    0.7331987362785515,
+    0.7959138149706964,
+    0.8586288936628411,
+    0.921343972354986,
+    0.9840590510471309,
+    1.0467741297392759,
+    1.1094892084314205,
+    1.1722042871235654,
+    1.2349193658157103,
+    1.297634444507855,
+    1.3603495232
+  ],
+  "J_eff": [
+    0.10925104429983386,
+    0.10717914379264254,
+    0.10486120029702922,
+    0.10231421007771122,
+    0.09955729281749434,
+    0.09661148780433718,
+    0.09349943433628062,
+    0.0902450727271679,
+    0.08687320125605182,
+    0.08340889616328047,
+    0.07987718398778675,
+    0.07630250558186448,
+    0.07270830350513052,
+    0.06911677027942352,
+    0.06554846876881072,
+    0.0620222710844372
+  ],
+  "shape_max": 0.37718526207380293,
+  "S_realized": 2.993622586998038,
+  "gate": "G3-SUCCESS",
+  "R_max": 0.3845945187789355,
+  "joint_cons_old": 1.0403267259168631,
+  "joint_cons_new": 2.02251904519396,
+  "joint_ver_old": 1.0815375219817012,
+  "joint_ver_new": 2.3956656826741702,
+  "claims": [
+    {
+      "name": "anchor_x1p129_reproduced",
+      "passed": true,
+      "detail": "(S_anchor = composed/bound = x1.129 reproduces the mendpoint x1.129 single-J0 anchor; J0 = 0.2896, M_END = 0.104953, rhat_end = 0.33675)"
+    },
+    {
+      "name": "two_way_pin_t0",
+      "passed": true,
+      "detail": "(J_eff(t->0) two ways: convolution 0.11592 == direct 1D 0.11592, ratio 1.00000 -- quadrature/convention pin, no absolute normalisation enters)"
+    },
+    {
+      "name": "sup_bound_consistency",
+      "passed": true,
+      "detail": "(J_eff(t) <= J0 = 0.2896 on every chord: the realized kernel never exceeds the anchor sup -- max J_eff = 0.1093 at t = 0.420)"
+    },
+    {
+      "name": "grid_convergence",
+      "passed": true,
+      "detail": "(doubling the loop grids moves the worst-chord J_eff by 0.00% < 1%)"
+    },
+    {
+      "name": "preregistered_gate_verdict",
+      "passed": true,
+      "detail": "(shape_max = 0.3772 -> S_realized = S_anchor/shape_max = x2.994; gate G3-SUCCESS; per the pre-registration: G1 shape>=1 fail / G2 S<=1.2 immaterial / G3 success)"
+    },
+    {
+      "name": "joint_recomputed",
+      "passed": true,
+      "detail": "(certified R_max = 0.385; joint(rho=6.55): x1.040 -> x2.023; joint(rho=12.6): x1.082 -> x2.396; saturation cap rho->inf: x1.13 -> x2.994)"
+    },
+    {
+      "name": "hardening_beyond_thin",
+      "passed": true,
+      "detail": "(the conservative-floor joint x2.023 > 1.3: the endpoint closure is no longer THIN under the per-transfer sunset kernel -- CANDIDATE evidence for removing H-ENDPOINT-THINNESS-ACCEPTED; operator decision required, NO flip here)"
+    },
+    {
+      "name": "admissibility_floor",
+      "passed": true,
+      "detail": "(theta_min = 0.627 -> t_min = 0.420: every admissible transfer sits on the evaluated chord set [t_min, 2q0])"
+    }
+  ],
+  "all_pass": true
+}

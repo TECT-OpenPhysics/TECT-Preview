@@ -1,0 +1,56 @@
+{
+  "script": "dr2_t030_r1_bridge.py",
+  "version": "1.0.0",
+  "preregistered_gates": {
+    "H1": "exact spectral identity: the v=0 coefficient of |f_Q|^4 (O(N^4) quadruple count) equals E_+(Q) (pair-sum count); integer equality, no tolerance",
+    "H2": "Besicovitch convergence: |avg_S/(int w) - E_+|/E_+ < 1e-3 at S=80 AND decays by >= 30x from S=5 to S=80 (envelope ~S^{-2}); failure falsifies the Lemma R1 limit step",
+    "H3": "Minkowski step: the L^2(dy) triangle inequality used in Lemma R1 holds on 200 random nonnegative trials (sanity of the inequality direction)"
+  },
+  "lemma": "R1 bridge: lim_S avg_{B_S} ||f_Q||^4_{L^4(w(.-y))} dy = (int w) E_+(Q), exact for finite Q (trig polynomial); + Minkowski step",
+  "configs": {
+    "generic_with_quadruple": {
+      "N": 10,
+      "E_plus": 206,
+      "c0": 206,
+      "sum_cv": 10000,
+      "errs": {
+        "5.0": 0.006611686920175278,
+        "10.0": 0.0004552900174315021,
+        "20.0": 0.000790693501322368,
+        "40.0": 9.478393869768712e-05,
+        "80.0": 1.800186160273626e-05
+      }
+    },
+    "rich_latitude_z2": {
+      "N": 8,
+      "E_plus": 168,
+      "c0": 168,
+      "sum_cv": 4096,
+      "errs": {
+        "5.0": 0.012714121789849335,
+        "10.0": 0.0013482239645446455,
+        "20.0": 0.0009769418864926766,
+        "40.0": 0.00012358731926959926,
+        "80.0": 2.3142312932528902e-05
+      }
+    }
+  },
+  "claims": [
+    {
+      "name": "H1_c0_equals_Eplus_exact",
+      "passed": true,
+      "detail": "(v=0 quadruple count == pair-sum E_+ exactly, and sum_v c_v == N^4, on both configs: the spectral identity behind M(|f_Q|^4) = E_+)"
+    },
+    {
+      "name": "H2_besicovitch_convergence",
+      "passed": true,
+      "detail": "(closed-form avg_S -> (int w) E_+ with the predicted ~S^{-2} envelope on both configs; final relative errors: generic_with_quadruple:1.80e-05, rich_latitude_z2:2.31e-05)"
+    },
+    {
+      "name": "H3_minkowski_step",
+      "passed": true,
+      "detail": "(L^2(dy) triangle inequality: 200/200 trials, worst lhs/rhs = 0.9223 <= 1)"
+    }
+  ],
+  "all_pass": true
+}

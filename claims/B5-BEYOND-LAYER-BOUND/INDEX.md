@@ -9,7 +9,7 @@
 
 **Falsifier.** An admissible pattern inside a certified box (a(P)<1) whose exact off-diagonal Bloch correction exceeds the Lemma-B envelope; or any pattern undercutting the +0.00432 band margin at the anchor.
 
-## DR-2/  ·  11 proof units  ·  tier span T6/T7
+## DR-2/  ·  12 proof units  ·  tier span T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -24,6 +24,7 @@
 | `dr2-pencil-rigidity-reduction` | v1.0 | T6* | (a) T7: E_off(A,B) <= 2 min(\|A\|^2-\|A\|,\|B\|^2-\|B\|), E_+(A,B) <= 3\|A\|\|B\| for A,B on sphere-circles (r<=2 for w!=0); corrects the external 2\|A\|\|B\| (off b… | (a) EXECUTED (dr2_cross_energy_lemma.py 6/6) … | Prove or disprove the PSM / Pencil Rigidity conjecture (independent math branch); none re… |
 | `dr2-programme-consolidation` | v1.0 | T6* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
+| `dr2-t030-frontier-consolidation` | v1.0 | T6 | (1) For every finite Q in S^2, E_+(Q) <= C N^{9/4}, proved via Lemma A's sum-circle structure + dyadic occupancy classes + the classical circle-incid… | Theorem 1: PROVED MODULO [CIRC-INC] (classica… | Operator review: (i) whether Theorem 1's modulo-classical grade is registered (T7-INCstan… |
 
 ## H-LAYER-AUX/  ·  9 proof units  ·  tier span T5/T6
 
@@ -39,7 +40,7 @@
 | `offshell-domination-theorem` | v1.1 | T6* | rho_off = \|Sigma_cond(k_off)\|/K_0(k_off) <= R_lead*r_R/(r_R+c*delta^2) < R_lead < 1, inheriting (a) on-shell R_lead<1 (T-018/020, \|Sigma_cond\|<=R_lea… | ANALYTIC (corollary of established results) +… | T7 Step 3 (Blocker B): R_max<0.634 certified bound (via the official Parseval-pinned Ghat… |
 | `offshell-operator-decision` | v1.0 | T6* | DECISION: off-shell/arbitrary-multi-radius antipodal lattice subsets are NOT in the primary A_adm (registered shell/shell-union, T'<=13), justified b… | ANALYTIC (kinetic penalty + two-tier closure)… | OPERATOR (optional): enact the B1/B2 re-tier to hypothesis-reduced T6 on the shell-suppor… |
 
-## SC-SCOPE/  ·  10 proof units  ·  tier span T6/T7
+## SC-SCOPE/  ·  11 proof units  ·  tier span T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -53,6 +54,7 @@
 | `scscope-programme-consolidation` | v1.0 | T6* | Chronicle of SC-SCOPE: the second-cumulant scope, the third-cumulant endpoint obstruction (sunset/quartic), the per-transfer arc (M-ENDPOINT x1.13, G… | CHRONICLE (no independent result). Final stat… | B1 rests on H-LAYER alone; the deepest remaining piece is Prop A (isotropic dressing = di… |
 | `scscope-quartic-normalisation-certificate` | v1.0 | T6* | Ghat4=J*J convolution is standard-normalised (Parseval (J*J)(0)=(2pi^2)^-1 int q^2 J^2, ratio 1.0000; Young ratio 0.27). Hence R_max=0.385<0.634 CERT… | CERTIFICATE: convention pinned (Parseval), R_… | Operator: re-examine the SC-SCOPE endpoint lift given the certified (thin) closure. If ac… |
 | `scscope-scope-decision` | v1.0 | T6* | Operator-authorized (2026-06-07): SC-SCOPE all-orders third-order lift ESTIMATE-FEASIBLE (estimate-grade, NOT proved) for I<=1e-3 (paired joint x3.1 … | DECISION RECORD over EXECUTED evidence (4 scr… | None required for SC-SCOPE (scope accepted). Optional reopening: sharper STEP-5B endpoint… |
+| `scscope-sunset-pertransfer-hardening` | v1.0 | T6 | EXECUTED (8/8): replacing the single-J0 sup anchor by the realized D-weighted loop average J_eff(t) on the admissible chords (all propagators at the … | EXECUTED certificate-candidate (T4-grade evid… | operator review -> decide H-ENDPOINT- THINNESS-ACCEPTED removal (then T-030 is the single… |
 
 ## STEP-5B/  ·  10 proof units  ·  tier span T5/T6/T7
 
@@ -76,4 +78,4 @@
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 | `t6-conditional-assignment` | v1.0 | T6 | B5-BEYOND-LAYER-BOUND re-tiered T5 PINNED-CLOSURE -> T6 PROVED-CONDITIONAL on H_B5^T6 = {lattice-class H-ADM-COH discharged; non-lattice remainder ex… | TIER-ASSIGNMENT RECORD over published bundles… | T7 path (optional): harden the sunset endpoint beyond thin OR close T-030. Mainline: T-03… |
 
-<!-- generated 2026-06-12T16:26:05Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-12T17:27:09Z by build_index.py v1.0.1 -->

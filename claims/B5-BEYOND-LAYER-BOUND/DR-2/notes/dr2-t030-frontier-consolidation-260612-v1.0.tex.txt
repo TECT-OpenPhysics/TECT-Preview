@@ -1,0 +1,500 @@
+% =============================================================================
+% Title: T-030 frontier consolidation -- arbitrary-Q DR-2: statement map, an
+%        unconditional N^{9/4} additive-energy bound via dyadic circle richness
+%        and classical circle incidences, and a written proof of the R1
+%        local-to-global bridge of the cross-scale induction
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; hypothesis
+%        H-NONLATTICE-REMAINDER-EXCLUDED of H_B5^T6; NOT load-bearing for the
+%        published C_full head, which caps T' <= 10 in-class by Lemma 2)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: T-030 frontier note. THREE deliverables at honest grades. (1) A
+%   consolidated statement map of the arbitrary-Q DR-2 frontier (Sec. 2).
+%   (2) Theorem 1: E_+(Q) <= C N^{9/4} for EVERY finite Q in S^2 --
+%   PROVED MODULO [CIRC-INC], the classical Pach-Sharir/CEGSW circle incidence
+%   bound (classical published combinatorial geometry; the analogue of R-026's
+%   modulo-textbook-NT structure). This improves the prior unconditional
+%   record for arbitrary Q (the N^{5/2} triple-count class) by N^{1/4}; with
+%   the Aronov-Sharir refinement the exponent improves to 20/9 + eps (Remark).
+%   A structure corollary pins where any DR-2 counterexample must live.
+%   (3) Lemma R1: the local-to-global translate-averaging bridge of
+%   dr2-cross-scale-induction v1.1 -- previously CITED, not reproduced -- is
+%   now a WRITTEN PROOF (exact Besicovitch limit for trigonometric polynomials
+%   + Minkowski in L^2(dy)); the conditional chain's cited residual set
+%   shrinks {R1, R2} -> {R2}. Machine experiments with PRE-REGISTERED gates
+%   (12/12 asserts across two scripts); gate G5 FIRED on a finite-N proxy and
+%   was resolved honestly as a constant-factor artifact (scaling exponent
+%   2.0057). The open statement E_+(Q) <=_eps N^{2+eps} for arbitrary
+%   antipodal Q remains OPEN. NO gate flip, NO tier enactment -- operator
+%   decisions only.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue. Overnight autonomous T-030 dispatch.
+%        Scripts codes/vacuum/dr2_t030_dyadic_richness.py (v1.1.0, 9/9) and
+%        codes/vacuum/dr2_t030_r1_bridge.py (v1.0.0, 3/3); JSON artefacts at
+%        claims/B5-BEYOND-LAYER-BOUND/runs/260612-dr2-t030-dyadic-richness/
+%        and .../260612-dr2-t030-r1-bridge/.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+T-030 is the arbitrary-$Q$ (non-lattice) DR-2 problem: for every finite
+antipodal $Q\subset S^2$ with $|Q|=N$, is the additive energy
+\[
+E_+(Q):=\#\{(a,b,c,d)\in Q^4:\ a+b=c+d\}
+\]
+bounded by $N^{2+\epsilon}$ for every $\epsilon>0$? This is the content of
+B5's hypothesis H-NONLATTICE-REMAINDER-EXCLUDED -- the last remaining B5 T7
+blocker after the 2026-06-12 operator verdicts (D1-A/D2-A/D3-A). Boundary
+kept explicit throughout (main-line-synthesis v1.3 Sec.~4b): this track is
+NOT load-bearing for the published $C_{\rm full}$ head theorem, whose Lemma~2
+caps $T'\le\lfloor2\pi/\theta_{\min}\rfloor=10$ elementarily in-class;
+T-030 is a frontier strengthening. This note consolidates the frontier
+(Sec.~2), proves one new unconditional-modulo-classical intermediate exponent
+(Sec.~3), discharges the R1 residual of the conditional chain by a written
+proof (Sec.~4), and records the pre-registered machine experiments including
+one honestly-fired gate (Sec.~5). No gate or tier action is taken.
+
+\section*{2. Statement map of the frontier (consolidation)}
+
+\subsection*{2.1 The exact open statement}
+
+\textbf{Open (T-030).} For every finite antipodal $Q\subset S^2$, $|Q|=N$:
+$E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$. (Antipodality plays no role in any
+partial result below; everything stated holds for arbitrary finite $Q$.)
+
+\subsection*{2.2 What is proved, at what grade (pre-this-note)}
+
+\begin{itemize}
+\item \textbf{Lemma A (R-025), T7 unconditional}: $E_+(Q)\le(1+T'(Q))N^2$,
+where $T'(Q)$ is the maximum occupancy of a proper sum-level circle
+$C_m=S^2\cap\{x\cdot m=\tfrac12|m|^2\}$, $m\neq0$. Hence $T'=O(1)$ classes
+(random, great circle) satisfy DR-2 elementarily.
+\item \textbf{Lattice class (R-026 + Lemma NT), T7-NTstandard}: for
+$Q\subset\mathbb Z^3\cap\{|x|^2=R\}$, $T'\lesssim_\epsilon R^\epsilon$
+(divisor + Dirichlet class number), so $E_+\le(1+C_\epsilon R^\epsilon)N^2$.
+SOLVED; this is what discharged H-ADM-COH for the lattice class.
+\item \textbf{Separated $Q$, T6 PROVED CONDITIONAL on Bourgain--Demeter}
+($d=3$, $p=4$): via the Besicovitch mean $M(|f_Q|^4)=E_+(Q)$ and the
+Schwartz-majorant bridge (dr2-decoupling-closure v1.1).
+\item \textbf{Arbitrary $Q$, conditional chain, T4+/T5-candidate}: the
+cross-scale induction (dr2-cross-scale-induction v1.1) reduces arbitrary
+finite $Q$ to the separated base via affine rescaling + decoupling
+stability, with TWO cited-not-reproduced residuals: R1 (local-to-global
+translate-averaging) and R2 (multi-scale $\epsilon$-bookkeeping).
+\item \textbf{PSM route}: Pencil Rigidity / Pair-Sum Surface Multiplicity
+conjecture T2 (falsification gate $E_+(Q_N)\ge N^{2+\delta}$); reduction
+PSM $\Rightarrow$ DR-2 at T3 with OPEN GAPS $\alpha$ (decomposition
+existence) and $\beta$ (per-cluster uniformity). Cross-energy lemma R-021
+(T7): $E_{\rm off}(A,B)\le2\min(|A|^2-|A|,|B|^2-|B|)$ for circle subsets.
+\item \textbf{Affine invariance (R-023), T7}: $E_+$ is exactly
+affine-invariant; cap clustering cannot beat $N^2$ by rescaling alone.
+\item \textbf{Unconditional record for arbitrary $Q$ (pre-this-note)}: the
+trivial/triple-count $N^{5/2}$ class. Lemma A gives only $(1+T')N^2\le N^3$
+in general.
+\end{itemize}
+
+\subsection*{2.3 Why the rich latitude blocks the naive $T'$ route}
+
+The engineered latitude circle ($N$ points on $z=z_0$) has ONE maximally
+rich sum-circle: $m^\ast=(0,0,2z_0)$ with $C_{m^\ast}$ equal to the latitude
+itself, so $T'=N$ -- yet $E_+\approx3N^2$ (machine-exact: $2.972N^2$ at
+$N=108$, Sec.~5). So $T'\lesssim_\epsilon N^\epsilon$ is SUFFICIENT for DR-2
+(Cor.~2 of R-025) but NOT necessary, and no bound on $T'$ alone can close
+T-030. The missing ingredient is visible in the witness: what matters is not
+how rich the richest circle is, but HOW MANY simultaneously rich circles can
+coexist. That is an incidence question, and Sec.~3 exploits exactly this.
+
+\subsection*{2.4 What an unconditional proof must overcome}
+
+By the structure corollary of Sec.~3 (Cor.~1.2), any family with
+$E_+\ge N^{2+\delta}$ must contain $\gtrsim N^{2+\delta}/(k^2\log N)$
+simultaneously $k$-rich sum-circles at some single dyadic richness
+$k\in[c_1N^{\delta},\,c_2N^{(1-\delta)/3}]$. Classical incidence bounds cap
+what this regime can do at $\delta=1/4$ (Pach--Sharir) or $2/9+\epsilon$
+(Aronov--Sharir); pushing $\delta\to0$ unconditionally would need
+near-optimal circle-incidence technology (the regime adjacent to the hard
+unit-distance-type problems), while the conditional Bourgain--Demeter route
+bypasses incidences entirely at the price of the R2 bookkeeping.
+
+\section*{3. Theorem 1: the unconditional $N^{9/4}$ bound (new)}
+
+\subsection*{3.1 The incidence input}
+
+\textbf{[CIRC-INC] (classical; Clarkson--Edelsbrunner--Guibas--Sharir--Welzl
+1990; Pach--Sharir curves with 3 degrees of freedom).} There is an absolute
+constant $A$ such that for any $N$ points and any $n$ DISTINCT circles in the
+plane, the number of point-circle incidences satisfies
+\[
+I\;\le\;A\big(N^{3/5}n^{4/5}+N+n\big).
+\]
+Transfer to $S^2$: stereographic projection from any $p\in S^2$ avoiding the
+finitely many circles and points (such $p$ exists; finitely many circles have
+measure zero) maps the configuration bijectively to points and distinct
+circles in the plane, preserving incidences. So [CIRC-INC] holds verbatim for
+circles on the sphere.
+
+\subsection*{3.2 Setup and the dyadic decomposition}
+
+As in R-025: $r(m)=\#\{(a,b)\in Q^2:a+b=m\}$, $E_+(Q)=\sum_m r(m)^2$,
+$\sum_m r(m)=N^2$. For $m\neq0$ both summands of $a+b=m$ lie on the
+sum-level circle $C_m$, $r(m)\le t_m:=\#(Q\cap C_m)$, and the map
+$m\mapsto C_m$ is INJECTIVE on $\{0<|m|\le2\}$: the plane
+$x\cdot m=\tfrac12|m|^2$ has unit normal $m/|m|$ and distance $|m|/2>0$ from
+the origin; a circle on $S^2$ determines its plane, and the pair (normal,
+distance$\,>0$) determines $m=2d\,u$. Distinct $m$ therefore give distinct
+circles, as [CIRC-INC] requires.
+
+Let $n_k:=\#\{m\neq0:\ r(m)\ge1,\ t_m\ge k\}$ (a finite family of distinct
+$k$-rich circles). Dyadic classes: $D_j=\{m\neq0:\ r(m)\ge1,\ 2^j\le
+t_m<2^{j+1}\}$, $j\ge0$.
+
+\textbf{Per-class bounds.} For $k=2^j$, $j\ge1$:
+\[
+\text{(i)}\ \sum_{m\in D_j}r(m)^2\le 2k\!\!\sum_{m\in D_j}\!\!r(m)\le 2kN^2,
+\qquad
+\text{(ii)}\ \sum_{m\in D_j}r(m)^2\le 4k^2|D_j|\le 4k^2\,n_k .
+\]
+The $j=0$ class has $r(m)=t_m=1$, contributing $\le N^2$; the $m=0$ term
+contributes $r(0)^2\le N^2$.
+
+\textbf{Richness count from [CIRC-INC].} Each of the $n_k$ circles carries
+$\ge k$ incidences, so $k\,n_k\le I\le A(N^{3/5}n_k^{4/5}+N+n_k)$. For
+$k\ge2A$ the $An_k$ term is absorbed ($An_k\le\tfrac k2 n_k$) and one of the
+two remaining terms dominates, giving
+\[
+n_k\;\le\;(4A)^5\,\frac{N^3}{k^5}\;+\;4A\,\frac{N}{k}
+\qquad(k\ge2A).
+\]
+
+\subsection*{3.3 Theorem 1 and proof}
+
+\textbf{Theorem 1.} There is an absolute constant $C$ (explicit in the
+[CIRC-INC] constant $A$) such that for EVERY finite $Q\subset S^2$,
+\[
+\boxed{\,E_+(Q)\;\le\;C\,N^{9/4}\,}.
+\]
+
+\textbf{Proof.} Split the dyadic sum at $k^\ast=N^{1/4}$:
+\[
+E_+(Q)\;\le\;2N^2+\sum_{1\le 2^j\le k^\ast}\ \sum_{m\in D_j}r(m)^2
+\;+\;\sum_{2^j>k^\ast}\ \sum_{m\in D_j}r(m)^2 .
+\]
+Small classes by (i): $\sum_{2^j\le k^\ast}2\cdot2^jN^2\le4k^\ast N^2
+=4N^{9/4}$. Large classes by (ii) and the richness count (the finitely many
+dyadic $k$ with $k^\ast<k<2A$, possible only when $N^{1/4}<2A$, contribute
+$\le2(2A)\cdot2AN^2=O_A(N^2)$ by (i)):
+\[
+\sum_{2^j>k^\ast}4k^2n_k
+\;\le\;\sum_{2^j>k^\ast}\Big(4(4A)^5\frac{N^3}{k^3}+16A\,kN\Big)
+\;\le\;\frac{32}{7}(4A)^5\,\frac{N^3}{(k^\ast)^3}+32A\,T'N
+\;\le\;C'\,N^{9/4}+32A\,N^2,
+\]
+using $\sum_{k>k^\ast\,\rm dyadic}k^{-3}\le\tfrac87(k^\ast)^{-3}$, $T'\le N$,
+and $N^3/(k^\ast)^3=N^{9/4}$. Summing, $E_+(Q)\le CN^{9/4}$. $\square$
+
+\textbf{Remark 1.1 (Aronov--Sharir refinement).} Replacing [CIRC-INC] by the
+Aronov--Sharir circle bound
+$I\lesssim N^{2/3}n^{2/3}+N^{6/11}n^{9/11}\log^{2/11}(N^3/n)+N+n$ gives
+$n_k\lesssim N^2/k^3+N^3k^{-11/2}\log^{O(1)}+N/k$ and, balancing at
+$k^\ast=N^{2/9}$, the exponent $E_+(Q)\lesssim_\epsilon N^{20/9+\epsilon}$.
+The $9/4$ statement is kept as the headline because its input is the cleaner
+classical bound; both are strictly below the prior $N^{5/2}$ record.
+
+\textbf{Corollary 1.2 (structure of potential extremizers).} If
+$E_+(Q)\ge N^{2+\delta}$ for some $\delta>0$ and $N$ large, then some single
+dyadic class contributes $\ge N^{2+\delta}/(2\log_2N)$, and by (i), (ii) +
+[CIRC-INC] its richness scale $k$ obeys
+\[
+c_1\,\frac{N^{\delta}}{\log N}\;\le\;k\;\le\;c_2\,N^{(1-\delta)/3}\log^{1/3}N,
+\qquad
+n_k\;\ge\;\frac{N^{2+\delta}}{8k^2\log_2 N},
+\]
+forcing $\delta<1/4$ (consistency of the window) and a SUPERLINEAR-in-$N$
+number $n_k\ge N^{2+\delta}/(8k^2\log N)\ge N^{4/3+O(\delta)}$ of
+simultaneously $k$-rich sum-circles. The rich latitude (ONE rich circle) and
+all tested families are nowhere near this regime (Sec.~5).
+
+\textbf{Honest grade.} Theorem 1 is PROVED MODULO [CIRC-INC]: every step
+above is self-contained EXCEPT the incidence input, which is classical
+published combinatorial geometry (CEGSW 1990 / Pach--Sharir), invoked the
+way R-026 invokes textbook number theory (T7-NTstandard precedent). Whether
+the repository registers this as the same modulo-classical grade is an
+OPERATOR decision; no enactment here. Within the repo this improves the
+unconditional arbitrary-$Q$ record from the $N^{5/2}$ class to $N^{9/4}$
+($\delta=1/4$); the statement itself is assembled from standard tools and no
+novelty beyond the repository record is claimed.
+
+\section*{4. Lemma R1: the local-to-global bridge, now a written proof}
+
+dr2-cross-scale-induction v1.1 rested on two CITED residuals; R1 was the
+decoupling-compatible passage from the ball inequality to the
+Besicovitch-mean energy inequality. R1 is in fact provable outright for
+finite $Q$, because $|f_Q|^4$ is a trigonometric polynomial. We record the
+proof.
+
+\textbf{Lemma R1 (translate-averaged decoupling $\Rightarrow$ energy
+inequality).} Let $Q\subset S^2$ be finite, $\{\theta\}$ a finite partition
+of $S^2$ into caps, $Q_\theta=Q\cap\theta$, and
+$f_P(x)=\sum_{q\in P}e(q\cdot x)$. Suppose the LOCAL decoupling inequality
+holds: for some ball radius $R_0$, weight $0\le w\in\mathcal S(\mathbb R^3)$
+with $\int w>0$ and $\widehat w$ absolutely summable over the (finite)
+relevant frequency set, and constant $D$,
+\[
+\|f_Q\|_{L^4(w(\cdot-y))}\;\le\;D\Big(\sum_\theta
+\|f_{Q_\theta}\|_{L^4(w(\cdot-y))}^2\Big)^{1/2}
+\qquad\text{for every translate }y\in\mathbb R^3 .
+\tag{4.1}
+\]
+Then
+\[
+\boxed{\,E_+(Q)\;\le\;D^4\Big(\sum_\theta E_+(Q_\theta)^{1/2}\Big)^{2}\,}.
+\]
+
+\textbf{Step 0 (one inequality suffices for all translates).} If (4.1) is
+assumed only at $y=0$ (the usual statement on $B_{R_0}$), it holds for every
+$y$ with the SAME $D$: substituting $g_P(x)=f_P(x+y)=\sum_q e(q\cdot y)
+e(q\cdot x)$ preserves the frequency support and cap decomposition
+(unimodular coefficients; decoupling constants are insensitive to them), and
+$\|f_P\|_{L^4(w(\cdot-y))}=\|g_P\|_{L^4(w)}$.
+
+\textbf{Step 1 (exact translate-averaging identity).} $|f_Q(x)|^4=\sum_v
+c_v\,e(v\cdot x)$ is a FINITE sum with $c_v=\#\{(a,b,c,d)\in Q^4:
+a+b-c-d=v\}\ge0$ and $c_0=E_+(Q)$. For $S>0$, by Fubini (all sums finite),
+\[
+\mathrm{avg}_S:=\frac{1}{|B_S|}\int_{B_S}\|f_Q\|_{L^4(w(\cdot-y))}^4\,dy
+=\sum_v c_v\,\widehat w(v)\,\beta_S(v),
+\qquad
+\beta_S(v):=\frac{1}{|B_S|}\int_{B_S}e(v\cdot y)\,dy,
+\]
+with $\beta_S(0)=1$ and $|\beta_S(v)|\le3/(2\pi|v|S)^2\cdot(1+o(1))\to0$ for
+$v\neq0$ (explicitly $\beta_S(v)=3(\sin u-u\cos u)/u^3$, $u=2\pi|v|S$).
+Hence
+\[
+\lim_{S\to\infty}\mathrm{avg}_S=\widehat w(0)\,c_0=\Big(\int
+w\Big)\,E_+(Q),
+\]
+and identically, for each cap,
+$\lim_S\frac{1}{|B_S|}\int_{B_S}\|f_{Q_\theta}\|^4_{L^4(w(\cdot-y))}dy
+=(\int w)E_+(Q_\theta)$. (Machine check: dr2\_t030\_r1\_bridge.py verifies
+$c_0=E_+$ as two independent exact integer counts and the convergence with
+the predicted $S^{-2}$ envelope, final relative error $\le2.4\times10^{-5}$
+at $S=80$ on both test configurations.)
+
+\textbf{Step 2 (Minkowski).} Set
+$A_\theta(y)=\|f_{Q_\theta}\|^2_{L^4(w(\cdot-y))}$. Raising (4.1) to the
+4th power and averaging over $y\in B_S$,
+\[
+\mathrm{avg}_S\;\le\;D^4\,\Big\|\sum_\theta A_\theta\Big\|_{L^2(\mu_S)}^2
+\;\le\;D^4\Big(\sum_\theta\|A_\theta\|_{L^2(\mu_S)}\Big)^{2},
+\qquad \mu_S=\tfrac{dy|_{B_S}}{|B_S|},
+\]
+by the triangle inequality in $L^2(\mu_S)$ applied to the FINITE sum over
+caps. And $\|A_\theta\|_{L^2(\mu_S)}^2=\frac1{|B_S|}\int_{B_S}
+\|f_{Q_\theta}\|^4_{L^4(w(\cdot-y))}dy$.
+
+\textbf{Step 3 (limit).} Let $S\to\infty$ in Step 2: the left side tends to
+$(\int w)E_+(Q)$ by Step 1; on the right, each of the finitely many cap terms
+tends to $[(\int w)E_+(Q_\theta)]^{1/2}$. Dividing by $\int w>0$ gives the
+boxed inequality. $\square$
+
+\textbf{Consequence for the conditional chain.} In
+dr2-cross-scale-induction v1.1, the iteration inequality
+$E_+(Q)\lesssim_\epsilon\delta^{-\epsilon}(\sum_\theta
+E_+(Q_\theta)^{1/2})^2$ now follows from the Bourgain--Demeter ball
+inequality alone via Lemma R1 -- the local-to-global passage is NO LONGER a
+cited residual. The chain for arbitrary $Q$ is now conditional on exactly:
+(a) the Bourgain--Demeter ball decoupling black box (with its $C^2$-stability
+for the rescaled caps, as already recorded), and (b) residual R2 (multi-scale
+$\epsilon$-bookkeeping over $O(\log N)$ levels). Whether \{black box + R2\}
+warrants moving the chain from T4+/T5-candidate is an OPERATOR decision; the
+factual change here is the residual set shrinking $\{R1,R2\}\to\{R2\}$.
+
+\textbf{PSM gaps (status note).} The PSM route's gaps $\alpha$
+(decomposition existence) and $\beta$ (per-cluster uniformity) are untouched
+by this note; the adversarial scan of Sec.~5 doubles as the PSM falsification
+gate scan and found NO candidate family (all scaling exponents $\approx2$).
+Theorem 1 supersedes the PSM route as the best unconditional statement: PSM
+would give $N^2\log^BN$ but is T2, while $N^{9/4}$ is proved modulo
+[CIRC-INC] only.
+
+\section*{5. Machine experiments (pre-registered gates; one honest firing)}
+
+Scripts: codes/vacuum/dr2\_t030\_dyadic\_richness.py (v1.1.0, 9/9 asserts)
+and codes/vacuum/dr2\_t030\_r1\_bridge.py (v1.0.0, 3/3 asserts); exact
+integer arithmetic throughout (every finite-precision configuration is a
+scaled-rational one, so exact experiments are necessarily of this form; the
+theorems cover arbitrary real $Q$). Gates G1--G6 and H1--H3 were declared in
+the scripts BEFORE the first full run and are quoted in the JSON artefacts.
+
+\textbf{Families} (adversarial; the known $T'=N$ witness as control):
+F1 rich latitude (108 points of an $r_2$-rich Gaussian-integer circle,
+$a^2+b^2=1105^2$, at $z_0=47$); F1b its antipodal double ($N=216$); F2
+random antipodal subset of the Gauss-typical shell $R=9974$ ($N=150$); F3
+antipodal two-cap cluster ($N=120$); F4 union of the 4 richest latitudes of
+the engineered sphere ($N=316$; Cayley-type: each circle is a unit/prime
+angle orbit); F5 great circle ($N=108$); F6 full shell $R=4994$ ($N=1152$).
+
+\textbf{Results} (all exact):
+\[
+\begin{array}{lrrrrr}
+\text{family} & N & E_+ & E_+/N^2 & T' & E_+/N^{9/4}\\
+\hline
+\text{F1 rich latitude} & 108 & 34668 & 2.972 & 108 & 0.922\\
+\text{F1b antipodal double} & 216 & 208008 & 4.458 & 108 & 1.163\\
+\text{F2 random antipodal} & 150 & 67194 & 2.986 & 7 & 0.853\\
+\text{F3 two-cap cluster} & 120 & 48600 & 3.375 & 16 & 1.020\\
+\text{F4 four rich latitudes} & 316 & 227900 & 2.282 & 108 & 0.541\\
+\text{F5 great circle} & 108 & 34668 & 2.972 & 2 & 0.922\\
+\text{F6 full shell } R{=}4994 & 1152 & 5209344 & 3.925 & 32 & 0.674\\
+\end{array}
+\]
+G1 estimator audit (vectorized $E_+$ $=$ brute-force $O(N^4)$ count on three
+small instances) PASS; G2 Lemma A PASS on all families; G3 ($r(m)\le t_m$,
+the Theorem-1 proof step) PASS on all proper sums of all families; G4
+(Theorem-1 consistency, $E_+\le5N^{9/4}$) PASS, max ratio $1.163$; G6
+(per-class dyadic bookkeeping inequalities) PASS on every class of every
+family. H1--H3 (Lemma R1 ingredients) PASS as quoted in Sec.~4.
+
+\textbf{Honest gate-firing record (G5).} The pre-registered PSM proxy
+(any family with $N\ge100$ and $E_+\ge N^{2.2}$ must be reported) FIRED on
+five families, worst finite-$N$ exponent $2.278$ (F1b). Investigation per
+the registered protocol (G5b, added v1.1.0 BEFORE resolution): rebuilding
+the same antipodal-double-latitude construction at $3\times$ size
+($r_2$-richer circle $a^2+b^2=32045^2$, $N=648$) gives $E_+/N^2$
+$4.458\to4.486$ and scaling exponent $\log(E_2/E_1)/\log(N_2/N_1)=2.0057$.
+Verdict: the firing is a CONSTANT-FACTOR artifact of the finite-$N$ proxy
+(a constant $c\approx4.5$ at $N=216$ mimics exponent $2.28$); growth is
+quadratic; NO PSM/DR-2 counterexample candidate. Lesson recorded: finite-$N$
+exponent proxies must be paired with scaling tests at registration time.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3,
+code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{Theorem 1's [CIRC-INC] is cited, not reproduced --
+the same defect class as citing decoupling; why grade it differently?}
+VALID with mitigation: it IS a citation, and the note says so in the grade
+line itself (PROVED MODULO [CIRC-INC]). The mitigation is the precedent
+class: CEGSW/Pach--Sharir is classical 1990s combinatorial geometry of the
+same standing as the textbook number theory behind R-026's T7-NTstandard,
+whereas Bourgain--Demeter is modern heavy machinery whose internal
+bookkeeping (R2) is precisely what the conditional chain cannot reproduce.
+The operator decides whether the repository accepts the analogy; nothing is
+enacted here.
+\item[($\beta$)] \emph{The incidence bound needs DISTINCT circles; different
+$m$ might give the same circle $C_m$, collapsing $n_k$.} DISMISSED with
+explicit counter: the plane of $C_m$ has unit normal $m/|m|$ at distance
+$|m|/2>0$; a circle determines its plane, and (normal, positive distance)
+determines $m=2du$ -- the map $m\mapsto C_m$ is injective on $0<|m|\le2$
+(Sec.~3.2). The only degenerate case $m=0$ is split off separately, exactly
+as in Lemma A.
+\item[($\gamma$)] \emph{Lemma R1 Step 0 assumes the decoupling constant is
+uniform over translates.} DISMISSED: translation $x\mapsto x+y$ multiplies
+each frequency atom by the unimodular constant $e(q\cdot y)$, preserving
+frequency supports and all cap norms; (4.1) at $y=0$ therefore transfers to
+every translate with the same $D$. No new hypothesis enters.
+\item[($\delta$)] \emph{Step 2/3 order of limits: Minkowski at finite $S$,
+then $S\to\infty$ -- any illegal interchange?} DISMISSED: at each finite $S$
+the inequality involves a FINITE sum over caps in $L^2$ of a probability
+measure; the $S\to\infty$ limit is then taken of both sides, each cap term
+converging by the Step-1 identity (finite Fourier sums; no dominated
+convergence or infinite-sum interchange is invoked anywhere).
+\item[($\epsilon$)] \emph{Gate G5 fired -- does the no-counterexample claim
+survive?} VALID with mitigation, fully recorded in Sec.~5: the registered
+proxy fired, the registered consequence (report + investigate) was executed,
+and the scaling test (exponent $2.0057$) resolves it as a constant-factor
+artifact. The claim made is exactly what the data supports: no tested family
+shows super-quadratic GROWTH.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Magnitude: at $N=216$,
+$N^{9/4}\approx1.79\times10^5$ vs $E_+=208008$, ratio $1.163$ -- the
+Theorem-1 constant $C$ must exceed $1.16$, consistent with the proof's
+$C=O(A^5)$ ($A$ the [CIRC-INC] constant; no contradiction). Limit case:
+great circle saturates Lemma A, $E_+/N^2=2.972$ vs ceiling $(1+T')=3$ --
+the $m=0$ split is necessary and the estimator is calibrated. Exponent
+direction: $E_+/N^{9/4}$ DECREASES along growing controls (F6 full shell
+$0.674$ at $N=1152$; F1b scaling point $E_+/N^2$ flat at $4.49$), as an
+$N^{2}$-class truth under an $N^{9/4}$ bound requires. Convergence rate:
+Lemma R1 machine check error $1.8$--$2.3\times10^{-5}$ at $S=80$ sits below
+the $3/u_{\min}^2=1.07\times10^{-4}$ envelope with $u_{\min}=2\pi S/3$ --
+the predicted $S^{-2}$ mechanism, not accidental cancellation.
+Reproducibility: both scripts are deterministic (fixed seeds), exact-integer
+in every energy count, and exit 0 only if all 12 asserts pass.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-030 (Theorem 1: unconditional-modulo-[CIRC-INC]
+                         N^{9/4} bound) + R-031 (Lemma R1: local-to-global
+                         bridge written proof) / T-030 frontier consolidation
+Precise statement:       (1) For every finite Q in S^2, E_+(Q) <= C N^{9/4},
+                         proved via Lemma A's sum-circle structure + dyadic
+                         occupancy classes + the classical circle-incidence
+                         bound [CIRC-INC] (CEGSW/Pach-Sharir, s=3); with
+                         Aronov-Sharir, N^{20/9+eps}. Corollary: any
+                         E_+ >= N^{2+delta} family needs >= N^{2+delta}/
+                         (8k^2 log N) simultaneously k-rich sum-circles at
+                         some k in [N^delta/log, N^{(1-delta)/3} log^{1/3}],
+                         forcing delta < 1/4. (2) Lemma R1: the ball
+                         decoupling inequality alone implies E_+(Q) <= D^4
+                         (sum_theta E_+(Q_theta)^{1/2})^2 (exact Besicovitch
+                         limit for trig polynomials + Minkowski in L^2(dy));
+                         the cross-scale chain's cited residual set shrinks
+                         {R1, R2} -> {R2}. (3) Statement map + adversarial
+                         scan: no super-quadratic-growth family found (G5
+                         proxy fired, resolved as constant-factor artifact,
+                         scaling exponent 2.0057).
+Scope:                   T-030 (arbitrary non-lattice finite Q in S^2; B5
+                         hypothesis H-NONLATTICE-REMAINDER-EXCLUDED). NOT
+                         load-bearing for the published C_full head (Lemma 2
+                         caps T' <= 10 in-class; synthesis v1.3 Sec. 4b).
+                         Antipodality not needed for any partial result.
+Evidence grade:          Theorem 1: PROVED MODULO [CIRC-INC] (classical
+                         published incidence geometry; operator may grade
+                         analogously to R-026's T7-NTstandard). Lemma R1:
+                         written unconditional proof GIVEN the ball
+                         decoupling inequality (the named black box); its
+                         own two ingredients are self-contained. Conditional
+                         chain: T4+/T5-candidate with residual set now {R2}
+                         -- any regrade is the operator's. Open statement
+                         E_+ <=_eps N^{2+eps}: STILL OPEN.
+Reproduction command:    python3 codes/vacuum/dr2_t030_dyadic_richness.py
+                         python3 codes/vacuum/dr2_t030_r1_bridge.py
+Expected output:         9/9 and 3/3 asserts PASS, exit 0; JSON artefacts at
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260612-dr2-t030-dyadic-richness/ and
+                         .../260612-dr2-t030-r1-bridge/.
+Falsifier:               (a) any finite Q with E_+(Q) > C N^{9/4} beyond the
+                         proof constant (would refute Theorem 1 / [CIRC-INC]);
+                         (b) a family with SCALING exponent > 2 along its own
+                         construction (PSM/DR-2 counterexample; gate G5/G5b
+                         protocol); (c) failure of the S^{-2} Besicovitch
+                         convergence or c_0 != E_+ in the R1 bridge (gates
+                         H1/H2).
+Tier before / after:     NONE -- operator decides. No gate flip, no tier
+                         enactment, no hypothesis removal. B5 stays T6
+                         PROVED-CONDITIONAL on H_B5^T6; DR2-SHARE stays
+                         RESCOPED-TO-T030-NONLOADBEARING; T-030 stays OPEN.
+No-overclaim statement:  This note does NOT close T-030: E_+ <=_eps N^{2+eps}
+                         for arbitrary (antipodal) Q remains open. Theorem 1
+                         is an INTERMEDIATE exponent (9/4), conditional on a
+                         cited classical incidence bound; no novelty beyond
+                         the repository record is claimed for it. Lemma R1
+                         removes ONE of the two cited residuals of the
+                         conditional chain; the chain remains conditional on
+                         Bourgain-Demeter + R2. The G5 gate firing is
+                         recorded, not suppressed.
+Next required action:    Operator review: (i) whether Theorem 1's
+                         modulo-classical grade is registered (T7-INCstandard
+                         analogue) as the new unconditional T-030 record;
+                         (ii) whether the conditional chain's residual
+                         shrinkage {R1,R2}->{R2} updates its T4+/T5-candidate
+                         grade; (iii) research continuation: either reproduce
+                         R2 (multi-scale bookkeeping) for a T6 conditional
+                         chain closure, or push the incidence route below
+                         20/9 (open incidence technology).
+\end{verbatim}
+}

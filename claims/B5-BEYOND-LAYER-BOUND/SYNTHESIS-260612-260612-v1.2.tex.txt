@@ -1,18 +1,20 @@
-% SUPERSEDED by SYNTHESIS-260612-260612-v1.2.tex.txt
 % =============================================================================
 % Title: B5-BEYOND-LAYER-BOUND claim-level synthesis: the beyond-layer machinery (DR-2, STEP-5B, SC-SCOPE)
 % Claim: B5-BEYOND-LAYER-BOUND (claim-level SYNTHESIS layer, T-013; taxonomy claims-restructure-proposal-260609)
-% Version: v1.1 -- first issued 2026-06-12; this version issued 2026-06-12
+% Version: v1.2 -- first issued 2026-06-12; this version issued 2026-06-12
 % Status: PUBLISHED SYNTHESIS NOTE (operator CONFIRM 2026-06-12) -- registered
 %   as B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612. No new mathematics, no tier change, no gate flip.
-%   Canonical claim state (status.json / CLAIMS.md): T5 PINNED-CLOSURE,
-%   scope CLOSED@H-ADM-COH-AMENDED-CLASS (second-cumulant order), no
-%   hypotheses, no open gates. B5 is the MACHINERY claim: it does not state
+%   Canonical claim state (status.json / CLAIMS.md, post-T-031 re-tier
+%   2026-06-12): T6 PROVED-CONDITIONAL on H_B5^T6 (label
+%   B5-BeyondLayer-T6Conditional-260612; dossier
+%   t6-conditional-assignment-260612-v1.0), scope CLOSED@LATTICE-DISCHARGED +
+%   NONLATTICE-REMAINDER(T-030); hypotheses H-ENDPOINT-THINNESS-ACCEPTED,
+%   H-NONLATTICE-REMAINDER-EXCLUDED. B5 is the MACHINERY claim: it does not state
 %   the vacuum selection itself; it supplies the off-diagonal/selection-floor
 %   inputs that B1/B2's head theorem consumes. Three of its sub-proof units
 %   hold PUBLISHED bundles at tiers ABOVE the claim tier (DR-2 T7-lattice,
-%   STEP-5B T6, SC-SCOPE T5) -- the claim tier is the floor of its weakest
-%   enacted closure, not of its strongest unit.
+%   STEP-5B T6, SC-SCOPE T5) -- the claim tier is the tier of the claim's OWN
+%   statement, not of its strongest unit.
 %
 % Revision history (cumulative):
 %   v1.0 (2026-06-12) first issue, alongside the operator CONFIRM of the parent
@@ -20,6 +22,11 @@
 %        already operator-confirmed at issue time.
 %   v1.1 (2026-06-12) operator CONFIRM: registered as PUBLISHED SYNTHESIS NOTE
 %        B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612 (registration patch only; no content change).
+%   v1.2 (2026-06-12) TIER-SYNC RE-ISSUE (operator-flagged): the v1.0/v1.1
+%        canonical state (T5 PINNED-CLOSURE) was superseded the same day by the
+%        T-031 verdicts (D3-A): B5 is now T6 PROVED-CONDITIONAL on H_B5^T6.
+%        All current-state statements updated; the Sec.4 tier-relation analysis
+%        retained with its upgrade-path paragraph marked EXECUTED.
 % =============================================================================
 
 \sloppy
@@ -28,17 +35,20 @@
 Claim-level synthesis for B5-BEYOND-LAYER-BOUND. It adds no mathematics; every
 statement carries the unit's registered tier. \textbf{Scope:} the composition
 of B5's units into the canonical claim state, and the precise tier relations
-between the T5 claim and its T6/T7 units. \textbf{Not claimed:} the vacuum
+between the claim (now T6-conditional) and its units. \textbf{Not claimed:} the vacuum
 selection itself (that is B1/B2's head), arbitrary non-lattice DR-2, or full
 STEP-5B exhaustiveness beyond the amended-class pin.
 
 \section*{2. The claim and its canonical state}
 
-\textbf{Claim (canonical).} Pattern-generic Gershgorin reduction of the
-beyond-layer bound: within the H-ADM-COH amended competitor class at
-second-cumulant order, the beyond-layer off-diagonal correction is bounded
-below the layer margin (T5 PINNED-CLOSURE; pinned by the operator decision
-record). No hypotheses; no open gates.
+\textbf{Claim (canonical, post-T-031).} Pattern-generic Gershgorin reduction
+of the beyond-layer bound: T6 PROVED-CONDITIONAL on
+$\mathcal H_{\rm B5}^{\rm T6}=\{$lattice-class H-ADM-COH discharged;
+non-lattice remainder excluded (T-030); SC-SCOPE endpoint thinness accepted;
+sunset-limited joint $\times1.040>1$ accepted$\}$; scope
+CLOSED@LATTICE-DISCHARGED + NONLATTICE-REMAINDER; label
+\texttt{B5-BeyondLayer-T6Conditional-260612}. (Historical: T5 PINNED-CLOSURE
+from 2026-06-06 until the T-031 verdicts of 2026-06-12.)
 
 \section*{3. Sub-proof unit map (per-unit tier and role)}
 
@@ -68,20 +78,18 @@ AUXILIARY (operator-accepted v1.1)\\
 \end{tabular}
 \end{center}
 
-\section*{4. Composition: why the claim is T5 while its units reach T7}
+\section*{4. Composition: the claim tier vs its units (updated post-T-031)}
 
-The claim's statement is the AMENDED-CLASS closure at second-cumulant order --
-an operator-pinned decision-layer statement (H-ADM-COH adoption). Its strongest
-units exceed it: DR-2 is an unconditional lattice-class theorem (independent
-mathematical interest), STEP-5B's rectangle constant is theorem-grade T6, and
-SC-SCOPE certifies the endpoint floor at T5 thin. The claim tier is NOT the
-maximum of its units: it is pinned at the level of the weakest statement the
-CLAIM ITSELF makes (the class-amended, second-cumulant closure), per the
-T5-DOSSIER. Upgrading the claim would require the exhaustiveness decision
-layer (T-031: H-ADM-COH adoption record finalisation + the R-U6-1 backlog
-lemma, T-004), not new analysis -- the budget COMPARISON is already
-machine-closed ($\times55.6/\times8.8/\times2.1$--$2.6$ across the intensity
-band, J-refined endpoint $\times2.6$).
+The claim's statement is the class-scoped closure; its strongest units exceed
+it (DR-2 T7-NTstandard; STEP-5B rectangle T6; SC-SCOPE T5 thin) and are cited
+at their own tiers. The upgrade path foreseen here (the T-031 exhaustiveness
+decision layer + the R-U6-1 backlog lemma) was EXECUTED on 2026-06-12: R-U6-1/2
+discharged, T-031 verdicts D1-A/D2-A/D3-A enacted, and the claim re-tiered to
+T6 PROVED-CONDITIONAL on the explicit set $\mathcal H_{\rm B5}^{\rm T6}$ (the
+budget comparison was already machine-closed at
+$\times55.6/\times8.8/\times2.1$--$2.6$). The remaining T7 path: remove the
+two acceptance hypotheses -- harden the sunset endpoint beyond thin, and close
+T-030.
 
 Consumption map (who uses what): B1/B2's head uses Lemma~1 (DR-2 mechanism) +
 Lemma~2 (in-head packing) for (O), SC-SCOPE for (S), STEP-5B for the K-budget;
@@ -91,9 +99,9 @@ Main-Line-Synthesis-T013-260612 Sec.~3--4.
 \section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
 
 \begin{itemize}
-\item[($\alpha$)] \emph{``A T5 claim holding a T7 unit invites tier-shopping:
-citing the claim at its unit's tier.''} ADDRESSED: Sec.~4 fixes the rule --
-cite the CLAIM at T5 (its own statement), cite the UNIT at its bundle tier
+\item[($\alpha$)] \emph{``A claim holding a higher-tier unit invites
+tier-shopping: citing the claim at its unit's tier.''} ADDRESSED: Sec.~4 fixes
+the rule -- cite the CLAIM at its own tier (now T6-conditional), the UNIT at its bundle tier
 (its own statement). The two statements differ; the synthesis exists precisely
 to prevent the conflation.
 \item[($\beta$)] \emph{``SC-SCOPE thinness ($\times1.04$) could silently cap
@@ -122,14 +130,14 @@ publication.
 \begin{verbatim}
 Result ID:               B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612
                          (PUBLISHED claim-level SYNTHESIS, T-013)
-Precise statement:       B5's canonical state (T5 PINNED-CLOSURE,
-                         CLOSED@H-ADM-COH-AMENDED-CLASS, gates none)
-                         is the claim's own decision-layer statement;
-                         its sub-proof units hold PUBLISHED bundles at
-                         their own tiers (DR-2 T7-lattice, STEP-5B T6,
-                         SC-SCOPE T5 thin) and are cited at those
-                         tiers by the B1/B2 head. Claim tier != max
-                         unit tier, by design.
+Precise statement:       B5's canonical state (post-T-031: T6
+                         PROVED-CONDITIONAL on H_B5^T6, label
+                         B5-BeyondLayer-T6Conditional-260612) is the
+                         claim's own statement; its sub-proof units
+                         hold PUBLISHED bundles at their own tiers
+                         (DR-2 T7-lattice, STEP-5B T6, SC-SCOPE T5
+                         thin) and are cited at those tiers by the
+                         B1/B2 head. Claim tier != max unit tier.
 Scope:                   synthesis layer; no new math, no tier change,
                          no gate flip.
 Evidence grade:          SYNTHESIS over three PUBLISHED bundles +
@@ -138,11 +146,14 @@ Reproduction command:    run the three bundles' entry manifests
                          (8 + 1 + 4 scripts).
 Falsifier:               any falsifier of the cited footers; or a
                          unit-tier mismatch against INDEX.md.
-Tier before / after:     no change (B5 stays T5 PINNED-CLOSURE).
-No-overclaim statement:  the claim is cited at T5; unit tiers are not
-                         claim tiers; exhaustiveness (T-031) and
-                         arbitrary-Q (T-030) remain open tracks.
-Next required action:    T-031 decision-layer support (R-U6-1 lemma
-                         T-004 first); T-030 as research frontier.
+Tier before / after:     no change BY THIS NOTE; the claim itself was
+                         re-tiered T5 -> T6-conditional by T-031
+                         (D3-A, 2026-06-12), reflected in this v1.2.
+No-overclaim statement:  the claim is cited at T6-conditional; unit
+                         tiers are not claim tiers; T7 requires
+                         removing the two acceptance hypotheses
+                         (sunset hardening; T-030).
+Next required action:    sunset endpoint hardening (T7 path) and
+                         T-030 frontier, per the active tracks.
 \end{verbatim}
 }

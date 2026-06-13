@@ -1,0 +1,185 @@
+% =============================================================================
+% Title: Per-transfer sunset hardening: the endpoint joint is no longer thin (S = x1.129 -> x2.994 realized)
+% Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE unit; the B5 T7-path attack on H-ENDPOINT-THINNESS-ACCEPTED)
+% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: EXECUTED HARDENING CERTIFICATE-CANDIDATE (gate G3-SUCCESS of the
+%   pre-registered gate set; scscope_sunset_pertransfer.py 8/8 asserts PASS,
+%   exit 0). The single-J0 sunset anchor S = x1.129 -- DOUBLY conservative
+%   (sup over transfer AND the loosest dressing) -- is replaced by the realized
+%   per-transfer kernel: the D-weighted loop average J_eff(t) over the
+%   admissible chord set gives shape_max = 0.377, hence S_realized = x2.994
+%   and the endpoint joint x1.040 -> x2.023 (conservative floor rho = 6.55) /
+%   x1.082 -> x2.396 (verified floor rho = 12.6); the rho -> inf saturation cap
+%   moves x1.13 -> x2.994. The endpoint closure is NO LONGER THIN. NO flip is
+%   enacted: removal of H-ENDPOINT-THINNESS-ACCEPTED (one of B5's two
+%   T6-conditional hypotheses) is the OPERATOR's decision upon review.
+%   Methodology: the same realized-vs-sup replacement that certified the
+%   quartic channel (Young 1.019 -> realized 0.385).
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-12) first issue. Dispatch note: the autonomous research agent
+%        (shell-less) correctly returned content instead of writing; its spec
+%        was executed in the parent session with ONE correction -- the sunset
+%        kernel is the 3-propagator object (J * G)(t) (bubble x propagator),
+%        NOT (J*J*J) (6 propagators) as the dispatch draft had it; the
+%        normalisation-free shape-factor formulation makes the (2pi)^3
+%        convention class structurally irrelevant.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The B5 T6-conditional hypothesis H-ENDPOINT-THINNESS-ACCEPTED exists because the
+certified endpoint joint saturates at the sunset cap $S=\times1.13$. This note
+attacks that cap with the methodology that certified the quartic channel:
+replace a sup-bound kernel by its realized per-transfer evaluation.
+\textbf{Scope:} the sunset kernel factor of the endpoint bookkeeping, at the
+endpoint dressing, on the admissible chord set. \textbf{Not claimed:} any gate
+or tier change; any new analytic theorem (this is an EXECUTED evaluation of the
+existing bound's kernel, certificate-candidate grade).
+
+\section*{2. Pre-registered gates (set before computation)}
+
+G1: $\mathrm{shape}_{\max}=\max_{t\in\rm chords}J_{\rm eff}(t)/J_0\ge1$
+$\Rightarrow$ hardening FAILS (honest negative). \quad
+G2: $S_{\rm realized}\le1.2$ $\Rightarrow$ immaterial. \quad
+G3: success $\Rightarrow$ report $S_{\rm realized}$ and the recomputed joints
+at $\rho_{\rm lat}=6.55$ and $12.6$. \quad
+\textbf{Outcome: G3.}
+
+\section*{3. The replacement and why it is exact}
+
+The anchor bound (scscope-mendpoint-evaluation v1.1) is
+$b=\tfrac12u_{\rm eff}^2(2I)\,6\,J_0M$ with $J_0=\sup_tJ(t)$ at the $4\times
+10^{-4}$ dressing: the 3-propagator sunset kernel $(J*G)(t)$ (bubble $\times$
+propagator) bounded by $\sup J\cdot\int G$. The realized replacement evaluates
+the convolution instead of bounding it:
+\[
+J_{\rm eff}(t)=\frac{N(t)}{N_0},\qquad
+N(t)=\int\!\!\int \frac{k^2}{D(k)}\,J\bigl(\sqrt{k^2+t^2+2kt\mu}\bigr)\,d\mu\,dk,
+\]
+\[
+N_0=\int\!\!\int \frac{k^2}{D(k)}\,d\mu\,dk,
+\qquad D(k)=\hat r_{\rm end}+C(k^2-q_0^2)^2,
+\]
+with ALL propagators at the endpoint dressing $\hat r_{\rm end}=0.33675$. The
+absolute normalisation cancels in the ratio: no $(2\pi)^3$ convention enters
+(the factor-2 error class is structurally excluded), and
+$J_{\rm eff}(t)\le J_0$ pointwise (machine assert). Admissible transfers obey
+$|t|\ge t_{\min}=2q_0\sin(\theta_{\min}/2)=0.420$, so the chord set
+$[t_{\min},2q_0]$ covers every realized transfer.
+
+\section*{4. Results (scscope\_sunset\_pertransfer.py, 8/8 asserts PASS)}
+
+Calibration: the anchor is REPRODUCED, $S_{\rm anchor}=\times1.129$
+($J_0=0.2896$, $M_{\rm END}=0.104953$). Two-way pin: $J_{\rm eff}(t\to0)$ by
+the convolution and by the degenerate 1D integral agree to $10^{-5}$.
+Grid-doubling drift on the worst chord: $0.00\%$.
+\[
+\mathrm{shape}_{\max}=\frac{\max_t J_{\rm eff}(t)}{J_0}=\frac{0.1093}{0.2896}=0.377
+\quad(\text{at }t=t_{\min}=0.420),
+\]
+\[
+S_{\rm realized}=\frac{1.129}{0.377}=\times2.994 .
+\]
+Recomputed joints (certified $R_{\max}=0.385$ from the quartic certificate run
+artefact):
+\[
+\mathrm{joint}(\rho{=}6.55):\ \times1.040\to\times2.023,
+\qquad
+\mathrm{joint}(\rho{=}12.6):\ \times1.082\to\times2.396,
+\]
+\[
+\mathrm{cap}(\rho\to\infty):\ \times1.13\to\times2.994 .
+\]
+The doubly-conservative structure of the anchor (sup over transfer; loosest
+dressing) accounts for the factor: the loop average of $J$ at $|t|\ge0.420$
+sits far below the $t\to0$ sup, exactly as the quartic's Young-vs-realized gap
+($1.019\to0.385$) did.
+
+\section*{5. Consequence for the B5 T7 path (no flip enacted)}
+
+If the operator accepts this evaluation as the sunset accounting, the endpoint
+closure is COMFORTABLE ($\times2.0$--$\times2.4$), and
+H-ENDPOINT-THINNESS-ACCEPTED -- one of the two $\mathcal H_{\rm B5}^{\rm T6}$
+hypotheses -- loses its load: its removal would leave
+H-NONLATTICE-REMAINDER-EXCLUDED (T-030) as the single remaining B5 T7 blocker.
+This note enacts NOTHING: the acceptance, the GATES.md update, the W\_SC
+re-certification with the hardened S, and any SC-SCOPE package re-issue are
+operator decisions upon review.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The weighted-average replacement may be doing
+bookkeeping work the bound's derivation does not permit (the sum over
+transfers might need the kernel at EACH transfer, not a sup).''} ADDRESSED:
+the original bound already uses ONE kernel value (the sup) times the total
+weight; replacing the global sup by the sup over the ADMISSIBLE chord set is a
+strictly valid intermediate ($J_{\rm eff}(t)\le\max_{\rm chords}J_{\rm eff}\le
+J_0$ pointwise on every realized transfer); no per-transfer redistribution is
+claimed.
+\item[($\beta$)] \emph{``The dressing choice (all propagators at
+$\hat r_{\rm end}$) could be optimistic.''} VALID with mitigation: the anchor
+itself already certifies the dressing direction (mendpoint: $J$ DECREASES with
+dressing, so the $4\times10^{-4}$-dressing $J_0$ over-estimates -- our
+endpoint-dressing kernel is the matched choice, and the two-way pin + sup
+consistency are asserted at that dressing); a mixed-dressing audit is listed as
+the residual polish item.
+\item[($\gamma$)] \emph{``$J_{\rm eff}$ peaks at $t_{\min}$ -- a competitor
+just above the admissibility floor gets the weakest hardening; is the floor
+itself certified?''} DISMISSED: $t_{\min}$ comes from $\theta_{\min}(\hat r)$,
+the SAME admissibility input the whole B5 chain uses (machine-asserted here);
+at $t_{\min}$ the hardening is already $\times2.65$ relative to $J_0$, and the
+gate G3 threshold was pre-registered well below the observed value.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Direction: a smaller kernel can
+only RAISE the sunset margin -- selection-favorable by construction, and the
+mechanism (loop average $<$ sup) is fixed by $J(t)$ monotonicity on the chord
+range, not tuning. Limit case: at $t\to0$ the two-way pin agrees to $10^{-5}$;
+at the anchor inputs the script REPRODUCES $\times1.129$ before any
+replacement. Magnitude: $\mathrm{shape}_{\max}=0.377$ is comparable to the
+quartic's realized/Young ratio ($0.385/1.019=0.378$) -- the same kernel
+geometry drives both, an independent cross-consistency.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / SC-SCOPE sunset
+                         per-transfer hardening (B5 T7 path)
+Precise statement:       EXECUTED (8/8): replacing the single-J0 sup
+                         anchor by the realized D-weighted loop
+                         average J_eff(t) on the admissible chords
+                         (all propagators at the endpoint dressing)
+                         gives shape_max = 0.377, S = x1.129 ->
+                         S_realized = x2.994; endpoint joint x1.040
+                         -> x2.023 (rho=6.55), x1.082 -> x2.396
+                         (rho=12.6); saturation cap x1.13 -> x2.994.
+                         Gate G3-SUCCESS (pre-registered).
+Scope:                   the sunset kernel factor at the endpoint, on
+                         the admissible chord set. Certificate-
+                         candidate (EXECUTED evaluation); no new
+                         analytic theorem; no flip.
+Evidence grade:          EXECUTED certificate-candidate (T4-grade
+                         evidence for the operator decision).
+Reproduction command:    python
+                         codes/vacuum/scscope_sunset_pertransfer.py
+Falsifier:               a realized admissible transfer with
+                         J_eff(t) > max_chords J_eff (chord-set
+                         escape); anchor non-reproduction; grid
+                         drift > 1%.
+Tier before / after:     none (B5 stays T6-conditional). CANDIDATE
+                         input for removing H-ENDPOINT-THINNESS-
+                         ACCEPTED (operator decision).
+No-overclaim statement:  hardening of the KERNEL FACTOR only, within
+                         the existing bookkeeping; the mixed-dressing
+                         audit is a listed residual; W_SC
+                         re-certification with hardened S is not
+                         done here.
+Next required action:    operator review -> decide H-ENDPOINT-
+                         THINNESS-ACCEPTED removal (then T-030 is
+                         the single remaining B5 T7 blocker).
+\end{verbatim}
+}
