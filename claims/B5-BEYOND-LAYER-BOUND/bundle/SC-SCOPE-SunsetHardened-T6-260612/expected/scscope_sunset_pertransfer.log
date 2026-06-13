@@ -1,0 +1,13 @@
+  [PASS] anchor_x1p129_reproduced (S_anchor = composed/bound = x1.129 reproduces the mendpoint x1.129 single-J0 anchor; J0 = 0.2896, M_END = 0.104953, rhat_end = 0.33675)
+  [PASS] two_way_pin_t0 (J_eff(t->0) two ways: convolution 0.11592 == direct 1D 0.11592, ratio 1.00000 -- quadrature/convention pin, no absolute normalisation enters)
+  [PASS] sup_bound_consistency (J_eff(t) <= J0 = 0.2896 on every chord: the realized kernel never exceeds the anchor sup -- max J_eff = 0.1093 at t = 0.420)
+  [PASS] grid_convergence (doubling the loop grids moves the worst-chord J_eff by 0.00% < 1%)
+  [PASS] preregistered_gate_verdict (shape_max = 0.3772 -> S_realized = S_anchor/shape_max = x2.994; gate G3-SUCCESS; per the pre-registration: G1 shape>=1 fail / G2 S<=1.2 immaterial / G3 success)
+  [PASS] joint_recomputed (certified R_max = 0.385; joint(rho=6.55): x1.040 -> x2.023; joint(rho=12.6): x1.082 -> x2.396; saturation cap rho->inf: x1.13 -> x2.994)
+  [PASS] hardening_beyond_thin (the conservative-floor joint x2.023 > 1.3: the endpoint closure is no longer THIN under the per-transfer sunset kernel -- CANDIDATE evidence for removing H-ENDPOINT-THINNESS-ACCEPTED; operator decision required, NO flip here)
+  [PASS] admissibility_floor (theta_min = 0.627 -> t_min = 0.420: every admissible transfer sits on the evaluated chord set [t_min, 2q0])
+  [PASS] mixed_dressing_monotone_order (lightest-dressing corner dominates: J_eff worst per variant = {'end_end': 0.1093, 'anchor_end': 0.1211, 'end_anchor': 0.111, 'anchor_anchor': 0.123} -- J and 1/D both DECREASE with dressing, so (anchor,anchor) is the adversarial corner, as argued)
+  [PASS] mixed_dressing_gate_survives (ADVERSARIAL mixed-dressing corner: shape_worst = 0.4247 -> S_worst = x2.659 > 2.0; joint(rho=6.55) = x1.886 -- the hardening and the gate-removal claim survive the worst dressing assignment; the matched endpoint choice was NOT load-bearing)
+
+S_anchor x1.129 -> S_realized x2.994 (shape 0.377); joint 1.040->2.023 (cons) / 1.082->2.396 (ver)
+claims 10/10 PASS

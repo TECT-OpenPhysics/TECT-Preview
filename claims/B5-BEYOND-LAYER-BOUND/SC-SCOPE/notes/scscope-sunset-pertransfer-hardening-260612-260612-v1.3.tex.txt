@@ -1,15 +1,16 @@
-% SUPERSEDED by scscope-sunset-pertransfer-hardening-260612-260612-v1.3.tex.txt
 % =============================================================================
 % Title: Per-transfer sunset hardening: the endpoint joint is no longer thin (S = x1.129 -> x2.994 realized)
 % Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE unit; the B5 T7-path attack on H-ENDPOINT-THINNESS-ACCEPTED)
-% Version: v1.2 -- first issued 2026-06-12; this version issued 2026-06-12
-% Status: CONFIRMED (operator clean-run 8/8 PASS, verdict 2026-06-12) --
-%   registered as SC-SCOPE-SunsetHardened-T6-260612. The operator ENACTED the
-%   removal of H-ENDPOINT-THINNESS-ACCEPTED: the endpoint closure is
-%   COMFORTABLE, SUNSET-HARDENED (no longer thin); B5's T6-conditional
-%   hypothesis set shrinks to {H-NONLATTICE-REMAINDER-EXCLUDED} and the single
-%   remaining B5 T7 blocker is T-030. Gate G3-SUCCESS of the pre-registered
-%   set (scscope_sunset_pertransfer.py 8/8 asserts PASS, exit 0). The single-J0 sunset anchor S = x1.129 -- DOUBLY conservative
+% Version: v1.3 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: PUBLISHED-BUNDLE CONFIRMED (operator final ratification 2026-06-12,
+%   after the v1.2 mixed-dressing addendum clean-run: 1/1 script, 10/10 asserts
+%   PASS, 0 FAIL) -- bundle SC-SCOPE-SunsetHardened-T6-260612. Gate action
+%   FINAL: H-ENDPOINT-THINNESS-ACCEPTED REMOVED (all four operator attacks
+%   resolved: derivation compatibility; mixed-dressing worst case S_worst =
+%   x2.659 / joint x1.886; t_min-corner; the no-T7-overreach boundary). The
+%   endpoint closure is COMFORTABLE, SUNSET-HARDENED; B5's hypothesis set =
+%   {H-NONLATTICE-REMAINDER-EXCLUDED} only; the single remaining B5 T7 blocker
+%   is T-030. The single-J0 sunset anchor S = x1.129 -- DOUBLY conservative
 %   (sup over transfer AND the loosest dressing) -- is replaced by the realized
 %   per-transfer kernel: the D-weighted loop average J_eff(t) over the
 %   admissible chord set gives shape_max = 0.377, hence S_realized = x2.994
@@ -50,6 +51,12 @@
 %        choice is NOT load-bearing. Final ratification of this addendum is
 %        the operator's at next review; the bundle packaging is HELD until
 %        then (policy sec.14).
+%   v1.3 (2026-06-12) operator FINAL RATIFICATION (clean-run of v1.2/script
+%        v1.1.0: 10/10 PASS): the mixed-dressing addendum is accepted, the
+%        H-ENDPOINT-THINNESS-ACCEPTED removal is FINAL-STAMPED, and the result
+%        is PUBLISHED-BUNDLE CONFIRMED as SC-SCOPE-SunsetHardened-T6-260612
+%        (sec.14.4 tier-history bundle beside SC-SCOPE-T5-260612). Publication
+%        qualifier only; no content change.
 % =============================================================================
 
 \sloppy
@@ -222,11 +229,12 @@ Falsifier:               a realized admissible transfer with
                          J_eff(t) > max_chords J_eff (chord-set
                          escape); anchor non-reproduction; grid
                          drift > 1%.
-Tier before / after:     CONFIRMED + ENACTED (operator 2026-06-12):
-                         H-ENDPOINT-THINNESS-ACCEPTED REMOVED; B5
-                         stays T6-conditional with the single
+Tier before / after:     PUBLISHED-BUNDLE CONFIRMED (operator final
+                         ratification 2026-06-12; clean-run 10/10);
+                         H-ENDPOINT-THINNESS-ACCEPTED REMOVED
+                         (FINAL); B5 T6-conditional with the single
                          hypothesis H-NONLATTICE-REMAINDER-EXCLUDED;
-                         registered SC-SCOPE-SunsetHardened-T6-260612.
+                         bundle SC-SCOPE-SunsetHardened-T6-260612.
 No-overclaim statement:  hardening of the KERNEL FACTOR only, within
                          the existing bookkeeping (derivation-
                          compatibility stated explicitly, Sec. 3);
@@ -234,10 +242,8 @@ No-overclaim statement:  hardening of the KERNEL FACTOR only, within
                          (Sec. 5b, worst case S = x2.659); W_SC
                          re-certification with the hardened S is
                          not done here.
-Next required action:    operator ratification of the v1.2 mixed-
-                         dressing addendum (final gate stamp) ->
-                         THEN package SC-SCOPE-SunsetHardened-T6-
-                         260612 (sec.14). Mainline: T-030 = the
-                         single remaining B5 T7 blocker.
+Next required action:    none for this result (PUBLISHED).
+                         Mainline: T-030 = the single remaining B5
+                         T7 blocker.
 \end{verbatim}
 }

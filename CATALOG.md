@@ -6,7 +6,7 @@
 
 Generated: 2026-06-13
 
-**1009 artefacts** · superseded versions kept: 104 · machine-readable twin: `verification/catalog.json`
+**1039 artefacts** · superseded versions kept: 105 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -80,7 +80,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B4-MASS-GAP/LINEAGE.md` | B4-MASS-GAP | — | — | — | ACTIVE | `fd5ef53c698d` |
 | `claims/B4-MASS-GAP/claim.md` | B4-MASS-GAP | — | — | — | ACTIVE | `aa64c40953f6` |
 | `claims/B4-MASS-GAP/status.json` | B4-MASS-GAP | — | — | — | ACTIVE | `fb0abca541cb` |
-| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `7a7a06ba20e6` |
+| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `2b94cbc4e6cd` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T6Conditional-260612/MANIFEST.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `50866bded712` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T6Conditional-260612/README.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `950a13a48401` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T6Conditional-260612/archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `33bf54023ec9` |
@@ -134,6 +134,23 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/expected/dr2_lemma_nt_exhaustive.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `1256b774d33a` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/expected/dr2_weighted_energy.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `dbcb082a6297` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/requirements.txt` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `e09f656c130b` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/MANIFEST.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `66a5935982c2` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/README.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `5cc64acf57f7` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `33bf54023ec9` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/archive/legacy/scripts/Math424_AddA_reading_uniqueness.py` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `e9c7d8d80eea` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/codes/vacuum/scscope_floor_sharpening.py` | B5-BEYOND-LAYER-BOUND | 2026-06-08 | — | v1.0.0 | ACTIVE | `f13a8dfbfc92` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/codes/vacuum/scscope_ghat4_pertransfer.py` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `65e0f5bcd2f6` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/codes/vacuum/scscope_mendpoint_eval.py` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.1.0 | ACTIVE | `abe68ec081f8` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/codes/vacuum/scscope_quartic_certificate.py` | B5-BEYOND-LAYER-BOUND | 2026-06-09 | — | v1.0.0 | ACTIVE | `e41963df4d50` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/codes/vacuum/scscope_sunset_pertransfer.py` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | — | v1.1.0 | ACTIVE | `296053a84d49` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/codes/vacuum/sectorb_common.py` | B5-BEYOND-LAYER-BOUND | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `2f2de8c2098f` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/environment.txt` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `c8278a0df935` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/expected/scscope_floor_sharpening.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `b70fd4c9b5b0` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/expected/scscope_ghat4_pertransfer.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `7cd5947f04f0` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/expected/scscope_mendpoint_eval.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `272511b42d60` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/expected/scscope_quartic_certificate.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `a03522c37156` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/expected/scscope_sunset_pertransfer.log` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `8ecc933b10e8` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/requirements.txt` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `e09f656c130b` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/MANIFEST.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `1b57b7aa269f` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/README.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `1a38a1384f8c` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `33bf54023ec9` |
@@ -483,6 +500,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-frontier-consolidation-260612-260612-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `5bfbb200ff98` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-frontier-consolidation-260612-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `78889197b192` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-frontier-consolidation-260612-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | SUPERSEDED | `4e4bec02d99b` |
+| `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-r2-bookkeeping-260613-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-13 | 2026-06-13 | v1.0 | ACTIVE | `cfaebbfeb5c6` |
+| `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-r2-bookkeeping-260613-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-13 | 2026-06-13 | v1.0 | ACTIVE | `30674554fe36` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/aadm-exclusion-boundaries-260610-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.0 | SUPERSEDED | `4e4ff66814f7` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/aadm-exclusion-boundaries-260610-v1.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `3aba3c474740` |
 | `claims/B5-BEYOND-LAYER-BOUND/H-LAYER-AUX/notes/aadm-exclusion-boundaries-260610-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-10 | v1.1 | ACTIVE | `b8befcf45ec2` |
@@ -553,7 +572,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `44612d966396` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | SUPERSEDED | `41075265d5cb` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.2.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.2 | ACTIVE | `cad5eedaaaa9` |
-| `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.2 | ACTIVE | `5c91cb1d4e2a` |
+| `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.2 | SUPERSEDED | `9a0884d4614e` |
+| `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.3.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.3 | ACTIVE | `4c8092445495` |
+| `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.3 | ACTIVE | `3d9656c3a950` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `3b37376e8acf` |
 | `claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | SUPERSEDED | `044a07940317` |
 | `claims/B5-BEYOND-LAYER-BOUND/STEP-5B/notes/beyond-layer-gershgorin-reduction-260605-260605-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | v1.1 | SUPERSEDED | `3fadd6e97936` |
@@ -622,6 +643,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr-2-referee-package-260610-260612-v1.5.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-12 | v1.5 | ACTIVE | `ceb0917aa7a0` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-lemma-nt-inbundle-260612-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `aa34120818b0` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-lemma-nt-inbundle-260612-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `ee69f4aa74d3` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.3.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.3 | ACTIVE | `4c8092445495` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/scscope-sunset-pertransfer-hardening-260612-260612-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.3 | ACTIVE | `3d9656c3a950` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/sc-scope-referee-package-260610-260612-v1.4.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-12 | v1.4 | ACTIVE | `543a79b48a91` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/claims/B5-BEYOND-LAYER-BOUND/SC-SCOPE/notes/sc-scope-referee-package-260610-260612-v1.4.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-10 | 2026-06-12 | v1.4 | ACTIVE | `90768f7737ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/STEP-5B-Rectangle-T6-260612/claims/B5-BEYOND-LAYER-BOUND/STEP-5B/notes/rectangle-constant-closure-260605-260605-v1.3.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-05 | 2026-06-05 | v1.3 | ACTIVE | `7122fa1cadc0` |
@@ -828,6 +851,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-lattice-divisor/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `9da35055356f` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260608-dr2-weighted-energy/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `24fa967d7374` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/DR2-Lattice-T7-NTstandard-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260612-dr2-lemma-nt-exhaustive/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `93fd36115cd4` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-ghat4-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `bc0c5c38b7df` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-mendpoint/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `dc09ded506ea` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260608-scscope-floor-sharpening/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `93fa2cfbcf06` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260609-scscope-quartic-certificate/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `095f1d24f691` |
+| `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-SunsetHardened-T6-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260612-scscope-sunset-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `77392a706f15` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-ghat4-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `bc0c5c38b7df` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260607-scscope-mendpoint/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `dc09ded506ea` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/SC-SCOPE-T5-260612/claims/B5-BEYOND-LAYER-BOUND/runs/260608-scscope-floor-sharpening/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `93fa2cfbcf06` |
@@ -864,6 +892,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260612-dr2-t030-r1-bridge/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `645289a524bf` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260612-ru61-tadpole-alignment/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `139abfb9af0b` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260612-scscope-sunset-pertransfer/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `77392a706f15` |
+| `claims/B5-BEYOND-LAYER-BOUND/runs/260613-dr2-t030-r2-bookkeeping/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `30d7af83a2bb` |
 
 ## Domain codes
 
@@ -883,6 +912,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/dr2_lemma_nt_exhaustive.py` | — | 2026-06-12 | — | v1.0.0 | ACTIVE | `43a9ff755b68` |
 | `codes/vacuum/dr2_t030_dyadic_richness.py` | — | 2026-06-12 | — | v1.1.0 | ACTIVE | `7a2d36edbbaa` |
 | `codes/vacuum/dr2_t030_r1_bridge.py` | — | 2026-06-12 | — | v1.0.0 | ACTIVE | `86f6173b9e69` |
+| `codes/vacuum/dr2_t030_r2_bookkeeping.py` | — | — | — | — | ACTIVE | `f08a35de7557` |
 | `codes/vacuum/dr2_weighted_energy.py` | — | 2026-06-08 | — | v1.0.0 | ACTIVE | `557901e757b2` |
 | `codes/vacuum/estimator_upgrade_enumerated.py` | — | 2026-06-07 | 2026-06-07 | v1.0.0 | ACTIVE | `88ab67c8c1cd` |
 | `codes/vacuum/estimator_upgrade_knobs.py` | — | — | — | — | ACTIVE | `0a2259e16d9f` |
@@ -1002,9 +1032,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
-| `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `6edecd440472` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `2d77a2c96555` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `6c64e9df94e8` |
+| `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `88fdbcaefbf2` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `d1e817726571` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `41f74d53b9af` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `8b5fbc9a4817` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
@@ -1034,12 +1064,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `f2f02729c116` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `71aba49c6c98` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `ee16d5988a0e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `f009b0354785` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `98a2c1915f83` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `c6fd8ea1f7f4` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
@@ -1053,7 +1083,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `399eca308e40` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `e448618652ed` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |

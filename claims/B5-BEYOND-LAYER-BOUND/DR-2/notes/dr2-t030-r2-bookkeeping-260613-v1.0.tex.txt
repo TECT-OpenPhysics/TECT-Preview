@@ -1,0 +1,205 @@
+% =============================================================================
+% Title: R2 multi-scale bookkeeping: the power-sum lemma closes the N-counting; the D-loss reduces to one decoupling invocation
+% Claim: B5-BEYOND-LAYER-BOUND (gate DR2-SHARE / T-030 conditional chain; R2 residual)
+% Version: v1.0 -- first issued 2026-06-13; this version issued 2026-06-13
+% Status: PARTIAL ADVANCE (pre-registered gate G1): R2 is REDUCED, not closed
+%   unconditionally. The multi-scale bookkeeping splits into (i) the N-counting,
+%   PROVED loss-free here by the power-sum (superadditivity) lemma -- it never
+%   blows up regardless of split balance, dissolving the unbalanced-tree fear;
+%   and (ii) the D-counting, where a naive fixed-scale tree DOES accumulate an
+%   exponential D^{2G}, but submultiplicativity collapses it to a SINGLE
+%   critical-scale loss. The residual that remains is exactly ONE named
+%   ingredient: the Bourgain--Demeter discrete well-separated reduction (or
+%   polynomial separation s >= N^{-O(1)}), which removes the geometry-dependent
+%   s^{-eps}. R2 thereby tightens from 'vague multi-scale bookkeeping' to a
+%   single clean invocation. With R1 (R-034) a written proof, the arbitrary-Q
+%   DR-2 conditional chain now rests on: separated base case + this single BD
+%   discrete-reduction invocation. NO tier/gate/hypothesis flip (operator
+%   decides); B5 stays T6-conditional; the chain stays T6 PROVED CONDITIONAL on
+%   Bourgain--Demeter.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-13) first issue. Parent-session execution after the R2
+%        autonomous dispatch hit a model-access error. Pre-registered gates
+%        G1/G2 stated before the attempt; outcome G1 (honest partial with the
+%        residual named precisely). Script dr2_t030_r2_bookkeeping.py 5/5 PASS.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The arbitrary-$Q$ DR-2 conditional chain (dr2-cross-scale-induction v1.1) rests
+on two cited-not-reproduced residuals: R1 (local-to-global), now a written
+proof (R-034, dr2-t030-frontier-consolidation v1.1), and R2 (multi-scale
+bookkeeping). This note attacks R2. \textbf{Scope:} the bookkeeping of the
+one-step inequality
+\[
+E_+(Q)\;\le\;D^2\Bigl(\sum_\theta E_+(Q_\theta)^{1/2}\Bigr)^2
+\]
+iterated across scales, where the $\delta^{1/2}$-caps $\theta$ partition $Q$,
+$D$ is the $\ell^2$-decoupling constant at one scale, and (R-023, affine
+invariance) each $Q_\theta$ rescales loss-free to a unit paraboloid patch.
+\textbf{Not claimed:} an unconditional $N^{2+\varepsilon}$; any flip.
+
+\section*{2. Pre-registered gates}
+
+G1: if the per-generation losses multiply unboundedly and no summable-$\varepsilon$
+schedule or one-shot replacement removes the geometry dependence, record an
+HONEST PARTIAL with the residual named precisely. \quad
+G2: success $=$ a complete proof, every constant chase explicit, graded T6
+PROVED CONDITIONAL on Bourgain--Demeter ONLY. \quad
+\textbf{Outcome: G1.}
+
+\section*{3. The N-counting is loss-free (power-sum lemma, PROVED)}
+
+\begin{lemma}[Power-sum / superadditivity]
+For $p\ge1$ and nonnegative integers $N_\theta$ with $\sum_\theta N_\theta=N$,
+\[
+\sum_\theta N_\theta^{\,p}\;\le\;\Bigl(\sum_\theta N_\theta\Bigr)^{p}=N^{p},
+\]
+with equality iff at most one $N_\theta$ is nonzero.
+\end{lemma}
+\emph{Proof.} $x\mapsto x^p$ is superadditive on $[0,\infty)$ for $p\ge1$:
+$(a+b)^p\ge a^p+b^p$ (convexity + $0^p=0$); induct on the number of parts.
+Strictness unless one term carries all the mass. $\square$
+
+\textbf{Consequence.} Substituting the induction hypothesis
+$E_+(Q_\theta)\le C\,N_\theta^{2+\varepsilon}$ into the one-step inequality,
+\[
+E_+(Q)\le D^2\Bigl(\sum_\theta (C N_\theta^{2+\varepsilon})^{1/2}\Bigr)^2
+= D^2 C\Bigl(\sum_\theta N_\theta^{\,1+\varepsilon/2}\Bigr)^2
+\le D^2 C\,\bigl(N^{1+\varepsilon/2}\bigr)^2 = D^2 C\,N^{2+\varepsilon},
+\]
+the last step by the Lemma with $p=1+\varepsilon/2\ge1$. The $N$-dependence is
+therefore carried with NO loss at ANY split, balanced or not -- the
+maximally-unbalanced partition $(N-1,1)$ obeys the Lemma exactly (machine: assert
+1, $400$ random partitions plus $(N-1,1)$ for $N\le499$, worst $\mathrm{lhs}/
+\mathrm{rhs}\le1$). This DISSOLVES the unbalanced-tree fear for the $N$-counting:
+the only thing that can blow up is the $D$-factor.
+
+\section*{4. The D-counting: naive tree fails; submultiplicativity repairs}
+
+\textbf{The obstruction (naive fixed-scale tree).} Recursing the one-step
+inequality at a FIXED scale $\delta_0$ multiplies a fixed $D_0$ per generation.
+The maximally-unbalanced tree (peel one point per split) has depth $G=N-1$, so
+the naive bound carries $D_0^{2G}=D_0^{2(N-1)}$ -- EXPONENTIAL in $N$, not
+$N^{O(\varepsilon)}$ (machine: assert 3, $N=30$ gives $D_0^{2\cdot29}\approx
+2.9\times10^{17}=e^{40.2}$). Any R2 proof that silently assumes balanced splits
+or depth $O(\log N)$ is therefore WRONG; this is the documented failure mode.
+
+\textbf{The repair (submultiplicativity / one-shot).} The $\ell^2$-decoupling
+constant is submultiplicative across scales,
+$D(\delta_1\delta_2)\le C_{\rm sub}\,D(\delta_1)D(\delta_2)$, and the
+Bourgain--Demeter theorem packages the entire scale-$1$-to-$\delta$ passage as a
+SINGLE application with a SINGLE loss $D(\delta)\le_\varepsilon\delta^{-\varepsilon}$
+(the multi-scale induction is INTERNAL to its proof). Decoupling directly from
+scale $1$ to the finest relevant scale $s$ (the min separation, where every cap
+holds $\le1$ point = base case) gives
+\[
+E_+(Q)\;\le_\varepsilon\;s^{-2\varepsilon}\,N^2,
+\]
+ONE loss, independent of tree shape. For polynomially-separated $Q$
+($s\ge N^{-C}$) this is $s^{-2\varepsilon}\le N^{2C\varepsilon}=N^{O(\varepsilon)}$
+(machine: assert 4, $s=N^{-3}$ gives the fixed power $N^{6\varepsilon}$,
+$\log$-dominating the exponential naive factor at $N=1000$: $4.1$ vs $1384.9$).
+
+\section*{5. The residual, named precisely (gate G1)}
+
+For ARBITRARY (not polynomially-separated) $Q$, the min separation $s$ can be
+sub-polynomial, and then $s^{-2\varepsilon}$ is NOT $N^{O(\varepsilon)}$: the
+adversarial $s=e^{-N}$ gives one-shot exponent $2\varepsilon N/\log N$, which
+GROWS unboundedly ($1.8\to10.5\to74.9$ at $N=30/300/3000$; machine: assert 5).
+So telescoping ALONE does not deliver the uniform-in-geometry bound. The single
+remaining ingredient is exactly:
+\[
+\boxed{\ \text{[BD-DISCRETE]: the Bourgain--Demeter discrete well-separated reduction,}\ }
+\]
+which pigeonholes the $O(\log N)$ relevant scales and reduces the arbitrary
+configuration to the separated base case with a single $N^{O(\varepsilon)}$
+loss -- equivalently, accepting polynomial separation $s\ge N^{-O(1)}$ after the
+affine normalization. This is standard decoupling machinery (the SAME single
+$\delta^{-\varepsilon}$ Bourgain--Demeter prove), invoked, not reproduced.
+
+\textbf{Net effect on R2.} Before: R2 $=$ ``vague multi-scale bookkeeping over
+$O(\log N)$ levels.'' After: the $N$-counting is a PROVED loss-free power-sum
+lemma; the $D$-counting is a single [BD-DISCRETE] invocation. R2 is reduced to
+ONE named, standard ingredient. With R1 proved, the arbitrary-$Q$ chain rests
+on: the separated base case (T6 cond.\ on BD) $+$ [BD-DISCRETE]. The chain's
+honest grade is unchanged -- \textbf{T6 PROVED CONDITIONAL on Bourgain--Demeter}
+-- but its residual set is now a SINGLE clean citation.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The power-sum lemma is trivial -- does it really carry
+the unbalanced-tree worry?''} VALID, and that is the point: the worry was
+MISPLACED on the $N$-counting (where it is dissolved by a one-line convexity
+fact) and BELONGS to the $D$-counting (assert 3), which submultiplicativity
+handles. Separating the two is the contribution; neither half is deep, but the
+conflation was what kept R2 vague.
+\item[($\beta$)] \emph{``Submultiplicativity of the decoupling constant for
+$C^2$ graph patches is itself cited.''} UPHELD as the residual: yes -- that is
+precisely [BD-DISCRETE], named as the single remaining ingredient. The note
+does NOT claim to reprove Bourgain--Demeter; it claims to reduce R2 TO it,
+cleanly.
+\item[($\gamma$)] \emph{``Affine rescaling to a unit paraboloid patch might lose
+the curvature that makes decoupling work.''} DISMISSED: parabolic rescaling maps
+a paraboloid patch to a paraboloid patch EXACTLY (R-023; dr2-affine-invariance),
+so curvature is normalized, not lost -- the flat-GAP escape (large planar
+additive energy) is illusory because the normal coordinates impose the curved
+constraint at every scale.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} The power-sum slack is exactly
+$0$ at the trivial partition and strictly positive otherwise (assert 2:
+$(100,100)$ slack $0.034$); the naive vs one-shot comparison is in $\log$ scale
+to avoid the $D_0^{2(N-1)}$ overflow ($N{=}1000$: $1384.9$ vs $4.1$); the
+adversarial exponent growth is monotone and unbounded (assert 5). All five
+checks PASS, exit 0; the verdict string in the JSON artefact records G1-PARTIAL.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / DR-2 R2 multi-scale
+                         bookkeeping (T-030 conditional chain)
+Precise statement:       R2 PARTIAL ADVANCE (gate G1). N-counting:
+                         the power-sum lemma sum N_theta^p <= N^p
+                         (p>=1) is PROVED, so the recursion's
+                         N-dependence is loss-free at any split
+                         balance (the unbalanced-tree fear is
+                         dissolved). D-counting: a naive fixed-scale
+                         tree accumulates D^{2(N-1)} (exponential,
+                         demonstrated), but submultiplicativity
+                         collapses it to one critical-scale loss
+                         s^{-2eps} N^2. Residual NAMED: [BD-DISCRETE]
+                         (Bourgain-Demeter discrete well-separated
+                         reduction) removes the geometry-dependent
+                         s^{-eps}; equivalently poly-separation
+                         s>=N^-C. R2 reduced from vague bookkeeping
+                         to ONE clean invocation.
+Scope:                   the multi-scale bookkeeping residual only;
+                         with R1 (R-034) proved, the arbitrary-Q
+                         chain rests on separated base + [BD-DISCRETE].
+Evidence grade:          PARTIAL ADVANCE; the chain stays T6 PROVED
+                         CONDITIONAL on Bourgain-Demeter (residual set
+                         tightened {R1,R2} -> single [BD-DISCRETE]).
+Reproduction command:    python codes/vacuum/dr2_t030_r2_bookkeeping.py
+Falsifier:               a partition with sum N_theta^p > N^p (p>=1);
+                         a fixed-scale tree bound below D^{2G} on the
+                         unbalanced tree; a claim that telescoping
+                         alone gives N^{2+eps} for sub-polynomial s.
+Tier before / after:     none -- operator decides. B5 stays
+                         T6-conditional; T-030 stays OPEN for
+                         unconditional N^{2+eps}; arbitrary-Q chain
+                         stays T6 PROVED CONDITIONAL on BD.
+No-overclaim statement:  R2 is REDUCED, not closed; [BD-DISCRETE] is
+                         cited not reproduced; no unconditional bound;
+                         no flip.
+Next required action:    operator: register the R2-reduction result
+                         (ledger) if deemed reuse-worthy; decide
+                         whether the single-invocation chain warrants
+                         a DR2-SHARE / arbitrary-Q tier note. T-030
+                         unconditional remains the open frontier.
+\end{verbatim}
+}
