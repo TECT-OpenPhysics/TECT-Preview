@@ -1,4 +1,3 @@
-% SUPERSEDED by dr2-t030-frontier-consolidation-260612-260612-v1.1.tex.txt
 % =============================================================================
 % Title: T-030 frontier consolidation -- arbitrary-Q DR-2: statement map, an
 %        unconditional N^{9/4} additive-energy bound via dyadic circle richness
@@ -7,7 +6,7 @@
 % Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; hypothesis
 %        H-NONLATTICE-REMAINDER-EXCLUDED of H_B5^T6; NOT load-bearing for the
 %        published C_full head, which caps T' <= 10 in-class by Lemma 2)
-% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
+% Version: v1.1 -- first issued 2026-06-12; this version issued 2026-06-12
 % Status: T-030 frontier note. THREE deliverables at honest grades. (1) A
 %   consolidated statement map of the arbitrary-Q DR-2 frontier (Sec. 2).
 %   (2) Theorem 1: E_+(Q) <= C N^{9/4} for EVERY finite Q in S^2 --
@@ -34,6 +33,18 @@
 %        codes/vacuum/dr2_t030_r1_bridge.py (v1.0.0, 3/3); JSON artefacts at
 %        claims/B5-BEYOND-LAYER-BOUND/runs/260612-dr2-t030-dyadic-richness/
 %        and .../260612-dr2-t030-r1-bridge/.
+%   v1.1 (2026-06-12) operator ACCEPT + ID-COLLISION FIX: the v1.0 draft labelled
+%        its two results R-030/R-031 WITHOUT the RESULTS-LEDGER numbering
+%        pre-check (dispatch-discipline violation, parent-caught): R-030/R-031
+%        are TAKEN (Reading-H lattice T7 enactment / C_full extension). The
+%        results are re-registered as R-033 (E_+ <= C N^(9/4) for arbitrary
+%        finite Q in S^2, modulo classical circle incidence [CIRC-INC]) and
+%        R-034 (the R1 local-to-global bridge, written proof; conditional-chain
+%        residuals {R1,R2} -> {R2}). Operator verdicts: ACCEPT as frontier
+%        advance; clean-runs CONFIRMED (3/3 + 9/9); registration name (number
+%        corrected, operator ratification pending)
+%        R033-ArbitraryQ-DR2-N9over4-INCstandard-260612. T-030 remains OPEN
+%        for N^(2+eps).
 % =============================================================================
 
 \sloppy
@@ -428,8 +439,8 @@ in every energy count, and exit 0 only if all 12 asserts pass.
 
 {\footnotesize
 \begin{verbatim}
-Result ID:               R-030 (Theorem 1: unconditional-modulo-[CIRC-INC]
-                         N^{9/4} bound) + R-031 (Lemma R1: local-to-global
+Result ID:               R-033 (Theorem 1: unconditional-modulo-[CIRC-INC]
+                         N^{9/4} bound) + R-034 (Lemma R1: local-to-global
                          bridge written proof) / T-030 frontier consolidation
 Precise statement:       (1) For every finite Q in S^2, E_+(Q) <= C N^{9/4},
                          proved via Lemma A's sum-circle structure + dyadic

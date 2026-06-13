@@ -16,9 +16,9 @@ Tier profile: T7x2 T6x1 T5x1 T4x1
 | [`B2-PROPA-HLAYER`](../../claims/B2-PROPA-HLAYER/INDEX.md) | T7 | A1-KERNEL-CONV | — | Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison inf |
 | [`B3-BCC-STRUCT`](../../claims/B3-BCC-STRUCT/INDEX.md) | T4 | — | G3PB-III | BCC structural selection among tested ordered condensates |
 | [`B4-MASS-GAP`](../../claims/B4-MASS-GAP/INDEX.md) | T5 | — | — | BCC ground-state uniqueness within the single-mode constraint cone |
-| [`B5-BEYOND-LAYER-BOUND`](../../claims/B5-BEYOND-LAYER-BOUND/INDEX.md) | T6 | H-ENDPOINT-THINNESS-ACCEPTED, H-NONLATTICE-REMAINDER-EXCLUDED | — | Pattern-generic Gershgorin reduction of the beyond-layer bound |
+| [`B5-BEYOND-LAYER-BOUND`](../../claims/B5-BEYOND-LAYER-BOUND/INDEX.md) | T6 | H-NONLATTICE-REMAINDER-EXCLUDED | — | Pattern-generic Gershgorin reduction of the beyond-layer bound |
 
-**Open named hypotheses (sector union):** A1-KERNEL-CONV, H-ENDPOINT-THINNESS-ACCEPTED, H-NONLATTICE-REMAINDER-EXCLUDED  
+**Open named hypotheses (sector union):** A1-KERNEL-CONV, H-NONLATTICE-REMAINDER-EXCLUDED  
 **Open gates (sector union):** G3PB-III
 
 ## Predictions

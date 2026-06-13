@@ -1,11 +1,14 @@
-% SUPERSEDED by scscope-sunset-pertransfer-hardening-260612-260612-v1.1.tex.txt
 % =============================================================================
 % Title: Per-transfer sunset hardening: the endpoint joint is no longer thin (S = x1.129 -> x2.994 realized)
 % Claim: B5-BEYOND-LAYER-BOUND (SC-SCOPE unit; the B5 T7-path attack on H-ENDPOINT-THINNESS-ACCEPTED)
-% Version: v1.0 -- first issued 2026-06-12; this version issued 2026-06-12
-% Status: EXECUTED HARDENING CERTIFICATE-CANDIDATE (gate G3-SUCCESS of the
-%   pre-registered gate set; scscope_sunset_pertransfer.py 8/8 asserts PASS,
-%   exit 0). The single-J0 sunset anchor S = x1.129 -- DOUBLY conservative
+% Version: v1.2 -- first issued 2026-06-12; this version issued 2026-06-12
+% Status: CONFIRMED (operator clean-run 8/8 PASS, verdict 2026-06-12) --
+%   registered as SC-SCOPE-SunsetHardened-T6-260612. The operator ENACTED the
+%   removal of H-ENDPOINT-THINNESS-ACCEPTED: the endpoint closure is
+%   COMFORTABLE, SUNSET-HARDENED (no longer thin); B5's T6-conditional
+%   hypothesis set shrinks to {H-NONLATTICE-REMAINDER-EXCLUDED} and the single
+%   remaining B5 T7 blocker is T-030. Gate G3-SUCCESS of the pre-registered
+%   set (scscope_sunset_pertransfer.py 8/8 asserts PASS, exit 0). The single-J0 sunset anchor S = x1.129 -- DOUBLY conservative
 %   (sup over transfer AND the loosest dressing) -- is replaced by the realized
 %   per-transfer kernel: the D-weighted loop average J_eff(t) over the
 %   admissible chord set gives shape_max = 0.377, hence S_realized = x2.994
@@ -25,6 +28,27 @@
 %        NOT (J*J*J) (6 propagators) as the dispatch draft had it; the
 %        normalisation-free shape-factor formulation makes the (2pi)^3
 %        convention class structurally irrelevant.
+%   v1.1 (2026-06-12) operator CONFIRM (clean-run 8/8 PASS): hardening accepted;
+%        H-ENDPOINT-THINNESS-ACCEPTED REMOVED (GATES.md + status.json flipped,
+%        operator-authorized); registered SC-SCOPE-SunsetHardened-T6-260612
+%        (T6: a sunset-kernel accounting hardening, not an arbitrary-Q
+%        theorem). The mixed-dressing audit remains a REGISTERED POLISH item
+%        (the endpoint dressing is the matched bookkeeping choice; the anchor
+%        direction-certificate covers the conservative side). Publication
+%        qualifier only; no content change.
+%   v1.2 (2026-06-12) OPERATOR REFINED VERDICT (adversarial-review format
+%        restored): the gate removal is CONDITIONALLY accepted -- the final
+%        stamp must include the mixed-dressing justification. DELIVERED in
+%        this version: (i) the explicit derivation-compatibility sentence
+%        (Sec. 3); (ii) Sec. 5b -- the monotonicity argument (J and 1/D both
+%        decrease with dressing, so the lightest assignment is the adversarial
+%        corner) PLUS the machine worst-case audit (script v1.1.0, now 10/10):
+%        even at the (anchor, anchor) corner, shape_worst = 0.4247 ->
+%        S_worst = x2.659 > 2, joint(rho=6.55) = x1.886 -- the gate-removal
+%        claim survives the WORST dressing assignment; the matched endpoint
+%        choice is NOT load-bearing. Final ratification of this addendum is
+%        the operator's at next review; the bundle packaging is HELD until
+%        then (policy sec.14).
 % =============================================================================
 
 \sloppy
@@ -54,7 +78,14 @@ The anchor bound (scscope-mendpoint-evaluation v1.1) is
 $b=\tfrac12u_{\rm eff}^2(2I)\,6\,J_0M$ with $J_0=\sup_tJ(t)$ at the $4\times
 10^{-4}$ dressing: the 3-propagator sunset kernel $(J*G)(t)$ (bubble $\times$
 propagator) bounded by $\sup J\cdot\int G$. The realized replacement evaluates
-the convolution instead of bounding it:
+the convolution instead of bounding it. \textbf{Derivation compatibility
+(explicit):} the existing bookkeeping multiplies the TOTAL transfer weight by
+ONE kernel constant; ANY constant that upper-bounds the kernel on every
+realized transfer is admissible there, and $\max_{t\in\rm chords}
+J_{\rm eff}(t)$ is such a constant (machine-asserted $J_{\rm eff}(t)\le J_0$
+pointwise and every admissible transfer lies in the chord set) -- so the
+replacement is a strictly valid sharpening of the same inequality, not a new
+bookkeeping. The kernel is:
 \[
 J_{\rm eff}(t)=\frac{N(t)}{N_0},\qquad
 N(t)=\int\!\!\int \frac{k^2}{D(k)}\,J\bigl(\sqrt{k^2+t^2+2kt\mu}\bigr)\,d\mu\,dk,
@@ -109,6 +140,26 @@ This note enacts NOTHING: the acceptance, the GATES.md update, the W\_SC
 re-certification with the hardened S, and any SC-SCOPE package re-issue are
 operator decisions upon review.
 
+\section*{5b. Mixed-dressing justification (operator-required for the final stamp)}
+
+\textbf{Monotonicity argument.} Both kernel factors move the SAME way with the
+dressing: $J(t;r)$ decreases in $r$ (heavier mass, smaller bubble -- the
+direction already certified by the mendpoint table $J(\hat r(I))\le J_0$), and
+the loop weight $1/D(k;r)$ decreases in $r$. Hence over ALL assignments of
+dressings to the sunset's propagators, the LIGHTEST (anchor, $4\times10^{-4}$)
+assignment maximises $J_{\rm eff}$: it is the adversarial corner, and matched
+endpoint dressing is the physically correct (per-pattern self-consistent)
+choice, used non-load-bearingly.
+
+\textbf{Machine worst-case (script v1.1.0, asserts 9--10).} All four
+$(J\text{-grid},\,D)$ dressing assignments evaluated on the chords: worst
+$J_{\rm eff}$ per variant $=0.1093/0.1211/0.1110/0.1230$ (end-end / anchor-end
+/ end-anchor / anchor-anchor), confirming the monotone ordering. At the
+adversarial corner: $\mathrm{shape}_{\rm worst}=0.4247$,
+$S_{\rm worst}=\times2.659>2$, $\mathrm{joint}(\rho{=}6.55)=\times1.886$ ---
+the hardening and the gate-removal claim SURVIVE the worst dressing
+assignment.
+
 \section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
 
 \begin{itemize}
@@ -121,12 +172,11 @@ strictly valid intermediate ($J_{\rm eff}(t)\le\max_{\rm chords}J_{\rm eff}\le
 J_0$ pointwise on every realized transfer); no per-transfer redistribution is
 claimed.
 \item[($\beta$)] \emph{``The dressing choice (all propagators at
-$\hat r_{\rm end}$) could be optimistic.''} VALID with mitigation: the anchor
-itself already certifies the dressing direction (mendpoint: $J$ DECREASES with
-dressing, so the $4\times10^{-4}$-dressing $J_0$ over-estimates -- our
-endpoint-dressing kernel is the matched choice, and the two-way pin + sup
-consistency are asserted at that dressing); a mixed-dressing audit is listed as
-the residual polish item.
+$\hat r_{\rm end}$) could be optimistic.''} RESOLVED in v1.2 (operator-required):
+Sec.~5b gives the monotonicity argument AND the machine worst-case -- even the
+adversarial (anchor, anchor) assignment leaves $S_{\rm worst}=\times2.659>2$
+and $\mathrm{joint}=\times1.886$; the matched endpoint choice is not
+load-bearing.
 \item[($\gamma$)] \emph{``$J_{\rm eff}$ peaks at $t_{\min}$ -- a competitor
 just above the admissibility floor gets the weakest hardening; is the floor
 itself certified?''} DISMISSED: $t_{\min}$ comes from $\theta_{\min}(\hat r)$,
@@ -171,16 +221,22 @@ Falsifier:               a realized admissible transfer with
                          J_eff(t) > max_chords J_eff (chord-set
                          escape); anchor non-reproduction; grid
                          drift > 1%.
-Tier before / after:     none (B5 stays T6-conditional). CANDIDATE
-                         input for removing H-ENDPOINT-THINNESS-
-                         ACCEPTED (operator decision).
+Tier before / after:     CONFIRMED + ENACTED (operator 2026-06-12):
+                         H-ENDPOINT-THINNESS-ACCEPTED REMOVED; B5
+                         stays T6-conditional with the single
+                         hypothesis H-NONLATTICE-REMAINDER-EXCLUDED;
+                         registered SC-SCOPE-SunsetHardened-T6-260612.
 No-overclaim statement:  hardening of the KERNEL FACTOR only, within
-                         the existing bookkeeping; the mixed-dressing
-                         audit is a listed residual; W_SC
-                         re-certification with hardened S is not
-                         done here.
-Next required action:    operator review -> decide H-ENDPOINT-
-                         THINNESS-ACCEPTED removal (then T-030 is
-                         the single remaining B5 T7 blocker).
+                         the existing bookkeeping (derivation-
+                         compatibility stated explicitly, Sec. 3);
+                         the mixed-dressing audit is DELIVERED
+                         (Sec. 5b, worst case S = x2.659); W_SC
+                         re-certification with the hardened S is
+                         not done here.
+Next required action:    operator ratification of the v1.2 mixed-
+                         dressing addendum (final gate stamp) ->
+                         THEN package SC-SCOPE-SunsetHardened-T6-
+                         260612 (sec.14). Mainline: T-030 = the
+                         single remaining B5 T7 blocker.
 \end{verbatim}
 }

@@ -25,7 +25,7 @@ PRE-REGISTERED GATES (before computation):
   G3: success -> report S_realized and the recomputed joints at rho = 6.55, 12.6.
 self-test asserts (exit 0 iff all pass).
 """
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-06-12"
 __claims__ = ["B5-BEYOND-LAYER-BOUND"]
 
@@ -132,6 +132,39 @@ claim("admissibility_floor", t_min > 0.3 and float(chords[0]) >= t_min - 1e-12,
       f"(theta_min = {theta_min:.3f} -> t_min = {t_min:.3f}: every admissible transfer sits on the "
       "evaluated chord set [t_min, 2q0])")
 
+# ---------- (6) v1.1.0 MIXED-DRESSING AUDIT (operator adversarial review) ----------
+# Worst case over dressing assignments: J-grid dressing and loop-propagator D
+# dressing each independently at the lightest (anchor, 4e-4) or matched
+# (endpoint, 2e-3) value. The lightest dressing maximises both J and 1/D, so
+# (anchor, anchor) is the adversarial corner; the gate-removal claim must
+# survive it.
+qgA = np.linspace(1e-6, QMAX, 90)
+JgA = np.array([sb.J_of_t(float(q), rhat_anchor) for q in qgA])
+def JiA(qq): return np.interp(np.asarray(qq), qgA, JgA, left=JgA[0], right=0.0)
+def J_eff_mixed(t, jfun, r_loop, nk=500, nmu=320):
+    k = np.linspace(1e-6, QMAX, nk); mu = np.linspace(-1.0, 1.0, nmu)
+    Kg, MUg = np.meshgrid(k, mu, indexing="ij")
+    D = r_loop + C*(Kg**2 - Q0**2)**2
+    kp = np.sqrt(np.maximum(Kg**2 + t**2 + 2.0*Kg*t*MUg, 0.0))
+    num = np.trapezoid(np.trapezoid(Kg**2*jfun(kp)/D, mu, axis=1), k)
+    den = np.trapezoid(np.trapezoid(Kg**2/D, mu, axis=1), k)
+    return float(num/den)
+variants = {"end_end": (Ji, rhat_end), "anchor_end": (JiA, rhat_end),
+            "end_anchor": (Ji, rhat_anchor), "anchor_anchor": (JiA, rhat_anchor)}
+worst = {}
+for name, (jf, rl) in variants.items():
+    worst[name] = max(J_eff_mixed(float(t), jf, rl) for t in chords)
+shape_worst = max(worst.values())/J0
+S_worst = S_anchor/shape_worst
+claim("mixed_dressing_monotone_order", worst["anchor_anchor"] >= worst["end_end"] - 1e-12,
+      f"(lightest-dressing corner dominates: J_eff worst per variant = "
+      f"{ {k: round(v,4) for k,v in worst.items()} } -- J and 1/D both DECREASE with dressing, "
+      "so (anchor,anchor) is the adversarial corner, as argued)")
+claim("mixed_dressing_gate_survives", shape_worst < 1.0 and S_worst > 2.0,
+      f"(ADVERSARIAL mixed-dressing corner: shape_worst = {shape_worst:.4f} -> S_worst = x{S_worst:.3f} "
+      f"> 2.0; joint(rho=6.55) = x{joint(6.55, S_worst):.3f} -- the hardening and the gate-removal "
+      "claim survive the worst dressing assignment; the matched endpoint choice was NOT load-bearing)")
+
 ok = all(c["passed"] for c in CLAIMS)
 out = REPO/"claims"/"B5-BEYOND-LAYER-BOUND"/"runs"/"260612-scscope-sunset-pertransfer"
 out.mkdir(parents=True, exist_ok=True)
@@ -140,6 +173,7 @@ out.mkdir(parents=True, exist_ok=True)
     S_anchor=S_anchor, J0=J0, J0_end=J0_end, rhat_end=rhat_end, M_END=M_END,
     t_min=t_min, chords=list(map(float, chords)), J_eff=list(map(float, Jeffs)),
     shape_max=shape_max, S_realized=S_realized, gate=gate, R_max=R_max,
+    mixed_dressing_worst={k: float(v) for k, v in worst.items()}, shape_worst=shape_worst, S_worst=S_worst,
     joint_cons_old=j_cons_old, joint_cons_new=j_cons_new,
     joint_ver_old=j_ver_old, joint_ver_new=j_ver_new,
     claims=CLAIMS, all_pass=ok), indent=2))

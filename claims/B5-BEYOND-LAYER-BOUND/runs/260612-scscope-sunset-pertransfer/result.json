@@ -1,6 +1,6 @@
 {
   "script": "scscope_sunset_pertransfer.py",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "S_anchor": 1.1291503200269108,
   "J0": 0.28964823200981,
   "J0_end": 0.2565418743206541,
@@ -47,6 +47,14 @@
   "S_realized": 2.993622586998038,
   "gate": "G3-SUCCESS",
   "R_max": 0.3845945187789355,
+  "mixed_dressing_worst": {
+    "end_end": 0.10925104429983386,
+    "anchor_end": 0.12107058045281228,
+    "end_anchor": 0.11098384178116634,
+    "anchor_anchor": 0.12301860298938867
+  },
+  "shape_worst": 0.42471725836469876,
+  "S_worst": 2.6585929763591696,
   "joint_cons_old": 1.0403267259168631,
   "joint_cons_new": 2.02251904519396,
   "joint_ver_old": 1.0815375219817012,
@@ -91,6 +99,16 @@
       "name": "admissibility_floor",
       "passed": true,
       "detail": "(theta_min = 0.627 -> t_min = 0.420: every admissible transfer sits on the evaluated chord set [t_min, 2q0])"
+    },
+    {
+      "name": "mixed_dressing_monotone_order",
+      "passed": true,
+      "detail": "(lightest-dressing corner dominates: J_eff worst per variant = {'end_end': 0.1093, 'anchor_end': 0.1211, 'end_anchor': 0.111, 'anchor_anchor': 0.123} -- J and 1/D both DECREASE with dressing, so (anchor,anchor) is the adversarial corner, as argued)"
+    },
+    {
+      "name": "mixed_dressing_gate_survives",
+      "passed": true,
+      "detail": "(ADVERSARIAL mixed-dressing corner: shape_worst = 0.4247 -> S_worst = x2.659 > 2.0; joint(rho=6.55) = x1.886 -- the hardening and the gate-removal claim survive the worst dressing assignment; the matched endpoint choice was NOT load-bearing)"
     }
   ],
   "all_pass": true

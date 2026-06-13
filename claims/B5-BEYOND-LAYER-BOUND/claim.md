@@ -17,7 +17,7 @@ T4: Lemmas A/B/C'/D/E rigorous; closed region n<=n_max(I) DERIVED; transversal n
 ## Dependencies and hypotheses
 
 - Hard dependencies: A1-KERNEL-CONV
-- Hypotheses (registered in `claims/GATES.md`): H-ENDPOINT-THINNESS-ACCEPTED; H-NONLATTICE-REMAINDER-EXCLUDED (frontier tracked at T-030) — the H_B5^T6 acceptance set (the two scope FACTS, lattice discharge + T-030 exclusion, are recorded in GATES.md / status.json)
+- Hypotheses (registered in `claims/GATES.md`): H-NONLATTICE-REMAINDER-EXCLUDED (frontier tracked at T-030) — the sole remaining H_B5^T6 element after the 2026-06-12 sunset-hardening enactment removed H-ENDPOINT-THINNESS-ACCEPTED (SC-SCOPE-SunsetHardened-T6-260612; endpoint joint x2.023/x2.396, comfortable)
 - Soft dependencies (context only): B1-RH-ENUM, B2-PROPA-HLAYER
 - Open gates: STEP-5B
 
