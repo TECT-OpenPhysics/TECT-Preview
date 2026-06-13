@@ -1,0 +1,202 @@
+% =============================================================================
+% Title: Route 3: the non-lattice remainder is non-load-bearing for B5's admissibility-bounded statement (Lemma 2 covers it)
+% Claim: B5-BEYOND-LAYER-BOUND (T6 hypothesis analysis; the structural B5 T7 route)
+% Version: v1.0 -- first issued 2026-06-13; this version issued 2026-06-13
+% Status: STRUCTURAL ANALYSIS (operator-decision input; enacts nothing). The B5
+%   T6-conditional hypothesis H-NONLATTICE-REMAINDER-EXCLUDED is shown
+%   NON-LOAD-BEARING for the admissibility-bounded statement of B5 (the statement
+%   the published C_full head actually uses): the coherence circle-packing
+%   Lemma 2 -- PURE geometry, no lattice / DR-2 / decoupling input -- caps
+%   T'(Q) <= floor(2pi/theta_min) <= 10 for EVERY admissible (coherence-resolved)
+%   competitor, lattice OR non-lattice, and the beyond-layer machinery depends on
+%   the competitor ONLY through (T', n), both pattern-generically bounded in the
+%   admissible class. Arbitrary-Q DR-2 (T-030) would REMOVE the admissibility cap
+%   -- a frontier strengthening, not a requirement. The hypothesis is load-bearing
+%   ONLY for the strictly stronger H-ADM-COH-discharged (lattice-only) statement.
+%   This is a candidate operator reclassification (conditional hypothesis ->
+%   definitional scope), NOT a flip. dr2_t030_route3_nonloadbearing.py 5/5 PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-13) first issue. Operator-requested route-3 research after the
+%        T7 re-proof attempt (R-036) returned G1. Parallels synthesis Sec. 4b
+%        (the same non-load-bearing finding for the C_full head).
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+After the T7 re-proof attempt (R-036) closed only the poly-separated subclass,
+route 3 of its next-action list asks: is H-NONLATTICE-REMAINDER-EXCLUDED actually
+load-bearing for B5's OWN statement, or -- as for the published $C_{\rm full}$
+head (synthesis Sec.~4b) -- is the non-lattice remainder already covered by the
+elementary coherence circle-packing Lemma 2? \textbf{Scope:} the dependence of
+B5's beyond-layer bound on the competitor's lattice structure. \textbf{Not
+claimed:} any tier/gate/hypothesis flip (operator decides); any new theorem
+(Lemma 2 already exists, res5\_036).
+
+\section*{2. B5's beyond-layer bound depends on the competitor only through (T', n)}
+
+The admissible (coherence-resolved) competitor class fixes: real antipodal
+$Q=-Q$; packing-bounded $|Q|=n\le n_{\rm pack}=16/\theta_{\min}^2$; coherence-
+resolved, pairwise geodesic $\ge\theta_{\min}$. The beyond-layer machinery enters
+the comparison through three competitor-dependent quantities, EACH a function of
+$(T'(Q), n)$ only:
+\[
+K_{\rm floor}\le T'(Q)\ \ (\text{Lemma A}),\qquad
+R_{\rm lead}=23.2\,(1+T')\,I,
+\]
+\[
+K(n)\le 8+4\sqrt{14}\,\kappa^4\sqrt n\quad(\text{rectangle, pattern-generic}),
+\]
+where $T'(Q)=\max_{t\ne0}\#(Q\cap C_t)$ is the maximal proper sum-circle
+occupancy. No other competitor feature enters; in particular the lattice/non-
+lattice distinction enters ONLY via $T'$.
+
+\section*{3. Lemma 2 caps T' pattern-generically (lattice and non-lattice alike)}
+
+\begin{lemma}[Coherence circle-packing, res5\_036; restated]
+For an admissible $Q$ and any $t\ne0$, $\#(Q\cap C_t)\le\lfloor2\pi/\theta_{\min}\rfloor$.
+\end{lemma}
+\emph{Proof (pure geometry).} $C_t$ is a Euclidean circle of radius
+$\rho=\sqrt{q_0^2-|t|^2/4}\le q_0$. Its $Q$-points are pairwise geodesically
+$\ge\theta_{\min}$, hence pairwise Euclidean $\ge d=2q_0\sin(\theta_{\min}/2)$.
+The $k$ cyclically-ordered points have a smallest adjacent gap
+$\Delta_{\min}\le2\pi/k$; coherence forces $d\le2\rho\sin(\Delta_{\min}/2)\le
+2\rho\sin(\pi/k)$, so with $\rho\le q_0$, $k\le\pi/\arcsin(\sin(\theta_{\min}/2))
+=2\pi/\theta_{\min}$. $\square$
+
+\textbf{Key point: the proof uses ONLY $(\theta_{\min}, q_0)$ -- no lattice,
+arithmetic, divisor, or decoupling input.} Across $\mathcal R$,
+$\theta_{\min}\ge0.596$, so the cap is $\le10$ (machine: assert 1, sharp value
+$10$ on the largest circle $\rho=q_0$; assert 2, monotone in $\rho$ and never
+above the cap; assert 3, the idealized equatorial packing meets the cap while the
+realized full-sphere admissible max is $8<10$ per the head's adversarial search;
+assert 4, random NON-LATTICE $\theta_{\min}$-separated antipodal configs obey the
+cap). The bound is identical for lattice and non-lattice competitors.
+
+\section*{4. Consequence: the non-lattice remainder is non-load-bearing}
+
+Combining \S2 and \S3: within the admissible class, $T'\le10$ (Lemma 2) and
+$n\le n_{\rm pack}\approx49$ are BOTH bounded pattern-generically, so
+\[
+R_{\rm lead}=23.2\cdot11\cdot I\le0.510<1,\qquad
+K(n_{\rm pack})\le8+4\sqrt{14}\sqrt{49}\approx113\ll5972=K_{\rm budget}
+\]
+hold for EVERY admissible competitor, lattice OR non-lattice (machine: assert 5).
+Therefore B5's beyond-layer bound closes on the full admissible class WITHOUT any
+arbitrary-$Q$ DR-2: the unrestricted-class bound $E_+(Q)\le_\varepsilon
+N^{2+\varepsilon}$ (T-030) would only be needed to REMOVE the admissibility cap
+$T'\le10$ -- i.e.\ to admit competitors that violate the $\theta_{\min}$
+coherence resolution. That is a FRONTIER STRENGTHENING of the competitor class,
+not a gap in B5's admissibility-bounded statement.
+
+\textbf{Where the hypothesis IS load-bearing.} H-NONLATTICE-REMAINDER-EXCLUDED is
+load-bearing ONLY for the strictly stronger statement in which H-ADM-COH (the
+$\theta_{\min}$ admissibility itself) is DISCHARGED -- removed as a hypothesis.
+That discharge (D1-A, 2026-06-12) used the lattice arithmetic (R-026/027/028) and
+holds for the lattice class; for non-lattice competitors the $\theta_{\min}$
+admissibility is RETAINED (it is the class definition, and Lemma 2 uses it). So
+the precise content of H-NONLATTICE-REMAINDER-EXCLUDED is: ``the
+admissibility-DISCHARGED form of the bound is claimed for lattice competitors
+only.'' It does NOT exclude non-lattice competitors from the admissibility-BOUNDED
+statement -- those are covered by Lemma 2.
+
+\section*{5. The operator-decision: reclassify the hypothesis}
+
+B5 has two statements of differing strength:
+\begin{itemize}
+\item[(A)] \emph{Admissibility-bounded} (matches the published $C_{\rm full}$
+head): the beyond-layer correction is below the layer margin for every admissible
+competitor. \textbf{Substantive hypotheses: none} -- $\theta_{\min}$ admissibility
++ packing are the DEFINITIONAL SCOPE, and Lemma 2 covers lattice + non-lattice.
+\item[(B)] \emph{Admissibility-discharged} (strictly stronger, lattice-only): the
+bound holds even WITHOUT $\theta_{\min}$ admissibility, via the lattice arithmetic.
+\textbf{H-NONLATTICE-REMAINDER-EXCLUDED is load-bearing here.}
+\end{itemize}
+The current B5 tier (T6 PROVED CONDITIONAL on
+\{H-NONLATTICE-REMAINDER-EXCLUDED\}) implicitly targets statement (B). If B5's
+canonical statement is taken to be (A) -- the one the published head uses -- then
+the hypothesis set is EMPTY of substantive conditions (only definitional scope
+remains), which is an operator-decision tier question: (A) is a candidate
+T6/T7 with definitional scope and NO substantive conditional hypothesis. This
+note ENACTS nothing; it presents the reclassification for operator decision,
+exactly parallel to synthesis Sec.~4b for the head.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Statement (A) just buries the hypothesis in the word
+`admissible'.''} VALID and acknowledged: the $\theta_{\min}$ admissibility is a
+real restriction on the competitor class. The point is that it is a DEFINITIONAL
+SCOPE (the physical coherence-resolution class, fixed by the microphysics), not a
+CONDITIONAL hypothesis pending a proof -- the same status as `lattice shells' in
+the head. Whether definitional scope warrants a tier above T6-conditional is the
+operator's call; the note only removes the FALSE impression that arbitrary-Q DR-2
+is a gap in (A).
+\item[($\beta$)] \emph{``Lemma 2 needs $\rho\le q_0$ -- does every sum-circle
+satisfy it?''} DISMISSED: $\rho=\sqrt{q_0^2-|t|^2/4}\le q_0$ for every $t$, with
+equality only at $t=0$ (excluded); the bound is uniform over all proper
+sum-circles (machine assert 2).
+\item[($\gamma$)] \emph{``The realized max is 8, not the cap 10 -- is the cap the
+right object?''} DISMISSED: the bound only needs $T'\le10$ (which gives
+$R_{\rm lead}\le0.510<1$); the realized $8$ is even more comfortable. The cap is
+the rigorous upper bound; the realized value is a bonus margin.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Lemma 2 cap $=10$ at
+$\theta_{\min}=0.596$; $R_{\rm lead}(T'{=}10)=23.2\cdot11\cdot2\times10^{-3}=0.510
+<1$; $K(49)\approx113\ll5972$; non-lattice worst occupancy $=2\le10$ on random
+configs; all five checks PASS, exit 0. The arithmetic is the head's own
+($R_{\rm lead}=0.510$, $\times1.96$ margin), reproduced here for the B5 machinery.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / route-3
+                         non-load-bearing analysis
+Precise statement:       B5's beyond-layer bound depends on the
+                         competitor only through (T', n). The
+                         coherence circle-packing Lemma 2 (pure
+                         geometry, no lattice/DR-2/decoupling) caps
+                         T' <= floor(2pi/theta_min) <= 10 for EVERY
+                         admissible competitor, lattice OR non-
+                         lattice, and n <= n_pack. Hence the
+                         admissibility-bounded statement (A) closes
+                         on the full admissible class with NO
+                         arbitrary-Q DR-2; H-NONLATTICE-REMAINDER-
+                         EXCLUDED is NON-LOAD-BEARING for (A),
+                         load-bearing ONLY for the stronger
+                         admissibility-discharged lattice-only (B).
+Scope:                   B5 hypothesis analysis; structural, no new
+                         theorem (Lemma 2 = res5_036), no flip.
+Evidence grade:          STRUCTURAL ANALYSIS + EXECUTED
+                         (dr2_t030_route3_nonloadbearing.py 5/5).
+Reproduction command:    python
+                         codes/vacuum/dr2_t030_route3_nonloadbearing.py
+Falsifier:               an admissible competitor with sum-circle
+                         occupancy > floor(2pi/theta_min); or a
+                         beyond-layer quantity depending on the
+                         competitor beyond (T', n).
+Tier before / after:     none -- operator decides. Candidate
+                         reclassification: H-NONLATTICE-REMAINDER-
+                         EXCLUDED from CONDITIONAL hypothesis to
+                         DEFINITIONAL SCOPE for statement (A); B5
+                         stays T6-conditional until the operator
+                         rules on (A) vs (B).
+No-overclaim statement:  arbitrary-Q DR-2 (T-030) stays OPEN as a
+                         frontier strengthening (removing the
+                         admissibility cap); this note does NOT close
+                         it and does NOT flip B5; statement (A)'s
+                         admissibility is definitional scope, not a
+                         discharged hypothesis.
+Next required action:    operator: rule whether B5's canonical
+                         statement is (A) admissibility-bounded
+                         (hypothesis set empty of substantive
+                         conditions -> candidate tier above
+                         T6-conditional) or (B) admissibility-
+                         discharged (H-NONLATTICE load-bearing,
+                         lattice-only); reconcile with the synthesis
+                         Sec. 4b head finding.
+\end{verbatim}
+}

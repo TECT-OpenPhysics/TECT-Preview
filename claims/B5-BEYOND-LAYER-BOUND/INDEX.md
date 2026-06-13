@@ -73,11 +73,12 @@
 | `tadpole-reabsorption-lemma` | v1.2 | T5 | PROOF (was T3 sketch): in the matched bookkeeping the residual cubic vertex is normal-ordered by construction (Hermite collection: j=0 reproduces the… | ANALYTIC (written proof, operator-ACCEPTED) +… | none for this lemma (gates closed). Mainline: T-031 exhaustiveness decision layer; the su… |
 | `third-cumulant-lift-assessment` | v1.0 | T6* | ESTIMATE (T2): the new third-cumulant channel is the cubic sunset with DRESSED coupling u_eff(M_R) = +2.685 (x9.7 above u^2 in square); conservative … | ESTIMATE (T2) -- closed-form arithmetic on ce… | Follow-up script (machine asserts); then the three named lift inputs (a)/(b)/(c) as separ… |
 
-## T5-DOSSIER/  ·  2 proof units  ·  tier span T5/T6
+## T5-DOSSIER/  ·  3 proof units  ·  tier span T5/T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `b5-nonlattice-nonloadbearing-route3` | v1.0 | T6 | B5's beyond-layer bound depends on the competitor only through (T', n). The coherence circle-packing Lemma 2 (pure geometry, no lattice/DR-2/decoupli… | STRUCTURAL ANALYSIS + EXECUTED (dr2_t030_rout… | operator: rule whether B5's canonical statement is (A) admissibility-bounded (hypothesis … |
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 | `t6-conditional-assignment` | v1.0 | T6 | B5-BEYOND-LAYER-BOUND re-tiered T5 PINNED-CLOSURE -> T6 PROVED-CONDITIONAL on H_B5^T6 = {lattice-class H-ADM-COH discharged; non-lattice remainder ex… | TIER-ASSIGNMENT RECORD over published bundles… | T7 path (optional): harden the sunset endpoint beyond thin OR close T-030. Mainline: T-03… |
 
-<!-- generated 2026-06-13T10:15:33Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-13T10:31:58Z by build_index.py v1.0.1 -->

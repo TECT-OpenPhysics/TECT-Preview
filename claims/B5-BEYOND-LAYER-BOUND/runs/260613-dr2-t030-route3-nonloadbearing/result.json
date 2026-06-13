@@ -1,0 +1,40 @@
+{
+  "script": "dr2_t030_route3_nonloadbearing.py",
+  "version": "1.0.0",
+  "theta_min": 0.596,
+  "lemma2_cap": 10,
+  "packing_max_worst": 10,
+  "realized_max": 10,
+  "nonlattice_worst_occupancy": 2,
+  "R_lead_at_cap": 0.5104,
+  "K_rect_npack": 112.76640682967036,
+  "verdict": "H-NONLATTICE-REMAINDER-EXCLUDED is NON-LOAD-BEARING for B5's admissibility-bounded statement: Lemma 2 (pattern-generic circle-packing) caps T'<=10 for all admissible competitors; beyond-layer depends only on (T',n). Load-bearing ONLY for the stronger H-ADM-COH-discharged lattice-only statement. Operator-level reclassification (conditional hypothesis -> definitional scope).",
+  "claims": [
+    {
+      "name": "lemma2_cap_le_10",
+      "passed": true,
+      "detail": "(Lemma 2: floor(2pi/theta_min) = 10; the sharp packing on the worst (largest) circle rho=q0 gives k <= floor(pi/arcsin(d/2q0)) = 10 <= 10, theta_min=0.596; pattern-generic geometry)"
+    },
+    {
+      "name": "packing_monotone_under_cap",
+      "passed": true,
+      "detail": "(packing max over radii 0.1q0..q0: range 1..10, all <= cap 10; the bound depends ONLY on (theta_min, q0) -- no lattice or arithmetic input; smaller circles hold fewer points)"
+    },
+    {
+      "name": "equatorial_packing_meets_cap",
+      "passed": true,
+      "detail": "(idealized equally-spaced equatorial packing: max k with chord 2 q0 sin(pi/k) >= d is 10 = the geometric cap 10 (sharp on the largest circle rho=q0); the REALIZED full-sphere admissible max is 8 < 10 per the C_full head adversarial search res5_036 -- cited, the cap is not saturated on actual configs)"
+    },
+    {
+      "name": "nonlattice_obeys_cap",
+      "passed": true,
+      "detail": "(random NON-LATTICE theta_min-separated antipodal configs: worst realized sum-circle occupancy = 2 <= Lemma-2 cap 10; the geometric bound holds without any lattice structure)"
+    },
+    {
+      "name": "beyond_layer_depends_only_on_Tprime_n",
+      "passed": true,
+      "detail": "(with T'<=10, n<=n_pack=49 BOTH pattern-generically bounded: R_lead = 23.2*11*I = 0.510 < 1, K_rect(49) = 113 < K_budget 5972 -- the beyond-layer bound depends on the competitor ONLY through (T',n), both capped by admissibility for lattice AND non-lattice => arbitrary-Q DR-2 is a frontier strengthening, NOT a requirement; H-NONLATTICE-REMAINDER-EXCLUDED is NON-LOAD-BEARING for the admissibility-bounded statement)"
+    }
+  ],
+  "all_pass": true
+}
