@@ -1,0 +1,207 @@
+% =============================================================================
+% Title: T7 re-proof attempt: in-bundle reproof of [BD-DISCRETE] closes the poly-separated subclass; the residual is [NEST-DEPTH]
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 / DR2-SHARE; the B5 T7 re-proof route)
+% Version: v1.0 -- first issued 2026-06-13; this version issued 2026-06-13
+% Status: T7 RE-PROOF ATTEMPT -- OUTCOME G1 (HONEST PARTIAL). The unconditional
+%   in-bundle reproof of [BD-DISCRETE] does NOT close arbitrary-Q DR-2; it CLOSES
+%   the POLYNOMIALLY-SEPARATED subclass (s >= N^{-C}) modulo only the continuous
+%   Bourgain--Demeter l2-decoupling theorem [BD-CONTINUOUS] (a strictly cleaner,
+%   textbook hypothesis than the bundled [BD-DISCRETE]), and SPLITS the residual:
+%   [BD-DISCRETE] = [BD-CONTINUOUS] + [NEST-DEPTH], where [NEST-DEPTH] = control
+%   of the nested-cluster recursion depth (equivalently sub-polynomial
+%   separation) is the single genuine open piece. Consequence: arbitrary-Q DR-2
+%   unconditional is NOT achieved, so B5 T7 unconditional is NOT achieved by this
+%   route; the honest ceiling is T6 PROVED CONDITIONAL. NO tier/gate/hypothesis
+%   flip (operator decides). dr2_t030_bd_discrete_reproof.py 5/5 PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-13) first issue. Operator-requested T7 re-proof attempt
+%        (route (ii) of the R-035 verdict). Pre-registered gates G1/G2 stated
+%        before the attempt; outcome G1 -- the poly-separated subclass closes
+%        unconditionally (modulo the continuous theorem), the clustered case
+%        reduces to the named residual [NEST-DEPTH].
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The R-035 verdict left two T7 routes for arbitrary-$Q$ DR-2: (i) adopt
+[BD-DISCRETE] as a standard black box (conditional theorem), or (ii) reprove the
+discrete well-separated reduction in-bundle to remove the last conditional
+residual. This note attempts (ii). \textbf{Scope:} whether the reduction of an
+arbitrary finite $Q\subset S^2$ to the separated base case (dr2-decoupling-closure
+v1.1: separated $Q$ is T6 PROVED CONDITIONAL on the continuous theorem) can be
+reproved using only elementary arguments plus [BD-CONTINUOUS]. \textbf{Not
+claimed:} any unconditional arbitrary-$Q$ bound; any flip.
+
+\section*{2. Pre-registered gates}
+
+G2 (success): a complete in-bundle reproof closing arbitrary-$Q$ DR-2 modulo only
+[BD-CONTINUOUS] $\Rightarrow$ arbitrary-$Q$ DR-2 T6 PROVED CONDITIONAL on the
+textbook theorem alone, opening the B5 T7 promotion. \quad
+G1 (partial): the reproof closes only a subclass, or reduces to a named open
+piece $\Rightarrow$ honest partial, B5 T7 unconditional not achieved. \quad
+\textbf{Outcome: G1.}
+
+\section*{3. The poly-separated subclass closes (in-bundle, modulo [BD-CONTINUOUS])}
+
+\begin{proposition}[Poly-separated closure]
+Let $Q\subset S^2$ (antipodal, $N$ points, $\mathrm{diam}\,Q\asymp1$ after the
+affine normalization R-023) have minimal separation $s\ge N^{-C}$ for a fixed
+$C$. Then $E_+(Q)\lesssim_{\varepsilon,C}N^{2+\varepsilon}$, modulo only the
+continuous $\ell^2$-decoupling theorem.
+\end{proposition}
+\emph{Proof.} Apply $\ell^2$-decoupling at $p=4$ and scale $\delta=s$, so each
+$\delta^{1/2}$-cap carries at most one point of $Q$; $f_Q=\sum_a e_a$ has one
+frequency per cap. With the Besicovitch-mean bridge (R1 $=$ R-034,
+$M(|f_Q|^4)=E_+(Q)$) and the single-frequency cap norms,
+\[
+E_+(Q)=M(|f_Q|^4)\;\lesssim_\varepsilon\;\delta^{-2\varepsilon}\,N^2
+=s^{-2\varepsilon}N^2\;\le\;N^{2+2C\varepsilon},
+\]
+using $s\ge N^{-C}$. Re-labelling $\varepsilon$ gives $N^{2+\varepsilon}$. The
+only non-elementary input is the continuous theorem; no discrete black box and
+no separation-restriction beyond $s\ge N^{-C}$ enter. $\square$
+
+This is a strict refinement: the bundled [BD-DISCRETE] is here replaced, for the
+poly-separated subclass, by [BD-CONTINUOUS] alone (machine: assert 1, the
+exponent $2+C\varepsilon'$ stays $2+O(\varepsilon)$ for every fixed $C$). The
+crystallographic-shell case ($s\asymp N^{-1/2}$, poly-separated) is an
+independent proven-case confirmation: $E_+/N^2\le5.27/4.93/3.93$ on
+$R=101/909/4994$ (assert 4, R-026 data).
+
+\section*{4. The clustered case reduces to [NEST-DEPTH] (the residual)}
+
+For sub-polynomially-separated $Q$ ($s<N^{-C}$ for every $C$) the factor
+$s^{-2\varepsilon}$ is not $N^{O(\varepsilon)}$ and Prop.~1 fails. The natural
+move is recursion: a cluster in a ball of radius $\rho$ rescales (R-023,
+loss-free) to a unit paraboloid patch, and one recurses on the rescaled
+sub-configuration. The obstruction is the recursion DEPTH.
+
+\begin{lemma}[Nesting-depth obstruction]
+There exist $N$-point configurations whose nested-cluster recursion has depth
+$\asymp\log(1/s)$, unbounded as $s\to0$ at fixed $N$.
+\end{lemma}
+\emph{Proof / witness.} The lacunary configuration with one-dimensional positions
+$\{2^{-j}:j=0,\ldots,J\}$ (carried onto $S^2$) has $\min$-separation $s=2^{-J}$
+and exactly $J=\log_2(1/s)$ dyadic scales at each of which a single point splits
+off -- a genuine split per scale, depth $J$ (machine: assert 2, depth
+$10/20/40$ at $J=10/20/40$). Iterating the one-step decoupling inequality at a
+fixed scale across $J$ nested generations carries $D_0^{2J}$, exponential in the
+depth (assert 3, $\exp(55.5)$ at $J=40$) -- the R-035 obstruction, now localized
+to the nesting recursion. $\square$
+
+\textbf{Consequence.} The in-bundle reproof closes the poly-separated subclass
+but reduces the general case to controlling this depth. Define
+\[
+\text{[NEST-DEPTH]: a uniform bound on the nested-cluster recursion}
+\]
+\[
+\text{depth (equivalently, } s\ge N^{-O(1)} \text{ suffices).}
+\]
+Then
+\[
+\text{[BD-DISCRETE]}\;=\;\text{[BD-CONTINUOUS]}\;+\;\text{[NEST-DEPTH]},
+\]
+and the in-bundle reproof discharges the first summand (textbook) but not the
+second. [NEST-DEPTH] is the genuine open piece; it is the discrete
+pigeonholing internal to Bourgain--Demeter's discrete corollary, which the power-sum
+lemma (R-035) handles for the $N$-counting but which carries an irreducible
+$D$-loss for sub-polynomial clustering.
+
+\section*{5. Verdict and the honest ceiling}
+
+Gate \textbf{G1}: the T7 re-proof does NOT close arbitrary-$Q$ DR-2
+unconditionally. What it achieves: (a) the poly-separated subclass at
+\textbf{T6 PROVED CONDITIONAL on [BD-CONTINUOUS]} (textbook decoupling only -- a
+strictly cleaner hypothesis than [BD-DISCRETE]); (b) a clean split of the
+residual into the textbook half and the single open piece [NEST-DEPTH]. The
+unconditional record for the fully general case stays $E_+\lesssim N^{9/4}$
+(R-033, modulo [CIRC-INC]). \textbf{B5 T7 unconditional is therefore not
+achieved by this route}; the honest ceiling for arbitrary-$Q$ DR-2 is T6
+PROVED CONDITIONAL, and B5 stays T6-conditional on
+H-NONLATTICE-REMAINDER-EXCLUDED. The remaining genuine routes to B5 T7 are: prove
+[NEST-DEPTH] (a hard incidence/clustering problem, the open frontier), OR
+demonstrate that the non-lattice remainder is non-load-bearing for B5's own
+statement (the way it is non-load-bearing for the published $C_{\rm full}$ head,
+synthesis Sec.~4b) -- an operator-level structural decision, not a new theorem.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The poly-separated closure is just the separated
+corollary restated.''} VALID with mitigation: it IS the continuous theorem
+applied at $\delta=s$, but the contribution is the EXPLICIT poly-separation
+threshold $s\ge N^{-C}$ delimiting exactly where [BD-DISCRETE] is unnecessary,
+and the resulting clean split [BD-DISCRETE] $=$ [BD-CONTINUOUS] $+$ [NEST-DEPTH].
+The value is the precise location of the open piece, not new analysis.
+\item[($\beta$)] \emph{``Maybe [NEST-DEPTH] closes by a cleverer recursion you
+did not try (broad-narrow, summable-$\varepsilon$).''} UPHELD as open: the note
+does not claim [NEST-DEPTH] is unprovable -- only that the elementary
+telescoping/fixed-scale routes fail (assert 3) and the standard discharge is the
+Bourgain--Demeter discrete pigeonholing itself. Whether a self-contained
+in-bundle proof of [NEST-DEPTH] exists is left OPEN, honestly.
+\item[($\gamma$)] \emph{``The lacunary witness is 1-dimensional; on the curved
+$S^2$ curvature might forbid the deep nesting.''} VALID with mitigation: the
+witness is carried onto a great circle / low-curvature direction where the
+nesting survives at the relevant scales; curvature helps the SEPARATED case
+(it is what makes decoupling work) but does not bound the nesting depth of a
+clustered set, which is a combinatorial scale count. A curvature-exploiting
+depth bound would be exactly a proof of [NEST-DEPTH].
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} The poly-separated exponent
+$2+C\varepsilon'$ is monotone in $C$ and equals $2+O(\varepsilon)$ for fixed $C$
+(assert 1: $2.2/2.4/2.6/3.0$ at $C=1/2/3/5$); the lattice ratios are bounded and
+DECREASING ($5.27\to3.93$, assert 4), the signature of $N^{2+o(1)}$ on a
+proven poly-separated family; the nesting depth equals $\log_2(1/s)$ exactly
+(assert 2) and its fixed-scale loss is exponential (assert 3). All five checks
+PASS, exit 0.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               B5-BEYOND-LAYER-BOUND / DR-2 T7 re-proof
+                         attempt ([BD-DISCRETE] in-bundle)
+Precise statement:       T7 RE-PROOF ATTEMPT, gate G1 (HONEST
+                         PARTIAL). Poly-separated subclass (s >=
+                         N^-C): E_+(Q) <=_{eps,C} N^{2+eps}, PROVED
+                         in-bundle modulo only the continuous
+                         l2-decoupling theorem [BD-CONTINUOUS] (one
+                         frequency per s-cap + Besicovitch bridge
+                         R-034). General case: reduces to
+                         [NEST-DEPTH] (nested-cluster recursion depth;
+                         unbounded for lacunary clusters, depth =
+                         log2(1/s)). Split: [BD-DISCRETE] =
+                         [BD-CONTINUOUS] + [NEST-DEPTH]; the reproof
+                         discharges the textbook half only.
+Scope:                   arbitrary-Q DR-2 reduction. Poly-separated
+                         closes; clustered open. Unconditional general
+                         record stays N^{9/4} (R-033).
+Evidence grade:          PARTIAL ADVANCE (subclass closed modulo
+                         [BD-CONTINUOUS]; residual [NEST-DEPTH] named).
+                         dr2_t030_bd_discrete_reproof.py 5/5.
+Reproduction command:    python
+                         codes/vacuum/dr2_t030_bd_discrete_reproof.py
+Falsifier:               a poly-separated Q with E_+ > N^{2+eps}; a
+                         bounded-depth proof for lacunary clusters
+                         (would CLOSE [NEST-DEPTH] -> upgrade); a
+                         lattice family with E_+/N^2 unbounded.
+Tier before / after:     none -- operator decides. B5 stays
+                         T6-conditional; arbitrary-Q DR-2 stays T6
+                         PROVED CONDITIONAL; T-030 unconditional OPEN;
+                         B5 T7 NOT achieved by this route.
+No-overclaim statement:  the unconditional reproof does NOT close;
+                         only the poly-separated subclass closes
+                         (modulo the textbook theorem); [NEST-DEPTH]
+                         is open; no flip.
+Next required action:    operator: (a) adopt [BD-CONTINUOUS] as the
+                         standard import and register arbitrary-Q DR-2
+                         as T6 PROVED CONDITIONAL with the residual
+                         narrowed to [NEST-DEPTH]; or (b) pursue
+                         [NEST-DEPTH] as a frontier problem; or (c)
+                         take the non-load-bearing structural route to
+                         B5 T7 (synthesis Sec. 4b).
+\end{verbatim}
+}

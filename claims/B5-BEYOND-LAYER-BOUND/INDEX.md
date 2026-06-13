@@ -9,7 +9,7 @@
 
 **Falsifier.** An admissible pattern inside a certified box (a(P)<1) whose exact off-diagonal Bloch correction exceeds the Lemma-B envelope; or any pattern undercutting the +0.00432 band margin at the anchor.
 
-## DR-2/  ·  13 proof units  ·  tier span T6/T7
+## DR-2/  ·  14 proof units  ·  tier span T6/T7
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
@@ -24,6 +24,7 @@
 | `dr2-pencil-rigidity-reduction` | v1.0 | T6* | (a) T7: E_off(A,B) <= 2 min(\|A\|^2-\|A\|,\|B\|^2-\|B\|), E_+(A,B) <= 3\|A\|\|B\| for A,B on sphere-circles (r<=2 for w!=0); corrects the external 2\|A\|\|B\| (off b… | (a) EXECUTED (dr2_cross_energy_lemma.py 6/6) … | Prove or disprove the PSM / Pencil Rigidity conjecture (independent math branch); none re… |
 | `dr2-programme-consolidation` | v1.0 | T6* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
+| `dr2-t030-bd-discrete-reproof-attempt` | v1.0 | T7 | T7 RE-PROOF ATTEMPT, gate G1 (HONEST PARTIAL). Poly-separated subclass (s >= N^-C): E_+(Q) <=_{eps,C} N^{2+eps}, PROVED in-bundle modulo only the con… | PARTIAL ADVANCE (subclass closed modulo [BD-C… | operator: (a) adopt [BD-CONTINUOUS] as the standard import and register arbitrary-Q DR-2 … |
 | `dr2-t030-frontier-consolidation` | v1.1 | T6 | (1) For every finite Q in S^2, E_+(Q) <= C N^{9/4}, proved via Lemma A's sum-circle structure + dyadic occupancy classes + the classical circle-incid… | Theorem 1: PROVED MODULO [CIRC-INC] (classica… | Operator review: (i) whether Theorem 1's modulo-classical grade is registered (T7-INCstan… |
 | `dr2-t030-r2-bookkeeping` | v1.1 | T6 | R2 PARTIAL ADVANCE (gate G1). N-counting: the power-sum lemma sum N_theta^p <= N^p (p>=1) is PROVED, so the recursion's N-dependence is loss-free at … | PARTIAL ADVANCE; the chain stays T6 PROVED CO… | operator-stated T7 routes (one required): (i) adopt [BD-DISCRETE] as a standard black box… |
 
@@ -79,4 +80,4 @@
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 | `t6-conditional-assignment` | v1.0 | T6 | B5-BEYOND-LAYER-BOUND re-tiered T5 PINNED-CLOSURE -> T6 PROVED-CONDITIONAL on H_B5^T6 = {lattice-class H-ADM-COH discharged; non-lattice remainder ex… | TIER-ASSIGNMENT RECORD over published bundles… | T7 path (optional): harden the sunset endpoint beyond thin OR close T-030. Mainline: T-03… |
 
-<!-- generated 2026-06-13T09:59:09Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-13T10:15:33Z by build_index.py v1.0.1 -->

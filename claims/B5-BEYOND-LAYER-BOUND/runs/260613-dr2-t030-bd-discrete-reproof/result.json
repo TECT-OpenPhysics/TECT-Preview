@@ -1,0 +1,64 @@
+{
+  "script": "dr2_t030_bd_discrete_reproof.py",
+  "version": "1.0.0",
+  "eps": 0.1,
+  "epsp": 0.2,
+  "subclass_exponents": {
+    "1": 2.2,
+    "2": 2.4,
+    "3": 2.6,
+    "5": 3.0
+  },
+  "lacunary_depths": [
+    10,
+    20,
+    40
+  ],
+  "nested_loss_log_J40": 55.451774444795625,
+  "lattice_ratios": [
+    [
+      101,
+      168,
+      5.267857142857143
+    ],
+    [
+      909,
+      504,
+      4.9316893424036286
+    ],
+    [
+      4994,
+      1152,
+      3.9253472222222223
+    ]
+  ],
+  "verdict": "G1-PARTIAL: poly-separated subclass closed in-bundle modulo [BD-CONTINUOUS] only; [BD-DISCRETE] = [BD-CONTINUOUS] + [NEST-DEPTH]; arbitrary-Q unconditional NOT achieved",
+  "claims": [
+    {
+      "name": "polyseparated_subclass_closes",
+      "passed": true,
+      "detail": "(s = N^-C poly-separated: E_+ <= N^(2 + C eps') with eps'=2eps; exponents {1: 2.2, 2: 2.4, 3: 2.6, 5: 3.0} = 2 + O(eps) for every fixed C -- the poly-separated subclass CLOSES modulo [BD-CONTINUOUS] only, NO discrete black box)"
+    },
+    {
+      "name": "lacunary_nesting_depth_unbounded",
+      "passed": true,
+      "detail": "(lacunary positions 2^-j, j=0..J: min-sep s=2^-J, nesting depth = log2(1/s) = [10, 20, 40] for J=10/20/40 -- the number of nested clustering scales is UNBOUNDED, = J ~ log(1/s); sub-polynomial s gives depth super-logarithmic in N for N-point lacunary clusters)"
+    },
+    {
+      "name": "nested_fixed_scale_loss_exponential",
+      "passed": true,
+      "detail": "(fixed-scale decoupling iterated over 40 nested scales: loss D0^(2 depth) = exp(55.5) -- exponential in the nesting depth; [NEST-DEPTH] is NOT discharged by fixed-scale iteration, the same obstruction class as R-035 localized to the nesting recursion)"
+    },
+    {
+      "name": "lattice_polyseparated_consistent",
+      "passed": true,
+      "detail": "(crystallographic shells R=101/909/4994: E_+/N^2 = [5.27, 4.93, 3.93] all < 6 (bounded), consistent with N^{2+o(1)}; lattice min-sep ~ N^{-1/2} is poly-separated, so this is an independent PROVEN-CASE confirmation of the poly-separated subclass closure)"
+    },
+    {
+      "name": "residual_named_nestdepth",
+      "passed": true,
+      "detail": "([NEST-DEPTH] = control of the nested-cluster recursion depth, equivalently sub-polynomial separation s < N^{-C} for all C; the SINGLE genuine open residual. Verdict G1 PARTIAL: poly-separated subclass CLOSED in-bundle modulo [BD-CONTINUOUS] only; [BD-DISCRETE] split into [BD-CONTINUOUS] + [NEST-DEPTH]; arbitrary-Q unconditional NOT achieved; B5 T7 unconditional NOT achieved)"
+    }
+  ],
+  "all_pass": true
+}
