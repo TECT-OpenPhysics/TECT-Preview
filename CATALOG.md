@@ -6,7 +6,7 @@
 
 Generated: 2026-06-13
 
-**1070 artefacts** · superseded versions kept: 107 · machine-readable twin: `verification/catalog.json`
+**1074 artefacts** · superseded versions kept: 109 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -692,7 +692,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260612-v1.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `254d31fd6b72` |
 | `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260612-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | SUPERSEDED | `48516e469da6` |
 | `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260612-v1.2.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.2 | ACTIVE | `9949135cf11c` |
-| `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260612-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.2 | ACTIVE | `83880f0178b6` |
+| `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260612-v1.2.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.2 | SUPERSEDED | `8c13aa89e335` |
+| `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260613-v1.3.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-13 | v1.3 | ACTIVE | `3ec715e56900` |
+| `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-260613-v1.3.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-13 | v1.3 | ACTIVE | `aa0be101e1c8` |
 | `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `0a002105c30a` |
 | `claims/B5-BEYOND-LAYER-BOUND/SYNTHESIS-260612-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | SUPERSEDED | `386fecb88483` |
 | `theory/main-line-synthesis-260612-260612-v1.1.pdf` | — | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `88677afa2186` |
@@ -700,7 +702,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/main-line-synthesis-260612-260612-v1.2.pdf` | — | 2026-06-12 | 2026-06-12 | v1.2 | ACTIVE | `309de9b322a2` |
 | `theory/main-line-synthesis-260612-260612-v1.2.tex.txt` | — | 2026-06-12 | 2026-06-12 | v1.2 | SUPERSEDED | `e9c2b14fa890` |
 | `theory/main-line-synthesis-260612-260612-v1.3.pdf` | — | 2026-06-12 | 2026-06-12 | v1.3 | ACTIVE | `d2b8a09de24a` |
-| `theory/main-line-synthesis-260612-260612-v1.3.tex.txt` | — | 2026-06-12 | 2026-06-12 | v1.3 | ACTIVE | `d620ede37f5a` |
+| `theory/main-line-synthesis-260612-260612-v1.3.tex.txt` | — | 2026-06-12 | 2026-06-12 | v1.3 | SUPERSEDED | `3ee3f63ac83c` |
+| `theory/main-line-synthesis-260612-260613-v1.4.pdf` | — | 2026-06-12 | 2026-06-13 | v1.4 | ACTIVE | `d0154cee4481` |
+| `theory/main-line-synthesis-260612-260613-v1.4.tex.txt` | — | 2026-06-12 | 2026-06-13 | v1.4 | ACTIVE | `f9fe5b15e4be` |
 | `theory/main-line-synthesis-260612-v1.0.pdf` | — | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `5e731b216579` |
 | `theory/main-line-synthesis-260612-v1.0.tex.txt` | — | 2026-06-12 | 2026-06-12 | v1.0 | SUPERSEDED | `7f2fa5ed42cb` |
 
@@ -1059,7 +1063,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `b939314a7d76` |
-| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `d1660d0a832f` |
+| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `89f7f3186b59` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
@@ -1069,7 +1073,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `8b5fbc9a4817` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `e4aeb63b3d1c` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `600904780126` |
 
 ## Governance policies
 
@@ -1095,8 +1099,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `429109938bcb` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `3ccf1695b79f` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `2f04acb7aeda` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `4330720ecda1` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
@@ -1114,7 +1118,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `b7c5f6487977` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `6be832386e34` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1148,11 +1152,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `b4b9bd3791a4` |
-| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `4c3bac576265` |
-| `theory/sectors/C.md` | — | — | — | — | ACTIVE | `f9e326f11f33` |
-| `theory/sectors/D.md` | — | — | — | — | ACTIVE | `470bb268ece4` |
-| `theory/sectors/E.md` | — | — | — | — | ACTIVE | `6b9decd15783` |
-| `theory/sectors/F.md` | — | — | — | — | ACTIVE | `c7ffe07b063c` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `9a61bb4688b5` |
+| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `da80409d157b` |
+| `theory/sectors/C.md` | — | — | — | — | ACTIVE | `6d032ac08f3f` |
+| `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
+| `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
+| `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
 | `todo/todo.json` | — | — | — | — | ACTIVE | `b108832b9a6c` |
 

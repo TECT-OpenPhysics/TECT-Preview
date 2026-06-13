@@ -1,16 +1,14 @@
-% SUPERSEDED by SYNTHESIS-260612-260613-v1.3.tex.txt
 % =============================================================================
 % Title: B5-BEYOND-LAYER-BOUND claim-level synthesis: the beyond-layer machinery (DR-2, STEP-5B, SC-SCOPE)
 % Claim: B5-BEYOND-LAYER-BOUND (claim-level SYNTHESIS layer, T-013; taxonomy claims-restructure-proposal-260609)
-% Version: v1.2 -- first issued 2026-06-12; this version issued 2026-06-12
+% Version: v1.3 -- first issued 2026-06-12; this version issued 2026-06-13
 % Status: PUBLISHED SYNTHESIS NOTE (operator CONFIRM 2026-06-12) -- registered
 %   as B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612. No new mathematics, no tier change, no gate flip.
 %   Canonical claim state (status.json / CLAIMS.md, post-T-031 re-tier
-%   2026-06-12): T6 PROVED-CONDITIONAL on H_B5^T6 (label
-%   B5-BeyondLayer-T6Conditional-260612; dossier
-%   t6-conditional-assignment-260612-v1.0), scope CLOSED@LATTICE-DISCHARGED +
-%   NONLATTICE-REMAINDER(T-030); hypotheses H-ENDPOINT-THINNESS-ACCEPTED,
-%   H-NONLATTICE-REMAINDER-EXCLUDED. B5 is the MACHINERY claim: it does not state
+%   2026-06-13): T7-SCOPE on the admissibility-bounded statement (label
+%   B5-BeyondLayer-T7Scope-260613; dossier b5-t7scope-assignment-260613-v1.0),
+%   substantive conditional hypotheses NONE (definitional scope = C_adm +
+%   A1-KERNEL-CONV). B5 is the MACHINERY claim: it does not state
 %   the vacuum selection itself; it supplies the off-diagonal/selection-floor
 %   inputs that B1/B2's head theorem consumes. Three of its sub-proof units
 %   hold PUBLISHED bundles at tiers ABOVE the claim tier (DR-2 T7-lattice,
@@ -28,6 +26,12 @@
 %        T-031 verdicts (D3-A): B5 is now T6 PROVED-CONDITIONAL on H_B5^T6.
 %        All current-state statements updated; the Sec.4 tier-relation analysis
 %        retained with its upgrade-path paragraph marked EXECUTED.
+%   v1.3 (2026-06-13) TIER-SYNC RE-ISSUE: B5 promoted T6 PROVED-CONDITIONAL ->
+%        T7-SCOPE_{admissibility-bounded} (route-3, R-037; H-NONLATTICE
+%        reclassified to definitional scope, Lemma 2 caps T'<=10 for all
+%        admissible competitors; Attack-4 (T',n)-only audit 6/6). All
+%        current-state statements updated; MANDATORY scope qualifier (NOT
+%        unrestricted arbitrary-Q) carried.
 % =============================================================================
 
 \sloppy
@@ -43,13 +47,21 @@ STEP-5B exhaustiveness beyond the amended-class pin.
 \section*{2. The claim and its canonical state}
 
 \textbf{Claim (canonical, post-T-031).} Pattern-generic Gershgorin reduction
-of the beyond-layer bound: T6 PROVED-CONDITIONAL on
+of the beyond-layer bound: T7-SCOPE on the admissibility-bounded statement, NOT (the historical T6-conditional form was on
 $\mathcal H_{\rm B5}^{\rm T6}=\{$lattice-class H-ADM-COH discharged;
 non-lattice remainder excluded (T-030); SC-SCOPE endpoint thinness accepted;
 sunset-limited joint $\times1.040>1$ accepted$\}$; scope
 CLOSED@LATTICE-DISCHARGED + NONLATTICE-REMAINDER; label
-\texttt{B5-BeyondLayer-T6Conditional-260612}. (Historical: T5 PINNED-CLOSURE
-from 2026-06-06 until the T-031 verdicts of 2026-06-12.)
+\texttt{B5-BeyondLayer-T6Conditional-260612}). The CURRENT canonical state
+(2026-06-13) is \textbf{T7-SCOPE}$_{\rm admissibility\text{-}bounded}$ given
+A1-KERNEL-CONV (label \texttt{B5-BeyondLayer-T7Scope-260613}): for every
+admissible competitor the beyond-layer correction is below the layer margin,
+with NO substantive conditional hypothesis -- H-ENDPOINT-THINNESS-ACCEPTED
+removed (sunset hardening) and H-NONLATTICE-REMAINDER-EXCLUDED reclassified to
+definitional scope (route-3; Lemma 2 caps $T'\le10$ pattern-generically).
+\textbf{Mandatory qualifier:} B5 does NOT claim unrestricted arbitrary-$Q$
+DR-2; T-030 stays OPEN as a frontier strengthening. (Historical:
+T5 PINNED-CLOSURE 2026-06-06; T6-conditional 2026-06-12; T7-SCOPE 2026-06-13.)
 
 \section*{3. Sub-proof unit map (per-unit tier and role)}
 
@@ -86,7 +98,7 @@ it (DR-2 T7-NTstandard; STEP-5B rectangle T6; SC-SCOPE T5 thin) and are cited
 at their own tiers. The upgrade path foreseen here (the T-031 exhaustiveness
 decision layer + the R-U6-1 backlog lemma) was EXECUTED on 2026-06-12: R-U6-1/2
 discharged, T-031 verdicts D1-A/D2-A/D3-A enacted, and the claim re-tiered to
-T6 PROVED-CONDITIONAL on the explicit set $\mathcal H_{\rm B5}^{\rm T6}$ (the
+T7-SCOPE on the admissibility-bounded statement, the substantive hypothesis set EMPTIED (the
 budget comparison was already machine-closed at
 $\times55.6/\times8.8/\times2.1$--$2.6$). The remaining T7 path: remove the
 two acceptance hypotheses -- harden the sunset endpoint beyond thin, and close
@@ -132,8 +144,10 @@ publication.
 Result ID:               B5-BEYOND-LAYER-BOUND-Synthesis-T013-260612
                          (PUBLISHED claim-level SYNTHESIS, T-013)
 Precise statement:       B5's canonical state (post-T-031: T6
-                         PROVED-CONDITIONAL on H_B5^T6, label
-                         B5-BeyondLayer-T6Conditional-260612) is the
+                         T7-SCOPE_{admissibility-bounded} given
+                         A1-KERNEL-CONV, label
+                         B5-BeyondLayer-T7Scope-260613, substantive
+                         hypotheses NONE) is the
                          claim's own statement; its sub-proof units
                          hold PUBLISHED bundles at their own tiers
                          (DR-2 T7-lattice, STEP-5B T6, SC-SCOPE T5
