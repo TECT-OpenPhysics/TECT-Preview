@@ -25,7 +25,7 @@
 | `dr2-programme-consolidation` | v1.0 | T6* | A one-place chronicle of the DR-2 programme: obstruction (DR2-SHARE, chi(P)); three routes (decoupling T4+, elementary/PSM T2, lattice T7); results R… | CHRONICLE (no independent result). Final stat… | Mainline: SC-SCOPE all-orders lift (the remaining B1 lever beyond H-LAYER). |
 | `dr2-step5b-integration` | v1.1 | T6 | WEIGHTED Lemma A: for finite Q in S^2 and any amplitudes c, sum_t w_t^2 <= (1+T'(Q))\|\|c\|\|_2^4, w_t = sum_{a+b=t} c_a c_b (Cauchy-Schwarz; t=0 split).… | T7 (weighted Lemma A + integration bound). Th… | Operator: accept/deny residuals (a)-(c); if accepted, discharge H-ADM-COH for the lattice… |
 | `dr2-t030-frontier-consolidation` | v1.1 | T6 | (1) For every finite Q in S^2, E_+(Q) <= C N^{9/4}, proved via Lemma A's sum-circle structure + dyadic occupancy classes + the classical circle-incid… | Theorem 1: PROVED MODULO [CIRC-INC] (classica… | Operator review: (i) whether Theorem 1's modulo-classical grade is registered (T7-INCstan… |
-| `dr2-t030-r2-bookkeeping` | v1.0 | T6 | R2 PARTIAL ADVANCE (gate G1). N-counting: the power-sum lemma sum N_theta^p <= N^p (p>=1) is PROVED, so the recursion's N-dependence is loss-free at … | PARTIAL ADVANCE; the chain stays T6 PROVED CO… | operator: register the R2-reduction result (ledger) if deemed reuse-worthy; decide whethe… |
+| `dr2-t030-r2-bookkeeping` | v1.1 | T6 | R2 PARTIAL ADVANCE (gate G1). N-counting: the power-sum lemma sum N_theta^p <= N^p (p>=1) is PROVED, so the recursion's N-dependence is loss-free at … | PARTIAL ADVANCE; the chain stays T6 PROVED CO… | operator-stated T7 routes (one required): (i) adopt [BD-DISCRETE] as a standard black box… |
 
 ## H-LAYER-AUX/  ·  9 proof units  ·  tier span T5/T6
 
@@ -79,4 +79,4 @@
 | `t5-assignment-dossier` | v2.1 | T5 | Within the H-ADM-COH amended competitor class at second-cumulant order, the beyond-layer off-diagonal correction is bounded below the layer margin fo… | ANALYTIC (closure pillars) + EXECUTED (192/19… | Promotion to T6 would require discharging the T4-grade lemmas to theorem grade and a clea… |
 | `t6-conditional-assignment` | v1.0 | T6 | B5-BEYOND-LAYER-BOUND re-tiered T5 PINNED-CLOSURE -> T6 PROVED-CONDITIONAL on H_B5^T6 = {lattice-class H-ADM-COH discharged; non-lattice remainder ex… | TIER-ASSIGNMENT RECORD over published bundles… | T7 path (optional): harden the sunset endpoint beyond thin OR close T-030. Mainline: T-03… |
 
-<!-- generated 2026-06-13T07:02:34Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-13T09:59:09Z by build_index.py v1.0.1 -->
