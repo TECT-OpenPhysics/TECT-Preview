@@ -30,9 +30,7 @@ Tier profile: T6x4 T5x1 T1x1
 
 ## Negative results (trust assets)
 
-| Tag | Branch / claim | Failure mode |
-|---|---|---|
-| R-2026-legacy-newtonG-label | Newton $G$ "independently predicted / T7" label | independent prediction missing ($a_{\rm BCC}$ fixed by $G_{\rm obs}$) |
+_None referencing this sector's claims._
 
 ---
 

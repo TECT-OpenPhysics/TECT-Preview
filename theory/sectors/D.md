@@ -28,9 +28,7 @@ _None linked to this sector._
 
 ## Negative results (trust assets)
 
-| Tag | Branch / claim | Failure mode |
-|---|---|---|
-| F-2026-04-30-flat-cartan | Pillar-4 sub-task-2 "closure completed" (flat-Cartan forcing | falsified by $c_2(E)=-40\neq 0$ on canonical $\mathbb{CP}^2$ |
+_None referencing this sector's claims._
 
 ---
 

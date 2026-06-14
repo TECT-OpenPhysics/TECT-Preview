@@ -25,9 +25,7 @@ _None linked to this sector._
 
 ## Negative results (trust assets)
 
-| Tag | Branch / claim | Failure mode |
-|---|---|---|
-| NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
+_None referencing this sector's claims._
 
 ---
 

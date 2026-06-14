@@ -1,0 +1,103 @@
+{
+  "script": "dr2_t030_fewcircles.py",
+  "version": "1.0.0",
+  "theorem": "E_+(Q) <= 3 L^2 N^2 for Q covered by L circles",
+  "single_circle": {
+    "N": 108,
+    "Eplus": 34668,
+    "ratio": 2.9722222222222223,
+    "R033_published": 34668
+  },
+  "L4_stack": {
+    "N": 432,
+    "Eplus": 1525392,
+    "E_C": 34668,
+    "E_AP4": 44,
+    "bound": 8957952
+  },
+  "L3_union": {
+    "N": 100,
+    "Eplus": 24548,
+    "bound": 270000
+  },
+  "pair_distinct_maxmult": 2,
+  "pair_single_m0": {
+    "n_big": 1,
+    "r_m0": 108,
+    "next": 2
+  },
+  "nestdepth_witness": [
+    {
+      "J": 4,
+      "N": 5,
+      "depth": 3,
+      "Eplus": 45,
+      "ratio": 1.8
+    },
+    {
+      "J": 5,
+      "N": 6,
+      "depth": 4,
+      "Eplus": 66,
+      "ratio": 1.8333333333333333
+    },
+    {
+      "J": 6,
+      "N": 7,
+      "depth": 5,
+      "Eplus": 91,
+      "ratio": 1.8571428571428572
+    },
+    {
+      "J": 7,
+      "N": 8,
+      "depth": 6,
+      "Eplus": 120,
+      "ratio": 1.875
+    }
+  ],
+  "verdict": "few-circles theorem PROVED unconditional; DR-2 closed for L<=N^eps class; [NEST-DEPTH] witness benign at L=1 (technique-only); open core = super-poly-many circles",
+  "claims": [
+    {
+      "name": "A1_single_circle_L1_and_R033_crosscheck",
+      "passed": true,
+      "detail": "1105-latitude@z=47: N=108, E_+=34668 (R-033 F1/F5 published 34668 -> MATCH), 3 L^2 N^2 = 34992 (L=1), ratio E_+/N^2=2.972 (~3, near-tight constant)"
+    },
+    {
+      "name": "A2_L4_stack_product_and_bound",
+      "passed": true,
+      "detail": "1105-circle at z=0,1,2,3 (L=4): N=432, E_+=1525392 = E_+(C)*E_+(AP4)=34668*44; 3 L^2 N^2 = 8957952, ratio E_+/N^2=8.17 (<= 48 bound w/ margin)"
+    },
+    {
+      "name": "A3_L3_distinct_radius_union_bound",
+      "passed": true,
+      "detail": "radii 65@z0,85@z40,125@z90 (L=3): N=100, E_+=24548, 3 L^2 N^2=270000, ratio E_+/N^2=2.45 (<= 27 bound)"
+    },
+    {
+      "name": "A4_pairlemma_distinct_radius_mult_le2",
+      "passed": true,
+      "detail": "r_AB(m) for distinct-radius circles 1105@z0 x 65@z10: max multiplicity = 2 (<= 2, the two-circles-meet-in-<=2-points bound; no aligned m_0)"
+    },
+    {
+      "name": "A5_pairlemma_single_circle_one_m0",
+      "passed": true,
+      "detail": "single 1105-latitude@z=5: exactly 1 sum m_0 with r>2; r(m_0)=108=N (center-reflection pairs at m_0=2*center=(0,0,10)); next largest r=2 (<= 2)"
+    },
+    {
+      "name": "A6_nestdepth_witness_benign",
+      "passed": true,
+      "detail": "lacunary witness on great circle (L=1): J=4 N=5 depth=3 E_+/N^2=1.800; J=5 N=6 depth=4 E_+/N^2=1.833; J=6 N=7 depth=5 E_+/N^2=1.857; J=7 N=8 depth=6 E_+/N^2=1.875 -- depth grows [3, 4, 5, 6] while E_+/N^2 stays <= 3 (theorem L=1) and ~flat: depth-INDEPENDENT energy"
+    },
+    {
+      "name": "A7_estimator_audit_brute",
+      "passed": true,
+      "detail": "12-point circle (r=5): vectorized E_+=396 == brute O(N^4) count 396"
+    },
+    {
+      "name": "A8_theorem_bound_holds_all_configs",
+      "passed": true,
+      "detail": "L1: E_+=34668 <= 3*1^2*108^2=34992 (ratio/N^2=2.97); L4stack: E_+=1525392 <= 3*4^2*432^2=8957952 (ratio/N^2=8.17); L3uni: E_+=24548 <= 3*3^2*100^2=270000 (ratio/N^2=2.45)"
+    }
+  ],
+  "all_pass": true
+}

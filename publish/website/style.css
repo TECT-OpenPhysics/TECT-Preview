@@ -21,3 +21,8 @@ select,input{background:var(--bg);color:var(--fg);border:1px solid var(--line);b
 footer{border-top:1px solid var(--line);color:var(--mut);font-size:.85rem;padding:1rem}
 a{color:var(--acc)}
 .notice{border:1px solid var(--warn);border-radius:8px;padding:.8rem;color:var(--warn)}
+
+/* Wide-table safety net (result-doc cleanup): oversized tables scroll within
+   their own box instead of blowing out the page; long tokens wrap in cells. */
+main table{display:block;max-width:100%;overflow-x:auto}
+th,td{overflow-wrap:anywhere}

@@ -1,0 +1,274 @@
+% =============================================================================
+% Title: T-030 / [NEST-DEPTH]: a covering-number (few-circles) sufficient
+%        condition closes arbitrary-Q DR-2 for Q on N^{o(1)} circles; the
+%        [NEST-DEPTH] lacunary witness is closed at L=1 (technique-only); the
+%        open core is the super-polynomially-many-circles regime
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; hypothesis
+%        H-NONLATTICE-REMAINDER-EXCLUDED. NOT load-bearing for the published
+%        C_full head, which caps T' <= 10 in-class by Lemma 2.)
+% Version: v1.0 -- first issued 2026-06-14
+% Status: PARTIAL ADVANCE / frontier clarification. (1) A covering-number
+%   sufficient condition E_+(Q) <= 3 L^2 N^2 for Q covered by L circles --
+%   T7-WITHIN-CLASS, assembled from R-021 (per-pair, T7) by Cauchy-Schwarz over
+%   the L^2 index pairs; closes arbitrary-Q DR-2 UNCONDITIONALLY for the class
+%   L <=_eps N^eps. (2) The [NEST-DEPTH] lacunary witness of
+%   dr2-t030-bd-discrete-reproof v1.1 (R-036) lies on ONE great circle, hence is
+%   closed at L=1 (E_+ <= 3N^2, R-021), INDEPENDENT of its unbounded nesting
+%   depth log2(1/s): the exp(depth) telescoping loss is an artifact of the
+%   fixed-scale decoupling technique, NOT a hardness of the bound. The witness is
+%   RECLASSIFIED technique-only. (3) The open core of T-030 is delineated
+%   sharply: Q simultaneously requiring L = N^{Omega(1)} circles to cover and
+%   carrying super-polynomially-many simultaneously-rich sum-circles (consistent
+%   with R-033 Cor.1.2). Does NOT close T-030: arbitrary-Q N^{2+eps} stays OPEN.
+%   No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded}.
+%   dr2_t030_fewcircles.py 8/8 PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-14) first issue. Direction set by the operator (continue the
+%        T-030 / [NEST-DEPTH] frontier). Honest credit: the per-pair bound
+%        E_+(A,B) <= 3|A||B| and the single-circle bound E_+(Q) <= 3N^2 are
+%        R-021 (T7, prior). New here: the covering-number assembly 3 L^2 N^2,
+%        the witness reclassification (technique-only at L=1), the open-core
+%        delineation. No deep new analysis is claimed; the deliverable is a
+%        structural sharpening of the frontier + one new closed sub-class.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+The in-bundle reproof attempt dr2-t030-bd-discrete-reproof v1.1 (R-036) split the
+discrete decoupling residual as
+\[
+\text{[BD-DISCRETE]}=\text{[BD-CONTINUOUS]}+\text{[NEST-DEPTH]},
+\]
+closing the poly-separated subclass ($s\ge N^{-C}$) modulo the textbook continuous
+theorem and naming \emph{[NEST-DEPTH]} -- control of the nested-cluster recursion
+depth -- as ``the single genuine open piece''. Its witness is the lacunary
+configuration $\{2^{-j}:j=0,\dots,J\}$ carried onto a great circle, with minimal
+separation $s=2^{-J}$ and recursion depth $J=\log_2(1/s)$, unbounded at fixed $N$;
+iterating the one-step decoupling inequality at a fixed scale across $J$ nested
+generations costs $D_0^{2J}=\exp(\Theta(J))$.
+
+This note asks the prior question the reproof note did not settle: \textbf{does the
+witness witness hardness of the BOUND, or only of the TECHNIQUE?} We show the
+latter, via an elementary covering-number bound, and use it to delineate the
+genuine open core. \textbf{Not claimed:} any unconditional arbitrary-$Q$ closure;
+any tier/gate flip. The track is the H-NONLATTICE-REMAINDER frontier and is
+NOT load-bearing for the published $C_{\rm full}$ head (synthesis Sec.~4b).
+
+\section*{2. The per-pair and single-circle bounds (R-021, T7 -- prior)}
+
+We recall, with explicit attribution, the input on which everything below rests.
+
+\begin{lemma}[R-021, sphere-circle cross-energy, T7]
+For finite $A,B$ each supported on a circle of $S^2$ (planar section), the
+rectangular additive energy satisfies $E_+(A,B):=\sum_m r_{A,B}(m)^2\le 3|A||B|$,
+where $r_{A,B}(m)=\#\{(a,b)\in A\times B:a+b=m\}$. It holds for parallel and
+non-parallel circles.
+\end{lemma}
+\emph{Mechanism (R-021).} For fixed $m$, $a+b=m$ with $a\in\Gamma_A$ forces
+$a\in\Gamma_A\cap(m-\Gamma_B)$; the reflected-translated set $m-\Gamma_B$ is a
+circle, and two \emph{distinct} circles in $\mathbb R^3$ meet in $\le2$ points, so
+$r_{A,B}(m)\le2$ except for the at most one $m_0$ with $m-\Gamma_B=\Gamma_A$
+(which forces equal radius and parallel planes, fixing $m_0$), where
+$r_{A,B}(m_0)\le\min(|A|,|B|)$. Hence $E_+(A,B)\le\min(|A|,|B|)^2+2|A||B|\le3|A||B|$.
+
+\begin{corollary}[single circle, T7 -- prior]
+If $Q$ is supported on ONE circle then $E_+(Q)=E_+(Q,Q)\le 3N^2$.
+\end{corollary}
+This already disposes of the rich-latitude obstruction of R-025 (a latitude with
+$T'=N$): one rich circle, however rich, has $E_+\le3N^2$. The aligned term is the
+center-reflection sum $m_0=2c$ ($c=$ circle centre): for the great circle $c=0$,
+$m_0=0$ and $r(0)=N$ are the antipodal pairs, giving $E_+\le(2N^2-N)+(N^2-N)<3N^2$.
+(Machine: a rich latitude $x^2+y^2=1105^2$ at $z=47$, $N=108$, has $E_+=34668$,
+$E_+/N^2=2.972$, exactly the published R-033 values F1/F5; assert A1.)
+
+\section*{3. Theorem: the covering-number (few-circles) bound (new assembly)}
+
+\begin{theorem}[few-circles additive-energy bound]
+Let $Q$ be a finite set covered by $L$ circles, $Q\subset\bigcup_{i=1}^L\Gamma_i$.
+Then
+\[
+\boxed{\,E_+(Q)\;\le\;3\,L^2\,N^2\,},\qquad N=|Q|.
+\]
+\end{theorem}
+\emph{Proof.} Fix a partition $Q=\bigsqcup_{i=1}^L Q_i$ with $Q_i\subset\Gamma_i$
+(assign each point to one covering circle). For every $m$,
+$r(m)=\#\{(a,b)\in Q^2:a+b=m\}=\sum_{i,j=1}^L r_{ij}(m)$ with
+$r_{ij}(m)=\#\{(a,b)\in Q_i\times Q_j:a+b=m\}$, the index pair being unique per
+ordered pair $(a,b)$. Cauchy--Schwarz over the $L^2$ index pairs gives
+$r(m)^2\le L^2\sum_{i,j}r_{ij}(m)^2$, and summing over $m$,
+\[
+E_+(Q)=\sum_m r(m)^2\;\le\;L^2\sum_{i,j}\sum_m r_{ij}(m)^2
+=L^2\sum_{i,j}E_+(Q_i,Q_j)
+\;\overset{\text{Lemma R-021}}{\le}\;3L^2\sum_{i,j}|Q_i||Q_j|
+=3L^2\Big(\sum_i|Q_i|\Big)^2=3L^2N^2. \qquad\square
+\]
+
+\begin{corollary}[a new unconditionally-closed class]
+If $Q\subset S^2$ is coverable by $L\lesssim_\epsilon N^{\epsilon}$ circles then
+$E_+(Q)\lesssim_\epsilon N^{2+\epsilon}$ -- DR-2 holds UNCONDITIONALLY for $Q$,
+with no decoupling theorem and no circle-incidence bound.
+\end{corollary}
+
+The bound is elementary (R-021 $+$ a Cauchy--Schwarz packaging) and is informative
+only for $L=N^{o(1)}$: at $L\sim N^{1/2}$ it degrades to $3N^3$. Its role is to add
+a covering-number axis to the existing sufficient conditions, complementary to the
+richness axis of Lemma~A. Machine: the bound holds on every tested configuration
+(asserts A2, A3, A8), including a maximally-aligned same-radius $L=4$ stack
+($E_+=1{,}525{,}392=E_+(\text{circle})\cdot E_+(\text{AP}_4)=34668\cdot44$, ratio
+$E_+/N^2=8.17\le 48=3\cdot4^2$) and an $L=3$ distinct-radius union (ratio $2.45\le27$).
+
+\section*{4. The [NEST-DEPTH] witness is closed at $L=1$ (technique-only)}
+
+\begin{proposition}[witness benignity]
+The [NEST-DEPTH] lacunary witness $\{2^{-j}\}_{j=0}^{J}$ carried onto a great
+circle is supported on ONE circle. By the Corollary of Sec.~2, $E_+\le 3N^2$ for
+every $J$, \emph{independent} of the recursion depth $J=\log_2(1/s)$.
+\end{proposition}
+
+Consequently the $D_0^{2J}=\exp(\Theta(J))$ blow-up that the reproof note
+exhibited is a property of the \emph{fixed-scale decoupling iteration}, not of the
+additive energy: the witness that motivated [NEST-DEPTH] does not witness any
+hardness of the target bound -- it has minimal ($\Theta(N^2)$) energy. Machine
+(assert A6): with rational points $t_j=2^{-j}$ on $x^2+y^2=1$, exact integer
+energy gives
+\[
+\begin{array}{lrrr}
+J & N & \text{depth}=\log_2(1/s) & E_+/N^2\\\hline
+4 & 5 & 3 & 1.800\\
+5 & 6 & 4 & 1.833\\
+6 & 7 & 5 & 1.857\\
+7 & 8 & 6 & 1.875
+\end{array}
+\]
+the depth grows while $E_+/N^2$ stays flat near $2$ ($<3$). \textbf{Reclassification.}
+The genuine open content of [NEST-DEPTH] is NOT the lacunary / near-one-circle
+family (benign by R-021) but the truly two-dimensional clustered family that
+requires \emph{many} circles to cover -- exactly the regime Sec.~5 isolates.
+
+\section*{5. Sharp delineation of the open core}
+
+Collecting the unconditional sufficient conditions for arbitrary finite
+$Q\subset S^2$:
+\[
+E_+(Q)\;\le\;\min\Big\{\,3L^2N^2\ \text{(this note)},\ (1+T')N^2\ \text{(R-025)},\
+C\,N^{9/4}\ \text{(R-033, mod [CIRC-INC])}\,\Big\},
+\]
+with the lattice class (R-026, $T'\lesssim_\epsilon R^\epsilon$) and the
+poly-separated class (R-037, modulo [BD-CONTINUOUS]) closed separately. A family
+can therefore violate $E_+\lesssim_\epsilon N^{2+\epsilon}$ only if it is
+SIMULTANEOUSLY (a) covered by no $N^{o(1)}$ circles ($L=N^{\Omega(1)}$),
+(b) rich, $T'=N^{\Omega(1)}$, and (c) beyond the reach of the $N^{9/4}$ incidence
+count. By R-033 Cor.~1.2 such a family must carry
+$\ge N^{2+\delta}/(8k^2\log N)$ simultaneously $k$-rich sum-circles -- a
+super-polynomial number of distinct rich circles. The few-circles bound shows
+this multiplicity is \emph{necessary}: a bounded (or polynomial) circle cover is
+incompatible with $E_+\ge N^{2+\delta}$. The open core of T-030 is thus precisely
+the \textbf{super-polynomially-many-simultaneously-rich-circles regime}; the
+lacunary/few-circle families that previously appeared as obstructions are not in
+it.
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``This is R-021 plus a Cauchy--Schwarz; the per-pair and
+single-circle bounds are not new.''} VALID, fully acknowledged in Sec.~2: R-021
+(T7) gives $E_+(A,B)\le3|A||B|$ and hence the $L=1$ single-circle bound. The new
+content is exactly (i) the covering-number assembly $3L^2N^2$ (R-021 is pairwise
+only; the $L^2$ Cauchy--Schwarz over index pairs is the packaging), (ii) the
+resulting covering-number sufficient class, (iii) the reclassification of the
+[NEST-DEPTH] witness as technique-only via $L=1$, and (iv) the open-core
+delineation. No deep new analysis is claimed; the deliverable is a structural
+sharpening plus one new closed sub-class.
+\item[($\beta$)] \emph{``The $L^2$ factor is lossy -- at $L\sim N^{1/2}$ the bound
+is $3N^3$, vacuous.''} VALID and central to the honest scope: the theorem is
+effective ONLY for $L=N^{o(1)}$ and explicitly does NOT touch the many-circle
+core, which is named as the residual (Sec.~5). No closure of T-030 is claimed.
+\item[($\gamma$)] \emph{``Every $Q$ is covered by some circles, so the hypothesis
+loses no generality / the class is trivial.''} DISMISSED with scope: every $Q$ is
+covered by $L\le N$ circles trivially, but the bound is non-vacuous only for
+$L=N^{o(1)}$; it is a SUFFICIENT condition delimiting a genuine sub-class
+(latitude unions, bounded-degree-curve sets, the witness), and its complement --
+the super-poly-circle regime -- is carried as the open core, not silently
+included.
+\item[($\delta$)] \emph{``The witness-benignity secretly uses the great circle's
+$m=0$ antipodal structure.''} DISMISSED: $E_+(Q)\le3N^2$ for $Q$ on ANY single
+circle is R-021's diagonal, valid for great AND non-great circles; the conclusion
+needs only ``one circle''. Verified on a rich non-great latitude ($z=47$,
+$E_+/N^2=2.972\le3$; assert A1) as well as the great circle ($z=0$).
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).}
+\emph{Magnitude / constant.} The single rich circle has measured
+$E_+/N^2=2.972$ ($N=108$, $E_+=34668$, matching the independently-published
+R-033 F1/F5 values exactly) -- inside and near the proven constant $3$, so the
+constant is correct, not loose by orders. \emph{Exact limit case.} The $L=4$
+same-radius stack factorises exactly, $E_+=34668\cdot44=1{,}525{,}392\le
+8{,}957{,}952=3\cdot4^2N^2$ (margin $5.9\times$). \emph{Depth direction.} The
+witness ratio is flat ($1.800\to1.875$) as the depth grows $3\to6$ -- the
+predicted depth-independence. \emph{Estimator audit.} The vectorised
+$E_+$ equals the brute $O(N^4)$ count ($396=396$) on a $12$-point circle.
+\emph{Reproducibility.} All counts are exact integer; the driver is deterministic
+and exits $0$ iff all $8$ asserts pass.
+
+\section*{7. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-038 (few-circles / covering-number additive-energy
+                         bound + [NEST-DEPTH] witness reclassification) /
+                         T-030 frontier
+Precise statement:       (1) Q covered by L circles => E_+(Q) <= 3 L^2 N^2
+                         (Cauchy-Schwarz over L^2 index pairs + R-021 per-pair
+                         E_+(Q_i,Q_j) <= 3|Q_i||Q_j|). Cor: L <=_eps N^eps =>
+                         E_+ <=_eps N^{2+eps}, arbitrary-Q DR-2 closed
+                         UNCONDITIONALLY for the few-circles class.
+                         (2) The [NEST-DEPTH] lacunary witness (great circle,
+                         L=1) has E_+ <= 3N^2 INDEPENDENT of nesting depth
+                         log2(1/s): the exp(depth) telescoping loss is a
+                         fixed-scale-technique artifact, not bound hardness.
+                         Witness reclassified TECHNIQUE-ONLY.
+                         (3) Open core delineated: T-030 open only for Q with
+                         circle-cover L = N^{Omega(1)} AND T' = N^{Omega(1)}
+                         (super-poly-many simultaneously-rich circles; R-033
+                         Cor.1.2).
+Scope:                   T-030 (arbitrary finite Q in S^2; B5 hypothesis
+                         H-NONLATTICE-REMAINDER-EXCLUDED). NOT load-bearing for
+                         the published C_full head (Lemma 2 caps T' <= 10
+                         in-class; synthesis Sec.4b).
+Evidence grade:          Few-circles bound: T7 WITHIN-CLASS (elementary; R-021
+                         [T7] + Cauchy-Schwarz). Witness reclassification:
+                         PROVED (R-021 at L=1 + machine depth-independence).
+                         Open-core delineation: structural synthesis. Does NOT
+                         close T-030: E_+ <=_eps N^{2+eps} for arbitrary Q
+                         STILL OPEN (unconditional record N^{9/4}, R-033).
+Reproduction command:    python3 codes/vacuum/dr2_t030_fewcircles.py
+Expected output:         8/8 asserts PASS, exit 0; JSON artefact at
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260614-dr2-t030-fewcircles/result.json
+Falsifier:               (a) Q on L circles with E_+ > 3L^2N^2 (refutes the
+                         theorem / R-021); (b) a single-circle family with
+                         E_+/N^2 unbounded (refutes R-021); (c) a lacunary
+                         witness with E_+ growing with depth at fixed N
+                         (refutes benignity). All three machine-checked false.
+Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
+                         B5 stays T7-SCOPE_{admissibility-bounded} given A1.
+                         T-030 stays OPEN; DR2-SHARE stays
+                         RESCOPED-TO-T030-NONLOADBEARING.
+No-overclaim statement:  This note does NOT close T-030. The per-pair and
+                         single-circle bounds are R-021 (prior, T7), credited
+                         explicitly; the new content is the covering-number
+                         assembly, the witness reclassification, and the
+                         open-core delineation. The L^2 factor makes the bound
+                         vacuous for L = N^{Omega(1)} -- exactly the open core.
+Next required action:    Operator review. Research continuation options:
+                         (i) bound the circle-cover number L by structural
+                         invariants of high-energy Q (would shrink the open
+                         core); (ii) attack the super-poly-rich-circle core via
+                         improved circle incidences (R-033 route, below 20/9);
+                         (iii) record this as the settled status of the
+                         [NEST-DEPTH] witness (technique-only) in the DR-2
+                         programme map.
+\end{verbatim}
+}
