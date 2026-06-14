@@ -19,6 +19,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-041](#r-041) | Sidon-height latitude unions (any radii) E_+<=6N^2 incidence-free (R-033 step 1); non-Sidon residual = open 4-circle incidence | PARTIAL ADVANCE; PROVED Sidon bound; residual = R-033 core; T-030 OPEN; dr2_t030_sidon_decoupling.py 7/7 |
+| [R-040](#r-040) | True sphere L-dependence: distinct-radius circles E_+<=(2 p_max+1)N^2 and empirically O(N^2) even at AP heights; linear is a cylinder artifact | PARTIAL ADVANCE; refined bound PROVED + O(N^2) sphere conjecture (T4); residual = 4-circle incidence -> R-033; T-030 OPEN; dr2_t030_height_multiplicity.py 6/6 |
 | [R-039](#r-039) | Few-circles bound is LINEAR on a sphere: E_+ <= 6(L+1)N^2 (sharpens R-038's quadratic) | PARTIAL ADVANCE; cover-number lower bound doubled to L >= N^delta/12; sphere-essential; T-030 OPEN; dr2_t030_fewcircles_linear.py 6/6 |
 | [R-038](#r-038) | Few-circles (covering-number) bound E_+ <= 3L^2N^2 + [NEST-DEPTH] witness reclassified technique-only | PARTIAL ADVANCE / frontier clarification (T7-within-class = R-021 + Cauchy-Schwarz); T-030 OPEN; dr2_t030_fewcircles.py 8/8 |
 | [R-037](#r-037) | Route 3: the non-lattice remainder is non-load-bearing for B5's admissibility-bo … | STRUCTURAL ANALYSIS, operator-ACCEPTED + ENACTED 2026-06-13 as B5-Route3-NonLattice-NonLoa … |
@@ -59,10 +61,36 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-041"></a>
+### R-041 — Sidon-height latitude unions: E_+ <= 6 N^2 incidence-free (R-033 step 1)
+
+**Statement (one line):** (PROVED) A union of L latitude circles (parallel planes, ANY radii) at heights z_i forming a SIDON set has E_+(Q) <= 6 N^2, incidence-free. Proof: the height equation z_a+z_b=z_c+z_d + Sidon => {z_a,z_b}={z_c,z_d} (plane-index multiset matches); each of the two matched arrangements (i,j,i,j) and (i,j,j,i) contributes E_+(C_i,C_j) resp. corr(C_i,C_j), both <= 3 nu_i nu_j (R-021 / Cauchy-Schwarz with E_+(C)<=3 nu^2); sum over ordered (i,j) gives <= 6 N^2. RADIUS-AGNOSTIC (the Sidon condition is on heights only; contrast R-040's (2 p_max+1)N^2 which needs distinct radii). This isolates the incidence-FREE part of the R-040 sphere O(N^2) conjecture; the NON-Sidon residual is the off-diagonal four-circle in-plane incidence energy #{c_a+c_b=c_c+c_d: c_a in C_i,...,{i,j}!={k,l}}, which does NOT reduce to a bounded 2D concentric-circle energy (that grows with L: 3.2,3.9,5.4,6.0 at L=2,4,6,8) -- a height-aware open incidence problem = the R-033 core. Verified dr2_t030_sidon_decoupling.py 7/7 (decoupling exact 0 mismatched; E_+<=6N^2 to L=8; arrangement decomposition; radius-agnostic equal-radius check; non-Sidon residual 1248 at L=5 AP).
+
+**Proven in:** B5 / dr2-t030-sidon-decoupling v1.1
+
+**Reuse scope:** arbitrary-Q DR-2 (T-030); the incidence-free Sidon-height case; the precise reduction of the sphere O(N^2) conjecture to the off-diagonal four-circle incidence energy (R-033).
+
+**Tier:** PARTIAL ADVANCE / R-033 step 1. Sidon-height bound PROVED (T7-within-class, any radii). Sphere O(N^2) conjecture stays STRONG EVIDENCE (T4, R-040). Does NOT close T-030: arbitrary-Q N^{2+eps} OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Honest corrections recorded (constant 3->6; 2D-concentric reduction refuted).
+
+**Publication target:** S^2 additive-energy paper / T-030
+
+<a id="r-040"></a>
+### R-040 — True sphere L-dependence of the few-circles energy (height-multiplicity refinement)
+
+**Statement (one line):** (PROVED) For L parallel circles with DISTINCT radii at heights z_i (N=|Q|), E_+(Q) <= (2 p_max + 1) N^2, p_max = max_H #{(i,j): z_i+z_j=H} (height additive multiplicity) -- replaces R-039's linear L by p_max (multi-circle Lemma A / R-025 refinement; for m!=0 grouping by plane-pair, the in-plane cross term r^{ij}(M_xy)<=2 by distinct radii, and the M_xy=0 i!=j term vanishes). (EMPIRICAL TRUTH) distinct-radius parallel circles (sphere latitudes have radii sqrt(R-z_i^2), distinct ONLY when z_i^2 pairwise distinct -- z and -z share a radius; the test family 5,10,..,5L is a distinct-radius family, not a sphere-arithmetic family) have E_+/N^2 BOUNDED (~3) EVEN at AP heights (p_max~L): tested to L=12 (Sidon E_+/N^2 2.22-2.60, AP 2.60-2.83) -- E_+ = O(N^2), L-INDEPENDENT; the p_max bound is loose because distinct radii send the colliding plane-pairs to different in-plane sums. (CONTRAST) the LINEAR regime is an EQUAL-radius (cylinder, off-sphere) artifact: same radius + AP heights gives the product C x AP, E_+ ~ 2 L N^2 (E_+/N^2 4.3->22.9, E_+/(LN^2)~1.9 const at L=2..12). Verified dr2_t030_height_multiplicity.py 6/6. CONJECTURE: sphere latitude unions have E_+ = O(N^2 polylog); the residual to a proof is the off-diagonal 4-circle in-plane energy = an incidence problem (-> R-033).
+
+**Proven in:** B5 / dr2-t030-height-multiplicity v1.0
+
+**Reuse scope:** arbitrary-Q DR-2 (T-030); the height-multiplicity refinement of the few-circles bound; the distinct-radius (sphere) vs equal-radius (cylinder) energy dichotomy; motivation for the R-033 incidence route.
+
+**Tier:** PARTIAL ADVANCE / frontier characterisation. Refined bound (2 p_max+1)N^2 PROVED (T7-within-class, distinct radii essential). O(N^2) sphere conjecture STRONG EVIDENCE (T4, scan to L=12 no growth). Does NOT close T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Honest prediction-correction recorded (initial AP->linear prediction refuted by the data for distinct radii).
+
+**Publication target:** S^2 additive-energy paper / T-030
+
 <a id="r-039"></a>
 ### R-039 — Few-circles additive-energy bound is LINEAR on a sphere (sharpens R-038)
 
-**Statement (one line):** For Q on an origin-centred S^2 (N=|Q|) covered by L distinct circles, E_+(Q) <= (2+2L)N^2 + 4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2 for every L>=2. Proof: a multi-circle refinement of Lemma A (R-025) -- for m!=0, a.m=|m|^2/2 iff |a|=|b| (origin-centred sphere), so r(m) <= t_m=|Q cap C_m|, and two distinct circles meet in <=2 points gives t_m <= 2L off the <=L cover sum-circles C_{m_i}, t_{m_i} <= nu_i+2L. SPHERE-ESSENTIAL: off the sphere (|a|!=|b|) r(m)<=t_m FAILS and R-038's quadratic is the correct general-circle bound (a proof-mechanism guard #{m!=0: r(m)>2L}<=L detected an off-sphere cylinder test config and now passes on the genuine integer sphere x^2+y^2+z^2=1105^2). CONSEQUENCE: E_+ >= N^{2+delta} => cover number L >= N^delta/12 (R-038 gave N^{delta/2}/sqrt3; exponent doubled), pinning the open core from two sides with R-033 Cor.1.2 (rich sum-circle count). Verified dr2_t030_fewcircles_linear.py 6/6 (linear bound holds; A6 mechanism passes on S^2; strict improvement over R-038; estimator audit). TIGHTNESS on S^2 NOT claimed (measured E_+ ~ 3N^2, L-independent on rich-latitude unions -- far below the bound; true energy may be O(N^2 polylog) per R-033).
+**Statement (one line):** For Q on an origin-centred S^2 (N=|Q|) covered by L distinct circles, E_+(Q) <= (2+2L)N^2 + 4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2 (the exact bound for every L>=2; the simplified 6(L+1)N^2 form for L>=3). Proof: a multi-circle refinement of Lemma A (R-025) -- for m!=0, a.m=|m|^2/2 iff |a|=|b| (origin-centred sphere), so r(m) <= t_m=|Q cap C_m|, and two distinct circles meet in <=2 points gives t_m <= 2L off the <=L cover sum-circles C_{m_i}, t_{m_i} <= nu_i+2L. SPHERE-ESSENTIAL: off the sphere (|a|!=|b|) r(m)<=t_m FAILS and R-038's quadratic is the correct general-circle bound (a proof-mechanism guard #{m!=0: r(m)>2L}<=L detected an off-sphere cylinder test config and now passes on the genuine integer sphere x^2+y^2+z^2=1105^2). CONSEQUENCE: E_+ >= N^{2+delta} => cover number L >= N^delta/12 (R-038 gave N^{delta/2}/sqrt3; exponent doubled), pinning the open core from two sides with R-033 Cor.1.2 (rich sum-circle count). Verified dr2_t030_fewcircles_linear.py 6/6 (linear bound holds; A6 mechanism passes on S^2; strict improvement over R-038; estimator audit). TIGHTNESS on S^2 NOT claimed (measured E_+ ~ 3N^2, L-independent on rich-latitude unions -- far below the bound; true energy may be O(N^2 polylog) per R-033).
 
 **Proven in:** B5 / dr2-t030-fewcircles-linear v1.0
 

@@ -1,0 +1,154 @@
+% =============================================================================
+% Title: T-030 / R-041 (R-033 step 1): Sidon-height latitude unions obey
+%        E_+ <= 6 N^2 (ANY radii; incidence-free, PROVED); the non-Sidon residual
+%        is the open off-diagonal four-circle in-plane incidence energy (R-033)
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; H-NONLATTICE-REMAINDER-EXCLUDED).
+% Version: v1.1 -- first issued 2026-06-14
+% Status: PARTIAL ADVANCE / R-033 step 1. PROVED: a union of L latitude circles
+%   (parallel planes, ANY radii) at heights z_i forming a SIDON set has
+%   E_+ <= 6 N^2 -- incidence-free, via height decoupling + R-021. This isolates
+%   the incidence-FREE part of the sphere O(N^2) question (R-040): the residual
+%   is exactly the NON-Sidon (additively structured) heights, whose mismatched-
+%   height quadruples are the off-diagonal four-circle in-plane incidence energy
+%   = the open R-033 core. RADIUS-AGNOSTIC (contrast R-040's (2p_max+1)N^2, which
+%   needs distinct radii). No tier/gate/hypothesis flip; B5 stays
+%   T7-SCOPE_{admissibility-bounded}. dr2_t030_sidon_decoupling.py 7/7 PASS.
+%
+% Revision history (cumulative):
+%   v1.1 (2026-06-14) first issue (numbered v1.1 to match the 7/7 script after the
+%        constant correction 3->6 and the radius-agnostic A7 addition). Honest
+%        record: an intermediate draft claimed the constant 3N^2; the verification
+%        script's decomposition showed BOTH index-arrangements (i,j,i,j) and
+%        (i,j,j,i) contribute, giving 6N^2; and an intermediate "reduce to 2D
+%        concentric energy" claim was refuted by the data (the 2D concentric
+%        energy GROWS with L), so the residual is kept height-aware.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Operator direction: after the sphere $L$-dependence (R-040), proceed to R-033 --
+bound the off-diagonal four-circle in-plane incidence energy below $N^{9/4}$, which
+would lift the sphere $E_+=O(N^2)$ conjecture (R-040) to a theorem. This note is
+step~1: it PROVES the incidence-FREE part (Sidon heights) and pins the residual
+exactly. Scope: parallel circles (latitudes); the H-NONLATTICE-REMAINDER frontier.
+
+\section*{2. Theorem: Sidon heights give $E_+\le 6N^2$ (any radii)}
+
+\begin{theorem}[Sidon-height bound]
+Let $Q=\bigcup_{i=1}^L(C_i\times\{z_i\})$ be a union of circles in parallel planes
+at heights $z_i$ (ANY radii $\rho_i$), $N=|Q|$, with the heights $\{z_i\}$ a SIDON
+set (i.e.\ $z_a+z_b=z_c+z_d\Rightarrow\{z_a,z_b\}=\{z_c,z_d\}$). Then
+\[
+E_+(Q)\;\le\;6N^2.
+\]
+\end{theorem}
+\emph{Proof.} In $E_+=\#\{(a,b,c,d):a+b=c+d\}$ the height coordinate gives
+$z_a+z_b=z_c+z_d$, so by the Sidon property the height multiset matches,
+$\{z_a,z_b\}=\{z_c,z_d\}$, hence the plane-index multiset $\{i_a,i_b\}=\{i_c,i_d\}$.
+Indexing by the ordered pair $(i_a,i_b)$, the matched $(i_c,i_d)$ is one of
+$(i_a,i_b),(i_b,i_a)$ -- at most two arrangements. The in-plane count of each is
+either the rectangular energy $E_+(C_i,C_j)$ (arrangement $(i,j,i,j)$) or the
+difference-correlation $\mathrm{corr}(C_i,C_j)=\sum_v d_{C_i}(v)d_{C_j}(v)$
+(arrangement $(i,j,j,i)$); both are $\le3\nu_i\nu_j$ -- the first by R-021
+($E_+$ of two circles), the second by Cauchy--Schwarz with $E_+(C)\le3\nu^2$.
+Summing over ordered $(i,j)$,
+\[
+E_+(Q)\;\le\;\sum_{i,j}\big[E_+(C_i,C_j)+\mathrm{corr}(C_i,C_j)\big]
+\;\le\;6\sum_{i,j}\nu_i\nu_j\;=\;6N^2. \qquad\square
+\]
+The bound uses the Sidon property of the HEIGHTS only; the radii are arbitrary
+(machine: assert A7, equal radius $25$ + Sidon heights still gives $E_+\le6N^2$).
+Measured $E_+/N^2\le2.6$ on the tested families (assert A2); the proved constant
+$6$ allows for both arrangements. The Sidon-decoupling step is verified exactly:
+zero quadruples with $a+b=c+d$ but mismatched height pair (assert A1).
+
+\section*{3. The residual is the open four-circle incidence energy (R-033)}
+
+For NON-Sidon heights (e.g.\ an arithmetic progression) the decoupling fails:
+there are $a+b=c+d$ with $\{z_a,z_b\}\ne\{z_c,z_d\}$ (assert A4: $1248$ such
+quadruples at $L=5$, AP heights). These mismatched-height quadruples are the
+off-diagonal four-circle in-plane incidences
+\[
+\#\{c_a+c_b=c_c+c_d:\ c_a\in C_i,\,c_b\in C_j,\,c_c\in C_k,\,c_d\in C_l\},
+\quad\{i,j\}\ne\{k,l\},
+\]
+and they do NOT reduce to a single bounded $2$-D concentric-circle energy: that
+$2$-D energy GROWS with $L$ (assert A5: $E_+^{2\mathrm D}/N^2=3.2,3.9,5.4,6.0$ for
+$L=2,4,6,8$), because the $3$-D heights suppress collisions that the $2$-D
+projection overcounts. Hence the residual is genuinely height-aware: bounding it
+by $O(N^2\log^{O(1)}N)$ (or below the current $N^{9/4}$, R-033) is exactly the
+open circle-incidence problem, and closing it lifts the R-040 sphere conjecture to
+a theorem. \textbf{This is the precise next target (R-033).}
+
+\section*{4. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The constant is $3N^2$, not $6N^2$.''} CORRECTED in this
+note: an intermediate draft used $3N^2$ via a single-arrangement identity; the
+verification decomposition shows BOTH $(i,j,i,j)$ and $(i,j,j,i)$ contribute, so
+the proved constant is $6$ (assert A3: $E_+\le\sum[E_+(C_i,C_j)+\mathrm{corr}]\le6N^2$).
+The measured value $\le2.6N^2$ is well inside.
+\item[($\beta$)] \emph{``The residual reduces to the 2-D concentric energy.''}
+REFUTED by the data and recorded: the 2-D concentric energy grows with $L$
+(assert A5), so it is an overcount; the genuine residual keeps the height
+structure. No false reduction is claimed.
+\item[($\gamma$)] \emph{``Does this need distinct radii like R-040?''} NO: the
+Sidon decoupling is a height property; assert A7 confirms equal radii $+$ Sidon
+heights still give $E_+\le6N^2$. This is strictly cleaner than R-040's
+distinct-radius requirement.
+\item[($\delta$)] \emph{``Is this a closure of T-030?''} No: only the Sidon-height
+case is closed (incidence-free); the general (non-Sidon) case is the open
+four-circle incidence energy. T-030 stays OPEN; B5 unchanged.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} \emph{Decoupling.} $0$ mismatched
+quadruples for Sidon heights (assert A1) -- the proof's load-bearing step.
+\emph{Bound.} $E_+\le6N^2$ on all Sidon configs to $L=8$ (assert A2), and
+$E_+\le\sum[E_+(C_i,C_j)+\mathrm{corr}]\le6N^2$ exactly at $L=5$ (assert A3).
+\emph{Radius-agnostic.} equal radius $+$ Sidon $\Rightarrow E_+/N^2=$ measured
+$\le$ bound (assert A7). \emph{Residual nonzero.} $1248$ mismatched quadruples at
+$L=5$ AP (assert A4). \emph{Reproducibility.} deterministic exact-integer; $7/7$
+asserts, exit $0$.
+
+\section*{5. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-041 (Sidon-height bound; R-033 step 1) / T-030 frontier
+Precise statement:       L latitude circles (parallel planes, ANY radii) at
+                         heights z_i forming a SIDON set => E_+(Q) <= 6 N^2,
+                         incidence-free (height decoupling: {z_a,z_b}={z_c,z_d};
+                         two arrangements (i,j,i,j),(i,j,j,i), each <= 3 nu_i nu_j
+                         by R-021 / Cauchy-Schwarz). RADIUS-AGNOSTIC. Non-Sidon
+                         residual = off-diagonal four-circle in-plane incidence
+                         energy (does NOT reduce to a bounded 2-D concentric
+                         energy, which grows with L); that is the open R-033 core.
+Scope:                   parallel circles (latitudes); T-030 (Q in S^2;
+                         H-NONLATTICE-REMAINDER). Not load-bearing for C_full head.
+Evidence grade:          PROVED (T7-within-class: Sidon heights, any radii).
+                         Isolates the incidence-free part of the R-040 sphere
+                         O(N^2) conjecture (which stays STRONG EVIDENCE T4). Does
+                         NOT close T-030: arbitrary-Q N^{2+eps} OPEN (N^{9/4},
+                         R-033).
+Reproduction command:    python3 codes/vacuum/dr2_t030_sidon_decoupling.py
+Expected output:         7/7 asserts PASS, exit 0; JSON at claims/
+                         B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-sidon-
+                         decoupling/result.json
+Falsifier:               a Sidon-height latitude union with E_+ > 6 N^2 (refutes
+                         the theorem); a Sidon-height config with a mismatched-
+                         height quadruple (refutes the decoupling). Both machine-
+                         checked false.
+Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
+                         B5 stays T7-SCOPE_{admissibility-bounded} given A1;
+                         T-030 OPEN.
+No-overclaim statement:  Only the Sidon-height case is proved (incidence-free,
+                         constant 6). The general (non-Sidon) case is the open
+                         four-circle incidence energy; the 2-D concentric
+                         reduction was refuted (it grows with L) and is not
+                         claimed. Builds on R-021/R-025/R-040.
+Next required action:    R-033: bound the off-diagonal four-circle in-plane
+                         incidence energy by O(N^2 polylog) or below N^{9/4} ->
+                         lifts the sphere O(N^2) conjecture to a theorem.
+\end{verbatim}
+}

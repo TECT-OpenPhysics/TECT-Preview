@@ -9,7 +9,7 @@
 % Status: PARTIAL ADVANCE / sharpening of R-038. (1) THEOREM (sphere): Q subset
 %   S^2 (origin-centred) covered by L distinct circles => E_+(Q) <= (2+2L)N^2 +
 %   4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2
-%   for every L>=2. Proof: a multi-circle refinement of Lemma A (R-025) via
+%   for every L>=2 (exact bound; the simplified 6(L+1)N^2 form for L>=3). Proof: a multi-circle refinement of Lemma A (R-025) via
 %   sum-circle occupancy t_m <= 2L off the <=L cover sum-circles. (2) The bound
 %   is SPHERE-ESSENTIAL: r(m)<=t_m needs |a|=|b| (origin-centred sphere); off the
 %   sphere it FAILS and R-038's quadratic is the correct general-circle bound (a
@@ -49,7 +49,7 @@ NOT load-bearing for the published $C_{\rm full}$ head.
 Let $Q$ lie on an origin-centred sphere $S^2$, $N=|Q|$, and be covered by $L$
 distinct circles. Then
 \[
-\boxed{\,E_+(Q)\;\le\;(2+2L)N^2+4LN+4L^3\;\le\;6(L+1)N^2\quad(L\le N).\,}
+E_+(Q)\;\le\;(2+2L)N^2+4LN+4L^3\;\le\;6(L+1)N^2\quad(L\le N).
 \]
 \end{theorem}
 \emph{Proof.} Write $E_+=r(0)^2+\sum_{m\ne0}r(m)^2$, $r(m)=\#\{(a,b)\in Q^2:a+b=m\}$.
@@ -71,8 +71,9 @@ using $\sum_{m\ne0}r(m)\le N^2$, $\sum_i\nu_i^2\le(\sum_i\nu_i)^2=N^2$,
 $\sum_i\nu_i=N$, and $|\{i\}|=L$. Adding $r(0)^2\le N^2$ gives the claim;
 $4LN\le4N^2$ and $4L^3\le4LN^2$ for $L\le N$ yield $6(L+1)N^2$. $\square$
 
-This strictly improves R-038 for every $L\ge2$ (e.g.\ $L=8$: $6(L+1)N^2=54N^2$ vs
-$3L^2N^2=192N^2$). The per-pair R-021 input is replaced by the sharper
+The exact bound improves R-038 for every $L\ge2$ (any $N\ge4$); the simplified
+$6(L+1)N^2$ form improves $3L^2N^2$ for $L\ge3$ (e.g.\ $L=8$: $54N^2$ vs $192N^2$;
+at $L=2$ via the exact $6N^2+8N+32<12N^2$). The per-pair R-021 input is replaced by the sharper
 sum-circle occupancy $t_m\le2L$, which is the multi-circle generalisation of
 Lemma~A (R-025: $E_+\le(1+T')N^2$, the single-richest-sum-circle case).
 
@@ -80,7 +81,7 @@ Lemma~A (R-025: $E_+\le(1+T')N^2$, the single-richest-sum-circle case).
 
 The identity $a\cdot m=|m|^2/2\iff|a|=|b|$ is the load-bearing step, and it
 requires all points equidistant from the centre. \textbf{Off the sphere the
-linear bound is false}: a same-radius latitude \emph{stack} (circles of equal
+linear bound is not claimed (the proof mechanism $r(m)\le t_m$ fails)}: a same-radius latitude \emph{stack} (circles of equal
 radius at distinct heights -- a cylinder, $|a|\ne|b|$) has product/AP structure
 with $r(m)>t_m$ for vertical $m$, and indeed $E_+\sim 2LN^2$ there is consistent
 with linearity but the \emph{proof} does not apply. The repository's correct
@@ -158,7 +159,7 @@ Precise statement:       Q on an origin-centred S^2, covered by L distinct
                          (vs R-038's N^{delta/2}/sqrt3; exponent doubled).
 Scope:                   T-030 (arbitrary finite Q in S^2; H-NONLATTICE-REMAINDER).
                          NOT load-bearing for the C_full head. Off the sphere the
-                         linear bound is FALSE; R-038's quadratic is the general
+                         linear bound is NOT CLAIMED (proof mechanism fails); R-038's quadratic is the guaranteed general-circle
                          bound there.
 Evidence grade:          PARTIAL ADVANCE. Theorem T7-WITHIN-CLASS (elementary,
                          sphere). Strictly improves R-038. Tightness on S^2 NOT
@@ -172,8 +173,8 @@ Expected output:         6/6 asserts PASS, exit 0; JSON at
 Falsifier:               (a) Q on L distinct circles of a sphere with
                          E_+ > 6(L+1)N^2; (b) #{m!=0 : r(m) > 2L} > L on a genuine
                          sphere config (would break the occupancy split). Both
-                         machine-checked false on S^2; (a) is expected to FAIL
-                         off the sphere (cylinder), which is why the bound is
+                         machine-checked false on S^2; the proof mechanism r(m)<=t_m fails
+                         off the sphere, but the cylinder STILL SATISFIES the bound (no counterexample); the bound is
                          scoped to S^2.
 Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
                          B5 stays T7-SCOPE_{admissibility-bounded} given A1;

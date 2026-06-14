@@ -1,0 +1,195 @@
+% =============================================================================
+% Title: T-030 / R-040: the true sphere L-dependence of the few-circles additive
+%        energy -- distinct-radius parallel circles obey E_+ <= (2 p_max + 1) N^2
+%        and EMPIRICALLY E_+ = O(N^2) (L-independent) even at AP heights; the
+%        linear-L regime is an equal-radius (cylinder, off-sphere) artifact
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; H-NONLATTICE-REMAINDER-EXCLUDED).
+% Version: v1.0 -- first issued 2026-06-14
+% Status: PARTIAL ADVANCE / frontier characterisation. (1) PROVED refined bound:
+%   for L parallel circles with DISTINCT radii at heights z_i,
+%   E_+ <= (2 p_max + 1) N^2, p_max = max_H #{(i,j): z_i+z_j=H} (height additive
+%   multiplicity) -- replaces R-039's linear L by p_max. (2) EMPIRICAL TRUTH:
+%   distinct-radius parallel circles (sphere latitudes have radii sqrt(R-z_i^2),
+%   distinct ONLY when the z_i^2 are pairwise distinct -- z and -z share a radius)
+%   have E_+/N^2 BOUNDED (~3) even at AP heights (p_max ~ L); the p_max bound is
+%   loose and the genuine behaviour is O(N^2), L-INDEPENDENT (STRONG EVIDENCE /
+%   conjecture). (3) The LINEAR regime is an EQUAL-radius (cylinder, off-sphere)
+%   artifact: same radius + AP heights gives E_+ ~ 2 L N^2 (verified contrast).
+%   The conjecture's residual = the off-diagonal 4-circle in-plane energy, an
+%   incidence problem -> R-033. No tier/gate/hypothesis flip; B5 stays
+%   T7-SCOPE_{admissibility-bounded}. dr2_t030_height_multiplicity.py 6/6 PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-14) first issue. Operator direction: determine the true sphere
+%        L-dependence, then proceed to R-033. Honest prediction-correction record:
+%        the first build PREDICTED AP heights => linear E_+; the data REFUTED this
+%        for distinct radii (E_+/N^2 stayed ~3 to L=12 while p_max grew to 12), so
+%        the deliverable was corrected to "distinct radii suppress to O(N^2); the
+%        linear regime is equal-radius-only", confirmed by the cylinder contrast.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+\textbf{Status.} The bound $E_+(Q)\le(2p_{\max}+1)N^2$ is PROVED for parallel circles with pairwise DISTINCT radii (T7 within that class). For genuine sphere latitudes it applies to subfamilies with $z_i^2$ pairwise distinct (on a sphere $z$ and $-z$ share a radius, so the full latitude union is not automatically distinct-radius). The broader sphere-latitude conjecture $E_+(Q)\lesssim N^2\log^{O(1)}N$ is STRONG EVIDENCE (T4), not a theorem; the test radii $5,10,\dots,5L$ are a distinct-radius test family, not an arithmetic sphere family ($\rho_i^2+z_i^2=R$). The remaining obstruction is the off-diagonal four-circle in-plane incidence energy, to be attacked in R-033.
+
+R-039 proved $E_+\le 6(L+1)N^2$ (linear in the circle-cover number $L$) on a
+sphere. The question (operator direction) is the \emph{true} $L$-dependence: is
+$E_+=O(N^2\,\mathrm{polylog})$ for circle unions, or is the linear $L$ real? We
+answer it: for distinct-radius parallel circles the linear $L$ is replaced by the
+height additive multiplicity $p_{\max}$ (proved), and empirically the energy is
+$O(N^2)$ \emph{regardless} of $p_{\max}$; the linear regime occurs only for
+\emph{equal} radii (a cylinder, off the sphere). Scope: parallel circles (a common
+axis; ``latitudes''); the H-NONLATTICE-REMAINDER frontier; not load-bearing for
+the $C_{\rm full}$ head.
+
+\section*{2. The refined bound (proved): $p_{\max}$ replaces $L$}
+
+\begin{theorem}[height-multiplicity bound, distinct-radius parallel circles]
+Let $Q$ be a union of $L$ circles in parallel planes (heights $z_1,\dots,z_L$) with
+\emph{distinct} radii $\rho_i$, $N=|Q|$. Then
+\[
+E_+(Q)\;\le\;(2\,p_{\max}+1)\,N^2,\qquad
+p_{\max}:=\max_H\#\{(i,j):z_i+z_j=H\}.
+\]
+\end{theorem}
+\emph{Proof.} Write $m=(M_{xy},M_z)$, $a=(c_a,z_a)$, $b=(c_b,z_b)$. Then $a+b=m$
+iff $z_a+z_b=M_z$ and $c_a+c_b=M_{xy}$. Grouping by the planes $(i,j)$ of $(a,b)$,
+$r(m)=\sum_{(i,j):z_i+z_j=M_z} r^{ij}(M_{xy})$, $r^{ij}(M_{xy})=\#\{(c_a,c_b)\in
+C_i\times C_j:c_a+c_b=M_{xy}\}$. For fixed $M_{xy}$, $c_a\in C_i\cap(M_{xy}-C_j)$:
+two circles of radii $\rho_i,\rho_j$. For $i\ne j$ (distinct radii) they are
+distinct, so $r^{ij}(M_{xy})\le2$ for \emph{all} $M_{xy}$, and $r^{ij}(0)=0$
+(an antipode of a radius-$\rho_i$ point has radius $\rho_i\ne\rho_j$). For $i=j$:
+$r^{ii}(M_{xy})\le2$ for $M_{xy}\ne0$ and $r^{ii}(0)=\nu_i$. Let
+$p(M_z)=\#\{(i,j):z_i+z_j=M_z\}$. Then for $M_{xy}\ne0$, $r(m)\le2p(M_z)$, and
+\[
+\sum_{M_{xy}\ne0}\!\!r(m)^2\le 2p(M_z)\!\!\sum_{M_{xy}\ne0}\!\!r(m)
+=2p(M_z)\!\!\sum_{(i,j)\in P(M_z)}\!\!\nu_i\nu_j,
+\]
+so summing over $M_z$ gives $\le 2p_{\max}\sum_{i,j}\nu_i\nu_j=2p_{\max}N^2$. The
+$M_{xy}=0$ slice receives only the diagonal $i=j$ (distinct radii kill $i\ne j$):
+$r((0,2z_i))=\nu_i$, so $\sum_{M_z}r((0,M_z))^2=\sum_i\nu_i^2\le N^2$. Adding,
+$E_+\le(2p_{\max}+1)N^2$. $\square$
+
+This is the multi-circle refinement of Lemma~A (R-025, the single-$T'$ case) and
+strictly sharper than R-039's $6(L+1)N^2$ whenever $p_{\max}<3(L+1)/(2)-\tfrac12$,
+in particular for sub-AP height structure (machine: assert A5, $p_{\max}\le2$ for
+Sidon heights).
+
+\section*{3. The empirical truth: distinct radii force $O(N^2)$}
+
+The bound's $p_{\max}$ is itself loose. With distinct radii (the sphere case:
+latitudes have radii $\sqrt{R-z_i^2}$ -- equal for $z_i$ and $-z_i$, hence distinct ONLY when the $z_i^2$ are pairwise distinct), the $p(M_z)$
+colliding plane-pairs land on \emph{different} in-plane sums $M_{xy}$ (distinct
+radii give distinct Minkowski annuli), so the energy never concentrates. Exact
+integer experiments (distinct rich radii $5,10,\dots,5L$; assert A2, A3):
+\[
+\begin{array}{l|ccccccccc}
+L & 2&3&4&5&6&7&8&10&12\\\hline
+\text{Sidon heights: } p_{\max} & 2&2&2&2&2&2&2&2&2\\
+\quad E_+/N^2 & 2.60&2.45&2.38&2.43&2.38&2.33&2.29&2.26&2.22\\
+\text{AP heights: } p_{\max} & 2&3&4&5&6&7&8&10&12\\
+\quad E_+/N^2 & 2.60&2.48&2.52&2.70&2.78&2.72&2.74&2.77&2.83
+\end{array}
+\]
+Both stay $\sim3$, \emph{independent of $L$ and of $p_{\max}$}: distinct radii
+suppress to $O(N^2)$ even at maximal height multiplicity. The contrast is decisive
+(assert A4): \emph{equal}-radius circles (a cylinder) at AP heights give
+$E_+/N^2=4.3,6.0,7.8,\dots,22.9$ for $L=2,\dots,12$ with $E_+/(LN^2)\approx1.9$
+constant -- i.e.\ $E_+\sim2LN^2$, linear. The product structure $C\times\mathrm{AP}$
+(equal radius makes every in-plane sum coincide) is what creates the linear $L$;
+the full cylinder mechanism (all $L$ circles sharing ONE radius) cannot occur for genuine sphere latitudes, where at most two latitudes ($\pm z$) share a radius; the tested linear mechanism is thus absent for sphere latitude subfamilies with $z_i^2$ distinct.
+
+\section*{4. Conjecture and the residual (an incidence problem $\to$ R-033)}
+
+\begin{conjecture}[sphere circle-union energy]
+For $Q\subset S^2$ a union of $L$ latitude circles, $E_+(Q)\lesssim N^2\log^{O(1)}N$,
+$L$-independent.
+\end{conjecture}
+The evidence is the data of Sec.~3 (STRONG EVIDENCE T4). The residual obstruction
+to a proof is the \emph{off-diagonal $4$-circle in-plane energy}
+$\#\{c_a+c_b=c_c+c_d:c_a\in C_i,c_b\in C_j,c_c\in C_k,c_d\in C_l\}$ for distinct-
+radius circles: the diagonal $(i,j)=(k,l)$ already gives $O(N^2)$ (R-021 in-plane),
+and bounding the genuinely-distinct $4$-tuple contribution by $O(N^2\,\mathrm{polylog})$
+is a circle-incidence statement -- exactly the technology that R-033 (the $N^{9/4}$
+incidence route) addresses. \textbf{Falsification gate (pre-registered):} a
+distinct-radius parallel-circle family with $E_+/N^2\to\infty$ as $L\to\infty$ at
+fixed per-circle richness would refute the conjecture; the scan to $L=12$ shows no
+growth (worst $2.83$).
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The refined bound is just R-039/Lemma~A with $p_{\max}$.''}
+VALID: it is the height-multiplicity refinement (the $i\ne j$ in-plane term is
+$\le2$ by distinct radii). The new content is (i) the clean $(2p_{\max}+1)N^2$
+form, (ii) the empirical $O(N^2)$ truth and (iii) the equal-vs-distinct-radius
+dichotomy that explains where the linear $L$ comes from.
+\item[($\beta$)] \emph{``AP-distinct $O(N^2)$ is a small-$L$ illusion.''}
+ADDRESSED: tested to $L=12$ ($p_{\max}=12$); $E_+/N^2$ flat at $2.6$--$2.83$. The
+equal-radius cylinder over the SAME $L$-range grows to $22.9$, so the flatness is
+a genuine distinct-radius effect, not a small-$L$ artefact.
+\item[($\gamma$)] \emph{``$O(N^2)$ is asserted, not proved.''} UPHELD: the
+conjecture is STRONG EVIDENCE, not a theorem; the proved statement is only
+$(2p_{\max}+1)N^2$. The residual is named (off-diagonal $4$-circle in-plane
+energy) and routed to the incidence programme R-033.
+\item[($\delta$)] \emph{Prediction-correction record.} The first build predicted
+AP heights $\Rightarrow$ linear $E_+$; the data refuted it for distinct radii. The
+note records the correction rather than hiding it; the surviving claim is exactly
+what the data supports.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} \emph{Bound.} $E_+\le(2p_{\max}+1)N^2$
+on all distinct-radius configs (assert A1). \emph{Dichotomy.} distinct-radius AP
+$E_+/N^2\le2.83$ vs equal-radius AP $E_+/N^2=22.9$ at $L=12$ -- a $8\times$
+separation isolating the equal-radius mechanism. \emph{Sharper.} $(2p_{\max}+1)N^2<6(L+1)N^2$
+for Sidon, $L\ge3$ (assert A5). \emph{Estimator.} vectorised $E_+=$ brute $O(N^4)$
+($396$, assert A6). \emph{Reproducibility.} deterministic exact-integer; $6/6$
+asserts, exit $0$.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-040 (true sphere L-dependence; height-multiplicity
+                         refinement) / T-030 frontier
+Precise statement:       (proved) L parallel circles, DISTINCT radii, heights z_i
+                         => E_+(Q) <= (2 p_max + 1) N^2, p_max = max_H
+                         #{(i,j): z_i+z_j=H}. Replaces R-039's linear L by the
+                         height additive multiplicity. (empirical) distinct radii
+                         (distinct-radius parallel circles; sphere latitudes
+                         with z_i^2 pairwise distinct) => E_+/N^2 BOUNDED (~3) even at AP
+                         heights (p_max~L): E_+ = O(N^2), L-independent. The
+                         linear-L regime is an EQUAL-radius (cylinder, off-sphere)
+                         artifact (E_+ ~ 2 L N^2, product C x AP).
+Scope:                   parallel circles (latitudes); T-030 (Q in S^2;
+                         H-NONLATTICE-REMAINDER). Not load-bearing for C_full head.
+Evidence grade:          Refined bound (2 p_max+1)N^2: PROVED (T7-within-class,
+                         elementary; distinct radii essential). Conjecture
+                         E_+=O(N^2 polylog) for sphere latitude unions: STRONG
+                         EVIDENCE (T4), scan to L=12 no growth. Does NOT close
+                         T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4},
+                         R-033).
+Reproduction command:    python3 codes/vacuum/dr2_t030_height_multiplicity.py
+Expected output:         6/6 asserts PASS, exit 0; JSON at claims/
+                         B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-height-
+                         multiplicity/result.json
+Falsifier:               a distinct-radius parallel-circle family with E_+/N^2 ->
+                         infinity as L grows at fixed per-circle richness (refutes
+                         the O(N^2) conjecture); a distinct-radius config with
+                         E_+ > (2 p_max+1) N^2 (refutes the theorem). Both
+                         machine-checked false to L=12.
+Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
+                         B5 stays T7-SCOPE_{admissibility-bounded} given A1;
+                         T-030 OPEN.
+No-overclaim statement:  The O(N^2) sphere behaviour is STRONG EVIDENCE, not a
+                         theorem; only (2 p_max+1)N^2 is proved. The residual
+                         (off-diagonal 4-circle in-plane energy) is an incidence
+                         problem routed to R-033. Distinct radii are essential;
+                         the cylinder (equal radii) genuinely is linear.
+Next required action:    Proceed to R-033: bound the off-diagonal 4-circle
+                         in-plane energy / improve circle incidences below
+                         N^{9/4}, which would both prove the O(N^2) sphere
+                         conjecture and push the arbitrary-Q T-030 record.
+\end{verbatim}
+}
