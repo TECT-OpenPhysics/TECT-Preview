@@ -6,7 +6,7 @@
 
 Generated: 2026-06-14
 
-**1081 artefacts** · superseded versions kept: 111 · machine-readable twin: `verification/catalog.json`
+**1084 artefacts** · superseded versions kept: 111 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -80,7 +80,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B4-MASS-GAP/LINEAGE.md` | B4-MASS-GAP | — | — | — | ACTIVE | `fd5ef53c698d` |
 | `claims/B4-MASS-GAP/claim.md` | B4-MASS-GAP | — | — | — | ACTIVE | `aa64c40953f6` |
 | `claims/B4-MASS-GAP/status.json` | B4-MASS-GAP | — | — | — | ACTIVE | `fb0abca541cb` |
-| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `460c95f95c3e` |
+| `claims/B5-BEYOND-LAYER-BOUND/LINEAGE.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0740b4dbfa7d` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T6Conditional-260612/MANIFEST.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `50866bded712` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T6Conditional-260612/README.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `950a13a48401` |
 | `claims/B5-BEYOND-LAYER-BOUND/bundle/B5-BeyondLayer-T6Conditional-260612/archive/legacy/scripts/Math400_AddE_brazovskii_one_loop.py` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `33bf54023ec9` |
@@ -514,6 +514,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-bd-discrete-reproof-attempt-260613-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-13 | 2026-06-13 | v1.0 | ACTIVE | `cc75757e1f92` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-bd-discrete-reproof-attempt-260613-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-13 | 2026-06-13 | v1.0 | SUPERSEDED | `f01db25f8c8c` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-fewcircles-260614-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-14 | 2026-06-14 | v1.0 | ACTIVE | `6d893017f933` |
+| `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-fewcircles-linear-260614-v1.0.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-14 | 2026-06-14 | v1.0 | ACTIVE | `4255647cea45` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-frontier-consolidation-260612-260612-v1.1.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `de3b17a46351` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-frontier-consolidation-260612-260612-v1.1.tex.txt` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `5bfbb200ff98` |
 | `claims/B5-BEYOND-LAYER-BOUND/DR-2/notes/dr2-t030-frontier-consolidation-260612-v1.0.pdf` | B5-BEYOND-LAYER-BOUND | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `78889197b192` |
@@ -931,6 +932,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260613-dr2-t030-bd-discrete-reproof/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `44a870af371d` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260613-dr2-t030-r2-bookkeeping/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `30d7af83a2bb` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260613-dr2-t030-route3-nonloadbearing/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `7b3512273438` |
+| `claims/B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-fewcircles-linear/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0095804c9434` |
 | `claims/B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-fewcircles/result.json` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `68961fab4eec` |
 
 ## Domain codes
@@ -952,6 +954,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/vacuum/dr2_t030_bd_discrete_reproof.py` | — | — | — | — | ACTIVE | `18f502c684ff` |
 | `codes/vacuum/dr2_t030_dyadic_richness.py` | — | 2026-06-12 | — | v1.1.0 | ACTIVE | `7a2d36edbbaa` |
 | `codes/vacuum/dr2_t030_fewcircles.py` | — | 2026-06-14 | — | v1.0.0 | ACTIVE | `b3b838d173b3` |
+| `codes/vacuum/dr2_t030_fewcircles_linear.py` | — | 2026-06-14 | — | v1.0.0 | ACTIVE | `a2b50a922df7` |
 | `codes/vacuum/dr2_t030_r1_bridge.py` | — | 2026-06-12 | — | v1.0.0 | ACTIVE | `86f6173b9e69` |
 | `codes/vacuum/dr2_t030_r2_bookkeeping.py` | — | — | — | — | ACTIVE | `f08a35de7557` |
 | `codes/vacuum/dr2_t030_route3_nonloadbearing.py` | — | — | — | — | ACTIVE | `d7500c84a1f1` |
@@ -1030,7 +1033,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/README.md` | — | — | — | — | ACTIVE | `5d7efd224fda` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/build_catalog.py` | — | 2026-06-05 | 2026-06-05 | v1.1.3 | ACTIVE | `a035f2cddea2` |
-| `verification/scripts/build_dossier.py` | — | — | — | v1.0.0 | ACTIVE | `2cf807f35a75` |
+| `verification/scripts/build_dossier.py` | — | — | — | v1.0.0 | ACTIVE | `84d2cc1512e1` |
 | `verification/scripts/build_index.py` | — | — | — | v1.0.1 | ACTIVE | `5b5cf548e8e3` |
 | `verification/scripts/build_lineage.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `50c360a1d1f2` |
 | `verification/scripts/build_note_pdf.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `833576292f13` |
@@ -1074,9 +1077,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `7d4a48528bd7` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
-| `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `0b384c2c3891` |
+| `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `c0c72f8e9f28` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `c7dd05c14854` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `734a14e9a341` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `1c4205fbd966` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `68c38377a03a` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83df3b726c79` |
@@ -1106,12 +1109,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `24e209f93590` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `0eea8ea5a055` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `41667a680590` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `3e15d860b580` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `14f7f5b27226` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `bba354b86fcd` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `c6fd8ea1f7f4` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
@@ -1125,7 +1128,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `b11516ecbae4` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `d3a74b2210bc` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1159,11 +1162,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `076e34d97cae` |
-| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `bbc80a1be214` |
-| `theory/sectors/C.md` | — | — | — | — | ACTIVE | `8786e2b47fbf` |
-| `theory/sectors/D.md` | — | — | — | — | ACTIVE | `da1ca985d107` |
-| `theory/sectors/E.md` | — | — | — | — | ACTIVE | `d9b9b6fc53ed` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `b4b9bd3791a4` |
+| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `567925c95b8b` |
+| `theory/sectors/C.md` | — | — | — | — | ACTIVE | `f9e326f11f33` |
+| `theory/sectors/D.md` | — | — | — | — | ACTIVE | `470bb268ece4` |
+| `theory/sectors/E.md` | — | — | — | — | ACTIVE | `6b9decd15783` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `c7ffe07b063c` |
 | `todo/todo.json` | — | — | — | — | ACTIVE | `b108832b9a6c` |
 

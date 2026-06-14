@@ -28,7 +28,9 @@ _None linked to this sector._
 
 ## Negative results (trust assets)
 
-_None referencing this sector's claims._
+| Tag | Branch / claim | Failure mode |
+|---|---|---|
+| NG-2026-legacy-classical-hbar | classical-field-theoretic derivation of $\hbar$ (8 routes) | each route fails (4 Math59 + 3 Math59-v3 + 1 R5) |
 
 ---
 

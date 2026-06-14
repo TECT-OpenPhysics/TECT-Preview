@@ -1,0 +1,191 @@
+% =============================================================================
+% Title: T-030 / R-039: the few-circles additive-energy bound is LINEAR in the
+%        cover number on a sphere -- E_+(Q) <= 6(L+1)N^2 -- strictly improving
+%        R-038's quadratic 3 L^2 N^2; the cover-number lower bound on any
+%        E_+ >= N^{2+delta} extremizer is sharpened to L >= N^delta/12
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; H-NONLATTICE-REMAINDER-EXCLUDED.
+%        NOT load-bearing for the published C_full head, Lemma 2 caps T'<=10.)
+% Version: v1.0 -- first issued 2026-06-14
+% Status: PARTIAL ADVANCE / sharpening of R-038. (1) THEOREM (sphere): Q subset
+%   S^2 (origin-centred) covered by L distinct circles => E_+(Q) <= (2+2L)N^2 +
+%   4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2
+%   for every L>=2. Proof: a multi-circle refinement of Lemma A (R-025) via
+%   sum-circle occupancy t_m <= 2L off the <=L cover sum-circles. (2) The bound
+%   is SPHERE-ESSENTIAL: r(m)<=t_m needs |a|=|b| (origin-centred sphere); off the
+%   sphere it FAILS and R-038's quadratic is the correct general-circle bound (a
+%   proof-mechanism guard detected an earlier off-sphere test config). (3)
+%   Consequence: any E_+ >= N^{2+delta} family needs cover number L >= N^delta/12
+%   (was N^{delta/2}/sqrt3 from R-038) -- the exponent doubles, sharpening the
+%   open core (jointly with R-033 Cor.1.2's rich-sum-circle count). TIGHTNESS on
+%   S^2 NOT claimed (measured E_+ ~ 3N^2, L-independent, on rich-latitude unions
+%   -- far below the bound). Does NOT close T-030: arbitrary-Q N^{2+eps} stays
+%   OPEN. No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded}.
+%   dr2_t030_fewcircles_linear.py 6/6 PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-14) first issue. Operator direction: sharpen the L-dependence
+%        of R-038 to shrink/sharpen the open core. Honest debugging record: the
+%        first test build used a same-radius latitude STACK (a cylinder, not a
+%        sphere); the proof-mechanism guard (assert A6) detected the off-sphere
+%        failure r(m) > t_m, and the configs were rebuilt on a genuine integer
+%        sphere x^2+y^2+z^2=1105^2, on which A6 passes.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+R-038 (dr2-t030-fewcircles) proved $E_+(Q)\le 3L^2N^2$ for $Q$ covered by $L$
+circles, by Cauchy--Schwarz over the $L^2$ index pairs plus the R-021 per-pair
+bound. The $L^2$ factor is the obstruction to a sharper open-core statement.
+This note removes it: on a sphere the bound is \emph{linear} in $L$. The
+operator direction was to sharpen the $L$-dependence so as to sharpen the
+cover-number lower bound on a hypothetical $E_+\ge N^{2+\delta}$ extremizer.
+Scope: arbitrary finite $Q\subset S^2$; the H-NONLATTICE-REMAINDER frontier;
+NOT load-bearing for the published $C_{\rm full}$ head.
+
+\section*{2. Theorem: the linear few-circles bound}
+
+\begin{theorem}[linear few-circles bound, sphere]
+Let $Q$ lie on an origin-centred sphere $S^2$, $N=|Q|$, and be covered by $L$
+distinct circles. Then
+\[
+\boxed{\,E_+(Q)\;\le\;(2+2L)N^2+4LN+4L^3\;\le\;6(L+1)N^2\quad(L\le N).\,}
+\]
+\end{theorem}
+\emph{Proof.} Write $E_+=r(0)^2+\sum_{m\ne0}r(m)^2$, $r(m)=\#\{(a,b)\in Q^2:a+b=m\}$.
+For $m\ne0$ and a pair $a+b=m$, compute $a\cdot m=a\cdot(a+b)=|a|^2+a\cdot b$ and
+$|m|^2/2=\tfrac12(|a|^2+|b|^2)+a\cdot b$; hence $a\cdot m=|m|^2/2\iff|a|=|b|$,
+which holds because all points of $Q$ are at the same radius (origin-centred
+sphere). So both summands lie on the sum-level circle
+$C_m=\{x\in S^2:x\cdot m=|m|^2/2\}$ and $r(m)\le t_m:=|Q\cap C_m|$. Each cover
+circle $\Gamma_i$ is a sphere section, hence $\Gamma_i=C_{m_i}$ for a unique
+$m_i\ne0$ (a great circle is $C_m$ for no $m\ne0$; its antipodal pairs feed only
+the $m=0$ term). Two distinct circles meet in $\le2$ points, so for $m\notin\{m_i\}$,
+$t_m=\sum_i|Q_i\cap C_m|\le 2L$; and $t_{m_i}\le\nu_i+2L$ where $\nu_i=|Q_i|$.
+Therefore
+\[
+\sum_{m\ne0}r(m)^2\le 2L\!\!\sum_{m\ne0}\!\!r(m)+\sum_i(\nu_i+2L)^2
+\le 2L\,N^2+\Big(N^2+4LN+4L^3\Big),
+\]
+using $\sum_{m\ne0}r(m)\le N^2$, $\sum_i\nu_i^2\le(\sum_i\nu_i)^2=N^2$,
+$\sum_i\nu_i=N$, and $|\{i\}|=L$. Adding $r(0)^2\le N^2$ gives the claim;
+$4LN\le4N^2$ and $4L^3\le4LN^2$ for $L\le N$ yield $6(L+1)N^2$. $\square$
+
+This strictly improves R-038 for every $L\ge2$ (e.g.\ $L=8$: $6(L+1)N^2=54N^2$ vs
+$3L^2N^2=192N^2$). The per-pair R-021 input is replaced by the sharper
+sum-circle occupancy $t_m\le2L$, which is the multi-circle generalisation of
+Lemma~A (R-025: $E_+\le(1+T')N^2$, the single-richest-sum-circle case).
+
+\section*{3. Sphere-essentiality (a recorded guard)}
+
+The identity $a\cdot m=|m|^2/2\iff|a|=|b|$ is the load-bearing step, and it
+requires all points equidistant from the centre. \textbf{Off the sphere the
+linear bound is false}: a same-radius latitude \emph{stack} (circles of equal
+radius at distinct heights -- a cylinder, $|a|\ne|b|$) has product/AP structure
+with $r(m)>t_m$ for vertical $m$, and indeed $E_+\sim 2LN^2$ there is consistent
+with linearity but the \emph{proof} does not apply. The repository's correct
+general-circle bound off the sphere is R-038's quadratic $3L^2N^2$ (whose R-021
+input needs no equidistance). The proof-mechanism guard
+($\#\{m\ne0:r(m)>2L\}\le L$, assert A6) FAILED on the first (cylinder) build and
+PASSES on the rebuilt genuine integer sphere $x^2+y^2+z^2=1105^2$; the guard is
+retained as the falsifier of any off-sphere misuse.
+
+\section*{4. Consequence: a sharper cover-number lower bound and open core}
+
+\begin{corollary}
+If $E_+(Q)\ge N^{2+\delta}$ for $Q\subset S^2$, then the circle-cover number of
+$Q$ satisfies $L\ge N^{\delta}/12$.
+\end{corollary}
+\emph{Proof.} $N^{2+\delta}\le E_+\le 6(L+1)N^2\le 12LN^2$ ($L\ge1$). $\square$
+
+This doubles the exponent of R-038's bound ($L\ge N^{\delta/2}/\sqrt3$). Combined
+with R-033 Cor.~1.2 (an $E_+\ge N^{2+\delta}$ family carries
+$\ge N^{2+\delta}/(8k^2\log N)$ simultaneously $k$-rich \emph{sum}-circles), the
+open core of T-030 is now pinned from two sides: a hypothetical extremizer must
+have BOTH a super-polynomial point-cover number ($\ge N^{\delta}$ distinct
+cover circles) AND super-polynomially many rich sum-circles. The lacunary /
+few-circle families (R-038, technique-only witness) are excluded; the residual
+is squarely the super-polynomially-many-circles regime, an open circle-incidence
+problem.
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Just a multi-circle restatement of Lemma~A.''} VALID:
+the occupancy bound $t_m\le2L$ off $\le L$ sum-circles is exactly the
+multi-circle generalisation of Lemma~A's single-$T'$ bound. The new content is
+the explicit $L$-linear closed form and the doubled cover-number lower bound
+(Cor.), strictly improving R-038.
+\item[($\beta$)] \emph{``Is the linear $L$-factor tight on $S^2$?''} UPHELD as
+open, and NOT claimed: on the genuine sphere the measured energy of rich-latitude
+unions is $E_+/N^2\in\{2.97,2.59,2.42,2.32,2.27,2.22\}$ for $L=1\ldots8$ --
+essentially $L$-INDEPENDENT ($\sim 3N^2$), far below $6(L+1)N^2$. The curvature
+suppresses the energy (consistent with R-033's global $N^{9/4}$ ceiling); the
+linear bound is correct but loose on these families, and its $L$-dependence may
+not be saturable on $S^2$. No tightness is claimed.
+\item[($\gamma$)] \emph{``Sphere-essential -- so the cylinder evidence is
+spurious.''} VALID and documented (Sec.~3): the first test build was a cylinder,
+the guard A6 caught the off-sphere $r(m)>t_m$, and the configs were rebuilt on a
+genuine sphere where A6 passes. Off the sphere R-038's quadratic stands; the
+linear bound is asserted only for $Q\subset S^2$, which is the T-030 setting.
+\item[($\delta$)] \emph{``Great circles break the $m_i$ enumeration.''}
+DISMISSED: a great circle is $C_m$ for no $m\ne0$, so it contributes $\le2$ to
+every $t_m$ ($m\ne0$) and feeds only the split-off $r(0)^2\le N^2$ term; the
+$\le L$ special sum-circles are exactly the non-great cover circles.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} \emph{Mechanism.} On the genuine
+sphere, $\#\{m\ne0:r(m)>2L\}\le L$ for $L=2,3,4,6,8$ (assert A6) -- the proof's
+occupancy split holds. \emph{Magnitude.} $L=1$: $E_+/N^2=2.97$ (the rich
+latitude, $N=108$, $E_+=34668$, matching R-033 F1) $\le 6\cdot2=12$. \emph{Limit /
+improvement.} $B_{\rm lin}<3L^2N^2$ for all $L\ge2$ (assert A2). \emph{Estimator.}
+vectorised $E_+=$ brute $O(N^4)$ ($396$, assert A8); all $L=1$ points verified on
+$x^2+y^2+z^2=1105^2$. \emph{Reproducibility.} deterministic exact-integer; exits
+$0$ iff all $6$ asserts pass.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-039 (linear few-circles bound, sphere) / T-030 frontier
+Precise statement:       Q on an origin-centred S^2, covered by L distinct
+                         circles => E_+(Q) <= (2+2L)N^2 + 4LN + 4L^3 <= 6(L+1)N^2.
+                         LINEAR in L; strictly improves R-038's 3 L^2 N^2 for
+                         L>=2. Proof: sum-circle occupancy t_m <= 2L off the <=L
+                         cover sum-circles (multi-circle Lemma A / R-025
+                         refinement); SPHERE-ESSENTIAL (r(m)<=t_m needs |a|=|b|).
+                         Cor: E_+ >= N^{2+delta} => cover number L >= N^delta/12
+                         (vs R-038's N^{delta/2}/sqrt3; exponent doubled).
+Scope:                   T-030 (arbitrary finite Q in S^2; H-NONLATTICE-REMAINDER).
+                         NOT load-bearing for the C_full head. Off the sphere the
+                         linear bound is FALSE; R-038's quadratic is the general
+                         bound there.
+Evidence grade:          PARTIAL ADVANCE. Theorem T7-WITHIN-CLASS (elementary,
+                         sphere). Strictly improves R-038. Tightness on S^2 NOT
+                         claimed (measured E_+ ~ 3N^2, L-independent on
+                         rich-latitude unions). Does NOT close T-030: arbitrary-Q
+                         N^{2+eps} STILL OPEN (record N^{9/4}, R-033).
+Reproduction command:    python3 codes/vacuum/dr2_t030_fewcircles_linear.py
+Expected output:         6/6 asserts PASS, exit 0; JSON at
+                         claims/B5-BEYOND-LAYER-BOUND/runs/
+                         260614-dr2-t030-fewcircles-linear/result.json
+Falsifier:               (a) Q on L distinct circles of a sphere with
+                         E_+ > 6(L+1)N^2; (b) #{m!=0 : r(m) > 2L} > L on a genuine
+                         sphere config (would break the occupancy split). Both
+                         machine-checked false on S^2; (a) is expected to FAIL
+                         off the sphere (cylinder), which is why the bound is
+                         scoped to S^2.
+Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
+                         B5 stays T7-SCOPE_{admissibility-bounded} given A1;
+                         T-030 OPEN; DR2-SHARE RESCOPED-TO-T030-NONLOADBEARING.
+No-overclaim statement:  Strict improvement of R-038's bound, sphere-only; the
+                         L-linear factor is NOT shown tight on S^2 (likely loose;
+                         true energy may be O(N^2 polylog) per R-033). Does NOT
+                         close T-030. Builds on Lemma A (R-025) and R-038.
+Next required action:    Operator review. Continuation: (i) determine the true
+                         S^2 L-dependence (is E_+ = O(N^2 polylog) for any
+                         bounded-curvature-circle union?); (ii) attack the
+                         super-poly-circle core via improved circle incidences
+                         (R-033 route).
+\end{verbatim}
+}

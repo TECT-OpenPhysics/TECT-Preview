@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-039](#r-039) | Few-circles bound is LINEAR on a sphere: E_+ <= 6(L+1)N^2 (sharpens R-038's quadratic) | PARTIAL ADVANCE; cover-number lower bound doubled to L >= N^delta/12; sphere-essential; T-030 OPEN; dr2_t030_fewcircles_linear.py 6/6 |
 | [R-038](#r-038) | Few-circles (covering-number) bound E_+ <= 3L^2N^2 + [NEST-DEPTH] witness reclassified technique-only | PARTIAL ADVANCE / frontier clarification (T7-within-class = R-021 + Cauchy-Schwarz); T-030 OPEN; dr2_t030_fewcircles.py 8/8 |
 | [R-037](#r-037) | Route 3: the non-lattice remainder is non-load-bearing for B5's admissibility-bo … | STRUCTURAL ANALYSIS, operator-ACCEPTED + ENACTED 2026-06-13 as B5-Route3-NonLattice-NonLoa … |
 | [R-036](#r-036) | T7 re-proof attempt: poly-separated subclass DR-2 closed modulo continuous decou … | PARTIAL ADVANCE, operator-ACCEPTED 2026-06-13 as DR2-T030-BDDiscrete-ReproofAttempt-260613 … |
@@ -57,6 +58,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-039"></a>
+### R-039 — Few-circles additive-energy bound is LINEAR on a sphere (sharpens R-038)
+
+**Statement (one line):** For Q on an origin-centred S^2 (N=|Q|) covered by L distinct circles, E_+(Q) <= (2+2L)N^2 + 4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2 for every L>=2. Proof: a multi-circle refinement of Lemma A (R-025) -- for m!=0, a.m=|m|^2/2 iff |a|=|b| (origin-centred sphere), so r(m) <= t_m=|Q cap C_m|, and two distinct circles meet in <=2 points gives t_m <= 2L off the <=L cover sum-circles C_{m_i}, t_{m_i} <= nu_i+2L. SPHERE-ESSENTIAL: off the sphere (|a|!=|b|) r(m)<=t_m FAILS and R-038's quadratic is the correct general-circle bound (a proof-mechanism guard #{m!=0: r(m)>2L}<=L detected an off-sphere cylinder test config and now passes on the genuine integer sphere x^2+y^2+z^2=1105^2). CONSEQUENCE: E_+ >= N^{2+delta} => cover number L >= N^delta/12 (R-038 gave N^{delta/2}/sqrt3; exponent doubled), pinning the open core from two sides with R-033 Cor.1.2 (rich sum-circle count). Verified dr2_t030_fewcircles_linear.py 6/6 (linear bound holds; A6 mechanism passes on S^2; strict improvement over R-038; estimator audit). TIGHTNESS on S^2 NOT claimed (measured E_+ ~ 3N^2, L-independent on rich-latitude unions -- far below the bound; true energy may be O(N^2 polylog) per R-033).
+
+**Proven in:** B5 / dr2-t030-fewcircles-linear v1.0
+
+**Reuse scope:** arbitrary-Q DR-2 (T-030); the multi-circle Lemma-A occupancy refinement; the sharpened cover-number lower bound on additive-energy extremizers on a sphere.
+
+**Tier:** PARTIAL ADVANCE / frontier sharpening. Theorem T7-WITHIN-CLASS (elementary, sphere-only). Strictly improves R-038's bound (quadratic -> linear). Does NOT close T-030: arbitrary-Q N^{2+eps} STILL OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1. Operator decides any disposition.
+
+**Publication target:** S^2 additive-energy paper / T-030
 
 <a id="r-038"></a>
 ### R-038 — Few-circles (covering-number) additive-energy bound + [NEST-DEPTH] witness reclassification

@@ -94,27 +94,43 @@ SEC_REF_RE = re.compile(r"\b([A-F]\d+)")
 
 
 def load_negatives(prefix2sector):
-    """Parse the registry; assign each row to sectors via actual claim prefixes
-    (B1, B5, C5, ...) so bare references like '(B1)' are caught precisely."""
+    """Parse the registry detail sections (### <Tag> — <branch>) and assign each
+    to sectors via claim prefixes (B1, B5, ...). Handles the index-table + detail
+    -section format from the 2026 result-doc restructure (replaces the legacy
+    single-row table parse)."""
     f = REPO / "negative-results" / "registry.md"
     out = []
     if not f.exists():
         return out
+    cur = None
+
+    def flush(c):
+        if not c:
+            return
+        text = " ".join([c["tag"], c["branch"]] + c.pop("body"))
+        claims = sorted(set(CLAIM_RE.findall(text)))
+        refs = {m.group(1) for m in SEC_REF_RE.finditer(text)}
+        refs |= {x.split("-", 1)[0] for x in claims}
+        c["claims"] = claims
+        c["sectors"] = sorted({prefix2sector[r] for r in refs if r in prefix2sector})
+        out.append(c)
+
     for ln in f.read_text(encoding="utf-8").splitlines():
-        if not ln.startswith("| "):
-            continue
-        cells = [c.strip() for c in ln.strip().strip("|").split("|")]
-        if len(cells) < 5 or cells[0] in ("Tag", "") or set(cells[0]) <= set("-: "):
-            continue
-        tag = cells[0]
-        if not re.match(r"^(R|F|NG|AUDIT)-", tag):
-            continue
-        rowtext = " ".join(cells)
-        claims = sorted(set(CLAIM_RE.findall(rowtext)))
-        refs = {m.group(1) for m in SEC_REF_RE.finditer(rowtext)}
-        refs |= {c.split("-", 1)[0] for c in claims}
-        sectors = sorted({prefix2sector[r] for r in refs if r in prefix2sector})
-        out.append(dict(tag=tag, branch=cells[1], mode=cells[2], claims=claims, sectors=sectors))
+        m = re.match(r"^###\s+((?:R|F|NG|AUDIT)-\S+)\b(.*)$", ln)
+        if m:
+            flush(cur)
+            cur = dict(tag=m.group(1),
+                       branch=m.group(2).strip().lstrip("\u2014\u2013- ").strip(),
+                       mode="", body=[])
+        elif cur is not None:
+            if ln.startswith("#"):
+                flush(cur)
+                cur = None
+                continue
+            if ln.startswith("**Failure mode:**"):
+                cur["mode"] = ln.split("**Failure mode:**", 1)[1].strip()
+            cur["body"].append(ln)
+    flush(cur)
     return out
 
 
