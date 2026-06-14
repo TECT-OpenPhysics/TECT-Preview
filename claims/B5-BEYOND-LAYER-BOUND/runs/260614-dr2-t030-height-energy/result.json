@@ -1,0 +1,74 @@
+{
+  "script": "dr2_t030_height_energy.py",
+  "version": "1.0.0",
+  "height_bound": "E_+ <= N^2 + 2 sum_{k,l} nu_k nu_l p(z_k+z_l); uniform nu => N^2 + 2(N^2/L^2)E_h",
+  "sidon": [
+    {
+      "N": 36,
+      "Eplus": 3172,
+      "bound": 5616,
+      "E_h": 15
+    },
+    {
+      "N": 68,
+      "Eplus": 11236,
+      "bound": 21168,
+      "E_h": 45
+    },
+    {
+      "N": 92,
+      "Eplus": 19708,
+      "bound": 39792,
+      "E_h": 91
+    }
+  ],
+  "ap": [
+    {
+      "N": 36,
+      "Eplus": 3220,
+      "bound": 6768,
+      "E_h": 19
+    },
+    {
+      "N": 68,
+      "Eplus": 12484,
+      "bound": 34992,
+      "E_h": 85
+    },
+    {
+      "N": 92,
+      "Eplus": 22988,
+      "bound": 89456,
+      "E_h": 231
+    }
+  ],
+  "verdict": "latitude-union energy controlled by HEIGHT additive energy E_h (1-D); the four-circle term needs SUM-ANNULUS overlap (distinct radii => disjoint annuli => O(N^2)); the incidence bound for overlapping annuli (-> O(N^2) for all height structures) stays OPEN = the R-033 core",
+  "claims": [
+    {
+      "name": "A1_height_energy_bound_holds",
+      "passed": true,
+      "detail": "E_+ <= N^2 + 2 sum nu_k nu_l p(z_k+z_l): L-cfg E=3172<=B=5616; L-cfg E=11236<=B=21168; L-cfg E=19708<=B=39792; L-cfg E=3220<=B=6768; L-cfg E=12484<=B=34992; L-cfg E=22988<=B=89456"
+    },
+    {
+      "name": "A2_Eh_interpolation",
+      "passed": true,
+      "detail": "height energy E_h: Sidon E_h/L^2=[1.7, 1.8, 1.9] (flat ~2 => O(N^2)); AP E_h/L^2=[2.1, 3.4, 4.7] (grows ~L/3 => O(LN^2))"
+    },
+    {
+      "name": "A3_sum_annulus_necessary",
+      "passed": true,
+      "detail": "DISJOINT sum-annuli (3,4)|[1,7] vs (50,60)|[10,110] => T=0 (=0); a matching pair (20,25) has T=264>0. Annulus overlap is NECESSARY for T!=0 (disjoint kills it); it is NOT sufficient (discrete sum-sets must also coincide). Spread/distinct radii => many disjoint annuli => 4-circle energy suppressed; equal radii => all annuli [0,2rho] => maximal overlap."
+    },
+    {
+      "name": "A4_bound_loose_incidence_gap",
+      "passed": true,
+      "detail": "AP L=7: measured E_+=22988 << height-bound B=89456 (E/B=0.26); the gap is the in-plane incidence cancellation the bound ignores = the OPEN R-033 core"
+    },
+    {
+      "name": "A5_R033_consistency",
+      "passed": true,
+      "detail": "all configs satisfy E_+ <= 3 N^{9/4} (R-033 record consistency)"
+    }
+  ],
+  "all_pass": true
+}

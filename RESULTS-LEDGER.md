@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-042](#r-042) | Height-energy bound E_+<=N^2+2 sum nu_k nu_l p(z_k+z_l) + sum-annulus mechanism (disjoint=>T=0); R-033 step 2 | PARTIAL; height additive energy E_h is the parameter; 4-circle incidence core OPEN; T-030 OPEN; dr2_t030_height_energy.py 5/5 |
 | [R-041](#r-041) | Sidon-height latitude unions (any radii) E_+<=6N^2 incidence-free (R-033 step 1); non-Sidon residual = open 4-circle incidence | PARTIAL ADVANCE; PROVED Sidon bound; residual = R-033 core; T-030 OPEN; dr2_t030_sidon_decoupling.py 7/7 |
 | [R-040](#r-040) | True sphere L-dependence: distinct-radius circles E_+<=(2 p_max+1)N^2 and empirically O(N^2) even at AP heights; linear is a cylinder artifact | PARTIAL ADVANCE; refined bound PROVED + O(N^2) sphere conjecture (T4); residual = 4-circle incidence -> R-033; T-030 OPEN; dr2_t030_height_multiplicity.py 6/6 |
 | [R-039](#r-039) | Few-circles bound is LINEAR on a sphere: E_+ <= 6(L+1)N^2 (sharpens R-038's quadratic) | PARTIAL ADVANCE; cover-number lower bound doubled to L >= N^delta/12; sphere-essential; T-030 OPEN; dr2_t030_fewcircles_linear.py 6/6 |
@@ -60,6 +61,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-042"></a>
+### R-042 — Height-energy bound + sum-annulus mechanism (R-033 step 2)
+
+**Statement (one line):** Two PROVED structural results localising the open T-030 core, no closure. (1) HEIGHT-ENERGY BOUND: for distinct-radius parallel circles, E_+(Q) <= N^2 + 2 sum_{(k,l)} nu_k nu_l p(z_k+z_l), p(H)=#{(i,j):z_i+z_j=H}; uniform nu => N^2 + 2(N^2/L^2)E_h with E_h=sum_H p(H)^2 the HEIGHT additive energy -- recovers Sidon (E_h~L^2 => O(N^2), matching R-041) and AP (E_h~L^3 => O(LN^2), matching R-039), identifying E_h (a 1-D additive energy) as the controlling parameter (dimension reduction). (2) SUM-ANNULUS MECHANISM: the off-diagonal 4-circle term I_{ijkl}=sum_w r^{ij}(w)r^{kl}(w) has r^{ij}(w)!=0 only for |w| in [|rho_i-rho_j|,rho_i+rho_j], so DISJOINT sum-annuli => I_{ijkl}=0 (rigorous; overlap is necessary-not-sufficient -- discrete sum-sets must also coincide). This is why spread/distinct radii suppress the 4-circle energy to O(N^2) and equal radii (cylinder, all annuli [0,2rho]) maximise it. The height-energy bound is LOOSE for high-E_h heights (measured E_+/bound=0.26 at AP L=7); the gap = the in-plane incidence cancellation = the OPEN R-033 core. Verified dr2_t030_height_energy.py 5/5. Honest correction recorded: "overlap => I>0" was refuted (overlap necessary not sufficient).
+
+**Proven in:** B5 / dr2-t030-height-energy v1.0
+
+**Reuse scope:** arbitrary-Q DR-2 (T-030); the reduction of latitude-union energy to the 1-D height additive energy E_h; the sum-annulus necessary condition for the off-diagonal four-circle incidence energy (the R-033 attack surface).
+
+**Tier:** PARTIAL ADVANCE / R-033 step 2. Both structural results PROVED (elementary). Does NOT close the incidence bound or the sphere O(N^2) conjecture (stays STRONG EVIDENCE T4, R-040); T-030 arbitrary-Q OPEN (record N^{9/4}, R-033). No tier/gate/hypothesis flip; B5 stays T7-SCOPE_{admissibility-bounded} given A1.
+
+**Publication target:** S^2 additive-energy paper / T-030
 
 <a id="r-041"></a>
 ### R-041 — Sidon-height latitude unions: E_+ <= 6 N^2 incidence-free (R-033 step 1)

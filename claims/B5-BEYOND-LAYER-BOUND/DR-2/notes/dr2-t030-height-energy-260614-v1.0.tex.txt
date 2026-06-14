@@ -1,0 +1,158 @@
+% =============================================================================
+% Title: T-030 / R-042 (R-033 step 2): the latitude-union additive energy is
+%        controlled by the HEIGHT additive energy E_h; the off-diagonal
+%        four-circle term requires SUM-ANNULUS overlap (disjoint => T=0); the
+%        incidence bound for overlapping annuli remains OPEN
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; H-NONLATTICE-REMAINDER-EXCLUDED).
+% Version: v1.0 -- first issued 2026-06-14
+% Status: PARTIAL ADVANCE / R-033 step 2. Two PROVED structural results, no
+%   closure. (1) Height-energy bound: for distinct-radius parallel circles,
+%   E_+ <= N^2 + 2 sum_{(k,l)} nu_k nu_l p(z_k+z_l); uniform nu => N^2 +
+%   2(N^2/L^2)E_h, E_h the HEIGHT additive energy -- recovers Sidon (E_h~L^2 =>
+%   O(N^2)) and AP (E_h~L^3 => O(L N^2)) and identifies E_h (a 1-D object) as the
+%   controlling parameter. (2) Sum-annulus mechanism: T_{ijkl}!=0 requires the
+%   sum-annuli [|rho_i-rho_j|,rho_i+rho_j], [|rho_k-rho_l|,rho_k+rho_l] to overlap
+%   (DISJOINT => T=0, rigorous; overlap is necessary-not-sufficient) -- the
+%   geometric reason spread/distinct radii suppress the four-circle energy. The
+%   height-energy bound is LOOSE for high-E_h heights (measured E_+/bound = 0.26
+%   at AP L=7): the gap is the in-plane incidence cancellation it ignores. Bounding
+%   the off-diagonal four-circle incidence energy by O(N^2 polylog) / o(N^{9/4})
+%   -- which lifts the R-040 sphere conjecture to a theorem -- stays OPEN (the
+%   R-033 core). No tier/gate/hypothesis flip; B5 T7-SCOPE_{admissibility-bounded}.
+%   dr2_t030_height_energy.py 5/5 PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-14) first issue. Honest correction recorded: an intermediate
+%        draft asserted "annulus overlap => T>0"; the data refuted the converse
+%        (overlap is necessary, not sufficient -- the discrete sum-sets must also
+%        coincide), so only "disjoint => T=0" is claimed.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+Operator target (R-033): bound the off-diagonal four-circle in-plane incidence
+energy
+\[
+\sum_{\substack{z_i+z_j=z_k+z_l\\ \{i,j\}\ne\{k,l\}}}
+\mathcal I_{ijkl},\qquad
+\mathcal I_{ijkl}=\#\{c_a+c_b=c_c+c_d:c_a\in C_i,c_b\in C_j,c_c\in C_k,c_d\in C_l\},
+\]
+by $N^2\log^{O(1)}N$ or at least $o(N^{9/4})$ -- which lifts the R-040 sphere
+$O(N^2)$ conjecture to a theorem. This note is step~2: two PROVED structural
+results that localise the obstruction; it does NOT close the incidence bound.
+
+\section*{2. The height-energy bound (proved)}
+
+\begin{proposition}[height-energy bound]
+For $L$ parallel circles with distinct radii at heights $z_i$,
+\[
+E_+(Q)\;\le\;N^2+2\sum_{k,l}\nu_k\nu_l\,p(z_k+z_l),\qquad
+p(H)=\#\{(i,j):z_i+z_j=H\}.
+\]
+For uniform $\nu_i=N/L$ this is $E_+\le N^2+2(N^2/L^2)E_h$, with
+$E_h=\sum_H p(H)^2$ the HEIGHT additive energy.
+\end{proposition}
+\emph{Proof.} As in R-040, for $M_{xy}\ne0$, $r(M_{xy},M_z)\le2p(M_z)$ and
+$\sum_{M_{xy}\ne0}r(M_{xy},M_z)\le\sum_{(i,j)\in P(M_z)}\nu_i\nu_j$, so
+$\sum_{M_{xy}\ne0}r^2\le2p(M_z)\sum_{(i,j)\in P(M_z)}\nu_i\nu_j$; the $M_{xy}=0$
+slice is the diagonal $\le N^2$ (distinct radii). Summing over $M_z$ and using
+$\sum_{M_z}p(M_z)\!\!\sum_{(i,j)\in P(M_z)}\!\!\nu_i\nu_j=\sum_{k,l}\nu_k\nu_l\,p(z_k+z_l)$
+gives the claim. $\square$
+
+This recovers both regimes (assert A2): Sidon heights have $E_h\le2L^2$ (so
+$E_+=O(N^2)$, matching R-041), AP heights have $E_h\asymp L^3$ (so the bound is
+$O(LN^2)$, matching R-039). The controlling parameter is the \emph{height} additive
+energy $E_h$ -- a $1$-D additive-energy object, a genuine dimension reduction of
+the latitude-union problem.
+
+\section*{3. The sum-annulus mechanism}
+
+\begin{proposition}[disjoint annuli kill the four-circle term]
+$\mathcal I_{ijkl}=\sum_w r^{ij}(w)r^{kl}(w)$, and $r^{ij}(w)\ne0$ forces
+$|w|\in[|\rho_i-\rho_j|,\rho_i+\rho_j]$. Hence if the two sum-annuli are disjoint,
+$\mathcal I_{ijkl}=0$.
+\end{proposition}
+Annulus overlap is therefore NECESSARY for $\mathcal I_{ijkl}\ne0$ (it is NOT
+sufficient: the discrete sum-sets must also coincide -- machine A3 exhibits
+overlapping circles with $\mathcal I=0$). This is the geometric reason
+\emph{spread} (distinct, well-separated) radii suppress the four-circle energy to
+$O(N^2)$ (most cross-pair annuli are disjoint), while \emph{equal} radii (a
+cylinder) put every annulus at $[0,2\rho]$ -- maximal overlap -- and produce the
+linear $LN^2$ blow-up (R-040 contrast).
+
+\section*{4. What stays open (the R-033 core)}
+
+The height-energy bound is LOOSE exactly where $E_h$ is large: at AP $L=7$ the
+measured $E_+=22988$ is $0.26\times$ the bound $89456$ (assert A4). The gap is the
+in-plane incidence cancellation -- the annulus-overlap pruning of Sec.~3 plus the
+discrete-coincidence sparsity -- which neither the Cauchy--Schwarz per-quadruple
+bound $\mathcal I_{ijkl}\le3\sqrt{\nu_i\nu_j\nu_k\nu_l}$ nor the height-energy bound
+captures. Closing it -- i.e.\ proving
+$\sum_{z_i+z_j=z_k+z_l,\{i,j\}\ne\{k,l\}}\mathcal I_{ijkl}\lesssim N^2\log^{O(1)}N$
+(or $o(N^{9/4})$) -- is the open circle-incidence problem and lifts the R-040
+sphere conjecture to a theorem. \textbf{This is the precise remaining R-033 target.}
+
+\section*{5. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3, code-discipline 6)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The height-energy bound is just R-040 reparametrised.''}
+VALID: it is the same $r\le2p(M_z)$ step, reorganised to expose $E_h$. The value
+is the dimension reduction (1-D height energy as the parameter) and the explicit
+Sidon/AP interpolation; no new strength over R-040 is claimed (it gives $O(LN^2)$
+for AP, not the empirical $O(N^2)$).
+\item[($\beta$)] \emph{``Annulus overlap $\Rightarrow\mathcal I>0$.''} REFUTED and
+corrected (A3): overlap is necessary, not sufficient; the discrete sum-sets must
+coincide. Only ``disjoint $\Rightarrow\mathcal I=0$'' is claimed.
+\item[($\gamma$)] \emph{``Is this a closure of the sphere conjecture / T-030?''}
+NO: the bound is loose for high $E_h$ (A4, $0.26\times$); the incidence
+cancellation is unproved. T-030 OPEN; the sphere $O(N^2)$ stays STRONG EVIDENCE.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} \emph{Bound.} $E_+\le N^2+2\sum
+\nu_k\nu_l p(z_k+z_l)$ on all Sidon+AP configs (A1). \emph{Interpolation.} Sidon
+$E_h/L^2\approx2$ flat, AP $E_h/L^2=2.1,3.4,4.7$ growing (A2). \emph{Mechanism.}
+disjoint annuli $\Rightarrow\mathcal I=0$, matching pair $\mathcal I=264>0$ (A3).
+\emph{Gap.} AP $L=7$ $E_+/\text{bound}=0.26$ (A4). \emph{Consistency.} all $\le3N^{9/4}$
+(A5). Deterministic exact-integer; $5/5$ asserts, exit $0$.
+
+\section*{6. Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-042 (height-energy bound + sum-annulus mechanism;
+                         R-033 step 2) / T-030 frontier
+Precise statement:       (1) distinct-radius parallel circles =>
+                         E_+ <= N^2 + 2 sum_{k,l} nu_k nu_l p(z_k+z_l)
+                         = N^2 + 2(N^2/L^2)E_h (uniform nu); recovers Sidon
+                         (E_h~L^2 => O(N^2)) and AP (E_h~L^3 => O(LN^2)).
+                         (2) I_{ijkl} != 0 requires the sum-annuli to overlap
+                         (DISJOINT => I=0; overlap necessary-not-sufficient) --
+                         spread radii suppress, equal radii (cylinder) maximise.
+Scope:                   parallel circles (latitudes); T-030 (Q in S^2;
+                         H-NONLATTICE-REMAINDER). Not load-bearing for C_full head.
+Evidence grade:          Both structural results PROVED (elementary). NO closure:
+                         height-energy bound is LOOSE for high E_h (E_+/bound=0.26
+                         at AP L=7); sphere O(N^2) stays STRONG EVIDENCE (R-040);
+                         T-030 arbitrary-Q OPEN (record N^{9/4}, R-033).
+Reproduction command:    python3 codes/vacuum/dr2_t030_height_energy.py
+Expected output:         5/5 asserts PASS, exit 0; JSON at claims/
+                         B5-BEYOND-LAYER-BOUND/runs/260614-dr2-t030-height-energy/
+Falsifier:               a distinct-radius config with E_+ > N^2+2 sum nu_k nu_l
+                         p(z_k+z_l) (refutes the bound); disjoint sum-annuli with
+                         I_{ijkl} != 0 (refutes the mechanism). Both checked false.
+Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
+                         B5 stays T7-SCOPE_{admissibility-bounded}; T-030 OPEN.
+No-overclaim statement:  This does NOT close the R-033 incidence bound or the
+                         sphere O(N^2) conjecture. The height-energy bound is
+                         R-040-strength (O(LN^2) for AP); the annulus mechanism is
+                         a necessary condition only. The remaining target is the
+                         off-diagonal four-circle incidence energy.
+Next required action:    R-033 core: bound sum_{z_i+z_j=z_k+z_l, {i,j}!={k,l}}
+                         I_{ijkl} <~ N^2 polylog (or o(N^{9/4})) via circle
+                         incidences on overlapping sum-annuli -> lifts the sphere
+                         O(N^2) conjecture to a theorem. Likely needs the
+                         Aronov-Sharir / Pach-Sharir incidence machinery (a
+                         focused research problem).
+\end{verbatim}
+}
