@@ -37,7 +37,32 @@ changelog/.cache/
 Thumbs.db
 desktop.ini
 
-# Google Drive sync temp artifacts (break `git add --all`)
+# ── Google Drive for Desktop sync artifacts ─────────────────────────────────
+#    Transient: Drive creates/deletes these mid-sync and they break
+#    `git add --all`; they must never reach the repo or GitHub.
 .tmp.driveupload/
-*.tmp.driveupload
 .tmp.drivedownload/
+.tmp.drive*
+*.tmp.driveupload
+*.tmp.drivedownload
+.driveupload/
+.drivedownload/
+*.gdoc
+*.gsheet
+*.gslides
+*.gdraw
+*.gform
+*.glink
+*.gmap
+*.gsite
+
+# ── transient / editor / lock files (never tracked) ──────────────────────────
+*.tmp
+.*.tmp
+*~
+*.swp
+.*.swp
+.~lock.*
+.goutputstream-*
+~$*
+ehthumbs.db

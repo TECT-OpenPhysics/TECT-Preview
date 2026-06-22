@@ -1,6 +1,9 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.5.0 -- first issued 2026-06-05; this version issued 2026-06-12
+# Version: 1.6.0 -- first issued 2026-06-05; this version issued 2026-06-22
+#   1.6.0 (2026-06-22): `git add` resilient to Google-Drive sync races
+#       (--ignore-errors + 5x retry with 3s settle); .gitignore extended to
+#       all Drive/transient artifacts so the operator need not pause sync.
 #   1.5.0 (2026-06-12): commit message passed via temp file + `git commit -F`
 #     instead of inline `-m $msg`. Root cause of the 2026-06-12 failure: a
 #     queued message containing embedded double quotes ('"3M g_3"') broke
@@ -87,10 +90,19 @@ function Process-Queue {
     # PDF. Build missing/stale ones now (operator-side; no sandbox timeout).
     & python verification/scripts/verify_note_pdfs.py --build | Out-Host
 
-    # stage the whole tree once
-    & git add --all
-    if ($LASTEXITCODE -ne 0) {
-        Write-Warning "[commit-watcher] git add --all failed; queue left intact."
+    # stage the whole tree; resilient to Google-Drive sync races. Drive briefly
+    # creates then deletes temp files (e.g. .tmp.driveupload/*) during sync; if one
+    # vanishes mid-add, git errors. .gitignore skips the known temp dirs, and this
+    # retry lets Drive settle so the operator need not pause sync manually.
+    $added = $false
+    for ($try = 1; $try -le 5; $try++) {
+        & git add --all --ignore-errors
+        if ($LASTEXITCODE -eq 0) { $added = $true; break }
+        Write-Warning "[commit-watcher] git add transient error (attempt $try/5; likely Google Drive sync) -- retrying in 3s..."
+        Start-Sleep -Seconds 3
+    }
+    if (-not $added) {
+        Write-Warning "[commit-watcher] git add --all still failing after 5 tries; queue left intact. Briefly pause Google Drive sync, then re-run -Once."
         return
     }
 
