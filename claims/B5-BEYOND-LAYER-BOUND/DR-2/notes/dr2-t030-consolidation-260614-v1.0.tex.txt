@@ -1,0 +1,284 @@
+% =============================================================================
+% Title: T-030 conditional consolidation and external-literature positioning:
+%        T-030a (lattice R^eps-loss) closed conditionally on R-025/R-026 (proofs
+%        appended); T-030b (N^2 polylog) and T-030-real (E_2 on S^2) are OPEN
+%        (Bourgain-Demeter); the B5 closure uses Lemma 2 + Lemma A (occupancy
+%        T'<=10 => E_+<=11N^2) and needs NEITHER R-026 NOR the few-circles cover
+%        number; the analytical reduction treadmill is terminated
+% Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; H-NONLATTICE-REMAINDER-EXCLUDED).
+% Version: v1.0 -- first issued 2026-06-14; this version issued 2026-06-14
+% Status: CONDITIONAL CONSOLIDATION -- NOT an independent proof certificate. This
+%   note synthesises status and pins the external-literature position; it proves
+%   no new theorem and re-derives none of R-025/R-026/R-032 (their statements +
+%   COMPLETE PROOFS are appended (Sec.A: A.3 [DIV-CIRC] + A.4 the assembled T-030a
+%   theorem), so T-030a is a self-contained certificate modulo textbook number theory).
+%   T-030 split: (a) lattice R^eps-loss CLOSED CONDITIONALLY on R-026 (T7-NTstandard,
+%   proof appended); (b) lattice N^2 polylog OPEN; (c) arbitrary real Q in S^2,
+%   E_2(A) <<_eps (#A)^{2+eps}, OPEN -- a Bourgain-Demeter conjecture (Sheffer
+%   exposition). B5's OWN closure is independent of all three: Lemma 2 (R-032,
+%   T'<=10) + Lemma A (R-025) => E_+<=11N^2, elementary. Treadmill terminated.
+%   No tier/gate/hypothesis flip. dr2_t030_consolidation_crosscheck.py PASS.
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-14) first issue (frontier-batch continuity date).
+%   v1.0-CORRECTED (2026-06-19) operator review (ACCEPT the operational decision;
+%        R-043 = conditional consolidation, not a proof certificate). Four fixes:
+%        (1) appended the exact statements + COMPLETE PROOFS (Sec.A.1-A.4:
+%        Lemma A, Lemma 2, [DIV-CIRC], and the assembled T-030a theorem) so T-030a
+%        is a self-contained, paper-grade citable certificate; (2) SEPARATED the two
+%        independent closures -- B5 uses Lemma 2 + Lemma A (occupancy T'<=10),
+%        which needs neither R-026 (lattice divisor) nor the few-circles cover
+%        number L; the v1.0 "admissible/lattice class" phrasing conflated them;
+%        (3) corrected the bibliography -- the real-sphere E_2 bound is the OPEN
+%        Bourgain-Demeter conjecture (Sheffer); the published O(#A^{7/2}) is for
+%        E_3 on S^1 (a DIFFERENT object), so the v1.0 "best ~O(n^{7/3})" claim for
+%        E_2 on S^2 is WITHDRAWN as unverified; (4) status downgraded to
+%        CONDITIONAL CONSOLIDATION.
+% =============================================================================
+
+\sloppy
+\section*{1. Purpose and scope}
+
+This is a \textbf{conditional consolidation}, not an independent proof certificate.
+It proves no new theorem. It (i) records the honest status of the three precise
+versions of T-030, (ii) pins each to its source -- internal (R-025/R-026/R-032,
+with statements and complete proofs appended in Sec.~A) or external (Mudgal 2022;
+Bourgain--Demeter), and (iii) on that basis terminates the analytical reduction
+treadmill. Every closure claim below is conditional on the cited proof, which is
+either the appended internal result or a textbook input named explicitly.
+
+\section*{2. The three precise versions of T-030}
+
+$N=|Q|$, $E_+(Q)=\#\{(a,b,c,d)\in Q^4:a+b=c+d\}$.
+
+\paragraph{T-030a (lattice, $R^\varepsilon$-loss) -- CLOSED conditionally on R-026.}
+\[
+Q\subset\mathbb Z^3\cap\{|x|^2=R\}\ \Longrightarrow\ E_+(Q)\ \ll_\varepsilon\ R^\varepsilon N^2.
+\]
+Source: R-026, assembled as the self-contained Theorem in Sec.~A.4 (T7-NTstandard --
+a theorem modulo the textbook Dirichlet
+class-number formula and the divisor bound only. \emph{External positioning:}
+A.\ Mudgal, \emph{Additive energies on spheres}, JLMS 106(4):2927--2958 (2022),
+arXiv:2105.06925, studies exactly $A\subset\mathbb Z^d\cap\{|x|^2=m\}$ additive
+energy ($d=3,4$); $d=4$ gives $\ll_\varepsilon m^\varepsilon|A|^{2+1/3-1/1392}$,
+$d=3$ improves Benatar--Maffucci. Mudgal confirms the object is studied and
+controlled, but is NOT the source of the clean $R^\varepsilon N^2$ here -- that is
+R-026 (Sec.~A.3); no specific Mudgal $d=3$ theorem number is attributed.
+
+\paragraph{T-030b (lattice, $N^2$ polylog) -- OPEN.}
+$Q\subset\mathbb Z^3\cap\{|x|^2=R\}\ \overset{?}{\Longrightarrow}\ E_+(Q)\lesssim N^2\log^{O(1)}N$:
+the $\varepsilon$-removal $R^\varepsilon\to\log^{O(1)}|Q|$, strictly stronger than
+T-030a, not found as a known theorem.
+
+\paragraph{T-030-real (arbitrary real $Q\subset S^2$) -- OPEN (Bourgain--Demeter).}
+$Q\subset S^2\ \overset{?}{\Longrightarrow}\ E_+(Q)=E_2(Q)\lesssim_\varepsilon(\#Q)^{2+\varepsilon}$:
+a Bourgain--Demeter conjecture (exposited by Sheffer). As of Sheffer's 2016
+exposition the best reported bound for $E_2$ on $S^2$ was $O(N^{7/3})$ -- cited as
+the 2016 state, NOT a current-best claim (the literature may have advanced). A
+DISTINCT object, the third-order energy $E_3$ on $S^1$, has best-known
+$O(\#A^{7/2})$ (Szemer\'edi--Trotter).
+
+\section*{3. The B5 closure is independent of T-030a/b/c}
+
+This is the load-bearing correction. B5's additive-energy input is the off-diagonal
+floor over the ADMISSIBLE (coherence-resolved, $\theta_{\min}$-separated) competitor
+class, and it is closed by TWO elementary lemmas, using the sum-circle OCCUPANCY:
+By Lemma~2 (R-032, Sec.~A.2) the occupancy obeys
+$T'(Q)\le\lfloor2\pi/\theta_{\min}\rfloor=10$; by Lemma~A (R-025, Sec.~A.1),
+$E_+(Q)\le(1+T'(Q))N^2$. Composing,
+\[
+E_+(Q)\le(1+10)N^2=11\,N^2=O(N^2).
+\]
+Here $T'(Q)$ is the maximum occupancy of one sum-level circle $C_m$. \textbf{It is a
+different quantity from} (i) the few-circles COVER NUMBER $L$ (number of circles
+needed to cover $Q$; R-038/R-039 give $E_+\le3L^2N^2$ resp.\ $6(L+1)N^2$), and from
+(ii) the lattice divisor bound (R-026). Consequently:
+\begin{itemize}
+\item B5's admissible closure needs \textbf{neither R-026 nor the cover number $L$};
+it is Lemma 2 $+$ Lemma A only, giving the clean $E_+\le11N^2$.
+\item R-026 (lattice $R^\varepsilon N^2$) is the SEPARATE statement T-030a, about
+the $\mathbb Z^3$ point class, not the admissible-competitor closure.
+\item R-038..R-042 (few-circles $L$, height multiplicity, Sidon, height energy)
+are structural results bearing on the OPEN real-sphere version (c); they are not
+part of B5's closure.
+\end{itemize}
+The v1.0 phrasing "the load-bearing admissible/lattice class is closed (R-026 +
+Lemma-2 cap)" conflated these independent arguments and is corrected here:
+In short, B5 $=$ T7-SCOPE$_{\rm adm}$ rests on Lemma~2 $+$ Lemma~A (occupancy
+$T'\le10$); T-030a/b/c are not prerequisites.
+
+\section*{4. Internal frontier results (this session) and what they bear on}
+
+\begin{center}\footnotesize
+\begin{tabular}{l|l|l|l}
+ID & statement & tier & bears on \\\hline
+R-025 & $E_+\le(1+T')N^2$ (Lemma A) & T7 & B5 closure (with R-032) \\
+R-032 & admissible $\Rightarrow T'\le10$ (Lemma 2) & T7 & B5 closure (with R-025) \\
+R-026 & lattice $E_+\ll_\varepsilon R^\varepsilon N^2$ & T7-NTstandard & T-030a \\
+R-038 & few-circles $E_+\le3L^2N^2$; witness technique-only & T7-in-class & (c) structure \\
+R-039 & linear $E_+\le6(L+1)N^2$; $L\ge N^\delta/12$ & T7-in-class & (c) structure \\
+R-040 & distinct-radius $E_+\le(2p_{\max}+1)N^2$ & T7-in-class & (c) structure \\
+R-041 & Sidon heights $E_+\le6N^2$, incidence-free & T7-in-class & (c) sub-case \\
+R-042 & height-energy bound + sum-annulus mechanism & PARTIAL & (c) localisation \\
+\end{tabular}
+\end{center}
+
+\section*{5. Termination of the analytical reduction treadmill (strategic)}
+
+T-030-real ($E_2$ on $S^2$) is a recognised Bourgain--Demeter OPEN PROBLEM (Sec.~2).
+An external dossier ran a $\sim$140-step internal reduction chain that never closed
+it and self-diagnosed the ``analytical-closure illusion''. Methodological boundary:
+\begin{itemize}
+\item Further internal reduction chains aimed at an unconditional real-sphere
+$E_2\lesssim(\#Q)^{2+\varepsilon}$ are NOT TECT deliverables (they re-derive an open
+research problem). Progress on (c) should be framed as a contribution to the
+Bourgain--Demeter problem with external incidence/decoupling machinery.
+\item Honest T-030 status: (a) closed conditionally on R-026; (b),(c) open in the
+literature; none load-bearing for B5 (Sec.~3).
+\end{itemize}
+
+\section*{6. Devil's-advocate / self-adversarial review (CLAUDE.md 6.3)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``R-043 is presented as a proof.''} CORRECTED: status is
+CONDITIONAL CONSOLIDATION (Sec.~1); T-030a closure is conditional on R-026, whose
+statement and complete proof are appended (Sec.~A.3 [DIV-CIRC] + Sec.~A.4 the
+assembled T-030a theorem).
+\item[($\beta$)] \emph{``B5 mixes the lattice and admissible arguments.''}
+CORRECTED (Sec.~3): B5 = Lemma 2 + Lemma A (occupancy $T'\le10$ $\Rightarrow$
+$11N^2$); R-026 (lattice) and the cover number $L$ are separate and not used.
+\item[($\gamma$)] \emph{``The real-sphere best-known must be sourced and dated.''}
+ADDRESSED (Sec.~2, App.~B): the $E_2$-on-$S^2$ bound $O(N^{7/3})$ is cited as the
+state REPORTED BY SHEFFER IN 2016 (date-qualified, not ``current best''); the
+DISTINCT $E_3$-on-$S^1$ object has $O(\#A^{7/2})$ (Szemer\'edi--Trotter).
+\item[($\delta$)] \emph{``Does terminating the treadmill cost a B5 tier?''}
+DISMISSED: B5 is already T7-SCOPE$_{\rm adm}$ via Sec.~3; the real-sphere route is a
+strictly stronger frontier statement, not a prerequisite.
+\end{itemize}
+
+\textbf{Quantitative sanity check (mandatory).} Anchors re-cross-checked
+(dr2\_t030\_consolidation\_crosscheck.py): single rich circle $E_+=34668$ ($N=108$);
+the B5 occupancy bound $E_+\le11N^2$ (Lemma A at $T'=10$); Mudgal $d=4$ exponent
+$2+\tfrac13-\tfrac1{1392}\approx2.3326$ recorded with provenance; the open
+$E_2$-on-$S^2$ conjecture exponent $2(+\varepsilon)$; NO unverified best-known
+exponent used. No internal numeric altered.
+
+\section*{Appendix A. Self-contained proof of T-030a (with the B5-closure lemmas)}
+
+\textbf{A.1 Lemma A (R-025; T7; full proof: dr2-circle-richness-reduction v1.0).}
+For finite $Q\subset S^2$, $E_+(Q)\le(1+T'(Q))N^2$ where
+$T'(Q)=\max_{m\neq0,\,r(m)>0}\#(Q\cap C_m)$, $C_m=S^2\cap\{x\cdot m=|m|^2/2\}$.
+\emph{Proof.} For $m\neq0$, $a+b=m$ forces $a,b\in C_m$, so $r(m)\le\#(Q\cap C_m)\le
+T'$; hence $\sum_{m\neq0}r(m)^2\le T'\sum_{m\neq0}r(m)\le T'N^2$, and $r(0)^2\le N^2$.
+Elementary, decoupling-free. $\square$
+
+\textbf{A.2 Lemma 2 (R-032; T7; full proof: coherence-offdiag-comfortable-bound v1.0).}
+For a $\theta_{\min}$-separated $Q$ on a sphere of radius $Q_0$, every proper
+sum-circle $C_t$ (radius $\rho=\sqrt{Q_0^2-|t|^2/4}\le Q_0$) has
+$\#(Q\cap C_t)\le\lfloor2\pi/\theta_{\min}\rfloor$.
+\emph{Proof.} Points on $C_t$ are pairwise Euclidean $\ge2Q_0\sin(\theta_{\min}/2)$;
+$k$ points pairwise $\ge d$ on a radius-$\rho$ circle satisfy
+$k\le\pi/\arcsin(d/2\rho)$, and $\rho\le Q_0$ gives $d/2\rho\ge\sin(\theta_{\min}/2)$,
+so $k\le2\pi/\theta_{\min}$. For the TECT admissible window this is $10$. $\square$
+
+\textbf{A.3 Lattice sum-circle occupancy [DIV-CIRC] (R-026; T7-NTstandard; full
+proof: dr2-lattice-divisor-closure v1.2).} For $m\in\mathbb Z^3$ with
+$0<|m|^2<4R$ (so $R':=4R-|m|^2>0$),
+\[
+\#(\mathbb Z^3\cap C_m)\ \le\ 6\,d(R')\ \ll_\varepsilon R^\varepsilon,
+\]
+uniformly in $m$ ($d$ the divisor function); the degenerate boundary
+$|m|^2=4R$ ($R'=0$) gives $\#(\mathbb Z^3\cap C_m)\le1$ (case (i) below).
+\emph{Proof.} \emph{(i) Shift removal.} $C_m$ has centre $m/2$. For
+$x\in\mathbb Z^3\cap C_m$ set $y:=2x-m\in\mathbb Z^3$; then
+$y\cdot m=2x\cdot m-|m|^2=0$, so $y$ lies in the rank-$2$ sublattice
+$\Lambda_m:=\mathbb Z^3\cap m^{\perp}$, and
+$|y|^2=4|x|^2-4x\cdot m+|m|^2=4R-|m|^2=:R'$. The map $x\mapsto y$ is injective
+($x=(y+m)/2$), so $\#(\mathbb Z^3\cap C_m)\le r_Q(R'):=\#\{y\in\Lambda_m:|y|^2=R'\}$,
+a HOMOGENEOUS representation count by the positive-definite integral binary
+quadratic form $Q(y)=|y|^2$ on $\Lambda_m$ (the centre $m/2$ is removed exactly).
+If $R'=0$ (i.e.\ $|m|^2=4R$, the tangent-plane degeneracy) then $y=0$ is the only
+solution and, by injectivity, $\#(\mathbb Z^3\cap C_m)\le1$; so assume henceforth
+$0<|m|^2<4R$, whence $R'>0$ and $d(R')$ is defined.
+\emph{(ii) Class-number bound.} For a primitive positive-definite integral binary
+form of discriminant $\Delta$, Dirichlet's class-number formula gives
+$\sum_{[f]\,\mathrm{disc}\,\Delta}r_f(n)=w(\Delta)\sum_{d\mid n}\chi_\Delta(d)\le6\,d(n)$
+($w(\Delta)\le6$, $\chi_\Delta\le1$); a single class is bounded by the sum over all
+classes, so $r_Q(R')\le6\,d(R')$ (an imprimitive content $g$ reduces to
+$r_{Q'}(R'/g)\le6\,d(R')$). This is UNIFORM in $m$ (independent of $\Delta$, hence
+of the plane). \emph{(iii) Divisor bound.}
+$d(R')\ll_\varepsilon R'^{\varepsilon}\le(4R)^{\varepsilon}\ll_\varepsilon R^\varepsilon$.
+$\square$ Both inputs -- the class-number formula and
+$d(n)\ll_\varepsilon n^\varepsilon$ -- are textbook, so [DIV-CIRC] is a theorem,
+not a hypothesis.
+
+\textbf{A.4 Theorem (T-030a), self-contained modulo textbook number theory.} For
+$Q\subset\mathbb Z^3\cap\{|x|^2=R\}$,
+\[
+E_+(Q)\ \le\ (1+C_\varepsilon R^\varepsilon)N^2\ \ll_\varepsilon\ R^\varepsilon N^2.
+\]
+\emph{Proof.} By A.1 (Lemma A), $E_+(Q)\le(1+T'(Q))N^2$ with
+$T'(Q)=\max_{m\neq0,\,r(m)>0}\#(Q\cap C_m)$. Each contributing $m=a+b$
+($a,b\in Q$) has $0<|m|^2\le4R$; by A.3 its occupancy is $\le1$ when $|m|^2=4R$
+and $\le6\,d(4R-|m|^2)$ when $0<|m|^2<4R$, so
+\[
+T'(Q)\le\max\Big\{1,\ 6\max_{0<|m|^2<4R}d(4R-|m|^2)\Big\}\ll_\varepsilon R^\varepsilon.
+\]
+Substituting gives the claim. $\square$ This is the frozen in-repo certificate for T-030a: it uses
+Lemma A (A.1) and the two textbook number-theoretic inputs of A.3 -- no decoupling,
+no incidence conjecture, no external theorem. (Mudgal 2022 corroborates the object
+but is not used in this proof.)
+
+\section*{Appendix B. References}
+
+[1] A.\ Mudgal, \emph{Additive energies on spheres}, J.\ London Math.\ Soc.\
+106(4):2927--2958 (2022); arXiv:2105.06925. (Lattice $\mathbb Z^3/\mathbb Z^4$
+sphere additive energy; $d=4$ threshold-breaking; corroborates T-030a's object.)
+
+[2] A.\ Sheffer, \emph{Additive Energy of Real Point Sets}, expository note
+(adamsheffer.wordpress.com, 2016): states the Bourgain--Demeter problem
+$E_2(A)\lesssim_\varepsilon(\#A)^{2+\varepsilon}$ for $A\subset S^2$ (OPEN), reports
+the then-best $O(N^{7/3})$ for $E_2$ on $S^2$ (2016 state), and records the DISTINCT
+$E_3$-on-$S^1$ best-known $O(\#A^{7/2})$ via Szemer\'edi--Trotter.
+
+[3] J.\ Bourgain, C.\ Demeter, decoupling/additive-energy works (the conjecture
+that T-030-real instantiates; Mudgal [1] "makes progress towards one of their
+conjectures").
+
+\section*{Result footer}
+
+{\footnotesize
+\begin{verbatim}
+Result ID:               R-043 (T-030 CONDITIONAL consolidation & literature
+                         positioning) / T-030 frontier. NOT a proof certificate.
+Precise statement:       (a) lattice R^eps-loss CLOSED conditionally on R-026
+                         (T7-NTstandard, complete proof appended
+                         Sec.A.3-A.4; Mudgal 2022
+                         corroborates the object). (b) lattice N^2 polylog OPEN.
+                         (c) arbitrary real Q in S^2, E_2 <<_eps (#Q)^{2+eps},
+                         OPEN (Bourgain-Demeter; Sheffer 2016 reports E_2/S^2
+                         best O(N^{7/3}); the distinct E_3/S^1 best is O(#A^{7/2})).
+                         B5 closure is INDEPENDENT: Lemma 2 (R-032, T'<=10) +
+                         Lemma A (R-025) => E_+<=11N^2; needs neither R-026 nor
+                         the few-circles cover number L.
+Scope:                   T-030 (H-NONLATTICE-REMAINDER). B5 = T7-SCOPE_{adm}
+                         UNAFFECTED (Sec.3). (b),(c) NON-LOAD-BEARING.
+Evidence grade:          CONDITIONAL CONSOLIDATION (no new theorem). Internal
+                         lemmas R-025/R-032 T7, R-026 T7-NTstandard (statements +
+                         complete proofs appended, Sec.A). (b),(c) OPEN.
+Reproduction command:    python3 codes/vacuum/dr2_t030_consolidation_crosscheck.py
+Falsifier:               a counterexample to R-026 (reopens (a)); an unconditional
+                         published proof of (c) (resolves Bourgain-Demeter).
+Tier before / after:     NONE -- consolidation only. No gate/tier/hypothesis flip.
+                         B5 stays T7-SCOPE_{adm}; T-030(b),(c) OPEN.
+No-overclaim statement:  NOT an independent proof; T-030a is conditional on R-026
+                         (appended). B5 closure uses Lemma 2 + Lemma A (occupancy
+                         T'<=10), not R-026 and not the cover number L. No E_2/S^2
+                         best-known exponent is claimed. External 140-step chain
+                         NOT adopted.
+Next required action:    Analytical T-030 frontier settled. Redirect to the
+                         numerical production run (strategy/numerical-programme-
+                         status-and-plan): P2 continuum-limit background (>=4
+                         resolutions) -> P3 Hessian/zero-modes -> P4 CKM/PMNS.
+\end{verbatim}
+}

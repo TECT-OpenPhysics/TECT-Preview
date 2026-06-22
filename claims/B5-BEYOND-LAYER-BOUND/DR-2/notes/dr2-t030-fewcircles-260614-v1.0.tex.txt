@@ -6,7 +6,7 @@
 % Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; hypothesis
 %        H-NONLATTICE-REMAINDER-EXCLUDED. NOT load-bearing for the published
 %        C_full head, which caps T' <= 10 in-class by Lemma 2.)
-% Version: v1.0 -- first issued 2026-06-14
+% Version: v1.0 -- first issued 2026-06-14; this version issued 2026-06-14
 % Status: PARTIAL ADVANCE / frontier clarification. (1) A covering-number
 %   sufficient condition E_+(Q) <= 3 L^2 N^2 for Q covered by L circles --
 %   T7-WITHIN-CLASS, assembled from R-021 (per-pair, T7) by Cauchy-Schwarz over
@@ -99,10 +99,13 @@ $r_{ij}(m)=\#\{(a,b)\in Q_i\times Q_j:a+b=m\}$, the index pair being unique per
 ordered pair $(a,b)$. Cauchy--Schwarz over the $L^2$ index pairs gives
 $r(m)^2\le L^2\sum_{i,j}r_{ij}(m)^2$, and summing over $m$,
 \[
-E_+(Q)=\sum_m r(m)^2\;\le\;L^2\sum_{i,j}\sum_m r_{ij}(m)^2
-=L^2\sum_{i,j}E_+(Q_i,Q_j)
-\;\overset{\text{Lemma R-021}}{\le}\;3L^2\sum_{i,j}|Q_i||Q_j|
-=3L^2\Big(\sum_i|Q_i|\Big)^2=3L^2N^2. \qquad\square
+\begin{aligned}
+E_+(Q)=\sum_m r(m)^2
+&\;\le\;L^2\sum_{i,j}\sum_m r_{ij}(m)^2
+=L^2\sum_{i,j}E_+(Q_i,Q_j)\\
+&\;\overset{\text{Lemma R-021}}{\le}\;3L^2\sum_{i,j}|Q_i||Q_j|
+=3L^2\Big(\sum_i|Q_i|\Big)^2=3L^2N^2. \quad\square
+\end{aligned}
 \]
 
 \begin{corollary}[a new unconditionally-closed class]

@@ -1,0 +1,43 @@
+{
+  "script": "dr2_t030_consolidation_crosscheck.py",
+  "version": "1.1.0",
+  "single_circle": {
+    "N": 108,
+    "Eplus": 34668
+  },
+  "b5_occupancy_bound_coeff": 11,
+  "literature": {
+    "mudgal_2022_d4_exponent": 2.332614942528736,
+    "E2_S2_open_conjecture": 2.0,
+    "E2_S2_best_2016_Sheffer": 2.3333333333333335,
+    "E3_S1_known_different_object": 3.5,
+    "refs": [
+      "Mudgal, Additive energies on spheres, JLMS 106(4):2927-2958 (2022), arXiv:2105.06925",
+      "Sheffer, Additive Energy of Real Point Sets (expository, 2016): Bourgain-Demeter E_2/S^2 open; E_3/S^1 O(#A^{7/2})"
+    ]
+  },
+  "verdict": "CONDITIONAL CONSOLIDATION. T-030a closed conditionally on R-026; B5 closure = Lemma2(T'<=10)+LemmaA => 11 N^2 (independent of R-026 and of cover number L); T-030b, E_2/S^2 OPEN (Bourgain-Demeter).",
+  "claims": [
+    {
+      "name": "A1_single_circle_anchor",
+      "passed": true,
+      "detail": "single rich circle r=1105: N=108, E_+=34668 (R-038/R-040/R-041 anchor; matches R-033 F1/F5)"
+    },
+    {
+      "name": "A2_B5_occupancy_closure",
+      "passed": true,
+      "detail": "B5 closure: Lemma A (R-025) E_+<=(1+T')N^2 with Lemma 2 (R-032) T'<=10 => E_+ <= 11 N^2 (uses sum-circle OCCUPANCY T', distinct from the few-circles cover number L and from the lattice bound R-026)"
+    },
+    {
+      "name": "A3_bound_hierarchy",
+      "passed": true,
+      "detail": "6(L+1) vs 3L^2 (per N^2): L=2:18/12; L=3:24/27; L=4:30/48; L=8:54/192 -- cover-number forms (R-038/R-039), cross at L=3"
+    },
+    {
+      "name": "A4_literature_constants",
+      "passed": true,
+      "detail": "Mudgal d=4 = 2+1/3-1/1392 = 2.33261; E_2/S^2 OPEN (conj 2.0+eps), 2016 Sheffer best 7/3 = 2.33333; E_3/S^1 = 7/2 = 3.5 (DISTINCT object, Szemeredi-Trotter)"
+    }
+  ],
+  "all_pass": true
+}

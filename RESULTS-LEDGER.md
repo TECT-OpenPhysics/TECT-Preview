@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-043](#r-043) | T-030 CONDITIONAL consolidation: lattice R^eps-loss closed conditionally on R-026 (proof appended); B5 closure = Lemma2+LemmaA (T'<=10 => 11N^2), independent of R-026 & cover-number L; N^2 polylog & E_2/S^2 OPEN (Bourgain-Demeter); treadmill terminated | CONDITIONAL CONSOLIDATION (not a proof certificate); B5 T7-SCOPE_adm unaffected; dr2_t030_consolidation_crosscheck.py 4/4 |
 | [R-042](#r-042) | Height-energy bound E_+<=N^2+2 sum nu_k nu_l p(z_k+z_l) + sum-annulus mechanism (disjoint=>T=0); R-033 step 2 | PARTIAL; height additive energy E_h is the parameter; 4-circle incidence core OPEN; T-030 OPEN; dr2_t030_height_energy.py 5/5 |
 | [R-041](#r-041) | Sidon-height latitude unions (any radii) E_+<=6N^2 incidence-free (R-033 step 1); non-Sidon residual = open 4-circle incidence | PARTIAL ADVANCE; PROVED Sidon bound; residual = R-033 core; T-030 OPEN; dr2_t030_sidon_decoupling.py 7/7 |
 | [R-040](#r-040) | True sphere L-dependence: distinct-radius circles E_+<=(2 p_max+1)N^2 and empirically O(N^2) even at AP heights; linear is a cylinder artifact | PARTIAL ADVANCE; refined bound PROVED + O(N^2) sphere conjecture (T4); residual = 4-circle incidence -> R-033; T-030 OPEN; dr2_t030_height_multiplicity.py 6/6 |
@@ -61,6 +62,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-043"></a>
+### R-043 — T-030 consolidation & external-literature closure (treadmill terminated)
+
+**Statement (one line):** CONSOLIDATION (no new theorem). T-030 splits into three precise versions with honest status: (a) LATTICE R^eps-loss, Q subset Z^3 cap {|x|^2=R} => E_+ <<_eps R^eps N^2 = CLOSED CONDITIONALLY on R-026 (Lemma A + Dirichlet class-number/divisor, T7-NTstandard, decoupling-free; the COMPLETE self-contained proof is APPENDED in the note Sec.A: A.1 Lemma A, A.3 [DIV-CIRC] shift-removal/class-number/divisor, A.4 the assembled T-030a theorem -- T-030a is thus paper-grade citable from R-043 modulo textbook number theory), externally corroborated (object only) by Mudgal, "Additive energies on spheres", JLMS 106(4):2927-2958 (2022), arXiv:2105.06925 (d=4 threshold-breaking m^eps|A|^{2+1/3-1/2766}; d=3 improves Benatar-Maffucci; clean R^eps N^2 NOT attributed to a specific d=3 theorem number absent from the abstract); (b) LATTICE N^2 polylog (eps-removal) = OPEN, not a known theorem; (c) ARBITRARY REAL Q in S^2, E_2(Q) <<_eps (#Q)^{2+eps} = OPEN, a Bourgain-Demeter conjecture (Sheffer exposition). NO E_2/S^2 best-known exponent is claimed: the published O(#A^{7/2}) is for E_3 on S^1, a DIFFERENT object (the v1.0 'best ~O(n^{7/3})' is WITHDRAWN as unverified). Internal session results R-038..R-042 (T7-in-class / PARTIAL) sharply localise the (c) obstruction to the non-Sidon overlapping-annulus four-circle incidence energy but do NOT close (b),(c). B5's OWN closure is Lemma 2 (R-032, admissible => T'<=10) + Lemma A (R-025, E_+<=(1+T')N^2) => E_+<=11N^2 -- it uses the sum-circle OCCUPANCY T' and needs NEITHER R-026 (lattice divisor, the separate T-030a result) NOR the few-circles cover-number L (R-038/R-039). The v1.0 'admissible/lattice class closed (R-026 + Lemma-2 cap)' conflated two independent arguments and is CORRECTED. Arbitrary-Q (b),(c) is NON-LOAD-BEARING (H-NONLATTICE-REMAINDER / DR2-SHARE), so B5 = T7-SCOPE_{adm} is UNAFFECTED. Terminates the analytical reduction treadmill: pursuing (c) is pursuing a known open research problem (the external ~140-step R-043..R-189 chain never closed it and is NOT adopted). Verified dr2_t030_consolidation_crosscheck.py 4/4 (single-circle anchor 34668; bound hierarchy; literature constants with provenance).
+
+**Proven in:** B5 / dr2-t030-consolidation v1.0
+
+**Reuse scope:** T-030 status of record; the lattice/real split; external literature anchor (Mudgal 2022; Demeter-Katz); methodological boundary terminating unbounded reduction chains on recognised open problems.
+
+**Tier:** CONDITIONAL CONSOLIDATION -- NOT an independent proof certificate. T-030a CLOSED CONDITIONALLY on R-026 (T7-NTstandard; statement+proof appended); T-030b & E_2/S^2 OPEN (Bourgain-Demeter). B5 closure independent (Lemma2+LemmaA => 11N^2). B5 stays T7-SCOPE_{adm} given A1. No tier/gate/hypothesis flip. Operator review 2026-06-19 ACCEPTED the operational decision with these four corrections.
+
+**Publication target:** S^2 additive-energy paper / T-030 (status section); cites Mudgal 2022.
 
 <a id="r-042"></a>
 ### R-042 — Height-energy bound + sum-annulus mechanism (R-033 step 2)

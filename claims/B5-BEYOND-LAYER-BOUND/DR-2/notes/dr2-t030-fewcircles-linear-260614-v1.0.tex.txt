@@ -5,7 +5,7 @@
 %        E_+ >= N^{2+delta} extremizer is sharpened to L >= N^delta/12
 % Claim: B5-BEYOND-LAYER-BOUND (T-030 frontier; H-NONLATTICE-REMAINDER-EXCLUDED.
 %        NOT load-bearing for the published C_full head, Lemma 2 caps T'<=10.)
-% Version: v1.0 -- first issued 2026-06-14
+% Version: v1.0 -- first issued 2026-06-14; this version issued 2026-06-14
 % Status: PARTIAL ADVANCE / sharpening of R-038. (1) THEOREM (sphere): Q subset
 %   S^2 (origin-centred) covered by L distinct circles => E_+(Q) <= (2+2L)N^2 +
 %   4LN + 4L^3 <= 6(L+1)N^2 -- LINEAR in L, strictly improving R-038's 3 L^2 N^2
@@ -159,7 +159,9 @@ Precise statement:       Q on an origin-centred S^2, covered by L distinct
                          (vs R-038's N^{delta/2}/sqrt3; exponent doubled).
 Scope:                   T-030 (arbitrary finite Q in S^2; H-NONLATTICE-REMAINDER).
                          NOT load-bearing for the C_full head. Off the sphere the
-                         linear bound is NOT CLAIMED (proof mechanism fails); R-038's quadratic is the guaranteed general-circle
+                         linear bound is NOT CLAIMED (proof mechanism
+                         fails); R-038's quadratic is the guaranteed
+                         general-circle
                          bound there.
 Evidence grade:          PARTIAL ADVANCE. Theorem T7-WITHIN-CLASS (elementary,
                          sphere). Strictly improves R-038. Tightness on S^2 NOT
@@ -173,8 +175,9 @@ Expected output:         6/6 asserts PASS, exit 0; JSON at
 Falsifier:               (a) Q on L distinct circles of a sphere with
                          E_+ > 6(L+1)N^2; (b) #{m!=0 : r(m) > 2L} > L on a genuine
                          sphere config (would break the occupancy split). Both
-                         machine-checked false on S^2; the proof mechanism r(m)<=t_m fails
-                         off the sphere, but the cylinder STILL SATISFIES the bound (no counterexample); the bound is
+                         machine-checked false on S^2; off the sphere the
+                         proof mechanism r(m)<=t_m fails, but the cylinder
+                         STILL SATISFIES the bound (no counterexample); thus
                          scoped to S^2.
 Tier before / after:     NONE -- operator decides. No gate/tier/hypothesis flip.
                          B5 stays T7-SCOPE_{admissibility-bounded} given A1;
