@@ -19,6 +19,9 @@
 | Math374 | (script-only migration: import dependency) | `scripts/Math374_canonical_BCC_hessian.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
 | Math400 | (script-only migration: import dependency) | `scripts/Math400_AddE_brazovskii_one_loop.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
 | Math424 | (script-only migration: import dependency) | `scripts/Math424_AddA_reading_uniqueness.py` | — | A1, B2 (indirect) | batch 1 (2026-06-05) |
+| Math01 | v2 BCC-uniqueness-rigorous (uniqueness within cone) | — | — | B4 | batch 3 (2026-06-23) |
+| Math56 | AddB ClassII guarded-quotient (constraint cone, canonical) + Addendum + HessJump-audit | — | — | B4 | batch 3 (2026-06-23) |
+| Math82 | Addenda G (7-point bifurcation curve) / G2 (stall-mechanism audit) / G3 (vacuum-floor guard) | — | `artefacts/Math82/math82H_groundstate_N32_Lbcc7_MANIFEST.md` (continuation provenance; anchor m*²=+4.247e-2 at μ²=+5e-3) | B4 | batch 3 (2026-06-23) |
 
 Script-only rows: the corresponding notes migrate when a claim consumes them
 directly (migration-plan §1.1).

@@ -21,8 +21,11 @@ Changelog:
   1.0.1 (2026-06-05) P0 fence narrowed to file pointers; Hangul regex via escapes (self-match fix).
   1.0.2 (2026-06-05) skip git-ignored build/ area.
   1.0.3 (2026-06-05) english-only scan extended to .html/.js/.css (website shell).
+  1.0.4 (2026-06-23) ADR-0001: enumerate via repo_inventory.real_files (git, .gitignore-aware
+        incl. committed-by-mistake junk) instead of rglob+SKIP_DIRS; every content pass now
+        skips the .tmp.driveupload junk class. SKIP_DIRS kept for the no-git fallback only.
 """
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-06-05"
 
@@ -32,6 +35,9 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_inventory import real_files  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[2]
 SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build", ".cache"}
@@ -43,9 +49,10 @@ CLAIM_ID = re.compile(r"\b([A-F]\d+-[A-Z0-9-]{3,})\b")
 
 
 def files():
-    for f in sorted(REPO.rglob("*")):
-        if f.is_file() and not any(p in SKIP_DIRS for p in f.parts):
-            yield f
+    # ADR-0001: enumerate real artefacts via git (honors .gitignore, including
+    # files committed by mistake -- e.g. the 8047 .tmp.driveupload/* junk),
+    # instead of rglob+SKIP_DIRS which read ~450 MB of Drive sync junk per pass.
+    return iter(real_files(REPO))
 
 
 def run(label, cmd, errors):

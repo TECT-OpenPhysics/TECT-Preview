@@ -1,0 +1,175 @@
+% =============================================================================
+% Title: B4-MASS-GAP evidence-chain migration record (migration batch 3)
+% Claim: B4-MASS-GAP (supporting: A1-KERNEL-CONV hard dependency)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: verification record (no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: migration batch-3 record for B4-MASS-GAP.
+%        Verbatim migration of the Math01-v2 / Math56-cone / Math82-AddG/G2/G3
+%        evidence chain from the frozen legacy repository into archive/legacy/;
+%        pointer resolution making B4 migration-clean. No tier action; the
+%        numerical anchor remains PACKAGE-PENDING (production-PDE provenance,
+%        re-execution waived and deferred to an operator-side reproduction
+%        bundle).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note is the permanent record of migration batch 3 (plan phase M1,
+\url{governance/migration-plan.md} \S 4 priority 1, completing the Sector-B
+critical path): the evidence chain cited by claim \texttt{B4-MASS-GAP} was
+copied verbatim from the frozen legacy repository
+(\url{TECT2/Contents/Docs/math/}, \url{Runs/}) into \url{archive/legacy/} and
+the card's \texttt{legacy:} pointers were resolved to \url{archive/...} paths.
+This note makes no new mathematical claim and performs no tier action. It is
+citable as the migration provenance for the \texttt{B4-MASS-GAP} card. The
+claim's reproduction status is unchanged (PACKAGE-PENDING): migration relocates
+and certifies the byte-identity of the textual evidence, not the
+re-executability of the production-PDE numerics (\S 3).
+
+\section*{2. What was migrated}
+
+Seven legacy notes and one run-provenance manifest, covering theory tags
+Math01 (v2), Math56 (constraint-cone cluster), and Math82 (Addenda G/G2/G3):
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{@{} l Y l @{}}
+\toprule
+Tag & Legacy file (verbatim) & Role \\
+\midrule
+Math01 & \url{TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt} & uniqueness within cone \\
+Math56 & \url{TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt} & constraint cone (canonical) \\
+Math56 & \url{TECT-Math56-Addendum.tex.txt} & cone-cluster base \\
+Math56 & \url{TECT-Math56-HessJump-audit.tex.txt} & cone Hessian-jump audit \\
+Math82 & \url{TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt} & continuation curve \\
+Math82 & \url{TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt} & stall-mechanism audit \\
+Math82 & \url{TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt} & vacuum-floor guard \\
+Math82 & \url{math82H_groundstate_N32_Lbcc7_MANIFEST.md} (artefact) & continuation-run provenance \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Disposition: \textbf{MIGRATED-VERBATIM} (all eight). Layout:
+\url{archive/legacy/}\{\url{notes/Math01/}, \url{notes/Math56/},
+\url{notes/Math82/}, \url{artefacts/Math82/}\}; per-file original paths in
+\url{archive/MIGRATION-LEDGER.md} (batch 3); per-tag lookup in
+\url{archive/legacy/INDEX.md}. The Math82 \emph{second-order} audit
+(\url{TECT-Math82-Addendum-G4-second-order-audit.tex.txt}) is available in the
+legacy corpus but is not cited by the B4 card; it is left for demand-driven
+migration (\S 1 pull-based principle).
+
+\section*{3. Re-validation status (honest grade)}
+
+Three-axis account, distinguishing textual verbatim-fidelity (achieved) from
+numerical re-execution (waived):
+
+\begin{enumerate}
+\item[(a)] \emph{Verbatim text fidelity --- ACHIEVED.} All seven migrated
+notes are byte-identical to their frozen legacy originals: SHA-256 prefixes
+\texttt{6aeffab9} (Math01-v2), \texttt{a5546466} / \texttt{26255775} /
+\texttt{4c99f5f9} (Math56 cluster), \texttt{9c76de35} / \texttt{2025a665} /
+\texttt{fd038f4a} (Math82 G/G2/G3) match source and archive.
+\item[(b)] \emph{Provenance cross-check --- ACHIEVED.} The migrated manifest
+records continuation point \#1 at $\mu^2 = 5.000\times 10^{-3}$,
+$r = 2.190\times 10^{-1}$, converged, with $m^{*2} = +4.247\times 10^{-2}$ and
+$\Delta F = +4.150\times 10^{-10}$ (unfavourable). This reproduces, to every
+quoted digit, the anchor stated in the \texttt{B4-MASS-GAP} card
+($m^{*2}=+4.247\times 10^{-2}$ at $\mu^2=+5\times 10^{-3}$, metastable branch).
+The 7-point table (3 converged, 4 stalled for $\mu^2 \le -0.5$) is the recorded
+Regime-III evidence.
+\item[(c)] \emph{Numerical re-execution --- WAIVED (reasoned).} The anchor is
+the fixed point of a production Newton--Krylov continuation
+(\url{continuation_mu2_v25.py} v2.6.4) seeded by a BCC analytic state
+(\texttt{.npy}, gitignored) on an $N=32$, $L_{\rm bcc}=7$ spectral grid. It is
+not sandbox-reproducible without the production solver stack and seed.
+Re-execution is therefore deferred to an operator-side reproduction bundle;
+the B4 reproduction status stays \textbf{PACKAGE-PENDING}, exactly as before
+migration. Migration does \emph{not} discharge the reproduction obligation; it
+only relocates and certifies the textual evidence and the run manifest.
+\end{enumerate}
+
+\section*{4. Convention check}
+
+Pillar-1 mass-gap content in the corrected production-kernel convention
+$r_{\rm braz}=K(q_0)=\mu^2$. The Math82 continuation is parameterised directly
+in $\mu^2$ (the manifest's $r$ column is the affine image
+$r=\mu^2+0.2140336$ of the same lineage), so the migrated curve is in the
+corrected convention; no stale-convention content. Math01-v2 (BCC uniqueness)
+and the Math56 cone cluster are structural / variational and
+convention-neutral.
+
+\section*{5. Scope preservation (no tier action)}
+
+The migration preserves the card's pinned scope exactly and upgrades nothing:
+the result is \textbf{CLOSED@SINGLE-MODE-CONE} (T5), the legacy `PROVED' label
+being precisely this pinned scope. The $m^{*2}$ anchor is the
+\emph{metastable} subset-4-cosine branch, \emph{not} the ground state; the
+Regime-III branch interpretation ($\mu^2 \le -0.5$) remains
+\textbf{undetermined} per the migrated G2 audit. No claim of ground-state
+uniqueness beyond the single-mode cone is made or implied.
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A migration that waives re-execution certifies
+nothing.''} VALID with mitigation: it certifies precisely two things ---
+byte-identity of the textual evidence (\S 3a, SHA-256) and internal consistency
+of the card's quoted anchor with the migrated manifest (\S 3b) --- and makes no
+stronger claim. The card's reproduction tier is left at PACKAGE-PENDING so the
+waiver is visible, not hidden. This is the honest disposition for a
+production-PDE numerical anchor under \url{governance/migration-plan.md} \S 6
+(``re-validation evidence: re-run artefact \emph{or reasoned waiver}'').
+\item[($\beta$)] \emph{``The anchor is a metastable, unfavourable
+($\Delta F>0$) point --- it does not support a mass-gap claim.''} DISMISSED as
+a scope objection: B4 claims uniqueness \emph{within the single-mode constraint
+cone} at the operating point, not global ground-state favourability. The
+$\Delta F$ sign and the metastable label are carried verbatim into \S 5 and the
+card; no favourability is asserted. The favourable point in the same table is
+\#3 ($\mu^2=-0.1$, $\Delta F=-6.27\times 10^{-10}$), also migrated.
+\item[($\gamma$)] \emph{``Archive copies could drift from the frozen legacy
+originals.''} DISMISSED: the legacy repository is frozen read-only (M0); copies
+are byte-identical at migration time (\S 3a hashes recorded), ledgered, and
+git-tracked from this commit --- any later divergence is visible in history.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the manifest arithmetic
+$r = \mu^2 + 0.2140336$ holds at point \#1 ($5.0\times 10^{-3}+0.2140336
+= 0.2190336 = r$) and at point \#4 ($-0.5+0.2140336 = -0.2859664 = r$),
+confirming the $\mu^2 \leftrightarrow r$ affine map across converged and
+stalled regimes; the seven wall-times ($O(20$--$1075\,\mathrm{s})$) sum to
+$\approx 45$ min, consistent with a single 7-point production sweep, not a
+multi-day run.
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B4-MASS-GAP (supporting migration record)
+Precise statement:       The B4 evidence chain (Math01-v2, Math56 cone
+                         cluster, Math82-AddG/G2/G3 + continuation manifest)
+                         was migrated verbatim (7/7 SHA-256 match) and the
+                         card's legacy: pointers resolved to archive/ paths.
+Scope:                   Textual verbatim-fidelity + manifest-provenance
+                         consistency only; no numerical re-execution; no
+                         new mathematical claim; no tier action.
+Dependencies:            archive/legacy/ batch-3 file set (ledger 2026-06-23);
+                         A1-KERNEL-CONV (hard dependency, already migrated).
+Evidence grade:          ANALYTIC (text) + provenance (manifest);
+                         numerical re-execution WAIVED (PACKAGE-PENDING).
+Reproduction command:    Production-PDE; not sandbox-reproducible. Operator-
+                         side: continuation_mu2_v25.py v2.6.4, N=32, Lbcc=7,
+                         BCC analytic seed; deferred reproduction bundle.
+Expected output:         Continuation point #1 m*^2 = +4.247e-02 at
+                         mu^2 = +5e-03 (metastable branch), reproducing the
+                         card anchor.
+Falsification gate:      A second distinct minimiser within the single-mode +
+                         cone class at the operating point, or failure to
+                         reproduce the anchor within stated tolerance.
+Tier before / after:     B4 T5 / T5 (no change); migration-clean: no / yes.
+No-overclaim statement:  No ground-state uniqueness beyond the single-mode
+                         cone; the subset-4-cosine anchor is metastable, not
+                         the ground state; Regime-III remains undetermined.
+Next required action:    Migrate B3-BCC-STRUCT (batch-3 continuation), then
+                         operator-side reproduction bundle for the B4 anchor.
+\end{verbatim}

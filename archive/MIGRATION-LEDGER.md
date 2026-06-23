@@ -124,3 +124,57 @@ All dispositions in this batch are MIGRATED-VERBATIM.
    chain~~ — **DONE (batch 2)**. B1 migration-clean; H-LAYER justification
    chain grounded; Packet-A evidence complete.
 3. T7-candidates: `C2-LORENTZ-EMERGENT`, `C3-EP`, `D3-CHIRALITY`.
+
+## Migration batch 3 — Sector-B mass-gap (B4-MASS-GAP) (plan phase M1, 2026-06-23)
+
+Goal: complete the Sector-B critical-path migration (`governance/migration-plan.md`
+§4 priority 1) by making `B4-MASS-GAP` migration-clean. Demand-driven: exactly
+the evidence the B4 card cites — Math01-v2 (uniqueness within cone), the Math56
+constraint-cone cluster, and Math82 Addenda G/G2/G3 (continuation curve + audits)
+— plus the continuation-run provenance manifest.
+
+**Re-validation (honest grade).** Two axes achieved, one waived:
+(a) **verbatim text** — all 7 migrated notes are byte-identical to the frozen
+legacy originals (SHA-256 verified at migration time: Math01-v2 `6aeffab9`;
+Math56 `a5546466`/`26255775`/`4c99f5f9`; Math82 G/G2/G3
+`9c76de35`/`2025a665`/`fd038f4a`);
+(b) **provenance cross-check** — the migrated manifest's continuation point #1
+($\mu^2=5.0\times10^{-3}$, converged, $m^{*2}=+4.247\times10^{-2}$,
+$\Delta F=+4.150\times10^{-10}$) reproduces the B4 card anchor to every quoted
+digit;
+(c) **numerical re-execution — WAIVED (reasoned)** — the anchor is a production
+Newton–Krylov continuation fixed point (`continuation_mu2_v25.py` v2.6.4, $N=32$,
+$L_{\rm bcc}=7$, BCC analytic `.npy` seed), not sandbox-reproducible. Re-execution
+is deferred to an operator-side reproduction bundle; B4's reproduction status
+stays **PACKAGE-PENDING** (migration does not discharge it). This is the
+§6 "re-run artefact OR reasoned waiver" disposition.
+
+**Convention check.** Pillar-1 mass-gap content in the corrected production-kernel
+convention $r_{\rm braz}=K(q_0)=\mu^2$; the Math82 continuation is parameterised
+in $\mu^2$ ($r=\mu^2+0.2140336$, verified at points #1 and #4) — no
+stale-convention content. Math01-v2 / Math56 are structural / variational and
+convention-neutral.
+
+**Scope preservation.** No tier action. CLOSED@SINGLE-MODE-CONE (T5) preserved;
+the anchor is the metastable subset-4-cosine branch (not the ground state);
+Regime-III ($\mu^2\le-0.5$) remains undetermined per the migrated G2 audit.
+
+Migration record + three-objection self-test:
+`claims/B4-MASS-GAP/notes/b4-massgap-migration-260623-260623-v1.0.tex.txt` (+ PDF).
+
+All dispositions in this batch are MIGRATED-VERBATIM. The Math82 second-order
+audit (`TECT-Math82-Addendum-G4-second-order-audit.tex.txt`) is **not** cited by
+the B4 card and is left for demand-driven migration. The production continuation
+driver (`continuation_mu2_v25.py`) is COLD-ARCHIVE (production machinery,
+migration-plan §5); only its run manifest migrates as provenance.
+
+| Legacy path (original) | Consuming claims | Re-validation | Sign-off |
+|---|---|---|---|
+| `Docs/math/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt` | B4 | verbatim (SHA-256 `6aeffab9`) | n/a (T5) |
+| `Docs/math/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt` | B4 | verbatim (SHA-256 `26255775`) | n/a (T5) |
+| `Docs/math/TECT-Math56-Addendum.tex.txt` | B4 | verbatim (SHA-256 `a5546466`) | n/a (T5) |
+| `Docs/math/TECT-Math56-HessJump-audit.tex.txt` | B4 | verbatim (SHA-256 `4c99f5f9`) | n/a (T5) |
+| `Docs/math/TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt` | B4 | verbatim (SHA-256 `9c76de35`) | n/a (T5) |
+| `Docs/math/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt` | B4 | verbatim (SHA-256 `2025a665`) | n/a (T5) |
+| `Docs/math/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt` | B4 | verbatim (SHA-256 `fd038f4a`) | n/a (T5) |
+| `Runs/continuation/math82H_groundstate_N32_Lbcc7_2026-04-24/MANIFEST.md` | B4 | provenance; anchor reproduces card to all digits; numerical re-run WAIVED (production-PDE) | n/a (T5) |

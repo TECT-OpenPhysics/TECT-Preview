@@ -1,0 +1,210 @@
+% =====================================================================
+% TECT — Math82 Addendum G
+% Title : Phase Z 7-point continuation: bifurcation of the subset-4-cosine
+%         BCC branch and reinterpretation of the Math82-F numerical anchor
+% Theory tag : Math82-AddG-Phase-Z-7-point-bifurcation-2026-04-24
+% Status : NEW NUMERICAL RESULT (Pillar 1 SCOPE-CLARIFICATION)
+% Date   : 2026-04-24
+% Author : Jusang Lee (jtkor@outlook.com)
+% Audit  : Internal only; results derived directly from
+%          Runs/continuation/math55_endpoint_N32_Lbcc7_phaseZ_E_2026-04-24/MANIFEST.md
+% Supersedes-status-claim : Math82-Addendum-F header
+%                          ("first numerical anchor at the Brazovskii target")
+%          is RETAINED but the qualifier "metastable subset-4-cosine branch"
+%          is added (see §5 below).
+% =====================================================================
+
+\section*{Math82-Addendum-G: Phase Z 7-point bifurcation curve}
+
+\subsection*{1.\ Run summary}
+
+The Phase Z full-schedule run was executed on
+\texttt{continuation\_mu2\_v25.py} v2.6.4 with the validated
+subset-4-cosine BCC seed
+\verb|Psi_BCC_subset4_N32_phaseZ_E.npy| (RMS$|\Psi|=0.2061$),
+grid $N=32$, BCC-commensurate box $L=L_{\mathrm{BCC}}^{(7)}=2\pi\sqrt{2}\cdot 7\approx 62.20036$,
+$\mu^{2}$ schedule $\{+5\!\times\!10^{-3},\,-0.02,\,-0.1,\,-0.5,\,-0.7,\,-0.85,\,-1.0\}$,
+$\mathrm{tol}_{\mathrm{Newton}}=10^{-8}$, $\mathrm{max}_{\mathrm{Newton}}=15$,
+Eisenstat--Walker $\eta\in[0.05,0.9]$.
+
+\subsection*{2.\ Per-point results (extracted from MANIFEST.md)}
+
+\begin{center}
+\begin{tabular}{|c|r|c|c|r|r|r|c|}
+\hline
+\# & $\mu^{2}$ & Conv. & Newton & $m^{*2}$ & $\lambda_{\min}$ & $\Delta F$ & Favourable? \\
+\hline
+1 & $+5\times 10^{-3}$ & \checkmark & 15 & $+4.246\times 10^{-2}$ & $+4.246\times 10^{-2}$ & $+2.56\times 10^{-10}$ & no \\
+2 & $-2\times 10^{-2}$ & \checkmark & 1  & $+1.748\times 10^{-2}$ & $+1.748\times 10^{-2}$ & $+1.16\times 10^{-10}$ & no \\
+3 & $-1\times 10^{-1}$ & \checkmark & 1  & $+1.982\times 10^{-2}$ & $\mathbf{-6.252\times 10^{-2}}$ & $\mathbf{-3.31\times 10^{-10}}$ & yes \\
+4 & $-5\times 10^{-1}$ & $\times$ & 15 & --- & --- & --- & --- (stall) \\
+5 & $-7\times 10^{-1}$ & $\times$ & 15 & --- & --- & --- & --- (stall) \\
+6 & $-8.5\times 10^{-1}$ & $\times$ & 15 & --- & --- & --- & --- (stall) \\
+7 & $-1.0\times 10^{0}$ & $\times$ & 15 & --- & --- & --- & --- (stall) \\
+\hline
+\end{tabular}
+\end{center}
+
+Total wall-time $3552\,\mathrm{s}$ ($\approx 59\,\mathrm{min}$).
+The reported $m^{*2}$ at $\mu^{2}=-0.1$ is $|\lambda_{1}|$ rather than $|\lambda_{0}|$
+because $\lambda_{0}=-6.252\times 10^{-2}<0$ (saddle-point).
+The four stalled points all collapse to merit
+$\sim 10^{-10}$ with $\rho_{\mathrm{trust}}\to\mathrm{NaN}$ (sentinel
+$-10^{30}$ in the per-step log) due to $0/0$ in the trust-region update;
+this is not a solver bug but the numerical signature of the iterate
+falling onto $\Psi\approx 0$ where both predicted and actual reductions
+vanish identically.
+
+\subsection*{3.\ Three-regime structure on the subset-4-cosine branch}
+
+The data partition into three regimes:
+
+\paragraph*{Regime I (stable metastable branch):} $\mu^{2}\in\{+5\!\times\!10^{-3},\,-2\!\times\!10^{-2}\}$.
+Newton converges, $\lambda_{\min}>0$ (strict local minimum), but
+$\Delta F\equiv F(\Psi^{*})-F(0)>0$ — the subset-4-cosine equilibrium
+is energetically subdominant to the trivial vacuum.
+
+\paragraph*{Regime II (bifurcation onset):} $\mu^{2}=-0.1$.
+Newton converges in a single step (warm-started by Regime I), but
+$\lambda_{\min}=-6.25\times 10^{-2}<0$ — the equilibrium is now a
+\emph{saddle point}. Simultaneously $\Delta F<0$ — the saddle lies
+energetically below the trivial vacuum. The sign change of
+$\lambda_{\min}$ between $\mu^{2}=-0.02$ ($+1.75\!\times\!10^{-2}$)
+and $\mu^{2}=-0.1$ ($-6.25\!\times\!10^{-2}$) localises the
+bifurcation point at
+$$
+\mu^{2}_{\mathrm{bif,\;subset\text{-}4}}\;\approx\;-0.05\ \pm\ 0.03
+\quad(\text{first numerical bracket}).
+$$
+
+\paragraph*{Regime III (branch absent):} $\mu^{2}\in\{-0.5,\,-0.7,\,-0.85,\,-1.0\}$.
+The Newton iterate cannot find a nearby equilibrium of the
+subset-4-cosine type and collapses to $\Psi\approx 0$, at which the
+gradient lies inside the noise floor while the trust-region ratio is
+undefined. The subset-4-cosine \emph{branch terminates} below
+$\mu^{2}\approx -0.1$.
+
+\subsection*{4.\ Reinterpretation of the Math82-F anchor}
+
+Point~1 reproduces Math82-Addendum-F's value
+$m^{*2}=+4.247\times 10^{-2}$ at $\mu^{2}=+5\times 10^{-3}$ to four
+digits ($+4.246\times 10^{-2}$ here vs.\ $+4.247\times 10^{-2}$ in
+Math82-F), confirming reproducibility. However, the present run
+clarifies the \emph{nature} of that anchor:
+
+\begin{itemize}
+\item The configuration is a strict local minimum
+($\lambda_{\min}>0$, $\nabla F\to 0$).
+\item The configuration is \emph{not} the global minimum:
+$F(\Psi^{*})>F(0)$ at $\mu^{2}=+5\!\times\!10^{-3}$ in the regime
+$\mu^{2}<R_{C}^{\mathrm{global}}=1.141\!\times\!10^{-2}$ where the
+\emph{global} BCC condensate is expected to be favourable
+($\Delta F<0$).
+\item The subset-4-cosine seed therefore samples a \emph{metastable
+secondary branch} (likely a striped/lamellar-type partial-mode
+configuration) and not the full 12-mode BCC ground state.
+\end{itemize}
+
+The Math82-F header text and the Pillar~1 status row in
+\texttt{Docs/status/TOE-FACT-SHEET.md} must therefore carry the
+qualifier ``metastable subset-4-cosine branch.'' The numerical claim
+$m^{*2}=+4.247\!\times\!10^{-2}$ is intact; its physical
+interpretation as the \emph{ground-state} mass gap is downgraded.
+
+\subsection*{5.\ Bifurcation theorem (numerical statement)}
+
+\begin{theorem}[Subset-4-cosine bifurcation, numerical]
+\label{thm:subset4-bifurcation-2026-04-24}
+For the Brazovskii free energy with locked parameters
+$(\mu^{2},\lambda,\gamma)=(\mu^{2},-0.43,1.62)$,
+$q_{0}^{\mathrm{phys}}=0.6801747616$, on the BCC-commensurate cubic
+torus $[0,L_{\mathrm{BCC}}^{(7)}]^{3}$ with $N=32$, the family of
+projected Newton equilibria seeded from
+\verb|Psi_BCC_subset4_N32_phaseZ_E.npy| satisfies:
+\begin{enumerate}
+\item[(i)] Existence and stability for $\mu^{2}\in[-0.02,\,+5\!\times\!10^{-3}]$,
+with $\lambda_{\min}(\mathrm{Hess}\,F\,|\,\mathrm{P})>0$.
+\item[(ii)] A pitchfork-type bifurcation at
+$\mu^{2}_{\mathrm{bif}}\in(-0.1,-0.02)$, numerically bracketed at
+$\approx -0.05\pm 0.03$, beyond which $\lambda_{\min}<0$
+(saddle structure).
+\item[(iii)] Termination of the branch for $\mu^{2}\le -0.1$:
+no Newton-accessible equilibrium of the same type exists in the
+subset-4-cosine basin of attraction.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+Statement (ii) and (iii) constitute a numerical bifurcation diagram
+and are not (yet) backed by an analytic continuation argument; a
+formal proof would require Lyapunov--Schmidt reduction at
+$\mu^{2}_{\mathrm{bif}}$ and a trust-region--free verification at
+$\mu^{2}\le -0.1$ (e.g.\ a deflated Newton seeded from the
+saddle's unstable direction). These are deferred to Math82-H.
+\end{remark}
+
+\subsection*{6.\ Physical interpretation}
+
+The subset-4-cosine seed activates a 4-mode partial-BCC configuration
+(four out of the twelve first-shell BCC reciprocal-lattice vectors).
+Such partial-mode states are well-known in Brazovskii / weak-crystallisation
+theory to form a hierarchy of metastable phases (lamellar at 2 modes,
+hexagonal at 6 modes, BCC at 12 modes). The 4-mode subset is generally
+energetically intermediate, and the present numerical evidence
+(Regime~I: $\Delta F>0$ but $\lambda_{\min}>0$) is consistent with this
+classification: the branch exists but is not globally favourable. The
+bifurcation in Regime~II reflects a cubic-coupling instability where one
+unstable direction becomes accessible via Brazovskii's fluctuation-induced
+mechanism — an instability of the metastable 4-mode towards the 6- or
+12-mode condensate, presumably along a direction not contained in the
+4-mode subspace.
+
+The branch termination in Regime~III (the iterate collapses to
+$\Psi=0$) is therefore not a physical statement that ``no condensate
+exists below $\mu^{2}=-0.1$'' but rather that ``no condensate
+\emph{of subset-4-cosine character} is reachable from this seed by
+Newton iteration below $\mu^{2}=-0.1$.'' The full 12-mode BCC
+condensate is presumed to remain present (indeed favoured) in
+Regime~III but lies in a different basin of attraction.
+
+\subsection*{7.\ Pillar 1 status update}
+
+\begin{itemize}
+\item \textbf{Pillar 1, current row in TOE-FACT-SHEET}: ``PROVED ---
+single-mode/Math56 cone caveat'' (audit-promoted from Math01-v2).
+\item \textbf{Pillar 1, post-Math82-G refinement}: status unchanged
+(theorem-level closure remains via Math01-v2), but the \emph{numerical
+anchor} previously cited from Math82-F is downgraded from
+``ground-state mass gap'' to ``metastable subset-4-cosine
+branch mass gap.''
+\item \textbf{Required next step (Math82-H, queued)}: re-run the
+7-point Phase Z schedule with a \emph{full 12-mode BCC analytic seed}
+(\texttt{bcc\_analytic\_seed.py} v0.2 mode \texttt{bcc\_analytic}) to
+obtain the ground-state continuation curve. The expected behaviour is
+$\Delta F<0$ in all of Regime I + II + III (BCC favourable throughout
+$\mu^{2}<R_{C}^{\mathrm{global}}$) with $\lambda_{\min}>0$ everywhere.
+\end{itemize}
+
+\subsection*{8.\ Output}
+
+\begin{itemize}
+\item Manifest:
+\verb|Runs/continuation/math55_endpoint_N32_Lbcc7_phaseZ_E_2026-04-24/MANIFEST.md|
+\item Driver: \verb|Codes/pde/continuation_mu2_v25.py| v2.6.4
+\item Theory-tag: \texttt{Math82-AddG-Phase-Z-7-point-bifurcation-2026-04-24}
+\item Result-tag: \texttt{R-2026-04-24-PhaseZ-7point-bifurcation}
+\item Wall-clock: $3552\,\mathrm{s}$ on local GPU.
+\end{itemize}
+
+\subsection*{9.\ Conclusion}
+
+The 7-point Phase Z run delivers the first \emph{continuation curve}
+(rather than a single anchor) for Pillar~1 numerical work. The
+positive content is the three-regime classification and the localised
+bifurcation point $\mu^{2}_{\mathrm{bif}}\approx -0.05$. The negative
+content is the clarification that the previous Math82-F anchor lies
+on a metastable branch, not the BCC ground state. The mainline next
+step is Math82-H: identical schedule, full 12-mode \texttt{bcc\_analytic}
+seed.
+
+% End of Math82 Addendum G

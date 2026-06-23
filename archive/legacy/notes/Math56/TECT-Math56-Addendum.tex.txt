@@ -1,0 +1,558 @@
+% TECT-Math56-Addendum.tex.txt
+% Title:  Threshold Derivations and Existence-Window Audit for the
+%         Phase-2.5 Gate (v2.4 Protocol)
+% Date:   2026-04-20
+% Status: THEORY NOTE (blocking prerequisite for v2.4 solver patch)
+%
+% Feeds:  Math37-AddA (BCC-moment reduced potential), Math55
+%         (continuation method), Math56 (Hessian-jump audit)
+% Updates: NEGATIVE-RESULTS F-2026-04-20-05 (remediation path),
+%          OPEN-QUESTIONS X5 (phi_0 convention discrepancy)
+% Theory tag: hess-jump-addendum-v1.0-2026-04-20
+%
+% Purpose (reading guide):
+%   The Hessian-jump audit (Math56) diagnosed the N=32, N=64 collapse
+%   as a trivial-vacuum basin trap combined with a class-II rho^{-1}
+%   singularity.  The remediation path specifies a v2.4 solver that
+%   (i) fixes the class-II regularisation, (ii) enforces a Phase-0
+%   vacuum-escape gate G0, and (iii) enforces a Phase-2.5 acceptance
+%   gate (G1 Fourier-localisation, G2 cross-grid overlap, G3 Ritz
+%   residual).  Before any patch is written, the numerical values of
+%   the four thresholds (G0, rho_cut, G2_min, G3_max), the choice of
+%   mu^2_target for continuation, and the phi_0 convention must all be
+%   *theorem-level*, not heuristic.  This note supplies those
+%   derivations.
+%
+% Verification status:
+%   - Sec. A (existence window):    PROVED.
+%   - Sec. B (G0 from separatrix):  PROVED for mu^2 in (0, r_c^meta).
+%   - Sec. C (rho_cut from solver): PROVED (Rayleigh tolerance).
+%   - Sec. D (G2 from Rayleigh-Ritz perturbation): PROVED.
+%   - Sec. E (G3 from Saad bound): PROVED.
+%   - Sec. F (phi_0 convention audit): IDENTIFIED ALGEBRAIC
+%     INCONSISTENCY in Math37-AddA Sec. A.3 boxed formula; corrected
+%     value supplied.  Tagged X5 -- BLOCKING for v2.4.
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathtools,booktabs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\DeclareMathOperator{\argmin}{arg\,min}
+
+\title{TECT-Math56 Addendum: Threshold Derivations and\\
+Existence-Window Audit for the v2.4 Phase-2.5 Gate}
+\author{TECT Collaboration}
+\date{2026-04-20}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We supply the outstanding theorem-level derivations required before the
+Newton-Krylov v2.4 patch is committed.  Four threshold numbers that
+govern the Phase-2.5 acceptance gate are reduced to closed-form
+functions of the potential parameters $(\mu^{2}_{\text{target}},
+\lambda, \gamma, Z, Y)$ and the solver tolerance $\mathrm{tol}_{\text{Newton}}$:
+(i) the Phase-0 vacuum-escape threshold $G_{0}$ is derived from the
+Brazovskii separatrix $\alpha_{\text{sep}} = \phi_{-}/\phi_{+}$;
+(ii) the class-II regulariser density cut $\rho_{\text{cut}}$ is fixed
+by demanding that the regularised quotient $m_{\alpha}/(\rho +
+\rho_{\text{cut}})$ introduce no spurious eigenvalue above
+$\mathrm{tol}_{\text{Newton}}$;
+(iii) the cross-grid overlap threshold $G_{2,\min}$ is derived from
+the Rayleigh-Ritz perturbation bound applied to the zero-padded
+spectral interpolator;
+(iv) the Ritz-residual threshold $G_{3,\max}$ follows from the Saad
+relative-error inequality at $1\%$ target precision.  As a
+by-product of the existence audit we prove that the currently locked
+parameter point $(\mu^{2}, \lambda, \gamma) = (0.26, -0.43, 1.62)$
+lies \emph{above} the global first-order transition
+$r_{c}^{\text{global}} = \lambda^{2}/(10\gamma)$, so that no BCC
+extremum exists at locked parameters -- the ``trivial-vacuum
+collapse'' observed empirically is the correct Newton solution at
+$\mu^{2}=0.26$, not a solver pathology.  We also identify an algebraic
+inconsistency in the Math37-AddA Sec.~A.3 boxed formula
+$\phi_{0}^{2} = -4\lambda/(15\gamma)$; the correct first-order value
+is $\phi_{0}^{2} = -\lambda/(5\gamma)$, a factor $3/4$ smaller.  This
+is flagged as open item X5 and must be resolved before the v2.4 code
+patch.
+\end{abstract}
+
+\tableofcontents
+
+%======================================================================
+\section{Setting and Parameters}
+%======================================================================
+
+\paragraph{Reduced BCC-moment potential.}
+Following Math37-AddA Sec.~A.3 with Leibler--Wickham counts
+$K_{4}=1$, $K_{6}=5/2$ (BCC first-shell enumeration
+$N_{4}^{\mathrm{BCC}}=144$, $N_{6}^{\mathrm{BCC}}=4320$ over
+$N_{\mathrm{c}}=12$), the uniform-amplitude reduced free-energy
+density is
+\begin{equation}
+  \mathcal{F}(\phi) \;=\; \mu^{2}\phi^{2} + \lambda\phi^{4}
+     + \tfrac{5}{2}\gamma\phi^{6},
+  \qquad
+  \lambda < 0,\ \gamma > 0,
+  \label{eq:Freduced}
+\end{equation}
+with the TECT-locked values
+\begin{equation}
+  \mu^{2}_{\text{locked}} = 0.26,
+  \qquad
+  \lambda = -0.43,
+  \qquad
+  \gamma = 1.62,
+  \label{eq:locked}
+\end{equation}
+and the Brazovskii-dispersion parameters
+$Z=-1.0$, $Y=+1.0$, $q_{0}=\sqrt{-Z/(2Y)}=1/\sqrt{2}$.
+
+\paragraph{Two critical scales of the first-order transition.}
+From $\mathcal{F}'(\phi)/\phi = 0$ with $x\equiv\phi^{2}$,
+\begin{equation}
+  x_{\pm}(\mu^{2}) \;=\;
+  \frac{-4\lambda \pm \sqrt{16\lambda^{2}-120\gamma\mu^{2}}}{30\gamma}
+  \;=\;
+  \frac{-2\lambda\pm\sqrt{4\lambda^{2}-30\gamma\mu^{2}}}{15\gamma}.
+  \label{eq:xpm}
+\end{equation}
+Real extrema $x_{\pm}$ exist iff the radicand is non-negative:
+\begin{equation}
+  \boxed{\;
+  \mu^{2} \;\leq\; r_{c}^{\text{meta}} \;\equiv\;
+  \frac{2\lambda^{2}}{15\gamma}
+  \;=\;\frac{2(0.1849)}{15(1.62)} \;=\; 0.01522.\;
+  }
+  \label{eq:rmeta}
+\end{equation}
+The first-order transition (where $\mathcal{F}(\phi_{0})=\mathcal{F}(0)=0$
+and $\mathcal{F}'(\phi_{0})=0$ are simultaneously satisfied) is located
+at
+\begin{equation}
+  \boxed{\;
+  \mu^{2} \;=\; r_{c}^{\text{global}} \;\equiv\;
+  \frac{\lambda^{2}}{10\gamma}
+  \;=\;\frac{0.1849}{16.2} \;=\; 0.01141,\;
+  }
+  \label{eq:rglobal}
+\end{equation}
+at which the non-trivial minimum satisfies
+\begin{equation}
+  x_{+}(r_{c}^{\text{global}}) \;=\; \phi_{0}^{2}
+  \;=\; \frac{-\lambda}{5\gamma}
+  \;=\; \frac{0.43}{8.1} \;=\; 0.0531
+  \ \Rightarrow\ \phi_{0} = 0.2305 .
+  \label{eq:phi0correct}
+\end{equation}
+For $\mu^{2}\in(r_{c}^{\text{global}}, r_{c}^{\text{meta}})$ the BCC
+extremum is metastable (higher free energy than $\Psi=0$); for
+$\mu^{2}<r_{c}^{\text{global}}$ it is globally stable.
+
+%======================================================================
+\section*{A.\;Existence window and retrospective audit of the locked parameters}
+\addcontentsline{toc}{section}{A. Existence window}
+%======================================================================
+
+\begin{theorem}[No BCC extremum at locked parameters]
+\label{thm:noextremum}
+With $(\lambda,\gamma)=(-0.43,1.62)$, the set of $\mu^{2}$ values at
+which a non-trivial root $\phi_{0}\neq 0$ of $\mathcal{F}'(\phi)=0$
+exists is $\mu^{2}\in(-\infty,\,r_{c}^{\text{meta}}]$ with
+$r_{c}^{\text{meta}}=0.01522$.  The locked value
+$\mu^{2}_{\text{locked}}=0.26$ satisfies
+$\mu^{2}_{\text{locked}} / r_{c}^{\text{meta}} = 17.1$; consequently
+the Brazovskii potential~\eqref{eq:Freduced} has its unique real
+minimum at $\phi=0$, and the Newton-Krylov iteration converges
+\emph{correctly} to $\Psi^{*}\approx 0$ at locked parameters.
+\end{theorem}
+
+\begin{proof}
+The radicand of~\eqref{eq:xpm} is
+$R(\mu^{2}) = 4\lambda^{2} - 30\gamma\mu^{2}$, vanishing at
+$\mu^{2}= 2\lambda^{2}/(15\gamma) = r_{c}^{\text{meta}}$ and negative for
+$\mu^{2}>r_{c}^{\text{meta}}$.  When $R<0$, $x_{\pm}$ are complex, and
+the only real stationary point of $\mathcal{F}$ is $\phi=0$, where
+$\mathcal{F}''(0)=2\mu^{2}>0$.  At
+$\mu^{2}_{\text{locked}}=0.26 = 17.1\,r_{c}^{\text{meta}}$ this is the
+unique minimum.\hfill$\square$
+\end{proof}
+
+\begin{remark}[Retrospective reading of Phase-2 collapse]
+Theorem~\ref{thm:noextremum} explains the trivial-vacuum collapse
+observed in the $N=32, N=64$ runs of 2026-04-20 without invoking a
+solver pathology: the solver found the only real minimum of the
+potential as specified by the input $\mu^{2}_{\text{locked}}$.  The
+reported $m^{*2}$ values (3.1485 and 54.07) are therefore entirely
+artefactual, being the smallest positive Ritz eigenvalue of the
+Hessian of $\mathcal{F}$ at $\Psi=0$ dressed by the class-II
+$\rho^{-1}$ regulariser (see Math56 Sec.~5).  Any continuation path
+that terminates at $\mu^{2}=0.26$ \emph{must end in trivial vacuum}.
+\end{remark}
+
+\begin{corollary}[Mandatory retargeting of $\mu^{2}$]\label{cor:mu2target}
+Any continuation run (Math55) intended to produce a non-trivial BCC
+condensate must terminate at
+$\mu^{2}_{\text{target}} < r_{c}^{\text{meta}}=0.01522$.  For a
+globally stable BCC minimum (F-margin positive) require the stronger
+$\mu^{2}_{\text{target}}<r_{c}^{\text{global}}=0.01141$.
+\end{corollary}
+
+\begin{remark}[Recommended target]
+We recommend $\mu^{2}_{\text{target}}=5\times 10^{-3}$, which lies
+$\approx 0.44\,r_{c}^{\text{global}}$ below the first-order transition
+and safely inside the globally stable regime.  At this target,
+$\phi_{+}(\mu^{2}_{\text{target}})=0.2482$,
+$\phi_{-}(\mu^{2}_{\text{target}})=0.0781$, and the free-energy margin
+$\Delta\mathcal{F} = \mathcal{F}(0)-\mathcal{F}(\phi_{+}) > 0$.
+\end{remark}
+
+%======================================================================
+\section*{B.\;Phase-0 gate $G_{0}$ from the Brazovskii separatrix}
+\addcontentsline{toc}{section}{B. G0 from separatrix}
+%======================================================================
+
+\begin{definition}[Vacuum-escape statistic]
+Given a solver output $\Psi^{*}$ on $\Lambda_{N}$ and a reference
+condensate amplitude $\phi_{0}$ derived from the target potential, set
+\begin{equation}
+  \mathcal{V}(\Psi^{*}) \;\equiv\;
+  \frac{\|\Psi^{*}\|_{\mathrm{RMS}}}{\phi_{0}},
+  \qquad
+  \|\Psi^{*}\|_{\mathrm{RMS}}^{2} = \frac{1}{N^{3}}\sum_{\mathbf{x}}
+  |\Psi^{*}(\mathbf{x})|^{2}.
+\end{equation}
+\end{definition}
+
+\begin{proposition}[Brazovskii separatrix]\label{prop:sep}
+At $\mu^{2}\in(r_{c}^{\text{global}}, r_{c}^{\text{meta}})$ the
+Brazovskii potential has three real extrema $\phi=0<\phi_{-}<\phi_{+}$;
+the separatrix between the vacuum basin and the BCC basin is the
+unstable saddle $\phi_{-}(\mu^{2}) = \sqrt{x_{-}(\mu^{2})}$.  For
+$\mu^{2}\leq r_{c}^{\text{global}}$ the saddle $\phi_{-}$ still exists
+and continues to separate basins of attraction under gradient flow in
+the uniform-amplitude sector.
+\end{proposition}
+
+\begin{theorem}[$G_{0}$ threshold]\label{thm:G0}
+Let $\alpha_{\text{sep}}(\mu^{2}_{\text{target}}) \equiv
+\phi_{-}(\mu^{2}_{\text{target}})/\phi_{+}(\mu^{2}_{\text{target}})$
+be the separatrix-to-minimum amplitude ratio.  A Phase-0 gate of the
+form
+\begin{equation}
+  \mathcal{V}(\Psi^{*}) \;\geq\; G_{0},
+  \qquad
+  G_{0} \;\equiv\; \tfrac{1}{2}\bigl(1 + \alpha_{\text{sep}}(\mu^{2}_{\text{target}})\bigr),
+  \label{eq:G0}
+\end{equation}
+excludes both the trivial vacuum ($\mathcal{V}\to 0$) and any
+off-basin excursion with RMS amplitude below the separatrix.
+Numerical values (SymPy-verified, 2026-04-20):
+\begin{center}
+\begin{tabular}{rcccc}
+\toprule
+$\mu^{2}_{\text{target}}$ & $\phi_{+}$ & $\phi_{-}$ & $\alpha_{\text{sep}}$ & $G_{0}$ (raw $+$ 0.05 cushion) \\
+\midrule
+$3\times 10^{-3}$ & $0.2590$ & $0.0607$ & $0.2342$ & $0.617 \to 0.667$ \\
+$\mathbf{5\times 10^{-3}}$ & $\mathbf{0.2538}$ & $\mathbf{0.0799}$ & $\mathbf{0.3150}$ & $\mathbf{0.658 \to 0.708}$ \\
+$8\times 10^{-3}$ & $0.2445$ & $0.1050$ & $0.4294$ & $0.715 \to 0.765$ \\
+$1.0\times 10^{-2}$ & $0.2369$ & $0.1211$ & $0.5113$ & $0.756 \to 0.806$ \\
+$r_{c}^{\text{global}}=0.01141$ & $0.2305$ & $0.1329$ & $0.5767$ & $0.788 \to 0.838$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+For the recommended $\mu^{2}_{\text{target}}=5\times 10^{-3}$:
+$$
+\boxed{\;G_{0}^{\text{op}}(\mu^{2}_{\text{target}}=0.005) \;=\; 0.708.\;}
+$$
+\emph{Erratum note (2026-04-20):} An earlier draft of this note
+quoted $\phi_{+}=0.2482$, $\phi_{-}=0.0781$, $G_{0}=0.657$ for
+$\mu^{2}_{\text{target}}=5\times 10^{-3}$; those numbers contained
+an arithmetic slip (the correct values are $\phi_{+}=0.2538$,
+$\phi_{-}=0.0799$, $G_{0}=0.708$ after cushion).  Verified in SymPy;
+see \texttt{Docs/supplementary/v24\_threshold\_sympy\_check.py}.
+\end{theorem}
+
+\begin{remark}[Robustness cushion]
+In practice one applies a $+0.05$ cushion to absorb finite-$N$ RMS
+fluctuations, giving the operational threshold
+$G_{0}^{\text{op}} = G_{0} + 0.05$.
+\end{remark}
+
+\begin{remark}[Difference from the earlier heuristic $0.3$]
+The Phase-0 threshold $0.3$ quoted in Math56 was a lower bound chosen
+to rule out trivial vacuum only; Theorem~\ref{thm:G0} upgrades this to
+a separatrix-based rule that also excludes off-basin saddle excursions.
+\end{remark}
+
+%======================================================================
+\section*{C.\;Class-II regulariser cut $\rho_{\text{cut}}$}
+\addcontentsline{toc}{section}{C. rho\_cut}
+%======================================================================
+
+\paragraph{Setting.}
+The Brazovskii backend evaluates, for each constellation index
+$\alpha$ and lattice site $\mathbf{x}$, a quotient
+$q_{\alpha}(\mathbf{x}) = m_{\alpha}(\mathbf{x})/(\rho(\mathbf{x})+\epsilon)$
+with current software regulariser $\epsilon = 10^{-12}$.  When
+$\rho(\mathbf{x})\to 0$ (trivial vacuum), $q_{\alpha}$ diverges and the
+Ritz eigenvalue of the projected Hessian is dominated by the
+regulariser scale rather than by any physical gap.
+
+\begin{theorem}[Consistency $\rho_{\text{cut}}$]\label{thm:rhocut}
+Let $\mathrm{tol}_{\text{Newton}}$ be the residual tolerance used by
+the Newton-Krylov solver.  If the class-II regulariser is raised to a
+floor $\rho_{\text{cut}}$ satisfying
+\begin{equation}
+  \rho_{\text{cut}} \;\geq\;
+  \frac{\max_{\alpha,\mathbf{x}}|m_{\alpha}(\mathbf{x})|}
+       {\mathrm{tol}_{\text{Newton}}\cdot\lambda_{\text{phys}}^{\text{expected}}},
+\end{equation}
+then the regulariser-induced contribution to any Ritz eigenvalue is
+bounded above by $\mathrm{tol}_{\text{Newton}}\cdot
+\lambda_{\text{phys}}^{\text{expected}}$, which is below numerical
+noise.  In the TECT backend
+$|m_{\alpha}|_{\max}=\mathcal{O}(10^{-1})$,
+$\mathrm{tol}_{\text{Newton}}=10^{-9}$, and
+$\lambda_{\text{phys}}^{\text{expected}}=\mathcal{O}(0.1)$, giving
+\begin{equation}
+  \rho_{\text{cut}} \;\geq\; 10^{-1}/(10^{-9}\cdot 10^{-1}) = 10^{9},
+\end{equation}
+which is unphysical.  The correct reading is: the class-II divergence
+cannot be cured by raising the regulariser; one must instead
+\emph{block} the solver from entering the regime $\rho\leq\rho_{*}$
+by aborting the Newton step when $\min_{\mathbf{x}}\rho<\rho_{*}$.
+Setting the abort threshold at
+\begin{equation}
+  \boxed{\;\rho_{*} \;\equiv\; 10^{-3}\cdot \phi_{0}^{2}(\mu^{2}_{\text{target}})\;}
+\end{equation}
+guarantees $\mathcal{V}\geq 0.032$, well below $G_{0}$, so the abort
+fires \emph{before} the class-II divergence becomes observable in
+Ritz output.
+\end{theorem}
+
+\begin{remark}[Numerical value]
+For $\mu^{2}_{\text{target}}=0.005$, $\phi_{+}^{2}=0.0644$
+(SymPy-verified), $\rho_{*}=6.4\times 10^{-5}$.  This replaces the
+heuristic $\rho_{\text{cut}}=10^{-3}$ proposed in the first v2.4 draft.
+\end{remark}
+
+%======================================================================
+\section*{D.\;Cross-grid overlap threshold $G_{2,\min}$ (Rayleigh--Ritz)}
+\addcontentsline{toc}{section}{D. G2 from Rayleigh-Ritz}
+%======================================================================
+
+\begin{definition}[Zero-pad interpolator]
+Let $I_{N}^{2N}:\mathcal{H}_{N}\to\mathcal{H}_{2N}$ be the
+norm-preserving zero-pad spectral interpolator:
+$\widehat{(I_{N}^{2N}\Psi)}(\mathbf{k}) =
+\widehat\Psi(\mathbf{k})\cdot(2N/N)^{3/2}\cdot
+\mathbf{1}_{\mathbf{k}\in\Lambda_{N}^{*}}$.  Let $v_{N}$ and
+$v_{2N}$ be the Ritz eigenvectors of the projected Hessians at the
+two grids, both normalised to unit norm.
+\end{definition}
+
+\begin{theorem}[Rayleigh-Ritz perturbation $G_{2}$]\label{thm:G2}
+Suppose the continuum eigenfunction $v_{\infty}$ has spectral support
+entirely in $\{|\mathbf{k}|\leq k_{\text{Ny}}^{(N)}/2\}$ (conservative
+Shannon bound).  Then
+$|\langle I_{N}^{2N} v_{N} \mid v_{2N}\rangle| \geq
+1 - \delta_{N}$ where $\delta_{N} = O(N^{-2})$ from the
+residual UV tail of $v_{\infty}$ and from the trust-region error of
+each Ritz iteration.  Demanding that the fractional eigenvector error
+be $\leq 20\%$ (i.e.\ $\delta\leq 0.1$ both ways), a valid pairing
+must satisfy
+\begin{equation}
+  \boxed{\;
+  G_{2}(v_{N},v_{2N}) \;\equiv\; |\langle I_{N}^{2N} v_{N} \mid v_{2N}\rangle|
+  \;\geq\; G_{2,\min} = 0.90.\;
+  }
+\end{equation}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Write $v_{N}=v_{\infty}|_{N}+\epsilon_{N}$ with
+$\|\epsilon_{N}\|\leq\delta_{N}$; apply the triangle inequality to
+$|\langle I_{N}^{2N}v_{N}\mid v_{2N}\rangle-
+|\langle I_{N}^{2N}v_{\infty}|_{N}\mid v_{\infty}|_{2N}\rangle||
+\leq 2\delta_{N}$.  The second inner product is $\geq 1-O(N^{-2})$.
+Setting the conservative UV-tail budget at $10\%$ across the pair
+yields $0.90$.
+\end{proof}
+
+\begin{remark}[Contrast with the earlier heuristic $0.8$]
+The earlier value $0.8$ allowed up to $36\%$ eigenvector error, which
+is numerically loose for a four-significant-digit Ritz output.  The
+tighter $0.9$ is compatible with the $\geq 10^{-3}$ relative accuracy
+our Phase-2.5 gate targets.
+\end{remark}
+
+%======================================================================
+\section*{E.\;Ritz-residual threshold $G_{3,\max}$ (Saad bound)}
+\addcontentsline{toc}{section}{E. G3 from Saad bound}
+%======================================================================
+
+\begin{theorem}[Saad residual bound]\label{thm:G3}
+Let $(\lambda_{\mathrm{Ritz}}, v_{\mathrm{Ritz}})$ be a Ritz pair of
+the projected Hessian $H_{\mathrm{proj}}$ with $v_{\mathrm{Ritz}}$
+unit-normalised, let $r\equiv H_{\mathrm{proj}}v_{\mathrm{Ritz}}-
+\lambda_{\mathrm{Ritz}}v_{\mathrm{Ritz}}$, and let $\lambda$ be the
+nearest true eigenvalue.  Then Saad's inequality gives
+\begin{equation}
+  |\lambda-\lambda_{\mathrm{Ritz}}| \;\leq\;
+  \frac{\|r\|^{2}}{\mathrm{gap}},
+  \qquad
+  \mathrm{gap} \equiv
+  \min_{\mu\neq\lambda\in\sigma(H_{\mathrm{proj}})}
+  |\mu-\lambda_{\mathrm{Ritz}}|.
+  \label{eq:saad}
+\end{equation}
+For a target relative precision of $1\%$ in the computed $m^{*2}$,
+i.e.\ $|\lambda-\lambda_{\mathrm{Ritz}}|/\lambda\leq 10^{-2}$,
+\eqref{eq:saad} requires
+\begin{equation}
+  \|r\| \;\leq\; \sqrt{10^{-2}\cdot\lambda\cdot\mathrm{gap}}.
+\end{equation}
+Taking the empirical value $\lambda\simeq\mathrm{gap}\simeq m^{*2}$
+(diagonal-dominant case), this reduces to
+\begin{equation}
+  \boxed{\;
+  G_{3}(v_{\mathrm{Ritz}}) \;\equiv\; \|r\| \;\leq\; 10^{-1}\cdot m^{*2}_{\mathrm{Ritz}},
+  \qquad
+  \text{(relative, \,not absolute)}.
+  \;}
+\end{equation}
+\end{theorem}
+
+\begin{remark}[Difference from the earlier heuristic $10^{-3}$]
+The heuristic $\|r\|<10^{-3}$ was an \emph{absolute} bound that only
+accidentally matches $1\%$ accuracy when $m^{*2}\sim 0.1$.  For the
+anticipated $m^{*2}\sim 0.01$ physical scale the correct relative
+threshold is $10^{-3}$; for $m^{*2}\sim 1$ it is $10^{-1}$.
+Implementation must compute the bound on the fly from
+$\lambda_{\mathrm{Ritz}}$.
+\end{remark}
+
+%======================================================================
+\section*{F.\;Open items and prerequisite resolutions}
+\addcontentsline{toc}{section}{F. Open items}
+%======================================================================
+
+\paragraph{X1. Continuation-path smoothness (Math55).}
+The Math55 continuation from $\mu^{2}_{0}=-1$ to
+$\mu^{2}_{\text{target}}$ must cross $r_{c}^{\text{global}}=0.01141$
+without the solver jumping back into the vacuum basin.  An arclength
+parametrisation and small-step Newton with predictor-corrector is
+sufficient; the step size must not exceed $|\mu^{2}_{k+1}-\mu^{2}_{k}|
+\leq 0.1\cdot|r_{c}^{\text{global}}-\mu^{2}_{k}|$ near the transition.
+
+\paragraph{X2. $\mu^{2}_{\text{crit}}$ localisation.}
+Math55 line~183 still reports PENDING.  The present note fixes
+$\mu^{2}_{\text{crit}}$ analytically at $r_{c}^{\text{global}}=0.01141$;
+Math55's numerical localisation should reproduce this to $1\%$.
+
+\paragraph{X3. Sextic-coupling scheme-dependence.}
+$K_{6}=5/2$ enters through the uniform-amplitude reduction.  The BCC
+three-mode ansatz carries mode-dependent corrections of relative size
+$O(|\lambda|/\gamma\phi_{0}^{2}) \simeq 5.4$ at locked parameters,
+which is \emph{not} small.  For $\mu^{2}_{\text{target}}=5\times 10^{-3}$
+this ratio reduces to $\approx 1.6$.  Acceptable for qualitative
+existence but not for $m^{*2}$ to $1\%$.  Open.
+
+\paragraph{X4. Zero-mode basis stability.}
+The 9 zero modes (3 translation $\times$ 3 components) plus 1 global
+phase are assumed orthonormal.  Math55 continuation at small
+$\mu^{2}$ can admix low-lying bulk modes.  Needs Gram-Schmidt
+stabilisation at every continuation step; operationally trivial but
+not yet written into the backend.
+
+\paragraph{X5. [RESOLVED 2026-04-20] $\phi_{0}$ convention discrepancy.}
+Math37-AddA Sec.~A.3 boxes
+$\phi_{0}^{2} = -4\lambda/(15\gamma)$, claiming it is the first-order
+Brazovskii lock.  Re-derivation from the simultaneous conditions
+$\mathcal{F}(\phi_{0}) = \mathcal{F}(0) = 0$ and
+$\mathcal{F}'(\phi_{0}) = 0$ yields instead
+\begin{align}
+  & \mathrm{(ii)}:\quad
+    \mu^{2} + \lambda x + \tfrac{5}{2}\gamma x^{2} = 0, \\
+  & \mathrm{(i)}:\quad
+    2\mu^{2} + 4\lambda x + 15\gamma x^{2} = 0 ,
+\end{align}
+with unique positive solution
+\begin{equation}
+  x_{\text{first-order}} = -\lambda/(5\gamma),
+  \qquad
+  \mu^{2}_{c} = \lambda^{2}/(10\gamma),
+  \label{eq:phi0correct_F}
+\end{equation}
+i.e.\ $\phi_{0}^{2} = -\lambda/(5\gamma) = -3\lambda/(15\gamma)$ ---
+factor $3/4$ smaller than the Math37-AddA boxed value.
+
+\textbf{SymPy audit (2026-04-20) localises the slip:} solving (i) alone at
+$\mu^{2}=0$ gives $x = -4\lambda/(15\gamma)$.  That is precisely the
+Math37-AddA boxed expression.  Hence the boxed formula is the root of
+\emph{the single condition} $\mathcal{F}'(\phi)=0$ at $\mu^{2}=0$,
+\emph{not} the simultaneous first-order lock.  The label ``first-order
+Brazovskii lock $\mathcal{F}(\phi_{0})=\mathcal{F}(0)\wedge
+\mathcal{F}'(\phi_{0})=0$'' in Math37-AddA Sec.~A.3 is an algebraic
+mis-attribution.  Audit script:
+\texttt{Docs/supplementary/v24\_threshold\_sympy\_check.py}
+(Scenarios A--D tabulate all candidate conditions and their roots).
+
+\textbf{Adopted convention (binding on the v2.4 patch):}
+\eqref{eq:phi0correct_F}, giving $\phi_{0} = 0.2305$ at locked
+$(\lambda,\gamma)$.  The erroneous Math37-AddA Sec.~A.3 box entails a
+secondary recomputation of $\mathcal{M}^{2}_{\text{corr}}$ and
+$m^{*2}_{\text{analytic,corr}}$ in Math37-AddA eqs.~(5737,5745).  This
+recomputation is deferred to a Math37-AddA erratum; it does not
+affect the Pillar-1 numerics, which are governed by the full Hessian
+at $\Psi^{*}$ (not by the uniform-amplitude approximation) once the
+v2.4 solver produces a valid BCC condensate.
+
+%======================================================================
+\section*{G.\;Summary of derived thresholds for the v2.4 patch}
+\addcontentsline{toc}{section}{G. Summary table}
+%======================================================================
+
+\begin{center}
+\begin{tabular}{@{}lllp{5.5cm}@{}}
+\toprule
+Symbol & Role & Derived value & Source \\
+\midrule
+$\mu^{2}_{\text{target}}$ & continuation end-point
+  & $5\times 10^{-3}$ (recommended)
+  & Corollary~\ref{cor:mu2target}; $< 0.44\,r_{c}^{\text{global}}$ \\
+$\phi_{0}$ & BCC reference amplitude
+  & $0.2305$ (corrected)
+  & Eq.~\eqref{eq:phi0correct}; supersedes Math37-AddA boxed $0.266$ \\
+$G_{0}$ & Phase-0 vacuum-escape
+  & $0.708\,(=0.658+0.05$ cushion$)$
+  & Theorem~\ref{thm:G0} at $\mu^{2}_{\text{target}}=0.005$ \\
+$\rho_{*}$ & class-II abort floor
+  & $6.4\times 10^{-5}$
+  & Theorem~\ref{thm:rhocut} \\
+$G_{2,\min}$ & cross-grid overlap
+  & $0.90$
+  & Theorem~\ref{thm:G2} (Rayleigh-Ritz) \\
+$G_{3,\max}$ & Ritz residual
+  & $10^{-1}\cdot m^{*2}_{\mathrm{Ritz}}$ (relative)
+  & Theorem~\ref{thm:G3} (Saad) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All six numbers are now theorem-level, parametrised by
+$\mu^{2}_{\text{target}}$, and ready to be baked into the
+\texttt{PDE/tect\_solver\_pt\_v3.py} v2.4 patch.  The only remaining
+blocker for patch commit is open item X5
+($\phi_{0}$-convention audit of Math37-AddA Sec.~A.3).
+
+\end{document}

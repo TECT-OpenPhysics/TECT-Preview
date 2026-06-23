@@ -61,9 +61,14 @@ Reproduction: `cd archive/legacy/scripts && python Math437_step5_class_closure.p
 
 ## B4-MASS-GAP — BCC ground-state uniqueness within the single-mode constraint cone  (T5)
 
-- UNRESOLVED `legacy:Math01-v2 (uniqueness within cone)`
-- UNRESOLVED `legacy:Math56 (constraint cone)`
-- UNRESOLVED `legacy:Math82-AddG/G2/G3 (continuation curve + audits)`
+- `archive/legacy/notes/Math01/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt (uniqueness within cone)`
+- `archive/legacy/notes/Math56/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt (constraint cone, canonical)`
+- `archive/legacy/notes/Math56/TECT-Math56-Addendum.tex.txt (cone-cluster base)`
+- `archive/legacy/notes/Math56/TECT-Math56-HessJump-audit.tex.txt (cone Hessian-jump audit)`
+- `archive/legacy/notes/Math82/TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt (continuation curve)`
+- `archive/legacy/notes/Math82/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt (stall-mechanism audit)`
+- `archive/legacy/notes/Math82/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt (vacuum-floor guard)`
+- `archive/legacy/artefacts/Math82/math82H_groundstate_N32_Lbcc7_MANIFEST.md (continuation-run provenance; anchor m*2=+4.247e-2 at mu2=+5e-3)`
 
 ## C1-LORENTZ-KIN — Kinematic Lorentz invariance (inertia) under H-SUPPRESSION  (T6)
 

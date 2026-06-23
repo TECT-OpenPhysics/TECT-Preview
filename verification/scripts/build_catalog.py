@@ -24,8 +24,13 @@ Changelog:
   1.1.1 (2026-06-05) skip git-ignored build/ area (PDF build artefacts are not catalogued).
   1.1.2 (2026-06-05) two-date parsing extended to .pdf (note PDFs now live beside sources).
   1.1.3 (2026-06-05) run artefacts relocated into the claim package (claims/<ID>/runs/); top-level runs/ branch removed.
+  1.2.0 (2026-06-23) ADR-0001 performance fix: enumerate via git (repo_inventory.real_files,
+        honoring .gitignore incl. committed-by-mistake junk via check-ignore --no-index) instead
+        of rglob+SKIP_DIRS; per-file intrinsics cached in verification/.cache/ keyed on
+        (size, mtime_ns) so unchanged files are never re-read. Kills the 45s Drive-junk timeout;
+        regen becomes O(changed). SKIP_DIRS retained only for the no-git fallback.
 """
-__version__ = "1.1.3"
+__version__ = "1.2.0"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-06-05"
 
@@ -36,6 +41,9 @@ import json
 import re
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_inventory import real_files, StatCache  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[2]
 CATALOG_MD = REPO / "CATALOG.md"
@@ -131,61 +139,82 @@ def iso(yymmdd):
     return f"20{yymmdd[0:2]}-{yymmdd[2:4]}-{yymmdd[4:6]}" if yymmdd else None
 
 
+CACHE_PATH = REPO / "verification" / ".cache" / "catalog-stat.json"
+
+
+def _intrinsic(rel, f, data):
+    """Per-file intrinsic catalog fields (everything except `claims`, which
+    depends on status.json and is re-attached each run). Computed only on a
+    StatCache miss; `data` is the full file bytes."""
+    m = VER_RE.search(f.name)
+    first, cur, ver = None, None, None
+    if m:
+        first = iso(m.group(1))
+        cur = iso(m.group(2)) if m.group(2) else first
+        ver = f"v{m.group(3)}.{m.group(4)}"
+    if f.suffix == ".py" and not rel.startswith("archive/"):
+        head = data[:2048].decode("utf-8", "replace")
+        hv = re.search(r"__version__\s*=\s*[\"\']([^\"\']+)", head)
+        hf = re.search(r"__first_issued__\s*=\s*[\"\'](\d{4}-\d{2}-\d{2})", head)
+        hc = re.search(r"__version_issued__\s*=\s*[\"\'](\d{4}-\d{2}-\d{2})", head)
+        if hv:
+            ver = "v" + hv.group(1)
+        if hf:
+            first = hf.group(1)
+        if hc:
+            cur = hc.group(1)
+    if "/runs/" in rel and f.suffix == ".json" and first is None:
+        try:
+            j = json.loads(data.decode("utf-8"))
+            d = j.get("date") or j.get("generated")
+            if isinstance(d, str) and len(d) == 10:
+                first = cur = d
+        except Exception:
+            pass
+    superseded = False
+    if f.suffix in (".md", ".txt"):
+        head = data[:300].decode("utf-8", "replace")
+        superseded = "SUPERSEDED by" in head
+    tag = None
+    tm = TAG_RE.search(f.name)
+    if tm and rel.startswith("archive/"):
+        tag = tm.group(1)
+    return {
+        "kind": classify(rel),
+        "tag": tag,
+        "first_issued": first,
+        "version_issued": cur,
+        "version": ver,
+        "lifecycle": "SUPERSEDED" if superseded else "ACTIVE",
+        "bytes": len(data),
+        "sha256_12": hashlib.sha256(data).hexdigest()[:12],
+    }
+
+
 def scan():
+    """Enumerate real artefacts via git (junk-excluded, ADR-0001) and build
+    catalog entries, re-reading only files whose (size, mtime_ns) changed."""
     links = claim_links()
+    cache = StatCache(CACHE_PATH)
     entries = []
-    for f in sorted(REPO.rglob("*")):
-        if not f.is_file():
-            continue
+    for f in real_files(REPO, skip_names=SKIP_NAMES):
         rel = str(f.relative_to(REPO)).replace("\\", "/")
-        if any(part in SKIP_DIRS for part in f.parts) or f.name in SKIP_NAMES:
-            continue
-        data = f.read_bytes()
-        m = VER_RE.search(f.name)
-        first, cur, ver = None, None, None
-        if m:
-            first = iso(m.group(1))
-            cur = iso(m.group(2)) if m.group(2) else first
-            ver = f"v{m.group(3)}.{m.group(4)}"
-        if f.suffix == ".py" and not rel.startswith("archive/"):
-            head = data[:2048].decode("utf-8", "replace")
-            hv = re.search(r"__version__\s*=\s*[\"']([^\"']+)", head)
-            hf = re.search(r"__first_issued__\s*=\s*[\"'](\d{4}-\d{2}-\d{2})", head)
-            hc = re.search(r"__version_issued__\s*=\s*[\"'](\d{4}-\d{2}-\d{2})", head)
-            if hv:
-                ver = "v" + hv.group(1)
-            if hf:
-                first = hf.group(1)
-            if hc:
-                cur = hc.group(1)
-        if "/runs/" in rel and f.suffix == ".json" and first is None:
-            try:
-                j = json.loads(data.decode("utf-8"))
-                d = j.get("date") or j.get("generated")
-                if isinstance(d, str) and len(d) == 10:
-                    first = cur = d
-            except Exception:
-                pass
-        superseded = False
-        if f.suffix in (".md", ".txt"):
-            head = data[:300].decode("utf-8", "replace")
-            superseded = "SUPERSEDED by" in head
-        tag = None
-        tm = TAG_RE.search(f.name)
-        if tm and rel.startswith("archive/"):
-            tag = tm.group(1)
+        intr = cache.get_or_compute(REPO, f, lambda ff, data, _r=rel: _intrinsic(_r, ff, data))
+        # preserve original key order (no diff churn) and re-attach claims fresh
         entries.append({
             "path": rel,
-            "kind": classify(rel),
+            "kind": intr["kind"],
             "claims": sorted(links.get(rel, [])),
-            "tag": tag,
-            "first_issued": first,
-            "version_issued": cur,
-            "version": ver,
-            "lifecycle": "SUPERSEDED" if superseded else "ACTIVE",
-            "bytes": len(data),
-            "sha256_12": hashlib.sha256(data).hexdigest()[:12],
+            "tag": intr["tag"],
+            "first_issued": intr["first_issued"],
+            "version_issued": intr["version_issued"],
+            "version": intr["version"],
+            "lifecycle": intr["lifecycle"],
+            "bytes": intr["bytes"],
+            "sha256_12": intr["sha256_12"],
         })
+    cache.prune()
+    cache.save()
     entries.sort(key=lambda e: (KIND_ORDER.get(e["kind"], 99), e["path"]))
     return entries
 

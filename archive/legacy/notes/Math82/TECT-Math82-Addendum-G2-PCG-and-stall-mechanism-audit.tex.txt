@@ -1,0 +1,321 @@
+% =====================================================================
+% TECT — Math82 Addendum G2 (devil's-advocate audit)
+% Title : PCG-routing probe blindness and the trivial-vacuum stall
+%         mechanism behind the Phase-Z Points 4-7 non-convergence;
+%         partial reinterpretation of Math82-Addendum-G Regime III
+% Theory tag : Math82-AddG2-PCG-and-stall-mechanism-audit-2026-04-24
+% Status : NUMERICAL AUDIT (refines Math82-AddG §3 Regime III
+%                          interpretation; reclassifies the cause)
+% Date   : 2026-04-24
+% Author : Jusang Lee (jtkor@outlook.com)
+% Audit  : Internal devil's-advocate pass on Math82-AddG by direct
+%          inspection of `Codes/tools/check_jacobian_symmetry.py`,
+%          `Codes/pde/tect_newton_krylov.py::truncated_cg_solve`, and
+%          `Codes/pde/continuation_mu2_v25.py::select_krylov_solver`.
+% Refines : Math82-Addendum-G §3 (Regime III) interpretation only.
+%           §1, §2, §4-§7 of Math82-G remain unchanged. Numerical
+%           values (m^{*2}, λ_min, ΔF) are unchanged.
+% =====================================================================
+
+\section*{Math82-Addendum-G2: Audit of the PCG routing and stall mechanism}
+
+\subsection*{1.\ Audited claim}
+
+User asked (devil's advocate): is there a problem with the PCG routing
+that produced the Points~4--7 stalls in the Phase-Z 7-point run
+(Math82-Addendum-G)? This addendum traces the question through the
+solver stack and isolates two distinct phenomena that were conflated
+under the single label ``branch termination'' in Math82-G §3.
+
+\subsection*{2.\ Audit chain (call graph)}
+
+\begin{verbatim}
+continuation_mu2_v25.py::main_continuation_loop
+  -> probe_symmetry  (5 random Gaussian probes)
+       returns {symmetric, indefinite, n_negative_rayleigh, ...}
+  -> select_krylov_solver
+       symmetric ∧ n_neg_rayl == 0 → "pcg" → "cg" (B1-shim)
+       symmetric ∧ n_neg_rayl > 0 → "minres" (Task #112: native)
+       asymmetric                  → "fgmres" → "gmres"
+  -> newton_solve
+       trust-region wrapper
+       calls truncated_cg_solve / gmres_trust_region_solve
+\end{verbatim}
+
+\subsection*{3.\ Finding 1: probe dimensional blind spot (latent bug)}
+
+\subsubsection*{3.1.\ Mechanism}
+
+\verb|probe_symmetry| (default \verb|n_probes = 5|) classifies as SPD
+iff the minimum of 5 sampled Rayleigh quotients
+$\rho_{i} = \mathrm{Re}\langle u_{i}, J u_{i}\rangle$ is strictly
+positive. The probes $u_{i}$ are drawn i.i.d.\ from a complex Gaussian
+ensemble in the ambient flattened field space of dimension
+$N = 2 \times 3 \times 32^{3} = 196{,}608$ (effective DoF $196{,}605$
+after constant-mode projection).
+
+For a Hermitian $J$ with eigendecomposition
+$J = \sum_{k} \lambda_{k}\, |k\rangle\langle k|$ and $u_{i}$ uniform on the
+unit sphere, the Rayleigh quotient is concentrated around its
+expectation
+$$
+\mathbb{E}[\rho_{i}] \;=\; \frac{1}{N}\,\mathrm{tr}\,J,\qquad
+\mathrm{Var}[\rho_{i}] \;=\;
+  \frac{2}{N(N{+}2)}\Big(\|J\|_{F}^{2} - \frac{(\mathrm{tr}\,J)^{2}}{N}\Big).
+$$
+Concentration scale: $\sigma_{\rho} = \mathcal{O}(\|J\|_{F}/\sqrt{N})$.
+
+\subsubsection*{3.2.\ Numerical estimate (Brazovskii bare Hessian at $\Psi = 0$)}
+
+For the bare projected Brazovskii Hessian at $\Psi = 0$, eigenvalues
+along the $k$-mode basis are
+$$
+\lambda_{k} \;=\; (k^{2} - q_{0}^{2})^{2} + \mu^{2}.
+$$
+With $L = L_{\mathrm{BCC}}^{(7)} \approx 62.20$ and $N_{k} = 32^{3}$:
+\begin{itemize}
+\item Largest eigenvalue: $|k|_{\max} \approx \pi N / L \cdot \sqrt{3}
+  \approx 2.8$, so $\lambda_{\max} \approx (2.8^{2} - 0.46)^{2}
+  \approx 56$.
+\item Bulk trace estimate: $\mathrm{tr}(J)/N \approx 50$ (dominated by
+  large-$k$ shells).
+\item For $\mu^{2} = -0.5$: $\lambda_{k} < 0$ iff $|k^{2} - q_{0}^{2}| <
+  \sqrt{0.5} \approx 0.707$, giving a thin spherical $k$-shell of
+  $\sim 5{,}000$ negative eigenmodes ($\approx 2.5\%$ of $N$).
+\end{itemize}
+
+Per-probe negative-Rayleigh probability:
+$$
+\Pr[\rho_{i} < 0] \;\approx\;
+  \Pr\!\left[\,\mathcal{N}\!\left(50,\ \mathcal{O}(0.1)\right) < 0\,\right]
+  \;\approx\; 0.
+$$
+Five-probe Bonferroni-style estimate: $\Pr[\min_{i}\rho_{i} < 0] \ll 1$.
+The probe will report ``SPD'' even though $J$ is genuinely symmetric
+\emph{indefinite}.
+
+\subsubsection*{3.3.\ Empirical confirmation from the Phase-Z log}
+
+Phase-Z log lines for Points 2--7 all read
+\begin{verbatim}
+[Probing Jacobian symmetry (iteration 0)...]
+  symmetric=True, indefinite=False, asymmetric=False
+[Jacobian: SPD (antisym=2.5e-16); using PCG]
+\end{verbatim}
+yet Point~3 Phase-2 Lanczos returned $\lambda_{\min} = -6.25\times 10^{-2}$
+explicitly. The probe is therefore confirmed to misclassify SI as SPD
+in this regime.
+
+\subsubsection*{3.4.\ Severity assessment}
+
+The misclassification is \emph{latent}: in the present Phase-Z 4--7
+regime, PCG is invoked on an SI operator, but the inner solver
+(\verb|truncated_cg_solve|, Steihaug--Toint, \texttt{tect\_newton\_krylov.py}
+lines 894--901) detects negative curvature via $p^{T}\!Hp \le 10^{-14}$
+and steps to the trust-region boundary along the unsafe direction. So
+the PCG path is \emph{safe} but \emph{suboptimal} (no second-order
+convergence, no Krylov-residual minimisation property). MINRES would
+strictly dominate.
+
+\subsubsection*{3.5.\ Recommended fix (Task \#115 proposed)}
+
+Replace the 5-probe Rayleigh classifier with one Lanczos sweep of
+size $m \in [10, 30]$ on $J$ and use the actual Ritz spectrum
+$\{\theta_{j}\}_{j=1}^{m}$:
+\begin{itemize}
+\item $\min_{j}\theta_{j} > 0$ at $\le 1\%$ relative tolerance $\Rightarrow$ SPD,
+\item $\min_{j}\theta_{j} \le 0$ $\Rightarrow$ SI,
+\item $\|J - J^{*}\|/\|J\| \ge 10^{-8}$ (off-diagonal probe) $\Rightarrow$ ASYM.
+\end{itemize}
+Cost: $\mathcal{O}(m \cdot N)$ matrix-vector products, comparable to
+the existing 5-probe cost but with diagnostically useful spectrum.
+
+\subsection*{4.\ Finding 2: trivial-vacuum stall (the actual cause of Points 4--7)}
+
+\subsubsection*{4.1.\ Mechanism}
+
+The Newton solver (\verb|newton_solve| in \verb|tect_newton_krylov.py|)
+has the following per-step structure:
+\begin{enumerate}
+\item Compute $g = J^{*} F$, $\|g\|_{2}$. If $\|g\|_{2}/\sqrt{\mathrm{dof}}
+  \le \mathrm{tol}_{\mathrm{Newton}} = 10^{-8}$: declare convergence.
+\item Run inner Krylov to obtain $s$.
+\item Compute $\mathrm{directional}_{m} := \langle g, J s\rangle$,
+  $\|J s\|^{2}$.
+\item Backtracking Armijo on merit
+  $m(\Psi) = \tfrac{1}{2}\|F(\Psi)\|^{2}$.
+\item $\mathrm{predicted} := \max\{-\alpha\,\mathrm{directional}_{m}
+  - \tfrac{1}{2}\alpha^{2}\|J s\|^{2},\ 0\}$.
+\item $\rho := \mathrm{actual\_reduction}/\mathrm{predicted}$
+  (fall-through: $\rho = -10^{30}$ if $\mathrm{predicted} = 0$).
+\end{enumerate}
+
+\subsubsection*{4.2.\ Phase-Z Points 4--7 numerical state at start}
+
+Direct extraction from the run log:
+\begin{center}
+\begin{tabular}{|c|r|r|r|}
+\hline
+Point & $\mu^{2}$ & $\|g\|/\sqrt{\mathrm{dof}}$ & merit \\
+\hline
+4 & $-0.5$  & $4.049\times 10^{-8}$ & $1.61\times 10^{-10}$ \\
+5 & $-0.7$  & $5.805\times 10^{-8}$ & $3.31\times 10^{-10}$ \\
+6 & $-0.85$ & $7.123\times 10^{-8}$ & $4.99\times 10^{-10}$ \\
+7 & $-1.0$  & $8.441\times 10^{-8}$ & $7.00\times 10^{-10}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The warm-start $\Psi$ at each of these points carries
+$\|F(\Psi)\| = \sqrt{2 m} \sim 10^{-5}$ and gradient norm
+$\sim 10^{-5}$, both within a factor of a few of the $N=32^{3}$ FFT
+floating-point floor. The Newton convergence threshold
+$\|g\|/\sqrt{\mathrm{dof}} \le 10^{-8}$ is below this floor by half an
+order of magnitude, so step (1) never declares convergence.
+
+\subsubsection*{4.3.\ Why \texttt{pred\_m} clamps to 0}
+
+In step (5), $\mathrm{directional}_{m} \sim -\alpha\cdot 10^{-10}$ and
+$\alpha^{2}\|Js\|^{2} \sim \alpha^{2}\cdot 10^{-9}$. After 12 Armijo
+halvings, $\alpha = 2.44\times 10^{-4}$, and the floating-point sum
+$-\alpha\,\mathrm{directional}_{m} - \tfrac{1}{2}\alpha^{2}\|Js\|^{2}$
+loses all significance (catastrophic cancellation against zero):
+$$
+\big|-\alpha\,\mathrm{directional}_{m}\big| \sim 10^{-13},\qquad
+\big|\tfrac{1}{2}\alpha^{2}\|Js\|^{2}\big| \sim 10^{-17}.
+$$
+The result rounds to a non-positive value, the
+$\max(\cdot, 0)$ clamp returns exactly $0$, and $\rho = 0/0$ falls
+through to the $-10^{30}$ sentinel. \texttt{REJECT}, trust radius
+shrinks 4×, repeat.
+
+\subsubsection*{4.4.\ Origin of the warm-start collapse}
+
+Point~3 ($\mu^{2} = -0.1$) returned a Newton iterate with
+$F(\Psi^{*}) = -3.31\times 10^{-10}$ and $\lambda_{\min} = -6.25\times 10^{-2}$.
+The tiny $|F|$ value is consistent with $\Psi^{*} \approx 0$ (the
+Brazovskii residual at $\Psi = 0$ vanishes exactly on the
+constant-mode-projected subspace). The Phase-2 Lanczos $\lambda_{\min} < 0$
+is consistent with the bare-Hessian indefiniteness at $\Psi = 0$ for
+$\mu^{2} = -0.1$. Together these imply:
+\begin{quote}
+The ``Regime II saddle'' converged at Point~3 is, with high
+confidence, the trivial vacuum $\Psi = 0$ itself, which is a saddle
+of the Brazovskii functional whenever $\mu^{2} < 0$ (the bare
+Hessian is indefinite).
+\end{quote}
+
+The warm-start chain then carries $\Psi \approx 0$ into Points~4--7, where
+the Newton solver is asked to refine an already-vacuum state past the
+floating-point floor. Hence the stall.
+
+\subsection*{5.\ Reinterpretation of Math82-Addendum-G §3 Regime III}
+
+\paragraph*{Original Math82-G claim (§3, Regime III):}
+``\emph{The subset-4-cosine branch terminates below
+$\mu^{2}\approx -0.1$.}''
+
+\paragraph*{Corrected claim (this audit):}
+The Phase-Z Points 4--7 do \emph{not} establish branch termination.
+What they establish is:
+\begin{enumerate}
+\item[(a)] Point~3 converged to a configuration with $F \approx 0$ and
+$\lambda_{\min} < 0$, consistent with $\Psi^{*} \approx 0$ (the trivial
+vacuum, which is a saddle for $\mu^{2} < 0$).
+\item[(b)] Points 4--7 inherited this near-vacuum warm-start and
+stalled at the FP roundoff floor, not because no equilibrium exists
+but because the solver cannot resolve productive steps from
+$\Psi \approx 0$ under the strict $10^{-8}$ gradient tolerance.
+\end{enumerate}
+
+The existence of a true subset-4-cosine equilibrium at $\mu^{2} \in
+\{-0.5,-0.7,-0.85,-1.0\}$ is therefore \textbf{undetermined} by this run.
+
+\paragraph*{Math82-G §3 Regime I and II claims unchanged.} Regime~I
+(stable-but-metastable, $F(\Psi^{*}) > F(0)$ at $\mu^{2} \in
+[-0.02,+5\!\times\!10^{-3}]$) is unaffected — the stable convergence
+and positive-definite Lanczos at Points~1--2 stand. Regime~II
+(bifurcation onset at $\mu^{2}_{\mathrm{bif}} \approx -0.05$) is
+\emph{partially} weakened because Point~3 may itself be the trivial
+vacuum (not a proper saddle of the subset-4 branch). The bifurcation
+location bracket should be widened to $\mu^{2}_{\mathrm{bif}} \in
+(-0.1, -0.02)$ pending re-run with cold-start.
+
+\subsection*{6.\ Required next runs}
+
+\subsubsection*{6.1.\ Math82-H (already queued; reframed)}
+
+The previously-queued Math82-H (full 12-mode \verb|bcc_analytic| seed)
+remains the right next mainline, but the success criterion is
+sharpened: at each of the 7 points,
+\begin{enumerate}
+\item[(i)] $\Psi^{*}$ must be \emph{not} the trivial vacuum, verified by
+$\|\Psi^{*}\|_{2} > c\cdot\sqrt{N}$ for some threshold $c \gtrsim 10^{-3}$
+(condensate-amplitude floor),
+\item[(ii)] $F(\Psi^{*}) < F(0) = 0$ (energy favourability),
+\item[(iii)] $\lambda_{\min}(\mathrm{Hess}) > 0$ (true local minimum).
+\end{enumerate}
+Math82-G's Point~1 amplitude was nominally non-trivial (Ψ initial RMS
+$\approx 0.21$), but Point~3 onwards may have collapsed; a
+\verb|||Psi*||_2| diagnostic should be added to the manifest.
+
+\subsubsection*{6.2.\ Math82-I (cold-start scan, new)}
+
+For each of the 7 $\mu^{2}$ values, run an independent cold-start
+Newton from a fresh BCC seed (no warm-start chain). This decouples
+the question ``does a subset-4 / 12-mode equilibrium exist at
+$\mu^{2} = -0.5$?'' from the warm-start collapse pathology. Direct
+test of Math82-G §3 Regime III claim (now under audit).
+
+\subsubsection*{6.3.\ Solver hygiene (Task \#115 + \#116)}
+
+\begin{itemize}
+\item \textbf{\#115}: Lanczos-based symmetry probe (replace 5-probe Rayleigh test).
+\item \textbf{\#116}: Vacuum-floor convergence guard:
+$$
+\|F(\Psi)\| < c_{\mathrm{floor}}\cdot \sqrt{N}\cdot \varepsilon_{\mathrm{mach}}
+\;\Rightarrow\; \text{declare}\ \Psi^{*}\equiv\Psi\ \text{(numerical-vacuum solution)}.
+$$
+This prevents the trust-region from chasing zero past where it can be
+measured. With $N = 196{,}608$, $\varepsilon_{\mathrm{mach}}^{(64)} \approx 1.1\!\times\!10^{-16}$,
+$c_{\mathrm{floor}} \sim 100$, the guard fires at $\|F\| \sim 5\!\times\!10^{-12}$,
+two orders below the present Points~4--7 merit floor — well-separated
+from any genuine non-trivial equilibrium.
+\end{itemize}
+
+\subsection*{7.\ Verdict}
+
+\begin{theorem}[PCG-routing devil's-advocate verdict]
+\label{thm:pcg-audit-2026-04-24}
+The Phase-Z Points 4--7 stalls (Math82-Addendum-G §3 Regime III) are
+\emph{not} caused by a defect in the PCG / truncated CG solver
+(\verb|truncated_cg_solve|, Steihaug--Toint), which correctly handles
+indefinite Hessians via negative-curvature detection and trust-region
+boundary stepping. The stalls are caused by:
+\begin{enumerate}
+\item[(a)] A warm-start collapse at Point~3 producing $\Psi^{*}\approx 0$
+(numerical trivial vacuum), inherited by Points~4--7.
+\item[(b)] The trust-region Newton solver's lack of a numerical-vacuum
+termination guard, which causes \texttt{predicted = max(...,0)} to
+clamp to zero and $\rho = 0/0$ to fall through to the sentinel for
+all 15 nominal Newton iterations at each stalled point.
+\end{enumerate}
+A separate latent defect — \verb|probe_symmetry|'s 5-probe Rayleigh
+classifier mis-classifying symmetric-indefinite as SPD in dimension
+$\sim 2\!\times\!10^{5}$ — exists but is mitigated by the Steihaug--Toint
+wrapper and is not the cause of the present stalls.
+\end{theorem}
+
+\subsection*{8.\ Atomic-write deliverables}
+
+\begin{itemize}
+\item This note: \verb|Docs/math/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt|
+\item \verb|CHANGELOG.md|: G2 entry, top.
+\item \verb|Docs/status/OPEN-QUESTIONS.md|: add Tasks~\#115 (Lanczos
+  probe), \#116 (vacuum-floor guard), \#117 (Math82-I cold-start scan).
+\item \verb|Docs/status/TOE-FACT-SHEET.md|: Pillar~1 row footnote
+  refining the Math82-G qualifier with the G2 caveat.
+\item Website regeneration via \verb|generate_website.py --all|.
+\end{itemize}
+
+% End of Math82 Addendum G2
