@@ -1,0 +1,161 @@
+% SUPERSEDED by a3-uv-superrenormalisability-260623-260623-v1.1.tex.txt (split: UV-only; continuum-correlators moved to A3-PERTURBATIVE-CONTINUUM-CORRELATORS)
+% =============================================================================
+% Title: Super-renormalisability and the continuum limit of the scalar Brazovskii functional
+% Claim: A3-RENORMALISATION (depends on A1-KERNEL-CONV; sibling of A2-PDE-WELLPOSED)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 PROVED CONDITIONAL (perturbative; submitted for operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: the d=3 quartic-kernel Brazovskii functional
+%        is super-renormalisable (D=3-3V-I<0 for every connected diagram with
+%        V>=1,I>=1; Weinberg => absolute convergence => UV-finite, finite/empty
+%        counterterm set; continuum a->0 limit of perturbative correlators
+%        exists). Numerical claims: codes/foundations/a3_renormalisation_checks.py
+%        (6/6 PASS).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note establishes the renormalisation foundation A3: the scalar Brazovskii
+functional admits a continuum limit with a finite counterterm set, so the
+``continuum-anchored'' language used throughout Sector B refers to a
+well-defined object. \textbf{Scope (narrow, matching A2):} one real scalar field
+in $d=3$ with the quartic kernel $K(q)=\mu^2+Y(q^2-q_0^2)^2$, $\mu^2>0$. The
+result is PERTURBATIVE super-renormalisability and the continuum limit of the
+perturbative correlation functions; the non-perturbative (constructive) limit of
+the full measure is a separate, stronger target ($\mathrm{A3}_{\rm constructive}$),
+as are the full Class-II action and the $\mu^2<0$ branch. Numerical constants are
+pinned by \url{codes/foundations/a3_renormalisation_checks.py} (6/6 PASS).
+
+\section*{2. Setup}
+
+The free energy (A1-KERNEL-CONV) is
+$F_{\rm TECT}[\phi]=\int[\tfrac12\phi K(-i\nabla)\phi+\tfrac\lambda4\phi^4
++\tfrac\gamma6\phi^6]$, with bare propagator
+\begin{equation}
+G(q)=\frac1{K(q)}=\frac1{\mu^2+Y(q^2-q_0^2)^2}\ \sim\ \frac1{Y\,q^4}\quad(q\to\infty),
+\end{equation}
+i.e.\ a $q^{-4}$ ultraviolet decay (assert \texttt{propagator\_uv\_decay\_q4}),
+in contrast to the $q^{-2}$ of a second-order kernel. Vertices are the
+$\phi^4$ ($\lambda$) and $\phi^6$ ($\gamma$) couplings. Regularise by a momentum
+cutoff $\Lambda$ (equivalently a lattice spacing $a\sim\Lambda^{-1}$).
+
+\section*{3. Power counting}
+
+A connected diagram with $V$ vertices, $I$ internal lines and $L=I-V+1$ loops
+has, in $d=3$ with a $q^{-4}$ propagator, superficial degree of divergence
+\begin{equation}
+D=dL-4I=3(I-V+1)-4I=3-3V-I .
+\label{eq:D}
+\end{equation}
+For every connected diagram with at least one vertex and one internal line
+($V\ge1$, $I\ge1$),
+\begin{equation}
+D=3-3V-I\ \le\ 3-3-1\ =\ -1\ <\ 0
+\end{equation}
+(assert \texttt{superficial\_degree\_all\_negative}: the $\phi^4$ tadpole,
+$\phi^4/\phi^6$ self-energies and higher diagrams all have $D\in\{-1,-2,\ldots\}$).
+The dimension $d=3$ is essential: \eqref{eq:D} reads $D=(d-4)I-dV+d$, which is
+$<0$ for all $V\ge1,I\ge1$ only when $d\le3$; $d=4$ is merely marginal.
+
+\section*{4. Ultraviolet finiteness (Weinberg)}
+
+Every \emph{subdiagram} of any diagram is itself connected with $V'\ge1$,
+$I'\ge1$, hence has $D'=3-3V'-I'<0$ by \eqref{eq:D}. Weinberg's convergence
+theorem then gives \emph{absolute} convergence of every loop integral as
+$\Lambda\to\infty$ (assert \texttt{weinberg\_all\_subdiagrams\_convergent}).
+Therefore the theory is \textbf{ultraviolet-finite}: the perturbative expansion
+requires NO divergent counterterms. The counterterm set is finite --- in fact
+empty up to the single finite normal-ordering of the tadpole (\S5).
+
+\section*{5. The tadpole and the continuum limit}
+
+The one-loop equal-point contraction is
+\begin{equation}
+\langle\phi^2\rangle=\int\frac{d^3q}{(2\pi)^3}\,G(q)
+=\frac1{2\pi^2}\int_0^\infty\frac{q^2\,dq}{\mu^2+Y(q^2-q_0^2)^2},
+\end{equation}
+whose integrand decays as $q^2/(Yq^4)=1/(Yq^2)$, so the integral converges:
+$\langle\phi^2\rangle=0.767$ at the production parameters, with
+$|\!\int^{4\Lambda}-\!\int^{2\Lambda}|\to4.8\times10^{-5}$ (assert
+\texttt{tadpole\_integral\_converges}). Hence the cutoff $\Lambda\to\infty$ limit
+is finite. At fixed cutoff, the discretised (lattice) tadpole is an isotropic
+Riemann sum that converges to the continuum integral as the spacing $a\to0$
+(assert \texttt{discretisation\_to\_continuum\_convergence}: error
+$3.7\times10^{-10}\to1.5\times10^{-12}$ on refinement, once $a$ resolves the
+shell width $\sim\sqrt{\mu^2/Y}/q_0$). The two limits combine: the continuum
+($a\to0$) limit of perturbative correlation functions exists and is
+cutoff-independent.
+
+\section*{6. Infrared finiteness}
+
+Under $\mu^2>0$, $K(q)\ge\mu^2>0$ for all $q$, so $G(q)\le1/\mu^2$ is bounded and
+no infrared divergence occurs (assert \texttt{no\_ir\_divergence\_mu2\_positive}).
+The near-degeneracy of $K$ on the shell $|q|=q_0$ (where $K=\mu^2$) is a finite
+enhancement, not a divergence.
+
+\paragraph{Theorem (A3, scalar/$d{=}3$/$\mu^2>0$).} \emph{The scalar Brazovskii
+functional with the quartic kernel $K(q)=\mu^2+Y(q^2-q_0^2)^2$ in $d=3$,
+$\mu^2>0$, is super-renormalisable: every connected diagram with $V\ge1,I\ge1$
+has $D=3-3V-I<0$, so by Weinberg's theorem the perturbative expansion is
+ultraviolet-finite and infrared-finite, the counterterm set is finite (empty up
+to a finite tadpole normal-ordering), and the continuum ($a\to0$,
+$\Lambda\to\infty$) limit of the perturbative correlation functions exists and is
+cutoff-independent.}
+
+\section*{7. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Power counting is only superficial; nested
+subdivergences could spoil it.''} DISMISSED: every subdiagram has $V'\ge1,I'\ge1$
+hence $D'<0$ by \eqref{eq:D}; Weinberg's theorem requires exactly this
+(all subdiagrams convergent) and yields absolute convergence. There are no
+divergent subgraphs to renormalise.
+\item[($\beta$)] \emph{``This is only perturbative.''} VALID with mitigation: the
+claim is explicitly the perturbative continuum limit (the standard meaning of
+super-renormalisability). The constructive (non-perturbative measure) limit is
+flagged as a separate target $\mathrm{A3}_{\rm constructive}$; it is not claimed.
+\item[($\gamma$)] \emph{``The shell $|q|=q_0$ where $K=\mu^2$ is small could
+cause trouble.''} DISMISSED: $\mu^2>0$ keeps $K\ge\mu^2>0$, so $G$ is bounded;
+the shell is a finite enhancement of width $\sim\sqrt{\mu^2/Y}/q_0$, resolved by
+any $a$ below that scale (\S5), with no divergence.
+\end{itemize}
+
+Quantitative sanity check (mandatory): all constants reproduced by
+\url{codes/foundations/a3_renormalisation_checks.py} (6/6): $D=3-3V-I\in\{-1,-2,
+-5,-6,-7,-10\}$ for the tabulated diagrams; $K(q)/(Yq^4)\to1$; finite tadpole
+$\langle\phi^2\rangle=0.767$; $\min_q K=\mu^2=5\times10^{-3}>0$; refinement error
+$\to10^{-12}$.
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A3-RENORMALISATION (scalar, d=3, mu^2>0)
+Precise statement:       The d=3 quartic-kernel scalar Brazovskii functional is
+                         super-renormalisable: every connected diagram with
+                         V>=1,I>=1 has D=3-3V-I<0; by Weinberg the perturbative
+                         expansion is UV- and IR-finite, the counterterm set is
+                         finite (empty up to a finite tadpole), and the
+                         continuum (a->0) limit of perturbative correlators
+                         exists and is cutoff-independent.
+Scope:                   ONE scalar field, d=3, quartic kernel, mu^2>0;
+                         PERTURBATIVE. NOT constructive/non-perturbative; NOT
+                         full Class-II; NOT mu^2<0.
+Dependencies:            A1-KERNEL-CONV.
+Hypotheses:              (H1) d=3 with the q^4 kernel [power counting D<0];
+                         (H2) mu^2>0 [IR finiteness, K>=mu^2>0].
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (6/6 checks).
+Reproduction command:    python codes/foundations/a3_renormalisation_checks.py
+Expected output:         6/6 PASS; exit 0.
+Falsification gate:      A connected diagram with V>=1,I>=1 and D>=0 (would need
+                         d>=4 or a softer-than-q^4 kernel); or a UV/IR divergence
+                         at mu^2>0; or failure of the a->0 Riemann convergence.
+Tier before / after:     A3 T1 / T6 PROVED CONDITIONAL (perturbative,
+                         scalar/d=3/mu^2>0) -- submitted for operator sign-off.
+No-overclaim statement:  No constructive/non-perturbative continuum limit; no
+                         full Class-II; no mu^2<0 branch; finiteness is the
+                         perturbative statement.
+Next required action:    Operator sign-off; then A3_constructive (non-pert.
+                         measure) and the joint production-Hessian + continuum
+                         mainline for BCC stability / mass gap.
+\end{verbatim}

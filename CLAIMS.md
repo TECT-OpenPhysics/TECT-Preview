@@ -5,7 +5,7 @@
 
 Generated: 2026-06-23
 
-**29 claims** · T1: 11 · T2: 1 · T3: 1 · T4: 3 · T5: 4 · T6: 6 · T7: 3 · T7-candidates: 3 · refuted: 0
+**32 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 3 · T5: 4 · T6: 9 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -16,8 +16,9 @@ reproduction commands, and history live on the claim cards.
 | Claim | Title | Tier | Lifecycle | Evidence | Hypotheses | Open gates |
 |---|---|---|---|---|---|---|
 | [A1-KERNEL-CONV](claims/A1-KERNEL-CONV/claim.md) | Production-kernel convention and G6 recomputation cascade | T5 | ACTIVE | EXECUTED | — | — |
-| [A2-PDE-WELLPOSED](claims/A2-PDE-WELLPOSED/claim.md) | Well-posedness of the TECT gradient flow and minimisation problem | T1 | ACTIVE | CONDITIONAL | — | — |
-| [A3-RENORMALISATION](claims/A3-RENORMALISATION/claim.md) | Regularisation, counterterms, and continuum limit of $F_{\rm TECT}$ | T1 | ACTIVE | CONDITIONAL | — | — |
+| [A2-PDE-WELLPOSED](claims/A2-PDE-WELLPOSED/claim.md) | Well-posedness of the TECT gradient flow and minimisation problem | T6 | ACTIVE | ANALYTIC, EXECUTED | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
+| [A3-PERTURBATIVE-CONTINUUM-CORRELATORS](claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/claim.md) | Cutoff-independent continuum limit of the perturbative correlators (conditional) | T6 | ACTIVE | ANALYTIC, ESTIMATOR | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
+| [A3-UV-SUPERRENORMALISABILITY](claims/A3-UV-SUPERRENORMALISABILITY/claim.md) | UV super-renormalisability of the scalar Brazovskii functional | T6 | ACTIVE | ANALYTIC, EXECUTED | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — |
 
 ## Sector B — Vacuum / Reading Selection
 
@@ -25,8 +26,10 @@ reproduction commands, and history live on the claim cards.
 |---|---|---|---|---|---|---|
 | [B1-RH-ENUM](claims/B1-RH-ENUM/claim.md) | Reading-H selection within enumerated condensate ensembles | T7 | ACTIVE | ANALYTIC, EXECUTED | A1-KERNEL-CONV | — |
 | [B2-PROPA-HLAYER](claims/B2-PROPA-HLAYER/claim.md) | Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison infimum (T7, H-LAYER discharged) | T7 | ACTIVE | ANALYTIC, CONDITIONAL | A1-KERNEL-CONV | — |
-| [B3-BCC-STRUCT](claims/B3-BCC-STRUCT/claim.md) | BCC structural selection among tested ordered condensates | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | G3PB-III |
-| [B4-MASS-GAP](claims/B4-MASS-GAP/claim.md) | BCC ground-state uniqueness within the single-mode constraint cone | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
+| [B3-BCC-STRUCT](claims/B3-BCC-STRUCT/claim.md) | BCC structural selection among tested ordered condensates | T0 | REFUTED | EXECUTED | — | — |
+| [B3-RH-TESTED-STRUCTURE-RANKING](claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md) | Reading-H is selected within the tested ordered-reading ensemble (estimator grade) | T4 | ACTIVE | EXECUTED, ESTIMATOR | — | ESTIMATOR-UPGRADE |
+| [B4-CONE-CURVATURE-ANCHOR](claims/B4-CONE-CURVATURE-ANCHOR/claim.md) | BCC single-mode-cone uniqueness + positive local curvature anchor (metastable branch) | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
+| [B4-MASS-GAP](claims/B4-MASS-GAP/claim.md) | BCC ground-state uniqueness within the single-mode constraint cone | T1 | ACTIVE | ANALYTIC | — | — |
 | [B5-BEYOND-LAYER-BOUND](claims/B5-BEYOND-LAYER-BOUND/claim.md) | Pattern-generic Gershgorin reduction of the beyond-layer bound | T7 | ACTIVE | ANALYTIC, EXECUTED | A1-KERNEL-CONV | — |
 
 ## Sector C — Spacetime / Lorentz / Gravity
@@ -38,7 +41,7 @@ reproduction commands, and history live on the claim cards.
 | [C3-EP](claims/C3-EP/claim.md) | Equivalence principle via Fermi-frame ODE lemma | T6 (T7-cand.) | ACTIVE | ANALYTIC | H-LEGACY-CHAIN | — |
 | [C4-GRAVITY-1LOOP](claims/C4-GRAVITY-1LOOP/claim.md) | Gravity sector closure at 1-loop | T5 | ACTIVE | ANALYTIC, EXECUTED | — | SCHEME-2LOOP |
 | [C5-NEWTON-G](claims/C5-NEWTON-G/claim.md) | Newton-constant relation (T6/T7-SPLIT management) | T6 | ACTIVE | ANALYTIC, MATCHED | H-LEGACY-CHAIN | GAP-3, PRED-G-FREEZE |
-| [C6-SPACETIME-SIGNATURE](claims/C6-SPACETIME-SIGNATURE/claim.md) | Emergent 3+1 dimensionality and Lorentzian signature | T1 | ACTIVE | CONDITIONAL | — | — |
+| [C6-SPACETIME-SIGNATURE](claims/C6-SPACETIME-SIGNATURE/claim.md) | Emergent 3+1 dimensionality and Lorentzian signature | T1 | ACTIVE | CONDITIONAL | — | C6-BCC-PREMISE-BLOCKED |
 
 ## Sector D — Gauge / Matter / Topology
 

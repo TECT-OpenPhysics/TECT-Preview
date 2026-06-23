@@ -1,0 +1,10 @@
+  [PASS] lattice_momentum_lower_bound -- on BZ_a (|q|<=pi/a): |qhat| >= (2/pi)|q| (sin(x)/x>=2/pi on [0,pi/2]) for a=1/0.3/0.1/0.03 => qhat^2 >= (4/pi^2) q^2
+  [PASS] lattice_momentum_pointwise_convergence -- qhat(q;a)->q at fixed q=[np.float64(0.1), np.float64(0.68), np.float64(1.5), np.float64(5.0)] as a->0: max|qhat-q| = ['5.19e-02', '4.69e-03', '5.21e-04'] (a=0.1/0.03/0.01)
+  [PASS] lattice_folding_flaw_demonstrated -- G_a^lattice(q)(1+|q|)^4 at the folded point q~2pi/a = ['7.58e+07', '8.95e+09', '7.16e+11'] -> blows up (qhat folds to ~0 so G_a~O(1) while (1+|q|)^4 grows): the LATTICE bound G_a<=C(1+|q|)^-4 FAILS for unwrapped internal-line momenta. The finite-difference lattice needs Reisz lattice power counting (Route B).
+  [PASS] spectral_regulator_uniform_bound -- spectral regulator G_a^spec=1_{|q|<=pi/a}/K(q): sup_q (1+|q|)^4/K(q) = C = 1600.0 (continuum kernel, a-INDEPENDENT) => G_a^spec(q_i) <= C(1+|q_i|)^-4 for ALL unwrapped q_i (the indicator only restricts). This closes the domination (Route A: spectral/Galerkin, NOT finite-difference lattice).
+  [PASS] dominating_function_integrable_weinberg -- prod_i (1+|q_i|)^-4 integrable on (R^3)^L because D=3-3V-I<0 for the graph and ALL subgraphs (A3-UV); Weinberg's theorem => the dominating function has finite integral
+  [PASS] regulator_matching_single_limit -- Lambda_a = pi/a = [31.4, 104.7, 314.2] -> inf as a->0: the lattice ties Lambda=pi/a, so a->0 and Lambda->inf are ONE limit (closes the matching gap)
+  [PASS] no_scalar_doubler -- min_q K_a = 0.00500 ~ mu^2 (on the shell qhat^2=q0^2), BZ-corner K_a = 2.559e+06 >> mu^2: a UNIQUE minimum on the shell, no spurious doubler minimum (scalar theory)
+  [PASS] integrated_instance_lattice_to_continuum -- radial lattice tadpole (with qhat) a=0.1/0.03/0.01 = [np.float64(0.7708), np.float64(0.7685), np.float64(0.768)] -> continuum 0.7675; |err| 3.34e-03->4.96e-04 (one-graph DCT instance)
+
+A3 graphwise-convergence (Route A spectral regulator; lattice folding flaw recorded) checks: 8/8 PASS

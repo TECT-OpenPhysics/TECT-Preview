@@ -135,9 +135,9 @@ constraint-cone cluster, and Math82 Addenda G/G2/G3 (continuation curve + audits
 
 **Re-validation (honest grade).** Two axes achieved, one waived:
 (a) **verbatim text** — all 7 migrated notes are byte-identical to the frozen
-legacy originals (SHA-256 verified at migration time: Math01-v2 `6aeffab9`;
-Math56 `a5546466`/`26255775`/`4c99f5f9`; Math82 G/G2/G3
-`9c76de35`/`2025a665`/`fd038f4a`);
+legacy originals (SHA-256 verified at migration time: Math01-v2 `6aeffab92c313edc9223748d4562581d33956b8cb856eea29f5c527ce427b45e`;
+Math56 `a5546466a8bc4cdf8255746e5196ce2cca0070f1b30fb387b4736f193ba518d6`/`26255775038bdc347f6eeeccbc83383a1d13e6bfffe26472afc8453c4d7a4601`/`4c99f5f9c7cfb9f3c0ed8dcfbd4ded62429ea44ca70414fc70f8077417f5a3b4`; Math82 G/G2/G3
+`9c76de35837b370aec945921f120512d145780b9e16780dc229266d1b0028b64`/`2025a6655421af147d8312c410d8af5e3473b25c9d764a64723f623f42a5b911`/`fd038f4a485e14699113f37e552bc5615200e96dbd5a522cd2bb67b018d71776`);
 (b) **provenance cross-check** — the migrated manifest's continuation point #1
 ($\mu^2=5.0\times10^{-3}$, converged, $m^{*2}=+4.247\times10^{-2}$,
 $\Delta F=+4.150\times10^{-10}$) reproduces the B4 card anchor to every quoted
@@ -170,13 +170,13 @@ migration-plan §5); only its run manifest migrates as provenance.
 
 | Legacy path (original) | Consuming claims | Re-validation | Sign-off |
 |---|---|---|---|
-| `Docs/math/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt` | B4 | verbatim (SHA-256 `6aeffab9`) | n/a (T5) |
-| `Docs/math/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt` | B4 | verbatim (SHA-256 `26255775`) | n/a (T5) |
-| `Docs/math/TECT-Math56-Addendum.tex.txt` | B4 | verbatim (SHA-256 `a5546466`) | n/a (T5) |
-| `Docs/math/TECT-Math56-HessJump-audit.tex.txt` | B4 | verbatim (SHA-256 `4c99f5f9`) | n/a (T5) |
-| `Docs/math/TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt` | B4 | verbatim (SHA-256 `9c76de35`) | n/a (T5) |
-| `Docs/math/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt` | B4 | verbatim (SHA-256 `2025a665`) | n/a (T5) |
-| `Docs/math/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt` | B4 | verbatim (SHA-256 `fd038f4a`) | n/a (T5) |
+| `Docs/math/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt` | B4 | verbatim (SHA-256 `6aeffab92c313edc9223748d4562581d33956b8cb856eea29f5c527ce427b45e`) | n/a (T5) |
+| `Docs/math/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt` | B4 | verbatim (SHA-256 `26255775038bdc347f6eeeccbc83383a1d13e6bfffe26472afc8453c4d7a4601`) | n/a (T5) |
+| `Docs/math/TECT-Math56-Addendum.tex.txt` | B4 | verbatim (SHA-256 `a5546466a8bc4cdf8255746e5196ce2cca0070f1b30fb387b4736f193ba518d6`) | n/a (T5) |
+| `Docs/math/TECT-Math56-HessJump-audit.tex.txt` | B4 | verbatim (SHA-256 `4c99f5f9c7cfb9f3c0ed8dcfbd4ded62429ea44ca70414fc70f8077417f5a3b4`) | n/a (T5) |
+| `Docs/math/TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt` | B4 | verbatim (SHA-256 `9c76de35837b370aec945921f120512d145780b9e16780dc229266d1b0028b64`) | n/a (T5) |
+| `Docs/math/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt` | B4 | verbatim (SHA-256 `2025a6655421af147d8312c410d8af5e3473b25c9d764a64723f623f42a5b911`) | n/a (T5) |
+| `Docs/math/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt` | B4 | verbatim (SHA-256 `fd038f4a485e14699113f37e552bc5615200e96dbd5a522cd2bb67b018d71776`) | n/a (T5) |
 | `Runs/continuation/math82H_groundstate_N32_Lbcc7_2026-04-24/MANIFEST.md` | B4 | provenance; anchor reproduces card to all digits; numerical re-run WAIVED (production-PDE) | n/a (T5) |
 
 ## Migration batch 4 — B3-BCC-STRUCT reframe to corrected continuum basis (plan phase M1, 2026-06-23)

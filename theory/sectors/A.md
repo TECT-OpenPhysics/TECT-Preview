@@ -8,15 +8,16 @@
 
 ## Claims
 
-Tier profile: T5x1 T1x2
+Tier profile: T6x3 T5x1
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
 | [`A1-KERNEL-CONV`](../../claims/A1-KERNEL-CONV/INDEX.md) | T5 | — | — | Production-kernel convention and G6 recomputation cascade |
-| [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T1 | — | — | Well-posedness of the TECT gradient flow and minimisation problem |
-| [`A3-RENORMALISATION`](../../claims/A3-RENORMALISATION/INDEX.md) | T1 | — | — | Regularisation, counterterms, and continuum limit of $F_{\rm TECT}$ |
+| [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
+| [`A3-PERTURBATIVE-CONTINUUM-CORRELATORS`](../../claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Cutoff-independent continuum limit of the perturbative correlators (conditional) |
+| [`A3-UV-SUPERRENORMALISABILITY`](../../claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | UV super-renormalisability of the scalar Brazovskii functional |
 
-**Open named hypotheses (sector union):** —  
+**Open named hypotheses (sector union):** A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY  
 **Open gates (sector union):** —
 
 ## Predictions

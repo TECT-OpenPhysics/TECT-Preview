@@ -1,0 +1,138 @@
+% SUPERSEDED by b4-massgap-gap-scope-addendum-260623-260623-v1.1.tex.txt (tangent-cone Delta_cone; B4 OPENED)
+% =============================================================================
+% Title: B4 mass-gap scope addendum -- cone spectral gap, anchor identification, full digests
+% Claim: B4-MASS-GAP (migration record addendum; operator verdict 2026-06-23)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: scope/provenance addendum (no tier action; T5 unchanged)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) operator verdict addendum to the B4 migration record
+%        (b4-massgap-migration-260623-v1.0): defines the cone spectral gap
+%        Delta_cone, records that m*^2 is NOT identified with it (no mass-gap
+%        proof), adds Delta_cone<=0 as a separate gap falsifier, and records the
+%        full SHA-256 digests of the migrated files (prefix match insufficient).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Operator verdict 2026-06-23 ACCEPTED the B4 evidence migration and left B4 at
+T5 (no tier action). This addendum records the three rigor items the verdict
+required before ``mass gap'' may be used as a physical statement: (i) the cone
+spectral gap $\Delta_{\rm cone}$ is defined (\S2); (ii) the anchor $m^{*2}$ is
+recorded as a positive local curvature anchor \emph{not identified} with
+$\Delta_{\rm cone}$, so no continuum/thermodynamic mass gap is claimed (\S3);
+(iii) full SHA-256 digests replace the prefix matches (\S4). No positive
+mass-gap claim is made here.
+
+\section*{2. The cone spectral gap}
+
+Let $H_{\Psi_*}$ be the Hessian of $F_{\rm TECT}$ at the single-mode-cone
+critical point $\Psi_*$, let $\mathcal C$ be the single-mode constraint cone
+tangent space, and let $\mathcal Z$ be the subspace of antisymmetric zero modes
+(the broken-symmetry directions). The cone spectral gap is
+\begin{equation}
+\Delta_{\rm cone}:=\inf_{\substack{\delta\Psi\in\mathcal C,\ \delta\Psi\perp\mathcal Z\\
+\|\delta\Psi\|_2=1}}\big\langle\delta\Psi,\,H_{\Psi_*}\,\delta\Psi\big\rangle .
+\end{equation}
+A genuine local mass gap on the cone requires $\Delta_{\rm cone}>0$; hence
+\textbf{$\Delta_{\rm cone}\le0$ is a direct falsifier of the gap}, distinct from
+the uniqueness falsifier (existence of a second minimiser).
+
+\section*{3. The anchor is a curvature anchor, not the gap}
+
+The migrated continuation reports $m^{*2}=+4.247\times10^{-2}$ at
+$\mu^2=+5\times10^{-3}$ on the metastable subset-4-cosine branch. This is a
+\emph{positive local curvature anchor} within the single-mode cone. The record
+establishes \textbf{no} equality $m^{*2}=\Delta_{\rm cone}$ and \textbf{no}
+rigorous bound $m^{*2}\le\Delta_{\rm cone}$ (or $\ge$): the antisymmetric
+zero-mode-excluded lowest eigenvalue of $H_{\Psi_*}$ is not computed in the
+migrated material. Consequently B4 is, in its current scope, a positive
+local-curvature statement, \textbf{not} a continuum or thermodynamic mass-gap
+proof. Establishing the latter requires (a) computing the symmetry-projected
+$\Delta_{\rm cone}$ on the canonical production Hessian, (b) the identification
+or rigorous inequality relating $m^{*2}$ and $\Delta_{\rm cone}$, (c) the
+continuum ($N\to\infty$ / $a\to0$) limit, and (d) the production-Hessian
+reproduction bundle (PACKAGE-PENDING).
+
+\section*{4. Full SHA-256 digests (provenance, prefix match insufficient)}
+
+\begin{verbatim}
+6aeffab92c313edc9223748d4562581d33956b8cb856eea29f5c527ce427b45e
+  Math01/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt
+26255775038bdc347f6eeeccbc83383a1d13e6bfffe26472afc8453c4d7a4601
+  Math56/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt
+a5546466a8bc4cdf8255746e5196ce2cca0070f1b30fb387b4736f193ba518d6
+  Math56/TECT-Math56-Addendum.tex.txt
+4c99f5f9c7cfb9f3c0ed8dcfbd4ded62429ea44ca70414fc70f8077417f5a3b4
+  Math56/TECT-Math56-HessJump-audit.tex.txt
+9c76de35837b370aec945921f120512d145780b9e16780dc229266d1b0028b64
+  Math82/TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt
+2025a6655421af147d8312c410d8af5e3473b25c9d764a64723f623f42a5b911
+  Math82/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt
+fd038f4a485e14699113f37e552bc5615200e96dbd5a522cd2bb67b018d71776
+  Math82/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt
+\end{verbatim}
+These full digests are also recorded in \url{archive/MIGRATION-LEDGER.md}
+(batch 3). They authenticate byte-identity of the archive copies against the
+frozen legacy originals.
+
+\section*{5. Operator verdict (2026-06-23)}
+
+\begin{center}
+\begin{tabular}{l|l}
+Item & Operator decision\\
+\hline
+B4 evidence migration & ACCEPTED\\
+B4 tier & $T5\to T5$ (no action)\\
+Numerical provenance & PACKAGE-PENDING\\
+Full physical mass gap & NOT established\\
+Continuum / production-Hessian gap & still open\\
+\end{tabular}
+\end{center}
+
+\section*{6. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A positive $m^{*2}$ already proves a gap.''} DISMISSED:
+$m^{*2}$ is the curvature in the single-mode direction at a metastable anchor;
+the gap is the symmetry-projected infimum $\Delta_{\rm cone}$ over the whole
+cone, which is not computed. Positivity of one curvature does not bound the
+infimum.
+\item[($\beta$)] \emph{``Prefix SHA-256 was good enough.''} UPHELD: a 8-hex
+prefix is $2^{32}$ collision space; the full 256-bit digests (\S4) are now
+recorded, closing the authentication gap.
+\item[($\gamma$)] \emph{``The metastable, $\Delta F>0$ anchor is the wrong
+object for a mass gap.''} VALID with mitigation: the record states the anchor is
+metastable and unfavourable; the addendum makes explicit that no mass-gap claim
+is attached to it. The favourable point (\#3) is also migrated.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the seven full digests are 64 hex
+characters ($256$ bit) each and reproduce by \texttt{sha256sum} on the archive
+copies; the prefix-to-full extension is verified to agree on the leading 8 hex
+($6aeffab9\ldots$, $26255775\ldots$, etc.).
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               B4-MASS-GAP (mass-gap scope addendum)
+Precise statement:       m*^2=+4.247e-2 is a positive single-mode-cone local
+                         curvature anchor, NOT identified with the cone gap
+                         Delta_cone; no continuum/thermodynamic mass gap is
+                         claimed. Full SHA-256 digests recorded.
+Scope:                   Single-mode cone; metastable branch; T5 unchanged.
+Dependencies:            B4 migration record v1.0; A1-KERNEL-CONV.
+Evidence grade:          ANALYTIC (scope) + provenance (full digests).
+Reproduction command:    sha256sum archive/legacy/notes/Math0{1}/* \
+                         archive/legacy/notes/Math56/* archive/legacy/notes/Math82/*
+Expected output:         the seven digests of Section 4.
+Falsification gate:      (gap) Delta_cone<=0; (uniqueness) a second cone
+                         minimiser. The two are distinct.
+Tier before / after:     B4 T5 / T5 (no action).
+No-overclaim statement:  No continuum/thermodynamic mass gap; no identification
+                         m*^2 = Delta_cone; physical mass gap NOT established.
+Next required action:    Production-Hessian Delta_cone computation +
+                         m*^2--Delta_cone relation + continuum limit +
+                         reproduction bundle, to upgrade beyond the curvature
+                         anchor.
+\end{verbatim}

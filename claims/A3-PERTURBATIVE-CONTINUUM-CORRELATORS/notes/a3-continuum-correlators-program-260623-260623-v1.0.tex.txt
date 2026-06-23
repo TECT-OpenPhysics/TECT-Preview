@@ -1,0 +1,122 @@
+% SUPERSEDED by a3-graphwise-convergence-lemma-260623-260623-v1.1.tex.txt (open lemma now PROVED; T6)
+% =============================================================================
+% Title: Continuum limit of the perturbative Brazovskii correlators -- program and open lemma
+% Claim: A3-PERTURBATIVE-CONTINUUM-CORRELATORS (depends on A3-UV-SUPERRENORMALISABILITY)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T3 PROOF SKETCH (open gap A3-GRAPHWISE-CONVERGENCE)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: defines the perturbative measure and states
+%        the graphwise regulator-convergence lemma as the OPEN gap separating
+%        this claim from T6; the UV-finiteness input is A3-UV-SUPERRENORMALISABILITY.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note sets up the continuum limit of the \emph{perturbative correlation
+functions} of the scalar Brazovskii theory and isolates the single open lemma
+that separates it from a theorem. It is a PROOF SKETCH (T3): the strategy is
+written, two gaps are marked OPEN. Scope: scalar, $d=3$, $\mu^2>0$, perturbative;
+NOT constructive, NOT full Class-II, NOT $\mu^2<0$. The UV-finiteness input (the
+uniform $q^{-4}$ bound and absolute convergence) is the proved sibling
+\texttt{A3-UV-SUPERRENORMALISABILITY}.
+
+\section*{2. The perturbative measure}
+
+UV-finiteness (A3-UV) concerns Feynman amplitudes; it does not by itself define
+correlators. Fix a regularised theory by a lattice spacing $a$ and a momentum
+cutoff $\Lambda$, with regulated kernel $K_a$ and action $F_{\Lambda,a}$. Define
+\begin{equation}
+d\nu_{\Lambda,a}(\phi)=Z_{\Lambda,a}^{-1}\,e^{-F_{\Lambda,a}[\phi]}\,D\phi,
+\qquad
+\langle\mathcal O\rangle_{\Lambda,a}=\int\mathcal O(\phi)\,d\nu_{\Lambda,a}(\phi),
+\end{equation}
+with $Z_{\Lambda,a}$ the partition function. The perturbative expansion of
+$\langle\mathcal O\rangle_{\Lambda,a}$ is a sum over connected graphs
+$\mathcal G$ with amplitudes $\mathcal A_{\mathcal G,a}(p_1,\ldots,p_n)$.
+
+\section*{3. The graphwise convergence lemma (target) and strategy}
+
+\paragraph{Lemma (A3-GRAPHWISE-CONVERGENCE, OPEN).} \emph{For a suitable
+regulator family $K_a\to K$ and every connected graph $\mathcal G$,}
+\begin{equation}
+\lim_{a\to0}\mathcal A_{\mathcal G,a}(p_1,\ldots,p_n)
+=\mathcal A_{\mathcal G}(p_1,\ldots,p_n),
+\end{equation}
+\emph{uniformly on compact external momenta, with the $a\to0$ and
+$\Lambda\to\infty$ limits agreeing.}
+
+Strategy (dominated convergence). (i) the lattice propagator converges
+pointwise; (ii) it obeys the uniform $q^{-4}$ UV bound of A3-UV; (iii) by the
+Weinberg condition every subintegral is absolutely convergent, giving an
+integrable dominating function; (iv) dominated convergence then exchanges the
+limit and the loop integrations for each graph. UV-finiteness (A3-UV) supplies
+exactly the uniform bound and absolute convergence that the dominating function
+requires; the single-graph instance (the tadpole, with $\mathcal A_{\mathcal G,a}
+\to\mathcal A_{\mathcal G}$ to $10^{-12}$) is verified in
+\url{codes/foundations/a3_renormalisation_checks.py}.
+
+\section*{4. Open gaps}
+
+\textbf{OPEN GAP 1 (the lemma).} The dominated-convergence argument above is
+written for a generic graph but not executed: the uniform integrable dominating
+function must be constructed for arbitrary nested loop structures, and the
+pointwise convergence $G_a\to G$ proved for the chosen $K_a$.
+
+\textbf{OPEN GAP 2 (regulator matching).} The regulator family $K_a$ and the
+matching of the Brillouin-zone cutoff to the continuum kernel must be fixed so
+that $a\to0$ and $\Lambda\to\infty$ are the \emph{same} limit; this is a
+definition that the present note states but does not pin down.
+
+Closing both gaps promotes this claim to T6 jointly with A3-UV
+(scalar/$d{=}3$/$\mu^2>0$ perturbative scope).
+
+\section*{5. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``A3-UV already gives this.''} DISMISSED: A3-UV gives
+per-graph UV-finiteness at fixed regularisation; it does not give the $a\to0$
+\emph{limit} of the correlators, which needs the measure and the graphwise lemma.
+\item[($\beta$)] \emph{``The tadpole instance suffices.''} DISMISSED: one
+convergent graph does not prove convergence of all graphs; the lemma is
+quantified over every connected $\mathcal G$.
+\item[($\gamma$)] \emph{``$a\to0$ and $\Lambda\to\infty$ are obviously the same.''}
+UPHELD as a gap: they coincide only for a specified regulator/cutoff matching
+(Gap 2); asserting it without that definition is unjustified.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the uniform UV bound exponent is the
+$q^{-4}$ of A3-UV (verified $K(q)/(Yq^4)\to1$); the one-graph dominated-convergence
+instance (tadpole) converges to $10^{-12}$ on refinement; the general lemma's
+status is OPEN (no numerical claim is made for arbitrary graphs).
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A3-PERTURBATIVE-CONTINUUM-CORRELATORS
+Precise statement:       PROOF SKETCH: with dnu=Z^-1 e^{-F} Dphi,
+                         all connected perturbative correlators
+                         -> a cutoff-independent continuum limit
+                         as a->0, Lambda->inf, CONDITIONAL on the
+                         open graphwise lemma lim_a A_{G,a}=A_G
+                         (A3-GRAPHWISE-CONVERGENCE).
+Scope:                   scalar, d=3, mu^2>0, perturbative;
+                         PROOF SKETCH.
+Dependencies:            A1-KERNEL-CONV;
+                         A3-UV-SUPERRENORMALISABILITY.
+Open gaps:               (1) graphwise dominated-convergence
+                         lemma; (2) K_a regulator / BZ matching.
+Evidence grade:          ANALYTIC (strategy) + ESTIMATOR
+                         (tadpole only).
+Reproduction command:    n/a (open); tadpole instance in
+                         a3_renormalisation_checks.py.
+Falsification gate:      a connected graph G with A_{G,a} not->
+                         A_G; or non-uniqueness of a->0 vs
+                         Lambda->inf.
+Tier before / after:     new / T3 PROOF SKETCH.
+No-overclaim statement:  Not a theorem; one tadpole instance
+                         does not prove the all-graph lemma; not
+                         constructive; not Class-II; not mu^2<0.
+Next required action:    Prove A3-GRAPHWISE-CONVERGENCE + fix the
+                         regulator matching; then T6 with A3-UV.
+\end{verbatim}

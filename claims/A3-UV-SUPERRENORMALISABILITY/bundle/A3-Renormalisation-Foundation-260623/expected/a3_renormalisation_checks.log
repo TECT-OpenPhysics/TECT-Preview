@@ -1,0 +1,8 @@
+  [PASS] superficial_degree_all_negative -- D=3-3V-I for (V>=1,I>=1): {'phi4 1-loop tadpole': -1, 'phi4 self-energy sunset': -6, 'phi6 2-loop': -2, 'phi4 4-pt 1-loop': -5, 'phi6 sunset': -7, 'phi4 3-loop': -10}; all <= -1 < 0 => every connected diagram is superficially convergent
+  [PASS] propagator_uv_decay_q4 -- K(q)/(Y q^4) -> 1 as q->inf (q=1000: 0.999999); G(q)=1/K ~ q^-4
+  [PASS] tadpole_integral_converges -- <phi^2>(Lambda) for Lambda=50/200/800/3200 = [np.float64(0.7667), np.float64(0.76746), np.float64(0.76765), np.float64(0.7677)]; |I(4L)-I(2L)| -> 4.75e-05 (UV integrand ~ 1/q^2 converges) => finite continuum tadpole
+  [PASS] no_ir_divergence_mu2_positive -- min_q K(q) = 0.005 >= mu^2 = 0.005 > 0; propagator bounded, no IR divergence
+  [PASS] tadpole_radial_quadrature_convergence -- radial QUADRATURE of the tadpole at cutoff 6.0 with n=2000/8000/32000 = [np.float64(0.7592), np.float64(0.7592), np.float64(0.7592)] -> 0.75920; |err| 3.71e-10->1.45e-12. NOTE: this is numerical accuracy of the (UV-finite) tadpole integral, NOT the lattice a->0 theorem (that is A3-PERTURBATIVE-CONTINUUM-CORRELATORS / a3_graphwise_convergence_checks.py)
+  [PASS] weinberg_all_subdiagrams_convergent -- the least-suppressed subdiagram (V=1,I=1) has D=-1<0; since EVERY subdiagram has D<0, Weinberg's theorem gives absolute convergence => UV-finite, finite/empty counterterm set
+
+A3 renormalisation checks: 6/6 PASS

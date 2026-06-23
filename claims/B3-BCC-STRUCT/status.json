@@ -1,44 +1,37 @@
 {
   "tier_scale": "TSv2",
-  "lifecycle": "ACTIVE",
+  "lifecycle": "REFUTED",
   "dependencies": [
     "A1-KERNEL-CONV"
   ],
   "hypotheses": [],
   "soft_dependencies": [],
-  "open_gates": [
-    "G3PB-III"
-  ],
+  "open_gates": [],
   "legacy_pillar": [],
   "tier_legacy": null,
   "legacy_evidence": [
-    "archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt (LAM/HEX/FCC races; surviving B1 evidence)",
-    "archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt (HEX exact-Wick bracket)",
-    "archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt (two-shell ensemble race)",
-    "archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt (continuum-anchored Bloch log-det)",
-    "archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt (Reading-H selection record)",
-    "archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (SUPERSEDED -- single-shell SMA ranking REFUTED by Math400; script re-run yields BCC rank 9; NOT active support)",
-    "archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (SUPERSEDED -- 1-mode K-table main claim T0-REFUTED by Math400; NOT active support)"
+    "archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (refuted: script re-run -> BCC rank 9)",
+    "archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (refuted by Math400)"
   ],
   "t7_candidate": false,
   "reproduction": {
-    "command": null,
-    "expected": null,
-    "status": "PACKAGE-PENDING"
+    "command": "python archive/legacy/scripts/Math194_brazovskii_lattice_ranking.py",
+    "expected": "prints 'BCC is Rank 9' (the refutation)",
+    "status": "AVAILABLE"
   },
   "last_review": "2026-06-23",
-  "notes": "Reframed 2026-06-23 (batch 4) onto the corrected continuum-anchored B1 evidence after the seeded single-shell-SMA lineage (Math194/Math383) was found REFUTED by Math400. Migration-clean. No tier change (T4). Reframe record: claims/B3-BCC-STRUCT/notes/b3-reframe-continuum-260623-260623-v1.0.tex.txt.",
+  "notes": "RETIRED/REFUTED 2026-06-23 by operator verdict. Refutation record + retirement: claims/B3-BCC-STRUCT/notes/b3-reframe-continuum-260623-260623-v1.1.tex.txt; negative-results R-2026-06-23-b3-bcc-structural-selection.",
   "id": "B3-BCC-STRUCT",
   "title": "BCC structural selection among tested ordered condensates",
   "sector": "B",
-  "statement": "Within the tested ordered-condensate class, no competitor reading lowers the TECT free energy below the selected Reading-H (H-layer, BCC-type) condensate at $r_{\\rm braz}=\\mu^2=0.005$ ($\\Delta F[\\mathcal R]=F_{\\rm TECT}[\\mathcal R]-F_{\\rm TECT}[\\mathcal R_H]>0$, estimator grade; LAM/HEX/FCC explicit via Math431) -- the structure-named projection of B1-RH-ENUM. The legacy single-shell-SMA / 1-mode $\\Delta F\\,$--$L_4$ ranking purporting $F_{\\rm BCC}<F_{\\rm FCC}<F_{\\rm SC}$ (Math194/Math383) is REFUTED (Math400) and retained only as superseded history.",
-  "scope": "Corrected continuum-anchored basis (B1-RH-ENUM evidence). Tested representatives at estimator grade; NOT an exhaustiveness statement. The original single-shell-SMA framing (fixed ordered structures ranked by Delta-F/L_4) is RETIRED: Math400 (T0, binding) shows lamellar is the deepest single-shell SMA configuration and the canonical-mu^2 'BCC minimum' is a saddle, and independently refutes the Math383 K_4/K_6 table; the fixed-ordered-BCC-vacuum reading is retired (negative-results/registry.md NG-2026-legacy-ordered-vacuum). Multi-shell/exhaustiveness tracked by G3PB-III. Estimator error bound: uncontrolled (estimator grade, inherited from the B1-RH-ENUM chain); tightening tracked by ESTIMATOR-UPGRADE / G3PB-III.",
-  "tier": "T4",
+  "statement": "REFUTED. The original claim -- within {LAM,HEX,FCC,SC,BCC} the fixed ordered BCC structure minimises the free energy at the operating point ($F_{\\rm BCC}<F_{\\rm FCC}<F_{\\rm SC}$) -- is withdrawn: Math194 re-run places BCC at rank 9 of 10, and Math400 (T0) shows the canonical-$\\mu^2$ SMA 'BCC minimum' is a saddle (all lattices collapse to disordered $F=0$). Operator verdict 2026-06-23: the reframe onto B1 is REJECTED (B1's relative ranking is not a physical-selection claim); B3 is RETIRED.",
+  "scope": "REFUTED -- no surviving claim under this card. See negative_result_ref.",
+  "tier": "T0",
   "evidence_grade": [
-    "EXECUTED",
-    "ESTIMATOR"
+    "EXECUTED"
   ],
-  "falsifier": "A tested-class competitor reading with lower TECT free energy than Reading-H at the operating point under the corrected continuum-anchored convention (estimator grade). NOTE: under the REFUTED single-shell SMA convention this falsifier already fires (Math194 script: lamellar < ... < bcc); that convention is retired.",
-  "no_overclaim": "BCC global optimality over all admissible structures; any fixed-ordered-BCC-vacuum reading (retired, NG-2026-legacy-ordered-vacuum); exhaustiveness beyond the tested representatives; and the refuted single-shell-SMA F_BCC<F_FCC<F_SC ordering.",
-  "next_action": "Assemble Minimal Review Packet B from the B1 continuum-anchored enumerated-reading evidence (Math431/434/436/428/432), restricted to the tested ordered-structure projection; tighten the estimator error bound (ESTIMATOR-UPGRADE / G3PB-III)."
+  "falsifier": "n/a (refuted claim)",
+  "no_overclaim": "This card asserts nothing positive. The restricted ranking projection lives in B3-RH-TESTED-STRUCTURE-RANKING (T4); physical BCC selection is NOT established by either.",
+  "next_action": "None for this card (retired). Physical BCC structure must be re-established as a NEW claim by certifying F[Psi_min]<F[0], lambda_min^perp>=0 (symmetry-projected), N->inf on the canonical PDE background.",
+  "negative_result_ref": "R-2026-06-23-b3-bcc-structural-selection"
 }

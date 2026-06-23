@@ -25,7 +25,7 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.8.0"
+__version__ = "1.9.0"
 __first_issued__ = "2026-06-10"
 __version_issued__ = "2026-06-10"
 
@@ -34,7 +34,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 SEARCH = [REPO/"codes"/"vacuum", REPO/"archive"/"legacy"/"scripts",
-          REPO/"codes"/"pde", REPO/"codes"/"scripts", REPO/"codes"/"tools"]
+          REPO/"codes"/"pde", REPO/"codes"/"scripts", REPO/"codes"/"tools",
+          REPO/"codes"/"foundations"]
 STDLIB = {"os","sys","math","json","re","collections","pathlib","itertools","functools",
           "time","tempfile","argparse","datetime","typing","__future__","hashlib","platform",
           "shutil","subprocess","ast","random","copy","warnings","importlib"}

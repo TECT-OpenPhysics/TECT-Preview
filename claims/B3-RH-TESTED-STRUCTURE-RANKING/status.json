@@ -1,0 +1,44 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-CONV",
+    "B1-RH-ENUM"
+  ],
+  "hypotheses": [],
+  "soft_dependencies": [
+    "B1-RH-ENUM"
+  ],
+  "open_gates": [
+    "ESTIMATOR-UPGRADE"
+  ],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card, 2026-06-23)",
+  "legacy_evidence": [
+    "archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt (LAM/HEX/FCC races)",
+    "archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt",
+    "archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt",
+    "archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "cd archive/legacy/scripts && python Math431_g1pp3_lam_hex_fcc.py",
+    "expected": "LAM/HEX/FCC races PASS (estimator grade)",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-06-23",
+  "notes": "Created 2026-06-23 by operator verdict as the ONLY surviving projection of the retired B3-BCC-STRUCT. Strictly a dependent projection of B1-RH-ENUM; carries no independent evidence. Estimator error bound: uncontrolled (inherited from B1; ESTIMATOR-UPGRADE).",
+  "id": "B3-RH-TESTED-STRUCTURE-RANKING",
+  "title": "Reading-H is selected within the tested ordered-reading ensemble (estimator grade)",
+  "sector": "B",
+  "statement": "$\\Delta F_{\\rm enum}[\\mathcal R]:=F_{\\rm TECT}[\\mathcal R]-F_{\\rm TECT}[\\mathcal R_H]>0$ for every $\\mathcal R$ in the tested ordered-reading ensemble $\\mathcal E_{\\rm tested}$ (LAM/HEX/FCC explicit via Math431), at estimator grade -- i.e. Reading-H is the lowest-energy reading WITHIN the tested ensemble. This is a dependent projection of B1-RH-ENUM.",
+  "scope": "RELATIVE ranking within the tested ordered-reading ensemble ONLY. 'Continuum-anchored' here means the estimator is built on the continuum functional/convention, NOT that an $a\\to0$ PDE continuum limit has been certified (it has not). The result does NOT imply $F[\\mathcal R_H]<F[0]$, nor $H_{\\mathcal R_H}\\succeq0$ under unrestricted variations, nor BCC phase existence/stability. Estimator error bound: uncontrolled (ESTIMATOR-UPGRADE / GAP-2).",
+  "tier": "T4",
+  "evidence_grade": [
+    "EXECUTED",
+    "ESTIMATOR"
+  ],
+  "falsifier": "A tested-ensemble reading $\\mathcal R\\in\\mathcal E_{\\rm tested}$ with $F_{\\rm TECT}[\\mathcal R]<F_{\\rm TECT}[\\mathcal R_H]$ at estimator grade (a ranking inversion). NOTE: this is a falsifier of the RANKING only, NOT of any BCC phase/minimum/global-selection claim.",
+  "no_overclaim": "BCC phase/minimum existence, stability, or GLOBAL selection; $F[\\mathcal R_H]<F[0]$; a symmetry-projected PSD Hessian under unrestricted variations; any completed $a\\to0$ PDE continuum limit; independence from B1-RH-ENUM.",
+  "next_action": "Tighten the estimator error bound (ESTIMATOR-UPGRADE). To re-establish a physical BCC structural claim (separate, new card), certify F[Psi_min]<F[0], lambda_min^perp>=0 (symmetry-projected), N->inf on the canonical PDE background."
+}

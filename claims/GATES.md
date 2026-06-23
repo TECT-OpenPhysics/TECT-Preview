@@ -295,6 +295,12 @@ exist here. Last updated: 2026-06-05.
 | [**H-SUPPRESSION**](#h-suppression) | H-SUPPRESSION-DISCHARGE |
 | [**H-LEGACY-CHAIN**](#h-legacy-chain) | `governance/migration-plan.md` M2 |
 | [**H-CP2-BUNDLE-DATA**](#h-cp2-bundle-data) | Migration … |
+| [**A2-H1-KERNEL-POSITIVITY**](#a2-h1-kernel-positivity) | SATISFIED@anchor (mu^2>0) … |
+| [**A2-H2-SEXTIC-COERCIVITY**](#a2-h2-sextic-coercivity) | SATISFIED@anchor (gamma>0) … |
+| [**C6-BCC-PREMISE-BLOCKED**](#c6-bcc-premise-blocked) | BLOCKED -- BCC-structure premise unavailable … |
+| [**A3-H1-DIM3-Q4-KERNEL**](#a3-h1-dim3-q4-kernel) | d=3 with q^4 kernel => D<0 … |
+| [**A3-H2-IR-POSITIVITY**](#a3-h2-ir-positivity) | mu^2>0 => K>=mu^2>0 (IR finite) … |
+| [**A3-GRAPHWISE-CONVERGENCE**](#a3-graphwise-convergence) | CLOSED@spectral (T6 ratified 2026-06-23); lattice=Route B open … |
 
 <a id="h-layer"></a>
 ### **H-LAYER**
@@ -407,6 +413,51 @@ exist here. Last updated: 2026-06-05.
 
 **Discharge path:** Migration (plan phase M1) + re-verification of cocycle closure
 
+
+<a id="a2-h1-kernel-positivity"></a>
+### **A2-H1-KERNEL-POSITIVITY**
+
+**Statement:** $Y>0$ and $\mu^2>0$ in the production kernel $K(q)=\mu^2+Y(q^2-q_0^2)^2$ (A1-KERNEL-CONV). $Y>0$ gives the fourth-order ellipticity / $q^{-4}$ decay; then $\lambda_0:=\min_k K(k)\ge\mu^2>0$, so $L=K(-i\nabla)$ is a positive self-adjoint fourth-order operator, hence sectorial and the generator of an analytic semigroup. This is the standing hypothesis for A2 LOCAL well-posedness (analytic-semigroup machinery) and for the $H^2$ a priori bound.
+
+**Discharge path:** SATISFIED@anchor (textbook sectoriality hypothesis; $\mu^2=5\times10^{-3}>0$ at the production point; verified \texttt{spec\_inf\_equals\_mu2\_positive} in codes/foundations/a2_wellposedness_checks.py). Carried as a named hypothesis of A2 (T6).
+
+<a id="a2-h2-sextic-coercivity"></a>
+### **A2-H2-SEXTIC-COERCIVITY**
+
+**Statement:** $\gamma>0$ (sextic stabiliser). Then by Young $\tfrac{|\lambda|}{4}t^4\le\tfrac{\gamma}{12}t^6+C_*$ with explicit $C_*$, so $F_{\rm TECT}$ is bounded below and coercive in $H^2\cap L^6$; combined with energy dissipation this gives the global a priori bound. Standing hypothesis for A2 GLOBAL existence (local existence does not need it).
+
+**Discharge path:** SATISFIED@anchor (textbook coercivity hypothesis; $\gamma=1.62>0$, $C_*=1.01\times10^{-2}$; verified \texttt{sextic\_dominates\_quartic\_coercive}). If $\gamma\le0$ the functional is unbounded below and global existence is not claimed. Carried as a named hypothesis of A2 (T6).
+
+
+<a id="c6-bcc-premise-blocked"></a>
+### **C6-BCC-PREMISE-BLOCKED**
+
+**Statement:** C6-SPACETIME-SIGNATURE previously depended on B3-BCC-STRUCT for a physical BCC-structure premise. B3-BCC-STRUCT is REFUTED/RETIRED (R-2026-06-23-b3-bcc-structural-selection); its only survivor B3-RH-TESTED-STRUCTURE-RANKING supplies a restricted relative ranking within the tested ensemble, which does NOT supply a BCC-structure premise. C6 therefore has no valid structural input.
+
+**Discharge path:** BLOCKED -- operator review required (2026-06-23). To unblock, a physical BCC structure must be re-established (F[Psi_min]<F[0], lambda_min^perp>=0 symmetry-projected, N->inf on the canonical PDE background); only then may C6 depend on it.
+
+
+<a id="a3-h1-dim3-q4-kernel"></a>
+### **A3-H1-DIM3-Q4-KERNEL**
+
+**Statement:** spatial dimension $d=3$ with the quartic kernel $K(q)=\mu^2+Y(q^2-q_0^2)^2$, $Y>0$ (propagator $\sim q^{-4}$; $Y>0$ is required for the $q^{-4}$ decay). Then the superficial degree of divergence is $D=(d-4)I-dV+d=3-3V-I<0$ for every connected diagram with $V\ge1,I\ge1$ (super-renormalisability). Standing hypothesis for A3 UV-finiteness.
+
+**Discharge path:** SATISFIED (TECT is a $d=3$ theory with the A1 quartic kernel; $d=4$ would be only marginal). Carried as a named hypothesis of A3 (T6).
+
+<a id="a3-h2-ir-positivity"></a>
+### **A3-H2-IR-POSITIVITY**
+
+**Statement:** $\mu^2>0$, so $K(q)\ge\mu^2>0$ and $G(q)=1/K\le1/\mu^2$ is bounded -- no infrared divergence (the shell $|q|=q_0$ is a finite enhancement). Standing hypothesis for A3 IR finiteness. Same underlying condition as A2-H1-KERNEL-POSITIVITY.
+
+**Discharge path:** SATISFIED@anchor ($\mu^2=5\times10^{-3}>0$; verified \texttt{no\_ir\_divergence\_mu2\_positive}). Carried as a named hypothesis of A3 (T6).
+
+
+<a id="a3-graphwise-convergence"></a>
+### **A3-GRAPHWISE-CONVERGENCE**
+
+**Statement:** For the perturbative measure $d\nu_{\Lambda,a}=Z^{-1}e^{-F_{\Lambda,a}}D\phi$, every connected amplitude must converge graphwise: $\lim_{a\to0}\mathcal A_{\mathcal G,a}(p_1,\ldots,p_n)=\mathcal A_{\mathcal G}(p_1,\ldots,p_n)$, via dominated convergence (lattice-propagator pointwise convergence + uniform $q^{-4}$ UV bound + Weinberg uniform integrability), with a defined regulator family $K_a$ matching the Brillouin-zone cutoff to the continuum kernel.
+
+**Discharge path:** PROVED 2026-06-23 via the SPECTRAL/Galerkin regulator G_a=1_{|q|<=pi/a}/K (Route A; v1.3 -- the v1.1/v1.2 finite-difference-lattice domination was refuted by aliasing/folding). Genuine lattice (Reisz power counting) = Route B, OPEN. Operator T6 RATIFIED 2026-06-23 (spectral/fixed-p scope). Genuine finite-difference lattice = Route B (Reisz), OPEN refinement. Originally via the lattice regulator $\hat q_j=\tfrac2a\sin\tfrac{aq_j}2$ + dominated convergence (pointwise $G_a\to G$ + uniform $(1+|q|)^{-4}$ bound from $|\hat q|\ge\tfrac2\pi|q|$ on BZ + Weinberg integrability), with $\Lambda=\pi/a$ tying $a\to0\equiv\Lambda\to\infty$ (claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-graphwise-convergence-lemma-260623-260623-v1.1.tex.txt; codes/foundations/a3_graphwise_convergence_checks.py 7/7). A3-PERTURBATIVE-CONTINUUM-CORRELATORS -> T6.
 
 ## Gate lifecycle
 

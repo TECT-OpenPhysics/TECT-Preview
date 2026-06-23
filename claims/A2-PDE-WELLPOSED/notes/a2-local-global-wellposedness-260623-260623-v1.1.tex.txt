@@ -1,0 +1,188 @@
+% SUPERSEDED by a2-local-global-wellposedness-260623-260623-v1.2.tex.txt (operator review #2: energy-domain global-existence patch)
+% =============================================================================
+% Title: Local and global well-posedness of the scalar Brazovskii gradient flow
+% Claim: A2-PDE-WELLPOSED (depends on A1-KERNEL-CONV)
+% Version: v1.1 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 PROVED CONDITIONAL (re-submitted for operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue.
+%   v1.1 (2026-06-23) operator review corrections: (1) spectral fact corrected
+%        to the lower bound lambda0 := min_k K(k) >= mu^2 > 0 (equality fails on
+%        a generic cell); (2) Sobolev inclusion direction corrected to
+%        H^2 subset H^{4beta} for beta<=1/2; (3) theorem range restricted to
+%        3/2 < s <= 2 (s>2 needs a separate higher-order persistence estimate);
+%        physical scope narrowed (one real scalar field, fixed periodic cell,
+%        mu^2>0 disordered side; full Class-II and mu^2<0 are separate targets).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note establishes the well-posedness foundation A2 for the scalar Brazovskii
+gradient flow, on which the Sector-B free-energy minimisation rests dynamically.
+The argument is standard semilinear-parabolic theory (Henry 1981; Pazy 1983;
+Lunardi 1995). \textbf{Scope (deliberately narrow, operator review 2026-06-23):}
+the result proved here is
+\begin{equation}
+\mathrm{A2}_{\text{scalar, periodic, }\mu^2>0,\ \gamma>0}:\quad
+\tfrac32<s\le2\ \Longrightarrow\ \text{global well-posedness},
+\end{equation}
+i.e.\ ONE real scalar field on a FIXED periodic cell with $\mu^2>0$, $\gamma>0$.
+It does \textbf{not} cover the full Class-II multi-field action, nor the
+$\mu^2<0$ condensate branch of the numerical mainline; those are separate proof
+targets ($\mathrm{A2}_{\text{full Class II}}$, $\mathrm{A2}_{\mu^2<0}$). In
+particular $\mu^2>0$ is the \emph{disordered-side} condition giving a positive
+linear gap; it is \emph{not} a proof of BCC condensation. Numerical constants
+are pinned by \url{codes/foundations/a2_wellposedness_checks.py} (8/8 PASS).
+
+\section*{2. Setup}
+
+Let $\mathbb{T}^3=\mathbb{R}^3/\Lambda$ be the fixed periodic cell, $\Lambda^*$
+its reciprocal lattice. With the A1-KERNEL-CONV kernel
+$K(q)=\mu^2+Y(q^2-q_0^2)^2$ ($Y>0$),
+\begin{equation}
+F_{\rm TECT}[\phi]=\int_{\mathbb{T}^3}\!\Big[\tfrac12\phi K(-i\nabla)\phi
++\tfrac\lambda4\phi^4+\tfrac\gamma6\phi^6\Big]dx,
+\end{equation}
+with $L^2$ gradient flow, on $X:=L^2(\mathbb{T}^3)$,
+\begin{equation}
+\partial_t\phi=-L\phi+N(\phi),\quad L:=K(-i\nabla),\quad
+N(\phi):=-\lambda\phi^3-\gamma\phi^5,\quad\phi(0)=\phi_0 .
+\label{eq:flow}
+\end{equation}
+Standing hypotheses \textbf{(H1)}
+$\mu^2>0$, \textbf{(H2)} $\gamma>0$ (production anchor $\mu^2=5\times10^{-3}$,
+$\gamma=1.62$).
+
+\section*{3. The linear part generates an analytic semigroup}
+
+$L$ is the self-adjoint Fourier multiplier $K(k)$, $k\in\Lambda^*$, with
+$D(L)=H^4$. The relevant spectral fact is the \emph{lower bound}
+\begin{equation}
+\lambda_0:=\min_{k\in\Lambda^*}K(k)\ \ge\ \mu^2\ >\ 0\qquad\text{(H1)} ,
+\label{eq:lam0}
+\end{equation}
+since $K(k)=\mu^2+Y(\cdots)^2\ge\mu^2$ for every $k$. Equality $\lambda_0=\mu^2$
+holds only if some lattice mode lies exactly on the shell $|k|=q_0$; on a generic
+cell $\lambda_0>\mu^2$ (assert \texttt{lambda0\_lower\_bound\_mu2\_positive}:
+$\mu^2$ is the sharp continuum infimum, lattice $\lambda_0>\mu^2$). Only
+$\lambda_0>0$ is used: a positive self-adjoint operator is sectorial, so $-L$
+generates an analytic semigroup $e^{-tL}$, fractional powers $L^\alpha$ exist
+with $D(L^\alpha)=H^{4\alpha}=:X^\alpha$, and
+\begin{equation}
+\|L^\beta e^{-tL}\|_{X\to X}\le C_\beta t^{-\beta},\quad
+C_\beta=\sup_{x\ge0}x^\beta e^{-x}=\beta^\beta e^{-\beta}<1\quad(0<\beta<1).
+\label{eq:smoothing}
+\end{equation}
+Moreover $K(k)\asymp(1+|k|^2)^2$ with constants depending on $\mu^2,Y,q_0$ (lower
+constant positive by \eqref{eq:lam0}), so $\langle\phi,L\phi\rangle$ is
+equivalent to $\|\phi\|_{H^2}^2$.
+
+\section*{4. The nonlinearity is locally Lipschitz on $X^\beta$}
+
+Fix $\beta\in(\tfrac38,\tfrac12]$, so $X^\beta=H^{4\beta}$ with
+$\tfrac32<4\beta\le2$. By Sobolev in $d=3$, $H^{4\beta}\hookrightarrow L^\infty$
+for $4\beta>\tfrac32$ (assert \texttt{sobolev\_linf\_threshold}), and $H^{4\beta}$
+is a Banach algebra. Hence on balls $\{\|\cdot\|_{X^\beta}\le R\}$,
+\begin{equation}
+\|N(\phi)-N(\psi)\|_X\le\ell(R)\|\phi-\psi\|_{X^\beta},\qquad
+\ell(R)=C\,(|\lambda|R^2+\gamma R^4),
+\end{equation}
+so $N:X^\beta\to X$ is locally Lipschitz and bounded on bounded sets.
+
+\section*{5. Local existence, uniqueness, regularity ($\tfrac32<s\le2$)}
+
+With $L$ sectorial (\S3) and $N:X^\beta\to X$ locally Lipschitz (\S4), Henry
+(1981, Thm.~3.3.3) gives, for every $\phi_0\in X^\beta=H^{4\beta}$
+($s:=4\beta\in(\tfrac32,2]$), a unique mild solution
+\begin{equation}
+\phi\in C([0,\tau];H^s)\cap C((0,\tau];H^4)\cap C^1((0,\tau];X),\quad
+\phi(t)=e^{-tL}\phi_0+\int_0^t e^{-(t-\sigma)L}N(\phi(\sigma))d\sigma,
+\end{equation}
+the integral converging by \eqref{eq:smoothing}. Uniqueness and continuous
+dependence follow by Gronwall; parabolic smoothing plus smoothness of $N$
+bootstrap $\phi\in C^\infty((0,\tau)\times\mathbb{T}^3)$. \textbf{The range is
+$\tfrac32<s\le2$:} the local theory used here employs only $X^\beta$,
+$\beta\le\tfrac12$. Persistence in $H^s$ for $s>2$ requires a separate
+higher-order estimate not carried out here and is therefore not claimed.
+
+\section*{6. Global existence ($\tfrac32<s\le2$)}
+
+$F_{\rm TECT}$ is a strict Lyapunov functional:
+$\frac{d}{dt}F[\phi(t)]=-\|\delta F/\delta\phi\|_{L^2}^2\le0$. Under (H2), by
+Young $\tfrac{|\lambda|}4 t^4\le\tfrac{\gamma}{12}t^6+C_*$
+($C_*=1.01\times10^{-2}$, assert \texttt{sextic\_dominates\_quartic\_coercive}),
+\begin{equation}
+F_{\rm TECT}[\phi]\ge\tfrac12\langle\phi,L\phi\rangle+\tfrac{\gamma}{12}\|\phi\|_{L^6}^6
+-C_*|\mathbb{T}^3|,
+\end{equation}
+so $F[\phi(t)]\le F[\phi_0]$ gives an a priori bound in $H^2$ (\S3 norm
+equivalence). \textbf{Inclusion direction (corrected):} since $\beta\le\tfrac12$,
+i.e.\ $4\beta\le2$, one has $H^2\subseteq H^{4\beta}=X^\beta$ (the smoother space
+embeds in the less smooth one), hence
+$\|\phi\|_{X^\beta}\le C\|\phi\|_{H^2}$ and the $H^2$ a priori bound
+\emph{controls} the $X^\beta$ norm (assert
+\texttt{continuation\_window\_nonempty}). The continuation alternative then
+forces $\tau=\infty$.
+
+\paragraph{Theorem (A2, scalar/periodic/$\mu^2>0$/$\gamma>0$).} \emph{Under (H1)
+and (H2), for every $\phi_0\in H^s(\mathbb{T}^3)$ with $\tfrac32<s\le2$ the flow
+\eqref{eq:flow} has a unique global solution
+$\phi\in C([0,\infty);H^s)\cap C^\infty((0,\infty)\times\mathbb{T}^3)$,
+depending continuously on $\phi_0$, with $F_{\rm TECT}[\phi(t)]$ non-increasing.}
+
+\section*{7. Devil's-advocate (operator review 2026-06-23)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$\inf\operatorname{spec}L=\mu^2$ is false on a generic
+cell.''} UPHELD and fixed: the proof now uses only the lower bound
+$\lambda_0:=\min_k K(k)\ge\mu^2>0$ \eqref{eq:lam0}; equality is not claimed
+(it is non-generic). Sectoriality and the $H^2$ equivalence need only
+$\lambda_0>0$.
+\item[($\beta$)] \emph{``The Sobolev inclusion is backwards.''} UPHELD and fixed:
+for $\beta\le\tfrac12$ the correct direction is $H^2\subseteq H^{4\beta}=X^\beta$
+(\S6), which still yields ``$H^2$ bound controls $X^\beta$'' --- the conclusion
+survives in the correct direction.
+\item[($\gamma$)] \emph{``The proof only closes for $\tfrac32<s\le2$.''} UPHELD:
+the theorem range is now stated as $\tfrac32<s\le2$; $s>2$ persistence is
+flagged as a separate higher-order estimate, not claimed. Scope narrowed to one
+scalar field on a fixed periodic cell, $\mu^2>0$ (disordered side, NOT BCC
+condensation), $\gamma>0$; full Class-II and $\mu^2<0$ remain separate targets.
+\end{itemize}
+
+Quantitative sanity check (mandatory): all constants reproduced by the 8/8
+verification (v1.1): $\lambda_0\ge\mu^2=5\times10^{-3}$ with strict
+$\lambda_0>\mu^2$ on a generic lattice; Sobolev $s>3/2$, $\beta>3/8$; smoothing
+$C_\beta=\beta^\beta e^{-\beta}\in(0.43,0.48)$; Young $C_*=1.01\times10^{-2}$;
+continuation window $\beta\in(3/8,1/2]$, $4\beta\le2$, $H^2\subseteq X^\beta$.
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-PDE-WELLPOSED (scalar, periodic, mu^2>0, gamma>0)
+Precise statement:       Under mu^2>0 and gamma>0, the scalar Brazovskii L2
+                         gradient flow on a fixed T^3 is globally well-posed for
+                         phi_0 in H^s, 3/2 < s <= 2: unique global solution,
+                         smooth for t>0, continuous dependence, F non-increasing.
+Scope:                   ONE real scalar field, fixed periodic cell, 3/2<s<=2.
+                         mu^2>0 = disordered-side positive linear gap (NOT BCC
+                         condensation). NOT full Class-II; NOT mu^2<0 branch.
+Dependencies:            A1-KERNEL-CONV.
+Hypotheses:              (H1) mu^2>0 [lambda0=min_k K(k)>=mu^2>0: sectoriality +
+                         H^2 equivalence]; (H2) gamma>0 [coercivity, global].
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (8/8 checks).
+Reproduction command:    python codes/foundations/a2_wellposedness_checks.py
+Expected output:         8/8 PASS; exit 0.
+Falsification gate:      finite-time blow-up or non-uniqueness for some phi_0 in
+                         H^s (3/2<s<=2) at mu^2>0, gamma>0; or lambda0:=min_k
+                         K(k) <= 0.
+Tier before / after:     A2 T1 / T6 PROVED CONDITIONAL (scalar/periodic/mu^2>0
+                         scope) -- RE-SUBMITTED for operator sign-off after the
+                         2026-06-23 review corrections.
+No-overclaim statement:  No s>2 persistence; no full Class-II; no mu^2<0
+                         condensate branch; mu^2>0 is NOT BCC condensation; no
+                         unique global minimiser (that is Sector B).
+Next required action:    Operator sign-off of the narrowed T6; then A3
+                         (renormalisation / continuum limit); separately
+                         A2_full-ClassII and A2_{mu^2<0}.
+\end{verbatim}

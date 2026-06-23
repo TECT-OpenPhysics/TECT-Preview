@@ -1,0 +1,156 @@
+% SUPERSEDED by a3-graphwise-convergence-lemma-260623-260623-v1.3.tex.txt (operator: v1.2 domination flawed by lattice folding; Route A spectral regulator)
+% =============================================================================
+% Title: The graphwise lattice-to-continuum lemma for the Brazovskii correlators
+% Claim: A3-PERTURBATIVE-CONTINUUM-CORRELATORS (closes gate A3-GRAPHWISE-CONVERGENCE)
+% Version: v1.2 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T3 PROOF SKETCH; graphwise lemma PROVED + gamma>0 measure stability; re-submitted for T6
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) program + open lemma (T3 PROOF SKETCH).
+%   v1.1 (2026-06-23) the open lemma A3-GRAPHWISE-CONVERGENCE is PROVED via a
+%        lattice regulator + dominated convergence; the regulator-matching gap is
+%        closed (Lambda=pi/a). Promotes the claim to T6 (perturbative, scalar,
+%        d=3, mu^2>0). Numerical ingredients:
+%        codes/foundations/a3_graphwise_convergence_checks.py (7/7 PASS).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note closes the gap \texttt{A3-GRAPHWISE-CONVERGENCE} left open in v1.0: it
+proves that every connected perturbative amplitude of the scalar Brazovskii theory
+converges, lattice-to-continuum, to its continuum value, and that the lattice
+spacing $a\to0$ and the cutoff $\Lambda\to\infty$ are a single limit. Together
+with A3-UV (the uniform bound and Weinberg absolute convergence) this upgrades
+A3-PERTURBATIVE-CONTINUUM-CORRELATORS to T6 in the scalar/$d{=}3$/$\mu^2>0$
+perturbative scope. The argument is standard lattice regularisation + dominated
+convergence (Reed--Simon I; Glimm--Jaffe). Numerical ingredients:
+\url{codes/foundations/a3_graphwise_convergence_checks.py} (7/7 PASS).
+
+\section*{2. The lattice regulator}
+
+For spacing $a$, work on the Brillouin zone $\mathrm{BZ}_a=[-\pi/a,\pi/a]^3$ with
+the lattice momentum and kernel
+\begin{equation}
+\hat q_j(q)=\tfrac2a\sin\tfrac{aq_j}{2},\qquad
+K_a(q)=\mu^2+Y(\hat q(q)^2-q_0^2)^2,\qquad G_a=\tfrac1{K_a},
+\end{equation}
+so the cutoff is $\Lambda_a=\pi/a$. A connected graph $\mathcal G$ ($V$ vertices,
+$I$ lines, $L=I-V+1$ loops, constant $\phi^4/\phi^6$ couplings) has amplitude
+\begin{equation}
+\mathcal A_{\mathcal G,a}(p)=\int_{(\mathbb{R}^3)^L}\!\prod_{\ell=1}^L\frac{d^3k_\ell}{(2\pi)^3}\,
+\mathbf 1_{\mathrm{BZ}_a}(k)\prod_{i=1}^I G_a(q_i(k,p)),
+\end{equation}
+the $q_i$ linear in $(k,p)$; $\mathcal A_{\mathcal G}$ is the same with
+$\mathbf 1_{\mathrm{BZ}_a}\to1$ and $G_a\to G=1/K$.
+
+\section*{2$'$. The measure is well-defined ($\gamma>0$)}
+
+The correlators $\langle\mathcal O\rangle_{\Lambda,a}=Z_{\Lambda,a}^{-1}\int\mathcal O\,e^{-F_{\Lambda,a}}\,d\phi$ are taken in the measure $d\nu_{\Lambda,a}\propto e^{-F_{\Lambda,a}}d\phi$ on the finite-dimensional cutoff field space $\mathbb{R}^{N^3}$. This requires $F_{\Lambda,a}$ \emph{bounded below} so that $Z_{\Lambda,a}=\int e^{-F_{\Lambda,a}}d\phi<\infty$. Writing $F_{\Lambda,a}[\phi]=\tfrac12\langle\phi,K_a\phi\rangle+\tfrac\lambda4\sum\phi^4+\tfrac\gamma6\sum\phi^6$, the quadratic form is $\ge0$ (since $K_a\ge\mu^2>0$) and, for $\gamma>0$, the sextic dominates the quartic pointwise ($\tfrac\gamma6 t^6+\tfrac\lambda4 t^4\to+\infty$ as $|t|\to\infty$ for any $\lambda\in\mathbb R$), so $F_{\Lambda,a}\to+\infty$ at large fields and is bounded below; hence $Z_{\Lambda,a}<\infty$ and the measure --- and its correlators --- are well-defined. \textbf{This is the hypothesis \texttt{A2-H2-SEXTIC-COERCIVITY} ($\gamma>0$)}; without it ($\gamma\le0$) the cutoff partition function diverges and the programme does not even start. The amplitudes $\mathcal A_{\mathcal G,a}$ of \S2 are the coefficients of the formal $\lambda,\gamma$ expansion of these well-defined correlators.
+
+\section*{3. Pointwise convergence}
+
+For each fixed $q$, $\hat q_j(q)=\tfrac2a\sin\tfrac{aq_j}2\to q_j$ as $a\to0$
+(assert \texttt{lattice\_momentum\_pointwise\_convergence}), hence
+$K_a(q)\to K(q)$ and $G_a(q)\to G(q)$ pointwise; and $\mathbf 1_{\mathrm{BZ}_a}(k)
+\to1$ for every fixed $k$ since $\Lambda_a\to\infty$. Thus the integrand converges
+pointwise a.e.\ to $\prod_i G(q_i)$.
+
+\section*{4. Uniform $q^{-4}$ bound}
+
+On $\mathrm{BZ}_a$ one has $aq_j/2\in[-\pi/2,\pi/2]$, where $\sin x/x\ge2/\pi$,
+so $|\hat q_j|\ge\tfrac2\pi|q_j|$ and $\hat q^2\ge\tfrac4{\pi^2}q^2$ (assert
+\texttt{lattice\_momentum\_lower\_bound}). Hence for $|q|$ beyond the shell
+$K_a(q)\ge Y(\hat q^2-q_0^2)^2\ge c\,q^4$, and near the shell $K_a\ge\mu^2>0$;
+combining,
+\begin{equation}
+G_a(q)=\frac1{K_a(q)}\le \frac{C}{(1+|q|)^4}\qquad\text{uniformly in }a,
+\label{eq:unif}
+\end{equation}
+with $C=C(\mu^2,Y,q_0)$ \emph{independent of $a$} (assert
+\texttt{uniform\_q4\_dominating\_bound}: $\sup_q G_a(1+|q|)^4$ varies by $<3\%$
+over $a\in[0.03,1]$). The scalar kernel has a unique minimum on the shell
+$\hat q^2=q_0^2$, not at the BZ corners ($K_a$ there $\sim2.6\times10^6\mu^2$):
+no spurious doubler (assert \texttt{no\_scalar\_doubler}).
+
+\section*{5. Dominated convergence}
+
+By \eqref{eq:unif} the integrand is dominated by
+$\Phi(k,p):=\prod_{i=1}^I C(1+|q_i(k,p)|)^{-4}$, independent of $a$. By A3-UV
+every subgraph has Weinberg degree $D'=3-3V'-I'<0$, so $\Phi\in L^1((\mathbb{R}^3)^L)$
+for fixed compact $p$ (Weinberg's theorem; assert
+\texttt{dominating\_function\_integrable\_weinberg}). Dominated convergence then
+exchanges the limit and the loop integrations:
+\begin{equation}
+\lim_{a\to0}\mathcal A_{\mathcal G,a}(p)=\mathcal A_{\mathcal G}(p),
+\end{equation}
+uniformly on compact external momenta (the bound $\Phi$ is $p$-locally uniform).
+
+\section*{6. Regulator matching and the single limit}
+
+Because $\Lambda_a=\pi/a$, the limits $a\to0$ and $\Lambda\to\infty$ coincide:
+there is one limit, taken along the lattice family (assert
+\texttt{regulator\_matching\_single\_limit}). No separate matching of a momentum
+cutoff to the continuum kernel is needed.
+
+\paragraph{Theorem (A3-GRAPHWISE-CONVERGENCE).} \emph{In the scalar Brazovskii
+theory ($d=3$, $\mu^2>0$, quartic kernel) with the lattice regulator
+$\hat q_j=\tfrac2a\sin\tfrac{aq_j}2$, every connected perturbative amplitude
+satisfies $\lim_{a\to0}\mathcal A_{\mathcal G,a}(p)=\mathcal A_{\mathcal G}(p)$,
+uniformly on compact external momenta, with $a\to0\equiv\Lambda\to\infty$.}
+
+\paragraph{Corollary (A3-PERTURBATIVE-CONTINUUM-CORRELATORS, T6).} Each order of
+the perturbative correlators $\langle\mathcal O\rangle_{\Lambda,a}$ (a finite sum
+of amplitudes $\mathcal A_{\mathcal G,a}$) converges to its continuum value as
+$a\to0$; the perturbative correlators have a cutoff-independent continuum limit.
+
+\section*{7. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Pointwise convergence of the integrand is not enough.''}
+DISMISSED: the proof is dominated convergence, not mere pointwise --- the uniform
+$a$-independent dominating function $\Phi$ \eqref{eq:unif} and its integrability
+(Weinberg, \S5) are exactly the DCT hypotheses.
+\item[($\beta$)] \emph{``Lattice artifacts / doublers near the BZ edge.''}
+DISMISSED: the scalar kernel is minimised only on the shell (no doubler), and the
+edge region is controlled by the same uniform $(1+|q|)^{-4}$ bound, whose integral
+is finite; the indicator $\mathbf 1_{\mathrm{BZ}_a}$ converges to $1$ a.e.
+\item[($\gamma$)] \emph{``This is order-by-order, not the full series.''} VALID
+with mitigation: the claim is the \emph{perturbative} continuum limit (each order),
+which is what is stated; resummation / the constructive non-perturbative limit
+remains the separate target $\mathrm{A3}_{\rm constructive}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): $|\hat q|\ge(2/\pi)|q|$ verified on $\mathrm{BZ}_a$;
+$\hat q\to q$ with $\max|\hat q-q|\to5\times10^{-4}$; the uniform constant
+$\sup_q G_a(1+|q|)^4\in[1600,1654]$ ($a$-independent to $3\%$); $\Lambda_a=\pi/a\to
+\infty$; BZ-corner $K_a/\mu^2\sim5\times10^8$ (no doubler); integrated tadpole
+instance converges to $4.96\times10^{-4}$ (7/7 checks).
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A3-PERTURBATIVE-CONTINUUM-CORRELATORS (T6)
+Precise statement:       With the lattice regulator qhat=(2/a)sin(aq/2),
+                         every connected perturbative amplitude converges
+                         lim_{a->0} A_{G,a}=A_G (uniformly on compact p),
+                         a->0 == Lambda->inf; hence the perturbative
+                         correlators have a cutoff-independent continuum
+                         limit. Gate A3-GRAPHWISE-CONVERGENCE CLOSED.
+Scope:                   scalar, d=3, mu^2>0, PERTURBATIVE (order by order).
+Dependencies:            A1-KERNEL-CONV; A3-UV-SUPERRENORMALISABILITY
+                         (uniform q^-4 bound + Weinberg integrability).
+Method:                  lattice regulator + dominated convergence.
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (7/7).
+Reproduction command:    python codes/foundations/
+                         a3_graphwise_convergence_checks.py
+Expected output:         7/7 PASS; exit 0.
+Falsification gate:      a connected graph G with A_{G,a} not-> A_G under
+                         this regulator; or failure of the uniform
+                         (1+|q|)^-4 bound on BZ_a.
+Tier before / after:     T3 PROOF SKETCH / T6 PROVED CONDITIONAL.
+No-overclaim statement:  Order-by-order only; NOT resummation; NOT the
+                         constructive/non-perturbative limit; not Class-II;
+                         not mu^2<0.
+Next required action:    Operator sign-off; then A3_constructive and the
+                         physical production-Hessian mainline.
+\end{verbatim}

@@ -1,0 +1,112 @@
+% =============================================================================
+% Title: B3-BCC-STRUCT refutation and retirement (operator verdict 2026-06-23)
+% Claim: B3-BCC-STRUCT (refuted); successor B3-RH-TESTED-STRUCTURE-RANKING
+% Version: v1.1 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: REFUTED / RETIRED record (no positive claim)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) reframe of B3 onto the B1 continuum chain (the refutation
+%        evidence was correct; the REFRAME conclusion is superseded here).
+%   v1.1 (2026-06-23) operator verdict: refutation ACCEPTED, reframe REJECTED.
+%        B3-BCC-STRUCT is RETIRED/REFUTED (T0); the only surviving projection is
+%        the separate card B3-RH-TESTED-STRUCTURE-RANKING (T4).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note records the refutation of \texttt{B3-BCC-STRUCT} and its retirement
+per the operator verdict of 2026-06-23. It makes no positive claim. The
+refutation evidence (\S2) is accepted; the v1.0 proposal to \emph{reframe} B3
+onto B1 is rejected (\S3) and B3 is retired (\S4).
+
+\section*{2. Refutation evidence (accepted)}
+
+The seeded B3 evidence is the single-shell SMA structural ranking (Math194) and
+the 1-mode $K_4/K_6$ ranking (Math383). Re-running
+\url{archive/legacy/scripts/Math194_brazovskii_lattice_ranking.py} places
+\textbf{BCC at rank 9 of 10} (lamellar rank 1, $F/V=-1.211\times10^{-5}$;
+bcc $F/V=-4.845\times10^{-6}$) --- the opposite of $F_{\rm BCC}<F_{\rm FCC}<
+F_{\rm SC}$. Independently, \textbf{Math400} (2026-05-11, T0 binding) shows that
+at $\mu^2=+0.005$ every lattice collapses to the disordered $F=0$ state (the SMA
+``BCC minimum'' is a saddle) and refutes the Math383 $K$-table. Registered:
+\url{negative-results/registry.md} \texttt{R-2026-06-23-b3-bcc-structural-selection}.
+
+\section*{3. Why the reframe is rejected (operator verdict)}
+
+B1-RH-ENUM establishes the \emph{restricted} proposition
+\begin{equation}
+\Delta F_{\rm enum}[\mathcal R]:=F_{\rm TECT}[\mathcal R]-F_{\rm TECT}[\mathcal R_H]>0,
+\qquad \mathcal R\in\mathcal E_{\rm tested},
+\end{equation}
+a \emph{relative ranking within the tested ordered-reading ensemble}. It does
+\textbf{not} entail
+\begin{equation}
+F[\mathcal R_H]<F[0]\qquad\text{nor}\qquad H_{\mathcal R_H}\succeq0
+\ \text{under unrestricted variations},
+\end{equation}
+and must not be conflated with the Math400 disordered-collapse / saddle result.
+Therefore B1 cannot resurrect the original ``BCC energy-condensate structure is
+selected'' claim. Adversarial points upheld by the operator: (i) ``continuum-
+anchored'' must mean a continuum-functional \emph{estimator}, not a completed
+$a\to0$ PDE continuum limit (PDE continuum certification is open); (ii) keeping
+the original card name for a meaning-replaced claim is a meaning substitution,
+not a scope reduction; (iii) the reframed ranking falsifier is not a falsifier
+of any BCC phase/minimum claim.
+
+\section*{4. Disposition (retirement)}
+
+\texttt{B3-BCC-STRUCT} $\to$ \textbf{T0 REFUTED / RETIRED}. The surviving
+restricted result is carried by the separate, B1-dependent card
+\texttt{B3-RH-TESTED-STRUCTURE-RANKING} (T4, estimator grade): $\mathcal R_H$ is
+selected within $\mathcal E_{\rm tested}$. B1-RH-ENUM's own T7 scope is
+unaffected. Physical BCC condensate existence/stability/global selection is
+\textbf{not established} by any current card.
+
+\section*{5. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The restricted ranking should keep the B3 name.''}
+DISMISSED: the operator ruled that reusing the name after the physical claim is
+refuted is meaning substitution; the restricted result gets a new, explicitly
+projection-named card.
+\item[($\beta$)] \emph{``Math194's rank-9 might be a buggy script.''} DISMISSED
+on the refutation direction: the script's \emph{ranking} (lamellar lowest, BCC
+near-highest) is corroborated independently by Math400's symmetry-preserving
+multi-shell solver; only the script's self-verdict logic (``confirmed'') was
+buggy, not the ordering.
+\item[($\gamma$)] \emph{``Retiring B3 breaks C6.''} VALID with mitigation: C6's
+\texttt{B3-BCC-STRUCT} dependency was re-pointed to
+\texttt{B3-RH-TESTED-STRUCTURE-RANKING} with an operator-review flag, since C6's
+BCC-structure premise now rests only on the restricted ranking, not on an
+established physical selection.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the Math194 re-run ratios are internally
+consistent ($C_{\rm lat}^{\rm bcc}=3.75$, $F/V\propto -A_{\rm min}^2$ reproduces
+$-4.845\times10^{-6}$); lamellar $C_{\rm lat}=1.5$ (Math400-corrected) is the
+deepest, confirming the ranking is the genuine single-shell SMA result --- which
+is exactly why that reduction is refuted in favour of a continuum-anchored
+\emph{estimator}.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               B3-BCC-STRUCT (REFUTED / RETIRED)
+Precise statement:       The fixed-ordered BCC structural-selection claim
+                         F_BCC<F_FCC<F_SC is refuted (Math194 rank 9; Math400
+                         disordered collapse/saddle). The reframe onto B1 is
+                         REJECTED (operator 2026-06-23). B3 retired.
+Scope:                   No positive claim. Surviving restricted projection:
+                         B3-RH-TESTED-STRUCTURE-RANKING (T4).
+Dependencies:            negative-results R-2026-06-23-b3-bcc-structural-selection.
+Evidence grade:          EXECUTED (refutation demo).
+Reproduction command:    python archive/legacy/scripts/
+                         Math194_brazovskii_lattice_ranking.py  (-> BCC rank 9)
+Falsification gate:      n/a (refuted).
+Tier before / after:     B3 T4 / T0 REFUTED.
+No-overclaim statement:  No BCC phase/minimum/global selection; B1's relative
+                         ranking is NOT a physical-selection claim.
+Next required action:    Re-establish BCC structure as a NEW claim by certifying
+                         F[Psi_min]<F[0], lambda_min^perp>=0 (symmetry-
+                         projected), N->inf on the canonical PDE background.
+\end{verbatim}

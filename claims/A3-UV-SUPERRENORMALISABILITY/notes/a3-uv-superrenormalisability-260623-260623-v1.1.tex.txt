@@ -1,0 +1,134 @@
+% =============================================================================
+% Title: UV super-renormalisability of the scalar Brazovskii functional
+% Claim: A3-UV-SUPERRENORMALISABILITY (depends on A1-KERNEL-CONV; sibling of A2)
+% Version: v1.1 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 PROVED CONDITIONAL (UV-only; submitted for operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23, descriptor "...continuum...") combined UV-finiteness with a
+%        stronger all-correlator continuum-limit claim.
+%   v1.1 (2026-06-23) operator review SPLIT: this note keeps ONLY the UV
+%        super-renormalisability result (power counting + Weinberg). The stronger
+%        "all perturbative correlators -> cutoff-independent continuum limit" is
+%        moved to A3-PERTURBATIVE-CONTINUUM-CORRELATORS (requires a measure
+%        definition + a graphwise regulator-convergence lemma; not proved here).
+%        Counterterm statement made precise.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note establishes the ULTRAVIOLET half of the A3 foundation: the scalar
+Brazovskii functional in $d=3$ with the quartic kernel is super-renormalisable
+(UV-finite). \textbf{Scope (narrow, matching A2):} one real scalar field, $d=3$,
+$K(q)=\mu^2+Y(q^2-q_0^2)^2$, $\mu^2>0$; perturbative power counting only. The
+\emph{stronger} statement that all perturbative correlation functions converge to
+a cutoff-independent continuum limit is NOT claimed here --- it requires a
+measure definition and a graphwise regulator-convergence lemma and is the
+separate (open) card \texttt{A3-PERTURBATIVE-CONTINUUM-CORRELATORS}. Numerical
+checks: \url{codes/foundations/a3_renormalisation_checks.py} (UV asserts).
+
+\section*{2. Setup}
+
+$F_{\rm TECT}[\phi]=\int[\tfrac12\phi K(-i\nabla)\phi+\tfrac\lambda4\phi^4
++\tfrac\gamma6\phi^6]$ with bare propagator
+\begin{equation}
+G(q)=\frac1{K(q)}=\frac1{\mu^2+Y(q^2-q_0^2)^2}\ \sim\ \frac1{Y\,q^4}\quad(q\to\infty)
+\end{equation}
+(a $q^{-4}$ UV decay; assert \texttt{propagator\_uv\_decay\_q4}), vertices
+$\phi^4(\lambda),\phi^6(\gamma)$, momentum cutoff $\Lambda$.
+
+\section*{3. Power counting}
+
+A connected diagram with $V$ vertices, $I$ internal lines, $L=I-V+1$ loops has,
+in $d=3$ with a $q^{-4}$ propagator,
+\begin{equation}
+D=dL-4I=3-3V-I\ \le\ -1\ <\ 0\qquad(V\ge1,\ I\ge1)
+\label{eq:D}
+\end{equation}
+(assert \texttt{superficial\_degree\_all\_negative}). The dimension is essential:
+$D=(d-4)I-dV+d<0$ for all $V\ge1,I\ge1$ only when $d\le3$ ($d=4$ marginal).
+
+\section*{4. Ultraviolet finiteness (Weinberg)}
+
+Every loop-containing connected \emph{subdiagram} is itself a connected graph
+with $V'\ge1,I'\ge1$, hence $D'=3-3V'-I'<0$ by \eqref{eq:D}. Weinberg's theorem
+then gives absolute convergence of every loop integral as $\Lambda\to\infty$
+(assert \texttt{weinberg\_all\_subdiagrams\_convergent}). Precisely:
+\begin{center}
+\textbf{No UV-divergent counterterm is required.}\\
+\textbf{A finite normal ordering of the tadpole is an optional scheme choice.}
+\end{center}
+That is, the theory is UV-finite; the counterterm \emph{set} contains no
+divergent element, and any finite tadpole subtraction is a renormalisation-scheme
+convention, not a necessity.
+
+\section*{5. The tadpole: an illustration (not the full continuum theorem)}
+
+The simplest correlator, the equal-point contraction, is the single convergent
+integral
+\begin{equation}
+\langle\phi^2\rangle=\frac1{2\pi^2}\int_0^\infty\frac{q^2\,dq}{\mu^2+Y(q^2-q_0^2)^2}=0.767,
+\end{equation}
+finite because the integrand decays as $1/(Yq^2)$ (assert
+\texttt{tadpole\_integral\_converges}); its isotropic Riemann sum converges as the
+spacing $a\to0$ (assert \texttt{discretisation\_to\_continuum\_convergence},
+error $\to10^{-12}$). This \emph{illustrates} UV-finiteness for one graph. It does
+NOT establish lattice-to-continuum convergence of all Feynman graphs, which
+requires the graphwise dominated-convergence lemma of
+\texttt{A3-PERTURBATIVE-CONTINUUM-CORRELATORS}.
+
+\section*{6. Infrared finiteness}
+
+Under $\mu^2>0$, $K(q)\ge\mu^2>0$, so $G\le1/\mu^2$ is bounded: no IR divergence
+(assert \texttt{no\_ir\_divergence\_mu2\_positive}). The shell $|q|=q_0$ is a
+finite enhancement.
+
+\paragraph{Theorem (A3-UV).} \emph{In $d=3$ with $K(q)=\mu^2+Y(q^2-q_0^2)^2$,
+$\mu^2>0$, every connected diagram with $V\ge1,I\ge1$ has $D=3-3V-I<0$; by
+Weinberg's theorem the perturbative expansion is ultraviolet- and
+infrared-finite. No UV-divergent counterterm is required; a finite normal
+ordering is an optional scheme choice.}
+
+\section*{7. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Superficial power counting misses nested
+subdivergences.''} DISMISSED: every subdiagram has $V'\ge1,I'\ge1$ hence $D'<0$;
+Weinberg requires exactly this and yields absolute convergence.
+\item[($\beta$)] \emph{``UV-finiteness implies the continuum limit of all
+correlators.''} VALID and the reason for the split: it does not, by itself ---
+that needs a measure and a graphwise convergence lemma (separate open card). This
+note claims only UV-finiteness.
+\item[($\gamma$)] \emph{``The finite tadpole is a counterterm.''} DISMISSED: a
+finite subtraction is a scheme choice, not a divergent counterterm; the precise
+statement is in \S4.
+\end{itemize}
+
+Quantitative sanity check (mandatory): $D=3-3V-I\in\{-1,-2,-5,-6,-7,-10\}$ for the
+tabulated diagrams; $K(q)/(Yq^4)\to1$; $\min_q K=\mu^2=5\times10^{-3}>0$;
+illustrative tadpole $0.767$ with refinement error $\to10^{-12}$ (6/6 checks).
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A3-UV-SUPERRENORMALISABILITY (scalar, d=3, mu^2>0)
+Precise statement:       Every connected diagram with V>=1,I>=1 has
+                         D=3-3V-I<0; by Weinberg the perturbative expansion is
+                         UV- and IR-finite. No UV-divergent counterterm is
+                         required; finite normal ordering is an optional scheme.
+Scope:                   ONE scalar field, d=3, quartic kernel, mu^2>0;
+                         PERTURBATIVE power counting. UV-finiteness ONLY.
+Dependencies:            A1-KERNEL-CONV.
+Hypotheses:              (H1) d=3 with q^4 kernel [D<0]; (H2) mu^2>0 [IR].
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (UV checks).
+Reproduction command:    python codes/foundations/a3_renormalisation_checks.py
+Expected output:         6/6 PASS; exit 0.
+Falsification gate:      A connected diagram with V>=1,I>=1 and D>=0 (needs d>=4
+                         or a softer kernel); or a UV/IR divergence at mu^2>0.
+Tier before / after:     A3-UV T1 / T6 PROVED CONDITIONAL -- submitted.
+No-overclaim statement:  NOT the continuum limit of correlators (separate card
+                         A3-PERTURBATIVE-CONTINUUM-CORRELATORS); NOT constructive;
+                         NOT full Class-II; NOT mu^2<0.
+Next required action:    Operator sign-off; then the graphwise convergence lemma
+                         (A3-PERTURBATIVE-CONTINUUM-CORRELATORS).
+\end{verbatim}

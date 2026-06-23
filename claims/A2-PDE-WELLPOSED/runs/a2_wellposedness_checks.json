@@ -1,0 +1,64 @@
+{
+  "version": "1.1.0",
+  "params": {
+    "mu2": 0.005,
+    "Y": 1.0,
+    "q0": 0.6802,
+    "lam": -0.43,
+    "gam": 1.62,
+    "d": 3
+  },
+  "lambda0_continuum_inf": 0.005000000046267545,
+  "lambda0_lattice": 0.008572976504384388,
+  "beta_threshold": 0.375,
+  "sobolev_linf_s": 1.5,
+  "sobolev_L10_s": 1.2000000000000002,
+  "young_C_star": 0.010098435197886502,
+  "continuation_window": [
+    0.375,
+    0.5
+  ],
+  "claims": [
+    {
+      "name": "lambda0_lower_bound_mu2_positive",
+      "passed": true,
+      "detail": "lambda0 := min_k K(k) >= mu^2 = 0.005 > 0 (K(k)>=mu^2 for all k; continuum inf = 0.005 = mu^2 is the SHARP lower bound; on a generic lattice lambda0 = 0.00857298 > mu^2, equality NOT generic). Only lambda0>0 is used for sectoriality; the H^2 equivalence uses K(k)>=mu^2 and K(k) ~ (1+|k|^2)^2"
+    },
+    {
+      "name": "sobolev_linf_threshold",
+      "passed": true,
+      "detail": "H^s(T^3)->L^inf for s>1.5; fractional-power exponent threshold beta>0.375=3/8"
+    },
+    {
+      "name": "sobolev_L10_threshold",
+      "passed": true,
+      "detail": "H^s->L^10 for s>=1.2000000000000002=6/5 (so phi^5 in L^2); below the L^inf threshold 1.5, so s>3/2 is the binding requirement"
+    },
+    {
+      "name": "smoothing_exponent_finite_beta_0.375",
+      "passed": true,
+      "detail": "sup_x x^0.375 e^-x = 0.47577 (= beta^beta e^-beta, attained x=beta); ||L^0.375 e^-tL|| <= C t^-0.375, C=0.47577"
+    },
+    {
+      "name": "smoothing_exponent_finite_beta_0.450",
+      "passed": true,
+      "detail": "sup_x x^0.450 e^-x = 0.44516 (= beta^beta e^-beta, attained x=beta); ||L^0.450 e^-tL|| <= C t^-0.450, C=0.44516"
+    },
+    {
+      "name": "smoothing_exponent_finite_beta_0.500",
+      "passed": true,
+      "detail": "sup_x x^0.500 e^-x = 0.42888 (= beta^beta e^-beta, attained x=beta); ||L^0.500 e^-tL|| <= C t^-0.500, C=0.42888"
+    },
+    {
+      "name": "sextic_dominates_quartic_coercive",
+      "passed": true,
+      "detail": "gamma=1.62>0; max_t[(|lam|/4)t^4-(gamma/12)t^6] = C_* = 0.0100984 (at t^2=0.5309); => (|lam|/4)t^4 <= (gamma/12)t^6 + C_*, F coercive + bounded below"
+    },
+    {
+      "name": "continuation_window_nonempty",
+      "passed": true,
+      "detail": "beta in (0.375,0.5]: X^beta=H^(4beta), 4beta in (1.5,2]; since 4beta<=2, H^2 SUBSET X^beta so the energy H^2 bound controls the X^beta norm => global continuation (no finite-time blow-up)"
+    }
+  ],
+  "all_pass": true
+}

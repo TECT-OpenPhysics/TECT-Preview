@@ -1,0 +1,44 @@
+{
+  "id": "A3-UV-SUPERRENORMALISABILITY",
+  "title": "UV super-renormalisability of the scalar Brazovskii functional",
+  "sector": "A",
+  "statement": "In d=3 with K(q)=mu^2+Y(q^2-q0^2)^2, mu^2>0, every connected diagram with V>=1,I>=1 has superficial degree D=3-3V-I<0; by Weinberg's theorem the perturbative expansion is UV- and IR-finite. NO UV-divergent counterterm is required; a finite normal ordering is an optional scheme choice. (UV half of A3; the continuum limit of correlators is the separate open card A3-PERTURBATIVE-CONTINUUM-CORRELATORS.)",
+  "scope": "NARROW (matching A2): one scalar field, d=3, quartic kernel, mu^2>0; PERTURBATIVE power counting, UV-finiteness ONLY. D=(d-4)I-dV+d<0 for d<=3 (d=4 marginal). NOT the continuum limit of correlators (separate card); NOT constructive; NOT full Class-II; NOT mu^2<0. Kernel hypothesis Y>0 (4th-order ellipticity / q^-4 decay) is made explicit in the consolidation v1.1.",
+  "tier": "T6",
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "dependencies": [
+    "A1-KERNEL-CONV"
+  ],
+  "hypotheses": [
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY"
+  ],
+  "soft_dependencies": [],
+  "open_gates": [],
+  "falsifier": "A connected diagram with V>=1,I>=1 and D>=0 (would need d>=4 or a softer-than-q^4 kernel); or a UV/IR divergence at mu^2>0.",
+  "reproduction": {
+    "command": "python codes/foundations/a3_renormalisation_checks.py",
+    "expected": "6/6 PASS (exit 0); D=3-3V-I<0, q^-4 decay, finite tadpole 0.767, no IR div, a->0 Riemann convergence",
+    "status": "AVAILABLE"
+  },
+  "legacy_pillar": [
+    "foundation"
+  ],
+  "tier_legacy": null,
+  "legacy_evidence": [
+    "claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-uv-superrenormalisability-260623-260623-v1.1.tex.txt (proof, UV-only)",
+    "codes/foundations/a3_renormalisation_checks.py (UV self-tests)",
+    "claims/A3-UV-SUPERRENORMALISABILITY/runs/a3_renormalisation_checks.json (artefact)",
+    "claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-consolidation-260623-260623-v1.0.tex.txt (A3 consolidation/bundle entry; covers A3-UV + A3-CORRELATORS)"
+  ],
+  "t7_candidate": false,
+  "no_overclaim": "The continuum limit of correlation functions (separate card A3-PERTURBATIVE-CONTINUUM-CORRELATORS); any constructive/non-perturbative statement; full Class-II; mu^2<0; treating the finite tadpole as a required counterterm (it is an optional scheme choice).",
+  "next_action": "Operator sign-off; then close A3-GRAPHWISE-CONVERGENCE (the graphwise lemma) for the correlators card.",
+  "last_review": "2026-06-23",
+  "notes": "A3 split 2026-06-23 (operator review): this card carries ONLY the UV super-renormalisability result (power counting + Weinberg), T6 PROVED CONDITIONAL APPROVED by operator 2026-06-23. The stronger 'all correlators -> cutoff-independent continuum limit' moved to A3-PERTURBATIVE-CONTINUUM-CORRELATORS (open; needs the measure definition + graphwise regulator-convergence lemma). Renamed from A3-RENORMALISATION. Reproduction bundle (T6, referee-grade, MANIFEST sha256): claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623. Consolidation v1.1 (paper-grade): Y>0 explicit; constants written generally (C_*(lambda,gamma), C(mu^2,Y,q0)) with numerics as production-anchor checks."
+}

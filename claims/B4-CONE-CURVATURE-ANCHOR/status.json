@@ -1,0 +1,45 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-CONV"
+  ],
+  "hypotheses": [],
+  "soft_dependencies": [],
+  "open_gates": [],
+  "legacy_pillar": [
+    1
+  ],
+  "tier_legacy": "PROVED - single-mode/Math56 cone caveat (legacy; the local-curvature-anchor content of the old B4 T5)",
+  "legacy_evidence": [
+    "archive/legacy/notes/Math01/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt (uniqueness within cone)",
+    "archive/legacy/notes/Math56/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt (constraint cone, canonical)",
+    "archive/legacy/notes/Math56/TECT-Math56-Addendum.tex.txt (cone-cluster base)",
+    "archive/legacy/notes/Math56/TECT-Math56-HessJump-audit.tex.txt (cone Hessian-jump audit)",
+    "archive/legacy/notes/Math82/TECT-Math82-Addendum-G-Phase-Z-7point-bifurcation-curve.tex.txt (continuation curve)",
+    "archive/legacy/notes/Math82/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt (stall-mechanism audit)",
+    "archive/legacy/notes/Math82/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt (vacuum-floor guard)",
+    "archive/legacy/artefacts/Math82/math82H_groundstate_N32_Lbcc7_MANIFEST.md (continuation-run provenance; anchor m*2=+4.247e-2 at mu2=+5e-3)"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "Production-PDE; not sandbox-reproducible (continuation_mu2_v25.py v2.6.4, N=32, Lbcc=7, BCC seed)",
+    "expected": "continuation point #1 m*^2=+4.247e-2 at mu^2=+5e-3 (metastable branch)",
+    "status": "PACKAGE-PENDING"
+  },
+  "last_review": "2026-06-23",
+  "notes": "Created 2026-06-23 by operator verdict #2 as the honest successor of B4-MASS-GAP: carries ONLY the single-mode-cone uniqueness + the positive local curvature anchor (the real content of the old B4 T5). NOT a mass gap. Migration record: claims/B4-MASS-GAP/notes/b4-massgap-migration-260623-260623-v1.0.tex.txt + gap-scope addendum v1.1.",
+  "id": "B4-CONE-CURVATURE-ANCHOR",
+  "title": "BCC single-mode-cone uniqueness + positive local curvature anchor (metastable branch)",
+  "sector": "B",
+  "statement": "Within the single-mode ansatz class intersected with the Math56 constraint cone, the BCC critical point is unique, and the curvature anchor m*^2=+4.247e-2 at mu^2=+5e-3 reproduces to 4 digits on the subset-4-cosine (metastable) branch. This is a positive LOCAL CURVATURE statement on the cone -- NOT a mass gap (m*^2 is not identified with the symmetry-projected cone gap Delta_cone).",
+  "scope": "CLOSED@SINGLE-MODE-CONE (local curvature anchor). Metastable branch (Delta F>0). Regime-III undetermined (legacy G2 audit). Explicitly NOT a continuum/thermodynamic mass gap; see B4-MASS-GAP (OPEN) for the mass-gap target and the b4-massgap-gap-scope addendum for Delta_cone.",
+  "tier": "T5",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "falsifier": "A second distinct minimiser within the single-mode + cone class at the operating point, or failure to reproduce the anchor m*^2 within stated tolerance. (This is a UNIQUENESS/anchor falsifier, NOT a gap falsifier.)",
+  "no_overclaim": "A mass gap (continuum/thermodynamic); identification m*^2 = Delta_cone; ground-state status beyond the single-mode cone; favourability (the anchor is metastable, Delta F>0).",
+  "next_action": "Operator-side reproduction bundle for the m*^2 anchor (production-PDE under TSv2 recording)."
+}

@@ -1,0 +1,81 @@
+% SUPERSEDED by a2-consolidation-260623-260623-v1.1.tex.txt (paper-grade: Y>0 explicit; constants generalised)
+% =============================================================================
+% Title: A2 consolidation -- global well-posedness of the scalar Brazovskii gradient flow
+% Claim: A2-PDE-WELLPOSED (T6 PROVED CONDITIONAL, operator-approved 2026-06-23)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 consolidation (single-place theorem record; bundle entry note)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) consolidation note for the reproduction bundle: the final
+%        A2 theorem in one place, with hypotheses, scope, verification and the
+%        pointer to the full proof a2-local-global-wellposedness-...-v1.2.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This is the single-place consolidation of A2 (the analytical foundation that the
+TECT free-energy minimisation has a well-posed dynamical realisation), and the
+entry note of the A2 reproduction bundle. The full proof is
+\url{claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.2.tex.txt};
+the numerics are \url{codes/foundations/a2_wellposedness_checks.py} (8/8 PASS).
+Scope (operator-approved): ONE real scalar field on a fixed periodic cell
+$\mathbb{T}^3$, $\mu^2>0$, $\gamma>0$, $\tfrac32<s\le2$. NOT full Class-II; NOT
+the $\mu^2<0$ condensate branch; $\mu^2>0$ is the disordered-side positive linear
+gap, not BCC condensation.
+
+\section*{2. The theorem}
+
+\paragraph{Theorem (A2).} \emph{Under (H1) $\mu^2>0$ and (H2) $\gamma>0$, the
+$L^2$ gradient flow $\partial_t\phi=-K(-i\nabla)\phi-\lambda\phi^3-\gamma\phi^5$
+on $\mathbb{T}^3$ with $K(q)=\mu^2+Y(q^2-q_0^2)^2$ (A1-KERNEL-CONV) has, for every
+$\phi_0\in H^s$ with $\tfrac32<s\le2$, a unique global solution
+$\phi\in C([0,\infty);H^s)\cap C^\infty((0,\infty)\times\mathbb{T}^3)$, depending
+continuously on $\phi_0$; $F_{\rm TECT}[\phi(t)]$ is non-increasing for $t>0$
+(for $t\ge0$ if additionally $\phi_0\in H^2$).}
+
+\section*{3. Proof structure (full proof: v1.2)}
+
+(i) $L=K(-i\nabla)$ is sectorial: $\lambda_0:=\min_k K(k)\ge\mu^2>0$, so $-L$
+generates an analytic semigroup with $X^\beta=H^{4\beta}$ and smoothing
+$\|L^\beta e^{-tL}\|\le C_\beta t^{-\beta}$. (ii) $N(\phi)=-\lambda\phi^3-
+\gamma\phi^5$ is locally Lipschitz $X^\beta\to L^2$ for $\beta\in(\tfrac38,\tfrac12]$
+($H^{4\beta}\hookrightarrow L^\infty$, $d=3$). (iii) Henry's theorem gives local
+existence/uniqueness + parabolic smoothing. (iv) For global existence, energy is
+taken from $t_0>0$ (parabolic smoothing $\Rightarrow F[\phi(t_0)]<\infty$),
+$F[\phi(t)]\le F[\phi(t_0)]$ on $[t_0,T_{\max})$, sextic coercivity ($\gamma>0$,
+Young $C_*=1.01\times10^{-2}$) $\Rightarrow$ uniform $H^2$ bound; $H^2\subseteq
+H^{4\beta}=X^\beta$ ($\beta\le\tfrac12$) $\Rightarrow T_{\max}=\infty$.
+
+\section*{4. Devil's-advocate (closed in v1.2 review)}
+
+($\alpha$) $\inf\operatorname{spec}L=\mu^2$ false on a generic cell --- replaced
+by the lower bound $\lambda_0\ge\mu^2>0$. ($\beta$) Sobolev direction --- the
+correct $H^2\subseteq H^{4\beta}$ is used. ($\gamma$) range --- restricted to
+$\tfrac32<s\le2$ ($s>2$ needs separate higher-order persistence, not claimed).
+($\delta$) energy domain --- $F[\phi_0]$ may be undefined for $s<2$, so the a
+priori bound is taken from $t_0>0$. Quantitative sanity check: all constants
+reproduced by the 8/8 verification.
+
+\section*{5. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-PDE-WELLPOSED (consolidation)
+Precise statement:       mu^2>0, gamma>0 => the scalar Brazovskii L2 gradient
+                         flow on T^3 is globally well-posed for phi_0 in H^s,
+                         3/2<s<=2: unique global solution, smooth for t>0,
+                         continuous dependence, F non-increasing for t>0.
+Scope:                   scalar, fixed periodic cell, mu^2>0, gamma>0,
+                         3/2<s<=2. NOT Class-II; NOT mu^2<0.
+Dependencies:            A1-KERNEL-CONV.
+Hypotheses:              (H1) A2-H1-KERNEL-POSITIVITY (mu^2>0);
+                         (H2) A2-H2-SEXTIC-COERCIVITY (gamma>0).
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (8/8).
+Reproduction command:    python codes/foundations/a2_wellposedness_checks.py
+Expected output:         8/8 PASS; exit 0.
+Tier:                    T6 PROVED CONDITIONAL (operator-approved 2026-06-23).
+Full proof:              a2-local-global-wellposedness-260623-260623-v1.2.
+No-overclaim statement:  No s>2 persistence; no Class-II; no mu^2<0; mu^2>0 is
+                         NOT BCC condensation; no unique global minimiser.
+Next required action:    (bundle) referee reproduction; Class-II / mu^2<0 are
+                         separate targets.
+\end{verbatim}

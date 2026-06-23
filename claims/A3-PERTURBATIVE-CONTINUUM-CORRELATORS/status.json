@@ -1,0 +1,45 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-CONV",
+    "A3-UV-SUPERRENORMALISABILITY"
+  ],
+  "hypotheses": [
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY"
+  ],
+  "soft_dependencies": [
+    "A3-UV-SUPERRENORMALISABILITY"
+  ],
+  "open_gates": [],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card, 2026-06-23 split)",
+  "legacy_evidence": [
+    "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-graphwise-convergence-lemma-260623-260623-v1.4.tex.txt (proof, Route A spectral; flaw recorded)",
+    "codes/foundations/a3_graphwise_convergence_checks.py (8/8: flaw demonstration + spectral bound)",
+    "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a3_graphwise_convergence_checks.py",
+    "expected": "7/7 PASS (exit 0); lattice-momentum bound, pointwise convergence, uniform q^-4, Weinberg integrability, Lambda=pi/a, no doubler, tadpole instance",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-06-23",
+  "notes": "T3->T6 PROVED CONDITIONAL APPROVED by operator 2026-06-23 (spectral/Galerkin regulator, scalar d=3, mu^2>0, gamma>0, order-by-order, FIXED external momenta). Gate A3-GRAPHWISE-CONVERGENCE CLOSED for the spectral scope; the genuine finite-difference lattice continuum limit is Route B (Reisz lattice power counting), OPEN refinement. With A2 (T6) and A3-UV (T6) this completes the perturbative analytical bedrock of Sector B. Reproduction bundle (T6, referee-grade, MANIFEST sha256): claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623. Consolidation v1.1 (paper-grade): Y>0 explicit; constants written generally (C_*(lambda,gamma), C(mu^2,Y,q0)) with numerics as production-anchor checks.",
+  "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+  "title": "Cutoff-independent continuum limit of the perturbative correlators (conditional)",
+  "sector": "A",
+  "statement": "Under the SPECTRAL (Galerkin) regulator G_a(q)=1_{|q|<=pi/a}/K(q) and gamma>0 (measure well-defined), every connected perturbative amplitude of the scalar Brazovskii theory (d=3, mu^2>0) converges lim_{a->0} A_{G,a}(p)=A_G(p) for each FIXED external momentum p (dominated convergence: the spectral bound G_a(q)<=C(1+|q|)^-4 holds for ALL unwrapped q_i + Weinberg integrability), with Lambda=pi/a tying a->0==Lambda->inf; hence each order of the perturbative correlators has a cutoff-independent continuum limit. The genuine finite-difference lattice (folded momenta / Umklapp) is the separate Route-B refinement.",
+  "scope": "scalar, d=3, mu^2>0, gamma>0, PERTURBATIVE order-by-order, SPECTRAL/Galerkin regulator (Route A). The finite-difference lattice qhat=(2/a)sin(aq/2) of v1.1/v1.2 was REFUTED for the domination (qhat is periodic => internal-line momenta fold => the (1+|q|)^-4 bound fails on Umklapp/aliasing); the spectral regulator carries the continuum kernel + a sharp per-line cutoff and closes it. Route B (genuine lattice, Reisz power counting) is a separate harder refinement. gamma>0 measure hypothesis (A2-H2-SEXTIC-COERCIVITY). NOT resummation; NOT constructive (A3_constructive); NOT full Class-II; NOT mu^2<0. Convergence is for each FIXED external momentum p (uniform-on-compact-p would need a separate equicontinuity argument; not claimed). Kernel hypothesis Y>0 (4th-order ellipticity / q^-4 decay) is made explicit in the consolidation v1.1.",
+  "tier": "T6",
+  "evidence_grade": [
+    "ANALYTIC",
+    "ESTIMATOR"
+  ],
+  "falsifier": "A connected graph G with A_{G,a} not-> A_G under the spectral regulator; or sup_q (1+|q|)^4/K(q) infinite; or gamma<=0 (measure undefined).",
+  "no_overclaim": "A ratified T6 (operator verdict is T3 PROOF SKETCH pending ratification of the lemma + the gamma>0 measure hypothesis); order-by-order only (NOT resummation); NOT constructive/non-perturbative; NOT full Class-II; NOT mu^2<0.",
+  "next_action": "Route B (Reisz lattice power counting; regularisation-independence) and A3_constructive (non-perturbative); the physical production-Hessian mainline (B3/B4/C6) now rests on a proved perturbative foundation."
+}

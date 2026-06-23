@@ -17,10 +17,10 @@ Tier profile: T6x4 T5x1 T1x1
 | [`C3-EP`](../../claims/C3-EP/INDEX.md) | T6 | H-LEGACY-CHAIN | — | Equivalence principle via Fermi-frame ODE lemma |
 | [`C4-GRAVITY-1LOOP`](../../claims/C4-GRAVITY-1LOOP/INDEX.md) | T5 | — | SCHEME-2LOOP | Gravity sector closure at 1-loop |
 | [`C5-NEWTON-G`](../../claims/C5-NEWTON-G/INDEX.md) | T6 | H-LEGACY-CHAIN | GAP-3, PRED-G-FREEZE | Newton-constant relation (T6/T7-SPLIT management) |
-| [`C6-SPACETIME-SIGNATURE`](../../claims/C6-SPACETIME-SIGNATURE/INDEX.md) | T1 | — | — | Emergent 3+1 dimensionality and Lorentzian signature |
+| [`C6-SPACETIME-SIGNATURE`](../../claims/C6-SPACETIME-SIGNATURE/INDEX.md) | T1 | — | C6-BCC-PREMISE-BLOCKED | Emergent 3+1 dimensionality and Lorentzian signature |
 
 **Open named hypotheses (sector union):** H-LEGACY-CHAIN, H-SUPPRESSION  
-**Open gates (sector union):** GAP-3, H-SUPPRESSION-DISCHARGE, PRED-G-FREEZE, SCHEME-2LOOP
+**Open gates (sector union):** C6-BCC-PREMISE-BLOCKED, GAP-3, H-SUPPRESSION-DISCHARGE, PRED-G-FREEZE, SCHEME-2LOOP
 
 ## Predictions
 

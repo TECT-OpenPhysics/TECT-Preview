@@ -1,0 +1,174 @@
+% =============================================================================
+% Title: The graphwise lattice-to-continuum lemma via a spectral regulator
+% Claim: A3-PERTURBATIVE-CONTINUUM-CORRELATORS (gate A3-GRAPHWISE-CONVERGENCE)
+% Version: v1.4 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T3 PROOF SKETCH; lemma closed via the spectral regulator (Route A); re-submitted for T6
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) program + open lemma.
+%   v1.1 (2026-06-23) attempted proof with the finite-difference lattice
+%        regulator qhat=(2/a)sin(aq/2).
+%   v1.2 (2026-06-23) added the gamma>0 measure-stability hypothesis.
+%   v1.3 (2026-06-23) operator review: the v1.1/v1.2 DOMINATION IS FLAWED -- the
+%        lattice qhat is periodic, so an unwrapped internal-line momentum
+%        q_i=k1+k2+p exceeding the BZ folds (qhat~0 at q~2pi/a) and G_a is NOT
+%        bounded by C(1+|q_i|)^-4 (aliasing/Umklapp). The proof is re-done with
+%        the SPECTRAL/Galerkin regulator G_a(q)=1_{|q|<=pi/a}/K(q) (Route A),
+%        under which the domination holds for ALL unwrapped q_i. The genuine
+%        finite-difference lattice (Route B) needs Reisz lattice power counting
+%        and is left as a separate refinement.
+%   v1.4 (2026-06-23) operator review: 'uniformly on compact p' is NOT given by
+%        the per-p DCT majorant; restated as convergence for each FIXED external
+%        momentum p (uniform-on-compact would need an extra equicontinuity
+%        argument, not claimed). Numerical count aligned to the co-delivered
+%        spectral check script (8/8).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note proves the gap \texttt{A3-GRAPHWISE-CONVERGENCE} via a \emph{spectral}
+(Galerkin) regulator, after the operator identified an aliasing flaw in the
+finite-difference-lattice proof of v1.1/v1.2 (\S3). Scope: scalar, $d=3$,
+$\mu^2>0$, $\gamma>0$, perturbative. The result is the order-by-order continuum
+limit of the perturbative correlators under the spectral regularisation; the
+genuine-lattice version and regularisation-independence are the separate
+refinement of \S8 (Route B). Tier stays T3 (operator's authorised tier); this is
+the corrected submission for T6 ratification. Ingredients:
+\url{codes/foundations/a3_graphwise_convergence_checks.py} (8/8 PASS, incl.\ the
+flaw demonstration and the spectral bound).
+
+\section*{2. Setup and the spectral regulator}
+
+$F_{\rm TECT}=\int[\tfrac12\phi K(-i\nabla)\phi+\tfrac\lambda4\phi^4+\tfrac\gamma6\phi^6]$,
+$K(q)=\mu^2+Y(q^2-q_0^2)^2$, $G=1/K$. Regularise by a sharp \emph{spectral}
+cutoff on the continuum kernel,
+\begin{equation}
+G_a(q):=\frac{\mathbf 1_{\{|q|\le\pi/a\}}}{K(q)},\qquad \Lambda_a:=\pi/a,
+\end{equation}
+i.e.\ a Galerkin truncation to modes $|q|\le\Lambda_a$. A connected graph
+$\mathcal G$ ($V$ vertices, $I$ lines, $L$ loops) has amplitude
+$\mathcal A_{\mathcal G,a}(p)=\int_{(\mathbb{R}^3)^L}\prod_\ell\frac{d^3k_\ell}{(2\pi)^3}
+\prod_i G_a(q_i(k,p))$, $q_i$ linear in $(k,p)$.
+
+\section*{2$'$. The measure is well-defined ($\gamma>0$)}
+
+The correlators are expectations in $d\nu_{\Lambda,a}\propto e^{-F_{\Lambda,a}}d\phi$
+on the finite-dimensional cutoff space. For $\gamma>0$ the sextic dominates the
+quartic ($\tfrac\gamma6 t^6+\tfrac\lambda4 t^4\to+\infty$, any $\lambda$), so
+$F_{\Lambda,a}$ is bounded below and $Z_{\Lambda,a}<\infty$: the measure and its
+correlators are well-defined (hypothesis \texttt{A2-H2-SEXTIC-COERCIVITY}). The
+$\mathcal A_{\mathcal G,a}$ are the coefficients of its $\lambda,\gamma$ expansion.
+
+\section*{3. The aliasing flaw of the finite-difference lattice (recorded)}
+
+With the finite-difference lattice momentum $\hat q_a=\tfrac2a\sin\tfrac{aq}2$,
+$\hat q_a$ is periodic. An internal-line momentum $q_i=k_1+k_2+p$ (sunset type)
+with $k_1,k_2\in\mathrm{BZ}$ can have $|q_i|\sim2\pi/a$, where
+$\hat q_a(2\pi/a)=\tfrac2a\sin\pi=0$ and $G_a^{\rm latt}(q_i)=1/(\mu^2+Yq_0^4)=O(1)$
+--- NOT bounded by $C(1+|q_i|)^{-4}$ (assert
+\texttt{lattice\_folding\_flaw\_demonstrated}: the ratio
+$G_a^{\rm latt}(1+|q|)^4$ at $q\sim2\pi/a$ blows up as $7.6\times10^7\to7.2\times10^{11}$).
+So the v1.1/v1.2 majorant fails on the Umklapp/aliasing region; the
+finite-difference lattice needs a genuine lattice power-counting theorem
+(\S8, Route B). The spectral regulator (\S2) avoids this because it carries the
+continuum kernel and a sharp cutoff on each line.
+
+\section*{4. Pointwise convergence}
+
+For each fixed $q$, $\mathbf 1_{\{|q|\le\pi/a\}}\to1$ as $a\to0$ (since
+$\Lambda_a\to\infty$), so $G_a(q)\to G(q)$ pointwise; the integrand of
+$\mathcal A_{\mathcal G,a}$ converges pointwise a.e.\ to $\prod_i G(q_i)$.
+
+\section*{5. Uniform domination (spectral)}
+
+Because $K(q)=\mu^2+Y(q^2-q_0^2)^2\asymp(1+|q|)^4$ with a positive lower constant
+($K(q)\ge c(1+|q|)^4$, $c=\inf_q K/(1+|q|)^4>0$), for \emph{every} $q$
+\begin{equation}
+G_a(q)=\frac{\mathbf 1_{\{|q|\le\pi/a\}}}{K(q)}\le\frac1{K(q)}\le \frac C{(1+|q|)^4},
+\qquad C=\sup_q\frac{(1+|q|)^4}{K(q)}=1.6\times10^3,
+\label{eq:specbound}
+\end{equation}
+with $C$ \emph{independent of $a$} (assert \texttt{spectral\_regulator\_uniform\_bound}).
+The indicator only restricts the domain, so \eqref{eq:specbound} holds for the
+\emph{unwrapped} internal-line momenta $q_i$ --- exactly what failed for the
+lattice regulator. Hence the integrand is dominated by
+$\Phi(k,p)=\prod_{i=1}^I C(1+|q_i(k,p)|)^{-4}$, independent of $a$.
+
+\section*{6. Dominated convergence and the single limit}
+
+By A3-UV every subgraph has Weinberg degree $D'=3-3V'-I'<0$, so
+$\Phi\in L^1((\mathbb{R}^3)^L)$ for compact $p$ (assert
+\texttt{dominating\_function\_integrable\_weinberg}). Dominated convergence gives, \emph{for each fixed external momentum $p$},
+$\lim_{a\to0}\mathcal A_{\mathcal G,a}(p)=\mathcal A_{\mathcal G}(p)$. (Uniform
+convergence on compact $p$-sets is not claimed: it would need an additional
+equicontinuity / uniform-tail estimate beyond the per-$p$ majorant.) The cutoff is
+$\Lambda_a=\pi/a$, so $a\to0\equiv\Lambda\to\infty$ is a single limit.
+
+\paragraph{Theorem (A3-GRAPHWISE-CONVERGENCE, spectral regulator).} \emph{For the
+scalar Brazovskii theory ($d=3$, $\mu^2>0$, $\gamma>0$) with the spectral
+regulator $G_a=\mathbf 1_{\{|q|\le\pi/a\}}/K$, every connected perturbative
+amplitude satisfies, for each fixed external momentum $p$,
+$\lim_{a\to0}\mathcal A_{\mathcal G,a}(p)=\mathcal A_{\mathcal G}(p)$. Hence each order of the perturbative correlators has a
+cutoff-independent continuum limit.}
+
+\section*{7. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``The v1.1 lattice proof was wrong, so trust is low.''}
+UPHELD and corrected: the aliasing flaw is recorded (\S3) and the proof re-done
+with the spectral regulator, whose domination \eqref{eq:specbound} provably holds
+for unwrapped momenta. The verification now explicitly exhibits the flaw and the
+fix.
+\item[($\beta$)] \emph{``Spectral $\ne$ the finite-difference lattice of the
+numerics.''} VALID with mitigation: this establishes the continuum limit under a
+legitimate (Galerkin) regularisation, which suffices for the perturbative
+continuum object. Regularisation-independence and the genuine lattice are the
+separate Route-B refinement (\S8), not claimed here.
+\item[($\gamma$)] \emph{``Order-by-order, not the full series.''} VALID:
+perturbative only; resummation / the constructive limit is
+$\mathrm{A3}_{\rm constructive}$.
+\end{itemize}
+
+Quantitative sanity check (mandatory): lattice folding ratio
+$G_a^{\rm latt}(1+|q|)^4\sim10^{7}$--$10^{11}$ at $q\sim2\pi/a$ (flaw); spectral
+constant $C=\sup_q(1+|q|)^4/K(q)=1.6\times10^3$, $a$-independent; pointwise
+$\mathbf 1\to1$; Weinberg $D=3-3V-I<0$; $\Lambda=\pi/a\to\infty$ (8/8 checks).
+
+\section*{8. Route B (separate refinement): the genuine lattice}
+
+To prove the same convergence for the finite-difference lattice $\hat q_a$ (and
+thereby regularisation-independence) one needs a lattice power-counting theorem
+(Reisz) handling folded line momenta and Umklapp sectors: a uniform lattice
+majorant replacing \eqref{eq:specbound}, with the lattice degree of divergence
+controlled over the periodic BZ. This is a strictly harder, separate lemma, left
+open as a refinement; the perturbative continuum limit itself is already
+established by Route A.
+
+\section*{9. Result footer}
+
+\begin{verbatim}
+Result ID:               A3-PERTURBATIVE-CONTINUUM-CORRELATORS
+Precise statement:       Under the SPECTRAL regulator G_a=1_{|q|<=pi/a}/K,
+                         every connected perturbative amplitude converges
+                         lim_{a->0} A_{G,a}(p)=A_G(p) for each FIXED p;
+                         hence the perturbative correlators have a cutoff-
+                         independent continuum limit. (gamma>0 measure.)
+Scope:                   scalar, d=3, mu^2>0, gamma>0, perturbative;
+                         spectral/Galerkin regulator (Route A).
+Dependencies:            A1-KERNEL-CONV; A3-UV-SUPERRENORMALISABILITY.
+Method:                  spectral cutoff + dominated convergence.
+Open refinement:         genuine finite-difference lattice (Reisz power
+                         counting; folded momenta / Umklapp) -- Route B.
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (8/8).
+Reproduction command:    python codes/foundations/
+                         a3_graphwise_convergence_checks.py
+Expected output:         8/8 PASS (flaw demonstrated + spectral bound).
+Falsification gate:      a connected graph G with A_{G,a} not-> A_G under the
+                         spectral regulator; or sup_q (1+|q|)^4/K(q)=inf.
+Tier before / after:     T3 (operator-authorised) / re-submitted for T6.
+No-overclaim statement:  Spectral regulator only (NOT the finite-difference
+                         lattice -- that is Route B); order-by-order; NOT
+                         resummation/constructive; not Class-II; not mu^2<0.
+Next required action:    Operator ratification (spectral T6) and/or Route B
+                         (Reisz lattice power counting) for the genuine lattice.
+\end{verbatim}

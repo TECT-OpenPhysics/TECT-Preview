@@ -55,17 +55,23 @@ Reproduction: `cd archive/legacy/scripts && python Math427_g1prime_diagonal_isot
 
 Reproduction: `cd archive/legacy/scripts && python Math437_step5_class_closure.py && python Math440_audit_secondwave_recheck.py`
 
-## B3-BCC-STRUCT — BCC structural selection among tested ordered condensates  (T4)
+## B3-BCC-STRUCT — BCC structural selection among tested ordered condensates  (T0)
 
-- `archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt (LAM/HEX/FCC races; surviving B1 evidence)`
-- `archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt (HEX exact-Wick bracket)`
-- `archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt (two-shell ensemble race)`
-- `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt (continuum-anchored Bloch log-det)`
-- `archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt (Reading-H selection record)`
-- `archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (SUPERSEDED -- single-shell SMA ranking REFUTED by Math400; script re-run yields BCC rank 9; NOT active support)`
-- `archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (SUPERSEDED -- 1-mode K-table main claim T0-REFUTED by Math400; NOT active support)`
+- `archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (refuted: script re-run -> BCC rank 9)`
+- `archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (refuted by Math400)`
 
-## B4-MASS-GAP — BCC ground-state uniqueness within the single-mode constraint cone  (T5)
+Reproduction: `python archive/legacy/scripts/Math194_brazovskii_lattice_ranking.py`
+
+## B3-RH-TESTED-STRUCTURE-RANKING — Reading-H is selected within the tested ordered-reading ensemble (estimator grade)  (T4)
+
+- `archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt (LAM/HEX/FCC races)`
+- `archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt`
+- `archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt`
+- `archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt`
+
+Reproduction: `cd archive/legacy/scripts && python Math431_g1pp3_lam_hex_fcc.py`
+
+## B4-CONE-CURVATURE-ANCHOR — BCC single-mode-cone uniqueness + positive local curvature anchor (metastable branch)  (T5)
 
 - `archive/legacy/notes/Math01/TECT-Math01-v2-BCC-uniqueness-rigorous.tex.txt (uniqueness within cone)`
 - `archive/legacy/notes/Math56/TECT-Math56-AddB-ClassII-guarded-quotient-analytical.tex.txt (constraint cone, canonical)`
@@ -75,6 +81,8 @@ Reproduction: `cd archive/legacy/scripts && python Math437_step5_class_closure.p
 - `archive/legacy/notes/Math82/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt (stall-mechanism audit)`
 - `archive/legacy/notes/Math82/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt (vacuum-floor guard)`
 - `archive/legacy/artefacts/Math82/math82H_groundstate_N32_Lbcc7_MANIFEST.md (continuation-run provenance; anchor m*2=+4.247e-2 at mu2=+5e-3)`
+
+Reproduction: `Production-PDE; not sandbox-reproducible (continuation_mu2_v25.py v2.6.4, N=32, Lbcc=7, BCC seed)`
 
 ## C1-LORENTZ-KIN — Kinematic Lorentz invariance (inertia) under H-SUPPRESSION  (T6)
 

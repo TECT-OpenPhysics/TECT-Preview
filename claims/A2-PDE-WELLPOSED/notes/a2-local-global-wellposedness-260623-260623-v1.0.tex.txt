@@ -1,0 +1,201 @@
+% SUPERSEDED by a2-local-global-wellposedness-260623-260623-v1.1.tex.txt (operator review: 3 defects fixed, scope narrowed)
+% =============================================================================
+% Title: Local and global well-posedness of the TECT gradient flow
+% Claim: A2-PDE-WELLPOSED (depends on A1-KERNEL-CONV for the kernel convention)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 PROVED CONDITIONAL (submitted for operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: local + global well-posedness of the
+%        Brazovskii L2 gradient flow on T^3 via analytic-semigroup theory
+%        (Henry/Pazy/Lunardi). Numerical claims backed by
+%        codes/foundations/a2_wellposedness_checks.py (8/8 PASS).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note establishes the well-posedness foundation A2 on which the entire
+Sector-B vacuum-selection programme rests: that the TECT free-energy
+minimisation has a well-defined dynamical realisation. Concretely, the
+$L^2$-gradient flow of the canonical Brazovskii free energy is locally and
+globally well-posed (existence, uniqueness, parabolic regularity) for the
+production-anchor parameters. The argument is standard semilinear-parabolic
+theory (Henry 1981; Pazy 1983; Lunardi 1995) applied to the fourth-order
+Brazovskii operator; no TECT-specific analytic novelty is claimed, only the
+careful verification that the hypotheses of that theory hold here. All
+numerical constants are pinned by
+\url{codes/foundations/a2_wellposedness_checks.py} (8/8 PASS,
+\url{claims/A2-PDE-WELLPOSED/runs/a2_wellposedness_checks.json}).
+
+\section*{2. Setup}
+
+Let $\mathbb{T}^3 = \mathbb{R}^3/\Lambda$ be the periodic BCC cell. The canonical
+free energy (A1-KERNEL-CONV convention $K(q)=\mu^2+Y(q^2-q_0^2)^2$,
+$r_{\rm braz}=K(q_0)=\mu^2$, with $Y>0$) is
+\begin{equation}
+F_{\rm TECT}[\phi]=\int_{\mathbb{T}^3}\!\Big[\tfrac12\,\phi\,K(-i\nabla)\phi
++\tfrac{\lambda}{4}\phi^4+\tfrac{\gamma}{6}\phi^6\Big]\,dx,\qquad
+K(-i\nabla)=\mu^2+Y(-\Delta-q_0^2)^2 .
+\end{equation}
+Its $L^2$ gradient flow is the semilinear parabolic Cauchy problem
+\begin{equation}
+\partial_t\phi=-\frac{\delta F_{\rm TECT}}{\delta\phi}
+=-L\phi+N(\phi),\qquad
+L:=K(-i\nabla),\quad N(\phi):=-\lambda\phi^3-\gamma\phi^5,\quad \phi(0)=\phi_0 .
+\label{eq:flow}
+\end{equation}
+Work on $X:=L^2(\mathbb{T}^3)$. We prove \eqref{eq:flow} is well-posed for
+$\phi_0\in H^s(\mathbb{T}^3)$, $s>\tfrac32$, under the standing hypotheses
+\textbf{(H1)} $\mu^2>0$ and \textbf{(H2)} $\gamma>0$ (both hold at the
+production anchor $\mu^2=5\times10^{-3}$, $\gamma=1.62$).
+
+\section*{3. The linear part generates an analytic semigroup}
+
+$L$ is the Fourier multiplier $K(k)=\mu^2+Y(|k|^2-q_0^2)^2$ on
+$\mathbb{T}^3$, self-adjoint with domain $D(L)=H^4(\mathbb{T}^3)$. Its spectrum
+is $\{K(k):k\in\Lambda^*\}\subset[\mu^2,\infty)$, and under (H1)
+\begin{equation}
+\inf\operatorname{spec}L=\mu^2>0
+\end{equation}
+(the continuum infimum $\mu^2$ is attained on the shell $|k|=q_0$ and is a
+lower bound on the discrete spectrum; checked numerically, assert
+\texttt{spec\_inf\_equals\_mu2\_positive}). A positive self-adjoint operator is
+sectorial; hence $-L$ generates an analytic semigroup $e^{-tL}$ on $X$, and the
+fractional powers $L^\alpha$ ($\alpha\ge0$) are well defined with
+$D(L^\alpha)=H^{4\alpha}(\mathbb{T}^3)=:X^\alpha$. The analytic-semigroup
+smoothing estimate holds:
+\begin{equation}
+\|L^\beta e^{-tL}\|_{X\to X}\le C_\beta\,t^{-\beta},\qquad
+C_\beta=\sup_{x\ge0}x^\beta e^{-x}=\beta^\beta e^{-\beta}<1 ,
+\label{eq:smoothing}
+\end{equation}
+for $0<\beta<1$ (assert \texttt{smoothing\_exponent\_finite\_beta\_*}:
+$C_{0.375}=0.476$, $C_{0.5}=0.429$).
+
+\section*{4. The nonlinearity is locally Lipschitz on $X^\beta$}
+
+Fix $\beta\in(\tfrac38,\tfrac12]$, so $X^\beta=H^{4\beta}$ with $4\beta>\tfrac32$.
+By the Sobolev embedding in $d=3$, $H^{4\beta}(\mathbb{T}^3)\hookrightarrow
+L^\infty(\mathbb{T}^3)$ for $4\beta>\tfrac32$, i.e.\ $\beta>\tfrac38$ (assert
+\texttt{sobolev\_linf\_threshold}); moreover $H^{4\beta}$ is a Banach algebra.
+For $\phi,\psi$ in a ball $\{\|\cdot\|_{X^\beta}\le R\}$,
+\begin{equation}
+\|N(\phi)-N(\psi)\|_{X}
+\le\big(3|\lambda|\,\|\phi^2+\phi\psi+\psi^2\|_{L^\infty}
++5\gamma\,\|{\textstyle\sum_{j=0}^4}\phi^j\psi^{4-j}\|_{L^\infty}\big)
+\|\phi-\psi\|_{L^2}\le \ell(R)\,\|\phi-\psi\|_{X},
+\end{equation}
+with $\ell(R)=C(|\lambda|R^2+\gamma R^4)$ using
+$\|\cdot\|_{L^\infty}\le C_S\|\cdot\|_{X^\beta}$. Thus $N:X^\beta\to X$ is
+locally Lipschitz (and bounded on bounded sets). (The weaker requirement
+$\phi^5\in L^2$ needs only $H^{6/5}\hookrightarrow L^{10}$, assert
+\texttt{sobolev\_L10\_threshold}; the $L^\infty$ route at $s>\tfrac32$ is taken
+for a clean Lipschitz constant.)
+
+\section*{5. Local existence, uniqueness, regularity}
+
+With $L$ sectorial (\S3) and $N:X^\beta\to X$ locally Lipschitz (\S4), the
+abstract parabolic theorem (Henry 1981, Thm.~3.3.3) applies to \eqref{eq:flow}:
+for every $\phi_0\in X^\beta$ there exist $\tau>0$ and a unique mild solution
+\begin{equation}
+\phi\in C\big([0,\tau];X^\beta\big)\cap C\big((0,\tau];D(L)\big)\cap
+C^1\big((0,\tau];X\big),\quad
+\phi(t)=e^{-tL}\phi_0+\int_0^t e^{-(t-\sigma)L}N(\phi(\sigma))\,d\sigma,
+\end{equation}
+the integral converging by \eqref{eq:smoothing}
+($\int_0^t(t-\sigma)^{-\beta}d\sigma<\infty$). Uniqueness and continuous
+dependence on $\phi_0$ follow from the Lipschitz bound via Gronwall. Parabolic
+smoothing plus the smoothness of the polynomial $N$ bootstraps
+$\phi\in C^\infty\big((0,\tau)\times\mathbb{T}^3\big)$: the solution is
+instantaneously smooth for $t>0$.
+
+\section*{6. Global existence}
+
+Along \eqref{eq:flow}, $F_{\rm TECT}$ is a strict Lyapunov functional:
+\begin{equation}
+\frac{d}{dt}F_{\rm TECT}[\phi(t)]
+=\Big\langle\frac{\delta F}{\delta\phi},\partial_t\phi\Big\rangle
+=-\Big\|\frac{\delta F}{\delta\phi}\Big\|_{L^2}^2\le0 .
+\end{equation}
+Under (H2), $F_{\rm TECT}$ is coercive and bounded below: by Young
+($a t^4\le b t^6 + C_*$ with $a=\tfrac{|\lambda|}4$, $b=\tfrac{\gamma}{12}$,
+$C_*=\max_t(at^4-bt^6)$; assert \texttt{sextic\_dominates\_quartic\_coercive},
+$C_*=1.01\times10^{-2}$),
+\begin{equation}
+F_{\rm TECT}[\phi]\ge\tfrac12\langle\phi,L\phi\rangle
++\tfrac{\gamma}{12}\|\phi\|_{L^6}^6-C_*\,|\mathbb{T}^3|
+\ge\tfrac{\mu^2}{2}\|\phi\|_{L^2}^2+\tfrac{Y}{2}\|(-\Delta-q_0^2)\phi\|_{L^2}^2
++\tfrac{\gamma}{12}\|\phi\|_{L^6}^6-C_*|\mathbb{T}^3| .
+\end{equation}
+Hence $F[\phi(t)]\le F[\phi_0]$ gives an a priori bound on $\phi(t)$ in
+$H^2(\mathbb{T}^3)\cap L^6$ (the quadratic form $\langle\phi,L\phi\rangle$ is
+equivalent to the $H^2$ norm by (H1)). Since $\beta\le\tfrac12$ implies
+$X^\beta=H^{4\beta}\subseteq H^2$ (assert
+\texttt{continuation\_window\_nonempty}), the $X^\beta$ norm cannot blow up in
+finite time, so the standard continuation alternative forces $\tau=\infty$. The
+solution is global.
+
+\paragraph{Theorem (A2).} \emph{Under (H1) $\mu^2>0$ and (H2) $\gamma>0$, for
+every $\phi_0\in H^s(\mathbb{T}^3)$ with $s>\tfrac32$ the TECT gradient flow
+\eqref{eq:flow} has a unique global solution
+$\phi\in C([0,\infty);H^s)\cap C^\infty((0,\infty)\times\mathbb{T}^3)$,
+depending continuously on $\phi_0$, with $F_{\rm TECT}[\phi(t)]$ non-increasing.}
+
+\section*{7. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``$q_0$ incommensurate with $\Lambda^*$ could push
+$\inf\operatorname{spec}L$ below $\mu^2$.''} DISMISSED: $K(k)=\mu^2+Y(\cdots)^2
+\ge\mu^2$ for \emph{every} $k$ regardless of commensurability; the shell value
+$\mu^2$ is a lower bound on the discrete spectrum, not a requirement that a mode
+sit exactly on the shell. Positivity (H1) is all that is used.
+\item[($\beta$)] \emph{``Global existence is convention-dependent.''}
+VALID with mitigation: global existence uses (H2) $\gamma>0$ essentially --- if
+$\gamma\le0$ the sextic no longer dominates the quartic and $F$ is unbounded
+below, permitting finite-time blow-up. This is stated as an explicit hypothesis,
+not hidden; at the production anchor $\gamma=1.62>0$. Local well-posedness (\S5)
+needs only (H1).
+\item[($\gamma$)] \emph{``Mild solutions need not be the variational gradient
+flow.''} DISMISSED: the parabolic smoothing of \S5 makes $\phi(t)\in D(L)=H^4$
+for $t>0$, so $\phi$ is a classical (strong) solution of \eqref{eq:flow} on
+$(0,\infty)$ and the energy identity of \S6 is rigorous there; the mild
+formulation is used only to obtain the solution.
+\end{itemize}
+
+Quantitative sanity check (mandatory): every numerical constant is reproduced
+by \url{codes/foundations/a2_wellposedness_checks.py} (8/8): spectral infimum
+$=\mu^2=5\times10^{-3}$; Sobolev thresholds $s>3/2$, $\beta>3/8$; smoothing
+constants $C_\beta=\beta^\beta e^{-\beta}\in(0.43,0.48)$; Young coercivity
+constant $C_*=1.01\times10^{-2}$ at $(\lambda,\gamma)=(-0.43,1.62)$;
+continuation window $\beta\in(3/8,1/2]$ non-empty with $4\beta\le2$.
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-PDE-WELLPOSED
+Precise statement:       Under mu^2>0 and gamma>0, the TECT L2 gradient flow
+                         d phi/dt = -K(-i grad)phi - lambda phi^3 - gamma phi^5
+                         on T^3 is globally well-posed for phi_0 in H^s, s>3/2:
+                         unique global solution, smooth for t>0, continuous
+                         dependence, F non-increasing.
+Scope:                   Periodic BCC cell T^3; production-anchor parameters;
+                         standard analytic-semigroup hypotheses (H1),(H2).
+Dependencies:            A1-KERNEL-CONV (kernel convention K=mu^2+Y(q^2-q0^2)^2).
+Hypotheses:              (H1) mu^2>0 [sectoriality + H^2 a priori];
+                         (H2) gamma>0 [sextic coercivity, global existence].
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (8/8 checks).
+Reproduction command:    python codes/foundations/a2_wellposedness_checks.py
+Expected output:         8/8 PASS; exit 0; JSON artefact under claims/.../runs/.
+Falsification gate:      A finite-time blow-up or non-uniqueness for some
+                         phi_0 in H^s (s>3/2) at mu^2>0, gamma>0; or
+                         inf spec L < mu^2.
+Tier before / after:     A2 T1 / T6 PROVED CONDITIONAL (operator sign-off
+                         pending; promotion path T1->T6 as a one-shot textbook
+                         parabolic argument).
+No-overclaim statement:  No claim for gamma<=0 (blow-up possible); no claim of
+                         a unique global MINIMISER (that is vacuum selection,
+                         Sector B); no uniqueness below s=3/2.
+Next required action:    Operator review of the T6 promotion; then A3
+                         (renormalisation / continuum limit) for the
+                         lattice-spacing -> 0 statement the flow presumes.
+\end{verbatim}

@@ -132,6 +132,16 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 **Consequence:** the projection closure lever is ELIMINATED; the operator-norm tail $C_G a_0=0.047$ is corrected UPWARD to $f_{\rm avg}a_0=0.059$ (the a0-skeleton $C_G$ estimate was forward-channel optimistic); the endpoint closes ONLY at the verified floor ($0.059<0.0758$, 23% margin), NOT conservative, and rests SOLELY on the DR-2 floor route. Off-endpoint ($I\le10^{-3}$) closure UNAFFECTED. B1 T6 on {H-LAYER} UNAFFECTED.
 
 
+
+<a id="r-2026-06-23-b3-bcc-structural-selection"></a>
+### R-2026-06-23-b3-bcc-structural-selection — fixed-ordered BCC structural selection ($F_{\rm BCC}<F_{\rm FCC}<F_{\rm SC}$)
+
+**Failure mode:** single-shell SMA ranking inversion + disordered collapse
+
+**Evidence:** Math194 re-run (BCC rank 9 of 10; lamellar rank 1); Math400 (T0 binding: at $\mu^2=+0.005$ all lattices collapse to the disordered $F=0$ state, the SMA "BCC minimum" is a saddle; Math383 $K_4/K_6$ table refuted). archive/legacy/notes/Math194, archive/legacy/notes/Math383.
+
+**Consequence:** `B3-BCC-STRUCT` RETIRED/REFUTED (T0). The original "BCC energy condensate structure is selected" claim is withdrawn. The operator (2026-06-23) rejected the reframe of B3 onto B1: B1's $\Delta F_{\rm enum}[\mathcal R]>0$ is only a RELATIVE ranking within the tested ordered-reading ensemble $\mathcal E_{\rm tested}$; it does NOT imply $F[\mathcal R_H]<F[0]$ nor $H_{\mathcal R_H}\succeq0$ under unrestricted variations, and must not be conflated with Math400's disordered-collapse/saddle result. Only the restricted ranking projection survives, carried as the separate B1-dependent card `B3-RH-TESTED-STRUCTURE-RANKING` (T4, estimator grade). Physical BCC condensate existence/stability/global selection is NOT established; re-establishing it requires certifying $F[\Psi_{\min}]<F[0]$, $\lambda_{\min}^\perp\ge0$ under symmetry projection, and $N\to\infty$ on the canonical PDE background.
+
 ## Process-grade negative results (carried as lessons, enforced in governance)
 
 - Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries

@@ -11,8 +11,9 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | Claim | Tier | Hypotheses | Open gates | Sub-proofs (proof-unit count) | Detail |
 |---|---|---|---|---|---|
 | `A1-KERNEL-CONV` | T5 | — | — | _scaffold (no notes yet)_ | — |
-| `A2-PDE-WELLPOSED` | T1 | — | — | _scaffold (no notes yet)_ | — |
-| `A3-RENORMALISATION` | T1 | — | — | _scaffold (no notes yet)_ | — |
+| `A2-PDE-WELLPOSED` | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | (all notes) (2) | [INDEX](A2-PDE-WELLPOSED/INDEX.md) |
+| `A3-PERTURBATIVE-CONTINUUM-CORRELATORS` | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | (all notes) (2) | [INDEX](A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) |
+| `A3-UV-SUPERRENORMALISABILITY` | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | (all notes) (3) | [INDEX](A3-UV-SUPERRENORMALISABILITY/INDEX.md) |
 
 ## Sector B — Vacuum / Reading Selection
 
@@ -20,8 +21,10 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 |---|---|---|---|---|---|
 | `B1-RH-ENUM` | T7 | A1-KERNEL-CONV | — | ESTIMATOR-UPGRADE (25), ROBUSTNESS-MU2 (4), Reading-H (12), enumerated (5), near-gap (4) | [INDEX](B1-RH-ENUM/INDEX.md) |
 | `B2-PROPA-HLAYER` | T7 | A1-KERNEL-CONV | — | G-A0-DUI (2), H-A0-removal (2), Prop-A (15) | [INDEX](B2-PROPA-HLAYER/INDEX.md) |
-| `B3-BCC-STRUCT` | T4 | — | G3PB-III | (all notes) (1) | [INDEX](B3-BCC-STRUCT/INDEX.md) |
-| `B4-MASS-GAP` | T5 | — | — | (all notes) (1) | [INDEX](B4-MASS-GAP/INDEX.md) |
+| `B3-BCC-STRUCT` | T0 | — | — | (all notes) (1) | [INDEX](B3-BCC-STRUCT/INDEX.md) |
+| `B3-RH-TESTED-STRUCTURE-RANKING` | T4 | — | ESTIMATOR-UPGRADE | _scaffold (no notes yet)_ | — |
+| `B4-CONE-CURVATURE-ANCHOR` | T5 | — | — | _scaffold (no notes yet)_ | — |
+| `B4-MASS-GAP` | T1 | — | — | (all notes) (2) | [INDEX](B4-MASS-GAP/INDEX.md) |
 | `B5-BEYOND-LAYER-BOUND` | T7 | A1-KERNEL-CONV | — | DR-2 (20), H-LAYER-AUX (9), SC-SCOPE (11), STEP-5B (10), T5-DOSSIER (4) | [INDEX](B5-BEYOND-LAYER-BOUND/INDEX.md) |
 
 ## Sector C — Spacetime / Lorentz / Gravity
@@ -33,7 +36,7 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `C3-EP` | T6 | H-LEGACY-CHAIN | — | _scaffold (no notes yet)_ | — |
 | `C4-GRAVITY-1LOOP` | T5 | — | SCHEME-2LOOP | _scaffold (no notes yet)_ | — |
 | `C5-NEWTON-G` | T6 | H-LEGACY-CHAIN | GAP-3, PRED-G-FREEZE | _scaffold (no notes yet)_ | — |
-| `C6-SPACETIME-SIGNATURE` | T1 | — | — | _scaffold (no notes yet)_ | — |
+| `C6-SPACETIME-SIGNATURE` | T1 | — | C6-BCC-PREMISE-BLOCKED | _scaffold (no notes yet)_ | — |
 
 ## Sector D — Gauge / Matter / Topology
 
@@ -65,4 +68,4 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `F2-BARYOGENESIS` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 | `F3-INFLATION-CMB` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 
-<!-- generated 2026-06-23T01:54:28Z by build_index.py v1.0.1 -->
+<!-- generated 2026-06-23T09:09:00Z by build_index.py v1.0.1 -->

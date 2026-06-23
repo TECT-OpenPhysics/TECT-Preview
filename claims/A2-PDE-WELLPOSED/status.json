@@ -2,33 +2,43 @@
   "id": "A2-PDE-WELLPOSED",
   "title": "Well-posedness of the TECT gradient flow and minimisation problem",
   "sector": "A",
-  "statement": "The TECT free-energy minimisation and the associated gradient flow $\\partial_t\\phi=-\\delta F_{\\rm TECT}/\\delta\\phi$ are well-posed: local existence, uniqueness, and regularity of solutions in the relevant Sobolev class, with global-in-time control on Brazovskii free-energy sublevel sets.",
-  "scope": "OPEN scaffold. Well-posedness (existence/uniqueness/regularity) of the dynamical and variational problem underlying $F_{\\rm TECT}$ at the production convention. The existence of minimisers is the variational counterpart consumed by Sector B; this claim is the analytic foundation, not a vacuum-selection statement.",
-  "tier": "T1",
+  "statement": "Under (H1) mu^2>0 and (H2) gamma>0, the SCALAR Brazovskii L2 gradient flow $\\partial_t\\phi=-K(-i\\nabla)\\phi-\\lambda\\phi^3-\\gamma\\phi^5$ on a FIXED periodic cell $\\mathbb{T}^3$ (K(q)=mu^2+Y(q^2-q_0^2)^2, A1-KERNEL-CONV) is globally well-posed for phi_0 in H^s, 3/2<s<=2: a unique global solution exists, is C^inf for t>0, depends continuously on phi_0, and F_TECT[phi(t)] is non-increasing. Standard analytic-semigroup theory (Henry/Pazy/Lunardi).",
+  "scope": "NARROW (operator review 2026-06-23): ONE real scalar field, FIXED periodic cell, 3/2<s<=2. The spectral fact used is the lower bound lambda0:=min_k K(k) >= mu^2 > 0 (equality non-generic). Sobolev direction: for beta<=1/2, H^2 subset H^{4beta}=X^beta, so the energy H^2 a priori bound controls X^beta -> global continuation. s>2 persistence needs a separate higher-order estimate (NOT claimed). mu^2>0 is the DISORDERED-side condition giving a positive linear gap -- NOT a proof of BCC condensation. The full Class-II multi-field action (A2_full-ClassII) and the mu^2<0 condensate branch (A2_{mu^2<0}) are separate proof targets. Kernel hypothesis Y>0 (4th-order ellipticity / q^-4 decay) is made explicit in the consolidation v1.1.",
+  "tier": "T6",
   "tier_scale": "TSv2",
   "lifecycle": "ACTIVE",
   "evidence_grade": [
-    "CONDITIONAL"
+    "ANALYTIC",
+    "EXECUTED"
   ],
   "dependencies": [
     "A1-KERNEL-CONV"
   ],
-  "hypotheses": [],
+  "hypotheses": [
+    "A2-H1-KERNEL-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY"
+  ],
   "soft_dependencies": [],
   "open_gates": [],
-  "falsifier": "A finite-time blow-up, loss of uniqueness, or regularity failure in the admissible Sobolev class at the production convention.",
+  "falsifier": "Finite-time blow-up or non-uniqueness for some phi_0 in H^s (3/2<s<=2) at mu^2>0, gamma>0; or lambda0:=min_k K(k) <= 0 (loss of sectoriality).",
   "reproduction": {
-    "command": null,
-    "expected": null,
-    "status": "PACKAGE-PENDING"
+    "command": "python codes/foundations/a2_wellposedness_checks.py",
+    "expected": "8/8 PASS (exit 0); spectral inf=mu^2, Sobolev s>3/2/beta>3/8, smoothing C_beta=beta^beta e^-beta, Young C_*=1.01e-2, continuation window (3/8,1/2]",
+    "status": "AVAILABLE"
   },
   "legacy_pillar": [
     "foundation"
   ],
   "tier_legacy": null,
-  "legacy_evidence": [],
+  "legacy_evidence": [
+    "claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.2.tex.txt (proof, v1.2 operator-corrected)",
+    "codes/foundations/a2_wellposedness_checks.py (8/8 self-tests, v1.1)",
+    "claims/A2-PDE-WELLPOSED/runs/a2_wellposedness_checks.json (artefact)",
+    "claims/A2-PDE-WELLPOSED/notes/a2-consolidation-260623-260623-v1.0.tex.txt (consolidation/bundle entry)"
+  ],
   "t7_candidate": false,
-  "no_overclaim": "Registering the target does not establish well-posedness; no existence/uniqueness theorem is claimed yet.",
-  "next_action": "Migrate or derive the local well-posedness estimate for the quartic Brazovskii functional; identify the Sobolev class and the sublevel-set a priori bound.",
-  "last_review": "2026-06-09"
+  "no_overclaim": "s>2 persistence; the full Class-II multi-field action; the mu^2<0 condensate branch; any claim that mu^2>0 proves BCC condensation (it is the disordered-side linear gap); a unique global MINIMISER (Sector B); well-posedness for gamma<=0.",
+  "next_action": "Operator sign-off of the narrowed T6; then A3-UV-SUPERRENORMALISABILITY (continuum limit); separately A2_full-ClassII and A2_{mu^2<0}.",
+  "last_review": "2026-06-23",
+  "notes": "T6 PROVED CONDITIONAL (scalar/periodic/mu^2>0/gamma^2>0 scope, 3/2<s<=2) APPROVED by operator 2026-06-23 (T1->T6 PROVED CONDITIONAL) after review corrections: (1) lambda0>=mu^2>0 lower bound (not equality); (2) Sobolev direction H^2 subset X^beta; (3) s-range restricted to (3/2,2]; physical scope narrowed. Note v1.2 (v1.0,v1.1 superseded): adds the energy-domain global-existence patch (a priori bound via parabolic smoothing at t_0>0; F monotone for t>0, for t>=0 if phi_0 in H^2). Foundation for Sector-B free-energy minimisation. Next: A3. Reproduction bundle (T6, referee-grade, MANIFEST sha256): claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623. Consolidation v1.1 (paper-grade): Y>0 explicit; constants written generally (C_*(lambda,gamma), C(mu^2,Y,q0)) with numerics as production-anchor checks."
 }
