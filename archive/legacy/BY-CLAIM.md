@@ -57,7 +57,13 @@ Reproduction: `cd archive/legacy/scripts && python Math437_step5_class_closure.p
 
 ## B3-BCC-STRUCT — BCC structural selection among tested ordered condensates  (T4)
 
-- UNRESOLVED `legacy:Packet-B lineage (N_loop, L_4, Delta-F tables)`
+- `archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt (LAM/HEX/FCC races; surviving B1 evidence)`
+- `archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt (HEX exact-Wick bracket)`
+- `archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt (two-shell ensemble race)`
+- `archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt (continuum-anchored Bloch log-det)`
+- `archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt (Reading-H selection record)`
+- `archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (SUPERSEDED -- single-shell SMA ranking REFUTED by Math400; script re-run yields BCC rank 9; NOT active support)`
+- `archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (SUPERSEDED -- 1-mode K-table main claim T0-REFUTED by Math400; NOT active support)`
 
 ## B4-MASS-GAP — BCC ground-state uniqueness within the single-mode constraint cone  (T5)
 

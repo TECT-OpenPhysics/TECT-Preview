@@ -12,7 +12,13 @@
   "legacy_pillar": [],
   "tier_legacy": null,
   "legacy_evidence": [
-    "legacy:Packet-B lineage (N_loop, L_4, Delta-F tables)"
+    "archive/legacy/notes/Math431/TECT-Math431-G1pp3-LAM-HEX-FCC-PASS-260604-v1.0.tex.txt (LAM/HEX/FCC races; surviving B1 evidence)",
+    "archive/legacy/notes/Math436/TECT-Math436-G1pp3b-HEX-Exact-Wick-Bracket-PASS-260604-v1.1.tex.txt (HEX exact-Wick bracket)",
+    "archive/legacy/notes/Math432/TECT-Math432-G3prime-Two-Shell-Ensemble-Race-PASS-260604-v1.1.tex.txt (two-shell ensemble race)",
+    "archive/legacy/notes/Math428/TECT-Math428-G1doubleprime-BCC-Bloch-LogDet-Race-PASS-Continuum-Anchored-260604-v1.1.tex.txt (continuum-anchored Bloch log-det)",
+    "archive/legacy/notes/Math434/TECT-Math434-AddA-T5-Promotion-Record-ReadingH-Selection-260604-v1.0.tex.txt (Reading-H selection record)",
+    "archive/legacy/notes/Math194/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt (SUPERSEDED -- single-shell SMA ranking REFUTED by Math400; script re-run yields BCC rank 9; NOT active support)",
+    "archive/legacy/notes/Math383/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt (SUPERSEDED -- 1-mode K-table main claim T0-REFUTED by Math400; NOT active support)"
   ],
   "t7_candidate": false,
   "reproduction": {
@@ -20,19 +26,19 @@
     "expected": null,
     "status": "PACKAGE-PENDING"
   },
-  "last_review": "2026-06-05",
-  "notes": "Estimator error bound: uncontrolled (legacy-grade); multi-shell extension tracked by G3PB-III.",
+  "last_review": "2026-06-23",
+  "notes": "Reframed 2026-06-23 (batch 4) onto the corrected continuum-anchored B1 evidence after the seeded single-shell-SMA lineage (Math194/Math383) was found REFUTED by Math400. Migration-clean. No tier change (T4). Reframe record: claims/B3-BCC-STRUCT/notes/b3-reframe-continuum-260623-260623-v1.0.tex.txt.",
   "id": "B3-BCC-STRUCT",
   "title": "BCC structural selection among tested ordered condensates",
   "sector": "B",
-  "statement": "Within the tested ordered-condensate class $\\{\\mathrm{LAM},\\mathrm{HEX},\\mathrm{FCC},\\mathrm{SC},\\mathrm{BCC}\\}$ at one-loop Brazovskii level, BCC minimises the free energy at the operating point ($N_{\\rm loop}$, $L_4$ coefficients): $F_{\\rm BCC}<F_{\\rm FCC}<F_{\\rm SC}$.",
-  "scope": "Tested representatives at one-loop; multi-shell caveat explicit; not an exhaustiveness statement.",
+  "statement": "Within the tested ordered-condensate class, no competitor reading lowers the TECT free energy below the selected Reading-H (H-layer, BCC-type) condensate at $r_{\\rm braz}=\\mu^2=0.005$ ($\\Delta F[\\mathcal R]=F_{\\rm TECT}[\\mathcal R]-F_{\\rm TECT}[\\mathcal R_H]>0$, estimator grade; LAM/HEX/FCC explicit via Math431) -- the structure-named projection of B1-RH-ENUM. The legacy single-shell-SMA / 1-mode $\\Delta F\\,$--$L_4$ ranking purporting $F_{\\rm BCC}<F_{\\rm FCC}<F_{\\rm SC}$ (Math194/Math383) is REFUTED (Math400) and retained only as superseded history.",
+  "scope": "Corrected continuum-anchored basis (B1-RH-ENUM evidence). Tested representatives at estimator grade; NOT an exhaustiveness statement. The original single-shell-SMA framing (fixed ordered structures ranked by Delta-F/L_4) is RETIRED: Math400 (T0, binding) shows lamellar is the deepest single-shell SMA configuration and the canonical-mu^2 'BCC minimum' is a saddle, and independently refutes the Math383 K_4/K_6 table; the fixed-ordered-BCC-vacuum reading is retired (negative-results/registry.md NG-2026-legacy-ordered-vacuum). Multi-shell/exhaustiveness tracked by G3PB-III. Estimator error bound: uncontrolled (estimator grade, inherited from the B1-RH-ENUM chain); tightening tracked by ESTIMATOR-UPGRADE / G3PB-III.",
   "tier": "T4",
   "evidence_grade": [
     "EXECUTED",
     "ESTIMATOR"
   ],
-  "falsifier": "A tested-class competitor with lower free energy at the operating point under the corrected convention.",
-  "no_overclaim": "BCC global optimality over all admissible structures.",
-  "next_action": "Assemble Minimal Review Packet B from the migrated N_loop/L_4 evidence chain."
+  "falsifier": "A tested-class competitor reading with lower TECT free energy than Reading-H at the operating point under the corrected continuum-anchored convention (estimator grade). NOTE: under the REFUTED single-shell SMA convention this falsifier already fires (Math194 script: lamellar < ... < bcc); that convention is retired.",
+  "no_overclaim": "BCC global optimality over all admissible structures; any fixed-ordered-BCC-vacuum reading (retired, NG-2026-legacy-ordered-vacuum); exhaustiveness beyond the tested representatives; and the refuted single-shell-SMA F_BCC<F_FCC<F_SC ordering.",
+  "next_action": "Assemble Minimal Review Packet B from the B1 continuum-anchored enumerated-reading evidence (Math431/434/436/428/432), restricted to the tested ordered-structure projection; tighten the estimator error bound (ESTIMATOR-UPGRADE / G3PB-III)."
 }

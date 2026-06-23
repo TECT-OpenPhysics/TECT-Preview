@@ -23,6 +23,7 @@ SYNC_GATES = [
     ("index",     ["build_index.py", "--check"]),
     ("todo",      ["todo.py", "--check"]),
     ("changelog", ["changelog.py", "render", "--check"]),
+    ("changelog-integrity", ["changelog.py", "verify"]),
     ("dossier",   ["build_dossier.py", "--check"]),
 ]
 

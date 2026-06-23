@@ -1,0 +1,139 @@
+% =============================================================================
+% Title: B3-BCC-STRUCT reframe onto the corrected continuum basis (migration batch 4)
+% Claim: B3-BCC-STRUCT (evidence shared with B1-RH-ENUM)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: verification record + reframe (no tier action)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: migration batch-4 record. The seeded B3
+%        evidence (single-shell-SMA ranking Math194 + 1-mode K-table Math383)
+%        was found REFUTED (Math400) on re-validation; B3 is reframed onto the
+%        surviving continuum-anchored B1-RH-ENUM evidence. No tier action.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note records migration batch 4: the demand-driven re-validation of the
+\texttt{B3-BCC-STRUCT} card's seeded evidence pointer
+(\texttt{legacy:Packet-B lineage ($N_{\rm loop}$, $L_4$, $\Delta F$ tables)})
+and the consequent reframe of B3 onto the corrected continuum-anchored
+evidence of \texttt{B1-RH-ENUM}. It performs no tier action (B3 remains T4).
+It is the canonical record of (i) the refutation of the seeded evidence and
+(ii) the re-pointing of B3's evidence chain. The migration gate
+(\url{governance/migration-plan.md} \S1.2, re-validation at the boundary)
+functioned as designed: a verbatim copy of the seeded notes would have
+laundered refuted content into a T4 claim.
+
+\section*{2. The refutation finding}
+
+The seeded B3 evidence comprises the single-shell SMA structural ranking
+(Math194) and the 1-mode $K_4/K_6$ ranking (Math383). Re-validation:
+
+\textbf{(a) Math194 script re-run.} Executing the migrated
+\url{archive/legacy/scripts/Math194_brazovskii_lattice_ranking.py} in a fresh
+sandbox at the stated operating point
+$(\mu^2,\lambda,\gamma)=(5\times10^{-3},-0.43,1.62)$, $q_0=0.6802$ reproduces
+the ranking with \textbf{BCC at rank 9 of 10}:
+$F/V_{\rm lamellar}=-1.211\times10^{-5}$ (rank 1) $<\dots<
+F/V_{\rm fcc}=-5.383\times10^{-6}$ (rank 7) $<
+F/V_{\rm bcc}=-4.845\times10^{-6}$ (rank 9). The script itself prints
+\texttt{[WARNING] BCC is Rank 9, not Rank 1!} while its verdict logic
+erroneously declares ``uniqueness CONFIRMED'' (a sign-convention bug in the
+falsification gate). This is the \emph{opposite} of the B3 statement
+$F_{\rm BCC}<F_{\rm FCC}<F_{\rm SC}$.
+
+\textbf{(b) Math400 (2026-05-11, T0 REFUTATION, binding).} The
+symmetry-preserving multi-shell SMA solver (Math396-AddA, operator PC)
+establishes: at $\mu^2=-1$, lamellar ($\mathcal F/V=-0.159$) is the deepest
+accessible configuration on every lattice manifold, HEX collapses to lamellar,
+and BCC/FCC reach shallower symmetry-broken saddles; at the canonical
+$\mu^2=+0.005$, every lattice collapses to the disordered $\mathcal F=0$ state,
+so the SMA ``BCC minimum'' is a saddle, not a local minimum. Math400
+additionally refutes the Math383 \S2 $K$-table by first-principles recompute
+(lamellar $K_4=1.5$ not $3$; BCC $K_4=3.75$ not $1.0$). Status: T0 refutation
+of the Math82-AddH BCC-condensation reading, of the Math383 main claim, and of
+the Math383 $K$-table. The fixed-ordered-BCC-vacuum reading is already retired
+in \url{negative-results/registry.md} (\texttt{NG-2026-legacy-ordered-vacuum}).
+
+Disposition: Math194 / Math383 are migrated \textbf{SUPERSEDED} (archive copies
+kept verbatim for history; SHA-256 \texttt{30ed6de7}, \texttt{41070cea};
+script \texttt{012903d5}), cross-linked to the refutation. They are \emph{not}
+active support for B3.
+
+\section*{3. Reframe onto the corrected continuum basis}
+
+The surviving structural-selection result is \texttt{B1-RH-ENUM} (T7):
+$\Delta F[\mathcal R]=F_{\rm TECT}[\mathcal R]-F_{\rm TECT}[\mathcal R_H]>0$ for
+every $\mathcal R$ in the enumerated single-shell and two-shell condensate
+ensembles at $r_{\rm braz}=\mu^2=0.005$, at estimator grade, with Reading-H
+(the H-layer, BCC-type condensate) the selected minimum. The migration-clean
+B1 chain explicitly defeats the named competitors:
+Math431 (LAM/HEX/FCC races, all channels PASS), Math436 (HEX exact-Wick
+bracket), Math432 (two-shell ensemble race), Math428 (continuum-anchored Bloch
+log-det), Math434 (Reading-H selection record). B3 is reframed as the
+\emph{structure-named projection} of B1: within the tested ordered-structure
+class, no competitor reading lowers the free energy below Reading-H at the
+corrected level. B3's \texttt{legacy\_evidence} now points to these archive
+notes; the card is migration-clean. No tier change (T4 STRONG EVIDENCE,
+consistent with the estimator-grade B1 evidence).
+
+\section*{4. Devil's-advocate (three objections)}
+
+\begin{itemize}
+\item[($\alpha$)] \emph{``Reframed B3 merely duplicates B1.''}
+VALID with mitigation: B3 is retained (operator choice: reframe over supersede)
+as the tested-ordered-structure projection of B1's reading-enumeration result;
+the two differ in framing (named crystallographic structures vs.\ enumerated
+readings), and B3 carries the explicit refutation record of the named-structure
+$\Delta F$ ranking that B1 does not. If the operator later judges the overlap
+total, the supersede path remains available.
+\item[($\beta$)] \emph{``Listing refuted notes in \texttt{legacy\_evidence}
+re-launders them.''} DISMISSED: Math194/Math383 are annotated SUPERSEDED /
+REFUTED and explicitly marked ``NOT active support''; the active evidence is the
+B1 continuum chain. Their presence is the demand-driven consumption link that
+justifies their archival, not a support claim.
+\item[($\gamma$)] \emph{``T4 is stale once the seeded evidence is refuted.''}
+DISMISSED for now: the reframed claim rests entirely on the B1 chain
+(estimator grade), which supports B1 at T7; T4 STRONG EVIDENCE for the
+structure-named projection is therefore consistent. Any tier change is a
+separate operator-authorised action and is not performed here.
+\end{itemize}
+
+Quantitative sanity check (mandatory): the Math194 re-run ratios are internally
+consistent --- $C_{\rm lat}^{\rm bcc}=3.75$, $A_{\rm min}\propto C_{\rm lat}^{-1}$
+gives $A_{\rm min}^{\rm bcc}=0.0394$ and
+$F/V\propto -A_{\rm min}^2$ reproduces $-4.845\times10^{-6}$ to the quoted
+digits; lamellar $C_{\rm lat}=1.5$ (the Math400-corrected $K_4$, not the
+Math383 value $3$) yields the deepest $F/V=-1.211\times10^{-5}$, consistent
+with lamellar rank 1. The ordering is therefore not a numerical artefact but
+the genuine single-shell SMA result --- which is exactly why that reduction is
+refuted in favour of the continuum-anchored treatment.
+
+\section*{5. Result footer}
+
+\begin{verbatim}
+Result ID:               B3-BCC-STRUCT (reframe + refutation record)
+Precise statement:       Seeded single-shell-SMA evidence (Math194/Math383)
+                         REFUTED (Math400; Math194 re-run -> BCC rank 9).
+                         B3 reframed onto the continuum-anchored B1 chain
+                         (Math431/434/436/428/432); migration-clean.
+Scope:                   Tested ordered-structure projection of B1-RH-ENUM,
+                         estimator grade; not an exhaustiveness statement.
+Dependencies:            A1-KERNEL-CONV; evidence shared with B1-RH-ENUM.
+Evidence grade:          EXECUTED + ESTIMATOR (B1 chain); refuted predecessors
+                         archived SUPERSEDED.
+Reproduction command:    cd archive/legacy/scripts &&
+                         python Math431_g1pp3_lam_hex_fcc.py &&
+                         python Math436_hex_exact_wick_bracket.py &&
+                         python Math432_g3prime_multishell_ensemble.py &&
+                         python Math428_g1doubleprime_bloch_logdet.py
+                         (refutation demo: python
+                          Math194_brazovskii_lattice_ranking.py -> BCC rank 9)
+Falsification gate:      A tested-class competitor below Reading-H at the
+                         operating point under the corrected convention.
+Tier before / after:     B3 T4 / T4 (no change); migration-clean: no / yes.
+No-overclaim statement:  No BCC global optimality; no fixed-ordered-BCC-vacuum
+                         reading (retired); no single-shell-SMA F-ordering.
+Next required action:    Minimal Review Packet B (tested-structure projection);
+                         estimator-error tightening (G3PB-III).
+\end{verbatim}

@@ -22,6 +22,8 @@
 | Math01 | v2 BCC-uniqueness-rigorous (uniqueness within cone) | — | — | B4 | batch 3 (2026-06-23) |
 | Math56 | AddB ClassII guarded-quotient (constraint cone, canonical) + Addendum + HessJump-audit | — | — | B4 | batch 3 (2026-06-23) |
 | Math82 | Addenda G (7-point bifurcation curve) / G2 (stall-mechanism audit) / G3 (vacuum-floor guard) | — | `artefacts/Math82/math82H_groundstate_N32_Lbcc7_MANIFEST.md` (continuation provenance; anchor m*²=+4.247e-2 at μ²=+5e-3) | B4 | batch 3 (2026-06-23) |
+| Math194 | BCC-uniqueness-among-3D-crystallographic-competitors (single-shell SMA ranking) — **SUPERSEDED/REFUTED** by Math400 (script re-run yields BCC rank 9, lamellar rank 1) | `scripts/Math194_brazovskii_lattice_ranking.py` | — | B3 (refuted lineage) | batch 4 (2026-06-23) |
+| Math383 | BCC-vs-Competitors-Analytical-and-Numerical (1-mode K_4/K_6 ranking) — **SUPERSEDED/REFUTED**: Math400 T0-refutes main claim + §2 K-table | — | — | B3 (refuted lineage) | batch 4 (2026-06-23) |
 
 Script-only rows: the corresponding notes migrate when a claim consumes them
 directly (migration-plan §1.1).

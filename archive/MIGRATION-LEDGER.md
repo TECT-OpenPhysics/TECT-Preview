@@ -178,3 +178,40 @@ migration-plan §5); only its run manifest migrates as provenance.
 | `Docs/math/TECT-Math82-Addendum-G2-PCG-and-stall-mechanism-audit.tex.txt` | B4 | verbatim (SHA-256 `2025a665`) | n/a (T5) |
 | `Docs/math/TECT-Math82-Addendum-G3-vacuum-floor-guard-implementation.tex.txt` | B4 | verbatim (SHA-256 `fd038f4a`) | n/a (T5) |
 | `Runs/continuation/math82H_groundstate_N32_Lbcc7_2026-04-24/MANIFEST.md` | B4 | provenance; anchor reproduces card to all digits; numerical re-run WAIVED (production-PDE) | n/a (T5) |
+
+## Migration batch 4 — B3-BCC-STRUCT reframe to corrected continuum basis (plan phase M1, 2026-06-23)
+
+Goal: make `B3-BCC-STRUCT` migration-clean. Demand-driven re-validation of the
+card's seeded `legacy:Packet-B lineage (N_loop, L_4, ΔF tables)` pointer found
+the cited evidence **refuted**, so the disposition is **SUPERSEDED**, not
+MIGRATED-VERBATIM-as-support, and B3 is reframed onto the surviving
+continuum-anchored B1 evidence (already migrated, batch 2).
+
+**Re-validation finding (the migration gate working as intended).** The seeded
+B3 evidence is the single-shell SMA structural ranking (Math194) + the 1-mode
+K_4/K_6 ranking (Math383). Running the migrated `Math194_brazovskii_lattice_ranking.py`
+in a fresh sandbox reproduces **BCC at rank 9 of 10** (lamellar rank 1,
+$F/V=-1.21\times10^{-5}$; bcc $F/V=-4.84\times10^{-6}$); the script even prints
+`[WARNING] BCC is Rank 9, not Rank 1!` while its own verdict logic erroneously
+declares "uniqueness CONFIRMED". This is the **opposite** of the B3 statement
+$F_{\rm BCC}<F_{\rm FCC}<F_{\rm SC}$. Independently, **Math400 (2026-05-11,
+T0 REFUTATION, binding)** refutes Math383's main claim and its §2 K-table
+(lamellar $K_4=1.5$ not $3$; BCC $K_4=3.75$ not $1.0$), and shows that in the
+symmetry-preserving multi-shell SMA lamellar is the deepest configuration and
+the canonical-$\mu^2$ "BCC minimum" is a saddle. The fixed-ordered-BCC-vacuum
+reading is already retired in `negative-results/registry.md`
+(`NG-2026-legacy-ordered-vacuum`).
+
+**Disposition: SUPERSEDED** (migration-plan §2; archive copies kept verbatim
+for history, cross-linked to the refutation). B3 is reframed onto the surviving
+**B1-RH-ENUM (T7)** continuum-anchored enumerated-reading evidence
+(Math431 LAM/HEX/FCC races, Math434/436 exact-Wick brackets, Math428 Bloch
+log-det, Math432 two-shell ensemble — all migration-clean, batch 2). No tier
+change (B3 stays T4); reframe record + devil's-advocate:
+`claims/B3-BCC-STRUCT/notes/b3-reframe-continuum-260623-260623-v1.0.tex.txt`.
+
+| Legacy path (original) | Consuming claims | Disposition / re-validation | Sign-off |
+|---|---|---|---|
+| `Docs/math/TECT-Math194-BCC-uniqueness-among-3D-crystallographic-competitors.tex.txt` | B3 (refuted lineage) | SUPERSEDED; verbatim (SHA-256 `30ed6de729e7`); script re-run reproduces BCC rank 9 = refutation | n/a (no tier action) |
+| `Docs/math/TECT-Math383-BCC-vs-Competitors-Analytical-and-Numerical.tex.txt` | B3 (refuted lineage) | SUPERSEDED; verbatim (SHA-256 `41070cea6baa`); main claim + §2 K-table T0-refuted by Math400 | n/a |
+| `Codes/supplementary/Math194_brazovskii_lattice_ranking.py` | B3 (refutation demo) | SUPERSEDED; verbatim (SHA-256 `012903d5575a`); re-run prints BCC rank 9 / lamellar rank 1 | n/a |

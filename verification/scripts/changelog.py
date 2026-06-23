@@ -10,6 +10,15 @@ Design (governance/changelog-db.md):
   * QUERY CACHE       changelog/.cache/changelog.db  (gitignored SQLite FTS5;
                       rebuildable from log.jsonl by `build-db`).
 
+Truncation resilience (2026-06-23): the repo lives inside a Google-Drive-synced
+folder that can corrupt files post-write. load() is tolerant (skips corrupted lines
+with a stderr warning instead of crashing every command on one bad line); `verify`
+strictly checks log.jsonl parses + contains every git-HEAD entry + CHANGELOG.md sync
+(wired into release_check); `repair` recovers from git HEAD (union with valid
+working-tree appends, dropping corrupted lines); build-db writes the .db atomically
+(os.replace, no truncated cache on interrupt) and cleans stale temp artefacts; `add`
+refuses to persist over a corrupted log (no silent data loss).
+
 Mirrors the repo's single-source-of-truth pattern (status.json->CLAIMS.md,
 catalog.json->CATALOG.md, todo.json->TODO.md): a plaintext structured source, a
 generated human view, and a rebuildable derived index. No binary enters git.
@@ -58,10 +67,47 @@ def atomic_write(path: Path, text: str):
     os.replace(tmp, str(path))
 
 
+def _parse_lines(text):
+    """Parse JSONL text -> (entries, bad_line_numbers). Never raises on a bad line.
+    Drive can truncate log.jsonl mid-write; this isolates the damage."""
+    entries, bad = [], []
+    for i, ln in enumerate(text.splitlines(), start=1):
+        if not ln.strip():
+            continue
+        try:
+            entries.append(json.loads(ln))
+        except json.JSONDecodeError:
+            bad.append(i)
+    return entries, bad
+
+
+def _git_head_entries():
+    """Entries from the committed log.jsonl (git HEAD) -- the recovery source that
+    Drive working-tree corruption cannot touch. [] if git/blob unavailable."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "show", "HEAD:changelog/log.jsonl"],
+                             capture_output=True, text=True, cwd=str(REPO), timeout=30)
+        if out.returncode != 0:
+            return []
+        ents, _ = _parse_lines(out.stdout)
+        return ents
+    except Exception:
+        return []
+
+
 def load():
+    """Tolerant load: never crashes on a corrupted line (the historical failure mode
+    where one Drive-truncated line broke every changelog command). Corruption is
+    surfaced as a stderr warning; strict checking is `verify`, recovery is `repair`."""
     if not LOG.exists():
         return []
-    return [json.loads(ln) for ln in LOG.read_text(encoding="utf-8").splitlines() if ln.strip()]
+    entries, bad = _parse_lines(LOG.read_text(encoding="utf-8"))
+    if bad:
+        sys.stderr.write(f"[changelog] WARNING: skipped {len(bad)} corrupted line(s) in "
+                         f"changelog/log.jsonl at {bad}; run 'changelog.py repair' "
+                         f"(recovers from git HEAD).\n")
+    return entries
 
 
 def save(entries):
@@ -98,6 +144,12 @@ def cmd_render(args):
 
 
 def cmd_add(args):
+    if LOG.exists():
+        _, bad = _parse_lines(LOG.read_text(encoding="utf-8"))
+        if bad:
+            print(f"changelog add: REFUSED -- changelog/log.jsonl has {len(bad)} corrupted line(s) "
+                  f"at {bad}. Run 'changelog.py repair' first (recovers from git HEAD), then retry.")
+            return 1
     body = sys.stdin.read() if not sys.stdin.isatty() else (args.body or "")
     body = body.rstrip("\n")
     raw = f"## [{args.title}] - {args.date}\n\n{body}\n\n"
@@ -158,13 +210,29 @@ def _build_local():
 
 
 def build_db():
-    p, d = _build_local()
     DBP.parent.mkdir(parents=True, exist_ok=True)
+    # clean stale temp artefacts left by interrupted builds (Drive/timeout)
+    for pat in ("tmp*.db", "tmp*.db-journal", "*.db-journal"):
+        for f in DBP.parent.glob(pat):
+            try:
+                f.unlink()
+            except OSError:
+                pass
+    p, d = _build_local()
+    ok = False
+    tmp = None
     try:
-        shutil.copyfile(p, str(DBP)); ok = True
+        fd, tmp = tempfile.mkstemp(dir=str(DBP.parent), suffix=".db"); os.close(fd)
+        shutil.copyfile(p, tmp)        # copy local build onto the mount, then
+        os.replace(tmp, str(DBP)); ok = True   # ATOMIC swap (no truncated .db on interrupt)
     except OSError as ex:
         print(f"  (cache not persisted to {DBP.relative_to(REPO)} on this filesystem: {ex}; "
               "local build OK -- the operator side persists it on local disk)")
+        if tmp and os.path.exists(tmp):
+            try:
+                os.remove(tmp)
+            except OSError:
+                pass
         ok = False
     shutil.rmtree(d, ignore_errors=True)
     return ok
@@ -231,6 +299,57 @@ def cmd_migrate(args):
     return 0
 
 
+def cmd_verify(args):
+    """Strict integrity check (gate): log.jsonl fully parses, contains every
+    committed (git HEAD) entry, and CHANGELOG.md is in sync. Detects Drive
+    truncation/loss before it reaches a commit."""
+    problems = []
+    if not LOG.exists():
+        print("CHANGELOG-VERIFY: FAIL -- changelog/log.jsonl missing"); return 1
+    text = LOG.read_text(encoding="utf-8")
+    entries, bad = _parse_lines(text)
+    if bad:
+        problems.append(f"{len(bad)} unparseable line(s) at {bad} (truncation/corruption)")
+    head = _git_head_entries()
+    cur_ids = {e.get("id") for e in entries}
+    lost = [e.get("id") for e in head if e.get("id") not in cur_ids]
+    if lost:
+        problems.append(f"{len(lost)} committed entry/entries missing from working tree "
+                        f"(e.g. {lost[:3]})")
+    if MD.exists() and MD.read_text(encoding="utf-8") != render(entries):
+        problems.append("CHANGELOG.md out of sync with log.jsonl")
+    if problems:
+        print("CHANGELOG-VERIFY: FAIL")
+        for pr in problems:
+            print(f"  - {pr}")
+        print("  fix: python verification/scripts/changelog.py repair")
+        return 1
+    print(f"CHANGELOG-VERIFY: PASS ({len(entries)} entries)")
+    return 0
+
+
+def cmd_repair(args):
+    """Recover changelog/log.jsonl from Drive truncation/corruption: union the
+    committed git-HEAD entries with any valid working-tree-only (new, uncommitted)
+    entries, drop corrupted lines, then re-write log.jsonl + CHANGELOG.md + db."""
+    cur, bad = (_parse_lines(LOG.read_text(encoding="utf-8")) if LOG.exists() else ([], []))
+    head = _git_head_entries()
+    by_id, order = {}, []
+    for e in head + cur:               # HEAD first (committed history), then new appends
+        eid = e.get("id")
+        if eid and eid not in by_id:
+            by_id[eid] = e; order.append(eid)
+    recovered = [by_id[i] for i in order]
+    added = len([e for e in cur if e.get("id") not in {h.get("id") for h in head}])
+    save(recovered)
+    atomic_write(MD, render(recovered))
+    build_db()
+    print(f"changelog repair: {len(recovered)} entries restored "
+          f"(git HEAD {len(head)} + {added} working-tree-only; dropped {len(bad)} corrupted line(s)). "
+          f"log.jsonl + CHANGELOG.md + db rebuilt atomically.")
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -248,6 +367,8 @@ def main():
     s.set_defaults(fn=cmd_search)
     sub.add_parser("build-db").set_defaults(fn=cmd_build_db)
     sub.add_parser("migrate").set_defaults(fn=cmd_migrate)
+    sub.add_parser("verify").set_defaults(fn=cmd_verify)
+    sub.add_parser("repair").set_defaults(fn=cmd_repair)
     args = ap.parse_args()
     return args.fn(args)
 
