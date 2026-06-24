@@ -1,0 +1,113 @@
+% SUPERSEDED by a1-production-kernel-manifest-260623-260623-v1.2.tex.txt
+% =============================================================================
+% Title: A1 production kernel manifest -- non-vacuous consistency gates (v1.1)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.1 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T1 OPEN (schema corrected; canonical backend now PASSES, pending N-001 certification)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: three gates incl. |r-(m_sh^2+Y q*^4)|.
+%   v1.1 (2026-06-23) operator review: the v1.0 second gate |r-(m_sh^2+Y q*^4)|
+%        is IDENTICALLY ZERO once m_sh^2:=r-Z^2/4Y, q*^2:=-Z/2Y are substituted --
+%        it auto-passes for all (r,Z,Y) and cannot discriminate. v1.1 replaces it
+%        with gates on the THREE INDEPENDENT STORED fields (r_zero, mu2_shell, q0)
+%        with SEPARATE tolerances; forbids the mu2=r alias (requires mu2_shell);
+%        splits the manifest into CONSISTENCY + ANALYTIC-BRANCH scopes; reads the
+%        backend D(k) and pins config+solver sha256. a1_kernel_checks.py v1.1 (7/7).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+A production config may be cited as the numerical implementation of A2/A3 only if
+its stored kernel parameters are mutually consistent AND it lies in the analytic
+branch. The v1.0 gate set contained a vacuity defect: with
+$m_{\rm sh}^2:=r-Z^2/(4Y)$ and $q_\star^2:=-Z/(2Y)$,
+\begin{equation}
+r-\bigl(m_{\rm sh}^2+Y q_\star^4\bigr)\equiv 0\qquad\text{for all }(r,Z,Y),
+\end{equation}
+so that gate auto-passed and tested nothing. v1.1 corrects this by gating the
+\emph{independent stored fields} $(\texttt{r\_zero},\texttt{mu2\_shell},
+\texttt{q0})$ against the identity, which is non-vacuous. Verification:
+\url{codes/foundations/a1_kernel_checks.py} v1.1 (7/7 PASS).
+
+\section*{2. The v1.1 schema (non-vacuous)}
+
+A config stores three independent fields
+$\texttt{r\_zero}:=D(0)$, $\texttt{mu2\_shell}:=D(q_\star)$, $\texttt{q0}:=q_\star$
+together with $(Z,Y)$. Define
+\begin{equation}
+\delta_Z:=\bigl|Z+2Y\,\texttt{q0}^2\bigr|,\quad
+\delta_m:=\Bigl|\texttt{mu2\_shell}-\bigl(\texttt{r\_zero}-\tfrac{Z^2}{4Y}\bigr)\Bigr|,\quad
+\delta_r:=\bigl|\texttt{r\_zero}-(\texttt{mu2\_shell}+Y\,\texttt{q0}^4)\bigr|,
+\end{equation}
+with \emph{separate} tolerances $\varepsilon_Z,\varepsilon_m,\varepsilon_r$ (the
+residuals carry different dimensions and must not be merged). The legacy alias
+$\texttt{mu2}=r$ is FORBIDDEN in the production schema; $\texttt{mu2\_shell}$ is
+required. Two nested scopes:
+\begin{align}
+\texttt{A1-KERNEL-CONSISTENCY-MANIFEST}:&\quad Y>0,\ Z<0,\ \delta_Z\le\varepsilon_Z,\ \delta_m\le\varepsilon_m,\ \delta_r\le\varepsilon_r,\\
+\texttt{A1-ANALYTIC-BRANCH-MANIFEST}:&\quad \texttt{A1-KERNEL-CONSISTENCY-MANIFEST}\ +\ \texttt{mu2\_shell}>0.
+\end{align}
+Only \texttt{A1-ANALYTIC-BRANCH-MANIFEST} may be cited as the A2/A3 numerical
+implementation. \texttt{A1-KERNEL-CONSISTENCY-MANIFEST} also covers the condensate
+branch $\texttt{mu2\_shell}<0$, but a config there must NOT be claimed to support
+the A2/A3 positive-gap theorems.
+
+\section*{3. Non-vacuity and the backend certificate}
+
+The corrected $\delta_m$ discriminates: with the canonical stored fields it gives
+$\delta_m=0$, and a deliberate $+0.01$ corruption of \texttt{mu2\_shell} yields
+$\delta_m=0.01$ (DETECTED) --- assert
+\texttt{delta\_m\_is\_nonvacuous\_not\_identically\_zero}. The backend diagonal
+$D(k)=\texttt{r\_zero}+Z|k|^2+Y|k|^4$ is read from the canonical reconciliation
+(Math426): $\texttt{r\_zero}=0.21903$, $\texttt{mu2\_shell}=0.00500$,
+$Z=-0.92528$, $Y=1.0000$, $\texttt{q0}=0.6801748$. This config passes BOTH
+manifests ($\delta_Z=4.7\times10^{-11}$, $\delta_m=2.2\times10^{-11}$,
+$\delta_r=0$, $\texttt{mu2\_shell}>0$). The certificate pins
+\texttt{config\_source\_sha256} and \texttt{solver\_source\_sha256}.
+
+\section*{4. The legacy template fails (illustration)}
+
+The illustrative template $(r,Z,Y,q_0)=(0.35,-1,0.50,0.6801748)$ FAILS:
+$\delta_Z=0.537$ ($q_\star^2=1\ne q_0^2=0.463$), derived
+$\texttt{mu2\_shell}=-0.15<0$ (condensate branch), and its $\texttt{mu2}=0.35=r$ is
+the forbidden alias. It is NOT citable as the A2/A3 implementation (assert
+\texttt{legacy\_template\_FAILS\_and\_alias\_forbidden}).
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``Then the manifest should close --- the backend passes.''} VALID
+direction, but OPEN is retained: closure requires an operator-certified N-001
+manifest with pinned $(\varepsilon_Z,\varepsilon_m,\varepsilon_r)$ and the
+config+solver hashes ratified. The canonical config is a certifiable CANDIDATE.
+($\beta$) \emph{``$\delta_m$ still derived?''} DISMISSED --- $\delta_m$ now compares
+the \emph{stored} \texttt{mu2\_shell} to the identity value computed from the
+\emph{stored} $(\texttt{r\_zero},Z,Y)$; corrupting either side moves $\delta_m$
+(demonstrated). ($\gamma$) \emph{``Single tolerance fine?''} UPHELD as a defect in
+v1.0 --- separated into $\varepsilon_Z,\varepsilon_m,\varepsilon_r$.
+Quantitative sanity check: $\delta_m^{\rm corrupt}=0.0100$ vs $\delta_m^{\rm
+canonical}=2.2\times10^{-11}$ (9 orders of magnitude separation).
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST (OPEN, v1.1)
+Precise statement:       Stored (r_zero, mu2_shell, q0)+(Z,Y). delta_Z=|Z+2Y q0^2|,
+                         delta_m=|mu2_shell-(r_zero-Z^2/4Y)|, delta_r=|r_zero-
+                         (mu2_shell+Y q0^4)|, separate tol eps_Z,eps_m,eps_r.
+                         CONSISTENCY: Y>0,Z<0,deltas certified. ANALYTIC-BRANCH:
+                         + mu2_shell>0 (the only A2/A3-citable scope). Alias mu2=r
+                         FORBIDDEN. v1.0 delta_m was identically 0 (fixed).
+Scope:                   production-config certification; two nested manifests.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Evidence grade:          ANALYTIC (gates) + EXECUTED (7/7, hashes pinned).
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         7/7 PASS; canonical PASSES both manifests; template FAILS.
+Tier:                    T1 OPEN (canonical config is a certifiable candidate).
+Falsifier:               operator-certified N-001 manifest (pinned tol + hashes)
+                         closes OPEN; a config failing any delta is rejected.
+No-overclaim:            schema corrected; canonical config not yet operator-
+                         certified; condensate-branch configs do NOT support A2/A3.
+Next required action:    Operator certifies the N-001 ANALYTIC-BRANCH manifest
+                         (ratify eps_Z,eps_m,eps_r + config/solver hashes).
+\end{verbatim}

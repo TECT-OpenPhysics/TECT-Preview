@@ -1,0 +1,33 @@
+{
+  "_schema": "A1 canonical N-001 kernel manifest (v1.2). Five physical params read AS-IS by the checker; no reconstruction/hardcoding. delta_{Z,m,r} computed from these stored fields.",
+  "r_zero": 0.2190336473068255,
+  "mu2_shell": 0.005,
+  "q0": 0.6801747616,
+  "Z": -0.9252754126352337,
+  "Y": 1.0,
+  "eps_Z": 1e-09,
+  "eps_m": 1e-09,
+  "eps_r": 1e-09,
+  "tolerance_note": "eps_Z, eps_m, eps_r are intentionally equal (1e-9): in the TECT dimensionless energy-scale normalisation all three residuals are dimensionless quantities of the same O(mu2_shell) magnitude class; they are kept as separate fields so a future config may tighten/loosen them independently.",
+  "backend_module": "n001_solver (continuation_mu2_v25 + bloch_linearization)",
+  "backend_path": "codes/foundations/n001_solver/bloch_linearization.py",
+  "backend_sha256": "337bd6de6b31e5230b8d139b75df33b67554edf080719d759697e9390f7a98ed",
+  "backend_kernel_form": "D_solver(k) = bloch_matrix_linear(G*,params)[0,0] = r+Z|k|^2+Y|k|^4+eta_shell*(|k|-q0)^2, r,Z = continuation_mu2_v25.kinetic_coefficients(mu2_shell,Y,q0). The verifier imports these ORIGINAL functions.",
+  "provenance": "five params for the N-001 production point (mu2_shell=0.005 shell mass); the verifier reads them AS-IS and calls the vendored N-001 backend (kinetic_coefficients + bloch scalar symbol), with the original solver sources pinned by sha256 and a faithfulness cross-check when the frozen TECT2 tree is reachable.",
+  "origin_n001_solver": {
+    "continuation_mu2_v25.py": {
+      "path": "Codes/pde/continuation_mu2_v25.py (frozen TECT2/Contents)",
+      "sha256": "6db0393a31f31eed7dbb109f23b41f07efd884c819999578394a8dad8f3d7432"
+    },
+    "bloch_linearization.py": {
+      "path": "Codes/pde/bloch_linearization.py (frozen TECT2/Contents)",
+      "sha256": "337bd6de6b31e5230b8d139b75df33b67554edf080719d759697e9390f7a98ed"
+    },
+    "math56_constants.py": {
+      "path": "Codes/pde/math56_constants.py (frozen TECT2/Contents)",
+      "sha256": "6c80859780baf755158c5bcbea1dafdb9928c8b83ed3b1d835226ad1f1dcb3e8"
+    }
+  },
+  "eta_shell": 0.0,
+  "eta_shell_note": "shell-bias coefficient. The N-001 solver symbol is r+Z|k|^2+Y|k|^4+eta_shell*(|k|-q0)^2 (bloch_matrix_linear). The pure Brazovskii A1 kernel REQUIRES eta_shell=0; the verifier enforces it and the stored D_original=r_zero+Z|k|^2+Y|k|^4 holds ONLY under eta_shell=0."
+}

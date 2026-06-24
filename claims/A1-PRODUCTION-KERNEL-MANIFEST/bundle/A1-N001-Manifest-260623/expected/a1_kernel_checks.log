@@ -1,0 +1,22 @@
+  [PASS] kernel_identity_complete_square -- D=r+Z k^2+Y k^4 = mu2_shell+Y(k^2-q*^2)^2; r=mu2_shell+Y q*^4: worst 5.68e-14 (UNCONDITIONAL) [A1-KERNEL-IDENTITY]
+  [PASS] canonical_config_present -- canonical_n001_kernel.json located
+  [PASS] eta_shell_is_zero_pure_brazovskii -- stored eta_shell=0.0: A1/A2/A3 certify the PURE Brazovskii scalar kernel, the eta_shell=0 slice of the N-001 symbol r+Z|k|^2+Y|k|^4+eta_shell*(|k|-q0)^2; stored D_original=r_zero+Z|k|^2+Y|k|^4 holds ONLY here
+  [PASS] n001_original_kinetic_coefficients_match_stored -- ORIGINAL continuation_mu2_v25.kinetic_coefficients(0.005,1.0,0.6801747616) -> (r=0.2190336, Z=-0.9252754) REPRODUCES stored (r_zero=0.2190336, Z=-0.9252754)
+  [PASS] n001_original_bloch_symbol_matches_stored -- ORIGINAL bloch_matrix_linear (eta_shell=0.0) scalar diagonal at k=[0.0, 0.31, 0.6801747616, 0.93, 1.4, 2.2] equals stored r_zero+Z|k|^2+Y|k|^4 to 8.88e-16: the REAL solver linear symbol IS the stored kernel
+  [PASS] shell_bias_term_is_load_bearing -- setting eta_shell=0.1 changes the ORIGINAL symbol by up to 0.2310 (the (|k|-q0)^2 term): eta_shell=0 is load-bearing, not vacuous -- A1 certifies the eta_shell=0 slice only
+  [PASS] n001_original_sources_sha256_pinned -- full sha256 of the 3 vendored ORIGINAL sources match PROVENANCE.json + config (continuation 6db0393a31f31eed.., bloch 337bd6de6b31e523.., math56 6c80859780baf755..)
+  [PASS] stored_field_error_is_detected -- corrupting stored q0 by +1% -> original coefficients (r=0.22772, Z=-0.94387) diverge from stored: the stored-field read is load-bearing
+  [PASS] analytic_branch_D_ge_mu2shell_positive -- mu2_shell=0.005>0, Y=1.0>0, Z=-0.9253<0 => D(k)>=mu2_shell>0 (min=0.005); r_zero=0.21903 distinct [A1-SCALAR-ANALYTIC-BRANCH]
+  [PASS] lambda0_ge_mu2shell_equality_onshell_only -- lambda0(L)=min_k D(k)=0.00857708 >= mu2_shell=0.005; strict on a GENERIC cell [A1-SCALAR-ANALYTIC-BRANCH]
+  [PASS] delta_m_is_nonvacuous_not_identically_zero -- delta_m on independent stored mu2_shell: correct -> 0.00e+00; +0.01 -> 0.0100 (DETECTED)
+  [PASS] canonical_n001_passes_gates_certification_pending -- canonical N-001 (r_zero=0.21903, mu2_shell=0.005, q0=0.6801747616, Z=-0.92528, Y=1.0, eta_shell=0.0): delta_Z=0.00e+00, delta_m=4.34e-18, delta_r=0.00e+00 <= eps; mu2_shell>0; eta_shell=0 => NUMERICAL GATES PASS; OPERATOR CERTIFICATION PENDING (T1 OPEN; not yet citable as the A2/A3 implementation)
+  [PASS] legacy_template_FAILS_and_alias_forbidden -- template (0.35,-1,0.50): delta_Z=0.537>eps; mu2_shell_derived=-0.150<0; 'mu2'=r alias FORBIDDEN. FAILS
+
+A1 kernel checks v1.4: 13/13 PASS
+
+[STDERR]
+WARNING: PyTorch not available. continuation_mu2_v25.py will not execute.
+WARNING: tect_newton_krylov not found. continuation_mu2_v25.py will not execute.
+WARNING: real_backend_pt_bcc_mixed_v3 not found.
+WARNING: bz_preconditioner not found.
+WARNING: check_jacobian_symmetry not found (ModuleNotFoundError: No module named 'tools'). Math63 §2A symmetry-probe-driven solver routing will fall back to plain FGMRES.

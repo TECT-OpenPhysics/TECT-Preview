@@ -1,0 +1,100 @@
+{
+  "version": "1.4.0",
+  "config_source": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json",
+  "eta_shell": 0.0,
+  "n001_solver_dir": "codes/foundations/n001_solver",
+  "original_sha256": {
+    "continuation_mu2_v25.py": "6db0393a31f31eed7dbb109f23b41f07efd884c819999578394a8dad8f3d7432",
+    "bloch_linearization.py": "337bd6de6b31e5230b8d139b75df33b67554edf080719d759697e9390f7a98ed",
+    "math56_constants.py": "6c80859780baf755158c5bcbea1dafdb9928c8b83ed3b1d835226ad1f1dcb3e8"
+  },
+  "bloch_symbol_residual": 8.881784197001252e-16,
+  "shell_bias_load_bearing_diff": 0.23098687552776198,
+  "gates": {
+    "delta_Z": 0.0,
+    "delta_m": 4.336808689942018e-18,
+    "delta_r": 0.0,
+    "mu2_shell_positive": true,
+    "eta_shell_zero": true,
+    "consistency_manifest": true,
+    "analytic_branch_manifest": true,
+    "certification": "operator certification pending (T1 OPEN)"
+  },
+  "subset_map": {
+    "identity": [
+      "kernel_identity_complete_square"
+    ],
+    "analytic_branch": [
+      "analytic_branch_D_ge_mu2shell_positive",
+      "lambda0_ge_mu2shell_equality_onshell_only"
+    ]
+  },
+  "claims": [
+    {
+      "name": "kernel_identity_complete_square",
+      "passed": true,
+      "detail": "D=r+Z k^2+Y k^4 = mu2_shell+Y(k^2-q*^2)^2; r=mu2_shell+Y q*^4: worst 5.68e-14 (UNCONDITIONAL) [A1-KERNEL-IDENTITY]"
+    },
+    {
+      "name": "canonical_config_present",
+      "passed": true,
+      "detail": "canonical_n001_kernel.json located"
+    },
+    {
+      "name": "eta_shell_is_zero_pure_brazovskii",
+      "passed": true,
+      "detail": "stored eta_shell=0.0: A1/A2/A3 certify the PURE Brazovskii scalar kernel, the eta_shell=0 slice of the N-001 symbol r+Z|k|^2+Y|k|^4+eta_shell*(|k|-q0)^2; stored D_original=r_zero+Z|k|^2+Y|k|^4 holds ONLY here"
+    },
+    {
+      "name": "n001_original_kinetic_coefficients_match_stored",
+      "passed": true,
+      "detail": "ORIGINAL continuation_mu2_v25.kinetic_coefficients(0.005,1.0,0.6801747616) -> (r=0.2190336, Z=-0.9252754) REPRODUCES stored (r_zero=0.2190336, Z=-0.9252754)"
+    },
+    {
+      "name": "n001_original_bloch_symbol_matches_stored",
+      "passed": true,
+      "detail": "ORIGINAL bloch_matrix_linear (eta_shell=0.0) scalar diagonal at k=[0.0, 0.31, 0.6801747616, 0.93, 1.4, 2.2] equals stored r_zero+Z|k|^2+Y|k|^4 to 8.88e-16: the REAL solver linear symbol IS the stored kernel"
+    },
+    {
+      "name": "shell_bias_term_is_load_bearing",
+      "passed": true,
+      "detail": "setting eta_shell=0.1 changes the ORIGINAL symbol by up to 0.2310 (the (|k|-q0)^2 term): eta_shell=0 is load-bearing, not vacuous -- A1 certifies the eta_shell=0 slice only"
+    },
+    {
+      "name": "n001_original_sources_sha256_pinned",
+      "passed": true,
+      "detail": "full sha256 of the 3 vendored ORIGINAL sources match PROVENANCE.json + config (continuation 6db0393a31f31eed.., bloch 337bd6de6b31e523.., math56 6c80859780baf755..)"
+    },
+    {
+      "name": "stored_field_error_is_detected",
+      "passed": true,
+      "detail": "corrupting stored q0 by +1% -> original coefficients (r=0.22772, Z=-0.94387) diverge from stored: the stored-field read is load-bearing"
+    },
+    {
+      "name": "analytic_branch_D_ge_mu2shell_positive",
+      "passed": true,
+      "detail": "mu2_shell=0.005>0, Y=1.0>0, Z=-0.9253<0 => D(k)>=mu2_shell>0 (min=0.005); r_zero=0.21903 distinct [A1-SCALAR-ANALYTIC-BRANCH]"
+    },
+    {
+      "name": "lambda0_ge_mu2shell_equality_onshell_only",
+      "passed": true,
+      "detail": "lambda0(L)=min_k D(k)=0.00857708 >= mu2_shell=0.005; strict on a GENERIC cell [A1-SCALAR-ANALYTIC-BRANCH]"
+    },
+    {
+      "name": "delta_m_is_nonvacuous_not_identically_zero",
+      "passed": true,
+      "detail": "delta_m on independent stored mu2_shell: correct -> 0.00e+00; +0.01 -> 0.0100 (DETECTED)"
+    },
+    {
+      "name": "canonical_n001_passes_gates_certification_pending",
+      "passed": true,
+      "detail": "canonical N-001 (r_zero=0.21903, mu2_shell=0.005, q0=0.6801747616, Z=-0.92528, Y=1.0, eta_shell=0.0): delta_Z=0.00e+00, delta_m=4.34e-18, delta_r=0.00e+00 <= eps; mu2_shell>0; eta_shell=0 => NUMERICAL GATES PASS; OPERATOR CERTIFICATION PENDING (T1 OPEN; not yet citable as the A2/A3 implementation)"
+    },
+    {
+      "name": "legacy_template_FAILS_and_alias_forbidden",
+      "passed": true,
+      "detail": "template (0.35,-1,0.50): delta_Z=0.537>eps; mu2_shell_derived=-0.150<0; 'mu2'=r alias FORBIDDEN. FAILS"
+    }
+  ],
+  "all_pass": true
+}

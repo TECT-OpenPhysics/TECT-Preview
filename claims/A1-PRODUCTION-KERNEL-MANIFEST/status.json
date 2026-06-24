@@ -1,0 +1,40 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-IDENTITY",
+    "A1-SCALAR-ANALYTIC-BRANCH"
+  ],
+  "hypotheses": [],
+  "soft_dependencies": [],
+  "open_gates": [],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-06-23)",
+  "legacy_evidence": [
+    "claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.tex.txt",
+    "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json (6 physical fields + 7-key scalar_slice + origin hash map)",
+    "codes/foundations/n001_solver/ (byte-identical ORIGINAL N-001 solver sources)",
+    "codes/foundations/a1_kernel_checks.py (14/14, v1.5: full runtime scalar_slice from JSON -> original bloch_matrix_linear)"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a1_kernel_checks.py",
+    "expected": "14/14 PASS; schema complete; runtime symbol matches stored (8.9e-16); scalar_slice settings load-bearing; sha256 pinned",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-06-23",
+  "notes": "A1 split (operator review). v1.5 (2026-06-23): v1.4 imported the original solver + eta_shell=0 but HARDCODED family_masses=[0,0,0] and k_lock=0 in the checker (the original DEFAULT is k_lock=0.15, which adds k_lock*(I-P0) to the diagonal), and the shipped config could go stale (KeyError eta_shell). v1.5: the checker asserts config SCHEMA completeness first (stale config -> named failure, not raw KeyError), and reads the FULL scalar-slice param set (laplacian_mode=spectral, bcc_mix_epsilon=0, a_bcc=1, family_masses=0, k_lock=0, z0, eta_shell=0) from canonical_n001_kernel.json['scalar_slice'], passing it verbatim to the ORIGINAL bloch_matrix_linear so the verified symbol IS the runtime symbol (residual 8.9e-16). Each setting is shown load-bearing (k_lock=0.15->0.1, eta_shell=0.1->0.231, mixed_bcc(eps=.5)->2.0, family->0.05). 3 source sha256 pinned. a1_kernel_checks.py v1.5 = 14/14, standalone-reproducible. Gates pass but 'OPERATOR CERTIFICATION PENDING' -- T1 OPEN. Math424 cert + v1.3 mimic WITHDRAWN; mimic excluded from the v1.5 bundle.",
+  "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+  "title": "Production kernel manifest: parameter-consistency gates (current config is a mock)",
+  "sector": "A",
+  "statement": "A config stores (r_zero, mu2_shell, q0, Z, Y, eta_shell) + a 7-key scalar_slice (laplacian_mode, bcc_mix_epsilon, a_bcc, family_masses, k_lock, z0, eta_shell). The N-001 solver symbol is bloch_matrix_linear(|k|,{r,Z,Y,q0,**scalar_slice}); (r,Z)=kinetic_coefficients(mu2_shell,Y,q0). Gates delta_Z,delta_m,delta_r (separate tolerances); CONSISTENCY: Y>0,Z<0,deltas; ANALYTIC-BRANCH: +mu2_shell>0 AND the scalar_slice (eta_shell=0, k_lock=0, spectral, etc.) reproduces the stored r_zero+Z|k|^2+Y|k|^4. The verifier asserts schema completeness, reads the scalar_slice AS-IS, imports the ORIGINAL solver, and confirms the runtime symbol = stored kernel; each scalar_slice setting is shown load-bearing. Canonical N-001 clears both manifests AND matches the real solver (gates pass; certification pending). Alias mu2=r FORBIDDEN; template (0.35,-1,0.50) FAILS.",
+  "scope": "pure-Brazovskii scalar slice certification (CONSISTENCY + ANALYTIC-BRANCH); verifier reads the full runtime scalar_slice from JSON and imports the ORIGINAL N-001 solver; full anisotropic operator excluded.",
+  "tier": "T1",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "falsifier": "A config passing all gates with m_sh^2>0 closes the OPEN status for that config (admits it as production).",
+  "no_overclaim": "scalar slice only (full anisotropic/locked/shell-biased operator excluded); gates passing is NOT certification; NOT yet operator-certified, NOT yet A2/A3-citable; Math424 cert + v1.3 mimic WITHDRAWN.",
+  "next_action": "Operator certifies the N-001 ANALYTIC-BRANCH manifest (ratify eps_Z,eps_m,eps_r + config/solver sha256)."
+}

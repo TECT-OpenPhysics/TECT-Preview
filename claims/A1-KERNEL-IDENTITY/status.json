@@ -1,0 +1,39 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-CONV"
+  ],
+  "hypotheses": [
+    "A1-KERNEL-CONV"
+  ],
+  "soft_dependencies": [],
+  "open_gates": [],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-06-23)",
+  "legacy_evidence": [
+    "claims/A1-KERNEL-IDENTITY/notes/a1-kernel-identity-260623-260623-v1.0.tex.txt",
+    "codes/foundations/a1_kernel_checks.py (4/4)"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a1_kernel_checks.py",
+    "expected": "4/4 PASS; identity residual ~1e-14",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-06-23",
+  "notes": "A1 split (operator review 2026-06-23): the complete-the-square identity separating r=K(0) (zero-momentum) from m_sh^2=K(q_star) (shell). T6 PROVED APPROVED 2026-06-23 (operator). mu^2 deprecated -> mu2_shell (m_sh^2) / r_zero.",
+  "id": "A1-KERNEL-IDENTITY",
+  "title": "Kernel complete-the-square identity (zero-momentum vs shell mass)",
+  "sector": "A",
+  "statement": "For Y>0, Z<0: K(q)=r+Z|q|^2+Y|q|^4 = m_sh^2 + Y(|q|^2-q_star^2)^2 with q_star^2=-Z/(2Y), m_sh^2=r-Z^2/(4Y), and r=K(0)=m_sh^2+Y q_star^4. The zero-momentum mass r and the shell mass m_sh^2 are distinct (differ by Y q_star^4).",
+  "scope": "Algebraic identity; Y>0, Z<0 (shell q_star^2>0). Naming: mu^2 deprecated for A1 -> m_sh^2 (mu2_shell) for K(q_star), r (r_zero) for K(0).",
+  "tier": "T6",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "falsifier": "A counterexample to the algebraic identity (none possible) or to r=K(0)=m_sh^2+Y q_star^4.",
+  "no_overclaim": "Identity/naming only; positivity is A1-SCALAR-ANALYTIC-BRANCH; production consistency is A1-PRODUCTION-KERNEL-MANIFEST.",
+  "next_action": "Operator sign-off; A2/A3 re-link to A1-SCALAR-ANALYTIC-BRANCH."
+}

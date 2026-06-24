@@ -1,0 +1,115 @@
+% SUPERSEDED by a1-production-kernel-manifest-260623-260623-v1.3.tex.txt
+% =============================================================================
+% Title: A1 production kernel manifest -- verifier reads stored fields + calls backend D(k) (v1.2)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.2 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T1 OPEN (numerical gates pass on the canonical N-001 candidate; operator certification pending)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) first issue: three gates incl. |r-(m_sh^2+Y q*^4)|.
+%   v1.1 (2026-06-23) operator review: the v1.0 second gate is identically 0;
+%        gate the independent stored fields; split CONSISTENCY + ANALYTIC-BRANCH.
+%   v1.2 (2026-06-23) operator review: v1.1's checker HARDCODED q0 and DERIVED Y
+%        (a wrong stored field could not be caught) and did not evaluate the
+%        backend D(k). v1.2 reads the FIVE physical params AS-IS from a config
+%        JSON, IMPORTS the backend module and verifies D_code(k) against the
+%        stored polynomial (semantic check), proves the reader has teeth (a
+%        corrupted stored q0 is detected), and reports "operator certification
+%        pending" (NOT "citable"). a1_kernel_checks.py v1.2 (9/9 PASS).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+A production config may be cited as the numerical implementation of A2/A3 only if
+its stored kernel parameters are mutually consistent AND it lies in the analytic
+branch. v1.2 makes the verifier actually read the stored fields and call the
+backend kernel, closing the two v1.1 implementation gaps (hardcoded $q_0$,
+derived $Y$, no backend evaluation). Verification:
+\url{codes/foundations/a1_kernel_checks.py} v1.2 (9/9 PASS); config
+\url{claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json}.
+
+\section*{2. The schema (unchanged from v1.1) and the verifier (new in v1.2)}
+
+A config stores five independent physical fields
+$\texttt{r\_zero}:=D(0)$, $\texttt{mu2\_shell}:=D(q_\star)$, $\texttt{q0}:=q_\star$,
+$Z$, $Y$, plus separate tolerances $\varepsilon_Z,\varepsilon_m,\varepsilon_r$ and
+backend provenance. Gates:
+\begin{equation}
+\delta_Z:=\bigl|Z+2Y\,\texttt{q0}^2\bigr|,\quad
+\delta_m:=\Bigl|\texttt{mu2\_shell}-\bigl(\texttt{r\_zero}-\tfrac{Z^2}{4Y}\bigr)\Bigr|,\quad
+\delta_r:=\bigl|\texttt{r\_zero}-(\texttt{mu2\_shell}+Y\,\texttt{q0}^4)\bigr|.
+\end{equation}
+\begin{align}
+\texttt{A1-KERNEL-CONSISTENCY-MANIFEST}:&\quad Y>0,\ Z<0,\ \delta_Z\le\varepsilon_Z,\ \delta_m\le\varepsilon_m,\ \delta_r\le\varepsilon_r,\\
+\texttt{A1-ANALYTIC-BRANCH-MANIFEST}:&\quad \texttt{A1-KERNEL-CONSISTENCY-MANIFEST}\ +\ \texttt{mu2\_shell}>0.
+\end{align}
+The legacy alias $\texttt{mu2}=r$ is FORBIDDEN; $\texttt{mu2\_shell}$ is required.
+The verifier reads all five fields AS-IS from the config JSON (no reconstruction,
+no hardcoding) and computes $\delta_Z,\delta_m,\delta_r$ from them.
+
+\section*{3. Semantic backend check (v1.2)}
+
+The verifier imports the backend module (\texttt{Math424\_AddA\_reading\_uniqueness})
+and evaluates the backend kernel
+\begin{equation}
+D_{\rm code}(k)=\texttt{MU2\_CANON}+C\,(k^2-Q_0^2)^2
+\qquad(\texttt{MU2\_CANON},C,Q_0\ \text{imported constants}),
+\end{equation}
+verifying $D_{\rm code}(k)=\texttt{r\_zero}+Z|k|^2+Y|k|^4$ at
+$k\in\{0,0.31,q_0,0.93,1.4,2.2\}$ to $4.4\times10^{-16}$ (assert
+\texttt{backend\_Dcode\_matches\_stored\_params}). A source hash alone is only
+provenance; this is an implementation-semantics check. That the reader has teeth
+is demonstrated: corrupting the stored $q_0$ by $1\%$ makes the residual
+$9.0\times10^{-2}\gg$ tol (assert \texttt{stored\_field\_error\_is\_detected}).
+The pinned \texttt{backend\_sha256} is retained as provenance.
+
+\section*{4. Canonical N-001 candidate and the legacy template}
+
+The canonical N-001 config $(\texttt{r\_zero}=0.21903,\ \texttt{mu2\_shell}=0.005,\
+\texttt{q0}=0.6801748,\ Z=-0.92528,\ Y=1)$ passes both manifests
+($\delta_Z=\delta_r=0$, $\delta_m=4.3\times10^{-18}$, $\texttt{mu2\_shell}>0$):
+the NUMERICAL GATES PASS but OPERATOR CERTIFICATION IS PENDING --- the card stays
+T1 OPEN and the config is NOT yet citable as the A2/A3 implementation. The
+illustrative template $(r,Z,Y,q_0)=(0.35,-1,0.50,0.6801748)$ FAILS
+($\delta_Z=0.537$, derived $\texttt{mu2\_shell}=-0.15<0$, $\texttt{mu2}=r$ alias).
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``Gates pass, so close it.''} VALID direction, OPEN retained:
+closure is an operator act (ratify $\varepsilon_Z,\varepsilon_m,\varepsilon_r$ +
+the config/backend hashes). The script now reports ``certification pending,'' not
+``citable.'' ($\beta$) \emph{``Hardcoded $q_0$ again?''} DISMISSED --- v1.2 reads
+$q_0$ and $Y$ from the JSON and the corrupted-$q_0$ test fires, proving the read
+is load-bearing. ($\gamma$) \emph{``Equal tolerances merged?''} DISMISSED ---
+$\varepsilon_Z,\varepsilon_m,\varepsilon_r$ are separate JSON fields; they are
+intentionally equal ($10^{-9}$, same dimensionless TECT energy-scale class) and
+documented as such in the config \texttt{tolerance\_note}.
+Quantitative sanity check: semantic residual $4.4\times10^{-16}$; corrupted-$q_0$
+residual $9.0\times10^{-2}$ (14 orders of magnitude separation).
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST (OPEN, v1.2)
+Precise statement:       Verifier reads 5 stored fields (r_zero, mu2_shell, q0,
+                         Z, Y) AS-IS from canonical_n001_kernel.json; computes
+                         delta_Z,delta_m,delta_r (separate eps); imports the
+                         backend module and verifies D_code(k)=r_zero+Z k^2+Y k^4
+                         (semantic) + corrupted-q0 detection + pinned sha256.
+                         CONSISTENCY: Y>0,Z<0,deltas. ANALYTIC-BRANCH: +mu2_shell
+                         >0 (only A2/A3-citable). Alias mu2=r FORBIDDEN.
+Scope:                   production-config certification; two nested manifests.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Evidence grade:          ANALYTIC (gates) + EXECUTED (9/9, semantic + provenance).
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         9/9 PASS; canonical gates pass (cert pending); template
+                         FAILS; corrupted-q0 detected.
+Tier:                    T1 OPEN (numerical gates pass; certification pending).
+Falsifier:               operator-certified N-001 manifest (ratified tol + hashes)
+                         closes OPEN; any config failing a delta is rejected.
+No-overclaim:            gates passing != certification; canonical config NOT yet
+                         operator-certified, NOT yet citable as A2/A3 impl;
+                         condensate-branch configs do NOT support the A2/A3 gap.
+Next required action:    Operator certifies the N-001 ANALYTIC-BRANCH manifest
+                         (ratify eps_Z,eps_m,eps_r + config/backend sha256).
+\end{verbatim}

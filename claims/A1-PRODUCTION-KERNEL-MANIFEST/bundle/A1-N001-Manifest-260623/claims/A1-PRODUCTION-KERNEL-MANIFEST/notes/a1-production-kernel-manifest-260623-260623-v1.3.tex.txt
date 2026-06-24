@@ -1,0 +1,113 @@
+% =============================================================================
+% Title: A1 production kernel manifest -- verifier calls the REAL N-001 PDE backend (v1.3)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.3 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T1 OPEN (real-backend gates pass; submitted for operator independent run + certification)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) three gates incl. |r-(m_sh^2+Y q*^4)| (identically 0).
+%   v1.1 (2026-06-23) gate the independent stored fields; split CONSISTENCY/BRANCH.
+%   v1.2 (2026-06-23) verifier reads stored fields AS-IS + semantic backend call.
+%   v1.3 (2026-06-23) operator review: v1.2 imported Math424_AddA_reading_uniqueness
+%        -- a Gibbs-Bogoliubov variational-Hartree READINGS comparison, NOT the
+%        canonical N-001 microscopic PDE solver. v1.3 calls the REAL N-001 backend
+%        (kinetic_coefficients from Codes/pde/continuation_mu2_v25.py + the scalar
+%        linear symbol from bloch_linearization.py), vendored into
+%        actual_n001_pde_backend.py and bundled with the config + checker; verifies
+%        kinetic_coefficients reproduces the stored (r_zero,Z); cross-checks the
+%        vendored backend against the original solver. a1_kernel_checks.py v1.3 (11/11).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+A production config is the numerical implementation of A2/A3 only if (i) its stored
+parameters are mutually consistent, (ii) it lies in the analytic branch, and
+(iii) it is the kernel actually implemented by the canonical N-001 microscopic PDE
+solver. v1.2 established (i)+(ii) but checked (iii) against the WRONG backend
+(Math424, a variational-Hartree readings comparison). v1.3 closes (iii) by calling
+the REAL N-001 solver. Verification: \url{codes/foundations/a1_kernel_checks.py}
+v1.3 (11/11 PASS); backend \url{codes/foundations/actual_n001_pde_backend.py};
+config \url{claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json}.
+
+\section*{2. The real N-001 backend (v1.3)}
+
+The canonical N-001 solver fixes the kinetic coefficients via
+\begin{equation}
+(r,Z)=\texttt{kinetic\_coefficients}(\texttt{mu2\_shell},Y,q_0):\qquad
+r=\texttt{mu2\_shell}+Y q_0^4,\quad Z=-2Y q_0^2,
+\end{equation}
+(\texttt{Codes/pde/continuation\_mu2\_v25.py}) and realises the linear operator as
+the scalar Bloch symbol
+\begin{equation}
+D_{\rm backend}(k)=r+Z\,s_2+Y\,s_2^2,\qquad s_2=|k|^2
+\end{equation}
+(\texttt{bloch\_matrix\_linear} in \texttt{Codes/pde/bloch\_linearization.py},
+residual $r\Psi-Z\nabla^2\Psi+Y\nabla^4\Psi$). Both are vendored VERBATIM into
+\texttt{actual\_n001\_pde\_backend.py} with the originals pinned by sha256. The
+verifier (a) confirms
+$\texttt{kinetic\_coefficients}(\texttt{mu2\_shell},Y,q_0)=(\texttt{r\_zero},Z)$
+to $10^{-12}$ --- the stored fields ARE the solver's own coefficients --- and (b)
+confirms $D_{\rm backend}(k)=\texttt{r\_zero}+Z|k|^2+Y|k|^4$ to $8.9\times10^{-16}$.
+
+\section*{3. Faithfulness, provenance, and teeth}
+
+When the frozen TECT2 solver tree is reachable, the verifier imports the ORIGINAL
+\texttt{continuation\_mu2\_v25.py} and asserts the vendored
+\texttt{kinetic\_coefficients} reproduces it exactly ($0$ over a random sweep);
+otherwise it reports the cross-check SKIPPED and relies on the pinned sha256
+(\texttt{continuation} \texttt{6db0393a..}, \texttt{bloch} \texttt{337bd6de..}).
+The reader has teeth: corrupting the stored $q_0$ by $1\%$ makes
+$\texttt{kinetic\_coefficients}$ diverge from the stored $(r,Z)$ by $O(10^{-2})$.
+
+\section*{4. Status: gates pass, certification pending}
+
+The canonical N-001 config $(\texttt{r\_zero}=0.21903,\ \texttt{mu2\_shell}=0.005,\
+\texttt{q0}=0.6801748,\ Z=-0.92528,\ Y=1)$ clears both manifests
+($\delta_Z=\delta_r=0$, $\delta_m=4.3\times10^{-18}$, $\texttt{mu2\_shell}>0$) AND
+matches the real N-001 backend. The script reports ``numerical gates pass;
+operator certification pending'': the card stays T1 OPEN pending the operator's
+independent run of the three-file bundle and certification act.
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``Vendored copy is not the real backend.''} VALID-with-mitigation
+--- the vendored functions are byte-faithful to the originals (verified when
+reachable; sha256-pinned otherwise), so the bundle is self-contained without
+misrepresenting the source. ($\beta$) \emph{``$s_2=|k|^2$ ignores the anisotropic
+$M_{\rm family}/M_{\rm lock}/M_{\rm shellbias}$ terms.''} VALID --- v1.3 certifies
+the SCALAR linear symbol only; the anisotropic corrections are a separate
+operator-curvature question (mainline production-Hessian), not the A1 scalar
+kernel. ($\gamma$) \emph{``Gates pass = certified.''} DISMISSED --- the script and
+this note both state certification is pending; T1 OPEN retained. Quantitative
+sanity check: backend symbol residual $8.9\times10^{-16}$; corrupted-$q_0$
+divergence $\sim9\times10^{-3}$ in $r$.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST (OPEN, v1.3)
+Precise statement:       Verifier reads 5 stored fields AS-IS, calls the REAL
+                         N-001 backend (kinetic_coefficients + bloch scalar
+                         symbol, vendored from continuation_mu2_v25.py +
+                         bloch_linearization.py): kinetic_coefficients(mu2_shell,
+                         Y,q0)=(r_zero,Z) and D_backend(k)=r_zero+Z k^2+Y k^4
+                         (residual 8.9e-16); faithfulness vs original + sha256
+                         pins; delta_{Z,m,r}<=eps; mu2_shell>0. Scalar symbol only.
+Scope:                   N-001 scalar kernel certification; CONSISTENCY + BRANCH.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Bundle:                  canonical_n001_kernel.json + actual_n001_pde_backend.py
+                         + a1_kernel_checks.py (travel together).
+Evidence grade:          ANALYTIC + EXECUTED (11/11) -- pending operator independent run.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         11/11 PASS; kinetic_coefficients match stored; backend
+                         symbol matches; faithfulness verified or SKIPPED.
+Tier:                    T1 OPEN (gates pass; certification pending).
+Falsifier:               a backend-source change (hash mismatch), a stored-field
+                         edit breaking a delta, or kinetic_coefficients not
+                         reproducing the stored (r_zero,Z) refuses use.
+No-overclaim:            scalar symbol only (anisotropic M-terms excluded);
+                         gates passing != certification; canonical config NOT yet
+                         operator-certified, NOT yet A2/A3-citable.
+Next required action:    Operator independently runs the bundle (TECT2/Contents
+                         reachable) and certifies the N-001 ANALYTIC-BRANCH manifest.
+\end{verbatim}

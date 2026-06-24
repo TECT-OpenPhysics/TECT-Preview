@@ -300,6 +300,7 @@ exist here. Last updated: 2026-06-05.
 | [**C6-BCC-PREMISE-BLOCKED**](#c6-bcc-premise-blocked) | BLOCKED -- BCC-structure premise unavailable … |
 | [**A3-H1-DIM3-Q4-KERNEL**](#a3-h1-dim3-q4-kernel) | d=3 with q^4 kernel => D<0 … |
 | [**A3-H2-IR-POSITIVITY**](#a3-h2-ir-positivity) | mu^2>0 => K>=mu^2>0 (IR finite) … |
+| [**A1-SHELL-POSITIVITY**](#a1-shell-positivity) | Y>0, Z<0, m_sh^2>0 (analytic branch) … |
 | [**A3-GRAPHWISE-CONVERGENCE**](#a3-graphwise-convergence) | CLOSED@spectral (T6 ratified 2026-06-23); lattice=Route B open … |
 
 <a id="h-layer"></a>
@@ -458,6 +459,17 @@ exist here. Last updated: 2026-06-05.
 **Statement:** For the perturbative measure $d\nu_{\Lambda,a}=Z^{-1}e^{-F_{\Lambda,a}}D\phi$, every connected amplitude must converge graphwise: $\lim_{a\to0}\mathcal A_{\mathcal G,a}(p_1,\ldots,p_n)=\mathcal A_{\mathcal G}(p_1,\ldots,p_n)$, via dominated convergence (lattice-propagator pointwise convergence + uniform $q^{-4}$ UV bound + Weinberg uniform integrability), with a defined regulator family $K_a$ matching the Brillouin-zone cutoff to the continuum kernel.
 
 **Discharge path:** PROVED 2026-06-23 via the SPECTRAL/Galerkin regulator G_a=1_{|q|<=pi/a}/K (Route A; v1.3 -- the v1.1/v1.2 finite-difference-lattice domination was refuted by aliasing/folding). Genuine lattice (Reisz power counting) = Route B, OPEN. Operator T6 RATIFIED 2026-06-23 (spectral/fixed-p scope). Genuine finite-difference lattice = Route B (Reisz), OPEN refinement. Originally via the lattice regulator $\hat q_j=\tfrac2a\sin\tfrac{aq_j}2$ + dominated convergence (pointwise $G_a\to G$ + uniform $(1+|q|)^{-4}$ bound from $|\hat q|\ge\tfrac2\pi|q|$ on BZ + Weinberg integrability), with $\Lambda=\pi/a$ tying $a\to0\equiv\Lambda\to\infty$ (claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-graphwise-convergence-lemma-260623-260623-v1.1.tex.txt; codes/foundations/a3_graphwise_convergence_checks.py 7/7). A3-PERTURBATIVE-CONTINUUM-CORRELATORS -> T6.
+
+
+<a id="a1-shell-positivity"></a>
+### **A1-SHELL-POSITIVITY**
+
+**Statement:** $Y>0$, $Z<0$ and the SHELL mass $m_{\rm sh}^2:=K(q_\star)=r-Z^2/(4Y)>0$ (A1-KERNEL-IDENTITY). Then $K(q)=m_{\rm sh}^2+Y(|q|^2-q_\star^2)^2\ge m_{\rm sh}^2>0$. This is the precise positivity hypothesis used by A2 (sectoriality / $H^2$ equivalence) and A3 (IR finiteness / $q^{-4}$ decay), stated in the shell mass -- NOT the zero-momentum $r=K(0)$ nor the solver template's \texttt{mu2}$=r$.
+
+**Discharge path:** carried as the named hypothesis of A1-SCALAR-ANALYTIC-BRANCH (T6 conditional) and inherited by A2/A3 via that dependency; SATISFIED@anchor ($m_{\rm sh}^2=5\times10^{-3}>0$, $Y=1$, $Z=-0.925$).
+
+
+
 
 ## Gate lifecycle
 

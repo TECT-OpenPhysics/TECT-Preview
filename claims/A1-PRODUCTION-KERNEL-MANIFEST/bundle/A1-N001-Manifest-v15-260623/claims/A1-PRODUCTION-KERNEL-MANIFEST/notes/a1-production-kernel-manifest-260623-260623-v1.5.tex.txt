@@ -1,0 +1,108 @@
+% =============================================================================
+% Title: A1 production kernel manifest -- full runtime scalar-slice from JSON (v1.5)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.5 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T1 OPEN (runtime-faithful scalar symbol verified; submitted for operator independent run + certification)
+%
+% Revision history (cumulative):
+%   v1.0-1.3 (2026-06-23) gate schema + stored-field reader; v1.3 mimic omitted shell-bias.
+%   v1.4 (2026-06-23) imported the ORIGINAL solver + eta_shell=0, but (a) hardcoded
+%        family_masses=[0,0,0] and k_lock=0 in the checker rather than reading them, and
+%        (b) the shipped config could go stale (KeyError eta_shell).
+%   v1.5 (2026-06-23) operator review: (1) the checker now asserts the config SCHEMA is
+%        complete first (a stale config fails a NAMED claim, not a raw KeyError); (2) the
+%        FULL scalar-slice param set (laplacian_mode, bcc_mix_epsilon, a_bcc, family_masses,
+%        k_lock, z0, eta_shell) is read from canonical_n001_kernel.json["scalar_slice"] and
+%        passed verbatim to the ORIGINAL bloch_matrix_linear, so the verified symbol IS the
+%        runtime symbol; each setting is shown load-bearing. a1_kernel_checks.py v1.5 (14/14).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+Certifying the scalar Brazovskii slice as the real N-001 kernel requires that the
+verifier evaluate the ORIGINAL \texttt{bloch\_matrix\_linear} under the EXACT runtime
+settings, not checker-chosen defaults. The function's scalar diagonal depends on
+\texttt{laplacian\_mode}, \texttt{bcc\_mix\_epsilon}, \texttt{a\_bcc},
+\texttt{family\_masses}, \texttt{k\_lock} (function DEFAULT $0.15$) and
+\texttt{eta\_shell}; v1.4 hardcoded two of these. v1.5 reads all of them from the
+config and passes them verbatim. Verification:
+\url{codes/foundations/a1_kernel_checks.py} v1.5 (14/14 PASS); solver sources
+\url{codes/foundations/n001_solver/}; config
+\url{claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json}.
+
+\section*{2. The runtime scalar slice}
+
+The config stores the full param set passed to the original function:
+\begin{equation}
+\begin{aligned}
+\texttt{scalar\_slice}=\{&\texttt{laplacian\_mode}{=}\text{spectral},\ \texttt{bcc\_mix\_epsilon}{=}0,\ \texttt{a\_bcc}{=}1,\\
+&\texttt{family\_masses}{=}\mathbf{0},\ \texttt{k\_lock}{=}0,\ \texttt{eta\_shell}{=}0\}.
+\end{aligned}
+\end{equation}
+Under these, the ORIGINAL $\texttt{bloch\_matrix\_linear}(\{|k|,0,0\},\{r,Z,Y,q_0,
+\texttt{**scalar\_slice}\})_{00}$ equals the stored $r_{\rm zero}+Z|k|^2+Y|k|^4$ to
+$8.9\times10^{-16}$. Each setting is load-bearing (reverting it shifts the ORIGINAL
+diagonal): $\texttt{k\_lock}{=}0.15$ (the function default) $\to0.100$ via
+$k_{\rm lock}(I-P_0)_{00}=0.15\cdot\tfrac{2}{3}$; $\texttt{eta\_shell}{=}0.1\to0.231$;
+$\texttt{mixed\_bcc}(\epsilon{=}0.5)\to1.997$; $\texttt{family\_masses}\to0.050$.
+Thus fixing them in the CONFIG (read by the checker) rather than in the checker is
+essential to verifying the runtime symbol.
+
+\section*{3. Schema completeness and provenance}
+
+The verifier asserts the config carries all required keys (the six physical fields,
+three tolerances, the seven \texttt{scalar\_slice} keys, the \texttt{origin\_n001\_solver}
+hash map) BEFORE using them, so a stale/v1.2 config fails the named claim
+\texttt{config\_schema\_v15\_complete} rather than raising \texttt{KeyError}. The three
+original solver sources are vendored byte-identical under \texttt{n001\_solver/} with
+full sha256 pinned and checked (\texttt{continuation\_mu2\_v25.py 6db0393a..},
+\texttt{bloch\_linearization.py 337bd6de..}, \texttt{math56\_constants.py 6c808597..}).
+The withdrawn v1.3 mimic \texttt{actual\_n001\_pde\_backend.py} is excluded from the
+v1.5 bundle and no config key references it.
+
+\section*{4. Status: gates pass, certification pending}
+
+Under the runtime scalar slice the canonical N-001 config clears both manifests
+($\delta_Z=\delta_r=0$, $\delta_m=4.3\times10^{-18}$, $\texttt{mu2\_shell}>0$) AND the
+ORIGINAL solver symbol equals the stored kernel. The script reports ``numerical gates
+pass; operator certification pending'': T1 OPEN, pending the operator's independent run.
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``Checker still chooses settings.''} DISMISSED --- all scalar-slice
+settings are read from the JSON and shown load-bearing; the checker injects none.
+($\beta$) \emph{``Stale config slips through.''} DISMISSED --- the schema-completeness
+claim fails loudly on any missing key. ($\gamma$) \emph{``Scalar slice $\neq$ full
+operator.''} VALID and explicitly scoped --- A1/A2/A3 certify the pure scalar Brazovskii
+kernel; the anisotropic / locked / shell-biased operator is the mainline
+production-Hessian question. Quantitative sanity check: runtime symbol residual
+$8.9\times10^{-16}$; $k_{\rm lock}=0.15$ shift $0.100=0.15\cdot\tfrac23$ (exact).
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST (OPEN, v1.5)
+Precise statement:       Verifier asserts config schema complete, reads 6 physical
+                         fields + the 7-key scalar_slice from canonical_n001_kernel
+                         .json, imports the ORIGINAL solver and evaluates
+                         bloch_matrix_linear(|k|, {r,Z,Y,q0, **scalar_slice}) =
+                         r_zero+Z|k|^2+Y|k|^4 (8.9e-16) -- the runtime symbol; each
+                         scalar_slice setting shown load-bearing (k_lock=0.15->0.1,
+                         eta_shell=0.1->0.231, mixed_bcc->2.0, family->0.05); 3
+                         source sha256 pinned.
+Scope:                   pure-Brazovskii scalar slice; CONSISTENCY + ANALYTIC-BRANCH.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Bundle:                  canonical_n001_kernel.json + continuation_mu2_v25.py +
+                         bloch_linearization.py + math56_constants.py + a1_kernel_checks.py.
+Evidence grade:          ANALYTIC + EXECUTED (14/14) -- pending operator independent run.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         14/14 PASS; schema complete; runtime symbol matches; all
+                         scalar_slice settings load-bearing; sha256 pinned.
+Tier:                    T1 OPEN (gates pass; certification pending).
+Falsifier:               any scalar_slice setting != stored, eta_shell != 0, a source
+                         -hash mismatch, a stored-field edit breaking a delta, or
+                         kinetic_coefficients not reproducing (r_zero,Z).
+No-overclaim:            scalar slice only (full anisotropic operator excluded); gates
+                         passing != certification; not yet A2/A3-citable.
+Next required action:    Operator independently runs the bundle (14/14) and certifies.
+\end{verbatim}

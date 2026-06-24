@@ -1,0 +1,80 @@
+% =============================================================================
+% Title: A1 scalar analytic branch -- the precise positivity hypothesis of A2/A3
+% Claim: A1-SCALAR-ANALYTIC-BRANCH (depends on A1-KERNEL-IDENTITY; used by A2, A3)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 PROVED CONDITIONAL (submitted for operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) operator review: state the precise hypothesis A2/A3 use --
+%        Y>0, Z<0, m_sh^2>0 => K(q) >= m_sh^2 > 0 -- in terms of the SHELL mass,
+%        not the ambiguous mu^2. Verification a1_kernel_checks.py (4/4).
+%   v1.0 (2026-06-23, same-day): verification grew to 9 asserts (v1.2); this
+%        card's subset = {analytic_branch_D_ge_mu2shell_positive,
+%        lambda0_ge_mu2shell_equality_onshell_only}. No math change.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This card isolates the exact kernel hypothesis that the analytic theorems A2
+(well-posedness) and A3 (renormalisation) rely on. It is stated in terms of the
+shell mass $m_{\rm sh}^2$ (A1-KERNEL-IDENTITY), not the deprecated $\mu^2$.
+Verification: \url{codes/foundations/a1_kernel_checks.py} (a1_kernel_checks.py, all PASS).
+
+\section*{2. The branch}
+
+\paragraph{Theorem (A1-SCALAR-ANALYTIC-BRANCH).} \emph{Assume $Y>0$, $Z<0$ and
+$m_{\rm sh}^2>0$. Then by A1-KERNEL-IDENTITY}
+\begin{equation}
+K(q)=m_{\rm sh}^2+Y\bigl(|q|^2-q_\star^2\bigr)^2\ \ge\ m_{\rm sh}^2\ >\ 0
+\qquad\text{for all }q,
+\end{equation}
+\emph{and on a fixed periodic cell $\mathbb{T}^3_L$,}
+\begin{equation}
+\lambda_0(L):=\min_{k\in\Lambda^*}K(k)\ \ge\ m_{\rm sh}^2\ >\ 0,
+\end{equation}
+\emph{with equality $\lambda_0(L)=m_{\rm sh}^2$ only if a lattice mode lies
+exactly on the shell $|k|=q_\star$ (non-generic).}
+
+\paragraph{Role.} This $m_{\rm sh}^2>0$ is precisely the input used as
+``$\mu^2>0$'' in A2 (sectoriality: $-L$ generates an analytic semigroup; the
+$H^2$ norm equivalence) and in A3 (IR finiteness: $G=1/K\le1/m_{\rm sh}^2$
+bounded; the $q^{-4}$ UV decay from $Y>0$). At the production anchor
+$m_{\rm sh}^2=5\times10^{-3}$, $Y=1$, $Z=-0.925$, with $r=K(0)=0.219$ distinct
+from $m_{\rm sh}^2$ (assert \texttt{analytic\_branch\_K\_ge\_msh2\_positive},
+\texttt{lambda0\_ge\_msh2\_equality\_onshell\_only}).
+
+\section*{3. Devil's-advocate}
+
+($\alpha$) \emph{``$\lambda_0=m_{\rm sh}^2$ on a generic cell.''} DISMISSED ---
+only the lower bound $\lambda_0\ge m_{\rm sh}^2>0$ is used; equality is
+non-generic (the verification shows $\lambda_0=8.6\times10^{-3}>m_{\rm sh}^2$ on
+a generic cell). ($\beta$) \emph{``Is this the same as the old $\mu^2>0$?''}
+VALID and the reason for the card: the old $\mu^2$ was the shell value $K(q_0)$,
+so $\mu^2=m_{\rm sh}^2$ in the analytic notes --- but the SOLVER's
+\texttt{mu2}$=r$ (zero momentum) is different; A2/A3 must hypothesise
+$m_{\rm sh}^2>0$, not the solver's \texttt{mu2}. ($\gamma$) \emph{``$Z<0$
+needed?''} Yes, for the shell $q_\star^2>0$ to exist. Quantitative sanity check:
+$\min_q K=m_{\rm sh}^2=5\times10^{-3}$; $\lambda_0(L)=8.6\times10^{-3}>m_{\rm sh}^2$.
+
+\section*{4. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-SCALAR-ANALYTIC-BRANCH
+Precise statement:       Y>0, Z<0, m_sh2>0 => K(q)=m_sh2+Y(q^2-q*^2)^2 >= m_sh2
+                         > 0 for all q; lambda0(L)=min_k K(k) >= m_sh2 > 0,
+                         equality only if a mode is exactly on shell.
+Scope:                   scalar Brazovskii kernel; the precise A2/A3 hypothesis.
+Dependencies:            A1-KERNEL-IDENTITY.
+Hypotheses:              Y>0; Z<0; m_sh2>0.
+Evidence grade:          PROVED CONDITIONAL (analytic) + EXECUTED (a1_kernel_checks.py; this
+                         card: analytic_branch_D_ge_mu2shell_positive,
+                         lambda0_ge_mu2shell_equality_onshell_only).
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         all PASS (this card: analytic_branch_D_ge_mu2shell_
+                         positive, lambda0_ge_mu2shell_equality_onshell_only); exit 0.
+Tier:                    T6 PROVED CONDITIONAL (submitted for sign-off).
+No-overclaim statement:  m_sh2>0 (shell), NOT the solver's mu2=r (zero
+                         momentum); no production-config certification (that is
+                         A1-PRODUCTION-KERNEL-MANIFEST).
+Next required action:    Operator sign-off; A2/A3 depend on THIS card.
+\end{verbatim}

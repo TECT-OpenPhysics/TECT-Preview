@@ -1,0 +1,87 @@
+% SUPERSEDED by a1-production-kernel-manifest-260623-260623-v1.1.tex.txt
+% =============================================================================
+% Title: A1 production kernel manifest -- parameter-consistency gates (current config is a mock)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T1 OPEN (the current solver-template config FAILS the manifest)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) operator review: the production kernel must pass explicit
+%        consistency gates; the current solver-template (r,Z,Y,q0)=(0.35,-1,0.50,
+%        0.68017) FAILS them (m_sh^2<0, shell mismatch, mu2=r alias) -> it is a
+%        working/mock config, NOT an N-001 production manifest. a1_kernel_checks.py.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+A production kernel config is admissible (and may be cited as the numerical
+implementation of A2/A3) only if it lies in the analytic branch
+(A1-SCALAR-ANALYTIC-BRANCH) AND its stored parameters are mutually consistent.
+This card states those gates and records that the CURRENT solver-template config
+fails them. OPEN until a certified config passes. Verification:
+\url{codes/foundations/a1_kernel_checks.py} (4/4 PASS, including the failure
+demonstration).
+
+\section*{2. The manifest gates}
+
+For a config $(\texttt{r},\texttt{Z},\texttt{Y},\texttt{q0},\texttt{mu2})$ with
+tolerance $\varepsilon_{\rm par}$:
+\begin{equation}
+\bigl|\,Z+2Y\,q_\star^2\,\bigr|\le\varepsilon_{\rm par},\qquad
+\bigl|\,r-(m_{\rm sh}^2+Y\,q_\star^4)\,\bigr|\le\varepsilon_{\rm par},\qquad
+\bigl|\,\texttt{mu2}-(r-\tfrac{Z^2}{4Y})\,\bigr|\le\varepsilon_{\rm par},
+\end{equation}
+together with the branch condition $m_{\rm sh}^2=r-\tfrac{Z^2}{4Y}>0$. The first
+gate enforces the shell $q_\star^2=-Z/(2Y)=q_0^2$; the third enforces that the
+config's \texttt{mu2} names the SHELL mass $m_{\rm sh}^2$, not $r$.
+
+\section*{3. The current config is a mock (FAILS)}
+
+For the solver template $(r,Z,Y,q_0)=(0.35,-1,0.50,0.6801747616)$ with
+\texttt{mu2}$=0.35$:
+\begin{equation}
+q_\star^2=-\tfrac{Z}{2Y}=1\ \ne\ q_0^2\simeq0.4626\quad(\,|Z+2Yq_0^2|=0.537\,),
+\qquad
+m_{\rm sh}^2=r-\tfrac{Z^2}{4Y}=-0.15<0,
+\end{equation}
+and \texttt{mu2}$=0.35=r$ is the ZERO-momentum alias ($|\texttt{mu2}-m_{\rm sh}^2|
+=0.50$). The manifest FAILS on three gates (assert
+\texttt{production\_manifest\_mock\_config\_FAILS}). Therefore this file is a
+\textbf{working/mock} config; it is NOT an N-001 production manifest, and A2/A3
+must NOT cite it as their numerical implementation.
+
+\section*{4. Devil's-advocate}
+
+($\alpha$) \emph{``The solver still runs.''} VALID --- it runs, but on a kernel
+outside the analytic branch ($m_{\rm sh}^2<0$); its output cannot be the
+numerical realisation of theorems that assume $m_{\rm sh}^2>0$. ($\beta$)
+\emph{``This weakens A2/A3.''} DISMISSED --- A2/A3 are unchanged; this card only
+forbids citing an inconsistent config as their implementation, which is an
+honesty gain, not a weakening. ($\gamma$) \emph{``$\varepsilon_{\rm par}$
+unspecified.''} VALID --- $\varepsilon_{\rm par}$ is a per-publication tolerance;
+the current config fails by $O(0.5)$, far above any reasonable $\varepsilon$.
+Quantitative sanity check: $m_{\rm sh}^2=-0.15$; shell residual $0.537$; mu2--shell
+gap $0.50$.
+
+\section*{5. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST (OPEN)
+Precise statement:       A production config is admissible iff |Z+2Y q*^2|,
+                         |r-(m_sh2+Y q*^4)|, |mu2-(r-Z^2/4Y)| <= eps_par and
+                         m_sh2>0. The current solver template FAILS (m_sh2=
+                         -0.15<0; q*^2=1 != q0^2=0.463; mu2=r alias).
+Scope:                   parameter-consistency gate for production kernels.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Evidence grade:          ANALYTIC (gates) + EXECUTED (mock-failure demo).
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         4/4 PASS (incl. the mock-config FAILS assertion).
+Tier:                    T1 OPEN (no certified production config yet).
+Falsifier:               a config passing all gates with m_sh2>0 closes the
+                         OPEN status for that config.
+No-overclaim statement:  The current mock config is NOT certified; A2/A3 are
+                         NOT numerically implemented by it.
+Next required action:    Produce + certify an N-001 production config (m_sh2>0,
+                         all gates) before any Class-II / condensate solver run
+                         is cited as the A2/A3 implementation.
+\end{verbatim}

@@ -1,0 +1,39 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-IDENTITY"
+  ],
+  "hypotheses": [
+    "A1-SHELL-POSITIVITY"
+  ],
+  "soft_dependencies": [],
+  "open_gates": [],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-06-23)",
+  "legacy_evidence": [
+    "claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.tex.txt",
+    "codes/foundations/a1_kernel_checks.py (4/4)"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a1_kernel_checks.py",
+    "expected": "4/4 PASS; K>=m_sh2>0; lambda0(L)>=m_sh2",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-06-23",
+  "notes": "A1 split (operator review): the precise kernel positivity hypothesis A2/A3 use, in the SHELL mass m_sh^2 (not mu^2/r). T6 PROVED CONDITIONAL APPROVED 2026-06-23 (operator). A2/A3 re-link here.",
+  "id": "A1-SCALAR-ANALYTIC-BRANCH",
+  "title": "Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis)",
+  "sector": "A",
+  "statement": "Assume Y>0, Z<0, m_sh^2>0. Then K(q)=m_sh^2+Y(|q|^2-q_star^2)^2 >= m_sh^2 > 0 for all q, and on a fixed periodic cell lambda0(L)=min_k K(k) >= m_sh^2 > 0 (equality only if a lattice mode lies exactly on the shell). This is the precise positivity input of A2 (sectoriality) and A3 (IR finiteness).",
+  "scope": "scalar Brazovskii kernel; stated in the SHELL mass m_sh^2 (= old mu^2 = K(q_star)), NOT the zero-momentum r=K(0) nor the solver's mu2=r. Production-config certification is A1-PRODUCTION-KERNEL-MANIFEST (separate).",
+  "tier": "T6",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "falsifier": "A kernel with Y>0,Z<0,m_sh^2>0 yet inf_q K < m_sh^2, or lambda0(L) < m_sh^2.",
+  "no_overclaim": "m_sh^2>0 (shell), NOT the solver mu2=r (zero momentum); no production-config certification; positivity only (not the dynamics/renormalisation themselves -- those are A2/A3).",
+  "next_action": "Operator sign-off; A2 and A3 depend on this card (re-linked 2026-06-23)."
+}

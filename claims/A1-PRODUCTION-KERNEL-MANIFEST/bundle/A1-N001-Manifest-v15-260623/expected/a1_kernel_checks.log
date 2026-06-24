@@ -1,0 +1,23 @@
+  [PASS] kernel_identity_complete_square -- D=r+Z k^2+Y k^4 = mu2_shell+Y(k^2-q*^2)^2; r=mu2_shell+Y q*^4: worst 5.68e-14 (UNCONDITIONAL) [A1-KERNEL-IDENTITY]
+  [PASS] canonical_config_present -- canonical_n001_kernel.json located
+  [PASS] config_schema_v15_complete -- config has all required keys ['r_zero', 'mu2_shell', 'q0', 'Z', 'Y', 'eta_shell', 'eps_Z', 'eps_m', 'eps_r', 'scalar_slice', 'origin_n001_solver', 'backend_sha256'] + scalar_slice['laplacian_mode', 'bcc_mix_epsilon', 'a_bcc', 'family_masses', 'k_lock', 'z0', 'eta_shell']
+  [PASS] eta_shell_is_zero_pure_brazovskii -- eta_shell=0.0: A1/A2/A3 certify the PURE Brazovskii scalar kernel, the eta_shell=0 slice of r+Z|k|^2+Y|k|^4+eta_shell*(|k|-q0)^2
+  [PASS] n001_original_kinetic_coefficients_match_stored -- ORIGINAL kinetic_coefficients(0.005,1.0,0.6801747616) -> (r=0.2190336, Z=-0.9252754) REPRODUCES stored (r_zero=0.2190336, Z=-0.9252754)
+  [PASS] n001_original_symbol_matches_stored_under_full_scalar_slice -- ORIGINAL bloch_matrix_linear with the FULL JSON scalar_slice {'laplacian_mode': 'spectral', 'bcc_mix_epsilon': 0.0, 'a_bcc': 1.0, 'family_masses': [0.0, 0.0, 0.0], 'k_lock': 0.0, 'z0': [1.0, 1.0, 1.0], 'eta_shell': 0.0} at k=[0.0, 0.31, 0.6801747616, 0.93, 1.4, 2.2] equals stored r_zero+Z|k|^2+Y|k|^4 to 8.88e-16: the verified symbol IS the runtime symbol
+  [PASS] scalar_slice_settings_are_load_bearing -- reverting each scalar_slice setting changes the ORIGINAL diagonal: k_lock=0.15(default)->0.1000, eta_shell=0.1->0.2310, mixed_bcc(eps=.5)->1.9970, family_masses->0.0500; ALL load-bearing, so fixing them in the config (not the checker) is essential
+  [PASS] n001_original_sources_sha256_pinned -- full sha256 of the 3 vendored ORIGINAL sources match PROVENANCE.json + config (continuation 6db0393a31f31eed.., bloch 337bd6de6b31e523.., math56 6c80859780baf755..)
+  [PASS] stored_field_error_is_detected -- corrupting stored q0 by +1% -> original coefficients (r=0.22772, Z=-0.94387) diverge from stored
+  [PASS] analytic_branch_D_ge_mu2shell_positive -- mu2_shell=0.005>0, Y=1.0>0, Z=-0.9253<0 => D(k)>=mu2_shell>0 (min=0.005) [A1-SCALAR-ANALYTIC-BRANCH]
+  [PASS] lambda0_ge_mu2shell_equality_onshell_only -- lambda0(L)=min_k D(k)=0.00857708 >= mu2_shell=0.005; strict on a GENERIC cell [A1-SCALAR-ANALYTIC-BRANCH]
+  [PASS] delta_m_is_nonvacuous_not_identically_zero -- delta_m on independent stored mu2_shell: correct -> 0.00e+00; +0.01 -> 0.0100 (DETECTED)
+  [PASS] canonical_n001_passes_gates_certification_pending -- canonical N-001 (r_zero=0.21903, mu2_shell=0.005, q0=0.6801747616, Z=-0.92528, Y=1.0, eta_shell=0.0): delta_Z=0.00e+00, delta_m=4.34e-18, delta_r=0.00e+00 <= eps; mu2_shell>0; scalar_slice matches solver => NUMERICAL GATES PASS; OPERATOR CERTIFICATION PENDING (T1 OPEN; not yet A2/A3-citable)
+  [PASS] legacy_template_FAILS_and_alias_forbidden -- template (0.35,-1,0.50): delta_Z=0.537>eps; mu2_shell_derived=-0.150<0; alias FORBIDDEN. FAILS
+
+A1 kernel checks v1.5: 14/14 PASS
+
+[STDERR]
+WARNING: PyTorch not available. continuation_mu2_v25.py will not execute.
+WARNING: tect_newton_krylov not found. continuation_mu2_v25.py will not execute.
+WARNING: real_backend_pt_bcc_mixed_v3 not found.
+WARNING: bz_preconditioner not found.
+WARNING: check_jacobian_symmetry not found (ModuleNotFoundError: No module named 'tools'). Math63 §2A symmetry-probe-driven solver routing will fall back to plain FGMRES.

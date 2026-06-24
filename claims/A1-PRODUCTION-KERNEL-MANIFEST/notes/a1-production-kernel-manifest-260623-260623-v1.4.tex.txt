@@ -1,0 +1,109 @@
+% SUPERSEDED by a1-production-kernel-manifest-260623-260623-v1.5.tex.txt
+% =============================================================================
+% Title: A1 production kernel manifest -- imports the ORIGINAL N-001 solver; enforces eta_shell=0 (v1.4)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.4 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T1 OPEN (real-solver gates pass under eta_shell=0; submitted for operator independent run + certification)
+%
+% Revision history (cumulative):
+%   v1.0-1.2 (2026-06-23) gate schema corrections (vacuous gate, stored-field reader).
+%   v1.3 (2026-06-23) called a VENDORED MIMIC of the backend; it OMITTED the
+%        shell-bias term and could not be checked against the original source.
+%   v1.4 (2026-06-23) operator review: (1) import the ORIGINAL N-001 solver
+%        functions (continuation_mu2_v25.kinetic_coefficients + bloch_linearization.
+%        bloch_matrix_linear), vendored byte-identical under codes/foundations/
+%        n001_solver/ with FULL sha256 pinned; (2) the real symbol is
+%        r+Z|k|^2+Y|k|^4+eta_shell*(|k|-q0)^2 -- add eta_shell as a 6th stored field,
+%        ENFORCE eta_shell=0 (pure Brazovskii), and demonstrate the shell-bias term
+%        is load-bearing. a1_kernel_checks.py v1.4 (13/13 PASS).
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+A config is the numerical implementation of A2/A3 only if it is the kernel actually
+implemented by the canonical N-001 microscopic PDE solver. v1.3 checked a vendored
+mimic that omitted the solver's shell-bias term; v1.4 imports the ORIGINAL solver
+functions and enforces the pure-Brazovskii condition. Verification:
+\url{codes/foundations/a1_kernel_checks.py} v1.4 (13/13 PASS); solver sources
+\url{codes/foundations/n001_solver/}; config
+\url{claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json}.
+
+\section*{2. The real N-001 symbol and the eta\_shell=0 slice}
+
+The N-001 solver's linear operator (\texttt{bloch\_matrix\_linear} in
+\texttt{bloch\_linearization.py}) has scalar diagonal
+\begin{equation}
+D_{\rm solver}(k)=r+Z|k|^2+Y|k|^4+\eta_{\rm shell}\,(|k|-q_0)^2,
+\qquad (r,Z)=\texttt{kinetic\_coefficients}(\texttt{mu2\_shell},Y,q_0).
+\end{equation}
+The pure Brazovskii kernel certified by A1/A2/A3 is the $\eta_{\rm shell}=0$ slice.
+The config stores $\eta_{\rm shell}=0$ as a sixth physical field; the verifier
+ENFORCES $\eta_{\rm shell}=0$ and confirms the ORIGINAL
+$\texttt{bloch\_matrix\_linear}(\eta_{\rm shell}=0)$ reduces to
+$r_{\rm zero}+Z|k|^2+Y|k|^4=$ the stored kernel ($8.9\times10^{-16}$). The shell-bias
+term is load-bearing: setting $\eta_{\rm shell}=0.1$ shifts the ORIGINAL symbol by up
+to $0.231$, so $\eta_{\rm shell}=0$ is an essential, non-vacuous condition.
+
+\section*{3. Original-source provenance (v1.4)}
+
+Three solver sources are vendored byte-identical from the frozen TECT2 tree and
+imported directly (full sha256 pinned and checked in
+\texttt{n001\_solver/PROVENANCE.json} and the config):
+\texttt{continuation\_mu2\_v25.py} (\texttt{6db0393a..}),
+\texttt{bloch\_linearization.py} (\texttt{337bd6de..}),
+\texttt{math56\_constants.py} (\texttt{6c808597..}, a transitive import dependency).
+The verifier confirms
+$\texttt{kinetic\_coefficients}(\texttt{mu2\_shell},Y,q_0)=(\texttt{r\_zero},Z)$ and
+detects a corrupted stored $q_0$ ($+1\%\Rightarrow O(10^{-2})$ divergence).
+
+\section*{4. Status: gates pass, certification pending}
+
+Under $\eta_{\rm shell}=0$ the canonical N-001 config clears both manifests
+($\delta_Z=\delta_r=0$, $\delta_m=4.3\times10^{-18}$, $\texttt{mu2\_shell}>0$) AND
+matches the ORIGINAL solver symbol. The script reports ``numerical gates pass;
+operator certification pending'': the card stays T1 OPEN pending the operator's
+independent run of the bundle (config + the three solver sources + the checker).
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``$\eta_{\rm shell}=0$ assumed away.''} DISMISSED --- it is enforced
+AND shown load-bearing ($0.231$ shift at $\eta_{\rm shell}=0.1$); the certification
+is explicitly scoped to the pure-Brazovskii slice. ($\beta$) \emph{``Vendored copies
+not the originals.''} DISMISSED --- byte-identical (full sha256 pinned; compare to
+TECT2/Contents); the verifier imports them directly. ($\gamma$) \emph{``Gates pass =
+certified.''} DISMISSED --- both the script and this note state certification is
+pending; T1 OPEN retained. Quantitative sanity check: bloch symbol residual
+$8.9\times10^{-16}$; shell-bias shift $0.231$ at $\eta_{\rm shell}=0.1$.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST (OPEN, v1.4)
+Precise statement:       Verifier reads 6 stored fields (r_zero, mu2_shell, q0,
+                         Z, Y, eta_shell=0) AS-IS; imports the ORIGINAL N-001
+                         solver (continuation_mu2_v25.kinetic_coefficients +
+                         bloch_linearization.bloch_matrix_linear): enforces
+                         eta_shell=0, confirms kinetic_coefficients(mu2_shell,Y,
+                         q0)=(r_zero,Z) and the original bloch symbol (eta_shell
+                         =0) = r_zero+Z|k|^2+Y|k|^4 (8.9e-16); shell-bias shown
+                         load-bearing; full sha256 of 3 sources pinned.
+Scope:                   pure-Brazovskii (eta_shell=0) scalar kernel; CONSISTENCY
+                         + ANALYTIC-BRANCH.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Bundle:                  canonical_n001_kernel.json + continuation_mu2_v25.py +
+                         bloch_linearization.py (+ math56_constants.py dep) +
+                         a1_kernel_checks.py.
+Evidence grade:          ANALYTIC + EXECUTED (13/13) -- pending operator independent run.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         13/13 PASS; eta_shell=0 enforced; original solver symbol
+                         matches; shell-bias load-bearing; sha256 pinned.
+Tier:                    T1 OPEN (gates pass; certification pending).
+Falsifier:               eta_shell != 0, a source-hash mismatch, a stored-field
+                         edit breaking a delta, or kinetic_coefficients not
+                         reproducing the stored (r_zero,Z).
+No-overclaim:            pure-Brazovskii eta_shell=0 slice only (full anisotropic
+                         operator excluded); gates passing != certification; not
+                         yet operator-certified, not yet A2/A3-citable.
+Next required action:    Operator independently runs the bundle (13/13) and
+                         certifies the N-001 ANALYTIC-BRANCH manifest.
+\end{verbatim}

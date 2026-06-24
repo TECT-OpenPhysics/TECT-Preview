@@ -1,0 +1,80 @@
+% =============================================================================
+% Title: A1 kernel identity -- zero-momentum mass vs shell mass (complete-the-square)
+% Claim: A1-KERNEL-IDENTITY (refines A1-KERNEL-CONV; used by A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.0 -- first issued 2026-06-23; this version issued 2026-06-23
+% Status: T6 PROVED (algebraic identity; submitted for operator sign-off)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-06-23) operator review: separate the zero-momentum mass r=K(0)
+%        from the shell mass m_sh^2=K(q_star). Both were called mu^2; they are
+%        distinct. Verification codes/foundations/a1_kernel_checks.py (4/4).
+%   v1.0 (2026-06-23, same-day): verification script grew to 9 asserts (v1.2);
+%        this card's subset = {kernel_identity_complete_square}. No math change.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This card removes a naming conflation in A1-KERNEL-CONV: the \emph{zero-momentum
+mass} $r:=K(0)$ and the \emph{shell mass} $m_{\rm sh}^2:=K(q_\star)$ were both
+written $\mu^2$, yet they differ by $Y q_\star^4$. This is the algebraic
+identity; the analytic hypothesis it feeds is A1-SCALAR-ANALYTIC-BRANCH, and the
+parameter-consistency gate is A1-PRODUCTION-KERNEL-MANIFEST. Verification:
+\url{codes/foundations/a1_kernel_checks.py} (a1_kernel_checks.py, all PASS).
+
+\section*{2. The identity}
+
+\paragraph{Theorem (A1-KERNEL-IDENTITY).} \emph{For $Y>0$, $Z<0$ and any
+$r\in\mathbb{R}$, the kernel $K(q)=r+Z|q|^2+Y|q|^4$ satisfies}
+\begin{equation}
+q_\star^2=-\frac{Z}{2Y}>0,\qquad m_{\rm sh}^2:=K(q_\star)=r-\frac{Z^2}{4Y},\qquad
+K(q)=m_{\rm sh}^2+Y\bigl(|q|^2-q_\star^2\bigr)^2,
+\end{equation}
+\emph{and}
+\begin{equation}
+r=K(0)=m_{\rm sh}^2+Y\,q_\star^4 .
+\end{equation}
+The completion of the square is unconditional algebra (residual $5.7\times10^{-14}$
+over a random sweep, assert \texttt{kernel\_identity\_complete\_square}); $Z<0$
+makes $q_\star^2>0$ a physical shell radius. Thus $r$ (zero momentum) and
+$m_{\rm sh}^2$ (shell) coincide only when $q_\star=0$ ($Z=0$); in general
+$r=m_{\rm sh}^2+Yq_\star^4>m_{\rm sh}^2$.
+
+\section*{3. Naming (binding for A1)}
+
+The symbol $\mu^2$ is deprecated for A1; use $m_{\rm sh}^2$ (\texttt{mu2\_shell})
+for the shell mass $K(q_\star)$ and $r$ (\texttt{r\_zero}/\texttt{r\_k0}) for the
+zero-momentum mass $K(0)$. On a fixed periodic cell,
+$\lambda_0(L):=\min_{k\in\Lambda^*}K(k)\ge m_{\rm sh}^2$, with equality only if a
+lattice mode lies exactly on the shell $|k|=q_\star$.
+
+\section*{4. Devil's-advocate}
+
+($\alpha$) \emph{``The identity is trivial.''} VALID --- it is elementary, but
+the conflation it removes is not: the A2/A3 analytic hypothesis is
+$m_{\rm sh}^2>0$, while the solver template's \texttt{mu2} is $r$ (\S
+A1-PRODUCTION-KERNEL-MANIFEST). ($\beta$) \emph{``$Z<0$ is an extra
+assumption.''} DISMISSED --- $Z<0$ is exactly what makes the Brazovskii shell
+$q_\star^2>0$ exist; with $Z\ge0$ the minimum is at $q=0$ and there is no shell.
+($\gamma$) \emph{``$Y>0$ needed?''} Yes --- $Y>0$ for the completion and for the
+shell to be a minimum (not a maximum). Quantitative sanity check: residual
+$5.7\times10^{-14}$; $r-(m_{\rm sh}^2+Yq_\star^4)=0$ identically.
+
+\section*{5. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-KERNEL-IDENTITY
+Precise statement:       For Y>0, Z<0: K=r+Z q^2+Y q^4 = m_sh2+Y(q^2-q*^2)^2,
+                         q*^2=-Z/2Y, m_sh2=r-Z^2/4Y, r=K(0)=m_sh2+Y q*^4.
+                         r (zero-momentum) and m_sh2 (shell) are distinct.
+Scope:                   algebraic identity; Y>0, Z<0.
+Dependencies:            A1-KERNEL-CONV (the kernel form).
+Evidence grade:          PROVED (analytic) + EXECUTED (a1_kernel_checks.py; this card's
+                         assert: kernel_identity_complete_square).
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         all PASS (this card: kernel_identity_complete_square); exit 0.
+Tier:                    T6 PROVED (submitted for operator sign-off).
+No-overclaim statement:  Naming/identity only; the positivity branch is
+                         A1-SCALAR-ANALYTIC-BRANCH; production consistency is
+                         A1-PRODUCTION-KERNEL-MANIFEST.
+Next required action:    Operator sign-off; re-point A2/A3 to the analytic branch.
+\end{verbatim}
