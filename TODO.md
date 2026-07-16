@@ -11,7 +11,7 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 29
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
 - **T-033** N-001: evaluate projected Hessian/Rayleigh curvature of the homogeneous branch on the commensurate q0/BCC-star subspace  _(owner: unassigned)_
-  - Experimental follow-up to the 2026-07-16 N32/N64/N128 homogeneous-condensate record. Positive q0/BCC-star curvature ends BCC exploration at this parameter point; negative or near-zero curvature justifies a separately scoped periodic BCC search. No tier or claim action is authorized.
+  - N32 full-star COMPLETE 2026-07-16: all six commensurate BCC {110} antipodal pairs around the uploaded homogeneous branch have positive projected Hessian curvature. Minimum curvature +52.12042392718455; no negative/near-zero directions. Evidence: reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json. This is the current operator-level stop signal for this parameter point; N64/N128 projected star checks are optional grid-transfer follow-up, and no tier or claim action is authorized.
   - _updated 2026-07-16_
 
 ## Backlog

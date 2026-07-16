@@ -6,7 +6,7 @@
 
 Generated: 2026-07-16
 
-**1307 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1311 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -1140,6 +1140,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a3_graphwise_convergence_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `295b72b2ed25` |
 | `codes/foundations/a3_renormalisation_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.0.0 | ACTIVE | `d41b7bb1db59` |
 | `codes/foundations/actual_n001_pde_backend.py` | — | — | — | — | ACTIVE | `8fe66e0df51b` |
+| `codes/foundations/n001_bcc_star_curvature.py` | — | — | — | v1.0.0 | ACTIVE | `175e103237bf` |
 | `codes/foundations/n001_solver/PROVENANCE.json` | — | — | — | — | ACTIVE | `48ff9292a0e8` |
 | `codes/foundations/n001_solver/README.md` | — | — | — | — | ACTIVE | `6af18efb12eb` |
 | `codes/foundations/n001_solver/bloch_linearization.py` | — | — | — | — | ACTIVE | `337bd6de6b31` |
@@ -1329,7 +1330,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `681e0996bf4f` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `abe4a128e60d` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `10153269836e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -1338,7 +1339,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `c6fd8ea1f7f4` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `206b61b6250d` |
+| `TODO.md` | — | — | — | — | ACTIVE | `4a9f75d534d5` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -1348,7 +1349,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `1ad1b34fd9c1` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `be30254e3823` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1371,6 +1372,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/2026-06-08-hadmcoh-discharge-authorization.md` | — | — | — | — | ACTIVE | `b97b87d1834e` |
 | `reviews/2026-06-08-scscope-lift-authorization.md` | — | — | — | — | ACTIVE | `cd0a85645dc2` |
 | `reviews/2026-06-09-scscope-lift-thin-certified.md` | — | — | — | — | ACTIVE | `9c332d9f5fa8` |
+| `reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json` | — | — | — | — | ACTIVE | `7b634df1fbf3` |
+| `reviews/2026-07-16-n001-bcc-star-curvature-n32-pair01.json` | — | — | — | — | ACTIVE | `aa4bef7321fb` |
+| `reviews/2026-07-16-n001-bcc-star-curvature-review.md` | — | — | — | — | ACTIVE | `8affbf041a1d` |
 | `reviews/2026-07-16-n001-uniform-condensate-evidence.json` | — | — | — | — | ACTIVE | `0eb79a8ca0b7` |
 | `reviews/2026-07-16-n001-uniform-condensate-review.md` | — | — | — | — | ACTIVE | `963770793062` |
 | `reviews/README.md` | — | — | — | — | ACTIVE | `31e69ef5cc8a` |
@@ -1391,5 +1395,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `3e37aca31dec` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `034851161bc3` |
 
