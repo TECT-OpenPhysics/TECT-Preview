@@ -3,16 +3,13 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 29
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 30
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-033** N-001: evaluate projected Hessian/Rayleigh curvature of the homogeneous branch on the commensurate q0/BCC-star subspace  _(owner: unassigned)_
-  - N32 full-star COMPLETE 2026-07-16: all six commensurate BCC {110} antipodal pairs around the uploaded homogeneous branch have positive projected Hessian curvature. Minimum curvature +52.12042392718455; no negative/near-zero directions. Evidence: reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json. This is the current operator-level stop signal for this parameter point; N64/N128 projected star checks are optional grid-transfer follow-up, and no tier or claim action is authorized.
-  - _updated 2026-07-16_
 
 ## Backlog
 
@@ -98,3 +95,6 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 29
 - **T-031** Full STEP-5B closure decision layer: budget comparison machine-closed (x55.6/x8.8/x2.1-2.6); remaining = admissible-class exhaustiveness operator-decision items (H-ADM-COH adoption record) + backlog lemma R-U6-1 (T-004).  _(claim: B5-BEYOND-LAYER-BOUND)_
   - CLOSED AS DECISION LAYER 2026-06-12: operator verdicts D1-A (lattice H-ADM-COH discharge re-affirmed, residual (a) pinned), D2-A (DR2-SHARE -> T-030 non-load-bearing), D3-A (B5 -> T6 PROVED-CONDITIONAL on H_B5^T6, label B5-BeyondLayer-T6Conditional-260612). Atomic flip set enacted.
   - _updated 2026-06-12_
+- **T-033** N-001: evaluate projected Hessian/Rayleigh curvature of the homogeneous branch on the commensurate q0/BCC-star subspace  _(owner: unassigned)_
+  - N32 full-star COMPLETE 2026-07-16: all six commensurate BCC {110} antipodal pairs around the uploaded homogeneous branch have positive projected Hessian curvature. Minimum curvature +52.12042392718455; no negative/near-zero directions. Evidence: reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json. This is the current operator-level stop signal for this parameter point; N64/N128 projected star checks are optional grid-transfer follow-up, and no tier or claim action is authorized.
+  - _updated 2026-07-16_

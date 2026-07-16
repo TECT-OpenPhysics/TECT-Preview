@@ -6,7 +6,7 @@
 
 Generated: 2026-07-16
 
-**1311 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1316 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -1330,7 +1330,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `abe4a128e60d` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `5ce451453764` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `10153269836e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -1339,7 +1339,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `c6fd8ea1f7f4` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `4a9f75d534d5` |
+| `TODO.md` | — | — | — | — | ACTIVE | `9c941cd785ea` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -1349,7 +1349,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `be30254e3823` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `76285a94d011` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1375,9 +1375,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json` | — | — | — | — | ACTIVE | `7b634df1fbf3` |
 | `reviews/2026-07-16-n001-bcc-star-curvature-n32-pair01.json` | — | — | — | — | ACTIVE | `aa4bef7321fb` |
 | `reviews/2026-07-16-n001-bcc-star-curvature-review.md` | — | — | — | — | ACTIVE | `8affbf041a1d` |
+| `reviews/2026-07-16-n001-q1a-bcc-bridge-freeze.md` | — | — | — | — | ACTIVE | `c12b46a16f0d` |
 | `reviews/2026-07-16-n001-uniform-condensate-evidence.json` | — | — | — | — | ACTIVE | `0eb79a8ca0b7` |
 | `reviews/2026-07-16-n001-uniform-condensate-review.md` | — | — | — | — | ACTIVE | `963770793062` |
 | `reviews/README.md` | — | — | — | — | ACTIVE | `31e69ef5cc8a` |
+| `reviews/n001-q1a-bcc-bridge-freeze-260716/MANIFEST.json` | — | — | — | — | ACTIVE | `a8ede19a3335` |
+| `reviews/n001-q1a-bcc-bridge-freeze-260716/README.md` | — | — | — | — | ACTIVE | `37623733b745` |
+| `reviews/n001-q1a-bcc-bridge-freeze-260716/RUNBOOK.md` | — | — | — | — | ACTIVE | `dea7a2d916c2` |
+| `reviews/n001-q1a-bcc-bridge-freeze-260716/SHA256SUMS.txt` | — | — | — | — | ACTIVE | `ecb48ed407a9` |
 | `strategy/dr2-external-research-assessment-260608.md` | — | — | — | — | ACTIVE | `7fc0afc0b0f6` |
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
@@ -1395,5 +1400,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `034851161bc3` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `0558b9cd8b7b` |
 

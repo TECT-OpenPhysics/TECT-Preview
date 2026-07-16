@@ -1,0 +1,50 @@
+{
+  "schema": "TECT-N001-q1a-bcc-bridge-evidence-freeze-v1",
+  "date": "2026-07-16",
+  "status": "frozen_experimental_record_no_claim_or_tier_change",
+  "purpose": "Preserve the N-001 q1a homogeneous-branch and N32 BCC-star diagnostic evidence without deciding whether Sector A continues.",
+  "authority_order": [
+    "this manifest",
+    "locked JSON evidence files",
+    "locked review records",
+    "locked diagnostic code",
+    "negative-result registry entry"
+  ],
+  "evidence_lock_algorithm": "SHA-256 over the UTF-8 bytes of the exact LF-terminated lines in SHA256SUMS.txt, in listed order",
+  "evidence_lock_digest": "ecb48ed407a9eecce757554f37a8ccadf541a0f54253521ba0d037d6f04af766",
+  "facts": {
+    "uniform_structure_classification": "NONUNIFORM_BUT_NO_Q0_SHELL",
+    "uniform_free_energy": -496.6861610721164,
+    "uniform_grids": [32, 64, 128],
+    "bcc_star_grid": 32,
+    "bcc_star_pairs_evaluated": 6,
+    "bcc_star_pairs_total": 6,
+    "minimum_recorded_bcc_star_curvature": 52.12042392718455,
+    "bcc_star_diagnosis": "POSITIVE_Q0_BCC_STAR_CURVATURE",
+    "bcc_seed_negative_result": "R-2026-07-16-N001-BCC-SEED-COLLAPSE"
+  },
+  "scope_exclusions": [
+    "No global-minimum conclusion.",
+    "No full-spectrum stability conclusion.",
+    "No BCC branch existence or nonexistence theorem.",
+    "No Reading-H/BCC downstream claim.",
+    "No Sector A or Sector B claim or tier change."
+  ],
+  "external_recomputation_prerequisites": {
+    "run_root": "C:\\Dev\\Runs\\q1a_final_pubgrade_compat_v2\\refinement",
+    "pde_root": "C:\\Dev\\Codes\\PDE",
+    "interpreter_requirement": "Python with NumPy and Torch",
+    "note": "The package preserves hashes for external sources and artefacts but does not copy those external trees into this repository."
+  },
+  "locked_files": [
+    {"path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json", "sha256": "030d1b7c62e77585c9967013554d7ff2e9e35f72bbecc37dcdfc9017d20b3a38", "role": "upstream convention anchor only"},
+    {"path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.tex.txt", "sha256": "ea4015123fd20d153994628a93594be4e0c96d5ae1e58efb7c268dcc91b82e9d", "role": "scoped T5 anchor; not numerical certification"},
+    {"path": "codes/foundations/n001_bcc_star_curvature.py", "sha256": "175e103237bfe1fb5a15d502bc13f67a653e4e1e874acc6d713196fdc96a115c", "role": "N32 BCC-star diagnostic source"},
+    {"path": "negative-results/registry.md", "sha256": "35a1298aeef8866da2f5f358e26ea39a8c3c31ba7931e289974ecd97709ec38b", "role": "BCC-seed collapse registry"},
+    {"path": "reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json", "sha256": "7b634df1fbf3952db06f5c3df4746aee70d11c20710fc9441d25f59ec3e70849", "role": "primary N32 full-star evidence"},
+    {"path": "reviews/2026-07-16-n001-bcc-star-curvature-n32-pair01.json", "sha256": "aa4bef7321fb3d794e4b37a822364a03434d948895d5071e12b14ca3a1bf629b", "role": "representative-pair historical evidence"},
+    {"path": "reviews/2026-07-16-n001-bcc-star-curvature-review.md", "sha256": "8affbf041a1dd37a16dc7c6b87ec9f1a974b1fec3e1f0fc7a452937e27b86a3e", "role": "curvature interpretation and exclusions"},
+    {"path": "reviews/2026-07-16-n001-uniform-condensate-evidence.json", "sha256": "0eb79a8ca0b764956b3e9a67de37842d8f168e8f7e5891916b724c851c1c6acb", "role": "uploaded uniform-condensate manifest"},
+    {"path": "reviews/2026-07-16-n001-uniform-condensate-review.md", "sha256": "963770793062fc75b7867eedbc680db56e304ad0e4dd3c7add8c6875809be749", "role": "uniform-condensate interpretation and exclusions"}
+  ]
+}
