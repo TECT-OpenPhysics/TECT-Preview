@@ -1,14 +1,14 @@
 # A1-PRODUCTION-FUNCTIONAL-REALISATION -- full production functional realisation
 
-**Tier**: T4 (TSv2) -- **Lifecycle**: ACTIVE -- **Last review**: 2026-07-17
+**Tier**: T5 (TSv2) -- **Lifecycle**: ACTIVE -- **Last review**: 2026-07-17
 
 ## Statement
 
-This card separates two objects.  The hash-pinned external working branch fails the variational audit: its scalar nonlinear energy is factor-two inconsistent with the residual and its Class-II energy uses `cKK` while the residual uses `cJK`.  Separately, a hash-pinned standalone backend implements the manifest-defined all-coupling functional and passes the three discrete variational identities and exact scalar reduction on grids N=4,6,8.  This is strong computational evidence for that standalone implementation, not an external-source repair claim.
+This card separates two objects.  The hash-pinned external working branch fails the variational audit: its scalar nonlinear energy is factor-two inconsistent with the residual and its Class-II energy uses `cKK` while the residual uses `cJK`.  Separately, a hash-pinned standalone backend implements the manifest-defined all-coupling functional and, after independent operator reproduction, is closed at T5 for the declared discrete variational matrix only.  This is not an external-source repair claim.
 
 ## Scope
 
-Discrete spectral torus grids N=4,6,8; zero, homogeneous, random, q0-shell, and Class-II-active fields; finite-difference steps 1e-4, 1e-5, and 1e-6; pinned parameters plus the manifest-declared shell-bias activation.  The source audit applies only to the separately SHA-256-pinned external working branch.  The T4 closure applies only to the in-repository standalone backend.  The canonical pure-Brazovskii scalar-slice T5 remains unchanged.
+**CLOSED@DISCRETE-VARIATIONAL-MATRIX**: discrete spectral torus grids N=4,6,8; zero, homogeneous, random, q0-shell, and Class-II-active fields; finite-difference steps 1e-4, 1e-5, and 1e-6; pinned parameters plus the manifest-declared shell-bias activation.  The source audit applies only to the separately SHA-256-pinned external working branch.  This T5 applies only to the in-repository standalone backend.  The canonical pure-Brazovskii scalar-slice T5 remains separate and unchanged.
 
 ## Dependencies and hypotheses
 
@@ -18,17 +18,17 @@ Discrete spectral torus grids N=4,6,8; zero, homogeneous, random, q0-shell, and 
 
 ## Evidence
 
-The source [audit record](notes/a1-production-functional-realisation-260717-v1.0.tex.txt), reference derivation [record](notes/a1-production-functional-realisation-260717-v1.1.tex.txt), T4 [closure record](notes/a1-production-functional-realisation-260717-v1.2.tex.txt), [manifest](production_functional_manifest.json), [standalone backend](../../codes/foundations/n001_variational_backend.py), [independent verifier](../../codes/foundations/a1_production_backend_verify.py), [multi-grid result](runs/2026-07-17-production-backend-multigrid/result.json), and hash-recorded [technical preflight](runs/promotion-evidence/2026-07-17-local-preflight-v3/promotion-evidence.json).
+The source [audit record](notes/a1-production-functional-realisation-260717-v1.0.tex.txt), reference derivation [record](notes/a1-production-functional-realisation-260717-v1.1.tex.txt), T5 [enactment note](notes/a1-production-functional-realisation-260717-v1.3.tex.txt), [manifest](production_functional_manifest.json), [standalone backend](../../codes/foundations/n001_variational_backend.py), [independent verifier](../../codes/foundations/a1_production_backend_verify.py), [multi-grid result](runs/2026-07-17-production-backend-multigrid/result.json), operator [independent reproduction](runs/promotion-evidence/2026-07-17-jusang-independent/promotion-evidence.json), and the [published T5 bundle](bundle/A1-Production-Functional-T5-260717/README.md).
 
 ## Falsifier
 
-This T4 record fails if a pinned hash or version drifts, any required grid or field class is omitted, any listed coupling is inactive, any variational/Hessian/symmetry threshold fails, or the independently defined scalar reduction ceases to agree.
+This T5 record fails if a pinned hash or version drifts, any required grid or field class is omitted, any listed coupling is inactive, any variational/Hessian/symmetry threshold fails, the independently defined scalar reduction ceases to agree, or independent reproduction no longer passes.
 
 ## Reproduction
 
 `python codes/foundations/a1_production_backend_verify.py --grids 4 6 8 --output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-production-backend-multigrid/result.json`
 
-Expected: `PRODUCTION-BACKEND-MULTIGRID-PASS`, with every assertion marked PASS.  To collect a fresh review package without changing tier: `python codes/foundations/a1_functional_promotion_evidence.py --run-id <id> --reviewer <name> --mode preflight --grids 4 6 8`.
+Expected: `PRODUCTION-BACKEND-MULTIGRID-PASS`, with every assertion marked PASS.  The T5 confirmation record is `runs/promotion-evidence/2026-07-17-jusang-independent/`; future refreshes use [PROMOTION-RUNBOOK.md](PROMOTION-RUNBOOK.md).
 
 ## Devil's-advocate
 
@@ -36,12 +36,12 @@ Expected: `PRODUCTION-BACKEND-MULTIGRID-PASS`, with every assertion marked PASS.
 2. **"Autodiff makes the checks tautological."** VALID with mitigation: the verifier independently defines energy finite differences, outer residual differences, the real pairing, and the analytic scalar reduction.
 3. **"Three small grids prove the continuum functional."** UPHELD as an invalid reading: this is a discrete spectral implementation result with no grid-convergence or continuum theorem.
 4. **"This silently validates the historical solver."** UPHELD as an invalid reading: the historical source remains hash-pinned and failed; solver integration is separate.
-5. **"The local preflight is an independent T5 reproduction."** UPHELD as an invalid reading: the collector explicitly marks preflight non-certifying.
+5. **"The local preflight is an independent T5 reproduction."** UPHELD as an invalid reading: only the operator-named `2026-07-17-jusang-independent` run is the recorded independent reproduction.
 
 ## No-overclaim
 
-No external-source repair, historical-solver integration, continuum/PDE theorem, minimizer, BCC selection, stability, or T5/T6/T7 action is asserted.
+No external-source repair, historical-solver integration, continuum/PDE theorem, minimizer, BCC selection, stability, T6, or T7 action is asserted.
 
 ## Next required action
 
-Obtain an operator-named independent reproduction with the evidence collector, review the generated checklist, and only then consider a separately scoped T5 decision and final operator-confirmed bundle.  Backend integration into the historical solver remains a separate claim if pursued.
+Use this claim only within `CLOSED@DISCRETE-VARIATIONAL-MATRIX`.  Backend integration into the historical solver, grid convergence, continuum behavior, and physical vacuum selection require separate claims.

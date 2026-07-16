@@ -25,9 +25,9 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.9.1"
+__version__ = "1.9.3"
 __first_issued__ = "2026-06-10"
-__version_issued__ = "2026-06-10"
+__version_issued__ = "2026-07-17"
 
 import argparse, ast, hashlib, json, os, platform, re, shutil, subprocess, sys, time
 from pathlib import Path
@@ -40,7 +40,7 @@ STDLIB = {"os","sys","math","json","re","collections","pathlib","itertools","fun
           "time","tempfile","argparse","datetime","typing","__future__","hashlib","platform",
           "shutil","subprocess","ast","random","copy","warnings","importlib","dataclasses",
           "traceback"}
-OPTIONAL_ABSENT = {"torch", "tect_newton_krylov", "real_backend_pt_bcc_mixed_v3",
+OPTIONAL_ABSENT = {"tect_newton_krylov", "real_backend_pt_bcc_mixed_v3",
                    "bz_preconditioner", "tools"}
 
 def find_module(name):
@@ -247,19 +247,17 @@ def main():
         import numpy as _np; npv = _np.__version__
     except Exception:
         npv = "unknown"
+    try:
+        import torch as _torch; torchv = _torch.__version__
+    except Exception:
+        torchv = "not-installed"
     env = dict(python=sys.version.split()[0], platform=platform.platform(),
-               numpy=npv, built_utc=time.strftime("%Y%m%dT%H%M%SZ", time.gmtime()))
+               numpy=npv, torch=torchv,
+               built_utc=time.strftime("%Y%m%dT%H%M%SZ", time.gmtime()))
     (out/"environment.txt").write_text(json.dumps(env, indent=2))
 
-    # collect every bundle file for the manifest (after expected/ logs written)
-    files = sorted(p.relative_to(out).as_posix() for p in out.rglob("*")
-                   if p.is_file() and p.name != "MANIFEST.json"
-                   and "__pycache__" not in p.parts and not p.name.endswith(".pyc"))
-    hashes = {f: sha256(out/f) for f in files}
-    bundle_digest = hashlib.sha256(
-        "\n".join(f"{h}  {f}" for f, h in sorted(hashes.items())).encode()).hexdigest()
-
-    # (5) README
+    # (5) README.  It is written before the file inventory so the manifest
+    # covers it too; MANIFEST.json is the only self-referential exclusion.
     runcmds = "\n".join(f"  python {s}" for s in args.scripts)
     expected = "\n".join(f"  {n}: exit 0, `{runlog[n]['pass_line']}`" for n in runlog)
     _bn = Path(args.out.rstrip("/")).name
@@ -268,7 +266,8 @@ def main():
     readme = f"""# Reproduction bundle -- {args.title or note.stem}
 
 Self-contained referee reproduction bundle (TECT verification-first repository).
-Built {env['built_utc']} with Python {env['python']}, numpy {env['numpy']}.
+Built {env['built_utc']} with Python {env['python']}, numpy {env['numpy']},
+and torch {env['torch']}.
 
 **Bundle grade:** {grade} -- `{_bn}`.
 
@@ -287,7 +286,7 @@ here, without a TECT checkout, and obtain the same PASS lines.
 
 ## How to reproduce (from this bundle directory)
 ```
-pip install -r requirements.txt        # numpy only
+pip install -r requirements.txt        # dependencies discovered from entry scripts
 {runcmds}
 ```
 Each script self-locates this bundle as its repository root, resolves its imports
@@ -298,16 +297,22 @@ your output against `expected/`.
 {expected}
 
 ## Integrity
-Bundle content digest (sha256 over `<sha256>  <path>` lines):
-`{bundle_digest}`
-The repository commit that produced this bundle is recorded in
-`MANIFEST.json:repo_commit`.
+`MANIFEST.json` hashes every bundle file except itself and records the
+content-addressable bundle digest plus the repository commit.
 
 ## Scope / how to attack
 See the note's scope, devil's-advocate, falsifier, and no-overclaim statement.
 The bundle does not enlarge the claim beyond that pinned scope.
 """
     (out/"README.md").write_text(readme)
+
+    # (6) Collect every bundle file for the manifest after README exists.
+    files = sorted(p.relative_to(out).as_posix() for p in out.rglob("*")
+                   if p.is_file() and p.name != "MANIFEST.json"
+                   and "__pycache__" not in p.parts and not p.name.endswith(".pyc"))
+    hashes = {f: sha256(out/f) for f in files}
+    bundle_digest = hashlib.sha256(
+        "\n".join(f"{h}  {f}" for f, h in sorted(hashes.items())).encode()).hexdigest()
 
     manifest = dict(
         bundle=args.title or note.stem, built_utc=env["built_utc"],
@@ -317,7 +322,7 @@ The bundle does not enlarge the claim beyond that pinned scope.
         bundle_digest=bundle_digest, files=hashes)
     (out/"MANIFEST.json").write_text(json.dumps(manifest, indent=2))
 
-    # (6) post-build durability + integrity self-check (mount-truncation guard, v1.6.0).
+    # (7) post-build durability + integrity self-check (mount-truncation guard, v1.6.0).
     # Scripts emit run-artefact JSON into the bundle tree; on a network/virtualised
     # mount these writes can be left unflushed and truncate on call teardown. fsync
     # every file, then re-parse all JSON/PY; a truncated bundle FAILS the build loudly

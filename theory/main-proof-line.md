@@ -22,6 +22,16 @@ res5_032--036.
 (A1-KERNEL-CONV is the named definitional input; it is legacy and has no in-repo
 notes folder yet, so no referee package is due until it is migrated.)
 
+## Sector-A production-functional verification line (operator-confirmed 2026-07-17)
+
+This line is a main-line support result for the future full-production-functional
+implementation track.  It does not alter, supply a missing premise for, or enlarge
+the published Reading-H C_full theorem above.
+
+| # | result | folder | role | status |
+|---|---|---|---|---|
+| A1-PFR | Production-functional discrete variational matrix | `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION` | reproducible standalone all-coupling functional implementation; future full-production-functional support only | **PUBLISHED** (T5 CLOSED@DISCRETE-VARIATIONAL-MATRIX) -- bundle `A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717`; N=4,6,8 only; no historical-solver, continuum, BCC, minimizer, or stability claim |
+
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 
 | folder | why auxiliary |

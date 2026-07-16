@@ -5,7 +5,7 @@
 
 Generated: 2026-07-17
 
-**36 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 4 · T5: 5 · T6: 11 · T7: 3 · T7-candidates: 3 · refuted: 1
+**36 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 3 · T5: 6 · T6: 11 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -17,7 +17,7 @@ reproduction commands, and history live on the claim cards.
 |---|---|---|---|---|---|---|
 | [A1-KERNEL-CONV](claims/A1-KERNEL-CONV/claim.md) | Production-kernel convention and G6 recomputation cascade | T5 | ACTIVE | EXECUTED | — | — |
 | [A1-KERNEL-IDENTITY](claims/A1-KERNEL-IDENTITY/claim.md) | Kernel complete-the-square identity (zero-momentum vs shell mass) | T6 | ACTIVE | ANALYTIC, EXECUTED | A1-KERNEL-CONV | — |
-| [A1-PRODUCTION-FUNCTIONAL-REALISATION](claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/claim.md) | Full production functional realisation: standalone variational backend | T4 | ACTIVE | EXECUTED, CONDITIONAL | — | — |
+| [A1-PRODUCTION-FUNCTIONAL-REALISATION](claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/claim.md) | Full production functional realisation: standalone variational backend | T5 | ACTIVE | EXECUTED, CONDITIONAL | — | — |
 | [A1-PRODUCTION-KERNEL-MANIFEST](claims/A1-PRODUCTION-KERNEL-MANIFEST/claim.md) | Canonical N-001 production-kernel manifest: scalar-slice consistency gates | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
 | [A1-SCALAR-ANALYTIC-BRANCH](claims/A1-SCALAR-ANALYTIC-BRANCH/claim.md) | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) | T6 | ACTIVE | ANALYTIC, EXECUTED | A1-SHELL-POSITIVITY | — |
 | [A2-PDE-WELLPOSED](claims/A2-PDE-WELLPOSED/claim.md) | Well-posedness of the TECT gradient flow and minimisation problem | T6 | ACTIVE | ANALYTIC, EXECUTED | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |

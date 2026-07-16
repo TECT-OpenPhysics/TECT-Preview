@@ -12,7 +12,7 @@
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-07-17)",
   "legacy_evidence": [
-    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-production-functional-realisation-260717-v1.2.tex.txt",
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-production-functional-realisation-260717-v1.3.tex.txt",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
     "codes/foundations/n001_variational_backend.py",
     "codes/foundations/a1_production_backend_verify.py",
@@ -20,7 +20,8 @@
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-reference-functional-closure/result.json",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-production-backend-multigrid/result.json",
-    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-local-preflight-v3/promotion-evidence.json"
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/promotion-evidence/2026-07-17-jusang-independent/promotion-evidence.json",
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717/ (PUBLISHED; digest 30749f1c5e1cdb9528ced2b6a3dcfced8d8ca8f6f39e8cef03913d32e13f33d6)"
   ],
   "t7_candidate": false,
   "reproduction": {
@@ -29,18 +30,18 @@
     "status": "AVAILABLE"
   },
   "last_review": "2026-07-17",
-  "notes": "Promoted from T3 to T4 on 2026-07-17 after a separately hash-pinned standalone backend and independent multi-grid verifier passed the complete discrete test matrix on N=4,6,8. The maximum relative errors are 1.856661591692621e-07 for DF=<R,v>, 6.695217715947473e-09 for DR=H, 1.282693395943113e-10 for real Hessian symmetry, and 6.218564371786818e-16 for scalar reduction. A clean subprocess preflight records the environment, hashes, output, and review checklist. The historical external source remains a pinned audit failure. No scalar-slice T5, external-solver integration, continuum theorem, minimizer, BCC, stability, T6, or T7 claim is changed.",
+  "notes": "Promoted from T4 to T5 CLOSED@DISCRETE-VARIATIONAL-MATRIX on 2026-07-17 after Jusang Lee independently reproduced the full N=4,6,8 verifier on the hash-pinned source tree. The evidence package reports REPRODUCTION-PASS, all six stored evidence-file hashes match, and the maxima are 1.856661591692621e-07 for DF=<R,v>, 6.695217715947473e-09 for DR=H, 1.282693395943113e-10 for real Hessian symmetry, and 6.218564371786818e-16 for scalar reduction. The published bundle A1-Production-Functional-T5-260717 self-runs the verifier with numpy and torch declared, has 19 hashed non-manifest files, digest 30749f1c5e1cdb9528ced2b6a3dcfced8d8ca8f6f39e8cef03913d32e13f33d6, and no missing, mismatched, or unhashed files. This result is a standalone discrete backend closure only. The historical external source remains a pinned audit failure; scalar-slice T5, external-solver integration, continuum theorem, minimizer, BCC, stability, T6, and T7 remain unchanged.",
   "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
   "title": "Full production functional realisation: standalone variational backend",
   "sector": "A",
   "statement": "The hash-pinned historical three-component N-001 working branch remains a documented variational audit failure. Separately, the in-repository hash-pinned standalone backend implements the manifest-defined all-coupling functional. Independent finite differences, real-pairing checks, and analytic scalar reduction verify DF[Psi](v)=<R[Psi],v>_R, DR[Psi]v=H[Psi]v, real Hessian symmetry, and scalar-slice reduction on grids N=4,6,8 across zero, homogeneous, random, q0-shell, and Class-II-active fields.",
-  "scope": "T4 strong computational evidence for the standalone discrete spectral-torus backend on N=4,6,8, using five field classes, three finite-difference steps, pinned parameters, and the declared shell-bias activation. The historical external source remains failed and is not repaired or integrated. The canonical scalar-slice T5 remains separate and unchanged.",
-  "tier": "T4",
+  "scope": "CLOSED@DISCRETE-VARIATIONAL-MATRIX: standalone discrete spectral-torus backend on N=4,6,8, using five field classes, three finite-difference steps, pinned parameters, and the declared shell-bias activation. The historical external source remains failed and is not repaired or integrated. The canonical scalar-slice T5 remains separate and unchanged.",
+  "tier": "T5",
   "evidence_grade": [
     "EXECUTED",
     "CONDITIONAL"
   ],
-  "falsifier": "Any backend or verifier hash/version drift, omitted required grid or field class, inactive listed coupling, failed numerical threshold, or failed analytic scalar reduction invalidates this T4 record.",
-  "no_overclaim": "This T4 result does not assert external-source repair, historical-solver integration, continuum or PDE closure, minimizer existence or selection, BCC structure, stability, or T5/T6/T7. The local preflight is not independent reproduction evidence.",
-  "next_action": "Obtain an operator-named independent evidence-collector run and review before any scoped T5 decision; build a final bundle only after operator confirmation. Treat historical-solver integration as a separate claim if pursued."
+  "falsifier": "Any backend or verifier hash/version drift, omitted required grid or field class, inactive listed coupling, failed numerical threshold, failed analytic scalar reduction, or failed independent reproduction invalidates this T5 record.",
+  "no_overclaim": "This T5 result does not assert external-source repair, historical-solver integration, continuum or PDE closure, minimizer existence or selection, BCC structure, stability, T6, or T7. It is not a theorem claim.",
+  "next_action": "Use only within CLOSED@DISCRETE-VARIATIONAL-MATRIX. Treat historical-solver integration, convergence, continuum behavior, and physical selection as separate claims."
 }

@@ -31,10 +31,11 @@ Changelog:
   1.1.0 (2026-06-05) banner-driven title/date/claim; standard-form validation
         with filename cross-check; temp-dir compile; PDF placed beside source;
         build/ area retired.
+  1.1.1 (2026-07-17) report source-line contexts for overfull-hbox failures.
 """
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-06-05"
+__version_issued__ = "2026-07-17"
 
 import argparse
 import re
@@ -150,6 +151,9 @@ def main():
         print(f"OVERFULL-HBOX: {n_over}" +
               ("" if n_over == 0 else "  <- fix per naming-and-versioning.md section 3"))
         if n_over:
+            contexts = [line for line in log.splitlines() if "Overfull \\hbox" in line]
+            print("OVERFULL CONTEXT:")
+            print("\n".join(contexts))
             return 1
         dest = src.parent / f"{stem}.pdf"
         shutil.copyfile(pdf, dest)

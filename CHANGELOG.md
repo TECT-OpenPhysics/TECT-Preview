@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Promote A1 production-functional backend to scoped T5] - 2026-07-17
+
+
+
 ## [Close A1 production-functional P1 at scoped T4] - 2026-07-17
 
 
