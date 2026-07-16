@@ -139,11 +139,13 @@ def main():
             r = subprocess.run([pdflatex, "-interaction=nonstopmode", tex.name],
                                cwd=td, capture_output=True, text=True, errors="replace")
         pdf = Path(td) / f"{stem}.pdf"
-        log = (Path(td) / f"{stem}.log").read_text(encoding="utf-8", errors="replace")
+        log_path = Path(td) / f"{stem}.log"
+        log = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
         n_over = log.count("Overfull \\hbox")
         if not pdf.exists() or r.returncode != 0:
             print("PDF build FAILED - tail of log:")
-            print("\n".join(r.stdout.splitlines()[-15:]))
+            tail = (log or r.stdout or r.stderr).splitlines()[-15:]
+            print("\n".join(tail))
             return 1
         print(f"OVERFULL-HBOX: {n_over}" +
               ("" if n_over == 0 else "  <- fix per naming-and-versioning.md section 3"))

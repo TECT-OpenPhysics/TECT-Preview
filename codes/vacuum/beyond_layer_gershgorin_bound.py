@@ -67,6 +67,7 @@ import numpy as np
 REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO / "archive" / "legacy" / "scripts"))
 import Math424_AddA_reading_uniqueness as m424  # noqa: E402
+import sectorb_common as sb  # noqa: E402
 
 CLAIMS = []
 def claim(name, expected, actual, tol):
@@ -81,7 +82,7 @@ def claim_true(name, cond, detail=""):
 
 U, V, Q0, C = m424.U, m424.V, m424.Q0, m424.C
 MU2 = 0.005
-MARGIN = 0.00432          # weakest interval margin: band P_B(M+) - dip_B (Math437 v1.2 / Math440)
+MARGIN = sb.margin_of(MU2)["margin"]  # derived Prop-A band margin
 
 print("S1 anchor constants")
 rR = m424.gap_solve(MU2, 0, 0, 0.0)

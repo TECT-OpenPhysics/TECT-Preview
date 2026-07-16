@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Align A1 scoped T5 note and bundle] - 2026-07-16
+
+
+
+## [Record N-001 homogeneous condensate experiment and scoped BCC-seed negative result] - 2026-07-16
+
+Added an experimental three-grid homogeneous-condensate record, its compact evidence manifest, a scoped q1a BCC-seed sweep negative result, and a q0/BCC-star curvature diagnostic task. No claim tier or BCC structural status changed.
+
 ## [Promote A1 production kernel manifest to scoped T5] - 2026-07-16
 
 

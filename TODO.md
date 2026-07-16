@@ -3,13 +3,16 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 29
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 29
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
+- **T-033** N-001: evaluate projected Hessian/Rayleigh curvature of the homogeneous branch on the commensurate q0/BCC-star subspace  _(owner: unassigned)_
+  - Experimental follow-up to the 2026-07-16 N32/N64/N128 homogeneous-condensate record. Positive q0/BCC-star curvature ends BCC exploration at this parameter point; negative or near-zero curvature justifies a separately scoped periodic BCC search. No tier or claim action is authorized.
+  - _updated 2026-07-16_
 
 ## Backlog
 

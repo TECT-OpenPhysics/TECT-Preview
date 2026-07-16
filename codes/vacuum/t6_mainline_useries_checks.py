@@ -39,7 +39,9 @@ from pathlib import Path
 import numpy as np
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "codes" / "vacuum"))
 sys.path.insert(0, str(REPO / "archive" / "legacy" / "scripts"))
+import sectorb_common as sb  # noqa: E402
 import Math424_AddA_reading_uniqueness as m424  # noqa: E402
 
 CLAIMS = []
@@ -60,8 +62,8 @@ def claim_true(name, cond, detail=""):
 
 U, V, Q0, C = m424.U, m424.V, m424.Q0, m424.C
 MU2 = 0.005
-MARGIN = 0.00432
-LAM_ANCHORS = [4e-4, 1e-3, 2e-3]
+MARGIN = sb.margin_of(MU2)["margin"]
+LAM_ANCHORS = list(sb.CERTIFIED_INTENSITIES)
 
 print("S0 shared anchors")
 rR = m424.gap_solve(MU2, 0, 0, 0.0)
@@ -114,7 +116,7 @@ J0 = J_of_t(1e-9, r_hat_anchor)
 claim("J0_addc_value", 0.290, J0, 0.01)
 
 # U1 composed margins (band floor x hardened/AddD ratios)
-rho = {4e-4: 59.4, 1e-3: 8.8, 2e-3: 2.6}
+rho = sb.RHO
 composed = {I: MARGIN * (1.0 - 1.0 / rho[I]) for I in LAM_ANCHORS}
 claim("composed_margin_anchor", 4.247e-3, composed[4e-4], 5e-6)
 claim("composed_margin_endpoint", 2.658e-3, composed[2e-3], 5e-6)

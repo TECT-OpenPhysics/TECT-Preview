@@ -39,6 +39,7 @@ _None linked to this sector._
 | AUDIT-2026-06-09-res5-survival-overclaim | RES-5 "survives at STRONG EVIDENCE, thin" (B1; certificate v | the higher-skeleton tail bound $C_{\rm higher}\le\text{leading}/(1-0.49)\approx2\times\text{leading}$ is SAME-ORDER (screened-finite), NOT s |
 | F-2026-06-10-res5-projection-route | RES-5 endpoint closure via the pattern projection $\chi_{\rm | the screened response at the BCC $\{110\}$ modulation transfers gives $\chi_{\rm proj}=f_{\rm avg}/C_G=0.613/0.492=1.25>1$ -- the bubble $\c |
 | R-2026-06-23-b3-bcc-structural-selection | fixed-ordered BCC structural selection ($F_{\rm BCC}<F_{\rm  | single-shell SMA ranking inversion + disordered collapse |
+| R-2026-07-16-N001-BCC-SEED-COLLAPSE | ??N-001 q1a BCC-seed sweep does not retain a q0-shell BCC br | all 48 stored `q1a_bcc_search` N32 outputs that contained both |
 
 ---
 

@@ -7,13 +7,13 @@
 
 **Selection statement.** A config stores (r_zero, mu2_shell, q0, Z, Y, eta_shell) + a 7-key scalar_slice (laplacian_mode, bcc_mix_epsilon, a_bcc, family_masses, k_lock, z0, eta_shell). The N-001 solver symbol is bloch_matrix_linear(|k|,{r,Z,Y,q0,**scalar_slice}); (r,Z)=kinetic_coefficients(mu2_shell,Y,q0). Gates delta_Z,delta_m,delta_r (separ…
 
-**Falsifier.** A config passing all gates with m_sh^2>0 closes the OPEN status for that config (admits it as production).
+**Falsifier.** Any required-field, scalar-slice, source-hash, delta, coefficient, or independent-review mismatch invalidates this scoped T5 manifest.
 
-## (all notes)/  ·  2 proof units  ·  tier span T1
+## (all notes)/  ·  2 proof units  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `a1-n001-analytic-branch-certification` | v1.0 | — |  |  |  |
-| `a1-production-kernel-manifest` | v1.6 | T1 | The canonical N-001 pure scalar slice passes the stored-field, runtime-symbol, positivity, and source-hash checks (14/14). | ANALYTIC + EXECUTED. | Independent operator reproduction, main-line decision, then T5 packaging. |
+| `a1-production-kernel-manifest` | v1.7 | T5 | The canonical N-001 pure scalar slice passes the stored-field, runtime-symbol, positivity, and source-hash checks (14/14) and has independent operato… | ANALYTIC + EXECUTED; independent reproduction… | Use only within pinned scalar-slice scope; separate theorem evidence is required for any … |
 
-<!-- generated 2026-07-16T09:56:34Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-16T10:28:18Z by build_index.py v1.0.1 -->

@@ -26,11 +26,13 @@ from pathlib import Path
 import numpy as np
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "codes" / "vacuum"))
 sys.path.insert(0, str(REPO / "archive" / "legacy" / "scripts"))
+import sectorb_common as sb  # noqa: E402
 import Math424_AddA_reading_uniqueness as m424  # noqa: E402
 
 U, V, Q0, C = m424.U, m424.V, m424.Q0, m424.C
-MARGIN = 0.00432          # anchor layer margin (Prop A band, Math437/Math440)
+MARGIN = sb.margin_of(sb.ANCHOR_MU2)["margin"]
 CLAIMS = []
 def claim(name, cond, detail=""):
     CLAIMS.append(dict(name=name, passed=bool(cond), detail=detail))

@@ -36,12 +36,14 @@ from pathlib import Path
 import numpy as np
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "codes" / "vacuum"))
 sys.path.insert(0, str(REPO / "archive" / "legacy" / "scripts"))
+import sectorb_common as sb  # noqa: E402
 import Math424_AddA_reading_uniqueness as m424  # noqa: E402
 
 U, V, Q0, C = m424.U, m424.V, m424.Q0, m424.C
-MARGIN = 0.00432          # Prop-A bulk layer margin (INPUT; I-independent; Math437/Math440 / ROBUSTNESS-MU2)
 ANCHOR_MU2 = 0.005
+MARGIN = sb.margin_of(ANCHOR_MU2)["margin"]
 I_LO, I_HI = 4e-4, 2e-3   # operating-point intensity interval (RES-4 scope)
 CLAIMS = []
 def claim(name, cond, detail=""):

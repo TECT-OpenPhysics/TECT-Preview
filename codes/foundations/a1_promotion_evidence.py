@@ -83,7 +83,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--expected-checker-version",
-        default="1.6.0",
+        default="1.7.0",
         help="Expected a1_kernel_checks.py JSON version.",
     )
     return parser.parse_args()
@@ -117,8 +117,8 @@ def review_text(args: argparse.Namespace, run_dir: Path, verdict: str) -> str:
         )
     else:
         mode_note = (
-            "This run is intended for independent reproduction review before any "
-            "T5 claim-card proposal."
+            "This run is intended for independent reproduction review of the "
+            "pinned scalar-slice T5 scope before any package re-issue or scope change."
         )
     return f"""# A1 Promotion Evidence Review
 
@@ -136,7 +136,7 @@ Recorded verdict: {verdict}
 - [ ] The input hashes in `environment.json` match the source tree under review.
 - [ ] The scope is only the canonical N-001 pure-Brazovskii scalar slice.
 - [ ] No statement here is treated as a full PDE, BCC, or operator theorem.
-- [ ] A main-proof-line decision is recorded before any T5 claim update.
+- [ ] Any package re-issue or scope change is recorded before publication.
 
 Reviewer:
 Decision:

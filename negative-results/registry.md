@@ -18,6 +18,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-06-09-res5-survival-overclaim](#audit-2026-06-09-res5-survival-overclaim) | RES-5 "survives at STRONG EVIDENCE, thin" (B1; certificate v1.0) | the higher-skeleton tail bound … |
 | [F-2026-06-10-res5-projection-route](#f-2026-06-10-res5-projection-route) | RES-5 endpoint closure via the pattern projection $\chi_{\rm proj}\le0.82$ (B1) | the screened response at the BCC $\{110\}$ modulation transfers gives … |
 
+| [R-2026-07-16-N001-BCC-SEED-COLLAPSE](#r-2026-07-16-n001-bcc-seed-collapse) | N-001 q1a BCC-seed sweep | stored fields do not retain q0-shell BCC modulation |
+
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention
 
@@ -179,3 +181,24 @@ x0.757 -> x0.95-1.03). scscope_joint_correction.py 5/5 verifies the corrected bo
 **Lesson**: run the conservative/established bookkeeping (not a favorable local formula) before claiming a closure.
 This is the adversarial-self-review the meta-feedback requires; it was omitted in the lift and caught during the
 follow-up rigorization.
+
+<a id="r-2026-07-16-n001-bcc-seed-collapse"></a>
+### R-2026-07-16-N001-BCC-SEED-COLLAPSE ??N-001 q1a BCC-seed sweep does not retain a q0-shell BCC branch
+
+**Failure mode:** all 48 stored `q1a_bcc_search` N32 outputs that contained both
+`Psi_star.npy` and `proof_results.json` lost their intended q0-shell/BCC
+modulation. The largest audited BCC/total Fourier fraction was approximately
+$9.8\times10^{-9}$; the 15 runs that passed the stored Phase-0 and projected
+Phase-2 fields had q0-shell fractions at most approximately $2.4\times10^{-12}$.
+
+**Evidence:** 2026-07-16 Fourier audit of the stored fields, recorded in
+`reviews/2026-07-16-n001-uniform-condensate-review.md` and its adjacent JSON
+evidence manifest. The audit is scoped to the stored q1a seed, parameter,
+box, discretisation, and solver setup.
+
+**Consequence:** this is not a nonexistence result for BCC condensates and does
+not modify B1-RH-ENUM or the already retired B3-BCC-STRUCT card. It rules out
+using these stored fields as BCC evidence. The observed three-grid branch is
+recorded separately as a homogeneous-condensate experimental result. Before a
+new BCC sweep, evaluate q0/BCC-star projected curvature about the homogeneous
+branch.

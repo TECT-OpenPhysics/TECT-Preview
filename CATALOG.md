@@ -6,7 +6,7 @@
 
 Generated: 2026-07-16
 
-**1288 artefacts** · superseded versions kept: 127 · machine-readable twin: `verification/catalog.json`
+**1307 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -21,8 +21,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-IDENTITY/LINEAGE.md` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `45fde0e6afee` |
 | `claims/A1-KERNEL-IDENTITY/claim.md` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `c2df5cdc2a5f` |
 | `claims/A1-KERNEL-IDENTITY/status.json` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `1ad6c2002c7e` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/LINEAGE.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `b4d1d0ff1638` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/PROMOTION-RUNBOOK.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `3bee8a600af8` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/LINEAGE.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `deb96b81c938` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/PROMOTION-RUNBOOK.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `c53234518dd1` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/MANIFEST.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `6f6581e2f332` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/README.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `cb0a14db4044` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `5206dc9efb84` |
@@ -35,6 +35,18 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/environment.txt` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `328aba0a806b` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/expected/a1_kernel_checks.log` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `b8efc1e862d0` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/requirements.txt` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `e283d1858ee0` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/MANIFEST.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `8bc972e69fc6` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/README.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `5f292d462125` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `030d1b7c62e7` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/codes/foundations/a1_kernel_checks.py` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.7.0 | ACTIVE | `2c39fc526824` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/codes/foundations/n001_solver/PROVENANCE.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `48ff9292a0e8` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/codes/foundations/n001_solver/README.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `6af18efb12eb` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/codes/foundations/n001_solver/bloch_linearization.py` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `337bd6de6b31` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/codes/foundations/n001_solver/continuation_mu2_v25.py` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `6db0393a31f3` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/codes/foundations/n001_solver/math56_constants.py` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `6c80859780ba` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/environment.txt` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `0edc3d54b61e` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/expected/a1_kernel_checks.log` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `82eb8ec980d9` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/requirements.txt` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `457e45615e94` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/MANIFEST.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `f981eece0342` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/README.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `64f1b5bea100` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `030d1b7c62e7` |
@@ -48,8 +60,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/expected/a1_kernel_checks.log` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `335c8dfbd201` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/requirements.txt` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `e283d1858ee0` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `030d1b7c62e7` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/claim.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `324059a0d654` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/status.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `ef447afc7948` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/claim.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `d91886cb5f0d` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/status.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `b5224a6abdda` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/LINEAGE.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `bbed77b840ee` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/claim.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `580c0ff56a20` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/status.json` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `49f434c6d9db` |
@@ -324,6 +336,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.3.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.3 | ACTIVE | `857c8ab1711e` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.4.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.4 | ACTIVE | `c2480d55c507` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.4.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.4 | ACTIVE | `4125a6a4187f` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.7 | ACTIVE | `e480e3acd519` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.7 | ACTIVE | `ea4015123fd2` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.5 | ACTIVE | `0a95015e303b` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.5 | ACTIVE | `f1d1398aeaa3` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-n001-analytic-branch-certification-260623-260623-v1.0.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `79e1c4bfec7f` |
@@ -339,9 +353,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.4.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.4 | ACTIVE | `c2480d55c507` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.4.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.4 | SUPERSEDED | `29349119a1c6` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.5 | ACTIVE | `0a95015e303b` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.5 | ACTIVE | `f1d1398aeaa3` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | v1.5 | SUPERSEDED | `646888238a34` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.6.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.6 | ACTIVE | `6f167852a18e` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.6.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.6 | ACTIVE | `44f5179f53c5` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.6.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.6 | SUPERSEDED | `aa612529ef5f` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.pdf` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.7 | ACTIVE | `e480e3acd519` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.7 | ACTIVE | `ea4015123fd2` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.pdf` | A1-SCALAR-ANALYTIC-BRANCH | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `897c3a956ff8` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.tex.txt` | A1-SCALAR-ANALYTIC-BRANCH | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `9e8060158030` |
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/claims/A2-PDE-WELLPOSED/notes/a2-consolidation-260623-260623-v1.1.pdf` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `01375e76fe38` |
@@ -940,8 +956,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-KERNEL-CONV/runs/260605-migration-revalidation/summary.json` | A1-KERNEL-CONV | 2026-06-05 | 2026-06-05 | — | ACTIVE | `89aba59bea20` |
 | `claims/A1-KERNEL-IDENTITY/runs/a1_kernel_checks.json` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `5dc6ba9d9876` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-260623/claims/A1-KERNEL-IDENTITY/runs/a1_kernel_checks.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `a524559a35f4` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/a1_kernel_checks.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `a2816b5e7805` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-v15-260623/claims/A1-KERNEL-IDENTITY/runs/a1_kernel_checks.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `5dc6ba9d9876` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/a1_kernel_checks.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `e541a84a417c` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/a1_kernel_checks.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `a2816b5e7805` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/n001_analytic_branch_certificate.json` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-06-23 | — | ACTIVE | `48a1cfc4e8c6` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-codex-preflight-01/FILE-SHA256.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `819e22bd5b3d` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-codex-preflight-01/REVIEW.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `0a1e92d6a74c` |
@@ -1116,9 +1133,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `codes/README.md` | — | — | — | — | ACTIVE | `1a99dfac3bfc` |
-| `codes/foundations/a1_kernel_checks.py` | — | 2026-06-23 | 2026-07-16 | v1.6.0 | ACTIVE | `417ec4788d82` |
+| `codes/foundations/a1_kernel_checks.py` | — | 2026-06-23 | 2026-07-16 | v1.7.0 | ACTIVE | `2c39fc526824` |
 | `codes/foundations/a1_n001_certify.py` | — | — | — | — | ACTIVE | `43cff440f85c` |
-| `codes/foundations/a1_promotion_evidence.py` | — | — | — | v1.0.0 | ACTIVE | `4c5d96eeacda` |
+| `codes/foundations/a1_promotion_evidence.py` | — | — | — | v1.0.0 | ACTIVE | `7c097c266818` |
 | `codes/foundations/a2_wellposedness_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `8839d0f40aed` |
 | `codes/foundations/a3_graphwise_convergence_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `295b72b2ed25` |
 | `codes/foundations/a3_renormalisation_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.0.0 | ACTIVE | `d41b7bb1db59` |
@@ -1229,7 +1246,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/scripts/build_index.py` | — | — | — | v1.0.1 | ACTIVE | `5b5cf548e8e3` |
 | `verification/scripts/build_lineage.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `50c360a1d1f2` |
 | `verification/scripts/build_note_pdf.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `fded07c49a97` |
-| `verification/scripts/build_reproduction_bundle.py` | — | 2026-06-10 | 2026-06-10 | v1.9.0 | ACTIVE | `75b0c9460d5c` |
+| `verification/scripts/build_reproduction_bundle.py` | — | 2026-06-10 | 2026-06-10 | v1.9.0 | ACTIVE | `013249a36745` |
 | `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
 | `verification/scripts/bundle_coverage.py` | — | 2026-06-10 | — | v1.0.0 | ACTIVE | `eca8801f49c9` |
 | `verification/scripts/changelog.py` | — | — | — | — | ACTIVE | `ac07ad463a51` |
@@ -1269,7 +1286,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `391083a555e2` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `17772b1c414e` |
 | `claims/A1-KERNEL-IDENTITY/INDEX.md` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `282467f832e4` |
-| `claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `842bfa139db0` |
+| `claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `a00996ec8ef4` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `73ce3a0fac09` |
 | `claims/A2-PDE-WELLPOSED/INDEX.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `db953c1945b8` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `36bc8af82f42` |
@@ -1281,7 +1298,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `82a66a7d1019` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `e5856514c608` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `3a57577ed43c` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `35a1298aeef8` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `c9927cd7940b` |
@@ -1312,7 +1329,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `8bc325ac45b4` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `681e0996bf4f` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `10153269836e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -1321,7 +1338,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `c6fd8ea1f7f4` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `1e01759e4a1c` |
+| `TODO.md` | — | — | — | — | ACTIVE | `206b61b6250d` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -1331,7 +1348,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `0de8bbc33c04` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `1ad1b34fd9c1` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1354,6 +1371,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/2026-06-08-hadmcoh-discharge-authorization.md` | — | — | — | — | ACTIVE | `b97b87d1834e` |
 | `reviews/2026-06-08-scscope-lift-authorization.md` | — | — | — | — | ACTIVE | `cd0a85645dc2` |
 | `reviews/2026-06-09-scscope-lift-thin-certified.md` | — | — | — | — | ACTIVE | `9c332d9f5fa8` |
+| `reviews/2026-07-16-n001-uniform-condensate-evidence.json` | — | — | — | — | ACTIVE | `0eb79a8ca0b7` |
+| `reviews/2026-07-16-n001-uniform-condensate-review.md` | — | — | — | — | ACTIVE | `963770793062` |
 | `reviews/README.md` | — | — | — | — | ACTIVE | `31e69ef5cc8a` |
 | `strategy/dr2-external-research-assessment-260608.md` | — | — | — | — | ACTIVE | `7fc0afc0b0f6` |
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
@@ -1367,10 +1386,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
 | `theory/sectors/A.md` | — | — | — | — | ACTIVE | `bc4c44faaaf6` |
-| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `61782baf577b` |
+| `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `4cf65cc410db` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `3e37aca31dec` |
 

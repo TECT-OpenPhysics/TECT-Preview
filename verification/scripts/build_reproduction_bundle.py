@@ -35,10 +35,13 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 SEARCH = [REPO/"codes"/"vacuum", REPO/"archive"/"legacy"/"scripts",
           REPO/"codes"/"pde", REPO/"codes"/"scripts", REPO/"codes"/"tools",
-          REPO/"codes"/"foundations"]
+          REPO/"codes"/"foundations", REPO/"codes"/"foundations"/"n001_solver"]
 STDLIB = {"os","sys","math","json","re","collections","pathlib","itertools","functools",
           "time","tempfile","argparse","datetime","typing","__future__","hashlib","platform",
-          "shutil","subprocess","ast","random","copy","warnings","importlib"}
+          "shutil","subprocess","ast","random","copy","warnings","importlib","dataclasses",
+          "traceback"}
+OPTIONAL_ABSENT = {"torch", "tect_newton_krylov", "real_backend_pt_bcc_mixed_v3",
+                   "bz_preconditioner", "tools"}
 
 def find_module(name):
     for d in SEARCH:
@@ -73,7 +76,7 @@ def resolve_deps(entries):
         for ref in re.findall(r"""['"]([A-Za-z0-9_]+)\.py['"]""", src):
             if find_module(ref):
                 stack.append(ref)
-    return sorted(deps), sorted(thirdparty - STDLIB)
+    return sorted(deps), sorted(thirdparty - STDLIB - OPTIONAL_ABSENT)
 
 def sha256(path):
     h = hashlib.sha256()
@@ -121,10 +124,12 @@ def main():
     ap.add_argument("--folder")
     ap.add_argument("--note")
     ap.add_argument("--scripts", nargs="+")
+    ap.add_argument("--extra-files", nargs="*", default=[], help="additional repo-relative data files to copy into the bundle")
     ap.add_argument("--out")
     ap.add_argument("--force", action="store_true", help="rebuild even if a complete bundle (MANIFEST) exists")
-    ap.add_argument("--tier", help="tier tag for the bundle name (e.g. T7, DRAFT)")
+    ap.add_argument("--tier", help="confirmed result tier for the bundle name (e.g. T5, T6, T7)")
     ap.add_argument("--result", help="result-name slug for the bundle name (default: sub-folder name)")
+    ap.add_argument("--repo-commit", help="immutable source commit used to build this bundle; required for a final published package")
     ap.add_argument("--title", default="")
     args = ap.parse_args()
     if args.tier and args.tier.strip().upper() == "DRAFT":
@@ -187,6 +192,15 @@ def main():
             rel = src.relative_to(REPO)
             dst = out/rel; dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dst); copied.append(rel.as_posix())
+    # (2b) runtime data files such as canonical JSON configs or provenance records.
+    for extra in args.extra_files:
+        src = REPO/extra
+        if not src.exists() or not src.is_file():
+            print(f"ERROR: extra file not found: {extra}")
+            return 1
+        rel = src.relative_to(REPO)
+        dst = out/rel; dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst); copied.append(rel.as_posix())
 
     # (3) RUN each entry script with the bundle as REPO; capture expected output.
     #     RESUMABLE: a script already captured with a PASS log is skipped, so a heavy
@@ -241,6 +255,7 @@ def main():
     expected = "\n".join(f"  {n}: exit 0, `{runlog[n]['pass_line']}`" for n in runlog)
     _bn = Path(args.out.rstrip("/")).name
     grade = "PUBLISHED (operator-confirmed)"  # policy sec.14: bundles are post-confirmation only
+    commit_text = args.repo_commit or "TO BE STAMPED AT PUBLISH (git rev-parse HEAD)"
     readme = f"""# Reproduction bundle -- {args.title or note.stem}
 
 Self-contained referee reproduction bundle (TECT verification-first repository).
@@ -276,12 +291,12 @@ your output against `expected/`.
 ## Integrity
 Bundle content digest (sha256 over `<sha256>  <path>` lines):
 `{bundle_digest}`
-The repository commit that produced this bundle is recorded at publish time in
+The repository commit that produced this bundle is recorded in
 `MANIFEST.json:repo_commit`.
 
 ## Scope / how to attack
-See the note's section 1 (scope) and section 10 (devil's-advocate + falsifier).
-The result is scope-qualified (T7-SCOPE), not an unconditional claim.
+See the note's scope, devil's-advocate, falsifier, and no-overclaim statement.
+The bundle does not enlarge the claim beyond that pinned scope.
 """
     (out/"README.md").write_text(readme)
 
@@ -289,7 +304,7 @@ The result is scope-qualified (T7-SCOPE), not an unconditional claim.
         bundle=args.title or note.stem, built_utc=env["built_utc"],
         note=note.relative_to(REPO).as_posix(), entry_scripts=list(args.scripts),
         environment=env, third_party=thirdparty, runlog=runlog,
-        repo_commit="TO BE STAMPED AT PUBLISH (git rev-parse HEAD)",
+        repo_commit=commit_text,
         bundle_digest=bundle_digest, files=hashes)
     (out/"MANIFEST.json").write_text(json.dumps(manifest, indent=2))
 

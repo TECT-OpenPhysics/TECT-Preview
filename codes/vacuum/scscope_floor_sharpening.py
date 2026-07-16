@@ -22,10 +22,12 @@ import json, sys, math
 from pathlib import Path
 import numpy as np
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "codes" / "vacuum"))
 sys.path.insert(0, str(REPO / "archive" / "legacy" / "scripts"))
+import sectorb_common as sb
 import Math424_AddA_reading_uniqueness as m424
 U, V, Q0, C = m424.U, m424.V, m424.Q0, m424.C
-MARGIN = 0.00432
+MARGIN = sb.margin_of(sb.ANCHOR_MU2)["margin"]
 INFL = 2.872   # third-order paired joint inflation 1+max[R_s+R_q] (scscope-joint-pairing)
 CLAIMS = []
 def claim(n,c,d=""): CLAIMS.append(dict(name=n,passed=bool(c),detail=d)); print(f"  [{'PASS' if c else 'FAIL'}] {n} {d}")
