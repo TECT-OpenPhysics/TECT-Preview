@@ -12,30 +12,31 @@
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-07-17)",
   "legacy_evidence": [
-    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-production-functional-realisation-260717-v1.0.tex.txt",
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/notes/a1-production-functional-realisation-260717-v1.1.tex.txt",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
     "codes/foundations/a1_production_functional_realisation.py",
-    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json"
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json",
+    "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-reference-functional-closure/result.json"
   ],
   "t7_candidate": false,
   "reproduction": {
-    "command": "python codes/foundations/a1_production_functional_realisation.py --output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json",
-    "expected": "P1 AUDIT PASS: independent declared-energy derivative control passes and the pinned scalar plus full-production variational mismatches are detected; this is not a closure pass.",
+    "command": "python codes/foundations/a1_production_functional_realisation.py --reference-closure --output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json --reference-output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-reference-functional-closure/result.json",
+    "expected": "P1 AUDIT PASS: the pinned source mismatch is detected and the proposed all-coupling reference functional closes the three N=4 variational identities; this is not a production closure pass.",
     "status": "AVAILABLE"
   },
   "last_review": "2026-07-17",
-  "notes": "T3 computable scaffold established on 2026-07-17. The manifest pins the external N-001 working-branch backend and config by SHA-256, freezes the torus real pairing and all listed production terms, and records the current energy/residual conventions. The audit is intentionally diagnostic: its independent autodiff/finite-difference energy control must pass, while the pinned source pair must expose both the scalar nonlinear factor-two mismatch and the Class-II cJK-versus-cKK mismatch before a repaired functional can be considered for T5. No existing scalar-slice T5 scope, PDE, BCC, Hessian-stability, T6, or T7 claim is changed.",
+  "notes": "T3 computable scaffold established on 2026-07-17 and extended by v1.1. The manifest pins the external N-001 working-branch backend and config by SHA-256, freezes the torus real pairing and all listed production terms, and records the current source energy/residual mismatch. Separately, a proposed all-coupling reference functional uses lambda/4 rho^2 + gamma/6 rho^3 and the symmetric cJJ/cJK/cKK J-K quadratic form. On the stated N=4 fields/steps, the reference closes DF=<R,v>, DR=H, and real Hessian symmetry; it does not repair or replace the external source. No existing scalar-slice T5 scope, PDE, BCC, Hessian-stability, T6, or T7 claim is changed.",
   "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
   "title": "Full production functional realisation: variational-consistency scaffold",
   "sector": "A",
-  "statement": "The current external three-component N-001 working branch is hash-pinned with a declared energy, executable residual, executable Hessian, real torus pairing, Class-II floor, projector convention, and a multi-field audit matrix. Independent Torch autodiff plus finite differences validate the declared-energy derivative and test DF[Psi](v)=<R[Psi],v>_R, DR[Psi]v=H[Psi]v, and real Hessian symmetry on zero, homogeneous, random, q0-shell, and Class-II-active fields. The scaffold records rather than conceals the current obstructions: the scalar energy nonlinearities are factor-two inconsistent with the residual under the frozen real pairing, and the Class-II energy uses cKK whereas residual uses cJK.",
-  "scope": "T3 computable diagnostic on N=4 spectral torus grids with the SHA-256-pinned external working branch; it establishes only a reproducible test harness and a named mismatch detection. The canonical scalar-slice T5 remains separate and unchanged.",
+  "statement": "The hash-pinned external three-component N-001 working branch is audited and shown not to close variationally under the frozen real torus pairing: its scalar energy nonlinearities are factor-two inconsistent with the residual, and its Class-II energy uses cKK whereas residual uses cJK. Separately, the manifest defines a proposed all-coupling reference functional with lambda/4 rho^2 + gamma/6 rho^3 and a symmetric cJJ/cJK/cKK J-K quadratic form. Independent energy finite differences plus Torch-autodiff gradient and centred-gradient Hessian checks close DF_ref[Psi](v)=<R_ref[Psi],v>_R, DR_ref[Psi]v=H_ref[Psi]v, and real Hessian symmetry on zero, homogeneous, random, q0-shell, and Class-II-active N=4 fields.",
+  "scope": "T3 computable diagnostic on N=4 spectral torus grids. The source audit applies only to the SHA-256-pinned external working branch and remains failed. The reference closure applies only to the explicitly manifest-defined candidate functional, not to the external backend. The canonical scalar-slice T5 remains separate and unchanged.",
   "tier": "T3",
   "evidence_grade": [
     "EXECUTED",
     "CONDITIONAL"
   ],
-  "falsifier": "Any source-hash drift, failure of the independently reconstructed energy derivative control, missing required field/configuration, or failure to detect the pinned nonlinear factor-two and cJK-versus-cKK mismatches invalidates this scaffold record.",
-  "no_overclaim": "This does not assert that the full production branch is variational, well posed, stable, BCC-selected, or T5/T6/T7. A detected mismatch is not a proof that no repaired Class-II functional exists.",
-  "next_action": "Resolve the functional authority: first align the scalar quartic/sextic energy coefficients with the frozen real-gradient convention, then derive one Class-II energy whose real gradient is the intended residual (including cJJ, cJK, cKK), or revise the residual to that energy; rerun all fields/grids before any separately scoped T5 proposal."
+  "falsifier": "Any source-hash drift, failure of the independently reconstructed energy derivative control, missing required field/configuration, failure to detect the pinned source mismatches, or a failed reference field/step/identity invalidates this scaffold record.",
+  "no_overclaim": "Reference closure does not assert that the external production branch is repaired, variational, well posed, stable, BCC-selected, or T5/T6/T7. A detected source mismatch is not a proof that no repaired Class-II functional can be implemented.",
+  "next_action": "Implement the manifest-defined reference convention in a separately hash-pinned production backend, then rerun the source audit against that backend on N=4 and larger grids before any separately scoped T5 proposal."
 }

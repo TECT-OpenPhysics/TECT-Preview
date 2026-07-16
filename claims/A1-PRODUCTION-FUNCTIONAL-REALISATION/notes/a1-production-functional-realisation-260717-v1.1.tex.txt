@@ -1,0 +1,71 @@
+% =============================================================================
+% Title: Production functional realisation -- source audit and reference closure
+% Claim: A1-PRODUCTION-FUNCTIONAL-REALISATION
+% Version: v1.1 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: verification record (T3 computable scaffold; no tier promotion)
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This revision retains the hash-pinned external-source audit and adds a separate,
+explicit reference functional.  The reference is an all-coupling mathematical
+candidate, not an assertion that the external working branch has been repaired.
+Neither result enlarges the pure-Brazovskii scalar-slice T5 claim.
+
+\section*{2. Reference functional}
+On the stated real torus pairing, define $J_A=\nabla m_A$,
+$K_A=J_A-(m_A/(\rho+10^{-12}))\nabla\rho$, and
+\[
+ F_{\rm ref}=F_{\rm Braz}+F_{\rm family}+F_{\rm lock}+F_{\rm shell}
+ +\int\left(\frac\lambda4\rho^2+\frac\gamma6\rho^3\right)
+ +\sum_A\int\left(\frac a2|J_A|^2+b\operatorname{Re}(\bar J_A\cdot K_A)
+ +\frac c2|K_A|^2\right),
+\]
+where $a=c_{JJ}\alpha_X^2/(M_X^2+10^{-12})$,
+$b=c_{JK}\alpha_X\beta_X/(M_X^2+10^{-12})$, and
+$c=c_{KK}\beta_X^2/(M_X^2+10^{-12})$.  Thus all three Class-II coefficients
+are represented and the scalar coefficients match the frozen real gradient.
+
+\section*{3. Procedure and result}
+Torch autodiff supplies $R_{\rm ref}$ from $F_{\rm ref}$.  A centred derivative
+of that gradient supplies $H_{\rm ref}$ because this CPU runtime does not expose
+a reliable complex-FFT second-autodiff path.  Independent energy finite
+differences and three outer derivative steps test the three identities over
+zero, homogeneous, random, commensurate $q_0$-shell, and Class-II-active fields,
+both at the pinned point and a manifest-declared shell-bias activation.
+
+The persisted reference run passes: maximum errors are $1.174\times10^{-7}$ for
+$DF_{\rm ref}=\langle R_{\rm ref},v\rangle_{\mathbb R}$,
+$1.005\times10^{-9}$ for $DR_{\rm ref}v=H_{\rm ref}v$, and
+$3.380\times10^{-11}$ for real Hessian symmetry.  The independent source audit
+continues to fail variational closure, as required by its separate falsifier.
+
+\section*{4. Devil's-advocate}
+(alpha) \emph{``The reference silently drops the troublesome Class-II term.''}
+DISMISSED: the manifest requires nonzero $c_{JJ},c_{JK},c_{KK}$ and the cross
+term is present explicitly.
+
+(beta) \emph{``Autodiff makes the variational identity tautological.''} VALID
+with mitigation: the directional derivative is checked by independent energy
+finite differences at three steps, and $DR=H$ is checked at separate outer
+steps.
+
+(gamma) \emph{``Reference closure repairs production.''} UPHELD as an invalid
+reading: the external backend hash remains pinned and its audit remains failed;
+implementation authority is still an open engineering and review action.
+
+\section*{5. Result footer}
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-FUNCTIONAL-REALISATION
+Precise statement:       Proposed all-coupling reference functional closes the
+                         three discrete variational identities on N=4 tests.
+Scope:                   Proposed reference only; source audit remains separate.
+Dependencies:            A1-PRODUCTION-KERNEL-MANIFEST.
+Evidence grade:          EXECUTED, CONDITIONAL.
+Reproduction command:    python codes/foundations/a1_production_functional_realisation.py --reference-closure
+Expected output:         AUDIT-PASS-MISMATCH-DETECTED and REFERENCE-CLOSURE-PASS.
+Falsification gate:      a failed field/step/identity or source/reference conflation.
+Tier before / after:     T3 / T3 (no promotion).
+No-overclaim statement:  Not a repaired production backend, PDE theorem, or BCC result.
+Next required action:    implement the chosen reference convention in a separately
+                         hash-pinned production backend and rerun this audit.
+\end{verbatim}

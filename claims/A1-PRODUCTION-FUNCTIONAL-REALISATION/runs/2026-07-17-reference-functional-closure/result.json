@@ -1,0 +1,294 @@
+{
+  "schema": "tect/a1-production-reference-functional-closure/1.0",
+  "date": "2026-07-17",
+  "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+  "verdict": "REFERENCE-CLOSURE-PASS",
+  "scope": "proposed reference functional only; not the external working-branch backend",
+  "checks": {
+    "all_scalar_terms_present": true,
+    "all_classII_terms_present": true,
+    "variational_identity": true,
+    "hessian_identity": true,
+    "real_hessian_symmetry": true
+  },
+  "thresholds": {
+    "variational": 2e-07,
+    "hessian": 2e-05,
+    "symmetry": 1e-09
+  },
+  "maxima": {
+    "variational_rel_error": 1.1110280573323195e-07,
+    "dr_hessian_rel_error": 8.849276476963366e-10,
+    "symmetry_rel_error": 2.8861583262207446e-11
+  },
+  "rows": [
+    {
+      "variant": "reference-pinned-production",
+      "field": "zero",
+      "residual_directional": 0.0,
+      "symmetry_rel_error": 4.4825254619240695e-15,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 0.0,
+          "variational_rel_error": 0.0,
+          "dr_hessian_rel_error": 1.7275343063503366e-13
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 0.0,
+          "variational_rel_error": 0.0,
+          "dr_hessian_rel_error": 1.5160623864824165e-14
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 0.0,
+          "variational_rel_error": 0.0,
+          "dr_hessian_rel_error": 1.7036048313005767e-14
+        }
+      ]
+    },
+    {
+      "variant": "reference-pinned-production",
+      "field": "homogeneous",
+      "residual_directional": 1.119977104387118,
+      "symmetry_rel_error": 1.8638701693163284e-11,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 1.119977104622194,
+          "variational_rel_error": 2.0989353954532005e-10,
+          "dr_hessian_rel_error": 2.4309974447651096e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 1.11997711087497,
+          "variational_rel_error": 5.792843416522315e-09,
+          "dr_hessian_rel_error": 8.447325233543847e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 1.1199771847714146,
+          "variational_rel_error": 7.177315542266557e-08,
+          "dr_hessian_rel_error": 7.026540638160955e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-pinned-production",
+      "field": "random",
+      "residual_directional": 1.5470001683572518,
+      "symmetry_rel_error": 2.5879794834926528e-11,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 1.5470001682160728,
+          "variational_rel_error": 9.125989209537118e-11,
+          "dr_hessian_rel_error": 2.5866760629613426e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 1.5470001926587427,
+          "variational_rel_error": 1.570878331818526e-08,
+          "dr_hessian_rel_error": 7.705585563921974e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 1.547000238133478,
+          "variational_rel_error": 4.510421162865887e-08,
+          "dr_hessian_rel_error": 8.35677269299814e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-pinned-production",
+      "field": "q0-shell",
+      "residual_directional": 1.2593014782062555,
+      "symmetry_rel_error": 2.8861583262207446e-11,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 1.2593014793083057,
+          "variational_rel_error": 8.751281936530417e-10,
+          "dr_hessian_rel_error": 3.044963400471996e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 1.2593014730555296,
+          "variational_rel_error": 4.090145159818184e-09,
+          "dr_hessian_rel_error": 9.165974348924556e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 1.2593014275807946,
+          "variational_rel_error": 4.020122409972419e-08,
+          "dr_hessian_rel_error": 8.560867424749832e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-pinned-production",
+      "field": "classII-active",
+      "residual_directional": 1.432677609692936,
+      "symmetry_rel_error": 1.6160225935202277e-11,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 1.4326776090456406,
+          "variational_rel_error": 4.518080858312453e-10,
+          "dr_hessian_rel_error": 3.231566338470359e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 1.4326776181405874,
+          "variational_rel_error": 5.896407789353116e-09,
+          "dr_hessian_rel_error": 7.388936144607497e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 1.4326776636153227,
+          "variational_rel_error": 3.763748688721466e-08,
+          "dr_hessian_rel_error": 8.744293182630099e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-all-terms-activation",
+      "field": "zero",
+      "residual_directional": 0.0,
+      "symmetry_rel_error": 7.216449660063518e-16,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 0.0,
+          "variational_rel_error": 0.0,
+          "dr_hessian_rel_error": 1.8158879353485776e-13
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 0.0,
+          "variational_rel_error": 0.0,
+          "dr_hessian_rel_error": 1.593550078487708e-14
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 0.0,
+          "variational_rel_error": 0.0,
+          "dr_hessian_rel_error": 1.790469719803685e-14
+        }
+      ]
+    },
+    {
+      "variant": "reference-all-terms-activation",
+      "field": "homogeneous",
+      "residual_directional": -0.9960534987802387,
+      "symmetry_rel_error": 5.598528585171181e-12,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": -0.9960534987385472,
+          "variational_rel_error": 4.169153910993373e-11,
+          "dr_hessian_rel_error": 2.687342534146331e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": -0.9960535010122838,
+          "variational_rel_error": 2.2320451043000844e-09,
+          "dr_hessian_rel_error": 6.489422189331663e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": -0.9960535294339934,
+          "variational_rel_error": 3.0653754645726394e-08,
+          "dr_hessian_rel_error": 5.914364531641959e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-all-terms-activation",
+      "field": "random",
+      "residual_directional": 2.2856461549359457,
+      "symmetry_rel_error": 1.0351941526209885e-11,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 2.285646156110488,
+          "variational_rel_error": 5.13877547539254e-10,
+          "dr_hessian_rel_error": 2.540136480533956e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 2.2856461612263956,
+          "variational_rel_error": 2.752153874658391e-09,
+          "dr_hessian_rel_error": 7.975046304373995e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 2.285646132804686,
+          "variational_rel_error": 9.682714642375134e-09,
+          "dr_hessian_rel_error": 8.849276476963366e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-all-terms-activation",
+      "field": "q0-shell",
+      "residual_directional": -0.966654286313472,
+      "symmetry_rel_error": 5.700460936619578e-12,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": -0.9666542854347426,
+          "variational_rel_error": 8.78729422559843e-10,
+          "dr_hessian_rel_error": 2.6502413759732673e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": -0.9666542894137818,
+          "variational_rel_error": 3.1003097866744156e-09,
+          "dr_hessian_rel_error": 8.844754716283222e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": -0.9666543974162778,
+          "variational_rel_error": 1.1110280573323195e-07,
+          "dr_hessian_rel_error": 8.5670277332992e-10
+        }
+      ]
+    },
+    {
+      "variant": "reference-all-terms-activation",
+      "field": "classII-active",
+      "residual_directional": 0.7475235329921653,
+      "symmetry_rel_error": 1.2130442483826442e-11,
+      "steps": [
+        {
+          "step": 0.0001,
+          "energy_fd": 0.747523530435501,
+          "variational_rel_error": 2.5566643246932585e-09,
+          "dr_hessian_rel_error": 2.8385668529707825e-11
+        },
+        {
+          "step": 1e-05,
+          "energy_fd": 0.7475235236142906,
+          "variational_rel_error": 9.377874699012523e-09,
+          "dr_hessian_rel_error": 6.964136999286475e-11
+        },
+        {
+          "step": 1e-06,
+          "energy_fd": 0.7475234724552138,
+          "variational_rel_error": 6.053695156271743e-08,
+          "dr_hessian_rel_error": 7.595761443633259e-10
+        }
+      ]
+    }
+  ],
+  "functional": {
+    "status": "mathematically self-consistent reference candidate; not an external-source replacement",
+    "formula": "F_ref = F_Brazovskii + F_family + F_lock + F_shell + (lambda/4) int rho^2 + (gamma/6) int rho^3 + sum_A [a/2 |J_A|^2 + b Re(conj(J_A).K_A) + c/2 |K_A|^2]",
+    "definitions": "J_A=grad m_A; K_A=J_A-(m_A/(rho+1e-12))grad rho; m_A=Psi^dagger T_A Psi",
+    "coefficients": "a=cJJ alpha_X^2/(M_X^2+1e-12), b=cJK alpha_X beta_X/(M_X^2+1e-12), c=cKK beta_X^2/(M_X^2+1e-12)",
+    "real_gradient_convention": "R_ref is the Torch-autodiff real gradient satisfying DF_ref[Psi](v)=<R_ref[Psi],v>_R; H_ref is a centred derivative of that gradient",
+    "purpose": "provides an explicit all-coupling target for a future production implementation; it does not identify the intended historical source convention"
+  }
+}

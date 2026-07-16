@@ -158,6 +158,94 @@ def declared_energy(psi: torch.Tensor, params: dict[str, Any]) -> torch.Tensor:
     return torch.real(result * dvol)
 
 
+def reference_energy(psi: torch.Tensor, params: dict[str, Any]) -> torch.Tensor:
+    """Proposed full variational functional under the manifest real pairing.
+
+    This is a reference candidate, not a claim about the hash-pinned working
+    branch.  It corrects the scalar real-gradient normalisation and retains all
+    three Class-II couplings through the symmetric quadratic form in (J, K).
+    Its residual is derived below by autodiff; its Hessian uses a centred
+    derivative of that gradient rather than copied external-source code.
+    """
+    nx, ny, nz = (int(n) for n in psi.shape[1:])
+    dvol = (float(params["Lx"]) / nx) * (float(params["Ly"]) / ny) * (float(params["Lz"]) / nz)
+    # Write every squared complex norm polynomially.  torch.abs(z)**2 has a
+    # non-smooth complex-autodiff path at z=0, whereas Re(conj(z) z) preserves
+    # the same value and gives a defined zero-field derivative/Hessian.
+    norm_sq = lambda value: torch.real(torch.conj(value) * value)
+    rho = torch.sum(norm_sq(psi), dim=0)
+    grad, lap = fft_grad(psi, params)
+    result = 0.5 * float(params["r"]) * torch.sum(rho)
+    result = result + 0.5 * float(params["Z"]) * torch.sum(norm_sq(grad))
+    result = result + 0.5 * float(params["Y"]) * torch.sum(norm_sq(lap))
+
+    family = torch.diag(torch.tensor(params["family_masses"], dtype=torch.complex128))
+    fam_psi = torch.einsum("ab,bxyz->axyz", family, psi)
+    result = result + 0.5 * torch.sum(torch.real(torch.sum(torch.conj(psi) * fam_psi, dim=0)))
+    z0 = torch.tensor(params["z0"], dtype=torch.complex128)
+    p0 = torch.outer(z0, torch.conj(z0)) / torch.real(torch.vdot(z0, z0))
+    lock = torch.einsum("ab,bxyz->axyz", torch.eye(3, dtype=torch.complex128) - p0, psi)
+    result = result + 0.5 * float(params["k_lock"]) * torch.sum(norm_sq(lock))
+
+    # Under <.,.>_R, these coefficients give lambda*rho*Psi and gamma*rho^2*Psi.
+    result = result + 0.25 * float(params["lambda"]) * torch.sum(rho ** 2)
+    result = result + (float(params["gamma"]) / 6.0) * torch.sum(rho ** 3)
+    eta = float(params["eta_shell"])
+    if abs(eta) > 0.0:
+        _, _, _, kmag = kmesh((nx, ny, nz), params)
+        psik = torch.fft.fftn(psi, dim=(1, 2, 3))
+        result = result + (0.5 * eta * torch.sum(norm_sq((kmag - float(params["q0"])).unsqueeze(0) * psik)) / (nx * ny * nz)) / dvol
+
+    alpha, beta, mass = (float(params[key]) for key in ("alpha_X", "beta_X", "M_X"))
+    denominator = mass * mass + 1e-12
+    pref_jj = float(params["cJJ"]) * alpha * alpha / denominator
+    pref_jk = float(params["cJK"]) * alpha * beta / denominator
+    pref_kk = float(params["cKK"]) * beta * beta / denominator
+    rho_safe = rho + 1e-12
+    grad_rho = 2.0 * torch.real(torch.sum(torch.conj(psi).unsqueeze(0) * grad, dim=1))
+    for gen in generators():
+        tpsi = torch.einsum("ab,bxyz->axyz", gen, psi)
+        moment = torch.sum(torch.conj(psi) * tpsi, dim=0)
+        current = torch.sum(torch.conj(grad) * tpsi.unsqueeze(0), dim=1) + torch.sum(
+            torch.conj(psi).unsqueeze(0) * torch.einsum("ab,ibxyz->iaxyz", gen, grad), dim=1
+        )
+        covariant = current - (moment / rho_safe).unsqueeze(0) * grad_rho
+        result = result + 0.5 * pref_jj * torch.sum(norm_sq(current))
+        result = result + pref_jk * torch.sum(torch.real(torch.conj(current) * covariant))
+        result = result + 0.5 * pref_kk * torch.sum(norm_sq(covariant))
+    return torch.real(result * dvol)
+
+
+def _real_coordinates(psi: np.ndarray, *, requires_grad: bool = False) -> torch.Tensor:
+    return torch.stack((torch.tensor(psi.real, dtype=torch.float64), torch.tensor(psi.imag, dtype=torch.float64))).requires_grad_(requires_grad)
+
+
+def _reference_energy_real(x: torch.Tensor, params: dict[str, Any]) -> torch.Tensor:
+    return reference_energy(torch.complex(x[0], x[1]), params)
+
+
+def reference_residual(psi: np.ndarray, params: dict[str, Any]) -> np.ndarray:
+    """Real gradient of reference_energy, converted to the manifest pairing."""
+    x = _real_coordinates(psi, requires_grad=True)
+    energy = _reference_energy_real(x, params)
+    gradient = torch.autograd.grad(energy, x)[0]
+    nx, ny, nz = (int(n) for n in psi.shape[1:])
+    dvol = (float(params["Lx"]) / nx) * (float(params["Ly"]) / ny) * (float(params["Lz"]) / nz)
+    return ((gradient[0].detach().cpu().numpy() + 1j * gradient[1].detach().cpu().numpy()) / dvol).astype(np.complex128)
+
+
+def reference_hessian_vec(psi: np.ndarray, direction: np.ndarray, params: dict[str, Any]) -> np.ndarray:
+    """Centred derivative of the autodiff real gradient.
+
+    Torch's complex-FFT second-derivative path is unavailable on the current
+    CPU runtime.  The residual remains an autodiff gradient; this H uses a
+    manifest-labelled centred derivative, while the outer audit uses three
+    independent steps to test DR=H and Hessian symmetry.
+    """
+    step = float(params.get("reference_hessian_step", 3e-5))
+    return (reference_residual(psi + step * direction, params) - reference_residual(psi - step * direction, params)) / (2.0 * step)
+
+
 def autodiff_directional(psi: np.ndarray, direction: np.ndarray, params: dict[str, Any]) -> float:
     x = torch.stack((torch.tensor(psi.real, dtype=torch.float64), torch.tensor(psi.imag, dtype=torch.float64))).requires_grad_(True)
     complex_psi = torch.complex(x[0], x[1])
@@ -170,6 +258,12 @@ def autodiff_directional(psi: np.ndarray, direction: np.ndarray, params: dict[st
 def finite_difference_energy(psi: np.ndarray, direction: np.ndarray, params: dict[str, Any], step: float) -> float:
     plus = float(declared_energy(tfield(psi + step * direction), params).detach().cpu().item())
     minus = float(declared_energy(tfield(psi - step * direction), params).detach().cpu().item())
+    return (plus - minus) / (2.0 * step)
+
+
+def finite_difference_reference_energy(psi: np.ndarray, direction: np.ndarray, params: dict[str, Any], step: float) -> float:
+    plus = float(reference_energy(tfield(psi + step * direction), params).detach().cpu().item())
+    minus = float(reference_energy(tfield(psi - step * direction), params).detach().cpu().item())
     return (plus - minus) / (2.0 * step)
 
 
@@ -231,6 +325,33 @@ def run_case(backend: Any, config: AuditConfig, name: str, psi: np.ndarray, dire
     return {"variant": config.name, "field": name, "autodiff_directional": ad, "residual_directional": real_pairing(r, direction, dvol), "symmetry_rel_error": symmetry, "steps": records}
 
 
+def reference_variants(base: dict[str, Any]) -> list[AuditConfig]:
+    activation = dict(base)
+    activation["eta_shell"] = 0.07  # manifest-declared audit activation, not physical retuning
+    return [AuditConfig("reference-pinned-production", dict(base)), AuditConfig("reference-all-terms-activation", activation)]
+
+
+def run_reference_case(config: AuditConfig, name: str, psi: np.ndarray, direction: np.ndarray, other: np.ndarray, steps: list[float]) -> dict[str, Any]:
+    p = torch_params(config.params)
+    shape = tuple(int(v) for v in psi.shape[1:])
+    dvol = (p["Lx"] / shape[0]) * (p["Ly"] / shape[1]) * (p["Lz"] / shape[2])
+    residual = reference_residual(psi, p)
+    hv = reference_hessian_vec(psi, direction, p)
+    hu = reference_hessian_vec(psi, other, p)
+    records = []
+    for step in steps:
+        fd_e = finite_difference_reference_energy(psi, direction, p, step)
+        dr_fd = (reference_residual(psi + step * direction, p) - reference_residual(psi - step * direction, p)) / (2.0 * step)
+        records.append({
+            "step": step,
+            "energy_fd": fd_e,
+            "variational_rel_error": rel_error(real_pairing(residual, direction, dvol), fd_e),
+            "dr_hessian_rel_error": norm_rel(dr_fd, hv),
+        })
+    symmetry = rel_error(real_pairing(other, hv, dvol), real_pairing(hu, direction, dvol))
+    return {"variant": config.name, "field": name, "residual_directional": real_pairing(residual, direction, dvol), "symmetry_rel_error": symmetry, "steps": records}
+
+
 def max_metric(rows: list[dict[str, Any]], metric: str) -> float:
     values: list[float] = []
     for row in rows:
@@ -241,9 +362,47 @@ def max_metric(rows: list[dict[str, Any]], metric: str) -> float:
     return max(values, default=0.0)
 
 
+def run_reference_closure(manifest: dict[str, Any], grid: int, output_path: Path) -> dict[str, Any]:
+    """Run the proposed functional through all three identities and persist it."""
+    pinned = manifest["parameters"]
+    steps = [float(x) for x in manifest["test_matrix"]["finite_difference_steps"]]
+    fields = make_fields(grid, pinned)
+    dvol = (pinned["Lx"] / grid) * (pinned["Ly"] / grid) * (pinned["Lz"] / grid)
+    rng = np.random.default_rng(20260717 + 2)
+    rows: list[dict[str, Any]] = []
+    for config in reference_variants(pinned):
+        for name, psi in fields.items():
+            rows.append(run_reference_case(config, name, psi, unit_complex(rng, psi.shape, dvol), unit_complex(rng, psi.shape, dvol), steps))
+    thresholds = {"variational": 2e-7, "hessian": 2e-5, "symmetry": 1e-9}
+    checks = {
+        "all_scalar_terms_present": float(pinned["lambda"]) != 0.0 and float(pinned["gamma"]) != 0.0,
+        "all_classII_terms_present": all(float(pinned[key]) != 0.0 for key in ("cJJ", "cJK", "cKK", "alpha_X", "beta_X", "M_X")),
+        "variational_identity": max_metric(rows, "variational_rel_error") < thresholds["variational"],
+        "hessian_identity": max_metric(rows, "dr_hessian_rel_error") < thresholds["hessian"],
+        "real_hessian_symmetry": max_metric(rows, "symmetry_rel_error") < thresholds["symmetry"],
+    }
+    result = {
+        "schema": "tect/a1-production-reference-functional-closure/1.0",
+        "date": "2026-07-17",
+        "claim_id": CLAIM,
+        "verdict": "REFERENCE-CLOSURE-PASS" if all(checks.values()) else "REFERENCE-CLOSURE-FAIL",
+        "scope": "proposed reference functional only; not the external working-branch backend",
+        "checks": checks,
+        "thresholds": thresholds,
+        "maxima": {metric: max_metric(rows, metric) for metric in ("variational_rel_error", "dr_hessian_rel_error", "symmetry_rel_error")},
+        "rows": rows,
+        "functional": manifest["proposed_reference_functional"],
+    }
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    return result
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    ap.add_argument("--reference-closure", action="store_true", help="also verify the proposed full reference functional")
+    ap.add_argument("--reference-output", type=Path, default=REPO / "claims" / CLAIM / "runs" / "2026-07-17-reference-functional-closure" / "result.json")
     ap.add_argument("--grid", type=int, default=4, help="diagnostic N; manifest currently certifies N=4")
     ap.add_argument("--assert-closure", action="store_true", help="return nonzero unless the full production identities close")
     args = ap.parse_args()
@@ -327,9 +486,18 @@ def main() -> int:
     print(f"  pinned production max residual error: {output['maxima']['pinned_production']['residual_rel_error']:.3e}")
     print(f"  pinned production max symmetry error: {output['maxima']['pinned_production']['symmetry_rel_error']:.3e}")
     print(f"  evidence: {args.output}")
+    reference_pass = True
+    if args.reference_closure:
+        reference = run_reference_closure(manifest, args.grid, args.reference_output)
+        reference_pass = reference["verdict"] == "REFERENCE-CLOSURE-PASS"
+        print(f"P1 reference result: {reference['verdict']}")
+        print(f"  reference max variational error: {reference['maxima']['variational_rel_error']:.3e}")
+        print(f"  reference max Hessian error: {reference['maxima']['dr_hessian_rel_error']:.3e}")
+        print(f"  reference max symmetry error: {reference['maxima']['symmetry_rel_error']:.3e}")
+        print(f"  reference evidence: {args.reference_output}")
     if args.assert_closure:
         return 0 if closure_pass else 1
-    return 0 if audit_pass else 1
+    return 0 if audit_pass and reference_pass else 1
 
 
 if __name__ == "__main__":

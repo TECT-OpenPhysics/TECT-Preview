@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close P1 reference-functional variational scaffold] - 2026-07-17
+
+Extended the P1 T3 record without changing any prior tier. The hash-pinned external working branch remains variationally non-closed: the source audit still detects the scalar nonlinear factor-two and Class-II cJK-versus-cKK mismatches. A separate manifest-defined reference functional now includes the real-gradient-normalised scalar terms lambda*rho^2/4 and gamma*rho^3/6, plus the symmetric all-coupling Class-II J-K form with cJJ, cJK, and cKK. On N=4 zero, homogeneous, random, q0-shell, and Class-II-active fields at three finite-difference steps, reference closure passed: max DF=<R,v> error 1.12e-7, max DR=H error 8.85e-10, and max real-Hessian symmetry error 2.89e-11. This is a scoped reference-functional result, not a repair of the external production backend.
+
 ## [Register P1 production-functional variational audit scaffold] - 2026-07-17
 
 P1 registers a separate T3 computable scaffold for the hash-pinned three-component production working branch. The manifest freezes the full declared energy, residual, Hessian convention, real torus pairing, projector, Class-II regularisation/floor, source hashes, and the N=4 multi-field audit matrix. Independent Torch autodiff agrees with the declared-energy finite differences (max 8.64e-8), and DRv=Hv agrees (max 8.65e-10). The audit exposes the present non-closure: the scalar nonlinear energy terms are factor-two inconsistent with the residual under the frozen real pairing; additionally, the Class-II energy uses cKK while the residual uses cJK. Pinned full production has max directional mismatch 2.90e-1 and Hessian symmetry defect 5.53e-5. No existing scalar-slice T5, PDE, BCC, stability, T6, or T7 status changed.
