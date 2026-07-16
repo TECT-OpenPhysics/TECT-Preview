@@ -1,0 +1,76 @@
+% =============================================================================
+% Title: A1 production kernel manifest -- promotion-package reconciliation (v1.6)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.6 -- first issued 2026-06-23; this version issued 2026-07-16
+% Status: T1 OPEN -- promotion package reconciled; operator independent certification pending
+%
+% Revision history (cumulative):
+%   v1.0--v1.5 (2026-06-23): corrected the vacuous gate, stored-field reader,
+%   backend provenance, shell-bias scope, and full runtime scalar-slice handling.
+%   v1.6 (2026-07-16): aligns the card, run artefact ownership, and future T5
+%   packaging requirements. No tier change and no operator certification occurred.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note reconciles the promotion package for the canonical N-001 production-kernel
+manifest.  It records only the pure-Brazovskii scalar slice: the full anisotropic,
+locked, shell-biased, condensate, and Hessian operators remain outside scope.  The
+operator has not yet independently certified this result, so the claim remains T1.
+
+\section*{2. Verified runtime configuration}
+
+The verifier reads the six physical fields, three tolerances, and the complete
+seven-key \texttt{scalar\_slice} from
+\url{claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json}.  It imports
+the original vendored N-001 solver sources and obtains
+\[
+ \texttt{bloch\_matrix\_linear}(|k|,\{r,Z,Y,q_0,\texttt{**scalar\_slice}\})
+ =r_{\rm zero}+Z|k|^2+Y|k|^4
+\]
+with maximum residual $8.9\times10^{-16}$.  The stored source hashes, the three
+independent consistency deltas, and the positive shell mass are all checked.
+
+\section*{3. Reproduction and record ownership}
+
+\texttt{codes/foundations/a1\_kernel\_checks.py} v1.6 runs 14 self-tests and writes
+its result to \url{claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/a1_kernel_checks.json}.
+This keeps the numerical artefact with the claim whose manifest it supports rather
+than with an analytic dependency.  The expected terminal line is
+\texttt{A1 kernel checks v1.6: 14/14 PASS}.
+
+\section*{4. Packaging decision}
+
+The existing v1.5 directory is pre-certification reproduction evidence.  It is not
+a final T5 package: its note states that certification is pending and its manifest
+does not carry a stamped source commit.  If the operator certifies the result and
+designates it as main-line, a new claim-top-level bundle must be built last with the
+confirmed T5 note, a tier-and-date-stamped name, a source commit, and final release
+checks.  The withdrawn Math424 certificate is not evidence for this package.
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``The checker chooses the scalar slice.''} DISMISSED --- every
+setting is loaded from JSON and demonstrated load-bearing.  ($\beta$) \emph{``The
+vendored solver is not original.''} DISMISSED --- all three source hashes are checked
+against provenance and config.  ($\gamma$) \emph{``Scalar-slice agreement proves the
+full operator.''} VALID with mitigation --- the scope excludes the full operator.
+($\delta$) \emph{``A PASS is certification.''} UPHELD --- independent operator
+reproduction is still required, so no tier action is taken here.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST
+Precise statement:       The canonical N-001 pure scalar slice passes the stored-field,
+                         runtime-symbol, positivity, and source-hash checks (14/14).
+Scope:                   Pure-Brazovskii scalar slice only; full operator excluded.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Evidence grade:          ANALYTIC + EXECUTED.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         A1 kernel checks v1.6: 14/14 PASS.
+Falsification gate:      Config, scalar-slice, source-hash, delta, or coefficient mismatch.
+Tier before / after:     T1 / T1 (promotion package reconciled; no certification).
+No-overclaim statement:  Not operator-certified; no full-operator or theorem claim.
+Next required action:    Independent operator reproduction, main-line decision, then T5 packaging.
+\end{verbatim}

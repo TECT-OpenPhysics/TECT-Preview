@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""a1_kernel_checks.py -- self-tests for the three A1 kernel cards (v1.5).
+"""a1_kernel_checks.py -- self-tests for the three A1 kernel cards (v1.6).
 
 Kernel:  D(k) = r_zero + Z|k|^2 + Y|k|^4,  r_zero=D(0).  Completing the square (Y>0):
     q_star^2=-Z/(2Y), mu2_shell:=D(q_star)=r_zero-Z^2/(4Y), D=mu2_shell+Y(|k|^2-q_star^2)^2.
@@ -17,16 +17,30 @@ v1.5 (operator review 2026-06-23) closes the v1.4 gaps:
 The three original solver sources are vendored byte-identical under n001_solver/ with full
 sha256 pinned + checked. Bundle: canonical_n001_kernel.json + the 3 sources + this checker.
 Passing the gates is NOT certification: reports "gates pass; certification pending" (T1 OPEN).
+The persisted numerical artefact belongs to the manifest claim, not to either
+analytic dependency claim.
 """
-__version__ = "1.5.0"
+__version__ = "1.6.0"
 __first_issued__ = "2026-06-23"
-__version_issued__ = "2026-06-23"
+__version_issued__ = "2026-07-16"
 __claims__ = ["A1-KERNEL-IDENTITY", "A1-SCALAR-ANALYTIC-BRANCH", "A1-PRODUCTION-KERNEL-MANIFEST"]
 
-import json, hashlib, random, sys, warnings
+import argparse, json, hashlib, random, sys, warnings
 from pathlib import Path
 import numpy as np
 warnings.filterwarnings("ignore")
+
+PARSER = argparse.ArgumentParser(
+    description="Verify the canonical A1 N-001 scalar-slice manifest."
+)
+PARSER.add_argument(
+    "--output",
+    type=Path,
+    default=None,
+    help=("JSON artefact path. Defaults to the claim's current evidence file; "
+          "promotion runs should supply a run-specific path."),
+)
+ARGS = PARSER.parse_args()
 
 REPO = Path(__file__).resolve().parents[2]
 CLAIMS = []
@@ -159,7 +173,10 @@ cert = dict(version=__version__, config_source=str(cfg_path.relative_to(REPO)), 
     subset_map=dict(identity=["kernel_identity_complete_square"],
                     analytic_branch=["analytic_branch_D_ge_mu2shell_positive", "lambda0_ge_mu2shell_equality_onshell_only"]),
     claims=CLAIMS, all_pass=ok)
-out = REPO/"claims"/"A1-KERNEL-IDENTITY"/"runs"/"a1_kernel_checks.json"
+out = ARGS.output or (REPO/"claims"/"A1-PRODUCTION-KERNEL-MANIFEST"/"runs"/"a1_kernel_checks.json")
+if not out.is_absolute():
+    out = REPO / out
 out.parent.mkdir(parents=True, exist_ok=True); out.write_text(json.dumps(cert, indent=2))
-print(f"\nA1 kernel checks v1.5: {sum(c['passed'] for c in CLAIMS)}/{len(CLAIMS)} {'PASS' if ok else 'FAIL'}")
+print(f"Artefact: {out}")
+print(f"\nA1 kernel checks v{__version__}: {sum(c['passed'] for c in CLAIMS)}/{len(CLAIMS)} {'PASS' if ok else 'FAIL'}")
 sys.exit(0 if ok else 1)

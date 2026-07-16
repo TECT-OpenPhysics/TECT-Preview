@@ -3,7 +3,13 @@
 Self-contained referee reproduction bundle (TECT verification-first repository).
 Built 20260623T122449Z with Python 3.10.12, numpy 2.2.6.
 
-**Bundle grade:** PUBLISHED (operator-confirmed) -- `A1-N001-Manifest-v15-260623`.
+**Record status:** pre-certification reproduction evidence -- `A1-N001-Manifest-v15-260623`.
+
+This directory demonstrates standalone v1.5 reproduction only. It is **not** an
+operator-confirmed PUBLISHED bundle and cannot serve as a T5 package: the associated
+note retains T1 OPEN / certification-pending status and `MANIFEST.json` has no stamped
+source commit. Any post-certification package must be rebuilt under the claim-level
+`<result>-T5-<date>` convention.
 
 ## What this verifies
 The note (below) is the proof map; the code reproduces every numerical constant,

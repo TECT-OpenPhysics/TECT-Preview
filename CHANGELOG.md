@@ -5,6 +5,26 @@ not pillar counts.
 
 ---
 
+## [Promote A1 production kernel manifest to scoped T5] - 2026-07-16
+
+
+
+## [Add A1 promotion evidence CLI and preflight package] - 2026-07-16
+
+
+
+## [A1 manifest historical-bundle integrity reconciled and T-032 operator certification blocker recorded] - 2026-07-16
+
+- Completed the historical-bundle integrity reconciliation after relabelling: A1-N001-Manifest-260623 now has 16/16 listed files and A1-N001-Manifest-v15-260623 has 14/14, with every SHA-256 and bundle digest verified.
+- Added T-032 as the explicit operator-owned blocker: independent 14/14 reproduction and ratification of tolerances, config, and solver hashes, followed by the main-proof-line decision. No tier action is authorized by this record.
+
+## [A1 manifest promotion-package reconciliation: v1.6 artefact ownership, pre-certification bundle correction, and T5 packaging guardrails] - 2026-07-16
+
+- Reconciled the pre-promotion package without a tier action. The canonical N-001 scalar-slice verifier is v1.6 and stores its 14/14 JSON artefact under A1-PRODUCTION-KERNEL-MANIFEST rather than an analytic dependency claim.
+- Re-issued the current manifest note as v1.6 with the required claim-card devil's-advocate, explicit T1/T1 footer, and a PDF with zero overfull boxes.
+- Corrected both historical bundle READMEs: they are pre-certification reproduction evidence, not operator-confirmed PUBLISHED packages. The withdrawn wrong-backend certification note is superseded in the current lineage.
+- Hardened the bundle builder so a future confirmed package can record its source commit and does not hardcode T7-SCOPE wording. No T5 bundle or tier change has been issued; operator independent reproduction and main-proof-line designation remain required.
+
 ## [A1 manifest v1.5: full runtime scalar-slice (laplacian_mode/bcc_mix/family_masses/k_lock/eta_shell) read from JSON -> ORIGINAL bloch_matrix_linear; schema-completeness assert; clean bundle reproduces 14/14] - 2026-06-23
 
 Operator review of v1.4 found two problems: (1) the shipped bundle config was STALE (v1.2 schema, no eta_shell) so the v1.4 checker raised a raw KeyError -- 13/13 was not reproducible on the uploaded bundle; (2) certifying the scalar slice needs MORE than eta_shell=0: the original bloch_matrix_linear scalar diagonal also depends on laplacian_mode, bcc_mix_epsilon, a_bcc, family_masses and k_lock (function DEFAULT 0.15, which adds k_lock*(I-P0) to the diagonal). v1.4 HARDCODED family_masses=[0,0,0] and k_lock=0 in the checker, so the verified symbol was not provably the runtime symbol. ENACTED v1.5: (a) the config gains a 7-key scalar_slice block {laplacian_mode=spectral, bcc_mix_epsilon=0, a_bcc=1, family_masses=0, k_lock=0, z0, eta_shell=0} + the origin hash map; (b) a1_kernel_checks.py v1.5 ASSERTS config schema completeness FIRST (a stale/v1.2 config fails the named claim config_schema_v15_complete, not a raw KeyError), then reads the full scalar_slice from JSON and passes it VERBATIM to the ORIGINAL bloch_matrix_linear -- the verified symbol r_zero+Z|k|^2+Y|k|^4 (residual 8.9e-16) IS the runtime symbol; (c) each scalar_slice setting is shown LOAD-BEARING by reverting it (k_lock=0.15->0.100=0.15*2/3 exactly, eta_shell=0.1->0.231, mixed_bcc eps=0.5->1.997, family_masses->0.050); (d) the 3 original solver sources remain vendored byte-identical with full sha256 pinned+checked; (e) a CLEAN 4-file bundle (A1-N001-Manifest-v15-260623, digest e66f10d3; the withdrawn v1.3 mimic EXCLUDED) was verified to contain the v1.5 config (eta_shell + scalar_slice + origin hash map) and to run STANDALONE 14/14 without the TECT2 tree. Gates pass under the runtime scalar slice but the script reports 'numerical gates pass; OPERATOR CERTIFICATION PENDING': card stays T1 OPEN pending the operator's independent run. Scalar slice only (full anisotropic/locked/shell-biased operator -> mainline). A1-KERNEL-IDENTITY (T6) / A1-SCALAR-ANALYTIC-BRANCH (T6 cond) unchanged. lint PASS (35 claims, 44 gates).

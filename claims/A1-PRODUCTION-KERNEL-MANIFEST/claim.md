@@ -1,35 +1,52 @@
-# A1-PRODUCTION-KERNEL-MANIFEST — parameter-consistency gates (current config is a mock)
+# A1-PRODUCTION-KERNEL-MANIFEST -- canonical N-001 scalar-slice consistency gates
 
-**Tier**: T1 OPEN (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-23 · *(A1 split; the current solver-template config FAILS)*
+**Tier**: T5 VERIFIED (TSv2) -- **Lifecycle**: ACTIVE -- **Last review**: 2026-07-16
 
 ## Statement
 
-A production kernel config is admissible iff $|Z+2Yq_\star^2|\le\varepsilon$, $|r-(m_{\rm sh}^2+Yq_\star^4)|\le\varepsilon$, $|\texttt{mu2}-(r-Z^2/4Y)|\le\varepsilon$, and $m_{\rm sh}^2=r-Z^2/4Y>0$. The current solver template $(r,Z,Y,q_0)=(0.35,-1,0.50,0.68017)$ **FAILS** (m_sh²$=-0.15<0$; $q_\star^2=1\ne q_0^2=0.4626$; `mu2`$=0.35=r$, the zero-momentum alias): a **working/mock** config, NOT an N-001 production manifest.
+The canonical N-001 config stores `(r_zero, mu2_shell, q0, Z, Y, eta_shell)`, three independent tolerances, and the complete seven-key runtime `scalar_slice`.  With those JSON values passed verbatim to the original N-001 `kinetic_coefficients` and `bloch_matrix_linear`, the pure-Brazovskii scalar symbol equals `r_zero + Z|k|^2 + Y|k|^4`; the separate `delta_Z`, `delta_m`, and `delta_r` gates, `Y>0`, `Z<0`, `mu2_shell>0`, `eta_shell=0`, and pinned source hashes all pass.  The legacy template `(r,Z,Y)=(0.35,-1,0.50)` remains a failing mock and is not the canonical config.
 
 ## Scope
-Parameter-consistency gate for production kernel configs; **OPEN** until a certified config passes.
+
+This is a parameter-consistency and runtime-faithfulness claim for the pure-Brazovskii scalar slice only.  The full anisotropic, locked, shell-biased, or condensate/Hessian operator is excluded.
 
 ## Dependencies and hypotheses
+
 - Hard dependencies: A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH
-- Hypotheses: none · Open gates: none
+- Hypotheses: none -- Open gates: none
 
 ## Evidence
-Grades: ANALYTIC, EXECUTED. `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260623-v1.5.tex.txt`; `codes/foundations/a1_kernel_checks.py` (14/14, v1.5: reads the full runtime scalar_slice from JSON -> ORIGINAL bloch_matrix_linear; schema-completeness assert; all scalar_slice settings shown load-bearing).
+
+Grades: ANALYTIC, EXECUTED, INDEPENDENT-REPRODUCED.  [v1.6 manifest note](notes/a1-production-kernel-manifest-260623-260716-v1.6.tex.txt), [canonical config](canonical_n001_kernel.json), [verifier](../../codes/foundations/a1_kernel_checks.py), the persisted result at `runs/a1_kernel_checks.json`, and the independent operator evidence package at `runs/promotion-evidence/20260716-operator-01/`.
+
+The verifier runs 14 self-tests: schema completeness; original coefficients and runtime symbol; load-bearing scalar-slice settings; three source SHA-256 values; stored-field corruption detection; analytic positivity; non-vacuous `delta_m`; the canonical manifest pass; and legacy mock failure.
 
 ## Falsifier
-A config passing all gates with $m_{\rm sh}^2>0$ closes the OPEN status for that config.
+
+Any required JSON field missing; a scalar-slice setting differing from the stored value; nonzero `eta_shell`; source-hash mismatch; a stored-field edit that breaks a delta; or a failure of `kinetic_coefficients` to reproduce `(r_zero,Z)` invalidates this scoped manifest.
 
 ## Reproduction
-Status: **AVAILABLE**. `python codes/foundations/a1_kernel_checks.py` → 14/14 PASS (incl. `production_manifest_mock_config_FAILS`).
+
+Status: **INDEPENDENTLY REPRODUCED**.  `python codes/foundations/a1_promotion_evidence.py --mode independent --run-id 20260716-operator-01 --reviewer "Justin"` -> `REPRODUCTION-PASS`; the nested checker reports `A1 kernel checks v1.6.0: 14/14 PASS`.
+
+## Devil's-advocate
+
+1. **"The checker silently chooses runtime settings."** DISMISSED: all seven scalar-slice keys are read from JSON and their reversions are shown load-bearing.
+2. **"The vendored code is only a mimic."** DISMISSED: the checker imports the three vendored original N-001 sources and checks their full SHA-256 values against both provenance and config records.
+3. **"The scalar slice proves the full production operator."** VALID with mitigation: the card, note, and future T5 scope exclude anisotropic, locked, shell-biased, and condensate/Hessian effects.
+4. **"Numerical gates passing is equivalent to unrestricted operator certification."** VALID with mitigation: the independent operator reproduction ratifies the tolerances, config, hashes, and main-proof-line status only for this canonical pure-Brazovskii scalar slice; unrestricted operator, PDE, BCC, T6, and T7 claims remain excluded.
 
 ## No-overclaim
-The current mock config is NOT certified; A2/A3 are NOT numerically implemented by it; no production run may be cited as the theorems' implementation until a config passes.
 
-## v1.1 schema (2026-06-23)
-The v1.0 gate $|r-(m_sh^2+Y q_*^4)|$ was identically 0 (vacuous). v1.1 gates the **independent stored fields** $(r_{zero}, mu2_{shell}, q0)$ with separate tolerances $(\varepsilon_Z,\varepsilon_m,\varepsilon_r)$, forbids the `mu2=r` alias, and splits into **CONSISTENCY** + **ANALYTIC-BRANCH** scopes (only the latter is A2/A3-citable). The verifier reads the five stored fields AS-IS from `canonical_n001_kernel.json` and imports the **ORIGINAL N-001 solver** (`codes/foundations/n001_solver/`, byte-identical, full sha256 pinned) and passes the **full runtime `scalar_slice` read from JSON** (laplacian_mode, bcc_mix_epsilon, a_bcc, family_masses, k_lock, z0, eta_shell) to `bloch_matrix_linear`, so the verified symbol IS the runtime symbol = stored kernel (8.9e-16). Each setting is shown load-bearing (k_lock=0.15→0.1, eta_shell=0.1→0.231, mixed_bcc→2.0, family→0.05); a schema-completeness assert prevents stale-config KeyErrors; a corrupted stored `q0` is detected. The canonical N-001 config PASSES both manifests — **numerical gates pass, operator certification pending** (card stays T1 OPEN, not yet A2/A3-citable); the legacy template $(0.35,-1,0.50)$ FAILS.
+The canonical scalar-slice config is T5 only for the constrained N-001 pure-Brazovskii scalar-slice manifest.  No claim is made about the full N-001 operator, PDE behavior, BCC selection, Hessian stability, or a theorem-level A2/A3 implementation.  This is not T6 or T7.
 
 ## History
-- 2026-06-23 — Created in the A1 split: the production-config gates; the current solver template fails them ($m_{\rm sh}^2<0$).
+
+- 2026-06-23 -- A1 split created the manifest card; the legacy solver template was recorded as a failing mock.
+- 2026-06-23 -- v1.1--v1.5 successively removed the vacuous gate, stored-field hardcoding, wrong backend, omitted shell-bias term, and incomplete scalar-slice configuration.
+- 2026-07-16 -- promotion-package reconciliation: evidence artefact ownership moved to this claim; pre-certification bundle and withdrawn certificate explicitly excluded from T5 evidence.
+- 2026-07-16 -- T5 promotion: Justin independently reproduced the 14/14 checker result, ratified the tolerances/config/source hashes, accepted the constrained scalar-slice scope, and recorded main-proof-line status in `runs/promotion-evidence/20260716-operator-01/REVIEW.md`.
 
 ## Next required action
-Produce + certify an N-001 production config ($m_{\rm sh}^2>0$, all gates) before any Class-II/condensate solver run is cited as the A2/A3 implementation.
+
+Use this T5 claim only within its stated scalar-slice scope.  Any future T6/T7 path must add a separate theorem-level argument and supporting evidence for the excluded operator/PDE/BCC/Hessian components.

@@ -3,7 +3,11 @@
 Self-contained referee reproduction bundle (TECT verification-first repository).
 Built 20260623T120854Z with Python 3.10.12, numpy 2.2.6.
 
-**Bundle grade:** PUBLISHED (operator-confirmed) -- `A1-N001-Manifest-260623`.
+**Record status:** superseded pre-certification reproduction evidence -- `A1-N001-Manifest-260623`.
+
+This directory predates the v1.5 runtime-scalar-slice correction and is retained only
+as history. It is not an operator-confirmed PUBLISHED bundle and cannot serve as a T5
+package.
 
 ## What this verifies
 The note (below) is the proof map; the code reproduces every numerical constant,
