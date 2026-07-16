@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Register P1 production-functional variational audit scaffold] - 2026-07-17
+
+P1 registers a separate T3 computable scaffold for the hash-pinned three-component production working branch. The manifest freezes the full declared energy, residual, Hessian convention, real torus pairing, projector, Class-II regularisation/floor, source hashes, and the N=4 multi-field audit matrix. Independent Torch autodiff agrees with the declared-energy finite differences (max 8.64e-8), and DRv=Hv agrees (max 8.65e-10). The audit exposes the present non-closure: the scalar nonlinear energy terms are factor-two inconsistent with the residual under the frozen real pairing; additionally, the Class-II energy uses cKK while the residual uses cJK. Pinned full production has max directional mismatch 2.90e-1 and Hessian symmetry defect 5.53e-5. No existing scalar-slice T5, PDE, BCC, stability, T6, or T7 status changed.
+
 ## [Align P0 Sector-A record and verification baseline] - 2026-07-17
 
 

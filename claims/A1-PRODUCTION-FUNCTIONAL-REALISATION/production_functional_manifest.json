@@ -1,0 +1,86 @@
+{
+  "schema": "tect/a1-production-functional-realisation/1.0",
+  "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+  "frozen_on": "2026-07-17",
+  "status": "AUDIT-SCAFFOLD; no variational closure is asserted",
+  "authority": {
+    "kind": "external working-branch source, hash-pinned",
+    "backend": {
+      "path": "C:/Dev/codes/pde/real_backend_pt_bcc_mixed_v3.py",
+      "sha256": "c6b5c3e1c2e8eddadc41cd7a0d5bfc6b32d536d346a220fd0f62559b2286a4c8"
+    },
+    "config": {
+      "path": "C:/Dev/codes/pde/config_template_brazovskii.json",
+      "sha256": "e415b9170f73605f6daba92a45eabcf8a1f9d37b374662045eef54c73e093326"
+    },
+    "classii_floor": {
+      "solver_guard": "rho >= rho_star",
+      "pinned_q1a_value": 0.00032445330282553797,
+      "evidence": "C:/Dev/Runs/q1a_final_pubgrade_compat_v2/refinement/refinement_summary.json",
+      "backend_regularizer": "rho_safe = rho + 1e-12"
+    }
+  },
+  "torus_and_real_pairing": {
+    "domain": "T^3 = [0,Lx) x [0,Ly) x [0,Lz)",
+    "field": "Psi in C^(3 x Nx x Ny x Nz)",
+    "quadrature": "dV = (Lx/Nx)(Ly/Ny)(Lz/Nz)",
+    "pairing": "<u,v>_R = dV Re sum_{a,x} conj(u_a(x)) v_a(x)",
+    "hessian_symmetry": "<u,Hv>_R = <Hu,v>_R"
+  },
+  "parameters": {
+    "Lx": 16.0,
+    "Ly": 16.0,
+    "Lz": 16.0,
+    "q0": 0.6801747616,
+    "r": 0.4740336473,
+    "mu2": 0.26,
+    "Z": -0.9252754126,
+    "Y": 1.0,
+    "lambda": -0.43,
+    "gamma": 1.62,
+    "family_masses": [0.0, 0.03, 0.07],
+    "family_projector": [1.0, 1.0, 1.0],
+    "z0": [1.0, 1.0, 1.0],
+    "k_lock": 0.15,
+    "eta_shell": 0.0,
+    "alpha_X": 0.3,
+    "beta_X": 0.25,
+    "M_X": 2.0,
+    "cJJ": 0.2,
+    "cJK": 0.1,
+    "cKK": 0.15,
+    "eps_classII_hess": 5e-07,
+    "laplacian_mode": "spectral",
+    "a_bcc": 1.0,
+    "bcc_mix_epsilon": 0.0,
+    "torch_complex_dtype": "complex128",
+    "use_cuda": false,
+    "use_xpu": false
+  },
+  "declared_energy": {
+    "formula": "F_decl = F_Brazovskii + F_family + F_lock + F_shell + (lambda/2) int rho^2 + (gamma/3) int rho^3 + F_ClassII[J,K]",
+    "brazovskii": "(1/2) int [r rho + Z |grad Psi|^2 + Y |Delta Psi|^2]",
+    "family": "(1/2) int Re Psi^dagger diag(family_masses) Psi",
+    "lock": "(k_lock/2) int |(I-P0) Psi|^2, P0=z0 z0^dagger/(z0^dagger z0)",
+    "shell": "(eta_shell/2Nsites) sum_k (|k|-q0)^2 |Psi_k|^2",
+    "classII": "sum_A [cJJ alpha_X^2/(2(M_X^2+1e-12)) |grad m_A|^2 + cKK beta_X^2/(2(M_X^2+1e-12)) |K_A|^2], with m_A=Psi^dagger T_A Psi, K_A=grad m_A-(m_A/(rho+1e-12)) grad rho",
+    "generators": "embedded Hermitian T1,T2,T3 acting on the first two internal components"
+  },
+  "implemented_residual": {
+    "formula": "R_exec = R_Brazovskii + R_family + R_lock + R_shell + lambda rho Psi + gamma rho^2 Psi + sum_A [cJJ alpha_X^2/(M_X^2+1e-12) div(grad m_A)(T_A Psi-q_A Psi) + cJK alpha_X beta_X/(M_X^2+1e-12) div(K_A)(T_A Psi-q_A Psi)]",
+    "q_A": "m_A/(rho+1e-12)",
+    "hessian": "H_exec v is analytic for core/local terms and a centred finite difference of the Class-II residual with eps_classII_hess"
+  },
+  "known_obstruction": {
+    "id": "A1-PFR-VARIATIONAL-MISMATCH",
+    "statement": "Two independent mismatches are pinned: (1) F_decl contains (lambda/2) rho^2+(gamma/3) rho^3, whose real gradient is 2 lambda rho Psi+2 gamma rho^2 Psi, while R_exec uses lambda rho Psi+gamma rho^2 Psi; (2) F_decl uses cKK in its K term while R_exec uses cJK. Hence DF_decl[Psi](v)=<R_exec[Psi],v>_R cannot hold generically.",
+    "additional_risk": "The shell energy is not multiplied by dV while the audit pairing is; eta_shell activation is separately tested."
+  },
+  "test_matrix": {
+    "grids": [4],
+    "fields": ["zero", "homogeneous", "random", "q0-shell", "classII-active"],
+    "finite_difference_steps": [0.0001, 1e-05, 1e-06],
+    "control": "scalar core only: family, lock, shell, and Class-II coefficients set to zero",
+    "activation": "pinned production parameters plus eta_shell=0.07; this is an audit activation, not a new physical parameter claim"
+  }
+}

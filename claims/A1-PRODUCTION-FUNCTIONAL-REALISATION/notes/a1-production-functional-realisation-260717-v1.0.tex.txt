@@ -1,0 +1,80 @@
+% =============================================================================
+% Title: Production functional realisation audit -- variational closure scaffold
+% Claim: A1-PRODUCTION-FUNCTIONAL-REALISATION
+% Version: v1.0 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: verification record (T3 computable scaffold; no tier promotion)
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This record freezes and audits the current three-component complex working-branch
+functional on a periodic three-torus.  It does not enlarge the pure-Brazovskii
+scalar-slice T5 claim.  The authority is the external backend and configuration
+pinned by SHA-256 in \texttt{production\_functional\_manifest.json}.  The audit
+checks whether the declared energy, executable residual, and executable Hessian
+are mutually compatible under the stated real inner product.
+
+\section*{2. Frozen setting}
+For $\Psi\in\mathbb C^3$ on a spectral grid on $\mathbb T^3$, use
+\[
+ \langle u,v\rangle_{\mathbb R}=dV\,\operatorname{Re}\sum_{a,x}\bar u_a(x)v_a(x).
+\]
+The frozen declared energy contains the Brazovskii quadratic term, family mass,
+internal projector lock $P_0=z_0z_0^\dagger/(z_0^\dagger z_0)$, shell bias,
+quartic and sextic density terms, and the Class-II $J,K$ terms.  The manifest
+gives the complete formulas, all coefficients, $\rho+10^{-12}$ regularisation,
+and the separate solver floor $\rho\geq\rho_\star$.
+
+\section*{3. Audit procedure}
+The standalone verifier independently reconstructs the declared energy with
+Torch autodiff and compares it with finite differences.  It then imports the
+hash-pinned external residual and Hessian and evaluates
+\[
+ DF[\Psi](v)=\langle R[\Psi],v\rangle_{\mathbb R},\qquad
+ DR[\Psi]v=H[\Psi]v,\qquad
+ \langle u,Hv\rangle_{\mathbb R}=\langle Hu,v\rangle_{\mathbb R}.
+\]
+It covers zero, homogeneous, random, commensurate $q_0$-shell, and
+Class-II-active fields at three finite-difference steps on $N=4$.
+
+\section*{4. Current result and named obstruction}
+The audit is designed to pass an independent energy-derivative control and to
+expose the current working-branch mismatch.  Already in the scalar core,
+$(\lambda/2)\rho^2+(\gamma/3)\rho^3$ has real gradient
+$2\lambda\rho\Psi+2\gamma\rho^2\Psi$, while the residual uses half those
+nonlinear terms.  Independently, the declared Class-II energy uses $c_{JJ}$ and
+$c_{KK}$, whereas the residual uses $c_{JJ}$ and $c_{JK}$; the pinned values
+$c_{JK}=0.1$ and $c_{KK}=0.15$ are unequal.  Therefore the full production
+configuration does not currently establish a single variational functional.
+This is a diagnosis, not a rejection of the scalar-slice kernel result.
+
+\section*{5. Devil's-advocate}
+(alpha) \emph{``This is only a finite-difference artifact.''} DISMISSED for the
+diagnosis only if the independent autodiff derivative and multi-step finite
+differences agree while the imported residual disagrees; all are reported.
+
+(beta) \emph{``Complex fields may use a different factor-of-two convention.''}
+DISMISSED only relative to the explicitly frozen real pairing: both the
+autodiff conversion and the finite-difference directional derivative use that
+same convention.
+
+(gamma) \emph{``The scalar T5 manifest has been invalidated.''} VALID only as a
+scope warning, with mitigation: its pure scalar slice has all extra terms zero
+and is tested as a separate control; no existing tier is changed here.
+
+\section*{6. Result footer}
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-FUNCTIONAL-REALISATION
+Precise statement:       A reproducible audit freezes the declared production
+                         energy and tests its gradient/Hessian consistency.
+Scope:                   N=4 diagnostic grids; hash-pinned external working branch.
+Dependencies:            A1-PRODUCTION-KERNEL-MANIFEST.
+Evidence grade:          EXECUTED, CONDITIONAL.
+Reproduction command:    python codes/foundations/a1_production_functional_realisation.py
+Expected output:         independent energy control pass; scalar and full
+                         working-branch mismatches detected and recorded.
+Falsification gate:      source hash drift, failed control, or a mismatch not detected.
+Tier before / after:     none / T3 computable scaffold.
+No-overclaim statement:  Not a PDE theorem, BCC result, or full closure.
+Next required action:    choose and implement one Class-II functional convention,
+                         then rerun this audit before any scoped T5 review.
+\end{verbatim}
