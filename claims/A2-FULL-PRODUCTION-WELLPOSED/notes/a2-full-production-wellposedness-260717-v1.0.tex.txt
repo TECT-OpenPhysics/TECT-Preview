@@ -1,0 +1,282 @@
+% =============================================================================
+% Title: Full production three-component gradient flow: canonical theorem route
+% Claim: A2-FULL-PRODUCTION-WELLPOSED
+% Version: v1.0 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 FULL-PROOF-CANDIDATE; three analytic audit gates remain open
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note starts P2 without changing the older scalar claim
+\texttt{A2-PDE-WELLPOSED}.  Its object is the real-$L^2$ gradient flow of the
+canonical three-component functional fixed by
+\texttt{A1-PRODUCTION-FUNCTIONAL-REALISATION}.  The historical external
+backend is not used: P1 records it as a non-variational proxy.  The actual
+production value $\eta_{\rm shell}=0$ is imposed.  A nonzero shell-bias
+continuum limit is outside this note because its discrete normalisation has
+not been identified with a continuum functional.
+
+The target theorem is deliberately an $H^2$ theorem.  For
+$\Psi_0\in H^2(\mathbb T^3;\mathbb C^3)$, the candidate conclusion is a unique
+global solution, continuous dependence in $H^2$, monotone energy, and smoothness
+for positive time.  Sections 2--4 close the algebraic and coercive baseline.
+Sections 5--7 assemble the analytic route but remain subject to the three named
+independent-audit gates on the claim card.  Consequently this note is T4, not a
+T6 theorem enactment.
+
+\section*{2. Canonical functional and real Hilbert structure}
+
+Let
+\[
+  \mathcal H=L^2(\mathbb T^3;\mathbb C^3),\qquad
+  \langle U,V\rangle_{\mathbb R}=\operatorname{Re}
+  \int_{\mathbb T^3}U^\dagger V\,dx .
+\]
+Write $\rho=\Psi^\dagger\Psi$, and let $T_A$ be the three Hermitian generators
+fixed by P1.  Define
+\[
+ m_A=\Psi^\dagger T_A\Psi,\quad J_A=\nabla m_A,\quad
+ q_A={m_A\over\rho+\epsilon_\rho},\quad
+ K_A=J_A-q_A\nabla\rho,
+\]
+where $\epsilon_\rho=10^{-12}$.  The canonical functional is
+\begin{align}
+ \mathcal F[\Psi]={}&{1\over2}\langle\Psi,L\Psi\rangle_{\mathbb R}
+ +\int_{\mathbb T^3}\left({\lambda\over4}\rho^2
+ +{\gamma\over6}\rho^3\right)dx \\
+ &+\sum_A\int_{\mathbb T^3}
+ \left({a\over2}|J_A|^2+b\operatorname{Re}(J_A^\dagger K_A)
+ +{c\over2}|K_A|^2\right)dx .
+\end{align}
+Here
+\[
+ L=\bigl(r+Z(-\Delta)+Y(-\Delta)^2\bigr)I_3
+   +M_{\rm fam}+k_{\rm lock}(I_3-P_0),
+\]
+$M_{\rm fam}=\operatorname{diag}(0,0.03,0.07)$,
+$P_0=z_0z_0^\dagger/(z_0^\dagger z_0)$, and $k_{\rm lock}=0.15$.  The
+Class-II denominator is $M_X^2+\epsilon_M$ with $\epsilon_M=10^{-12}$, and
+\[
+ a={c_{JJ}\alpha_X^2\over M_X^2+\epsilon_M},\quad
+ b={c_{JK}\alpha_X\beta_X\over M_X^2+\epsilon_M},\quad
+ c={c_{KK}\beta_X^2\over M_X^2+\epsilon_M}.
+\]
+The PDE is the real gradient flow
+\[
+                 \partial_t\Psi=-\nabla_{\mathbb R}\mathcal F[\Psi].
+\]
+
+\section*{3. Full linear self-adjointness and lower bound}
+
+On a Fourier mode $k$, the scalar part of $L$ has the real symbol
+\[
+ p(|k|^2)=r+Z|k|^2+Y|k|^4,
+ \quad r=0.4740336473,\ Z=-0.9252754126,\ Y=1.
+\]
+Since $Y>0$, the multiplier is self-adjoint on $H^4$.  Completing the square
+gives the continuum shell location and mass
+\[
+ q_{\rm sh}=\sqrt{-Z/(2Y)}=0.6801747615870498,
+ \qquad m_{\rm sh}^2=r-{Z^2\over4Y}=0.260000000009475>0.
+\]
+Every discrete torus mode therefore satisfies $p(|k|^2)\ge m_{\rm sh}^2$.
+More strongly,
+\[
+ c_{H^2}:=\min_{x\ge0}{r+Zx+Yx^2\over1+x^2}
+ =0.2048572626782363>0,
+\]
+so the scalar quadratic form controls the $H^2$ norm.  The family matrix is
+Hermitian positive semidefinite.  The normalised $P_0$ is a Hermitian
+idempotent, hence $I-P_0$ is positive semidefinite; multiplication by the
+nonnegative lock coefficient preserves this sign.  Bounded Hermitian internal
+terms preserve self-adjointness on $H^4$ and cannot reduce either lower bound.
+This closes proof stage 1 in the declared production scope.
+
+\section*{4. Class-II sign and energy coercivity}
+
+For each generator and spatial direction the Class-II density is the quadratic
+form with coefficient matrix
+\[
+ Q_{II}=\begin{pmatrix}a&b\\b&c\end{pmatrix}
+ =\begin{pmatrix}
+ 0.004499999999998875&0.0018749999999995311\\
+ 0.0018749999999995311&0.002343749999999414
+ \end{pmatrix}.
+\]
+Its determinant and eigenvalues are
+\[
+ \det Q_{II}=7.031249999996483\times10^{-6},\qquad
+ \sigma(Q_{II})=\{0.001259011500926061,
+                    0.005584738499072228\}.
+\]
+Thus the Class-II energy is nonnegative and coercive in the pair $(J_A,K_A)$.
+Because $\rho+\epsilon_\rho$ is strictly positive, no singular coefficient is
+introduced.  This closes proof stage 2 for the canonical subset.
+
+The production potential has $\lambda=-0.43$ and $\gamma=1.62>0$.  Pointwise,
+\[
+ { |\lambda|\over4}\rho^2
+ \le {\gamma\over12}\rho^3+C_Y,qquad
+ C_Y={|\lambda|^3\over3\gamma^2}=0.010098435197886498.
+\]
+Combining this inequality with the linear and Class-II bounds yields
+\[
+ \mathcal F[\Psi]\ge {c_{H^2}\over2}\|\Psi\|_{H^2}^2
+ +{\gamma\over12}\int_{\mathbb T^3}\rho^3dx
+ -C_Y|\mathbb T^3| .                                      \tag{4.1}
+\]
+The deterministic audit reproduces all values above with 20 assertions and
+also verifies the P1 source hash, family/lock signs, projector identities,
+regularisers, and the zero shell-bias restriction.
+
+\section*{5. Local existence and uniqueness: proof candidate}
+
+Identify $\mathbb C^3$ with $\mathbb R^6$ and write the field as $u$.  The
+quantities $m_A$ and $\rho$ are quadratic in $u$.  Hence
+\[
+ J_A=Dm_A(u)\nabla u,\qquad
+ K_A=\bigl(Dm_A(u)-q_A(u)D\rho(u)\bigr)\nabla u.
+\]
+Since $\rho+\epsilon_\rho>0$, every coefficient is a smooth function of $u$.
+The Class-II density therefore has the real-coordinate form
+\[
+            G_{II}(u,\nabla u)={1\over2}
+            B^{j\ell}_{\alpha\beta}(u)
+            \partial_j u_\alpha\partial_\ell u_\beta,
+\]
+with smooth $B$.  Its Euler--Lagrange map is a sum of terms of the two forms
+\[
+             B(u)\nabla^2u,qquad DB(u)[\nabla u,\nabla u].       \tag{5.1}
+\]
+On an $H^2$ ball in three dimensions, $u$ is bounded in $L^\infty$ and
+$\nabla u$ is bounded in $L^6$.  Thus the first term of (5.1) lies in $L^2$;
+the second lies in $L^3$, hence also in $L^2$ on the fixed finite torus.
+Applying the same product estimates to a difference gives the candidate bound
+\[
+ \|N_{II}(u)-N_{II}(v)\|_{L^2}
+ \le C_R\|u-v\|_{H^2},\qquad
+ \|u\|_{H^2},\|v\|_{H^2}\le R.                              \tag{5.2}
+\]
+The quartic and sextic Euler--Lagrange terms satisfy the same local-Lipschitz
+bound because $H^2$ is an algebra.  Consequently the full lower-order map
+$N:H^2\to L^2$ is locally Lipschitz, provided the coordinate reduction leading
+to (5.1) is confirmed term by term.
+
+The positive self-adjoint fourth-order operator $L$ generates an analytic
+semigroup and $D(L^{1/2})=H^2$ with equivalent norms.  Since
+\[
+             \|L^{1/2}e^{-tL}\|_{L^2\to L^2}\le Ct^{-1/2},
+\]
+the singularity is integrable.  The standard contraction argument for
+\[
+ u(t)=e^{-tL}u_0-\int_0^t e^{-(t-s)L}N(u(s))\,ds
+\]
+then gives a unique local mild solution in $C([0,T];H^2)$ and the continuation
+alternative that a finite maximal time forces the $H^2$ norm to diverge.
+Equation (5.2) and its explicit coordinate expansion are the subject of
+\texttt{A2-FULL-NONLINEAR-MAPPING-AUDIT}; no theorem-tier claim is made before
+that audit closes.
+
+\section*{6. Energy decrease and global continuation: proof candidate}
+
+Let $P_n$ be the Fourier projection onto finitely many modes.  The projected
+equation is a finite-dimensional real gradient flow for $\mathcal F(P_nu)$, so
+\[
+ {d\over dt}\mathcal F(u_n(t))
+ =-\|\nabla_{\mathbb R}\mathcal F(u_n(t))\|_{L^2}^2\le0.       \tag{6.1}
+\]
+The coercive estimate (4.1) bounds $u_n$ uniformly in $H^2$ on every interval
+on which the initial energy is fixed.  The functional is continuous on $H^2$:
+the linear part is its quadratic norm, the local potential is continuous by
+$H^2\hookrightarrow L^\infty$, and the Class-II density is quadratic in
+$\nabla u$ with smooth coefficients of $u$.
+
+The candidate limiting argument uses the uniform $H^2$ bound, the projected
+equation, compact Sobolev embedding on the torus, and lower semicontinuity to
+pass (6.1) to the local solution.  It yields
+\[
+ \mathcal F(u(t))+\int_0^t
+ \|\nabla_{\mathbb R}\mathcal F(u(s))\|_{L^2}^2ds
+ =\mathcal F(u_0).                                           \tag{6.2}
+\]
+Then (4.1) and (6.2) give a uniform $H^2$ bound.  The local continuation
+alternative cannot fire, so the solution extends globally.  The exact
+Class-II chain rule and the compactness passage in (6.2) remain the named
+\texttt{A2-FULL-ENERGY-CONTINUATION-AUDIT}.
+
+\section*{7. Continuous dependence and smoothing: proof candidate}
+
+Local continuous dependence follows from (5.2) and the same weakly singular
+semigroup estimate used in the contraction.  On a finite time interval the
+energy bound keeps solutions with nearby initial data in a common $H^2$ ball;
+iterating the local estimate gives continuous dependence for the global flow.
+
+For every $t_0>0$, analytic-semigroup regularity first upgrades the solution to
+$D(L)=H^4$ on $[t_0,T]$.  Smoothness of the regularised coefficient map and the
+fact that it is only second order then give
+\[
+             N:H^s\longrightarrow H^{s-2}
+\]
+on bounded sets at higher Sobolev orders.  Repeating the fourth-order
+semigroup gain bootstraps by two spatial derivatives and gives
+$u\in C^\infty((0,\infty)\times\mathbb T^3)$.  The time-regularity input for
+the first $H^4$ gain and the induction are retained as
+\texttt{A2-FULL-SMOOTHING-AUDIT}.
+
+\paragraph{Candidate theorem.}
+For the canonical production functional, with $\eta_{\rm shell}=0$ and the
+pinned positive regularisers, every $u_0\in H^2(\mathbb T^3;\mathbb R^6)$
+generates a unique global $H^2$ solution of the real-$L^2$ gradient flow.  The
+solution depends continuously on its initial datum, obeys (6.2), and is smooth
+for $t>0$.  This paragraph is the target assembled by the note, not a T6
+enactment while the three audit gates remain open.
+
+\section*{8. Devil's-advocate}
+
+\begin{itemize}
+\item \emph{``P1 T5 already proves the PDE theorem.''} UPHELD as an invalid
+reading.  P1 closes a discrete variational matrix, not continuum evolution.
+\item \emph{``The Class-II cross term may destroy the lower bound.''}
+DISMISSED at the production point: $Q_{II}$ is positive definite with minimum
+eigenvalue $0.001259011500926061$.
+\item \emph{``The nonzero shell-bias test can be imported into the PDE.''}
+VALID with mitigation.  Only the actual production value $\eta_{\rm shell}=0$
+is included; nonzero normalisation and convergence are separate work.
+\item \emph{``Writing a smooth coefficient $B(u)$ hides derivative loss.''}
+VALID as an audit demand.  Formula (5.1) shows the proposed order count, but
+the complete six-real-component expansion must independently confirm it.
+\item \emph{``Energy decrease is automatic for any formal gradient.''}
+UPHELD as an invalid shortcut.  The Galerkin chain rule and limiting passage
+are explicitly retained as an open gate.
+\item \emph{``Smoothing follows without a first positive-time domain gain.''}
+UPHELD as an invalid shortcut.  The $H^4$ entry and induction must be audited.
+\end{itemize}
+
+Quantitative sanity check: the independent executable audit reports 20/20 PASS,
+$m_{\rm sh}^2=0.260000000009475$, $c_{H^2}=0.2048572626782363$,
+$\lambda_{\min}(Q_{II})=0.001259011500926061$, and
+$C_Y=0.010098435197886498$.
+
+\section*{9. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-FULL-PRODUCTION-WELLPOSED
+Precise statement:       The production linear and Class-II terms are
+                         coercive; a global H2 proof candidate is assembled.
+Scope:                   Fixed T3, C3 field, canonical P1 functional,
+                         positive regularisers, eta_shell=0, H2 initial data.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION.
+Evidence grade:          ANALYTIC + EXECUTED; T4 proof candidate.
+Reproduction command:    python
+                         codes/foundations/
+                         a2_full_production_wellposedness_checks.py
+Expected output:         20/20 PASS;
+                         A2-FULL-COERCIVITY-BASELINE-PASS; exit 0.
+Falsification gate:      Failed H2->L2 map, energy passage, continuation,
+                         smoothing, or a counterexample in the stated scope.
+Tier before / after:     T0 / T4 FULL-PROOF-CANDIDATE.
+No-overclaim statement:  Not T6; not historical proxy; not eta_shell!=0;
+                         not below H2, infinite volume, BCC, or stability.
+Next required action:    Audit the nonlinear map, energy continuation, and
+                         smoothing gates in that order.
+\end{verbatim}

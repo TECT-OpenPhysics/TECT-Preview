@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Start A2 full-production PDE proof candidate] - 2026-07-17
+
+
+
 ## [Promote A1 production-functional backend to scoped T5] - 2026-07-17
 
 

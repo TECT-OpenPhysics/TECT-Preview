@@ -15,6 +15,7 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `A1-PRODUCTION-FUNCTIONAL-REALISATION` | T5 | — | — | (all notes) (1) | [INDEX](A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md) |
 | `A1-PRODUCTION-KERNEL-MANIFEST` | T5 | — | — | (all notes) (2) | [INDEX](A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md) |
 | `A1-SCALAR-ANALYTIC-BRANCH` | T6 | A1-SHELL-POSITIVITY | — | (all notes) (1) | [INDEX](A1-SCALAR-ANALYTIC-BRANCH/INDEX.md) |
+| `A2-FULL-PRODUCTION-WELLPOSED` | T4 | — | A2-FULL-NONLINEAR-MAPPING-AUDIT, A2-FULL-ENERGY-CONTINUATION-AUDIT, A2-FULL-SMOOTHING-AUDIT | (all notes) (1) | [INDEX](A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) |
 | `A2-PDE-WELLPOSED` | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | (all notes) (2) | [INDEX](A2-PDE-WELLPOSED/INDEX.md) |
 | `A3-PERTURBATIVE-CONTINUUM-CORRELATORS` | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | (all notes) (2) | [INDEX](A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) |
 | `A3-UV-SUPERRENORMALISABILITY` | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | (all notes) (3) | [INDEX](A3-UV-SUPERRENORMALISABILITY/INDEX.md) |
@@ -72,4 +73,4 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `F2-BARYOGENESIS` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 | `F3-INFLATION-CMB` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 
-<!-- generated 2026-07-16T18:05:58Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-16T18:26:51Z by build_index.py v1.0.1 -->

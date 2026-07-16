@@ -1,0 +1,45 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+  ],
+  "hypotheses": [],
+  "soft_dependencies": [
+    "A2-PDE-WELLPOSED"
+  ],
+  "open_gates": [
+    "A2-FULL-NONLINEAR-MAPPING-AUDIT",
+    "A2-FULL-ENERGY-CONTINUATION-AUDIT",
+    "A2-FULL-SMOOTHING-AUDIT"
+  ],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-07-17)",
+  "legacy_evidence": [
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.0.tex.txt",
+    "codes/foundations/a2_full_production_wellposedness_checks.py",
+    "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a2_full_production_wellposedness_checks.py",
+    "expected": "20/20 PASS and A2-FULL-COERCIVITY-BASELINE-PASS; shell mass 0.260000000009475, H2 coercivity 0.2048572626782363, Class-II minimum eigenvalue 0.001259011500926061.",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-07-17",
+  "notes": "New full-production PDE card; the existing scalar A2-PDE-WELLPOSED card is unchanged. The five-step H2 theorem route is assembled as a T4 proof candidate. Steps 1-2 are closed analytically and by a deterministic 20-assertion audit. Steps 3-5 have explicit Sobolev/semigroup, Galerkin-energy, and regularity arguments in the v1.0 note but remain named audit gates before any theorem-tier action. The historical external backend is excluded as a non-variational proxy. Nonzero shell bias is also excluded because its discrete normalisation has not been identified with a continuum PDE functional; the actual production value eta_shell=0 is used.",
+  "id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "title": "Full production three-component gradient-flow well-posedness",
+  "sector": "A",
+  "statement": "For the canonical P1 variational functional on a fixed three-torus at the pinned production parameters and eta_shell=0, the full linear operator on the real Hilbert space L2(T3;C3) is self-adjoint on H4, bounded below by the positive shell mass, and coercive in H2. The family and lock matrices are positive semidefinite, the Class-II J-K coefficient matrix is positive definite, and the positive sextic term absorbs the negative quartic term. These close the algebraic/coercive baseline. A complete H2 local-to-global well-posedness argument is assembled as a proof candidate, pending the three named analytic audits.",
+  "scope": "T4 FULL-PROOF-CANDIDATE: Psi in C3 on the fixed periodic cell; real L2 pairing; the hash-pinned A1 reference functional; production coefficients including positive rho and Class-II mass regularisers; eta_shell exactly zero. The theorem target is unique global H2 solutions, continuous H2 dependence, energy decrease, and C-infinity smoothing for t>0. The historical external backend and nonzero shell-bias continuum limits are excluded.",
+  "tier": "T4",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "falsifier": "A non-Hermitian production linear term, nonpositive linear H2 lower bound, indefinite Class-II coefficient matrix, loss of the positive regulariser or sextic coefficient, failure of the H2-to-L2 local-Lipschitz estimate for the full Euler-Lagrange map, failure of the energy identity/continuation argument, or a finite-time blow-up/non-uniqueness example in the stated H2 scope.",
+  "no_overclaim": "T4 is a proof candidate, not a T6 theorem. No claim is made for the historical non-variational backend, eta_shell nonzero, Hs initial data below H2, R3/infinite volume, the mu2<0 branch, minimizer uniqueness, BCC selection, stability, T6, or T7.",
+  "next_action": "Discharge A2-FULL-NONLINEAR-MAPPING-AUDIT by expanding the real-coordinate Class-II Euler-Lagrange operator and independently checking the local Lipschitz estimate H2 -> L2; then audit the Galerkin energy identity/continuation and positive-time smoothing steps in order."
+}

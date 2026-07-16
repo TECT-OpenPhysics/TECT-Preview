@@ -2,7 +2,41 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-06-05.
+exist here. Last updated: 2026-07-17.
+
+## A2 full-production PDE audit gates
+
+### **A2-FULL-NONLINEAR-MAPPING-AUDIT**
+
+**Statement:** Independently expand the canonical Class-II Euler--Lagrange
+operator in six real components and verify, term by term, that the full
+lower-order map is locally Lipschitz from $H^2(\mathbb T^3;\mathbb R^6)$ to
+$L^2$. The positive fourth-order coefficient must remain the sole principal
+order-four part.
+
+**Status:** OPEN. A general smooth-coefficient/quadratic-gradient argument is
+assembled in the A2 full-production v1.0 note; explicit term expansion and an
+independent audit are still required before theorem-tier use.
+
+### **A2-FULL-ENERGY-CONTINUATION-AUDIT**
+
+**Statement:** Verify the Galerkin passage for the full canonical functional,
+including the Class-II chain rule, the $L^2$ energy identity, continuity of the
+functional on $H^2$, and the continuation alternative driven by its coercive
+$H^2$ bound.
+
+**Status:** OPEN. The production sign and Young inequalities pass; the
+infinite-dimensional chain-rule/limit argument is a proof candidate pending
+independent audit.
+
+### **A2-FULL-SMOOTHING-AUDIT**
+
+**Statement:** Verify continuous $H^2$ dependence on every finite time interval
+and the positive-time bootstrap from the fourth-order analytic semigroup to
+$C^\infty$ for the full Class-II Euler--Lagrange map.
+
+**Status:** OPEN. The semigroup bootstrap route is assembled but has not yet
+received an independent regularity audit.
 
 ## Umbrella gates (GAPs)
 

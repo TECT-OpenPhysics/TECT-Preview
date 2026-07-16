@@ -3,13 +3,16 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 30
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 30
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
+- **T-034** Audit the full Class-II Euler-Lagrange map H2 to L2  _(owner: unassigned; claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-NONLINEAR-MAPPING-AUDIT)_
+  - First P2 analytic gate after the 2026-07-17 coercivity baseline: expand the six-real-component operator term by term and independently verify local Lipschitz continuity without derivative loss.
+  - _updated 2026-07-16_
 
 ## Backlog
 
