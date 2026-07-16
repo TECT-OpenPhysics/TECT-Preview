@@ -1,58 +1,78 @@
-# A2-PDE-WELLPOSED — local & global well-posedness of the scalar Brazovskii gradient flow
+# A2-PDE-WELLPOSED -- local and global well-posedness of the scalar Brazovskii gradient flow
 
-**Tier**: T6 PROVED CONDITIONAL (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-23 · *(T1→T6 PROVED CONDITIONAL — APPROVED by operator 2026-06-23; scope: scalar/periodic/$\mu^2>0$/$\gamma>0$, $3/2<s\le2$)*
+**Tier**: T6 PROVED CONDITIONAL (TSv2) | **Lifecycle**: ACTIVE | **Last review**: 2026-06-23
 
 ## Statement
 
-Under (H1) $\mu^2>0$ and (H2) $\gamma>0$, the **scalar** Brazovskii $L^2$ gradient flow
-$\partial_t\phi=-K(-i\nabla)\phi-\lambda\phi^3-\gamma\phi^5$ on a **fixed** periodic cell $\mathbb{T}^3$
-($K(q)=\mu^2+Y(q^2-q_0^2)^2$, A1-KERNEL-CONV) is **globally well-posed** for $\phi_0\in H^s$, $\tfrac32<s\le2$:
-unique global solution, $C^\infty$ for $t>0$, continuous dependence, $F_{\rm TECT}$ non-increasing. ($\mu^2>0$
-is the disordered-side positive linear gap, **not** BCC condensation.)
+Under (H1) `mu^2 > 0` and (H2) `gamma > 0`, the scalar Brazovskii `L^2` gradient flow
+`partial_t phi = -K(-i nabla) phi - lambda phi^3 - gamma phi^5` on a fixed periodic
+cell `T^3`, with `K(q)=mu^2+Y(q^2-q0^2)^2`, is globally well-posed for
+`phi_0 in H^s`, `3/2 < s <= 2`: unique global solution, smoothing for `t > 0`,
+continuous dependence, and non-increasing energy. The positive `mu^2` condition is
+the disordered-side linear gap, not a proof of BCC condensation.
 
 ## Scope
 
-NARROW (operator review 2026-06-23): one real scalar field, fixed periodic cell, $\tfrac32<s\le2$. Uses the
-lower bound $\lambda_0:=\min_k K(k)\ge\mu^2>0$ (equality non-generic); Sobolev direction
-$H^2\subseteq H^{4\beta}=X^\beta$ for $\beta\le1/2$ (so the energy $H^2$ a priori bound controls $X^\beta$);
-$s>2$ persistence is **not** claimed. **NOT** the full Class-II multi-field action; **NOT** the $\mu^2<0$
-condensate branch — those are separate targets $\mathrm{A2}_{\text{full Class II}}$, $\mathrm{A2}_{\mu^2<0}$.
+One real scalar field, fixed periodic cell, `3/2 < s <= 2`, `Y > 0`,
+positive shell mass, and positive sextic coefficient. The spectral fact used is
+`lambda0 := min_k K(k) >= mu^2 > 0` (equality is non-generic). `s > 2`
+persistence, the full Class-II multi-field action, and the `mu^2 < 0` condensate
+branch are separate targets. `A1-PRODUCTION-KERNEL-MANIFEST` is T5 only for the
+canonical pure-Brazovskii scalar slice; this theorem does not close the full
+Class-II/condensate production backend.
 
 ## Dependencies and hypotheses
 
-- Hard dependencies: A1-KERNEL-CONV
-- Hypotheses (registered in `claims/GATES.md`): A2-H1-KERNEL-POSITIVITY ($\mu^2>0$ ⇒ $\lambda_0\ge\mu^2>0$), A2-H2-SEXTIC-COERCIVITY ($\gamma>0$) — both SATISFIED@anchor
+- Hard dependencies: A1-KERNEL-CONV, A1-SCALAR-ANALYTIC-BRANCH
+- Hypotheses: A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY
 - Open gates: none
 
 ## Evidence
 
 Grades: ANALYTIC, EXECUTED.
 
-- `claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.1.tex.txt` — proof (operator-corrected v1.1: $\lambda_0$ lower bound, Sobolev direction, $s$-range, narrow scope)
-- `codes/foundations/a2_wellposedness_checks.py` — 8/8 self-tests (v1.1)
-- `claims/A2-PDE-WELLPOSED/runs/a2_wellposedness_checks.json` — artefact
+- `claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.2.tex.txt`
+- `codes/foundations/a2_wellposedness_checks.py` -- 8/8 self-tests
+- `claims/A2-PDE-WELLPOSED/runs/a2_wellposedness_checks.json`
+- `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/`
 
 ## Falsifier
 
-Finite-time blow-up or non-uniqueness for some $\phi_0\in H^s$ ($\tfrac32<s\le2$) at $\mu^2>0,\gamma>0$; or $\lambda_0:=\min_k K(k)\le0$ (loss of sectoriality).
+Finite-time blow-up or non-uniqueness for some `phi_0 in H^s`, `3/2 < s <= 2`,
+at `mu^2 > 0`, `gamma > 0`; or `lambda0 <= 0`.
 
 ## Reproduction
 
-Status: **AVAILABLE**. Command: `python codes/foundations/a2_wellposedness_checks.py` → 8/8 PASS, exit 0.
+Status: **AVAILABLE**.
+
+```bash
+python codes/foundations/a2_wellposedness_checks.py
+```
+
+Expected: 8/8 PASS, exit 0.
 
 ## No-overclaim
 
-$s>2$ persistence; the full Class-II multi-field action; the $\mu^2<0$ condensate branch; any claim that $\mu^2>0$ proves BCC condensation (it is the disordered-side linear gap); a unique global **minimiser** (Sector B); well-posedness for $\gamma\le0$.
+Not claimed: `s > 2` persistence; full Class-II multi-field PDE; `mu^2 < 0`
+condensate branch; BCC condensation; unique global minimiser; well-posedness for
+`gamma <= 0`.
 
 ## Devil's-advocate record
 
-Operator review 2026-06-23 raised three defects, all UPHELD and fixed in note v1.1 §7: (α) $\inf\operatorname{spec}L=\mu^2$ false on a generic cell → use $\lambda_0\ge\mu^2>0$; (β) Sobolev inclusion backwards → $H^2\subseteq X^\beta$ (conclusion recovered); (γ) proof closes only for $\tfrac32<s\le2$ → theorem range restricted, $s>2$ not claimed. Scope narrowed to scalar/periodic/$\mu^2>0$/$\gamma>0$. Quantitative sanity check: 8/8 verification (v1.1).
+Operator review on 2026-06-23 raised three defects, all upheld and fixed:
+generic `lambda0` is only bounded below by `mu^2`; the Sobolev inclusion direction
+had to be corrected; and the theorem range had to be restricted to
+`3/2 < s <= 2`.
 
 ## History
 
-- 2026-06-05 — Seeded T1 OPEN (no legacy evidence).
-- 2026-06-23 — A2 deep-dive: local + global well-posedness derived (analytic-semigroup). v1.0 → operator review (3 defects) → v1.1 corrected + scope narrowed. Proposed T1→T6 PROVED CONDITIONAL (scalar/periodic/$\mu^2>0$/$\gamma>0$, $3/2<s\le2$), RE-SUBMITTED for sign-off.
+- 2026-06-05: seeded T1 OPEN.
+- 2026-06-23: operator-approved T1 -> T6 PROVED CONDITIONAL within the scalar,
+  periodic, positive-shell-mass, positive-sextic scope.
+- 2026-07-17: P0 record alignment; removed stale sign-off and mock-backend wording.
 
 ## Next required action
 
-Operator sign-off of the narrowed T6; then **A3-RENORMALISATION** (continuum limit); separately $\mathrm{A2}_{\text{full Class II}}$ and $\mathrm{A2}_{\mu^2<0}$.
+No scalar-scope sign-off is pending. Next foundation work is the separate
+full-production variational/PDE closure for the Class-II multi-field backend and
+the `mu^2 < 0` condensate branch.

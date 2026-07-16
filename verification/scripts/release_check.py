@@ -14,7 +14,8 @@ become public satisfies the publication invariants
   4. English-only policy: no Hangul in any publishable file
   5. no-overclaim phrase scan on claim/theory/publish surfaces
   6. P2 integrity: publish/ may only cite migration-clean claims
-  7. file hygiene: NUL bytes, JSON parse, python AST, oversized files (>5 MB)
+  7. verification baseline: verify_claim.py exists and bundle manifests are commit-stamped
+  8. file hygiene: NUL bytes, JSON parse, python AST, oversized files (>5 MB)
 
 Changelog:
   1.0.0 (2026-06-05) first issue.
@@ -24,8 +25,10 @@ Changelog:
   1.0.4 (2026-06-23) ADR-0001: enumerate via repo_inventory.real_files (git, .gitignore-aware
         incl. committed-by-mistake junk) instead of rglob+SKIP_DIRS; every content pass now
         skips the .tmp.driveupload junk class. SKIP_DIRS kept for the no-git fallback only.
+  1.1.0 (2026-07-17) enforce P0 verification baseline: verify_claim entrypoint exists and
+        every tracked bundle MANIFEST has a stamped repo_commit, not the publish placeholder.
 """
-__version__ = "1.0.4"
+__version__ = "1.1.0"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-06-05"
 
@@ -123,7 +126,21 @@ def main():
                 errors.append(f"P2: {f.relative_to(REPO)} cites {cid} which is not migration-clean")
     print("  [p2-clean-citation] done")
 
-    # 7. hygiene
+    # 7. verification baseline
+    if not (REPO / "verification" / "scripts" / "verify_claim.py").exists():
+        errors.append("verification baseline: verification/scripts/verify_claim.py missing")
+    for manifest in (REPO / "claims").glob("*/bundle/*/MANIFEST.json"):
+        try:
+            data = json.loads(manifest.read_text(encoding="utf-8"))
+        except Exception as e:
+            errors.append(f"verification baseline: MANIFEST parse {manifest.relative_to(REPO)}: {e}")
+            continue
+        commit = str(data.get("repo_commit", "")).strip()
+        if not commit or "TO BE STAMPED" in commit:
+            errors.append(f"verification baseline: unstamped repo_commit in {manifest.relative_to(REPO)}")
+    print("  [verification-baseline] done")
+
+    # 8. hygiene
     for f in files():
         b = f.read_bytes()
         rel = f.relative_to(REPO)

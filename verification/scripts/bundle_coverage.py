@@ -1,86 +1,127 @@
 #!/usr/bin/env python3
-"""bundle_coverage.py -- reproduction-bundle coverage report (governance/reproduction-bundle-policy.md sec.8).
+"""bundle_coverage.py -- claim-level reproduction-bundle coverage report.
 
-Lists every result-bearing sub-proof folder, its owning claim's tier, and whether a
-current reproduction bundle exists. A T5+ claim's folder with notes but no bundle is a
-MANDATORY gap; a T4 folder without one is a RECOMMENDED gap; <=T3 needs none.
+This reflects reproduction-bundle-policy.md sec.14: bundles are main-line,
+claim-level artefacts under `claims/<ID>/bundle/<Result>-<Tier>-<YYMMDD>/`.
+Sub-proof-folder bundle coverage was retired on 2026-06-11. Therefore the
+failing coverage gate is the operator-confirmed main-proof-line registry, not
+every T5+ claim in the repository.
 
-    python verification/scripts/bundle_coverage.py            # report
-    python verification/scripts/bundle_coverage.py --build    # build all missing mandatory (T5+) bundles
+Usage:
+    python verification/scripts/bundle_coverage.py
 """
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __first_issued__ = "2026-06-10"
+__version_issued__ = "2026-07-17"
 
-import json, re, subprocess, sys
+import json
+import re
+import sys
 from pathlib import Path
+
 REPO = Path(__file__).resolve().parents[2]
-RANK = {"T7":7,"T6":6,"T5":5,"T4":4,"T3":3,"T2":2,"T1":1,"T0":0}
+RANK = {"T7": 7, "T6": 6, "T5": 5, "T4": 4, "T3": 3, "T2": 2, "T1": 1, "T0": 0}
 
-def claim_tier(cid):
-    p = REPO/"claims"/cid/"status.json"
-    if p.exists():
+
+def _load_status(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _bundle_rows(claim_dir):
+    rows = []
+    for manifest in sorted((claim_dir / "bundle").glob("*/MANIFEST.json")):
         try:
-            t = json.load(open(p)).get("tier","?")
-            return t.split()[0] if t else "?"
-        except Exception: pass
-    return "?"
+            data = json.loads(manifest.read_text(encoding="utf-8"))
+        except Exception as exc:
+            rows.append((manifest.parent.name, "BAD-MANIFEST", str(exc)))
+            continue
+        runlog = data.get("runlog", {})
+        all_pass = all(v.get("exit") == 0 and "FAIL" not in v.get("pass_line", "") for v in runlog.values())
+        commit = str(data.get("repo_commit", ""))
+        stamped = bool(commit) and "TO BE STAMPED" not in commit
+        if all_pass and stamped:
+            status = "PUBLISHED"
+        elif all_pass:
+            status = "UNSTAMPED"
+        else:
+            status = "FAILING"
+        ref = f"claims/{claim_dir.name}/bundle/{manifest.parent.name}"
+        rows.append((manifest.parent.name, status, data.get("bundle_digest", "")[:12], ref))
+    return rows
 
-def has_bundle(folder):
-    import json as _j
-    bdir = REPO/folder/"bundle"
-    if not bdir.exists(): return None, None
-    for m in bdir.glob("*/MANIFEST.json"):
-        try: note = _j.load(open(m)).get("note","")
-        except Exception: note = ""
-        try: rl=_j.load(open(m)).get("runlog",{})
-        except Exception: rl={}
-        bad=any(v.get("exit")!=0 or "FAIL" in v.get("pass_line","") for v in rl.values())
-        g=("PUB" if "referee-package" in note else "DRAFT")
-        return m.parent.relative_to(REPO).as_posix(), (g+"*" if bad else g)
-    for _ in bdir.glob("*/expected"):
-        return None, "partial"
-    return None, None
+
+def _mainline_bundles():
+    path = REPO / "theory" / "main-proof-line.md"
+    if not path.exists():
+        return set()
+    text = path.read_text(encoding="utf-8", errors="replace")
+    refs = set()
+    for ref in re.findall(r"`([^`]+/bundle/[^`]+)`", text):
+        clean = ref.strip("/")
+        if not clean.startswith("claims/"):
+            clean = "claims/" + clean
+        refs.add(clean)
+    return refs
+
+
+def _registered_bundle_refs(card):
+    refs = set()
+    for item in card.get("legacy_evidence", []):
+        text = str(item).strip()
+        for ref in re.findall(r"claims/[A-Z0-9-]+/bundle/[A-Za-z0-9_.\-/]+", text):
+            refs.add(ref.rstrip("/"))
+    notes = str(card.get("notes", ""))
+    for ref in re.findall(r"claims/[A-Z0-9-]+/bundle/[A-Za-z0-9_.\-/]+", notes):
+        refs.add(ref.rstrip("/"))
+    return refs
+
 
 def main():
-    build = "--build" in sys.argv
+    mainline = _mainline_bundles()
     rows = []
-    for notes in sorted((REPO/"claims").glob("*/*/notes")):
-        folder = notes.parent
-        cid = folder.relative_to(REPO/"claims").parts[0]
-        sub = folder.name
-        nnotes = len([n for n in notes.glob("*.tex.txt")
-                      if not n.read_text().split("\n",1)[0].startswith("% SUPERSEDED")])
-        if nnotes == 0: continue
-        tier = claim_tier(cid)
+    mainline_gaps = []
+    for claim_dir in sorted((REPO / "claims").iterdir()):
+        status_path = claim_dir / "status.json"
+        if not claim_dir.is_dir() or not status_path.exists():
+            continue
+        card = _load_status(status_path)
+        tier = str(card.get("tier", "?")).split()[0]
         rank = RANK.get(tier, -1)
-        req = "MANDATORY" if rank >= 5 else ("recommended" if rank == 4 else "-")
-        # doc-only folders (headline note has no reproduction scripts) need no code bundle
-        import re as _re
-        live_notes=[n for n in notes.glob("*.tex.txt") if not n.read_text().split("\n",1)[0].startswith("% SUPERSEDED")]
-        has_scripts=any(_re.search(r"Reproduction command:.*\.py", n.read_text()) for n in live_notes)
-        b, grade = has_bundle(folder.relative_to(REPO).as_posix())
-        if not has_scripts:
-            req="-"  # doc-only
-        st = (grade if b else ("partial" if grade=="partial" else ("GAP" if req!="-" else "n/a")))
-        rows.append([cid, tier, sub, nnotes, req, st, b])
-    # report
-    print(f"{'claim':22} {'tier':4} {'sub-proof':22} {'notes':5} {'req':11} status")
-    mand_gap = []
-    for cid,tier,sub,nn,req,st,b in rows:
-        print(f"{cid:22} {tier:4} {sub:22} {nn:5} {req:11} {st}" + (f"  {b}" if b else ""))
-        if req=="MANDATORY" and (st in ("GAP","partial") or str(st).endswith("*")): mand_gap.append((cid,sub))
-    print(f"\nPUBLISHED: {sum(1 for r in rows if r[5]==chr(80)+chr(85)+chr(66))}  DRAFT: {sum(1 for r in rows if r[5]==chr(68)+chr(82)+chr(65)+chr(70)+chr(84))}")
-    print(f"\nMANDATORY (T5+) folders: {sum(1 for r in rows if r[4]=='MANDATORY')}; "
-          f"with bundle: {sum(1 for r in rows if r[4]=='MANDATORY' and r[5] in ('PUB','DRAFT'))}; "
-          f"GAPS: {len(mand_gap)}")
-    if build and mand_gap:
-        for cid,sub in mand_gap:
-            folder = f"claims/{cid}/{sub}"
-            print(f"\n=== building {folder} ===")
-            r = subprocess.run([sys.executable, str(REPO/"verification/scripts/build_reproduction_bundle.py"),
-                                "--folder", folder], cwd=REPO)
-            print(f"  exit {r.returncode}")
-    return 1 if mand_gap and not build else 0
+        bundles = _bundle_rows(claim_dir)
+        registered_refs = _registered_bundle_refs(card)
+        claim_bundle_refs = {b[3] for b in bundles}
+        is_mainline = any(ref in mainline for ref in claim_bundle_refs)
+        is_card_registered = bool(registered_refs & claim_bundle_refs)
+        preferred = [b for b in bundles if b[3] in registered_refs]
+        if not preferred:
+            preferred = [b for b in bundles if b[3] in mainline]
+        if not preferred:
+            preferred = bundles[-1:] if bundles else []
+        current = preferred[-1] if preferred else ("-", "NO-BUNDLE", "", "")
+        if is_mainline:
+            requirement = "MAIN-LINE"
+        elif is_card_registered:
+            requirement = "CARD-REF"
+        elif rank >= 5:
+            requirement = "NON-MAIN"
+        elif rank == 4:
+            requirement = "optional"
+        else:
+            requirement = "-"
+        rows.append((card["id"], tier, requirement, current[0], current[1], current[2], len(bundles)))
+        if is_mainline and current[1] in {"NO-BUNDLE", "UNSTAMPED", "FAILING", "BAD-MANIFEST"}:
+            mainline_gaps.append(card["id"])
+
+    print(f"{'claim':42} {'tier':4} {'req':11} {'current-bundle':38} {'status':12} digest")
+    for cid, tier, req, bundle, status, digest, count in rows:
+        suffix = f" ({count} total)" if count else ""
+        print(f"{cid:42} {tier:4} {req:11} {bundle[:38]:38} {status:12} {digest}{suffix}")
+    print()
+    print(f"MAIN-LINE bundle refs: {len(mainline)}; gaps: {len(mainline_gaps)}")
+    if mainline_gaps:
+        print("MAIN-LINE GAPS: " + ", ".join(mainline_gaps))
+    return 1 if mainline_gaps else 0
+
 
 if __name__ == "__main__":
     sys.exit(main())

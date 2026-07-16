@@ -25,7 +25,7 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.9.0"
+__version__ = "1.9.1"
 __first_issued__ = "2026-06-10"
 __version_issued__ = "2026-06-10"
 
@@ -82,6 +82,15 @@ def sha256(path):
     h = hashlib.sha256()
     h.update(Path(path).read_bytes())
     return h.hexdigest()
+
+
+def default_repo_commit():
+    try:
+        result = subprocess.run(["git", "rev-parse", "HEAD"], cwd=REPO, capture_output=True,
+                                text=True, check=True)
+        return result.stdout.strip() + " (pre-publication HEAD; the atomic publication commit is its child)"
+    except Exception:
+        return "UNKNOWN (git rev-parse HEAD unavailable at bundle build time)"
 
 
 def discover_folder(folder):
@@ -255,7 +264,7 @@ def main():
     expected = "\n".join(f"  {n}: exit 0, `{runlog[n]['pass_line']}`" for n in runlog)
     _bn = Path(args.out.rstrip("/")).name
     grade = "PUBLISHED (operator-confirmed)"  # policy sec.14: bundles are post-confirmation only
-    commit_text = args.repo_commit or "TO BE STAMPED AT PUBLISH (git rev-parse HEAD)"
+    commit_text = args.repo_commit or default_repo_commit()
     readme = f"""# Reproduction bundle -- {args.title or note.stem}
 
 Self-contained referee reproduction bundle (TECT verification-first repository).

@@ -1,54 +1,73 @@
-# A3-UV-SUPERRENORMALISABILITY — UV super-renormalisability of the scalar Brazovskii functional
+# A3-UV-SUPERRENORMALISABILITY -- scalar Brazovskii UV super-renormalisability
 
-**Tier**: T6 PROVED CONDITIONAL (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-23 · *(UV-only; T1→T6 submitted for operator sign-off; renamed from A3-RENORMALISATION)*
+**Tier**: T6 PROVED CONDITIONAL (TSv2) | **Lifecycle**: ACTIVE | **Last review**: 2026-06-23
 
 ## Statement
 
-In $d=3$ with $K(q)=\mu^2+Y(q^2-q_0^2)^2$, $\mu^2>0$, every connected diagram with $V\ge1,I\ge1$ has superficial
-degree $D=3-3V-I<0$; by Weinberg's theorem the perturbative expansion is **UV- and IR-finite**. **No UV-divergent
-counterterm is required; a finite normal ordering is an optional scheme choice.** (UV half of A3; the continuum
-limit of correlators is the separate open card **A3-PERTURBATIVE-CONTINUUM-CORRELATORS**.)
+In `d=3` with `K(q)=mu^2+Y(q^2-q0^2)^2`, positive shell mass, and `Y > 0`,
+every connected diagram with `V >= 1` and `I >= 1` has superficial degree
+`D = 3 - 3V - I < 0`. By Weinberg's theorem the scalar perturbative expansion is
+UV- and IR-finite. No UV-divergent counterterm is required; finite normal
+ordering is an optional scheme choice.
 
 ## Scope
 
-NARROW (matching A2): one scalar field, $d=3$, quartic kernel, $\mu^2>0$; **perturbative power counting**,
-UV-finiteness only. $D=(d-4)I-dV+d<0$ for $d\le3$ ($d=4$ marginal). **NOT** the continuum limit of correlators;
-**NOT** constructive; **NOT** full Class-II; **NOT** $\mu^2<0$.
+One scalar field, `d=3`, quartic kernel, positive shell mass, perturbative power
+counting, UV-finiteness only. Not claimed: continuum correlator convergence
+(separate A3 correlator card), constructive/non-perturbative control, full
+Class-II, or `mu^2 < 0`.
 
 ## Dependencies and hypotheses
 
-- Hard dependencies: A1-KERNEL-CONV
-- Hypotheses (registered in `claims/GATES.md`): A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY — both SATISFIED
+- Hard dependencies: A1-KERNEL-CONV, A1-SCALAR-ANALYTIC-BRANCH
+- Hypotheses: A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY
 - Open gates: none
 
 ## Evidence
 
 Grades: ANALYTIC, EXECUTED.
 
-- `claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-uv-superrenormalisability-260623-260623-v1.1.tex.txt` — proof (UV-only; §3 power counting, §4 Weinberg + precise counterterm statement, §5 tadpole illustration, §6 IR)
-- `codes/foundations/a3_renormalisation_checks.py` — 6/6 self-tests (UV core + tadpole illustration)
+- `claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-uv-superrenormalisability-260623-260623-v1.1.tex.txt`
+- `codes/foundations/a3_renormalisation_checks.py` -- 6/6 self-tests
 - `claims/A3-UV-SUPERRENORMALISABILITY/runs/a3_renormalisation_checks.json`
+- `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/`
 
 ## Falsifier
 
-A connected diagram with $V\ge1,I\ge1$ and $D\ge0$ (would need $d\ge4$ or a softer-than-$q^4$ kernel); or a UV/IR divergence at $\mu^2>0$.
+A connected diagram with `V >= 1`, `I >= 1`, and `D >= 0`; or a UV/IR divergence
+within the stated scalar, positive-shell-mass scope.
 
 ## Reproduction
 
-Status: **AVAILABLE**. `python codes/foundations/a3_renormalisation_checks.py` → 6/6 PASS.
+Status: **AVAILABLE**.
+
+```bash
+python codes/foundations/a3_renormalisation_checks.py
+```
+
+Expected: 6/6 PASS, exit 0.
 
 ## No-overclaim
 
-The continuum limit of correlation functions (separate card A3-PERTURBATIVE-CONTINUUM-CORRELATORS); any constructive/non-perturbative statement; full Class-II; $\mu^2<0$; treating the finite tadpole as a required counterterm (it is an optional scheme choice).
+Not claimed: continuum correlator convergence; constructive/non-perturbative
+statements; full Class-II; `mu^2 < 0`; treating the finite tadpole as a required
+counterterm.
 
 ## Devil's-advocate record
 
-Note §7: (α) nested subdivergences — DISMISSED (Weinberg, all $D'<0$); (β) UV-finiteness ⇒ continuum limit — VALID, the reason for the split (separate card); (γ) finite tadpole is a counterterm — DISMISSED (scheme choice). Sanity check: 6/6.
+Nested subdivergences are covered by Weinberg power counting because all
+subdegrees are negative. UV-finiteness does not by itself prove continuum
+correlator convergence, which is handled by the separate correlator card. The
+finite tadpole is a scheme choice, not a required UV counterterm.
 
 ## History
 
-- 2026-06-23 — A3 deep-dive then operator review SPLIT: this card = UV super-renormalisability only (T6); the stronger continuum-correlators claim moved to A3-PERTURBATIVE-CONTINUUM-CORRELATORS. Renamed from A3-RENORMALISATION.
+- 2026-06-23: A3 split; this card carries only the UV super-renormalisability
+  result and was operator-approved as T6 within the scalar scope.
+- 2026-07-17: P0 record alignment; removed stale sign-off and open-correlator wording.
 
 ## Next required action
 
-Operator sign-off; then close A3-GRAPHWISE-CONVERGENCE (graphwise lemma) for the correlators card.
+No UV-scope sign-off is pending. Next foundation work is Route B
+regularisation-independence, constructive/non-perturbative control, and the
+separate full-production Class-II backend closure.

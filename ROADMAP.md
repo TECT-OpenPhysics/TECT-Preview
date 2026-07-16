@@ -38,8 +38,14 @@ the single normative source.
 **Status**: production-kernel convention $r_{\rm braz}=K(q_0)=\mu^2$ stabilised
 after the Math426/Math435 corrected-convention cascade; recomputation cascade
 G6 = CLOSED-PASS (claim `A1-KERNEL-CONV`, T5 pinned to the current canonical
-note set). PDE well-posedness and counterterm closure remain to be registered
-as claims during migration.
+note set). The current Sector-A foundation record is registered as scoped
+claims: `A1-PRODUCTION-KERNEL-MANIFEST` is T5 for the canonical pure-Brazovskii
+scalar slice; `A2-PDE-WELLPOSED`, `A3-UV-SUPERRENORMALISABILITY`, and
+`A3-PERTURBATIVE-CONTINUUM-CORRELATORS` are T6 only within their scalar,
+positive-shell-mass, positive-sextic, spectral/Galerkin scopes. Remaining
+Stage-1 work is not a re-registration of those scalar results; it is the
+separate full-production variational/PDE closure for the multi-field Class-II /
+condensate backend and any genuine lattice/constructive refinements.
 
 ## Stage 2 — Prove the vacuum (Sector B) ← **critical path**
 

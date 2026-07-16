@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Align P0 Sector-A record and verification baseline] - 2026-07-17
+
+
+
 ## [Freeze N-001 q1a BCC-bridge evidence package] - 2026-07-16
 
 Frozen the uploaded homogeneous-condensate record, the complete N32 BCC-star curvature diagnostic, the BCC-seed collapse record, exact SHA-256 evidence lock, and a resume runbook. T-033 is complete at its N32 full-star scope; N64/N128 transfer audits are not automatic follow-up work. No claim, tier, or BCC/Reading-H conclusion changed.
