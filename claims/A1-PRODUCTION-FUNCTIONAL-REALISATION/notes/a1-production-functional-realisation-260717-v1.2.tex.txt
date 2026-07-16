@@ -1,0 +1,113 @@
+% =============================================================================
+% Title: Production functional realisation -- standalone backend closure
+% Claim: A1-PRODUCTION-FUNCTIONAL-REALISATION
+% Version: v1.2 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 strong-evidence verification record; no T5 assertion
+% =============================================================================
+
+\section*{1. Purpose and scope}
+The manifest-defined three-component complex functional is now implemented in
+a standalone, hash-pinned backend.  A separate verifier reproduces the discrete
+variational identities on spectral torus grids $N=4,6,8$.  This closes the P1
+technical implementation-and-verification task at T4 strong evidence.  It does
+not repair the separately pinned historical working branch, and it does not
+assert a continuum theorem, minimizer, BCC selection, or stability result.
+
+\section*{2. Frozen functional}
+With $\rho=\Psi^\dagger\Psi$, $m_A=\Psi^\dagger T_A\Psi$,
+$J_A=\nabla m_A$, and
+$K_A=J_A-(m_A/(\rho+10^{-12}))\nabla\rho$, the standalone backend computes
+\[
+ F=F_{\rm Braz}+F_{\rm family}+F_{\rm lock}+F_{\rm shell}
+ +\int\left(\frac\lambda4\rho^2+\frac\gamma6\rho^3\right)
+ +\sum_A\int\left(\frac a2|J_A|^2
+ +b\operatorname{Re}(\bar J_A\cdot K_A)+\frac c2|K_A|^2\right),
+\]
+where $a=c_{JJ}\alpha_X^2/(M_X^2+10^{-12})$,
+$b=c_{JK}\alpha_X\beta_X/(M_X^2+10^{-12})$, and
+$c=c_{KK}\beta_X^2/(M_X^2+10^{-12})$.  The implementation includes the
+Brazovskii linear term, family masses, internal lock, shell bias, quartic and
+sextic terms, all three Class-II coefficients, the density regularizer, and the
+manifest projector conventions.
+
+\section*{3. Independent verification matrix}
+The verifier imports only the standalone backend and independently defines the
+real torus pairing, field generators, finite differences, and analytic
+one-component scalar residual.  It tests zero, homogeneous, random,
+$q_0$-shell, and Class-II-active fields at the pinned parameter point and at the
+declared shell-bias activation $\eta_{\rm shell}=0.07$.  Each grid uses finite
+difference steps $10^{-4},10^{-5},10^{-6}$.
+
+All gates pass.  Across $N=4,6,8$, the maximum relative errors are
+\[
+ \max |DF-\langle R,v\rangle_{\mathbb R}|_{\rm rel}
+ =1.856661591692621\times10^{-7},
+\]
+\[
+ \max \|DRv-Hv\|_{\rm rel}=6.695217715947473\times10^{-9}.
+\]
+\[
+ \max |\langle u,Hv\rangle_{\mathbb R}
+ -\langle Hu,v\rangle_{\mathbb R}|_{\rm rel}
+ =1.282693395943113\times10^{-10}.
+\]
+The exact scalar-reduction maximum is
+$6.218564371786818\times10^{-16}$.  The persisted verifier assertion list also
+checks source existence, source hash, source version, grid count, required field
+coverage, and nonzero activation of every listed coupling.
+
+\section*{4. Reproduction record}
+The direct multi-grid run is stored at
+\url{runs/2026-07-17-production-backend-multigrid/result.json}.  The clean
+subprocess preflight at
+\url{runs/promotion-evidence/2026-07-17-local-preflight-v3/} records the
+Python environment, git state, input hashes, stdout, stderr, full verifier JSON,
+review checklist, and file hashes.  Its verdict is \texttt{TECHNICAL-PASS}; by
+construction, local preflight is not independent reproduction evidence.
+
+\section*{5. Devil's-advocate}
+(alpha) \emph{``The Class-II cross coupling is omitted or conflated with the
+$K$ square.''} DISMISSED: $c_{JJ}$, $c_{JK}$, and $c_{KK}$ enter three distinct
+quadratic coefficients and all are nonzero in the activation check.
+
+(beta) \emph{``Autodiff makes every check tautological.''} VALID with
+mitigation: the verifier independently computes energy finite differences,
+outer residual differences, the real pairing, and the analytic scalar
+reduction.  Torch supplies the backend residual, not the verification formulas.
+
+(gamma) \emph{``Three small grids prove the continuum functional.''} UPHELD as
+an invalid reading: the certified object is the stated discrete spectral
+implementation only.  Grid convergence and continuum well-posedness are absent.
+
+(delta) \emph{``This silently validates the historical production solver.''}
+UPHELD as an invalid reading: the historical external source remains frozen as
+\texttt{EXTERNAL-SOURCE-AUDIT-FAIL}.  Solver integration is a separate action.
+
+(epsilon) \emph{``The local preflight is an independent T5 reproduction.''}
+UPHELD as an invalid reading: the evidence collector marks it non-certifying.
+An operator-named independent run and final confirmed bundle are still required
+for any T5 decision.
+
+\section*{6. Result footer}
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-FUNCTIONAL-REALISATION
+Precise statement:       Hash-pinned standalone all-coupling backend passes the
+                         discrete variational and scalar-reduction gates.
+Scope:                   Spectral torus grids N=4,6,8; five field classes;
+                         pinned parameters plus declared shell activation.
+Dependencies:            A1-PRODUCTION-KERNEL-MANIFEST.
+Evidence grade:          EXECUTED, INDEPENDENT-CALCULATION, HASH-PINNED.
+Direct command:          python
+                         codes/foundations/a1_production_backend_verify.py
+                         --grids 4 6 8
+Expected output:         PRODUCTION-BACKEND-MULTIGRID-PASS.
+Preflight command:       python
+                         codes/foundations/a1_functional_promotion_evidence.py
+                         --run-id <id> --reviewer <name> --mode preflight
+Falsification gate:      source/hash drift or any failed identity, field, grid,
+                         coupling-activation, or scalar-reduction assertion.
+Tier before / after:     T3 / T4.
+No-overclaim statement:  No external-source repair, continuum theorem,
+                         minimizer, BCC, stability, or T5/T6/T7 result.
+Next required action:    independent operator reproduction before scoped T5 review.
+\end{verbatim}

@@ -2,7 +2,7 @@
   "schema": "tect/a1-production-functional-realisation/1.0",
   "claim_id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
   "frozen_on": "2026-07-17",
-  "status": "SOURCE-AUDIT-FAIL plus PROPOSED-REFERENCE-CLOSURE scaffold; no production closure is asserted",
+  "status": "EXTERNAL-SOURCE-AUDIT-FAIL plus STANDALONE-BACKEND-MULTIGRID-PASS; scoped T4 variational realisation only",
   "authority": {
     "kind": "external working-branch source, hash-pinned",
     "backend": {
@@ -50,6 +50,8 @@
     "cJK": 0.1,
     "cKK": 0.15,
     "eps_classII_hess": 5e-07,
+    "rho_regularizer": 1e-12,
+    "classii_mass_regularizer": 1e-12,
     "reference_hessian_step": 3e-05,
     "laplacian_mode": "spectral",
     "a_bcc": 1.0,
@@ -57,6 +59,21 @@
     "torch_complex_dtype": "complex128",
     "use_cuda": false,
     "use_xpu": false
+  },
+  "production_reference_backend": {
+    "path": "codes/foundations/n001_variational_backend.py",
+    "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "version": "1.0.0"
+  },
+  "independent_verifier": {
+    "path": "codes/foundations/a1_production_backend_verify.py",
+    "sha256": "54007d5545adcf3ddbdce2ca1e983c3a42a34617321972ca5b9d750156ebf1b4",
+    "version": "1.0.0"
+  },
+  "evidence_collector": {
+    "path": "codes/foundations/a1_functional_promotion_evidence.py",
+    "sha256": "3c6608f94217dfbced9a896cd49e4c5564c422e4f06ae320479b2bc269b53e3f",
+    "version": "1.0.0"
   },
   "declared_energy": {
     "formula": "F_decl = F_Brazovskii + F_family + F_lock + F_shell + (lambda/2) int rho^2 + (gamma/3) int rho^3 + F_ClassII[J,K]",
@@ -78,18 +95,29 @@
     "additional_risk": "The shell energy is not multiplied by dV while the audit pairing is; eta_shell activation is separately tested."
   },
   "proposed_reference_functional": {
-    "status": "mathematically self-consistent reference candidate; not an external-source replacement",
+    "status": "implemented by the hash-pinned standalone backend; not an external-source repair or solver integration",
     "formula": "F_ref = F_Brazovskii + F_family + F_lock + F_shell + (lambda/4) int rho^2 + (gamma/6) int rho^3 + sum_A [a/2 |J_A|^2 + b Re(conj(J_A).K_A) + c/2 |K_A|^2]",
     "definitions": "J_A=grad m_A; K_A=J_A-(m_A/(rho+1e-12))grad rho; m_A=Psi^dagger T_A Psi",
     "coefficients": "a=cJJ alpha_X^2/(M_X^2+1e-12), b=cJK alpha_X beta_X/(M_X^2+1e-12), c=cKK beta_X^2/(M_X^2+1e-12)",
     "real_gradient_convention": "R_ref is the Torch-autodiff real gradient satisfying DF_ref[Psi](v)=<R_ref[Psi],v>_R; H_ref is a centred derivative of that gradient",
-    "purpose": "provides an explicit all-coupling target for a future production implementation; it does not identify the intended historical source convention"
+    "purpose": "defines the all-coupling functional implemented by the standalone backend; it does not identify or repair the intended historical source convention"
   },
   "test_matrix": {
-    "grids": [4],
+    "grids": [4, 6, 8],
     "fields": ["zero", "homogeneous", "random", "q0-shell", "classII-active"],
     "finite_difference_steps": [0.0001, 1e-05, 1e-06],
     "control": "scalar core only: family, lock, shell, and Class-II coefficients set to zero",
     "activation": "pinned production parameters plus eta_shell=0.07; this is an audit activation, not a new physical parameter claim"
+  },
+  "verified_result": {
+    "verdict": "PRODUCTION-BACKEND-MULTIGRID-PASS",
+    "evidence": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-production-backend-multigrid/result.json",
+    "maxima": {
+      "variational_rel_error": 1.856661591692621e-07,
+      "dr_hessian_rel_error": 6.695217715947473e-09,
+      "symmetry_rel_error": 1.282693395943113e-10,
+      "scalar_reduction_rel_error": 6.218564371786818e-16
+    },
+    "tier_boundary": "T4 strong computational evidence; independent operator reproduction and final publication bundle are not yet recorded"
   }
 }

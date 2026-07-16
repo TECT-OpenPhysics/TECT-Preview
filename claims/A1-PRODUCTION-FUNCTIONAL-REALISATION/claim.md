@@ -1,14 +1,14 @@
 # A1-PRODUCTION-FUNCTIONAL-REALISATION -- full production functional realisation
 
-**Tier**: T3 (TSv2) -- **Lifecycle**: ACTIVE -- **Last review**: 2026-07-17
+**Tier**: T4 (TSv2) -- **Lifecycle**: ACTIVE -- **Last review**: 2026-07-17
 
 ## Statement
 
-This card separates two objects.  The hash-pinned external working branch fails the variational audit: its scalar nonlinear energy is factor-two inconsistent with the residual and its Class-II energy uses `cKK` while residual uses `cJK`.  The manifest also defines an explicit all-coupling reference functional.  That reference closes the three discrete variational identities on zero, homogeneous, random, q0-shell, and Class-II-active fields; it is not an external-source repair claim.
+This card separates two objects.  The hash-pinned external working branch fails the variational audit: its scalar nonlinear energy is factor-two inconsistent with the residual and its Class-II energy uses `cKK` while the residual uses `cJK`.  Separately, a hash-pinned standalone backend implements the manifest-defined all-coupling functional and passes the three discrete variational identities and exact scalar reduction on grids N=4,6,8.  This is strong computational evidence for that standalone implementation, not an external-source repair claim.
 
 ## Scope
 
-N=4 spectral diagnostic grids only.  The source audit uses the external backend and configuration pinned by SHA-256 in [the manifest](production_functional_manifest.json).  The reference closure applies only to the manifest-defined candidate functional.  The canonical pure-Brazovskii scalar-slice T5 remains unchanged.
+Discrete spectral torus grids N=4,6,8; zero, homogeneous, random, q0-shell, and Class-II-active fields; finite-difference steps 1e-4, 1e-5, and 1e-6; pinned parameters plus the manifest-declared shell-bias activation.  The source audit applies only to the separately SHA-256-pinned external working branch.  The T4 closure applies only to the in-repository standalone backend.  The canonical pure-Brazovskii scalar-slice T5 remains unchanged.
 
 ## Dependencies and hypotheses
 
@@ -18,29 +18,30 @@ N=4 spectral diagnostic grids only.  The source audit uses the external backend 
 
 ## Evidence
 
-The source [audit record](notes/a1-production-functional-realisation-260717-v1.0.tex.txt), current [reference-closure record](notes/a1-production-functional-realisation-260717-v1.1.tex.txt), [manifest](production_functional_manifest.json), [independent verifier](../../codes/foundations/a1_production_functional_realisation.py), source [audit JSON](runs/2026-07-17-variational-audit/result.json), and [reference-closure JSON](runs/2026-07-17-reference-functional-closure/result.json).
+The source [audit record](notes/a1-production-functional-realisation-260717-v1.0.tex.txt), reference derivation [record](notes/a1-production-functional-realisation-260717-v1.1.tex.txt), T4 [closure record](notes/a1-production-functional-realisation-260717-v1.2.tex.txt), [manifest](production_functional_manifest.json), [standalone backend](../../codes/foundations/n001_variational_backend.py), [independent verifier](../../codes/foundations/a1_production_backend_verify.py), [multi-grid result](runs/2026-07-17-production-backend-multigrid/result.json), and hash-recorded [technical preflight](runs/promotion-evidence/2026-07-17-local-preflight-v3/promotion-evidence.json).
 
 ## Falsifier
 
-The scaffold fails if source hashes drift, the independent autodiff/finite-difference energy control fails, the known source mismatches are not detected, or any reference functional identity fails.
+This T4 record fails if a pinned hash or version drifts, any required grid or field class is omitted, any listed coupling is inactive, any variational/Hessian/symmetry threshold fails, or the independently defined scalar reduction ceases to agree.
 
 ## Reproduction
 
-`python codes/foundations/a1_production_functional_realisation.py --reference-closure --output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-variational-audit/result.json --reference-output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-reference-functional-closure/result.json`
+`python codes/foundations/a1_production_backend_verify.py --grids 4 6 8 --output claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/runs/2026-07-17-production-backend-multigrid/result.json`
 
-Expected: source mismatch detected and `REFERENCE-CLOSURE-PASS`.  The latter means only the manifest-defined reference functional closes, not the external production backend.
+Expected: `PRODUCTION-BACKEND-MULTIGRID-PASS`, with every assertion marked PASS.  To collect a fresh review package without changing tier: `python codes/foundations/a1_functional_promotion_evidence.py --run-id <id> --reviewer <name> --mode preflight --grids 4 6 8`.
 
 ## Devil's-advocate
 
-1. **"A finite-difference mismatch is numerical noise."** DISMISSED only when independent autodiff agrees with finite differences at several steps and the imported residual still differs.
-2. **"Complex differentiation may hide a factor of two."** DISMISSED only relative to the explicit real pairing; autodiff is converted to that same pairing before comparison.
-3. **"This changes the scalar T5 result."** VALID as a scope risk, with mitigation: the existing T5 card certifies the scalar kernel manifest, not this energy/residual pairing; this card cannot expand or downgrade it.
-4. **"Reference closure repairs production."** UPHELD as an invalid reading: the external source remains hash-pinned and failed; implementing the reference convention is still a separate task.
+1. **"The Class-II cross coupling is omitted or conflated with the K square."** DISMISSED: `cJJ`, `cJK`, and `cKK` enter distinct quadratic coefficients and the verifier requires all couplings to be nonzero.
+2. **"Autodiff makes the checks tautological."** VALID with mitigation: the verifier independently defines energy finite differences, outer residual differences, the real pairing, and the analytic scalar reduction.
+3. **"Three small grids prove the continuum functional."** UPHELD as an invalid reading: this is a discrete spectral implementation result with no grid-convergence or continuum theorem.
+4. **"This silently validates the historical solver."** UPHELD as an invalid reading: the historical source remains hash-pinned and failed; solver integration is separate.
+5. **"The local preflight is an independent T5 reproduction."** UPHELD as an invalid reading: the collector explicitly marks preflight non-certifying.
 
 ## No-overclaim
 
-No external production closure, PDE theorem, BCC selection, Hessian stability, or T5/T6/T7 action is asserted.
+No external-source repair, historical-solver integration, continuum/PDE theorem, minimizer, BCC selection, stability, or T5/T6/T7 action is asserted.
 
 ## Next required action
 
-Implement the manifest-defined reference convention in a separately hash-pinned production backend, then repeat this audit on the full test matrix and larger grids before any scoped T5 review.
+Obtain an operator-named independent reproduction with the evidence collector, review the generated checklist, and only then consider a separately scoped T5 decision and final operator-confirmed bundle.  Backend integration into the historical solver remains a separate claim if pursued.

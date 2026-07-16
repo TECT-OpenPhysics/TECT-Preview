@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close A1 production-functional P1 at scoped T4] - 2026-07-17
+
+
+
 ## [Close P1 reference-functional variational scaffold] - 2026-07-17
 
 Extended the P1 T3 record without changing any prior tier. The hash-pinned external working branch remains variationally non-closed: the source audit still detects the scalar nonlinear factor-two and Class-II cJK-versus-cKK mismatches. A separate manifest-defined reference functional now includes the real-gradient-normalised scalar terms lambda*rho^2/4 and gamma*rho^3/6, plus the symmetric all-coupling Class-II J-K form with cJJ, cJK, and cKK. On N=4 zero, homogeneous, random, q0-shell, and Class-II-active fields at three finite-difference steps, reference closure passed: max DF=<R,v> error 1.12e-7, max DR=H error 8.85e-10, and max real-Hessian symmetry error 2.89e-11. This is a scoped reference-functional result, not a repair of the external production backend.

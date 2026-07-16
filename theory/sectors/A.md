@@ -8,13 +8,13 @@
 
 ## Claims
 
-Tier profile: T6x5 T5x2 T3x1
+Tier profile: T6x5 T5x2 T4x1
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
 | [`A1-KERNEL-CONV`](../../claims/A1-KERNEL-CONV/INDEX.md) | T5 | — | — | Production-kernel convention and G6 recomputation cascade |
 | [`A1-KERNEL-IDENTITY`](../../claims/A1-KERNEL-IDENTITY/INDEX.md) | T6 | A1-KERNEL-CONV | — | Kernel complete-the-square identity (zero-momentum vs shell mass) |
-| [`A1-PRODUCTION-FUNCTIONAL-REALISATION`](../../claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md) | T3 | — | — | Full production functional realisation: variational-consistency scaffold |
+| [`A1-PRODUCTION-FUNCTIONAL-REALISATION`](../../claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md) | T4 | — | — | Full production functional realisation: standalone variational backend |
 | [`A1-PRODUCTION-KERNEL-MANIFEST`](../../claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md) | T5 | — | — | Canonical N-001 production-kernel manifest: scalar-slice consistency gates |
 | [`A1-SCALAR-ANALYTIC-BRANCH`](../../claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md) | T6 | A1-SHELL-POSITIVITY | — | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
