@@ -1210,6 +1210,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a2_full_production_energy_continuation_audit.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `76d08eccb464` |
 | `codes/foundations/a2_full_production_nonlinear_mapping_audit.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `9cb8b3addcac` |
 | `codes/foundations/a2_full_production_smoothing_audit.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `7f3e0436c6ea` |
+| `codes/foundations/a2_full_production_verify.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `4bc68f4411a9` |
 | `codes/foundations/a2_full_production_wellposedness_checks.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `cfb91709f156` |
 | `codes/foundations/a2_wellposedness_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `8839d0f40aed` |
 | `codes/foundations/a3_graphwise_convergence_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `295b72b2ed25` |
@@ -1409,7 +1410,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `133c45576994` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `1fed49f34a61` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `c381f8debbaa` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -1420,7 +1421,6 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
 | `TODO.md` | — | — | — | — | ACTIVE | `bc081eea7587` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
-| `tmpot3q7tni` | — | — | — | — | ACTIVE | `133c45576994` |
 
 ## Other tracked files
 
@@ -1429,7 +1429,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `6796165de63d` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `05da82e706f2` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |

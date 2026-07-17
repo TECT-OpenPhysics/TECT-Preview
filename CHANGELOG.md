@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Add A2 full-production one-command verifier] - 2026-07-17
+
+
+
 ## [Prepare A2 full-production T6 referee package] - 2026-07-17
 
 
