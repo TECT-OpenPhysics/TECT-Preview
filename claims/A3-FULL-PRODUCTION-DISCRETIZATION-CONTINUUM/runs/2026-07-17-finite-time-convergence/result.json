@@ -1,0 +1,157 @@
+{
+  "schema": "tect/a3-full-production-finite-time-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "verdict": "A3-FULL-FINITE-TIME-CONVERGENCE-PASS",
+  "scope": "forced semidiscrete manufactured time-order test plus same-backend unforced cross-grid trajectory self-convergence; CPU complex128",
+  "not_closed_here": [
+    "independent continuum-residual implementation",
+    "Hessian/Ritz convergence",
+    "CPU/GPU and precision cross-check",
+    "uniform continuum error theorem"
+  ],
+  "time_manufactured": {
+    "rows": [
+      {
+        "step": 0.04,
+        "steps": 5,
+        "relative_l2_error": 5.633363671119498e-11
+      },
+      {
+        "step": 0.02,
+        "steps": 10,
+        "relative_l2_error": 3.4821256122858847e-12
+      },
+      {
+        "step": 0.01,
+        "steps": 20,
+        "relative_l2_error": 2.1644237708117687e-13
+      }
+    ],
+    "observed_orders": [
+      4.015956458122533,
+      4.007913350866455
+    ]
+  },
+  "unforced_cross_grid": {
+    "rows": [
+      {
+        "grid": 8,
+        "trajectory_relative_l2_error": 1.306332323104246e-08,
+        "reference_trajectory_relative_l2_error": 1.7141892614429513e-16
+      },
+      {
+        "grid": 12,
+        "trajectory_relative_l2_error": 1.0238533863457545e-12,
+        "reference_trajectory_relative_l2_error": 2.685152815767055e-16
+      },
+      {
+        "grid": 16,
+        "trajectory_relative_l2_error": 1.3117724858997058e-14,
+        "reference_trajectory_relative_l2_error": 2.9819106767481145e-16
+      }
+    ],
+    "observed_orders": [
+      23.316409479312703,
+      15.146457415558869
+    ],
+    "energy_rows": [
+      {
+        "grid": 8,
+        "initial": 252.26296766433958,
+        "final": 250.95401829313732,
+        "maximum_step_increase": -0.1304723404375352,
+        "allowed_slack": 2.522629676643396e-08,
+        "status": "PASS"
+      },
+      {
+        "grid": 12,
+        "initial": 252.26296766429527,
+        "final": 250.95401829309358,
+        "maximum_step_increase": -0.1304723404374215,
+        "allowed_slack": 2.522629676642953e-08,
+        "status": "PASS"
+      },
+      {
+        "grid": 16,
+        "initial": 252.26296766429522,
+        "final": 250.9540182930935,
+        "maximum_step_increase": -0.13047234043762046,
+        "allowed_slack": 2.5226296766429522e-08,
+        "status": "PASS"
+      },
+      {
+        "grid": 20,
+        "initial": 252.26296766429525,
+        "final": 250.9540182930936,
+        "maximum_step_increase": -0.13047234043747835,
+        "allowed_slack": 2.5226296766429526e-08,
+        "status": "PASS"
+      },
+      {
+        "grid": 24,
+        "initial": 252.26296766429522,
+        "final": 250.9540182930935,
+        "maximum_step_increase": -0.1304723404375352,
+        "allowed_slack": 2.5226296766429522e-08,
+        "status": "PASS"
+      }
+    ]
+  },
+  "assertions": [
+    {
+      "name": "backend_hash",
+      "status": "PASS",
+      "detail": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "time_error_monotone",
+      "status": "PASS",
+      "detail": "errors=[5.633363671119498e-11, 3.4821256122858847e-12, 2.1644237708117687e-13]"
+    },
+    {
+      "name": "rk4_time_order",
+      "status": "PASS",
+      "detail": "orders=[4.015956458122533, 4.007913350866455]"
+    },
+    {
+      "name": "final_time_error",
+      "status": "PASS",
+      "detail": "final=2.164424e-13"
+    },
+    {
+      "name": "trajectory_error_monotone",
+      "status": "PASS",
+      "detail": "errors=[1.306332323104246e-08, 1.0238533863457545e-12, 1.3117724858997058e-14]"
+    },
+    {
+      "name": "trajectory_spatial_order",
+      "status": "PASS",
+      "detail": "orders=[23.316409479312703, 15.146457415558869]"
+    },
+    {
+      "name": "final_trajectory_error",
+      "status": "PASS",
+      "detail": "final=1.311772e-14"
+    },
+    {
+      "name": "reference_trajectory_stable",
+      "status": "PASS",
+      "detail": "max=2.981911e-16"
+    },
+    {
+      "name": "unforced_energy_nonincreasing",
+      "status": "PASS",
+      "detail": "rows=[{'grid': 8, 'initial': 252.26296766433958, 'final': 250.95401829313732, 'maximum_step_increase': -0.1304723404375352, 'allowed_slack': 2.522629676643396e-08, 'status': 'PASS'}, {'grid': 12, 'initial': 252.26296766429527, 'final': 250.95401829309358, 'maximum_step_increase': -0.1304723404374215, 'allowed_slack': 2.522629676642953e-08, 'status': 'PASS'}, {'grid': 16, 'initial': 252.26296766429522, 'final': 250.9540182930935, 'maximum_step_increase': -0.13047234043762046, 'allowed_slack': 2.5226296766429522e-08, 'status': 'PASS'}, {'grid': 20, 'initial': 252.26296766429525, 'final': 250.9540182930936, 'maximum_step_increase': -0.13047234043747835, 'allowed_slack': 2.5226296766429526e-08, 'status': 'PASS'}, {'grid': 24, 'initial': 252.26296766429522, 'final': 250.9540182930935, 'maximum_step_increase': -0.1304723404375352, 'allowed_slack': 2.5226296766429522e-08, 'status': 'PASS'}]"
+    },
+    {
+      "name": "time_and_space_errors_separated",
+      "status": "PASS",
+      "detail": "manifest records two distinct experiments"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 10,
+    "total": 10
+  }
+}

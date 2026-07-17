@@ -4,6 +4,32 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-17.
 
+## A3 full-production discretization gate
+
+### **A3-FULL-DISCRETIZATION-CLOSURE**
+
+**Statement:** Connect the hash-pinned full-production Fourier discretization
+to the P2 continuum PDE. Closure requires all of: (1) projected spectral
+Galerkin residual consistency with a stable oversampled continuum reference;
+(2) the discrete real energy-gradient identity; (3) finite-time solution
+convergence with temporal and spatial errors separated; (4) Hessian/Ritz grid
+convergence under explicit residual, compactness, and isolated-cluster gap
+conditions; (5) CPU/GPU and complex64/complex128 cross-checks with unavailable
+hardware reported honestly; and (6) a manufactured solution achieving its
+declared convergence order. Raw N32/N64/N128 solver output is not sufficient.
+
+**Status:** OPEN. Stage 1 is CLOSED@T3-COMPUTABLE-SCAFFOLD on 2026-07-17:
+the spatial manifest distinguishes collocation from exact Galerkin residuals,
+and the full-production manufactured-field self-convergence audit passes 13/13
+on N=8,12,16 against same-backend N=24,32 oversampled references. Residual errors decrease from 5.3301e-6 to
+6.6679e-12; reference uncertainty is at most 2.3351e-14; the discrete
+energy-gradient identity is within 1.0211e-8. An independent continuum
+residual implementation remains open. Stage 2 is CLOSED@T3-EXECUTED: the
+forced manufactured RK4 audit gives orders 4.016 and 4.008, while unforced
+cross-grid trajectory errors decrease 1.3063e-8 -> 1.0239e-12 -> 1.3118e-14
+and energy is nonincreasing on N=8,12,16,20,24. Hessian/Ritz,
+hardware/precision, integrated proof, and independent reproduction remain open.
+
 ## A2 full-production PDE audit gates
 
 ### **A2-FULL-NONLINEAR-MAPPING-AUDIT**

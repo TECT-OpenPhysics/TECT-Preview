@@ -1,0 +1,167 @@
+% =============================================================================
+% Title: Full-production spectral discretization to continuum PDE: P3 stages 1-2
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.0 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T3 computable scaffold; spatial and finite-time execution stages pass
+% =============================================================================
+
+\section*{1. Purpose and scope}
+The P1 backend supplies a discrete variational functional and its real
+gradient. P2 proves well-posedness of the corresponding continuum
+full-production gradient flow on a fixed three-torus. Neither result by itself
+proves that an N32, N64, or N128 nonlinear solver trajectory approximates that
+continuum flow. P3 is the separate discretization-to-continuum package.
+
+This v1.0 note freezes the numerical objects and closes only the first spatial
+baseline. Finite-time flow convergence, Hessian/Ritz convergence, and
+hardware/precision agreement remain open.
+
+\section{Continuum and discrete objects}
+Let $R(\Psi)=\nabla_{\mathbb R}F(\Psi)$ denote the real-$L^2$ gradient of the
+P1 reference functional, in the eta-shell-zero scope of P2. Let $S_N$ be the
+three-component trigonometric polynomial space represented by the cubic FFT
+grid and let $P_N$ be the real-$L^2$ Fourier projector.
+
+The exact spectral Galerkin vector field is
+\[
+ R_N^G(\Psi_N)=P_NR(\Psi_N).
+\]
+The hash-pinned backend instead differentiates the periodic collocation energy;
+call the result $R_N^C$. Spectral differentiation is exact on $S_N$, but
+pointwise nonlinear products need not remain in $S_N$. Therefore
+$R_N^C=R_N^G$ is not assumed. The measured aliasing/consistency quantity is
+\[
+ e_N^R=\frac{\lVert R_N^C-P_NR_{N_{\rm ref}}^C\rVert_{L^2}}
+ {\max(\lVert P_NR_{N_{\rm ref}}^C\rVert_{L^2},10^{-30})}.
+\]
+Two same-backend reference grids are used, and their projected difference is
+reported separately. This prevents a single under-resolved reference from
+defining its own apparent convergence. It does not provide an independent
+implementation of the continuum Euler--Lagrange residual; that remains a
+load-bearing closure item.
+
+For the collocation functional $F_N^C$, the discrete real pairing is
+\[
+ \langle u,v\rangle_{N,\mathbb R}
+ =\Delta V\,\mathrm{Re}\sum_{a,x}\overline{u_a(x)}v_a(x).
+\]
+The energy-gradient audit verifies a centred finite-difference form of
+$DF_N^C(\Psi_N)v=\langle R_N^C(\Psi_N),v\rangle_{N,\mathbb R}$.
+
+\section{Manufactured spatial field}
+Each complex component is a nonzero constant plus several low Fourier modes
+with distinct phases and directions. The construction keeps the density far
+above the positive rho floor and activates every pinned Class-II coefficient.
+It is analytic, so spectral convergence is expected rather than a fixed
+low-order finite-difference rate. The acceptance criterion asks for at least
+fourth algebraic order over the declared grid sequence; the measured rate is
+also retained rather than replaced by the threshold.
+
+\section{Executed result}
+The grids are $N=8,12,16$ and the same-backend oversampling references are
+$N=24,32$. The result is:
+\[
+\begin{array}{c|c|c|c|c}
+N&e_N^R&e_N^{\rm ref}&e_N^F&e_N^{DF}\\\hline
+8&5.3301196\,10^{-6}&5.5885294\,10^{-16}&1.7564784\,10^{-13}&1.0210053\,10^{-8}\\
+12&4.2482236\,10^{-10}&3.6469415\,10^{-15}&0&3.9197285\,10^{-9}\\
+16&6.6678548\,10^{-12}&2.3350092\,10^{-14}&2.2533398\,10^{-16}&3.9197706\,10^{-9}
+\end{array}
+\]
+The two observed residual orders are 23.2750 and 14.4408. All 13 executable
+assertions pass. Energy monotonicity is interpreted above the declared
+$10^{-14}$ relative roundoff floor; values below that floor are machine-level
+agreement and are not ordered artificially.
+
+\section{Stage 2 finite-time result}
+Temporal and spatial errors are separated. On N8, the manufactured trajectory
+uses the semidiscrete forcing
+$S_N(t)=\partial_t\Psi_N^\star+R_N^C(\Psi_N^\star)$, so the experiment measures
+the classical RK4 time error rather than spatial aliasing. At final time 0.2,
+steps $0.04,0.02,0.01$ give relative errors
+$5.6334\,10^{-11}$, $3.4821\,10^{-12}$, and $2.1644\,10^{-13}$, hence observed
+orders 4.0160 and 4.0079. These errors are in the truncation regime rather than
+at machine zero.
+
+Separately, the unforced full-production gradient flow is integrated to time
+0.005 with step $5\,10^{-4}$. N8, N12, and N16 are compared with projected N20
+and N24 trajectories. Relative errors against N24 are $1.3063\,10^{-8}$,
+$1.0239\,10^{-12}$, and $1.3118\,10^{-14}$, with observed rates 23.3164 and
+15.1465. The energy decreases at every recorded step on all five grids. This
+is same-backend trajectory self-convergence, not yet an independent continuum
+flow implementation.
+
+\section{What remains for closure}
+The following are load-bearing and are not inferred from the spatial table:
+\begin{enumerate}
+\item a forced manufactured finite-time solution with separated temporal and
+spatial errors, plus an unforced cross-grid trajectory check;
+\item a matrix-free real Hessian audit on nested Fourier spaces, with Ritz
+residuals, a spectral gap, and an isolated-cluster statement;
+\item CPU complex128 as the reference, CPU complex64 comparison, and CUDA
+complex64/complex128 comparison when the installed device supports them;
+\item a one-command aggregate, immutable evidence hashes, independent operator
+reproduction, and an integrated convergence proof.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+First, Fourier differentiation alone does not remove nonlinear aliasing; this
+objection is valid and is mitigated by keeping $R_N^C$ and $R_N^G$ distinct.
+Second, one smooth manufactured field does not give a uniform theorem for all
+P2 solutions; this objection is upheld, and the claim remains T3. Third, energy
+convergence does not imply eigenvalue convergence; the isolated Ritz-cluster
+gate remains open. Fourth, a missing CUDA device cannot be reported as a
+cross-device pass; the hardware matrix must distinguish PASS, FAIL, and
+UNAVAILABLE.
+
+\section{Mandatory adversarial code review}
+\textbf{Sign.} Fourier derivatives use $+ik_j$ and the Laplacian uses
+$-|k|^2$; the spatial audit does not change the canonical backend signs.
+\textbf{Factor and convention.} FFT coefficients are divided by the grid-point
+count, inverse reconstruction multiplies by the target count, and the real
+pairing includes the cell volume. Centered crops use same-parity grids, so no
+Nyquist half-weight is silently introduced. \textbf{Units.} All values use the
+pinned dimensionless P1 normalization and the fixed length-16 torus; the table
+does not claim a dimensional laboratory error. \textbf{Convergence.} Two
+reference grids and three target grids are retained, with the reference
+projection uncertainty reported independently of the measured target error.
+The time-order rerun was deliberately moved away from machine precision after
+the first otherwise-passing run exposed roundoff-sensitive terminal errors.
+\textbf{Hardcode masking.} No measured residual, rate, or energy value is an
+input to the executable. Manufactured Fourier coefficients are declared test
+inputs; acceptance thresholds live in the manifest. \textbf{Limit cases.} A
+nonzero-density analytic field is intentional for this baseline and does not
+test removal of the rho floor, rough H2 data at time zero, or a Nyquist-loaded
+field. Those cases cannot be inferred from this table. External review of the
+Fourier normalization, same-backend-reference limitation, and later
+manufactured forcing is explicitly invited.
+
+\section{Reproduction}
+Run \texttt{python codes/foundations/a3\_full\_production\_spatial\_consistency.py}.
+The expected verdict is \texttt{13/13 PASS} and
+\texttt{A3-FULL-SPATIAL-CONSISTENCY-PASS}.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Stages 1-2 define the Fourier consistency metrics and
+                         pass spatial and finite-time self-convergence audits.
+Scope:                   Fixed T3, pinned full-production parameters and floors,
+                         eta_shell=0, CPU complex128, analytic manufactured data.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION;
+                         A2-FULL-PRODUCTION-WELLPOSED;
+                         A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL; T3 scaffold.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_spatial_consistency.py
+                         python codes/foundations/
+                         a3_full_production_finite_time_convergence.py
+Expected output:         13/13 spatial PASS and 10/10 finite-time PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE.
+Tier before / after:     new / T3 COMPUTABLE-SCAFFOLD.
+No-overclaim statement:  Same-backend self-convergence only; not an independent
+                         continuum residual, Hessian/Ritz, GPU/precision,
+                         Sector-B continuum certificate, T5, T6, or T7.
+Next required action:    Hessian/Ritz isolated-cluster audit, then hardware and
+                         precision matrix and independent continuum residual.
+\end{verbatim}

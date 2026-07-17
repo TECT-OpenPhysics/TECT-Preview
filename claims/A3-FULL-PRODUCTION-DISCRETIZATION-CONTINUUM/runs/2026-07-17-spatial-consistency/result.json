@@ -1,0 +1,196 @@
+{
+  "schema": "tect/a3-full-production-spatial-consistency-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "verdict": "A3-FULL-SPATIAL-CONSISTENCY-PASS",
+  "scope": "analytic manufactured field; same-backend oversampled projected reference; pinned full-production parameters; eta_shell=0; CPU complex128",
+  "not_closed_here": [
+    "independent continuum-residual implementation",
+    "finite-time convergence",
+    "Hessian/Ritz convergence",
+    "CPU/GPU and complex precision cross-check",
+    "full P3 tier review"
+  ],
+  "authority_hashes": {
+    "p1_backend": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "p1_manifest": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "p2_manifest": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+  },
+  "grids": [
+    8,
+    12,
+    16
+  ],
+  "reference_grids": [
+    24,
+    32
+  ],
+  "rows": [
+    {
+      "grid": 8,
+      "collocation_to_projected_oversampled_reference_relative_l2": 5.330119610232513e-06,
+      "reference_projection_relative_l2": 5.588529377067335e-16,
+      "energy_relative_error_to_finest_reference": 1.756478384927496e-13,
+      "gradient_identity_best_relative_error": 1.0210052991966446e-08,
+      "gradient_identity_steps": [
+        {
+          "step": 0.0001,
+          "energy_derivative": 0.043378925482784325,
+          "gradient_pairing": 0.04337892592568546,
+          "relative_error": 1.0210052991966446e-08
+        },
+        {
+          "step": 1e-05,
+          "energy_derivative": 0.043378928182846714,
+          "gradient_pairing": 0.04337892592568546,
+          "relative_error": 5.203358752893757e-08
+        },
+        {
+          "step": 1e-06,
+          "energy_derivative": 0.04337891823524842,
+          "gradient_pairing": 0.04337892592568546,
+          "relative_error": 1.7728509577124427e-07
+        }
+      ],
+      "energy": 252.26296766433958,
+      "residual_l2": 16.209026318889933
+    },
+    {
+      "grid": 12,
+      "collocation_to_projected_oversampled_reference_relative_l2": 4.2482235731956223e-10,
+      "reference_projection_relative_l2": 3.6469414569202616e-15,
+      "energy_relative_error_to_finest_reference": 0.0,
+      "gradient_identity_best_relative_error": 3.9197284975877776e-09,
+      "gradient_identity_steps": [
+        {
+          "step": 0.0001,
+          "energy_derivative": 0.04337892576700142,
+          "gradient_pairing": 0.04337892593703503,
+          "relative_error": 3.9197284975877776e-09
+        },
+        {
+          "step": 1e-05,
+          "energy_derivative": 0.04337892249850483,
+          "gradient_pairing": 0.04337892593703503,
+          "relative_error": 7.926729695005735e-08
+        },
+        {
+          "step": 1e-06,
+          "energy_derivative": 0.043378989289521996,
+          "gradient_pairing": 0.04337892593703503,
+          "relative_error": 1.460441748467969e-06
+        }
+      ],
+      "energy": 252.26296766429527,
+      "residual_l2": 16.20902631888595
+    },
+    {
+      "grid": 16,
+      "collocation_to_projected_oversampled_reference_relative_l2": 6.667854783688148e-12,
+      "reference_projection_relative_l2": 2.3350092416561837e-14,
+      "energy_relative_error_to_finest_reference": 2.253339813890309e-16,
+      "gradient_identity_best_relative_error": 3.919770567073135e-09,
+      "gradient_identity_steps": [
+        {
+          "step": 0.0001,
+          "energy_derivative": 0.04337892576700142,
+          "gradient_pairing": 0.04337892593703686,
+          "relative_error": 3.919770567073135e-09
+        },
+        {
+          "step": 1e-05,
+          "energy_derivative": 0.04337892249850483,
+          "gradient_pairing": 0.04337892593703686,
+          "relative_error": 7.926733901953953e-08
+        },
+        {
+          "step": 1e-06,
+          "energy_derivative": 0.04337891823524842,
+          "gradient_pairing": 0.04337892593703686,
+          "relative_error": 1.775467757628487e-07
+        }
+      ],
+      "energy": 252.26296766429522,
+      "residual_l2": 16.209026318885943
+    }
+  ],
+  "residual_observed_orders": [
+    23.275031437598138,
+    14.44084741465372
+  ],
+  "energy_observed_orders": [
+    null,
+    null
+  ],
+  "assertions": [
+    {
+      "name": "p1_backend_hash",
+      "status": "PASS",
+      "detail": "actual=e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc; expected=e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "p1_manifest_hash",
+      "status": "PASS",
+      "detail": "actual=88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565; expected=88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "p2_manifest_hash",
+      "status": "PASS",
+      "detail": "actual=ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682; expected=ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+    },
+    {
+      "name": "all_classii_channels_active",
+      "status": "PASS",
+      "detail": "all pinned Class-II coefficients are nonzero"
+    },
+    {
+      "name": "positive_manufactured_density",
+      "status": "PASS",
+      "detail": "manufactured density stays far above the rho floor"
+    },
+    {
+      "name": "reference_projection_stable",
+      "status": "PASS",
+      "detail": "max=2.335009e-14"
+    },
+    {
+      "name": "residual_error_monotone",
+      "status": "PASS",
+      "detail": "errors=[5.330119610232513e-06, 4.2482235731956223e-10, 6.667854783688148e-12]"
+    },
+    {
+      "name": "energy_error_monotone_above_roundoff",
+      "status": "PASS",
+      "detail": "errors=[1.756478384927496e-13, 0.0, 2.253339813890309e-16]; floor=1e-14"
+    },
+    {
+      "name": "final_residual_error",
+      "status": "PASS",
+      "detail": "final=6.667855e-12"
+    },
+    {
+      "name": "final_energy_error",
+      "status": "PASS",
+      "detail": "final=2.253340e-16"
+    },
+    {
+      "name": "gradient_identity",
+      "status": "PASS",
+      "detail": "max=1.021005e-08"
+    },
+    {
+      "name": "observed_spatial_order",
+      "status": "PASS",
+      "detail": "orders=[23.275031437598138, 14.44084741465372]"
+    },
+    {
+      "name": "spectral_not_exact_galerkin_label",
+      "status": "PASS",
+      "detail": "collocation and Galerkin residuals remain distinct"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 13,
+    "total": 13
+  }
+}

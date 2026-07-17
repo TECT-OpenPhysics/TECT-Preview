@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Close P3 finite-time manufactured and cross-grid execution stage] - 2026-07-17
+
+
+
+## [Register P3 full-production discretization scaffold and close spatial baseline] - 2026-07-17
+
+
+
 ## [Promote A2 full-production well-posedness to scoped T6] - 2026-07-17
 
 

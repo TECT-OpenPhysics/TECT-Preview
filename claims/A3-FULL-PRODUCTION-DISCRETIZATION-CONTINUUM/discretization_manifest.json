@@ -1,0 +1,112 @@
+{
+  "schema": "tect/a3-full-production-discretization-continuum/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "frozen_on": "2026-07-17",
+  "status": "T3 COMPUTABLE-SCAFFOLD; stage-1 spatial and stage-2 finite-time audits PASS",
+  "authority": {
+    "p1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "version": "1.0.0"
+    },
+    "p1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "p2_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+      "sha256": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+    },
+    "spatial_audit": {
+      "path": "codes/foundations/a3_full_production_spatial_consistency.py",
+      "sha256": "560cc462c754d8d4fdf3c8c0d82beec891def0d50fbc2ca78b942cd43c13a44b",
+      "version": "1.0.0"
+    },
+    "finite_time_audit": {
+      "path": "codes/foundations/a3_full_production_finite_time_convergence.py",
+      "sha256": "899860abf27aa5d89292bc64a06e6cc1440d69f4a728bd8a3c8fd06cfcee37aa",
+      "version": "1.0.0"
+    }
+  },
+  "continuum_problem": {
+    "domain": "fixed T^3 with periods Lx=Ly=Lz=16",
+    "field": "Psi in C^3, treated as six real components",
+    "flow": "partial_t Psi = -R[Psi], where R is the real-L2 gradient of the P1 reference functional",
+    "regularity_input": "P2 gives a unique global H2 solution and C-infinity smoothing for every t>0",
+    "scope": "pinned production parameters, positive rho and Class-II mass regularisers, eta_shell=0"
+  },
+  "spatial_discretization": {
+    "space": "S_N = three-component trigonometric polynomials on the fftfreq cube",
+    "projector": "P_N is the real-L2 Fourier projector onto S_N",
+    "derivatives": "Fourier multipliers ik_j and -|k|^2",
+    "quadrature": "uniform periodic trapezoidal rule",
+    "galerkin_residual": "R_N^G(Psi_N)=P_N R(Psi_N)",
+    "collocation_residual": "R_N^C is the hash-pinned P1 backend gradient of the collocation energy",
+    "dealiasing_rule": "Stage 1 uses the same backend at higher resolution followed by Fourier projection as a numerical proxy for R_N^G; an oversampling-reference stability error must be reported. Independent continuum-residual evaluation remains required for closure.",
+    "honesty_boundary": "R_N^C is not called exact Galerkin. Its difference from R_N^G is an aliasing error that must converge to zero."
+  },
+  "norms": {
+    "field_l2": "||u||_L2^2 = dV sum |u|^2",
+    "residual_relative": "||R_N^C-P_N R_ref^C||_L2 / max(||P_N R_ref^C||_L2,1e-30) for the stage-1 same-backend oversampled reference",
+    "energy_relative": "|F_N-F_ref|/max(|F_ref|,1e-30)",
+    "ritz": "real-L2 Rayleigh-Ritz values on a declared projected subspace"
+  },
+  "required_gates": [
+    "spectral Galerkin residual versus continuum residual",
+    "energy versus discrete real gradient",
+    "finite-time solution convergence",
+    "Hessian/Ritz grid convergence under an isolated-cluster condition",
+    "CPU/GPU and complex64/complex128 cross-check",
+    "manufactured-solution observed convergence order"
+  ],
+  "stage1": {
+    "grids": [8, 12, 16],
+    "reference_grids": [24, 32],
+    "finite_difference_steps": [0.0001, 1e-05, 1e-06],
+    "manufactured_field": "analytic, nonzero-density, three-component complex trigonometric field with all Class-II channels active",
+    "acceptance": {
+      "source_hashes_match": true,
+      "reference_projection_relative_error_max": 1e-08,
+      "final_collocation_to_projected_reference_relative_error_max": 1e-06,
+      "final_energy_relative_error_max": 1e-09,
+      "energy_roundoff_floor": 1e-14,
+      "gradient_identity_relative_error_max": 1e-06,
+      "minimum_observed_spatial_order": 4.0,
+      "require_monotone_spatial_errors": true
+    }
+  },
+  "stage2": {
+    "time_manufactured": {
+      "grid": 8,
+      "final_time": 0.2,
+      "time_steps": [0.04, 0.02, 0.01],
+      "integrator": "classical explicit RK4",
+      "forcing": "S_N(t)=partial_t Psi_star_N(t)+R_N^C(Psi_star_N(t)); this isolates temporal order for the semidiscrete ODE"
+    },
+    "unforced_cross_grid": {
+      "grids": [8, 12, 16],
+      "reference_grids": [20, 24],
+      "final_time": 0.005,
+      "time_step": 0.0005,
+      "integrator": "classical explicit RK4",
+      "initial_data": "the stage-1 analytic manufactured spatial field",
+      "comparison": "project each reference trajectory to the target grid; report reference-grid uncertainty separately"
+    },
+    "acceptance": {
+      "minimum_time_order": 3.5,
+      "final_time_relative_error_max": 1e-08,
+      "minimum_spatial_order": 4.0,
+      "final_trajectory_relative_error_max": 1e-06,
+      "reference_trajectory_relative_error_max": 1e-08,
+      "energy_relative_slack": 1e-10,
+      "require_monotone_errors": true
+    }
+  },
+  "later_stages": {
+    "finite_time": "CLOSED@T3-EXECUTED: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
+    "hessian_ritz": "matrix-free real Hessian on nested Fourier subspaces; convergence claimed only for an isolated eigenvalue cluster with residual and gap checks",
+    "hardware_precision": "same frozen cases on CPU complex128, CPU complex64, and CUDA complex64/complex128 when supported; absence of CUDA is reported, not silently passed",
+    "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
+  },
+  "tier_boundary": "T3 until all six required gates are closed. N32/N64/N128 solver output alone is not discretization evidence."
+}
