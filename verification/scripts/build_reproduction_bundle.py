@@ -25,7 +25,7 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.9.3"
+__version__ = "1.9.4"
 __first_issued__ = "2026-06-10"
 __version_issued__ = "2026-07-17"
 
@@ -39,7 +39,7 @@ SEARCH = [REPO/"codes"/"vacuum", REPO/"archive"/"legacy"/"scripts",
 STDLIB = {"os","sys","math","json","re","collections","pathlib","itertools","functools",
           "time","tempfile","argparse","datetime","typing","__future__","hashlib","platform",
           "shutil","subprocess","ast","random","copy","warnings","importlib","dataclasses",
-          "traceback"}
+          "traceback","decimal"}
 OPTIONAL_ABSENT = {"tect_newton_krylov", "real_backend_pt_bcc_mixed_v3",
                    "bz_preconditioner", "tools"}
 
