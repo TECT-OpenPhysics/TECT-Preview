@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T6 CONDITIONAL-THEOREM RE-ENACTED AFTER ADVERSARIAL REPAIR: separate exact-Galerkin energy ball, common-ball evolution Lipschitz bound, directed rounding, full-chain independent audit, and replacement PUBLISHED bundle are closed",
+  "status": "T6 REPAIR CANDIDATE: adversarially identified Galerkin-ball and enclosure defects are being corrected; enactment requires the v1.1 primary/full-chain-independent audits and replacement PUBLISHED bundle",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -79,12 +79,12 @@
     }
   },
   "published_bundle": {
-    "path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-Repair-260717",
+    "path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717",
     "grade": "PUBLISHED",
-    "repo_commit": "d4c7b3149fe56293ab2c88464c931d64c2e614e3",
+    "repo_commit": "a88f2aa87f23928b06bdfe93c1638fce8d037dcf",
     "files": 42,
     "entry_scripts": 9,
-    "bundle_digest": "6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41"
+    "bundle_digest": "6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910"
   },
   "continuum_problem": {
     "domain": "fixed T^3 with periods Lx=Ly=Lz=16",
@@ -279,7 +279,7 @@
     }
   },
   "stage9_adversarial_repair": {
-    "trigger": "Post-promotion adversarial review found that v1.0 used the continuum M2 ball for the restarted exact-Galerkin trajectory, selected displayed upper bounds were rounded inward, the large-log Gronwall enclosure used a direction-sensitive subtraction, and the former independent audit did not reconstruct the load-bearing chain.",
+    "trigger": "Post-promotion adversarial review found that v1.0 used the continuum M2 ball for the restarted exact-Galerkin trajectory, and that selected displayed upper bounds were rounded inward.",
     "required_corrections": [
       "derive F(P_N u(tau)) <= E_upper(M2(R)) without assuming projection-energy monotonicity",
       "derive the uniform Galerkin H2 envelope from E_upper(M2(R)) and coercivity",
@@ -292,12 +292,7 @@
       "primary_assertions_min": 20,
       "independent_full_chain_assertions_min": 18,
       "require_projection_energy_monotonicity": false,
-      "require_replacement_published_bundle": true,
-      "observed_primary_assertions": 21,
-      "observed_independent_assertions": 24,
-      "observed_integrated_assertions": 124,
-      "replacement_bundle_digest": "6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41",
-      "status": "PASS"
+      "require_replacement_published_bundle": true
     }
   },
   "later_stages": {
@@ -307,8 +302,8 @@
     "independent_continuum_residual": "CLOSED@T4-EVIDENCE-SCOPE for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; Stage 8 separately supplies the uniform analytic bound in its declared solution-ball scope",
     "solution_ball_bound": "CLOSED@T6-CONDITIONAL-THEOREM-SCOPE: explicit positive-time B6 and C(R,tau,T) enclosures give a uniform N^-2 residual/alias bound for R=0.5,1,2, tau=0.02, and T=0.2",
     "energy_ball_envelope": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS gives explicit all-time M2(R) enclosures for declared initial H2 radii; this is only the input to an explicit positive-time smoothing majorant",
-    "quantitative_majorant": "CLOSED@T6-CONDITIONAL-THEOREM-SCOPE AFTER ADVERSARIAL REPAIR: primary 21/21 and full-chain independent 24/24 audits give explicit outward-rounded B6, residual N^-2, a separate exact-Galerkin energy ball, and positive-time restarted exact-Galerkin N^-4 constants; practical sharpness remains open",
-    "integrated_release": "CLOSED: 124/124 one-command verifier PASS; corrected v2.2 referee note and replacement 42-file PUBLISHED bundle with nine entry scripts ALL PASS"
+    "quantitative_majorant": "CLOSED@T6-CONDITIONAL-THEOREM-SCOPE: primary 15/15 and independent 10/10 audits give explicit conservative B6, residual N^-2, and positive-time restarted exact-Galerkin N^-4 constants; practical sharpness remains open",
+    "integrated_release": "CLOSED: 104/104 one-command verifier PASS; immutable JSON evidence, T6 referee note, and PUBLISHED bundle with nine entry scripts ALL PASS"
   },
-  "tier_boundary": "T6 CONDITIONAL-THEOREM RE-ENACTED: the corrected full positive-time theorem, named canonical-functional hypothesis, separate exact-Galerkin energy ball, explicit B6/C and exact-Galerkin N^-4 bound, full-chain independent audit, directed rounding, and replacement PUBLISHED reproduction bundle are closed. The v2.1 note and original bundle are superseded. T7 is prohibited by the named hypothesis and lack of external public reproduction. N32/N64/N128 solver output is not covered."
+  "tier_boundary": "T6 CONDITIONAL-THEOREM: the full positive-time theorem, named canonical-functional hypothesis, explicit B6/C and exact-Galerkin N^-4 bound, independent audit, quantitative sanity checks, and PUBLISHED reproduction bundle are closed. T7 is prohibited by the named hypothesis and lack of external public reproduction. N32/N64/N128 solver output is not covered."
 }

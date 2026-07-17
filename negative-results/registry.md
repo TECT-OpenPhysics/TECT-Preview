@@ -19,6 +19,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [F-2026-06-10-res5-projection-route](#f-2026-06-10-res5-projection-route) | RES-5 endpoint closure via the pattern projection $\chi_{\rm proj}\le0.82$ (B1) | the screened response at the BCC $\{110\}$ modulation transfers gives … |
 
 | [R-2026-07-16-N001-BCC-SEED-COLLAPSE](#r-2026-07-16-n001-bcc-seed-collapse) | N-001 q1a BCC-seed sweep | stored fields do not retain q0-shell BCC modulation |
+| [AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND](#audit-2026-07-17-a3-galerkin-ball-underbound) | A3 full-production discretization T6 v2.1 | continuum H2 ball reused for exact-Galerkin trajectory without proof |
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention
@@ -143,6 +144,15 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 **Evidence:** Math194 re-run (BCC rank 9 of 10; lamellar rank 1); Math400 (T0 binding: at $\mu^2=+0.005$ all lattices collapse to the disordered $F=0$ state, the SMA "BCC minimum" is a saddle; Math383 $K_4/K_6$ table refuted). archive/legacy/notes/Math194, archive/legacy/notes/Math383.
 
 **Consequence:** `B3-BCC-STRUCT` RETIRED/REFUTED (T0). The original "BCC energy condensate structure is selected" claim is withdrawn. The operator (2026-06-23) rejected the reframe of B3 onto B1: B1's $\Delta F_{\rm enum}[\mathcal R]>0$ is only a RELATIVE ranking within the tested ordered-reading ensemble $\mathcal E_{\rm tested}$; it does NOT imply $F[\mathcal R_H]<F[0]$ nor $H_{\mathcal R_H}\succeq0$ under unrestricted variations, and must not be conflated with Math400's disordered-collapse/saddle result. Only the restricted ranking projection survives, carried as the separate B1-dependent card `B3-RH-TESTED-STRUCTURE-RANKING` (T4, estimator grade). Physical BCC condensate existence/stability/global selection is NOT established; re-establishing it requires certifying $F[\Psi_{\min}]<F[0]$, $\lambda_{\min}^\perp\ge0$ under symmetry projection, and $N\to\infty$ on the canonical PDE background.
+
+<a id="audit-2026-07-17-a3-galerkin-ball-underbound"></a>
+### AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND -- A3 v2.1 exact-Galerkin evolution underbound
+
+**Failure mode:** The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_Nu)\leq F(u)$. The former independent 10/10 audit did not reconstruct this trajectory ball or the downstream Lipschitz/Gronwall chain; selected displayed upper bounds were also rounded inward.
+
+**Evidence:** Adversarial comparison of the v1.0 quantitative-majorant implementation and v2.1 referee note; repaired primary audit 21/21; non-importing full-chain audit 24/24; integrated verifier 124/124; corrected referee note v2.2.
+
+**Consequence:** The v2.1 note and original PUBLISHED bundle are superseded, not deleted. T6 was treated as challenged until the repair derived $F(P_Nu(\tau))\leq E_+(M_2)$, a separate uniform Galerkin $H^2$ envelope, common-ball evolution constants, directed rounding, and a subtraction-free conservative logarithmic Gronwall enclosure. T6 is re-enacted only by replacement bundle `A3-Full-Production-Discretization-T6-Repair-260717`, digest `6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41`.
 
 ## Process-grade negative results (carried as lessons, enforced in governance)
 

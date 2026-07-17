@@ -1,0 +1,173 @@
+{
+  "schema": "tect/a2-full-production-wellposed/2.0",
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "frozen_on": "2026-07-17",
+  "status": "T6 CONDITIONAL-THEOREM; operator-confirmed, PUBLISHED bundle complete, all five P2 stages closed",
+  "authority": {
+    "p1_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "canonical_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "version": "1.0.0"
+    },
+    "coercivity_audit": {
+      "path": "codes/foundations/a2_full_production_wellposedness_checks.py",
+      "sha256": "cfb91709f1568daddb20e5080a0edcb0d74394228359b61e7f14570bb1ee2457",
+      "version": "1.0.0"
+    },
+    "nonlinear_mapping_audit": {
+      "path": "codes/foundations/a2_full_production_nonlinear_mapping_audit.py",
+      "sha256": "9cb8b3addcac3da8d7c6e5862379b8235cb463301194e624297134e256f463a9",
+      "version": "1.0.0"
+    },
+    "energy_continuation_audit": {
+      "path": "codes/foundations/a2_full_production_energy_continuation_audit.py",
+      "sha256": "76d08eccb464060639e61d0603d7623482830fc31fc3027f01432b7d9a75a7fc",
+      "version": "1.0.0"
+    },
+    "smoothing_audit": {
+      "path": "codes/foundations/a2_full_production_smoothing_audit.py",
+      "sha256": "7f3e0436c6ea5f2aacf4397227c73304d6674b52b5de561eac88195edf0b0c62",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a2_full_production_verify.py",
+      "sha256": "4bc68f4411a9babee02abdadde36dbff798e60cf75c709d28d53cf96f05551a9",
+      "version": "1.0.0",
+      "expected": "61/61 and A2-FULL-PRODUCTION-VERIFY-PASS"
+    },
+    "audit_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json",
+      "sha256": "b9df1470a98fa8f6293474c775acadf74b04f8359fe5c8cf5ee523a8bebcedea",
+      "verdict": "A2-FULL-COERCIVITY-BASELINE-PASS"
+    },
+    "nonlinear_mapping_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json",
+      "sha256": "0e27357fe044601859747414d0ed71619f30ac8e58d8a8d184a676de02484f15",
+      "verdict": "A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS"
+    },
+    "energy_continuation_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json",
+      "sha256": "56b563d1d4f5a3f1566f8e9d5c268b108c08506c6dada151bea9879bf0bd2dca",
+      "verdict": "A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS"
+    },
+    "smoothing_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-smoothing-audit/result.json",
+      "sha256": "1b845e1bd4ee6912d6fdf34f7215ce5ea1ee7ef644e19cde9b38c7dbf975aadd",
+      "verdict": "A2-FULL-SMOOTHING-AUDIT-PASS"
+    },
+    "published_t6_bundle": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717",
+      "repo_commit": "c2c5a97e21ebc1f9368c1f9e5e126eb394fe47be",
+      "bundle_digest": "f07a39627a2eccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb",
+      "files": 22,
+      "entry_scripts": 5,
+      "verdict": "ALL-PASS"
+    }
+  },
+  "canonical_variational_subset": {
+    "domain": "fixed T^3 with periods Lx=Ly=Lz=16",
+    "field": "Psi in H^2(T^3;C^3), treated as six real components",
+    "pairing": "<u,v>_R = Re integral_T3 u^dagger v",
+    "flow": "partial_t Psi = -grad_R F_ref[Psi]",
+    "linear_symbol": "r + Z|k|^2 + Y|k|^4, plus Hermitian family and lock matrices",
+    "local_potential": "lambda rho^2/4 + gamma rho^3/6, rho=Psi^dagger Psi",
+    "classii": "sum_A [a|J_A|^2/2 + b Re(conj(J_A).K_A) + c|K_A|^2/2]",
+    "definitions": "m_A=Psi^dagger T_A Psi; J_A=grad m_A; K_A=J_A-[m_A/(rho+eps_rho)]grad rho",
+    "regularisers": {
+      "eps_rho": 1e-12,
+      "eps_mass": 1e-12
+    },
+    "shell_bias": {
+      "eta_shell": 0.0,
+      "rule": "Only the actual zero production value is included. A nonzero continuum term requires a separate normalisation and convergence claim."
+    }
+  },
+  "production_conditions": {
+    "linear": {
+      "Y": 1.0,
+      "Z": -0.9252754126,
+      "r": 0.4740336473,
+      "q_shell": 0.6801747615870498,
+      "shell_mass": 0.260000000009475,
+      "h2_coercivity_constant": 0.2048572626782363,
+      "family_mass_eigenvalues": [0.0, 0.03, 0.07],
+      "k_lock": 0.15
+    },
+    "classii_coefficient_matrix": {
+      "matrix": [
+        [0.004499999999998875, 0.0018749999999995311],
+        [0.0018749999999995311, 0.002343749999999414]
+      ],
+      "determinant": 7.031249999996483e-06,
+      "eigenvalues": [0.001259011500926061, 0.005584738499072228],
+      "condition": "a>0, c>0, ac-b^2>0"
+    },
+    "potential": {
+      "lambda": -0.43,
+      "gamma": 1.62,
+      "young_bound": "|lambda| rho^2/4 <= gamma rho^3/12 + C_y",
+      "C_y_per_unit_volume": 0.010098435197886498,
+      "remaining_rho_cubed_coefficient": 0.135
+    }
+  },
+  "theorem_target": {
+    "initial_space": "H^2(T^3;C^3)",
+    "solution": "unique global Psi in C([0,infinity);H^2), classical and C-infinity for every t>0",
+    "stability": "continuous dependence on H^2 initial data on every finite time interval",
+    "lyapunov": "F_ref[Psi(t)] is non-increasing and satisfies the L2 gradient-flow energy identity",
+    "excluded": [
+      "H^s initial data with s<2",
+      "eta_shell nonzero",
+      "infinite volume",
+      "historical non-variational proxy",
+      "negative shell mass",
+      "minimizer uniqueness, BCC selection, or stability"
+    ]
+  },
+  "proof_stages": [
+    {
+      "order": 1,
+      "name": "linear self-adjointness and lower bound",
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "real Fourier symbol, Hermitian bounded internal matrices, positive shell mass and H2 coercivity"
+    },
+    {
+      "order": 2,
+      "name": "coefficient-matrix and Class-II sign conditions",
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "positive family/lock terms and positive-definite 2x2 J-K matrix"
+    },
+    {
+      "order": 3,
+      "name": "local existence and uniqueness",
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "v1.1 six-real-coordinate expansion gives only B(u) grad^2 u and DB(u)[grad u,grad u] terms; the bounded-ball H2-to-L2 Lipschitz estimate is analytic and the independent local-jet audit passes 14/14",
+      "route": "The mapping input is closed; the analytic fourth-order semigroup construction still requires the later energy and smoothing audits for the theorem target."
+    },
+    {
+      "order": 4,
+      "name": "global continuation",
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "v1.2 gives the projected finite-dimensional chain rule, the H2/H4 Aubin-Lions passage, the Class-II real-gradient chain rule, and the exact energy identity; the independent NumPy Galerkin audit passes 12/12",
+      "route": "The coercive energy bound prevents the H2 continuation alternative. Smoothing remains a separate audit."
+    },
+    {
+      "order": 5,
+      "name": "continuous dependence and positive-time smoothing",
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "v1.3 proves weakly singular Gronwall continuous dependence, fractional positive-time gain, the endpoint H4 Duhamel cancellation, and the two-derivative Moser bootstrap to C-infinity; the independent NumPy spectral audit passes 15/15",
+      "route": "The P2 proof package is complete at T4. Tier promotion is a separate governance action."
+    }
+  ],
+  "proxy_separation": {
+    "historical_backend": "NON-VARIATIONAL-PROXY",
+    "reason": "P1 pins scalar factor-two and cJK-versus-cKK variational mismatches",
+    "canonical_pde": "Uses only the independently implemented P1 reference functional",
+    "rule": "No PDE theorem or energy identity may be transferred to the historical backend."
+  },
+  "tier_boundary": "T6 CONDITIONAL-THEOREM under A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL. The mathematical theorem is closed for the declared fixed-torus eta_shell=0 functional. T7 is excluded because the declared physical domain is narrower and the theorem does not cover the historical backend, eta_shell nonzero, infinite volume, negative shell mass, or vacuum/BCC selection."
+}

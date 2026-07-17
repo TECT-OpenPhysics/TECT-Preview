@@ -1,0 +1,315 @@
+% =============================================================================
+% Title: Full-production spectral Galerkin convergence: adversarially repaired conditional theorem
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v2.2 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T6 CONDITIONAL-THEOREM, re-enacted after adversarial repair
+% Supersedes: v2.1, whose exact-Galerkin trajectory ball was under-justified
+% =============================================================================
+
+\section*{1. Purpose and scope; repair provenance}
+This is the corrected integrated referee package for the quantitative P3
+theorem.  Version 2.1 is superseded because it used the continuum $H^2$ ball
+for the restarted exact-Galerkin trajectory without proving that the Fourier
+projection decreases the nonlinear energy.  It also displayed selected upper
+bounds with inward decimal rounding, and its independent audit did not
+reconstruct the load-bearing constant chain.  Those defects are not treated as
+cosmetic: the T6 conclusion below is re-enacted only after the separate
+Galerkin ball, outward rounding, and full-chain audit in this version.
+
+The field is $u:\mathbb T^3\to\mathbb C^3$, treated isometrically as six real
+components on the fixed torus with periods $16,16,16$.  The canonical P1
+functional has the pinned positive regularisers, $\eta_{\rm shell}=0$, and
+density floor $\varepsilon_\rho=10^{-12}$.  The P2 gradient flow is
+\[
+ \partial_tu+Lu+N(u)=0.                                      \tag{1.1}
+\]
+The single named hypothesis is
+\[
+ \texttt{A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL}:              \tag{H3}
+\]
+the hash-pinned T5 P1 standalone reference functional is the canonical
+production functional.  The T6 P2 well-posedness theorem is a hard dependency.
+
+\paragraph{Corrected theorem.}
+Assume (H3), let $R\in\{0.5,1,2\}$, and let
+$\|u_0\|_{H^2}\leq R$.  For $\tau=0.02$ and $T=0.2$ the P2 solution satisfies
+\[
+ \sup_{\tau\leq t\leq T}\|u(t)\|_{H^6}\leq B_6(R,\tau,T)<\infty. \tag{1.2}
+\]
+For every even Fourier grid size $N$, with $P_N$ the real-$L^2$ Fourier
+projector and $R_N^C$ the pinned collocation residual,
+\[
+ \sup_{\tau\leq t\leq T}
+ \|P_NR(u(t))-R_N^C(P_Nu(t))\|_{L^2}
+ \leq C(R,\tau,T)N^{-2}.                                  \tag{1.3}
+\]
+Let $u_N$ solve the exact Galerkin equation
+\[
+ \partial_tu_N+Lu_N+P_NN(u_N)=0,\qquad u_N(\tau)=P_Nu(\tau).
+                                                                    \tag{1.4}
+\]
+Then an explicit finite $E(R,\tau,T)$ satisfies
+\[
+ \sup_{\tau\leq t\leq T}\|u_N(t)-P_Nu(t)\|_{L^2}
+ \leq E(R,\tau,T)N^{-4}.                                  \tag{1.5}
+\]
+Equations (1.2)--(1.5) are a positive-time, restarted, exact-Galerkin
+conditional theorem.  They do not assert an algebraic rate from $t=0$ for
+merely $H^2$ data and do not identify finite oversampling with exact Galerkin
+for the rational Class-II term.
+
+\section{Continuum and discrete conventions}
+The real pairing and even Sobolev norms are
+\[
+ \langle v,w\rangle_{\mathbb R}=\operatorname{Re}
+ \int_{\mathbb T^3}v^\dagger w,
+ \qquad
+ \|v\|_{H^{2m}}^2=|\mathbb T^3|\sum_k(1+|k|^4)^m|\widehat v_k|^2. \tag{2.1}
+\]
+The exact Galerkin residual is $P_NR(v_N)$.  The executable collocation
+residual $R_N^C$ is the real gradient of the periodic collocation energy.
+Pointwise nonlinear products alias, so these objects are never conflated.
+
+The linear symbol contains the Brazovskii fourth-order scalar part, family
+mass, and internal lock.  Direct spectral bounds give
+\[
+ c_L\|v\|_{H^2}^2\leq\langle Lv,v\rangle
+ \leq C_L\|v\|_{H^2}^2,                                  \tag{2.2}
+\]
+where $c_L=0.2048572626782363$ and $C_L=2.1566713536$ are
+derived from the pinned parameters.
+
+\section{Fourier, product, and Class-II constants}
+The max-shell count $24m^2+2$, an integral tail, and Hausdorff--Young give
+\[
+ \|v\|_\infty\leq E_2\|v\|_{H^2},\quad E_2=0.329926816704,
+ \qquad
+ \|\partial_iv\|_{L^4}\leq E_{14}\|v\|_{H^2},\quad
+ E_{14}=0.533391254984.                                    \tag{3.1}
+\]
+The Fourier-weight inequality and Young convolution give the deliberately
+enlarged algebra estimate
+\[
+ \|fg\|_{H^2}\leq A_2\|f\|_{H^2}\|g\|_{H^2},\qquad
+ A_2=8E_2=2.63941453363.                                  \tag{3.2}
+\]
+
+For $q_A=m_A/(\rho+\varepsilon_\rho)$ and $|u|\leq A$, inverse-density
+derivatives through order three obey
+\[
+ I_j=j!(2A+2)^j\varepsilon_\rho^{-(j+1)},\qquad0\leq j\leq3. \tag{3.3}
+\]
+Leibniz convolution with the quadratic moment gives explicit envelopes $Q_j$
+for $D^jq_A$, and a second convolution gives metric envelopes $G_j$.
+
+The contraction overcount is now explicit rather than merely declared.  Write
+the Class-II energy density as
+$\frac12 B(u)[\nabla u,\nabla u]$.  Its Euler term is
+\[
+ -\partial_i\{B(u)\partial_i u\}
+ +\frac12 DB(u)^*[\nabla u,\nabla u].                    \tag{3.4}
+\]
+Expanding the divergence leaves one $DB[\nabla u,\nabla u]$ term and the
+half-weight term, hence a coordinate-free tensor factor $3/2$.  The $G_j$
+already sum all three Pauli generators; the low-order formulas explicitly sum
+the three spatial directions; the $H^2$ formulas use (3.2); and the
+$\mathbb C^3\simeq\mathbb R^6$ realification is isometric.  Thus there is no
+unrecorded component multiplicity.  The declared factor 108 has headroom
+\[
+ 108/(3/2)=72,                                             \tag{3.5}
+\]
+which the primary and independent audits both assert.
+
+Consequently the pinned nonlinear map has computed majorants
+\[
+ \|N(u)\|_{L^2}\leq K_0(M),\qquad
+ \|N(u)-N(v)\|_{L^2}\leq L_0(M)\|u-v\|_{H^2},           \tag{3.6}
+\]
+and analogous $H^2$ bounds $K_2(M_2,M_4)$ and $L_2(M_2,M_4)$.  Every
+$Q_j,G_j,K_s,L_s$ is persisted in the quantitative JSON with the density floor
+retained explicitly.
+
+\section{Continuum and Galerkin energy balls}
+The continuum energy-to-ball chain gives
+\[
+ M_2(R)^2={2\{E_+(R)+C_Y|\mathbb T^3|\}\over c_L}.        \tag{4.1}
+\]
+For $R=0.5,1,2$, respectively, the outward stored bounds for $M_2$ are
+$20.1609886852989$, $20.3597732081305$, and $21.2161594568883$.
+
+The crucial repair is that $u_N$ is not assigned this same ball.  Orthogonal
+projection gives only $\|P_Nu(\tau)\|_{H^2}\leq M_2(R)$.  We therefore apply
+the functional's direct upper estimate on that entire ball:
+\[
+ F(P_Nu(\tau))\leq E_+\{M_2(R)\}.                         \tag{4.2}
+\]
+No assertion $F(P_Nu)\leq F(u)$ is used.  Exact-Galerkin energy dissipation
+and coercivity then give the independent uniform trajectory ball
+\[
+ M_{2,G}(R)^2=
+ {2\{E_+(M_2(R))+C_Y|\mathbb T^3|\}\over c_L}.           \tag{4.3}
+\]
+The three outward bounds are
+\[
+ M_{2,G}\leq1457.64276910276,\quad1500.96407138871,
+ \quad1697.46098407395.                                   \tag{4.4}
+\]
+Every evolution Lipschitz constant is evaluated on the common ball
+$M_*=\max(M_2,M_{2,G})$, not on the continuum ball alone.
+
+\section{Positive-time $H^6$ and residual bounds}
+For positive self-adjoint $L$, spectral calculus gives
+\[
+ \|L^\alpha e^{-tL}\|\leq(\alpha/(et))^\alpha.           \tag{5.1}
+\]
+Take $\alpha=3/4$, Holder exponent $\theta=1/4$, and
+$\delta=\tau/4$.  The mild formula first bounds $u$ in $D(L^{3/4})$.
+The endpoint cancellation
+\[
+ L\int_a^tS(t-s)f(s)\,ds=(I-S(t-a))f(t)
+ +\int_a^tLS(t-s)\{f(s)-f(t)\}\,ds                       \tag{5.2}
+\]
+changes the nonintegrable $r^{-1}$ kernel to $r^{\theta-1}$ and gives an
+explicit $H^4$ bound.  Repeating the argument on base space $H^2$ gives (1.2).
+
+The Fourier projection and alias bounds are
+\[
+ \|(I-P_N)v\|_{H^2}\leq(L_{\max}/\pi)^4N^{-4}\|v\|_{H^6}, \tag{5.3}
+\]
+\[
+ \|P_N(I_N-I)f\|_{L^2}\leq A_{\rm alias}N^{-2}\|f\|_{H^2},
+ \qquad A_{\rm alias}=167.383081344.                      \tag{5.4}
+\]
+The repaired computation uses 90-digit decimal arithmetic and serialises
+upper bounds by directed ceiling rounding to 15 significant digits.  For
+$R=0.5,1,2$, the outward logarithmic bounds are
+\[
+\begin{array}{c|ccc}
+R&0.5&1&2\\ \hline
+\log_{10}B_6&515.377687&515.751049&517.319858\\
+\log_{10}C&576.354914&576.769779&578.512971
+\end{array}                                                \tag{5.5}
+\]
+and (5.3)--(5.4) prove (1.3).
+
+\section{Repaired exact-Galerkin evolution estimate}
+Put $e=u_N-P_Nu$.  The continuum projection forcing is bounded on the
+continuum ball, while $N(u_N)-N(P_Nu)$ is bounded on the common ball (4.4).
+Coercivity and Young's inequality give
+\[
+ {d\over dt}\|e\|_{L^2}\leq a_G\|e\|_{L^2}+F_RN^{-4},
+ \qquad a_G={L_0(M_*)^2\over2c_L},                        \tag{6.1}
+\]
+where $F_R=L_0(M_2)(L_{\max}/\pi)^4B_6$.  Since $e(\tau)=0$,
+\[
+ \|e(t)\|_{L^2}\leq
+ F_R{e^{a_G(t-\tau)}-1\over a_G}N^{-4}.                  \tag{6.2}
+\]
+For $d=T-\tau=0.18\leq1$,
+$(e^{a_Gd}-1)/a_G\leq d e^{a_Gd}\leq e^{a_Gd}$.  Therefore the stored
+logarithmic enclosure is computed without a direction-sensitive subtraction:
+\[
+ \log_{10}E\leq\log_{10}F_R+{a_Gd\over\log 10}.          \tag{6.3}
+\]
+The outward stored values of this logarithm are
+$3.32936730872633\,10^{152}$, $5.97917890507636\,10^{152}$, and
+$6.99562180830297\,10^{153}$.  Their extreme size makes the theorem
+non-practical but does not affect finiteness or the $N^{-4}$ rate.
+
+\section{Independent checks and reproduction}
+The repaired primary audit passes 21/21.  The non-importing independent audit
+passes 24/24 and reconstructs, from the pinned manifests, the continuum energy
+ball, separate Galerkin restart ball, coefficient and nonlinear envelopes,
+both endpoint bounds, residual constant, common-ball Lipschitz constant,
+growth rate, and Gronwall logarithm.  It also verifies that projection-energy
+monotonicity is absent, checks the 72-fold contraction headroom, samples the
+semigroup and projection-tail inequalities, and retains the historical-solver
+exclusion.  The integrated verifier passes 124/124, including the recorded
+CUDA evidence.
+
+The one-command recorded-evidence reproduction is
+\begin{verbatim}
+python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits
+\end{verbatim}
+and must print 
+\texttt{ASSERTS: 124/124} followed by
+\texttt{A3-FULL-PRODUCTION-VERIFY-PASS}.  Omitting
+\texttt{--reuse-recorded-audits} re-executes all CPU audits in temporary
+directories.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{The continuum $M_2$ ball also bounds the Galerkin trajectory.}
+\textbf{UPHELD as unjustified in v2.1; repaired here.}  Equations
+(4.2)--(4.4) derive a separate Galerkin ball without projection-energy
+monotonicity.
+\item \textbf{A decimal approximation of an upper bound can be rounded to
+nearest.} \textbf{UPHELD as unsafe.}  All stored upper bounds now use directed
+ceiling rounding; the graph lower bound uses directed floor rounding.
+\item \textbf{The former 10/10 independent audit independently proved the
+constant chain.} \textbf{UPHELD as false.}  It sampled only selected local
+ingredients.  The repaired 24/24 audit reconstructs every load-bearing stage.
+\item \textbf{The factor 108 hides unknown Class-II contractions.}
+\textbf{VALID WITH MITIGATION.}  Equation (3.4) isolates the remaining factor
+$3/2$ after generator, spatial, algebra, and realification conventions are
+accounted for; (3.5) records factor-72 headroom.
+\item \textbf{Finite constants imply useful practical error bars.}
+\textbf{UPHELD as false.}  The $10^{-12}$ floor makes the bounds
+astronomically large.  The theorem establishes convergence only.
+\item \textbf{$H^2$ data have the stated rate from $t=0$.}
+\textbf{UPHELD as false.}  Smoothing and comparison are used only after the
+positive restart time $\tau$.
+\item \textbf{A finite oversampling rule is exact for the rational Class-II
+residual.} \textbf{UPHELD as false.}  Only mathematical projection
+$P_NN(u_N)$ is called exact Galerkin.
+\item \textbf{T6 silently inherits a T5 functional.}
+\textbf{VALID WITH MITIGATION.}  The exact identification is the named
+hypothesis (H3), satisfying dependency monotonicity.
+\end{enumerate}
+
+\section{Falsifier, tier review, and no-overclaim boundary}
+The theorem is falsified by source-hash drift; failure of the 124-assertion
+verifier or replacement bundle; an incorrect Fourier shell, endpoint,
+coefficient, energy-ball, directed-rounding, or alias estimate; a counterexample
+to (1.2)--(1.5); or failure of exact-Galerkin energy dissipation.  Such a
+failure reopens \texttt{A3-FULL-DISCRETIZATION-CLOSURE}.
+
+The original tier transition is T4 to T6 because this is a complete
+conditional theorem with one named sub-T6 hypothesis, a self-contained proof,
+explicit finite constants, independent reconstruction, and a PUBLISHED
+reproduction bundle.  The adversarial finding temporarily challenged that
+justification; this v2.2 package re-enacts T6 rather than pretending the v2.1
+argument was sound.  T7 remains prohibited by the named hypothesis and absence
+of public external reproduction.
+
+This theorem does not cover $t=0$ algebraic rates for merely $H^2$ data,
+$\eta_{\rm shell}\ne0$, removed regularisers, infinite volume, finite-rule
+oversampling exactness, practical-grid error bars, historical Sector-B
+trajectories, full-spectrum Hessian convergence, minimizer or BCC selection,
+T7, or physical-domain closure.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Explicit B6 and residual C on [tau,T], plus N^-4
+                         convergence of exact Galerkin restarted at tau.
+Repair:                  Separate Galerkin energy ball; common-ball Lip0;
+                         outward rounding; full-chain independent audit.
+Scope:                   T6 CONDITIONAL-THEOREM; fixed T3, canonical P1/P2,
+                         eta_shell=0, R=0.5/1/2, tau=0.02, T=0.2.
+Named hypothesis:        A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_verify.py --reuse-recorded-audits
+Expected output:         ASSERTS: 124/124;
+                         A3-FULL-PRODUCTION-VERIFY-PASS.
+Falsification gate:      Failed hash, energy ball, coefficient/endpoint/
+                         Fourier estimate, exact-Galerkin identity, or audit.
+Tier before / after:     T6 challenged / T6 re-enacted; original T4-to-T6
+                         promotion is justified only by this repaired package.
+No-overclaim statement:  Not a practical solver error bar, t=0 H2 rate,
+                         finite-oversampling exactness, Sector-B certificate,
+                         T7, minimizer, or BCC result.
+Next required action:    Preserve as the repaired P3 baseline; sharper
+                         constants or executable solver bridges are separate.
+\end{verbatim}

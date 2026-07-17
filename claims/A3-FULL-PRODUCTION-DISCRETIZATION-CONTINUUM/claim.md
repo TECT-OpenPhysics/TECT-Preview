@@ -95,9 +95,16 @@ P1/P2 manifests, Class-II generator convention, and derived coefficients.
 Stage 8 makes the positive-time theorem quantitative for `R=0.5,1,2`,
 `tau=0.02`, and `T=0.2`. Explicit Fourier embeddings, Class-II derivative
 envelopes retaining the `1e-12` floor, and two endpoint-Duhamel cancellations
-give finite `B6(R,tau,T)`. The derived `log10 B6` bounds are 515.378, 515.751,
-and 517.320; the corresponding `log10 C` bounds are 576.355, 576.770, and
-578.513. The primary and independent audits pass 15/15 and 10/10.
+give finite `B6(R,tau,T)`. The outward-rounded `log10 B6` bounds are
+515.377687, 515.751049, and 517.319858; the corresponding `log10 C` bounds are
+576.354914, 576.769779, and 578.512971. Adversarial review then found that v2.1 reused the continuum `H2`
+ball for the restarted Galerkin trajectory without proving projection-energy
+monotonicity. The repaired chain instead bounds `F(P_N u(tau))` directly on
+the continuum ball and derives separate Galerkin `H2` envelopes
+`1457.64276910276`, `1500.96407138871`, and `1697.46098407395`. Evolution
+Lipschitz constants use the common continuum/Galerkin ball, all stored upper
+bounds use directed ceiling rounding, and the primary/full-chain-independent
+audits pass 21/21 and 24/24.
 
 For the mathematically dealiased exact Galerkin flow
 `partial_t u_N + L u_N + P_N N(u_N)=0`, restarted by
@@ -169,9 +176,9 @@ python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits
 ```
 
 Expected: `13/13 PASS`, `A3-FULL-SOLUTION-BALL-BOUND-PASS`; then
-`13/13 PASS`, `A3-FULL-ENERGY-BALL-ENVELOPE-PASS`; then `15/15` and
-`A3-FULL-QUANTITATIVE-MAJORANT-PASS`; then `10/10` and
-`A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS`; then `104/104`,
+`13/13 PASS`, `A3-FULL-ENERGY-BALL-ENVELOPE-PASS`; then `21/21` and
+`A3-FULL-QUANTITATIVE-MAJORANT-PASS`; then `24/24` and
+`A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS`; then `124/124`,
 `A3-FULL-PRODUCTION-VERIFY-PASS`. The verifier's default (without
 `--reuse-recorded-audits`) reruns CPU audits into a temporary directory and can
 take substantially longer; the recorded mode validates their immutable results
@@ -201,6 +208,20 @@ and current source hashes without overwriting them.
 7. **"T6 silently inherits the T5 P1 functional."** VALID WITH MITIGATION. The
    identification is explicit as `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, while
    the P2 well-posedness input is already T6.
+8. **"The continuum energy ball automatically contains the Galerkin flow."**
+   UPHELD as unjustified in v2.1. The repaired proof derives a separate
+   Galerkin restart-energy ball without assuming `F(P_Nu) <= F(u)`.
+9. **"Nearest decimal rounding is harmless for displayed upper bounds."**
+   UPHELD as false. Upper and lower quantities now use directed ceiling and
+   floor serialization, respectively.
+10. **"The old independent audit reconstructed the theorem constants."**
+    UPHELD as false. The replacement 24/24 audit reconstructs every
+    load-bearing energy, endpoint, residual, Lipschitz, growth, and Gronwall
+    stage without importing the primary implementation.
+11. **"The Class-II factor 108 hides uncontrolled contractions."** VALID WITH
+    MITIGATION. Generator and spatial sums, `H2` products, and realification
+    are separately accounted for; the remaining coordinate-free Euler factor
+    is `3/2`, leaving declared headroom `108/(3/2)=72`.
 
 ## No-overclaim
 
@@ -213,19 +234,21 @@ closure.
 
 ## Tier review
 
-The v2.1 review promotes T4 to T6 in one step because the new result is a
-complete conditional theorem rather than an enlarged evidence-only scope. It
-has a self-contained proof, one named hypothesis covering the sub-T6 hard
-input, explicit quantitative sanity checks, a non-importing independent audit,
-a 104/104 integrated verifier, and a PUBLISHED bundle. The bundle contains 42
-files and nine entry scripts, all PASS, with digest
-`6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910`.
+The v2.2 review re-enacts the original T4-to-T6 promotion after treating the
+v2.1 Galerkin-ball gap as load-bearing rather than cosmetic. The corrected
+result is a complete conditional theorem with one named hypothesis covering
+the sub-T6 hard input, a separate Galerkin energy ball, directed rounding,
+explicit quantitative sanity checks, a non-importing full-chain audit, a
+124/124 integrated verifier, and a replacement PUBLISHED bundle. The bundle
+contains 42 files and nine entry scripts, all PASS, source-pinned to
+`d4c7b3149fe56293ab2c88464c931d64c2e614e3`, with digest
+`6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41`.
 T7 is prohibited by the named hypothesis and lack of public external
 reproduction.
 
 ## Next action
 
-Preserve this T6 package as the closed P3 baseline. Any sharp practical
+Preserve the corrected v2.2/replacement-bundle package as the closed P3 baseline. Any sharp practical
 constant, finite-oversampling solver bridge, historical-solver certificate,
 `eta_shell` extension, lower-regularity data, or infinite-volume limit must be
 registered as a separate claim. P4 may proceed without widening P3.

@@ -1,0 +1,117 @@
+{
+  "schema": "tect/a3-full-production-energy-ball-envelope-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "verdict": "A3-FULL-ENERGY-BALL-ENVELOPE-PASS",
+  "scope": "all canonical P2 trajectories with ||u0||_H2<=R; fixed torus; eta_shell=0; explicit H2 envelope only",
+  "derived_constants": {
+    "volume": 4096.0,
+    "embedding_series_upper": 445.85658114053473,
+    "embedding_tail_upper": 0.12319178710720373,
+    "h2_to_linf_squared_upper": 0.10885170438001336,
+    "linear_energy_upper": 2.1566713536,
+    "classii_quartic_coefficient": 0.04274999999998931,
+    "quartic_energy_upper": 0.014028263401973641,
+    "sextic_energy_upper": 0.0031991472575371317,
+    "young_constant_per_unit_volume": 0.010098435197886498,
+    "h2_coercivity": 0.2048572626782363
+  },
+  "rows": [
+    {
+      "initial_h2_radius": 0.5,
+      "energy_upper": 0.2705106723385224,
+      "h2_envelope": 20.160988685298896,
+      "h2_envelope_squared": 406.46546476875005
+    },
+    {
+      "initial_h2_radius": 1.0,
+      "energy_upper": 1.095563087459511,
+      "h2_envelope": 20.35977320813049,
+      "h2_envelope_squared": 414.52036508650815
+    },
+    {
+      "initial_h2_radius": 2.0,
+      "energy_upper": 4.742540346113955,
+      "h2_envelope": 21.216159456888267,
+      "h2_envelope_squared": 450.1254221001094
+    }
+  ],
+  "not_closed_here": [
+    "explicit positive-time H4/H6 smoothing constants",
+    "explicit C(R,tau,T) residual-aliasing constant",
+    "dealiased finite-time evolution bound",
+    "Sector-B solver continuum certificate",
+    "P3 tier promotion"
+  ],
+  "assertions": [
+    {
+      "name": "p1_backend_hash",
+      "status": "PASS",
+      "detail": "actual=e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc; expected=e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "p1_manifest_hash",
+      "status": "PASS",
+      "detail": "actual=88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565; expected=88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "p2_manifest_hash",
+      "status": "PASS",
+      "detail": "actual=ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682; expected=ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+    },
+    {
+      "name": "positive_h2_coercivity",
+      "status": "PASS",
+      "detail": "c_H2=2.0485726267823631e-01"
+    },
+    {
+      "name": "positive_sextic_coefficient",
+      "status": "PASS",
+      "detail": "gamma=1.6200000000000001e+00"
+    },
+    {
+      "name": "positive_regularisers",
+      "status": "PASS",
+      "detail": "rho and Class-II mass regularisers are positive"
+    },
+    {
+      "name": "pauli_generator_operator_norm_convention",
+      "status": "PASS",
+      "detail": "the hash-pinned backend uses three embedded Pauli generators, each with operator norm one"
+    },
+    {
+      "name": "embedding_series_upper_is_finite",
+      "status": "PASS",
+      "detail": "series_upper=4.4585658114053473e+02; tail_upper=1.2319178710720373e-01"
+    },
+    {
+      "name": "classii_energy_upper_coefficient_is_nonnegative",
+      "status": "PASS",
+      "detail": "coefficient=4.2749999999989310e-02"
+    },
+    {
+      "name": "linear_energy_upper_coefficient_is_positive",
+      "status": "PASS",
+      "detail": "coefficient=2.1566713536000002e+00"
+    },
+    {
+      "name": "energy_upper_is_monotone_in_radius",
+      "status": "PASS",
+      "detail": "energies=[0.2705106723385224, 1.095563087459511, 4.742540346113955]"
+    },
+    {
+      "name": "h2_envelope_dominates_declared_initial_radii",
+      "status": "PASS",
+      "detail": "envelopes=[20.160988685298896, 20.35977320813049, 21.216159456888267]"
+    },
+    {
+      "name": "energy_to_h2_formula_uses_p2_coercivity",
+      "status": "PASS",
+      "detail": "M2^2=2(E_upper+C_y|T3|)/c_H2"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 13,
+    "total": 13
+  }
+}

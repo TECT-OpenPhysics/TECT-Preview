@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Repair and re-enact A3 full-production discretization T6] - 2026-07-17
+
+
+
 ## [A3 full-production discretization promoted to T6] - 2026-07-17
 
 Closed A3-FULL-DISCRETIZATION-CLOSURE by computing explicit positive-time H6 and residual majorants for the declared H2 balls and proving N^-4 convergence of the exact Galerkin flow restarted at tau. Primary and independent audits pass 15/15 and 10/10; the integrated verifier passes 104/104. The v2.1 referee note is PDF-valid, and the PUBLISHED 42-file bundle runs nine entry scripts ALL PASS with digest 6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910. Promoted T4 to T6 under A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL; practical constants and historical solver grids remain excluded.

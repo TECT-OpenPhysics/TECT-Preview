@@ -7,7 +7,7 @@
 
 **Selection statement.** Conditional on A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, for the canonical full-production P1/P2 gradient flow on the fixed three-torus, eta_shell=0, initial H2 radii R in {0.5,1,2}, tau=0.02, and T=0.2, explicit finite B6(R,tau,T) and C(R,tau,T) bound the positive-time H6 solution ball and the collocation/Galerkin resid…
 
-**Falsifier.** A failed source hash or 104-assertion verifier; an incorrect Fourier shell, semigroup, endpoint-cancellation, Class-II coefficient, projection-tail, or alias estimate; a counterexample to the stated positive-time H6/residual bounds; failure of the exact Galerkin energy identity …
+**Falsifier.** A failed source hash or 124-assertion verifier; an incorrect Fourier shell, semigroup, endpoint-cancellation, Class-II coefficient/contraction, continuum or Galerkin energy ball, directed-rounding, projection-tail, Gronwall, or alias estimate; a counterexample to the stated posi…
 
 ## (all notes)/  ·  1 proof unit  ·  tier span T6
 
@@ -15,4 +15,4 @@
 |---|---|---|---|---|---|
 | `a3-full-production-discretization-continuum` | v2.2 | T6 | Explicit B6 and residual C on [tau,T], plus N^-4 convergence of exact Galerkin restarted at tau. | ANALYTIC + EXECUTED + CONDITIONAL. | Preserve as the repaired P3 baseline; sharper constants or executable solver bridges are … |
 
-<!-- generated 2026-07-17T15:12:12Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T15:31:36Z by build_index.py v1.0.1 -->
