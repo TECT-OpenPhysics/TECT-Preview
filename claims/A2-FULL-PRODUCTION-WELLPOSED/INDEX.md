@@ -9,10 +9,10 @@
 
 **Falsifier.** A non-Hermitian production linear term, nonpositive linear H2 lower bound, indefinite Class-II coefficient matrix, loss of the positive regulariser or sextic coefficient, an error in the six-real-coordinate Euler-Lagrange expansion or its H2-to-L2 local-Lipschitz estimate, a fai…
 
-## (all notes)/  ·  1 proof unit  ·  tier span T4
+## (all notes)/  ·  1 proof unit  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a2-full-production-wellposedness` | v1.3 | T4 | Canonical global H2 solutions depend continuously on H2 initial data on finite intervals and are C-infinity for every positive time. | ANALYTIC + EXECUTED; T4 proof package complet… | Separate T5/T6 tier review with operator approval; do not alter this proof package during… |
+| `a2-full-production-wellposedness` | v2.0 | T6 | The canonical full-production real-L2 gradient flow is uniquely globally well-posed in H2, continuously dependent, energy decreasing, and smooth for … | ANALYTIC + EXECUTED + CONDITIONAL; integrated… | Build the content-addressed T6 reproduction bundle, run release_check, and enact the atom… |
 
-<!-- generated 2026-07-17T01:42:34Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T02:15:31Z by build_index.py v1.0.1 -->

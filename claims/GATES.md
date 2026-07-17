@@ -475,6 +475,13 @@ received an independent regularity audit.
 **Discharge path:** SATISFIED@anchor (textbook coercivity hypothesis; $\gamma=1.62>0$, $C_*=1.01\times10^{-2}$; verified \texttt{sextic\_dominates\_quartic\_coercive}). If $\gamma\le0$ the functional is unbounded below and global existence is not claimed. Carried as a named hypothesis of A2 (T6).
 
 
+<a id="a2-h3-canonical-production-functional"></a>
+### **A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL**
+
+**Statement:** The hash-pinned functional in `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json`, implemented independently by `codes/foundations/n001_variational_backend.py`, is adopted as the canonical full-production continuum functional for the A2 theorem. It uses the real $L^2$ pairing, three complex components, positive rho and Class-II mass regularisers, and the actual production value $\eta_{\rm shell}=0$. This hypothesis identifies the mathematical functional; it does not identify the historical non-variational solver backend with that functional.
+
+**Discharge path:** DEFINITIONAL INPUT, pinned by `A1-PRODUCTION-FUNCTIONAL-REALISATION` at T5 `CLOSED@DISCRETE-VARIATIONAL-MATRIX`. It is carried as a named hypothesis of `A2-FULL-PRODUCTION-WELLPOSED` to satisfy the TSv2 rule for a T6 theorem depending on a sub-T6 input. Removing it requires an independently governed replacement canonical functional and a new PDE audit. It does not block the mathematical theorem for the stated functional, but it blocks transferring the theorem to the historical backend or to $\eta_{\rm shell}\ne0$.
+
 <a id="c6-bcc-premise-blocked"></a>
 ### **C6-BCC-PREMISE-BLOCKED**
 

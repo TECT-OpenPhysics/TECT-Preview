@@ -6,7 +6,7 @@
 
 Generated: 2026-07-17
 
-**1393 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1396 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -79,7 +79,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/LINEAGE.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `bbed77b840ee` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/claim.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `580c0ff56a20` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/status.json` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `49f434c6d9db` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/LINEAGE.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `8e8292e5eb56` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/LINEAGE.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `bb21346f753f` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `edef0ecc49e9` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `cca02935aa1c` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/status.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `2f802a0b4ba8` |
@@ -396,6 +396,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.2.tex.txt` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.2 | ACTIVE | `1938db73cd7f` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.3.pdf` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.3 | ACTIVE | `cb9b0e8a8f66` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.3.tex.txt` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.3 | ACTIVE | `ae136728a953` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v2.0.pdf` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `60e22bd7f702` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v2.0.tex.txt` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `e60b1b764032` |
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/claims/A2-PDE-WELLPOSED/notes/a2-consolidation-260623-260623-v1.1.pdf` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `01375e76fe38` |
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/claims/A2-PDE-WELLPOSED/notes/a2-consolidation-260623-260623-v1.1.tex.txt` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `df73fada6975` |
 | `claims/A2-PDE-WELLPOSED/notes/a2-consolidation-260623-260623-v1.0.pdf` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `7657f769dc24` |
@@ -1365,7 +1367,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md` | A1-PRODUCTION-FUNCTIONAL-REALISATION | — | — | — | ACTIVE | `1ae9cb0e336a` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `a00996ec8ef4` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `73ce3a0fac09` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b095b780e52b` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `61df0822727f` |
 | `claims/A2-PDE-WELLPOSED/INDEX.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `db953c1945b8` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `36bc8af82f42` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `29f58267f507` |
@@ -1374,7 +1376,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `fadc0b632f94` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `c10e81ec12c9` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `818118c6973f` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `eee8f5809c13` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `35a1298aeef8` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
@@ -1407,7 +1409,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `304ee5de4686` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `133c45576994` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `c381f8debbaa` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -1418,6 +1420,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
 | `TODO.md` | — | — | — | — | ACTIVE | `bc081eea7587` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
+| `tmpot3q7tni` | — | — | — | — | ACTIVE | `133c45576994` |
 
 ## Other tracked files
 
@@ -1426,7 +1429,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `580e7ec1c407` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `6796165de63d` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
