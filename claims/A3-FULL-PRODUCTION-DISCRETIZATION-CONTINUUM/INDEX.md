@@ -13,6 +13,6 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a3-full-production-discretization-continuum` | v1.1 | T3 | Stage 3 Hessian/Ritz passes in the declared invariant and fixed-subspace scopes; CPU precision rows pass. | ANALYTIC + EXECUTED + CONDITIONAL; T3 scaffol… | Execute CUDA rows, then independent continuum residual and integrated convergence proof. |
+| `a3-full-production-discretization-continuum` | v1.2 | T3 | Independent analytic manufactured-field quadrature proxy converges and agrees with canonical collocation. | ANALYTIC + EXECUTED + CONDITIONAL; T3 scaffol… | Uniform analytic Galerkin error bound, CUDA rows, and integrated one-command verification. |
 
-<!-- generated 2026-07-17T04:15:39Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T04:33:50Z by build_index.py v1.0.1 -->

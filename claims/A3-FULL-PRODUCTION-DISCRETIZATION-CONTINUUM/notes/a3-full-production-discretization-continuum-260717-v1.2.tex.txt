@@ -1,0 +1,86 @@
+% =============================================================================
+% Title: Full-production discretization P3: independent continuum quadrature
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.2 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T3 independent analytic manufactured-field quadrature proxy PASS
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This supplement closes the executable independent-reference part of P3 item 1.
+It does not identify a same-backend fine-grid residual with the continuum
+residual. Instead it prolongs a declared analytic field from $S_N$ to two
+oversampling grids, differentiates an independently implemented portable
+trapezoid-quadrature functional, and projects the result back to $S_N$.
+
+\section{Independent quadrature proxy}
+Let $I_M:S_N\to S_M$ be Fourier zero-padding and $P_N$ the real-$L^2$ Fourier
+projector. The computed reference is
+\[
+ R_{N,M}^{\rm IQ}(\Psi_N)=P_N R_M^{P}(I_M\Psi_N),
+\]
+where $R_M^P$ is the real gradient of the portable functional implementation.
+For the analytic, nonzero-density manufactured field, the density floor keeps
+all rational Class-II coefficients smooth. Periodic trapezoid quadrature then
+converges superalgebraically for smooth periodic integrands and exponentially
+for this analytic test input. The M24/M32 difference is retained as observed
+reference uncertainty, not hidden as exact continuum data.
+
+\section{Executed result}
+For N8, N12, and N16, exact Fourier prolongation to M24/M32 differs from direct
+analytic sampling by at most $3.0848\,10^{-16}$. The portable and canonical
+gradients agree exactly on every tested target and oversampling grid. The
+projected M24/M32 uncertainty is at most $2.5180\,10^{-14}$. The canonical
+collocation residual differs from the independent projected proxy by
+\[
+ 5.3301196\,10^{-6},\qquad4.2482266\,10^{-10},\qquad6.6668345\,10^{-12},
+\]
+with observed orders 23.2750 and 14.4414. All 11 assertions pass.
+
+\section{Devil's-advocate and mandatory adversarial review}
+\textbf{Sign and factor.} The portable code differentiates its own real
+functional in explicit real coordinates; it does not reuse the canonical
+residual. The canonical comparison then detects a factor or pairing mismatch.
+\textbf{Convention.} Fourier prolongation divides forward coefficients by the
+source count and multiplies inverse reconstruction by the target count; the
+same centered convention is used by $P_N$. \textbf{Units.} The fixed torus and
+dimensionless P1 normalization are unchanged. \textbf{Convergence.} Two
+independent oversampling resolutions measure the quadrature tail. \textbf{Hardcode
+masking.} No measured residual, rate, or reference value is an input; grids and
+thresholds are manifest inputs. \textbf{Limit cases.} This audit is analytic,
+nonzero-density, eta-shell-zero, and CPU complex128 only. It does not bound
+arbitrary H2 P2 data at time zero, floor removal, GPU behavior, or a historical
+solver. External review of the periodic quadrature-to-continuum passage is
+explicitly invited.
+
+\section{Remaining analytic passage}
+P2 gives $C^\infty$ regularity for every positive time, but the present result
+does not yet supply a uniform Sobolev/analytic-norm bound on a P2 solution ball
+that turns the observed quadrature tail into a theorem. That bound, plus a
+dealiased/oversampled evolution comparison and the CUDA matrix, is required
+before Sector-B solver outputs may be described as controlled continuum PDE
+approximations.
+
+\section{Reproduction}
+Run \texttt{python codes/foundations/a3\_full\_production\_independent\_galerkin.py}.
+Expected: \texttt{11/11 PASS} and
+\texttt{A3-FULL-INDEPENDENT-GALERKIN-PASS}.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Independent analytic manufactured-field quadrature
+                         proxy converges and agrees with canonical collocation.
+Scope:                   Fixed T3, pinned functional and floors, eta_shell=0,
+                         analytic nonzero-density field, N8/12/16, M24/32.
+Dependencies:            P1 canonical backend; P2 well-posed PDE package.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL; T3 scaffold.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_independent_galerkin.py
+Expected output:         11/11 PASS; A3-FULL-INDEPENDENT-GALERKIN-PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE.
+Tier before / after:     T3 / T3.
+No-overclaim statement:  Not a uniform P2 solution-ball bound, GPU execution,
+                         historical-solver result, T5, T6, or T7.
+Next required action:    Uniform analytic Galerkin error bound, CUDA rows, and
+                         integrated one-command verification.
+\end{verbatim}

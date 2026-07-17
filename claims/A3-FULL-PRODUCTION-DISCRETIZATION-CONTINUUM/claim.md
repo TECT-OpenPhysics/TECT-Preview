@@ -49,9 +49,7 @@ Stage 1 supplies a self-convergence precursor to item 1 and spatial parts of
 items 2 and 6. Stage 2 closes the executable finite-time and manufactured-time
 parts of items 3 and 6: RK4 rates are 4.016 and 4.008, and unforced trajectory
 errors decrease from `1.3063e-8` at N8 to `1.3118e-14` at N16 against the N24
-reference. Energy is nonincreasing on N8, N12, N16, N20, and N24. An
-independent continuum-residual implementation, item 4, item 5, and the
-integrated analytic convergence argument remain open.
+reference. Energy is nonincreasing on N8, N12, N16, N20, and N24.
 
 Stage 3 now closes the executable Hessian/Ritz item in its declared scope. The
 homogeneous 12-real-dimensional Fourier block has an isolated lowest cluster
@@ -102,6 +100,24 @@ Expected locally: `13/13 PASS` and
 same second command must report both CUDA rows PASS before the hardware gate can
 close.
 
+Stage 5 closes the independent manufactured-field quadrature proxy for item 1.
+Each `S_N` field is Fourier-prolonged exactly to M24 and M32, evaluated by the
+portable functional's real gradient, then projected back by `P_N`. The
+prolongation mismatch is at most `3.0848e-16`, the portable/canonical residual
+comparison is exact on every sampled grid, and M24/M32 projection uncertainty
+is at most `2.5180e-14`. Canonical collocation-to-independent-proxy errors are
+`5.3301e-6`, `4.2482e-10`, and `6.6668e-12`, with rates 23.28 and 14.44.
+This is an independently implemented quadrature proxy for an analytic field;
+it is not yet a uniform continuum theorem for every P2 solution.
+
+Run it with:
+
+```bash
+python codes/foundations/a3_full_production_independent_galerkin.py
+```
+
+Expected: `11/11 PASS`, `A3-FULL-INDEPENDENT-GALERKIN-PASS`, exit 0.
+
 ## Devil's-advocate record
 
 1. **"Fourier differentiation makes the current backend exact Galerkin."**
@@ -118,16 +134,14 @@ close.
 
 ## No-overclaim
 
-The present T3 record is a computable scaffold and a passed spatial baseline.
-Its reference uses the same backend at higher resolution, so it is not yet an
-independent continuum-residual check. It is not finite-time convergence, a
-Hessian/Ritz theorem, hardware
-equivalence, complex64 certification, historical-solver integration, a license
+The present T3 record includes an independent manufactured-field
+continuum-quadrature proxy, but not a uniform error theorem for arbitrary P2
+solutions. It is not GPU equivalence, historical-solver integration, a license
 to label N32/N64/N128 Sector-B output as continuum PDE evidence, or a T5/T6/T7
 result.
 
 ## Next action
 
-Run the prepared hardware audit in a CUDA-enabled Torch environment. Then add
-the independent continuum residual and integrated convergence proof before
-one-command integration and tier review.
+Run the prepared hardware audit in a CUDA-enabled Torch environment. Then prove
+the uniform continuum-quadrature/Galerkin error bound and build the integrated
+one-command verifier before tier review.

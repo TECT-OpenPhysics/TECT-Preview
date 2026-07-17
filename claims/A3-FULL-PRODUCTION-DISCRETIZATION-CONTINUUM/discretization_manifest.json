@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T3 COMPUTABLE-SCAFFOLD; stages 1-3 PASS, stage 4 CPU PASS / GPU UNAVAILABLE",
+  "status": "T3 COMPUTABLE-SCAFFOLD; stages 1-3 and independent quadrature stage PASS, stage 4 CPU PASS / GPU UNAVAILABLE",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -40,6 +40,11 @@
     "hardware_precision_audit": {
       "path": "codes/foundations/a3_full_production_hardware_precision.py",
       "sha256": "c948992b413f3b11bb53ba582fabdcc10a8b6b4cb8be6d4088f0814594a90a0f",
+      "version": "1.0.0"
+    },
+    "independent_galerkin_audit": {
+      "path": "codes/foundations/a3_full_production_independent_galerkin.py",
+      "sha256": "8348ebadf9f5338a6edf93a6ad92e6db2f6093c9952c974491ed90e691adf8b8",
       "version": "1.0.0"
     }
   },
@@ -164,10 +169,25 @@
       "cuda_complex64_residual_relative_max": 5e-05
     }
   },
+  "stage5": {
+    "grids": [8, 12, 16],
+    "reference_grids": [24, 32],
+    "field": "stage-1 analytic nonzero-density three-component manufactured field, prolonged from each target grid",
+    "independent_continuum_proxy": "P_N R_M^P(I_M Psi_N), where R_M^P is the real gradient of the independently implemented portable trapezoid-quadrature functional; M=24,32 provide reference-stability evidence for the continuum integral",
+    "acceptance": {
+      "prolongation_relative_error_max": 1e-13,
+      "portable_vs_canonical_relative_error_max": 1e-11,
+      "reference_projection_relative_error_max": 1e-08,
+      "final_collocation_to_independent_proxy_relative_error_max": 1e-06,
+      "minimum_observed_order": 4.0,
+      "require_monotone_errors": true
+    }
+  },
   "later_stages": {
     "finite_time": "CLOSED@T3-EXECUTED: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
     "hessian_ritz": "CLOSED@T3-EXECUTED: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
     "hardware_precision": "PARTIAL: CPU complex128 and complex64 PASS; CUDA complex128 and complex64 UNAVAILABLE under torch 2.11.0+cpu, so the hardware gate remains open",
+    "independent_continuum_residual": "CLOSED@T3-EXECUTED for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; uniform analytic error bound remains open",
     "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
   },
   "tier_boundary": "T3 until all six required gates are closed. N32/N64/N128 solver output alone is not discretization evidence."

@@ -39,6 +39,14 @@ complex128 agrees exactly and complex64 energy/residual errors are at most
 CPU-only Torch build and therefore remain OPEN. Independent continuum residual,
 integrated proof, and independent reproduction also remain open.
 
+**Stage 5 update 2026-07-17:** the independent analytic manufactured-field
+continuum-quadrature proxy is CLOSED@T3-EXECUTED (11/11). Exact Fourier
+prolongation, independent portable-gradient/canonical agreement, and M24/M32
+reference stability are all verified; canonical collocation-to-proxy errors are
+5.3301e-6 -> 4.2482e-10 -> 6.6668e-12. This does not close the uniform analytic
+error bound for arbitrary P2 solution balls, GPU rows, integrated proof, or
+independent reproduction.
+
 ## A2 full-production PDE audit gates
 
 ### **A2-FULL-NONLINEAR-MAPPING-AUDIT**
