@@ -30,6 +30,15 @@ cross-grid trajectory errors decrease 1.3063e-8 -> 1.0239e-12 -> 1.3118e-14
 and energy is nonincreasing on N=8,12,16,20,24. Hessian/Ritz,
 hardware/precision, integrated proof, and independent reproduction remain open.
 
+**Stage 3/4 update 2026-07-17:** Hessian/Ritz is CLOSED@T3-EXECUTED (13/13):
+the homogeneous invariant block has gap 0.1368657 and Ritz-residual/gap
+1.0061e-8; nonuniform fixed-subspace Ritz errors converge
+1.5199e-3 -> 4.7888e-7 -> 2.7136e-8. CPU precision is CLOSED@EXECUTED:
+complex128 agrees exactly and complex64 energy/residual errors are at most
+9.8340e-8/2.8775e-7. CUDA complex128/64 are UNAVAILABLE under the installed
+CPU-only Torch build and therefore remain OPEN. Independent continuum residual,
+integrated proof, and independent reproduction also remain open.
+
 ## A2 full-production PDE audit gates
 
 ### **A2-FULL-NONLINEAR-MAPPING-AUDIT**

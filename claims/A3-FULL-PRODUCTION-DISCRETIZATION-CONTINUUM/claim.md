@@ -53,6 +53,20 @@ reference. Energy is nonincreasing on N8, N12, N16, N20, and N24. An
 independent continuum-residual implementation, item 4, item 5, and the
 integrated analytic convergence argument remain open.
 
+Stage 3 now closes the executable Hessian/Ritz item in its declared scope. The
+homogeneous 12-real-dimensional Fourier block has an isolated lowest cluster
+with gap `0.1368657` and maximum Ritz-residual/gap `1.0061e-8`. At the
+nonuniform Class-II stress field, the fixed-subspace Ritz errors are
+`1.5199e-3`, `4.7888e-7`, and `2.7136e-8`, with observed orders 19.89 and 9.98.
+This certifies the invariant-block cluster and grid convergence of the declared
+non-invariant Ritz matrix; it is not the full spectrum of a Sector-B solution.
+
+Stage 4 closes the CPU precision rows. The independent portable implementation
+matches the canonical CPU complex128 energy and residual exactly in the frozen
+cases. CPU complex64 has maximum energy error `9.8340e-8` and residual error
+`2.8775e-7`. CUDA complex128 and complex64 are `UNAVAILABLE` under the installed
+CPU-only Torch build, so item 5 remains open rather than being counted as PASS.
+
 ## Reproduction
 
 Run from the repository root in the same Torch-enabled Python environment used
@@ -74,6 +88,19 @@ python codes/foundations/a3_full_production_finite_time_convergence.py
 Expected: `10/10 PASS`, `A3-FULL-FINITE-TIME-CONVERGENCE-PASS`, exit 0. On the
 current CPU/Torch environment the full two-reference run takes about 10--12
 minutes.
+
+Hessian/Ritz and hardware/precision commands are:
+
+```bash
+python codes/foundations/a3_full_production_hessian_ritz_convergence.py
+python codes/foundations/a3_full_production_hardware_precision.py
+```
+
+Expected locally: `13/13 PASS` and
+`A3-FULL-HESSIAN-RITZ-CONVERGENCE-PASS`; then CPU rows PASS and
+`A3-FULL-CPU-PRECISION-PASS-GPU-UNAVAILABLE`. In a CUDA-enabled Torch build the
+same second command must report both CUDA rows PASS before the hardware gate can
+close.
 
 ## Devil's-advocate record
 
@@ -101,7 +128,6 @@ result.
 
 ## Next action
 
-Add the matrix-free Hessian/Ritz audit with an explicit isolated-cluster
-condition, followed by the CPU/GPU and complex64/complex128 matrix. The
-independent continuum residual and integrated proof remain required before
+Run the prepared hardware audit in a CUDA-enabled Torch environment. Then add
+the independent continuum residual and integrated convergence proof before
 one-command integration and tier review.

@@ -1,0 +1,93 @@
+{
+  "schema": "tect/a3-full-production-hardware-precision-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "torch": {
+    "version": "2.11.0+cpu",
+    "cuda_available": false,
+    "cuda_version": null,
+    "device_count": 0,
+    "devices": []
+  },
+  "verdict": "A3-FULL-CPU-PRECISION-PASS-GPU-UNAVAILABLE",
+  "scope": "portable independent functional implementation compared with canonical CPU complex128 on homogeneous and nonuniform Class-II-active fields",
+  "gate_closed": false,
+  "rows": [
+    {
+      "configuration": "cpu_complex128",
+      "status": "PASS",
+      "energy_limit": 1e-12,
+      "residual_limit": 1e-11,
+      "maximum_energy_relative_error": 0.0,
+      "maximum_residual_relative_l2": 0.0,
+      "fields": [
+        {
+          "field": "homogeneous",
+          "energy_relative_error": 0.0,
+          "residual_relative_l2": 0.0
+        },
+        {
+          "field": "classii_stress",
+          "energy_relative_error": 0.0,
+          "residual_relative_l2": 0.0
+        }
+      ]
+    },
+    {
+      "configuration": "cpu_complex64",
+      "status": "PASS",
+      "energy_limit": 5e-06,
+      "residual_limit": 5e-05,
+      "maximum_energy_relative_error": 9.833985728052461e-08,
+      "maximum_residual_relative_l2": 2.877483889596793e-07,
+      "fields": [
+        {
+          "field": "homogeneous",
+          "energy_relative_error": 8.524459973064009e-08,
+          "residual_relative_l2": 7.264039971125886e-08
+        },
+        {
+          "field": "classii_stress",
+          "energy_relative_error": 9.833985728052461e-08,
+          "residual_relative_l2": 2.877483889596793e-07
+        }
+      ]
+    },
+    {
+      "configuration": "cuda_complex128",
+      "status": "UNAVAILABLE",
+      "reason": "torch.cuda.is_available() is false"
+    },
+    {
+      "configuration": "cuda_complex64",
+      "status": "UNAVAILABLE",
+      "reason": "torch.cuda.is_available() is false"
+    }
+  ],
+  "assertions": [
+    {
+      "name": "canonical_backend_hash",
+      "status": "PASS",
+      "detail": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "cpu_complex128",
+      "status": "PASS",
+      "detail": "energy=0.000000e+00/1.000000e-12; residual=0.000000e+00/1.000000e-11"
+    },
+    {
+      "name": "cpu_complex64",
+      "status": "PASS",
+      "detail": "energy=9.833986e-08/5.000000e-06; residual=2.877484e-07/5.000000e-05"
+    },
+    {
+      "name": "cuda_availability_reported_honestly",
+      "status": "PASS",
+      "detail": "cuda_available=False; unavailable is not counted as GPU PASS"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 4,
+    "total": 4
+  }
+}

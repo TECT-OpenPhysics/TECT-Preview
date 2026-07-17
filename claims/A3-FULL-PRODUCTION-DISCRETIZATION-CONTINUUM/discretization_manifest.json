@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T3 COMPUTABLE-SCAFFOLD; stage-1 spatial and stage-2 finite-time audits PASS",
+  "status": "T3 COMPUTABLE-SCAFFOLD; stages 1-3 PASS, stage 4 CPU PASS / GPU UNAVAILABLE",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -25,6 +25,21 @@
     "finite_time_audit": {
       "path": "codes/foundations/a3_full_production_finite_time_convergence.py",
       "sha256": "899860abf27aa5d89292bc64a06e6cc1440d69f4a728bd8a3c8fd06cfcee37aa",
+      "version": "1.0.0"
+    },
+    "hessian_ritz_audit": {
+      "path": "codes/foundations/a3_full_production_hessian_ritz_convergence.py",
+      "sha256": "4dcb1d6df4a8d7cd965760e45ce9983076cebce99bd85679786cef3cb82afb49",
+      "version": "1.0.0"
+    },
+    "portable_backend": {
+      "path": "codes/foundations/a3_full_production_portable_backend.py",
+      "sha256": "85501c65af0d73a09e9acde17dae42d1ce340d77f45f80f3a8297d22099b68ca",
+      "version": "1.0.0"
+    },
+    "hardware_precision_audit": {
+      "path": "codes/foundations/a3_full_production_hardware_precision.py",
+      "sha256": "c948992b413f3b11bb53ba582fabdcc10a8b6b4cb8be6d4088f0814594a90a0f",
       "version": "1.0.0"
     }
   },
@@ -102,10 +117,57 @@
       "require_monotone_errors": true
     }
   },
+  "stage3": {
+    "grids": [8, 12, 16],
+    "reference_grid": 20,
+    "homogeneous_block": {
+      "fourier_mode": [1, 1, 0],
+      "real_dimension": 12,
+      "lowest_cluster_multiplicity": 2,
+      "basis": "cosine and sine profiles times all six internal real coordinates",
+      "purpose": "translation invariance makes this a candidate invariant Hessian block, allowing a residual/gap eigenvalue certificate"
+    },
+    "manufactured_ritz": {
+      "real_dimension": 8,
+      "basis": "fixed orthonormal low-frequency real Fourier directions",
+      "field": "nonzero-density three-component Class-II-active stress field with Fourier indices up to 3, chosen to expose N=8 aliasing rather than start at the finite-difference floor",
+      "purpose": "grid convergence of a non-invariant Ritz matrix at a nonuniform Class-II-active stress field; no full-spectrum eigenvalue claim"
+    },
+    "hessian_steps": [0.0001, 3e-05, 1e-05],
+    "acceptance": {
+      "real_pairing_gram_error_max": 1e-12,
+      "hessian_antisymmetry_relative_max": 1e-06,
+      "homogeneous_invariance_defect_max": 1e-06,
+      "lowest_cluster_gap_min": 1e-04,
+      "cluster_residual_to_gap_max": 1e-04,
+      "final_homogeneous_ritz_relative_error_max": 1e-07,
+      "final_manufactured_ritz_relative_error_max": 1e-06,
+      "minimum_manufactured_ritz_order": 4.0,
+      "hessian_step_ritz_relative_spread_max": 1e-05,
+      "require_monotone_manufactured_ritz_errors": true
+    }
+  },
+  "stage4": {
+    "grid": 8,
+    "fields": ["homogeneous", "Class-II-active stress field"],
+    "reference": "hash-pinned canonical CPU complex128 backend",
+    "matrix": ["CPU complex128", "CPU complex64", "CUDA complex128", "CUDA complex64"],
+    "availability_rule": "CUDA rows are PASS or FAIL only when torch.cuda.is_available(); otherwise they are UNAVAILABLE and the hardware gate remains open",
+    "acceptance": {
+      "cpu_complex128_energy_relative_max": 1e-12,
+      "cpu_complex128_residual_relative_max": 1e-11,
+      "complex64_energy_relative_max": 5e-06,
+      "complex64_residual_relative_max": 5e-05,
+      "cuda_complex128_energy_relative_max": 1e-11,
+      "cuda_complex128_residual_relative_max": 1e-09,
+      "cuda_complex64_energy_relative_max": 5e-06,
+      "cuda_complex64_residual_relative_max": 5e-05
+    }
+  },
   "later_stages": {
     "finite_time": "CLOSED@T3-EXECUTED: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
-    "hessian_ritz": "matrix-free real Hessian on nested Fourier subspaces; convergence claimed only for an isolated eigenvalue cluster with residual and gap checks",
-    "hardware_precision": "same frozen cases on CPU complex128, CPU complex64, and CUDA complex64/complex128 when supported; absence of CUDA is reported, not silently passed",
+    "hessian_ritz": "CLOSED@T3-EXECUTED: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
+    "hardware_precision": "PARTIAL: CPU complex128 and complex64 PASS; CUDA complex128 and complex64 UNAVAILABLE under torch 2.11.0+cpu, so the hardware gate remains open",
     "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
   },
   "tier_boundary": "T3 until all six required gates are closed. N32/N64/N128 solver output alone is not discretization evidence."

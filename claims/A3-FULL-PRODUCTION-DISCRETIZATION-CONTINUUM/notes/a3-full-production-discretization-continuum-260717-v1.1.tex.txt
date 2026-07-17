@@ -1,0 +1,88 @@
+% =============================================================================
+% Title: Full-production discretization P3: Hessian/Ritz and hardware precision
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.1 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T3 stages 3 PASS; stage 4 CPU PASS and GPU UNAVAILABLE
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This supplement records P3 stages 3 and 4. The domain, functional, positive
+floors, eta-shell-zero rule, and real pairing are unchanged from v1.0. Stage 3
+asks which conditions make a finite-grid Ritz value interpretable as a Hessian
+spectral value. Stage 4 compares an independent device/dtype-variable
+implementation with the canonical CPU complex128 backend.
+
+\section{Hessian/Ritz conditions and result}
+At a homogeneous nonzero Class-II-active background, translation invariance
+makes the cosine/sine block for Fourier index $(1,1,0)$ invariant when all six
+internal real coordinates are retained. The real block dimension is 12. If a
+Ritz cluster has gap $g>0$ and residual norm $r<g/2$, the standard residual
+bound localises true spectrum within distance $r$ and keeps the cluster
+separated from its complement. The audit measures both quantities rather than
+inferring eigenvalue validity from a symmetric small matrix.
+
+Across N8, N12, N16 and N20, the block has maximum invariance defect
+$5.45\,10^{-8}$ and relative antisymmetry below $7.50\,10^{-11}$. The lowest
+cluster has multiplicity two, gap $g=0.1368657$, maximum residual
+$1.377\,10^{-9}$, and $r/g=1.0061\,10^{-8}$. A separate nonuniform stress field
+with Fourier indices through three exposes aliasing at N8. Its fixed eight-real
+dimensional Ritz errors against N20 are $1.5199\,10^{-3}$,
+$4.7888\,10^{-7}$, and $2.7136\,10^{-8}$, with observed orders 19.89 and 9.98.
+The nonuniform subspace is not invariant and its values are not labelled as
+full-spectrum eigenvalues.
+
+\section{Hardware and precision result}
+The portable implementation reproduces the functional independently of the P1
+backend and makes device and complex dtype explicit. On homogeneous and
+nonuniform Class-II-active N8 fields, CPU complex128 agrees exactly with the
+canonical energy and residual. CPU complex64 has maximum relative energy error
+$9.8340\,10^{-8}$ and residual error $2.8775\,10^{-7}$, below the frozen
+$5\,10^{-6}$ and $5\,10^{-5}$ limits.
+
+The installed runtime is Torch 2.11.0+cpu, with no CUDA device exposed. CUDA
+complex128 and complex64 are therefore recorded as UNAVAILABLE, not PASS. The
+same executable automatically runs those rows when a CUDA-enabled Torch build
+and device are present.
+
+\section{Devil's-advocate and mandatory adversarial review}
+\textbf{Sign and factor.} The Hessian action is the centred derivative of the
+canonical real gradient, and the Ritz matrix uses the same cell-volume real
+pairing. Antisymmetry is measured before symmetrisation. \textbf{Convention.}
+All six internal real directions and both cosine/sine profiles are retained;
+dropping either would create a false invariant block. \textbf{Units.} Ritz
+values use the pinned dimensionless fixed-torus normalization. \textbf{Convergence.}
+The first stress field placed all grids at the finite-difference floor and was
+rejected despite 11/13 passing; a higher-bandwidth declared test input exposes
+measurable convergence without relaxing thresholds. \textbf{Hardcode masking.}
+No measured eigenvalue, gap, residual, error, or rate is an input. Modes and
+thresholds are declared test inputs in the manifest. \textbf{Limit cases.}
+This does not cover a BCC candidate Hessian, a non-isolated cluster, spectral
+pollution for arbitrary expanding subspaces, rho-floor removal, or unavailable
+CUDA hardware. External review of the invariant-block argument and the
+portable complex-gradient convention is invited.
+
+\section{Reproduction}
+Run the Hessian/Ritz script followed by the hardware/precision script. Expected
+local verdicts are 13/13 Hessian/Ritz PASS and CPU-PRECISION-PASS-GPU-UNAVAILABLE.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Stage 3 Hessian/Ritz passes in the declared invariant
+                         and fixed-subspace scopes; CPU precision rows pass.
+Scope:                   Fixed T3, pinned full-production functional and floors,
+                         eta_shell=0, N8/12/16 with N20 Ritz reference.
+Dependencies:            P1 canonical backend and P2 continuum PDE package.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL; T3 scaffold.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_hessian_ritz_convergence.py
+                         python codes/foundations/
+                         a3_full_production_hardware_precision.py
+Expected output:         13/13 PASS; CPU rows PASS; CUDA PASS or UNAVAILABLE.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE.
+Tier before / after:     T3 / T3.
+No-overclaim statement:  Not full candidate spectrum, GPU equivalence,
+                         independent continuum residual, T5, T6, or T7.
+Next required action:    Execute CUDA rows, then independent continuum residual
+                         and integrated convergence proof.
+\end{verbatim}

@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
 ## In progress
 
 - **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
-  - Stages 1-2 PASS (13/13 spatial, 10/10 finite-time). Next: isolated-cluster Hessian/Ritz audit, then CPU/GPU complex64/128 matrix and independent continuum residual.
+  - Stages 1-3 PASS. Stage 4 CPU complex128/64 PASS; CUDA complex128/64 UNAVAILABLE under torch 2.11.0+cpu. Next: execute same hardware audit in CUDA-enabled Torch, then independent continuum residual and integrated proof.
   - _updated 2026-07-17_
 
 ## Next up

@@ -21,7 +21,14 @@
     "codes/foundations/a3_full_production_spatial_consistency.py",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-spatial-consistency/result.json",
     "codes/foundations/a3_full_production_finite_time_convergence.py",
-    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-finite-time-convergence/result.json"
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-finite-time-convergence/result.json",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.1.tex.txt",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.1.pdf",
+    "codes/foundations/a3_full_production_hessian_ritz_convergence.py",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hessian-ritz-convergence/result.json",
+    "codes/foundations/a3_full_production_portable_backend.py",
+    "codes/foundations/a3_full_production_hardware_precision.py",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hardware-precision/result.json"
   ],
   "t7_candidate": false,
   "reproduction": {
@@ -30,12 +37,12 @@
     "status": "AVAILABLE"
   },
   "last_review": "2026-07-17",
-  "notes": "P3 is registered as a separate T3 computable scaffold. Stage 1 passes 13/13: full-production manufactured-field self-convergence on N=8,12,16 against same-backend N=24,32 oversampled references, with residual errors 5.330119610232513e-06, 4.2482235731956223e-10, and 6.667854783688148e-12. Stage 2 passes 10/10: forced manufactured RK4 errors are 5.633363671119498e-11, 3.4821256122858847e-12, and 2.1644237708117687e-13 with observed orders 4.015956458122533 and 4.007913350866455; unforced cross-grid trajectory errors are 1.306332323104246e-08, 1.0238533863457545e-12, and 1.3117724858997058e-14, with nonincreasing energy on N=8,12,16,20,24. An independent continuum-residual implementation, Hessian/Ritz convergence, CPU/GPU and precision cross-checks, the integrated proof, independent reproduction, and tier review remain open.",
+  "notes": "P3 remains a T3 computable scaffold. Stages 1-2 retain their 13/13 spatial and 10/10 finite-time PASS results. Stage 3 passes 13/13: the homogeneous 12-real-dimensional Fourier block has lowest-cluster gap 0.1368657 and maximum Ritz-residual/gap 1.006025e-08; the nonuniform stress-field Ritz errors are 1.5199039e-03, 4.7887939e-07, and 2.7135563e-08 with observed orders 19.8851 and 9.9784. Stage 4 is partial: the independent portable implementation agrees exactly on CPU complex128 and has maximum complex64 energy/residual errors 9.8339857e-08 and 2.8774839e-07. The installed torch 2.11.0+cpu exposes no CUDA device, so CUDA complex128/64 are UNAVAILABLE and do not close the hardware gate. Independent continuum residual, GPU execution, integrated proof, independent reproduction, and tier review remain open.",
   "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "title": "Full-production spectral discretization to continuum PDE",
   "sector": "A",
-  "statement": "For the hash-pinned full-production functional and fixed-torus PDE, the P3 package defines the Fourier projector and separates the exact spectral Galerkin residual from the production collocation gradient. Stage 1 verifies stable same-backend spatial self-convergence and the real energy-gradient identity. Stage 2 independently separates RK4 temporal error from cross-grid spatial trajectory error, verifies fourth-order manufactured time convergence, and observes nonincreasing energy on every tested unforced trajectory.",
-  "scope": "T3 COMPUTABLE-SCAFFOLD. Fixed T3, pinned full-production parameters and positive regularisers, eta_shell=0, analytic nonzero-density manufactured field, CPU complex128. Spatial grids N=8,12,16 with N=24,32 references; finite-time grids N=8,12,16 with N=20,24 references. Stages 1 and 2 only.",
+  "statement": "For the hash-pinned full-production functional and fixed-torus PDE, P3 stages 1-3 verify spatial self-convergence, the real energy-gradient identity, fourth-order manufactured finite-time convergence, unforced trajectory and energy convergence, and Hessian/Ritz grid convergence with an isolated-cluster residual/gap certificate. The independent portable implementation closes CPU complex128/64 consistency; GPU rows remain unavailable.",
+  "scope": "T3 COMPUTABLE-SCAFFOLD. Fixed T3, pinned full-production parameters and positive regularisers, eta_shell=0, analytic nonzero-density manufactured fields. Spatial and finite-time grids as frozen in stages 1-2; Hessian/Ritz N=8,12,16 against N=20; CPU complex128/64 precision matrix at N=8. CUDA not executed.",
   "tier": "T3",
   "evidence_grade": [
     "ANALYTIC",
@@ -43,6 +50,6 @@
     "CONDITIONAL"
   ],
   "falsifier": "Source-hash drift, an unstable oversampling reference, nonconvergent collocation-to-Galerkin residual error, failure of the discrete energy-gradient identity, failure of the later finite-time or Hessian/Ritz convergence conditions, or an unexplained hardware/precision discrepancy invalidates the corresponding P3 stage.",
-  "no_overclaim": "This T3 stage does not supply an independent continuum residual, a completed Galerkin passage, finite-time solution convergence, Hessian or Ritz convergence, CPU/GPU equivalence, complex64 adequacy, convergence of the historical solver, continuum validity of N32/N64/N128 Sector-B runs, minimizer or BCC selection, T5, T6, or T7.",
-  "next_action": "Add the isolated-cluster Hessian/Ritz audit and hardware/precision matrix, then implement the independent continuum residual and integrated convergence proof before review."
+  "no_overclaim": "This T3 stage does not supply an independent continuum residual, a completed Galerkin passage, full-spectrum Hessian convergence at a Sector-B candidate, GPU equivalence, convergence of the historical solver, continuum validity of N32/N64/N128 Sector-B runs, minimizer or BCC selection, T5, T6, or T7.",
+  "next_action": "Run the prepared hardware/precision audit in a CUDA-enabled Torch environment, then implement the independent continuum residual and integrated convergence proof before review."
 }
