@@ -1,8 +1,8 @@
 {
-  "schema": "tect/a2-full-production-wellposed/1.2",
+  "schema": "tect/a2-full-production-wellposed/1.3",
   "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
   "frozen_on": "2026-07-17",
-  "status": "T4 FULL-PROOF-CANDIDATE; algebraic/coercive, nonlinear-mapping, and energy-continuation audits passed; smoothing audit open",
+  "status": "T4 FULL-PROOF-CANDIDATE COMPLETE; all five P2 analytic stages and four executable audits passed; tier review separate",
   "authority": {
     "p1_functional_manifest": {
       "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
@@ -28,6 +28,11 @@
       "sha256": "76d08eccb464060639e61d0603d7623482830fc31fc3027f01432b7d9a75a7fc",
       "version": "1.0.0"
     },
+    "smoothing_audit": {
+      "path": "codes/foundations/a2_full_production_smoothing_audit.py",
+      "sha256": "7f3e0436c6ea5f2aacf4397227c73304d6674b52b5de561eac88195edf0b0c62",
+      "version": "1.0.0"
+    },
     "audit_result": {
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json",
       "sha256": "b9df1470a98fa8f6293474c775acadf74b04f8359fe5c8cf5ee523a8bebcedea",
@@ -42,6 +47,11 @@
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json",
       "sha256": "56b563d1d4f5a3f1566f8e9d5c268b108c08506c6dada151bea9879bf0bd2dca",
       "verdict": "A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS"
+    },
+    "smoothing_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-smoothing-audit/result.json",
+      "sha256": "1b845e1bd4ee6912d6fdf34f7215ce5ea1ee7ef644e19cde9b38c7dbf975aadd",
+      "verdict": "A2-FULL-SMOOTHING-AUDIT-PASS"
     }
   },
   "canonical_variational_subset": {
@@ -134,9 +144,9 @@
     {
       "order": 5,
       "name": "continuous dependence and positive-time smoothing",
-      "status": "PROOF-CANDIDATE-PENDING-AUDIT",
-      "gate": "A2-FULL-SMOOTHING-AUDIT",
-      "route": "iterate the local Lipschitz estimate on energy-bounded balls and bootstrap analytic-semigroup regularity"
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "v1.3 proves weakly singular Gronwall continuous dependence, fractional positive-time gain, the endpoint H4 Duhamel cancellation, and the two-derivative Moser bootstrap to C-infinity; the independent NumPy spectral audit passes 15/15",
+      "route": "The P2 proof package is complete at T4. Tier promotion is a separate governance action."
     }
   ],
   "proxy_separation": {
@@ -145,5 +155,5 @@
     "canonical_pde": "Uses only the independently implemented P1 reference functional",
     "rule": "No PDE theorem or energy identity may be transferred to the historical backend."
   },
-  "tier_boundary": "T4 proof candidate only. T6 requires discharge of the remaining smoothing analytic audit and operator approval; T7 is not under consideration."
+  "tier_boundary": "T4 complete proof package only. All named P2 analytic gates are discharged, but no automatic tier change follows. T5/T6 requires a separate adversarial tier review and operator approval; T7 is not under consideration."
 }

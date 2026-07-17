@@ -1,0 +1,131 @@
+% =============================================================================
+% Title: Full production three-component gradient flow: dependence and smoothing
+% Claim: A2-FULL-PRODUCTION-WELLPOSED
+% Version: v1.3 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 FULL-PROOF-CANDIDATE; all five P2 analytic gates closed
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This v1.3 note closes only \texttt{A2-FULL-SMOOTHING-AUDIT}. The scope is the canonical P1 functional on the fixed three-torus, in six real coordinates, with positive regularisers and $\eta_{\rm shell}=0$. Versions v1.0--v1.2 already establish: a positive self-adjoint fourth-order linear operator $L$ with $D(L)=H^4$ and $D(L^{1/2})=H^2$; a full lower-order map $N:H^2\to L^2$ that is locally Lipschitz; a unique local mild solution; the exact energy identity; and a coercive global $H^2$ bound.
+
+Write $H=L^2(\mathbb T^3;\mathbb R^6)$, $X_\alpha=D(L^\alpha)$, and $S(t)=e^{-tL}$. Positivity and ellipticity give
+\[
+ X_\alpha=H^{4\alpha}\quad(0\leq\alpha\leq1),
+ \qquad \|L^\alpha S(t)\|_{H\to H}\leq C_\alpha t^{-\alpha}.       \tag{1.1}
+\]
+All Sobolev spaces are periodic. Norm equivalence constants depend only on the pinned production coefficients and torus.
+
+\section*{2. Continuous dependence in $H^2$}
+
+Let $u,v$ be two canonical solutions on $[0,T]$ and set $w=u-v$. On a common $H^2$ ball of radius $R$, the v1.1 estimate gives
+\[
+ \|N(u)-N(v)\|_H\leq K_R\|u-v\|_{H^2}.                    \tag{2.1}
+\]
+The energy estimate provides such a common ball on $[0,T]$ for initial data in any bounded neighbourhood of a fixed datum. The mild difference equation is
+\[
+ w(t)=S(t)w(0)-\int_0^tS(t-s)[N(u(s))-N(v(s))],ds.        \tag{2.2}
+\]
+Apply $L^{1/2}$, use commutation on $X_{1/2}$ and (1.1), and use the equivalence $X_{1/2}=H^2$:
+\[
+ \|w(t)\|_{H^2}\leq C\|w(0)\|_{H^2}
+ +C K_R\int_0^t(t-s)^{-1/2}\|w(s)\|_{H^2},ds.           \tag{2.3}
+\]
+The kernel is integrable. The weakly singular Gronwall lemma (equivalently, iteration of the convolution followed by the Mittag--Leffler bound) yields
+\[
+ \sup_{0\leq t\leq T}\|u(t)-v(t)\|_{H^2}
+ \leq C(T,R)\|u(0)-v(0)\|_{H^2}.                         \tag{2.4}
+\]
+This proves uniqueness again and continuous dependence on every finite time interval.
+
+\section*{3. Fractional positive-time gain}
+
+For $1/2\leq\alpha<1$, the mild formula and (1.1) give, for $t>0$,
+\[
+ \|u(t)\|_{X_\alpha}
+ \leq C t^{-(\alpha-1/2)}\|u_0\|_{X_{1/2}}
+ +C\int_0^t(t-s)^{-\alpha}\|N(u(s))\|_H,ds.             \tag{3.1}
+\]
+The second integral is finite precisely because $\alpha<1$ and $N(u)$ is bounded in $H$ on energy-bounded $H^2$ balls. Hence
+\[
+ u\in C((0,T];X_\alpha)\quad\hbox{for every }\alpha<1,   \tag{3.2}
+\]
+with uniform bounds on $[\delta,T]$ for every $\delta>0$.
+
+Choose one $\alpha\in(1/2,1)$. On a shifted interval, the semigroup difference estimate and the short Duhamel integral imply
+\[
+ \|u(t+h)-u(t)\|_{X_{1/2}}
+ \leq C_\delta\bigl(h^{\alpha-1/2}+h^{1/2}\bigr).        \tag{3.3}
+\]
+Thus $u$ is Holder continuous in $H^2$ with some exponent $\theta>0$ away from $t=0$. By (2.1), $f(t)=N(u(t))$ is Holder continuous into $H$ with the same positive exponent.
+
+\section*{4. The first $H^4$ gain}
+
+The estimate with $\alpha<1$ alone does not reach $D(L)$. Fix $0<a<t$ and use the shifted mild formula. For the nonlinear convolution, add and subtract $f(t)$:
+\[
+ L\int_a^tS(t-s)f(s),ds
+ =(I-S(t-a))f(t)
+ +\int_a^tLS(t-s)[f(s)-f(t)],ds.                         \tag{4.1}
+\]
+The first term belongs to $H$. In the second,
+\[
+ \|LS(t-s)[f(s)-f(t)]\|_H
+ \leq C(t-s)^{-1}(t-s)^\theta=C(t-s)^{\theta-1},          \tag{4.2}
+\]
+which is integrable because $\theta>0$. The linear term $LS(t-a)u(a)$ is also in $H$. Therefore $Lu(t)\in H$ and
+\[
+ u(t)\in D(L)=H^4\qquad\hbox{for every }t>0,              \tag{4.3}
+\]
+uniformly on compact positive-time intervals. Formula (4.1), rather than an invalid direct integration of the non-integrable $(t-s)^{-1}$ bound, is the essential endpoint step.
+
+\section*{5. Bootstrap to smoothness}
+
+The positive floors $\rho_{\rm floor}>0$ and $M_X^2+\varepsilon_M>0$ make every Class-II coefficient a smooth function of the six real field components. The v1.1 local expression contains at most two spatial derivatives. Periodic Moser product and composition estimates consequently give, for every integer $m\geq2$,
+\[
+ N:H^m\longrightarrow H^{m-2}\quad\hbox{locally Lipschitz}.              \tag{5.1}
+\]
+After (4.3), repeat Sections 3--4 on the base space $H^{m-2}$. The fourth-order operator has domain $H^{m+2}$ there, while $H^m$ is its half-power domain. Each shifted repetition therefore gives
+\[
+ H^m\longrightarrow H^{m+2}\quad\hbox{for positive time}.               \tag{5.2}
+\]
+Starting at $m=4$ and iterating proves $u(t)\in H^m$ for every $m$ and every $t>0$. Sobolev embedding gives spatial $C^\infty$ regularity. The equation $u_t=-Lu-N(u)$ and differentiation on intervals $[\delta,T]$ then give all time derivatives, so the solution is classical and $C^\infty$ in space-time for $t>0$.
+
+\section*{6. Independent executable audit}
+
+The NumPy-only script \texttt{codes/foundations/a2\_full\_production\_smoothing\_audit.py} reconstructs the full linear Fourier symbol from the pinned P1 manifest. It checks the positive scalar minimum and internal matrix, graph-norm equivalence on an adversarial Fourier sample, spectral contraction, the fractional analytic-semigroup bound, integrability of the $(t-s)^{-1/2}$ and $(t-s)^{\theta-1}$ kernels, positive regularisers, the zero-shell-bias scope, and the two-derivative bootstrap margin. It also requires all three earlier P2 audits to be present and passing.
+
+The recorded run passes 15/15 assertions. The continuous scalar symbol minimum is $0.260000000009475$, and the largest sampled ratio to the exact universal fractional semigroup bound is $0.999999998916$. The executable audits source pins, signs, exponents, and spectral constants; Sections 2--5 supply the nonlinear PDE proof.
+
+\section*{7. Devil's-advocate}
+
+\begin{itemize}
+\item \emph{``The bound for every $\alpha<1$ has been silently promoted to $H^4$.''} UPHELD as an invalid shortcut and fixed: Section 4 uses positive-time Holder continuity and the cancellation identity (4.1) to reach the endpoint $D(L)$.
+\item \emph{``The $LS(t-s)$ Duhamel kernel is non-integrable.''} DISMISSED after the required subtraction of $f(t)$: Holder continuity changes the endpoint kernel to $(t-s)^{\theta-1}$.
+\item \emph{``Class-II rational coefficients may destroy the higher Sobolev bootstrap.''} DISMISSED only in the pinned scope: both denominators have strictly positive floors, and the real-coordinate map has differential order two, so standard periodic Moser estimates give (5.1).
+\item \emph{``A finite Fourier sample proves the smoothing theorem.''} UPHELD as an overclaim. The executable is an independent spectral and bookkeeping audit; the analytic argument is Sections 2--5.
+\item \emph{``Closing this gate automatically makes the claim T6.''} UPHELD as a governance error. This turn closes the P2 proof package at T4; any theorem-tier promotion requires a separate tier review and operator approval.
+\end{itemize}
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-FULL-PRODUCTION-WELLPOSED
+Precise statement:       Canonical global H2 solutions depend continuously on
+                         H2 initial data on finite intervals and are C-infinity
+                         for every positive time.
+Scope:                   Fixed T3, six-real-coordinate C3 field, canonical
+                         P1 functional, positive regularisers, eta_shell=0.
+Dependencies:            P2 v1.0--v1.2 audits and their hash-pinned evidence.
+Evidence grade:          ANALYTIC + EXECUTED; T4 proof package complete.
+Reproduction command:    python codes/foundations/
+                         a2_full_production_smoothing_audit.py
+Expected output:         15/15 PASS; A2-FULL-SMOOTHING-AUDIT-PASS; exit 0.
+Falsification gate:      Failure of H2 local Lipschitz continuity, positive
+                         semigroup bounds, endpoint cancellation, or the
+                         two-derivative Moser bootstrap.
+Tier before / after:     T4 / T4 (final analytic gate discharged only).
+No-overclaim statement:  Not T6, T7, historical proxy, eta_shell!=0,
+                         Hs data below H2, or infinite volume.
+Next required action:    Separate T5/T6 tier review with operator approval;
+                         do not alter this proof package during that review.
+\end{verbatim}
