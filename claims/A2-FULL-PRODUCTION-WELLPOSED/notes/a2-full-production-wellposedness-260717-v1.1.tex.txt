@@ -1,0 +1,209 @@
+% =============================================================================
+% Title: Full production three-component gradient flow: nonlinear-map audit
+% Claim: A2-FULL-PRODUCTION-WELLPOSED
+% Version: v1.1 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 FULL-PROOF-CANDIDATE; nonlinear-map audit closed, two analytic audits remain
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This v1.1 note closes only the first analytic audit of the full-production P2
+route.  It does not change the older scalar claim
+\texttt{A2-PDE-WELLPOSED}, and it does not promote the full claim beyond T4.
+The scope remains the real-$L^2$ gradient flow of the canonical P1 reference
+functional on the fixed three-torus, with three complex components, positive
+regularisers, and $\eta_{\rm shell}=0$.  The historical backend remains a
+non-variational proxy and is excluded.
+
+The purpose is precise: expand the Class-II Euler--Lagrange map in six real
+coordinates, prove that it has spatial order at most two, and establish the
+local $H^2\to L^2$ Lipschitz estimate required by the fourth-order semigroup
+local-existence route.  The Galerkin energy passage and the positive-time
+smoothing bootstrap are not addressed here; their two gates remain open.
+
+\section*{2. Six-real-coordinate Class-II density}
+
+Write
+\[
+ u=(\operatorname{Re}\Psi_1,\operatorname{Re}\Psi_2,
+ \operatorname{Re}\Psi_3,\operatorname{Im}\Psi_1,
+ \operatorname{Im}\Psi_2,\operatorname{Im}\Psi_3)\in\mathbb R^6.
+\]
+For each P1 Hermitian generator $T_A$, let $A_A$ denote its real symmetric
+realification.  Then
+\[
+ \rho=u^Tu,\qquad m_A=u^TA_Au,\qquad
+ q_A={m_A\over\rho+\epsilon_\rho}.
+\]
+With $w_j=\partial_j u$, define
+\[
+ p_A(u)=2A_Au,\qquad s_A(u)=2(A_A-q_A(u)I_6)u.
+\]
+The identities
+\[
+ \partial_jm_A=p_A(u)^Tw_j,\qquad
+ K_{A,j}=s_A(u)^Tw_j
+\]
+turn the full Class-II density into
+\[
+ G_{II}(u,\nabla u)={1\over2}\sum_{j=1}^3w_j^TB(u)w_j,
+\]
+where
+\[
+ B(u)=\sum_A\left[a\,p_Ap_A^T+
+ b(p_As_A^T+s_Ap_A^T)+c\,s_As_A^T\right].                 \tag{2.1}
+\]
+Here $a,b,c$ are exactly the production coefficients derived from the P1
+manifest.  The matrix is symmetric.  Its definition is an identity, rather
+than an approximation or an expansion around a nonzero background.
+
+The regulariser is decisive: $\epsilon_\rho>0$ makes $q_A$, hence $B$, a
+$C^\infty$ function on all of $\mathbb R^6$.  Moreover
+\[
+ |q_A(u)|\le \|A_A\|_{\rm op}{\rho\over\rho+\epsilon_\rho}
+ \le\|A_A\|_{\rm op}.                                    \tag{2.2}
+\]
+For every finite $R$, the functions $B$, $DB$, and $D^2B$ have finite
+supremum norms on $\{|u|\le R\}$.  No inverse power of $\rho$ is present
+without the positive $\epsilon_\rho$ denominator.
+
+\section*{3. Explicit Euler--Lagrange expansion}
+
+For a density of the form (2.1), componentwise differentiation gives
+\[
+ \begin{aligned}
+ (N_{II}(u))_\gamma={}&-B_{\gamma\beta}(u)\Delta u_\beta\\
+ &+\sum_{j=1}^3\left[{1\over2}\partial_\gamma B_{\alpha\beta}(u)
+              -\partial_\alpha B_{\gamma\beta}(u)\right]
+       (\partial_ju_\alpha)(\partial_ju_\beta),
+ \end{aligned}                                               \tag{3.1}
+\]
+with repeated real-coordinate indices summed from $1$ to $6$.  Thus there are
+only two types of terms:
+\[
+                 B(u)\nabla^2u,qquad
+                 C(u)[\nabla u,\nabla u],                    \tag{3.2}
+\]
+where $C$ is a smooth tensor built from $DB$.  In particular, Class-II
+contributes no spatial derivative of order three or four.  Since the pinned
+Brazovskii coefficient is $Y=1>0$, the fourth-order linear operator remains
+the unique principal order-four part of the PDE.
+
+For auditability, the derivative used in (3.1) is completely explicit.  For
+a direction $h\in\mathbb R^6$,
+\[
+ Dq_A(u)[h]={2(h^TA_Au)(\rho+\epsilon_\rho)-2m_A(h^Tu)
+                 \over(\rho+\epsilon_\rho)^2},               \tag{3.3}
+\]
+\[
+ Dp_A(u)[h]=2A_Ah,
+ \qquad Ds_A(u)[h]=2(A_A-q_AI_6)h-2Dq_A(u)[h]u.               \tag{3.4}
+\]
+Applying the product rule to (2.1) gives $DB(u)[h]$ with no hidden
+differential operator.  Equations (3.1)--(3.4) are the requested termwise
+real-coordinate expansion.
+
+\section*{4. Local H2-to-L2 Lipschitz estimate}
+
+Fix an $H^2$ ball of radius $R$ on the fixed three-torus.  Sobolev embedding
+gives
+\[
+ H^2\hookrightarrow L^\infty,\qquad H^2\hookrightarrow W^{1,6}.
+\]
+Equation (2.2) and the bounded-set smoothness of $B,DB,D^2B$ give constants
+$C_R$ for all coefficient differences.  From (3.2),
+\[
+ \begin{aligned}
+ \|B(u)\Delta u-B(v)\Delta v\|_{L^2}
+ &\le C_R\|u-v\|_{H^2},\\
+ \|C(u)[\nabla u,\nabla u]-C(v)[\nabla v,\nabla v]\|_{L^2}
+ &\le C_R\|u-v\|_{H^2}.
+ \end{aligned}                                               \tag{4.1}
+\]
+For the second line, each product of two first derivatives is in $L^3$ by
+$L^6\cdot L^6\subset L^3$, and $L^3\hookrightarrow L^2$ on the fixed
+finite-volume torus.  The differences split into one derivative difference
+and one bounded $W^{1,6}$ factor, plus a coefficient difference controlled by
+$\|u-v\|_{L^\infty}$.  This proves
+\[
+ \|N_{II}(u)-N_{II}(v)\|_{L^2}
+ \le C_R\|u-v\|_{H^2}.                                      \tag{4.2}
+\]
+The local potential has real gradient
+\[
+ N_{\rm pot}(u)=\lambda\rho u+\gamma\rho^2u,
+\]
+and obeys the same estimate because $H^2(\mathbb T^3)$ is an algebra.  The
+family and lock terms are bounded linear maps.  Hence the full lower-order
+map $N:H^2\to L^2$ is locally Lipschitz in the pinned canonical scope.
+
+This closes the mapping input for the standard analytic-semigroup local
+solution construction.  It does not itself establish the later Galerkin
+chain rule, global continuation, continuous dependence, or smoothing claims.
+
+\section*{5. Independent executable audit}
+
+The independent NumPy script
+\texttt{codes/foundations/a2\_full\_production\_nonlinear\_mapping\_audit.py}
+does not call the Torch-autodiff P1 backend.  It reads the P1 manifest and
+verifies the backend source hash, then checks the six-real-coordinate
+identities against central finite differences of local jets.  The recorded
+run reports 14/14 assertions passing:
+\[
+ \begin{array}{rcl}
+ \max|m_{\mathbb C}-m_{\mathbb R}|&=&8.881784197001252\times10^{-16},\\
+ \max\operatorname{relerr}(Dq)&=&2.70426292470205\times10^{-10},\\
+ \max\operatorname{relerr}(DB)&=&1.1811986217680235\times10^{-10},\\
+ \max\operatorname{relerr}(E_{II})&=&9.042801480415788\times10^{-11}.
+ \end{array}
+\]
+The complex-to-real density identity has relative error
+$1.1102230246251565\times10^{-16}$.  These are reproducibility checks of the
+expansion and its factors; the analytic proof of (4.2), not the float values,
+is the closure basis.
+
+\section*{6. Devil's-advocate}
+
+\begin{itemize}
+\item \emph{``$K_A$ divides by $\rho$, so the zero field is singular.''}
+DISMISSED in the stated scope: the pinned functional has
+$\rho+\epsilon_\rho$ with $\epsilon_\rho=10^{-12}>0$; (3.3) is defined at
+$u=0$ and the executable includes that case.
+\item \emph{``The $C(u)[\nabla u,\nabla u]$ term loses one derivative.''}
+DISMISSED: $H^2\hookrightarrow W^{1,6}$ makes the product $L^3$, and on the
+fixed torus $L^3\hookrightarrow L^2$.  The difference estimate needs only
+$D^2B$ on an $L^\infty$-bounded ball.
+\item \emph{``Realification may hide a factor of two or the complex
+cross-term.''} DISMISSED by the independent complex-to-real density identity
+and local Euler--Lagrange jet test, both of which pass with the recorded
+errors above.
+\item \emph{``This proves global well-posedness.''} UPHELD as an invalid
+reading.  The Galerkin chain rule/energy passage and smoothing bootstrap are
+still separate open gates.
+\item \emph{``The conclusion transfers to the historical solver.''} UPHELD
+as an invalid reading.  The audit is only for the canonical P1 variational
+functional; the historical backend remains explicitly non-variational.
+\end{itemize}
+
+\section*{7. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-FULL-PRODUCTION-WELLPOSED
+Precise statement:       The full canonical lower-order Euler--Lagrange map,
+                         including Class-II, is locally Lipschitz H2 -> L2.
+Scope:                   Fixed T3, six-real-coordinate C3 field, canonical
+                         P1 functional, positive regularisers, eta_shell=0.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION.
+Evidence grade:          ANALYTIC + EXECUTED; T4 proof candidate.
+Reproduction command:    python codes/foundations/
+                         a2_full_production_nonlinear_mapping_audit.py
+Expected output:         14/14 PASS;
+                         A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS; exit 0.
+Falsification gate:      A singular coefficient, a Class-II derivative above
+                         order two, or a failed bounded-ball H2 -> L2 bound.
+Tier before / after:     T4 / T4 (one analytic gate discharged only).
+No-overclaim statement:  Not energy continuation, global PDE closure,
+                         smoothing, T6, T7, historical proxy, or eta_shell!=0.
+Next required action:    Audit the Galerkin chain rule, energy identity, and
+                         coercive continuation in A2-FULL-ENERGY-CONTINUATION-AUDIT.
+\end{verbatim}

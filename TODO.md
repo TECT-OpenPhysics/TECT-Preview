@@ -3,16 +3,16 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 30
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 31
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-034** Audit the full Class-II Euler-Lagrange map H2 to L2  _(owner: unassigned; claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-NONLINEAR-MAPPING-AUDIT)_
-  - First P2 analytic gate after the 2026-07-17 coercivity baseline: expand the six-real-component operator term by term and independently verify local Lipschitz continuity without derivative loss.
-  - _updated 2026-07-16_
+- **T-035** Audit full Class-II Galerkin energy identity and global continuation  _(claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-ENERGY-CONTINUATION-AUDIT)_
+  - Next P2 gate after the closed nonlinear H2-to-L2 audit: verify the finite-dimensional chain rule, compactness passage, and coercive continuation argument for the canonical eta_shell=0 functional.
+  - _updated 2026-07-17_
 
 ## Backlog
 
@@ -101,3 +101,6 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 30
 - **T-033** N-001: evaluate projected Hessian/Rayleigh curvature of the homogeneous branch on the commensurate q0/BCC-star subspace  _(owner: unassigned)_
   - N32 full-star COMPLETE 2026-07-16: all six commensurate BCC {110} antipodal pairs around the uploaded homogeneous branch have positive projected Hessian curvature. Minimum curvature +52.12042392718455; no negative/near-zero directions. Evidence: reviews/2026-07-16-n001-bcc-star-curvature-n32-fullstar.json. This is the current operator-level stop signal for this parameter point; N64/N128 projected star checks are optional grid-transfer follow-up, and no tier or claim action is authorized.
   - _updated 2026-07-16_
+- **T-034** Audit the full Class-II Euler-Lagrange map H2 to L2  _(owner: unassigned; claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-NONLINEAR-MAPPING-AUDIT)_
+  - First P2 analytic gate after the 2026-07-17 coercivity baseline: expand the six-real-component operator term by term and independently verify local Lipschitz continuity without derivative loss.
+  - _updated 2026-07-17_

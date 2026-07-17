@@ -1,8 +1,8 @@
 {
-  "schema": "tect/a2-full-production-wellposed/1.0",
+  "schema": "tect/a2-full-production-wellposed/1.1",
   "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
   "frozen_on": "2026-07-17",
-  "status": "T4 FULL-PROOF-CANDIDATE; algebraic/coercive baseline passed; three analytic audits open",
+  "status": "T4 FULL-PROOF-CANDIDATE; algebraic/coercive baseline and nonlinear-mapping audit passed; two analytic audits open",
   "authority": {
     "p1_functional_manifest": {
       "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
@@ -18,10 +18,20 @@
       "sha256": "cfb91709f1568daddb20e5080a0edcb0d74394228359b61e7f14570bb1ee2457",
       "version": "1.0.0"
     },
+    "nonlinear_mapping_audit": {
+      "path": "codes/foundations/a2_full_production_nonlinear_mapping_audit.py",
+      "sha256": "9cb8b3addcac3da8d7c6e5862379b8235cb463301194e624297134e256f463a9",
+      "version": "1.0.0"
+    },
     "audit_result": {
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json",
       "sha256": "b9df1470a98fa8f6293474c775acadf74b04f8359fe5c8cf5ee523a8bebcedea",
       "verdict": "A2-FULL-COERCIVITY-BASELINE-PASS"
+    },
+    "nonlinear_mapping_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json",
+      "sha256": "9aacfaa7afdd23e614395cd335f70c13c4d32de7093f7cf0e0bce44dfb8e0e8f",
+      "verdict": "A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS"
     }
   },
   "canonical_variational_subset": {
@@ -100,9 +110,9 @@
     {
       "order": 3,
       "name": "local existence and uniqueness",
-      "status": "PROOF-CANDIDATE-PENDING-AUDIT",
-      "gate": "A2-FULL-NONLINEAR-MAPPING-AUDIT",
-      "route": "show the full lower-order Euler-Lagrange map is locally Lipschitz H2 to L2, then use the analytic fourth-order semigroup"
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "v1.1 six-real-coordinate expansion gives only B(u) grad^2 u and DB(u)[grad u,grad u] terms; the bounded-ball H2-to-L2 Lipschitz estimate is analytic and the independent local-jet audit passes 14/14",
+      "route": "The mapping input is closed; the analytic fourth-order semigroup construction still requires the later energy and smoothing audits for the theorem target."
     },
     {
       "order": 4,

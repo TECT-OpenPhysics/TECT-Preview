@@ -14,9 +14,15 @@ lower-order map is locally Lipschitz from $H^2(\mathbb T^3;\mathbb R^6)$ to
 $L^2$. The positive fourth-order coefficient must remain the sole principal
 order-four part.
 
-**Status:** OPEN. A general smooth-coefficient/quadratic-gradient argument is
-assembled in the A2 full-production v1.0 note; explicit term expansion and an
-independent audit are still required before theorem-tier use.
+**Status:** CLOSED@T4-PROOF-CANDIDATE (2026-07-17). The v1.1 note expands the
+canonical Class-II density as
+`G_II=1/2 sum_j (partial_j u)^T B(u) partial_j u` in six real coordinates and
+derives its Euler--Lagrange map as `B(u) grad^2 u` plus
+`DB(u)[grad u,grad u]`. On bounded `H2` balls, Sobolev embedding gives the
+local `H2 -> L2` Lipschitz estimate. The independent NumPy audit
+`a2_full_production_nonlinear_mapping_audit.py` passes 14/14, including the
+complex-to-real density and local-jet formula checks. This is not a T6 PDE
+closure; the energy-continuation and smoothing gates remain open.
 
 ### **A2-FULL-ENERGY-CONTINUATION-AUDIT**
 
