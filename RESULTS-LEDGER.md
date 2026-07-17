@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-044](#r-044) | Full-production three-component gradient-flow well-posedness on the fixed torus | T6 CONDITIONAL-THEOREM; global H2 existence/uniqueness, continuous dependence, exact energy identity, and positive-time C-infinity smoothing; 61/61 aggregate audit |
 | [R-043](#r-043) | T-030 CONDITIONAL consolidation: lattice R^eps-loss closed conditionally on R-026 (proof appended); B5 closure = Lemma2+LemmaA (T'<=10 => 11N^2), independent of R-026 & cover-number L; N^2 polylog & E_2/S^2 OPEN (Bourgain-Demeter); treadmill terminated | CONDITIONAL CONSOLIDATION (not a proof certificate); B5 T7-SCOPE_adm unaffected; dr2_t030_consolidation_crosscheck.py 4/4 |
 | [R-042](#r-042) | Height-energy bound E_+<=N^2+2 sum nu_k nu_l p(z_k+z_l) + sum-annulus mechanism (disjoint=>T=0); R-033 step 2 | PARTIAL; height additive energy E_h is the parameter; 4-circle incidence core OPEN; T-030 OPEN; dr2_t030_height_energy.py 5/5 |
 | [R-041](#r-041) | Sidon-height latitude unions (any radii) E_+<=6N^2 incidence-free (R-033 step 1); non-Sidon residual = open 4-circle incidence | PARTIAL ADVANCE; PROVED Sidon bound; residual = R-033 core; T-030 OPEN; dr2_t030_sidon_decoupling.py 7/7 |
@@ -62,6 +63,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-044"></a>
+### R-044 -- full-production three-component gradient-flow well-posedness
+
+**Statement (one line):** Conditional on the hash-pinned P1 reference functional being the canonical production functional, its real-L2 gradient flow on the fixed three-torus has a unique global H2 solution for every H2 initial datum, depends continuously on the initial datum on finite intervals, satisfies the exact energy identity, and is C-infinity for positive time.
+
+**Proven in:** `A2-FULL-PRODUCTION-WELLPOSED`, integrated referee theorem v2.0; PUBLISHED bundle `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717`.
+
+**Reuse scope:** Sector-A full-production continuum dynamics; a stable PDE foundation for later variational and vacuum studies using exactly the pinned eta_shell=0 functional. It does not select a minimizer, BCC structure, or physical vacuum.
+
+**Tier:** T6 CONDITIONAL-THEOREM on `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`. Four direct audits pass 20/20, 14/14, 12/12, and 15/15; the one-command wrapper passes 61/61. Operator independent reproduction and sign-off recorded 2026-07-17. Bundle source commit `c2c5a97e21ebc1f9368c1f9e5e126eb394fe47be`; digest `f07a39627a2eccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb`.
+
+**Publication target:** Sector-A microscopic-foundation PDE theorem. Excludes the historical backend, eta_shell nonzero, data below H2, infinite volume, negative shell mass, minimizer/BCC selection, stability, and T7.
 
 <a id="r-043"></a>
 ### R-043 — T-030 consolidation & external-literature closure (treadmill terminated)

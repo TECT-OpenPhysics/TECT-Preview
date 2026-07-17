@@ -1,8 +1,8 @@
 {
-  "schema": "tect/a2-full-production-wellposed/1.3",
+  "schema": "tect/a2-full-production-wellposed/2.0",
   "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
   "frozen_on": "2026-07-17",
-  "status": "T4 FULL-PROOF-CANDIDATE COMPLETE; all five P2 analytic stages and four executable audits passed; tier review separate",
+  "status": "T6 CONDITIONAL-THEOREM; operator-confirmed, PUBLISHED bundle complete, all five P2 stages closed",
   "authority": {
     "p1_functional_manifest": {
       "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
@@ -33,6 +33,12 @@
       "sha256": "7f3e0436c6ea5f2aacf4397227c73304d6674b52b5de561eac88195edf0b0c62",
       "version": "1.0.0"
     },
+    "one_command_verifier": {
+      "path": "codes/foundations/a2_full_production_verify.py",
+      "sha256": "4bc68f4411a9babee02abdadde36dbff798e60cf75c709d28d53cf96f05551a9",
+      "version": "1.0.0",
+      "expected": "61/61 and A2-FULL-PRODUCTION-VERIFY-PASS"
+    },
     "audit_result": {
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json",
       "sha256": "b9df1470a98fa8f6293474c775acadf74b04f8359fe5c8cf5ee523a8bebcedea",
@@ -52,6 +58,14 @@
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-smoothing-audit/result.json",
       "sha256": "1b845e1bd4ee6912d6fdf34f7215ce5ea1ee7ef644e19cde9b38c7dbf975aadd",
       "verdict": "A2-FULL-SMOOTHING-AUDIT-PASS"
+    },
+    "published_t6_bundle": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717",
+      "repo_commit": "c2c5a97e21ebc1f9368c1f9e5e126eb394fe47be",
+      "bundle_digest": "f07a39627a2eccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb",
+      "files": 22,
+      "entry_scripts": 5,
+      "verdict": "ALL-PASS"
     }
   },
   "canonical_variational_subset": {
@@ -155,5 +169,5 @@
     "canonical_pde": "Uses only the independently implemented P1 reference functional",
     "rule": "No PDE theorem or energy identity may be transferred to the historical backend."
   },
-  "tier_boundary": "T4 complete proof package only. All named P2 analytic gates are discharged, but no automatic tier change follows. T5/T6 requires a separate adversarial tier review and operator approval; T7 is not under consideration."
+  "tier_boundary": "T6 CONDITIONAL-THEOREM under A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL. The mathematical theorem is closed for the declared fixed-torus eta_shell=0 functional. T7 is excluded because the declared physical domain is narrower and the theorem does not cover the historical backend, eta_shell nonzero, infinite volume, negative shell mass, or vacuum/BCC selection."
 }

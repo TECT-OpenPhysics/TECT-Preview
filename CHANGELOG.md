@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Promote A2 full-production well-posedness to scoped T6] - 2026-07-17
+
+
+
 ## [Add A2 full-production one-command verifier] - 2026-07-17
 
 

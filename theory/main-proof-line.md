@@ -31,6 +31,7 @@ the published Reading-H C_full theorem above.
 | # | result | folder | role | status |
 |---|---|---|---|---|
 | A1-PFR | Production-functional discrete variational matrix | `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION` | reproducible standalone all-coupling functional implementation; future full-production-functional support only | **PUBLISHED** (T5 CLOSED@DISCRETE-VARIATIONAL-MATRIX) -- bundle `A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717`; N=4,6,8 only; no historical-solver, continuum, BCC, minimizer, or stability claim |
+| A2-FULL | Full-production three-component gradient-flow well-posedness | `claims/A2-FULL-PRODUCTION-WELLPOSED` | continuum PDE theorem for the canonical P1 functional: unique global H2 flow, continuous dependence, exact energy identity, and positive-time smoothing | **PUBLISHED** (T6 CONDITIONAL-THEOREM on `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`) -- bundle `A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717`; 22 files, 5/5 entry scripts PASS, aggregate 61/61; excludes historical backend, eta_shell nonzero, infinite volume, minimizer/BCC selection, stability, and T7 |
 
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 

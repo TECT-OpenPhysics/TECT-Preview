@@ -6,7 +6,7 @@
 
 Generated: 2026-07-17
 
-**1396 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1418 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -79,10 +79,26 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/LINEAGE.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `bbed77b840ee` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/claim.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `580c0ff56a20` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/status.json` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `49f434c6d9db` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/LINEAGE.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `bb21346f753f` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `edef0ecc49e9` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `cca02935aa1c` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/status.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `2f802a0b4ba8` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/LINEAGE.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `348dd2cfbd9b` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/MANIFEST.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `7a17dd8d9ed3` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/README.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `ef36d86e3e97` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `88da7764302b` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/codes/foundations/a2_full_production_energy_continuation_audit.py` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `76d08eccb464` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/codes/foundations/a2_full_production_nonlinear_mapping_audit.py` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `9cb8b3addcac` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/codes/foundations/a2_full_production_smoothing_audit.py` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `7f3e0436c6ea` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/codes/foundations/a2_full_production_verify.py` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `4bc68f4411a9` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/codes/foundations/a2_full_production_wellposedness_checks.py` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `cfb91709f156` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/codes/foundations/n001_variational_backend.py` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `e2b55702d481` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/environment.txt` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `f7267cbc3df1` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/expected/a2_full_production_energy_continuation_audit.log` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `d8385367026b` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/expected/a2_full_production_nonlinear_mapping_audit.log` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `2efa001e7a74` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/expected/a2_full_production_smoothing_audit.log` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `58aa3013e808` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/expected/a2_full_production_verify.log` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `68c280e27e1c` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/expected/a2_full_production_wellposedness_checks.log` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b2bb860ea189` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/requirements.txt` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `457e45615e94` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `0bdd89e2e2b6` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `ef0238b07da6` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/status.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `9b528ba8fe4b` |
 | `claims/A2-PDE-WELLPOSED/LINEAGE.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `152035e06d33` |
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/MANIFEST.json` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `2936c37a414f` |
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/README.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `23e54efa7925` |
@@ -388,6 +404,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.tex.txt` | A1-PRODUCTION-KERNEL-MANIFEST | 2026-06-23 | 2026-07-16 | v1.7 | ACTIVE | `ea4015123fd2` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.pdf` | A1-SCALAR-ANALYTIC-BRANCH | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `897c3a956ff8` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.tex.txt` | A1-SCALAR-ANALYTIC-BRANCH | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `9e8060158030` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v2.0.pdf` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `60e22bd7f702` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v2.0.tex.txt` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `e60b1b764032` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.0.pdf` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0 | ACTIVE | `f0e704b65f7a` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.0.tex.txt` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.0 | ACTIVE | `3a85f21773d3` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v1.1.pdf` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v1.1 | ACTIVE | `39bb2834307f` |
@@ -1038,6 +1056,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-operator-01/a1_kernel_checks.stdout.txt` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `7120eae84913` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-operator-01/environment.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `b0f95b0aa77f` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-operator-01/promotion_evidence.json` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `d222b3805c91` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b9df1470a98f` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `21c7f16a6bc5` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `37d0dd3a37b7` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-smoothing-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `53c21169707d` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b9df1470a98f` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `56b563d1d4f5` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `0e27357fe044` |
@@ -1368,7 +1390,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md` | A1-PRODUCTION-FUNCTIONAL-REALISATION | — | — | — | ACTIVE | `1ae9cb0e336a` |
 | `claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md` | A1-PRODUCTION-KERNEL-MANIFEST | — | — | — | ACTIVE | `a00996ec8ef4` |
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `73ce3a0fac09` |
-| `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `61df0822727f` |
+| `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `8853a56d0cae` |
 | `claims/A2-PDE-WELLPOSED/INDEX.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `db953c1945b8` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `36bc8af82f42` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `29f58267f507` |
@@ -1378,11 +1400,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `818118c6973f` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `eee8f5809c13` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `e098ad1c0742` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `35a1298aeef8` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `c98ce41eac27` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `c896289d57e8` |
 
 ## Governance policies
 
@@ -1410,12 +1432,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `1fed49f34a61` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `c381f8debbaa` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `923fb4322158` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `7ad87749ed2f` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `f95986576da2` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `999751b7aeb5` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `d34556ea715f` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
@@ -1429,7 +1451,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `05da82e706f2` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `653102857bd9` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1467,14 +1489,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
-| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `3c8b6e90363f` |
+| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `9300a4367a74` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `ceff37462e28` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `6e98c9da52ff` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |

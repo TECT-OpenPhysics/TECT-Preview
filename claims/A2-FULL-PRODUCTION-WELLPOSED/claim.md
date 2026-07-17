@@ -1,137 +1,153 @@
 # A2-FULL-PRODUCTION-WELLPOSED -- full production three-component PDE
 
-**Tier**: T4 FULL-PROOF-CANDIDATE (TSv2) -- **Lifecycle**: ACTIVE --
+**Tier**: T6 CONDITIONAL-THEOREM (TSv2) | **Lifecycle**: ACTIVE |
 **Last review**: 2026-07-17
 
 ## Statement
 
-On the fixed periodic cell, take the real `L2` gradient flow of the canonical
-three-component P1 reference functional with the pinned production parameters
-and `eta_shell = 0`.  The full linear operator is self-adjoint on `H4`, has a
-positive spectral lower bound, and controls the `H2` norm.  The family and lock
-terms are positive semidefinite, the Class-II `J-K` coefficient matrix is
-positive definite, and the sextic term absorbs the negative quartic term.
-
-The six-real-coordinate Class-II Euler--Lagrange expansion has spatial order
-at most two, and the full lower-order map is locally Lipschitz `H2 -> L2` on
-bounded balls.  The Fourier-Galerkin chain rule, compactness passage, exact
-real-`L2` energy identity, and coercive global `H2` continuation are now
-audited.  Positive-time smoothing and continuous dependence remain the final
-T4 proof-candidate stage, not a T6 theorem.
+Assume `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`: the hash-pinned P1 reference
+functional is the canonical full-production continuum functional. On the fixed
+three-torus, for every three-component complex initial field in `H2`, its
+real-`L2` gradient flow has a unique global `H2` solution. The solution depends
+continuously on the initial field on every finite interval, obeys the exact
+gradient-flow energy identity, and is smooth for every positive time.
 
 ## Scope
 
-The field is `Psi in C3` on the fixed three-torus, regarded as six real
-components with the P1 real pairing.  The source of truth is the hash-pinned P1
-functional and production coefficient set.  Positive `rho` and Class-II mass
-regularisers are retained.  The production shell-bias coefficient is exactly
-zero.  The historical external backend remains a non-variational proxy and is
-not part of this claim.
+The field has three complex components, treated as six real components. The
+domain is the fixed periodic cell with the P1 real pairing. Production
+coefficients, positive rho and Class-II mass regularisers, and
+`eta_shell = 0` are fixed by the P1 manifest. Initial data are in `H2`.
 
-## Dependencies and gates
+Excluded: the historical non-variational solver, nonzero shell bias, removal of
+the regularisers, data below `H2`, infinite volume, negative shell mass,
+minimiser or BCC selection, vacuum stability, and T7.
 
-- Hard dependency: `A1-PRODUCTION-FUNCTIONAL-REALISATION`
-- Soft context: `A2-PDE-WELLPOSED` (the older scalar theorem, unchanged)
-- Open gate: `A2-FULL-SMOOTHING-AUDIT`
-- Hypotheses: none
+## Dependencies and hypotheses
 
-## Evidence
+- Hard dependency: `A1-PRODUCTION-FUNCTIONAL-REALISATION` (T5).
+- Named hypothesis: `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`.
+- Soft context: `A2-PDE-WELLPOSED` (older scalar theorem, unchanged).
+- Open gates: none.
 
-- [Full PDE manifest](full_pde_manifest.json)
-- [Nonlinear-map audit note](notes/a2-full-production-wellposedness-260717-v1.1.tex.txt)
-- [Deterministic audit script](../../codes/foundations/a2_full_production_wellposedness_checks.py)
-- [Audit result](runs/2026-07-17-coercivity-baseline/result.json)
-- [Independent nonlinear-map audit](../../codes/foundations/a2_full_production_nonlinear_mapping_audit.py)
-- [Nonlinear-map result](runs/2026-07-17-nonlinear-mapping-audit/result.json)
-- [Energy-continuation audit note](notes/a2-full-production-wellposedness-260717-v1.2.tex.txt)
-- [Independent energy audit](../../codes/foundations/a2_full_production_energy_continuation_audit.py)
-- [Energy-audit result](runs/2026-07-17-energy-continuation-audit/result.json)
+The named hypothesis is required by TSv2 because the T6 theorem uses a T5
+definition of the production functional. It does not weaken the mathematical
+theorem for that explicitly defined functional; it prevents transfer to the
+historical backend or a different functional.
 
-The coercivity audit gives 20/20 PASS.  Its load-bearing values are shell mass
-`0.260000000009475`, linear `H2` coercivity constant `0.2048572626782363`,
-Class-II determinant `7.031249999996483e-06`, and Class-II minimum eigenvalue
-`0.001259011500926061`.  The independent real-coordinate audit gives 14/14
-PASS, including complex-to-real density agreement at `1.11e-16`, the
-Class-II Euler local-jet formula at relative error `9.04e-11`, and the
-quartic/sextic real gradient at `1.59e-10`.  The independent NumPy
-energy-continuation audit gives 12/12 PASS: its finite Galerkin energy law has
-maximum relative error `7.99e-13` over 4, 6, and 8 grids and five field types.
+## Proof map
 
-## Reproduction
+1. The fourth-order linear operator is positive self-adjoint on `H4` and its
+   form domain is `H2`. The continuous shell-symbol minimum is
+   `0.260000000009475`, and the `H2` coercivity constant is
+   `0.2048572626782363`.
+2. The family and lock matrices are positive semidefinite. The Class-II `J-K`
+   matrix is positive definite, with determinant
+   `7.031249999996483e-06` and minimum eigenvalue
+   `0.001259011500926061`.
+3. In six real coordinates the regularised Class-II Euler--Lagrange map has
+   spatial order two and is locally Lipschitz `H2 -> L2` on bounded balls.
+   Analytic-semigroup contraction gives local existence and uniqueness.
+4. The projected Fourier-Galerkin chain rule, `H4/H2` compactness, and the
+   nonlinear real-gradient chain rule give the exact energy identity. Energy
+   coercivity prevents the `H2` continuation alternative, giving global
+   existence.
+5. Weakly singular Gronwall gives continuous `H2` dependence. Positive-time
+   Holder regularity and Duhamel cancellation give the endpoint `H4` gain;
+   the order-two nonlinear map then bootstraps by two derivatives to
+   `C-infinity`.
+
+The self-contained proof is
+[v2.0 integrated referee theorem](notes/a2-full-production-wellposedness-260717-v2.0.tex.txt).
+
+## Evidence and reproduction
+
+Evidence grades: `ANALYTIC`, `EXECUTED`, `CONDITIONAL`.
+
+- Coercivity baseline: 20/20 PASS.
+- Six-real-coordinate nonlinear map: 14/14 PASS.
+- Galerkin energy and continuation: 12/12 PASS.
+- Semigroup and smoothing: 15/15 PASS.
+- One-command aggregate: 61/61 PASS.
+
+Run from the repository root:
 
 ```bash
-python codes/foundations/a2_full_production_wellposedness_checks.py
-python codes/foundations/a2_full_production_nonlinear_mapping_audit.py
-python codes/foundations/a2_full_production_energy_continuation_audit.py
+python codes/foundations/a2_full_production_verify.py
 ```
 
-Expected: `A2-FULL-COERCIVITY-BASELINE-PASS`, 20/20 assertions, then
-`A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS`, 14/14 assertions, then
-`A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS`, 12/12 assertions; all exit 0.
+Expected: four PASS lines, `ASSERTS: 61/61`,
+`A2-FULL-PRODUCTION-VERIFY-PASS`, exit 0. The wrapper writes only temporary
+JSON and does not modify the immutable evidence.
+
+The PUBLISHED referee bundle is
+`bundle/A2-Full-Production-WellPosedness-T6-260717/`: 22 files, five entry
+scripts all PASS, source commit
+`c2c5a97e21ebc1f9368c1f9e5e126eb394fe47be`, bundle digest
+`f07a39627a2eccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb`.
 
 ## Falsifier
 
-The baseline fails if a pinned source hash drifts, the full linear operator is
-not Hermitian/coercive, the Class-II matrix is not positive definite, or the
-regulariser/sextic signs fail.  The mapping result fails if the explicit
-real-coordinate Euler--Lagrange formula has a term above second spatial order
-or its bounded-ball `H2 -> L2` estimate fails.  The energy result fails if
-the projected Galerkin chain rule, H2/H4 compactness passage, or Class-II
-chain rule fails.  The remaining theorem candidate fails if positive-time
-regularity or continuous dependence fails, or if blow-up/non-uniqueness occurs
-in the declared `H2` scope.
+The theorem fails if any initial datum in the declared `H2` scope produces
+nonexistence, nonuniqueness, finite-time `H2` blow-up, discontinuous dependence,
+failure of the exact energy identity, failure of the positive-time `H4` gain,
+or failure of the higher Sobolev bootstrap. A source-hash drift or loss of a
+positive production sign invalidates the pinned theorem input rather than being
+silently absorbed.
 
-## Devil's-advocate
+## Devil's-advocate record
 
-1. **"P1 T5 already proves this PDE theorem."** UPHELD as an invalid reading:
-   P1 is only a discrete variational-matrix result.
-2. **"The Class-II cross term can make the energy indefinite."** DISMISSED at
-   the production point: the symmetric coefficient matrix has determinant
-   `7.031249999996483e-06` and minimum eigenvalue
-   `0.001259011500926061`, both positive.
-3. **"The shell-bias activation used in P1 tests defines the continuum term."**
-   VALID with mitigation: the continuum theorem is restricted to the actual
-   production value `eta_shell = 0`; nonzero bias needs a separate
-   normalisation/convergence argument.
-4. **"Energy decrease was assumed before the Class-II chain rule was
-   justified."** UPHELD as an audit requirement: the Galerkin/chain-rule
-   passage is the named energy-continuation gate.
-5. **"The regularised Class-II term nevertheless loses derivatives."**
-   DISMISSED in the declared scope: the explicit v1.1 expansion has only
-   `B(u) grad^2 u` and `DB(u)[grad u,grad u]`; Sobolev products close in
-   `L2`, and the independent local-jet check passes 14/14.
-6. **"Fourth-order smoothing makes the remaining regularity proof
-   automatic."** UPHELD as an invalid shortcut: the positive-time bootstrap
-   remains a named audit.
-7. **"The Galerkin equality automatically survives the limit."** UPHELD as
-   an invalid shortcut and resolved: v1.2 records the H2/H4 compactness route
-   and the real-gradient Class-II chain rule separately; the NumPy audit only
-   checks the finite-dimensional projection convention.
+1. **"The discrete P1 backend already proves the continuum PDE."** UPHELD as
+   false. P1 is carried as a named definitional hypothesis; the continuum proof
+   is separate.
+2. **"The Class-II cross term destroys positivity."** DISMISSED in the pinned
+   scope by the positive determinant and minimum eigenvalue.
+3. **"The Class-II denominator is singular at the zero field."** DISMISSED only
+   with the pinned positive rho floor. Removing it requires a new theorem.
+4. **"The finite Galerkin equality automatically survives the limit."** UPHELD
+   as an invalid shortcut. Compactness and the explicit nonlinear chain rule are
+   load-bearing.
+5. **"Fractional smoothing below one already gives `H4`."** UPHELD as false.
+   The endpoint Duhamel cancellation is required.
+6. **"Well-posedness proves vacuum or BCC selection."** UPHELD as an overclaim.
+   The theorem controls evolution but does not choose the global minimiser.
+7. **"This should be T7."** UPHELD as a governance error. The declared physical
+   domain excludes several production extensions, and the T7 external-domain
+   audit is absent.
+
+## Tier decision and operator sign-off
+
+T5 is insufficient because the result is not merely a closed finite
+calculation: it proves a statement for every `H2` initial datum in the declared
+domain. T6 is justified by the full proof, named T5 definitional hypothesis,
+four independent executable audits, quantitative sanity checks, and PUBLISHED
+reproduction bundle.
+
+The operator independently reproduced the four audits and on 2026-07-17
+instructed the repository to review eligibility, explain the result, and enact
+the justified tier. This records the required operator sign-off for the
+T4-to-T6 promotion.
 
 ## No-overclaim
 
-This T4 card is not a theorem-tier closure.  It does not cover the historical
-proxy, nonzero shell bias, initial data below `H2`, infinite volume, the
-negative-shell-mass branch, minimizer or BCC selection, stability, T6, or T7.
+This is a T6 theorem conditional on the pinned P1 functional definition. It is
+not a theorem for the historical backend, `eta_shell != 0`, data below `H2`,
+infinite volume, negative shell mass, minimiser uniqueness, BCC selection,
+vacuum stability, T7, or TOE closure.
 
 ## History
 
-- 2026-07-17: created separately from the scalar A2 card.  Algebraic and
-  coercive stages closed; full `H2` proof candidate assembled at T4 with three
-  named audits retained.
-- 2026-07-17: `A2-FULL-NONLINEAR-MAPPING-AUDIT` closed.  The v1.1 note
-  expands the Class-II Euler--Lagrange map in six real coordinates and proves
-  the local `H2 -> L2` bound; an independent NumPy local-jet audit passes
-  14/14.  The tier remains T4 because energy continuation and smoothing are
-  still open.
-- 2026-07-17: `A2-FULL-ENERGY-CONTINUATION-AUDIT` closed.  The v1.2 note
-  supplies the Fourier-Galerkin chain rule, compactness/chain-rule passage,
-  exact energy identity, and coercive global continuation; an independent
-  NumPy finite-Galerkin audit passes 12/12.  The tier remains T4 because
-  smoothing and continuous dependence are still open.
+- 2026-07-17: registered at T4 as a separate full-production proof candidate.
+- 2026-07-17: nonlinear mapping audit closed, 14/14 PASS.
+- 2026-07-17: energy-continuation audit closed, 12/12 PASS.
+- 2026-07-17: continuous-dependence and smoothing audit closed, 15/15 PASS;
+  P2 proof package complete at T4.
+- 2026-07-17: operator independently reproduced the complete audit matrix;
+  v2.0 integrated referee theorem confirmed; one-command verification passed
+  61/61; PUBLISHED T6 bundle passed all five entries; T4 -> T6 enacted.
 
 ## Next required action
 
-Audit continuous `H2` dependence and the positive-time `H4` entry before
-bootstrapping the full Class-II flow to `C-infinity` in
-`A2-FULL-SMOOTHING-AUDIT`.
+Preserve this bundle as the closed P2 baseline. Extensions to nonzero shell
+bias, floor removal, lower-regularity data, infinite volume, or the historical
+backend require separate claims. T7 is not an active target.
