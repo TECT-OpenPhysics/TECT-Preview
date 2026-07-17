@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T3 COMPUTABLE-SCAFFOLD; stages 1-5 PASS in their declared scopes, including the recorded CUDA hardware matrix",
+  "status": "T3 COMPUTABLE-SCAFFOLD; stages 1-5 PASS in their declared scopes, Stage 6 qualitative bound PASS, and Stage 7 explicit energy-to-H2 input PASS",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -52,10 +52,15 @@
       "sha256": "14978809a776031db4d9467878732fbc24984bafe236efcd49429917f5b96fcb",
       "version": "1.0.0"
     },
+    "energy_ball_envelope_audit": {
+      "path": "codes/foundations/a3_full_production_energy_ball_envelope.py",
+      "sha256": "f019a4b890084916da821610e32b3696e0aa85e4d40ed190d33f5a702e5c174b",
+      "version": "1.0.0"
+    },
     "one_command_verifier": {
       "path": "codes/foundations/a3_full_production_verify.py",
-      "sha256": "92bc46dffb7083823a975077122441010843c718d5b51172e76a948cc941711e",
-      "version": "1.1.0"
+      "sha256": "fac41510222c91553b7ad1fc66a783d5c9d5cd25c29e34f1aedbb48e525317d7",
+      "version": "1.2.0"
     }
   },
   "continuum_problem": {
@@ -212,12 +217,25 @@
       "uniform_rate_min": 2.0
     }
   },
+  "stage7_energy_ball": {
+    "embedding_shell_cutoff": 8192,
+    "initial_h2_radii": [0.5, 1.0, 2.0],
+    "statement": "For every R in the declared H2-radius list, the canonical P1 energy is explicitly bounded above by E_upper(R); P2 dissipation and coercivity give ||u(t)||_H2 <= M2(R) for every t>=0.",
+    "method": "A max-norm-shell upper bound for the Fourier H2-to-Linfinity embedding, the canonical Pauli-generator current bound, and the P2 Young/coercivity constants.",
+    "acceptance": {
+      "require_p1_p2_source_hashes": true,
+      "require_positive_coercivity_and_sextic": true,
+      "require_monotone_energy_and_envelope": true,
+      "require_envelope_dominates_initial_radius": true
+    }
+  },
   "later_stages": {
     "finite_time": "CLOSED@T3-EXECUTED: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
     "hessian_ritz": "CLOSED@T3-EXECUTED: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
     "hardware_precision": "CLOSED@T3-EXECUTED: CPU and CUDA complex128/complex64 rows PASS on the recorded torch 2.13.0+cu130 environment with one NVIDIA GeForce RTX 5070 Laptop GPU; this is not an all-device equivalence theorem",
     "independent_continuum_residual": "CLOSED@T3-EXECUTED for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; uniform analytic error bound remains open",
     "solution_ball_bound": "PARTIAL@T4-ANALYTIC: a positive-time H2 solution-ball bound of the form C(R,tau,T)N^-2 is derived from P2 smoothing and H6-to-H2 residual regularity; C(R,tau,T) is not numerically enclosed",
+    "energy_ball_envelope": "CLOSED@T3-ANALYTIC-AND-EXECUTED: 13/13 PASS gives explicit all-time M2(R) enclosures for declared initial H2 radii; this is only the input to an explicit positive-time smoothing majorant",
     "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
   },
   "tier_boundary": "T3 until all six required gates are closed. N32/N64/N128 solver output alone is not discretization evidence."

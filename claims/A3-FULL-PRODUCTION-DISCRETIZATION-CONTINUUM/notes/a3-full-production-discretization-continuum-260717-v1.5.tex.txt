@@ -1,0 +1,115 @@
+% =============================================================================
+% Title: Full-production discretization P3: explicit energy-to-H2 ball envelope
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.5 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T3 partial analytic/executed closure; energy-to-H2 envelope PASS
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This supplement makes the first previously qualitative input to the P3
+positive-time solution-ball route explicit.  It applies only to the canonical
+P1/P2 three-component gradient flow on the fixed $16^3$ torus, with positive
+regularisers and $\eta_{\rm shell}=0$.  For each declared $H^2$ radius $R$ it
+computes an upper energy $E_+(R)$ and an all-time common bound $M_2(R)$:
+\[
+  \|u_0\|_{H^2}\leq R \quad\Longrightarrow\quad
+  \sup_{t\geq0}\|u(t)\|_{H^2}\leq M_2(R).                 \tag{1}
+\]
+It does not yet compute the positive-time $H^6$ bound, the residual/aliasing
+constant $C(R,\tau,T)$, or a continuum error bar for a Sector-B solver run.
+
+\section{Fourier embedding bound}
+Use the P2-compatible norm
+\[
+ \|u\|_{H^2}^2=|\mathbb T^3|\sum_{n\in\mathbb Z^3}
+ (1+|k_n|^4)|\widehat u_n|^2.
+\]
+By Cauchy--Schwarz,
+\[
+ \|u\|_\infty^2\leq {S\over|\mathbb T^3|}\|u\|_{H^2}^2,
+ \qquad S=\sum_n(1+|k_n|^4)^{-1}.                         \tag{2}
+\]
+For a max-norm shell $m$, there are $24m^2+2$ points and
+$|k_n|^4\geq (2\pi/L_{\max})^4m^4$.  Summing through $M$ and bounding the
+tail by the integrals of $m^{-2}$ and $m^{-4}$ gives
+\[
+ S\leq1+\sum_{m=1}^{M}{24m^2+2\over1+a m^4}
+       +{24\over aM}+{2\over3aM^3},\qquad a=(2\pi/L_{\max})^4. \tag{3}
+\]
+The audit uses $M=8192$ and obtains $S\leq445.8565811405$, with tail at most
+$0.1231917871$.  Since $|\mathbb T^3|=4096$, (2) yields
+$\|u\|_\infty^2\leq0.1088517044\|u\|_{H^2}^2$.
+
+\section{Energy upper and lower bounds}
+The hash-pinned embedded Pauli generators have operator norm one.  Therefore
+$|J_A|\leq2|u||\nabla u|$ and $|K_A|\leq4|u||\nabla u|$.  With the P1
+coefficients, the absolute Class-II contribution is bounded by
+\[
+ (2|a|+8|b|+8|c|)\int|u|^2|\nabla u|^2,
+\]
+whose computed coefficient is $0.04275$.  Combining this with (2), the
+linear upper coefficient $2.1566713536$, and the quartic/sextic terms gives
+\[
+ F(u_0)\leq E_+(R)={L_+\over2}R^2+Q_+R^4+S_+R^6.          \tag{4}
+\]
+Here $Q_+=0.01402826340$ and $S_+=0.003199147258$ are calculated from pinned
+coefficients, not fitted from trajectories.
+
+P2 supplies energy dissipation and
+\[
+ F(u)\geq {c_{H^2}\over2}\|u\|_{H^2}^2-C_Y|\mathbb T^3|,
+ \quad c_{H^2}=0.2048572626782363,\quad C_Y=0.010098435197886498. \tag{5}
+\]
+Equations (4)--(5) prove (1) with
+\[
+ M_2(R)^2={2\{E_+(R)+C_Y|\mathbb T^3|\}\over c_{H^2}}.   \tag{6}
+\]
+
+\section{Executed enclosure}
+For the declared representative radii, the standalone audit returns:
+\[
+\begin{array}{c|c|c}R&E_+(R)&M_2(R)\\ \hline
+0.5&0.2705106723&20.16098869\\
+1.0&1.0955630875&20.35977321\\
+2.0&4.7425403461&21.21615946\end{array}
+\]
+It validates P1 backend, P1 manifest, and P2 manifest hashes; positivity of
+coercivity, sextic, and regularisers; the generator convention; the series
+bound; and monotonicity/dominance of (6).  All 13 checks pass.
+
+\section{Devil's-advocate and mandatory adversarial review}
+\textbf{Tail direction.} The shell count and integral tail in (3) are upper
+bounds, so truncation cannot make $S$ too small.  \textbf{Class-II factors.}
+The $2,8,8$ coefficients follow from the hash-checked unit-norm Pauli
+convention.  \textbf{Norm convention.} The fourth-power Fourier weight is
+the P2 coercivity norm.  \textbf{Coarseness.} $M_2$ is deliberately large
+because the global Young lower bound includes the whole torus volume; it is an
+enclosure, not a sharp dynamical prediction.  \textbf{Limit cases.} This does
+not cover a nonzero shell term, zero floors, infinite volume, or the historical
+non-variational backend.  \textbf{No smoothing shortcut.} An $H^2$ envelope
+does not prove a computable $H^6$ envelope.  External review of the Class-II
+inequality and explicit semigroup/Moser constants remains invited.
+
+\section{What remains open}
+The next step must turn $M_2(R)$ into an explicit positive-time
+$B_6(R,\tau,T)$ using named semigroup and Moser constants.  Only then can P3
+compute $C(R,\tau,T)$, propagate it through a dealiased finite-time evolution
+estimate, and consider a tier review.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Explicit all-time H2 envelope M2(R) for declared
+                         canonical P2 initial H2 balls.
+Scope:                   Fixed T3, canonical P1/P2 functional, eta_shell=0.
+Dependencies:            A1 production functional; A2 T6 well-posedness.
+Evidence grade:          ANALYTIC + EXECUTED; T3 partial stage.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_energy_ball_envelope.py
+Expected output:         13/13 PASS; A3-FULL-ENERGY-BALL-ENVELOPE-PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE.
+Tier before / after:     T3 / T3.
+No-overclaim statement:  Not an H6 or C(R,tau,T) enclosure, a solver
+                         continuum certificate, or a T5/T6/T7 result.
+Next required action:    Explicit positive-time H6 smoothing majorant.
+\end{verbatim}

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close P3 explicit energy-to-H2 solution-ball input] - 2026-07-17
+
+
+
 ## [Add P3 positive-time solution-ball bound and integrated verifier] - 2026-07-17
 
 

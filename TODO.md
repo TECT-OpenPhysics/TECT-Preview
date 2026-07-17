@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
 ## In progress
 
 - **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
-  - Stages 1-5 PASS in their declared scopes; Stage 6 now derives the qualitative positive-time P2 solution-ball mismatch C(R,tau,T)N^-2 (13/13) and the integrated recorded-evidence verifier passes 66/66. The open load-bearing work is a computable enclosure of B6(R,tau,T) and C(R,tau,T), then a dealiased finite-time evolution bound; only after that can a Sector-B solver run carry a controlled continuum-error bar.
+  - P3 stages 1-7: stages 1-5 executed, stage 6 qualitative solution-ball rate, and stage 7 explicit energy-to-H2 envelope now recorded. Next: explicit positive-time H6 majorant, then C(R,tau,T) and dealiased finite-time evolution.
   - _updated 2026-07-17_
 
 ## Next up

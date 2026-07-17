@@ -1,0 +1,119 @@
+{
+  "schema": "tect/a3-full-production-integrated-verifier-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.2.0",
+  "verdict": "A3-FULL-PRODUCTION-VERIFY-PASS",
+  "scope": "recorded immutable CPU audits of spatial, finite-time, Hessian/Ritz, independent-proxy, solution-ball-order, and energy-to-H2-envelope audits; hash validation of recorded CUDA evidence",
+  "reports": [
+    {
+      "script": "a3_full_production_spatial_consistency.py",
+      "mode": "recorded",
+      "expected_verdict": "A3-FULL-SPATIAL-CONSISTENCY-PASS",
+      "actual_verdict": "A3-FULL-SPATIAL-CONSISTENCY-PASS",
+      "assertions": {
+        "passed": 13,
+        "total": 13
+      },
+      "source_hash_ok": true,
+      "recorded_artifact": "claims\\A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM\\runs\\2026-07-17-spatial-consistency\\result.json",
+      "passed": true
+    },
+    {
+      "script": "a3_full_production_finite_time_convergence.py",
+      "mode": "recorded",
+      "expected_verdict": "A3-FULL-FINITE-TIME-CONVERGENCE-PASS",
+      "actual_verdict": "A3-FULL-FINITE-TIME-CONVERGENCE-PASS",
+      "assertions": {
+        "passed": 10,
+        "total": 10
+      },
+      "source_hash_ok": true,
+      "recorded_artifact": "claims\\A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM\\runs\\2026-07-17-finite-time-convergence\\result.json",
+      "passed": true
+    },
+    {
+      "script": "a3_full_production_hessian_ritz_convergence.py",
+      "mode": "recorded",
+      "expected_verdict": "A3-FULL-HESSIAN-RITZ-CONVERGENCE-PASS",
+      "actual_verdict": "A3-FULL-HESSIAN-RITZ-CONVERGENCE-PASS",
+      "assertions": {
+        "passed": 13,
+        "total": 13
+      },
+      "source_hash_ok": true,
+      "recorded_artifact": "claims\\A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM\\runs\\2026-07-17-hessian-ritz-convergence\\result.json",
+      "passed": true
+    },
+    {
+      "script": "a3_full_production_independent_galerkin.py",
+      "mode": "recorded",
+      "expected_verdict": "A3-FULL-INDEPENDENT-GALERKIN-PASS",
+      "actual_verdict": "A3-FULL-INDEPENDENT-GALERKIN-PASS",
+      "assertions": {
+        "passed": 11,
+        "total": 11
+      },
+      "source_hash_ok": true,
+      "recorded_artifact": "claims\\A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM\\runs\\2026-07-17-independent-galerkin\\result.json",
+      "passed": true
+    },
+    {
+      "script": "a3_full_production_solution_ball_bound.py",
+      "mode": "recorded",
+      "expected_verdict": "A3-FULL-SOLUTION-BALL-BOUND-PASS",
+      "actual_verdict": "A3-FULL-SOLUTION-BALL-BOUND-PASS",
+      "assertions": {
+        "passed": 13,
+        "total": 13
+      },
+      "source_hash_ok": true,
+      "recorded_artifact": "claims\\A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM\\runs\\2026-07-17-solution-ball-bound\\result.json",
+      "passed": true
+    },
+    {
+      "script": "a3_full_production_energy_ball_envelope.py",
+      "mode": "recorded",
+      "expected_verdict": "A3-FULL-ENERGY-BALL-ENVELOPE-PASS",
+      "actual_verdict": "A3-FULL-ENERGY-BALL-ENVELOPE-PASS",
+      "assertions": {
+        "passed": 13,
+        "total": 13
+      },
+      "source_hash_ok": true,
+      "recorded_artifact": "claims\\A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM\\runs\\2026-07-17-energy-ball-envelope\\result.json",
+      "passed": true
+    },
+    {
+      "script": "recorded_cuda_hardware_evidence",
+      "assertions": {
+        "passed": 6,
+        "total": 6
+      },
+      "passed": true,
+      "detail": {
+        "recorded_artifact_sha256": "b7590feb0909c4d73f9a9df533e802ba6f4f80ef11aee9409202657191206a8d",
+        "recorded_device": [
+          "NVIDIA GeForce RTX 5070 Laptop GPU"
+        ],
+        "source_hash_ok": true,
+        "backend_hash_ok": true,
+        "rows_pass": true,
+        "assertions_pass": true,
+        "verdict": "A3-FULL-HARDWARE-PRECISION-PASS"
+      }
+    }
+  ],
+  "assertion_summary": {
+    "passed": 79,
+    "total": 79
+  },
+  "failures": [],
+  "not_closed_here": [
+    "explicit positive-time H4/H6 smoothing constants",
+    "numerical enclosure of the solution-ball constant C(R,tau,T)",
+    "dealiased finite-time evolution bound",
+    "historical Sector-B solver continuum validity",
+    "independent external reproduction",
+    "tier promotion"
+  ]
+}

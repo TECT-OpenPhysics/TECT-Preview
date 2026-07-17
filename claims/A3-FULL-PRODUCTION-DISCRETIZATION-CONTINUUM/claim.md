@@ -76,6 +76,15 @@ bounded `H2` ball. The Fourier tail and periodic aliasing estimates yield
 solution ball and time interval. The order/source audit passes 13/13. This is
 not yet a numerical error bar: `C(R,tau,T)` has not been enclosed.
 
+Stage 7 now makes the first input to that enclosure computable.  A rigorous
+max-norm-shell Fourier embedding bound and P2 energy dissipation yield an
+explicit, all-time `H2` envelope for each declared initial ball.  For initial
+radii `R=0.5, 1, 2`, the certified bounds are respectively `20.16099`,
+`20.35978`, and `21.21616`.  The audit is 13/13 PASS and pins the P1 backend,
+P1/P2 manifests, Class-II generator convention, and derived coefficients.
+This remains only an `H2` input: it does not evaluate the positive-time `H6`
+envelope or `C(R,tau,T)`.
+
 ## Reproduction
 
 Run from the repository root in the same Torch-enabled Python environment used
@@ -132,11 +141,13 @@ The solution-ball and package commands are:
 
 ```bash
 python codes/foundations/a3_full_production_solution_ball_bound.py
+python codes/foundations/a3_full_production_energy_ball_envelope.py
 python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits
 ```
 
 Expected: `13/13 PASS`, `A3-FULL-SOLUTION-BALL-BOUND-PASS`; then
-`66/66`, `A3-FULL-PRODUCTION-VERIFY-PASS`. The verifier's default (without
+`13/13 PASS`, `A3-FULL-ENERGY-BALL-ENVELOPE-PASS`; then `79/79`,
+`A3-FULL-PRODUCTION-VERIFY-PASS`. The verifier's default (without
 `--reuse-recorded-audits`) reruns CPU audits into a temporary directory and can
 take substantially longer; the recorded mode validates their immutable results
 and current source hashes without overwriting them.
@@ -160,6 +171,10 @@ and current source hashes without overwriting them.
    bar."** UPHELD as false. The qualitative positive-time bound needs a
    computable enclosure of its constant and a dealiased finite-time evolution
    estimate before it applies to a solver trajectory.
+6. **"An all-time H2 envelope is already the needed numerical C(R,tau,T)."**
+   UPHELD as false. It supplies only the common initial input for explicit
+   positive-time H4/H6 smoothing and leaves both that estimate and the
+   dealiased evolution bound open.
 
 ## No-overclaim
 
@@ -171,5 +186,6 @@ Sector-B output as continuum PDE evidence, or a T5/T6/T7 result.
 
 ## Next action
 
-Enclose the solution-ball constants and propagate them through a dealiased
+Derive the explicit positive-time H6 smoothing majorant from the new H2
+envelope, then propagate the resulting C(R,tau,T) through a dealiased
 finite-time evolution estimate before independent reproduction and tier review.
