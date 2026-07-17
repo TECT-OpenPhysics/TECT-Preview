@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Promote P3 discretization evidence package to scoped T4] - 2026-07-17
+
+
+
 ## [Close P3 explicit energy-to-H2 solution-ball input] - 2026-07-17
 
 

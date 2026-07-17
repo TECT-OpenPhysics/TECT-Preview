@@ -1,6 +1,6 @@
 # A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM -- spectral discretization to continuum PDE
 
-**Tier**: T3 COMPUTABLE-SCAFFOLD (TSv2) | **Lifecycle**: ACTIVE |
+**Tier**: T4 STRONG-EVIDENCE (TSv2) | **Lifecycle**: ACTIVE |
 **Last review**: 2026-07-17
 
 ## Statement
@@ -178,11 +178,21 @@ and current source hashes without overwriting them.
 
 ## No-overclaim
 
-The present T3 record includes an independent manufactured-field
+The present T4 strong-evidence record includes an independent manufactured-field
 continuum-quadrature proxy and a recorded CUDA consistency matrix, but not a
 numerical uniform error bar for arbitrary P2 solutions. It is not all-device
 GPU equivalence, historical-solver integration, a license to label N32/N64/N128
-Sector-B output as continuum PDE evidence, or a T5/T6/T7 result.
+Sector-B output as continuum PDE evidence, a theorem, or a T5/T6/T7 result.
+
+## Tier review
+
+The v1.6 review promotes T3 to T4 because the frozen package combines executed
+spatial, finite-time, Hessian/Ritz, manufactured-order, and hardware/precision
+tests with an independent portable implementation, a qualitative uniform
+positive-time analytic bound, and an explicit energy-to-H2 envelope. The
+hash-bound recorded verifier passes 79/79. T5 remains blocked by the unevaluated
+positive-time H6 and residual constants and the missing dealiased finite-time
+evolution estimate.
 
 ## Next action
 

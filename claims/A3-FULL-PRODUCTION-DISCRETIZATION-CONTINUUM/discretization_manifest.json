@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T3 COMPUTABLE-SCAFFOLD; stages 1-5 PASS in their declared scopes, Stage 6 qualitative bound PASS, and Stage 7 explicit energy-to-H2 input PASS",
+  "status": "T4 STRONG-EVIDENCE; stages 1-5 PASS in their declared scopes, Stage 6 qualitative bound PASS, and Stage 7 explicit energy-to-H2 input PASS; not a theorem or T5 closure",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -230,13 +230,13 @@
     }
   },
   "later_stages": {
-    "finite_time": "CLOSED@T3-EXECUTED: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
-    "hessian_ritz": "CLOSED@T3-EXECUTED: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
-    "hardware_precision": "CLOSED@T3-EXECUTED: CPU and CUDA complex128/complex64 rows PASS on the recorded torch 2.13.0+cu130 environment with one NVIDIA GeForce RTX 5070 Laptop GPU; this is not an all-device equivalence theorem",
-    "independent_continuum_residual": "CLOSED@T3-EXECUTED for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; uniform analytic error bound remains open",
+    "finite_time": "CLOSED@T4-EVIDENCE-SCOPE: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
+    "hessian_ritz": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
+    "hardware_precision": "CLOSED@T4-EVIDENCE-SCOPE: CPU and CUDA complex128/complex64 rows PASS on the recorded torch 2.13.0+cu130 environment with one NVIDIA GeForce RTX 5070 Laptop GPU; this is not an all-device equivalence theorem",
+    "independent_continuum_residual": "CLOSED@T4-EVIDENCE-SCOPE for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; uniform analytic error bound remains open",
     "solution_ball_bound": "PARTIAL@T4-ANALYTIC: a positive-time H2 solution-ball bound of the form C(R,tau,T)N^-2 is derived from P2 smoothing and H6-to-H2 residual regularity; C(R,tau,T) is not numerically enclosed",
-    "energy_ball_envelope": "CLOSED@T3-ANALYTIC-AND-EXECUTED: 13/13 PASS gives explicit all-time M2(R) enclosures for declared initial H2 radii; this is only the input to an explicit positive-time smoothing majorant",
+    "energy_ball_envelope": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS gives explicit all-time M2(R) enclosures for declared initial H2 radii; this is only the input to an explicit positive-time smoothing majorant",
     "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
   },
-  "tier_boundary": "T3 until all six required gates are closed. N32/N64/N128 solver output alone is not discretization evidence."
+  "tier_boundary": "T4 STRONG-EVIDENCE because the six numerical/analytic evidence gates are closed in their frozen test scopes. T5 remains prohibited until B6(R,tau,T) and C(R,tau,T) are computably enclosed, the dealiased finite-time evolution estimate is closed, and the final reproduction package passes. N32/N64/N128 solver output alone is not discretization evidence."
 }

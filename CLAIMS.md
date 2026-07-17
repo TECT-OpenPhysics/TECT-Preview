@@ -5,7 +5,7 @@
 
 Generated: 2026-07-17
 
-**38 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 2 · T4: 3 · T5: 6 · T6: 12 · T7: 3 · T7-candidates: 3 · refuted: 1
+**38 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 4 · T5: 6 · T6: 12 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -22,7 +22,7 @@ reproduction commands, and history live on the claim cards.
 | [A1-SCALAR-ANALYTIC-BRANCH](claims/A1-SCALAR-ANALYTIC-BRANCH/claim.md) | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) | T6 | ACTIVE | ANALYTIC, EXECUTED | A1-SHELL-POSITIVITY | — |
 | [A2-FULL-PRODUCTION-WELLPOSED](claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md) | Full production three-component gradient-flow well-posedness | T6 | ACTIVE | ANALYTIC, EXECUTED, CONDITIONAL | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — |
 | [A2-PDE-WELLPOSED](claims/A2-PDE-WELLPOSED/claim.md) | Well-posedness of the TECT gradient flow and minimisation problem | T6 | ACTIVE | ANALYTIC, EXECUTED | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
-| [A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM](claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/claim.md) | Full-production spectral discretization to continuum PDE | T3 | ACTIVE | ANALYTIC, EXECUTED, CONDITIONAL | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | A3-FULL-DISCRETIZATION-CLOSURE |
+| [A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM](claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/claim.md) | Full-production spectral discretization to continuum PDE | T4 | ACTIVE | ANALYTIC, EXECUTED, CONDITIONAL | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | A3-FULL-DISCRETIZATION-CLOSURE |
 | [A3-PERTURBATIVE-CONTINUUM-CORRELATORS](claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/claim.md) | Cutoff-independent continuum limit of the perturbative correlators (conditional) | T6 | ACTIVE | ANALYTIC, ESTIMATOR | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
 | [A3-UV-SUPERRENORMALISABILITY](claims/A3-UV-SUPERRENORMALISABILITY/claim.md) | UV super-renormalisability of the scalar Brazovskii functional | T6 | ACTIVE | ANALYTIC, EXECUTED | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — |
 

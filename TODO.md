@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
 ## In progress
 
 - **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
-  - P3 stages 1-7: stages 1-5 executed, stage 6 qualitative solution-ball rate, and stage 7 explicit energy-to-H2 envelope now recorded. Next: explicit positive-time H6 majorant, then C(R,tau,T) and dealiased finite-time evolution.
+  - P3 promoted T3 -> scoped T4 STRONG-EVIDENCE after v1.6 adversarial tier review and 79/79 integrated verification. Next T5 blockers: explicit positive-time B6(R,tau,T) and C(R,tau,T), then dealiased finite-time evolution and final reproduction package.
   - _updated 2026-07-17_
 
 ## Next up

@@ -1,0 +1,90 @@
+% =============================================================================
+% Title: Full-production discretization P3: scoped T4 tier review
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.6 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 STRONG-EVIDENCE tier review; quantitative closure remains open
+% =============================================================================
+
+\section*{1. Purpose and scope}
+The claim is promoted from T3 COMPUTABLE-SCAFFOLD to T4 STRONG-EVIDENCE under
+TSv2.  The promotion is deliberately limited to the frozen P3 evidence scope:
+the fixed $16^3$ torus, the hash-pinned P1/P2 canonical functional,
+$\eta_{\rm shell}=0$, the declared grids and manufactured fields, and the one
+recorded CUDA device/precision matrix.  It is not a continuum-error theorem
+and does not close the gate \texttt{A3-FULL-DISCRETIZATION-CLOSURE}.
+
+\section{Why T4 is justified}
+TSv2 defines T4 as numerics plus analytic bounds plus a partial audit, while
+explicitly stating that T4 is not a theorem.  P3 now has all three components.
+
+\begin{enumerate}
+\item The spatial residual, real energy-gradient identity, manufactured
+orders, finite-time trajectories, and Hessian/Ritz tests are executed at their
+frozen grids.
+\item The independent portable functional supplies a second implementation of
+the energy/residual path, and the CPU/CUDA complex128/complex64 matrix is closed
+on the recorded RTX 5070 Laptop GPU environment.
+\item P2 smoothing gives the positive-time solution-ball rate
+$C(R,\tau,T)N^{-2}$, and Stage 7 makes its all-time $H^2$ energy-ball input
+$M_2(R)$ explicit for the declared radii.
+\item The hash-bound integrated verifier checks the immutable evidence matrix
+at 79/79 PASS.
+\end{enumerate}
+
+These facts exceed a mere runnable scaffold.  They are strong convergent
+evidence with analytic control in a pinned scope, which is exactly T4.
+
+\section{Why T5 is not justified}
+The constant $C(R,\tau,T)$ is still unevaluated because the P2 proof uses
+unnamed norm-equivalence, Moser, Holder, and endpoint-Duhamel constants.  A
+dealiased finite-time Galerkin evolution estimate has also not been propagated
+from the residual bound.  Therefore the package cannot attach a controlled
+continuum error bar to arbitrary P2 trajectories or historical N32/N64/N128
+Sector-B runs.  The open gate and T5 blocker remain explicit.
+
+\section{Devil's-advocate tier review}
+\begin{enumerate}
+\item \textbf{Objection: the N8/N12/N16 manufactured-field convergence is a
+continuum theorem.} \textbf{UPHELD as false.}  It is strong numerical evidence
+only; the solution-ball constant is not enclosed.
+\item \textbf{Objection: one CUDA device proves hardware-independent
+equivalence.} \textbf{VALID WITH MITIGATION.}  The claim scope names the exact
+Torch/CUDA environment and makes no all-device assertion.
+\item \textbf{Objection: the Hessian/Ritz test proves the full Sector-B
+spectrum.} \textbf{UPHELD as false.}  The evidence covers one homogeneous
+invariant block and one declared nonuniform fixed Ritz subspace.
+\item \textbf{Objection: the qualitative $N^{-2}$ rate already closes T5.}
+\textbf{UPHELD as false.}  T5 requires the computable constant, the dealiased
+finite-time passage, and a reproduction package in the final pinned scope.
+\item \textbf{Objection: the large $M_2(R)$ values are fitted trajectory
+outputs.} \textbf{DISMISSED.}  They are upper enclosures derived from the
+Fourier embedding, P1 coefficients, and P2 coercivity; no trajectory fit is
+used.
+\end{enumerate}
+
+\section{Next quantitative gate}
+The next accepted result must expose the actual norm-equivalence, nonlinear
+Moser, Holder, and semigroup constants needed to turn $M_2(R)$ into an explicit
+$B_6(R,\tau,T)$.  If that majorant is finite but extremely large, it remains a
+valid enclosure; sharpness is secondary to correctness.  Afterward the
+residual constant must be propagated through a dealiased finite-time evolution
+estimate before a T5 review.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Strong numerical and analytic discretization evidence
+                         in the frozen P3 scope.
+Scope:                   Fixed T3, canonical P1/P2, eta_shell=0, declared
+                         grids/fields and recorded RTX 5070 CUDA matrix.
+Dependencies:            A1 production functional; A2 T6 well-posedness.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_verify.py --reuse-recorded-audits
+Expected output:         79/79; A3-FULL-PRODUCTION-VERIFY-PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE remains open.
+Tier before / after:     T3 / T4 STRONG-EVIDENCE.
+No-overclaim statement:  Not T5/T6/T7, not a numerical C(R,tau,T), not a
+                         continuum certificate for Sector-B solver runs.
+Next required action:    Explicit B6 and C constants, then dealiased evolution.
+\end{verbatim}
