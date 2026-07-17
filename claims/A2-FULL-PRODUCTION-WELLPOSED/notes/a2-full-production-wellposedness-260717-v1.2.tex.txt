@@ -1,0 +1,137 @@
+% =============================================================================
+% Title: Full production three-component gradient flow: energy-continuation audit
+% Claim: A2-FULL-PRODUCTION-WELLPOSED
+% Version: v1.2 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 FULL-PROOF-CANDIDATE; energy-continuation audit closed, smoothing audit remains
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This v1.2 note closes only \texttt{A2-FULL-ENERGY-CONTINUATION-AUDIT}. The scope is the canonical P1 functional on the fixed three-torus, in six real coordinates, with positive regularisers and $\eta_{\rm shell}=0$. The v1.1 note already establishes the local $H^2\to L^2$ Lipschitz property of the full lower-order map. Here the task is the exact energy identity, the Fourier-Galerkin compactness passage, and global continuation.
+
+The historical backend remains a non-variational proxy and is excluded. This note does not settle positive-time smoothing or continuous $H^2$ dependence. The claim consequently remains T4, not T6.
+
+\section*{2. Functional derivative and finite Galerkin identity}
+
+Let $H=L^2(\mathbb T^3;\mathbb R^6)$ and let $L$ be the positive self-adjoint fourth-order operator fixed by P1. Write
+\[
+ \mathcal F(u)={1\over2}\langle u,Lu\rangle_H+\Phi(u),
+ \qquad R(u)=Lu+N(u).                                      \tag{2.1}
+\]
+Here the family and lock matrices are included in $L$, while $\Phi$ contains
+the quartic, sextic, and Class-II terms. The v1.1 real-coordinate calculation gives
+\[
+ N:H^2\longrightarrow H\ \hbox{ locally Lipschitz},
+ \qquad D\Phi(u)[h]=\langle N(u),h\rangle_H\quad(u,h\in H^2).
+                                                               \tag{2.2}
+\]
+
+Let $P_n$ be the real $L^2$-orthogonal Fourier projection, $V_n=P_nH$, and $u_{0,n}=P_nu_0$. The finite-dimensional ODE is
+\[
+ \partial_tu_n=-P_nR(u_n),\qquad u_n(0)=u_{0,n}.             \tag{2.3}
+\]
+For $v\in V_n$, $D(\mathcal F|_{V_n})(u_n)[v]=\langle P_nR(u_n),v\rangle_H$. Thus (2.3) is the exact real gradient flow of the restricted functional, and the ordinary finite-dimensional chain rule gives
+\[
+ {d\over dt}\mathcal F(u_n(t))
+ =\langle R(u_n),-P_nR(u_n)\rangle_H
+ =-\|P_nR(u_n)\|_H^2=-\|\partial_tu_n\|_H^2.              \tag{2.4}
+\]
+The projection in (2.3) is essential: an unprojected residual would not in general remain in $V_n$.
+
+\section*{3. Uniform bounds and compactness}
+
+The production coercivity audit gives
+\[
+ \mathcal F(u)\ge {c_{H^2}\over2}\|u\|_{H^2}^2
+ +{\gamma\over12}\|u\|_{L^6}^6-C_Y|\mathbb T^3|.          \tag{3.1}
+\]
+Here $c_{H^2}>0$ and $\gamma>0$. As $P_nu_0\to u_0$ in $H^2$ and $\mathcal F$ is continuous on $H^2$, the Galerkin initial energies are uniformly bounded. Equations (2.4)--(3.1) imply, on every finite interval,
+\[
+ \sup_n\|u_n\|_{L^\infty(0,T;H^2)}<\infty,
+ \qquad\sup_n\|\partial_tu_n\|_{L^2(0,T;H)}<\infty.       \tag{3.2}
+\]
+
+By (2.2), $N(u_n)$ is bounded in $L^\infty(0,T;H)$. Since $P_n$ commutes with the Fourier multiplier $L$, (2.3) gives
+\[
+ Lu_n=-\partial_tu_n-P_nN(u_n),
+ \qquad\sup_n\|u_n\|_{L^2(0,T;H^4)}<\infty.                \tag{3.3}
+\]
+The graph norm of $L$ is equivalent to the $H^4$ norm by the positive fourth-order coefficient and bounded internal matrices. Apply Aubin--Lions to $H^4\Subset H^2\hookrightarrow H$. After a subsequence,
+\[
+ u_n\to u\ \hbox{ strongly in }L^2(0,T;H^2),\qquad
+ u_n\rightharpoonup u\ \hbox{ in }L^2(0,T;H^4).            \tag{3.4}
+\]
+The local Lipschitz property makes $N(u_n)\to N(u)$ strongly in $L^2(0,T;H)$. Passing through (2.3) yields
+\[
+ u\in L^2(0,T;H^4)\cap H^1(0,T;H),
+ \qquad\partial_tu=-Lu-N(u).                               \tag{3.5}
+\]
+The Hilbert interpolation result for (3.5) gives $u\in C([0,T];H^2)$.
+
+\section*{4. Infinite-dimensional Class-II chain rule}
+
+Passing only a lower-semicontinuous inequality would not suffice. The identity follows from a direct lemma. If $u\in C([0,T];H^2)\cap H^1(0,T;H)$ and $\Phi,N$ satisfy (2.2), then
+\[
+ \Phi(u(t))-\Phi(u(s))=\int_s^t\langle N(u(\tau)),\partial_\tau u(\tau)\rangle_Hd\tau. \tag{4.1}
+\]
+Indeed, apply the fundamental theorem of calculus on the $H^2$ segment from $u(t)$ to $u(t+h)$:
+\[
+ \Phi(u(t+h))-\Phi(u(t))=\int_0^1\langle N(u(t)+\theta\delta_hu(t)),\delta_hu(t)\rangle_Hd\theta.
+\]
+After integration in time, continuity in $H^2$, local Lipschitz continuity of $N$, and $L^2(0,T;H)$ convergence of difference quotients prove (4.1). The v1.1 Class-II expansion supplies (2.2), so this is a true real-gradient chain rule rather than formal complex differentiation.
+
+For $u$ in (3.5), the spectral quadratic-form chain rule gives
+\[
+ {d\over dt}{1\over2}\langle u,Lu\rangle_H
+ =\langle Lu,\partial_tu\rangle_H\quad\hbox{a.e.}         \tag{4.2}
+\]
+Combining (4.1), (4.2), and (3.5) proves
+\[
+ \boxed{\mathcal F(u(t))+\int_s^t\|\partial_\tau u(\tau)\|_H^2d\tau
+ =\mathcal F(u(s)),\qquad 0\le s\le t\le T.}              \tag{4.3}
+\]
+
+\section*{5. Global continuation}
+
+Taking $s=0$ in (4.3), the coercive inequality (3.1) supplies a uniform $H^2$ bound on every finite interval from $\mathcal F(u_0)$. Hence the local continuation alternative cannot occur in finite time. As the construction works for arbitrary $T$, the canonical solution extends globally in $H^2$. Only the hash-pinned canonical functional, zero shell bias, positive regularisers, and the earlier lower-bound/mapping audits are used here.
+
+\section*{6. Independent executable audit}
+
+The NumPy-only script \texttt{codes/foundations/a2\_full\_production\_energy\_continuation\_audit.py} reconstructs the canonical energy from the manifest without importing the Torch backend. On real orthonormal low-Fourier Galerkin subspaces at grids $4,6,8$, and on zero, homogeneous, random, q-shell, and Class-II-active states, it verifies (2.4). The recorded run passes 12/12 assertions with
+\[
+ \max\operatorname{relerr}\bigl(D\mathcal F[-\nabla_{V_n}\mathcal F],-\|\nabla_{V_n}\mathcal F\|_H^2\bigr)=7.990691441861486\times10^{-13}.
+\]
+The real basis Gram error is $2.220446049250313\times10^{-16}$. The zero state correctly gives equality; every nonstationary test state has a positive forward descent margin. These values audit signs, factors, real-pairing normalisation, and the projection convention. Sections 2--5 are the analytic closure basis.
+
+\section*{7. Devil's-advocate}
+
+\begin{itemize}
+\item \emph{``$\dot u_n=-R(u_n)$ does not remain in $V_n$.''} UPHELD as an invalid Galerkin formulation and fixed: (2.3) uses $-P_nR(u_n)$, giving (2.4).
+\item \emph{``A limiting inequality is being relabelled an identity.''} DISMISSED: (3.5) plus the explicit Class-II chain-rule lemma proves (4.3).
+\item \emph{``Class-II gradients break compactness.''} DISMISSED in the pinned regularised scope: $N:H^2\to H$ is locally Lipschitz, so (3.4) gives strong $N(u_n)$ convergence while (3.3) supplies the $H^4$ bound.
+\item \emph{``The executable silently calls the prior autodiff backend.''} DISMISSED: it reconstructs the energy in NumPy and uses the backend hash only as a source-pin check.
+\item \emph{``This establishes smoothing or T6.''} UPHELD as an invalid reading. The separate smoothing/continuous-dependence audit remains open.
+\end{itemize}
+
+\section*{8. Result footer}
+
+\begin{verbatim}
+Result ID:               A2-FULL-PRODUCTION-WELLPOSED
+Precise statement:       The canonical full-production H2 flow has the exact
+                         L2 energy identity and coercive global continuation.
+Scope:                   Fixed T3, six-real-coordinate C3 field, canonical
+                         P1 functional, positive regularisers, eta_shell=0.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION; v1.1 mapping audit.
+Evidence grade:          ANALYTIC + EXECUTED; T4 proof candidate.
+Reproduction command:    python codes/foundations/
+                         a2_full_production_energy_continuation_audit.py
+Expected output:         12/12 PASS;
+                         A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS; exit 0.
+Falsification gate:      Failed Galerkin chain rule, H2/H4 compactness passage,
+                         Class-II chain rule, or finite H2 blow-up.
+Tier before / after:     T4 / T4 (one analytic gate discharged only).
+No-overclaim statement:  Not smoothing, continuous-dependence completion,
+                         T6, T7, historical proxy, or eta_shell!=0.
+Next required action:    Audit continuous H2 dependence and the positive-time
+                         fourth-order semigroup bootstrap in A2-FULL-SMOOTHING-AUDIT.
+\end{verbatim}

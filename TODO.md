@@ -3,15 +3,15 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 31
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 32
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-035** Audit full Class-II Galerkin energy identity and global continuation  _(claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-ENERGY-CONTINUATION-AUDIT)_
-  - Next P2 gate after the closed nonlinear H2-to-L2 audit: verify the finite-dimensional chain rule, compactness passage, and coercive continuation argument for the canonical eta_shell=0 functional.
+- **T-036** Audit full Class-II continuous dependence and positive-time smoothing  _(claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-SMOOTHING-AUDIT)_
+  - Final P2 analytic gate: establish finite-interval continuous H2 dependence, the first t>0 H4 gain, and the higher-order bootstrap for the canonical eta_shell=0 flow.
   - _updated 2026-07-17_
 
 ## Backlog
@@ -103,4 +103,7 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 31
   - _updated 2026-07-16_
 - **T-034** Audit the full Class-II Euler-Lagrange map H2 to L2  _(owner: unassigned; claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-NONLINEAR-MAPPING-AUDIT)_
   - First P2 analytic gate after the 2026-07-17 coercivity baseline: expand the six-real-component operator term by term and independently verify local Lipschitz continuity without derivative loss.
+  - _updated 2026-07-17_
+- **T-035** Audit full Class-II Galerkin energy identity and global continuation  _(claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-ENERGY-CONTINUATION-AUDIT)_
+  - Next P2 gate after the closed nonlinear H2-to-L2 audit: verify the finite-dimensional chain rule, compactness passage, and coercive continuation argument for the canonical eta_shell=0 functional.
   - _updated 2026-07-17_

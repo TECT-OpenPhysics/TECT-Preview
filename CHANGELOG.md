@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close A2 full-production energy-continuation audit] - 2026-07-17
+
+
+
 ## [Close A2 full-production nonlinear mapping audit] - 2026-07-17
 
 

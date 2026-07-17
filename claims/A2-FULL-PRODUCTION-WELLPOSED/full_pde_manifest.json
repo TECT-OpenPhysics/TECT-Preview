@@ -1,8 +1,8 @@
 {
-  "schema": "tect/a2-full-production-wellposed/1.1",
+  "schema": "tect/a2-full-production-wellposed/1.2",
   "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
   "frozen_on": "2026-07-17",
-  "status": "T4 FULL-PROOF-CANDIDATE; algebraic/coercive baseline and nonlinear-mapping audit passed; two analytic audits open",
+  "status": "T4 FULL-PROOF-CANDIDATE; algebraic/coercive, nonlinear-mapping, and energy-continuation audits passed; smoothing audit open",
   "authority": {
     "p1_functional_manifest": {
       "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
@@ -23,6 +23,11 @@
       "sha256": "9cb8b3addcac3da8d7c6e5862379b8235cb463301194e624297134e256f463a9",
       "version": "1.0.0"
     },
+    "energy_continuation_audit": {
+      "path": "codes/foundations/a2_full_production_energy_continuation_audit.py",
+      "sha256": "76d08eccb464060639e61d0603d7623482830fc31fc3027f01432b7d9a75a7fc",
+      "version": "1.0.0"
+    },
     "audit_result": {
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json",
       "sha256": "b9df1470a98fa8f6293474c775acadf74b04f8359fe5c8cf5ee523a8bebcedea",
@@ -30,8 +35,13 @@
     },
     "nonlinear_mapping_result": {
       "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json",
-      "sha256": "9aacfaa7afdd23e614395cd335f70c13c4d32de7093f7cf0e0bce44dfb8e0e8f",
+      "sha256": "0e27357fe044601859747414d0ed71619f30ac8e58d8a8d184a676de02484f15",
       "verdict": "A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS"
+    },
+    "energy_continuation_result": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json",
+      "sha256": "56b563d1d4f5a3f1566f8e9d5c268b108c08506c6dada151bea9879bf0bd2dca",
+      "verdict": "A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS"
     }
   },
   "canonical_variational_subset": {
@@ -117,9 +127,9 @@
     {
       "order": 4,
       "name": "global continuation",
-      "status": "PROOF-CANDIDATE-PENDING-AUDIT",
-      "gate": "A2-FULL-ENERGY-CONTINUATION-AUDIT",
-      "route": "Galerkin chain rule plus sextic/H2 coercivity gives a uniform continuation norm"
+      "status": "CLOSED-ANALYTIC-AND-EXECUTED",
+      "evidence": "v1.2 gives the projected finite-dimensional chain rule, the H2/H4 Aubin-Lions passage, the Class-II real-gradient chain rule, and the exact energy identity; the independent NumPy Galerkin audit passes 12/12",
+      "route": "The coercive energy bound prevents the H2 continuation alternative. Smoothing remains a separate audit."
     },
     {
       "order": 5,
@@ -135,5 +145,5 @@
     "canonical_pde": "Uses only the independently implemented P1 reference functional",
     "rule": "No PDE theorem or energy identity may be transferred to the historical backend."
   },
-  "tier_boundary": "T4 proof candidate only. T6 requires discharge of all three analytic audit gates and operator approval; T7 is not under consideration."
+  "tier_boundary": "T4 proof candidate only. T6 requires discharge of the remaining smoothing analytic audit and operator approval; T7 is not under consideration."
 }

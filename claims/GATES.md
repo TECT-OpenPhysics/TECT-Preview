@@ -22,7 +22,7 @@ derives its Euler--Lagrange map as `B(u) grad^2 u` plus
 local `H2 -> L2` Lipschitz estimate. The independent NumPy audit
 `a2_full_production_nonlinear_mapping_audit.py` passes 14/14, including the
 complex-to-real density and local-jet formula checks. This is not a T6 PDE
-closure; the energy-continuation and smoothing gates remain open.
+closure; the smoothing gate remains open.
 
 ### **A2-FULL-ENERGY-CONTINUATION-AUDIT**
 
@@ -31,9 +31,14 @@ including the Class-II chain rule, the $L^2$ energy identity, continuity of the
 functional on $H^2$, and the continuation alternative driven by its coercive
 $H^2$ bound.
 
-**Status:** OPEN. The production sign and Young inequalities pass; the
-infinite-dimensional chain-rule/limit argument is a proof candidate pending
-independent audit.
+**Status:** CLOSED@T4-PROOF-CANDIDATE (2026-07-17). The v1.2 note proves the
+projected finite-dimensional Fourier-Galerkin identity, obtains uniform H2,
+time-derivative, and H4 bounds, uses Aubin--Lions for strong H2 convergence,
+and supplies the real-gradient Class-II chain-rule lemma yielding the exact
+L2 energy identity and coercive global continuation. The independent NumPy
+audit reconstructs the energy without importing the Torch backend and passes
+12/12 on 4, 6, and 8 grids. This is not a T6 PDE closure: smoothing and
+continuous-dependence remain open.
 
 ### **A2-FULL-SMOOTHING-AUDIT**
 

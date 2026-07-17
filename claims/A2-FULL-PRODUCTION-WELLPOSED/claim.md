@@ -12,10 +12,12 @@ positive spectral lower bound, and controls the `H2` norm.  The family and lock
 terms are positive semidefinite, the Class-II `J-K` coefficient matrix is
 positive definite, and the sextic term absorbs the negative quartic term.
 
-The six-real-coordinate Class-II Euler--Lagrange expansion is now audited:
-it has spatial order at most two, and the full lower-order map is locally
-Lipschitz `H2 -> L2` on bounded balls.  The energy-continuation and smoothing
-arguments remain T4 proof-candidate stages, not a T6 theorem.
+The six-real-coordinate Class-II Euler--Lagrange expansion has spatial order
+at most two, and the full lower-order map is locally Lipschitz `H2 -> L2` on
+bounded balls.  The Fourier-Galerkin chain rule, compactness passage, exact
+real-`L2` energy identity, and coercive global `H2` continuation are now
+audited.  Positive-time smoothing and continuous dependence remain the final
+T4 proof-candidate stage, not a T6 theorem.
 
 ## Scope
 
@@ -30,8 +32,7 @@ not part of this claim.
 
 - Hard dependency: `A1-PRODUCTION-FUNCTIONAL-REALISATION`
 - Soft context: `A2-PDE-WELLPOSED` (the older scalar theorem, unchanged)
-- Open gates: `A2-FULL-ENERGY-CONTINUATION-AUDIT`,
-  `A2-FULL-SMOOTHING-AUDIT`
+- Open gate: `A2-FULL-SMOOTHING-AUDIT`
 - Hypotheses: none
 
 ## Evidence
@@ -42,6 +43,9 @@ not part of this claim.
 - [Audit result](runs/2026-07-17-coercivity-baseline/result.json)
 - [Independent nonlinear-map audit](../../codes/foundations/a2_full_production_nonlinear_mapping_audit.py)
 - [Nonlinear-map result](runs/2026-07-17-nonlinear-mapping-audit/result.json)
+- [Energy-continuation audit note](notes/a2-full-production-wellposedness-260717-v1.2.tex.txt)
+- [Independent energy audit](../../codes/foundations/a2_full_production_energy_continuation_audit.py)
+- [Energy-audit result](runs/2026-07-17-energy-continuation-audit/result.json)
 
 The coercivity audit gives 20/20 PASS.  Its load-bearing values are shell mass
 `0.260000000009475`, linear `H2` coercivity constant `0.2048572626782363`,
@@ -49,17 +53,21 @@ Class-II determinant `7.031249999996483e-06`, and Class-II minimum eigenvalue
 `0.001259011500926061`.  The independent real-coordinate audit gives 14/14
 PASS, including complex-to-real density agreement at `1.11e-16`, the
 Class-II Euler local-jet formula at relative error `9.04e-11`, and the
-quartic/sextic real gradient at `1.59e-10`.
+quartic/sextic real gradient at `1.59e-10`.  The independent NumPy
+energy-continuation audit gives 12/12 PASS: its finite Galerkin energy law has
+maximum relative error `7.99e-13` over 4, 6, and 8 grids and five field types.
 
 ## Reproduction
 
 ```bash
 python codes/foundations/a2_full_production_wellposedness_checks.py
 python codes/foundations/a2_full_production_nonlinear_mapping_audit.py
+python codes/foundations/a2_full_production_energy_continuation_audit.py
 ```
 
 Expected: `A2-FULL-COERCIVITY-BASELINE-PASS`, 20/20 assertions, then
-`A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS`, 14/14 assertions; both exit 0.
+`A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS`, 14/14 assertions, then
+`A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS`, 12/12 assertions; all exit 0.
 
 ## Falsifier
 
@@ -67,9 +75,11 @@ The baseline fails if a pinned source hash drifts, the full linear operator is
 not Hermitian/coercive, the Class-II matrix is not positive definite, or the
 regulariser/sextic signs fail.  The mapping result fails if the explicit
 real-coordinate Euler--Lagrange formula has a term above second spatial order
-or its bounded-ball `H2 -> L2` estimate fails.  The remaining theorem
-candidate fails if the energy identity does not justify global continuation,
-or if blow-up/non-uniqueness occurs in the declared `H2` scope.
+or its bounded-ball `H2 -> L2` estimate fails.  The energy result fails if
+the projected Galerkin chain rule, H2/H4 compactness passage, or Class-II
+chain rule fails.  The remaining theorem candidate fails if positive-time
+regularity or continuous dependence fails, or if blow-up/non-uniqueness occurs
+in the declared `H2` scope.
 
 ## Devil's-advocate
 
@@ -93,6 +103,10 @@ or if blow-up/non-uniqueness occurs in the declared `H2` scope.
 6. **"Fourth-order smoothing makes the remaining regularity proof
    automatic."** UPHELD as an invalid shortcut: the positive-time bootstrap
    remains a named audit.
+7. **"The Galerkin equality automatically survives the limit."** UPHELD as
+   an invalid shortcut and resolved: v1.2 records the H2/H4 compactness route
+   and the real-gradient Class-II chain rule separately; the NumPy audit only
+   checks the finite-dimensional projection convention.
 
 ## No-overclaim
 
@@ -110,9 +124,14 @@ negative-shell-mass branch, minimizer or BCC selection, stability, T6, or T7.
   the local `H2 -> L2` bound; an independent NumPy local-jet audit passes
   14/14.  The tier remains T4 because energy continuation and smoothing are
   still open.
+- 2026-07-17: `A2-FULL-ENERGY-CONTINUATION-AUDIT` closed.  The v1.2 note
+  supplies the Fourier-Galerkin chain rule, compactness/chain-rule passage,
+  exact energy identity, and coercive global continuation; an independent
+  NumPy finite-Galerkin audit passes 12/12.  The tier remains T4 because
+  smoothing and continuous dependence are still open.
 
 ## Next required action
 
-Audit the Fourier-Galerkin chain rule, the full Class-II energy identity, and
-the compactness/continuation passage in
-`A2-FULL-ENERGY-CONTINUATION-AUDIT`.  Audit smoothing only after that step.
+Audit continuous `H2` dependence and the positive-time `H4` entry before
+bootstrapping the full Class-II flow to `C-infinity` in
+`A2-FULL-SMOOTHING-AUDIT`.
