@@ -1,6 +1,6 @@
 # A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM -- spectral discretization to continuum PDE
 
-**Tier**: T4 STRONG-EVIDENCE (TSv2) | **Lifecycle**: ACTIVE |
+**Tier**: T6 CONDITIONAL-THEOREM (TSv2) | **Lifecycle**: ACTIVE |
 **Last review**: 2026-07-17
 
 ## Statement
@@ -8,6 +8,13 @@
 This package asks whether the finite Fourier grids used by the full-production
 Sector-A model approximate the continuum PDE proved in P2. It deliberately
 does not treat N32/N64/N128 solver output as convergence evidence.
+
+Conditional on `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, every P2 solution from
+the declared `H2` balls has an explicit uniform `H6` bound on
+`0.02 <= t <= 0.2`, the collocation/Galerkin residual mismatch is bounded by
+an explicit `C N^-2`, and the exact Galerkin flow restarted at `t=0.02`
+converges to the projected continuum solution in `L2` at an explicit
+`E N^-4` rate.
 
 The spatial convention is frozen as follows. `P_N` is the real-L2 Fourier
 projector, the exact Galerkin residual is `P_N R(Psi_N)`, and the current P1
@@ -26,10 +33,14 @@ energy-gradient identity is within `1.0211e-8`.
 
 - Hard dependencies: `A1-PRODUCTION-FUNCTIONAL-REALISATION` and
   `A2-FULL-PRODUCTION-WELLPOSED`.
-- Named hypothesis: `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`.
-- Scope: fixed torus, pinned production coefficients and positive floors,
-  `eta_shell=0`, CPU complex128, stage-1 manufactured field.
-- Open gate: `A3-FULL-DISCRETIZATION-CLOSURE`.
+- Named hypothesis: `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, identifying the
+  hash-pinned T5 P1 reference functional as canonical.
+- Theorem scope: fixed torus, pinned production coefficients and positive
+  floors, `eta_shell=0`, `R=0.5,1,2`, `tau=0.02`, `T=0.2`, and exact nonlinear
+  Fourier projection. Finite-grid CPU/CUDA tests retain their own narrower
+  recorded scopes.
+- The quantitative gate `A3-FULL-DISCRETIZATION-CLOSURE` is closed in the
+  theorem scope stated below.
 
 The frozen conventions and acceptance thresholds are in
 `discretization_manifest.json`.
@@ -68,13 +79,12 @@ assertions pass. CUDA complex128 has maximum energy/residual errors
 `3.7843e-7`, respectively. Both are within the frozen acceptance limits. This
 is a recorded-device result, not a claim about every GPU.
 
-Stage 6 supplies the missing qualitative solution-ball passage. For every
-initial `H2` radius `R` and every `0 < tau <= T`, P2 smoothing gives a uniform
+Stage 6 supplies the qualitative solution-ball passage. For every initial
+`H2` radius `R` and every `0 < tau <= T`, P2 smoothing gives a uniform
 positive-time `H6` envelope. The fourth-order residual therefore lies in a
 bounded `H2` ball. The Fourier tail and periodic aliasing estimates yield
 `||P_N R(u)-R_N^C(P_Nu)||_L2 <= C(R,tau,T) N^-2`, uniformly over that P2
-solution ball and time interval. The order/source audit passes 13/13. This is
-not yet a numerical error bar: `C(R,tau,T)` has not been enclosed.
+solution ball and time interval. The order/source audit passes 13/13.
 
 Stage 7 now makes the first input to that enclosure computable.  A rigorous
 max-norm-shell Fourier embedding bound and P2 energy dissipation yield an
@@ -82,8 +92,19 @@ explicit, all-time `H2` envelope for each declared initial ball.  For initial
 radii `R=0.5, 1, 2`, the certified bounds are respectively `20.16099`,
 `20.35978`, and `21.21616`.  The audit is 13/13 PASS and pins the P1 backend,
 P1/P2 manifests, Class-II generator convention, and derived coefficients.
-This remains only an `H2` input: it does not evaluate the positive-time `H6`
-envelope or `C(R,tau,T)`.
+Stage 8 makes the positive-time theorem quantitative for `R=0.5,1,2`,
+`tau=0.02`, and `T=0.2`. Explicit Fourier embeddings, Class-II derivative
+envelopes retaining the `1e-12` floor, and two endpoint-Duhamel cancellations
+give finite `B6(R,tau,T)`. The derived `log10 B6` bounds are 515.378, 515.751,
+and 517.320; the corresponding `log10 C` bounds are 576.355, 576.770, and
+578.513. The primary and independent audits pass 15/15 and 10/10.
+
+For the mathematically dealiased exact Galerkin flow
+`partial_t u_N + L u_N + P_N N(u_N)=0`, restarted by
+`u_N(tau)=P_N u(tau)`, the proof yields
+`sup_[tau,T] ||u_N-P_Nu||_L2 <= E(R,tau,T) N^-4`. This is a genuine
+positive-time convergence theorem, but the deliberately worst-case constants
+are astronomically large and are not useful error bars at practical grids.
 
 ## Reproduction
 
@@ -142,11 +163,15 @@ The solution-ball and package commands are:
 ```bash
 python codes/foundations/a3_full_production_solution_ball_bound.py
 python codes/foundations/a3_full_production_energy_ball_envelope.py
+python codes/foundations/a3_full_production_quantitative_majorant.py
+python codes/foundations/a3_full_production_quantitative_majorant_independent.py
 python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits
 ```
 
 Expected: `13/13 PASS`, `A3-FULL-SOLUTION-BALL-BOUND-PASS`; then
-`13/13 PASS`, `A3-FULL-ENERGY-BALL-ENVELOPE-PASS`; then `79/79`,
+`13/13 PASS`, `A3-FULL-ENERGY-BALL-ENVELOPE-PASS`; then `15/15` and
+`A3-FULL-QUANTITATIVE-MAJORANT-PASS`; then `10/10` and
+`A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS`; then `104/104`,
 `A3-FULL-PRODUCTION-VERIFY-PASS`. The verifier's default (without
 `--reuse-recorded-audits`) reruns CPU audits into a temporary directory and can
 take substantially longer; the recorded mode validates their immutable results
@@ -167,35 +192,40 @@ and current source hashes without overwriting them.
    as false. The CPU/CUDA complex128/64 matrix is closed only for the recorded
    N8 fields and RTX 5070 Laptop GPU environment; broader device coverage is
    not asserted.
-5. **"The existence of C(R,tau,T) already gives a controlled solver error
-   bar."** UPHELD as false. The qualitative positive-time bound needs a
-   computable enclosure of its constant and a dealiased finite-time evolution
-   estimate before it applies to a solver trajectory.
-6. **"An all-time H2 envelope is already the needed numerical C(R,tau,T)."**
-   UPHELD as false. It supplies only the common initial input for explicit
-   positive-time H4/H6 smoothing and leaves both that estimate and the
-   dealiased evolution bound open.
+5. **"Finite B6 and C automatically give a useful practical solver error
+   bar."** UPHELD as false. The floor-sensitive enclosures are astronomically
+   large; they prove convergence but do not certify historical grids.
+6. **"Three-halves dealiasing is exact for the Class-II residual."** UPHELD as
+   false. The density denominator is rational. Only the mathematical nonlinear
+   projection `P_N N(u_N)` is exact Galerkin here.
+7. **"T6 silently inherits the T5 P1 functional."** VALID WITH MITIGATION. The
+   identification is explicit as `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, while
+   the P2 well-posedness input is already T6.
 
 ## No-overclaim
 
-The present T4 strong-evidence record includes an independent manufactured-field
-continuum-quadrature proxy and a recorded CUDA consistency matrix, but not a
-numerical uniform error bar for arbitrary P2 solutions. It is not all-device
-GPU equivalence, historical-solver integration, a license to label N32/N64/N128
-Sector-B output as continuum PDE evidence, a theorem, or a T5/T6/T7 result.
+The T6 result is conditional on the canonical-functional identification and is
+restricted to the declared positive-time solution balls and exact Galerkin
+flow. It is not all-device GPU equivalence, historical-solver integration, a
+license to label N32/N64/N128 Sector-B output as continuum PDE evidence, a
+practically sharp error budget, minimizer/BCC selection, T7, or physical-domain
+closure.
 
 ## Tier review
 
-The v1.6 review promotes T3 to T4 because the frozen package combines executed
-spatial, finite-time, Hessian/Ritz, manufactured-order, and hardware/precision
-tests with an independent portable implementation, a qualitative uniform
-positive-time analytic bound, and an explicit energy-to-H2 envelope. The
-hash-bound recorded verifier passes 79/79. T5 remains blocked by the unevaluated
-positive-time H6 and residual constants and the missing dealiased finite-time
-evolution estimate.
+The v2.1 review promotes T4 to T6 in one step because the new result is a
+complete conditional theorem rather than an enlarged evidence-only scope. It
+has a self-contained proof, one named hypothesis covering the sub-T6 hard
+input, explicit quantitative sanity checks, a non-importing independent audit,
+a 104/104 integrated verifier, and a PUBLISHED bundle. The bundle contains 42
+files and nine entry scripts, all PASS, with digest
+`6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910`.
+T7 is prohibited by the named hypothesis and lack of public external
+reproduction.
 
 ## Next action
 
-Derive the explicit positive-time H6 smoothing majorant from the new H2
-envelope, then propagate the resulting C(R,tau,T) through a dealiased
-finite-time evolution estimate before independent reproduction and tier review.
+Preserve this T6 package as the closed P3 baseline. Any sharp practical
+constant, finite-oversampling solver bridge, historical-solver certificate,
+`eta_shell` extension, lower-regularity data, or infinite-volume limit must be
+registered as a separate claim. P4 may proceed without widening P3.

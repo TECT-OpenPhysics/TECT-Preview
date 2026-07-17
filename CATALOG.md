@@ -6,7 +6,7 @@
 
 Generated: 2026-07-17
 
-**1458 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1511 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -108,10 +108,40 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/requirements.txt` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `457e45615e94` |
 | `claims/A2-PDE-WELLPOSED/claim.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `7c8baaf31ca1` |
 | `claims/A2-PDE-WELLPOSED/status.json` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `d20a1a7211f4` |
-| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/LINEAGE.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `35bf0dcfd008` |
-| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/claim.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `c1a21969aeb7` |
-| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/discretization_manifest.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9b78920a8f27` |
-| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `15b59069ea20` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/LINEAGE.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `3b937259201a` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/MANIFEST.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `102cef5ac558` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/README.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `d729a9972b02` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `88da7764302b` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `ef0238b07da6` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/discretization_manifest.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9cce799e6676` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_bundle_verify.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `45e913238363` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_energy_ball_envelope.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `f019a4b89008` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_finite_time_convergence.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `899860abf27a` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_hardware_precision.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `c948992b413f` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_hessian_ritz_convergence.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `4dcb1d6df4a8` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_independent_galerkin.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `8348ebadf9f5` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_portable_backend.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `85501c65af0d` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_quantitative_majorant.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `86bb0fcbb41c` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_quantitative_majorant_independent.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `b541bfce66df` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_solution_ball_bound.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `14978809a776` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_spatial_consistency.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `560cc462c754` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/a3_full_production_verify.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.3.0 | ACTIVE | `b56e58582365` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/codes/foundations/n001_variational_backend.py` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `e2b55702d481` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/environment.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `6ca1add20936` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_bundle_verify.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `07b64e89ad3e` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_energy_ball_envelope.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `53298768cfcd` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_finite_time_convergence.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `fd518cd730c6` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_hessian_ritz_convergence.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `85459bf55a2a` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_independent_galerkin.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `4e9b16e1321c` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_quantitative_majorant.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `e49a00b5f49b` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_quantitative_majorant_independent.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `31b6b893af58` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_solution_ball_bound.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `286fe6bf7a88` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_spatial_consistency.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `b0eec00824e3` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/expected/a3_full_production_verify.log` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `07b64e89ad3e` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/requirements.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `10739b3c6d5f` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/claim.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `8a0540254891` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/discretization_manifest.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `41127ee4175f` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `a7cbaee1ece4` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/LINEAGE.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `80b057b63466` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/claim.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `c07e204a240d` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `b61a2cd4bfb8` |
@@ -432,6 +462,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.1.tex.txt` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.1 | SUPERSEDED | `f9b431115bd5` |
 | `claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.2.pdf` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.2 | ACTIVE | `9fc0e2565c75` |
 | `claims/A2-PDE-WELLPOSED/notes/a2-local-global-wellposedness-260623-260623-v1.2.tex.txt` | A2-PDE-WELLPOSED | 2026-06-23 | 2026-06-23 | v1.2 | ACTIVE | `1320fe907377` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.1 | ACTIVE | `1bf452f287b0` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.1 | ACTIVE | `e13fe6e24854` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.0.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0 | ACTIVE | `9be4bd7935b7` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.0.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.0 | ACTIVE | `a304f150bc63` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.1.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.1 | ACTIVE | `ec6eee15a3fd` |
@@ -446,8 +478,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.5.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.5 | ACTIVE | `283962becb9d` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.6.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.6 | ACTIVE | `606e656029d3` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.6.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.6 | ACTIVE | `f37b1b75bf56` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.7.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.7 | ACTIVE | `1ab78d1d06c1` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.7.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v1.7 | ACTIVE | `a74f7911082f` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.0.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `224a8641927b` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.0.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `317ba76d2c53` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.1 | ACTIVE | `1bf452f287b0` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.1 | ACTIVE | `e13fe6e24854` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-continuum-correlators-program-260623-260623-v1.0.pdf` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `f769faf1abce` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-continuum-correlators-program-260623-260623-v1.0.tex.txt` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.0 | SUPERSEDED | `5ce8e66da50c` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-graphwise-convergence-lemma-260623-260623-v1.1.pdf` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `7104de65857f` |
@@ -1086,6 +1122,17 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-smoothing-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `c30a6f4028c7` |
 | `claims/A2-PDE-WELLPOSED/bundle/A2-WellPosedness-260623/claims/A2-PDE-WELLPOSED/runs/a2_wellposedness_checks.json` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `e976548ce323` |
 | `claims/A2-PDE-WELLPOSED/runs/a2_wellposedness_checks.json` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `c469254e39db` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-energy-ball-envelope/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `6e744ec46451` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-finite-time-convergence/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9222a41e70b1` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hardware-precision/cuda-evidence-review.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `2afe797fa769` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hardware-precision/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `b7590feb0909` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hessian-ritz-convergence/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `39b2f6bdc96e` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-independent-galerkin/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `c91166e6fa67` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-integrated-verifier-quantitative/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `88344861e42a` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant-independent/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `62e0406a74ca` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `08a81db4cbf4` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-solution-ball-bound/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9d523514967d` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-spatial-consistency/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `cda67efa654a` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-energy-ball-envelope/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `6e744ec46451` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-finite-time-convergence/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9222a41e70b1` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hardware-precision/cuda-evidence-review.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `2afe797fa769` |
@@ -1093,7 +1140,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hessian-ritz-convergence/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `39b2f6bdc96e` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-independent-galerkin/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `c91166e6fa67` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-integrated-verifier-energy-envelope/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `a3b3abcd5245` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-integrated-verifier-quantitative/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `0fc212bcf4ec` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-integrated-verifier/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `0420a001f1cb` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant-independent/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `62e0406a74ca` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `08a81db4cbf4` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-solution-ball-bound/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9d523514967d` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-spatial-consistency/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `cda67efa654a` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `60f9ea6d8738` |
@@ -1265,15 +1315,18 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a2_full_production_verify.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `4bc68f4411a9` |
 | `codes/foundations/a2_full_production_wellposedness_checks.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `cfb91709f156` |
 | `codes/foundations/a2_wellposedness_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `8839d0f40aed` |
+| `codes/foundations/a3_full_production_bundle_verify.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `45e913238363` |
 | `codes/foundations/a3_full_production_energy_ball_envelope.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `f019a4b89008` |
 | `codes/foundations/a3_full_production_finite_time_convergence.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `899860abf27a` |
 | `codes/foundations/a3_full_production_hardware_precision.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `c948992b413f` |
 | `codes/foundations/a3_full_production_hessian_ritz_convergence.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `4dcb1d6df4a8` |
 | `codes/foundations/a3_full_production_independent_galerkin.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `8348ebadf9f5` |
 | `codes/foundations/a3_full_production_portable_backend.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `85501c65af0d` |
+| `codes/foundations/a3_full_production_quantitative_majorant.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `86bb0fcbb41c` |
+| `codes/foundations/a3_full_production_quantitative_majorant_independent.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `b541bfce66df` |
 | `codes/foundations/a3_full_production_solution_ball_bound.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `14978809a776` |
 | `codes/foundations/a3_full_production_spatial_consistency.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `560cc462c754` |
-| `codes/foundations/a3_full_production_verify.py` | — | 2026-07-17 | 2026-07-17 | v1.2.0 | ACTIVE | `fac41510222c` |
+| `codes/foundations/a3_full_production_verify.py` | — | 2026-07-17 | 2026-07-17 | v1.3.0 | ACTIVE | `b56e58582365` |
 | `codes/foundations/a3_graphwise_convergence_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `295b72b2ed25` |
 | `codes/foundations/a3_renormalisation_checks.py` | — | 2026-06-23 | 2026-06-23 | v1.0.0 | ACTIVE | `d41b7bb1db59` |
 | `codes/foundations/actual_n001_pde_backend.py` | — | — | — | — | ACTIVE | `8fe66e0df51b` |
@@ -1385,7 +1438,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/scripts/build_index.py` | — | — | — | v1.0.1 | ACTIVE | `5b5cf548e8e3` |
 | `verification/scripts/build_lineage.py` | — | 2026-06-06 | 2026-06-06 | v1.0.0 | ACTIVE | `50c360a1d1f2` |
 | `verification/scripts/build_note_pdf.py` | — | — | — | — | ACTIVE | `342d4924fb56` |
-| `verification/scripts/build_reproduction_bundle.py` | — | 2026-06-10 | 2026-07-17 | v1.9.3 | ACTIVE | `d69238d7b1ab` |
+| `verification/scripts/build_reproduction_bundle.py` | — | 2026-06-10 | 2026-07-17 | v1.9.4 | ACTIVE | `a0bdba6df1ec` |
 | `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
 | `verification/scripts/bundle_coverage.py` | — | 2026-06-10 | 2026-07-17 | v2.0.0 | ACTIVE | `56a9397e764d` |
 | `verification/scripts/changelog.py` | — | — | — | — | ACTIVE | `ac07ad463a51` |
@@ -1431,7 +1484,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `73ce3a0fac09` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `8853a56d0cae` |
 | `claims/A2-PDE-WELLPOSED/INDEX.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `db953c1945b8` |
-| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `1feff9493c7e` |
+| `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `caf9d2516aab` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `36bc8af82f42` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `29f58267f507` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
@@ -1440,11 +1493,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `527592926d92` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `795e7f028d99` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `7699b412eaa7` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `35a1298aeef8` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `b49f96a9f3cb` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `32162c8ce15d` |
 
 ## Governance policies
 
@@ -1472,8 +1525,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `cd0d0305b0f2` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `f77b16558391` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `134443d3deff` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `30a5d492dd6e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
@@ -1481,7 +1534,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `d34556ea715f` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `15e937686a71` |
+| `TODO.md` | — | — | — | — | ACTIVE | `74a01b308205` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -1491,7 +1544,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `19e654113e37` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `e81d2bfe92e8` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1536,11 +1589,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `c64982669f86` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `cb5e2ec17cc0` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `07f449192136` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `cbd6bbbf62d8` |
 

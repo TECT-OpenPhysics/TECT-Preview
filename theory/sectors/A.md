@@ -8,7 +8,7 @@
 
 ## Claims
 
-Tier profile: T6x6 T5x3 T4x1
+Tier profile: T6x7 T5x3
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
@@ -19,12 +19,12 @@ Tier profile: T6x6 T5x3 T4x1
 | [`A1-SCALAR-ANALYTIC-BRANCH`](../../claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md) | T6 | A1-SHELL-POSITIVITY | — | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) |
 | [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production three-component gradient-flow well-posedness |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
-| [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T4 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | A3-FULL-DISCRETIZATION-CLOSURE | Full-production spectral discretization to continuum PDE |
+| [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full-production spectral discretization to continuum PDE |
 | [`A3-PERTURBATIVE-CONTINUUM-CORRELATORS`](../../claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Cutoff-independent continuum limit of the perturbative correlators (conditional) |
 | [`A3-UV-SUPERRENORMALISABILITY`](../../claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | UV super-renormalisability of the scalar Brazovskii functional |
 
 **Open named hypotheses (sector union):** A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY  
-**Open gates (sector union):** A3-FULL-DISCRETIZATION-CLOSURE
+**Open gates (sector union):** —
 
 ## Predictions
 

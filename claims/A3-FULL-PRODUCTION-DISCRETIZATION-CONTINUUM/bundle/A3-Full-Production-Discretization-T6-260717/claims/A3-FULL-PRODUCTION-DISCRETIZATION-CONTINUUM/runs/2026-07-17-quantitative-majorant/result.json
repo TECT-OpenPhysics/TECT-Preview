@@ -1,0 +1,250 @@
+{
+  "schema": "tect/a3-full-production-quantitative-majorant-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "verdict": "A3-FULL-QUANTITATIVE-MAJORANT-PASS",
+  "scope": "canonical P1/P2 H2 solution balls; explicit positive-time H6 and residual bounds; exact Galerkin flow restarted at tau",
+  "constant_labels": "All reported constants are DERIVED conservative enclosures, not fitted or matched values.",
+  "norms": {
+    "H2": "volume sum (1+|k|^4)|u_hat|^2",
+    "H4": "volume sum (1+|k|^4)^2|u_hat|^2",
+    "H6": "volume sum (1+|k|^4)^3|u_hat|^2"
+  },
+  "derived_global_constants": {
+    "H2_to_Linf": "3.29926816703362E-1",
+    "H2_to_grad_L4": "5.33391254984102E-1",
+    "H2_algebra_overcount": "2.63941453362690E+0",
+    "linear_graph_lower": "2.04857262678236E-1",
+    "linear_graph_upper": "2.15667135360000E+0",
+    "projection_tail_N_minus_4": "6.72791413042993E+2",
+    "periodic_alias_N_minus_2": "1.67383081344240E+2",
+    "rho_floor": "1.00000000000000E-12",
+    "fractional_power": "0.75",
+    "holder_exponent": "0.25",
+    "tau": "0.02",
+    "T": "0.2"
+  },
+  "rows": [
+    {
+      "initial_h2_radius": "0.5",
+      "M2": "2.01609886852989E+1",
+      "pointwise_amplitude_upper": "6.65165081853317E+0",
+      "classii_q_derivative_envelopes": [
+        "1.00000000000000E+0",
+        "6.77086295903448E+26",
+        "2.07233116410688E+40",
+        "9.51405266886614E+53"
+      ],
+      "classii_metric_derivative_envelopes": [
+        "1.13487036338964E+1",
+        "4.71827736381285E+27",
+        "1.14095747975340E+54",
+        "1.04762498806395E+68"
+      ],
+      "K0_H2_to_L2_bound": "1.76784388843745E+32",
+      "Lip0_H2_to_L2_bound": "1.41041695714150E+58",
+      "B4_tau_over_2_T": "1.32867789680333E+91",
+      "K2_H4_to_H2_bound": "3.94024377649217E+256",
+      "Lip2_H4_to_H2_bound": "1.07944874743069E+257",
+      "B6_tau_T": "2.38608549705266E+515",
+      "log10_B6_tau_T": "5.15377686001041E+2",
+      "residual_C_for_N_minus_2": "2.26419570189095E+576",
+      "log10_residual_C": "5.76354913961641E+2",
+      "dealiased_galerkin_growth_rate": "4.85527329367083E+116",
+      "dealiased_restarted_error_rate": "N^-4 on [tau,T] with u_N(tau)=P_N u(tau)",
+      "log10_dealiased_error_constant": "3.79551311923224E+115"
+    },
+    {
+      "initial_h2_radius": "1.0",
+      "M2": "2.03597732081305E+1",
+      "pointwise_amplitude_upper": "6.71723516336089E+0",
+      "classii_q_derivative_envelopes": [
+        "1.00000000000000E+0",
+        "6.96422567063275E+26",
+        "2.14978268923951E+40",
+        "9.95422713779020E+53"
+      ],
+      "classii_metric_derivative_envelopes": [
+        "1.15736001735294E+1",
+        "4.94919424570993E+27",
+        "1.23097520053305E+54",
+        "1.13996701233340E+68"
+      ],
+      "K0_H2_to_L2_bound": "1.89111162230131E+32",
+      "Lip0_H2_to_L2_bound": "1.55184944343189E+58",
+      "B4_tau_over_2_T": "1.56384975584136E+91",
+      "K2_H4_to_H2_bound": "6.05734597719060E+256",
+      "Lip2_H4_to_H2_bound": "1.65884142167048E+257",
+      "B6_tau_T": "5.63700128456074E+515",
+      "log10_B6_tau_T": "5.15751048133787E+2",
+      "residual_C_for_N_minus_2": "5.88542945473655E+576",
+      "log10_residual_C": "5.76769778158431E+2",
+      "dealiased_galerkin_growth_rate": "5.87784065742991E+116",
+      "dealiased_restarted_error_rate": "N^-4 on [tau,T] with u_N(tau)=P_N u(tau)",
+      "log10_dealiased_error_constant": "4.59488477345111E+115"
+    },
+    {
+      "initial_h2_radius": "2.0",
+      "M2": "2.12161594568883E+1",
+      "pointwise_amplitude_upper": "6.99977995228208E+0",
+      "classii_q_derivative_envelopes": [
+        "1.00000000000000E+0",
+        "7.83929146765347E+26",
+        "2.50850426892121E+40",
+        "1.20404892964379E+54"
+      ],
+      "classii_metric_derivative_envelopes": [
+        "1.25677098210618E+1",
+        "6.04959282962597E+27",
+        "1.69373290900250E+54",
+        "1.62593886839495E+68"
+      ],
+      "K0_H2_to_L2_bound": "2.51013153203526E+32",
+      "Lip0_H2_to_L2_bound": "2.31863761288952E+58",
+      "B4_tau_over_2_T": "3.10139894018498E+91",
+      "K2_H4_to_H2_bound": "3.68983710254844E+257",
+      "Lip2_H4_to_H2_bound": "1.00899481303642E+258",
+      "B6_tau_T": "2.08860834913428E+517",
+      "log10_B6_tau_T": "5.17319857009747E+2",
+      "residual_C_for_N_minus_2": "3.25814438569796E+578",
+      "log10_residual_C": "5.78512970326296E+2",
+      "dealiased_galerkin_growth_rate": "1.31215274226086E+117",
+      "dealiased_restarted_error_rate": "N^-4 on [tau,T] with u_N(tau)=P_N u(tau)",
+      "log10_dealiased_error_constant": "1.02574925168060E+116"
+    }
+  ],
+  "assertions": [
+    {
+      "name": "p1_manifest_hash",
+      "status": "PASS",
+      "detail": {
+        "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      }
+    },
+    {
+      "name": "p2_manifest_hash",
+      "status": "PASS",
+      "detail": {
+        "actual": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+        "expected": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+      }
+    },
+    {
+      "name": "energy_ball_result_passed",
+      "status": "PASS",
+      "detail": "A3-FULL-ENERGY-BALL-ENVELOPE-PASS"
+    },
+    {
+      "name": "positive_declared_times",
+      "status": "PASS",
+      "detail": {
+        "tau": "0.02",
+        "T": "0.2"
+      }
+    },
+    {
+      "name": "fractional_power_supports_two_endpoint_steps",
+      "status": "PASS",
+      "detail": {
+        "alpha": "0.75",
+        "theta": "0.25"
+      }
+    },
+    {
+      "name": "positive_explicit_density_floor",
+      "status": "PASS",
+      "detail": "1E-12"
+    },
+    {
+      "name": "embedding_tail_is_explicit",
+      "status": "PASS",
+      "detail": {
+        "linf_tail": "1.23191787107204E-1",
+        "grad_l4_tail": "1.23191787107204E-1"
+      }
+    },
+    {
+      "name": "linear_graph_constants_are_positive",
+      "status": "PASS",
+      "detail": {
+        "lower": "0.2048572626782363",
+        "upper": "2.1566713536"
+      }
+    },
+    {
+      "name": "all_majorants_are_finite_positive_decimals",
+      "status": "PASS",
+      "detail": {
+        "B6_log10": [
+          "515.377686001041",
+          "515.751048133787",
+          "517.319857009747"
+        ]
+      }
+    },
+    {
+      "name": "B6_is_monotone_in_declared_radius",
+      "status": "PASS",
+      "detail": [
+        "515.377686001041",
+        "515.751048133787",
+        "517.319857009747"
+      ]
+    },
+    {
+      "name": "residual_constant_is_monotone_in_declared_radius",
+      "status": "PASS",
+      "detail": [
+        "576.354913961641",
+        "576.769778158431",
+        "578.512970326296"
+      ]
+    },
+    {
+      "name": "evolution_constant_is_monotone_in_declared_radius",
+      "status": "PASS",
+      "detail": [
+        "3.79551311923224E+115",
+        "4.59488477345111E+115",
+        "1.02574925168060E+116"
+      ]
+    },
+    {
+      "name": "residual_aliasing_rate_is_explicit",
+      "status": "PASS",
+      "detail": {
+        "alias_N^-2": "1.67383081344240E+2",
+        "projection_N^-4": "6.72791413042993E+2"
+      }
+    },
+    {
+      "name": "positive_time_restart_is_declared",
+      "status": "PASS",
+      "detail": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data."
+    },
+    {
+      "name": "historical_solver_scope_is_excluded",
+      "status": "PASS",
+      "detail": "No historical collocation trajectory is certified"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 15,
+    "total": 15
+  },
+  "honesty_boundary": {
+    "closed_here": [
+      "explicit conservative B4 and B6 positive-time solution-ball majorants",
+      "explicit residual aliasing constant C(R,tau,T) multiplying N^-2",
+      "explicit N^-4 finite-time bound for exact Galerkin flow restarted at tau"
+    ],
+    "not_closed_here": [
+      "useful or sharp numerical error bars at practical N",
+      "algebraic convergence from t=0 for merely H2 initial data",
+      "finite-oversampling exactness for the rational Class-II collocation residual",
+      "historical Sector-B solver continuum certification",
+      "T5/T6/T7 promotion or PUBLISHED reproduction bundle"
+    ]
+  }
+}

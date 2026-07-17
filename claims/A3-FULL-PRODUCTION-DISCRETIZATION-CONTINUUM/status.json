@@ -9,9 +9,7 @@
     "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL"
   ],
   "soft_dependencies": [],
-  "open_gates": [
-    "A3-FULL-DISCRETIZATION-CLOSURE"
-  ],
+  "open_gates": [],
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-07-17)",
   "legacy_evidence": [
@@ -48,28 +46,39 @@
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.5.tex.txt",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.5.pdf",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.6.tex.txt",
-    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.6.pdf"
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.6.pdf",
+    "codes/foundations/a3_full_production_quantitative_majorant.py",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant/result.json",
+    "codes/foundations/a3_full_production_quantitative_majorant_independent.py",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant-independent/result.json",
+    "codes/foundations/a3_full_production_bundle_verify.py",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-integrated-verifier-quantitative/result.json",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.7.tex.txt",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.7.pdf",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.tex.txt",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.pdf",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717/ (PUBLISHED; digest 6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910)"
   ],
   "t7_candidate": false,
   "reproduction": {
-    "command": "python codes/foundations/a3_full_production_spatial_consistency.py",
-    "expected": "13/13 PASS; A3-FULL-SPATIAL-CONSISTENCY-PASS; exit 0.",
+    "command": "python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits",
+    "expected": "Nine PASS lines; ASSERTS: 104/104; A3-FULL-PRODUCTION-VERIFY-PASS; exit 0.",
     "status": "AVAILABLE"
   },
   "last_review": "2026-07-17",
-  "notes": "P3 is T4 STRONG-EVIDENCE in its frozen scope after the v1.6 tier review. Stages 1-2 retain their 13/13 spatial and 10/10 finite-time PASS results. Stage 3 passes 13/13 with homogeneous lowest-cluster gap 0.1368657 and maximum Ritz-residual/gap 9.881785e-09. Stage 4 closes the recorded torch 2.13.0+cu130 matrix on one NVIDIA GeForce RTX 5070 Laptop GPU at 6/6 assertions PASS. Stage 5 closes the independent analytic manufactured-field continuum-quadrature proxy at 11/11. Stage 6 adds a qualitative positive-time P2 solution-ball estimate C(R,tau,T)N^-2 at 13/13, and Stage 7 closes the explicit energy-to-H2 input M2(R) at 13/13. The integrated verifier validates all immutable CPU evidence, source hashes, recorded CUDA evidence, and Stage 7 at 79/79 PASS. Explicit positive-time H4/H6 smoothing constants, numerical C(R,tau,T), a dealiased finite-time evolution bound, and the final T5 reproduction package remain open.",
+  "notes": "Promoted from T4 to T6 CONDITIONAL-THEOREM on 2026-07-17 after closing the selected quantitative gate. Stage 8 computes explicit conservative B6(R,tau,T) and C(R,tau,T) for R=0.5,1,2, tau=0.02, T=0.2, and proves N^-4 L2 convergence for the exact Galerkin flow restarted at tau. The primary majorant audit passes 15/15, the independent audit passes 10/10, and the integrated verifier passes 104/104 including recorded CUDA evidence. The v2.1 referee note has seven concrete devil's-advocate objections, FORM-CHECK PASS, and zero overfull boxes. The PUBLISHED bundle contains 42 files and nine entry scripts, all PASS, source-pinned to a88f2aa87f23928b06bdfe93c1638fce8d037dcf with digest 6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910. The sole named hypothesis identifies the hash-pinned T5 P1 reference functional as canonical. Constants are finite but astronomically conservative and do not certify practical Sector-B grids.",
   "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "title": "Full-production spectral discretization to continuum PDE",
   "sector": "A",
-  "statement": "For the hash-pinned full-production functional and fixed-torus PDE, P3 stages 1-3 verify spatial self-convergence, the real energy-gradient identity, fourth-order manufactured finite-time convergence, unforced trajectory and energy convergence, and Hessian/Ritz grid convergence with an isolated-cluster residual/gap certificate. Stage 5 independently implements the functional and, after exact Fourier prolongation, verifies convergence of the canonical collocation residual to an oversampled M=24,32 projected quadrature-gradient proxy. Stage 6 derives a uniform positive-time solution-ball mismatch bound C(R,tau,T)N^-2 from P2 smoothing and the fourth-order residual order. Stage 7 computes the prerequisite all-time H2 envelope M2(R) for declared initial balls directly from a Fourier embedding, P1 energy upper bound, and P2 coercivity. The independent portable implementation closes the CPU and recorded CUDA complex128/64 consistency matrix; the integrated verifier validates the hash-bound evidence matrix.",
-  "scope": "T4 STRONG-EVIDENCE. Fixed T3, pinned full-production parameters and positive regularisers, eta_shell=0. The qualitative solution-ball statement applies to every H2 initial ball only on fixed positive-time intervals 0<tau<=t<=T and has an unevaluated constant C(R,tau,T). Spatial and finite-time grids are frozen in stages 1-2; Hessian/Ritz N=8,12,16 against N=20; independent Galerkin proxy N=8,12,16 against M=24,32; CPU and CUDA complex128/64 precision matrix at N=8 on the recorded torch 2.13.0+cu130 / NVIDIA GeForce RTX 5070 Laptop GPU environment. T4 records strong evidence and is not a continuum theorem or solver-error certificate.",
-  "tier": "T4",
+  "statement": "Conditional on A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, for the canonical full-production P1/P2 gradient flow on the fixed three-torus, eta_shell=0, initial H2 radii R in {0.5,1,2}, tau=0.02, and T=0.2, explicit finite B6(R,tau,T) and C(R,tau,T) bound the positive-time H6 solution ball and the collocation/Galerkin residual mismatch by C N^-2. The exact Galerkin flow restarted at tau from P_N u(tau) converges to P_N u in L2 uniformly on [tau,T] at explicit rate E(R,tau,T)N^-4. Independent analytic and executable audits, the finite-grid evidence matrix, and the PUBLISHED reproduction bundle support the theorem.",
+  "scope": "T6 CONDITIONAL-THEOREM: fixed T3 with periods 16, canonical hash-pinned P1/P2 functional and coefficients, positive rho and Class-II mass regularisers, eta_shell=0, H2 initial radii R=0.5,1,2, tau=0.02, T=0.2, and exact nonlinear projection P_N N(u_N). Conditional on A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL. The theorem is positive-time and restarted; it excludes t=0 algebraic rates for merely H2 data, finite-oversampling exactness for the rational Class-II term, practical-grid error certification, historical solver trajectories, eta_shell nonzero, removed regularisers, and infinite volume.",
+  "tier": "T6",
   "evidence_grade": [
     "ANALYTIC",
     "EXECUTED",
     "CONDITIONAL"
   ],
-  "falsifier": "Source-hash drift, an unstable oversampling reference, nonconvergent collocation-to-Galerkin residual error, failure of the discrete energy-gradient identity, failure of the later finite-time or Hessian/Ritz convergence conditions, or an unexplained hardware/precision discrepancy invalidates the corresponding P3 stage.",
-  "no_overclaim": "This T4 strong-evidence claim is not a theorem and does not supply a numerical enclosure of C(R,tau,T), a controlled continuum-error bar for arbitrary P2 or historical-solver trajectories, a completed dealiased finite-time Galerkin passage, full-spectrum Hessian convergence at a Sector-B candidate, validation on all GPU devices or grids, continuum validity of N32/N64/N128 Sector-B runs, minimizer or BCC selection, T5, T6, or T7.",
-  "next_action": "Derive a computable enclosure of the positive-time solution-ball constants B6(R,tau,T) and C(R,tau,T) from the closed M2(R) input, propagate it through a dealiased finite-time evolution estimate, then obtain independent reproduction and tier review."
+  "falsifier": "A failed source hash or 104-assertion verifier; an incorrect Fourier shell, semigroup, endpoint-cancellation, Class-II coefficient, projection-tail, or alias estimate; a counterexample to the stated positive-time H6/residual bounds; failure of the exact Galerkin energy identity or N^-4 estimate; or a broken bundle digest invalidates this T6 theorem and reopens A3-FULL-DISCRETIZATION-CLOSURE.",
+  "no_overclaim": "T6 is conditional on the canonical-functional identification. The derived constants are finite but not practically sharp. This claim does not assert an algebraic rate from t=0 for merely H2 data, exactness of any fixed finite oversampling rule for the rational Class-II term, a controlled error bar for historical N32/N64/N128 Sector-B trajectories, full-spectrum Hessian convergence, all-device GPU equivalence, minimizer or BCC selection, T7, or physical-domain closure.",
+  "next_action": "Preserve this T6 package as the closed P3 baseline. Treat sharp practical constants, an executable finite-oversampling bridge, historical-solver certification, eta_shell nonzero, lower-regularity data, or infinite volume as separate claims; proceed to P4 only without widening this theorem."
 }

@@ -3,13 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
-
-## In progress
-
-- **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
-  - P3 is T4. A self-contained v2.0 T5 candidate referee package is PDF-valid and directly CPU-reproduced; recorded CUDA remains 79/79 hash-valid. Awaiting operator review/confirmation before PUBLISHED bundle and any T5 CLOSED@FROZEN-DISCRETIZATION-EVIDENCE-MATRIX promotion. Quantitative B6/C and dealiased evolution remain the broader-scope blockers.
-  - _updated 2026-07-17_
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 34
 
 ## Next up
 
@@ -112,4 +106,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
   - _updated 2026-07-17_
 - **T-036** Audit full Class-II continuous dependence and positive-time smoothing  _(claim: A2-FULL-PRODUCTION-WELLPOSED; gate: A2-FULL-SMOOTHING-AUDIT)_
   - Final P2 analytic gate: establish finite-interval continuous H2 dependence, the first t>0 H4 gain, and the higher-order bootstrap for the canonical eta_shell=0 flow.
+  - _updated 2026-07-17_
+- **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
+  - Closed at T6 CONDITIONAL-THEOREM. Explicit B6/C and restarted exact-Galerkin N^-4 bounds pass primary 15/15, independent 10/10, and integrated 104/104 audits. PUBLISHED bundle has 42 files, nine entry scripts ALL PASS, digest 6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910. Practical sharpness and historical-solver certification remain separate work.
   - _updated 2026-07-17_
