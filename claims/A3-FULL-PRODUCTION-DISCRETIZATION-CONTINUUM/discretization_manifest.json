@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T4 STRONG-EVIDENCE; stages 1-5 PASS in their declared scopes, Stage 6 qualitative bound PASS, and Stage 7 explicit energy-to-H2 input PASS; not a theorem or T5 closure",
+  "status": "T6 CANDIDATE pending published bundle and claim-card enactment: stages 1-7 retained, Stage 8 gives explicit B6/C and restarted exact-Galerkin evolution bounds, and the integrated verifier passes 104/104",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -57,10 +57,20 @@
       "sha256": "f019a4b890084916da821610e32b3696e0aa85e4d40ed190d33f5a702e5c174b",
       "version": "1.0.0"
     },
+    "quantitative_majorant_audit": {
+      "path": "codes/foundations/a3_full_production_quantitative_majorant.py",
+      "sha256": "86bb0fcbb41c095ad5a817e4880bdd0f8d6a0e384586079e1b60013321e1a373",
+      "version": "1.0.0"
+    },
+    "quantitative_majorant_independent_audit": {
+      "path": "codes/foundations/a3_full_production_quantitative_majorant_independent.py",
+      "sha256": "b541bfce66df0ee13c143d2bd56e463ad43df9c7e78770ba8b850a04539f9f18",
+      "version": "1.0.0"
+    },
     "one_command_verifier": {
       "path": "codes/foundations/a3_full_production_verify.py",
-      "sha256": "fac41510222c91553b7ad1fc66a783d5c9d5cd25c29e34f1aedbb48e525317d7",
-      "version": "1.2.0"
+      "sha256": "b56e585823651023c854a6b326e29998ec9e3790baba2072a8c6eb7d2ecf10ba",
+      "version": "1.3.0"
     }
   },
   "continuum_problem": {
@@ -209,7 +219,7 @@
     "residual_differential_order": 4,
     "projection_target_sobolev_order": 2,
     "theorem_statement": "For every R>0 and 0<tau<=T<infinity, there is C(R,tau,T)<infinity such that every P2 solution from B_R satisfies sup_{tau<=t<=T} ||P_N R(u(t))-R_N^C(P_N u(t))||_L2 <= C(R,tau,T) N^-2.",
-    "constant_status": "QUALITATIVE-ANALYTIC: existence follows from the P2 smoothing/Moser route; a numerical enclosure of B6 and C(R,tau,T) is still required before any solver run gets a controlled numerical continuum-error bar.",
+    "constant_status": "QUANTITATIVE for the declared radii R=0.5,1,2 at tau=0.02 and T=0.2: Stage 8 evaluates finite B6 and C enclosures. The constants are deliberately conservative and are not practical solver error bars.",
     "audit_grids": [8, 12, 16],
     "acceptance": {
       "pinned_residual_order": 4,
@@ -229,14 +239,34 @@
       "require_envelope_dominates_initial_radius": true
     }
   },
+  "stage8_quantitative_majorant": {
+    "tau": 0.02,
+    "T": 0.2,
+    "fractional_power": 0.75,
+    "embedding_shell_cutoff": 8192,
+    "field_real_components": 6,
+    "spatial_dimensions": 3,
+    "classii_generators": 3,
+    "classii_contraction_overcount": 108,
+    "statement": "For each declared H2 initial radius, compute explicit two-step endpoint-cancellation bounds B4 and B6 on [tau,T], an explicit collocation/Galerkin residual constant C multiplying N^-2, and a restarted exact-Galerkin evolution constant multiplying N^-4.",
+    "evolution_scope": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data.",
+    "acceptance": {
+      "require_finite_positive_majorants": true,
+      "require_monotone_radius_envelopes": true,
+      "require_explicit_floor_dependence": true,
+      "require_positive_time_restart": true,
+      "require_no_historical_solver_claim": true
+    }
+  },
   "later_stages": {
     "finite_time": "CLOSED@T4-EVIDENCE-SCOPE: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
     "hessian_ritz": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
     "hardware_precision": "CLOSED@T4-EVIDENCE-SCOPE: CPU and CUDA complex128/complex64 rows PASS on the recorded torch 2.13.0+cu130 environment with one NVIDIA GeForce RTX 5070 Laptop GPU; this is not an all-device equivalence theorem",
-    "independent_continuum_residual": "CLOSED@T4-EVIDENCE-SCOPE for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; uniform analytic error bound remains open",
-    "solution_ball_bound": "PARTIAL@T4-ANALYTIC: a positive-time H2 solution-ball bound of the form C(R,tau,T)N^-2 is derived from P2 smoothing and H6-to-H2 residual regularity; C(R,tau,T) is not numerically enclosed",
+    "independent_continuum_residual": "CLOSED@T4-EVIDENCE-SCOPE for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; Stage 8 separately supplies the uniform analytic bound in its declared solution-ball scope",
+    "solution_ball_bound": "CLOSED@T6-CANDIDATE-SCOPE: explicit positive-time B6 and C(R,tau,T) enclosures give a uniform N^-2 residual/alias bound for R=0.5,1,2, tau=0.02, and T=0.2",
     "energy_ball_envelope": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS gives explicit all-time M2(R) enclosures for declared initial H2 radii; this is only the input to an explicit positive-time smoothing majorant",
-    "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
+    "quantitative_majorant": "CLOSED@T6-CANDIDATE-SCOPE: primary 15/15 and independent 10/10 audits give explicit conservative B6, residual N^-2, and positive-time restarted exact-Galerkin N^-4 constants; practical sharpness remains open",
+    "integrated_release": "104/104 one-command verifier PASS; immutable JSON evidence and T6 referee note complete; published bundle and claim-card enactment pending"
   },
-  "tier_boundary": "T4 STRONG-EVIDENCE because the six numerical/analytic evidence gates are closed in their frozen test scopes. T5 remains prohibited until B6(R,tau,T) and C(R,tau,T) are computably enclosed, the dealiased finite-time evolution estimate is closed, and the final reproduction package passes. N32/N64/N128 solver output alone is not discretization evidence."
+  "tier_boundary": "T6 CONDITIONAL-THEOREM is eligible after a PUBLISHED reproduction bundle because the full positive-time theorem, named canonical-functional hypothesis, explicit B6/C and exact-Galerkin N^-4 bound, independent audit, and quantitative sanity checks are present. T7 is prohibited by the named hypothesis and lack of external public reproduction. N32/N64/N128 solver output is not covered."
 }

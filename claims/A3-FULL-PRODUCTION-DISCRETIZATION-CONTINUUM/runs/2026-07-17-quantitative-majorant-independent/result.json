@@ -1,0 +1,102 @@
+{
+  "schema": "tect/a3-full-production-quantitative-majorant-independent/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "verdict": "A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS",
+  "scope": "independent spectral, Fourier-tail, Class-II q-derivative, logarithm, and honesty-boundary audit",
+  "assertions": [
+    {
+      "name": "majorant_source_hash_matches_manifest",
+      "status": "PASS",
+      "detail": {
+        "actual": "86bb0fcbb41c095ad5a817e4880bdd0f8d6a0e384586079e1b60013321e1a373",
+        "expected": "86bb0fcbb41c095ad5a817e4880bdd0f8d6a0e384586079e1b60013321e1a373"
+      }
+    },
+    {
+      "name": "majorant_result_passed",
+      "status": "PASS",
+      "detail": "A3-FULL-QUANTITATIVE-MAJORANT-PASS"
+    },
+    {
+      "name": "independent_linear_spectrum_is_positive",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.3118976887106417,
+        "internal_eigenvalues": [
+          0.02811617233511541,
+          0.16519715288082723,
+          0.20668667478405733
+        ]
+      }
+    },
+    {
+      "name": "sampled_semigroup_respects_universal_fractional_bound",
+      "status": "PASS",
+      "detail": 0.9999815568812259
+    },
+    {
+      "name": "projection_H6_to_H2_tail_obeys_N_minus_4",
+      "status": "PASS",
+      "detail": 0.9993587875263241
+    },
+    {
+      "name": "alias_shell_constant_is_conservative",
+      "status": "PASS",
+      "detail": {
+        "published": 167.38308134424,
+        "reconstructed": 167.38308134424025
+      }
+    },
+    {
+      "name": "sampled_q_directional_derivatives_fit_explicit_envelopes",
+      "status": "PASS",
+      "detail": {
+        "sampled_maxima": [
+          7.869995139351557,
+          117.81730594739858,
+          2067.8095277726347
+        ],
+        "envelopes": [
+          7.83929146765347e+26,
+          2.50850426892121e+40,
+          1.20404892964379e+54
+        ]
+      }
+    },
+    {
+      "name": "decimal_B6_logarithms_are_self_consistent",
+      "status": "PASS",
+      "detail": [
+        "3.4450983499780326553382586245092720998697435932394842301804992907E-13",
+        "2.9421790891031636071142930792993641579192465002956464225709760084E-13",
+        "4.5853680876234616568939387226033706191964925106986836410897870233E-13"
+      ]
+    },
+    {
+      "name": "declared_rates_and_restart_scope_are_consistent",
+      "status": "PASS",
+      "detail": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data."
+    },
+    {
+      "name": "historical_solver_certificate_is_absent",
+      "status": "PASS",
+      "detail": [
+        "useful or sharp numerical error bars at practical N",
+        "algebraic convergence from t=0 for merely H2 initial data",
+        "finite-oversampling exactness for the rational Class-II collocation residual",
+        "historical Sector-B solver continuum certification",
+        "T5/T6/T7 promotion or PUBLISHED reproduction bundle"
+      ]
+    }
+  ],
+  "assertion_summary": {
+    "passed": 10,
+    "total": 10
+  },
+  "not_closed_here": [
+    "sharpness of the conservative constants",
+    "historical solver certification",
+    "tier promotion or bundle publication"
+  ]
+}

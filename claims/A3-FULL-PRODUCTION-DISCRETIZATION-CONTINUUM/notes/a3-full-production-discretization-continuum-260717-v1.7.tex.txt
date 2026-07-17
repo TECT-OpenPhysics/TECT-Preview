@@ -1,0 +1,227 @@
+% =============================================================================
+% Title: Full-production P3: quantitative smoothing and dealiased evolution
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.7 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T4 analytic/executed quantitative gate closure; no tier promotion
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This supplement resolves the two previously qualitative P3 inputs: an explicit
+positive-time $H^6$ solution-ball majorant and an explicit finite-time error
+bound for the dealiased exact Galerkin flow.  The scope is the canonical P1/P2
+three-component gradient flow on the fixed $16^3$ torus, positive regularisers,
+$\eta_{\rm shell}=0$, initial $H^2$ radii $R=0.5,1,2$, and
+$0.02=\tau\leq t\leq T=0.2$.
+
+For merely $H^2$ initial data the Galerkin comparison is restarted at positive
+time: $u_N(\tau)=P_Nu(\tau)$.  This is essential.  No algebraic rate from
+$t=0$, finite-oversampling exactness for the rational Class-II residual, or
+historical Sector-B solver certificate is asserted.
+
+\section{Explicit Fourier constants}
+Use
+\[
+ \|u\|_{H^{2m}}^2=|\mathbb T^3|\sum_k(1+|k|^4)^m|\widehat u_k|^2.
+\]
+The max-shell count $24m^2+2$ and an integral tail give
+\[
+ \|u\|_\infty\leq E_2\|u\|_{H^2},\qquad E_2=0.329926816704,
+\]
+and Hausdorff--Young with the independently enclosed series
+$\sum k_i^4/(1+|k|^4)^2$ gives
+\[
+ \|\partial_i u\|_{L^4}\leq E_{14}\|u\|_{H^2},
+ \qquad E_{14}=0.533391254984.
+\]
+The Fourier weight inequality
+$w(k)\leq4\{w(\ell)+w(k-\ell)\}$, followed by Young convolution, yields the
+deliberately enlarged algebra constant
+\[
+ \|fg\|_{H^2}\leq A_2\|f\|_{H^2}\|g\|_{H^2},
+ \qquad A_2=8E_2=2.63941453363.                         \tag{2.1}
+\]
+
+The P2 lower graph constant is $c_L=0.2048572626782363$.  A direct upper bound
+on the scalar symbol plus the family/lock norm gives
+$C_L=2.1566713536$, hence
+\[
+ c_L\|u\|_{H^2}^2\leq\langle Lu,u\rangle
+ \leq C_L\|u\|_{H^2}^2.                                \tag{2.2}
+\]
+
+\section{Class-II coefficient envelopes}
+Write $q_A=m_A/(\rho+\varepsilon_\rho)$, with
+$\varepsilon_\rho=10^{-12}$, $J_A=A_J(u)\nabla u$, and
+$K_A=A_K(u)\nabla u$.  The embedded Pauli generators have norm one, so
+$\|A_J\|\leq2|u|$ and $\|A_K\|\leq4|u|$.
+
+For $|u|\leq A$, derivatives of $(\rho+\varepsilon_\rho)^{-1}$ through order
+$j\leq3$ are bounded by
+\[
+ I_j=j!(2A+2)^j\varepsilon_\rho^{-(j+1)}.                \tag{3.1}
+\]
+Leibniz convolution with the quadratic moment gives explicit $Q_j$ for
+$D^jq_A$.  A second Leibniz convolution gives derivative envelopes $G_j$ for
+the Class-II metric
+\[
+ B(u)=\sum_A\{aA_J^*A_J+b(A_J^*A_K+A_K^*A_J)+cA_K^*A_K\}.
+\]
+All component, spatial, and generator contractions are then enlarged by the
+declared factor 108.  This overcount preserves signs and makes every dependence
+on the small density floor visible instead of hiding it in a Moser symbol.
+
+Consequently the full lower-order map has computable bounds
+\[
+ \|N(u)\|_{L^2}\leq K_0(M_2),\quad
+ \|N(u)-N(v)\|_{L^2}\leq L_0(M_2)\|u-v\|_{H^2},          \tag{3.2}
+\]
+and, after an $H^4$ bound is available,
+\[
+ \|N(u)\|_{H^2}\leq K_2(M_2,M_4),\quad
+ \|N(u)-N(v)\|_{H^2}\leq L_2(M_2,M_4)\|u-v\|_{H^4}.    \tag{3.3}
+\]
+The executable records every intermediate $Q_j,G_j,K_s,L_s$.
+
+\section{Two quantitative endpoint cancellations}
+For a positive self-adjoint $L$,
+\[
+ \|L^\alpha e^{-tL}\|\leq(\alpha/(et))^\alpha.          \tag{4.1}
+\]
+Choose $\alpha=3/4$, $\theta=\alpha-1/2=1/4$, and
+$\delta=\tau/4$.  The mild formula first gives an explicit $X_{3/4}$ bound,
+where $X_s=D(L^s)$.  It also makes $u$ Holder continuous in $X_{1/2}$ and,
+using $L_0$, makes $N(u)$ Holder continuous in $L^2$.
+
+The endpoint identity
+\[
+ L\int_a^tS(t-s)f(s)ds=(I-S(t-a))f(t)
+ +\int_a^tLS(t-s)\{f(s)-f(t)\}ds                         \tag{4.2}
+\]
+changes the nonintegrable $r^{-1}$ kernel into $r^{\theta-1}$.  Equations
+(2.2)--(4.2) give an explicit $M_4$ on $[\tau/2,T]$.
+
+Repeat the same construction on the base space $H^2$, using (3.3).  The second
+endpoint cancellation produces $X_{3/2}$ and therefore
+\[
+ \sup_{\|u_0\|_{H^2}\leq R}\sup_{\tau\leq t\leq T}
+ \|u(t)\|_{H^6}\leq B_6(R,\tau,T).                       \tag{4.3}
+\]
+The bounds are enormous because (3.1) treats the $10^{-12}$ floor in the worst
+possible direction, but they are finite and fully computable.  For
+$R=0.5,1,2$, respectively,
+\[
+ \log_{10}B_6\leq515.378,\qquad515.751,\qquad517.320.    \tag{4.4}
+\]
+
+\section{Residual and aliasing constant}
+The omitted Fourier cube obeys
+\[
+ \|(I-P_N)u\|_{H^2}\leq(L_{\max}/\pi)^4N^{-4}\|u\|_{H^6}. \tag{5.1}
+\]
+For periodic sampling, Cauchy--Schwarz over aliases and
+\[
+ \sum_{m\geq1}{24m^2+2\over m^4}=4\pi^2+{\pi^4\over45}
+\]
+give
+\[
+ \|P_N(I_N-I)f\|_{L^2}\leq A_{\rm alias}N^{-2}\|f\|_{H^2},
+ \qquad A_{\rm alias}=167.383081344.                     \tag{5.2}
+\]
+Combining (3.2)--(5.2) yields the now evaluated statement
+\[
+ \|P_NR(u)-R_N^C(P_Nu)\|_{L^2}
+ \leq C(R,\tau,T)N^{-2}.                                 \tag{5.3}
+\]
+For $R=0.5,1,2$, the conservative logarithmic bounds are
+\[
+ \log_{10}C\leq576.355,\qquad576.770,\qquad578.513.      \tag{5.4}
+\]
+
+\section{Dealiased finite-time evolution}
+Let $u_N$ be the exact Galerkin flow
+\[
+ \partial_tu_N+Lu_N+P_NN(u_N)=0,qquad u_N(\tau)=P_Nu(\tau). \tag{6.1}
+\]
+This is the mathematically dealiased object.  For the rational Class-II term,
+a fixed finite oversampling factor is not called exact Galerkin.
+
+The restricted gradient flow has the same energy identity and $H^2$ envelope.
+For $e=u_N-P_Nu$, coercivity and (3.2) give
+\[
+ {d\over dt}\|e\|_{L^2}\leq a_R\|e\|_{L^2}
+ +L_0(M_2)(L_{\max}/\pi)^4B_6N^{-4},
+ \qquad a_R={L_0(M_2)^2\over2c_L}.                       \tag{6.2}
+\]
+Since $e(\tau)=0$, Gronwall yields
+\[
+ \sup_{\tau\leq t\leq T}\|u_N(t)-P_Nu(t)\|_{L^2}
+ \leq E(R,\tau,T)N^{-4},                                \tag{6.3}
+\]
+where
+\[
+ E=L_0(L_{\max}/\pi)^4B_6{e^{a_R(T-\tau)}-1\over a_R}.  \tag{6.4}
+\]
+The implementation stores $\log_{10}E$ with Decimal arithmetic because the
+worst-case exponential is far beyond floating-point range.  This proves
+finite-time convergence but is not a practical error budget at present grids.
+
+\section{Executable and independent audits}
+The primary audit passes 15/15.  The independent NumPy audit does not import
+the majorant implementation; it reconstructs the linear spectrum, samples the
+universal semigroup inequality, checks the N$^{-4}$ projection tail and alias
+shell identity, probes exact Class-II $q$ directional derivatives against the
+analytic envelopes, and recomputes the Decimal logarithms.  It passes 10/10.
+The integrated P3 verifier consequently passes 104/104.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{A finite constant is automatically a useful numerical error
+bar.} \textbf{UPHELD as false.}  The floor-based bounds are astronomically
+large; they prove convergence but do not certify practical N32/N64/N128 runs.
+\item \textbf{The $H^6$ estimate is valid at $t=0$ for $H^2$ data.}
+\textbf{UPHELD as false.}  Both (4.3) and the Galerkin comparison require
+$\tau>0$; (6.1) is explicitly restarted at $\tau$.
+\item \textbf{Three-halves dealiasing is exact for the Class-II backend.}
+\textbf{UPHELD as false.}  The rational density denominator has no finite
+polynomial bandwidth.  Only $P_NN(u_N)$ is called exact Galerkin.
+\item \textbf{The $10^{-12}$ floor may be ignored because $|q_A|\leq1$.}
+\textbf{VALID WITH MITIGATION.}  The value is bounded, but its derivatives
+enter Moser/Lipschitz constants; (3.1) retains the full floor dependence.
+\item \textbf{Large hardcoded numbers mask the derivation.}
+\textbf{DISMISSED.}  Production values are read from pinned manifests; all
+reported majorants are recomputed and labelled DERIVED.
+\item \textbf{This result alone authorises T6.} \textbf{UPHELD as a governance
+error.}  A final self-contained theorem package, PUBLISHED reproduction bundle,
+and separate tier review are still required.
+\end{enumerate}
+
+\section{What remains open}
+The two selected mathematical blockers are closed in the stated positive-time
+exact-Galerkin scope.  Remaining promotion work is packaging and tier review.
+Separately, sharp constants, a rate from $t=0$ for merely $H^2$ data, and a
+certified finite-oversampling implementation for the rational Class-II term
+remain research improvements, not hidden premises of (4.3)--(6.3).
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Explicit B6 and residual C on [tau,T], plus N^-4
+                         convergence of exact Galerkin restarted at tau.
+Scope:                   Fixed T3, canonical P1/P2, eta_shell=0, R=0.5/1/2,
+                         tau=0.02, T=0.2, exact P_N nonlinear projection.
+Dependencies:            A1 production functional; A2 T6 well-posedness;
+                         P3 energy-to-H2 envelope.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_quantitative_majorant.py
+Expected output:         15/15 PASS;
+                         A3-FULL-QUANTITATIVE-MAJORANT-PASS.
+Falsification gate:      Failed coefficient envelope, endpoint constant,
+                         Fourier tail, alias sum, or independent audit.
+Tier before / after:     T4 / T4 (quantitative gate closure only).
+No-overclaim statement:  Not a sharp practical error bar, t=0 H2 rate,
+                         finite-oversampling exactness, solver certificate,
+                         PUBLISHED bundle, T5/T6/T7 promotion.
+Next required action:    Integrate into the referee package and conduct the
+                         separate T5/T6 packaging and tier review.
+\end{verbatim}

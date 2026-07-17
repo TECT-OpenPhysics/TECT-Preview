@@ -22,7 +22,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 __first_issued__ = "2026-07-17"
 __version_issued__ = "2026-07-17"
 __claims__ = ["A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"]
@@ -31,7 +31,7 @@ REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
 MANIFEST = CLAIM / "discretization_manifest.json"
 HARDWARE_EVIDENCE = CLAIM / "runs" / "2026-07-17-hardware-precision" / "result.json"
-DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-17-integrated-verifier-energy-envelope" / "result.json"
+DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-17-integrated-verifier-quantitative" / "result.json"
 AUDITS = (
     ("a3_full_production_spatial_consistency.py", "spatial_audit", "A3-FULL-SPATIAL-CONSISTENCY-PASS", "spatial.json", CLAIM / "runs" / "2026-07-17-spatial-consistency" / "result.json"),
     ("a3_full_production_finite_time_convergence.py", "finite_time_audit", "A3-FULL-FINITE-TIME-CONVERGENCE-PASS", "finite-time.json", CLAIM / "runs" / "2026-07-17-finite-time-convergence" / "result.json"),
@@ -39,6 +39,8 @@ AUDITS = (
     ("a3_full_production_independent_galerkin.py", "independent_galerkin_audit", "A3-FULL-INDEPENDENT-GALERKIN-PASS", "independent-galerkin.json", CLAIM / "runs" / "2026-07-17-independent-galerkin" / "result.json"),
     ("a3_full_production_solution_ball_bound.py", "solution_ball_bound_audit", "A3-FULL-SOLUTION-BALL-BOUND-PASS", "solution-ball.json", CLAIM / "runs" / "2026-07-17-solution-ball-bound" / "result.json"),
     ("a3_full_production_energy_ball_envelope.py", "energy_ball_envelope_audit", "A3-FULL-ENERGY-BALL-ENVELOPE-PASS", "energy-ball.json", CLAIM / "runs" / "2026-07-17-energy-ball-envelope" / "result.json"),
+    ("a3_full_production_quantitative_majorant.py", "quantitative_majorant_audit", "A3-FULL-QUANTITATIVE-MAJORANT-PASS", "quantitative-majorant.json", CLAIM / "runs" / "2026-07-17-quantitative-majorant" / "result.json"),
+    ("a3_full_production_quantitative_majorant_independent.py", "quantitative_majorant_independent_audit", "A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS", "quantitative-majorant-independent.json", CLAIM / "runs" / "2026-07-17-quantitative-majorant-independent" / "result.json"),
 )
 
 
@@ -100,7 +102,7 @@ def main() -> int:
         failures.append(f"recorded CUDA evidence invalid: {hardware_report}")
     passed = not failures
     mode = "recorded immutable CPU audits" if args.reuse_recorded_audits else "temporary CPU re-execution"
-    output = {"schema": "tect/a3-full-production-integrated-verifier-result/1.0", "claim_id": manifest["claim_id"], "script_version": __version__, "verdict": "A3-FULL-PRODUCTION-VERIFY-PASS" if passed else "A3-FULL-PRODUCTION-VERIFY-FAIL", "scope": f"{mode} of spatial, finite-time, Hessian/Ritz, independent-proxy, solution-ball-order, and energy-to-H2-envelope audits; hash validation of recorded CUDA evidence", "reports": reports, "assertion_summary": {"passed": assertion_total if passed else sum(int(report.get("assertions", {}).get("passed", 0)) for report in reports), "total": assertion_total}, "failures": failures, "not_closed_here": ["explicit positive-time H4/H6 smoothing constants", "numerical enclosure of the solution-ball constant C(R,tau,T)", "dealiased finite-time evolution bound", "historical Sector-B solver continuum validity", "independent external reproduction", "tier promotion"]}
+    output = {"schema": "tect/a3-full-production-integrated-verifier-result/1.0", "claim_id": manifest["claim_id"], "script_version": __version__, "verdict": "A3-FULL-PRODUCTION-VERIFY-PASS" if passed else "A3-FULL-PRODUCTION-VERIFY-FAIL", "scope": f"{mode} of spatial, finite-time, Hessian/Ritz, independent-proxy, solution-ball-order, energy-to-H2-envelope, quantitative-majorant, and independent-majorant audits; hash validation of recorded CUDA evidence", "reports": reports, "assertion_summary": {"passed": assertion_total if passed else sum(int(report.get("assertions", {}).get("passed", 0)) for report in reports), "total": assertion_total}, "failures": failures, "not_closed_here": ["sharp practical continuum-error constants", "algebraic convergence from t=0 for merely H2 initial data", "finite-oversampling exactness for rational Class-II collocation", "historical Sector-B solver continuum validity", "PUBLISHED reproduction bundle", "tier promotion"]}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     print(f"ASSERTS: {output['assertion_summary']['passed']}/{assertion_total}")
