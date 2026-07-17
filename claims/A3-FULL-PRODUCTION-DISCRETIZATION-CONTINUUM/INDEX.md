@@ -13,6 +13,6 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a3-full-production-discretization-continuum` | v2.1 | T6 | Explicit B6 and residual C on [tau,T], plus N^-4 convergence of exact Galerkin restarted at tau. | ANALYTIC + EXECUTED + CONDITIONAL. | Preserve as the closed P3 baseline; any sharper constants or executable solver bridge is … |
+| `a3-full-production-discretization-continuum` | v2.2 | T6 | Explicit B6 and residual C on [tau,T], plus N^-4 convergence of exact Galerkin restarted at tau. | ANALYTIC + EXECUTED + CONDITIONAL. | Preserve as the repaired P3 baseline; sharper constants or executable solver bridges are … |
 
-<!-- generated 2026-07-17T13:03:47Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T15:12:12Z by build_index.py v1.0.1 -->

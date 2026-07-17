@@ -2,7 +2,7 @@
   "schema": "tect/a3-full-production-discretization-continuum/1.0",
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "frozen_on": "2026-07-17",
-  "status": "T6 CONDITIONAL-THEOREM enacted: stages 1-7 retained, Stage 8 gives explicit B6/C and restarted exact-Galerkin evolution bounds, the integrated verifier passes 104/104, and the PUBLISHED bundle has nine entry scripts ALL PASS",
+  "status": "T6 REPAIR CANDIDATE: adversarially identified Galerkin-ball and enclosure defects are being corrected; enactment requires the v1.1 primary/full-chain-independent audits and replacement PUBLISHED bundle",
   "authority": {
     "p1_backend": {
       "path": "codes/foundations/n001_variational_backend.py",
@@ -59,23 +59,23 @@
     },
     "quantitative_majorant_audit": {
       "path": "codes/foundations/a3_full_production_quantitative_majorant.py",
-      "sha256": "86bb0fcbb41c095ad5a817e4880bdd0f8d6a0e384586079e1b60013321e1a373",
-      "version": "1.0.0"
+      "sha256": "27ead22c75e75cb65b6a520221ebf2e46a4756963a0fd5f6ca105fb8aee449c2",
+      "version": "1.1.0"
     },
     "quantitative_majorant_independent_audit": {
       "path": "codes/foundations/a3_full_production_quantitative_majorant_independent.py",
-      "sha256": "b541bfce66df0ee13c143d2bd56e463ad43df9c7e78770ba8b850a04539f9f18",
-      "version": "1.0.0"
+      "sha256": "e3e9ce208d67b41a52a05a278ff9542e58ceaf683e7117b5257d300b9d0cc134",
+      "version": "1.1.0"
     },
     "one_command_verifier": {
       "path": "codes/foundations/a3_full_production_verify.py",
-      "sha256": "b56e585823651023c854a6b326e29998ec9e3790baba2072a8c6eb7d2ecf10ba",
-      "version": "1.3.0"
+      "sha256": "4df13b819871cebd035ad387d4d76d4c6b9c7dd3a87b245d5ad845e01b532bfe",
+      "version": "1.4.0"
     },
     "bundle_safe_verifier": {
       "path": "codes/foundations/a3_full_production_bundle_verify.py",
-      "sha256": "45e913238363df7a1af65485ba5805dd139a1241bebf744e94b81cd34deed645",
-      "version": "1.0.0"
+      "sha256": "f2340d46858c9dd98b2e9f3548dd51ea2cb247664bb272556caaa741a8daa7e6",
+      "version": "1.1.0"
     }
   },
   "published_bundle": {
@@ -261,7 +261,14 @@
     "spatial_dimensions": 3,
     "classii_generators": 3,
     "classii_contraction_overcount": 108,
-    "statement": "For each declared H2 initial radius, compute explicit two-step endpoint-cancellation bounds B4 and B6 on [tau,T], an explicit collocation/Galerkin residual constant C multiplying N^-2, and a restarted exact-Galerkin evolution constant multiplying N^-4.",
+    "classii_contraction_breakdown": {
+      "generator_sum": "already included in every bmetric derivative envelope",
+      "spatial_frobenius_sum": "the three-direction low-order sum is explicit in K0/Lip0; H2 products use the proved H2 algebra constant",
+      "field_components": "absorbed by operator-norm AJ/AK estimates after the isometric C3-to-R6 realification",
+      "remaining_coordinate_free_euler_factor": 1.5,
+      "declared_headroom_ratio": 72
+    },
+    "statement": "For each declared H2 initial radius, compute explicit two-step endpoint-cancellation bounds B4 and B6 on [tau,T], an explicit collocation/Galerkin residual constant C multiplying N^-2, and a restarted exact-Galerkin evolution constant multiplying N^-4. The evolution estimate must use a separately derived Galerkin energy ball rather than importing the continuum M2 ball.",
     "evolution_scope": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data.",
     "acceptance": {
       "require_finite_positive_majorants": true,
@@ -269,6 +276,23 @@
       "require_explicit_floor_dependence": true,
       "require_positive_time_restart": true,
       "require_no_historical_solver_claim": true
+    }
+  },
+  "stage9_adversarial_repair": {
+    "trigger": "Post-promotion adversarial review found that v1.0 used the continuum M2 ball for the restarted exact-Galerkin trajectory, and that selected displayed upper bounds were rounded inward.",
+    "required_corrections": [
+      "derive F(P_N u(tau)) <= E_upper(M2(R)) without assuming projection-energy monotonicity",
+      "derive the uniform Galerkin H2 envelope from E_upper(M2(R)) and coercivity",
+      "evaluate the evolution Lipschitz and Gronwall constants on the common Galerkin/continuum ball",
+      "serialize every upper bound with outward rounding and the graph lower bound with downward rounding",
+      "independently reconstruct the energy, nonlinear-majorant, endpoint, residual, and Gronwall chains",
+      "prove the declared Class-II contraction factor dominates the coordinate-free Euler tensor factor"
+    ],
+    "acceptance": {
+      "primary_assertions_min": 20,
+      "independent_full_chain_assertions_min": 18,
+      "require_projection_energy_monotonicity": false,
+      "require_replacement_published_bundle": true
     }
   },
   "later_stages": {

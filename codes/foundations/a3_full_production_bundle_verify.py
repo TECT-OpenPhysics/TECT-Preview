@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bundle-safe one-command verifier for the P3 conditional theorem.
+"""Bundle-safe one-command verifier for the repaired P3 conditional theorem.
 
 The repository verifier normally reruns every CPU audit.  A reproduction
 bundle already runs those audits as separate entry points, so this final entry
@@ -13,7 +13,7 @@ import sys
 
 import a3_full_production_verify
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-17"
 __version_issued__ = "2026-07-17"
 __claims__ = ["A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"]

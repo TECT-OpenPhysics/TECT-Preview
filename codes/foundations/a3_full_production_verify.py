@@ -22,7 +22,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 __first_issued__ = "2026-07-17"
 __version_issued__ = "2026-07-17"
 __claims__ = ["A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"]
@@ -31,7 +31,7 @@ REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
 MANIFEST = CLAIM / "discretization_manifest.json"
 HARDWARE_EVIDENCE = CLAIM / "runs" / "2026-07-17-hardware-precision" / "result.json"
-DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-17-integrated-verifier-quantitative" / "result.json"
+DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-17-integrated-verifier-adversarial-repair" / "result.json"
 AUDITS = (
     ("a3_full_production_spatial_consistency.py", "spatial_audit", "A3-FULL-SPATIAL-CONSISTENCY-PASS", "spatial.json", CLAIM / "runs" / "2026-07-17-spatial-consistency" / "result.json"),
     ("a3_full_production_finite_time_convergence.py", "finite_time_audit", "A3-FULL-FINITE-TIME-CONVERGENCE-PASS", "finite-time.json", CLAIM / "runs" / "2026-07-17-finite-time-convergence" / "result.json"),
@@ -39,8 +39,8 @@ AUDITS = (
     ("a3_full_production_independent_galerkin.py", "independent_galerkin_audit", "A3-FULL-INDEPENDENT-GALERKIN-PASS", "independent-galerkin.json", CLAIM / "runs" / "2026-07-17-independent-galerkin" / "result.json"),
     ("a3_full_production_solution_ball_bound.py", "solution_ball_bound_audit", "A3-FULL-SOLUTION-BALL-BOUND-PASS", "solution-ball.json", CLAIM / "runs" / "2026-07-17-solution-ball-bound" / "result.json"),
     ("a3_full_production_energy_ball_envelope.py", "energy_ball_envelope_audit", "A3-FULL-ENERGY-BALL-ENVELOPE-PASS", "energy-ball.json", CLAIM / "runs" / "2026-07-17-energy-ball-envelope" / "result.json"),
-    ("a3_full_production_quantitative_majorant.py", "quantitative_majorant_audit", "A3-FULL-QUANTITATIVE-MAJORANT-PASS", "quantitative-majorant.json", CLAIM / "runs" / "2026-07-17-quantitative-majorant" / "result.json"),
-    ("a3_full_production_quantitative_majorant_independent.py", "quantitative_majorant_independent_audit", "A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS", "quantitative-majorant-independent.json", CLAIM / "runs" / "2026-07-17-quantitative-majorant-independent" / "result.json"),
+    ("a3_full_production_quantitative_majorant.py", "quantitative_majorant_audit", "A3-FULL-QUANTITATIVE-MAJORANT-PASS", "quantitative-majorant.json", CLAIM / "runs" / "2026-07-17-quantitative-majorant-repair" / "result.json"),
+    ("a3_full_production_quantitative_majorant_independent.py", "quantitative_majorant_independent_audit", "A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS", "quantitative-majorant-independent.json", CLAIM / "runs" / "2026-07-17-quantitative-majorant-independent-repair" / "result.json"),
 )
 
 

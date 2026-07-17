@@ -1,0 +1,238 @@
+{
+  "schema": "tect/a3-full-production-quantitative-majorant-independent/1.1",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.1.0",
+  "verdict": "A3-FULL-QUANTITATIVE-MAJORANT-INDEPENDENT-PASS",
+  "scope": "independent full-chain reconstruction of energy balls, nonlinear constants, two endpoint gains, residual/alias bound, Galerkin Lipschitz/Gronwall chain, plus spectral, Fourier-tail, q-derivative, logarithm, and honesty-boundary checks",
+  "assertions": [
+    {
+      "name": "majorant_source_hash_matches_manifest",
+      "status": "PASS",
+      "detail": {
+        "actual": "27ead22c75e75cb65b6a520221ebf2e46a4756963a0fd5f6ca105fb8aee449c2",
+        "expected": "27ead22c75e75cb65b6a520221ebf2e46a4756963a0fd5f6ca105fb8aee449c2"
+      }
+    },
+    {
+      "name": "majorant_result_passed",
+      "status": "PASS",
+      "detail": "A3-FULL-QUANTITATIVE-MAJORANT-PASS"
+    },
+    {
+      "name": "independent_linear_spectrum_is_positive",
+      "status": "PASS",
+      "detail": {
+        "minimum": 0.3118976887106417,
+        "internal_eigenvalues": [
+          0.02811617233511541,
+          0.16519715288082723,
+          0.20668667478405733
+        ]
+      }
+    },
+    {
+      "name": "sampled_semigroup_respects_universal_fractional_bound",
+      "status": "PASS",
+      "detail": 0.9999815568812259
+    },
+    {
+      "name": "projection_H6_to_H2_tail_obeys_N_minus_4",
+      "status": "PASS",
+      "detail": 0.9993587875263241
+    },
+    {
+      "name": "alias_shell_constant_is_conservative",
+      "status": "PASS",
+      "detail": {
+        "published": 167.383081344241,
+        "reconstructed": 167.38308134424025
+      }
+    },
+    {
+      "name": "sampled_q_directional_derivatives_fit_explicit_envelopes",
+      "status": "PASS",
+      "detail": {
+        "sampled_maxima": [
+          7.869995139351666,
+          117.81730593074523,
+          2067.8095485893164
+        ],
+        "envelopes": [
+          7.83929146765347e+26,
+          2.50850426892121e+40,
+          1.20404892964259e+54
+        ]
+      }
+    },
+    {
+      "name": "full_chain_continuum_energy_and_M2_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "2.331816503012590004277556648586086794481248527642518768980358719018054698034249573683E-15",
+        "5.526658251448184608213378372808466198882985769436241301593093014347284578615741267746E-15",
+        "3.67847369643047783622593441039771252578918082259346488141363236085887093229310241026427E-15",
+        "5.286792992958627911189235809674820668127386854689960815962373205589932220255018344844E-15",
+        "4.149674765787867528431801192286930655094236807583032996411163281320285483266260452431E-15",
+        "3.921469567517888828315323309575891787861518566510940466259864196953479849551547582460E-15"
+      ]
+    },
+    {
+      "name": "full_chain_galerkin_restart_ball_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "5.6629637799363062621540551244001368930641476632322076378666533297292994236199556788E-16",
+        "3.014064575357235913071892590017287518643607237635591029943316988023938397087408300715E-15",
+        "1.64863287147690117733174207711676641925392768934986807507576152083713080856818367357E-15",
+        "1.744807701333274277612875294269430185229768737500153653484747647407367261440680435887E-15",
+        "6.89708528478247741817263034930097254346536799625697022009344103812493994494343168337E-15",
+        "1.17875176144700186118158209506926770298659522351060967501895338902755108754797519225E-16"
+      ]
+    },
+    {
+      "name": "projection_energy_monotonicity_is_not_assumed",
+      "status": "PASS",
+      "detail": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "common_evolution_ball_contains_galerkin_and_continuum_balls",
+      "status": "PASS",
+      "detail": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "full_chain_K0_and_Lip0_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "7.40436832148830955466319054436905218726285448568758953809898304226939504741445823744E-15",
+        "1.88088580984931557322390394951482839080176118365580611933480836366547959938102257108E-14",
+        "1.026883009551751561049628258903561705346281459430011042860145550624945796188926505031E-14",
+        "2.03804125671338827908767119910170123584308828569095922738092384712493953167120051479E-14",
+        "2.134145021341924679562172497894721570051030705996975709629511748907946060582207683391E-14",
+        "3.29281653508077556465779650355603531159830462125111480376088769119027108708347348812E-14"
+      ]
+    },
+    {
+      "name": "full_chain_first_endpoint_B4_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "3.13254096871781324448249406932965662248874190984762257773616902555988894594449560303E-14",
+        "3.48583007083212379039888662326530947237758606294678244753243138371300789528652529602E-14",
+        "5.89958897468216176845942460629954691727363810845087016923202315505173588969118289188E-14"
+      ]
+    },
+    {
+      "name": "full_chain_K2_and_Lip2_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "3.28934542604880779995559718085573001838005765651236349566143666344242108522867376787E-14",
+        "3.37875088691952900249333918878642377467820986986811671490457904582108352727814276170E-14",
+        "3.53211253491745424527497633224455861045165636030565258932066450486148678573567495122E-14",
+        "3.27597627165435178406982543986555472319478453798340812169382767885993358349611784083E-14",
+        "3.75752469077174217616206846201011090875877928683702654437867149081492052535872996438E-14",
+        "3.72833975312587627054738763879049685034635038675805774744037397645235906777187985590E-14"
+      ]
+    },
+    {
+      "name": "full_chain_second_endpoint_B6_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "9.102865210481317193323010510480617885926011022917469375738630489751528247308174405E-15",
+        "1.0245606230594593280205230078839866001583783453556555209216349004170929763570455445E-14",
+        "7.693810212095911383627808519754840067816820127772035916851431953688970068505376642E-15"
+      ]
+    },
+    {
+      "name": "full_chain_residual_C_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "2.1173004373307918146308357254773655479323604478697511249209271569926831704117937246E-14",
+        "2.4848426833738000333280690935342431140368199824869749276688302700070037953281268806E-14",
+        "3.5389341999373477429156756018392722390037139833192395846297362706211255347814114593E-14"
+      ]
+    },
+    {
+      "name": "full_chain_evolution_Lip0_reconstructed_on_galerkin_ball",
+      "status": "PASS",
+      "detail": [
+        "6.26616840494446833750030027693109680672441315003799418460908783350809663451529144063E-14",
+        "5.71418918491271308917093075721234317814492939545321496163030620024606155918107530811E-14",
+        "7.20497074001616434638442579169163263114203665523256566314743654475107128940607817624E-14"
+      ]
+    },
+    {
+      "name": "full_chain_growth_rate_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "4.5647293734737905422519731104045146926863553274639532020383725362717308077995173861E-15",
+        "7.157024435558304917806356558178920617324085830038586530026020260766936161147072305E-16",
+        "8.1379442442297912923748974591952331453328990524433479456075649780425077500194795366E-15"
+      ]
+    },
+    {
+      "name": "full_chain_gronwall_log_constant_reconstructed",
+      "status": "PASS",
+      "detail": [
+        "4.5426032306133784565648374897998806923123052902877033530125783364503022511452803814E-15",
+        "1.5406711037443275958289665579827832123021994101119082010662810955201196310964769472E-15",
+        "7.8767768020109438586420871682394120205478380637113151920378884768115408492640045235E-15"
+      ]
+    },
+    {
+      "name": "gronwall_duration_is_within_coarse_enclosure_scope",
+      "status": "PASS",
+      "detail": {
+        "T_minus_tau": "0.18"
+      }
+    },
+    {
+      "name": "declared_contraction_dominates_coordinate_free_euler_factor",
+      "status": "PASS",
+      "detail": {
+        "declared": "108.000000000000",
+        "required": "1.5",
+        "headroom_ratio": "72.0000000000000"
+      }
+    },
+    {
+      "name": "decimal_B6_logarithms_are_self_consistent",
+      "status": "PASS",
+      "detail": [
+        "6.500298265217898307985146404690417893039723041478069421160504278672665073128839100674E-13",
+        "6.973073027052634163873790942253842983669603025724969201109110173729225218682168883509E-13",
+        "5.352251454774241281359690660082778593668560209432564793416444893329599616974666329823E-13"
+      ]
+    },
+    {
+      "name": "declared_rates_and_restart_scope_are_consistent",
+      "status": "PASS",
+      "detail": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data."
+    },
+    {
+      "name": "historical_solver_certificate_is_absent",
+      "status": "PASS",
+      "detail": [
+        "useful or sharp numerical error bars at practical N",
+        "algebraic convergence from t=0 for merely H2 initial data",
+        "finite-oversampling exactness for the rational Class-II collocation residual",
+        "historical Sector-B solver continuum certification",
+        "T5/T6/T7 promotion or PUBLISHED reproduction bundle"
+      ]
+    }
+  ],
+  "assertion_summary": {
+    "passed": 24,
+    "total": 24
+  },
+  "not_closed_here": [
+    "sharpness of the conservative constants",
+    "historical solver certification",
+    "external public reproduction"
+  ]
+}
