@@ -9,10 +9,10 @@
 
 **Falsifier.** Source-hash drift, an unstable oversampling reference, nonconvergent collocation-to-Galerkin residual error, failure of the discrete energy-gradient identity, failure of the later finite-time or Hessian/Ritz convergence conditions, or an unexplained hardware/precision discrepanc…
 
-## (all notes)/  ·  1 proof unit  ·  tier span T4
+## (all notes)/  ·  1 proof unit  ·  tier span T5
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a3-full-production-discretization-continuum` | v1.6 | T4 | Strong numerical and analytic discretization evidence in the frozen P3 scope. | ANALYTIC + EXECUTED + CONDITIONAL. | Explicit B6 and C constants, then dealiased evolution. |
+| `a3-full-production-discretization-continuum` | v2.0 | T5 | Closed frozen discretization evidence matrix for the canonical full-production PDE and declared tests. | ANALYTIC + EXECUTED + CONDITIONAL. | Operator review/confirmation, then PUBLISHED bundle; separately derive B6/C and dealiased… |
 
-<!-- generated 2026-07-17T07:38:53Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T08:24:37Z by build_index.py v1.0.1 -->

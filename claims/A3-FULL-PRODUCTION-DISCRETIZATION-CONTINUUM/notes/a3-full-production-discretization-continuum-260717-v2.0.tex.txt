@@ -1,0 +1,184 @@
+% =============================================================================
+% Title: Full-production spectral discretization: integrated referee package
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v2.0 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T5 CANDIDATE@FROZEN-DISCRETIZATION-EVIDENCE-MATRIX
+% Operator confirmation: PENDING -- do not package or promote before review
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This document is the self-contained referee package for the strongest P3 result
+currently justified by the evidence.  The candidate closure scope is
+\[
+ \texttt{FROZEN-DISCRETIZATION-EVIDENCE-MATRIX}.             \tag{1.1}
+\]
+It covers the fixed three-torus with periods $16,16,16$, the hash-pinned P1
+three-component complex functional, the canonical P2 gradient flow with
+positive regularisers and $\eta_{\rm shell}=0$, the declared manufactured
+fields and Fourier grids, and one recorded CPU/CUDA precision environment.
+
+The candidate does not claim that arbitrary historical N32/N64/N128 Sector-B
+solver trajectories carry a controlled continuum error.  That stronger result
+requires an evaluated positive-time solution-ball constant and a dealiased
+finite-time evolution estimate, which remain under the open gate
+\texttt{A3-FULL-DISCRETIZATION-CLOSURE}.
+
+\section{Continuum and discrete objects}
+The field is $\Psi:\mathbb T^3\to\mathbb C^3$, treated as six real components,
+with pairing
+\[
+ \langle u,v\rangle_{\mathbb R}=\operatorname{Re}
+ \int_{\mathbb T^3}u^\dagger v.
+\]
+Let $F$ be the P1 functional, $R=\nabla_{\mathbb R}F$, and let the P2 flow be
+$\partial_t\Psi=-R(\Psi)$.  The linear part has symbol
+\[
+ r+Z|k|^2+Y|k|^4+M_{\rm fam}+k_{\rm lock}(I-P_0),
+\]
+while the lower-order part contains the quartic/sextic potential and the
+positive-definite Class-II $J$--$K$ quadratic form.
+
+For the Fourier cube $S_N$, $P_N$ is the real-$L^2$ projector.  The exact
+Galerkin residual is $P_NR(\Psi_N)$.  The canonical executable residual
+$R_N^C$ is instead the real gradient of the periodic collocation energy.  This
+package never identifies these two objects: their difference is the measured
+aliasing error.
+
+\section{Stage 1: spatial residual and real gradient}
+An analytic nonzero-density three-component trigonometric field activates all
+Class-II channels.  Against N24 and N32 oversampled references, the N8/N12/N16
+collocation-to-projected residual errors are
+\[
+ 5.3301\,10^{-6},\qquad4.2482\,10^{-10},\qquad6.6679\,10^{-12}.
+\]
+The observed rates are $23.28$ and $14.44$, reference uncertainty is at most
+$2.3351\,10^{-14}$, and the real energy-gradient identity is within
+$1.0211\,10^{-8}$.  The frozen audit passes 13/13.
+
+\section{Stage 2: finite-time convergence}
+Forced manufactured evolution isolates RK4 time error on N8 and gives observed
+orders $4.016$ and $4.008$.  The unforced N8/N12/N16 trajectories are compared
+with projected N20/N24 references at fixed final time; the relative error falls
+from $1.3063\,10^{-8}$ at N8 to $1.3118\,10^{-14}$ at N16.  Time and space
+errors are recorded separately, and energy is nonincreasing on every declared
+grid.  The audit passes 10/10.
+
+\section{Stage 3: Hessian and Ritz stability}
+At the homogeneous field, the declared twelve-real-dimensional Fourier block
+has a lowest isolated cluster with gap $0.1368657$ and maximum
+Ritz-residual/gap about $1.01\,10^{-8}$.  At the nonuniform Class-II stress
+field, the fixed-subspace Ritz errors are $1.5199\,10^{-3}$,
+$4.7888\,10^{-7}$, and $2.7136\,10^{-8}$ on N8/N12/N16.  This is a block and
+fixed-subspace result, not a full-spectrum statement.  The audit passes 13/13.
+
+\section{Stages 4 and 5: implementation and hardware independence checks}
+The portable implementation reconstructs the functional without calling the
+canonical energy/residual functions.  Exact Fourier prolongation to M24/M32
+then gives portable/canonical agreement and reference stability; the independent
+quadrature-proxy audit passes 11/11.
+
+The recorded precision matrix covers CPU complex128/complex64 and CUDA
+complex128/complex64 at N8 on Torch 2.13.0+cu130 with one NVIDIA GeForce RTX
+5070 Laptop GPU.  CUDA complex128 has maximum energy/residual relative errors
+$5.7489\,10^{-16}$ and $1.7181\,10^{-15}$; CUDA complex64 gives
+$8.5245\,10^{-8}$ and $3.7843\,10^{-7}$.  All six hardware assertions pass.
+No all-device or all-grid equivalence claim is made.
+
+\section{Stages 6 and 7: analytic solution-ball control}
+P2 gives a unique global $H^2$ solution and positive-time smoothing.  For every
+$H^2$ initial radius $R$ and $0<\tau\leq T$, the fourth-order residual and the
+periodic aliasing estimate imply the qualitative bound
+\[
+ \sup_{\|u_0\|_{H^2}\leq R}\sup_{\tau\leq t\leq T}
+ \|P_NR(u(t))-R_N^C(P_Nu(t))\|_{L^2}
+ \leq C(R,\tau,T)N^{-2}.                                  \tag{7.1}
+\]
+The exponent/source audit passes 13/13.
+
+The all-time $H^2$ input is explicit.  A rigorous max-norm-shell Fourier
+embedding gives $\|u\|_\infty^2\leq0.1088517044\|u\|_{H^2}^2$; P1 energy
+upper bounds and P2 coercivity then give
+\[
+ M_2(R)^2={2\{E_+(R)+C_Y|\mathbb T^3|\}\over c_{H^2}}.
+\]
+For $R=0.5,1,2$, the enclosures are $20.16099$, $20.35977$, and $21.21616$.
+The audit passes 13/13.  These numbers are derived bounds, not trajectory fits.
+
+\section{Integrated reproduction map}
+The hash-bound verifier checks the immutable spatial, finite-time,
+Hessian/Ritz, independent-proxy, solution-ball-order, energy-ball, and recorded
+CUDA evidence at 79/79 PASS.  The purpose-written PUBLISHED bundle, if confirmed,
+must include and execute the seven load-bearing audits and preserve every local
+manifest/result dependency.  The principal repository command is
+\begin{verbatim}
+python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits
+\end{verbatim}
+and must print \texttt{ASSERTS: 79/79} followed by
+\texttt{A3-FULL-PRODUCTION-VERIFY-PASS}.
+
+\section{Closure boundary and route to stronger tiers}
+The candidate T5 statement is only that the declared evidence matrix is closed,
+hash-pinned, independently implementable, and reproducible.  Equation (7.1)
+remains qualitative because P2 uses unnamed norm-equivalence, local Moser,
+Holder, and endpoint-Duhamel constants.  Therefore this candidate does not
+close full positive-time continuum error control.
+
+To strengthen the result, one must expose these constants, compute
+$B_6(R,\tau,T)$ and $C(R,\tau,T)$, propagate them through a dealiased finite-time
+Galerkin stability inequality, and independently reproduce the resulting error
+budget.  That is the route to a broader T5 scope and eventually a conditional
+T6 theorem; no T6/T7 claim is supported here.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{A frozen manufactured matrix is the same as a continuum theorem.}
+\textbf{UPHELD as false.}  The candidate scope names the fields, grids, device,
+and unevaluated constant explicitly.
+\item \textbf{Spectral differentiation removes nonlinear aliasing.}
+\textbf{UPHELD as false.}  Pointwise nonlinear products alias, and $R_N^C$ is
+kept distinct from $P_NR$ throughout.
+\item \textbf{Fast N8/N12/N16 convergence guarantees all rough P2 data.}
+\textbf{UPHELD as false.}  The analytic test field is smoother than a generic
+$H^2$ datum; only the qualitative positive-time bound is uniform over $H^2$
+balls.
+\item \textbf{One RTX 5070 run validates every accelerator.}
+\textbf{VALID WITH MITIGATION.}  The exact recorded device and Torch version
+are part of the scope, and broader hardware equivalence is excluded.
+\item \textbf{The Hessian block proves stability of a Sector-B candidate.}
+\textbf{UPHELD as false.}  It certifies only the declared invariant block and
+fixed Ritz subspace at the tested fields.
+\item \textbf{A bundle can be published before operator review.}
+\textbf{UPHELD as a governance violation.}  This v2.0 package remains pending
+operator confirmation; no PUBLISHED bundle or T5 promotion is authorised by
+the document itself.
+\end{enumerate}
+
+\section{Falsifier}
+The candidate closure fails if a pinned source hash drifts, any of the 79
+integrated assertions fails, an oversampling reference becomes unstable, the
+portable/canonical comparison exceeds its threshold, a declared precision row
+fails, or the bundle cannot reproduce the expected PASS outputs from its own
+copied dependencies.  Such a failure returns the claim to T4 or lower; it is not
+absorbed by widening a tolerance after the fact.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Closed frozen discretization evidence matrix for the
+                         canonical full-production PDE and declared tests.
+Scope:                   T5 CANDIDATE@FROZEN-DISCRETIZATION-EVIDENCE-MATRIX;
+                         fixed torus, declared grids/fields, recorded device.
+Dependencies:            A1 production functional; A2 T6 well-posedness.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_verify.py --reuse-recorded-audits
+Expected output:         ASSERTS: 79/79;
+                         A3-FULL-PRODUCTION-VERIFY-PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE remains open for the
+                         stronger quantitative continuum-error statement.
+Tier before / after:     T4 / T5 CANDIDATE (operator confirmation pending).
+No-overclaim statement:  Not a numerical C(R,tau,T), arbitrary-trajectory
+                         continuum certificate, full-spectrum theorem, T6/T7.
+Next required action:    Operator review/confirmation, then PUBLISHED bundle;
+                         separately derive B6/C and dealiased evolution.
+\end{verbatim}

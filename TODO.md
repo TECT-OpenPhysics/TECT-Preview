@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
 ## In progress
 
 - **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
-  - P3 promoted T3 -> scoped T4 STRONG-EVIDENCE after v1.6 adversarial tier review and 79/79 integrated verification. Next T5 blockers: explicit positive-time B6(R,tau,T) and C(R,tau,T), then dealiased finite-time evolution and final reproduction package.
+  - P3 is T4. A self-contained v2.0 T5 candidate referee package is PDF-valid and directly CPU-reproduced; recorded CUDA remains 79/79 hash-valid. Awaiting operator review/confirmation before PUBLISHED bundle and any T5 CLOSED@FROZEN-DISCRETIZATION-EVIDENCE-MATRIX promotion. Quantitative B6/C and dealiased evolution remain the broader-scope blockers.
   - _updated 2026-07-17_
 
 ## Next up
