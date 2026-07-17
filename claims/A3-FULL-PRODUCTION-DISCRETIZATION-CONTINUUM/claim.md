@@ -59,11 +59,14 @@ nonuniform Class-II stress field, the fixed-subspace Ritz errors are
 This certifies the invariant-block cluster and grid convergence of the declared
 non-invariant Ritz matrix; it is not the full spectrum of a Sector-B solution.
 
-Stage 4 closes the CPU precision rows. The independent portable implementation
-matches the canonical CPU complex128 energy and residual exactly in the frozen
-cases. CPU complex64 has maximum energy error `9.8340e-8` and residual error
-`2.8775e-7`. CUDA complex128 and complex64 are `UNAVAILABLE` under the installed
-CPU-only Torch build, so item 5 remains open rather than being counted as PASS.
+Stage 4 now closes the declared hardware/precision matrix. The independently
+implemented portable functional matches the hash-pinned canonical CPU
+complex128 reference on CPU and on the recorded CUDA environment
+(`torch 2.13.0+cu130`, one NVIDIA GeForce RTX 5070 Laptop GPU). All six
+assertions pass. CUDA complex128 has maximum energy/residual errors
+`5.7489e-16` and `1.7181e-15`; CUDA complex64 has `8.5245e-8` and
+`3.7843e-7`, respectively. Both are within the frozen acceptance limits. This
+is a recorded-device result, not a claim about every GPU.
 
 ## Reproduction
 
@@ -94,11 +97,10 @@ python codes/foundations/a3_full_production_hessian_ritz_convergence.py
 python codes/foundations/a3_full_production_hardware_precision.py
 ```
 
-Expected locally: `13/13 PASS` and
-`A3-FULL-HESSIAN-RITZ-CONVERGENCE-PASS`; then CPU rows PASS and
-`A3-FULL-CPU-PRECISION-PASS-GPU-UNAVAILABLE`. In a CUDA-enabled Torch build the
-same second command must report both CUDA rows PASS before the hardware gate can
-close.
+Expected: `13/13 PASS` and `A3-FULL-HESSIAN-RITZ-CONVERGENCE-PASS`; then
+`6/6 available assertions PASS` and `A3-FULL-HARDWARE-PRECISION-PASS` in a
+CUDA-enabled Torch build. The recorded CUDA evidence is hash-checked against
+the current canonical backend and frozen manifest.
 
 Stage 5 closes the independent manufactured-field quadrature proxy for item 1.
 Each `S_N` field is Fourier-prolonged exactly to M24 and M32, evaluated by the
@@ -129,19 +131,20 @@ Expected: `11/11 PASS`, `A3-FULL-INDEPENDENT-GALERKIN-PASS`, exit 0.
 3. **"Energy convergence alone controls Hessian eigenvalues."** UPHELD as
    false. Ritz convergence also needs consistent Hessian action, compactness,
    residual bounds, and an isolated-cluster gap.
-4. **"CPU complex128 is sufficient hardware validation."** UPHELD as false.
-   CUDA and complex64 remain explicit unfinished matrix entries.
+4. **"One GPU run validates every accelerator and precision regime."** UPHELD
+   as false. The CPU/CUDA complex128/64 matrix is closed only for the recorded
+   N8 fields and RTX 5070 Laptop GPU environment; broader device coverage is
+   not asserted.
 
 ## No-overclaim
 
 The present T3 record includes an independent manufactured-field
-continuum-quadrature proxy, but not a uniform error theorem for arbitrary P2
-solutions. It is not GPU equivalence, historical-solver integration, a license
-to label N32/N64/N128 Sector-B output as continuum PDE evidence, or a T5/T6/T7
-result.
+continuum-quadrature proxy and a recorded CUDA consistency matrix, but not a
+uniform error theorem for arbitrary P2 solutions. It is not all-device GPU
+equivalence, historical-solver integration, a license to label N32/N64/N128
+Sector-B output as continuum PDE evidence, or a T5/T6/T7 result.
 
 ## Next action
 
-Run the prepared hardware audit in a CUDA-enabled Torch environment. Then prove
-the uniform continuum-quadrature/Galerkin error bound and build the integrated
-one-command verifier before tier review.
+Prove the uniform continuum-quadrature/Galerkin error bound and build the
+integrated one-command verifier before independent reproduction and tier review.

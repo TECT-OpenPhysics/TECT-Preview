@@ -33,19 +33,21 @@ hardware/precision, integrated proof, and independent reproduction remain open.
 **Stage 3/4 update 2026-07-17:** Hessian/Ritz is CLOSED@T3-EXECUTED (13/13):
 the homogeneous invariant block has gap 0.1368657 and Ritz-residual/gap
 1.0061e-8; nonuniform fixed-subspace Ritz errors converge
-1.5199e-3 -> 4.7888e-7 -> 2.7136e-8. CPU precision is CLOSED@EXECUTED:
-complex128 agrees exactly and complex64 energy/residual errors are at most
-9.8340e-8/2.8775e-7. CUDA complex128/64 are UNAVAILABLE under the installed
-CPU-only Torch build and therefore remain OPEN. Independent continuum residual,
-integrated proof, and independent reproduction also remain open.
+1.5199e-3 -> 4.7888e-7 -> 2.7136e-8. The hardware/precision matrix is now
+CLOSED@T3-EXECUTED from the attached torch 2.13.0+cu130 run on one NVIDIA
+GeForce RTX 5070 Laptop GPU: CPU and CUDA complex128/complex64 all PASS;
+CUDA complex128 energy/residual errors are 5.7489e-16/1.7181e-15 and CUDA
+complex64 errors are 8.5245e-8/3.7843e-7. The result is limited to the
+recorded device and fields. Independent continuum residual, integrated proof,
+and independent reproduction remain open.
 
 **Stage 5 update 2026-07-17:** the independent analytic manufactured-field
 continuum-quadrature proxy is CLOSED@T3-EXECUTED (11/11). Exact Fourier
 prolongation, independent portable-gradient/canonical agreement, and M24/M32
 reference stability are all verified; canonical collocation-to-proxy errors are
 5.3301e-6 -> 4.2482e-10 -> 6.6668e-12. This does not close the uniform analytic
-error bound for arbitrary P2 solution balls, GPU rows, integrated proof, or
-independent reproduction.
+error bound for arbitrary P2 solution balls, integrated proof, or independent
+reproduction.
 
 ## A2 full-production PDE audit gates
 

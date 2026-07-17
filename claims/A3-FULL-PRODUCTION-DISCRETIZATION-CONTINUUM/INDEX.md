@@ -13,6 +13,6 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a3-full-production-discretization-continuum` | v1.2 | T3 | Independent analytic manufactured-field quadrature proxy converges and agrees with canonical collocation. | ANALYTIC + EXECUTED + CONDITIONAL; T3 scaffol… | Uniform analytic Galerkin error bound, CUDA rows, and integrated one-command verification. |
+| `a3-full-production-discretization-continuum` | v1.3 | T3 | Recorded CPU/CUDA complex128/64 precision matrix passes. | EXECUTED; reviewed recorded-device evidence; … | Uniform Galerkin error bound and integrated verifier. |
 
-<!-- generated 2026-07-17T04:33:50Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T06:04:28Z by build_index.py v1.0.1 -->

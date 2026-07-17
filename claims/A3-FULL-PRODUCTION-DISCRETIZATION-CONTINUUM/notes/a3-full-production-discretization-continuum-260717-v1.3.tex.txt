@@ -1,0 +1,78 @@
+% =============================================================================
+% Title: Full-production discretization P3: recorded CUDA matrix review
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.3 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T3 recorded-device CPU/CUDA precision matrix PASS
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This supplement records and reviews the attached CUDA execution of the frozen
+P3 Stage-4 hardware/precision audit. Its purpose is to close the declared
+four-row CPU/CUDA complex128/complex64 matrix, not to promote the P3 claim or
+to generalise the result to every accelerator.
+
+\section{Recorded execution and source identity}
+The reviewed JSON reports PyTorch 2.13.0+cu130, CUDA 13.0, and one NVIDIA
+GeForce RTX 5070 Laptop GPU. Its canonical-backend hash is
+\texttt{e2b55702...56f70fc}; it equals both the frozen manifest authority and
+the current backend source. The current portable and hardware-audit source
+hashes also equal their frozen manifest entries. The artifact itself has SHA256
+\texttt{b7590feb...1206a8d}.
+
+\section{Acceptance result}
+All six available assertions pass. The two CUDA rows are
+\[
+ \begin{array}{c|cc|cc}
+  \text{configuration}&\text{energy error}&\text{limit}&\text{residual error}&\text{limit}\\
+  \hline
+  \text{complex128}&5.7489\,10^{-16}&10^{-11}&1.7181\,10^{-15}&10^{-9}\\
+  \text{complex64}&8.5245\,10^{-8}&5\,10^{-6}&3.7843\,10^{-7}&5\,10^{-5}
+ \end{array}
+\]
+Thus the audit verdict is \texttt{A3-FULL-HARDWARE-PRECISION-PASS}; the
+Stage-4 hardware gate is closed at its recorded-device, N8-field scope.
+
+\section{Devil's-advocate and mandatory adversarial review}
+\textbf{Sign and factor.} The portable implementation is independently
+evaluated against the canonical CPU complex128 residual, so a sign or real-pairing
+factor mismatch would appear in the residual comparison. \textbf{Convention.}
+The evidence names the canonical backend hash and the review checks it against
+the frozen authority. \textbf{Units.} Both implementations use the fixed-torus
+P1 normalization and manifest thresholds. \textbf{Convergence.} This is a
+cross-device/precision agreement test, not a grid-convergence theorem; its N8
+scope is explicit. \textbf{Hardcode masking.} The reviewed energy and residual
+errors are produced by the audit and checked against manifest limits, not copied
+into the code as targets. \textbf{Limit cases.} One GPU, two fields, and one
+grid do not prove all-device equivalence, a solution-ball error bound, or
+historical-solver continuum validity. External hardware reproduction remains
+welcome.
+
+\section{Remaining closure work}
+The independent analytic quadrature proxy and this hardware matrix now cover
+their executable P3 subtests. The load-bearing open passage is a uniform
+Galerkin/quadrature error estimate on P2 solution balls, followed by an
+integrated one-command verifier and an independent reproduction/tier review.
+
+\section{Reproduction}
+Run \texttt{python codes/foundations/a3\_full\_production\_hardware\_precision.py}
+in a CUDA-enabled Torch environment. Expected: \texttt{6/6 available assertions
+PASS} and \texttt{A3-FULL-HARDWARE-PRECISION-PASS}.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Recorded CPU/CUDA complex128/64 precision matrix passes.
+Scope:                   Fixed T3, N8 homogeneous and Class-II stress fields,
+                         torch 2.13.0+cu130, one RTX 5070 Laptop GPU.
+Dependencies:            Hash-pinned P1 backend and frozen P3 manifest.
+Evidence grade:          EXECUTED; reviewed recorded-device evidence; T3 scaffold.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_hardware_precision.py
+Expected output:         6/6 available assertions PASS;
+                         A3-FULL-HARDWARE-PRECISION-PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE.
+Tier before / after:     T3 / T3.
+No-overclaim statement:  Not all-device equivalence, a uniform P2 bound,
+                         historical-solver result, T5, T6, or T7.
+Next required action:    Uniform Galerkin error bound and integrated verifier.
+\end{verbatim}

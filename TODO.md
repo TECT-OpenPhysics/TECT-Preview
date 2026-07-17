@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 33
 ## In progress
 
 - **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
-  - Stages 1-3 PASS; stage 4 CPU precision PASS / CUDA UNAVAILABLE; stage 5 independent analytic continuum-quadrature proxy 11/11 PASS. Next: uniform P2 solution-ball Galerkin/quadrature error bound, CUDA execution, and one-command integrated verifier.
+  - Stages 1-5 PASS in their declared scopes. The attached torch 2.13.0+cu130 CUDA execution on one NVIDIA GeForce RTX 5070 Laptop GPU closes Stage 4: CPU/CUDA complex128/64 all PASS (6/6 assertions), source hashes match. Next: uniform P2 solution-ball Galerkin/quadrature error bound, one-command integrated verifier, independent reproduction, and tier review.
   - _updated 2026-07-17_
 
 ## Next up

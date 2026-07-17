@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close P3 recorded CUDA hardware precision matrix] - 2026-07-17
+
+
+
 ## [Close P3 independent analytic continuum-quadrature proxy] - 2026-07-17
 
 

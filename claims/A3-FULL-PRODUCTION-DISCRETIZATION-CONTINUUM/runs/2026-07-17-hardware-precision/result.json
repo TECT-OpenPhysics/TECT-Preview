@@ -3,15 +3,17 @@
   "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "script_version": "1.0.0",
   "torch": {
-    "version": "2.11.0+cpu",
-    "cuda_available": false,
-    "cuda_version": null,
-    "device_count": 0,
-    "devices": []
+    "version": "2.13.0+cu130",
+    "cuda_available": true,
+    "cuda_version": "13.0",
+    "device_count": 1,
+    "devices": [
+      "NVIDIA GeForce RTX 5070 Laptop GPU"
+    ]
   },
-  "verdict": "A3-FULL-CPU-PRECISION-PASS-GPU-UNAVAILABLE",
+  "verdict": "A3-FULL-HARDWARE-PRECISION-PASS",
   "scope": "portable independent functional implementation compared with canonical CPU complex128 on homogeneous and nonuniform Class-II-active fields",
-  "gate_closed": false,
+  "gate_closed": true,
   "rows": [
     {
       "configuration": "cpu_complex128",
@@ -38,8 +40,48 @@
       "status": "PASS",
       "energy_limit": 5e-06,
       "residual_limit": 5e-05,
-      "maximum_energy_relative_error": 9.833985728052461e-08,
-      "maximum_residual_relative_l2": 2.877483889596793e-07,
+      "maximum_energy_relative_error": 9.833985747309958e-08,
+      "maximum_residual_relative_l2": 2.7729067522778514e-07,
+      "fields": [
+        {
+          "field": "homogeneous",
+          "energy_relative_error": 8.524459973064009e-08,
+          "residual_relative_l2": 7.263489272742051e-08
+        },
+        {
+          "field": "classii_stress",
+          "energy_relative_error": 9.833985747309958e-08,
+          "residual_relative_l2": 2.7729067522778514e-07
+        }
+      ]
+    },
+    {
+      "configuration": "cuda_complex128",
+      "status": "PASS",
+      "energy_limit": 1e-11,
+      "residual_limit": 1e-09,
+      "maximum_energy_relative_error": 5.748876527257478e-16,
+      "maximum_residual_relative_l2": 1.7180228032220023e-15,
+      "fields": [
+        {
+          "field": "homogeneous",
+          "energy_relative_error": 5.748876527257478e-16,
+          "residual_relative_l2": 0.0
+        },
+        {
+          "field": "classii_stress",
+          "energy_relative_error": 1.9257494456892276e-16,
+          "residual_relative_l2": 1.7180228032220023e-15
+        }
+      ]
+    },
+    {
+      "configuration": "cuda_complex64",
+      "status": "PASS",
+      "energy_limit": 5e-06,
+      "residual_limit": 5e-05,
+      "maximum_energy_relative_error": 8.524459973064009e-08,
+      "maximum_residual_relative_l2": 3.784218836116966e-07,
       "fields": [
         {
           "field": "homogeneous",
@@ -48,20 +90,10 @@
         },
         {
           "field": "classii_stress",
-          "energy_relative_error": 9.833985728052461e-08,
-          "residual_relative_l2": 2.877483889596793e-07
+          "energy_relative_error": 5.048028645967434e-09,
+          "residual_relative_l2": 3.784218836116966e-07
         }
       ]
-    },
-    {
-      "configuration": "cuda_complex128",
-      "status": "UNAVAILABLE",
-      "reason": "torch.cuda.is_available() is false"
-    },
-    {
-      "configuration": "cuda_complex64",
-      "status": "UNAVAILABLE",
-      "reason": "torch.cuda.is_available() is false"
     }
   ],
   "assertions": [
@@ -78,16 +110,26 @@
     {
       "name": "cpu_complex64",
       "status": "PASS",
-      "detail": "energy=9.833986e-08/5.000000e-06; residual=2.877484e-07/5.000000e-05"
+      "detail": "energy=9.833986e-08/5.000000e-06; residual=2.772907e-07/5.000000e-05"
+    },
+    {
+      "name": "cuda_complex128",
+      "status": "PASS",
+      "detail": "energy=5.748877e-16/1.000000e-11; residual=1.718023e-15/1.000000e-09"
+    },
+    {
+      "name": "cuda_complex64",
+      "status": "PASS",
+      "detail": "energy=8.524460e-08/5.000000e-06; residual=3.784219e-07/5.000000e-05"
     },
     {
       "name": "cuda_availability_reported_honestly",
       "status": "PASS",
-      "detail": "cuda_available=False; unavailable is not counted as GPU PASS"
+      "detail": "cuda_available=True; unavailable is not counted as GPU PASS"
     }
   ],
   "assertion_summary": {
-    "passed": 4,
-    "total": 4
+    "passed": 6,
+    "total": 6
   }
 }

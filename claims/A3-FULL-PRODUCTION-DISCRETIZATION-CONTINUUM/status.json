@@ -29,8 +29,11 @@
     "codes/foundations/a3_full_production_portable_backend.py",
     "codes/foundations/a3_full_production_hardware_precision.py",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hardware-precision/result.json",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-hardware-precision/cuda-evidence-review.json",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.2.tex.txt",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.2.pdf",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.3.tex.txt",
+    "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v1.3.pdf",
     "codes/foundations/a3_full_production_independent_galerkin.py",
     "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-independent-galerkin/result.json"
   ],
@@ -41,12 +44,12 @@
     "status": "AVAILABLE"
   },
   "last_review": "2026-07-17",
-  "notes": "P3 remains a T3 computable scaffold. Stages 1-2 retain their 13/13 spatial and 10/10 finite-time PASS results. Stage 3 passes 13/13 with homogeneous lowest-cluster gap 0.1368657 and maximum Ritz-residual/gap 1.006025e-08. Stage 4 CPU complex128/64 passes, but CUDA is UNAVAILABLE under torch 2.11.0+cpu. Stage 5 closes the independent analytic manufactured-field continuum-quadrature proxy at 11/11: exact Fourier prolongation is within 3.084749e-16, portable/canonical residual agreement is exact in the sampled grids, M24/M32 reference uncertainty is at most 2.517966e-14, and collocation-to-independent-proxy errors are 5.3301196e-06, 4.2482266e-10, and 6.6668345e-12 with observed orders 23.2750 and 14.4414. A uniform analytic error bound on P2 solution balls, GPU execution, integrated proof, independent reproduction, and tier review remain open.",
+  "notes": "P3 remains a T3 computable scaffold. Stages 1-2 retain their 13/13 spatial and 10/10 finite-time PASS results. Stage 3 passes 13/13 with homogeneous lowest-cluster gap 0.1368657 and maximum Ritz-residual/gap 9.881785e-09. Stage 4 is now CLOSED@T3-EXECUTED: the attached torch 2.13.0+cu130 run on one NVIDIA GeForce RTX 5070 Laptop GPU reports 6/6 assertions PASS. CUDA complex128 maximum energy/residual relative errors are 5.748877e-16/1.718023e-15 and CUDA complex64 values are 8.524460e-08/3.784219e-07; both meet the frozen limits and the recorded canonical-backend hash matches the current manifest and source. Stage 5 closes the independent analytic manufactured-field continuum-quadrature proxy at 11/11: exact Fourier prolongation is within 3.104352e-16, portable/canonical residual agreement is exact in the sampled grids, M24/M32 reference uncertainty is at most 2.672031e-14, and collocation-to-independent-proxy errors are 5.3301196e-06, 4.2482268e-10, and 6.6668344e-12 with observed orders 23.2750 and 14.4414. A uniform analytic error bound on P2 solution balls, integrated proof, independent reproduction, and tier review remain open.",
   "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
   "title": "Full-production spectral discretization to continuum PDE",
   "sector": "A",
-  "statement": "For the hash-pinned full-production functional and fixed-torus PDE, P3 stages 1-3 verify spatial self-convergence, the real energy-gradient identity, fourth-order manufactured finite-time convergence, unforced trajectory and energy convergence, and Hessian/Ritz grid convergence with an isolated-cluster residual/gap certificate. Stage 5 independently implements the functional and, after exact Fourier prolongation, verifies convergence of the canonical collocation residual to an oversampled M=24,32 projected quadrature-gradient proxy. The independent portable implementation closes CPU complex128/64 consistency; GPU rows remain unavailable.",
-  "scope": "T3 COMPUTABLE-SCAFFOLD. Fixed T3, pinned full-production parameters and positive regularisers, eta_shell=0, analytic nonzero-density manufactured fields. Spatial and finite-time grids as frozen in stages 1-2; Hessian/Ritz N=8,12,16 against N=20; independent Galerkin proxy N=8,12,16 against M=24,32; CPU complex128/64 precision matrix at N=8. CUDA not executed.",
+  "statement": "For the hash-pinned full-production functional and fixed-torus PDE, P3 stages 1-3 verify spatial self-convergence, the real energy-gradient identity, fourth-order manufactured finite-time convergence, unforced trajectory and energy convergence, and Hessian/Ritz grid convergence with an isolated-cluster residual/gap certificate. Stage 5 independently implements the functional and, after exact Fourier prolongation, verifies convergence of the canonical collocation residual to an oversampled M=24,32 projected quadrature-gradient proxy. The independent portable implementation closes the CPU and recorded CUDA complex128/64 consistency matrix.",
+  "scope": "T3 COMPUTABLE-SCAFFOLD. Fixed T3, pinned full-production parameters and positive regularisers, eta_shell=0, analytic nonzero-density manufactured fields. Spatial and finite-time grids as frozen in stages 1-2; Hessian/Ritz N=8,12,16 against N=20; independent Galerkin proxy N=8,12,16 against M=24,32; CPU and CUDA complex128/64 precision matrix at N=8 on the recorded torch 2.13.0+cu130 / NVIDIA GeForce RTX 5070 Laptop GPU environment.",
   "tier": "T3",
   "evidence_grade": [
     "ANALYTIC",
@@ -54,6 +57,6 @@
     "CONDITIONAL"
   ],
   "falsifier": "Source-hash drift, an unstable oversampling reference, nonconvergent collocation-to-Galerkin residual error, failure of the discrete energy-gradient identity, failure of the later finite-time or Hessian/Ritz convergence conditions, or an unexplained hardware/precision discrepancy invalidates the corresponding P3 stage.",
-  "no_overclaim": "This T3 stage does not supply a uniform analytic error bound from arbitrary P2 solution balls to the continuum residual, a completed Galerkin passage for all P2 solutions, full-spectrum Hessian convergence at a Sector-B candidate, GPU equivalence, convergence of the historical solver, continuum validity of N32/N64/N128 Sector-B runs, minimizer or BCC selection, T5, T6, or T7.",
-  "next_action": "Run the prepared hardware/precision audit in a CUDA-enabled Torch environment, then prove the uniform continuum-quadrature/Galerkin error bound and construct the integrated one-command verifier before review."
+  "no_overclaim": "This T3 stage does not supply a uniform analytic error bound from arbitrary P2 solution balls to the continuum residual, a completed Galerkin passage for all P2 solutions, full-spectrum Hessian convergence at a Sector-B candidate, validation on all GPU devices or grids, convergence of the historical solver, continuum validity of N32/N64/N128 Sector-B runs, minimizer or BCC selection, T5, T6, or T7.",
+  "next_action": "Prove the uniform continuum-quadrature/Galerkin error bound and construct the integrated one-command verifier, then obtain independent reproduction and tier review."
 }
