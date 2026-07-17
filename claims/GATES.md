@@ -49,6 +49,17 @@ reference stability are all verified; canonical collocation-to-proxy errors are
 error bound for arbitrary P2 solution balls, integrated proof, or independent
 reproduction.
 
+**Stage 6 update 2026-07-17:** a qualitative positive-time solution-ball
+passage is CLOSED@T3-PARTIAL (13/13). For every P2 initial H2 ball and each
+fixed 0<tau<=t<=T interval, P2 smoothing supplies a common H6 envelope;
+the fourth-order residual and the periodic aliasing lemma yield
+`||P_N R(u)-R_N^C(P_Nu)||_L2 <= C(R,tau,T) N^-2`. The integrated verifier
+checks the immutable spatial, finite-time, Hessian/Ritz, independent-proxy,
+solution-ball, and recorded-CUDA evidence at 66/66 PASS. The gate stays OPEN:
+the constant C(R,tau,T) is not numerically enclosed, no dealiased finite-time
+evolution estimate is yet attached, and no Sector-B solver output is thereby
+certified as a controlled continuum approximation.
+
 ## A2 full-production PDE audit gates
 
 ### **A2-FULL-NONLINEAR-MAPPING-AUDIT**

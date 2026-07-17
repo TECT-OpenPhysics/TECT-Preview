@@ -13,6 +13,6 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a3-full-production-discretization-continuum` | v1.3 | T3 | Recorded CPU/CUDA complex128/64 precision matrix passes. | EXECUTED; reviewed recorded-device evidence; … | Uniform Galerkin error bound and integrated verifier. |
+| `a3-full-production-discretization-continuum` | v1.4 | T3 | Positive-time P2 H2 solution balls obey a qualitative collocation/Galerkin residual bound C(R,tau,T) N^-2. | ANALYTIC + EXECUTED + CONDITIONAL; T3 partial… | Enclose B6 and C(R,tau,T), then dealiased evolution. |
 
-<!-- generated 2026-07-17T06:04:28Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-17T06:33:26Z by build_index.py v1.0.1 -->

@@ -68,6 +68,14 @@ assertions pass. CUDA complex128 has maximum energy/residual errors
 `3.7843e-7`, respectively. Both are within the frozen acceptance limits. This
 is a recorded-device result, not a claim about every GPU.
 
+Stage 6 supplies the missing qualitative solution-ball passage. For every
+initial `H2` radius `R` and every `0 < tau <= T`, P2 smoothing gives a uniform
+positive-time `H6` envelope. The fourth-order residual therefore lies in a
+bounded `H2` ball. The Fourier tail and periodic aliasing estimates yield
+`||P_N R(u)-R_N^C(P_Nu)||_L2 <= C(R,tau,T) N^-2`, uniformly over that P2
+solution ball and time interval. The order/source audit passes 13/13. This is
+not yet a numerical error bar: `C(R,tau,T)` has not been enclosed.
+
 ## Reproduction
 
 Run from the repository root in the same Torch-enabled Python environment used
@@ -120,6 +128,19 @@ python codes/foundations/a3_full_production_independent_galerkin.py
 
 Expected: `11/11 PASS`, `A3-FULL-INDEPENDENT-GALERKIN-PASS`, exit 0.
 
+The solution-ball and package commands are:
+
+```bash
+python codes/foundations/a3_full_production_solution_ball_bound.py
+python codes/foundations/a3_full_production_verify.py --reuse-recorded-audits
+```
+
+Expected: `13/13 PASS`, `A3-FULL-SOLUTION-BALL-BOUND-PASS`; then
+`66/66`, `A3-FULL-PRODUCTION-VERIFY-PASS`. The verifier's default (without
+`--reuse-recorded-audits`) reruns CPU audits into a temporary directory and can
+take substantially longer; the recorded mode validates their immutable results
+and current source hashes without overwriting them.
+
 ## Devil's-advocate record
 
 1. **"Fourier differentiation makes the current backend exact Galerkin."**
@@ -135,16 +156,20 @@ Expected: `11/11 PASS`, `A3-FULL-INDEPENDENT-GALERKIN-PASS`, exit 0.
    as false. The CPU/CUDA complex128/64 matrix is closed only for the recorded
    N8 fields and RTX 5070 Laptop GPU environment; broader device coverage is
    not asserted.
+5. **"The existence of C(R,tau,T) already gives a controlled solver error
+   bar."** UPHELD as false. The qualitative positive-time bound needs a
+   computable enclosure of its constant and a dealiased finite-time evolution
+   estimate before it applies to a solver trajectory.
 
 ## No-overclaim
 
 The present T3 record includes an independent manufactured-field
 continuum-quadrature proxy and a recorded CUDA consistency matrix, but not a
-uniform error theorem for arbitrary P2 solutions. It is not all-device GPU
-equivalence, historical-solver integration, a license to label N32/N64/N128
+numerical uniform error bar for arbitrary P2 solutions. It is not all-device
+GPU equivalence, historical-solver integration, a license to label N32/N64/N128
 Sector-B output as continuum PDE evidence, or a T5/T6/T7 result.
 
 ## Next action
 
-Prove the uniform continuum-quadrature/Galerkin error bound and build the
-integrated one-command verifier before independent reproduction and tier review.
+Enclose the solution-ball constants and propagate them through a dealiased
+finite-time evolution estimate before independent reproduction and tier review.

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Add P3 positive-time solution-ball bound and integrated verifier] - 2026-07-17
+
+
+
 ## [Close P3 recorded CUDA hardware precision matrix] - 2026-07-17
 
 

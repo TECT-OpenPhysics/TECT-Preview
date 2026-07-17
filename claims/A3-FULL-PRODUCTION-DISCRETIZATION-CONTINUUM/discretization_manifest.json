@@ -46,6 +46,16 @@
       "path": "codes/foundations/a3_full_production_independent_galerkin.py",
       "sha256": "8348ebadf9f5338a6edf93a6ad92e6db2f6093c9952c974491ed90e691adf8b8",
       "version": "1.0.0"
+    },
+    "solution_ball_bound_audit": {
+      "path": "codes/foundations/a3_full_production_solution_ball_bound.py",
+      "sha256": "14978809a776031db4d9467878732fbc24984bafe236efcd49429917f5b96fcb",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a3_full_production_verify.py",
+      "sha256": "92bc46dffb7083823a975077122441010843c718d5b51172e76a948cc941711e",
+      "version": "1.1.0"
     }
   },
   "continuum_problem": {
@@ -183,11 +193,31 @@
       "require_monotone_errors": true
     }
   },
+  "stage6": {
+    "solution_ball": {
+      "initial_space": "B_R={u0 in H2(T3;C3): ||u0||_H2 <= R}, for arbitrary R>0",
+      "tau": 0.02,
+      "T": 0.2,
+      "positive_time_sobolev_order": 6,
+      "p2_input": "P2 global H2 well-posedness, energy control, and positive-time C-infinity smoothing imply a finite B6(R,tau,T) envelope on every fixed 0<tau<=t<=T interval."
+    },
+    "residual_differential_order": 4,
+    "projection_target_sobolev_order": 2,
+    "theorem_statement": "For every R>0 and 0<tau<=T<infinity, there is C(R,tau,T)<infinity such that every P2 solution from B_R satisfies sup_{tau<=t<=T} ||P_N R(u(t))-R_N^C(P_N u(t))||_L2 <= C(R,tau,T) N^-2.",
+    "constant_status": "QUALITATIVE-ANALYTIC: existence follows from the P2 smoothing/Moser route; a numerical enclosure of B6 and C(R,tau,T) is still required before any solver run gets a controlled numerical continuum-error bar.",
+    "audit_grids": [8, 12, 16],
+    "acceptance": {
+      "pinned_residual_order": 4,
+      "strict_alias_sobolev_order_min": 1.5,
+      "uniform_rate_min": 2.0
+    }
+  },
   "later_stages": {
     "finite_time": "CLOSED@T3-EXECUTED: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
     "hessian_ritz": "CLOSED@T3-EXECUTED: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
     "hardware_precision": "CLOSED@T3-EXECUTED: CPU and CUDA complex128/complex64 rows PASS on the recorded torch 2.13.0+cu130 environment with one NVIDIA GeForce RTX 5070 Laptop GPU; this is not an all-device equivalence theorem",
     "independent_continuum_residual": "CLOSED@T3-EXECUTED for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; uniform analytic error bound remains open",
+    "solution_ball_bound": "PARTIAL@T4-ANALYTIC: a positive-time H2 solution-ball bound of the form C(R,tau,T)N^-2 is derived from P2 smoothing and H6-to-H2 residual regularity; C(R,tau,T) is not numerically enclosed",
     "integrated_release": "one-command verifier, immutable JSON evidence, independent operator reproduction, and a published hash manifest"
   },
   "tier_boundary": "T3 until all six required gates are closed. N32/N64/N128 solver output alone is not discretization evidence."

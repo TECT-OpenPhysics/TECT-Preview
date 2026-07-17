@@ -1,0 +1,114 @@
+% =============================================================================
+% Title: Full-production discretization P3: positive-time solution-ball bound
+% Claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+% Version: v1.4 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T3 partial analytic closure; qualitative uniform bound PASS
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This supplement supplies the missing qualitative bridge from P2 solutions to
+the P3 Fourier discretization. It concerns the canonical variational
+three-component flow only, on the fixed torus with positive regularisers and
+$\eta_{\rm shell}=0$. For every initial-radius $R>0$ and every fixed
+$0<\tau\leq T<\infty$, write
+\[
+ \mathcal B_R=\{u_0\in H^2:\|u_0\|_{H^2}\leq R\}.
+\]
+The result is uniform over $u_0\in\mathcal B_R$ and $t\in[\tau,T]$. It does
+not assign a numerical value to the resulting constant.
+
+\section{Statement}
+Let $u$ be the P2 solution, $P_N$ the real Fourier projector, and $R_N^C$ the
+hash-pinned collocation residual. There is a finite constant
+$C(R,\tau,T)$ such that
+\[
+ \sup_{u_0\in\mathcal B_R}\sup_{\tau\leq t\leq T}
+ \|P_NR(u(t))-R_N^C(P_Nu(t))\|_{L^2}
+ \leq C(R,\tau,T)N^{-2}.                                      \tag{1}
+\]
+This is an existence-and-rate statement for the canonical positive-time
+solution ball. It is not an evaluated error bar for a particular solver run.
+
+\section{Uniform positive-time regularity}
+P2 gives a global $H^2$ solution, a coercive energy bound, and a smooth
+coefficient map because both regularisers are positive. Continuity of the
+functional on the initial $H^2$ ball gives an upper energy bound depending only
+on $R$. The P2 coercivity estimate therefore gives a common $H^2$ bound for
+all its trajectories. The analytic-semigroup estimate, the local
+$H^2\to L^2$ Moser bound, endpoint Duhamel cancellation, and the two-derivative
+bootstrap can consequently be applied with constants depending only on
+$(R,\tau,T)$. In particular,
+\[
+ \sup_{u_0\in\mathcal B_R,\ \tau\leq t\leq T}\|u(t)\|_{H^6}
+ \leq B_6(R,\tau,T)<\infty.                                  \tag{2}
+\]
+The crucial restriction $\tau>0$ is explicit: P2 starts at $H^2$, not at a
+uniform $H^6$ ball at time zero.
+
+\section{Projection and aliasing estimate}
+The full residual has principal order four and, by the P2 Moser map,
+maps bounded $H^6$ balls to bounded $H^2$ balls. Fourier projection gives
+\[
+ \|(I-P_N)u\|_{H^2}\leq C N^{-4}\|u\|_{H^6}.                 \tag{3}
+\]
+For $f\in H^q(\mathbb T^3)$ with $q>3/2$, the periodic sampling/interpolation
+aliasing operator obeys
+\[
+ \|P_N(I_N-I)f\|_{L^2}\leq C_q N^{-q}\|f\|_{H^q}.            \tag{4}
+\]
+Choose $q=2$. It is above the three-dimensional summability threshold, and
+the $H^6\to H^2$ residual bound makes (4) applicable to the nonlinear
+residual. The $H^2\to L^2$ Lipschitz estimate controls
+$R(P_Nu)-R(u)$ using (3). The collocation residual is exactly the sampled,
+projected residual of $P_Nu$ in the fixed discrete real pairing. Combining
+these three estimates yields (1); the slower aliasing term is $N^{-2}$.
+
+\section{Numerical verification}
+The standalone order-accounting audit reads the P1, P2, and P3 source hashes,
+checks the positive-time $H^6$ to residual-$H^2$ order drop, verifies
+$2>3/2$, and evaluates the decreasing Fourier-cutoff envelopes on N8, N12,
+and N16. It passes 13/13. These checks guard the exponent, torus convention,
+and source identity; they do not substitute for the analytic Moser proof or
+produce $C(R,\tau,T)$.
+
+\section{Devil's-advocate and mandatory adversarial review}
+\textbf{Sign and factor.} The residual is the real-$L^2$ gradient fixed by P1;
+the estimate compares it only after the same real projection and does not
+alter its sign. \textbf{Convention.} $R_N^C$ remains collocation, not exact
+Galerkin; the aliasing operator in (4) is the explicit difference.
+\textbf{Units.} The Fourier cutoff is computed from the fixed torus periods,
+so the Sobolev factors have the correct inverse-length power.
+\textbf{Convergence.} The proof gives an algebraic $N^{-2}$ envelope, while
+the earlier analytic-field tests may converge faster and must not replace it.
+\textbf{Hardcode masking.} All production coefficients and periods are read
+from the pinned manifests; only Sobolev orders and grid choices are declared
+audit inputs. \textbf{Limit cases.} At $t=0$ the uniform $H^6$ envelope is
+not available; removal of the rho floor, nonzero shell bias, infinite volume,
+or the historical backend all fall outside this result. External review of the
+sampling aliasing lemma and the uniformisation of the P2 bootstrap is invited.
+
+\section{What remains open}
+Equation (1) is qualitative because P2 proves finite smoothing constants but
+does not yet enclose $B_6(R,\tau,T)$ numerically. Before a Sector-B solver
+output receives a controlled continuum-error bar, the package must derive an
+explicit computable enclosure for that constant, propagate it through a
+dealiased finite-time evolution estimate, and pass independent reproduction.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+Precise statement:       Positive-time P2 H2 solution balls obey a qualitative
+                         collocation/Galerkin residual bound C(R,tau,T) N^-2.
+Scope:                   Fixed T3, canonical P1/P2 functional, eta_shell=0,
+                         arbitrary H2 radius R and 0<tau<=t<=T.
+Dependencies:            A1 production functional; A2 T6 well-posedness.
+Evidence grade:          ANALYTIC + EXECUTED + CONDITIONAL; T3 partial stage.
+Reproduction command:    python codes/foundations/
+                         a3_full_production_solution_ball_bound.py
+Expected output:         13/13 PASS; A3-FULL-SOLUTION-BALL-BOUND-PASS.
+Falsification gate:      A3-FULL-DISCRETIZATION-CLOSURE.
+Tier before / after:     T3 / T3.
+No-overclaim statement:  Not a numerical C(R,tau,T) enclosure, historical
+                         solver certificate, t=0 rough-data result, T5/T6/T7.
+Next required action:    Enclose B6 and C(R,tau,T), then dealiased evolution.
+\end{verbatim}

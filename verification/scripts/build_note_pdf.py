@@ -32,8 +32,11 @@ Changelog:
         with filename cross-check; temp-dir compile; PDF placed beside source;
         build/ area retired.
   1.1.1 (2026-07-17) report source-line contexts for overfull-hbox failures.
+  1.2.0 (2026-07-17) stop after the first failed LaTeX pass and classify a
+        MiKTeX user-cache permission denial, avoiding an identical second
+        failure in a restricted execution sandbox.
 """
-__version__ = "1.1.1"
+__version__ = "1.2.0"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-07-17"
 
@@ -139,11 +142,18 @@ def main():
         for _ in range(2):
             r = subprocess.run([pdflatex, "-interaction=nonstopmode", tex.name],
                                cwd=td, capture_output=True, text=True, errors="replace")
+            if r.returncode != 0:
+                break
         pdf = Path(td) / f"{stem}.pdf"
         log_path = Path(td) / f"{stem}.log"
         log = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
         n_over = log.count("Overfull \\hbox")
         if not pdf.exists() or r.returncode != 0:
+            failure_text = "\n".join((log, r.stdout, r.stderr))
+            if "MiKTeX" in failure_text and ("Windows API error 5" in failure_text or "Permission denied" in failure_text):
+                print("PDF build BLOCKED: MiKTeX user-cache permission denied.")
+                print("Run this same command once from a normal Windows shell or an approved elevated execution context; do not retry the restricted sandbox pass.")
+                return 2
             print("PDF build FAILED - tail of log:")
             tail = (log or r.stdout or r.stderr).splitlines()[-15:]
             print("\n".join(tail))
