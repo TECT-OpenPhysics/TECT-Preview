@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Prepare integrated A4 T6 referee package and repair verifier tier-boundary drift] - 2026-07-19
+
+Publication preflight found that verifier v1.0.0 still emitted its pre-promotion T5-to-T6 boundary after the scoped T6 theorem had been enacted. The calculation was unaffected. Verifier v1.1.0 changes only that status sentence and fresh primary 17/17 plus non-importing independent 14/14 execution passes 31/31; preflight SHA-256 is bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667. A self-contained six-page integrated referee package v2.0 now combines the approved proof and T6 enactment without mathematical enlargement. FORM-CHECK passes, Overfull-HBox is zero, and visual QA passes. Under no-auto-PUBLISHED, the exact v2.0 package awaits operator confirmation; no A4 bundle is built in this increment.
+
 ## [Replace defective historical A3 shared bundle with clean claim-level T6 support package] - 2026-07-19
 
 A direct SHA-256 audit found that the historical shared A3 260623 package had a stale MANIFEST: two listed v1.0 note files were absent and README did not match its listed hash. The theorem is not refuted. A clean claim-level PUBLISHED support bundle was rebuilt around the already operator-approved consolidation v1.1. Both entry scripts pass (6/6 and 8/8), all 11 listed hashes match, and digest 6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c recomputes exactly. The defective directory is retained only as historical provenance; the replacement is registered in the A3 card, result ledger, and Sector-A main proof line.

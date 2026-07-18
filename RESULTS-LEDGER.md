@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-046](#r-046) | Finite-volume scalar spectral constructive Gibbs measure | T6 CONDITIONAL-THEOREM; full Galerkin sequence converges weakly on L2, lifted densities in L1/TV, and smeared cylinder-polynomial correlations; 31/31 plus independent operator run |
 | [R-045](#r-045) | Scalar spectral perturbative continuum limit | T6 PROVED CONDITIONAL; every connected scalar Brazovskii amplitude converges order-by-order for fixed external momenta under the spectral/Galerkin regulator; clean PUBLISHED support bundle 6/6 + 8/8 |
 | [R-044](#r-044) | Full-production three-component gradient-flow well-posedness on the fixed torus | T6 CONDITIONAL-THEOREM; global H2 existence/uniqueness, continuous dependence, exact energy identity, and positive-time C-infinity smoothing; 61/61 aggregate audit |
 | [R-043](#r-043) | T-030 CONDITIONAL consolidation: lattice R^eps-loss closed conditionally on R-026 (proof appended); B5 closure = Lemma2+LemmaA (T'<=10 => 11N^2), independent of R-026 & cover-number L; N^2 polylog & E_2/S^2 OPEN (Bourgain-Demeter); treadmill terminated | CONDITIONAL CONSOLIDATION (not a proof certificate); B5 T7-SCOPE_adm unaffected; dr2_t030_consolidation_crosscheck.py 4/4 |
@@ -64,6 +65,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-046"></a>
+### R-046 -- finite-volume scalar spectral constructive Gibbs measure
+
+**Statement (one line):** On the fixed three-torus, the real scalar positive-mass `q^4` Brazovskii covariance with local `lambda phi^4/4 + gamma phi^6/6`, `lambda` real and `gamma>0`, defines a non-perturbative Gibbs measure obtained as the full sharp-spectral Galerkin limit; projected laws converge weakly on `L2`, lifted common-Gaussian densities converge in `L1`/total variation, and finite-degree smeared cylinder-polynomial correlations converge.
+
+**Proven in:** `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`, analytic proof v1.0, T6 enactment v1.0, and integrated referee-package candidate v2.0. Primary and non-importing independent audits are rerun by `a4_scalar_constructive_measure_verify.py`.
+
+**Reuse scope:** Finite-volume non-perturbative construction for scalar `q^4` Gaussian fields with a stable quartic-sextic local potential. It excludes derivative Class-II currents, unsmeared composites, infinite volume, phase transition, genuine finite-difference Route B, BCC, and parameter identity with the full-production branch.
+
+**Tier:** T6 CONDITIONAL-THEOREM under `A1-SHELL-POSITIVITY` and `A2-H2-SEXTIC-COERCIVITY`. Jusang Lee's independent 2026-07-18 run passes 31/31; verifier v1.1.0 publication preflight passes 31/31 with digest `bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667`. The exact integrated v2.0 document awaits operator confirmation before its PUBLISHED bundle is built.
+
+**Publication target:** Sector-A scalar constructive-measure theorem and support package for the branch-aware A5 synthesis.
 
 <a id="r-045"></a>
 ### R-045 -- scalar spectral perturbative continuum limit

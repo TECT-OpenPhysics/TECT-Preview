@@ -19,9 +19,9 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-18"
-__version_issued__ = "2026-07-18"
+__version_issued__ = "2026-07-19"
 __claims__ = ["A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"]
 
 REPO = Path(__file__).resolve().parents[2]
@@ -168,7 +168,7 @@ def main() -> int:
         "assertion_summary": {"passed": assertion_passed, "total": assertion_total},
         "environment": {"python": sys.version.split()[0], "platform": platform.platform()},
         "failures": failures,
-        "promotion_boundary": "T5 internal reproduction complete; independent operator execution is required before the scoped T6 review",
+        "promotion_boundary": "T6 conditional theorem enacted after independent operator reproduction on 2026-07-18; this verifier does not authorize T7 or any excluded scope",
         "not_closed_here": manifest["honesty_boundary"]["excluded"],
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -9,11 +9,12 @@
 
 **Falsifier.** A divergent trace of K^{-1} in the stated d=3 q^4 scope; failure of the quartic-sextic lower bound; a zero, infinite, or non-uniformly controlled Galerkin partition function; failure of P_N phi to converge in the Gaussian L6 control used for the interaction; non-tightness or two…
 
-## (all notes)/  ·  2 proof units  ·  tier span T5/T6
+## (all notes)/  ·  3 proof units  ·  tier span T5/T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `a4-scalar-constructive-referee-package` | v2.0 | — | Full sharp spectral Galerkin Gibbs sequence converges weakly on real L2; lifted densities converge in L1/TV; finite-degree smeared cylinder polynomia… | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Operator review/confirmation of this exact v2.0; then build, integrity-check, and registe… |
 | `a4-scalar-constructive-t6-enactment` | v1.0 | T6 | Full spectral Galerkin Gibbs sequence converges weakly on L2; lifted densities converge in L1/TV; smeared cylinder-polynomial correlations converge. | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Build the separate P5 Sector-A synthesis and reproduction bundle with these exclusions in… |
 | `a4-scalar-spectral-constructive-measure` | v1.0 | T5 | The full sharp spectral Galerkin Gibbs sequence converges weakly on L2; common-Gaussian lifted densities converge in L1/total variation. | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Independent operator execution, then scoped T6 review; full Class-II remains a separate p… |
 
-<!-- generated 2026-07-18T02:57:51Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-18T16:00:44Z by build_index.py v1.0.1 -->

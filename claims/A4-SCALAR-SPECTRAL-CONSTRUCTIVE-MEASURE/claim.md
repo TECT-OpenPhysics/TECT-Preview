@@ -2,7 +2,7 @@
 
 **Tier**: T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL (TSv2) |
 **Lifecycle**: ACTIVE |
-**Last review**: 2026-07-18
+**Last review**: 2026-07-19
 
 ## Closed statement
 
@@ -146,6 +146,13 @@ claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/
 SHA-256 fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c
 ```
 
+The current publication preflight uses verifier v1.1.0 and is frozen at
+`runs/2026-07-19-referee-preflight/result.json` (31/31 PASS, SHA-256
+`bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667`).
+The integrated six-page referee package v2.0 passes FORM-CHECK, has zero
+overfull boxes, and passes visual QA. It is the exact operator-review candidate;
+no PUBLISHED bundle exists until that document is confirmed.
+
 ## No-overclaim
 
 This T6 conditional scalar theorem does not cover the full three-component
@@ -155,7 +162,7 @@ selection, T7, or the future P5 Sector-A synthesis.
 
 ## Next required action
 
-Build the separate P5 Sector-A synthesis and reproduction package.  It must
-link the frozen definitions, P1 variational realization, P2 well-posedness,
-P3 spectral convergence, perturbative control, and this scoped constructive
-theorem without importing BCC or any excluded A4 scope.
+Operator review and confirmation of
+`a4-scalar-constructive-referee-package-260719-v2.0`; then build and
+integrity-check the claim-level T6 PUBLISHED bundle before the A5 capstone is
+packaged.
