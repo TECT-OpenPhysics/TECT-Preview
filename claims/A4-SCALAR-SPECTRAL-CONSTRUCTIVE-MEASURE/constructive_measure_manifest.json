@@ -1,0 +1,117 @@
+{
+  "schema": "tect/a4-scalar-spectral-constructive-measure/1.0",
+  "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+  "frozen_on": "2026-07-18",
+  "status": "T5 CLOSED@FINITE-VOLUME-REAL-SCALAR-SPECTRAL after internal dual audit; independent operator execution remains required before T6 review",
+  "authority": {
+    "scalar_kernel_anchor": {
+      "path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json",
+      "sha256": "030d1b7c62e77585c9967013554d7ff2e9e35f72bbecc37dcdfc9017d20b3a38"
+    },
+    "production_functional_anchor": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a4_scalar_constructive_measure.py",
+      "sha256": "eb391d8c129b25ca01ff6562357d9effcb63665b89b7724218715fccdca64ba1",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a4_scalar_constructive_measure_independent.py",
+      "sha256": "d4e77fea79c58f6a6dac1dfa9a2c11111749647638ae096996a651ebe4880a1a",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a4_scalar_constructive_measure_verify.py",
+      "sha256": "e2b739d0578cb838600f4ef8d2be1d5183f0eb50c44de0a0b53791839cfbba21",
+      "version": "1.0.0"
+    }
+  },
+  "theorem_scope": {
+    "domain": "real scalar field on T3 with Lx=Ly=Lz=16",
+    "kernel": "K(k)=m_sh^2+Y(|k|^2-q0^2)^2",
+    "kernel_assumptions": "m_sh^2>0, Y>0, q0>=0",
+    "interaction": "V(phi)=integral(lambda phi^4/4+gamma phi^6/6)",
+    "interaction_assumptions": "lambda real, gamma>0",
+    "inverse_temperature": 1.0,
+    "projector": "P_N retains Fourier modes with max_j |n_j|<=N",
+    "measure": "nu_N(dphi_N)=Z_N^-1 exp(-V(phi_N)) mu_0,N(dphi_N), covariance(mu_0,N)=P_N K^-1 P_N",
+    "target_limit": "the full N sequence converges weakly on L2; the common-Gaussian lifted densities converge in L1/total variation"
+  },
+  "anchors": {
+    "perturbative_scalar": {
+      "source": "canonical_n001_kernel.json",
+      "m_shell_squared_field": "mu2_shell"
+    },
+    "production_local_potential": {
+      "source": "production_functional_manifest.json",
+      "m_shell_squared_derived_as": "r-Z^2/(4Y)",
+      "quartic_convention": "lambda/4",
+      "sextic_convention": "gamma/6"
+    }
+  },
+  "analytic_identities": {
+    "trace_class": "sum_n K(k_n)^-1<infinity because K(k)>=Y|k|^4/4 beyond the shell and sum_m (24m^2+2)m^-4<infinity",
+    "sobolev_support": "Tr[(1-Delta)^s K^-1]<infinity for every s<1/2; the power threshold is sharp at s=1/2",
+    "potential_lower_bound": "lambda phi^4/4+gamma phi^6/6 >= -|min(lambda,0)|^3/(12 gamma^2)",
+    "uniform_partition_lower": "Z_N>=exp(-|T3|[(3 lambda_+/4)sigma_*^4+(5 gamma/2)sigma_*^6]) by Jensen, with lambda_+=max(lambda,0)",
+    "interaction_convergence": "P_N phi -> phi in L6(Omega x T3), hence V(P_N phi)->V(phi) in probability/L1-local polynomial control",
+    "measure_convergence": "bounded Gibbs weights plus Z_N->Z>0 identify the full sequence; projected laws converge weakly and lifted densities converge in total variation"
+  },
+  "audit": {
+    "max_mode_cutoffs": [4, 8, 12, 16, 24, 32],
+    "sobolev_exponents": [0.0, 0.25, 0.49],
+    "sharp_excluded_exponent": 0.5,
+    "gaussian_even_moments_through": 12,
+    "require_two_anchor_rows": true,
+    "require_nonimporting_independent_audit": true,
+    "require_full_sequence_identification": true
+  },
+  "verified_result": {
+    "verdict": "A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS",
+    "assertions": {
+      "primary": "17/17",
+      "nonimporting_independent": "14/14",
+      "integrated": "31/31"
+    },
+    "evidence": {
+      "primary": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-primary-constructive-measure/result.json",
+        "sha256": "8ef47904aed3b33e83a5a6472d13409ca0ffcaaa132951c3661707b2a98c8212"
+      },
+      "independent": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-independent-constructive-measure/result.json",
+        "sha256": "8308483e154a59dd0abc72d115e54ae7ba8a7d2c9c307ff69efc27f206636d5c"
+      },
+      "integrated": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-integrated-constructive-measure/result.json",
+        "sha256": "29b9d7fe53b022a93fced298f42a94f3e53505294e3f2dc852ec739c5850c99f"
+      },
+      "proof_source": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.tex.txt",
+        "sha256": "c3604aa5029e80c811fd11480b861fe1256a3a4fa16869a32307d03992f8f4f6"
+      },
+      "proof_pdf": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.pdf",
+        "sha256": "847112ccc304731cb29dd09a097c841dea966971b7f74e06f50f224a72918724"
+      }
+    },
+    "promotion_boundary": "T5 pinned scalar closure only; operator-side fresh execution is pre-registered for the later scoped T6 review"
+  },
+  "honesty_boundary": {
+    "closed_target": [
+      "finite-volume real-scalar spectral constructive measure",
+      "partition-function and declared correlation cutoff removal"
+    ],
+    "excluded": [
+      "three-component derivative Class-II constructive measure",
+      "eta_shell nonzero",
+      "zero or negative shell mass",
+      "infinite volume and phase transition",
+      "genuine finite-difference lattice Route B",
+      "BCC existence or selection",
+      "P5 Sector-A synthesis"
+    ]
+  }
+}

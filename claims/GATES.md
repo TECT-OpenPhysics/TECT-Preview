@@ -2,7 +2,35 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-17.
+exist here. Last updated: 2026-07-18.
+
+## A4 scalar constructive-measure gate
+
+### **A4-CONSTRUCTIVE-MEASURE-CLOSURE**
+
+**Statement:** On the fixed three-torus for the real scalar Brazovskii kernel
+with $Y>0$, positive shell mass, arbitrary real quartic coefficient, and
+positive sextic coefficient, construct the Gaussian measure with covariance
+$K^{-1}$ and remove the sharp spectral Galerkin regulator non-perturbatively.
+Closure requires: (1) a trace-class covariance and a precise Gaussian support
+threshold; (2) finite, uniformly nonzero Galerkin partition functions; (3) an
+explicit negative-quartic/positive-sextic lower bound; (4) tightness and
+identification of the full cutoff sequence, not only an unnamed subsequence;
+(5) convergence of cylinder and polynomial correlation observables; and
+(6) a non-importing independent audit and one-command verifier.  The theorem
+must distinguish the scalar local interaction from the derivative Class-II
+functional, whose constructive definition is a separate target.
+
+**Status:** CLOSED@T5-FINITE-VOLUME-REAL-SCALAR-SPECTRAL (2026-07-18).
+The self-contained v1.0 proof closes trace class, the direct Gaussian `L6`
+interaction construction, the exact quartic-sextic stability bound, uniform
+partition normalization, full-sequence weak convergence, lifted-density
+total-variation convergence, and smeared cylinder-polynomial correlations.
+The primary audit passes 17/17, the non-importing reconstruction passes 14/14,
+and fresh integrated re-execution passes 31/31.  Full derivative Class-II,
+unsmeared composite operators, infinite volume, phase transition, Route B,
+BCC, T6/T7, and P5 remain outside this closed gate.  Independent operator
+execution is required before the separate scoped T6 review.
 
 ## A3 full-production discretization gate
 

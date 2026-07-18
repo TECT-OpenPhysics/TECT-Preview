@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 34
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 35
 
 ## Next up
 
@@ -110,3 +110,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 34
 - **T-037** P3: close full-production spectral discretization-to-continuum package  _(claim: A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM; gate: A3-FULL-DISCRETIZATION-CLOSURE)_
   - Closed at T6 CONDITIONAL-THEOREM after adversarial repair. The v2.1 Galerkin-ball underbound is registered as AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND. Corrected primary 21/21, non-importing full-chain 24/24, and integrated 124/124 audits pass. Replacement PUBLISHED bundle has 42 files and nine entry scripts ALL PASS, source-pinned to d4c7b3149fe56293ab2c88464c931d64c2e614e3 with digest 6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41. Practical sharpness and historical-solver certification remain separate work.
   - _updated 2026-07-17_
+- **T-038** P4: close finite-volume real-scalar spectral constructive Gibbs measure  _(claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE; gate: A4-CONSTRUCTIVE-MEASURE-CLOSURE)_
+  - Trace class, L6 interaction, partition bounds, full-sequence limit, dual audit, and proof PDF.
+  - _updated 2026-07-18_

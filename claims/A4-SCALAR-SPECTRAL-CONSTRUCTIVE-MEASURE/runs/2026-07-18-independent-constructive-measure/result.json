@@ -1,0 +1,342 @@
+{
+  "schema": "tect/a4-scalar-constructive-independent-result/1.0",
+  "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+  "script_version": "1.0.0",
+  "verdict": "A4-SCALAR-CONSTRUCTIVE-INDEPENDENT-PASS",
+  "scope": "non-importing reconstruction of covariance, stability, partition bounds, and full-sequence theorem declarations",
+  "trace_comparisons": [
+    {
+      "anchor": "perturbative_scalar",
+      "reconstructed": 2864.255859250375,
+      "published": 2864.255859250375,
+      "relative_error": 0.0
+    },
+    {
+      "anchor": "production_local",
+      "reconstructed": 431.72695475987376,
+      "published": 431.7269547598737,
+      "relative_error": 1.3166520698811657e-16
+    }
+  ],
+  "partition_rows": [
+    {
+      "anchor": "perturbative_scalar",
+      "trace_upper": 3029.399163006104,
+      "log10_lower": -2914.666986263498,
+      "log10_upper": 4.4909513546748725,
+      "moment12_relative_error": 1.60367964092825e-15,
+      "published_log10_lower": -2914.666986263496,
+      "published_log10_upper": 4.490951354674871
+    },
+    {
+      "anchor": "production_local",
+      "trace_upper": 596.8577666998391,
+      "log10_lower": -22.291125001439983,
+      "log10_upper": 4.4909513546748725,
+      "moment12_relative_error": 9.71445146547012e-17,
+      "published_log10_lower": -22.29112500143997,
+      "published_log10_upper": 4.490951354674871
+    }
+  ],
+  "tail_rows": [
+    {
+      "cutoff": 4,
+      "trace_tail_upper": 970.2549231297347,
+      "L6_sixth_moment_upper": 816.6367655785853
+    },
+    {
+      "cutoff": 8,
+      "trace_tail_upper": 498.5690977312956,
+      "L6_sixth_moment_upper": 110.8019574797272
+    },
+    {
+      "cutoff": 12,
+      "trace_tail_upper": 334.46801617566285,
+      "L6_sixth_moment_upper": 33.453005806096996
+    },
+    {
+      "cutoff": 16,
+      "trace_tail_upper": 251.4506318403918,
+      "L6_sixth_moment_upper": 14.214433526013314
+    },
+    {
+      "cutoff": 24,
+      "trace_tail_upper": 167.93677431027882,
+      "L6_sixth_moment_upper": 4.234564812971106
+    },
+    {
+      "cutoff": 32,
+      "trace_tail_upper": 126.03595509688871,
+      "L6_sixth_moment_upper": 1.7900070173154263
+    }
+  ],
+  "assertions": [
+    {
+      "name": "independent_source_hash_matches_manifest",
+      "status": "PASS",
+      "detail": {
+        "actual": "d4e77fea79c58f6a6dac1dfa9a2c11111749647638ae096996a651ebe4880a1a",
+        "expected": "d4e77fea79c58f6a6dac1dfa9a2c11111749647638ae096996a651ebe4880a1a"
+      }
+    },
+    {
+      "name": "primary_source_and_upstreams_are_hash_pinned",
+      "status": "PASS",
+      "detail": {
+        "primary": "eb391d8c129b25ca01ff6562357d9effcb63665b89b7724218715fccdca64ba1",
+        "kernel": "030d1b7c62e77585c9967013554d7ff2e9e35f72bbecc37dcdfc9017d20b3a38",
+        "functional": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      }
+    },
+    {
+      "name": "primary_artifact_is_complete_pass",
+      "status": "PASS",
+      "detail": {
+        "verdict": "A4-SCALAR-CONSTRUCTIVE-PRIMARY-PASS",
+        "summary": {
+          "passed": 17,
+          "total": 17
+        }
+      }
+    },
+    {
+      "name": "independent_anchor_reconstruction_is_admissible",
+      "status": "PASS",
+      "detail": {
+        "Y": 1.0,
+        "gamma": 1.62,
+        "masses": {
+          "perturbative_scalar": 0.005,
+          "production_local": 0.260000000009475
+        }
+      }
+    },
+    {
+      "name": "scalar_loop_covariance_traces_match_vectorized_primary",
+      "status": "PASS",
+      "detail": [
+        {
+          "anchor": "perturbative_scalar",
+          "reconstructed": 2864.255859250375,
+          "published": 2864.255859250375,
+          "relative_error": 0.0
+        },
+        {
+          "anchor": "production_local",
+          "reconstructed": 431.72695475987376,
+          "published": 431.7269547598737,
+          "relative_error": 1.3166520698811657e-16
+        }
+      ]
+    },
+    {
+      "name": "max_norm_shell_count_is_exact",
+      "status": "PASS",
+      "detail": [
+        {
+          "shell": 1,
+          "enumerated": 26,
+          "formula": 26
+        },
+        {
+          "shell": 2,
+          "enumerated": 98,
+          "formula": 98
+        },
+        {
+          "shell": 3,
+          "enumerated": 218,
+          "formula": 218
+        },
+        {
+          "shell": 4,
+          "enumerated": 386,
+          "formula": 386
+        },
+        {
+          "shell": 5,
+          "enumerated": 602,
+          "formula": 602
+        },
+        {
+          "shell": 6,
+          "enumerated": 866,
+          "formula": 866
+        },
+        {
+          "shell": 7,
+          "enumerated": 1178,
+          "formula": 1178
+        },
+        {
+          "shell": 8,
+          "enumerated": 1538,
+          "formula": 1538
+        },
+        {
+          "shell": 9,
+          "enumerated": 1946,
+          "formula": 1946
+        },
+        {
+          "shell": 10,
+          "enumerated": 2402,
+          "formula": 2402
+        },
+        {
+          "shell": 11,
+          "enumerated": 2906,
+          "formula": 2906
+        },
+        {
+          "shell": 12,
+          "enumerated": 3458,
+          "formula": 3458
+        }
+      ]
+    },
+    {
+      "name": "q4_covariance_is_trace_class_in_three_dimensions",
+      "status": "PASS",
+      "detail": {
+        "covariance_order": 4.0,
+        "dimension": 3.0,
+        "radial_power": -2.0
+      }
+    },
+    {
+      "name": "Hs_support_and_half_derivative_threshold_are_rederived",
+      "status": "PASS",
+      "detail": {
+        "audited": [
+          {
+            "s": 0.0,
+            "shell_power": -2.0
+          },
+          {
+            "s": 0.25,
+            "shell_power": -1.5
+          },
+          {
+            "s": 0.49,
+            "shell_power": -1.02
+          }
+        ],
+        "critical_s": 0.5
+      }
+    },
+    {
+      "name": "quartic_sextic_minimum_is_independently_stationary_and_exact",
+      "status": "PASS",
+      "detail": {
+        "phi_squared": "0.26543209876543209876543209876543209876543209876543209876543209876543209876543210",
+        "minimum": "-0.0025246087994716252603769750546156581821876746430930244373317075649037240258090738",
+        "lower_constant": "0.0025246087994716252603769750546156581821876746430930244373317075649037240258090738",
+        "primary_lower": "0.0025246087994716246"
+      }
+    },
+    {
+      "name": "gaussian_moments_and_uniform_partition_bounds_reconstruct",
+      "status": "PASS",
+      "detail": [
+        {
+          "anchor": "perturbative_scalar",
+          "trace_upper": 3029.399163006104,
+          "log10_lower": -2914.666986263498,
+          "log10_upper": 4.4909513546748725,
+          "moment12_relative_error": 1.60367964092825e-15,
+          "published_log10_lower": -2914.666986263496,
+          "published_log10_upper": 4.490951354674871
+        },
+        {
+          "anchor": "production_local",
+          "trace_upper": 596.8577666998391,
+          "log10_lower": -22.291125001439983,
+          "log10_upper": 4.4909513546748725,
+          "moment12_relative_error": 9.71445146547012e-17,
+          "published_log10_lower": -22.29112500143997,
+          "published_log10_upper": 4.490951354674871
+        }
+      ]
+    },
+    {
+      "name": "independent_gaussian_L6_tail_envelope_vanishes_monotonically",
+      "status": "PASS",
+      "detail": [
+        {
+          "cutoff": 4,
+          "trace_tail_upper": 970.2549231297347,
+          "L6_sixth_moment_upper": 816.6367655785853
+        },
+        {
+          "cutoff": 8,
+          "trace_tail_upper": 498.5690977312956,
+          "L6_sixth_moment_upper": 110.8019574797272
+        },
+        {
+          "cutoff": 12,
+          "trace_tail_upper": 334.46801617566285,
+          "L6_sixth_moment_upper": 33.453005806096996
+        },
+        {
+          "cutoff": 16,
+          "trace_tail_upper": 251.4506318403918,
+          "L6_sixth_moment_upper": 14.214433526013314
+        },
+        {
+          "cutoff": 24,
+          "trace_tail_upper": 167.93677431027882,
+          "L6_sixth_moment_upper": 4.234564812971106
+        },
+        {
+          "cutoff": 32,
+          "trace_tail_upper": 126.03595509688871,
+          "L6_sixth_moment_upper": 1.7900070173154263
+        }
+      ]
+    },
+    {
+      "name": "full_sequence_and_lifted_density_topologies_are_explicit",
+      "status": "PASS",
+      "detail": "the full N sequence converges weakly on L2; the common-Gaussian lifted densities converge in L1/total variation"
+    },
+    {
+      "name": "derivative_classii_infinite_volume_and_BCC_are_not_smuggled_in",
+      "status": "PASS",
+      "detail": [
+        "three-component derivative Class-II constructive measure",
+        "eta_shell nonzero",
+        "zero or negative shell mass",
+        "infinite volume and phase transition",
+        "genuine finite-difference lattice Route B",
+        "BCC existence or selection",
+        "P5 Sector-A synthesis"
+      ]
+    },
+    {
+      "name": "measure_limit_uses_bounded_weight_not_sampling_extrapolation",
+      "status": "PASS",
+      "detail": {
+        "identity": "bounded Gibbs weights plus Z_N->Z>0 identify the full sequence; projected laws converge weakly and lifted densities converge in total variation",
+        "target": "the full N sequence converges weakly on L2; the common-Gaussian lifted densities converge in L1/total variation"
+      }
+    }
+  ],
+  "assertion_summary": {
+    "passed": 14,
+    "total": 14
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "not_closed_here": [
+    "three-component derivative Class-II constructive measure",
+    "eta_shell nonzero",
+    "zero or negative shell mass",
+    "infinite volume and phase transition",
+    "genuine finite-difference lattice Route B",
+    "BCC existence or selection",
+    "P5 Sector-A synthesis"
+  ]
+}

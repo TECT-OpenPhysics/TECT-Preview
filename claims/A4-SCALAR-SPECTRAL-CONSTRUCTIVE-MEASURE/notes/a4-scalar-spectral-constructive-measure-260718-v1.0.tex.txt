@@ -1,0 +1,302 @@
+% =============================================================================
+% Title: Finite-volume scalar spectral constructive Gibbs measure
+% Claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+% Version: v1.0 -- first issued 2026-07-18; this version issued 2026-07-18
+% Status: T5 PINNED-CLOSURE at finite-volume real-scalar spectral scope
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This note constructs the non-perturbative finite-volume Gibbs measure for the
+real scalar Brazovskii slice.  It is deliberately a separate claim from the
+perturbative A3 correlator theorem and from the P3 PDE-discretization theorem.
+The torus is
+\[
+ \mathbb T^3=[0,L)^3,\qquad L=16,\qquad |\mathbb T^3|=L^3.       \tag{1.1}
+\]
+Let $\alpha=2\pi/L$, let $P_N$ retain the Fourier modes
+$n\in\mathbb Z^3$ with $|n|_\infty\leq N$, and define
+\[
+ K_n=m_{\rm sh}^2+Y\bigl(\alpha^2|n|^2-q_0^2\bigr)^2,
+ \qquad C_n=K_n^{-1}.                                      \tag{1.2}
+\]
+The hypotheses are
+\[
+ m_{\rm sh}^2>0,\qquad Y>0,\qquad q_0\geq0,
+ \qquad \lambda\in\mathbb R,\qquad \gamma>0.              \tag{1.3}
+\]
+For a real field $\phi$, put
+\[
+ V(\phi)=\int_{\mathbb T^3}
+ \left(\frac{\lambda}{4}\phi^4+
+       \frac{\gamma}{6}\phi^6\right)dx.                   \tag{1.4}
+\]
+
+\paragraph{Pinned-scope theorem.}
+Let $\mu_0$ be the centred real Gaussian measure with covariance $C=K^{-1}$.
+The covariance is trace class on real $L^2(\mathbb T^3)$.  The Galerkin laws
+\[
+ d\nu_N(\phi_N)=Z_N^{-1}e^{-V(\phi_N)}d\mu_{0,N}(\phi_N),
+ \qquad \mu_{0,N}=(P_N)_\#\mu_0,                            \tag{1.5}
+\]
+are normalizable.  There is a probability measure
+\[
+ d\nu(\phi)=Z^{-1}e^{-V(\phi)}d\mu_0(\phi)                 \tag{1.6}
+\]
+such that the full sequence $\nu_N$ converges weakly to $\nu$ on real $L^2$.
+The lifted densities on the common Gaussian space converge in $L^1(\mu_0)$,
+equivalently in total variation, and every finite-degree smeared cylinder
+polynomial has a convergent expectation.  This is cutoff removal for the
+declared spectral regulator; it is not an infinite-volume limit.
+
+\section{Trace class and Gaussian regularity}
+On the max-norm shell $|n|_\infty=m$ there are exactly
+\[
+ (2m+1)^3-(2m-1)^3=24m^2+2                              \tag{2.1}
+\]
+modes.  If $m\geq m_0:=\lceil\sqrt2q_0/\alpha\rceil$, then
+$\alpha^2|n|^2\geq2q_0^2$ and hence
+\[
+ K_n\geq \frac{Y}{4}\alpha^4m^4.                         \tag{2.2}
+\]
+Consequently,
+\[
+ \sum_{|n|_\infty\geq M}C_n
+ \leq\frac{4}{Y\alpha^4}
+ \sum_{m=M}^\infty\left(24m^{-2}+2m^{-4}\right)<\infty.  \tag{2.3}
+\]
+The finitely many inner modes are harmless because $K_n\geq m_{\rm sh}^2$.
+Thus $C$ is trace class and $\mu_0$ is a Radon Gaussian probability measure
+on real $L^2$.
+
+With the $H^s$ weight, the shell summand is bounded by a constant times
+$m^{2s-2}$.  It is summable for every $s<1/2$; negative $s$ already follows
+from $L^2$ support.  Conversely, $K_n\leq c(1+|n|^4)$ at large $|n|$, so the
+weighted covariance trace has the harmonic lower power at $s=1/2$.  Hence the
+covariance is trace class on $H^s$ for $s<1/2$, but not on $H^{1/2}$.  This is
+the sharp Gaussian Hilbert-space threshold used here.
+
+The low Sobolev exponent does not obstruct the local polynomial.  For the
+common Gaussian Fourier series, the tail
+$X_N=(I-P_N)\phi$ has an $x$-independent variance
+\[
+ t_N=|\mathbb T^3|^{-1}\sum_{|n|_\infty>N}C_n\longrightarrow0. \tag{2.4}
+\]
+Since a centred real Gaussian $X$ satisfies $\mathbb E X^6=15(\mathbb E
+X^2)^3$,
+\[
+ \mathbb E\int_{\mathbb T^3}|X_N(x)|^6dx
+ =15|\mathbb T^3|t_N^3\longrightarrow0.                   \tag{2.5}
+\]
+Therefore $P_N\phi\to\phi$ in
+$L^6(\Omega\times\mathbb T^3)$.  In particular, $\phi\in L^6$ almost surely
+and (1.4) is a finite random variable.  This direct Gaussian-moment argument,
+not an invalid $H^{1/2-}\to L^6$ Sobolev embedding, defines the interaction.
+
+\section{Stability and partition functions}
+Write $a=\max(-\lambda,0)$.  For $x=\phi^2\geq0$, the possibly negative part
+of the potential is minimized at $x=a/\gamma$.  Direct substitution gives the
+sharp pointwise bound
+\[
+ \frac{\lambda}{4}\phi^4+\frac{\gamma}{6}\phi^6
+ \geq -\frac{a^3}{12\gamma^2}=-c_*.                       \tag{3.1}
+\]
+It follows immediately that
+\[
+ e^{-V(P_N\phi)}\leq e^{c_*|\mathbb T^3|},
+ \qquad Z_N\leq e^{c_*|\mathbb T^3|}.                     \tag{3.2}
+\]
+
+Let
+\[
+ \sigma_*^2=|\mathbb T^3|^{-1}\operatorname{Tr}C.         \tag{3.3}
+\]
+Translation invariance and the real Gaussian moments
+$\mathbb E X^4=3\sigma^4$, $\mathbb E X^6=15\sigma^6$ give
+\[
+ \mathbb E V(P_N\phi)
+ \leq |\mathbb T^3|
+ \left(\frac{3\lambda_+}{4}\sigma_*^4+
+       \frac{5\gamma}{2}\sigma_*^6\right)=B_*<\infty.   \tag{3.4}
+\]
+Jensen's inequality has the required direction:
+\[
+ Z_N=\mathbb E e^{-V(P_N\phi)}
+ \geq e^{-\mathbb E V(P_N\phi)}\geq e^{-B_*}>0.           \tag{3.5}
+\]
+Equations (3.2) and (3.5) uniformly enclose every Galerkin partition function.
+
+\section{Full-sequence regulator removal}
+The elementary polynomial difference inequality, Holder's inequality on
+$\Omega\times\mathbb T^3$, and (2.5) yield
+\[
+ \mathbb E|V(P_N\phi)-V(\phi)|\longrightarrow0.            \tag{4.1}
+\]
+For example, the sextic term is bounded by a constant times
+\[
+ \bigl(\|P_N\phi\|_{L^6}^5+\|\phi\|_{L^6}^5\bigr)
+ \|P_N\phi-\phi\|_{L^6},                                  \tag{4.2}
+\]
+and the quartic term is easier on the finite product space.  Thus
+$V(P_N\phi)\to V(\phi)$ in probability.  By (3.1), all weights are bounded by
+the same deterministic constant.  Bounded convergence in probability gives
+\[
+ w_N:=e^{-V(P_N\phi)}\longrightarrow w:=e^{-V(\phi)}
+ \quad\hbox{in }L^1(\mu_0).                                \tag{4.3}
+\]
+Hence $Z_N\to Z=\mathbb Ew$.  The limit is strictly positive because $w>0$
+almost surely; equivalently, (3.5) passes to the limit.
+
+Define the lifted probability measure
+\[
+ d\widetilde\nu_N=Z_N^{-1}w_Nd\mu_0.                      \tag{4.4}
+\]
+Normalization and (4.3) imply
+\[
+ \left\|\frac{w_N}{Z_N}-\frac{w}{Z}\right\|_{L^1(\mu_0)}
+ \longrightarrow0,                                        \tag{4.5}
+\]
+which is total-variation convergence of the lifted laws.  The actual
+finite-dimensional law is $(P_N)_\#\widetilde\nu_N=\nu_N$.  For every bounded
+continuous $F$ on $L^2$, $P_N\phi\to\phi$ almost surely and the normalized
+densities are uniformly bounded by (3.2)--(3.5).  Therefore
+\[
+ \int F(\phi_N)d\nu_N
+ =\int F(P_N\phi)d\widetilde\nu_N
+ \longrightarrow\int F(\phi)d\nu.                         \tag{4.6}
+\]
+This identifies the full sequence, so no unnamed subsequence or uniqueness
+assumption is hidden in the cutoff removal.  Weak convergence also supplies
+tightness on the Polish space $L^2$.
+
+The total-variation statement in (4.5) is only for the common-Gaussian lifted
+laws.  The embedded finite-dimensional laws have different supports and are
+not claimed to converge in total variation.
+
+\section{Declared correlations}
+Let $\ell_1,\ldots,\ell_r$ be continuous real linear functionals on $L^2$ and
+let $Q$ be a finite-degree polynomial.  The observable
+\[
+ \mathcal O(\phi)=Q(\ell_1(\phi),\ldots,\ell_r(\phi))       \tag{5.1}
+\]
+has Gaussian moments of every order.  The uniform density bound from
+(3.2)--(3.5) transfers uniform integrability to $\widetilde\nu_N$.  Since
+$\ell_j(P_N\phi)\to\ell_j(\phi)$ in every finite Gaussian moment,
+\[
+ \int Q(\ell_1(\phi_N),\ldots,\ell_r(\phi_N))d\nu_N
+ \longrightarrow \int\mathcal O(\phi)d\nu.                \tag{5.2}
+\]
+Thus smeared cylinder correlations have regulator removal.  Unsmeared
+coincident-point products, composite-operator renormalization, and infinite-
+volume correlation decay are not statements of this theorem.
+
+\section{Reproducible quantitative audit}
+The primary audit derives all bounds from two hash-pinned anchors.  The
+non-importing audit reconstructs the Fourier trace with scalar loops, the
+shell count, the Decimal potential minimum, the Gaussian moments, and the
+partition bounds.  The integrated verifier reruns both in a temporary
+directory and checks all three source hashes.
+
+For the perturbative scalar anchor $m_{\rm sh}^2=0.005$, the conservative
+covariance-trace upper bound is $3029.399163006103$ and the pointwise variance
+upper bound is $0.7395994050307869$.  For the production-local sanity anchor,
+\[
+ m_{\rm sh}^2=r-\frac{Z^2}{4Y}=0.260000000009475,           \tag{6.1}
+\]
+the corresponding bounds are $596.857766699839$ and
+$0.14571722819820287$.  The exact stability constant from the pinned local
+coefficients is
+\[
+ c_*=0.0025246087994716246.                                \tag{6.2}
+\]
+These are derived sanity checks from stored inputs, not physical predictions
+and not restrictions of the general theorem.
+
+The internal result is
+\begin{verbatim}
+PASS: primary (17/17)
+PASS: independent (14/14)
+ASSERTS: 31/31
+A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS
+\end{verbatim}
+from
+\begin{verbatim}
+python codes/foundations/a4_scalar_constructive_measure_verify.py
+\end{verbatim}
+Any failed assertion or source-hash drift reopens the closure gate.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{Trace class alone defines the local sextic interaction.}
+\textbf{UPHELD as false.}  Equation (2.5) separately proves Gaussian $L^6$
+convergence and almost-sure integrability.
+\item \textbf{$H^{1/2-}$ embeds into $L^6$ in three dimensions.}
+\textbf{UPHELD as false.}  No such embedding is used; the pointwise Gaussian
+sixth-moment identity is the load-bearing route.
+\item \textbf{A negative quartic makes the Gibbs weight unbounded.}
+\textbf{DISMISSED under the stated hypotheses.}  The positive sextic gives
+the exact global lower bound (3.1), hence the uniform weight bound (3.2).
+\item \textbf{Jensen's inequality could have been used in the wrong
+direction.} \textbf{DISMISSED.}  The convex function is $e^{-x}$, giving
+$\mathbb E e^{-V}\geq e^{-\mathbb EV}$ as displayed in (3.5).
+\item \textbf{Tightness only gives an unidentified subsequence.}
+\textbf{UPHELD as insufficient by itself.}  The $L^1$ density limit (4.5)
+identifies the full sequence before tightness is cited.
+\item \textbf{The finite-dimensional measures converge in total variation
+after zero-extension.} \textbf{UPHELD as false.}  Only the lifted laws converge
+in total variation; the actual Galerkin laws converge weakly on $L^2$.
+\par\smallskip
+\item \textbf{Every local or composite correlation is covered.}
+\textbf{UPHELD as false.}  Section 5 is restricted to finite-degree smeared
+cylinder polynomials.
+\item \textbf{The same proof covers derivative Class-II terms.}
+\textbf{UPHELD as false.}  Typical fields have only the covariance regularity
+of Section 2; derivative-current squares require a separate definition and
+possibly renormalization.
+\item \textbf{Finite volume establishes a phase transition.}
+\textbf{UPHELD as false.}  No thermodynamic limit, symmetry breaking, or BCC
+selection is included.
+\item \textbf{Large finite constants are practical error bars.}
+\textbf{UPHELD as false.}  The bounds certify existence and convergence, not
+useful cutoff sizes or Monte Carlo efficiency.
+\end{enumerate}
+
+\section{Falsifier and no-overclaim boundary}
+The claim is falsified by a non-trace-class covariance in the declared
+three-dimensional positive-mass $q^4$ scope; failure of (2.5), (3.1), or the
+uniform partition bounds; a failure of $L^1$ weight convergence; two Galerkin
+subsequences with different weak limits; a declared smeared cylinder
+correlation that does not converge; or failure of the 31-assertion verifier.
+
+This result does not construct the full three-complex-component derivative
+Class-II Gibbs measure.  It also excludes $\eta_{\rm shell}\ne0$, zero or
+negative shell mass, infinite volume, phase transition, a genuine finite-
+difference Route B limit, BCC existence or selection, and the future P5
+Sector-A synthesis.  Independent operator execution is required before the
+separate T6 conditional-theorem review.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+Precise statement:       The full sharp spectral Galerkin Gibbs sequence
+                         converges weakly on L2; common-Gaussian lifted
+                         densities converge in L1/total variation.
+Scope:                   T5 CLOSED@FINITE-VOLUME-REAL-SCALAR-SPECTRAL;
+                         T3 with periods 16, m_sh^2>0, Y>0, q0>=0,
+                         lambda real, gamma>0, beta=1.
+Dependencies:            A1-SCALAR-ANALYTIC-BRANCH;
+                         hypotheses A1-SHELL-POSITIVITY and
+                         A2-H2-SEXTIC-COERCIVITY.
+Evidence grade:          ANALYTIC + EXACT + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a4_scalar_constructive_measure_verify.py
+Expected output:         primary 17/17; independent 14/14; ASSERTS 31/31;
+                         A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS.
+Falsification gate:      Failed trace/L6/stability/partition/full-sequence/
+                         correlation argument, audit, or source hash.
+Tier before / after:     T3 / T5, justified as a one-shot textbook argument
+                         plus two independent executable reconstructions.
+No-overclaim statement:  Not full derivative Class-II, infinite volume,
+                         phase transition, Route B, BCC, T6/T7, or P5.
+Next required action:    Independent operator execution, then scoped T6
+                         review; full Class-II remains a separate project.
+\end{verbatim}

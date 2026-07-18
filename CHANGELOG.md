@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [P4 scalar spectral constructive measure closed at pinned T5 scope] - 2026-07-18
+
+Constructed the finite-volume real-scalar Gibbs measure for the positive-mass q4 Brazovskii covariance. The proof uses a direct Gaussian L6 tail, the exact quartic-sextic lower bound, Jensen partition bounds, common-Gaussian L1 density convergence, full-sequence weak convergence, and smeared cylinder-polynomial correlation convergence. Primary 17/17, non-importing independent 14/14, and integrated 31/31 audits pass. The visually checked five-page PDF has zero overfull boxes. Full derivative Class-II, unsmeared composites, infinite volume, phase transition, Route B, BCC, T6/T7, and P5 are excluded; independent operator execution is required before scoped T6 review.
+
 ## [Repair and re-enact A3 full-production discretization T6] - 2026-07-17
 
 
