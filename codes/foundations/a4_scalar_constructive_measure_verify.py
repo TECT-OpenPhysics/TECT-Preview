@@ -168,7 +168,7 @@ def main() -> int:
         "assertion_summary": {"passed": assertion_passed, "total": assertion_total},
         "environment": {"python": sys.version.split()[0], "platform": platform.platform()},
         "failures": failures,
-        "promotion_boundary": "internal proof candidate only; independent operator execution is required before scoped tier review",
+        "promotion_boundary": "T5 internal reproduction complete; independent operator execution is required before the scoped T6 review",
         "not_closed_here": manifest["honesty_boundary"]["excluded"],
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
