@@ -5,7 +5,7 @@
 
 Generated: 2026-07-18
 
-**39 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 3 · T5: 7 · T6: 13 · T7: 3 · T7-candidates: 3 · refuted: 1
+**39 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 3 · T5: 6 · T6: 14 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -25,7 +25,7 @@ reproduction commands, and history live on the claim cards.
 | [A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM](claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/claim.md) | Full-production spectral discretization to continuum PDE | T6 | ACTIVE | ANALYTIC, EXECUTED, CONDITIONAL | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — |
 | [A3-PERTURBATIVE-CONTINUUM-CORRELATORS](claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/claim.md) | Cutoff-independent continuum limit of the perturbative correlators (conditional) | T6 | ACTIVE | ANALYTIC, ESTIMATOR | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
 | [A3-UV-SUPERRENORMALISABILITY](claims/A3-UV-SUPERRENORMALISABILITY/claim.md) | UV super-renormalisability of the scalar Brazovskii functional | T6 | ACTIVE | ANALYTIC, EXECUTED | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — |
-| [A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE](claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/claim.md) | Finite-volume scalar spectral constructive Gibbs measure | T5 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
+| [A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE](claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/claim.md) | Finite-volume scalar spectral constructive Gibbs measure | T6 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
 
 ## Sector B — Vacuum / Reading Selection
 

@@ -21,7 +21,8 @@ identification of the full cutoff sequence, not only an unnamed subsequence;
 must distinguish the scalar local interaction from the derivative Class-II
 functional, whose constructive definition is a separate target.
 
-**Status:** CLOSED@T5-FINITE-VOLUME-REAL-SCALAR-SPECTRAL (2026-07-18).
+**Status:** CLOSED@T6-CONDITIONAL-THEOREM-FINITE-VOLUME-REAL-SCALAR-SPECTRAL
+(2026-07-18).
 The self-contained v1.0 proof closes trace class, the direct Gaussian `L6`
 interaction construction, the exact quartic-sextic stability bound, uniform
 partition normalization, full-sequence weak convergence, lifted-density
@@ -29,8 +30,10 @@ total-variation convergence, and smeared cylinder-polynomial correlations.
 The primary audit passes 17/17, the non-importing reconstruction passes 14/14,
 and fresh integrated re-execution passes 31/31.  Full derivative Class-II,
 unsmeared composite operators, infinite volume, phase transition, Route B,
-BCC, T6/T7, and P5 remain outside this closed gate.  Independent operator
-execution is required before the separate scoped T6 review.
+BCC, T7, and P5 remain outside this closed gate.  The pre-registered operator
+gate is discharged by Jusang Lee's separate 31/31 PASS artifact from clean
+commit `7eee2fe84887cc4ccdd311c75095ec84bc9d0d45`; all source and audit rows pass
+and the T6 enactment addendum records the conditional-theorem review.
 
 ## A3 full-production discretization gate
 

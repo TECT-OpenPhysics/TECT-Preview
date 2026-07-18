@@ -2,7 +2,7 @@
   "schema": "tect/a4-scalar-spectral-constructive-measure/1.0",
   "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
   "frozen_on": "2026-07-18",
-  "status": "T5 CLOSED@FINITE-VOLUME-REAL-SCALAR-SPECTRAL after internal dual audit; independent operator execution remains required before T6 review",
+  "status": "T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL after independent operator reproduction",
   "authority": {
     "scalar_kernel_anchor": {
       "path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json",
@@ -88,6 +88,15 @@
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-integrated-constructive-measure/result.json",
         "sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c"
       },
+      "independent_operator": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json",
+        "sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c",
+        "reviewer": "Jusang Lee",
+        "source_commit": "7eee2fe84887cc4ccdd311c75095ec84bc9d0d45",
+        "recorded_on": "2026-07-18",
+        "verdict": "A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS",
+        "assertions": "31/31"
+      },
       "proof_source": {
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.tex.txt",
         "sha256": "c3604aa5029e80c811fd11480b861fe1256a3a4fa16869a32307d03992f8f4f6"
@@ -95,9 +104,17 @@
       "proof_pdf": {
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.pdf",
         "sha256": "847112ccc304731cb29dd09a097c841dea966971b7f74e06f50f224a72918724"
+      },
+      "t6_enactment_source": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-t6-enactment-260718-v1.0.tex.txt",
+        "sha256": "35bc2a9497609eb44c950b24cee7c476cd7170c76465fcf15c414b3a924a1cd7"
+      },
+      "t6_enactment_pdf": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-t6-enactment-260718-v1.0.pdf",
+        "sha256": "3ec4ab11e11ae372120c05291f59de76773cc6c4277b7aa436adeb94df4f7421"
       }
     },
-    "promotion_boundary": "T5 pinned scalar closure only; operator-side fresh execution is pre-registered for the later scoped T6 review"
+    "promotion_boundary": "T6 conditional theorem enacted after independent operator reproduction; T7 and all excluded scopes remain prohibited"
   },
   "honesty_boundary": {
     "closed_target": [

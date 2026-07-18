@@ -1,6 +1,6 @@
 # A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE -- finite-volume constructive measure
 
-**Tier**: T5 CLOSED@FINITE-VOLUME-REAL-SCALAR-SPECTRAL (TSv2) |
+**Tier**: T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL (TSv2) |
 **Lifecycle**: ACTIVE |
 **Last review**: 2026-07-18
 
@@ -60,7 +60,7 @@ requires a separate divergence/renormalisation analysis and is excluded here.
 - Soft anchors: `A1-PRODUCTION-KERNEL-MANIFEST`,
   `A1-PRODUCTION-FUNCTIONAL-REALISATION`, and
   `A3-PERTURBATIVE-CONTINUUM-CORRELATORS`.
-- Closed gate: `A4-CONSTRUCTIVE-MEASURE-CLOSURE` at the pinned T5 scalar scope.
+- Closed gate: `A4-CONSTRUCTIVE-MEASURE-CLOSURE` at the scoped T6 conditional-theorem boundary.
 
 ## Devil's-advocate record
 
@@ -86,6 +86,11 @@ requires a separate divergence/renormalisation analysis and is excluded here.
 7. **"A finite-volume Gibbs measure proves a phase transition or BCC
    selection."** UPHELD as false.  Both require additional limits or
    selection arguments and are excluded.
+8. **"The matching internal and operator artifact hashes defeat execution
+   independence."** DISMISSED.  The verifier is deterministic; the separate
+   operator-created path, clean source commit, filesystem event, and fresh
+   subprocess return codes establish execution provenance, while the
+   non-importing reconstruction supplies algorithmic diversity.
 
 ## Quantitative sanity checks
 
@@ -104,10 +109,17 @@ requires a separate divergence/renormalisation analysis and is excluded here.
 
 The T3-to-T5 transition uses the tier-system exception for a one-shot
 textbook argument.  The proof is self-contained, the package has two
-non-importing executable reconstructions, all 31 integrated assertions pass,
+executable routes including one non-importing reconstruction, all 31 integrated assertions pass,
 and the visually checked PDF has no overfull boxes.  T6 is deliberately not
-claimed: independent operator execution was pre-registered before that
-review.
+claimed by that earlier record.
+
+The pre-registered T5-to-T6 gate is now discharged.  Jusang Lee reran the
+one-command verifier from clean commit
+`7eee2fe84887cc4ccdd311c75095ec84bc9d0d45` and wrote the separate immutable
+artifact `runs/2026-07-18-jusang-independent/result.json`.  It passes 31/31
+with zero failures, zero bad source rows, and zero bad audit rows.  The
+three-page T6 enactment addendum records the independent execution and the
+conditional-theorem tier review.  T7 remains prohibited.
 
 ## Reproduction
 
@@ -126,15 +138,24 @@ ASSERTS: 31/31
 A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS
 ```
 
+Independent operator evidence is frozen at:
+
+```text
+claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/
+2026-07-18-jusang-independent/result.json
+SHA-256 fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c
+```
+
 ## No-overclaim
 
-This T5 pinned scalar closure does not cover the full three-component
+This T6 conditional scalar theorem does not cover the full three-component
 derivative Class-II functional, unsmeared composite operators, infinite
 volume, phase transition, finite-difference Route B, BCC existence or
-selection, T6/T7, or the future P5 Sector-A synthesis.
+selection, T7, or the future P5 Sector-A synthesis.
 
 ## Next required action
 
-Run the one-command verifier independently from a normal operator checkout
-and preserve that output in a new operator-evidence run directory.  Then
-perform the separately recorded scoped T6 conditional-theorem review.
+Build the separate P5 Sector-A synthesis and reproduction package.  It must
+link the frozen definitions, P1 variational realization, P2 well-posedness,
+P3 spectral convergence, perturbative control, and this scoped constructive
+theorem without importing BCC or any excluded A4 scope.

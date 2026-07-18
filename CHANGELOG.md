@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [P4 scalar constructive measure promoted to scoped T6] - 2026-07-18
+
+Jusang Lee independently reran the hash-bound one-command verifier from clean commit 7eee2fe84887cc4ccdd311c75095ec84bc9d0d45 and recorded a separate 31/31 PASS artifact with zero failures, zero bad source rows, and zero bad audit rows. Enact T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL under A1-SHELL-POSITIVITY and A2-H2-SEXTIC-COERCIVITY. Add a visually checked three-page T6 enactment PDF. Full derivative Class-II, unsmeared composites, infinite volume, phase transition, Route B, BCC, T7, and P5 remain excluded; P5 synthesis is next.
+
 ## [P4 integrated evidence boundary aligned with T5 status] - 2026-07-18
 
 Corrected the integrated verifier's inherited scaffold-era promotion-boundary text. The artifact now states that T5 internal reproduction is complete and only the scoped T6 review awaits independent operator execution. Source and evidence hashes were refreshed; primary 17/17, independent 14/14, and integrated 31/31 remain unchanged.

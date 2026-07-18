@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 35
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 36
 
 ## Next up
 
@@ -112,4 +112,7 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 35
   - _updated 2026-07-17_
 - **T-038** P4: close finite-volume real-scalar spectral constructive Gibbs measure  _(claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE; gate: A4-CONSTRUCTIVE-MEASURE-CLOSURE)_
   - Trace class, L6 interaction, partition bounds, full-sequence limit, dual audit, and proof PDF.
+  - _updated 2026-07-18_
+- **T-039** P4: enact scoped T6 after independent operator reproduction  _(claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE; gate: A4-CONSTRUCTIVE-MEASURE-CLOSURE)_
+  - Bind Jusang operator evidence, issue T6 enactment addendum, and preserve scalar-only exclusions.
   - _updated 2026-07-18_

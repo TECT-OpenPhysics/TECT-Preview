@@ -1,0 +1,176 @@
+% =============================================================================
+% Title: A4 scalar constructive measure: scoped T6 enactment
+% Claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+% Version: v1.0 -- first issued 2026-07-18; this version issued 2026-07-18
+% Status: T6 CONDITIONAL-THEOREM after independent operator reproduction
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This addendum records the tier review and independent operator reproduction for
+the theorem proved in
+\texttt{a4-scalar-spectral-constructive-measure-260718-v1.0}.  It does not
+replace or shorten that proof.  Its only mathematical action is to enact the
+pre-registered T5-to-T6 transition after a fresh operator-side execution.
+
+The theorem remains the finite-volume real-scalar statement on the fixed
+three-torus with sharp max-norm spectral projectors:
+\[
+ K(k)=m_{\rm sh}^2+Y(|k|^2-q_0^2)^2,
+ \qquad
+ V(\phi)=\int_{\mathbb T^3}
+ \left(\frac{\lambda}{4}\phi^4+
+       \frac{\gamma}{6}\phi^6\right)dx.                   \tag{1.1}
+\]
+The named hypotheses are
+\[
+ \begin{split}
+ \texttt{A1-SHELL-POSITIVITY}:&\quad m_{\rm sh}^2>0,
+        \quad Y>0,\quad q_0\geq0,\\
+ \texttt{A2-H2-SEXTIC-COERCIVITY}:&\quad
+        \lambda\in\mathbb R,\quad\gamma>0.
+ \end{split}                                                \tag{1.2}
+\]
+The hard dependency \texttt{A1-SCALAR-ANALYTIC-BRANCH} is already T6.  The
+other production manifests remain soft anchors and are not silently promoted
+to theorem inputs.
+
+Under (1.2), the full Galerkin sequence converges weakly on real $L^2$ to the
+finite-volume Gibbs measure.  The common-Gaussian lifted densities converge in
+$L^1$ and total variation, and finite-degree smeared cylinder-polynomial
+correlations converge.  The proof uses the trace-class $q^{-4}$ covariance,
+the direct Gaussian $L^6$ tail, the exact quartic-sextic lower bound, uniform
+partition bounds, and common-space density convergence.
+
+\section{Independent operator reproduction}
+Jusang Lee executed the one-command verifier from the clean checkout at
+commit
+\begin{verbatim}
+7eee2fe84887cc4ccdd311c75095ec84bc9d0d45
+\end{verbatim}
+and wrote a separate immutable result at
+\begin{verbatim}
+claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/
+2026-07-18-jusang-independent/result.json
+\end{verbatim}
+The artefact SHA-256 is
+\begin{verbatim}
+fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c
+\end{verbatim}
+and records Python 3.12.10 on Windows 11.  It reports
+\begin{verbatim}
+PASS: primary (17/17)
+PASS: independent (14/14)
+ASSERTS: 31/31
+A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS
+\end{verbatim}
+with zero failures, zero failed source-hash rows, zero failed audit rows, and
+return code zero for both executable routes.
+
+The operator artefact has the same content hash as the accepted internal
+integrated result.  This equality is expected for a deterministic verifier and
+is not used as the evidence of execution independence.  Independence is
+recorded by the separate operator-created path and filesystem event, the clean
+source commit, and the fresh subprocess return codes.  Algorithmic diversity
+is supplied separately by the non-importing scalar-loop reconstruction, which
+does not import the vectorized primary audit.
+
+\section{Tier decision}
+The T6 requirements are now met:
+\begin{enumerate}
+\item The v1.0 note is a self-contained analytic proof under the two named
+hypotheses in (1.2).
+\item The primary audit derives the trace, stability, partition, and Gaussian
+tail bounds and passes 17/17.
+\item A non-importing implementation independently reconstructs the shell
+count, scalar Fourier traces, potential minimum, Gaussian moments, and
+partition bounds and passes 14/14.
+\item The integrated verifier hash-binds all three sources and passes 31/31 in
+both the internal and operator-side executions.
+\item The claim card, manifest, proof PDF, evidence JSONs, falsifier, and
+no-overclaim boundary form an available one-command reproduction package.
+\end{enumerate}
+Therefore the claim is enacted as
+\[
+ \boxed{\text{T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL}}.
+                                                                    \tag{3.1}
+\]
+This is a T5-to-T6 promotion, not a T7 claim.  T7 is prohibited because the
+result is deliberately conditional and scoped, has no public standalone
+reproduction bundle, and does not cover the full physical-domain functional.
+
+\section{Quantitative sanity record}
+The independent scalar-loop covariance trace agrees with the primary
+vectorized trace to at most $1.32\times10^{-16}$ relative error at cutoff 8.
+The production-local shell mass reconstructs as
+$0.260000000009475$, agreeing with the stored $0.26$ within the declared
+source precision.  Conservative full covariance-trace upper bounds are
+$3029.399163006103$ and $596.857766699839$ for the two audit anchors.  The
+exact pinned-coefficient stability constant is
+$0.0025246087994716246$ per unit volume.  These are derived reproduction
+checks, not physical predictions.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{Identical internal and operator JSON hashes prove that the
+operator file was copied.} \textbf{DISMISSED.}  The verifier is deterministic;
+the independent path, creation event, clean source commit, and fresh subprocess
+return codes record the separate execution.
+\item \textbf{Operator reproduction merely repeats one implementation.}
+\textbf{VALID-with-mitigation.}  The one command launches both the vectorized
+primary route and a non-importing scalar-loop reconstruction.  External
+mathematical peer review remains desirable but is not mislabeled as completed.
+\item \textbf{The T6 claim inherits a sub-T6 hard dependency.}
+\textbf{DISMISSED.}  The sole hard dependency is T6; the positivity and
+coercivity inputs are explicit named hypotheses, and production manifests are
+soft anchors only.
+\item \textbf{Scalar T6 closes the derivative three-component Class-II
+measure.} \textbf{UPHELD as false.}  Rough Gaussian samples do not
+automatically define derivative-current squares; that extension is excluded.
+\item \textbf{Finite-volume regulator removal proves a phase transition.}
+\textbf{UPHELD as false.}  No thermodynamic limit or spontaneous symmetry
+breaking is proved.
+\item \textbf{This promotion closes Sector A or BCC selection.}
+\textbf{UPHELD as false.}  P5 synthesis remains a separate package and BCC
+existence or selection remains explicitly outside it.
+\end{enumerate}
+
+\section{Falsifier and next boundary}
+The T6 status is revoked if the source or evidence hashes drift; either route
+fails; the trace, Gaussian $L^6$, stability, Jensen, density-convergence, or
+correlation argument admits a counterexample in the declared scope; or the
+operator artefact is shown not to be a fresh execution.  Such a finding
+reopens \texttt{A4-CONSTRUCTIVE-MEASURE-CLOSURE}.
+
+The next Sector-A action is P5 synthesis.  P5 may cite this theorem only at its
+finite-volume real-scalar spectral scope.  It must not silently extend it to
+the derivative Class-II measure, unsmeared composite operators, infinite
+volume, phase transition, finite-difference Route B, or BCC existence and
+selection.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+Precise statement:       Full spectral Galerkin Gibbs sequence converges
+                         weakly on L2; lifted densities converge in L1/TV;
+                         smeared cylinder-polynomial correlations converge.
+Scope:                   T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-
+                         SPECTRAL; periods 16, m_sh^2>0, Y>0, q0>=0,
+                         lambda real, gamma>0, beta=1.
+Dependencies:            A1-SCALAR-ANALYTIC-BRANCH; named hypotheses
+                         A1-SHELL-POSITIVITY and A2-H2-SEXTIC-COERCIVITY.
+Evidence grade:          ANALYTIC + EXACT + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a4_scalar_constructive_measure_verify.py
+Expected output:         primary 17/17; independent 14/14; ASSERTS 31/31;
+                         A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS.
+Operator evidence:       2026-07-18-jusang-independent/result.json;
+                         SHA-256 fb2d81ba75d95972e55c675146fbf84c...
+Falsification gate:      Failed proof step, route, source/evidence hash, or
+                         operator-execution provenance.
+Tier before / after:     T5 / T6 after independent operator reproduction.
+No-overclaim statement:  Not derivative Class-II, unsmeared composites,
+                         infinite volume, phase transition, Route B, BCC,
+                         T7, or P5 synthesis.
+Next required action:    Build the separate P5 Sector-A synthesis and
+                         reproduction bundle with these exclusions intact.
+\end{verbatim}
