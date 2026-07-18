@@ -1,6 +1,6 @@
 # A3-PERTURBATIVE-CONTINUUM-CORRELATORS -- spectral perturbative continuum limit
 
-**Tier**: T6 PROVED CONDITIONAL (TSv2) | **Lifecycle**: ACTIVE | **Last review**: 2026-06-23
+**Tier**: T6 PROVED CONDITIONAL (TSv2) | **Lifecycle**: ACTIVE | **Last review**: 2026-07-19
 
 ## Statement
 
@@ -32,7 +32,7 @@ Grades: ANALYTIC, ESTIMATOR.
 - `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-graphwise-convergence-lemma-260623-260623-v1.4.tex.txt`
 - `codes/foundations/a3_graphwise_convergence_checks.py` -- 8/8 self-tests
 - `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json`
-- `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/`
+- `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/` -- PUBLISHED, 6/6 + 8/8, digest `6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c`
 
 ## Falsifier
 
@@ -69,6 +69,10 @@ or constructive measure result.
   within the spectral/Galerkin scope after the measure-stability hypothesis was
   made explicit.
 - 2026-07-17: P0 record alignment; corrected stale T6-pending and 7/7 wording.
+- 2026-07-19: replaced the integrity-defective historical shared bundle as this
+  claim's publication support with a clean claim-level T6 bundle around the
+  already operator-approved A3 consolidation; all 11 hashes and the content
+  digest were independently recomputed.
 
 ## Next required action
 

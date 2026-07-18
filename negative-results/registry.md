@@ -20,6 +20,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | [R-2026-07-16-N001-BCC-SEED-COLLAPSE](#r-2026-07-16-n001-bcc-seed-collapse) | N-001 q1a BCC-seed sweep | stored fields do not retain q0-shell BCC modulation |
 | [AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND](#audit-2026-07-17-a3-galerkin-ball-underbound) | A3 full-production discretization T6 v2.1 | continuum H2 ball reused for exact-Galerkin trajectory without proof |
+| [AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY](#audit-2026-07-19-a3-shared-bundle-integrity) | A3 shared renormalisation bundle | stale MANIFEST listed two absent notes and a mismatched README hash |
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention
@@ -212,3 +213,12 @@ using these stored fields as BCC evidence. The observed three-grid branch is
 recorded separately as a homogeneous-condensate experimental result. Before a
 new BCC sweep, evaluate q0/BCC-star projected curvature about the homogeneous
 branch.
+
+<a id="audit-2026-07-19-a3-shared-bundle-integrity"></a>
+### AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY -- stale historical A3 shared bundle manifest
+
+**Failure mode:** `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and `.pdf`, but those files were absent from the bundle, and the checked-out `README.md` hash did not match the listed hash. The claimed historical content digest therefore could not be reproduced from that directory.
+
+**Evidence:** direct enumeration and SHA-256 audit on 2026-07-19. The mathematical entry note v1.1 and both entry scripts remained present; this is a packaging-integrity failure, not a theorem refutation.
+
+**Consequence:** the 260623 directory is retained only as defective historical provenance and is not used as current A3 perturbative publication support. A clean claim-level replacement, `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719`, was rebuilt from the already operator-approved v1.1 consolidation. Both entry scripts pass (6/6 and 8/8), all 11 listed file hashes match, and bundle digest `6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c` recomputes exactly.

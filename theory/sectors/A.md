@@ -38,6 +38,7 @@ _None linked to this sector._
 |---|---|---|
 | NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
+| AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |
 
 ---
 

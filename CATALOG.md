@@ -4,9 +4,9 @@
 <!-- DO NOT HAND-EDIT. Derived index — sources of truth are the files,
      claims/*/status.json, and git history. Regenerate at will. -->
 
-Generated: 2026-07-18
+Generated: 2026-07-19
 
-**1587 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1599 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -172,8 +172,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/discretization_manifest.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `ba6cd2ba056c` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `5f156750c2b7` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/LINEAGE.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `80b057b63466` |
-| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/claim.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `c07e204a240d` |
-| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `b61a2cd4bfb8` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/MANIFEST.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `2e2c1ae2f78d` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/README.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `4ec1cbd7e20a` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/codes/foundations/a3_graphwise_convergence_checks.py` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.1.0 | ACTIVE | `295b72b2ed25` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/codes/foundations/a3_renormalisation_checks.py` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.0.0 | ACTIVE | `d41b7bb1db59` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/environment.txt` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `adaa6d78c7c8` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/expected/a3_graphwise_convergence_checks.log` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `cea3a35cbc91` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/expected/a3_renormalisation_checks.log` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `c04a0f94c792` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/requirements.txt` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `457e45615e94` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/claim.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `6206e6e875af` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `d5a13ff83510` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/LINEAGE.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `9cd298ff6a76` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `288f3b8115b3` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/README.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `d6f2ff72512f` |
@@ -523,6 +531,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.1.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.1 | ACTIVE | `e13fe6e24854` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.2.pdf` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.2 | ACTIVE | `a9d42830e5ac` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/notes/a3-full-production-discretization-continuum-260717-v2.2.tex.txt` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | 2026-07-17 | 2026-07-17 | v2.2 | ACTIVE | `28e29f3c9877` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-consolidation-260623-260623-v1.1.pdf` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `f7742a04b962` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-consolidation-260623-260623-v1.1.tex.txt` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `1931e6a53064` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-continuum-correlators-program-260623-260623-v1.0.pdf` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.0 | ACTIVE | `f769faf1abce` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-continuum-correlators-program-260623-260623-v1.0.tex.txt` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.0 | SUPERSEDED | `5ce8e66da50c` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/notes/a3-graphwise-convergence-lemma-260623-260623-v1.1.pdf` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `7104de65857f` |
@@ -1207,6 +1217,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-quantitative-majorant/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `08a81db4cbf4` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-solution-ball-bound/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `9d523514967d` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/runs/2026-07-17-spatial-consistency/result.json` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `cda67efa654a` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `7857dd6c1581` |
+| `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/claims/A3-UV-SUPERRENORMALISABILITY/runs/a3_renormalisation_checks.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `dba16cebf975` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `60f9ea6d8738` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `60f9ea6d8738` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/claims/A3-UV-SUPERRENORMALISABILITY/runs/a3_renormalisation_checks.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `229272ae341b` |
@@ -1550,7 +1562,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `archive/MIGRATION-LEDGER.md` | — | — | — | — | ACTIVE | `0db7e2d97d8e` |
-| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `6ab013da3351` |
+| `archive/legacy/BY-CLAIM.md` | — | — | — | — | ACTIVE | `6f8f4f7e8d62` |
 | `archive/legacy/INDEX.md` | — | — | — | — | ACTIVE | `17772b1c414e` |
 | `claims/A1-KERNEL-IDENTITY/INDEX.md` | A1-KERNEL-IDENTITY | — | — | — | ACTIVE | `282467f832e4` |
 | `claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md` | A1-PRODUCTION-FUNCTIONAL-REALISATION | — | — | — | ACTIVE | `1ae9cb0e336a` |
@@ -1570,7 +1582,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
 | `claims/GATES.md` | — | — | — | — | ACTIVE | `19e86b054563` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `f55440cb3b0a` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `073706789293` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `ad82421eee72` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `310cff638379` |
@@ -1601,12 +1613,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `d11f7c68b90e` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `b2eecd41537a` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `57a682b33984` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `0f95eb6a13ee` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `999751b7aeb5` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `3ca8defafec4` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `d34556ea715f` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
@@ -1620,7 +1632,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `5f0cd1ab42b8` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `e670ddf2d3f2` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1658,14 +1670,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
-| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `9300a4367a74` |
+| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `4e7223ef126b` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `e804c326a0a9` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `3ed6aa6a1686` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Replace defective historical A3 shared bundle with clean claim-level T6 support package] - 2026-07-19
+
+A direct SHA-256 audit found that the historical shared A3 260623 package had a stale MANIFEST: two listed v1.0 note files were absent and README did not match its listed hash. The theorem is not refuted. A clean claim-level PUBLISHED support bundle was rebuilt around the already operator-approved consolidation v1.1. Both entry scripts pass (6/6 and 8/8), all 11 listed hashes match, and digest 6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c recomputes exactly. The defective directory is retained only as historical provenance; the replacement is registered in the A3 card, result ledger, and Sector-A main proof line.
+
 ## [P5 branch-aware Sector-A synthesis prepared for operator review] - 2026-07-18
 
 Registered A5 as a T4 referee candidate with a frozen branch-aware manifest. The full-production P1-to-P2-to-P3 chain and the separate scalar perturbative/constructive chain are content-addressed without equating the 0.005 and 0.260000000009475 shell-mass anchors or claiming a full derivative Class-II constructive measure. Fresh primary and non-importing independent audits pass 16/16 each; the integrated verifier passes 32/32 with PASS@BRANCH-AWARE-DECLARED-SCOPE. The six-page v1.0 referee PDF passes the standard form check, has zero overfull boxes, and was visually inspected. The operator-confirmation gate remains open; under the no-auto-PUBLISHED rule no A5 bundle exists before explicit review confirmation.

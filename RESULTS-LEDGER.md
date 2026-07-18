@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-045](#r-045) | Scalar spectral perturbative continuum limit | T6 PROVED CONDITIONAL; every connected scalar Brazovskii amplitude converges order-by-order for fixed external momenta under the spectral/Galerkin regulator; clean PUBLISHED support bundle 6/6 + 8/8 |
 | [R-044](#r-044) | Full-production three-component gradient-flow well-posedness on the fixed torus | T6 CONDITIONAL-THEOREM; global H2 existence/uniqueness, continuous dependence, exact energy identity, and positive-time C-infinity smoothing; 61/61 aggregate audit |
 | [R-043](#r-043) | T-030 CONDITIONAL consolidation: lattice R^eps-loss closed conditionally on R-026 (proof appended); B5 closure = Lemma2+LemmaA (T'<=10 => 11N^2), independent of R-026 & cover-number L; N^2 polylog & E_2/S^2 OPEN (Bourgain-Demeter); treadmill terminated | CONDITIONAL CONSOLIDATION (not a proof certificate); B5 T7-SCOPE_adm unaffected; dr2_t030_consolidation_crosscheck.py 4/4 |
 | [R-042](#r-042) | Height-energy bound E_+<=N^2+2 sum nu_k nu_l p(z_k+z_l) + sum-annulus mechanism (disjoint=>T=0); R-033 step 2 | PARTIAL; height additive energy E_h is the parameter; 4-circle incidence core OPEN; T-030 OPEN; dr2_t030_height_energy.py 5/5 |
@@ -63,6 +64,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-045"></a>
+### R-045 -- scalar spectral perturbative continuum limit
+
+**Statement (one line):** In the scalar `d=3` Brazovskii theory with `Y>0`, positive shell mass, and `gamma>0`, every connected perturbative amplitude converges for each fixed external momentum when the sharp spectral/Galerkin cutoff is removed; the proof combines pointwise convergence, an `a`-uniform `q^-4` majorant, and Weinberg integrability for every subgraph.
+
+**Proven in:** `A3-PERTURBATIVE-CONTINUUM-CORRELATORS`, A3 consolidation v1.1 and graphwise-convergence lemma v1.4; PUBLISHED bundle `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719`.
+
+**Reuse scope:** Scalar perturbative continuum control for Sector A and other finite-volume `q^4` Brazovskii models using the spectral regulator. It does not establish resummation, a non-perturbative Gibbs limit, a genuine finite-difference lattice limit, full Class-II control, or uniformity in external momenta.
+
+**Tier:** T6 PROVED CONDITIONAL. The two entry scripts pass 6/6 and 8/8; all 11 bundle file hashes and digest `6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c` verify. Operator approval of the underlying theorem and integrated consolidation was recorded 2026-06-23; the clean claim-level package was integrity-audited 2026-07-19.
+
+**Publication target:** Sector-A scalar perturbative continuum theorem. Genuine finite-difference Route B and constructive/full-production extensions remain separate targets.
 
 <a id="r-044"></a>
 ### R-044 -- full-production three-component gradient-flow well-posedness
