@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-18.
+exist here. Last updated: 2026-07-19.
 
 ## A5 Sector-A synthesis gate
 
@@ -18,11 +18,13 @@ the note PDF must pass the form and visual checks.  Under the no-auto-PUBLISHED
 rule, explicit operator confirmation is required before T5 promotion and the
 claim-level PUBLISHED reproduction bundle.
 
-**Status:** OPEN@T4-REFEREE-CANDIDATE (2026-07-18).  The frozen manifest and
-direct one-command verifier pass `16/16 + 16/16 = 32/32` with termination
-verdict `PASS@BRANCH-AWARE-DECLARED-SCOPE`.  Packaging and promotion remain
-blocked only on review of the v1.0 integrated referee package and explicit
-operator confirmation; no pre-confirmation bundle exists.
+**Status:** CLOSED@T5-BRANCH-AWARE-SECTOR-A-SYNTHESIS (2026-07-19).  Jusang
+Lee independently ran the integrated `16/16 + 16/16 = 32/32` verifier and
+explicitly approved the v1.0 referee package.  The T5 synthesis tier is enacted.
+The separate A5 capstone PUBLISHED bundle is deferred under dependency-first
+policy until the exact A4 v2.0 package is operator-confirmed and its T6 support
+bundle is PUBLISHED; this packaging prerequisite does not reopen this review
+gate or enlarge the T5 theorem scope.
 
 ## A4 scalar constructive-measure gate
 

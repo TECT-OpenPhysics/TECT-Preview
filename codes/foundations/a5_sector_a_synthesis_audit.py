@@ -18,15 +18,15 @@ import sys
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-18"
-__version_issued__ = "2026-07-18"
+__version_issued__ = "2026-07-19"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
 
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "sector_a_synthesis_manifest.json"
-DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-18-primary-synthesis-audit" / "result.json"
+DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-19-t5-primary-preflight" / "result.json"
 
 
 def sha256(path: Path) -> str:
@@ -63,9 +63,10 @@ def main() -> int:
     )
     check(
         "manifest_schema_and_review_gate_are_frozen",
-        manifest.get("schema") == "tect/a5-sector-a-synthesis/1.0"
+        manifest.get("schema") == "tect/a5-sector-a-synthesis/1.1"
         and manifest.get("claim_id") == __claims__[0]
-        and manifest["review_gate"]["id"] == "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION",
+        and manifest["review_gate"]["id"] == "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION"
+        and manifest["review_gate"]["status"] == "CLOSED",
         {"schema": manifest.get("schema"), "review_gate": manifest.get("review_gate")},
         assertions,
     )
@@ -282,11 +283,19 @@ def main() -> int:
         manifest["termination_verdict"],
         assertions,
     )
+    a4_component = next(row for row in manifest["components"] if row["id"] == "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE")
+    a4_preflight_ok = (
+        sha256(REPO / a4_component["publication_preflight_path"]) == a4_component["publication_preflight_sha256"]
+        and sha256(REPO / a4_component["referee_package_candidate"]) == a4_component["referee_package_candidate_sha256"]
+    )
     check(
-        "operator_confirmation_gate_remains_open_before_published_bundle",
-        manifest["review_gate"]["status"] == "OPEN"
-        and manifest["review_gate"]["required_before"] == "T5 promotion and PUBLISHED reproduction bundle",
-        manifest["review_gate"],
+        "operator_confirmation_is_recorded_and_a4_publication_prerequisite_is_explicit",
+        manifest["review_gate"]["status"] == "CLOSED"
+        and manifest["review_gate"]["confirmed_on"] == "2026-07-19"
+        and manifest["publication_prerequisites"][0]["claim_id"] == "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        and manifest["publication_prerequisites"][0]["status"] == "PENDING-OPERATOR-CONFIRMATION"
+        and a4_preflight_ok,
+        {"review_gate": manifest["review_gate"], "publication_prerequisites": manifest["publication_prerequisites"], "a4_candidate_hashes_ok": a4_preflight_ok},
         assertions,
     )
 

@@ -18,15 +18,15 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-18"
-__version_issued__ = "2026-07-18"
+__version_issued__ = "2026-07-19"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
 
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "sector_a_synthesis_manifest.json"
-DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-18-integrated-synthesis" / "result.json"
+DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-19-t5-integrated-preflight" / "result.json"
 
 
 def sha256(path: Path) -> str:
@@ -175,7 +175,7 @@ def main() -> int:
         "assertion_summary": {"passed": assertion_passed, "total": assertion_total},
         "environment": {"python": sys.version.split()[0], "platform": platform.platform()},
         "failures": failures,
-        "promotion_boundary": "T4 referee candidate only; operator confirmation is required before T5 and a PUBLISHED reproduction bundle",
+        "promotion_boundary": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS after operator confirmation; capstone PUBLISHED packaging remains deferred until the A4 support bundle is PUBLISHED",
         "not_closed_here": manifest["honesty_boundary"],
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Enact operator-confirmed A5 branch-aware synthesis at scoped T5 and refresh dependency pins] - 2026-07-19
+
+Jusang Lee independently ran the A5 32/32 CLI and explicitly approved the v1.0 referee package, closing A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION and enacting T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. Administrative v1.1 preserves the proposition, 0.005 versus 0.260000000009475 mass fork, and full-Class-II non-implication while refreshing all A3/A4 pins. The current audits again pass primary 16/16 plus non-importing independent 16/16, integrated 32/32, with PASS@BRANCH-AWARE-DECLARED-SCOPE; five PUBLISHED support bundles verify. FORM-CHECK and six-page visual QA pass. The claim-level A5 PUBLISHED bundle is deliberately not built: dependency-first policy requires operator confirmation and PUBLISHED bundling of the exact A4 v2.0 support package first.
+
 ## [Prepare integrated A4 T6 referee package and repair verifier tier-boundary drift] - 2026-07-19
 
 Publication preflight found that verifier v1.0.0 still emitted its pre-promotion T5-to-T6 boundary after the scoped T6 theorem had been enacted. The calculation was unaffected. Verifier v1.1.0 changes only that status sentence and fresh primary 17/17 plus non-importing independent 14/14 execution passes 31/31; preflight SHA-256 is bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667. A self-contained six-page integrated referee package v2.0 now combines the approved proof and T6 enactment without mathematical enlargement. FORM-CHECK passes, Overfull-HBox is zero, and visual QA passes. Under no-auto-PUBLISHED, the exact v2.0 package awaits operator confirmation; no A4 bundle is built in this increment.

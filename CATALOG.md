@@ -6,7 +6,7 @@
 
 Generated: 2026-07-19
 
-**1602 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1605 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -197,8 +197,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/claim.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `83e3f7e75212` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `e86ee3249575` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `874f75ba70a7` |
-| `claims/A5-SECTOR-A-SYNTHESIS/claim.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `b33ba4a162d1` |
-| `claims/A5-SECTOR-A-SYNTHESIS/status.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `536caee7af62` |
+| `claims/A5-SECTOR-A-SYNTHESIS/claim.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `85641c4366a8` |
+| `claims/A5-SECTOR-A-SYNTHESIS/status.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `a81625636b0c` |
 | `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `0370f4e3b76f` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/MANIFEST.json` | B1-RH-ENUM | — | — | — | ACTIVE | `d93bbfaa83cb` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/README.md` | B1-RH-ENUM | — | — | — | ACTIVE | `abf305f81e64` |
@@ -559,6 +559,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-t6-enactment-260718-v1.0.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `35bc2a949760` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `847112ccc304` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `c3604aa5029e` |
+| `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.pdf` | A5-SECTOR-A-SYNTHESIS | 2026-07-18 | 2026-07-19 | v1.1 | ACTIVE | `b7561c8537f9` |
+| `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.tex.txt` | A5-SECTOR-A-SYNTHESIS | 2026-07-18 | 2026-07-19 | v1.1 | ACTIVE | `74693f94c649` |
 | `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.pdf` | A5-SECTOR-A-SYNTHESIS | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `495677e3cc5b` |
 | `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.tex.txt` | A5-SECTOR-A-SYNTHESIS | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `98884c564224` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/estimator-upgrade-closure-consolidation-260607-v1.0.pdf` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `225172dd190b` |
@@ -1004,8 +1006,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
-| `claims/A5-SECTOR-A-SYNTHESIS/LINEAGE.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `f76006be433e` |
-| `claims/A5-SECTOR-A-SYNTHESIS/sector_a_synthesis_manifest.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `9b1b83a55e18` |
+| `claims/A5-SECTOR-A-SYNTHESIS/LINEAGE.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `a71023f4cfa8` |
+| `claims/A5-SECTOR-A-SYNTHESIS/sector_a_synthesis_manifest.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `078989ac9b5c` |
 | `claims/B1-RH-ENUM/SYNTHESIS-260612-260612-v1.1.pdf` | B1-RH-ENUM | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `ad030a7282f2` |
 | `claims/B1-RH-ENUM/SYNTHESIS-260612-260612-v1.1.tex.txt` | B1-RH-ENUM | 2026-06-12 | 2026-06-12 | v1.1 | ACTIVE | `8b39afc3c779` |
 | `claims/B1-RH-ENUM/SYNTHESIS-260612-v1.0.pdf` | B1-RH-ENUM | 2026-06-12 | 2026-06-12 | v1.0 | ACTIVE | `dd8a5c45c5f3` |
@@ -1233,6 +1235,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-18-independent-synthesis-audit/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `d3fbf88c6651` |
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-18-integrated-synthesis/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `227d7a3429e3` |
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-18-primary-synthesis-audit/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `4bd26999d9d3` |
+| `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-19-t5-integrated-preflight/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `ebd155fcc745` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-032-window-certification/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `3e2cec863392` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-033-ext-adversarial-map/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `0feb8b491ed5` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-034-DS-nonlattice-extension/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `ef5b32161378` |
@@ -1415,9 +1418,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a4_scalar_constructive_measure.py` | — | 2026-07-18 | 2026-07-18 | v1.0.0 | ACTIVE | `eb391d8c129b` |
 | `codes/foundations/a4_scalar_constructive_measure_independent.py` | — | 2026-07-18 | 2026-07-18 | v1.0.0 | ACTIVE | `d4e77fea79c5` |
 | `codes/foundations/a4_scalar_constructive_measure_verify.py` | — | 2026-07-18 | 2026-07-19 | v1.1.0 | ACTIVE | `98bdda1e8899` |
-| `codes/foundations/a5_sector_a_synthesis_audit.py` | — | 2026-07-18 | 2026-07-18 | v1.0.0 | ACTIVE | `637d391961c0` |
-| `codes/foundations/a5_sector_a_synthesis_independent.py` | — | 2026-07-18 | 2026-07-18 | v1.0.0 | ACTIVE | `004ab4726865` |
-| `codes/foundations/a5_sector_a_synthesis_verify.py` | — | 2026-07-18 | 2026-07-18 | v1.0.0 | ACTIVE | `90e3809f7697` |
+| `codes/foundations/a5_sector_a_synthesis_audit.py` | — | 2026-07-18 | 2026-07-19 | v1.1.0 | ACTIVE | `6e8587c125e0` |
+| `codes/foundations/a5_sector_a_synthesis_independent.py` | — | 2026-07-18 | 2026-07-19 | v1.1.0 | ACTIVE | `324d355083f2` |
+| `codes/foundations/a5_sector_a_synthesis_verify.py` | — | 2026-07-18 | 2026-07-19 | v1.1.0 | ACTIVE | `b7245afa5e48` |
 | `codes/foundations/actual_n001_pde_backend.py` | — | — | — | — | ACTIVE | `8fe66e0df51b` |
 | `codes/foundations/n001_bcc_star_curvature.py` | — | — | — | v1.0.0 | ACTIVE | `175e103237bf` |
 | `codes/foundations/n001_solver/PROVENANCE.json` | — | — | — | — | ACTIVE | `48ff9292a0e8` |
@@ -1577,18 +1580,18 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `36bc8af82f42` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `29f58267f507` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/INDEX.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `ec0967baa31f` |
-| `claims/A5-SECTOR-A-SYNTHESIS/INDEX.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `c98d171ed303` |
+| `claims/A5-SECTOR-A-SYNTHESIS/INDEX.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `9e73f85f86fe` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `fadc0b632f94` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `19e86b054563` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `83b9842ee681` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `f772484594e3` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `4f71c4ffdd4d` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `29081c5cbb41` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `0f203de4841c` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `310cff638379` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `025f59f20fc2` |
 
 ## Governance policies
 
@@ -1616,16 +1619,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `2f4a76332a37` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `0f95eb6a13ee` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `7b228b1c64ac` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `a4a47b7b980e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `011f6f8c9599` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `5f92e62e5455` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `d34556ea715f` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `724bac0e50df` |
+| `TODO.md` | — | — | — | — | ACTIVE | `e0f2e65fa135` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -1635,7 +1638,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `1beedb783c3a` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `e4582f116773` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1673,18 +1676,18 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
-| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `5ad26e808ff7` |
+| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `3db8563eb1a9` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `95bc050ee9ed` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `9ecf4372b11a` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `0fd25b1db191` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `b80cc648024a` |
 

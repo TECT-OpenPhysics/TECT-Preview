@@ -17,17 +17,17 @@ from decimal import Decimal, getcontext
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-18"
-__version_issued__ = "2026-07-18"
+__version_issued__ = "2026-07-19"
 __claims__ = ["A5-SECTOR-A-SYNTHESIS"]
 
 getcontext().prec = 80
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "sector_a_synthesis_manifest.json"
-DEFAULT_PRIMARY = CLAIM / "runs" / "2026-07-18-primary-synthesis-audit" / "result.json"
-DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-18-independent-synthesis-audit" / "result.json"
+DEFAULT_PRIMARY = CLAIM / "runs" / "2026-07-19-t5-primary-preflight" / "result.json"
+DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-19-t5-independent-preflight" / "result.json"
 
 
 def sha256(path: Path) -> str:
@@ -76,11 +76,12 @@ def main() -> int:
         assertions,
     )
     check(
-        "manifest_is_an_unpublished_review_candidate",
-        manifest.get("schema") == "tect/a5-sector-a-synthesis/1.0"
-        and manifest.get("source_commit") == "35b113e"
-        and "T4 REFEREE-CANDIDATE" in manifest.get("status", "")
-        and manifest["review_gate"]["status"] == "OPEN",
+        "manifest_records_confirmed_t5_with_deferred_capstone_packaging",
+        manifest.get("schema") == "tect/a5-sector-a-synthesis/1.1"
+        and manifest.get("source_commit") == "77c2431"
+        and "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS" in manifest.get("status", "")
+        and manifest["review_gate"]["status"] == "CLOSED"
+        and manifest["publication_prerequisites"][0]["status"] == "PENDING-OPERATOR-CONFIRMATION",
         {"schema": manifest.get("schema"), "status": manifest.get("status"), "gate": manifest["review_gate"]},
         assertions,
     )
@@ -231,8 +232,8 @@ def main() -> int:
             }
         )
     check(
-        "all_four_support_bundle_attestations_are_valid",
-        len(bundle_rows) == 4 and all(all(value is True for key, value in row.items() if key != "id") for row in bundle_rows),
+        "all_five_available_support_bundle_attestations_are_valid",
+        len(bundle_rows) == 5 and all(all(value is True for key, value in row.items() if key != "id") for row in bundle_rows),
         bundle_rows,
         assertions,
     )
@@ -259,12 +260,20 @@ def main() -> int:
         verdict_record,
         assertions,
     )
+    a4_component = next(row for row in manifest["components"] if row["id"] == "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE")
+    a4_preflight_ok = (
+        sha256(REPO / a4_component["publication_preflight_path"]) == a4_component["publication_preflight_sha256"]
+        and sha256(REPO / a4_component["referee_package_candidate"]) == a4_component["referee_package_candidate_sha256"]
+    )
     check(
-        "operator_confirmation_precedes_t5_and_publication",
+        "operator_confirmation_is_recorded_and_a4_bundle_precedes_capstone_publication",
         manifest["review_gate"]["id"] == "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION"
-        and manifest["review_gate"]["status"] == "OPEN"
-        and manifest["review_gate"]["required_before"] == "T5 promotion and PUBLISHED reproduction bundle",
-        manifest["review_gate"],
+        and manifest["review_gate"]["status"] == "CLOSED"
+        and manifest["review_gate"]["confirmed_on"] == "2026-07-19"
+        and manifest["publication_prerequisites"][0]["claim_id"] == "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        and manifest["publication_prerequisites"][0]["status"] == "PENDING-OPERATOR-CONFIRMATION"
+        and a4_preflight_ok,
+        {"review_gate": manifest["review_gate"], "publication_prerequisites": manifest["publication_prerequisites"], "a4_candidate_hashes_ok": a4_preflight_ok},
         assertions,
     )
 

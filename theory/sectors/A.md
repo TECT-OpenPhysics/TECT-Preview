@@ -8,7 +8,7 @@
 
 ## Claims
 
-Tier profile: T6x8 T5x3 T4x1
+Tier profile: T6x8 T5x4
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
@@ -23,10 +23,10 @@ Tier profile: T6x8 T5x3 T4x1
 | [`A3-PERTURBATIVE-CONTINUUM-CORRELATORS`](../../claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Cutoff-independent continuum limit of the perturbative correlators (conditional) |
 | [`A3-UV-SUPERRENORMALISABILITY`](../../claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md) | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | UV super-renormalisability of the scalar Brazovskii functional |
 | [`A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`](../../claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/INDEX.md) | T6 | A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Finite-volume scalar spectral constructive Gibbs measure |
-| [`A5-SECTOR-A-SYNTHESIS`](../../claims/A5-SECTOR-A-SYNTHESIS/INDEX.md) | T4 | A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION | Sector A branch-aware synthesis and termination package |
+| [`A5-SECTOR-A-SYNTHESIS`](../../claims/A5-SECTOR-A-SYNTHESIS/INDEX.md) | T5 | A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | Sector A branch-aware synthesis and termination package |
 
 **Open named hypotheses (sector union):** A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY  
-**Open gates (sector union):** A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION
+**Open gates (sector union):** —
 
 ## Predictions
 
@@ -40,6 +40,7 @@ _None linked to this sector._
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
 | AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |
 | AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT | stale pre-promotion boundary in the A4 verifier artifact | after the A4 scalar constructive theorem was enacted at scoped T6 on 2026-07-18, `a4_scalar_constructive_measure_verify.py` v1.0.0 continued |
+| AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT | stale A3/A4 pins in the A5 v1.0 synthesis manifest | A5 manifest schema 1.0 correctly froze the 2026-07-18 review surface, but the subsequent replacement A3 perturbative T6 bundle and A4 v2.0 p |
 
 ---
 

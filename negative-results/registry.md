@@ -22,6 +22,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND](#audit-2026-07-17-a3-galerkin-ball-underbound) | A3 full-production discretization T6 v2.1 | continuum H2 ball reused for exact-Galerkin trajectory without proof |
 | [AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY](#audit-2026-07-19-a3-shared-bundle-integrity) | A3 shared renormalisation bundle | stale MANIFEST listed two absent notes and a mismatched README hash |
 | [AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT](#audit-2026-07-19-a4-verifier-tier-drift) | A4 constructive one-command verifier | v1.0.0 still emitted its pre-promotion T5-to-T6 boundary after T6 enactment |
+| [AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT](#audit-2026-07-19-a5-dependency-pin-drift) | A5 branch-aware synthesis manifest v1.0 | A3/A4 publication work made the frozen component hashes and four-bundle count stale |
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention
@@ -232,3 +233,12 @@ branch.
 **Evidence:** direct source and result-JSON inspection during the 2026-07-19 publication preflight. The stale sentence was isolated to the `promotion_boundary` field; no formula, input, source-hash test, assertion, or verdict logic depended on it.
 
 **Consequence:** verifier v1.1.0 changes only that boundary field to record the already enacted T6 theorem and retain the T7/excluded-scope prohibition. A fresh primary 17/17 plus non-importing independent 14/14 run passes 31/31 at `runs/2026-07-19-referee-preflight/result.json`, SHA-256 `bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667`. The old artifacts remain historical evidence; no theorem or tier change results from this correction.
+
+<a id="audit-2026-07-19-a5-dependency-pin-drift"></a>
+### AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT -- stale A3/A4 pins in the A5 v1.0 synthesis manifest
+
+**Failure mode:** A5 manifest schema 1.0 correctly froze the 2026-07-18 review surface, but the subsequent replacement A3 perturbative T6 bundle and A4 v2.0 publication preflight changed the current A3/A4 status and manifest hashes. The v1.0 verifier also expected only four PUBLISHED support bundles and an OPEN operator gate. Running it against the updated repository would therefore report source drift even though the branch proposition was unchanged.
+
+**Evidence:** direct SHA-256 comparison of all six component cards, four component manifests, evidence artifacts, and support manifests on 2026-07-19. The A3 replacement added a fifth valid PUBLISHED support bundle; the A4 package remained an explicit pending dependency.
+
+**Consequence:** schema 1.1 refreshes every changed pin, attests the fifth A3 bundle, records the already completed A5 operator confirmation, and fails closed on the still-pending A4 publication prerequisite. The primary and non-importing independent routes remain 16/16 each and the integrated verifier remains 32/32. This is a dependency-record repair and T5 enactment, not a change to the branch theorem or an authorization to build the A5 bundle before A4.

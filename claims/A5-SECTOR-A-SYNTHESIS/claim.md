@@ -1,8 +1,8 @@
 # A5-SECTOR-A-SYNTHESIS -- Sector A branch-aware synthesis
 
-**Tier**: T4 REFEREE-CANDIDATE@BRANCH-AWARE-SECTOR-A-SYNTHESIS (TSv2) |
+**Tier**: T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS (TSv2) |
 **Lifecycle**: ACTIVE |
-**Last review**: 2026-07-18
+**Last review**: 2026-07-19
 
 ## Result
 
@@ -61,10 +61,11 @@ them.
 - `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`: T6 conditional finite-volume
   real-scalar spectral Gibbs measure.
 
-Four load-bearing support bundles are already PUBLISHED and content-addressed:
-the A1 kernel, A1 full functional, A2 PDE, and repaired A3 full discretization
-packages.  The scalar A3 and A4 records are directly source- and
-evidence-pinned in the synthesis manifest.
+Five load-bearing support bundles are already PUBLISHED and content-addressed:
+the A1 kernel, A1 full functional, A2 PDE, repaired A3 full discretization,
+and scalar A3 perturbative packages.  A4 is an operator-approved T6 theorem
+with an integrated v2.0 publication candidate, but its claim-level support
+bundle still awaits confirmation of that exact document.
 
 ## Reproduction and evidence
 
@@ -117,9 +118,9 @@ the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 6. **"Existing support bundles eliminate the need for A5 review."**
    DISMISSED.  They verify components, while A5 adds the load-bearing branch
    map and non-implication firewall that no component states alone.
-7. **"A passing internal verifier permits immediate PUBLISHED packaging."**
-   UPHELD as false.  Repository policy requires operator review and explicit
-   confirmation of the integrated referee package before packaging.
+7. **"Operator confirmation permits immediate A5 PUBLISHED packaging even
+   when a support package is pending."** UPHELD as false.  Dependency-first
+   policy requires the A4 support bundle before the A5 capstone bundle.
 8. **"Sector-A termination proves BCC or physical vacuum selection."**
    UPHELD as false.  BCC existence/selection, minimizer uniqueness, Sector B,
    and physical-domain closure are excluded.
@@ -133,7 +134,7 @@ the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 
 - Six component cards are hash-pinned, ACTIVE, gate-free in their own scopes,
   and have AVAILABLE reproduction commands.
-- Four published support-bundle manifests and their bundle digests/runlogs are
+- Five published support-bundle manifests and their bundle digests/runlogs are
   independently rechecked.
 - Scalar perturbative evidence is `8/8`; scalar constructive evidence is
   `31/31`.
@@ -141,19 +142,20 @@ the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 - The mass separation is approximately `0.255000000009475`, so it cannot be
   hidden by the upstream `1e-9` kernel tolerance.
 
-## Current gate and tier rationale
+## Confirmation and tier rationale
 
-The self-contained synthesis and direct scripts make this a strong T4
-referee candidate.  The appropriate eventual tier is scoped T5 because the
-deliverable closes a pinned synthesis/coverage question; it is not a new T6
-mathematical theorem.  The no-auto-PUBLISHED rule leaves
-`A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION` open.  After explicit operator
-confirmation, the final note can be marked confirmed, the claim reviewed for
-T5, and the claim-level PUBLISHED bundle built once and registered.
+Jusang Lee independently ran the integrated 32/32 CLI and explicitly approved
+the v1.0 referee package on 2026-07-19.  This closes
+`A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION` and enacts scoped T5: the
+deliverable closes a pinned synthesis and interface question but is not a new
+T6 mathematical theorem.  The v1.1 preflight refreshes the A3/A4 dependency
+hashes without changing the branch proposition.  The claim-level A5 bundle is
+still deferred because dependency-first publication requires the A4 T6
+support bundle to be PUBLISHED first.
 
 ## No-overclaim
 
-This package does not establish a parameter-identical full-production
+This T5 package does not establish a parameter-identical full-production
 constructive quantum field theory, derivative Class-II Gibbs measure,
 `eta_shell` nonzero, removed regularisers, `t=0` P3 rates for H2 data,
 historical-grid error bars, finite-difference Route B, infinite volume, phase
@@ -162,6 +164,6 @@ physical-domain closure, T6, or T7.
 
 ## Next required action
 
-The operator must review and explicitly confirm or return corrections on the
-v1.0 integrated referee package.  No reproduction bundle may be built before
-that confirmation.
+Confirm the exact A4 v2.0 package and publish its T6 support bundle.  Then
+refresh the single A4 prerequisite row and build the already confirmed A5 T5
+capstone bundle as the final dependency-first packaging step.

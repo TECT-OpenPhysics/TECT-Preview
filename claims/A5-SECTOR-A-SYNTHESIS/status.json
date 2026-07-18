@@ -18,9 +18,7 @@
     "A3-H2-IR-POSITIVITY"
   ],
   "soft_dependencies": [],
-  "open_gates": [
-    "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION"
-  ],
+  "open_gates": [],
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-07-18)",
   "legacy_evidence": [
@@ -31,8 +29,11 @@
     "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-18-primary-synthesis-audit/result.json",
     "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-18-independent-synthesis-audit/result.json",
     "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-18-integrated-synthesis/result.json",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-19-t5-integrated-preflight/result.json",
     "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.tex.txt",
-    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.pdf"
+    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.pdf",
+    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.tex.txt (operator-confirmed T5 administrative reissue; SHA-256 74693f94c6496a715c423e43bfe6bd213f3aa6d6d96e328aaf02aa37c47c5cff)",
+    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.pdf (FORM-CHECK PASS; zero overfull; capstone bundle deferred until A4 support publication)"
   ],
   "t7_candidate": false,
   "reproduction": {
@@ -40,20 +41,20 @@
     "expected": "PASS: primary (16/16); PASS: independent (16/16); ASSERTS: 32/32; A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS; Termination: PASS@BRANCH-AWARE-DECLARED-SCOPE; exit 0.",
     "status": "AVAILABLE"
   },
-  "last_review": "2026-07-18",
-  "notes": "T4 referee candidate. The synthesis freezes a full-production branch (P1 functional to P2 PDE to P3 exact-Galerkin continuum control) and a separate scalar-continuum branch (A3 perturbative correlators plus A4 finite-volume constructive measure). It explicitly records the shell-mass fork 0.005 versus 0.260000000009475 and forbids identifying the scalar constructive result with the full derivative Class-II theory. Fresh primary and non-importing independent audits pass 16/16 each and the integrated verifier passes 32/32. Under the no-auto-PUBLISHED policy, operator review and confirmation of the self-contained referee note are still required before scoped T5 promotion and construction of the claim-level PUBLISHED bundle.",
+  "last_review": "2026-07-19",
+  "notes": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. Jusang Lee independently ran the 32/32 CLI and explicitly approved the v1.0 referee package on 2026-07-19, closing A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION. The synthesis freezes a full-production branch (P1 functional to P2 PDE to P3 exact-Galerkin continuum control) and a separate scalar-continuum branch (A3 perturbative correlators plus A4 finite-volume constructive measure). It explicitly records the shell-mass fork 0.005 versus 0.260000000009475 and forbids identifying the scalar constructive result with the full derivative Class-II theory. The v1.1 T5 preflight refreshes dependency hashes after the clean A3 T6 support package and the A4 v2.0 publication candidate; primary and non-importing independent audits remain 16/16 each and the integrated verifier remains 32/32. Five dependency bundles are PUBLISHED and verified; the A4 theorem is T6 and its exact v2.0 package is ready, but its claim-level PUBLISHED support bundle awaits operator confirmation. Therefore the A5 theorem/synthesis tier is T5 while the capstone PUBLISHED bundle remains publication-incomplete under dependency-first policy. No parameter identity, full derivative Class-II constructive measure, BCC, physical closure, T6, or T7 is inferred.",
   "id": "A5-SECTOR-A-SYNTHESIS",
   "title": "Sector A branch-aware synthesis and termination package",
   "sector": "A",
   "statement": "The frozen Sector-A records support two reproducible, explicitly separated chains on the fixed spectral three-torus: the canonical full-production variational functional feeds the conditional full PDE well-posedness theorem and its positive-time exact-Galerkin discretization-to-continuum theorem; independently, the positive-mass real-scalar spectral branch has order-by-order perturbative cutoff removal and a finite-volume non-perturbative constructive Gibbs measure. Their shared geometry, dependencies, hypotheses, parameter fork, and non-implications are content-addressed and audit reproducible.",
-  "scope": "T4 REFEREE-CANDIDATE@BRANCH-AWARE-SECTOR-A-SYNTHESIS. This is a synthesis and termination audit, not a new theorem and not a parameter-identical chain. The full-production branch uses shell mass squared 0.260000000009475, while the scalar perturbative anchor uses 0.005; A4 audits both admissible positive masses without equating them. The scalar constructive result does not cover the three-component derivative Class-II functional. Operator confirmation and a PUBLISHED bundle remain open.",
-  "tier": "T4",
+  "scope": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. This is an operator-confirmed pinned synthesis and termination audit, not a new T6 theorem and not a parameter-identical chain. The full-production branch uses shell mass squared 0.260000000009475, while the scalar perturbative anchor uses 0.005; A4 audits both admissible positive masses without equating them. The scalar constructive result does not cover the three-component derivative Class-II functional. The claim-level A5 PUBLISHED bundle is deferred until the A4 T6 support bundle is operator-confirmed and PUBLISHED.",
+  "tier": "T5",
   "evidence_grade": [
     "EXACT",
     "EXECUTED",
     "CONDITIONAL"
   ],
   "falsifier": "Any drift in a pinned component card, manifest, evidence artifact, or support-bundle attestation; a failed 32-assertion verifier; an unregistered named hypothesis; a broken dependency edge; equality or silent substitution of the 0.005 and 0.26 mass anchors; or evidence that the scalar constructive measure already defines the full derivative Class-II measure invalidates this synthesis and reopens the A5 operator-confirmation gate.",
-  "no_overclaim": "This T4 synthesis does not prove a single parameter-identical full-production constructive quantum field theory, a derivative Class-II Gibbs measure, eta_shell nonzero, removal of rho/Class-II regularisers, t=0 P3 rates for H2 data, practical historical-grid error bars, genuine finite-difference Route B, infinite volume, a phase transition, minimizer uniqueness, BCC existence or selection, Sector-B closure, physical-domain closure, T6, or T7.",
-  "next_action": "Operator reviews and explicitly confirms or returns corrections on the v1.0 referee package. Only after confirmation may the note be marked operator-confirmed, this claim be reviewed for scoped T5, and the claim-level PUBLISHED reproduction bundle be built and registered."
+  "no_overclaim": "This T5 synthesis does not prove a single parameter-identical full-production constructive quantum field theory, a derivative Class-II Gibbs measure, eta_shell nonzero, removal of rho/Class-II regularisers, t=0 P3 rates for H2 data, practical historical-grid error bars, genuine finite-difference Route B, infinite volume, a phase transition, minimizer uniqueness, BCC existence or selection, Sector-B closure, physical-domain closure, T6, or T7.",
+  "next_action": "Obtain operator confirmation of the exact A4 v2.0 integrated package and publish its claim-level T6 support bundle; then refresh the A5 prerequisite row and build, integrity-check, register, and commit the already operator-confirmed A5 scoped T5 capstone bundle."
 }

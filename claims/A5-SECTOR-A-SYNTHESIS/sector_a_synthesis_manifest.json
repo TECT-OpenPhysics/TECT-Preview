@@ -1,24 +1,24 @@
 {
-  "schema": "tect/a5-sector-a-synthesis/1.0",
+  "schema": "tect/a5-sector-a-synthesis/1.1",
   "claim_id": "A5-SECTOR-A-SYNTHESIS",
-  "frozen_on": "2026-07-18",
-  "source_commit": "35b113e",
-  "status": "T4 REFEREE-CANDIDATE; operator confirmation required before T5 PUBLISHED bundle",
+  "frozen_on": "2026-07-19",
+  "source_commit": "77c2431",
+  "status": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS after operator confirmation; PUBLISHED capstone bundle deferred until the A4 support bundle is PUBLISHED",
   "authority": {
     "primary_audit": {
       "path": "codes/foundations/a5_sector_a_synthesis_audit.py",
-      "sha256": "637d391961c003c1de6f9c9dbb8d97bd8e0c899be1bd39f1cac5fa6515dd4f1c",
-      "version": "1.0.0"
+      "sha256": "6e8587c125e01a220e504cf79612cb93f366ed20eb48403aad779a716b4bd669",
+      "version": "1.1.0"
     },
     "independent_audit": {
       "path": "codes/foundations/a5_sector_a_synthesis_independent.py",
-      "sha256": "004ab47268655c7d9633e42ab2077ed8fda2104c8257b88961601cfa1bc1a62a",
-      "version": "1.0.0"
+      "sha256": "324d355083f28d6c3b3f3c1e1216827172420090e1634615de2eba203941dca0",
+      "version": "1.1.0"
     },
     "one_command_verifier": {
       "path": "codes/foundations/a5_sector_a_synthesis_verify.py",
-      "sha256": "90e3809f76971929e90a8a46a6f1c13655ab89e87204524fbd7dbdcee0c03e75",
-      "version": "1.0.0"
+      "sha256": "b7245afa5e48740f1eb57ea2202e4ca89d184f4c538997c91bb54f1cd9d190f9",
+      "version": "1.1.0"
     }
   },
   "named_hypotheses": [
@@ -84,9 +84,11 @@
       "branch": "scalar-continuum",
       "expected_tier": "T6",
       "status_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json",
-      "status_sha256": "b61a2cd4bfb8071a8b300005e145d6bc0d98c5e74da74dafbcd7e0b96a174088",
+      "status_sha256": "d5a13ff8351094eb06cc5f8483b8dc3db930bad4bc95a12b0c6c9a8282600ef0",
       "evidence_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json",
-      "evidence_sha256": "60f9ea6d87385b78d731942dc94b7bc3d357e21b069ad95b3446348216b58c4b"
+      "evidence_sha256": "60f9ea6d87385b78d731942dc94b7bc3d357e21b069ad95b3446348216b58c4b",
+      "published_bundle_manifest": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/MANIFEST.json",
+      "published_bundle_manifest_sha256": "2e2c1ae2f78d7a8610f762f01f5dded3aa01d6b1180701e543299ae2eb8fd86e"
     },
     {
       "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
@@ -94,11 +96,15 @@
       "branch": "scalar-continuum",
       "expected_tier": "T6",
       "status_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json",
-      "status_sha256": "e61dc816638daff1b357556ac56a378592b60a9d2226e8c5ff13c6a64491c2f7",
+      "status_sha256": "874f75ba70a718bc2aa43f8f438918f3c80312bfe202f9215db8dd2f49570674",
       "manifest_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json",
-      "manifest_sha256": "3bec4381107480c3762a4655ec414b5d47b8f26ed295daf96f9f146d46b4c0aa",
+      "manifest_sha256": "e86ee32495758c1bdd4969068c6ee4a8cefa0fb4ae6a5541bc1e27dae0da60e3",
       "evidence_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json",
-      "evidence_sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c"
+      "evidence_sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c",
+      "publication_preflight_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-19-referee-preflight/result.json",
+      "publication_preflight_sha256": "bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667",
+      "referee_package_candidate": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.0.tex.txt",
+      "referee_package_candidate_sha256": "25ef6e64c020fca5085e3cf1dae7a42462ee59060169fbe92c90acb4a3e4926e"
     }
   ],
   "branch_map": {
@@ -157,10 +163,45 @@
     "Sector B or physical-domain closure",
     "T7"
   ],
+  "t5_enactment": {
+    "tier": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS",
+    "operator_confirmed_entry_source": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.tex.txt",
+      "sha256": "74693f94c6496a715c423e43bfe6bd213f3aa6d6d96e328aaf02aa37c47c5cff"
+    },
+    "operator_confirmed_entry_pdf": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.pdf",
+      "sha256": "b7561c8537f9548a726019e2b4773b7e3da2b022a3d223cbdca5018308bd8998",
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS (6 pages, 2026-07-19)"
+    },
+    "current_preflight": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-19-t5-integrated-preflight/result.json",
+      "sha256": "ebd155fcc745e6f00591b21214b75ce568354bf13f380be5c8a8a70932fb1712",
+      "verdict": "A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS",
+      "assertions": "32/32",
+      "termination": "PASS@BRANCH-AWARE-DECLARED-SCOPE"
+    },
+    "published_bundle_status": "DEFERRED-UNTIL-A4-SUPPORT-PUBLISHED"
+  },
   "review_gate": {
     "id": "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION",
-    "status": "OPEN",
-    "required_before": "T5 promotion and PUBLISHED reproduction bundle",
+    "status": "CLOSED",
+    "confirmed_on": "2026-07-19",
+    "confirmed_by": "Jusang Lee",
+    "confirmed_document": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.tex.txt",
+    "confirmation_basis": "Operator independently ran the 32/32 CLI and explicitly approved the v1.0 referee package.",
+    "required_before": "T5 promotion",
     "policy": "governance/reproduction-bundle-policy.md section 14"
-  }
+  },
+  "publication_prerequisites": [
+    {
+      "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+      "required_artifact": "claim-level T6 PUBLISHED support bundle",
+      "status": "PENDING-OPERATOR-CONFIRMATION",
+      "candidate_document": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.0.tex.txt",
+      "reason": "Dependency-first policy requires every main-line support package to be PUBLISHED before the A5 capstone bundle."
+    }
+  ]
 }
