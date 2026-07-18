@@ -1,0 +1,166 @@
+{
+  "schema": "tect/a5-sector-a-synthesis/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "frozen_on": "2026-07-18",
+  "source_commit": "35b113e",
+  "status": "T4 REFEREE-CANDIDATE; operator confirmation required before T5 PUBLISHED bundle",
+  "authority": {
+    "primary_audit": {
+      "path": "codes/foundations/a5_sector_a_synthesis_audit.py",
+      "sha256": "637d391961c003c1de6f9c9dbb8d97bd8e0c899be1bd39f1cac5fa6515dd4f1c",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a5_sector_a_synthesis_independent.py",
+      "sha256": "004ab47268655c7d9633e42ab2077ed8fda2104c8257b88961601cfa1bc1a62a",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a5_sector_a_synthesis_verify.py",
+      "sha256": "90e3809f76971929e90a8a46a6f1c13655ab89e87204524fbd7dbdcee0c03e75",
+      "version": "1.0.0"
+    }
+  },
+  "named_hypotheses": [
+    "A1-KERNEL-CONV",
+    "A1-SHELL-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY",
+    "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY"
+  ],
+  "components": [
+    {
+      "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+      "role": "scalar production-kernel definition and parameter anchor",
+      "branch": "shared-definition/scalar-anchor",
+      "expected_tier": "T5",
+      "status_path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/status.json",
+      "status_sha256": "b5224a6abdda2f9a61ce7bb567d9d7ab273f1470ecc7cceffa8a82e4d7d2ac50",
+      "manifest_path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json",
+      "manifest_sha256": "030d1b7c62e77585c9967013554d7ff2e9e35f72bbecc37dcdfc9017d20b3a38",
+      "published_bundle_manifest": "claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/MANIFEST.json",
+      "published_bundle_manifest_sha256": "0fdb6377fd3be5ae3ea5ee4ea5d0da0bed697987374eb738534faaf5663af68f"
+    },
+    {
+      "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "role": "standalone full three-component variational realization",
+      "branch": "full-production",
+      "expected_tier": "T5",
+      "status_path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json",
+      "status_sha256": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
+      "manifest_path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "published_bundle_manifest": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717/MANIFEST.json",
+      "published_bundle_manifest_sha256": "074b6f62f089e84f0fb8509e38efcefef173643eec7cf7fff9a858d96c60c453"
+    },
+    {
+      "id": "A2-FULL-PRODUCTION-WELLPOSED",
+      "role": "full three-component continuum gradient-flow well-posedness",
+      "branch": "full-production",
+      "expected_tier": "T6",
+      "status_path": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json",
+      "status_sha256": "9b528ba8fe4bc7c52c9bf61745305d6478b4d7bb8dfad0fb2c9c0edc336a4a9e",
+      "manifest_path": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+      "manifest_sha256": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+      "published_bundle_manifest": "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/MANIFEST.json",
+      "published_bundle_manifest_sha256": "7a17dd8d9ed3c3eca61ac503dd568beb3ebf7b4060103c213c418dd490fe25c7"
+    },
+    {
+      "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+      "role": "positive-time exact-Galerkin discretization-to-continuum theorem",
+      "branch": "full-production",
+      "expected_tier": "T6",
+      "status_path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json",
+      "status_sha256": "5f156750c2b73a40c12334973514a6d8926907d37430249bf4f63c3d2942078c",
+      "manifest_path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/discretization_manifest.json",
+      "manifest_sha256": "ba6cd2ba056cc531cf3520f981e022d756be0f7774dc0d9b244374e45041795f",
+      "published_bundle_manifest": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-Repair-260717/MANIFEST.json",
+      "published_bundle_manifest_sha256": "f766fe47ba7fbcfe34a88a9b63d7b3f91a113c209ade262bcf718f1a5120691e"
+    },
+    {
+      "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "role": "order-by-order scalar spectral continuum correlators",
+      "branch": "scalar-continuum",
+      "expected_tier": "T6",
+      "status_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json",
+      "status_sha256": "b61a2cd4bfb8071a8b300005e145d6bc0d98c5e74da74dafbcd7e0b96a174088",
+      "evidence_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json",
+      "evidence_sha256": "60f9ea6d87385b78d731942dc94b7bc3d357e21b069ad95b3446348216b58c4b"
+    },
+    {
+      "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+      "role": "finite-volume non-perturbative scalar spectral Gibbs measure",
+      "branch": "scalar-continuum",
+      "expected_tier": "T6",
+      "status_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json",
+      "status_sha256": "e61dc816638daff1b357556ac56a378592b60a9d2226e8c5ff13c6a64491c2f7",
+      "manifest_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json",
+      "manifest_sha256": "3bec4381107480c3762a4655ec414b5d47b8f26ed295daf96f9f146d46b4c0aa",
+      "evidence_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json",
+      "evidence_sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c"
+    }
+  ],
+  "branch_map": {
+    "shared_definition": [
+      "fixed T3 periods 16",
+      "q0=0.6801747616",
+      "Y=1",
+      "Z approximately -0.9252754126",
+      "eta_shell=0",
+      "spectral Fourier convention"
+    ],
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ],
+    "mass_fork": {
+      "scalar_perturbative_shell_mass_squared": 0.005,
+      "full_production_shell_mass_squared": 0.26,
+      "rule": "The two rows are separate anchors. Equality is forbidden; A4 audits both without identifying them."
+    },
+    "functional_fork": {
+      "full_branch": "three complex components with family, lock, and derivative Class-II terms",
+      "continuum_measure_branch": "real scalar local quartic/sextic slice",
+      "rule": "Scalar perturbative/constructive control is not a full three-component Class-II constructive measure."
+    }
+  },
+  "interface_contracts": [
+    "P1 standalone functional is the named canonical input of P2 and P3",
+    "P2 is a hard dependency of P3",
+    "P3 proves positive-time restarted exact-Galerkin convergence, not historical-solver error bars",
+    "A3 perturbative and A4 constructive claims use the scalar spectral branch",
+    "A4 proves a general positive-mass scalar theorem and audits both mass anchors without equating them",
+    "No arrow from full-production P3 to full Class-II constructive measure is asserted"
+  ],
+  "termination_verdict": {
+    "result": "PASS@BRANCH-AWARE-DECLARED-SCOPE",
+    "meaning": "Sector A has a reproducible definitions-to-dynamics-to-discretization branch and a separate scalar perturbative/constructive continuum branch with their interface and non-implications fixed.",
+    "not_meaning": "A single parameter-identical full-production constructive quantum field theory or a BCC existence/selection theorem."
+  },
+  "honesty_boundary": [
+    "historical non-variational solver identification",
+    "full three-component derivative Class-II constructive measure",
+    "equality of the 0.005 and 0.26 shell-mass anchors",
+    "eta_shell nonzero",
+    "removed rho or Class-II mass regularisers",
+    "t=0 algebraic P3 rates for merely H2 data",
+    "practical historical N32/N64/N128 continuum error bars",
+    "genuine finite-difference lattice Route B",
+    "infinite volume or thermodynamic phase transition",
+    "minimizer uniqueness, BCC existence, or BCC selection",
+    "Sector B or physical-domain closure",
+    "T7"
+  ],
+  "review_gate": {
+    "id": "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION",
+    "status": "OPEN",
+    "required_before": "T5 promotion and PUBLISHED reproduction bundle",
+    "policy": "governance/reproduction-bundle-policy.md section 14"
+  }
+}

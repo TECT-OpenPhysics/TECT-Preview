@@ -1,0 +1,411 @@
+{
+  "schema": "tect/a5-sector-a-synthesis-independent-result/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "script_version": "1.0.0",
+  "verdict": "A5-SECTOR-A-SYNTHESIS-INDEPENDENT-PASS",
+  "branch_map": {
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ]
+  },
+  "mass_fork": {
+    "scalar_mass_squared": "0.005",
+    "full_mass_squared": "0.26000000000947494031"
+  },
+  "record_rows": [
+    {
+      "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+      "status_hash_ok": true,
+      "tier_ok": true,
+      "active": true,
+      "no_open_gates": true,
+      "reproducible": true,
+      "manifest_hash_ok": true
+    },
+    {
+      "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "status_hash_ok": true,
+      "tier_ok": true,
+      "active": true,
+      "no_open_gates": true,
+      "reproducible": true,
+      "manifest_hash_ok": true
+    },
+    {
+      "id": "A2-FULL-PRODUCTION-WELLPOSED",
+      "status_hash_ok": true,
+      "tier_ok": true,
+      "active": true,
+      "no_open_gates": true,
+      "reproducible": true,
+      "manifest_hash_ok": true
+    },
+    {
+      "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+      "status_hash_ok": true,
+      "tier_ok": true,
+      "active": true,
+      "no_open_gates": true,
+      "reproducible": true,
+      "manifest_hash_ok": true
+    },
+    {
+      "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "status_hash_ok": true,
+      "tier_ok": true,
+      "active": true,
+      "no_open_gates": true,
+      "reproducible": true,
+      "evidence_hash_ok": true
+    },
+    {
+      "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+      "status_hash_ok": true,
+      "tier_ok": true,
+      "active": true,
+      "no_open_gates": true,
+      "reproducible": true,
+      "manifest_hash_ok": true,
+      "evidence_hash_ok": true
+    }
+  ],
+  "bundle_rows": [
+    {
+      "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+      "manifest_hash_ok": true,
+      "digest_ok": true,
+      "runlog_ok": true
+    },
+    {
+      "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "manifest_hash_ok": true,
+      "digest_ok": true,
+      "runlog_ok": true
+    },
+    {
+      "id": "A2-FULL-PRODUCTION-WELLPOSED",
+      "manifest_hash_ok": true,
+      "digest_ok": true,
+      "runlog_ok": true
+    },
+    {
+      "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+      "manifest_hash_ok": true,
+      "digest_ok": true,
+      "runlog_ok": true
+    }
+  ],
+  "assertions": [
+    {
+      "name": "independent_source_hash_matches_manifest",
+      "status": "PASS",
+      "detail": {
+        "actual": "004ab47268655c7d9633e42ab2077ed8fda2104c8257b88961601cfa1bc1a62a",
+        "expected": "004ab47268655c7d9633e42ab2077ed8fda2104c8257b88961601cfa1bc1a62a"
+      }
+    },
+    {
+      "name": "fresh_primary_record_and_source_are_complete",
+      "status": "PASS",
+      "detail": {
+        "source_sha256": "637d391961c003c1de6f9c9dbb8d97bd8e0c899be1bd39f1cac5fa6515dd4f1c",
+        "verdict": "A5-SECTOR-A-SYNTHESIS-PRIMARY-PASS",
+        "summary": {
+          "passed": 16,
+          "total": 16
+        }
+      }
+    },
+    {
+      "name": "manifest_is_an_unpublished_review_candidate",
+      "status": "PASS",
+      "detail": {
+        "schema": "tect/a5-sector-a-synthesis/1.0",
+        "status": "T4 REFEREE-CANDIDATE; operator confirmation required before T5 PUBLISHED bundle",
+        "gate": {
+          "id": "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION",
+          "status": "OPEN",
+          "required_before": "T5 promotion and PUBLISHED reproduction bundle",
+          "policy": "governance/reproduction-bundle-policy.md section 14"
+        }
+      }
+    },
+    {
+      "name": "all_six_component_records_are_current_and_closed_in_scope",
+      "status": "PASS",
+      "detail": [
+        {
+          "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+          "status_hash_ok": true,
+          "tier_ok": true,
+          "active": true,
+          "no_open_gates": true,
+          "reproducible": true,
+          "manifest_hash_ok": true
+        },
+        {
+          "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "status_hash_ok": true,
+          "tier_ok": true,
+          "active": true,
+          "no_open_gates": true,
+          "reproducible": true,
+          "manifest_hash_ok": true
+        },
+        {
+          "id": "A2-FULL-PRODUCTION-WELLPOSED",
+          "status_hash_ok": true,
+          "tier_ok": true,
+          "active": true,
+          "no_open_gates": true,
+          "reproducible": true,
+          "manifest_hash_ok": true
+        },
+        {
+          "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+          "status_hash_ok": true,
+          "tier_ok": true,
+          "active": true,
+          "no_open_gates": true,
+          "reproducible": true,
+          "manifest_hash_ok": true
+        },
+        {
+          "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "status_hash_ok": true,
+          "tier_ok": true,
+          "active": true,
+          "no_open_gates": true,
+          "reproducible": true,
+          "evidence_hash_ok": true
+        },
+        {
+          "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "status_hash_ok": true,
+          "tier_ok": true,
+          "active": true,
+          "no_open_gates": true,
+          "reproducible": true,
+          "manifest_hash_ok": true,
+          "evidence_hash_ok": true
+        }
+      ]
+    },
+    {
+      "name": "branch_membership_is_exact_and_disjoint",
+      "status": "PASS",
+      "detail": {
+        "full_production": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED",
+          "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+        ],
+        "scalar_continuum": [
+          "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+        ]
+      }
+    },
+    {
+      "name": "full_production_dependency_dag_is_reconstructed",
+      "status": "PASS",
+      "detail": {
+        "P2_dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+        ],
+        "P3_dependencies": [
+          "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "A2-FULL-PRODUCTION-WELLPOSED"
+        ]
+      }
+    },
+    {
+      "name": "scalar_continuum_claims_are_scalar_spectral_not_full_classii",
+      "status": "PASS",
+      "detail": {
+        "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "scalar, d=3, mu^2>0, gamma>0, PERTURBATIVE order-by-order, SPECTRAL/Galerkin regulator (Route A). The finite-difference lattice qhat=(2/a)sin(aq/2) of v1.1/v1.2 was REFUTED for the domination (qhat is periodic => internal-line momenta fold => the (1+|q|)^-4 bound fails on Umklapp/aliasing); the spectral regulator carries the continuum kernel + a sharp per-line cutoff and closes it. Route B (genuine lattice, Reisz power counting) is a separate harder refinement. gamma>0 measure hypothesis (A2-H2-SEXTIC-COERCIVITY). NOT resummation; NOT constructive (A3_constructive); NOT full Class-II; NOT mu^2<0. Convergence is for each FIXED external momentum p (uniform-on-compact-p would need a separate equicontinuity argument; not claimed). Kernel hypothesis Y>0 (4th-order ellipticity / q^-4 decay) is made explicit in the consolidation v1.1.",
+        "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL: real scalar field on T3 with periods 16 under named hypotheses A1-SHELL-POSITIVITY and A2-H2-SEXTIC-COERCIVITY; positive shell mass, Y>0, q0>=0, arbitrary real lambda, gamma>0, beta=1, and sharp spectral/max-norm Galerkin projectors. Production-anchor values are derived sanity checks, not restrictions or predictions. Excludes the full three-complex-component derivative Class-II energy, eta_shell nonzero, zero/negative shell mass, unsmeared composite fields, infinite volume or thermodynamic limit, spontaneous phase transition, finite-difference lattice Route B, BCC existence/selection, T7, and P5 synthesis."
+      }
+    },
+    {
+      "name": "shared_geometry_is_verified_on_both_branches",
+      "status": "PASS",
+      "detail": {
+        "q0_match": true,
+        "Y_match": true,
+        "Z_difference": "3.52337E-11",
+        "A4_domain": "real scalar field on T3 with Lx=Ly=Lz=16"
+      }
+    },
+    {
+      "name": "mass_fork_is_rederived_with_decimal_arithmetic",
+      "status": "PASS",
+      "detail": {
+        "scalar_mass_squared": "0.005",
+        "full_mass_squared": "0.26000000000947494031",
+        "difference": "0.25500000000947494031"
+      }
+    },
+    {
+      "name": "local_scalar_reduction_does_not_imply_measure_equivalence",
+      "status": "PASS",
+      "detail": {
+        "scalar_reduction_relative_error": "6.218564371786818E-16",
+        "rule": "Scalar perturbative/constructive control is not a full three-component Class-II constructive measure."
+      }
+    },
+    {
+      "name": "scalar_continuum_evidence_totals_are_reconstructed",
+      "status": "PASS",
+      "detail": {
+        "A3": {
+          "all_pass": true,
+          "count": 8
+        },
+        "A4": {
+          "passed": 31,
+          "total": 31
+        }
+      }
+    },
+    {
+      "name": "all_four_support_bundle_attestations_are_valid",
+      "status": "PASS",
+      "detail": [
+        {
+          "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+          "manifest_hash_ok": true,
+          "digest_ok": true,
+          "runlog_ok": true
+        },
+        {
+          "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "manifest_hash_ok": true,
+          "digest_ok": true,
+          "runlog_ok": true
+        },
+        {
+          "id": "A2-FULL-PRODUCTION-WELLPOSED",
+          "manifest_hash_ok": true,
+          "digest_ok": true,
+          "runlog_ok": true
+        },
+        {
+          "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+          "manifest_hash_ok": true,
+          "digest_ok": true,
+          "runlog_ok": true
+        }
+      ]
+    },
+    {
+      "name": "named_hypotheses_are_registered",
+      "status": "PASS",
+      "detail": [
+        {
+          "id": "A1-KERNEL-CONV",
+          "registered": true
+        },
+        {
+          "id": "A1-SHELL-POSITIVITY",
+          "registered": true
+        },
+        {
+          "id": "A2-H2-SEXTIC-COERCIVITY",
+          "registered": true
+        },
+        {
+          "id": "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+          "registered": true
+        },
+        {
+          "id": "A3-H1-DIM3-Q4-KERNEL",
+          "registered": true
+        },
+        {
+          "id": "A3-H2-IR-POSITIVITY",
+          "registered": true
+        }
+      ]
+    },
+    {
+      "name": "termination_firewall_has_all_required_exclusions",
+      "status": "PASS",
+      "detail": {
+        "required": [
+          "historical",
+          "full three-component",
+          "0.005 and 0.26",
+          "eta_shell",
+          "t=0",
+          "route b",
+          "infinite volume",
+          "bcc",
+          "sector b",
+          "t7"
+        ],
+        "boundary": [
+          "historical non-variational solver identification",
+          "full three-component derivative Class-II constructive measure",
+          "equality of the 0.005 and 0.26 shell-mass anchors",
+          "eta_shell nonzero",
+          "removed rho or Class-II mass regularisers",
+          "t=0 algebraic P3 rates for merely H2 data",
+          "practical historical N32/N64/N128 continuum error bars",
+          "genuine finite-difference lattice Route B",
+          "infinite volume or thermodynamic phase transition",
+          "minimizer uniqueness, BCC existence, or BCC selection",
+          "Sector B or physical-domain closure",
+          "T7"
+        ]
+      }
+    },
+    {
+      "name": "branch_aware_termination_is_not_parameter_identical_physical_closure",
+      "status": "PASS",
+      "detail": {
+        "result": "PASS@BRANCH-AWARE-DECLARED-SCOPE",
+        "meaning": "Sector A has a reproducible definitions-to-dynamics-to-discretization branch and a separate scalar perturbative/constructive continuum branch with their interface and non-implications fixed.",
+        "not_meaning": "A single parameter-identical full-production constructive quantum field theory or a BCC existence/selection theorem."
+      }
+    },
+    {
+      "name": "operator_confirmation_precedes_t5_and_publication",
+      "status": "PASS",
+      "detail": {
+        "id": "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION",
+        "status": "OPEN",
+        "required_before": "T5 promotion and PUBLISHED reproduction bundle",
+        "policy": "governance/reproduction-bundle-policy.md section 14"
+      }
+    }
+  ],
+  "assertion_summary": {
+    "passed": 16,
+    "total": 16
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "honesty_boundary": [
+    "historical non-variational solver identification",
+    "full three-component derivative Class-II constructive measure",
+    "equality of the 0.005 and 0.26 shell-mass anchors",
+    "eta_shell nonzero",
+    "removed rho or Class-II mass regularisers",
+    "t=0 algebraic P3 rates for merely H2 data",
+    "practical historical N32/N64/N128 continuum error bars",
+    "genuine finite-difference lattice Route B",
+    "infinite volume or thermodynamic phase transition",
+    "minimizer uniqueness, BCC existence, or BCC selection",
+    "Sector B or physical-domain closure",
+    "T7"
+  ]
+}

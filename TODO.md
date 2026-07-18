@@ -3,13 +3,16 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 36
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 36
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
+- **T-040** Review and confirm the A5 Sector-A synthesis referee package, then build the scoped T5 PUBLISHED bundle  _(claim: A5-SECTOR-A-SYNTHESIS; gate: A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION)_
+  - Direct 32/32 audits and the visually checked v1.0 referee PDF are ready; no bundle exists before explicit operator confirmation.
+  - _updated 2026-07-18_
 
 ## Backlog
 

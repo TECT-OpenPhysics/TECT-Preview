@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [P5 branch-aware Sector-A synthesis prepared for operator review] - 2026-07-18
+
+Registered A5 as a T4 referee candidate with a frozen branch-aware manifest. The full-production P1-to-P2-to-P3 chain and the separate scalar perturbative/constructive chain are content-addressed without equating the 0.005 and 0.260000000009475 shell-mass anchors or claiming a full derivative Class-II constructive measure. Fresh primary and non-importing independent audits pass 16/16 each; the integrated verifier passes 32/32 with PASS@BRANCH-AWARE-DECLARED-SCOPE. The six-page v1.0 referee PDF passes the standard form check, has zero overfull boxes, and was visually inspected. The operator-confirmation gate remains open; under the no-auto-PUBLISHED rule no A5 bundle exists before explicit review confirmation.
+
 ## [P4 scalar constructive measure promoted to scoped T6] - 2026-07-18
 
 Jusang Lee independently reran the hash-bound one-command verifier from clean commit 7eee2fe84887cc4ccdd311c75095ec84bc9d0d45 and recorded a separate 31/31 PASS artifact with zero failures, zero bad source rows, and zero bad audit rows. Enact T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL under A1-SHELL-POSITIVITY and A2-H2-SEXTIC-COERCIVITY. Add a visually checked three-page T6 enactment PDF. Full derivative Class-II, unsmeared composites, infinite volume, phase transition, Route B, BCC, T7, and P5 remain excluded; P5 synthesis is next.

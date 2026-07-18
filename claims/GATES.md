@@ -4,6 +4,26 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-18.
 
+## A5 Sector-A synthesis gate
+
+### **A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION**
+
+**Statement:** Adversarially review the self-contained A5 branch-aware Sector-A
+synthesis package.  Confirm that it pins the six P1--P4 component records,
+proves the full-production dependency chain and the separate scalar-continuum
+chain, preserves the `0.005` versus `0.26` shell-mass fork, and does not infer a
+full derivative Class-II constructive measure, BCC selection, or physical
+closure.  Direct primary and non-importing independent scripts must pass, and
+the note PDF must pass the form and visual checks.  Under the no-auto-PUBLISHED
+rule, explicit operator confirmation is required before T5 promotion and the
+claim-level PUBLISHED reproduction bundle.
+
+**Status:** OPEN@T4-REFEREE-CANDIDATE (2026-07-18).  The frozen manifest and
+direct one-command verifier pass `16/16 + 16/16 = 32/32` with termination
+verdict `PASS@BRANCH-AWARE-DECLARED-SCOPE`.  Packaging and promotion remain
+blocked only on review of the v1.0 integrated referee package and explicit
+operator confirmation; no pre-confirmation bundle exists.
+
 ## A4 scalar constructive-measure gate
 
 ### **A4-CONSTRUCTIVE-MEASURE-CLOSURE**
