@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A5 T6 conditional-composition referee candidate prepared] - 2026-07-19
+
+
+
 ## [Repair A5 capstone note-PDF completeness before commit] - 2026-07-19
 
 The first uncommitted A5 bundle copied the original-path A4 v2.1 source without its adjacent PDF. The entry scripts and initial hashes passed, but verify_note_pdfs.py caught the incomplete pair. Rebuilt the bundle with the A4 PDF included. Final standalone verification passes 32/32; all 155 hashes match; digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5 recomputes exactly; NOTE-PDF passes for all 190 current notes. The approved A5 v1.2 source, scoped T5 statement, and tier are unchanged. This entry supersedes the preliminary bundle counts and digest in the immediately preceding publication entry.

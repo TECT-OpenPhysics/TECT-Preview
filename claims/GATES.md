@@ -4,6 +4,43 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-19.
 
+## A5 T6 conditional-composition hypothesis and review gate
+
+### **A5-H1-CANONICAL-KERNEL-MANIFEST**
+
+**Statement:** The exact, content-addressed T5 record
+`A1-PRODUCTION-KERNEL-MANIFEST` is the canonical kernel and Fourier-convention
+anchor for the real-scalar continuum branch.  A T6 composition may use this
+sub-T6 record only through this named hypothesis together with
+`A1-KERNEL-CONV` and `A1-SHELL-POSITIVITY`.  The hypothesis fixes record
+identity; it does not identify the scalar shell mass with the full-production
+shell mass or promote the scalar field to the full three-component state space.
+
+**Status:** ACTIVE (2026-07-19).  The immutable A5 T5 capstone pins the source
+record and its PUBLISHED support bundle.  The T6 candidate independently
+rehashes both before applying the scalar-continuum conclusions.
+
+### **A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION**
+
+**Statement:** Independently run and adversarially review the exact A5 T6
+branch-aware conditional-composition referee package.  Confirm that the theorem
+uses exactly seven registered hypotheses, exposes both sub-T6 premises through
+named lifts, proves only the full-production implication chain and the separate
+scalar-continuum conjunction, preserves the `0.005` versus
+`0.260000000009475` shell-mass fork, and retains every declared non-implication.
+The original 155-file T5 capstone must reconstruct unchanged; the primary and
+non-importing audits, exact PDF form/visual checks, and cross-audit comparison
+must pass.  Confirmation does not authorize T7 and does not assert a full
+three-component derivative Class-II constructive measure, BCC selection, or
+physical-domain closure.
+
+**Status:** OPEN.  The exact v1.0 T6 referee candidate is prepared: primary
+21/21, non-importing independent 12/12, and integrated 33/33 preflight pass;
+the six-page PDF passes FORM-CHECK, zero overfull, and visual QA.  Under the
+no-auto-PUBLISHED rule, explicit operator confirmation of this unchanged
+package is required before the claim card can be promoted and the T6 bundle can
+be built last.
+
 ## A5 Sector-A synthesis gate
 
 ### **A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION**

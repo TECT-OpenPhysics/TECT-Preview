@@ -3,16 +3,19 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 37
+Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 37
+
+## In progress
+
+- **T-041** A5: prepare branch-aware T6 conditional-composition theorem package  _(owner: Jusang Lee; claim: A5-SECTOR-A-SYNTHESIS; gate: A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION)_
+  - IN PROGRESS 2026-07-19: exact v1.0 branch-aware T6 conditional-composition referee candidate is complete. The hypothesis-count defect is repaired: the T6 theorem uses seven registered hypotheses, including A5-H1 to lift the T5 kernel manifest and A2-H3 to lift the T5 full functional. Primary 21/21, non-importing independent 12/12, and integrated 33/33 preflight PASS; six-page PDF passes FORM-CHECK, zero overfull, and visual QA. The immutable 155-file T5 capstone and digest are reconstructed. Full derivative Class-II construction, parameter identity, regulariser removal, t=0/historical error bars, Route B, infinite volume/phase transition, BCC/Sector-B, physical closure, and T7 remain excluded. Exact-package independent operator confirmation is now required; only then promote A5 and build the PUBLISHED T6 bundle last beside the T5 bundle.
+  - _updated 2026-07-19_
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-041** A5: prepare branch-aware T6 conditional-composition theorem package  _(claim: A5-SECTOR-A-SYNTHESIS)_
-  - Separate tier-history increment after the scoped T5 capstone. State and prove only the conditional composition of the full-production and scalar-continuum branches under the union of six named hypotheses. Preserve the 0.005 versus 0.260000000009475 mass fork, exclude full derivative Class-II construction and BCC/Sector-B selection, add a new adversarial review and exact operator-confirmed PUBLISHED T6 bundle; do not claim T7.
-  - _updated 2026-07-19_
 
 ## Backlog
 

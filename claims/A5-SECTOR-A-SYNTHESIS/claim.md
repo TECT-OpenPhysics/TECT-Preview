@@ -1,6 +1,7 @@
 # A5-SECTOR-A-SYNTHESIS -- Sector A branch-aware synthesis
 
-**Tier**: T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS (TSv2) |
+**Tier**: T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS (TSv2); separate T6
+conditional-composition referee candidate pending operator confirmation |
 **Lifecycle**: ACTIVE |
 **Last review**: 2026-07-19
 
@@ -25,7 +26,7 @@ shared spectral geometry and declared hypotheses
           +-> A4 finite-volume non-perturbative Gibbs measure
 ```
 
-The synthesis verdict is `PASS@BRANCH-AWARE-DECLARED-SCOPE`.  It means that
+The enacted T5 synthesis verdict is `PASS@BRANCH-AWARE-DECLARED-SCOPE`.  It means that
 both declared chains and their interfaces are reproducibly fixed.  It does
 not mean that they are one parameter-identical full constructive theory.
 
@@ -91,13 +92,65 @@ A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS
 Termination: PASS@BRANCH-AWARE-DECLARED-SCOPE
 ```
 
+The separate T6 candidate has its own non-importing dual audit and does not
+replace the T5 command:
+
+```bash
+python codes/foundations/a5_t6_conditional_verify.py
+```
+
+Its required verdict is
+`A5-T6-CONDITIONAL-COMPOSITION-PREFLIGHT-PASS` together with an explicit
+`REFEREE-CANDIDATE-OPERATOR-CONFIRMATION-REQUIRED` publication state.  A PASS
+does not itself enact T6 or authorize a PUBLISHED bundle.
+
 ## Dependencies and named hypotheses
 
-The six component claims above are hard dependencies.  The synthesis carries
-the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
+The six component claims above are hard dependencies.  The T6 candidate carries
+exactly seven registered hypotheses:
+`A5-H1-CANONICAL-KERNEL-MANIFEST`, `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 `A2-H2-SEXTIC-COERCIVITY`,
 `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`,
 `A3-H1-DIM3-Q4-KERNEL`, and `A3-H2-IR-POSITIVITY`.
+The new A5 hypothesis exposes the T5 kernel-manifest premise; A2-H3 exposes the
+T5 full-functional premise.  This repairs tier monotonicity without pretending
+that either input has independently become T6.
+
+## T6 conditional-composition candidate (T-041)
+
+On the fixed spectral three-torus, under those seven hypotheses and the exact
+six content-addressed premises, the candidate theorem makes two simultaneous
+but separate conclusions:
+
+1. the full variational realization implies the A2 global H2 gradient flow,
+   which in turn is the continuum trajectory approximated by A3 at positive
+   time in its restarted exact-Galerkin scope; and
+2. the scalar perturbative cutoff-removal theorem and scalar finite-volume
+   constructive-measure theorem both hold for their declared positive-mass
+   spectral class, without either theorem proving the other.
+
+The canonical theorem contract has SHA-256
+`df01a1a3606d979307ac0bb8c9de14a4ab2d68fd83d228ed38f9e470eba823fc`.
+The audit rejects any change to the premise set, seven-hypothesis set, branch
+topology, conclusion maps, or non-implication firewall.
+
+### Sector-A weakness map
+
+The conditional theorem directly controls seven interface defects: sub-T6
+dependency visibility, immutable T5 history, branch topology, shell-mass
+identity, scalar-to-full measure inference, the repaired A4 q0=0 endpoint, and
+the positive-time P3 boundary.  It deliberately leaves the following as
+separate research claims:
+
+- full three-component derivative Class-II constructive measure;
+- a canonical parameter-identical scalar/full bridge;
+- removal of eta/rho/Class-II regularisers;
+- t=0 rates and practical historical-grid error bars;
+- finite-difference Route B;
+- infinite volume and phase transition; and
+- BCC existence, stability, and selection.
+
+This separation is part of the theorem, not a documentation afterthought.
 
 ## Devil's-advocate record
 
@@ -129,6 +182,20 @@ the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 10. **"P3 now supplies practical error bars for old N32/N64/N128 runs."**
     UPHELD as false.  Its constants are theorem-grade but deliberately
     conservative and do not certify historical solver trajectories.
+11. **"The existing six hypotheses are sufficient for T6."** VALID-with-
+    mitigation.  They are sufficient for the mathematics already carried by
+    the components, but tier monotonicity also requires the T5 kernel record to
+    be exposed as `A5-H1`; the exact T6 set therefore has seven entries.
+12. **"Conditional composition is merely a relabelled T5 audit."** VALID-with-
+    mitigation.  It adds no new field dynamics, but it is a formal theorem that
+    composes four T6 premises under named lifts and proves a checked conclusion
+    and non-implication map.  Its title and scope state that limited value.
+13. **"The T6 candidate may overwrite the T5 bundle."** DISMISSED.  Every new
+    audit reconstructs the immutable 155-file T5 bundle and its digest before
+    checking the theorem contract; any drift fails closed.
+14. **"A successful local preflight is operator confirmation."** UPHELD as
+    false.  Exact-package review and independent execution remain a registered
+    open gate, and no T6 PUBLISHED bundle exists before that confirmation.
 
 ## Quantitative sanity checks
 
@@ -161,16 +228,17 @@ therefore publication-complete without changing its theorem boundary.
 
 ## No-overclaim
 
-This T5 package does not establish a parameter-identical full-production
-constructive quantum field theory, derivative Class-II Gibbs measure,
+This T5 package and the pending T6 candidate do not establish a parameter-
+identical full-production constructive quantum field theory, a full three-
+component derivative Class-II Gibbs measure,
 `eta_shell` nonzero, removed regularisers, `t=0` P3 rates for H2 data,
 historical-grid error bars, finite-difference Route B, infinite volume, phase
 transition, minimizer uniqueness, BCC existence or selection, Sector-B or
-physical-domain closure, T6, or T7.
+physical-domain closure, enacted T6 before operator confirmation, or T7.
 
 ## Next required action
 
-Prepare a separate branch-aware T6 conditional-composition theorem under the
-six named hypotheses.  It must retain the mass and functional forks, exclude
-full derivative Class-II construction and BCC/Sector-B selection, and preserve
-this T5 bundle as immutable tier history.
+Jusang Lee independently runs the 33/33 verifier, reviews the exact six-page
+v1.0 PDF, and explicitly confirms or rejects the package.  Only after that
+confirmation may the card be promoted and the new T6 PUBLISHED bundle be built
+last beside the immutable T5 bundle.
