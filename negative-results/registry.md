@@ -24,6 +24,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT](#audit-2026-07-19-a4-verifier-tier-drift) | A4 constructive one-command verifier | v1.0.0 still emitted its pre-promotion T5-to-T6 boundary after T6 enactment |
 | [AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY](#audit-2026-07-19-a4-q0-zero-shell-boundary) | A4 constructive referee package v2.0 | max-shell trace notation did not isolate the zero mode at the declared q0=0 endpoint |
 | [AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT](#audit-2026-07-19-a5-dependency-pin-drift) | A5 branch-aware synthesis manifest v1.0 | A3/A4 publication work made the frozen component hashes and four-bundle count stale |
+| [AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS](#audit-2026-07-19-a5-bundle-note-pdf-completeness) | A5 scoped T5 capstone initial bundle build | original-path A4 v2.1 source was copied without its paired PDF |
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention
@@ -271,4 +272,25 @@ and digest `b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162`.
 
 **Evidence:** direct SHA-256 comparison of all six component cards, four component manifests, evidence artifacts, and support manifests on 2026-07-19. The A3 replacement added a fifth valid PUBLISHED support bundle; the A4 package remained an explicit pending dependency.
 
-**Consequence:** schema 1.1 refreshes every changed pin, attests the fifth A3 bundle, records the already completed A5 operator confirmation, and fails closed on the still-pending A4 publication prerequisite. The primary and non-importing independent routes remain 16/16 each and the integrated verifier remains 32/32. This is a dependency-record repair and T5 enactment, not a change to the branch theorem or an authorization to build the A5 bundle before A4.
+**Consequence:** schema 1.1 refreshed the interim pins, attested the fifth A3 bundle, and failed closed on the then-pending A4 publication prerequisite. After corrected A4 v2.1 became PUBLISHED, schema 1.2 refreshed the A4 card/manifest/preflight pins, attested all six support bundles, and recorded the exact A5 v1.2 batch authorization. The primary and non-importing routes remain 16/16 each and the integrated verifier remains 32/32. The final rebuilt A5 T5 PUBLISHED bundle has 155 hashed files and digest `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`. This closes the dependency-record defect without changing the branch proposition or promoting it to T6.
+
+<a id="audit-2026-07-19-a5-bundle-note-pdf-completeness"></a>
+### AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS -- paired A4 PDF omitted from initial A5 bundle
+
+**Failure mode:** The first A5 capstone bundle copied the confirmed A4 v2.1
+source at its original claim path because the A5 audit reads that source hash,
+but copied the A4 PDF only inside the nested A4 support-bundle tree.  The A5
+entry scripts and all 154 initial file hashes passed, yet the repository-wide
+note-PDF check correctly reported that the original-path A4 source inside the
+A5 bundle had no adjacent PDF.
+
+**Evidence:** `verification/scripts/verify_note_pdfs.py` reported exactly one
+missing pair inside the initial A5 bundle.  The bundle was still uncommitted and
+was not retained as tier history.
+
+**Consequence:** The A5 bundle was rebuilt once with the original-path A4 v2.1
+PDF included.  It passes standalone 16/16 + 16/16 = 32/32, all 155 final file
+hashes, content digest
+`5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`,
+and `NOTE-PDF: PASS (190 current notes, all have fresh PDFs)`.  No claim tier,
+proof statement, or approved A5 entry source changed.

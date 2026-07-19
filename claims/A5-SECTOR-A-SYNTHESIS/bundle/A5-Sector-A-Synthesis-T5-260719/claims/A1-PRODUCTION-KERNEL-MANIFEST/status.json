@@ -1,0 +1,42 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-IDENTITY",
+    "A1-SCALAR-ANALYTIC-BRANCH"
+  ],
+  "hypotheses": [],
+  "soft_dependencies": [],
+  "open_gates": [],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-06-23)",
+  "legacy_evidence": [
+    "claims/A1-PRODUCTION-KERNEL-MANIFEST/notes/a1-production-kernel-manifest-260623-260716-v1.7.tex.txt",
+    "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json (6 physical fields + 7-key scalar_slice + origin hash map)",
+    "codes/foundations/n001_solver/ (byte-identical ORIGINAL N-001 solver sources)",
+    "codes/foundations/a1_kernel_checks.py (14/14, v1.6: full runtime scalar_slice from JSON -> original bloch_matrix_linear; artefact stored under this claim)",
+    "claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-operator-01/ (independent REPRODUCTION-PASS package; reviewer ratified constrained scope and main-proof-line status)",
+    "claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/ (current scoped T5 reproduction bundle)"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a1_promotion_evidence.py --mode independent --run-id 20260716-operator-01 --reviewer \"Justin\"",
+    "expected": "REPRODUCTION-PASS; current checker 14/14 PASS; schema complete; runtime symbol matches stored (8.9e-16); scalar_slice settings load-bearing; sha256 pinned",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-07-16",
+  "notes": "T5 promotion (2026-07-16): the current canonical N-001 config clears the CONSISTENCY and ANALYTIC-BRANCH manifests under the full JSON scalar slice, and Justin independently reproduced the 14/14 checker result in runs/promotion-evidence/20260716-operator-01/. The reviewer ratified eps_Z, eps_m, eps_r, the canonical config, the original-source hashes, the constrained scalar-slice scope, and main-proof-line status. The current public package is the v1.7 enactment note plus bundle/A1-N001-Manifest-T5-260716/. This T5 is limited to the pure-Brazovskii scalar-slice manifest. Full PDE, BCC selection, Hessian stability, unrestricted operator theorem, T6, and T7 claims remain excluded. Math424 certification and the v1.3 mimic remain WITHDRAWN.",
+  "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+  "title": "Canonical N-001 production-kernel manifest: scalar-slice consistency gates",
+  "sector": "A",
+  "statement": "A config stores (r_zero, mu2_shell, q0, Z, Y, eta_shell) + a 7-key scalar_slice (laplacian_mode, bcc_mix_epsilon, a_bcc, family_masses, k_lock, z0, eta_shell). The N-001 solver symbol is bloch_matrix_linear(|k|,{r,Z,Y,q0,**scalar_slice}); (r,Z)=kinetic_coefficients(mu2_shell,Y,q0). Gates delta_Z,delta_m,delta_r (separate tolerances); CONSISTENCY: Y>0,Z<0,deltas; ANALYTIC-BRANCH: +mu2_shell>0 AND the scalar_slice (eta_shell=0, k_lock=0, spectral, etc.) reproduces the stored r_zero+Z|k|^2+Y|k|^4. The verifier asserts schema completeness, reads the scalar_slice AS-IS, imports the ORIGINAL solver, and confirms the runtime symbol = stored kernel; each scalar_slice setting is shown load-bearing. Canonical N-001 clears both manifests, matches the real solver, and is scoped T5 after independent operator reproduction. Alias mu2=r FORBIDDEN; template (0.35,-1,0.50) FAILS.",
+  "scope": "pure-Brazovskii scalar slice certification (CONSISTENCY + ANALYTIC-BRANCH); verifier reads the full runtime scalar_slice from JSON and imports the ORIGINAL N-001 solver; full anisotropic operator excluded.",
+  "tier": "T5",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXECUTED"
+  ],
+  "falsifier": "Any required-field, scalar-slice, source-hash, delta, coefficient, or independent-review mismatch invalidates this scoped T5 manifest.",
+  "no_overclaim": "T5 applies only to the canonical pure-Brazovskii scalar-slice manifest. Full anisotropic/locked/shell-biased operator, PDE behavior, BCC selection, Hessian stability, T6, and T7 remain excluded; Math424 cert + v1.3 mimic WITHDRAWN.",
+  "next_action": "Use this T5 claim only within its stated scalar-slice scope. Any future T6/T7 path must add separate theorem-level evidence for the excluded operator/PDE/BCC/Hessian components."
+}

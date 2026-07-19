@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Repair A5 capstone note-PDF completeness before commit] - 2026-07-19
+
+The first uncommitted A5 bundle copied the original-path A4 v2.1 source without its adjacent PDF. The entry scripts and initial hashes passed, but verify_note_pdfs.py caught the incomplete pair. Rebuilt the bundle with the A4 PDF included. Final standalone verification passes 32/32; all 155 hashes match; digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5 recomputes exactly; NOTE-PDF passes for all 190 current notes. The approved A5 v1.2 source, scoped T5 statement, and tier are unchanged. This entry supersedes the preliminary bundle counts and digest in the immediately preceding publication entry.
+
+## [Publish the A5 scoped T5 Sector-A capstone] - 2026-07-19
+
+Refreshed A5 to manifest schema 1.2 after corrected A4 v2.1 became the sixth PUBLISHED support. The exact v1.2 capstone records the operator's explicit batch authorization, passes FORM-CHECK with zero overfull boxes and six-page visual QA, and reruns primary 16/16 plus non-importing independent 16/16. PUBLISHED bundle A5-Sector-A-Synthesis-T5-260719 passes 32/32 from its own root; all 154 hashed files match and digest 02fcf6cce68b5726d472001999251c65e3879901f424842bd6f16e022571a5dc recomputes exactly. Scope remains branch-aware T5: the two mass anchors and scalar/full functional fork remain separate; full derivative Class-II construction, BCC, T6, and T7 are excluded.
+
 ## [Publish corrected A4 scalar constructive T6 support bundle] - 2026-07-19
 
 Jusang Lee confirmed the exact corrected v2.1 source and PDF on 2026-07-19. The final note records that approval and its rebuilt six-page PDF passes FORM-CHECK, zero overfull boxes, and visual QA. Bundle A4-Scalar-Constructive-T6-260719 contains the confirmed note, three entry scripts, both upstream anchors, operator evidence, and the v2.1 preflight. All three scripts pass from the bundle root (18/18 + 15/15 = 33/33); all 18 listed file hashes and content digest b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162 independently recompute. A4 is publication-complete at its declared finite-volume real-scalar T6 scope and does not extend to derivative Class-II, infinite volume, phase transition, Route B, BCC, or T7.

@@ -19,7 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-047](#r-047) | Branch-aware Sector-A synthesis and termination closure | T5 CLOSED; operator-confirmed two-branch dependency and non-implication capstone; refreshed primary 16/16 + independent 16/16 preflight |
+| [R-047](#r-047) | Branch-aware Sector-A synthesis and termination closure | T5 PUBLISHED; six dependency bundles plus exact v1.2 capstone; direct and standalone primary 16/16 + independent 16/16 PASS |
 | [R-046](#r-046) | Finite-volume scalar spectral constructive Gibbs measure | T6 CONDITIONAL-THEOREM; full Galerkin sequence converges weakly on L2, lifted densities in L1/TV, and smeared cylinder-polynomial correlations; 31/31 plus independent operator run |
 | [R-045](#r-045) | Scalar spectral perturbative continuum limit | T6 PROVED CONDITIONAL; every connected scalar Brazovskii amplitude converges order-by-order for fixed external momenta under the spectral/Galerkin regulator; clean PUBLISHED support bundle 6/6 + 8/8 |
 | [R-044](#r-044) | Full-production three-component gradient-flow well-posedness on the fixed torus | T6 CONDITIONAL-THEOREM; global H2 existence/uniqueness, continuous dependence, exact energy identity, and positive-time C-infinity smoothing; 61/61 aggregate audit |
@@ -72,13 +72,13 @@ policy in `governance/development-history.md`.
 
 **Statement (one line):** The frozen Sector-A records form a reproducible full-production variational/PDE/exact-Galerkin branch and a separate real-scalar perturbative/constructive continuum branch, with their dependency edges, shared geometry, `0.005` versus `0.260000000009475` mass fork, and full-Class-II non-implication explicitly fixed.
 
-**Proven in:** `A5-SECTOR-A-SYNTHESIS`, operator-confirmed referee package v1.1 and manifest schema 1.1. Primary and non-importing independent audits are rerun by `a5_sector_a_synthesis_verify.py`.
+**Proven in:** `A5-SECTOR-A-SYNTHESIS`, exact operator-confirmed referee package v1.2, manifest schema 1.2, and PUBLISHED bundle `claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719`. Primary and non-importing independent audits are rerun by `a5_sector_a_synthesis_verify.py`.
 
 **Reuse scope:** Sector-A termination and interface map for downstream work that must distinguish a canonical full-production dynamics chain from scalar perturbative and finite-volume constructive control. It does not identify the two parameter anchors or construct a full derivative Class-II Gibbs measure.
 
-**Tier:** T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. Jusang Lee independently ran and approved the original 32/32 package; the prior dependency preflight passes 16/16 + 16/16 = 32/32. The corrected A4 v2.1 T6 support is now the sixth PUBLISHED dependency. A5 must refresh its component hashes, sixth bundle attestation, and exact capstone entry before its own PUBLISHED packaging; the theorem scope remains unchanged.
+**Tier:** T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS and publication-complete. Jusang Lee independently ran and approved the original 32/32 package, then explicitly authorized the remaining approvals in batch after the exact v1.2 candidate and initial PDF validation existed. Schema 1.2 attests all six PUBLISHED dependency bundles, including corrected A4 v2.1. Direct and bundle-root runs each pass 16/16 + 16/16 = 32/32. Initial packaging omitted the paired A4 PDF at its original runtime path; the pre-commit note-PDF check caught it and the bundle was rebuilt. All final 155 hashed files match, content digest `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5` recomputes exactly, and all 190 current notes have fresh PDFs. The theorem scope remains unchanged.
 
-**Publication target:** Sector-A synthesis/capstone package. A future T6 result requires a separately stated conditional-composition theorem and must retain every branch and non-implication boundary.
+**Publication target:** Achieved for the scoped T5 Sector-A synthesis/capstone. A future T6 result requires a separately stated conditional-composition theorem and must retain every branch and non-implication boundary.
 
 <a id="r-046"></a>
 ### R-046 -- finite-volume scalar spectral constructive Gibbs measure

@@ -61,11 +61,11 @@ them.
 - `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`: T6 conditional finite-volume
   real-scalar spectral Gibbs measure.
 
-Five load-bearing support bundles are already PUBLISHED and content-addressed:
-the A1 kernel, A1 full functional, A2 PDE, repaired A3 full discretization,
-and scalar A3 perturbative packages.  A4 is an operator-approved T6 theorem
-with an integrated v2.0 publication candidate, but its claim-level support
-bundle still awaits confirmation of that exact document.
+All six load-bearing support bundles are PUBLISHED and content-addressed: the
+A1 kernel, A1 full functional, A2 PDE, repaired A3 full discretization, scalar
+A3 perturbative, and corrected A4 v2.1 constructive packages.  The A5 T5
+capstone is also PUBLISHED as
+`claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719`.
 
 ## Reproduction and evidence
 
@@ -118,9 +118,9 @@ the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 6. **"Existing support bundles eliminate the need for A5 review."**
    DISMISSED.  They verify components, while A5 adds the load-bearing branch
    map and non-implication firewall that no component states alone.
-7. **"Operator confirmation permits immediate A5 PUBLISHED packaging even
-   when a support package is pending."** UPHELD as false.  Dependency-first
-   policy requires the A4 support bundle before the A5 capstone bundle.
+7. **"Batch approval permits packaging before direct validation."** UPHELD as
+   false.  The v1.2 source remained unchanged; its PDF and 32/32 preflight were
+   validated before the bundle was built, and the bundle was rerun afterward.
 8. **"Sector-A termination proves BCC or physical vacuum selection."**
    UPHELD as false.  BCC existence/selection, minimizer uniqueness, Sector B,
    and physical-domain closure are excluded.
@@ -134,11 +134,14 @@ the registered hypotheses `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 
 - Six component cards are hash-pinned, ACTIVE, gate-free in their own scopes,
   and have AVAILABLE reproduction commands.
-- Five published support-bundle manifests and their bundle digests/runlogs are
+- Six published support-bundle manifests and their bundle digests/runlogs are
   independently rechecked.
 - Scalar perturbative evidence is `8/8`; scalar constructive evidence is
-  `31/31`.
+  `33/33` at the corrected publication boundary.
 - The A5 audits pass `16/16 + 16/16 = 32/32`.
+- The A5 PUBLISHED bundle has 155 hashed files; all match, and content digest
+  `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`
+  recomputes exactly.
 - The mass separation is approximately `0.255000000009475`, so it cannot be
   hidden by the upstream `1e-9` kernel tolerance.
 
@@ -148,10 +151,13 @@ Jusang Lee independently ran the integrated 32/32 CLI and explicitly approved
 the v1.0 referee package on 2026-07-19.  This closes
 `A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION` and enacts scoped T5: the
 deliverable closes a pinned synthesis and interface question but is not a new
-T6 mathematical theorem.  The v1.1 preflight refreshes the A3/A4 dependency
-hashes without changing the branch proposition.  The claim-level A5 bundle is
-still deferred because dependency-first publication requires the A4 T6
-support bundle to be PUBLISHED first.
+T6 mathematical theorem.  Corrected A4 v2.1 and all six support bundles are
+now PUBLISHED.  The exact v1.2 capstone entry records the later explicit batch
+approval, passes FORM-CHECK with zero overfull boxes and six-page visual QA,
+and reruns 32/32.  Its PUBLISHED T5 bundle also passes 32/32 from its own root,
+complete 155-file hash and content-digest integrity, and the 190-current-note
+PDF check after the paired A4 PDF omission was caught and repaired.  The scoped T5 result is
+therefore publication-complete without changing its theorem boundary.
 
 ## No-overclaim
 
@@ -164,6 +170,7 @@ physical-domain closure, T6, or T7.
 
 ## Next required action
 
-Confirm the exact A4 v2.0 package and publish its T6 support bundle.  Then
-refresh the single A4 prerequisite row and build the already confirmed A5 T5
-capstone bundle as the final dependency-first packaging step.
+Prepare a separate branch-aware T6 conditional-composition theorem under the
+six named hypotheses.  It must retain the mass and functional forks, exclude
+full derivative Class-II construction and BCC/Sector-B selection, and preserve
+this T5 bundle as immutable tier history.

@@ -3,16 +3,16 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 36
+Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 37
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
-- **T-040** Publish the A4 T6 support bundle, then build the confirmed A5 scoped T5 capstone bundle  _(claim: A5-SECTOR-A-SYNTHESIS)_
-  - A5 operator confirmation is CLOSED and scoped T5 is enacted. Corrected A4 v2.1 is operator-confirmed and its T6 PUBLISHED support bundle passes standalone 33/33, all 18 file hashes, and digest b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162. Dependency-first packaging is now unblocked: refresh the A5 pins and dual audit to the sixth support bundle, issue the exact capstone entry, then build the A5 T5 PUBLISHED bundle after its exact-package check.
-  - _updated 2026-07-18_
+- **T-041** A5: prepare branch-aware T6 conditional-composition theorem package  _(claim: A5-SECTOR-A-SYNTHESIS)_
+  - Separate tier-history increment after the scoped T5 capstone. State and prove only the conditional composition of the full-production and scalar-continuum branches under the union of six named hypotheses. Preserve the 0.005 versus 0.260000000009475 mass fork, exclude full derivative Class-II construction and BCC/Sector-B selection, add a new adversarial review and exact operator-confirmed PUBLISHED T6 bundle; do not claim T7.
+  - _updated 2026-07-19_
 
 ## Backlog
 
@@ -119,3 +119,6 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 36
 - **T-039** P4: enact scoped T6 after independent operator reproduction  _(claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE; gate: A4-CONSTRUCTIVE-MEASURE-CLOSURE)_
   - Bind Jusang operator evidence, issue T6 enactment addendum, and preserve scalar-only exclusions.
   - _updated 2026-07-18_
+- **T-040** Publish the A4 T6 support bundle, then build the confirmed A5 scoped T5 capstone bundle  _(claim: A5-SECTOR-A-SYNTHESIS)_
+  - COMPLETE 2026-07-19: corrected A4 v2.1 support is PUBLISHED; A5 schema 1.2 attests all six support bundles; exact v1.2 is operator-confirmed by batch authorization and passes FORM-CHECK, zero overfull, six-page visual QA, and direct 32/32. Initial packaging omitted the paired original-path A4 PDF; the note-PDF gate caught it and AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS records the rebuild. Final PUBLISHED bundle A5-Sector-A-Synthesis-T5-260719 passes standalone 32/32, all 155 file hashes, all 190 current-note PDF pairs, and digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5. Next is T-041, the separate branch-aware T6 conditional-composition package.
+  - _updated 2026-07-19_

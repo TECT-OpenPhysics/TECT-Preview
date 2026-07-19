@@ -13,6 +13,6 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a5-sector-a-synthesis-referee-package` | v1.1 | T5 | Sector A has a reproducible full-production variational/PDE/Galerkin branch and a separate real-scalar perturbative/constructive branch, with exact i… | EXACT + EXECUTED + CONDITIONAL. | Confirm and publish the exact A4 v2.0 support package; then build the A5 T5 PUBLISHED cap… |
+| `a5-sector-a-synthesis-referee-package` | v1.2 | T5 | Sector A has a reproducible full-production variational/PDE/Galerkin branch and a separate real-scalar perturbative/constructive branch, with exact i… | EXACT + EXECUTED + CONDITIONAL. | Build, independently integrity-check, and register the A5 T5 PUBLISHED capstone bundle la… |
 
-<!-- generated 2026-07-18T16:23:15Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-19T10:44:13Z by build_index.py v1.0.1 -->

@@ -1,0 +1,89 @@
+{
+  "schema": "tect/a5-sector-a-synthesis-integrated-result/1.0",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "script_version": "1.2.0",
+  "verdict": "A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS",
+  "scope": "fresh primary and non-importing independent audit of the branch-aware P1-P4 synthesis",
+  "termination_verdict": {
+    "result": "PASS@BRANCH-AWARE-DECLARED-SCOPE",
+    "meaning": "Sector A has a reproducible definitions-to-dynamics-to-discretization branch and a separate scalar perturbative/constructive continuum branch with their interface and non-implications fixed.",
+    "not_meaning": "A single parameter-identical full-production constructive quantum field theory or a BCC existence/selection theorem."
+  },
+  "source_reports": [
+    {
+      "authority": "primary_audit",
+      "path": "codes/foundations/a5_sector_a_synthesis_audit.py",
+      "actual_sha256": "81db2d03f68fd73855cf7bee1c8b98e8cc8c6685ab4e255ac9a1b2633fce5734",
+      "expected_sha256": "81db2d03f68fd73855cf7bee1c8b98e8cc8c6685ab4e255ac9a1b2633fce5734",
+      "passed": true
+    },
+    {
+      "authority": "independent_audit",
+      "path": "codes/foundations/a5_sector_a_synthesis_independent.py",
+      "actual_sha256": "1c2a5c0229d8348296ebad1d8426621862e787a1ed9d51e84b05c07956119dbd",
+      "expected_sha256": "1c2a5c0229d8348296ebad1d8426621862e787a1ed9d51e84b05c07956119dbd",
+      "passed": true
+    },
+    {
+      "authority": "one_command_verifier",
+      "path": "codes/foundations/a5_sector_a_synthesis_verify.py",
+      "actual_sha256": "95cc7d557a0ff52d65f02b2bcea7d74272df25edca02eec0fa3d6d0199dca24e",
+      "expected_sha256": "95cc7d557a0ff52d65f02b2bcea7d74272df25edca02eec0fa3d6d0199dca24e",
+      "passed": true
+    }
+  ],
+  "audit_reports": [
+    {
+      "audit": "primary_audit",
+      "mode": "fresh temporary re-execution",
+      "returncode": 0,
+      "expected_verdict": "A5-SECTOR-A-SYNTHESIS-PRIMARY-PASS",
+      "actual_verdict": "A5-SECTOR-A-SYNTHESIS-PRIMARY-PASS",
+      "assertions": {
+        "passed": 16,
+        "total": 16
+      },
+      "passed": true
+    },
+    {
+      "audit": "independent_audit",
+      "mode": "fresh non-importing temporary re-execution",
+      "returncode": 0,
+      "expected_verdict": "A5-SECTOR-A-SYNTHESIS-INDEPENDENT-PASS",
+      "actual_verdict": "A5-SECTOR-A-SYNTHESIS-INDEPENDENT-PASS",
+      "assertions": {
+        "passed": 16,
+        "total": 16
+      },
+      "passed": true
+    }
+  ],
+  "cross_audit": {
+    "branch_agreement": true,
+    "mass_fork_agreement": true
+  },
+  "assertion_summary": {
+    "passed": 32,
+    "total": 32
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "failures": [],
+  "promotion_boundary": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS; all six support bundles are PUBLISHED; exact A5 v1.2 package confirmation is required before capstone PUBLISHED packaging",
+  "not_closed_here": [
+    "historical non-variational solver identification",
+    "full three-component derivative Class-II constructive measure",
+    "equality of the 0.005 and 0.26 shell-mass anchors",
+    "eta_shell nonzero",
+    "removed rho or Class-II mass regularisers",
+    "t=0 algebraic P3 rates for merely H2 data",
+    "practical historical N32/N64/N128 continuum error bars",
+    "genuine finite-difference lattice Route B",
+    "infinite volume or thermodynamic phase transition",
+    "minimizer uniqueness, BCC existence, or BCC selection",
+    "Sector B or physical-domain closure",
+    "T7"
+  ]
+}

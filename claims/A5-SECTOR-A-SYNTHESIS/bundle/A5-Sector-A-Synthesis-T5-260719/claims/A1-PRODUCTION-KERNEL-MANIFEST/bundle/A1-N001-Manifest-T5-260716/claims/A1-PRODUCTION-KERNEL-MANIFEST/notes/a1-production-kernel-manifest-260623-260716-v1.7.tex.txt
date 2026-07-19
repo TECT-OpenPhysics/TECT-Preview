@@ -1,0 +1,84 @@
+% =============================================================================
+% Title: A1 production kernel manifest -- scoped T5 promotion enactment (v1.7)
+% Claim: A1-PRODUCTION-KERNEL-MANIFEST (depends on A1-KERNEL-IDENTITY, A1-SCALAR-ANALYTIC-BRANCH)
+% Version: v1.7 -- first issued 2026-06-23; this version issued 2026-07-16
+% Status: T5 VERIFIED -- canonical N-001 pure-Brazovskii scalar-slice manifest only
+%
+% Revision history (cumulative):
+%   v1.0--v1.5 (2026-06-23): corrected the vacuous gate, stored-field reader,
+%   backend provenance, shell-bias scope, and full runtime scalar-slice handling.
+%   v1.6 (2026-07-16): reconciled evidence ownership and stated the remaining
+%   requirements for a T5 package.
+%   v1.7 (2026-07-16): enacts the scoped T5 promotion after independent operator
+%   reproduction and reviewer ratification.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This note records the scoped T5 promotion of the canonical N-001 production-kernel
+manifest.  The certified object is only the pure-Brazovskii scalar slice encoded in
+\url{claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json}.  The full
+anisotropic, locked, shell-biased, condensate, Hessian, PDE, BCC-selection, and
+unrestricted operator-theorem claims remain outside scope.
+
+\section*{2. Verified runtime configuration}
+
+The verifier reads the six physical fields, three tolerances, and the complete
+seven-key \texttt{scalar\_slice} from the canonical JSON.  It imports the original
+vendored N-001 solver sources and obtains
+\[
+ \texttt{bloch\_matrix\_linear}(|k|,\{r,Z,Y,q_0,\texttt{**scalar\_slice}\})
+ =r_{\rm zero}+Z|k|^2+Y|k|^4
+\]
+with maximum residual $8.9\times10^{-16}$.  The stored source hashes, the three
+independent consistency deltas, the positive shell mass, and the load-bearing
+scalar-slice settings are all checked.
+
+\section*{3. Independent reproduction}
+
+The operator evidence package
+\url{claims/A1-PRODUCTION-KERNEL-MANIFEST/runs/promotion-evidence/20260716-operator-01/}
+records an independent \texttt{REPRODUCTION-PASS}.  The reviewer checked the
+recorded command, \texttt{all\_pass=true}, checker version, input hashes, constrained
+scope, no-overclaim boundary, and main-proof-line status.  That review is the
+ratification that converts the earlier 14/14 gate pass into a scoped T5 result.
+
+\section*{4. T5 bundle requirement}
+
+The June 2026 bundle directories are retained only as superseded pre-certification
+reproduction history.  The current published package must be a claim-top-level
+T5-stamped bundle built from this note, the current verifier, the canonical JSON,
+the vendored original solver sources, and the current PASS output.  The bundle does
+not enlarge the claim beyond this pinned scalar-slice scope.
+
+\section*{5. Devil's-advocate}
+
+($\alpha$) \emph{``The checker chooses the scalar slice.''} DISMISSED -- every
+setting is loaded from JSON and demonstrated load-bearing.  ($\beta$) \emph{``The
+vendored solver is not original.''} DISMISSED -- all three source hashes are checked
+against provenance and config.  ($\gamma$) \emph{``Scalar-slice agreement proves the
+full operator.''} VALID with mitigation -- the scope excludes the full operator,
+PDE behavior, BCC selection, and Hessian stability.  ($\delta$) \emph{``T5 implies
+T6 or T7.''} UPHELD as a prohibited inference -- this note provides no theorem-level
+discharge for the excluded components.
+
+\section*{6. Result footer}
+
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-KERNEL-MANIFEST
+Precise statement:       The canonical N-001 pure scalar slice passes the stored-field,
+                         runtime-symbol, positivity, and source-hash checks (14/14)
+                         and has independent operator reproduction.
+Scope:                   Pure-Brazovskii scalar slice only; full operator/PDE/BCC
+                         and Hessian claims excluded.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SCALAR-ANALYTIC-BRANCH.
+Evidence grade:          ANALYTIC + EXECUTED; independent reproduction package.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         A1 kernel checks v1.7.0: 14/14 PASS.
+Falsification gate:      Config, scalar-slice, source-hash, delta, coefficient,
+                         or independent-review mismatch invalidates this scoped T5.
+Tier before / after:     T1 / T5 (scoped pure-Brazovskii scalar-slice manifest).
+No-overclaim statement:  No full-operator, PDE, BCC, Hessian, T6, or T7 claim.
+Next required action:    Use only within pinned scalar-slice scope; separate theorem
+                         evidence is required for any future T6/T7 path.
+\end{verbatim}
