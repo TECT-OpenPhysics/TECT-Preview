@@ -160,9 +160,13 @@ the v2.1 repair.  The current publication preflight uses verifier v1.2.0 and
 is frozen at `runs/2026-07-19-referee-preflight-v2.1/result.json` (33/33 PASS,
 SHA-256 `85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`).
 The corrected integrated six-page referee package v2.1 passes FORM-CHECK, has
-zero overfull boxes, and passes visual QA.  Because the entry document changed,
-v2.1 is the renewed exact operator-review candidate; no PUBLISHED bundle exists
-until that document is confirmed.
+zero overfull boxes, and passes visual QA.  Jusang Lee confirmed that exact
+v2.1 source and PDF on 2026-07-19.  The claim-level PUBLISHED bundle
+`bundle/A4-Scalar-Constructive-T6-260719` contains the confirmed note, all three
+entry scripts, both upstream anchors, operator and current preflight evidence,
+and captured PASS logs.  Its 18 hashed files and digest
+`b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162`
+independently recompute, and its standalone one-command run passes 33/33.
 
 ## No-overclaim
 
@@ -173,7 +177,6 @@ selection, T7, or the future P5 Sector-A synthesis.
 
 ## Next required action
 
-Operator review and confirmation of
-`a4-scalar-constructive-referee-package-260719-v2.1`; then build and
-integrity-check the claim-level T6 PUBLISHED bundle before the A5 capstone is
-packaged.
+Refresh the A5 synthesis pins to this PUBLISHED A4 support bundle, rerun the A5
+dual audit, and prepare the exact scoped-T5 capstone entry package for its
+bundle-last publication step.

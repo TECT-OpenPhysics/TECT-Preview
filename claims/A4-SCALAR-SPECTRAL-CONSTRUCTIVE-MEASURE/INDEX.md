@@ -13,8 +13,8 @@
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a4-scalar-constructive-referee-package` | v2.1 | — | Full sharp spectral Galerkin Gibbs sequence converges weakly on real L2; lifted densities converge in L1/TV; finite-degree smeared cylinder polynomia… | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Operator review/confirmation of this exact v2.1; then build, integrity-check, and registe… |
+| `a4-scalar-constructive-referee-package` | v2.1 | — | Full sharp spectral Galerkin Gibbs sequence converges weakly on real L2; lifted densities converge in L1/TV; finite-degree smeared cylinder polynomia… | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Build, integrity-check, and register the T6 PUBLISHED bundle before the A5 capstone bundl… |
 | `a4-scalar-constructive-t6-enactment` | v1.0 | T6 | Full spectral Galerkin Gibbs sequence converges weakly on L2; lifted densities converge in L1/TV; smeared cylinder-polynomial correlations converge. | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Build the separate P5 Sector-A synthesis and reproduction bundle with these exclusions in… |
 | `a4-scalar-spectral-constructive-measure` | v1.0 | T5 | The full sharp spectral Galerkin Gibbs sequence converges weakly on L2; common-Gaussian lifted densities converge in L1/total variation. | ANALYTIC + EXACT + EXECUTED + CONDITIONAL. | Independent operator execution, then scoped T6 review; full Class-II remains a separate p… |
 
-<!-- generated 2026-07-19T03:46:01Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-19T04:48:55Z by build_index.py v1.0.1 -->

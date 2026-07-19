@@ -259,8 +259,10 @@ v1.2.0 passes 18/18 + 15/15 = 33/33 at
 `runs/2026-07-19-referee-preflight-v2.1/result.json`, SHA-256
 `85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`.
 The T6 theorem and scope are unchanged.  v2.0 remains approved review
-provenance but is superseded as the publication entry; exact v2.1 confirmation
-is required before bundling.
+provenance but is superseded as the publication entry.  Jusang Lee confirmed
+exact v2.1 on 2026-07-19; the PUBLISHED bundle
+`A4-Scalar-Constructive-T6-260719` passes standalone 33/33, all 18 file hashes,
+and digest `b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162`.
 
 <a id="audit-2026-07-19-a5-dependency-pin-drift"></a>
 ### AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT -- stale A3/A4 pins in the A5 v1.0 synthesis manifest

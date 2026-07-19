@@ -76,7 +76,7 @@ policy in `governance/development-history.md`.
 
 **Reuse scope:** Sector-A termination and interface map for downstream work that must distinguish a canonical full-production dynamics chain from scalar perturbative and finite-volume constructive control. It does not identify the two parameter anchors or construct a full derivative Class-II Gibbs measure.
 
-**Tier:** T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. Jusang Lee independently ran and approved the original 32/32 package; the refreshed dependency preflight again passes 16/16 + 16/16 = 32/32. Five support bundles verify. The A5 PUBLISHED capstone bundle remains deferred until the exact A4 v2.0 package is confirmed and its T6 support bundle is published.
+**Tier:** T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. Jusang Lee independently ran and approved the original 32/32 package; the prior dependency preflight passes 16/16 + 16/16 = 32/32. The corrected A4 v2.1 T6 support is now the sixth PUBLISHED dependency. A5 must refresh its component hashes, sixth bundle attestation, and exact capstone entry before its own PUBLISHED packaging; the theorem scope remains unchanged.
 
 **Publication target:** Sector-A synthesis/capstone package. A future T6 result requires a separately stated conditional-composition theorem and must retain every branch and non-implication boundary.
 
@@ -89,9 +89,9 @@ policy in `governance/development-history.md`.
 
 **Reuse scope:** Finite-volume non-perturbative construction for scalar `q^4` Gaussian fields with a stable quartic-sextic local potential. It excludes derivative Class-II currents, unsmeared composites, infinite volume, phase transition, genuine finite-difference Route B, BCC, and parameter identity with the full-production branch.
 
-**Tier:** T6 CONDITIONAL-THEOREM under `A1-SHELL-POSITIVITY` and `A2-H2-SEXTIC-COERCIVITY`. Jusang Lee's independent 2026-07-18 run passes 31/31. After operator confirmation of v2.0, final review found its `q0=0` shell-index endpoint defect; corrected v2.1 and verifier v1.2.0 pass 18/18 + 15/15 = 33/33 with digest `85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`. The theorem is unchanged, but the exact corrected v2.1 document requires renewed confirmation before its PUBLISHED bundle is built.
+**Tier:** T6 CONDITIONAL-THEOREM under `A1-SHELL-POSITIVITY` and `A2-H2-SEXTIC-COERCIVITY`. Jusang Lee's independent 2026-07-18 run passes 31/31. After operator confirmation of v2.0, final review found its `q0=0` shell-index endpoint defect; corrected v2.1 and verifier v1.2.0 pass 18/18 + 15/15 = 33/33 with artifact digest `85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`. Jusang Lee confirmed exact v2.1 on 2026-07-19. PUBLISHED bundle `A4-Scalar-Constructive-T6-260719` passes standalone 33/33, all 18 file hashes, and content digest `b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162`.
 
-**Publication target:** Sector-A scalar constructive-measure theorem and support package for the branch-aware A5 synthesis.
+**Publication target:** Achieved for the Sector-A scalar constructive-measure support theorem. The bundle is now a dependency-first PUBLISHED input to the branch-aware A5 synthesis.
 
 <a id="r-045"></a>
 ### R-045 -- scalar spectral perturbative continuum limit

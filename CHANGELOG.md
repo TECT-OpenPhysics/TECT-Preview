@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Publish corrected A4 scalar constructive T6 support bundle] - 2026-07-19
+
+Jusang Lee confirmed the exact corrected v2.1 source and PDF on 2026-07-19. The final note records that approval and its rebuilt six-page PDF passes FORM-CHECK, zero overfull boxes, and visual QA. Bundle A4-Scalar-Constructive-T6-260719 contains the confirmed note, three entry scripts, both upstream anchors, operator evidence, and the v2.1 preflight. All three scripts pass from the bundle root (18/18 + 15/15 = 33/33); all 18 listed file hashes and content digest b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162 independently recompute. A4 is publication-complete at its declared finite-volume real-scalar T6 scope and does not extend to derivative Class-II, infinite volume, phase transition, Route B, BCC, or T7.
+
 ## [Repair A4 q0=0 shell-boundary defect before publication] - 2026-07-19
 
 Final adversarial review after operator confirmation of v2.0 found that the displayed max-shell trace argument admitted q0=0 but started its nonzero-shell p-series at m=0. The corrected v2.1 entry note uses m0=max(1,ceil(sqrt(2)q0/alpha)), treats the zero mode in the finite inner set, and adds independent q0=0 boundary assertions. Fresh primary 18/18 and non-importing independent 15/15 audits give 33/33 PASS. FORM-CHECK, zero-overfull, and six-page visual QA pass. The T6 theorem and scope are unchanged; because the exact entry document changed, v2.1 requires renewed operator confirmation before a PUBLISHED bundle is built.

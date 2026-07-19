@@ -6,7 +6,7 @@
 
 Generated: 2026-07-19
 
-**1608 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**1627 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -194,9 +194,22 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-UV-SUPERRENORMALISABILITY/claim.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `1ebb7dbd470b` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/status.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `a2e8cc306d5c` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/LINEAGE.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `ae1f4bf78269` |
-| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/claim.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `cea51aee6108` |
-| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `fac6092f6d1b` |
-| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `bd3e61e72f65` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/MANIFEST.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `a225fbe02452` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/README.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `1cdba8b73434` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `88da7764302b` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `030d1b7c62e7` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `30e73751c474` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/codes/foundations/a4_scalar_constructive_measure.py` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-19 | v1.1.0 | ACTIVE | `3db46289e7c4` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/codes/foundations/a4_scalar_constructive_measure_independent.py` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-19 | v1.1.0 | ACTIVE | `640c23958806` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/codes/foundations/a4_scalar_constructive_measure_verify.py` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-19 | v1.2.0 | ACTIVE | `8d062707406a` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/environment.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `ebb8252d8cfa` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/expected/a4_scalar_constructive_measure.log` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `8163e6ca4153` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/expected/a4_scalar_constructive_measure_independent.log` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `7a257c06c3f8` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/expected/a4_scalar_constructive_measure_verify.log` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `304dd9d75eda` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/requirements.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `457e45615e94` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/claim.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `03cba52834e9` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `26221e875784` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `1a1747ccb219` |
 | `claims/A5-SECTOR-A-SYNTHESIS/claim.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `85641c4366a8` |
 | `claims/A5-SECTOR-A-SYNTHESIS/status.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `a81625636b0c` |
 | `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `0370f4e3b76f` |
@@ -553,10 +566,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-superrenormalisability-continuum-260623-260623-v1.0.tex.txt` | A3-UV-SUPERRENORMALISABILITY | 2026-06-23 | 2026-06-23 | v1.0 | SUPERSEDED | `cfd2a5e20ae5` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-uv-superrenormalisability-260623-260623-v1.1.pdf` | A3-UV-SUPERRENORMALISABILITY | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `e6453371e90c` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/notes/a3-uv-superrenormalisability-260623-260623-v1.1.tex.txt` | A3-UV-SUPERRENORMALISABILITY | 2026-06-23 | 2026-06-23 | v1.1 | ACTIVE | `e1f14f6c3c28` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.1 | ACTIVE | `98987fff39e2` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.1 | ACTIVE | `6b68e5d7a299` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.0.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.0 | ACTIVE | `2ccd039dbfd1` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.0.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.0 | ACTIVE | `25ef6e64c020` |
-| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.1 | ACTIVE | `f4788612e300` |
-| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.1 | ACTIVE | `1d8ef67588fd` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.1 | ACTIVE | `98987fff39e2` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-19 | 2026-07-19 | v2.1 | ACTIVE | `6b68e5d7a299` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-t6-enactment-260718-v1.0.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `3ec4ab11e11a` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-t6-enactment-260718-v1.0.tex.txt` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `35bc2a949760` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-spectral-constructive-measure-260718-v1.0.pdf` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | 2026-07-18 | 2026-07-18 | v1.0 | ACTIVE | `847112ccc304` |
@@ -1229,6 +1244,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `60f9ea6d8738` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/claims/A3-UV-SUPERRENORMALISABILITY/runs/a3_renormalisation_checks.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `229272ae341b` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/runs/a3_renormalisation_checks.json` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `229272ae341b` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-independent-constructive-measure/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `97f457b01546` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `fb2d81ba75d9` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-primary-constructive-measure/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `ffa48e583a4b` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-19-referee-preflight-v2.1/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `85da0df0d2b9` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-independent-constructive-measure/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `8308483e154a` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-integrated-constructive-measure/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `fb2d81ba75d9` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `fb2d81ba75d9` |
@@ -1582,16 +1601,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `249335dafb21` |
 | `claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/INDEX.md` | A3-PERTURBATIVE-CONTINUUM-CORRELATORS | — | — | — | ACTIVE | `36bc8af82f42` |
 | `claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `29f58267f507` |
-| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/INDEX.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `8128a78b35fe` |
+| `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/INDEX.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `1148397f2b6a` |
 | `claims/A5-SECTOR-A-SYNTHESIS/INDEX.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `9e73f85f86fe` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `fadc0b632f94` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `ad2a754c6df9` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `d8e4515d88b7` |
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `29081c5cbb41` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `ac67c452eb31` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `f1ef9c60162f` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `025f59f20fc2` |
@@ -1622,16 +1641,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `44cf88628769` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `ba70b14c0a01` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `a4a47b7b980e` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `3c76e6baf928` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `2d34d884078b` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `d34556ea715f` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `51569de02924` |
+| `TODO.md` | — | — | — | — | ACTIVE | `6f51ec9b6c2e` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -1641,7 +1660,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `84ef35dc3c1e` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `d951c1ab1cce` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -1679,7 +1698,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
-| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `b54e6068c314` |
+| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `95d3fdd7006d` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `fde5e96b65ae` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
@@ -1692,5 +1711,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `716201a296d5` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `9f746adae220` |
 

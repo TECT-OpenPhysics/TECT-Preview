@@ -21,10 +21,11 @@ claim-level PUBLISHED reproduction bundle.
 **Status:** CLOSED@T5-BRANCH-AWARE-SECTOR-A-SYNTHESIS (2026-07-19).  Jusang
 Lee independently ran the integrated `16/16 + 16/16 = 32/32` verifier and
 explicitly approved the v1.0 referee package.  The T5 synthesis tier is enacted.
-The separate A5 capstone PUBLISHED bundle is deferred under dependency-first
-policy until the exact A4 v2.0 package is operator-confirmed and its T6 support
-bundle is PUBLISHED; this packaging prerequisite does not reopen this review
-gate or enlarge the T5 theorem scope.
+The dependency-first packaging prerequisite is now satisfied by the
+operator-confirmed corrected A4 v2.1 package and its PUBLISHED T6 support bundle
+`A4-Scalar-Constructive-T6-260719`.  The A5 review gate remains closed and the
+capstone may now be refreshed to that exact support digest before packaging;
+this does not enlarge the T5 theorem scope.
 
 ## A4 scalar constructive-measure gate
 
@@ -61,8 +62,12 @@ publication review found that its tail notation did not separate the zero mode
 when `q0=0`.  The theorem gate remains closed: v2.1 repairs the proof line to
 `m0=max(1,ceil(sqrt(2)q0/alpha))`, adds two independent endpoint assertions,
 and passes 33/33.  Because this changes the exact entry document, renewed v2.1
-operator confirmation is still required by the no-auto-PUBLISHED policy before
-the claim-level bundle is built.
+operator confirmation was still required by the no-auto-PUBLISHED policy.
+Jusang Lee supplied that exact v2.1 confirmation on 2026-07-19.  The resulting
+claim-level bundle `A4-Scalar-Constructive-T6-260719` passes all three entry
+scripts from its own root, all 18 listed file hashes, its content digest, and
+the repository release gate.  A4 is therefore publication-complete in this
+declared T6 scalar finite-volume scope.
 
 ## A3 full-production discretization gate
 
