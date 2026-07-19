@@ -1,0 +1,75 @@
+{
+  "schema": "tect/a4-scalar-constructive-integrated-result/1.0",
+  "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+  "script_version": "1.2.0",
+  "verdict": "A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS",
+  "scope": "fresh primary and non-importing independent reconstruction of the finite-volume real-scalar spectral constructive measure",
+  "source_reports": [
+    {
+      "authority": "primary_audit",
+      "path": "codes/foundations/a4_scalar_constructive_measure.py",
+      "actual_sha256": "3db46289e7c45b4940166e8192db387ab7fb1877536929dc493458d4f2118eb8",
+      "expected_sha256": "3db46289e7c45b4940166e8192db387ab7fb1877536929dc493458d4f2118eb8",
+      "passed": true
+    },
+    {
+      "authority": "independent_audit",
+      "path": "codes/foundations/a4_scalar_constructive_measure_independent.py",
+      "actual_sha256": "640c239588061954f983c9185d306331b8d0ee3c35bd3c9dba98685395a3724c",
+      "expected_sha256": "640c239588061954f983c9185d306331b8d0ee3c35bd3c9dba98685395a3724c",
+      "passed": true
+    },
+    {
+      "authority": "one_command_verifier",
+      "path": "codes/foundations/a4_scalar_constructive_measure_verify.py",
+      "actual_sha256": "8d062707406a2f8bf15ce25b52ac56b0cde7b825342721362916cbe54fa36042",
+      "expected_sha256": "8d062707406a2f8bf15ce25b52ac56b0cde7b825342721362916cbe54fa36042",
+      "passed": true
+    }
+  ],
+  "audit_reports": [
+    {
+      "audit": "primary_audit",
+      "mode": "fresh temporary re-execution",
+      "returncode": 0,
+      "expected_verdict": "A4-SCALAR-CONSTRUCTIVE-PRIMARY-PASS",
+      "actual_verdict": "A4-SCALAR-CONSTRUCTIVE-PRIMARY-PASS",
+      "assertions": {
+        "passed": 18,
+        "total": 18
+      },
+      "passed": true
+    },
+    {
+      "audit": "independent_audit",
+      "mode": "fresh non-importing temporary re-execution",
+      "returncode": 0,
+      "expected_verdict": "A4-SCALAR-CONSTRUCTIVE-INDEPENDENT-PASS",
+      "actual_verdict": "A4-SCALAR-CONSTRUCTIVE-INDEPENDENT-PASS",
+      "assertions": {
+        "passed": 15,
+        "total": 15
+      },
+      "passed": true
+    }
+  ],
+  "assertion_summary": {
+    "passed": 33,
+    "total": 33
+  },
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "failures": [],
+  "promotion_boundary": "T6 conditional theorem enacted after independent operator reproduction on 2026-07-18; this verifier does not authorize T7 or any excluded scope",
+  "not_closed_here": [
+    "three-component derivative Class-II constructive measure",
+    "eta_shell nonzero",
+    "zero or negative shell mass",
+    "infinite volume and phase transition",
+    "genuine finite-difference lattice Route B",
+    "BCC existence or selection",
+    "P5 Sector-A synthesis"
+  ]
+}

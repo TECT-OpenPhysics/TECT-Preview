@@ -19,9 +19,7 @@
     "A3-H2-IR-POSITIVITY"
   ],
   "soft_dependencies": [],
-  "open_gates": [
-    "A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION"
-  ],
+  "open_gates": [],
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-07-18)",
   "legacy_evidence": [
@@ -49,28 +47,34 @@
     "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.2.pdf (FORM-CHECK PASS; zero overfull; six-page visual QA PASS; SHA-256 246619724c8a65960f9aeb465a9fc60dfa886674cf5c99b395a6fa7062779631)",
     "claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719 (PUBLISHED capstone; standalone 16/16 + 16/16 = 32/32 PASS; 155 hashed files; digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5; note-PDF completeness PASS)",
     "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.tex.txt (exact T6 referee candidate; SHA-256 58d2f5ab1ed56b2d2fb390cae5323f2b7b3b52fb56006cc637739e1baa1ea944; operator confirmation required)",
-    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.pdf (FORM-CHECK PASS; zero overfull; six-page visual QA PASS; SHA-256 bcbfcda3f15129a94fafedabbae68e0c488c09aa685b030eff9afac790f68fdf)"
+    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.pdf (FORM-CHECK PASS; zero overfull; six-page visual QA PASS; SHA-256 bcbfcda3f15129a94fafedabbae68e0c488c09aa685b030eff9afac790f68fdf)",
+    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.tex.txt (operator-confirmed T6 enactment issue; source SHA-256 b9a4494b4db87f50c34f4047cd0c825f6d414d4bed5ad4e844425151ff287252)",
+    "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.pdf (FORM-CHECK PASS; zero overfull; five-page visual QA PASS; SHA-256 50968b2e31ea74d18ad5a8652a20aeda7cab2ce0ea37db3c2489d1d7c3f14e7d)",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-primary/result.json (22/22 PASS; SHA-256 3f064a7c29d7f71e9adea3eba06d63c643f69a17a4a2dd31931f0c7d5eaf043c)",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-independent/result.json (13/13 PASS; SHA-256 74fafc5c35cea43c4541d316bdd5650375858901fe8e5332b058b1b1a047cdfd)",
+    "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-integrated/result.json (35/35 PASS; SHA-256 11addf12638b1eb28730f02974a680eebd7683cf4561a3515b8a119624e0510f)",
+    "claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Conditional-Composition-T6-260720 (PUBLISHED conditional theorem; standalone 22/22 + 13/13 = 35/35 PASS; 307 hashed files; digest 7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526)"
   ],
   "t7_candidate": false,
   "reproduction": {
-    "command": "python codes/foundations/a5_sector_a_synthesis_verify.py",
-    "expected": "PASS: primary (16/16); PASS: independent (16/16); ASSERTS: 32/32; A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS; Termination: PASS@BRANCH-AWARE-DECLARED-SCOPE; exit 0.",
+    "command": "python codes/foundations/a5_t6_conditional_verify.py",
+    "expected": "PASS: primary (22/22); PASS: independent (13/13); ASSERTS: 35/35; A5-T6-CONDITIONAL-COMPOSITION-INTEGRATED-PASS; Publication: T6-PUBLISHED-OPERATOR-CONFIRMED; exit 0.",
     "status": "AVAILABLE"
   },
-  "last_review": "2026-07-19",
-  "notes": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS remains publication-complete and immutable. The PUBLISHED T5 capstone has 155 hashed files and digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5. T-041 now prepares a separate T6 conditional-composition theorem over exactly seven named hypotheses: the original six plus A5-H1-CANONICAL-KERNEL-MANIFEST, which repairs the T5 kernel dependency. The candidate composes the full-production variational/PDE/exact-Galerkin implications and conjoins the separate scalar perturbative/constructive conclusions without identifying masses, state spaces, or measures. The new exact referee package, dual audit, and weakness map remain behind A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION. No full derivative Class-II constructive measure, BCC, physical closure, enacted T6, or T7 is inferred before that gate closes.",
+  "last_review": "2026-07-20",
+  "notes": "T6 CONDITIONAL-COMPOSITION is operator-confirmed and publication-complete in the exact seven-hypothesis branch-aware scope. Jusang Lee confirmed the exact v1.0 source/PDF on 2026-07-20 and authorized bundle-last publication; candidate commit fb776bff6b161178a6328570af3ef9529b44a2df and both candidate hashes are pinned. The 307-file PUBLISHED T6 bundle passes standalone 22/22 + 13/13 = 35/35 and has digest 7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526. The theorem composes the full-production variational/PDE/exact-Galerkin implication chain and conjoins the separate scalar perturbative/constructive conclusions without identifying masses, state spaces, functionals, or measures. The immutable T5 capstone remains authoritative history with 155 hashed files and digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5. No full derivative Class-II constructive measure, BCC, physical closure, or T7 is inferred.",
   "id": "A5-SECTOR-A-SYNTHESIS",
   "title": "Sector A branch-aware synthesis and termination package",
   "sector": "A",
   "statement": "The frozen Sector-A records support two reproducible, explicitly separated chains on the fixed spectral three-torus: the canonical full-production variational functional feeds the conditional full PDE well-posedness theorem and its positive-time exact-Galerkin discretization-to-continuum theorem; independently, the positive-mass real-scalar spectral branch has order-by-order perturbative cutoff removal and a finite-volume non-perturbative constructive Gibbs measure. Their shared geometry, dependencies, hypotheses, parameter fork, and non-implications are content-addressed and audit reproducible.",
-  "scope": "Current enacted tier remains T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS and publication-complete. A separate T6 conditional-composition referee candidate is prepared under exactly seven registered hypotheses and six hash-pinned premises, but operator confirmation and bundle-last publication are still open. The candidate preserves the full-production shell mass squared 0.260000000009475 versus scalar anchor 0.005, the scalar/full functional fork, positive-time exact-Galerkin scope, and every Class-II/BCC/T7 exclusion. The immutable T5 bundle remains authoritative tier history.",
-  "tier": "T5",
+  "scope": "T6 CONDITIONAL-COMPOSITION under exactly seven registered hypotheses and six hash-pinned premises. The result preserves the full-production shell mass squared 0.260000000009475 versus scalar anchor 0.005, the scalar/full functional fork, positive-time exact-Galerkin scope, and every Class-II/BCC/T7 exclusion. It is a logical composition theorem, not a parameter-identical full constructive theory. The immutable T5 bundle remains authoritative tier history.",
+  "tier": "T6",
   "evidence_grade": [
     "EXACT",
     "EXECUTED",
     "CONDITIONAL"
   ],
   "falsifier": "Any drift in the immutable T5 manifest or 155-file bundle; any failed component-card, support-bundle, source, note, PDF, contract-digest, or cross-audit check; fewer or more than the exact seven named hypotheses; an unlifted sub-T6 premise; a broken branch edge; equality or silent substitution of the 0.005 and 0.260000000009475 mass anchors; a scalar-to-full Class-II measure inference; or an operator rejection invalidates the T6 candidate and leaves A5 at its existing T5 tier.",
-  "no_overclaim": "The current T5 record and the pending T6 candidate do not prove a parameter-identical full-production constructive quantum field theory, a full three-component derivative Class-II Gibbs measure, eta_shell nonzero, removal of rho/Class-II regularisers, t=0 P3 rates for H2 data, practical historical-grid error bars, genuine finite-difference Route B, unsmeared composite correlations, infinite volume, a phase transition, minimizer uniqueness, BCC existence or selection, Sector-B closure, physical-domain closure, enacted T6 before operator confirmation, or T7.",
-  "next_action": "Jusang Lee independently runs the 33/33 one-command verifier, reviews the exact six-page v1.0 PDF, and explicitly confirms or rejects the package. Only after confirmation may the card be promoted to T6 and a new PUBLISHED T6 bundle be built last beside the immutable T5 bundle."
+  "no_overclaim": "This T6 conditional-composition theorem does not prove a parameter-identical full-production constructive quantum field theory, a full three-component derivative Class-II Gibbs measure, eta_shell nonzero, removal of rho/Class-II regularisers, t=0 P3 rates for H2 data, practical historical-grid error bars, genuine finite-difference Route B, unsmeared composite correlations, infinite volume, a phase transition, minimizer uniqueness, BCC existence or selection, Sector-B closure, physical-domain closure, or T7.",
+  "next_action": "Register the higher-value full three-component derivative Class-II constructive-measure programme as a separate claim below T6; require ultraviolet power counting, counterterm classification, uniform stability, tightness, and regulator removal before promotion."
 }

@@ -1,0 +1,338 @@
+{
+  "schema": "tect/a3-full-production-quantitative-majorant-result/1.1",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.1.0",
+  "verdict": "A3-FULL-QUANTITATIVE-MAJORANT-PASS",
+  "scope": "canonical P1/P2 H2 solution balls; explicit positive-time H6 and residual bounds; exact Galerkin flow restarted at tau",
+  "constant_labels": "All reported upper constants are DERIVED outward-rounded conservative enclosures; the graph lower constant is rounded downward.",
+  "numeric_enclosure": {
+    "decimal_precision": 90,
+    "relative_pad_per_nonlinear_stage": "1E-60",
+    "upper_serialisation": "ROUND_CEILING to 15 significant digits",
+    "lower_serialisation": "ROUND_FLOOR to 15 significant digits"
+  },
+  "norms": {
+    "H2": "volume sum (1+|k|^4)|u_hat|^2",
+    "H4": "volume sum (1+|k|^4)^2|u_hat|^2",
+    "H6": "volume sum (1+|k|^4)^3|u_hat|^2"
+  },
+  "derived_global_constants": {
+    "H2_to_Linf": "3.29926816703363E-1",
+    "H2_to_grad_L4": "5.33391254984102E-1",
+    "H2_algebra_overcount": "2.63941453362690E+0",
+    "linear_graph_lower": "2.04857262678236E-1",
+    "linear_graph_upper": "2.15667135360001E+0",
+    "energy_young_constant_per_volume": "1.00984351978866E-2",
+    "energy_quartic_upper": "1.40282634019738E-2",
+    "energy_sextic_upper": "3.19914725753717E-3",
+    "classii_contraction_overcount": "1.08000000000000E+2",
+    "coordinate_free_euler_tensor_factor": "1.50000000000000E+0",
+    "classii_contraction_headroom_ratio": "7.20000000000000E+1",
+    "projection_tail_N_minus_4": "6.72791413042993E+2",
+    "periodic_alias_N_minus_2": "1.67383081344241E+2",
+    "rho_floor": "1.00000000000000E-12",
+    "fractional_power": "0.75",
+    "holder_exponent": "0.25",
+    "tau": "0.02",
+    "T": "0.2"
+  },
+  "rows": [
+    {
+      "initial_h2_radius": "0.5",
+      "continuum_initial_energy_upper": "2.70510672338523E-1",
+      "M2": "2.01609886852989E+1",
+      "pointwise_amplitude_upper": "6.65165081853317E+0",
+      "classii_q_derivative_envelopes": [
+        "1.00000000000000E+0",
+        "6.77086295903449E+26",
+        "2.07233116410689E+40",
+        "9.51405266885664E+53"
+      ],
+      "classii_metric_derivative_envelopes": [
+        "1.13487036338965E+1",
+        "4.71827736381286E+27",
+        "1.14095747975341E+54",
+        "1.04762498806395E+68"
+      ],
+      "K0_H2_to_L2_bound": "1.76784388843746E+32",
+      "Lip0_H2_to_L2_bound": "1.41041695714151E+58",
+      "B4_tau_over_2_T": "1.32867789680334E+91",
+      "K2_H4_to_H2_bound": "3.94024377649219E+256",
+      "Lip2_H4_to_H2_bound": "1.07944874743070E+257",
+      "B6_tau_T": "2.38608549705269E+515",
+      "log10_B6_tau_T": "5.15377686001042E+2",
+      "residual_C_for_N_minus_2": "2.26419570189098E+576",
+      "log10_residual_C": "5.76354913961641E+2",
+      "galerkin_restart_energy_upper": "2.17591048551524E+5",
+      "galerkin_H2_envelope": "1.45764276910276E+3",
+      "galerkin_to_continuum_H2_envelope_ratio": "7.23001630453593E+1",
+      "evolution_common_H2_ball": "1.45764276910276E+3",
+      "evolution_Lip0_H2_to_L2_bound": "4.17727558552441E+76",
+      "dealiased_galerkin_growth_rate": "4.25897307454164E+153",
+      "dealiased_restarted_error_rate": "N^-4 on [tau,T] with u_N(tau)=P_N u(tau)",
+      "log10_dealiased_error_constant": "3.32936730872633E+152",
+      "projection_energy_monotonicity_used": false
+    },
+    {
+      "initial_h2_radius": "1.0",
+      "continuum_initial_energy_upper": "1.09556308745952E+0",
+      "M2": "2.03597732081305E+1",
+      "pointwise_amplitude_upper": "6.71723516336090E+0",
+      "classii_q_derivative_envelopes": [
+        "1.00000000000000E+0",
+        "6.96422567063276E+26",
+        "2.14978268923951E+40",
+        "9.95422713778026E+53"
+      ],
+      "classii_metric_derivative_envelopes": [
+        "1.15736001735295E+1",
+        "4.94919424570995E+27",
+        "1.23097520053305E+54",
+        "1.13996701233341E+68"
+      ],
+      "K0_H2_to_L2_bound": "1.89111162230132E+32",
+      "Lip0_H2_to_L2_bound": "1.55184944343190E+58",
+      "B4_tau_over_2_T": "1.56384975584137E+91",
+      "K2_H4_to_H2_bound": "6.05734597719066E+256",
+      "Lip2_H4_to_H2_bound": "1.65884142167050E+257",
+      "B6_tau_T": "5.63700128456085E+515",
+      "log10_B6_tau_T": "5.15751048133788E+2",
+      "residual_C_for_N_minus_2": "5.88542945473668E+576",
+      "log10_residual_C": "5.76769778158432E+2",
+      "galerkin_restart_energy_upper": "2.30719398061636E+5",
+      "galerkin_H2_envelope": "1.50096407138871E+3",
+      "galerkin_to_continuum_H2_envelope_ratio": "7.37220427774367E+1",
+      "evolution_common_H2_ball": "1.50096407138871E+3",
+      "evolution_Lip0_H2_to_L2_bound": "5.59800196329636E+76",
+      "dealiased_galerkin_growth_rate": "7.64864900842961E+153",
+      "dealiased_restarted_error_rate": "N^-4 on [tau,T] with u_N(tau)=P_N u(tau)",
+      "log10_dealiased_error_constant": "5.97917890507636E+152",
+      "projection_energy_monotonicity_used": false
+    },
+    {
+      "initial_h2_radius": "2.0",
+      "continuum_initial_energy_upper": "4.74254034611396E+0",
+      "M2": "2.12161594568883E+1",
+      "pointwise_amplitude_upper": "6.99977995228209E+0",
+      "classii_q_derivative_envelopes": [
+        "1.00000000000000E+0",
+        "7.83929146765347E+26",
+        "2.50850426892121E+40",
+        "1.20404892964259E+54"
+      ],
+      "classii_metric_derivative_envelopes": [
+        "1.25677098210618E+1",
+        "6.04959282962598E+27",
+        "1.69373290900250E+54",
+        "1.62593886839496E+68"
+      ],
+      "K0_H2_to_L2_bound": "2.51013153203526E+32",
+      "Lip0_H2_to_L2_bound": "2.31863761288953E+58",
+      "B4_tau_over_2_T": "3.10139894018499E+91",
+      "K2_H4_to_H2_bound": "3.68983710254846E+257",
+      "Lip2_H4_to_H2_bound": "1.00899481303643E+258",
+      "B6_tau_T": "2.08860834913431E+517",
+      "log10_B6_tau_T": "5.17319857009748E+2",
+      "residual_C_for_N_minus_2": "3.25814438569801E+578",
+      "log10_residual_C": "5.78512970326297E+2",
+      "galerkin_restart_energy_upper": "2.95093810746823E+5",
+      "galerkin_H2_envelope": "1.69746098407395E+3",
+      "galerkin_to_continuum_H2_envelope_ratio": "8.00079292165588E+1",
+      "evolution_common_H2_ball": "1.69746098407395E+3",
+      "evolution_Lip0_H2_to_L2_bound": "1.91480888399893E+77",
+      "dealiased_galerkin_growth_rate": "8.94889694001248E+154",
+      "dealiased_restarted_error_rate": "N^-4 on [tau,T] with u_N(tau)=P_N u(tau)",
+      "log10_dealiased_error_constant": "6.99562180830297E+153",
+      "projection_energy_monotonicity_used": false
+    }
+  ],
+  "assertions": [
+    {
+      "name": "p1_manifest_hash",
+      "status": "PASS",
+      "detail": {
+        "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      }
+    },
+    {
+      "name": "p2_manifest_hash",
+      "status": "PASS",
+      "detail": {
+        "actual": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+        "expected": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+      }
+    },
+    {
+      "name": "energy_ball_result_passed",
+      "status": "PASS",
+      "detail": "A3-FULL-ENERGY-BALL-ENVELOPE-PASS"
+    },
+    {
+      "name": "positive_declared_times",
+      "status": "PASS",
+      "detail": {
+        "tau": "0.02",
+        "T": "0.2"
+      }
+    },
+    {
+      "name": "fractional_power_supports_two_endpoint_steps",
+      "status": "PASS",
+      "detail": {
+        "alpha": "0.75",
+        "theta": "0.25"
+      }
+    },
+    {
+      "name": "positive_explicit_density_floor",
+      "status": "PASS",
+      "detail": "1E-12"
+    },
+    {
+      "name": "embedding_tail_is_explicit",
+      "status": "PASS",
+      "detail": {
+        "linf_tail": "1.23191787107204E-1",
+        "grad_l4_tail": "1.23191787107204E-1"
+      }
+    },
+    {
+      "name": "linear_graph_constants_are_positive",
+      "status": "PASS",
+      "detail": {
+        "lower": "0.2048572626782363",
+        "upper": "2.1566713536000000000000000000000000000000000000000000000000031566713536"
+      }
+    },
+    {
+      "name": "all_majorants_are_finite_positive_decimals",
+      "status": "PASS",
+      "detail": {
+        "B6_log10": [
+          "515.377686001042",
+          "515.751048133788",
+          "517.319857009748"
+        ]
+      }
+    },
+    {
+      "name": "B6_is_monotone_in_declared_radius",
+      "status": "PASS",
+      "detail": [
+        "515.377686001042",
+        "515.751048133788",
+        "517.319857009748"
+      ]
+    },
+    {
+      "name": "residual_constant_is_monotone_in_declared_radius",
+      "status": "PASS",
+      "detail": [
+        "576.354913961641",
+        "576.769778158432",
+        "578.512970326297"
+      ]
+    },
+    {
+      "name": "evolution_constant_is_monotone_in_declared_radius",
+      "status": "PASS",
+      "detail": [
+        "3.32936730872633E+152",
+        "5.97917890507636E+152",
+        "6.99562180830297E+153"
+      ]
+    },
+    {
+      "name": "residual_aliasing_rate_is_explicit",
+      "status": "PASS",
+      "detail": {
+        "alias_N^-2": "1.67383081344241E+2",
+        "projection_N^-4": "6.72791413042993E+2"
+      }
+    },
+    {
+      "name": "continuum_energy_envelope_is_recomputed_outward",
+      "status": "PASS",
+      "detail": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "galerkin_restart_has_separate_energy_envelope",
+      "status": "PASS",
+      "detail": [
+        "1.45764276910276E+3",
+        "1.50096407138871E+3",
+        "1.69746098407395E+3"
+      ]
+    },
+    {
+      "name": "evolution_lipschitz_uses_galerkin_common_ball",
+      "status": "PASS",
+      "detail": [
+        "4.17727558552441E+76",
+        "5.59800196329636E+76",
+        "1.91480888399893E+77"
+      ]
+    },
+    {
+      "name": "reported_majorants_are_outward_rounded",
+      "status": "PASS",
+      "detail": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "classii_contraction_overcount_dominates_coordinate_free_euler_factor",
+      "status": "PASS",
+      "detail": {
+        "declared": "108",
+        "minimal_euler_tensor_factor": "1.5",
+        "headroom_ratio": "72",
+        "generator_sum": "already included in every bmetric derivative envelope",
+        "spatial_frobenius_sum": "the three-direction low-order sum is explicit in K0/Lip0; H2 products use the proved H2 algebra constant",
+        "field_components": "absorbed by operator-norm AJ/AK estimates after the isometric C3-to-R6 realification"
+      }
+    },
+    {
+      "name": "gronwall_duration_is_within_coarse_enclosure_scope",
+      "status": "PASS",
+      "detail": {
+        "T_minus_tau": "0.18"
+      }
+    },
+    {
+      "name": "positive_time_restart_is_declared",
+      "status": "PASS",
+      "detail": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data."
+    },
+    {
+      "name": "historical_solver_scope_is_excluded",
+      "status": "PASS",
+      "detail": "No historical collocation trajectory is certified"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 21,
+    "total": 21
+  },
+  "honesty_boundary": {
+    "closed_here": [
+      "explicit conservative B4 and B6 positive-time solution-ball majorants",
+      "explicit residual aliasing constant C(R,tau,T) multiplying N^-2",
+      "explicit N^-4 finite-time bound for exact Galerkin flow restarted at tau"
+    ],
+    "not_closed_here": [
+      "useful or sharp numerical error bars at practical N",
+      "algebraic convergence from t=0 for merely H2 initial data",
+      "finite-oversampling exactness for the rational Class-II collocation residual",
+      "historical Sector-B solver continuum certification",
+      "T5/T6/T7 promotion or PUBLISHED reproduction bundle"
+    ]
+  }
+}

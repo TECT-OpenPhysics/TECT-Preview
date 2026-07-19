@@ -3,13 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 37
-
-## In progress
-
-- **T-041** A5: prepare branch-aware T6 conditional-composition theorem package  _(owner: Jusang Lee; claim: A5-SECTOR-A-SYNTHESIS; gate: A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION)_
-  - IN PROGRESS 2026-07-19: exact v1.0 branch-aware T6 conditional-composition referee candidate is complete. The hypothesis-count defect is repaired: the T6 theorem uses seven registered hypotheses, including A5-H1 to lift the T5 kernel manifest and A2-H3 to lift the T5 full functional. Primary 21/21, non-importing independent 12/12, and integrated 33/33 preflight PASS; six-page PDF passes FORM-CHECK, zero overfull, and visual QA. The immutable 155-file T5 capstone and digest are reconstructed. Full derivative Class-II construction, parameter identity, regulariser removal, t=0/historical error bars, Route B, infinite volume/phase transition, BCC/Sector-B, physical closure, and T7 remain excluded. Exact-package independent operator confirmation is now required; only then promote A5 and build the PUBLISHED T6 bundle last beside the T5 bundle.
-  - _updated 2026-07-19_
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 38
 
 ## Next up
 
@@ -124,4 +118,7 @@ Counts: In progress 1 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 37
   - _updated 2026-07-18_
 - **T-040** Publish the A4 T6 support bundle, then build the confirmed A5 scoped T5 capstone bundle  _(claim: A5-SECTOR-A-SYNTHESIS)_
   - COMPLETE 2026-07-19: corrected A4 v2.1 support is PUBLISHED; A5 schema 1.2 attests all six support bundles; exact v1.2 is operator-confirmed by batch authorization and passes FORM-CHECK, zero overfull, six-page visual QA, and direct 32/32. Initial packaging omitted the paired original-path A4 PDF; the note-PDF gate caught it and AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS records the rebuild. Final PUBLISHED bundle A5-Sector-A-Synthesis-T5-260719 passes standalone 32/32, all 155 file hashes, all 190 current-note PDF pairs, and digest 5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5. Next is T-041, the separate branch-aware T6 conditional-composition package.
+  - _updated 2026-07-19_
+- **T-041** A5: prepare branch-aware T6 conditional-composition theorem package  _(owner: Jusang Lee; claim: A5-SECTOR-A-SYNTHESIS; gate: A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION)_
+  - COMPLETE 2026-07-20: Jusang Lee confirmed the exact A5 T6 v1.0 source/PDF and authorized PUBLISHED bundle creation. Manifest schema 1.1 binds candidate commit fb776bff6b161178a6328570af3ef9529b44a2df and reviewed hashes. The v1.1 enactment issue passes FORM-CHECK, zero overfull, and five-page visual QA. Direct and bundle-root verification pass primary 22/22 plus independent 13/13 equals 35/35. PUBLISHED bundle A5-Sector-A-Conditional-Composition-T6-260720 contains 307 hashed files and digest 7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526. Immutable T5 capstone remains unchanged. Full derivative Class-II constructive measure, parameter identity, regulariser removal, t0/historical rates, Route B, infinite volume/phase transition, BCC/Sector-B, physical closure, and T7 remain excluded.
   - _updated 2026-07-19_

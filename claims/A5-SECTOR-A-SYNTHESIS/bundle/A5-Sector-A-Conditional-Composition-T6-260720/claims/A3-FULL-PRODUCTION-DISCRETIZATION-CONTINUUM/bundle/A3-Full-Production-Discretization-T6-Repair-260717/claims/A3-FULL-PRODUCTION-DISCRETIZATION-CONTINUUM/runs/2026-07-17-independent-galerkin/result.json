@@ -1,0 +1,132 @@
+{
+  "schema": "tect/a3-full-production-independent-galerkin-result/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "script_version": "1.0.0",
+  "verdict": "A3-FULL-INDEPENDENT-GALERKIN-PASS",
+  "scope": "analytic nonzero-density manufactured field; exact Fourier prolongation; independently implemented portable trapezoid-quadrature gradient on M=24,32; CPU complex128",
+  "not_closed_here": [
+    "analytic error bound uniform over P2 solution balls",
+    "GPU cross-device rows",
+    "historical solver convergence",
+    "Sector-B candidate continuum certificate"
+  ],
+  "rows": [
+    {
+      "grid": 8,
+      "collocation_to_independent_proxy_relative_l2": 5.330119610205969e-06,
+      "independent_reference_projection_relative_l2": 1.0854698152360336e-15,
+      "portable_vs_canonical_low_relative_l2": 0.0,
+      "prolongation_relative_l2": {
+        "24": 2.8433015098428783e-16,
+        "32": 1.6665789394781093e-16
+      },
+      "portable_vs_canonical_high_relative_l2": {
+        "24": 0.0,
+        "32": 0.0
+      }
+    },
+    {
+      "grid": 12,
+      "collocation_to_independent_proxy_relative_l2": 4.2482266392980977e-10,
+      "independent_reference_projection_relative_l2": 5.548227855685308e-15,
+      "portable_vs_canonical_low_relative_l2": 0.0,
+      "prolongation_relative_l2": {
+        "24": 2.634411341890842e-16,
+        "32": 1.7166688341531657e-16
+      },
+      "portable_vs_canonical_high_relative_l2": {
+        "24": 0.0,
+        "32": 0.0
+      }
+    },
+    {
+      "grid": 16,
+      "collocation_to_independent_proxy_relative_l2": 6.666834549835507e-12,
+      "independent_reference_projection_relative_l2": 2.517966115987793e-14,
+      "portable_vs_canonical_low_relative_l2": 0.0,
+      "prolongation_relative_l2": {
+        "24": 3.084748813654507e-16,
+        "32": 1.8808563973080357e-16
+      },
+      "portable_vs_canonical_high_relative_l2": {
+        "24": 0.0,
+        "32": 0.0
+      }
+    }
+  ],
+  "independent_errors": [
+    5.330119610205969e-06,
+    4.2482266392980977e-10,
+    6.666834549835507e-12
+  ],
+  "reference_errors": [
+    1.0854698152360336e-15,
+    5.548227855685308e-15,
+    2.517966115987793e-14
+  ],
+  "observed_orders": [
+    23.27502965756268,
+    14.441381828397642
+  ],
+  "assertions": [
+    {
+      "name": "canonical_backend_hash",
+      "status": "PASS",
+      "detail": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "portable_backend_hash",
+      "status": "PASS",
+      "detail": "85501c65af0d73a09e9acde17dae42d1ce340d77f45f80f3a8297d22099b68ca"
+    },
+    {
+      "name": "positive_manufactured_density",
+      "status": "PASS",
+      "detail": "all target fields remain far above rho floor"
+    },
+    {
+      "name": "exact_fourier_prolongation",
+      "status": "PASS",
+      "detail": "max=3.084749e-16"
+    },
+    {
+      "name": "portable_canonical_low_agreement",
+      "status": "PASS",
+      "detail": "max=0.000000e+00"
+    },
+    {
+      "name": "portable_canonical_high_agreement",
+      "status": "PASS",
+      "detail": "max=0.000000e+00"
+    },
+    {
+      "name": "independent_reference_stable",
+      "status": "PASS",
+      "detail": "max=2.517966e-14"
+    },
+    {
+      "name": "collocation_to_independent_proxy_monotone",
+      "status": "PASS",
+      "detail": "errors=[5.330119610205969e-06, 4.2482266392980977e-10, 6.666834549835507e-12]"
+    },
+    {
+      "name": "final_collocation_to_independent_proxy",
+      "status": "PASS",
+      "detail": "final=6.666835e-12"
+    },
+    {
+      "name": "independent_proxy_observed_order",
+      "status": "PASS",
+      "detail": "orders=[23.27502965756268, 14.441381828397642]"
+    },
+    {
+      "name": "proxy_scope_declared",
+      "status": "PASS",
+      "detail": "manifest fixes the independently implemented quadrature proxy"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 11,
+    "total": 11
+  }
+}

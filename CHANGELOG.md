@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Bundle coverage prefers the current claim tier] - 2026-07-20
+
+After A5 retained both immutable T5 and new T6 PUBLISHED bundles, the coverage report selected the lexicographically last historical T5 name. Version 2.0.1 now prefers an otherwise registered or main-line bundle whose stamped tier matches the current claim card. A5 now reports A5-Sector-A-Conditional-Composition-T6-260720 while preserving both bundles.
+
+## [A5 branch-aware T6 conditional-composition theorem published] - 2026-07-20
+
+Jusang Lee confirmed the exact v1.0 referee source/PDF and authorized bundle-last publication. A5 is enacted as T6 only in its seven-hypothesis conditional-composition scope. The v1.1 package passes form, zero-overfull, and five-page visual checks; direct and bundle-root audits pass 22/22 plus 13/13 equals 35/35. The new 307-file PUBLISHED bundle digest is 7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526. The immutable T5 capstone remains unchanged. Full derivative Class-II construction, parameter identity, BCC, physical closure, and T7 remain excluded.
+
 ## [A5 T6 conditional-composition referee candidate prepared] - 2026-07-19
 
 

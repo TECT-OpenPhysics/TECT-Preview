@@ -1,0 +1,245 @@
+{
+  "schema": "tect/a5-sector-a-synthesis/1.2",
+  "claim_id": "A5-SECTOR-A-SYNTHESIS",
+  "frozen_on": "2026-07-19",
+  "source_commit": "6db0405ff9073078ce695f35caffe664096960c4",
+  "status": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS; all six support bundles PUBLISHED; exact v1.2 capstone entry operator-confirmed by 2026-07-19 batch authorization",
+  "authority": {
+    "primary_audit": {
+      "path": "codes/foundations/a5_sector_a_synthesis_audit.py",
+      "sha256": "81db2d03f68fd73855cf7bee1c8b98e8cc8c6685ab4e255ac9a1b2633fce5734",
+      "version": "1.2.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a5_sector_a_synthesis_independent.py",
+      "sha256": "1c2a5c0229d8348296ebad1d8426621862e787a1ed9d51e84b05c07956119dbd",
+      "version": "1.2.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a5_sector_a_synthesis_verify.py",
+      "sha256": "95cc7d557a0ff52d65f02b2bcea7d74272df25edca02eec0fa3d6d0199dca24e",
+      "version": "1.2.0"
+    }
+  },
+  "named_hypotheses": [
+    "A1-KERNEL-CONV",
+    "A1-SHELL-POSITIVITY",
+    "A2-H2-SEXTIC-COERCIVITY",
+    "A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL",
+    "A3-H1-DIM3-Q4-KERNEL",
+    "A3-H2-IR-POSITIVITY"
+  ],
+  "components": [
+    {
+      "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+      "role": "scalar production-kernel definition and parameter anchor",
+      "branch": "shared-definition/scalar-anchor",
+      "expected_tier": "T5",
+      "status_path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/status.json",
+      "status_sha256": "b5224a6abdda2f9a61ce7bb567d9d7ab273f1470ecc7cceffa8a82e4d7d2ac50",
+      "manifest_path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json",
+      "manifest_sha256": "030d1b7c62e77585c9967013554d7ff2e9e35f72bbecc37dcdfc9017d20b3a38",
+      "published_bundle_manifest": "claims/A1-PRODUCTION-KERNEL-MANIFEST/bundle/A1-N001-Manifest-T5-260716/MANIFEST.json",
+      "published_bundle_manifest_sha256": "0fdb6377fd3be5ae3ea5ee4ea5d0da0bed697987374eb738534faaf5663af68f"
+    },
+    {
+      "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "role": "standalone full three-component variational realization",
+      "branch": "full-production",
+      "expected_tier": "T5",
+      "status_path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json",
+      "status_sha256": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
+      "manifest_path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "published_bundle_manifest": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/bundle/A1-Production-Functional-T5-260717/MANIFEST.json",
+      "published_bundle_manifest_sha256": "074b6f62f089e84f0fb8509e38efcefef173643eec7cf7fff9a858d96c60c453"
+    },
+    {
+      "id": "A2-FULL-PRODUCTION-WELLPOSED",
+      "role": "full three-component continuum gradient-flow well-posedness",
+      "branch": "full-production",
+      "expected_tier": "T6",
+      "status_path": "claims/A2-FULL-PRODUCTION-WELLPOSED/status.json",
+      "status_sha256": "9b528ba8fe4bc7c52c9bf61745305d6478b4d7bb8dfad0fb2c9c0edc336a4a9e",
+      "manifest_path": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+      "manifest_sha256": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682",
+      "published_bundle_manifest": "claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/MANIFEST.json",
+      "published_bundle_manifest_sha256": "7a17dd8d9ed3c3eca61ac503dd568beb3ebf7b4060103c213c418dd490fe25c7"
+    },
+    {
+      "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+      "role": "positive-time exact-Galerkin discretization-to-continuum theorem",
+      "branch": "full-production",
+      "expected_tier": "T6",
+      "status_path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/status.json",
+      "status_sha256": "5f156750c2b73a40c12334973514a6d8926907d37430249bf4f63c3d2942078c",
+      "manifest_path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/discretization_manifest.json",
+      "manifest_sha256": "ba6cd2ba056cc531cf3520f981e022d756be0f7774dc0d9b244374e45041795f",
+      "published_bundle_manifest": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-Repair-260717/MANIFEST.json",
+      "published_bundle_manifest_sha256": "f766fe47ba7fbcfe34a88a9b63d7b3f91a113c209ade262bcf718f1a5120691e"
+    },
+    {
+      "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "role": "order-by-order scalar spectral continuum correlators",
+      "branch": "scalar-continuum",
+      "expected_tier": "T6",
+      "status_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/status.json",
+      "status_sha256": "d5a13ff8351094eb06cc5f8483b8dc3db930bad4bc95a12b0c6c9a8282600ef0",
+      "evidence_path": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/runs/a3_graphwise_convergence_checks.json",
+      "evidence_sha256": "60f9ea6d87385b78d731942dc94b7bc3d357e21b069ad95b3446348216b58c4b",
+      "published_bundle_manifest": "claims/A3-PERTURBATIVE-CONTINUUM-CORRELATORS/bundle/A3-Perturbative-Continuum-T6-260719/MANIFEST.json",
+      "published_bundle_manifest_sha256": "2e2c1ae2f78d7a8610f762f01f5dded3aa01d6b1180701e543299ae2eb8fd86e"
+    },
+    {
+      "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+      "role": "finite-volume non-perturbative scalar spectral Gibbs measure",
+      "branch": "scalar-continuum",
+      "expected_tier": "T6",
+      "status_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json",
+      "status_sha256": "1a1747ccb2193e3ca832dd6ecb36079ed2c8ff1b53ac5fb93e56e49281e193f2",
+      "manifest_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/constructive_measure_manifest.json",
+      "manifest_sha256": "26221e8757848aa23fe5f5fa52372fd916e70cad8687fb1f2f873731fe8a6043",
+      "evidence_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json",
+      "evidence_sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c",
+      "publication_preflight_path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-19-referee-preflight-v2.1/result.json",
+      "publication_preflight_sha256": "85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8",
+      "referee_package_confirmed": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.tex.txt",
+      "referee_package_confirmed_sha256": "6b68e5d7a29952255039c444a6ffc75a0193e5d5430352e7fe20d863328685b1",
+      "published_bundle_manifest": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/MANIFEST.json",
+      "published_bundle_manifest_sha256": "a225fbe02452b0d9c2b73fd917675fe37474f0fffca6ae5b1ee1730ff3d425b4"
+    }
+  ],
+  "branch_map": {
+    "shared_definition": [
+      "fixed T3 periods 16",
+      "q0=0.6801747616",
+      "Y=1",
+      "Z approximately -0.9252754126",
+      "eta_shell=0",
+      "spectral Fourier convention"
+    ],
+    "full_production": [
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+      "A2-FULL-PRODUCTION-WELLPOSED",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM"
+    ],
+    "scalar_continuum": [
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"
+    ],
+    "mass_fork": {
+      "scalar_perturbative_shell_mass_squared": 0.005,
+      "full_production_shell_mass_squared": 0.26,
+      "rule": "The two rows are separate anchors. Equality is forbidden; A4 audits both without identifying them."
+    },
+    "functional_fork": {
+      "full_branch": "three complex components with family, lock, and derivative Class-II terms",
+      "continuum_measure_branch": "real scalar local quartic/sextic slice",
+      "rule": "Scalar perturbative/constructive control is not a full three-component Class-II constructive measure."
+    }
+  },
+  "interface_contracts": [
+    "P1 standalone functional is the named canonical input of P2 and P3",
+    "P2 is a hard dependency of P3",
+    "P3 proves positive-time restarted exact-Galerkin convergence, not historical-solver error bars",
+    "A3 perturbative and A4 constructive claims use the scalar spectral branch",
+    "A4 proves a general positive-mass scalar theorem and audits both mass anchors without equating them",
+    "No arrow from full-production P3 to full Class-II constructive measure is asserted"
+  ],
+  "termination_verdict": {
+    "result": "PASS@BRANCH-AWARE-DECLARED-SCOPE",
+    "meaning": "Sector A has a reproducible definitions-to-dynamics-to-discretization branch and a separate scalar perturbative/constructive continuum branch with their interface and non-implications fixed.",
+    "not_meaning": "A single parameter-identical full-production constructive quantum field theory or a BCC existence/selection theorem."
+  },
+  "honesty_boundary": [
+    "historical non-variational solver identification",
+    "full three-component derivative Class-II constructive measure",
+    "equality of the 0.005 and 0.26 shell-mass anchors",
+    "eta_shell nonzero",
+    "removed rho or Class-II mass regularisers",
+    "t=0 algebraic P3 rates for merely H2 data",
+    "practical historical N32/N64/N128 continuum error bars",
+    "genuine finite-difference lattice Route B",
+    "infinite volume or thermodynamic phase transition",
+    "minimizer uniqueness, BCC existence, or BCC selection",
+    "Sector B or physical-domain closure",
+    "T7"
+  ],
+  "t5_enactment": {
+    "tier": "T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS",
+    "operator_confirmed_entry_source": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.tex.txt",
+      "sha256": "74693f94c6496a715c423e43bfe6bd213f3aa6d6d96e328aaf02aa37c47c5cff"
+    },
+    "operator_confirmed_entry_pdf": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.1.pdf",
+      "sha256": "b7561c8537f9548a726019e2b4773b7e3da2b022a3d223cbdca5018308bd8998",
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS (6 pages, 2026-07-19)"
+    },
+    "current_preflight": {
+        "path": "claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-19-t5-capstone-preflight/result.json",
+        "sha256": "6c84014b7460abc604ce8dd7a393a339d84ff6044595dcfc21edbb4d4d67e6f5",
+      "verdict": "A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS",
+      "assertions": "32/32",
+      "termination": "PASS@BRANCH-AWARE-DECLARED-SCOPE"
+    },
+    "published_bundle_status": "PUBLISHED",
+    "published_bundle": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719",
+      "manifest_path": "claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719/MANIFEST.json",
+      "manifest_sha256": "596bb1eb9312c91c22730c77a75e14d426af3fc3c412ceef46de01aa6cbe01ee",
+      "bundle_digest": "5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5",
+      "files_total": 156,
+      "hashed_files": 155,
+      "entry_scripts": 3,
+      "standalone_result": "16/16 + 16/16 = 32/32 PASS",
+      "integrity": "all 155 file hashes and the content digest independently recomputed; PUBLISHED marker, runlog, and 190-note PDF completeness checks PASS",
+      "source_commit": "6db0405ff9073078ce695f35caffe664096960c4"
+    }
+  },
+  "review_gate": {
+    "id": "A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION",
+    "status": "CLOSED",
+    "confirmed_on": "2026-07-19",
+    "confirmed_by": "Jusang Lee",
+    "confirmed_document": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-v1.0.tex.txt",
+    "confirmation_basis": "Operator independently ran the 32/32 CLI and explicitly approved the v1.0 referee package.",
+    "required_before": "T5 promotion",
+    "policy": "governance/reproduction-bundle-policy.md section 14"
+  },
+  "publication_prerequisites": [
+    {
+      "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+      "required_artifact": "claim-level T6 PUBLISHED support bundle",
+      "status": "SATISFIED",
+      "confirmed_document": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.tex.txt",
+      "published_bundle_manifest": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/bundle/A4-Scalar-Constructive-T6-260719/MANIFEST.json",
+      "published_bundle_manifest_sha256": "a225fbe02452b0d9c2b73fd917675fe37474f0fffca6ae5b1ee1730ff3d425b4",
+      "bundle_digest": "b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162",
+      "satisfied_on": "2026-07-19",
+      "reason": "Corrected A4 v2.1 is operator-confirmed and its claim-level T6 support bundle is PUBLISHED and integrity-verified."
+    }
+  ],
+  "capstone_publication_review": {
+    "id": "A5-V1.2-EXACT-CAPSTONE-PACKAGE-CONFIRMATION",
+    "status": "CLOSED-BATCH-AUTHORIZATION",
+    "confirmed_on": "2026-07-19",
+    "confirmed_by": "Jusang Lee",
+    "confirmation_basis": "After the exact v1.2 candidate source was created and its initial PDF passed FORM-CHECK with zero overfull boxes, the operator explicitly instructed that approvals be processed in batch and work continue.",
+    "candidate_source": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.2.tex.txt",
+      "sha256": "6bd7c5bc23727b396bd7f3856624ec417e5fa4aba0c79265c9bbeb2ab81bdb68"
+    },
+    "candidate_pdf": {
+      "path": "claims/A5-SECTOR-A-SYNTHESIS/notes/a5-sector-a-synthesis-referee-package-260718-260719-v1.2.pdf",
+      "sha256": "246619724c8a65960f9aeb465a9fc60dfa886674cf5c99b395a6fa7062779631",
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS (all 6 pages rendered with Poppler and inspected 2026-07-19)"
+    },
+    "required_before": "A5 T5 PUBLISHED capstone bundle creation",
+    "policy": "governance/reproduction-bundle-policy.md section 14"
+  }
+}

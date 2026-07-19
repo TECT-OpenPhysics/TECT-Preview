@@ -1,0 +1,309 @@
+{
+  "schema": "tect/a3-full-production-discretization-continuum/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "frozen_on": "2026-07-17",
+  "status": "T6 REPAIR CANDIDATE: adversarially identified Galerkin-ball and enclosure defects are being corrected; enactment requires the v1.1 primary/full-chain-independent audits and replacement PUBLISHED bundle",
+  "authority": {
+    "p1_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "version": "1.0.0"
+    },
+    "p1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "p2_manifest": {
+      "path": "claims/A2-FULL-PRODUCTION-WELLPOSED/full_pde_manifest.json",
+      "sha256": "ef0238b07da6f600159b22ba709275d27154501bdea700ff4e489c2864b17682"
+    },
+    "spatial_audit": {
+      "path": "codes/foundations/a3_full_production_spatial_consistency.py",
+      "sha256": "560cc462c754d8d4fdf3c8c0d82beec891def0d50fbc2ca78b942cd43c13a44b",
+      "version": "1.0.0"
+    },
+    "finite_time_audit": {
+      "path": "codes/foundations/a3_full_production_finite_time_convergence.py",
+      "sha256": "899860abf27aa5d89292bc64a06e6cc1440d69f4a728bd8a3c8fd06cfcee37aa",
+      "version": "1.0.0"
+    },
+    "hessian_ritz_audit": {
+      "path": "codes/foundations/a3_full_production_hessian_ritz_convergence.py",
+      "sha256": "4dcb1d6df4a8d7cd965760e45ce9983076cebce99bd85679786cef3cb82afb49",
+      "version": "1.0.0"
+    },
+    "portable_backend": {
+      "path": "codes/foundations/a3_full_production_portable_backend.py",
+      "sha256": "85501c65af0d73a09e9acde17dae42d1ce340d77f45f80f3a8297d22099b68ca",
+      "version": "1.0.0"
+    },
+    "hardware_precision_audit": {
+      "path": "codes/foundations/a3_full_production_hardware_precision.py",
+      "sha256": "c948992b413f3b11bb53ba582fabdcc10a8b6b4cb8be6d4088f0814594a90a0f",
+      "version": "1.0.0"
+    },
+    "independent_galerkin_audit": {
+      "path": "codes/foundations/a3_full_production_independent_galerkin.py",
+      "sha256": "8348ebadf9f5338a6edf93a6ad92e6db2f6093c9952c974491ed90e691adf8b8",
+      "version": "1.0.0"
+    },
+    "solution_ball_bound_audit": {
+      "path": "codes/foundations/a3_full_production_solution_ball_bound.py",
+      "sha256": "14978809a776031db4d9467878732fbc24984bafe236efcd49429917f5b96fcb",
+      "version": "1.0.0"
+    },
+    "energy_ball_envelope_audit": {
+      "path": "codes/foundations/a3_full_production_energy_ball_envelope.py",
+      "sha256": "f019a4b890084916da821610e32b3696e0aa85e4d40ed190d33f5a702e5c174b",
+      "version": "1.0.0"
+    },
+    "quantitative_majorant_audit": {
+      "path": "codes/foundations/a3_full_production_quantitative_majorant.py",
+      "sha256": "27ead22c75e75cb65b6a520221ebf2e46a4756963a0fd5f6ca105fb8aee449c2",
+      "version": "1.1.0"
+    },
+    "quantitative_majorant_independent_audit": {
+      "path": "codes/foundations/a3_full_production_quantitative_majorant_independent.py",
+      "sha256": "e3e9ce208d67b41a52a05a278ff9542e58ceaf683e7117b5257d300b9d0cc134",
+      "version": "1.1.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a3_full_production_verify.py",
+      "sha256": "4df13b819871cebd035ad387d4d76d4c6b9c7dd3a87b245d5ad845e01b532bfe",
+      "version": "1.4.0"
+    },
+    "bundle_safe_verifier": {
+      "path": "codes/foundations/a3_full_production_bundle_verify.py",
+      "sha256": "f2340d46858c9dd98b2e9f3548dd51ea2cb247664bb272556caaa741a8daa7e6",
+      "version": "1.1.0"
+    }
+  },
+  "published_bundle": {
+    "path": "claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/bundle/A3-Full-Production-Discretization-T6-260717",
+    "grade": "PUBLISHED",
+    "repo_commit": "a88f2aa87f23928b06bdfe93c1638fce8d037dcf",
+    "files": 42,
+    "entry_scripts": 9,
+    "bundle_digest": "6bbf537dd44a6e727db59ebc99eb640265d98ed830e0b88ef6ad0de37e559910"
+  },
+  "continuum_problem": {
+    "domain": "fixed T^3 with periods Lx=Ly=Lz=16",
+    "field": "Psi in C^3, treated as six real components",
+    "flow": "partial_t Psi = -R[Psi], where R is the real-L2 gradient of the P1 reference functional",
+    "regularity_input": "P2 gives a unique global H2 solution and C-infinity smoothing for every t>0",
+    "scope": "pinned production parameters, positive rho and Class-II mass regularisers, eta_shell=0"
+  },
+  "spatial_discretization": {
+    "space": "S_N = three-component trigonometric polynomials on the fftfreq cube",
+    "projector": "P_N is the real-L2 Fourier projector onto S_N",
+    "derivatives": "Fourier multipliers ik_j and -|k|^2",
+    "quadrature": "uniform periodic trapezoidal rule",
+    "galerkin_residual": "R_N^G(Psi_N)=P_N R(Psi_N)",
+    "collocation_residual": "R_N^C is the hash-pinned P1 backend gradient of the collocation energy",
+    "dealiasing_rule": "Stage 1 uses the same backend at higher resolution followed by Fourier projection as a numerical proxy for R_N^G; an oversampling-reference stability error must be reported. Independent continuum-residual evaluation remains required for closure.",
+    "honesty_boundary": "R_N^C is not called exact Galerkin. Its difference from R_N^G is an aliasing error that must converge to zero."
+  },
+  "norms": {
+    "field_l2": "||u||_L2^2 = dV sum |u|^2",
+    "residual_relative": "||R_N^C-P_N R_ref^C||_L2 / max(||P_N R_ref^C||_L2,1e-30) for the stage-1 same-backend oversampled reference",
+    "energy_relative": "|F_N-F_ref|/max(|F_ref|,1e-30)",
+    "ritz": "real-L2 Rayleigh-Ritz values on a declared projected subspace"
+  },
+  "required_gates": [
+    "spectral Galerkin residual versus continuum residual",
+    "energy versus discrete real gradient",
+    "finite-time solution convergence",
+    "Hessian/Ritz grid convergence under an isolated-cluster condition",
+    "CPU/GPU and complex64/complex128 cross-check",
+    "manufactured-solution observed convergence order"
+  ],
+  "stage1": {
+    "grids": [8, 12, 16],
+    "reference_grids": [24, 32],
+    "finite_difference_steps": [0.0001, 1e-05, 1e-06],
+    "manufactured_field": "analytic, nonzero-density, three-component complex trigonometric field with all Class-II channels active",
+    "acceptance": {
+      "source_hashes_match": true,
+      "reference_projection_relative_error_max": 1e-08,
+      "final_collocation_to_projected_reference_relative_error_max": 1e-06,
+      "final_energy_relative_error_max": 1e-09,
+      "energy_roundoff_floor": 1e-14,
+      "gradient_identity_relative_error_max": 1e-06,
+      "minimum_observed_spatial_order": 4.0,
+      "require_monotone_spatial_errors": true
+    }
+  },
+  "stage2": {
+    "time_manufactured": {
+      "grid": 8,
+      "final_time": 0.2,
+      "time_steps": [0.04, 0.02, 0.01],
+      "integrator": "classical explicit RK4",
+      "forcing": "S_N(t)=partial_t Psi_star_N(t)+R_N^C(Psi_star_N(t)); this isolates temporal order for the semidiscrete ODE"
+    },
+    "unforced_cross_grid": {
+      "grids": [8, 12, 16],
+      "reference_grids": [20, 24],
+      "final_time": 0.005,
+      "time_step": 0.0005,
+      "integrator": "classical explicit RK4",
+      "initial_data": "the stage-1 analytic manufactured spatial field",
+      "comparison": "project each reference trajectory to the target grid; report reference-grid uncertainty separately"
+    },
+    "acceptance": {
+      "minimum_time_order": 3.5,
+      "final_time_relative_error_max": 1e-08,
+      "minimum_spatial_order": 4.0,
+      "final_trajectory_relative_error_max": 1e-06,
+      "reference_trajectory_relative_error_max": 1e-08,
+      "energy_relative_slack": 1e-10,
+      "require_monotone_errors": true
+    }
+  },
+  "stage3": {
+    "grids": [8, 12, 16],
+    "reference_grid": 20,
+    "homogeneous_block": {
+      "fourier_mode": [1, 1, 0],
+      "real_dimension": 12,
+      "lowest_cluster_multiplicity": 2,
+      "basis": "cosine and sine profiles times all six internal real coordinates",
+      "purpose": "translation invariance makes this a candidate invariant Hessian block, allowing a residual/gap eigenvalue certificate"
+    },
+    "manufactured_ritz": {
+      "real_dimension": 8,
+      "basis": "fixed orthonormal low-frequency real Fourier directions",
+      "field": "nonzero-density three-component Class-II-active stress field with Fourier indices up to 3, chosen to expose N=8 aliasing rather than start at the finite-difference floor",
+      "purpose": "grid convergence of a non-invariant Ritz matrix at a nonuniform Class-II-active stress field; no full-spectrum eigenvalue claim"
+    },
+    "hessian_steps": [0.0001, 3e-05, 1e-05],
+    "acceptance": {
+      "real_pairing_gram_error_max": 1e-12,
+      "hessian_antisymmetry_relative_max": 1e-06,
+      "homogeneous_invariance_defect_max": 1e-06,
+      "lowest_cluster_gap_min": 1e-04,
+      "cluster_residual_to_gap_max": 1e-04,
+      "final_homogeneous_ritz_relative_error_max": 1e-07,
+      "final_manufactured_ritz_relative_error_max": 1e-06,
+      "minimum_manufactured_ritz_order": 4.0,
+      "hessian_step_ritz_relative_spread_max": 1e-05,
+      "require_monotone_manufactured_ritz_errors": true
+    }
+  },
+  "stage4": {
+    "grid": 8,
+    "fields": ["homogeneous", "Class-II-active stress field"],
+    "reference": "hash-pinned canonical CPU complex128 backend",
+    "matrix": ["CPU complex128", "CPU complex64", "CUDA complex128", "CUDA complex64"],
+    "availability_rule": "CUDA rows are PASS or FAIL only when torch.cuda.is_available(); otherwise they are UNAVAILABLE and the hardware gate remains open",
+    "acceptance": {
+      "cpu_complex128_energy_relative_max": 1e-12,
+      "cpu_complex128_residual_relative_max": 1e-11,
+      "complex64_energy_relative_max": 5e-06,
+      "complex64_residual_relative_max": 5e-05,
+      "cuda_complex128_energy_relative_max": 1e-11,
+      "cuda_complex128_residual_relative_max": 1e-09,
+      "cuda_complex64_energy_relative_max": 5e-06,
+      "cuda_complex64_residual_relative_max": 5e-05
+    }
+  },
+  "stage5": {
+    "grids": [8, 12, 16],
+    "reference_grids": [24, 32],
+    "field": "stage-1 analytic nonzero-density three-component manufactured field, prolonged from each target grid",
+    "independent_continuum_proxy": "P_N R_M^P(I_M Psi_N), where R_M^P is the real gradient of the independently implemented portable trapezoid-quadrature functional; M=24,32 provide reference-stability evidence for the continuum integral",
+    "acceptance": {
+      "prolongation_relative_error_max": 1e-13,
+      "portable_vs_canonical_relative_error_max": 1e-11,
+      "reference_projection_relative_error_max": 1e-08,
+      "final_collocation_to_independent_proxy_relative_error_max": 1e-06,
+      "minimum_observed_order": 4.0,
+      "require_monotone_errors": true
+    }
+  },
+  "stage6": {
+    "solution_ball": {
+      "initial_space": "B_R={u0 in H2(T3;C3): ||u0||_H2 <= R}, for arbitrary R>0",
+      "tau": 0.02,
+      "T": 0.2,
+      "positive_time_sobolev_order": 6,
+      "p2_input": "P2 global H2 well-posedness, energy control, and positive-time C-infinity smoothing imply a finite B6(R,tau,T) envelope on every fixed 0<tau<=t<=T interval."
+    },
+    "residual_differential_order": 4,
+    "projection_target_sobolev_order": 2,
+    "theorem_statement": "For every R>0 and 0<tau<=T<infinity, there is C(R,tau,T)<infinity such that every P2 solution from B_R satisfies sup_{tau<=t<=T} ||P_N R(u(t))-R_N^C(P_N u(t))||_L2 <= C(R,tau,T) N^-2.",
+    "constant_status": "QUANTITATIVE for the declared radii R=0.5,1,2 at tau=0.02 and T=0.2: Stage 8 evaluates finite B6 and C enclosures. The constants are deliberately conservative and are not practical solver error bars.",
+    "audit_grids": [8, 12, 16],
+    "acceptance": {
+      "pinned_residual_order": 4,
+      "strict_alias_sobolev_order_min": 1.5,
+      "uniform_rate_min": 2.0
+    }
+  },
+  "stage7_energy_ball": {
+    "embedding_shell_cutoff": 8192,
+    "initial_h2_radii": [0.5, 1.0, 2.0],
+    "statement": "For every R in the declared H2-radius list, the canonical P1 energy is explicitly bounded above by E_upper(R); P2 dissipation and coercivity give ||u(t)||_H2 <= M2(R) for every t>=0.",
+    "method": "A max-norm-shell upper bound for the Fourier H2-to-Linfinity embedding, the canonical Pauli-generator current bound, and the P2 Young/coercivity constants.",
+    "acceptance": {
+      "require_p1_p2_source_hashes": true,
+      "require_positive_coercivity_and_sextic": true,
+      "require_monotone_energy_and_envelope": true,
+      "require_envelope_dominates_initial_radius": true
+    }
+  },
+  "stage8_quantitative_majorant": {
+    "tau": 0.02,
+    "T": 0.2,
+    "fractional_power": 0.75,
+    "embedding_shell_cutoff": 8192,
+    "field_real_components": 6,
+    "spatial_dimensions": 3,
+    "classii_generators": 3,
+    "classii_contraction_overcount": 108,
+    "classii_contraction_breakdown": {
+      "generator_sum": "already included in every bmetric derivative envelope",
+      "spatial_frobenius_sum": "the three-direction low-order sum is explicit in K0/Lip0; H2 products use the proved H2 algebra constant",
+      "field_components": "absorbed by operator-norm AJ/AK estimates after the isometric C3-to-R6 realification",
+      "remaining_coordinate_free_euler_factor": 1.5,
+      "declared_headroom_ratio": 72
+    },
+    "statement": "For each declared H2 initial radius, compute explicit two-step endpoint-cancellation bounds B4 and B6 on [tau,T], an explicit collocation/Galerkin residual constant C multiplying N^-2, and a restarted exact-Galerkin evolution constant multiplying N^-4. The evolution estimate must use a separately derived Galerkin energy ball rather than importing the continuum M2 ball.",
+    "evolution_scope": "The exact Galerkin flow is restarted at t=tau with P_N u(tau). This avoids claiming an algebraic rate at t=0 for merely H2 initial data.",
+    "acceptance": {
+      "require_finite_positive_majorants": true,
+      "require_monotone_radius_envelopes": true,
+      "require_explicit_floor_dependence": true,
+      "require_positive_time_restart": true,
+      "require_no_historical_solver_claim": true
+    }
+  },
+  "stage9_adversarial_repair": {
+    "trigger": "Post-promotion adversarial review found that v1.0 used the continuum M2 ball for the restarted exact-Galerkin trajectory, and that selected displayed upper bounds were rounded inward.",
+    "required_corrections": [
+      "derive F(P_N u(tau)) <= E_upper(M2(R)) without assuming projection-energy monotonicity",
+      "derive the uniform Galerkin H2 envelope from E_upper(M2(R)) and coercivity",
+      "evaluate the evolution Lipschitz and Gronwall constants on the common Galerkin/continuum ball",
+      "serialize every upper bound with outward rounding and the graph lower bound with downward rounding",
+      "independently reconstruct the energy, nonlinear-majorant, endpoint, residual, and Gronwall chains",
+      "prove the declared Class-II contraction factor dominates the coordinate-free Euler tensor factor"
+    ],
+    "acceptance": {
+      "primary_assertions_min": 20,
+      "independent_full_chain_assertions_min": 18,
+      "require_projection_energy_monotonicity": false,
+      "require_replacement_published_bundle": true
+    }
+  },
+  "later_stages": {
+    "finite_time": "CLOSED@T4-EVIDENCE-SCOPE: forced manufactured solution plus unforced cross-grid trajectory convergence with time error separated from spatial error; 10/10 PASS",
+    "hessian_ritz": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS for the homogeneous invariant-block residual/gap certificate and nonuniform fixed-subspace Ritz grid convergence",
+    "hardware_precision": "CLOSED@T4-EVIDENCE-SCOPE: CPU and CUDA complex128/complex64 rows PASS on the recorded torch 2.13.0+cu130 environment with one NVIDIA GeForce RTX 5070 Laptop GPU; this is not an all-device equivalence theorem",
+    "independent_continuum_residual": "CLOSED@T4-EVIDENCE-SCOPE for the analytic manufactured-field quadrature proxy: 11/11 PASS, exact Fourier prolongation, portable/canonical agreement, and M=24,32 reference stability; Stage 8 separately supplies the uniform analytic bound in its declared solution-ball scope",
+    "solution_ball_bound": "CLOSED@T6-CONDITIONAL-THEOREM-SCOPE: explicit positive-time B6 and C(R,tau,T) enclosures give a uniform N^-2 residual/alias bound for R=0.5,1,2, tau=0.02, and T=0.2",
+    "energy_ball_envelope": "CLOSED@T4-EVIDENCE-SCOPE: 13/13 PASS gives explicit all-time M2(R) enclosures for declared initial H2 radii; this is only the input to an explicit positive-time smoothing majorant",
+    "quantitative_majorant": "CLOSED@T6-CONDITIONAL-THEOREM-SCOPE: primary 15/15 and independent 10/10 audits give explicit conservative B6, residual N^-2, and positive-time restarted exact-Galerkin N^-4 constants; practical sharpness remains open",
+    "integrated_release": "CLOSED: 104/104 one-command verifier PASS; immutable JSON evidence, T6 referee note, and PUBLISHED bundle with nine entry scripts ALL PASS"
+  },
+  "tier_boundary": "T6 CONDITIONAL-THEOREM: the full positive-time theorem, named canonical-functional hypothesis, explicit B6/C and exact-Galerkin N^-4 bound, independent audit, quantitative sanity checks, and PUBLISHED reproduction bundle are closed. T7 is prohibited by the named hypothesis and lack of external public reproduction. N32/N64/N128 solver output is not covered."
+}

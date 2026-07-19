@@ -1,9 +1,9 @@
 # A5-SECTOR-A-SYNTHESIS -- Sector A branch-aware synthesis
 
-**Tier**: T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS (TSv2); separate T6
-conditional-composition referee candidate pending operator confirmation |
+**Tier**: T6 CONDITIONAL-COMPOSITION (TSv2), operator-confirmed and PUBLISHED;
+immutable T5 capstone retained as tier history |
 **Lifecycle**: ACTIVE |
-**Last review**: 2026-07-19
+**Last review**: 2026-07-20
 
 ## Result
 
@@ -26,9 +26,12 @@ shared spectral geometry and declared hypotheses
           +-> A4 finite-volume non-perturbative Gibbs measure
 ```
 
-The enacted T5 synthesis verdict is `PASS@BRANCH-AWARE-DECLARED-SCOPE`.  It means that
-both declared chains and their interfaces are reproducibly fixed.  It does
-not mean that they are one parameter-identical full constructive theory.
+The enacted T6 theorem has verdict
+`A5-T6-CONDITIONAL-COMPOSITION-INTEGRATED-PASS`.  It means that both declared
+chains compose under exactly seven named hypotheses and that their interfaces
+and non-implications are reproducibly fixed.  It does not mean that they are
+one parameter-identical full constructive theory.  The earlier
+`PASS@BRANCH-AWARE-DECLARED-SCOPE` T5 result remains immutable tier history.
 
 ## Exact branch interface
 
@@ -92,21 +95,21 @@ A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS
 Termination: PASS@BRANCH-AWARE-DECLARED-SCOPE
 ```
 
-The separate T6 candidate has its own non-importing dual audit and does not
-replace the T5 command:
+The T6 theorem has its own non-importing dual audit; the historical T5 command
+remains reproducible from its unchanged bundle:
 
 ```bash
 python codes/foundations/a5_t6_conditional_verify.py
 ```
 
 Its required verdict is
-`A5-T6-CONDITIONAL-COMPOSITION-PREFLIGHT-PASS` together with an explicit
-`REFEREE-CANDIDATE-OPERATOR-CONFIRMATION-REQUIRED` publication state.  A PASS
-does not itself enact T6 or authorize a PUBLISHED bundle.
+`A5-T6-CONDITIONAL-COMPOSITION-INTEGRATED-PASS`, with primary `22/22`,
+non-importing independent `13/13`, aggregate `35/35`, and publication state
+`T6-PUBLISHED-OPERATOR-CONFIRMED`.
 
 ## Dependencies and named hypotheses
 
-The six component claims above are hard dependencies.  The T6 candidate carries
+The six component claims above are hard dependencies.  The T6 theorem carries
 exactly seven registered hypotheses:
 `A5-H1-CANONICAL-KERNEL-MANIFEST`, `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`,
 `A2-H2-SEXTIC-COERCIVITY`,
@@ -116,10 +119,10 @@ The new A5 hypothesis exposes the T5 kernel-manifest premise; A2-H3 exposes the
 T5 full-functional premise.  This repairs tier monotonicity without pretending
 that either input has independently become T6.
 
-## T6 conditional-composition candidate (T-041)
+## T6 conditional-composition theorem (T-041)
 
 On the fixed spectral three-torus, under those seven hypotheses and the exact
-six content-addressed premises, the candidate theorem makes two simultaneous
+six content-addressed premises, the theorem makes two simultaneous
 but separate conclusions:
 
 1. the full variational realization implies the A2 global H2 gradient flow,
@@ -194,8 +197,11 @@ This separation is part of the theorem, not a documentation afterthought.
     audit reconstructs the immutable 155-file T5 bundle and its digest before
     checking the theorem contract; any drift fails closed.
 14. **"A successful local preflight is operator confirmation."** UPHELD as
-    false.  Exact-package review and independent execution remain a registered
-    open gate, and no T6 PUBLISHED bundle exists before that confirmation.
+    false.  The exact v1.0 package was separately confirmed by Jusang Lee on
+    2026-07-20; that confirmation, not the preflight alone, enacts T6.
+15. **"The confirmation could be rebound to a later reissue."** DISMISSED.
+    The record pins candidate commit `fb776bff6b161178a6328570af3ef9529b44a2df`
+    and the exact v1.0 source/PDF hashes before the v1.1 enactment issue.
 
 ## Quantitative sanity checks
 
@@ -206,6 +212,8 @@ This separation is part of the theorem, not a documentation afterthought.
 - Scalar perturbative evidence is `8/8`; scalar constructive evidence is
   `33/33` at the corrected publication boundary.
 - The A5 audits pass `16/16 + 16/16 = 32/32`.
+- The T6 dual audit passes `22/22 + 13/13 = 35/35` and independently binds
+  the exact operator confirmation to the candidate commit and hashes.
 - The A5 PUBLISHED bundle has 155 hashed files; all match, and content digest
   `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`
   recomputes exactly.
@@ -228,17 +236,31 @@ therefore publication-complete without changing its theorem boundary.
 
 ## No-overclaim
 
-This T5 package and the pending T6 candidate do not establish a parameter-
+This T6 conditional-composition package does not establish a parameter-
 identical full-production constructive quantum field theory, a full three-
 component derivative Class-II Gibbs measure,
 `eta_shell` nonzero, removed regularisers, `t=0` P3 rates for H2 data,
 historical-grid error bars, finite-difference Route B, infinite volume, phase
 transition, minimizer uniqueness, BCC existence or selection, Sector-B or
-physical-domain closure, enacted T6 before operator confirmation, or T7.
+physical-domain closure, or T7.
 
-## Next required action
+## T6 confirmation and publication rationale
 
-Jusang Lee independently runs the 33/33 verifier, reviews the exact six-page
-v1.0 PDF, and explicitly confirms or rejects the package.  Only after that
-confirmation may the card be promoted and the new T6 PUBLISHED bundle be built
-last beside the immutable T5 bundle.
+Jusang Lee independently reviewed the exact six-page v1.0 package and on
+2026-07-20 explicitly confirmed it and authorized the PUBLISHED T6 bundle.
+The v1.1 issue binds that decision to the candidate commit and exact hashes,
+passes FORM-CHECK, zero-overfull, and five-page visual QA, and raises the dual
+audit to `22/22 + 13/13 = 35/35`.  The T6 bundle is built last beside the
+unchanged T5 capstone; it does not overwrite any earlier tier artifact.  The
+PUBLISHED bundle
+`claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Conditional-Composition-T6-260720`
+contains 307 hash-listed files, reproduces 35/35 from its own root, and has
+content digest
+`7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526`.
+
+## Next research action
+
+Open a separate claim below T6 for the full three-component derivative
+Class-II constructive measure.  Promotion requires derivative-current power
+counting, counterterm classification, uniform stability, tightness, and
+regulator removal; no part is inferred from this composition theorem.

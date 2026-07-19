@@ -10,9 +10,9 @@ every T5+ claim in the repository.
 Usage:
     python verification/scripts/bundle_coverage.py
 """
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 __first_issued__ = "2026-06-10"
-__version_issued__ = "2026-07-17"
+__version_issued__ = "2026-07-20"
 
 import json
 import re
@@ -97,6 +97,13 @@ def main():
             preferred = [b for b in bundles if b[3] in mainline]
         if not preferred:
             preferred = bundles[-1:] if bundles else []
+        # A claim may intentionally retain immutable bundles from earlier
+        # tiers.  Among otherwise registered/main-line candidates, prefer the
+        # bundle whose stamped name matches the card's current tier instead of
+        # silently choosing the lexicographically last historical bundle.
+        current_tier_preferred = [b for b in preferred if f"-{tier}-" in b[0]]
+        if current_tier_preferred:
+            preferred = current_tier_preferred
         current = preferred[-1] if preferred else ("-", "NO-BUNDLE", "", "")
         if is_mainline:
             requirement = "MAIN-LINE"

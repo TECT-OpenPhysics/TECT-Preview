@@ -1,0 +1,405 @@
+% =============================================================================
+% Title: Finite-volume scalar spectral constructive Gibbs measure -- integrated referee package
+% Claim: A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+% Version: v2.1 -- first issued 2026-07-19; this version issued 2026-07-19
+% Status: T6 PUBLISHED ENTRY -- operator-confirmed 2026-07-19 by Jusang Lee
+%
+% Revision history:
+%   v2.1 (2026-07-19) repairs the q0=0 endpoint in the trace-class shell
+%        notation after final adversarial review of the operator-approved v2.0.
+%        The first nonzero max-norm shell is now fixed explicitly by
+%        m0=max(1,ceil(sqrt(2)q0/alpha)).  Primary and non-importing audits add
+%        independent q0=0 boundary assertions; fresh preflight is 33/33 PASS.
+%        The theorem and scope are unchanged.  Because the entry document
+%        changed, this exact v2.1 required renewed operator confirmation.
+%        Jusang Lee confirmed the exact source (pre-marker SHA-256
+%        1d8ef67588fd697a00bfacf5630ee5d01cf2d9ba325bca5947e54906cc6d20a5)
+%        and PDF (SHA-256 f4788612e300458d7e8ea78ccb97c1a42ea223ee3b548b5a78c73e8f5b0c9c8d)
+%        on 2026-07-19, authorizing bundle-last PUBLISHED packaging.
+%   v2.0 (2026-07-19) integrates the operator-approved proof v1.0 and the
+%        operator-reproduction/T6 enactment v1.0 into one self-contained
+%        referee document.  The theorem and scope are unchanged.  The
+%        one-command verifier is re-issued as v1.1.0 solely to remove its
+%        stale pre-promotion boundary text; fresh preflight is 31/31 PASS.
+%        Underlying T6 theorem approved 2026-07-18.  This exact integrated
+%        package awaits the policy-required operator confirmation before any
+%        PUBLISHED bundle is built.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+
+This package gives a single-file proof and reproduction map for the
+finite-volume real-scalar constructive measure in Sector A.  It consolidates
+the previously approved analytic proof and scoped T6 enactment without adding
+a theorem or enlarging the scope.  The torus, regulator, covariance,
+interaction, topology of convergence, and admissible observables are all fixed
+below so that the result can be attacked without consulting a sibling note.
+
+The underlying theorem was promoted to T6 after Jusang Lee independently ran
+the hash-bound verifier on 2026-07-18.  Jusang Lee confirmed integrated v2.0 on
+2026-07-19, but final adversarial review then found that its shell notation did
+not isolate the zero mode when $q_0=0$.  The current v2.1 repairs that endpoint
+without changing the theorem.  It is the exact entry for the eventual
+reproduction bundle.  Jusang Lee confirmed this v2.1 source and PDF on
+2026-07-19.  That confirmation authorizes bundle-last packaging; publication
+is claimed only after the resulting bundle passes its integrity and repository
+release checks.
+
+The result is deliberately scalar.  It is not a construction of the full
+three-complex-component derivative Class-II measure and it proves neither an
+infinite-volume phase transition nor BCC existence or selection.
+
+\section{Definitions and theorem}
+
+Let
+\[
+ \mathbb T_L^3=[0,L)^3,\qquad L=16,\qquad
+ \alpha=\frac{2\pi}{L},\qquad |\mathbb T_L^3|=L^3.       \tag{2.1}
+\]
+Use the orthonormal real Fourier representation, with the usual conjugacy
+constraint, and let $P_N$ retain precisely the modes
+$n\in\mathbb Z^3$ satisfying $|n|_\infty\leq N$.  For
+\[
+ m_{\rm sh}^2>0,\qquad Y>0,\qquad q_0\geq0,              \tag{2.2}
+\]
+define
+\[
+ K_n=m_{\rm sh}^2+Y\bigl(\alpha^2|n|^2-q_0^2\bigr)^2,
+ \qquad C_n=K_n^{-1}.                                   \tag{2.3}
+\]
+Let $\mu_0$ be the centred real Gaussian probability measure with covariance
+$C=K^{-1}$.  Its projected law is $\mu_{0,N}=(P_N)_\#\mu_0$.
+
+For $\lambda\in\mathbb R$ and $\gamma>0$, set
+\[
+ V(\phi)=\int_{\mathbb T_L^3}
+ \left(\frac{\lambda}{4}\phi(x)^4+
+       \frac{\gamma}{6}\phi(x)^6\right)dx.             \tag{2.4}
+\]
+The finite-dimensional Galerkin Gibbs law is
+\[
+ d\nu_N(\phi_N)=Z_N^{-1}e^{-V(\phi_N)}d\mu_{0,N}(\phi_N).
+                                                               \tag{2.5}
+\]
+
+\paragraph{Theorem (finite-volume scalar spectral constructive measure).}
+Under (2.2) and $\lambda\in\mathbb R$, $\gamma>0$:
+\begin{enumerate}
+\item $C=K^{-1}$ is trace class on real $L^2(\mathbb T_L^3)$ and defines a
+Radon Gaussian probability measure $\mu_0$;
+\item $V(\phi)$ is finite for $\mu_0$-almost every $\phi$, every $Z_N$ is
+finite and strictly positive, and the bounds are uniform in $N$;
+\item with
+\[
+ d\nu(\phi)=Z^{-1}e^{-V(\phi)}d\mu_0(\phi),              \tag{2.6}
+\]
+the full sequence $\nu_N$ converges weakly to $\nu$ on real $L^2$;
+\item on the common Gaussian space, the lifted normalized densities converge
+in $L^1(\mu_0)$, equivalently in total variation; and
+\item expectations of every finite-degree polynomial in finitely many
+continuous real linear functionals on $L^2$ converge.
+\end{enumerate}
+This is a T6 conditional theorem under the named hypotheses
+\texttt{A1-SHELL-POSITIVITY} and
+\texttt{A2-H2-SEXTIC-COERCIVITY}.  The hard analytic dependency is
+\texttt{A1-SCALAR-ANALYTIC-BRANCH}.
+
+\section{Trace class and the sharp Gaussian Hilbert threshold}
+
+For every integer $m\geq1$, the number of lattice points on the nonzero
+max-norm shell $|n|_\infty=m$ is exactly
+\[
+ (2m+1)^3-(2m-1)^3=24m^2+2.                              \tag{3.1}
+\]
+Let
+\[
+ m_0=\max\left\{1,\left\lceil\sqrt2q_0/\alpha\right\rceil\right\}.
+\]
+If $m\geq m_0$ and
+$|n|_\infty=m$, then $\alpha^2|n|^2\geq2q_0^2$ and
+\[
+ K_n\geq \frac{Y}{4}\alpha^4m^4.                        \tag{3.2}
+\]
+Therefore, for $M\geq m_0$,
+\[
+ \sum_{|n|_\infty\geq M}C_n
+ \leq\frac{4}{Y\alpha^4}
+ \sum_{m=M}^\infty\left(24m^{-2}+2m^{-4}\right)<\infty. \tag{3.3}
+\]
+The inner modes are finite in number and $K_n\geq m_{\rm sh}^2$, so
+$\operatorname{Tr}C<\infty$.  Hence $\mu_0$ is a Radon Gaussian measure on
+$L^2$.
+
+With the $H^s$ weight, the shell contribution is asymptotic to
+$m^{2s-2}$.  Thus the covariance is trace class on $H^s$ for every
+$s<1/2$.  Conversely, the upper estimate $K_n\leq c(1+|n|^4)$ at large
+$|n|$ gives the harmonic lower behaviour at $s=1/2$, so the threshold is
+sharp.  This regularity fact is used as a warning, not as a Sobolev route to
+the local sextic term.
+
+\section{The local interaction: direct Gaussian $L^6$ control}
+
+Let $X_N=(I-P_N)\phi$.  Translation invariance gives the pointwise variance
+\[
+ t_N=|\mathbb T_L^3|^{-1}
+     \sum_{|n|_\infty>N}C_n\longrightarrow0.             \tag{4.1}
+\]
+For a centred real Gaussian random variable $X$,
+$\mathbb E X^6=15(\mathbb E X^2)^3$.  Tonelli's theorem therefore yields
+\[
+ \mathbb E\int_{\mathbb T_L^3}|X_N(x)|^6dx
+ =15|\mathbb T_L^3|t_N^3\longrightarrow0.                \tag{4.2}
+\]
+Consequently $P_N\phi\to\phi$ in
+$L^6(\Omega\times\mathbb T_L^3)$, $\phi\in L^6$ almost surely, and the
+quartic and sextic integrals in (2.4) are finite.  This is the load-bearing
+construction of $V$; the false embedding $H^{1/2-}\hookrightarrow L^6$ in
+three dimensions is never used.
+
+The polynomial difference identity and Holder's inequality on the finite
+measure product space imply
+\[
+ \mathbb E|V(P_N\phi)-V(\phi)|\longrightarrow0.           \tag{4.3}
+\]
+For the sextic part one uses
+\[
+ |a^6-b^6|\leq6(|a|^5+|b|^5)|a-b|                       \tag{4.4}
+\]
+with the $L^6$ convergence and uniform Gaussian $L^6$ norms; the quartic
+term follows identically with lower powers.
+
+\section{Stability and uniform partition bounds}
+
+Put $a=\max(-\lambda,0)$ and $x=\phi^2$.  Direct minimization on $x\geq0$
+gives
+\[
+ \frac{\lambda}{4}\phi^4+\frac{\gamma}{6}\phi^6
+ \geq-\frac{a^3}{12\gamma^2}=:-c_*.                     \tag{5.1}
+\]
+Therefore
+\[
+ 0<e^{-V(P_N\phi)}\leq e^{c_*|\mathbb T_L^3|},
+ \qquad Z_N\leq e^{c_*|\mathbb T_L^3|}.                 \tag{5.2}
+\]
+
+Let $\sigma_*^2=|\mathbb T_L^3|^{-1}\operatorname{Tr}C$ and
+$\lambda_+=\max(\lambda,0)$.  The real Gaussian moments
+$\mathbb E X^4=3\sigma^4$ and $\mathbb E X^6=15\sigma^6$ give
+\[
+ \mathbb EV(P_N\phi)
+ \leq |\mathbb T_L^3|
+ \left(\frac{3\lambda_+}{4}\sigma_*^4+
+       \frac{5\gamma}{2}\sigma_*^6\right)=:B_*<\infty. \tag{5.3}
+\]
+Since $x\mapsto e^{-x}$ is convex, Jensen's inequality has the direction
+\[
+ Z_N=\mathbb E e^{-V(P_N\phi)}
+ \geq e^{-\mathbb EV(P_N\phi)}\geq e^{-B_*}>0.           \tag{5.4}
+\]
+Equations (5.2)--(5.4) enclose every Galerkin partition function uniformly.
+
+\section{Full-sequence cutoff removal}
+
+Write $w_N=e^{-V(P_N\phi)}$ and $w=e^{-V(\phi)}$.  Equation (4.3) implies
+$V(P_N\phi)\to V(\phi)$ in probability.  The deterministic ceiling in
+(5.2) makes the weights uniformly bounded, and bounded convergence in
+probability gives
+\[
+ w_N\longrightarrow w\quad\hbox{in }L^1(\mu_0),
+ \qquad Z_N=\mathbb Ew_N\longrightarrow Z=\mathbb Ew>0. \tag{6.1}
+\]
+Define the lifted law
+\[
+ d\widetilde\nu_N=Z_N^{-1}w_Nd\mu_0.                    \tag{6.2}
+\]
+Then
+\[
+ \left\|\frac{w_N}{Z_N}-\frac{w}{Z}\right\|_{L^1(\mu_0)}
+ \longrightarrow0.                                      \tag{6.3}
+\]
+This is total-variation convergence only on the common Gaussian space.
+
+The actual Galerkin law satisfies
+$\nu_N=(P_N)_\#\widetilde\nu_N$.  For bounded continuous $F$ on $L^2$,
+$P_N\phi\to\phi$ almost surely and (5.2)--(5.4) uniformly bound the
+normalized densities.  Combining this fact with (6.3) gives
+\[
+ \int F(\phi_N)d\nu_N
+ =\int F(P_N\phi)d\widetilde\nu_N
+ \longrightarrow\int F(\phi)d\nu.                      \tag{6.4}
+\]
+Thus the full sequence converges weakly; no unnamed subsequence remains.
+The embedded finite-dimensional laws have different supports and are not
+claimed to converge in total variation.
+
+\section{Declared correlations}
+
+Let $\ell_1,\ldots,\ell_r$ be continuous real linear functionals on $L^2$
+and $Q$ a finite-degree polynomial.  The random variables
+$Q(\ell_1(P_N\phi),\ldots,\ell_r(P_N\phi))$ converge in every finite
+Gaussian moment to the corresponding unprojected polynomial.  The uniform
+density ceiling following from (5.2)--(5.4) transfers uniform integrability
+to the lifted Gibbs laws.  Hence
+\[
+ \int Q(\ell_1(\phi_N),\ldots,\ell_r(\phi_N))d\nu_N
+ \longrightarrow
+ \int Q(\ell_1(\phi),\ldots,\ell_r(\phi))d\nu.           \tag{7.1}
+\]
+Unsmeared coincident-point products and composite-operator renormalization
+are not included.
+
+\section{Reproduction and independent execution}
+
+The one-command verifier is
+\begin{verbatim}
+python codes/foundations/a4_scalar_constructive_measure_verify.py
+\end{verbatim}
+and must print
+\begin{verbatim}
+PASS: primary (18/18)
+PASS: independent (15/15)
+ASSERTS: 33/33
+A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS
+\end{verbatim}
+The primary audit derives the trace, stability, partition, and Gaussian-tail
+bounds.  The second route is non-importing: it reconstructs the shell count,
+Fourier traces, Decimal potential minimum, Gaussian moments, and partition
+bounds with scalar loops.  The integrated verifier launches both routes in a
+fresh temporary directory and checks the three source hashes pinned in
+\texttt{constructive\_measure\_manifest.json}.
+
+Jusang Lee independently executed verifier v1.0.0 from clean commit
+\begin{verbatim}
+7eee2fe84887cc4ccdd311c75095ec84bc9d0d45
+\end{verbatim}
+on 2026-07-18.  The immutable operator artifact is
+\begin{verbatim}
+claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/
+2026-07-18-jusang-independent/result.json
+\end{verbatim}
+with SHA-256
+\begin{verbatim}
+fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c
+\end{verbatim}
+and 31/31 assertions, zero failures, zero bad source rows, and zero bad audit
+rows.  Verifier v1.1.0 changed no mathematics or audit calculation; it removed
+only the stale pre-promotion boundary sentence.  Final review of v2.0 then
+identified the $q_0=0$ shell-index endpoint described above.  Primary and
+independent audit v1.1.0 add separate boundary assertions, and verifier v1.2.0
+reruns the full package.  Its v2.1 referee preflight passes 33/33, at
+\begin{verbatim}
+claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/
+2026-07-19-referee-preflight-v2.1/result.json
+\end{verbatim}
+with SHA-256
+\begin{verbatim}
+85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8.
+\end{verbatim}
+
+The deterministic internal and operator JSONs may have identical content
+hashes; execution independence is instead evidenced by the clean source
+commit, separate operator-created path and filesystem event, and fresh
+subprocess return codes.  Algorithmic diversity comes from the non-importing
+second route.
+
+\section{Quantitative sanity record}
+
+At cutoff 8 the scalar-loop and vectorized covariance traces agree to at most
+$1.32\times10^{-16}$ relative error.  The production-local shell mass is
+reconstructed from its stored inputs as
+\[
+ r-\frac{Z^2}{4Y}=0.260000000009475,                      \tag{9.1}
+\]
+consistent with the stored value $0.26$ at the declared source precision.
+The conservative covariance-trace bounds are $3029.399163006103$ for the
+perturbative scalar anchor and $596.857766699839$ for the production-local
+anchor.  The pinned-coefficient pointwise stability constant is
+$0.0025246087994716246$ per unit volume.  These numbers are executable sanity
+checks, not physical predictions or practical cutoff error estimates.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Trace class alone defines the local sextic.}
+\textbf{UPHELD as false.}  The separate Gaussian sixth-moment estimate (4.2)
+is load-bearing.
+\item \textbf{The proof silently uses $H^{1/2-}\hookrightarrow L^6$.}
+\textbf{UPHELD as false.}  That embedding is unavailable in three dimensions;
+the proof uses direct $L^6(\Omega\times\mathbb T^3)$ convergence.
+\item \textbf{A negative quartic makes the Gibbs weight uncontrollable.}
+\textbf{DISMISSED under the hypotheses.}  The positive sextic gives the exact
+global lower bound (5.1).
+\item \textbf{Jensen's inequality has the wrong direction.}
+\textbf{DISMISSED.}  Convexity of $e^{-x}$ gives the lower bound (5.4).
+\item \textbf{Tightness identifies only a subsequence.}
+\textbf{UPHELD as insufficient by itself.}  The common-space $L^1$ density
+limit identifies the full sequence before weak convergence is concluded.
+\item \textbf{The finite-dimensional laws converge in total variation after
+zero extension.} \textbf{UPHELD as false.}  Total variation is asserted only
+for the lifted laws; the projected laws converge weakly.
+\item \textbf{Identical deterministic JSON hashes prove a copied operator
+artifact.} \textbf{DISMISSED.}  The execution provenance and subprocess
+returns are distinct; a non-importing second algorithm supplies diversity.
+\item \textbf{The theorem constructs derivative Class-II currents.}
+\textbf{UPHELD as false.}  Typical Gaussian regularity does not automatically
+define those terms; they require a separate construction or renormalization.
+\item \textbf{Finite volume proves a phase transition or BCC selection.}
+\textbf{UPHELD as false.}  Neither a thermodynamic limit nor a selection
+argument occurs here.
+\item \textbf{The large explicit constants are usable numerical error bars.}
+\textbf{UPHELD as false.}  They certify integrability and reproduction only.
+\item \textbf{The shell-count proof is undefined at $q_0=0$.}
+\textbf{DISMISSED after v2.1 repair.}  The zero Fourier mode is part of the
+finite inner set, while the tail begins at
+$m_0=\max\{1,\lceil\sqrt2q_0/\alpha\rceil\}$; two executable routes test the
+$q_0=0$, $m_0=1$ endpoint independently.
+\end{enumerate}
+
+\section{Falsifier and honesty boundary}
+
+The theorem fails if the covariance trace diverges in the declared positive
+$q^4$ scope; the Gaussian $L^6$ tail does not vanish; the exact stability or
+uniform partition bounds fail; the common-space densities do not converge in
+$L^1$; two cutoff subsequences have different weak limits; a declared smeared
+cylinder polynomial fails to converge; a source/evidence hash drifts; or one
+of the two executable routes fails.
+
+The theorem excludes the full three-component derivative Class-II Gibbs
+measure, $\eta_{\rm shell}\ne0$, zero or negative shell mass, unsmeared
+composite operators, infinite volume, phase transition, finite-difference
+Route B and regulator independence, BCC existence or selection, T7, and any
+claim that the scalar branch shares the full-production parameter anchor.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+Precise statement:       Full sharp spectral Galerkin Gibbs sequence
+                         converges weakly on real L2; lifted densities
+                         converge in L1/TV; finite-degree smeared cylinder
+                         polynomial correlations converge.
+Scope:                   T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-
+                         SPECTRAL; L=16, m_sh^2>0, Y>0, q0>=0,
+                         lambda real, gamma>0, beta=1.
+Dependencies:            A1-SCALAR-ANALYTIC-BRANCH; named hypotheses
+                         A1-SHELL-POSITIVITY and A2-H2-SEXTIC-COERCIVITY.
+Evidence grade:          ANALYTIC + EXACT + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a4_scalar_constructive_measure_verify.py
+Expected output:         primary 18/18; independent 15/15; total 33/33;
+                         A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS.
+Operator evidence:       2026-07-18-jusang-independent/result.json;
+                         SHA-256 fb2d81ba75d95972e55c675146fbf84c...
+Publication preflight:   2026-07-19-referee-preflight-v2.1/result.json;
+                         SHA-256 85da0df0d2b96dbfc98f2ea8a0787bf1...
+Falsification gate:      Failed proof step, route, source/evidence hash, or
+                         execution provenance in the declared scope.
+Tier:                    T6 CONDITIONAL-THEOREM, operator-approved 2026-07-18.
+Package status:          exact v2.1 entry document operator-confirmed by
+                         Jusang Lee on 2026-07-19 after the q0=0 repair;
+                         PUBLISHED bundle-last packaging authorized.
+No-overclaim statement:  Not derivative Class-II, unsmeared composites,
+                         infinite volume, phase transition, Route B, BCC,
+                         T7, or parameter identity with the full branch.
+Next required action:    Build, integrity-check, and register the T6
+                         PUBLISHED bundle before the A5 capstone bundle.
+\end{verbatim}

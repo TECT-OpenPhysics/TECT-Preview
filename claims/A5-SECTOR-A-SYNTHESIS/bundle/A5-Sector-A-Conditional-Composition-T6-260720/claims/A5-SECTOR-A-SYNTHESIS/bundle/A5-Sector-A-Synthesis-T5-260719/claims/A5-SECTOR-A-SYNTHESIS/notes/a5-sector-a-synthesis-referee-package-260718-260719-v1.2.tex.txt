@@ -1,0 +1,374 @@
+% =============================================================================
+% Title: Sector A branch-aware synthesis and termination package
+% Claim: A5-SECTOR-A-SYNTHESIS
+% Version: v1.2 -- first issued 2026-07-18; this version issued 2026-07-19
+% Status: T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS
+% Review: operator-confirmed 2026-07-19 by explicit batch-approval instruction
+% Publication: A5 bundle authorized after final direct validation; bundle-last
+%
+% Revision history:
+%   v1.0 (2026-07-18) self-contained T4 referee candidate; 32/32 preflight.
+%   v1.1 (2026-07-19) recorded independent operator execution and approval of
+%        v1.0, enacting scoped T5; A5 packaging stayed deferred behind A4.
+%   v1.2 (2026-07-19) refreshes the capstone after corrected A4 v2.1 became
+%        PUBLISHED.  All six support bundles are now content-attested.  The
+%        branch proposition and T5 tier are unchanged.  Jusang Lee then gave
+%        explicit batch approval to continue on 2026-07-19, confirming this
+%        exact candidate for bundle-last publication if final validation passes.
+% =============================================================================
+
+\section*{1. Purpose and scope: result and current review boundary}
+This package answers one narrow completion question: do the frozen Sector-A
+records form a reproducible path from definitions through full variational
+dynamics and spectral PDE approximation, together with controlled scalar
+perturbative and non-perturbative continuum limits?  The answer is
+\[
+ \boxed{\texttt{PASS@BRANCH-AWARE-DECLARED-SCOPE}.}          \tag{1.1}
+\]
+The qualifier is load-bearing.  The records form two compatible but distinct
+branches, not one parameter-identical full constructive theory.  The first is
+the full-production variational/PDE/discretization branch.  The second is the
+positive-mass real-scalar perturbative/constructive branch.
+
+Jusang Lee independently ran the integrated 32/32 command and approved v1.0
+on 2026-07-19.  That review enacted
+\texttt{T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS}.  It did not authorize a
+later, dependency-refreshed package automatically.  Corrected A4 v2.1 is now
+operator-confirmed and PUBLISHED, so all six support bundles are complete.
+This v1.2 document is the exact capstone entry.  After it was created and its
+initial PDF passed the form and overfull checks, Jusang Lee explicitly directed
+that the remaining approvals be processed in batch and that work continue.
+This records exact-package confirmation, conditional only on the unchanged
+source and final direct validation passing before bundle creation.
+
+\setcounter{section}{1}
+\section{Common definitions and conventions}
+The common spatial domain is the fixed spectral torus
+\[
+ \mathbb T^3=[0,L_x)\times[0,L_y)\times[0,L_z),\qquad
+ L_x=L_y=L_z=16.                                           \tag{2.1}
+\]
+For a three-component complex field $\Psi$ the real pairing is
+\[
+ \langle u,v\rangle_{\mathbb R}
+ =\operatorname{Re}\int_{\mathbb T^3}u^\dagger v\,dx.    \tag{2.2}
+\]
+The full-production fourth-order scalar symbol inside each component is
+\[
+ K_{\rm full}(k)=r+Z|k|^2+Y|k|^4
+ =m_{\rm full}^2+Y(|k|^2-q_0^2)^2,                       \tag{2.3}
+\]
+where $Y=1$, $Z<0$, $q_0^2=-Z/(2Y)$, and
+\[
+ m_{\rm full}^2=r-\frac{Z^2}{4Y}.                        \tag{2.4}
+\]
+The scalar-continuum branch uses
+\[
+ K_{\rm sc}(k)=m_{\rm sc}^2+Y(|k|^2-q_0^2)^2             \tag{2.5}
+\]
+with positive shell mass.  Both branches use the spectral Fourier convention
+and $\eta_{\rm shell}=0$ in the closed statements.
+
+The local polynomial convention shared by the verified scalar reduction and
+the scalar Gibbs construction is
+\[
+ V(\phi)=\int_{\mathbb T^3}
+ \left(\frac{\lambda}{4}\phi^4+
+       \frac{\gamma}{6}\phi^6\right)dx,
+ \qquad \gamma>0.                                        \tag{2.6}
+\]
+The full P1 functional has more field structure: three complex components,
+family masses, an internal lock, positive regularisers, and derivative
+Class-II currents.  Equation (2.6) is a verified scalar slice, not a statement
+that the full and scalar measures coincide.
+
+\section{Six frozen input results}
+\paragraph{D1: scalar kernel definition.}
+\texttt{A1-PRODUCTION-KERNEL-MANIFEST} is T5.  It pins the scalar Brazovskii
+symbol, Fourier convention, $q_0$, $Y$, $Z$, shell mass, and
+$\eta_{\rm shell}=0$.  It is a definition and implementation-identity result,
+not a phase-selection theorem.
+
+\paragraph{D2: full variational realization.}
+\texttt{A1-PRODUCTION-FUNCTIONAL-REALISATION} is T5 within its declared
+finite-grid audit scope.  On grids 4, 6, and 8, five field classes, and three
+finite-difference steps it verifies
+\[
+ DF[\Psi](v)=\langle R[\Psi],v\rangle_{\mathbb R},\quad
+ DR[\Psi]v=H[\Psi]v,\quad
+ \langle u,Hv\rangle_{\mathbb R}=\langle Hu,v\rangle_{\mathbb R}. \tag{3.1}
+\]
+It also verifies the local scalar reduction.  This standalone canonical
+functional does not repair or certify the historical non-variational solver.
+
+\paragraph{D3: full PDE theorem.}
+\texttt{A2-FULL-PRODUCTION-WELLPOSED} is a T6 conditional theorem for the D2
+functional on (2.1), with $H^2$ initial data, positive regularisers, and
+$\eta_{\rm shell}=0$.  The linear operator is self-adjoint and bounded below;
+the coefficient conditions and positive sextic make the energy coercive; the
+gradient flow has a unique global $H^2$ solution, continuous finite-time
+dependence, exact energy dissipation, and smoothness at every positive time.
+
+\paragraph{D4: spectral PDE approximation theorem.}
+\texttt{A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM} is a T6 conditional
+theorem for the same D2/D3 branch.  On pinned initial $H^2$ balls and
+$0<\tau\leq t\leq T$, it provides finite explicit solution-ball and residual
+constants and proves restarted exact-Galerkin convergence.  It covers positive
+time and exact nonlinear projection, not useful historical N32/N64/N128 error
+bars or a genuine finite-difference lattice.
+
+\paragraph{D5: scalar perturbative cutoff removal.}
+\texttt{A3-PERTURBATIVE-CONTINUUM-CORRELATORS} is a T6 conditional theorem.
+For the real scalar $d=3$ positive-mass $q^4$ kernel, every connected
+perturbative amplitude converges at each fixed external momentum under the
+sharp spectral regulator.  This is order-by-order, not a resummed construction.
+
+\paragraph{D6: scalar constructive cutoff removal.}
+\texttt{A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE} is a T6 conditional theorem.
+For $m_{\rm sh}^2>0$, $Y>0$, real $\lambda$, and $\gamma>0$ on (2.1), the
+covariance is trace class, all sharp spectral Galerkin Gibbs measures are
+normalizable, and the full sequence converges weakly on real $L^2$.  Lifted
+densities converge in total variation and the declared smeared cylinder-
+polynomial correlations converge.  The corrected v2.1 proof isolates the
+zero Fourier mode when $q_0=0$ by using
+\[
+ m_0=\max\!\left(1,\left\lceil \sqrt{2}q_0/\alpha\right\rceil\right), \tag{3.2}
+\]
+so the nonzero max-shell count and inverse-power tail start at $m\geq1$.
+This is finite volume and real scalar.
+
+\section{Branch graph and proof of its interfaces}
+The exact dependency graph is
+\begin{verbatim}
+shared spectral geometry and named hypotheses
+  |
+  +-- full-production branch
+  |     A1-PRODUCTION-FUNCTIONAL-REALISATION
+  |       -> A2-FULL-PRODUCTION-WELLPOSED
+  |       -> A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM
+  |
+  +-- scalar-continuum branch
+        A1-PRODUCTION-KERNEL-MANIFEST
+          +-> A3-PERTURBATIVE-CONTINUUM-CORRELATORS
+          +-> A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE
+\end{verbatim}
+The two scalar arrows are parallel.  They record a shared positive-mass
+spectral class, not a derivation of the A4 measure from a finite perturbation
+series and not a hard dependency between D5 and D6.
+
+For the full branch, the A2 card names D2 as a hard dependency and carries
+\texttt{A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL}.  The A3 full-discretization
+card names both D2 and D3 as hard dependencies and carries the same hypothesis.
+Its PDE residual, energy, solution ball, and exact-Galerkin flow therefore refer
+to the same canonical functional.  This proves the two directed edges without
+identifying the historical solver.
+
+For the scalar branch, D5 and D6 both state real-scalar, positive-mass,
+spectral/Galerkin scope.  D5 uses $q^{-4}$ domination at fixed external momenta.
+D6 uses the same covariance class with the local quartic/sextic potential and
+proves a non-perturbative finite-volume limit.  D6 is general in positive mass
+and audits both production anchors without identifying them.
+
+\section{The mass fork is necessary}
+The canonical scalar kernel stores
+\[
+ m_{\rm sc}^2=0.005.                                      \tag{5.1}
+\]
+The full-production parameters store
+\[
+ r=0.4740336473,\quad Z=-0.9252754126,\quad Y=1,
+\]
+so independent reconstruction gives
+\[
+ m_{\rm full}^2=r-\frac{Z^2}{4Y}
+ =0.260000000009475.                                      \tag{5.2}
+\]
+Consequently
+\[
+ |m_{\rm full}^2-m_{\rm sc}^2|
+ =0.255000000009475>0.2.                                  \tag{5.3}
+\]
+This is far above the upstream $10^{-9}$ kernel tolerance and is not rounding.
+A4 applies at either positive mass, but its generality does not identify the
+two anchored models.  Any synthesis that writes (5.1)=(5.2) is false.
+
+\section{The functional fork is necessary}
+The D2 audit bounds the scalar-reduction relative error by
+\[
+ 6.218564371786818\times10^{-16}.                         \tag{6.1}
+\]
+This proves the local convention (2.6) when non-scalar structures are switched
+off.  It does not prove equality of the full and scalar measures.  The full
+Class-II density contains derivative currents.  A4 Gaussian samples have
+covariance regularity only in $H^s$ for $s<1/2$; the derivative-current squares
+are not automatically defined there.  Their construction requires a separate
+divergence and renormalisation analysis.  No edge from D4 or D6 to a full
+three-component Class-II constructive measure is asserted.
+
+\section{Synthesis proposition and proof}
+\paragraph{Proposition.}
+Under the six registered named hypotheses and exact scopes D1--D6, Sector A
+has: (i) a reproducible definitions-to-full-dynamics-to-spectral-approximation
+branch; (ii) a reproducible real-scalar spectral branch with both order-by-order
+and finite-volume non-perturbative cutoff removal; and (iii) an explicit
+interface contract that prevents parameter and functional identification
+across the branches.
+
+\paragraph{Proof.}
+D1 and D2 fix the scalar and full functional definitions.  The hard-dependency
+edges in Section 4 compose D2, D3, and D4 into the full-production branch.  D5
+and D6 give distinct continuum statements on the scalar spectral class.
+Equations (2.1)--(2.6) verify shared geometry and local convention.
+Equations (5.1)--(5.3) prove that the anchored numerical models are not
+parameter-identical, while Section 6 proves that a scalar reduction is not a
+full-measure equivalence.  The frozen manifest states these edges and non-edges.
+The primary and non-importing audits rehash all component records and support
+bundles and reconstruct every load-bearing interface.  This proves the
+proposition at the declared synthesis scope. \hfill$\square$
+
+\section{Content addressing and direct reproduction}
+The synthesis manifest pins six status cards, four component manifests, two
+component evidence records, and six PUBLISHED support-bundle manifests.  Their
+content digests are
+\begin{verbatim}
+A1 scalar kernel:       99b255e767b5c1a6ea12983399f46ae5f23f5d3d76e4d587d3350c5c5ed62f7e
+A1 full functional:    30749f1c5e1cdb9528ced2b6a3dcfced8d8ca8f6f39e8cef03913d32e13f33d6
+A2 full PDE:           f07a39627a2eccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb
+A3 discretization:      6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41
+A3 scalar perturbative: 6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c
+A4 scalar constructive: b1a215465956443ce22a7dcf42caaa9a3dfb61305759f4be4f55eab630cd3162
+\end{verbatim}
+The primary audit checks every listed support file, recomputed digest,
+PUBLISHED marker, and runlog.  The independent audit recomputes the six
+manifest digests, graph, Decimal mass fork, and exact capstone candidate hashes
+without importing the primary implementation.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/a5_sector_a_synthesis_verify.py
+\end{verbatim}
+The required output is
+\begin{verbatim}
+PASS: primary (16/16)
+PASS: independent (16/16)
+ASSERTS: 32/32
+A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS
+Termination: PASS@BRANCH-AWARE-DECLARED-SCOPE
+\end{verbatim}
+The wrapper executes both audits in a temporary directory, compares their
+branch and mass reconstructions, and writes the integrated result to the
+declared evidence path.  The six support bundles remain the authoritative
+component reproduction packages; A5 verifies their current attestations.
+
+\section{What the termination result means}
+The result closes a documentation, interface, and reproducibility weakness in
+Sector A.  The repository can answer which mathematical model is defined,
+which full field equation is controlled, why its spectral approximation
+converges in the pinned positive-time scope, and which scalar continuum limits
+exist perturbatively and non-perturbatively.  It also records exactly where
+those statements stop.
+
+This is not a claim that energy underwent a phase transition and created the
+present universe.  No thermodynamic phase transition, vacuum selection, BCC
+existence, cosmology, or observation is proved.  The result remains a scoped
+T5 synthesis closure, not a new T6 theorem and not T7 physical-domain closure.
+
+\section{Devil's-advocate review}
+\begin{enumerate}
+\item \textbf{The P1--P4 sequence is one linear theory.}
+\textbf{UPHELD as false.}  Sections 5 and 6 force the two-branch map.
+\item \textbf{The two shell masses differ only by rounding.}
+\textbf{DISMISSED.}  Their separation exceeds $0.2$, versus a $10^{-9}$
+upstream tolerance.
+\item \textbf{A4 constructs the full derivative Class-II measure.}
+\textbf{UPHELD as false.}  D6 is a real-scalar local-polynomial construction;
+the derivative currents need a separate analysis.
+\item \textbf{The P1 scalar reduction proves measure equivalence.}
+\textbf{UPHELD as false.}  It proves a local slice identity, not equality after
+restoring internal fields and derivative currents.
+\item \textbf{Component T6 labels automatically make A5 T6.}
+\textbf{UPHELD as false.}  A5 is a meta-level synthesis and interface audit;
+it adds no new conditional theorem beyond D1--D6.
+\item \textbf{Six PUBLISHED support bundles make A5 unnecessary.}
+\textbf{DISMISSED.}  No component package states or audits the cross-branch
+mass and functional non-implications.
+\item \textbf{The graph secretly depends on the historical solver.}
+\textbf{DISMISSED in scope.}  D2 is the standalone canonical functional; the
+historical non-variational source remains excluded.
+\item \textbf{P3 gives useful error bars for historical grid runs.}
+\textbf{UPHELD as false.}  D4 is an exact-Galerkin positive-time theorem with
+conservative constants and a distinct solver scope.
+\item \textbf{Finite-volume cutoff removal proves a phase transition.}
+\textbf{UPHELD as false.}  D6 contains no thermodynamic limit or spontaneous
+symmetry-breaking statement.
+\item \textbf{This package closes BCC selection or Sector B.}
+\textbf{UPHELD as false.}  Both are outside the proposition.
+\item \textbf{The earlier v1.0 approval automatically authorizes v1.2.}
+\textbf{UPHELD as false.}  v1.2 changes dependency pins, the A4 endpoint
+record, and the exact publication entry.  Its authority instead comes from
+the later explicit 2026-07-19 batch-approval instruction, recorded here.
+\item \textbf{The A4 q0=0 repair changes the A5 theorem.}
+\textbf{DISMISSED.}  It repairs the endpoint notation and executable boundary
+inside D6; A5's branch proposition and T5 tier remain unchanged.
+\item \textbf{A synthesis can omit a falsifier because it adds no physics.}
+\textbf{UPHELD as false.}  Hash drift, a broken edge, or an erased fork
+falsifies the declared synthesis.
+\end{enumerate}
+
+\section{Falsifier and no-overclaim boundary}
+The synthesis is falsified by any failed source or evidence hash; a support
+bundle digest, file, marker, or runlog failure; a component no longer ACTIVE
+and reproducible in its pinned scope; an unregistered hypothesis; a missing
+D2 to D3 to D4 hard-dependency edge; a failed 32-assertion verifier; equality
+or silent substitution of (5.1) and (5.2); or a valid proof that D6 already
+defines the full derivative Class-II measure contrary to its card.
+
+The package does not cover the historical non-variational solver, a full
+three-component derivative Class-II constructive measure,
+$\eta_{\rm shell}\ne0$, removal of the $\rho$ or Class-II mass regularisers,
+$t=0$ algebraic P3 rates from merely $H^2$ data, practical historical-grid
+error bars, finite-difference Route B, infinite volume, phase transition,
+minimizer uniqueness, BCC existence or selection, Sector B, physical-domain
+closure, T6, or T7.
+
+\section{Review and packaging order}
+The original A5 T5 review gate is CLOSED by the independently executed v1.0
+approval.  The dependency-first prerequisite is also SATISFIED: corrected A4
+v2.1 is operator-confirmed and its PUBLISHED support bundle passes standalone
+33/33, all file hashes, and its content digest.  The exact v1.2 package review
+is CLOSED by the operator's explicit 2026-07-19 batch-approval instruction.
+The A5 PUBLISHED capstone bundle may therefore be built only from this unchanged
+source and validated PDF, then re-executed from its own root, integrity-checked,
+registered, and committed.
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A5-SECTOR-A-SYNTHESIS
+Precise statement:       Sector A has a reproducible full-production
+                         variational/PDE/Galerkin branch and a separate
+                         real-scalar perturbative/constructive branch,
+                         with exact interfaces and non-implications frozen.
+Scope:                   T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS;
+                         fixed spectral T3, eta_shell=0; mass and
+                         functional forks retained.
+Dependencies:            Six component claims and their six PUBLISHED
+                         support bundles; six named hypotheses.
+Evidence grade:          EXACT + EXECUTED + CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a5_sector_a_synthesis_verify.py
+Expected output:         primary 16/16; independent 16/16; ASSERTS 32/32;
+                         A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS;
+                         PASS@BRANCH-AWARE-DECLARED-SCOPE.
+Falsification gate:      Hash/digest/runlog drift, broken dependency or
+                         hypothesis, failed audit, or erased branch fork.
+Tier before / after:     T4 referee candidate / T5 after independent
+                         operator execution and explicit v1.0 confirmation.
+No-overclaim statement:  Not one parameter-identical full constructive
+                         theory; not full Class-II measure, Route B,
+                         infinite volume, phase transition, BCC, Sector B,
+                         physical closure, T6, or T7.
+Current package status:  Exact v1.2 operator-confirmed entry; bundle-last
+                         publication authorized after final validation.
+Next required action:    Build, independently integrity-check, and register
+                         the A5 T5 PUBLISHED capstone bundle last.
+\end{verbatim}

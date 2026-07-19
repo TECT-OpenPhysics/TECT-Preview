@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-19.
+exist here. Last updated: 2026-07-20.
 
 ## A5 T6 conditional-composition hypothesis and review gate
 
@@ -34,12 +34,18 @@ must pass.  Confirmation does not authorize T7 and does not assert a full
 three-component derivative Class-II constructive measure, BCC selection, or
 physical-domain closure.
 
-**Status:** OPEN.  The exact v1.0 T6 referee candidate is prepared: primary
-21/21, non-importing independent 12/12, and integrated 33/33 preflight pass;
-the six-page PDF passes FORM-CHECK, zero overfull, and visual QA.  Under the
-no-auto-PUBLISHED rule, explicit operator confirmation of this unchanged
-package is required before the claim card can be promoted and the T6 bundle can
-be built last.
+**Status:** CLOSED@T6-CONDITIONAL-COMPOSITION (2026-07-20).  Jusang Lee
+explicitly confirmed the exact v1.0 T6 referee source and PDF and authorized
+the PUBLISHED bundle.  Candidate commit
+`fb776bff6b161178a6328570af3ef9529b44a2df` and the reviewed source/PDF hashes
+are pinned in the theorem manifest.  The operator-confirmed v1.1 issue passes
+FORM-CHECK, zero overfull, and five-page visual QA; the upgraded primary 22/22
+and non-importing independent 13/13 audits give integrated 35/35.  The new T6
+bundle was built last beside the immutable T5 capstone and passes standalone
+35/35 with 307 hash-listed files and digest
+`7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526`.
+Closure does not authorize T7 or assert a full derivative Class-II measure,
+BCC selection, or physical-domain closure.
 
 ## A5 Sector-A synthesis gate
 

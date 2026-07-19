@@ -25,9 +25,9 @@ exit 0, (4) emits requirements.txt, environment.txt, README.md and MANIFEST.json
 (sha256 of every file + a content-addressable bundle digest + a repo_commit slot to be
 stamped at publish).
 """
-__version__ = "1.9.4"
+__version__ = "1.9.5"
 __first_issued__ = "2026-06-10"
-__version_issued__ = "2026-07-17"
+__version_issued__ = "2026-07-20"
 
 import argparse, ast, hashlib, json, os, platform, re, shutil, subprocess, sys, time
 from pathlib import Path
@@ -134,6 +134,7 @@ def main():
     ap.add_argument("--note")
     ap.add_argument("--scripts", nargs="+")
     ap.add_argument("--extra-files", nargs="*", default=[], help="additional repo-relative data files to copy into the bundle")
+    ap.add_argument("--extra-folders", nargs="*", default=[], help="additional repo-relative folders to copy recursively into the bundle")
     ap.add_argument("--out")
     ap.add_argument("--force", action="store_true", help="rebuild even if a complete bundle (MANIFEST) exists")
     ap.add_argument("--tier", help="confirmed result tier for the bundle name (e.g. T5, T6, T7)")
@@ -210,6 +211,23 @@ def main():
         rel = src.relative_to(REPO)
         dst = out/rel; dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst); copied.append(rel.as_posix())
+    # (2c) Runtime data trees for capstone verifiers that recursively validate
+    # already-PUBLISHED dependency bundles.  This keeps large dependency sets
+    # on the generated path without overflowing the Windows command line with
+    # hundreds of --extra-files arguments.
+    for extra_folder in args.extra_folders:
+        src_root = REPO/extra_folder
+        if not src_root.exists() or not src_root.is_dir():
+            print(f"ERROR: extra folder not found: {extra_folder}")
+            return 1
+        for src in sorted(src_root.rglob("*")):
+            if not src.is_file() or "__pycache__" in src.parts or src.name.endswith(".pyc"):
+                continue
+            rel = src.relative_to(REPO)
+            dst = out/rel; dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            if rel.as_posix() not in copied:
+                copied.append(rel.as_posix())
 
     # (3) RUN each entry script with the bundle as REPO; capture expected output.
     #     RESUMABLE: a script already captured with a PASS log is skipped, so a heavy

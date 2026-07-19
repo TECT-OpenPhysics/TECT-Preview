@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-048](#r-048) | Branch-aware Sector-A T6 conditional-composition theorem | T6 PUBLISHED CONDITIONAL; exactly seven hypotheses, six pinned premises, immutable T5 history, branch and mass firewalls; direct and standalone 22/22 + 13/13 = 35/35 PASS |
 | [R-047](#r-047) | Branch-aware Sector-A synthesis and termination closure | T5 PUBLISHED; six dependency bundles plus exact v1.2 capstone; direct and standalone primary 16/16 + independent 16/16 PASS |
 | [R-046](#r-046) | Finite-volume scalar spectral constructive Gibbs measure | T6 CONDITIONAL-THEOREM; full Galerkin sequence converges weakly on L2, lifted densities in L1/TV, and smeared cylinder-polynomial correlations; 31/31 plus independent operator run |
 | [R-045](#r-045) | Scalar spectral perturbative continuum limit | T6 PROVED CONDITIONAL; every connected scalar Brazovskii amplitude converges order-by-order for fixed external momenta under the spectral/Galerkin regulator; clean PUBLISHED support bundle 6/6 + 8/8 |
@@ -66,6 +67,19 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-048"></a>
+### R-048 -- branch-aware Sector-A T6 conditional-composition theorem
+
+**Statement (one line):** On the fixed spectral three-torus, exactly seven named hypotheses and six content-addressed premises imply the full-production variational/PDE/positive-time exact-Galerkin chain and, separately, the scalar perturbative/finite-volume constructive conjunction, without identifying their masses, state spaces, functionals, or measures.
+
+**Proven in:** `A5-SECTOR-A-SYNTHESIS`, theorem-contract manifest schema 1.1, exact operator-confirmed referee package v1.1, and PUBLISHED bundle `claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Conditional-Composition-T6-260720`.  Primary and non-importing independent audits are rerun by `a5_t6_conditional_verify.py`.
+
+**Reuse scope:** A conditional composition and non-implication theorem for downstream Sector-A work.  It permits citation of the full-production flow/discretization chain and the separate scalar perturbative/constructive results in one branch-aware statement.  It does not provide a parameter-identical full theory, a derivative Class-II constructive measure, infinite volume, phase transition, BCC, physical closure, or T7.
+
+**Tier:** T6 PUBLISHED CONDITIONAL under exactly `A5-H1-CANONICAL-KERNEL-MANIFEST`, `A1-KERNEL-CONV`, `A1-SHELL-POSITIVITY`, `A2-H2-SEXTIC-COERCIVITY`, `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`, `A3-H1-DIM3-Q4-KERNEL`, and `A3-H2-IR-POSITIVITY`.  Jusang Lee confirmed the exact v1.0 source/PDF on 2026-07-20 and authorized bundle-last publication.  Candidate commit `fb776bff6b161178a6328570af3ef9529b44a2df` and both reviewed hashes are pinned.  Direct and bundle-root runs pass 22/22 + 13/13 = 35/35.  All 307 bundle file hashes and digest `7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526` reconstruct exactly; the 155-file T5 capstone remains immutable.
+
+**Publication target:** Achieved for the branch-aware conditional-composition theorem.  The highest-value next target is a separate full three-component derivative Class-II constructive-measure claim starting below T6.
 
 <a id="r-047"></a>
 ### R-047 -- branch-aware Sector-A synthesis and termination closure
