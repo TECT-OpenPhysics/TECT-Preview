@@ -35,9 +35,11 @@ requires a separate divergence/renormalisation analysis and is excluded here.
 
 ## Closed proof chain
 
-1. The exact max-shell count `24 m^2+2` and the `q^-4` covariance tail prove
-   `Tr K^-1 < infinity`; the covariance is trace class on `H^s` exactly below
-   the `s=1/2` threshold.
+1. For nonzero shells `m>=1`, the exact max-shell count `24 m^2+2` and the
+   `q^-4` covariance tail prove `Tr K^-1 < infinity`; the tail starts at
+   `m0=max(1,ceil(sqrt(2)q0/alpha))`, so the `q0=0` zero mode remains in the
+   finite inner set.  The covariance is trace class on `H^s` exactly below the
+   `s=1/2` threshold.
 2. A direct Gaussian sixth-moment tail proves `P_N phi -> phi` in
    `L6(Omega x T3)`.  No false `H^(1/2-) -> L6` embedding is used.
 3. The exact pointwise minimum
@@ -49,8 +51,9 @@ requires a separate divergence/renormalisation analysis and is excluded here.
 5. The density limit identifies the full sequence.  Projected laws converge
    weakly on `L2`, and uniform Gaussian moments give the declared smeared
    cylinder-polynomial correlations.
-6. The 17/17 primary audit and non-importing 14/14 reconstruction are rerun
-   together by the 31/31 one-command verifier.
+6. The 18/18 primary audit and non-importing 15/15 reconstruction, including
+   separate `q0=0` boundary assertions, are rerun together by the 33/33
+   one-command verifier.
 
 ## Dependencies and gates
 
@@ -91,6 +94,10 @@ requires a separate divergence/renormalisation analysis and is excluded here.
    operator-created path, clean source commit, filesystem event, and fresh
    subprocess return codes establish execution provenance, while the
    non-importing reconstruction supplies algorithmic diversity.
+9. **"The max-shell trace proof is defined at `m=0` when `q0=0`."** UPHELD
+   against v2.0 notation and repaired in v2.1.  The zero mode is treated in the
+   finite inner set, the nonzero-shell formula is used only for `m>=1`, and two
+   independent executable assertions test the endpoint.
 
 ## Quantitative sanity checks
 
@@ -109,9 +116,9 @@ requires a separate divergence/renormalisation analysis and is excluded here.
 
 The T3-to-T5 transition uses the tier-system exception for a one-shot
 textbook argument.  The proof is self-contained, the package has two
-executable routes including one non-importing reconstruction, all 31 integrated assertions pass,
-and the visually checked PDF has no overfull boxes.  T6 is deliberately not
-claimed by that earlier record.
+executable routes including one non-importing reconstruction, all 33 current
+integrated assertions pass, and the visually checked PDF has no overfull
+boxes.  T6 is deliberately not claimed by that earlier record.
 
 The pre-registered T5-to-T6 gate is now discharged.  Jusang Lee reran the
 one-command verifier from clean commit
@@ -132,9 +139,9 @@ python codes/foundations/a4_scalar_constructive_measure_verify.py
 It must print:
 
 ```text
-PASS: primary (17/17)
-PASS: independent (14/14)
-ASSERTS: 31/31
+PASS: primary (18/18)
+PASS: independent (15/15)
+ASSERTS: 33/33
 A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS
 ```
 
@@ -146,12 +153,16 @@ claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/
 SHA-256 fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c
 ```
 
-The current publication preflight uses verifier v1.1.0 and is frozen at
-`runs/2026-07-19-referee-preflight/result.json` (31/31 PASS, SHA-256
-`bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667`).
-The integrated six-page referee package v2.0 passes FORM-CHECK, has zero
-overfull boxes, and passes visual QA. It is the exact operator-review candidate;
-no PUBLISHED bundle exists until that document is confirmed.
+Jusang Lee confirmed the integrated v2.0 package, but final adversarial review
+then found that its max-shell notation did not isolate the zero mode at
+`q0=0`.  `AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY` records the defect and
+the v2.1 repair.  The current publication preflight uses verifier v1.2.0 and
+is frozen at `runs/2026-07-19-referee-preflight-v2.1/result.json` (33/33 PASS,
+SHA-256 `85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`).
+The corrected integrated six-page referee package v2.1 passes FORM-CHECK, has
+zero overfull boxes, and passes visual QA.  Because the entry document changed,
+v2.1 is the renewed exact operator-review candidate; no PUBLISHED bundle exists
+until that document is confirmed.
 
 ## No-overclaim
 
@@ -163,6 +174,6 @@ selection, T7, or the future P5 Sector-A synthesis.
 ## Next required action
 
 Operator review and confirmation of
-`a4-scalar-constructive-referee-package-260719-v2.0`; then build and
+`a4-scalar-constructive-referee-package-260719-v2.1`; then build and
 integrity-check the claim-level T6 PUBLISHED bundle before the A5 capstone is
 packaged.

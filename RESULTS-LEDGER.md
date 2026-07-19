@@ -85,11 +85,11 @@ policy in `governance/development-history.md`.
 
 **Statement (one line):** On the fixed three-torus, the real scalar positive-mass `q^4` Brazovskii covariance with local `lambda phi^4/4 + gamma phi^6/6`, `lambda` real and `gamma>0`, defines a non-perturbative Gibbs measure obtained as the full sharp-spectral Galerkin limit; projected laws converge weakly on `L2`, lifted common-Gaussian densities converge in `L1`/total variation, and finite-degree smeared cylinder-polynomial correlations converge.
 
-**Proven in:** `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`, analytic proof v1.0, T6 enactment v1.0, and integrated referee-package candidate v2.0. Primary and non-importing independent audits are rerun by `a4_scalar_constructive_measure_verify.py`.
+**Proven in:** `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`, analytic proof v1.0, T6 enactment v1.0, and corrected integrated referee-package candidate v2.1. Primary and non-importing independent audits are rerun by `a4_scalar_constructive_measure_verify.py`.
 
 **Reuse scope:** Finite-volume non-perturbative construction for scalar `q^4` Gaussian fields with a stable quartic-sextic local potential. It excludes derivative Class-II currents, unsmeared composites, infinite volume, phase transition, genuine finite-difference Route B, BCC, and parameter identity with the full-production branch.
 
-**Tier:** T6 CONDITIONAL-THEOREM under `A1-SHELL-POSITIVITY` and `A2-H2-SEXTIC-COERCIVITY`. Jusang Lee's independent 2026-07-18 run passes 31/31; verifier v1.1.0 publication preflight passes 31/31 with digest `bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667`. The exact integrated v2.0 document awaits operator confirmation before its PUBLISHED bundle is built.
+**Tier:** T6 CONDITIONAL-THEOREM under `A1-SHELL-POSITIVITY` and `A2-H2-SEXTIC-COERCIVITY`. Jusang Lee's independent 2026-07-18 run passes 31/31. After operator confirmation of v2.0, final review found its `q0=0` shell-index endpoint defect; corrected v2.1 and verifier v1.2.0 pass 18/18 + 15/15 = 33/33 with digest `85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`. The theorem is unchanged, but the exact corrected v2.1 document requires renewed confirmation before its PUBLISHED bundle is built.
 
 **Publication target:** Sector-A scalar constructive-measure theorem and support package for the branch-aware A5 synthesis.
 

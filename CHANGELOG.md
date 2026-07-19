@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Repair A4 q0=0 shell-boundary defect before publication] - 2026-07-19
+
+Final adversarial review after operator confirmation of v2.0 found that the displayed max-shell trace argument admitted q0=0 but started its nonzero-shell p-series at m=0. The corrected v2.1 entry note uses m0=max(1,ceil(sqrt(2)q0/alpha)), treats the zero mode in the finite inner set, and adds independent q0=0 boundary assertions. Fresh primary 18/18 and non-importing independent 15/15 audits give 33/33 PASS. FORM-CHECK, zero-overfull, and six-page visual QA pass. The T6 theorem and scope are unchanged; because the exact entry document changed, v2.1 requires renewed operator confirmation before a PUBLISHED bundle is built.
+
 ## [Enact operator-confirmed A5 branch-aware synthesis at scoped T5 and refresh dependency pins] - 2026-07-19
 
 Jusang Lee independently ran the A5 32/32 CLI and explicitly approved the v1.0 referee package, closing A5-SECTOR-A-SYNTHESIS-OPERATOR-CONFIRMATION and enacting T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS. Administrative v1.1 preserves the proposition, 0.005 versus 0.260000000009475 mass fork, and full-Class-II non-implication while refreshing all A3/A4 pins. The current audits again pass primary 16/16 plus non-importing independent 16/16, integrated 32/32, with PASS@BRANCH-AWARE-DECLARED-SCOPE; five PUBLISHED support bundles verify. FORM-CHECK and six-page visual QA pass. The claim-level A5 PUBLISHED bundle is deliberately not built: dependency-first policy requires operator confirmation and PUBLISHED bundling of the exact A4 v2.0 support package first.

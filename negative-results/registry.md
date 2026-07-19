@@ -22,6 +22,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND](#audit-2026-07-17-a3-galerkin-ball-underbound) | A3 full-production discretization T6 v2.1 | continuum H2 ball reused for exact-Galerkin trajectory without proof |
 | [AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY](#audit-2026-07-19-a3-shared-bundle-integrity) | A3 shared renormalisation bundle | stale MANIFEST listed two absent notes and a mismatched README hash |
 | [AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT](#audit-2026-07-19-a4-verifier-tier-drift) | A4 constructive one-command verifier | v1.0.0 still emitted its pre-promotion T5-to-T6 boundary after T6 enactment |
+| [AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY](#audit-2026-07-19-a4-q0-zero-shell-boundary) | A4 constructive referee package v2.0 | max-shell trace notation did not isolate the zero mode at the declared q0=0 endpoint |
 | [AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT](#audit-2026-07-19-a5-dependency-pin-drift) | A5 branch-aware synthesis manifest v1.0 | A3/A4 publication work made the frozen component hashes and four-bundle count stale |
 
 <a id="ng-2026-legacy-convention"></a>
@@ -233,6 +234,33 @@ branch.
 **Evidence:** direct source and result-JSON inspection during the 2026-07-19 publication preflight. The stale sentence was isolated to the `promotion_boundary` field; no formula, input, source-hash test, assertion, or verdict logic depended on it.
 
 **Consequence:** verifier v1.1.0 changes only that boundary field to record the already enacted T6 theorem and retain the T7/excluded-scope prohibition. A fresh primary 17/17 plus non-importing independent 14/14 run passes 31/31 at `runs/2026-07-19-referee-preflight/result.json`, SHA-256 `bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667`. The old artifacts remain historical evidence; no theorem or tier change results from this correction.
+
+<a id="audit-2026-07-19-a4-q0-zero-shell-boundary"></a>
+### AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY -- zero-mode endpoint omitted from the v2.0 shell notation
+
+**Failure mode:** the operator-confirmed integrated v2.0 referee package declared
+`q0>=0` but wrote `m0=ceil(sqrt(2)q0/alpha)` and then applied the nonzero
+max-norm shell count `24m^2+2` and inverse-power tail from `m=m0`.  At `q0=0`
+this gives `m0=0`; the shell formula is valid only for `m>=1`, and the displayed
+`m^-2`/`m^-4` sum is undefined at zero.  The executable primary implementation
+already guarded its tail with `max(1,shell_threshold)`, so this was a proof-note
+endpoint defect rather than a failed numerical result or false theorem.
+
+**Evidence:** line-by-line adversarial review after the exact v2.0 approval on
+2026-07-19, followed by direct comparison with
+`weighted_trace_tail_upper`, which already required a start shell of at least
+one.  The defect is load-bearing for the declared endpoint and therefore blocks
+publication of v2.0 even though the positive production anchors have `q0>0`.
+
+**Consequence:** v2.1 treats the zero Fourier mode in the finite inner set and
+defines `m0=max(1,ceil(sqrt(2)q0/alpha))`.  Primary audit v1.1.0 and the
+non-importing audit v1.1.0 add separate `q0=0`, `m0=1` assertions; verifier
+v1.2.0 passes 18/18 + 15/15 = 33/33 at
+`runs/2026-07-19-referee-preflight-v2.1/result.json`, SHA-256
+`85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8`.
+The T6 theorem and scope are unchanged.  v2.0 remains approved review
+provenance but is superseded as the publication entry; exact v2.1 confirmation
+is required before bundling.
 
 <a id="audit-2026-07-19-a5-dependency-pin-drift"></a>
 ### AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT -- stale A3/A4 pins in the A5 v1.0 synthesis manifest

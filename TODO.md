@@ -11,7 +11,7 @@ Counts: In progress 0 · Next up 2 · Blocked 0 · Backlog 1 · Done (recent) 36
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
 - **T-040** Publish the A4 T6 support bundle, then build the confirmed A5 scoped T5 capstone bundle  _(claim: A5-SECTOR-A-SYNTHESIS)_
-  - A5 operator confirmation is CLOSED and scoped T5 is enacted. Refreshed v1.1 preflight passes 32/32; five support bundles verify. Packaging is deferred only by dependency-first policy: confirm A4 v2.0, publish the A4 T6 support bundle, refresh the A4 prerequisite row, then build the A5 T5 PUBLISHED capstone.
+  - A5 operator confirmation is CLOSED and scoped T5 is enacted. Refreshed v1.1 preflight passes 32/32; five support bundles verify. A4 v2.0 was operator-confirmed, but final review found its q0=0 shell-index endpoint defect. Corrected A4 v2.1 passes 33/33 and awaits renewed exact-package confirmation; then publish the A4 T6 support bundle, refresh the A4 prerequisite row, and build the A5 T5 PUBLISHED capstone.
   - _updated 2026-07-18_
 
 ## Backlog

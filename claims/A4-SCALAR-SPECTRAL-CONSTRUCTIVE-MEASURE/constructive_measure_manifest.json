@@ -1,8 +1,8 @@
 {
-  "schema": "tect/a4-scalar-spectral-constructive-measure/1.0",
+  "schema": "tect/a4-scalar-spectral-constructive-measure/1.1",
   "claim_id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
-  "frozen_on": "2026-07-18",
-  "status": "T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL after independent operator reproduction",
+  "frozen_on": "2026-07-19",
+  "status": "T6 CONDITIONAL-THEOREM@FINITE-VOLUME-REAL-SCALAR-SPECTRAL; v2.1 publication candidate pending renewed exact-package operator confirmation after q0=0 endpoint repair",
   "authority": {
     "scalar_kernel_anchor": {
       "path": "claims/A1-PRODUCTION-KERNEL-MANIFEST/canonical_n001_kernel.json",
@@ -14,18 +14,18 @@
     },
     "primary_audit": {
       "path": "codes/foundations/a4_scalar_constructive_measure.py",
-      "sha256": "eb391d8c129b25ca01ff6562357d9effcb63665b89b7724218715fccdca64ba1",
-      "version": "1.0.0"
+      "sha256": "3db46289e7c45b4940166e8192db387ab7fb1877536929dc493458d4f2118eb8",
+      "version": "1.1.0"
     },
     "independent_audit": {
       "path": "codes/foundations/a4_scalar_constructive_measure_independent.py",
-      "sha256": "d4e77fea79c58f6a6dac1dfa9a2c11111749647638ae096996a651ebe4880a1a",
-      "version": "1.0.0"
+      "sha256": "640c239588061954f983c9185d306331b8d0ee3c35bd3c9dba98685395a3724c",
+      "version": "1.1.0"
     },
     "one_command_verifier": {
       "path": "codes/foundations/a4_scalar_constructive_measure_verify.py",
-      "sha256": "98bdda1e88993f7086c53d0cd2cd4868040a62518d8f97e3838710563e4dc1b5",
-      "version": "1.1.0"
+      "sha256": "8d062707406a2f8bf15ce25b52ac56b0cde7b825342721362916cbe54fa36042",
+      "version": "1.2.0"
     }
   },
   "theorem_scope": {
@@ -52,7 +52,7 @@
     }
   },
   "analytic_identities": {
-    "trace_class": "sum_n K(k_n)^-1<infinity because K(k)>=Y|k|^4/4 beyond the shell and sum_m (24m^2+2)m^-4<infinity",
+    "trace_class": "sum_n K(k_n)^-1<infinity because for m>=m0=max(1,ceil(sqrt(2)q0/alpha)), K(k)>=Y|k|^4/4 and the nonzero max-norm shells satisfy sum_m (24m^2+2)m^-4<infinity",
     "sobolev_support": "Tr[(1-Delta)^s K^-1]<infinity for every s<1/2; the power threshold is sharp at s=1/2",
     "potential_lower_bound": "lambda phi^4/4+gamma phi^6/6 >= -|min(lambda,0)|^3/(12 gamma^2)",
     "uniform_partition_lower": "Z_N>=exp(-|T3|[(3 lambda_+/4)sigma_*^4+(5 gamma/2)sigma_*^6]) by Jensen, with lambda_+=max(lambda,0)",
@@ -66,14 +66,15 @@
     "gaussian_even_moments_through": 12,
     "require_two_anchor_rows": true,
     "require_nonimporting_independent_audit": true,
-    "require_full_sequence_identification": true
+    "require_full_sequence_identification": true,
+    "require_q0_zero_shell_boundary_check": true
   },
   "verified_result": {
     "verdict": "A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS",
     "assertions": {
-      "primary": "17/17",
-      "nonimporting_independent": "14/14",
-      "integrated": "31/31"
+      "primary": "18/18",
+      "nonimporting_independent": "15/15",
+      "integrated": "33/33"
     },
     "evidence": {
       "primary": {
@@ -89,11 +90,11 @@
         "sha256": "fb2d81ba75d95972e55c675146fbf84cb8209847ea031abdaa0a5f44b111935c"
       },
       "publication_preflight": {
-        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-19-referee-preflight/result.json",
-        "sha256": "bc953c71f13f464da2e7d3cf7355204a41f288ad8c500947abf04baa45aa1667",
-        "verifier_version": "1.1.0",
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-19-referee-preflight-v2.1/result.json",
+        "sha256": "85da0df0d2b96dbfc98f2ea8a0787bf1bd711228505c671c06cb9d3e036836d8",
+        "verifier_version": "1.2.0",
         "verdict": "A4-SCALAR-CONSTRUCTIVE-INTEGRATED-PASS",
-        "assertions": "31/31"
+        "assertions": "33/33"
       },
       "independent_operator": {
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/runs/2026-07-18-jusang-independent/result.json",
@@ -120,17 +121,31 @@
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-t6-enactment-260718-v1.0.pdf",
         "sha256": "3ec4ab11e11ae372120c05291f59de76773cc6c4277b7aa436adeb94df4f7421"
       },
-      "referee_package_candidate_source": {
+      "referee_package_v2_0_source": {
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.0.tex.txt",
         "sha256": "25ef6e64c020fca5085e3cf1dae7a42462ee59060169fbe92c90acb4a3e4926e",
-        "status": "exact-package operator confirmation required before PUBLISHED bundling"
+        "status": "operator-confirmed 2026-07-19 but superseded as publication entry after q0=0 shell-index endpoint review"
       },
-      "referee_package_candidate_pdf": {
+      "referee_package_v2_0_pdf": {
         "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.0.pdf",
         "sha256": "2ccd039dbfd1712a01e6b288beb741995c3707937fe87b6774b9b64c56db8274",
         "form_check": "PASS",
         "overfull_hbox": 0,
-        "visual_qa": "PASS (6 pages, 2026-07-19)"
+        "visual_qa": "PASS (6 pages, 2026-07-19)",
+        "status": "superseded publication entry; retained as approved review provenance"
+      },
+      "referee_package_candidate_source": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.tex.txt",
+        "sha256": "1d8ef67588fd697a00bfacf5630ee5d01cf2d9ba325bca5947e54906cc6d20a5",
+        "status": "renewed exact-package operator confirmation required before PUBLISHED bundling"
+      },
+      "referee_package_candidate_pdf": {
+        "path": "claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/notes/a4-scalar-constructive-referee-package-260719-v2.1.pdf",
+        "sha256": "f4788612e300458d7e8ea78ccb97c1a42ea223ee3b548b5a78c73e8f5b0c9c8d",
+        "form_check": "PASS",
+        "overfull_hbox": 0,
+        "visual_qa": "PASS (6 pages, 2026-07-19)",
+        "repair": "m0=max(1,ceil(sqrt(2)q0/alpha)); primary and independent q0=0 assertions"
       }
     },
     "promotion_boundary": "T6 conditional theorem enacted after independent operator reproduction; T7 and all excluded scopes remain prohibited"

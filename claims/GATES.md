@@ -56,6 +56,13 @@ BCC, T7, and P5 remain outside this closed gate.  The pre-registered operator
 gate is discharged by Jusang Lee's separate 31/31 PASS artifact from clean
 commit `7eee2fe84887cc4ccdd311c75095ec84bc9d0d45`; all source and audit rows pass
 and the T6 enactment addendum records the conditional-theorem review.
+Jusang Lee confirmed integrated package v2.0 on 2026-07-19, but the final
+publication review found that its tail notation did not separate the zero mode
+when `q0=0`.  The theorem gate remains closed: v2.1 repairs the proof line to
+`m0=max(1,ceil(sqrt(2)q0/alpha))`, adds two independent endpoint assertions,
+and passes 33/33.  Because this changes the exact entry document, renewed v2.1
+operator confirmation is still required by the no-auto-PUBLISHED policy before
+the claim-level bundle is built.
 
 ## A3 full-production discretization gate
 

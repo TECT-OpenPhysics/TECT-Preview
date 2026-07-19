@@ -20,9 +20,9 @@ from decimal import Decimal, getcontext
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-18"
-__version_issued__ = "2026-07-18"
+__version_issued__ = "2026-07-19"
 __claims__ = ["A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"]
 
 getcontext().prec = 80
@@ -56,11 +56,15 @@ def exact_trace_scalar_loop(max_mode: int, length: float, q0: float, mass2: floa
 
 def pseries_integral_bound(start: int, exponent: float) -> float:
     """Integral-test upper bound for sum from start to infinity."""
+    if start < 1 or exponent <= 1.0:
+        raise ValueError("p-series bound requires start>=1 and exponent>1")
     return start ** (-exponent) + start ** (1.0 - exponent) / (exponent - 1.0)
 
 
 def max_shell_tail(start: int, length: float, q0: float, y_value: float) -> float:
     scale = 2.0 * math.pi / length
+    if start < 1:
+        raise ValueError("max-norm shell tail starts at m=1")
     if scale * scale * start * start < 2.0 * q0 * q0:
         raise ValueError("tail start does not lie beyond the shell")
     shell_sum = 24.0 * pseries_integral_bound(start, 2.0) + 2.0 * pseries_integral_bound(start, 4.0)
@@ -172,6 +176,20 @@ def main() -> int:
         formula = 24 * shell * shell + 2
         shell_counts.append({"shell": shell, "enumerated": enumerated, "formula": formula})
     check("max_norm_shell_count_is_exact", all(row["enumerated"] == row["formula"] for row in shell_counts), shell_counts, assertions)
+    zero_q0_tail = max_shell_tail(1, length, 0.0, y_value)
+    check(
+        "q0_zero_boundary_is_independently_well_defined",
+        bool(manifest["audit"]["require_q0_zero_shell_boundary_check"])
+        and shell_counts[0]["shell"] == 1
+        and math.isfinite(zero_q0_tail)
+        and zero_q0_tail > 0.0,
+        {
+            "q0": 0.0,
+            "first_nonzero_max_norm_shell": shell_counts[0]["shell"],
+            "trace_tail_upper": zero_q0_tail,
+        },
+        assertions,
+    )
     covariance_order = 4.0
     spatial_dimension = 3.0
     check(

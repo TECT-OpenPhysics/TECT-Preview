@@ -19,7 +19,7 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 __first_issued__ = "2026-07-18"
 __version_issued__ = "2026-07-19"
 __claims__ = ["A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"]
@@ -27,7 +27,7 @@ __claims__ = ["A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"]
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = REPO / "claims" / __claims__[0]
 MANIFEST = CLAIM / "constructive_measure_manifest.json"
-DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-18-integrated-constructive-measure" / "result.json"
+DEFAULT_OUTPUT = CLAIM / "runs" / "2026-07-19-referee-preflight-v2.1" / "result.json"
 
 AUDITS = (
     {

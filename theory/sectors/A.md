@@ -40,6 +40,7 @@ _None linked to this sector._
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
 | AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |
 | AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT | stale pre-promotion boundary in the A4 verifier artifact | after the A4 scalar constructive theorem was enacted at scoped T6 on 2026-07-18, `a4_scalar_constructive_measure_verify.py` v1.0.0 continued |
+| AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY | zero-mode endpoint omitted from the v2.0 shell notation | the operator-confirmed integrated v2.0 referee package declared |
 | AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT | stale A3/A4 pins in the A5 v1.0 synthesis manifest | A5 manifest schema 1.0 correctly froze the 2026-07-18 review surface, but the subsequent replacement A3 perturbative T6 bundle and A4 v2.0 p |
 
 ---

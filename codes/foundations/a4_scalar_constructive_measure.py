@@ -29,9 +29,9 @@ from typing import Any
 
 import numpy as np
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __first_issued__ = "2026-07-18"
-__version_issued__ = "2026-07-18"
+__version_issued__ = "2026-07-19"
 __claims__ = ["A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE"]
 
 REPO = Path(__file__).resolve().parents[2]
@@ -146,6 +146,20 @@ def main() -> int:
         "positive_q4_kernel_inputs",
         y_value > 0.0 and all(mass2 > 0.0 for _, mass2 in anchors) and q0 >= 0.0,
         {"Y": y_value, "q0": q0, "masses": dict(anchors)},
+        assertions,
+    )
+    zero_q0_tail = weighted_trace_tail_upper(1, length, 0.0, y_value)
+    check(
+        "q0_zero_shell_tail_starts_at_first_nonzero_max_norm_shell",
+        bool(audit["require_q0_zero_shell_boundary_check"])
+        and math.isfinite(zero_q0_tail)
+        and zero_q0_tail > 0.0,
+        {
+            "q0": 0.0,
+            "first_nonzero_max_norm_shell": 1,
+            "trace_tail_upper": zero_q0_tail,
+            "rule": "m0=max(1,ceil(sqrt(2)*q0/alpha))",
+        },
         assertions,
     )
     check(
