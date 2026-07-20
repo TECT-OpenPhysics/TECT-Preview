@@ -130,10 +130,12 @@ continuous composites `m_A` and `rho` have distributional derivatives, but
      \nabla\left(\frac{m_A}{\rho+\varepsilon_\rho}\right)
 \]
 
-is at the marginal product boundary `C^alpha * C^(alpha-1)` with
-`alpha<1/2`.  Therefore cutoff convergence and scheme independence of `K_A`
-itself require a separate lift/construction.  This is registered as
-`A6-CLASSII-K-COMPOSITE-DEFINITION`.
+lies just below the deterministic multiplication threshold
+`C^alpha * C^(alpha-1)` when `alpha<1/2`.  This power count alone neither
+proves divergence nor ambiguity because the Gaussian one-form current has
+special cancellations.  The successor `A6-CLASSII-K-COMPOSITE-DEFINITION`
+constructs the required canonical lift at fixed floor inside a declared
+common-even spectral regulator class.
 
 ## Dependencies and gates
 
@@ -141,8 +143,9 @@ itself require a separate lift/construction.  This is registered as
   `A1-PRODUCTION-FUNCTIONAL-REALISATION`.
 - Soft dependencies: `A3-UV-SUPERRENORMALISABILITY`,
   `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE`, `A5-SECTOR-A-SYNTHESIS`.
+- Closed successor gate: `A6-CLASSII-K-COMPOSITE-DEFINITION`.
 - Open gates: `A6-CLASSII-COUNTERTERM-CLOSURE`,
-  `A6-CLASSII-K-COMPOSITE-DEFINITION`.
+  `A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION`.
 
 ## Reproduction
 
@@ -220,16 +223,17 @@ failure.
 
 ## No-overclaim
 
-This T4 result does not construct a renormalised composite, prove finite
+This T4 result alone does not construct a renormalised composite, prove finite
 counterterm sufficiency, establish stability/tightness or a Gibbs measure,
 classify a possible bare concentration limit, prove that a counterterm is
 necessary for every weak limit, remove either regulariser, prove regulator
 independence, take infinite volume, establish a phase transition or BCC state,
-or justify T5/T6/T7.
+or justify T5/T6/T7.  Its fixed-floor `K_A` successor is a separate T5 claim
+and does not promote this bare-UV card.
 
 ## Next required action
 
-Obtain an independent operator run, then construct a regulator-independent
-`K_A` composite and test whether the symmetry-preserving rational
-`W_eps` subtraction closes the fixed-floor counterterm family with a uniform
-lower bound.
+Use the fixed-floor canonical `K_A` successor to construct renormalised
+`J_A*K_A` and `|K_A|^2` products.  Literal fixed-parameter `W_eps` subtraction
+is now ruled out as a uniform-coercivity route; test running relevant
+coefficients and analyse full-field bare concentration under separate gates.

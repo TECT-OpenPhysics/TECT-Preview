@@ -4,7 +4,7 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-20.
 
-## A6 full derivative Class-II ultraviolet gates
+## A6 full derivative Class-II composite and renormalisation gates
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 
@@ -16,26 +16,57 @@ subgraphs, is scheme controlled, and leaves a uniform lower bound, partition
 control, and tightness sufficient for a nontrivial finite-volume continuum
 measure.
 
-**Status:** OPEN (2026-07-20).  The bare Gaussian-reference growth is
-classified: the derivative covariance has a positive linear max-mode slope and
-the first local counterterm candidate is the nonconstant orientation-dependent term
-`delta_cube*N*W_eps(Psi)`, not a vacuum constant.  Primary 19/19,
-non-importing independent 12/12, and integrated 44/44 audits pass.  Finite
-counterterm necessity for every weak limit, sufficiency, stability after
-subtraction, bare concentration, and measure construction are not established.
+**Status:** OPEN (2026-07-20).  The bare Gaussian-reference growth and the
+current `K_A` are now classified.  The literal subtraction
+`-delta_cube*N*W_eps(Psi)` with fixed lower-order coefficients is eliminated as
+a uniform-coercivity route: a homogeneous first-two-component trial has
+`|Psi_N|=Theta(N^(1/4))` and energy `-Theta(N^(3/2))`.  A vacuum shift does not
+repair the escaping amplitude.  Adding a running family mass can restore
+nonnegativity but also drives the same components toward zero, so it is a new
+renormalisation condition rather than closure.  Remaining work is to classify
+all superficially divergent products `J*K` and `|K|^2`, choose running relevant
+parameters by explicit renormalisation conditions, and prove uniform partition
+control and tightness.  Bare concentration is tracked by a separate gate.
 
 ### **A6-CLASSII-K-COMPOSITE-DEFINITION**
 
-**Statement:** Construct a regulator-independent continuum meaning of
+**Statement:** Construct a scheme-controlled continuum meaning of
 `K_A=(rho+eps_rho) grad[m_A/(rho+eps_rho)]` for the three-component `q^-4`
-Gaussian field at fixed positive `eps_rho`, and prove convergence and scheme
-independence of the chosen spectral composite/lift before its square is used in
-an energy or Gibbs weight.
+Gaussian field at fixed positive `eps_rho`, and prove convergence and
+independence inside an explicitly declared symmetry-preserving spectral
+regulator class before its square is used in an energy or Gibbs weight.
 
-**Status:** OPEN (2026-07-20).  The cutoff calculation is well defined, but
-typical regularity is below one half and the product is at the marginal
-`C^alpha * C^(alpha-1)` boundary.  The current A6 result does not infer a
-continuum composite from cutoff moments alone.
+**Status:** CLOSED@T5-FIXED-FLOOR-CANONICAL-SPECTRAL-LIFT (2026-07-20).
+`A6-CLASSII-K-COMPOSITE-DEFINITION` proves convergence in
+`L^p(Omega; C^(-1/2-kappa))` for every finite `p` and `kappa>0` under common
+real-even bounded scalar Fourier multipliers converging to one, with compact
+support or a uniform Schwartz tail and exact/dealiased convolution.  The
+Fourier-Wick second level has an `N^-3` fixed-mode variance tail, its local
+contraction vanishes by evenness, and paracontrolled reconstruction defines the
+non-exact one-form current.  Primary 29/29, non-importing independent 16/16,
+and integrated 64/64 audits pass.  A component-split asymmetric negative
+control has a nonzero area anomaly, so arbitrary-regulator independence is
+explicitly not claimed.  This closure does not define `J*K`, `|K|^2`, remove
+the density floor, or close a Gibbs measure.
+
+### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
+
+**Statement:** Determine whether the unmodified finite-cutoff full derivative
+Class-II Gibbs measures concentrate on
+`W_eps^-1(0)={Psi_1=Psi_2=0}`.  A closure must control the spatially correlated
+partition function, the entropy of the growing Fourier-mode space, rational
+mode coupling, tube probabilities around the zero set, and tightness of the
+remaining third component.  It must not replace the full Gibbs weight by a
+conditional-mean or one-point derivative-integrated proxy.
+
+**Status:** OPEN (2026-07-20).  The exact bound
+`9*lambda_min(Q_II)*s <= W_eps <= 9*(a+2b+c)*s` fixes the zero set.  Two local
+proxies are solved at T5: the mean-contraction proxy gives
+`t*s -> Gamma(2,rate=9*(a+2b+c))`, while exact one-point Gaussian derivative
+integration gives density `35*g^2*r*(1+2*g*r)^(-9/2)`.  Their distinct means
+show that proxy choice is load-bearing.  Neither result is a full-field
+concentration theorem, and no pathwise inequality identifies the complete
+Class-II energy with `delta_cube*N*W_eps`.
 
 ## A5 T6 conditional-composition hypothesis and review gate
 

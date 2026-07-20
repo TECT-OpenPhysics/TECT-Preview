@@ -25,6 +25,10 @@ where I_cube=int_[-1,1]^3 |x|^-2 dx.  A positive linear Class-II expectation
 is a UV-renormalisation signal for any nondegenerate full-component limit at
 fixed low-order parameters; it is not a constructive measure or a proof that
 no bare, degenerate, or renormalised measure exists.
+
+Version 1.0.2 corrects the ``leading_counterterm_density`` docstring: the
+function already returns ``W=3*sum_A(...)``, so the conditional leading term
+is ``delta_cube*N*W``.  Numerical behaviour is unchanged.
 """
 
 from __future__ import annotations
@@ -41,7 +45,7 @@ from typing import Any
 
 import numpy as np
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __first_issued__ = "2026-07-20"
 __version_issued__ = "2026-07-20"
 __claims__ = ["A6-CLASSII-UV-POWER-COUNTING"]
@@ -207,7 +211,7 @@ def gaussian_current_moments(
 
 
 def leading_counterterm_density(field: np.ndarray, params: dict[str, Any]) -> float:
-    """Coefficient W(Psi) in E[F_ClassII | Psi] ~ 3 delta_cube N W(Psi)."""
+    """Coefficient W(Psi) in E[F_ClassII | Psi] ~ delta_cube N W(Psi)."""
     psi = np.asarray(field, dtype=np.complex128)
     rho = float(np.real(np.vdot(psi, psi)))
     eps_rho = float(params["rho_regularizer"])

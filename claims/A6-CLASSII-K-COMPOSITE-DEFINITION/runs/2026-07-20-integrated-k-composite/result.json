@@ -1,0 +1,180 @@
+{
+  "schema": "tect/a6-classii-k-composite-integrated-result/1.0",
+  "claim_id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+  "script_version": "1.0.0",
+  "verdict": "A6-CLASSII-K-COMPOSITE-INTEGRATED-PASS",
+  "subprocesses": {
+    "primary": {
+      "returncode": 0,
+      "stdout": "29/29 PASS\nA6-CLASSII-K-COMPOSITE-PRIMARY-PASS\nArea-tail slopes: {'cube_variance_tail': -2.9892828318168676, 'ball_variance_tail': -3.0122944577774713, 'smooth_variance_tail': -3.013918494222858}\nNaive subtraction energy coefficient: -3.2671015648e-05\nLocal proxy E[N s]: 1294.94082887 / 3884.8224866\nEvidence: C:\\Dev\\TECT\\claims\\A6-CLASSII-K-COMPOSITE-DEFINITION\\runs\\2026-07-20-primary-k-composite\\result.json\n",
+      "stderr": ""
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "16/16 PASS\nA6-CLASSII-K-COMPOSITE-INDEPENDENT-PASS\nDirect area-tail slopes: {'cube_tail': -3.0677212651902943, 'ball_tail': -3.064677242201255, 'smooth_tail': -3.042088346700157}\nAsymmetric anomaly: 0.00553270511383\nEvidence: C:\\Dev\\TECT\\claims\\A6-CLASSII-K-COMPOSITE-DEFINITION\\runs\\2026-07-20-independent-k-composite\\result.json\n",
+      "stderr": ""
+    }
+  },
+  "source_reports": {
+    "manifest_sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d",
+    "primary_sha256": "31337f69e19494bd3a6bbc3f879544c5f1b6f239dfbde011d6874f599efe1789",
+    "independent_sha256": "8b82b5abb2c3ca5af2a9d7b13b715d7facc379991d5170e889481b232be3ce2f",
+    "verifier_sha256": "a43719778fc3239af82516b2964747c2db1b2b7aa1fb36b0fa5bc4b81a283d2d",
+    "primary_result_sha256": "ca29f2f5879f0188b8ec0084a52163009bd3993a739bc634546e8435b0c81aaf",
+    "independent_result_sha256": "ed64c250c8bd6ce394358876304d9e4de0586193bc21dd4da500069cdbea65aa"
+  },
+  "assertions": [
+    {
+      "name": "primary_subprocess_passes",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "independent_subprocess_passes",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "primary_verdict_passes",
+      "status": "PASS",
+      "actual": "A6-CLASSII-K-COMPOSITE-PRIMARY-PASS",
+      "expected": "A6-CLASSII-K-COMPOSITE-PRIMARY-PASS"
+    },
+    {
+      "name": "independent_verdict_passes",
+      "status": "PASS",
+      "actual": "A6-CLASSII-K-COMPOSITE-INDEPENDENT-PASS",
+      "expected": "A6-CLASSII-K-COMPOSITE-INDEPENDENT-PASS"
+    },
+    {
+      "name": "primary_audit_hash_matches",
+      "status": "PASS",
+      "actual": "31337f69e19494bd3a6bbc3f879544c5f1b6f239dfbde011d6874f599efe1789",
+      "expected": "31337f69e19494bd3a6bbc3f879544c5f1b6f239dfbde011d6874f599efe1789"
+    },
+    {
+      "name": "independent_audit_hash_matches",
+      "status": "PASS",
+      "actual": "8b82b5abb2c3ca5af2a9d7b13b715d7facc379991d5170e889481b232be3ce2f",
+      "expected": "8b82b5abb2c3ca5af2a9d7b13b715d7facc379991d5170e889481b232be3ce2f"
+    },
+    {
+      "name": "one_command_verifier_hash_matches",
+      "status": "PASS",
+      "actual": "a43719778fc3239af82516b2964747c2db1b2b7aa1fb36b0fa5bc4b81a283d2d",
+      "expected": "a43719778fc3239af82516b2964747c2db1b2b7aa1fb36b0fa5bc4b81a283d2d"
+    },
+    {
+      "name": "a6_uv_source_hash_matches",
+      "status": "PASS",
+      "actual": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "expected": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+    },
+    {
+      "name": "proof_note_hash_matches",
+      "status": "PASS",
+      "actual": "38f3ea8461852e5b3853de2959ded2b3e1bbc2237189528421e85f8e00bdb3df",
+      "expected": "38f3ea8461852e5b3853de2959ded2b3e1bbc2237189528421e85f8e00bdb3df"
+    },
+    {
+      "name": "proof_pdf_hash_matches",
+      "status": "PASS",
+      "actual": "1cb6c678c961b56110600bee5a6b57974b1500c083c477de6e822523b35ff558",
+      "expected": "1cb6c678c961b56110600bee5a6b57974b1500c083c477de6e822523b35ff558"
+    },
+    {
+      "name": "independent_area_reference_agrees",
+      "status": "PASS",
+      "actual": 2.432477245397325e-07,
+      "expected": 0.005
+    },
+    {
+      "name": "independent_w_infinity_agrees",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": "<1e-14"
+    },
+    {
+      "name": "independent_lower_bound_coefficient_agrees",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": "<1e-14"
+    },
+    {
+      "name": "independent_naive_subtraction_no_go_agrees",
+      "status": "PASS",
+      "actual": {
+        "primary": -3.26710156480221e-05,
+        "independent": -3.26710156480221e-05
+      },
+      "expected": "same negative coefficient"
+    },
+    {
+      "name": "independent_mean_proxy_limit_agrees",
+      "status": "PASS",
+      "actual": {
+        "primary": 20.97672894133596,
+        "independent": 20.976728941336614
+      },
+      "expected": "relative error <1e-10"
+    },
+    {
+      "name": "independent_derivative_proxy_limit_agrees",
+      "status": "PASS",
+      "actual": {
+        "primary": 62.93018682400787,
+        "independent": 62.9301868240079
+      },
+      "expected": "relative error <1e-10"
+    },
+    {
+      "name": "negative_control_blocks_unrestricted_scheme_independence",
+      "status": "PASS",
+      "actual": 0.005532705113828768,
+      "expected": "nonzero outside declared class"
+    },
+    {
+      "name": "counterterm_gate_remains_open",
+      "status": "PASS",
+      "actual": [
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+      ],
+      "expected": "counterterm closure listed"
+    },
+    {
+      "name": "bare_full_field_gate_remains_open",
+      "status": "PASS",
+      "actual": [
+        "A6-CLASSII-COUNTERTERM-CLOSURE",
+        "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+      ],
+      "expected": "full-field bare gate listed"
+    }
+  ],
+  "assertion_summary": {
+    "integrated_passed": 19,
+    "integrated_total": 19,
+    "primary_total": 29,
+    "independent_total": 16,
+    "aggregate_total": 64
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "not_closed_here": [
+    "arbitrary asymmetric regulator independence",
+    "rho_regularizer removal",
+    "renormalised J*K and |K|^2 products",
+    "finite counterterm closure or uniform interacting tightness",
+    "full-field bare concentration theorem",
+    "full three-component constructive Gibbs measure",
+    "infinite-volume limit or phase transition",
+    "BCC existence, stability, or selection",
+    "T6 or T7 theorem status"
+  ]
+}

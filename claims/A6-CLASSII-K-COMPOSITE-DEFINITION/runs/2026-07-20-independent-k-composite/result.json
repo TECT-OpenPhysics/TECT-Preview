@@ -1,0 +1,291 @@
+{
+  "schema": "tect/a6-classii-k-composite-independent-result/1.0",
+  "claim_id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+  "script_version": "1.0.0",
+  "verdict": "A6-CLASSII-K-COMPOSITE-INDEPENDENT-PASS",
+  "scope": "Canonical A1 full-production q^-4 Gaussian on the fixed L=16 three-torus, six real coordinates for three complex components, fixed rho_regularizer=1e-12, embedded Pauli generators, exact spectral convolution, and the declared common symmetry-preserving multiplier class. Counterterm and bare-concentration follow-ups are reviewed separately at fixed production coefficients.",
+  "derived": {
+    "area_lift": {
+      "reference_cutoff": 192,
+      "reference_variance": 0.03039477782536347,
+      "rows": [
+        {
+          "cutoff": 12,
+          "sharp_cube": 0.030365373681492766,
+          "sharp_ball": 0.030337565776384492,
+          "smooth_even": 0.030248877305245878,
+          "cube_tail": 2.940414387070378e-05,
+          "ball_tail": 5.721204897897805e-05,
+          "smooth_tail": 0.00014590052011759225
+        },
+        {
+          "cutoff": 24,
+          "sharp_cube": 0.030390968286965,
+          "sharp_ball": 0.030387962343499938,
+          "smooth_even": 0.030378079842260413,
+          "cube_tail": 3.8095383984686204e-06,
+          "ball_tail": 6.815481863532008e-06,
+          "smooth_tail": 1.669798310305684e-05
+        },
+        {
+          "cutoff": 48,
+          "sharp_cube": 0.030394296525836986,
+          "sharp_ball": 0.030393941680720245,
+          "smooth_even": 0.030392743035529208,
+          "cube_tail": 4.812995264835696e-07,
+          "ball_tail": 8.361446432250674e-07,
+          "smooth_tail": 2.0347898342619464e-06
+        },
+        {
+          "cutoff": 96,
+          "sharp_cube": 0.030394723635242923,
+          "sharp_ball": 0.030394680466159896,
+          "smooth_even": 0.030394531706821503,
+          "cube_tail": 5.419012054710959e-08,
+          "ball_tail": 9.735920357412109e-08,
+          "smooth_tail": 2.461185419667944e-07
+        }
+      ],
+      "tail_slopes": {
+        "cube_tail": -3.0677212651902943,
+        "ball_tail": -3.064677242201255,
+        "smooth_tail": -3.042088346700157
+      }
+    },
+    "asymmetric_negative_control": [
+      {
+        "cutoff": 16,
+        "common_phase": 0.0,
+        "split_phase": 0.004978724856561434
+      },
+      {
+        "cutoff": 32,
+        "common_phase": 0.0,
+        "split_phase": 0.005310538617246015
+      },
+      {
+        "cutoff": 64,
+        "common_phase": 0.0,
+        "split_phase": 0.0054771195227826565
+      },
+      {
+        "cutoff": 96,
+        "common_phase": 0.0,
+        "split_phase": 0.005532705113828768
+      }
+    ],
+    "counterterm": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "g": 0.01059374999999735,
+      "h": 0.09534374999997615,
+      "lambda_min": 0.0012590115009260615,
+      "lower_bound_coefficient": 0.011331103508334554,
+      "w_infinity": 0.07706249999998072,
+      "epsilon_remainder_coefficient": 0.013007812499996746,
+      "amplitude_over_N_quarter_limit": 0.19813512777440426,
+      "rho_over_sqrt_N_limit": 0.0392575288581795,
+      "energy_density_over_N_3_2_limit": -3.26710156480221e-05
+    },
+    "local_proxy_quadrature": {
+      "mean_proxy": {
+        "normalization": 110.00578926957571,
+        "mean": 20.976728941336614,
+        "variance": 220.01157853912872
+      },
+      "derivative_proxy": {
+        "normalization": 254.58482659529182,
+        "mean": 62.9301868240079,
+        "variance": 13860.729447965847
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "production_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "direct_cube_tail_has_cubic_variance_tail",
+      "status": "PASS",
+      "actual": -3.0677212651902943,
+      "expected": "between -4 and -2"
+    },
+    {
+      "name": "direct_ball_tail_has_cubic_variance_tail",
+      "status": "PASS",
+      "actual": -3.064677242201255,
+      "expected": "between -4 and -2"
+    },
+    {
+      "name": "direct_smooth_tail_has_cubic_variance_tail",
+      "status": "PASS",
+      "actual": -3.042088346700157,
+      "expected": "between -4 and -2"
+    },
+    {
+      "name": "direct_even_schemes_approach_one_limit",
+      "status": "PASS",
+      "actual": 6.31451963631485e-06,
+      "expected": 0.025
+    },
+    {
+      "name": "common_component_regulator_has_zero_area_drift",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": "all zero"
+    },
+    {
+      "name": "component_split_asymmetric_regulator_has_stable_nonzero_anomaly",
+      "status": "PASS",
+      "actual": {
+        "rows": [
+          {
+            "cutoff": 16,
+            "common_phase": 0.0,
+            "split_phase": 0.004978724856561434
+          },
+          {
+            "cutoff": 32,
+            "common_phase": 0.0,
+            "split_phase": 0.005310538617246015
+          },
+          {
+            "cutoff": 64,
+            "common_phase": 0.0,
+            "split_phase": 0.0054771195227826565
+          },
+          {
+            "cutoff": 96,
+            "common_phase": 0.0,
+            "split_phase": 0.005532705113828768
+          }
+        ],
+        "last_relative_change": 0.010046729385084672
+      },
+      "expected": "nonzero and last change <8%"
+    },
+    {
+      "name": "ClassII_coefficient_matrix_is_strictly_positive",
+      "status": "PASS",
+      "actual": 0.0012590115009260615,
+      "expected": ">0"
+    },
+    {
+      "name": "W_lower_bound_coefficient_is_positive",
+      "status": "PASS",
+      "actual": 0.011331103508334554,
+      "expected": ">0"
+    },
+    {
+      "name": "homogeneous_naive_subtraction_coefficient_is_negative",
+      "status": "PASS",
+      "actual": -3.26710156480221e-05,
+      "expected": "<0"
+    },
+    {
+      "name": "independent_mean_proxy_quadrature_matches_Gamma_law",
+      "status": "PASS",
+      "actual": {
+        "normalization": 110.00578926957571,
+        "mean": 20.976728941336614,
+        "variance": 220.01157853912872
+      },
+      "expected": {
+        "mean": 20.97672894133596,
+        "variance": 220.0115785391408
+      }
+    },
+    {
+      "name": "independent_derivative_proxy_quadrature_matches_beta_prime_law",
+      "status": "PASS",
+      "actual": {
+        "normalization": 254.58482659529182,
+        "mean": 62.9301868240079,
+        "variance": 13860.729447965847
+      },
+      "expected": {
+        "mean": 62.93018682400787,
+        "variance": 13860.729447965869
+      }
+    },
+    {
+      "name": "two_local_proxies_are_not_identified",
+      "status": "PASS",
+      "actual": {
+        "mean_proxy": 20.976728941336614,
+        "derivative_proxy": 62.9301868240079
+      },
+      "expected": "distinct limits"
+    },
+    {
+      "name": "A6_W_docstring_has_no_extra_factor_three",
+      "status": "PASS",
+      "actual": "corrected convention text found",
+      "expected": "W is already 3*sum"
+    },
+    {
+      "name": "arbitrary_regulator_independence_is_explicitly_forbidden",
+      "status": "PASS",
+      "actual": [
+        "arbitrary asymmetric regulator independence",
+        "rho_regularizer removal",
+        "renormalised J*K and |K|^2 products",
+        "finite counterterm closure or uniform interacting tightness",
+        "full-field bare concentration theorem",
+        "full three-component constructive Gibbs measure",
+        "infinite-volume limit or phase transition",
+        "BCC existence, stability, or selection",
+        "T6 or T7 theorem status"
+      ],
+      "expected": "explicit exclusion"
+    },
+    {
+      "name": "full_field_bare_concentration_is_explicitly_open",
+      "status": "PASS",
+      "actual": [
+        "arbitrary asymmetric regulator independence",
+        "rho_regularizer removal",
+        "renormalised J*K and |K|^2 products",
+        "finite counterterm closure or uniform interacting tightness",
+        "full-field bare concentration theorem",
+        "full three-component constructive Gibbs measure",
+        "infinite-volume limit or phase transition",
+        "BCC existence, stability, or selection",
+        "T6 or T7 theorem status"
+      ],
+      "expected": "explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 16,
+    "total": 16
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "5a8c0be9ca88837ad909b588fe4a41f64a25bd2b",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "arbitrary asymmetric regulator independence",
+    "rho_regularizer removal",
+    "renormalised J*K and |K|^2 products",
+    "finite counterterm closure or uniform interacting tightness",
+    "full-field bare concentration theorem",
+    "full three-component constructive Gibbs measure",
+    "infinite-volume limit or phase transition",
+    "BCC existence, stability, or selection",
+    "T6 or T7 theorem status"
+  ]
+}

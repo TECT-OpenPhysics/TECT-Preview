@@ -1,0 +1,470 @@
+% =============================================================================
+% Title: Canonical Class-II K current and the first renormalisation split
+% Claim: A6-CLASSII-K-COMPOSITE-DEFINITION (supporting: A6-CLASSII-UV-POWER-COUNTING)
+% Version: v1.0 -- first issued 2026-07-20; this version issued 2026-07-20
+% Status: theorem note and adversarial split review (T5 pinned closure)
+%
+% Revision history (cumulative):
+%   v1.0 (2026-07-20) first issue.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+The previous ultraviolet calculation identified a positive linear contraction
+in the derivative Class-II energy, but it deliberately left two logically
+different questions open.  First, does the current $K_A$ itself have a
+canonical continuum definition?  Second, can the leading energy contraction
+be subtracted while preserving stability, or can an unsubtracted measure
+concentrate on its zero set?
+
+This note closes the first question at fixed positive density floor and inside
+a declared symmetry-preserving spectral regulator class.  It then reviews the
+other questions separately.  The literal leading-$W_\varepsilon$ subtraction
+is ruled out as a cutoff-uniform fixed-parameter coercivity route.  Two local
+bare-concentration proxies are solved exactly, but no conclusion is drawn for
+the spatially correlated Gibbs field.
+
+The domain is the three-torus of side $L=16$.  The covariance and all
+production parameters are imported from the content-addressed A1 production
+manifest.  The density floor is fixed at
+$\varepsilon_\rho=10^{-12}$.  Floor removal, infinite volume, a phase
+transition, and BCC existence or selection are outside scope.
+
+\section*{2. Statement}
+Realify the three-component complex field as
+$X:\mathbb T_L^3\to\mathbb R^6$.  Let $S_A$ be the real symmetric
+representation of an embedded Pauli generator and set
+\[
+ \rho(X)=X^{\mathsf T}X,\qquad
+ m_A(X)=X^{\mathsf T}S_AX,\qquad
+ q_A(X)={m_A(X)\over\rho(X)+\varepsilon_\rho}.
+\]
+The relevant one-form is
+\[
+ \omega_A=dm_A-q_A,d\rho
+          =(\rho+\varepsilon_\rho)dq_A,
+\qquad
+ \omega_{A,a}(X)=2\{(S_AX)_a-q_A(X)X_a\}.
+\]
+
+\begin{theorem}[Fixed-floor canonical spectral current]
+Suppose the centered stationary six-real Gaussian field has an even symmetric
+Fourier covariance $Q(k)$ satisfying
+\[
+ c\langle k\rangle^{-4}I_6\le Q(k)
+ \le C\langle k\rangle^{-4}I_6.
+\]
+Let $R_\Lambda$ be a scalar Fourier multiplier common to all six coordinates,
+real and even, uniformly bounded, converging pointwise to one, and having
+compact spectral support or a uniform Schwartz tail.  Let
+$X_\Lambda=R_\Lambda X$ and evaluate nonlinear products by exact convolution
+or sufficient de-aliasing.  For every $p<\infty$ and $\kappa>0$,
+\[
+ K_{A,i}^{(\Lambda)}
+ =\omega_A(X_\Lambda)\,\partial_iX_\Lambda
+ \longrightarrow K_{A,i}
+ \quad\hbox{in }L^p(\Omega;\mathcal C^{-1/2-\kappa}).
+\]
+The limit is independent of the multiplier inside this class and is the
+canonical geometric, equivalently symmetric-Stratonovich, reconstruction of
+the one-form current.  Along a dyadic subsequence the convergence is almost
+sure.  No divergent $K_A$-level subtraction occurs.
+\end{theorem}
+
+The limit identities are written
+\[
+ K_A=\nabla m_A-q_A\diamond\nabla\rho
+     =(\rho+\varepsilon_\rho)\diamond\nabla q_A,
+\]
+where $\diamond$ denotes the canonical geometric product.  It is not an
+ordinary product of arbitrary distributions.  The theorem defines $K_A$ but
+does not define $J_AK_A$, $|K_A|^2$, or the Class-II energy.
+
+\section*{3. Setting and proof of the composite theorem}
+\subsection*{3.1 Gaussian regularity}
+The production symbol has leading part $Y|k|^4I_6$.  On a dyadic shell,
+\[
+ \mathbb E|\Delta_jX(x)|^2
+ \lesssim\sum_{|k|\asymp2^j}\langle k\rangle^{-4}
+ \lesssim2^{-j}.
+\]
+Gaussian moment equivalence, Bernstein estimates, and the usual dyadic
+summation imply
+\[
+ X\in\bigcap_{\eta>0}\mathcal C^{1/2-\eta}
+ \quad\hbox{almost surely and in every finite }L^p(\Omega),
+\]
+while $\partial_iX\in\mathcal C^{-1/2-\eta}$.  The endpoint
+$H^{1/2}$ is not claimed.
+
+\subsection*{3.2 The canonical second level}
+Fix $\alpha\in(1/3,1/2)$.  The only nonclassical input required by the
+one-form current is the resonant product
+\[
+ \mathbb X_i^{ab,\Lambda}
+ =X_\Lambda^a\circ\partial_iX_\Lambda^b.
+\]
+The resonant restriction has $|k|\asymp|\ell|$.  Wick's identity and the
+covariance bound give, uniformly in the admitted multipliers,
+\begin{align*}
+ \mathbb E\left|
+  \widehat{\mathbb X_i^{ab,\Lambda}}(p)
+ \right|^2
+ &\lesssim
+ \sum_{\substack{k+\ell=p\\|k|\asymp|\ell|}}
+ \langle k\rangle^{-4}\ell_i^2\langle\ell\rangle^{-4}\\
+ &\lesssim \langle p\rangle^{-3}.
+\end{align*}
+The last estimate is obtained by splitting $|k|\lesssim|p|$ from
+$|k|>|p|$.  The first part has $O(|p|^3)$ summands of size
+$O(|p|^{-6})$; the second is bounded by
+$\sum_{|k|>|p|}O(|k|^{-6})=O(|p|^{-3})$.
+
+At fixed output mode the cutoff tail obeys
+\[
+ \mathbb E\left|
+  \widehat{\mathbb X_i^{ab,\Lambda}
+              -\mathbb X_i^{ab}}(p)
+ \right|^2
+ \lesssim\sum_{|k|>c\Lambda}|k|^{-6}
+ =O(\Lambda^{-3}).
+\]
+Dominated convergence handles two different admitted multipliers coupled to
+the same Gaussian modes.  Littlewood-Paley summation and hypercontractivity of
+the second chaos yield convergence in
+$L^p(\Omega;\mathcal C^{-\eta})$ for every $p<\infty$ and $\eta>0$.
+Summability of dyadic cutoff increments then gives almost-sure convergence
+along dyadic subsequences.
+
+For every admitted regulator,
+\[
+ \mathbb E[X_\Lambda^a\partial_iX_\Lambda^b]
+ =\partial_iC_\Lambda^{ab}(0)=0,
+\]
+because the covariance and common multiplier are even.  Thus the second level
+has no local divergent contraction to subtract.  Its symmetric part is fixed
+by
+\[
+ X^a\diamond\partial_iX^b
+ +X^b\diamond\partial_iX^a
+ =\partial_i(X^aX^b).
+\]
+
+\subsection*{3.3 Nonlinear reconstruction}
+The positive floor makes every derivative of $\omega_A$ smooth with at most
+polynomial growth controlled by powers of $\varepsilon_\rho^{-1}$.  First
+order paralinearisation gives
+\[
+ \omega_{A,a}(X)
+ =T_{\partial_b\omega_{A,a}(X)}X^b+R_{A,a},
+ \qquad R_{A,a}\in\mathcal C^{2\alpha}.
+\]
+All paraproducts with $\partial_iX^a$ are classical except the resonant term,
+which is reconstructed from
+\[
+ \partial_b\omega_{A,a}(X)\,
+ \mathbb X_i^{ba}.
+\]
+The coefficient is in $\mathcal C^\alpha$ and the second level is in
+$\mathcal C^{-\eta}$, so this product is classical for $\eta<\alpha$.
+Moreover,
+\[
+ R_{A,a}\circ\partial_iX^a
+ \in\mathcal C^{3\alpha-1},
+\]
+which is well defined because $3\alpha-1>0$.  The reconstruction is a
+continuous map of the enhanced Gaussian field $(X,\mathbb X)$.  Convergence
+and scheme independence of the enhancement therefore imply the asserted
+convergence of $K_A$.  The least regular low-high paraproduct has regularity
+$\alpha-1$, giving the declared $\mathcal C^{-1/2-\kappa}$ target.
+
+This is the same second-level mechanism used in paracontrolled calculus; see
+Gubinelli, Imkeller, and Perkowski,
+\url{https://arxiv.org/abs/1210.2684}.  Canonical Gaussian rough lifts and
+approximation convergence are developed by Friz and Victoir,
+\url{https://arxiv.org/abs/0711.0668}.  The equality of Gaussian rough and
+symmetric-Stratonovich integrals under suitable regularity is treated by
+Ohashi and Russo, \url{https://arxiv.org/abs/2206.06865}; correction formulas
+relative to Skorohod integration are discussed by Cass and Lim,
+\url{https://arxiv.org/abs/1604.06846}.  The Fourier estimates above are the
+specialised argument used for the pinned torus field.
+
+\subsection*{3.4 Why the enhancement is load-bearing}
+Direct differentiation gives
+\[
+ (d\omega_A)_{ab}
+ ={4\over\rho+\varepsilon_\rho}
+ \{X_a(S_AX)_b-X_b(S_AX)_a\}.
+\]
+For the real two-coordinate slice of $S_3=\operatorname{diag}(1,-1)$,
+\[
+ \rho=x^2+y^2,\qquad m_3=x^2-y^2,
+\]
+and
+\[
+ d\omega_3=-{8xy\over x^2+y^2+\varepsilon_\rho}\,dx\wedge dy.
+\]
+This is generically nonzero.  Two enhancements differing by antisymmetric
+area $\Gamma_i^{ab}$ can change the current by
+\[
+ \Delta K_{A,i}
+ ={1\over2}\sum_{a,b}(d\omega_A)_{ab}(X)\Gamma_i^{ab}.
+\]
+The common-even spectral class fixes $\Gamma=0$ relative to the canonical
+Gaussian lift.  A component-split asymmetric approximation is outside this
+class and can have a finite anomaly.  Therefore the theorem is scheme
+controlled, not an unrestricted universality claim.
+
+\section*{4. Counterterm and bare-concentration split}
+\subsection*{4.1 Exact $W_\varepsilon$ bounds}
+Write
+\[
+ Q_{II}=\begin{pmatrix}a&b\\b&c\end{pmatrix},\qquad
+ s=|\Psi_1|^2+|\Psi_2|^2,
+\]
+and let $v_A=(T_A-q_AI)\Psi$.  The leading contraction is
+\[
+ W_\varepsilon
+ =3\sum_A
+ \begin{pmatrix}T_A\Psi\\v_A\end{pmatrix}^{\!*}
+ Q_{II}
+ \begin{pmatrix}T_A\Psi\\v_A\end{pmatrix}.
+\]
+Since $Q_{II}>0$ and $\sum_A|T_A\Psi|^2=3s$,
+\[
+ W_\varepsilon\ge9\lambda_{\min}(Q_{II})s.
+\]
+The exact Fierz form is
+\[
+ W_\varepsilon
+ =9(a+2b+c)s-{6bs^2\over\rho+\varepsilon_\rho}
+ -{3cs^2(\rho+2\varepsilon_\rho)
+       \over(\rho+\varepsilon_\rho)^2},
+\]
+so, because $b,c>0$,
+\[
+ W_\varepsilon\le9(a+2b+c)s.
+\]
+It follows that $W_\varepsilon=0$ exactly when
+$\Psi_1=\Psi_2=0$.  This is an algebraic statement about the conditional
+leading contraction, not a pathwise lower bound on the full derivative
+energy.
+
+\subsection*{4.2 No-go for literal fixed-parameter subtraction}
+Let $t_N=\delta_{\rm cube}N$ and consider
+\[
+ F_N^{\rm naive}=F_{\rm core}+F_{{\rm II},N}
+ -t_N\int W_\varepsilon(\Psi)\,dx.
+\]
+For a homogeneous field in the first component, every derivative current
+vanishes.  Put $\rho=|\Psi_1|^2$.  Then
+\[
+ W_\varepsilon(\sqrt\rho,e_1)
+ =w_\infty\rho+O(\varepsilon_\rho),
+ \qquad w_\infty=9a+12b+6c>0,
+\]
+while
+\[
+ {F_{\rm core}\over|\mathbb T^3|}
+ ={\gamma\over6}\rho^3+{\lambda\over4}\rho^2+O(\rho).
+\]
+Choose
+\[
+ \rho_N=\sqrt{{2t_Nw_\infty\over\gamma}}.
+\]
+Substitution gives
+\[
+ {F_N^{\rm naive}(\sqrt{\rho_N}e_1)\over|\mathbb T^3|}
+ =-{2\sqrt2\over3\sqrt\gamma}
+   w_\infty^{3/2}t_N^{3/2}+O(t_N),
+\]
+hence there is no cutoff-uniform raw lower bound.  In $N$ variables,
+\[
+ {|\Psi_N|\over N^{1/4}}
+ \longrightarrow
+ \left({2\delta_{\rm cube}w_\infty\over\gamma}\right)^{1/4},
+\]
+and the energy density divided by $N^{3/2}$ tends to a strictly negative
+constant.  A vacuum shift changes the displayed minimum but not the normalised
+measure or the escaping amplitude.  Sextic coercivity proves finite-cutoff
+normalisability only.
+
+Adding the running relevant term $t_Nh\int s$ with
+$h=9(a+2b+c)$ makes $t_N(hs-W_\varepsilon)\ge0$.  This is a possible stability
+repair, but it introduces a new renormalisation condition and favours collapse
+toward $s=0$.  It is not counterterm closure.
+
+\subsection*{4.3 Mean-contraction local proxy}
+Let $z=(\Psi_1,\Psi_2)\in\mathbb C^2$, let $w=\Psi_3$, and let $\nu$ be a
+nondegenerate local Gaussian value law.  Define
+\[
+ d\mu_t^W=Z_t^{-1}e^{-tW_\varepsilon(z,w)}d\nu(z,w).
+\]
+For $z=y/\sqrt t$, fixed positive floor gives
+\[
+ tW_\varepsilon(y/\sqrt t,w)\longrightarrow h|y|^2,
+ \qquad h=9(a+2b+c).
+\]
+The lower bound $W_\varepsilon\ge9\lambda_{\min}s$ supplies domination.
+Laplace scaling in four real dimensions yields
+\[
+ Z_t\sim t^{-2}{\pi^2p_z(0)\over h^2},
+\]
+and
+\[
+ (\sqrt t\,z,w)\Longrightarrow(Y,W_0),
+ \qquad {d\Pr_Y\over dy}=\left({h\over\pi}\right)^2e^{-h|y|^2}.
+\]
+Thus
+\[
+ t|z|^2\Longrightarrow\operatorname{Gamma}(2,\operatorname{rate}=h),
+ \qquad \mathbb E[t|z|^2]\longrightarrow{2\over h}.
+\]
+
+\subsection*{4.4 Exact derivative-integrated local proxy}
+The preceding proxy exponentiates the conditional mean and is not exact
+gradient integration.  Instead let each of the three local complex gradient
+vectors have covariance $tI_3$ and define
+\[
+ G_t(\Psi)=\mathbb E_{\nabla\Psi}
+ \exp\{-e_{II}(\Psi,\nabla\Psi)\}.
+\]
+At $z=y/\sqrt t$, the floor makes $K_A-J_A\to0$.  The embedded Pauli identity
+gives, for one spatial direction,
+\[
+ \operatorname{Cov}(J_A,J_B)=2|y|^2\delta_{AB}.
+\]
+With $g=a+2b+c$, a Gaussian determinant in three current coordinates and
+three spatial directions gives
+\[
+ G_t(y/\sqrt t,w)\longrightarrow
+ G_\infty(y)=(1+2g|y|^2)^{-9/2}.
+\]
+The lower eigenvalue of $Q_{II}$ gives an integrable determinant bound.  Hence
+the rescaled radial variable has density
+\[
+ f_R(r)=35g^2r(1+2gr)^{-9/2},\qquad r\ge0,
+\]
+with
+\[
+ \mathbb ER={2\over3g},\qquad
+ \operatorname{Var}R={14\over9g^2}.
+\]
+This proxy also concentrates locally on $z=0$, but with a different limiting
+law and a mean three times the mean-contraction proxy after substituting
+$h=9g$.  Neither local statement controls spatial entropy, mode coupling,
+partition functions, or tightness of the third component.
+
+\section*{5. Numerical verification}
+The production coefficients are derived from the hash-pinned A1 manifest:
+\[
+ a=0.004499999999998875,\quad
+ b=0.0018749999999995311,\quad
+ c=0.002343749999999414.
+\]
+The principal derived values are
+\begin{align*}
+ 9\lambda_{\min}(Q_{II})&=0.0113311035083346,\\
+ w_\infty&=0.0770624999999807,\\
+ {|\Psi_N|\over N^{1/4}}&\longrightarrow0.198135127774404,\\
+ {\inf F_N^{\rm naive}/|\mathbb T^3|\over N^{3/2}}
+ &\longrightarrow-3.26710156480221\times10^{-5},\\
+ \mathbb E_{\rm mean}[N|z|^2]&\longrightarrow1294.94082886623,\\
+ \mathbb E_{\rm derivative}[N|z|^2]&\longrightarrow3884.82248659868.
+\end{align*}
+
+The primary script uses FFT multiplicity convolution, exact Pauli/Fierz
+identities, finite-difference curvature, three even regulator families, the
+homogeneous trial, and direct determinant algebra.  It passes $29/29$.
+The non-importing audit uses direct $(n_x,n_y,n_z)$ enumeration, a separately
+coded coefficient reduction, independent Gamma and beta-prime quadrature, and
+a synthetic positive $q^{-4}$ covariance with a component-split phase
+regulator as a negative control.  It passes $16/16$.  The one-command audit
+passes $64/64$ in aggregate.
+
+The primary fitted variance-tail slopes are
+\[
+ -2.98928\quad(\hbox{cube}),\qquad
+ -3.01229\quad(\hbox{ball}),\qquad
+ -3.01392\quad(\hbox{smooth even}),
+\]
+and the independent slopes are $-3.06772$, $-3.06468$, and $-3.04209$.
+These values check the analytic $N^{-3}$ variance tail; they do not replace
+the all-cutoff proof.  The asymmetric negative control has a stable nonzero
+area drift and is not admitted by the theorem.
+
+Reproduce with
+\begin{verbatim}
+python codes/foundations/a6_classii_k_composite_verify.py
+\end{verbatim}
+Expected terminal lines are primary $29/29$, independent $16/16$, aggregate
+$64/64$, and `A6-CLASSII-K-COMPOSITE-INTEGRATED-PASS'.
+
+The previous A6 source was also re-run after correcting one documentation
+defect.  Its function already returns
+$W=3\sum_A(\cdots)$, so the leading conditional term is
+$\delta_{\rm cube}NW$, not $3\delta_{\rm cube}NW$.  The correction changes no
+arithmetic; the original A6 integrated audit remains $44/44$ PASS.
+
+\section*{6. Devil's-advocate}
+\begin{enumerate}
+\item \textbf{VALID-with-mitigation:} deterministic Holder counting alone
+does not prove that the product diverges or is ambiguous.  The closure instead
+uses the special Fourier-Wick second level and the one-form reconstruction.
+\item \textbf{DISMISSED:} the rational denominator creates a hidden
+$K$-level subtraction.  At fixed positive floor the one-form is smooth, and
+the only local second-level contraction vanishes by evenness.
+\item \textbf{VALID-with-mitigation:} arbitrary regulator independence is
+false.  The theorem is restricted to common real-even scalar multipliers.  A
+component-split asymmetric negative control exhibits an anomaly.
+\item \textbf{DISMISSED:} sharp spectral cutoffs invalidate the limit.  The
+proof uses bounded pointwise-convergent multipliers and dominated Fourier-Wick
+sums, so smoothness of the multiplier is not required when convolution is
+exact.
+\item \textbf{VALID-with-mitigation:} collocation aliasing can imitate scheme
+dependence.  The scope requires exact convolution or sufficient de-aliasing;
+an aliased product is a falsifier, not an admitted implementation.
+\item \textbf{DISMISSED:} defining $K_A$ defines $|K_A|^2$.  Squaring a
+$\mathcal C^{-1/2-}$ distribution is a separate renormalisation problem and
+is explicitly excluded.
+\item \textbf{UPHELD:} literal subtraction of
+$\delta_{\rm cube}NW_\varepsilon$ with fixed lower-order coefficients is not
+uniformly coercive.  The exact homogeneous trial has an escaping
+$N^{1/4}$ amplitude and negative $N^{3/2}$ energy.
+\item \textbf{VALID-with-mitigation:} $W_\varepsilon^{-1}(0)$ does not prove
+full Gibbs concentration.  Only two local proxies are closed; the full-field
+problem is a separate gate.
+\item \textbf{VALID-with-mitigation:} the constants are asymptotic and the
+couplings are weak, so existing $N=32,64,128$ simulations need not display
+the local proxy limits.  No practical crossover claim is made.
+\item \textbf{VALID-with-mitigation:} no estimate is uniform as
+$\varepsilon_\rho\downarrow0$.  The floor is pinned at a positive value and
+removal is excluded.
+\end{enumerate}
+
+\section*{7. Result footer}
+\begin{verbatim}
+Result ID:               A6-CLASSII-K-COMPOSITE-DEFINITION
+Precise statement:       Common real-even spectral approximations define one
+                         fixed-floor canonical geometric K_A current; literal
+                         fixed-parameter W subtraction is nonuniform, and two
+                         local bare proxies have distinct exact limits.
+Scope:                   L=16 production q^-4 Gaussian; three complex fields;
+                         six-real convention; eps_rho=1e-12; common real-even
+                         scalar multipliers; exact/dealiased convolution.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION;
+                         A6-CLASSII-UV-POWER-COUNTING.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED, CONDITIONAL.
+Reproduction command:    python codes/foundations/
+                         a6_classii_k_composite_verify.py
+Expected output:         primary 29/29; independent 16/16; aggregate 64/64;
+                         integrated PASS; exit 0.
+Falsification gate:      failed Wick tail, scheme comparison, curvature,
+                         W/no-go/proxy identity, hash audit, or subprocess.
+Tier before / after:     new / T5 PINNED-CLOSURE@FIXED-FLOOR-CANONICAL-
+                         SPECTRAL-K-LIFT.
+No-overclaim statement:  No K-square, counterterm closure, full-field bare
+                         theorem, Gibbs measure, floor removal, arbitrary
+                         regulator universality, BCC, T6, or T7.
+Next required action:    Design running relevant counterterms and separate
+                         full-field partition/tightness estimates.
+\end{verbatim}

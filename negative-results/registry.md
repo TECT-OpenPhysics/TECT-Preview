@@ -27,6 +27,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS](#audit-2026-07-19-a5-bundle-note-pdf-completeness) | A5 scoped T5 capstone initial bundle build | original-path A4 v2.1 source was copied without its paired PDF |
 | [AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT](#audit-2026-07-20-sector-a-baseline-status-drift) | Sector-A live records after A5 publication | stale sign-off, mass-alias, gate, and roadmap wording contradicted enacted claims |
 | [NG-2026-07-20-A6-BARE-CLASSII-L1](#ng-2026-07-20-a6-bare-classii-l1) | direct A4-style bare extension to full derivative Class-II | positive linear derivative-pair contraction defeats uniform Gaussian L1 control |
+| [NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM](#ng-2026-07-20-a6-naive-w-subtraction-nonuniform) | literal fixed-parameter leading-W subtraction | homogeneous amplitudes escape as N^(1/4) and the raw lower bound falls as -N^(3/2) |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -66,10 +67,34 @@ cancel it.
 
 **Consequence:** The unchanged A4 proof route is eliminated, but a bare
 degenerate limit concentrated on `W_eps=0` and a renormalised measure are
-neither classified nor ruled out. The active counterterm path is
-`A6-CLASSII-K-COMPOSITE-DEFINITION` followed by
-`A6-CLASSII-COUNTERTERM-CLOSURE`, with stability and tightness reproved after
-subtraction.
+neither classified nor ruled out. `A6-CLASSII-K-COMPOSITE-DEFINITION` now
+closes the fixed-floor current itself; active work is the separate
+`A6-CLASSII-COUNTERTERM-CLOSURE` and full-field bare-concentration gates, with
+stability and tightness reproved for any proposed renormalised weight.
+
+<a id="ng-2026-07-20-a6-naive-w-subtraction-nonuniform"></a>
+### NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM -- literal leading-W subtraction
+
+**Failure mode:** The direct prescription
+`F_N^naive=F_core+F_II,N-delta_cube*N*int W_eps` with all lower-order
+production coefficients fixed is not cutoff-uniformly coercive. A homogeneous
+field supported in the first two components has `J_A=K_A=F_II,N=0`, while the
+negative local counterterm remains. The sextic term balances it only at
+`|Psi_N|=Theta(N^(1/4))`, and the trial energy density is
+`-Theta(N^(3/2))`.
+
+**Evidence:** `A6-CLASSII-K-COMPOSITE-DEFINITION`; exact Pauli/Fierz bounds,
+homogeneous asymptotics, and primary 29/29 plus non-importing independent
+16/16, integrated 64/64 execution. At the production point,
+`|Psi_N|/N^(1/4) -> 0.198135127774404` and the trial energy-density coefficient
+is `-3.26710156480221e-05` per `N^(3/2)`.
+
+**Consequence:** A vacuum-energy recentering cannot repair the escaping
+amplitude. A running family-mass counterterm can restore nonnegativity but
+introduces a new renormalisation condition and may force concentration on the
+pure-third-component subspace. Counterterm closure remains open. The separate
+full-field bare-concentration gate is not decided by this no-go or by either
+local proxy.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

@@ -1,0 +1,447 @@
+{
+  "schema": "tect/a6-classii-k-composite-primary-result/1.0",
+  "claim_id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+  "script_version": "1.0.0",
+  "verdict": "A6-CLASSII-K-COMPOSITE-PRIMARY-PASS",
+  "scope": "Canonical A1 full-production q^-4 Gaussian on the fixed L=16 three-torus, six real coordinates for three complex components, fixed rho_regularizer=1e-12, embedded Pauli generators, exact spectral convolution, and the declared common symmetry-preserving multiplier class. Counterterm and bare-concentration follow-ups are reviewed separately at fixed production coefficients.",
+  "theorem_boundary": {
+    "field_regularities": "X belongs almost surely to C^(1/2-kappa) for every kappa>0; partial_i X belongs to C^(-1/2-kappa)",
+    "one_form": "omega_A=dm_A-q_A d rho=(rho+eps_rho)dq_A, q_A=m_A/(rho+eps_rho)",
+    "canonical_lift": "K_A is the geometric/Stratonovich reconstruction of omega_A(X) partial_i X from the canonical Gaussian second level X^a circle partial_i X^b",
+    "convergence": "For every finite p and kappa>0, admissible common-even approximations converge in L^p(Omega; C^(-1/2-kappa)); dyadic subsequences converge almost surely",
+    "zero_K_counterterm": "E[X^a_Lambda partial_i X^b_Lambda]=partial_i C_Lambda^{ab}(0)=0 for every common real-even regulator",
+    "scheme_boundary": "The limit is independent within the declared common-even scalar class; component-split asymmetric approximations may carry an area/drift anomaly",
+    "energy_boundary": "The lift defines K_A only. It does not define J_A*K_A, |K_A|^2, or the Class-II Gibbs energy."
+  },
+  "derived": {
+    "chain_rule": {
+      "one_form_vs_floor_grad_q": 4.2563666103023243e-16,
+      "one_form_vs_J_minus_q_grad_rho": 3.44040374740782e-16
+    },
+    "curvature_maximum": 2.768166089964919,
+    "area_lift": {
+      "reference_cutoff": 512,
+      "reference_variance": 0.030394785218825812,
+      "rows": [
+        {
+          "cutoff": 16,
+          "sharp_cube": 0.03038216579409523,
+          "sharp_ball": 0.030371337518285857,
+          "smooth_even": 0.03033628614999431,
+          "cube_variance_tail": 1.2619424730582474e-05,
+          "ball_variance_tail": 2.3447700539955263e-05,
+          "smooth_variance_tail": 5.849906883150305e-05
+        },
+        {
+          "cutoff": 32,
+          "sharp_cube": 0.03039315601667171,
+          "sharp_ball": 0.030391924946031015,
+          "smooth_even": 0.03038782823132866,
+          "cube_variance_tail": 1.6292021541020052e-06,
+          "ball_variance_tail": 2.8602727947975304e-06,
+          "smooth_variance_tail": 6.956987497152428e-06
+        },
+        {
+          "cutoff": 64,
+          "sharp_cube": 0.0303945778746008,
+          "sharp_ball": 0.030394430385518603,
+          "smooth_even": 0.030393926671094324,
+          "cube_variance_tail": 2.0734422501167415e-07,
+          "ball_variance_tail": 3.548333072089793e-07,
+          "smooth_variance_tail": 8.585477314880519e-07
+        },
+        {
+          "cutoff": 128,
+          "sharp_cube": 0.030394759381510823,
+          "sharp_ball": 0.03039474128232355,
+          "smooth_even": 0.030394678593227694,
+          "cube_variance_tail": 2.5837314988896853e-08,
+          "ball_variance_tail": 4.3936502262809096e-08,
+          "smooth_variance_tail": 1.0662559811816519e-07
+        }
+      ],
+      "variance_tail_slopes": {
+        "cube_variance_tail": -2.9892828318168676,
+        "ball_variance_tail": -3.0122944577774713,
+        "smooth_variance_tail": -3.013918494222858
+      },
+      "rms_tail_slopes": {
+        "cube_variance_tail": -1.4946414159084338,
+        "ball_variance_tail": -1.5061472288887356,
+        "smooth_variance_tail": -1.506959247111429
+      }
+    },
+    "counterterm": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "g": 0.01059374999999735,
+      "h": 0.09534374999997615,
+      "coefficient_eigenvalues": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "lower_bound_coefficient": 0.011331103508334554,
+      "w_infinity": 0.07706249999998072,
+      "fierz_max_absolute_error": 4.440892098500626e-16,
+      "minimum_lower_margin": 0.015128729254012381,
+      "minimum_upper_margin": 0.00014611308963775535,
+      "pure_third_W": 0.0,
+      "first_component_W": 0.07706249999999197,
+      "homogeneous_instability": {
+        "quadratic_coefficient": 0.28701682365000003,
+        "amplitude_over_N_quarter_limit": 0.19813512777440426,
+        "rho_over_sqrt_N_limit": 0.0392575288581795,
+        "energy_density_over_N_3_2_limit": -3.26710156480221e-05,
+        "rows": [
+          {
+            "cutoff": 10000,
+            "rho_trial": 3.9257528858179502,
+            "amplitude_trial": 1.9813512777440425,
+            "energy_density": -33.20099861425625,
+            "energy_over_N_3_2": -3.320099861425625e-05
+          },
+          {
+            "cutoff": 1000000,
+            "rho_trial": 39.257528858179505,
+            "amplitude_trial": 6.2655828825560596,
+            "energy_density": -32825.42208578053,
+            "energy_over_N_3_2": -3.2825422085780523e-05
+          },
+          {
+            "cutoff": 100000000,
+            "rho_trial": 392.575288581795,
+            "amplitude_trial": 19.813512777440426,
+            "energy_density": -32687470.3732093,
+            "energy_over_N_3_2": -3.26874703732093e-05
+          },
+          {
+            "cutoff": 10000000000,
+            "rho_trial": 3925.7528858179503,
+            "amplitude_trial": 62.6558288255606,
+            "energy_density": -32672671261.354942,
+            "energy_over_N_3_2": -3.267267126135494e-05
+          }
+        ]
+      }
+    },
+    "local_proxies": {
+      "mean_contraction_proxy": {
+        "normalization_radial_without_pi2": 110.0057892695704,
+        "rescaled_mean_t_s": 20.97672894133596,
+        "rescaled_variance_t_s": 220.0115785391408,
+        "mean_N_s": 1294.9408288662253,
+        "limit_law": "Gamma(shape=2, rate=h)"
+      },
+      "derivative_integrated_proxy": {
+        "normalization_radial_without_pi2": 254.5848265952916,
+        "closed_normalization": 254.5848265952915,
+        "rescaled_mean_t_s": 62.93018682400787,
+        "rescaled_variance_t_s": 13860.729447965869,
+        "mean_N_s": 3884.822486598676,
+        "limit_density": "35*g^2*r*(1+2*g*r)^(-9/2)"
+      },
+      "determinant_rows": [
+        {
+          "covariance": [
+            [
+              2.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              2.0
+            ]
+          ],
+          "direct_factor": 0.9099662699565176,
+          "closed_factor": 0.9099662699565175
+        },
+        {
+          "covariance": [
+            [
+              2.625,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.625,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              2.625
+            ]
+          ],
+          "direct_factor": 0.8838832406237467,
+          "closed_factor": 0.8838832406237467
+        },
+        {
+          "covariance": [
+            [
+              0.26,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.26,
+              6.661338147750939e-18
+            ],
+            [
+              0.0,
+              6.661338147750939e-18,
+              0.26
+            ]
+          ],
+          "direct_factor": 0.9876986390460668,
+          "closed_factor": 0.9876986390460671
+        }
+      ]
+    }
+  },
+  "assertions": [
+    {
+      "name": "production_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "a6_uv_source_hash_matches",
+      "status": "PASS",
+      "actual": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "expected": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+    },
+    {
+      "name": "rho_floor_is_fixed_positive",
+      "status": "PASS",
+      "actual": 1e-12,
+      "expected": ">0"
+    },
+    {
+      "name": "realified_generators_are_symmetric",
+      "status": "PASS",
+      "actual": "all three",
+      "expected": "real symmetric"
+    },
+    {
+      "name": "one_form_curvature_formula_matches_finite_difference",
+      "status": "PASS",
+      "actual": 1.7286422293594228e-10,
+      "expected": 1e-08
+    },
+    {
+      "name": "one_form_is_generically_non_exact",
+      "status": "PASS",
+      "actual": 2.768166089964919,
+      "expected": ">0.1"
+    },
+    {
+      "name": "T3_real_slice_curvature_has_expected_sign_and_factor",
+      "status": "PASS",
+      "actual": -3.19999999999936,
+      "expected": -3.19999999999936
+    },
+    {
+      "name": "smooth_chain_rule_omega_equals_floor_grad_q",
+      "status": "PASS",
+      "actual": 4.2563666103023243e-16,
+      "expected": "<1e-12"
+    },
+    {
+      "name": "smooth_chain_rule_omega_equals_J_minus_q_grad_rho",
+      "status": "PASS",
+      "actual": 3.44040374740782e-16,
+      "expected": "<1e-12"
+    },
+    {
+      "name": "K_one_form_vanishes_on_pure_third_component_subspace",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": "all zero"
+    },
+    {
+      "name": "cube_variance_tail_has_N_minus_3_tail",
+      "status": "PASS",
+      "actual": -2.9892828318168676,
+      "expected": "between -3.8 and -2.2"
+    },
+    {
+      "name": "ball_variance_tail_has_N_minus_3_tail",
+      "status": "PASS",
+      "actual": -3.0122944577774713,
+      "expected": "between -3.8 and -2.2"
+    },
+    {
+      "name": "smooth_variance_tail_has_N_minus_3_tail",
+      "status": "PASS",
+      "actual": -3.013918494222858,
+      "expected": "between -3.8 and -2.2"
+    },
+    {
+      "name": "cube_variance_tail_has_N_minus_3_over_2_rms_tail",
+      "status": "PASS",
+      "actual": -1.4946414159084338,
+      "expected": "between -1.9 and -1.1"
+    },
+    {
+      "name": "ball_variance_tail_has_N_minus_3_over_2_rms_tail",
+      "status": "PASS",
+      "actual": -1.5061472288887356,
+      "expected": "between -1.9 and -1.1"
+    },
+    {
+      "name": "smooth_variance_tail_has_N_minus_3_over_2_rms_tail",
+      "status": "PASS",
+      "actual": -1.506959247111429,
+      "expected": "between -1.9 and -1.1"
+    },
+    {
+      "name": "admissible_even_regulators_approach_common_area_limit",
+      "status": "PASS",
+      "actual": 2.6579652577781656e-06,
+      "expected": 0.01
+    },
+    {
+      "name": "common_even_regulator_has_zero_value_derivative_contraction",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": "zero by oddness"
+    },
+    {
+      "name": "Pauli_Fierz_W_formula_matches_generator_sum",
+      "status": "PASS",
+      "actual": 4.440892098500626e-16,
+      "expected": "<2e-14"
+    },
+    {
+      "name": "W_lower_bound_by_9_lambda_min_s",
+      "status": "PASS",
+      "actual": 0.015128729254012381,
+      "expected": ">=-2e-14"
+    },
+    {
+      "name": "W_upper_bound_by_h_s",
+      "status": "PASS",
+      "actual": 0.00014611308963775535,
+      "expected": ">=-2e-14"
+    },
+    {
+      "name": "W_zero_set_contains_exact_pure_third_subspace",
+      "status": "PASS",
+      "actual": {
+        "pure_third": 0.0,
+        "first_component": 0.07706249999999197
+      },
+      "expected": "0 and positive"
+    },
+    {
+      "name": "literal_W_subtraction_has_negative_N_3_over_2_trial_energy",
+      "status": "PASS",
+      "actual": {
+        "last": -3.267267126135494e-05,
+        "limit": -3.26710156480221e-05,
+        "relative_error": 5.067529429369755e-05
+      },
+      "expected": "negative and converged"
+    },
+    {
+      "name": "beta_prime_normalization_identity",
+      "status": "PASS",
+      "actual": {
+        "beta": 254.5848265952916,
+        "closed": 254.5848265952915
+      },
+      "expected": "absolute error <1e-12"
+    },
+    {
+      "name": "derivative_integrated_proxy_determinant_is_closed_form",
+      "status": "PASS",
+      "actual": 3.3306690738754696e-16,
+      "expected": "<2e-14"
+    },
+    {
+      "name": "Pauli_current_covariance_is_isotropic",
+      "status": "PASS",
+      "actual": 6.661338147750939e-18,
+      "expected": "<2e-14"
+    },
+    {
+      "name": "local_proxy_concentration_scales_are_positive",
+      "status": "PASS",
+      "actual": {
+        "mean_proxy": 1294.9408288662253,
+        "derivative_proxy": 3884.822486598676
+      },
+      "expected": "both positive"
+    },
+    {
+      "name": "full_field_bare_concentration_remains_explicitly_excluded",
+      "status": "PASS",
+      "actual": [
+        "arbitrary asymmetric regulator independence",
+        "rho_regularizer removal",
+        "renormalised J*K and |K|^2 products",
+        "finite counterterm closure or uniform interacting tightness",
+        "full-field bare concentration theorem",
+        "full three-component constructive Gibbs measure",
+        "infinite-volume limit or phase transition",
+        "BCC existence, stability, or selection",
+        "T6 or T7 theorem status"
+      ],
+      "expected": "explicit exclusion"
+    },
+    {
+      "name": "K_square_remains_explicitly_excluded",
+      "status": "PASS",
+      "actual": [
+        "arbitrary asymmetric regulator independence",
+        "rho_regularizer removal",
+        "renormalised J*K and |K|^2 products",
+        "finite counterterm closure or uniform interacting tightness",
+        "full-field bare concentration theorem",
+        "full three-component constructive Gibbs measure",
+        "infinite-volume limit or phase transition",
+        "BCC existence, stability, or selection",
+        "T6 or T7 theorem status"
+      ],
+      "expected": "explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 29,
+    "total": 29
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "5a8c0be9ca88837ad909b588fe4a41f64a25bd2b",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "arbitrary asymmetric regulator independence",
+    "rho_regularizer removal",
+    "renormalised J*K and |K|^2 products",
+    "finite counterterm closure or uniform interacting tightness",
+    "full-field bare concentration theorem",
+    "full three-component constructive Gibbs measure",
+    "infinite-volume limit or phase transition",
+    "BCC existence, stability, or selection",
+    "T6 or T7 theorem status"
+  ]
+}

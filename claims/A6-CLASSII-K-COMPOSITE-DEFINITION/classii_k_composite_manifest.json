@@ -1,0 +1,117 @@
+{
+  "schema": "tect/a6-classii-k-composite/1.0",
+  "claim_id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+  "frozen_on": "2026-07-20",
+  "status": "T4 STRONG-EVIDENCE candidate for fixed-floor canonical spectral K lift; counterterm closure and full-field bare concentration remain open",
+  "authority": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_uv_source": {
+      "path": "codes/foundations/a6_classii_uv_power_counting.py",
+      "sha256": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "version": "1.0.2"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a6_classii_k_composite.py",
+      "sha256": "31337f69e19494bd3a6bbc3f879544c5f1b6f239dfbde011d6874f599efe1789",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a6_classii_k_composite_independent.py",
+      "sha256": "8b82b5abb2c3ca5af2a9d7b13b715d7facc379991d5170e889481b232be3ce2f",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a6_classii_k_composite_verify.py",
+      "sha256": "a43719778fc3239af82516b2964747c2db1b2b7aa1fb36b0fa5bc4b81a283d2d",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.tex.txt",
+      "sha256": "38f3ea8461852e5b3853de2959ded2b3e1bbc2237189528421e85f8e00bdb3df",
+      "version": "1.0"
+    },
+    "proof_pdf": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.pdf",
+      "sha256": "1cb6c678c961b56110600bee5a6b57974b1500c083c477de6e822523b35ff558",
+      "pages": 7,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS on all seven rendered pages: no clipping, overlap, broken equations, unreadable text, or footer defects"
+    }
+  },
+  "scope": "Canonical A1 full-production q^-4 Gaussian on the fixed L=16 three-torus, six real coordinates for three complex components, fixed rho_regularizer=1e-12, embedded Pauli generators, exact spectral convolution, and the declared common symmetry-preserving multiplier class. Counterterm and bare-concentration follow-ups are reviewed separately at fixed production coefficients.",
+  "theorem_boundary": {
+    "field_regularities": "X belongs almost surely to C^(1/2-kappa) for every kappa>0; partial_i X belongs to C^(-1/2-kappa)",
+    "one_form": "omega_A=dm_A-q_A d rho=(rho+eps_rho)dq_A, q_A=m_A/(rho+eps_rho)",
+    "canonical_lift": "K_A is the geometric/Stratonovich reconstruction of omega_A(X) partial_i X from the canonical Gaussian second level X^a circle partial_i X^b",
+    "convergence": "For every finite p and kappa>0, admissible common-even approximations converge in L^p(Omega; C^(-1/2-kappa)); dyadic subsequences converge almost surely",
+    "zero_K_counterterm": "E[X^a_Lambda partial_i X^b_Lambda]=partial_i C_Lambda^{ab}(0)=0 for every common real-even regulator",
+    "scheme_boundary": "The limit is independent within the declared common-even scalar class; component-split asymmetric approximations may carry an area/drift anomaly",
+    "energy_boundary": "The lift defines K_A only. It does not define J_A*K_A, |K_A|^2, or the Class-II Gibbs energy."
+  },
+  "admissible_regulators": "common real-even scalar Fourier multipliers on all six real components, uniformly bounded, converging pointwise to one, with compact spectral support or a uniform Schwartz tail; nonlinear products use exact Fourier convolution or sufficient de-aliasing",
+  "analytic_split": {
+    "counterterm_bounds": "With s=|Psi_1|^2+|Psi_2|^2 and positive Q_II, 9*lambda_min(Q_II)*s <= W_eps(Psi) <= 9*(a+2b+c)*s, so W_eps=0 iff s=0.",
+    "naive_subtraction_no_go": "For F_N^naive=F_core+F_II,N-delta_cube*N*int W_eps, homogeneous first-two-component fields have F_II,N=0 and yield amplitude Theta(N^(1/4)) with infimum at most -c*N^(3/2); fixed lower-order coefficients therefore have no cutoff-uniform raw lower bound.",
+    "mean_proxy": "The local value proxy exp[-t W_eps] has sqrt(t)z converging to a complex two-component Gaussian with rate h=9(a+2b+c), and t|z|^2 converges to Gamma(2,rate=h).",
+    "derivative_proxy": "After exactly integrating independent local Gaussian derivatives, the rescaled factor is (1+2g|y|^2)^(-9/2), and t|z|^2 has density 35*g^2*r*(1+2*g*r)^(-9/2).",
+    "full_field_boundary": "Neither local proxy is the spatially correlated full Gibbs measure; no full-field bare concentration theorem is inferred."
+  },
+  "constants": {
+    "delta_cube": 0.01619898645075695,
+    "classification": "DERIVED from the A6 sharp-cube theorem at L=16 and Y=1"
+  },
+  "audit": {
+    "seed": 20260720,
+    "curvature_step": 1e-06,
+    "curvature_tolerance": 1e-08,
+    "area_cutoffs": [16, 32, 64, 128],
+    "area_reference_cutoff": 512,
+    "scheme_relative_tolerance": 0.01,
+    "odd_sum_cutoff": 64,
+    "instability_relative_tolerance": 0.002,
+    "independent_area_cutoffs": [12, 24, 48, 96],
+    "independent_area_reference_cutoff": 192,
+    "independent_scheme_relative_tolerance": 0.025,
+    "quadrature_order": 64
+  },
+  "integrated_audit": {
+    "area_reference_relative_tolerance": 0.005,
+    "counterterm_absolute_tolerance": 1e-14,
+    "proxy_relative_tolerance": 1e-10
+  },
+  "open_followups": [
+    "A6-CLASSII-COUNTERTERM-CLOSURE",
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+  ],
+  "references": [
+    "https://arxiv.org/abs/1210.2684",
+    "https://arxiv.org/abs/0711.0668",
+    "https://arxiv.org/abs/2206.06865",
+    "https://arxiv.org/abs/1604.06846"
+  ],
+  "honesty_boundary": {
+    "closed": [
+      "fixed-positive-floor canonical geometric K_A lift within the declared common-even scalar spectral regulator class",
+      "zero divergent K-level contraction for those regulators",
+      "non-exact one-form and the necessity of second-level data outside smooth calculus",
+      "exact W_eps bounds and zero set",
+      "literal leading-W subtraction failure as a cutoff-uniform raw-coercivity route",
+      "two distinct local bare-concentration proxy limits"
+    ],
+    "excluded": [
+      "arbitrary asymmetric regulator independence",
+      "rho_regularizer removal",
+      "renormalised J*K and |K|^2 products",
+      "finite counterterm closure or uniform interacting tightness",
+      "full-field bare concentration theorem",
+      "full three-component constructive Gibbs measure",
+      "infinite-volume limit or phase transition",
+      "BCC existence, stability, or selection",
+      "T6 or T7 theorem status"
+    ]
+  }
+}

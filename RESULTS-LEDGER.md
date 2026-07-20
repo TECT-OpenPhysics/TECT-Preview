@@ -19,6 +19,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-051](#r-051) | Literal Class-II leading-counterterm no-go and local bare-proxy split | T5 pinned split result; fixed-parameter subtraction has an escaping N^(1/4) homogeneous amplitude and -N^(3/2) raw energy, while two exact local proxies concentrate with distinct laws; full-field concentration remains open |
+| [R-050](#r-050) | Fixed-floor canonical spectral Class-II K current | T5 PINNED-CLOSURE; common real-even scalar regulators define one geometric/Stratonovich K_A distribution in C^(-1/2-kappa), with zero K-level contraction; primary 29/29 + independent 16/16, integrated 64/64 PASS |
 | [R-049](#r-049) | Full derivative Class-II Gaussian ultraviolet power counting | T4 STRONG-EVIDENCE; exact linear sharp-cube derivative-covariance divergence, nonconstant local leading contraction, and bare Gaussian L1 obstruction; primary 19/19 + independent 12/12, integrated 44/44 PASS |
 | [R-048](#r-048) | Branch-aware Sector-A T6 conditional-composition theorem | T6 PUBLISHED CONDITIONAL; exactly seven hypotheses, six pinned premises, immutable T5 history, branch and mass firewalls; direct and standalone 22/22 + 13/13 = 35/35 PASS |
 | [R-047](#r-047) | Branch-aware Sector-A synthesis and termination closure | T5 PUBLISHED; six dependency bundles plus exact v1.2 capstone; direct and standalone primary 16/16 + independent 16/16 PASS |
@@ -68,6 +70,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-051"></a>
+### R-051 -- literal Class-II leading-counterterm no-go and local bare-proxy split
+
+**Statement (one line):** With production coefficients fixed, literal
+subtraction of `delta_cube*N*W_eps` has no cutoff-uniform raw lower bound: a
+homogeneous first-two-component trial has amplitude `Theta(N^(1/4))` and
+energy `-Theta(N^(3/2))`; separately, the mean-contraction and exact
+one-point derivative-integrated bare proxies both concentrate locally on
+`Psi_1=Psi_2=0` but have distinct Gamma and beta-prime scaling laws.
+
+**Proven in:** `A6-CLASSII-K-COMPOSITE-DEFINITION`, proof note v1.0,
+hash-pinned manifest, primary analytic audit, non-importing independent audit,
+and integrated one-command verifier `a6_classii_k_composite_verify.py`.
+
+**Reuse scope:** Renormalisation design and honest classification of the bare
+alternative. It eliminates a literal fixed-lower-order-parameter subtraction,
+shows why a vacuum constant is insufficient, fixes the exact zero set and two
+local comparison laws, and prevents either proxy from being called the full
+Gibbs field. It does not eliminate running relevant counterterms, prove
+full-field bare concentration, or construct a measure.
+
+**Tier:** T5 PINNED-SPLIT@FIXED-PRODUCTION-COEFFICIENTS. The production trial
+has `|Psi_N|/N^(1/4) -> 0.198135127774404` and energy-density coefficient
+`-3.26710156480221e-05`. The local proxy limits satisfy
+`E[Ns] -> 1294.94082886623` and `3884.82248659868`, respectively. Primary
+29/29, non-importing independent 16/16, and integrated 64/64 audits pass.
+
+**Publication target:** A renormalisation note contrasting running-mass
+stability, nondegenerate renormalisation conditions, and the separate
+full-field bare-concentration problem.
+
+<a id="r-050"></a>
+### R-050 -- fixed-floor canonical spectral Class-II K current
+
+**Statement (one line):** For the pinned full-production `q^-4` Gaussian at
+fixed positive density floor, common real-even uniformly bounded scalar
+Fourier approximations with exact/dealiased convolution converge to one
+canonical geometric `K_A` current in
+`L^p(Omega; C^(-1/2-kappa))` for every finite `p` and `kappa>0`; the K-level
+local contraction vanishes.
+
+**Proven in:** `A6-CLASSII-K-COMPOSITE-DEFINITION`, proof note v1.0,
+Fourier-Wick/paracontrolled derivation, hash-pinned manifest, primary 29/29,
+non-importing independent 16/16, and integrated 64/64 verifier.
+
+**Reuse scope:** Gives the full-component derivative branch a canonical
+current before its quadratic energy is renormalised. The non-exact one-form
+curvature explains why second-level data are necessary. Sharp cube, sharp
+ball, and smooth-even regulators share the limit; a component-split
+asymmetric control has an anomaly and is outside scope. The result does not
+define `J*K`, `|K|^2`, or a Gibbs measure.
+
+**Tier:** T5 PINNED-CLOSURE@FIXED-FLOOR-CANONICAL-SPECTRAL-K-LIFT. The three
+primary variance-tail slopes are `-2.98928`, `-3.01229`, and `-3.01392`, in
+agreement with the analytic `N^-3` law; the independent slopes are
+`-3.06772`, `-3.06468`, and `-3.04209`. These decimals are diagnostics, not
+the convergence proof.
+
+**Publication target:** A concise stochastic-current lemma for smooth
+non-exact one-forms of three-dimensional `q^-4` Gaussian fields, with explicit
+scheme class and asymmetric anomaly boundary.
 
 <a id="r-049"></a>
 ### R-049 -- full derivative Class-II Gaussian ultraviolet power counting

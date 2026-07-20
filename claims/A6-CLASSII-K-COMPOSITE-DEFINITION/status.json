@@ -1,0 +1,54 @@
+{
+  "id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+  "title": "Fixed-floor canonical spectral definition of the Class-II K current",
+  "sector": "A",
+  "statement": "For the hash-pinned A1 full-production q^-4 Gaussian field on the fixed three-torus, fixed eps_rho>0, embedded Pauli generators, exact spectral convolution, and any common real-even uniformly bounded scalar Fourier approximation converging pointwise to one with compact support or a uniform Schwartz tail, the smooth currents K_A,Lambda=omega_A(X_Lambda) partial_i X_Lambda converge to one regulator-independent canonical geometric/Stratonovich distribution K_A in L^p(Omega; C^(-1/2-kappa)) for every finite p and kappa>0. The K-level contraction vanishes in this class. Separately, the literal -delta_cube*N*W_eps subtraction with fixed lower-order coefficients is not cutoff-uniformly coercive, while two rigorously defined local bare proxies concentrate on the pure-third-component zero set with distinct scaling laws.",
+  "scope": "CLOSED@FIXED-FLOOR-CANONICAL-SPECTRAL-K-LIFT on L=16 for the A1 production covariance, three complex components in the six-real convention, fixed rho_regularizer=1e-12, common real-even scalar spectral regulators, and exact/dealiased nonlinear products. The counterterm no-go concerns only the literal leading-W subtraction with pinned lower-order coefficients. Bare concentration is proved only for two local proxies, not the spatial Gibbs field.",
+  "tier": "T5",
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "CONDITIONAL"
+  ],
+  "dependencies": [
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+    "A6-CLASSII-UV-POWER-COUNTING"
+  ],
+  "soft_dependencies": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "hypotheses": [],
+  "open_gates": [
+    "A6-CLASSII-COUNTERTERM-CLOSURE",
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+  ],
+  "falsifier": "Failure of the resonant Fourier-Wick bound or admissible-regulator dominated-convergence argument; a nonzero same-point value-derivative contraction for a common real-even regulator; non-Cauchy sharp-cube/ball/smooth-even area tails; an incorrect Pauli curvature, W bound, zero set, N^(1/4)/N^(3/2) no-go scaling, or local-proxy law; source-hash drift; or any failed primary, independent, or integrated assertion falsifies the pinned closure.",
+  "reproduction": {
+    "command": "python codes/foundations/a6_classii_k_composite_verify.py",
+    "expected": "PASS: primary (29/29); PASS: independent (16/16); ASSERTS: 64/64; A6-CLASSII-K-COMPOSITE-INTEGRATED-PASS; exit 0.",
+    "status": "AVAILABLE"
+  },
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-07-20)",
+  "legacy_evidence": [
+    "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+    "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.tex.txt",
+    "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.pdf (7 pages; FORM-CHECK PASS; 0 overfull; visual QA PASS)",
+    "codes/foundations/a6_classii_k_composite.py",
+    "codes/foundations/a6_classii_k_composite_independent.py",
+    "codes/foundations/a6_classii_k_composite_verify.py",
+    "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-primary-k-composite/result.json (29/29 PASS)",
+    "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-independent-k-composite/result.json (16/16 PASS)",
+    "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-integrated-k-composite/result.json (64/64 PASS)"
+  ],
+  "t7_candidate": false,
+  "no_overclaim": "This claim does not define J_A*K_A or |K_A|^2, close the Class-II counterterm family, prove uniform interacting stability or tightness, prove full-field bare concentration, construct a three-component Gibbs measure, remove rho_regularizer, cover arbitrary asymmetric regulators, take infinite volume, prove a phase transition or BCC state, or justify T6/T7.",
+  "next_action": "Seek a stable renormalisation prescription with running relevant coefficients and explicit renormalisation conditions; in parallel, treat full-field bare concentration as a separate partition-function/tightness problem rather than importing either local proxy.",
+  "last_review": "2026-07-20",
+  "closure_depth": "C1",
+  "proof_maturity": "S1",
+  "notes": "T5 PINNED-CLOSURE@FIXED-FLOOR-CANONICAL-SPECTRAL-K-LIFT. The Fourier-Wick/paracontrolled proof closes K_A itself in the declared common-even class; the component-split asymmetric negative control shows why the class restriction is load-bearing. Literal W subtraction is refuted as a uniform-coercivity route by an exact homogeneous -Theta(N^(3/2)) trial. The two local concentration limits are exact but are explicitly not the full spatial Gibbs law."
+}

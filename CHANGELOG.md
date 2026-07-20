@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close the fixed-floor Class-II K current and split counterterm from bare concentration] - 2026-07-20
+
+
+
 ## [Bound A6 counterterm conclusion against bare concentration] - 2026-07-20
 
 

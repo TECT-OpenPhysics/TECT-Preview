@@ -5,7 +5,7 @@
 
 Generated: 2026-07-20
 
-**41 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 4 · T5: 6 · T6: 15 · T7: 3 · T7-candidates: 3 · refuted: 1
+**42 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 4 · T5: 7 · T6: 15 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -27,7 +27,8 @@ reproduction commands, and history live on the claim cards.
 | [A3-UV-SUPERRENORMALISABILITY](claims/A3-UV-SUPERRENORMALISABILITY/claim.md) | UV super-renormalisability of the scalar Brazovskii functional | T6 | ACTIVE | ANALYTIC, EXECUTED | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — |
 | [A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE](claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/claim.md) | Finite-volume scalar spectral constructive Gibbs measure | T6 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
 | [A5-SECTOR-A-SYNTHESIS](claims/A5-SECTOR-A-SYNTHESIS/claim.md) | Sector A branch-aware synthesis and termination package | T6 | ACTIVE | EXACT, EXECUTED, CONDITIONAL | A5-H1-CANONICAL-KERNEL-MANIFEST, A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — |
-| [A6-CLASSII-UV-POWER-COUNTING](claims/A6-CLASSII-UV-POWER-COUNTING/claim.md) | Full derivative Class-II Gaussian UV power counting and leading contraction | T4 | ACTIVE | ANALYTIC, EXACT, EXECUTED | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-K-COMPOSITE-DEFINITION |
+| [A6-CLASSII-K-COMPOSITE-DEFINITION](claims/A6-CLASSII-K-COMPOSITE-DEFINITION/claim.md) | Fixed-floor canonical spectral definition of the Class-II K current | T5 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION |
+| [A6-CLASSII-UV-POWER-COUNTING](claims/A6-CLASSII-UV-POWER-COUNTING/claim.md) | Full derivative Class-II Gaussian UV power counting and leading contraction | T4 | ACTIVE | ANALYTIC, EXACT, EXECUTED | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION |
 
 ## Sector B — Vacuum / Reading Selection
 

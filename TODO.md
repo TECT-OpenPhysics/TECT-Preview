@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 39
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 40
 
 ## Next up
 
@@ -16,6 +16,10 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 39
 - **T-030** Arbitrary-Q DR-2 (frontier): remove the admissibility cap from Lemma 1's backing; currently T6-conditional on Bourgain-Demeter decoupling. NOT load-bearing for the C_full main theorem (Lemma 2 caps T'<=10 in-class; main-line-synthesis Sec.4b).  _(claim: B5-BEYOND-LAYER-BOUND)_
   - OPEN FRONTIER (arbitrary-Q DR-2). D2-A 2026-06-12: DR2-SHARE gate formally rescoped here as NON-LOAD-BEARING for the published C_full head (Lemma 2 caps T'<=10 in-class). Content: BD-conditional T6 (separated Q); PSM conjecture T2; elementary route open.
   - _updated 2026-06-12_
+- **T-044** A6: construct running relevant counterterms and close renormalised J*K and |K|^2 stability  _(owner: Codex; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-COUNTERTERM-CLOSURE)_
+  - _updated 2026-07-20_
+- **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
+  - _updated 2026-07-20_
 
 ## Done (recent)
 
@@ -124,4 +128,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 39
   - _updated 2026-07-19_
 - **T-042** A6: full Class-II UV power counting and renormalisation decision  _(owner: Codex; claim: A6-CLASSII-UV-POWER-COUNTING; gate: A6-CLASSII-COUNTERTERM-CLOSURE)_
   - Derive the production Gaussian cutoff asymptotics, independently verify J/K current growth, and register the necessary leading counterterm without claiming a constructive measure.
+  - _updated 2026-07-20_
+- **T-043** A6: close the fixed-floor canonical K composite and split counterterm versus bare concentration  _(owner: Codex; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-K-COMPOSITE-DEFINITION)_
   - _updated 2026-07-20_

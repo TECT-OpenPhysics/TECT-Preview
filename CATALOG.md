@@ -6,7 +6,7 @@
 
 Generated: 2026-07-20
 
-**2144 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**2157 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -231,10 +231,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719/claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/status.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `1a1747ccb219` |
 | `claims/A5-SECTOR-A-SYNTHESIS/claim.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `bc365e4230d1` |
 | `claims/A5-SECTOR-A-SYNTHESIS/status.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `14e5073590aa` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/LINEAGE.md` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `116cdcd04f5f` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/claim.md` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `2c138ab98867` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `c65e7296efa7` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/status.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `bfffc38c638b` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/LINEAGE.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `08dbf684c172` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/claim.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `05cffb3fd575` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `c4167326168f` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/status.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `976b6a886ec6` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/claim.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `4745053c8893` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `2fb1bbc997a3` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/status.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `2dd8ecf4ae2a` |
 | `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `0370f4e3b76f` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/MANIFEST.json` | B1-RH-ENUM | — | — | — | ACTIVE | `d93bbfaa83cb` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/README.md` | B1-RH-ENUM | — | — | — | ACTIVE | `abf305f81e64` |
@@ -661,6 +665,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-260720-v1.1.tex.txt` | A5-SECTOR-A-SYNTHESIS | 2026-07-19 | 2026-07-20 | v1.1 | ACTIVE | `b9a4494b4db8` |
 | `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.pdf` | A5-SECTOR-A-SYNTHESIS | 2026-07-19 | 2026-07-19 | v1.0 | ACTIVE | `bcbfcda3f151` |
 | `claims/A5-SECTOR-A-SYNTHESIS/notes/a5-t6-conditional-composition-referee-package-260719-v1.0.tex.txt` | A5-SECTOR-A-SYNTHESIS | 2026-07-19 | 2026-07-19 | v1.0 | ACTIVE | `58d2f5ab1ed5` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.pdf` | A6-CLASSII-K-COMPOSITE-DEFINITION | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `1cb6c678c961` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.tex.txt` | A6-CLASSII-K-COMPOSITE-DEFINITION | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `38f3ea846185` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/notes/a6-classii-uv-power-counting-260720-v1.0.pdf` | A6-CLASSII-UV-POWER-COUNTING | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `a5e7a862a2b4` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/notes/a6-classii-uv-power-counting-260720-v1.0.tex.txt` | A6-CLASSII-UV-POWER-COUNTING | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `f7f3ca4dbefd` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/estimator-upgrade-closure-consolidation-260607-v1.0.pdf` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `225172dd190b` |
@@ -1765,9 +1771,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-independent/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `74fafc5c35ce` |
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-integrated/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `11addf12638b` |
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-primary/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `3f064a7c29d7` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-independent-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `9224d2e36fb6` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-integrated-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `4e157db9113d` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-primary-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `cc11d5766c95` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-independent-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `ed64c250c8bd` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-integrated-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `524dd3e72270` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-primary-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `ca29f2f5879f` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-independent-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `22e32ffc70e9` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-integrated-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `acefc13f268b` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-primary-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `345308ad8f1d` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-032-window-certification/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `3e2cec863392` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-033-ext-adversarial-map/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `0feb8b491ed5` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-034-DS-nonlattice-extension/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `ef5b32161378` |
@@ -1956,7 +1965,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a5_t6_conditional_independent.py` | — | 2026-07-19 | 2026-07-20 | v1.1.0 | ACTIVE | `64a2663e3015` |
 | `codes/foundations/a5_t6_conditional_primary.py` | — | 2026-07-19 | 2026-07-20 | v1.1.0 | ACTIVE | `4094697f0f3a` |
 | `codes/foundations/a5_t6_conditional_verify.py` | — | 2026-07-19 | 2026-07-20 | v1.1.0 | ACTIVE | `3e2026b6c23d` |
-| `codes/foundations/a6_classii_uv_power_counting.py` | — | 2026-07-20 | 2026-07-20 | v1.0.1 | ACTIVE | `e9619dd5978a` |
+| `codes/foundations/a6_classii_k_composite.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `31337f69e194` |
+| `codes/foundations/a6_classii_k_composite_independent.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `8b82b5abb2c3` |
+| `codes/foundations/a6_classii_k_composite_verify.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `a43719778fc3` |
+| `codes/foundations/a6_classii_uv_power_counting.py` | — | 2026-07-20 | 2026-07-20 | v1.0.2 | ACTIVE | `2537c71312d2` |
 | `codes/foundations/a6_classii_uv_power_counting_independent.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `72dcb78ba26d` |
 | `codes/foundations/a6_classii_uv_power_counting_verify.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `0b594d732607` |
 | `codes/foundations/actual_n001_pde_backend.py` | — | — | — | — | ACTIVE | `8fe66e0df51b` |
@@ -2119,18 +2131,19 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A3-UV-SUPERRENORMALISABILITY/INDEX.md` | A3-UV-SUPERRENORMALISABILITY | — | — | — | ACTIVE | `29f58267f507` |
 | `claims/A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/INDEX.md` | A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE | — | — | — | ACTIVE | `1148397f2b6a` |
 | `claims/A5-SECTOR-A-SYNTHESIS/INDEX.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `e3078a598ceb` |
-| `claims/A6-CLASSII-UV-POWER-COUNTING/INDEX.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `a5e489d540ae` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/INDEX.md` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `37a5f08378dd` |
+| `claims/A6-CLASSII-UV-POWER-COUNTING/INDEX.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `c2b239a0f1e9` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `fadc0b632f94` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `57bada09941b` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `0e4c6443911b` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `8196267195c0` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `a284de26b4a6` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `406de6b39476` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `1b5aecbd685c` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `13b58e5412fd` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `5a3fd4b611e8` |
 
 ## Governance policies
 
@@ -2158,16 +2171,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `b0af6d18755e` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `f1ca732ae16c` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `eb43f81615be` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `36905c6ade1c` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `c585da15abbb` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `4f817683cc5d` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
-| `ROADMAP.md` | — | — | — | — | ACTIVE | `4b9aa22af3a5` |
+| `ROADMAP.md` | — | — | — | — | ACTIVE | `626e06235e8c` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `c5018da37a83` |
+| `TODO.md` | — | — | — | — | ACTIVE | `48e9c299b1d9` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -2177,7 +2190,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `6f951a85ef43` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `4927963b535e` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -2216,17 +2229,17 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `002e2752b4fd` |
-| `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `27002a46fb70` |
+| `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `1d374610585a` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `890061454f21` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `053b9711ad28` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `f9cfc9068296` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `299f7c3653f4` |
 

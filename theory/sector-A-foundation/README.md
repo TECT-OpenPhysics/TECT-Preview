@@ -11,5 +11,11 @@ derivative Class-II measure, BCC, physical closure, and T7.
 
 Working proof notes remain under `claims/<ID>/notes/`. This directory does not
 duplicate the A5 theorem; future sector-level prose must be derived from the
-claim cards and their current manifests. The active microscopic frontier is
-`A6-CLASSII-UV-POWER-COUNTING` and its composite/counterterm gates.
+claim cards and their current manifests. The A6 bare ultraviolet obstruction
+is recorded in `A6-CLASSII-UV-POWER-COUNTING`. Its fixed-floor canonical
+`K_A` current is closed separately at scoped T5 in
+`A6-CLASSII-K-COMPOSITE-DEFINITION`, within a common real-even scalar spectral
+regulator class. Active microscopic frontiers are counterterm closure for the
+renormalised quadratic current products and the separately registered
+full-field bare-concentration problem. Neither is supplied by the two local
+proxy limits.
