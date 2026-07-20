@@ -25,6 +25,51 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY](#audit-2026-07-19-a4-q0-zero-shell-boundary) | A4 constructive referee package v2.0 | max-shell trace notation did not isolate the zero mode at the declared q0=0 endpoint |
 | [AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT](#audit-2026-07-19-a5-dependency-pin-drift) | A5 branch-aware synthesis manifest v1.0 | A3/A4 publication work made the frozen component hashes and four-bundle count stale |
 | [AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS](#audit-2026-07-19-a5-bundle-note-pdf-completeness) | A5 scoped T5 capstone initial bundle build | original-path A4 v2.1 source was copied without its paired PDF |
+| [AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT](#audit-2026-07-20-sector-a-baseline-status-drift) | Sector-A live records after A5 publication | stale sign-off, mass-alias, gate, and roadmap wording contradicted enacted claims |
+| [NG-2026-07-20-A6-BARE-CLASSII-L1](#ng-2026-07-20-a6-bare-classii-l1) | direct A4-style bare extension to full derivative Class-II | positive linear derivative-pair contraction defeats uniform Gaussian L1 control |
+
+<a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
+### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
+
+**Failure mode:** Several current-facing records retained pre-approval or
+pre-promotion text: the A1 identity and scalar cards still requested sign-off;
+the scalar card incorrectly described the canonical solver field as `mu2=r`;
+A2 smoothing and A3 discretization gates were still OPEN despite their
+operator-confirmed PUBLISHED T6 packages; A5 retained candidate/fallback text;
+and the roadmap/sector README still described already completed work as open.
+
+**Evidence:** Direct comparison of the live `status.json` cards, current
+14/14 A1 checker, A2 61/61 package, repaired A3 124/124 package, and A5 35/35
+PUBLISHED package against their claim cards, `claims/GATES.md`, `ROADMAP.md`,
+`RESULTS-LEDGER.md`, and `theory/sector-A-foundation/README.md`.
+
+**Consequence:** Administrative/provenance repair only. No theorem, tier, or
+immutable historical bundle is withdrawn. The canonical N-001 convention is
+`mu2_shell` for the shell mass and separately reconstructed `r_zero`; alias
+`mu2=r` remains forbidden. A6 imports only the repaired current convention.
+
+<a id="ng-2026-07-20-a6-bare-classii-l1"></a>
+### NG-2026-07-20-A6-BARE-CLASSII-L1 -- bare full-Class-II constructive route
+
+**Failure mode:** The A4 scalar bounded-density/dominated-convergence proof
+cannot be transferred unchanged to the unrenormalised full derivative
+Class-II energy. Under the canonical six-real Gaussian convention and sharp
+cube cutoff, the point covariance converges but the derivative covariance has
+a positive linear slope. Exact conditional contraction gives
+`E F_ClassII,N / N -> kappa_II>0`.
+
+**Evidence:** `A6-CLASSII-UV-POWER-COUNTING`; analytic cube Riemann-sum and
+conditional Wick identities; primary 19/19, non-importing independent 12/12,
+and integrated 44/44 execution. The field-dependent leading contraction is the
+nonconstant rational term `delta_cube*N*W_eps(Psi)`; a vacuum constant cannot
+cancel it.
+
+**Consequence:** The unchanged A4 proof route is eliminated, but a bare
+degenerate limit concentrated on `W_eps=0` and a renormalised measure are
+neither classified nor ruled out. The active counterterm path is
+`A6-CLASSII-K-COMPOSITE-DEFINITION` followed by
+`A6-CLASSII-COUNTERTERM-CLOSURE`, with stability and tightness reproved after
+subtraction.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

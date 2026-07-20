@@ -12,28 +12,29 @@
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-06-23)",
   "legacy_evidence": [
-    "claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.tex.txt",
-    "codes/foundations/a1_kernel_checks.py (4/4)"
+    "claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260623-v1.0.tex.txt (historical pre-approval issue)",
+    "claims/A1-SCALAR-ANALYTIC-BRANCH/notes/a1-scalar-analytic-branch-260623-260720-v1.1.tex.txt (current administrative alignment)",
+    "codes/foundations/a1_kernel_checks.py v1.7.0 (14/14 overall; two named positivity assertions PASS)"
   ],
   "t7_candidate": false,
   "reproduction": {
     "command": "python codes/foundations/a1_kernel_checks.py",
-    "expected": "4/4 PASS; K>=m_sh2>0; lambda0(L)>=m_sh2",
+    "expected": "14/14 PASS overall; analytic_branch_D_ge_mu2shell_positive and lambda0_ge_mu2shell_equality_onshell_only PASS",
     "status": "AVAILABLE"
   },
-  "last_review": "2026-06-23",
-  "notes": "A1 split (operator review): the precise kernel positivity hypothesis A2/A3 use, in the SHELL mass m_sh^2 (not mu^2/r). T6 PROVED CONDITIONAL APPROVED 2026-06-23 (operator). A2/A3 re-link here.",
+  "last_review": "2026-07-20",
+  "notes": "A1 split (operator review): the precise scalar-branch kernel positivity hypothesis in the SHELL mass m_sh^2, distinct from r_zero. T6 PROVED CONDITIONAL APPROVED 2026-06-23 (operator); no sign-off remains pending. The canonical N-001 field mu2_shell is the shell mass and kinetic_coefficients reconstructs r_zero=mu2_shell+Y*q0^4; alias mu2=r is forbidden. Administrative alignment on 2026-07-20 points to the current 14/14 checker.",
   "id": "A1-SCALAR-ANALYTIC-BRANCH",
   "title": "Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis)",
   "sector": "A",
   "statement": "Assume Y>0, Z<0, m_sh^2>0. Then K(q)=m_sh^2+Y(|q|^2-q_star^2)^2 >= m_sh^2 > 0 for all q, and on a fixed periodic cell lambda0(L)=min_k K(k) >= m_sh^2 > 0 (equality only if a lattice mode lies exactly on the shell). This is the precise positivity input of A2 (sectoriality) and A3 (IR finiteness).",
-  "scope": "scalar Brazovskii kernel; stated in the SHELL mass m_sh^2 (= old mu^2 = K(q_star)), NOT the zero-momentum r=K(0) nor the solver's mu2=r. Production-config certification is A1-PRODUCTION-KERNEL-MANIFEST (separate).",
+  "scope": "Scalar Brazovskii kernel; stated in the SHELL mass m_sh^2 (= legacy mu^2 = K(q_star)), not the zero-momentum r=K(0). In the canonical N-001 manifest, mu2_shell is the shell mass and r_zero is reconstructed separately; alias mu2=r is forbidden. This is the scalar A2/A3/A4 positivity input. Production-config and full-production certification are separate.",
   "tier": "T6",
   "evidence_grade": [
     "ANALYTIC",
     "EXECUTED"
   ],
   "falsifier": "A kernel with Y>0,Z<0,m_sh^2>0 yet inf_q K < m_sh^2, or lambda0(L) < m_sh^2.",
-  "no_overclaim": "m_sh^2>0 (shell), NOT the solver mu2=r (zero momentum); no production-config certification; positivity only (not the dynamics/renormalisation themselves -- those are A2/A3).",
-  "next_action": "Operator sign-off; A2 and A3 depend on this card (re-linked 2026-06-23)."
+  "no_overclaim": "m_sh^2>0 is the shell condition and mu2_shell is not r_zero. This card proves scalar-kernel positivity only; it does not certify a production config, full functional, dynamics, renormalisation, or constructive measure.",
+  "next_action": "Preserve as the scalar A2/A3/A4 positivity input. Any parameter-identical bridge to the full-production branch remains a separate claim."
 }

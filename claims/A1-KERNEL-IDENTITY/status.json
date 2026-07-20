@@ -12,17 +12,18 @@
   "legacy_pillar": [],
   "tier_legacy": "n/a (new card 2026-06-23)",
   "legacy_evidence": [
-    "claims/A1-KERNEL-IDENTITY/notes/a1-kernel-identity-260623-260623-v1.0.tex.txt",
-    "codes/foundations/a1_kernel_checks.py (4/4)"
+    "claims/A1-KERNEL-IDENTITY/notes/a1-kernel-identity-260623-260623-v1.0.tex.txt (historical pre-approval issue)",
+    "claims/A1-KERNEL-IDENTITY/notes/a1-kernel-identity-260623-260720-v1.1.tex.txt (current administrative alignment)",
+    "codes/foundations/a1_kernel_checks.py v1.7.0 (14/14 overall; named identity assertion PASS)"
   ],
   "t7_candidate": false,
   "reproduction": {
     "command": "python codes/foundations/a1_kernel_checks.py",
-    "expected": "4/4 PASS; identity residual ~1e-14",
+    "expected": "14/14 PASS overall; kernel_identity_complete_square PASS with residual below 1e-10",
     "status": "AVAILABLE"
   },
-  "last_review": "2026-06-23",
-  "notes": "A1 split (operator review 2026-06-23): the complete-the-square identity separating r=K(0) (zero-momentum) from m_sh^2=K(q_star) (shell). T6 PROVED APPROVED 2026-06-23 (operator). mu^2 deprecated -> mu2_shell (m_sh^2) / r_zero.",
+  "last_review": "2026-07-20",
+  "notes": "A1 split (operator review 2026-06-23): the complete-the-square identity separating r=K(0) (zero-momentum) from m_sh^2=K(q_star) (shell). T6 PROVED APPROVED 2026-06-23 (operator); no sign-off remains pending. Administrative alignment on 2026-07-20 points to the current v1.7.0 checker, which passes 14/14 overall including the named identity assertion. mu^2 is deprecated as an ambiguous new-field name -> mu2_shell (m_sh^2) / r_zero.",
   "id": "A1-KERNEL-IDENTITY",
   "title": "Kernel complete-the-square identity (zero-momentum vs shell mass)",
   "sector": "A",
@@ -35,5 +36,5 @@
   ],
   "falsifier": "A counterexample to the algebraic identity (none possible) or to r=K(0)=m_sh^2+Y q_star^4.",
   "no_overclaim": "Identity/naming only; positivity is A1-SCALAR-ANALYTIC-BRANCH; production consistency is A1-PRODUCTION-KERNEL-MANIFEST.",
-  "next_action": "Operator sign-off; A2/A3 re-link to A1-SCALAR-ANALYTIC-BRANCH."
+  "next_action": "Preserve the approved identity and naming firewall; downstream scalar positivity uses A1-SCALAR-ANALYTIC-BRANCH and production parameters use A1-PRODUCTION-KERNEL-MANIFEST."
 }

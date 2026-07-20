@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Bound A6 counterterm conclusion against bare concentration] - 2026-07-20
+
+
+
+## [Prove A6 derivative Class-II UV power counting] - 2026-07-20
+
+
+
+## [Align Sector-A A1, A5, and roadmap records] - 2026-07-20
+
+
+
 ## [Bundle coverage prefers the current claim tier] - 2026-07-20
 
 After A5 retained both immutable T5 and new T6 PUBLISHED bundles, the coverage report selected the lexicographically last historical T5 name. Version 2.0.1 now prefers an otherwise registered or main-line bundle whose stamped tier matches the current claim card. A5 now reports A5-Sector-A-Conditional-Composition-T6-260720 while preserving both bundles.

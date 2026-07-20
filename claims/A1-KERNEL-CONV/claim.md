@@ -1,6 +1,6 @@
 # A1-KERNEL-CONV — Production-kernel convention and G6 recomputation cascade
 
-**Tier**: T5 (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-06-05
+**Tier**: T5 (TSv2) · **Lifecycle**: ACTIVE · **Last review**: 2026-07-20
 
 ## Statement
 
@@ -66,6 +66,14 @@ the first TSv2 tier action on this claim.
 - 2026-06-05 — Batch record re-issued v1.2 (table-width compliance, Overfull 7->0)
   then v1.3 (standard-form banner; FORM-CHECK PASS); PDF now lives beside the
   source in `notes/`; `build/` area retired.
+- 2026-06-23 — Operator-approved A1 split separated the algebraic identity,
+  scalar positivity branch, and production manifest without changing this
+  convention-only T5 scope.
+- 2026-07-16/17 — The canonical scalar kernel manifest and the separate full
+  variational functional reached their own scoped T5 records; neither promotes
+  this convention audit into a physics theorem.
+- 2026-07-20 — P0 alignment records that the failed mock is the legacy
+  `(r,Z,Y)=(0.35,-1,0.50)` template, not the current canonical N-001 config.
 
 ## Next required action
 

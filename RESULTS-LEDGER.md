@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-049](#r-049) | Full derivative Class-II Gaussian ultraviolet power counting | T4 STRONG-EVIDENCE; exact linear sharp-cube derivative-covariance divergence, nonconstant local leading contraction, and bare Gaussian L1 obstruction; primary 19/19 + independent 12/12, integrated 44/44 PASS |
 | [R-048](#r-048) | Branch-aware Sector-A T6 conditional-composition theorem | T6 PUBLISHED CONDITIONAL; exactly seven hypotheses, six pinned premises, immutable T5 history, branch and mass firewalls; direct and standalone 22/22 + 13/13 = 35/35 PASS |
 | [R-047](#r-047) | Branch-aware Sector-A synthesis and termination closure | T5 PUBLISHED; six dependency bundles plus exact v1.2 capstone; direct and standalone primary 16/16 + independent 16/16 PASS |
 | [R-046](#r-046) | Finite-volume scalar spectral constructive Gibbs measure | T6 CONDITIONAL-THEOREM; full Galerkin sequence converges weakly on L2, lifted densities in L1/TV, and smeared cylinder-polynomial correlations; 31/31 plus independent operator run |
@@ -68,6 +69,19 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-049"></a>
+### R-049 -- full derivative Class-II Gaussian ultraviolet power counting
+
+**Statement (one line):** For the canonical three-complex-component full-production quadratic Gaussian on the fixed three-torus with sharp cube cutoff, the value covariance converges but each one-axis derivative covariance obeys $D_N/N\to\delta_{\rm cube}I_3$, where $\delta_{\rm cube}=I_{\rm cube}/(6\pi^2YL)>0$; exact conditional Wick and Pauli/Fierz identities then force the bare positive Class-II mean energy to grow linearly with a nonconstant local leading contraction $\delta_{\rm cube}N W_\varepsilon(\Psi)$.
+
+**Proven in:** `A6-CLASSII-UV-POWER-COUNTING`, proof note v1.0, hash-pinned manifest, primary analytic/numerical audit, non-importing independent audit, and the integrated one-command verifier `a6_classii_uv_power_counting_verify.py`.
+
+**Reuse scope:** Ultraviolet diagnosis and counterterm design for the future full three-component derivative Class-II constructive branch.  It fixes the six-real/complex covariance normalisation, the sharp-cube coefficient, the exact field-dependent leading contraction, and why a vacuum-energy constant cannot cancel that contraction.  It does not prove that a counterterm is necessary for every possible weak limit, classify bare concentration, define the rough $K_A$ composite, or construct a renormalised measure.
+
+**Tier:** T4 STRONG-EVIDENCE@BARE-GAUSSIAN-UV.  The analytic coefficient is $\delta_{\rm cube}=0.01619898645075695$ for $L=16,Y=1$.  Primary 19/19, non-importing independent 12/12, and integrated 44/44 audits pass.  The displayed full-production energy-density slope $0.000542394795319287$ per cutoff is a high-cutoff diagnostic, not an interval theorem or physical prediction.  Independent operator reproduction is pending.
+
+**Publication target:** A future successor claim may attempt a fixed-floor symmetry-preserving rational counterterm and a regulator-independent $K_A$ composite.  No T5/T6/PUBLISHED bundle is due from this power-counting result alone.
+
 <a id="r-048"></a>
 ### R-048 -- branch-aware Sector-A T6 conditional-composition theorem
 
@@ -92,7 +106,7 @@ policy in `governance/development-history.md`.
 
 **Tier:** T5 CLOSED@BRANCH-AWARE-SECTOR-A-SYNTHESIS and publication-complete. Jusang Lee independently ran and approved the original 32/32 package, then explicitly authorized the remaining approvals in batch after the exact v1.2 candidate and initial PDF validation existed. Schema 1.2 attests all six PUBLISHED dependency bundles, including corrected A4 v2.1. Direct and bundle-root runs each pass 16/16 + 16/16 = 32/32. Initial packaging omitted the paired A4 PDF at its original runtime path; the pre-commit note-PDF check caught it and the bundle was rebuilt. All final 155 hashed files match, content digest `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5` recomputes exactly, and all 190 current notes have fresh PDFs. The theorem scope remains unchanged.
 
-**Publication target:** Achieved for the scoped T5 Sector-A synthesis/capstone. A future T6 result requires a separately stated conditional-composition theorem and must retain every branch and non-implication boundary.
+**Publication target:** Achieved for the scoped T5 Sector-A synthesis/capstone. The separate conditional-composition target was subsequently achieved as R-048; R-047 remains immutable T5 tier history.
 
 <a id="r-046"></a>
 ### R-046 -- finite-volume scalar spectral constructive Gibbs measure

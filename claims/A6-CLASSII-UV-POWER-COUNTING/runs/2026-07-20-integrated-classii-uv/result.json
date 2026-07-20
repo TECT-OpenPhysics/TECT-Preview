@@ -1,0 +1,142 @@
+{
+  "schema": "tect/a6-classii-uv-integrated-result/1.0",
+  "claim_id": "A6-CLASSII-UV-POWER-COUNTING",
+  "script_version": "1.0.0",
+  "verdict": "A6-CLASSII-UV-POWER-COUNTING-INTEGRATED-PASS",
+  "subprocesses": {
+    "primary": {
+      "returncode": 0,
+      "stdout": "19/19 PASS\nA6-CLASSII-UV-PRIMARY-PASS\ndelta_cube: 0.0161989864508\nClass-II energy-density slope: 0.000542394795319 per cutoff N\nEvidence: C:\\Dev\\TECT\\claims\\A6-CLASSII-UV-POWER-COUNTING\\runs\\2026-07-20-primary-classii-uv\\result.json\n",
+      "stderr": ""
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "12/12 PASS\nA6-CLASSII-UV-INDEPENDENT-PASS\nindependent delta_cube: 0.0161989864508\nindependent Class-II energy increment: 0.000544664650759\nEvidence: C:\\Dev\\TECT\\claims\\A6-CLASSII-UV-POWER-COUNTING\\runs\\2026-07-20-independent-classii-uv\\result.json\n",
+      "stderr": ""
+    }
+  },
+  "source_reports": {
+    "manifest_sha256": "c4167326168ff281346e8e4558feadf93e9dcbb60adff77fce81907be049ea1d",
+    "primary_sha256": "e9619dd5978aa01d5d70a2dc494f105c4dd34491e127a520c87acbadd9f929ee",
+    "independent_sha256": "72dcb78ba26d38d53e47471971ebdec82f7c0c276915c266134f62e972be5f1c",
+    "verifier_sha256": "0b594d732607274f163099b080374d41be11c93a8e7a3e9720859b1659bbe28c",
+    "primary_result_sha256": "cc11d5766c955dbbbe30a8af4cdb35a52032b08a95399c69607b8326786979f9",
+    "independent_result_sha256": "9224d2e36fb6439720831a4341b2eab0e13af6d1b4d56e114ea477b85a313354"
+  },
+  "assertions": [
+    {
+      "name": "primary_subprocess_passes",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "independent_subprocess_passes",
+      "status": "PASS",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "primary_verdict_passes",
+      "status": "PASS",
+      "actual": "A6-CLASSII-UV-PRIMARY-PASS",
+      "expected": "A6-CLASSII-UV-PRIMARY-PASS"
+    },
+    {
+      "name": "independent_verdict_passes",
+      "status": "PASS",
+      "actual": "A6-CLASSII-UV-INDEPENDENT-PASS",
+      "expected": "A6-CLASSII-UV-INDEPENDENT-PASS"
+    },
+    {
+      "name": "primary_audit_hash_matches",
+      "status": "PASS",
+      "actual": "e9619dd5978aa01d5d70a2dc494f105c4dd34491e127a520c87acbadd9f929ee",
+      "expected": "e9619dd5978aa01d5d70a2dc494f105c4dd34491e127a520c87acbadd9f929ee"
+    },
+    {
+      "name": "independent_audit_hash_matches",
+      "status": "PASS",
+      "actual": "72dcb78ba26d38d53e47471971ebdec82f7c0c276915c266134f62e972be5f1c",
+      "expected": "72dcb78ba26d38d53e47471971ebdec82f7c0c276915c266134f62e972be5f1c"
+    },
+    {
+      "name": "one_command_verifier_hash_matches",
+      "status": "PASS",
+      "actual": "0b594d732607274f163099b080374d41be11c93a8e7a3e9720859b1659bbe28c",
+      "expected": "0b594d732607274f163099b080374d41be11c93a8e7a3e9720859b1659bbe28c"
+    },
+    {
+      "name": "independent_cube_coefficients_agree",
+      "status": "PASS",
+      "actual": 1.070883960086123e-15,
+      "expected": 1e-12
+    },
+    {
+      "name": "common_cutoff_ClassII_expectations_agree",
+      "status": "PASS",
+      "actual": 0.0018061397001983672,
+      "expected": 0.015
+    },
+    {
+      "name": "counterterm_function_reconstruction_agrees",
+      "status": "PASS",
+      "actual": 5.551115123125783e-17,
+      "expected": 1e-14
+    },
+    {
+      "name": "both_routes_find_positive_linear_growth",
+      "status": "PASS",
+      "actual": {
+        "primary": 0.0005423947953192876,
+        "independent": 0.0005446646507590171
+      },
+      "expected": "both positive"
+    },
+    {
+      "name": "complex_covariance_factor_two_is_explicit",
+      "status": "PASS",
+      "actual": "E[Psi_n Psi_n^dagger]=2 A(k)^-1; the factor 2 is load-bearing",
+      "expected": "explicit factor 2"
+    },
+    {
+      "name": "bare_route_negative_result_is_scope_limited",
+      "status": "PASS",
+      "actual": [
+        "finite counterterm sufficiency",
+        "renormalised Class-II measure nonexistence",
+        "constructive Gibbs measure",
+        "partition-function or tightness bounds",
+        "regulator-independent K_A composite definition",
+        "rho or Class-II mass regulariser removal",
+        "infinite volume or phase transition",
+        "BCC existence, stability, or selection",
+        "T5, T6, or T7 promotion without operator review"
+      ],
+      "expected": "nonexistence not claimed"
+    }
+  ],
+  "assertion_summary": {
+    "integrated_passed": 13,
+    "integrated_total": 13,
+    "primary_total": 19,
+    "independent_total": 12,
+    "aggregate_total": 44
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "not_closed_here": [
+    "finite counterterm sufficiency",
+    "renormalised Class-II measure nonexistence",
+    "constructive Gibbs measure",
+    "partition-function or tightness bounds",
+    "regulator-independent K_A composite definition",
+    "rho or Class-II mass regulariser removal",
+    "infinite volume or phase transition",
+    "BCC existence, stability, or selection",
+    "T5, T6, or T7 promotion without operator review"
+  ]
+}

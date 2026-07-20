@@ -169,8 +169,9 @@ This separation is part of the theorem, not a documentation afterthought.
    false.  A local slice identity does not remove internal fields, derivative
    Class-II terms, or their regularisers.
 5. **"Component T6 labels automatically make the synthesis T6."** UPHELD as
-   false.  A5 is a new meta-claim whose present result is an executed scope
-   and interface audit, not a new conditional theorem.
+   false.  Component labels were insufficient.  A5 became a separate T6
+   conditional-composition theorem only through its exact seven-hypothesis
+   contract, dual 35/35 audit, operator confirmation, and PUBLISHED bundle.
 6. **"Existing support bundles eliminate the need for A5 review."**
    DISMISSED.  They verify components, while A5 adds the load-bearing branch
    map and non-implication firewall that no component states alone.
@@ -214,13 +215,13 @@ This separation is part of the theorem, not a documentation afterthought.
 - The A5 audits pass `16/16 + 16/16 = 32/32`.
 - The T6 dual audit passes `22/22 + 13/13 = 35/35` and independently binds
   the exact operator confirmation to the candidate commit and hashes.
-- The A5 PUBLISHED bundle has 155 hashed files; all match, and content digest
+- The immutable A5 T5 capstone bundle has 155 hashed files; all match, and content digest
   `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`
   recomputes exactly.
 - The mass separation is approximately `0.255000000009475`, so it cannot be
   hidden by the upstream `1e-9` kernel tolerance.
 
-## Confirmation and tier rationale
+## Historical T5 confirmation and tier rationale
 
 Jusang Lee independently ran the integrated 32/32 CLI and explicitly approved
 the v1.0 referee package on 2026-07-19.  This closes
@@ -260,7 +261,9 @@ content digest
 
 ## Next research action
 
-Open a separate claim below T6 for the full three-component derivative
-Class-II constructive measure.  Promotion requires derivative-current power
-counting, counterterm classification, uniform stability, tightness, and
-regulator removal; no part is inferred from this composition theorem.
+Continue through `A6-CLASSII-UV-POWER-COUNTING`, the separate below-T6 claim
+for the full three-component derivative Class-II programme.  Its first result
+identifies the bare linear UV contraction; promotion still requires a
+regulator-independent `K_A` composite, counterterm closure, uniform stability,
+tightness, and any separately stated regulariser removal.  No part is inferred
+from this composition theorem.

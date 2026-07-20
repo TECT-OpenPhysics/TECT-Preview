@@ -1,0 +1,111 @@
+{
+  "schema": "tect/a6-classii-uv-power-counting/1.0",
+  "claim_id": "A6-CLASSII-UV-POWER-COUNTING",
+  "frozen_on": "2026-07-20",
+  "status": "T4 STRONG-EVIDENCE analytic UV obstruction; operator reproduction and counterterm closure remain open",
+  "authority": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "canonical_backend": {
+      "path": "codes/foundations/n001_variational_backend.py",
+      "sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "version": "1.0.1"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a6_classii_uv_power_counting.py",
+      "sha256": "e9619dd5978aa01d5d70a2dc494f105c4dd34491e127a520c87acbadd9f929ee",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a6_classii_uv_power_counting_independent.py",
+      "sha256": "72dcb78ba26d38d53e47471971ebdec82f7c0c276915c266134f62e972be5f1c",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a6_classii_uv_power_counting_verify.py",
+      "sha256": "0b594d732607274f163099b080374d41be11c93a8e7a3e9720859b1659bbe28c",
+      "version": "1.0.0"
+    }
+  },
+  "scope": "Canonical A1 full-production quadratic Gaussian on the fixed L=16 three-torus, three complex components, eta_shell=0, sharp max-norm spectral cutoff, fixed positive rho and Class-II mass regularisers, and the embedded Pauli T1/T2/T3 derivative currents. The result concerns bare Gaussian-reference ultraviolet power counting only.",
+  "convention": {
+    "fourier_modes": "k_n=(2*pi/L)n with max_j |n_j|<=N and Psi(x)=V^-1/2 sum_n Psi_n exp(i k_n.x)",
+    "quadratic_symbol": "A(k)=[r+Z|k|^2+Y|k|^4] I_3 + diag(family_masses) + k_lock(I-P0)",
+    "real_gaussian": "Re Psi_n and Im Psi_n are six real Gaussian coordinates with covariance A(k)^-1, as induced by exp[-(1/2) Psi_n^dagger A(k) Psi_n]",
+    "complex_mode_covariance": "E[Psi_n Psi_n^dagger]=2 A(k)^-1; the factor 2 is load-bearing",
+    "point_covariance": "C_N=(2/V) sum_n A(k_n)^-1",
+    "one_axis_derivative_covariance": "D_N=(2/(3V)) sum_n |k_n|^2 A(k_n)^-1 by cube symmetry"
+  },
+  "analytic_targets": {
+    "cube_constant": "I_cube=int_[-1,1]^3 |x|^-2 dx=6 int_[-1,1]^2 (1+y^2+z^2)^-1 dy dz",
+    "derivative_limit": "D_N/N -> delta_cube I_3, delta_cube=I_cube/(6*pi^2*Y*L)>0",
+    "point_limit": "C_N -> C_infinity as a finite positive matrix because A(k)^-1=O(|k|^-4)",
+    "conditional_currents": "with q_A=m_A/(rho+eps_rho), v_A=(T_A-q_A I)Psi: E sum_i J_A,i^2=6 E[(T_A Psi)^dagger D_N(T_A Psi)], E sum_i J_A,i K_A,i=6 E Re[(T_A Psi)^dagger D_N v_A], E sum_i K_A,i^2=6 E[v_A^dagger D_N v_A]",
+    "leading_contraction": "E[e_ClassII,N | Psi]=delta_cube*N*W_eps(Psi)+o(N), where W_eps=3 sum_A[a|T_A Psi|^2+2b Re((T_A Psi)^dagger v_A)+c|v_A|^2]",
+    "fierz_form": "for s=|Psi_1|^2+|Psi_2|^2 and rho=|Psi|^2, W_eps=9(a+2b+c)s-6b s^2/(rho+eps_rho)-3c s^2(rho+2eps_rho)/(rho+eps_rho)^2",
+    "positivity": "the pinned 2x2 coefficient matrix [[a,b],[b,c]] is positive definite, so W_eps is nonnegative and nonzero on an open set; its Gaussian expectation is strictly positive",
+    "bare_L1_obstruction": "E[e_ClassII,N]/N converges to a strictly positive coefficient, so the bare positive Class-II energy is not uniformly L1-bounded under the canonical Gaussian reference",
+    "leading_local_contraction": "the first divergent derivative-pair contraction is the nonconstant local rational term delta_cube*N*W_eps(Psi); a vacuum constant cannot cancel it, while subtraction is a counterterm candidate for a nondegenerate full-component limit rather than a proved necessity for every possible weak limit"
+  },
+  "branch_firewall": {
+    "full_production_shell_mass_squared": "derive r-Z^2/(4Y) from the A1 production manifest",
+    "scalar_shell_mass_squared": 0.005,
+    "rule": "The scalar anchor is checked only for non-identity; it is not used in the full-production covariance."
+  },
+  "audit": {
+    "cutoffs": [8, 16, 32, 64, 128],
+    "reference_cutoff": 256,
+    "gauss_hermite_order": 8,
+    "gauss_hermite_cross_order": 10,
+    "cube_integral_orders": [64, 128],
+    "cube_integral_tolerance": 1e-12,
+    "asymptotic_relative_tolerance": 0.12,
+    "energy_slope_relative_tolerance": 0.18,
+    "quadrature_relative_tolerance": 0.02,
+    "trace_identity_tolerance": 1e-12,
+    "mass_separation_minimum": 0.2,
+    "point_covariance_finite_ceiling": 100.0
+  },
+  "independent_audit": {
+    "cutoffs": [8, 16, 32, 64],
+    "cube_integral_orders": [96, 192],
+    "cube_integral_tolerance": 1e-12,
+    "monte_carlo_samples": 250000,
+    "seed": 20260720,
+    "asymptotic_relative_tolerance": 0.12,
+    "monte_carlo_trace_tolerance": 0.012,
+    "minimum_signal_to_standard_error": 50.0,
+    "point_covariance_increment_tolerance": 0.05
+  },
+  "integrated_audit": {
+    "common_cutoff": 64,
+    "cube_coefficient_relative_tolerance": 1e-12,
+    "common_energy_relative_tolerance": 0.015,
+    "counterterm_relative_tolerance": 1e-14
+  },
+  "gates": {
+    "A6-CLASSII-COUNTERTERM-CLOSURE": "Prove that a symmetry-compatible finite renormalisation prescription defines the full Class-II energy and yields uniform stability/tightness.",
+    "A6-CLASSII-K-COMPOSITE-DEFINITION": "Construct a regulator-independent meaning of K_A=(rho+eps_rho) grad[m_A/(rho+eps_rho)] at the q^-4 Gaussian regularity boundary and prove scheme independence."
+  },
+  "honesty_boundary": {
+    "closed": [
+      "exact Gaussian covariance and conditional-current identities",
+      "linear max-mode UV exponent and universal cube coefficient",
+      "strict positivity of the bare Class-II expected-energy slope",
+      "necessity and field dependence of the leading derivative-pair contraction"
+    ],
+    "excluded": [
+      "finite counterterm sufficiency",
+      "renormalised Class-II measure nonexistence",
+      "constructive Gibbs measure",
+      "partition-function or tightness bounds",
+      "regulator-independent K_A composite definition",
+      "rho or Class-II mass regulariser removal",
+      "infinite volume or phase transition",
+      "BCC existence, stability, or selection",
+      "T5, T6, or T7 promotion without operator review"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "dependencies": [
+    "A1-KERNEL-IDENTITY",
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION"
+  ],
+  "hypotheses": [],
+  "soft_dependencies": [
+    "A3-UV-SUPERRENORMALISABILITY",
+    "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "open_gates": [
+    "A6-CLASSII-COUNTERTERM-CLOSURE",
+    "A6-CLASSII-K-COMPOSITE-DEFINITION"
+  ],
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-07-20)",
+  "legacy_evidence": [
+    "claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/notes/a6-classii-uv-power-counting-260720-v1.0.tex.txt",
+    "codes/foundations/a6_classii_uv_power_counting.py",
+    "codes/foundations/a6_classii_uv_power_counting_independent.py",
+    "codes/foundations/a6_classii_uv_power_counting_verify.py",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-primary-classii-uv/result.json (19/19 PASS)",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-independent-classii-uv/result.json (12/12 PASS)",
+    "claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-integrated-classii-uv/result.json (44/44 PASS)"
+  ],
+  "t7_candidate": false,
+  "reproduction": {
+    "command": "python codes/foundations/a6_classii_uv_power_counting_verify.py",
+    "expected": "PASS: primary (19/19); PASS: independent (12/12); ASSERTS: 44/44; A6-CLASSII-UV-POWER-COUNTING-INTEGRATED-PASS; exit 0.",
+    "status": "AVAILABLE"
+  },
+  "last_review": "2026-07-20",
+  "notes": "T4 STRONG-EVIDENCE@BARE-GAUSSIAN-UV. Analytic covariance/Wick identities prove positive linear max-mode growth and identify the nonconstant leading derivative-pair contraction. Primary 19/19, non-importing independent 12/12, and integrated 44/44 audits pass. delta_cube=0.01619898645075695 is analytic for L=16,Y=1. The full-production decimal energy-density slope 0.000542394795319287 is a high-cutoff non-interval diagnostic, not a physical prediction. The result blocks direct reuse of A4's bare bounded-density argument but does not prove nonexistence of a bare degenerate or renormalised measure.",
+  "id": "A6-CLASSII-UV-POWER-COUNTING",
+  "title": "Full derivative Class-II Gaussian UV power counting and leading contraction",
+  "sector": "A",
+  "statement": "For the canonical full-production quadratic Gaussian on the fixed L=16 three-torus, with three complex components, eta_shell=0, fixed positive rho and Class-II mass regularisers, embedded Pauli generators, the six-real Gaussian convention, and sharp max-norm spectral cutoff N, the point covariance converges while each one-axis derivative covariance satisfies D_N/N -> delta_cube I with delta_cube=I_cube/(6 pi^2 Y L)>0. The exact conditional Wick identities imply that the positive Class-II expected energy grows linearly, E F_II,N / N -> kappa_II>0, and its field-dependent leading contraction is the nonconstant local rational term delta_cube N W_eps(Psi).",
+  "scope": "T4 bare-Gaussian UV result for the hash-pinned A1 full-production quadratic symbol, fixed torus, fixed positive regularisers, eta_shell=0, sharp cube spectral projector, and derivative J/K Class-II energy. Analytic exponent/coefficient formula plus dual executable calculations; the displayed full-production decimal energy slope is diagnostic rather than an interval enclosure.",
+  "tier": "T4",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED"
+  ],
+  "falsifier": "An incorrect six-real/complex covariance factor, Pauli normalisation, Fourier or per-volume factor; failure of D_N/N to approach the positive cube coefficient; a nonpositive pinned contraction; an out-of-tolerance primary/independent discrepancy; or source-hash drift falsifies the registered result.",
+  "no_overclaim": "This result does not define the continuum K_A composite, prove finite counterterm closure, prove that subtraction is necessary for every weak limit, classify a possible bare cutoff-concentration limit, construct or rule out a renormalised Class-II Gibbs measure, prove uniform stability/tightness, remove regularisers, take infinite volume, establish a phase transition or BCC state, or justify T5/T6/T7.",
+  "next_action": "Obtain independent operator reproduction, then close A6-CLASSII-K-COMPOSITE-DEFINITION and test whether the symmetry-preserving rational W_eps subtraction gives a finite fixed-floor counterterm family with a uniform lower bound."
+}

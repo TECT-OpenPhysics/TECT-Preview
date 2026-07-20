@@ -4,6 +4,39 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-20.
 
+## A6 full derivative Class-II ultraviolet gates
+
+### **A6-CLASSII-COUNTERTERM-CLOSURE**
+
+**Statement:** Starting from the exact bare Gaussian contraction recorded by
+`A6-CLASSII-UV-POWER-COUNTING`, define a symmetry-preserving renormalised
+Class-II energy at fixed positive regularisers.  Determine whether the leading
+local rational counterterm candidate closes under all superficially divergent
+subgraphs, is scheme controlled, and leaves a uniform lower bound, partition
+control, and tightness sufficient for a nontrivial finite-volume continuum
+measure.
+
+**Status:** OPEN (2026-07-20).  The bare Gaussian-reference growth is
+classified: the derivative covariance has a positive linear max-mode slope and
+the first local counterterm candidate is the nonconstant orientation-dependent term
+`delta_cube*N*W_eps(Psi)`, not a vacuum constant.  Primary 19/19,
+non-importing independent 12/12, and integrated 44/44 audits pass.  Finite
+counterterm necessity for every weak limit, sufficiency, stability after
+subtraction, bare concentration, and measure construction are not established.
+
+### **A6-CLASSII-K-COMPOSITE-DEFINITION**
+
+**Statement:** Construct a regulator-independent continuum meaning of
+`K_A=(rho+eps_rho) grad[m_A/(rho+eps_rho)]` for the three-component `q^-4`
+Gaussian field at fixed positive `eps_rho`, and prove convergence and scheme
+independence of the chosen spectral composite/lift before its square is used in
+an energy or Gibbs weight.
+
+**Status:** OPEN (2026-07-20).  The cutoff calculation is well defined, but
+typical regularity is below one half and the product is at the marginal
+`C^alpha * C^(alpha-1)` boundary.  The current A6 result does not infer a
+continuum composite from cutoff moments alone.
+
 ## A5 T6 conditional-composition hypothesis and review gate
 
 ### **A5-H1-CANONICAL-KERNEL-MANIFEST**
@@ -17,7 +50,7 @@ identity; it does not identify the scalar shell mass with the full-production
 shell mass or promote the scalar field to the full three-component state space.
 
 **Status:** ACTIVE (2026-07-19).  The immutable A5 T5 capstone pins the source
-record and its PUBLISHED support bundle.  The T6 candidate independently
+record and its PUBLISHED support bundle.  The PUBLISHED T6 verifier independently
 rehashes both before applying the scalar-continuum conclusions.
 
 ### **A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION**
@@ -66,9 +99,10 @@ Lee independently ran the integrated `16/16 + 16/16 = 32/32` verifier and
 explicitly approved the v1.0 referee package.  The T5 synthesis tier is enacted.
 The dependency-first packaging prerequisite is now satisfied by the
 operator-confirmed corrected A4 v2.1 package and its PUBLISHED T6 support bundle
-`A4-Scalar-Constructive-T6-260719`.  The A5 review gate remains closed and the
-capstone may now be refreshed to that exact support digest before packaging;
-this does not enlarge the T5 theorem scope.
+`A4-Scalar-Constructive-T6-260719`.  The A5 review gate remains closed.  The
+final 155-file PUBLISHED T5 capstone has digest
+`5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5` and is
+retained as immutable tier history; this does not enlarge its theorem scope.
 
 ## A4 scalar constructive-measure gate
 
@@ -126,47 +160,29 @@ conditions; (5) CPU/GPU and complex64/complex128 cross-checks with unavailable
 hardware reported honestly; and (6) a manufactured solution achieving its
 declared convergence order. Raw N32/N64/N128 solver output is not sufficient.
 
-**Status:** OPEN. Stage 1 is CLOSED@T3-COMPUTABLE-SCAFFOLD on 2026-07-17:
-the spatial manifest distinguishes collocation from exact Galerkin residuals,
-and the full-production manufactured-field self-convergence audit passes 13/13
-on N=8,12,16 against same-backend N=24,32 oversampled references. Residual errors decrease from 5.3301e-6 to
-6.6679e-12; reference uncertainty is at most 2.3351e-14; the discrete
-energy-gradient identity is within 1.0211e-8. An independent continuum
-residual implementation remains open. Stage 2 is CLOSED@T3-EXECUTED: the
-forced manufactured RK4 audit gives orders 4.016 and 4.008, while unforced
-cross-grid trajectory errors decrease 1.3063e-8 -> 1.0239e-12 -> 1.3118e-14
-and energy is nonincreasing on N=8,12,16,20,24. Hessian/Ritz,
-hardware/precision, integrated proof, and independent reproduction remain open.
+**Status:** CLOSED@T6-CONDITIONAL-THEOREM (2026-07-17; adversarial repair
+enacted the same day).  The final v2.2 theorem derives explicit positive-time
+`H6` and collocation-residual majorants on the declared `H2` balls, a separate
+uniform exact-Galerkin restart-energy/`H2` envelope, common-ball evolution
+constants, directed rounding, and an `N^-4` exact-Galerkin trajectory estimate
+on `[tau,T]`.  The repair was required because v2.1 had reused the continuum
+solution ball for the Galerkin trajectory without proving it; that defect is
+recorded as `AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND`.
 
-**Stage 3/4 update 2026-07-17:** Hessian/Ritz is CLOSED@T3-EXECUTED (13/13):
-the homogeneous invariant block has gap 0.1368657 and Ritz-residual/gap
-1.0061e-8; nonuniform fixed-subspace Ritz errors converge
-1.5199e-3 -> 4.7888e-7 -> 2.7136e-8. The hardware/precision matrix is now
-CLOSED@T3-EXECUTED from the attached torch 2.13.0+cu130 run on one NVIDIA
-GeForce RTX 5070 Laptop GPU: CPU and CUDA complex128/complex64 all PASS;
-CUDA complex128 energy/residual errors are 5.7489e-16/1.7181e-15 and CUDA
-complex64 errors are 8.5245e-8/3.7843e-7. The result is limited to the
-recorded device and fields. Independent continuum residual, integrated proof,
-and independent reproduction remain open.
-
-**Stage 5 update 2026-07-17:** the independent analytic manufactured-field
-continuum-quadrature proxy is CLOSED@T3-EXECUTED (11/11). Exact Fourier
-prolongation, independent portable-gradient/canonical agreement, and M24/M32
-reference stability are all verified; canonical collocation-to-proxy errors are
-5.3301e-6 -> 4.2482e-10 -> 6.6668e-12. This does not close the uniform analytic
-error bound for arbitrary P2 solution balls, integrated proof, or independent
-reproduction.
-
-**Stage 6 update 2026-07-17:** a qualitative positive-time solution-ball
-passage is CLOSED@T3-PARTIAL (13/13). For every P2 initial H2 ball and each
-fixed 0<tau<=t<=T interval, P2 smoothing supplies a common H6 envelope;
-the fourth-order residual and the periodic aliasing lemma yield
-`||P_N R(u)-R_N^C(P_Nu)||_L2 <= C(R,tau,T) N^-2`. The integrated verifier
-checks the immutable spatial, finite-time, Hessian/Ritz, independent-proxy,
-solution-ball, and recorded-CUDA evidence at 66/66 PASS. The gate stays OPEN:
-the constant C(R,tau,T) is not numerically enclosed, no dealiased finite-time
-evolution estimate is yet attached, and no Sector-B solver output is thereby
-certified as a controlled continuum approximation.
+The corrected primary audit passes 21/21, the non-importing full-chain audit
+passes 24/24, and the one-command verifier passes 124/124 including the spatial,
+manufactured-time, Hessian/Ritz, independent continuum proxy, solution-ball,
+energy-ball, quantitative-majorant, and recorded CUDA/precision rows.  The
+replacement PUBLISHED bundle
+`A3-Full-Production-Discretization-T6-Repair-260717` has 42 files, nine entry
+scripts, source pin `d4c7b3149fe56293ab2c88464c931d64c2e614e3`, and digest
+`6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41`.
+The gate is closed only in the positive-time, restarted exact-Galerkin scope
+conditional on `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`.  The constants are
+finite but not practically sharp; historical N32/N64/N128 solver trajectories,
+fixed finite oversampling exactness for the rational Class-II term, and
+Sector-B practical error bars remain excluded rather than open parts of this
+gate.
 
 ## A2 full-production PDE audit gates
 
@@ -178,15 +194,16 @@ lower-order map is locally Lipschitz from $H^2(\mathbb T^3;\mathbb R^6)$ to
 $L^2$. The positive fourth-order coefficient must remain the sole principal
 order-four part.
 
-**Status:** CLOSED@T4-PROOF-CANDIDATE (2026-07-17). The v1.1 note expands the
+**Status:** CLOSED@T6-SUPPORT (2026-07-17). The v1.1 note expands the
 canonical Class-II density as
 `G_II=1/2 sum_j (partial_j u)^T B(u) partial_j u` in six real coordinates and
 derives its Euler--Lagrange map as `B(u) grad^2 u` plus
 `DB(u)[grad u,grad u]`. On bounded `H2` balls, Sobolev embedding gives the
 local `H2 -> L2` Lipschitz estimate. The independent NumPy audit
 `a2_full_production_nonlinear_mapping_audit.py` passes 14/14, including the
-complex-to-real density and local-jet formula checks. This is not a T6 PDE
-closure; the smoothing gate remains open.
+complex-to-real density and local-jet formula checks.  Together with the
+coercivity, energy-continuation, and smoothing audits it is part of the
+operator-confirmed 61/61 PUBLISHED A2 T6 theorem package.
 
 ### **A2-FULL-ENERGY-CONTINUATION-AUDIT**
 
@@ -195,14 +212,14 @@ including the Class-II chain rule, the $L^2$ energy identity, continuity of the
 functional on $H^2$, and the continuation alternative driven by its coercive
 $H^2$ bound.
 
-**Status:** CLOSED@T4-PROOF-CANDIDATE (2026-07-17). The v1.2 note proves the
+**Status:** CLOSED@T6-SUPPORT (2026-07-17). The v1.2 note proves the
 projected finite-dimensional Fourier-Galerkin identity, obtains uniform H2,
 time-derivative, and H4 bounds, uses Aubin--Lions for strong H2 convergence,
 and supplies the real-gradient Class-II chain-rule lemma yielding the exact
 L2 energy identity and coercive global continuation. The independent NumPy
 audit reconstructs the energy without importing the Torch backend and passes
-12/12 on 4, 6, and 8 grids. This is not a T6 PDE closure: smoothing and
-continuous-dependence remain open.
+12/12 on 4, 6, and 8 grids.  It is part of the operator-confirmed 61/61
+PUBLISHED A2 T6 theorem package.
 
 ### **A2-FULL-SMOOTHING-AUDIT**
 
@@ -210,8 +227,15 @@ continuous-dependence remain open.
 and the positive-time bootstrap from the fourth-order analytic semigroup to
 $C^\infty$ for the full Class-II Euler--Lagrange map.
 
-**Status:** OPEN. The semigroup bootstrap route is assembled but has not yet
-received an independent regularity audit.
+**Status:** CLOSED@T6-SUPPORT (2026-07-17).  The continuous-dependence and
+positive-time smoothing audit passes 15/15 and closes the endpoint `H4`
+Duhamel cancellation and higher Sobolev bootstrap.  With the 20/20 coercivity,
+14/14 nonlinear-map, and 12/12 energy-continuation audits, the integrated
+verifier passes 61/61.  Jusang Lee independently reproduced the package and
+approved T6 conditional on `A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL`; the
+PUBLISHED bundle `A2-Full-Production-WellPosedness-T6-260717` passes all five
+entry scripts.  Removed regularisers, nonzero shell bias, infinite volume, and
+the historical backend are separate scopes, not residuals of this gate.
 
 ## Umbrella gates (GAPs)
 
@@ -680,9 +704,9 @@ received an independent regularity audit.
 <a id="a1-shell-positivity"></a>
 ### **A1-SHELL-POSITIVITY**
 
-**Statement:** $Y>0$, $Z<0$ and the SHELL mass $m_{\rm sh}^2:=K(q_\star)=r-Z^2/(4Y)>0$ (A1-KERNEL-IDENTITY). Then $K(q)=m_{\rm sh}^2+Y(|q|^2-q_\star^2)^2\ge m_{\rm sh}^2>0$. This is the precise positivity hypothesis used by A2 (sectoriality / $H^2$ equivalence) and A3 (IR finiteness / $q^{-4}$ decay), stated in the shell mass -- NOT the zero-momentum $r=K(0)$ nor the solver template's \texttt{mu2}$=r$.
+**Statement:** $Y>0$, $Z<0$ and the SHELL mass $m_{\rm sh}^2:=K(q_\star)=r-Z^2/(4Y)>0$ (A1-KERNEL-IDENTITY). Then $K(q)=m_{\rm sh}^2+Y(|q|^2-q_\star^2)^2\ge m_{\rm sh}^2>0$. This is the precise positivity hypothesis used by the scalar A2/A3/A4 branch, stated in the shell mass and not the zero-momentum $r=K(0)$.  In the canonical N-001 manifest, \texttt{mu2\_shell} is this shell mass and the original kinetic-coefficient routine reconstructs \texttt{r\_zero}; the alias \texttt{mu2=r} is forbidden.  Only the failed legacy template carried that conflation.  The separate full-production A2/A3 branch has its own functional and mass anchor.
 
-**Discharge path:** carried as the named hypothesis of A1-SCALAR-ANALYTIC-BRANCH (T6 conditional) and inherited by A2/A3 via that dependency; SATISFIED@anchor ($m_{\rm sh}^2=5\times10^{-3}>0$, $Y=1$, $Z=-0.925$).
+**Discharge path:** carried as the named hypothesis of A1-SCALAR-ANALYTIC-BRANCH (T6 conditional) and inherited by the scalar A2/A3/A4 arm; SATISFIED@anchor ($m_{\rm sh}^2=5\times10^{-3}>0$, $Y=1$, $Z=-0.925$).  The current v1.7.0 checker passes both named positivity assertions within its 14/14 overall audit.
 
 
 

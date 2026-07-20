@@ -1,8 +1,9 @@
 # TECT 6-Stage Roadmap — v2
 
 **Issued**: 2026-06-05 · **Source of stage definitions**: GOVERNANCE.md
-**Current-status source**: legacy `TOE-FACT-SHEET.md` (snapshot 2026-06-05, last
-theory tag Math442) translated into seeded claim cards — see `CLAIMS.md`.
+**Current-status source**: live `claims/*/status.json`, rendered `CLAIMS.md`,
+`RESULTS-LEDGER.md`, and `TODO.md`. The legacy `TOE-FACT-SHEET.md` snapshot is
+bootstrap provenance only and is not a current-status authority.
 
 Stages are sequential in their exit conditions but parallel in day-to-day work.
 A stage is closed only when its exit condition is met at the stated tier with a
@@ -35,17 +36,30 @@ counterterms, PDE well-posedness.
 **Exit condition**: no convention ambiguity remains; the convention registry is
 the single normative source.
 
-**Status**: production-kernel convention $r_{\rm braz}=K(q_0)=\mu^2$ stabilised
-after the Math426/Math435 corrected-convention cascade; recomputation cascade
-G6 = CLOSED-PASS (claim `A1-KERNEL-CONV`, T5 pinned to the current canonical
-note set). The current Sector-A foundation record is registered as scoped
-claims: `A1-PRODUCTION-KERNEL-MANIFEST` is T5 for the canonical pure-Brazovskii
-scalar slice; `A2-PDE-WELLPOSED`, `A3-UV-SUPERRENORMALISABILITY`, and
-`A3-PERTURBATIVE-CONTINUUM-CORRELATORS` are T6 only within their scalar,
-positive-shell-mass, positive-sextic, spectral/Galerkin scopes. Remaining
-Stage-1 work is not a re-registration of those scalar results; it is the
-separate full-production variational/PDE closure for the multi-field Class-II /
-condensate backend and any genuine lattice/constructive refinements.
+**Status — Sector A refreshed 2026-07-20**: the convention and exact kernel
+identity are fixed, with `r_zero` and `mu2_shell` kept distinct. The canonical
+full-production branch is
+
+```text
+A1-PRODUCTION-FUNCTIONAL-REALISATION (scoped T5)
+  -> A2-FULL-PRODUCTION-WELLPOSED (conditional T6)
+  -> A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM (conditional T6).
+```
+
+The separate scalar-continuum branch contains the positive scalar kernel,
+order-by-order perturbative cutoff removal, and the finite-volume scalar
+constructive measure at T6. `A5-SECTOR-A-SYNTHESIS` is a PUBLISHED T6
+conditional-composition theorem under exactly seven named hypotheses; it
+preserves the scalar/full functional fork and the `0.005` versus
+`0.260000000009475` shell-mass fork.
+
+The remaining Stage-1 frontier is not another full variational/PDE closure.
+`A6-CLASSII-UV-POWER-COUNTING` now records at T4 that the bare full derivative
+Class-II Gaussian energy has a positive linear cutoff contraction. The open
+work is a regulator-independent `K_A` composite and symmetry-preserving
+counterterm/stability/tightness closure. Parameter identity, regulariser
+removal, infinite volume, phase transition, BCC, and T7 remain outside the
+current Sector-A theorem.
 
 ## Stage 2 — Prove the vacuum (Sector B) ← **critical path**
 
@@ -126,18 +140,21 @@ D — Gauge/matter topology.
 
 ---
 
-## Immediate priority queue (operator-confirmed, 2026-06-05, Math442)
+## Current priority view (refreshed 2026-07-20)
 
-1. **Step-5b** — beyond-layer class-wide bound (pattern-generic Gershgorin
-   attack designated). Gateway for whole-Reading-H T6.
-2. **G3'-b(iii)** — AddF ratio extraction (higher-shell / anisotropic harmonic
-   dominance).
-3. **Estimator → controlled-theorem upgrade** (GAP-2 machinery).
-4. **Open-neighbourhood robustness** in $\mu^2$ around the operating point.
-5. **Housekeeping**: legacy errata queue (Math401 v1.1; Math431-HEX/AddE/426 ξ
-   errata; KZ ξ⁻³ lineage; Math434-AddA retrofit clause — operator approval
-   pending).
-6. **Master-ledger consolidation** — this repository's Stage-0 (in progress).
+The live task source is `TODO.md`; historical 2026-06-05 priorities are
+preserved in git/changelog rather than treated as current gates.
+
+1. **Repository control task T-006** — finish code-discipline automation.
+2. **A6-CLASSII-K-COMPOSITE-DEFINITION** — construct and compare a
+   regulator-independent continuum lift of the marginal `K_A` product.
+3. **A6-CLASSII-COUNTERTERM-CLOSURE** — test the rational `W_eps` counterterm
+   candidate, lower bound, partition control, and tightness at fixed positive
+   floors; separately classify possible bare concentration on `W_eps=0`.
+4. **A6 constructive successor** — open only if the preceding two gates close;
+   begin below T6 and keep regulariser removal separate.
+5. **Backlog T-030** — arbitrary-Q DR-2 remains a non-load-bearing Sector-B
+   frontier as recorded in `TODO.md`.
 
 ## Standing rule
 

@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 38
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 39
 
 ## Next up
 
@@ -122,3 +122,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 1 · Done (recent) 38
 - **T-041** A5: prepare branch-aware T6 conditional-composition theorem package  _(owner: Jusang Lee; claim: A5-SECTOR-A-SYNTHESIS; gate: A5-T6-CONDITIONAL-COMPOSITION-OPERATOR-CONFIRMATION)_
   - COMPLETE 2026-07-20: Jusang Lee confirmed the exact A5 T6 v1.0 source/PDF and authorized PUBLISHED bundle creation. Manifest schema 1.1 binds candidate commit fb776bff6b161178a6328570af3ef9529b44a2df and reviewed hashes. The v1.1 enactment issue passes FORM-CHECK, zero overfull, and five-page visual QA. Direct and bundle-root verification pass primary 22/22 plus independent 13/13 equals 35/35. PUBLISHED bundle A5-Sector-A-Conditional-Composition-T6-260720 contains 307 hashed files and digest 7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526. Immutable T5 capstone remains unchanged. Full derivative Class-II constructive measure, parameter identity, regulariser removal, t0/historical rates, Route B, infinite volume/phase transition, BCC/Sector-B, physical closure, and T7 remain excluded.
   - _updated 2026-07-19_
+- **T-042** A6: full Class-II UV power counting and renormalisation decision  _(owner: Codex; claim: A6-CLASSII-UV-POWER-COUNTING; gate: A6-CLASSII-COUNTERTERM-CLOSURE)_
+  - Derive the production Gaussian cutoff asymptotics, independently verify J/K current growth, and register the necessary leading counterterm without claiming a constructive measure.
+  - _updated 2026-07-20_

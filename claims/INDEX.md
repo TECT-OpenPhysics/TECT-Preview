@@ -22,6 +22,7 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `A3-UV-SUPERRENORMALISABILITY` | T6 | A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | (all notes) (3) | [INDEX](A3-UV-SUPERRENORMALISABILITY/INDEX.md) |
 | `A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE` | T6 | A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | (all notes) (3) | [INDEX](A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE/INDEX.md) |
 | `A5-SECTOR-A-SYNTHESIS` | T6 | A5-H1-CANONICAL-KERNEL-MANIFEST, A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | (all notes) (2) | [INDEX](A5-SECTOR-A-SYNTHESIS/INDEX.md) |
+| `A6-CLASSII-UV-POWER-COUNTING` | T4 | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-K-COMPOSITE-DEFINITION | (all notes) (1) | [INDEX](A6-CLASSII-UV-POWER-COUNTING/INDEX.md) |
 
 ## Sector B — Vacuum / Reading Selection
 
@@ -76,4 +77,4 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `F2-BARYOGENESIS` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 | `F3-INFLATION-CMB` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 
-<!-- generated 2026-07-19T15:31:24Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-20T07:05:29Z by build_index.py v1.0.1 -->

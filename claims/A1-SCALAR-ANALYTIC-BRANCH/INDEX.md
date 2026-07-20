@@ -9,10 +9,10 @@
 
 **Falsifier.** A kernel with Y>0,Z<0,m_sh^2>0 yet inf_q K < m_sh^2, or lambda0(L) < m_sh^2.
 
-## (all notes)/  ·  1 proof unit  ·  tier span —
+## (all notes)/  ·  1 proof unit  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a1-scalar-analytic-branch` | v1.0 | — | Y>0, Z<0, m_sh2>0 => K(q)=m_sh2+Y(q^2-q*^2)^2 >= m_sh2 > 0 for all q; lambda0(L)=min_k K(k) >= m_sh2 > 0, equality only if a mode is exactly on shell. | PROVED CONDITIONAL (analytic) + EXECUTED (a1_… | Operator sign-off; A2/A3 depend on THIS card. |
+| `a1-scalar-analytic-branch` | v1.1 | T6 | Y>0, Z<0, m_sh^2>0 imply K>=m_sh^2 and lambda0(L)>=m_sh^2. | ANALYTIC, EXECUTED, CONDITIONAL. | Preserve as the scalar A2/A3/A4 positivity input. |
 
-<!-- generated 2026-06-23T11:50:19Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-20T07:05:29Z by build_index.py v1.0.1 -->

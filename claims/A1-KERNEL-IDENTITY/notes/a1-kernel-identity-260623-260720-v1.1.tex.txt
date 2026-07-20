@@ -1,0 +1,54 @@
+% =============================================================================
+% Title: Kernel identity -- current-status alignment
+% Claim: A1-KERNEL-IDENTITY
+% Version: v1.1 -- first issued 2026-06-23; this version issued 2026-07-20
+% Status: T6 PROVED, operator-approved 2026-06-23
+% =============================================================================
+
+\section*{Purpose and scope}
+The algebraic theorem and scope are unchanged from v1.0.  This issue records
+the already enacted operator approval and removes the obsolete sign-off action.
+For $Y>0$ and $Z<0$,
+\[
+ r+Z|q|^2+Y|q|^4
+ =m_{\rm sh}^2+Y(|q|^2-q_\star^2)^2,
+\]
+where $q_\star^2=-Z/(2Y)$,
+$m_{\rm sh}^2=r-Z^2/(4Y)$, and
+$r=m_{\rm sh}^2+Yq_\star^4$.  Thus the zero-momentum and shell masses are
+distinct.
+
+The current verifier v1.7.0 passes 14/14 overall.  Its named
+kernel_identity_complete_square assertion has worst residual
+$5.68\times10^{-14}$.  The remaining thirteen assertions belong to the shared
+A1 production-manifest and scalar-positivity audit; they do not enlarge this
+identity claim.
+
+\section*{Devil's-advocate}
+\begin{enumerate}
+\item Confusing $r=K(0)$ with $m_{\rm sh}^2=K(q_\star)$ would erase the
+nonzero shell shift.  The displayed identity and the verifier test the two
+values separately.
+\item The identity alone does not imply positivity.  Positivity remains a
+separate conditional statement in A1-SCALAR-ANALYTIC-BRANCH.
+\item Updating an approval field could accidentally enlarge the theorem.
+This issue changes administrative state and naming only; the algebraic scope
+and T6 tier are unchanged.
+\end{enumerate}
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A1-KERNEL-IDENTITY
+Precise statement:       The Brazovskii kernel complete-square identity
+                         separates r=K(0) from m_sh^2=K(q_star).
+Scope:                   Algebraic identity; Y>0, Z<0; naming only.
+Dependencies:            A1-KERNEL-CONV.
+Evidence grade:          ANALYTIC, EXECUTED.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         14/14 PASS overall; named identity assertion PASS.
+Falsification gate:      A counterexample to the displayed identity.
+Tier before / after:     T6 / T6; administrative alignment only.
+No-overclaim statement:  No positivity, production-functional, PDE, measure,
+                         vacuum, or physical-selection conclusion.
+Next required action:    Preserve the identity and naming firewall.
+\end{verbatim}

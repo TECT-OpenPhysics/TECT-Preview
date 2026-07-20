@@ -1,0 +1,243 @@
+% =============================================================================
+% Title: Full derivative Class-II Gaussian ultraviolet power counting
+% Claim: A6-CLASSII-UV-POWER-COUNTING
+% Version: v1.0 -- first issued 2026-07-20; this version issued 2026-07-20
+% Status: T4 STRONG-EVIDENCE@BARE-GAUSSIAN-UV
+% =============================================================================
+
+\section{Purpose and scope}
+The scalar constructive theorem does not contain the derivative Class-II
+energy.  This note asks the prior question needed before attempting such a
+construction: under the Gaussian measure fixed by the quadratic part of the
+canonical full-production functional, what is the ultraviolet growth of the
+bare currents and what field-dependent local contraction is generated?
+
+The domain is the fixed three-torus of side $L=16$.  The field has three
+complex components and is projected to
+$\max_j|n_j|\leq N$, with $k_n=2\pi n/L$.  The positive density and Class-II
+mass regularisers remain fixed, and $\eta_{\rm shell}=0$.  This is not a
+construction of an interacting measure.
+
+\section{Quadratic Gaussian convention}
+The quadratic symbol is
+\[
+ A(k)=\bigl(r+Z|k|^2+Y|k|^4\bigr)I_3
+ +M_{\rm family}+k_{\rm lock}(I-P_0).
+\]
+The real and imaginary parts of every complex mode are six real Gaussian
+coordinates with covariance $A(k)^{-1}$.  Therefore the load-bearing complex
+covariance is
+\[
+ \mathbb E[\Psi_k\Psi_k^\dagger]=2A(k)^{-1}.
+\]
+With the volume-normalised Fourier convention, define
+\[
+ C_N=\frac2V\sum_{\|n\|_\infty\leq N}A(k_n)^{-1},\qquad
+ D_N=\frac2{3V}\sum_{\|n\|_\infty\leq N}|k_n|^2A(k_n)^{-1}.
+\]
+Cube symmetry makes $D_N$ the derivative covariance in each spatial
+direction.  The odd value--derivative covariance vanishes exactly, so value
+and derivative are independent.
+
+\section{Derivative-covariance theorem}
+For large momentum,
+\[
+ A(k)^{-1}=\frac1{Y|k|^4}I_3+O(|k|^{-6}).
+\]
+The remainder contributes a convergent derivative-covariance sum.  The leading
+term is a cube Riemann sum:
+\[
+ \frac{D_N}{N}\longrightarrow
+\delta_{\rm cube}I_3,\qquad
+ \delta_{\rm cube}=\frac{I_{\rm cube}}{6\pi^2YL},
+\]
+where
+\[
+ I_{\rm cube}=\int_{[-1,1]^3}\frac{dx}{|x|^2}.
+\]
+The singularity is integrable in three dimensions.  Using
+$\nabla\cdot(x/|x|^2)=|x|^{-2}$ gives the nonsingular surface representation
+\[
+ I_{\rm cube}=6\int_{[-1,1]^2}\frac{dy\,dz}{1+y^2+z^2}
+ =15.348248444887457\ldots .
+\]
+For $L=16,Y=1$,
+\[
+ \delta_{\rm cube}=0.01619898645075695.
+\]
+In contrast, $C_N$ converges because the summand is $O(|n|^{-4})$.
+
+\section{Exact conditional current identities}
+Let $T_A$ be the three embedded Pauli generators and put
+\[
+ \rho=\Psi^\dagger\Psi,\quad
+ m_A=\Psi^\dagger T_A\Psi,\quad
+ q_A=\frac{m_A}{\rho+\varepsilon_\rho},
+\]
+\[
+ J_A=\nabla m_A,\qquad
+ K_A=J_A-q_A\nabla\rho.
+\]
+If $w_i=\partial_i\Psi$ and
+$v_A=(T_A-q_AI)\Psi$, circular Gaussian contraction conditional on $\Psi$
+gives
+\[
+ \mathbb E\sum_iJ_{A,i}^2
+ =6\,\mathbb E[(T_A\Psi)^\dagger D_N(T_A\Psi)],
+\]
+\[
+ \mathbb E\sum_iJ_{A,i}K_{A,i}
+ =6\,\mathbb E\operatorname{Re}[(T_A\Psi)^\dagger D_Nv_A],
+\]
+\[
+ \mathbb E\sum_iK_{A,i}^2
+ =6\,\mathbb E[v_A^\dagger D_Nv_A].
+\]
+These formulas include the spatial factor three and the real-part contraction
+factor two.  The primary calculation checks the first identity against its
+closed trace formula at every cutoff.
+
+\section{Fierz reduction and leading counterterm}
+Set $s=|\Psi_1|^2+|\Psi_2|^2$.  The Pauli/Fierz identities give
+\[
+ \sum_Am_A^2=s^2,\qquad
+ \sum_A|T_A\Psi|^2=3s,
+\]
+\[
+ \sum_A\operatorname{Re}(T_A\Psi)^\dagger v_A
+ =3s-\frac{s^2}{\rho+\varepsilon_\rho},
+\]
+\[
+ \sum_A|v_A|^2
+ =3s-\frac{s^2(\rho+2\varepsilon_\rho)}
+                 {(\rho+\varepsilon_\rho)^2}.
+\]
+For
+\[
+ Q_{II}=\begin{pmatrix}a&b\\b&c\end{pmatrix},
+\]
+the leading conditional Class-II contraction is
+\[
+ \mathbb E[e_{{\rm II},N}\mid\Psi]
+ =\delta_{\rm cube}N W_\varepsilon(\Psi)+o(N),
+\]
+\[
+ W_\varepsilon
+ =9(a+2b+c)s
+ -\frac{6bs^2}{\rho+\varepsilon_\rho}
+ -\frac{3cs^2(\rho+2\varepsilon_\rho)}
+              {(\rho+\varepsilon_\rho)^2}.
+\]
+At the production point,
+\[
+ a=0.004499999999998875,\quad
+ b=0.0018749999999995311,\quad
+ c=0.002343749999999414,
+\]
+and the eigenvalues of $Q_{II}$ are
+$0.0012590115009260615$ and $0.005584738499072227$.  Hence the contraction is
+nonnegative and nonzero on an open set, so its Gaussian expectation is
+strictly positive.  It follows that
+\[
+ \mathbb E F_{{\rm II},N}/N\longrightarrow\kappa_{II}>0.
+\]
+The bare positive energy is therefore not uniformly bounded in Gaussian
+$L^1$.  A vacuum-energy constant cannot cancel the field-dependent local
+contraction $\delta_{\rm cube}NW_\varepsilon(\Psi)$.  Subtracting this term is
+the first counterterm candidate for a nondegenerate full-component limit at
+fixed low-order parameters.  It is not proved necessary for every possible
+weak limit: the bare laws could instead concentrate on the zero set of
+$W_\varepsilon$.  The rational orientation terms do not belong to the current
+family-mass plus $\rho^2,\rho^3$ parameter family.
+
+\section{Numerical audit and interpretation}
+The primary audit uses FFT convolution for exact cube multiplicities,
+eigenspace covariance sums, and tensor Gauss--Hermite quadrature.  The
+non-importing audit uses direct three-dimensional enumeration, original-basis
+matrix inversion, a different one-dimensional cube integral, and fixed-seed
+Monte Carlo.  They pass $19/19$ and $12/12$; the integrated audit passes
+$44/44$.
+
+At cutoff $N=128$, the eigenvalues of $D_N/N$ are between
+$0.0163072859843$ and $0.0163866362110$.  The high-cutoff full-production
+diagnostic is
+\[
+ \mathbb E F_{{\rm II},N}/(VN)\simeq
+ 5.42394795319\times10^{-4}.
+\]
+The independent dyadic increment is
+$5.44664650759\times10^{-4}$.  This decimal coefficient is not an interval
+evaluation of the $C_\infty$ expectation; only its positivity, formula, and
+linear exponent are claimed analytically.
+
+\section{Renormalisation and composite gates}
+For graphs with $V_D$ two-derivative vertices, $V_0$ local vertices, and $I$
+internal lines, the superficial degree is
+\[
+ \omega=3L+2V_D-4I=3-I-V_D-3V_0.
+\]
+This makes the one-vertex differentiated contraction the leading primitive
+candidate and leaves open the possibility that one prescribed rational
+counterterm closes the fixed-floor theory.  It does not prove that closure.
+
+There is also a definition problem before squaring $K_A$.  Typical fields have
+regularity below one half, and
+\[
+ K_A=(\rho+\varepsilon_\rho)
+ \nabla\left(m_A/(\rho+\varepsilon_\rho)\right)
+\]
+is a marginal product of the form $C^\alpha C^{\alpha-1}$ with
+$\alpha<1/2$.  Cutoff convergence and scheme independence require a separate
+composite lift.  The two open gates are therefore
+`A6-CLASSII-COUNTERTERM-CLOSURE` and
+`A6-CLASSII-K-COMPOSITE-DEFINITION`.
+
+\section{Devil's-advocate}
+\begin{enumerate}
+\item A factor-two error in complex covariance would change every coefficient.
+The convention is explicit and hash-audited.
+\item A finite-cutoff slope fit cannot prove the theorem.  Here the exponent
+and cube coefficient come from the symbol expansion and Riemann-sum limit; the
+cutoff table is only a check.
+\item A positive density floor does not cure derivative variance.  It controls
+the rational denominator only.
+\item Divergent Gaussian mean energy does not prove nonexistence of a
+renormalised Gibbs measure, nor does it exclude a bare degenerate limit
+concentrated on $W_\varepsilon=0$.  No such no-go is claimed.
+\item Subtracting a constant is inadequate because $W_\varepsilon$ is
+nonconstant and contains new rational terms.
+\item The $J_A$ derivative is canonical as a distributional derivative, while
+$K_A$ remains a marginal rough product.  Their continuum statuses are not
+identified.
+\item Family/lock masses change $C_\infty$ but not the high-momentum exponent
+or universal cube factor.
+\item The derivative Class-II energy is not the legacy solver's guarded-
+quotient diagnostic; the terminology is explicitly separated.
+\end{enumerate}
+
+\section{Result footer}
+\begin{verbatim}
+Result ID:               A6-CLASSII-UV-POWER-COUNTING
+Precise statement:       The canonical bare derivative Class-II Gaussian
+                         expectation has a strictly positive linear cutoff
+                         divergence with explicit cube coefficient and a
+                         nonconstant local leading contraction.
+Scope:                   Fixed L=16 torus; full A1 quadratic symbol; three
+                         complex fields; six-real Gaussian convention; fixed
+                         positive floors; eta_shell=0; sharp cube cutoff.
+Dependencies:            A1-KERNEL-IDENTITY;
+                         A1-PRODUCTION-FUNCTIONAL-REALISATION.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a6_classii_uv_power_counting_verify.py
+Expected output:         19/19 + 12/12; integrated 44/44 PASS.
+Falsification gate:      factor/convention error, nonpositive slope, failed
+                         asymptotic or independent mismatch, or source drift.
+Tier before / after:     new / T4 STRONG-EVIDENCE@BARE-GAUSSIAN-UV.
+No-overclaim statement:  No renormalised composite/measure, counterterm
+                         necessity for every weak limit, bare-limit
+                         classification, sufficiency, regulariser removal,
+                         phase transition, BCC, or T5/T6/T7 result.
+Next required action:    Operator reproduction; define K_A and prove fixed-
+                         floor rational-counterterm stability and tightness.
+\end{verbatim}

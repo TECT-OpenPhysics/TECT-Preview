@@ -1,0 +1,456 @@
+{
+  "schema": "tect/a6-classii-uv-independent-result/1.0",
+  "claim_id": "A6-CLASSII-UV-POWER-COUNTING",
+  "script_version": "1.0.0",
+  "verdict": "A6-CLASSII-UV-INDEPENDENT-PASS",
+  "algorithmic_independence": [
+    "does not import the primary audit",
+    "direct 3D cube enumeration instead of FFT convolution",
+    "batched original-basis matrix inversion instead of eigenspace sums",
+    "one-dimensional cube-integral identity instead of two-dimensional surface quadrature",
+    "fixed-seed Monte Carlo instead of tensor Gauss-Hermite quadrature"
+  ],
+  "inputs": {
+    "cutoffs": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "sample_count": 250000,
+    "seed_rule": "20260720 + cutoff"
+  },
+  "derived": {
+    "cube_integral": 15.348248444887457,
+    "delta_cube": 0.01619898645075695,
+    "dyadic_derivative_slope_eigenvalues": [
+      0.01623011081882192,
+      0.016230114505827654,
+      0.01623012668768352
+    ],
+    "derivative_slope_relative_error": 0.0019223571191463314,
+    "classii_energy_increment": 0.0005446646507590171,
+    "counterterm_test_values": [
+      0.07706249999999198,
+      0.15818749999996928
+    ]
+  },
+  "cutoff_rows": [
+    {
+      "cutoff": 8,
+      "covariance": [
+        [
+          0.18394719478922653,
+          0.012238977095891406,
+          0.0114321407123319
+        ],
+        [
+          0.012238977095891406,
+          0.17720893581936126,
+          0.010827013424662269
+        ],
+        [
+          0.0114321407123319,
+          0.01082701342466227,
+          0.1693541614631909
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          0.1420990964023437,
+          0.003061562477045057,
+          0.002895638750276205
+        ],
+        [
+          0.003061562477045057,
+          0.14038660171119333,
+          0.002771195955199566
+        ],
+        [
+          0.002895638750276205,
+          0.002771195955199566,
+          0.13833556867380253
+        ]
+      ],
+      "derivative_slope_eigenvalues": [
+        0.017034127872363816,
+        0.017269125611679897,
+        0.018299404864373738
+      ],
+      "moments": {
+        "sample_count": 250000,
+        "seed": 20260728,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 0.30640670525805536,
+            "J2_analytic": 0.3064793520671219,
+            "J2_relative_error": 7.264680906654553e-05,
+            "JK": 0.22834369540457639,
+            "K2": 0.22788439001719785
+          },
+          {
+            "generator": 2,
+            "J2": 0.30550592092038614,
+            "J2_analytic": 0.3055800626343012,
+            "J2_relative_error": 7.414171391506574e-05,
+            "JK": 0.22797552888866673,
+            "K2": 0.22776378928252128
+          },
+          {
+            "generator": 3,
+            "J2": 0.3055724596047815,
+            "J2_analytic": 0.30564929803058216,
+            "J2_relative_error": 7.683842580064049e-05,
+            "JK": 0.22822487266195957,
+            "K2": 0.22799283704132617
+          }
+        ],
+        "classii_energy_density_expectation": 0.004149003440826882,
+        "classii_energy_density_standard_error": 5.682275835193015e-06
+      },
+      "classii_energy_over_cutoff": 0.0005186254301033603
+    },
+    {
+      "cutoff": 16,
+      "covariance": [
+        [
+          0.19658045735863686,
+          0.012240131776506303,
+          0.011433295248852896
+        ],
+        [
+          0.012240131776506303,
+          0.18984150568847313,
+          0.010828167853112806
+        ],
+        [
+          0.011433295248852896,
+          0.010828167853112807,
+          0.18198580793363633
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          0.2754422683554655,
+          0.0030699959890240196,
+          0.0029040714215410016
+        ],
+        [
+          0.0030699959890240196,
+          0.2737247141876636,
+          0.0027796279959287247
+        ],
+        [
+          0.0029040714215410016,
+          0.0027796279959287247,
+          0.2716669363584035
+        ]
+      ],
+      "derivative_slope_eigenvalues": [
+        0.016849887727794076,
+        0.016967823766268732,
+        0.01748440843728297
+      ],
+      "moments": {
+        "sample_count": 250000,
+        "seed": 20260736,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 0.6383440666044239,
+            "J2_analytic": 0.6370467526268466,
+            "J2_relative_error": 0.0012973139775772635,
+            "JK": 0.4761472035144639,
+            "K2": 0.47565932878055683
+          },
+          {
+            "generator": 2,
+            "J2": 0.6374387213758763,
+            "J2_analytic": 0.6361449008958306,
+            "J2_relative_error": 0.001293820480045671,
+            "JK": 0.475564315061351,
+            "K2": 0.4753310141680239
+          },
+          {
+            "generator": 3,
+            "J2": 0.6375072166017604,
+            "J2_analytic": 0.6362143479829969,
+            "J2_relative_error": 0.001292868618763432,
+            "JK": 0.4764803813785874,
+            "K2": 0.4762246275906833
+          }
+        ],
+        "classii_energy_density_expectation": 0.008655279866322675,
+        "classii_energy_density_standard_error": 1.1872502849401466e-05
+      },
+      "classii_energy_over_cutoff": 0.0005409549916451672
+    },
+    {
+      "cutoff": 32,
+      "covariance": [
+        [
+          0.2030340913195465,
+          0.012240171506207263,
+          0.011433334978215191
+        ],
+        [
+          0.012240171506207263,
+          0.1962951158118163,
+          0.010828207582221151
+        ],
+        [
+          0.011433334978215191,
+          0.010828207582221153,
+          0.18843938627403123
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          0.5365766436625133,
+          0.003071095014984985,
+          0.0029051704400949044
+        ],
+        [
+          0.003071095014984985,
+          0.5348584300846894,
+          0.002780727008927347
+        ],
+        [
+          0.0029051704400949044,
+          0.002780727008927347,
+          0.5327997730524363
+        ]
+      ],
+      "derivative_slope_eigenvalues": [
+        0.01658531981108701,
+        0.016644316328191536,
+        0.016902702823210165
+      ],
+      "moments": {
+        "sample_count": 250000,
+        "seed": 20260752,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 1.282493565706567,
+            "J2_analytic": 1.2839823072353003,
+            "J2_relative_error": 0.001159471996104706,
+            "JK": 0.9575022876255904,
+            "K2": 0.9570088591956294
+          },
+          {
+            "generator": 2,
+            "J2": 1.2816129624795989,
+            "J2_analytic": 1.2830801297226138,
+            "J2_relative_error": 0.0011434728112671038,
+            "JK": 0.9568545617288395,
+            "K2": 0.9566054864499867
+          },
+          {
+            "generator": 3,
+            "J2": 1.2816756227332518,
+            "J2_analytic": 1.2831496037179217,
+            "J2_relative_error": 0.0011487210691560384,
+            "JK": 0.9586189050827238,
+            "K2": 0.9583558864675075
+          }
+        ],
+        "classii_energy_density_expectation": 0.017405429494891562,
+        "classii_energy_density_standard_error": 2.3909086761136193e-05
+      },
+      "classii_energy_over_cutoff": 0.0005439196717153613
+    },
+    {
+      "cutoff": 64,
+      "covariance": [
+        [
+          0.20631505729110708,
+          0.01224017282776472,
+          0.011433336299771868
+        ],
+        [
+          0.01224017282776472,
+          0.19957608099044374,
+          0.010828208903777245
+        ],
+        [
+          0.011433336299771868,
+          0.010828208903777246,
+          0.19172035039541419
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          1.0559404932511987,
+          0.0030712372008093475,
+          0.0029053126258564207
+        ],
+        [
+          0.0030712372008093475,
+          1.0542221943619285,
+          0.0027808691946417186
+        ],
+        [
+          0.0029053126258564207,
+          0.0027808691946417186,
+          1.052163423581171
+        ]
+      ],
+      "derivative_slope_eigenvalues": [
+        0.016407715314954465,
+        0.016437215417009602,
+        0.01656641475544685
+      ],
+      "moments": {
+        "sample_count": 250000,
+        "seed": 20260784,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 2.5655979000553892,
+            "J2_analytic": 2.569905376666765,
+            "J2_relative_error": 0.0016761226504622877,
+            "JK": 1.9127890745966485,
+            "K2": 1.9122868705680274
+          },
+          {
+            "generator": 2,
+            "J2": 2.5647012208078177,
+            "J2_analytic": 2.569003157287574,
+            "J2_relative_error": 0.0016745547655528778,
+            "JK": 1.9185815053793633,
+            "K2": 1.918332460242469
+          },
+          {
+            "generator": 3,
+            "J2": 2.5647690298783474,
+            "J2_analytic": 2.5690726347405275,
+            "J2_relative_error": 0.0016751588896258371,
+            "JK": 1.9194392121203332,
+            "K2": 1.9191633847860257
+          }
+        ],
+        "classii_energy_density_expectation": 0.03483469831918011,
+        "classii_energy_density_standard_error": 4.765062625660518e-05
+      },
+      "classii_energy_over_cutoff": 0.0005442921612371892
+    }
+  ],
+  "assertions": [
+    {
+      "name": "source_manifest_hash",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "source_backend_hash",
+      "status": "PASS",
+      "actual": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "expected": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "independent_cube_integral_converges",
+      "status": "PASS",
+      "actual": 5.329070518200751e-15,
+      "expected": 1e-12
+    },
+    {
+      "name": "direct_derivative_increment_matches_linear_law",
+      "status": "PASS",
+      "actual": 0.0019223571191463314,
+      "expected": 0.12
+    },
+    {
+      "name": "independent_classii_energy_increment_is_positive",
+      "status": "PASS",
+      "actual": 0.0005446646507590171,
+      "expected": ">0"
+    },
+    {
+      "name": "monte_carlo_J_matches_exact_trace",
+      "status": "PASS",
+      "actual": 0.0016761226504622877,
+      "expected": 0.012
+    },
+    {
+      "name": "all_independent_K_moments_positive",
+      "status": "PASS",
+      "actual": "all rows",
+      "expected": ">0"
+    },
+    {
+      "name": "monte_carlo_signal_exceeds_sampling_error",
+      "status": "PASS",
+      "actual": {
+        "signal": 0.03483469831918011,
+        "standard_error": 4.765062625660518e-05
+      },
+      "expected": ">50.0 standard errors"
+    },
+    {
+      "name": "point_covariance_stabilises",
+      "status": "PASS",
+      "actual": 0.005682798234647872,
+      "expected": 0.05
+    },
+    {
+      "name": "independent_counterterm_is_field_dependent",
+      "status": "PASS",
+      "actual": [
+        0.07706249999999198,
+        0.15818749999996928
+      ],
+      "expected": "positive and nonconstant"
+    },
+    {
+      "name": "fixed_rho_floor_does_not_change_power",
+      "status": "PASS",
+      "actual": {
+        "rho_floor": 1e-12,
+        "slope": 0.01619898645075695
+      },
+      "expected": "positive linear slope at fixed floor"
+    },
+    {
+      "name": "counterterm_closure_remains_open",
+      "status": "PASS",
+      "actual": [
+        "finite counterterm sufficiency",
+        "renormalised Class-II measure nonexistence",
+        "constructive Gibbs measure",
+        "partition-function or tightness bounds",
+        "regulator-independent K_A composite definition",
+        "rho or Class-II mass regulariser removal",
+        "infinite volume or phase transition",
+        "BCC existence, stability, or selection",
+        "T5, T6, or T7 promotion without operator review"
+      ],
+      "expected": "explicitly excluded"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 12,
+    "total": 12
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "a35958a0426eb378d7d4f826dbba771c3781287c",
+    "deterministic_seeded": true
+  },
+  "not_closed_here": [
+    "finite counterterm sufficiency",
+    "renormalised Class-II measure nonexistence",
+    "constructive Gibbs measure",
+    "partition-function or tightness bounds",
+    "regulator-independent K_A composite definition",
+    "rho or Class-II mass regulariser removal",
+    "infinite volume or phase transition",
+    "BCC existence, stability, or selection",
+    "T5, T6, or T7 promotion without operator review"
+  ]
+}

@@ -37,6 +37,13 @@ the published Reading-H C_full theorem above.
 | A5-T5 | Branch-aware Sector-A synthesis and termination package | `claims/A5-SECTOR-A-SYNTHESIS` | dependency and non-implication capstone joining the full-production P1/P2/P3 chain with the separate scalar perturbative/constructive arms without identifying their mass or functional scopes | **T5 PUBLISHED** -- exact v1.2 entry operator-confirmed by explicit batch authorization after initial form validation; six support bundles attested; direct and standalone bundle runs pass 16/16 + 16/16 = 32/32; bundle `A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719` has 155 hashed files, note-PDF completeness PASS, and digest `5cf4397c38fb316ec108447404531e649e628d6fcc62d67e613d060b70b24ea5`; excludes parameter identity, full derivative Class-II construction, BCC, physical closure, T6, and T7 |
 | A5-T6 | Branch-aware Sector-A conditional-composition theorem | `claims/A5-SECTOR-A-SYNTHESIS` | conditional theorem composing the full-production variational/PDE/positive-time exact-Galerkin implication chain and the separate scalar perturbative/constructive conjunction under exactly seven named hypotheses | **T6 PUBLISHED CONDITIONAL** -- exact v1.0 candidate confirmed by Jusang Lee on 2026-07-20; v1.1 binds candidate commit and reviewed hashes; direct and standalone runs pass 22/22 + 13/13 = 35/35; bundle `A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Conditional-Composition-T6-260720` has 307 hashed files and digest `7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526`; immutable T5 history retained; excludes parameter identity, full derivative Class-II construction, BCC, physical closure, and T7 |
 
+The separate successor frontier is `A6-CLASSII-UV-POWER-COUNTING`, currently
+T4 STRONG-EVIDENCE@BARE-GAUSSIAN-UV.  It proves the exact positive linear
+sharp-cube divergence of the bare derivative Class-II Gaussian expectation
+and identifies its nonconstant local leading contraction.  It is not a new
+premise of A5, has no PUBLISHED bundle at T4, and leaves both the $K_A$
+composite definition and counterterm/measure closure open.
+
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 
 | folder | why auxiliary |

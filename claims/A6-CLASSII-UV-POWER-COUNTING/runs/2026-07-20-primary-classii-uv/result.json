@@ -1,0 +1,833 @@
+{
+  "schema": "tect/a6-classii-uv-primary-result/1.0",
+  "claim_id": "A6-CLASSII-UV-POWER-COUNTING",
+  "script_version": "1.0.1",
+  "verdict": "A6-CLASSII-UV-PRIMARY-PASS",
+  "scope": "Canonical A1 full-production quadratic Gaussian on the fixed L=16 three-torus, three complex components, eta_shell=0, sharp max-norm spectral cutoff, fixed positive rho and Class-II mass regularisers, and the embedded Pauli T1/T2/T3 derivative currents. The result concerns bare Gaussian-reference ultraviolet power counting only.",
+  "convention": {
+    "fourier_modes": "k_n=(2*pi/L)n with max_j |n_j|<=N and Psi(x)=V^-1/2 sum_n Psi_n exp(i k_n.x)",
+    "quadratic_symbol": "A(k)=[r+Z|k|^2+Y|k|^4] I_3 + diag(family_masses) + k_lock(I-P0)",
+    "real_gaussian": "Re Psi_n and Im Psi_n are six real Gaussian coordinates with covariance A(k)^-1, as induced by exp[-(1/2) Psi_n^dagger A(k) Psi_n]",
+    "complex_mode_covariance": "E[Psi_n Psi_n^dagger]=2 A(k)^-1; the factor 2 is load-bearing",
+    "point_covariance": "C_N=(2/V) sum_n A(k_n)^-1",
+    "one_axis_derivative_covariance": "D_N=(2/(3V)) sum_n |k_n|^2 A(k_n)^-1 by cube symmetry"
+  },
+  "inputs": {
+    "cutoffs": [
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "reference_cutoff": 256,
+    "gauss_hermite_order": 8,
+    "production_parameters": {
+      "Lx": 16.0,
+      "Ly": 16.0,
+      "Lz": 16.0,
+      "q0": 0.6801747616,
+      "r": 0.4740336473,
+      "mu2": 0.26,
+      "Z": -0.9252754126,
+      "Y": 1.0,
+      "lambda": -0.43,
+      "gamma": 1.62,
+      "family_masses": [
+        0.0,
+        0.03,
+        0.07
+      ],
+      "family_projector": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "z0": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "k_lock": 0.15,
+      "eta_shell": 0.0,
+      "alpha_X": 0.3,
+      "beta_X": 0.25,
+      "M_X": 2.0,
+      "cJJ": 0.2,
+      "cJK": 0.1,
+      "cKK": 0.15,
+      "eps_classII_hess": 5e-07,
+      "rho_regularizer": 1e-12,
+      "classii_mass_regularizer": 1e-12,
+      "reference_hessian_step": 3e-05,
+      "laplacian_mode": "spectral",
+      "a_bcc": 1.0,
+      "bcc_mix_epsilon": 0.0,
+      "torch_complex_dtype": "complex128",
+      "use_cuda": false,
+      "use_xpu": false
+    }
+  },
+  "derived": {
+    "full_production_shell_mass_squared": 0.260000000009475,
+    "classii_coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414
+    },
+    "classii_coefficient_matrix_eigenvalues": [
+      0.0012590115009260615,
+      0.005584738499072227
+    ],
+    "cube_integral": 15.348248444887473,
+    "delta_cube": 0.01619898645075697,
+    "reference_point_covariance": [
+      [
+        0.20880492320222654,
+        0.012240172871908192,
+        0.011433336343915908
+      ],
+      [
+        0.012240172871908194,
+        0.20206594687507587,
+        0.010828208947921587
+      ],
+      [
+        0.011433336343915917,
+        0.010828208947921587,
+        0.1942102162447311
+      ]
+    ],
+    "leading_unit_current_moments": {
+      "quadrature_order": 10,
+      "quadrature_nodes": 1000000,
+      "weight_sum": 1.0000000000000009,
+      "generators": [
+        {
+          "generator": 1,
+          "J2": 2.465225220463815,
+          "JK": 1.8370945361412427,
+          "K2": 1.8370945361401936,
+          "J2_analytic": 2.4652252204638145,
+          "J2_quadrature_relative_error": 1.8014143542086204e-16,
+          "classii_energy_density_expectation": 0.011144154160844917
+        },
+        {
+          "generator": 2,
+          "J2": 2.465225220463815,
+          "JK": 1.8428832427115347,
+          "K2": 1.8428832427104909,
+          "J2_analytic": 2.4652252204638145,
+          "J2_quadrature_relative_error": 1.8014143542086204e-16,
+          "classii_energy_density_expectation": 0.011161791626176278
+        },
+        {
+          "generator": 3,
+          "J2": 2.465225220463815,
+          "JK": 1.8479762195436873,
+          "K2": 1.847976219542727,
+          "J2_analytic": 2.4652252204638145,
+          "J2_quadrature_relative_error": 1.8014143542086204e-16,
+          "classii_energy_density_expectation": 0.011177309289961836
+        }
+      ],
+      "classii_energy_density_expectation": 0.033483255076983034
+    },
+    "predicted_classii_energy_density_slope": 0.0005423947953192876,
+    "last_cutoff_energy_slope_relative_error": 0.005048557021707278,
+    "leading_local_counterterm_candidate": "for a nondegenerate full-component limit at fixed low-order parameters, test subtraction of the derivative-pair contraction delta_cube*N*W_eps(Psi), with W_eps defined by leading_counterterm_density; an additive vacuum constant cannot cancel this field-dependent contraction",
+    "counterterm_test_values": [
+      0.07706249999999197,
+      0.15818749999996934
+    ]
+  },
+  "cutoff_rows": [
+    {
+      "cutoff": 8,
+      "covariance": [
+        [
+          0.18394719478922636,
+          0.01223897709589128,
+          0.011432140712331923
+        ],
+        [
+          0.012238977095891284,
+          0.17720893581936115,
+          0.010827013424662319
+        ],
+        [
+          0.011432140712331923,
+          0.010827013424662314,
+          0.1693541614631908
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          0.14209909640234375,
+          0.0030615624770450713,
+          0.002895638750276243
+        ],
+        [
+          0.0030615624770450665,
+          0.14038660171119335,
+          0.002771195955199538
+        ],
+        [
+          0.002895638750276242,
+          0.0027711959551995373,
+          0.13833556867380267
+        ]
+      ],
+      "diagnostics": {
+        "mode_count": 4913,
+        "quadratic_symbol_minimum": 0.2881161723445904,
+        "internal_mass_eigenvalues": [
+          0.028116172335115434,
+          0.16519715288082723,
+          0.20668667478405733
+        ],
+        "point_covariance_eigenvalues": [
+          0.1612679000051534,
+          0.16821200606276443,
+          0.20103038600386047
+        ],
+        "derivative_covariance_eigenvalues": [
+          0.13627302297891067,
+          0.1381530048934391,
+          0.1463952389149899
+        ]
+      },
+      "derivative_slope_eigenvalues": [
+        0.017034127872363834,
+        0.017269125611679887,
+        0.018299404864373738
+      ],
+      "moments": {
+        "quadrature_order": 8,
+        "quadrature_nodes": 262144,
+        "weight_sum": 1.000000000000001,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 0.30647935206712196,
+            "JK": 0.22757349297186752,
+            "K2": 0.22709997223068823,
+            "J2_analytic": 0.30647935206712174,
+            "J2_quadrature_relative_error": 2.220446049250313e-16,
+            "classii_energy_density_expectation": 0.001382411621430768
+          },
+          {
+            "generator": 2,
+            "J2": 0.3055800626343013,
+            "JK": 0.2279785315263747,
+            "K2": 0.22775466361941138,
+            "J2_analytic": 0.3055800626343011,
+            "J2_quadrature_relative_error": 2.220446049250313e-16,
+            "classii_energy_density_expectation": 0.0013819148839677828
+          },
+          {
+            "generator": 3,
+            "J2": 0.30564929803058216,
+            "JK": 0.22949794986732786,
+            "K2": 0.22927751517328765,
+            "J2_analytic": 0.30564929803058205,
+            "J2_quadrature_relative_error": 1.1102230246251565e-16,
+            "classii_energy_density_expectation": 0.0013867041646633993
+          }
+        ],
+        "classii_energy_density_expectation": 0.00415103067006195
+      },
+      "classii_energy_over_cutoff": 0.0005188788337577438
+    },
+    {
+      "cutoff": 16,
+      "covariance": [
+        [
+          0.19658045735863666,
+          0.012240131776506291,
+          0.011433295248852966
+        ],
+        [
+          0.012240131776506302,
+          0.1898415056884729,
+          0.01082816785311286
+        ],
+        [
+          0.011433295248852959,
+          0.01082816785311286,
+          0.18198580793363614
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          0.2754422683554655,
+          0.003069995989024303,
+          0.002904071421541188
+        ],
+        [
+          0.0030699959890243115,
+          0.27372471418766325,
+          0.0027796279959287013
+        ],
+        [
+          0.002904071421541188,
+          0.0027796279959287074,
+          0.27166693635840367
+        ]
+      ],
+      "diagnostics": {
+        "mode_count": 35937,
+        "quadratic_symbol_minimum": 0.2881161723445904,
+        "internal_mass_eigenvalues": [
+          0.028116172335115434,
+          0.16519715288082723,
+          0.20668667478405733
+        ],
+        "point_covariance_eigenvalues": [
+          0.17389869940739497,
+          0.18084376303436112,
+          0.21366530853898963
+        ],
+        "derivative_covariance_eigenvalues": [
+          0.2695982036447052,
+          0.2714851802602992,
+          0.27975053499652797
+        ]
+      },
+      "derivative_slope_eigenvalues": [
+        0.016849887727794076,
+        0.0169678237662687,
+        0.017484408437282998
+      ],
+      "moments": {
+        "quadrature_order": 8,
+        "quadrature_nodes": 262144,
+        "weight_sum": 1.000000000000001,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 0.6370467526268462,
+            "JK": 0.4736903137454338,
+            "K2": 0.47319256698622353,
+            "J2_analytic": 0.6370467526268455,
+            "J2_quadrature_relative_error": 6.661338147750939e-16,
+            "classii_energy_density_expectation": 0.0028760470711193535
+          },
+          {
+            "generator": 2,
+            "J2": 0.6361449008958299,
+            "JK": 0.47485072360289526,
+            "K2": 0.4746028347713269,
+            "J2_analytic": 0.6361449008958295,
+            "J2_quadrature_relative_error": 3.3306690738754696e-16,
+            "classii_energy_density_expectation": 0.002877846330767975
+          },
+          {
+            "generator": 3,
+            "J2": 0.636214347982996,
+            "JK": 0.477976689713954,
+            "K2": 0.47773397975000953,
+            "J2_analytic": 0.6362143479829958,
+            "J2_quadrature_relative_error": 2.220446049250313e-16,
+            "classii_energy_density_expectation": 0.0028875330836942254
+          }
+        ],
+        "classii_energy_density_expectation": 0.008641426485581555
+      },
+      "classii_energy_over_cutoff": 0.0005400891553488472
+    },
+    {
+      "cutoff": 32,
+      "covariance": [
+        [
+          0.20303409131954675,
+          0.012240171506207573,
+          0.011433334978215349
+        ],
+        [
+          0.01224017150620757,
+          0.1962951158118164,
+          0.010828207582221075
+        ],
+        [
+          0.011433334978215356,
+          0.010828207582221075,
+          0.18843938627403195
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          0.5365766436625118,
+          0.0030710950149855512,
+          0.0029051704400954313
+        ],
+        [
+          0.003071095014985522,
+          0.5348584300846881,
+          0.002780727008927577
+        ],
+        [
+          0.002905170440095434,
+          0.002780727008927577,
+          0.5327997730524366
+        ]
+      ],
+      "diagnostics": {
+        "mode_count": 274625,
+        "quadratic_symbol_minimum": 0.2881161723445904,
+        "internal_mass_eigenvalues": [
+          0.028116172335115434,
+          0.16519715288082723,
+          0.20668667478405733
+        ],
+        "point_covariance_eigenvalues": [
+          0.18035224859715365,
+          0.18729734519009694,
+          0.2201189996181444
+        ],
+        "derivative_covariance_eigenvalues": [
+          0.5307302339547841,
+          0.532618122502127,
+          0.540886490342725
+        ]
+      },
+      "derivative_slope_eigenvalues": [
+        0.016585319811087004,
+        0.01664431632819147,
+        0.016902702823210155
+      ],
+      "moments": {
+        "quadrature_order": 8,
+        "quadrature_nodes": 262144,
+        "weight_sum": 1.000000000000001,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 1.2839823072352992,
+            "JK": 0.9553433840458176,
+            "K2": 0.9548337968722453,
+            "J2_analytic": 1.283982307235298,
+            "J2_quadrature_relative_error": 8.646715911652363e-16,
+            "classii_energy_density_expectation": 0.005799174892073544
+          },
+          {
+            "generator": 2,
+            "J2": 1.2830801297226122,
+            "JK": 0.957999616384259,
+            "K2": 0.9577397384711277,
+            "J2_analytic": 1.2830801297226113,
+            "J2_quadrature_relative_error": 6.92223657061964e-16,
+            "classii_energy_density_expectation": 0.005805530828615764
+          },
+          {
+            "generator": 3,
+            "J2": 1.2831496037179204,
+            "JK": 0.9642683856471099,
+            "K2": 0.9640145743101949,
+            "J2_analytic": 1.2831496037179195,
+            "J2_quadrature_relative_error": 6.921861777665151e-16,
+            "classii_energy_density_expectation": 0.005824794410721955
+          }
+        ],
+        "classii_energy_density_expectation": 0.017429500131411264
+      },
+      "classii_energy_over_cutoff": 0.000544671879106602
+    },
+    {
+      "cutoff": 64,
+      "covariance": [
+        [
+          0.2063150572911085,
+          0.012240172827763622,
+          0.011433336299771397
+        ],
+        [
+          0.012240172827763634,
+          0.19957608099044455,
+          0.010828208903777127
+        ],
+        [
+          0.011433336299771411,
+          0.010828208903777128,
+          0.19172035039541524
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          1.0559404932511949,
+          0.0030712372008077373,
+          0.0029053126258570755
+        ],
+        [
+          0.003071237200807773,
+          1.0542221943619234,
+          0.002780869194643552
+        ],
+        [
+          0.0029053126258570786,
+          0.002780869194643532,
+          1.0521634235811603
+        ]
+      ],
+      "diagnostics": {
+        "mode_count": 2146689,
+        "quadratic_symbol_minimum": 0.2881161723445904,
+        "internal_mass_eigenvalues": [
+          0.028116172335115434,
+          0.16519715288082723,
+          0.20668667478405733
+        ],
+        "point_covariance_eigenvalues": [
+          0.18363321174886701,
+          0.1905783094384249,
+          0.22339996748967636
+        ],
+        "derivative_covariance_eigenvalues": [
+          1.0500937801570747,
+          1.0519817866886108,
+          1.0602505443485923
+        ]
+      },
+      "derivative_slope_eigenvalues": [
+        0.01640771531495429,
+        0.016437215417009543,
+        0.016566414755446755
+      ],
+      "moments": {
+        "quadrature_order": 8,
+        "quadrature_nodes": 262144,
+        "weight_sum": 1.000000000000001,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 2.5699053766667683,
+            "JK": 1.912724102064042,
+            "K2": 1.9122085682577015,
+            "J2_analytic": 2.569905376666768,
+            "J2_quadrature_relative_error": 1.7280372027784834e-16,
+            "classii_energy_density_expectation": 0.011609514204794398
+          },
+          {
+            "generator": 2,
+            "J2": 2.569003157287579,
+            "JK": 1.9183634562649565,
+            "K2": 1.9180975266909726,
+            "J2_analytic": 2.5690031572875776,
+            "J2_quadrature_relative_error": 5.185932239012239e-16,
+            "classii_energy_density_expectation": 0.011624959123481923
+          },
+          {
+            "generator": 3,
+            "J2": 2.5690726347405324,
+            "JK": 1.9308786001442222,
+            "K2": 1.9306191874955414,
+            "J2_analytic": 2.569072634740531,
+            "J2_quadrature_relative_error": 5.18579199176571e-16,
+            "classii_energy_density_expectation": 0.011663255163780036
+          }
+        ],
+        "classii_energy_density_expectation": 0.03489772849205636
+      },
+      "classii_energy_over_cutoff": 0.0005452770076883806
+    },
+    {
+      "cutoff": 128,
+      "covariance": [
+        [
+          0.2079719695352114,
+          0.01224017287054628,
+          0.01143333634255354
+        ],
+        [
+          0.01224017287054627,
+          0.20123299320887825,
+          0.010828208946558861
+        ],
+        [
+          0.011433336342553552,
+          0.010828208946558884,
+          0.19337726257962407
+        ]
+      ],
+      "derivative_covariance": [
+        [
+          2.0931793578126268,
+          0.0030712553515045804,
+          0.002905330776546175
+        ],
+        [
+          0.003071255351504578,
+          2.091461048032943,
+          0.002780887345326106
+        ],
+        [
+          0.0029053307765461917,
+          0.002780887345326245,
+          2.0894022627316424
+        ]
+      ],
+      "diagnostics": {
+        "mode_count": 16974593,
+        "quadratic_symbol_minimum": 0.2881161723445904,
+        "internal_mass_eigenvalues": [
+          0.028116172335115434,
+          0.16519715288082723,
+          0.20668667478405733
+        ],
+        "point_covariance_eigenvalues": [
+          0.18529012390168528,
+          0.1922352216267418,
+          0.22505687979528657
+        ],
+        "derivative_covariance_eigenvalues": [
+          2.087332605989791,
+          2.0892206275825704,
+          2.097489435004851
+        ]
+      },
+      "derivative_slope_eigenvalues": [
+        0.016307285984295244,
+        0.01632203615298883,
+        0.0163866362109754
+      ],
+      "moments": {
+        "quadrature_order": 8,
+        "quadrature_nodes": 262144,
+        "weight_sum": 1.000000000000001,
+        "generators": [
+          {
+            "generator": 1,
+            "J2": 5.137543237524753,
+            "JK": 3.824347598923558,
+            "K2": 3.8238290715707226,
+            "J2_analytic": 5.13754323752475,
+            "J2_quadrature_relative_error": 5.186399677648531e-16,
+            "classii_energy_density_expectation": 0.0232111737256535
+          },
+          {
+            "generator": 2,
+            "J2": 5.136641012810385,
+            "JK": 3.8359487737993905,
+            "K2": 3.835679794466496,
+            "J2_analytic": 5.136641012810382,
+            "J2_quadrature_relative_error": 5.187310642217809e-16,
+            "classii_energy_density_expectation": 0.023244783488831834
+          },
+          {
+            "generator": 3,
+            "J2": 5.136710490703945,
+            "JK": 3.860935910991703,
+            "K2": 3.860673675869158,
+            "J2_analytic": 5.136710490703941,
+            "J2_quadrature_relative_error": 6.916320639891918e-16,
+            "classii_energy_density_expectation": 0.023321080401096657
+          }
+        ],
+        "classii_energy_density_expectation": 0.06977703761558199
+      },
+      "classii_energy_over_cutoff": 0.0005451331063717343
+    }
+  ],
+  "analytic_result": {
+    "derivative_covariance": "D_i,N/N -> delta_cube I",
+    "current_growth": "E int |J_A,N|^2, E int |K_A,N|^2, and the positive Class-II quadratic expectation grow linearly in N",
+    "L1_obstruction": "the bare positive Class-II energy is not uniformly L1-bounded under the canonical Gaussian reference",
+    "renormalisation_boundary": "this identifies the field-dependent leading contraction that any nondegenerate full-component construction must control; counterterm necessity for every possible weak limit, sufficiency, tightness, and measure convergence remain open"
+  },
+  "assertions": [
+    {
+      "name": "production_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "canonical_backend_hash_matches",
+      "status": "PASS",
+      "actual": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+      "expected": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+    },
+    {
+      "name": "production_is_fixed_three_torus",
+      "status": "PASS",
+      "actual": [
+        16.0,
+        16.0,
+        16.0
+      ],
+      "expected": "equal positive periods"
+    },
+    {
+      "name": "full_production_shell_mass_is_not_scalar_anchor",
+      "status": "PASS",
+      "actual": 0.260000000009475,
+      "expected": "separated from scalar anchor"
+    },
+    {
+      "name": "classii_coefficient_matrix_is_positive_definite",
+      "status": "PASS",
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "both eigenvalues positive"
+    },
+    {
+      "name": "embedded_Pauli_generator_normalisation_is_pinned",
+      "status": "PASS",
+      "actual": "Hermitian, trace zero, T_A^2=diag(1,1,0) for A=1,2,3",
+      "expected": "exact embedded Pauli normalisation"
+    },
+    {
+      "name": "cube_integral_two_order_convergence",
+      "status": "PASS",
+      "actual": 5.329070518200751e-15,
+      "expected": 1e-12
+    },
+    {
+      "name": "derivative_covariance_has_linear_cube_cutoff_slope",
+      "status": "PASS",
+      "actual": 0.01158404328498359,
+      "expected": 0.12
+    },
+    {
+      "name": "classii_energy_has_positive_linear_slope",
+      "status": "PASS",
+      "actual": {
+        "predicted": 0.0005423947953192876,
+        "last_cutoff": 0.0005451331063717343,
+        "relative_error": 0.005048557021707278
+      },
+      "expected": "positive and within declared cutoff tolerance"
+    },
+    {
+      "name": "gauss_hermite_cross_order_agrees",
+      "status": "PASS",
+      "actual": 0.00013788190768503894,
+      "expected": 0.02
+    },
+    {
+      "name": "conditional_wick_J_formula_matches_exact_trace",
+      "status": "PASS",
+      "actual": 8.646715911652363e-16,
+      "expected": 1e-12
+    },
+    {
+      "name": "all_J_and_K_second_moments_are_positive",
+      "status": "PASS",
+      "actual": "all audited generator/cutoff rows",
+      "expected": ">0"
+    },
+    {
+      "name": "classii_expectations_increase_on_audited_tail",
+      "status": "PASS",
+      "actual": [
+        0.008641426485581555,
+        0.017429500131411264,
+        0.03489772849205636,
+        0.06977703761558199
+      ],
+      "expected": "strictly increasing"
+    },
+    {
+      "name": "point_covariance_is_bounded_while_derivative_covariance_diverges",
+      "status": "PASS",
+      "actual": {
+        "reference_point_covariance_eigenvalues": [
+          0.18612307756579255,
+          0.193068175291981,
+          0.22588983346425995
+        ],
+        "first_derivative_eigenvalues": [
+          0.13627302297891067,
+          0.1381530048934391,
+          0.1463952389149899
+        ],
+        "last_derivative_eigenvalues": [
+          2.087332605989791,
+          2.0892206275825704,
+          2.097489435004851
+        ]
+      },
+      "expected": "bounded C_N and growing D_N"
+    },
+    {
+      "name": "leading_contraction_counterterm_is_field_dependent",
+      "status": "PASS",
+      "actual": [
+        0.07706249999999197,
+        0.15818749999996934
+      ],
+      "expected": "positive and nonconstant"
+    },
+    {
+      "name": "Pauli_Fierz_counterterm_formula_matches_generator_sum",
+      "status": "PASS",
+      "actual": {
+        "generator_sum": [
+          0.07706249999999197,
+          0.15818749999996934
+        ],
+        "fierz": [
+          0.07706249999999197,
+          0.1581874999999693
+        ]
+      },
+      "expected": "absolute error below 1e-14"
+    },
+    {
+      "name": "rho_floor_is_positive_but_does_not_enter_derivative_slope",
+      "status": "PASS",
+      "actual": {
+        "rho_floor": 1e-12,
+        "delta_cube": 0.01619898645075697
+      },
+      "expected": "both positive; delta independent of rho floor"
+    },
+    {
+      "name": "unrenormalised_L1_energy_uniform_bound_fails",
+      "status": "PASS",
+      "actual": 0.0005423947953192876,
+      "expected": "positive coefficient of N"
+    },
+    {
+      "name": "honesty_boundary_excludes_constructive_measure",
+      "status": "PASS",
+      "actual": [
+        "finite counterterm sufficiency",
+        "renormalised Class-II measure nonexistence",
+        "constructive Gibbs measure",
+        "partition-function or tightness bounds",
+        "regulator-independent K_A composite definition",
+        "rho or Class-II mass regulariser removal",
+        "infinite volume or phase transition",
+        "BCC existence, stability, or selection",
+        "T5, T6, or T7 promotion without operator review"
+      ],
+      "expected": "explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 19,
+    "total": 19
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "a35958a0426eb378d7d4f826dbba771c3781287c",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "finite counterterm sufficiency",
+    "renormalised Class-II measure nonexistence",
+    "constructive Gibbs measure",
+    "partition-function or tightness bounds",
+    "regulator-independent K_A composite definition",
+    "rho or Class-II mass regulariser removal",
+    "infinite volume or phase transition",
+    "BCC existence, stability, or selection",
+    "T5, T6, or T7 promotion without operator review"
+  ]
+}

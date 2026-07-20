@@ -1,0 +1,56 @@
+% =============================================================================
+% Title: Scalar analytic branch -- current-status and naming alignment
+% Claim: A1-SCALAR-ANALYTIC-BRANCH
+% Version: v1.1 -- first issued 2026-06-23; this version issued 2026-07-20
+% Status: T6 PROVED CONDITIONAL, operator-approved 2026-06-23
+% =============================================================================
+
+\section*{Purpose and scope}
+The theorem and tier are unchanged.  Under $Y>0$, $Z<0$, and
+$m_{\rm sh}^2>0$,
+\[
+ K(q)=m_{\rm sh}^2+Y(|q|^2-q_\star^2)^2
+ \geq m_{\rm sh}^2>0,
+\]
+and every periodic-cell spectral minimum satisfies
+$\lambda_0(L)\geq m_{\rm sh}^2$.
+
+The current canonical N-001 convention stores mu2_shell as this shell mass.
+Its original kinetic_coefficients routine reconstructs
+$r_{\rm zero}=\text{mu2_shell}+Yq_0^4$.  Therefore mu2_shell and $r_{\rm zero}$ are distinct;
+the alias ``mu2=r'' is forbidden.  The obsolete contrary sentence described the
+failed legacy template, not the current canonical solver manifest.
+
+The current verifier v1.7.0 passes 14/14 overall, including the two named
+positivity assertions.  This card is the scalar A2/A3/A4 positivity input.  It
+does not identify the scalar `0.005` shell mass with the full-production
+`0.260000000009475` anchor.
+
+\section*{Devil's-advocate}
+\begin{enumerate}
+\item The lower bound fails if the shell mass is nonpositive.  The theorem is
+explicitly conditional on $m_{\rm sh}^2>0$.
+\item A finite torus can miss the continuum minimizing shell, but that only
+raises the spectral minimum; it cannot invalidate
+$\lambda_0(L)\geq m_{\rm sh}^2$.
+\item The scalar and full-production anchors are numerically different and
+belong to different theorem branches.  This note forbids their identification
+and makes no full-production measure claim.
+\end{enumerate}
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A1-SCALAR-ANALYTIC-BRANCH
+Precise statement:       Y>0, Z<0, m_sh^2>0 imply K>=m_sh^2 and
+                         lambda0(L)>=m_sh^2.
+Scope:                   Positive-mass scalar Brazovskii kernel only.
+Dependencies:            A1-KERNEL-IDENTITY; A1-SHELL-POSITIVITY.
+Evidence grade:          ANALYTIC, EXECUTED, CONDITIONAL.
+Reproduction command:    python codes/foundations/a1_kernel_checks.py
+Expected output:         14/14 PASS overall; both positivity assertions PASS.
+Falsification gate:      K or lambda0 below the positive shell mass.
+Tier before / after:     T6 / T6; administrative alignment only.
+No-overclaim statement:  No production config, full functional, dynamics,
+                         measure, parameter identity, or BCC conclusion.
+Next required action:    Preserve as the scalar A2/A3/A4 positivity input.
+\end{verbatim}

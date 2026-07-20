@@ -9,10 +9,10 @@
 
 **Falsifier.** A counterexample to the algebraic identity (none possible) or to r=K(0)=m_sh^2+Y q_star^4.
 
-## (all notes)/  ·  1 proof unit  ·  tier span —
+## (all notes)/  ·  1 proof unit  ·  tier span T6
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
-| `a1-kernel-identity` | v1.0 | — | For Y>0, Z<0: K=r+Z q^2+Y q^4 = m_sh2+Y(q^2-q*^2)^2, q*^2=-Z/2Y, m_sh2=r-Z^2/4Y, r=K(0)=m_sh2+Y q*^4. r (zero-momentum) and m_sh2 (shell) are distinc… | PROVED (analytic) + EXECUTED (a1_kernel_check… | Operator sign-off; re-point A2/A3 to the analytic branch. |
+| `a1-kernel-identity` | v1.1 | T6 | The Brazovskii kernel complete-square identity separates r=K(0) from m_sh^2=K(q_star). | ANALYTIC, EXECUTED. | Preserve the identity and naming firewall. |
 
-<!-- generated 2026-06-23T11:50:19Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-20T07:05:29Z by build_index.py v1.0.1 -->
