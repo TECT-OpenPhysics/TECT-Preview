@@ -1,0 +1,439 @@
+% =============================================================================
+% Title: Decoupled Class-II Nelson bound and exact self-coupling residual
+% Claim: A8-CLASSII-DECOUPLED-NELSON-BOUND
+% Version: v1.0 -- first issued 2026-07-20; this version issued 2026-07-20
+% Status: scoped T5 theorem note; self-coupled A7 Nelson gate remains open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-20): spatial-background det_2 theorem, decoupled product-
+% Gaussian Nelson bound and full-sequence limit, finite-cutoff divergence
+% identity, and exact statement of the remaining self-coupling estimate.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Schat}{\mathfrak S_2}
+
+\section*{1. Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Scope firewall.}  This note proves a cutoff-uniform Nelson bound and
+full-sequence finite-volume measure convergence when the Class-II coefficient
+field and derivative carrier are independent Gaussian copies.  It also proves
+an exact finite-cutoff Gaussian-divergence identity for the original action.
+It does \emph{not} prove the self-coupled A7 Gibbs measure.  The one remaining
+load-bearing estimate is an adapted-drift bound; a smart-path interpolation
+bound is an alternative sufficient route.
+}}
+\end{center}
+
+\section{Pinned model and theorem}
+
+Let $A$ be the hash-pinned six-real A1 production quadratic operator on
+$\T_L^3$, $L=16$, and let $C=A^{-1}$.  Its symbol satisfies
+\[
+ A(k)\ge c_{\rm sym}\langle k\rangle^4\Id_6,
+ \qquad c_{\rm sym}>0.                                      \tag{1.1}
+\]
+All family masses and the internal-lock matrix are nonnegative.  It is
+therefore sufficient for an explicit lower bound to use
+\[
+ c_{\rm sym}=\inf_{x\ge0}
+ {Yx^2+Zx+r\over(1+x)^2}.
+ \tag{1.2}
+\]
+At the production point the minimum occurs at
+$x_*=(2r-Z)/(2Y-Z)$ and gives
+\[
+ x_*=0.640398746432892,\qquad
+ c_{\rm sym}=0.108364530587115.                             \tag{1.3}
+\]
+
+Let $Z$ and $Y$ be independent copies of the corresponding Gaussian field,
+coupled across cutoffs through common Fourier modes.  The admitted regulators
+are the common, real-even, uniformly bounded scalar multipliers of A7, with
+compact support or a uniform Schwartz tail.  Put $Z_\Lambda=R_\Lambda Z$ and
+$Y_\Lambda=R_\Lambda Y$, and
+$C_\Lambda=R_\Lambda C R_\Lambda^*$.
+
+For $z\in\R^6$, define
+\[
+ B(z)=\sum_{A=1}^3
+ \left[a p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)+cv_Av_A^T\right],   \tag{1.4}
+\]
+where $p_A=2S_Az$, $v_A=2(S_A-q_A\Id)z$, and
+$q_A=z^TS_Az/(|z|^2+\varepsilon_\rho)$.  The floor is fixed at
+$\varepsilon_\rho=10^{-12}$.  Write $Y=C^{1/2}\xi_Y$ over one common white
+noise and put $G_\Lambda=DR_\Lambda C^{1/2}$; $M_b$ denotes multiplication
+by $b$.  For deterministic $b(x)\ge0$, set
+\[
+ L_b=D^*bD,\qquad
+ T_{\Lambda,b}=G_\Lambda^*M_bG_\Lambda,                  \tag{1.5}
+\]
+and
+\[
+ Q_{\Lambda,b}(Y)
+ ={1\over2}\left(
+ \langle\xi_Y,T_{\Lambda,b}\xi_Y\rangle
+ -\Tr T_{\Lambda,b}\right).                               \tag{1.6}
+\]
+The decoupled Class-II composite is
+$Q_\Lambda(Z,Y)=Q_{\Lambda,B(Z_\Lambda)}(Y)$.  The local interaction is
+\[
+ U_\Lambda(Z)=\int_{\T_L^3}
+ \left({\lambda\over4}\rho_\Lambda^2
+       +{\gamma\over6}\rho_\Lambda^3\right)\dd x,
+ \qquad \rho_\Lambda=|Z_\Lambda|^2,                       \tag{1.7}
+\]
+with $\lambda=-0.43$ and $\gamma=1.62$.
+
+\begin{theorem}[decoupled Nelson bound and measure]
+For every fixed $p>0$,
+\[
+ \sup_\Lambda
+ \E_{Z,Y}\exp\{-p[U_\Lambda(Z)+Q_\Lambda(Z,Y)]\}<\infty. \tag{1.8}
+\]
+The actions converge in probability on the common product Gaussian space.
+For any fixed $p>1$, the weights converge in $L^1$, their partition functions
+converge to a strictly positive finite limit, and the lifted product-space
+densities converge in total variation.  The projected Galerkin laws converge
+weakly along the full sequence.
+\end{theorem}
+
+This theorem is about an explicitly declared product-Gaussian model.  The
+physical A7 action is recovered only after identifying $Y=Z$, which is not an
+innocent substitution under the exponential.
+
+\section{Exact spatial-background determinant}
+
+Fix a deterministic measurable symmetric matrix field
+$b\in L^2(\T_L^3;\R^{6\times6})$ with $b(x)\ge0$.  At each regulated level,
+$T_{\Lambda,b}$ is positive trace class (and finite rank for compact-support
+cutoffs).  Diagonalising it and using
+standard real Gaussian coordinates gives the exact identity
+\[
+ \E_Ye^{-pQ_{\Lambda,b}(Y)}
+ =\exp\left\{{1\over2}\Tr(pT_{\Lambda,b})\right\}
+   \det(\Id+pT_{\Lambda,b})^{-1/2}
+ =\det{}_2(\Id+pT_{\Lambda,b})^{-1/2}.                    \tag{2.1}
+\]
+For $t\ge0$,
+\[
+ 0\le pt-\log(1+pt)\le {p^2t^2\over2}.                   \tag{2.2}
+\]
+Consequently
+\[
+ 0\le\log\E_Ye^{-pQ_{\Lambda,b}}
+ \le {p^2\over4}\|T_{\Lambda,b}\|_{\Schat}^2.           \tag{2.3}
+\]
+
+The point of this package is that (2.3) holds for a spatially varying
+background, not merely the constant field checked in A7.
+
+\section{Cutoff-uniform Schatten bound}
+
+Use the normalized Fourier basis and write
+$\widehat b(q)=L^{-3}\int b(x)e^{-iq\cdot x}\dd x$.  For a fixed admitted
+regulator family put $M_R=\sup_{\Lambda,k}|r_\Lambda(k)|<\infty$.  From
+(1.1), the $(k,\ell)$ block of $T_{\Lambda,b}$ obeys
+\[
+ \|T_{\Lambda,b}(k,\ell)\|_F
+ \le M_R^2c_{\rm sym}^{-1}
+ {\|\widehat b(k-\ell)\|_F
+  \over\langle k\rangle\langle\ell\rangle}.              \tag{3.1}
+\]
+The two covariance roots give the factor $M_R^2$ in (3.1), hence $M_R^4$
+after squaring.  Cauchy--Schwarz in the convolution variable gives
+\[
+ \sup_q\sum_k{1\over\langle k\rangle^2
+                        \langle k-q\rangle^2}
+ \le\sum_k\langle k\rangle^{-4}=:S_L<\infty.              \tag{3.2}
+\]
+Parseval now yields
+\[
+ \sup_\Lambda\|T_{\Lambda,b}\|_{\Schat}^2
+ \le {M_R^4S_L\over L^3c_{\rm sym}^2}\|b\|_{L^2}^2.     \tag{3.3}
+\]
+
+The code uses a deliberately elementary enclosure.  With
+$\alpha=2\pi/L$, the shell $\|n\|_\infty=m$ has $24m^2+2$ lattice points and
+$|n|\ge m$, so
+\[
+ S_L\le1+\alpha^{-4}
+ \left(24\sum_{m\ge1}m^{-2}+2\sum_{m\ge1}m^{-4}\right)
+ =1+\alpha^{-4}\left(4\pi^2+{\pi^4\over45}\right).        \tag{3.4}
+\]
+At $L=16$, this upper bound is $1752.06849501828$.  It is coarse but rigorous,
+cutoff independent, and computed from the pinned torus length.
+
+Approximation by smooth matrix fields extends (2.1)--(3.3) to every positive
+$b\in L^2$.  Moreover, if $b_n\to b$ in $L^2$, the corresponding operators
+converge in $\Schat$.  This is the continuity used below.
+
+\section{Production coefficient and sextic absorption}
+
+The production matrix
+\[
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix}
+\]
+has eigenvalues $0.00125901150092606$ and $0.00558473849907223$, hence
+$B(z)\ge0$.  Since $|q_A|\le1$ and the embedded Pauli matrices have operator
+norm one,
+\[
+ |p_A|\le2|z|,\qquad |v_A|\le4|z|.                       \tag{4.1}
+\]
+The Frobenius norm of each rank-one term and the triangle inequality give
+\[
+ \|B(z)\|_F
+ \le(12a+48|b|+48c)|z|^2
+ =:\beta_B|z|^2,                                          \tag{4.2}
+\]
+where
+\[
+ \beta_B=0.256499999999936.                               \tag{4.3}
+\]
+Combining (2.3), (3.3), and (4.2), conditionally on $Z$, gives
+\[
+ \log\E_Ye^{-pQ_\Lambda(Z,Y)}
+ \le p^2K_B\int\rho_\Lambda^2\dd x,
+ \qquad
+ K_B(M_R)={\beta_B^2M_R^4S_L\over4L^3c_{\rm sym}^2}.     \tag{4.4}
+\]
+The executable contractive subfamily has $M_R=1$ and the explicit coarse
+enclosure $K_B(1)=0.599144492990436$.  Every other fixed admitted family has
+the same theorem with its finite $M_R$ inserted.
+
+Put
+\[
+ A_p=p^2K_B(M_R)+{p\max(-\lambda,0)\over4},\qquad
+ b_p={p\gamma\over6}.                                    \tag{4.5}
+\]
+For every $r\ge0$,
+\[
+ A_pr^2-b_pr^3
+ \le {4A_p^3\over27b_p^2},                               \tag{4.6}
+\]
+with equality at $r=2A_p/(3b_p)$.  Therefore
+\[
+ \E_{Z,Y}e^{-p(U_\Lambda+Q_\Lambda)}
+ \le\exp\left\{L^3{4A_p^3\over27b_p^2}\right\},         \tag{4.7}
+\]
+uniformly in the cutoff.  This proves (1.8).  The numerical value of the
+right-hand side is intentionally not advertised as a sharp physical bound;
+only its finite, cutoff-independent character is load bearing.
+
+\section{Full-sequence cutoff removal}
+
+The trace-class covariance gives
+$Z_\Lambda\to Z$ in $L^6(\Omega\times\T_L^3)$.  At fixed positive floor,
+$B$ is smooth, has quadratic growth, and satisfies
+$\|DB(z)\|\le C_{\varepsilon_\rho}(1+|z|)$, hence
+\[
+ \|B(z)-B(w)\|_F
+ \le C_{\varepsilon_\rho}(1+|z|+|w|)|z-w|.
+\]
+Gaussian moment bounds therefore imply
+\[
+ B(Z_\Lambda)\longrightarrow B(Z)
+ \quad\hbox{in }L^2(\Omega;L^2_x).                        \tag{5.1}
+\]
+The preceding $L^2_x\to\Schat$ estimate, its polarized form, and dominated
+convergence of the common multipliers give
+\[
+ T_{\Lambda,B(Z_\Lambda)}\longrightarrow T_{B(Z)}
+ \quad\hbox{in }L^2(\Omega;\Schat).                       \tag{5.2}
+\]
+Here $T_{B(Z)}=(DC^{1/2})^*M_{B(Z)}DC^{1/2}$.  Conditionally on $Z$, the
+centered quadratic form is a second Gaussian chaos in the independent carrier
+$Y$.  Its exact isometry is
+\[
+ \E_Y|Q_\Lambda-Q|^2
+ ={1\over2}\|T_{\Lambda,B(Z_\Lambda)}-T_{B(Z)}\|_{\Schat}^2. \tag{5.3}
+\]
+Thus (5.2) gives $L^2$ convergence of $Q_\Lambda$.  The same all-moment
+Gaussian convergence and the polynomial argument used in A4 give
+$U_\Lambda\to U$ in $L^1$.  Hence the complete actions converge in
+probability.
+
+Choose any $p>1$.  Equation (4.7) makes the weights uniformly bounded in
+$L^p$, so Vitali's theorem gives $L^1$ convergence.  Also
+$\E Q_\Lambda=0$ and $\sup_\Lambda\E U_\Lambda<\infty$;
+Jensen therefore gives a cutoff-uniform positive lower bound on the partition
+functions.  Normalization preserves $L^1$ convergence, which is total
+variation convergence on the common product Gaussian space.  Combining that
+density convergence with $R_\Lambda(Z,Y)\to(Z,Y)$ in probability gives weak
+convergence of the projected Galerkin laws along the full sequence.
+
+\section{Exact finite-cutoff divergence identity}
+
+There is a second result which applies to the original self-coupled A7
+composite but does not yet exponentiate it.  Whiten a finite cutoff as
+$X_\Lambda=C_\Lambda^{1/2}\xi$ and define
+\[
+ b_\Lambda(\xi)=C_\Lambda^{1/2}D^*
+ [B(X_\Lambda)DX_\Lambda].                               \tag{6.1}
+\]
+For the standard Gaussian divergence
+$\delta_\gamma b=\langle\xi,b\rangle-\operatorname{div}_\xi b$,
+\[
+ 2V_\Lambda^{\rm ren}=\delta_\gamma b_\Lambda.           \tag{6.2}
+\]
+Indeed, the first term is
+$\langle DX_\Lambda,B(X_\Lambda)DX_\Lambda\rangle$.
+The derivative of (6.1) has a $B$ term and a $DB$ term.  The trace of the
+first is
+\[
+ \Tr(C_\Lambda D^*B(X_\Lambda)D)
+ =\sum_i\int\Tr[B(X_\Lambda)\Gamma_{\Lambda,i}]\dd x,     \tag{6.3}
+\]
+which is twice the exact A7 counterterm.  The $DB$ trace contains the
+same-point kernel
+\[
+ D_xC_\Lambda(x,y)|_{y=x}=0,                              \tag{6.4}
+\]
+and hence vanishes for every admitted common-even regulator.  This is an
+algebraic reason the exact covariance and evenness restrictions are
+load-bearing.  An asymmetric regulator would require a different identity.
+
+The Cameron--Martin space is
+\[
+ \cH_A=\operatorname{Dom}A^{1/2}\simeq H^2(\T_L^3;\R^6),
+ \qquad\|h\|_{\cH_A}^2=\langle h,Ah\rangle.               \tag{6.5}
+\]
+Equations (6.2)--(6.5) identify the correct Boue--Dupuis geometry for the
+remaining problem.
+
+\section{Why the self-coupled gate is still open}
+
+Conditioning on $B(X)$ in the original action does not leave the derivative
+carrier Gaussian: it is the same field.  Thus (2.1) cannot simply be reused.
+The independent and self-coupled distinction is executable even in the scalar
+finite Gaussian control
+\[
+ Q^{\rm dec}(z,y)={g\over2}z^2(y^2-1),\qquad
+ Q^{\rm self}(z)={g\over2}z^2(z^2-1).                     \tag{7.1}
+\]
+At the pinned control inputs their negative-exponential moments differ by
+$1.10\times10^{-2}$.  This is a falsifier for silently identifying the two
+models, not evidence against the desired self-coupled theorem.
+
+For a covariance flow $C_\Lambda=\int J_tJ_t^*\dd t$, write
+\[
+ X_\Lambda=\int J_t\dd W_t,\qquad
+ h_\Lambda(u)=\int J_tu_t\dd t.                           \tag{7.2}
+\]
+One sufficient load-bearing estimate is: for every $\epsilon>0$, uniformly in the
+cutoff and in every progressive drift $u$,
+\[
+ \E V_\Lambda^{\rm ren}(X_\Lambda+h_\Lambda(u))
+ \ge-\epsilon\E\left[
+       \int\|u_t\|_2^2\dd t+\|h_\Lambda(u)\|_6^6\right]
+     -C_\epsilon.                                         \tag{7.3}
+\]
+The local potential supplies a positive multiple of the $L^6$ term, while
+the Boue--Dupuis control cost supplies the first term.  Choosing $\epsilon$
+small would prove the desired A7 Nelson bound.
+
+An alternative sufficient smart-path formulation uses independent $X,Y$ and
+$Z_s=sX+\sqrt{1-s^2}Y$.  If $\Phi_\Lambda(s)$ is the logarithm of the
+interpolated partition function, it is enough to prove
+\[
+ \sup_\Lambda\int_0^1(\Phi_\Lambda'(s))_+\dd s<\infty.     \tag{7.4}
+\]
+At $s=0$ this note applies; at $s=1$ one reaches A7.  Differentiation produces
+$DB$ and $D^2B$ mixed value--derivative connections under the tilted law.
+A7's two-point $L^2$ identity does not sum the arbitrary vertex count created
+by the exponential.
+
+The designated proof route is dyadic scale freezing: freeze $B$ two shells
+below the new derivative shell, apply (2.3) conditionally, and prove that the
+sum of the resulting self-coupling commutators obeys (7.3).  No running mass,
+orientation term, or vacuum counterterm is silently assumed.  If that audit
+produces one, it must be registered as a new renormalization condition.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The old homogeneous $-\Theta(\Lambda^{3/2})$ trial disproves
+the Nelson bound.''}  \textbf{DISMISSED.}  It disproves a uniform pathwise
+lower bound.  Gaussian integration cancels the linear trace through
+$\det_2$; the remaining deterministic-background cost is quartic and the
+sextic absorbs it.  This does not settle self-coupling.
+
+\item \textbf{``A7's constant frozen determinant already proves this note.''}
+\textbf{DISMISSED.}  The Schatten proof here covers every deterministic
+spatial $L^2$ matrix background and supplies the coefficient-field and
+full-sequence arguments.
+
+\item \textbf{``Condition on $B(X)$ and apply the same determinant.''}
+\textbf{UPHELD as invalid.}  The derivative carrier is then not an independent
+production Gaussian.  The scalar negative control detects the substitution.
+
+\item \textbf{``The coarse lattice constant is a fitted cutoff number.''}
+\textbf{DISMISSED.}  It follows from the exact sup-norm shell count and zeta
+sums.  Partial finite sums are checks, not the proof.
+
+\item \textbf{``The rational floor may hide unbounded coefficient growth.''}
+\textbf{VALID with mitigation.}  The proof fixes a positive floor, uses
+$|q_A|\le1$, and obtains the global quadratic bound (4.2).  Floor removal is
+excluded.
+
+\item \textbf{``The decoupled measure is the physical three-component
+measure.''}  \textbf{UPHELD as false.}  It is a product-space control theorem.
+The physical claim remains behind (7.3) or (7.4).
+
+\item \textbf{``No additional interacting counterterm is now proved.''}
+\textbf{UPHELD.}  Gaussian power counting is favorable, but arbitrary vertex
+number is not yet controlled.  Any surviving local term found by the
+commutator audit must be recorded explicitly.
+\end{enumerate}
+
+\section{Reproduction}
+
+The fail-closed one-command verifier is
+\begin{verbatim}
+python codes/foundations/a8_classii_decoupled_nelson_verify.py
+\end{verbatim}
+It reruns a primary spatial-background operator audit and a non-importing
+complex-row/determinant audit in a temporary directory, including a full-$B$
+finite-dimensional Gaussian-divergence Jacobian check and a parity-breaking
+negative control.  It checks every pinned authority hash before execution and
+then performs the cross-route contract.
+
+\section{References}
+
+\begin{enumerate}
+\item M. Boue and P. Dupuis, ``A variational representation for certain
+functionals of Brownian motion,'' \emph{Annals of Probability} 26 (1998),
+\url{https://doi.org/10.1214/aop/1022855876}.
+\item Y. Hariya, ``A variational representation and Pr\'ekopa's theorem for
+unbounded Wiener functionals,'' \url{https://arxiv.org/abs/1505.02479}.
+\item N. Barashkov and M. Gubinelli, ``A variational method for $\Phi^4_3$,''
+\url{https://arxiv.org/abs/1805.10814}.
+\end{enumerate}
+
+\section*{Result footer}
+\begin{verbatim}
+Result ID:               A8-CLASSII-DECOUPLED-NELSON-BOUND
+Precise statement:       Arbitrary deterministic spatial PSD backgrounds obey
+                         a cutoff-uniform det_2/Schatten bound; an independent
+                         coefficient/derivative product model has all fixed-p
+                         Nelson moments and a full-sequence finite-volume limit.
+Scope:                   L=16; A1 q^-4 covariance; three complex fields;
+                         six-real convention; fixed floor; common-even scalar
+                         regulators; independent coefficient Z and carrier Y.
+Evidence:                Analytic determinant, Fourier trace-ideal, sextic
+                         absorption, convergence proof; dual executable audit.
+Tier before / after:     new / T5 CLOSED@INDEPENDENT-DERIVATIVE-PRODUCT-GAUSSIAN.
+No-overclaim statement:  No self-coupled A7 Gibbs measure, adapted-drift bound,
+                         extra-counterterm closure, floor removal, infinite
+                         volume, phase transition, BCC, T6, or T7.
+Next required action:    Prove A7-CLASSII-SELF-COUPLING-INTERPOLATION via the
+                         dyadic frozen-background commutator estimate.
+\end{verbatim}

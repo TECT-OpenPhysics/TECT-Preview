@@ -18,8 +18,13 @@ is recorded in `A6-CLASSII-UV-POWER-COUNTING`. Its fixed-floor canonical
 regulator class. `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE` separately closes
 at scoped T5 the exact covariance-normal-ordered joint quadratic current energy
 and its fixed-floor distributional continuum limit. It does not construct the
-interacting Gibbs measure. The active renormalised frontier is the
-`A7-CLASSII-NELSON-EXPONENTIAL-BOUND` needed for uniform integrability,
-density convergence, and tightness. The unmodified bare law remains a separate
-branch-aware concentration problem; neither it nor the A7 Gibbs gate is supplied
-by the local proxy limits.
+interacting Gibbs measure. `A8-CLASSII-DECOUPLED-NELSON-BOUND` closes at scoped
+T5 the arbitrary spatial PSD-background determinant estimate and the
+independent coefficient/derivative product-Gaussian measure, with the general
+regulator multiplier bound retained explicitly. It also pins the finite-cutoff
+Gaussian-divergence identity for the original A7 composite. The physical fields
+are still self-coupled, so the active renormalised frontier is
+`A7-CLASSII-SELF-COUPLING-INTERPOLATION`: a cutoff-uniform adapted-drift or
+alternative sufficient smart-path commutator bound. The unmodified bare law
+remains a separate branch-aware concentration problem; neither it nor the A7
+Gibbs gate is supplied by the local proxy or independent-carrier limits.

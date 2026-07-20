@@ -63,9 +63,15 @@ at scoped T5 the exact covariance-normal-ordered joint `J^2`, `J*K`, and `K^2`
 energy composite and its `L2(Omega;H^(-1-kappa))` continuum limit. The same
 split review eliminates literal fixed-parameter `-delta_cube*N*W_eps`
 subtraction as a uniform-coercivity route and exhibits a pathwise Class-II
-plane-wave null with `W_eps>0`. Open work is the self-coupled uniform
-negative-exponential estimate needed for an interacting Gibbs measure and the
-separate branch-aware bare-concentration theorem. Parameter identity,
+plane-wave null with `W_eps>0`. `A8-CLASSII-DECOUPLED-NELSON-BOUND` closes a
+separate scoped T5 control theorem: arbitrary deterministic spatial PSD
+backgrounds satisfy a cutoff-uniform `det_2`/Schatten estimate, and independent
+Gaussian coefficient and derivative fields have all fixed-p Nelson moments and
+a full-sequence finite-volume product-measure limit. The required `M_R^4`
+regulator factor is explicit. This does not identify the two Gaussian fields.
+Open work is the self-coupled adapted-drift or smart-path commutator estimate
+needed for the physical interacting Gibbs measure and the separate branch-aware
+bare-concentration theorem. Parameter identity,
 regulariser removal, infinite volume, phase transition, BCC, and T7 remain
 outside the current Sector-A theorem.
 
@@ -154,10 +160,12 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A7-CLASSII-NELSON-EXPONENTIAL-BOUND** — prove the self-coupled uniform
-   `p>1` negative-exponential estimate for the now-defined renormalised energy,
-   then obtain interacting-density convergence, tightness, and the fixed-volume
-   full three-component Gibbs limit.
+2. **A7-CLASSII-SELF-COUPLING-INTERPOLATION** — the arbitrary spatial
+   deterministic-background and independent-carrier endpoint is closed in A8;
+   now prove the dyadic frozen-background commutator bound under every adapted
+   drift, or an alternative sufficient smart-path positive-variation bound.
+   Only then derive the self-coupled `p>1` estimate, interacting-density
+   convergence, tightness, and fixed-volume full three-component Gibbs limit.
 3. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
    unmodified spatial Gibbs law across all Class-II null branches; the
    conditional `W_eps=0` branch and local proxy limits are not sufficient.

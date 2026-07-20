@@ -35,8 +35,10 @@ Changelog:
   1.2.0 (2026-07-17) stop after the first failed LaTeX pass and classify a
         MiKTeX user-cache permission denial, avoiding an identical second
         failure in a restricted execution sandbox.
+  1.2.1 (2026-07-20) report LaTeX error markers with adjacent source context
+        instead of only the uninformative end-of-log font statistics.
 """
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-07-17"
 
@@ -154,9 +156,28 @@ def main():
                 print("PDF build BLOCKED: MiKTeX user-cache permission denied.")
                 print("Run this same command once from a normal Windows shell or an approved elevated execution context; do not retry the restricted sandbox pass.")
                 return 2
-            print("PDF build FAILED - tail of log:")
-            tail = (log or r.stdout or r.stderr).splitlines()[-15:]
-            print("\n".join(tail))
+            diagnostic = log or r.stdout or r.stderr
+            lines = diagnostic.splitlines()
+            marker_indices = [
+                index
+                for index, line in enumerate(lines)
+                if line.startswith("!")
+                or "LaTeX Error:" in line
+                or "Undefined control sequence" in line
+                or "Emergency stop" in line
+            ]
+            if marker_indices:
+                print("PDF build FAILED - LaTeX error context:")
+                emitted = set()
+                for index in marker_indices[:8]:
+                    for context_index in range(max(0, index - 2), min(len(lines), index + 5)):
+                        if context_index not in emitted:
+                            print(lines[context_index])
+                            emitted.add(context_index)
+                    print("---")
+            else:
+                print("PDF build FAILED - tail of log:")
+                print("\n".join(lines[-15:]))
             return 1
         print(f"OVERFULL-HBOX: {n_over}" +
               ("" if n_over == 0 else "  <- fix per naming-and-versioning.md section 3"))

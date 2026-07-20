@@ -66,15 +66,44 @@ partition-function convergence, tightness of the Galerkin laws, and a unique
 full-sequence finite-volume Gibbs limit with convergence of bounded smeared
 correlations.
 
-**Status:** OPEN (2026-07-20).  The A7 composite action converges in `L2`, has
-mean zero, and its finite-cutoff partition functions have a uniform positive
-Jensen lower bound.  Frozen deterministic coefficient matrices admit a
-Hilbert-Schmidt/Carleman-Fredholm audit, but that calculation does not apply to
-the self-coupled random matrix `B(X)`.  Closure requires a genuine
-Nelson/Boue-Dupuis or equivalent self-coupled estimate; `L2` action convergence,
-finite-cutoff sextic normalisability, and the frozen determinant are
+**Status:** OPEN, DECOUPLED SPATIAL-BACKGROUND SUBGATE CLOSED (2026-07-20).
+The A7 composite action converges in `L2`, has mean zero, and its finite-cutoff
+partition functions have a uniform positive Jensen lower bound.
+`A8-CLASSII-DECOUPLED-NELSON-BOUND` upgrades the old constant-background audit
+to every deterministic spatial PSD `L2` matrix field, including the exact
+`det_2` identity, the cutoff-uniform Schatten bound with its required `M_R^4`
+regulator factor, sextic absorption, and full-sequence convergence of the
+independent coefficient/derivative product-Gaussian model.  It also records
+the exact finite-cutoff Gaussian-divergence identity for A7.  None of these
+results makes `B(X)` independent of the derivative carrier.  Closure therefore
+still requires a genuine self-coupled estimate, now tracked by
+`A7-CLASSII-SELF-COUPLING-INTERPOLATION`.  `L2` action convergence,
+finite-cutoff sextic normalisability, and the decoupled determinant are
 insufficient.  Density-floor removal and infinite volume are not part of this
 gate.
+
+### **A7-CLASSII-SELF-COUPLING-INTERPOLATION**
+
+**Statement:** Starting from the closed arbitrary-spatial-background
+`det_2`/Schatten endpoint in `A8-CLASSII-DECOUPLED-NELSON-BOUND`, control the
+same-field dependence of `B(X)` and `DX` uniformly over the cutoff.  One
+sufficient closure route is an adapted Cameron--Martin drift estimate
+`E V_Lambda^ren(X_Lambda+h_Lambda(u)) >= -eps E[int ||u_t||_2^2 dt +
+||h_Lambda(u)||_6^6] - C_eps` for every progressive drift.  An alternative
+sufficient route is a uniformly bounded positive variation along an
+independent-to-self-coupled smart path.  Either proof must control the `DB` and
+`D2B` commutators at arbitrary vertex number, preserve the fixed-floor/common-
+even scope, and explicitly register any surviving mass, orientation, or vacuum
+counterterm.
+
+**Status:** OPEN (2026-07-20).  A8 closes the `s=0` independent-carrier
+endpoint and verifies the complete finite-dimensional `B(X)` Gaussian-
+divergence identity, including an asymmetric parity negative control.  The
+`s=1` self-coupled endpoint is not reached.  The designated next proof is a
+dyadic frozen-background expansion: freeze `B` below each new derivative
+shell, apply the conditional `det_2` estimate, and prove a summable uniform
+commutator bound under every adapted drift.  The adapted-drift and smart-path
+criteria are separate sufficient routes here; no equivalence is asserted.
 
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 

@@ -38,8 +38,10 @@ Usage:
 
 Changelog:
   1.0.0 (2026-06-09) first issue. JSONL source + generated MD + FTS5 query cache.
+  1.0.1 (2026-07-20) honor --body when a non-interactive caller exposes an
+        empty stdin stream; previously such calls silently emitted blank bodies.
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import argparse, json, os, re, shutil, sqlite3, sys, tempfile
 from pathlib import Path
@@ -150,7 +152,8 @@ def cmd_add(args):
             print(f"changelog add: REFUSED -- changelog/log.jsonl has {len(bad)} corrupted line(s) "
                   f"at {bad}. Run 'changelog.py repair' first (recovers from git HEAD), then retry.")
             return 1
-    body = sys.stdin.read() if not sys.stdin.isatty() else (args.body or "")
+    stdin_body = sys.stdin.read() if not sys.stdin.isatty() else ""
+    body = stdin_body if stdin_body else (args.body or "")
     body = body.rstrip("\n")
     raw = f"## [{args.title}] - {args.date}\n\n{body}\n\n"
     header = f"[{args.title}] - {args.date}"

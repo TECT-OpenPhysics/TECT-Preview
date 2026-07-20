@@ -54,11 +54,11 @@
   "derived": {
     "conditional_monte_carlo": {
       "samples": 120000,
-      "mean": 0.030095637549069142,
+      "mean": 0.030095637549069135,
       "expected": 0.030088133252909637,
       "standard_error": 4.2605330009199e-05,
-      "z_score": 0.17613514923801388,
-      "centered_mean": 7.504296159505097e-06
+      "z_score": 0.176135149237851,
+      "centered_mean": 7.504296159498158e-06
     },
     "counterterm_asymptotics": [
       {
@@ -88,51 +88,51 @@
     ],
     "centered_gradient_variance": {
       "reference_cutoff": 512,
-      "reference": 0.0003367963520869462,
+      "reference": 0.00033679635208694623,
       "rows": [
         {
           "cutoff": 16,
           "cube": 0.00031817577227546794,
-          "cube_tail": 1.8620579811478243e-05,
+          "cube_tail": 1.8620579811478297e-05,
           "ball": 0.0003133765133821153,
-          "ball_tail": 2.34198387048309e-05,
-          "smooth": 0.0002931608198179077,
-          "smooth_tail": 4.3635532269038454e-05
+          "ball_tail": 2.3419838704830955e-05,
+          "smooth": 0.00029316081981790767,
+          "smooth_tail": 4.363553226903856e-05
         },
         {
           "cutoff": 32,
-          "cube": 0.0003277179667382997,
-          "cube_tail": 9.078385348646476e-06,
+          "cube": 0.00032771796673829965,
+          "cube_tail": 9.078385348646584e-06,
           "ball": 0.0003255465599946981,
-          "ball_tail": 1.1249792092248088e-05,
+          "ball_tail": 1.1249792092248142e-05,
           "smooth": 0.00031649406288672963,
-          "smooth_tail": 2.0302289200216546e-05
+          "smooth_tail": 2.03022892002166e-05
         },
         {
           "cutoff": 64,
           "cube": 0.00033253560740102137,
-          "cube_tail": 4.2607446859248125e-06,
+          "cube_tail": 4.260744685924867e-06,
           "ball": 0.00033149785584163615,
-          "ball_tail": 5.298496245310024e-06,
-          "smooth": 0.00032711758763972234,
+          "ball_tail": 5.2984962453100784e-06,
+          "smooth": 0.0003271175876397224,
           "smooth_tail": 9.678764447223836e-06
         },
         {
           "cutoff": 128,
           "cube": 0.00033496420021224206,
-          "cube_tail": 1.8321518747041162e-06,
+          "cube_tail": 1.8321518747041704e-06,
           "ball": 0.00033445569391782814,
-          "ball_tail": 2.340658169118037e-06,
-          "smooth": 0.00033228496596856535,
-          "smooth_tail": 4.511386118380824e-06
+          "ball_tail": 2.3406581691180913e-06,
+          "smooth": 0.0003322849659685653,
+          "smooth_tail": 4.511386118380932e-06
         }
       ],
       "tail_slopes": {
-        "cube": -1.112719109912919,
-        "ball": -1.1054478394913618,
-        "smooth": -1.0890329779741474
+        "cube": -1.1127191099129077,
+        "ball": -1.105447839491352,
+        "smooth": -1.0890329779741392
       },
-      "last_relative_spread": 0.013394996977925046
+      "last_relative_spread": 0.013394996977925365
     },
     "gaussian_ibp_connections": {
       "one_vertex": [
@@ -301,18 +301,18 @@
       "status": "PASS",
       "actual": {
         "samples": 120000,
-        "mean": 0.030095637549069142,
+        "mean": 0.030095637549069135,
         "expected": 0.030088133252909637,
         "standard_error": 4.2605330009199e-05,
-        "z_score": 0.17613514923801388,
-        "centered_mean": 7.504296159505097e-06
+        "z_score": 0.176135149237851,
+        "centered_mean": 7.504296159498158e-06
       },
       "expected": "z<5.5"
     },
     {
       "name": "covariance_normal_ordering_centres_the_density",
       "status": "PASS",
-      "actual": 7.504296159505097e-06,
+      "actual": 7.504296159498158e-06,
       "expected": "within MC uncertainty of zero"
     },
     {
@@ -338,7 +338,7 @@
     {
       "name": "cube_centered_gradient_variance_has_N_minus_1_tail",
       "status": "PASS",
-      "actual": -1.112719109912919,
+      "actual": -1.1127191099129077,
       "expected": [
         -1.8,
         -0.6
@@ -347,7 +347,7 @@
     {
       "name": "ball_centered_gradient_variance_has_N_minus_1_tail",
       "status": "PASS",
-      "actual": -1.1054478394913618,
+      "actual": -1.105447839491352,
       "expected": [
         -1.8,
         -0.6
@@ -356,7 +356,7 @@
     {
       "name": "smooth_centered_gradient_variance_has_N_minus_1_tail",
       "status": "PASS",
-      "actual": -1.0890329779741474,
+      "actual": -1.0890329779741392,
       "expected": [
         -1.8,
         -0.6
@@ -365,7 +365,7 @@
     {
       "name": "common_regulators_approach_same_Hilbert_Schmidt_limit",
       "status": "PASS",
-      "actual": 0.013394996977925046,
+      "actual": 0.013394996977925365,
       "expected": 0.02
     },
     {
@@ -595,10 +595,10 @@
   },
   "failures": [],
   "environment": {
-    "python": "3.12.13",
-    "numpy": "2.3.5",
+    "python": "3.12.10",
+    "numpy": "1.26.4",
     "platform": "Windows-11-10.0.26200-SP0",
-    "git_commit": "31808f4ee680ed2d289851b398f561b289c5b640",
+    "git_commit": "e413346380a76f1d1792e72615882744e53de707",
     "deterministic": true
   },
   "not_closed_here": [

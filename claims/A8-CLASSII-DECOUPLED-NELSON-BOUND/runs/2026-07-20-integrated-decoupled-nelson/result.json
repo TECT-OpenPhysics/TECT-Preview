@@ -1,0 +1,527 @@
+{
+  "schema": "tect/a8-classii-decoupled-nelson-integrated-result/1.0",
+  "claim_id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+  "script_version": "1.0.0",
+  "verdict": "A8-CLASSII-DECOUPLED-NELSON-INTEGRATED-PASS",
+  "manifest_sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+  "scope": "Fixed L=16 A1 production q^-4 Gaussian, three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, eta_shell=0, and any one fixed A7 common real-even scalar regulator family with finite multiplier bound M_R. The coefficient field Z and derivative carrier Y are independent Gaussian copies. Exact/dealiased products and each regulator's exact derivative covariance are used. Executable numeric constants instantiate the contractive M_R=1 subfamily; the analytic theorem retains the explicit M_R^4 factor.",
+  "preflight": {
+    "status": "PASS",
+    "errors": [],
+    "authority_hashes": {
+      "production_functional_manifest": {
+        "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+        "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      },
+      "a7_composite_manifest": {
+        "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+        "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+        "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+      },
+      "primary_audit": {
+        "path": "codes/foundations/a8_classii_decoupled_nelson.py",
+        "expected": "eab70bcf82a5d132c9d68e2ec7c8ac8590a6030859e38c952073e05dc706a948",
+        "actual": "eab70bcf82a5d132c9d68e2ec7c8ac8590a6030859e38c952073e05dc706a948"
+      },
+      "independent_audit": {
+        "path": "codes/foundations/a8_classii_decoupled_nelson_independent.py",
+        "expected": "a62444f8231935931e80436cbbb2c34a514ae36b5e9a77f3ad11ee0c813720d9",
+        "actual": "a62444f8231935931e80436cbbb2c34a514ae36b5e9a77f3ad11ee0c813720d9"
+      },
+      "one_command_verifier": {
+        "path": "codes/foundations/a8_classii_decoupled_nelson_verify.py",
+        "expected": "65b7601c4099662f1d930321b9b85a60ea53f9a78568c844b8222384acfeeb27",
+        "actual": "65b7601c4099662f1d930321b9b85a60ea53f9a78568c844b8222384acfeeb27"
+      },
+      "proof_note": {
+        "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/notes/a8-classii-decoupled-nelson-bound-260720-v1.0.tex.txt",
+        "expected": "46d959b6699ef93225e74ffed949127f33c13e89fcdb7e9b97953cc44c2958d1",
+        "actual": "46d959b6699ef93225e74ffed949127f33c13e89fcdb7e9b97953cc44c2958d1"
+      },
+      "proof_pdf": {
+        "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/notes/a8-classii-decoupled-nelson-bound-260720-v1.0.pdf",
+        "expected": "ff49d41e8193c05e06da51d30de58d87154781a6f30d827a2b778cd22a69b4bd",
+        "actual": "ff49d41e8193c05e06da51d30de58d87154781a6f30d827a2b778cd22a69b4bd"
+      }
+    }
+  },
+  "subprocesses": {
+    "primary": {
+      "command": [
+        "C:\\Users\\jtkor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Dev\\TECT\\codes\\foundations\\a8_classii_decoupled_nelson.py",
+        "--manifest",
+        "C:\\Dev\\TECT\\claims\\A8-CLASSII-DECOUPLED-NELSON-BOUND\\classii_decoupled_nelson_manifest.json",
+        "--output",
+        "C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a8-decoupled-cyqco3_u\\primary.json"
+      ],
+      "returncode": 0,
+      "stdout": "21/21 PASS\nA8-CLASSII-DECOUPLED-NELSON-PRIMARY-PASS\nEvidence: C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a8-decoupled-cyqco3_u\\primary.json\n",
+      "stderr": ""
+    },
+    "independent": {
+      "command": [
+        "C:\\Users\\jtkor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Dev\\TECT\\codes\\foundations\\a8_classii_decoupled_nelson_independent.py",
+        "--manifest",
+        "C:\\Dev\\TECT\\claims\\A8-CLASSII-DECOUPLED-NELSON-BOUND\\classii_decoupled_nelson_manifest.json",
+        "--output",
+        "C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a8-decoupled-cyqco3_u\\independent.json"
+      ],
+      "returncode": 0,
+      "stdout": "15/15 PASS\nA8-CLASSII-DECOUPLED-NELSON-INDEPENDENT-PASS\nEvidence: C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a8-decoupled-cyqco3_u\\independent.json\n",
+      "stderr": ""
+    }
+  },
+  "source_hashes": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a7_composite_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a8_classii_decoupled_nelson.py",
+      "expected": "eab70bcf82a5d132c9d68e2ec7c8ac8590a6030859e38c952073e05dc706a948",
+      "actual": "eab70bcf82a5d132c9d68e2ec7c8ac8590a6030859e38c952073e05dc706a948"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a8_classii_decoupled_nelson_independent.py",
+      "expected": "a62444f8231935931e80436cbbb2c34a514ae36b5e9a77f3ad11ee0c813720d9",
+      "actual": "a62444f8231935931e80436cbbb2c34a514ae36b5e9a77f3ad11ee0c813720d9"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a8_classii_decoupled_nelson_verify.py",
+      "expected": "65b7601c4099662f1d930321b9b85a60ea53f9a78568c844b8222384acfeeb27",
+      "actual": "65b7601c4099662f1d930321b9b85a60ea53f9a78568c844b8222384acfeeb27"
+    },
+    "proof_note": {
+      "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/notes/a8-classii-decoupled-nelson-bound-260720-v1.0.tex.txt",
+      "expected": "46d959b6699ef93225e74ffed949127f33c13e89fcdb7e9b97953cc44c2958d1",
+      "actual": "46d959b6699ef93225e74ffed949127f33c13e89fcdb7e9b97953cc44c2958d1"
+    },
+    "proof_pdf": {
+      "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/notes/a8-classii-decoupled-nelson-bound-260720-v1.0.pdf",
+      "expected": "ff49d41e8193c05e06da51d30de58d87154781a6f30d827a2b778cd22a69b4bd",
+      "actual": "ff49d41e8193c05e06da51d30de58d87154781a6f30d827a2b778cd22a69b4bd"
+    }
+  },
+  "assertions": [
+    {
+      "name": "primary_result_contract_matches",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a8-classii-decoupled-nelson-primary-result/1.0",
+        "claim_id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+        "script_version": "1.0.0",
+        "manifest_sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+        "verdict": "A8-CLASSII-DECOUPLED-NELSON-PRIMARY-PASS"
+      },
+      "expected": "exact primary contract"
+    },
+    {
+      "name": "independent_result_contract_matches",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a8-classii-decoupled-nelson-independent-result/1.0",
+        "claim_id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+        "script_version": "1.0.0",
+        "manifest_sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+        "verdict": "A8-CLASSII-DECOUPLED-NELSON-INDEPENDENT-PASS"
+      },
+      "expected": "exact independent contract"
+    },
+    {
+      "name": "primary_assertion_count_matches",
+      "status": "PASS",
+      "actual": {
+        "passed": 21,
+        "total": 21
+      },
+      "expected": 21
+    },
+    {
+      "name": "independent_assertion_count_matches",
+      "status": "PASS",
+      "actual": {
+        "passed": 15,
+        "total": 15
+      },
+      "expected": 15
+    },
+    {
+      "name": "production_coefficients_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": {
+          "a": 0.004499999999998875,
+          "b": 0.0018749999999995311,
+          "c": 0.002343749999999414,
+          "Q_eigenvalues": [
+            0.0012590115009260615,
+            0.005584738499072227
+          ]
+        },
+        "independent": {
+          "a": 0.004499999999998875,
+          "b": 0.0018749999999995311,
+          "c": 0.002343749999999414,
+          "Q_eigenvalues": [
+            0.0012590115009260615,
+            0.005584738499072227
+          ]
+        }
+      },
+      "expected": "a,b,c agree"
+    },
+    {
+      "name": "QII_eigenvalues_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": [
+          0.0012590115009260615,
+          0.005584738499072227
+        ],
+        "independent": [
+          0.0012590115009260615,
+          0.005584738499072227
+        ]
+      },
+      "expected": "agree"
+    },
+    {
+      "name": "symbol_coercivity_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": {
+          "stationary_k2": 0.6403987464328916,
+          "c_symbol": 0.10836453058711468,
+          "zero_ratio": 0.4740336473,
+          "stationary_ratio": 0.10836453058711468,
+          "infinity_ratio": 1.0
+        },
+        "independent": {
+          "stationary_k2": 0.6403987464328916,
+          "c_symbol": 0.10836453058711468,
+          "dense_minimum": 0.10836453058763539
+        }
+      },
+      "expected": "agree"
+    },
+    {
+      "name": "beta_B_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": 0.2564999999999359,
+        "independent": 0.2564999999999359
+      },
+      "expected": "agree"
+    },
+    {
+      "name": "lattice_upper_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": 1752.0684950182842,
+        "independent": 1752.0684950182842
+      },
+      "expected": "agree"
+    },
+    {
+      "name": "trace_ideal_constant_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": 36.426447977732074,
+        "independent": 36.426447977732074
+      },
+      "expected": "agree"
+    },
+    {
+      "name": "Nelson_quartic_constant_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": 0.5991444929904363,
+        "independent": 0.5991444929904363
+      },
+      "expected": "agree"
+    },
+    {
+      "name": "sextic_absorption_rows_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": [
+          {
+            "p": 1.25,
+            "quartic_coefficient": 1.0705382702975565,
+            "sextic_coefficient": 0.3375000000000001,
+            "rho_star": 2.114643496884062,
+            "pointwise_log_bound": 1.5957147699140743,
+            "volume_log_bound": 6536.0476975680485,
+            "grid_maximum": 1.5957147699140748
+          },
+          {
+            "p": 2.0,
+            "quartic_coefficient": 2.611577971961745,
+            "sextic_coefficient": 0.54,
+            "rho_star": 3.2241703357552405,
+            "pointwise_log_bound": 9.0493565051038,
+            "volume_log_bound": 37066.164244905165,
+            "grid_maximum": 9.049356505103798
+          },
+          {
+            "p": 4.0,
+            "quartic_coefficient": 10.01631188784698,
+            "sextic_coefficient": 1.08,
+            "rho_star": 6.182908572745049,
+            "pointwise_log_bound": 127.63572029478195,
+            "volume_log_bound": 522795.91032742686,
+            "grid_maximum": 127.63572029478189
+          }
+        ],
+        "independent": [
+          {
+            "p": 1.25,
+            "quartic": 1.0705382702975565,
+            "sextic": 0.3375000000000001,
+            "rho_star": 2.114643496884062,
+            "pointwise_maximum": 1.5957147699140743
+          },
+          {
+            "p": 2.0,
+            "quartic": 2.611577971961745,
+            "sextic": 0.54,
+            "rho_star": 3.2241703357552405,
+            "pointwise_maximum": 9.0493565051038
+          },
+          {
+            "p": 4.0,
+            "quartic": 10.01631188784698,
+            "sextic": 1.08,
+            "rho_star": 6.182908572745049,
+            "pointwise_maximum": 127.63572029478195
+          }
+        ]
+      },
+      "expected": "rho_star and maximum agree"
+    },
+    {
+      "name": "primary_variable_operator_checks_pass",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 1,
+        "dimension": 162,
+        "modulation": 0.25,
+        "p": 2.0,
+        "symmetry_error": 3.903127820947816e-18,
+        "minimum_eigenvalue": -1.7777546102128243e-17,
+        "maximum_eigenvalue": 0.03859846312525298,
+        "trace": 1.5858716630892034,
+        "counterterm_direct": 0.7929358315446017,
+        "counterterm_spectral": 0.7929358315446017,
+        "counterterm_absolute_error": 0.0,
+        "hs_squared": 0.04060194899394702,
+        "b_l2_squared": 7.439411834079142,
+        "hs_upper": 270.9913481590082,
+        "hs_ratio_to_upper": 0.00014982747334842299,
+        "det2_log_moment": 0.039055316860226424,
+        "det2_hs_upper": 0.04060194899394702
+      },
+      "expected": "PSD and det2 bounded"
+    },
+    {
+      "name": "independent_constant_operator_checks_pass",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 3,
+        "trace": 21.631153893688076,
+        "hs_squared": 0.5878334390218124,
+        "log_moment_eigen": 0.5630720364295172,
+        "log_moment_slogdet": 0.5630720364295193,
+        "half_hs_bound": 0.5878334390218124
+      },
+      "expected": "det2 bounded"
+    },
+    {
+      "name": "full_B_Gaussian_divergence_and_parity_control_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "sites": 5,
+        "dimension": 30,
+        "finite_difference_step": 0.0001,
+        "even_errors": [
+          6.089573290068984e-13,
+          1.7852386235972517e-13,
+          6.52811138479592e-14,
+          2.220446049250313e-14
+        ],
+        "asymmetric_gaps": [
+          0.24047668617217344,
+          0.09494365062470678,
+          0.09707833905048346,
+          0.2097652779463317
+        ],
+        "even_same_point_kernel": 8.673617379884035e-19,
+        "asymmetric_same_point_kernel": 0.41500600999557163
+      },
+      "expected": "even identity passes and parity-breaking control fires"
+    },
+    {
+      "name": "self_decoupling_negative_control_fires_stably",
+      "status": "PASS",
+      "actual": {
+        "rows": [
+          {
+            "order": 128,
+            "decoupled": 0.7045728065436849,
+            "self_coupled": 0.7154233124283766,
+            "absolute_difference": 0.010850505884691719
+          },
+          {
+            "order": 160,
+            "decoupled": 0.7046194679221599,
+            "self_coupled": 0.7154536291346767,
+            "absolute_difference": 0.01083416121251679
+          }
+        ],
+        "minimum_absolute_difference": 0.01083416121251679,
+        "order_spread": 1.63446721749283e-05
+      },
+      "expected": "stable nonzero difference across quadrature orders"
+    },
+    {
+      "name": "full_sequence_decoupled_theorem_is_pinned",
+      "status": "PASS",
+      "actual": "The decoupled actions converge in probability on the common product Gaussian space; the p>1 estimate gives L1 convergence of weights, partition convergence, total-variation convergence of lifted product-space densities, and weak convergence of the projected full-sequence laws.",
+      "expected": "contains full-sequence"
+    },
+    {
+      "name": "self_coupling_boundary_is_fail_closed",
+      "status": "PASS",
+      "actual": {
+        "gate": "A7-CLASSII-SELF-COUPLING-INTERPOLATION",
+        "excluded": [
+          "the self-coupled A7 negative-exponential bound",
+          "the adapted Boue-Dupuis drift or smart-path interpolation estimate",
+          "a full three-component production Gibbs measure",
+          "proof that no additional interacting mass, orientation, or vacuum counterterm is required",
+          "rho_regularizer removal",
+          "asymmetric or component-split regulator universality",
+          "infinite volume, phase transition, BCC existence or selection",
+          "T6 or T7 status"
+        ]
+      },
+      "expected": "named gate and explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "primary": {
+      "passed": 21,
+      "total": 21
+    },
+    "independent": {
+      "passed": 15,
+      "total": 15
+    },
+    "cross": {
+      "passed": 18,
+      "total": 18
+    },
+    "aggregate": {
+      "passed": 54,
+      "total": 54
+    },
+    "count_contract": true
+  },
+  "key_results": {
+    "beta_B": 0.2564999999999359,
+    "c_symbol": 0.10836453058711468,
+    "lattice_upper": 1752.0684950182842,
+    "trace_ideal_constant": 36.426447977732074,
+    "nelson_quartic_constant": 0.5991444929904363,
+    "p_bounds": [
+      {
+        "p": 1.25,
+        "quartic_coefficient": 1.0705382702975565,
+        "sextic_coefficient": 0.3375000000000001,
+        "rho_star": 2.114643496884062,
+        "pointwise_log_bound": 1.5957147699140743,
+        "volume_log_bound": 6536.0476975680485,
+        "grid_maximum": 1.5957147699140748
+      },
+      {
+        "p": 2.0,
+        "quartic_coefficient": 2.611577971961745,
+        "sextic_coefficient": 0.54,
+        "rho_star": 3.2241703357552405,
+        "pointwise_log_bound": 9.0493565051038,
+        "volume_log_bound": 37066.164244905165,
+        "grid_maximum": 9.049356505103798
+      },
+      {
+        "p": 4.0,
+        "quartic_coefficient": 10.01631188784698,
+        "sextic_coefficient": 1.08,
+        "rho_star": 6.182908572745049,
+        "pointwise_log_bound": 127.63572029478195,
+        "volume_log_bound": 522795.91032742686,
+        "grid_maximum": 127.63572029478189
+      }
+    ],
+    "toy_negative_control": {
+      "rows": [
+        {
+          "order": 128,
+          "decoupled": 0.7045728065436849,
+          "self_coupled": 0.7154233124283766,
+          "absolute_difference": 0.010850505884691719
+        },
+        {
+          "order": 160,
+          "decoupled": 0.7046194679221599,
+          "self_coupled": 0.7154536291346767,
+          "absolute_difference": 0.01083416121251679
+        }
+      ],
+      "minimum_absolute_difference": 0.01083416121251679,
+      "order_spread": 1.63446721749283e-05
+    },
+    "divergence": {
+      "sites": 5,
+      "dimension": 30,
+      "finite_difference_step": 0.0001,
+      "even_errors": [
+        6.089573290068984e-13,
+        1.7852386235972517e-13,
+        6.52811138479592e-14,
+        2.220446049250313e-14
+      ],
+      "asymmetric_gaps": [
+        0.24047668617217344,
+        0.09494365062470678,
+        0.09707833905048346,
+        0.2097652779463317
+      ],
+      "even_same_point_kernel": 8.673617379884035e-19,
+      "asymmetric_same_point_kernel": 0.41500600999557163
+    }
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "not_closed_here": [
+    "the self-coupled A7 negative-exponential bound",
+    "the adapted Boue-Dupuis drift or smart-path interpolation estimate",
+    "a full three-component production Gibbs measure",
+    "proof that no additional interacting mass, orientation, or vacuum counterterm is required",
+    "rho_regularizer removal",
+    "asymmetric or component-split regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7 status"
+  ]
+}

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-052](#r-052) | Spatial-background Class-II det2 bound and decoupled Nelson measure | T5 PINNED-CLOSURE; arbitrary deterministic spatial PSD L2 backgrounds obey an explicit M_R^4 Schatten bound, and the independent coefficient/derivative product-Gaussian model has all fixed-p moments and a full-sequence limit; self-coupling remains open |
 | [R-051](#r-051) | Literal Class-II leading-counterterm no-go and local bare-proxy split | T5 pinned split result; fixed-parameter subtraction has an escaping N^(1/4) homogeneous amplitude and -N^(3/2) raw energy, while two exact local proxies concentrate with distinct laws; full-field concentration remains open |
 | [R-050](#r-050) | Fixed-floor canonical spectral Class-II K current | T5 PINNED-CLOSURE; common real-even scalar regulators define one geometric/Stratonovich K_A distribution in C^(-1/2-kappa), with zero K-level contraction; primary 29/29 + independent 16/16, integrated 64/64 PASS |
 | [R-049](#r-049) | Full derivative Class-II Gaussian ultraviolet power counting | T4 STRONG-EVIDENCE; exact linear sharp-cube derivative-covariance divergence, nonconstant local leading contraction, and bare Gaussian L1 obstruction; primary 19/19 + independent 12/12, integrated 44/44 PASS |
@@ -70,6 +71,42 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-052"></a>
+### R-052 -- spatial-background Class-II det2 bound and decoupled Nelson measure
+
+**Statement (one line):** For the fixed-torus production `q^-4` Gaussian and
+any one fixed common-even regulator family with multiplier bound `M_R`, every
+deterministic spatial PSD `L2` matrix background has an exact centred-Gaussian
+`det_2` formula and cutoff-uniform Schatten-2 bound with explicit `M_R^4`;
+therefore an independent Gaussian coefficient field and derivative carrier
+define a product-space model with all fixed-p negative-exponential moments and
+a full-sequence finite-volume limit.
+
+**Proven in:** `A8-CLASSII-DECOUPLED-NELSON-BOUND`, proof note v1.0,
+hash-pinned manifest, primary 21/21 spatial-operator audit, non-importing
+independent 15/15 determinant/divergence audit, and integrated 54/54 verifier.
+
+**Reuse scope:** A cutoff-uniform determinant lemma for spatially varying
+positive matrix coefficients over a fourth-order Gaussian covariance, plus a
+constructive product-Gaussian application in which a positive sextic absorbs
+the determinant quartic. The finite-cutoff Gaussian-divergence identity also
+fixes the correct Cameron--Martin geometry for the physical successor. The
+result does not identify coefficient and derivative fields, prove the
+self-coupled A7 measure, rule out extra interacting counterterms, remove the
+density floor, or take infinite volume.
+
+**Tier:** T5 PINNED-CLOSURE@INDEPENDENT-DERIVATIVE-PRODUCT-GAUSSIAN. The
+contractive `M_R=1` executable enclosure gives
+`C_A=36.4264479777321`, `beta_B=0.256499999999936`, and
+`K_B=0.599144492990436`; general fixed families carry the analytic `M_R^4`
+factor. The full nonlinear finite-dimensional divergence check has maximum
+common-even residual below `6.1e-13`, while the parity-breaking control has
+minimum gap above `9.4e-2`.
+
+**Publication target:** A short operator/probability lemma paired with the
+future self-coupled Class-II construction. The next theorem must prove the
+dyadic adapted-drift commutator or an alternative sufficient smart-path bound.
 
 <a id="r-051"></a>
 ### R-051 -- literal Class-II leading-counterterm no-go and local bare-proxy split

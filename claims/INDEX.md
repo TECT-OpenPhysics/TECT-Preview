@@ -25,6 +25,7 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `A6-CLASSII-K-COMPOSITE-DEFINITION` | T5 | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | (all notes) (1) | [INDEX](A6-CLASSII-K-COMPOSITE-DEFINITION/INDEX.md) |
 | `A6-CLASSII-UV-POWER-COUNTING` | T4 | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | (all notes) (1) | [INDEX](A6-CLASSII-UV-POWER-COUNTING/INDEX.md) |
 | `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE` | T5 | — | A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | (all notes) (1) | [INDEX](A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/INDEX.md) |
+| `A8-CLASSII-DECOUPLED-NELSON-BOUND` | T5 | — | A7-CLASSII-SELF-COUPLING-INTERPOLATION | (all notes) (1) | [INDEX](A8-CLASSII-DECOUPLED-NELSON-BOUND/INDEX.md) |
 
 ## Sector B — Vacuum / Reading Selection
 
@@ -79,4 +80,4 @@ Top-down map of the proof of record. Start here, drill into a claim's `INDEX.md`
 | `F2-BARYOGENESIS` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 | `F3-INFLATION-CMB` | T1 | — | GAP-4 | _scaffold (no notes yet)_ | — |
 
-<!-- generated 2026-07-20T10:32:33Z by build_index.py v1.0.1 -->
+<!-- generated 2026-07-20T13:31:13Z by build_index.py v1.0.1 -->
