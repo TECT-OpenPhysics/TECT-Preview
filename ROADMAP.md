@@ -69,9 +69,13 @@ backgrounds satisfy a cutoff-uniform `det_2`/Schatten estimate, and independent
 Gaussian coefficient and derivative fields have all fixed-p Nelson moments and
 a full-sequence finite-volume product-measure limit. The required `M_R^4`
 regulator factor is explicit. This does not identify the two Gaussian fields.
-Open work is the self-coupled adapted-drift or smart-path commutator estimate
-needed for the physical interacting Gibbs measure and the separate branch-aware
-bare-concentration theorem. Parameter identity,
+`A9-CLASSII-SMART-PATH-CANCELLATION` then closes at scoped T5 the exact
+independent-to-self-coupled interpolation algebra, removes the apparent
+Schatten-1 terms, and proves an arbitrary-source noncentral frozen-shell bound
+with summable `2^(-j)` cost. The remaining constructive obstruction is the
+uniform tilted-law coefficient-increment form bound, not the finite-cutoff
+smart-path identity or frozen-shell determinant. The separate branch-aware
+bare-concentration theorem also remains open. Parameter identity,
 regulariser removal, infinite volume, phase transition, BCC, and T7 remain
 outside the current Sector-A theorem.
 
@@ -160,10 +164,11 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A7-CLASSII-SELF-COUPLING-INTERPOLATION** — the arbitrary spatial
-   deterministic-background and independent-carrier endpoint is closed in A8;
-   now prove the dyadic frozen-background commutator bound under every adapted
-   drift, or an alternative sufficient smart-path positive-variation bound.
+2. **A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND** — A9 closes the exact
+   self-coupling interpolation reduction and the arbitrary-source noncentral
+   frozen-shell determinant. Now prove the cutoff-uniform entropy--sextic form
+   bound for the exact dyadic coefficient increment under every tilted law, or
+   close a different sufficient route with the same counterterm accounting.
    Only then derive the self-coupled `p>1` estimate, interacting-density
    convergence, tightness, and fixed-volume full three-component Gibbs limit.
 3. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A9 exact smart-path cancellation and frozen-shell theorem closed at scoped T5] - 2026-07-20
+
+Added the hash-pinned A9 package. Exact finite-cutoff interpolation cancels apparent trace-class terms into Schatten-2 structure; the arbitrary-source noncentral frozen-shell determinant has a summable q^-4 dyadic cost. Primary 24/24, non-importing independent 17/17, and integrated 58/58 audits pass. The self-coupled Nelson estimate is not claimed: A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND remains open.
+
 ## [Complete the A8 closure record after empty-stdin body loss] - 2026-07-20
 
 The immediately preceding A8 entry was appended with an empty body because changelog.py preferred an exposed but empty non-interactive stdin stream over --body. Version 1.0.1 now falls back to --body when stdin is empty. This append-only correction records the complete result: A8 is scoped T5 only for the independent coefficient/derivative product-Gaussian model; arbitrary deterministic spatial PSD L2 backgrounds satisfy the exact det_2 formula and M_R^4 Schatten bound; the positive sextic yields all fixed-p moments and full-sequence finite-volume convergence. Primary 21/21, independent 15/15, and integrated 54/54 pass. The six-page PDF passes form, zero overfull, and visual QA. The physical A7 self-coupled measure remains open at A7-CLASSII-SELF-COUPLING-INTERPOLATION.

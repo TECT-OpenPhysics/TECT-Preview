@@ -1,0 +1,566 @@
+{
+  "schema": "tect/a9-classii-smart-path-primary-result/1.0",
+  "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+  "script_version": "1.0.0",
+  "verdict": "A9-CLASSII-SMART-PATH-PRIMARY-PASS",
+  "manifest_sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+  "config": {
+    "p": 1.4,
+    "partition_quadrature_order": 9,
+    "conditional_quadrature_order": 11,
+    "interpolation_t_values": [
+      0.22,
+      0.51,
+      0.79
+    ],
+    "negative_control_t": 0.47
+  },
+  "config_sha256": "c2fe4bf4935d030dfa78a4794c0649133bc6ed4259c1d2b2c43ccea526cea9ef",
+  "derived": {
+    "local_cross_covariances": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "conditional_determinant": [
+      {
+        "t": 0.2,
+        "direct": 1.0394657175069213,
+        "formula": 1.0394657175069217,
+        "absolute_error": 4.440892098500626e-16
+      },
+      {
+        "t": 0.6,
+        "direct": 1.0200640514439554,
+        "formula": 1.020064051443956,
+        "absolute_error": 6.661338147750939e-16
+      },
+      {
+        "t": 1.0,
+        "direct": 1.0014663289131625,
+        "formula": 1.0014663289131631,
+        "absolute_error": 6.661338147750939e-16
+      }
+    ],
+    "noncentral_shell": {
+      "direct_log_moment": -0.05619026789349553,
+      "formula": -0.056190267893495835,
+      "absolute_error": 3.0531133177191805e-16,
+      "source_remainder": -0.07973747708650243,
+      "hs_upper": 0.027487495699999993,
+      "bound_gap": 0.08367776359349582
+    },
+    "interpolation": [
+      {
+        "log_partition": -0.20675843672091782,
+        "raw_expectation": -0.033290026712343615,
+        "cancellation_expectation": -0.033291116129775776,
+        "maximum_trace_decomposition_error": 3.552713678800501e-15,
+        "maximum_divergence_bound_excess": 0.0,
+        "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+        "t": 0.22,
+        "finite_difference": -0.03329002675890591,
+        "raw_fd_error": 4.656229568578141e-11,
+        "cancel_fd_error": 1.0893708698653248e-06,
+        "raw_cancel_error": 1.0894174321610106e-06
+      },
+      {
+        "log_partition": -0.2161809079402563,
+        "raw_expectation": -0.031776222765667606,
+        "cancellation_expectation": -0.03176407443981561,
+        "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+        "maximum_divergence_bound_excess": 0.0,
+        "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+        "t": 0.51,
+        "finite_difference": -0.03177622279942893,
+        "raw_fd_error": 3.37613270673387e-11,
+        "cancel_fd_error": 1.214835961332178e-05,
+        "raw_cancel_error": 1.2148325851994712e-05
+      },
+      {
+        "log_partition": -0.2249231259053156,
+        "raw_expectation": -0.030725556922897954,
+        "cancellation_expectation": -0.03071557407978248,
+        "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+        "maximum_divergence_bound_excess": 0.0,
+        "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+        "t": 0.79,
+        "finite_difference": -0.030725556947677757,
+        "raw_fd_error": 2.4779803209362683e-11,
+        "cancel_fd_error": 9.982867895275138e-06,
+        "raw_cancel_error": 9.982843115471929e-06
+      }
+    ],
+    "asymmetric_control": {
+      "log_partition": -0.2150656360858592,
+      "raw_expectation": -0.030777724515836234,
+      "cancellation_expectation": -0.030733372547135856,
+      "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+      "maximum_divergence_bound_excess": 0.014724029013948516,
+      "minimum_operator_eigenvalue": -1.9608624381741014e-15
+    },
+    "physical_constants": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "beta_B": 0.2564999999999359,
+      "beta_DB_linear": 1.1429999999997142,
+      "c_symbol": 0.10836453058711468,
+      "lattice_sum_upper": 1752.0684950182842,
+      "kappa_zero_upper": 23.684009616377335
+    },
+    "theorem": {
+      "smart_path": "For independent standard white noises x,y, z_s=s*x+sqrt(1-s^2)*y, T(x)=G^*M_B(Kx)G>=0, and H_s=U(Kx)+(z_s^T T(x) z_s-Tr T(x))/2, Phi_Lambda(s)=log E exp(-p H_s) has the exact finite-cutoff Gaussian covariance derivative recorded in the proof note.",
+      "conditional_determinant": "With t=1-s^2, R_t=(I+p*t*T)^(-1), and S_t=T*R_t, integrating y gives W_t=-pU-(1/2)log det_2(I+p*t*T)+p(1-t)[Tr T-x^T S_t x]/2.",
+      "cancelled_derivative": "Gaussian integration by parts yields d_t Phi=(p/2) E_nu[-p<DU,S_t x>+<a_t,S_t x>+<div S_t,x>], where a_t is the explicit DB term. The apparent positive ||S_t x||^2 term cancels exactly.",
+      "trace_reduction": "Tr T_i-x^T R_t T_i R_t x=Tr[(I-R_t^2)T_i]-{x^T R_t T_i R_t x-Tr(R_t T_i R_t)}. Since I-R_t^2=p*t*S_t(I+R_t), only Schatten-2 pairings and centered Hilbert-Schmidt quadratics remain.",
+      "common_even_divergence": "The exact same-point identity D_x C_Lambda(x,y)|_(y=x)=0 gives div T=0 and div S_t=-p*t contraction_i(S_t T_i R_t), hence ||div S_t||<=p*t||S_t||_S2(sum_i||T_i||_S2^2)^(1/2).",
+      "physical_derivative_bound": "At fixed positive rho floor, B is C-infinity with quadratic growth and DB has linear growth. A8's trace-ideal bound and trace-class value covariance imply a cutoff-uniform bound on sum_i||T_i||_S2^2 by a constant times int(1+|X|)^2.",
+      "noncentral_frozen_shell": "For A=M_b^(1/2)G_j, T=A^*A, q=M_b^(1/2)a, and Q=(||q+A xi_j||^2-Tr T)/2, log E exp(-pQ) equals [pTrT-log det(I+pT)]/2-p||q||^2/2+p^2<A^*q,(I+pT)^(-1)A^*q>/2 and is at most p^2||T||_S2^2/4.",
+      "entropy_form": "For every conditional law nu_j and eta>0, E_nu Q>=-eta H(nu_j|gamma_j)-||T||_S2^2/(4eta).",
+      "dyadic_gain": "For a q^-4 covariance and a dyadic annulus j, ||T_j,b||_S2^2<=C_sh(L) M_R^4 c_symbol^(-2) 2^(-j)||b||_L2^2. Thus the frozen-shell determinant costs are summable and are quartic in the coefficient field.",
+      "independent_shift": "For every deterministic Cameron-Martin shift h, or h independent of X_Lambda, E V_Lambda^ren(X_Lambda+h)=(1/2)sum_i int E[(D_i h)^T B(X_Lambda+h)D_i h]>=0. Only genuine same-noise adapted dependence can create the unresolved negative contribution."
+    }
+  },
+  "assertions": [
+    {
+      "name": "authority_a7_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    {
+      "name": "authority_a8_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+      "expected": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382"
+    },
+    {
+      "name": "common_even_local_value_derivative_covariance_vanishes",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": 1e-14
+    },
+    {
+      "name": "coefficient_operator_is_positive_semidefinite",
+      "status": "PASS",
+      "actual": [
+        -5.101846813173045e-19,
+        1.1475429473172951e-05,
+        0.01608760489961347,
+        0.05358454825941336
+      ],
+      "expected": ">=0"
+    },
+    {
+      "name": "analytic_operator_derivatives_match_central_difference",
+      "status": "PASS",
+      "actual": 7.269865265335795e-12,
+      "expected": 2e-08
+    },
+    {
+      "name": "common_even_operator_divergence_is_zero",
+      "status": "PASS",
+      "actual": [
+        -4.336808689942018e-19,
+        1.734723475976807e-18,
+        8.673617379884035e-19,
+        0.0
+      ],
+      "expected": 2e-12
+    },
+    {
+      "name": "conditional_noncentral_determinant_matches_gauss_hermite",
+      "status": "PASS",
+      "actual": [
+        {
+          "t": 0.2,
+          "direct": 1.0394657175069213,
+          "formula": 1.0394657175069217,
+          "absolute_error": 4.440892098500626e-16
+        },
+        {
+          "t": 0.6,
+          "direct": 1.0200640514439554,
+          "formula": 1.020064051443956,
+          "absolute_error": 6.661338147750939e-16
+        },
+        {
+          "t": 1.0,
+          "direct": 1.0014663289131625,
+          "formula": 1.0014663289131631,
+          "absolute_error": 6.661338147750939e-16
+        }
+      ],
+      "expected": 2e-09
+    },
+    {
+      "name": "noncentral_shell_formula_matches_direct_quadrature",
+      "status": "PASS",
+      "actual": {
+        "direct_log_moment": -0.05619026789349553,
+        "formula": -0.056190267893495835,
+        "absolute_error": 3.0531133177191805e-16,
+        "source_remainder": -0.07973747708650243,
+        "hs_upper": 0.027487495699999993,
+        "bound_gap": 0.08367776359349582
+      },
+      "expected": 2e-09
+    },
+    {
+      "name": "noncentral_source_term_is_nonpositive",
+      "status": "PASS",
+      "actual": -0.07973747708650243,
+      "expected": "<=0"
+    },
+    {
+      "name": "noncentral_shell_log_moment_obeys_HS_bound",
+      "status": "PASS",
+      "actual": 0.08367776359349582,
+      "expected": ">=0"
+    },
+    {
+      "name": "raw_smart_path_derivative_matches_partition_difference",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.20675843672091782,
+          "raw_expectation": -0.033290026712343615,
+          "cancellation_expectation": -0.033291116129775776,
+          "maximum_trace_decomposition_error": 3.552713678800501e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.22,
+          "finite_difference": -0.03329002675890591,
+          "raw_fd_error": 4.656229568578141e-11,
+          "cancel_fd_error": 1.0893708698653248e-06,
+          "raw_cancel_error": 1.0894174321610106e-06
+        },
+        {
+          "log_partition": -0.2161809079402563,
+          "raw_expectation": -0.031776222765667606,
+          "cancellation_expectation": -0.03176407443981561,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.51,
+          "finite_difference": -0.03177622279942893,
+          "raw_fd_error": 3.37613270673387e-11,
+          "cancel_fd_error": 1.214835961332178e-05,
+          "raw_cancel_error": 1.2148325851994712e-05
+        },
+        {
+          "log_partition": -0.2249231259053156,
+          "raw_expectation": -0.030725556922897954,
+          "cancellation_expectation": -0.03071557407978248,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.79,
+          "finite_difference": -0.030725556947677757,
+          "raw_fd_error": 2.4779803209362683e-11,
+          "cancel_fd_error": 9.982867895275138e-06,
+          "raw_cancel_error": 9.982843115471929e-06
+        }
+      ],
+      "expected": 3e-05
+    },
+    {
+      "name": "gaussian_IBP_cancellation_matches_partition_difference",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.20675843672091782,
+          "raw_expectation": -0.033290026712343615,
+          "cancellation_expectation": -0.033291116129775776,
+          "maximum_trace_decomposition_error": 3.552713678800501e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.22,
+          "finite_difference": -0.03329002675890591,
+          "raw_fd_error": 4.656229568578141e-11,
+          "cancel_fd_error": 1.0893708698653248e-06,
+          "raw_cancel_error": 1.0894174321610106e-06
+        },
+        {
+          "log_partition": -0.2161809079402563,
+          "raw_expectation": -0.031776222765667606,
+          "cancellation_expectation": -0.03176407443981561,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.51,
+          "finite_difference": -0.03177622279942893,
+          "raw_fd_error": 3.37613270673387e-11,
+          "cancel_fd_error": 1.214835961332178e-05,
+          "raw_cancel_error": 1.2148325851994712e-05
+        },
+        {
+          "log_partition": -0.2249231259053156,
+          "raw_expectation": -0.030725556922897954,
+          "cancellation_expectation": -0.03071557407978248,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.79,
+          "finite_difference": -0.030725556947677757,
+          "raw_fd_error": 2.4779803209362683e-11,
+          "cancel_fd_error": 9.982867895275138e-06,
+          "raw_cancel_error": 9.982843115471929e-06
+        }
+      ],
+      "expected": 3e-05
+    },
+    {
+      "name": "raw_and_cancelled_derivatives_agree",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.20675843672091782,
+          "raw_expectation": -0.033290026712343615,
+          "cancellation_expectation": -0.033291116129775776,
+          "maximum_trace_decomposition_error": 3.552713678800501e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.22,
+          "finite_difference": -0.03329002675890591,
+          "raw_fd_error": 4.656229568578141e-11,
+          "cancel_fd_error": 1.0893708698653248e-06,
+          "raw_cancel_error": 1.0894174321610106e-06
+        },
+        {
+          "log_partition": -0.2161809079402563,
+          "raw_expectation": -0.031776222765667606,
+          "cancellation_expectation": -0.03176407443981561,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.51,
+          "finite_difference": -0.03177622279942893,
+          "raw_fd_error": 3.37613270673387e-11,
+          "cancel_fd_error": 1.214835961332178e-05,
+          "raw_cancel_error": 1.2148325851994712e-05
+        },
+        {
+          "log_partition": -0.2249231259053156,
+          "raw_expectation": -0.030725556922897954,
+          "cancellation_expectation": -0.03071557407978248,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.79,
+          "finite_difference": -0.030725556947677757,
+          "raw_fd_error": 2.4779803209362683e-11,
+          "cancel_fd_error": 9.982867895275138e-06,
+          "raw_cancel_error": 9.982843115471929e-06
+        }
+      ],
+      "expected": 3e-05
+    },
+    {
+      "name": "IBP_quadrature_error_contracts_at_higher_order",
+      "status": "PASS",
+      "actual": {
+        "coarse": [
+          0.001835960644343243,
+          0.0016715330503315681,
+          0.0015440991980729263
+        ],
+        "fine": [
+          1.0894174321610106e-06,
+          1.2148325851994712e-05,
+          9.982843115471929e-06
+        ]
+      },
+      "expected": "fine < 0.05 * coarse"
+    },
+    {
+      "name": "trace_difference_is_only_HS_pairing_plus_centered_quadratic",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.20675843672091782,
+          "raw_expectation": -0.033290026712343615,
+          "cancellation_expectation": -0.033291116129775776,
+          "maximum_trace_decomposition_error": 3.552713678800501e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.22,
+          "finite_difference": -0.03329002675890591,
+          "raw_fd_error": 4.656229568578141e-11,
+          "cancel_fd_error": 1.0893708698653248e-06,
+          "raw_cancel_error": 1.0894174321610106e-06
+        },
+        {
+          "log_partition": -0.2161809079402563,
+          "raw_expectation": -0.031776222765667606,
+          "cancellation_expectation": -0.03176407443981561,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.51,
+          "finite_difference": -0.03177622279942893,
+          "raw_fd_error": 3.37613270673387e-11,
+          "cancel_fd_error": 1.214835961332178e-05,
+          "raw_cancel_error": 1.2148325851994712e-05
+        },
+        {
+          "log_partition": -0.2249231259053156,
+          "raw_expectation": -0.030725556922897954,
+          "cancellation_expectation": -0.03071557407978248,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.79,
+          "finite_difference": -0.030725556947677757,
+          "raw_fd_error": 2.4779803209362683e-11,
+          "cancel_fd_error": 9.982867895275138e-06,
+          "raw_cancel_error": 9.982843115471929e-06
+        }
+      ],
+      "expected": 2e-11
+    },
+    {
+      "name": "divergence_S_obeys_HS_bound",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.20675843672091782,
+          "raw_expectation": -0.033290026712343615,
+          "cancellation_expectation": -0.033291116129775776,
+          "maximum_trace_decomposition_error": 3.552713678800501e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.22,
+          "finite_difference": -0.03329002675890591,
+          "raw_fd_error": 4.656229568578141e-11,
+          "cancel_fd_error": 1.0893708698653248e-06,
+          "raw_cancel_error": 1.0894174321610106e-06
+        },
+        {
+          "log_partition": -0.2161809079402563,
+          "raw_expectation": -0.031776222765667606,
+          "cancellation_expectation": -0.03176407443981561,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.51,
+          "finite_difference": -0.03177622279942893,
+          "raw_fd_error": 3.37613270673387e-11,
+          "cancel_fd_error": 1.214835961332178e-05,
+          "raw_cancel_error": 1.2148325851994712e-05
+        },
+        {
+          "log_partition": -0.2249231259053156,
+          "raw_expectation": -0.030725556922897954,
+          "cancellation_expectation": -0.03071557407978248,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.79,
+          "finite_difference": -0.030725556947677757,
+          "raw_fd_error": 2.4779803209362683e-11,
+          "cancel_fd_error": 9.982867895275138e-06,
+          "raw_cancel_error": 9.982843115471929e-06
+        }
+      ],
+      "expected": "excess<=0"
+    },
+    {
+      "name": "asymmetric_regulator_breaks_local_evenness",
+      "status": "PASS",
+      "actual": [
+        0.11519999999999997,
+        0.1152,
+        0.11519999999999991
+      ],
+      "expected": ">0.002"
+    },
+    {
+      "name": "asymmetric_regulator_produces_nonzero_divergence_correction",
+      "status": "PASS",
+      "actual": 0.020020851825794155,
+      "expected": ">0.002"
+    },
+    {
+      "name": "physical_B_growth_constant_matches_A8",
+      "status": "PASS",
+      "actual": 0.2564999999999359,
+      "expected": 0.2564999999999359
+    },
+    {
+      "name": "physical_DB_linear_bound_is_finite",
+      "status": "PASS",
+      "actual": 1.1429999999997142,
+      "expected": "finite positive"
+    },
+    {
+      "name": "production_point_covariance_trace_upper_is_finite",
+      "status": "PASS",
+      "actual": 23.684009616377335,
+      "expected": "finite positive"
+    },
+    {
+      "name": "one_shell_noncentral_theorem_is_declared_closed",
+      "status": "PASS",
+      "actual": [
+        "exact finite-cutoff independent-to-self-coupled smart-path covariance derivative",
+        "exact conditional determinant and Gaussian-IBP cancellation formula",
+        "removal of every apparent Schatten-1 trace from the first interpolation derivative",
+        "common-even div T cancellation and Schatten-2 div S bound",
+        "cutoff-uniform unweighted Hilbert-Schmidt structure at fixed floor",
+        "exact arbitrary-source noncentral frozen-shell determinant and entropy theorem",
+        "dyadic 2^(-j) frozen-shell Schatten gain",
+        "nonnegativity under deterministic or independent Cameron-Martin translations"
+      ],
+      "expected": "declared"
+    },
+    {
+      "name": "tilted_commutator_bound_remains_excluded",
+      "status": "PASS",
+      "actual": [
+        "the uniform tilted-law commutator entropy form bound",
+        "the self-coupled A7 Nelson negative-exponential estimate",
+        "the full self-coupled three-component Gibbs measure",
+        "proof that no counterterm can arise in later all-scale tilted-law analysis",
+        "rho_regularizer removal",
+        "asymmetric or component-split regulator universality",
+        "infinite volume, phase transition, BCC existence or selection",
+        "T6 or T7 status"
+      ],
+      "expected": "explicit exclusion"
+    },
+    {
+      "name": "remaining_gate_is_named",
+      "status": "PASS",
+      "actual": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND",
+      "expected": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 24,
+    "total": 24
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "debd4a3f954ca44e489c2d35efc042905403e9e6",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "the uniform tilted-law commutator entropy form bound",
+    "the self-coupled A7 Nelson negative-exponential estimate",
+    "the full self-coupled three-component Gibbs measure",
+    "proof that no counterterm can arise in later all-scale tilted-law analysis",
+    "rho_regularizer removal",
+    "asymmetric or component-split regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7 status"
+  ]
+}

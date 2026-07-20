@@ -5,7 +5,7 @@
 
 Generated: 2026-07-20
 
-**44 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 4 · T5: 9 · T6: 15 · T7: 3 · T7-candidates: 3 · refuted: 1
+**45 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 4 · T5: 10 · T6: 15 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -31,6 +31,7 @@ reproduction commands, and history live on the claim cards.
 | [A6-CLASSII-UV-POWER-COUNTING](claims/A6-CLASSII-UV-POWER-COUNTING/claim.md) | Full derivative Class-II Gaussian UV power counting and leading contraction | T4 | ACTIVE | ANALYTIC, EXACT, EXECUTED | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION |
 | [A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE](claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/claim.md) | Covariance-normal-ordered full three-component Class-II energy composite | T5 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | — | A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION |
 | [A8-CLASSII-DECOUPLED-NELSON-BOUND](claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/claim.md) | Decoupled Class-II Nelson bound with spatial PSD backgrounds | T5 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | — | A7-CLASSII-SELF-COUPLING-INTERPOLATION |
+| [A9-CLASSII-SMART-PATH-CANCELLATION](claims/A9-CLASSII-SMART-PATH-CANCELLATION/claim.md) | Exact Class-II smart-path cancellation and noncentral frozen-shell control | T5 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | — | A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND |
 
 ## Sector B — Vacuum / Reading Selection
 

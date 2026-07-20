@@ -18,8 +18,8 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 41
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-046** A7: prove the self-coupled Nelson/Boue-Dupuis exponential bound and construct the fixed-volume Gibbs limit  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE; gate: A7-CLASSII-SELF-COUPLING-INTERPOLATION)_
-  - A8 closes at scoped T5 the arbitrary spatial PSD-background det_2/Schatten theorem and independent coefficient/derivative product-Gaussian Nelson limit (21/21 + 15/15; integrated 54/54). A7 remains self-coupled. Next prove a dyadic frozen-background commutator bound uniformly under every adapted Cameron-Martin drift, or an alternative sufficient smart-path positive-variation bound; register any surviving local counterterm. Keep rho-floor removal and infinite volume separate.
+- **T-046** A7: prove the tilted-law commutator form bound, then construct the fixed-volume Gibbs limit  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE; gate: A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND)_
+  - A9 closes at scoped T5 the exact self-coupling smart-path cancellation and arbitrary-source noncentral frozen-shell theorem (primary 24/24, independent 17/17, integrated 58/58). The umbrella self-coupled Nelson estimate remains open: prove the cutoff-uniform entropy-sextic bound for the exact dyadic coefficient increment under every tilted law, or an alternative sufficient route with explicit counterterm accounting. Keep rho-floor removal and infinite volume separate.
   - _updated 2026-07-20_
 
 ## Done (recent)

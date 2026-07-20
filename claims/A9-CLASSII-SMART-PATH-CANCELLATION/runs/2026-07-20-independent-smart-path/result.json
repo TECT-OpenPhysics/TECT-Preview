@@ -1,0 +1,407 @@
+{
+  "schema": "tect/a9-classii-smart-path-independent-result/1.0",
+  "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+  "script_version": "1.0.0",
+  "verdict": "A9-CLASSII-SMART-PATH-INDEPENDENT-PASS",
+  "manifest_sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+  "derived": {
+    "parity": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "interpolation": [
+      {
+        "log_partition": -0.19351268932617915,
+        "raw": -0.06101997766927273,
+        "cancelled": -0.06101694795464367,
+        "without_divergence": -0.06552520451830482,
+        "decomposition_error": 3.552713678800501e-15,
+        "finite_difference": -0.061019977717624574,
+        "raw_error": 4.8351843362492986e-11,
+        "cancelled_error": 3.0297629809022952e-06,
+        "raw_cancelled_error": 3.0297146290589327e-06,
+        "t": 0.19
+      },
+      {
+        "log_partition": -0.21040561547609776,
+        "raw": -0.055802047569660916,
+        "cancelled": -0.05579664295192409,
+        "without_divergence": -0.06484730355964434,
+        "decomposition_error": 1.7763568394002505e-15,
+        "finite_difference": -0.055802047599778914,
+        "raw_error": 3.011799837304707e-11,
+        "cancelled_error": 5.404647854825861e-06,
+        "raw_cancelled_error": 5.404617736827488e-06,
+        "t": 0.48
+      },
+      {
+        "log_partition": -0.22913166561248005,
+        "raw": -0.05148181841791299,
+        "cancelled": -0.0514747757042929,
+        "without_divergence": -0.06379155575265402,
+        "decomposition_error": 2.220446049250313e-15,
+        "finite_difference": -0.05148181843495081,
+        "raw_error": 1.7037822541698944e-11,
+        "cancelled_error": 7.042730657907947e-06,
+        "raw_cancelled_error": 7.042713620085406e-06,
+        "t": 0.83
+      }
+    ],
+    "noncentral_shell": {
+      "formula": -0.030104977912382917,
+      "direct": -0.03010497791238344,
+      "error": 5.238864897449957e-16,
+      "source_part": -0.04246155805063167,
+      "ceiling": 0.013753203100000007,
+      "ceiling_gap": 0.043858181012382924
+    },
+    "deterministic_shift": {
+      "exact": 0.021682567583073326,
+      "expanded": 0.021682567583073346,
+      "error": 2.0816681711721685e-17
+    },
+    "odd_control": {
+      "parity": [
+        0.15,
+        0.1499999999999999,
+        0.15000000000000002,
+        0.15
+      ],
+      "result": {
+        "log_partition": -0.2147049076555958,
+        "raw": -0.0518883228244747,
+        "cancelled": -0.05188189145049961,
+        "without_divergence": -0.06762261048691404,
+        "decomposition_error": 2.220446049250313e-15
+      }
+    }
+  },
+  "assertions": [
+    {
+      "name": "independent_authority_production_functional_manifest_hash",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "independent_authority_a8_manifest_hash",
+      "status": "PASS",
+      "actual": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+      "expected": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382"
+    },
+    {
+      "name": "independent_common_even_parity",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": 2e-12
+    },
+    {
+      "name": "independent_raw_derivative",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.19351268932617915,
+          "raw": -0.06101997766927273,
+          "cancelled": -0.06101694795464367,
+          "without_divergence": -0.06552520451830482,
+          "decomposition_error": 3.552713678800501e-15,
+          "finite_difference": -0.061019977717624574,
+          "raw_error": 4.8351843362492986e-11,
+          "cancelled_error": 3.0297629809022952e-06,
+          "raw_cancelled_error": 3.0297146290589327e-06,
+          "t": 0.19
+        },
+        {
+          "log_partition": -0.21040561547609776,
+          "raw": -0.055802047569660916,
+          "cancelled": -0.05579664295192409,
+          "without_divergence": -0.06484730355964434,
+          "decomposition_error": 1.7763568394002505e-15,
+          "finite_difference": -0.055802047599778914,
+          "raw_error": 3.011799837304707e-11,
+          "cancelled_error": 5.404647854825861e-06,
+          "raw_cancelled_error": 5.404617736827488e-06,
+          "t": 0.48
+        },
+        {
+          "log_partition": -0.22913166561248005,
+          "raw": -0.05148181841791299,
+          "cancelled": -0.0514747757042929,
+          "without_divergence": -0.06379155575265402,
+          "decomposition_error": 2.220446049250313e-15,
+          "finite_difference": -0.05148181843495081,
+          "raw_error": 1.7037822541698944e-11,
+          "cancelled_error": 7.042730657907947e-06,
+          "raw_cancelled_error": 7.042713620085406e-06,
+          "t": 0.83
+        }
+      ],
+      "expected": 1e-05
+    },
+    {
+      "name": "independent_cancelled_derivative",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.19351268932617915,
+          "raw": -0.06101997766927273,
+          "cancelled": -0.06101694795464367,
+          "without_divergence": -0.06552520451830482,
+          "decomposition_error": 3.552713678800501e-15,
+          "finite_difference": -0.061019977717624574,
+          "raw_error": 4.8351843362492986e-11,
+          "cancelled_error": 3.0297629809022952e-06,
+          "raw_cancelled_error": 3.0297146290589327e-06,
+          "t": 0.19
+        },
+        {
+          "log_partition": -0.21040561547609776,
+          "raw": -0.055802047569660916,
+          "cancelled": -0.05579664295192409,
+          "without_divergence": -0.06484730355964434,
+          "decomposition_error": 1.7763568394002505e-15,
+          "finite_difference": -0.055802047599778914,
+          "raw_error": 3.011799837304707e-11,
+          "cancelled_error": 5.404647854825861e-06,
+          "raw_cancelled_error": 5.404617736827488e-06,
+          "t": 0.48
+        },
+        {
+          "log_partition": -0.22913166561248005,
+          "raw": -0.05148181841791299,
+          "cancelled": -0.0514747757042929,
+          "without_divergence": -0.06379155575265402,
+          "decomposition_error": 2.220446049250313e-15,
+          "finite_difference": -0.05148181843495081,
+          "raw_error": 1.7037822541698944e-11,
+          "cancelled_error": 7.042730657907947e-06,
+          "raw_cancelled_error": 7.042713620085406e-06,
+          "t": 0.83
+        }
+      ],
+      "expected": 1e-05
+    },
+    {
+      "name": "independent_raw_cancelled_agreement",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.19351268932617915,
+          "raw": -0.06101997766927273,
+          "cancelled": -0.06101694795464367,
+          "without_divergence": -0.06552520451830482,
+          "decomposition_error": 3.552713678800501e-15,
+          "finite_difference": -0.061019977717624574,
+          "raw_error": 4.8351843362492986e-11,
+          "cancelled_error": 3.0297629809022952e-06,
+          "raw_cancelled_error": 3.0297146290589327e-06,
+          "t": 0.19
+        },
+        {
+          "log_partition": -0.21040561547609776,
+          "raw": -0.055802047569660916,
+          "cancelled": -0.05579664295192409,
+          "without_divergence": -0.06484730355964434,
+          "decomposition_error": 1.7763568394002505e-15,
+          "finite_difference": -0.055802047599778914,
+          "raw_error": 3.011799837304707e-11,
+          "cancelled_error": 5.404647854825861e-06,
+          "raw_cancelled_error": 5.404617736827488e-06,
+          "t": 0.48
+        },
+        {
+          "log_partition": -0.22913166561248005,
+          "raw": -0.05148181841791299,
+          "cancelled": -0.0514747757042929,
+          "without_divergence": -0.06379155575265402,
+          "decomposition_error": 2.220446049250313e-15,
+          "finite_difference": -0.05148181843495081,
+          "raw_error": 1.7037822541698944e-11,
+          "cancelled_error": 7.042730657907947e-06,
+          "raw_cancelled_error": 7.042713620085406e-06,
+          "t": 0.83
+        }
+      ],
+      "expected": 1e-05
+    },
+    {
+      "name": "independent_IBP_quadrature_convergence",
+      "status": "PASS",
+      "actual": {
+        "coarse": [
+          0.0001248781450895603,
+          6.520817504535731e-05,
+          1.1336763275415773e-05
+        ],
+        "fine": [
+          3.0297146290589327e-06,
+          5.404617736827488e-06,
+          7.042713620085406e-06
+        ]
+      },
+      "expected": "fine < 0.08 * coarse"
+    },
+    {
+      "name": "independent_trace_decomposition",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.19351268932617915,
+          "raw": -0.06101997766927273,
+          "cancelled": -0.06101694795464367,
+          "without_divergence": -0.06552520451830482,
+          "decomposition_error": 3.552713678800501e-15,
+          "finite_difference": -0.061019977717624574,
+          "raw_error": 4.8351843362492986e-11,
+          "cancelled_error": 3.0297629809022952e-06,
+          "raw_cancelled_error": 3.0297146290589327e-06,
+          "t": 0.19
+        },
+        {
+          "log_partition": -0.21040561547609776,
+          "raw": -0.055802047569660916,
+          "cancelled": -0.05579664295192409,
+          "without_divergence": -0.06484730355964434,
+          "decomposition_error": 1.7763568394002505e-15,
+          "finite_difference": -0.055802047599778914,
+          "raw_error": 3.011799837304707e-11,
+          "cancelled_error": 5.404647854825861e-06,
+          "raw_cancelled_error": 5.404617736827488e-06,
+          "t": 0.48
+        },
+        {
+          "log_partition": -0.22913166561248005,
+          "raw": -0.05148181841791299,
+          "cancelled": -0.0514747757042929,
+          "without_divergence": -0.06379155575265402,
+          "decomposition_error": 2.220446049250313e-15,
+          "finite_difference": -0.05148181843495081,
+          "raw_error": 1.7037822541698944e-11,
+          "cancelled_error": 7.042730657907947e-06,
+          "raw_cancelled_error": 7.042713620085406e-06,
+          "t": 0.83
+        }
+      ],
+      "expected": 2e-12
+    },
+    {
+      "name": "independent_noncentral_shell_formula",
+      "status": "PASS",
+      "actual": {
+        "formula": -0.030104977912382917,
+        "direct": -0.03010497791238344,
+        "error": 5.238864897449957e-16,
+        "source_part": -0.04246155805063167,
+        "ceiling": 0.013753203100000007,
+        "ceiling_gap": 0.043858181012382924
+      },
+      "expected": 1e-05
+    },
+    {
+      "name": "independent_noncentral_source_nonpositive",
+      "status": "PASS",
+      "actual": -0.04246155805063167,
+      "expected": "<=0"
+    },
+    {
+      "name": "independent_noncentral_HS_ceiling",
+      "status": "PASS",
+      "actual": 0.043858181012382924,
+      "expected": ">=0"
+    },
+    {
+      "name": "deterministic_shift_expectation_is_nonnegative",
+      "status": "PASS",
+      "actual": {
+        "exact": 0.021682567583073326,
+        "expanded": 0.021682567583073346,
+        "error": 2.0816681711721685e-17
+      },
+      "expected": ">=0"
+    },
+    {
+      "name": "deterministic_shift_exact_cancellation",
+      "status": "PASS",
+      "actual": {
+        "exact": 0.021682567583073326,
+        "expanded": 0.021682567583073346,
+        "error": 2.0816681711721685e-17
+      },
+      "expected": 2e-12
+    },
+    {
+      "name": "odd_regulator_breaks_parity",
+      "status": "PASS",
+      "actual": [
+        0.15,
+        0.1499999999999999,
+        0.15000000000000002,
+        0.15
+      ],
+      "expected": ">0.001"
+    },
+    {
+      "name": "odd_regulator_requires_divergence_term",
+      "status": "PASS",
+      "actual": {
+        "log_partition": -0.2147049076555958,
+        "raw": -0.0518883228244747,
+        "cancelled": -0.05188189145049961,
+        "without_divergence": -0.06762261048691404,
+        "decomposition_error": 2.220446049250313e-15
+      },
+      "expected": ">0.001"
+    },
+    {
+      "name": "residual_gate_is_tilted_not_base_law",
+      "status": "PASS",
+      "actual": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND",
+      "expected": "named residual"
+    },
+    {
+      "name": "full_self_coupled_measure_is_excluded",
+      "status": "PASS",
+      "actual": [
+        "the uniform tilted-law commutator entropy form bound",
+        "the self-coupled A7 Nelson negative-exponential estimate",
+        "the full self-coupled three-component Gibbs measure",
+        "proof that no counterterm can arise in later all-scale tilted-law analysis",
+        "rho_regularizer removal",
+        "asymmetric or component-split regulator universality",
+        "infinite volume, phase transition, BCC existence or selection",
+        "T6 or T7 status"
+      ],
+      "expected": "explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 17,
+    "total": 17
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "debd4a3f954ca44e489c2d35efc042905403e9e6",
+    "deterministic": true,
+    "imports_primary": false
+  },
+  "not_closed_here": [
+    "the uniform tilted-law commutator entropy form bound",
+    "the self-coupled A7 Nelson negative-exponential estimate",
+    "the full self-coupled three-component Gibbs measure",
+    "proof that no counterterm can arise in later all-scale tilted-law analysis",
+    "rho_regularizer removal",
+    "asymmetric or component-split regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7 status"
+  ]
+}

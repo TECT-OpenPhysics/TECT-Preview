@@ -1,0 +1,175 @@
+{
+  "schema": "tect/a9-classii-smart-path-cancellation/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+  "frozen_on": "2026-07-20",
+  "status": "T5 CLOSED@EXACT-INTERPOLATION-AND-NONCENTRAL-FROZEN-SHELL",
+  "authority": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "schema": "tect/a1-production-functional-realisation/1.0"
+    },
+    "a7_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "schema": "tect/a7-classii-renormalised-energy/1.1"
+    },
+    "a8_manifest": {
+      "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/classii_decoupled_nelson_manifest.json",
+      "sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+      "schema": "tect/a8-classii-decoupled-nelson/1.0"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a9_classii_smart_path_cancellation.py",
+      "sha256": "f4afc6c96feab1c5ccf6ee2c200a124a0cec9b5b9afb8d380acf4d2c899dd526",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a9_classii_smart_path_cancellation_independent.py",
+      "sha256": "d6cd832fd29376dbf82ae87c76f436591d54a07d736848497b3a998619bc7aee",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a9_classii_smart_path_cancellation_verify.py",
+      "sha256": "7eb381423f2c4e8ffa0847c20993f6b9436d310f0769159edfe031278aad11a1",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/notes/classii-smart-path-cancellation-260720-v1.0.tex.txt",
+      "sha256": "58a04ab27e544ba263a720503fdf507ea433212aa7c99f0f0a4d332596e43ff8",
+      "version": "1.0"
+    },
+    "proof_pdf": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/notes/classii-smart-path-cancellation-260720-v1.0.pdf",
+      "sha256": "664f4a6dc9286d9cc86f4c57d3ea0ec0db8194c8b564a1af26d17ba5ce7e5fef",
+      "version": "1.0",
+      "pages": 6,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS"
+    }
+  },
+  "scope": "Hash-pinned A1 finite-cutoff production Gaussian on L=16, three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, exact/dealiased products, and the common real-even scalar A7 regulator class. The smart-path identities hold at every finite cutoff and pass continuously to both endpoints. The frozen-shell theorem permits an arbitrary past-measurable PSD spatial background and arbitrary past-measurable derivative source. The theorem does not bound the final commutator under the tilted interacting laws.",
+  "theorem": {
+    "smart_path": "For independent standard white noises x,y, z_s=s*x+sqrt(1-s^2)*y, T(x)=G^*M_B(Kx)G>=0, and H_s=U(Kx)+(z_s^T T(x) z_s-Tr T(x))/2, Phi_Lambda(s)=log E exp(-p H_s) has the exact finite-cutoff Gaussian covariance derivative recorded in the proof note.",
+    "conditional_determinant": "With t=1-s^2, R_t=(I+p*t*T)^(-1), and S_t=T*R_t, integrating y gives W_t=-pU-(1/2)log det_2(I+p*t*T)+p(1-t)[Tr T-x^T S_t x]/2.",
+    "cancelled_derivative": "Gaussian integration by parts yields d_t Phi=(p/2) E_nu[-p<DU,S_t x>+<a_t,S_t x>+<div S_t,x>], where a_t is the explicit DB term. The apparent positive ||S_t x||^2 term cancels exactly.",
+    "trace_reduction": "Tr T_i-x^T R_t T_i R_t x=Tr[(I-R_t^2)T_i]-{x^T R_t T_i R_t x-Tr(R_t T_i R_t)}. Since I-R_t^2=p*t*S_t(I+R_t), only Schatten-2 pairings and centered Hilbert-Schmidt quadratics remain.",
+    "common_even_divergence": "The exact same-point identity D_x C_Lambda(x,y)|_(y=x)=0 gives div T=0 and div S_t=-p*t contraction_i(S_t T_i R_t), hence ||div S_t||<=p*t||S_t||_S2(sum_i||T_i||_S2^2)^(1/2).",
+    "physical_derivative_bound": "At fixed positive rho floor, B is C-infinity with quadratic growth and DB has linear growth. A8's trace-ideal bound and trace-class value covariance imply a cutoff-uniform bound on sum_i||T_i||_S2^2 by a constant times int(1+|X|)^2.",
+    "noncentral_frozen_shell": "For A=M_b^(1/2)G_j, T=A^*A, q=M_b^(1/2)a, and Q=(||q+A xi_j||^2-Tr T)/2, log E exp(-pQ) equals [pTrT-log det(I+pT)]/2-p||q||^2/2+p^2<A^*q,(I+pT)^(-1)A^*q>/2 and is at most p^2||T||_S2^2/4.",
+    "entropy_form": "For every conditional law nu_j and eta>0, E_nu Q>=-eta H(nu_j|gamma_j)-||T||_S2^2/(4eta).",
+    "dyadic_gain": "For a q^-4 covariance and a dyadic annulus j, ||T_j,b||_S2^2<=C_sh(L) M_R^4 c_symbol^(-2) 2^(-j)||b||_L2^2. Thus the frozen-shell determinant costs are summable and are quartic in the coefficient field.",
+    "independent_shift": "For every deterministic Cameron-Martin shift h, or h independent of X_Lambda, E V_Lambda^ren(X_Lambda+h)=(1/2)sum_i int E[(D_i h)^T B(X_Lambda+h)D_i h]>=0. Only genuine same-noise adapted dependence can create the unresolved negative contribution."
+  },
+  "remaining_commutator": {
+    "gate": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND",
+    "dyadic_remainder": "C_j=(1/2)int(D phi_j)^T[B(phi_j)-B(phi_(j-1))]D phi_j-(1/2)int Tr[Gamma_<=j(B(phi_j)-B(phi_(j-1)))].",
+    "sufficient_bound": "For every eta>0, uniformly in cutoff J and every tilted law nu, E_nu sum_(j<=J) C_j>=-eta H(nu|gamma_J)-eta E_nu||phi_J||_6^6-C_eta.",
+    "smart_path_equivalent_target": "It is also sufficient to bound the negative variation of the exact cancelled derivative uniformly in Lambda over t in [0,1].",
+    "status": "OPEN. Unshifted Gaussian L2/shell summability is known but does not imply the all-tilted-laws entropy form bound."
+  },
+  "oracles": {
+    "beta_B": 0.2564999999999359,
+    "c_symbol": 0.10836453058711468,
+    "classification": "Derived from the hash-pinned A1/A8 authorities; used only as cross-route equality oracles."
+  },
+  "audit": {
+    "positions": [0.19, 1.07, 2.31],
+    "mode_covariances": [0.75, 0.21],
+    "coefficient_quadratic": 0.18,
+    "coefficient_rational": 0.07,
+    "coefficient_floor": 0.35,
+    "potential_quartic": 0.12,
+    "potential_sextic": 0.18,
+    "p": 1.4,
+    "probe_white": [0.42, -0.31, 0.27, 0.36],
+    "conditional_t_values": [0.2, 0.6, 1.0],
+    "interpolation_t_values": [0.22, 0.51, 0.79],
+    "conditional_quadrature_order": 11,
+    "partition_quadrature_order": 9,
+    "coarse_partition_quadrature_order": 7,
+    "shell_quadrature_order": 24,
+    "shell_matrix": [[0.35, -0.12], [0.18, 0.29], [-0.21, 0.16]],
+    "shell_source": [0.27, -0.19, 0.11],
+    "finite_difference_step": 1e-6,
+    "partition_difference_step": 0.0002,
+    "matrix_tolerance": 1e-11,
+    "even_tolerance": 1e-14,
+    "derivative_tolerance": 2e-8,
+    "divergence_tolerance": 2e-12,
+    "quadrature_tolerance": 2e-9,
+    "partition_tolerance": 0.00003,
+    "quadrature_convergence_factor": 0.05,
+    "trace_tolerance": 2e-11,
+    "constant_tolerance": 1e-14,
+    "asymmetric_mixing": 0.12,
+    "negative_control_t": 0.47,
+    "negative_control_floor": 0.002
+  },
+  "independent_audit": {
+    "independent_positions": [0.17, 1.03, 2.22, 2.91],
+    "independent_floor": 0.42,
+    "independent_strength": 0.25,
+    "independent_quartic": 0.14,
+    "independent_sextic": 0.22,
+    "independent_odd_mixing": 0.15,
+    "p": 1.3,
+    "t_values": [0.19, 0.48, 0.83],
+    "quadrature_order": 60,
+    "coarse_quadrature_order": 30,
+    "difference_step": 0.0001,
+    "tolerance": 2e-12,
+    "derivative_tolerance": 0.00001,
+    "quadrature_convergence_factor": 0.08,
+    "negative_control_t": 0.56,
+    "negative_control_floor": 0.001,
+    "independent_shell_matrix": [[0.31, -0.17], [0.22, 0.28]],
+    "independent_shell_source": [0.24, -0.13],
+    "shift_value": 0.37,
+    "shift_derivative": -0.29,
+    "shift_derivative_variance": 1.8,
+    "shift_quadrature_order": 40
+  },
+  "integrated_audit": {
+    "primary_assertions": 24,
+    "independent_assertions": 17,
+    "cross_assertions": 17,
+    "expected_aggregate_assertions": 58,
+    "source_hash_mode": "SHA-256 fail closed before child execution",
+    "numeric_relative_tolerance": 1e-10
+  },
+  "run_contract": {
+    "primary_result_schema": "tect/a9-classii-smart-path-primary-result/1.0",
+    "independent_result_schema": "tect/a9-classii-smart-path-independent-result/1.0",
+    "integrated_result_schema": "tect/a9-classii-smart-path-integrated-result/1.0"
+  },
+  "references": [
+    "https://doi.org/10.1214/aop/1022855876",
+    "https://arxiv.org/abs/1805.10814"
+  ],
+  "open_followup": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND",
+  "honesty_boundary": {
+    "closed": [
+      "exact finite-cutoff independent-to-self-coupled smart-path covariance derivative",
+      "exact conditional determinant and Gaussian-IBP cancellation formula",
+      "removal of every apparent Schatten-1 trace from the first interpolation derivative",
+      "common-even div T cancellation and Schatten-2 div S bound",
+      "cutoff-uniform unweighted Hilbert-Schmidt structure at fixed floor",
+      "exact arbitrary-source noncentral frozen-shell determinant and entropy theorem",
+      "dyadic 2^(-j) frozen-shell Schatten gain",
+      "nonnegativity under deterministic or independent Cameron-Martin translations"
+    ],
+    "excluded": [
+      "the uniform tilted-law commutator entropy form bound",
+      "the self-coupled A7 Nelson negative-exponential estimate",
+      "the full self-coupled three-component Gibbs measure",
+      "proof that no counterterm can arise in later all-scale tilted-law analysis",
+      "rho_regularizer removal",
+      "asymmetric or component-split regulator universality",
+      "infinite volume, phase transition, BCC existence or selection",
+      "T6 or T7 status"
+    ]
+  }
+}

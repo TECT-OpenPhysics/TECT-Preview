@@ -96,14 +96,39 @@ independent-to-self-coupled smart path.  Either proof must control the `DB` and
 even scope, and explicitly register any surviving mass, orientation, or vacuum
 counterterm.
 
-**Status:** OPEN (2026-07-20).  A8 closes the `s=0` independent-carrier
-endpoint and verifies the complete finite-dimensional `B(X)` Gaussian-
-divergence identity, including an asymmetric parity negative control.  The
-`s=1` self-coupled endpoint is not reached.  The designated next proof is a
-dyadic frozen-background expansion: freeze `B` below each new derivative
-shell, apply the conditional `det_2` estimate, and prove a summable uniform
-commutator bound under every adapted drift.  The adapted-drift and smart-path
-criteria are separate sufficient routes here; no equivalence is asserted.
+**Status:** OPEN, EXACT SMART-PATH/FROZEN-SHELL SUBGATE CLOSED (2026-07-20).
+`A9-CLASSII-SMART-PATH-CANCELLATION` reaches both finite-cutoff interpolation
+endpoints, proves the exact Gaussian-IBP cancellation of the apparent
+trace-class terms, and closes the arbitrary-source noncentral frozen-shell
+determinant with a summable `2^(-j)` cost.  It also shows that deterministic or
+independent Cameron--Martin shifts have nonnegative expected renormalised
+energy.  It does not control the remaining coefficient increment under every
+interacting tilted law, so the self-coupled Nelson estimate and Gibbs measure
+remain open.  The residual designated-route gate is
+`A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND` below.  The adapted-drift and
+smart-path criteria remain separate sufficient routes; no equivalence is
+asserted.
+
+### **A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND**
+
+**Statement:** For the common real-even, fixed-positive-floor A7 composite,
+let `phi_j=P_<=j phi`, `Delta_j B=B(phi_j)-B(phi_(j-1))`, and
+`C_j=(1/2) int (D phi_j)^T Delta_j B D phi_j -(1/2) int
+Tr[Gamma_<=j Delta_j B]`.  Prove that for every `eta>0`, uniformly in the
+cutoff `J` and every law `nu` absolutely continuous with respect to the cutoff
+Gaussian law,
+`E_nu sum_(j<=J) C_j >= -eta H(nu|gamma_J)
+-eta E_nu ||phi_J||_6^6-C_eta`.
+This is a sufficient closure estimate for the designated dyadic route; it is
+not asserted to be logically necessary for every possible construction.
+
+**Status:** OPEN (2026-07-20).  A9 proves the exact noncentral conditional
+shell determinant, its entropy form, and its `q^(-4)` Schatten gain, but those
+base/frozen-shell bounds do not imply this all-tilted-laws estimate.  A direct
+adapted-drift Gaussian integration by parts leaves a `DB D_x h` term not
+controlled by Cameron--Martin cost.  Closure requires a genuine
+paracontrolled/entropy-sextic form bound, or a different sufficient route with
+equally explicit cutoff uniformity and counterterm accounting.
 
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 

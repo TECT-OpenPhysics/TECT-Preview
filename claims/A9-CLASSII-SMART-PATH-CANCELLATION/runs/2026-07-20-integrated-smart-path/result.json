@@ -1,0 +1,527 @@
+{
+  "schema": "tect/a9-classii-smart-path-integrated-result/1.0",
+  "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+  "script_version": "1.0.0",
+  "verdict": "A9-CLASSII-SMART-PATH-INTEGRATED-PASS",
+  "manifest_sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+  "scope": "Hash-pinned A1 finite-cutoff production Gaussian on L=16, three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, exact/dealiased products, and the common real-even scalar A7 regulator class. The smart-path identities hold at every finite cutoff and pass continuously to both endpoints. The frozen-shell theorem permits an arbitrary past-measurable PSD spatial background and arbitrary past-measurable derivative source. The theorem does not bound the final commutator under the tilted interacting laws.",
+  "preflight": {
+    "status": "PASS",
+    "errors": [],
+    "authority_hashes": {
+      "production_functional_manifest": {
+        "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+        "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      },
+      "a7_manifest": {
+        "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+        "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+        "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+      },
+      "a8_manifest": {
+        "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/classii_decoupled_nelson_manifest.json",
+        "expected": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382",
+        "actual": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382"
+      },
+      "primary_audit": {
+        "path": "codes/foundations/a9_classii_smart_path_cancellation.py",
+        "expected": "f4afc6c96feab1c5ccf6ee2c200a124a0cec9b5b9afb8d380acf4d2c899dd526",
+        "actual": "f4afc6c96feab1c5ccf6ee2c200a124a0cec9b5b9afb8d380acf4d2c899dd526"
+      },
+      "independent_audit": {
+        "path": "codes/foundations/a9_classii_smart_path_cancellation_independent.py",
+        "expected": "d6cd832fd29376dbf82ae87c76f436591d54a07d736848497b3a998619bc7aee",
+        "actual": "d6cd832fd29376dbf82ae87c76f436591d54a07d736848497b3a998619bc7aee"
+      },
+      "one_command_verifier": {
+        "path": "codes/foundations/a9_classii_smart_path_cancellation_verify.py",
+        "expected": "7eb381423f2c4e8ffa0847c20993f6b9436d310f0769159edfe031278aad11a1",
+        "actual": "7eb381423f2c4e8ffa0847c20993f6b9436d310f0769159edfe031278aad11a1"
+      },
+      "proof_note": {
+        "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/notes/classii-smart-path-cancellation-260720-v1.0.tex.txt",
+        "expected": "58a04ab27e544ba263a720503fdf507ea433212aa7c99f0f0a4d332596e43ff8",
+        "actual": "58a04ab27e544ba263a720503fdf507ea433212aa7c99f0f0a4d332596e43ff8"
+      },
+      "proof_pdf": {
+        "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/notes/classii-smart-path-cancellation-260720-v1.0.pdf",
+        "expected": "664f4a6dc9286d9cc86f4c57d3ea0ec0db8194c8b564a1af26d17ba5ce7e5fef",
+        "actual": "664f4a6dc9286d9cc86f4c57d3ea0ec0db8194c8b564a1af26d17ba5ce7e5fef"
+      }
+    }
+  },
+  "subprocesses": {
+    "primary": {
+      "command": [
+        "C:\\Users\\jtkor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Dev\\TECT\\codes\\foundations\\a9_classii_smart_path_cancellation.py",
+        "--manifest",
+        "C:\\Dev\\TECT\\claims\\A9-CLASSII-SMART-PATH-CANCELLATION\\classii_smart_path_manifest.json",
+        "--output",
+        "C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a9-smart-path-68gzbiqm\\primary.json"
+      ],
+      "returncode": 0,
+      "stdout": "24/24 PASS\nA9-CLASSII-SMART-PATH-PRIMARY-PASS\nEvidence: C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a9-smart-path-68gzbiqm\\primary.json\n",
+      "stderr": ""
+    },
+    "independent": {
+      "command": [
+        "C:\\Users\\jtkor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Dev\\TECT\\codes\\foundations\\a9_classii_smart_path_cancellation_independent.py",
+        "--manifest",
+        "C:\\Dev\\TECT\\claims\\A9-CLASSII-SMART-PATH-CANCELLATION\\classii_smart_path_manifest.json",
+        "--output",
+        "C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a9-smart-path-68gzbiqm\\independent.json"
+      ],
+      "returncode": 0,
+      "stdout": "17/17 PASS\nA9-CLASSII-SMART-PATH-INDEPENDENT-PASS\nEvidence: C:\\Users\\jtkor\\AppData\\Local\\Temp\\tect-a9-smart-path-68gzbiqm\\independent.json\n",
+      "stderr": ""
+    }
+  },
+  "assertions": [
+    {
+      "name": "primary_result_contract",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a9-classii-smart-path-primary-result/1.0",
+        "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+        "script_version": "1.0.0",
+        "manifest_sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+        "verdict": "A9-CLASSII-SMART-PATH-PRIMARY-PASS"
+      },
+      "expected": "exact"
+    },
+    {
+      "name": "independent_result_contract",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a9-classii-smart-path-independent-result/1.0",
+        "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+        "script_version": "1.0.0",
+        "manifest_sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+        "verdict": "A9-CLASSII-SMART-PATH-INDEPENDENT-PASS"
+      },
+      "expected": "exact"
+    },
+    {
+      "name": "primary_assertion_count",
+      "status": "PASS",
+      "actual": {
+        "passed": 24,
+        "total": 24
+      },
+      "expected": 24
+    },
+    {
+      "name": "independent_assertion_count",
+      "status": "PASS",
+      "actual": {
+        "passed": 17,
+        "total": 17
+      },
+      "expected": 17
+    },
+    {
+      "name": "physical_beta_B_oracle",
+      "status": "PASS",
+      "actual": 0.2564999999999359,
+      "expected": 0.2564999999999359
+    },
+    {
+      "name": "physical_c_symbol_oracle",
+      "status": "PASS",
+      "actual": 0.10836453058711468,
+      "expected": 0.10836453058711468
+    },
+    {
+      "name": "primary_common_even_identity",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": "zero"
+    },
+    {
+      "name": "primary_interpolation_derivative",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.20675843672091782,
+          "raw_expectation": -0.033290026712343615,
+          "cancellation_expectation": -0.033291116129775776,
+          "maximum_trace_decomposition_error": 3.552713678800501e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.22,
+          "finite_difference": -0.03329002675890591,
+          "raw_fd_error": 4.656229568578141e-11,
+          "cancel_fd_error": 1.0893708698653248e-06,
+          "raw_cancel_error": 1.0894174321610106e-06
+        },
+        {
+          "log_partition": -0.2161809079402563,
+          "raw_expectation": -0.031776222765667606,
+          "cancellation_expectation": -0.03176407443981561,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.51,
+          "finite_difference": -0.03177622279942893,
+          "raw_fd_error": 3.37613270673387e-11,
+          "cancel_fd_error": 1.214835961332178e-05,
+          "raw_cancel_error": 1.2148325851994712e-05
+        },
+        {
+          "log_partition": -0.2249231259053156,
+          "raw_expectation": -0.030725556922897954,
+          "cancellation_expectation": -0.03071557407978248,
+          "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+          "maximum_divergence_bound_excess": 0.0,
+          "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+          "t": 0.79,
+          "finite_difference": -0.030725556947677757,
+          "raw_fd_error": 2.4779803209362683e-11,
+          "cancel_fd_error": 9.982867895275138e-06,
+          "raw_cancel_error": 9.982843115471929e-06
+        }
+      ],
+      "expected": 3e-05
+    },
+    {
+      "name": "primary_quadrature_refinement",
+      "status": "PASS",
+      "actual": {
+        "name": "IBP_quadrature_error_contracts_at_higher_order",
+        "status": "PASS",
+        "actual": {
+          "coarse": [
+            0.001835960644343243,
+            0.0016715330503315681,
+            0.0015440991980729263
+          ],
+          "fine": [
+            1.0894174321610106e-06,
+            1.2148325851994712e-05,
+            9.982843115471929e-06
+          ]
+        },
+        "expected": "fine < 0.05 * coarse"
+      },
+      "expected": "PASS"
+    },
+    {
+      "name": "primary_noncentral_shell",
+      "status": "PASS",
+      "actual": {
+        "direct_log_moment": -0.05619026789349553,
+        "formula": -0.056190267893495835,
+        "absolute_error": 3.0531133177191805e-16,
+        "source_remainder": -0.07973747708650243,
+        "hs_upper": 0.027487495699999993,
+        "bound_gap": 0.08367776359349582
+      },
+      "expected": "formula, source sign, HS ceiling"
+    },
+    {
+      "name": "independent_common_even_identity",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": "zero"
+    },
+    {
+      "name": "independent_interpolation_derivative",
+      "status": "PASS",
+      "actual": [
+        {
+          "log_partition": -0.19351268932617915,
+          "raw": -0.06101997766927273,
+          "cancelled": -0.06101694795464367,
+          "without_divergence": -0.06552520451830482,
+          "decomposition_error": 3.552713678800501e-15,
+          "finite_difference": -0.061019977717624574,
+          "raw_error": 4.8351843362492986e-11,
+          "cancelled_error": 3.0297629809022952e-06,
+          "raw_cancelled_error": 3.0297146290589327e-06,
+          "t": 0.19
+        },
+        {
+          "log_partition": -0.21040561547609776,
+          "raw": -0.055802047569660916,
+          "cancelled": -0.05579664295192409,
+          "without_divergence": -0.06484730355964434,
+          "decomposition_error": 1.7763568394002505e-15,
+          "finite_difference": -0.055802047599778914,
+          "raw_error": 3.011799837304707e-11,
+          "cancelled_error": 5.404647854825861e-06,
+          "raw_cancelled_error": 5.404617736827488e-06,
+          "t": 0.48
+        },
+        {
+          "log_partition": -0.22913166561248005,
+          "raw": -0.05148181841791299,
+          "cancelled": -0.0514747757042929,
+          "without_divergence": -0.06379155575265402,
+          "decomposition_error": 2.220446049250313e-15,
+          "finite_difference": -0.05148181843495081,
+          "raw_error": 1.7037822541698944e-11,
+          "cancelled_error": 7.042730657907947e-06,
+          "raw_cancelled_error": 7.042713620085406e-06,
+          "t": 0.83
+        }
+      ],
+      "expected": 1e-05
+    },
+    {
+      "name": "independent_quadrature_refinement",
+      "status": "PASS",
+      "actual": {
+        "name": "independent_IBP_quadrature_convergence",
+        "status": "PASS",
+        "actual": {
+          "coarse": [
+            0.0001248781450895603,
+            6.520817504535731e-05,
+            1.1336763275415773e-05
+          ],
+          "fine": [
+            3.0297146290589327e-06,
+            5.404617736827488e-06,
+            7.042713620085406e-06
+          ]
+        },
+        "expected": "fine < 0.08 * coarse"
+      },
+      "expected": "PASS"
+    },
+    {
+      "name": "independent_noncentral_shell",
+      "status": "PASS",
+      "actual": {
+        "formula": -0.030104977912382917,
+        "direct": -0.03010497791238344,
+        "error": 5.238864897449957e-16,
+        "source_part": -0.04246155805063167,
+        "ceiling": 0.013753203100000007,
+        "ceiling_gap": 0.043858181012382924
+      },
+      "expected": "formula, source sign, HS ceiling"
+    },
+    {
+      "name": "deterministic_shift_positivity",
+      "status": "PASS",
+      "actual": {
+        "exact": 0.021682567583073326,
+        "expanded": 0.021682567583073346,
+        "error": 2.0816681711721685e-17
+      },
+      "expected": "nonnegative exact"
+    },
+    {
+      "name": "odd_regulator_negative_control",
+      "status": "PASS",
+      "actual": {
+        "parity": [
+          0.15,
+          0.1499999999999999,
+          0.15000000000000002,
+          0.15
+        ],
+        "result": {
+          "log_partition": -0.2147049076555958,
+          "raw": -0.0518883228244747,
+          "cancelled": -0.05188189145049961,
+          "without_divergence": -0.06762261048691404,
+          "decomposition_error": 2.220446049250313e-15
+        }
+      },
+      "expected": "parity and omitted-divergence gaps"
+    },
+    {
+      "name": "tilted_gate_scope_firewall",
+      "status": "PASS",
+      "actual": {
+        "gate": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND",
+        "excluded": [
+          "the uniform tilted-law commutator entropy form bound",
+          "the self-coupled A7 Nelson negative-exponential estimate",
+          "the full self-coupled three-component Gibbs measure",
+          "proof that no counterterm can arise in later all-scale tilted-law analysis",
+          "rho_regularizer removal",
+          "asymmetric or component-split regulator universality",
+          "infinite volume, phase transition, BCC existence or selection",
+          "T6 or T7 status"
+        ]
+      },
+      "expected": "named open gate and exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "primary": {
+      "passed": 24,
+      "total": 24
+    },
+    "independent": {
+      "passed": 17,
+      "total": 17
+    },
+    "cross": {
+      "passed": 17,
+      "total": 17
+    },
+    "aggregate": {
+      "passed": 58,
+      "total": 58
+    },
+    "count_contract": true
+  },
+  "key_results": {
+    "physical_constants": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "beta_B": 0.2564999999999359,
+      "beta_DB_linear": 1.1429999999997142,
+      "c_symbol": 0.10836453058711468,
+      "lattice_sum_upper": 1752.0684950182842,
+      "kappa_zero_upper": 23.684009616377335
+    },
+    "primary_interpolation": [
+      {
+        "log_partition": -0.20675843672091782,
+        "raw_expectation": -0.033290026712343615,
+        "cancellation_expectation": -0.033291116129775776,
+        "maximum_trace_decomposition_error": 3.552713678800501e-15,
+        "maximum_divergence_bound_excess": 0.0,
+        "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+        "t": 0.22,
+        "finite_difference": -0.03329002675890591,
+        "raw_fd_error": 4.656229568578141e-11,
+        "cancel_fd_error": 1.0893708698653248e-06,
+        "raw_cancel_error": 1.0894174321610106e-06
+      },
+      {
+        "log_partition": -0.2161809079402563,
+        "raw_expectation": -0.031776222765667606,
+        "cancellation_expectation": -0.03176407443981561,
+        "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+        "maximum_divergence_bound_excess": 0.0,
+        "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+        "t": 0.51,
+        "finite_difference": -0.03177622279942893,
+        "raw_fd_error": 3.37613270673387e-11,
+        "cancel_fd_error": 1.214835961332178e-05,
+        "raw_cancel_error": 1.2148325851994712e-05
+      },
+      {
+        "log_partition": -0.2249231259053156,
+        "raw_expectation": -0.030725556922897954,
+        "cancellation_expectation": -0.03071557407978248,
+        "maximum_trace_decomposition_error": 1.7763568394002505e-15,
+        "maximum_divergence_bound_excess": 0.0,
+        "minimum_operator_eigenvalue": -2.2765536721548103e-15,
+        "t": 0.79,
+        "finite_difference": -0.030725556947677757,
+        "raw_fd_error": 2.4779803209362683e-11,
+        "cancel_fd_error": 9.982867895275138e-06,
+        "raw_cancel_error": 9.982843115471929e-06
+      }
+    ],
+    "primary_noncentral_shell": {
+      "direct_log_moment": -0.05619026789349553,
+      "formula": -0.056190267893495835,
+      "absolute_error": 3.0531133177191805e-16,
+      "source_remainder": -0.07973747708650243,
+      "hs_upper": 0.027487495699999993,
+      "bound_gap": 0.08367776359349582
+    },
+    "independent_interpolation": [
+      {
+        "log_partition": -0.19351268932617915,
+        "raw": -0.06101997766927273,
+        "cancelled": -0.06101694795464367,
+        "without_divergence": -0.06552520451830482,
+        "decomposition_error": 3.552713678800501e-15,
+        "finite_difference": -0.061019977717624574,
+        "raw_error": 4.8351843362492986e-11,
+        "cancelled_error": 3.0297629809022952e-06,
+        "raw_cancelled_error": 3.0297146290589327e-06,
+        "t": 0.19
+      },
+      {
+        "log_partition": -0.21040561547609776,
+        "raw": -0.055802047569660916,
+        "cancelled": -0.05579664295192409,
+        "without_divergence": -0.06484730355964434,
+        "decomposition_error": 1.7763568394002505e-15,
+        "finite_difference": -0.055802047599778914,
+        "raw_error": 3.011799837304707e-11,
+        "cancelled_error": 5.404647854825861e-06,
+        "raw_cancelled_error": 5.404617736827488e-06,
+        "t": 0.48
+      },
+      {
+        "log_partition": -0.22913166561248005,
+        "raw": -0.05148181841791299,
+        "cancelled": -0.0514747757042929,
+        "without_divergence": -0.06379155575265402,
+        "decomposition_error": 2.220446049250313e-15,
+        "finite_difference": -0.05148181843495081,
+        "raw_error": 1.7037822541698944e-11,
+        "cancelled_error": 7.042730657907947e-06,
+        "raw_cancelled_error": 7.042713620085406e-06,
+        "t": 0.83
+      }
+    ],
+    "independent_noncentral_shell": {
+      "formula": -0.030104977912382917,
+      "direct": -0.03010497791238344,
+      "error": 5.238864897449957e-16,
+      "source_part": -0.04246155805063167,
+      "ceiling": 0.013753203100000007,
+      "ceiling_gap": 0.043858181012382924
+    },
+    "deterministic_shift": {
+      "exact": 0.021682567583073326,
+      "expanded": 0.021682567583073346,
+      "error": 2.0816681711721685e-17
+    },
+    "odd_control": {
+      "parity": [
+        0.15,
+        0.1499999999999999,
+        0.15000000000000002,
+        0.15
+      ],
+      "result": {
+        "log_partition": -0.2147049076555958,
+        "raw": -0.0518883228244747,
+        "cancelled": -0.05188189145049961,
+        "without_divergence": -0.06762261048691404,
+        "decomposition_error": 2.220446049250313e-15
+      }
+    }
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "not_closed_here": [
+    "the uniform tilted-law commutator entropy form bound",
+    "the self-coupled A7 Nelson negative-exponential estimate",
+    "the full self-coupled three-component Gibbs measure",
+    "proof that no counterterm can arise in later all-scale tilted-law analysis",
+    "rho_regularizer removal",
+    "asymmetric or component-split regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7 status"
+  ]
+}
