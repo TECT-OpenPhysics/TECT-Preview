@@ -1,0 +1,56 @@
+{
+  "id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+  "title": "Covariance-normal-ordered full three-component Class-II energy composite",
+  "sector": "A",
+  "statement": "For the hash-pinned A1 full-production q^-4 Gaussian on the fixed three-torus, three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, embedded Pauli generators, exact/dealiased products, and the declared common real-even bounded scalar spectral regulator class, subtracting each regulator's exact conditional derivative-pair contraction jointly defines J_A,i^2, J_A,i*K_A,i, K_A,i^2 and the complete Class-II energy density. For every kappa>0 the renormalised densities converge to one regulator-independent limit in L2(Omega; H^(-1-kappa)), and their spatial integrals converge in L2 with mean zero.",
+  "scope": "CLOSED@FIXED-FLOOR-COVARIANCE-NORMAL-ENERGY-COMPOSITE on L=16 for the A1 production covariance, three complex components, six-real normalization, fixed positive rho floor, common real-even uniformly bounded scalar multipliers converging pointwise to one with compact support or a uniform Schwartz tail, each regulator's exact derivative covariance subtraction, and exact Fourier convolution or sufficient de-aliasing. H^-1, the interacting exponential weight, the full-field bare law, and floor removal are outside scope.",
+  "tier": "T5",
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED",
+    "CONDITIONAL"
+  ],
+  "dependencies": [
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+    "A6-CLASSII-UV-POWER-COUNTING",
+    "A6-CLASSII-K-COMPOSITE-DEFINITION"
+  ],
+  "soft_dependencies": [
+    "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "hypotheses": [],
+  "open_gates": [
+    "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION"
+  ],
+  "falsifier": "A wrong complex/six-real factor; a nonzero common-even value-derivative contraction; a missing Q^2, QPR, or P^2R^2 Gaussian-IBP connection; failure of the Bessel-weighted H^(-1-kappa) Cauchy bound or exact-covariance scheme limit; a failed direct current/matrix identity, conditional Gaussian mean, N^-1 Hilbert-Schmidt tail, authority hash, frozen determinant bound, sharp mass-threshold identity, or plane-wave null control; or any failed primary, independent, or integrated assertion falsifies the pinned closure.",
+  "reproduction": {
+    "command": "python codes/foundations/a7_classii_renormalised_energy_verify.py",
+    "expected": "PASS: primary (29/29); PASS: independent (17/17); ASSERTS: 74/74; A7-CLASSII-RENORMALISED-ENERGY-INTEGRATED-PASS; exit 0.",
+    "status": "AVAILABLE"
+  },
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-07-20)",
+  "legacy_evidence": [
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.tex.txt",
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.pdf (8 pages; FORM-CHECK PASS; 0 overfull; visual QA PASS)",
+    "codes/foundations/a7_classii_renormalised_energy.py",
+    "codes/foundations/a7_classii_renormalised_energy_independent.py",
+    "codes/foundations/a7_classii_renormalised_energy_verify.py",
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-07-20-primary-renormalised-energy/result.json (29/29 PASS)",
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-07-20-independent-renormalised-energy/result.json (17/17 PASS)",
+    "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-07-20-integrated-renormalised-energy/result.json (74/74 PASS)"
+  ],
+  "t7_candidate": false,
+  "no_overclaim": "This claim does not prove a uniform Nelson or Boue-Dupuis negative-exponential estimate, interacting-density L1 convergence, a full three-component constructive Gibbs measure, full-field bare concentration, rho-floor removal, arbitrary asymmetric-regulator universality, infinite volume, phase transition, BCC existence or selection, T6, or T7.",
+  "next_action": "Prove A7-CLASSII-NELSON-EXPONENTIAL-BOUND for the self-coupled random coefficient B(X), using the frozen det_2 estimate only as a deterministic-background lemma; keep bare concentration and rho-floor removal separate.",
+  "last_review": "2026-07-20",
+  "closure_depth": "C1",
+  "proof_maturity": "S1",
+  "notes": "T5 PINNED-CLOSURE@FIXED-FLOOR-COVARIANCE-NORMAL-ENERGY-COMPOSITE. The exact six-real conditional contraction removes the divergent local derivative pair in the Gaussian composite. An exact finite Gaussian-IBP identity exhausts Q^2, QPR, and P^2R^2 and jointly defines the three quadratic current products without a Hermite-tail assumption. The integrated action exists in L2 but the interacting exponential estimate is a separate open gate. The sharp leading pointwise mass threshold is h=0.09534375; subcritical repairs retain a mixed-orientation runaway, while critical pointwise repair can be degenerate. A plane-wave null with W>0 blocks naive pure-third bare concentration."
+}

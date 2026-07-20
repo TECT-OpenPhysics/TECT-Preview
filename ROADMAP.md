@@ -56,15 +56,18 @@ preserves the scalar/full functional fork and the `0.005` versus
 The remaining Stage-1 frontier is not another full variational/PDE closure.
 `A6-CLASSII-UV-POWER-COUNTING` records at T4 that the bare full derivative
 Class-II Gaussian energy has a positive linear cutoff contraction.
-`A6-CLASSII-K-COMPOSITE-DEFINITION` now closes at scoped T5 the fixed-floor
+`A6-CLASSII-K-COMPOSITE-DEFINITION` closes at scoped T5 the fixed-floor
 canonical geometric `K_A` current within the declared common real-even scalar
-spectral regulator class. The same split review eliminates literal
-fixed-parameter `-delta_cube*N*W_eps` subtraction as a uniform-coercivity route
-and solves two local bare proxies without identifying either with the spatial
-Gibbs law. Open work is running-counterterm closure and a separate full-field
-bare-concentration theorem. Parameter identity, regulariser removal, infinite
-volume, phase transition, BCC, and T7 remain outside the current Sector-A
-theorem.
+spectral regulator class. `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE` now closes
+at scoped T5 the exact covariance-normal-ordered joint `J^2`, `J*K`, and `K^2`
+energy composite and its `L2(Omega;H^(-1-kappa))` continuum limit. The same
+split review eliminates literal fixed-parameter `-delta_cube*N*W_eps`
+subtraction as a uniform-coercivity route and exhibits a pathwise Class-II
+plane-wave null with `W_eps>0`. Open work is the self-coupled uniform
+negative-exponential estimate needed for an interacting Gibbs measure and the
+separate branch-aware bare-concentration theorem. Parameter identity,
+regulariser removal, infinite volume, phase transition, BCC, and T7 remain
+outside the current Sector-A theorem.
 
 ## Stage 2 — Prove the vacuum (Sector B) ← **critical path**
 
@@ -151,15 +154,16 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A6-CLASSII-COUNTERTERM-CLOSURE** — replace the falsified literal
-   fixed-parameter subtraction by a running, symmetry-preserving
-   renormalisation prescription; close `J*K`, `|K|^2`, lower bounds,
-   partition control, and tightness at fixed positive floors.
-3. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately decide whether
-   the unmodified spatial Gibbs laws concentrate on `W_eps=0`; local proxy
-   limits are not sufficient.
-4. **A6 constructive successor** — open only if the counterterm route closes;
-   begin below T6 and keep regulariser removal separate.
+2. **A7-CLASSII-NELSON-EXPONENTIAL-BOUND** — prove the self-coupled uniform
+   `p>1` negative-exponential estimate for the now-defined renormalised energy,
+   then obtain interacting-density convergence, tightness, and the fixed-volume
+   full three-component Gibbs limit.
+3. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
+   unmodified spatial Gibbs law across all Class-II null branches; the
+   conditional `W_eps=0` branch and local proxy limits are not sufficient.
+4. **A7 constructive successor** — only after the exponential gate closes,
+   package the resulting fixed-floor finite-volume measure below T6 first;
+   keep floor removal and infinite volume separate.
 5. **Backlog T-030** — arbitrary-Q DR-2 remains a non-load-bearing Sector-B
    frontier as recorded in `TODO.md`.
 

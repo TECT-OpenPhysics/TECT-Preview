@@ -1,0 +1,617 @@
+% =============================================================================
+% Title: Covariance-normal-ordered full Class-II energy composite
+% Claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE
+% Version: v1.0 -- first issued 2026-07-20; this version issued 2026-07-20
+% Status: scoped T5 theorem note; interacting-measure gate remains open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-20): exact tensor counterterm, composite convergence,
+% stability threshold, and bare null control; adversarial repair before the
+% first commit replaced the formal Hermite-tail step by an exact finite
+% Gaussian-IBP identity and Bessel-weighted Fourier domination, and narrowed
+% graph language to the Gaussian two-point composite construction.
+% =============================================================================
+
+\section*{1. Purpose and scope}
+The preceding A6 packages fixed two facts.  The full production Gaussian has a
+positive linear derivative contraction, and the fixed-floor geometric current
+$K_A$ has a canonical common-even spectral lift.  Neither fact defines
+$J_AK_A$, $|K_A|^2$, or an interacting Gibbs weight.  This note closes the
+next, narrower question: the full Class-II \emph{energy density as a Gaussian
+composite distribution}.
+
+The result uses the fixed $L=16$ torus, the hash-pinned A1 production
+quadratic symbol, three complex components (six real components), embedded
+Pauli generators, fixed
+\[
+ \varepsilon_\rho=10^{-12}>0,
+\]
+one common real-even uniformly bounded scalar Fourier multiplier on every
+real component, pointwise convergence of that multiplier to one, compact
+support or a uniform Schwartz tail, and exact Fourier convolution or
+sufficient de-aliasing.  The theorem is regulator independent only inside
+that class.  The proof below uses regulator-independent Fourier majorants;
+it does not silently assume a pointwise kernel bound.
+
+The result does not construct the interacting measure.  In particular,
+$L^2$ convergence of an action is not uniform integrability of its
+exponential.  The missing estimate is isolated in Section~8.
+
+\section*{2. Exact finite-cutoff algebra}
+Realify the field as $X:\mathbb T_L^3\to\mathbb R^6$ and each Hermitian
+generator as a real symmetric matrix $S_A$.  Put
+\[
+ \rho=X^TX,\qquad m_A=X^TS_AX,\qquad
+ q_A={m_A\over \rho+\varepsilon_\rho},
+\]
+\[
+ p_A(X)=2S_AX,\qquad
+ v_A(X)=2(S_A-q_AI)X.
+\]
+For $Y_i=\partial_iX$, the currents are
+\[
+ J_{A,i}=p_A^TY_i,\qquad K_{A,i}=v_A^TY_i.
+\]
+Writing
+\[
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix}>0,
+\]
+define the symmetric six-real matrix
+\[
+ B(X)=\sum_A\left\{
+ a\,p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)+c\,v_Av_A^T
+ \right\}.
+\]
+Then the exact smooth cutoff density is
+\[
+ e_{{\rm II},\Lambda}(x)
+ ={1\over2}\sum_{i=1}^3
+ Y_{\Lambda,i}(x)^TB(X_\Lambda(x))Y_{\Lambda,i}(x).
+ \tag{2.1}
+\]
+This identity includes all $J^2$, $J K$, and $K^2$ coefficients and is
+checked against the direct complex-current implementation.
+
+Let
+\[
+ \Gamma_{\Lambda,i}
+ =\mathbb E\!\left[
+ \partial_iX_\Lambda(x)\partial_iX_\Lambda(x)^T
+ \right]
+ \tag{2.2}
+\]
+be the \emph{six-real} derivative covariance.  Common evenness gives
+\[
+ \mathbb E[X_\Lambda(x)\partial_iX_\Lambda(x)^T]=0.
+ \tag{2.3}
+\]
+The two jointly Gaussian vectors are therefore independent.  The exact
+finite-cutoff conditional contraction is
+\[
+ {\cal C}_\Lambda(X)
+ ={1\over2}\sum_i\operatorname{Tr}
+ [B(X)\Gamma_{\Lambda,i}]
+ =\mathbb E[e_{{\rm II},\Lambda}(x)\mid X_\Lambda(x)=X].
+ \tag{2.4}
+\]
+Equation (2.4), rather than only its leading asymptotic term, is the
+renormalisation condition.
+
+In complex notation let
+\[
+ U_A=T_A\Psi,\qquad V_A=(T_A-q_AI)\Psi,\qquad
+ D_{\Lambda,i}
+ =\mathbb E[\partial_i\Psi_\Lambda
+             \partial_i\Psi_\Lambda^\dagger].
+\]
+Since $\Gamma_{\Lambda,i}=\frac12\operatorname{realify}
+(D_{\Lambda,i})$, (2.4) is equivalently
+\[
+ {\cal C}_\Lambda(\Psi)
+ =\sum_{i,A}\left[
+ a\,U_A^\dagger D_{\Lambda,i}U_A
+ +2b\,\operatorname{Re}(U_A^\dagger D_{\Lambda,i}V_A)
+ +c\,V_A^\dagger D_{\Lambda,i}V_A
+ \right].
+ \tag{2.5}
+\]
+The explicit one-half in the real covariance is load-bearing: inserting the
+complex $D_{\Lambda,i}$ directly into the real trace formula would double the
+subtraction.
+
+\begin{definition}
+For every generator and spatial direction define jointly
+\begin{align*}
+ [J_{A,i}^2]_\Lambda^{\rm ren}
+ &=J_{A,i}^2-p_A^T\Gamma_{\Lambda,i}p_A,\\
+ [J_{A,i}K_{A,i}]_\Lambda^{\rm ren}
+ &=J_{A,i}K_{A,i}-p_A^T\Gamma_{\Lambda,i}v_A,\\
+ [K_{A,i}^2]_\Lambda^{\rm ren}
+ &=K_{A,i}^2-v_A^T\Gamma_{\Lambda,i}v_A.
+\end{align*}
+Their $Q_{\rm II}$ combination is
+\[
+ e_{{\rm II},\Lambda}^{\rm ren}
+ =e_{{\rm II},\Lambda}-{\cal C}_\Lambda(X_\Lambda).
+ \tag{2.6}
+\]
+\end{definition}
+
+\section*{3. Composite convergence theorem}
+\begin{theorem}[fixed-floor covariance-normal closure]
+For every $\kappa>0$ the three products in Definition~1, and hence
+$e_{{\rm II},\Lambda}^{\rm ren}$, converge jointly as
+\[
+ e_{{\rm II},\Lambda}^{\rm ren}
+ \longrightarrow e_{\rm II}^{\rm ren}
+ \quad\hbox{in}\quad
+ L^2(\Omega;H^{-1-\kappa}(\mathbb T_L^3)).
+ \tag{3.1}
+\]
+The limit is common to every regulator in the class of Section~1.  In
+particular,
+\[
+ {\cal V}_\Lambda^{\rm ren}
+ =\int_{\mathbb T_L^3}e_{{\rm II},\Lambda}^{\rm ren}(x)\,dx
+ \longrightarrow
+ {\cal V}^{\rm ren}
+ \quad\hbox{in }L^2(\Omega),
+ \tag{3.2}
+\]
+and $\mathbb E{\cal V}^{\rm ren}=0$.
+\end{theorem}
+
+\subsection*{3.1 Gaussian regularity and coefficient bounds}
+The production symbol satisfies, uniformly at high momentum,
+\[
+ c\langle k\rangle^4I\le {\cal A}(k)
+ \le C\langle k\rangle^4I.
+ \tag{3.3}
+\]
+Thus every real covariance entry is bounded by
+$C\langle k\rangle^{-4}$.  The value field has regularity below one half,
+whereas a derivative has regularity below minus one half.
+
+At fixed positive floor, $q_A$, $p_A$, $v_A$, and $B$ are smooth functions of
+$X$.  Since $|m_A|\le\rho$, one has $|q_A|\le1$ and
+\[
+ |p_A(X)|+|v_A(X)|\le C|X|,\qquad |B(X)|\le C|X|^2.
+ \tag{3.4}
+\]
+Every derivative of $B$ has polynomial growth with a constant depending on
+the fixed floor.  The point covariance converges, so all required Gaussian
+Sobolev norms of $B(X_\Lambda)$ are uniform in $\Lambda$.
+
+\subsection*{3.2 Exact finite Gaussian-IBP covariance lemma}
+The rational coefficient is handled without an infinite Hermite truncation.
+We use the following finite lemma.  Let $(X,Y,\widetilde X,\widetilde Y)$ be
+jointly Gaussian finite-dimensional vectors with
+\[
+ \mathbb E[X\otimes Y]=0,\qquad
+ \mathbb E[\widetilde X\otimes\widetilde Y]=0,
+\]
+and write
+\[
+ P=\max\{\|\mathbb E[Y\otimes\widetilde X]\|,
+          \|\mathbb E[X\otimes\widetilde Y]\|\},\qquad
+ Q=\|\mathbb E[Y\otimes\widetilde Y]\|.
+\]
+For symmetric matrix functions $A,D$ with derivatives through order two of
+polynomial growth, put
+\[
+ \Phi_A={1\over2}A_{ab}(X)
+   (Y_aY_b-\mathbb E[Y_aY_b]),\qquad
+ \widetilde\Phi_D={1\over2}D_{cd}(\widetilde X)
+   (\widetilde Y_c\widetilde Y_d-
+    \mathbb E[\widetilde Y_c\widetilde Y_d]).
+\]
+Uniformly over Gaussian value covariances in a compact set,
+\[
+ |\mathbb E[\Phi_A\widetilde\Phi_D]|
+ \le C_{A,D}\{Q^2+QP^2+P^4\}.
+ \tag{3.5}
+\]
+Here is the exact tensor identity behind that bound.  Put
+$P_{a\beta}=\mathbb E[Y_a\widetilde X_\beta]$,
+$R_{c\alpha}=\mathbb E[\widetilde Y_cX_\alpha]$,
+$Q_{ac}=\mathbb E[Y_a\widetilde Y_c]$,
+$\Gamma=\mathbb E[Y\otimes Y]$, and
+$\widetilde\Gamma=\mathbb E[\widetilde Y\otimes\widetilde Y]$.  Then
+\[
+\begin{aligned}
+&\mathbb E\{A_{ab}(X)(Y_aY_b-\Gamma_{ab})
+D_{cd}(\widetilde X)
+(\widetilde Y_c\widetilde Y_d-\widetilde\Gamma_{cd})\}\\
+={}&(Q_{ac}Q_{bd}+Q_{ad}Q_{bc})\,
+\mathbb E[A_{ab}(X)D_{cd}(\widetilde X)]\\
+&+\{P_{a\beta}(Q_{bc}R_{d\alpha}+Q_{bd}R_{c\alpha})
++P_{b\beta}(Q_{ac}R_{d\alpha}+Q_{ad}R_{c\alpha})\}\\
+&\hspace{16mm}\times
+\mathbb E[(\partial_\alpha A_{ab})(X)
+(\partial_\beta D_{cd})(\widetilde X)]\\
+&+P_{a\beta}P_{b\gamma}R_{c\alpha}R_{d\delta}\,
+\mathbb E[(\partial_{\alpha\delta}A_{ab})(X)
+(\partial_{\beta\gamma}D_{cd})(\widetilde X)].
+\end{aligned}
+\tag{3.5a}
+\]
+
+To prove (3.5), apply Gaussian integration by parts successively to the four
+displayed derivative variables.  The two conditional-centering terms cancel
+every same-vertex derivative pair.  Each surviving derivative leg therefore
+either pairs with a derivative at the opposite vertex, contributing $Q$, or
+differentiates the opposite coefficient through a value--derivative
+covariance, contributing $P$.  There are exactly three connection types:
+\[
+ (Q^2,P^0),\qquad (Q^1,P^2),\qquad (Q^0,P^4).
+ \tag{3.6}
+\]
+No coefficient is differentiated beyond order two.  H\"older's inequality and the
+Gaussian Sobolev norms of $A$ and $D$ give (3.5).  This is a finite identity
+and bound; it leaves no Hermite-series tail.  Applied with $A=D=B$ it covers
+the complete rational coefficient, and applied to the three separate
+coefficient matrices it covers $J^2$, $JK$, and $K^2$ jointly.
+
+The same argument identifies the only divergent \emph{local contraction in
+this Gaussian two-point composite construction}.  Before centering, pairing
+the two derivative legs at one vertex gives
+\[
+ \sum_{|k|\lesssim\Lambda}|k|^2\langle k\rangle^{-4}
+ =\Theta(\Lambda),
+ \tag{3.7}
+\]
+and (2.4) removes it exactly while keeping $B$ unexpanded.  A same-point
+value--derivative contraction is zero by (2.3).  We make no claim here about
+counterterms in an interacting perturbation expansion.
+
+\subsection*{3.3 Bessel-weighted Fourier domination}
+Couple all cutoffs through the same underlying Gaussian Fourier modes.  If
+$a_r(k)=\langle k\rangle^{-r}$, the production symbol and the common bounded
+scalar multipliers give, uniformly in both cutoffs,
+\[
+ |\widehat C_{\Lambda M}(k)|\le Ca_4(k),\qquad
+ |\widehat P_{\Lambda M}(k)|\le Ca_3(k),\qquad
+ |\widehat Q_{\Lambda M}(k)|\le Ca_2(k).
+ \tag{3.8}
+\]
+The first sequence is summable in dimension three, so the value covariances
+converge uniformly.  Polynomial growth and uniform Gaussian moments then make
+all coefficient expectations in (3.5a) bounded and continuous under a change
+of cutoff.
+
+The needed discrete convolutions are, for every $\eta>0$,
+\[
+ a_2*a_2\lesssim a_1,\qquad
+ a_2*a_3*a_3\lesssim_\eta a_{2-\eta},\qquad
+ a_3*a_3*a_3*a_3\lesssim_\eta a_{3-\eta}.
+ \tag{3.9}
+\]
+They follow by splitting each lattice sum into the regions where one input
+frequency is at most half the output frequency and its complement.  The
+first estimate is sharp.  It corresponds to the two derivative--derivative
+bridges; the other two are the $QPR$ and $P^2R^2$ lines of (3.5a).
+
+The executable connection-pattern audit enumerates exactly these three
+families rather than declaring a hand-written multivertex graph table.  Its
+frozen-gradient variance sum is only a numerical check of the worst $Q^2$
+scaling; the proof of the full rational coefficient is the exact identity
+(3.5a) together with (3.8)--(3.9).
+
+\subsection*{3.4 Sobolev Cauchy convergence and scheme independence}
+Put $s=1+\kappa$ and let $G_s$ be the positive periodic Bessel kernel with
+Fourier coefficients $\langle k\rangle^{-2s}$.  Positivity follows from its
+heat-kernel representation.  From (3.9),
+\[
+ \int G_s(z)|Q_{\Lambda M}(z)|^2\,dz
+ \lesssim\sum_k\langle k\rangle^{-2s-1}<\infty
+ \quad\Longleftrightarrow\quad s>1.
+ \tag{3.10}
+\]
+The $P^2R^2$ term is strictly better by the last estimate in (3.9), and the
+$QPR$ term is bounded by Cauchy--Schwarz in the positive measure
+$G_s(z)\,dz$.  Thus (3.5a) is uniformly integrable against $G_s$ for every
+$s>1$.
+
+Pointwise multiplier convergence and the same absolutely summable
+convolution majorants imply convergence of each $G_s$-weighted covariance
+term.  Uniform convergence of the value covariance handles the coefficient
+expectations in (3.5a): truncate the Gaussian values at fixed radius, use
+continuity in the finite-dimensional covariance there, and then remove the
+truncation with the uniform polynomial moments.
+
+For
+$R_{\Lambda M}=e_{{\rm II},\Lambda}^{\rm ren}
+-e_{{\rm II},M}^{\rm ren}$, stationarity and Parseval give
+\[
+ \mathbb E\|R_{\Lambda M}\|_{H^{-s}}^2
+ =\int_{\mathbb T_L^3}G_s(z)
+   \mathbb E[R_{\Lambda M}(z)R_{\Lambda M}(0)]\,dz.
+ \tag{3.11}
+\]
+Polarising the four cross-cutoff covariances and applying the preceding
+dominated-convergence argument makes (3.11) tend to zero.  This proves the
+common Cauchy limit in $L^2(\Omega;H^{-1-\kappa})$ for every $\kappa>0$.
+At $s=1$ the sharp $Q^2$ sum in (3.10) is logarithmic, so the $H^{-1}$
+endpoint is not claimed.  Pairing with the constant test function gives
+(3.2), and conditional centering in (2.4) gives zero mean at every cutoff
+and in the limit.
+
+This direct Fourier--Wick proof is the pinned specialisation used here.
+The general BPHZ framework and stochastic model convergence are developed by
+Chandra and Hairer,
+\url{https://arxiv.org/abs/1612.08138}; the present proof does not import a
+black-box interacting-measure conclusion from that work.
+
+\section*{4. Leading contraction and exact finite scheme}
+For the sharp cube, spatial symmetry makes all complex derivative
+covariances equal to the A6 matrix $D_N$.  The A6 limit gives
+\[
+ {D_N\over N}\longrightarrow\delta_{\rm cube}I_3,
+ \qquad
+ \delta_{\rm cube}=0.01619898645075695.
+ \tag{4.1}
+\]
+Substituting (4.1) into (2.5) recovers
+\[
+ {{\cal C}_N(\Psi)\over N}
+ \longrightarrow\delta_{\rm cube}W_\varepsilon(\Psi),
+ \tag{4.2}
+\]
+where, with $s=|\Psi_1|^2+|\Psi_2|^2$,
+\[
+ W_\varepsilon
+ =9(a+2b+c)s
+ -{6bs^2\over\rho+\varepsilon_\rho}
+ -{3cs^2(\rho+2\varepsilon_\rho)
+       \over(\rho+\varepsilon_\rho)^2}.
+ \tag{4.3}
+\]
+Equation (4.2) is an asymptotic check, not the definition.  Exact
+$D_{\Lambda,i}$ subtraction removes the finite regulator-dependent part and
+pins one covariance-normal renormalisation condition.
+
+\section*{5. Frozen-background determinant check}
+Fix a deterministic background $u$ and freeze $B(X)$ at $B(u)$.  Relative to
+the Gaussian quadratic operator, the derivative perturbation defines a
+positive operator $T_{u,\Lambda}$ whose high-mode eigenvalues are
+$O(|k|^{-2})$.  Hence
+\[
+ \sup_\Lambda\|T_{u,\Lambda}\|_{\rm HS}^2
+ \lesssim\sum_k\langle k\rangle^{-4}<\infty.
+ \tag{5.1}
+\]
+The exactly centered quadratic partition factor is
+\[
+ \mathbb E\exp\left\{
+ -{1\over2}\langle X,L_uX\rangle
+ +{1\over2}\operatorname{Tr}T_{u,\Lambda}
+ \right\}
+ =\det{}_2(I+T_{u,\Lambda})^{-1/2},
+ \tag{5.2}
+\]
+and
+\[
+ 0\le {1\over2}\sum_j
+ [\lambda_j-\log(1+\lambda_j)]
+ \le {1\over4}\sum_j\lambda_j^2.
+ \tag{5.3}
+\]
+This proves a convergent frozen-coefficient determinant and checks that the
+remaining diagrams are Hilbert--Schmidt.  It is not an estimate for the
+self-coupled random coefficient $B(X)$ and is not used to claim a Gibbs
+measure.
+
+\section*{6. Sharp pointwise running-mass threshold}
+At the production coefficients,
+\[
+ a=0.0045,\qquad b=0.001875,\qquad c=0.00234375.
+\]
+Put
+\[
+ h=9(a+2b+c)=0.09534375,\qquad
+ d=6b+3c=0.01828125.
+ \tag{6.1}
+\]
+Equation (4.3) gives the exact identity
+\[
+ hs-W_\varepsilon
+ ={6bs^2\over\rho+\varepsilon_\rho}
+ +{3cs^2(\rho+2\varepsilon_\rho)
+       \over(\rho+\varepsilon_\rho)^2}\ge0.
+ \tag{6.2}
+\]
+Moreover $W_\varepsilon/s\to h$ as $s/\rho\to0$ with a nonzero third
+component.  Therefore
+\[
+ \sup_{\Psi:s>0}{W_\varepsilon(\Psi)\over s}=h.
+ \tag{6.3}
+\]
+
+For the leading subtraction $-t_NW_\varepsilon$, a pointwise family-mass
+repair $t_Nms$ is nonnegative for every field exactly when $m\ge h$.  Since
+the production family energy is $\frac12\Delta\mu_Ns$, the leading sharp
+shift is
+\[
+ \Delta\mu_N\ge2h\delta_{\rm cube}N+O(1)
+ =0.00308894422882794\,N+O(1).
+ \tag{6.4}
+\]
+If $m<h$, choose a fixed small orientation $x=s/\rho$ such that
+\[
+ A_x=(h-m)x-dx^2>0.
+\]
+A homogeneous amplitude then has asymptotic potential
+\[
+ {\gamma\over6}\rho^3-t_NA_x\rho+O(\rho^2),
+\]
+whose minimum is
+\[
+ -{2^{3/2}\over3\sqrt\gamma}
+ (t_NA_x)^{3/2}+O(t_N).
+ \tag{6.5}
+\]
+Thus every subcritical pointwise mass repair retains the raw
+$-\Theta(N^{3/2})$ escape.  At the sharp value, (6.2) produces a divergent
+positive orientation penalty and can collapse the first doublet under
+additional uniform-energy and tightness assumptions.  This explains why the
+pointwise-coercive repair is not adopted as the physical nondegenerate
+renormalisation condition.
+
+\section*{7. Bare-route negative control}
+The zero set of the conditional contraction is not the zero set of the
+pathwise Class-II energy.  For
+\[
+ \Psi(x)=e^{ik\cdot x}u
+ \tag{7.1}
+\]
+with constant $u\in\mathbb C^3$, both $\rho$ and every $m_A$ are constant.
+Therefore $J_A=\nabla m_A=0$ and $K_A=0$, even if the first doublet of $u$ is
+nonzero.  But (4.3) gives $W_\varepsilon(u)>0$ for such a field.
+
+More generally, positive definiteness of $Q_{\rm II}$ implies that
+$F_{\rm II}=0$ exactly when every $J_A$ and $K_A$ vanishes.  This includes
+fixed-density, fixed-Bloch-direction phase branches, not only the pure third
+component.  Consequently the conditional Gaussian mean cannot be used as a
+deterministic rate function for the bare Gibbs law.  Any bare-concentration
+proof must compare the entropy and free energy of all null branches.
+
+\section*{8. Interacting-measure boundary}
+Let $U_\Lambda$ denote the local quartic--sextic part relative to the
+production Gaussian.  Since
+\[
+ \mathbb E{\cal V}_\Lambda^{\rm ren}=0
+\]
+and the Gaussian local moments are uniformly bounded, Jensen gives a
+uniform positive lower bound on the finite-cutoff partition functions:
+\[
+ Z_\Lambda
+ =\mathbb E\exp[-U_\Lambda-{\cal V}_\Lambda^{\rm ren}]
+ \ge
+ \exp[-\mathbb E U_\Lambda]>z_*>0.
+ \tag{8.1}
+\]
+The positive sextic gives finite-dimensional normalisability.  Neither fact
+gives uniform integrability of the weights.
+
+The missing constructive estimate is
+\[
+ \boxed{\quad
+ \sup_\Lambda
+ \mathbb E\exp\{-p[U_\Lambda+
+ {\cal V}_\Lambda^{\rm ren}]\}<\infty
+ \quad\hbox{for some }p>1.
+ \quad}
+ \tag{8.2}
+\]
+If (8.2) is proved, (3.2), Vitali convergence, and the common-Gaussian
+construction yield $L^1$ convergence of densities, partition convergence,
+tightness, a full-sequence finite-volume Gibbs limit, and convergence of
+smeared correlations.  This is the named
+\texttt{A7-CLASSII-NELSON-EXPONENTIAL-BOUND} gate.  It is not discharged in
+this note.
+
+\section*{9. Executable audit}
+The primary implementation reconstructs the exact tensor counterterm,
+real/complex factor, conditional Gaussian mean, three regulator
+Hilbert--Schmidt tails, the finite Gaussian-IBP connection patterns, mass
+threshold, plane-wave negative control, and frozen determinant.  It passes
+29/29.
+
+The non-importing implementation uses direct mode enumeration, independently
+coded generators and coefficients, a separate Monte Carlo stream, direct
+variance sums, a recursive connection-pattern enumeration, the actual
+three-dimensional parity matrix, and a second determinant calculation.  It
+passes 17/17.  The integrated verifier performs all authority hashes before
+execution and adds 28 cross-route assertions, for 74/74 in total.
+
+The principal derived diagnostics are
+\begin{verbatim}
+exact counterterm / N error at N=128        0.00939344390845
+variance-tail slopes (cube, ball, smooth)  -1.11272, -1.10545, -1.08903
+conditional Monte Carlo z-score             0.176135
+h = sup W/s                                 0.09534375
+2 h delta_cube                              0.00308894422883
+plane-wave max |J|,|K|                      2.22045e-16
+plane-wave W                                0.0534857142857
+frozen determinant remainder at N=64        0.000102756574758
+corresponding half-HS upper bound            0.000105206016708
+\end{verbatim}
+
+Reproduce the package with
+\begin{verbatim}
+python codes/foundations/a7_classii_renormalised_energy_verify.py
+\end{verbatim}
+
+\section*{10. Devil's-advocate}
+\begin{enumerate}
+\item \textbf{DISMISSED:} the A6 complex derivative covariance can be inserted
+unchanged into the six-real trace.  It cannot; the real covariance is one
+half of the realification.  Both implementations test the factor.
+
+\item \textbf{VALID-with-mitigation:} subtracting only
+$\delta_{\rm cube}NW_\varepsilon$ can leave a finite scheme term.  The
+definition uses each regulator's exact $\Gamma_{\Lambda,i}$ and thereby fixes
+the covariance-normal finite renormalisation condition.
+
+\item \textbf{DISMISSED in the Gaussian-composite scope:} the rational
+coefficient creates an uncontrolled Hermite tail.  Exact identity (3.5a)
+acts directly on $B$ and uses only its first two derivatives.  Conditional
+centering removes the local derivative pair, evenness removes the local mixed
+pair, and the three surviving two-point connection families are controlled
+by (3.9).  This does not assert convergence of an interacting perturbation
+series.
+
+\item \textbf{VALID-with-mitigation:} arbitrary component-split or asymmetric
+regulators may carry a first-level or area anomaly.  They are excluded.  The
+theorem inherits the full common real-even scalar multiplier and
+exact/dealiased-product boundary of A6.
+
+\item \textbf{UPHELD:} composite $L^2$ convergence is not a constructive Gibbs
+theorem.  Uniform negative-exponential control (8.2) is separately named and
+remains open.
+
+\item \textbf{VALID-with-mitigation:} the frozen-background determinant might
+be mistaken for the self-coupled measure.  Section~5 states and uses it only
+for deterministic $B(u)$; it is an audit of the Hilbert--Schmidt remainder.
+
+\item \textbf{UPHELD:} a pointwise running mass at the sharp threshold can
+produce a degenerate first-doublet limit.  The result is recorded as a
+stability boundary, not selected as the physical prescription.
+
+\item \textbf{UPHELD:} $W_\varepsilon^{-1}(0)$ does not classify the bare
+pathwise zero set.  The exact plane-wave counterexample prevents a
+pure-third concentration overclaim.
+
+\item \textbf{VALID-with-mitigation:} constants can blow up as
+$\varepsilon_\rho\downarrow0$.  The floor is fixed; no uniform floor-removal
+statement is made.
+\end{enumerate}
+
+\section*{11. Result footer}
+\begin{verbatim}
+Result ID:               A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE
+Precise statement:       Exact covariance-normal ordering jointly defines
+                         J^2, J*K, K^2 and the full Class-II energy density;
+                         the common-even fixed-floor spectral sequence
+                         converges in L2(Omega; H^(-1-kappa)).
+Scope:                   L=16 production q^-4 Gaussian; three complex fields;
+                          six-real convention; eps_rho=1e-12; common bounded
+                          real-even scalar multipliers with compact support or
+                          uniform Schwartz tails; exact/dealiased products.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION;
+                         A6-CLASSII-UV-POWER-COUNTING;
+                         A6-CLASSII-K-COMPOSITE-DEFINITION.
+ Evidence:                exact Gaussian-IBP/Fourier proof; exact algebra; primary,
+                         non-importing independent, and integrated verifier.
+ Falsification gate:      wrong real/complex factor; missing Gaussian-IBP
+                          connection; non-Cauchy centered variance; failed
+                         scheme/source/counterterm/determinant assertion.
+Tier before / after:     new / T5 PINNED-CLOSURE@FIXED-FLOOR-COVARIANCE-
+                         NORMAL-ENERGY-COMPOSITE.
+No-overclaim statement:  No uniform exponential bound, interacting Gibbs
+                         measure, full-field bare concentration, floor
+                         removal, arbitrary regulator universality, infinite
+                         volume, phase transition, BCC, T6, or T7.
+Next required action:    Prove A7-CLASSII-NELSON-EXPONENTIAL-BOUND; keep the
+                         bare concentration branch separate.
+\end{verbatim}

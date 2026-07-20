@@ -15,7 +15,11 @@ claim cards and their current manifests. The A6 bare ultraviolet obstruction
 is recorded in `A6-CLASSII-UV-POWER-COUNTING`. Its fixed-floor canonical
 `K_A` current is closed separately at scoped T5 in
 `A6-CLASSII-K-COMPOSITE-DEFINITION`, within a common real-even scalar spectral
-regulator class. Active microscopic frontiers are counterterm closure for the
-renormalised quadratic current products and the separately registered
-full-field bare-concentration problem. Neither is supplied by the two local
-proxy limits.
+regulator class. `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE` separately closes
+at scoped T5 the exact covariance-normal-ordered joint quadratic current energy
+and its fixed-floor distributional continuum limit. It does not construct the
+interacting Gibbs measure. The active renormalised frontier is the
+`A7-CLASSII-NELSON-EXPONENTIAL-BOUND` needed for uniform integrability,
+density convergence, and tightness. The unmodified bare law remains a separate
+branch-aware concentration problem; neither it nor the A7 Gibbs gate is supplied
+by the local proxy limits.

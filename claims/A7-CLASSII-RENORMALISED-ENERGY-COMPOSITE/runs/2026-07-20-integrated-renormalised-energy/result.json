@@ -1,0 +1,436 @@
+{
+  "schema": "tect/a7-classii-renormalised-energy-integrated-result/1.1",
+  "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+  "script_version": "1.0.1",
+  "verdict": "A7-CLASSII-RENORMALISED-ENERGY-INTEGRATED-PASS",
+  "manifest_sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+  "scope": "Fixed L=16 hash-pinned A1 production q^-4 Gaussian on three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, embedded Pauli generators, common real-even uniformly bounded scalar Fourier multipliers converging pointwise to one with compact support or a uniform Schwartz tail, each regulator's exact derivative covariance subtraction, and exact Fourier convolution or sufficient de-aliasing.",
+  "preflight": {
+    "status": "PASS",
+    "errors": [],
+    "authority_hashes": {
+      "production_functional_manifest": {
+        "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+        "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+      },
+      "a6_uv_source": {
+        "actual": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+        "expected": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+      },
+      "a6_k_composite_manifest": {
+        "actual": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d",
+        "expected": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+      },
+      "primary_audit": {
+        "actual": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+        "expected": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b"
+      },
+      "independent_audit": {
+        "actual": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2",
+        "expected": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2"
+      },
+      "one_command_verifier": {
+        "actual": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069",
+        "expected": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069"
+      },
+      "proof_note": {
+        "actual": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7",
+        "expected": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7"
+      },
+      "proof_pdf": {
+        "actual": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf",
+        "expected": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf"
+      }
+    }
+  },
+  "subprocesses": {
+    "primary": {
+      "returncode": 0,
+      "stdout": "29/29 PASS\nA7-CLASSII-RENORMALISED-ENERGY-PRIMARY-PASS\nCounterterm ratio error at N=128: 0.00939344\nMass threshold h: 0.09534375\nEvidence: C:\\Dev\\TECT\\claims\\A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE\\runs\\2026-07-20-primary-renormalised-energy\\result.json\n",
+      "stderr": ""
+    },
+    "independent": {
+      "returncode": 0,
+      "stdout": "17/17 PASS\nA7-CLASSII-RENORMALISED-ENERGY-INDEPENDENT-PASS\nIndependent h: 0.09534375\nEvidence: C:\\Dev\\TECT\\claims\\A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE\\runs\\2026-07-20-independent-renormalised-energy\\result.json\n",
+      "stderr": ""
+    }
+  },
+  "source_hashes": {
+    "production_functional_manifest": {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_uv_source": {
+      "actual": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "expected": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+    },
+    "a6_k_composite_manifest": {
+      "actual": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d",
+      "expected": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "primary_audit": {
+      "actual": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+      "expected": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b"
+    },
+    "independent_audit": {
+      "actual": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2",
+      "expected": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2"
+    },
+    "one_command_verifier": {
+      "actual": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069",
+      "expected": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069"
+    },
+    "proof_note": {
+      "actual": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7",
+      "expected": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7"
+    },
+    "proof_pdf": {
+      "actual": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf",
+      "expected": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf"
+    }
+  },
+  "assertions": [
+    {
+      "name": "primary_subprocess_exits_zero",
+      "status": "PASS",
+      "actual": {
+        "process": {
+          "returncode": 0,
+          "stdout": "29/29 PASS\nA7-CLASSII-RENORMALISED-ENERGY-PRIMARY-PASS\nCounterterm ratio error at N=128: 0.00939344\nMass threshold h: 0.09534375\nEvidence: C:\\Dev\\TECT\\claims\\A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE\\runs\\2026-07-20-primary-renormalised-energy\\result.json\n",
+          "stderr": ""
+        },
+        "load_error": null
+      },
+      "expected": "returncode 0 and valid JSON"
+    },
+    {
+      "name": "independent_subprocess_exits_zero",
+      "status": "PASS",
+      "actual": {
+        "process": {
+          "returncode": 0,
+          "stdout": "17/17 PASS\nA7-CLASSII-RENORMALISED-ENERGY-INDEPENDENT-PASS\nIndependent h: 0.09534375\nEvidence: C:\\Dev\\TECT\\claims\\A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE\\runs\\2026-07-20-independent-renormalised-energy\\result.json\n",
+          "stderr": ""
+        },
+        "load_error": null
+      },
+      "expected": "returncode 0 and valid JSON"
+    },
+    {
+      "name": "primary_result_contract_matches",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a7-classii-renormalised-energy-primary-result/1.1",
+        "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "script_version": "1.0.1",
+        "verdict": "A7-CLASSII-RENORMALISED-ENERGY-PRIMARY-PASS",
+        "run_role": "primary",
+        "run_manifest_sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+        "run_script_sha256": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+        "run_config_sha256": "a765138375b956500af51a5c8d14ce8efc741b26894d340d75509bd3af762bb5"
+      },
+      "expected": {
+        "schema": "tect/a7-classii-renormalised-energy-primary-result/1.1",
+        "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "script_version": "1.0.1",
+        "verdict": "A7-CLASSII-RENORMALISED-ENERGY-PRIMARY-PASS",
+        "run_role": "primary",
+        "run_manifest_sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+        "run_script_sha256": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+        "run_config_sha256": "a765138375b956500af51a5c8d14ce8efc741b26894d340d75509bd3af762bb5"
+      }
+    },
+    {
+      "name": "independent_result_contract_matches",
+      "status": "PASS",
+      "actual": {
+        "schema": "tect/a7-classii-renormalised-energy-independent-result/1.1",
+        "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "script_version": "1.0.1",
+        "verdict": "A7-CLASSII-RENORMALISED-ENERGY-INDEPENDENT-PASS",
+        "run_role": "independent",
+        "run_manifest_sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+        "run_script_sha256": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2",
+        "run_config_sha256": "81058b0a5418ea10d46ddb9311be80306c668bb0c0c3b86a071261c550ec3faa"
+      },
+      "expected": {
+        "schema": "tect/a7-classii-renormalised-energy-independent-result/1.1",
+        "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+        "script_version": "1.0.1",
+        "verdict": "A7-CLASSII-RENORMALISED-ENERGY-INDEPENDENT-PASS",
+        "run_role": "independent",
+        "run_manifest_sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+        "run_script_sha256": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2",
+        "run_config_sha256": "81058b0a5418ea10d46ddb9311be80306c668bb0c0c3b86a071261c550ec3faa"
+      }
+    },
+    {
+      "name": "primary_assertions_all_pass",
+      "status": "PASS",
+      "actual": {
+        "passed": 29,
+        "total": 29
+      },
+      "expected": {
+        "passed": 29,
+        "total": 29
+      }
+    },
+    {
+      "name": "independent_assertions_all_pass",
+      "status": "PASS",
+      "actual": {
+        "passed": 17,
+        "total": 17
+      },
+      "expected": {
+        "passed": 17,
+        "total": 17
+      }
+    },
+    {
+      "name": "both_failure_lists_are_empty",
+      "status": "PASS",
+      "actual": {
+        "primary": [],
+        "independent": []
+      },
+      "expected": "both empty"
+    },
+    {
+      "name": "coefficient_a_crosscheck",
+      "status": "PASS",
+      "actual": [
+        0.004499999999998875,
+        0.004499999999998875
+      ],
+      "expected": "absolute error <1e-15"
+    },
+    {
+      "name": "coefficient_b_crosscheck",
+      "status": "PASS",
+      "actual": [
+        0.0018749999999995311,
+        0.0018749999999995311
+      ],
+      "expected": "absolute error <1e-15"
+    },
+    {
+      "name": "coefficient_c_crosscheck",
+      "status": "PASS",
+      "actual": [
+        0.002343749999999414,
+        0.002343749999999414
+      ],
+      "expected": "absolute error <1e-15"
+    },
+    {
+      "name": "sharp_mass_threshold_crosscheck",
+      "status": "PASS",
+      "actual": [
+        0.09534374999997615,
+        0.09534374999997615
+      ],
+      "expected": "absolute error <1e-15"
+    },
+    {
+      "name": "family_mass_slope_crosscheck",
+      "status": "PASS",
+      "actual": [
+        0.0030889442288279433,
+        0.0030889442288279433
+      ],
+      "expected": "absolute error <1e-15"
+    },
+    {
+      "name": "counterterm_targets_crosscheck",
+      "status": "PASS",
+      "actual": [
+        0.0012002006237778616,
+        0.0012002006237778616
+      ],
+      "expected": "same delta*W target"
+    },
+    {
+      "name": "primary_counterterm_asymptotic_passes",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 128,
+        "exact_over_N": 0.0012114746410162084,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.009393443908452244
+      },
+      "expected": "<0.03"
+    },
+    {
+      "name": "independent_counterterm_asymptotic_passes",
+      "status": "PASS",
+      "actual": {
+        "cutoff": 48,
+        "ratio": 0.0012289720082724533,
+        "target": 0.0012002006237778616,
+        "relative_error": 0.02397214592676034
+      },
+      "expected": "<0.03"
+    },
+    {
+      "name": "conditional_MC_checks_are_statistically_consistent",
+      "status": "PASS",
+      "actual": {
+        "primary": 0.17613514923801388,
+        "independent": 1.1942911550839497
+      },
+      "expected": "both z<5.5"
+    },
+    {
+      "name": "both_variance_audits_show_decaying_tails",
+      "status": "PASS",
+      "actual": {
+        "primary": {
+          "cube": -1.112719109912919,
+          "ball": -1.1054478394913618,
+          "smooth": -1.0890329779741474
+        },
+        "independent": {
+          "cube": -1.3931260294341974,
+          "ball": -1.35056299823749,
+          "smooth": -1.3036785262601829
+        }
+      },
+      "expected": "all slopes <-0.5"
+    },
+    {
+      "name": "plane_wave_null_negative_control_crosschecks",
+      "status": "PASS",
+      "actual": {
+        "primary": {
+          "max_abs_J": 2.220446049250313e-16,
+          "max_abs_K": 2.220446049250313e-16,
+          "W": 0.05348571428570664
+        },
+        "independent_W": 0.05348571428570665,
+        "independent_current": 2.220446049250313e-16
+      },
+      "expected": "zero current and positive W"
+    },
+    {
+      "name": "frozen_determinant_HS_checks_crosscheck",
+      "status": "PASS",
+      "actual": {
+        "primary": {
+          "cutoff": 64,
+          "leading_density": 0.07821859222610002,
+          "logdet_density": 0.07811583565134174,
+          "normal_ordered_log_partition": 0.00010275657475827815,
+          "half_hs_bound": 0.00010520601670824825
+        },
+        "independent": {
+          "leading": 0.030088133252909623,
+          "logdet": 0.029987782899296832,
+          "remainder": 0.00010035035361279088,
+          "half_hs_bound": 0.00010279955460196716
+        }
+      },
+      "expected": "positive and HS bounded"
+    },
+    {
+      "name": "authority_production_functional_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "authority_a6_uv_source_hash_matches",
+      "status": "PASS",
+      "actual": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "expected": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+    },
+    {
+      "name": "authority_a6_k_composite_manifest_hash_matches",
+      "status": "PASS",
+      "actual": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d",
+      "expected": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    {
+      "name": "authority_primary_audit_hash_matches",
+      "status": "PASS",
+      "actual": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+      "expected": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b"
+    },
+    {
+      "name": "authority_independent_audit_hash_matches",
+      "status": "PASS",
+      "actual": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2",
+      "expected": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2"
+    },
+    {
+      "name": "authority_one_command_verifier_hash_matches",
+      "status": "PASS",
+      "actual": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069",
+      "expected": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069"
+    },
+    {
+      "name": "authority_proof_note_hash_matches",
+      "status": "PASS",
+      "actual": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7",
+      "expected": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7"
+    },
+    {
+      "name": "authority_proof_pdf_hash_matches",
+      "status": "PASS",
+      "actual": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf",
+      "expected": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf"
+    },
+    {
+      "name": "manifest_excludes_interacting_measure_closure",
+      "status": "PASS",
+      "actual": [
+        "Nelson or Boue-Dupuis uniform negative-exponential estimate",
+        "uniform integrability or L1 convergence of interacting Gibbs weights",
+        "full three-component constructive Gibbs measure",
+        "classification or tightness of the full-field bare law",
+        "rho_regularizer removal",
+        "arbitrary component-split or asymmetric regulators",
+        "infinite-volume limit or phase transition",
+        "BCC existence, stability, or selection",
+        "T6 or T7 theorem status"
+      ],
+      "expected": "explicit exclusion"
+    }
+  ],
+  "assertion_summary": {
+    "primary": {
+      "passed": 29,
+      "total": 29
+    },
+    "independent": {
+      "passed": 17,
+      "total": 17
+    },
+    "cross": {
+      "passed": 28,
+      "total": 28
+    },
+    "aggregate": {
+      "passed": 74,
+      "total": 74
+    },
+    "count_contract": true
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "not_closed_here": [
+    "Nelson or Boue-Dupuis uniform negative-exponential estimate",
+    "uniform integrability or L1 convergence of interacting Gibbs weights",
+    "full three-component constructive Gibbs measure",
+    "classification or tightness of the full-field bare law",
+    "rho_regularizer removal",
+    "arbitrary component-split or asymmetric regulators",
+    "infinite-volume limit or phase transition",
+    "BCC existence, stability, or selection",
+    "T6 or T7 theorem status"
+  ]
+}

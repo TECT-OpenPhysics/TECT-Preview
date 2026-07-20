@@ -1,0 +1,214 @@
+{
+  "schema": "tect/a7-classii-renormalised-energy/1.1",
+  "package_version": "1.0.1",
+  "claim_id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+  "frozen_on": "2026-07-20",
+  "status": "T5 PINNED-CLOSURE@FIXED-FLOOR-COVARIANCE-NORMAL-ENERGY-COMPOSITE",
+  "authority": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_uv_source": {
+      "path": "codes/foundations/a6_classii_uv_power_counting.py",
+      "sha256": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c",
+      "version": "1.0.2"
+    },
+    "a6_k_composite_manifest": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a7_classii_renormalised_energy.py",
+      "sha256": "ee41cc4f8220b9b2951c52afc9d7229115c5af8a34c8839f8846485420f41a2b",
+      "version": "1.0.1"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a7_classii_renormalised_energy_independent.py",
+      "sha256": "f25a010023d27a8a31a61082efeecc6c307589e22c57f16f6162c58cff7731b2",
+      "version": "1.0.1"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a7_classii_renormalised_energy_verify.py",
+      "sha256": "298e0bd60cf1b3df6b0eac1e8d00552d9d8d978c9cdad9279b74e7762dc8d069",
+      "version": "1.0.1"
+    },
+    "proof_note": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.tex.txt",
+      "sha256": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7",
+      "version": "1.0"
+    },
+    "proof_pdf": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.pdf",
+      "sha256": "dba6cc9b833ebcb3ee651ba5831f3e4e0f98a5ab0414885b7230966ab2e44daf",
+      "version": "1.0",
+      "pages": 8,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS on all eight final rendered pages after the Gaussian-IBP repair and spacing correction; no clipping, overlap, broken equations, unreadable text, or footer defects"
+    }
+  },
+  "scope": "Fixed L=16 hash-pinned A1 production q^-4 Gaussian on three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, embedded Pauli generators, common real-even uniformly bounded scalar Fourier multipliers converging pointwise to one with compact support or a uniform Schwartz tail, each regulator's exact derivative covariance subtraction, and exact Fourier convolution or sufficient de-aliasing.",
+  "normal_ordering": {
+    "real_matrix": "B(X)=sum_A[a p_A p_A^T+b(p_A v_A^T+v_A p_A^T)+c v_A v_A^T], p_A=2S_A X, v_A=2(S_A-q_A I)X",
+    "six_real_covariance": "Gamma_Lambda,i=E[partial_i X_Lambda partial_i X_Lambda^T]",
+    "complex_covariance_factor": "Gamma_Lambda,i=(1/2) realify(D_Lambda,i), where D_Lambda,i=E[partial_i Psi_Lambda partial_i Psi_Lambda^dagger]",
+    "counterterm": "C_Lambda(X)=(1/2) sum_i Tr[B(X) Gamma_Lambda,i]=E[e_II,Lambda(x)|X_Lambda(x)=X]",
+    "renormalised_density": "e_II,Lambda^ren=e_II,Lambda-C_Lambda(X_Lambda)",
+    "finite_scheme_condition": "use the exact covariance of each admitted regulator; subtraction of only delta_cube*N*W_eps is not the definition"
+  },
+  "theorem_boundary": {
+    "joint_products": "The covariance-normal sequences for J_A,i^2, J_A,i*K_A,i, and K_A,i^2 converge jointly; this is not an arbitrary bilinear multiplication of already-existing distributions.",
+    "convergence": "For every kappa>0, e_II,Lambda^ren converges in L2(Omega; H^(-1-kappa)(T_L^3)); its spatial integral converges in L2(Omega) and has mean zero.",
+    "primitive_divergence": "In the Gaussian two-point composite construction, exact conditional centering removes the only divergent local derivative-pair contraction. The exact finite Gaussian-IBP identity leaves only Q^2, QPR, and P^2R^2 cross-vertex families. No interacting perturbation-series convergence is asserted.",
+    "scheme_control": "Exact covariance-normal ordering gives one common limit inside the declared common-even scalar spectral regulator class.",
+    "endpoint": "H^(-1) is excluded; the dyadic shell sum is logarithmic at the endpoint.",
+    "floor": "All coefficient and Gaussian-Sobolev bounds fix rho_regularizer>0; no uniform floor-removal estimate is asserted."
+  },
+  "leading_stability_split": {
+    "W": "W_eps=9(a+2b+c)s-6b*s^2/(rho+eps)-3c*s^2*(rho+2eps)/(rho+eps)^2",
+    "sharp_action_threshold": "sup_(s>0) W_eps/s=h=9(a+2b+c); the leading pointwise action repair t_N*m*s is nonnegative for all fields iff m>=h",
+    "critical_residual": "h*s-W_eps=6b*s^2/(rho+eps)+3c*s^2*(rho+2eps)/(rho+eps)^2>=0",
+    "subcritical_no_go": "every m<h admits a mixed-orientation homogeneous -Theta(t_N^(3/2)) trial",
+    "parameter_shift": "because the family energy is (1/2) Delta_mu_N*s, the leading parameter threshold is Delta_mu_N>=2*h*delta_cube*N+O(1)",
+    "physical_boundary": "the pointwise-coercive critical repair can suppress the first doublet and is not selected as a nondegenerate physical prescription"
+  },
+  "bare_negative_control": {
+    "statement": "Psi(x)=exp(i k.x)u has J_A=K_A=F_II=0 for every A while W_eps(u)>0 whenever the first doublet is active.",
+    "consequence": "W_eps^-1(0) is not the pathwise Class-II null set, so the conditional Gaussian mean cannot by itself prove pure-third bare concentration."
+  },
+  "frozen_background_check": {
+    "statement": "For deterministic B(u), the normal-ordered quadratic partition factor is det_2(I+T_u)^(-1/2), with 0<=log factor<=||T_u||_HS^2/4.",
+    "boundary": "This does not condition on the full self-coupled field and does not prove a random-coefficient Gibbs estimate."
+  },
+  "constants": {
+    "delta_cube": {
+      "value": 0.01619898645075695,
+      "classification": "DERIVED from A6 sharp-cube theorem"
+    },
+    "a": {
+      "value": 0.004499999999998875,
+      "classification": "DERIVED from hash-pinned A1 production coefficients"
+    },
+    "b": {
+      "value": 0.0018749999999995311,
+      "classification": "DERIVED from hash-pinned A1 production coefficients"
+    },
+    "c": {
+      "value": 0.002343749999999414,
+      "classification": "DERIVED from hash-pinned A1 production coefficients"
+    },
+    "h": {
+      "value": 0.09534374999997615,
+      "classification": "DERIVED sharp leading pointwise action threshold"
+    },
+    "d": {
+      "value": 0.018281249999995426,
+      "classification": "DERIVED"
+    },
+    "family_mass_slope": {
+      "value": 0.0030889442288279433,
+      "classification": "DERIVED parameter-space leading threshold 2*h*delta_cube"
+    }
+  },
+  "audit": {
+    "seed": 20260720,
+    "conditional_cutoff": 24,
+    "conditional_samples": 120000,
+    "conditional_z_score": 5.5,
+    "asymptotic_cutoffs": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "asymptotic_relative_tolerance": 0.03,
+    "variance_cutoffs": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "variance_reference_cutoff": 512,
+    "variance_tail_slope_interval": [
+      -1.8,
+      -0.6
+    ],
+    "variance_scheme_relative_tolerance": 0.02,
+    "determinant_cutoffs": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "matrix_identity_tolerance": 1e-12
+  },
+  "independent_audit": {
+    "seed": 20260731,
+    "conditional_cutoff": 16,
+    "conditional_samples": 80000,
+    "asymptotic_cutoffs": [
+      12,
+      20,
+      32,
+      48
+    ],
+    "variance_cutoffs": [
+      8,
+      12,
+      20,
+      32
+    ],
+    "variance_reference_cutoff": 64,
+    "determinant_cutoff": 24,
+    "parity_cutoff": 64,
+    "parity_tolerance": 1e-13
+  },
+  "integrated_audit": {
+    "primary_assertions": 29,
+    "independent_assertions": 17,
+    "cross_assertions": 28,
+    "expected_aggregate_assertions": 74,
+    "coefficient_absolute_tolerance": 1e-15,
+    "source_hash_mode": "SHA-256 fail closed"
+  },
+  "run_contract": {
+    "schema": "tect/a7-classii-renormalised-energy-run-contract/1.0",
+    "primary_result_schema": "tect/a7-classii-renormalised-energy-primary-result/1.1",
+    "independent_result_schema": "tect/a7-classii-renormalised-energy-independent-result/1.1",
+    "integrated_result_schema": "tect/a7-classii-renormalised-energy-integrated-result/1.1"
+  },
+  "references": [
+    "https://arxiv.org/abs/1612.08138",
+    "https://arxiv.org/abs/1210.2684",
+    "https://arxiv.org/abs/0711.0668"
+  ],
+  "open_followups": [
+    "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
+    "A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION",
+    "rho_regularizer removal"
+  ],
+  "honesty_boundary": {
+    "closed": [
+      "exact six-real and complex finite-cutoff Class-II conditional counterterm",
+      "joint fixed-floor covariance-normal definitions of J^2, J*K, and K^2",
+      "L2(Omega; H^(-1-kappa)) common-even spectral composite convergence for every kappa>0",
+      "L2 convergence and zero mean of the integrated renormalised Class-II energy",
+      "finite Gaussian-IBP two-point connection closure at fixed floor",
+      "frozen deterministic-background det_2 check",
+      "sharp leading pointwise running-mass threshold and subcritical raw-coercivity no-go",
+      "plane-wave negative control against naive pure-third bare concentration"
+    ],
+    "excluded": [
+      "Nelson or Boue-Dupuis uniform negative-exponential estimate",
+      "uniform integrability or L1 convergence of interacting Gibbs weights",
+      "full three-component constructive Gibbs measure",
+      "classification or tightness of the full-field bare law",
+      "rho_regularizer removal",
+      "arbitrary component-split or asymmetric regulators",
+      "infinite-volume limit or phase transition",
+      "BCC existence, stability, or selection",
+      "T6 or T7 theorem status"
+    ]
+  }
+}

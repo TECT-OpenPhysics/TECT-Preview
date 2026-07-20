@@ -28,6 +28,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT](#audit-2026-07-20-sector-a-baseline-status-drift) | Sector-A live records after A5 publication | stale sign-off, mass-alias, gate, and roadmap wording contradicted enacted claims |
 | [NG-2026-07-20-A6-BARE-CLASSII-L1](#ng-2026-07-20-a6-bare-classii-l1) | direct A4-style bare extension to full derivative Class-II | positive linear derivative-pair contraction defeats uniform Gaussian L1 control |
 | [NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM](#ng-2026-07-20-a6-naive-w-subtraction-nonuniform) | literal fixed-parameter leading-W subtraction | homogeneous amplitudes escape as N^(1/4) and the raw lower bound falls as -N^(3/2) |
+| [NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE](#ng-2026-07-20-a7-w-zeroset-bare-inference) | pure-third bare concentration inferred from the conditional contraction | a full Class-II plane-wave null has W_eps > 0 |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -95,6 +96,27 @@ introduces a new renormalisation condition and may force concentration on the
 pure-third-component subspace. Counterterm closure remains open. The separate
 full-field bare-concentration gate is not decided by this no-go or by either
 local proxy.
+
+<a id="ng-2026-07-20-a7-w-zeroset-bare-inference"></a>
+### NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE -- conditional contraction does not classify bare null branches
+
+**Failure mode:** The zero set of the positive conditional derivative-pair
+contraction `W_eps` is not the zero set of the pathwise full Class-II energy.
+For a common-phase plane wave `Psi(x)=exp(i*k.x)u`, direct substitution gives
+`J_A=K_A=F_II=0` for every generator, including when the first doublet is
+active and `W_eps(u)>0`. Therefore a large conditional Gaussian mean cannot by
+itself force the unmodified Gibbs law onto the pure-third subspace.
+
+**Evidence:** `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`; analytic common-phase
+cancellation; primary 29/29, non-importing independent 17/17, and integrated
+74/74 execution. The independent route evaluates the currents directly and
+finds maximum residual `2.22e-16` while `W_eps=0.0534857142857`.
+
+**Consequence:** The full bare problem must classify and compare all branches
+of the Class-II null set, including active-doublet phase configurations. The
+two local contraction proxies remain valid as local calculations but cannot
+select a global branch. No pure-third concentration, tightness, or scalar A4
+reduction is inferred.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

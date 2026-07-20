@@ -4,7 +4,7 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-20.
 
-## A6 full derivative Class-II composite and renormalisation gates
+## A6/A7 full derivative Class-II composite and renormalisation gates
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**
 
@@ -16,17 +16,21 @@ subgraphs, is scheme controlled, and leaves a uniform lower bound, partition
 control, and tightness sufficient for a nontrivial finite-volume continuum
 measure.
 
-**Status:** OPEN (2026-07-20).  The bare Gaussian-reference growth and the
-current `K_A` are now classified.  The literal subtraction
+**Status:** OPEN, COMPOSITE SUBGATE CLOSED (2026-07-20).  The bare
+Gaussian-reference growth and the current `K_A` are classified.  The literal subtraction
 `-delta_cube*N*W_eps(Psi)` with fixed lower-order coefficients is eliminated as
 a uniform-coercivity route: a homogeneous first-two-component trial has
 `|Psi_N|=Theta(N^(1/4))` and energy `-Theta(N^(3/2))`.  A vacuum shift does not
 repair the escaping amplitude.  Adding a running family mass can restore
 nonnegativity but also drives the same components toward zero, so it is a new
-renormalisation condition rather than closure.  Remaining work is to classify
-all superficially divergent products `J*K` and `|K|^2`, choose running relevant
-parameters by explicit renormalisation conditions, and prove uniform partition
-control and tightness.  Bare concentration is tracked by a separate gate.
+renormalisation condition rather than closure.
+`A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE` now closes at scoped T5 the exact
+covariance-normal-ordered joint definition of `J^2`, `J*K`, and `K^2`, the
+exact finite Gaussian-IBP two-point connection classification, and convergence in
+`L2(Omega;H^(-1-kappa))` for every `kappa>0`.  This does not close the present
+gate: the self-coupled weight still needs a uniform negative-exponential bound,
+partition-density convergence, and tightness.  Those requirements are tracked
+by `A7-CLASSII-NELSON-EXPONENTIAL-BOUND`; bare concentration remains separate.
 
 ### **A6-CLASSII-K-COMPOSITE-DEFINITION**
 
@@ -49,24 +53,52 @@ control has a nonzero area anomaly, so arbitrary-regulator independence is
 explicitly not claimed.  This closure does not define `J*K`, `|K|^2`, remove
 the density floor, or close a Gibbs measure.
 
+### **A7-CLASSII-NELSON-EXPONENTIAL-BOUND**
+
+**Statement:** For the fixed-floor, covariance-normal-ordered full
+three-component Class-II action constructed by
+`A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`, prove for some `p>1` a cutoff-uniform
+bound
+`sup_Lambda E exp(-p[U_Lambda+V_Lambda^ren]) < infinity`, with all lower-order
+production terms and the exact A1 Gaussian split pinned.  Use it to prove
+uniform integrability and `L1` convergence of the interacting densities,
+partition-function convergence, tightness of the Galerkin laws, and a unique
+full-sequence finite-volume Gibbs limit with convergence of bounded smeared
+correlations.
+
+**Status:** OPEN (2026-07-20).  The A7 composite action converges in `L2`, has
+mean zero, and its finite-cutoff partition functions have a uniform positive
+Jensen lower bound.  Frozen deterministic coefficient matrices admit a
+Hilbert-Schmidt/Carleman-Fredholm audit, but that calculation does not apply to
+the self-coupled random matrix `B(X)`.  Closure requires a genuine
+Nelson/Boue-Dupuis or equivalent self-coupled estimate; `L2` action convergence,
+finite-cutoff sextic normalisability, and the frozen determinant are
+insufficient.  Density-floor removal and infinite volume are not part of this
+gate.
+
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 
-**Statement:** Determine whether the unmodified finite-cutoff full derivative
-Class-II Gibbs measures concentrate on
-`W_eps^-1(0)={Psi_1=Psi_2=0}`.  A closure must control the spatially correlated
-partition function, the entropy of the growing Fourier-mode space, rational
-mode coupling, tube probabilities around the zero set, and tightness of the
-remaining third component.  It must not replace the full Gibbs weight by a
-conditional-mean or one-point derivative-integrated proxy.
+**Statement:** Determine the cutoff-limit behaviour of the unmodified
+finite-cutoff full derivative Class-II Gibbs measures and classify which
+branches of the full pathwise Class-II null set can carry subsequential limits.
+A closure must control the spatially correlated partition function, the entropy
+of the growing Fourier-mode space, rational mode coupling, branch-aware tube
+probabilities, and tightness.  It must not replace the full Gibbs weight by a
+conditional-mean or one-point derivative-integrated proxy, or identify the
+pathwise null set with `W_eps^-1(0)`.
 
 **Status:** OPEN (2026-07-20).  The exact bound
-`9*lambda_min(Q_II)*s <= W_eps <= 9*(a+2b+c)*s` fixes the zero set.  Two local
+`9*lambda_min(Q_II)*s <= W_eps <= 9*(a+2b+c)*s` fixes the zero set of the
+conditional contraction only.  Two local
 proxies are solved at T5: the mean-contraction proxy gives
 `t*s -> Gamma(2,rate=9*(a+2b+c))`, while exact one-point Gaussian derivative
 integration gives density `35*g^2*r*(1+2*g*r)^(-9/2)`.  Their distinct means
 show that proxy choice is load-bearing.  Neither result is a full-field
 concentration theorem, and no pathwise inequality identifies the complete
-Class-II energy with `delta_cube*N*W_eps`.
+Class-II energy with `delta_cube*N*W_eps`.  In fact,
+`Psi(x)=exp(i*k.x)u` with an active first doublet has `J_A=K_A=F_II=0` while
+`W_eps(u)>0`.  Pure-third concentration therefore cannot be inferred from the
+conditional contraction; all null branches must be compared.
 
 ## A5 T6 conditional-composition hypothesis and review gate
 

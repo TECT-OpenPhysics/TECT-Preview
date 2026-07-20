@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A7 adversarial repair closes the rational-coefficient proof and verifier defects] - 2026-07-20
+
+
+
+## [A7 full Class-II renormalised energy composite closed at scoped T5] - 2026-07-20
+
+
+
 ## [Close the fixed-floor Class-II K current and split counterterm from bare concentration] - 2026-07-20
 
 

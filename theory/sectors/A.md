@@ -8,7 +8,7 @@
 
 ## Claims
 
-Tier profile: T6x9 T5x4 T4x1
+Tier profile: T6x9 T5x5 T4x1
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
@@ -26,9 +26,10 @@ Tier profile: T6x9 T5x4 T4x1
 | [`A5-SECTOR-A-SYNTHESIS`](../../claims/A5-SECTOR-A-SYNTHESIS/INDEX.md) | T6 | A5-H1-CANONICAL-KERNEL-MANIFEST, A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY | — | Sector A branch-aware synthesis and termination package |
 | [`A6-CLASSII-K-COMPOSITE-DEFINITION`](../../claims/A6-CLASSII-K-COMPOSITE-DEFINITION/INDEX.md) | T5 | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | Fixed-floor canonical spectral definition of the Class-II K current |
 | [`A6-CLASSII-UV-POWER-COUNTING`](../../claims/A6-CLASSII-UV-POWER-COUNTING/INDEX.md) | T4 | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | Full derivative Class-II Gaussian UV power counting and leading contraction |
+| [`A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`](../../claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/INDEX.md) | T5 | — | A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | Covariance-normal-ordered full three-component Class-II energy composite |
 
 **Open named hypotheses (sector union):** A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A5-H1-CANONICAL-KERNEL-MANIFEST  
-**Open gates (sector union):** A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION
+**Open gates (sector union):** A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-NELSON-EXPONENTIAL-BOUND
 
 ## Predictions
 
@@ -41,6 +42,7 @@ _None linked to this sector._
 | AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT | Sector-A live-record alignment | Several current-facing records retained pre-approval or |
 | NG-2026-07-20-A6-BARE-CLASSII-L1 | bare full-Class-II constructive route | The A4 scalar bounded-density/dominated-convergence proof |
 | NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM | literal leading-W subtraction | The direct prescription |
+| NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE | conditional contraction does not classify bare null branches | The zero set of the positive conditional derivative-pair |
 | NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
 | AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |

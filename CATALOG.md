@@ -6,7 +6,7 @@
 
 Generated: 2026-07-20
 
-**2157 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**2170 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -239,6 +239,10 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A6-CLASSII-UV-POWER-COUNTING/claim.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `4745053c8893` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `2fb1bbc997a3` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/status.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `2dd8ecf4ae2a` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/LINEAGE.md` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `6adae35e9ae5` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/claim.md` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `e3ccbc950299` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `4e14817d1928` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/status.json` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `d6d5b341cb0f` |
 | `claims/B1-RH-ENUM/LINEAGE.md` | B1-RH-ENUM | — | — | — | ACTIVE | `0370f4e3b76f` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/MANIFEST.json` | B1-RH-ENUM | — | — | — | ACTIVE | `d93bbfaa83cb` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/README.md` | B1-RH-ENUM | — | — | — | ACTIVE | `abf305f81e64` |
@@ -669,6 +673,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.tex.txt` | A6-CLASSII-K-COMPOSITE-DEFINITION | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `38f3ea846185` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/notes/a6-classii-uv-power-counting-260720-v1.0.pdf` | A6-CLASSII-UV-POWER-COUNTING | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `a5e7a862a2b4` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/notes/a6-classii-uv-power-counting-260720-v1.0.tex.txt` | A6-CLASSII-UV-POWER-COUNTING | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `f7f3ca4dbefd` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.pdf` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `dba6cc9b833e` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.tex.txt` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | 2026-07-20 | 2026-07-20 | v1.0 | ACTIVE | `d9f74e7448d8` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/estimator-upgrade-closure-consolidation-260607-v1.0.pdf` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `225172dd190b` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/estimator-upgrade-closure-consolidation-260607-v1.0.tex.txt` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `499b4317ce1d` |
 | `claims/B1-RH-ENUM/ESTIMATOR-UPGRADE/notes/estimator-upgrade-enumerated-260607-v1.0.pdf` | B1-RH-ENUM | 2026-06-07 | 2026-06-07 | v1.0 | ACTIVE | `ea6f6211ca03` |
@@ -1771,12 +1777,15 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-independent/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `74fafc5c35ce` |
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-integrated/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `11addf12638b` |
 | `claims/A5-SECTOR-A-SYNTHESIS/runs/2026-07-20-t6-conditional-published-primary/result.json` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `3f064a7c29d7` |
-| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-independent-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `ed64c250c8bd` |
-| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-integrated-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `524dd3e72270` |
-| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-primary-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `ca29f2f5879f` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-independent-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `f93f0a69a1f4` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-integrated-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `39523178c406` |
+| `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/runs/2026-07-20-primary-k-composite/result.json` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `a9b9d8e91fdc` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-independent-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `22e32ffc70e9` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-integrated-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `acefc13f268b` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/runs/2026-07-20-primary-classii-uv/result.json` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `345308ad8f1d` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-07-20-independent-renormalised-energy/result.json` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `63bf5a18f2af` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-07-20-integrated-renormalised-energy/result.json` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `fef558532f81` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/runs/2026-07-20-primary-renormalised-energy/result.json` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `8ace15d73bbd` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-032-window-certification/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `3e2cec863392` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-033-ext-adversarial-map/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `0feb8b491ed5` |
 | `claims/B1-RH-ENUM/bundle/Reading-H-cFull-T7-260611/claims/B1-RH-ENUM/runs/260610-res5-034-DS-nonlattice-extension/result.json` | B1-RH-ENUM | — | — | — | ACTIVE | `ef5b32161378` |
@@ -1971,6 +1980,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a6_classii_uv_power_counting.py` | — | 2026-07-20 | 2026-07-20 | v1.0.2 | ACTIVE | `2537c71312d2` |
 | `codes/foundations/a6_classii_uv_power_counting_independent.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `72dcb78ba26d` |
 | `codes/foundations/a6_classii_uv_power_counting_verify.py` | — | 2026-07-20 | 2026-07-20 | v1.0.0 | ACTIVE | `0b594d732607` |
+| `codes/foundations/a7_classii_renormalised_energy.py` | — | 2026-07-20 | 2026-07-20 | v1.0.1 | ACTIVE | `ee41cc4f8220` |
+| `codes/foundations/a7_classii_renormalised_energy_independent.py` | — | 2026-07-20 | 2026-07-20 | v1.0.1 | ACTIVE | `f25a010023d2` |
+| `codes/foundations/a7_classii_renormalised_energy_verify.py` | — | 2026-07-20 | 2026-07-20 | v1.0.1 | ACTIVE | `298e0bd60cf1` |
 | `codes/foundations/actual_n001_pde_backend.py` | — | — | — | — | ACTIVE | `8fe66e0df51b` |
 | `codes/foundations/n001_bcc_star_curvature.py` | — | — | — | v1.0.0 | ACTIVE | `175e103237bf` |
 | `codes/foundations/n001_solver/PROVENANCE.json` | — | — | — | — | ACTIVE | `48ff9292a0e8` |
@@ -2133,17 +2145,18 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A5-SECTOR-A-SYNTHESIS/INDEX.md` | A5-SECTOR-A-SYNTHESIS | — | — | — | ACTIVE | `e3078a598ceb` |
 | `claims/A6-CLASSII-K-COMPOSITE-DEFINITION/INDEX.md` | A6-CLASSII-K-COMPOSITE-DEFINITION | — | — | — | ACTIVE | `37a5f08378dd` |
 | `claims/A6-CLASSII-UV-POWER-COUNTING/INDEX.md` | A6-CLASSII-UV-POWER-COUNTING | — | — | — | ACTIVE | `c2b239a0f1e9` |
+| `claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/INDEX.md` | A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE | — | — | — | ACTIVE | `5d664e1ab122` |
 | `claims/B1-RH-ENUM/INDEX.md` | B1-RH-ENUM | — | — | — | ACTIVE | `ef584396ca74` |
 | `claims/B2-PROPA-HLAYER/INDEX.md` | B2-PROPA-HLAYER | — | — | — | ACTIVE | `5f21708c8a94` |
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `fadc0b632f94` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `a284de26b4a6` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `406de6b39476` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `1b5aecbd685c` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `e3978fd53ca2` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `069590e3dfb7` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `f33c57b96623` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
-| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `5a3fd4b611e8` |
+| `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `561c57c486e9` |
 
 ## Governance policies
 
@@ -2171,16 +2184,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `eb43f81615be` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `36905c6ade1c` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `f5b0f2a2cace` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `05f490821bad` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
 | `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `4f817683cc5d` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
-| `ROADMAP.md` | — | — | — | — | ACTIVE | `626e06235e8c` |
+| `ROADMAP.md` | — | — | — | — | ACTIVE | `1f33ceac0488` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `48e9c299b1d9` |
+| `TODO.md` | — | — | — | — | ACTIVE | `53546c976303` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -2190,7 +2203,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `4927963b535e` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `766515fc3e3d` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -2229,17 +2242,17 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `c04ffdfbce47` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `002e2752b4fd` |
-| `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `1d374610585a` |
+| `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `b0184e514469` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `053b9711ad28` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `71cce520bb0e` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `299f7c3653f4` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `5bbeae46af0a` |
 
