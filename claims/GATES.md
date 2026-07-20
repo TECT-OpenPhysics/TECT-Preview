@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-20.
+exist here. Last updated: 2026-07-21.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
@@ -96,18 +96,22 @@ independent-to-self-coupled smart path.  Either proof must control the `DB` and
 even scope, and explicitly register any surviving mass, orientation, or vacuum
 counterterm.
 
-**Status:** OPEN, EXACT SMART-PATH/FROZEN-SHELL SUBGATE CLOSED (2026-07-20).
+**Status:** OPEN, EXACT SMART-PATH/FROZEN-SHELL SUBGATE CLOSED (2026-07-20);
+FORMER COMMUTATOR-ALONE SUBGATE FALSIFIED (2026-07-21).
 `A9-CLASSII-SMART-PATH-CANCELLATION` reaches both finite-cutoff interpolation
 endpoints, proves the exact Gaussian-IBP cancellation of the apparent
 trace-class terms, and closes the arbitrary-source noncentral frozen-shell
 determinant with a summable `2^(-j)` cost.  It also shows that deterministic or
 independent Cameron--Martin shifts have nonnegative expected renormalised
-energy.  It does not control the remaining coefficient increment under every
-interacting tilted law, so the self-coupled Nelson estimate and Gibbs measure
-remain open.  The residual designated-route gate is
-`A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND` below.  The adapted-drift and
-smart-path criteria remain separate sufficient routes; no equivalence is
-asserted.
+energy.  A resonant covariance-contracted Gaussian tilt with a
+Cameron--Martin mean now falsifies the former commutator-alone infinitesimal
+form bound without touching those positive results.  The corrected designated
+route must retain a fixed fraction of the
+complete covariance-normal frozen energy and is registered as
+`A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND` below.  The
+adapted-drift and smart-path criteria remain separate sufficient routes; no
+equivalence is asserted.  The self-coupled Nelson estimate and Gibbs measure
+remain open.
 
 ### **A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND**
 
@@ -122,13 +126,48 @@ Gaussian law,
 This is a sufficient closure estimate for the designated dyadic route; it is
 not asserted to be logically necessary for every possible construction.
 
-**Status:** OPEN (2026-07-20).  A9 proves the exact noncentral conditional
-shell determinant, its entropy form, and its `q^(-4)` Schatten gain, but those
-base/frozen-shell bounds do not imply this all-tilted-laws estimate.  A direct
-adapted-drift Gaussian integration by parts leaves a `DB D_x h` term not
-controlled by Cameron--Martin cost.  Closure requires a genuine
-paracontrolled/entropy-sextic form bound, or a different sufficient route with
-equally explicit cutoff uniformity and counterterm accounting.
+**Status:** FALSIFIED AS STATED (2026-07-21).  On the physical scalar ray
+`Psi=f e_1`, use the same-shell resonant triad
+`g_K=cos(Kx)+cos(Ky)-cos(K(x+y))` and the covariance-contracted Gaussian
+tilt with mean `h_K=tK(1+epsilon*g_K)e_1`.  Exact Fourier convolution gives
+`<g_K |grad g_K|^2>=-K^2` and
+`<g_K^2 |grad g_K|^2>=(5/2)K^2`.  The commutator, entropy, and sextic terms
+then all scale as `K^6`, and the proposed estimate necessarily requires
+`eta>=a*epsilon^3*(4-5*epsilon)/
+[2*sqrt(((3/2)*Y*epsilon^2)*M_6(epsilon))]>0`.  At the production point with
+`epsilon=0.3` this is `eta>=2.4891432e-4`, so `eta=1e-4` is an explicit
+counterexample.  The covariance trace is only `O(K^3)`.  Primary 24/24,
+non-importing independent 17/17, and integrated 56/56 verification are pinned
+in the A9 no-go addendum.  This eliminates one sufficient decomposition; it
+does not falsify A9 T5 or the full A7 Nelson statement.
+
+### **A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND**
+
+**Statement:** Let `Q_j^fr` be the complete covariance-normal frozen shell
+energy from A9, including its trace subtraction, and let `C_j` be the
+coefficient increment above.  Prove that there exist a fixed
+`theta in (0,1)` and explicit production constants
+`alpha_c, epsilon_6, K_theta, C_theta`, uniform in the cutoff, such that for
+every `nu<<gamma_J`,
+`E_nu sum_(j<=J)[theta Q_j^fr+C_j]
+>=-alpha_c H(nu|gamma_J)-epsilon_6 E_nu||phi_J||_6^6
+-K_theta E_nu||phi_J||_4^4-C_theta`.
+Together with the A9 bound on `(1-theta)Q_j^fr`, the constants must leave some
+`p>1` entropy budget and strict production sextic budget after quartic
+absorption.  The proof must act on the complete covariance-normal term rather
+than its raw positive square, determine or bound the all-ray critical
+`theta`, and exclude a direction with zero frozen energy but a negative
+commutator.
+
+**Status:** OPEN (2026-07-21).  The registered resonant ray proves the exact
+budget tradeoff
+`alpha_c*epsilon_6 >= [(c_C-theta*c_F)_+]^2/(4*c_H*c_6)`.
+At `epsilon=0.3`, `theta=3/16` neutralises this ray without entropy or sextic
+expenditure; it is not an absolute lower bound when positive budgets are
+allowed.  This is a necessary condition and a candidate closure target, not
+an all-field proof.  The next step is a trace-safe conditional log-Laplace or
+carre-du-champ estimate for the retained-energy remainder with an explicit
+summable dyadic constant.
 
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 

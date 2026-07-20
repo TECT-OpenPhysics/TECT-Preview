@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-053](#r-053) | Resonant no-go for an infinitesimal Class-II commutator-alone form bound | T5 EXACT-NO-GO; a same-shell scalar-ray triad forces a positive entropy-sextic relative-bound threshold, while retained frozen source energy compensates the witness |
 | [R-052](#r-052) | Spatial-background Class-II det2 bound and decoupled Nelson measure | T5 PINNED-CLOSURE; arbitrary deterministic spatial PSD L2 backgrounds obey an explicit M_R^4 Schatten bound, and the independent coefficient/derivative product-Gaussian model has all fixed-p moments and a full-sequence limit; self-coupling remains open |
 | [R-051](#r-051) | Literal Class-II leading-counterterm no-go and local bare-proxy split | T5 pinned split result; fixed-parameter subtraction has an escaping N^(1/4) homogeneous amplitude and -N^(3/2) raw energy, while two exact local proxies concentrate with distinct laws; full-field concentration remains open |
 | [R-050](#r-050) | Fixed-floor canonical spectral Class-II K current | T5 PINNED-CLOSURE; common real-even scalar regulators define one geometric/Stratonovich K_A distribution in C^(-1/2-kappa), with zero K-level contraction; primary 29/29 + independent 16/16, integrated 64/64 PASS |
@@ -71,6 +72,39 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-053"></a>
+### R-053 -- resonant no-go for an infinitesimal Class-II commutator-alone form bound
+
+**Statement (one line):** On the physical production scalar ray, a
+same-dyadic-shell resonant triad and admissible covariance-contracted cutoff
+Gaussian tilts with Cameron--Martin means show that the isolated Class-II
+coefficient increment cannot be
+bounded by entropy and the sextic norm with the same arbitrarily small
+relative coefficient, although a fixed part of the frozen source energy
+compensates this witness.
+
+**Proven in:** `A9-CLASSII-SMART-PATH-CANCELLATION` no-go addendum v1.0,
+hash-pinned manifest, exact rational Fourier audit 24/24, non-importing direct
+Pauli-current audit 17/17, and integrated 56/56 verifier.
+
+**Reuse scope:** Critical form-bound diagnostics for derivative polynomial
+Gibbs constructions. The exact resonant averages are
+`<g|grad g|^2>=-1` and `<g^2|grad g|^2>=5/2`. They expose when a
+commutator-only decomposition loses a positive quadratic shell budget. The
+result does not refute the complete renormalised energy, prove the corrected
+all-field relative bound, construct a Gibbs measure, remove the floor, or
+take infinite volume.
+
+**Tier:** T5 EXACT-NO-GO@PINNED-PRODUCTION-RAY. At `epsilon=0.3`,
+`M_6=4412239/1600000` and `eta_min=2.48914320732e-4`; `eta=1e-4` has a
+strict normalised violation margin `8.89605767815e-6`. The witness frozen
+source-energy ratio is `3/16`; it is the zero-extra-budget neutralisation
+fraction for this ray, not an absolute lower bound with positive budgets.
+
+**Publication target:** A counterexample and corrected-decomposition lemma
+for a future full derivative Class-II constructive-measure paper. The next
+theorem is `A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND`.
 
 <a id="r-052"></a>
 ### R-052 -- spatial-background Class-II det2 bound and decoupled Nelson measure

@@ -1,0 +1,369 @@
+{
+  "schema": "tect/a9-tilted-commutator-nogo-primary-result/1.0",
+  "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+  "script_version": "1.0.0",
+  "verdict": "A9-TILTED-COMMUTATOR-NOGO-PRIMARY-PASS",
+  "manifest_sha256": "113558ce035a2aec96f34c747fabe8945dc0bf7ccc07a2de2b4e93a6652f2af9",
+  "config": {
+    "epsilon": 0.3,
+    "eta_test": 0.0001,
+    "phase_grid": 256,
+    "lattice_modes": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "dyadic_projector": "P_prev=1_[abs(q)<K], P_top=1_[abs(q)<2K]",
+    "covariance_contraction_power": 2
+  },
+  "config_sha256": "248cd524321d936e979db68c327478c068799e668a53399780ce4a6a8f7d11c4",
+  "derived": {
+    "production_constants": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "Y": 1.0,
+      "gamma": 1.62,
+      "rho_floor": 1e-12,
+      "L": 16.0
+    },
+    "triad_moments": [
+      "1",
+      "0",
+      "3/2",
+      "-3/2",
+      "45/8",
+      "-45/4",
+      "255/8"
+    ],
+    "gradient_averages": {
+      "mean_grad2": "2",
+      "mean_g_grad2": "-1",
+      "mean_g2_grad2": "5/2"
+    },
+    "m6_exact": "4412239/1600000",
+    "m6": 2.757649375,
+    "c_commutator": 0.00030374999999992404,
+    "c_entropy": 0.135,
+    "c_sextic": 2.757649375,
+    "t_optimal": 0.4703798188528491,
+    "eta_min": 0.0002489143207319817,
+    "eta_test": 0.0001,
+    "violation_margin_per_volume_K6": 8.896057678145992e-06,
+    "budget_product_minimum": 6.195833906546386e-08,
+    "full_floor_rows": [
+      {
+        "lattice_mode": 16,
+        "wave_number": 6.283185307179586,
+        "amplitude": 2.9554835666100168,
+        "normalized_commutator": -0.000303749999999924,
+        "leading_coefficient": -0.00030374999999992404,
+        "absolute_error": 5.421010862427522e-20
+      },
+      {
+        "lattice_mode": 32,
+        "wave_number": 12.566370614359172,
+        "amplitude": 5.9109671332200335,
+        "normalized_commutator": -0.0003037499999999241,
+        "leading_coefficient": -0.00030374999999992404,
+        "absolute_error": 5.421010862427522e-20
+      },
+      {
+        "lattice_mode": 64,
+        "wave_number": 25.132741228718345,
+        "amplitude": 11.821934266440067,
+        "normalized_commutator": -0.0003037499999999242,
+        "leading_coefficient": -0.00030374999999992404,
+        "absolute_error": 1.6263032587282567e-19
+      },
+      {
+        "lattice_mode": 128,
+        "wave_number": 50.26548245743669,
+        "amplitude": 23.643868532880134,
+        "normalized_commutator": -0.00030374999999992436,
+        "leading_coefficient": -0.00030374999999992404,
+        "absolute_error": 3.2526065174565133e-19
+      }
+    ],
+    "scaling_exponents": {
+      "commutator": 6,
+      "entropy": 6,
+      "sextic": 6,
+      "fixed_quartic": 4,
+      "covariance_counterterm": 3,
+      "contracted_covariance_entropy_power_with_log": 3,
+      "contracted_value_variance": -4.0,
+      "contracted_derivative_variance": -3.0,
+      "mass": 2,
+      "vacuum": 0
+    },
+    "contracted_tilt": {
+      "law": "N(h_K, sigma_K^2 C_J)",
+      "sigma_K": "K^(-covariance_contraction_power)",
+      "covariance_entropy": "O(K^3 log K)"
+    },
+    "c_frozen": 0.0016199999999995949,
+    "theta_ray": 0.1875
+  },
+  "assertions": [
+    {
+      "name": "production_authority_hash_is_pinned",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "production_authority_schema_is_pinned",
+      "status": "PASS",
+      "actual": "tect/a1-production-functional-realisation/1.0",
+      "expected": "tect/a1-production-functional-realisation/1.0"
+    },
+    {
+      "name": "production_ray_constants_are_admissible",
+      "status": "PASS",
+      "actual": {
+        "a": 0.004499999999998875,
+        "b": 0.0018749999999995311,
+        "c": 0.002343749999999414,
+        "Y": 1.0,
+        "gamma": 1.62,
+        "rho_floor": 1e-12,
+        "L": 16.0
+      },
+      "expected": "a,Y,gamma,rho_floor all positive"
+    },
+    {
+      "name": "triad_moments_are_exact_Fourier_constant_terms",
+      "status": "PASS",
+      "actual": [
+        "1",
+        "0",
+        "3/2",
+        "-3/2",
+        "45/8",
+        "-45/4",
+        "255/8"
+      ],
+      "expected": [
+        "1",
+        "0",
+        "3/2",
+        "-3/2",
+        "45/8",
+        "-45/4",
+        "255/8"
+      ]
+    },
+    {
+      "name": "triad_gradient_and_laplacian_means_are_exact",
+      "status": "PASS",
+      "actual": {
+        "mean_grad2": "2",
+        "mean_laplacian_squared": "3"
+      },
+      "expected": {
+        "mean_grad2": "2",
+        "mean_laplacian_squared": "3"
+      }
+    },
+    {
+      "name": "resonant_cubic_gradient_average_is_negative_one",
+      "status": "PASS",
+      "actual": "-1",
+      "expected": "-1"
+    },
+    {
+      "name": "resonant_quartic_gradient_average_is_five_halves",
+      "status": "PASS",
+      "actual": "5/2",
+      "expected": "5/2"
+    },
+    {
+      "name": "all_three_resonant_modes_fit_the_pinned_sharp_radial_increment",
+      "status": "PASS",
+      "actual": {
+        "mode_norms_over_K": [
+          1.0,
+          1.0,
+          1.4142135623730951
+        ],
+        "projector": "P_prev=1_[abs(q)<K], P_top=1_[abs(q)<2K]"
+      },
+      "expected": "all nonconstant modes in [K,2K)"
+    },
+    {
+      "name": "positive_floor_witness_stays_away_from_zero",
+      "status": "PASS",
+      "actual": 0.10000000000000009,
+      "expected": "> 0"
+    },
+    {
+      "name": "sextic_moment_is_exact_and_positive",
+      "status": "PASS",
+      "actual": "4412239/1600000",
+      "expected": "positive exact Fraction"
+    },
+    {
+      "name": "commutator_leading_coefficient_is_strictly_negative",
+      "status": "PASS",
+      "actual": -0.00030374999999992404,
+      "expected": "< 0"
+    },
+    {
+      "name": "optimal_amplitude_scale_is_positive",
+      "status": "PASS",
+      "actual": 0.4703798188528491,
+      "expected": "finite positive"
+    },
+    {
+      "name": "explicit_eta_is_below_the_necessary_threshold",
+      "status": "PASS",
+      "actual": {
+        "eta_test": 0.0001,
+        "eta_min": 0.0002489143207319817
+      },
+      "expected": "0 < eta_test < eta_min"
+    },
+    {
+      "name": "explicit_asymptotic_form_bound_margin_is_violated",
+      "status": "PASS",
+      "actual": 8.896057678145992e-06,
+      "expected": "> 0"
+    },
+    {
+      "name": "separate_entropy_sextic_budget_has_positive_hyperbola",
+      "status": "PASS",
+      "actual": 6.195833906546386e-08,
+      "expected": "> 0"
+    },
+    {
+      "name": "full_fixed_floor_scalar_coefficient_converges_to_J_only_limit",
+      "status": "PASS",
+      "actual": [
+        {
+          "lattice_mode": 16,
+          "wave_number": 6.283185307179586,
+          "amplitude": 2.9554835666100168,
+          "normalized_commutator": -0.000303749999999924,
+          "leading_coefficient": -0.00030374999999992404,
+          "absolute_error": 5.421010862427522e-20
+        },
+        {
+          "lattice_mode": 32,
+          "wave_number": 12.566370614359172,
+          "amplitude": 5.9109671332200335,
+          "normalized_commutator": -0.0003037499999999241,
+          "leading_coefficient": -0.00030374999999992404,
+          "absolute_error": 5.421010862427522e-20
+        },
+        {
+          "lattice_mode": 64,
+          "wave_number": 25.132741228718345,
+          "amplitude": 11.821934266440067,
+          "normalized_commutator": -0.0003037499999999242,
+          "leading_coefficient": -0.00030374999999992404,
+          "absolute_error": 1.6263032587282567e-19
+        },
+        {
+          "lattice_mode": 128,
+          "wave_number": 50.26548245743669,
+          "amplitude": 23.643868532880134,
+          "normalized_commutator": -0.00030374999999992436,
+          "leading_coefficient": -0.00030374999999992404,
+          "absolute_error": 3.2526065174565133e-19
+        }
+      ],
+      "expected": 1e-10
+    },
+    {
+      "name": "fixed_floor_b_and_c_do_not_change_the_K6_leading_sign",
+      "status": "PASS",
+      "actual": [
+        -0.000303749999999924,
+        -0.0003037499999999241,
+        -0.0003037499999999242,
+        -0.00030374999999992436
+      ],
+      "expected": "all negative"
+    },
+    {
+      "name": "contracted_Gaussian_fluctuations_and_lower_terms_are_sub_K6",
+      "status": "PASS",
+      "actual": {
+        "commutator": 6,
+        "entropy": 6,
+        "sextic": 6,
+        "fixed_quartic": 4,
+        "covariance_counterterm": 3,
+        "contracted_covariance_entropy_power_with_log": 3,
+        "contracted_value_variance": -4.0,
+        "contracted_derivative_variance": -3.0,
+        "mass": 2,
+        "vacuum": 0
+      },
+      "expected": "all corrections are o(K^6)"
+    },
+    {
+      "name": "frozen_positive_energy_coefficient_is_positive",
+      "status": "PASS",
+      "actual": 0.0016199999999995949,
+      "expected": "> 0"
+    },
+    {
+      "name": "witness_zero_budget_frozen_neutralisation_fraction_is_strict",
+      "status": "PASS",
+      "actual": 0.1875,
+      "expected": "0 < theta_ray < 1"
+    },
+    {
+      "name": "corrected_budget_vanishes_at_the_ray_threshold",
+      "status": "PASS",
+      "actual": 0.0,
+      "expected": 1e-14
+    },
+    {
+      "name": "old_commutator_gate_is_explicitly_falsified",
+      "status": "PASS",
+      "actual": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND",
+      "expected": "A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND"
+    },
+    {
+      "name": "corrected_gate_is_explicitly_open",
+      "status": "PASS",
+      "actual": "A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND",
+      "expected": "A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND"
+    },
+    {
+      "name": "scope_firewall_preserves_A9_and_A7_Nelson_status",
+      "status": "PASS",
+      "actual": [
+        "This no-go does not falsify the A9 T5 theorem for exact smart-path cancellation and the noncentral frozen-shell determinant.",
+        "This no-go does not prove or disprove the full A7 Nelson bound or the existence of the interacting Gibbs measure.",
+        "The corrected all-field frozen-energy relative commutator estimate remains open.",
+        "No floor removal, asymmetric-regulator universality, infinite-volume limit, phase transition, BCC statement, T6, or T7 is claimed."
+      ],
+      "expected": "both firewalls explicit"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 24,
+    "total": 24
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "990ac88b6be563225809cd639220feb0dd1838b7",
+    "deterministic": true
+  },
+  "not_closed_here": [
+    "the all-field A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND",
+    "the self-coupled A7 Nelson negative-exponential estimate",
+    "a full three-component interacting finite-volume Gibbs measure",
+    "rho-floor removal or asymmetric-regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7"
+  ]
+}

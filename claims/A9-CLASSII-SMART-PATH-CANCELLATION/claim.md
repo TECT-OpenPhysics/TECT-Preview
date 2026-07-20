@@ -1,7 +1,7 @@
 # A9-CLASSII-SMART-PATH-CANCELLATION -- exact reduction of the A7 self-coupling gate
 
 **Tier**: T5 CLOSED@EXACT-INTERPOLATION-AND-NONCENTRAL-FROZEN-SHELL
-(TSv2) | **Lifecycle**: ACTIVE | **Last review**: 2026-07-20
+(TSv2) | **Lifecycle**: ACTIVE | **Last review**: 2026-07-21
 
 ## Result
 
@@ -125,7 +125,7 @@ common evenness and exact covariance centering give
 The unresolved negative mechanism is therefore genuine adapted same-noise
 dependence, not an ordinary Cameron-Martin translation.
 
-## Exact residual gate
+## Falsified former residual gate
 
 For the designated dyadic-freezing route, with
 (phi_j=P_{\le j}\phi) and
@@ -136,7 +136,8 @@ For the designated dyadic-freezing route, with
 -\frac12\int\operatorname{Tr}[\Gamma_{\le j}\Delta_jB].
 \]
 
-It is sufficient to prove, uniformly in the cutoff and every tilted law,
+The former designated-route target asked, uniformly in the cutoff and every
+tilted law, for
 
 \[
 \mathbb E_\nu\sum_{j\le J}\mathcal C_j
@@ -144,23 +145,97 @@ It is sufficient to prove, uniformly in the cutoff and every tilted law,
 -\eta\mathbb E_\nu\|\phi_J\|_6^6-C_\eta.
 \]
 
-This is now registered as
-`A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND`.  It remains open.  Unshifted
-Gaussian (L^2) shell summability does not imply this all-tilted-laws bound.
+This target is **falsified as stated**.  On the physical scalar ray
+\(\Psi=f e_1\), take
+
+\[
+g_K=\cos(Kx)+\cos(Ky)-\cos(K(x+y)),\qquad
+\phi_j=tK(1+\epsilon g_K)e_1.
+\]
+
+The three modes lie in one dyadic annulus and exact Fourier convolution gives
+
+\[
+\langle g_K|\nabla g_K|^2\rangle=-K^2,\qquad
+\langle g_K^2|\nabla g_K|^2\rangle={5\over2}K^2.
+\]
+
+For the covariance-contracted cutoff Gaussian
+\(\nu_K=N(h_K,K^{-4}C_J)\) with Cameron--Martin mean,
+
+\[
+K^{-6}L^{-3}\mathbb E_\nu\sum_j\mathcal C_j
+\longrightarrow-a t^4\epsilon^3(4-5\epsilon),
+\]
+
+\[
+K^{-6}L^{-3}H(\nu|\gamma_J)
+\longrightarrow {3\over2}Yt^2\epsilon^2,\qquad
+K^{-6}L^{-3}\mathbb E_\nu\|\phi_J\|_6^6
+\longrightarrow t^6M_6(\epsilon).
+\]
+
+Thus the displayed bound requires a strictly positive lower threshold
+
+\[
+\eta\ge {a\epsilon^3(4-5\epsilon)\over
+2\sqrt{((3/2)Y\epsilon^2)M_6(\epsilon)}}.
+\]
+
+At the production point and \(\epsilon=0.3\), this threshold is
+\(2.4891432\times10^{-4}\), so \(\eta=10^{-4}\) is an explicit
+counterexample.  The covariance trace is only \(O(K^3)\) against the
+\(O(K^6)\) defect.
+
+## Corrected residual gate
+
+This no-go does not withdraw the positive A9 theorem.  The same witness has
+positive covariance-normal frozen source energy with coefficient
+\(c_F=4a\epsilon^2\), and
+
+\[
+{|\mathcal C_j|\over Q_j^{\rm fr,source}}
+\longrightarrow {\epsilon(4-5\epsilon)\over4}
+={3\over16}
+\quad(\epsilon=0.3).
+\]
+
+The corrected open gate is
+`A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND`.  It must retain a
+fixed fraction of the complete covariance-normal \(Q_j^{\rm fr}\), including
+its trace subtraction, and bound only
+\(\theta Q_j^{\rm fr}+\mathcal C_j\) with explicit production entropy,
+quartic, and sextic budgets.  On the registered ray it supplies the exact
+necessary tradeoff
+\[
+\alpha_c\epsilon_6\ge
+{[(c_C-\theta c_F)_+]^2\over4c_Hc_6}.
+\]
+The value \(\theta=3/16\) neutralises this ray without entropy or sextic
+expenditure; it is not an absolute lower bound when positive budgets are
+allowed.
 
 ## Reproduction
 
 ```powershell
 python codes/foundations/a9_classii_smart_path_cancellation_verify.py
+python codes/foundations/a9_tilted_commutator_nogo_verify.py
 ```
 
 Expected:
 
 ```text
+Smart-path regression:
 PASS: primary (24/24)
 PASS: independent (17/17)
 ASSERTS: 58/58
 A9-CLASSII-SMART-PATH-INTEGRATED-PASS
+
+No-go addendum:
+PASS: primary (24/24)
+PASS: independent (17/17)
+ASSERTS: 56/56
+A9-TILTED-COMMUTATOR-NOGO-INTEGRATED-PASS
 ```
 
 The verifier fails closed on every authority/source hash, result schema,
@@ -179,6 +254,15 @@ independent route does not import the primary route.
 - `runs/2026-07-20-primary-smart-path/result.json`
 - `runs/2026-07-20-independent-smart-path/result.json`
 - `runs/2026-07-20-integrated-smart-path/result.json`
+- `tilted_commutator_nogo_manifest.json`
+- `notes/classii-tilted-commutator-nogo-260721-v1.0.tex.txt`
+- `notes/classii-tilted-commutator-nogo-260721-v1.0.pdf`
+- `../../codes/foundations/a9_tilted_commutator_nogo.py`
+- `../../codes/foundations/a9_tilted_commutator_nogo_independent.py`
+- `../../codes/foundations/a9_tilted_commutator_nogo_verify.py`
+- `runs/2026-07-21-primary-tilted-commutator-nogo/result.json`
+- `runs/2026-07-21-independent-tilted-commutator-nogo/result.json`
+- `runs/2026-07-21-integrated-tilted-commutator-nogo/result.json`
 
 ## Devil's-advocate self-test
 
@@ -191,8 +275,9 @@ independent route does not import the primary route.
 3. **DISMISSED -- the shell theorem ignores the low-frequency derivative
    source.** The noncentral formula retains an arbitrary source and proves its
    net contribution is nonpositive.
-4. **UPHELD -- base-law moments are insufficient.** The open gate is a
-   uniform estimate under the interacting tilted laws.
+4. **UPHELD -- base-law moments are insufficient.** The former all-tilted-law
+   commutator-alone gate is now explicitly falsified by a resonant
+   covariance-contracted Gaussian tilt with a Cameron--Martin mean.
 5. **UPHELD as invalid -- direct Malliavin integration by parts closes the
    Boue-Dupuis drift bound.** It produces a (DB\,D_xH) term not controlled by
    the Cameron-Martin cost.
@@ -203,8 +288,14 @@ independent route does not import the primary route.
    expectation under every deterministic or independent shift is
    nonnegative.
 8. **UPHELD as false -- the physical Gibbs measure is now constructed.** The
-   final tilted commutator estimate and hence the self-coupled Nelson bound
-   remain open.
+   corrected frozen-energy relative estimate and hence the self-coupled
+   Nelson bound remain open.
+9. **DISMISSED -- the no-go withdraws A9 T5.** The negative term is only the
+   coefficient increment after discarding frozen positive energy.  The exact
+   determinant, trace cancellation, and frozen-shell theorem are unchanged.
+10. **UPHELD as an overclaim -- the corrected relative estimate is proved.**
+    This package proves a necessary resonance budget and records a candidate
+    closure target, not the all-field estimate.
 
 ## Promotion rationale and boundary
 
@@ -215,11 +306,13 @@ executables reproduce the signs and factors, quadrature refinement contracts
 the integration-by-parts residual, and negative controls fail when common
 evenness is removed.
 
-This claim does not prove the tilted-law commutator form bound, the
-self-coupled A7 negative-exponential estimate, a full three-component Gibbs
-measure, absence of every possible later counterterm, floor removal,
-asymmetric-regulator universality, infinite volume, phase transition, BCC
-existence or selection, T6, or T7.
+The former commutator-alone infinitesimal bound is falsified, while this
+claim's scoped T5 positive theorem is preserved.  This claim does not prove
+the corrected frozen-energy relative commutator bound, the self-coupled A7
+negative-exponential estimate, a full three-component Gibbs measure, absence
+of every possible later counterterm, floor removal, asymmetric-regulator
+universality, infinite volume, phase transition, BCC existence or selection,
+T6, or T7.
 
 ## References
 

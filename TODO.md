@@ -18,9 +18,9 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 41
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-046** A7: prove the tilted-law commutator form bound, then construct the fixed-volume Gibbs limit  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE; gate: A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND)_
-  - A9 closes at scoped T5 the exact self-coupling smart-path cancellation and arbitrary-source noncentral frozen-shell theorem (primary 24/24, independent 17/17, integrated 58/58). The umbrella self-coupled Nelson estimate remains open: prove the cutoff-uniform entropy-sextic bound for the exact dyadic coefficient increment under every tilted law, or an alternative sufficient route with explicit counterterm accounting. Keep rho-floor removal and infinite volume separate.
-  - _updated 2026-07-20_
+- **T-046** A7: prove the frozen-energy relative commutator bound, then construct the fixed-volume Gibbs limit  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE; gate: A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND)_
+  - The former commutator-alone all-eta target is falsified by the 2026-07-21 same-shell resonant covariance-contracted Gaussian tilt with a Cameron-Martin mean (A9 no-go addendum: primary 24/24, independent 17/17, integrated 56/56). A9 scoped T5 remains valid. Next determine the all-ray critical retained fraction and its budget tradeoff, exclude zero-frozen/negative-commutator directions, and prove a trace-safe conditional log-Laplace bound for theta Q_fr+C with explicit production entropy, quartic, and sextic budgets. Keep rho-floor removal and infinite volume separate.
+  - _updated 2026-07-21_
 
 ## Done (recent)
 

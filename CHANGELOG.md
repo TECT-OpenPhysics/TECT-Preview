@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Falsify A7 infinitesimal tilted-commutator bound and register frozen-energy-relative successor] - 2026-07-21
+
+Exact Fourier and non-importing Pauli-current audits show that the former all-eta commutator-alone sufficient bound is false. At the production point, epsilon=0.3 gives eta_min=2.4891432e-4, so eta=1e-4 fails with a positive K^6-normalised margin; the covariance trace is only O(K^3). Primary 24/24, independent 17/17, and integrated 56/56 pass. A9 scoped T5 is preserved because the witness retains positive covariance-normal frozen energy; the replacement open gate is A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND.
+
 ## [A9 exact smart-path cancellation and frozen-shell theorem closed at scoped T5] - 2026-07-20
 
 Added the hash-pinned A9 package. Exact finite-cutoff interpolation cancels apparent trace-class terms into Schatten-2 structure; the arbitrary-source noncentral frozen-shell determinant has a summable q^-4 dyadic cost. Primary 24/24, non-importing independent 17/17, and integrated 58/58 audits pass. The self-coupled Nelson estimate is not claimed: A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND remains open.

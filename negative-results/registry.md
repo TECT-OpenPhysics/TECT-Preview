@@ -29,6 +29,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-20-A6-BARE-CLASSII-L1](#ng-2026-07-20-a6-bare-classii-l1) | direct A4-style bare extension to full derivative Class-II | positive linear derivative-pair contraction defeats uniform Gaussian L1 control |
 | [NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM](#ng-2026-07-20-a6-naive-w-subtraction-nonuniform) | literal fixed-parameter leading-W subtraction | homogeneous amplitudes escape as N^(1/4) and the raw lower bound falls as -N^(3/2) |
 | [NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE](#ng-2026-07-20-a7-w-zeroset-bare-inference) | pure-third bare concentration inferred from the conditional contraction | a full Class-II plane-wave null has W_eps > 0 |
+| [F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM](#f-2026-07-21-a7-infinitesimal-commutator-form) | A7 commutator-alone all-eta sufficient bound | same-shell resonant translation forces a positive relative-bound threshold |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -117,6 +118,40 @@ of the Class-II null set, including active-doublet phase configurations. The
 two local contraction proxies remain valid as local calculations but cannot
 select a global branch. No pure-third concentration, tightness, or scalar A4
 reduction is inferred.
+
+<a id="f-2026-07-21-a7-infinitesimal-commutator-form"></a>
+### F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM -- commutator-alone all-eta form bound
+
+**Failure mode:** The proposed
+`A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND` required the exact dyadic
+coefficient increment to be infinitesimally form-bounded by entropy and the
+sextic norm with the same arbitrary `eta>0`. On the physical scalar ray,
+`g_K=cos(Kx)+cos(Ky)-cos(K(x+y))` produces a negative same-shell resonant
+increment. Under the covariance-contracted cutoff Gaussian tilt with
+Cameron--Martin mean amplitude `A=tK`, the commutator, entropy, and sextic
+contributions all scale as
+`K^6`. The inequality therefore has a strictly positive necessary
+relative-bound threshold and cannot hold for every `eta>0`.
+
+**Evidence:** `A9-CLASSII-SMART-PATH-CANCELLATION` no-go addendum; exact
+Fourier averages `<g|grad g|^2>=-1` and
+`<g^2|grad g|^2>=5/2`; primary 24/24, non-importing Pauli-current independent
+17/17, and integrated 56/56 execution. At the production point with
+`epsilon=0.3`, `M_6=4412239/1600000`,
+`eta_min=2.48914320732e-4`, and the explicit `eta=1e-4` violation margin is
+`8.89605767815e-6` per volume and `K^6`. The covariance trace is only
+`O(K^3)`.
+
+**Consequence:** The former sufficient gate is retired as false, but the A9
+scoped T5 exact smart-path and frozen-shell theorem remains valid. The same
+witness has positive frozen source energy and ratio
+`|C_j|/Q_j^fr -> 3/16`; this is its zero-extra-budget neutralisation fraction,
+not an absolute lower bound when positive entropy and sextic budgets are
+allowed. The active replacement is
+`A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND`, which must retain a
+fixed fraction of the complete covariance-normal frozen term and close the
+remaining entropy, quartic, and sextic budgets. The self-coupled Nelson bound
+and interacting Gibbs measure remain open.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

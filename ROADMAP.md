@@ -72,12 +72,19 @@ regulator factor is explicit. This does not identify the two Gaussian fields.
 `A9-CLASSII-SMART-PATH-CANCELLATION` then closes at scoped T5 the exact
 independent-to-self-coupled interpolation algebra, removes the apparent
 Schatten-1 terms, and proves an arbitrary-source noncentral frozen-shell bound
-with summable `2^(-j)` cost. The remaining constructive obstruction is the
-uniform tilted-law coefficient-increment form bound, not the finite-cutoff
-smart-path identity or frozen-shell determinant. The separate branch-aware
-bare-concentration theorem also remains open. Parameter identity,
-regulariser removal, infinite volume, phase transition, BCC, and T7 remain
-outside the current Sector-A theorem.
+with summable `2^(-j)` cost. The 2026-07-21 resonant-ray audit falsifies the
+former commutator-alone infinitesimal form-bound follow-up: the commutator,
+entropy, and sextic terms share the same `K^6` scaling under an admissible
+covariance-contracted Gaussian tilt with a Cameron--Martin mean. This does not
+withdraw A9 T5, because the
+discarded covariance-normal frozen term has positive source energy on the
+witness. The
+remaining constructive obstruction is therefore the corrected
+frozen-energy-relative commutator bound, not the finite-cutoff smart-path
+identity or frozen-shell determinant. The separate branch-aware
+bare-concentration theorem also remains open. Parameter identity, regulariser
+removal, infinite volume, phase transition, BCC, and T7 remain outside the
+current Sector-A theorem.
 
 ## Stage 2 — Prove the vacuum (Sector B) ← **critical path**
 
@@ -158,19 +165,21 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-20)
+## Current priority view (refreshed 2026-07-21)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND** — A9 closes the exact
-   self-coupling interpolation reduction and the arbitrary-source noncentral
-   frozen-shell determinant. Now prove the cutoff-uniform entropy--sextic form
-   bound for the exact dyadic coefficient increment under every tilted law, or
-   close a different sufficient route with the same counterterm accounting.
-   Only then derive the self-coupled `p>1` estimate, interacting-density
-   convergence, tightness, and fixed-volume full three-component Gibbs limit.
+2. **A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND** — the former
+   commutator-alone all-`eta` target is falsified by a same-shell resonant
+   translation. Retain a fixed fraction of the complete covariance-normal
+   frozen energy, determine or bound the all-ray critical fraction, exclude
+   zero-frozen/negative-commutator directions, and prove a trace-safe
+   cutoff-uniform conditional log-Laplace estimate with explicit entropy,
+   quartic, and sextic budgets. Only then derive the self-coupled `p>1`
+   estimate, interacting-density convergence, tightness, and fixed-volume
+   full three-component Gibbs limit.
 3. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
    unmodified spatial Gibbs law across all Class-II null branches; the
    conditional `W_eps=0` branch and local proxy limits are not sufficient.

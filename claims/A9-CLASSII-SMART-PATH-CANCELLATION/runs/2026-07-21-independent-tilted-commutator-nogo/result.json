@@ -1,0 +1,178 @@
+{
+  "schema": "tect/a9-tilted-commutator-nogo-independent-result/1.0",
+  "claim_id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+  "script_version": "1.0.0",
+  "verdict": "A9-TILTED-COMMUTATOR-NOGO-INDEPENDENT-PASS",
+  "manifest_sha256": "113558ce035a2aec96f34c747fabe8945dc0bf7ccc07a2de2b4e93a6652f2af9",
+  "config": {
+    "epsilon": 0.3,
+    "eta_test": 0.0001,
+    "phase_grid": 384,
+    "lattice_mode": 96
+  },
+  "config_sha256": "5a05e02f1b79a9ce6392185af88104045de37de2db10336cef221e5cf4c919de",
+  "derived": {
+    "production_constants": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414,
+      "Y": 1.0,
+      "rho_floor": 1e-12,
+      "L": 16.0
+    },
+    "averages": {
+      "mean_g_grad2": -1.0000000000000002,
+      "mean_g2_grad2": 2.5,
+      "mean_grad2": 2.0,
+      "m6": 2.7576493749999997
+    },
+    "normalized_commutator": -0.0003037499999999241,
+    "expected_normalized_commutator": -0.00030374999999992414,
+    "entropy_coefficient": 0.135,
+    "sextic_coefficient": 2.7576493749999997,
+    "t_optimal": 0.4703798188528491,
+    "eta_min": 0.00024891432073198186,
+    "eta_test": 0.0001,
+    "violation_margin_per_volume_K6": 8.896057678145999e-06,
+    "adjacent_shell_coefficient": -0.012824999999999996,
+    "adjacent_shell_expected": -0.012824999999999996,
+    "frozen_coefficient": 0.0016199999999995992,
+    "theta_ray": 0.18749999999999953
+  },
+  "assertions": [
+    {
+      "name": "independent_authority_hash_is_pinned",
+      "status": "PASS",
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    {
+      "name": "numeric_resonant_cubic_average_matches_minus_one",
+      "status": "PASS",
+      "actual": -1.0000000000000002,
+      "expected": -1.0
+    },
+    {
+      "name": "numeric_resonant_quartic_average_matches_five_halves",
+      "status": "PASS",
+      "actual": 2.5,
+      "expected": 2.5
+    },
+    {
+      "name": "numeric_gradient_average_matches_two",
+      "status": "PASS",
+      "actual": 2.0,
+      "expected": 2.0
+    },
+    {
+      "name": "numeric_witness_is_uniformly_nonzero",
+      "status": "PASS",
+      "actual": 0.10000000000000009,
+      "expected": "> 0"
+    },
+    {
+      "name": "direct_Pauli_current_commutator_has_predicted_negative_sign",
+      "status": "PASS",
+      "actual": -0.0003037499999999241,
+      "expected": "< 0"
+    },
+    {
+      "name": "direct_Pauli_current_commutator_matches_scalar_ray_formula",
+      "status": "PASS",
+      "actual": -0.0003037499999999241,
+      "expected": -0.00030374999999992414
+    },
+    {
+      "name": "direct_Pauli_currents_leave_only_generator_three",
+      "status": "PASS",
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": 5e-12
+    },
+    {
+      "name": "direct_K3_matches_fixed_floor_ray_identity",
+      "status": "PASS",
+      "actual": 2.994927022376607e-12,
+      "expected": 5e-12
+    },
+    {
+      "name": "direct_biharmonic_entropy_coefficient_matches_three_halves",
+      "status": "PASS",
+      "actual": 0.135,
+      "expected": 0.135
+    },
+    {
+      "name": "independent_eta_threshold_is_strictly_above_test_value",
+      "status": "PASS",
+      "actual": {
+        "eta_min": 0.00024891432073198186,
+        "eta_test": 0.0001
+      },
+      "expected": "eta_min > eta_test > 0"
+    },
+    {
+      "name": "independent_form_bound_violation_margin_is_positive",
+      "status": "PASS",
+      "actual": 8.896057678145999e-06,
+      "expected": "> 0"
+    },
+    {
+      "name": "adjacent_shell_high_low_control_is_negative",
+      "status": "PASS",
+      "actual": -0.012824999999999996,
+      "expected": "< 0"
+    },
+    {
+      "name": "adjacent_shell_control_matches_exact_polynomial",
+      "status": "PASS",
+      "actual": -0.012824999999999996,
+      "expected": -0.012824999999999996
+    },
+    {
+      "name": "direct_frozen_energy_is_strictly_positive",
+      "status": "PASS",
+      "actual": 0.0016199999999995992,
+      "expected": "> 0"
+    },
+    {
+      "name": "direct_frozen_compensation_ratio_is_between_zero_and_one",
+      "status": "PASS",
+      "actual": 0.18749999999999953,
+      "expected": "0 < theta_ray < 1"
+    },
+    {
+      "name": "manifest_scope_does_not_withdraw_positive_A9_T5",
+      "status": "PASS",
+      "actual": [
+        "This no-go does not falsify the A9 T5 theorem for exact smart-path cancellation and the noncentral frozen-shell determinant.",
+        "This no-go does not prove or disprove the full A7 Nelson bound or the existence of the interacting Gibbs measure.",
+        "The corrected all-field frozen-energy relative commutator estimate remains open.",
+        "No floor removal, asymmetric-regulator universality, infinite-volume limit, phase transition, BCC statement, T6, or T7 is claimed."
+      ],
+      "expected": "A9 T5 firewall present"
+    }
+  ],
+  "assertion_summary": {
+    "passed": 17,
+    "total": 17
+  },
+  "failures": [],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "1.26.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "990ac88b6be563225809cd639220feb0dd1838b7",
+    "deterministic": true,
+    "imports_primary": false
+  },
+  "not_closed_here": [
+    "the all-field A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND",
+    "the self-coupled A7 Nelson negative-exponential estimate",
+    "a full three-component interacting finite-volume Gibbs measure",
+    "rho-floor removal or asymmetric-regulator universality",
+    "infinite volume, phase transition, BCC existence or selection",
+    "T6 or T7"
+  ]
+}

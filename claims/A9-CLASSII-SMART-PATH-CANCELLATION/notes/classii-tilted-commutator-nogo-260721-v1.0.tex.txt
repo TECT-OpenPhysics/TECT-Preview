@@ -1,0 +1,329 @@
+% =============================================================================
+% Title: Resonant no-go for the infinitesimal Class-II tilted commutator bound
+% Claim: A9-CLASSII-SMART-PATH-CANCELLATION
+% Version: v1.0 -- first issued 2026-07-21; this version issued 2026-07-21
+% Status: exact negative result; corrected frozen-energy relative gate remains open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-21): resonant scalar-ray counterexample, exact threshold,
+% frozen-energy compensation, and corrected research gate.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cC}{\mathcal C}
+
+\section*{1. Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Exact result.}  The commutator-alone estimate designated
+\texttt{A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND}, with the same arbitrarily
+small coefficient multiplying entropy and the sextic norm, is false.  A
+physical scalar ray and a same-shell resonant Fourier triad give an explicit
+positive lower threshold for that coefficient.
+
+\medskip
+\textbf{Boundary.}  This does not withdraw the A9 scoped T5 smart-path and
+frozen-shell theorem, and it neither proves nor disproves the full A7 Nelson
+bound.  The counterexample identifies the positive source part of the
+covariance-normal frozen energy that the next sufficient estimate may use.
+}}
+\end{center}
+
+The authority is the hash-pinned A1 production functional on
+$\T_L^3$, $L=16$, with $Y=1$, fixed
+$\varepsilon_\rho=10^{-12}$, and
+\[
+ a={c_{JJ}\alpha_X^2\over M_X^2+\delta_M}=0.0045.
+\]
+All three nonconstant frequencies below belong to one dyadic annulus.
+Products are exact Fourier products; the independent audit also computes the
+embedded Pauli currents directly.  For the counterexample sequence we pin the
+sharp radial filtration
+\[
+ P_{\le j-1}=\mathbf 1_{\{|q|<K\}},\qquad
+ P_{\le j}=\mathbf 1_{\{|q|<2K\}}.
+ \tag{1.1}
+\]
+
+\section{Exact scalar-ray reduction}
+
+Take a real field in the first internal component, $\Psi=fe_1$.  Only
+generator $T_3$ contributes, and
+\[
+ J_3=2f\nabla f,\qquad
+ K_3={\varepsilon_\rho\over f^2+\varepsilon_\rho}J_3.
+ \tag{2.1}
+\]
+Consequently the coefficient in the $e_1$ derivative direction is
+\[
+ B_{11}(fe_1)
+ =4f^2\left[
+ a+2b{\varepsilon_\rho\over f^2+\varepsilon_\rho}
+ +c\left({\varepsilon_\rho\over f^2+\varepsilon_\rho}\right)^2
+ \right].
+ \tag{2.2}
+\]
+For fields uniformly separated from zero this is $4af^2+O(1)$, and the
+$b,c$ and floor terms do not contribute to the leading high-frequency
+coefficient.
+
+\section{Same-shell resonant triad}
+
+Let
+\[
+ g_K(x,y)=\cos(Kx)+\cos(Ky)-\cos(K(x+y)).
+ \tag{3.1}
+\]
+Its frequencies have lengths $K,K,\sqrt2K$, so they lie in the annulus
+$[K,2K)$.  Exact Fourier convolution gives
+\[
+ \langle g_K|\nabla g_K|^2\rangle=-K^2,\qquad
+ \langle g_K^2|\nabla g_K|^2\rangle={5\over2}K^2,
+ \tag{3.2}
+\]
+and
+\[
+\left\langle g^m\right\rangle_{m=0}^6
+=\left(1,0,{3\over2},-{3\over2},{45\over8},
+-{45\over4},{255\over8}\right).
+ \tag{3.3}
+\]
+
+Choose the previous shell to be $\phi_{j-1}=Ae_1$ and the full shell to be
+\[
+ \phi_j=A(1+\epsilon g_K)e_1,\qquad 0<\epsilon<{1\over3}.
+ \tag{3.4}
+\]
+This restriction keeps the field uniformly away from zero.  Substitution of
+(3.2) into the raw coefficient increment gives
+\[
+ {1\over L^3}\cC_j^{\rm raw}
+ =-aA^4K^2\epsilon^3(4-5\epsilon)+o(A^4K^2).
+ \tag{3.5}
+\]
+The covariance counterterm grows only as
+$\Gamma_{\le j}O(A^2)=O(K^3)$ when $A=tK$.  Thus it cannot cancel the
+$K^6$ term in (3.5).  Fixed mass and vacuum terms are still lower order.
+
+\section{Covariance-contracted Gaussian contradiction}
+
+Let $C_J$ be the cutoff covariance, let $d_J=O(K^3)$ be its real dimension,
+and put
+\[
+ h_K=tK(1+\epsilon g_K)e_1,\qquad
+ \sigma_K=K^{-2},\qquad
+ \nu_K=N(h_K,\sigma_K^2C_J).
+ \tag{4.1}
+\]
+This law is absolutely continuous with respect to
+$\gamma_J=N(0,C_J)$ at every finite cutoff.  Its exact relative entropy is
+\[
+ H(\nu_K\mid\gamma_J)
+ ={1\over2}\|h_K\|_{\mathcal H_J}^2
+ +{d_J\over2}(\sigma_K^2-1-\log\sigma_K^2).
+ \tag{4.2}
+\]
+The lattice-shell count in dimension three and the production $q^4$ symbol
+give, uniformly up to the cutoff,
+\[
+ \sum_{|q|\le K}{1\over 1+|q|^4}=O(1),\qquad
+ \sum_{|q|\le K}{|q|^2\over 1+|q|^4}=O(K),\qquad
+ d_J=O(K^3).
+ \tag{4.2a}
+\]
+These follow by grouping lattice points into unit radial shells, whose
+cardinality is $O(r^2)$, and comparing the resulting sums with integrals.
+The second term in (4.2) is therefore
+$O(K^3\log K)=o(K^6)$.  The production symbol and (3.3) give
+\[
+ {H(\nu_K\mid\gamma_J)\over L^3K^6}
+ \longrightarrow c_Ht^2,\qquad c_H={3\over2}Y\epsilon^2,
+ \tag{4.3}
+\]
+\[
+ {\E_{\nu_K}\|\phi_J\|_6^6\over L^3K^6}
+ \longrightarrow c_6t^6,\qquad
+ c_6=M_6(\epsilon)=\langle(1+\epsilon g)^6\rangle,
+ \tag{4.4}
+\]
+\[
+ {\E_{\nu_K}\sum_{\ell\le J}\cC_\ell\over L^3K^6}
+ \longrightarrow-c_Ct^4,\qquad
+ c_C=a\epsilon^3(4-5\epsilon)>0.
+ \tag{4.5}
+\]
+Here is the fluctuation estimate explicitly.  At fixed floor, $B$ is smooth
+with quadratic growth and its first two derivatives have polynomial growth.
+Before contraction the point-value variance is $O(1)$ and the point-derivative
+variance is $O(K)$; after multiplication by $\sigma_K^2=K^{-4}$ they are
+$O(K^{-4})$ and $O(K^{-3})$.  Hence the value and derivative standard
+deviations are $O(K^{-2})$ and $O(K^{-3/2})$.  Against
+$|h_K|=O(K)$ and $|\nabla h_K|=O(K^2)$, the largest Taylor/Wick corrections
+to the raw term are respectively
+\[
+ O(K^{-1})O(K^4)=O(K^3),\quad
+ O(K^2)O(K^2)O(K^{-3/2})=O(K^{5/2}),\quad
+ O(K^2)O(K^{-3})=O(K^{-1}).
+ \tag{4.5a}
+\]
+Second-order coefficient corrections are $O(1)$ after multiplication by
+$|\nabla h_K|^2$.  The same moment accounting bounds every lower-shell term
+by $O(K^3)$, so the $O(\log K)$ shell sum is still $o(K^6)$.  The covariance
+trace subtraction is $O(K^3)$, and all sextic fluctuation corrections are at
+most $O(K^3)$.  Fixed-floor Gaussian tail bounds justify the Taylor remainder.
+This proves (4.4)--(4.5), rather than assuming that a same-covariance
+translation is already deterministic.
+
+The falsified estimate would therefore require, for all $t>0$,
+\[
+ c_Ct^4\le\eta(c_Ht^2+c_6t^6).
+ \tag{4.6}
+\]
+Optimising in $t$ yields the necessary condition
+\[
+ \eta\ge\eta_{\min}
+ ={c_C\over2\sqrt{c_Hc_6}}>0,\qquad t^4={c_H\over c_6}.
+ \tag{4.7}
+\]
+This contradicts the quantifier \emph{for every $\eta>0$}.  More generally,
+separate entropy and sextic budgets $\alpha,\epsilon_6$ must obey
+\[
+ \alpha\epsilon_6\ge {c_C^2\over4c_Hc_6}.
+ \tag{4.8}
+\]
+
+At the production point choose $\epsilon=3/10$.  Then
+\[
+ M_6={4412239\over1600000}=2.757649375,\qquad
+ \eta_{\min}=2.4891432\,10^{-4}.
+ \tag{4.9}
+\]
+Hence $\eta=10^{-4}$ gives a strict $K^6$ violation; no fixed
+$C_\eta$ can repair it as $K\to\infty$.  The fixed quartic term is only
+$O(K^4)$ and likewise cannot change the contradiction.
+
+\section{Why the positive A9 theorem survives}
+
+The covariance-normal frozen shell term contains a positive source energy
+whose leading coefficient on the same ray is
+\[
+ {Q_{\rm fr}^{\rm source}\over L^3K^6}
+ \longrightarrow c_Ft^4,\qquad c_F=4a\epsilon^2.
+ \tag{5.1}
+\]
+The ratio forced by the witness is
+\[
+ \theta_{\rm ray}={c_C\over c_F}
+ ={\epsilon(4-5\epsilon)\over4}.
+ \tag{5.2}
+\]
+For $\epsilon=3/10$, $\theta_{\rm ray}=3/16=0.1875$.  Thus the commutator
+is compensated by a fixed part of the frozen energy.  A9 proved the exact
+determinant and entropy control for the complete covariance-normal frozen
+term; it never proved the now-falsified commutator-alone estimate.
+
+\section{Corrected open gate}
+
+Let $Q_j^{\rm fr}$ denote the complete covariance-normal frozen shell energy,
+including its trace subtraction.  The corrected gate is
+\[
+\boxed{\texttt{A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND}.}
+\]
+For some fixed $\theta\in(0,1)$ set
+\[
+ R_j^\theta=\theta Q_j^{\rm fr}+\cC_j.
+ \tag{6.1}
+\]
+The target is to prove explicit production-budget constants
+$\alpha_c,\epsilon_6,K_\theta,C_\theta$ such that, uniformly in cutoff and
+all $\nu\ll\gamma_J$,
+\[
+ \E_\nu\sum_{j\le J}R_j^\theta
+ \ge-\alpha_cH(\nu\mid\gamma_J)
+ -\epsilon_6\E_\nu\|\phi_J\|_6^6
+ -K_\theta\E_\nu\|\phi_J\|_4^4-C_\theta.
+ \tag{6.2}
+\]
+The untouched $(1-\theta)Q_j^{\rm fr}$ remains under A9's
+$\det_2$/Schatten theorem.  A closure must use the full covariance-normal
+quantity, not only its raw positive square; otherwise an uncancelled
+Schatten-one trace is reintroduced.  On the registered ray the exact
+necessary tradeoff is
+\[
+ \alpha_c\epsilon_6\ge
+ {[(c_C-\theta c_F)_+]^2\over4c_Hc_6}.
+ \tag{6.3}
+\]
+Thus $\theta=3/16$ neutralises this ray without entropy or sextic expenditure;
+it is not an absolute lower bound on $\theta$ when positive budgets are
+allowed.  This package proves the necessary resonant tradeoff and records a
+candidate closure target; it does not prove (6.2) for all fields.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: a single Fourier mode has no negative term.}
+\textbf{DISMISSED.}  That mode misses the exact triad resonance (3.2).
+
+\item \textbf{Objection: the floor or $K_A$ term repairs the sign.}
+\textbf{DISMISSED.}  The witness stays uniformly away from zero, and (2.2)
+shows that $b,c,\varepsilon_\rho$ are lower order.
+
+\item \textbf{Objection: the covariance counterterm cancels the defect.}
+\textbf{DISMISSED.}  It is $O(K^3)$ while the defect is $O(K^6)$.
+
+\item \textbf{Objection: the tilted law is not admissible.}
+\textbf{DISMISSED.}  It is a finite-cutoff nondegenerate Gaussian with a
+Cameron--Martin mean and contracted positive covariance.  It is absolutely
+continuous with respect to the reference Gaussian and has the exact finite
+entropy (4.2).
+
+\item \textbf{Objection: this disproves the full Nelson estimate.}
+\textbf{UPHELD as false.}  Equation (5.1) supplies a positive term discarded
+by the failed decomposition.
+
+\item \textbf{Objection: a raw-square split is sufficient.}
+\textbf{UPHELD as invalid.}  The fraction must be applied to the complete
+covariance-normal frozen energy or the trace divergence returns.
+
+\item \textbf{Objection: the corrected relative bound is now proved.}
+\textbf{UPHELD as an overclaim.}  Only its necessary resonance budget and a
+candidate closure target are recorded; the all-field estimate is open.
+
+\item \textbf{Objection: every corrected proof requires
+$\theta\ge3/16$.} \textbf{UPHELD as false.}  That value makes the registered
+ray cost-free; smaller values remain possible if the explicit budget
+tradeoff (6.3) is satisfied.
+\end{enumerate}
+
+\section{Reproduction and references}
+
+\begin{verbatim}
+python codes/foundations/a9_tilted_commutator_nogo_verify.py
+\end{verbatim}
+
+The primary route uses exact rational Fourier convolution and the independent
+route evaluates the embedded Pauli currents without importing the primary
+code.  The variational-law background follows M. Boue and P. Dupuis,
+\url{https://doi.org/10.1214/aop/1022855876}.  The constructive variational
+context is related to N. Barashkov and M. Gubinelli,
+\url{https://arxiv.org/abs/1805.10814}.  Neither reference supplies the
+model-specific no-go result proved here.
+
+\section*{Result footer}
+
+\begin{verbatim}
+Claim: A9-CLASSII-SMART-PATH-CANCELLATION
+Result: A7-CLASSII-TILTED-COMMUTATOR-FORM-BOUND falsified as stated
+Preserved: A9 scoped T5 exact smart-path and frozen-shell theorem
+Open: A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND
+\end{verbatim}
+
+\noindent\textbf{Final boundary.}
+The infinitesimal commutator-alone sufficient condition is eliminated.
+The A9 T5 theorem remains valid.  The self-coupled Nelson estimate, the
+corrected all-field relative bound, the interacting Gibbs measure, floor
+removal, infinite volume, phase transition, BCC selection, T6, and T7 are not
+claimed.
