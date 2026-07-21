@@ -1,0 +1,56 @@
+{
+  "id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+  "title": "Class-II sharp-cube source-square reduction",
+  "sector": "A",
+  "statement": "For the hash-pinned A1 production coefficients and the A7-A11 strict sharp rectangular-cube filtration, the adapted source satisfies sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6, where C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2, beta_op=4(a+2b+c), and M_6,Q_6 are the precisely defined cutoff-uniform Hilbert-valued sharp-cube L6 maximal and exact-weight derivative-prefix square-function norms.",
+  "scope": "PROVED-ANALYTIC-REDUCTION@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, a common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The Pauli/Fierz operator constant and exact shell decay are pinned numerically; the harmonic norms are proved finite but do not yet have a certified decimal enclosure, so T-047 and the production sextic budget remain open.",
+  "tier": "T4",
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED"
+  ],
+  "dependencies": [
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+    "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+    "A9-CLASSII-SMART-PATH-CANCELLATION",
+    "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+    "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION"
+  ],
+  "soft_dependencies": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "hypotheses": [],
+  "open_gates": [
+    "A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE"
+  ],
+  "falsifier": "Failure of the Pauli identities |m|^2=s^2 or m dot J=s ds; a field or variation violating 0<=B(psi)<=4(a+2b+c)|psi|^2 I_6 at the fixed floor; a wrong N_(j-1)+1 shell boundary, physical 2pi/L factor, covariance convention, derivative-direction factor, or M_R^2 regulator power; failure of the strict-dyadic periodic product-Marcinkiewicz hypotheses or the alternative six-linear face variation; a claimed decimal M_6^4 Q_6^2 without a certified enclosure; or any authority hash, PDF QA, non-importing, assertion-count, or cross-route failure falsifies the pinned reduction.",
+  "reproduction": {
+    "command": "python codes/foundations/a12_classii_source_square_reduction_verify.py",
+    "expected": "PASS: primary (26/26); PASS: independent (19/19); ASSERTS: 65/65; A12-CLASSII-SOURCE-SQUARE-REDUCTION-INTEGRATED-PASS; exit 0.",
+    "status": "AVAILABLE"
+  },
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-07-21)",
+  "legacy_evidence": [
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_source_square_reduction_manifest.json",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.tex.txt",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.pdf (5 pages; FORM-CHECK PASS; 0 overfull; visual QA PASS)",
+    "codes/foundations/a12_classii_source_square_reduction.py",
+    "codes/foundations/a12_classii_source_square_reduction_independent.py",
+    "codes/foundations/a12_classii_source_square_reduction_verify.py",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json (26/26 PASS)",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-source-square/result.json (19/19 PASS)",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json (65/65 PASS)"
+  ],
+  "t7_candidate": false,
+  "no_overclaim": "This claim does not provide a certified decimal enclosure of M_6^4 Q_6^2, complete T-047, establish a positive production sextic reserve, prove the true-increment stabilised log-Laplace estimate, close the A7 self-coupled Nelson theorem, construct the interacting full three-component measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
+  "next_action": "Close A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE by producing a certified admissible upper bound for H_6=M_6^4 Q_6^2 and comparing it with 29.62571266025876 at p=1.1 for M_R=1. Then recompute all determinant, relative-form, quartic, and sextic budgets before revisiting the A11 stabilised log-Laplace gate.",
+  "last_review": "2026-07-21",
+  "closure_depth": "C1",
+  "proof_maturity": "S1",
+  "notes": "T4 PROVED-ANALYTIC-REDUCTION. The exact production Pauli/Fierz constant is beta_op=0.0423749999999894, the exact one-G source scaling is M_R^2, and beta_op^2/c_sym=0.016570372383568618. The cutoff-uniform sharp-cube vector theorem is proved by smooth-plus-annular product-Marcinkiewicz analysis and cross-checked by a six-linear multiplier route. Primary 26/26, non-importing independent 19/19, and integrated 65/65 pass. Numerical H_6 enclosure and the production budget remain open."
+}

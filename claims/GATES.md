@@ -272,15 +272,39 @@ sharp-cube geometry. It must use a genuine `L6` vector-valued maximal/square
 function or multilinear paraproduct theorem; individual `L4` projection
 stability and polynomial Fourier-support shortcuts are insufficient.
 
-**Status:** OPEN (2026-07-21), EXACTLY REDUCED BY A11. The true-increment
+**Status:** OPEN (2026-07-21), ANALYTICALLY REDUCED BY A12. The true-increment
 determinant is
 `-0.5 log det_2(I+pT_j)+0.5 p^2<ell_j,(I+pT_j)^(-1)ell_j>` with
 `ell_j=G_j^*B(phi_(j-1))D phi_(j-1)`. A scalar source family proves that no
 Hilbert--Schmidt-only estimate can delete this positive term. A9 already
 controls the summed Hilbert--Schmidt part by a terminal quartic. The present
 source-square is therefore the first surviving load-bearing analytic gate.
-Its explicit `C_src` must be compared with `gamma/6`; existence of a finite
-constant alone is not yet a positive production sextic budget.
+A12 proves its cutoff-uniform form with
+`C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2`, where
+`beta_op=0.0423749999999894` is the sharp production Pauli/Fierz operator
+constant and `beta_op^2/c_sym=0.016570372383568618`.  What remains is the
+certified numerical enclosure below.  Until that enclosure is compared with
+`gamma/6`, T-047 and the positive production sextic budget remain open.
+
+### **A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE**
+
+**Statement:** For the exact strict sharp rectangular-cube operators defined
+by A12, produce a certified admissible numerical upper bound on
+`H_6=M_6^4 Q_6^2`, including the six-real Hilbert target, all three physical
+derivatives, the exact shell weight
+`[1+(2pi/L)^2(N_(j-1)+1)^2]^-1`, and the periodic product-Marcinkiewicz or an
+equally rigorous six-linear paraproduct constant.  Finite FFT ladders may be
+used as adversarial evidence but not as the infinite-cutoff enclosure.
+
+**Status:** OPEN (2026-07-21), EXACT TARGET FROM A12.  At `p=1.1` and
+`M_R=1`, source-only absorption requires
+`H_6<29.62571266025876`.  This omits the remaining determinant, commutator,
+quartic, and entropy costs and therefore is necessary only for that isolated
+allocation, not sufficient for the final Nelson budget.  The obsolete A10
+`epsilon_6=0.25` allocation would demand `H_6<2.194497234093243`; it belongs
+to the refuted past-energy route and must not be reused.  A certified bound
+which misses the source-only threshold is still a valid quantitative result,
+but it forces a sharper resolvent estimate or a different budget allocation.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

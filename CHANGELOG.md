@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Prove the sharp-cube Class-II source-square analytic reduction] - 2026-07-21
+
+Registered A12 at scoped T4. Exact Pauli/Fierz analysis sharpens the production coefficient to beta_op=0.0423749999999894, exact shell decay fixes one-leg M_R^2 scaling, and two harmonic-analysis routes prove cutoff-uniform source-square control with C_src=0.016570372383568618 M_R^2 M_6^4 Q_6^2. Primary 26/26, non-importing independent 19/19, and integrated 65/65 pass; the five-page PDF passes form, zero-overfull, and visual QA. T-047 remains open because M_6^4 Q_6^2 has no certified decimal enclosure; the source-only p=1.1 target is 29.62571266025876 and the obsolete epsilon_6 allocation is not reused.
+
 ## [A11 true-increment determinant closes action recovery and refutes the past-energy upper form] - 2026-07-21
 
 The base Gaussian disproves every cutoff-uniform A10 E_J upper form with fixed entropy/quartic/sextic constants. A11 replaces it by I_j=Q_j^fr-q_B(D phi_(j-1)), proves exact endpoint telescoping and the noncentral determinant, and isolates the positive adapted source-square. Primary 24/24, non-importing independent 18/18, integrated 58/58, and five-page PDF QA pass. T4 only; source-square and true-increment relative log-Laplace gates remain open.

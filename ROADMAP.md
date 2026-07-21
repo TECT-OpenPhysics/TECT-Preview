@@ -86,8 +86,12 @@ past-energy upper form is impossible already at the base Gaussian, retires
 that branch, and exactly reconstructs the endpoint with
 `I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))`. The finite-cutoff noncentral
 determinant is closed, but it contains a positive adapted source-square. The
-two load-bearing antecedents are now, in order,
-`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and
+new `A12-CLASSII-SOURCE-SQUARE-REDUCTION` proves the cutoff-uniform analytic
+bound with the sharp Pauli/Fierz coefficient and exact one-leg shell decay.
+Its constant is
+`C_src=0.016570372383568618 M_R^2 M_6^4 Q_6^2`. The first load-bearing
+quantitative antecedent is now
+`A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE`; after it comes
 `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` for
 `theta I_j+C_j`. Neither alone closes the A7 Nelson estimate. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -179,15 +183,13 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND** — A11 refutes the direct
-   past-energy upper-form route and closes the exact true-increment action
-   telescope and determinant. The next theorem must bound
-   `sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2` by an explicit
-   cutoff-uniform terminal sextic constant. A10's individual `L4` projection
-   estimate is insufficient; use a genuine sharp-cube `L6` vector-valued or
-   multilinear paraproduct theorem, retain the rational fixed-floor
-   coefficient, and quantify the constant against the production sextic
-   budget.
+2. **A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE** — A12 proves the
+   cutoff-uniform source-square form and pins
+   `C_src=0.016570372383568618 M_R^2 H_6`,
+   `H_6=M_6^4 Q_6^2`, without treating rational `B` as band-limited. The next
+   task is a certified infinite-cutoff numerical enclosure of `H_6`, not an
+   FFT-only estimate. At `p=1.1`, `M_R=1`, the isolated source budget target
+   is `H_6<29.62571266025876`; all other costs must then be recomputed.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — after the source
    square closes, prove the relative estimate for `theta I_j+C_j`, not the
    historical `theta Q_j^fr+C_j`. Recompute the quartic and sextic allocation

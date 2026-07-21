@@ -1,0 +1,133 @@
+{
+  "schema": "tect/a12-classii-source-square-reduction/1.0",
+  "package_version": "1.0",
+  "claim_id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+  "frozen_on": "2026-07-21",
+  "status": "T4 PROVED-ANALYTIC-REDUCTION",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a7_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    "a8_manifest": {
+      "path": "claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/classii_decoupled_nelson_manifest.json",
+      "sha256": "30c718bb7d0c03e596a389d1870f600c9a895736ae87b793beca1d59177fa382"
+    },
+    "a9_manifest": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/classii_smart_path_manifest.json",
+      "sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d"
+    },
+    "a10_manifest": {
+      "path": "claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/classii_relative_structural_reduction_manifest.json",
+      "sha256": "ae97c870916b8f1da6822def01c9b8c80243538676f3fdbce42ddc7701b36cc9"
+    },
+    "a11_manifest": {
+      "path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/classii_true_increment_determinant_manifest.json",
+      "sha256": "4d40921f333adb6c9e547abb22db932ec7fcc1fc9285c47b54c706372e08a8e3"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a12_classii_source_square_reduction.py",
+      "sha256": "827507d9a82dc7ad7e80b41795272a7092521c547495772c57752ad6649f26cc",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a12_classii_source_square_reduction_independent.py",
+      "sha256": "1ff8fe5a086608eb45b71a9786a44f74cd215b477fe68d37bd955186480c7e66",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a12_classii_source_square_reduction_verify.py",
+      "sha256": "fdc31f4879bae0a9648e3ebba1117778e14b73d3f9c6d53ebba4cd58e1d0a307",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.tex.txt",
+      "sha256": "58478d509382dd4a435ad6ff09efc75e320b7e27f17deb8b3aa9e8106a669d55",
+      "version": "1.0"
+    },
+    "proof_pdf": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.pdf",
+      "sha256": "e8c71f1339e86b2f15e96360c7a29f6984b648b5c7156574949da52f28299a9d",
+      "version": "1.0",
+      "pages": 5,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS"
+    }
+  },
+  "scope": "Hash-pinned A1 production coefficients on L=16, three complex components in the six-real convention, fixed rho_regularizer=1e-12, the A7-A11 common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The result is cutoff-uniform and retains the rational coefficient exactly through its pointwise Pauli/Fierz bound. It proves a symbolic source-square constant in precisely defined L6 operator norms; it does not numerically enclose those norms or close the production sextic budget.",
+  "theorem": {
+    "pauli_operator": "For the production coefficients and every psi in C^3, 0<=B(psi)<=beta_op |psi|^2 I_6, beta_op=4(a+2b+c)=0.0423749999999894. The upper constant is sharp on a doublet tangent direction and includes the fixed floor and third component.",
+    "sharp_shell": "For shell j outside the previous cube N_(j-1), kappa_j=(2pi/L)(N_(j-1)+1), and ||G_j^*F||_2^2<=M_R^2/[c_sym(1+kappa_j^2)] ||F||_2^2. The source contains one G_j and therefore M_R^2, not M_R^4.",
+    "vector_bounds": "The strict dyadic sharp-cube maximal operator and the exact-weight derivative-prefix square function have finite cutoff-independent Hilbert-valued L6 norms M_6 and Q_6. A de la Vallee Poussin comparison plus periodic product Marcinkiewicz variation proves the bounds; a six-linear paraproduct multiplier gives an independent route after the pointwise B envelope.",
+    "source_square": "sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6 with C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2.",
+    "production_base": "beta_op^2/c_sym=0.016570372383568618. At p=1.1 and M_R=1, a source-only direct determinant budget would require M_6^4 Q_6^2<29.62571266025876. This is a target, not an established numerical enclosure."
+  },
+  "harmonic_constants": {
+    "M_6": "The least constant in ||sup_j |P_<=j f|||_6<=M_6||f||_6 for R^6-valued f on T_L^3 and the strict dyadic sharp cubes.",
+    "Q_6": "The least constant in ||(sum_j (1+kappa_j^2)^(-1)|D P_<=j-1 f|^2)^(1/2)||_6<=Q_6||f||_6, with all three derivatives and six real components.",
+    "proof_route": "Choose a product de la Vallee Poussin cutoff equal to one on each sharp cube. The sharp-minus-smooth remainder has one-cube-annular support. Random signed remainders and normalized derivative shells obey uniform periodic product-Marcinkiewicz mixed-variation bounds. Khintchine and scale Young yield M_6,Q_6<infinity without a multiparameter Carleson assumption.",
+    "alternative_route": "After |B(u)Du|^2<=beta_op^2|u|^4|Du|^2, polarization gives six-linear sharp-cube forms. Their scale multiplier has absolute value at most one and uniform dyadic face variation, so the multilinear product-Marcinkiewicz/paraproduct theorem gives the same cutoff-uniform conclusion."
+  },
+  "derived_oracles": {
+    "beta_operator": 0.0423749999999894,
+    "c_symbol": 0.10836453058711468,
+    "source_base_constant": 0.016570372383568618,
+    "budget_reference_p": 1.1,
+    "source_only_H6_ceiling_at_reference_p": 29.62571266025876,
+    "obsolete_allocation_H6_ceiling_at_reference_p": 2.194497234093243
+  },
+  "audit": {
+    "seed": 120721,
+    "fierz_samples": 4096,
+    "identity_tolerance": 1e-10,
+    "rational_grid": 512,
+    "rational_tail_floor": 1e-24,
+    "shell_scales": [1, 2, 3, 4, 5, 6, 7],
+    "regulator_amplitudes": [0.5, 1.0, 1.7],
+    "p_values": [1.001, 1.05, 1.1],
+    "obsolete_epsilon6": 0.25
+  },
+  "independent_audit": {
+    "seed": 912071,
+    "fierz_samples": 2048,
+    "matrix_tolerance": 1e-12,
+    "derivative_tolerance": 1e-8,
+    "multiplier_seed": 712021,
+    "multiplier_samples": 4096,
+    "extra_scales": 5,
+    "fixture_grid": 256
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-14,
+    "budget_tolerance": 1e-10
+  },
+  "run_contract": {
+    "primary_output": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json",
+    "independent_output": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-source-square/result.json",
+    "integrated_output": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json",
+    "primary_assertions": 26,
+    "independent_assertions": 19,
+    "integrated_own_assertions": 19,
+    "expected_total_assertions": 65,
+    "command": "python codes/foundations/a12_classii_source_square_reduction_verify.py"
+  },
+  "open_followup": "A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE",
+  "honesty_boundary": {
+    "numerical_enclosure": "OPEN",
+    "t047": "OPEN",
+    "production_sextic_budget": "OPEN",
+    "stabilised_log_laplace": "OPEN",
+    "nelson": "OPEN",
+    "warning": "Finite FFT or multiplier samples do not prove the infinite-cutoff vector theorem and cannot supply a certified decimal M_6^4 Q_6^2. The obsolete A10 epsilon_6 allocation is not reused."
+  },
+  "references": [
+    "L. Grafakos and L. Slavikova, The Marcinkiewicz multiplier theorem revisited, arXiv:1706.07201.",
+    "M. Mastylo and L. Rodriguez-Piazza, Convergence almost everywhere of multiple Fourier series over cubes, Trans. Amer. Math. Soc. 370 (2018), 1629-1659, doi:10.1090/tran/7172.",
+    "TECT A8-A11 hash-pinned Class-II packages listed under authority."
+  ]
+}

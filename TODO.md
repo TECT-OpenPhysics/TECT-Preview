@@ -18,8 +18,8 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 4 · Done (recent) 42
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-047** A11: prove the adapted source-square bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND)_
-  - Next proof gate. Prove a genuine sharp-cube L6 vector-valued or six-linear paraproduct bound for sum_j ||G_j^*B(P_<=j-1 phi)D P_<=j-1 phi||_2^2, retain rational fixed-floor B and all M_R factors, and compute an explicit C_src against the production sextic budget. Individual L4 projection stability is insufficient.
+- **T-047** A12: certify the sharp-cube L6 vector-norm enclosure  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE)_
+  - A12 T4 on 2026-07-21 proves the cutoff-uniform analytic source-square reduction with beta_op=0.0423749999999894, exact M_R^2 shell scaling, and C_src=0.016570372383568618 M_R^2 H_6, H_6=M_6^4 Q_6^2. Primary 26/26, independent 19/19, integrated 65/65. T-047 remains open until a certified infinite-cutoff numerical upper enclosure is compared with the source-only p=1.1 target H_6<29.62571266025876 and the full production budget is recomputed; FFT sampling alone is insufficient and obsolete epsilon_6=0.25 is not reused.
   - _updated 2026-07-21_
 - **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE)_
   - Blocked in proof order by T-047. Prove the stabilised relative estimate for theta I_j+C_j, not theta Q_j^fr+C_j; then recompute quartic/sextic budgets before any A7 Nelson composition.

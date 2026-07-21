@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-056](#r-056) | Sharp-cube Class-II source-square reduction | T4 PROVED-ANALYTIC-REDUCTION; exact Pauli/Fierz operator constant, exact one-leg shell decay, and cutoff-uniform L6 maximal/square bound reduce the source to 0.016570372383568618 M_R^2 M_6^4 Q_6^2; certified numerical norm enclosure remains open |
 | [R-055](#r-055) | Class-II true-increment determinant and past-energy no-go | T4 PROVED-STRUCTURAL-REDUCTION; base Gaussian refutes the direct past-energy upper form, while the true increment exactly telescopes the endpoint and exposes the positive adapted source-square as the next gate |
 | [R-054](#r-054) | Frozen-energy relative Class-II structural reduction | T4 PROVED-STRUCTURAL-REDUCTION; exact Gamma_j convention, corrected covariance factor, strict-dyadic raw theta=1 sharpness, trace defect, exact action mismatch, closed sharp-cube filtration, and two-antecedent conditional composition; action recovery and relative log-Laplace remain open |
 | [R-053](#r-053) | Resonant no-go for an infinitesimal Class-II commutator-alone form bound | T5 EXACT-NO-GO; a same-shell scalar-ray triad forces a positive entropy-sextic relative-bound threshold, while retained frozen source energy compensates the witness |
@@ -74,6 +75,41 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-056"></a>
+### R-056 -- sharp-cube Class-II source-square reduction
+
+**Statement.** In the fixed-floor A1/A7--A11 strict sharp-cube production
+scope, the exact Pauli/Fierz identities give
+`0<=B(psi)<=beta_op |psi|^2 I_6`,
+`beta_op=4(a+2b+c)=0.0423749999999894`, including the density floor and third
+component.  The new-shell operator obeys
+`||G_j^*F||_2^2<=M_R^2/[c_sym(1+kappa_j^2)] ||F||_2^2`,
+`kappa_j=(2pi/L)(N_(j-1)+1)`.  Hilbert-valued strict-dyadic sharp-cube
+maximal and exact-weight derivative-prefix square-function bounds then yield
+`sum_j||ell_j||_2^2<=0.016570372383568618 M_R^2 M_6^4 Q_6^2 ||phi||_6^6`.
+The rational coefficient is retained pointwise rather than treated as
+polynomial-bandlimited.
+
+**Where proved.** `A12-CLASSII-SOURCE-SQUARE-REDUCTION`, proof note
+`classii-source-square-reduction-260721-v1.0`; primary 26/26, non-importing
+independent 19/19, and integrated 65/65 PASS.  The five-page PDF passes form,
+zero-overfull, and full visual QA.
+
+**Reuse.** Adapted noncentral Gaussian-shell estimates for derivative Gibbs
+measures with strict rectangular-cube filtrations.  The proof separates the
+one-leg `M_R^2` source scaling from the two-leg `M_R^4` Schatten scaling and
+provides both a smooth-plus-annular product-Marcinkiewicz route and a
+six-linear paraproduct cross-check.
+
+**Tier / publication target.** T4 PROVED-ANALYTIC-REDUCTION.  A certified
+numerical enclosure of `H_6=M_6^4 Q_6^2` is still required.  At `p=1.1` and
+`M_R=1`, the isolated source target is `H_6<29.62571266025876`; this is not
+yet proved and is not the full Nelson budget.  T-047, the stabilised
+log-Laplace theorem, A7 Nelson, an interacting measure, T5, T6, and T7 remain
+open.
+
+---
 
 <a id="r-055"></a>
 ### R-055 -- Class-II true-increment determinant and past-energy no-go
