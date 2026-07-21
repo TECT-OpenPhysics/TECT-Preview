@@ -33,6 +33,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [F-2026-07-21-A7-ZERO-FROZEN-EXCLUSION](#f-2026-07-21-a7-zero-frozen-exclusion) | exclusion of zero-frozen negative commutator directions | covariance trace makes an active-doublet common-phase plane wave strictly negative |
 | [F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION](#f-2026-07-21-a10-naive-action-composition) | direct identification of the A9/A10 shell sum with the actual A7 action | exact telescoping leaves a positive past-energy term with the wrong sign for lower-bound transfer |
 | [F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM](#f-2026-07-21-a10-past-energy-upper-form) | cutoff-uniform absorption of the A10 past-energy mismatch | base Gaussian has linearly growing past energy but bounded endpoint L4/L6 moments |
+| [NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET](#ng-2026-07-21-a12-sharp-cube-scalar-budget) | A12 separated H6 and coefficient-blind scalar source routes | dyadic Riesz boundary modulation forces H6 and the scalar envelope far above the production target |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -231,6 +232,36 @@ source-square, so the next load-bearing gates are
 `A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and then
 `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`.  This negative result
 does not withdraw A10 T4 or close A7.
+
+<a id="ng-2026-07-21-a12-sharp-cube-scalar-budget"></a>
+### NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET -- separated sharp-cube source budget is impossible
+
+**Failure mode:** A12 reduced the adapted source to
+`C_src=(beta_op^2/c_sym) M_R^2 H_6`, `H_6=M_6^4Q_6^2`, and proposed the
+isolated production target `H_6<29.62571266025876`.  Replacing the separated
+norms by a generic six-linear theorem after the coefficient-blind envelope
+`|B(u)Du|<=beta_op|u|^2|Du|` was the apparent fallback.
+
+**Evidence:** `A12-CLASSII-SOURCE-SQUARE-REDUCTION`, obstruction package
+v1.0.  Dyadic boundary modulation turns the centered cube projection into
+the tensor product of three Riesz projections.  The exact one-dimensional
+`L6` Riesz norm is two, hence `M_6>=8`, `Q_6>=8sqrt(3)`, and
+`H_6>=3*8^6=786432`.  The same witness gives coefficient-blind scalar-envelope
+norm at least `786432`.  Independently, a finite Gaussian-integer polynomial
+and exact triple-convolution arithmetic certify
+`H_6>=184.54034191803735`, already above the target.  Baseline A12 is 65/65;
+the obstruction primary is 36/36, non-importing independent 25/25, and
+integrated 83/83.
+
+**Consequence:** T-047 is closed negatively.  No numerical upper enclosure of
+the separated `H_6` can meet the source-only production budget, and a generic
+coefficient-blind scalar paraproduct cannot repair it.  This does not refute
+the actual A11 source: the exact matrix obeys `B(X)JX=0`, while the coarse
+route also discarded the output shell and determinant resolvent.  The active
+successor is
+`A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND`.  A12 remains T4;
+no positive sextic reserve, A11 log-Laplace closure, or interacting measure is
+claimed.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

@@ -6,7 +6,7 @@
 
 Generated: 2026-07-21
 
-**2244 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
+**2253 artefacts** · superseded versions kept: 129 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -87,10 +87,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/claim.md` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `5a375ab60fb5` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/classii_true_increment_determinant_manifest.json` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `4d40921f333a` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/status.json` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `7ec39c5cf388` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/LINEAGE.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `da1212f444c6` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/claim.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `8d8510886166` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/LINEAGE.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `f6c54be26afd` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/claim.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `007f751d78ac` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `e16ad41f1925` |
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_source_square_reduction_manifest.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `f1e12ad869ff` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `4c49b41f04a8` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `ff7a72286b6d` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/LINEAGE.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `348dd2cfbd9b` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/MANIFEST.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `7a17dd8d9ed3` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/README.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `ef36d86e3e97` |
@@ -554,6 +555,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/notes/classii-relative-structural-reduction-260721-v1.0.tex.txt` | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `65f1f659c737` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/notes/classii-true-increment-determinant-260721-v1.0.pdf` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `d96010d68d5d` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/notes/classii-true-increment-determinant-260721-v1.0.tex.txt` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `6457306c8060` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.pdf` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `5081041b5fe7` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.tex.txt` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `83291ff7ced8` |
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.pdf` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `e8c71f1339e8` |
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.tex.txt` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | 2026-07-21 | 2026-07-21 | v1.0 | ACTIVE | `58478d509382` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/notes/a2-full-production-wellposedness-260717-v2.0.pdf` | A2-FULL-PRODUCTION-WELLPOSED | 2026-07-17 | 2026-07-17 | v2.0 | ACTIVE | `60e22bd7f702` |
@@ -1636,9 +1639,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/runs/2026-07-21-independent-true-increment/result.json` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `03efbc8e5c44` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/runs/2026-07-21-integrated-true-increment/result.json` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `6223b1c99a8f` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/runs/2026-07-21-primary-true-increment/result.json` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `0ec7344b9912` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-source-square/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `f897e34f8261` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `984605a447d1` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `63075f381c64` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-sharp-cube-obstruction/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `dd6a5ce4ec0f` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-source-square/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `f3f2b66e09f5` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `d1e87a7451b2` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `ce43f23b037b` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-sharp-cube-obstruction/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `905e9636a979` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `4f2c24132a11` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b9df1470a98f` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `21c7f16a6bc5` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `37d0dd3a37b7` |
@@ -1996,6 +2002,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a11_classii_true_increment_determinant.py` | — | 2026-07-21 | 2026-07-21 | v1.0.0 | ACTIVE | `2566d5e059a9` |
 | `codes/foundations/a11_classii_true_increment_determinant_independent.py` | — | — | — | v1.0.0 | ACTIVE | `76719d770cf7` |
 | `codes/foundations/a11_classii_true_increment_determinant_verify.py` | — | — | — | v1.0.0 | ACTIVE | `731c5ea1a9d3` |
+| `codes/foundations/a12_classii_sharp_cube_budget_obstruction.py` | — | 2026-07-21 | 2026-07-21 | v1.0.0 | ACTIVE | `07ef491b184b` |
+| `codes/foundations/a12_classii_sharp_cube_budget_obstruction_independent.py` | — | 2026-07-21 | 2026-07-21 | v1.0.0 | ACTIVE | `84b5b915f39d` |
+| `codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py` | — | 2026-07-21 | 2026-07-21 | v1.0.0 | ACTIVE | `cb2373ee35b8` |
 | `codes/foundations/a12_classii_source_square_reduction.py` | — | — | — | — | ACTIVE | `827507d9a82d` |
 | `codes/foundations/a12_classii_source_square_reduction_independent.py` | — | — | — | — | ACTIVE | `1ff8fe5a0866` |
 | `codes/foundations/a12_classii_source_square_reduction_verify.py` | — | — | — | — | ACTIVE | `fdc31f4879ba` |
@@ -2207,7 +2216,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md` | A1-SCALAR-ANALYTIC-BRANCH | — | — | — | ACTIVE | `9eee9b0797a6` |
 | `claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/INDEX.md` | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION | — | — | — | ACTIVE | `74bf7d4982d9` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/INDEX.md` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `745ceff9ed70` |
-| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `f0180457fcb1` |
+| `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `517d13b56263` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `ce8741a0195f` |
 | `claims/A2-PDE-WELLPOSED/INDEX.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `db953c1945b8` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `249335dafb21` |
@@ -2225,9 +2234,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `fadc0b632f94` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `f00a47dea2ba` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `ae53f19ff06c` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `944d70933466` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `4d29b4d6b5b8` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `5db2ab88e447` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `ef1db0204359` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `7b37d229bc8a` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `8033c2916ece` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `a55d4ff1ee00` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `37714cc946c9` |
@@ -2258,16 +2267,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `04e202b37a18` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `0738c71e97c6` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `879698da6ce6` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `ab6ba9cebedb` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `759e120b506c` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `d6b4dc249c62` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `9d55b6706334` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `8c8e0f624500` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `6c7b556c34a9` |
-| `ROADMAP.md` | — | — | — | — | ACTIVE | `f161996316cb` |
+| `ROADMAP.md` | — | — | — | — | ACTIVE | `25319675e464` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `18a5f1875a60` |
-| `TODO.md` | — | — | — | — | ACTIVE | `d52549786a2a` |
+| `TODO.md` | — | — | — | — | ACTIVE | `dfe42601f846` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `ce4fcf78e60c` |
 
 ## Other tracked files
@@ -2277,7 +2286,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `197a6c886a48` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `cc753ede5df2` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -2322,11 +2331,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `8041e24ae23c` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `4b25b772d008` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `b8eb9eba7f8a` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `ad7a8e69c6df` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `53cadb2421ae` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `7e5beeb109b6` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `bcc785d4b6a5` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `f5799e28fc53` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `12c5d06e216c` |
 

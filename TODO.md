@@ -3,13 +3,19 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 4 · Done (recent) 42
+Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 43
 
 ## Next up
 
 - **T-006** De-hardcode codes/vacuum scripts (derive MARGIN/RHO from source) + add check_code_discipline.py to release_check  _(owner: unassigned; claim: B1-RH-ENUM)_
   - MARGIN de-hardcoded 2026-06-07 (codes/vacuum/sectorb_common.py single source; scscope+robustness import margin_of). REMAINING: RHO consolidation + automated check_code_discipline.py wired into release_check (no-hardcoding + self-test + JSON-artefact scan).
   - _updated 2026-06-07_
+
+## Blocked
+
+- **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE; blocked by: T-049)_
+  - Blocked in proof order by A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND. The separated H_6 and coefficient-blind scalar routes are refuted. First prove an explicit production bound for the exact source retaining B(X)JX=0, the output shell, fixed floor, relative phase directions, and if necessary the determinant resolvent; then recompute all quartic and sextic costs for theta I_j+C_j.
+  - _updated 2026-07-21_
 
 ## Backlog
 
@@ -18,11 +24,8 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 4 · Done (recent) 42
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-047** A12: certify the sharp-cube L6 vector-norm enclosure  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE)_
-  - A12 T4 on 2026-07-21 proves the cutoff-uniform analytic source-square reduction with beta_op=0.0423749999999894, exact M_R^2 shell scaling, and C_src=0.016570372383568618 M_R^2 H_6, H_6=M_6^4 Q_6^2. Primary 26/26, independent 19/19, integrated 65/65. T-047 remains open until a certified infinite-cutoff numerical upper enclosure is compared with the source-only p=1.1 target H_6<29.62571266025876 and the full production budget is recomputed; FFT sampling alone is insufficient and obsolete epsilon_6=0.25 is not reused.
-  - _updated 2026-07-21_
-- **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE)_
-  - Blocked in proof order by T-047. Prove the stabilised relative estimate for theta I_j+C_j, not theta Q_j^fr+C_j; then recompute quartic/sextic budgets before any A7 Nelson composition.
+- **T-049** A12: prove the coefficient-aware shell-localised source bound  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND)_
+  - Retain the exact production B, its gauge-null identity B(X)JX=0, the output shell inside G_j^*, all relative doublet/singlet phase directions, the fixed positive density floor, and preferably the determinant resolvent. The separated M_6^4Q_6^2 and coefficient-blind scalar paraproduct routes are forbidden by NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET. Produce an explicit source constant and compare it with the full recomputed production budget.
   - _updated 2026-07-21_
 
 ## Done (recent)
@@ -140,4 +143,7 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 4 · Done (recent) 42
   - _updated 2026-07-20_
 - **T-046** A10/A11: close the action mismatch by the true-increment determinant  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION)_
   - DONE by A11 on 2026-07-21. The direct E_J upper-form branch is refuted at nu=gamma_J: entropy is zero, endpoint L4/L6 moments are bounded, but E E_J/(L^3 2^J) tends to positive kappa_II. The replacement I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1)) exactly satisfies I_j+C_j=V_j-V_(j-1), and its noncentral determinant is closed. Primary 24/24, independent 18/18, integrated 58/58. The positive source-square and reformulated relative log-Laplace estimates are split into T-047 and T-048.
+  - _updated 2026-07-21_
+- **T-047** A12: certify the sharp-cube L6 vector-norm enclosure  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE)_
+  - CLOSED-NEGATIVE by A12 on 2026-07-21. Exact dyadic Riesz boundary modulation gives M_6>=8, Q_6>=8sqrt(3), and H_6>=786432, versus the isolated target H_6<29.62571266025876. An independent finite Gaussian-integer polynomial certifies H_6>=184.54034191803735 by exact convolution arithmetic. The coefficient-blind scalar six-linear envelope is also at least 786432. Baseline 65/65, primary 36/36, non-importing independent 25/25, integrated 83/83. This no-go does not refute the exact-B shell source because B(X)JX=0 and the coarse route dropped the output shell and resolvent.
   - _updated 2026-07-21_

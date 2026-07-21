@@ -19,7 +19,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-056](#r-056) | Sharp-cube Class-II source-square reduction | T4 PROVED-ANALYTIC-REDUCTION; exact Pauli/Fierz operator constant, exact one-leg shell decay, and cutoff-uniform L6 maximal/square bound reduce the source to 0.016570372383568618 M_R^2 M_6^4 Q_6^2; certified numerical norm enclosure remains open |
+| [R-057](#r-057) | Sharp-cube scalar-budget obstruction and Class-II gauge-null pivot | EXACT NO-GO within A12 T4: dyadic Riesz boundary modulation forces M_6>=8, Q_6>=8sqrt(3), H_6>=786432 and the coefficient-blind scalar envelope >=786432; the actual source survives through B(X)JX=0 and output-shell localisation |
+| [R-056](#r-056) | Sharp-cube Class-II source-square reduction | T4 PROVED-ANALYTIC-REDUCTION; exact Pauli/Fierz operator constant, exact one-leg shell decay, and cutoff-uniform L6 maximal/square bound reduce the source to 0.016570372383568618 M_R^2 M_6^4 Q_6^2; R-057 subsequently refutes this separated route for the production budget |
 | [R-055](#r-055) | Class-II true-increment determinant and past-energy no-go | T4 PROVED-STRUCTURAL-REDUCTION; base Gaussian refutes the direct past-energy upper form, while the true increment exactly telescopes the endpoint and exposes the positive adapted source-square as the next gate |
 | [R-054](#r-054) | Frozen-energy relative Class-II structural reduction | T4 PROVED-STRUCTURAL-REDUCTION; exact Gamma_j convention, corrected covariance factor, strict-dyadic raw theta=1 sharpness, trace defect, exact action mismatch, closed sharp-cube filtration, and two-antecedent conditional composition; action recovery and relative log-Laplace remain open |
 | [R-053](#r-053) | Resonant no-go for an infinitesimal Class-II commutator-alone form bound | T5 EXACT-NO-GO; a same-shell scalar-ray triad forces a positive entropy-sextic relative-bound threshold, while retained frozen source energy compensates the witness |
@@ -76,6 +77,43 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-057"></a>
+### R-057 -- sharp-cube scalar-budget obstruction and Class-II gauge-null pivot
+
+**Statement.** For the strict dyadic centered cube projections on the
+three-torus, boundary modulation embeds the tensor product of three
+one-dimensional Riesz projections.  Since the exact `L6` Riesz norm is two,
+the A12 constants satisfy
+`M_6>=8`, `Q_6>=8sqrt(3)`, and
+`H_6=M_6^4Q_6^2>=3*8^6=786432`.  The coefficient-blind scalar six-linear
+envelope has the same lower bound.  Hence neither route can meet the isolated
+production target `H_6<29.62571266025876`.
+
+**Where proved.** `A12-CLASSII-SOURCE-SQUARE-REDUCTION`, proof note
+`classii-sharp-cube-scalar-budget-obstruction-260721-v1.0`.  A finite
+Gaussian-integer polynomial independently certifies
+`H_6>=184.54034191803735` by exact triple-convolution arithmetic.  The
+baseline A12 verifier passes 65/65; obstruction primary 36/36, non-importing
+independent 25/25, and integrated 83/83 PASS.  The five-page PDF passes form,
+zero-overfull, and full visual QA.
+
+**Reuse.** This is a general warning for sharp centered Fourier-cube source
+estimates: a pointwise multiplier bound and a symbol-size bound do not produce
+a small multilinear `L6` norm because boundary modulation contains Riesz
+projection tensor products.  It also isolates the viable null-form structure
+for derivative internal-current models.  In the production Class-II metric,
+the global-phase complex structure satisfies `B(X)JX=0`; the actual source
+also retains an output shell and a determinant resolvent.
+
+**Tier / publication target.** Exact negative result housed in the scoped T4
+A12 claim; no tier promotion.  T-047 is closed negatively, not positively.
+The active successor is
+`A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND`.  No exact-source
+bound, positive sextic reserve, A11 log-Laplace closure, Nelson measure, T5,
+T6, or T7 is claimed.
+
+---
+
 <a id="r-056"></a>
 ### R-056 -- sharp-cube Class-II source-square reduction
 
@@ -102,12 +140,11 @@ one-leg `M_R^2` source scaling from the two-leg `M_R^4` Schatten scaling and
 provides both a smooth-plus-annular product-Marcinkiewicz route and a
 six-linear paraproduct cross-check.
 
-**Tier / publication target.** T4 PROVED-ANALYTIC-REDUCTION.  A certified
-numerical enclosure of `H_6=M_6^4 Q_6^2` is still required.  At `p=1.1` and
-`M_R=1`, the isolated source target is `H_6<29.62571266025876`; this is not
-yet proved and is not the full Nelson budget.  T-047, the stabilised
-log-Laplace theorem, A7 Nelson, an interacting measure, T5, T6, and T7 remain
-open.
+**Tier / publication target.** T4 PROVED-ANALYTIC-REDUCTION.  The subsequent
+R-057 theorem closes the separated numerical-enclosure route negatively:
+`H_6>=786432`, so it cannot meet the isolated target.  The exact-B
+shell-localised successor, stabilised log-Laplace theorem, A7 Nelson, an
+interacting measure, T5, T6, and T7 remain open.
 
 ---
 

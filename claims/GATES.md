@@ -272,19 +272,23 @@ sharp-cube geometry. It must use a genuine `L6` vector-valued maximal/square
 function or multilinear paraproduct theorem; individual `L4` projection
 stability and polynomial Fourier-support shortcuts are insufficient.
 
-**Status:** OPEN (2026-07-21), ANALYTICALLY REDUCED BY A12. The true-increment
+**Status:** OPEN (2026-07-21), ANALYTICALLY REDUCED BUT THE FIRST BUDGET ROUTE
+REFUTED BY A12. The true-increment
 determinant is
 `-0.5 log det_2(I+pT_j)+0.5 p^2<ell_j,(I+pT_j)^(-1)ell_j>` with
 `ell_j=G_j^*B(phi_(j-1))D phi_(j-1)`. A scalar source family proves that no
 Hilbert--Schmidt-only estimate can delete this positive term. A9 already
 controls the summed Hilbert--Schmidt part by a terminal quartic. The present
 source-square is therefore the first surviving load-bearing analytic gate.
-A12 proves its cutoff-uniform form with
+A12 proves a cutoff-uniform coarse form with
 `C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2`, where
 `beta_op=0.0423749999999894` is the sharp production Pauli/Fierz operator
-constant and `beta_op^2/c_sym=0.016570372383568618`.  What remains is the
-certified numerical enclosure below.  Until that enclosure is compared with
-`gamma/6`, T-047 and the positive production sextic budget remain open.
+constant and `beta_op^2/c_sym=0.016570372383568618`.  Exact dyadic boundary
+modulation now gives `M_6>=8`, `Q_6>=8sqrt(3)`, and
+`M_6^4 Q_6^2>=786432`, so the separated norm route cannot meet the isolated
+production target.  The same witness refutes the coefficient-blind scalar
+six-linear envelope.  The surviving gate must retain the exact null identity
+`B(X)JX=0`, the output shell, and preferably the determinant resolvent.
 
 ### **A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE**
 
@@ -296,15 +300,35 @@ derivatives, the exact shell weight
 equally rigorous six-linear paraproduct constant.  Finite FFT ladders may be
 used as adversarial evidence but not as the infinite-cutoff enclosure.
 
-**Status:** OPEN (2026-07-21), EXACT TARGET FROM A12.  At `p=1.1` and
-`M_R=1`, source-only absorption requires
-`H_6<29.62571266025876`.  This omits the remaining determinant, commutator,
-quartic, and entropy costs and therefore is necessary only for that isolated
-allocation, not sufficient for the final Nelson budget.  The obsolete A10
-`epsilon_6=0.25` allocation would demand `H_6<2.194497234093243`; it belongs
-to the refuted past-energy route and must not be reused.  A certified bound
-which misses the source-only threshold is still a valid quantitative result,
-but it forces a sharper resolvent estimate or a different budget allocation.
+**Status:** CLOSED-NEGATIVE (2026-07-21),
+`NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET`.  At `p=1.1` and `M_R=1`,
+source-only absorption would require `H_6<29.62571266025876`.  The exact
+one-dimensional `L6` Riesz projection norm is two.  Dyadic boundary
+modulation in all three spatial directions therefore proves
+`M_6>=8`, `Q_6>=8sqrt(3)`, and `H_6>=786432`, more than 26545 times the
+target.  Independently, a finite Gaussian-integer polynomial certifies
+`H_6>=184.54034191803735` by exact convolution arithmetic.  The same witness
+gives coefficient-blind scalar-envelope norm at least `786432`.  This closes
+T-047 only as a no-go; it does not refute the exact-B shell source.
+
+### **A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND**
+
+**Statement:** Prove a cutoff-uniform production-budget bound for the actual
+source while retaining the exact matrix `B(P_<=j-1 phi)`, its global-phase
+null identity `B(X)JX=0`, and the output shell projection inside `G_j^*`.
+The theorem must test all relative doublet/singlet phase directions, retain
+the fixed positive density floor and six-real convention, and either keep the
+determinant resolvent `(I+pT_j)^(-1)` or prove that dropping it still leaves a
+strict positive production sextic reserve.  A coefficient-blind replacement
+by `beta_op |u|^2 |Du|`, separated maximal/square norms, or a generic scalar
+six-linear paraproduct is forbidden by the preceding no-go.
+
+**Status:** OPEN (2026-07-21), FIRST SURVIVING SOURCE GATE AFTER T-047.  The
+identity `B(X)JX=0` is exact and primary 36/36, non-importing independent
+25/25, and integrated 83/83 reproduce the obstruction and pivot.  No explicit
+constant for the shell-localised exact-B source is yet proved.  A smooth
+filtration is a separate fallback because it would require rederiving the A10
+and A11 determinant machinery.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

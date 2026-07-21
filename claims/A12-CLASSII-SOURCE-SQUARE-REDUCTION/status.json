@@ -2,8 +2,8 @@
   "id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
   "title": "Class-II sharp-cube source-square reduction",
   "sector": "A",
-  "statement": "For the hash-pinned A1 production coefficients and the A7-A11 strict sharp rectangular-cube filtration, the adapted source satisfies sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6, where C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2, beta_op=4(a+2b+c), and M_6,Q_6 are the precisely defined cutoff-uniform Hilbert-valued sharp-cube L6 maximal and exact-weight derivative-prefix square-function norms.",
-  "scope": "PROVED-ANALYTIC-REDUCTION@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, a common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The Pauli/Fierz operator constant and exact shell decay are pinned numerically; the harmonic norms are proved finite but do not yet have a certified decimal enclosure, so T-047 and the production sextic budget remain open.",
+  "statement": "For the hash-pinned A1 production coefficients and the A7-A11 strict sharp rectangular-cube filtration, the adapted source satisfies sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6, where C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2. The separated production-budget route is now exactly ruled out: M_6>=8, Q_6>=8 sqrt(3), and H_6=M_6^4 Q_6^2>=786432, while the source-only target is H_6<29.62571266025876. This does not refute the exact source because B(X) JX=0 and the coarse bound discarded the output shell and determinant resolvent.",
+  "scope": "PROVED-ANALYTIC-REDUCTION-AND-SCALAR-BUDGET-NOGO@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, a common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The original cutoff-uniform reduction remains valid. T-047 is closed negatively by the exact Riesz boundary-modulation lower bound and an independent finite rational countercertificate. The coefficient-aware, output-shell-localised exact-B source bound and the production sextic budget remain open.",
   "tier": "T4",
   "tier_scale": "TSv2",
   "lifecycle": "ACTIVE",
@@ -25,12 +25,12 @@
   ],
   "hypotheses": [],
   "open_gates": [
-    "A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE"
+    "A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND"
   ],
-  "falsifier": "Failure of the Pauli identities |m|^2=s^2 or m dot J=s ds; a field or variation violating 0<=B(psi)<=4(a+2b+c)|psi|^2 I_6 at the fixed floor; a wrong N_(j-1)+1 shell boundary, physical 2pi/L factor, covariance convention, derivative-direction factor, or M_R^2 regulator power; failure of the strict-dyadic periodic product-Marcinkiewicz hypotheses or the alternative six-linear face variation; a claimed decimal M_6^4 Q_6^2 without a certified enclosure; or any authority hash, PDF QA, non-importing, assertion-count, or cross-route failure falsifies the pinned reduction.",
+  "falsifier": "Failure of the Pauli identities, a>=0, c>=0, ac-b^2>0, B(X)JX=0, or 0<=B(psi)<=4(a+2b+c)|psi|^2 I_6 at the fixed floor; a wrong N_(j-1)+1 shell boundary, physical 2pi/L factor, covariance convention, derivative-direction factor, or M_R^2 regulator power; failure of the strict-dyadic qualitative multiplier theorem; failure of the exact boundary-modulation identity, the L6 Riesz norm 2, the finite rational countercertificate, M_6>=8, Q_6>=8sqrt(3), or H_6>=786432; treating the coefficient-blind no-go as a counterexample to the exact-B shell source; or any authority hash, PDF QA, non-importing, assertion-count, or cross-route failure falsifies the pinned package.",
   "reproduction": {
-    "command": "python codes/foundations/a12_classii_source_square_reduction_verify.py",
-    "expected": "PASS: primary (26/26); PASS: independent (19/19); ASSERTS: 65/65; A12-CLASSII-SOURCE-SQUARE-REDUCTION-INTEGRATED-PASS; exit 0.",
+    "command": "python codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py",
+    "expected": "Baseline A12: 65/65 and A12-CLASSII-SOURCE-SQUARE-REDUCTION-INTEGRATED-PASS; obstruction primary 36/36; independent 25/25; ASSERTS: 83/83; A12-CLASSII-SHARP-CUBE-BUDGET-OBSTRUCTION-INTEGRATED-PASS; exit 0.",
     "status": "AVAILABLE"
   },
   "legacy_pillar": [],
@@ -44,13 +44,23 @@
     "codes/foundations/a12_classii_source_square_reduction_verify.py",
     "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-source-square/result.json (26/26 PASS)",
     "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-source-square/result.json (19/19 PASS)",
-    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json (65/65 PASS)"
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-source-square/result.json (65/65 PASS)",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.tex.txt",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.pdf (5 pages; FORM-CHECK PASS; 0 overfull; visual QA PASS)",
+    "codes/foundations/a12_classii_sharp_cube_budget_obstruction.py",
+    "codes/foundations/a12_classii_sharp_cube_budget_obstruction_independent.py",
+    "codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-sharp-cube-obstruction/result.json (36/36 PASS)",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-sharp-cube-obstruction/result.json (25/25 PASS)",
+    "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json (83/83 PASS)",
+    "negative-results/registry.md#ng-2026-07-21-a12-sharp-cube-scalar-budget"
   ],
   "t7_candidate": false,
-  "no_overclaim": "This claim does not provide a certified decimal enclosure of M_6^4 Q_6^2, complete T-047, establish a positive production sextic reserve, prove the true-increment stabilised log-Laplace estimate, close the A7 self-coupled Nelson theorem, construct the interacting full three-component measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
-  "next_action": "Close A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE by producing a certified admissible upper bound for H_6=M_6^4 Q_6^2 and comparing it with 29.62571266025876 at p=1.1 for M_R=1. Then recompute all determinant, relative-form, quartic, and sextic budgets before revisiting the A11 stabilised log-Laplace gate.",
+  "no_overclaim": "This claim closes T-047 only as a negative result for the separated H_6 and coefficient-blind scalar-envelope routes. It does not refute or bound the exact-B shell-localised A11 source, establish a positive production sextic reserve, prove the true-increment stabilised log-Laplace estimate, close the A7 self-coupled Nelson theorem, construct the interacting full three-component measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
+  "next_action": "Prove A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND while retaining B(X)JX=0, the output shell projection, the fixed-floor rational coefficient, all relative-phase directions, and preferably the determinant resolvent. Only after an explicit exact-B constant is obtained may the full determinant, commutator, quartic, and sextic budgets and the A11 stabilised log-Laplace gate be revisited.",
   "last_review": "2026-07-21",
   "closure_depth": "C1",
   "proof_maturity": "S1",
-  "notes": "T4 PROVED-ANALYTIC-REDUCTION. The exact production Pauli/Fierz constant is beta_op=0.0423749999999894, the exact one-G source scaling is M_R^2, and beta_op^2/c_sym=0.016570372383568618. The cutoff-uniform sharp-cube vector theorem is proved by smooth-plus-annular product-Marcinkiewicz analysis and cross-checked by a six-linear multiplier route. Primary 26/26, non-importing independent 19/19, and integrated 65/65 pass. Numerical H_6 enclosure and the production budget remain open."
+  "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. Exact B satisfies B(X)JX=0, so the actual shell source remains open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass."
 }

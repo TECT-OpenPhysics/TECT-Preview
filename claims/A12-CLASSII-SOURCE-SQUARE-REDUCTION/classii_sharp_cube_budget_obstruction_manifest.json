@@ -1,0 +1,150 @@
+{
+  "schema": "tect/a12-classii-sharp-cube-budget-obstruction-manifest/1.0",
+  "claim_id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+  "title": "Sharp-cube scalar-budget obstruction and the Class-II gauge-null pivot",
+  "issued": "2026-07-21",
+  "version": "1.0",
+  "scope": "The strict dyadic sharp rectangular-cube filtration on T_L^3 with L=16, three complex components in the six-real convention, all three derivative directions, the A1 production coefficients, fixed positive density floor, and the A11 adapted source. The negative result applies to the separated H6=M6^4 Q6^2 route and to the coefficient-blind scalar envelope after |B(u)Du|<=beta_op|u|^2|Du|; it does not refute the exact-B shell-localised source.",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a12_manifest": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_source_square_reduction_manifest.json",
+      "sha256": "f1e12ad869fff0e5ac51b8dbfbb04fe9b13ac46f108cce8f60bed05c1acfb5d5"
+    },
+    "a12_note": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-source-square-reduction-260721-v1.0.tex.txt",
+      "sha256": "58478d509382dd4a435ad6ff09efc75e320b7e27f17deb8b3aa9e8106a669d55"
+    },
+    "riesz_projection_theorem": {
+      "authors": "Brian Hollenbeck and Igor E. Verbitsky",
+      "title": "Best constants for the Riesz projection",
+      "journal": "Journal of Functional Analysis 175 (2000), 370-392",
+      "doi": "10.1006/jfan.2000.3616",
+      "url": "https://doi.org/10.1006/jfan.2000.3616",
+      "imported_statement": "For 1<p<infinity, the Riesz projection on the circle has norm csc(pi/p*) with p*=max(p,p/(p-1)); in particular the L6 norm is 2."
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a12_classii_sharp_cube_budget_obstruction.py",
+      "sha256": "07ef491b184beaa8500c513cd95bfda1bed6462759c4f98980a0531ee5161991"
+    },
+    "independent": {
+      "path": "codes/foundations/a12_classii_sharp_cube_budget_obstruction_independent.py",
+      "sha256": "84b5b915f39da5e14a042ce8f3d1a9d93b48d9d91f4022e27a97a6af28a7f605"
+    },
+    "verifier": {
+      "path": "codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py",
+      "sha256": "cb2373ee35b8d75931f3d038ffa7f332e95fac59e102471cf124c6c346edf154"
+    },
+    "note": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.tex.txt",
+      "sha256": "83291ff7ced8949a16d4644a72ab452b95d45783275c8ff40500934ed7b036dc"
+    },
+    "pdf": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/notes/classii-sharp-cube-scalar-budget-obstruction-260721-v1.0.pdf",
+      "sha256": "5081041b5fe70d042bfb31b1eb138c90be9ffd373c2d3022bd23503393c0a05e",
+      "pages": 5,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS"
+    }
+  },
+  "geometry": {
+    "torus_length": 16,
+    "spatial_dimension": 3,
+    "lebsegue_exponent": 6,
+    "cutoffs": "N_j=2^j",
+    "projection": "S_j=1_(max_a |n_a|<=N_j)",
+    "shell_weight": "[1+(2pi/L)^2(N_(j-1)+1)^2]^-1",
+    "target_space": "six real field components and three spatial derivative directions"
+  },
+  "theorem": {
+    "boundary_modulation": "For every fixed finite trigonometric polynomial F and sufficiently large dyadic N, S_N[e^(i alpha N(x1+x2+x3))F]=e^(i alpha N(x1+x2+x3)) P_<=0^(tensor 3)F.",
+    "maximal_lower": "M6>=||P_<=0^(tensor 3)||_6>=2^3=8.",
+    "square_lower": "The one-scale carrier derivative gives Q6>=sqrt(3)||P_<=0^(tensor 3)||_6>=8sqrt(3), hence Q6^2>=192.",
+    "separated_lower": "H6=M6^4 Q6^2>=8^4*192=786432.",
+    "scalar_envelope_lower": "The coefficient-blind scalar six-linear envelope constant is at least 3*8^6=786432; its one-axis restriction is already at least 2^6=64.",
+    "gauge_null": "With J the real global-phase complex structure, p_A^T JX=v_A^T JX=0 and therefore B(X)JX=0 exactly, including the fixed floor.",
+    "lost_structures": [
+      "the exact Class-II B gauge-null direction",
+      "the output shell projection on B(S_(j-1)phi) D S_(j-1)phi",
+      "the positive determinant resolvent (I+pT_j)^-1"
+    ]
+  },
+  "budget": {
+    "p": 1.1,
+    "M_R": 1.0,
+    "target_formula": "H6 < [gamma/(3p)]/[beta_op^2/c_sym]",
+    "target_derived": "29.62571266025876",
+    "sharp_lower": "786432",
+    "sharp_lower_over_target": ">26545",
+    "finite_countercertificate_lower": "184.54034191803735034683866972842969237664651375460",
+    "interpretation": "Both the finite exact witness and the sharp asymptotic lower bound exceed the source-only target, so no admissible upper enclosure of H6 can satisfy it."
+  },
+  "finite_rational_witness": {
+    "description": "A complex trigonometric polynomial g=sum_(n=-10)^10 c_n z^n with common denominator 10^10. The stored pairs are Gaussian-integer numerators (Re c_n, Im c_n).",
+    "frequency_min": -10,
+    "frequency_max": 10,
+    "common_denominator": 10000000000,
+    "dyadic_carrier": 32,
+    "gaussian_integer_coefficients": [
+      [-1015230264, 523530901],
+      [-64978334, -1261099498],
+      [1016603962, 664121427],
+      [-1123541151, 748528872],
+      [9007354, -1491587698],
+      [1444678675, 713406162],
+      [-1232413910, 1111436986],
+      [-253456472, -2025758652],
+      [2183822843, 887829383],
+      [-2176539620, 2120722938],
+      [-1310642425, -5833647348],
+      [-5066555445, -1338551137],
+      [1214092119, -1211996655],
+      [251359199, 765007357],
+      [-244003710, -231235839],
+      [-39762625, -272947639],
+      [-51743123, -164937214],
+      [94494827, -42458401],
+      [-152357027, 219507697],
+      [-215033625, -157049697],
+      [306289995, 13467094]
+    ],
+    "certificate_formula": "||g||_6^6=sum_k |(c*c*c)_k|^2 exactly; project by retaining n<=0; the three-dimensional carrier lower is 3*(||P_<=0 g||_6^6/||g||_6^6)^3.",
+    "purpose": "An elementary finite-integer countercertificate independent of the external sharp Riesz norm."
+  },
+  "audit": {
+    "seed": 1200721,
+    "independent_seed": 2100721,
+    "gauge_samples": 256,
+    "gauge_tolerance": 1e-12,
+    "required_checks": [
+      "authority and source hashes",
+      "exact Riesz tensor and carrier constants",
+      "finite rational countercertificate",
+      "dyadic shift identity and terminal-cutoff admissibility",
+      "a>=0, c>=0, and ac-b^2>0",
+      "B(X)JX=0 by real-matrix and current formulations",
+      "the distinction between coefficient-blind no-go and the open exact-B source"
+    ]
+  },
+  "outputs": {
+    "primary": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-primary-sharp-cube-obstruction/result.json",
+    "independent": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-independent-sharp-cube-obstruction/result.json",
+    "integrated": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/runs/2026-07-21-integrated-sharp-cube-obstruction/result.json"
+  },
+  "consequence": {
+    "negative_result": "NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET",
+    "closed_gate": "A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE",
+    "closed_gate_status": "CLOSED-NEGATIVE",
+    "next_gate": "A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND",
+    "exact_B_source_status": "OPEN",
+    "tier_before": "T4",
+    "tier_after": "T4",
+    "no_overclaim": "This package does not refute the exact A11 source, prove a coefficient-aware shell-localised bound, establish a positive sextic reserve, close the stabilised log-Laplace or Nelson gates, construct an interacting measure, or justify T5, T6, or T7."
+  }
+}

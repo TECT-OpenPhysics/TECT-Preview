@@ -562,11 +562,11 @@
     {
       "id": "T-047",
       "title": "A12: certify the sharp-cube L6 vector-norm enclosure",
-      "status": "backlog",
+      "status": "done",
       "owner": "Codex",
       "claim": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
       "gate": "A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE",
-      "note": "A12 T4 on 2026-07-21 proves the cutoff-uniform analytic source-square reduction with beta_op=0.0423749999999894, exact M_R^2 shell scaling, and C_src=0.016570372383568618 M_R^2 H_6, H_6=M_6^4 Q_6^2. Primary 26/26, independent 19/19, integrated 65/65. T-047 remains open until a certified infinite-cutoff numerical upper enclosure is compared with the source-only p=1.1 target H_6<29.62571266025876 and the full production budget is recomputed; FFT sampling alone is insufficient and obsolete epsilon_6=0.25 is not reused.",
+      "note": "CLOSED-NEGATIVE by A12 on 2026-07-21. Exact dyadic Riesz boundary modulation gives M_6>=8, Q_6>=8sqrt(3), and H_6>=786432, versus the isolated target H_6<29.62571266025876. An independent finite Gaussian-integer polynomial certifies H_6>=184.54034191803735 by exact convolution arithmetic. The coefficient-blind scalar six-linear envelope is also at least 786432. Baseline 65/65, primary 36/36, non-importing independent 25/25, integrated 83/83. This no-go does not refute the exact-B shell source because B(X)JX=0 and the coarse route dropped the output shell and resolvent.",
       "created": "2026-07-21",
       "updated": "2026-07-21",
       "blocked_by": []
@@ -574,15 +574,29 @@
     {
       "id": "T-048",
       "title": "A11: prove the true-increment stabilised relative log-Laplace bound",
-      "status": "backlog",
+      "status": "blocked",
       "owner": "Codex",
       "claim": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
       "gate": "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE",
-      "note": "Blocked in proof order by T-047. Prove the stabilised relative estimate for theta I_j+C_j, not theta Q_j^fr+C_j; then recompute quartic/sextic budgets before any A7 Nelson composition.",
+      "note": "Blocked in proof order by A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND. The separated H_6 and coefficient-blind scalar routes are refuted. First prove an explicit production bound for the exact source retaining B(X)JX=0, the output shell, fixed floor, relative phase directions, and if necessary the determinant resolvent; then recompute all quartic and sextic costs for theta I_j+C_j.",
+      "created": "2026-07-21",
+      "updated": "2026-07-21",
+      "blocked_by": [
+        "T-049"
+      ]
+    },
+    {
+      "id": "T-049",
+      "title": "A12: prove the coefficient-aware shell-localised source bound",
+      "status": "backlog",
+      "owner": "Codex",
+      "claim": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+      "gate": "A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND",
+      "note": "Retain the exact production B, its gauge-null identity B(X)JX=0, the output shell inside G_j^*, all relative doublet/singlet phase directions, the fixed positive density floor, and preferably the determinant resolvent. The separated M_6^4Q_6^2 and coefficient-blind scalar paraproduct routes are forbidden by NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET. Produce an explicit source constant and compare it with the full recomputed production budget.",
       "created": "2026-07-21",
       "updated": "2026-07-21",
       "blocked_by": []
     }
   ],
-  "next_id": 49
+  "next_id": 50
 }

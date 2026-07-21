@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Refute the separated sharp-cube source budget and expose the Class-II gauge-null pivot] - 2026-07-21
+
+Exact dyadic boundary modulation proves M_6>=8, Q_6>=8sqrt(3), and H_6>=786432, so the separated A12 constant cannot meet the source-only target 29.62571266025876. An independent finite Gaussian-integer polynomial certifies H_6>=184.54034191803735 by exact convolution arithmetic, and the coefficient-blind scalar six-linear envelope is also ruled out. The actual A11 source remains open because B(X)JX=0 and the coarse route discarded the output shell and determinant resolvent. Close T-047 negatively, open A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND, retain A12 at T4, and add primary 36/36, non-importing independent 25/25, integrated 83/83 plus a five-page proof PDF.
+
 ## [Prove the sharp-cube Class-II source-square analytic reduction] - 2026-07-21
 
 Registered A12 at scoped T4. Exact Pauli/Fierz analysis sharpens the production coefficient to beta_op=0.0423749999999894, exact shell decay fixes one-leg M_R^2 scaling, and two harmonic-analysis routes prove cutoff-uniform source-square control with C_src=0.016570372383568618 M_R^2 M_6^4 Q_6^2. Primary 26/26, non-importing independent 19/19, and integrated 65/65 pass; the five-page PDF passes form, zero-overfull, and visual QA. T-047 remains open because M_6^4 Q_6^2 has no certified decimal enclosure; the source-only p=1.1 target is 29.62571266025876 and the obsolete epsilon_6 allocation is not reused.

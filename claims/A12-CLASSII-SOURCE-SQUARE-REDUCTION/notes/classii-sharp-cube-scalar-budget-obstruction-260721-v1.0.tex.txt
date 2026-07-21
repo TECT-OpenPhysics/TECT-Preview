@@ -1,0 +1,327 @@
+% =============================================================================
+% Title: Sharp-cube scalar-budget obstruction and the Class-II gauge-null pivot
+% Claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION
+% Version: v1.0 -- first issued 2026-07-21; this version issued 2026-07-21
+% Status: exact no-go for the separated H6 and coefficient-blind scalar
+% envelope routes; exact-B shell-localised source bound remains open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-21): exact Riesz boundary-modulation obstruction, independent
+% finite rational countercertificate, gauge-null identity, and successor gate.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cP}{\mathfrak P}
+\newcommand{\op}{\mathrm{op}}
+
+\section*{1. Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Exact negative result.}  For the strict dyadic sharp rectangular-cube
+filtration used by A10--A12,
+\[
+ M_6\ge8,\qquad Q_6\ge8\sqrt3,\qquad
+ H_6:=M_6^4Q_6^2\ge786432.
+\]
+The A12 source-only target is $H_6<29.62571266025876$, so no certified upper
+enclosure of the separated constant can close that budget.  The same witness
+proves that the coefficient-blind six-linear scalar envelope has norm at least
+$786432$.
+
+\medskip
+\textbf{Surviving route.}  This does not refute the actual A11 source.  The
+exact production matrix satisfies $B(X)\cJ X=0$, while the A12 scalar envelope
+discarded this gauge-null identity, the output shell projection, and the
+determinant resolvent.  The successor must retain those structures before any
+Fourier estimate.
+
+\medskip
+\textbf{Tier boundary.}  A12 remains scoped T4.  No positive sextic reserve,
+stabilised log-Laplace estimate, Nelson bound, interacting measure, or tier
+promotion is claimed.
+}}
+\end{center}
+\setcounter{section}{1}
+
+The setting is the fixed torus $\T_L^3$ with $L=16$,
+$\alpha_L=2\pi/L$, dyadic integers $N_j=2^j$, and
+\[
+ S_j=\mathbf1_{\{\max_a|n_a|\le N_j\}}.
+\]
+The target space is the six-real representation of three complex fields and
+the derivative square function contains all three spatial directions.  A
+complex scalar test is admissible by embedding its real and imaginary parts
+in two of the six real components.
+
+\section{The separated constants and the production target}
+
+A12 defined
+\[
+ M_6=\sup_{f\ne0}
+ {\|\sup_j|S_jf|\|_6\over\|f\|_6}
+\]
+and
+\[
+ Q_6=\sup_{f\ne0}
+ {\left\|\left(\sum_j{ |DS_{j-1}f|^2\over
+ 1+\alpha_L^2(N_{j-1}+1)^2}\right)^{1/2}\right\|_6
+ \over\|f\|_6}.
+\]
+Its valid qualitative reduction is
+\[
+ \sum_j\|G_j^*B(S_{j-1}\phi)DS_{j-1}\phi\|_2^2
+ \le {\beta_{\op}^2\over c_{\rm sym}}M_R^2H_6\|\phi\|_6^6.
+ \tag{2.1}
+\]
+At $p=1.1$, $M_R=1$, and production $\gamma=1.62$, source-only
+absorption would require
+\[
+ H_6<29.62571266025876.                              \tag{2.2}
+\]
+Equation (2.2) is a proposed threshold, not an established estimate.
+
+\section{Dyadic boundary modulation}
+
+Let $P_{\le0}$ be the one-dimensional Fourier projection onto frequencies
+$n\le0$.  Hollenbeck and Verbitsky proved the exact Riesz projection norm
+\[
+ \|P_{\le0}\|_{L^6(\T)\to L^6(\T)}
+ =\csc(\pi/6)=2.                                      \tag{3.1}
+\]
+Choose a finite trigonometric polynomial $g$ and let
+$F(x)=g(x_1)g(x_2)g(x_3)$.  For a dyadic $N$ larger than the Fourier degree
+of $g$, set
+\[
+ U_NF(x)=e^{i\alpha_LN(x_1+x_2+x_3)}F(x).
+\]
+For every relative frequency in the support of $F$,
+\[
+ -N\le N+n_a\le N\quad\Longleftrightarrow\quad n_a\le0.
+\]
+Consequently
+\[
+ S_NU_NF=U_N(P_{\le0}^{\otimes3}F).                  \tag{3.2}
+\]
+The input fits below the next terminal cube $2N$, so (3.2) is an admissible
+finite-cutoff witness.  Finite trigonometric polynomials are dense in $L^6$;
+using product near-extremisers for (3.1) gives
+\[
+ M_6\ge\|P_{\le0}^{\otimes3}\|_{6\to6}\ge2^3=8.   \tag{3.3}
+\]
+
+Use the single square-function term whose previous cutoff is $N$.  If
+$h=P_{\le0}^{\otimes3}F$, then
+\[
+ D(U_Nh)=U_N\{i\alpha_LN(1,1,1)h+Dh\}.
+\]
+After division by $\sqrt{1+\alpha_L^2(N+1)^2}$ and passage to large dyadic
+$N$, the norm ratio tends
+\[
+ \sqrt3,{\|h\|_6\over\|F\|_6}.
+\]
+Taking the same product near-extremisers yields
+\[
+ Q_6\ge8\sqrt3.                                      \tag{3.4}
+\]
+Combining (3.3)--(3.4),
+\[
+ \boxed{H_6\ge8^4(8\sqrt3)^2=3\,8^6=786432.}        \tag{3.5}
+\]
+This is more than $2.65\times10^4$ times the target (2.2).
+
+\section{The coefficient-blind six-linear route also fails}
+
+Define the scalar-envelope constant
+\[
+ \cP_6:=\sup_{f\ne0,J}
+ {\displaystyle\sum_{j\le J}{1\over1+\kappa_j^2}
+ \int_{\T_L^3}|S_{j-1}f|^4|DS_{j-1}f|^2
+ \over\|f\|_6^6}.                                   \tag{4.1}
+\]
+The single boundary term of the preceding witness converges to
+\[
+ 3{\|P_{\le0}^{\otimes3}F\|_6^6\over\|F\|_6^6}.
+\]
+Therefore
+\[
+ \boxed{\cP_6\ge3\,8^6=786432.}                     \tag{4.2}
+\]
+Even a one-axis witness gives $\cP_6\ge2^6=64$, already above the production
+target.  Thus replacing $M_6^4Q_6^2$ by a direct six-linear theorem after the
+pointwise estimate
+\[
+ |B(u)Du|\le\beta_{\op}|u|^2|Du|
+\]
+cannot repair the budget.  The pointwise multiplier bound in A12 controls
+symbol size and qualitative Marcinkiewicz variation; it does not state that
+the multilinear $L^6$ operator norm is one.
+
+\section{Independent finite rational countercertificate}
+
+The manifest contains a Gaussian-integer polynomial supported on
+$[-10,10]$.  Its coefficients share denominator $10^{10}$, so Parseval gives
+the sixth power of the $L^6$ norm exactly: if $c*c*c$ is the triple discrete
+convolution, then
+\[
+ \left\|\sum_nc_nz^n\right\|_6^6
+ =\sum_k|(c*c*c)_k|^2.                               \tag{5.1}
+\]
+For the stored polynomial, the exact ratio obeys
+\[
+ {\|P_{\le0}g\|_6^6\over\|g\|_6^6}
+ =3.9475110593975523284\ldots .                      \tag{5.2}
+\]
+Tensorisation and the carrier derivative give the elementary certified lower
+bound
+\[
+ 3\left({\|P_{\le0}g\|_6^6\over\|g\|_6^6}\right)^3
+ =184.5403419180373503\ldots>29.62571266025876.      \tag{5.3}
+\]
+This finite exact countercertificate fires the gate without relying on a
+numerical approximation to the sharp norm (3.1).  Equation (3.5) is the
+stronger asymptotic theorem.
+
+\section{Why the actual Class-II source is not refuted}
+
+Let $X\in\R^6$ be the realification of the complex field and let
+\[
+ \cJ=\begin{pmatrix}0&-I_3\\ I_3&0\end{pmatrix}
+\]
+be the global phase generator.  For each embedded Pauli generator, write
+\[
+ p_A=2S_AX,\qquad v_A=2(S_A-q_AI)X.
+\]
+The real symmetric matrix $S_A$ commutes with $\cJ$.  Hence $S_A\cJ$ is
+skew-symmetric and
+\[
+ p_A^T\cJ X=0,\qquad v_A^T\cJ X=0.                  \tag{6.1}
+\]
+Since
+\[
+ B(X)=\sum_A\{a,p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)
+                  +c,v_Av_A^T\},
+\]
+equation (6.1) gives the exact fixed-floor identity
+\[
+ \boxed{B(X)\cJ X=0.}                                \tag{6.2}
+\]
+The large derivative in the boundary-modulation witness is precisely the
+common phase direction $\cJ X$.  The actual matrix removes it, whereas the
+coefficient-blind envelope (4.1) retains it.
+
+Two further structures were also discarded in passing to (2.1): the actual
+source contains the output shell projection of
+$B(S_{j-1}\phi)DS_{j-1}\phi$, and the noncentral determinant contains a
+positive resolvent.  A viable successor must retain at least (6.2) and the
+output shell localisation, and should test whether the resolvent gives an
+additional gain.
+
+For completeness, positivity of the production Class-II quadratic form is
+explicit rather than inferred from $b>0$:
+\[
+ a=0.004499999999998875>0,\quad
+ c=0.002343749999999414>0,
+\]
+\[
+ ac-b^2=7.031249999996483\times10^{-6}>0.             \tag{6.3}
+\]
+
+\section{Consequence and proof order}
+
+The gate
+\texttt{A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE}
+is closed negatively: an upper enclosure exists abstractly, but every valid
+one is at least (3.5), so it cannot satisfy (2.2).  The coefficient-blind
+six-linear replacement is eliminated by (4.2).
+
+The next gate is
+\begin{center}
+\texttt{A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND}.
+\end{center}
+It must retain the exact $B$, its gauge-null direction, the output shell, all
+three relative-phase directions, the fixed floor, and the production
+determinant convention.  Only after that bound has an explicit production
+constant may the full sextic budget and the A11 stabilised log-Laplace gate be
+revisited.  Changing to a smooth filtration is a separate fallback because it
+would require rederiving the dependent determinant construction.
+
+\section{Numerical verification}
+
+Run
+\begin{verbatim}
+python codes/foundations/
+  a12_classii_sharp_cube_budget_obstruction_verify.py
+\end{verbatim}
+The primary audit derives the production threshold, sharp lower bounds,
+coefficient positivity, and gauge-null identity.  The non-importing audit
+uses the finite Gaussian-integer countercertificate and reconstructs the
+current identities directly.  The integrated verifier checks hashes and
+cross-route equality.  FFT sampling is not used as proof of an infinite-scale
+upper bound.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{DISMISSED -- the modulation is not dyadic.}  The carrier is
+chosen as a power of two.  Equation (3.2) is exact on every fixed finite
+polynomial once the dyadic carrier exceeds its degree.
+
+\item \textbf{DISMISSED -- the witness falls outside the terminal cutoff.}
+Its largest frequency is $N+m<2N$ for $N>m$, so the next dyadic terminal cube
+contains the full input while the previous cube supplies the boundary term.
+
+\item \textbf{DISMISSED -- complex tests are inadmissible for a six-real
+field.}  A complex scalar is embedded as two real components.  Fourier
+projection, Euclidean norm, and derivatives agree under this embedding.
+
+\item \textbf{DISMISSED -- separate lower bounds for $M_6$ and $Q_6$ cannot
+be multiplied.}  Both are lower bounds on fixed universal constants, so their
+product is valid.  Moreover the same witness directly proves (4.2).
+
+\item \textbf{VALID WITH MITIGATION -- the exact Riesz norm is an external
+theorem.}  It is cited precisely.  The independent rational witness (5.3)
+already exceeds the target using finite integer arithmetic.
+
+\item \textbf{UPHELD -- this disproves the actual source-square estimate.}
+It does not.  Equation (6.2), the output shell, and the determinant resolvent
+were discarded by the scalar route.  The exact-B problem remains open.
+
+\item \textbf{UPHELD -- a generic six-linear paraproduct bound is enough.}
+It is not.  Equation (4.2) refutes any coefficient-blind bound with the
+required production constant.
+
+\item \textbf{UPHELD as an overclaim -- this closes A11 or promotes A12.}
+It closes only the failed separated/scalar branch.  A12 remains T4 and the
+coefficient-aware shell-localised source bound is open.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION
+Tier: T4 (unchanged)
+Closed negatively: separated H6 production target;
+                   coefficient-blind scalar six-linear envelope.
+Exact bounds: M6 >= 8; Q6 >= 8 sqrt(3); H6 >= 786432.
+Independent finite certificate: H6 >= 184.5403419180373503...
+Structural pivot: B(X) J X = 0; retain the output shell and exact B.
+Open: A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND.
+Not claimed: actual-source closure, positive sextic reserve, A11 log-Laplace
+             closure, Nelson bound, interacting measure, T5, T6, or T7.
+Expected: primary PASS; independent PASS; integrated PASS; release PASS.
+\end{verbatim}
+
+\section*{References}
+
+\begin{enumerate}
+\item B. Hollenbeck and I. E. Verbitsky, ``Best constants for the Riesz
+projection,'' \emph{Journal of Functional Analysis} 175 (2000), 370--392,
+\url{https://doi.org/10.1006/jfan.2000.3616}.
+\item TECT claim A12-CLASSII-SOURCE-SQUARE-REDUCTION, qualitative sharp-cube
+source-square reduction and production threshold.
+\item TECT claim A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, exact
+noncentral determinant and adapted source.
+\end{enumerate}

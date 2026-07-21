@@ -89,9 +89,14 @@ determinant is closed, but it contains a positive adapted source-square. The
 new `A12-CLASSII-SOURCE-SQUARE-REDUCTION` proves the cutoff-uniform analytic
 bound with the sharp Pauli/Fierz coefficient and exact one-leg shell decay.
 Its constant is
-`C_src=0.016570372383568618 M_R^2 M_6^4 Q_6^2`. The first load-bearing
-quantitative antecedent is now
-`A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE`; after it comes
+`C_src=0.016570372383568618 M_R^2 M_6^4 Q_6^2`. The proposed separated
+enclosure is now closed negatively: dyadic Riesz boundary modulation gives
+`M_6>=8`, `Q_6>=8sqrt(3)`, and `M_6^4Q_6^2>=786432`, while the isolated target
+was `29.62571266025876`. The coefficient-blind scalar six-linear route fails
+on the same witness. The first surviving quantitative antecedent is now
+`A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND`, retaining
+`B(X)JX=0`, the output shell, and preferably the determinant resolvent. After
+it comes
 `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` for
 `theta I_j+C_j`. Neither alone closes the A7 Nelson estimate. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -183,13 +188,14 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE** — A12 proves the
-   cutoff-uniform source-square form and pins
-   `C_src=0.016570372383568618 M_R^2 H_6`,
-   `H_6=M_6^4 Q_6^2`, without treating rational `B` as band-limited. The next
-   task is a certified infinite-cutoff numerical enclosure of `H_6`, not an
-   FFT-only estimate. At `p=1.1`, `M_R=1`, the isolated source budget target
-   is `H_6<29.62571266025876`; all other costs must then be recomputed.
+2. **A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND** — the
+   separated `H_6=M_6^4Q_6^2` route is refuted by the exact lower bound
+   `H_6>=786432`, and a finite rational certificate independently exceeds the
+   target. Prove the actual source bound without discarding `B(X)JX=0`, the
+   output shell projection, the fixed-floor rational structure, or relative
+   internal phase directions. Test whether retaining `(I+pT_j)^(-1)` is
+   required for a positive production reserve. A generic scalar six-linear
+   paraproduct is already ruled out.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — after the source
    square closes, prove the relative estimate for `theta I_j+C_j`, not the
    historical `theta Q_j^fr+C_j`. Recompute the quartic and sextic allocation
