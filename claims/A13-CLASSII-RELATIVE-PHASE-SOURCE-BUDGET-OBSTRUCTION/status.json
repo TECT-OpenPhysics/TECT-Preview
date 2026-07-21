@@ -1,0 +1,57 @@
+{
+  "id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "title": "Class-II gauge-horizontal source and relative-phase budget obstruction",
+  "sector": "A",
+  "statement": "For the hash-pinned A1 production coefficients and A10-A12 strict sharp cubes, the exact Class-II matrix has two independent phase-null directions and the next-shell source is an exact commutator. Nevertheless an explicit opposite-corner SU(2) relative-phase polynomial gives an asymptotic exact-B source-to-sextic ratio greater than 0.9, above gamma/3=0.54. Therefore the deterministic source-only absorption budget fails for every p>=1, and the exact determinant resolvent does not repair this carrier because its shell operator tends to zero.",
+  "scope": "PROVED-STRUCTURAL-REDUCTION-AND-EXECUTED-BUDGET-NOGO@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production symbol and coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, exact Fourier products, the unit sharp regulator, and the A10-A12 dyadic rectangular-cube filtration. The Fierz, phase-null, commutator, carrier, and resolvent-limit statements are analytic. The finite degree-65536 polynomial is reproduced by coefficient-convolution and non-importing alias-free grid routes with a conservative margin; it is not labelled a formal floating-point interval proof.",
+  "tier": "T4",
+  "tier_scale": "TSv2",
+  "lifecycle": "ACTIVE",
+  "evidence_grade": [
+    "ANALYTIC",
+    "EXACT",
+    "EXECUTED"
+  ],
+  "dependencies": [
+    "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+    "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+    "A9-CLASSII-SMART-PATH-CANCELLATION",
+    "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+    "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+    "A12-CLASSII-SOURCE-SQUARE-REDUCTION"
+  ],
+  "soft_dependencies": [
+    "A5-SECTOR-A-SYNTHESIS"
+  ],
+  "hypotheses": [],
+  "open_gates": [
+    "A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE"
+  ],
+  "falsifier": "A failure of the compact Fierz matrix, separate doublet/singlet phase nulls, local phase covariance, output-shell commutator, active SU(2) carrier identity, fixed-floor independence, tensor octant formula, exact production covariance normalization, finite polynomial cross-route reproduction, conservative C_rel>0.9>gamma/3 comparison, resolvent O(N^-2) limit, source hashes, PDF QA, assertion count, or release gate falsifies this package.",
+  "reproduction": {
+    "command": "python codes/foundations/a13_classii_relative_phase_source_obstruction_verify.py",
+    "expected": "Primary, non-importing independent, and integrated assertions pass; A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION-INTEGRATED-PASS; exit 0.",
+    "status": "AVAILABLE"
+  },
+  "legacy_pillar": [],
+  "tier_legacy": "n/a (new card 2026-07-21)",
+  "legacy_evidence": [
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_relative_phase_source_obstruction_manifest.json",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-relative-phase-source-budget-obstruction-260721-v1.0.tex.txt",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-relative-phase-source-budget-obstruction-260721-v1.0.pdf",
+    "codes/foundations/a13_classii_relative_phase_source_obstruction.py",
+    "codes/foundations/a13_classii_relative_phase_source_obstruction_independent.py",
+    "codes/foundations/a13_classii_relative_phase_source_obstruction_verify.py",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-primary-relative-phase-obstruction/result.json",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-independent-relative-phase-obstruction/result.json",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-integrated-relative-phase-obstruction/result.json",
+    "negative-results/registry.md#ng-2026-07-21-a13-relative-phase-source-budget"
+  ],
+  "t7_candidate": false,
+  "no_overclaim": "This claim does not prove that the exact source is unbounded, rule out a joint source-potential estimate or different true increment, prove the A11 stabilised log-Laplace theorem or A7 Nelson bound, construct an interacting measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
+  "next_action": "Prove or refute A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE by retaining the local sextic potential and exact noncentral determinant in one estimate, or redesign the true increment. Standalone deterministic source-square absorption and resolvent-only repair are forbidden by the relative-phase carrier.",
+  "last_review": "2026-07-21",
+  "closure_depth": "C1",
+  "proof_maturity": "S1",
+  "notes": "Scoped T4 exact structural reduction plus executed production-budget no-go. The compact Fierz form yields separate doublet and singlet local phase nulls, a sharp B<=beta_op*s bound, and the exact output-shell commutator. A degree-65536 opposite-corner SU(2) polynomial gives C_rel>0.9>gamma/3=0.54 by two independent finite routes. The determinant resolvent tends to identity on the carrier. T-049 is closed negatively; joint or redesigned routes remain open."
+}

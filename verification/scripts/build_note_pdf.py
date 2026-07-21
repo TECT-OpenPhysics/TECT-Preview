@@ -37,10 +37,12 @@ Changelog:
         failure in a restricted execution sandbox.
   1.2.1 (2026-07-20) report LaTeX error markers with adjacent source context
         instead of only the uninformative end-of-log font statistics.
+  1.2.2 (2026-07-21) split the repository label and claim ID across author
+        lines so long canonical claim IDs do not create overfull title boxes.
 """
-__version__ = "1.2.1"
+__version__ = "1.2.2"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-07-17"
+__version_issued__ = "2026-07-21"
 
 import argparse
 import re
@@ -127,8 +129,10 @@ def main():
     claim_id = claim.split()[0].rstrip(";,")
     pre = PREAMBLE.read_text(encoding="utf-8")
     pre = pre.replace("%%TITLE%%", title).replace("%%DATE%%", date_line)
-    pre = pre.replace("%%AUTHOR%%",
-                      f"TECT verification-first repository \\,\\textperiodcentered\\, claim {claim_id}")
+    pre = pre.replace(
+        "%%AUTHOR%%",
+        f"TECT verification-first repository \\\\ claim \\texttt{{{claim_id}}}",
+    )
     doc = pre + "\n" + frag + "\n\\end{document}\n"
     stem = src.name[:-len(".tex.txt")]
     if args.no_compile:

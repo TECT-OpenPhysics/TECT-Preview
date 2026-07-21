@@ -2,8 +2,8 @@
   "id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
   "title": "Class-II sharp-cube source-square reduction",
   "sector": "A",
-  "statement": "For the hash-pinned A1 production coefficients and the A7-A11 strict sharp rectangular-cube filtration, the adapted source satisfies sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6, where C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2. The separated production-budget route is now exactly ruled out: M_6>=8, Q_6>=8 sqrt(3), and H_6=M_6^4 Q_6^2>=786432, while the source-only target is H_6<29.62571266025876. This does not refute the exact source because B(X) JX=0 and the coarse bound discarded the output shell and determinant resolvent.",
-  "scope": "PROVED-ANALYTIC-REDUCTION-AND-SCALAR-BUDGET-NOGO@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, a common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The original cutoff-uniform reduction remains valid. T-047 is closed negatively by the exact Riesz boundary-modulation lower bound and an independent finite rational countercertificate. The coefficient-aware, output-shell-localised exact-B source bound and the production sextic budget remain open.",
+  "statement": "For the hash-pinned A1 production coefficients and the A7-A11 strict sharp rectangular-cube filtration, the adapted source satisfies sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2 <= C_src ||phi||_6^6, where C_src=(beta_op^2/c_sym) M_R^2 M_6^4 Q_6^2. The separated production-budget route is exactly ruled out: M_6>=8, Q_6>=8 sqrt(3), and H_6=M_6^4 Q_6^2>=786432, while the source-only target is H_6<29.62571266025876. A13 subsequently restores exact B and the output shell but closes the standalone source/sextic allocation negatively with an internal SU(2) relative-phase carrier; it does not prove the exact source constant infinite.",
+  "scope": "PROVED-ANALYTIC-REDUCTION-AND-SCALAR-BUDGET-NOGO@FIXED-FLOOR-SHARP-CUBE on L=16 for the A1 production coefficients, three complex components in the six-real convention, rho_regularizer=1e-12, a common real-even scalar regulator with supremum M_R, and the strict sharp rectangular-cube dyadic filtration. The original cutoff-uniform reduction remains valid. T-047 is closed negatively by the exact Riesz boundary-modulation lower bound and an independent finite rational countercertificate. A13 closes T-049 negatively as a production-budget gate while leaving finiteness of the exact-B source constant unclassified; the surviving constructive route is a joint source-potential or redesigned-increment estimate.",
   "tier": "T4",
   "tier_scale": "TSv2",
   "lifecycle": "ACTIVE",
@@ -24,9 +24,7 @@
     "A5-SECTOR-A-SYNTHESIS"
   ],
   "hypotheses": [],
-  "open_gates": [
-    "A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND"
-  ],
+  "open_gates": [],
   "falsifier": "Failure of the Pauli identities, a>=0, c>=0, ac-b^2>0, B(X)JX=0, or 0<=B(psi)<=4(a+2b+c)|psi|^2 I_6 at the fixed floor; a wrong N_(j-1)+1 shell boundary, physical 2pi/L factor, covariance convention, derivative-direction factor, or M_R^2 regulator power; failure of the strict-dyadic qualitative multiplier theorem; failure of the exact boundary-modulation identity, the L6 Riesz norm 2, the finite rational countercertificate, M_6>=8, Q_6>=8sqrt(3), or H_6>=786432; treating the coefficient-blind no-go as a counterexample to the exact-B shell source; or any authority hash, PDF QA, non-importing, assertion-count, or cross-route failure falsifies the pinned package.",
   "reproduction": {
     "command": "python codes/foundations/a12_classii_sharp_cube_budget_obstruction_verify.py",
@@ -57,10 +55,10 @@
     "negative-results/registry.md#ng-2026-07-21-a12-sharp-cube-scalar-budget"
   ],
   "t7_candidate": false,
-  "no_overclaim": "This claim closes T-047 only as a negative result for the separated H_6 and coefficient-blind scalar-envelope routes. It does not refute or bound the exact-B shell-localised A11 source, establish a positive production sextic reserve, prove the true-increment stabilised log-Laplace estimate, close the A7 self-coupled Nelson theorem, construct the interacting full three-component measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
-  "next_action": "Prove A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND while retaining B(X)JX=0, the output shell projection, the fixed-floor rational coefficient, all relative-phase directions, and preferably the determinant resolvent. Only after an explicit exact-B constant is obtained may the full determinant, commutator, quartic, and sextic budgets and the A11 stabilised log-Laplace gate be revisited.",
+  "no_overclaim": "This claim closes T-047 only as a negative result for the separated H_6 and coefficient-blind scalar-envelope routes. A13 separately closes the production-compatible standalone exact-B source allocation, but neither claim proves the exact source constant infinite. A12 does not establish a positive production sextic reserve, prove the true-increment stabilised log-Laplace estimate, close the A7 self-coupled Nelson theorem, construct the interacting full three-component measure, remove the floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
+  "next_action": "No A12 gate remains open. Continue under A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE by retaining the local potential and noncentral determinant in one estimate or redesigning the true increment. Do not retry the separated scalar route or standalone deterministic exact-B source absorption.",
   "last_review": "2026-07-21",
   "closure_depth": "C1",
   "proof_maturity": "S1",
-  "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. Exact B satisfies B(X)JX=0, so the actual shell source remains open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass."
+  "notes": "T4 PROVED-ANALYTIC-REDUCTION plus exact scalar-budget no-go. The original reduction and beta_op^2/c_sym=0.016570372383568618 remain valid. Boundary modulation and the exact L6 Riesz norm give M_6>=8, Q_6>=8sqrt(3), H_6>=786432, 26545 times the source-only target; an independent finite Gaussian-integer witness already gives H_6>=184.54034191803735. The same witness refutes the coefficient-blind six-linear envelope. A13 preserves exact B and the output shell but finds a relative-phase carrier above gamma/3, closing the standalone production budget negatively while leaving source-constant finiteness open. Baseline 65/65, obstruction primary 36/36, independent 25/25, and integrated 83/83 pass."
 }

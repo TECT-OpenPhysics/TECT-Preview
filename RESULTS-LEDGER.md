@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-058](#r-058) | Exact Class-II phase-null structure and relative-phase source-budget obstruction | Scoped T4 exact/executed no-go: the production matrix has separate local doublet/singlet phase nulls and an output-shell commutator, yet a finite opposite-corner SU(2) witness gives C_rel>0.9>gamma/3 and defeats every standalone deterministic source allocation with p>=1 |
 | [R-057](#r-057) | Sharp-cube scalar-budget obstruction and Class-II gauge-null pivot | EXACT NO-GO within A12 T4: dyadic Riesz boundary modulation forces M_6>=8, Q_6>=8sqrt(3), H_6>=786432 and the coefficient-blind scalar envelope >=786432; the actual source survives through B(X)JX=0 and output-shell localisation |
 | [R-056](#r-056) | Sharp-cube Class-II source-square reduction | T4 PROVED-ANALYTIC-REDUCTION; exact Pauli/Fierz operator constant, exact one-leg shell decay, and cutoff-uniform L6 maximal/square bound reduce the source to 0.016570372383568618 M_R^2 M_6^4 Q_6^2; R-057 subsequently refutes this separated route for the production budget |
 | [R-055](#r-055) | Class-II true-increment determinant and past-energy no-go | T4 PROVED-STRUCTURAL-REDUCTION; base Gaussian refutes the direct past-energy upper form, while the true increment exactly telescopes the endpoint and exposes the positive adapted source-square as the next gate |
@@ -76,6 +77,42 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-058"></a>
+### R-058 -- exact Class-II phase-null structure and relative-phase source-budget obstruction
+
+**Statement.**  For the hash-pinned A1 production coefficients, fixed density
+floor, and strict sharp rectangular-cube filtration, the exact Pauli/Fierz
+matrix has separate local doublet and singlet phase-null directions and the
+next-shell source is an exact commutator.  Nevertheless an opposite-corner
+internal `SU(2)` carrier survives.  The explicit degree-65536 polynomial
+`a_n=n^(-5/6)` gives
+`C_rel=0.916052728265233>0.9>gamma/3=0.54`.  Hence the standalone deterministic
+source/sextic condition fails for every Nelson exponent `p>=1`.  On the same
+fixed-envelope carrier the determinant shell operator is `O(N^-2)`, so its
+resolvent tends to the identity and preserves the obstruction.
+
+**Where proved.** `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`,
+proof note `classii-relative-phase-source-budget-obstruction-260721-v1.0`.
+Zero-padded coefficient convolution gives 30/30 PASS, a non-importing
+alias-free physical-grid route gives 18/18 PASS, and the integrated verifier
+gives 77/77 PASS.  The six-page PDF passes form, zero-overfull, and full visual
+QA.
+
+**Reuse.**  Derivative internal-current Gibbs constructions with matrix-valued
+field metrics and sharp spectral filtrations.  The result separates genuine
+gauge/common-phase cancellation from active relative internal phases and shows
+that retaining an output shell or determinant resolvent is not, by itself, a
+substitute for a joint source-potential estimate.
+
+**Tier / publication target.** Scoped T4 analytic/executed negative result; no
+tier promotion.  T-049 is closed negatively only for the current unit-sharp,
+fixed-parameter standalone deterministic source allocation.  Finiteness of the
+exact source constant, joint source-potential cancellation, redesigned
+increments, the Nelson theorem, an interacting measure, T5, T6, and T7 remain
+open.
+
+---
 
 <a id="r-057"></a>
 ### R-057 -- sharp-cube scalar-budget obstruction and Class-II gauge-null pivot

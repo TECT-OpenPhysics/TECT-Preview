@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Complete A13 gate-record synchronization and register R-058] - 2026-07-21
+
+Synchronized the stale A12 successor metadata after the A13 countercertificate without changing the A12 theorem, tier, or evidence. A12 now has no open gate; the constructive successor is the joint source-potential redesign owned by A13. Registered the reusable exact phase-null and relative-phase source-budget result as R-058. Replaced the A13 proof-note footer with the complete standard result matrix, rebuilt the six-page PDF with zero overfull boxes, visually checked the footer, refreshed all hashes, and reconfirmed primary 30/30, independent 18/18, and integrated 77/77.
+
+## [Close T-049 negatively with the A13 relative-phase source obstruction] - 2026-07-21
+
+Registered A13 at scoped T4. Exact Pauli/Fierz reduction proves separate local doublet and singlet phase nulls, the exact output-shell commutator, and the determinant resolvent rebate. An explicit degree-65536 opposite-corner SU(2) polynomial gives C_rel=0.916052728265233>0.9>gamma/3=0.54, independently reproduced by coefficient convolution and an alias-free physical-grid route. The integrated verifier passes 77/77. T-049 is closed negatively; the surviving gate is A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE. Also updated the note PDF builder to wrap long canonical claim IDs without overfull title boxes.
+
 ## [Refute the separated sharp-cube source budget and expose the Class-II gauge-null pivot] - 2026-07-21
 
 Exact dyadic boundary modulation proves M_6>=8, Q_6>=8sqrt(3), and H_6>=786432, so the separated A12 constant cannot meet the source-only target 29.62571266025876. An independent finite Gaussian-integer polynomial certifies H_6>=184.54034191803735 by exact convolution arithmetic, and the coefficient-blind scalar six-linear envelope is also ruled out. The actual A11 source remains open because B(X)JX=0 and the coarse route discarded the output shell and determinant resolvent. Close T-047 negatively, open A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND, retain A12 at T4, and add primary 36/36, non-importing independent 25/25, integrated 83/83 plus a five-page proof PDF.

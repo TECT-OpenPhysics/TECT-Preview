@@ -8,7 +8,7 @@
 
 ## Claims
 
-Tier profile: T6x9 T5x7 T4x4
+Tier profile: T6x9 T5x7 T4x5
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
@@ -19,7 +19,8 @@ Tier profile: T6x9 T5x7 T4x4
 | [`A1-SCALAR-ANALYTIC-BRANCH`](../../claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md) | T6 | A1-SHELL-POSITIVITY | — | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) |
 | [`A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`](../../claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/INDEX.md) | T4 | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE | Frozen-energy relative Class-II structural reduction |
 | [`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`](../../claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/INDEX.md) | T4 | — | A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | Class-II true-increment determinant reduction |
-| [`A12-CLASSII-SOURCE-SQUARE-REDUCTION`](../../claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md) | T4 | — | A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND | Class-II sharp-cube source-square reduction |
+| [`A12-CLASSII-SOURCE-SQUARE-REDUCTION`](../../claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md) | T4 | — | — | Class-II sharp-cube source-square reduction |
+| [`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`](../../claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md) | T4 | — | A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE | Class-II gauge-horizontal source and relative-phase budget obstruction |
 | [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production three-component gradient-flow well-posedness |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
 | [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full-production spectral discretization to continuum PDE |
@@ -34,7 +35,7 @@ Tier profile: T6x9 T5x7 T4x4
 | [`A9-CLASSII-SMART-PATH-CANCELLATION`](../../claims/A9-CLASSII-SMART-PATH-CANCELLATION/INDEX.md) | T5 | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE | Exact Class-II smart-path cancellation and noncentral frozen-shell control |
 
 **Open named hypotheses (sector union):** A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A5-H1-CANONICAL-KERNEL-MANIFEST  
-**Open gates (sector union):** A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE, A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND, A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A7-CLASSII-SELF-COUPLING-INTERPOLATION
+**Open gates (sector union):** A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE, A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE, A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A7-CLASSII-SELF-COUPLING-INTERPOLATION
 
 ## Predictions
 
@@ -53,6 +54,7 @@ _None linked to this sector._
 | F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION | shell sum is not the actual endpoint action | The naive conditional-composition route treated |
 | F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM | direct past-energy absorption fails at the base Gaussian | A10 equation (8.4) proposed controlling |
 | NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET | separated sharp-cube source budget is impossible | A12 reduced the adapted source to |
+| NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET | exact-B standalone source absorption fails | T-049 sought a production-compatible deterministic bound for |
 | NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
 | AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |

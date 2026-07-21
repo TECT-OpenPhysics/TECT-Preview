@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 43
+Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 
 ## Next up
 
@@ -13,8 +13,8 @@ Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 43
 
 ## Blocked
 
-- **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE; blocked by: T-049)_
-  - Blocked in proof order by A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND. The separated H_6 and coefficient-blind scalar routes are refuted. First prove an explicit production bound for the exact source retaining B(X)JX=0, the output shell, fixed floor, relative phase directions, and if necessary the determinant resolvent; then recompute all quartic and sextic costs for theta I_j+C_j.
+- **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE; blocked by: T-050)_
+  - Blocked by T-050 after the A13 relative-phase no-go. The prior proof order assumed a production-compatible standalone exact-B source bound; A13 proves that its best constant exceeds gamma/3 even with the output shell and determinant resolvent. First redesign a joint source-potential log-Laplace estimate or the true increment, then restate the A11 stabilised relative theorem.
   - _updated 2026-07-21_
 
 ## Backlog
@@ -24,8 +24,8 @@ Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 43
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-049** A12: prove the coefficient-aware shell-localised source bound  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND)_
-  - Retain the exact production B, its gauge-null identity B(X)JX=0, the output shell inside G_j^*, all relative doublet/singlet phase directions, the fixed positive density floor, and preferably the determinant resolvent. The separated M_6^4Q_6^2 and coefficient-blind scalar paraproduct routes are forbidden by NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET. Produce an explicit source constant and compare it with the full recomputed production budget.
+- **T-050** A13: prove a joint source-potential log-Laplace estimate  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE)_
+  - T-049 standalone source absorption is refuted even with exact B, output shell, and resolvent. Retain the local potential and noncentral determinant in one estimate, redesign the true increment, or prove a genuinely probabilistic cancellation that survives the A13 opposite-corner SU(2) carrier.
   - _updated 2026-07-21_
 
 ## Done (recent)
@@ -146,4 +146,7 @@ Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 43
   - _updated 2026-07-21_
 - **T-047** A12: certify the sharp-cube L6 vector-norm enclosure  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-SHARP-CUBE-L6-VECTOR-NORM-ENCLOSURE)_
   - CLOSED-NEGATIVE by A12 on 2026-07-21. Exact dyadic Riesz boundary modulation gives M_6>=8, Q_6>=8sqrt(3), and H_6>=786432, versus the isolated target H_6<29.62571266025876. An independent finite Gaussian-integer polynomial certifies H_6>=184.54034191803735 by exact convolution arithmetic. The coefficient-blind scalar six-linear envelope is also at least 786432. Baseline 65/65, primary 36/36, non-importing independent 25/25, integrated 83/83. This no-go does not refute the exact-B shell source because B(X)JX=0 and the coarse route dropped the output shell and resolvent.
+  - _updated 2026-07-21_
+- **T-049** A12: prove the coefficient-aware shell-localised source bound  _(owner: Codex; claim: A12-CLASSII-SOURCE-SQUARE-REDUCTION; gate: A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND)_
+  - CLOSED NEGATIVELY by A13 on 2026-07-21. Exact Fierz algebra gives separate doublet/singlet phase nulls and the output-shell commutator, but an explicit degree-65536 opposite-corner SU(2) polynomial gives C_rel>0.9>gamma/3=0.54. The determinant shell operator is O(N^-2), so the resolvent tends to identity. Primary 30/30, non-importing independent 18/18, and integrated 77/77 pass.
   - _updated 2026-07-21_

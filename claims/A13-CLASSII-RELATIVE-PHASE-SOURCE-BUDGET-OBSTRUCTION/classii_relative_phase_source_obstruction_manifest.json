@@ -1,0 +1,161 @@
+{
+  "schema": "tect/a13-classii-relative-phase-source-obstruction/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "frozen_on": "2026-07-21",
+  "status": "T4 PROVED-STRUCTURAL-REDUCTION-AND-EXECUTED-BUDGET-NOGO",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a12_status": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json",
+      "sha256": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c"
+    },
+    "a12_obstruction_manifest": {
+      "path": "claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json",
+      "sha256": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_relative_phase_source_obstruction.py",
+      "sha256": "fec920dc12faa4b5f1922807b9933fa736c679785ca2ad9b6130b6823891fb0e",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_relative_phase_source_obstruction_independent.py",
+      "sha256": "bbacd5b53999502cf7f89b330655ccde198947c49acd0056a6c2cb79bfa0432a",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_relative_phase_source_obstruction_verify.py",
+      "sha256": "d0463c2cc67506b115c4e3c0cd6eceffab03c975f405dad9aab94e93d27c05a7",
+      "version": "1.0.1"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-relative-phase-source-budget-obstruction-260721-v1.0.tex.txt",
+      "sha256": "f4bd628f4836bcfde79021361ee5db5c1514c4288d9a421f2f7392d88ddcf495",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-relative-phase-source-budget-obstruction-260721-v1.0.pdf",
+    "sha256": "81e6dc870aecbe36e4a08af73401f8e0448c7d7702a937260772c39a659e0f38",
+    "version": "1.0",
+    "pages": 6,
+    "size_bytes": 383292,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "PASS"
+  },
+  "scope": "Fixed L=16 torus; three complex components in the six-real convention; hash-pinned A1 production symbol and coefficients; rho_regularizer=1e-12; eta_shell=0; exact Fourier products; the unit sharp regulator; and the A10-A12 strict dyadic rectangular-cube filtration. The Fierz, phase-null, shell-commutator, active-carrier, and resolvent-limit statements are analytic. The finite polynomial is a large-margin executed cross-route certificate, not a formal floating-point interval proof.",
+  "theorem": {
+    "fierz_matrix": "With X=Z+W, s=|Z|^2, R=|X|^2+rho_floor, P=4[s E_Z-(JZ)(JZ)^T], and d=a+2b+c, B(X)=dP-4(b+c)(s/R)(Z tensor X+X tensor Z)+4c(s/R)^2 X tensor X.",
+    "separate_phase_nulls": "B(X)JZ=0 and B(X)JW=0; arbitrary local doublet-common and singlet phases contribute no carrier derivative.",
+    "sharp_operator_bound": "0<=B(X)<=beta_op s I and B(X)^2<=beta_op s B(X), beta_op=4(a+2b+c).",
+    "shell_commutator": "For u_j=P_<=j-1 phi, P_j[B(u_j)D u_j]=[P_j,M_B(u_j)]D u_j because P_jD u_j=0.",
+    "resolvent_rebate": "For ell=A^*r, T=A^*A, K=AA^*, <ell,(I+pT)^-1ell>=p^-1[||r||^2-<r,(I+pK)^-1r>].",
+    "active_carrier": "For opposite doublet momenta, B(X)D_iX=i beta_op(k1_i-k2_i)(X1|X2|^2,-|X1|^2X2,0); the carrier is floor-independent because ds=drho=0.",
+    "corner_limit": "For the tensor boundary polynomial, the exact-B source/sextic ratio tends beta_op^2[(D_K/B_K)^3-(C_K/B_K)^3], including both complex components and the q^-4 covariance convention.",
+    "budget_no_go": "The explicit K=65536 certificate gives C_rel>0.9>gamma/3=0.54, so C_rel<gamma/(3p) fails for every p>=1.",
+    "resolvent_persistence": "On the fixed-envelope carrier ||T_j||=O_K(N^-2), hence (I+pT_j)^-1 tends I and the same lower limit survives."
+  },
+  "certificate": {
+    "degree": 65536,
+    "coefficient_exponent": 0.8333333333333334,
+    "coefficient_formula": "a_n=n^(-5/6), 1<=n<=K",
+    "full_polynomial": "f_K(z)=sum_(n=1)^K a_n(z^(-n)-z^n)",
+    "past_polynomial": "u_K=P_-f_K=sum_(n=1)^K a_n z^(-n)",
+    "tensor_dimension": 3,
+    "required_margin_over_gamma_third": 0.3,
+    "decision_floor": 0.9,
+    "primary_method": "zero-padded coefficient convolution and Parseval",
+    "independent_method": "alias-free physical grid with separate FFT projection"
+  },
+  "budget": {
+    "reference_p": 1.1,
+    "gamma_over_three_formula": "gamma/3",
+    "reference_allowance_formula": "gamma/(3p)",
+    "all_p_domain": "p>=1"
+  },
+  "derived_oracles": {
+    "beta_operator": 0.0423749999999894,
+    "primary_source_ratio": 0.9160527282652334,
+    "independent_source_ratio": 0.9160527282652334,
+    "gamma_over_three": 0.54,
+    "gamma_over_3p_reference": 0.4909090909090909
+  },
+  "audit": {
+    "seed": 130721,
+    "shell_seed": 713021,
+    "algebra_samples": 512,
+    "resolvent_samples": 128,
+    "algebra_tolerance": 1e-10,
+    "resolvent_tolerance": 1e-10,
+    "certificate_cross_tolerance": 1e-8,
+    "carrier_scales": [1024, 2048, 4096, 8192],
+    "asymptotic_tolerance": 1e-5,
+    "decay_ratio_tolerance": 1e-4
+  },
+  "independent_audit": {
+    "seed": 131721,
+    "algebra_samples": 256,
+    "resolvent_samples": 96,
+    "algebra_tolerance": 1e-10,
+    "resolvent_tolerance": 1e-10,
+    "certificate_tolerance": 1e-8
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-13,
+    "certificate_tolerance": 1e-6,
+    "spin_tolerance": 1e-6,
+    "source_tolerance": 1e-9
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-primary-relative-phase-obstruction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-independent-relative-phase-obstruction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-integrated-relative-phase-obstruction/result.json",
+    "primary_assertions": 30,
+    "independent_assertions": 18,
+    "integrated_own_assertions": 29,
+    "expected_total_assertions": 77,
+    "command": "python codes/foundations/a13_classii_relative_phase_source_obstruction_verify.py"
+  },
+  "consequence": {
+    "t049": "CLOSED-NEGATIVELY",
+    "negative_result": "NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET",
+    "tier_after": "T4",
+    "next_gate": "A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE",
+    "forbidden_successor": "standalone deterministic exact-B source-square absorption, with or without resolvent-only repair"
+  },
+  "honesty_boundary": {
+    "closed": [
+      "the exact compact Fierz form of B",
+      "separate local doublet and singlet phase nulls",
+      "the exact output-shell commutator",
+      "the exact determinant resolvent rebate identity",
+      "an active SU(2) opposite-corner carrier",
+      "the current standalone source-only production-budget no-go"
+    ],
+    "does_not_rule_out": [
+      "a joint source-potential log-Laplace cancellation",
+      "a redesigned true increment",
+      "a probabilistic cancellation not available to deterministic source absorption",
+      "a different regulator, filtration, or parameter set"
+    ],
+    "not_claimed": [
+      "unboundedness of the exact source constant",
+      "A11 stabilised log-Laplace or A7 Nelson closure",
+      "an interacting full three-component Gibbs measure",
+      "floor removal, regulator independence, or infinite volume",
+      "phase transition, BCC selection, T5, T6, or T7"
+    ]
+  },
+  "references": [
+    "B. Hollenbeck and I. E. Verbitsky, Best constants for the Riesz projection, J. Funct. Anal. 175 (2000), 370-392, doi:10.1006/jfan.2000.3616.",
+    "TECT A11 exact noncentral determinant package.",
+    "TECT A12 sharp-cube scalar-budget obstruction package."
+  ]
+}

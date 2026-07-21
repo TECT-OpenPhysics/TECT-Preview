@@ -323,12 +323,31 @@ strict positive production sextic reserve.  A coefficient-blind replacement
 by `beta_op |u|^2 |Du|`, separated maximal/square norms, or a generic scalar
 six-linear paraproduct is forbidden by the preceding no-go.
 
-**Status:** OPEN (2026-07-21), FIRST SURVIVING SOURCE GATE AFTER T-047.  The
-identity `B(X)JX=0` is exact and primary 36/36, non-importing independent
-25/25, and integrated 83/83 reproduce the obstruction and pivot.  No explicit
-constant for the shell-localised exact-B source is yet proved.  A smooth
-filtration is a separate fallback because it would require rederiving the A10
-and A11 determinant machinery.
+**Status:** CLOSED NEGATIVELY (2026-07-21) by
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`.  Exact Fierz algebra
+strengthens `B(X)JX=0` to separate doublet and singlet local phase nulls and
+retains the output shell as an exact commutator.  Nevertheless an
+opposite-corner internal SU(2) carrier with an explicit degree-65536 polynomial
+gives `C_rel>0.9>gamma/3=0.54`, so standalone source-only absorption fails for
+every `p>=1`.  The determinant shell operator is `O(N^-2)` on the witness, so
+the exact resolvent tends to the identity and does not repair the budget.  This
+does not prove the source constant infinite; it forbids the current production
+allocation.
+
+### **A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE**
+
+**Statement:** Replace standalone deterministic source-square absorption by a
+single cutoff-uniform estimate that retains the exact noncentral determinant,
+the local quartic/sextic potential, and any cancellation created by a revised
+true-increment decomposition.  The theorem must survive the A13 opposite-cube
+SU(2) carrier, retain the fixed floor and exact production covariance, and
+provide an explicit positive final budget.  Reusing a source-only bound,
+dropping the output shell, or claiming that the resolvent alone repairs T-049
+is forbidden.
+
+**Status:** OPEN (2026-07-21), FIRST SURVIVING GATE AFTER THE A13 RELATIVE-PHASE
+NO-GO.  Joint source-potential, redesigned-increment, and probabilistic routes
+are not classified by A13.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

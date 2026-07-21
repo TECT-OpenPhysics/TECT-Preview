@@ -34,6 +34,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION](#f-2026-07-21-a10-naive-action-composition) | direct identification of the A9/A10 shell sum with the actual A7 action | exact telescoping leaves a positive past-energy term with the wrong sign for lower-bound transfer |
 | [F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM](#f-2026-07-21-a10-past-energy-upper-form) | cutoff-uniform absorption of the A10 past-energy mismatch | base Gaussian has linearly growing past energy but bounded endpoint L4/L6 moments |
 | [NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET](#ng-2026-07-21-a12-sharp-cube-scalar-budget) | A12 separated H6 and coefficient-blind scalar source routes | dyadic Riesz boundary modulation forces H6 and the scalar envelope far above the production target |
+| [NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET](#ng-2026-07-21-a13-relative-phase-source-budget) | A13 exact-B standalone source/sextic absorption | opposite-corner SU(2) relative phase exceeds gamma/3 even with output shell and resolvent |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -262,6 +263,32 @@ successor is
 `A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND`.  A12 remains T4;
 no positive sextic reserve, A11 log-Laplace closure, or interacting measure is
 claimed.
+
+<a id="ng-2026-07-21-a13-relative-phase-source-budget"></a>
+### NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET -- exact-B standalone source absorption fails
+
+**Failure mode:** T-049 sought a production-compatible deterministic bound for
+the exact shell-localised source after restoring the Class-II matrix, its
+phase-null direction, the output shell, and preferably the determinant
+resolvent.  The required source-only condition is
+`C_rel<gamma/(3p)` for some Nelson exponent `p>=1`.
+
+**Evidence:** `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`.  Exact
+Pauli/Fierz algebra gives separate doublet and singlet local phase nulls and
+the shell commutator, but an opposite-corner internal SU(2) carrier survives.
+For the explicit degree-65536 polynomial `a_n=n^(-5/6)`, zero-padded
+coefficient convolution and an independent alias-free physical-grid route
+both give `C_rel=0.916052728...`.  The conservative comparison is
+`C_rel>0.9>gamma/3=0.54`, so the budget fails for every `p>=1`.  On the same
+fixed-envelope carrier the shell operator in the determinant is `O(N^-2)`,
+hence the exact resolvent tends to the identity and preserves the lower limit.
+
+**Consequence:** T-049 is closed negatively as a production-budget gate.  The
+result does not say that the exact source constant is infinite and does not
+rule out joint source-potential cancellation, a redesigned true increment, or
+a genuinely probabilistic estimate.  The successor is
+`A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE`; A13 remains scoped T4 and no
+Nelson or interacting-measure closure is claimed.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

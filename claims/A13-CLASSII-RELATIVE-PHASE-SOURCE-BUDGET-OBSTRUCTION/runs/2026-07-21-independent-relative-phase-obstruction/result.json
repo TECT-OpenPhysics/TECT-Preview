@@ -1,0 +1,159 @@
+{
+  "assertions": [
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "authority_a1_manifest_hash_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
+      "expected": "e2bfaa8bc00b72a95a2fa7890d8550ff5486e9599f3c485c4e8c552f8bf0047c",
+      "name": "authority_a12_status_hash_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213",
+      "expected": "e16ad41f192505ca17a7c249705e30ec51771877505a9e833cd900e863580213",
+      "name": "authority_a12_obstruction_manifest_hash_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": "bbacd5b53999502cf7f89b330655ccde198947c49acd0056a6c2cb79bfa0432a",
+      "expected": "bbacd5b53999502cf7f89b330655ccde198947c49acd0056a6c2cb79bfa0432a",
+      "name": "independent_source_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0423749999999894,
+      "expected": 0.0423749999999894,
+      "name": "independent_beta_from_production",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.116994083107172e-16,
+      "expected": "<1e-10",
+      "name": "relative_su2_carrier_direct_currents",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<1e-10",
+      "name": "three_phase_null_checks_direct",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.7194799110210365e-16,
+      "expected": "<1e-10",
+      "name": "carrier_identity_floor_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 524288,
+      "expected": ">393217",
+      "name": "alias_free_grid_is_strict",
+      "status": "PASS"
+    },
+    {
+      "actual": 510.1537108883858,
+      "expected": ">0",
+      "name": "grid_spin_functional_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9160527282652321,
+      "expected": 0.54,
+      "name": "grid_source_exceeds_gamma_third",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9160527282652321,
+      "expected": 0.4909090909090909,
+      "name": "grid_source_exceeds_reference_budget",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9160527282652321,
+      "expected": 0.9160527282652334,
+      "name": "grid_certificate_matches_independent_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-15,
+      "expected": "<1e-10",
+      "name": "resolvent_svd_identity_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "lower<=exact",
+      "name": "resolvent_lower_bound_direction",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "independent_route_nonimporting",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "a joint source-potential log-Laplace cancellation",
+        "a redesigned true increment",
+        "a probabilistic cancellation not available to deterministic source absorption",
+        "a different regulator, filtration, or parameter set"
+      ],
+      "expected": "joint routes remain open",
+      "name": "negative_result_is_scoped",
+      "status": "PASS"
+    },
+    {
+      "actual": "T4",
+      "expected": "T4",
+      "name": "tier_boundary_is_t4",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "beta_operator": 0.0423749999999894,
+    "budget": {
+      "gamma_over_three": 0.54,
+      "margin_over_gamma_third": 0.37605272826523206,
+      "reference_allowance": 0.4909090909090909
+    },
+    "certificate": {
+      "alias_free_minimum": 393217,
+      "degree": 65536,
+      "full_l6_sixth": 2022.5787400615052,
+      "grid": 524288,
+      "nonpositive_cubic_energy": 15022.206839284134,
+      "nonpositive_over_full": 7.427254396448031,
+      "past_l6_sixth": 19670.459449911603,
+      "past_over_full": 9.725435682822138,
+      "source_ratio": 0.9160527282652321,
+      "spin_functional": 510.1537108883858
+    },
+    "floor_invariance_error": 2.7194799110210365e-16,
+    "phase_null_error": 0.0,
+    "relative_carrier_error": 4.116994083107172e-16,
+    "resolvent_svd_error": 8.881784197001252e-15
+  },
+  "generated_at_utc": "2026-07-21T13:25:15.893293+00:00",
+  "git_commit": "7ba30c69bbdf20e4472b3e084da77d5b6edd9a84",
+  "manifest": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_relative_phase_source_obstruction_manifest.json",
+  "method": [
+    "direct complex-current algebra",
+    "alias-free physical-grid quadrature",
+    "SVD resolvent audit"
+  ],
+  "next_gate": "A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "schema": "tect/a13-classii-relative-phase-source-obstruction-independent-result/1.0",
+  "script_version": "1.0.0",
+  "summary": {
+    "failed": 0,
+    "passed": 18,
+    "total": 18
+  }
+}

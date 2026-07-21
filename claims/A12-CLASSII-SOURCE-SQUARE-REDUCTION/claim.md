@@ -124,7 +124,7 @@ direct paraproduct theorem after
 
 does not repair the budget.
 
-## Surviving exact-B route
+## Exact-B successor result
 
 Let $\mathcal J$ be the real global-phase complex structure. The embedded
 Pauli generators commute with $\mathcal J$, and their frame vectors satisfy
@@ -139,12 +139,14 @@ Consequently
 B(X)\mathcal JX=0.
 \]
 
-The large carrier derivative in the no-go witness lies precisely in this null
-direction. The actual A11 source is therefore not refuted. A12's coarse route
-also discarded the output shell projection on
-$B(S_{j-1}\phi)DS_{j-1}\phi$ and the determinant resolvent. The successor must
-retain the exact coefficient, its gauge-null structure, and the output shell
-before estimating the source.
+The large carrier derivative in the scalar no-go witness lies precisely in
+this null direction. A12's coarse witness therefore does not refute the actual
+A11 source. A13 subsequently retains the exact coefficient, strengthens the
+null to separate doublet and singlet local phase directions, and keeps the
+output shell as a commutator. An internal opposite-corner $SU(2)$ carrier still
+gives a source/sextic ratio above $\gamma/3$. Thus the standalone exact-$B$
+production allocation is also closed negatively, although finiteness of the
+exact source constant remains unclassified.
 
 ## Scope and tier
 
@@ -152,9 +154,10 @@ The pinned scope is $L=16$, three complex components in the six-real
 convention, `rho_regularizer=1e-12`, a common real-even scalar regulator with
 supremum $M_R$, and strict dyadic sharp rectangular cubes. The claim remains
 T4: the cutoff-uniform analytic reduction is proved, while its separated and
-coefficient-blind scalar production-budget routes are closed negatively. The
-exact-B shell-localised source bound and the production sextic reserve remain
-open.
+coefficient-blind scalar production-budget routes are closed negatively. A13
+also closes the production-compatible standalone exact-$B$ allocation
+negatively. The joint source-potential or redesigned-increment route remains
+open under A13; A12 has no remaining gate.
 
 ## Reproduction
 
@@ -237,8 +240,9 @@ integrated, PDF, or release assertion.
 ## No-overclaim
 
 This claim closes T-047 only as a negative result for the separated and
-coefficient-blind scalar routes. It does not bound the exact-B shell-localised
-source, establish a positive production sextic reserve, prove the stabilised
+coefficient-blind scalar routes. A13 separately closes the standalone exact-B
+production allocation, but neither result proves the exact source constant
+infinite. A12 does not establish a positive production sextic reserve, prove the stabilised
 true-increment log-Laplace estimate or A7 Nelson bound, construct an
 interacting measure, remove regulators, take infinite volume, prove a phase
 transition or BCC selection, or justify T5, T6, or T7.
@@ -254,3 +258,7 @@ transition or BCC selection, or justify T5, T6, or T7.
   paraproduct route also fails. The exact-B shell-localised gate replaces it;
   obstruction primary 36/36, independent 25/25, integrated 83/83. Tier remains
   T4.
+- 2026-07-21: Synchronized the successor disposition after A13 retained exact
+  B and the output shell but found an internal relative-phase carrier above
+  the complete source-only budget. T-049 is closed negatively; A12's theorem,
+  tier, and evidence are unchanged.

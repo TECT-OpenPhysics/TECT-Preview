@@ -1,0 +1,420 @@
+% =============================================================================
+% Title: Class-II relative-phase source-budget obstruction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-21; this version issued 2026-07-21
+% Status: scoped T4 exact structural reduction and executed finite-polynomial
+% no-go for deterministic source-only production absorption
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-21): exact Fierz form, two local phase nulls, shell
+% commutator, SU(2) opposite-corner carrier, finite certificate, and
+% resolvent persistence.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cJZ}{\cJ Z}
+\newcommand{\cJW}{\cJ W}
+\newcommand{\cH}{\mathfrak H}
+\newcommand{\Id}{\mathrm I}
+
+\section*{1. Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Exact structure and a scoped no-go.}  The production Class-II matrix
+has two independent local phase-null directions and the actual A11 source is
+an exact output-shell commutator.  These facts remove the scalar carrier that
+defeated A12's coefficient-blind estimate.  They do not remove an internal
+$SU(2)$ relative-phase carrier.  An explicit finite polynomial of degree
+$65536$ gives the asymptotic exact-$B$ source ratio
+$C_{\rm rel}=0.91605\ldots>{\gamma\over3}=0.54$.
+Consequently the deterministic source-only sextic allocation fails for every
+Nelson exponent $p\ge1$, including the A12 reference $p=1.1$.  The determinant
+resolvent tends to the identity on this carrier and does not repair it.
+
+\medskip
+\textbf{Tier boundary.}  This is a scoped T4 analytic/executed obstruction.
+It closes T-049 negatively.  It does not rule out a joint source--potential
+log-Laplace cancellation, a different true-increment decomposition,
+probabilistic cancellation, changed parameters, a new filtration, or an
+interacting measure.  It is not T5, T6, or T7.
+}}
+\end{center}
+
+The setting is the fixed $L=16$ torus, three complex fields in the six-real
+convention, the hash-pinned A1 production symbol and Class-II coefficients,
+fixed $\rho_{\rm floor}=10^{-12}$, and the A10--A12 strict dyadic rectangular
+cubes.  Products are exact Fourier products.  The regulator is the unit sharp
+cutoff member of the allowed common real-even family.
+
+\section*{2. Exact Fierz reduction}
+
+Write $X=Z+W\in\C^2\oplus\C$, with
+$Z=(z_1,z_2,0)$ and $W=(0,0,w)$.  Put
+\[
+ s=|Z|^2,\qquad \rho=|X|^2,\qquad R=\rho+\rho_{\rm floor}.
+\]
+For the embedded Pauli generators define
+\[
+ p_A=2S_AX,\qquad q_A={X^TS_AX\over R},\qquad
+ v_A=p_A-2q_AX.
+\]
+The production coefficient matrix is
+\[
+ B(X)=\sum_A\{a p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)+c v_Av_A^T\}.
+ \tag{2.1}
+\]
+Set
+\[
+ d=a+2b+c=0.01059374999999735,\qquad
+ \beta_{\rm op}=4d=0.0423749999999894.
+\]
+
+Let $E_Z$ be the projection onto the four real doublet coordinates and let
+$\cJ$ be the complex structure.  Pauli completeness gives
+\[
+ P:=\sum_Ap_Ap_A^T
+   =4\{sE_Z-(\cJZ)(\cJZ)^T\},                         \tag{2.2}
+\]
+\[
+ \sum_Aq_Ap_A=2{s\over R}Z,\qquad
+ \sum_Aq_A^2={s^2\over R^2}.                          \tag{2.3}
+\]
+Substitution into (2.1) yields the exact fixed-floor matrix
+\[
+ \boxed{
+ B(X)=dP-4(b+c){s\over R}(Z\otimes X+X\otimes Z)
+       +4c{s^2\over R^2}X\otimes X.}                  \tag{2.4}
+\]
+In particular,
+\[
+ \boxed{B(X)\mathcal JZ=0,\qquad B(X)\mathcal JW=0.} \tag{2.5}
+\]
+The two nulls are separate: one rotates the doublet by a common phase and the
+other rotates the singlet.  They are stronger than the previously recorded
+single global-phase identity.
+
+For a tangent $H=(\eta,\omega)$ let
+\[
+ ds=2\Re(z^\dagger\eta),\qquad
+ d\rho=ds+2\Re(\bar w\omega).
+\]
+The complex representative of $B(X)H$ is
+\[
+\begin{split}
+ B(X)H={}&dP_J
+ -2(b+c){s\over R}\{Z\,d\rho+X\,ds\}
+ +2c{s^2\over R^2}X\,d\rho,\\
+ P_J={}&\bigl(4s\eta+2(\eta^\dagger z-z^\dagger\eta)z,0\bigr).
+\end{split}                                           \tag{2.6}
+\]
+Equivalently, for a spatial tangent $H=\partial_iX$,
+\[
+ B(X)H=\sum_A\{(aJ_A+bK_A)p_A+(bJ_A+cK_A)v_A\},       \tag{2.7}
+\]
+where
+\[
+ K_A=R\,\partial_iq_A,\qquad v_A=R\nabla_Xq_A.       \tag{2.8}
+\]
+Equations (2.4)--(2.8) are algebraic identities, not estimates.
+
+They also sharpen the pointwise operator bound:
+\[
+ 0\le B(X)\le\beta_{\rm op}s\Id,\qquad
+ B(X)^2\le\beta_{\rm op}sB(X).                       \tag{2.9}
+\]
+Equality in the first bound is reached on an active doublet-horizontal
+tangent.  Replacing $s$ by the full $\rho$ is valid but loses structure.
+
+\section*{3. Local phase covariance and the exact shell object}
+
+Let $U_{\theta,\varphi}$ rotate the doublet by a spatially dependent phase
+$\theta(x)$ and the singlet by an independent phase $\varphi(x)$.  Matrix
+covariance and (2.5) give
+\[
+ B(U X)=U B(X)U^T,                                    \tag{3.1}
+\]
+\[
+ \partial_i(UX)=U\{\partial_iX+(\partial_i\theta)\cJZ
+                         +(\partial_i\varphi)\cJW\}, \tag{3.2}
+\]
+and hence
+\[
+ \boxed{B(UX)\partial_i(UX)=U B(X)\partial_iX.}       \tag{3.3}
+\]
+Thus an arbitrary local common carrier in either phase sector contributes no
+derivative to the source.
+
+Let $u_j=P_{\le j-1}\phi$ and let $P_j$ be the disjoint next sharp cube shell.
+Since $P_jD u_j=0$,
+\[
+ \boxed{P_j[B(u_j)D u_j]=[P_j,M_{B(u_j)}]D u_j.}       \tag{3.4}
+\]
+The actual source is
+\[
+ \widehat\ell_j(n)=R_\Lambda(n)A(n)^{-1/2}
+  1_{\Sigma_j}(n)\{-ik_n\cdot\widehat{B(u_j)D u_j}(n)\}.
+ \tag{3.5}
+\]
+Dropping $1_{\Sigma_j}$ destroys the exact commutator and is forbidden by the
+A12 no-go.
+
+The exact determinant resolvent also admits the identity
+\[
+\begin{split}
+ A_j&=M_{B(u_j)}^{1/2}G_j,\quad T_j=A_j^*A_j,\quad
+ K_j=A_jA_j^*,\\
+ r_j&=M_{B(u_j)}^{1/2}D u_j,\quad \ell_j=A_j^*r_j,
+\end{split}
+\]
+\[
+ \boxed{
+ \langle\ell_j,(\Id+pT_j)^{-1}\ell_j\rangle
+ ={1\over p}\{\|r_j\|^2-
+ \langle r_j,(\Id+pK_j)^{-1}r_j\rangle\}.}           \tag{3.6}
+\]
+The second term is an exact negative rebate.  Bounding (3.6) only by
+$\|r_j\|^2/p$ recreates the past-energy route already refuted by A11.
+
+\section*{4. The active relative-phase carrier}
+
+The nulls (2.5) do not annihilate an internal $SU(2)$ relative phase.  For
+\[
+ X=(e^{ik_1\cdot x}f,e^{ik_2\cdot x}g,0)
+\]
+with fixed amplitudes, the leading tangent has $ds=d\rho=0$.  Equation (2.6)
+therefore gives
+\[
+ B(X)D_iX
+ =i\beta_{\rm op}(k_{1,i}-k_{2,i})
+ \bigl(X_1|X_2|^2,-|X_1|^2X_2,0\bigr).               \tag{4.1}
+\]
+This is independent of $\rho_{\rm floor}$.  If each component contains only
+one Fourier mode, (4.1) remains in the past cube and the next-shell source is
+zero.  A boundary modulation is required to move it into the output shell.
+
+For a positive integer $K$, define the finite one-dimensional polynomial
+\[
+ f_K(z)=\sum_{n=1}^K n^{-5/6}(z^{-n}-z^n),\qquad
+ u_K=P_-f_K=\sum_{n=1}^K n^{-5/6}z^{-n}.              \tag{4.2}
+\]
+On $\T^3$, put
+\[
+ F_K(x)=\prod_{a=1}^3f_K(e^{ix_a}),\qquad
+ U_K(x)=\prod_{a=1}^3u_K(e^{ix_a}).                   \tag{4.3}
+\]
+Choose a dyadic carrier $N>3K$ and define
+\[
+ \Phi_N=\bigl(e^{iN(x_1+x_2+x_3)}F_K,
+              e^{-iN(x_1+x_2+x_3)}\overline{F_K},0\bigr). \tag{4.4}
+\]
+The previous sharp cube selects exactly
+\[
+ P_{\le N}\Phi_N=
+ \bigl(e^{iN\sum_ax_a}U_K,
+       e^{-iN\sum_ax_a}\overline{U_K},0\bigr).        \tag{4.5}
+\]
+
+Let
+\[
+ D_K=\|u_K\|_6^6,\qquad
+ C_K=\|P_-(|u_K|^2u_K)\|_2^2,\qquad
+ B_K=\|f_K\|_6^6.                                    \tag{4.6}
+\]
+Tensorisation shows that the output cube keeps the complement of the
+nonpositive octant, with energy $D_K^3-C_K^3$.  The two complex components,
+the factor $8$ in $\|\Phi_N\|_6^6$, the two opposite carrier momenta, and the
+$q^{-4}$ covariance cancel to give
+\[
+ \boxed{
+ \lim_{N\to\infty}
+ {\|G_j^*B(P_{\le N}\Phi_N)D(P_{\le N}\Phi_N)\|_2^2
+  \over\|\Phi_N\|_6^6}
+ =\beta_{\rm op}^2\cH_{\rm spin}(K),}                 \tag{4.7}
+\]
+\[
+ \cH_{\rm spin}(K)={D_K^3-C_K^3\over B_K^3}.         \tag{4.8}
+\]
+The physical $2\pi/L$ cancels in the high-frequency limit, and $Y=1$ is
+retained from the production symbol.
+
+\section*{5. Finite certificate and production comparison}
+
+Take
+\[
+ K=65536.                                             \tag{5.1}
+\]
+The primary route computes the three finite coefficient convolutions with
+zero padding.  The independent route evaluates the polynomial on an
+alias-free grid of $524288$ points and projects the cubic by a separate FFT.
+They reproduce
+\[
+ {D_K\over B_K}=9.7254356828\ldots,\qquad
+ {C_K\over B_K}=7.4272543964\ldots,                   \tag{5.2}
+\]
+\[
+ \cH_{\rm spin}(K)=510.153710888\ldots,               \tag{5.3}
+\]
+and
+\[
+ \boxed{C_{\rm rel}=\beta_{\rm op}^2\cH_{\rm spin}(K)
+       =0.9160527283\ldots.}                          \tag{5.4}
+\]
+The recorded decision uses only the conservative inequalities
+\[
+ C_{\rm rel}>0.9>{\gamma\over3}=0.54.                 \tag{5.5}
+\]
+For any $p\ge1$,
+\[
+ {\gamma\over3p}\le{\gamma\over3}=0.54,              \tag{5.6}
+\]
+so the necessary source-only absorption condition
+\[
+ C_{\rm rel}< {\gamma\over3p}                         \tag{5.7}
+\]
+fails for every admissible exponent.  At the historical $p=1.1$, the
+allowance is $0.4909090909\ldots$.
+
+This obstruction is stronger than saying that a particular upper bound is
+too coarse.  Equation (4.7) is a lower bound on the best exact-$B$ source
+constant itself.
+
+\section*{6. Why the resolvent does not repair the witness}
+
+For fixed $K$, the envelope in (4.2) is fixed while $N\to\infty$.  From
+(2.9) and the production symbol,
+\[
+ \|T_j\|\le \beta_{\rm op}\|P_{\le N}\Phi_N\|_\infty^2
+ \sup_{q\in\Sigma_j}{|q|^2\over\lambda_{\min}A(q)}
+ =O_K(N^{-2}).                                        \tag{6.1}
+\]
+Consequently
+\[
+ \langle\ell_j,(\Id+pT_j)^{-1}\ell_j\rangle
+ \ge {\|\ell_j\|^2\over1+p\|T_j\|}
+ =(1-o(1))\|\ell_j\|^2.                              \tag{6.2}
+\]
+Thus the same limit (4.7) holds with the exact determinant resolvent.
+
+There is also an amplitude check.  Scaling the entire field by $\delta$
+leaves the source-to-sextic ratio invariant: both numerator and denominator
+scale as $\delta^6$.  Meanwhile $T_j=O(\delta^2)$.  The relative carrier has
+$ds=d\rho=0$, so its leading identity is floor-independent even as the
+amplitude is changed.  The resolvent can therefore be made arbitrarily close
+to the identity without weakening the obstruction.
+
+\section*{7. Consequence and new proof order}
+
+The gate
+\begin{center}
+\texttt{A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND}
+\end{center}
+is closed negatively as a \emph{production-budget} gate.  A finite exact-$B$
+source bound may still exist, but no such bound can satisfy the current
+deterministic source-only sextic allocation.
+
+The next gate is
+\begin{center}
+\texttt{A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE}.
+\end{center}
+It must change the proof architecture by retaining cancellations between the
+source and the local potential, changing the true-increment decomposition, or
+using a genuinely probabilistic cancellation.  Merely improving a standalone
+source-square constant or restoring the resolvent is forbidden by (4.7)--(6.2).
+
+This is recorded as
+\begin{center}
+\texttt{NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET}.
+\end{center}
+
+\section*{8. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the A12 common-phase null invalidates the witness.}
+\textbf{Dismissed.}  The two components carry opposite phases.  Equation
+(4.1) is an active $SU(2)$ horizontal tangent, not either null in (2.5).
+
+\item \textbf{Objection: the nonlinear current remains in the past cube.}
+\textbf{Dismissed.}  The Riesz boundary projection (4.5) and cubic product
+place exactly the complement of the nonpositive octant in the next shell.
+The carrier is chosen dyadic with $N>3K$, so no terminal alias is used.
+
+\item \textbf{Objection: the fixed floor changes the leading coefficient.}
+\textbf{Dismissed.}  The carrier has $ds=d\rho=0$.  Every rational radial term
+in (2.6) vanishes, leaving the floor-independent $dP_J$ term.
+
+\item \textbf{Objection: a complex/six-real factor two or the torus scale was
+lost.}  \textbf{Dismissed.}  Both complex components, the factor eight in the
+sextic norm, $A(q)^{-1}$ for the six-real shell coordinates, and $2\pi/L$ are
+carried through (4.7).  The two executable routes start from different
+coefficient- versus grid-space normalisations and agree.
+
+\item \textbf{Objection: the finite calculation is a formal interval proof.}
+\textbf{Valid with mitigation.}  It is not labelled as one.  Two independent
+finite algorithms agree far inside the conservative inequality
+$C_{\rm rel}>0.9$, leaving more than $0.36$ above $\gamma/3$.  The claim stays
+T4, and any cross-route or convergence failure is an explicit falsifier.
+
+\item \textbf{Objection: the determinant resolvent restores the budget.}
+\textbf{Dismissed.}  Equations (6.1)--(6.2) show $T_j\to0$ on the fixed-envelope
+carrier.  Amplitude scaling gives an independent limiting argument.
+
+\item \textbf{Objection: the result proves the exact source is unbounded.}
+\textbf{Upheld.}  No such statement is made.  The result proves only that its
+best constant is larger than the production source-only budget.
+
+\item \textbf{Objection: every possible Nelson or constructive route fails.}
+\textbf{Upheld.}  The no-go is specific to deterministic standalone source
+absorption in the current true-increment allocation.  Joint and redesigned
+routes remain open.
+\end{enumerate}
+
+\section*{9. Reproduction and evidence matrix}
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/a13_classii_relative_phase_source_obstruction_verify.py
+\end{verbatim}
+The command runs a primary coefficient-convolution audit, a non-importing
+alias-free grid audit, and integrated cross-checks.  It writes three JSON
+artefacts under the A13 claim's \texttt{runs/} directory.
+
+\section*{10. Result footer}
+
+\begin{verbatim}
+Result ID:               A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Precise statement:       Exact B has two local phase nulls and a shell
+                         commutator, but a K=65536 opposite-corner SU(2)
+                         witness gives C_rel > 0.9 > gamma/3 = 0.54.
+Scope:                   Fixed L=16 torus; A1 production coefficients; six-real
+                         fields; fixed floor; unit sharp dyadic cubes.
+Dependencies:            A1, A7, A9, A10, A11, and A12 claim packages.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED; independent reproduction.
+Reproduction command:
+  python codes/foundations/a13_classii_relative_phase_source_obstruction_verify.py
+Expected output:         Primary 30/30; independent 18/18; integrated 77/77;
+                         A13-...-OBSTRUCTION-INTEGRATED-PASS.
+Falsification gate:      Any identity, source ratio, hash, PDF, assertion-count,
+                         independent-route, or release-gate failure.
+Tier before / after:     New claim / scoped T4; T-049 CLOSED-NEGATIVELY.
+No-overclaim statement:  No source unboundedness, joint-route failure, Nelson
+                         closure, interacting measure, T5, T6, or T7.
+Next required action:    A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE.
+\end{verbatim}
+
+\section*{References}
+
+\begin{enumerate}
+\item B. Hollenbeck and I. E. Verbitsky, ``Best constants for the Riesz
+projection,'' \emph{Journal of Functional Analysis} 175 (2000), 370--392,
+\url{https://doi.org/10.1006/jfan.2000.3616}.
+\item TECT claim A12-CLASSII-SOURCE-SQUARE-REDUCTION, scalar-budget no-go and
+the exact-$B$ successor gate.
+\item TECT claim A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION, exact
+noncentral determinant and positive adapted source.
+\item TECT claim A1-PRODUCTION-FUNCTIONAL-REALISATION, hash-pinned production
+coefficients and quadratic symbol.
+\end{enumerate}

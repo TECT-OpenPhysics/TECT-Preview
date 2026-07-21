@@ -93,12 +93,15 @@ Its constant is
 enclosure is now closed negatively: dyadic Riesz boundary modulation gives
 `M_6>=8`, `Q_6>=8sqrt(3)`, and `M_6^4Q_6^2>=786432`, while the isolated target
 was `29.62571266025876`. The coefficient-blind scalar six-linear route fails
-on the same witness. The first surviving quantitative antecedent is now
-`A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND`, retaining
-`B(X)JX=0`, the output shell, and preferably the determinant resolvent. After
-it comes
-`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` for
-`theta I_j+C_j`. Neither alone closes the A7 Nelson estimate. The separate
+on the same witness. A13 then restores the exact coefficient and proves
+separate local doublet/singlet phase nulls plus the output-shell commutator.
+Its opposite-corner SU(2) polynomial nevertheless gives
+`C_rel>0.9>gamma/3=0.54`; the determinant resolvent tends to the identity on
+that carrier. Thus T-049 is also closed negatively. The first surviving
+antecedent is now `A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE`, which must
+change the proof architecture rather than improve a standalone source bound.
+The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
+is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
 regulariser removal, infinite volume, phase transition, BCC, and T7 remain
 outside the current Sector-A theorem.
@@ -188,18 +191,15 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A12-CLASSII-COEFFICIENT-AWARE-SHELL-LOCALISED-SOURCE-BOUND** — the
-   separated `H_6=M_6^4Q_6^2` route is refuted by the exact lower bound
-   `H_6>=786432`, and a finite rational certificate independently exceeds the
-   target. Prove the actual source bound without discarding `B(X)JX=0`, the
-   output shell projection, the fixed-floor rational structure, or relative
-   internal phase directions. Test whether retaining `(I+pT_j)^(-1)` is
-   required for a positive production reserve. A generic scalar six-linear
-   paraproduct is already ruled out.
-3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — after the source
-   square closes, prove the relative estimate for `theta I_j+C_j`, not the
-   historical `theta Q_j^fr+C_j`. Recompute the quartic and sextic allocation
-   before composing the conditional self-coupled `p>1` estimate.
+2. **A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE** — A13 closes the exact-B
+   standalone source budget negatively: an opposite-corner SU(2) carrier gives
+   `C_rel>0.9>gamma/3`, and the resolvent tends to the identity. Seek a joint
+   cancellation with the local potential, redesign the true increment, or
+   prove a genuinely probabilistic estimate that survives this carrier.
+3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
+   A13 redesign fixes the relative variable and budget. Do not reuse a
+   standalone source-square antecedent or the historical
+   `theta Q_j^fr+C_j` variable.
 4. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
    unmodified spatial Gibbs law across all Class-II null branches; the
    conditional `W_eps=0` branch and local proxy limits are not sufficient.
