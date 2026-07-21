@@ -23,8 +23,15 @@ T5 the arbitrary spatial PSD-background determinant estimate and the
 independent coefficient/derivative product-Gaussian measure, with the general
 regulator multiplier bound retained explicitly. It also pins the finite-cutoff
 Gaussian-divergence identity for the original A7 composite. The physical fields
-are still self-coupled, so the active renormalised frontier is
-`A7-CLASSII-SELF-COUPLING-INTERPOLATION`: a cutoff-uniform adapted-drift or
-alternative sufficient smart-path commutator bound. The unmodified bare law
+are still self-coupled. `A9-CLASSII-SMART-PATH-CANCELLATION` closes the exact
+finite-cutoff interpolation and frozen-shell determinant, while A10 identifies
+the positive past-energy action mismatch. The successor
+`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION` refutes direct absorption of
+that mismatch at the base Gaussian and replaces it by an exact true increment.
+Its determinant retains a positive adapted source-square. The active
+renormalised frontier is therefore, in order,
+`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and
+`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`. The unmodified bare law
 remains a separate branch-aware concentration problem; neither it nor the A7
-Gibbs gate is supplied by the local proxy or independent-carrier limits.
+Gibbs gate is supplied by the local proxy, independent-carrier, or current
+true-increment structural limits.

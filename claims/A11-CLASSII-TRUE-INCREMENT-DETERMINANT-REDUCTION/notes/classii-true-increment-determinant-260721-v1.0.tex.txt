@@ -1,0 +1,328 @@
+% =============================================================================
+% Title: Class-II true-increment determinant reduction
+% Claim: A11-CLASSII-TRUE-INCREMENT-\protect\\DETERMINANT-REDUCTION
+% Version: v1.0 -- first issued 2026-07-21; this version issued 2026-07-21
+% Status: T4 proved structural reduction; adapted source-square and new
+% relative log-Laplace gates open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-21): base-Gaussian no-go for the A10 past-energy upper
+% form, exact true-increment action telescope, noncentral determinant, and
+% the positive adapted source-square obstruction.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\fr}{\mathrm{fr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+
+\section*{1. Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Proved here.}  The direct past-energy upper form proposed in A10
+equation (8.4) is false already for the base Gaussian.  The replacement
+variable
+\[
+ I_j=Q_j^{\fr}-q_{B(\phi_{j-1})}(D\phi_{j-1})
+\]
+telescopes the actual A7 action exactly.  Its conditional Gaussian
+log-Laplace transform is an exact regularised determinant plus a positive
+adapted source-square.  The source cannot be discarded or controlled by the
+Hilbert--Schmidt norm alone.
+
+\medskip
+\textbf{Open boundary.}  This note does not prove the source-square bound
+needed to sum that positive term.  It also does not prove the stabilised
+relative log-Laplace estimate for $\theta I_j+\cC_j$, the A7 Nelson bound, or
+an interacting measure.  The two load-bearing successors are
+\texttt{A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND} followed by
+\texttt{A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE}.
+}}
+\end{center}
+\setcounter{section}{1}
+
+The authority is the hash-pinned A1 production Gaussian on $\T_L^3$ with
+$L=16$, three complex components in the six-real convention, fixed
+$\rho_{\rm floor}=10^{-12}$, $\eta_{\rm shell}=0$, and the A7--A10 sharp
+rectangular-cube dyadic filtration.  The complex Fourier covariance is
+$2A(k)^{-1}$.  This factor two, the distinction between one-axis and total
+derivative covariance, and the torus volume $L^3$ are retained throughout.
+The full-production shell mass is $0.260000000009475$; the scalar anchor
+$0.005$ is not used.
+
+\section{The past-energy upper form is impossible}
+
+Let $N_j=2^j$, let $\gamma_J$ be the terminal Gaussian, and write
+\[
+ E_J=\sum_{j\le J}
+ q_{B(\phi_{j-1})}(D\phi_{j-1}).                     \tag{2.1}
+\]
+The candidate A10 upper form was
+\[
+ \E_\nu E_J\le \alpha_d\cH(\nu\mid\gamma_J)
+ +\epsilon_d\E_\nu\|\phi_J\|_6^6
+ +K_d\E_\nu\|\phi_J\|_4^4+C_d,                    \tag{2.2}
+\]
+with constants independent of $J$.
+
+Set $\nu=\gamma_J$.  Then the entropy term vanishes.  Marginal consistency
+identifies $\phi_{j-1}$ with the cutoff-$N_{j-1}$ Gaussian.  The Gaussian
+integration-by-parts identity already fixed in A7 gives
+\[
+ \E_{\gamma_J}q_{B(\phi_{j-1})}(D\phi_{j-1})
+ =\E_{\gamma_J}t_{\Gamma_{\le j-1}}
+                  (B(\phi_{j-1})).                   \tag{2.3}
+\]
+If $e_N$ denotes this expectation per unit volume, the A6 sharp-cube theorem
+states
+\[
+ {e_N\over N}\longrightarrow
+ \kappa_{\rm II}=\delta_{\rm cube}\E W_\varepsilon(X_\infty)>0. \tag{2.4}
+\]
+Strict positivity follows from positivity of the production $Q_{\rm II}$
+and from $W_\varepsilon$ being nonzero on an open set of the nondegenerate
+Gaussian law.  Therefore
+\[
+ {\E_{\gamma_J}E_J\over L^3N_J}
+ ={1\over N_J}\sum_{j\le J}e_{N_{j-1}}
+ \longrightarrow \kappa_{\rm II}>0,                 \tag{2.5}
+\]
+because $\sum_{m=0}^{J-1}2^m=2^J-1$.
+
+On the other hand $A(k)^{-1}=O(|k|^{-4})$ in dimension three, so the point
+covariances $C_N$ converge in trace.  For a circular complex Gaussian vector
+$X$ with eigenvalues $c_a$ of $C_N$,
+\[
+ \E|X|^4=(\Tr C_N)^2+\Tr C_N^2,\qquad
+ \E|X|^6=(\Tr C_N)^3+3\Tr C_N\Tr C_N^2+2\Tr C_N^3. \tag{2.6}
+\]
+Thus the two endpoint moments on the right of (2.2) remain uniformly
+bounded, while the left side grows like $L^3\kappa_{\rm II}N_J$.  This is a
+contradiction for every fixed choice of
+$\alpha_d,\epsilon_d,K_d,C_d$.  We register it as
+\texttt{F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM}.
+
+\section{Exact true-increment telescope}
+
+Put $x_j=\phi_{j-1}$ and $z_j=\phi_j$.  A10 proved
+\[
+ Q_j^{\fr}+\cC_j
+ =V_j-V_{j-1}+q_{B(x_j)}(Dx_j).                       \tag{3.1}
+\]
+Define
+\[
+ \boxed{I_j:=Q_j^{\fr}-q_{B(x_j)}(Dx_j).}             \tag{3.2}
+\]
+Subtracting the last term of (3.1) is an exact identity, not an estimate:
+\[
+ \boxed{I_j+\cC_j=V_j-V_{j-1}.}                       \tag{3.3}
+\]
+The empty initial scale is fixed by
+$\phi_0=0$, $\Gamma_{\le0}=0$, hence $V_0=0$.  Consequently
+\[
+ \boxed{V_J=\sum_{j\le J}(I_j+\cC_j).}               \tag{3.4}
+\]
+There is no residual $E_J$ in (3.4).
+
+Condition on the past $x_j$.  In the real shell Hilbert space let
+\[
+ A_j=M_{B(x_j)}^{1/2}G_j,\quad
+ r_j=M_{B(x_j)}^{1/2}Dx_j,\quad
+ T_j=A_j^*A_j,\quad \ell_j=A_j^*r_j.                 \tag{3.5}
+\]
+For a standard real Gaussian shell coordinate $\xi_j$,
+\[
+ I_j={1\over2}
+ \{\langle\xi_j,T_j\xi_j\rangle-\Tr T_j\}
+ +\langle\ell_j,\xi_j\rangle.                       \tag{3.6}
+\]
+
+\section{Exact determinant and the positive source}
+
+At finite cutoff $T_j\ge0$.  Diagonalising $T_j$ and completing the Gaussian
+square gives, for $p>0$,
+\[
+\begin{split}
+ \log\E_j e^{-pI_j}
+ ={}&{1\over2}\{p\Tr T_j-\log\det(I+pT_j)\}\\
+ &+{p^2\over2}
+ \langle\ell_j,(I+pT_j)^{-1}\ell_j\rangle\\
+ ={}&-{1\over2}\log\det{}_2(I+pT_j)
+ +{p^2\over2}
+ \langle\ell_j,(I+pT_j)^{-1}\ell_j\rangle.
+\end{split}\tag{4.1}
+\]
+The sign of the second line is positive.  The scalar inequality
+$u-\log(1+u)\le u^2/2$ for $u\ge0$ yields
+\[
+ \log\E_j e^{-pI_j}
+ \le {p^2\over4}\|T_j\|_{\mathfrak S_2}^2
+     +{p^2\over2}\|\ell_j\|^2.                      \tag{4.2}
+\]
+
+The positive source is unavoidable.  In one dimension take $T=\tau>0$ and
+$\ell=\sqrt\tau q$.  Its exact contribution is
+\[
+ {p^2\tau q^2\over2(1+p\tau)}.                       \tag{4.3}
+\]
+For fixed $\tau$, this diverges quadratically as $|q|\to\infty$, while
+$\|T\|_{\mathfrak S_2}$ remains fixed.  Hence no bound depending only on the
+Hilbert--Schmidt cost can replace (4.2).  The crude operator inequality that
+bounds (4.3) by a multiple of the past energy merely recreates the already
+refuted $E_J$ route.
+
+Here
+\[
+ \ell_j=G_j^*B(x_j)Dx_j.                              \tag{4.4}
+\]
+A9 controls $\sum_j\|T_j\|_{\mathfrak S_2}^2$ by a terminal quartic.  The
+new load-bearing analytic statement is instead
+\[
+ \sum_j\|G_j^*B(P_{\le j-1}\phi)
+ D P_{\le j-1}\phi\|_2^2
+ \le C_{\rm src}\|\phi\|_6^6.                       \tag{4.5}
+\]
+Equation (4.5) is the gate
+\texttt{A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND}.  The rational coefficient
+$B$ is not band-limited; a valid proof must use an actual sharp-cube
+maximal/square-function or multilinear paraproduct theorem, not a polynomial
+support shortcut.  This note does not prove the source-square bound.
+
+\section{The relative variable must also change}
+
+For $s=1-\theta$, define
+\[
+ \widetilde R_j^\theta:=\theta I_j+\cC_j.             \tag{5.1}
+\]
+Then (3.4) becomes
+\[
+ V_J=\sum_j\{sI_j+\widetilde R_j^\theta\}.            \tag{5.2}
+\]
+The A10 historical variable was
+$R_j^\theta=\theta Q_j^{\fr}+\cC_j$, and
+\[
+ \widetilde R_j^\theta
+ =R_j^\theta-\theta q_{B(x_j)}(Dx_j).                 \tag{5.3}
+\]
+Therefore the old relative log-Laplace gate cannot simply be renamed or
+reused.  After (4.5), the next theorem must be stated for
+$\theta I_j+\cC_j$ and is named
+\texttt{A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE}.
+
+If (4.5) holds and the A9 quartic constant is $C_{\rm fr}$, the determinant
+part has the conditional entropy budget
+\[
+ \E_\nu s\sum_j I_j\ge-\alpha_f\cH(\nu\mid\gamma_J)
+ -{s^2C_{\rm fr}\over4\alpha_f}\E_\nu\|\phi_J\|_4^4
+ -{s^2C_{\rm src}\over2\alpha_f}\E_\nu\|\phi_J\|_6^6. \tag{5.4}
+\]
+This is only a conditional consequence of the open source-square gate.
+The production sextic remainder must be recomputed with the explicit
+$C_{\rm src}$; the previously displayed small reserve cannot be presumed to
+survive.
+
+\section{Executable evidence}
+
+The primary route recomputes the A6 covariance and current contractions,
+uses exact complex-Gaussian fourth and sixth moments, checks (3.3) on a
+genuine three-component spectral field fixture, and verifies (4.1) by
+two-dimensional deterministic Gauss--Hermite quadrature.  It passes 24/24
+assertions.  Its independently derived values are
+\[
+ \kappa_{\rm II}=5.42469581748385\times10^{-4},\qquad
+ {\sum_{N<64}e_N\over64}=5.06948292202567\times10^{-4}. \tag{6.1}
+\]
+
+The non-importing route directly enumerates cube modes, reconstructs all
+three Pauli current contractions, and uses a separate scalar determinant
+quadrature.  It passes 18/18 assertions and finds
+\[
+ \kappa_{\rm II}=5.40500145647357\times10^{-4}.        \tag{6.2}
+\]
+The small finite-reference difference is within the declared cross-route
+tolerance and has the same strictly positive conclusion.
+
+\section{Proof order now fixed}
+
+The surviving order is:
+\begin{enumerate}
+\item retain the negative result for the direct $E_J$ upper form;
+\item use the exact true-increment determinant (3.4)--(4.2);
+\item prove the adapted source-square estimate (4.5), with an explicit
+constant compatible with the production sextic budget;
+\item prove the new relative log-Laplace estimate for (5.1);
+\item reassemble the Nelson inequality, and only then revisit construction
+of the interacting measure.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{DISMISSED -- perhaps positive $E_J$ helps a lower bound.}
+The actual endpoint is the shell sum minus $E_J$.  Its positivity has the
+wrong direction.  The base-Gaussian limit (2.5) makes this quantitative.
+
+\item \textbf{DISMISSED -- the contradiction may confuse density and
+integral.}  Equations (2.4)--(2.5) explicitly restore the volume $L^3$.
+Both sides of (2.2) use torus integrals; the common volume does not alter the
+linear cutoff contradiction.
+
+\item \textbf{VALID WITH MITIGATION -- the initial telescope can hide a
+boundary term.}  We fix $\phi_0=0$ and $\Gamma_{\le0}=0$, hence $V_0=0$.
+For a different initial scale, (3.4) must include $V_0$.
+
+\item \textbf{DISMISSED -- the determinant source should be negative.}
+Completing the square gives the positive sign in (4.1).  Two independent
+Gauss--Hermite routes verify it and a sign flip fails their assertions.
+
+\item \textbf{UPHELD -- an HS-only estimate is insufficient.}  The scalar
+family (4.3) is an exact counterexample.  The adapted source must be retained.
+
+\item \textbf{UPHELD -- A10's individual $L^4$ projector bound closes
+(4.5).}  It does not.  Equation (4.5) needs an $L^6$ vector-valued maximal or
+multilinear estimate with a cutoff-uniform constant.
+
+\item \textbf{UPHELD -- rational $B$ has finite polynomial Fourier support.}
+It does not: the fixed positive denominator prevents a singularity but does
+not make $B(P_{\le j}\phi)$ band-limited.  No support claim is used here.
+
+\item \textbf{UPHELD -- the old relative gate can be reused unchanged.}
+Equation (5.3) shows the missing past energy exactly.  A new relative theorem
+is required.
+
+\item \textbf{UPHELD as an overclaim -- this closes A7 or promotes T5/T6.}
+It does neither.  The honest result is a scoped T4 structural reduction with
+two explicit open gates.  Operator reproduction may later review T5 without
+enlarging the statement; T6 and T7 are excluded.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION
+Tier: T4 PROVED-STRUCTURAL-REDUCTION@FIXED-FLOOR-FINITE-CUTOFF
+Closed: base-Gaussian no-go for the A10 past-energy upper form;
+        exact true-increment action telescope; exact noncentral determinant;
+        positive-source and Hilbert-Schmidt-only no-go.
+Open: A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND;
+      A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE.
+Not claimed: source-square closure, A7 Nelson closure, an interacting measure,
+             floor removal, infinite volume, BCC, T5, T6, or T7.
+Primary expected: 24/24 PASS.
+Independent expected: 18/18 PASS.
+Integrated expected: 58/58 PASS.
+\end{verbatim}
+
+\section*{References}
+
+\begin{enumerate}
+\item TECT claim A6-CLASSII-UV-POWER-COUNTING, sharp-cube covariance and
+positive Class-II ultraviolet slope.
+\item TECT claim A9-CLASSII-SMART-PATH-CANCELLATION, arbitrary-source
+noncentral Gaussian determinant.
+\item TECT claim A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION, exact action
+mismatch and sharp rectangular-cube filtration.
+\end{enumerate}

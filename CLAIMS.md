@@ -5,7 +5,7 @@
 
 Generated: 2026-07-21
 
-**46 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 5 · T5: 10 · T6: 15 · T7: 3 · T7-candidates: 3 · refuted: 1
+**47 claims** · T0: 1 · T1: 10 · T2: 1 · T3: 1 · T4: 6 · T5: 10 · T6: 15 · T7: 3 · T7-candidates: 3 · refuted: 1
 
 Tier scale TSv2 (`governance/tier-system.md`). A claim is exactly as strong
 as its registered tier, scope, and hypotheses — never stronger. Falsifiers,
@@ -21,6 +21,7 @@ reproduction commands, and history live on the claim cards.
 | [A1-PRODUCTION-KERNEL-MANIFEST](claims/A1-PRODUCTION-KERNEL-MANIFEST/claim.md) | Canonical N-001 production-kernel manifest: scalar-slice consistency gates | T5 | ACTIVE | ANALYTIC, EXECUTED | — | — |
 | [A1-SCALAR-ANALYTIC-BRANCH](claims/A1-SCALAR-ANALYTIC-BRANCH/claim.md) | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) | T6 | ACTIVE | ANALYTIC, EXECUTED | A1-SHELL-POSITIVITY | — |
 | [A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION](claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/claim.md) | Frozen-energy relative Class-II structural reduction | T4 | ACTIVE | ANALYTIC, EXACT, EXECUTED, CONDITIONAL | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE |
+| [A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION](claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/claim.md) | Class-II true-increment determinant reduction | T4 | ACTIVE | ANALYTIC, EXACT, EXECUTED | — | A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE |
 | [A2-FULL-PRODUCTION-WELLPOSED](claims/A2-FULL-PRODUCTION-WELLPOSED/claim.md) | Full production three-component gradient-flow well-posedness | T6 | ACTIVE | ANALYTIC, EXECUTED, CONDITIONAL | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — |
 | [A2-PDE-WELLPOSED](claims/A2-PDE-WELLPOSED/claim.md) | Well-posedness of the TECT gradient flow and minimisation problem | T6 | ACTIVE | ANALYTIC, EXECUTED | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — |
 | [A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM](claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/claim.md) | Full-production spectral discretization to continuum PDE | T6 | ACTIVE | ANALYTIC, EXECUTED, CONDITIONAL | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — |

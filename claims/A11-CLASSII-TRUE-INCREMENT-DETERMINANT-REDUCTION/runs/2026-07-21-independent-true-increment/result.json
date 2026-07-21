@@ -1,0 +1,224 @@
+{
+  "assertion_count": 18,
+  "assertions": [
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "positive",
+      "name": "coefficient_matrix_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "E[Psi_n Psi_n^dagger]=2 A(k_n)^-1; the factor 2 is load-bearing",
+      "expected": "factor 2",
+      "name": "complex_covariance_factor_two_explicit",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0005405001456473571,
+      "expected": ">0",
+      "name": "positive_independent_uv_slope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.898217036680265e-05,
+        0.0004341679721048936,
+        0.0017521911958405492,
+        0.004144177650820758,
+        0.008627021306911377,
+        0.017400310244206234,
+        0.03483914953760043
+      ],
+      "expected": "all >0",
+      "name": "independent_energy_ladder_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0071444307809105465,
+      "expected": "<0.15",
+      "name": "independent_last_slope_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.06403671901787673,
+      "expected": "<0.18",
+      "name": "independent_dyadic_sum_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "L4": 0.4770882853583974,
+        "L6": 0.47700597516599597
+      },
+      "expected": "below ceilings",
+      "name": "independent_endpoint_moments_bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "entropy": 0.0,
+        "past_ratio": 0.0005058882896914158,
+        "point_trace": 0.5976114886767823
+      },
+      "expected": "positive past ratio and bounded covariance",
+      "name": "base_gaussian_no_go",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "<1e-12",
+      "name": "scalar_determinant_quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.03430898819439415,
+      "expected": ">0",
+      "name": "scalar_source_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.020239862775590672,
+      "expected": ">=-1e-13",
+      "name": "scalar_HS_source_upper_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 30.25,
+      "expected": ">30",
+      "name": "HS_only_source_scaling_no_go",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<1e-14",
+      "name": "independent_raw_action_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.881784197001252e-16,
+      "expected": "<1e-14",
+      "name": "independent_true_increment_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.661338147750939e-16,
+      "expected": "<1e-14",
+      "name": "relative_variable_shift_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "phi_0=0 and Gamma_le_0=0, hence V_0=0",
+      "expected": "empty initial scale",
+      "name": "phi0_convention_pinned",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+      ],
+      "expected": "source-square first",
+      "name": "source_square_gate_open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+      ],
+      "expected": "true-increment relative second",
+      "name": "new_relative_gate_open",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+  "derived": {
+    "algebra": {
+      "raw_error": 4.440892098500626e-16,
+      "relative_variable_identity_error": 6.661338147750939e-16,
+      "true_error": 8.881784197001252e-16
+    },
+    "coefficient_eigenvalues": [
+      0.0012590115009260615,
+      0.005584738499072227
+    ],
+    "coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414
+    },
+    "cutoff_rows": [
+      {
+        "L4_density": 0.012372141446181964,
+        "L6_density": 0.002017136086236843,
+        "cutoff": 1,
+        "energy_density": 1.898217036680265e-05,
+        "point_trace": 0.09584138443916242
+      },
+      {
+        "L4_density": 0.1221997519557465,
+        "L6_density": 0.06225023729433084,
+        "cutoff": 2,
+        "energy_density": 0.0004341679721048936,
+        "point_trace": 0.30178602239866903
+      },
+      {
+        "L4_density": 0.2772720133693853,
+        "L6_density": 0.21177519704548858,
+        "cutoff": 4,
+        "energy_density": 0.0017521911958405492,
+        "point_trace": 0.45528161021428604
+      },
+      {
+        "L4_density": 0.3761570006466798,
+        "L6_density": 0.33420668317256064,
+        "cutoff": 8,
+        "energy_density": 0.004144177650820758,
+        "point_trace": 0.5305102920717808
+      },
+      {
+        "L4_density": 0.43168548246838356,
+        "L6_density": 0.4106846985789909,
+        "cutoff": 16,
+        "energy_density": 0.008627021306911377,
+        "point_trace": 0.5684077709807527
+      },
+      {
+        "L4_density": 0.46153152247603424,
+        "L6_density": 0.4539101929296484,
+        "cutoff": 32,
+        "energy_density": 0.017400310244206234,
+        "point_trace": 0.5877685934054441
+      },
+      {
+        "L4_density": 0.4770882853583974,
+        "L6_density": 0.47700597516599597,
+        "cutoff": 64,
+        "energy_density": 0.03483914953760043,
+        "point_trace": 0.5976114886767823
+      }
+    ],
+    "delta_cube": 0.01619898645075695,
+    "determinant": {
+      "analytic": 0.06336367972440934,
+      "determinant": 0.029054691530015192,
+      "error": 2.220446049250313e-16,
+      "quadrature": 0.06336367972440957,
+      "source": 0.03430898819439415,
+      "upper_slack": 0.020239862775590672
+    },
+    "dyadic_past_energy_ratio": 0.0005058882896914158,
+    "leading_unit_current_energy": 0.03336629407589266,
+    "predicted_classii_energy_density_slope": 0.0005405001456473571,
+    "terminal_energy_slope": 0.0005443617115250067
+  },
+  "failures": [],
+  "git_commit": "c453a4197f0596ddb80c0486ae895c787821f5c6",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "schema": "tect/a11-classii-true-increment-independent-result/1.0",
+  "script_version": "1.0.0",
+  "verdict": "A11-CLASSII-TRUE-INCREMENT-INDEPENDENT-PASS"
+}

@@ -32,6 +32,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM](#f-2026-07-21-a7-infinitesimal-commutator-form) | A7 commutator-alone all-eta sufficient bound | same-shell resonant translation forces a positive relative-bound threshold |
 | [F-2026-07-21-A7-ZERO-FROZEN-EXCLUSION](#f-2026-07-21-a7-zero-frozen-exclusion) | exclusion of zero-frozen negative commutator directions | covariance trace makes an active-doublet common-phase plane wave strictly negative |
 | [F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION](#f-2026-07-21-a10-naive-action-composition) | direct identification of the A9/A10 shell sum with the actual A7 action | exact telescoping leaves a positive past-energy term with the wrong sign for lower-bound transfer |
+| [F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM](#f-2026-07-21-a10-past-energy-upper-form) | cutoff-uniform absorption of the A10 past-energy mismatch | base Gaussian has linearly growing past energy but bounded endpoint L4/L6 moments |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -206,6 +207,30 @@ variable with its own determinant theorem. The named gate is
 `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`. Closing the separate relative
 log-Laplace gate alone is insufficient. The sharp rectangular-cube filtration
 subgate is closed but does not control this past-energy term.
+
+<a id="f-2026-07-21-a10-past-energy-upper-form"></a>
+### F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM -- direct past-energy absorption fails at the base Gaussian
+
+**Failure mode:** A10 equation (8.4) proposed controlling
+`E_J=sum_j q_(B(phi_(j-1)))(D phi_(j-1))` by a fixed entropy coefficient,
+terminal sextic and quartic moments, and a cutoff-independent constant.  This
+cannot hold even for `nu=gamma_J`.
+
+**Evidence:** `A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`.  At the base
+Gaussian the entropy is zero, while the q^4 covariance is trace class, so the
+terminal L4 and L6 moments are cutoff-uniform.  Marginal consistency and the
+A6 positive ultraviolet slope give, for `N_j=2^j`,
+`E_gamma E_J/(L^3 N_J) -> kappa_II>0`.  The primary route passes 24/24 and
+finds `kappa_II=0.000542469581748385`; the non-importing route passes 18/18
+and finds `0.000540500145647357`; integrated verification is 58/58.
+
+**Consequence:** The direct upper-form branch is retired.  The active route
+uses `I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))`, for which
+`I_j+C_j=V_j-V_(j-1)` exactly.  Its determinant contains a positive adapted
+source-square, so the next load-bearing gates are
+`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and then
+`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`.  This negative result
+does not withdraw A10 T4 or close A7.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

@@ -1,0 +1,170 @@
+{
+  "schema": "tect/a11-classii-true-increment-determinant/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+  "frozen_on": "2026-07-21",
+  "status": "T4 PROVED-STRUCTURAL-REDUCTION@FIXED-FLOOR-FINITE-CUTOFF",
+  "authority": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "schema": "tect/a1-production-functional-realisation/1.0"
+    },
+    "a6_uv_manifest": {
+      "path": "claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json",
+      "sha256": "2fb1bbc997a3e832bd1c16748eb6a2b9ccb2844280fdaa9029289dc860ea0cd9",
+      "schema": "tect/a6-classii-uv-power-counting/1.0"
+    },
+    "a7_composite_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "schema": "tect/a7-classii-renormalised-energy/1.1"
+    },
+    "a9_smart_path_manifest": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/classii_smart_path_manifest.json",
+      "sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+      "schema": "tect/a9-classii-smart-path-cancellation/1.0"
+    },
+    "a10_structural_manifest": {
+      "path": "claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/classii_relative_structural_reduction_manifest.json",
+      "sha256": "ae97c870916b8f1da6822def01c9b8c80243538676f3fdbce42ddc7701b36cc9",
+      "schema": "tect/a10-classii-relative-structural-reduction/1.0"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a11_classii_true_increment_determinant.py",
+      "sha256": "2566d5e059a90106a4b55dc75512a79eae8fffafa91842efeab255d64455cb62",
+      "version": "1.0.0"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a11_classii_true_increment_determinant_independent.py",
+      "sha256": "76719d770cf7171dd79da47d459cd4e1105dbc3204d3a4a476b98b777cbbc9ec",
+      "version": "1.0.0"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a11_classii_true_increment_determinant_verify.py",
+      "sha256": "731c5ea1a9d38bc0766c0eca749078b4abfd47dd50ccb998eed501795635daf2",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/notes/classii-true-increment-determinant-260721-v1.0.tex.txt",
+      "sha256": "6457306c8060e82d962592816f30ce7406520db7efcbff2bdf43691e3749ed11"
+    },
+    "proof_pdf": {
+      "path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/notes/classii-true-increment-determinant-260721-v1.0.pdf",
+      "sha256": "d96010d68d5d3ef0bd9ed6e9165c3edc424b7e5e2f5744d2d2905e55bc703ad0",
+      "pages": 5,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS"
+    }
+  },
+  "scope": "Hash-pinned A1 production Gaussian on the fixed L=16 three-torus, three complex components in the six-real convention, eta_shell=0, fixed rho_regularizer=1e-12, positive production Q_II, exact/dealiased products, and the A7-A10 common real-even sharp rectangular-cube dyadic filtration. The no-go is cutoff asymptotic under the base Gaussian; the determinant theorem is finite-cutoff conditional Gaussian algebra.",
+  "convention": {
+    "complex_mode_covariance": "E[Psi_n Psi_n^dagger]=2 A(k_n)^-1; the factor 2 is load-bearing",
+    "point_covariance": "C_N=(2/V) sum_n A(k_n)^-1 is trace-class in three dimensions for the q^4 production symbol",
+    "one_axis_derivative_covariance": "Gamma_i,N=(2/V) sum_n k_i^2 A(k_n)^-1",
+    "total_derivative_covariance": "Gamma_N^Sigma=sum_i Gamma_i,N; do not insert an additional factor 3",
+    "energy_normalisation": "q_B(Dphi) and V_j are torus integrals; numerical rows report densities and restore the volume V=L^3 explicitly in the asymptotic statement",
+    "reference_local_terms": "F_ref uses lambda/4 times int rho^2 and gamma/6 times int rho^3"
+  },
+  "branch_firewall": {
+    "full_production_shell_mass_squared": 0.260000000009475,
+    "scalar_shell_mass_squared": 0.005,
+    "rule": "The scalar anchor is checked only for non-identity and is never substituted into the full-production covariance."
+  },
+  "past_energy_no_go": {
+    "candidate": "E_nu E_J <= alpha_d H(nu|gamma_J)+epsilon_d E_nu||phi_J||_6^6+K_d E_nu||phi_J||_4^4+C_d with constants independent of J",
+    "base_measure": "Set nu=gamma_J, so H=0.",
+    "left_asymptotic": "For N_j=2^j, E_gamma E_J/(L^3 N_J) -> kappa_II>0 by A6 and marginal consistency.",
+    "right_asymptotic": "The endpoint L4 and L6 Gaussian moments remain O(1) because C_N converges in trace.",
+    "negative_result": "F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM"
+  },
+  "true_increment": {
+    "definition": "I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))",
+    "initial_condition": "phi_0=0 and Gamma_le_0=0, hence V_0=0",
+    "telescope": "I_j+C_j=V_j-V_(j-1), hence V_J=sum_(j<=J)(I_j+C_j)",
+    "operator_data": "A_j=M_(B(x_j))^(1/2) G_j, r_j=M_(B(x_j))^(1/2) D x_j, T_j=A_j^*A_j, ell_j=A_j^*r_j=G_j^*B(x_j)D x_j",
+    "conditional_log_laplace": "log E_j exp(-p I_j)=0.5[p Tr T_j-log det(I+pT_j)]+0.5 p^2 <ell_j,(I+pT_j)^-1 ell_j>",
+    "upper_bound": "log E_j exp(-p I_j)<=p^2||T_j||_S2^2/4+p^2||ell_j||^2/2",
+    "relative_variable": "theta*I_j+C_j",
+    "legacy_relative_variable": "theta*Q_j^fr+C_j"
+  },
+  "route_disposition": {
+    "past_energy_upper_form": "REFUTED",
+    "true_increment": "ACTIVE"
+  },
+  "proof_order": [
+    "Register the base-Gaussian no-go for the direct past-energy upper form.",
+    "Use I_j to telescope the actual A7 action exactly.",
+    "Retain and bound the positive adapted source-square term.",
+    "Prove the stabilised relative log-Laplace estimate for theta I_j+C_j.",
+    "Reassemble the Nelson budget and only then revisit the interacting measure."
+  ],
+  "open_followups": [
+    "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+    "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+  ],
+  "primary_audit": {
+    "cutoffs": [1, 2, 4, 8, 16, 32, 64],
+    "reference_cutoff": 256,
+    "gauss_hermite_order": 6,
+    "reference_quadrature_order": 8,
+    "cube_integral_order": 128,
+    "seed": 20260721,
+    "hermite_order": 28,
+    "determinant_tolerance": 1e-11,
+    "slope_relative_tolerance": 0.12,
+    "dyadic_relative_tolerance": 0.15,
+    "point_covariance_trace_ceiling": 2.0,
+    "L4_density_ceiling": 2.0,
+    "L6_density_ceiling": 3.0
+  },
+  "independent_audit": {
+    "cutoffs": [1, 2, 4, 8, 16, 32, 64],
+    "reference_cutoff": 128,
+    "gauss_hermite_order": 5,
+    "reference_quadrature_order": 6,
+    "cube_integral_order": 192,
+    "seed": 20260722,
+    "algebra_samples": 500,
+    "hermite_order": 80,
+    "determinant_tolerance": 1e-12,
+    "slope_relative_tolerance": 0.15,
+    "dyadic_relative_tolerance": 0.18,
+    "point_covariance_trace_ceiling": 2.0,
+    "L4_density_ceiling": 2.0,
+    "L6_density_ceiling": 3.0
+  },
+  "integrated_audit": {
+    "primary_assertions": 24,
+    "independent_assertions": 18,
+    "cross_assertions": 16,
+    "expected_aggregate_assertions": 58,
+    "numeric_relative_tolerance": 0.08
+  },
+  "run_contract": {
+    "primary_result_schema": "tect/a11-classii-true-increment-primary-result/1.0",
+    "independent_result_schema": "tect/a11-classii-true-increment-independent-result/1.0",
+    "integrated_result_schema": "tect/a11-classii-true-increment-integrated-result/1.0",
+    "primary_result_path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/runs/2026-07-21-primary-true-increment/result.json",
+    "independent_result_path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/runs/2026-07-21-independent-true-increment/result.json",
+    "integrated_result_path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/runs/2026-07-21-integrated-true-increment/result.json"
+  },
+  "honesty_boundary": {
+    "closed": [
+      "the base-Gaussian contradiction for the A10 past-energy upper-form route",
+      "the exact true-increment action telescope at every finite cutoff",
+      "the exact noncentral conditional determinant formula",
+      "the positive-source and Hilbert-Schmidt-only no-go"
+    ],
+    "excluded": [
+      "the adapted source-square or sharp-cube L6 paraproduct estimate",
+      "the true-increment stabilised relative log-Laplace estimate",
+      "a positive production sextic budget after source allocation",
+      "the A7 Nelson exponential bound",
+      "an interacting full three-component Gibbs measure",
+      "rho-floor removal, regulator independence, or infinite volume",
+      "phase transition, BCC existence or selection, T5, T6, or T7"
+    ]
+  }
+}

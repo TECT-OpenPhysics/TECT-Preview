@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-055](#r-055) | Class-II true-increment determinant and past-energy no-go | T4 PROVED-STRUCTURAL-REDUCTION; base Gaussian refutes the direct past-energy upper form, while the true increment exactly telescopes the endpoint and exposes the positive adapted source-square as the next gate |
 | [R-054](#r-054) | Frozen-energy relative Class-II structural reduction | T4 PROVED-STRUCTURAL-REDUCTION; exact Gamma_j convention, corrected covariance factor, strict-dyadic raw theta=1 sharpness, trace defect, exact action mismatch, closed sharp-cube filtration, and two-antecedent conditional composition; action recovery and relative log-Laplace remain open |
 | [R-053](#r-053) | Resonant no-go for an infinitesimal Class-II commutator-alone form bound | T5 EXACT-NO-GO; a same-shell scalar-ray triad forces a positive entropy-sextic relative-bound threshold, while retained frozen source energy compensates the witness |
 | [R-052](#r-052) | Spatial-background Class-II det2 bound and decoupled Nelson measure | T5 PINNED-CLOSURE; arbitrary deterministic spatial PSD L2 backgrounds obey an explicit M_R^4 Schatten bound, and the independent coefficient/derivative product-Gaussian model has all fixed-p moments and a full-sequence limit; self-coupling remains open |
@@ -74,6 +75,39 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-055"></a>
+### R-055 -- Class-II true-increment determinant and past-energy no-go
+
+**Statement.** In the fixed-floor A1/A7--A10 sharp-cube production scope,
+the proposed cutoff-uniform upper form on the positive past-energy mismatch is
+false already under the base Gaussian: entropy is zero, endpoint `L4` and
+`L6` moments remain bounded, but
+`E E_J/(L^3 2^J) -> kappa_II>0`.  The exact replacement
+`I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))` satisfies
+`I_j+C_j=V_j-V_(j-1)`.  Its conditional log-Laplace transform is the
+regularised determinant plus the positive source
+`(p^2/2)<ell_j,(I+pT_j)^(-1)ell_j>`.  A scalar family proves that no
+Hilbert--Schmidt-only estimate can remove this source.
+
+**Where proved.** `A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`, proof
+note `classii-true-increment-determinant-260721-v1.0`; primary 24/24,
+non-importing independent 18/18, and integrated 58/58 PASS.  The five-page
+PDF passes form, zero-overfull, and full visual QA.
+
+**Reuse.** Multiscale derivative-Gibbs arguments with adapted noncentral
+Gaussian shells.  The result prevents a positive accumulated past energy
+from being absorbed by bounded endpoint moments, gives the correct exact
+increment variable, and isolates the precise vector-valued source-square
+that a subsequent harmonic-analysis theorem must control.
+
+**Tier / publication target.** T4 PROVED-STRUCTURAL-REDUCTION.  The next
+theorems are `A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and then
+`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`.  Source-square closure,
+A7 Nelson, an interacting Gibbs measure, floor removal, infinite volume, BCC,
+T5, T6, and T7 are not claimed.
+
+---
+
 <a id="r-054"></a>
 ### R-054 -- frozen-energy relative Class-II structural reduction
 
@@ -90,9 +124,11 @@ strictly positive entropy coefficient. The exact shell bookkeeping is
 `E_J=sum_j q_(B(phi_(j-1)))(D phi_(j-1))`; thus the actual endpoint action
 requires subtracting `E_J`. A sharp rectangular-cube filtration closes
 independent innovations and uniform terminal `L4` stability. Under both a
-still-open upper form bound on `E_J` and the still-open relative log-Laplace
-antecedent, the exact conditional composition theorem yields
+then-open upper form bound on `E_J` and the relative log-Laplace antecedent,
+the exact conditional composition theorem yields
 `log E exp(-pS_J)<=p(C_theta+C_d)+4pL^3A_4^3/(27B_6^2)`.
+The successor R-055 later refutes that direct upper-form branch and replaces
+it by the exact true increment; R-054's structural identity remains valid.
 
 **Where proved.**
 `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`, proof note

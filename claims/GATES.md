@@ -180,8 +180,10 @@ At `epsilon=0.3`, `theta=3/16` neutralises this ray without entropy or sextic
 expenditure; it is neither a global raw threshold nor an absolute lower bound
 when positive budgets are allowed. It also closes a sharp rectangular-cube
 filtration route with independent innovations and a uniform `L4` projection
-bound. The two remaining load-bearing gates are action recovery and the
-all-field relative log-Laplace estimate below.
+bound. A11 subsequently closes action recovery by the true-increment branch,
+refutes direct past-energy absorption, and replaces the old relative variable.
+The surviving load-bearing gates are now the A11 adapted source-square and
+true-increment relative log-Laplace estimates below.
 
 ### **A10-CLASSII-DYADIC-FILTRATION-REALISATION**
 
@@ -207,12 +209,19 @@ is an upper form bound
 `E_J=sum_(j<=J) q_(B(phi_(j-1)))(D phi_(j-1))`; an alternative is a
 true-increment variable with a newly proved determinant theorem.
 
-**Status:** OPEN (2026-07-21). A10 proves exactly
+**Status:** CLOSED@A11-TRUE-INCREMENT-DETERMINANT (2026-07-21). A10 proves exactly
 `Q_j^fr+C_j=V_j-V_(j-1)+q_(B(phi_(j-1)))(D phi_(j-1))`, hence
 `sum_j(Q_j^fr+C_j)=V_J+E_J` when `V_0=0`. Since `E_J>=0`, the actual action is
 the shell expression minus `E_J`; positivity has the wrong direction for a
-lower bound. This falsifies the naive one-gate composition and leaves the
-quantitative upper form bound or true-increment reconstruction open.
+lower bound. `A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION` proves that the
+quantitative upper-form branch is impossible already under the base Gaussian:
+`E E_J/(L^3 2^J)->kappa_II>0` while entropy vanishes and terminal `L4/L6`
+moments remain bounded. It then defines
+`I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))` and proves exactly
+`I_j+C_j=V_j-V_(j-1)` together with its noncentral conditional determinant.
+Thus action reconstruction is closed by the true-increment branch, not by
+past-energy absorption. The determinant's positive source-square is the
+separate successor gate below.
 
 ### **A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE**
 
@@ -227,7 +236,8 @@ filtration proof must retain the endpoint self-coupled square or allocate the
 final sextic through the scales. The sharp rectangular-cube filtration is
 available; overlapping smooth Littlewood--Paley decompositions are not covered.
 
-**Status:** OPEN (2026-07-21).  A10 proves the exact finite-cutoff
+**Status:** OPEN AS A HISTORICAL Q-RELATIVE BRANCH; SUPERSEDED ON THE ACTIVE
+TRUE-INCREMENT COMPOSITION (2026-07-21). A10 proves the exact finite-cutoff
 Gibbs-variational equivalence, the necessity of `alpha_c>0`, and the
 two-antecedent conditional composition theorem. In that theorem
 `C_fr=C_sh(L)M_R^4 c_sym^-2 beta_B^2 C_LP,4^4 S_dy`,
@@ -241,6 +251,55 @@ The proof-friendly target is `theta=0.90`, `alpha_f=0.05`, `alpha_c=0.80`,
 It gives `p*alpha=0.979` and `B_6=0.01`, but `K_d,C_d` remain symbolic and
 neither open estimate is proved. No A7 Nelson closure or interacting Gibbs
 measure is claimed.
+
+`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION` shows that the active exact
+action decomposition uses `I_j`, so its relative variable must be
+`theta I_j+C_j=(theta Q_j^fr+C_j)-theta q_(B(phi_(j-1)))(D phi_(j-1))`.
+Consequently, closing this historical gate alone would not feed the exact
+true-increment composition. The load-bearing replacement is the A11 gate
+below.
+
+### **A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND**
+
+**Statement:** For the sharp rectangular-cube dyadic filtration and the
+fixed-floor production coefficient, prove a cutoff-uniform estimate with an
+explicit constant
+`sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2`
+`<=C_src ||phi||_6^6`, or a resolvent-sharpened version strong enough for the
+same production budget. The proof must retain the rational coefficient, all
+`M_R` and symbol constants, the three-component/six-real convention, and the
+sharp-cube geometry. It must use a genuine `L6` vector-valued maximal/square
+function or multilinear paraproduct theorem; individual `L4` projection
+stability and polynomial Fourier-support shortcuts are insufficient.
+
+**Status:** OPEN (2026-07-21), EXACTLY REDUCED BY A11. The true-increment
+determinant is
+`-0.5 log det_2(I+pT_j)+0.5 p^2<ell_j,(I+pT_j)^(-1)ell_j>` with
+`ell_j=G_j^*B(phi_(j-1))D phi_(j-1)`. A scalar source family proves that no
+Hilbert--Schmidt-only estimate can delete this positive term. A9 already
+controls the summed Hilbert--Schmidt part by a terminal quartic. The present
+source-square is therefore the first surviving load-bearing analytic gate.
+Its explicit `C_src` must be compared with `gamma/6`; existence of a finite
+constant alone is not yet a positive production sextic budget.
+
+### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
+
+**Statement:** After the adapted source-square gate closes, prove for some
+fixed `theta in (0,1)`, `alpha_c>0`, and explicit quartic/sextic stabilisers a
+cutoff-uniform entropy or log-Laplace bound for
+`sum_j[theta I_j+C_j]`, where
+`I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))`. Combine it with the determinant
+budget for `(1-theta)I_j`, retain a strict positive production sextic
+remainder, and exhibit `p>1` with total entropy coefficient below `1/p`.
+
+**Status:** OPEN, BLOCKED IN PROOF ORDER BY
+`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` (2026-07-21). The historical A10
+bound for `theta Q_j^fr+C_j` is not the required statement: the two variables
+differ by the positive past energy whose direct upper form is refuted. After
+the source theorem, the determinant contribution has conditional budget
+`-alpha_f H-s^2 C_fr/(4 alpha_f) E||phi||_4^4`
+`-s^2 C_src/(2 alpha_f) E||phi||_6^6`, `s=1-theta`. All constants and the
+remaining sextic reserve must be recomputed before any A7 Nelson conclusion.
 
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 

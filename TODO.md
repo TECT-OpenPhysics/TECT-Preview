@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 41
+Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 4 · Done (recent) 42
 
 ## Next up
 
@@ -18,8 +18,11 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 41
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-046** A10: control the multiscale action mismatch, then close the relative log-Laplace bound  _(owner: Codex; claim: A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION; gate: A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION)_
-  - A10 T4 structural reduction corrected by pre-freeze adversarial audit on 2026-07-21. It fixes the Gamma_j frozen trace, restores the A6/A7 complex-covariance factor two, proves strict-dyadic raw theta=1 sharpness and the zero-frozen negative trace direction, and exactly derives sum_j(Q_fr+C)=V_J+E_J with E_J=sum_j q_(B(phi_(j-1)))(D phi_(j-1))>=0. The naive one-gate composition is false because actual V_J subtracts E_J. First prove a cutoff-uniform upper form bound for E_J or a true-increment determinant theorem; then close A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE. The sharp rectangular-cube independent-innovation and uniform L4 filtration subgate is closed. Canonical verification target is primary 47/47, independent 34/34, integrated 101/101. Neither open gate alone closes A7 Nelson or the interacting measure.
+- **T-047** A11: prove the adapted source-square bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND)_
+  - Next proof gate. Prove a genuine sharp-cube L6 vector-valued or six-linear paraproduct bound for sum_j ||G_j^*B(P_<=j-1 phi)D P_<=j-1 phi||_2^2, retain rational fixed-floor B and all M_R factors, and compute an explicit C_src against the production sextic budget. Individual L4 projection stability is insufficient.
+  - _updated 2026-07-21_
+- **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE)_
+  - Blocked in proof order by T-047. Prove the stabilised relative estimate for theta I_j+C_j, not theta Q_j^fr+C_j; then recompute quartic/sextic budgets before any A7 Nelson composition.
   - _updated 2026-07-21_
 
 ## Done (recent)
@@ -135,3 +138,6 @@ Counts: In progress 0 · Next up 1 · Blocked 0 · Backlog 3 · Done (recent) 41
 - **T-044** A6/A7: define the exact counterterm and close renormalised J*K and K^2 composites  _(owner: Codex; claim: A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE; gate: A6-CLASSII-COUNTERTERM-CLOSURE)_
   - Composite and divergent-subgraph subgate closed at scoped T5; interacting stability, density convergence, and tightness move to the A7 Nelson gate.
   - _updated 2026-07-20_
+- **T-046** A10/A11: close the action mismatch by the true-increment determinant  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION)_
+  - DONE by A11 on 2026-07-21. The direct E_J upper-form branch is refuted at nu=gamma_J: entropy is zero, endpoint L4/L6 moments are bounded, but E E_J/(L^3 2^J) tends to positive kappa_II. The replacement I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1)) exactly satisfies I_j+C_j=V_j-V_(j-1), and its noncentral determinant is closed. Primary 24/24, independent 18/18, integrated 58/58. The positive source-square and reformulated relative log-Laplace estimates are split into T-047 and T-048.
+  - _updated 2026-07-21_

@@ -80,14 +80,19 @@ withdraw A9 T5, because the
 discarded covariance-normal frozen term has positive source energy on the
 witness. The later `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION` fixes that
 successor problem at T4 structural depth. It proves the exact action mismatch
-and closes a sharp rectangular-cube filtration subgate, but leaves two
-load-bearing antecedents open: `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`
-and `A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`. Thus the remaining
-constructive obstruction is not the finite-cutoff smart-path identity or
-frozen-shell determinant, and neither A10 antecedent alone closes the A7
-Nelson estimate. The separate branch-aware bare-concentration theorem also
-remains open. Parameter identity, regulariser removal, infinite volume, phase
-transition, BCC, and T7 remain outside the current Sector-A theorem.
+and closes a sharp rectangular-cube filtration subgate. The follow-up
+`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION` proves that the direct
+past-energy upper form is impossible already at the base Gaussian, retires
+that branch, and exactly reconstructs the endpoint with
+`I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))`. The finite-cutoff noncentral
+determinant is closed, but it contains a positive adapted source-square. The
+two load-bearing antecedents are now, in order,
+`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and
+`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` for
+`theta I_j+C_j`. Neither alone closes the A7 Nelson estimate. The separate
+branch-aware bare-concentration theorem also remains open. Parameter identity,
+regulariser removal, infinite volume, phase transition, BCC, and T7 remain
+outside the current Sector-A theorem.
 
 ## Stage 2 — Prove the vacuum (Sector B) ← **critical path**
 
@@ -174,29 +179,23 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION** — the A10 structural
-   reduction now fixes the A9 frozen trace as `Gamma_j`, proves that the sharp
-   cost-free raw fraction is `theta=1` even for strict dyadic splits, and
-   exhibits a zero-frozen negative covariance-trace direction.  Such
-   directions cannot be excluded; they require `alpha_c>0` entropy control.
-   More importantly, it proves
-   `sum_j(Q_j^fr+C_j)=V_J+sum_j q_(B(phi_(j-1)))(D phi_(j-1))`, so the shell
-   sum does not by itself reconstruct the actual A7 action. First prove a
-   cutoff-uniform upper form bound on this positive past-energy term or a new
-   true-increment determinant theorem. The sharp rectangular-cube filtration
-   prerequisite is already closed by independent Fourier blocks and the
-   tensorised M. Riesz `L4` bound.
-3. **A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE** — after or alongside the
-   action gate, prove the cutoff-uniform stabilised relative log-Laplace
-   estimate while retaining the endpoint self-coupled square or a proved
-   production-sextic allocation. Both gates, not either one alone, feed the
-   conditional self-coupled `p>1` estimate; interacting-density convergence,
-   tightness, and the fixed-volume full three-component Gibbs limit remain
-   subsequent gates.
+2. **A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND** — A11 refutes the direct
+   past-energy upper-form route and closes the exact true-increment action
+   telescope and determinant. The next theorem must bound
+   `sum_j ||G_j^* B(P_<=j-1 phi) D P_<=j-1 phi||_2^2` by an explicit
+   cutoff-uniform terminal sextic constant. A10's individual `L4` projection
+   estimate is insufficient; use a genuine sharp-cube `L6` vector-valued or
+   multilinear paraproduct theorem, retain the rational fixed-floor
+   coefficient, and quantify the constant against the production sextic
+   budget.
+3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — after the source
+   square closes, prove the relative estimate for `theta I_j+C_j`, not the
+   historical `theta Q_j^fr+C_j`. Recompute the quartic and sextic allocation
+   before composing the conditional self-coupled `p>1` estimate.
 4. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
    unmodified spatial Gibbs law across all Class-II null branches; the
    conditional `W_eps=0` branch and local proxy limits are not sufficient.
-5. **A7 constructive successor** — only after both A10 analytic gates close,
+5. **A7 constructive successor** — only after both A11 analytic gates close,
    package the resulting fixed-floor finite-volume measure below T6 first;
    keep floor removal and infinite volume separate.
 6. **Backlog T-030** — arbitrary-Q DR-2 remains a non-load-bearing Sector-B

@@ -1,0 +1,308 @@
+{
+  "assertion_count": 24,
+  "assertions": [
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "a1_authority_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.260000000009475,
+      "expected": {
+        "full_production_shell_mass_squared": 0.260000000009475,
+        "rule": "The scalar anchor is checked only for non-identity and is never substituted into the full-production covariance.",
+        "scalar_shell_mass_squared": 0.005
+      },
+      "name": "full_production_shell_mass_not_scalar_anchor",
+      "status": "PASS"
+    },
+    {
+      "actual": 1e-12,
+      "expected": ">0",
+      "name": "fixed_positive_rho_floor",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "eta_shell_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0005424695817483847,
+      "expected": ">0",
+      "name": "positive_uv_slope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.9016254325488223e-05,
+        0.00043499403175746565,
+        0.001755746426777148,
+        0.004152788495876685,
+        0.008645130676326895,
+        0.017437014815900608,
+        0.03491281769688778
+      ],
+      "expected": "all >0",
+      "name": "finite_cutoff_energy_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.005609890153985568,
+      "expected": "<0.12",
+      "name": "terminal_energy_slope_approaches_kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.06548070295726471,
+      "expected": "<0.15",
+      "name": "dyadic_past_sum_approaches_kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.03244469070096429,
+      "expected": ">0.017437014815900608",
+      "name": "dyadic_past_sum_grows_with_terminal_cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5976114886769683,
+      "expected": "<2.0",
+      "name": "point_covariance_trace_bounded_on_ladder",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.477088285358703,
+      "expected": "<2.0",
+      "name": "endpoint_L4_density_bounded_on_ladder",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.47700597516646753,
+      "expected": "<3.0",
+      "name": "endpoint_L6_density_bounded_on_ladder",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "L4": 0.477088285358703,
+        "L6": 0.47700597516646753,
+        "entropy": 0.0,
+        "past_ratio": 0.0005069482922025671
+      },
+      "expected": "positive linear past-energy ratio with bounded endpoint moments",
+      "name": "upper_form_base_gaussian_contradiction",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<1e-12",
+      "name": "genuine_field_raw_action_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": "<1e-12",
+      "name": "genuine_field_true_increment_telescope",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.06387029906553411,
+      "expected": ">0",
+      "name": "shell_covariance_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.465450562766819e-16,
+      "expected": "<1e-11",
+      "name": "noncentral_determinant_quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.010412052049890652,
+      "expected": ">=-1e-12",
+      "name": "determinant_HS_source_upper_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.06781370696892226,
+      "expected": ">0",
+      "name": "source_term_strictly_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 81.00000000000001,
+      "expected": ">80",
+      "name": "HS_only_bound_falsified_by_source_scaling",
+      "status": "PASS"
+    },
+    {
+      "actual": 81.00000000000001,
+      "expected": 81.0,
+      "name": "source_scaling_is_quadratic",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+      ],
+      "expected": [
+        "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+        "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+      ],
+      "name": "remaining_gate_firewall",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "conditional_log_laplace": "log E_j exp(-p I_j)=0.5[p Tr T_j-log det(I+pT_j)]+0.5 p^2 <ell_j,(I+pT_j)^-1 ell_j>",
+        "definition": "I_j=Q_j^fr-q_(B(phi_(j-1)))(D phi_(j-1))",
+        "initial_condition": "phi_0=0 and Gamma_le_0=0, hence V_0=0",
+        "legacy_relative_variable": "theta*Q_j^fr+C_j",
+        "operator_data": "A_j=M_(B(x_j))^(1/2) G_j, r_j=M_(B(x_j))^(1/2) D x_j, T_j=A_j^*A_j, ell_j=A_j^*r_j=G_j^*B(x_j)D x_j",
+        "relative_variable": "theta*I_j+C_j",
+        "telescope": "I_j+C_j=V_j-V_(j-1), hence V_J=sum_(j<=J)(I_j+C_j)",
+        "upper_bound": "log E_j exp(-p I_j)<=p^2||T_j||_S2^2/4+p^2||ell_j||^2/2"
+      },
+      "expected": "new true-increment relative variable",
+      "name": "old_relative_variable_not_reused",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "past_energy_upper_form": "REFUTED",
+        "true_increment": "ACTIVE"
+      },
+      "expected": "past-energy route REFUTED",
+      "name": "direct_upper_form_route_refuted",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+  "closed": [
+    "base-Gaussian no-go for the A10 past-energy upper-form route",
+    "exact true-increment action telescoping",
+    "exact noncentral true-increment determinant formula",
+    "necessity of the positive adapted source-square term"
+  ],
+  "derived": {
+    "cumulative_past_energy_density": 0.03244469070096429,
+    "cutoff_rows": [
+      {
+        "L4_density": 0.01237214144618198,
+        "L6_density": 0.0020171360862368468,
+        "cutoff": 1,
+        "energy_density": 1.9016254325488223e-05,
+        "mode_count": 27,
+        "point_covariance_trace": 0.09584138443916244
+      },
+      {
+        "L4_density": 0.12219975195574642,
+        "L6_density": 0.06225023729433078,
+        "cutoff": 2,
+        "energy_density": 0.00043499403175746565,
+        "mode_count": 125,
+        "point_covariance_trace": 0.3017860223986689
+      },
+      {
+        "L4_density": 0.27727201336938556,
+        "L6_density": 0.21177519704548897,
+        "cutoff": 4,
+        "energy_density": 0.001755746426777148,
+        "mode_count": 729,
+        "point_covariance_trace": 0.45528161021428626
+      },
+      {
+        "L4_density": 0.37615700064667634,
+        "L6_density": 0.3342066831725561,
+        "cutoff": 8,
+        "energy_density": 0.004152788495876685,
+        "mode_count": 4913,
+        "point_covariance_trace": 0.5305102920717784
+      },
+      {
+        "L4_density": 0.43168548246837324,
+        "L6_density": 0.41068469857897627,
+        "cutoff": 16,
+        "energy_density": 0.008645130676326895,
+        "mode_count": 35937,
+        "point_covariance_trace": 0.5684077709807457
+      },
+      {
+        "L4_density": 0.4615315224759571,
+        "L6_density": 0.4539101929295341,
+        "cutoff": 32,
+        "energy_density": 0.017437014815900608,
+        "mode_count": 274625,
+        "point_covariance_trace": 0.5877685934053951
+      },
+      {
+        "L4_density": 0.477088285358703,
+        "L6_density": 0.47700597516646753,
+        "cutoff": 64,
+        "energy_density": 0.03491281769688778,
+        "mode_count": 2146689,
+        "point_covariance_trace": 0.5976114886769683
+      }
+    ],
+    "delta_cube": 0.01619898645075697,
+    "determinant": {
+      "analytic_log_laplace": 0.07837692361402554,
+      "determinant_part": 0.010563216645103277,
+      "ell_squared": 0.2878767246948479,
+      "hs_squared": 0.09070536587707995,
+      "p": 0.73,
+      "quadrature_error": 8.465450562766819e-16,
+      "quadrature_log_laplace": 0.0783769236140247,
+      "scalar_source_growth_ratio": 81.00000000000001,
+      "scalar_source_large": 9.109039299799349,
+      "scalar_source_small": 0.11245727530616478,
+      "source_part": 0.06781370696892226,
+      "trace_T": 0.30926313260406946,
+      "upper_bound": 0.08878897566391619,
+      "upper_bound_slack": 0.010412052049890652
+    },
+    "dyadic_past_energy_ratio": 0.0005069482922025671,
+    "full_production_shell_mass_squared": 0.260000000009475,
+    "leading_unit_current_energy": 0.033487871812068554,
+    "predicted_classii_energy_density_slope": 0.0005424695817483847,
+    "spectral_telescope": {
+      "commutator": -3.977006905878837e-05,
+      "gamma_shell_minimum_eigenvalue": 0.06387029906553411,
+      "q_frozen": -0.00037562378095643055,
+      "q_past": 0.0002614961998069679,
+      "raw_shell_identity_error": 1.0842021724855044e-19,
+      "true_increment": -0.0006371199807633985,
+      "true_increment_identity_error": 1.0842021724855044e-19,
+      "v_endpoint": -0.0008645251293602508,
+      "v_previous": -0.00018763507953806408
+    },
+    "terminal_energy_slope": 0.0005455127765138716
+  },
+  "failures": [],
+  "git_commit": "c453a4197f0596ddb80c0486ae895c787821f5c6",
+  "inputs": {
+    "cutoffs": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "gauss_hermite_order": 6,
+    "reference_cutoff": 256
+  },
+  "open_followups": [
+    "A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND",
+    "A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE"
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "schema": "tect/a11-classii-true-increment-primary-result/1.0",
+  "script_version": "1.0.0",
+  "verdict": "A11-CLASSII-TRUE-INCREMENT-PRIMARY-PASS"
+}

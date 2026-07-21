@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A11 true-increment determinant closes action recovery and refutes the past-energy upper form] - 2026-07-21
+
+The base Gaussian disproves every cutoff-uniform A10 E_J upper form with fixed entropy/quartic/sextic constants. A11 replaces it by I_j=Q_j^fr-q_B(D phi_(j-1)), proves exact endpoint telescoping and the noncentral determinant, and isolates the positive adapted source-square. Primary 24/24, non-importing independent 18/18, integrated 58/58, and five-page PDF QA pass. T4 only; source-square and true-increment relative log-Laplace gates remain open.
+
 ## [Repair A10 covariance normalization and isolate the multiscale action gate] - 2026-07-21
 
 The final adversarial audit found and repaired two load-bearing defects in the initial A10 record. The A6/A7 complex covariance gives Gamma=realify(sum |k|^2 A(k)^-1/V), so both finite plane-wave builders had been low by a factor two; independent finite-cutoff slope regressions now converge to the unchanged analytic coefficient. More importantly, the exact composition is sum_j(Q_fr+C)=V_J+E_J with E_J>=0, so the actual A7 action is the shell sum minus E_J and the earlier one-gate inference was invalid. A10 therefore closes only a T4 structural reduction plus the sharp rectangular-cube filtration subgate. The separate action-recovery and stabilised relative log-Laplace gates remain open. The corrected package passes primary 47/47, non-importing independent 34/34, integrated 101/101, and an eight-page PDF form and visual check.
