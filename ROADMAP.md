@@ -78,13 +78,16 @@ entropy, and sextic terms share the same `K^6` scaling under an admissible
 covariance-contracted Gaussian tilt with a Cameron--Martin mean. This does not
 withdraw A9 T5, because the
 discarded covariance-normal frozen term has positive source energy on the
-witness. The
-remaining constructive obstruction is therefore the corrected
-frozen-energy-relative commutator bound, not the finite-cutoff smart-path
-identity or frozen-shell determinant. The separate branch-aware
-bare-concentration theorem also remains open. Parameter identity, regulariser
-removal, infinite volume, phase transition, BCC, and T7 remain outside the
-current Sector-A theorem.
+witness. The later `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION` fixes that
+successor problem at T4 structural depth. It proves the exact action mismatch
+and closes a sharp rectangular-cube filtration subgate, but leaves two
+load-bearing antecedents open: `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`
+and `A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`. Thus the remaining
+constructive obstruction is not the finite-cutoff smart-path identity or
+frozen-shell determinant, and neither A10 antecedent alone closes the A7
+Nelson estimate. The separate branch-aware bare-concentration theorem also
+remains open. Parameter identity, regulariser removal, infinite volume, phase
+transition, BCC, and T7 remain outside the current Sector-A theorem.
 
 ## Stage 2 — Prove the vacuum (Sector B) ← **critical path**
 
@@ -171,22 +174,32 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND** — the former
-   commutator-alone all-`eta` target is falsified by a same-shell resonant
-   translation. Retain a fixed fraction of the complete covariance-normal
-   frozen energy, determine or bound the all-ray critical fraction, exclude
-   zero-frozen/negative-commutator directions, and prove a trace-safe
-   cutoff-uniform conditional log-Laplace estimate with explicit entropy,
-   quartic, and sextic budgets. Only then derive the self-coupled `p>1`
-   estimate, interacting-density convergence, tightness, and fixed-volume
-   full three-component Gibbs limit.
-3. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
+2. **A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION** — the A10 structural
+   reduction now fixes the A9 frozen trace as `Gamma_j`, proves that the sharp
+   cost-free raw fraction is `theta=1` even for strict dyadic splits, and
+   exhibits a zero-frozen negative covariance-trace direction.  Such
+   directions cannot be excluded; they require `alpha_c>0` entropy control.
+   More importantly, it proves
+   `sum_j(Q_j^fr+C_j)=V_J+sum_j q_(B(phi_(j-1)))(D phi_(j-1))`, so the shell
+   sum does not by itself reconstruct the actual A7 action. First prove a
+   cutoff-uniform upper form bound on this positive past-energy term or a new
+   true-increment determinant theorem. The sharp rectangular-cube filtration
+   prerequisite is already closed by independent Fourier blocks and the
+   tensorised M. Riesz `L4` bound.
+3. **A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE** — after or alongside the
+   action gate, prove the cutoff-uniform stabilised relative log-Laplace
+   estimate while retaining the endpoint self-coupled square or a proved
+   production-sextic allocation. Both gates, not either one alone, feed the
+   conditional self-coupled `p>1` estimate; interacting-density convergence,
+   tightness, and the fixed-volume full three-component Gibbs limit remain
+   subsequent gates.
+4. **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION** — separately classify the
    unmodified spatial Gibbs law across all Class-II null branches; the
    conditional `W_eps=0` branch and local proxy limits are not sufficient.
-4. **A7 constructive successor** — only after the exponential gate closes,
+5. **A7 constructive successor** — only after both A10 analytic gates close,
    package the resulting fixed-floor finite-volume measure below T6 first;
    keep floor removal and infinite volume separate.
-5. **Backlog T-030** — arbitrary-Q DR-2 remains a non-load-bearing Sector-B
+6. **Backlog T-030** — arbitrary-Q DR-2 remains a non-load-bearing Sector-B
    frontier as recorded in `TODO.md`.
 
 ## Standing rule

@@ -143,9 +143,12 @@ does not falsify A9 T5 or the full A7 Nelson statement.
 
 ### **A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND**
 
-**Statement:** Let `Q_j^fr` be the complete covariance-normal frozen shell
-energy from A9, including its trace subtraction, and let `C_j` be the
-coefficient increment above.  Prove that there exist a fixed
+**Statement:** With `x=phi_(j-1)`, `z=phi_j`, new-shell derivative covariance
+`Gamma_j`, and cumulative covariance `Gamma_<=j`, fix the A9 determinant
+variable exactly as
+`Q_j^fr=q_(B(x))(D z)-t_(Gamma_j)(B(x))`, while
+`C_j=q_(B(z)-B(x))(D z)-t_(Gamma_<=j)(B(z)-B(x))`.
+Prove that there exist a fixed
 `theta in (0,1)` and explicit production constants
 `alpha_c, epsilon_6, K_theta, C_theta`, uniform in the cutoff, such that for
 every `nu<<gamma_J`,
@@ -155,19 +158,89 @@ every `nu<<gamma_J`,
 Together with the A9 bound on `(1-theta)Q_j^fr`, the constants must leave some
 `p>1` entropy budget and strict production sextic budget after quartic
 absorption.  The proof must act on the complete covariance-normal term rather
-than its raw positive square, determine or bound the all-ray critical
-`theta`, and exclude a direction with zero frozen energy but a negative
-commutator.
+than its raw positive square, determine the necessary all-ray budget, and
+classify and entropy-control every direction with zero frozen energy but a
+negative covariance-trace commutator.
 
-**Status:** OPEN (2026-07-21).  The registered resonant ray proves the exact
+**Status:** OPEN, STRUCTURAL-REDUCTION SUBGATE CLOSED (2026-07-21).
+`A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION` fixes the `Gamma_j` versus
+`Gamma_<=j` convention and proves
+`theta Q_fr,raw+C_raw=q_z-(1-theta)q_x`.  A legitimate strict-dyadic Blaschke
+family makes `q_z/q_x -> 0`, so the sharp cost-free raw fraction is `theta=1`,
+not the earlier triad value.  After trace subtraction, the common-phase
+top-shell field `x=0`, `z=A exp(i k.x)e_1` has `Q_j^fr=0` and
+`C_j=-t_(Gamma_<=j)(B(z))<0`.  Thus the former instruction to exclude such a
+direction is false; a cutoff-uniform theorem necessarily has `alpha_c>0`.
+The same package proves the exact action mismatch and a two-antecedent
+conditional composition theorem, with primary 47/47, non-importing independent
+34/34, and integrated 101/101 verification. The registered resonant ray proves the exact
 budget tradeoff
 `alpha_c*epsilon_6 >= [(c_C-theta*c_F)_+]^2/(4*c_H*c_6)`.
 At `epsilon=0.3`, `theta=3/16` neutralises this ray without entropy or sextic
-expenditure; it is not an absolute lower bound when positive budgets are
-allowed.  This is a necessary condition and a candidate closure target, not
-an all-field proof.  The next step is a trace-safe conditional log-Laplace or
-carre-du-champ estimate for the retained-energy remainder with an explicit
-summable dyadic constant.
+expenditure; it is neither a global raw threshold nor an absolute lower bound
+when positive budgets are allowed. It also closes a sharp rectangular-cube
+filtration route with independent innovations and a uniform `L4` projection
+bound. The two remaining load-bearing gates are action recovery and the
+all-field relative log-Laplace estimate below.
+
+### **A10-CLASSII-DYADIC-FILTRATION-REALISATION**
+
+**Statement:** Exhibit a concrete A7/A9-admissible dyadic filtration with
+independent Gaussian innovations, summable A9 shell weights, and a cutoff-
+uniform terminal `L4` projection bound.
+
+**Status:** CLOSED@SHARP-RECTANGULAR-CUBE (2026-07-21). Take `N_j=2^j` and
+`P_<=j=1_(max_a |n_a|<=N_j)`. Disjoint Fourier blocks are independent. In one
+dimension the symmetric partial sum is the difference of two modulated Riesz
+projections, so the M. Riesz theorem gives a uniform `L4` bound; tensorisation
+gives `||P_<=j||_(L4(T3)->L4)<=C_4^3`. Cube-shell mode counting also retains
+the A9 summable `2^-j` Hilbert--Schmidt weight. This closure does not cover
+overlapping smooth Littlewood--Paley increments.
+
+### **A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION**
+
+**Statement:** Recover the actual A7 endpoint energy `V_J` from the A9/A10
+shell variables with cutoff-uniform quantitative budgets. A sufficient route
+is an upper form bound
+`E_nu E_J<=alpha_d H(nu|gamma_J)+epsilon_d E_nu||phi_J||_6^6`
+`+K_d E_nu||phi_J||_4^4+C_d`, where
+`E_J=sum_(j<=J) q_(B(phi_(j-1)))(D phi_(j-1))`; an alternative is a
+true-increment variable with a newly proved determinant theorem.
+
+**Status:** OPEN (2026-07-21). A10 proves exactly
+`Q_j^fr+C_j=V_j-V_(j-1)+q_(B(phi_(j-1)))(D phi_(j-1))`, hence
+`sum_j(Q_j^fr+C_j)=V_J+E_J` when `V_0=0`. Since `E_J>=0`, the actual action is
+the shell expression minus `E_J`; positivity has the wrong direction for a
+lower bound. This falsifies the naive one-gate composition and leaves the
+quantitative upper form bound or true-increment reconstruction open.
+
+### **A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE**
+
+**Statement:** For some fixed `theta in (0,1)`, `alpha_c>0`,
+`epsilon_6<gamma/6`, and finite `K_theta,C_theta`, prove uniformly in the
+cutoff that `log E_gamma_J exp[-G_J/alpha_c] <= C_theta/alpha_c`, where
+`G_J` is the sum of the `theta Q_j^fr+C_j` terms plus
+`epsilon_6||phi_J||_6^6+K_theta||phi_J||_4^4` and uses the exact
+`Gamma_j`/`Gamma_<=j` convention above.  Equivalently, prove
+the corresponding entropy form bound for every `nu<<gamma_J`.  A valid
+filtration proof must retain the endpoint self-coupled square or allocate the
+final sextic through the scales. The sharp rectangular-cube filtration is
+available; overlapping smooth Littlewood--Paley decompositions are not covered.
+
+**Status:** OPEN (2026-07-21).  A10 proves the exact finite-cutoff
+Gibbs-variational equivalence, the necessity of `alpha_c>0`, and the
+two-antecedent conditional composition theorem. In that theorem
+`C_fr=C_sh(L)M_R^4 c_sym^-2 beta_B^2 C_LP,4^4 S_dy`,
+`K_f=(1-theta)^2 C_fr/(4 alpha_f)`,
+`B_6=gamma/6-epsilon_6-epsilon_d`, and
+`A_4=[K_theta+K_f+K_d-lambda/4]_+`. If some `p>1` satisfies
+`p(alpha_f+alpha_c+alpha_d)<1`, closure of both open gates would imply
+`log E exp(-pS_J)<=p(C_theta+C_d)+4pL^3A_4^3/(27B_6^2)`.
+The proof-friendly target is `theta=0.90`, `alpha_f=0.05`, `alpha_c=0.80`,
+`alpha_d=0.04`, `epsilon_6=0.25`, `epsilon_d=0.01`, and `p=1.10`.
+It gives `p*alpha=0.979` and `B_6=0.01`, but `K_d,C_d` remain symbolic and
+neither open estimate is proved. No A7 Nelson closure or interacting Gibbs
+measure is claimed.
 
 ### **A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION**
 

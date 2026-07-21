@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Repair A10 covariance normalization and isolate the multiscale action gate] - 2026-07-21
+
+The final adversarial audit found and repaired two load-bearing defects in the initial A10 record. The A6/A7 complex covariance gives Gamma=realify(sum |k|^2 A(k)^-1/V), so both finite plane-wave builders had been low by a factor two; independent finite-cutoff slope regressions now converge to the unchanged analytic coefficient. More importantly, the exact composition is sum_j(Q_fr+C)=V_J+E_J with E_J>=0, so the actual A7 action is the shell sum minus E_J and the earlier one-gate inference was invalid. A10 therefore closes only a T4 structural reduction plus the sharp rectangular-cube filtration subgate. The separate action-recovery and stabilised relative log-Laplace gates remain open. The corrected package passes primary 47/47, non-importing independent 34/34, integrated 101/101, and an eight-page PDF form and visual check.
+
+## [Prove A10 relative-commutator structural reduction and correct the zero-frozen criterion] - 2026-07-21
+
+A10 closes the exact structural reduction at T4 without closing the A7 measure. The A9 frozen determinant is fixed with Gamma_j while the coefficient commutator uses Gamma_le_j. A strict-dyadic Blaschke family proves the sharp cost-free raw retained fraction is theta=1. A common-phase top-shell plane wave has Q_fr=0 but a strictly negative covariance-trace commutator, so the former exclusion criterion is falsified and every uniform relative theorem needs alpha_c>0. The exact conditional composition theorem shows how a future stabilised relative log-Laplace bound yields the A7 Nelson estimate. Primary 46/46, non-importing independent 33/33, integrated 99/99, and the seven-page proof PDF pass. The all-field relative log-Laplace bound, A7 Nelson closure, and interacting Gibbs measure remain open.
+
 ## [Falsify A7 infinitesimal tilted-commutator bound and register frozen-energy-relative successor] - 2026-07-21
 
 Exact Fourier and non-importing Pauli-current audits show that the former all-eta commutator-alone sufficient bound is false. At the production point, epsilon=0.3 gives eta_min=2.4891432e-4, so eta=1e-4 fails with a positive K^6-normalised margin; the covariance trace is only O(K^3). Primary 24/24, independent 17/17, and integrated 56/56 pass. A9 scoped T5 is preserved because the witness retains positive covariance-normal frozen energy; the replacement open gate is A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND.

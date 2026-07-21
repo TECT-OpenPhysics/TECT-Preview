@@ -8,7 +8,7 @@
 
 ## Claims
 
-Tier profile: T6x9 T5x7 T4x1
+Tier profile: T6x9 T5x7 T4x2
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
@@ -17,6 +17,7 @@ Tier profile: T6x9 T5x7 T4x1
 | [`A1-PRODUCTION-FUNCTIONAL-REALISATION`](../../claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md) | T5 | — | — | Full production functional realisation: standalone variational backend |
 | [`A1-PRODUCTION-KERNEL-MANIFEST`](../../claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md) | T5 | — | — | Canonical N-001 production-kernel manifest: scalar-slice consistency gates |
 | [`A1-SCALAR-ANALYTIC-BRANCH`](../../claims/A1-SCALAR-ANALYTIC-BRANCH/INDEX.md) | T6 | A1-SHELL-POSITIVITY | — | Scalar analytic branch: K>=m_sh^2>0 (the A2/A3 hypothesis) |
+| [`A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`](../../claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/INDEX.md) | T4 | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE | Frozen-energy relative Class-II structural reduction |
 | [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production three-component gradient-flow well-posedness |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
 | [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full-production spectral discretization to continuum PDE |
@@ -28,10 +29,10 @@ Tier profile: T6x9 T5x7 T4x1
 | [`A6-CLASSII-UV-POWER-COUNTING`](../../claims/A6-CLASSII-UV-POWER-COUNTING/INDEX.md) | T4 | — | A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | Full derivative Class-II Gaussian UV power counting and leading contraction |
 | [`A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`](../../claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/INDEX.md) | T5 | — | A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION | Covariance-normal-ordered full three-component Class-II energy composite |
 | [`A8-CLASSII-DECOUPLED-NELSON-BOUND`](../../claims/A8-CLASSII-DECOUPLED-NELSON-BOUND/INDEX.md) | T5 | — | A7-CLASSII-SELF-COUPLING-INTERPOLATION | Decoupled Class-II Nelson bound with spatial PSD backgrounds |
-| [`A9-CLASSII-SMART-PATH-CANCELLATION`](../../claims/A9-CLASSII-SMART-PATH-CANCELLATION/INDEX.md) | T5 | — | A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND | Exact Class-II smart-path cancellation and noncentral frozen-shell control |
+| [`A9-CLASSII-SMART-PATH-CANCELLATION`](../../claims/A9-CLASSII-SMART-PATH-CANCELLATION/INDEX.md) | T5 | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE | Exact Class-II smart-path cancellation and noncentral frozen-shell control |
 
 **Open named hypotheses (sector union):** A1-KERNEL-CONV, A1-SHELL-POSITIVITY, A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY, A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL, A3-H1-DIM3-Q4-KERNEL, A3-H2-IR-POSITIVITY, A5-H1-CANONICAL-KERNEL-MANIFEST  
-**Open gates (sector union):** A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND, A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A7-CLASSII-SELF-COUPLING-INTERPOLATION
+**Open gates (sector union):** A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE, A6-CLASSII-COUNTERTERM-CLOSURE, A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION, A7-CLASSII-NELSON-EXPONENTIAL-BOUND, A7-CLASSII-SELF-COUPLING-INTERPOLATION
 
 ## Predictions
 
@@ -46,6 +47,8 @@ _None linked to this sector._
 | NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM | literal leading-W subtraction | The direct prescription |
 | NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE | conditional contraction does not classify bare null branches | The zero set of the positive conditional derivative-pair |
 | F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM | commutator-alone all-eta form bound | The proposed |
+| F-2026-07-21-A7-ZERO-FROZEN-EXCLUSION | zero-frozen exclusion criterion | The first wording of |
+| F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION | shell sum is not the actual endpoint action | The naive conditional-composition route treated |
 | NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
 | AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |

@@ -1,0 +1,557 @@
+{
+  "assertion_count": 47,
+  "assertions": [
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "A1_authority_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "expected": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "name": "A7_authority_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+      "expected": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+      "name": "A9_authority_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "both positive",
+      "name": "production_QII_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.2564999999999359,
+      "expected": 0.2564999999999359,
+      "name": "beta_B_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1429999999997142,
+      "expected": 1.1429999999997142,
+      "name": "beta_1_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": -1.1019402169974897e-16,
+      "expected": ">=-1e-11",
+      "name": "B_is_PSD_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0625310154102746,
+      "expected": 0.2564999999999359,
+      "name": "B_quadratic_growth_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.11696801259237316,
+      "expected": 1.1429999999997142,
+      "name": "DB_growth_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.757564350360633,
+      "expected": 4.0,
+      "name": "Dq_component_bound_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.09513602613340398,
+      "expected": "<=1",
+      "name": "B_mean_value_bound_samples",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7763568394002505e-15,
+      "expected": 0.0,
+      "name": "raw_retained_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.552713678800501e-15,
+      "expected": 0.0,
+      "name": "complete_Gamma_j_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "identity_error": 3.552713678800501e-15,
+        "minimum_remainder": 0.0027910424448784887
+      },
+      "expected": {
+        "identity_error": 0.0,
+        "minimum_remainder": ">=0"
+      },
+      "name": "multiscale_action_identity_and_positive_past_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.01449498749273026,
+      "expected": ">=0",
+      "name": "raw_C_lower_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "Gamma_j",
+      "expected": "Gamma_j",
+      "name": "frozen_trace_convention",
+      "status": "PASS"
+    },
+    {
+      "actual": "Gamma_le_j",
+      "expected": "Gamma_le_j",
+      "name": "commutator_trace_convention",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.1500000000002037,
+        0.5159313725489902,
+        0.8030301687464545,
+        0.9262685267759448,
+        0.9906775990540069,
+        0.9989733954702047,
+        0.9998992490672913
+      ],
+      "expected": "last four strictly increase",
+      "name": "strict_dyadic_blaschke_monotone_tail",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9998992490672913,
+      "expected": 0.9998,
+      "name": "strict_dyadic_ratio_near_one",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.776263578034403e-21,
+      "expected": 2e-12,
+      "name": "blaschke_exact_autocorrelation",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "plane_wave_zero_frozen_energy",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.82627454174466e-16,
+      "expected": 2e-12,
+      "name": "plane_wave_common_phase_currents_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.2932640989247197e-18,
+      "expected": 2e-12,
+      "name": "plane_wave_current_raw_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.1027499999999893,
+        0.1027499999999893,
+        0.10274999999998928
+      ],
+      "expected": ">0",
+      "name": "plane_wave_B_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "convention": "Gamma=0.5*realify(D_complex)=realify(sum_k |k|^2 A(k)^-1/V), with D_complex=2*sum_k |k|^2 A(k)^-1/V",
+        "eigenvalues": [
+          0.03309293141464775,
+          0.09696323048018186,
+          0.20440953446836346
+        ]
+      },
+      "expected": "positive and exact A7 complex-factor-two convention",
+      "name": "plane_wave_Gamma_positive_and_A7_factor_two",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "finite_slope": 0.0013552076465872744,
+        "relative_error": 0.08561268021973878,
+        "values": [
+          -0.001962591945996524,
+          -0.00531314093161597,
+          -0.010841661172698195
+        ]
+      },
+      "expected": {
+        "asymptotic_slope": 0.0012483343933611451,
+        "relative_error_below": 0.12,
+        "sign": "all negative"
+      },
+      "name": "zero_frozen_negative_commutator_and_A6_slope",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.07706249999999197,
+      "expected": ">0",
+      "name": "W_active_doublet_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "W_pure_third_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.07706249999998072,
+      "expected": 0.07706249999998072,
+      "name": "W_large_amplitude_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0012483343933611451,
+      "expected": 0.0012483343933611451,
+      "name": "sharp_cube_trace_defect_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.10836453058711468,
+      "expected": ">0",
+      "name": "symbol_coercivity_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "alpha_c>0",
+      "expected": "alpha_c>0",
+      "name": "plane_wave_entropy_is_necessary",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.9138628575700163,
+      "expected": "finite positive threshold for identified family",
+      "name": "plane_wave_trace_entropy_ratio_decays_Kminus3",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.0,
+        -1.0,
+        2.5
+      ],
+      "expected": [
+        2.0,
+        -1.0,
+        2.5
+      ],
+      "name": "triad_exact_averages",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1875,
+      "expected": 0.1875,
+      "name": "triad_theta_three_sixteenths",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.19444444444444445,
+      "expected": 0.19444444444444445,
+      "name": "triad_family_supremum_seven_thirtysixths",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.195833906546384e-08,
+      "expected": ">0",
+      "name": "triad_budget_discriminant_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9790000000000002,
+      "expected": "<1",
+      "name": "composition_entropy_budget_strict",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.010000000000000018,
+      "expected": ">0",
+      "name": "composition_sextic_budget_strict",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.049999999999999975,
+      "expected": 0.05,
+      "name": "composition_scaled_frozen_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1075,
+      "expected": 0.1075,
+      "name": "composition_quartic_anchor",
+      "status": "PASS"
+    },
+    {
+      "actual": 6674962.962962939,
+      "expected": "finite positive",
+      "name": "composition_ceiling_finite",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "name": "stabilised_DV_equivalence_fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "closed": [
+          "A10-CLASSII-DYADIC-FILTRATION-REALISATION"
+        ],
+        "open": [
+          "A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION",
+          "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE"
+        ]
+      },
+      "expected": {
+        "closed": [
+          "A10-CLASSII-DYADIC-FILTRATION-REALISATION"
+        ],
+        "open": [
+          "A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION",
+          "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE"
+        ]
+      },
+      "name": "prerequisite_firewall_and_cube_filtration_closure",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "a production-valid multiscale reconstruction of the actual A7 action",
+        "the all-field stabilised relative log-Laplace estimate",
+        "the self-coupled A7 Nelson bound",
+        "a full three-component interacting Gibbs measure",
+        "an optimal positive-budget global theta",
+        "rho-floor removal or asymmetric-regulator universality",
+        "infinite volume, phase transition, or BCC selection",
+        "T6 or T7"
+      ],
+      "expected": "contains A7 Nelson exclusion",
+      "name": "scope_excludes_A7_Nelson_closure",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "a production-valid multiscale reconstruction of the actual A7 action",
+        "the all-field stabilised relative log-Laplace estimate",
+        "the self-coupled A7 Nelson bound",
+        "a full three-component interacting Gibbs measure",
+        "an optimal positive-budget global theta",
+        "rho-floor removal or asymmetric-regulator universality",
+        "infinite volume, phase transition, or BCC selection",
+        "T6 or T7"
+      ],
+      "expected": "contains Gibbs exclusion",
+      "name": "scope_excludes_Gibbs_measure",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "a production-valid multiscale reconstruction of the actual A7 action",
+        "the all-field stabilised relative log-Laplace estimate",
+        "the self-coupled A7 Nelson bound",
+        "a full three-component interacting Gibbs measure",
+        "an optimal positive-budget global theta",
+        "rho-floor removal or asymmetric-regulator universality",
+        "infinite volume, phase transition, or BCC selection",
+        "T6 or T7"
+      ],
+      "expected": "contains T6/T7 exclusion",
+      "name": "scope_excludes_T6_T7",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+  "derived": {
+    "QII_eigenvalues": [
+      0.0012590115009260615,
+      0.005584738499072227
+    ],
+    "W_infinity": 0.07706249999998072,
+    "W_unit": 0.07706249999999197,
+    "blaschke": [
+      {
+        "current_over_frozen": 0.8499999999997964,
+        "current_raw": 0.0006723632812504897,
+        "frozen_raw": 0.0007910156250007657,
+        "m": 1,
+        "modulus_derivative_exact": 0.298828125,
+        "modulus_derivative_l2": 0.298828125,
+        "negative_commutator_ratio": 0.1500000000002037
+      },
+      {
+        "current_over_frozen": 0.48406862745100976,
+        "current_raw": 0.00018307685852061675,
+        "frozen_raw": 0.0003782043457033271,
+        "m": 2,
+        "modulus_derivative_exact": 0.08136749267578125,
+        "modulus_derivative_l2": 0.08136749267578125,
+        "negative_commutator_ratio": 0.5159313725489902
+      },
+      {
+        "current_over_frozen": 0.19696983125354553,
+        "current_raw": 2.6824839413181717e-05,
+        "frozen_raw": 0.00013618755340584097,
+        "m": 3,
+        "modulus_derivative_exact": 0.01192215085029602,
+        "modulus_derivative_l2": 0.01192215085029602,
+        "negative_commutator_ratio": 0.8030301687464545
+      },
+      {
+        "current_over_frozen": 0.07373147322405514,
+        "current_raw": 3.0498500273115102e-06,
+        "frozen_raw": 4.136428982021868e-05,
+        "m": 4,
+        "modulus_derivative_exact": 0.001355488901026547,
+        "modulus_derivative_l2": 0.001355488901026547,
+        "negative_commutator_ratio": 0.9262685267759448
+      },
+      {
+        "current_over_frozen": 0.009322400945993148,
+        "current_raw": 2.7470290654212826e-08,
+        "frozen_raw": 2.946696973596679e-06,
+        "m": 6,
+        "modulus_derivative_exact": 1.2209018068531918e-05,
+        "modulus_derivative_l2": 1.2209018068531912e-05,
+        "negative_commutator_ratio": 0.9906775990540069
+      },
+      {
+        "current_over_frozen": 0.0010266045297952888,
+        "current_raw": 1.9322033040227432e-10,
+        "frozen_raw": 1.8821301172400208e-07,
+        "m": 8,
+        "modulus_derivative_exact": 8.587570240095707e-08,
+        "modulus_derivative_l2": 8.587570240096074e-08,
+        "negative_commutator_ratio": 0.9989733954702047
+      },
+      {
+        "current_over_frozen": 0.00010075093270875494,
+        "current_raw": 1.188595888380106e-12,
+        "frozen_raw": 1.1797368584328955e-08,
+        "m": 10,
+        "modulus_derivative_exact": 5.282648392797751e-10,
+        "modulus_derivative_l2": 5.282648392797389e-10,
+        "negative_commutator_ratio": 0.9998992490672913
+      }
+    ],
+    "bounds": {
+      "beta_1": 1.1429999999997142,
+      "beta_B": 0.2564999999999359,
+      "max_B_over_x2": 0.0625310154102746,
+      "max_DB_over_xh": 0.11696801259237316,
+      "max_Dq_x_over_h": 1.757564350360633,
+      "max_mean_value_bound_ratio": 0.09513602613340398,
+      "minimum_B_eigenvalue": -1.1019402169974897e-16
+    },
+    "coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414
+    },
+    "composition": {
+      "B6": 0.010000000000000018,
+      "Kf_over_Cfr": 0.049999999999999975,
+      "alpha_c": 0.8,
+      "alpha_d": 0.04,
+      "alpha_f": 0.05,
+      "alpha_total": 0.8900000000000001,
+      "ceiling_factor_times_A4_cubed": 6674962.962962939,
+      "epsilon_6": 0.25,
+      "epsilon_d": 0.01,
+      "negative_lambda_quartic": 0.1075,
+      "p": 1.1,
+      "p_alpha": 0.9790000000000002,
+      "theta": 0.9
+    },
+    "delta_cube": 0.01619898645075695,
+    "plane_wave": {
+      "rows": [
+        {
+          "B_trace_mean": 0.1027499999999893,
+          "commutator_complete": -0.001962591945996524,
+          "cutoff": 2,
+          "gamma_min_eigenvalue": 0.03309293141464775,
+          "max_abs_J": 1.7065686354358574e-16,
+          "max_abs_K": 1.7071443027048459e-28,
+          "q_current_raw": -5.1616070223308927e-20,
+          "q_frozen_raw": 0.0,
+          "trace_current": 0.001962591945996524
+        },
+        {
+          "B_trace_mean": 0.1027499999999893,
+          "commutator_complete": -0.00531314093161597,
+          "cutoff": 4,
+          "gamma_min_eigenvalue": 0.09696323048018186,
+          "max_abs_J": 3.413137270871833e-16,
+          "max_abs_K": 3.4142886054096917e-28,
+          "q_current_raw": -5.04831636563563e-19,
+          "q_frozen_raw": 0.0,
+          "trace_current": 0.005313140931615969
+        },
+        {
+          "B_trace_mean": 0.10274999999998928,
+          "commutator_complete": -0.010841661172698195,
+          "cutoff": 8,
+          "gamma_min_eigenvalue": 0.20440953446836346,
+          "max_abs_J": 6.82627454174466e-16,
+          "max_abs_K": 6.828577210819383e-28,
+          "q_current_raw": -3.2932640989247197e-18,
+          "q_frozen_raw": 0.0,
+          "trace_current": 0.010841661172698192
+        }
+      ]
+    },
+    "plane_wave_CGamma_bound": 2.3693117817624394,
+    "plane_wave_entropy_threshold_K0": 1.9138628575700163,
+    "raw_algebra": {
+      "max_action_identity_error": 3.552713678800501e-15,
+      "max_complete_identity_error": 3.552713678800501e-15,
+      "max_raw_identity_error": 1.7763568394002505e-15,
+      "min_Craw_plus_qx": 0.01449498749273026,
+      "min_past_energy_remainder": 0.0027910424448784887
+    },
+    "sharp_cube_trace_defect_coefficient": 0.0012483343933611451,
+    "symbol_coercivity": 0.10836453058711468,
+    "triad": {
+      "M6": 2.757649375,
+      "M6_fraction": "4412239/1600000",
+      "average_g2_grad2": 2.5,
+      "average_g_grad2": -1.0,
+      "average_grad2": 2.0,
+      "budget_product_at_theta_zero": 6.195833906546384e-08,
+      "c_6": 2.757649375,
+      "c_C": 0.000303749999999924,
+      "c_F": 0.0016199999999995949,
+      "c_H": 0.135,
+      "epsilon": 0.3,
+      "theta_cost_free": 0.1875,
+      "theta_family_supremum": 0.19444444444444445
+    },
+    "variational_fixture": {
+      "absolute_error": 1.1102230246251565e-16,
+      "log_moment": 0.8758771688852109,
+      "variational_objective": 0.8758771688852108
+    }
+  },
+  "failed": [],
+  "git_commit": "aff873236cc8d6d2d455138c60766c90db27f78e",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+  "schema": "tect/a10-classii-relative-structural-reduction-primary-result/1.0",
+  "verdict": "A10-CLASSII-RELATIVE-STRUCTURAL-REDUCTION-PRIMARY-PASS",
+  "version": "1.0.1"
+}

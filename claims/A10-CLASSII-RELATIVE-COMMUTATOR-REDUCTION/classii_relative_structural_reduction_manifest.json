@@ -1,0 +1,196 @@
+{
+  "schema": "tect/a10-classii-relative-structural-reduction/1.0",
+  "package_version": "1.0.1",
+  "claim_id": "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+  "frozen_on": "2026-07-21",
+  "status": "T4 PROVED-STRUCTURAL-REDUCTION@FIXED-FLOOR-FINITE-CUTOFF",
+  "authority": {
+    "production_functional_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "schema": "tect/a1-production-functional-realisation/1.0"
+    },
+    "a7_composite_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607",
+      "schema": "tect/a7-classii-renormalised-energy/1.1"
+    },
+    "a9_smart_path_manifest": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/classii_smart_path_manifest.json",
+      "sha256": "f84f70945b4abf7ced1292222620e4bee8a4ba7b95ebb302aff95b4cd902454d",
+      "schema": "tect/a9-classii-smart-path-cancellation/1.0"
+    },
+    "a9_nogo_manifest": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/tilted_commutator_nogo_manifest.json",
+      "sha256": "113558ce035a2aec96f34c747fabe8945dc0bf7ccc07a2de2b4e93a6652f2af9",
+      "schema": "tect/a9-tilted-commutator-nogo/1.0"
+    },
+    "primary_audit": {
+      "path": "codes/foundations/a10_classii_relative_structural_reduction.py",
+      "sha256": "956c06825c21c2e721b34dbb33dcad489efb29b312f6d9d60529adaef4228398",
+      "version": "1.0.1"
+    },
+    "independent_audit": {
+      "path": "codes/foundations/a10_classii_relative_structural_reduction_independent.py",
+      "sha256": "52d7f49c6416206f9d3ae06a3f603c091ced5f2baa1313eb79d77243f2b7836d",
+      "version": "1.0.1"
+    },
+    "one_command_verifier": {
+      "path": "codes/foundations/a10_classii_relative_structural_reduction_verify.py",
+      "sha256": "27098fbd30f0a58f3147e2a0d57fcb3fba9244b051156e80aee20da24615dfc1",
+      "version": "1.0.1"
+    },
+    "proof_note": {
+      "path": "claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/notes/classii-relative-structural-reduction-260721-v1.0.tex.txt",
+      "sha256": "65f1f659c737732d6f0298c97560bd8111de2f14ff8561d19a02c8dee4cfb589",
+      "version": "1.0"
+    },
+    "proof_pdf": {
+      "path": "claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/notes/classii-relative-structural-reduction-260721-v1.0.pdf",
+      "sha256": "f588b2b9d6dd960f9706f42e6621ca9510a167a4b0182ac28ef5e9ea9908e209",
+      "version": "1.0",
+      "pages": 8,
+      "form_check": "PASS",
+      "overfull_hbox": 0,
+      "visual_qa": "PASS"
+    }
+  },
+  "scope": "Hash-pinned A1 production Gaussian on the fixed L=16 torus, three complex components in the six-real convention, fixed rho_regularizer=1e-12, positive production Q_II, exact/dealiased products, and the declared common real-even scalar spectral scope. The exact frozen-shell determinant trace is Gamma_j and the coefficient commutator uses Gamma_le_j. A sharp rectangular-cube dyadic filtration is realised with independent innovations and a uniform terminal L4 projection bound. The theorem proves an exact multiscale action-bookkeeping obstruction and a conditional composition formula; it does not prove either a production-valid reconstruction of the actual A7 action or the all-field stabilised log-Laplace antecedent.",
+  "frozen_shell_convention": {
+    "past": "x=phi_(j-1)",
+    "innovation": "xi_j=phi_j-phi_(j-1)",
+    "endpoint": "z=phi_j",
+    "trace": "Gamma_j",
+    "commutator_trace": "Gamma_le_j",
+    "covariance_normalisation": "Gamma=0.5*realify(D_complex)=realify(sum_k |k|^2 A(k)^-1/V), with D_complex=2*sum_k |k|^2 A(k)^-1/V",
+    "Q_fr": "q_(B(x))(D z)-t_(Gamma_j)(B(x))",
+    "C_j": "q_(B(z)-B(x))(D z)-t_(Gamma_le_j)(B(z)-B(x))",
+    "warning": "Replacing Gamma_j by Gamma_le_j in Q_fr changes the A9 determinant variable and is forbidden."
+  },
+  "theorem": {
+    "coefficient_structure": "B(X)=sum_A [p_A v_A] Q_II [p_A v_A]^T is PSD; ||B(X)||_F<=beta_B|X|^2 and ||DB(X)[h]||_F<=beta_1|X||h|.",
+    "raw_identity": "For q_x=q_(B(x))(Dz) and q_z=q_(B(z))(Dz), theta Q_fr,raw+C_raw=q_z-(1-theta)q_x.",
+    "strict_dyadic_sharpness": "On the physical scalar ray, partial sums F_m and F_(2m) of the inner Blaschke factor form legitimate hard dyadic splits and satisfy q_current/q_frozen->0. Hence theta=1 is the sharp cost-free raw retained fraction even under strict shell geometry.",
+    "trace_defect": "For x=0 and z=A exp(i k.x)e_1 in one new shell, Q_fr=0 and J_A=K_A=0, but C_j=-t_(Gamma_le_j)(B(z))<0.",
+    "entropy_necessity": "alpha_c>0",
+    "trace_defect_mitigation": "The identified plane-wave trace loss is O(K A^2), while its Cameron-Martin shift entropy is O(K^4 A^2); their ratio is O(K^-3). This mitigates that family only and is not the all-field estimate.",
+    "triad_budget": "For the registered scalar triad, alpha_c*epsilon_6 >= [(c_C-theta*c_F)_+]^2/(4*c_H*c_6); theta=3/16 only neutralises epsilon=0.3 and is not global.",
+    "multiscale_action_identity": "For V_j=q_(B(phi_j))(D phi_j)-t_(Gamma_le_j)(B(phi_j)), Q_j^fr+C_j=V_j-V_(j-1)+q_(B(phi_(j-1)))(D phi_(j-1)); hence, with V_0=0, sum_j(Q_j^fr+C_j)=V_J+sum_j q_(B(phi_(j-1)))(D phi_(j-1)). The extra past-energy sum is nonnegative on the shell action, so recovering the actual A7 action requires subtracting it and is not supplied by positivity.",
+    "dyadic_filtration_realisation": "For N_j=2^j and the sharp rectangular-cube multiplier P_<=j=1_(max_a |n_a|<=N_j), disjoint Fourier blocks give independent Gaussian innovations. The one-dimensional symmetric partial sum is the difference of two modulated Riesz projections, so the M. Riesz theorem and tensorisation give ||P_<=j||_(L4(T3)->L4)<=C_4^3 uniformly. This closes A10-CLASSII-DYADIC-FILTRATION-REALISATION for this route.",
+    "conditional_composition": "For the realised sharp-cube filtration, if a separate production-valid action decomposition or domination removes the exact past-energy mismatch and the open relative form bound holds, then the retained A9 fraction plus production quartic-sextic potential yields the explicit uniform p-th Nelson ceiling stated in the proof note. The two antecedents remain open."
+  },
+  "strict_dyadic_lemma": {
+    "inner_function": "F_a(z)=(z-a)/(1-a z), 0<a<1",
+    "partial_sum": "F_N=-a+(1-a^2) sum_(n=1)^N a^(n-1) z^n",
+    "split": "x_m=F_m e_1=P_<=m z_m and z_m=F_(2m)e_1; the innovation contains exactly m<n<=2m",
+    "exact_modulus_formula": "|F_N|^2=1-(1-a^2)a^(2N)-2(1-a^2)sum_(k=1)^N a^(2N-k)cos(kx)",
+    "current_bound": "||d|F_(2m)|^2||_2^2=2(1-a^2)^2 sum_(k=1)^(2m) k^2 a^(8m-2k)=O_a(m^2 a^(4m))",
+    "frozen_lower_bound": "The sine mode m+1 of 2 Re(conj(F_m)dF_(2m)) has coefficient -2 a^(m+1)(1+o(1)), so q_frozen>=c_a a^(2m)",
+    "conclusion": "q_current/q_frozen=O_a(m^2 a^(2m))->0"
+  },
+  "conditional_composition": {
+    "filtration_hypotheses": [
+      "the closed sharp rectangular-cube route with independent Gaussian innovations",
+      "the closed uniform terminal L4 stability ||phi_(j-1)||_4<=C_LP4||phi_J||_4 from the tensorised M. Riesz bound",
+      "dyadic Schatten weights w_j with S_dy=sum_j w_j<infinity",
+      "an open production-valid reconstruction or domination connecting the shell expression to the actual final-cutoff A7 action"
+    ],
+    "frozen_constant": "C_fr=C_sh(L) M_R^4 c_sym^-2 beta_B^2 C_LP4^4 S_dy",
+    "frozen_quartic_cost": "K_f=(1-theta)^2 C_fr/(4 alpha_f)",
+    "action_gate_target": "A quantitative route may prove E_nu E_J<=alpha_d H+epsilon_d E_nu||phi_J||_6^6+K_d E_nu||phi_J||_4^4+C_d, where E_J=sum_j q_(B(phi_(j-1)))(D phi_(j-1)). A true-increment reformulation with its own determinant theorem is an alternative.",
+    "budgets": "alpha=alpha_f+alpha_c+alpha_d; B_6=gamma/6-epsilon_6-epsilon_d; A_4=[K_theta+K_f+K_d-lambda/4]_+",
+    "strict_conditions": "alpha_f>0, B_6>0, and some p>1 with p*alpha<1",
+    "ceiling": "log E exp(-p S_J)<=p(C_theta+C_d)+4 p L^3 A_4^3/(27 B_6^2)",
+    "filtration_warning": "The closed route is the sharp rectangular cube. Overlapping smooth Littlewood-Paley cutoffs do not automatically give independent innovations and are not covered by this filtration lemma."
+  },
+  "composition_target": {
+    "classification": "PROOF-FRIENDLY CONDITIONAL TARGET; NOT AN ESTABLISHED RELATIVE BOUND",
+    "theta": 0.9,
+    "alpha_f": 0.05,
+    "alpha_c": 0.8,
+    "alpha_d": 0.04,
+    "epsilon_6": 0.25,
+    "epsilon_d": 0.01,
+    "action_constants": "K_d and C_d remain symbolic proof targets; no action upper-form estimate is established here",
+    "p": 1.1
+  },
+  "constants": {
+    "beta_B": 0.2564999999999359,
+    "beta_1": 1.1429999999997142,
+    "W_infinity": 0.07706249999998072,
+    "sharp_cube_trace_defect_coefficient": 0.0012483343933611451
+  },
+  "audit": {
+    "seed": 20260721,
+    "coefficient_samples": 2048,
+    "algebra_samples": 4096,
+    "matrix_tolerance": 1e-11,
+    "quadrature_tolerance": 2e-12,
+    "current_tolerance": 2e-12,
+    "blaschke_radius": 0.5,
+    "blaschke_m_values": [1, 2, 3, 4, 6, 8, 10],
+    "blaschke_grid": 16384,
+    "blaschke_ratio_floor": 0.9998,
+    "plane_wave_cutoffs": [2, 4, 8],
+    "plane_wave_grid": 256,
+    "plane_wave_slope_relative_tolerance": 0.12
+  },
+  "independent_audit": {
+    "seed": 20260791,
+    "blaschke_radius": 0.5,
+    "blaschke_m_values": [2, 4, 6, 8, 10],
+    "blaschke_grid": 24576,
+    "plane_wave_cutoffs": [3, 6, 9],
+    "plane_wave_grid": 384,
+    "plane_wave_slope_relative_tolerance": 0.12,
+    "relative_tolerance": 2e-10,
+    "quadrature_tolerance": 3e-12
+  },
+  "integrated_audit": {
+    "primary_assertions": 47,
+    "independent_assertions": 34,
+    "cross_assertions": 20,
+    "expected_aggregate_assertions": 101,
+    "source_hash_mode": "SHA-256 fail closed before child execution",
+    "numeric_relative_tolerance": 2e-10
+  },
+  "run_contract": {
+    "primary_result_schema": "tect/a10-classii-relative-structural-reduction-primary-result/1.0",
+    "independent_result_schema": "tect/a10-classii-relative-structural-reduction-independent-result/1.0",
+    "integrated_result_schema": "tect/a10-classii-relative-structural-reduction-integrated-result/1.0"
+  },
+  "closed_subgates": [
+    "A10-CLASSII-DYADIC-FILTRATION-REALISATION"
+  ],
+  "open_followups": [
+    "A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION",
+    "A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE"
+  ],
+  "honesty_boundary": {
+    "closed": [
+      "the exact Gamma_j versus Gamma_le_j convention",
+      "production B and DB growth constants",
+      "the raw retained-energy identity and strict-dyadic sharp cost-free threshold theta=1",
+      "the zero-frozen negative covariance-trace plane-wave defect",
+      "necessity of a strictly positive entropy coefficient",
+      "the registered-triad necessary budget",
+      "the exact multiscale action identity and its positive past-energy mismatch",
+      "a sharp rectangular-cube filtration with independent innovations and a uniform terminal L4 projection bound",
+      "the conditional Nelson-composition implication with explicit budget formulas and two open antecedents"
+    ],
+    "excluded": [
+      "a production-valid multiscale reconstruction of the actual A7 action",
+      "the all-field stabilised relative log-Laplace estimate",
+      "the self-coupled A7 Nelson bound",
+      "a full three-component interacting Gibbs measure",
+      "an optimal positive-budget global theta",
+      "rho-floor removal or asymmetric-regulator universality",
+      "infinite volume, phase transition, or BCC selection",
+      "T6 or T7"
+    ]
+  },
+  "references": [
+    "https://doi.org/10.1214/aop/1022855876",
+    "https://arxiv.org/abs/1805.10814"
+  ]
+}

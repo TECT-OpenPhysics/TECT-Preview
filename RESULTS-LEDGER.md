@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-054](#r-054) | Frozen-energy relative Class-II structural reduction | T4 PROVED-STRUCTURAL-REDUCTION; exact Gamma_j convention, corrected covariance factor, strict-dyadic raw theta=1 sharpness, trace defect, exact action mismatch, closed sharp-cube filtration, and two-antecedent conditional composition; action recovery and relative log-Laplace remain open |
 | [R-053](#r-053) | Resonant no-go for an infinitesimal Class-II commutator-alone form bound | T5 EXACT-NO-GO; a same-shell scalar-ray triad forces a positive entropy-sextic relative-bound threshold, while retained frozen source energy compensates the witness |
 | [R-052](#r-052) | Spatial-background Class-II det2 bound and decoupled Nelson measure | T5 PINNED-CLOSURE; arbitrary deterministic spatial PSD L2 backgrounds obey an explicit M_R^4 Schatten bound, and the independent coefficient/derivative product-Gaussian model has all fixed-p moments and a full-sequence limit; self-coupling remains open |
 | [R-051](#r-051) | Literal Class-II leading-counterterm no-go and local bare-proxy split | T5 pinned split result; fixed-parameter subtraction has an escaping N^(1/4) homogeneous amplitude and -N^(3/2) raw energy, while two exact local proxies concentrate with distinct laws; full-field concentration remains open |
@@ -73,6 +74,48 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-054"></a>
+### R-054 -- frozen-energy relative Class-II structural reduction
+
+**Statement.** In the fixed-floor A1/A7/A9 production scope, the A9
+frozen-shell determinant uses the new-shell trace `Gamma_j`, while the
+coefficient commutator uses `Gamma_<=j`. The raw retained-energy identity is
+`theta Q_fr,raw+C_raw=q_z-(1-theta)q_x`. A strict-dyadic Blaschke family
+proves that the cost-free all-field raw threshold is sharply `theta=1`.
+After covariance normal ordering, an active-doublet common-phase top-shell
+plane wave has `Q_fr=0` but
+`C=-t_(Gamma_<=j)(B(z))<0`, so a uniform relative theorem necessarily has a
+strictly positive entropy coefficient. The exact shell bookkeeping is
+`sum_j(Q_j^fr+C_j)=V_J+E_J`, with positive past energy
+`E_J=sum_j q_(B(phi_(j-1)))(D phi_(j-1))`; thus the actual endpoint action
+requires subtracting `E_J`. A sharp rectangular-cube filtration closes
+independent innovations and uniform terminal `L4` stability. Under both a
+still-open upper form bound on `E_J` and the still-open relative log-Laplace
+antecedent, the exact conditional composition theorem yields
+`log E exp(-pS_J)<=p(C_theta+C_d)+4pL^3A_4^3/(27B_6^2)`.
+
+**Where proved.**
+`A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`, proof note
+`classii-relative-structural-reduction-260721-v1.0`; primary 47/47,
+non-importing independent 34/34, and integrated 101/101 PASS; the proof PDF
+passes form, zero-overfull, and visual QA.
+
+**Reuse.** Exact frozen-shell convention and conditional composition lemma for
+random-coefficient derivative Gibbs constructions. The theorem separates
+cost-free raw positivity from covariance-trace entropy control and prevents a
+triad-specific retained fraction from being promoted to an all-field value.
+It also prevents the shell expression from being identified with the actual
+A7 action with the wrong remainder sign.
+
+**Tier / publication target.** T4 PROVED-STRUCTURAL-REDUCTION. A scoped T5
+review may follow operator reproduction, but cannot close either open
+`A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION` or
+`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`. Full A7 Nelson,
+interacting Gibbs, floor removal, infinite volume, BCC, T6, and T7 are not
+claimed.
+
+---
+
 <a id="r-053"></a>
 ### R-053 -- resonant no-go for an infinitesimal Class-II commutator-alone form bound
 
@@ -103,8 +146,10 @@ source-energy ratio is `3/16`; it is the zero-extra-budget neutralisation
 fraction for this ray, not an absolute lower bound with positive budgets.
 
 **Publication target:** A counterexample and corrected-decomposition lemma
-for a future full derivative Class-II constructive-measure paper. The next
-theorem is `A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND`.
+for a future full derivative Class-II constructive-measure paper. The later
+A10 structural reduction supersedes the first successor wording; the active
+gates are `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION` and
+`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`.
 
 <a id="r-052"></a>
 ### R-052 -- spatial-background Class-II det2 bound and decoupled Nelson measure

@@ -200,10 +200,10 @@ positive covariance-normal frozen source energy with coefficient
 \quad(\epsilon=0.3).
 \]
 
-The corrected open gate is
-`A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND`.  It must retain a
+The first corrected open gate was
+`A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND`.  It retained a
 fixed fraction of the complete covariance-normal \(Q_j^{\rm fr}\), including
-its trace subtraction, and bound only
+its trace subtraction, and asked to bound only
 \(\theta Q_j^{\rm fr}+\mathcal C_j\) with explicit production entropy,
 quartic, and sextic budgets.  On the registered ray it supplies the exact
 necessary tradeoff
@@ -214,6 +214,18 @@ necessary tradeoff
 The value \(\theta=3/16\) neutralises this ray without entropy or sextic
 expenditure; it is not an absolute lower bound when positive budgets are
 allowed.
+
+The later `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION` supersedes the first
+wording without altering this A9 theorem.  It fixes the determinant trace as
+\(\Gamma_j\), proves by a strict-dyadic Blaschke family that the cost-free raw
+threshold is sharply \(\theta=1\), and exhibits a common-phase direction with
+\(Q_j^{\rm fr}=0\) but a negative cumulative covariance-trace commutator.
+Such directions must be entropy-controlled, not excluded. A10 further proves
+that the shell sum equals the actual endpoint energy plus a positive past-
+energy term, so the naive one-gate composition has the wrong sign. The active
+cores are `A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION` and
+`A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE`; a sharp rectangular-cube
+independent-innovation and uniform-`L4` filtration subgate is closed.
 
 ## Reproduction
 

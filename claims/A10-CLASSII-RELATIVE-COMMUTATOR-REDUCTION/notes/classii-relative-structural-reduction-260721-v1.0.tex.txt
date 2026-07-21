@@ -1,0 +1,575 @@
+% =============================================================================
+% Title: Frozen-energy relative Class-II structural reduction
+% Claim: A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION
+% Version: v1.0 -- first issued 2026-07-21; this version issued 2026-07-21
+% Status: T4 proved structural reduction; action-recovery and stabilised
+% relative log-Laplace gates open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-21, corrected before publication freeze): exact trace
+% convention, coefficient bounds, strict-dyadic raw sharpness, zero-frozen
+% trace defect, entropy necessity, triad budget, and conditional
+% Nelson-composition theorem.  Pre-freeze corrections restore the
+% load-bearing complex-covariance factor two in both executable routes and
+% isolate the exact multiscale action mismatch as a second open antecedent.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\fr}{\mathrm{fr}}
+
+\section*{1. Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Proved here.}  The A9 frozen variable is fixed with the new-shell
+trace $\Gamma_j$, while its coefficient commutator uses the cumulative trace
+$\Gamma_{\le j}$.  The raw retained-energy identity is exact.  Its sharp
+cost-free retained fraction is $\theta=1$, even for legitimate hard dyadic
+splits.  After covariance normal ordering there is nevertheless a strict
+common-phase plane-wave direction with zero frozen energy and a negative
+commutator.  Therefore every cutoff-uniform relative theorem must spend a
+strictly positive entropy budget.  We also prove the exact conditional
+composition theorem that turns such a relative estimate together with a
+quantitative action-recovery estimate into the A7 Nelson bound.
+
+\medskip
+\textbf{Open boundary.}  This note does not prove the relative form bound or
+its equivalent stabilised log-Laplace estimate, and it does not control the
+positive past-energy mismatch needed to reconstruct the actual A7 action.
+Those are the two named gates
+\texttt{A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION} and
+\texttt{A10-CLASSII-STABILISED-}\allowbreak
+\texttt{RELATIVE-LOG-LAPLACE}.  A sharp rectangular-cube filtration subgate
+is closed here.  The self-coupled Gibbs measure is not constructed.
+}}
+\end{center}
+
+The authority is the hash-pinned A1 production Gaussian on $\T_L^3$, $L=16$,
+with three complex components, fixed $\rho_{\rm floor}=10^{-12}$, exact
+products, and the common real-even scalar regulator class already declared by
+A7--A9.  The Class-II coefficient matrix is
+\[
+ B(X)=\sum_{A=1}^3 [p_A(X)\ v_A(X)]Q_{\rm II}
+                   [p_A(X)\ v_A(X)]^{T},                 \tag{1.1}
+\]
+where
+\[
+ p_A=2S_AX,\qquad v_A=2(S_A-q_AI)X,\qquad
+ q_A={X^TS_AX\over |X|^2+\rho_{\rm floor}},              \tag{1.2}
+\]
+and
+\[
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix}>0,
+\quad
+ (a,b,c)=(0.0045,0.001875,0.00234375)                    \tag{1.3}
+\]
+up to the displayed hash-pinned mass-regulariser rounding.
+
+\section{The exact frozen-shell convention}
+
+Let
+\[
+ x=\phi_{j-1},\qquad \xi_j=\phi_j-\phi_{j-1},\qquad
+ z=\phi_j,                                               \tag{2.1}
+\]
+and let
+\[
+ \Gamma_{j,i}=\E[D_i\xi_jD_i\xi_j^T],\qquad
+ \Gamma_{\le j,i}=\sum_{\ell\le j}\Gamma_{\ell,i}.    \tag{2.2}
+\]
+The A6/A7 convention is load-bearing here.  If
+$D_i=\E[\partial_i\Psi\,\partial_i\Psi^\dagger]$, then
+$\E[\Psi_k\Psi_k^\dagger]=2A(k)^{-1}$ and
+$\Gamma_i=\tfrac12\operatorname{realify}(D_i)$.  Hence, after summing over
+directions,
+\[
+ \Gamma_{\le j}=\operatorname{realify}\!\left(
+ {1\over V}\sum_{k\in\Lambda_{\le j}}|k|^2A(k)^{-1}\right),
+ \qquad \Lambda_{\le j}:=\{k_n:\max_a|n_a|\le N_j\}.  \tag{2.2a}
+\]
+There is no further factor one half in (2.2a).
+For a matrix field $b$ define
+\[
+ q_b(w)={1\over2}\sum_i\int (D_iw)^Tb(D_iw),\qquad
+ t_\Gamma(b)={1\over2}\sum_i\int\operatorname{Tr}(\Gamma_i b).
+                                                                  \tag{2.3}
+\]
+The noncentral determinant in A9 integrates only the independent innovation
+$\xi_j$.  Its exact covariance-normal variable is therefore
+\[
+ \boxed{Q_j^{\fr}=q_{B(x)}(z)-t_{\Gamma_j}(B(x)).}       \tag{2.4}
+\]
+The trace in (2.4) is $\Gamma_j$, not $\Gamma_{\le j}$.  The coefficient
+increment is
+\[
+ \boxed{\cC_j=q_{B(z)-B(x)}(z)
+       -t_{\Gamma_{\le j}}(B(z)-B(x)).}                 \tag{2.5}
+\]
+Consequently, for $0\le\theta\le1$,
+\[
+\begin{split}
+ R_j^\theta:=\theta Q_j^{\fr}+\cC_j
+ ={}&q_{B(z)}(z)-(1-\theta)q_{B(x)}(z)
+      -t_{\Gamma_{\le j}}(B(z))\\
+    &+t_{\Gamma_{\le j-1}}(B(x))
+      +(1-\theta)t_{\Gamma_j}(B(x)).
+\end{split}
+\tag{2.6}
+\]
+This identity is bookkeeping, but it is load-bearing.  Using a cumulative
+trace in (2.4) would define a different random variable and would invalidate
+the A9 determinant factor.
+
+\section{Production growth bounds}
+
+Positivity of $Q_{\rm II}$ makes (1.1) positive semidefinite.  Since
+\[
+ |p_A|\le2|X|,\quad |v_A|\le4|X|,
+\quad |Dp_A[h]|\le2|h|,                                  \tag{3.1}
+\]
+and direct differentiation of (1.2) gives
+\[
+ |Dq_A(X)[h]|\,|X|\le4|h|,
+ \qquad |Dv_A(X)[h]|\le12|h|,                            \tag{3.2}
+\]
+the three generators yield
+\[
+ \boxed{\|B(X)\|_F\le\beta_B|X|^2,
+ \quad \beta_B=12a+48|b|+48c
+ =0.2564999999999359,}                                   \tag{3.3}
+\]
+\[
+ \boxed{\|DB(X)[h]\|_F\le\beta_1|X||h|,
+ \quad \beta_1=24a+192|b|+288c
+ =1.1429999999997142.}                                   \tag{3.4}
+\]
+Integrating (3.4) along the segment from $x$ to $z$ gives
+\[
+ \|B(z)-B(x)\|_F
+ \le{\beta_1\over2}(|x|+|z|)|z-x|.                     \tag{3.5}
+\]
+These bounds are deliberately coarse and global; no derivative of the fixed
+positive floor is hidden in a constant.
+
+\section{Raw retained energy and its sharp dyadic threshold}
+
+Write
+\[
+ q_x=q_{B(x)}(z),\qquad q_z=q_{B(z)}(z).                 \tag{4.1}
+\]
+The raw part of (2.5) is $\cC_j^{\rm raw}=q_z-q_x$, and
+\[
+ \boxed{\theta Q_{j,\rm raw}^{\fr}+\cC_j^{\rm raw}
+       =q_z-(1-\theta)q_x.}                              \tag{4.2}
+\]
+Thus $\cC_j^{\rm raw}\ge-q_x$, and $q_x=0$ implies
+$\cC_j^{\rm raw}=q_z\ge0$.  The choice $\theta=1$ leaves $q_z\ge0$.
+We now prove that no smaller fixed $\theta$ is a cost-free all-field choice,
+even when $x$ and $z$ must arise from a genuine dyadic Fourier split.
+
+\subsection{Strict-dyadic Blaschke lemma}
+
+Fix $0<a_0<1$ and the inner function
+\[
+ F(w)={w-a_0\over1-a_0w},\qquad |F(e^{it})|=1.           \tag{4.3}
+\]
+Its analytic Fourier partial sum is
+\[
+ F_N=-a_0+(1-a_0^2)\sum_{n=1}^N a_0^{n-1}e^{int}.       \tag{4.4}
+\]
+Set
+\[
+ x_m=F_me_1,\qquad z_m=F_{2m}e_1.                       \tag{4.5}
+\]
+Then $x_m=P_{\le m}z_m$ and the innovation contains exactly the modes
+$m<n\le2m$.  On this physical scalar ray the Class-II density with a base
+$f$ and derivative carrier $d$ is
+\[
+ e_B(f;d)={1\over2}\left[a+2bs_f+cs_f^2\right]
+             \left(2\operatorname{Re}(\overline f,d)\right)^2,
+ \qquad s_f={\rho_{\rm floor}\over |f|^2+\rho_{\rm floor}}.     \tag{4.6}
+\]
+The fields $F_N$ converge uniformly to the unit-modulus $F$, so the bracket
+in (4.6) stays between two positive constants.
+
+An exact autocorrelation calculation gives
+\[
+ |F_N|^2=1-(1-a_0^2)a_0^{2N}
+ -2(1-a_0^2)\sum_{k=1}^N a_0^{2N-k}\cos(kt),             \tag{4.7}
+\]
+hence
+\[
+ \|\partial_t|F_{2m}|^2\|_2^2
+ =2(1-a_0^2)^2\sum_{k=1}^{2m}k^2a_0^{8m-2k}
+ =O_{a_0}(m^2a_0^{4m}).                                 \tag{4.8}
+\]
+This bounds $q_z=O_{a_0}(m^2a_0^{4m})$.  On the other hand, the sine mode
+$m+1$ of
+\[
+ J_{\fr,m}=2\operatorname{Re}
+        (\overline{F_m}\,\partial_tF_{2m})               \tag{4.9}
+\]
+has coefficient
+\[
+ -2\sum_{p=0}^{m-1}(p+m+1)c_pc_{p+m+1}
+ =-2a_0^{m+1}(1+o(1)),                                  \tag{4.10}
+\]
+where $c_0=-a_0$ and $c_n=(1-a_0^2)a_0^{n-1}$.  Parseval
+therefore yields $q_x\ge c_{a_0}a_0^{2m}$ for all large $m$.  Combining
+(4.8)--(4.10),
+\[
+ {q_z\over q_x}=O_{a_0}(m^2a_0^{2m})\longrightarrow0,
+ \qquad {-\cC_j^{\rm raw}\over q_x}\longrightarrow1.  \tag{4.11}
+\]
+For every $\theta<1$, (4.2) is negative along (4.5) for all sufficiently
+large $m$.  Thus
+\[
+ \boxed{\theta_{\rm raw,cost-free}=1}                   \tag{4.12}
+\]
+is sharp under strict dyadic geometry.  The executable at $a_0=1/2$ reaches
+$0.999899249067$ by $m=10$ and separately verifies (4.7)--(4.8); this number
+illustrates the theorem and is not its proof.
+
+\section{Covariance trace: an exact zero-frozen negative direction}
+
+Let $k$ lie strictly inside one new shell and choose
+\[
+ x=0,\qquad z(r)=Ae^{ik\cdot r}e_1.                     \tag{5.1}
+\]
+Then $B(x)=0$, so $Q_j^{\fr}=0$ with either the raw or the correct A9 trace
+convention.  Every density $\rho$ and moment $m_A$ is constant.  Therefore
+\[
+ J_A=\nabla m_A=0,\qquad
+ K_A=J_A-{m_A\over\rho+\rho_{\rm floor}}\nabla\rho=0,  \tag{5.2}
+\]
+and $q_{B(z)}(z)=0$ exactly.  Nevertheless $B(z)$ is nonzero PSD and the
+cumulative derivative covariance is positive definite.  Hence
+\[
+ \boxed{\cC_j=-t_{\Gamma_{\le j}}(B(z))<0,
+ \qquad Q_j^{\fr}=0.}                                   \tag{5.3}
+\]
+No $\theta$, including $\theta=1$, makes the complete covariance-normal
+$R_j^\theta$ algebraically nonnegative.  The former gate wording requiring
+this direction to be excluded is therefore false.  The correct task is to
+classify and entropy-control every such direction.
+
+For the sharp cube the A6/A7 contraction theorem gives
+\[
+ {\cC_j\over L^3N}\longrightarrow
+ -\delta_{\rm cube}W_\varepsilon(Ae_1),
+ \qquad \delta_{\rm cube}=0.01619898645075695,           \tag{5.4}
+\]
+where $s_{\rm dbl}=|\Psi_1|^2+|\Psi_2|^2$ is the active-doublet density and
+$\rho=|\Psi_1|^2+|\Psi_2|^2+|\Psi_3|^2$,
+\[
+ W_\varepsilon
+ =9(a+2b+c)s_{\rm dbl}-{6b s_{\rm dbl}^2\over\rho+\rho_{\rm floor}}
+ -{3c s_{\rm dbl}^2(\rho+2\rho_{\rm floor})
+      \over(\rho+\rho_{\rm floor})^2}.                 \tag{5.5}
+\]
+For $Ae_1$, $W_\varepsilon>0$, and
+\[
+ {W_\varepsilon(Ae_1)\over A^2}\longrightarrow
+ 9a+12b+6c=0.07706249999998072.                          \tag{5.6}
+\]
+The large-amplitude trace-loss coefficient is therefore
+$0.0012483343933611451 L^3NA^2$.
+
+\section{Why a positive entropy budget is necessary}
+
+Consider a proposed uniform relative estimate
+\[
+ \E_\nu\sum_{j\le J}R_j^\theta
+ \ge-\alpha_c\cH(\nu\mid\gamma_J)
+     -\epsilon_6\E_\nu\|\phi_J\|_6^6
+     -K_\theta\E_\nu\|\phi_J\|_4^4-C_\theta.         \tag{6.1}
+\]
+If $\alpha_c=0$, take the plane-wave mean in (5.1) at the top shell and the
+finite-dimensional absolutely continuous law
+\[
+ \nu_{N,\sigma}=N(h_N,\sigma^2C_N).                     \tag{6.2}
+\]
+At each fixed $N$, let $\sigma\downarrow0$.  The fixed positive floor makes
+all displayed finite-dimensional functions continuous with polynomial
+growth.  Equation (5.4) sends the left side to $-dNA^2$, while the quartic
+and sextic terms are $O(A^4)$ and $O(A^6)$ independently of $N$.  No uniform
+$C_\theta$ can repair (6.1).  Thus
+\[
+ \boxed{\alpha_c>0\ \hbox{is necessary}.}              \tag{6.3}
+\]
+
+This defect is not a counterexample when entropy is present.  If
+$\sum_i\|\Gamma_{\le j,i}\|_F\le C_\Gamma K$ and the production symbol
+obeys
+\[
+ A(k)\ge c_{\rm sym}(1+|k|^2)^2I,
+ \qquad c_{\rm sym}=0.10836453058711468,                 \tag{6.4}
+\]
+then its trace loss is $O(KA^2)$, whereas the Cameron--Martin entropy of the
+same shift is at least $O(c_{\rm sym}K^4A^2)$.  Their ratio is $O(K^{-3})$.
+This proves entropy mitigation only for the identified plane-wave family; it
+does not prove the relative form bound for arbitrary adapted laws.
+
+\section{The registered triad budget is necessary, not global}
+
+For the A9 triad
+\[
+ g_K=\cos(Kx)+\cos(Ky)-\cos(K(x+y)),                    \tag{7.1}
+\]
+exact Fourier convolution gives
+\[
+ \langle|\nabla g_K|^2\rangle=2K^2,\quad
+ \langle g_K|\nabla g_K|^2\rangle=-K^2,\quad
+ \langle g_K^2|\nabla g_K|^2\rangle={5\over2}K^2.      \tag{7.2}
+\]
+For $x=Ae_1$, $z=A(1+\epsilon g_K)e_1$, and $A=tK$, define
+\[
+ c_F=4a\epsilon^2,\quad
+ c_C=a\epsilon^3(4-5\epsilon),\quad
+ c_H={3\over2}Y\epsilon^2,\quad
+ c_6=\langle(1+\epsilon g_K)^6\rangle.                 \tag{7.3}
+\]
+Optimising the leading polynomial in $t^2$ proves the exact necessary
+condition
+\[
+ \boxed{\alpha_c\epsilon_6\ge
+ {[(c_C-\theta c_F)_+]^2\over4c_Hc_6}.}                \tag{7.4}
+\]
+The no-extra-budget threshold on this family is
+\[
+ \theta\ge\epsilon-{5\over4}\epsilon^2.                \tag{7.5}
+\]
+It is $3/16$ at $\epsilon=0.3$ and has supremum $7/36$ over
+$0<\epsilon<1/3$.  The Blaschke theorem (4.12) proves that neither number is
+a global raw threshold.
+
+\section{Exact action mismatch and the two remaining gates}
+
+Let the actual final-cutoff A7 energy at scale $j$ be
+\[
+ V_j=q_{B(\phi_j)}(D\phi_j)-t_{\Gamma_{\le j}}(B(\phi_j)).
+                                                                  \tag{8.1}
+\]
+The definitions (2.4)--(2.5), with $x=\phi_{j-1}$ and $z=\phi_j$, give the
+exact identity
+\[
+ \boxed{Q_j^{\fr}+\cC_j
+ =V_j-V_{j-1}+q_{B(\phi_{j-1})}(D\phi_{j-1}).}          \tag{8.2}
+\]
+Indeed $Q_j^{\fr}+\cC_j=V_j+t_{\Gamma_{\le j-1}}(B(x))$ and
+$t_{\Gamma_{\le j-1}}(B(x))=q_{B(x)}(Dx)-V_{j-1}$.
+Consequently, when $V_0=0$,
+\[
+ \sum_{j\le J}(Q_j^{\fr}+\cC_j)=V_J+E_J,\qquad
+ E_J:=\sum_{j\le J}q_{B(\phi_{j-1})}(D\phi_{j-1})\ge0. \tag{8.3}
+\]
+This is an obstruction, not a favourable remainder: reconstructing $V_J$
+requires subtracting $E_J$.  A lower bound for the larger shell expression
+does not lower-bound the actual A7 action.  The gate
+\texttt{A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION} may be closed either by
+a true-increment determinant theorem or by a cutoff-uniform upper form bound
+\[
+ \E_\nu E_J\le\alpha_d\cH(\nu\mid\gamma_J)
+ +\epsilon_d\E_\nu\|\phi_J\|_6^6
+ +K_d\E_\nu\|\phi_J\|_4^4+C_d.                       \tag{8.4}
+\]
+No such estimate is proved here.
+
+For $\alpha_c>0$ put
+\[
+ G_J=\sum_{j\le J}R_j^\theta
+       +\epsilon_6\|\phi_J\|_6^6+K_\theta\|\phi_J\|_4^4.   \tag{8.5}
+\]
+At finite cutoff, the Gibbs variational formula makes
+\[
+ \E_\nu G_J\ge-\alpha_c\cH(\nu\mid\gamma_J)-C_\theta
+ \quad(\nu\ll\gamma_J)                                \tag{8.6}
+\]
+equivalent to
+\[
+ \boxed{\log\E_{\gamma_J}\exp(-G_J/\alpha_c)
+       \le C_\theta/\alpha_c.}                          \tag{8.7}
+\]
+The uniform version is the separate gate
+\texttt{A10-CLASSII-STABILISED-}\allowbreak
+\texttt{RELATIVE-LOG-LAPLACE}.  It controls the shell expression in (8.5),
+but (8.3) proves that it does not recover the actual A7 action by itself.
+
+The A9 determinant alone cannot prove (8.7) by discarding endpoint terms.
+For every $\theta<1$, $B(z)-(1-\theta)B(x)$ may be indefinite and the past
+$x$ is unbounded.  A successful proof must retain the self-coupled endpoint
+square or allocate the final sextic through a trace-safe mechanism.
+
+\section{Closed cube filtration and conditional composition}
+
+The filtration prerequisite can be closed for one concrete route.  Put
+$N_j=2^j$ and
+\[
+ P_{\le j}=\mathbf1_{\{\max_a|n_a|\le N_j\}},
+ \qquad \xi_j=(P_{\le j}-P_{\le j-1})\phi.             \tag{9.1}
+\]
+The production Gaussian is diagonal in Fourier momentum, so disjoint blocks
+$\xi_j$ are independent.  In one dimension the symmetric partial-sum
+operator satisfies
+\[
+ S_Nf=e^{-iNx}P_+(e^{iNx}f)
+      -e^{i(N+1)x}P_+(e^{-i(N+1)x}f).                  \tag{9.2}
+\]
+The M.~Riesz theorem bounds $P_+$ on $L^4$ uniformly; Fubini and tensorisation
+therefore give
+$\|P_{\le j}\|_{L^4(\T^3)\to L^4(\T^3)}\le C_4^3$.
+Thus $\|\phi_{j-1}\|_4\le C_4^3\|\phi_J\|_4$.  Cube shells also have
+$O(2^{3j})$ modes of size $|k|\asymp2^j$, so the A9 counting gives
+\[
+ \|T_{j,B(\phi_{j-1})}\|_{\mathfrak S_2}^2
+ \le C_{\rm sh}(L)M_R^4c_{\rm sym}^{-2}w_j
+       \|B(\phi_{j-1})\|_2^2,\qquad \sum_jw_j<\infty. \tag{9.3}
+\]
+This proves the scoped subgate
+\texttt{A10-CLASSII-DYADIC-FILTRATION-REALISATION}.  It does not extend to
+overlapping smooth Littlewood--Paley increments without another proof.
+
+Write the actual production action as $S_J=U_J+V_J$, with the non-Class-II
+part satisfying
+\[
+ U_J\ge\int\left({\lambda\over4}\rho^2
+                         +{\gamma\over6}\rho^3\right). \tag{9.3a}
+\]
+
+Let $s=1-\theta$.  The A9 noncentral determinant and conditional entropy
+chain rule yield
+\[
+ \E_\nu\sum_j sQ_j^{\fr}
+ \ge-\alpha_f\cH(\nu\mid\gamma_J)
+       -K_f\E_\nu\|\phi_J\|_4^4,                       \tag{9.4}
+\]
+where
+\[
+ C_{\fr}=C_{\rm sh}(L)M_R^4c_{\rm sym}^{-2}
+     \beta_B^2C_4^{12}S_{\rm dy},\qquad
+ K_f={s^2C_{\fr}\over4\alpha_f}.                       \tag{9.5}
+\]
+Assume both open estimates (8.4) and (8.6).  With the production lower bound
+$U_J\ge\int[(\lambda/4)\rho^2+(\gamma/6)\rho^3]$, set
+\[
+ \alpha=\alpha_f+\alpha_c+\alpha_d,\quad
+ B_6={\gamma\over6}-\epsilon_6-\epsilon_d,\quad
+ A_4=\left[K_\theta+K_f+K_d-{\lambda\over4}\right]_+. \tag{9.6}
+\]
+Equations (8.3), (8.4), (8.6), and (9.4) then give
+\[
+ \E_\nu S_J\ge-\alpha\cH(\nu\mid\gamma_J)
+ +B_6\E_\nu\|\phi_J\|_6^6-A_4\E_\nu\|\phi_J\|_4^4
+ -(C_\theta+C_d).                                      \tag{9.7}
+\]
+If $B_6>0$ and some $p>1$ satisfies $p\alpha<1$, the Gibbs variational
+formula and the exact maximum of $A_4r^2-B_6r^3$ give
+\[
+ \boxed{\log\E_{\gamma_J}e^{-pS_J}
+ \le p(C_\theta+C_d)+{4pL^3A_4^3\over27B_6^2}.}        \tag{9.8}
+\]
+This is the A7 Nelson estimate conditional on both named open gates.
+
+At the production point, the proof-friendly target
+\[
+ \theta=0.90,\ \alpha_f=0.05,\ \alpha_c=0.80,\
+ \alpha_d=0.04,\ \epsilon_6=0.25,\ \epsilon_d=0.01,
+ \quad p=1.10                                           \tag{9.9}
+\]
+has $p\alpha=0.979$, $B_6=0.01$, and $K_f=0.05C_{\fr}$.
+$K_d$ and $C_d$ remain symbolic proof targets.  None of these targets proves
+(8.4) or (8.7).
+
+\section{Reproduction and evidence discipline}
+
+The primary executable derives every production number from A1/A7 authority,
+checks the exact trace and action-reconstruction identities, reconstructs the
+Blaschke and plane-wave families, and verifies the conditional composition
+algebra.  The independent
+route imports neither primary code nor its numerical outputs; it rebuilds the
+Pauli currents, covariance, Fourier quadrature, entropy chain rule, and
+quartic--sextic optimiser.  The one-command verifier rehashes all sources and
+requires agreement before accepting either child result.
+
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{UPHELD as a defect -- the frozen trace was left ambiguous.}
+The determinant integrates only the new innovation, so (2.4) now pins
+$\Gamma_j$.  A cumulative trace there is rejected by the verifier.
+
+\item \textbf{UPHELD as a repaired numerical defect -- the six-real
+covariance was halved twice.}  A pre-freeze audit found that both executable
+routes used $\tfrac12\operatorname{realify}(\sum_k|k|^2A(k)^{-1}/V)$.
+Equation (2.2a) restores the A6/A7 complex factor two.  The finite plane-wave
+trace values double, while their sign and the analytic coefficient in
+(5.4)--(5.6) are unchanged.  Both routes now test convergence toward that
+coefficient, so a repeated factor error fails closed.
+
+\item \textbf{UPHELD -- $3/16$ is the global retained fraction.}
+The strict-dyadic Blaschke family proves the raw loss ratio tends to one.
+$3/16$ belongs only to the registered $\epsilon=0.3$ triad.
+
+\item \textbf{UPHELD as false -- zero frozen energy excludes negative
+commutators.}  Equation (5.3) is an exact counterexample after trace
+subtraction.  The gate is corrected from exclusion to entropy control.
+
+\item \textbf{DISMISSED -- the plane-wave defect disproves every entropy
+bound.}  Its trace-to-Cameron--Martin ratio is $O(K^{-3})$.  It proves
+$\alpha_c>0$ is necessary, not that positive $\alpha_c$ fails.
+
+\item \textbf{VALID with mitigation -- an A9 determinant split closes the
+remaining theorem automatically.}  For $\theta<1$ its conditional coefficient
+is indefinite on unbounded past fields.  The open proof must retain endpoint
+self-coupling or allocate the stabilisers through a proved trace-safe route.
+
+\item \textbf{UPHELD as false -- the shell sum reconstructs the actual A7
+action plus a harmless nonnegative remainder.}  Equation (8.3) has the wrong
+direction for that inference: $V_J$ is the shell sum \emph{minus} $E_J$.
+An upper form bound such as (8.4), or a new true-increment theorem, is a
+separate load-bearing gate.
+
+\item \textbf{UPHELD as an overclaim -- (9.8) constructs the Gibbs measure.}
+Equation (9.8) is conditional on both (8.4) and (8.7).  No density
+convergence, partition limit, or tightness is claimed here.
+
+\item \textbf{VALID with mitigation -- smooth dyadic cutoffs supply both
+independence and $L^4$ stability.}  They need not.  Section 9 instead closes a
+specific sharp rectangular-cube route by independent Fourier blocks and the
+tensorised M.~Riesz bound; overlapping smooth increments remain outside it.
+
+\item \textbf{UPHELD as an overclaim -- this is T5/T6 closure.}
+The honest tier is T4 for the proved structural reduction.  T5 requires
+operator reproduction and cannot enlarge the theorem; T6/T7 are excluded.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Claim: A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION
+Tier: T4 PROVED-STRUCTURAL-REDUCTION@FIXED-FLOOR-FINITE-CUTOFF
+Closed: exact Gamma_j convention; B/DB constants; strict-dyadic raw
+        theta=1 sharpness; zero-frozen trace defect; alpha_c>0 necessity;
+        triad budget; exact action-mismatch identity; sharp-cube filtration;
+        conditional Nelson-composition implication with two antecedents.
+Open: A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION;
+      A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE.
+Not claimed: the relative form bound, A7 Nelson closure, an interacting Gibbs
+             measure, floor removal, infinite volume, BCC, T6, or T7.
+Primary expected: 47/47 PASS.
+Independent expected: 34/34 PASS.
+Integrated expected: 101/101 PASS.
+\end{verbatim}
+
+\section*{References}
+
+\begin{enumerate}
+\item M. Bou\'e and P. Dupuis, ``A variational representation for certain
+functionals of Brownian motion,'' \emph{Annals of Probability} 26 (1998),
+1641--1659.
+\item N. Barashkov and M. Gubinelli, ``A variational method for $\Phi^4_3$,''
+arXiv:1805.10814.
+\end{enumerate}

@@ -30,6 +30,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM](#ng-2026-07-20-a6-naive-w-subtraction-nonuniform) | literal fixed-parameter leading-W subtraction | homogeneous amplitudes escape as N^(1/4) and the raw lower bound falls as -N^(3/2) |
 | [NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE](#ng-2026-07-20-a7-w-zeroset-bare-inference) | pure-third bare concentration inferred from the conditional contraction | a full Class-II plane-wave null has W_eps > 0 |
 | [F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM](#f-2026-07-21-a7-infinitesimal-commutator-form) | A7 commutator-alone all-eta sufficient bound | same-shell resonant translation forces a positive relative-bound threshold |
+| [F-2026-07-21-A7-ZERO-FROZEN-EXCLUSION](#f-2026-07-21-a7-zero-frozen-exclusion) | exclusion of zero-frozen negative commutator directions | covariance trace makes an active-doublet common-phase plane wave strictly negative |
+| [F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION](#f-2026-07-21-a10-naive-action-composition) | direct identification of the A9/A10 shell sum with the actual A7 action | exact telescoping leaves a positive past-energy term with the wrong sign for lower-bound transfer |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -152,6 +154,58 @@ allowed. The active replacement is
 fixed fraction of the complete covariance-normal frozen term and close the
 remaining entropy, quartic, and sextic budgets. The self-coupled Nelson bound
 and interacting Gibbs measure remain open.
+
+<a id="f-2026-07-21-a7-zero-frozen-exclusion"></a>
+### F-2026-07-21-A7-ZERO-FROZEN-EXCLUSION -- zero-frozen exclusion criterion
+
+**Failure mode:** The first wording of
+`A7-CLASSII-FROZEN-ENERGY-RELATIVE-COMMUTATOR-BOUND` required excluding a
+direction with zero complete frozen energy and a negative coefficient
+commutator. That criterion is false after the exact covariance trace is
+included.
+
+**Evidence:** `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`. Put the past field
+to zero and take one new-shell common-phase plane wave
+`z=A exp(i k.x)e_1`. Then `B(0)=0`, hence `Q_j^fr=0`, while constant
+density and moments give `J_A=K_A=0` and zero raw endpoint energy. But
+`B(z)` is nonzero PSD and `Gamma_<=j` is positive definite, so exactly
+`C_j=-t_(Gamma_<=j)(B(z))<0`. Primary 47/47, non-importing independent
+34/34, and integrated 101/101 checks reproduce the sign, the strict
+`Gamma_j` frozen convention, and the sharp-cube coefficient.
+
+**Consequence:** The relative theorem must classify and entropy-control these
+directions, not exclude them. The same family proves that `alpha_c=0` is
+impossible uniformly in the cutoff, but it does not falsify a positive-entropy
+estimate: its trace loss is `O(KA^2)` against `O(K^4A^2)`
+Cameron--Martin entropy. Action recovery and the corrected relative log-
+Laplace estimate remain separate open gates; A7 Nelson closure and the
+interacting Gibbs measure remain open.
+
+<a id="f-2026-07-21-a10-naive-action-composition"></a>
+### F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION -- shell sum is not the actual endpoint action
+
+**Failure mode:** The naive conditional-composition route treated
+`sum_j(Q_j^fr+C_j)` as the actual final-cutoff A7 Class-II energy plus a
+nonnegative remainder that could be discarded in a lower bound. The sign is
+the opposite.
+
+**Evidence:** `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`. For
+`V_j=q_(B(phi_j))(D phi_j)-t_(Gamma_<=j)(B(phi_j))`, exact finite-dimensional
+algebra gives
+`Q_j^fr+C_j=V_j-V_(j-1)+q_(B(phi_(j-1)))(D phi_(j-1))`. Therefore, with
+`V_0=0`,
+`sum_j(Q_j^fr+C_j)=V_J+E_J`, where
+`E_J=sum_j q_(B(phi_(j-1)))(D phi_(j-1))>=0`. Primary 47/47,
+non-importing independent 34/34, and integrated 101/101 checks include this
+identity and its sign.
+
+**Consequence:** Recovering `V_J` requires subtracting `E_J`. A lower bound on
+the larger shell expression cannot be transferred to the actual A7 action
+without a cutoff-uniform upper form bound on `E_J`, or a new true-increment
+variable with its own determinant theorem. The named gate is
+`A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION`. Closing the separate relative
+log-Laplace gate alone is insufficient. The sharp rectangular-cube filtration
+subgate is closed but does not control this past-energy term.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention
