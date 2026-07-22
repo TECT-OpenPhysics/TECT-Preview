@@ -114,11 +114,17 @@ The translation-model reduction now proves the flexible sufficient field
 range `epsilon_6<gamma/6`, the exact finite-cutoff translation and Cartan
 identities, and deterministic-shift expectation positivity.  It also shows
 that A7's contracted `L^2` composite does not supply the universal translated
-model: the selected subordinate gate is
-`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`, with at least
-the endpoint `L^3` model-norm moment and no new interaction counterterm.
-Only after that lift may a coupled centered-`Q`/current/curvature stochastic
-form bound be attempted.
+model.  `A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION` now closes
+the centered tensor in every finite `Lp(H^(-1-kappa))` and its deterministic
+`H2` translation.  Adversarial analysis refutes the literal full-product jet
+reading in the required `L2` model topology.  A cone-localized subdiagram of
+the unnormalised nested resonance has a fixed negative coefficient whose
+magnitude accumulates like `c log Lambda`; this shows that lower-chaos terms
+cannot be omitted, but it does not prove noncancellation of the total
+symmetric tree.  The parent model lift remains open at the selected subordinate gate
+`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`.  Only after its
+lower-chaos terms are explicitly cancelled or registered may a coupled
+centered-`Q`/current/curvature stochastic form bound be attempted.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -219,13 +225,16 @@ preserved in git/changelog rather than treated as current gates.
    The flexible potential lemma enlarges the sufficient field range from the
    conservative `epsilon_6<0.135` to `epsilon_6<gamma/6=0.27`; the current
    stress candidate is `epsilon_6=0.15`, `delta=0.06`,
-   `epsilon_v=0.45`, with final sextic margin `0.06`. First prove
-   `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`: construct the
-   universal centered derivative-square tensor and its coefficient jets with
-   `L^3`-level moments, Cameron--Martin translation continuity, and no new
-   interaction counterterm. Then prove a strict-past signed conditional
-   reconstruction that keeps the positive square, centered `Q`, current, and
-   Cartan curvature coupled. Do not use termwise paraproduct Young absorption.
+   `epsilon_v=0.45`, with final sextic margin `0.06`. The universal centered
+   `Q` tensor, all finite moments, and deterministic `H2` Cameron--Martin
+   action are closed. Next prove
+   `A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`: fix the
+   corrected first/second coefficient symbols, enumerate their lower-chaos
+   contractions, and prove cancellation or register a new interaction
+   counterterm in the exact A7 reconstruction. Then prove a strict-past signed
+   conditional reconstruction that keeps the positive square, centered `Q`,
+   current, and Cartan curvature coupled. Do not use termwise paraproduct
+   Young absorption.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

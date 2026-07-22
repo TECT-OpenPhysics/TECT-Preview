@@ -1,0 +1,438 @@
+% =============================================================================
+% Title: Universal derivative-square model, Cameron--Martin action, and raw-jet obstruction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-22; this version issued 2026-07-22
+% Status: scoped T4 subgate closure; coefficient-jet classification remains open
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Id}{\mathrm I}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{One exact stochastic-model subgate is closed, and an ambiguous
+coefficient-jet claim is corrected before it can become an overclaim.}
+For the hash-pinned production Gaussian, this note constructs the universal
+centered derivative-square tensor in every finite probability moment and
+proves its deterministic $H^2$ Cameron--Martin translation continuity.  The
+only divergent subtraction at this $Q$ level is the derivative covariance.
+
+\medskip
+The advertised regularities of the later $XQ$ and $XXQ$ coefficient jets are
+false if the diamond is read as a full Wick product.  For a cone-localized
+piece of a natural unnormalised nested resonance, one scalar double pairing
+has a fixed negative coefficient whose magnitude stays positive on every
+dyadic scale.  This is a contraction-classification certificate, not a proof
+that the total symmetric Littlewood--Paley tree has a nonzero logarithmic
+coefficient.  Thus the parent translated-current model gate is not closed by
+silently choosing either reading.  Its coefficient-jet half is split into an
+explicit renormalisation-classification gate.  A13 remains T4, and no Nelson
+or interacting-measure theorem is claimed.
+}}
+\end{center}
+
+The scope is the fixed $L=16$ three-torus, the six-real form of the A1
+production Gaussian, the fixed positive density floor inherited by the
+Class-II coefficients, common real-even scalar spectral multipliers coupled
+through the same Gaussian modes, and exact or sufficiently de-aliased
+products.  Admitted multipliers are uniformly bounded approximate identities
+that converge pointwise to one and use the same real-even scalar multiplier
+for every component.  Cameron--Martin shifts are deterministic elements of
+$H^2$.
+Adapted random shifts are outside this theorem.
+
+\section*{1. The universal centered tensor}
+
+Let $\widehat C(k)$ denote the six-real covariance symbol.  The production
+ellipticity bounds used by A6 and A7 give constants $0<c<C<\infty$ such that
+at high momentum
+\[
+ c\langle k\rangle^{-4}\Id
+ \le \widehat C(k)
+ \le C\langle k\rangle^{-4}\Id.                     \tag{1.1}
+\]
+Let $R_\Lambda$ be an admitted common scalar multiplier and put
+$X_\Lambda=R_\Lambda X$.  For a spatial direction $i$ and real component
+indices $a,b$, define
+\[
+ \Gamma_{\Lambda,i}^{ab}
+ =\E[\partial_iX_\Lambda^a(x)\partial_iX_\Lambda^b(x)],
+ \qquad
+ Q_{\Lambda,i}^{ab}
+ =\partial_iX_\Lambda^a\partial_iX_\Lambda^b
+  -\Gamma_{\Lambda,i}^{ab}.                          \tag{1.2}
+\]
+
+\textbf{Theorem 1.1.}  For every $\kappa>0$ and every finite $p$,
+there is a regulator-independent tensor $Q_i^{ab}$ such that
+\[
+ Q_{\Lambda,i}^{ab}\longrightarrow Q_i^{ab}
+ \quad\hbox{in}\quad
+ L^p\bigl(\Omega;H^{-1-\kappa}(\T_L^3)\bigr).        \tag{1.3}
+\]
+The convergence is joint over the finite family of directions and component
+indices and with the A6 enhancement $(X,\mathbb X)$, where
+$\mathbb X_i^{ab}=X^a\circ\partial_iX^b$.  A subsequence selected from the
+dyadic cutoffs converges almost surely.  The A6 area theorem is inherited
+rather than restated as a new result here.
+
+\subsection*{1.1 Fourier--Wick estimate}
+
+Apart from harmless torus normalisations, the Fourier coefficient of (1.2)
+is
+\[
+ \widehat Q_{\Lambda,i}^{ab}(n)
+ =-\sum_{k+\ell=n}k_i\ell_i
+   :\widehat X_\Lambda^a(k)\widehat X_\Lambda^b(\ell): .
+                                                               \tag{1.4}
+\]
+Wick isometry, the finite internal dimension, and (1.1) imply
+\[
+ \E|\widehat Q_{\Lambda,i}^{ab}(n)|^2
+ \le C\sum_{k+\ell=n}
+       \langle k\rangle^{-2}\langle\ell\rangle^{-2}.
+                                                               \tag{1.5}
+\]
+The discrete convolution bound in three dimensions is
+\[
+ \sum_k\langle k\rangle^{-2}\langle n-k\rangle^{-2}
+ \le C\langle n\rangle^{-1}.                         \tag{1.6}
+\]
+Indeed, on $|k|\le|n|/2$ the second factor is
+$O(\langle n\rangle^{-2})$ and the first sum is
+$O(\langle n\rangle)$; the region $|n-k|\le|n|/2$ is symmetric.  On the
+remaining region both factors are at most their common-scale bounds, and
+dyadic summation again gives $O(\langle n\rangle^{-1})$.
+
+Consequently
+\[
+ \E\|Q_\Lambda\|_{H^{-1-\kappa}}^2
+ \le C\sum_n\langle n\rangle^{-2-2\kappa}
+                    \langle n\rangle^{-1}<\infty.     \tag{1.7}
+\]
+The radial summand is $O(r^{-1-2\kappa})$, explaining both convergence for
+every positive $\kappa$ and exclusion of the $H^{-1}$ endpoint.
+
+Couple two cutoffs through the same Gaussian modes.  At every fixed Fourier
+configuration their multiplier difference tends to zero, while (1.5)--(1.7)
+give a summable cutoff-independent majorant.  Dominated convergence proves
+the $L^2(H^{-1-\kappa})$ Cauchy property and regulator independence.
+
+\subsection*{1.2 Every finite probability moment}
+
+Each $Q_\Lambda-Q_{\Lambda'}$ lies in the second homogeneous Wiener chaos.
+For a Hilbert-valued chaos of degree $m$ and $p\ge2$, Nelson
+hypercontractivity gives
+\[
+ \|Z\|_{L^p(\Omega;\cH)}
+ \le(p-1)^{m/2}\|Z\|_{L^2(\Omega;\cH)}.              \tag{1.8}
+\]
+Apply (1.8) with $m=2$ and
+$\cH=H^{-1-\kappa}$.  For $p<2$, probability monotonicity suffices.  Thus
+(1.3) holds for every finite $p$, not merely for $p=3$.  This distinction is
+load-bearing: in the coefficient-model application range $0<\kappa<1/2$,
+the translation-model estimate asks for
+\[
+ p_\kappa={6\over2-\kappa}>3.                         \tag{1.9}
+\]
+At the audited $\kappa=0.1$, $p_\kappa=60/19$.
+
+\section*{2. Cameron--Martin translation}
+
+For deterministic $h\in H^2(\T_L^3;\R^6)$ define
+\[
+ \begin{split}
+ (\tau_hQ)_i^{ab}={}&Q_i^{ab}
+ +\partial_ih^a\,\partial_iX^b
+ +\partial_iX^a\,\partial_ih^b\\
+ &+\partial_ih^a\,\partial_ih^b .
+ \end{split}                                         \tag{2.1}
+\]
+At every finite cutoff this is the exact algebraic identity obtained by
+replacing $X_\Lambda$ with $X_\Lambda+h_\Lambda$ while keeping the same
+Gaussian covariance subtraction $\Gamma_{\Lambda,i}$.
+
+\textbf{Theorem 2.1.}  For every finite $p$ and every $\kappa>0$, (2.1) is
+an element of $L^p(\Omega;H^{-1-\kappa})$.  On each $H^2$ ball,
+\[
+ \|\tau_hQ-\tau_gQ\|_{L^p(\Omega;H^{-1-\kappa})}
+ \le C_{p,\kappa,R}
+      \bigl(1+\|h\|_{H^2}+\|g\|_{H^2}\bigr)
+      \|h-g\|_{H^2}.                                 \tag{2.2}
+\]
+For each fixed $h$, if $h_\Lambda=R_\Lambda h$, then
+$\tau_{h_\Lambda}Q_\Lambda\to\tau_hQ$ in the same space.
+
+\emph{Proof.}
+It is enough first to take
+$0<\bar\kappa=\min\{\kappa,1/4\}$.  For
+$R_h=\partial h\,\partial X$, Fourier orthogonality and (1.1) give
+\[
+ \begin{split}
+ \E\|R_h\|_{H^{-1-\bar\kappa}}^2
+ &\le C\sum_k |k|^2|\widehat h(k)|^2
+   \sum_m\langle m+k\rangle^{-2-2\bar\kappa}
+          \langle m\rangle^{-2}\\
+ &\le C_{\bar\kappa}\|h\|_{H^2}^2.
+ \end{split}                                         \tag{2.3}
+\]
+The inner convolution is uniformly bounded because the two decay exponents
+sum to $4+2\bar\kappa>3$.  The random term is first chaos, so (1.8) gives
+every finite $p$.  Moreover $H^1\hookrightarrow L^4$ on the finite torus,
+and hence
+\[
+ \|\partial h\,\partial g\|_{L^2}
+ \le C\|h\|_{H^2}\|g\|_{H^2}.                       \tag{2.4}
+\]
+Equations (2.3)--(2.4), applied to differences, prove (2.2).  If
+$\kappa>1/4$, embed the already constructed
+$H^{-1-1/4}$ object into $H^{-1-\kappa}$.  Finally
+$R_\Lambda h\to h$ strongly in $H^2$ for each fixed $h$, and the coupled
+Gaussian cutoff convergence follows from the same dominated Fourier
+estimate. \hfill$\square$
+
+This theorem is deterministic in $h$.  Substituting an adapted random
+$h=h(X)$ requires joint moments and measurability estimates not supplied by
+(2.2).
+
+\section*{3. Counterterm classification at the closed subgate}
+
+The value covariance is summable.  On unit radial shells,
+\[
+ \sum_{r\le |k|<r+1}\langle k\rangle^{-4}=O(r^{-2}), \tag{3.1}
+\]
+whereas the derivative covariance has order one per unit radial shell:
+\[
+ \sum_{r\le |k|<r+1}|k|^2\langle k\rangle^{-4}=O(1).\tag{3.2}
+\]
+Thus $\Gamma_{\Lambda,i}$ is the primitive divergent local contraction in
+$Q$.  Common real-even multipliers also give the exact full same-point
+identity
+\[
+ \E[X_\Lambda^c(x)\partial_iX_\Lambda^a(x)]
+ =\sum_k ik_i\widehat C^{ca}(k)|R_\Lambda(k)|^2=0.   \tag{3.3}
+\]
+Translation by deterministic $h$ introduces no new stochastic pairing.
+Hence $\Gamma_{\Lambda,i}$ is the only divergent \emph{$Q$-level} local
+subtraction.
+
+Equation (3.3) must not be overextended.  A Littlewood--Paley resonance
+selector need not preserve the global $k\mapsto-k$ cancellation inside each
+localized contraction.  Such lower-chaos terms belong to the next model
+classification, not to the closed $Q$ theorem.
+
+\section*{4. Why full coefficient products do not have the target gain}
+
+Put $D_i(k)=k_i^2\widehat C(k)$.  On a fixed cone, ellipticity gives
+$D_i(k)\asymp|k|^{-2}$.  Restricting the convolution to a ball of order
+$|n|$ around $n/2$ gives the matching lower bound
+\[
+ \E|\widehat Q_i(n)|^2\ge c|n|^{-1}.                 \tag{4.1}
+\]
+The value covariance is in $\ell^1(\mathbb Z^3)$ and has a positive zero
+mode.  Therefore the full Wick products retain the same low--high tail:
+\[
+ \E|\widehat{{:XQ:}}(n)|^2\ge c|n|^{-1},\qquad
+ \E|\widehat{{:XXQ:}}(n)|^2\ge c|n|^{-1}.            \tag{4.2}
+\]
+A spectrum $|n|^{-1}$ in dimension three has finite
+$L^2(\Omega;H^s)$ model norm only for $s<-1$.  For small
+$\kappa<\alpha$, this contradicts both advertised full-product targets
+\[
+ s=\alpha-1-\kappa>-1,
+ \qquad s=2\alpha-1-\kappa>-1.                       \tag{4.3}
+\]
+Thus the diamonds in the parent gate cannot mean literal full products.
+This is an analytic no-go, not a failure of the centered $Q$ tensor.
+
+\section*{5. Cone-localized raw nested-resonance certificate}
+
+It is also unsafe to assume that renaming the diamonds as unnormalised nested
+Bony products removes every lower-chaos contraction.  Consider the natural
+tree
+\[
+ \Pi\bigl(X,\Pi(X,Q)\bigr).                           \tag{5.1}
+\]
+For a dyadic integer $r$, let
+\[
+ S_r=\{k\in\mathbb Z^3:r\le k_j<2r,\ j=1,2,3\}.     \tag{5.2}
+\]
+Insert a broad balanced angular localization which is one on the following
+configurations.  Choose the two value-field momenta $\ell,j\in S_r$ and pair the two
+derivative legs of $Q$ with $-\ell,-j$.  The inner $Q$ output is
+$-(\ell+j)$, the inner product output is $-\ell$, and the outer product has
+zero output.  All inputs are comparable in scale, so this is a legitimate
+cone-localized balanced-resonance subdiagram.  No assertion about an
+unspecified global Littlewood--Paley multiplier is made.
+
+For the scalar covariance $(1+|k|^2)^{-2}$ used by the executable certificate,
+the magnitude of one perfect matching is
+\[
+ A_r=\left(\sum_{k\in S_r}k_1(1+|k|^2)^{-2}\right)^2. \tag{5.3}
+\]
+Since $|S_r|=r^3$, $k_1\ge r$, and $|k|^2<12r^2$,
+\[
+ A_r\ge
+ \left({r^4\over(1+12r^2)^2}\right)^2
+ \longrightarrow {1\over12^4}>0.                   \tag{5.4}
+\]
+With the sign convention in (1.4), the scalar double-cross coefficient from
+the two perfect matchings is $-2A_r$, not $+A_r$.  Thus its absolute magnitude
+has a scale-independent positive lower bound.  The production ellipticity
+(1.1) gives the same conclusion, with a changed constant, for a diagonal
+production component.  Summing this cone-localized component over the
+$\asymp\log_2\Lambda$ admitted scales gives magnitude at least
+$c\log\Lambda$.
+
+This does \emph{not} prove that the total symmetric Littlewood--Paley tree has
+the same logarithmic coefficient: other angular sectors may cancel it.  It
+proves that global same-point evenness and superficial power counting do not
+classify the lower-chaos terms.  The next gate must fix the actual multiplier
+and calculate the total coefficient, or use base-point/homogeneous-chaos
+correctors for which the cancellation is explicit.
+
+The first raw resonance $\Pi(X,Q)$ similarly has two possible
+value--derivative contractions.  A localized selector generally leaves a
+finite, nonzero first-chaos Fourier multiplier even though the sum in (3.3)
+vanishes.  At second order there are four single cross contractions and two
+double cross contractions.  A valid coefficient model must specify their
+homogeneous-chaos projections or equivalent correctors explicitly.
+
+This does not prove that the Class-II action, or even the final specified
+total tree, needs a new physical counterterm.  A7 proves convergence of one
+exact $B(X)$-contracted scalar
+with the derivative covariance subtraction.  The open task is to show that
+all model-level lower-chaos normalisations cancel under the translated
+coefficient reconstruction, or else to register the surviving term instead
+of hiding it.
+
+\section*{6. Corrected proof order}
+
+The subgate
+\begin{verbatim}
+A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION
+\end{verbatim}
+is closed by Theorems 1.1 and 2.1.  The parent
+\begin{verbatim}
+A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT
+\end{verbatim}
+remains open.  Its next subordinate gate is
+\begin{verbatim}
+A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION.
+\end{verbatim}
+That gate must do all of the following.
+
+\begin{enumerate}
+\item Fix either base-point increment symbols or an exact balanced
+Littlewood--Paley corrector family for the first- and second-order jets.
+\item Enumerate every first-, second-, and zero-chaos contraction, including
+both two-$X$/one-$Q$ parenthesisations needed by second-order
+paralinearisation.
+\item Prove coupled-cutoff convergence and every finite probability moment.
+\item Reconstruct $\Delta B:Q$ and the translated current in the exact A7
+covariance-normal scheme, without a finite Hermite truncation of the rational
+coefficient.
+\item Prove cancellation of the logarithmic and finite lower-chaos model
+terms in that reconstruction, or register a surviving interaction
+counterterm as a new obstruction.
+\end{enumerate}
+
+Only after that classification may the proof move to the strict-past signed
+$Q$/current/positive-square/Cartan-curvature form bound.  Termwise absolute
+Young absorption remains excluded by the earlier A13 critical-exponent
+calculation.
+
+\section*{7. Executable audit}
+
+The primary route derives every exponent from the dimension and covariance
+decay, forms the finite scalar $Q$ convolution by zero-padded FFT, checks the
+exact translated tensor identity, and computes (5.3) on four dyadic cones.
+For $r=2,4,8,16$, the respective positive contraction magnitudes are approximately
+\[
+ 0.00274457,\quad0.00185506,\quad0.00147026,\quad0.00130040. \tag{7.1}
+\]
+The localized first-chaos selector witness is
+$-0.09512894227995705$, confirming that full parity does not kill every
+resonant contraction.
+
+The non-importing route enumerates the $Q$ convolution directly, checks the
+Wick translation polynomial with probabilists' Hermite polynomials, verifies
+the degree-$2,3,4$ Nelson bounds by 120-node Gaussian quadrature, counts the
+cross contractions, and independently recomputes three cone lower bounds.
+These finite calculations are regression and falsifier evidence.  The
+continuum theorem is (1.4)--(2.4), the full-product no-go is (4.1)--(4.3),
+and the cone-localized classification boundary is (5.1)--(5.4).
+
+The one-command verifier is
+\begin{verbatim}
+python codes/foundations/a13_classii_universal_q_cm_translation_verify.py
+\end{verbatim}
+
+\section*{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED: A7's $L^2$ result is enough because every translated
+coefficient is fixed chaos.}  The rational $B(X)$ has infinitely many chaos
+components.  Hypercontractivity is applied here only to the universal
+second-chaos tensor $Q$, not directly to A7's nonlinear contraction.
+
+\item \textbf{UPHELD AS A CORRECTION: exact $L^3$ is the required endpoint.}
+For the application range $0<\kappa<1/2$, (1.9) is strictly above three.
+The theorem therefore proves all finite moments.
+
+\item \textbf{DISMISSED: $H^2\hookrightarrow C^{1/2}$ permits an ordinary
+Holder product with $\partial X$.}  That endpoint multiplication is not used.
+The mixed Fourier--Sobolev estimate (2.3) constructs the product directly.
+
+\item \textbf{VALID WITH MITIGATION: local Lipschitz continuity for
+deterministic $h$ proves the adapted case.}  It does not.  Joint moments for
+$h(X)$ and the signed stochastic form estimate remain open.
+
+\item \textbf{UPHELD AS A NO-GO: the diamonds may be literal full Wick
+products.}  Equations (4.1)--(4.3) show that their low--high spectra miss the
+advertised regularities.
+
+\item \textbf{UPHELD AS A NO-GO: changing ``full'' to ``resonant'' removes
+all contractions by evenness.}  The explicit cone (5.2)--(5.4) gives a
+fixed-sign zero-chaos subdiagram with logarithmically growing magnitude, and
+the first-chaos localized witness is nonzero.  Total-tree noncancellation is
+not claimed.
+
+\item \textbf{VALID WITH MITIGATION: the logarithm proves a new physical
+Class-II counterterm is necessary.}  It proves only that a cone-localized
+subdiagram is not absolutely summable and must be included in the contraction
+classification.  Whether it cancels across the specified total tree and the
+exact translated Class-II reconstruction is precisely the next gate.
+
+\item \textbf{DISMISSED: the finite cone and FFT fixtures are presented as a
+continuum proof.}  They are only independent regression certificates.  The
+analytic majorants and lower bound are written explicitly in the note.
+\end{enumerate}
+
+\section*{Result footer}
+
+\begin{verbatim}
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Result: A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION
+Tier: T4 (unchanged)
+Closed: universal centered Q in every finite Lp(H^(-1-kappa)); deterministic
+        H2 Cameron-Martin action and local Lipschitz continuity; Q-level
+        derivative-covariance counterterm classification.
+Negative: full-product coefficient jets miss the targets; a cone-localized
+          nested QXX subdiagram has a fixed negative coefficient with
+          logarithmically growing magnitude. Total-tree noncancellation is
+          not claimed.
+Open: A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT and the
+      umbrella A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE theorem.
+Next: A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION.
+Honesty: no adapted-shift form bound, Nelson moment, interacting measure,
+         floor/regulator removal, infinite volume, phase transition, BCC,
+         T5, T6, or T7 is proved here.
+\end{verbatim}

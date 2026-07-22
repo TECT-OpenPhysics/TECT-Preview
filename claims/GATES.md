@@ -407,22 +407,71 @@ payment of the Ramer square plus inverse determinant are excluded.
 **Statement:** Construct a cutoff-consistent enhanced model for
 `X`, `X circle partial_i X`, the universal tensor
 `Q_i^ab=:partial_i X_a partial_i X_b:`, and the coefficient jets
-`X^c diamond Q_i^ab` and `:X^c X^d: diamond Q_i^ab`, with Cameron--Martin
-translation continuity and every moment needed by the signed reconstruction.
-For `1/3<alpha<1/2` and `kappa>0`, the target regularities are respectively
-`C^alpha`, `C^(2alpha-1)`, `H^(-1-kappa)`,
-`H^(alpha-1-kappa)`, and `H^(2alpha-1-kappa)`.  The exact derivative-pair
-covariance subtraction is the only admitted local counterterm.
+`X^c diamond Q_i^ab` and `X^c X^d diamond Q_i^ab`, with Cameron--Martin
+translation continuity and every finite moment needed by the signed
+reconstruction.  The diamonds must be defined as base-point increments or
+explicit renormalised balanced correctors, not literal full Wick products or
+unnormalised nested Bony trees.  The action-level scheme must remain the exact
+A7 derivative-covariance normalisation; every lower-chaos model correction
+must be displayed and either cancelled on reconstruction or registered as a
+new interaction counterterm.
 
-**Status:** OPEN SELECTED SUBGATE (2026-07-22) under the sole canonical
-one-use objective.  Testing the universal `Q` against `h^2` requires its
-model norm in `L^(6/(2-kappa))(Omega)`, approaching `L^3` as `kappa` tends
-to zero; A7 states only an `L^2` bound for one `B(X)`-contracted scalar.
-The exact Cartan identity keeps the non-exact `K` curvature antisymmetric.
-After this lift closes, the next step is a strict-past joint conditional
-estimate of centered `Q`, the current, the positive square, and the Cartan
-curvature.  Termwise absolute paraproduct/Young absorption is excluded by
-the critical `H^2` exponent `3/2` and `L^6` exponent `3/2`.
+**Status:** OPEN (universal-Q child CLOSED) (2026-07-22) under the sole
+canonical one-use objective.  The universal `Q` and deterministic `H2`
+translation half is closed by the next subgate in every finite probability
+moment.  The coefficient-jet half remains open because full `XQ`/`XXQ` retain
+the `|n|^-1` low--high spectrum.  A cone-localized raw nested subdiagram has a
+fixed negative coefficient with magnitude accumulating like `c log Lambda`,
+but noncancellation of the total symmetric Littlewood--Paley tree is not
+proved.  After the coefficient classification closes, the next step is a
+strict-past joint conditional estimate of centered `Q`, current, positive
+square, and Cartan curvature.  Termwise absolute paraproduct/Young absorption
+remains excluded.
+
+### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
+
+**Statement:** For the common real-even production cutoffs, construct the
+universal centered tensor
+`Q_Lambda,i^ab=partial_i X_Lambda^a partial_i X_Lambda^b-Gamma_Lambda,i^ab`
+jointly with the inherited A6 `(X,area)` lift.  Prove convergence in
+`L^p(Omega;H^(-1-kappa))` for every `kappa>0` and finite `p`, and prove that
+the exact deterministic `H2` Cameron--Martin action is locally Lipschitz in
+the same model topology.
+
+**Status:** CLOSED (2026-07-22) at scoped T4 analytic/executed grade.  The
+variance spectrum is bounded by
+`sum_k <k>^-2<n-k>^-2 <= C<n>^-1`; dominated convergence gives the coupled
+cutoff limit, and second-chaos hypercontractivity gives all finite moments,
+including `6/(2-kappa)>3` in the application range `0<kappa<1/2`.  A mixed Fourier--Sobolev estimate constructs
+`partial h partial X` for `h in H2`.  `Gamma_Lambda,i` is the only divergent
+Q-level local subtraction.  This does not cover adapted random shifts or the
+nonlinear coefficient reconstruction.
+
+### **A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION**
+
+**Statement:** Fix base-point increment symbols or an exact balanced
+Littlewood--Paley corrector family for the first- and second-order coefficient
+jets.  Enumerate every first-, second-, and zero-chaos contraction for both
+two-`X`/one-`Q` parenthesisations; prove coupled-cutoff convergence in all
+finite moments with first- and second-order targets
+`H^(alpha-1-kappa)` and `H^(2alpha-1-kappa)`; and reconstruct `Delta B:Q`
+plus the translated current in the exact A7 covariance-normal scheme.  The
+exit condition is an exact reconstruction identity in that scheme together
+with either cancellation of the total LP-weighted logarithmic and finite
+lower-chaos terms or registration of every survivor as an interaction
+counterterm.
+
+**Status:** OPEN SELECTED SUBGATE (2026-07-22).  Literal full products miss
+the target `L2` model regularities.  For a cone-localized piece of the raw
+nested tree `Pi(X,Pi(X,Q))`, the scalar coefficient is negative and its
+magnitude is bounded below per dyadic scale, giving a localized
+`c log Lambda` magnitude certificate.  This is registered as
+`NG-2026-07-22-A13-RAW-DIAMOND-JET`.  It does not prove noncancellation of the
+total symmetric tree.  Global same-point evenness does not remove every
+localized resonant contraction, so the total multiplier and both
+parenthesisations must be classified.  The obstruction is to the unqualified
+raw jet definition, not yet to a corrected model or to the Class-II Nelson
+theorem.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

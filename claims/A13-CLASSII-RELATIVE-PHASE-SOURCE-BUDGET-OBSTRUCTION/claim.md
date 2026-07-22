@@ -175,12 +175,13 @@ half-sextic comparison, refutes the one-shot `xi -> xi+t b_J(xi)` proof
 architecture. The Nelson moment is not refuted.
 
 The sole canonical objective remains
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. The selected subordinate
-gate is now
-`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`. A viable
-continuation must first construct the universal centered derivative-square
-tensor and its translated coefficient jets with `L^3`-level moments, then
-preserve a signed global cancellation in the random remainder estimate.
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. Its parent model subgate is
+`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`. The universal
+centered derivative-square and deterministic translation half is now closed;
+the selected subordinate gate is
+`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`. Only after the
+coefficient correctors and their lower-chaos cancellations are fixed may a
+signed global random-remainder estimate be attempted.
 
 The failed local architecture is registered as
 `NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER`. Coefficient-one local potential
@@ -255,22 +256,85 @@ A7 states only the particular `B(X)`-contracted scalar composite in
 `L^2(Omega;H^(-1-kappa))`. Translation requires the universal centered
 tensor `Q_i^ab=:partial_i X_a partial_i X_b:`, its `QX` and `QXX`
 coefficient jets, Cameron--Martin translation continuity, and moments beyond
-`L^2`. Testing `Q` against `h^2` requires
-`L^(6/(2-kappa))(Omega)`, approaching `L^3` at the endpoint. The next
-subgate is therefore
-`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`. Only after it
-closes may the positive square, centered `Q`, current, and Cartan curvature
-be estimated jointly in a strict-past random-remainder theorem.
+`L^2`. In the application range `0<kappa<1/2`, testing `Q` against `h^2`
+requires `L^(6/(2-kappa))(Omega)`, approaching `L^3` as `kappa` tends to
+zero. The parent gate
+`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT` remains open.
+Its universal-Q child is now closed below, and
+`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION` is the selected
+next subgate. Only after that classification closes may the positive square,
+centered `Q`, current, and Cartan curvature be estimated jointly in a
+strict-past random-remainder theorem.
+
+## Universal-Q closure and corrected coefficient-jet boundary
+
+For every `kappa>0` and every finite `p`, the universal tensor
+
+\[
+Q_{\Lambda,i}^{ab}
+=\partial_iX_\Lambda^a\partial_iX_\Lambda^b
+-\Gamma_{\Lambda,i}^{ab}
+\]
+
+converges in `L^p(Omega;H^(-1-kappa))`, jointly with the inherited A6
+`(X,area)` lift. Wick isometry reduces its variance spectrum to
+
+\[
+\sum_k\langle k\rangle^{-2}\langle n-k\rangle^{-2}
+\lesssim\langle n\rangle^{-1}.
+\]
+
+The `H^(-1-kappa)` sum is therefore finite, coupled cutoffs converge by
+dominated convergence, and second-chaos hypercontractivity gives every finite
+probability moment. This is stronger than exact `L3`: in the application
+range `0<kappa<1/2`, the Sobolev test needs `p=6/(2-kappa)>3`.
+
+For deterministic `h in H2`, the exact translated tensor is
+
+\[
+\tau_hQ=Q+\partial h\,\partial X+\partial X\,\partial h
+          +\partial h\,\partial h.
+\]
+
+A mixed Fourier--Sobolev estimate constructs the cross term directly in
+`L^p(Omega;H^(-1-kappa))` and makes the action locally Lipschitz in `H2`.
+This closes
+`A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION` without claiming an
+adapted random-shift estimate.
+
+Adversarial analysis corrects the remaining jet statement. Literal full Wick
+`XQ` and `XXQ` products retain the `|n|^-1` low--high spectrum of `Q`, so for
+small `kappa<alpha` they fail the required `L^2(Omega;H^s)` model topology at
+the advertised `H^(alpha-1-kappa)` and `H^(2alpha-1-kappa)` targets. For a
+cone-localized piece of the raw nested tree `Pi(X,Pi(X,Q))`, take the positive
+dyadic cone
+`S_r={k:r<=k_j<2r}`, its double contraction obeys
+
+\[
+\left(\sum_{k\in S_r}k_1(1+|k|^2)^{-2}\right)^2
+\ge\left({r^4\over(1+12r^2)^2}\right)^2\longrightarrow12^{-4}>0.
+\]
+
+The displayed square is the magnitude of one matching. With the sign in the
+Fourier definition of `Q`, the scalar two-matching coefficient is `-2A_r`.
+Its cone-localized magnitude therefore accumulates like `c log Lambda`, but
+this does not prove that the total symmetric Littlewood--Paley tree has a
+nonzero logarithmic coefficient; other angular sectors may cancel it. This
+is recorded under `NG-2026-07-22-A13-RAW-DIAMOND-JET` as a failure of the
+unqualified raw definition, not as a proof of a new physical counterterm.
+The next gate must pin the actual multiplier, enumerate every contraction,
+and either cancel or retain all first-, second-, and zero-chaos correctors in
+the exact A7 reconstruction.
 
 ## Reproduction
 
 ```powershell
-python codes/foundations/a13_classii_translation_model_reduction_verify.py
+python codes/foundations/a13_classii_universal_q_cm_translation_verify.py
 ```
 
-Expected: primary 29/29, non-importing independent 24/24, and integrated
-aggregate 106/106 assertions pass; the verifier prints
-`A13-CLASSII-TRANSLATION-MODEL-REDUCTION-INTEGRATED-PASS`.
+Expected: primary 42/42, non-importing independent 22/22, and integrated
+aggregate 110/110 assertions pass; the verifier prints
+`A13-CLASSII-UNIVERSAL-Q-CM-TRANSLATION-INTEGRATED-PASS`.
 
 ## Evidence
 
@@ -295,11 +359,21 @@ aggregate 106/106 assertions pass; the verifier prints
 - `runs/2026-07-22-primary-translation-model-reduction/result.json`
 - `runs/2026-07-22-independent-translation-model-reduction/result.json`
 - `runs/2026-07-22-integrated-translation-model-reduction/result.json`
+- `classii_universal_q_cm_translation_manifest.json`
+- `notes/classii-universal-q-cm-translation-260722-v1.0.tex.txt`
+- `notes/classii-universal-q-cm-translation-260722-v1.0.pdf`
+- `../../codes/foundations/a13_classii_universal_q_cm_translation.py`
+- `../../codes/foundations/a13_classii_universal_q_cm_translation_independent.py`
+- `../../codes/foundations/a13_classii_universal_q_cm_translation_verify.py`
+- `runs/2026-07-22-primary-universal-q-cm-translation/result.json`
+- `runs/2026-07-22-independent-universal-q-cm-translation/result.json`
+- `runs/2026-07-22-integrated-universal-q-cm-translation/result.json`
 - `../../negative-results/registry.md#ng-2026-07-21-a13-local-bellman-barrier`
 - `../../negative-results/registry.md#audit-2026-07-22-a13-factor-four-allocation`
 - `../../negative-results/registry.md#audit-2026-07-22-a13-half-sextic-overrestriction`
 - `../../negative-results/registry.md#ng-2026-07-22-a13-timewise-young-carre-du-champ`
 - `../../negative-results/registry.md#ng-2026-07-22-a13-nonfrozen-ramer-one-shot`
+- `../../negative-results/registry.md#ng-2026-07-22-a13-raw-diamond-jet`
 
 The three `2026-07-21-*-joint-source-potential-reduction` run JSON files and
 the `classii-joint-source-potential-reduction-260721-v1.0` note pair are kept
@@ -308,7 +382,9 @@ contains a forward pointer, so those old runs are not hash-reconstructible from
 the current named v1.0 files and must not be cited as current evidence.  The
 v1.1 note, manifest, and `2026-07-22-*-v1.1` runs above remain the immutable
 joint-source authority. The translation-model v1.0 note, manifest, and three
-2026-07-22 translation-model runs are the current continuation package.
+2026-07-22 translation-model runs remain current for their reduction scope.
+The universal-Q note, manifest, and three same-day runs are the latest
+continuation package.
 
 ## Devil's-advocate
 
@@ -394,6 +470,29 @@ joint-source authority. The translation-model v1.0 note, manifest, and three
     FALSE FOR THAT ARCHITECTURE.** The current term has `H2` exponent
     `3/2` and `L6` exponent `3/2`, which saturate Young and leave no slot
     for an unbounded random model norm. A coupled signed estimate is required.
+21. **Exact `L3` closes the Q moment gate - UPHELD AS INSUFFICIENT.** In the
+    application range `0<kappa<1/2`, the required exponent is
+    `6/(2-kappa)>3`. The universal second-chaos result is therefore proved in
+    every finite `Lp`.
+22. **The H2 translation cross term is a classical Holder product - UPHELD
+    AS AN INVALID JUSTIFICATION.** The endpoint Holder sum is not positive.
+    The theorem instead uses a direct mixed Fourier--Sobolev convolution.
+23. **The coefficient diamonds may be literal full Wick products - UPHELD AS
+    FALSE.** Their low--high spectra retain the `|n|^-1` Q tail and miss both
+    advertised improved regularities.
+24. **Global evenness removes every resonant contraction - UPHELD AS FALSE.**
+    It removes the full same-point value--derivative pairing, but a localized
+    selector leaves a nonzero first-chaos multiplier, and a cone-localized
+    nested subdiagram has a fixed negative coefficient with logarithmically
+    growing magnitude. This does not assert total-tree noncancellation.
+25. **The logarithm proves a new physical counterterm is unavoidable - VALID
+    WITH MITIGATION.** It proves only that a cone-localized contraction is not
+    absolutely summable and must be classified. Whether it cancels in the
+    specified total tree and exact translated Class-II reconstruction is the
+    newly named open gate.
+26. **Deterministic H2 continuity proves adapted translation control -
+    UPHELD AS FALSE.** Adapted shifts require joint model/control moments and
+    the still-open signed stochastic form estimate.
 
 ## Falsifier
 
@@ -412,19 +511,23 @@ deterministic-remainder fixture, translated-model moment arithmetic, source
 hashes, seven-page PDF QA, or 106-assertion aggregate falsifies the
 translation-model continuation. The original
 Fierz, phase-null, commutator, and carrier falsifiers remain in force.
+Failure of the universal-Q convolution bound, all-finite-moment lift, mixed
+H2 translation estimate, raw full-product lower bound, dyadic logarithmic
+contraction, either independent implementation, six-page PDF QA, or the
+110-assertion aggregate falsifies the universal-Q continuation.
 
 ## No-overclaim
 
-This claim does not prove an exact finite-`K` doubling identity for the full
-modulated carrier, a cutoff-uniform estimate for random or adapted
-translations, a uniform translated-model `Lp` bound, the controlled-shell
-estimate or its equivalent `q=10/9` Nelson moment, failure of all nonlinear
-transports, the A11 stabilised theorem or A7 Nelson bound, a full joint
-log-Laplace bound, an interacting measure, absence of new interaction
-counterterms, floor or regulator removal, infinite volume, a phase transition
-or BCC selection, or T5, T6, or T7. Deterministic-shift positivity does not
-extend automatically to adapted shifts, and finite-grid identities are
-algebraic regression tests rather than continuum estimates.
+This claim proves all finite probability moments only for the universal
+centered `Q` tensor and its deterministic `H2` translation. It does not
+construct renormalised `QX`/`QXX` coefficient correctors, prove cancellation
+of their lower-chaos terms, exclude a surviving interaction counterterm,
+control random or adapted translations, prove the signed form bound,
+controlled-shell estimate or equivalent `q=10/9` Nelson moment, close A11 or
+A7, construct an interacting measure, remove the floor or regulator, take
+infinite volume, prove a phase transition or BCC selection, or justify T5,
+T6, or T7. The raw-jet logarithm refutes an unnormalised model tree, not every
+corrected model or the Nelson theorem.
 
 ## History
 
@@ -451,3 +554,11 @@ algebraic regression tests rather than continuum estimates.
   `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT` with
   `L3`-level moments and no new counterterm. A13 remains T4 and the umbrella
   one-use gate remains open.
+- 2026-07-22: Closed the universal centered-Q subgate in every finite
+  `Lp(Omega;H^(-1-kappa))` and proved deterministic H2 Cameron--Martin
+  continuity. Adversarial review refuted the full-product reading of the
+  coefficient jets and exhibited a fixed-sign cone-localized contraction
+  whose magnitude accumulates like `c log Lambda`; total-tree noncancellation
+  is not claimed. The parent model lift remains open at the
+  explicit coefficient-jet renormalisation-classification gate; A13 remains
+  T4.

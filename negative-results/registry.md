@@ -40,6 +40,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION](#audit-2026-07-22-a13-half-sextic-overrestriction) | A13 v1.1 one-use field budget | gamma/12 was a conservative equal split; flexible quartic absorption gives the sufficient range epsilon_6<gamma/6 |
 | [NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP](#ng-2026-07-22-a13-timewise-young-carre-du-champ) | A13 continuous-time source-square Young route | a zero-endpoint loop has sixth-order bracket growth but exact signed-action cancellation |
 | [NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT](#ng-2026-07-22-a13-nonfrozen-ramer-one-shot) | A13 direct nonfrozen Ramer map | the production Jacobian determinant changes sign at finite field amplitude |
+| [NG-2026-07-22-A13-RAW-DIAMOND-JET](#ng-2026-07-22-a13-raw-diamond-jet) | A13 unqualified coefficient-jet definitions | full products miss the target L2 regularity; a cone-localized nested contraction has logarithmic magnitude and requires total-tree classification |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -430,8 +431,58 @@ or Follmer transport, a different globally invertible map, or a direct
 constructive proof. The unique canonical objective remains
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`; the next method must preserve a
 signed global cancellation rather than bound the inverse determinant and
-Ramer square separately.  The selected subordinate proof gate is
-`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`.
+Ramer square separately.  The universal-Q half of the parent model lift is
+now closed; its selected subordinate proof gate is
+`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`.
+
+<a id="ng-2026-07-22-a13-raw-diamond-jet"></a>
+### NG-2026-07-22-A13-RAW-DIAMOND-JET -- unqualified coefficient jets fail
+
+**Failure mode:** The translation-model boundary used the symbols
+`X diamond Q` and `XX diamond Q` without fixing whether `diamond` meant a
+full Wick product or a balanced renormalised coefficient corrector.  The
+literal full-product reading is false in the advertised `L2` model topology: the
+universal derivative-square tensor has variance spectrum comparable to
+`|n|^-1`, and convolution with the summable value covariance leaves this
+low--high tail unchanged.  Thus full `XQ` and `XXQ` fail to have finite
+`L2(Omega;H^s)` norm in the claimed improved spaces for small
+`kappa<alpha`.
+
+The direct replacement by an unspecified raw nested Bony tree
+`Pi(X,Pi(X,Q))` is also not justified by global evenness alone.  On each
+positive dyadic cone
+`S_r={k in Z^3:r<=k_j<2r}`, pair the two value legs with the two derivative
+legs at momenta `l,j,-l,-j` and insert a broad balanced cone localization
+which is one there.  The magnitude of one perfect matching obeys
+`[sum_(k in S_r) k_1(1+|k|^2)^(-2)]^2
+ >= [r^4/(1+12r^2)^2]^2 -> 12^(-4)>0`.
+With the derivative sign and two scalar perfect matchings, the raw scalar
+coefficient is negative and equals minus twice this magnitude.  The
+cone-localized magnitude therefore accumulates like `c log Lambda`.
+
+This certificate does not prove that the total symmetric Littlewood--Paley
+tree has a nonzero logarithmic coefficient.  Other angular sectors can have
+the same scale order and may cancel.  It proves that the raw contraction is
+not absolutely summable and that every lower-chaos term must be classified
+for the pinned total multiplier.
+
+**Evidence:** Analytic Fourier lower bounds and contraction enumeration in
+`classii-universal-q-cm-translation-260722-v1.0`.  The primary route computes
+positive cone magnitudes `0.00274457`, `0.00185506`, `0.00147026`, and
+`0.00130040` for `r=2,4,8,16` and a nonzero localized first-chaos witness
+`-0.09512894227995705`.  A non-importing direct loop independently verifies
+three cone bounds and the two/four/two cross-contraction counts.  The complete
+package passes primary 42/42, independent 22/22, and integrated 110/110.
+
+**Consequence:** The unqualified raw definitions are retired.  This is not a
+no-go for every pinned symmetric tree, base-point-increment,
+homogeneous-chaos, or corrected paracontrolled model, and it does not prove
+that the final Class-II action needs a new physical counterterm.  The next
+gate must fix all coefficient symbols and the total multiplier, enumerate
+their lower-chaos terms, and prove cancellation in the exact A7
+reconstruction or register any surviving interaction counterterm.  The
+universal centered `Q` tensor and deterministic `H2` Cameron--Martin action
+are separately closed.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-061](#r-061) | Universal derivative-square tensor and raw coefficient-jet obstruction | Scoped T4 analytic/executed result: universal Q converges in every finite Lp(H^(-1-kappa)) with deterministic H2 Cameron--Martin continuity; literal full jets miss the L2 target and a cone-localized nested subdiagram has logarithmically growing fixed-sign magnitude, without a total-tree noncancellation claim |
 | [R-060](#r-060) | Class-II translation identity and translated-current model boundary | Scoped T4 exact reduction: flexible potential coercivity enlarges the sufficient field-charge range to epsilon_6<gamma/6; exact translation, frame, expectation, and Cartan identities isolate the universal L3-level translated model as the next gate |
 | [R-059](#r-059) | Joint Class-II completion and nonfrozen determinant boundary | Scoped T4 reduction: corrected factor-four allocation, exact one-use/Nelson equivalence, mixed Hardy and nonfrozen Schatten-two theorems, exact coefficient curl, and independently executed one-shot Ramer singularity; the cutoff-uniform full-action theorem remains open |
 | [R-058](#r-058) | Exact Class-II phase-null structure and relative-phase source-budget obstruction | Scoped T4 exact/executed no-go: the production matrix has separate local doublet/singlet phase nulls and an output-shell commutator, yet a finite opposite-corner SU(2) witness gives C_rel>0.9>gamma/3 and defeats every standalone deterministic source allocation with p>=1 |
@@ -79,6 +80,49 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-061"></a>
+### R-061 -- universal derivative-square tensor and raw coefficient-jet obstruction
+
+**Result ID.** `A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION`.
+
+**Statement.** For the hash-pinned six-real production Gaussian, common
+real-even coupled spectral cutoffs, every `kappa>0`, and every finite `p`,
+the universal centered tensor
+`Q_Lambda,i^ab=partial_i X_Lambda^a partial_i X_Lambda^b-Gamma_Lambda,i^ab`
+converges in `L^p(Omega;H^(-1-kappa))`.  The variance spectrum is bounded by
+`sum_k<k>^-2<n-k>^-2 <= C<n>^-1`; dominated convergence gives the common
+cutoff limit, and Hilbert-valued second-chaos hypercontractivity supplies all
+finite moments.  For deterministic `h in H2`, the exact translated tensor is
+locally Lipschitz in the same probability/Sobolev topology by a direct mixed
+Fourier--Sobolev estimate.  `Gamma_Lambda,i` is the only divergent Q-level
+local subtraction.
+
+The coefficient-jet audit refutes the literal full-product definition. Full
+Wick `XQ` and `XXQ` retain the `|n|^-1` low--high spectrum and miss the claimed
+improved `L2` model regularities.  For a cone-localized subdiagram of the raw
+nested balanced tree `Pi(X,Pi(X,Q))`, the scalar two-matching coefficient is
+negative and its magnitude stays bounded below at every scale, producing a
+localized `c log Lambda` magnitude.  This does not prove noncancellation of
+the total symmetric tree.  A corrected base-point or homogeneous-chaos model
+may cancel the localized term in the exact A7 reconstruction; that complete
+classification is the next gate.
+
+**Proven in.** A13 /
+`classii-universal-q-cm-translation-260722-v1.0`, with primary 42/42,
+non-importing independent 22/22, integrated 110/110, and six-page PDF visual
+QA.
+
+**Reuse scope.** Derivative-square Gaussian composites with `q^-4`
+covariance in three dimensions; deterministic Cameron--Martin translations;
+and adversarial checks distinguishing full products from renormalised
+coefficient correctors.
+
+**Tier.** T4 analytic/executed subgate closure.  No coefficient-jet
+reconstruction, adapted-shift bound, Nelson moment, or interacting measure.
+
+**Publication target.** Stochastic-analysis methods note after the corrected
+coefficient model is classified.
 
 <a id="r-060"></a>
 ### R-060 -- Class-II translation identity and translated-current model boundary

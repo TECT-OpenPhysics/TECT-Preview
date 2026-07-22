@@ -1,0 +1,161 @@
+{
+  "schema": "tect/a13-classii-universal-q-cm-translation/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "result_id": "A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION",
+  "frozen_on": "2026-07-22",
+  "status": "T4 UNIVERSAL-Q SUBGATE CLOSED; COEFFICIENT-JET CLASSIFICATION OPEN",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_k_manifest": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "a7_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    "a13_translation_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_translation_model_reduction_manifest.json",
+      "sha256": "de737fb0a23a588861b5c95e760636524b260178b41f9cffceaa399f123b932b"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_universal_q_cm_translation.py",
+      "sha256": "5db5fbaf6334688be81dea1ebd6838dfa0ba3002e59ee9b13b71896978f392aa",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_universal_q_cm_translation_independent.py",
+      "sha256": "0ceff8a72a72210b5e74c5b2a0ddd9d215f8788d43012507daaec4538542e356",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_universal_q_cm_translation_verify.py",
+      "sha256": "66898f9671d903116030be9b6e2fa443a6f6b31064d129aff422833981774e33",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-universal-q-cm-translation-260722-v1.0.tex.txt",
+      "sha256": "51acafa751f7157bd0e14916cc3f0e212d203ba50407049c0f5a039aabc54323",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-universal-q-cm-translation-260722-v1.0.pdf",
+    "sha256": "296c09594dfb63dfcc4e9f3d97c93c38909ac4f12d715b77e016d35bbf6f6a67",
+    "version": "1.0",
+    "pages": 6,
+    "size_bytes": 364850,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "PASS"
+  },
+  "scope": "Fixed L=16 three-torus; six-real production Gaussian with covariance symbol bounded by a constant times <k>^-4; fixed positive rho floor inherited from A6/A7; uniformly bounded common real-even scalar approximate identities coupled through the same Gaussian modes and converging pointwise to one; exact/dealiased products; and deterministic Cameron-Martin shifts h in H^2. The theorem constructs the universal centered derivative-square tensor Q in every finite probability moment and its H^2 translation action. The A6 X/area lift is inherited. Finite scalar majorants and tensor fixtures are regression evidence, not replacements for the Fourier proof.",
+  "definitions": {
+    "centered_tensor": "Q_{Lambda,i}^{ab}=partial_i X_Lambda^a partial_i X_Lambda^b-Gamma_{Lambda,i}^{ab}.",
+    "cameron_martin_action": "tau_h Q_i^{ab}=Q_i^{ab}+partial_i h^a partial_i X^b+partial_i X^a partial_i h^b+partial_i h^a partial_i h^b.",
+    "full_product_reading": "The literal full Wick products XQ and XXQ retain the low-high spectrum of Q and are not the advertised coefficient jets.",
+    "naive_nested_reading": "A cone-localized subdiagram of Pi(X,Pi(X,Q)) has a fixed negative scalar coefficient whose absolute magnitude is bounded below on every dyadic scale. This requires explicit lower-chaos classification but does not prove noncancellation of the total symmetric Littlewood-Paley tree."
+  },
+  "theorem": {
+    "joint_limit": "For every kappa>0 and finite p, Q_Lambda converges jointly with the inherited A6 (X,area) lift in L^p(Omega;H^(-1-kappa)); a subsequence selected from dyadic cutoffs converges almost surely.",
+    "all_moments": "Q is a Hilbert-valued second Wiener chaos. Nelson hypercontractivity upgrades the Fourier-Wick L2 Cauchy estimate to every finite p, including 6/(2-kappa) in the coefficient-model application range 0<kappa<1/2.",
+    "translation": "For every deterministic h in H^2, the displayed tau_h Q is well-defined in every finite L^p(Omega;H^(-1-kappa)); h maps locally Lipschitzly into this space, and coupled cutoffs R_Lambda h converge strongly for each h.",
+    "q_counterterm": "Gamma_{Lambda,i}^{ab} is the only divergent Q-level local subtraction. Translation adds deterministic-linear and deterministic-quadratic terms and no new Q-level stochastic contraction.",
+    "raw_jet_no_go": "Literal full XQ/XXQ fail the advertised improved L2 model regularities. A cone-localized subdiagram of the natural unnormalised nested resonant QXX tree has a fixed negative coefficient with magnitude accumulating like c log Lambda, but total-tree noncancellation is not proved. The complete coefficient-jet half of the parent model-lift gate therefore remains open."
+  },
+  "regularity": {
+    "dimension": 3,
+    "alpha": 0.4,
+    "kappa": 0.1,
+    "field_covariance_decay": 4.0,
+    "derivative_leg_covariance_decay": 2.0,
+    "cameron_martin_space": "H^2"
+  },
+  "theoretical_oracles": {
+    "classification": "ANALYTIC_ORACLES_DERIVED_FROM_DIMENSION_AND_COVARIANCE_DECAY",
+    "q_spectrum_decay": 1.0,
+    "q_sobolev_ceiling": -1.0,
+    "full_product_spectrum_decay": 1.0,
+    "nested_resonance_shell_power": 0.0,
+    "primitive_q_chaos_degree": 2
+  },
+  "audit": {
+    "arithmetic_tolerance": 1e-12,
+    "fft_tolerance": 1e-9,
+    "translation_tolerance": 5e-13,
+    "translation_seed": 1313221,
+    "translation_samples": 31,
+    "components": 6,
+    "q_cutoffs": [
+      4,
+      6,
+      8
+    ],
+    "selected_outputs": [
+      [0, 0, 0],
+      [1, 0, 0],
+      [2, 1, 0]
+    ],
+    "cone_shell_radii": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "localized_witness_radius": 4,
+    "localized_witness_minimum": 1e-8
+  },
+  "independent_audit": {
+    "arithmetic_tolerance": 1e-12,
+    "shared_cutoff": 6,
+    "hermite_order": 120,
+    "maximum_chaos_degree": 4,
+    "hermite_points": [-1.2, -0.1, 0.7, 1.9],
+    "hermite_shifts": [-0.4, 0.0, 0.3],
+    "moment_tolerance": 1e-10,
+    "translation_tolerance": 5e-12,
+    "translation_seed": 1313222,
+    "translation_samples": 29,
+    "parity_cutoff": 9,
+    "parity_tolerance": 1e-13,
+    "cone_shell_radii": [
+      2,
+      4,
+      8
+    ]
+  },
+  "integrated_audit": {
+    "cross_tolerance": 5e-10
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-primary-universal-q-cm-translation/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-independent-universal-q-cm-translation/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-integrated-universal-q-cm-translation/result.json",
+    "primary_assertions": 42,
+    "independent_assertions": 22,
+    "integrated_own_assertions": 46,
+    "expected_total_assertions": 110,
+    "command": "python codes/foundations/a13_classii_universal_q_cm_translation_verify.py"
+  },
+  "consequence": {
+    "result_ledger_id": "R-061",
+    "tier_after": "T4",
+    "closed_subgate": "A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION",
+    "parent_subgate": "A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+    "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "next_subgate": "A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION",
+    "negative_record": "NG-2026-07-22-A13-RAW-DIAMOND-JET"
+  },
+  "honesty_boundary": "This scoped T4 result proves the universal centered derivative-square tensor in every finite probability moment and its deterministic H^2 Cameron-Martin translation continuity. It refutes the literal full-product reading of the proposed coefficient jets and exhibits a non-absolutely-summable cone-localized contraction component, without proving noncancellation of the total symmetric resonant tree. It does not construct the renormalised first- and second-order coefficient-corrector model, prove cancellation of its lower-chaos contractions in the Class-II reconstruction, handle adapted random shifts, prove a signed stochastic form bound, bound the strong random remainder, prove the q=10/9 Nelson moment, close A7/A11, construct an interacting measure, remove the rho floor or regulator, take infinite volume, prove a phase transition or BCC selection, or justify T5, T6, or T7.",
+  "references": [
+    "https://arxiv.org/abs/1210.2684",
+    "https://arxiv.org/abs/1612.08138",
+    "https://arxiv.org/abs/1809.03570"
+  ]
+}

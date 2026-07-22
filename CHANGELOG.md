@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Correct A13 cone-contraction sign and total-tree boundary] - 2026-07-22
+
+Adversarial correction to A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION and NG-2026-07-22-A13-RAW-DIAMOND-JET: the derivative convention makes the scalar two-matching cone coefficient negative, equal to minus twice the recorded positive magnitude. The cone-localized magnitude accumulates like c log Lambda, but that component alone does not prove noncancellation of the total symmetric Littlewood-Paley tree. The package now asserts only the localized contraction-classification certificate, restricts 6/(2-kappa)>3 to 0<kappa<1/2, corrects unit-shell power counting, and strengthens section-specific verifier checks. The universal-Q and deterministic H2 translation theorem remains closed at T4; the parent model lift and coefficient-jet classification remain open.
+
+## [Bind exact A13 universal-Q result and no-go identifiers] - 2026-07-22
+
+Record-binding addendum: A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION is the closed subordinate result. NG-2026-07-22-A13-RAW-DIAMOND-JET is the registered obstruction to the naive literal coefficient-jet interpretation. This addendum changes no theorem scope or tier; A13 remains T4 and the parent translated-current model lift remains open.
+
+## [Close A13 universal-Q subgate and register the raw coefficient-jet no-go] - 2026-07-22
+
+Closed the universal centered derivative-square tensor in every finite Lp(Omega;H^(-1-kappa)) and proved deterministic H2 Cameron-Martin local Lipschitz continuity. The primary Fourier-Wick route passes 42/42 and the non-importing direct/Hermite route passes 22/22. Adversarial review found that literal full XQ/XXQ products retain the Q low-high spectrum and miss the advertised jet regularities; a natural raw nested resonance also has a positive dyadic c log Lambda zero-chaos contraction. The parent model lift and umbrella one-use theorem remain open. A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION is selected next, and A13 remains T4.
+
 ## [Reduce A13 to the translated-current model lift] - 2026-07-22
 
 Closed a scoped T4 translation-model reduction without claiming the Nelson theorem. The flexible production-potential lemma enlarges the sufficient one-use field range from the conservative gamma/12 split to epsilon_6<gamma/6; epsilon_6=0.15, delta=0.06, epsilon_v=0.45 leaves sextic margin 0.06. Exact finite-cutoff translation/frame and Cartan identities and deterministic-shift expectation positivity are proved. A constant active-doublet shift refutes only a cutoff-independent deterministic constant remainder. A7's contracted L2 composite is insufficient; the selected next subgate constructs the universal centered derivative-square tensor and coefficient jets with L3-level moments, translation continuity, and no new counterterm. Primary 29/29, non-importing independent 24/24, integrated 106/106, seven-page PDF form/visual QA PASS. A13 remains T4 and the umbrella one-use theorem remains open.

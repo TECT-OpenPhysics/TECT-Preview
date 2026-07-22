@@ -20,7 +20,7 @@ Tier profile: T6x9 T5x7 T4x5
 | [`A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`](../../claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/INDEX.md) | T4 | — | A10-CLASSII-MULTISCALE-ACTION-DECOMPOSITION, A10-CLASSII-STABILISED-RELATIVE-LOG-LAPLACE | Frozen-energy relative Class-II structural reduction |
 | [`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`](../../claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/INDEX.md) | T4 | — | A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND, A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE | Class-II true-increment determinant reduction |
 | [`A12-CLASSII-SOURCE-SQUARE-REDUCTION`](../../claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md) | T4 | — | — | Class-II sharp-cube source-square reduction |
-| [`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`](../../claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md) | T4 | — | A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE | Class-II gauge-horizontal source, joint source-potential, translation-model redu |
+| [`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`](../../claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md) | T4 | — | A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE | Class-II gauge-horizontal source, translation model, universal Q, and obstructio |
 | [`A2-FULL-PRODUCTION-WELLPOSED`](../../claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full production three-component gradient-flow well-posedness |
 | [`A2-PDE-WELLPOSED`](../../claims/A2-PDE-WELLPOSED/INDEX.md) | T6 | A2-H1-KERNEL-POSITIVITY, A2-H2-SEXTIC-COERCIVITY | — | Well-posedness of the TECT gradient flow and minimisation problem |
 | [`A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM`](../../claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md) | T6 | A2-H3-CANONICAL-PRODUCTION-FUNCTIONAL | — | Full-production spectral discretization to continuum PDE |
@@ -60,6 +60,7 @@ _None linked to this sector._
 | NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP | timewise source-square summation loses cancellation | Replacing forbidden shellwise Young summation by the |
 | AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION | flexible potential budget | The A13 v1.1 one-use target treated |
 | NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT | direct production Ramer map becomes singular | The selected nonfrozen determinant continuation first tried |
+| NG-2026-07-22-A13-RAW-DIAMOND-JET | unqualified coefficient jets fail | The translation-model boundary used the symbols |
 | NG-2026-legacy-convention | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND | A3 v2.1 exact-Galerkin evolution underbound | The v2.1 evolution argument assigned the restarted exact-Galerkin solution the continuum energy-derived $H^2$ envelope without proving $F(P_ |
 | AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY | stale historical A3 shared bundle manifest | `claims/A3-UV-SUPERRENORMALISABILITY/bundle/A3-Renormalisation-Foundation-260623/MANIFEST.json` listed the v1.0 consolidation `.tex.txt` and |
