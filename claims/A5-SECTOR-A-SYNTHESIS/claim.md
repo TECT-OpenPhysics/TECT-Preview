@@ -69,7 +69,7 @@ All six load-bearing support bundles are PUBLISHED and content-addressed: the
 A1 kernel, A1 full functional, A2 PDE, repaired A3 full discretization, scalar
 A3 perturbative, and corrected A4 v2.1 constructive packages.  The A5 T5
 capstone is also PUBLISHED as
-`claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Synthesis-T5-260719`.
+`claims/a5/bundle/a5t5`.
 
 ## Reproduction and evidence
 
@@ -254,7 +254,7 @@ passes FORM-CHECK, zero-overfull, and five-page visual QA, and raises the dual
 audit to `22/22 + 13/13 = 35/35`.  The T6 bundle is built last beside the
 unchanged T5 capstone; it does not overwrite any earlier tier artifact.  The
 PUBLISHED bundle
-`claims/A5-SECTOR-A-SYNTHESIS/bundle/A5-Sector-A-Conditional-Composition-T6-260720`
+`claims/a5/bundle/a5t6`
 contains 307 hash-listed files, reproduces 35/35 from its own root, and has
 content digest
 `7779f98a945cf1b393023ab7d41cd30af6e68572797ab698368265a392f4a526`.

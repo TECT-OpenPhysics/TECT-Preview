@@ -46,4 +46,4 @@ _No curated narrative yet. Write `claims/A5-SECTOR-A-SYNTHESIS/lineage-narrative
 - `runs/2026-07-20-t6-conditional-published-integrated/`
 - `runs/2026-07-20-t6-conditional-published-primary/`
 
-<!-- generated 2026-07-22T06:23:13Z -->
+<!-- generated 2026-07-22T08:24:19Z -->

@@ -229,9 +229,9 @@ manifests.  The support-bundle content digests are
 \begin{verbatim}
 A1 scalar kernel:       99b255e767b5c1a6ea12983399f46ae5f23f5d3d76e4d587d3350c5c5ed62f7e
 A1 full functional:    30749f1c5e1cdb9528ced2b6a3dcfced8d8ca8f6f39e8cef03913d32e13f33d6
-A2 full PDE:           f07a39627a2eccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb
-A3 discretization:      6d15d165a73d3a2af07e10fce07394ce8b83311e571ba2aae2fbbc61c31d2e41
-A3 scalar perturbative: 6783ee6637936675af9f0b16ede28fa5da91c1daf5c075e43f510625c59b9c0c
+A2 full PDE:           f07a39627A2-FULL-PRODUCTION-WELLPOSEDeccc251fc67d1c988b9de18ec0b5643664fc60c3da0acc2eeeddb
+A3 discretization:      6d15d165a73d3A2-FULL-PRODUCTION-WELLPOSEDaf07e10fce07394ce8b83311e571bA2-FULL-PRODUCTION-WELLPOSEDaae2fbbc61c31d2e41
+A3 scalar perturbative: 6783ee6637936675af9f0b16ede28fA5-SECTOR-A-SYNTHESISda91c1daf5c075e43f510625c59b9c0c
 \end{verbatim}
 The primary audit checks all files listed in those support manifests, their
 recomputed digests, publication markers, and runlogs.  The non-importing audit
@@ -240,7 +240,7 @@ graph and mass fork using Decimal arithmetic.
 
 Run from the repository root:
 \begin{verbatim}
-python codes/foundations/a5_sector_a_synthesis_verify.py
+python codes/foundations/A5-SECTOR-A-SYNTHESIS_sector_a_synthesis_verify.py
 \end{verbatim}
 The required output is
 \begin{verbatim}
@@ -353,7 +353,7 @@ Dependencies:            A1-PRODUCTION-KERNEL-MANIFEST;
                          six named hypotheses in the frozen manifest.
 Evidence grade:          EXACT + EXECUTED + CONDITIONAL.
 Reproduction command:    python codes/foundations/
-                         a5_sector_a_synthesis_verify.py
+                         A5-SECTOR-A-SYNTHESIS_sector_a_synthesis_verify.py
 Expected output:         primary 16/16; independent 16/16; ASSERTS 32/32;
                          A5-SECTOR-A-SYNTHESIS-INTEGRATED-PASS;
                          PASS@BRANCH-AWARE-DECLARED-SCOPE.

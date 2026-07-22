@@ -1,0 +1,250 @@
+{
+  "schema": "tect/a2-full-production-energy-continuation-audit/1.0",
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "generated_on": "2026-07-17",
+  "script_version": "1.0.0",
+  "input": {
+    "p1_manifest": "claims/a1f/production_functional_manifest.json",
+    "p1_manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "backend": "codes/foundations/n001_variational_backend.py",
+    "backend_sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "coercivity_result": "claims/a2/runs/2026-07-17-coercivity-baseline/result.json",
+    "nonlinear_mapping_result": "claims/a2/runs/2026-07-17-nonlinear-mapping-audit/result.json"
+  },
+  "galerkin_identity": "dF(u_n)/dt=-||grad_{V_n}F(u_n)||_R^2",
+  "test_configuration": {
+    "seed": 20260717,
+    "grids": [
+      4,
+      6,
+      8
+    ],
+    "states": [
+      "zero",
+      "homogeneous",
+      "random",
+      "q-shell",
+      "classii-active"
+    ],
+    "finite_difference_step": 1e-05,
+    "basis_gram_tolerance": 3e-12,
+    "energy_relative_tolerance": 4e-06
+  },
+  "derived": {
+    "max_basis_gram_error": 2.220446049250313e-16,
+    "max_directional_energy_relative_error": 7.990691441861486e-13,
+    "max_coordinate_norm_relative_error": 7.990830219739564e-13,
+    "minimum_forward_descent_margin": 0.0
+  },
+  "cases": [
+    {
+      "grid": 4,
+      "state": "zero",
+      "energy": 0.0,
+      "gradient_norm_sq": 0.0,
+      "finite_difference_dFdt": 0.0,
+      "forward_descent_margin": 0.0
+    },
+    {
+      "grid": 4,
+      "state": "homogeneous",
+      "energy": 0.034928939562884,
+      "gradient_norm_sq": 0.037683481898834935,
+      "finite_difference_dFdt": -0.03768348189880921,
+      "forward_descent_margin": 3.7683380169767355e-07
+    },
+    {
+      "grid": 4,
+      "state": "random",
+      "energy": 0.05990889502038727,
+      "gradient_norm_sq": 0.0598905251411262,
+      "finite_difference_dFdt": -0.05989052514060455,
+      "forward_descent_margin": 5.989036970729944e-07
+    },
+    {
+      "grid": 4,
+      "state": "q-shell",
+      "energy": 0.027223728260410928,
+      "gradient_norm_sq": 0.0229028446616396,
+      "finite_difference_dFdt": -0.022902844662268936,
+      "forward_descent_margin": 2.290279641874171e-07
+    },
+    {
+      "grid": 4,
+      "state": "classii-active",
+      "energy": 0.03524860936223794,
+      "gradient_norm_sq": 0.033105831466081245,
+      "finite_difference_dFdt": -0.03310583146613755,
+      "forward_descent_margin": 3.310575229162338e-07
+    },
+    {
+      "grid": 6,
+      "state": "zero",
+      "energy": 0.0,
+      "gradient_norm_sq": 0.0,
+      "finite_difference_dFdt": 0.0,
+      "forward_descent_margin": 0.0
+    },
+    {
+      "grid": 6,
+      "state": "homogeneous",
+      "energy": 0.034928939562884,
+      "gradient_norm_sq": 0.03768348189870403,
+      "finite_difference_dFdt": -0.0376834818995031,
+      "forward_descent_margin": 3.7683380171155134e-07
+    },
+    {
+      "grid": 6,
+      "state": "random",
+      "energy": 0.027403718221293026,
+      "gradient_norm_sq": 0.0270742378753486,
+      "finite_difference_dFdt": -0.027074237875755743,
+      "forward_descent_margin": 2.707417004615964e-07
+    },
+    {
+      "grid": 6,
+      "state": "q-shell",
+      "energy": 0.027223728260410935,
+      "gradient_norm_sq": 0.022902844661400665,
+      "finite_difference_dFdt": -0.022902844661575047,
+      "forward_descent_margin": 2.290279641874171e-07
+    },
+    {
+      "grid": 6,
+      "state": "classii-active",
+      "energy": 0.035248610269635425,
+      "gradient_norm_sq": 0.033105834523472315,
+      "finite_difference_dFdt": -0.03310583452410809,
+      "forward_descent_margin": 3.3105755348900034e-07
+    },
+    {
+      "grid": 8,
+      "state": "zero",
+      "energy": 0.0,
+      "gradient_norm_sq": 0.0,
+      "finite_difference_dFdt": 0.0,
+      "forward_descent_margin": 0.0
+    },
+    {
+      "grid": 8,
+      "state": "homogeneous",
+      "energy": 0.034928939562884,
+      "gradient_norm_sq": 0.037683481898834935,
+      "finite_difference_dFdt": -0.0376834818995031,
+      "forward_descent_margin": 3.7683380170461245e-07
+    },
+    {
+      "grid": 8,
+      "state": "random",
+      "energy": 0.026333025071594445,
+      "gradient_norm_sq": 0.026296396536208785,
+      "finite_difference_dFdt": -0.026296396535632757,
+      "forward_descent_margin": 2.629632956802075e-07
+    },
+    {
+      "grid": 8,
+      "state": "q-shell",
+      "energy": 0.027223728260410928,
+      "gradient_norm_sq": 0.022902844661559955,
+      "finite_difference_dFdt": -0.02290284466174852,
+      "forward_descent_margin": 2.2902796418047822e-07
+    },
+    {
+      "grid": 8,
+      "state": "classii-active",
+      "energy": 0.035248610269637666,
+      "gradient_norm_sq": 0.03310583452358965,
+      "finite_difference_dFdt": -0.03310583452410809,
+      "forward_descent_margin": 3.310575534543059e-07
+    }
+  ],
+  "environment": {
+    "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_revision": "c2c5a97e21ebc1f9368c1f9e5e126eb394fe47be"
+  },
+  "assertions": [
+    {
+      "name": "p1_backend_hash_matches_manifest",
+      "passed": true,
+      "value": {
+        "computed": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+        "expected": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+      }
+    },
+    {
+      "name": "coercivity_baseline_is_available_and_passed",
+      "passed": true,
+      "value": "A2-FULL-COERCIVITY-BASELINE-PASS"
+    },
+    {
+      "name": "nonlinear_mapping_audit_is_available_and_passed",
+      "passed": true,
+      "value": "A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS"
+    },
+    {
+      "name": "production_subset_has_zero_shell_bias_and_positive_regularisers",
+      "passed": true,
+      "value": {
+        "eta_shell": 0.0,
+        "rho_regularizer": 1e-12,
+        "classii_mass_regularizer": 1e-12
+      }
+    },
+    {
+      "name": "real_galerkin_basis_is_orthonormal",
+      "passed": true,
+      "value": 2.220446049250313e-16
+    },
+    {
+      "name": "galerkin_projector_is_idempotent",
+      "passed": true,
+      "value": 2.1989497733035704e-29
+    },
+    {
+      "name": "galerkin_projector_is_self_adjoint_for_real_pairing",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "test_states_are_in_the_galerkin_subspace",
+      "passed": true,
+      "value": 1.0798523688574636e-31
+    },
+    {
+      "name": "restricted_energy_gradient_flow_stays_in_the_galerkin_subspace",
+      "passed": true,
+      "value": 1.2131101700486007e-32
+    },
+    {
+      "name": "restricted_energy_directional_derivative_is_negative_gradient_norm",
+      "passed": true,
+      "value": 7.990691441861486e-13
+    },
+    {
+      "name": "real_pairing_norm_and_coordinate_gradient_norm_agree",
+      "passed": true,
+      "value": 7.990830219739564e-13
+    },
+    {
+      "name": "small_forward_galerkin_gradient_steps_do_not_increase_energy",
+      "passed": true,
+      "value": 0.0
+    }
+  ],
+  "proof_boundary": {
+    "closed_here": [
+      "finite Galerkin restricted-gradient energy identity",
+      "independent NumPy energy reconstruction and directional-descent checks",
+      "analytic energy-continuation route in the v1.2 note"
+    ],
+    "not_closed_here": [
+      "continuous dependence and positive-time smoothing audit",
+      "T6 or T7 full-production PDE theorem",
+      "historical non-variational proxy or eta_shell nonzero"
+    ]
+  },
+  "verdict": "A2-FULL-ENERGY-CONTINUATION-AUDIT-PASS",
+  "passed": true
+}

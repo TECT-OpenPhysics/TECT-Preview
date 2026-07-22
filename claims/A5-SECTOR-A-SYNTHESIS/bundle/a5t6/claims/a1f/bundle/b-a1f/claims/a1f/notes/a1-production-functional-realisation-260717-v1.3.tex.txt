@@ -1,0 +1,112 @@
+% =============================================================================
+% Title: Production functional realisation -- scoped T5 promotion enactment
+% Claim: A1-PRODUCTION-FUNCTIONAL-REALISATION
+% Version: v1.3 -- first issued 2026-07-17; this version issued 2026-07-17
+% Status: T5 VERIFIED -- standalone discrete variational backend only
+% =============================================================================
+
+\section*{1. Purpose and scope}
+This note enacts the scoped T5 promotion of the manifest-defined, standalone
+three-component production-functional backend.  The closed object is the
+hash-pinned discrete spectral-torus implementation on $N=4,6,8$, with the
+listed five field classes, finite-difference steps, parameters, and shell-bias
+activation.  It is not a repair or validation of the separately hash-pinned
+historical working branch, which remains a recorded variational audit failure.
+No continuum, PDE, minimizer, BCC-selection, or stability result is asserted.
+
+\section*{2. Frozen functional and implementation}
+For $\rho=\Psi^\dagger\Psi$, $m_A=\Psi^\dagger T_A\Psi$,
+$J_A=\nabla m_A$, and
+$K_A=J_A-(m_A/(\rho+10^{-12}))\nabla\rho$, the backend implements
+\[
+ F=F_{\rm Braz}+F_{\rm family}+F_{\rm lock}+F_{\rm shell}
+ +\int\left(\frac\lambdA4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE\rho^2+\frac\gamma6\rho^3\right)
+ +\sum_A\int\left(\frac A2-FULL-PRODUCTION-WELLPOSED|J_A|^2
+ +b\operatorname{Re}(\bar J_A\cdot K_A)+\frac c2|K_A|^2\right),
+\]
+where $a=c_{JJ}\alpha_X^2/(M_X^2+10^{-12})$,
+$b=c_{JK}\alpha_X\beta_X/(M_X^2+10^{-12})$, and
+$c=c_{KK}\beta_X^2/(M_X^2+10^{-12})$.  The manifest fixes the Brazovskii
+term, family mass, internal lock, shell bias, quartic and sextic terms,
+all three Class-II coefficients, density regularizers, projector, and real
+pairing convention.  The backend, verifier, and collector are SHA-256 pinned.
+
+\section*{3. Closed verification matrix}
+The separately constructed verifier checks
+\[
+ DF[\Psi](v)=\langle R[\Psi],v\rangle_{\mathbb R}.
+\]
+\[
+ DR[\Psi]v=H[\Psi]v.
+\]
+\[
+ \langle u,Hv\rangle_{\mathbb R}=\langle Hu,v\rangle_{\mathbb R}.
+\]
+It independently defines field generation, the real torus pairing, centred
+energy and residual differences, and the analytic scalar reduction.  It covers
+zero, homogeneous, random, $q_0$-shell, and Class-II-active fields at the pinned
+point and at $\eta_{\rm shell}=0.07$, for $N=4,6,8$ and steps
+$10^{-4},10^{-5},10^{-6}$.
+
+The persisted maximum relative errors are
+\[
+ 1.856661591692621\times10^{-7},\qquad
+ 6.695217715947473\times10^{-9}
+\]
+\[
+ 1.282693395943113\times10^{-10},\qquad
+ 6.218564371786818\times10^{-16}
+\]
+for the variational identity, $DR=H$, Hessian symmetry, and scalar reduction,
+respectively.  All source, hash, version, grid, field-coverage, and coupling
+activation assertions pass.
+
+\section*{4. Independent reproduction and confirmation}
+The operator-named evidence package
+\url{runs/promotion-evidence/2026-07-17-jusang-independent/}
+records reviewer Jusang Lee, the frozen source hashes, the command, a clean
+subprocess result, and \texttt{REPRODUCTION-PASS}.  Its six evidence-file hashes
+also verify.  On 2026-07-17 the operator requested verification of that result
+and approval of the scoped T5 promotion.  This approval applies only to this
+note's discrete implementation scope and authorises the final claim-level
+publication bundle.
+
+\section*{5. Devil's-advocate}
+(alpha) \emph{``The Class-II cross term could be omitted.''} DISMISSED: the
+manifest and nonzero activation check require distinct $c_{JJ}$, $c_{JK}$, and
+$c_{KK}$ coefficients.
+
+(beta) \emph{``Autodiff makes the test circular.''} VALID with mitigation: the
+verifier independently evaluates energy directional differences, residual
+differences, the real pairing, and the scalar reduction.
+
+(gamma) \emph{``This proves a continuum functional.''} UPHELD as an invalid
+reading: only the explicitly enumerated discrete grids and tests are closed.
+
+(delta) \emph{``This validates the old solver or identifies a BCC vacuum.''}
+UPHELD as an invalid reading: the old source remains failed, and neither solver
+integration nor BCC/minimizer/stability evidence is part of this result.
+
+(epsilon) \emph{``T5 is a theorem claim.''} UPHELD as an invalid reading: T5
+is a hash-pinned, reproducible closure within its stated scope, not T6 or T7.
+
+\section*{6. Result footer}
+\begin{verbatim}
+Result ID:               A1-PRODUCTION-FUNCTIONAL-REALISATION
+Precise statement:       The hash-pinned standalone all-coupling backend closes
+                         the declared discrete variational test matrix.
+Scope:                   Spectral torus N=4,6,8; five field classes; three steps;
+                         pinned parameters plus declared shell activation only.
+Dependencies:            A1-PRODUCTION-KERNEL-MANIFEST.
+Evidence grade:          EXECUTED, CONDITIONAL; independent REPRODUCTION-PASS.
+Reproduction command:    python codes/foundations/a1_production_backend_verify.py
+                         --grids 4 6 8
+Expected output:         PRODUCTION-BACKEND-MULTIGRID-PASS; all assertions PASS.
+Falsification gate:      hash/version drift or any failed required assertion.
+Tier before / after:     T4 / T5.
+                         CLOSED@DISCRETE-VARIATIONAL-MATRIX.
+No-overclaim statement:  No old-solver repair, continuum/PDE, minimizer, BCC,
+                         stability, T6, or T7 claim.
+Next required action:    Use only at this pinned T5 scope; create separate claims
+                         for solver integration, convergence, or physical selection.
+\end{verbatim}

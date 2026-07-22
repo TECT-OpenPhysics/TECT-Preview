@@ -160,6 +160,15 @@ def main():
             warnings.append(f"large file (>5MB): {rel} ({len(b)//1024} KB)")
     print("  [hygiene] done")
 
+    # 9. Windows path-length budget
+    path_gate = subprocess.run(
+        [sys.executable, "verification/scripts/check_path_lengths.py", "--max", "256"],
+        capture_output=True, text=True, cwd=REPO,
+    )
+    if path_gate.returncode != 0:
+        errors.append(f"path-length: {path_gate.stdout.strip()[:300]}")
+    print(f"  [path-length] {'PASS' if path_gate.returncode == 0 else 'FAIL'}")
+
     for w in warnings:
         print(f"  WARN {w}")
     if errors:

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Rename historical bundle paths under the 256-character budget] - 2026-07-22
+
+Audit the complete C:/Dev/TECT project surface and enforce a 256-character absolute-path budget. The initial scan found 313 over-limit filesystem paths, including 223 tracked files, concentrated in recursively copied historical A5 T5/T6 reproduction bundles with a maximum of 391 characters. Preserve canonical claim IDs and rename only historical bundle-copy directories to compact aliases (a5t6, a5t5, a1f, a1k, a2, a3f, a3p, a3u, a4, a5 and compact bundle aliases). Refresh all 21 affected MANIFEST.json inventories and content-addressable digests, update bundle-local path references, regenerate catalog and generated surfaces, and verify every manifest has zero missing or hash-mismatched entries. The final scan reports zero paths over 256 characters. Add the fail-closed check_path_lengths.py self-test and wire it into release_check.
+
 ## [Sector A: enforce five-family theorem map and close A13 finite forest subproof] - 2026-07-22
 
 Reclassify the 21 active Sector-A claim cards as five theorem families without deleting or renumbering any issued identifier. Establish A7 as the long-term full derivative Class-II constructive-measure anchor, A13 as the current subproof host, and a fail-closed A14 decision gate; add executable exact-cover enforcement to the claim linter and generated indexes. Close only the finite-cutoff coefficient-jet forest classification subproof: enumerate XQ, :XX:Q, raw XXQ, and recursively centered X P3(XQ); prove production-covariance cross-contraction cancellation; retain the finite Sigma Q term; and verify exact sharp-cube/dealiased parenthesization identities with asymmetric negative controls. Primary, independent, and integrated evidence passes 34/34, 31/31, and 82/82. The A13 umbrella remains scoped T4. Continuum coefficient-jet bounds, rational A7 reconstruction, adapted shift, Nelson control, interacting measure, T5, T6, and T7 remain open.

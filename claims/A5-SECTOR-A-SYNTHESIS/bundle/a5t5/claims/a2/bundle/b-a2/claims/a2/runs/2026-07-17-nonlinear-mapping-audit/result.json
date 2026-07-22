@@ -1,0 +1,257 @@
+{
+  "schema": "tect/a2-full-production-nonlinear-mapping-audit/1.0",
+  "claim_id": "A2-FULL-PRODUCTION-WELLPOSED",
+  "generated_on": "2026-07-17",
+  "script_version": "1.0.0",
+  "input": {
+    "p1_manifest": "claims/a1f/production_functional_manifest.json",
+    "p1_manifest_sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+    "backend": "codes/foundations/n001_variational_backend.py",
+    "backend_sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+  },
+  "convention": {
+    "real_coordinates": "u=(Re Psi_1,Re Psi_2,Re Psi_3,Im Psi_1,Im Psi_2,Im Psi_3)",
+    "classii_density": "G_II=1/2 sum_j (partial_j u)^T B(u) partial_j u",
+    "euler_map": "E_gamma=-B_gamma,beta Delta u_beta + sum_j[1/2 partial_gamma B_alpha,beta-partial_alpha B_gamma,beta]partial_j u_alpha partial_j u_beta",
+    "spatial_order": {
+      "classii": 2,
+      "brazovskii_principal": 4
+    }
+  },
+  "derived": {
+    "classii_coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414
+    },
+    "classii_coefficient_eigenvalues": [
+      0.0012590115009260615,
+      0.005584738499072227
+    ],
+    "max_moment_realification_error": 8.881784197001252e-16,
+    "max_q_derivative_relative_error": 2.70426292470205e-10,
+    "max_b_derivative_relative_error": 1.1811986217680235e-10,
+    "max_density_relative_error": 1.1102230246251565e-16,
+    "max_euler_local_jet_relative_error": 9.042801480415788e-11,
+    "max_potential_gradient_relative_error": 1.5925841993236676e-10
+  },
+  "test_configuration": {
+    "seed": 20260717,
+    "finite_difference_step": 1e-06,
+    "absolute_tolerance": 2e-07,
+    "relative_tolerance": 2e-06,
+    "test_radii": [
+      0.0,
+      0.3,
+      1.0
+    ]
+  },
+  "environment": {
+    "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_revision": "c2c5a97e21ebc1f9368c1f9e5e126eb394fe47be"
+  },
+  "assertions": [
+    {
+      "name": "p1_backend_hash_matches_manifest",
+      "passed": true,
+      "value": {
+        "computed": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+        "expected": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc"
+      }
+    },
+    {
+      "name": "canonical_functional_declares_full_classii_quadratic_form",
+      "passed": true,
+      "value": "F_ref = F_Brazovskii + F_family + F_lock + F_shell + (lambda/4) int rho^2 + (gamma/6) int rho^3 + sum_A [a/2 |J_A|^2 + b Re(conj(J_A).K_A) + c/2 |K_A|^2]"
+    },
+    {
+      "name": "regularised_production_subset_is_selected",
+      "passed": true,
+      "value": {
+        "rho_regularizer": 1e-12,
+        "eta_shell": 0.0
+      }
+    },
+    {
+      "name": "classii_coefficient_matrix_is_positive_definite",
+      "passed": true,
+      "value": {
+        "matrix": [
+          [
+            0.004499999999998875,
+            0.0018749999999995311
+          ],
+          [
+            0.0018749999999995311,
+            0.002343749999999414
+          ]
+        ],
+        "eigenvalues": [
+          0.0012590115009260615,
+          0.005584738499072227
+        ]
+      }
+    },
+    {
+      "name": "realified_generators_are_symmetric",
+      "passed": true,
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "complex_and_real_moment_definitions_agree",
+      "passed": true,
+      "value": 8.881784197001252e-16
+    },
+    {
+      "name": "regularised_q_is_bounded_by_generator_norm",
+      "passed": true,
+      "value": [
+        {
+          "abs_q": 0.0,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.0,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.0,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.2256480051658168,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.24022833284574677,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.4073572085536206,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.28045094167175505,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.7702899267210638,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.19958928133796616,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.057738201129092295,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.829102112182198,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.01056725118465196,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.5117218298669101,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.052313595115827075,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.5428135974459832,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.2590625136100258,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.3947979267563863,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.2187128974316645,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.08765093948014505,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.8007752865895272,
+          "operator_bound": 1.0
+        },
+        {
+          "abs_q": 0.5596851418692339,
+          "operator_bound": 1.0
+        }
+      ]
+    },
+    {
+      "name": "analytic_dq_matches_central_difference",
+      "passed": true,
+      "value": 2.70426292470205e-10
+    },
+    {
+      "name": "classii_b_matrix_is_symmetric",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "complex_and_real_classii_densities_agree",
+      "passed": true,
+      "value": 1.1102230246251565e-16
+    },
+    {
+      "name": "analytic_db_matches_central_difference",
+      "passed": true,
+      "value": 1.1811986217680235e-10
+    },
+    {
+      "name": "expanded_classii_euler_local_jet_matches_finite_difference",
+      "passed": true,
+      "value": 9.042801480415788e-11
+    },
+    {
+      "name": "quartic_and_sextic_real_gradients_match_finite_difference",
+      "passed": true,
+      "value": 1.5925841993236676e-10
+    },
+    {
+      "name": "classii_has_at_most_second_spatial_order_and_y_is_positive",
+      "passed": true,
+      "value": {
+        "classii_euler_order": 2,
+        "brazovskii_principal_order": 4,
+        "Y": 1.0
+      }
+    }
+  ],
+  "proof_boundary": {
+    "closed_here": [
+      "six-real-coordinate Class-II density and Euler--Lagrange expansion",
+      "no derivative order above two in the Class-II Euler--Lagrange term",
+      "smooth regularised coefficient map on bounded H2 balls",
+      "algebraic inputs for the local H2-to-L2 Lipschitz estimate"
+    ],
+    "not_closed_here": [
+      "Galerkin chain rule and energy identity",
+      "global continuation",
+      "continuous dependence and positive-time smoothing",
+      "T6 or T7 well-posedness theorem"
+    ]
+  },
+  "verdict": "A2-FULL-NONLINEAR-MAPPING-AUDIT-PASS",
+  "passed": true
+}

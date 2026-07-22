@@ -1,0 +1,42 @@
+{
+  "schema": "tect/path-length-audit/1.0",
+  "date": "2026-07-22",
+  "limit_chars": 256,
+  "scope": "C:/Dev/TECT excluding .git",
+  "before": {
+    "all_paths_over_limit": 313,
+    "tracked_files_over_limit": 223,
+    "max_observed_chars": 391,
+    "concentration": "Historical nested A5 T5/T6 reproduction bundles"
+  },
+  "rename_policy": {
+    "canonical_claim_ids_preserved": true,
+    "historical_bundle_copies_only": true,
+    "manifest_hashes_refreshed": true,
+    "directory_aliases": {
+      "A5-Sector-A-Conditional-Composition-T6-260720": "a5t6",
+      "A5-Sector-A-Synthesis-T5-260719": "a5t5",
+      "A1-PRODUCTION-FUNCTIONAL-REALISATION": "a1f",
+      "A1-PRODUCTION-KERNEL-MANIFEST": "a1k",
+      "A2-FULL-PRODUCTION-WELLPOSED": "a2",
+      "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM": "a3f",
+      "A3-PERTURBATIVE-CONTINUUM-CORRELATORS": "a3p",
+      "A3-UV-SUPERRENORMALISABILITY": "a3u",
+      "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE": "a4",
+      "A5-SECTOR-A-SYNTHESIS": "a5",
+      "A1-Production-Functional-T5-260717": "b-a1f",
+      "A1-N001-Manifest-T5-260716": "b-a1n",
+      "A2-Full-Production-WellPosedness-T6-260717": "b-a2",
+      "A3-Full-Production-Discretization-T6-Repair-260717": "b-a3f",
+      "A3-Perturbative-Continuum-T6-260719": "b-a3p",
+      "A4-Scalar-Constructive-T6-260719": "b-a4"
+    }
+  },
+  "after": {
+    "all_paths_over_limit": 0,
+    "max_observed_chars": 241,
+    "manifest_count_checked": 21,
+    "manifest_bad_entries": 0
+  },
+  "verifier": "verification/scripts/check_path_lengths.py"
+}

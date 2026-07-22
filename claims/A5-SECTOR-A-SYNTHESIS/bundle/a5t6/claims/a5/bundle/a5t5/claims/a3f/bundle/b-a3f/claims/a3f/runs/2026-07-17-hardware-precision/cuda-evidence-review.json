@@ -1,0 +1,36 @@
+{
+  "schema": "tect/a3-full-production-hardware-precision-evidence-review/1.0",
+  "claim_id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+  "review_date": "2026-07-17",
+  "reviewed_artifact": "claims/a3f/runs/2026-07-17-hardware-precision/result.json",
+  "reviewed_artifact_sha256": "b7590feb0909c4d73f9a9df533e802ba6f4f80ef11aee9409202657191206a8d",
+  "review_scope": "Structural validation of the attached CUDA JSON against the frozen P3 manifest and current source hashes; this review does not rerun CUDA locally.",
+  "source_integrity": {
+    "canonical_backend_sha256": "e2b55702d48198b933968f002e3d7e3781075927fe9b2684047d585ed56f70fc",
+    "hardware_audit_sha256": "c948992b413f3b11bb53ba582fabdcc10a8b6b4cb8be6d4088f0814594a90a0f",
+    "portable_backend_sha256": "85501c65af0d73a09e9acde17dae42d1ce340d77f45f80f3a8297d22099b68ca",
+    "all_match_current_frozen_authority": true
+  },
+  "recorded_environment": {
+    "torch": "2.13.0+cu130",
+    "cuda": "13.0",
+    "device_count": 1,
+    "device": "NVIDIA GeForce RTX 5070 Laptop GPU"
+  },
+  "acceptance_review": {
+    "cpu_complex128": "PASS",
+    "cpu_complex64": "PASS",
+    "cuda_complex128": "PASS; energy 5.748876527257478e-16 <= 1e-11; residual 1.7180228032220023e-15 <= 1e-09",
+    "cuda_complex64": "PASS; energy 8.524459973064009e-08 <= 5e-06; residual 3.784218836116966e-07 <= 5e-05",
+    "all_six_recorded_assertions_pass": true,
+    "reported_verdict": "A3-FULL-HARDWARE-PRECISION-PASS",
+    "reported_gate_closed": true
+  },
+  "conclusion": "ACCEPTED for the declared P3 Stage-4 recorded-device hardware/precision scope.",
+  "not_established": [
+    "all-device GPU equivalence",
+    "uniform continuum error control on arbitrary P2 solution balls",
+    "historical Sector-B solver continuum validity",
+    "tier promotion beyond T3"
+  ]
+}
