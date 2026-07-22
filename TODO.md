@@ -3,7 +3,13 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 2 · Done (recent) 44
+
+## In progress
+
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
+  - A13 v1.1 keeps the controlled-shell energy one-use inequality as the sole canonical objective. The candidate epsilon_6=0.13, epsilon_v=0.45 is exactly equivalent to the open q=10/9 Nelson moment. Coefficient-one and finite-bank Bellman repairs, repeated past-energy payment, coefficient-blind endpoint-only timewise Young, and the direct one-shot Ramer map xi+(5/9)b_J(xi) are closed negatively. Continue only with a signed global cancellation, such as a genuinely triangular/flow transport or direct constructive estimate; no unique successor method is claimed.
+  - _updated 2026-07-21_
 
 ## Next up
 
@@ -14,7 +20,7 @@ Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 ## Blocked
 
 - **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE; blocked by: T-050)_
-  - Blocked by T-050 after the A13 relative-phase no-go. The prior proof order assumed a production-compatible standalone exact-B source bound; A13 proves that its best constant exceeds gamma/3 even with the output shell and determinant resolvent. First redesign a joint source-potential log-Laplace estimate or the true increment, then restate the A11 stabilised relative theorem.
+  - Blocked by T-050 at A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE. A13 v1.1 proves exact equivalence to the q=10/9 Nelson moment and retires local Bellman, endpoint-only timewise Young, repeated past-energy, and direct one-shot Ramer repairs. Only after a signed global cancellation closes the one-use theorem may the A11 stabilised relative log-Laplace statement be reformulated; no unique successor method is assumed.
   - _updated 2026-07-21_
 
 ## Backlog
@@ -24,9 +30,6 @@ Counts: In progress 0 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
-- **T-050** A13: prove a joint source-potential log-Laplace estimate  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE)_
-  - T-049 standalone source absorption is refuted even with exact B, output shell, and resolvent. Retain the local potential and noncentral determinant in one estimate, redesign the true increment, or prove a genuinely probabilistic cancellation that survives the A13 opposite-corner SU(2) carrier.
-  - _updated 2026-07-21_
 
 ## Done (recent)
 

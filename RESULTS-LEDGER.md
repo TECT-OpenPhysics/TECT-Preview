@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-059](#r-059) | Joint Class-II completion and nonfrozen determinant boundary | Scoped T4 reduction: corrected factor-four allocation, exact one-use/Nelson equivalence, mixed Hardy and nonfrozen Schatten-two theorems, exact coefficient curl, and independently executed one-shot Ramer singularity; the cutoff-uniform full-action theorem remains open |
 | [R-058](#r-058) | Exact Class-II phase-null structure and relative-phase source-budget obstruction | Scoped T4 exact/executed no-go: the production matrix has separate local doublet/singlet phase nulls and an output-shell commutator, yet a finite opposite-corner SU(2) witness gives C_rel>0.9>gamma/3 and defeats every standalone deterministic source allocation with p>=1 |
 | [R-057](#r-057) | Sharp-cube scalar-budget obstruction and Class-II gauge-null pivot | EXACT NO-GO within A12 T4: dyadic Riesz boundary modulation forces M_6>=8, Q_6>=8sqrt(3), H_6>=786432 and the coefficient-blind scalar envelope >=786432; the actual source survives through B(X)JX=0 and output-shell localisation |
 | [R-056](#r-056) | Sharp-cube Class-II source-square reduction | T4 PROVED-ANALYTIC-REDUCTION; exact Pauli/Fierz operator constant, exact one-leg shell decay, and cutoff-uniform L6 maximal/square bound reduce the source to 0.016570372383568618 M_R^2 M_6^4 Q_6^2; R-057 subsequently refutes this separated route for the production budget |
@@ -77,6 +78,59 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-059"></a>
+### R-059 -- joint Class-II completion and nonfrozen determinant boundary
+
+**Statement.**  For the hash-pinned A1 fixed-floor production functional and
+strict sharp-cube filtration, the joint conditional source-potential transform
+has an exact completed-Gaussian formula.  In the homogeneous fast-phase
+principal-symbol fixture, the coefficient-slot and frozen derivative-slot
+sources agree, so the joint source doubles.  Lower-order envelope,
+trace, and potential corrections vanish on the registered modulated-carrier
+limit, giving the asymptotic factor-four constant
+`4 C_rel=3.6642109130609337`.  This refutes coefficient-one conditioning and
+finite banks of local Class-II/quartic/sextic polynomial terms with bounded
+coefficients and cutoff-summable positive replenishments and scalar transfer
+errors.  Separately,
+
+\[
+\|P_{<0}f\|_4^8\le {64\over9}\|f\|_2^2\|f\|_6^6,
+\]
+
+and a universal frozen one-shell Cameron--Martin estimate, with the corrected
+total allocation `0.45/4=0.1125` per frozen copy, leave exponent cost
+`0.044555890186929` and margin `0.103944109813071`.  The candidate one-use
+theorem is exactly equivalent to the still-open `q=10/9` Nelson moment.
+For the nonfrozen derivative, production `q^-4` gives cutoff-uniform
+Schatten-two bounds but the exact Class-II coefficient curl is nonzero.  At
+the correct direct Ramer coefficient `t=q/2=5/9`, two independent
+30-real-mode production calculations find a determinant sign change near
+amplitude `3.49230586`; the one-shot global Ramer architecture therefore
+fails, without refuting the Nelson moment.
+
+**Where proved.** `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`,
+proof unit `classii-joint-source-potential-reduction-260721-260722-v1.1`.
+The primary coefficient/Fierz route gives 54/54 PASS, the non-importing
+alias-free/Gauss--Hermite/direct-Pauli route gives 47/47 PASS, and the
+integrated verifier gives 158/158 PASS.  The ten-page PDF passes form,
+zero-overfull, and full visual QA.
+
+**Reuse.**  Derivative Gibbs constructions whose local Gaussian completion
+creates a noncentral source and whose spectral filtration separates terminal
+and conditional-past norms.  The mixed Hardy/Riesz lemma is independent of the
+TECT coefficients.  The local no-go is limited to the stated bounded,
+cutoff-summable finite-bank architecture.  The Ramer no-go is limited to the
+direct one-shot map `xi+(5/9)b_J(xi)`; ODE, triangular/Follmer, alternative
+transport, and direct constructive routes remain open.
+
+**Tier / publication target.** Scoped T4 analytic/executed reduction and
+negative result; no tier promotion.  The broad joint log-Laplace gate is
+`REDUCED-NOT-CLOSED`.  The cutoff-uniform nonlocal full-action estimate
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, the A7 Nelson theorem, an
+interacting measure, T5, T6, and T7 remain open.
+
+---
 
 <a id="r-058"></a>
 ### R-058 -- exact Class-II phase-null structure and relative-phase source-budget obstruction

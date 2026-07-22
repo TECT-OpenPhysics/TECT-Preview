@@ -35,6 +35,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM](#f-2026-07-21-a10-past-energy-upper-form) | cutoff-uniform absorption of the A10 past-energy mismatch | base Gaussian has linearly growing past energy but bounded endpoint L4/L6 moments |
 | [NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET](#ng-2026-07-21-a12-sharp-cube-scalar-budget) | A12 separated H6 and coefficient-blind scalar source routes | dyadic Riesz boundary modulation forces H6 and the scalar envelope far above the production target |
 | [NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET](#ng-2026-07-21-a13-relative-phase-source-budget) | A13 exact-B standalone source/sextic absorption | opposite-corner SU(2) relative phase exceeds gamma/3 even with output shell and resolvent |
+| [NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER](#ng-2026-07-21-a13-local-bellman-barrier) | A13 local joint source-potential architecture | asymptotic factor-four carrier defeats coefficient-one conditioning and the precisely scoped finite-bank local Bellman class |
+| [AUDIT-2026-07-22-A13-FACTOR-FOUR-ALLOCATION](#audit-2026-07-22-a13-factor-four-allocation) | A13 v1.0 one-shell factor-four diagnostic | source multiplication by four was not applied to the Cameron--Martin Young allocation |
+| [NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP](#ng-2026-07-22-a13-timewise-young-carre-du-champ) | A13 continuous-time source-square Young route | a zero-endpoint loop has sixth-order bracket growth but exact signed-action cancellation |
+| [NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT](#ng-2026-07-22-a13-nonfrozen-ramer-one-shot) | A13 direct nonfrozen Ramer map | the production Jacobian determinant changes sign at finite field amplitude |
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment
@@ -289,6 +293,112 @@ rule out joint source-potential cancellation, a redesigned true increment, or
 a genuinely probabilistic estimate.  The successor is
 `A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE`; A13 remains scoped T4 and no
 Nelson or interacting-measure closure is claimed.
+
+<a id="ng-2026-07-21-a13-local-bellman-barrier"></a>
+### NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER -- scoped local joint barriers fail
+
+**Failure mode:** T-050 first sought to repair the A13 standalone source no-go
+by placing the coefficient increment and local quartic/sextic potential in a
+single coefficient-one conditional estimate.  The same question extends to a
+finite bank of local Class-II/quartic/sextic polynomial terms with bounded
+coefficients whose positive coefficient replenishments and scalar transfer
+errors are summable in the cutoff.
+
+**Evidence:** The A13 joint-source v1.0 package completes the conditional
+Gaussian exactly.  Independent compact-Fierz and direct-Pauli calculations
+give `ell_joint=2 ell_frozen` in the homogeneous fast-phase principal-symbol
+fixture.  Envelope, trace, and potential corrections are lower order on the
+registered modulated-carrier limit, so the limiting source square has a
+factor four and
+`4 C_rel=3.6642109130609337>gamma/(3p)` for every `p>=1`.  Along a subsequence,
+cutoff-summable positive replenishments vanish; the remaining finite-bank
+transport terms are lower order.  Thus the coefficient-one estimate and the
+precisely stated finite-bank class cannot close the production budget.
+
+**Consequence:** This is not a full-action no-go.  The exact terminal/past
+split, the `64/9` mixed Hardy/Riesz lemma, and the one-shell
+Cameron--Martin/sextic bound show that the registered carrier is subcritical
+when past potential and entropy are retained.  The successor is
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, a nonlocal adapted-control
+estimate which must spend Cameron--Martin energy only once.  A13 remains T4;
+no A7 Nelson bound, interacting measure, or T5/T6/T7 promotion is claimed.
+
+<a id="audit-2026-07-22-a13-factor-four-allocation"></a>
+### AUDIT-2026-07-22-A13-FACTOR-FOUR-ALLOCATION -- factor-four Young budget corrected
+
+**Failure mode:** The first A13 joint-source draft multiplied the frozen
+source-square sextic cost by four but retained the full Cameron--Martin Young
+allocation `theta=0.45` for each copy. The same factor-four decomposition must
+divide the total allocation, so the frozen parameter is `theta=0.45/4=0.1125`.
+
+**Evidence:** Re-deriving the homogeneous carrier Young inequality in both the
+primary floating route and a non-importing exact-rational route gives the
+corrected factor-four sextic cost `0.044555890186929`, half-sextic exponent
+margin `0.103944109813071`, and unexponentiated one-use margin
+`0.09449464528461002` after dividing the exponent cost by `p=1.1`. The
+retired values `0.011138972546732238` and
+`0.13736102745326778` resulted from the inconsistent allocation.
+
+**Consequence:** This is a quantitative repair, not a theorem retraction. The
+registered carrier remains subcritical under the corrected one-shell budget,
+but the one-shell estimate still cannot be summed across scales. A13 remains
+T4 and the umbrella one-use theorem remains open.
+
+<a id="ng-2026-07-22-a13-timewise-young-carre-du-champ"></a>
+### NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP -- timewise source-square summation loses cancellation
+
+**Failure mode:** Replacing forbidden shellwise Young summation by the
+coefficient-blind continuous-time endpoint enclosure
+`E integral g_t^2 <= C(1+E|W_1+h_1|^6+integral |h'|^2)` was proposed as a way
+to spend the Cameron--Martin energy once.
+
+**Evidence:** For `V(x)=(x^4-3x^2)/2`, the exact Doob integrand is
+`g_t(x)=2x^3+(3-6t)x`. With the triangular deterministic loop
+`h_A(t)=2At` for `t<=1/2` and `h_A(t)=2A(1-t)` afterwards, the endpoint is
+unchanged, the signed action pairing is exactly zero, the control energy is
+`4A^2`, and the terminal sixth moment is `15`, whereas exact rational
+integration gives
+
+`E integral_0^1 g_t(W_t+h_A(t))^2 dt = 21/2 + (78/5)A^2 + 6A^4 + (4/7)A^6`.
+
+**Consequence:** The displayed endpoint-only coefficient-blind source-square
+architecture destroys an essential global cancellation and cannot establish
+the A13 one-use theorem. This does not disprove a Class-II-specific timewise
+argument retaining signed tensor cancellation, a global determinant, or a
+nonlinear Gaussian-transport argument. The canonical one-use objective stays
+open; no unique successor method is claimed.
+
+<a id="ng-2026-07-22-a13-nonfrozen-ramer-one-shot"></a>
+### NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT -- direct production Ramer map becomes singular
+
+**Failure mode:** The selected nonfrozen determinant continuation first tried
+the single Gaussian change of variables `F_t(xi)=xi+t b_J(xi)`, where
+`2 V_J^ren=delta_gamma b_J`. At the one-use candidate
+`epsilon_v=0.45`, the correct Laplace exponent is `q=10/9` and the Ramer
+displacement coefficient is therefore `t=q/2=5/9`.
+
+**Evidence:** Exact differentiation gives
+`Db_J=T_X+K_X`, with `T_X>=0` but a nonzero coefficient curl
+`Omega_(u e1)(e1,e3)=4u q_u[b+c(1-q_u)]e3`. Thus the feedback is not an
+exact one-form. In a production 30-real-mode fixture with seed `913131`, the
+compact-Fierz route at 64-point quadrature and a non-importing direct-Pauli
+route at 128 points give the unit-amplitude minimum real eigenvalues
+`-0.14758695068599045` and `-0.14758695131105462`. Both find a sign change of
+`det(I+t Db_J)` around amplitude `3.49230586`, with minimum singular value
+below `1.5e-10`; the density exceeds `376`, so the `1e-12` floor is inactive.
+This is converged floating evidence, not an interval certificate. Separately,
+the direct Ramer-square carrier charge is
+`(t^2/2) C_rel=0.14136616176932618>0.135>0.13` before any inverse-determinant
+cost.
+
+**Consequence:** A global orientation-preserving one-shot map `xi+t b_J(xi)`
+and any proof requiring its determinant to stay positive are invalid. This
+does not refute the Nelson moment, an exact ODE flow, a genuinely triangular
+or Follmer transport, a different globally invertible map, or a direct
+constructive proof. The unique canonical objective remains
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`; the next method must preserve a
+signed global cancellation rather than bound the inverse determinant and
+Ramer square separately.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

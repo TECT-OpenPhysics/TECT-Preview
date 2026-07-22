@@ -1,0 +1,228 @@
+{
+  "schema": "tect/a13-classii-joint-source-potential-reduction/1.1",
+  "package_version": "1.1.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "result_id": "A13-CLASSII-JOINT-SOURCE-POTENTIAL-REDUCTION",
+  "frozen_on": "2026-07-21",
+  "version_issued_on": "2026-07-22",
+  "status": "T4 REDUCED-NOT-CLOSED JOINT-GATE",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a11_status": {
+      "path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/status.json",
+      "sha256": "7ec39c5cf388a1450720efd04bcf5ee356392237dff8a7817a6f54cf9e7e53cc"
+    },
+    "a13_obstruction_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_relative_phase_source_obstruction_manifest.json",
+      "sha256": "118bb82adb341c0127871aa6e56c414386546c7da10b53e2a89bd901dc1b58b8"
+    },
+    "a13_obstruction_primary_result": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-primary-relative-phase-obstruction/result.json",
+      "sha256": "e944066d24de8dcda55ad5beb087be0be13d504169066495bbb1c62a6f4d8215"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_joint_source_potential_reduction.py",
+      "sha256": "4b32893563185d1353abc1c34d58e72bae27170a94d0f2756880eb5065694754",
+      "version": "1.0.1"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_joint_source_potential_reduction_independent.py",
+      "sha256": "0bc07dee8d39d0f45976241143bb9989d541499616970c331b768b49a1090f5b",
+      "version": "1.0.1"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_joint_source_potential_reduction_verify.py",
+      "sha256": "44357fe1cbbd0e9d63154467533dd5c30d5a6426dae7061179b0ed8523e35dd5",
+      "version": "1.0.1"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-joint-source-potential-reduction-260721-260722-v1.1.tex.txt",
+      "sha256": "792a727d9a98e4600739c1cc6dceb4e4df105cd92e61e8ca984bc775948d7a58",
+      "version": "1.1"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-joint-source-potential-reduction-260721-260722-v1.1.pdf",
+    "sha256": "d8ec8e710a9361460160f73261de1f58a381887cedd1d2c70003f95d7128c3bf",
+    "version": "1.1",
+    "pages": 10,
+    "size_bytes": 423985,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "PASS"
+  },
+  "scope": "Fixed L=16 torus; three complex components in the six-real convention; hash-pinned A1 production covariance and Class-II coefficients; rho_regularizer=1e-12; eta_shell=0; unit sharp common real-even regulator; and the A10-A13 strict dyadic rectangular-cube filtration. The shifted-Gaussian identity, exact fast-phase principal-symbol source-slot doubling, its asymptotic transfer to the registered carrier, the precisely scoped local Bellman obstruction, mixed Hardy lemma, potential coercivity, and one-shell frozen-source crossover are analytic. The K=65536 values are independently reproduced finite calculations, not formal interval arithmetic.",
+  "theorem": {
+    "joint_completion": "For q=p theta, R_q=(I+qT)^-1, and mu_q=-qR_q ell, the joint conditional transform is the exact det_2/noncentral constant plus expectation of C_j+U under N(mu_q,R_q).",
+    "source_doubling": "In the exact same-corner fast-phase principal-symbol fixture, the coefficient-slot first variation equals the frozen derivative-slot first variation, so ell_joint=2 ell_frozen and the source square gains factor four. Envelope-derivative, trace, and potential terms are lower order on the registered degree-K carrier, so the factor four is an asymptotic carrier statement rather than an unqualified finite-K shell identity.",
+    "terminal_past_split": "The A13 K=65536 terminal amplification is (D/B)^3=919.8715735886835; C_rel=0.9160527282652334 corresponds to the terminal norm while c_past=0.0009958485016462115 corresponds to the conditional past norm.",
+    "local_bellman_nogo": "The coefficient-one potential-increment conditional estimate and every finite bank of local q/quartic/sextic polynomial terms with bounded coefficients and cutoff-summable positive replenishments and scalar transfer errors fail because the asymptotic 4 C_rel=3.6642109130609337 exceeds gamma/(3p) for every p>=1 while potential and trace variations are lower order at A^2/N^2->0.",
+    "mixed_hardy": "For normalized Haar measure, g=P_<0 f obeys ||g||_4^8 <= (64/9)||f||_2^2||f||_6^6, by the nonpositive product projection, real-spectrum half-energy, the sharp L3 Riesz norm 2/sqrt(3), and interpolation.",
+    "frozen_cm_sextic": "Every finite-cutoff field and shell obey p^2/2 <ell,(I+pT)^-1ell> <= theta H_A(x)+p^2 beta_op^2/(16 c_sym theta)||x||_6^6.",
+    "surviving_reduction": "Full positive closure is reduced to one adapted-control inequality with epsilon_6<gamma/12=0.135 and epsilon_v<1/(2p), spending Cameron-Martin energy once across all scales and producing no new interaction counterterm.",
+    "one_use_equivalence": "For G_J=V_J^ren+epsilon_6||phi||_6^6, the uniform one-use lower bound with control coefficient epsilon_v is exactly equivalent by Boue-Dupuis to sup_J E exp[-G_J/(2 epsilon_v)]<infinity. At epsilon_v=0.45 this is q=10/9>1.1, so BD, entropy, Follmer, or HJB alone would be circular.",
+    "timewise_young_nogo": "For V(x)=(x^4-3x^2)/2 the exact Doob integrand is g_t(x)=2x^3+(3-6t)x. A triangular zero-endpoint loop has control cost 4A^2 and fixed terminal sixth moment 15, while E integral g_t(W_t+h_A)^2 dt=21/2+(78/5)A^2+6A^4+(4/7)A^6 and the signed action change is zero. Therefore no coefficient-blind endpoint-only enclosure by terminal L6 plus Cameron-Martin energy can hold uniformly; Class-II-specific signed tensor estimates are not excluded.",
+    "nonfrozen_schatten_decomposition": "In whitened variables 2V_J^ren=delta_gamma b_J and Db_J=T_X+K_X, where T_X>=0 and both T_X,K_X have cutoff-uniform deterministic Schatten-two bounds from the q^-4 production symbol. This does not imply a lower bound on det_2(I+tDb_J).",
+    "coefficient_curl": "For x=u e1, Omega_x(e1,e3)=4u q_u[b+c(1-q_u)]e3 is nonzero for u!=0, so B is not an exact coefficient one-form and the nonfrozen feedback cannot be absorbed into the positive determinant factor.",
+    "conditional_cf_bound": "If R=t(I+tT_X)^-1K_X has operator norm at most rho<1 and the direct Ramer map is an orientation-preserving Gaussian C1 diffeomorphism, determinant factorization gives a cutoff-uniform Carleman-Fredholm bound with t^2||T||_2^2/2+c_rho||R||_2^2+t||T||_2||R||_2. These are additional hypotheses, not consequences of Schatten-two control.",
+    "one_shot_ramer_nogo": "Because 2V=delta_gamma b, q=10/9 uses t=q/2=5/9. Two independent 30-real-mode production calculations find a negative real Db eigenvalue near -0.147586951 and a determinant sign change near amplitude 3.49230586, with the floor inactive. The one-shot u=t b global Ramer diffeomorphism/positive-determinant architecture is false; the Nelson moment itself is not refuted.",
+    "predictable_triangular_boundary": "For frozen full positive-square shells with block-diagonal T>=0 and strictly block-lower-triangular predictable feedback K, det_2(I+t(T+K)) equals the product of the positive block determinants. This maximal current determinant theorem does not close A11 true increments after subtracting their past squares."
+  },
+  "certificate": {
+    "degree": 65536,
+    "coefficient_exponent": 0.8333333333333334,
+    "coefficient_formula": "a_n=n^(-5/6), 1<=n<=K",
+    "primary_method": "zero-padded coefficient convolution, compact Fierz differentiation, and pointwise completed-density identity",
+    "independent_method": "alias-free grid quadrature, direct Pauli-current differentiation, and Gauss-Hermite completed-measure integration"
+  },
+  "budget": {
+    "reference_p": 1.1,
+    "entropy_fraction": 0.45,
+    "coherent_sextic_allocation": 0.21,
+    "coherent_allocation_role": "alternative frozen-carrier diagnostic only; not composed with the half-sextic one-shell diagnostic",
+    "half_sextic_formula": "p gamma/12",
+    "full_sextic_formula": "p gamma/6",
+    "adapted_control_targets": {
+      "epsilon_6_strict_upper": 0.135,
+      "epsilon_v_formula": "1/(2p)",
+      "epsilon_v_reference_strict_upper": 0.45454545454545453
+    },
+    "one_use_candidate": {
+      "epsilon_6": 0.13,
+      "epsilon_v": 0.45,
+      "role": "Exact target and equivalence diagnostic only; the analytic inequality remains open."
+    }
+  },
+  "derived_oracles": {
+    "beta_operator": 0.0423749999999894,
+    "symbol_coercivity": 0.10836453058711468,
+    "source_ratio": 0.9160527282652334,
+    "past_amplification": 919.8715735886835,
+    "past_frozen_source_ratio": 0.0009958485016462115,
+    "terminal_joint_source_ratio": 3.6642109130609337,
+    "past_joint_exponent_reward": 0.002409953373983832,
+    "potential_constant_L3": 41.3631905705431,
+    "mixed_hardy_bound": 7.111111111111111,
+    "frozen_tensor_threshold": 0.08878396049378273,
+    "joint_factor_four_tensor_threshold": 0.35513584197513093,
+    "universal_frozen_source_sextic_cost": 0.0027847431366830595,
+    "factor_four_frozen_theta": 0.1125,
+    "registered_factor_four_source_sextic_cost": 0.044555890186929,
+    "half_sextic_exponent_penalty": 0.14850000000000002,
+    "registered_factor_four_half_sextic_margin": 0.103944109813071,
+    "registered_factor_four_unexponentiated_source_sextic_cost": 0.04050535471539,
+    "one_use_unexponentiated_margin_after_factor_four": 0.09449464528461002,
+    "equivalent_nelson_exponent_q": 1.1111111111111112,
+    "one_use_field_margin": 0.0050000000000000044,
+    "one_use_control_margin": 0.004545454545454519
+    ,
+    "direct_ramer_square_carrier_charge": 0.14136616176932618
+  },
+  "decision_thresholds": {
+    "past_frozen_source_ratio_upper": 0.0011,
+    "past_potential_margin_lower": 0.29,
+    "role": "Labelled audit decision thresholds, not derived physical constants."
+  },
+  "audit": {
+    "gaussian_seed": 1307211,
+    "hardy_seed": 1307212,
+    "doubling_seed": 1307213,
+    "gaussian_tolerance": 1e-11,
+    "hardy_tolerance": 1e-10,
+    "doubling_tolerance": 5e-6,
+    "minimum_retained_samples": 128,
+    "certificate_tolerance": 1e-8,
+    "doob_tolerance": 1e-10,
+    "ramer_seed": 913131,
+    "ramer_primary_quadrature": 64,
+    "ramer_unit_eigenvalue_lower": -0.148,
+    "ramer_unit_eigenvalue_upper": -0.147,
+    "ramer_root_singular_value_upper": 1e-7,
+    "ramer_floor_ratio_upper": 1e-10,
+    "schatten_cutoffs": [64, 256, 1024, 4096, 16384, 65536],
+    "schatten_non_hs_growth_lower": 1.0
+  },
+  "independent_audit": {
+    "hardy_seed": 1317212,
+    "doubling_seed": 1317213,
+    "hermite_order": 160,
+    "hermite_tolerance": 1e-11,
+    "hardy_tolerance": 1e-10,
+    "doubling_tolerance": 5e-6,
+    "minimum_retained_samples": 128,
+    "certificate_tolerance": 1e-6,
+    "ramer_quadrature": 128
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-12,
+    "certificate_tolerance": 1e-6
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-primary-joint-source-potential-reduction-v1.1/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-independent-joint-source-potential-reduction-v1.1/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-integrated-joint-source-potential-reduction-v1.1/result.json",
+    "primary_assertions": 54,
+    "independent_assertions": 47,
+    "integrated_own_assertions": 57,
+    "expected_total_assertions": 158,
+    "command": "python codes/foundations/a13_classii_joint_source_potential_reduction_verify.py"
+  },
+  "consequence": {
+    "t050": "IN-PROGRESS-REDUCED",
+    "disposition": "REDUCED-NOT-CLOSED",
+    "negative_result": "NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER",
+    "additional_negative_results": [
+      "AUDIT-2026-07-22-A13-FACTOR-FOUR-ALLOCATION",
+      "NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP",
+      "NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT"
+    ],
+    "tier_after": "T4",
+    "next_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "positive_route": "SIGNED-GLOBAL-TRIANGULAR-OR-FLOW-CANCELLATION-THEN-FULL-ACTION-COERCIVITY; selected research direction, not a unique antecedent theorem",
+    "forbidden_successor": "coefficient-one local potential-increment conditioning or a finite bank of local q/quartic/sextic polynomial terms with bounded coefficients and cutoff-summable positive replenishments and scalar transfer errors"
+  },
+  "honesty_boundary": {
+    "closed": [
+      "the exact joint shifted-Gaussian formula",
+      "coefficient-slot equals frozen derivative-slot in the exact fast-phase principal-symbol fixture",
+      "the asymptotic factor-four complete local source on the registered carrier",
+      "terminal-versus-past normalisation",
+      "the coefficient-one and precisely scoped finite-bank local Bellman no-go",
+      "the 64/9 mixed Hardy/Riesz lemma",
+      "the universal one-shell frozen-source Cameron-Martin/sextic inequality",
+      "the corrected factor-four Young allocation with total Cameron-Martin coefficient 0.45",
+      "the exact one-use versus q=1/(2 epsilon_v) Nelson equivalence",
+      "the scoped scalar endpoint-only timewise source-square/Young no-go",
+      "the cutoff-uniform deterministic nonfrozen Schatten-two decomposition",
+      "the exact nonzero Class-II coefficient curl",
+      "the conditional Carleman-Fredholm determinant theorem",
+      "the production one-shot Ramer singularity by two independent finite-mode routes",
+      "the predictable frozen positive-square triangular determinant boundary"
+    ],
+    "open": [
+      "a cutoff-uniform adapted-control estimate which spends Cameron-Martin energy once",
+      "tilted-law commutator control within that estimate",
+      "proof that the full-action route generates no new interaction counterterm",
+      "a signed global cancellation theorem for terminal nonfrozen coefficient feedback"
+    ],
+    "not_claimed": [
+      "the A7 Nelson/log-Laplace bound",
+      "failure of every Ramer, ODE, triangular, Follmer, or constructive route",
+      "the A11 stabilised relative theorem",
+      "an interacting full three-component Gibbs measure",
+      "floor removal, regulator independence, or infinite volume",
+      "phase transition, BCC selection, T5, T6, or T7"
+    ]
+  },
+  "references": [
+    "M. Boue and P. Dupuis, A variational representation for certain functionals of Brownian motion, Ann. Probab. 26 (1998), doi:10.1214/aop/1022855876.",
+    "N. Barashkov and M. Gubinelli, A variational method for Phi^4_3, arXiv:1805.10814.",
+    "B. Hollenbeck and I. E. Verbitsky, Best constants for the Riesz projection, J. Funct. Anal. 175 (2000), doi:10.1006/jfan.2000.3616.",
+    "R. Ramer, On nonlinear transformations of Gaussian measures, J. Funct. Anal. 15 (1974), doi:10.1016/0022-1236(74)90017-2."
+  ]
+}

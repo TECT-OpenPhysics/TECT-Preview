@@ -1,0 +1,704 @@
+% =============================================================================
+% Title: Class-II joint source-potential reduction and local Bellman no-go
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.1 -- first issued 2026-07-21; this version issued 2026-07-22
+% Status: scoped T4 exact reduction, analytic/executed crossover, and no-go
+% v1.1: corrects the factor-four Young allocation and proves the exact
+%          one-use/Nelson equivalence plus the timewise-Young no-go.
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cH}{\mathcal H}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{The broad joint gate is reduced but not closed.}
+The exact conditional source-potential formula is now fixed.  On the A13
+opposite-corner carrier, the coefficient-variation source has the same
+leading amplitude and sign as the A11 frozen derivative source.  The exact
+fast-phase principal symbol therefore has twice the frozen source, and its
+square has a factor four; the registered modulated carrier inherits this
+asymptotically.  A coefficient-one potential-increment estimate and, more
+generally, a finite bank of local Class-II/quartic/sextic polynomial terms
+with bounded coefficients and cutoff-summable positive replenishments and
+scalar transfer errors fail on this carrier.
+
+\medskip
+This does \emph{not} refute the full action.  Once a Cameron--Martin cost and
+a retained past sextic are present, the registered carrier is strongly
+subcritical.  A universal one-shell frozen-source inequality and a mixed
+Hardy/Riesz lemma make that feasibility quantitative.  What remains is a
+single cutoff-uniform adapted-control theorem which spends the
+Cameron--Martin energy only once across all scales.  The package remains T4;
+it does not prove the A7 Nelson bound, an interacting measure, T5, T6, or T7.
+
+\medskip
+The corrected factor-four allocation uses frozen Young parameter $0.1125$,
+not $0.45$, so that all four copies together spend total Cameron--Martin
+coefficient $0.45$.  Its sextic cost is $0.0445558902\ldots$.  The target
+one-use inequality is exactly equivalent to a Nelson moment at exponent
+$q=1/(2\epsilon_v)>p$; Boue--Dupuis, entropy, or HJB cannot be invoked again
+as its proof.  A scalar quartic loop rules out coefficient-blind endpoint
+Young summation, and a production determinant sign change rules out the
+direct one-shot Ramer map at the correct coefficient $5/9$.  The one-use
+objective remains open; no unique successor method is claimed.
+}}
+\end{center}
+
+The authority is the hash-pinned A1 production functional on the $L=16$
+torus, three complex fields in the six-real convention, fixed
+$\rho_{\rm floor}=10^{-12}$, $Y=1$, the common real-even sharp regulator,
+and the A10--A13 strict dyadic rectangular-cube filtration.  Write
+\[
+ U(z)=\int_{\T_L^3}\left({\lambda\over4}|z|^4
+                         +{\gamma\over6}|z|^6\right)\,dx,
+ \qquad \lambda=-0.43,\quad\gamma=1.62.                \tag{1.1}
+\]
+
+\section*{2. Exact conditional joint formula}
+
+At shell $j$, set $x=\phi_{j-1}$, $z=x+K_j\xi_j$, and let $\xi_j$ be the
+standard real Gaussian innovation.  With
+\[
+ A_j=M_{B(x)}^{1/2}G_j,\quad T_j=A_j^*A_j,\quad
+ r_j=M_{B(x)}^{1/2}Dx,\quad \ell_j=A_j^*r_j,            \tag{2.1}
+\]
+the A11 true increment is
+\[
+ I_j={1\over2}\{\langle\xi_j,T_j\xi_j\rangle-
+                  \operatorname{Tr}T_j\}
+       +\langle\ell_j,\xi_j\rangle.                    \tag{2.2}
+\]
+The coefficient increment is
+\[
+ \cC_j=q_{B(z)-B(x)}(Dz)
+       -t_{\Gamma_{\le j}}(B(z)-B(x)),                  \tag{2.3}
+\]
+and $I_j+\cC_j=V_j-V_{j-1}$ exactly.
+
+For $q=p\theta$, put
+\[
+ R_q=(\Id+qT_j)^{-1},\qquad \mu_q=-qR_q\ell_j.          \tag{2.4}
+\]
+Let $\kappa=0$ mean that the full local potential is retained and
+$\kappa=1$ mean that only its increment is retained.  Completing the
+Gaussian square, without estimating $\cC_j$ or $U$, gives
+\[
+\begin{split}
+&\log\E_j\exp\{-p[\theta I_j+\cC_j+U(z)-\kappa U(x)]\}\\
+={}&p\kappa U(x)-{1\over2}\log\det{}_2(\Id+qT_j)
+ +{q^2\over2}\langle\ell_j,R_q\ell_j\rangle\\
+&+\log\E_{\eta\sim N(\mu_q,R_q)}
+ \exp\{-p[\cC_j(x,\eta)+U(x+K_j\eta)]\}.
+\end{split}                                             \tag{2.5}
+\]
+Equation (2.5) fixes all signs.  Both the regularised-determinant term and
+the noncentral source term are nonnegative.  The sextic supplies the negative
+large-field exponent.  The sign-indefinite $\cC_j$ cannot be dropped.
+
+The primary executable checks (2.5) pointwise at random matrix inputs.  The
+non-importing route checks the integrated identity by independent
+Gauss--Hermite quadrature with a nonzero quartic--sextic test potential.
+
+\section*{3. Why the complete local source has a factor four}
+
+For the symmetric opposite-corner carrier write, after removal of the fast
+phases,
+\[
+ x=(\psi,\bar\psi,0),\qquad
+ D_i x=(iN\psi,-iN\bar\psi,0).                          \tag{3.1}
+\]
+The exact A13 Fierz identity gives
+\[
+ B(x)D_i x=i\,2\beta_{\rm op}N
+ (\psi|\psi|^2,-|\psi|^2\bar\psi,0),                   \tag{3.2}
+\]
+where
+\[
+ \beta_{\rm op}=4(a+2b+c)=0.0423749999999894.           \tag{3.3}
+\]
+Consequently the raw Class-II density is
+\[
+ q_B(x)=6\beta_{\rm op}N^2|\psi|^4.                    \tag{3.4}
+\]
+
+Let $y=(\eta,\bar\eta,0)$ be a same-corner shell amplitude variation.
+Differentiating only the derivative slots of
+$q_B=\frac12\sum_i(D_ix)^TB(x)D_ix$ produces the A11 frozen source.
+Differentiating the explicit expression (3.4) produces twice that result.
+Therefore
+\[
+ {1\over2}\sum_i(D_ix)^TDB(x)[y]D_ix
+ =\sum_i(D_ix)^TB(x)D_iy,                              \tag{3.5}
+\]
+and the coefficient-slot source equals the frozen derivative-slot source.
+Thus
+\[
+ \boxed{\ell_{\rm joint}=2\ell_{\rm frozen},\qquad
+        \|\ell_{\rm joint}\|^2=4\|\ell_{\rm frozen}\|^2.} \tag{3.6}
+\]
+The two executables verify (3.5) directly in this homogeneous fast-phase
+principal-symbol fixture: one uses the compact Fierz matrix, the other the
+three Pauli currents.  For the actual degree-$K$ modulated carrier, envelope
+derivatives and the trace/potential terms are not asserted to vanish at finite
+$K$; Section 5 proves that they are lower order in the carrier limit.  Thus
+the factor four is exact for the principal symbol and asymptotic for the
+registered carrier, not an unqualified finite-shell identity.
+
+\section*{4. Terminal and past normalisations are different}
+
+For the A13 polynomial $f_K$ and $u_K=P_-f_K$, put
+\[
+ B_K=\|f_K\|_6^6,\qquad D_K=\|u_K\|_6^6,
+ \qquad C_K=\|P_-(|u_K|^2u_K)\|_2^2.                   \tag{4.1}
+\]
+At $K=65536$, two finite routes give
+\[
+ {D_K\over B_K}=9.7254356828\ldots,\qquad
+ {C_K\over D_K}=0.7636937448\ldots.                   \tag{4.2}
+\]
+The frozen source normalised by the terminal field is
+\[
+ C_{\rm rel}=\beta_{\rm op}^2
+ \left[\left({D_K\over B_K}\right)^3
+       -\left({C_K\over B_K}\right)^3\right]
+ =0.9160527283\ldots.                                  \tag{4.3}
+\]
+The same source normalised by the actual conditional past is only
+\[
+ c_{\rm past}=\beta_{\rm op}^2
+ \left[1-\left({C_K\over D_K}\right)^3\right]
+ =0.0009958485\ldots,                                  \tag{4.4}
+\]
+because
+\[
+ {\|x\|_6^6\over\|\Phi\|_6^6}
+ =\left({D_K\over B_K}\right)^3
+ =919.8715736\ldots.                                   \tag{4.5}
+\]
+
+For the complete local source (3.6), the past-normalised exponent reward at
+$p=1.1$ is
+\[
+ {p^2\over2}(4c_{\rm past})=0.0024099534\ldots.        \tag{4.6}
+\]
+If the past potential itself is retained, its sextic exponent penalty is
+\[
+ {p\gamma\over6}=0.297,                                \tag{4.7}
+\]
+leaving $0.2945900466\ldots$.  This comparison is deliberately labelled
+\emph{past-normalised}.  It is not a comparison with the much smaller
+terminal field $\Phi$ and does not itself prove a global theorem.
+
+\section*{5. Asymptotic no-go for the local potential-increment route}
+
+Consider a high carrier with amplitude $A_N$ and
+\[
+ \tau_N={A_N^2\over N^2}\longrightarrow0.              \tag{5.1}
+\]
+Then $\|T_j\|=O(\tau_N)$, while the trace-gradient and local-potential
+gradient are lower by $O(\tau_N)$ relative to the source.  The potential
+Hessian is lower by $O(\tau_N^2)$.  Equations (3.6) and (4.3) therefore give
+the terminal-normalised joint constant
+\[
+ C_{\rm joint}=4C_{\rm rel}=3.6642109131\ldots.         \tag{5.2}
+\]
+The entire production sextic can supply at most
+\[
+ {\gamma\over3p}\le {\gamma\over3}=0.54.              \tag{5.3}
+\]
+Hence the coefficient-one conditional estimate
+\[
+ \sup_{j,x}\log\E_j
+ \exp\{-p[I_j+\cC_j+U(z)-U(x)]\}<\infty               \tag{5.4}
+\]
+is false for every $p\ge1$.
+
+The same scaling rules out the following precisely scoped class.  A
+\emph{finite-bank local Bellman barrier} is allowed to use bounded
+coefficients of $q_B$, $\|x\|_4^4$, and $\|x\|_6^6$, but its positive
+coefficient replenishments and scalar transfer errors must be summable in
+the cutoff.  Along a subsequence their positive increments tend to zero.
+Choose
+\[
+ \tau_j=\max\{\sqrt{\delta_j},N_j^{-1}\},              \tag{5.5}
+\]
+where $\delta_j$ is the available positive coefficient replenishment.  Then
+$T_j=O(\tau_j)$, the bank contribution divided by $A_j^6$ is
+$O(\delta_j/\tau_j)=o(1)$, and all local transport corrections are $o(1)$,
+while (5.2) persists.  Therefore no such barrier closes the production
+budget.  Nonlocal value functions, adapted-control costs, smooth covariance
+flows, and redesigned actions are expressly outside this no-go.
+
+This result is registered as
+\begin{center}
+\texttt{NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER}.
+\end{center}
+
+\section*{6. A mixed Hardy/Riesz lemma}
+
+The relative-phase carrier nevertheless admits a useful analytic enclosure.
+Use normalised Haar measure on $\T$.  Let $g=P_{<0}f$ and let
+$Q=P_{\le0}$ be used only on products.  Since $f-g$ has nonnegative modes
+and $\bar g$ has strictly positive modes,
+\[
+ Q(f\bar g)=Q(|g|^2).                                   \tag{6.1}
+\]
+For the real function $u=|g|^2$, Fourier symmetry gives
+\[
+ \|Qu\|_2^2={1\over2}\{\|u\|_2^2+|\widehat u(0)|^2\}
+ \ge {1\over2}\|u\|_2^2.                              \tag{6.2}
+\]
+Therefore
+\[
+ \|g\|_4^4
+ \le2\|Q(f\bar g)\|_2^2
+ \le2\|f\|_6^2\|g\|_3^2.                             \tag{6.3}
+\]
+The sharp Riesz norm $\|P_{<0}\|_{3\to3}=\csc(\pi/3)=2/\sqrt3$ and
+$\|f\|_3\le\|f\|_2^{1/2}\|f\|_6^{1/2}$ imply
+\[
+ \boxed{
+ {\|P_{<0}f\|_4^8\over\|f\|_2^2\|f\|_6^6}
+ \le {64\over9}.}                                     \tag{6.4}
+\]
+
+For the three-dimensional tensor frozen carrier this yields the coherent-ray
+threshold
+\[
+ \alpha b\ge {p\beta_{\rm op}^2\over8Y}
+                    \left({64\over9}\right)^3
+ =0.0887839605\ldots                                   \tag{6.5}
+\]
+at $p=1.1$.  The illustrative allocation $\alpha=0.45$, $b=0.21$ has
+$\alpha b=0.0945$, a positive but narrow margin for the \emph{frozen}
+source.  The complete local source has the separate factor four from (3.6),
+raising this coarse threshold to $0.355135842\ldots$; thus (6.4) alone does
+not close the joint gate.  This distinction prevents double counting the
+two components, three axes, or six-real normalisation already present in
+the coefficient of (6.5).
+
+The coherent-ray allocation in (6.5) and the one-shell Young allocation in
+the next section are alternative diagnostics.  They are never added together
+or charged to the same entropy/sextic reserve.
+
+\section*{7. Universal one-shell Cameron--Martin/sextic crossover}
+
+Let
+\[
+ H_A(x)=\langle x,Ax\rangle,\qquad L_6(x)=\int|x|^6.
+\]
+A13 gives the exact resolvent rebate
+\[
+ \langle\ell,(\Id+pT)^{-1}\ell\rangle
+ \le {1\over p}\|r\|_2^2.                             \tag{7.1}
+\]
+The sharp matrix bound $B(x)\le\beta_{\rm op}|x|^2\Id$ gives
+\[
+ \|r\|_2^2\le\beta_{\rm op}\int|x|^2|Dx|^2.          \tag{7.2}
+\]
+Integration by parts and the production symbol lower bound
+$A(k)\ge c_{\rm sym}\langle k\rangle^4\Id$ yield
+\[
+\begin{split}
+ \int|x|^2|Dx|^2
+ &\le\int |x|^2x\cdot(-\Delta x)\\
+ &\le L_6(x)^{1/2}\|\Delta x\|_2
+ \le c_{\rm sym}^{-1/2}L_6(x)^{1/2}H_A(x)^{1/2},
+\end{split}                                             \tag{7.3}
+\]
+where $c_{\rm sym}=0.10836453058711468$.  Young's inequality proves, for
+every $\vartheta>0$,
+\[
+ \boxed{
+ {p^2\over2}\langle\ell,(\Id+pT)^{-1}\ell\rangle
+ \le\vartheta H_A(x)
+ +{p^2\beta_{\rm op}^2\over16c_{\rm sym}\vartheta}L_6(x).} \tag{7.4}
+\]
+
+At $p=1.1$ and $\vartheta=0.45$, the frozen-source sextic coefficient in
+(7.4) is $0.0027847431\ldots$.  Multiplying the source by two multiplies the
+entire right-hand side of (7.4) by four, including its Cameron--Martin term.
+To keep the \emph{total} Cameron--Martin allocation equal to $0.45$, apply
+(7.4) to the frozen source with
+\[
+ \vartheta_{\rm fr}={0.45\over4}=0.1125.                \tag{7.5}
+\]
+The corrected joint sextic coefficient is therefore
+\[
+ 4\,{p^2\beta_{\rm op}^2\over
+       16c_{\rm sym}\vartheta_{\rm fr}}
+ =16(0.0027847431\ldots)
+ =0.0445558902\ldots.                                  \tag{7.6}
+\]
+The production potential obeys
+\[
+ {\lambda\over4}\rho^2+{\gamma\over6}\rho^3
+ \ge {\gamma\over12}\rho^3-{|\lambda|^3\over3\gamma^2}, \tag{7.7}
+\]
+so the half-sextic exponent coefficient is $p\gamma/12=0.1485$ and the
+registered factor-four margin is $0.1039441098\ldots$.  Against the
+unexponentiated one-use threshold $\gamma/12=0.135$, the exponent cost must
+first be divided by $p$.  The corresponding cost is
+$0.0405053547\ldots$ and the diagnostic margin is
+$0.0944946453\ldots$.
+
+Equation (7.4) is a genuine all-field, all-shell frozen-source theorem.  It
+is not summable as written: $x$ contains Gaussian past noise, and paying
+$H_A(x)$ at every shell recreates the A11 $O(N)$ base-Gaussian divergence.
+This is the exact point at which a full-action adapted-control argument is
+needed.
+
+\section*{8. Exact backward recursion and surviving theorem}
+
+Let $S_j=V_j+U$ and
+\[
+ J_j(x,\xi)=S_j(x+K_j\xi)-S_{j-1}(x)
+            =I_j+\cC_j+U(x+K_j\xi)-U(x).               \tag{8.1}
+\]
+The exact backward value function is
+\[
+ W_J=0,\qquad
+ W_{j-1}(x)=-{1\over p}\log\E_j
+ e^{-p[J_j(x,\xi_j)+W_j(x+K_j\xi_j)]}.                \tag{8.2}
+\]
+For the control statement use the A8 covariance-flow definition, not a bare
+formal shell norm.  Choose
+\[
+ C_J=\int_0^1J_{J,t}J_{J,t}^*dt,\quad
+ X_J=\int_0^1J_{J,t}\,dW_t,\quad
+ h_J(v)=\int_0^1J_{J,t}v_tdt,                          \tag{8.3}
+\]
+where $v$ is progressive and
+$\mathcal E(v)=\E\int_0^1\|v_t\|_2^2dt<\infty$.
+An orthogonal shell realization gives the displayed discrete sum below.
+The finite-dimensional Boue--Dupuis formula gives
+\[
+ -{1\over p}\log\E e^{-pS_J}
+ =\inf_v\E\left[S_J(X_J+h_J(v))+{1\over2p}\int_0^1\|v_t\|_2^2dt\right]. \tag{8.4}
+\]
+
+Combining (7.7) with (8.4) reduces positive closure to one theorem:
+\begin{center}
+\texttt{A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE}.
+\end{center}
+For every progressive control $v$, uniformly in the cutoff, prove
+\[
+ \E V_J^{\rm ren}(X_J+h_J(v))
+ \ge-\epsilon_6\E\|X_J+h_J(v)\|_6^6
+     -\epsilon_v\mathcal E(v)-C,                       \tag{8.5}
+\]
+with
+\[
+ \epsilon_6<0.135,\qquad \epsilon_v<{1\over2p}.        \tag{8.6}
+\]
+At $p=1.1$, the second threshold is $0.454545\ldots$.
+The proof must retain the A9 Hilbert--Schmidt cancellation for Gaussian
+fluctuations, use the saturated estimate only on the Cameron--Martin drift,
+spend that drift energy once across the scale sum, and verify that no new
+interaction counterterm is generated.  Once (8.5) holds, (8.4) and (7.7)
+give the cutoff-uniform Nelson/log-Laplace bound directly.
+
+\section*{9. Exact equivalence and a forbidden proof architecture}
+
+Fix the explicit candidate
+\[
+ p={11\over10},\qquad \epsilon_6={13\over100},\qquad
+ \epsilon_v={9\over20}.                                \tag{9.1}
+\]
+The strict reserves are
+\[
+ {\gamma\over12}-\epsilon_6={1\over200},\qquad
+ {1\over2p}-\epsilon_v={1\over220}.                    \tag{9.2}
+\]
+For $G_J=V_J^{\rm ren}+\epsilon_6\|\phi\|_6^6$, the
+Boue--Dupuis formula at coefficient $\epsilon_v$ gives the exact identity
+\[
+ \inf_v\E\left[G_J(X_J+h_J(v))+\epsilon_v\|v\|_{L^2_tH}^2\right]
+ =-2\epsilon_v\log\E\exp\left\{-{G_J\over2\epsilon_v}\right\}. \tag{9.3}
+\]
+Consequently (8.5), uniformly in the cutoff, is equivalent to
+\[
+ \sup_J\E\exp\{-qG_J\}<\infty,
+ \qquad q={1\over2\epsilon_v}={10\over9}>p.            \tag{9.4}
+\]
+Thus entropy, endpoint Follmer drift, or HJB completion records the energy
+once but does not prove the missing lower bound; using (9.3) as the proof of
+(8.5) would be circular.
+
+There is also an exact no-go for applying Young's inequality at each time.
+For a scalar standard Brownian motion let
+\[
+ V(x)={1\over2}(x^4-3x^2),\qquad
+ g_t(x)=2x^3+(3-6t)x.                                  \tag{9.5}
+\]
+Then $V(W_1)=\int_0^1g_t(W_t)\,dW_t$.  For the triangular loop
+\[
+ h_A(t)=2At\quad(t\le1/2),\qquad
+ h_A(t)=2A(1-t)\quad(t\ge1/2),                         \tag{9.6}
+\]
+one has $h_A(0)=h_A(1)=0$, $\int|\dot h_A|^2=4A^2$, and terminal sixth
+moment $15$, but the exact bracket is
+\[
+ \E\int_0^1g_t(W_t+h_A(t))^2dt
+ ={21\over2}+{78\over5}A^2+6A^4+{4\over7}A^6.         \tag{9.7}
+\]
+The exact signed pairing is zero because the endpoint did not move.  Hence no
+cutoff-independent $C$ can make the coefficient-blind endpoint enclosure
+\[
+ \E\int_0^1g_t(W_t+h_t)^2dt
+ \le C\left(1+\E|W_1+h_1|^6+\int_0^1|\dot h_t|^2dt\right)               \tag{9.8}
+\]
+hold for every deterministic Cameron--Martin path.  Thus timewise
+source-square/Young summation of precisely this endpoint-only type discards
+the cancellation and is false.  This does not exclude a Class-II-specific
+timewise argument which retains additional signed tensor cancellation.  The
+failed architecture is registered as
+\begin{center}
+\texttt{NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP}.
+\end{center}
+
+\section*{10. Nonfrozen determinant boundary and one-shot Ramer no-go}
+
+Whiten the finite-cutoff field as $X=C_J^{1/2}\xi$ and put
+\[
+ b_J(\xi)=C_J^{1/2}D^*\{B(X)DX\}.
+\]
+The A8 divergence identity and its derivative give
+\[
+ 2V_J^{\rm ren}=\delta_\gamma b_J,
+ \qquad Db_J=T_X+K_X,                                  \tag{10.1}
+\]
+\[
+ T_X=C_J^{1/2}D^*M_{B(X)}DC_J^{1/2}\ge0,
+ \quad K_Xh=C_J^{1/2}D^*\{DB(X)[C_J^{1/2}h]DX\}.       \tag{10.2}
+\]
+Common evenness gives $\operatorname{Tr}K_X=0$.  With
+$c_0(k)=\|A(k)^{-1/2}\|_{\rm op}$,
+$c_1(k)=|k|c_0(k)$, and $V=L^3$, define
+\[
+ C_{11}=V^{-1}\sum_kc_1(k)^4,
+ \qquad C_{10}\le V^{-1}
+ \left(\sum_kc_1(k)^4\sum_kc_0(k)^4\right)^{1/2}.     \tag{10.3}
+\]
+The production $q^{-4}$ symbol in dimension three makes both sums finite.
+Direct Fourier matrix estimates therefore prove, cutoff uniformly,
+\[
+ \|T_X\|_{\mathfrak S_2}^2
+ \le C_{11}\beta_B^2\|X\|_4^4,
+ \qquad
+ \|K_X\|_{\mathfrak S_2}^2
+ \le6C_{10}\beta_1^2\int|X|^2|DX|^2.                 \tag{10.4}
+\]
+This is a genuine nonfrozen Schatten-two theorem, but it is not a determinant
+lower bound.
+
+The obstruction is an exact coefficient curl.  In the six-real basis let
+$x=ue_1$, $q_u=u^2/(u^2+\rho_{\rm floor})$, and
+$\Omega_x(h,g)=DB(x)[h]g-DB(x)[g]h$.  Direct differentiation of the third
+Pauli block gives
+\[
+ \boxed{\Omega_{ue_1}(e_1,e_3)
+ =4u q_u\{b+c(1-q_u)\}e_3\ne0.}                       \tag{10.5}
+\]
+Thus $B$ is not an exact coefficient one-form and $K_X$ cannot be absorbed
+into the positive $T_X$ factor.
+
+The distinction is sharp.  If $t=q/2$,
+$R=t(I+tT_X)^{-1}K_X$, and $\|R\|_{\rm op}\le\rho<1$, then
+\[
+ I+tDb_J=(I+tT_X)(I+R),                                \tag{10.6}
+\]
+and Carleman--Fredholm multiplication plus the convergent determinant series
+gives
+\[
+ -\log|\det{}_2(I+tDb_J)|
+ \le {t^2\over2}\|T_X\|_2^2+c_\rho\|R\|_2^2
+       +t\|T_X\|_2\|R\|_2,                            \tag{10.7}
+\]
+\[
+ c_\rho={-\log(1-\rho)-\rho\over\rho^2}.              \tag{10.8}
+\]
+Together with an orientation-preserving Gaussian diffeomorphism and a
+pointwise sextic bound on the right side plus $t^2\|b_J\|^2/2$, (10.7)
+would prove the Nelson moment.  Those are additional hypotheses, not
+consequences of (10.4): for rank-one
+$R=-(1-\delta)P$, $\det{}_2(I+R)=\delta e^{1-\delta}\to0$ although
+$\|R\|_2<1$.
+
+Production itself exhibits the failure.  Since $q=10/9$ in (9.4), the
+correct direct Ramer displacement is
+\[
+ t={q\over2}={5\over9},                                \tag{10.9}
+\]
+not $10/9$.  On the A13 carrier its separated Ramer-square charge is already
+\[
+ {t^2\over2}C_{\rm rel}=0.1413661618\ldots>0.135>0.13. \tag{10.10}
+\]
+Moreover, a 30-real-mode production fixture using modes
+$0,\cos x,\sin x,\cos2x,\sin2x$ and seed $913131$ gives
+\[
+ \lambda_{\min}^{\mathbb R}(Db)=-0.1475869507\ldots
+ \quad(M=64),
+ \qquad -0.1475869513\ldots\quad(M=128).               \tag{10.11}
+\]
+Both the compact-Fierz and non-importing direct-Pauli routes find a sign
+change of $\det(I+tDb)$ across amplitudes
+$0.98(3.4923058\ldots)$ and $1.02(3.4923058\ldots)$; at the central estimate
+the minimum singular value is below $1.5\,10^{-10}$.  The density exceeds
+$376$ there, so the $10^{-12}$ floor is inactive.  This is converged
+floating evidence, not interval arithmetic, and is registered as
+\begin{center}
+\texttt{NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT}.
+\end{center}
+
+The frozen/predictable triangular theorem survives: if the positive-square
+shell Hessian is block diagonal and the coefficient feedback is strictly
+block lower triangular, then every feedback loop vanishes and
+\[
+ \det{}_2(I+t(T+K))=\prod_j\det{}_2(I+tT_j).            \tag{10.12}
+\]
+Together with A9 this closes the frozen full positive squares, not A11's true
+increments after their past squares are removed.  The canonical one-use
+objective (8.5) therefore remains the sole gate.  No unique antecedent is
+claimed.  Any viable continuation must retain a signed global cancellation,
+for example through a genuinely triangular/flow transport; one-shot
+$u=tb_J$, shellwise Young, and coefficient-blind endpoint Young are now
+excluded.
+
+\section*{11. Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the factor four was declared rather than derived.}
+\textbf{Dismissed.}  Equation (3.5) derives amplitude doubling from the raw
+principal-symbol density.  Independent compact-Fierz and direct-Pauli finite
+fixtures verify the coefficient and derivative slots separately, while
+Section 5 controls the lower-order carrier corrections asymptotically.
+
+\item \textbf{Objection: the $0.297$ sextic comparison uses the terminal
+field.}  \textbf{Valid with mitigation.}  It does not.  Section 4 explicitly
+labels it as a retained \emph{past} potential comparison.  Terminal
+normalisation restores the factor $919.87\ldots$ and gives the local no-go.
+
+\item \textbf{Objection: adding $U(z)-U(x)$ cancels the source.}
+\textbf{Dismissed.}  Under $\tau=A^2/N^2\to0$, its gradient and Hessian are
+lower order while the joint source (3.6) persists.
+
+\item \textbf{Objection: the no-go rules out every Bellman value function.}
+\textbf{Upheld as false.}  It applies only to the bounded-coefficient,
+cutoff-summable finite-bank local class defined in Section 5.  The nonlocal
+adapted-control value (8.4) is outside its scope.
+
+\item \textbf{Objection: the Riesz inequality alone closes the full joint
+gate.}  \textbf{Upheld as false.}  It closes a frozen coherent-ray budget;
+the coefficient source adds the separate factor four, and general
+commutators remain under (8.5).
+
+\item \textbf{Objection: (7.4) may be summed shell by shell.}
+\textbf{Upheld as invalid.}  Its $H_A(x)$ contains Gaussian past energy.
+A11 proves that the corresponding repeated payment diverges with cutoff.
+
+\item \textbf{Objection: the old factor-four margin $0.137361\ldots$ is
+valid.} \textbf{Upheld as false and corrected.}  It multiplied the sextic
+cost by four while leaving the Cameron--Martin allocation unchanged.  The
+same multiplication acts on both terms.  Equation (7.5) fixes the frozen
+parameter at $0.1125$ and gives cost $0.0445558902\ldots$ and exponent margin
+$0.1039441098\ldots$.
+
+\item \textbf{Objection: HJB proves the one-use theorem.}
+\textbf{Upheld as circular.}  Equation (9.3) shows that its initial HJB value
+is exactly the higher-exponent Nelson moment which remains to be bounded.
+
+\item \textbf{Objection: source-square Young can be applied continuously
+rather than shellwise.} \textbf{Dismissed as a repair.}  The exact scalar
+loop (9.5)--(9.8) refutes the coefficient-blind endpoint-$L^6$ plus
+control-energy enclosure.  A Class-II-specific signed tensor estimate is not
+excluded.
+
+\item \textbf{Objection: Schatten-two control makes the nonfrozen Ramer
+determinant nonzero.}  \textbf{Upheld as false.}  Rank-one operators already
+disprove that implication, and the production fixture (10.11) crosses an
+actual determinant zero with the correctly halved Ramer coefficient.
+
+\item \textbf{Objection: the one-shot Ramer failure disproves the Nelson
+moment.}  \textbf{Upheld as false.}  It removes one change-of-variables
+architecture.  Signed ODE, triangular/Follmer, or direct constructive
+arguments remain logically possible.
+
+\item \textbf{Objection: nonfrozen global determinant cancellation is the
+unique successor.}  \textbf{Upheld as unproved.}  The one-use inequality is
+the unique canonical objective in this package.  Section 10 proves only the
+maximal current determinant theorem and records the one-shot failure.
+
+\item \textbf{Objection: the quartic destroys potential coercivity.}
+\textbf{Dismissed.}  Equation (7.7) is the exact one-variable optimisation.
+On $L=16$ its additive constant is $41.3631905705\ldots$.
+
+\item \textbf{Objection: this package proves A7 Nelson or an interacting
+measure.}  \textbf{Upheld as false.}  Those conclusions require (8.5), which
+remains open.  The tier stays T4.
+\end{enumerate}
+
+\section*{Reproduction}
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/a13_classii_joint_source_potential_reduction_verify.py
+\end{verbatim}
+The command runs the primary coefficient/Fierz route, a non-importing
+alias-free/Gauss--Hermite route, and integrated hash and boundary checks.
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID:               A13-CLASSII-JOINT-SOURCE-POTENTIAL-REDUCTION
+Precise statement:       Exact joint completion and asymptotic factor-four
+                         source refute coefficient-one conditioning and the
+                         precisely scoped finite-bank local Bellman class;
+                         exact one-use/Nelson equivalence, corrected factor-
+                         four allocation, scoped timewise-Young no-go, and
+                         nonfrozen one-shot Ramer singularity.
+Scope:                   L=16 fixed-floor A1 production coefficients;
+                         six-real fields; strict sharp-cube filtration.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION;
+                         A7--A13 Class-II chain (full IDs in card).
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_joint_source_potential_reduction_verify.py
+Expected output:         A13-CLASSII-JOINT-SOURCE-POTENTIAL-REDUCTION-
+                         INTEGRATED-PASS; assertion count in manifest; exit 0.
+Falsification gate:      Any failed completion, doubling, mixed-Hardy,
+                         one-shell, Ramer-sign, cross-route, hash, or PDF
+                         check.
+Tier before / after:     T4 / T4
+No-overclaim statement:  No A7 Nelson bound, interacting measure, T5/T6/T7,
+                         floor removal, infinite volume, phase transition,
+                         or BCC selection
+Next required action:    Prove the open one-use theorem through a signed
+                         global cancellation; one-shot Ramer and endpoint-
+                         only Young routes are excluded.
+\end{verbatim}
+
+\section*{References}
+
+\begin{enumerate}
+\item M. Boue and P. Dupuis, ``A variational representation for certain
+functionals of Brownian motion,'' \emph{Annals of Probability} 26 (1998),
+1641--1659, \url{https://doi.org/10.1214/aop/1022855876}.
+\item N. Barashkov and M. Gubinelli, ``A variational method for
+$\Phi^4_3$,'' \url{https://arxiv.org/abs/1805.10814}.
+\item B. Hollenbeck and I. E. Verbitsky, ``Best constants for the Riesz
+projection,'' \emph{Journal of Functional Analysis} 175 (2000), 370--392,
+\url{https://doi.org/10.1006/jfan.2000.3616}.
+\item R. Ramer, ``On nonlinear transformations of Gaussian measures,''
+\emph{Journal of Functional Analysis} 15 (1974), 166--187,
+\url{https://doi.org/10.1016/0022-1236(74)90017-2}.
+\item TECT A7--A13 claim packages, exact covariance-normal composite,
+determinant, true-increment, and relative-phase obstruction records.
+\end{enumerate}

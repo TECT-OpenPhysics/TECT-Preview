@@ -97,9 +97,20 @@ on the same witness. A13 then restores the exact coefficient and proves
 separate local doublet/singlet phase nulls plus the output-shell commutator.
 Its opposite-corner SU(2) polynomial nevertheless gives
 `C_rel>0.9>gamma/3=0.54`; the determinant resolvent tends to the identity on
-that carrier. Thus T-049 is also closed negatively. The first surviving
-antecedent is now `A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE`, which must
-change the proof architecture rather than improve a standalone source bound.
+that carrier. Thus T-049 is also closed negatively. The corrected joint-source v1.1
+package now reduces, but does not close, the broad joint log-Laplace gate:
+exact principal-symbol source doubling gives an asymptotic factor four on the
+registered carrier and refutes coefficient-one conditioning plus the
+precisely scoped finite-bank local Bellman class. The terminal/past split and
+one-shell crossover leave a nonlocal full-action route. Exact
+Boue--Dupuis analysis makes the candidate one-use inequality equivalent to
+the still-open `q=10/9` Nelson moment. A coefficient-blind endpoint-only
+timewise Young enclosure and the direct nonfrozen one-shot Ramer map at
+`t=5/9` are now also closed negatively; the latter has a production
+determinant sign change near amplitude `3.49230586`. The sole canonical
+objective remains `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, which must
+spend Cameron--Martin energy once and retain a signed global cancellation.
+No unique successor proof method is claimed.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -191,11 +202,18 @@ The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
 
 1. **Repository control task T-006** — finish code-discipline automation.
-2. **A13-CLASSII-JOINT-SOURCE-POTENTIAL-LOG-LAPLACE** — A13 closes the exact-B
-   standalone source budget negatively: an opposite-corner SU(2) carrier gives
-   `C_rel>0.9>gamma/3`, and the resolvent tends to the identity. Seek a joint
-   cancellation with the local potential, redesign the true increment, or
-   prove a genuinely probabilistic estimate that survives this carrier.
+2. **A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE** — the broad joint gate is
+   `REDUCED-NOT-CLOSED`. Exact principal-symbol doubling produces an
+   asymptotic factor four on the relative-phase carrier and excludes the
+   coefficient-one and precisely scoped finite-bank local Bellman routes.
+   v1.1 also excludes coefficient-blind endpoint-only timewise Young and the
+   direct nonfrozen one-shot Ramer map; it does not exclude all transports.
+   Prove the cutoff-uniform full-action controlled-shell inequality with
+   `epsilon_6<0.135` and `epsilon_v<1/(2p)`, retain the A9 cancellation, spend
+   Cameron--Martin energy once, preserve a signed global cancellation, and
+   generate no new interaction counterterm. A triangular/flow transport or
+   direct constructive estimate is the selected research direction, not a
+   uniquely proved antecedent.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

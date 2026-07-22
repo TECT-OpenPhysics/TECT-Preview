@@ -345,9 +345,55 @@ provide an explicit positive final budget.  Reusing a source-only bound,
 dropping the output shell, or claiming that the resolvent alone repairs T-049
 is forbidden.
 
-**Status:** OPEN (2026-07-21), FIRST SURVIVING GATE AFTER THE A13 RELATIVE-PHASE
-NO-GO.  Joint source-potential, redesigned-increment, and probabilistic routes
-are not classified by A13.
+**Status:** REDUCED-NOT-CLOSED (reviewed 2026-07-22) by the corrected A13
+joint-source v1.1
+package.  Exact Gaussian completion and two independent first-variation
+routes give `ell_joint=2 ell_frozen` in the homogeneous fast-phase
+principal-symbol fixture; lower-order carrier corrections vanish
+asymptotically, hence a factor four in the limiting source square.  The
+coefficient-one potential-increment estimate and every finite bank of local
+Class-II/quartic/sextic polynomial terms with bounded coefficients and
+cutoff-summable positive replenishments and scalar transfer errors fail because
+`4 C_rel=3.6642109130609337>gamma/(3p)` for every `p>=1`; this is
+`NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER`.  The exact terminal/past split,
+the `64/9` mixed Hardy lemma, and a universal one-shell
+Cameron--Martin/sextic estimate show that the registered carrier is instead
+subcritical when the past potential and entropy are retained.  v1.1 corrects
+the factor-four allocation to cost `0.044555890186929`, proves that the
+candidate one-use inequality is exactly equivalent to the still-open
+`q=10/9` Nelson moment, and refutes both the coefficient-blind endpoint-only
+timewise Young route and the direct nonfrozen one-shot Ramer map.  The broad
+gate is reduced to the following nonlocal full-action theorem; no Nelson
+bound or interacting measure is claimed.
+
+### **A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE**
+
+**Statement:** Prove a cutoff-uniform adapted-control estimate for the full
+renormalised Class-II action,
+`E V_J^ren(X+h(v)) >= -epsilon_6 E||X+h(v)||_6^6
+-epsilon_v E sum_j||v_j||_2^2-C`, with
+`epsilon_6<gamma/12=0.135` and `epsilon_v<1/(2p)`.  The proof must retain the
+A9 Hilbert--Schmidt cancellation for Gaussian fluctuations, spend the
+Cameron--Martin control energy only once across all shells, and show that no
+new interaction counterterm is generated.  A shell-by-shell sum of the A13
+one-shell estimate is forbidden because its `H_A(x)` term repeatedly pays
+Gaussian past energy, whose expectation grows with the cutoff by A11.
+
+**Status:** OPEN (reviewed 2026-07-22), SOLE CANONICAL OBJECTIVE AFTER THE
+ARCHITECTURE NOGOS.  At the explicit candidate
+`epsilon_6=0.13`, `epsilon_v=0.45`, the theorem is exactly equivalent to
+`sup_J E exp[-(10/9)(V_J^ren+0.13||phi||_6^6)]<infinity`; restating
+Boue--Dupuis, entropy, Follmer, or HJB is therefore circular.  The production
+nonfrozen derivative has a genuine coefficient curl.  With the correct Ramer
+coefficient `t=(10/9)/2=5/9`, two independent finite-mode routes find a
+determinant sign change near amplitude `3.49230586`, registered as
+`NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT`.  This refutes one-shot
+`xi+t b_J(xi)`, not the objective.  No unique proof antecedent is claimed.
+Any continuation must retain a signed global cancellation, for example by a
+genuinely triangular/flow transport or direct constructive estimate.
+Coefficient-one conditioning, the finite-bank Bellman class, repeated past
+energy, endpoint-only timewise Young, resolvent-only repair, and separate
+payment of the Ramer square plus inverse determinant are excluded.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

@@ -1,0 +1,401 @@
+{
+  "assertions": [
+    {
+      "actual": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "expected": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565",
+      "name": "independent_authority_a1_manifest_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "7ec39c5cf388a1450720efd04bcf5ee356392237dff8a7817a6f54cf9e7e53cc",
+      "expected": "7ec39c5cf388a1450720efd04bcf5ee356392237dff8a7817a6f54cf9e7e53cc",
+      "name": "independent_authority_a11_status_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "118bb82adb341c0127871aa6e56c414386546c7da10b53e2a89bd901dc1b58b8",
+      "expected": "118bb82adb341c0127871aa6e56c414386546c7da10b53e2a89bd901dc1b58b8",
+      "name": "independent_authority_a13_obstruction_manifest_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "e944066d24de8dcda55ad5beb087be0be13d504169066495bbb1c62a6f4d8215",
+      "expected": "e944066d24de8dcda55ad5beb087be0be13d504169066495bbb1c62a6f4d8215",
+      "name": "independent_authority_a13_obstruction_primary_result_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "87313d9146d8f6c0202c1981b41710ff602722998824ae0d86197bc2dad6b326",
+      "expected": "87313d9146d8f6c0202c1981b41710ff602722998824ae0d86197bc2dad6b326",
+      "name": "independent_source_hash",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0423749999999894,
+      "expected": 0.0423749999999894,
+      "name": "independent_beta_operator",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.1083645305871147,
+      "expected": 0.10836453058711468,
+      "name": "independent_symbol_coercivity",
+      "status": "PASS"
+    },
+    {
+      "actual": 524288,
+      "expected": ">393217",
+      "name": "alias_free_grid_strict",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.9160527282652341,
+      "expected": 0.9160527282652334,
+      "name": "grid_source_ratio_reproduced",
+      "status": "PASS"
+    },
+    {
+      "actual": 919.8715735886846,
+      "expected": 919.8715735886835,
+      "name": "grid_past_amplification_reproduced",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.0876690093606385e-13,
+      "expected": "<1e-11",
+      "name": "gauss_hermite_joint_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "error_normalisation": "max(1, abs(frozen))",
+        "finite_difference_step": 1.5e-06,
+        "max_coefficient_vs_frozen_relative_error": 1.5329255018126098e-09,
+        "max_total_vs_two_frozen_relative_error": 1.5329255018126098e-09,
+        "retained_samples": 160
+      },
+      "expected": "retained>=128 and error<5e-06",
+      "name": "joint_source_amplitude_doubles_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "error_normalisation": "max(1, abs(frozen))",
+        "finite_difference_step": 1.5e-06,
+        "max_coefficient_vs_frozen_relative_error": 1.5329255018126098e-09,
+        "max_total_vs_two_frozen_relative_error": 1.5329255018126098e-09,
+        "retained_samples": 160
+      },
+      "expected": "retained>=128 and error<5e-06",
+      "name": "coefficient_slot_equals_frozen_slot_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.6642109130609364,
+      "expected": 3.6642109130609364,
+      "name": "joint_source_factor_four_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.6642109130609364,
+      "expected": 0.4909090909090909,
+      "name": "local_bellman_budget_fails_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0024099533739838307,
+        0.29700000000000004
+      ],
+      "expected": "past-normalized reward < retained past-sextic penalty",
+      "name": "retained_past_potential_suppresses_local_saddle",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.269023605933037e-14,
+      "expected": "<1e-10",
+      "name": "hardy_support_identity_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.361592866715861,
+      "expected": 7.111111111111111,
+      "name": "hardy_random_ratio_below_64_over_9",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5100820047344796,
+      "expected": 7.111111111111111,
+      "name": "certificate_mixed_functional_below_64_over_9",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0945,
+        0.08878396049378273
+      ],
+      "expected": "allocation > threshold",
+      "name": "frozen_tensor_budget_feasible",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0945,
+        0.35513584197513093
+      ],
+      "expected": "allocation < factor-four threshold",
+      "name": "joint_tensor_budget_not_closed_by_mixed_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0027847431366830586,
+        0.14850000000000002
+      ],
+      "expected": "cost < half-sextic",
+      "name": "frozen_cm_sextic_margin_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.04455589018692894,
+        0.14850000000000002
+      ],
+      "expected": "cost < half-sextic",
+      "name": "factor_four_carrier_cm_sextic_margin_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.1125,
+        0.45
+      ],
+      "expected": [
+        0.1125,
+        0.45
+      ],
+      "name": "factor_four_theta_quarter_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.04455589018692894,
+      "expected": 0.044555890186929,
+      "name": "corrected_factor_four_cost_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1111111111111112,
+      "expected": ">1.1 and manifest oracle",
+      "name": "bd_equivalent_exponent_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0050000000000000044,
+      "expected": ">0",
+      "name": "bd_field_margin_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.004545454545454519,
+      "expected": ">0",
+      "name": "bd_control_margin_independent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": [
+          21,
+          2
+        ],
+        "2": [
+          78,
+          5
+        ],
+        "4": [
+          6,
+          1
+        ],
+        "6": [
+          4,
+          7
+        ]
+      },
+      "expected": {
+        "0": [
+          21,
+          2
+        ],
+        "2": [
+          78,
+          5
+        ],
+        "4": [
+          6,
+          1
+        ],
+        "6": [
+          4,
+          7
+        ]
+      },
+      "name": "doob_loop_exact_rational_formula",
+      "status": "PASS"
+    },
+    {
+      "actual": {},
+      "expected": {},
+      "name": "doob_loop_pairing_cancels_exactly",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5714285714285714,
+      "expected": 0.5714285714285714,
+      "name": "doob_loop_leading_four_sevenths",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.010098435197886502,
+      "expected": -0.010098435197886498,
+      "name": "potential_optimizer_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": 41.3631905705431,
+      "expected": 41.3631905705431,
+      "name": "potential_volume_constant_reproduced",
+      "status": "PASS"
+    },
+    {
+      "actual": "REDUCED-NOT-CLOSED",
+      "expected": "REDUCED-NOT-CLOSED",
+      "name": "gate_disposition_is_reduced_not_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": "T4",
+      "expected": "T4",
+      "name": "tier_boundary_is_t4",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "name": "independent_route_nonimporting",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "consequence": {
+    "disposition": "REDUCED-NOT-CLOSED",
+    "forbidden_successor": "coefficient-one local potential-increment conditioning or a finite bank of local q/quartic/sextic polynomial terms with bounded coefficients and cutoff-summable positive replenishments and scalar transfer errors",
+    "negative_result": "NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER",
+    "next_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "positive_route": "NONFROZEN-GLOBAL-DETERMINANT-CANCELLATION-THEN-FULL-ACTION-BOUE-DUPUIS-COERCIVITY",
+    "t050": "IN-PROGRESS-REDUCED",
+    "tier_after": "T4"
+  },
+  "derived": {
+    "beta_operator": 0.0423749999999894,
+    "certificate": {
+      "alias_free_minimum": 393217,
+      "degree": 65536,
+      "full_l2_second": 4.245200359626837,
+      "full_l6_sixth": 2022.5787400615038,
+      "grid": 524288,
+      "mixed_hardy_functional": 0.5100820047344796,
+      "nonpositive_cubic_energy": 15022.206839284123,
+      "past_l4_fourth": 66.17924622268805,
+      "past_l6_sixth": 19670.459449911596,
+      "source_ratio": 0.9160527282652341,
+      "spin_functional": 510.1537108883869
+    },
+    "cm_sextic": {
+      "factor_four_frozen_theta": 0.1125,
+      "registered_factor_four_source_sextic_cost": 0.04455589018692894,
+      "universal_frozen_source_sextic_cost": 0.0027847431366830586
+    },
+    "gaussian_identity": {
+      "absolute_error": 3.0876690093606385e-13,
+      "constant": 0.028422802153516107,
+      "left": 0.0014281166505477894,
+      "order": 160,
+      "right": 0.0014281166508565563
+    },
+    "hardy_fixture": {
+      "maximum_ratio": 0.361592866715861,
+      "maximum_support_error": 4.269023605933037e-14
+    },
+    "joint_source_doubling": {
+      "error_normalisation": "max(1, abs(frozen))",
+      "finite_difference_step": 1.5e-06,
+      "max_coefficient_vs_frozen_relative_error": 1.5329255018126098e-09,
+      "max_total_vs_two_frozen_relative_error": 1.5329255018126098e-09,
+      "retained_samples": 160
+    },
+    "mixed_hardy": {
+      "allocated_product": 0.0945,
+      "analytic_upper_bound": 7.111111111111111,
+      "frozen_tensor_threshold": 0.08878396049378273,
+      "joint_factor_four_tensor_threshold": 0.35513584197513093
+    },
+    "one_use_equivalence": {
+      "control_margin": 0.004545454545454519,
+      "epsilon_6": 0.13,
+      "epsilon_v": 0.45,
+      "equivalent_nelson_exponent_q": 1.1111111111111112,
+      "sextic_margin": 0.0050000000000000044
+    },
+    "potential": {
+      "full_sextic_exponent_penalty": 0.29700000000000004,
+      "half_sextic_exponent_penalty": 0.14850000000000002,
+      "lower_bound_constant_L3": 41.3631905705431
+    },
+    "scalar_doob_loop": {
+      "bracket_coefficients": {
+        "0": [
+          21,
+          2
+        ],
+        "2": [
+          78,
+          5
+        ],
+        "4": [
+          6,
+          1
+        ],
+        "6": [
+          4,
+          7
+        ]
+      },
+      "expected_formula": "21/2 + (78/5) A^2 + 6 A^4 + (4/7) A^6",
+      "leading_A6_coefficient": 0.5714285714285714,
+      "pairing_coefficients": {}
+    },
+    "source": {
+      "past_amplification": 919.8715735886846,
+      "past_frozen_ratio": 0.0009958485016462108,
+      "past_joint_exponent_reward": 0.0024099533739838307,
+      "terminal_joint_ratio": 3.6642109130609364
+    },
+    "symbol_coercivity": 0.1083645305871147
+  },
+  "generated_at_utc": "2026-07-21T16:02:55.669460+00:00",
+  "git_commit": "24f3e84e55d581d84613a924270c9f9f31d1b77e",
+  "manifest": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_joint_source_potential_reduction_manifest.json",
+  "manifest_sha256": "51893ef44efaef44ab8e89c887c4f641685be342882fa8c5b23c535ef85fd23b",
+  "method": [
+    "alias-free FFT quadrature",
+    "Gauss-Hermite completed measure",
+    "independent Fourier-support audit"
+  ],
+  "platform": "Windows-11-10.0.26200-SP0",
+  "schema": "tect/a13-classii-joint-source-potential-reduction-independent-result/1.0",
+  "script_version": "1.0.1",
+  "summary": {
+    "failed": 0,
+    "passed": 36,
+    "total": 36
+  }
+}

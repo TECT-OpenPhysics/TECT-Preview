@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Classify unreconstructible A13 v1.0 joint-source runs as superseded provenance] - 2026-07-22
+
+Final evidence-lineage audit found that the three 2026-07-21 joint-source run JSONs pin the original v1.0 source and PDF hashes, while the currently named v1.0 source is a 312-byte supersession pointer and the current PDF hash also differs. The old run outputs remain useful development provenance but are not reconstructible from those current names and are therefore removed from the current Evidence list and explicitly classified as superseded, non-current provenance in the claim card and status note. The hash-pinned v1.1 note, manifest, and 2026-07-22 primary 54/54, independent 47/47, integrated 158/158 runs remain the sole current joint-source package. No mathematical result or tier changes.
+
+## [Repair A13 v1.1 and close the direct nonfrozen Ramer route negatively] - 2026-07-22
+
+The v1.1 adversarial repair corrects the factor-four Cameron-Martin allocation: the exponent cost is 0.044555890186929 with margin 0.103944109813071, and the separate unexponentiated margin is 0.09449464528461002. It proves that the proposed one-use estimate is exactly equivalent to the still-open q=10/9 Nelson moment, so Boue-Dupuis, entropy, Follmer, or HJB recasting cannot serve as an independent proof. A scoped scalar loop refutes coefficient-blind endpoint-only timewise square/Young control. The nonfrozen decomposition 2V=delta_gamma b and Db=T_X+K_X has cutoff-uniform Schatten-two bounds but nonzero exact Class-II coefficient curl. With the corrected direct Ramer coefficient t=q/2=5/9, two independent production 30-real-mode implementations find a determinant sign change near amplitude 3.49230586, while the direct Ramer square costs 0.14136616176932618, above both 0.135 and 0.13. This refutes only the one-shot global u=(5/9)b Ramer architecture, not exact flow, triangular/Follmer, alternative invertible transport, or direct constructive estimates. Primary 54/54, non-importing independent 47/47, and integrated 158/158 pass; the ten-page PDF passes form, zero-overfull, and visual QA. A13 remains T4 and A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE remains the sole canonical gate; no Nelson theorem or interacting measure is claimed.
+
+## [A13 joint source-potential gate reduced to one-use full-action control] - 2026-07-21
+
+Completed the exact conditional Gaussian reduction and two nonvacuous independent principal-symbol source-doubling checks. The registered carrier has an asymptotic factor-four joint source, which closes coefficient-one conditioning and the precisely scoped bounded/cutoff-summable finite-bank local Bellman class negatively. The 64/9 mixed Hardy lemma and one-shell Cameron-Martin/sextic crossover leave A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE as the sole positive gate. Primary 35/35, independent 28/28, integrated 105/105, PDF form/visual QA PASS. A13 remains T4 REDUCED-NOT-CLOSED; no Nelson theorem or interacting measure is claimed.
+
 ## [Complete A13 gate-record synchronization and register R-058] - 2026-07-21
 
 Synchronized the stale A12 successor metadata after the A13 countercertificate without changing the A12 theorem, tier, or evidence. A12 now has no open gate; the constructive successor is the joint source-potential redesign owned by A13. Registered the reusable exact phase-null and relative-phase source-budget result as R-058. Replaced the A13 proof-note footer with the complete standard result matrix, rebuilt the six-page PDF with zero overfull boxes, visually checked the footer, refreshed all hashes, and reconfirmed primary 30/30, independent 18/18, and integrated 77/77.
