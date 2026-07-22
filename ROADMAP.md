@@ -110,7 +110,15 @@ timewise Young enclosure and the direct nonfrozen one-shot Ramer map at
 determinant sign change near amplitude `3.49230586`. The sole canonical
 objective remains `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, which must
 spend Cameron--Martin energy once and retain a signed global cancellation.
-No unique successor proof method is claimed.
+The translation-model reduction now proves the flexible sufficient field
+range `epsilon_6<gamma/6`, the exact finite-cutoff translation and Cartan
+identities, and deterministic-shift expectation positivity.  It also shows
+that A7's contracted `L^2` composite does not supply the universal translated
+model: the selected subordinate gate is
+`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`, with at least
+the endpoint `L^3` model-norm moment and no new interaction counterterm.
+Only after that lift may a coupled centered-`Q`/current/curvature stochastic
+form bound be attempted.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -196,7 +204,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-21)
+## Current priority view (refreshed 2026-07-22)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -208,12 +216,16 @@ preserved in git/changelog rather than treated as current gates.
    coefficient-one and precisely scoped finite-bank local Bellman routes.
    v1.1 also excludes coefficient-blind endpoint-only timewise Young and the
    direct nonfrozen one-shot Ramer map; it does not exclude all transports.
-   Prove the cutoff-uniform full-action controlled-shell inequality with
-   `epsilon_6<0.135` and `epsilon_v<1/(2p)`, retain the A9 cancellation, spend
-   Cameron--Martin energy once, preserve a signed global cancellation, and
-   generate no new interaction counterterm. A triangular/flow transport or
-   direct constructive estimate is the selected research direction, not a
-   uniquely proved antecedent.
+   The flexible potential lemma enlarges the sufficient field range from the
+   conservative `epsilon_6<0.135` to `epsilon_6<gamma/6=0.27`; the current
+   stress candidate is `epsilon_6=0.15`, `delta=0.06`,
+   `epsilon_v=0.45`, with final sextic margin `0.06`. First prove
+   `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`: construct the
+   universal centered derivative-square tensor and its coefficient jets with
+   `L^3`-level moments, Cameron--Martin translation continuity, and no new
+   interaction counterterm. Then prove a strict-past signed conditional
+   reconstruction that keeps the positive square, centered `Q`, current, and
+   Cartan curvature coupled. Do not use termwise paraproduct Young absorption.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

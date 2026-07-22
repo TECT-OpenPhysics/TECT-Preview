@@ -372,7 +372,11 @@ bound or interacting measure is claimed.
 renormalised Class-II action,
 `E V_J^ren(X+h(v)) >= -epsilon_6 E||X+h(v)||_6^6
 -epsilon_v E sum_j||v_j||_2^2-C`, with
-`epsilon_6<gamma/12=0.135` and `epsilon_v<1/(2p)`.  The proof must retain the
+`epsilon_6<gamma/6=0.27` and `epsilon_v<1/(2p)`.  The flexible production
+potential inequality
+`U(r)>=(gamma/6-delta)r^3-|lambda|^3/(432 delta^2)` permits this range for
+any positive `delta<gamma/6-epsilon_6`; the older `gamma/12` condition was a
+conservative equal split.  The proof must retain the
 A9 Hilbert--Schmidt cancellation for Gaussian fluctuations, spend the
 Cameron--Martin control energy only once across all shells, and show that no
 new interaction counterterm is generated.  A shell-by-shell sum of the A13
@@ -380,9 +384,12 @@ one-shell estimate is forbidden because its `H_A(x)` term repeatedly pays
 Gaussian past energy, whose expectation grows with the cutoff by A11.
 
 **Status:** OPEN (reviewed 2026-07-22), SOLE CANONICAL OBJECTIVE AFTER THE
-ARCHITECTURE NOGOS.  At the explicit candidate
-`epsilon_6=0.13`, `epsilon_v=0.45`, the theorem is exactly equivalent to
-`sup_J E exp[-(10/9)(V_J^ren+0.13||phi||_6^6)]<infinity`; restating
+ARCHITECTURE NOGOS.  The translation-model reduction proves the exact
+finite-cutoff translation and Cartan identities and deterministic-shift
+expectation positivity.  It admits the explicit candidate
+`epsilon_6=0.15`, `delta=0.06`, `epsilon_v=0.45`, leaving sextic margin
+`0.06`; the theorem is exactly equivalent to
+`sup_J E exp[-(10/9)(V_J^ren+0.15||phi||_6^6)]<infinity`.  Restating
 Boue--Dupuis, entropy, Follmer, or HJB is therefore circular.  The production
 nonfrozen derivative has a genuine coefficient curl.  With the correct Ramer
 coefficient `t=(10/9)/2=5/9`, two independent finite-mode routes find a
@@ -394,6 +401,28 @@ genuinely triangular/flow transport or direct constructive estimate.
 Coefficient-one conditioning, the finite-bank Bellman class, repeated past
 energy, endpoint-only timewise Young, resolvent-only repair, and separate
 payment of the Ramer square plus inverse determinant are excluded.
+
+### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
+
+**Statement:** Construct a cutoff-consistent enhanced model for
+`X`, `X circle partial_i X`, the universal tensor
+`Q_i^ab=:partial_i X_a partial_i X_b:`, and the coefficient jets
+`X^c diamond Q_i^ab` and `:X^c X^d: diamond Q_i^ab`, with Cameron--Martin
+translation continuity and every moment needed by the signed reconstruction.
+For `1/3<alpha<1/2` and `kappa>0`, the target regularities are respectively
+`C^alpha`, `C^(2alpha-1)`, `H^(-1-kappa)`,
+`H^(alpha-1-kappa)`, and `H^(2alpha-1-kappa)`.  The exact derivative-pair
+covariance subtraction is the only admitted local counterterm.
+
+**Status:** OPEN SELECTED SUBGATE (2026-07-22) under the sole canonical
+one-use objective.  Testing the universal `Q` against `h^2` requires its
+model norm in `L^(6/(2-kappa))(Omega)`, approaching `L^3` as `kappa` tends
+to zero; A7 states only an `L^2` bound for one `B(X)`-contracted scalar.
+The exact Cartan identity keeps the non-exact `K` curvature antisymmetric.
+After this lift closes, the next step is a strict-past joint conditional
+estimate of centered `Q`, the current, the positive square, and the Cartan
+curvature.  Termwise absolute paraproduct/Young absorption is excluded by
+the critical `H^2` exponent `3/2` and `L^6` exponent `3/2`.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

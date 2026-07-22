@@ -1,0 +1,453 @@
+% =============================================================================
+% Title: Class-II translation identity and translated-current model reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-22; this version issued 2026-07-22
+% Status: scoped T4 exact reduction; umbrella one-use theorem remains open
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Id}{\mathrm I}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{A genuine reduction is closed, but the Nelson theorem is not.}
+For the hash-pinned A1 production coefficients and every finite common-even
+spectral cutoff, this note proves the exact Class-II Cameron--Martin
+translation identity, its Pauli-current frame form, deterministic-shift
+expectation positivity, and a Cartan identity which preserves the
+antisymmetric curvature of the non-exact $K$ current.  It also removes the
+unnecessarily restrictive half-sextic budget: the sufficient one-use range
+is $\epsilon_6<\gamma/6$, not $\epsilon_6<\gamma/12$.
+
+\medskip
+These results do not prove the cutoff-uniform Nelson moment.  The translated
+random-coefficient terms require a larger enhanced model than A7 states, and
+an $L^3$ model-norm moment appears already at the endpoint of the simplest
+Sobolev estimate.  A homogeneous fixture refutes only a cutoff-independent
+deterministic constant remainder; it does not refute an integrable random
+remainder.  A13 therefore remains T4 and the umbrella gate
+\texttt{A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE} remains open.
+}}
+\end{center}
+
+The scope is the fixed $L=16$ torus, three complex components in the six-real
+convention, the A1 production covariance and coefficients, fixed
+$\rho_{\rm floor}=10^{-12}$, common real-even sharp spectral cutoffs, and
+exact covariance-normal subtraction from A7.  All finite-cutoff identities
+hold for arbitrary fields in the cutoff space.  The executable manufactured
+fields are algebraic regression tests, not continuum convergence evidence.
+
+\section*{1. Production definitions}
+
+Write the complex field as a six-real vector $X\in\R^6$.  For the three
+embedded Pauli generators $S_A$, put
+\[
+ \rho=X^TX,\qquad m_A=X^TS_AX,\qquad
+ q_A={m_A\over\rho+\epsilon_\rho},                     \tag{1.1}
+\]
+\[
+ p_A=2S_AX,\qquad v_A=2(S_A-q_A\Id)X.                 \tag{1.2}
+\]
+The production coefficient matrix is
+\[
+ B(X)=\sum_A M_A(X)Q_{\rm II}M_A(X)^T,
+ \quad M_A=[p_A,v_A],\quad
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix}.   \tag{1.3}
+\]
+Here
+\[
+ a=0.004499999999998875,\quad
+ b=0.0018749999999995311,\quad
+ c=0.002343749999999414,                               \tag{1.4}
+\]
+and the eigenvalues of $Q_{\rm II}$ are
+\[
+ 0.00125901150092606,\qquad 0.00558473849907223.        \tag{1.5}
+\]
+Consequently $B(X)\ge0$ for every $X$, including the floor region.
+
+For $Y_i=\partial_iX$ and the exact six-real derivative covariance
+$\Gamma_{J,i}$, A7 defines
+\[
+ V_J^{\rm ren}(X)
+ ={1\over2}\sum_i\int_{\T_L^3}
+ \left\{Y_i^TB(X)Y_i-\operatorname{Tr}
+ [B(X)\Gamma_{J,i}]\right\}\dd x.                    \tag{1.6}
+\]
+The subtraction in (1.6) is regulator dependent through the exact
+$\Gamma_{J,i}$; a leading asymptotic scalar is not substituted for it.
+
+\section*{2. Flexible production-potential coercivity}
+
+The local scalar potential is
+\[
+ U(r)={\lambda\over4}r^2+{\gamma\over6}r^3,\qquad
+ r=|z|^2,\quad \lambda=-0.43,\quad\gamma=1.62.         \tag{2.1}
+\]
+
+\textbf{Lemma 2.1.}  For every $\delta>0$ and every $r\ge0$,
+\[
+ U(r)\ge
+ \left({\gamma\over6}-\delta\right)r^3
+ -{ |\lambda|^3\over432\delta^2}.                    \tag{2.2}
+\]
+
+\emph{Proof.}
+Put $A=|\lambda|/4$.  The minimum of
+$\delta r^3-Ar^2$ occurs at
+\[
+ r_*= {2A\over3\delta}={|\lambda|\over6\delta},       \tag{2.3}
+\]
+and its value is $-|\lambda|^3/(432\delta^2)$.  Adding
+$(\gamma/6-\delta)r^3$ proves (2.2).  Equality holds in the auxiliary
+inequality at (2.3). \hfill$\square$
+
+The production stress choice used in this package is
+\[
+ \epsilon_6=0.15,\qquad \delta=0.06,\qquad
+ {\gamma\over6}-\delta-\epsilon_6=0.06.               \tag{2.4}
+\]
+The constant density and the $L=16$ finite-volume constant are
+\[
+ { |\lambda|^3\over432\delta^2}
+ =0.0511233281893004\ldots,\qquad
+ L^3{ |\lambda|^3\over432\delta^2}
+ =209.401152263374\ldots.                              \tag{2.5}
+\]
+Thus any one-use estimate with field charge
+$\epsilon_6<\gamma/6=0.27$ leaves a coercive sextic after choosing a
+sufficiently small positive $\delta<\gamma/6-\epsilon_6$.  The previous
+$\gamma/12=0.135$ requirement was a convenient equal split, not the sharp
+sufficient range.  This correction is registered as
+\texttt{AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION}.
+
+At $p=1.1$, the retained control candidate is
+\[
+ \epsilon_v=0.45<{1\over2p}=0.454545\ldots.           \tag{2.6}
+\]
+The separated direct Ramer-square carrier charge
+$0.14136616176932618$ now fits below $0.15$.  This does not revive the
+one-shot Ramer map: the v1.1 production determinant crosses zero at the
+correct displacement coefficient $5/9$.  The surviving obstruction is the
+fold, not the old half-sextic comparison.
+
+\section*{3. Exact finite-cutoff translation identity}
+
+Let $h$ belong to the same finite cutoff space and set
+\[
+ H_i=\partial_i h,\qquad B_+=B(X+h),\qquad
+ \Delta B=B_+-B(X).                                   \tag{3.1}
+\]
+
+\textbf{Theorem 3.1.}  At every finite cutoff,
+\[
+\begin{split}
+ V_J^{\rm ren}(X+h)-V_J^{\rm ren}(X)
+={}&{1\over2}\sum_i\int
+ \Delta B:(Y_i\otimes Y_i-\Gamma_{J,i})\,\dd x\\
+&+\sum_i\int H_i^TB_+Y_i\,\dd x
+ +{1\over2}\sum_i\int H_i^TB_+H_i\,\dd x.
+\end{split}                                             \tag{3.2}
+\]
+
+\emph{Proof.}
+Insert $Y_i+H_i$ and $B_+$ into (1.6), subtract the expression at $X$,
+and expand the quadratic form.  Symmetry of $B_+$ combines the two mixed
+terms.  The counterterm changes only by
+$\operatorname{Tr}(\Delta B\Gamma_{J,i})$, because a deterministic
+translation does not change the Gaussian covariance. \hfill$\square$
+
+The final line of (3.2) is nonnegative.  The first two terms are signed and
+must remain coupled.  Bounding them separately discards precisely the
+centered covariance cancellation fixed in A7 and A9.
+
+There is a second exact form.  Put
+\[
+ w_{A,i}=M_A(X)^TY_i,\qquad
+ \Delta w_{A,i}=M_A(X+h)^T(Y_i+H_i)-w_{A,i},
+ \qquad\Delta M_A=M_A(X+h)-M_A(X).                    \tag{3.3}
+\]
+Then
+\[
+\begin{split}
+ \Delta V_J^{\rm ren}
+ =\sum_{A,i}\int\{&w_{A,i}^TQ_{\rm II}\Delta w_{A,i}
+ +\tfrac12\Delta w_{A,i}^TQ_{\rm II}\Delta w_{A,i}\\
+ &-\operatorname{Tr}(Q_{\rm II}M_A^T\Gamma_{J,i}\Delta M_A)
+ -\tfrac12\operatorname{Tr}
+ (Q_{\rm II}\Delta M_A^T\Gamma_{J,i}\Delta M_A)\}\dd x.
+\end{split}                                             \tag{3.4}
+\]
+The $\Delta w$ square is positive, while the last counterterm square is
+negative.  Formulae (3.2) and (3.4) are alternative decompositions of the
+same quantity; their positive squares must not be counted twice.
+
+\section*{4. Deterministic translations are positive in expectation}
+
+For a common real-even regulator,
+\[
+ \E[X(x)\otimes\partial_iX(x)]=0.                     \tag{4.1}
+\]
+Joint Gaussianity therefore makes $X(x)$ and $Y_i(x)$ independent.  If $h$
+is deterministic, $B(X+h)$ and $\Delta B$ depend only on $X$.  Conditioning
+on $X$ in (3.2) gives
+\[
+ \E[\Delta B:(Y_i\otimes Y_i-\Gamma_{J,i})\mid X]=0,
+ \qquad
+ \E[H_i^TB_+Y_i\mid X]=0.                            \tag{4.2}
+\]
+Hence
+\[
+ \E\{V_J^{\rm ren}(X+h)-V_J^{\rm ren}(X)\}
+ ={1\over2}\sum_i\int H_i^T\E[B(X+h)]H_i\,\dd x
+ \ge0.                                                \tag{4.3}
+\]
+The executable checks (4.3) by exact covariance-reproducing sigma points and
+an independent Gauss--Hermite rule.  Equation (4.3) does not apply to an
+adapted random $h(X)$; that dependence is the remaining problem.
+
+\section*{5. Cartan identity for the non-exact current}
+
+For each Pauli generator define the target-space one-form
+\[
+ \omega_A=\dd m_A-q_A\dd\rho,\qquad K_A(X)=X^*\omega_A. \tag{5.1}
+\]
+It is not exact.  Direct differentiation gives
+\[
+ \dd\omega_A={1\over\rho+\epsilon_\rho}
+ \dd\rho\wedge\dd m_A,\qquad
+ \|\dd\omega_A\|_{\rm op}
+ \le {4\rho\over\rho+\epsilon_\rho}\le4.            \tag{5.2}
+\]
+Let $X_t=X+th$.  Cartan's homotopy formula along this straight target-space
+path gives the exact spatial-current translation
+\[
+\begin{split}
+ K_A(X+h)-K_A(X)
+={}&\dd_x\int_0^1\omega_A(X_t)[h]\,\dd t\\
+ &+\int_0^1\dd\omega_A(X_t)
+ [h,\dd_xX_t]\,\dd t.
+\end{split}                                             \tag{5.3}
+\]
+
+\emph{Proof.}
+Differentiate $X_t^*\omega_A$ in $t$.  In coordinates the result is
+$D\omega_A(X_t)[h]\dd_xX_t+\omega_A(X_t)\dd_xh$.
+Add and subtract $D\omega_A(X_t)[\dd_xX_t]h$; the exact derivative becomes
+$\dd_x\{\omega_A(X_t)[h]\}$ and the remainder is
+$\dd\omega_A(X_t)[h,\dd_xX_t]$.  Integrate from zero to one. \hfill$\square$
+
+Formula (5.3) is stronger than a direct termwise Taylor estimate of $B$:
+the rough dependence remains linear in $h\,\dd X$, and the nonzero Class-II
+curl from v1.1 is retained with its signed antisymmetry.
+
+\section*{6. Why a deterministic constant remainder is impossible}
+
+Consider the stronger, pathwise proposal with a cutoff-independent constant
+$C$,
+\[
+ \Delta V_J^{\rm ren}(X;h)
+ \ge-\eta\|h\|_{\cH_C}^2
+     -\epsilon_6\|X+h\|_6^6-C.                       \tag{6.1}
+\]
+At the Gaussian-null point $X=0$, choose a constant active-doublet
+translation $h=t e_1$.  Its currents vanish, so
+\[
+ V_J^{\rm ren}(te_1)=-\cC_J(te_1).                   \tag{6.2}
+\]
+The A7 sharp-cube asymptotic is
+\[
+ {\cC_J(te_1)\over Jt^2L^3}
+ \longrightarrow
+ \delta_{\rm cube}(9a+12b+6c)
+ =0.00124833439336115\ldots.                          \tag{6.3}
+\]
+The Cameron--Martin cost is only $O(t^2)$ with a $J$-independent
+coefficient.  After that coefficient changes sign, minimising
+$-A_Jt^2+\epsilon_6t^6$ yields a deficit proportional to
+$A_J^{3/2}=\Theta(J^{3/2})$.  Thus (6.1) is false.
+
+This is a deliberately narrow no-go.  The point $X=0$ has Gaussian measure
+zero, and a random remainder $R_J(X)$ can be large there while satisfying
+$\sup_J\E R_J(X)<\infty$.  The calculation does not refute the canonical
+expected adapted-control inequality.
+
+\section*{7. The exact translated-model gap}
+
+For the production covariance $C(k)\asymp\langle k\rangle^{-4}$ in three
+dimensions, take any
+\[
+ {1\over3}<\alpha<{1\over2},\qquad\kappa>0.           \tag{7.1}
+\]
+A7 supplies the particular contracted scalar
+$B(X):(\partial X\otimes\partial X-\Gamma)$ in
+$L^2(\Omega;H^{-1-\kappa})$.  It does not state the universal tensor or the
+coefficient jets needed after translation.  The smallest non-circular next
+theorem is
+\[
+ \texttt{A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT}. \tag{7.2}
+\]
+It must construct, consistently across cutoffs and with all required finite
+moments,
+\[
+\begin{array}{c|c}
+\text{model object}&\text{target regularity}\\ \hline
+X&C^\alpha\\
+\mathbb X_i^{ab}=X^a\circ\partial_iX^b&C^{2\alpha-1}\\
+Q_i^{ab}=: \partial_iX_a\partial_iX_b :&H^{-1-\kappa}\\
+X^c\diamond Q_i^{ab}&H^{\alpha-1-\kappa}\\
+:X^cX^d:\diamond Q_i^{ab}&H^{2\alpha-1-\kappa}.
+\end{array}                                             \tag{7.3}
+\]
+The derivative-pair covariance $\Gamma_{J,i}$ is the only local subtraction
+allowed.  Common evenness makes the same-point value--derivative contraction
+zero.  Any new divergent interaction counterterm would be a new obstruction,
+not an admissible silent repair.
+
+The moment requirement is already visible in one deterministic Sobolev
+calculation.  Testing $Q$ against $h^2$ gives
+\[
+ \|h^2\|_{H^{1+\kappa}}
+ \lesssim
+ \|h\|_{H^2}^{\,1+\kappa/2}
+ \|h\|_6^{\,1-\kappa/2}.                              \tag{7.4}
+\]
+Three-factor Young therefore requires the model norm of $Q$ in
+\[
+ L^{\,6/(2-\kappa)}(\Omega),                          \tag{7.5}
+\]
+which tends to $L^3$ as $\kappa\downarrow0$.  A7's stated $L^2$ result does
+not imply (7.5).
+
+There is also a critical signed-current boundary.  Termwise absolute-value
+estimates produce schematically
+\[
+ |\langle\mathbb J,h^2\nabla h\rangle|
+ \lesssim\|\mathbb J\|_{H^{-1/2}}
+ \|h\|_{H^2}^{3/2}\|h\|_6^{3/2}.                    \tag{7.6}
+\]
+Since
+\[
+ {3/2\over2}+{3/2\over6}=1,                           \tag{7.7}
+\]
+Young's inequality leaves no exponent with which to absorb an unbounded
+random $\|\mathbb J\|$.  The positive current square, centered $Q$, and the
+Cartan curvature term must therefore be estimated together.  Generic
+termwise paraproduct absorption is not a valid successor architecture.
+
+\section*{8. Conditional route to the umbrella one-use theorem}
+
+For fixed $\eta,\epsilon_6>0$, define the strongest useful stochastic form
+deficit
+\[
+ R_J^*(X)=\sup_h\left[
+ -\Delta V_J^{\rm ren}(X;h)
+ -\eta\|h\|_{\cH_C}^2
+ -\epsilon_6\|X+h\|_6^6\right]_+.                    \tag{8.1}
+\]
+If the translated model lift and a signed reconstruction theorem prove
+\[
+ \sup_J\E R_J^*(X)<\infty,                            \tag{8.2}
+\]
+then substituting the adapted endpoint shift $h=h(v)$ and using
+$\|h(v)\|_{\cH_C}^2\le\mathcal E(v)$ gives the required one-use estimate.
+The identity $\E V_J^{\rm ren}(X)=0$ supplies the unshifted term.  Combining
+that estimate with Lemma 2.1 yields the $q=10/9$ Nelson moment.
+
+Equation (8.2) may be stronger than necessary.  If the all-$h$ supremum is
+too strong, the honest fallback is the strict-past shell-progressive version
+for triangular adapted shifts.  Merely renaming the original Nelson moment
+as a Bellman value is circular and remains forbidden by v1.1.
+
+\section*{9. Executable audit}
+
+The primary implementation constructs $B$ from the six-real Pauli frames and
+checks (3.2), (3.4), and (5.3).  Its field matrix contains zero,
+homogeneous, band-limited random, exact $q_0$-shell, Class-II relative-phase,
+high-frequency, pure-third, and near-floor cases.  Exact sharp-cube
+covariances reproduce the deterministic-remainder no-go.
+
+The independent implementation does not import the primary module.  It
+computes $J_A$ and $K_A$ directly in complex notation, uses an independently
+implemented Fourier mode-count convolution, checks the endpoint difference
+by path quadrature, and verifies (4.3) with tensor Gauss--Hermite quadrature.
+The integrated verifier pins every source, authority, note, and PDF hash and
+checks the claim, gate, roadmap, result, task, and negative-result records.
+
+The operator command is
+\begin{verbatim}
+python codes/foundations/a13_classii_translation_model_reduction_verify.py
+\end{verbatim}
+
+Expected verdict:
+\begin{verbatim}
+A13-CLASSII-TRANSLATION-MODEL-REDUCTION-INTEGRATED-PASS
+\end{verbatim}
+
+\section*{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED: the old $\gamma/12$ condition is necessary.}
+Lemma 2.1 keeps the quartic absorption parameter independent of the one-use
+field charge.  For every $\epsilon_6<\gamma/6$, a positive
+$\delta<\gamma/6-\epsilon_6$ leaves a sextic margin and only a finite-volume
+constant.
+
+\item \textbf{VALID WITH MITIGATION: fitting the Ramer square below $0.15$
+revives the one-shot map.}  It does not.  The immutable v1.1 finite-mode
+fixture has a zero and sign change of $\det(I+(5/9)Db_J)$; this package
+reclassifies the square comparison but preserves the determinant no-go.
+
+\item \textbf{DISMISSED: the positive final term in (3.2) permits separate
+absolute estimates of the first two terms.}  The frame identity (3.4) shows a
+negative translated-counterterm square of the same order.  Separating the
+terms loses the centered Gaussian cancellation and can manufacture a false
+coercivity statement.
+
+\item \textbf{VALID WITH MITIGATION: deterministic expectation positivity
+proves the adapted case.}  It does not.  Formula (4.2) uses independence of
+$h$ from $X$ and $Y$.  The remaining theorem is explicitly restricted to
+random/adapted translations and requires the new model lift.
+
+\item \textbf{DISMISSED: the homogeneous fixture refutes every random
+remainder.}  It refutes only a cutoff-independent deterministic constant.
+The Gaussian-null evaluation at $X=0$ supplies no lower bound on
+$\E R_J(X)$.
+
+\item \textbf{VALID WITH MITIGATION: A7's $L^2$ composite already contains
+all tensors in (7.3).}  The A7 theorem states one coefficient-contracted
+scalar.  Decontraction and translated coefficient jets are not consequences
+of that statement.  The next claim must construct them and pin the absence of
+new counterterms.
+
+\item \textbf{UPHELD AGAINST TERMWISE METHODS: ordinary paraproduct Young
+estimates close the last gate.}  The endpoint cubic moment in (7.5) and the
+saturated exponents in (7.7) show that such an argument has no random-norm
+absorption slot.  Only a coupled signed reconstruction remains viable.
+\end{enumerate}
+
+\section*{Result footer}
+
+\begin{verbatim}
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Result: A13-CLASSII-TRANSLATION-MODEL-REDUCTION
+Tier: T4 (unchanged)
+Closed: flexible potential coercivity; exact finite-cutoff translation and
+        frame identities; deterministic-shift expectation positivity;
+        Cartan current identity; deterministic-constant remainder no-go;
+        exact translated-model and moment boundary.
+Open: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE.
+Next: A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT, followed by
+      a coupled centered-Q/current/curvature stochastic form bound.
+Honesty: this result does not prove the cutoff-uniform Nelson moment, a
+         random/adapted translation estimate, an interacting measure, floor
+         or regulator removal, infinite volume, phase transition, BCC, T5,
+         T6, or T7.
+\end{verbatim}

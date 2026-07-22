@@ -115,12 +115,14 @@ full-action adapted-control bound of the form
      -\epsilon_v\mathbb E\sum_j\|v_j\|_2^2-C,
 \]
 
-with `epsilon_6<gamma/12=0.135` and
-`epsilon_v<1/(2p)` (`<0.454545...` at `p=1.1`). It must retain the A9
+with `epsilon_6<gamma/6=0.27` and
+`epsilon_v<1/(2p)` (`<0.454545...` at `p=1.1`). The flexible potential
+bound below shows that `gamma/12` was a conservative equal split rather
+than a necessary restriction. It must retain the A9
 Gaussian-fluctuation cancellation, spend Cameron--Martin energy only once
 across all scales, and introduce no new interaction counterterm.
 
-For the explicit candidate `epsilon_6=0.13`, `epsilon_v=0.45`, put
+For the explicit stress candidate `epsilon_6=0.15`, `epsilon_v=0.45`, put
 `G_J=V_J^ren+epsilon_6||phi||_6^6`. The Boue--Dupuis identity gives
 
 \[
@@ -167,14 +169,18 @@ away from zero. At `q=10/9`, the direct Ramer coefficient is correctly
 30-real-mode calculations find a negative real `Db` eigenvalue near
 `-0.147586951` and a determinant sign change near amplitude `3.49230586`,
 with the floor inactive. The separated Ramer-square carrier cost is already
-`(t^2/2)C_rel=0.14136616176932618>0.135>0.13`. Thus the one-shot
-`xi -> xi+t b_J(xi)` proof architecture is refuted, not the Nelson moment.
+`(t^2/2)C_rel=0.14136616176932618`; it fits below the corrected
+`epsilon_6=0.15` stress budget. The determinant sign change, not the old
+half-sextic comparison, refutes the one-shot `xi -> xi+t b_J(xi)` proof
+architecture. The Nelson moment is not refuted.
 
 The sole canonical objective remains
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. No unique antecedent method is
-claimed. A viable continuation must preserve a signed global cancellation,
-for example through a genuinely triangular/flow transport or a direct
-constructive estimate.
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. The selected subordinate
+gate is now
+`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`. A viable
+continuation must first construct the universal centered derivative-square
+tensor and its translated coefficient jets with `L^3`-level moments, then
+preserve a signed global cancellation in the random remainder estimate.
 
 The failed local architecture is registered as
 `NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER`. Coefficient-one local potential
@@ -189,15 +195,82 @@ source-square architecture as
 The direct nonfrozen transform is registered as
 `NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT`.
 
+## Translation-model reduction
+
+For every `delta>0` and `r>=0`, the production scalar potential satisfies
+
+[
+{lambdaover4}r^2+{gammaover6}r^3
+geleft({gammaover6}-deltaight)r^3
+  -{|lambda|^3over432delta^2}.
+]
+
+At `epsilon_6=0.15` and `delta=0.06`, the final sextic margin is
+`0.06` and the finite `L=16` constant is
+`209.40115226337448`. This proves that the sufficient field-charge range is
+`epsilon_6<gamma/6`. The historical `epsilon_6=0.13` candidate remains
+valid; the range correction is
+`AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION`.
+
+For every finite common-even cutoff, let `Y_i=partial_i X`,
+`H_i=partial_i h`, and `B_+=B(X+h)`. The exact finite-cutoff translation
+identity is
+
+[
+egin{split}
+ V_J^{m ren}(X+h)-V_J^{m ren}(X)
+={}&{1over2}sum_iint
+ [B(X+h)-B(X)]:(Y_iotimes Y_i-Gamma_{J,i})\
+ &+sum_iint H_i^TB_+Y_i
+ +{1over2}sum_iint H_i^TB_+H_i.
+end{split}
+]
+
+For deterministic `h`, common evenness makes `X(x)` independent of
+`partial_i X(x)`, and hence
+
+[
+mathbb E{V_J^{m ren}(X+h)-V_J^{m ren}(X)}
+={1over2}sum_iint H_i^Tmathbb E[B(X+h)]H_ige0.
+]
+
+The non-exact `K` current is kept geometric by the exact Cartan formula
+
+[
+egin{split}
+K_A(X+h)-K_A(X)
+={}&d_xint_0^1omega_A(X+th)[h],dt\
+&+int_0^1domega_A(X+th)[h,d_x(X+th)],dt,
+end{split}
+]
+
+where
+`d omega_A=(rho+rho_regularizer)^-1 d rho wedge d m_A` has operator norm at
+most four. A constant active-doublet shift at the Gaussian-null field
+`X=0` forces every cutoff-independent deterministic constant remainder to
+grow on the `J^(3/2)` asymptotic scale. This does not refute an integrable
+random remainder.
+
+A7 states only the particular `B(X)`-contracted scalar composite in
+`L^2(Omega;H^(-1-kappa))`. Translation requires the universal centered
+tensor `Q_i^ab=:partial_i X_a partial_i X_b:`, its `QX` and `QXX`
+coefficient jets, Cameron--Martin translation continuity, and moments beyond
+`L^2`. Testing `Q` against `h^2` requires
+`L^(6/(2-kappa))(Omega)`, approaching `L^3` at the endpoint. The next
+subgate is therefore
+`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`. Only after it
+closes may the positive square, centered `Q`, current, and Cartan curvature
+be estimated jointly in a strict-past random-remainder theorem.
+
 ## Reproduction
 
 ```powershell
-python codes/foundations/a13_classii_joint_source_potential_reduction_verify.py
+python codes/foundations/a13_classii_translation_model_reduction_verify.py
 ```
 
-Expected: primary 54/54, non-importing independent 47/47, and integrated
-aggregate 158/158 assertions pass; the verifier prints
-`A13-CLASSII-JOINT-SOURCE-POTENTIAL-REDUCTION-INTEGRATED-PASS`.
+Expected: primary 29/29, non-importing independent 24/24, and integrated
+aggregate 106/106 assertions pass; the verifier prints
+`A13-CLASSII-TRANSLATION-MODEL-REDUCTION-INTEGRATED-PASS`.
 
 ## Evidence
 
@@ -213,8 +286,18 @@ aggregate 158/158 assertions pass; the verifier prints
 - `runs/2026-07-22-primary-joint-source-potential-reduction-v1.1/result.json`
 - `runs/2026-07-22-independent-joint-source-potential-reduction-v1.1/result.json`
 - `runs/2026-07-22-integrated-joint-source-potential-reduction-v1.1/result.json`
+- `classii_translation_model_reduction_manifest.json`
+- `notes/classii-translation-model-reduction-260722-v1.0.tex.txt`
+- `notes/classii-translation-model-reduction-260722-v1.0.pdf`
+- `../../codes/foundations/a13_classii_translation_model_reduction.py`
+- `../../codes/foundations/a13_classii_translation_model_reduction_independent.py`
+- `../../codes/foundations/a13_classii_translation_model_reduction_verify.py`
+- `runs/2026-07-22-primary-translation-model-reduction/result.json`
+- `runs/2026-07-22-independent-translation-model-reduction/result.json`
+- `runs/2026-07-22-integrated-translation-model-reduction/result.json`
 - `../../negative-results/registry.md#ng-2026-07-21-a13-local-bellman-barrier`
 - `../../negative-results/registry.md#audit-2026-07-22-a13-factor-four-allocation`
+- `../../negative-results/registry.md#audit-2026-07-22-a13-half-sextic-overrestriction`
 - `../../negative-results/registry.md#ng-2026-07-22-a13-timewise-young-carre-du-champ`
 - `../../negative-results/registry.md#ng-2026-07-22-a13-nonfrozen-ramer-one-shot`
 
@@ -223,7 +306,9 @@ the `classii-joint-source-potential-reduction-260721-v1.0` note pair are kept
 only as superseded development provenance.  The v1.0 source filename now
 contains a forward pointer, so those old runs are not hash-reconstructible from
 the current named v1.0 files and must not be cited as current evidence.  The
-v1.1 note, manifest, and `2026-07-22-*-v1.1` runs above are the current package.
+v1.1 note, manifest, and `2026-07-22-*-v1.1` runs above remain the immutable
+joint-source authority. The translation-model v1.0 note, manifest, and three
+2026-07-22 translation-model runs are the current continuation package.
 
 ## Devil's-advocate
 
@@ -252,9 +337,11 @@ v1.1 note, manifest, and `2026-07-22-*-v1.1` runs above are the current package.
 6. **The one-shell Cameron--Martin estimate may simply be summed - UPHELD.**
    That would repeatedly pay Gaussian past energy, which A11 shows grows with
    cutoff. The successor theorem must spend this energy once globally.
-7. **The negative quartic destroys coercivity - DISMISSED.** Exact scalar
-   optimisation absorbs it into the positive sextic plus the finite `L=16`
-   constant `41.3631905705431`.
+7. **The negative quartic destroys coercivity - DISMISSED.** Flexible scalar
+   optimisation absorbs it into an arbitrary positive sextic allocation plus
+   a finite constant. The new stress split gives `epsilon_6=0.15`,
+   `delta=0.06`, margin `0.06`, and `L=16` constant
+   `209.40115226337448`; the old equal split remains a valid special case.
 8. **The finite degree-65536 calculation is a formal interval certificate -
    VALID WITH MITIGATION.** It is explicitly labelled an independently
    reproduced floating calculation with a large margin, and the tier remains
@@ -287,6 +374,26 @@ v1.1 note, manifest, and `2026-07-22-*-v1.1` runs above are the current package.
 15. **Nonfrozen global determinant cancellation is the unique successor -
     UPHELD AS UNPROVED.** The only unique object here is the canonical one-use
     objective. No completeness theorem over proof methods is claimed.
+16. **Deterministic-shift expectation positivity proves the adapted case -
+    UPHELD AS FALSE.** The proof conditions on a shift independent of the
+    Gaussian value and derivative. An adapted shift destroys that
+    independence; the random translation theorem remains open.
+17. **The positive square in the translation identity closes coercivity -
+    UPHELD AS FALSE.** The equivalent Pauli-frame identity contains a negative
+    translated-counterterm square. The signed coefficient and mixed-current
+    terms must remain coupled.
+18. **A7's contracted `L2` composite automatically supplies the translated
+    model - UPHELD AS FALSE.** The universal `Q` tensor and its `QX` and
+    `QXX` jets are not recoverable from one contraction. The simplest
+    Sobolev estimate already requires an endpoint `L3` model-norm moment.
+19. **The homogeneous `X=0` deficit refutes every random remainder -
+    DISMISSED.** It refutes only a cutoff-independent deterministic constant.
+    The field is a Gaussian-null point and gives no lower bound on the
+    expectation of a random remainder.
+20. **Termwise paraproduct Young can close after the model lift - UPHELD AS
+    FALSE FOR THAT ARCHITECTURE.** The current term has `H2` exponent
+    `3/2` and `L6` exponent `3/2`, which saturate Young and leave no slot
+    for an unbounded random model norm. A coupled signed estimate is required.
 
 ## Falsifier
 
@@ -298,18 +405,26 @@ corrected factor-four allocation, exact one-use/Nelson equivalence, scalar
 zero-endpoint loop polynomial, nonfrozen Schatten decomposition, coefficient
 curl, corrected Ramer coefficient, either determinant sign-change route,
 source hashes, PDF form/visual QA, assertion count, or release gate falsifies
-the v1.1 reduction. The original
+the v1.1 reduction. Any failure of the flexible potential equality, exact
+translation or frame identity, deterministic expectation formula, Cartan
+identity, independent current implementation, exact sharp-cube
+deterministic-remainder fixture, translated-model moment arithmetic, source
+hashes, seven-page PDF QA, or 106-assertion aggregate falsifies the
+translation-model continuation. The original
 Fierz, phase-null, commutator, and carrier falsifiers remain in force.
 
 ## No-overclaim
 
 This claim does not prove an exact finite-`K` doubling identity for the full
-modulated carrier, the cutoff-uniform controlled-shell estimate, its
-equivalent `q=10/9` Nelson moment, failure of all nonlinear transports,
-the A11 stabilised theorem or A7 Nelson bound, a full joint log-Laplace bound, an
-interacting measure, absence of new interaction counterterms, floor or
-regulator removal, infinite volume, a phase transition or BCC selection, or
-T5, T6, or T7.
+modulated carrier, a cutoff-uniform estimate for random or adapted
+translations, a uniform translated-model `Lp` bound, the controlled-shell
+estimate or its equivalent `q=10/9` Nelson moment, failure of all nonlinear
+transports, the A11 stabilised theorem or A7 Nelson bound, a full joint
+log-Laplace bound, an interacting measure, absence of new interaction
+counterterms, floor or regulator removal, infinite volume, a phase transition
+or BCC selection, or T5, T6, or T7. Deterministic-shift positivity does not
+extend automatically to adapted shifts, and finite-grid identities are
+algebraic regression tests rather than continuum estimates.
 
 ## History
 
@@ -328,3 +443,11 @@ T5, T6, or T7.
   calculations then refuted the direct one-shot Ramer map at `t=5/9`.
   The umbrella one-use gate remains open, no unique successor method is
   claimed, and the tier remains T4.
+- 2026-07-22: Added the translation-model v1.0 continuation. Proved the
+  flexible `epsilon_6<gamma/6` potential budget, exact finite-cutoff
+  translation/frame and Cartan identities, and deterministic-shift
+  expectation positivity. Refuted only a uniform deterministic constant
+  remainder and reduced the next proof to
+  `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT` with
+  `L3`-level moments and no new counterterm. A13 remains T4 and the umbrella
+  one-use gate remains open.

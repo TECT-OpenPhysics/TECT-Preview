@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Reduce A13 to the translated-current model lift] - 2026-07-22
+
+Closed a scoped T4 translation-model reduction without claiming the Nelson theorem. The flexible production-potential lemma enlarges the sufficient one-use field range from the conservative gamma/12 split to epsilon_6<gamma/6; epsilon_6=0.15, delta=0.06, epsilon_v=0.45 leaves sextic margin 0.06. Exact finite-cutoff translation/frame and Cartan identities and deterministic-shift expectation positivity are proved. A constant active-doublet shift refutes only a cutoff-independent deterministic constant remainder. A7's contracted L2 composite is insufficient; the selected next subgate constructs the universal centered derivative-square tensor and coefficient jets with L3-level moments, translation continuity, and no new counterterm. Primary 29/29, non-importing independent 24/24, integrated 106/106, seven-page PDF form/visual QA PASS. A13 remains T4 and the umbrella one-use theorem remains open.
+
 ## [Classify unreconstructible A13 v1.0 joint-source runs as superseded provenance] - 2026-07-22
 
 Final evidence-lineage audit found that the three 2026-07-21 joint-source run JSONs pin the original v1.0 source and PDF hashes, while the currently named v1.0 source is a 312-byte supersession pointer and the current PDF hash also differs. The old run outputs remain useful development provenance but are not reconstructible from those current names and are therefore removed from the current Evidence list and explicitly classified as superseded, non-current provenance in the claim card and status note. The hash-pinned v1.1 note, manifest, and 2026-07-22 primary 54/54, independent 47/47, integrated 158/158 runs remain the sole current joint-source package. No mathematical result or tier changes.

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-060](#r-060) | Class-II translation identity and translated-current model boundary | Scoped T4 exact reduction: flexible potential coercivity enlarges the sufficient field-charge range to epsilon_6<gamma/6; exact translation, frame, expectation, and Cartan identities isolate the universal L3-level translated model as the next gate |
 | [R-059](#r-059) | Joint Class-II completion and nonfrozen determinant boundary | Scoped T4 reduction: corrected factor-four allocation, exact one-use/Nelson equivalence, mixed Hardy and nonfrozen Schatten-two theorems, exact coefficient curl, and independently executed one-shot Ramer singularity; the cutoff-uniform full-action theorem remains open |
 | [R-058](#r-058) | Exact Class-II phase-null structure and relative-phase source-budget obstruction | Scoped T4 exact/executed no-go: the production matrix has separate local doublet/singlet phase nulls and an output-shell commutator, yet a finite opposite-corner SU(2) witness gives C_rel>0.9>gamma/3 and defeats every standalone deterministic source allocation with p>=1 |
 | [R-057](#r-057) | Sharp-cube scalar-budget obstruction and Class-II gauge-null pivot | EXACT NO-GO within A12 T4: dyadic Riesz boundary modulation forces M_6>=8, Q_6>=8sqrt(3), H_6>=786432 and the coefficient-blind scalar envelope >=786432; the actual source survives through B(X)JX=0 and output-shell localisation |
@@ -78,6 +79,71 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-060"></a>
+### R-060 -- Class-II translation identity and translated-current model boundary
+
+**Result ID.** `A13-CLASSII-TRANSLATION-MODEL-REDUCTION`.
+
+**Statement.** For the hash-pinned A1 fixed-floor production functional and
+every finite common-even spectral cutoff, the scalar production potential
+obeys
+[
+ {lambdaover4}r^2+{gammaover6}r^3
+ ge left({gammaover6}-deltaight)r^3
+ -{|lambda|^3over432delta^2}.
+]
+Consequently the sufficient one-use field range is
+`epsilon_6<gamma/6=0.27`, rather than the conservative equal split
+`gamma/12`.  The stress choice `epsilon_6=0.15`, `delta=0.06` leaves
+sextic margin `0.06` and finite-volume constant
+`209.40115226337448`.
+
+For every finite cutoff, with `Y_i=partial_i X`, `H_i=partial_i h`, and
+`B_plus=B(X+h)`, the renormalised Class-II action satisfies the exact
+translation identity
+[
+egin{split}
+ Delta V_J^{m ren}
+={}&{1over2}sum_iint
+ [B(X+h)-B(X)]:(Y_iotimes Y_i-Gamma_{J,i})\
+ &+sum_iint H_i^TB_+Y_i
+ +{1over2}sum_iint H_i^TB_+H_i.
+end{split}
+]
+Deterministic shifts are nonnegative in expectation.  For the non-exact
+current one-form (omega_A=dm_A-q_A dho), Cartan homotopy gives an exact
+translation formula with
+(domega_A=(ho+epsilon_ho)^{-1}dhowedge dm_A) and operator norm at
+most four.  A constant active-doublet shift at (X=0) refutes only a
+cutoff-independent deterministic constant remainder; it does not refute an
+integrable random remainder.
+
+**Where proved.**
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, proof unit
+`classii-translation-model-reduction-260722-v1.0`.  The six-real
+Pauli-frame primary route gives 29/29 PASS, the non-importing direct-current
+and independent mode-count route gives 24/24 PASS, and the one-command
+integrated verifier gives 106/106 PASS.  The seven-page PDF passes form,
+zero-overfull, and full-page visual QA.
+
+**Reuse.** Derivative Gibbs constructions with covariance-normal quadratic
+currents and Cameron--Martin translations.  The flexible sextic lemma and
+Cartan current identity are model independent.  The exact regularity audit
+shows why a single coefficient-contracted `L2` composite is insufficient:
+the next theorem must construct the universal centered derivative-square
+tensor and its coefficient jets with at least the endpoint `L3` model-norm
+moment, translation continuity, and no new divergent interaction
+counterterm.
+
+**Tier / publication target.** Scoped T4 exact analytic/executed reduction;
+no tier promotion.  The sole canonical objective remains
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`; its selected subordinate gate
+is `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`.  The random
+adapted form bound, the Nelson moment, an interacting measure, floor or
+regulator removal, T5, T6, and T7 remain open.
+
+---
 
 <a id="r-059"></a>
 ### R-059 -- joint Class-II completion and nonfrozen determinant boundary

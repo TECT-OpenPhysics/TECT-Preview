@@ -37,6 +37,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET](#ng-2026-07-21-a13-relative-phase-source-budget) | A13 exact-B standalone source/sextic absorption | opposite-corner SU(2) relative phase exceeds gamma/3 even with output shell and resolvent |
 | [NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER](#ng-2026-07-21-a13-local-bellman-barrier) | A13 local joint source-potential architecture | asymptotic factor-four carrier defeats coefficient-one conditioning and the precisely scoped finite-bank local Bellman class |
 | [AUDIT-2026-07-22-A13-FACTOR-FOUR-ALLOCATION](#audit-2026-07-22-a13-factor-four-allocation) | A13 v1.0 one-shell factor-four diagnostic | source multiplication by four was not applied to the Cameron--Martin Young allocation |
+| [AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION](#audit-2026-07-22-a13-half-sextic-overrestriction) | A13 v1.1 one-use field budget | gamma/12 was a conservative equal split; flexible quartic absorption gives the sufficient range epsilon_6<gamma/6 |
 | [NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP](#ng-2026-07-22-a13-timewise-young-carre-du-champ) | A13 continuous-time source-square Young route | a zero-endpoint loop has sixth-order bracket growth but exact signed-action cancellation |
 | [NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT](#ng-2026-07-22-a13-nonfrozen-ramer-one-shot) | A13 direct nonfrozen Ramer map | the production Jacobian determinant changes sign at finite field amplitude |
 
@@ -368,6 +369,35 @@ argument retaining signed tensor cancellation, a global determinant, or a
 nonlinear Gaussian-transport argument. The canonical one-use objective stays
 open; no unique successor method is claimed.
 
+<a id="audit-2026-07-22-a13-half-sextic-overrestriction"></a>
+### AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION -- flexible potential budget
+
+**Failure mode:** The A13 v1.1 one-use target treated
+`epsilon_6<gamma/12=0.135` as the required field-charge range.  That value
+came from assigning exactly half of the production sextic to absorb the
+negative quartic; it was a convenient split, not a necessary restriction.
+
+**Evidence:** For every `delta>0` and `r>=0`,
+[
+ {lambdaover4}r^2+{gammaover6}r^3
+ geleft({gammaover6}-deltaight)r^3
+ -{|lambda|^3over432delta^2}.
+]
+The auxiliary inequality is sharp at
+`r=|lambda|/(6 delta)`.  With the hash-pinned production values,
+`epsilon_6=0.15` and `delta=0.06` leave final sextic margin `0.06`;
+the finite `L=16` constant is `209.40115226337448`.  Primary and
+non-importing independent implementations reproduce the equality, margins,
+and constants.
+
+**Consequence:** The sufficient range is `epsilon_6<gamma/6=0.27`.
+The old `epsilon_6=0.13` candidate remains valid, but it is no longer the
+largest registered stress point.  The direct Ramer-square charge
+`0.14136616176932618` fits below the new `0.15` candidate; the one-shot
+Ramer route nevertheless remains false because its production Jacobian
+determinant crosses zero.  This is a budget correction, not a Nelson theorem
+or tier promotion.
+
 <a id="ng-2026-07-22-a13-nonfrozen-ramer-one-shot"></a>
 ### NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT -- direct production Ramer map becomes singular
 
@@ -388,8 +418,10 @@ route at 128 points give the unit-amplitude minimum real eigenvalues
 below `1.5e-10`; the density exceeds `376`, so the `1e-12` floor is inactive.
 This is converged floating evidence, not an interval certificate. Separately,
 the direct Ramer-square carrier charge is
-`(t^2/2) C_rel=0.14136616176932618>0.135>0.13` before any inverse-determinant
-cost.
+`(t^2/2) C_rel=0.14136616176932618`.  It exceeded the conservative v1.1
+`0.135` split but fits the corrected `epsilon_6=0.15` stress budget; the
+determinant singularity, rather than that separated square comparison, is the
+surviving no-go.
 
 **Consequence:** A global orientation-preserving one-shot map `xi+t b_J(xi)`
 and any proof requiring its determinant to stay positive are invalid. This
@@ -398,7 +430,8 @@ or Follmer transport, a different globally invertible map, or a direct
 constructive proof. The unique canonical objective remains
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`; the next method must preserve a
 signed global cancellation rather than bound the inverse determinant and
-Ramer square separately.
+Ramer square separately.  The selected subordinate proof gate is
+`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`.
 
 <a id="ng-2026-legacy-convention"></a>
 ### NG-2026-legacy-convention — old $r=K(0)$ no-condensation convention

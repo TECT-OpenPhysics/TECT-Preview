@@ -1,0 +1,173 @@
+{
+  "schema": "tect/a13-classii-translation-model-reduction/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "result_id": "A13-CLASSII-TRANSLATION-MODEL-REDUCTION",
+  "frozen_on": "2026-07-22",
+  "status": "T4 EXACT-TRANSLATION-AND-MODEL-BOUNDARY-CLOSED; ONE-USE OPEN",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a7_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    "a6_k_manifest": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "a13_v1_1_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_joint_source_potential_reduction_manifest.json",
+      "sha256": "fcfc084bd1527b25c6f9e4184f2f168a45e4ab794989b3ad168d4c8f4169aff4"
+    },
+    "a13_v1_1_integrated_result": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-integrated-joint-source-potential-reduction-v1.1/result.json",
+      "sha256": "8cadcebae6fb916c3527de29bdcc5ab96efb6b3c95fe5ddc07b4d28f447c7033"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_translation_model_reduction.py",
+      "sha256": "1c19bbfb022d4182f5033e3410fe953e825d440ce59a012e7f9f3aefadcb53e6",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_translation_model_reduction_independent.py",
+      "sha256": "d57ec13a679c216ef82323295a51ce92486e6aced3bf67d33e526fab8dccc42d",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_translation_model_reduction_verify.py",
+      "sha256": "3a115ff0877205da02982f975d24282f11e9bc33ae515b73be95000106024371",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-translation-model-reduction-260722-v1.0.tex.txt",
+      "sha256": "42038ad81156ea73435f66fae0f40901aa18e35b36a2498c52dd3c93fabd03ee",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-translation-model-reduction-260722-v1.0.pdf",
+    "sha256": "5c14a32515f0930e0cf2f958d46b160fc55ed8b1bc6a79c6d8f0528886c4d3f6",
+    "version": "1.0",
+    "pages": 7,
+    "size_bytes": 386714,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "PASS"
+  },
+  "scope": "Fixed L=16 torus; three complex components in the six-real convention; hash-pinned A1 production symbol and Class-II coefficients; fixed rho_regularizer=1e-12; common real-even finite sharp spectral cutoffs; exact A7 derivative covariance subtraction; and finite-cutoff Cameron-Martin translations. The potential bound, translation identities, deterministic-shift expectation formula, Cartan identity, and model-moment arithmetic are analytic. Manufactured finite-grid and sharp-cube fixtures are regression/falsifier evidence, not continuum convergence or an interacting-measure theorem.",
+  "definitions": {
+    "renormalised_energy": "V_J^ren(X)=1/2 sum_i integral [partial_i X^T B(X) partial_i X-Tr(B(X) Gamma_J,i)].",
+    "translated_field": "X_plus=X+h, Y_i=partial_i X, H_i=partial_i h, B_plus=B(X+h), Delta_B=B_plus-B(X).",
+    "current_one_form": "omega_A=dm_A-q_A drho with q_A=m_A/(rho+rho_regularizer), and K_A(X)=X^*omega_A.",
+    "strong_random_remainder": "R_J^*(X)=sup_h[-Delta V_J^ren(X;h)-eta||h||_HC^2-epsilon_6||X+h||_6^6]_+."
+  },
+  "theorem": {
+    "flexible_potential": "For every delta>0 and r>=0, lambda r^2/4+gamma r^3/6 >= (gamma/6-delta)r^3-|lambda|^3/(432 delta^2), with equality in the auxiliary cubic-quadratic inequality at r=|lambda|/(6 delta).",
+    "one_use_field_range": "The sufficient field-charge range is epsilon_6<gamma/6. The previous epsilon_6<gamma/12 range was conservative, not necessary.",
+    "translation_identity": "Delta V_J^ren=1/2 sum_i int Delta_B:(Y_i tensor Y_i-Gamma_J,i)+sum_i int H_i^T B_plus Y_i+1/2 sum_i int H_i^T B_plus H_i.",
+    "frame_identity": "For M_A=[p_A,v_A], w=M_A(X)^T Y, and Delta_w=M_A(X+h)^T(Y+H)-w, Delta V is the exact sum of w Q Delta_w, the positive Delta_w square, the signed linear counterterm, and the negative Delta_M counterterm square.",
+    "deterministic_expectation": "For deterministic h and a common real-even regulator, X(x) is independent of partial_i X(x), so E Delta V_J^ren=1/2 sum_i int H_i^T E[B(X+h)]H_i>=0.",
+    "cartan_translation": "K_A(X+h)-K_A(X)=d_x int_0^1 omega_A(X+t h)[h]dt+int_0^1 d omega_A(X+t h)[h,d_x(X+t h)]dt, with d omega_A=(rho+rho_regularizer)^-1 d rho wedge d m_A and operator norm at most four.",
+    "deterministic_constant_nogo": "At X=0 and a constant active-doublet shift, the exact covariance counterterm forces every cutoff-independent deterministic constant remainder to grow at least on the J^(3/2) scale. This does not refute a cutoff-uniform expected random remainder.",
+    "model_boundary": "A7 states one B(X)-contracted L2 composite. The translation problem additionally requires a universal centered derivative-square tensor, translated coefficient jets, p>2 model moments, Cameron-Martin translation continuity, and a signed reconstruction retaining the positive square."
+  },
+  "production_candidate": {
+    "reference_p": 1.1,
+    "epsilon_6": 0.15,
+    "quartic_absorption_delta": 0.06,
+    "epsilon_v": 0.45,
+    "classification": "Declared analysis inputs. All margins and constants are computed from these inputs and the hash-pinned A1 parameters."
+  },
+  "translated_model": {
+    "name": "A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+    "alpha": 0.4,
+    "kappa": 0.1,
+    "required_objects": [
+      "X in C^alpha",
+      "area X^a circle partial_i X^b in C^(2 alpha-1)",
+      "universal Q_i^ab=:partial_i X_a partial_i X_b: in H^(-1-kappa)",
+      "X^c diamond Q_i^ab in H^(alpha-1-kappa)",
+      ":X^c X^d: diamond Q_i^ab in H^(2 alpha-1-kappa)"
+    ],
+    "moment_boundary": "Testing Q against h^2 requires Q model norm in L^(6/(2-kappa))(Omega), tending to L3 as kappa goes to zero; A7's stated L2 bound is insufficient.",
+    "counterterm_rule": "The exact derivative-pair covariance Gamma_J,i is the only admitted local subtraction. Common evenness makes the value-derivative contraction zero. Any additional divergent interaction counterterm is a new obstruction."
+  },
+  "audit": {
+    "grid": 7,
+    "translation_seed": 1307221,
+    "field_seed": 1307222,
+    "expectation_seed": 1307223,
+    "expectation_x_samples": 24,
+    "cartan_order": 48,
+    "potential_tolerance": 1e-12,
+    "translation_tolerance": 5e-10,
+    "cartan_tolerance": 2e-9,
+    "expectation_tolerance": 2e-13,
+    "homogeneous_cutoffs": [
+      128,
+      206,
+      256,
+      512,
+      1024
+    ],
+    "homogeneous_growth_start": 256,
+    "homogeneous_density_max": 10000.0,
+    "homogeneous_growth_slope_lower": 1.1
+  },
+  "independent_audit": {
+    "grid": 7,
+    "translation_seed": 1307221,
+    "independent_field_seed": 1317222,
+    "expectation_seed": 1307223,
+    "independent_hermite_order": 3,
+    "path_order": 48,
+    "path_difference_step": 1e-6,
+    "potential_tolerance": 1e-12,
+    "translation_tolerance": 5e-10,
+    "path_tolerance": 2e-7,
+    "expectation_tolerance": 2e-12,
+    "independent_homogeneous_cutoffs": [
+      206,
+      256,
+      512,
+      1024
+    ],
+    "homogeneous_growth_slope_lower": 1.1
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-12,
+    "homogeneous_relative_tolerance": 1e-5
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-primary-translation-model-reduction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-independent-translation-model-reduction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-integrated-translation-model-reduction/result.json",
+    "primary_assertions": 29,
+    "independent_assertions": 24,
+    "integrated_own_assertions": 53,
+    "expected_total_assertions": 106,
+    "command": "python codes/foundations/a13_classii_translation_model_reduction_verify.py"
+  },
+  "consequence": {
+    "result_ledger_id": "R-060",
+    "tier_after": "T4",
+    "disposition": "EXACT-REDUCTION-CLOSED; STOCHASTIC-COERCIVITY-OPEN",
+    "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "next_subgate": "A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+    "after_model_lift": "Prove a strict-past signed conditional reconstruction for centered Q plus current plus Cartan curvature, then prove a cutoff-uniform expected random-remainder form bound.",
+    "audit_record": "AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION"
+  },
+  "honesty_boundary": "This scoped T4 result proves the flexible scalar potential coercivity bound, the exact finite-cutoff Class-II translation and frame identities, deterministic-shift expectation positivity, the Cartan current identity, a deterministic-constant remainder no-go, and an exact reduction to a translated-current model lift. It does not prove a cutoff-uniform estimate for random or adapted shifts, a uniform translated-model Lp bound, the q=10/9 Nelson moment, the A7 Nelson theorem, the A11 stabilised log-Laplace theorem, an interacting full three-component measure, or absence of additional interaction counterterms in the continuum limit. Deterministic-shift positivity does not extend automatically to adapted shifts, and finite-cutoff manufactured identities are algebraic regression tests rather than continuum estimates. Floor or regulator removal, infinite volume, phase transition, BCC selection, and T5, T6, or T7 remain outside the result.",
+  "references": [
+    "https://arxiv.org/abs/1210.2684",
+    "https://arxiv.org/abs/1612.08138",
+    "https://arxiv.org/abs/1805.10814",
+    "https://arxiv.org/abs/1809.03570",
+    "https://arxiv.org/abs/2301.10081"
+  ]
+}
