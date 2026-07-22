@@ -100,16 +100,23 @@ finite-cutoff Wiener forests and proves the net parity cancellation under the
 entrywise-even A1 covariance. It also retains the finite tensor
 `Sigma_Lambda Q_Lambda`, so the result cannot be misread as permission to
 drop every lower-chaos term. Primary, non-importing independent, and
-integrated verification pass 82/82 assertions in aggregate. The current child
-is now
+integrated verification pass 82/82 assertions in aggregate. The balanced
+continuation now also closes
 `A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
-The A13 tier remains T4. The executable exact-cover audit is frozen at
+Its high-against-root `P3/P4` jets have the proved `-2+epsilon` and
+`-3+epsilon` variance bounds, converge across coupled cutoffs in every finite
+moment at the target Sobolev orders, and reconstruct the full rational
+translated coefficient in the exact grouped A7 scheme with every lower chaos
+and finite `Sigma Q` retained. The current child is
+`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`. The A13 tier remains
+T4. The executable exact-cover audit is frozen at
 `reviews/2026-07-22-sector-a-theorem-family-taxonomy-audit.json` and reports
 21 cards, five families, and zero unclassified cards.
 
 ## Honesty boundary
 
-This taxonomy improves reviewability and prevents claim-number inflation. It
-does not change a tier, close the coefficient-jet model, prove the Nelson
-moment, construct the interacting Class-II measure, remove a regulator, or
-extend the published A5 conditional-composition theorem.
+This taxonomy improves reviewability and prevents claim-number inflation. The
+coefficient-jet model is now closed only at scoped T4 in the declared grouped
+A7 scheme. It does not prove the adapted signed form bound, Nelson moment,
+interacting Class-II measure, regulator removal, or an extension of the
+published A5 conditional-composition theorem.

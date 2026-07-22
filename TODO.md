@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - The finite-cutoff coefficient-jet forest child is closed at scoped T4: exact 2, 4+2, 5+2, and 3+0 contraction classification; complete non-aliased sharp-cube reconstruction; entrywise-even six-real parity cancellation; finite Sigma_Lambda Q_Lambda retained. Primary 34/34, independent 31/31, integrated 17/17, aggregate 82/82 pass. This does not close continuum coefficient jets or the one-use theorem. Current child: A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION. Prove coupled-cutoff P3/P4 convergence and exact A7 rational-B reconstruction before the signed strict-past one-use estimate. No A14 claim.
+  - A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION is closed at scoped T4. High-against-root-shell P3/P4 variances satisfy <n>^(-2+epsilon) and <n>^(-3+epsilon); coupled-cutoff convergence holds in every finite probability moment at H^(alpha-1-kappa) and H^(2alpha-1-kappa). The exact second-order full-rational chart retains P1/P2/P0 corrections and finite Sigma_Lambda Q_Lambda in the A7 covariance-normal scheme. Primary 35/35 and non-importing independent 26/26 pass; integrated package and six-page PDF are hash-pinned. Current child: A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND. Prove the adapted strict-past signed Q/current/positive-square/Cartan-curvature form estimate without termwise Young absorption. No A14 claim.
   - _updated 2026-07-22_
 
 ## Next up

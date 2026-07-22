@@ -416,17 +416,16 @@ A7 derivative-covariance normalisation; every lower-chaos model correction
 must be displayed and either cancelled on reconstruction or registered as a
 new interaction counterterm.
 
-**Status:** OPEN (universal-Q child CLOSED) (2026-07-22) under the sole
-canonical one-use objective.  The universal `Q` and deterministic `H2`
-translation half is closed by the next subgate in every finite probability
-moment.  The coefficient-jet half remains open because full `XQ`/`XXQ` retain
-the `|n|^-1` low--high spectrum.  A cone-localized raw nested subdiagram has a
-fixed negative coefficient with magnitude accumulating like `c log Lambda`,
-but noncancellation of the total symmetric Littlewood--Paley tree is not
-proved.  After the coefficient classification closes, the next step is a
-strict-past joint conditional estimate of centered `Q`, current, positive
-square, and Cartan curvature.  Termwise absolute paraproduct/Young absorption
-remains excluded.
+**Status:** CLOSED (2026-07-22) at scoped T4 model-lift grade.  The universal
+`Q` and deterministic `H2` translation half is closed in every finite
+probability moment.  The balanced continuation replaces the impossible full
+`XQ`/`XXQ` jets by high-against-root-shell homogeneous chaoses, proves their
+continuum limits, and reconstructs the full rational coefficient in the exact
+A7 scheme.  The finite `Sigma Q` conversion and every grouped lower chaos are
+retained.  This closes the enhanced deterministic Cameron--Martin model, not
+an adapted random-shift estimate.  The current child is the strict-past signed
+form bound below; termwise absolute paraproduct/Young absorption remains
+excluded.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
 
@@ -461,8 +460,8 @@ with either cancellation of the total LP-weighted logarithmic and finite
 lower-chaos terms or registration of every survivor as an interaction
 counterterm.
 
-**Status:** OPEN SELECTED SUBGATE; FINITE-CUTOFF FOREST CHILD CLOSED
-(2026-07-22).  Literal full products miss the target `L2` model regularities.
+**Status:** CLOSED (2026-07-22) at scoped T4 analytic/exact/executed grade.
+Literal full products miss the target `L2` model regularities.
 For a cone-localized piece of the raw nested tree `Pi(X,Pi(X,Q))`, the scalar
 coefficient is negative and its magnitude is bounded below per dyadic scale;
 this is `NG-2026-07-22-A13-RAW-DIAMOND-JET` and does not prove the total-tree
@@ -473,9 +472,10 @@ A1 covariance, the full mixed matrix `E[X tensor partial_i X]` vanishes, so
 complete-sector value-derivative and double-cross corrections cancel.  Raw
 `XXQ` retains the finite tensor `Sigma_Lambda Q_Lambda`; it is not a new
 divergent interaction counterterm, but it must remain in the A7 comparison.
-This child theorem does not make an individual resonant jet convergent and
-does not close the selected subgate.  The remaining child is registered
-below.
+The balanced child below completes the classification: its top `P3/P4` jets
+converge, while the complete second-order chart retains and groups every
+finite-cutoff lower chaos in the exact A7 identity.  Arbitrary localized
+correction channels are not promoted to separate continuum objects.
 
 ### **A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION**
 
@@ -489,14 +489,37 @@ the finite `Sigma Q` Wick-conversion term and every compensating lower-chaos
 correction.  The reconstruction must be independent of an intermediate
 Galerkin projection and must state the admitted regulator class.
 
+**Status:** CLOSED (2026-07-22) at scoped T4 analytic/exact/executed grade.
+The high-against-root-shell definitions satisfy the proved Fourier-variance
+bounds `<n>^(-2+epsilon)` and `<n>^(-3+epsilon)`.  Coupled-cutoff dominated
+convergence plus fixed-chaos Hilbert hypercontractivity gives every finite
+probability moment at the stated Sobolev targets.  For
+`1/3<alpha<1/2`, `0<kappa<3 alpha-1`, the exact order-two dyadic chart
+reconstructs `B(X):Q` and `Delta B:Q` for deterministic `H2` translations in
+the same-regulator A7 covariance-normal scheme.  Both complete
+parenthesisations agree without an intermediate projection.  The chart keeps
+the `P1`, four-cross `P2`, two-double-cross `P0`, recursive three-cross, and
+finite `Sigma_Lambda Q_Lambda` terms.  Primary 35/35 and non-importing
+independent 26/26 audits pass; the integrated package and six-page PDF are
+hash-pinned.  No adapted shift, one-use estimate, Nelson bound, interacting
+measure, or tier promotion follows.
+
+### **A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND**
+
+**Statement:** In the strict sharp-cube filtration, condition each current
+shell on its strict past and prove a cutoff-uniform signed form estimate for
+the translated Class-II increment.  The reconstruction must keep the centered
+`Q` tensor, rational current, positive translated-frame square, and Cartan
+curvature term coupled.  It may use the closed universal-Q and balanced A7
+model, but may not take termwise absolute values and repay the same past
+energy at every shell.  The output must control the adapted random shift at
+the one-use charge without assuming the desired Nelson moment.
+
 **Status:** OPEN CURRENT CHILD (2026-07-22), proof-ordered after the closed
-finite forest classification and before any adapted signed-form estimate.
-Expected Fourier variance targets are `<n>^(-2+epsilon)` for the third-chaos
-first jet and `<n>^(-3+epsilon)` for the fourth-chaos second jet.  These rates
-are targets, not yet theorems.  Full-product reconstruction alone is
-insufficient because it retains the low--high `Q` spectrum.  Closure requires
-both the continuum Cauchy estimates and the exact A7 identity; neither is
-inferred from the finite Hermite/sparse-convolution fixtures.
+balanced coefficient model and before
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`.  No assertion is made that the
+signed conditional form estimate already follows from deterministic `H2`
+translation continuity.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

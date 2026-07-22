@@ -1,0 +1,152 @@
+{
+  "schema": "tect/a13-classii-balanced-coefficient-jet-continuum/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "result_id": "A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION",
+  "frozen_on": "2026-07-22",
+  "status": "T4 BALANCED CONTINUUM JET AND EXACT A7-SCHEME RECONSTRUCTION SUBPROOF CLOSED; SIGNED ONE-USE OPEN",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a7_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    "a13_universal_q_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_universal_q_cm_translation_manifest.json",
+      "sha256": "b5d3976a6275e521c18565b86271d41fafb836dfe05098324dc4d902395d6f87"
+    },
+    "a13_finite_forest_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_coefficient_jet_forest_manifest.json",
+      "sha256": "d75158604bcc3404d1b444374551afc061beb45f0470fa2ad05447aea2ce4d09"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_balanced_coefficient_jet_continuum.py",
+      "sha256": "374fcad550d773a104abad52fc6af45f225a105099f54c5623a98986572fec8b",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_balanced_coefficient_jet_continuum_independent.py",
+      "sha256": "9bda1717e3aee4034f83b9779ec16ab415e3d6beb622d452c19a4f72a977f5a7",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_balanced_coefficient_jet_continuum_verify.py",
+      "sha256": "405eb670fbabe245eec2140a1098e854c50e151dc854d2125ecef85d31ce704a",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0.tex.txt",
+      "sha256": "dec2c9046e83ce06f88a49b600791becad89a8bf39226d52ad101b4fd8738b71",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0.pdf",
+    "sha256": "fb7581b898392af6ac2618a3412c3946afc0f7896aff3e2f06d562cd6393db17",
+    "version": "1.0",
+    "pages": 6,
+    "size_bytes": 405359,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "PASS"
+  },
+  "scope": "Fixed L=16 A1 production Gaussian in the A7 six-real convention; covariance decay q^-4; fixed rho_regularizer=1e-12; common bounded real-even scalar spectral multipliers converging pointwise to one with compact support or a uniform Schwartz tail; same-regulator Gamma_Lambda,i; strict sharp-cube dyadic blocks; exact convolution or sufficient de-aliasing; no intermediate projection; alpha in (1/3,1/2), kappa>0 for the top jets and kappa<3 alpha-1 for rational reconstruction; deterministic H2 translations only.",
+  "theorem_inputs": {
+    "dimension": 3,
+    "covariance_decay": 4,
+    "alpha": 0.4,
+    "kappa": 0.1,
+    "classification": "dimension and covariance decay are theorem inputs; alpha and kappa are the pinned audit point inside the proved range"
+  },
+  "balanced_jets": {
+    "first": "J1_Lambda=sum_j P3[(I-S_(j-2))X_Lambda Delta_j Q_Lambda]",
+    "second_left": "J2_Lambda^L=sum_j P4[((I-S_(j-2))X_Lambda)^2 Delta_j Q_Lambda]",
+    "second_right": "J2_Lambda^R=sum_j P4[(I-S_(j-2))X_Lambda ((I-S_(j-2))X_Lambda Delta_j Q_Lambda)]",
+    "intermediate_projection": false,
+    "variance_bounds": "for every epsilon>0, E|J1_hat(n)|^2<=C_epsilon<n>^(-2+epsilon) and E|J2_hat(n)|^2<=C_epsilon<n>^(-3+epsilon)",
+    "convergence": "J1 converges in every finite Lp(Omega;H^(alpha-1-kappa)); J2^L=J2^R converges in every finite Lp(Omega;H^(2alpha-1-kappa))",
+    "moment_lift": "fixed-chaos Hilbert-valued hypercontractivity"
+  },
+  "regulator_class": {
+    "common_scalar": true,
+    "real_even": true,
+    "uniformly_bounded": true,
+    "pointwise_limit": 1,
+    "tail": "compact support at O(Lambda) or uniform Schwartz decay at scale Lambda",
+    "excluded": "component-split, asymmetric, non-even, or non-dominated multipliers"
+  },
+  "reconstruction": {
+    "coefficient": "the full rational A1/A7 B(X), or F_h(X)=B(X+h)-B(X) for deterministic h in H2",
+    "method": "exact order-two root-shell Taylor chart plus positive 3 alpha-1-kappa sewing remainder",
+    "derivative_counterterm": "same-regulator Gamma_Lambda,i only",
+    "lower_chaoses": "retain P1 first-cross; P2 four-cross; P0 two-double-cross; recursive P2 three-cross; and all Taylor compensators as one exact grouped reconstruction",
+    "finite_wick_conversion": "retain Sigma_Lambda Q_Lambda and scale-resolved Sigma_>j Delta_j Q_Lambda",
+    "identity": "at every cutoff the complete chart equals F(X_Lambda):Q_Lambda; for F=B its limit is the A7 covariance-normal composite",
+    "individual_correction_boundary": "individual localized lower-chaos channels are not claimed to converge separately; the exact grouped A7 reconstruction is the canonical object"
+  },
+  "oracles": {
+    "theorem_arithmetic": {
+      "derivative_covariance_decay": 2.0,
+      "q_variance_decay": 1.0,
+      "first_jet_variance_decay": 2.0,
+      "second_jet_variance_decay": 3.0,
+      "first_sobolev_ceiling": -0.5,
+      "second_sobolev_ceiling": 0.0,
+      "first_target": -0.7,
+      "second_target": -0.3,
+      "third_remainder_regularities": 0.1
+    }
+  },
+  "audit": {
+    "identity_tolerance": 1e-10,
+    "sparse_seed": 1313721,
+    "rational_seed": 1313722
+  },
+  "independent_audit": {
+    "tolerance": 1e-10,
+    "hermite_order": 24,
+    "dense_seed": 1313731,
+    "directional_seed": 1313732
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-9
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-primary-balanced-coefficient-jet-continuum/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-independent-balanced-coefficient-jet-continuum/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-integrated-balanced-coefficient-jet-continuum/result.json",
+    "primary_assertions": 35,
+    "independent_assertions": 26,
+    "integrated_own_assertions": 48,
+    "expected_total_assertions": 109,
+    "command": "python codes/foundations/a13_classii_balanced_coefficient_jet_continuum_verify.py"
+  },
+  "consequence": {
+    "result_ledger_id": "R-063",
+    "tier_after": "T4",
+    "closed_subproof": "A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION",
+    "parent_subgate": "A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION",
+    "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "next_subproof": "A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND"
+  },
+  "claims_not_established": {
+    "individual_localized_correction_convergence": false,
+    "adapted_random_shift_control": false,
+    "signed_one_use_bound": false,
+    "nelson_bound": false,
+    "interacting_measure": false,
+    "floor_or_regulator_removal": false,
+    "tier_promotion": false
+  },
+  "honesty_boundary": "This scoped T4 subproof proves the coupled-cutoff balanced P3/P4 continuum jets, every finite probability moment at the stated Sobolev targets, and the exact grouped full-rational A7 covariance-normal reconstruction with the finite Sigma Q and every lower-chaos family retained. It does not assert separate convergence of an arbitrary localized correction channel, control an adapted random shift, prove the strict-past signed one-use estimate, the q=10/9 Nelson bound, an interacting full three-component measure, floor or regulator removal, infinite volume, phase transition, BCC, T5, T6, or T7.",
+  "references": [
+    "https://arxiv.org/abs/1210.2684",
+    "https://arxiv.org/abs/1303.5113",
+    "https://arxiv.org/abs/1612.08138"
+  ]
+}

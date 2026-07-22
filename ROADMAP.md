@@ -129,19 +129,22 @@ reading in the required `L2` model topology.  A cone-localized subdiagram of
 the unnormalised nested resonance has a fixed negative coefficient whose
 magnitude accumulates like `c log Lambda`; this shows that lower-chaos terms
 cannot be omitted, but it does not prove noncancellation of the total
-symmetric tree. The parent model lift remains open at the selected subordinate
-gate `A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`. Its first
-child is now closed: the finite-cutoff forest theorem classifies the exact
+symmetric tree. The finite-cutoff forest theorem classifies the exact
 `2`, `4+2`, `5+2`, and `3+0` contractions for both complete non-aliased
 sharp-cube parenthesisations. Entrywise parity of the six-real A1 covariance
 makes all complete-sector value--derivative and double-cross terms cancel,
 while raw `XXQ` retains the finite tensor `Sigma_Lambda Q_Lambda`. This does
-not improve the literal full-product regularity and does not close the
-coefficient-jet gate. The current child is
-`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
-Only after its coupled-cutoff top-chaos limits and exact A7 reconstruction are
-proved may a coupled centered-`Q`/current/curvature stochastic form bound be
-attempted.
+not improve the literal full-product regularity.
+`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`
+now closes the coefficient-jet and parent model-lift gates at scoped T4. Its
+high-against-root-shell `P3/P4` variances obey `<n>^(-2+epsilon)` and
+`<n>^(-3+epsilon)`; the coupled-cutoff limits exist in every finite moment at
+the target Sobolev orders. An exact second-order chart reconstructs the full
+rational translated coefficient in the A7 covariance-normal scheme, retaining
+every grouped lower chaos and finite `Sigma Q`. The current child is
+`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`, which must keep the
+centered `Q`, current, positive square, and Cartan curvature coupled for an
+adapted shift.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -244,14 +247,13 @@ preserved in git/changelog rather than treated as current gates.
    stress candidate is `epsilon_6=0.15`, `delta=0.06`,
    `epsilon_v=0.45`, with final sextic margin `0.06`. The universal centered
    `Q` tensor, all finite moments, and deterministic `H2` Cameron--Martin
-   action are closed. The finite forest classification is also closed at
-   scoped T4 with 82/82 aggregate assertions, but continuum balanced jets and
-   exact A7 reconstruction remain open. Next prove
-   `A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`;
-   retain the finite `Sigma Q` term and every compensating lower-chaos
-   correction. Then prove a strict-past signed conditional reconstruction
-   that keeps the positive square, centered `Q`, current, and Cartan curvature
-   coupled. Do not use termwise paraproduct Young absorption.
+   action are closed. The finite forest and balanced continuum classifications
+   are also closed at scoped T4. The latter proves the top-jet `-2/-3`
+   variance rates, every-finite-moment coupled-cutoff convergence, and the
+   exact grouped full-rational A7 reconstruction while retaining `Sigma Q`.
+   Next prove `A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`, keeping
+   the positive square, centered `Q`, current, and Cartan curvature coupled.
+   Do not use termwise paraproduct Young absorption.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

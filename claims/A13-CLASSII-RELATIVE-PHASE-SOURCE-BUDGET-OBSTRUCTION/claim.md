@@ -47,9 +47,31 @@ the following structural results and proof-architecture boundaries hold.
    `Sigma_Lambda^{cd} Q_{Lambda,i}^{ab}`. This term is not a new divergent
    interaction counterterm at the complete finite monomial level, but it may
    not be deleted from the later A7 reconstruction.
+6. `A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`
+   removes the low-value/high-`Q` tail by the
+   high-against-root-shell definitions
 
-The broad one-use/Nelson theorem remains open. The finite forest result is a
-scoped T4 subproof and does not promote A13.
+   \[
+   \mathbb J_{1,\Lambda}
+   =\sum_jP_3[(I-S_{j-2})X_\Lambda\,\Delta_jQ_\Lambda],
+   \]
+
+   \[
+   \mathbb J_{2,\Lambda}
+   =\sum_jP_4[((I-S_{j-2})X_\Lambda)^2\Delta_jQ_\Lambda].
+   \]
+
+   Their Fourier variances are bounded by
+   `<n>^(-2+epsilon)` and `<n>^(-3+epsilon)`. Hence they converge
+   across coupled cutoffs in every finite probability moment at
+   `H^(alpha-1-kappa)` and `H^(2alpha-1-kappa)`. For
+   `1/3<alpha<1/2` and `0<kappa<3alpha-1`, an exact second-order dyadic
+   chart reconstructs the full rational `B(X+h)-B(X)` coefficient in the A7
+   covariance-normal scheme for deterministic `h in H2`. It retains all
+   `P1/P2/P0` corrections and the finite `Sigma_Lambda Q_Lambda` conversion.
+
+The broad one-use/Nelson theorem remains open. The balanced continuum result
+is a scoped T4 subproof and does not promote A13.
 
 ## Canonical subproof hierarchy
 
@@ -60,7 +82,7 @@ scoped T4 subproof and does not promote A13.
 | Translated-current model | Exact translation/frame/Cartan identities and flexible potential budget | T4 reduction |
 | Universal Q | All finite moments and deterministic H2 translation | T4 child gate closed |
 | Coefficient-jet forest | Finite-cutoff Wiener forest and complete-sector parity cancellation | T4 child subproof closed |
-| Balanced coefficient jets | Coupled-cutoff P3/P4 convergence and exact A7 reconstruction | OPEN |
+| Balanced coefficient jets | Coupled-cutoff P3/P4 convergence and exact grouped rational A7 reconstruction | T4 child subproof closed |
 | Controlled-shell one-use | Signed strict-past stochastic form bound | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -78,9 +100,12 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
 - Same-cutoff covariance-normal Wick subtraction.
 - Exact non-aliased products and the strict dyadic rectangular-cube
   filtration.
-- For the finite forest theorem, a complete low/resonant/high partition on
-  the full output support, no intermediate projection, and at most one common
-  root projection.
+- Balanced jets use high-against-root sharp-cube shells, no intermediate
+  projection, and at most one common root projection.
+- Common bounded real-even scalar regulators with compact support or uniform
+  Schwartz tails; component-split or non-even schemes are excluded.
+- `1/3<alpha<1/2`; jet convergence allows `kappa>0`, while rational
+  reconstruction uses `0<kappa<3alpha-1`.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -103,45 +128,40 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. balanced/base-point-increment P3 and P4 coefficient jets;
-2. coupled-cutoff convergence in the target Sobolev spaces and every finite
-   probability moment;
-3. exact rational-`B` translated-current reconstruction in the A7 scheme,
-   retaining `Sigma Q` and every other finite correction;
-4. strict-past signed one-use estimate;
-5. return to the A7 Nelson and finite-volume measure gates.
+1. `A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`;
+2. the controlled-shell one-use estimate without termwise Young absorption;
+3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_coefficient_jet_forest_verify.py
+python codes/foundations/a13_classii_balanced_coefficient_jet_continuum_verify.py
 ```
 
 Expected output:
 
-- primary `34/34`;
-- non-importing independent `31/31`;
-- integrated `17/17`;
-- aggregate `82/82`;
-- `A13-CLASSII-COEFFICIENT-JET-FOREST-INTEGRATED-PASS`;
+- primary `35/35`;
+- non-importing independent `26/26`;
+- integrated `48/48` and aggregate `109/109` pass;
+- `A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-INTEGRATED-PASS`;
 - exit code zero.
 
-The proof note is five pages and passes the standard form check, zero-overfull
+The proof note is six pages and passes the standard form check, zero-overfull
 gate, and rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_coefficient_jet_forest_manifest.json`
-- `notes/classii-coefficient-jet-forest-classification-260722-v1.0.tex.txt`
-- `notes/classii-coefficient-jet-forest-classification-260722-v1.0.pdf`
-- `../../codes/foundations/a13_classii_coefficient_jet_forest.py`
-- `../../codes/foundations/a13_classii_coefficient_jet_forest_independent.py`
-- `../../codes/foundations/a13_classii_coefficient_jet_forest_verify.py`
-- `runs/2026-07-22-primary-coefficient-jet-forest-classification/result.json`
-- `runs/2026-07-22-independent-coefficient-jet-forest-classification/result.json`
-- `runs/2026-07-22-integrated-coefficient-jet-forest-classification/result.json`
+- `classii_balanced_coefficient_jet_continuum_manifest.json`
+- `notes/classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0.tex.txt`
+- `notes/classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0.pdf`
+- `../../codes/foundations/a13_classii_balanced_coefficient_jet_continuum.py`
+- `../../codes/foundations/a13_classii_balanced_coefficient_jet_continuum_independent.py`
+- `../../codes/foundations/a13_classii_balanced_coefficient_jet_continuum_verify.py`
+- `runs/2026-07-22-primary-balanced-coefficient-jet-continuum/result.json`
+- `runs/2026-07-22-independent-balanced-coefficient-jet-continuum/result.json`
+- `runs/2026-07-22-integrated-balanced-coefficient-jet-continuum/result.json`
 
 Earlier current packages remain binding within their own scopes:
 
@@ -149,6 +169,7 @@ Earlier current packages remain binding within their own scopes:
 - `classii_joint_source_potential_reduction_manifest.json` (v1.1 authority)
 - `classii_translation_model_reduction_manifest.json`
 - `classii_universal_q_cm_translation_manifest.json`
+- `classii_coefficient_jet_forest_manifest.json`
 
 The three 2026-07-21 joint-source v1.0 runs are superseded development
 provenance and are not current hash-reconstructible evidence. The v1.1 note,
@@ -176,11 +197,15 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
 6. **VALID WITH MITIGATION: finite `Sigma_Lambda Q_Lambda` can be discarded.**
    It is non-divergent but remains a load-bearing finite Wick-conversion term
    in rational coefficient reconstruction.
-7. **UPHELD AGAINST CLOSURE: complete forest cancellation proves the improved
-   coefficient-jet model.** The complete sum is the literal full product,
-   whose low--high regularity remains insufficient. Balanced jets and their
-   reconstruction are still open.
-8. **UPHELD AGAINST PROMOTION: this finite theorem proves the Nelson moment or
+7. **DISMISSED: complete forest cancellation alone proves the improved
+   coefficient-jet model.** It does not; the new theorem instead removes the
+   low--high tail explicitly and proves the separate `-2`/`-3` variance
+   bounds before reconstruction.
+8. **VALID WITH MITIGATION: every localized lower-chaos correction converges
+   separately.** The theorem claims only the exact grouped A7 reconstruction.
+   It displays every correction but does not promote arbitrary localized
+   channels to standalone continuum objects.
+9. **UPHELD AGAINST PROMOTION: this balanced theorem proves the Nelson moment or
    interacting measure.** It proves neither; A13 remains T4.
 
 ## Falsifier
@@ -189,31 +214,32 @@ Any failure of a prior Fierz, source, factor-four, one-use/Nelson equivalence,
 scalar-loop, determinant, translation/frame, Cartan, universal-Q, or raw-jet
 assertion remains a falsifier for its package.
 
-The finite forest continuation is falsified by any of the following:
+The balanced continuum continuation is falsified by any of the following:
 
-- an incorrect `2`, `4+2`, `5+2`, or `3+0` forest count;
-- an incomplete sharp-cube pair or nested partition;
-- failure of either exact sparse parenthesisation to reconstruct the full
-  triple convolution;
-- nonzero complete mixed covariance or double-cross coefficient under the
-  pinned entrywise-even A1 law;
-- loss of the one-sided non-even-cutoff failure control;
+- a Fourier-variance exponent weaker than `-2+epsilon` or `-3+epsilon`;
+- failure of coupled-cutoff Cauchy convergence at either target Sobolev order;
+- failure of the every-finite-moment homogeneous-chaos lift;
+- disagreement of the two complete parenthesisations without an intermediate
+  projection;
+- omission of a `P1`, `P2`, or `P0` grouped correction;
 - omission of the finite tensor `Sigma_Lambda Q_Lambda`;
+- mismatch of the full rational Taylor chart with the A7 covariance-normal
+  finite-cutoff expression;
 - a source or PDF hash mismatch;
 - a PDF form, overfull, or visual-QA failure;
-- any failure in the 82-assertion aggregate or the release gate.
+- any failed primary, independent, integrated, or release assertion.
 
 ## No-overclaim
 
-The finite forest theorem proves zero net value--derivative and double-cross
-correction only for complete covariance-matched non-aliased monomials under
-the entrywise-even A1 law. It does not license deletion of resonant-only
-correctors, improve literal full-product regularity, or prove continuum
-balanced-jet convergence. It does not complete rational-`B`/A7
-reconstruction, control adapted translations, prove the signed one-use
-estimate or `q=10/9` Nelson moment, close A11/A7, construct an interacting
-measure, remove a floor or regulator, take infinite volume, prove a phase
-transition or BCC selection, or justify T5, T6, or T7.
+The balanced theorem proves continuum convergence only for its declared
+high-against-root `P3/P4` jets and reconstructs lower chaoses only as the exact
+grouped rational A7 chart. It does not license deletion of localized
+correctors or claim their separate continuum convergence, and it does not
+improve the literal full-product regularity. It does not control adapted
+translations, prove the signed one-use estimate or `q=10/9` Nelson moment,
+close A11/A7, construct an interacting measure, remove a floor or regulator,
+take infinite volume, prove a phase transition or BCC selection, or justify
+T5, T6, or T7.
 
 ## History
 
@@ -231,4 +257,10 @@ transition or BCC selection, or justify T5, T6, or T7.
   proved complete-sector parity cancellation with exact sparse convolution,
   retained the finite tensor `Sigma_Lambda Q_Lambda`, and recorded balanced
   continuum jets plus exact A7 reconstruction as the next A13 subproof. Tier
+  remains T4.
+- 2026-07-22: Closed the balanced coefficient-jet continuum and exact grouped
+  A7 reconstruction child. The `P3/P4` variances have `-2+epsilon` and
+  `-3+epsilon` bounds, every finite probability moment converges at the target
+  Sobolev orders, and the full rational chart retains every lower chaos and
+  `Sigma Q`. The strict-past signed form bound is now the current child; tier
   remains T4.

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-063](#r-063) | Balanced coefficient-jet continuum and exact rational A7 reconstruction | Scoped T4 analytic/exact/executed subproof: high-against-root P3/P4 jets have Fourier variances bounded by <n>^(-2+epsilon) and <n>^(-3+epsilon), converge across coupled cutoffs in every finite moment at the target Sobolev orders, and reconstruct the full rational translated coefficient in the exact grouped A7 scheme with every lower chaos and finite Sigma Q retained |
 | [R-062](#r-062) | Finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation | Scoped T4 analytic/exact/executed subproof: exact 2, 4+2, 5+2, and 3+0 forest classification; both non-aliased sharp-cube parenthesisations reconstruct the complete product; entrywise-even A1 parity cancels net value-derivative/double-cross terms while retaining finite tensor Sigma_Lambda Q_Lambda; 82/82 aggregate assertions |
 | [R-061](#r-061) | Universal derivative-square tensor and raw coefficient-jet obstruction | Scoped T4 analytic/executed result: universal Q converges in every finite Lp(H^(-1-kappa)) with deterministic H2 Cameron--Martin continuity; literal full jets miss the L2 target and a cone-localized nested subdiagram has logarithmically growing fixed-sign magnitude, without a total-tree noncancellation claim |
 | [R-060](#r-060) | Class-II translation identity and translated-current model boundary | Scoped T4 exact reduction: flexible potential coercivity enlarges the sufficient field-charge range to epsilon_6<gamma/6; exact translation, frame, expectation, and Cartan identities isolate the universal L3-level translated model as the next gate |
@@ -81,6 +82,40 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-063"></a>
+### R-063 -- balanced coefficient-jet continuum and exact rational A7 reconstruction
+
+**Result ID.**
+`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
+
+**Statement.** For the fixed-floor six-real A1 production Gaussian and common
+bounded real-even scalar regulators, the high-against-root-shell third- and
+fourth-chaos coefficient jets have Fourier variances bounded by
+`<n>^(-2+epsilon)` and `<n>^(-3+epsilon)`. They converge across coupled
+cutoffs in every finite probability moment in `H^(alpha-1-kappa)` and
+`H^(2alpha-1-kappa)`. For `1/3<alpha<1/2` and
+`0<kappa<3alpha-1`, an exact order-two dyadic chart reconstructs the full
+rational `B(X):Q` and deterministic-`H2` translated coefficient in the A7
+same-regulator covariance-normal scheme. Both complete parenthesisations
+agree without an intermediate projection. The chart retains every
+`P1/P2/P0` correction and the finite `Sigma_Lambda Q_Lambda` conversion.
+
+**Proven in.** A13 /
+`classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0`,
+with primary 35/35, non-importing independent 26/26, integrated hash-pinned
+verification, and six-page PDF form, zero-overfull, and visual QA.
+
+**Reuse scope.** Gaussian enhanced models, balanced paraproduct jets,
+full-rational coefficient reconstruction, and audits separating canonical
+grouped corrections from arbitrary localized channels.
+
+**Tier.** T4 analytic/exact/executed subproof. Arbitrary localized correction
+channels are not standalone continuum objects. No adapted random-shift form
+bound, one-use estimate, Nelson moment, interacting measure, or tier action.
+
+**Publication target.** Stochastic-analysis methods note with R-061 and R-062
+after the signed strict-past form bound is resolved.
 
 <a id="r-062"></a>
 ### R-062 -- finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation

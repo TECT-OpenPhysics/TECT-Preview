@@ -1,0 +1,400 @@
+% =============================================================================
+% Title: Balanced Class-II coefficient jets, continuum convergence, and A7 reconstruction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-22; this version issued 2026-07-22
+% Status: T4 scoped subproof; selected coefficient-jet child closed; one-use and Nelson gates open
+% =============================================================================
+
+\section*{Purpose and scope}
+
+This note closes the selected child
+\begin{verbatim}
+A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION.
+\end{verbatim}
+It does so by replacing the impossible literal products $XQ$ and $XXQ$ by
+explicit high-against-root-shell homogeneous-chaos jets.  The third- and
+fourth-chaos jets converge at the advertised Sobolev regularities and in
+every finite probability moment.  A second-order dyadic reconstruction then
+recovers the full rational production coefficient in the exact A7
+covariance-normal scheme.  The reconstruction retains the finite
+$\Sigma_\Lambda Q_\Lambda$ Wick-conversion term and all cross-contraction
+corrections.
+
+The result is deliberately scoped.  The torus has $L=16$; the Gaussian is
+the three-complex-component, six-real A1 production field with covariance
+symbol bounded by $\langle k\rangle^{-4}$; the density floor is fixed at
+$10^{-12}$; and all components use one common real-even scalar regulator.
+The theorem is finite volume.  It does not control an adapted random
+Cameron--Martin shift, prove the signed one-use estimate, prove a Nelson
+moment, construct an interacting measure, remove the floor or regulator, or
+change A13 from T4.
+
+The construction follows the paracontrolled and reconstruction principles
+of Gubinelli--Imkeller--Perkowski
+(\url{https://arxiv.org/abs/1210.2684}) and Hairer
+(\url{https://arxiv.org/abs/1303.5113}), but all power counts and the
+finite-cutoff identification needed here are stated below.
+
+\section*{1. Gaussian and dyadic conventions}
+
+Write $X=(X^1,\ldots,X^6)$ on $\mathbb T_L^3$.  The production covariance
+satisfies, entrywise and in operator norm,
+\[
+ |\widehat C^{ab}(k)|\le C\langle k\rangle^{-4},
+ \qquad \widehat C^{ab}(-k)=\widehat C^{ab}(k)\in\mathbb R.       \tag{1.1}
+\]
+For a common regulator $r_\Lambda$ put
+$X_\Lambda=r_\Lambda(D)X$ and
+\[
+ Q_{\Lambda,i}^{ab}
+ =\partial_iX_\Lambda^a\partial_iX_\Lambda^b
+  -\Gamma_{\Lambda,i}^{ab},
+ \qquad
+ \Gamma_{\Lambda,i}^{ab}
+ =\mathbb E[\partial_iX_\Lambda^a\partial_iX_\Lambda^b].       \tag{1.2}
+\]
+The subtraction in (1.2) is the exact covariance of the same regulator.
+
+Let
+\[
+ S_j=\mathbf1_{\{\|k\|_\infty\le2^j\}}(D),\qquad
+ \Delta_j=S_j-S_{j-1},                                         \tag{1.3}
+\]
+with one declared low block, and put $R_j=I-S_{j-2}$.  Empty negative
+indices are absorbed into the low block.  The root-shell tensor is
+$Q_{\Lambda,i,j}=\Delta_jQ_{\Lambda,i}$.  Products below are exact Fourier
+convolutions.  No Galerkin projection is inserted at an intermediate node;
+one common projection may be applied after the complete product.
+
+The admitted regulator class consists of common scalar multipliers with
+\[
+ r_\Lambda(-k)=r_\Lambda(k)\in\mathbb R,
+ \quad\sup_{\Lambda,k}|r_\Lambda(k)|<\infty,
+ \quad r_\Lambda(k)\longrightarrow1,                           \tag{1.4}
+\]
+and either support $\|k\|\le C\Lambda$ or uniform Schwartz tails at scale
+$\Lambda$.  These hypotheses give a common summable Fourier majorant.  They
+include the pinned sharp cubes and the common-even A7 regulator class, but
+exclude component-split and non-even multipliers.
+
+\section*{2. Balanced homogeneous-chaos jets}
+
+Let $\mathsf P_m$ denote projection onto homogeneous Wiener chaos $m$ of
+the underlying A1 Gaussian.  For component indices $a,b,c,d$ define
+\begin{align}
+ \mathbb J_{1,\Lambda,i}^{c;ab}
+ &=\sum_j\mathsf P_3\!\left[
+       (R_jX_\Lambda^c)Q_{\Lambda,i,j}^{ab}\right],             \tag{2.1}\\
+ \mathbb J_{2,\Lambda,i}^{cd;ab,L}
+ &=\sum_j\mathsf P_4\!\left[
+       ((R_jX_\Lambda^c)(R_jX_\Lambda^d))
+       Q_{\Lambda,i,j}^{ab}\right],                            \tag{2.2}\\
+ \mathbb J_{2,\Lambda,i}^{cd;ab,R}
+ &=\sum_j\mathsf P_4\!\left[
+       (R_jX_\Lambda^c)((R_jX_\Lambda^d)
+       Q_{\Lambda,i,j}^{ab})\right].                           \tag{2.3}
+\end{align}
+The letters $L,R$ record the two previously pinned sharp-cube
+parenthesisations.  Since all inner products are exact and non-aliased,
+multiplication is associative before $\mathsf P_4$ and hence
+\[
+ \mathbb J_{2,\Lambda}^{L}=\mathbb J_{2,\Lambda}^{R}.           \tag{2.4}
+\]
+This equality is after complete reconstruction.  It does not assert equality
+of individual Bony channels, and it fails if a cutoff is reinserted between
+the two multiplications.
+
+The high factor $R_jX$ is load-bearing.  If it is replaced by $X$, the
+summable zero and low modes of $X$ multiply the $|n|^{-1}$ spectrum of $Q$;
+the result has only $H^{-1-}$ regularity.  Equations (2.1)--(2.3) remove
+exactly that low--high piece while preserving an exact reconstruction in
+Section 5.
+
+\section*{3. Fourier convolution estimate}
+
+\begin{lemma}[balanced convolution]
+Let $d=3$, $a(k)=\langle k\rangle^{-4}$ and
+$b(k)=\langle k\rangle^{-2}$.  With $\chi_j$ the sharp-cube annulus from
+(1.3), for every $\epsilon>0$ the complete balanced kernels satisfy
+\begin{align}
+ V_3(n)&\le C_\epsilon\langle n\rangle^{-2+\epsilon},            \tag{3.1}\\
+ V_4(n)&\le C_\epsilon\langle n\rangle^{-3+\epsilon}.            \tag{3.2}
+\end{align}
+Here $V_3,V_4$ are the Fourier variances of (2.1) and (2.2), with arbitrary
+fixed component indices.  The same bounds hold for cross-cutoff differences
+with a factor tending to zero under the corresponding weighted sum.
+\end{lemma}
+
+\begin{proof}
+The derivative covariance is bounded by $b$.  The standard three-dimensional
+convolution split into $|p|\le|n|/2$, $|n-p|\le|n|/2$, and the remaining
+region gives
+\[
+ (b*b)(r)\le C\langle r\rangle^{-1}.                            \tag{3.3}
+\]
+Fix the root shell $|r|\asymp2^j$.  In (2.1) the value momentum is restricted
+to $|k|\gtrsim2^j$.  If $2^j\ll|n|$, then $k=n-r$ has size $|n|$ and the
+shell mass of (3.3) is $O(2^{2j})$; summing up to $2^j\asymp|n|$ gives
+$O(|n|^{-2})$.  If $2^j\gtrsim|n|$, both $k$ and $r$ are at least of shell
+size and the $j$-term is $O(2^{-2j})$.  Its tail is again
+$O(\langle n\rangle^{-2})$.
+
+For (2.2), both value momenta are restricted below by the root scale.  In
+the low-root region, convolving the two $a$ factors costs at most
+$|n|^{-4}2^{-j}$, while the $Q$ shell has mass $O(2^{2j})$.  Summation to
+$2^j\asymp|n|$ gives $O(|n|^{-3})$.  At and above the output scale, direct
+rescaling of the two value sums and the root sum gives $O(2^{-3j})$.
+
+The finite overlap of annuli gives the same estimates for diagonal shell
+pairs.  Cauchy--Schwarz with weights $2^{\epsilon|j-j'|}$ absorbs the
+off-diagonal shell pairs at the displayed arbitrarily small loss.  Wick
+isometry adds only a finite component/contraction factor.  For two cutoffs,
+at least one covariance multiplier is replaced by a difference.  Pointwise
+convergence in (1.4), the preceding summable majorant, and dominated
+convergence prove the cross-cutoff assertion.
+\end{proof}
+
+\begin{theorem}[continuum balanced jets]
+Let $1/3<\alpha<1/2$ and $\kappa>0$.  Then the nets (2.1)--(2.3) are Cauchy
+for every finite $p$ in
+\begin{align}
+ \mathbb J_{1,\Lambda}&\longrightarrow\mathbb J_1
+ &&\text{in }L^p(\Omega;H^{\alpha-1-\kappa}),                  \tag{3.4}\\
+ \mathbb J_{2,\Lambda}^{L,R}&\longrightarrow\mathbb J_2
+ &&\text{in }L^p(\Omega;H^{2\alpha-1-\kappa}).                 \tag{3.5}
+\end{align}
+The two second-jet limits agree and are common to the regulator class (1.4).
+\end{theorem}
+
+\begin{proof}
+For a Fourier variance $\langle n\rangle^{-\beta+\epsilon}$ in three
+dimensions, the $H^s$ second moment is finite for
+$s<(\beta-3)/2$.  Equation (3.1) therefore permits every $s<-1/2$, and
+(3.2) every $s<0$.  Since $\alpha<1/2$, the exponents in (3.4)--(3.5) are
+strictly below those ceilings.  The cross-cutoff part of the lemma proves
+$L^2$ Cauchy convergence.  Hilbert-valued homogeneous-chaos
+hypercontractivity gives
+\[
+ \|Z\|_{L^p(\Omega;H^s)}
+ \le C_m(p-1)^{m/2}\|Z\|_{L^2(\Omega;H^s)}                    \tag{3.6}
+\]
+for chaos order $m=3,4$, proving every finite $p$.  Equation (2.4) and
+dominated convergence give the remaining statements.
+\end{proof}
+
+\section*{4. Complete lower-chaos conversion}
+
+Put $Z_j^c=R_jX^c$ and $Q_j^{ab}=\Delta_jQ^{ab}$.  At every finite cutoff,
+Wick's formula gives the exact decompositions
+\begin{align}
+ Z_j^cQ_j^{ab}
+ &=\mathsf P_3[Z_j^cQ_j^{ab}]
+   +\mathsf P_1[Z_j^cQ_j^{ab}],                                \tag{4.1}\\
+ Z_j^cZ_j^dQ_j^{ab}
+ &=\mathsf P_4[Z_j^cZ_j^dQ_j^{ab}]
+   +\mathsf P_2^{\rm cross}[Z_j^cZ_j^dQ_j^{ab}]\notag\\
+ &\quad+\Sigma_{j}^{cd}Q_j^{ab}
+   +\mathsf P_0^{\rm cross}[Z_j^cZ_j^dQ_j^{ab}],               \tag{4.2}
+\end{align}
+where $\Sigma_j^{cd}=\mathbb E[Z_j^cZ_j^d]$.  The first correction has two
+value--derivative contractions.  The cross part in (4.2) has four
+second-chaos and two zero-chaos contractions.  Together with
+$\Sigma_jQ_j$, raw $ZZQ$ has five second-chaos and two zero-chaos families.
+For the recursive parenthesisation $Z\mathsf P_3[ZQ]$ there are three
+second-chaos and no zero-chaos contractions.  These are the previously
+proved $2$, $4+2$, $5+2$, and $3+0$ forests, now attached to the balanced
+root-shell multiplier.
+
+The cross pieces in (4.1)--(4.2) need not vanish shell by shell.  They are
+therefore retained, rather than replaced by the global same-point parity
+identity.  In a scalar two-variable notation with
+$\mathbb E Z^2=\sigma$, $\mathbb E Y^2=\gamma$, and
+$\mathbb E ZY=k$,
+\begin{align}
+ Z(Y^2-\gamma)&=:ZYY:+2kY,                                    \tag{4.3}\\
+ Z^2(Y^2-\gamma)&=:ZZYY:+\sigma(Y^2-\gamma)
+                 +4k:ZY:+2k^2.                               \tag{4.4}
+\end{align}
+Equation (4.4) displays the finite $\Sigma Q$ term.  Deleting it changes the
+finite-cutoff random variable and is not a change of notation.
+
+\section*{5. Exact rational coefficient reconstruction}
+
+The six-real production matrix is
+\[
+ B(X)=\sum_A\{a p_Ap_A^T+b(p_Av_A^T+v_Ap_A^T)+cv_Av_A^T\},   \tag{5.1}
+\]
+where
+\[
+ p_A=2S_AX,\quad
+ v_A=2(S_A-q_AI)X,\quad
+ q_A={X^TS_AX\over X^TX+\epsilon_\rho}.                       \tag{5.2}
+\]
+The fixed positive floor makes $B$ smooth; its derivatives have polynomial
+growth with constants depending on the floor.
+
+For a root shell $j$ write $x_j=S_{j-2}X$ and $z_j=R_jX$.  For any matrix
+coefficient $F$ equal to $B$ or
+\[
+ F_h(x)=B(x+h)-B(x)                                           \tag{5.3}
+\]
+with deterministic $h\in H^2$, Taylor's formula is the exact identity
+\[
+ F(x_j+z_j)=F(x_j)+DF(x_j)[z_j]
+ +\frac12D^2F(x_j)[z_j,z_j]+\mathcal R_{3,j}^F.               \tag{5.4}
+\]
+Multiplying by $Q_j$, substituting (4.1)--(4.2), and summing $j$ gives the
+finite-cutoff reconstruction chart
+\begin{align}
+ F(X):Q={}&\sum_j F(x_j):Q_j\notag\\
+ &+\sum_jDF(x_j):\{\mathsf P_3[z_jQ_j]+\mathsf P_1[z_jQ_j]\}\notag\\
+ &+\frac12\sum_jD^2F(x_j):\{\mathsf P_4[z_jz_jQ_j]
+       +\mathsf P_2^{\rm cross}[z_jz_jQ_j]\notag\\
+ &\hspace{43mm}+\Sigma_jQ_j+\mathsf P_0^{\rm cross}[z_jz_jQ_j]\}\notag\\
+ &+\sum_j\mathcal R_{3,j}^F:Q_j .                             \tag{5.5}
+\end{align}
+All tensor indices are contracted exactly as in (5.1).  Formula (5.5) is an
+identity, not an asymptotic expansion.  It uses neither a finite Hermite
+truncation of $B$ nor a new physical counterterm.
+
+For the quadratic test $F^{cd}(X)=X^cX^d$, the low chart contains
+$\Sigma_{<j}^{cd}Q_j$ and (4.2) contains $\Sigma_j^{cd}Q_j$.  Their complete
+sum is precisely
+\[
+ \Sigma_\Lambda^{cd}Q_{\Lambda}^{ab},                         \tag{5.6}
+\]
+the finite conversion term from the preceding forest theorem.  Thus (5.5)
+cannot silently Wick-order the coefficient itself.
+
+\begin{theorem}[A7-scheme reconstruction]
+Assume
+\[
+ {1\over3}<\alpha<{1\over2},\qquad
+ 0<\kappa<3\alpha-1.                                         \tag{5.7}
+\]
+The dyadic chart (5.5), interpreted as the standard modelled-distribution
+reconstruction from $Q,\mathbb J_1,\mathbb J_2$ and the displayed lower
+chaoses, is continuous in those model norms.  Its regularised values converge
+in every finite probability moment in $H^{-1-\kappa}$.  For $F=B$ the limit
+is exactly the A7 covariance-normal composite
+\[
+ B(X):\bigl(\partial_iX\otimes\partial_iX-\Gamma_i\bigr).      \tag{5.8}
+\]
+For deterministic $h\in H^2$, $F=F_h$ gives the translated coefficient term
+in the same scheme.  No intermediate projection or extra divergent local
+counterterm appears.
+\end{theorem}
+
+\begin{proof}
+At scale $j$, subtract the order-two expansion (5.4).  The remainder gains
+$3\alpha$, while $Q_j$ has order $-1-\kappa$.  Condition (5.7) makes the
+sewing exponent $3\alpha-1-\kappa$ positive.  The order-one and order-two
+increments are represented by (2.1)--(2.3); their model bounds are (3.4)--
+(3.5).  The lower-chaos terms in (4.1)--(4.2) are fixed Gaussian contractions
+of the same kernels and are grouped with the Taylor levels in (5.5).  The
+usual dyadic telescoping estimate therefore makes the reconstruction map
+continuous and unique at regularity $-1-\kappa$.
+
+Every regularised object is smooth.  For it, the reconstruction axiom is
+ordinary multiplication, so (5.5) equals its left-hand side exactly.  With
+$F=B$, that left-hand side is (5.8) with the same-regulator covariance
+(1.2), hence is exactly the A7 finite-cutoff prescription.  A7 proves its
+common-regulator limit.  Continuity of the present chart and Theorem 3.2
+identify the two limits and show explicitly where all lower chaoses sit.
+
+For (5.3), approximate deterministic $h\in H^2$ by smooth functions.  The
+three-dimensional embedding $H^2\hookrightarrow C^\beta$ for every
+$\beta<1/2$, the fixed-floor derivative bounds on $B$, and the same chart
+estimate give a locally Lipschitz limit.  Passing through the smooth
+approximants proves the translated statement.
+\end{proof}
+
+At the production values $\alpha=0.4$, $\kappa=0.1$, the first and second
+targets are $-0.7$ and $-0.3$, below the variance ceilings $-0.5$ and $0$.
+The reconstruction remainder has positive exponent
+$3\alpha-1-\kappa=0.1$.
+
+\section*{6. Executable adversarial audit}
+
+The primary program derives the exponent chain from $d=3$ and the A1
+$q^{-4}$ covariance, checks exact sparse non-aliased associativity, evaluates
+the complete $2$, $4+2$, $5+2$, and $3+0$ forest identities with a nonzero
+$\Sigma Q$ deletion control, and differentiates the full six-real rational
+matrix analytically.  The independent program does not import it: it uses
+zero-padded dense Fourier convolution, Gauss--Hermite projection, and
+complex-step versus five-point differentiation for the production matrix.
+The integrated verifier pins every
+authority and source hash, reruns both children, and checks the claim/gate
+boundary.
+
+The finite fixtures test algebra, signs, conventions, and hardcode masking.
+They do not infer continuum convergence from a fitted slope.  The continuum
+claim rests on Lemma 3.1, Theorem 3.2, and the reconstruction proof.
+
+\section*{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED: the literal full product already has the target
+regularity.}  Its low value modes preserve the $|n|^{-1}$ variance of $Q$.
+The high-against-root restriction in (2.1)--(2.3) is essential.
+
+\item \textbf{VALID WITH MITIGATION: homogeneous-chaos projection loses the
+original rational coefficient.}  Projection is used only for the two model
+jets.  Formula (5.5) is an exact second-order reconstruction and retains the
+Taylor remainder, every lower chaos, and the full nonpolynomial $B$.
+
+\item \textbf{VALID WITH MITIGATION: parity makes all lower chaoses zero.}
+Global same-point value--derivative covariance is zero, but a root-shell
+selector need not preserve that cancellation.  The $\mathsf P_1$,
+$\mathsf P_2^{\rm cross}$, and $\mathsf P_0^{\rm cross}$ terms are displayed
+and retained.
+
+\item \textbf{DISMISSED: finite $\Sigma Q$ may be deleted because it is not
+divergent.}  Equation (4.4) and the quadratic test (5.6) show that deletion
+changes the finite-cutoff composite.  Finiteness is not zero.
+
+\item \textbf{UPHELD AGAINST INTERMEDIATE PROJECTION: both trees agree after
+projecting every inner product.}  They need not.  Equation (2.4) assumes
+exact convolution and at most one common root projection.
+
+\item \textbf{VALID WITH MITIGATION: the theorem is regulator universal.}
+It is universal only in the declared common real-even scalar class with a
+uniform Fourier majorant and exact same-regulator covariance subtraction.
+
+\item \textbf{UPHELD AGAINST PROMOTION: this closes the signed one-use or
+Nelson theorem.}  It supplies the enhanced coefficient model and exact A7
+bridge only.  Adapted-shift stochastic coercivity is the next gate; A13 stays
+T4.
+\end{enumerate}
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID:               A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-
+                         AND-A7-RECONSTRUCTION
+Claim:                   A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Precise statement:       Balanced P3/P4 root-shell jets converge in every
+                         finite probability moment at H^(alpha-1-kappa) and
+                         H^(2alpha-1-kappa). A second-order dyadic chart
+                         reconstructs the full rational translated coefficient
+                         in the exact A7 covariance-normal scheme, retaining
+                         Sigma Q and every lower-chaos correction.
+Parameter range:         1/3 < alpha < 1/2; 0 < kappa < 3 alpha - 1 for the
+                         reconstruction; alpha=0.4, kappa=0.1 is the pinned
+                         audit point.
+Regulators:              Common bounded real-even scalar multipliers,
+                         pointwise to one, compact support or uniform Schwartz
+                         tail; same-regulator Gamma; exact/dealiased products.
+Dependencies:            A1 production functional; A7 covariance-normal
+                         composite; A13 universal Q and finite forest results.
+Tier before / after:     T4 / T4 (no tier change).
+Falsifiers:              Wrong -2/-3 variance exponents; failed cross-cutoff
+                         Cauchy estimate; missing lower chaos or Sigma Q;
+                         intermediate-projection associativity; rational chart
+                         mismatch; authority/hash/assertion failure.
+No-overclaim:            No adapted random-shift form bound, one-use estimate,
+                         Nelson moment, Gibbs measure, floor/regulator removal,
+                         infinite volume, phase transition, BCC, T5, T6, T7.
+Next required action:    Prove the strict-past signed Q/current/positive-square/
+                         Cartan-curvature one-use estimate using this model.
+\end{verbatim}

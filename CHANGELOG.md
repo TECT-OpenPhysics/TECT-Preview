@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Close A13 balanced coefficient-jet continuum and exact A7 reconstruction] - 2026-07-22
+
+Close the scoped T4 child A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION. Replace the impossible literal full-product jets by high-against-root-shell P3/P4 homogeneous chaoses. Prove Fourier-variance bounds <n>^(-2+epsilon) and <n>^(-3+epsilon), coupled-cutoff convergence in every finite probability moment at H^(alpha-1-kappa) and H^(2alpha-1-kappa), and parenthesisation agreement without intermediate projection. Reconstruct the full rational B(X):Q and deterministic-H2 translated coefficient through an exact order-two chart in the same-regulator A7 covariance-normal scheme, retaining P1/P2/P0 corrections and finite Sigma_Lambda Q_Lambda. Primary 35/35 and non-importing independent 26/26 pass; the integrated verifier and six-page PDF are hash-pinned. A13 remains T4. Adapted shift control, the strict-past signed one-use bound, Nelson moment, interacting measure, T5, T6, and T7 remain open. The next child is A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND.
+
 ## [Rename historical bundle paths under the 256-character budget] - 2026-07-22
 
 Audit the complete C:/Dev/TECT project surface and enforce a 256-character absolute-path budget. The initial scan found 313 over-limit filesystem paths, including 223 tracked files, concentrated in recursively copied historical A5 T5/T6 reproduction bundles with a maximum of 391 characters. Preserve canonical claim IDs and rename only historical bundle-copy directories to compact aliases (a5t6, a5t5, a1f, a1k, a2, a3f, a3p, a3u, a4, a5 and compact bundle aliases). Refresh all 21 affected MANIFEST.json inventories and content-addressable digests, update bundle-local path references, regenerate catalog and generated surfaces, and verify every manifest has zero missing or hash-mismatched entries. The final scan reports zero paths over 256 characters. Add the fail-closed check_path_lengths.py self-test and wire it into release_check.

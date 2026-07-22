@@ -25,12 +25,15 @@ endpoint theorem.
    cone-localized logarithmic magnitude certificate is therefore compatible
    with complete-sector cancellation and does not establish a total-tree
    counterterm.
-6. **Current subproof.** Construct balanced/base-point-increment P3 and P4
-   jets, prove coupled-cutoff convergence at the target regularities and every
-   finite probability moment, and reconstruct them in the exact A7
-   covariance-normal scheme with all finite corrections retained.
-7. **Only after step 6.** Attempt the strict-past signed one-use bound, then
-   return to the A7 Nelson and finite-volume measure gates.
+6. **Balanced continuum and A7 reconstruction.** High-against-root-shell P3
+   and P4 jets have the proved `-2+epsilon` and `-3+epsilon` Fourier-variance
+   bounds and converge across coupled cutoffs in every finite probability
+   moment at the target Sobolev orders. An exact order-two chart reconstructs
+   the full rational translated coefficient in the A7 covariance-normal
+   scheme while retaining all grouped lower chaoses and finite `Sigma Q`.
+7. **Current subproof.** Prove the strict-past signed Q/current/positive-square/
+   Cartan-curvature form bound for an adapted shift, then close the umbrella
+   one-use theorem and return to the A7 Nelson and finite-volume measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
