@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-21.
+exist here. Last updated: 2026-07-22.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
@@ -461,17 +461,42 @@ with either cancellation of the total LP-weighted logarithmic and finite
 lower-chaos terms or registration of every survivor as an interaction
 counterterm.
 
-**Status:** OPEN SELECTED SUBGATE (2026-07-22).  Literal full products miss
-the target `L2` model regularities.  For a cone-localized piece of the raw
-nested tree `Pi(X,Pi(X,Q))`, the scalar coefficient is negative and its
-magnitude is bounded below per dyadic scale, giving a localized
-`c log Lambda` magnitude certificate.  This is registered as
-`NG-2026-07-22-A13-RAW-DIAMOND-JET`.  It does not prove noncancellation of the
-total symmetric tree.  Global same-point evenness does not remove every
-localized resonant contraction, so the total multiplier and both
-parenthesisations must be classified.  The obstruction is to the unqualified
-raw jet definition, not yet to a corrected model or to the Class-II Nelson
-theorem.
+**Status:** OPEN SELECTED SUBGATE; FINITE-CUTOFF FOREST CHILD CLOSED
+(2026-07-22).  Literal full products miss the target `L2` model regularities.
+For a cone-localized piece of the raw nested tree `Pi(X,Pi(X,Q))`, the scalar
+coefficient is negative and its magnitude is bounded below per dyadic scale;
+this is `NG-2026-07-22-A13-RAW-DIAMOND-JET` and does not prove the total-tree
+coefficient.  The finite forest continuation now classifies exactly the
+`2`, `4+2`, `5+2`, and `3+0` contraction families for both complete
+non-aliased sharp-cube parenthesisations.  Under the entrywise-even six-real
+A1 covariance, the full mixed matrix `E[X tensor partial_i X]` vanishes, so
+complete-sector value-derivative and double-cross corrections cancel.  Raw
+`XXQ` retains the finite tensor `Sigma_Lambda Q_Lambda`; it is not a new
+divergent interaction counterterm, but it must remain in the A7 comparison.
+This child theorem does not make an individual resonant jet convergent and
+does not close the selected subgate.  The remaining child is registered
+below.
+
+### **A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION**
+
+**Statement:** Construct balanced or base-point-increment homogeneous-chaos
+jets `P3 J1_Lambda` and `P4 J2_Lambda` for both pinned sharp-cube
+parenthesisations.  Prove coupled-cutoff convergence in every finite
+probability moment at `H^(alpha-1-kappa)` and
+`H^(2alpha-1-kappa)`, respectively.  Then reconstruct the translated rational
+coefficient expression in the exact A7 covariance-normal scheme, retaining
+the finite `Sigma Q` Wick-conversion term and every compensating lower-chaos
+correction.  The reconstruction must be independent of an intermediate
+Galerkin projection and must state the admitted regulator class.
+
+**Status:** OPEN CURRENT CHILD (2026-07-22), proof-ordered after the closed
+finite forest classification and before any adapted signed-form estimate.
+Expected Fourier variance targets are `<n>^(-2+epsilon)` for the third-chaos
+first jet and `<n>^(-3+epsilon)` for the fourth-chaos second jet.  These rates
+are targets, not yet theorems.  Full-product reconstruction alone is
+insufficient because it retains the low--high `Q` spectrum.  Closure requires
+both the continuum Cauchy estimates and the exact A7 identity; neither is
+inferred from the finite Hermite/sparse-convolution fixtures.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

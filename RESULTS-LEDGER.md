@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-062](#r-062) | Finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation | Scoped T4 analytic/exact/executed subproof: exact 2, 4+2, 5+2, and 3+0 forest classification; both non-aliased sharp-cube parenthesisations reconstruct the complete product; entrywise-even A1 parity cancels net value-derivative/double-cross terms while retaining finite tensor Sigma_Lambda Q_Lambda; 82/82 aggregate assertions |
 | [R-061](#r-061) | Universal derivative-square tensor and raw coefficient-jet obstruction | Scoped T4 analytic/executed result: universal Q converges in every finite Lp(H^(-1-kappa)) with deterministic H2 Cameron--Martin continuity; literal full jets miss the L2 target and a cone-localized nested subdiagram has logarithmically growing fixed-sign magnitude, without a total-tree noncancellation claim |
 | [R-060](#r-060) | Class-II translation identity and translated-current model boundary | Scoped T4 exact reduction: flexible potential coercivity enlarges the sufficient field-charge range to epsilon_6<gamma/6; exact translation, frame, expectation, and Cartan identities isolate the universal L3-level translated model as the next gate |
 | [R-059](#r-059) | Joint Class-II completion and nonfrozen determinant boundary | Scoped T4 reduction: corrected factor-four allocation, exact one-use/Nelson equivalence, mixed Hardy and nonfrozen Schatten-two theorems, exact coefficient curl, and independently executed one-shot Ramer singularity; the cutoff-uniform full-action theorem remains open |
@@ -81,6 +82,39 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-062"></a>
+### R-062 -- finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation
+
+**Result ID.** `A13-CLASSII-COEFFICIENT-JET-FOREST-FINITE-CUTOFF`.
+
+**Statement.** For the covariance-matched six-real A1 production Gaussian,
+same-cutoff Wick ordering, and a complete non-aliased sharp-cube Bony
+partition, the first and second coefficient monomials have the exact Wiener
+forest counts `2`, `4+2`, `5+2`, and `3+0`. Both complete nine-channel
+parenthesisations reconstruct the same exact triple convolution, although
+their individual channels generally differ. Entrywise parity of the A1
+covariance gives `E[X tensor partial_i X]=0` componentwise, so the net
+complete-sector value--derivative and double-cross corrections vanish. Raw
+`XXQ` retains the finite tensor `Sigma_Lambda Q_Lambda`; it is not a new
+divergent interaction counterterm at this complete finite-monomial level and
+may not be dropped from a later rational-coefficient reconstruction.
+
+**Proven in.** A13 /
+`classii-coefficient-jet-forest-classification-260722-v1.0`, with primary
+34/34, non-importing independent 31/31, integrated 17/17, aggregate 82/82,
+and five-page PDF form and visual QA.
+
+**Reuse scope.** Finite Gaussian Wiener-product forests, exact paraproduct
+reconstruction, and audits distinguishing localized resonant contractions
+from net complete-product counterterms.
+
+**Tier.** T4 finite-cutoff analytic/exact/executed subproof. No continuum
+balanced-jet convergence, improved full-product regularity, A7 rational-`B`
+reconstruction, adapted shift, Nelson moment, or interacting measure.
+
+**Publication target.** Stochastic-analysis methods note after the balanced
+continuum jet and exact reconstruction children are resolved.
+
 <a id="r-061"></a>
 ### R-061 -- universal derivative-square tensor and raw coefficient-jet obstruction
 
@@ -132,60 +166,60 @@ coefficient model is classified.
 **Statement.** For the hash-pinned A1 fixed-floor production functional and
 every finite common-even spectral cutoff, the scalar production potential
 obeys
-[
- {lambdaover4}r^2+{gammaover6}r^3
- ge left({gammaover6}-deltaight)r^3
- -{|lambda|^3over432delta^2}.
-]
+\[
+\frac{\lambda}{4}r^2+\frac{\gamma}{6}r^3
+\ge \left(\frac{\gamma}{6}-\delta\right)r^3
+-\frac{|\lambda|^3}{432\delta^2}.
+\]
 Consequently the sufficient one-use field range is
 `epsilon_6<gamma/6=0.27`, rather than the conservative equal split
-`gamma/12`.  The stress choice `epsilon_6=0.15`, `delta=0.06` leaves
+`gamma/12`. The stress choice `epsilon_6=0.15`, `delta=0.06` leaves
 sextic margin `0.06` and finite-volume constant
 `209.40115226337448`.
 
 For every finite cutoff, with `Y_i=partial_i X`, `H_i=partial_i h`, and
 `B_plus=B(X+h)`, the renormalised Class-II action satisfies the exact
 translation identity
-[
-egin{split}
- Delta V_J^{m ren}
-={}&{1over2}sum_iint
- [B(X+h)-B(X)]:(Y_iotimes Y_i-Gamma_{J,i})\
- &+sum_iint H_i^TB_+Y_i
- +{1over2}sum_iint H_i^TB_+H_i.
-end{split}
-]
-Deterministic shifts are nonnegative in expectation.  For the non-exact
-current one-form (omega_A=dm_A-q_A dho), Cartan homotopy gives an exact
+\[
+\begin{split}
+\Delta V_J^{\mathrm{ren}}
+={}&\frac12\sum_i\int
+[B(X+h)-B(X)]:(Y_i\otimes Y_i-\Gamma_{J,i})\\
+&+\sum_i\int H_i^{\mathsf T}B_+Y_i
++\frac12\sum_i\int H_i^{\mathsf T}B_+H_i.
+\end{split}
+\]
+Deterministic shifts are nonnegative in expectation. For the non-exact
+current one-form `omega_A=dm_A-q_A d rho`, Cartan homotopy gives an exact
 translation formula with
-(domega_A=(ho+epsilon_ho)^{-1}dhowedge dm_A) and operator norm at
-most four.  A constant active-doublet shift at (X=0) refutes only a
+`d omega_A=(rho+epsilon_rho)^(-1) d rho wedge d m_A` and operator norm at
+most four. A constant active-doublet shift at `X=0` refutes only a
 cutoff-independent deterministic constant remainder; it does not refute an
 integrable random remainder.
 
 **Where proved.**
 `A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, proof unit
-`classii-translation-model-reduction-260722-v1.0`.  The six-real
+`classii-translation-model-reduction-260722-v1.0`. The six-real
 Pauli-frame primary route gives 29/29 PASS, the non-importing direct-current
 and independent mode-count route gives 24/24 PASS, and the one-command
-integrated verifier gives 106/106 PASS.  The seven-page PDF passes form,
+integrated verifier gives 106/106 PASS. The seven-page PDF passes form,
 zero-overfull, and full-page visual QA.
 
 **Reuse.** Derivative Gibbs constructions with covariance-normal quadratic
-currents and Cameron--Martin translations.  The flexible sextic lemma and
-Cartan current identity are model independent.  The exact regularity audit
-shows why a single coefficient-contracted `L2` composite is insufficient:
-the next theorem must construct the universal centered derivative-square
-tensor and its coefficient jets with at least the endpoint `L3` model-norm
-moment, translation continuity, and no new divergent interaction
-counterterm.
+currents and Cameron--Martin translations. The flexible sextic lemma and
+Cartan current identity are model independent. The exact regularity audit
+shows why a single coefficient-contracted `L2` composite is insufficient.
+R-061 subsequently constructs the universal centered derivative-square
+tensor and its deterministic Cameron--Martin action, while R-062 classifies
+the finite-cutoff coefficient jets and their complete-sector cancellation.
 
 **Tier / publication target.** Scoped T4 exact analytic/executed reduction;
-no tier promotion.  The sole canonical objective remains
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`; its selected subordinate gate
-is `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`.  The random
-adapted form bound, the Nelson moment, an interacting measure, floor or
-regulator removal, T5, T6, and T7 remain open.
+no tier promotion. The translated-current and finite-forest descendants are
+now closed. The selected child is
+`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
+The continuum coefficient-jet bound, rational A7 reconstruction, adapted
+random form bound, Nelson moment, interacting measure, floor or regulator
+removal, T5, T6, and T7 remain open.
 
 ---
 

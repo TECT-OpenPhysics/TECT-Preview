@@ -3,12 +3,12 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 2 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION is closed: Q converges in every finite Lp(H^(-1-kappa)) and is locally Lipschitz under deterministic H2 Cameron-Martin translation. Adversarial review refutes literal full XQ/XXQ target L2 regularities. A cone-localized raw nested subdiagram has a fixed negative scalar coefficient whose magnitude accumulates like c log Lambda, but noncancellation of the total symmetric Littlewood-Paley tree is not proved; NG-2026-07-22-A13-RAW-DIAMOND-JET records this corrected boundary. Next prove A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION: pin the total multiplier or base-point correctors, enumerate all lower-chaos contractions, and prove cancellation in the exact A7 reconstruction or register a surviving counterterm. The parent model lift and umbrella one-use theorem remain open; termwise Young and prior excluded architectures remain forbidden.
+  - The finite-cutoff coefficient-jet forest child is closed at scoped T4: exact 2, 4+2, 5+2, and 3+0 contraction classification; complete non-aliased sharp-cube reconstruction; entrywise-even six-real parity cancellation; finite Sigma_Lambda Q_Lambda retained. Primary 34/34, independent 31/31, integrated 17/17, aggregate 82/82 pass. This does not close continuum coefficient jets or the one-use theorem. Current child: A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION. Prove coupled-cutoff P3/P4 convergence and exact A7 rational-B reconstruction before the signed strict-past one-use estimate. No A14 claim.
   - _updated 2026-07-22_
 
 ## Next up
@@ -30,6 +30,9 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 2 · Done (recent) 44
   - _updated 2026-06-12_
 - **T-045** A6: decide full-field bare concentration with partition-function tube bounds and tightness  _(owner: unassigned; claim: A6-CLASSII-K-COMPOSITE-DEFINITION; gate: A6-CLASSII-FULL-FIELD-BARE-CONCENTRATION)_
   - _updated 2026-07-20_
+- **T-051** Reconcile stale Sector-A claim cards with the five-family theorem map  _(owner: Codex)_
+  - One substantive claim card per turn. Correct stale next_action/open-gate text in A10, A9, A11, A12, A6, A5, and A4 without changing valid tiers or immutable IDs; regenerate all ledgers after each card.
+  - _updated 2026-07-22_
 
 ## Done (recent)
 

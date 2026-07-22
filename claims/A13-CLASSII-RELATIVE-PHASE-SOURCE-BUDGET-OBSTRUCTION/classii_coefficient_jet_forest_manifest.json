@@ -1,0 +1,133 @@
+{
+  "schema": "tect/a13-classii-coefficient-jet-forest/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "result_id": "A13-CLASSII-COEFFICIENT-JET-FOREST-FINITE-CUTOFF",
+  "frozen_on": "2026-07-22",
+  "status": "T4 FINITE-CUTOFF FOREST SUBPROOF CLOSED; CONTINUUM COEFFICIENT-JET CLASSIFICATION OPEN",
+  "authority": {
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "a6_k_manifest": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "a7_manifest": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
+      "sha256": "4e14817d1928d54fa15e5871e506870d51c0b49baee5407c24200b2a726c5607"
+    },
+    "a13_universal_q_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_universal_q_cm_translation_manifest.json",
+      "sha256": "b5d3976a6275e521c18565b86271d41fafb836dfe05098324dc4d902395d6f87"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_coefficient_jet_forest.py",
+      "sha256": "f0f4c2b8de11afbee67865435cd2075996756974096cd25a92fd292b2e945e77",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_coefficient_jet_forest_independent.py",
+      "sha256": "5e1d6d696d4df18084f2046ac939d949a7c0e26b756a3f2d6b5a94e453a393a0",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_coefficient_jet_forest_verify.py",
+      "sha256": "691f0eb36080ca366ffb0a63de98cc44798cad5564a36496a908358d1c9006b1",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-coefficient-jet-forest-classification-260722-v1.0.tex.txt",
+      "sha256": "3a4d1bcec06e310efe52245518922ab1dbb12c442fdc76983ff8f5879a030c52",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-coefficient-jet-forest-classification-260722-v1.0.pdf",
+    "sha256": "40daad183c74d94f65800a39a1e4db96ea590b3bab94c2a60cb699f4765be532",
+    "version": "1.0",
+    "pages": 5,
+    "size_bytes": 318933,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "PASS"
+  },
+  "scope": "Fixed L=16 six-real A1 production Gaussian; finite common entrywise-real-even sharp cutoff; covariance-matched Wick ordering; complete low/resonant/high sharp-cube partition on the full exact convolution support; no intermediate projection or aliasing. A single common root projection is harmless. The theorem is finite-cutoff forest algebra only.",
+  "definitions": {
+    "mixed_covariance": "K_{Lambda,i}^{ca}=E[X_Lambda^c partial_i X_Lambda^a]=0 entrywise.",
+    "centered_tensor": "Q_{Lambda,i}^{ab}=:partial_i X_Lambda^a partial_i X_Lambda^b: with the same-cutoff Gamma_Lambda.",
+    "first_forest": "XQ=P3+two P1 cross contractions; P1 vanishes only after the complete sector sum under K=0.",
+    "second_centered_forest": ":XX:Q=P4+four P2 cross contractions+two P0 double crosses; all lower chaoses vanish after complete reconstruction under K=0.",
+    "second_raw_forest": "XXQ has the centered forest plus the finite tensor Sigma_Lambda Q, hence five P2 families and two P0 families before parity cancellation.",
+    "recursive_forest": "X P3(XQ) has P4 plus three P2 contractions and no P0 term before the outer subtraction."
+  },
+  "oracles": {
+    "contraction_counts": {
+      "first_jet_cross": 2,
+      "wick_xx_q_single_cross": 4,
+      "wick_xx_q_double_cross": 2,
+      "raw_xx_q_second_chaos": 5,
+      "raw_xx_q_zero_chaos": 2,
+      "recursive_x_times_p3_single_cross": 3,
+      "recursive_x_times_p3_zero_chaos": 0
+    }
+  },
+  "audit": {
+    "tolerance": 1e-12,
+    "classification_cutoff": 3,
+    "partition_cutoff": 3,
+    "direction": 0,
+    "first_jet_output": [1, 0, 0],
+    "cone_radius": 2,
+    "cone_minimum_magnitude": 1e-12,
+    "asymmetric_minimum": 1e-10,
+    "value_covariance_cutoffs": [1, 2, 3, 4],
+    "sparse_convolution_cutoff": 2,
+    "sparse_convolution_seed": 1313231
+  },
+  "independent_audit": {
+    "tolerance": 1e-10,
+    "hermite_order": 32,
+    "maximum_degree": 4,
+    "pointwise_points": [-1.7, -0.4, 0.0, 0.8, 2.1],
+    "partition_cutoff": 3,
+    "parity_cutoff": 3,
+    "direction": 0,
+    "asymmetric_minimum": 1e-10
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-9
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-primary-coefficient-jet-forest-classification/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-independent-coefficient-jet-forest-classification/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-22-integrated-coefficient-jet-forest-classification/result.json",
+    "primary_assertions": 34,
+    "independent_assertions": 31,
+    "integrated_own_assertions": 17,
+    "expected_total_assertions": 82,
+    "command": "python codes/foundations/a13_classii_coefficient_jet_forest_verify.py"
+  },
+  "consequence": {
+    "result_ledger_id": "R-062",
+    "tier_after": "T4",
+    "closed_subproof": "A13-CLASSII-COEFFICIENT-JET-FOREST-FINITE-CUTOFF",
+    "partially_advanced_subgate": "A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION",
+    "parent_gate": "A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+    "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+    "next_subproof": "A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION"
+  },
+  "claims_not_established": {
+    "continuum_coefficient_jet_convergence": false,
+    "improved_full_product_regularity": false,
+    "individual_resonant_counterterm_cancellation": false,
+    "rational_B_reconstruction": false,
+    "A7_composite_identity": false,
+    "adapted_shift_control": false,
+    "Nelson_bound": false
+  },
+  "honesty_boundary": "This scoped T4 finite-cutoff result classifies the exact Wiener forests and complete-sector cancellation for covariance-matched non-aliased monomials. It retains the finite tensor Sigma_Lambda Q and does not justify deleting a resonant-only correction. It does not prove continuum jet convergence, the advertised improved regularities, total smooth-regulator independence, rational coefficient reconstruction, equality with the A7 composite, adapted random translation control, the signed one-use estimate, the q=10/9 Nelson moment, an interacting measure, floor or regulator removal, infinite volume, phase transition, BCC, T5, T6, or T7."
+}

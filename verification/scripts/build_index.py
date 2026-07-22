@@ -25,11 +25,14 @@ Regenerate after any notes/ or status.json change:
     python verification/scripts/build_index.py            # write
     python verification/scripts/build_index.py --check     # CI staleness gate
 """
-__version__ = "1.0.1"  # 1.0.1 (2026-06-09): sort sub-proof folders by name, not by
+__version__ = "1.1.1"  # 1.0.1 (2026-06-09): sort sub-proof folders by name, not by
 #                       Path object -- WindowsPath compares case-insensitively while
 #                       PosixPath is case-sensitive, which reordered mixed-case sub-
 #                       folders (e.g. B1-RH-ENUM) and made the index falsely STALE on
 #                       Windows after Linux generation (cross-OS reproducibility bug).
+# 1.1.0 (2026-07-22): render the binding Sector-A theorem-family map, consume
+#                      its logical A13 subproof taxonomy, and preserve flat
+#                      compatibility notes when physical subproof folders exist.
 
 import os, re, sys, json, tempfile
 from pathlib import Path
@@ -37,6 +40,7 @@ from datetime import datetime
 
 REPO = Path(__file__).resolve().parents[2]
 CLAIMS = REPO / "claims"
+SECTOR_A_MAP_PATH = REPO / "governance" / "sector-a-theorem-map.json"
 
 SECTORS = {
     "A": "Microscopic Foundation",
@@ -71,6 +75,21 @@ TAXONOMY = {
         ("G-A0-DUI",     ("ga0",)),
     ],
 }
+
+
+def load_sector_a_map():
+    try:
+        return json.loads(SECTOR_A_MAP_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+SECTOR_A_MAP = load_sector_a_map()
+for _claim_id, _groups in SECTOR_A_MAP.get("subproof_taxonomy", {}).items():
+    TAXONOMY[_claim_id] = [
+        (group["name"], tuple(group.get("lineage_prefixes", [])))
+        for group in _groups
+    ]
 
 FOOTER_LABELS = ["Result ID", "Precise statement", "Scope", "Dependencies",
                  "Evidence grade", "Reproduction command", "Expected output",
@@ -138,6 +157,31 @@ def sub_groups(cid, notes_files):
         for d in phys:
             fs = sorted(f.name for f in (d / "notes").glob("*.tex.txt"))
             groups.append((d.name, [(d / "notes" / f) for f in fs]))
+        # During a non-destructive migration, old evidence may remain in the
+        # claim-level notes/ folder while new units use physical subfolders.
+        # Never make either set disappear from the reviewer index.
+        flat_paths = [cdir / "notes" / f for f in sorted(notes_files)]
+        if flat_paths:
+            rules = TAXONOMY.get(cid)
+            if rules:
+                logical = {name: [] for name, _ in rules}
+                fallback = []
+                for path in flat_paths:
+                    slug = lineage_slug(path.name)
+                    matches = [name for name, prefixes in rules if slug.startswith(prefixes)]
+                    if len(matches) == 1:
+                        logical[matches[0]].append(path)
+                    else:
+                        fallback.append(path)
+                physical_names = {name for name, _ in groups}
+                for name, _ in rules:
+                    if logical[name]:
+                        label = name if name not in physical_names else f"{name}-COMPAT"
+                        groups.append((label, logical[name]))
+                if fallback:
+                    groups.append(("FLAT-COMPATIBILITY", fallback))
+            else:
+                groups.append(("FLAT-COMPATIBILITY", flat_paths))
         return groups, True
     rules = TAXONOMY.get(cid)
     if not rules:
@@ -171,6 +215,63 @@ def read_card(cid):
     except Exception:
         return None
 
+
+def claim_sort_key(cid):
+    match = re.match(r"^([A-F])(\d+)-(.*)$", cid)
+    if not match:
+        return (cid, 0, "")
+    return (match.group(1), int(match.group(2)), match.group(3))
+
+
+def sector_a_family_section():
+    families = SECTOR_A_MAP.get("families", [])
+    if not families:
+        return []
+    registered_count = sum(len(family.get("claims", [])) for family in families)
+    lines = ["## Sector A canonical theorem families", ""]
+    lines.append(
+        f"The {registered_count} Sector-A claim cards are immutable evidence and "
+        f"branch records, not {registered_count} peer-level physical theorems. "
+        f"The binding review map has {len(families)} theorem families."
+    )
+    lines.append("")
+    lines.append("| Family | Kind | Registered cards | Anchor / active host |")
+    lines.append("|---|---|---|---|")
+    for family in families:
+        members = family.get("claims", [])
+        member_text = ", ".join(
+            f"`{entry.get('id')}` ({entry.get('role', '').lower().replace('_', '-')})"
+            for entry in members
+        )
+        anchors = []
+        if family.get("long_term_theorem_anchor"):
+            anchors.append(f"anchor `{family['long_term_theorem_anchor']}`")
+        if family.get("active_subproof_host"):
+            anchors.append(f"host `{family['active_subproof_host']}`")
+        if not anchors:
+            top = [
+                entry["id"] for entry in members
+                if entry.get("role") in {
+                    "TOP_LEVEL_THEOREM", "CANONICAL_OBJECT", "BRANCH_THEOREM"
+                }
+            ]
+            anchors = [", ".join(f"`{claim_id}`" for claim_id in top)] if top else ["--"]
+        lines.append(
+            f"| `{family.get('id')}`<br>{family.get('title', '')} "
+            f"| {family.get('kind', '')} | {member_text} | {'; '.join(anchors)} |"
+        )
+    lines.append("")
+    frontier = SECTOR_A_MAP.get("active_frontier", {})
+    if frontier:
+        lines.append(
+            "**Active proof unit:** "
+            f"`{frontier.get('selected_subproof')}` is recorded as a "
+            f"{str(frontier.get('record_as', '')).lower()} under "
+            f"`{frontier.get('host_claim')}`; it is not a new numbered claim."
+        )
+        lines.append("")
+    return lines
+
 def per_claim_index(cid):
     cdir = CLAIMS / cid
     card = read_card(cid) or {}
@@ -179,7 +280,7 @@ def per_claim_index(cid):
     flat = [f.name for f in notes_dir.glob("*.tex.txt")] if notes_dir.exists() else []
     groups, physical = sub_groups(cid, flat)
     L = [f"# {cid} — proof-unit index", ""]
-    L.append(f"**Claim**: {card.get('title','(see status.json)')}  ")
+    L.append(f"**Claim**: {card.get('title','(see status.json)')}")
     L.append(f"**Tier**: {claim_tier or '—'} ({card.get('lifecycle','')})  ·  "
              f"**Hypotheses**: {', '.join(card.get('hypotheses',[])) or '—'}  ·  "
              f"**Open gates**: {', '.join(card.get('open_gates',[])) or '—'}")
@@ -238,8 +339,11 @@ def master_index():
     L.append("")
     L.append("> GENERATED by `build_index.py` — do not hand-edit.")
     L.append("")
-    claim_dirs = sorted([d.name for d in CLAIMS.iterdir()
-                         if d.is_dir() and not d.name.startswith("_")])
+    L.extend(sector_a_family_section())
+    claim_dirs = sorted(
+        [d.name for d in CLAIMS.iterdir() if d.is_dir() and not d.name.startswith("_")],
+        key=claim_sort_key,
+    )
     for letter, sname in SECTORS.items():
         sec_claims = [c for c in claim_dirs if c.startswith(letter)]
         if not sec_claims:

@@ -22,10 +22,12 @@ Changelog:
   1.0.0 (2026-06-05) first issue: schema/DAG/monotonicity linter + CLAIMS.md render.
   1.1.0 (2026-06-05) added BY-CLAIM.md generated view + dual sync-check.
   1.2.0 (2026-06-05) version header added (code-versioning rule, naming §5).
+  1.3.0 (2026-07-22) enforce the exact-cover Sector-A theorem-family map and
+        fail closed on unapproved claim-ID expansion.
 """
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-06-05"
+__version_issued__ = "2026-07-22"
 
 import argparse
 import datetime as _dt
@@ -39,6 +41,7 @@ CLAIMS_DIR = REPO / "claims"
 GATES_FILE = CLAIMS_DIR / "GATES.md"
 LEDGER = REPO / "CLAIMS.md"
 BYCLAIM = REPO / "archive" / "legacy" / "BY-CLAIM.md"
+SECTOR_A_MAP = REPO / "governance" / "sector-a-theorem-map.json"
 
 TIERS = ["T0", "T1", "T2", "T3", "T4", "T5", "T6", "T7"]
 LIFECYCLES = {"ACTIVE", "SUPERSEDED", "REFUTED"}
@@ -287,6 +290,26 @@ def main():
     for c in cards.values():
         check_card(c, cards, registry, errors)
     check_dag(cards, errors)
+
+    # The family map distinguishes theorem families from branch packages and
+    # development anchors. Keeping this check inside the ledger linter makes
+    # it part of doctor.py, release_check.py, and the commit watcher without a
+    # second publication-gate list.
+    try:
+        from check_sector_a_taxonomy import validate as validate_sector_a_taxonomy
+
+        theorem_map = json.loads(SECTOR_A_MAP.read_text(encoding="utf-8"))
+        sector_a_cards = {
+            claim_id: card
+            for claim_id, card in cards.items()
+            if card.get("sector") == "A"
+        }
+        taxonomy_errors, _ = validate_sector_a_taxonomy(
+            sector_a_cards, theorem_map, REPO, CLAIMS_DIR
+        )
+        errors.extend(f"Sector-A taxonomy: {error}" for error in taxonomy_errors)
+    except (OSError, ValueError, json.JSONDecodeError) as exc:
+        errors.append(f"Sector-A taxonomy unavailable or invalid: {exc}")
 
     if errors:
         print(f"LINT: FAIL ({len(errors)} error(s))")

@@ -1,0 +1,316 @@
+% =============================================================================
+% Title: Finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-22; this version issued 2026-07-22
+% Status: scoped T4 finite-cutoff subproof; continuum coefficient-jet gate remains open
+% =============================================================================
+
+\newcommand{\T}{\mathbb T}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\cP}{\mathcal P}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\mathrm d}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{The coefficient-jet forest is classified exactly at finite cutoff,
+without closing the coefficient-jet model.}
+For the covariance-matched six-real A1 production Gaussian, the complete
+non-aliased sharp-cube Bony forests reproduce the literal monomials.  The
+summed value--derivative and double-cross contractions vanish because the
+full matrix $\E[X\otimes\partial_iX]$ is zero.  For an uncentred coefficient
+pair, the only remaining lower-chaos Wick-conversion term is the finite
+tensor $\Sigma_\Lambda^{cd}Q_{\Lambda,i}^{ab}$.
+
+\medskip
+This result explains how a fixed-sign cone-localized contraction can coexist
+with zero net complete-sector correction.  It does not make an individual
+resonant jet convergent, does not improve the literal full product's spatial
+regularity, and does not identify a rational-$B$ reconstruction with the A7
+composite.  A13 remains T4.  The selected coefficient-jet gate is only
+partially advanced.
+}}
+\end{center}
+
+The scope is the fixed $L=16$ three-torus, a centred stationary six-real
+finite Fourier Gaussian with the A1 production covariance, a common
+entrywise real-even cutoff, exact Fourier convolution with no intermediate
+projection, and Wick subtractions evaluated with the same cutoff law.  A
+single deterministic root projection after the complete product is allowed.
+Node-dependent projections, circular aliasing, adapted shifts, continuum jet
+convergence, floor removal, and infinite volume are excluded.
+
+\section*{1. Pinned Gaussian and parity identity}
+
+Write $V=L^3$, $\omega=2\pi/L$, and
+\[
+ X_\Lambda(x)=V^{-1/2}\sum_{n\in\mathbb Z^3}
+ R_\Lambda(n)\widehat X(n)e^{i\omega n\cdot x},
+ \qquad
+ \E[\widehat X^a(n)\widehat X^b(m)]
+ =\mathbf1_{n+m=0}C^{ab}(n).
+ \tag{1.1}
+\]
+Here $a,b\in\{1,\ldots,6\}$.  The production complex symbol is a scalar
+even function of $|n|^2$ times the identity plus a real symmetric internal
+mass matrix.  Its inverse is therefore entrywise real and even.  The A7
+six-real covariance is one half of its realification.  With a common real-even
+$R_\Lambda$, every entry satisfies
+\[
+ C_\Lambda^{ab}(-n)=C_\Lambda^{ab}(n).
+ \tag{1.2}
+\]
+
+Let $Y_{\Lambda,i}=\partial_iX_\Lambda$.  The complete mixed covariance
+matrix is
+\[
+ K_{\Lambda,i}^{ca}
+ :=\E[X_\Lambda^c(x)Y_{\Lambda,i}^a(x)]
+ ={i\omega\over V}\sum_n n_i C_\Lambda^{ca}(n)=0.
+ \tag{1.3}
+\]
+The conclusion requires the matrix identity (1.3), not merely Hermiticity of
+the covariance.  An odd imaginary off-diagonal covariance can be Hermitian
+and compatible with a real field while making $K_{\Lambda,i}\ne0$.
+
+Define the covariance-matched tensor
+\[
+ Q_{\Lambda,i}^{ab}
+ =:Y_{\Lambda,i}^aY_{\Lambda,i}^b:
+ =Y_{\Lambda,i}^aY_{\Lambda,i}^b
+  -\Gamma_{\Lambda,i}^{ab},
+ \qquad
+ \Gamma_{\Lambda,i}^{ab}
+ =\E[Y_{\Lambda,i}^aY_{\Lambda,i}^b].
+ \tag{1.4}
+\]
+A subtraction from a different cutoff would leave an additional zero-chaos
+term and is not admitted.
+
+\section*{2. Exact first-jet forest}
+
+The componentwise Wiener product formula gives
+\begin{align}
+ X^c Q_i^{ab}
+ ={}&:X^cY_i^aY_i^b:
+   +K_i^{ca}Y_i^b+K_i^{cb}Y_i^a.
+ \tag{2.1}
+\end{align}
+Thus the raw first jet has one third-chaos term and two first-chaos cross
+contractions.  Under (1.3), its complete monomial is pure third chaos.
+
+For a deterministic bilinear Fourier multiplier $m(p,r)$, the first-chaos
+part at output $n$ is, with the convention $\partial_i\leftrightarrow
+i\omega n_i$,
+\[
+ (\cP_1J_1)^b(n)
+ =\omega^2n_i\sum_p p_i m(p,n-p)C^{ca}(p)X^b(n)
+  +(a\leftrightarrow b).
+ \tag{2.2}
+\]
+The sign is positive because the contracted derivative mode is $-p$.
+When the complete multiplier sum is one, (2.2) reduces to (1.3) and vanishes.
+An individual resonant multiplier need not vanish.
+
+\section*{3. Exact second-jet forest}
+
+Let $\Sigma_\Lambda^{cd}=\E[X_\Lambda^cX_\Lambda^d]$.  For the Wick-centred
+coefficient pair,
+\begin{align}
+ :X^cX^d:Q_i^{ab}={}&:X^cX^dY_i^aY_i^b:
+ +K_i^{ca}:X^dY_i^b:
+ +K_i^{cb}:X^dY_i^a: \notag\\
+ &+K_i^{da}:X^cY_i^b:
+ +K_i^{db}:X^cY_i^a:
+ +K_i^{ca}K_i^{db}+K_i^{cb}K_i^{da}.
+ \tag{3.1}
+\end{align}
+There are exactly four single-cross second-chaos families and two
+double-cross constants.  They all vanish when the full matrix $K_i$ vanishes.
+
+For an uncentred pair,
+\[
+ X^cX^dQ_i^{ab}
+ =:X^cX^d:Q_i^{ab}+\Sigma_\Lambda^{cd}Q_i^{ab}
+ =:X^cX^dY_i^aY_i^b:
+  +\Sigma_\Lambda^{cd}Q_i^{ab}.
+ \tag{3.2}
+\]
+Before the parity cancellation, the raw forest therefore has five
+second-chaos families and two zero-chaos families.  If the inner $XQ$ is first
+projected to pure third chaos, multiplication by the outer $X$ has three
+second-chaos contractions and no double-cross constant before its own
+subtraction.  These are distinct forest conventions:
+\[
+ 2,\qquad 4+2,\qquad 5+2,\qquad 3+0.
+ \tag{3.3}
+\]
+The scalar multiplicities are independently recovered by
+\begin{align*}
+ H_1H_2&=H_3+2H_1, &
+ H_2H_2&=H_4+4H_2+2H_0,\\
+ H_1^2H_2&=H_4+5H_2+2H_0, &
+ H_1H_3&=H_4+3H_2.
+\end{align*}
+They verify the combinatorics but do not replace the six-real tensor formula.
+
+In Fourier space, a scalar double cross at zero output contains
+\[
+ -{\omega^2\over V^2}\sum_{p,q}p_iq_iw_\sigma(p,q,-p,-q)
+ \left[C^{ca}(p)C^{db}(q)+C^{cb}(p)C^{da}(q)\right].
+ \tag{3.4}
+\]
+The minus sign comes from the two Fourier derivatives, not from Wick's
+pairing rule.  A positive cone can give a fixed negative contribution, as in
+the preceding A13 note.  Equation (3.4) does not have a definite sign after
+all angular and Bony sectors are restored.
+
+\section*{4. Complete sharp-cube reconstruction}
+
+Let $S_j=\mathbf1_{\{\|n\|_\infty\le2^j\}}$ and
+$\Delta_j=S_j-S_{j-1}$, with a declared low block.  Every scale pair belongs
+to exactly one region
+\[
+ j\le k-2,\qquad |j-k|\le1,\qquad k\le j-2,
+ \tag{4.1}
+\]
+which defines the low--high, resonant, and high--low multipliers.  Their sum
+is one on every Fourier pair.  Deterministic multipliers commute with Wiener
+chaos projection, so summing the forest correctors over all three sectors
+recovers (2.1).
+
+For the two second-jet parenthesisations, use the full nine-channel sums
+\[
+ \sum_{\alpha,\beta}\alpha\bigl(X^c,
+     \beta(X^d,Q_i^{ab})\bigr),
+ \qquad
+ \sum_{\alpha,\beta}\alpha\bigl(
+     \beta(X^c,X^d),Q_i^{ab}\bigr).
+ \tag{4.2}
+\]
+Each sum separately equals the exact triple convolution.  Their complete
+sums agree by associativity, but corresponding individual channels generally
+do not; their difference is an associator.  Adding the two complete trees
+would double-count the monomial.
+
+If $X_J$ is supported through scale $J$, an $XXQ$ output can reach the
+$J+2$ block.  Hence the resolution in (4.2) must cover the full convolution
+support.  Intermediate projections such as
+$S_J[X S_J(XQ)]$ and $S_J[S_J(XX)Q]$ are not interchangeable.  The theorem
+uses exact sparse convolution, or equivalently sufficient zero padding,
+followed at most by one common root projection.
+
+Combining (1.3), (3.1), and (4.2) proves that the net complete-sector
+value--derivative and double-cross corrections vanish.  This is compatible
+with the localized negative cone in (3.4): the omitted complementary sectors
+carry the opposite net coefficient.  It does not license subtracting only
+the resonant correction while leaving the complementary sectors unchanged.
+
+\section*{5. The finite Wick-conversion term}
+
+The production covariance behaves as $|n|^{-4}$.  A three-dimensional shell
+contains $O(r^2)$ modes, so
+\[
+ \sum_n\|C(n)\|<\infty,
+ \qquad
+ \Sigma_\Lambda\longrightarrow\Sigma.
+ \tag{5.1}
+\]
+Consequently $\Sigma_\Lambda^{cd}Q_{\Lambda,i}^{ab}$ in (3.2) is not a new
+divergent interaction counterterm at this monomial/full-partition level.  It
+is nevertheless a load-bearing finite tensor Wick-conversion term.  A later
+rational-$B$ Taylor reconstruction must retain it and compare it with the
+exact A7 covariance-normal prescription.
+
+The complete monomials in (2.1) and (3.2) retain the low--high spectrum of
+$Q$.  The previous A13 analysis therefore still applies: literal full $XQ$
+and $XXQ$ do not have the improved coefficient-jet regularities required by
+the translated-current model.  The next proof must construct balanced or
+base-point-increment top-chaos jets, prove their coupled-cutoff convergence,
+and supply explicit compensating reconstruction terms.
+
+\section*{6. Executed adversarial audit}
+
+The primary implementation independently derives the contraction counts,
+checks the three-way sharp-cube partition on every small-grid pair, and uses
+integer sparse convolution without intermediate truncation to reconstruct
+both nine-channel parenthesisations.  It evaluates the production six-real
+covariance, verifies entrywise parity and $K_i=0$, records a nonzero one-sided
+cutoff control, and confirms that each localized positive-cone coefficient is
+negative while the complete sector sum vanishes.
+
+The non-importing implementation recovers every Hermite coefficient by
+Gauss--Hermite projection, reimplements the dyadic boundary rules, pairs
+$n$ with $-n$ independently, and repeats the one-sided failure control.  The
+integrated verifier pins all sources and requires 34/34 primary, 31/31
+independent, and 17/17 integrated assertions, for 82/82 in total.
+
+These finite fixtures are regression and falsifier evidence.  They are not a
+cutoff-Cauchy estimate or a continuum regularity proof.
+
+\section*{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{VALID WITH MITIGATION: a real-even scalar regulator alone is
+enough for every matrix covariance.}  It is not.  The proof uses the
+entrywise-even A1 covariance, equivalently the complete matrix identity
+$K_i=0$.  An odd imaginary off-diagonal covariance is excluded.
+
+\item \textbf{DISMISSED: the cone-localized logarithmic coefficient
+contradicts complete cancellation.}  The cone is one sector and angular
+subdiagram.  The exact complete partition adds complementary coefficients;
+only their sum is constrained by $K_i=0$.
+
+\item \textbf{VALID WITH MITIGATION: the two parenthesisations agree channel
+by channel.}  They do not.  The integer fixture records different channels
+with equal complete sums.  Each tree must be reconstructed separately.
+
+\item \textbf{UPHELD AGAINST AN INTERMEDIATE-PROJECTION READING: Galerkin
+projection may be inserted at every node.}  Such projections break
+associativity and are outside this theorem.  Only exact convolution and an
+optional common root projection are admitted.
+
+\item \textbf{VALID WITH MITIGATION: $\Sigma_\Lambda Q_\Lambda$ can be
+dropped because it is finite.}  Finiteness means it is not a new divergent
+counterterm.  It remains part of the exact Wick conversion and must enter the
+A7 comparison.
+
+\item \textbf{UPHELD AGAINST CLOSURE: the forest classification proves the
+coefficient-jet model.}  It does not prove improved regularity, continuum
+convergence, rational coefficient reconstruction, adapted translation, or
+the Nelson estimate.  The selected A13 gate remains open.
+\end{enumerate}
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID:               A13-CLASSII-COEFFICIENT-JET-FOREST-FINITE-CUTOFF
+Precise statement:       Complete non-aliased sharp-cube forests reproduce the
+                         covariance-matched finite-cutoff first and second
+                         coefficient monomials; summed value-derivative and
+                         double-cross corrections vanish, while raw XXQ keeps
+                         the finite tensor Sigma_Lambda Q_Lambda.
+Scope:                   L=16; six-real A1 Gaussian; same-cutoff Wick ordering;
+                         entrywise-even common cutoff; exact convolution; no
+                         intermediate projection; finite cutoff only.
+Dependencies:            A1-PRODUCTION-FUNCTIONAL-REALISATION;
+                         A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE;
+                         A13 universal-Q subproof; A10-A13 sharp cubes.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/a13_classii_coefficient_jet_forest_verify.py
+Expected output:         34/34 primary, 31/31 independent, 17/17 integrated;
+                         aggregate 82/82; integrated PASS; exit 0.
+Falsification gate:      Any wrong forest count, incomplete Bony partition,
+                         nonzero complete K or double-cross coefficient,
+                         parenthesisation mismatch after full summation,
+                         source-hash mismatch, or failed assertion.
+Tier before / after:     T4 / T4 (no tier change).
+No-overclaim statement:  No continuum jet convergence, improved full-product
+                         regularity, A7 reconstruction, adapted shift, one-use
+                         estimate, Nelson bound, measure, T5, T6, or T7.
+Next required action:    Prove coupled-cutoff convergence of balanced P3/P4
+                         jets and the exact finite-term A7 reconstruction.
+\end{verbatim}

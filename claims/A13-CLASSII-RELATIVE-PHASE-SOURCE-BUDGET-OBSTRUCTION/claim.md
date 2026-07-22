@@ -2,563 +2,233 @@
 
 ## Claim
 
-For the hash-pinned A1 production coefficients and the A10--A13 strict sharp
-rectangular-cube filtration, the exact Class-II matrix has the compact Fierz
-form
+A13 is the active subproof host inside the full three-component derivative
+Class-II constructive-measure programme. It is not a new peer-level Sector-A
+endpoint theorem. For the hash-pinned A1 production coefficients, the A7
+covariance-normal convention, and the A10--A13 strict sharp-cube filtration,
+the following structural results and proof-architecture boundaries hold.
 
-\[
-B(X)=dP-4(b+c)\frac{s}{R}(Z\otimes X+X\otimes Z)
-     +4c\frac{s^2}{R^2}X\otimes X,
-\]
+1. Exact Fierz algebra gives separate doublet and singlet phase nulls and an
+   output-shell commutator, but the registered opposite-corner carrier makes
+   standalone deterministic source absorption fail.
+2. The corrected joint-source calculation has principal-symbol source
+   doubling and a factor-four source-square budget. It retires the scoped
+   coefficient-one/local-Bellman, endpoint-only timewise Young, repeated
+   past-energy, and direct one-shot Ramer routes without refuting every signed
+   global transport.
+3. The finite-cutoff translated-current calculation proves the flexible
+   potential range `epsilon_6<gamma/6`, the exact translation, frame, and
+   Cartan identities, and deterministic-shift expectation positivity. It does
+   not control an adapted random shift.
+4. The universal centered tensor
 
-and separately annihilates the doublet and singlet phase tangents. The actual
-next-shell source is an exact commutator. These structural cancellations do
-not remove the opposite-corner internal `SU(2)` relative-phase carrier from
-v1.0. Its degree-65536 polynomial gives
+   \[
+   Q_{\Lambda,i}^{ab}
+   =\partial_iX_\Lambda^a\partial_iX_\Lambda^b
+    -\Gamma_{\Lambda,i}^{ab}
+   \]
 
-\[
-C_{\rm rel}=0.9160527282652334>0.9>\gamma/3=0.54,
-\]
+   converges in every finite
+   `Lp(Omega;H^(-1-kappa))` and has a locally Lipschitz deterministic `H2`
+   Cameron--Martin action. Literal full `XQ` and `XXQ` products retain the
+   low--high spectrum of `Q` and do not supply the advertised improved jet
+   regularities.
+5. At finite cutoff, the complete non-aliased sharp-cube coefficient-jet
+   forests are now classified exactly. Their contraction counts are
 
-so standalone deterministic source absorption fails for every `p>=1`. The
-determinant shell operator tends to zero on this fixed-envelope carrier and
-its resolvent does not repair that budget.
+   \[
+   2,\qquad 4+2,\qquad 5+2,\qquad 3+0.
+   \]
 
-The joint-source v1.1 calculation fixes what happens when the local potential is
-retained. For `q=p theta`, `R_q=(I+qT)^{-1}`, and
-`mu_q=-q R_q ell`, completion of the conditional Gaussian is exact: the
-joint transform is the regularised determinant/noncentral constant plus the
-expectation of the coefficient increment and potential under
-`N(mu_q,R_q)`. Direct compact-Fierz differentiation and a non-importing Pauli
-current calculation both prove in the homogeneous fast-phase principal-symbol
-fixture,
+   For the entrywise-even six-real A1 covariance,
+   `E[X tensor partial_i X]=0` componentwise. Hence complete-sector
+   value--derivative and double-cross corrections cancel. The uncentred
+   second coefficient pair retains the finite tensor
+   `Sigma_Lambda^{cd} Q_{Lambda,i}^{ab}`. This term is not a new divergent
+   interaction counterterm at the complete finite monomial level, but it may
+   not be deleted from the later A7 reconstruction.
 
-\[
-\ell_{\rm coefficient}=\ell_{\rm frozen},\qquad
-\ell_{\rm joint}=2\ell_{\rm frozen}.
-\]
+The broad one-use/Nelson theorem remains open. The finite forest result is a
+scoped T4 subproof and does not promote A13.
 
-Envelope derivatives and the trace/potential terms are lower order along the
-registered modulated-carrier limit. Thus its joint source square gains a
-factor four asymptotically, not as an unqualified finite-`K` shell identity.
-The terminal carrier ratio is `4 C_rel=3.6642109130609337`, whereas the available coefficient-one
-local sextic threshold is at most `gamma/(3p)<=0.54`. Potential and trace
-variations are lower order on the same amplitude/carrier limit. Consequently
-the coefficient-one local potential-increment estimate and every finite bank
-of local Class-II/quartic/sextic polynomial terms with bounded coefficients
-and cutoff-summable positive replenishments and scalar transfer errors fail
-on this carrier.
+## Canonical subproof hierarchy
 
-This is not a full-action no-go. The exact terminal/past split gives
+| Subproof group | Current result | Status |
+|---|---|---|
+| Phase-source geometry | Fierz nulls, commutator, opposite-corner source-budget obstruction | T4 structural/no-go |
+| Joint source-potential | Factor-four correction, local Bellman and timewise/Ramer boundaries | T4 reduction/no-go |
+| Translated-current model | Exact translation/frame/Cartan identities and flexible potential budget | T4 reduction |
+| Universal Q | All finite moments and deterministic H2 translation | T4 child gate closed |
+| Coefficient-jet forest | Finite-cutoff Wiener forest and complete-sector parity cancellation | T4 child subproof closed |
+| Balanced coefficient jets | Coupled-cutoff P3/P4 convergence and exact A7 reconstruction | OPEN |
+| Controlled-shell one-use | Signed strict-past stochastic form bound | OPEN umbrella gate |
 
-- terminal amplification `(D/B)^3=919.8715735886835`;
-- past-normalised frozen source ratio `0.0009958485016462115`;
-- joint past exponent reward `0.002409953373983832` at `p=1.1`;
-- retained past sextic exponent penalty `p gamma/6=0.297`.
-
-Thus the registered carrier is safely subcritical when the past potential and
-Cameron--Martin entropy are retained. Two analytic estimates quantify the
-surviving route:
-
-\[
-\|P_{<0}f\|_4^8\le {64\over9}\|f\|_2^2\|f\|_6^6,
-\]
-
-and, for every finite cutoff and one frozen shell,
-
-\[
-{p^2\over2}\langle\ell,(I+pT)^{-1}\ell\rangle
-\le \vartheta H_A(x)
- +{p^2\beta_{\rm op}^2\over16c_{\rm sym}\vartheta}\|x\|_6^6.
-\]
-
-At `p=1.1`, the total Cameron--Martin allocation is `0.45`. Factor-four
-source-square bookkeeping therefore assigns `vartheta=0.45/4=0.1125` to each
-frozen copy. The corrected registered factor-four sextic cost is
-`0.044555890186929`, leaving half-sextic exponent margin
-`0.103944109813071` and unexponentiated one-use margin
-`0.09449464528461002` after dividing the exponent cost by `p=1.1`. The old
-`0.011138972546732238` value multiplied the
-sextic term by four without applying the same factor to the
-Cameron--Martin allocation and is retired. This one-shell inequality cannot
-be summed by paying `H_A(x)` at every scale:
-A11 proves that the corresponding Gaussian past energy grows with the number
-of shells. The broad joint gate is therefore **REDUCED-NOT-CLOSED** to one
-nonlocal full-action theorem.
+The long-term theorem anchor is
+`A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
+until its coefficient model and one-use subproofs are resolved. New work in
+this chain is recorded as an A13 subproof rather than a new numbered claim.
 
 ## Scope and tier
 
-The scope is the fixed `L=16` torus, three complex fields in the six-real
-convention, `rho_regularizer=1e-12`, the A1 production symbol and coefficients,
-the common unit sharp cutoff, exact Fourier products, and the strict dyadic
-sharp rectangular-cube filtration. The shifted-Gaussian identity,
-principal-symbol source-slot equality, asymptotic factor-four local
-obstruction, mixed Hardy/Riesz lemma,
-potential coercivity, and one-shell Cameron--Martin estimate are analytic.
-The degree-65536 values are reproduced by coefficient-convolution and
-non-importing alias-free-grid routes; they are not labelled a formal interval
-proof.
+- Fixed `L=16` torus.
+- Three complex fields in the A7 six-real convention.
+- A1 production symbol and coefficients.
+- Fixed positive `rho_regularizer=1e-12`.
+- Common entrywise-real-even scalar Fourier cutoffs.
+- Same-cutoff covariance-normal Wick subtraction.
+- Exact non-aliased products and the strict dyadic rectangular-cube
+  filtration.
+- For the finite forest theorem, a complete low/resonant/high partition on
+  the full output support, no intermediate projection, and at most one common
+  root projection.
 
-A13 remains scoped T4. The joint-source v1.1 package closes precise invalid proof architectures
-negatively and reduces the positive route; it does not close the broad joint
-log-Laplace theorem.
+Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
+cone, Ramer, and manufactured-mode computations are independent regression
+and falsifier evidence. They do not replace the analytic continuum arguments.
 
-## Consequence
+## Dependencies and active gates
 
-The sole active successor is
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. It must prove a cutoff-uniform
-full-action adapted-control bound of the form
+Hard dependencies:
 
-\[
-\mathbb E V_J^{\rm ren}(X+h(v))
-\ge -\epsilon_6\mathbb E\|X+h(v)\|_6^6
-     -\epsilon_v\mathbb E\sum_j\|v_j\|_2^2-C,
-\]
+- `A1-PRODUCTION-FUNCTIONAL-REALISATION`
+- `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`
+- `A9-CLASSII-SMART-PATH-CANCELLATION`
+- `A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION`
+- `A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION`
+- `A12-CLASSII-SOURCE-SQUARE-REDUCTION`
 
-with `epsilon_6<gamma/6=0.27` and
-`epsilon_v<1/(2p)` (`<0.454545...` at `p=1.1`). The flexible potential
-bound below shows that `gamma/12` was a conservative equal split rather
-than a necessary restriction. It must retain the A9
-Gaussian-fluctuation cancellation, spend Cameron--Martin energy only once
-across all scales, and introduce no new interaction counterterm.
+Active umbrella gate:
 
-For the explicit stress candidate `epsilon_6=0.15`, `epsilon_v=0.45`, put
-`G_J=V_J^ren+epsilon_6||phi||_6^6`. The Boue--Dupuis identity gives
+- `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`
 
-\[
-\inf_v \mathbb E\left[G_J(X+h(v))+epsilon_v\|v\|_H^2\right]
-=-2\epsilon_v\log\mathbb E
- \exp\left\{-{G_J\over2\epsilon_v}\right\}.
-\]
+Current subordinate order:
 
-Thus the desired uniform lower bound is exactly equivalent to the
-cutoff-uniform Nelson moment at `q=1/(2 epsilon_v)=10/9>1.1`. Entropy,
-endpoint Follmer drift, Boue--Dupuis, or HJB completion alone cannot prove it
-without circularly assuming the missing moment.
+1. balanced/base-point-increment P3 and P4 coefficient jets;
+2. coupled-cutoff convergence in the target Sobolev spaces and every finite
+   probability moment;
+3. exact rational-`B` translated-current reconstruction in the A7 scheme,
+   retaining `Sigma Q` and every other finite correction;
+4. strict-past signed one-use estimate;
+5. return to the A7 Nelson and finite-volume measure gates.
 
-Coefficient-blind timewise or shellwise Young summation into an endpoint
-`L^6` moment plus Cameron--Martin energy is also ruled out. For
-`V(x)=(x^4-3x^2)/2`, its exact Doob integrand is
-`g_t(x)=2x^3+(3-6t)x`. The triangular zero-endpoint shift with amplitude `A`
-has control energy `4A^2`, unchanged terminal sixth moment `15`, and zero
-signed action change, but
-
-\[
-\mathbb E\int_0^1g_t(W_t+h_A(t))^2dt
-={21\over2}+{78\over5}A^2+6A^4+{4\over7}A^6.
-\]
-
-Consequently no cutoff-independent `C` can bound this bracket by
-`C(1+E|W_1+h_1|^6+integral |h'|^2)` for all Cameron--Martin paths. This does
-not exclude a Class-II-specific timewise argument retaining extra signed or
-tensor cancellations.
-
-The nonfrozen determinant analysis closes only a maximal conditional theorem.
-In whitened coordinates, `2V_J^ren=delta_gamma b_J` and
-`Db_J=T_X+K_X`, where `T_X>=0`; production `q^-4` gives cutoff-uniform
-Schatten-two bounds for both terms. But the exact coefficient curl is nonzero:
-
-\[
-\Omega_{u e_1}(e_1,e_3)
-=4u q_u[b+c(1-q_u)]e_3\ne0.
-\]
-
-Consequently Schatten-two control does not keep the nonfrozen determinant
-away from zero. At `q=10/9`, the direct Ramer coefficient is correctly
-`t=q/2=5/9` because `2V=delta_gamma b`. Two independent production
-30-real-mode calculations find a negative real `Db` eigenvalue near
-`-0.147586951` and a determinant sign change near amplitude `3.49230586`,
-with the floor inactive. The separated Ramer-square carrier cost is already
-`(t^2/2)C_rel=0.14136616176932618`; it fits below the corrected
-`epsilon_6=0.15` stress budget. The determinant sign change, not the old
-half-sextic comparison, refutes the one-shot `xi -> xi+t b_J(xi)` proof
-architecture. The Nelson moment is not refuted.
-
-The sole canonical objective remains
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. Its parent model subgate is
-`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT`. The universal
-centered derivative-square and deterministic translation half is now closed;
-the selected subordinate gate is
-`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`. Only after the
-coefficient correctors and their lower-chaos cancellations are fixed may a
-signed global random-remainder estimate be attempted.
-
-The failed local architecture is registered as
-`NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER`. Coefficient-one local potential
-conditioning and finite banks of local Class-II/quartic/sextic polynomial
-terms with bounded coefficients and cutoff-summable positive replenishments
-and scalar transfer errors are not valid successors. Repeated payment of
-Gaussian past energy and resolvent-only repair are also excluded.
-The corrected allocation is recorded as
-`AUDIT-2026-07-22-A13-FACTOR-FOUR-ALLOCATION`, and the continuous-time
-source-square architecture as
-`NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP`.
-The direct nonfrozen transform is registered as
-`NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT`.
-
-## Translation-model reduction
-
-For every `delta>0` and `r>=0`, the production scalar potential satisfies
-
-[
-{lambdaover4}r^2+{gammaover6}r^3
-geleft({gammaover6}-deltaight)r^3
-  -{|lambda|^3over432delta^2}.
-]
-
-At `epsilon_6=0.15` and `delta=0.06`, the final sextic margin is
-`0.06` and the finite `L=16` constant is
-`209.40115226337448`. This proves that the sufficient field-charge range is
-`epsilon_6<gamma/6`. The historical `epsilon_6=0.13` candidate remains
-valid; the range correction is
-`AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION`.
-
-For every finite common-even cutoff, let `Y_i=partial_i X`,
-`H_i=partial_i h`, and `B_+=B(X+h)`. The exact finite-cutoff translation
-identity is
-
-[
-egin{split}
- V_J^{m ren}(X+h)-V_J^{m ren}(X)
-={}&{1over2}sum_iint
- [B(X+h)-B(X)]:(Y_iotimes Y_i-Gamma_{J,i})\
- &+sum_iint H_i^TB_+Y_i
- +{1over2}sum_iint H_i^TB_+H_i.
-end{split}
-]
-
-For deterministic `h`, common evenness makes `X(x)` independent of
-`partial_i X(x)`, and hence
-
-[
-mathbb E{V_J^{m ren}(X+h)-V_J^{m ren}(X)}
-={1over2}sum_iint H_i^Tmathbb E[B(X+h)]H_ige0.
-]
-
-The non-exact `K` current is kept geometric by the exact Cartan formula
-
-[
-egin{split}
-K_A(X+h)-K_A(X)
-={}&d_xint_0^1omega_A(X+th)[h],dt\
-&+int_0^1domega_A(X+th)[h,d_x(X+th)],dt,
-end{split}
-]
-
-where
-`d omega_A=(rho+rho_regularizer)^-1 d rho wedge d m_A` has operator norm at
-most four. A constant active-doublet shift at the Gaussian-null field
-`X=0` forces every cutoff-independent deterministic constant remainder to
-grow on the `J^(3/2)` asymptotic scale. This does not refute an integrable
-random remainder.
-
-A7 states only the particular `B(X)`-contracted scalar composite in
-`L^2(Omega;H^(-1-kappa))`. Translation requires the universal centered
-tensor `Q_i^ab=:partial_i X_a partial_i X_b:`, its `QX` and `QXX`
-coefficient jets, Cameron--Martin translation continuity, and moments beyond
-`L^2`. In the application range `0<kappa<1/2`, testing `Q` against `h^2`
-requires `L^(6/(2-kappa))(Omega)`, approaching `L^3` as `kappa` tends to
-zero. The parent gate
-`A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT` remains open.
-Its universal-Q child is now closed below, and
-`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION` is the selected
-next subgate. Only after that classification closes may the positive square,
-centered `Q`, current, and Cartan curvature be estimated jointly in a
-strict-past random-remainder theorem.
-
-## Universal-Q closure and corrected coefficient-jet boundary
-
-For every `kappa>0` and every finite `p`, the universal tensor
-
-\[
-Q_{\Lambda,i}^{ab}
-=\partial_iX_\Lambda^a\partial_iX_\Lambda^b
--\Gamma_{\Lambda,i}^{ab}
-\]
-
-converges in `L^p(Omega;H^(-1-kappa))`, jointly with the inherited A6
-`(X,area)` lift. Wick isometry reduces its variance spectrum to
-
-\[
-\sum_k\langle k\rangle^{-2}\langle n-k\rangle^{-2}
-\lesssim\langle n\rangle^{-1}.
-\]
-
-The `H^(-1-kappa)` sum is therefore finite, coupled cutoffs converge by
-dominated convergence, and second-chaos hypercontractivity gives every finite
-probability moment. This is stronger than exact `L3`: in the application
-range `0<kappa<1/2`, the Sobolev test needs `p=6/(2-kappa)>3`.
-
-For deterministic `h in H2`, the exact translated tensor is
-
-\[
-\tau_hQ=Q+\partial h\,\partial X+\partial X\,\partial h
-          +\partial h\,\partial h.
-\]
-
-A mixed Fourier--Sobolev estimate constructs the cross term directly in
-`L^p(Omega;H^(-1-kappa))` and makes the action locally Lipschitz in `H2`.
-This closes
-`A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION` without claiming an
-adapted random-shift estimate.
-
-Adversarial analysis corrects the remaining jet statement. Literal full Wick
-`XQ` and `XXQ` products retain the `|n|^-1` low--high spectrum of `Q`, so for
-small `kappa<alpha` they fail the required `L^2(Omega;H^s)` model topology at
-the advertised `H^(alpha-1-kappa)` and `H^(2alpha-1-kappa)` targets. For a
-cone-localized piece of the raw nested tree `Pi(X,Pi(X,Q))`, take the positive
-dyadic cone
-`S_r={k:r<=k_j<2r}`, its double contraction obeys
-
-\[
-\left(\sum_{k\in S_r}k_1(1+|k|^2)^{-2}\right)^2
-\ge\left({r^4\over(1+12r^2)^2}\right)^2\longrightarrow12^{-4}>0.
-\]
-
-The displayed square is the magnitude of one matching. With the sign in the
-Fourier definition of `Q`, the scalar two-matching coefficient is `-2A_r`.
-Its cone-localized magnitude therefore accumulates like `c log Lambda`, but
-this does not prove that the total symmetric Littlewood--Paley tree has a
-nonzero logarithmic coefficient; other angular sectors may cancel it. This
-is recorded under `NG-2026-07-22-A13-RAW-DIAMOND-JET` as a failure of the
-unqualified raw definition, not as a proof of a new physical counterterm.
-The next gate must pin the actual multiplier, enumerate every contraction,
-and either cancel or retain all first-, second-, and zero-chaos correctors in
-the exact A7 reconstruction.
-
-## Reproduction
+## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_universal_q_cm_translation_verify.py
+python codes/foundations/a13_classii_coefficient_jet_forest_verify.py
 ```
 
-Expected: primary 42/42, non-importing independent 22/22, and integrated
-aggregate 110/110 assertions pass; the verifier prints
-`A13-CLASSII-UNIVERSAL-Q-CM-TRANSLATION-INTEGRATED-PASS`.
+Expected output:
 
-## Evidence
+- primary `34/34`;
+- non-importing independent `31/31`;
+- integrated `17/17`;
+- aggregate `82/82`;
+- `A13-CLASSII-COEFFICIENT-JET-FOREST-INTEGRATED-PASS`;
+- exit code zero.
+
+The proof note is five pages and passes the standard form check, zero-overfull
+gate, and rendered-page visual QA.
+
+## Current evidence
+
+The latest subproof package is:
+
+- `classii_coefficient_jet_forest_manifest.json`
+- `notes/classii-coefficient-jet-forest-classification-260722-v1.0.tex.txt`
+- `notes/classii-coefficient-jet-forest-classification-260722-v1.0.pdf`
+- `../../codes/foundations/a13_classii_coefficient_jet_forest.py`
+- `../../codes/foundations/a13_classii_coefficient_jet_forest_independent.py`
+- `../../codes/foundations/a13_classii_coefficient_jet_forest_verify.py`
+- `runs/2026-07-22-primary-coefficient-jet-forest-classification/result.json`
+- `runs/2026-07-22-independent-coefficient-jet-forest-classification/result.json`
+- `runs/2026-07-22-integrated-coefficient-jet-forest-classification/result.json`
+
+Earlier current packages remain binding within their own scopes:
 
 - `classii_relative_phase_source_obstruction_manifest.json`
-- `notes/classii-relative-phase-source-budget-obstruction-260721-v1.0.tex.txt`
-- `notes/classii-relative-phase-source-budget-obstruction-260721-v1.0.pdf`
-- `classii_joint_source_potential_reduction_manifest.json`
-- `notes/classii-joint-source-potential-reduction-260721-260722-v1.1.tex.txt`
-- `notes/classii-joint-source-potential-reduction-260721-260722-v1.1.pdf`
-- `../../codes/foundations/a13_classii_joint_source_potential_reduction.py`
-- `../../codes/foundations/a13_classii_joint_source_potential_reduction_independent.py`
-- `../../codes/foundations/a13_classii_joint_source_potential_reduction_verify.py`
-- `runs/2026-07-22-primary-joint-source-potential-reduction-v1.1/result.json`
-- `runs/2026-07-22-independent-joint-source-potential-reduction-v1.1/result.json`
-- `runs/2026-07-22-integrated-joint-source-potential-reduction-v1.1/result.json`
+- `classii_joint_source_potential_reduction_manifest.json` (v1.1 authority)
 - `classii_translation_model_reduction_manifest.json`
-- `notes/classii-translation-model-reduction-260722-v1.0.tex.txt`
-- `notes/classii-translation-model-reduction-260722-v1.0.pdf`
-- `../../codes/foundations/a13_classii_translation_model_reduction.py`
-- `../../codes/foundations/a13_classii_translation_model_reduction_independent.py`
-- `../../codes/foundations/a13_classii_translation_model_reduction_verify.py`
-- `runs/2026-07-22-primary-translation-model-reduction/result.json`
-- `runs/2026-07-22-independent-translation-model-reduction/result.json`
-- `runs/2026-07-22-integrated-translation-model-reduction/result.json`
 - `classii_universal_q_cm_translation_manifest.json`
-- `notes/classii-universal-q-cm-translation-260722-v1.0.tex.txt`
-- `notes/classii-universal-q-cm-translation-260722-v1.0.pdf`
-- `../../codes/foundations/a13_classii_universal_q_cm_translation.py`
-- `../../codes/foundations/a13_classii_universal_q_cm_translation_independent.py`
-- `../../codes/foundations/a13_classii_universal_q_cm_translation_verify.py`
-- `runs/2026-07-22-primary-universal-q-cm-translation/result.json`
-- `runs/2026-07-22-independent-universal-q-cm-translation/result.json`
-- `runs/2026-07-22-integrated-universal-q-cm-translation/result.json`
-- `../../negative-results/registry.md#ng-2026-07-21-a13-local-bellman-barrier`
-- `../../negative-results/registry.md#audit-2026-07-22-a13-factor-four-allocation`
-- `../../negative-results/registry.md#audit-2026-07-22-a13-half-sextic-overrestriction`
-- `../../negative-results/registry.md#ng-2026-07-22-a13-timewise-young-carre-du-champ`
-- `../../negative-results/registry.md#ng-2026-07-22-a13-nonfrozen-ramer-one-shot`
-- `../../negative-results/registry.md#ng-2026-07-22-a13-raw-diamond-jet`
 
-The three `2026-07-21-*-joint-source-potential-reduction` run JSON files and
-the `classii-joint-source-potential-reduction-260721-v1.0` note pair are kept
-only as superseded development provenance.  The v1.0 source filename now
-contains a forward pointer, so those old runs are not hash-reconstructible from
-the current named v1.0 files and must not be cited as current evidence.  The
-v1.1 note, manifest, and `2026-07-22-*-v1.1` runs above remain the immutable
-joint-source authority. The translation-model v1.0 note, manifest, and three
-2026-07-22 translation-model runs remain current for their reduction scope.
-The universal-Q note, manifest, and three same-day runs are the latest
-continuation package.
+The three 2026-07-21 joint-source v1.0 runs are superseded development
+provenance and are not current hash-reconstructible evidence. The v1.1 note,
+manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
 
 ## Devil's-advocate
 
-1. **The factor four was inferred from the old source ratio rather than from
-   the production functional - DISMISSED.** The compact Fierz route and a
-   non-importing direct Pauli-current route independently differentiate both
-   the field/coefficient slot and derivative slot and obtain the same leading
-   source with the same sign.
-2. **The completed-Gaussian determinant sign is wrong - DISMISSED.** A
-   pointwise completed-density identity and an independent order-160
-   Gauss--Hermite expectation reproduce the transform; the latter has absolute
-   residual below `1e-11`.
-3. **The terminal source ratio can be compared directly with the past sextic
-   norm - DISMISSED.** The package records the amplification
-   `(D/B)^3=919.8715735886835` and never composes terminal and past
-   normalisations. The past-normalised reward is tested separately.
-4. **The local Bellman no-go rules out every source-potential proof - VALID
-   WITH MITIGATION.** It rules out only coefficient-one conditioning and
-   finite banks with bounded coefficients and cutoff-summable positive
-   replenishments and scalar transfer errors. The nonlocal adapted-control
-   value function is the explicit surviving gate.
-5. **The mixed Hardy lemma closes the broad joint theorem - VALID WITH
-   MITIGATION.** It closes the frozen coherent-ray budget, not the complete
-   coefficient source or all commutators. The full joint factor-four tensor
-   threshold remains above the diagnostic allocation.
-6. **The one-shell Cameron--Martin estimate may simply be summed - UPHELD.**
-   That would repeatedly pay Gaussian past energy, which A11 shows grows with
-   cutoff. The successor theorem must spend this energy once globally.
-7. **The negative quartic destroys coercivity - DISMISSED.** Flexible scalar
-   optimisation absorbs it into an arbitrary positive sextic allocation plus
-   a finite constant. The new stress split gives `epsilon_6=0.15`,
-   `delta=0.06`, margin `0.06`, and `L=16` constant
-   `209.40115226337448`; the old equal split remains a valid special case.
-8. **The finite degree-65536 calculation is a formal interval certificate -
-   VALID WITH MITIGATION.** It is explicitly labelled an independently
-   reproduced floating calculation with a large margin, and the tier remains
-   T4.
-9. **This proves the A7 Nelson bound or an interacting full three-component
-   measure - UPHELD.** Neither is claimed; both require the remaining
-   controlled-shell theorem and later composition.
-10. **The old factor-four cost `0.011138972546732238` is valid - UPHELD AS
-    FALSE AND CORRECTED.** The factor four multiplies both the source-square
-    term and its Young allocation. The frozen parameter is `0.1125`, giving
-    corrected cost `0.044555890186929` and half-sextic margin
-    `0.103944109813071`.
-11. **Boue--Dupuis or HJB closes the one-use theorem - UPHELD AS CIRCULAR.**
-    The variational identity shows that its value is exactly the missing
-    `q=10/9` Nelson log moment.
-12. **Coefficient-blind continuous-time source-square Young avoids the
-    shellwise loss - DISMISSED.** The exact scalar triangular loop has an
-    `A^6` bracket but zero signed action change and fixed terminal moment, so
-    an endpoint-`L^6` plus control-energy enclosure erases the cancellation it
-    must prove. Class-II-specific signed tensor estimates remain outside this
-    no-go.
-13. **Schatten-two control makes the direct nonfrozen Ramer determinant
-    positive - UPHELD AS FALSE.** A rank-one determinant already disproves
-    the abstract implication, and the production finite-mode fixture crosses
-    an actual determinant zero at the correct `t=5/9`.
-14. **The Ramer singularity disproves the one-use/Nelson theorem - UPHELD AS
-    FALSE.** It refutes one global change of variables. Exact ODE,
-    triangular/Follmer, alternative transport, and direct constructive routes
-    remain open.
-15. **Nonfrozen global determinant cancellation is the unique successor -
-    UPHELD AS UNPROVED.** The only unique object here is the canonical one-use
-    objective. No completeness theorem over proof methods is claimed.
-16. **Deterministic-shift expectation positivity proves the adapted case -
-    UPHELD AS FALSE.** The proof conditions on a shift independent of the
-    Gaussian value and derivative. An adapted shift destroys that
-    independence; the random translation theorem remains open.
-17. **The positive square in the translation identity closes coercivity -
-    UPHELD AS FALSE.** The equivalent Pauli-frame identity contains a negative
-    translated-counterterm square. The signed coefficient and mixed-current
-    terms must remain coupled.
-18. **A7's contracted `L2` composite automatically supplies the translated
-    model - UPHELD AS FALSE.** The universal `Q` tensor and its `QX` and
-    `QXX` jets are not recoverable from one contraction. The simplest
-    Sobolev estimate already requires an endpoint `L3` model-norm moment.
-19. **The homogeneous `X=0` deficit refutes every random remainder -
-    DISMISSED.** It refutes only a cutoff-independent deterministic constant.
-    The field is a Gaussian-null point and gives no lower bound on the
-    expectation of a random remainder.
-20. **Termwise paraproduct Young can close after the model lift - UPHELD AS
-    FALSE FOR THAT ARCHITECTURE.** The current term has `H2` exponent
-    `3/2` and `L6` exponent `3/2`, which saturate Young and leave no slot
-    for an unbounded random model norm. A coupled signed estimate is required.
-21. **Exact `L3` closes the Q moment gate - UPHELD AS INSUFFICIENT.** In the
-    application range `0<kappa<1/2`, the required exponent is
-    `6/(2-kappa)>3`. The universal second-chaos result is therefore proved in
-    every finite `Lp`.
-22. **The H2 translation cross term is a classical Holder product - UPHELD
-    AS AN INVALID JUSTIFICATION.** The endpoint Holder sum is not positive.
-    The theorem instead uses a direct mixed Fourier--Sobolev convolution.
-23. **The coefficient diamonds may be literal full Wick products - UPHELD AS
-    FALSE.** Their low--high spectra retain the `|n|^-1` Q tail and miss both
-    advertised improved regularities.
-24. **Global evenness removes every resonant contraction - UPHELD AS FALSE.**
-    It removes the full same-point value--derivative pairing, but a localized
-    selector leaves a nonzero first-chaos multiplier, and a cone-localized
-    nested subdiagram has a fixed negative coefficient with logarithmically
-    growing magnitude. This does not assert total-tree noncancellation.
-25. **The logarithm proves a new physical counterterm is unavoidable - VALID
-    WITH MITIGATION.** It proves only that a cone-localized contraction is not
-    absolutely summable and must be classified. Whether it cancels in the
-    specified total tree and exact translated Class-II reconstruction is the
-    newly named open gate.
-26. **Deterministic H2 continuity proves adapted translation control -
-    UPHELD AS FALSE.** Adapted shifts require joint model/control moments and
-    the still-open signed stochastic form estimate.
+1. **DISMISSED: A13 is a thirteenth peer-level physical theorem.** It is an
+   immutable development claim and the current subproof host under the single
+   A6--A13 Class-II constructive-measure family.
+2. **VALID WITH MITIGATION: a common real-even scalar cutoff alone forces the
+   mixed covariance to vanish for every matrix law.** The theorem also pins
+   the A1 covariance itself as entrywise real-even. General Hermitian matrix
+   covariances can have odd off-diagonal parts and are excluded.
+3. **DISMISSED: the localized negative cone contradicts complete-sector
+   cancellation.** The cone is a proper angular/Bony subdiagram. The complete
+   multiplier sum restores complementary coefficients and is constrained by
+   the exact mixed-covariance identity.
+4. **VALID WITH MITIGATION: the two parenthesisations agree channel by
+   channel.** They generally differ by an associator. Exact sparse
+   convolution verifies equality only after each complete nine-channel sum.
+5. **UPHELD AGAINST AN INTERMEDIATE-PROJECTION READING: Galerkin projection
+   may be inserted at each node.** Intermediate projections break
+   associativity and are outside the finite forest theorem.
+6. **VALID WITH MITIGATION: finite `Sigma_Lambda Q_Lambda` can be discarded.**
+   It is non-divergent but remains a load-bearing finite Wick-conversion term
+   in rational coefficient reconstruction.
+7. **UPHELD AGAINST CLOSURE: complete forest cancellation proves the improved
+   coefficient-jet model.** The complete sum is the literal full product,
+   whose low--high regularity remains insufficient. Balanced jets and their
+   reconstruction are still open.
+8. **UPHELD AGAINST PROMOTION: this finite theorem proves the Nelson moment or
+   interacting measure.** It proves neither; A13 remains T4.
 
 ## Falsifier
 
-Any failure of the exact Gaussian completion, either nonvacuous independent
-principal-symbol source-doubling calculation, the lower-order asymptotic
-transfer, the terminal/past normalisation split, the factor-four carrier
-limit, the `64/9` mixed Hardy/Riesz estimate, the
-corrected factor-four allocation, exact one-use/Nelson equivalence, scalar
-zero-endpoint loop polynomial, nonfrozen Schatten decomposition, coefficient
-curl, corrected Ramer coefficient, either determinant sign-change route,
-source hashes, PDF form/visual QA, assertion count, or release gate falsifies
-the v1.1 reduction. Any failure of the flexible potential equality, exact
-translation or frame identity, deterministic expectation formula, Cartan
-identity, independent current implementation, exact sharp-cube
-deterministic-remainder fixture, translated-model moment arithmetic, source
-hashes, seven-page PDF QA, or 106-assertion aggregate falsifies the
-translation-model continuation. The original
-Fierz, phase-null, commutator, and carrier falsifiers remain in force.
-Failure of the universal-Q convolution bound, all-finite-moment lift, mixed
-H2 translation estimate, raw full-product lower bound, dyadic logarithmic
-contraction, either independent implementation, six-page PDF QA, or the
-110-assertion aggregate falsifies the universal-Q continuation.
+Any failure of a prior Fierz, source, factor-four, one-use/Nelson equivalence,
+scalar-loop, determinant, translation/frame, Cartan, universal-Q, or raw-jet
+assertion remains a falsifier for its package.
+
+The finite forest continuation is falsified by any of the following:
+
+- an incorrect `2`, `4+2`, `5+2`, or `3+0` forest count;
+- an incomplete sharp-cube pair or nested partition;
+- failure of either exact sparse parenthesisation to reconstruct the full
+  triple convolution;
+- nonzero complete mixed covariance or double-cross coefficient under the
+  pinned entrywise-even A1 law;
+- loss of the one-sided non-even-cutoff failure control;
+- omission of the finite tensor `Sigma_Lambda Q_Lambda`;
+- a source or PDF hash mismatch;
+- a PDF form, overfull, or visual-QA failure;
+- any failure in the 82-assertion aggregate or the release gate.
 
 ## No-overclaim
 
-This claim proves all finite probability moments only for the universal
-centered `Q` tensor and its deterministic `H2` translation. It does not
-construct renormalised `QX`/`QXX` coefficient correctors, prove cancellation
-of their lower-chaos terms, exclude a surviving interaction counterterm,
-control random or adapted translations, prove the signed form bound,
-controlled-shell estimate or equivalent `q=10/9` Nelson moment, close A11 or
-A7, construct an interacting measure, remove the floor or regulator, take
-infinite volume, prove a phase transition or BCC selection, or justify T5,
-T6, or T7. The raw-jet logarithm refutes an unnormalised model tree, not every
-corrected model or the Nelson theorem.
+The finite forest theorem proves zero net value--derivative and double-cross
+correction only for complete covariance-matched non-aliased monomials under
+the entrywise-even A1 law. It does not license deletion of resonant-only
+correctors, improve literal full-product regularity, or prove continuum
+balanced-jet convergence. It does not complete rational-`B`/A7
+reconstruction, control adapted translations, prove the signed one-use
+estimate or `q=10/9` Nelson moment, close A11/A7, construct an interacting
+measure, remove a floor or regulator, take infinite volume, prove a phase
+transition or BCC selection, or justify T5, T6, or T7.
 
 ## History
 
-- 2026-07-21: Registered v1.0 at scoped T4; T-049 closed negatively by the
-  exact-B relative-phase source-budget obstruction.
-- 2026-07-21: Added the joint-source v1.0 exact Gaussian/source-potential reduction,
-  source doubling, local Bellman no-go, mixed Hardy lemma, and one-shell
-  Cameron--Martin crossover. The broad joint gate was reduced to
-  `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`; T-050 remains in progress and
-  the tier remains T4.
-- 2026-07-22: Issued v1.1. Corrected the factor-four Cameron--Martin
-  allocation, proved exact equivalence of the candidate one-use theorem to
-  the `q=10/9` Nelson moment, and closed the coefficient-blind endpoint-only
-  timewise source-square route negatively with an exact scalar loop.
-  Nonfrozen Schatten-two and curl analysis plus two production finite-mode
-  calculations then refuted the direct one-shot Ramer map at `t=5/9`.
-  The umbrella one-use gate remains open, no unique successor method is
-  claimed, and the tier remains T4.
-- 2026-07-22: Added the translation-model v1.0 continuation. Proved the
-  flexible `epsilon_6<gamma/6` potential budget, exact finite-cutoff
-  translation/frame and Cartan identities, and deterministic-shift
-  expectation positivity. Refuted only a uniform deterministic constant
-  remainder and reduced the next proof to
-  `A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT` with
-  `L3`-level moments and no new counterterm. A13 remains T4 and the umbrella
-  one-use gate remains open.
-- 2026-07-22: Closed the universal centered-Q subgate in every finite
-  `Lp(Omega;H^(-1-kappa))` and proved deterministic H2 Cameron--Martin
-  continuity. Adversarial review refuted the full-product reading of the
-  coefficient jets and exhibited a fixed-sign cone-localized contraction
-  whose magnitude accumulates like `c log Lambda`; total-tree noncancellation
-  is not claimed. The parent model lift remains open at the
-  explicit coefficient-jet renormalisation-classification gate; A13 remains
-  T4.
+- 2026-07-21: Registered the relative-phase source-budget obstruction at
+  scoped T4.
+- 2026-07-21--22: Corrected the joint factor-four allocation and retired the
+  scoped local Bellman, endpoint-only timewise Young, and one-shot Ramer
+  architectures without refuting the one-use/Nelson objective.
+- 2026-07-22: Proved the translation/frame/Cartan reductions and the flexible
+  `epsilon_6<gamma/6` potential range.
+- 2026-07-22: Closed the universal centered-Q all-finite-moment and
+  deterministic-H2-translation child gate; corrected the literal full-product
+  jet regularity and localized raw-tree boundary.
+- 2026-07-22: Classified the finite-cutoff coefficient-jet Wiener forests,
+  proved complete-sector parity cancellation with exact sparse convolution,
+  retained the finite tensor `Sigma_Lambda Q_Lambda`, and recorded balanced
+  continuum jets plus exact A7 reconstruction as the next A13 subproof. Tier
+  remains T4.

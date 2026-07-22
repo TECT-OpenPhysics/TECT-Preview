@@ -13,9 +13,9 @@ overlay instead, then regenerate. Run after any notes/ or runs/ change:
     python verification/scripts/build_lineage.py            # all claims
     python verification/scripts/build_lineage.py --check    # CI staleness gate
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __first_issued__ = "2026-06-06"
-__version_issued__ = "2026-06-06"
+__version_issued__ = "2026-07-22"
 
 import re, sys, json
 from pathlib import Path
@@ -99,7 +99,7 @@ def build_one(cid):
     L = []
     L.append(f"# Development lineage — {cid}")
     L.append("")
-    L.append(f"**Claim**: {sj.get('title','(title in status.json)')}  ")
+    L.append(f"**Claim**: {sj.get('title','(title in status.json)')}")
     L.append(f"**Current tier**: {sj.get('tier','—')} ({sj.get('lifecycle','')})  ")
     sub_summary = ""
     if has_sub:

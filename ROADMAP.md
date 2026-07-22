@@ -36,7 +36,7 @@ counterterms, PDE well-posedness.
 **Exit condition**: no convention ambiguity remains; the convention registry is
 the single normative source.
 
-**Status — Sector A refreshed 2026-07-20**: the convention and exact kernel
+**Status — Sector A refreshed 2026-07-22**: the convention and exact kernel
 identity are fixed, with `r_zero` and `mu2_shell` kept distinct. The canonical
 full-production branch is
 
@@ -52,6 +52,14 @@ constructive measure at T6. `A5-SECTOR-A-SYNTHESIS` is a PUBLISHED T6
 conditional-composition theorem under exactly seven named hypotheses; it
 preserves the scalar/full functional fork and the `0.005` versus
 `0.260000000009475` shell-mass fork.
+
+The binding reviewer hierarchy is
+`governance/sector-a-theorem-map.json`: 21 immutable Sector-A claim cards are
+classified into five theorem families. The A6--A13 cards form one full
+derivative Class-II constructive-measure programme, not eight peer-level
+Sector-A endpoint theorems. A7 is its long-term theorem anchor and A13 is its
+current subproof host. New coefficient-jet and one-use work remains under
+A13; any A14+ claim requires a separate independent-capstone decision.
 
 The remaining Stage-1 frontier is not another full variational/PDE closure.
 `A6-CLASSII-UV-POWER-COUNTING` records at T4 that the bare full derivative
@@ -121,10 +129,19 @@ reading in the required `L2` model topology.  A cone-localized subdiagram of
 the unnormalised nested resonance has a fixed negative coefficient whose
 magnitude accumulates like `c log Lambda`; this shows that lower-chaos terms
 cannot be omitted, but it does not prove noncancellation of the total
-symmetric tree.  The parent model lift remains open at the selected subordinate gate
-`A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`.  Only after its
-lower-chaos terms are explicitly cancelled or registered may a coupled
-centered-`Q`/current/curvature stochastic form bound be attempted.
+symmetric tree. The parent model lift remains open at the selected subordinate
+gate `A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`. Its first
+child is now closed: the finite-cutoff forest theorem classifies the exact
+`2`, `4+2`, `5+2`, and `3+0` contractions for both complete non-aliased
+sharp-cube parenthesisations. Entrywise parity of the six-real A1 covariance
+makes all complete-sector value--derivative and double-cross terms cancel,
+while raw `XXQ` retains the finite tensor `Sigma_Lambda Q_Lambda`. This does
+not improve the literal full-product regularity and does not close the
+coefficient-jet gate. The current child is
+`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
+Only after its coupled-cutoff top-chaos limits and exact A7 reconstruction are
+proved may a coupled centered-`Q`/current/curvature stochastic form bound be
+attempted.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -227,14 +244,14 @@ preserved in git/changelog rather than treated as current gates.
    stress candidate is `epsilon_6=0.15`, `delta=0.06`,
    `epsilon_v=0.45`, with final sextic margin `0.06`. The universal centered
    `Q` tensor, all finite moments, and deterministic `H2` Cameron--Martin
-   action are closed. Next prove
-   `A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION`: fix the
-   corrected first/second coefficient symbols, enumerate their lower-chaos
-   contractions, and prove cancellation or register a new interaction
-   counterterm in the exact A7 reconstruction. Then prove a strict-past signed
-   conditional reconstruction that keeps the positive square, centered `Q`,
-   current, and Cartan curvature coupled. Do not use termwise paraproduct
-   Young absorption.
+   action are closed. The finite forest classification is also closed at
+   scoped T4 with 82/82 aggregate assertions, but continuum balanced jets and
+   exact A7 reconstruction remain open. Next prove
+   `A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`;
+   retain the finite `Sigma Q` term and every compensating lower-chaos
+   correction. Then prove a strict-past signed conditional reconstruction
+   that keeps the positive square, centered `Q`, current, and Cartan curvature
+   coupled. Do not use termwise paraproduct Young absorption.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

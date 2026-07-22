@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Sector A: enforce five-family theorem map and close A13 finite forest subproof] - 2026-07-22
+
+Reclassify the 21 active Sector-A claim cards as five theorem families without deleting or renumbering any issued identifier. Establish A7 as the long-term full derivative Class-II constructive-measure anchor, A13 as the current subproof host, and a fail-closed A14 decision gate; add executable exact-cover enforcement to the claim linter and generated indexes. Close only the finite-cutoff coefficient-jet forest classification subproof: enumerate XQ, :XX:Q, raw XXQ, and recursively centered X P3(XQ); prove production-covariance cross-contraction cancellation; retain the finite Sigma Q term; and verify exact sharp-cube/dealiased parenthesization identities with asymmetric negative controls. Primary, independent, and integrated evidence passes 34/34, 31/31, and 82/82. The A13 umbrella remains scoped T4. Continuum coefficient-jet bounds, rational A7 reconstruction, adapted shift, Nelson control, interacting measure, T5, T6, and T7 remain open.
+
 ## [Correct A13 cone-contraction sign and total-tree boundary] - 2026-07-22
 
 Adversarial correction to A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION and NG-2026-07-22-A13-RAW-DIAMOND-JET: the derivative convention makes the scalar two-matching cone coefficient negative, equal to minus twice the recorded positive magnitude. The cone-localized magnitude accumulates like c log Lambda, but that component alone does not prove noncancellation of the total symmetric Littlewood-Paley tree. The package now asserts only the localized contraction-classification certificate, restricts 6/(2-kappa)>3 to 0<kappa<1/2, corrects unit-shell power counting, and strengthens section-specific verifier checks. The universal-Q and deterministic H2 translation theorem remains closed at T4; the parent model lift and coefficient-jet classification remain open.

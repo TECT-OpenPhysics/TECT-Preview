@@ -1,37 +1,42 @@
-# sector-A-foundation — synthesis
+# Sector-A foundation - synthesis pointer
 
-Microscopic foundation.
+The canonical published synthesis is `claims/A5-SECTOR-A-SYNTHESIS`: a T6
+conditional-composition theorem under exactly seven named hypotheses. It keeps
+the full-production variational/PDE/exact-Galerkin branch separate from the
+scalar perturbative/constructive branch, preserves the `0.005` versus
+`0.260000000009475` shell-mass fork, and excludes a full derivative Class-II
+measure, BCC, physical closure, and T7.
 
-The canonical synthesis is the claim-level, content-addressed package
-`claims/A5-SECTOR-A-SYNTHESIS`: a PUBLISHED T6 conditional-composition theorem
-that keeps the full-production variational/PDE/exact-Galerkin branch separate
-from the scalar perturbative/constructive branch. It also preserves the
-`0.005` versus `0.260000000009475` shell-mass fork and excludes a full
-derivative Class-II measure, BCC, physical closure, and T7.
+The binding reviewer hierarchy is
+`governance/sector-a-theorem-map.json`. The 21 immutable Sector-A claim cards
+belong to five theorem families; they are not 21 peer-level physical theorems.
+In particular, A6--A13 are one full three-component derivative Class-II
+constructive-measure programme:
 
-Working proof notes remain under `claims/<ID>/notes/`. This directory does not
-duplicate the A5 theorem; future sector-level prose must be derived from the
-claim cards and their current manifests. The A6 bare ultraviolet obstruction
-is recorded in `A6-CLASSII-UV-POWER-COUNTING`. Its fixed-floor canonical
-`K_A` current is closed separately at scoped T5 in
-`A6-CLASSII-K-COMPOSITE-DEFINITION`, within a common real-even scalar spectral
-regulator class. `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE` separately closes
-at scoped T5 the exact covariance-normal-ordered joint quadratic current energy
-and its fixed-floor distributional continuum limit. It does not construct the
-interacting Gibbs measure. `A8-CLASSII-DECOUPLED-NELSON-BOUND` closes at scoped
-T5 the arbitrary spatial PSD-background determinant estimate and the
-independent coefficient/derivative product-Gaussian measure, with the general
-regulator multiplier bound retained explicitly. It also pins the finite-cutoff
-Gaussian-divergence identity for the original A7 composite. The physical fields
-are still self-coupled. `A9-CLASSII-SMART-PATH-CANCELLATION` closes the exact
-finite-cutoff interpolation and frozen-shell determinant, while A10 identifies
-the positive past-energy action mismatch. The successor
-`A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION` refutes direct absorption of
-that mismatch at the base Gaussian and replaces it by an exact true increment.
-Its determinant retains a positive adapted source-square. The active
-renormalised frontier is therefore, in order,
-`A11-CLASSII-ADAPTED-SOURCE-SQUARE-BOUND` and
-`A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE`. The unmodified bare law
-remains a separate branch-aware concentration problem; neither it nor the A7
-Gibbs gate is supplied by the local proxy, independent-carrier, or current
-true-increment structural limits.
+```text
+A6 UV and K definitions
+  -> A7 renormalised energy composite
+  -> A8 decoupled Nelson reference
+  -> A9 interpolation cancellation
+  -> A10-A13 replacement/no-go lineage
+  -> A13 balanced coefficient jets and one-use estimate (open)
+  -> A7 Nelson/Gibbs reassembly (open)
+```
+
+A7 is the long-term theorem anchor; A13 is the current subproof host. The
+latest A13 finite-cutoff forest theorem classifies the exact `2`, `4+2`,
+`5+2`, and `3+0` Wiener contractions and proves complete-sector parity
+cancellation under the entrywise-even A1 covariance. It retains the finite
+tensor `Sigma_Lambda Q_Lambda`, does not improve literal full-product
+regularity, and does not close the coefficient-jet model. The current child is
+`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
+
+Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
+The generated `claims/INDEX.md` provides the five-family view and A13's
+logical subproof grouping without moving stable evidence paths. New work in
+the present chain stays under A13 unless a later independent capstone passes
+the explicit new-claim admission policy.
+
+The unmodified bare law is a separate branch-aware concentration problem.
+Floor removal, infinite volume, phase transition, BCC selection, and T7 remain
+outside the current Class-II theorem.
