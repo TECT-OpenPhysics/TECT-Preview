@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Automate verified offsite push after watcher commit] - 2026-07-23
+
+A later operator directive replaces the manual-push default. After a release-gated watcher commit, the AI now pushes the current branch to its configured push remote and verifies remote head equality. Force-push, tag/release creation, and remote reconfiguration remain forbidden without separate explicit instruction; authentication or branch-protection failures preserve the local commit and are reported.
+
 ## [Harden catalog fallback for workspace-local toolchains] - 2026-07-23
 
 The no-git repository inventory fallback now excludes .venv, venv, and tmp, matching .gitignore. This prevents a workspace-local PDF/TeX toolchain from polluting CATALOG.md and verification/catalog.json when git is not on PATH. Regression: fallback catalog generation produced 2332 entries, zero ignored-path leaks, and retained all new A13 note, PDF, run, and source entries.

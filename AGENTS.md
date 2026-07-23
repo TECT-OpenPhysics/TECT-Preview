@@ -94,9 +94,13 @@ still gives a cleaner 1:1 commit-to-message mapping but is not required for
 correctness. The
 queue is inside `internal/` (P0 — never reaches history). FALLBACK: if the
 watcher is not running, the AI additionally prints the equivalent one-line
-CLI block. Push remains a manual operator action. This closes the
-skipped-commit gap (code version bumps were occasionally left unrecorded
-when manual paste was skipped).
+CLI block. DEFAULT (2026-07-23 operator directive, replacing manual push):
+after the watcher creates a release-gated commit, the AI pushes the current
+branch to its configured push remote and verifies that the remote branch head
+equals local `HEAD`. Never force-push, create a tag/release, or change remote
+configuration without a separate explicit instruction. Authentication or
+branch-protection failures are reported with the commit preserved locally.
+This closes both the skipped-commit and skipped-offsite-backup gaps.
 
 ## 5. Honesty contract
 
