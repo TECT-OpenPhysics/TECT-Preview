@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Make commit watcher resolve repository toolchains] - 2026-07-23
+
+commit_watcher.ps1 v1.7.0 now resolves the adjacent external TECT.venv first, then a workspace venv or PATH Python, and resolves Git from PATH or the Codex bundled runtime. It fails before touching the queue if either tool is unavailable. This prevents desktop-agent shells with a sparse PATH from moving a valid request to EMPTYDIFF or running the release gate under the wrong Python. A no-alias -Once smoke run selected E:/Dev/TECT.venv/Scripts/python.exe and the bundled Git executable successfully.
+
 ## [A13 NPC-cone and martingale-injection reduction] - 2026-07-23
 
 Exact production-current diagonalisation gives alpha=5/9 and q=10/9, the aggregate target metric is a CAT(0) cone, and the raw secant has a strong nonnegative Jacobi remainder plus an exact raw-energy/injection telescope. A positive-floor witness refutes shellwise secant positivity; isolated adapted 1:2 and 1:3 resonance losses are summable. A flat CAT(0) reset model refutes geometry-only abstract one-use but is not a production counterexample. The nonlinear NPC-Carleson martingale-injection balance and finite-energy extension remain open; A13 stays T4. Primary 24/24, non-importing independent 23/23, and integrated aggregate 118/118 are the package contract; the nine-page PDF passed form, zero-overfull, and direct all-page visual QA.

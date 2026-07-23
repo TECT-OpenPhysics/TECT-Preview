@@ -1,6 +1,11 @@
 # =============================================================================
 # commit_watcher.ps1 - Windows-side auto-commit daemon for the TECT repository
-# Version: 1.6.0 -- first issued 2026-06-05; this version issued 2026-06-22
+# Version: 1.7.0 -- first issued 2026-06-05; this version issued 2026-07-23
+#   1.7.0 (2026-07-23): remove ambient-PATH dependence. Prefer the adjacent
+#     external repository venv, then the workspace venv, then python on PATH;
+#     resolve Git from PATH or the Codex bundled runtime. Fail before touching
+#     the queue when either executable is unavailable. This prevents false
+#     EMPTYDIFF moves and release-gate drift under desktop-agent shells.
 #   1.6.0 (2026-06-22): `git add` resilient to Google-Drive sync races
 #       (--ignore-errors + 5x retry with 3s settle); .gitignore extended to
 #       all Drive/transient artifacts so the operator need not pause sync.
@@ -60,10 +65,51 @@ Set-Location $repo
 if (-not (Test-Path (Join-Path $repo ".git"))) {
     Write-Error "Not a git repository root: $repo"; exit 1
 }
+
+$externalVenvPython = Join-Path "${repo}.venv" "Scripts\python.exe"
+$workspaceVenvPython = Join-Path $repo ".venv\Scripts\python.exe"
+$pythonCommand = Get-Command python -ErrorAction SilentlyContinue
+$pythonExe = if (Test-Path -LiteralPath $externalVenvPython) {
+    $externalVenvPython
+} elseif (Test-Path -LiteralPath $workspaceVenvPython) {
+    $workspaceVenvPython
+} elseif ($pythonCommand) {
+    $pythonCommand.Source
+} else {
+    $null
+}
+
+$gitCommand = Get-Command git -ErrorAction SilentlyContinue
+$runtimeRoot = Join-Path $env:USERPROFILE ".cache\codex-runtimes"
+$primaryBundledGit = Join-Path $runtimeRoot "codex-primary-runtime\dependencies\native\git\cmd\git.exe"
+$fallbackBundledGit = @(
+    Get-ChildItem -Path (Join-Path $runtimeRoot "*\dependencies\native\git\cmd\git.exe") `
+        -File -ErrorAction SilentlyContinue | Select-Object -First 1
+)
+$gitExe = if ($gitCommand) {
+    $gitCommand.Source
+} elseif (Test-Path -LiteralPath $primaryBundledGit) {
+    $primaryBundledGit
+} elseif ($fallbackBundledGit.Count -gt 0) {
+    $fallbackBundledGit[0].FullName
+} else {
+    $null
+}
+
+if (-not $pythonExe) {
+    Write-Error "Python not found in ${repo}.venv, workspace .venv, or PATH; queue untouched."
+    exit 1
+}
+if (-not $gitExe) {
+    Write-Error "Git not found on PATH or in the Codex bundled runtime; queue untouched."
+    exit 1
+}
+
 $queue = Join-Path $repo "internal\commit-queue"
 $done  = Join-Path $queue "done"
 New-Item -ItemType Directory -Force -Path $done | Out-Null
 Write-Host "[commit-watcher] watching $queue (Ctrl+C to stop)"
+Write-Host "[commit-watcher] tools: python=$pythonExe; git=$gitExe"
 
 function Move-ToDone($file, $prefix) {
     $stamp = (Get-Date -Format "yyyyMMdd-HHmmss")
@@ -88,7 +134,7 @@ function Process-Queue {
 
     # pre-commit NOTE-PDF build: every current note must enter history with a fresh
     # PDF. Build missing/stale ones now (operator-side; no sandbox timeout).
-    & python verification/scripts/verify_note_pdfs.py --build | Out-Host
+    & $pythonExe verification/scripts/verify_note_pdfs.py --build | Out-Host
 
     # stage the whole tree; resilient to Google-Drive sync races. Drive briefly
     # creates then deletes temp files (e.g. .tmp.driveupload/*) during sync; if one
@@ -96,7 +142,7 @@ function Process-Queue {
     # retry lets Drive settle so the operator need not pause sync manually.
     $added = $false
     for ($try = 1; $try -le 5; $try++) {
-        & git add --all --ignore-errors
+        & $gitExe add --all --ignore-errors
         if ($LASTEXITCODE -eq 0) { $added = $true; break }
         Write-Warning "[commit-watcher] git add transient error (attempt $try/5; likely Google Drive sync) -- retrying in 3s..."
         Start-Sleep -Seconds 3
@@ -108,9 +154,9 @@ function Process-Queue {
 
     # pre-commit JSON-integrity gate: refuse if any staged .json fails to parse
     $bad = @()
-    git diff --cached --name-only --diff-filter=ACM | Where-Object { $_ -match '\.json$' } | ForEach-Object {
+    & $gitExe diff --cached --name-only --diff-filter=ACM | Where-Object { $_ -match '\.json$' } | ForEach-Object {
         if (Test-Path $_) {
-            & python -c "import json,sys; json.load(open(sys.argv[1],encoding='utf-8'))" $_ 2>$null
+            & $pythonExe -c "import json,sys; json.load(open(sys.argv[1],encoding='utf-8'))" $_ 2>$null
             if ($LASTEXITCODE -ne 0) { $bad += $_ }
         }
     }
@@ -120,7 +166,7 @@ function Process-Queue {
     }
 
     # is there anything to commit?
-    & git diff --cached --quiet
+    & $gitExe diff --cached --quiet
     $hasDiff = ($LASTEXITCODE -ne 0)
     if (-not $hasDiff) {
         # content already committed by an earlier run; these are empty-diff
@@ -132,7 +178,7 @@ function Process-Queue {
 
     # pre-commit RELEASE gate (single source: release_check.py = the publication
     # gate; gate list in gates.py). Refuse to commit a stale/broken tree.
-    & python verification/scripts/release_check.py | Out-Host
+    & $pythonExe verification/scripts/release_check.py | Out-Host
     if ($LASTEXITCODE -ne 0) {
         Write-Warning "[commit-watcher] BLOCKED: release_check failed (stale generated surface or hygiene/policy error). Queue left intact -- run python verification/scripts/regen_all.py (or fix the reported error), then re-run."
         return
@@ -153,7 +199,7 @@ function Process-Queue {
     # robust against quotes/newlines. Temp file is P0 (inside internal/).
     $msgFile = Join-Path $queue ".commit-msg.tmp"
     [System.IO.File]::WriteAllText($msgFile, $msg, (New-Object System.Text.UTF8Encoding($false)))
-    & git -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit -F $msgFile
+    & $gitExe -c user.email="jtkor@outlook.com" -c user.name="Jusang Lee" commit -F $msgFile
     $rc = $LASTEXITCODE
     Remove-Item $msgFile -ErrorAction SilentlyContinue
     if ($rc -eq 0) {
