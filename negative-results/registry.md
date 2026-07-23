@@ -43,6 +43,41 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-22-A13-RAW-DIAMOND-JET](#ng-2026-07-22-a13-raw-diamond-jet) | A13 unqualified coefficient-jet definitions | full products miss the target L2 regularity; a cone-localized nested contraction has logarithmic magnitude and requires total-tree classification |
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
+| [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-23-a13-absolute-score-and-full-remainder"></a>
+### NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER -- absolute score and full fast remainder fail
+
+**Failure mode:** Two proposed continuations attempted to close the production
+NPC--Carleson balance without grouping the exact secant. The first integrated
+the full conservative shell score in absolute value along each inserted-shell
+path and then applied Young term by term. The second assigned the whole
+nonlinear current remainder an `N^-3/2 ||h_j||^2` shell gain.
+
+**Evidence:** Writing `x=||phi||_6`,
+`y=(sum_j||h_j||^2)^(1/2)`, and `delta=N_(j0)^-1`, the absolute score route
+produces
+`x^3 y+delta x^2 y^2+delta^2 x y^3+delta^3 y^4`; no constant can bound this
+by arbitrary `eta y^2+zeta x^6+C_(eta,zeta)`. For an exact current map `M`,
+
+`delta-Lh=[M(z+a)-M(z)-DM(z)a]^T y
+          +[M(z+a)-M(z)]^T b`.
+
+Only the second product has the standalone fast shell decay. The first is the
+coefficient-curvature term multiplying the old derivative field; at the
+Gaussian derivative scale it is only naively `N^-1/2 ||h_j||^2` and is also
+singular in a radial cone chart near the tip. Primary 27/27 and non-importing
+independent 22/22 audits verify the polynomial obstruction, exact remainder
+decomposition, and scalar tip fixture.
+
+**Consequence:** Direct absolute-score integration and the uniform full fast-
+remainder claim are retired. This is not a production counterexample. The
+successor remains under
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: prove one finite-cutoff
+tip-safe production good/bad Schur--Jacobi inequality, group the
+coefficient-curvature term with the positive current/Jacobi square, telescope
+pure-control current creation, and apply the uncontrolled Gaussian tail only
+to Gaussian-rooted terms before the global centered-form estimate.
 
 <a id="ng-2026-07-23-a13-shellwise-raw-secant-positivity"></a>
 ### NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY -- shellwise raw positivity and geometry-only one-use fail

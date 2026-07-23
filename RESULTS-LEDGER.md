@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-068](#r-068) | Tip-safe grouped-harvest and Gaussian-Carleson reduction | Scoped T4 exact/analytic/executed subproof: exact nonlinear harvest, full conservative-score Carleson bound, uncontrolled-Gaussian N^-1/N^-2 tails, CAT(0) whole secant through the tip, floor-uniform physical distance, and a global centered-form one-use estimate with exponent 10/3 at kappa=1/10; absolute score integration and the claimed full N^-3/2 remainder are retired; 110/110 aggregate assertions |
 | [R-067](#r-067) | NPC-cone and martingale-injection reduction | Scoped T4 exact/analytic/executed subproof: the production current diagonalises at alpha=5/9 and q=10/9 into an aggregate CAT(0) cone; strong Jacobi and raw-injection telescopes isolate the nonlinear NPC--Carleson balance, while positive-floor and flat-model no-gos retire shellwise and geometry-only proofs; 118/118 aggregate assertions |
 | [R-066](#r-066) | Backward-heat martingale and square-coupled Cartan reduction | Scoped T4 exact/analytic/executed subproof: the retained-square Gibbs charge and terminal-backward heat martingale give an exact controlled telescope; finite-low and covariance-trace channels fall below arbitrary budgets for regular one-shot controls; the averaged raw-current/Cartan--Jacobi bound and finite-energy extension remain open |
 | [R-065](#r-065) | Strict-past joint-score and heat-current reduction | Scoped T4 exact/executed subproof: coefficient differentiation before completion gives the exact ell+m score and factor-four recovery; same-shell independence gives the heat-current identity, while an origin witness refutes shellwise positivity; the global joint-remainder/Cartan bound remains open |
@@ -86,6 +87,48 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-068"></a>
+### R-068 -- Tip-safe grouped-harvest and Gaussian-Carleson reduction
+
+**Result ID.**
+`A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION`.
+
+**Statement.** For every exact reachable current increment, nonlinear
+Tikhonov minimisation gives an exact nonnegative harvest and retains the
+positive resolvent formula in the linear case. Differentiating the full
+production energy gives both frame and coefficient score terms and a
+cutoff-uniform Carleson square estimate. At the uncontrolled
+terminal-backward Gaussian base, the value and coefficient score components
+have second moments of orders `N^-1` and `N^-2`. The aggregate CAT(0) energy
+obeys the strong whole-secant inequality through cone-tip crossings, and the
+production cone distance is floor-uniformly controlled by physical endpoint
+increments. Globally summing the centered quadratic control form before Young
+gives, for `0<kappa<1`, the random norm power `3/(1-kappa)`, hence `10/3` at
+`kappa=1/10`. Exact scalar Schur and gauge-beat calculations explain the
+required good/bad split and show that the isolated beat remains summable.
+
+**Proven in.** A13 /
+`classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0`, with primary
+27/27, non-importing independent 22/22, integrated 61/61, aggregate 110/110,
+and a nine-page PDF passing form, zero-overfull, and direct all-page visual QA.
+
+**Reuse scope.** Nonlinear Tikhonov harvesting, Hilbert-valued sharp-cube
+score estimates, CAT(0)-valued Sobolev secants through singular cone tips, and
+global centered negative-Sobolev one-use forms on a fixed three-torus.
+
+**Boundary.** The Gaussian score tails are uncontrolled-base statements. The
+production tip-safe good/bad Schur--Jacobi inequality, a finite first
+variation at every tip contact, arbitrary finite-energy drift extension,
+controlled-shell one-use, Nelson theorem, and interacting measure remain
+open. Direct absolute score integration and a standalone full `N^-3/2`
+nonlinear-remainder claim are false architectures. Tier T4.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-059--R-067 after the production Schur--Jacobi lemma, finite-energy extension,
+and one-use theorem are resolved.
+
+---
 
 <a id="r-067"></a>
 ### R-067 -- NPC-cone and martingale-injection reduction

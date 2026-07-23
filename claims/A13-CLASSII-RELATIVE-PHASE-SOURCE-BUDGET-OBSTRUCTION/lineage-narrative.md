@@ -43,20 +43,33 @@ endpoint theorem.
    diagonalisation to identify
    the production exponent `alpha=5/9`, hence `q=10/9=2 alpha`, and converts
    the three-current form into an aggregate nonpositively curved metric cone.
-   The raw secant is an exact signed geodesic first variation plus a
-   nonnegative strong Jacobi remainder, while a second exact identity
-   telescopes raw terminal energy against fresh Gaussian injection. A
+   On the regular target locus, the raw secant is an exact signed geodesic
+   first variation plus a nonnegative strong Jacobi remainder, while a second
+   exact identity telescopes raw terminal energy against fresh Gaussian
+   injection. A
    positive-floor witness refutes shellwise secant positivity, the isolated
    adapted `1:2` and `1:3` resonance losses are summable, and a flat CAT(0)
    reset model refutes every geometry-only abstract one-use proof without
    constituting a production counterexample.
-9. **Current subproof.** Prove
-   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: a nonlinear
-   NPC--Carleson/paradifferential estimate that couples the geodesic Jacobi
-   square to causally harvestable injection through production
-   Fourier/Cameron--Martin decay. Then extend from regular controls to the
-   declared finite-energy class, close the umbrella one-use theorem, and
-   return to the A7 Nelson and finite-volume measure gates.
+9. **Tip-safe grouped harvest and Carleson reduction.**
+   `A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION` proves the exact
+   nonlinear Tikhonov harvest, full conservative-score square bound,
+   uncontrolled-Gaussian `N^-1`/`N^-2` score tails, CAT(0) whole-secant
+   inequality through the cone tip, floor-uniform physical endpoint distance,
+   and the global centered negative-Sobolev one-use form with exponent
+   `10/3` at `kappa=1/10`. Exact scalar and gauge fixtures retire direct
+   absolute score integration and correct the full nonlinear-remainder decay
+   claim. A finite first variation at every tip contact is not asserted.
+10. **Current subproof.** Prove the finite-cutoff tip-safe production good/bad
+    Schur--Jacobi inequality under
+    `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`. On the good region,
+    complete derivative displacement against the current/Jacobi square; on
+    the bad cone-tip region, retain the whole secant without an invalid
+    derivative-linear tangent. Group the coefficient-curvature term into the
+    global centered form, telescope pure-control current creation, and invoke
+    Gaussian tails only on Gaussian-rooted terms. Then extend from regular
+    controls to the declared finite-energy class, close the umbrella one-use
+    theorem, and return to the A7 Nelson and finite-volume measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

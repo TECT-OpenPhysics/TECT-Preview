@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 tip-safe grouped-harvest reduction] - 2026-07-23
+
+Recorded A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION at scoped T4. The package proves the exact nonlinear harvest, full conservative-score square estimate, uncontrolled-Gaussian N^-1/N^-2 tails, CAT(0) whole secant through tip crossings, floor-uniform physical distance, and the global centered H^(-1-kappa) one-use form with exponent 10/3 at kappa=1/10. Scalar Schur and gauge-beat fixtures retire direct absolute-score integration and correct the full nonlinear-remainder decay claim. The finite-cutoff production good/bad Schur--Jacobi lemma, finite-energy extension, one-use, and Nelson remain open.
+
 ## [Make commit watcher resolve repository toolchains] - 2026-07-23
 
 commit_watcher.ps1 v1.7.0 now resolves the adjacent external TECT.venv first, then a workspace venv or PATH Python, and resolves Git from PATH or the Codex bundled runtime. It fails before touching the queue if either tool is unavailable. This prevents desktop-agent shells with a sparse PATH from moving a valid request to EMPTYDIFF or running the release gate under the wrong Python. A no-alias -Once smoke run selected E:/Dev/TECT.venv/Scripts/python.exe and the bundled Git executable successfully.

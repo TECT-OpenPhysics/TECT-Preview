@@ -549,7 +549,14 @@ controls it proves, uniformly in `J`,
 +E sum_(j>=j0) R_j`, where the finite low block and high covariance-trace
 terms are already absorbed. This is a strict reduction, not the original
 bound. Separate one-shell, absolute-value, and repeated-past-energy estimates
-remain invalid.
+remain invalid. `A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION`
+then proves the exact nonlinear harvest, the full conservative-score square
+bound, the uncontrolled-Gaussian `N^(-1)`/`N^(-2)` score tails, the CAT(0)
+whole-secant inequality through the tip, and the global centered
+`H^(-1-kappa)` one-use form estimate. Its scalar and gauge fixtures retire
+absolute score integration and correct the nonlinear coefficient-curvature
+remainder. The remaining production good/bad Schur--Jacobi lemma must group
+that curvature term with the positive current/Jacobi square.
 
 ### **A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND**
 
@@ -579,16 +586,23 @@ with the retained square, while the isolated adapted `1:2` and `1:3`
 resonance losses are summable. A flat CAT(0) reset model refutes a
 geometry-only one-use argument but is not a production counterexample. The
 successor below is required; finite-energy extension, one-use, Nelson, and
-tier promotion remain open.
+tier promotion remain open. The successor has now been reduced further by
+`A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION`: every
+uncontrolled-Gaussian infinitesimal tail and the global centered form are
+controlled, leaving the production tip-safe good/bad Schur--Jacobi inequality
+and causal grouping as the exact finite-cutoff analytic core.
 
 ### **A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE**
 
 **Statement:** For every `zeta,eta>0`, prove uniformly in the terminal cutoff
-`J`, first for regular mutually orthogonal one-shot strict-past controls,
-`E sum_(j>=j0)(F_j+J_j) >= -zeta E||Z_J||_6^6
--eta E sum_j||h_j||^2-C_(zeta,eta,j0)`, where `F_j` is the exact geodesic
-first variation for the production NPC target and
-`J_j >= ||nabla d_g(U_j,U_j^+)||_2^2/2` is retained. The argument must couple
+`J`, first for regular mutually orthogonal one-shot strict-past controls, the
+grouped lower bound
+`E sum_(j>=j0) G_j >= -zeta E||Z_J||_6^6
+-eta E sum_j||h_j||^2-C_(zeta,eta,j0)`. On the good region away from a target
+tip, `G_j` is the geodesic first-variation term plus the retained
+`J_j >= ||nabla d_g(U_j,U_j^+)||_2^2/2`. On the bad tip region, `G_j` is the
+whole finite secant, with no separately asserted finite first variation and
+no retained derivative-linear tangent. The argument must couple
 the causally harvestable raw-energy injection to production Fourier/
 Cameron--Martin decay through a nonlinear Carleson or paradifferential
 estimate compatible with the A12 source-square structure. It must address
@@ -600,14 +614,24 @@ and injection are forbidden. After the regular-control estimate, prove the
 localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
-**Status:** OPEN CURRENT CHILD (2026-07-23), proof-ordered after
-`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` and before
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. Exact isolated `1:2` and `1:3`
-adapted harmonics have completed shell losses of orders `N^-5` and `N^-9`
-after three-dimensional multiplicity, so they do not falsify this global
-production statement. A nonsummable coupled multi-mode harvesting mechanism
-has not been excluded or constructed. The balance, finite-energy extension,
-one-use, Nelson theorem, and any tier promotion remain open.
+**Status:** REDUCED-NOT-CLOSED CURRENT CHILD (2026-07-23), proof-ordered after
+`A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION` and before
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. The reduction proves the exact
+nonlinear Tikhonov harvest; full-score Carleson estimate; uncontrolled-base
+`N^-1`/`N^-2` Gaussian tails; CAT(0) whole-secant through the tip; floor-uniform
+physical distance; and, for `0<kappa<1`, the global centered-form bound with
+random-norm exponent `3/(1-kappa)` (`10/3` at `kappa=1/10`). It also proves
+that direct absolute-score integration cannot meet arbitrary budgets and that
+only the second product in the nonlinear current remainder has the advertised
+standalone `N^-3/2` decay. The exact successor is a finite-cutoff production
+good/bad Schur--Jacobi inequality: complete the derivative displacement on the
+good region, use the whole secant without the invalid tangent on the bad
+tip-region, leave only the global centered `Q` form plus an `N^-3` trace term,
+telescope pure-control current creation, and use Gaussian score tails only on
+Gaussian-rooted terms. Exact isolated `1:2` and `1:3` adapted harmonics remain
+summable and do not falsify this global statement. The production lemma,
+finite-energy extension, one-use, Nelson theorem, and any tier promotion
+remain open.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

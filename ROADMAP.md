@@ -159,10 +159,17 @@ remainder, and raw-energy/injection telescope. It refutes shellwise positivity
 at a positive floor, proves the isolated adapted `1:2` and `1:3` losses
 summable, and uses a flat CAT(0) reset model to retire geometry-only one-use
 without producing a production counterexample. The current child is
-`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, which must couple
-geodesic positivity to causally harvestable injection through production
-Fourier/Cameron--Martin decay, then extend the result to the declared
-finite-energy control class.
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`.  The new
+tip-safe grouped-harvest reduction proves the exact nonlinear Tikhonov harvest,
+conservative-score Carleson square bound, the uncontrolled-Gaussian
+`N^(-1)`/`N^(-2)` score tails, the CAT(0) whole-secant inequality through the
+tip, and the global centered-form one-use estimate with exponent `10/3` at
+`kappa=1/10`.  It also retires direct absolute-score integration and corrects
+the nonlinear remainder: the coefficient-curvature term cannot be assigned a
+standalone `N^(-3/2)` gain.  The current child is therefore the finite-cutoff
+tip-safe production Schur--Jacobi good/bad lemma, with the coefficient-curvature
+piece grouped into the positive current square and global centered form before
+the declared finite-energy extension.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -281,12 +288,17 @@ preserved in git/changelog rather than treated as current gates.
    strong Jacobi remainder and exact injection telescope, and records both a
    positive-floor shellwise no-go and a geometry-only flat-model no-go. The
    isolated `1:2` and `1:3` adapted losses are summable rather than global
-   falsifiers. Next prove
-   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: a nonlinear
-   NPC--Carleson/paradifferential bridge between the geodesic square and
-   production Fourier/Cameron--Martin injection decay, followed by the
-   finite-energy extension. Do not use shellwise positivity, delete the
-   Jacobi remainder, or pay terminal raw energy and injection separately.
+   falsifiers.  `A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION`
+   then closes the nonlinear harvest, full-score Carleson, uncontrolled
+   Gaussian-tail, CAT(0) tip-secant, physical-distance, and global
+   centered-form sublemmas.  Next prove the finite-cutoff tip-safe production
+   good/bad Schur--Jacobi inequality under
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: complete derivative
+   displacement only on the good region, use the whole secant at the bad
+   cone-tip region, telescope pure-control current creation, and invoke the
+   `N^(-1)`/`N^(-2)` tails only on Gaussian-rooted terms.  Then make the
+   finite-energy extension. Do not use shellwise positivity, delete the Jacobi
+   remainder, or pay terminal raw energy and injection separately.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

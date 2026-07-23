@@ -138,6 +138,37 @@ the following structural results and proof-architecture boundaries hold.
     remaining theorem is the nonlinear production
     `NPC`--Carleson/paradifferential balance between the nonnegative geodesic
     square and causally harvestable Gaussian injection.
+11. `A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION` replaces that
+    broad balance by one precise production lemma.  For an exact reachable
+    current increment `delta_j(h)`, the nonlinear Tikhonov harvest
+
+    \[
+    H_{\eta,j}(w)={1\over2}\|w\|^2-
+      \inf_h\left\{{1\over2}\|w+\delta_j(h)\|^2+
+      \eta\|h\|^2\right\}
+    \]
+
+    gives the exact lower bound
+    `R_j(h)+eta||h||^2 >= -H_{eta,j}(w)` and retains the usual positive
+    resolvent formula when `delta_j` is linear.  The full conservative shell
+    score contains both the frame derivative and coefficient derivative and
+    obeys a cutoff-uniform Carleson square estimate.  At the *uncontrolled*
+    terminal-backward Gaussian base, its value and coefficient components
+    have `N^(-1)` and `N^(-2)` second-moment tails.  The aggregate `CAT(0)`
+    energy has its strong whole-secant inequality through cone-tip crossings,
+    and the production endpoint distance is floor-uniformly controlled in
+    physical variables; no finite first-variation formula at every tip contact
+    is asserted.  Finally, for `0<kappa<1`, the globally summed centered form
+    satisfies a one-use interpolation/Young bound with random-norm exponent
+    `3/(1-kappa)`, hence `10/3` at `kappa=1/10`.  Exact scalar Schur and
+    gauge-beat fixtures show both why a good/bad split is necessary and why the
+    isolated gauge-null beat is still probabilistically summable.  Direct
+    absolute score integration and the claimed full `N^(-3/2)` nonlinear
+    remainder are false architectures.  The exact remaining child is a
+    finite-cutoff, tip-safe production good/bad Schur--Jacobi inequality which
+    groups the coefficient-curvature remainder before applying the global
+    centered-form lemma and restricts Gaussian tail estimates to
+    Gaussian-rooted terms.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -156,6 +187,7 @@ is a scoped T4 subproof and does not promote A13.
 | Strict-past joint score | Exact `ell+m` recentering and conditional heat-current reduction | T4 child subproof closed |
 | Backward heat / square-coupled Cartan | Exact martingale, retained-square charge, finite-low and trace-tail reduction | T4 child subproof closed |
 | NPC cone / martingale injection | Nelson-aligned current factorisation, CAT(0) target, strong Jacobi remainder, exact injection telescope, and shellwise/geometry-only boundaries | T4 child reduction closed |
+| Tip-safe grouped harvest / Carleson reduction | Exact nonlinear harvest, full conservative-score and Gaussian-tail estimates, CAT(0) whole secant through the tip, centered-form one-use lemma, and corrected remainder boundary | T4 child reduction closed |
 | Controlled-shell one-use | Nonlinear NPC--Carleson injection balance and finite-energy extension | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -179,6 +211,12 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   Schwartz tails; component-split or non-even schemes are excluded.
 - `1/3<alpha<1/2`; jet convergence allows `kappa>0`, while rational
   reconstruction uses `0<kappa<3alpha-1`.
+- The latest centered-form theorem uses inhomogeneous `H2` on the fixed
+  three-torus and `0<kappa<1`; its sharp-cube low endpoint is the
+  Hilbert-valued `L^(3/2)` maximal estimate.
+- The latest Gaussian score-tail theorem is an uncontrolled-base
+  infinitesimal statement.  It is not applied after an adapted control has
+  changed the conditional law.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -201,8 +239,9 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE` for regular mutually
-   orthogonal one-shot controls;
+1. the finite-cutoff tip-safe production good/bad Schur--Jacobi inequality,
+   including causal current grouping and the global centered-form estimate,
+   under `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`;
 2. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
@@ -210,17 +249,17 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_npc_cone_martingale_injection_reduction_verify.py
+python codes/foundations/a13_classii_tip_safe_grouped_harvest_carleson_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `24/24`;
-- non-importing independent `23/23`;
-- integrated aggregate `118/118`;
-- exact production coefficient, cone-metric, Jacobi, witness, injection,
-  isolated-resonance, and flat-model diagnostics below their asserted
-  tolerances;
+- primary `27/27`;
+- non-importing independent `22/22`;
+- integrated `61/61`, hence aggregate `110/110`;
+- exact nonlinear-harvest, full-score, Gaussian-tail, CAT(0) secant,
+  centered-form, scalar-Schur, gauge-beat, and corrected-remainder diagnostics
+  below their asserted tolerances;
 - exit code zero.
 
 The nine-page proof note passes the standard form check, zero-overfull gate,
@@ -229,6 +268,19 @@ and direct rendered-page visual QA.
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_tip_safe_grouped_harvest_carleson_reduction_manifest.json`
+- `notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt`
+- `notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.pdf`
+- `../../codes/foundations/a13_classii_tip_safe_grouped_harvest_carleson_reduction.py`
+- `../../codes/foundations/a13_classii_tip_safe_grouped_harvest_carleson_reduction_independent.py`
+- `../../codes/foundations/a13_classii_tip_safe_grouped_harvest_carleson_reduction_verify.py`
+- `runs/2026-07-23-primary-tip-safe-grouped-harvest-carleson-reduction/result.json`
+- `runs/2026-07-23-independent-tip-safe-grouped-harvest-carleson-reduction/result.json`
+- `runs/2026-07-23-integrated-tip-safe-grouped-harvest-carleson-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-23-a13-absolute-score-and-full-remainder`
+
+The immediate predecessor package remains binding:
 
 - `classii_npc_cone_martingale_injection_reduction_manifest.json`
 - `notes/classii-npc-cone-martingale-injection-reduction-260723-v1.0.tex.txt`
@@ -241,7 +293,7 @@ The latest subproof package is:
 - `runs/2026-07-23-integrated-npc-cone-martingale-injection-reduction/result.json`
 - `../../negative-results/registry.md#ng-2026-07-23-a13-shellwise-raw-secant-positivity`
 
-The immediate predecessor package remains binding:
+The earlier backward-heat package remains binding:
 
 - `classii_backward_heat_martingale_square_coupled_cartan_reduction_manifest.json`
 - `notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt`
@@ -363,6 +415,37 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     spreads Fourier support.  Affine physical interpolation preserves shell
     support but restores the signed Cartan acceleration.  Reconciling these
     two structures is precisely the open nonlinear NPC--Carleson gate.
+22. **DISMISSED: the frame derivative alone is the full conservative shell
+    score.**  Differentiating the production energy also gives the coefficient
+    term `K_j^*q/2`; the primary and independent derivations include it before
+    proving the square-sum estimate.
+23. **UPHELD AGAINST A TIP-DERIVATIVE READING: CAT(0) strong convexity
+    identifies a finite first variation at every cone-tip contact.**  It gives
+    the whole-secant inequality and an extended-real right slope.  Finiteness
+    and chart identification at an arbitrary tip-touching pair remain open.
+24. **VALID WITH MITIGATION: the centered-form low endpoint follows from the
+    previously used `L6` maximal constant.**  It requires the sharp-cube
+    Hilbert-valued `L^(3/2)` maximal estimate and inhomogeneous `H2` on the
+    fixed torus.  A homogeneous norm with an uncontrolled zero mode would be
+    false.
+25. **UPHELD AGAINST ABSOLUTE SCORE INTEGRATION: the full score may be
+    integrated along every inserted-shell path and then absorbed termwise.**
+    The resulting polynomial contains `x^3 y`, `delta x^2 y^2`,
+    `delta^2 x y^3`, and `delta^3 y^4`; it cannot meet arbitrary sextic and
+    quadratic allocations.
+26. **UPHELD AGAINST A FULL FAST-REMAINDER CLAIM: every term in
+    `delta_j-L_jh_j` has `N^(-3/2)||h_j||^2` decay.**  The
+    coefficient-curvature term multiplying the old derivative field is only
+    naively `N^(-1/2)||h_j||^2` and is chart-singular near the tip.  It must be
+    grouped with the Jacobi/current square before estimation.
+27. **UPHELD AGAINST CONTROLLED-BASE TRANSFER: the `N^(-1)`/`N^(-2)` Gaussian
+    score tails may be reused after adapted control.**  They are proved only at
+    the uncontrolled terminal-backward Gaussian base; causal grouping must
+    isolate Gaussian-rooted terms before invoking them.
+28. **DISMISSED: the gauge-null beat is already a production counterexample.**
+    Its exact completed Cameron--Martin threshold requires an `AC` fluctuation
+    of order `N^2`; the resulting Gaussian tail is summable even after
+    three-dimensional mode multiplicity.
 
 ## Falsifier
 
@@ -399,6 +482,16 @@ telescope, positive-floor secant witness, isolated-resonance completion and
 summability, independent reconstruction, hash pins, PDF QA, or aggregate
 `118/118` verifier contract.
 
+The tip-safe grouped-harvest continuation is additionally falsified by a wrong
+sign or factor in the nonlinear Tikhonov identity or full score, failure of the
+uncontrolled-base `N^(-1)`/`N^(-2)` covariance traces, failure of the CAT(0)
+whole-secant or floor-uniform physical-distance bound, use of a homogeneous
+zero-mode-blind control norm, a centered-form exponent different from
+`3/(1-kappa)` (and `10/3` at `kappa=1/10`), failure of the scalar Schur or
+gauge-beat fixtures, a source/PDF hash mismatch, failed PDF QA, or failure of
+the primary `27/27`, independent `22/22`, integrated `61/61`, and aggregate
+`110/110` verifier contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -416,6 +509,13 @@ prove the nonlinear martingale-injection balance or the extension to every
 finite-energy drift.  The flat countermodel is not a production
 counterexample.  Consequently the result does not close one-use, Nelson, A7,
 or any measure/removal theorem, and A13 remains T4.
+
+The tip-safe grouped-harvest theorem further isolates all infinitesimal
+Gaussian tails and proves the global centered-form estimate, but it does not
+prove the production good/bad Schur--Jacobi inequality, identify a finite
+first variation at every tip contact, extend to arbitrary finite-energy
+drifts, or close one-use or Nelson.  It is a T4 reduction, not a tier
+promotion.
 
 ## History
 
@@ -462,3 +562,10 @@ or any measure/removal theorem, and A13 remains T4.
   adapted losses.  A flat CAT(0) reset model retires geometry-only one-use;
   the nonlinear NPC--Carleson injection balance remains open and the tier
   stays T4.
+- 2026-07-23: Proved the exact nonlinear harvest, full conservative-score
+  Carleson estimate, uncontrolled-Gaussian score tails, CAT(0) whole-secant
+  inequality through the cone tip, floor-uniform physical endpoint distance,
+  and global centered-form one-use lemma.  Exact scalar and gauge fixtures
+  retire absolute score integration and correct the nonlinear-remainder decay.
+  The production tip-safe good/bad Schur--Jacobi lemma and finite-energy
+  extension remain open; tier stays T4.

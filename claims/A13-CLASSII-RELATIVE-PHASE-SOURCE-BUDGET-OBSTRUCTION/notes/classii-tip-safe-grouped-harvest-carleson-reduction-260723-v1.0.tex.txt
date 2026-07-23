@@ -1,0 +1,599 @@
+% =============================================================================
+% Title: Class-II tip-safe grouped-harvest and Gaussian-Carleson reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION
+% Version: v1.0 -- first issued 2026-07-23; this version issued 2026-07-23
+% Status: T4 analytic/exact structural subproof; grouped production balance open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-23): exact nonlinear harvest functional and retained linear
+% resolvent; full conservative-score Carleson theorem; uncontrolled-Gaussian
+% score tail; CAT(0) cone-tip strong secant; global centered-form one-use bound;
+% and exact good/bad scalar Schur and gauge-null adversarial diagnostics.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cJ}{\mathfrak J}
+\newcommand{\cF}{\mathfrak F}
+\newcommand{\op}{\mathrm{op}}
+
+\section*{Purpose and scope}
+
+This note continues
+\texttt{A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE} inside the
+existing A13 claim.  It does not create a peer-level claim and does not close
+the controlled-shell one-use theorem.  Its purpose is to separate three
+parts of the remaining problem which can now be proved from the one genuinely
+geometric part which cannot yet be proved.
+
+First, the amount of raw current energy which one shell can causally remove
+is written as an exact nonlinear Tikhonov harvest.  Its linearisation is the
+retained A11 resolvent, not a coefficient-blind source norm.  Second, the
+complete conservative score, including coefficient differentiation, obeys a
+cutoff-uniform A12-compatible Carleson theorem.  At the uncontrolled Gaussian
+base its two pieces improve further to dyadic rates $N_j^{-1}$ and $N_j^{-2}$.
+Third, CAT(0) strong convexity is extended through the aggregate cone tip, and
+the centered $H^{-1-\kappa}$ quadratic remainder is paid globally with one
+Cameron--Martin/sextic allocation.
+
+Two tempting shortcuts are also retired.  Integrating the absolute full-score
+bound along a finite physical shell path produces superquadratic control
+powers and cannot meet arbitrary one-use allocations.  More seriously, the
+often suggested full nonlinear remainder estimate
+$\|\delta_j-L_jh_j\|\lesssim N_j^{-3/2}\|h_j\|^2$ omits a coefficient-curvature
+term and is false.  The exact remaining theorem is a tip-safe production
+Schur--Jacobi inequality which keeps that term inside the grouped current
+square.
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Closed here.}  Exact nonlinear harvest and retained linear resolvent;
+full conservative-score Carleson bound; explicit uncontrolled-Gaussian
+$N_j^{-1}$/$N_j^{-2}$ score tail; CAT(0) strong energy secant through the cone
+tip; floor-uniform physical endpoint-distance comparison; and a global
+strict-past $H^{-1-\kappa}$ quadratic-form bound with arbitrary control and
+sextic allocations.
+
+\medskip
+\textbf{Still open.}  The finite-cutoff production good/bad Schur--Jacobi
+inequality, including the coefficient-curvature remainder and causal
+Gaussian-rooted grouping; finiteness/identification of the cone-tip first
+variation; extension from regular one-shot controls to every declared
+finite-energy drift; one-use; Nelson; and all removal limits.
+}}
+\end{center}
+
+The fixed data are the hash-pinned $L=16$ six-real production model, positive
+floor $e=10^{-12}$, common real-even strict sharp cubes, and regular mutually
+orthogonal one-shot strict-past controls.  Every statement below is
+cutoff-wise unless a uniform limit is explicitly stated.
+
+\section{The exact nonlinear harvest}
+
+Put every current component, spatial direction, heat dummy, and generator in
+the Hilbert direct sum with the production $Q_{\rm II}$ metric.  At shell $j$
+let $w_j$ be the past current and let $\delta_j(h)$ be the exact current
+increment reachable by the physical shell control $h$.  Then the raw secant
+is simply
+\[
+ \cR_j(h)={1\over2}\|w_j+\delta_j(h)\|^2
+                    -{1\over2}\|w_j\|^2.                 \tag{1.1}
+\]
+For $\eta>0$ define
+\[
+ \boxed{
+ \cH_{\eta,j}(w)
+ ={1\over2}\|w\|^2-
+   \inf_h\left\{{1\over2}\|w+\delta_j(h)\|^2
+                         +\eta\|h\|_{\cH_j}^2\right\}.} \tag{1.2}
+\]
+Thus, pathwise and without a Taylor expansion,
+\[
+ \cR_j(h)+\eta\|h\|_{\cH_j}^2\ge-\cH_{\eta,j}(w_j).      \tag{1.3}
+\]
+This is the energy which the declared control can actually harvest, rather
+than the total Gaussian energy injected at the scale.  A sufficient global
+successor estimate is
+\[
+ \E\sum_{j\ge j_0}\cH_{\eta,j}(w_j)
+ \le \zeta\E\|Z_J\|_6^6+C_{\zeta,\eta,j_0}               \tag{1.4}
+\]
+uniformly in $J$ and along every regular controlled trajectory.
+
+If $\delta_j(h)=L_jh$ is linear and $s_j=L_j^*w_j$, completing the Hilbert
+square gives the exact retained resolvent
+\[
+ \boxed{
+ \cH_{\eta,j}^{\rm lin}(w)
+ ={1\over2}\left\langle s_j,
+   (L_j^*L_j+2\eta\Id)^{-1}s_j\right\rangle.}             \tag{1.5}
+\]
+The executable solves the normal equation independently and checks (1.5).
+This is the same structural object as the A11 determinant resolvent.  Replacing
+it by $\|s_j\|^2/(4\eta)$ deletes the retained operator and returns to the
+already failed coefficient-blind budget.
+
+\section{The full conservative-score Carleson theorem}
+
+Let
+\[
+ \cE(u)={1\over2}\sum_i\int (D_i u)^TB(u)D_i u\dd x,
+ \qquad u_j=S_{j-1}\phi,\qquad a_j=K_jh.                  \tag{2.1}
+\]
+For a vector $q(u,Du)\in\R^6$ define it by duality,
+\[
+ \xi\cdot q(u,Du)=\sum_i
+ DB(u)[\xi]:(D_i u\otimes D_i u).                         \tag{2.2}
+\]
+Differentiating before any completion gives
+\[
+ D\cE(u_j)[K_jh]=\langle\sigma_j(u_j),h\rangle,
+ \quad
+ \boxed{\sigma_j
+ =G_j^*[B(u_j)Du_j]+{1\over2}K_j^*q(u_j,Du_j).}            \tag{2.3}
+\]
+The factor $1/2$ in the second term is compulsory.
+
+Set
+\[
+ \beta_0=\sup_{u\ne0}{\|B(u)\|_{\op}\over|u|^2},
+ \qquad
+ \beta_1=\sup_{u\ne0,\,|\xi|=1}
+ {\|DB(u)[\xi]\|_{\op}\over|u|}.                       \tag{2.4}
+\]
+The fixed floor and the frame estimates
+\[
+ \|M_A(u)\|_F\le\sqrt{20}|u|,
+ \qquad \|DM_A(u)[\xi]\|_F\le\sqrt{68}|\xi|           \tag{2.5}
+\]
+give the safe production constants
+\[
+ \beta_0=4(a+2b+c)={339\over2000P},
+ \qquad
+ \beta_1\le6\sqrt{1360}\,\|Q_{\rm II}\|_{\op},
+ \quad P=4+10^{-12}.                                     \tag{2.6}
+\]
+In particular $|q(u,Du)|\le\beta_1|u||Du|^2$.
+
+Let $A_0=M_R^2/c_{\rm sym}$ and retain the A12 sharp-cube constants $M_6,Q_6$.
+The derivative source obeys the A12 estimate.  For the coefficient source use
+\[
+ \|K_j^*F\|_2^2\le {A_0\over(1+\kappa_j^2)^2}\|F\|_2^2 \tag{2.7}
+\]
+and
+\[
+ \sum_j{|Du_j|^4\over(1+\kappa_j^2)^2}
+ \le\left(\sum_j{|Du_j|^2\over1+\kappa_j^2}\right)^2.   \tag{2.8}
+\]
+Hölder and the A12 maximal/square-function theorem then prove
+\[
+ \boxed{
+ \sum_j\|\sigma_j(u_j)\|_{\cH_j}^2
+ \le A_0\left(\beta_0M_6^2Q_6
+       +{\beta_1\over2}M_6Q_6^2\right)^2\|\phi\|_6^6.} \tag{2.9}
+\]
+This is a cutoff-uniform theorem for the complete linearised energy score,
+not only the old derivative source.  It is qualitative: its fixed coefficient
+does not become an arbitrary $\zeta$, so (2.9) alone does not close A13.
+
+\section{The uncontrolled Gaussian score is dyadically summable}
+
+There is extra decay at the uncontrolled Gaussian base which deterministic
+$L^6$ envelopes cannot see.  Let $U_j=X_{<j}+r_{j:J}$ be the point value,
+including the spatially frozen terminal heat dummy, and let $Y_j=DX_{<j}$.
+Evenness of the common covariance makes $U_j$ independent of $Y_j$ at each
+spatial point.  Define
+\[
+ S_*:=\sup_{j,J}\Tr\operatorname{Cov}(U_j),
+ \qquad D_j:=\Tr\operatorname{Cov}(Y_j).                  \tag{3.1}
+\]
+Grouping lattice points by $\|n\|_\infty=m$ gives
+\[
+ S_*\le {6L^{-3}M_R^2\over c_{\rm sym}}
+ \left[1+\sum_{m\ge1}{24m^2+2\over(1+\alpha_L^2m^2)^2}\right],             \tag{3.2}
+\]
+\[
+ D_j\le {6L^{-3}M_R^2\over c_{\rm sym}}\alpha_L^{-2}
+ \left(24N+{\pi^2\over3}\right),
+ \quad N=N_{j-1},\quad \alpha_L={2\pi\over L}.           \tag{3.3}
+\]
+For a centered Gaussian vector with covariance trace $S$,
+$\E|U|^4\le3S^2$; similarly $\E|Y|^4\le3D^2$.  Jensen in the heat dummy,
+(2.7), and value--derivative independence yield
+\[
+ \E\|\ell_j\|^2
+ \le {3A_0\beta_0^2L^3S_*^2D_j\over1+\kappa_j^2}
+ \le {C_\ell\over N},                                   \tag{3.4}
+\]
+\[
+ \E\|m_j\|^2
+ \le {3A_0\beta_1^2L^3S_*D_j^2\over4(1+\kappa_j^2)^2}
+ \le {C_m\over N^2}.                                    \tag{3.5}
+\]
+Here $\ell_j=G_j^*[B(U_j)Y_j]$ and
+$m_j=K_j^*q(U_j,Y_j)/2$.  Safe explicit constants are obtained from
+\[
+ C_D={6L^{-3}M_R^2\over c_{\rm sym}}\alpha_L^{-2}
+       \left(24+{\pi^2\over3}\right),                   \tag{3.6}
+\]
+\[
+ C_\ell=3A_0\beta_0^2L^3S_*^2C_D\alpha_L^{-2},
+ \qquad
+ C_m={3\over4}A_0\beta_1^2L^3S_*C_D^2\alpha_L^{-4}.     \tag{3.7}
+\]
+Consequently
+\[
+ \E\sum_{j\ge j_0}\|\ell_j+m_j\|^2
+ \le {4C_\ell\over N_{j_0-1}}
+      +{8C_m\over3N_{j_0-1}^2}.                          \tag{3.8}
+\]
+For every predictable infinitesimal feedback,
+\[
+ \E\sum_{j\ge j_0}
+ \{\langle\ell_j+m_j,h_j\rangle+\eta\|h_j\|^2\}
+ \ge-{1\over4\eta}\E\sum_{j\ge j_0}\|\ell_j+m_j\|^2.\tag{3.9}
+\]
+Thus no linear-response strategy around the base Gaussian can create a
+nonsummable ultraviolet loss.  Equations (3.4)--(3.9) may not be transplanted
+to a controlled base: that would reuse the Gaussian independence after the
+control has destroyed it.
+
+\section{CAT(0) strong secants through the cone tip}
+
+Let $Y=C(B)$ be the complete aggregate production cone already identified in
+the preceding A13 result.  For $U_0,U_1\in W^{1,2}(\mathbb T_L^3;Y)$ let
+$U_t$ be the pointwise constant-speed geodesic and put
+$d(x)=d_Y(U_0(x),U_1(x))$.  The CAT(0) quadrilateral inequality applied at
+$x$ and $x+he_i$, divided by $h^2$ and passed to the Korevaar--Schoen limit,
+proves
+\[
+ \boxed{
+ \cE(U_t)+{t(1-t)\over2}\|\nabla d\|_2^2
+ \le(1-t)\cE(U_0)+t\cE(U_1).}                            \tag{4.1}
+\]
+This statement includes $R=0$ and requires no smooth-stratum approximation.
+It also proves $d\in H^1$ and lower semicontinuity of the cone energy.
+
+The function
+\[
+ t\longmapsto\cE(U_t)-{t^2\over2}\|\nabla d\|_2^2       \tag{4.2}
+\]
+is convex.  Hence the right slope $\cF_+$ exists in the extended real line,
+and
+\[
+ \cE(U_1)-\cE(U_0)
+ \ge\cF_+(U_0,U_1)+{1\over2}\|\nabla d\|_2^2.           \tag{4.3}
+\]
+On the smooth $R>0$ stratum this is the preceding Cartan--Jacobi formula.
+For a general tip-touching finite-energy pair, however, finiteness of
+$\cF_+$ and convergence of smooth first variations are not yet established.
+The safe tip theorem is therefore the whole finite secant (4.1), not a
+separately estimated logarithm.
+
+There is also a global physical endpoint comparison.  Write $Z$ for the
+active doublet of $X$.  The production pullback satisfies
+\[
+ |D\Phi_e(X)H|_g^2=H^TB_e(X)H\le\beta_0|Z|^2|H|^2.       \tag{4.4}
+\]
+The affine physical path $X_t=X+ta$ then gives, even if it crosses the tip,
+\[
+ \boxed{
+ d_g(\Phi_e(X),\Phi_e(X+a))
+ \le\sqrt{\beta_0}\left(|Z|+{|a_Z|\over2}\right)|a|
+ \le\sqrt{\beta_0}(|X|+|a|)|a|.}                        \tag{4.5}
+\]
+The constant is floor-uniform and equals
+$\sqrt{339/[2000(4+10^{-12})]}$.  In particular $L^4$ convergence of physical
+fields implies $L^2(Y)$ convergence of their cone images, so the energy lower
+semicontinuity in (4.1) applies directly at the tip.  This controls endpoint
+distance; it does not control the spatial derivative of a cone logarithm.
+
+\section{A global centered-form one-use lemma}
+
+The balanced coefficient-jet result supplies every finite probability moment
+of the centered derivative-square model in $H^{-1-\kappa}$, with
+$0<\kappa<1$; the production audit uses $\kappa=1/10$.  Let
+$Q_{j-1}=S_{j-1}Q$ and let $a_j$ be mutually orthogonal sharp-shell physical
+controls.  Put
+\[
+ \Pi(a)=\sum_jS_{j-1}(a_j\otimes a_j),\quad
+ X=\sum_j\|a_j\|_{H^2}^2,\quad
+ A=\left(\sum_j|a_j|^2\right)^{1/2},\quad
+ Y=\|A\|_6^6.                                             \tag{5.1}
+\]
+All Sobolev spaces here are inhomogeneous; this is load-bearing for zero
+modes.  By self-adjointness of $S_{j-1}$, duality, and the sharp-cube maximal
+theorem at exponent $3/2$,
+\[
+ \|\Pi(a)\|_2\le C_LY^{1/3}.                              \tag{5.2}
+\]
+The $p=3/2$ maximal estimate follows from the same de la Vallee Poussin plus
+cube-annular product-Marcinkiewicz proof used in A12.  At the high endpoint,
+the three-dimensional $H^2$ algebra and $L^2$ boundedness of each sharp
+projection give
+\[
+ \|\Pi(a)\|_{H^2}\le C_HX.                               \tag{5.3}
+\]
+Interpolating (5.2)--(5.3), with
+$\vartheta=(1+\kappa)/2$, yields
+\[
+ \boxed{
+ \|\Pi(a)\|_{H^{1+\kappa}}
+ \le C X^\vartheta Y^{(1-\vartheta)/3}.}                  \tag{5.4}
+\]
+
+Let $M=\|Q\|_{H^{-1-\kappa}}$.  Duality and three-factor weighted Young now
+give, for every $\eta,\zeta>0$,
+\[
+ \boxed{
+ \left|\sum_j\langle Q_{j-1},a_j\otimes a_j\rangle\right|
+ \le\eta X+\zeta Y
+ +C_\kappa\eta^{-{3(1+\kappa)\over2(1-\kappa)}}
+  \zeta^{-1/2}M^{3/(1-\kappa)}.}                          \tag{5.5}
+\]
+At $\kappa=1/10$, the model moment is $10/3$ and the negative $\eta$ exponent
+is $11/6$.  Both are available from the balanced-jet theorem.
+
+A1 ellipticity makes $X\lesssim\sum_j\|h_j\|_{\cH_j}^2$.  Moreover
+$a_j=P_j(Z_J-X_J)$, and the sharp-cube Littlewood--Paley theorem gives
+\[
+ \E Y\le C\E\|Z_J\|_6^6+C\E\|X_J\|_6^6
+ \le C\E\|Z_J\|_6^6+C.                                 \tag{5.6}
+\]
+Thus any centered quadratic remainder of the form on the left of (5.5) is
+globally one-use: it spends one control allocation, one terminal sextic
+allocation, and one integrable random constant.  Applying Young shell by
+shell would create one constant per shell and is forbidden.
+
+\section{Why absolute score integration still fails}
+
+The full-score theorem does extend to current-shell inserted states
+\[
+ v_j=S_{j-1}\phi+t_jK_jh_j,\qquad 0\le t_j\le1.          \tag{6.1}
+\]
+For $x=\|\phi\|_6$, $y=(\sum_j\|h_j\|^2)^{1/2}$ and
+$\delta=N_{j_0}^{-1}$, shell Bernstein and A1 smoothing give
+\[
+ \left\|\sup_j|v_j|\right\|_6\le M_6x+C_a\delta y,
+\quad
+ \left\|\left(\sum_j{|Dv_j|^2\over1+\kappa_j^2}\right)^{1/2}\right\|_6
+ \le Q_6x+C_d\delta y.                                  \tag{6.2}
+\]
+Substitution in (2.9) and integration over $t$ control the absolute secant
+only by a constant times
+\[
+ x^3y+\delta x^2y^2+\delta^2xy^3+\delta^3y^4.             \tag{6.3}
+\]
+For any fixed $\delta>0$, the last term cannot be bounded by
+$\eta y^2+\zeta x^6+C$ for all $x,y$.  Even the first term has a fixed Young
+tradeoff between the two requested arbitrary allocations.  Therefore direct
+absolute-score paralinearisation is a valid estimate but an invalid closure
+architecture.  The grouped positive current/Jacobi square must be retained.
+
+There is an even simpler obstruction to an initial-score-only comparison.
+In the flat scalar target $m(u)=u^2$, take
+\[
+ h=-u+\sqrt{u^2+c}.                                       \tag{6.4}
+\]
+Then the finite target displacement is the constant $c$.  Its distance
+gradient, energy secant, and Jacobi term all vanish, while the initial affine
+target displacement $2uh$ generally has nonzero gradient.  Hence no universal
+finite-geodesic inequality may replace the endpoint displacement by the
+initial physical score with only $\cJ$ as an error.
+
+\section{The exact scalar good/bad Schur prototype}
+
+The correct local structure is visible for
+\[
+ f(u,p)=u^2p^2.                                            \tag{7.1}
+\]
+When $u+a\ne0$, completing the endpoint derivative $b$ gives exactly
+\[
+\begin{split}
+ &f(u+a,p+b)-f(u,p)-Df(u,p)[a,b]\\
+ &=(u+a)^2\left[b+{ap(2u+a)\over(u+a)^2}\right]^2
+ -{a^2p^2u(3u+2a)\over(u+a)^2}.
+\end{split}                                                \tag{7.2}
+\]
+If $|a|\le\theta|u|$ with $0\le\theta<1$, the sharp uniform bound is
+\[
+ f(u+a,p+b)-f(u,p)-Df(u,p)[a,b]
+ \ge-{3-2\theta\over(1-\theta)^2}a^2p^2,                 \tag{7.3}
+\]
+uniformly in $b$.  On the bad region $|u|\le C|a|$, discard the tangent and
+use the whole secant:
+\[
+ f(u+a,p+b)-f(u,p)\ge-u^2p^2\ge-C^2a^2p^2.               \tag{7.4}
+\]
+Keeping the tangent globally is impossible.  At $u=1,a=-1$ its remainder is
+$p^2-2pb$, unbounded below as $b$ varies.  This is precisely why the cone
+geodesic and its tip behavior are load-bearing rather than cosmetic.
+
+The production successor must prove a frame-valued analogue of
+(7.3)--(7.4), uniformly in the derivative displacement, while converting the
+$a_j^2p_j^2$ remainder into the centered form of Section 5 plus the covariance
+trace.  The latter is already harmless:
+\[
+ \langle\Gamma_{j-1},a_j^2\rangle
+ \lesssim N_j\|a_j\|_2^2
+ \lesssim N_j^{-3}\|h_j\|_{\cH_j}^2.                    \tag{7.5}
+\]
+
+\section{A production-scaled gauge-null stress test}
+
+The initial physical score can vanish even when a finite secant is negative.
+On a normalized circle take one real active component
+\[
+ u=C+A\cos(qx),\qquad
+ h=if,\qquad f=B(\cos(nx)-\cos(mx)),\quad q=m-n.           \tag{8.1}
+\]
+Assume $m\ne2n,3n$, so no unintended resonance meets $q$ or $2q$.  The affine
+moment-map and density variations vanish because $h$ is a phase tangent, but
+the affine endpoint changes the density by $f^2$.  With
+$I=\langle(u u_x)^2\rangle$, Fourier orthogonality gives
+\[
+ \Delta I=-{1\over2}ACq^2B^2
+       +{3\over8}(n^2+m^2)B^4.                            \tag{8.2}
+\]
+The production $J$-sector secant, including its full positive square, is
+\[
+ \Delta E_J=-aACq^2B^2+{3a\over4}(n^2+m^2)B^4.           \tag{8.3}
+\]
+If the CM symbol lower bound is $\kappa_4|k|^4$, optimization in $B^2$ yields
+\[
+ \inf_B\{\Delta E_J+\eta\|h\|_{\cH}^2\}
+ =-{L_+^2\over3a(n^2+m^2)},                              \tag{8.4}
+\]
+\[
+ L=aACq^2-{\eta\kappa_4\over2}(n^4+m^4).                \tag{8.5}
+\]
+For $n=N+1,m=2N,q=N-1$, $N\ge2$, negativity requires
+$AC\gtrsim\eta N^2$.  A production Gaussian $q$-mode has standard deviation
+$O(N^{-2})$.  With bounded $C$ this is an $N^4$-standard-deviation event; if
+$C$ is also Gaussian, the optimized joint tail is still $\exp(-cN^4)$.
+Alternatively, finite moments give after $N^3$ multiplicity the bound
+$N^{9-4p}$ for any $p>9/4$.  The mechanism is therefore summable.  It refutes
+initial-score-only reasoning but is not a production counterexample.
+
+\section{The corrected nonlinear remainder and exact successor}
+
+For
+\[
+ \delta=M(z+a)^T(y+b)-M(z)^Ty                              \tag{9.1}
+\]
+the true linearisation is
+\[
+ Lh=DM(z)[a]^Ty+M(z)^Tb.                                  \tag{9.2}
+\]
+The exact nonlinear remainder has two terms:
+\[
+\boxed{
+ \delta-Lh=
+ [M(z+a)-M(z)-DM(z)a]^Ty
+ +[M(z+a)-M(z)]^Tb.}                                      \tag{9.3}
+\]
+Only the second term obeys the attractive shell bound
+\[
+ \|[M(z+a)-M(z)]^Tb\|
+ \lesssim N_j^{-3/2}\|h_j\|^2.                           \tag{9.4}
+\]
+The first is the frame-curvature/Cartan term.  A naive fixed-floor Taylor
+bound at Gaussian derivative size is only of order
+$N_j^{-1/2}\|h_j\|^2$, and cone coordinates become singular near the tip.
+Thus any proof which assigns (9.4) to the whole remainder is invalid.  The
+term must remain inside the grouped current/Jacobi square and be reduced to
+the centered form (5.5) by a good/bad Schur argument.
+
+The remaining finite-cutoff lemma is now precise.  It must combine:
+\begin{enumerate}
+\item a smooth good-region tangent where the active radius dominates the
+control displacement;
+\item a tip-safe bad-region whole secant, with no forbidden $b$-linear
+tangent;
+\item a Schur complement uniform in $b_j$ which leaves only the centered
+$Q_{j-1}$ form and the summable trace (7.5); and
+\item a causal grouping in which pure-control current creation telescopes,
+while only Gaussian-rooted pieces use the $N_j^{-1}$/$N_j^{-2}$ tail.
+\end{enumerate}
+Once this grouped production Schur--Jacobi lemma is proved, Sections 3--5
+provide the required arbitrary $\eta,\zeta$ allocations for regular one-shot
+controls.  Localization and lower semicontinuity must then extend the result
+to the declared finite-energy class before one-use or Nelson can be invoked.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The full-score Carleson theorem closes A13.''}
+\textbf{UPHELD as false.}  Its coefficient is fixed, and finite path
+integration creates (6.3).  It proves the complete linear score, not the
+required grouped finite secant.
+
+\item \textbf{``The Gaussian score tail applies after adapted control.''}
+\textbf{UPHELD as false.}  Equations (3.4)--(3.9) use same-point Gaussian
+value--derivative independence.  The production successor must first isolate
+Gaussian-rooted terms without differentiating the control.
+
+\item \textbf{``The cone tip was already harmless because the floor is
+positive.''}  \textbf{DISMISSED in the stated form.}  The density floor does
+not prevent the active doublet radius from vanishing.  The whole-secants
+inequality (4.1), not the floor, supplies the tip-safe result.  A finite
+separate first variation at the tip remains open.
+
+\item \textbf{``The centered form can be paid shell by shell.''}
+\textbf{UPHELD as false.}  That creates one Young constant per shell.
+Equations (5.1)--(5.6) sum first and pay the random model norm once.
+
+\item \textbf{``The full nonlinear remainder has shell power $-3/2$.''}
+\textbf{UPHELD as false.}  Equation (9.3) displays the omitted coefficient-
+curvature term.  Only the product remainder has that power.
+
+\item \textbf{``The gauge-null beat is a production counterexample.''}
+\textbf{DISMISSED.}  Its CM threshold is $AC\gtrsim\eta N^2$, and every
+base-Gaussian tail estimate is summable after shell multiplicity.  A
+control-created carrier also pays its creation energy in the global telescope.
+
+\item \textbf{``CAT(0) strong convexity alone proves one-use.''}
+\textbf{UPHELD as false.}  The previous flat reset no-go remains valid.
+Production Fourier/CM decay and the grouped Schur--Jacobi comparison are
+essential.
+\end{enumerate}
+
+\section{Reproduction and references}
+
+The fail-closed command is
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_tip_safe_grouped_harvest_carleson_reduction_verify.py
+\end{verbatim}
+The primary route derives production constants, explicit Gaussian tail
+constants, the retained resolvent, scalar Schur completion, gauge beat, and
+Young exponents.  The non-importing route reconstructs rational production
+coefficients, uses different finite-dimensional coefficients, exact rational
+Schur grids, an independent Fourier grid, Wick identities, and weighted
+AM--GM.  The integrated verifier pins both scripts, their JSON artifacts, this
+source, the rendered PDF, all claim/ledger boundaries, and the negative-result
+entry.
+
+The CAT(0) Sobolev-energy passage uses the metric energy and quadrilateral
+framework of N. Korevaar and R. Schoen, ``Sobolev spaces and harmonic maps for
+metric space targets,'' Communications in Analysis and Geometry 1 (1993),
+566--601, and the lower-semicontinuity/differential formulation of N. Gigli
+and A. Tyulenev, ``Korevaar--Schoen's energy on strongly rectifiable spaces,''
+Calculus of Variations 60 (2021), article 235,
+\texttt{https://doi.org/10.1007/s00526-021-02028-z}.
+
+\clearpage
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Tier:      T4 before / T4 after (no promotion)
+Closed:    nonlinear Tikhonov harvest; retained linear resolvent;
+           full conservative-score Carleson theorem; uncontrolled
+           Gaussian N^-1/N^-2 score tail; CAT(0) cone-tip strong
+           secant; physical endpoint distance; global centered-form
+           one-use bound; scalar good/bad Schur prototype
+Open:      production tip-safe grouped Schur--Jacobi lemma; finite
+           cone-tip first variation; finite-energy extension
+Umbrella:  A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE remains open
+Scope:     fixed floor; finite cutoff; strict one-shot sharp shells;
+           regular controls; inhomogeneous H2; 0<kappa<1
+No claim:  global injection balance; one-use; Nelson; measure;
+           floor/regulator/infinite-volume limits; T5--T7
+\end{verbatim}
+
+\noindent\textbf{Final boundary.}
+The stochastic, harmonic-analytic, centered-form, and cone-tip pieces of the
+successor are now individually controlled.  The unresolved object is no
+longer a generic geodesic-log Carleson estimate: it is the finite-cutoff
+production good/bad Schur--Jacobi inequality which must keep the first term of
+(9.3) grouped with the positive current square and telescope pure-control
+current creation before applying the Gaussian tail.

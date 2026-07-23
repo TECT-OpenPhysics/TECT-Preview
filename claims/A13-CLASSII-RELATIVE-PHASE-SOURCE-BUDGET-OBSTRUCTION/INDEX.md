@@ -7,7 +7,7 @@
 
 **Selection statement.** For the hash-pinned A1 production coefficients and A10-A13 strict sharp cubes, exact Class-II algebra and independently executed fixtures close several invalid proof architectures without closing the Nelson theorem. The translation, universal-Q, finite-forest, and balanced-jet continuations prove the flexible epsilon_…
 
-**Falsifier.** A failure of any prior A13 Fierz, source, factor-four, determinant, translation/frame, Cartan, universal-Q, forest, balanced-jet, strict-past, or backward-heat assertion remains a falsifier for its package. The latest continuation is falsified by a production coefficient ratio d…
+**Falsifier.** A failure of any prior A13 Fierz, source, factor-four, determinant, translation/frame, Cartan, universal-Q, forest, balanced-jet, strict-past, backward-heat, or NPC-cone assertion remains a falsifier for its package. The latest continuation is falsified by a wrong sign or factor…
 
 ## PHASE-SOURCE-GEOMETRY/  ·  1 proof unit  ·  tier span T4
 
@@ -43,10 +43,11 @@
 | `classii-strict-past-joint-score-heat-current-reduction` | v1.0 | T4* | Strict-past joint score and heat-current reduction |  |  |
 | `classii-strict-past-signed-causal-reduction` | v1.0 | T4* | Strict-past causalization retains the PSD affine shell block and gives the exact q-resolvent charge. For A11, delta a/2=I_j and delta r/2=sum C_j, so… |  | Bound S_(J,10/9) with centered Q, rational current, translated-frame square, and Cartan c… |
 
-## NPC-CONE-AND-MARTINGALE-INJECTION/  ·  1 proof unit  ·  tier span —
+## NPC-CONE-AND-MARTINGALE-INJECTION/  ·  2 proof units  ·  tier span —
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
 | `classii-npc-cone-martingale-injection-reduction` | v1.0 | — | Class-II NPC cone and martingale-injection reduction |  |  |
+| `classii-tip-safe-grouped-harvest-carleson-reduction` | v1.0 | — | Class-II tip-safe grouped-harvest and Gaussian-Carleson reduction |  |  |
 
-<!-- generated 2026-07-23T16:11:42Z by build_index.py v1.1.1 -->
+<!-- generated 2026-07-23T21:05:41Z by build_index.py v1.1.1 -->

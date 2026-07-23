@@ -42,11 +42,13 @@ not a sequence of peer-level capstones. A6 closes the fixed-floor canonical
 $K_A$ definition after its UV power-counting obstruction; A7 closes the
 covariance-normal energy composite; A8 and A9 close the decoupled reference
 and interpolation identities. A10--A13 retain the exact replacement/no-go
-lineage. A13 is the active subproof host: its universal $Q$ child and
-finite-cutoff coefficient-jet forest are closed at scoped T4, while balanced
-jet continuum convergence, exact A7 reconstruction, and the one-use/Nelson
-bound remain open. This family is not a new premise of A5 and has no current
-PUBLISHED measure theorem.
+lineage. A13 is the active subproof host: its universal $Q$, finite-cutoff
+coefficient-jet forest, balanced-jet continuum, exact grouped A7
+reconstruction, backward-heat, NPC-cone, and tip-safe grouped-harvest
+reductions are closed at scoped T4. The exact current child is the finite-cutoff
+production good/bad Schur--Jacobi lemma, followed by the finite-energy
+extension and umbrella one-use/Nelson bound. This family is not a new premise
+of A5 and has no current PUBLISHED measure theorem.
 
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 

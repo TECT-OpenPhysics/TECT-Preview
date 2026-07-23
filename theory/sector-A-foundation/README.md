@@ -19,17 +19,20 @@ A6 UV and K definitions
   -> A8 decoupled Nelson reference
   -> A9 interpolation cancellation
   -> A10-A13 replacement/no-go lineage
-  -> A13 balanced coefficient jets and one-use estimate (open)
+  -> A13 tip-safe production Schur--Jacobi lemma and one-use estimate (open)
   -> A7 Nelson/Gibbs reassembly (open)
 ```
 
-A7 is the long-term theorem anchor; A13 is the current subproof host. The
-latest A13 finite-cutoff forest theorem classifies the exact `2`, `4+2`,
-`5+2`, and `3+0` Wiener contractions and proves complete-sector parity
-cancellation under the entrywise-even A1 covariance. It retains the finite
-tensor `Sigma_Lambda Q_Lambda`, does not improve literal full-product
-regularity, and does not close the coefficient-jet model. The current child is
-`A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION`.
+A7 is the long-term theorem anchor; A13 is the current subproof host. Its
+finite forest, balanced coefficient-jet continuum, exact grouped rational A7
+reconstruction, backward-heat, NPC-cone, and tip-safe grouped-harvest
+reductions are closed at scoped T4. The newest reduction controls the full
+conservative score and uncontrolled-Gaussian tails, proves the CAT(0) whole
+secant through the cone tip, and establishes the global centered-form one-use
+estimate. The current child remains
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, now sharpened to the
+finite-cutoff tip-safe production good/bad Schur--Jacobi lemma before the
+finite-energy extension.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's
