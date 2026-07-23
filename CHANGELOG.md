@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 strict-past joint-score and heat-current reduction] - 2026-07-23
+
+Proved the exact ell_j+m_j metric center before discarding the positive square, recovered the fast relative-phase factor four, and derived the conditional Gaussian heat-current identity. A production origin witness refutes shellwise positivity. Primary and non-importing independent audits pass 9/9 each; the three-page PDF passes form, zero-overfull, and direct all-page visual QA. The global joint-remainder/Cartan bound and one-use theorem remain open at T4.
+
 ## [Automate verified offsite push after watcher commit] - 2026-07-23
 
 A later operator directive replaces the manual-push default. After a release-gated watcher commit, the AI now pushes the current branch to its configured push remote and verifies remote head equality. Force-push, tag/release creation, and remote reconfiguration remain forbidden without separate explicit instruction; authentication or branch-protection failures preserve the local commit and are reported.

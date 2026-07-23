@@ -35,10 +35,11 @@
 | `classii-coefficient-jet-forest-classification` | v1.0 | T4* | Complete non-aliased sharp-cube forests reproduce the covariance-matched finite-cutoff first and second coefficient monomials; summed value-derivativ… | ANALYTIC, EXACT, EXECUTED. | Prove coupled-cutoff convergence of balanced P3/P4 jets and the exact finite-term A7 reco… |
 | `classii-universal-q-cm-translation` | v1.0 | — | Universal derivative-square model, Cameron--Martin action, and raw-jet obstruction |  |  |
 
-## STRICT-PAST-SIGNED-CHARGE/  ·  1 proof unit  ·  tier span T4
+## STRICT-PAST-SIGNED-CHARGE/  ·  2 proof units  ·  tier span T4
 
 | Proof unit | Cur | Tier | What it proves (footer: precise statement) | Evidence | Next action |
 |---|---|---|---|---|---|
+| `classii-strict-past-joint-score-heat-current-reduction` | v1.0 | T4* | Strict-past joint score and heat-current reduction |  |  |
 | `classii-strict-past-signed-causal-reduction` | v1.0 | T4* | Strict-past causalization retains the PSD affine shell block and gives the exact q-resolvent charge. For A11, delta a/2=I_j and delta r/2=sum C_j, so… |  | Bound S_(J,10/9) with centered Q, rational current, translated-frame square, and Cartan c… |
 
-<!-- generated 2026-07-23T09:45:17Z by build_index.py v1.1.1 -->
+<!-- generated 2026-07-23T11:05:05Z by build_index.py v1.1.1 -->

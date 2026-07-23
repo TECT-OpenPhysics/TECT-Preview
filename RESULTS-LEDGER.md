@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-065](#r-065) | Strict-past joint-score and heat-current reduction | Scoped T4 exact/executed subproof: coefficient differentiation before completion gives the exact ell+m score and factor-four recovery; same-shell independence gives the heat-current identity, while an origin witness refutes shellwise positivity; the global joint-remainder/Cartan bound remains open |
 | [R-064](#r-064) | Strict-past PSD-resolvent one-use reduction | Scoped T4 exact/executed subproof: causal Gaussian conditioning retains the positive A11 shell block, gives the exact q-resolvent source rebate, and reduces one-use to one global signed coefficient-increment charge; the cutoff-uniform charge bound remains open |
 | [R-063](#r-063) | Balanced coefficient-jet continuum and exact rational A7 reconstruction | Scoped T4 analytic/exact/executed subproof: high-against-root P3/P4 jets have Fourier variances bounded by <n>^(-2+epsilon) and <n>^(-3+epsilon), converge across coupled cutoffs in every finite moment at the target Sobolev orders, and reconstruct the full rational translated coefficient in the exact grouped A7 scheme with every lower chaos and finite Sigma Q retained |
 | [R-062](#r-062) | Finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation | Scoped T4 analytic/exact/executed subproof: exact 2, 4+2, 5+2, and 3+0 forest classification; both non-aliased sharp-cube parenthesisations reconstruct the complete product; entrywise-even A1 parity cancels net value-derivative/double-cross terms while retaining finite tensor Sigma_Lambda Q_Lambda; 82/82 aggregate assertions |
@@ -83,6 +84,31 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-065"></a>
+### R-065 -- strict-past joint-score and heat-current reduction
+
+**Result ID.**
+`A13-CLASSII-STRICT-PAST-JOINT-SCORE-HEAT-CURRENT-REDUCTION`.
+
+**Statement.** Differentiating the strict-past coefficient increment before
+metric completion gives the exact score `ell_j+m_j` and nonlinear remainder
+`N_j`, retaining the positive completed square. It recovers the factor-four
+fast relative-phase principal symbol. Under the pinned entrywise-even
+covariance, same-shell value--derivative independence gives the exact
+Gaussian heat-current identity. A production origin witness shows that
+conditional `C_j` can be strictly negative.
+
+**Proven in.** A13 /
+`classii-strict-past-joint-score-heat-current-reduction-260723-v1.0`, with
+primary 9/9, non-importing independent 9/9, and three-page PDF form,
+zero-overfull, and direct all-page visual QA.
+
+**Boundary.** The cutoff-uniform global joint-remainder/Cartan form bound,
+controlled-shell one-use estimate, Nelson theorem, and interacting measure
+remain open. Tier T4.
+
+---
 
 <a id="r-064"></a>
 ### R-064 -- strict-past PSD-resolvent one-use reduction

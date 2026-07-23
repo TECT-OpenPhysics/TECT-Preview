@@ -504,7 +504,7 @@ independent 26/26 audits pass; the integrated package and six-page PDF are
 hash-pinned.  No adapted shift, one-use estimate, Nelson bound, interacting
 measure, or tier promotion follows.
 
-### **A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND**
+### **A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND**
 
 **Statement:** In the strict sharp-cube filtration, condition each current
 shell on its strict past and prove a cutoff-uniform signed form estimate for
@@ -515,14 +515,20 @@ model, but may not take termwise absolute values and repay the same past
 energy at every shell.  The output must control the adapted random shift at
 the one-use charge without assuming the desired Nelson moment.
 
-**Status:** OPEN CURRENT CHILD (2026-07-23; strict-past resolvent reduction
-CLOSED), proof-ordered after the closed balanced coefficient model and before
+**Status:** OPEN CURRENT CHILD (2026-07-23; strict-past joint-score and
+heat-current reduction CLOSED), proof-ordered after the closed balanced
+coefficient model and before
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`.
 
 **Advance:** `A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION`
 proves the exact causal/PSD completion. With `q=(2 epsilon_v)^(-1)=10/9`,
 the remaining object is
 `S_J,q=sum_j[(q/2)<ell_j,(I+qT_j)^(-1)ell_j>-C_j]`.
+The joint-score continuation writes `C_j(u)=<m_j,u>+N_j(u)` before completion,
+so the exact center is `ell_j+m_j`; it recovers factor four and yields the
+conditional heat-current identity.  The remaining global object is
+`sum_j[(q/2)<ell_j+m_j,R_q,j(ell_j+m_j)>-N_j]`, with its positive square and
+Cartan heat curvature kept coupled.  Its cutoff-uniform bound is not proved.
 This spends endpoint control energy once and retains the complete coefficient
 increment. The cutoff-uniform global bound on this signed charge is not
 proved. In particular, the factor-four relative-phase contribution remains

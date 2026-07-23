@@ -145,10 +145,12 @@ every grouped lower chaos and finite `Sigma Q`. `A13-CLASSII-STRICT-PAST-RESOLVE
 the causal/PSD completion at scoped T4. It derives `q=10/9` from the one-use
 control allocation and reduces the remaining problem exactly to
 `sum_j[(q/2)<ell_j,(I+qT_j)^(-1)ell_j>-C_j]`.
-The current child remains
-`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`, which must bound this
-global charge while keeping centered `Q`, current, positive square, and
-Cartan curvature coupled for an adapted shift.
+The joint-score continuation now replaces the separated charge by the exact
+center `ell_j+m_j`, recovers factor four, and derives the conditional
+heat-current identity while refuting shellwise positivity of `C_j`.  The
+current child is `A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND`,
+which must keep centered `Q`, current, positive square, and Cartan heat
+curvature coupled for an adapted shift.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -258,9 +260,9 @@ preserved in git/changelog rather than treated as current gates.
    The strict-past causal/PSD-resolvent continuation is also closed: at
    `epsilon_v=0.45`, `q=10/9`, and one-use is reduced to the global charge
    `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]` without repeated past-energy payment.
-   Next prove `A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND` for that
-   charge, keeping the positive square, centered `Q`, current, and Cartan
-   curvature coupled.
+   Next prove `A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND` for
+   the exact `ell+m` charge and nonlinear remainder, keeping the positive
+   square, centered `Q`, current, and Cartan curvature coupled.
    Do not use termwise paraproduct Young absorption.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a

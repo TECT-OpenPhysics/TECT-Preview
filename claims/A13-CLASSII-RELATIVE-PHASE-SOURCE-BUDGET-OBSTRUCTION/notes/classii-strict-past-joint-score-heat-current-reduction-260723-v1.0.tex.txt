@@ -1,0 +1,97 @@
+% =============================================================================
+% Title: Strict-past joint score and heat-current reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-23; this version issued 2026-07-23
+% Status: T4 exact structural subproof; joint-remainder/Cartan and one-use open
+% =============================================================================
+
+\section*{Purpose and scope}
+
+This note continues the strict-past resolvent reduction for the finite ordered Gaussian sharp-cube filtration.  It keeps the positive completed square that the preceding sufficient signed-charge formulation discarded, differentiates the production coefficient increment at the conditional origin, and computes the exact conditional heat-current identity.  All identities are finite-dimensional and cutoff-wise.  No cutoff-uniform form bound, Nelson estimate, or measure construction is asserted.
+
+Write \(H_j=T_j+q^{-1}I\), \(R_j=(I+qT_j)^{-1}\), so \(H_j^{-1}=qR_j\), and let
+\[
+C_j(u)={1\over2}\int [B(x+G_ju)-B(x)]:
+ ((D(x+G_ju))^{\otimes2}-\Gamma_j).
+\]
+The strict-past coefficient score and exact nonlinear remainder are
+\[
+ \langle m_j,v\rangle=DC_j(0)[v]
+ ={1\over2}\int DB(x)[G_jv]:(Dx^{\otimes2}-\Gamma_j),
+ \qquad N_j(u)=C_j(u)-\langle m_j,u\rangle .
+\]
+Thus \(N_j(0)=DN_j(0)=0\).
+
+\section*{Joint-score metric completion}
+
+For every strict-past realization and shell displacement \(h_j\), the retained affine block plus coefficient increment satisfies the exact identity
+\[
+ \mathbb E_j(I_j+C_j)(\xi_j+h_j)
+ =-\epsilon_v|h_j|^2-{q\over2}\langle \ell_j+m_j,
+ R_j(\ell_j+m_j)\rangle+\mathbb E_jN_j(\xi_j+h_j)
+ +{1\over2}|H_j^{1/2}(h_j+qR_j(\ell_j+m_j))|^2.
+\]
+Indeed, substitute \(C_j(u)=\langle m_j,u\rangle+N_j(u)\) before completing the \(H_j\)-square.  This is algebraic and loses no sign.  On the fast relative-phase principal symbol, where \(m_j=\ell_j\), the negative source rebate is four times its coefficient-one value.  Hence the earlier factor-four obstruction is recovered automatically rather than inserted as a separate convention.
+
+The preceding charge involving only \(\ell_j\) remains a sufficient reduction, but it discards a potentially useful positive square too early.  The sharper remaining object must retain the joint score, nonlinear remainder, and square together.
+
+\section*{Conditional heat-current identity}
+
+Let \(g=G_j\xi_j\), condition on the strict past, and use independence of the same-shell Gaussian value and derivative variables under the pinned entrywise-even covariance.  With value covariance \(\Sigma_j\) and past derivative covariance \(\Gamma_{j-1}\),
+\[
+ \mathbb E_j C_j(\xi_j+h_j)
+ ={1\over2}\int [P_{\Sigma_j}B(x+G_jh_j)-B(x)]:
+ (D(x+G_jh_j)^{\otimes2}-\Gamma_{j-1}).
+\]
+The proof expands the derivative square.  The centered same-shell derivative covariance cancels \(\Gamma_j-\Gamma_{j-1}\), while all value--derivative cross terms vanish.  The remaining value average is precisely the Gaussian heat semigroup \(P_{\Sigma_j}\).
+
+Moreover,
+\[
+ P_{\Sigma}B(u)-B(u)
+ ={1\over2}\int_0^1P_{t\Sigma}(\Sigma:D^2B)(u)\,dt.
+\]
+This separates a translated current/Cartan contraction from Gaussian heat curvature without assigning either term an unsupported sign.
+
+Conditional positivity of \(C_j\) is false.  At \(x=0\), \(Dx=0\), and \(h_j=0\), production \(B(0)=0\) and \(P_{\Sigma_j}B(0)\succeq0\), whence
+\[
+ \mathbb E_jC_j=-{1\over2}\operatorname{Tr}
+ (P_{\Sigma_j}B(0)\Gamma_{j-1})<0
+\]
+for a nondegenerate past covariance.  Therefore the proof may not discard the current term by a shellwise positivity claim.
+
+\section*{Consequence and remaining gate}
+
+The next honest target is
+\begin{verbatim}
+A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND
+\end{verbatim}
+prove a cutoff-uniform global estimate for the sum of
+\[
+ {q\over2}\langle\ell_j+m_j,R_j(\ell_j+m_j)\rangle-N_j
+\]
+while keeping the centered \(Q\), translated current, frame/Cartan heat curvature, and the retained positive square coupled.  Termwise Young absorption or repeated payment of past energy is not admissible.  Closure of this gate would feed the umbrella controlled-shell one-use estimate; it is not itself established here.
+
+\section*{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED:} the coefficient score may be added after completing the old square.  Differentiating first changes the center from \(\ell_j\) to \(\ell_j+m_j\); the primary and independent randomized identities verify the exact equality.
+\item \textbf{VALID WITH MITIGATION:} same-point value and derivative noises are always independent.  This holds only for the pinned entrywise-real-even covariance.  A correlated synthetic control fails the heat-current identity and is included in the independent audit.
+\item \textbf{UPHELD AGAINST A POSITIVITY READING:} the conditional coefficient increment is nonnegative.  The origin calculation gives a strict negative production example, so no such sign is used.
+\item \textbf{VALID WITH MITIGATION:} the heat-semigroup formula already bounds the global sum.  It only identifies the curvature exactly; its cutoff-uniform Cartan/form estimate is the named next gate.
+\item \textbf{UPHELD AGAINST PROMOTION:} this reduction proves the controlled-shell one-use or Nelson theorem.  It proves neither and leaves A13 at T4.
+\end{enumerate}
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-STRICT-PAST-JOINT-SCORE-HEAT-CURRENT-REDUCTION
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Evidence: primary 9/9 and non-importing independent 9/9.
+Verified: exact joint-score recentering, factor-four recovery, conditional
+heat-current identity, and two adversarial negative controls.
+Tier before / after: T4 / T4 (no tier change).
+No-overclaim: no global joint-remainder bound, controlled-shell one-use,
+Nelson theorem, interacting measure, regulator removal, or tier promotion.
+Next action: prove A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND
+with the positive square retained.
+\end{verbatim}

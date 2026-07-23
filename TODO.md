@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION is closed at scoped T4. Strict-past Gaussian causalization retains the PSD A11 shell block and yields the exact source rebate (q/2)<ell_j,(I+qT_j)^(-1)ell_j>, with q=10/9 at epsilon_v=0.45. The A11 telescope reduces one-use to the global signed charge sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j] without repeated past-energy payment. Primary 12/12 and non-importing independent 11/11 pass; five-page PDF passes form, zero-overfull, and automated render QA. Current child remains A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND: prove a cutoff-uniform global bound with centered Q, rational current, translated-frame square, and Cartan curvature coupled. No A14 claim.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND)_
+  - Joint-score/heat-current reduction closed at T4: exact ell+m center, factor-four recovery, heat-current identity, and conditional-positivity no-go. Next bound the global joint remainder with positive square and Cartan curvature coupled.
   - _updated 2026-07-23_
 
 ## Next up

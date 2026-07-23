@@ -29,8 +29,8 @@
   ],
   "falsifier": "A failure of any prior A13 Fierz, source, factor-four, one-use/Nelson, scalar-loop, nonfrozen determinant, potential, translation/frame, Cartan, expectation, universal-Q, or finite-forest assertion remains a falsifier. The balanced continuation is falsified by a wrong -2 or -3 Fourier-variance exponent, failure of coupled-cutoff Cauchy convergence at either target, failure of all-finite-moment hypercontractive lift, parenthesisation mismatch without an intermediate projection, omission of a P1/P2/P0 correction or the finite Sigma_Lambda Q_Lambda term, mismatch of the exact rational Taylor chart with the A7 covariance-normal composite, source/PDF hash mismatch, failed six-page PDF QA, failed primary/independent/integrated assertion, or a release-gate failure. The strict-past continuation is falsified by present/future dependence in a predictor, a wrong affine-divergence factor, loss of T_j positivity, a q other than (2 epsilon_v)^-1, a wrong resolvent sign, failure of delta a/2=sum I_j or delta(b-a)/2=sum C_j, deletion of the factor-four contribution inside shifted C_j, source/PDF hash mismatch, or a failed primary, independent, integrated, or release assertion.",
   "reproduction": {
-    "command": "python codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py",
-    "expected": "Primary 12/12, non-importing independent 11/11, integrated aggregate pass; A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION-INTEGRATED-PASS; exit 0.",
+    "command": "python codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction.py && python codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction_independent.py",
+    "expected": "Primary 9/9 and non-importing independent 9/9; both PASS sentinels; exit 0.",
     "status": "AVAILABLE"
   },
   "legacy_pillar": [],
@@ -110,13 +110,19 @@
     "codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py",
     "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-primary-strict-past-signed-causal-reduction/result.json",
     "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-independent-strict-past-signed-causal-reduction/result.json",
-    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-integrated-strict-past-signed-causal-reduction/result.json"
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-integrated-strict-past-signed-causal-reduction/result.json",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.tex.txt",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.pdf",
+    "codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction.py",
+    "codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction_independent.py",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-primary-strict-past-joint-score-heat-current-reduction/result.json",
+    "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-independent-strict-past-joint-score-heat-current-reduction/result.json"
   ],
   "t7_candidate": false,
   "no_overclaim": "The strict-past theorem is an exact causal/PSD-resolvent and A11 signed-charge reduction only. It preserves the relative-phase factor-four effect inside C_j and does not prove the cutoff-uniform global charge bound, the one-use inequality, q=10/9 Nelson moment, A11/A7 closure, an interacting measure, floor or regulator removal, infinite volume, phase transition, BCC selection, T5, T6, or T7.",
-  "next_action": "Continue under A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND. Prove the cutoff-uniform global estimate for S_J,10/9=sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j], using the balanced A7 reconstruction to keep centered Q, rational current, translated-frame square, and Cartan curvature coupled. Do not estimate the two summands or individual shells separately.",
+  "next_action": "Continue under A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND. Bound the global sum of (q/2)<ell_j+m_j,R_q,j(ell_j+m_j)>-N_j while keeping centered Q, rational current, translated-frame square, heat curvature, and the positive completed square coupled. Do not estimate individual shells separately.",
   "last_review": "2026-07-23",
   "closure_depth": "C1",
   "proof_maturity": "S1",
-  "notes": "Scoped T4 exact reductions plus executed architecture no-gos. The latest subproof closes strict-past Gaussian causalization and the PSD affine resolvent completion, proves q=10/9 from epsilon_v=0.45, and uses the exact A11 telescope to isolate one global signed production charge. Primary 12/12 and non-importing independent 11/11 pass before integrated ledger verification. The five-page PDF passes form, zero-overfull, and automated render QA; direct image viewing was blocked by the app sandbox helper and is not claimed. T-050 remains in progress at the global signed Q/current/Cartan bound. Tier stays T4."
+  "notes": "Scoped T4 exact reductions plus executed architecture no-gos. The latest subproof differentiates the coefficient increment before completion, proves the exact ell_j+m_j center and heat-current identity, recovers factor four, and falsifies shellwise conditional positivity. Primary 9/9 and non-importing independent 9/9 pass. The three-page PDF passes form, zero-overfull, and direct all-page visual QA. T-050 remains in progress at the global joint-remainder/Cartan form bound. Tier stays T4."
 }

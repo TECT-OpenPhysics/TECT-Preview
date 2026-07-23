@@ -77,6 +77,13 @@ the following structural results and proof-architecture boundaries hold.
    the single global signed charge
    `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]`. At `epsilon_v=0.45`,
    `q=10/9` exactly. The global cutoff-uniform bound remains open.
+8. `A13-CLASSII-STRICT-PAST-JOINT-SCORE-HEAT-CURRENT-REDUCTION` differentiates
+   the coefficient increment before discarding the completed square.  The
+   exact center is `ell_j+m_j`, which recovers the factor-four principal
+   symbol automatically.  Conditional value--derivative independence gives
+   the exact Gaussian heat-current identity, while an origin calculation
+   disproves shellwise positivity of `C_j`.  The remaining gate is the global
+   joint-remainder/Cartan form bound with the positive square retained.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -92,6 +99,7 @@ is a scoped T4 subproof and does not promote A13.
 | Coefficient-jet forest | Finite-cutoff Wiener forest and complete-sector parity cancellation | T4 child subproof closed |
 | Balanced coefficient jets | Coupled-cutoff P3/P4 convergence and exact grouped rational A7 reconstruction | T4 child subproof closed |
 | Strict-past resolvent charge | Exact causal/PSD completion and A11 signed-charge reduction | T4 child subproof closed |
+| Strict-past joint score | Exact `ell+m` recentering and conditional heat-current reduction | T4 child subproof closed |
 | Controlled-shell one-use | Global signed Q/current/Cartan form bound | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -137,33 +145,37 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. `A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`;
+1. `A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND`;
 2. the controlled-shell one-use estimate without termwise Young absorption;
 3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py
+python codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction.py
+python codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction_independent.py
 ```
 
 Expected output:
 
-- primary `12/12`;
-- non-importing independent `11/11`;
-- integrated and aggregate assertions pass;
-- `A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION-INTEGRATED-PASS`;
+- primary `9/9`;
+- non-importing independent `9/9`;
+- joint-recentring and heat-current residuals below their asserted tolerances;
 - exit code zero.
 
-The five-page proof note passes the standard form check, zero-overfull gate,
-and automated rendered-page QA. Direct model image viewing was unavailable
-because the app sandbox helper failed to initialize; that limitation is
-recorded in the manifest rather than reported as manual visual QA.
+The three-page proof note passes the standard form check, zero-overfull gate,
+and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
+- `notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.tex.txt`
+- `notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.pdf`
+- `../../codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction.py`
+- `../../codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction_independent.py`
+- `runs/2026-07-23-primary-strict-past-joint-score-heat-current-reduction/result.json`
+- `runs/2026-07-23-independent-strict-past-joint-score-heat-current-reduction/result.json`
 - `classii_strict_past_signed_causal_reduction_manifest.json`
 - `notes/classii-strict-past-signed-causal-reduction-260723-v1.0.tex.txt`
 - `notes/classii-strict-past-signed-causal-reduction-260723-v1.0.pdf`
@@ -284,3 +296,8 @@ T5, T6, or T7.
   The exact A11 telescope reduces one-use to the single global charge
   `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]`, with `q=10/9` at the production
   control allocation. The global signed Q/current/Cartan bound remains open.
+- 2026-07-23: Refined the strict-past charge to the exact joint score
+  `ell_j+m_j`, recovered the factor-four principal symbol, derived the
+  conditional heat-current identity, and falsified shellwise positivity of
+  the coefficient increment.  The joint-remainder/Cartan form bound remains
+  open and the tier remains T4.
