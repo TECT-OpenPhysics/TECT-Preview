@@ -7,7 +7,7 @@ source. This closes the recurring "forgot to build the PDF" / "PDF build timed o
 defect systemically (parallel to the generated-surface sync gates).
 
   --check            list current notes with missing/stale PDFs; warn (exit 0).
-  --check --strict   exit 1 if any missing/stale AND pdflatex is available.
+  --check --strict   exit 1 if any missing/stale AND a TeX engine is available.
   --build            build all missing/stale PDFs (build_note_pdf.py per note);
                      exit 1 if any build genuinely fails.
 
@@ -17,8 +17,12 @@ and doctor report missing PDFs as a warning. Governance: enforcement-spine.md.
 
 Changelog:
   1.0.0 (2026-06-10) first issue. Note-PDF presence/freshness enforcement.
+  1.1.0 (2026-07-23) recognize PATH or venv-local Tectonic consistently with
+        build_note_pdf.py.
 """
-__version__ = "1.0.0"
+__version__ = "1.1.0"
+__first_issued__ = "2026-06-10"
+__version_issued__ = "2026-07-23"
 
 import argparse, shutil, subprocess, sys
 from pathlib import Path
@@ -42,6 +46,18 @@ def pdf_of(f):
     return f.parent / (f.name[:-len(SUF)] + ".pdf")
 
 
+def tex_engine():
+    """Return the usable TeX engine path, preferring pdflatex."""
+    pdflatex = shutil.which("pdflatex")
+    if pdflatex:
+        return pdflatex
+    tectonic = shutil.which("tectonic")
+    if tectonic:
+        return tectonic
+    sibling = Path(sys.executable).resolve().parent / "tectonic.exe"
+    return str(sibling) if sibling.exists() else None
+
+
 def state(f):
     p = pdf_of(f)
     if not p.exists():
@@ -59,7 +75,7 @@ def main():
     a = ap.parse_args()
     notes = current_notes()
     bad = [(f, state(f)) for f in notes if state(f) != "ok"]
-    have_tex = shutil.which("pdflatex") is not None
+    have_tex = tex_engine() is not None
 
     if a.build:
         built = failed = 0
@@ -80,7 +96,7 @@ def main():
     for f, st in bad:
         print(f"  {st:7s} {f.relative_to(REPO)}")
     if a.strict and have_tex:
-        print("  STRICT + pdflatex present -> FAIL. Fix: python verification/scripts/verify_note_pdfs.py --build")
+        print("  STRICT + TeX engine present -> FAIL. Fix: python verification/scripts/verify_note_pdfs.py --build")
         return 1
     print("  (warning) build with: python verification/scripts/verify_note_pdfs.py --build")
     return 0

@@ -31,9 +31,18 @@ endpoint theorem.
    moment at the target Sobolev orders. An exact order-two chart reconstructs
    the full rational translated coefficient in the A7 covariance-normal
    scheme while retaining all grouped lower chaoses and finite `Sigma Q`.
-7. **Current subproof.** Prove the strict-past signed Q/current/positive-square/
-   Cartan-curvature form bound for an adapted shift, then close the umbrella
-   one-use theorem and return to the A7 Nelson and finite-volume measure gates.
+7. **Backward heat and square-coupled Cartan reduction.** The full `ell+m`
+   score is retained with its positive completed square and exact
+   Gibbs--Pythagoras identity. A terminal-backward heat coefficient gives an
+   exact controlled telescope. Heat averaging preserves the PSD frame and
+   Cartan secant; the finite low block and covariance-trace tail are below
+   arbitrary one-use budgets for regular mutually orthogonal one-shot
+   strict-past controls.
+8. **Current subproof.** Prove the cutoff-uniform averaged raw-current/
+   Cartan--Jacobi lower bound with the positive square retained, extend from
+   regular controls to the declared finite-energy class, then close the
+   umbrella one-use theorem and return to the A7 Nelson and finite-volume
+   measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

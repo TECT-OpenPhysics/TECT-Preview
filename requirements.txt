@@ -1,11 +1,14 @@
 # TECT — Python dependencies for the verification chain and numerical codes.
 # Install:  pip install -r requirements.txt
 #
-# The repository deliberately depends on ONE third-party package; everything
-# else is the Python standard library (json, math, argparse, subprocess, ...).
+# Numerical and PDF-verification dependencies used by the fail-closed research
+# workflow. The TeX engine itself is a separate executable; see SESSION.md.
 numpy>=1.24
+pypdf>=5.0
+pdfplumber>=0.11
+reportlab>=4.0
 
-# Not pip-installable (optional, only for rebuilding note PDFs via
-# verification/scripts/build_note_pdf.py FORM-CHECK):
-#   - a TeX distribution providing `pdflatex` (e.g. TeX Live / MiKTeX)
-# Research can resume without it; doctor.py reports it as optional.
+# Not installed by pip (required for rebuilding proof-note PDFs):
+#   - `tectonic` beside the active venv's Python executable; or
+#   - a TeX distribution providing `pdflatex` (e.g. TeX Live / MiKTeX).
+# `doctor.py` reports NOT READY when neither engine is available.

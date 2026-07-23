@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 backward-heat martingale and square-coupled Cartan reduction] - 2026-07-23
+
+A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION proves the retained-square conditional charge, state-past Gibbs identity, exact terminal-backward heat martingale and controlled telescope, averaged PSD frame/Cartan secant, finite-low-block bound, and arbitrarily small high covariance-trace losses for regular mutually orthogonal one-shot controls. Exact scalar and two-order production fixtures retire shellwise heat-modulus, charge-alone, and terminal-only architectures. The averaged raw-current/Cartan-Jacobi lower bound and finite-energy extension remain open; A13 stays T4. Primary 22/22, independent 16/16, integrated contract 103/103, ten-page PDF form/zero-overfull/direct visual QA. The external venv PDF runtime now includes Tectonic and doctor/build/note checks share the same TeX-engine readiness contract.
+
 ## [A13 strict-past joint-score and heat-current reduction] - 2026-07-23
 
 Proved the exact ell_j+m_j metric center before discarding the positive square, recovered the fast relative-phase factor four, and derived the conditional Gaussian heat-current identity. A production origin witness refutes shellwise positivity. Primary and non-importing independent audits pass 9/9 each; the three-page PDF passes form, zero-overfull, and direct all-page visual QA. The global joint-remainder/Cartan bound and one-use theorem remain open at T4.

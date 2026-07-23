@@ -41,6 +41,37 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-22-A13-TIMEWISE-YOUNG-CARRE-DU-CHAMP](#ng-2026-07-22-a13-timewise-young-carre-du-champ) | A13 continuous-time source-square Young route | a zero-endpoint loop has sixth-order bracket growth but exact signed-action cancellation |
 | [NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT](#ng-2026-07-22-a13-nonfrozen-ramer-one-shot) | A13 direct nonfrozen Ramer map | the production Jacobian determinant changes sign at finite field amplitude |
 | [NG-2026-07-22-A13-RAW-DIAMOND-JET](#ng-2026-07-22-a13-raw-diamond-jet) | A13 unqualified coefficient-jet definitions | full products miss the target L2 regularity; a cone-localized nested contraction has logarithmic magnitude and requires total-tree classification |
+| [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
+
+<a id="ng-2026-07-23-a13-shellwise-heat-and-charge"></a>
+### NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE -- shellwise heat and separated charge routes fail
+
+**Failure mode:** A forward proof attempted to bound each conditional heat
+increment by a floor-uniform coefficient modulus and a shell sextic moment.
+Related variants dropped the positive completed square and estimated the
+source charge alone, or used only the terminal quartic displacement. These
+architectures take an absolute value or positive part before the exact global
+cancellation.
+
+**Evidence:** For the scalar coefficient `B(x)=x^2`, value variance
+`sigma_j=2^-j` and past derivative variance `gamma_<j=2^j` give exactly
+`E C_j=-1/2` on every shell, whereas `E|g_j|^6=15*2^(-3j)`. The full six-real
+production audit gives fixed-floor origin deficits
+`2.8680745298e-4` and `2.8689027298e-4` at `N=64`, and
+`2.8526808367e-4` and `2.8535053764e-4` at `N=128`, at Gauss--Hermite orders
+seven and nine respectively. The relative quadrature gaps are below
+`5e-4`. The exact scalar quartic identity shows that factor four is
+neutralized only by the nonlinear remainder and retained square together.
+Primary 22/22, non-importing independent 16/16, and integrated 103/103 audits
+pin these fixtures.
+
+**Consequence:** Shellwise heat-modulus, positive-part/absolute-value,
+charge-alone, and terminal-only architectures are retired. This is not a
+nonexistence result and does not refute a global one-use or Nelson theorem.
+The terminal-backward heat martingale removes the uncontrolled drift exactly;
+the successor is
+`A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`, with the positive
+frame square retained and the finite-energy extension still open.
 
 <a id="audit-2026-07-20-sector-a-baseline-status-drift"></a>
 ### AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT -- Sector-A live-record alignment

@@ -28,9 +28,9 @@ Changelog:
   1.1.0 (2026-07-17) enforce P0 verification baseline: verify_claim entrypoint exists and
         every tracked bundle MANIFEST has a stamped repo_commit, not the publish placeholder.
 """
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-06-05"
+__version_issued__ = "2026-07-23"
 
 import ast
 import json
@@ -59,7 +59,14 @@ def files():
 
 
 def run(label, cmd, errors):
-    r = subprocess.run([sys.executable] + cmd, capture_output=True, text=True, cwd=REPO)
+    r = subprocess.run(
+        [sys.executable] + cmd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        cwd=REPO,
+    )
     print(f"  [{label}] {'PASS' if r.returncode == 0 else 'FAIL'}")
     if r.returncode != 0:
         errors.append(f"{label}: {r.stdout.strip()[:300]}")
@@ -76,7 +83,8 @@ def main():
 
     # note-PDF presence/freshness (advisory; enforced by commit_watcher --build)
     rp = subprocess.run([sys.executable, "verification/scripts/verify_note_pdfs.py", "--check"],
-                        capture_output=True, text=True, cwd=REPO)
+                        capture_output=True, text=True, encoding="utf-8",
+                        errors="replace", cwd=REPO)
     npass = "NOTE-PDF: PASS" in rp.stdout
     print(f"  [note-pdf] {'PASS' if npass else 'WARN'}")
     if not npass:
@@ -163,7 +171,8 @@ def main():
     # 9. Windows path-length budget
     path_gate = subprocess.run(
         [sys.executable, "verification/scripts/check_path_lengths.py", "--max", "256"],
-        capture_output=True, text=True, cwd=REPO,
+        capture_output=True, text=True, encoding="utf-8", errors="replace",
+        cwd=REPO,
     )
     if path_gate.returncode != 0:
         errors.append(f"path-length: {path_gate.stdout.strip()[:300]}")

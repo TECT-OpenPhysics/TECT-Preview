@@ -383,7 +383,7 @@ new interaction counterterm is generated.  A shell-by-shell sum of the A13
 one-shell estimate is forbidden because its `H_A(x)` term repeatedly pays
 Gaussian past energy, whose expectation grows with the cutoff by A11.
 
-**Status:** OPEN (reviewed 2026-07-22), SOLE CANONICAL OBJECTIVE AFTER THE
+**Status:** OPEN (reviewed 2026-07-23), SOLE CANONICAL OBJECTIVE AFTER THE
 ARCHITECTURE NOGOS.  The translation-model reduction proves the exact
 finite-cutoff translation and Cartan identities and deterministic-shift
 expectation positivity.  It admits the explicit candidate
@@ -401,6 +401,11 @@ genuinely triangular/flow transport or direct constructive estimate.
 Coefficient-one conditioning, the finite-bank Bellman class, repeated past
 energy, endpoint-only timewise Young, resolvent-only repair, and separate
 payment of the Ramer square plus inverse determinant are excluded.
+The backward-heat continuation now cancels the uncontrolled heat drift
+exactly and puts the finite-low and covariance-trace channels below arbitrary
+budgets for regular mutually orthogonal one-shot controls. The current child
+is `A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`; the extension
+to every finite-energy drift and the umbrella theorem remain open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -423,9 +428,9 @@ probability moment.  The balanced continuation replaces the impossible full
 continuum limits, and reconstructs the full rational coefficient in the exact
 A7 scheme.  The finite `Sigma Q` conversion and every grouped lower chaos are
 retained.  This closes the enhanced deterministic Cameron--Martin model, not
-an adapted random-shift estimate.  The current child is the strict-past signed
-form bound below; termwise absolute paraproduct/Young absorption remains
-excluded.
+an adapted random-shift estimate.  The current child is
+`A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`; termwise absolute
+paraproduct/Young absorption remains excluded.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
 
@@ -515,10 +520,11 @@ model, but may not take termwise absolute values and repay the same past
 energy at every shell.  The output must control the adapted random shift at
 the one-use charge without assuming the desired Nelson moment.
 
-**Status:** OPEN CURRENT CHILD (2026-07-23; strict-past joint-score and
-heat-current reduction CLOSED), proof-ordered after the closed balanced
-coefficient model and before
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`.
+**Status:** REDUCED-NOT-CLOSED (2026-07-23). The strict-past joint-score and
+heat-current reduction is closed, and the backward-heat continuation below
+removes the heat, finite-low, and covariance-trace channels. The gate's
+cutoff-uniform signed form bound is not closed because one raw-current/
+Cartan--Jacobi form remains.
 
 **Advance:** `A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION`
 proves the exact causal/PSD completion. With `q=(2 epsilon_v)^(-1)=10/9`,
@@ -526,13 +532,39 @@ the remaining object is
 `S_J,q=sum_j[(q/2)<ell_j,(I+qT_j)^(-1)ell_j>-C_j]`.
 The joint-score continuation writes `C_j(u)=<m_j,u>+N_j(u)` before completion,
 so the exact center is `ell_j+m_j`; it recovers factor four and yields the
-conditional heat-current identity.  The remaining global object is
-`sum_j[(q/2)<ell_j+m_j,R_q,j(ell_j+m_j)>-N_j]`, with its positive square and
-Cartan heat curvature kept coupled.  Its cutoff-uniform bound is not proved.
-This spends endpoint control energy once and retains the complete coefficient
-increment. The cutoff-uniform global bound on this signed charge is not
-proved. In particular, the factor-four relative-phase contribution remains
-inside shifted `C_j`; separate one-shell or termwise estimates remain invalid.
+conditional heat-current identity. The result
+`A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION` keeps
+the completed square inside the exact Gibbs charge and constructs a
+terminal-backward Doob coefficient. Its controlled telescope cancels the
+apparent order-one heat drift before inequalities. The averaged PSD frame
+secant retains the positive Gauss--Newton square. For regular one-shot
+controls it proves, uniformly in `J`,
+`E V_J^ren >= -zeta E||Z_J||_6^6-eta E sum_j||h_j||^2-C
++E sum_(j>=j0) R_j`, where the finite low block and high covariance-trace
+terms are already absorbed. This is a strict reduction, not the original
+bound. Separate one-shell, absolute-value, and repeated-past-energy estimates
+remain invalid.
+
+### **A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND**
+
+**Statement:** For every `zeta,eta>0`, prove for regular mutually orthogonal
+one-shot strict-past controls, uniformly in the terminal cutoff `J`,
+`E sum_(j>=j0) R_j >= -zeta E||Z_J||_6^6
+-eta E sum_j||h_j||^2-C_(zeta,eta,j0)`, where
+`R_j=sum_(i,A) int[w^T Q_II Delta w
++(Delta w)^T Q_II Delta w/2]` is the exact heat-averaged raw-current secant.
+The positive square must remain coupled to the Cartan--Jacobi term. Applying
+the elementary lower bound `>=-|w|_Q^2/2` shellwise, taking absolute values,
+assuming the Nelson estimate, or identifying the heat dummy with the actual
+future field is forbidden. After the regular-control estimate, prove the
+localization/lower-semicontinuity extension to the declared finite-energy
+control class.
+
+**Status:** OPEN CURRENT CHILD (2026-07-23), proof-ordered after
+`A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION` and
+before `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. The latest result proves
+only the reduction to this form. It does not bound the form, extend it to all
+finite-energy drifts, prove one-use or Nelson, or promote A13 beyond T4.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

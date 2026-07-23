@@ -1,0 +1,704 @@
+% =============================================================================
+% Title: Backward heat martingale, square-coupled charge, and Cartan reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION
+% Version: v1.0 -- first issued 2026-07-23; this version issued 2026-07-23
+% Status: T4 exact/analytic structural subproof; raw-current Cartan form open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-23): square-coupled conditional charge, Gibbs-Pythagoras
+% identity, terminal-backward heat martingale, controlled drift telescope,
+% scalar and production shellwise no-gos, averaged frame/Cartan secant,
+% finite-low-block bound, and summable high-shell trace-secant reduction.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cR}{\mathcal R}
+
+\section*{Purpose and scope}
+
+This note continues the A13 strict-past proof without creating a new peer
+claim.  It corrects the remaining charge by retaining the completed square,
+removes the apparent shellwise heat-current drift by a terminal-backward Doob
+martingale, and proves that the finite low block and the high-frequency
+counterterm secants are not the final obstruction.  The complete finite-cutoff
+problem is reduced to one averaged raw-current/Cartan secant with its positive
+Gauss--Newton square retained.
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Closed here.}  Exact square-coupled and Gibbs--Pythagoras identities;
+the terminal-backward heat martingale and controlled telescope; uniform
+$C^{1,1}$ heat regularity; exact scalar shellwise no-gos; the averaged
+production frame/Cartan secant; a finite-low-block bound; and a summable
+high-shell covariance-trace loss using the control energy once.
+
+\medskip
+\textbf{Still open.}  A cutoff-uniform lower bound for the remaining averaged
+raw-current/Cartan--Jacobi secant under every regular declared strict-past
+control.
+Consequently no controlled-shell one-use theorem, Nelson moment, interacting
+measure, regulator removal, or tier promotion is asserted.
+}}
+\end{center}
+
+All exact identities are finite-dimensional and cutoff-wise.  The analytic
+tail bounds use the hash-pinned $L=16$ A1 symbol, the common real-even sharp
+spectral shells, one strict-past control block per mutually orthogonal shell,
+the fixed positive density floor, and the six-real convention.  A general
+progressive covariance flow which revisits the same Fourier range is not
+silently identified with this ordered block class.  The controlled identities
+and bounds are stated for bounded cylindrical controls, or more generally for
+strict-past controls for which every displayed product is integrable.  An
+extension to arbitrary finite-energy drifts by localization and lower
+semicontinuity belongs to the successor gate and is not asserted here.
+
+\section{The full score and the square that must remain}
+
+Use the A11--A13 strict-past notation.  Conditional on $\cF_{j-1}$, the exact
+shell increment is
+\[
+ F_j(u)=I_j(u)+C_j(u)
+ ={1\over2}\{u^TT_ju-\Tr T_j\}+\langle s_j,u\rangle+N_j(u),
+ \qquad s_j=\ell_j+m_j,                                      \tag{1.1}
+\]
+where $T_j\ge0$, $C_j(u)=\langle m_j,u\rangle+N_j(u)$, and
+$N_j(0)=DN_j(0)=0$.  The A11 telescope says
+\[
+ V_J^{\rm ren}=\sum_{j\le J}F_j.                            \tag{1.2}
+\]
+If $\mathcal K_j u=(K_ju,DK_ju)$ denotes the physical value/derivative
+displacement, then more is true:
+\[
+ F_j(u)=V_j^{\rm ren}(Z_{j-1}+\mathcal K_ju)
+       -V_{j-1}^{\rm ren}(Z_{j-1}).                          \tag{1.3}
+\]
+Consequently
+\[
+ \langle s_j,v\rangle
+ =DV_j^{\rm ren}(Z_{j-1})[\mathcal K_jv].                   \tag{1.4}
+\]
+Thus the full score is conservative at the energy-gradient level.  The
+non-exact target-space current one-form found earlier is still present inside
+the frame representation; it is not a curl of the complete shell energy.
+
+Let $q>0$,
+\[
+ R_j=(\Id+qT_j)^{-1},\qquad H_j=T_j+q^{-1}\Id,              \tag{1.5}
+\]
+and let $\xi_j$ be standard Gaussian.  Put
+\[
+ \overline F_j(h)=\E_jF_j(\xi_j+h),\qquad
+ \overline N_j(h)=\E_jN_j(\xi_j+h),                         \tag{1.6}
+\]
+\[
+ P_j(h)={1\over2}\left|H_j^{1/2}(h+qR_js_j)\right|^2.       \tag{1.7}
+\]
+Exact metric completion gives
+\[
+ \boxed{\quad
+ \overline F_j(h)=-{|h|^2\over2q}-\mathcal S_j^\sharp(h),
+ \quad
+ \mathcal S_j^\sharp(h)
+ ={q\over2}\langle s_j,R_js_j\rangle
+ -\overline N_j(h)-P_j(h).
+ \quad}                                                     \tag{1.8}
+\]
+The square $P_j$ is part of the charge.  Bounding
+$q\langle s_j,R_js_j\rangle/2-\overline N_j$ alone is a
+strictly stronger statement and repeats the earlier source-square error.
+At $h=0$,
+\[
+ P_j(0)={q\over2}\langle s_j,R_js_j\rangle,\qquad
+ \mathcal S_j^\sharp(0)=-\E_jN_j(\xi_j)=-\E_jF_j(\xi_j).   \tag{1.9}
+\]
+After averaging and summing, (1.2) gives
+\[
+ \E\sum_{j\le J}\mathcal S_j^\sharp(0)
+ =-\E V_J^{\rm ren}(X_J)=0.                                \tag{1.10}
+\]
+Any shellwise positive-part or absolute-value estimate destroys this exact
+base-law cancellation.
+
+\subsection*{Conditional Gibbs--Pythagoras identity}
+
+Assume first that the displayed exponential normalizer is finite and that the
+shifted Gaussian has finite relative entropy against the conditional tilted
+law.  The identities below then extend to the usual localized/truncated class
+whenever both sides are finite.
+
+Define
+\[
+ \kappa_j={1\over q}\log\E_j e^{-qF_j},\qquad
+ \nu_j(\dd u)=e^{-qF_j(u)-q\kappa_j}\,\gamma_j(\dd u).       \tag{1.11}
+\]
+Then
+\[
+ \boxed{\quad
+ \mathcal S_j^\sharp(h)
+ =\kappa_j-{1\over q}H(\gamma_h\mid\nu_j).
+ \quad}                                                     \tag{1.12}
+\]
+Indeed,
+\[
+ H(\gamma_h\mid\nu_j)
+ ={|h|^2\over2}+q\overline F_j(h)+q\kappa_j,                \tag{1.13}
+\]
+and (1.12) follows from (1.8).  Completing the conditional Gaussian also
+gives the exact non-separated normalizer
+\[
+\begin{split}
+ \kappa_j={}&-{1\over2q}\log\det{}_2(\Id+qT_j)
+ +{q\over2}\langle s_j,R_js_j\rangle\\
+ &+{1\over q}\log
+ \E_{\mathcal N(-qR_js_j,R_j)}e^{-qN_j}.
+\end{split}                                                  \tag{1.14}
+\]
+
+For a triangular shifted law $Q$ and the sequentially normalized law
+$P=\prod_j\nu_j$, the entropy chain rule yields
+\[
+ \boxed{
+ \E_QV_J^{\rm ren}
+ =-{1\over2q}\E_Q\sum_j|\widehat h_j|^2
+  -\E_Q\sum_j\kappa_j+{1\over q}H(Q\mid P).}               \tag{1.15}
+\]
+Here $\widehat h_j$ is the conditional mean as a function of the \emph{state}
+past.  If $Z_j=\xi_j+h_j(\xi_{<j})$, then
+\[
+ \widehat h_j(z_{<j})=h_j(\mathcal T_{<j}^{-1}z_{<j}).       \tag{1.16}
+\]
+The executable negative control shows that replacing (1.16) by
+$h_j(z_{<j})$ changes the chain identity.  Also, $P$ is not generally the
+global Gibbs law: its past-dependent conditional normalizers do not telescope.
+Thus (1.15) is an exact geometric identity, not a Nelson estimate.
+
+\subsection*{Fast quartic carrier: factor four is reassembled}
+
+For the scalar principal carrier $f(A)=cA^4$, $c\ge0$, one has
+\[
+ T=2cA^2,\qquad \ell=m=2cA^3,\qquad s=4cA^3,                \tag{1.17}
+\]
+\[
+ N(u)=cu^2(u^2+4Au+5A^2)
+ =cu^2\{(u+2A)^2+A^2\}\ge0.                                \tag{1.18}
+\]
+With $R=(1+qT)^{-1}$ and
+$P(u)=(T+q^{-1})(u+qRs)^2/2$, direct expansion gives
+\[
+ {q\over2}s^2R-N(u)-P(u)
+ =f(A)-f(A+u)-{u^2\over2q}.                                 \tag{1.19}
+\]
+The ratio $s^2/\ell^2=4$ is therefore exactly neutralized by the nonlinear
+remainder and retained square.  At $u=-A$ the right side is
+$cA^4-A^2/(2q)$, so a shellwise terminal-only estimate is still false for
+large $A$.  Equation (1.19) is pointwise.  It must not be confused with the
+Gaussian-averaged charge in (1.8); for example
+$\mathcal S^\sharp(0)=-c(5A^2+3)$ in the standard scalar Gaussian fixture.
+
+\section{Terminal-backward heat martingale}
+
+Let $(g_j,d_{j,i})$ be the value and $i$th derivative fields of the $j$th
+Gaussian shell.  At each spatial point assume
+\[
+ \E[g_j\otimes g_j]=\Sigma_j,\qquad
+ \E[d_{j,i}\otimes d_{j,i}]=\Delta\Gamma_{j,i},\qquad
+ \E[g_j\otimes d_{j,i}]=0.                                 \tag{2.1}
+\]
+Joint Gaussianity and the pinned common-even covariance make the value and
+derivative variables independent at the same point.  Write
+\[
+ \Gamma_{j,i}=\sum_{k\le j}\Delta\Gamma_{k,i},\qquad
+ \Sigma_{r:s}=\sum_{k=r}^s\Sigma_k.                         \tag{2.2}
+\]
+For a fixed terminal shell $J$, define the backward coefficient and energy
+\[
+ B_j^{(J)}=P_{\Sigma_{j+1:J}}B,                              \tag{2.3}
+\]
+\[
+ W_j^{(J)}(x,y)
+ ={1\over2}\sum_i\int
+ B_j^{(J)}(x):(y_i^{\otimes2}-\Gamma_{j,i})\dd r.            \tag{2.4}
+\]
+The integral in (2.4) is the spatial integral; the heat semigroup acts in the
+six-real target variable at each point.
+
+\textbf{Theorem 2.1 (backward heat martingale).}
+For every finite cutoff and every deterministic past state $(x,y)$,
+\[
+ \E_jW_j^{(J)}(x+g_j,y+d_j)=W_{j-1}^{(J)}(x,y).              \tag{2.5}
+\]
+If $(a_j,b_j)$ is $\cF_{j-1}$-measurable, then
+\[
+ \E_jW_j^{(J)}(x+a_j+g_j,y+b_j+d_j)
+ =W_{j-1}^{(J)}(x+a_j,y+b_j).                               \tag{2.6}
+\]
+
+\emph{Proof.}
+Independence in (2.1) factors the same-point expectation.  The derivative
+average changes $y_i^{\otimes2}-\Gamma_{j,i}$ into
+$y_i^{\otimes2}-\Gamma_{j-1,i}$, while the value average changes
+$B_j^{(J)}$ into
+$P_{\Sigma_j}B_j^{(J)}=B_{j-1}^{(J)}$.  This proves (2.5).
+Conditioning on the strict past makes $(a_j,b_j)$ deterministic, which proves
+(2.6). \hfill$\square$
+
+Let the controlled state satisfy
+\[
+ Z_j=Z_{j-1}+a_j+g_j,\qquad
+ DZ_j=DZ_{j-1}+b_j+d_j,\qquad Z_0=DZ_0=0.                   \tag{2.7}
+\]
+Since $W_J^{(J)}=V_J^{\rm ren}$ and $W_0^{(J)}(0,0)=0$, the
+tower property gives the exact controlled discrete Ito identity
+\[
+ \boxed{
+ \E V_J^{\rm ren}(Z_J)
+ =\E\sum_{j\le J}
+ \left\{W_{j-1}^{(J)}(Z_{j-1}+a_j,DZ_{j-1}+b_j)
+              -W_{j-1}^{(J)}(Z_{j-1},DZ_{j-1})\right\}.}    \tag{2.8}
+\]
+This is the nonlocal reorganization missing from the forward conditional
+heat-current calculation.  Every uncontrolled $O(1)$-per-shell heat drift is
+removed before an inequality is applied.
+
+\section{Why the forward heat term cannot be bounded shellwise}
+
+The production coefficient is globally $C^{1,1}$ uniformly in the positive
+floor.  If the floor is $e>0$ and $X=\sqrt e\,Y$, then
+\[
+ B_e(\sqrt e\,Y)=eB_1(Y),\qquad
+ D_X^2B_e(\sqrt e\,Y)=D_Y^2B_1(Y).                          \tag{3.1}
+\]
+The rational $B_1$ is smooth on bounded sets and is asymptotically degree two
+with a smooth angular coefficient.  Hence
+\[
+ L_B:=\sup_{e>0}\sup_X\|D^2B_e(X)\|<\infty.                \tag{3.2}
+\]
+Taylor's formula gives
+\[
+ \|P_\Sigma B(X)-B(X)\|
+ \le {L_B\over2}\Tr\Sigma.                                \tag{3.3}
+\]
+This correct estimate is not summable after taking an absolute contraction
+with $DX^{\otimes2}-\Gamma_{<j}$: sharp dyadic scaling gives
+$\Tr\Sigma_j\asymp2^{-j}$ and
+$\Tr\Gamma_{<j}\asymp2^j$.
+
+The failure is exact already for the scalar coefficient $B(x)=x^2$.  Take
+\[
+ \sigma_j=2^{-j},\qquad \gamma_{<j}=2^j.                   \tag{3.4}
+\]
+At $x=Dx=h=0$ the score and completed square vanish, but
+\[
+ \E_jC_j=-{1\over2}\sigma_j\gamma_{<j}=-{1\over2}          \tag{3.5}
+\]
+for every shell, whereas
+\[
+ \E|g_j|^6=15\,2^{-3j}.                                    \tag{3.6}
+\]
+For a Gaussian past derivative the centered quadratic in (3.5) has standard
+deviation $1/\sqrt2$, again independent of $j$.  Thus shellwise absolute
+values, positive parts, or sextic domination are impossible.
+
+The executable production audit confirms that this is not an artifact of the
+scalar model.  It computes the exact A1 sharp-cube value/derivative
+covariances and averages the full rational six-real $B$ at two Gauss--Hermite
+orders.  The origin deficits are
+\[
+\begin{array}{c|cc}
+ &N=64&N=128\\ \hline
+ {\rm GH}\,7&2.8680745298\times10^{-4}&2.8526808367\times10^{-4}\\
+ {\rm GH}\,9&2.8689027298\times10^{-4}&2.8535053764\times10^{-4}
+\end{array}                                                  \tag{3.7}
+\]
+The registered assertions are the conservative interval
+$2.84\times10^{-4}< -\E C_{128}<2.87\times10^{-4}$, a relative
+$64/128$ gap below two percent, and an order-seven/order-nine relative gap
+below $5\times10^{-4}$ at both cutoffs.  This is cutoff- and
+quadrature-stable finite evidence for the pinned production coefficients, not
+an interval proof of a continuum limit.
+
+There is also an analytic zero-floor diagnostic.  Write
+$R=|\psi_1|^2+|\psi_2|^2$ and $\rho=R+|\psi_3|^2$.  Direct Pauli algebra gives
+\[
+ \Tr B_e=12(a+2b+c_{\rm II})R-{8bR^2\over\rho+e}
+ -{4c_{\rm II}R^2(\rho+2e)\over(\rho+e)^2}.                \tag{3.8}
+\]
+Set $e=0$ first (equivalently, take the high-variance limit
+$e/c_{\rm sh}\downarrow0$).  If
+$\E\psi\psi^*=c_{\rm sh}\Id_3$ and the one-direction derivative covariance
+is $d\Id_3$, Pauli identities then give
+\[
+ \E\Tr B
+ =6c_{\rm sh}(4a+6b+3c_{\rm II}),                         \tag{3.9}
+\]
+so the three-direction origin deficit coefficient is
+\[
+ {3\over4}d\,\E\Tr B
+ \simeq0.163265625\,c_{\rm sh}d.                          \tag{3.10}
+\]
+At the production values, $b,c_{\rm II}>0$, so (3.8) is no smaller at
+$e>0$ than at $e=0$.  Hence (3.10) is also a positive-floor lower-bound
+coefficient, although equality is reserved for the zero-floor limit.  The
+product $c_{\rm sh}d$ is scale zero.  Equations (3.5)--(3.10) explain why the
+backward martingale, rather than a sharper modulus estimate in (3.3), is
+load-bearing.  The executable fixed-floor computation (3.7), rather than the
+zero-floor equality (3.9), is the finite-floor numerical evidence.
+
+\section{Averaged frame secant and Cartan form}
+
+Recall the production frame
+\[
+ B(X)=\sum_{A=1}^3M_A(X)Q_{\rm II}M_A(X)^T,\qquad
+ M_A=[p_A,v_A],\qquad Q_{\rm II}\succeq0,                   \tag{4.1}
+\]
+\[
+ p_A=2S_AX,\qquad
+ v_A=2(S_A-q_A\Id)X,\qquad
+ q_A={X^TS_AX\over |X|^2+e}.                               \tag{4.2}
+\]
+Heat averaging preserves both positivity and the frame representation:
+\[
+ B_{j-1}^{(J)}(x)
+ =\int\sum_AM_A(x+r)Q_{\rm II}M_A(x+r)^T\dd\mu_{j:J}(r),    \tag{4.3}
+\]
+where $\mu_{j:J}=\mathcal N(0,\Sigma_{j:J})$.  The variable $r$ in
+(4.3) is a target-space heat dummy held fixed under spatial differentiation;
+it is not identified pathwise with the actual future Gaussian field.
+
+For a stage state $(x,y_i)$ and physical control $(a,b_i)$ put
+\[
+ w_{A,i,r}=M_A(x+r)^Ty_i,                                   \tag{4.4}
+\]
+\[
+ \Delta w_{A,i,r}
+ =M_A(x+a+r)^T(y_i+b_i)-M_A(x+r)^Ty_i,\qquad
+ \Delta M_{A,r}=M_A(x+a+r)-M_A(x+r).                        \tag{4.5}
+\]
+Direct expansion of (2.4) gives the exact averaged secant
+\[
+\begin{split}
+ \Delta W_{j-1}^{(J)}
+ =\sum_{i,A}\int\!\int\{&
+ w_{A,i,r}^TQ_{\rm II}\Delta w_{A,i,r}
+ +{1\over2}\Delta w_{A,i,r}^TQ_{\rm II}\Delta w_{A,i,r}\\
+ &-\Tr(Q_{\rm II}M_A(x+r)^T\Gamma_{j-1,i}\Delta M_{A,r})\\
+ &-{1\over2}\Tr(Q_{\rm II}\Delta M_{A,r}^T
+                 \Gamma_{j-1,i}\Delta M_{A,r})\}\dd x\dd\mu_{j:J}(r).
+\end{split}                                                    \tag{4.6}
+\]
+The second term is the retained positive Gauss--Newton square.  The last term
+is negative; its scale will be shown summable rather than assigned a false
+sign.
+
+For the non-exact current one-form
+\[
+ \omega_A=\dd m_A-q_A\dd\rho,\qquad K_A(X)=X^*\omega_A,      \tag{4.7}
+\]
+the prior exact identity remains valid under the heat average:
+\[
+ K_A(x+a+r)-K_A(x+r)
+ =\dd_x\int_0^1\omega_A(x+r+ta)[a]\dd t
+ +\int_0^1\dd\omega_A(x+r+ta)[a,y+tb]\dd t,                \tag{4.8}
+\]
+\[
+ \dd\omega_A={\dd\rho\wedge\dd m_A\over\rho+e},\qquad
+ \|\dd\omega_A\|_{\rm op}\le4.                           \tag{4.9}
+\]
+Thus (4.6) is precisely an averaged exact-current plus Cartan-curvature
+secant.  In second-variation language, if
+$w_t=M_A(x+r+ta)^T(y_i+tb_i)$, then
+\[
+ {\dd^2\over\dd t^2}{1\over2}|w_t|_{Q_{\rm II}}^2
+ =|\dot w_t|_{Q_{\rm II}}^2
+  +\langle w_t,Q_{\rm II}\ddot w_t\rangle.                 \tag{4.10}
+\]
+The first term is positive; the second is the signed Cartan--Jacobi term.
+They may not be estimated independently at the critical regularity.
+
+\section{The covariance-trace channels are summable}
+
+Let $\Lambda_j=2^j$, $a_j=K_jh_j$, and $b_{j,i}=D_iK_jh_j$.  The A1 symbol lower
+bound and the sharp-cube count imply, after enlarging constants for finitely
+many low shells,
+\[
+ \|K_j\|_{\cH_j\to L^2}\le C_K\Lambda_j^{-2},\qquad
+ \|DK_j\|_{\cH_j\to L^2}\le C_G\Lambda_j^{-1},           \tag{5.1}
+\]
+\[
+ \max_i\|\Gamma_{j-1,i}\|_{\rm op}\le C_\Gamma\Lambda_j. \tag{5.2}
+\]
+Here $M_R:=\sup_{\Lambda,n}|R_\Lambda(n)|$ is the common multiplier bound,
+and $c_{\rm sym}>0$ is a pinned high-frequency symbol constant such that
+$\lambda_{\min}A(k)\ge c_{\rm sym}\langle k\rangle^4$ on every shell mode.
+One admissible set is
+\[
+ C_K=4M_Rc_{\rm sym}^{-1/2}\alpha^{-2},\qquad
+ C_G=2M_Rc_{\rm sym}^{-1/2}\alpha^{-1},                    \tag{5.3}
+\]
+\[
+ C_\Gamma=L^{-3}M_R^2c_{\rm sym}^{-1}\alpha^{-2}
+ \left(24+{\pi^2\over3}\right),\qquad \alpha={2\pi\over L}.\tag{5.4}
+\]
+For (5.4), group lattice points by $\|n\|_\infty=m$, use
+$\#\{\|n\|_\infty=m\}=24m^2+2$, and bound
+$k_i^2\langle k\rangle^{-4}\le(\alpha m)^{-2}$.
+
+The production frames have floor-uniform deterministic bounds
+\[
+ |M_A(z)|_F\le\sqrt{20}|z|,\qquad
+ |M_A(z+a)-M_A(z)|_F\le\sqrt{68}|a|.                        \tag{5.5}
+\]
+To see the second bound, write $r_A=(S_A-q_A\Id)z$.  Since
+$S_A^2\le\Id$ and $m_A=q_A(|z|^2+e)$,
+\[
+ |r_A|^2\le |z|^2,\qquad
+ \nabla q_A={2r_A\over |z|^2+e},\qquad
+ |z|\,|Dq_A(z)[a]|\le2|a|.                                \tag{5.6}
+\]
+Hence $|Dp_A[a]|\le2|a|$ and $|Dv_A[a]|\le8|a|$, proving
+$\sqrt{2^2+8^2}=\sqrt{68}$.
+
+Let $S_j$ denote the positive magnitude of the last trace term in (4.6):
+\[
+ S_j={1\over2}\sum_{i,A}\int\!\int
+ \Tr(Q_{\rm II}\Delta M_{A,j,r}^T
+                 \Gamma_{j-1,i}\Delta M_{A,j,r})\dd x\dd\mu.\tag{5.7}
+\]
+Equations (5.1), (5.2), and (5.5) give pathwise
+\[
+ S_j\le C_S\Lambda_j^{-3}\|h_j\|^2,\qquad
+ C_S={9\over2}\|Q_{\rm II}\|_{\rm op}(68)C_\Gamma C_K^2. \tag{5.8}
+\]
+Thus
+\[
+ \sum_{j\ge j_0}S_j
+ \le C_S2^{-3j_0}\sum_{j\ge j_0}\|h_j\|^2.                \tag{5.9}
+\]
+
+For the mixed trace term put
+\[
+ L_j=\sum_{i,A}\int\!\int
+ \Tr(Q_{\rm II}M_A(x+r)^T\Gamma_{j-1,i}
+                 \Delta M_{A,j,r})\dd x\dd\mu,             \tag{5.10}
+\]
+and
+\[
+ A_j^2=\int\|Z_{j-1}+r\|_2^2\dd\mu_{j:J}(r).               \tag{5.11}
+\]
+Then
+\[
+ |L_j|\le C_L\Lambda_j^{-1}\|h_j\|A_j,\qquad
+ C_L=9\|Q_{\rm II}\|_{\rm op}\sqrt{20}\sqrt{68}
+       C_\Gamma C_K.                                        \tag{5.12}
+\]
+It is unnecessary to identify $r$ with a future controlled field.  Bounded
+total value covariance, (5.1), and shell orthogonality give directly
+\[
+\begin{split}
+ \E A_j^2
+ &\le2\E\|Z_{j-1}\|_2^2+2L^3\Tr\Sigma_{j:J}\\
+ &\le4\E\|X_{<j}\|_2^2
+     +4\E\left\|\sum_{k<j}K_kh_k\right\|_2^2+C\\
+ &\le C_A\left(1+\E\sum_k\|h_k\|^2\right).
+\end{split}                                                  \tag{5.13}
+\]
+The last line uses the mutually orthogonal one-shot shell ranges pathwise;
+it is not a future-field substitution.
+Cauchy--Schwarz over probability and shells therefore yields
+\[
+ \E\sum_{j\ge j_0}|L_j|
+ \le C2^{-j_0}
+ \left\{1+\E\sum_k\|h_k\|^2\right\}.                     \tag{5.14}
+\]
+Combining (5.9)--(5.14), for every $\eta>0$ one may choose a fixed $j_0$
+large enough that, uniformly in $J$,
+\[
+ \E\sum_{j\ge j_0}(|L_j|+S_j)
+ \le\eta\E\sum_k\|h_k\|^2+C_{\eta,j_0}.                  \tag{5.15}
+\]
+This spends the control energy once.  It does not use the desired Nelson
+moment.
+
+\section{The finite low block and the exact remaining form}
+
+Fix the threshold $j_0$ selected above.  Summing (2.8) only over
+$j<j_0$ gives exactly
+\[
+ \E\sum_{j<j_0}\Delta_j^{\rm ctrl}
+ =\E W_{j_0-1}^{(J)}(Z_{j_0-1},DZ_{j_0-1}).                 \tag{6.1}
+\]
+Positivity of $B_{j_0-1}^{(J)}$, quadratic growth of $B$, bounded total value
+covariance, and the fixed matrix $\Gamma_{j_0-1}$ imply
+\[
+ W_{j_0-1}^{(J)}(z,Dz)\ge-C_{j_0}(1+\|z\|_2^2),             \tag{6.2}
+\]
+uniformly in $J$.  In the declared orthogonal one-shot shell class,
+$Z_{j_0-1}=P_{<j_0}Z_J$.  The fixed low projection is bounded from $L^6$ to
+$L^2$, and scalar Young gives, for every $\zeta>0$,
+\[
+ \E\sum_{j<j_0}\Delta_j^{\rm ctrl}
+ \ge-\zeta\E\|Z_J\|_6^6-C_{\zeta,j_0}.                   \tag{6.3}
+\]
+If later controls are allowed to revisit the low range, the equality
+$Z_{j_0-1}=P_{<j_0}Z_J$ fails and (6.3) needs an extra control term.  No such
+broader progressive-flow theorem is claimed here.
+
+Define the remaining high-shell raw-current secant
+\[
+\begin{split}
+ \cR_j=\sum_{i,A}\int\!\int\{&
+ w_{A,i,r}^TQ_{\rm II}\Delta w_{A,i,r}
+ +{1\over2}\Delta w_{A,i,r}^TQ_{\rm II}\Delta w_{A,i,r}
+ \}\dd x\dd\mu_{j:J}(r).
+\end{split}                                                    \tag{6.4}
+\]
+For the regular control class fixed in the scope paragraph, equations (2.8),
+(4.6), (5.15), and (6.3) prove the strongest closed reduction:
+\[
+ \boxed{
+ \E V_J^{\rm ren}(Z_J)
+ \ge-\zeta\E\|Z_J\|_6^6
+      -\eta\E\sum_j\|h_j\|^2-C_{\zeta,\eta,j_0}
+      +\E\sum_{j\ge j_0}\cR_j.}                           \tag{6.5}
+\]
+The constant is uniform in the terminal cutoff $J$.  Thus neither the
+forward heat drift, the finite low block, nor the high covariance trace is the
+remaining ultraviolet obstruction.
+
+The exact successor theorem is a lower bound for
+$\E\sum_{j\ge j_0}\cR_j$ with arbitrarily small remaining control and sextic
+allocations.  It must use (4.8)--(4.10) while retaining the positive square in
+(6.4).  The elementary inequality
+\[
+ w^TQ\Delta w+{1\over2}|\Delta w|_Q^2\ge-{1\over2}|w|_Q^2 \tag{6.6}
+\]
+is forbidden: summing its right side repays the full past current energy at
+every shell.
+
+\section{What A9 imports, and what it cannot supply}
+
+The backward coefficient $B_{j-1}^{(J)}$ is positive and satisfies
+\[
+ \|B_{j-1}^{(J)}(z)\|_F
+ \le\beta_B(|z|^2+\kappa_0).                                \tag{7.1}
+\]
+Therefore the A9 arbitrary-source frozen-shell theorem applies conditionally
+to its PSD quadratic block, and its Schatten estimate gives
+\[
+ \|T_{j,B_{j-1}^{(J)}(z)}\|_{\mathfrak S_2}^2
+ \le C2^{-j}(\|z\|_4^4+L^3\kappa_0^2).                     \tag{7.2}
+\]
+This is a valid reusable summable determinant cost.
+
+It does not bound (6.4).  Once the present shell has been conditioned out,
+$w_{A,i,r}$ and $\Delta w_{A,i,r}$ depend on the same past noise and adapted
+control.  A9's base-Gaussian $L^2$ estimates do not control every such tilted
+law; direct Malliavin integration by parts also creates a derivative of the
+control which the Boue--Dupuis cost does not bound.  A new global relative-form
+or backward log-Laplace theorem for the full Cartan secant is therefore
+load-bearing.  Rewriting (6.4) as entropy, HJB, or a Follmer drift without a
+new estimate is circular.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The uniform $C^{1,1}$ heat estimate makes the shell sum
+summable.''}  \textbf{UPHELD as false.}  The scalar identity (3.5) saturates
+the scale-zero contraction; the production computation (3.7) shows the same
+plateau.
+
+\item \textbf{``The coefficient curl means the full shell score is not a
+gradient.''}  \textbf{DISMISSED.}  Equation (1.4) is the exact energy
+gradient.  The curl survives only in the internal current-frame decomposition
+and reappears correctly in (4.8).
+
+\item \textbf{``The source factor four disproves the route.''}
+\textbf{DISMISSED.}  Equation (1.19) shows exact neutralization by the
+nonlinear remainder and retained square.  It disproves only the charge-alone
+and terminal-only readings.
+
+\item \textbf{``The Gibbs--Pythagoras formula proves the Nelson bound.''}
+\textbf{UPHELD as false.}  The sequential normalizers in (1.15) are
+past-dependent.  Bounding their sum, or equivalently (6.4), is the open
+theorem.
+
+\item \textbf{``The heat dummy $r$ is the actual future Gaussian field.''}
+\textbf{UPHELD as false.}  In (4.3)--(4.8), $r$ is held spatially constant.
+Identifying it pathwise with a field would omit its derivative and corrupt the
+Cartan formula.
+
+\item \textbf{``Closing the low block and trace tail closes one-use.''}
+\textbf{UPHELD as false.}  The raw-current secant (6.4) remains at critical
+regularity.  Deleting its positive square or applying (6.6) repeats the
+forbidden past-energy payment.
+
+\item \textbf{``The ordered-shell proof automatically covers every
+progressive control.''}  \textbf{UPHELD as false.}  A flow that revisits a
+Fourier range can cancel an earlier field in that range and requires a
+separate reduction.  The present theorem states the orthogonal one-shot block
+hypothesis explicitly.
+
+\item \textbf{``The numerical plateau proves continuum nonexistence.''}
+\textbf{UPHELD as false.}  It is a regression test and architecture no-go.
+No nonexistence theorem, regulator removal, or physical phase claim follows.
+\end{enumerate}
+
+\section{Reproduction and references}
+
+The fail-closed command is
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_backward_heat_martingale_square_coupled_cartan_reduction_verify.py
+\end{verbatim}
+The primary route checks the exact martingale/telescope, square and nonlinear
+partition identities, full production frame secant, scalar no-gos, and the
+$N=64,128$ production plateau with order-seven/order-nine convergence.  The
+non-importing route defines the Pauli
+frames independently, uses different quadrature and seeds, verifies the
+triangular state-past pullback, and computes the isotropic production
+coefficient.  Both write JSON artifacts and the integrated verifier pins all
+source, note, PDF, claim, gate, and ledger boundaries.
+
+The stochastic variational framework is due to M. Boue and P. Dupuis,
+``A variational representation for certain functionals of Brownian motion,''
+\emph{Annals of Probability} 26 (1998),
+\url{https://doi.org/10.1214/aop/1022855876}.  A related scale-flow use in
+constructive field theory is N. Barashkov and M. Gubinelli,
+``A variational method for $\Phi^4_3$,''
+\url{https://arxiv.org/abs/1805.10814}.  These references supply method, not
+the model-specific identities or the remaining estimate (6.4).
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-
+           CARTAN-REDUCTION
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Tier:      T4 before / T4 after (no promotion)
+Closed:    full score and retained-square charge; Gibbs-Pythagoras;
+           terminal-backward heat martingale; controlled telescope;
+           shellwise heat/charge no-gos; averaged frame/Cartan secant;
+           finite low block; summable high trace-secant loss
+Open:      A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND
+Umbrella:  A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE remains open
+Scope:     finite cutoff; fixed floor; common real-even mutually orthogonal
+           one-shot sharp shells; regular strict-past block controls
+No claim:  arbitrary finite-energy drift extension; Nelson estimate;
+           interacting measure; removal limits; phase transition; BCC;
+           T5, T6, or T7
+\end{verbatim}
+
+\noindent\textbf{Final boundary.}
+The apparent heat-current divergence has been cancelled exactly, and all
+covariance-trace channels have been reduced below arbitrary one-use budgets.
+Within the regular control class, the sole load-bearing analytic remainder is
+the global averaged raw-current Cartan--Jacobi form (6.4), with its positive
+square retained.  Extension to arbitrary finite-energy drifts also remains
+open.

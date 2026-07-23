@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-066](#r-066) | Backward-heat martingale and square-coupled Cartan reduction | Scoped T4 exact/analytic/executed subproof: the retained-square Gibbs charge and terminal-backward heat martingale give an exact controlled telescope; finite-low and covariance-trace channels fall below arbitrary budgets for regular one-shot controls; the averaged raw-current/Cartan--Jacobi bound and finite-energy extension remain open |
 | [R-065](#r-065) | Strict-past joint-score and heat-current reduction | Scoped T4 exact/executed subproof: coefficient differentiation before completion gives the exact ell+m score and factor-four recovery; same-shell independence gives the heat-current identity, while an origin witness refutes shellwise positivity; the global joint-remainder/Cartan bound remains open |
 | [R-064](#r-064) | Strict-past PSD-resolvent one-use reduction | Scoped T4 exact/executed subproof: causal Gaussian conditioning retains the positive A11 shell block, gives the exact q-resolvent source rebate, and reduces one-use to one global signed coefficient-increment charge; the cutoff-uniform charge bound remains open |
 | [R-063](#r-063) | Balanced coefficient-jet continuum and exact rational A7 reconstruction | Scoped T4 analytic/exact/executed subproof: high-against-root P3/P4 jets have Fourier variances bounded by <n>^(-2+epsilon) and <n>^(-3+epsilon), converge across coupled cutoffs in every finite moment at the target Sobolev orders, and reconstruct the full rational translated coefficient in the exact grouped A7 scheme with every lower chaos and finite Sigma Q retained |
@@ -84,6 +85,42 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-066"></a>
+### R-066 -- backward-heat martingale and square-coupled Cartan reduction
+
+**Result ID.**
+`A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION`.
+
+**Statement.** The exact shell score is `ell_j+m_j`. Keeping the completed
+square gives the conditional Gibbs--Pythagoras identity with the triangular
+state-past pullback. A terminal-backward heat coefficient is an exact Doob
+martingale and yields the controlled endpoint telescope before any
+inequality. Heat averaging preserves the positive production frame and its
+four-term Cartan secant. Exact scalar and two-order production fixtures refute
+shellwise heat-modulus, charge-alone, and terminal-only estimates. For regular
+mutually orthogonal one-shot strict-past controls, the finite low block and
+high covariance-trace losses are below arbitrary sextic/control allocations,
+leaving only the global averaged raw-current/Cartan--Jacobi form.
+
+**Proven in.** A13 /
+`classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0`,
+with primary 22/22, non-importing independent 16/16, integrated 103/103, and a
+ten-page PDF passing form, zero-overfull, and direct all-page visual QA.
+
+**Reuse scope.** Finite Gaussian triangular controls, backward heat
+telescopes, square-coupled entropy completions, and PSD frame secants within
+the declared fixed-floor mutually orthogonal one-shot shell class.
+
+**Boundary.** The cutoff-uniform averaged raw-current/Cartan--Jacobi lower
+bound, extension to every finite-energy drift, controlled-shell one-use
+estimate, Nelson theorem, and interacting measure remain open. Tier T4.
+
+**Publication target.** Stochastic-analysis methods note with R-059--R-065
+after the raw-current form, finite-energy extension, and one-use theorem are
+resolved.
+
+---
 
 <a id="r-065"></a>
 ### R-065 -- strict-past joint-score and heat-current reduction

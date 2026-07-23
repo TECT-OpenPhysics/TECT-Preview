@@ -11,14 +11,16 @@ research state lives in the cowork app; it all lives in tracked files here.
 
 ## 1. First time on a new machine (once)
 
-1. **Install the interpreter + the one dependency.** Python ≥ 3.10, then:
+1. **Install the interpreter and verification dependencies.** Python >= 3.10,
+   then, preferably in an external sibling venv such as `TECT.venv`:
 
    ```bash
-   pip install -r requirements.txt        # numpy (everything else is stdlib)
+   pip install -r requirements.txt
    ```
 
-   Optional: a TeX distribution (`pdflatex`) only if you will rebuild note PDFs
-   (FORM-CHECK). Research resumes fine without it.
+   Install either a venv-local `tectonic` executable or a TeX distribution
+   providing `pdflatex`. Proof-note PDF generation is part of the readiness
+   gate, so `doctor.py` reports NOT READY when neither engine is available.
 
 2. **Copy the WHOLE folder.** The numerical codes in `codes/` import constants
    from `archive/legacy/scripts/`; a partial copy of only `claims/` will not run.

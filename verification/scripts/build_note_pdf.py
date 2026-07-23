@@ -17,8 +17,8 @@ Pipeline (naming-and-versioning.md section 3, binding):
      banner Title (never the filename); the date field shows
      "first issued D1 · this version issued D2 · vN.M"; the author line
      carries the primary claim ID.
-  3. COMPILE in a TEMPORARY directory (two pdflatex passes); LaTeX
-     intermediates never touch the repository.
+  3. COMPILE in a TEMPORARY directory (two pdflatex passes, or one Tectonic
+     invocation with a rerun); LaTeX intermediates never touch the repository.
   4. GATE on zero Overfull-hbox, then place the PDF NEXT TO ITS SOURCE
      (claims/<ID>/notes/<stem>.pdf). Only the current version's PDF is kept;
      superseded PDFs are removed on re-issue (sources remain, so any PDF is
@@ -39,10 +39,13 @@ Changelog:
         instead of only the uninformative end-of-log font statistics.
   1.2.2 (2026-07-21) split the repository label and claim ID across author
         lines so long canonical claim IDs do not create overfull title boxes.
+  1.3.0 (2026-07-23) use a venv-local Tectonic executable when pdflatex is
+        unavailable; retain temporary compilation, log, PDF, and overfull
+        gates.
 """
-__version__ = "1.2.2"
+__version__ = "1.3.0"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-07-21"
+__version_issued__ = "2026-07-23"
 
 import argparse
 import re
@@ -139,17 +142,31 @@ def main():
         print("WRAP-ONLY: validated; no PDF requested")
         return 0
     pdflatex = shutil.which("pdflatex")
-    if not pdflatex:
-        print("pdflatex not found - install TeX (e.g. MiKTeX) and re-run")
+    tectonic = shutil.which("tectonic")
+    if not tectonic:
+        sibling = Path(sys.executable).resolve().parent / "tectonic.exe"
+        if sibling.exists():
+            tectonic = str(sibling)
+    if not pdflatex and not tectonic:
+        print("No TeX engine found - install pdflatex or venv-local Tectonic and re-run")
         return 1
     with tempfile.TemporaryDirectory(prefix="tect-note-") as td:
         tex = Path(td) / f"{stem}.tex"
         tex.write_text(doc, encoding="utf-8")
-        for _ in range(2):
-            r = subprocess.run([pdflatex, "-interaction=nonstopmode", tex.name],
-                               cwd=td, capture_output=True, text=True, errors="replace")
-            if r.returncode != 0:
-                break
+        if pdflatex:
+            for _ in range(2):
+                r = subprocess.run([pdflatex, "-interaction=nonstopmode", tex.name],
+                                   cwd=td, capture_output=True, text=True, errors="replace")
+                if r.returncode != 0:
+                    break
+        else:
+            r = subprocess.run(
+                [tectonic, "--keep-logs", "--reruns", "1", "--outdir", td, tex.name],
+                cwd=td,
+                capture_output=True,
+                text=True,
+                errors="replace",
+            )
         pdf = Path(td) / f"{stem}.pdf"
         log_path = Path(td) / f"{stem}.log"
         log = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""

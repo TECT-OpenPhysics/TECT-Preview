@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND)_
-  - Joint-score/heat-current reduction closed at T4: exact ell+m center, factor-four recovery, heat-current identity, and conditional-positivity no-go. Next bound the global joint remainder with positive square and Cartan curvature coupled.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND)_
+  - A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION closes the retained-square, terminal-backward heat, finite-low, and covariance-trace reduction at T4 for regular one-shot controls. Next prove the cutoff-uniform averaged raw-current/Cartan-Jacobi lower bound with the positive square retained, then extend to every declared finite-energy drift; one-use and Nelson remain open.
   - _updated 2026-07-23_
 
 ## Next up

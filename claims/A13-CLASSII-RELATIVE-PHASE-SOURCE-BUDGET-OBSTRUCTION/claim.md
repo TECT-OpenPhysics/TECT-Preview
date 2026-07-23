@@ -84,6 +84,26 @@ the following structural results and proof-architecture boundaries hold.
    the exact Gaussian heat-current identity, while an origin calculation
    disproves shellwise positivity of `C_j`.  The remaining gate is the global
    joint-remainder/Cartan form bound with the positive square retained.
+9. `A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION`
+   keeps that square inside the exact conditional charge and proves the
+   Gibbs--Pythagoras identity with the required state-past pullback.  The
+   terminal-backward heat coefficient is an exact Doob martingale, so the
+   apparent order-one heat drift cancels before inequalities are applied.
+   Heat averaging preserves the positive production frame and its four-term
+   Cartan secant.  For regular mutually orthogonal one-shot strict-past
+   controls, the finite low block and all covariance-trace channels lie below
+   arbitrary sextic/control allocations, leaving
+
+   \[
+   \mathbb E V_J^{\rm ren}(Z_J)
+   \ge-\zeta\mathbb E\|Z_J\|_6^6
+      -\eta\mathbb E\sum_j\|h_j\|^2-C
+      +\mathbb E\sum_{j\ge j_0}\mathcal R_j.
+   \]
+
+   The cutoff-uniform lower bound for the averaged raw-current/Cartan--Jacobi
+   form `sum R_j`, and its extension to every finite-energy drift, remain
+   open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -100,7 +120,8 @@ is a scoped T4 subproof and does not promote A13.
 | Balanced coefficient jets | Coupled-cutoff P3/P4 convergence and exact grouped rational A7 reconstruction | T4 child subproof closed |
 | Strict-past resolvent charge | Exact causal/PSD completion and A11 signed-charge reduction | T4 child subproof closed |
 | Strict-past joint score | Exact `ell+m` recentering and conditional heat-current reduction | T4 child subproof closed |
-| Controlled-shell one-use | Global signed Q/current/Cartan form bound | OPEN umbrella gate |
+| Backward heat / square-coupled Cartan | Exact martingale, retained-square charge, finite-low and trace-tail reduction | T4 child subproof closed |
+| Controlled-shell one-use | Averaged raw-current/Cartan--Jacobi lower bound and finite-energy extension | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -145,31 +166,44 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. `A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND`;
-2. the controlled-shell one-use estimate without termwise Young absorption;
+1. `A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND` for regular
+   mutually orthogonal one-shot controls;
+2. localization/lower-semicontinuity extension to the declared finite-energy
+   control class and the controlled-shell one-use estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction.py
-python codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction_independent.py
+python codes/foundations/a13_classii_backward_heat_martingale_square_coupled_cartan_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `9/9`;
-- non-importing independent `9/9`;
-- joint-recentring and heat-current residuals below their asserted tolerances;
+- primary `22/22`;
+- non-importing independent `16/16`;
+- integrated `103/103`;
+- exact martingale, Gibbs, quartic, and frame-secant residuals below their
+  asserted tolerances, with order-seven/order-nine production stability;
 - exit code zero.
 
-The three-page proof note passes the standard form check, zero-overfull gate,
+The ten-page proof note passes the standard form check, zero-overfull gate,
 and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
+- `classii_backward_heat_martingale_square_coupled_cartan_reduction_manifest.json`
+- `notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt`
+- `notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.pdf`
+- `../../codes/foundations/a13_classii_backward_heat_martingale_square_coupled_cartan_reduction.py`
+- `../../codes/foundations/a13_classii_backward_heat_martingale_square_coupled_cartan_reduction_independent.py`
+- `../../codes/foundations/a13_classii_backward_heat_martingale_square_coupled_cartan_reduction_verify.py`
+- `runs/2026-07-23-primary-backward-heat-martingale-square-coupled-cartan-reduction/result.json`
+- `runs/2026-07-23-independent-backward-heat-martingale-square-coupled-cartan-reduction/result.json`
+- `runs/2026-07-23-integrated-backward-heat-martingale-square-coupled-cartan-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-23-a13-shellwise-heat-and-charge`
 - `notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.tex.txt`
 - `notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.pdf`
 - `../../codes/foundations/a13_classii_strict_past_joint_score_heat_current_reduction.py`
@@ -235,6 +269,29 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     conditional expectation. The primary negative control exhibits a negative
     pointwise completion gap; the metric-resolvent identity is likewise an
     expected shell statement before the A11 algebraic telescope is applied.
+11. **UPHELD AGAINST A SHELLWISE HEAT READING: floor-uniform `C^{1,1}`
+    regularity makes the heat-current shell sum summable.**  The scalar model
+    has expectation `-1/2` on every shell, and the production order-seven/
+    order-nine audit has a nonzero cutoff-stable plateau.  The exact backward
+    martingale is essential.
+12. **DISMISSED: the coefficient curl makes the full shell score
+    nonconservative.**  The full `ell+m` score is the exact shell-energy
+    gradient.  The curl belongs to the internal current-frame decomposition
+    and reappears in the Cartan term.
+13. **VALID WITH MITIGATION: factor four is harmless by source-square
+    completion alone.**  It is neutralized only after the nonlinear remainder
+    and positive completed square are retained together.
+14. **UPHELD AGAINST A FUTURE-FIELD READING: the heat dummy is the actual
+    future Gaussian field.**  It is held spatially constant.  A pathwise
+    identification would add an omitted derivative and corrupt the secant.
+15. **UPHELD AGAINST CLOSURE: finite-low and covariance-trace control closes
+    one-use.**  The averaged raw-current/Cartan--Jacobi form remains at
+    critical regularity; deleting its positive square repeats the forbidden
+    past-energy payment.
+16. **UPHELD AGAINST SCOPE EXPANSION: one-shot orthogonal shells cover every
+    progressive finite-energy drift.**  A flow may revisit and cancel a
+    Fourier range.  The localization and lower-semicontinuity extension is a
+    separate open step.
 
 ## Falsifier
 
@@ -257,6 +314,13 @@ The balanced continuum continuation is falsified by any of the following:
 - a PDF form, overfull, or visual-QA failure;
 - any failed primary, independent, integrated, or release assertion.
 
+The backward-heat continuation is additionally falsified by a wrong sign in
+the retained square, failure of the state-past pullback, a failed backward
+martingale or controlled telescope, loss of `Q_II` positivity, a shellwise
+heat plateau inconsistent with the exact scalar fixture, a two-order
+production-envelope failure, an invalid finite-low/high-trace bound, or use
+beyond the declared regular one-shot control class.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -268,6 +332,11 @@ translations, prove the signed one-use estimate or `q=10/9` Nelson moment,
 close A11/A7, construct an interacting measure, remove a floor or regulator,
 take infinite volume, prove a phase transition or BCC selection, or justify
 T5, T6, or T7.
+
+The backward-heat theorem advances adapted regular one-shot controls but does
+not prove the remaining averaged raw-current/Cartan--Jacobi lower bound or the
+extension to every finite-energy drift.  Consequently it does not close
+one-use, Nelson, A7, or any measure/removal theorem, and A13 remains T4.
 
 ## History
 
@@ -301,3 +370,9 @@ T5, T6, or T7.
   conditional heat-current identity, and falsified shellwise positivity of
   the coefficient increment.  The joint-remainder/Cartan form bound remains
   open and the tier remains T4.
+- 2026-07-23: Proved the retained-square/Gibbs identity and exact
+  terminal-backward heat martingale, converted the controlled endpoint to a
+  backward secant telescope, retained the positive averaged Cartan square,
+  and put the finite-low and covariance-trace channels below arbitrary
+  one-use budgets for regular one-shot controls.  The averaged raw-current
+  Cartan--Jacobi lower bound and finite-energy extension remain open; tier T4.
