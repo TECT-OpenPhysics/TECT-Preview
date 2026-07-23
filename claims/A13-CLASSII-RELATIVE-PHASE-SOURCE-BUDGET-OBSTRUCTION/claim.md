@@ -104,6 +104,40 @@ the following structural results and proof-architecture boundaries hold.
    The cutoff-uniform lower bound for the averaged raw-current/Cartan--Jacobi
    form `sum R_j`, and its extension to every finite-energy drift, remain
    open.
+10. `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` diagonalises the
+    hash-pinned production current quadratic form at the exact exponent
+    `alpha=5/9`, so its weighted square uses the already fixed Nelson exponent
+    `q=10/9=2 alpha`.  After the exact radial change, the aggregate
+    three-current target metric is
+
+    \[
+    dR^2+R^2\left({113\over32}d\Omega^2+{25\over32}dz^2\right).
+    \]
+
+    Its smooth sectional curvatures are nonpositive, its base passes the
+    required `CAT(1)` closed-geodesic diagnostic, and the standard
+    angle-clipped metric completion is `CAT(0)`.  Hence the exact raw secant
+    splits as a signed geodesic first variation plus a Jacobi remainder
+
+    \[
+    \mathcal R_j=\mathfrak F_j+\mathfrak J_j,
+    \qquad
+    \mathfrak J_j\ge {1\over2}
+    \|\nabla d_g(U_j,U_j^+)\|_2^2.
+    \]
+
+    The same package proves the exact raw-energy/noise-injection telescope.
+    A strictly positive-floor trigonometric witness has a positive retained
+    square but a negative full production secant, so shellwise positivity is
+    false even away from the cone tip.  The strongest isolated adapted
+    `1:2` and `1:3` harmonic losses are nevertheless dyadically summable after
+    three-dimensional shell multiplicity.  Conversely, a flat `CAT(0)`
+    one-shot reset model with equal target coupling has a linearly divergent
+    negative objective, showing that geometry and abstract one-use alone are
+    insufficient.  This flat model is not a production counterexample.  The
+    remaining theorem is the nonlinear production
+    `NPC`--Carleson/paradifferential balance between the nonnegative geodesic
+    square and causally harvestable Gaussian injection.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -121,7 +155,8 @@ is a scoped T4 subproof and does not promote A13.
 | Strict-past resolvent charge | Exact causal/PSD completion and A11 signed-charge reduction | T4 child subproof closed |
 | Strict-past joint score | Exact `ell+m` recentering and conditional heat-current reduction | T4 child subproof closed |
 | Backward heat / square-coupled Cartan | Exact martingale, retained-square charge, finite-low and trace-tail reduction | T4 child subproof closed |
-| Controlled-shell one-use | Averaged raw-current/Cartan--Jacobi lower bound and finite-energy extension | OPEN umbrella gate |
+| NPC cone / martingale injection | Nelson-aligned current factorisation, CAT(0) target, strong Jacobi remainder, exact injection telescope, and shellwise/geometry-only boundaries | T4 child reduction closed |
+| Controlled-shell one-use | Nonlinear NPC--Carleson injection balance and finite-energy extension | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -166,8 +201,8 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. `A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND` for regular
-   mutually orthogonal one-shot controls;
+1. `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE` for regular mutually
+   orthogonal one-shot controls;
 2. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
@@ -175,24 +210,38 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_backward_heat_martingale_square_coupled_cartan_reduction_verify.py
+python codes/foundations/a13_classii_npc_cone_martingale_injection_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `22/22`;
-- non-importing independent `16/16`;
-- integrated `103/103`;
-- exact martingale, Gibbs, quartic, and frame-secant residuals below their
-  asserted tolerances, with order-seven/order-nine production stability;
+- primary `24/24`;
+- non-importing independent `23/23`;
+- integrated aggregate `118/118`;
+- exact production coefficient, cone-metric, Jacobi, witness, injection,
+  isolated-resonance, and flat-model diagnostics below their asserted
+  tolerances;
 - exit code zero.
 
-The ten-page proof note passes the standard form check, zero-overfull gate,
+The nine-page proof note passes the standard form check, zero-overfull gate,
 and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_npc_cone_martingale_injection_reduction_manifest.json`
+- `notes/classii-npc-cone-martingale-injection-reduction-260723-v1.0.tex.txt`
+- `notes/classii-npc-cone-martingale-injection-reduction-260723-v1.0.pdf`
+- `../../codes/foundations/a13_classii_npc_cone_martingale_injection_reduction.py`
+- `../../codes/foundations/a13_classii_npc_cone_martingale_injection_reduction_independent.py`
+- `../../codes/foundations/a13_classii_npc_cone_martingale_injection_reduction_verify.py`
+- `runs/2026-07-23-primary-npc-cone-martingale-injection-reduction/result.json`
+- `runs/2026-07-23-independent-npc-cone-martingale-injection-reduction/result.json`
+- `runs/2026-07-23-integrated-npc-cone-martingale-injection-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-23-a13-shellwise-raw-secant-positivity`
+
+The immediate predecessor package remains binding:
 
 - `classii_backward_heat_martingale_square_coupled_cartan_reduction_manifest.json`
 - `notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt`
@@ -292,6 +341,28 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     progressive finite-energy drift.**  A flow may revisit and cancel a
     Fourier range.  The localization and lower-semicontinuity extension is a
     separate open step.
+17. **DISMISSED: the production current quadratic form has no canonical
+    Nelson-aligned diagonalisation.**  Exact rational arithmetic gives
+    `alpha=5/9` and therefore `2 alpha=10/9`, with both diagonal coefficients
+    and the determinant strictly positive at the production floor.
+18. **UPHELD AGAINST SHELLWISE POSITIVITY: a positive Jacobi square forces a
+    nonnegative raw secant.**  The registered positive-floor witness remains
+    uniformly away from the cone tip, keeps a strictly positive retained
+    square, and has a strictly negative full production secant.
+19. **VALID WITH MITIGATION: a negative adapted shell secant refutes the
+    global estimate.**  The exact isolated `1:2` and `1:3` losses complete
+    against Cameron--Martin cost with shell powers `-5` and `-9` after mode
+    multiplicity, so those mechanisms are summable.  A nonsummable coupled
+    multi-mode mechanism is still not excluded.
+20. **UPHELD AGAINST A GEOMETRY-ONLY PROOF: CAT(0), one-use orthogonality, and
+    an endpoint sextic suffice.**  The flat reset countermodel has negative
+    linear slope for small allocations.  The missing input must be the
+    production Fourier/Cameron--Martin decay of target coupling.
+21. **VALID WITH MITIGATION: the geodesic logarithm may be inserted directly
+    into A12's sharp-shell source-square estimate.**  A geodesic logarithm
+    spreads Fourier support.  Affine physical interpolation preserves shell
+    support but restores the signed Cartan acceleration.  Reconciling these
+    two structures is precisely the open nonlinear NPC--Carleson gate.
 
 ## Falsifier
 
@@ -321,6 +392,13 @@ heat plateau inconsistent with the exact scalar fixture, a two-order
 production-envelope failure, an invalid finite-low/high-trace bound, or use
 beyond the declared regular one-shot control class.
 
+The NPC-cone continuation is additionally falsified by failure of its exact
+production current factorisation, cone ratios, nonpositive-curvature or
+`CAT(1)` base diagnostics, strong Jacobi lower bound, raw-energy/injection
+telescope, positive-floor secant witness, isolated-resonance completion and
+summability, independent reconstruction, hash pins, PDF QA, or aggregate
+`118/118` verifier contract.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -333,10 +411,11 @@ close A11/A7, construct an interacting measure, remove a floor or regulator,
 take infinite volume, prove a phase transition or BCC selection, or justify
 T5, T6, or T7.
 
-The backward-heat theorem advances adapted regular one-shot controls but does
-not prove the remaining averaged raw-current/Cartan--Jacobi lower bound or the
-extension to every finite-energy drift.  Consequently it does not close
-one-use, Nelson, A7, or any measure/removal theorem, and A13 remains T4.
+The NPC-cone theorem advances adapted regular one-shot controls but does not
+prove the nonlinear martingale-injection balance or the extension to every
+finite-energy drift.  The flat countermodel is not a production
+counterexample.  Consequently the result does not close one-use, Nelson, A7,
+or any measure/removal theorem, and A13 remains T4.
 
 ## History
 
@@ -359,8 +438,8 @@ one-use, Nelson, A7, or any measure/removal theorem, and A13 remains T4.
   A7 reconstruction child. The `P3/P4` variances have `-2+epsilon` and
   `-3+epsilon` bounds, every finite probability moment converges at the target
   Sobolev orders, and the full rational chart retains every lower chaos and
-  `Sigma Q`. The strict-past signed form bound is now the current child; tier
-  remains T4.
+  `Sigma Q`. The strict-past signed form bound became the next child; tier
+  remained T4.
 - 2026-07-23: Closed the strict-past causal/PSD-resolvent reduction at T4.
   The exact A11 telescope reduces one-use to the single global charge
   `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]`, with `q=10/9` at the production
@@ -376,3 +455,10 @@ one-use, Nelson, A7, or any measure/removal theorem, and A13 remains T4.
   and put the finite-low and covariance-trace channels below arbitrary
   one-use budgets for regular one-shot controls.  The averaged raw-current
   Cartan--Jacobi lower bound and finite-energy extension remain open; tier T4.
+- 2026-07-23: Diagonalised the production current at the Nelson exponent,
+  identified the aggregate CAT(0) cone, proved the strong Jacobi remainder and
+  exact raw-energy/injection telescope, falsified shellwise positivity at a
+  positive floor, and proved summability of the isolated `1:2` and `1:3`
+  adapted losses.  A flat CAT(0) reset model retires geometry-only one-use;
+  the nonlinear NPC--Carleson injection balance remains open and the tier
+  stays T4.

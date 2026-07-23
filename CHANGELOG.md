@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 NPC-cone and martingale-injection reduction] - 2026-07-23
+
+Exact production-current diagonalisation gives alpha=5/9 and q=10/9, the aggregate target metric is a CAT(0) cone, and the raw secant has a strong nonnegative Jacobi remainder plus an exact raw-energy/injection telescope. A positive-floor witness refutes shellwise secant positivity; isolated adapted 1:2 and 1:3 resonance losses are summable. A flat CAT(0) reset model refutes geometry-only abstract one-use but is not a production counterexample. The nonlinear NPC-Carleson martingale-injection balance and finite-energy extension remain open; A13 stays T4. Primary 24/24, non-importing independent 23/23, and integrated aggregate 118/118 are the package contract; the nine-page PDF passed form, zero-overfull, and direct all-page visual QA.
+
 ## [A13 backward-heat martingale and square-coupled Cartan reduction] - 2026-07-23
 
 A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION proves the retained-square conditional charge, state-past Gibbs identity, exact terminal-backward heat martingale and controlled telescope, averaged PSD frame/Cartan secant, finite-low-block bound, and arbitrarily small high covariance-trace losses for regular mutually orthogonal one-shot controls. Exact scalar and two-order production fixtures retire shellwise heat-modulus, charge-alone, and terminal-only architectures. The averaged raw-current/Cartan-Jacobi lower bound and finite-energy extension remain open; A13 stays T4. Primary 22/22, independent 16/16, integrated contract 103/103, ten-page PDF form/zero-overfull/direct visual QA. The external venv PDF runtime now includes Tectonic and doctor/build/note checks share the same TeX-engine readiness contract.

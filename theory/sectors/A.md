@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY | shellwise raw positivity and geometry-only one-use fail | Two proposed shortcuts attempted to close the averaged |
 | NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE | shellwise heat and separated charge routes fail | A forward proof attempted to bound each conditional heat |
 | AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT | Sector-A live-record alignment | Several current-facing records retained pre-approval or |
 | NG-2026-07-20-A6-BARE-CLASSII-L1 | bare full-Class-II constructive route | The A4 scalar bounded-density/dominated-convergence proof |

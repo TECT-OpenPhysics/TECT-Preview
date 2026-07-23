@@ -152,10 +152,17 @@ backward-heat continuation keeps the completed square inside the exact Gibbs
 charge and constructs a terminal-backward Doob coefficient. Its controlled
 telescope removes the apparent order-one heat drift before inequalities;
 the finite low block and high covariance-trace channels are below arbitrary
-budgets for regular mutually orthogonal one-shot controls. The current child
-is `A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`, which must
-bound the global raw-current secant with its positive square retained and then
-extend the result to the declared finite-energy control class.
+budgets for regular mutually orthogonal one-shot controls. The subsequent
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` gives the exact
+Nelson-aligned current factorisation, aggregate CAT(0) cone, strong Jacobi
+remainder, and raw-energy/injection telescope. It refutes shellwise positivity
+at a positive floor, proves the isolated adapted `1:2` and `1:3` losses
+summable, and uses a flat CAT(0) reset model to retire geometry-only one-use
+without producing a production counterexample. The current child is
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, which must couple
+geodesic positivity to causally harvestable injection through production
+Fourier/Cameron--Martin decay, then extend the result to the declared
+finite-energy control class.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -266,15 +273,20 @@ preserved in git/changelog rather than treated as current gates.
    `epsilon_v=0.45`, `q=10/9`, and one-use is reduced to the global charge
    `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]` without repeated past-energy payment.
    `A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION`
-   now proves the exact retained-square/Gibbs charge, terminal-backward heat
+   proves the exact retained-square/Gibbs charge, terminal-backward heat
    martingale, controlled telescope, averaged PSD frame secant, and the
-   strongest regular-control reduction
-   `E V_J^ren >= -zeta E||Z_J||_6^6-eta E sum||h_j||^2-C
-   +E sum_(j>=j0)R_j`. Next prove
-   `A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`, retain the
-   positive square, and extend from regular one-shot controls to the declared
-   finite-energy class. Do not use termwise absolute values, paraproduct Young
-   absorption, or the shellwise `-|w|_Q^2/2` bound.
+   strongest regular-control raw-current reduction. The new
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` diagonalises that
+   current at `alpha=5/9`, identifies its aggregate CAT(0) cone, proves the
+   strong Jacobi remainder and exact injection telescope, and records both a
+   positive-floor shellwise no-go and a geometry-only flat-model no-go. The
+   isolated `1:2` and `1:3` adapted losses are summable rather than global
+   falsifiers. Next prove
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: a nonlinear
+   NPC--Carleson/paradifferential bridge between the geodesic square and
+   production Fourier/Cameron--Martin injection decay, followed by the
+   finite-energy extension. Do not use shellwise positivity, delete the
+   Jacobi remainder, or pay terminal raw energy and injection separately.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

@@ -38,11 +38,25 @@ endpoint theorem.
    Cartan secant; the finite low block and covariance-trace tail are below
    arbitrary one-use budgets for regular mutually orthogonal one-shot
    strict-past controls.
-8. **Current subproof.** Prove the cutoff-uniform averaged raw-current/
-   Cartan--Jacobi lower bound with the positive square retained, extend from
-   regular controls to the declared finite-energy class, then close the
-   umbrella one-use theorem and return to the A7 Nelson and finite-volume
-   measure gates.
+8. **NPC cone and martingale injection.**
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` uses exact
+   diagonalisation to identify
+   the production exponent `alpha=5/9`, hence `q=10/9=2 alpha`, and converts
+   the three-current form into an aggregate nonpositively curved metric cone.
+   The raw secant is an exact signed geodesic first variation plus a
+   nonnegative strong Jacobi remainder, while a second exact identity
+   telescopes raw terminal energy against fresh Gaussian injection. A
+   positive-floor witness refutes shellwise secant positivity, the isolated
+   adapted `1:2` and `1:3` resonance losses are summable, and a flat CAT(0)
+   reset model refutes every geometry-only abstract one-use proof without
+   constituting a production counterexample.
+9. **Current subproof.** Prove
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: a nonlinear
+   NPC--Carleson/paradifferential estimate that couples the geodesic Jacobi
+   square to causally harvestable injection through production
+   Fourier/Cameron--Martin decay. Then extend from regular controls to the
+   declared finite-energy class, close the umbrella one-use theorem, and
+   return to the A7 Nelson and finite-volume measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

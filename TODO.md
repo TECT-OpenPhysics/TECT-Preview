@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND)_
-  - A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION closes the retained-square, terminal-backward heat, finite-low, and covariance-trace reduction at T4 for regular one-shot controls. Next prove the cutoff-uniform averaged raw-current/Cartan-Jacobi lower bound with the positive square retained, then extend to every declared finite-energy drift; one-use and Nelson remain open.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE)_
+  - A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION proves the Nelson-aligned current factorisation, aggregate CAT(0) cone, strong Jacobi remainder, and exact raw-energy/injection telescope. A positive-floor witness retires shellwise positivity; a flat CAT(0) reset model retires geometry-only one-use but is not a production counterexample; isolated adapted 1:2 and 1:3 losses are summable. Next prove the nonlinear NPC-Carleson/paradifferential injection balance for regular controls, then the finite-energy extension; one-use and Nelson remain open.
   - _updated 2026-07-23_
 
 ## Next up

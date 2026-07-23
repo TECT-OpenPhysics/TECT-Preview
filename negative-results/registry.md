@@ -42,6 +42,40 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-22-A13-NONFROZEN-RAMER-ONE-SHOT](#ng-2026-07-22-a13-nonfrozen-ramer-one-shot) | A13 direct nonfrozen Ramer map | the production Jacobian determinant changes sign at finite field amplitude |
 | [NG-2026-07-22-A13-RAW-DIAMOND-JET](#ng-2026-07-22-a13-raw-diamond-jet) | A13 unqualified coefficient-jet definitions | full products miss the target L2 regularity; a cone-localized nested contraction has logarithmic magnitude and requires total-tree classification |
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
+| [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
+
+<a id="ng-2026-07-23-a13-shellwise-raw-secant-positivity"></a>
+### NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY -- shellwise raw positivity and geometry-only one-use fail
+
+**Failure mode:** Two proposed shortcuts attempted to close the averaged
+raw-current gate. The first inferred nonnegativity of each production secant
+from the retained Jacobi square. The second used only CAT(0), strict-past
+one-use orthogonality, Cameron--Martin cost, and an additive endpoint sextic,
+without quantitative production decay of target coupling.
+
+**Evidence:** For
+`u0=101/100+cos(Nx)` and increment `-(3/400)cos(3Nx)`, the whole interpolation
+stays at least `1/400` above the cone tip and the endpoint stays at least
+`7/400` above it. In the exact scalar current functional, the cross term is
+`-3/800`, the retained square is the positive rational
+`81682713/204800000000`, and their increment is the negative rational
+`-686317287/204800000000`. The full fixed-floor production quadratic form
+remains strictly negative: its numerical secant is
+`-3.016042765136e-5 N^2`, while the certified floor correction is below
+`8.057e-10 N^2`. Independently, a flat CAT(0) one-shot reset model with equal
+target coupling has combined asymptotic slope
+`-1/2+eta+120 zeta`, which is negative for small allocations even with an
+additive coordinate sextic. Primary 24/24 and non-importing independent 23/23
+audits reconstruct both boundaries.
+
+**Consequence:** Shellwise raw-secant/Jacobi positivity and geometry-only
+abstract one-use are retired. This is not a production counterexample: the
+flat model deliberately omits A1 Fourier/Cameron--Martin target-coupling
+decay, while the exact isolated production-analogue `1:2` and `1:3` adapted
+losses are dyadically summable. The production theorem and one-use remain
+open at `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, which must retain
+the Jacobi square and prove a nonlinear NPC--Carleson/paradifferential bound
+for causally harvestable Gaussian injection.
 
 <a id="ng-2026-07-23-a13-shellwise-heat-and-charge"></a>
 ### NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE -- shellwise heat and separated charge routes fail

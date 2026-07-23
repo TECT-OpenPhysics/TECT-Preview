@@ -1,0 +1,606 @@
+% =============================================================================
+% Title: Class-II NPC cone and martingale-injection reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION
+% Version: v1.0 -- first issued 2026-07-23; this version issued 2026-07-23
+% Status: T4 exact/analytic structural subproof; global injection balance open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-23): exact current diagonalisation at the Nelson exponent,
+% aggregate metric-cone geometry, smooth Cartan--Jacobi decomposition,
+% raw-energy/noise-injection telescope, and a uniformly nonvanishing
+% positive-floor retained-square shellwise no-go.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cJ}{\mathfrak J}
+\newcommand{\cI}{\mathcal I}
+\newcommand{\cR}{\mathcal R}
+
+\section*{Purpose and scope}
+
+This note continues
+\texttt{A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND}
+inside the existing A13 claim.  It does not create a new peer-level claim.
+The three production currents are diagonalised jointly, not one at a time.
+Their exact target metric is identified with the smooth part of a
+nonpositively curved Euclidean cone, and the exponent in that factorisation
+is shown to be exactly the previously fixed Nelson exponent $q=10/9$.
+The raw secant consequently has a first-variation plus nonnegative Jacobi
+decomposition wherever the pointwise geodesic is smooth.
+
+The same calculation also reveals the remaining obstruction sharply.  The
+sum of raw secants is terminal raw energy minus the accumulated Gaussian
+derivative-energy injection.  Both terms are scale-critical and cancel
+exactly at zero control; estimating either one separately loses order one per
+shell.  Thus the current gate is reduced to one global martingale-injection
+balance.  It is not closed here.
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Closed here.}  Exact production-$Q_{\rm II}$ diagonalisation; the
+$5/9$ normalized-current exponent and its equality $2(5/9)=q$; the aggregate
+cone with base coefficients $113/32$ and $25/32$; nonpositive smooth
+sectional curvatures and the canonical CAT(0) cone completion; the smooth
+first-variation/Jacobi formula; the raw-energy/noise-injection telescope; and
+a positive-floor shellwise-negativity witness which retains the full positive
+square and stays uniformly away from the cone tip.
+
+\medskip
+\textbf{Still open.}  A cutoff-uniform lower bound for the \emph{joint}
+terminal-energy/injection balance, equivalently for the sum of the signed
+first variations plus the nonnegative Jacobi terms.  The cone-tip
+approximation, comparison of cone logarithmic displacement with the physical
+shell control, localization to every finite-energy drift, controlled-shell
+one-use, and the Nelson theorem are not asserted.
+}}
+\end{center}
+
+All identities are cutoff-wise and use the hash-pinned $L=16$ A1 production
+parameters, three complex fields in the six-real convention, the fixed floor
+$e=10^{-12}$, common real-even sharp cubes, and regular mutually orthogonal
+one-shot strict-past controls.  The heat dummy below is held fixed under
+spatial differentiation.  It is never identified with the actual future
+field.
+
+\section{Production currents and exact Nelson-aligned factorisation}
+
+Let
+\[
+ d=\rho+e,\qquad s=\log d,\qquad
+ J_A=\dd m_A,\qquad K_A=\dd m_A-m_A\dd s.                 \tag{1.1}
+\]
+The quadratic form before the physical outer factor $1/2$ is
+\[
+ |(J_A,K_A)|_{Q_{\rm II}}^2
+ =a|J_A|^2+2bJ_A\!\cdot K_A+c|K_A|^2.                    \tag{1.2}
+\]
+With
+\[
+ P=M_X^2+10^{-12}=4+10^{-12},                             \tag{1.3}
+\]
+the pinned coefficients are derived, not pasted, as
+\[
+ a={9\over500P},\qquad b={3\over400P},\qquad
+ c={3\over320P},\qquad D:=ac-b^2={9\over80000P^2}>0.     \tag{1.4}
+\]
+Completing the $Q_{\rm II}$ square gives
+\[
+ a|J|^2+2bJ\!\cdot K+c|K|^2
+ =c_0|J|^2+c_1|L|^2,                                     \tag{1.5}
+\]
+where
+\[
+ c_0={D\over c}={3\over250P},\qquad
+ c_1=c\left(1+{b\over c}\right)^2={243\over8000P},       \tag{1.6}
+\]
+\[
+ L=J-\alpha m\dd s,\qquad
+ \alpha={c\over b+c}={5\over9}.                          \tag{1.7}
+\]
+Since
+\[
+ L=d^\alpha\dd(m d^{-\alpha}),                            \tag{1.8}
+\]
+equation (1.5) becomes the exact weighted-current factorisation
+\[
+ \boxed{
+ a|J|^2+2bJ\!\cdot K+c|K|^2
+ =c_0|\dd m|^2+c_1d^{10/9}
+       |\dd(m d^{-5/9})|^2.}                              \tag{1.9}
+\]
+The exponent is not fitted after the fact.  The strict-past authority fixed
+$\epsilon_v=0.45=9/20$, hence
+\[
+ q={1\over2\epsilon_v}={10\over9}=2\alpha.                \tag{1.10}
+\]
+This exact equality is the main new structural coincidence.
+
+There is also a global radial state change behind the second term.  Put
+\[
+ Y=X(\rho+e)^{-5/18}.                                      \tag{1.11}
+\]
+Because $m_A$ is quadratic,
+$m_A(Y)=m_A(X)d^{-5/9}$.  The derivative of (1.11) has tangential eigenvalue
+$d^{-5/18}$ and radial eigenvalue
+\[
+ d^{-5/18}\left(1-{5\over9}{\rho\over d}\right)
+ \ge {4\over9}d^{-5/18}.                                  \tag{1.12}
+\]
+Thus it is an orientation-preserving radial diffeomorphism for every fixed
+$e>0$.  This fact alone does not bound a physical shell secant: shell
+addition is affine in $X$, not in $Y$.
+
+\section{The three currents form one nonpositively curved cone}
+
+The generators act on the first two complex components.  Pauli--Fierz algebra
+gives
+\[
+ m=(m_1,m_2,m_3),\qquad r:=|m|=\rho_{\rm dbl}\le\rho.      \tag{2.1}
+\]
+For $r>0$ write $m=rn$, $n\in S^2$.  Summing (1.2) over all three generators
+produces the target quadratic form
+\[
+ g=A_0(\dd r^2+r^2\dd\Omega^2)-2B_0r\dd r\dd s
+       +cr^2\dd s^2,                                      \tag{2.2}
+\]
+\[
+ A_0=a+2b+c,\qquad B_0=b+c.                               \tag{2.3}
+\]
+Set
+\[
+ z=s-{B_0\over c}\log r,\qquad
+ R=\sqrt{D/c}\,r.                                         \tag{2.4}
+\]
+A direct substitution, with no inequality, yields
+\[
+ \boxed{
+ g=\dd R^2+R^2\left({A_0c\over D}\dd\Omega^2
+                     +{c^2\over D}\dd z^2\right)
+  =\dd R^2+R^2\left({113\over32}\dd\Omega^2
+                     +{25\over32}\dd z^2\right).}        \tag{2.5}
+\]
+The physical energy is one half of the spatial Dirichlet energy defined by
+$g$.  The common denominator $P$ remains in the radial scale $R$ but cancels
+from both base ratios.
+
+On the smooth stratum $R>0$, warped-product curvature gives
+\[
+ K(\partial_R,\cdot)=0,\qquad
+ K_{\Omega\Omega}=-{81\over113R^2},\qquad
+ K_{\Omega z}=-{1\over R^2}.                              \tag{2.6}
+\]
+Every sectional curvature is therefore nonpositive.  More globally, define
+\[
+ B=S^2_{\sqrt{113/32}}\times\R_{\sqrt{25/32}}.             \tag{2.7}
+\]
+This complete base is locally CAT(1).  Its shortest closed local geodesic is
+the sphere great circle, of length
+$2\pi\sqrt{113/32}>2\pi$; the line factor creates no closed geodesic.
+Consequently $B$ is CAT(1), and the canonical angle-clipped Euclidean cone
+$C(B)$ is CAT(0).  Its smooth metric is exactly (2.5), and its metric
+completion collapses all of $B$ at $R=0$ to one cone tip.
+
+Two scope points are essential.  First, the physical image satisfies
+$\rho\ge r$ and is only a subset of the ambient cone.  Second, pure singlet
+and phase directions lie in the production pseudometric kernel and collapse
+at the tip.  Ambient geodesics compare endpoint Dirichlet energies, but need
+not lift to affine physical-field paths.  Comparing their logarithmic
+displacement with the declared shell control is part of the next gate.
+
+\section{The retained square is a Jacobi form}
+
+Let $U_0,U_1$ be two smooth target maps into the $R>0$ stratum and let $U_t$
+be their pointwise ambient-cone geodesic.  Write $V_t=\partial_tU_t$.  For the
+Dirichlet energy
+\[
+ \cE(U)={1\over2}\sum_i\int|\partial_iU|_g^2\dd x,       \tag{3.1}
+\]
+the standard second variation is
+\[
+ {\dd^2\over\dd t^2}\cE(U_t)
+ =\sum_i\int\left\{|\nabla_iV_t|_g^2
+ -\langle R^g(V_t,\partial_iU_t)\partial_iU_t,V_t\rangle_g
+ \right\}\dd x.                                          \tag{3.2}
+\]
+Equation (2.6) makes the integrand nonnegative.  Taylor's formula with
+integral remainder therefore gives the exact secant decomposition
+\[
+ \cE(U_1)-\cE(U_0)=\mathfrak F(U_0,U_1)
+                                  +\mathfrak J(U_0,U_1),   \tag{3.3}
+\]
+\[
+ \mathfrak F=\sum_i\int
+       \langle\partial_iU_0,\nabla_iV_0\rangle_g\dd x,     \tag{3.4}
+\]
+\[
+\mathfrak J=\sum_i\int_0^1(1-t)\int
+\left\{|\nabla_iV_t|_g^2
+-\langle R^g(V_t,\partial_iU_t)\partial_iU_t,V_t\rangle_g
+\right\}\dd x\dd t\ge0.                                  \tag{3.5}
+\]
+In fact the remainder is quantitatively stronger.  The pointwise geodesic is
+constant speed, so $|V_t|_g=d_g(U_0,U_1)$ is independent of $t$.  Kato's
+inequality and the curvature sign give
+\[
+ |\nabla_iV_t|_g^2
+ -\langle R^g(V_t,\partial_iU_t)\partial_iU_t,V_t\rangle_g
+ \ge|\partial_i d_g(U_0,U_1)|^2.
+\]
+Therefore
+\[
+ \boxed{\mathfrak J(U_0,U_1)
+ \ge {1\over2}\|\nabla d_g(U_0,U_1)\|_2^2.}                \tag{3.6}
+\]
+
+Apply this pointwise for every target-space heat dummy $\xi$ in the previous
+backward-heat representation.  Wherever the smooth formula is legitimate,
+the remaining raw secant is
+\[
+\boxed{\cR_j=\mathfrak F_j+\mathfrak J_j,\qquad
+        \mathfrak J_j\ge0.}                               \tag{3.7}
+\]
+This identifies the positive Gauss--Newton square and the signed Cartan term
+as one geometric Jacobi remainder.  It also explains why deleting the square
+was fatal.  CAT(0) convexity supplies a metric-space extension of the energy
+inequality, but the exact stochastic theorem still needs an approximation at
+$R=0$ and a control-displacement comparison.  Neither is hidden in (3.6).
+
+Most importantly, (3.7) does not permit one to discard $\mathfrak J_j$ and
+estimate $\mathfrak F_j$ shell by shell.  The latter is the same critical
+relative-phase source channel isolated earlier.  The favorable curvature
+must remain coupled to the signed first variation in the global sum.
+
+\section{Exact raw-energy/noise-injection telescope}
+
+Let $B_k^{(J)}$ be the terminal-backward heat coefficient from the preceding
+A13 result and define its uncentred raw energy
+\[
+ \cE_k^{(J)}(z,y)
+ ={1\over2}\sum_i\int y_i^TB_k^{(J)}(z)y_i\dd x.           \tag{4.1}
+\]
+The definition of $\cR_j$ is exactly
+\[
+ \cR_j=\cE_{j-1}^{(J)}(Z_{j-1}+a_j,
+                              DZ_{j-1}+b_j)
+        -\cE_{j-1}^{(J)}(Z_{j-1},DZ_{j-1}).                \tag{4.2}
+\]
+Value/derivative independence of the current Gaussian shell gives
+\[
+ \E_j\cE_j^{(J)}(z+g_j,y+d_j)
+ =\cE_{j-1}^{(J)}(z,y)+\cI_j(z),                          \tag{4.3}
+\]
+\[
+ \cI_j(z)={1\over2}\sum_i\int
+ \Tr\!\left[B_{j-1}^{(J)}(z)\Delta\Gamma_{j,i}\right]
+ \dd x\ge0.                                               \tag{4.4}
+\]
+Taking conditional expectations and telescoping now proves
+\[
+ \boxed{
+ \E\sum_{j=j_0}^J\cR_j
+ =\E\cE_J^{(J)}(Z_J,DZ_J)
+ -\E\cE_{j_0-1}^{(J)}(Z_{j_0-1},DZ_{j_0-1})
+ -\E\sum_{j=j_0}^J\cI_j(Z_{j-1}+a_j).}                   \tag{4.5}
+\]
+The primary executable checks a two-shell version of (4.5) by polynomial
+Gauss--Hermite cubature with residual $1.39\times10^{-16}$.  The non-importing
+route uses different coefficients, controls, and three shells and obtains
+$4.69\times10^{-17}$.
+
+At zero control, $\cR_j=0$ identically and (4.5) says that expected terminal
+raw energy equals the accumulated injection.  In the sharp three-dimensional
+scaling, the value variance and derivative variance have reciprocal dyadic
+weights; the injection is scale zero.  Separating the positive terminal term
+from the negative injection therefore loses an order-one quantity at every
+shell even though their joint zero-control balance is exact.  Cone convexity
+does not remove this cancellation requirement.
+
+\section{Retained-square shellwise positivity is false at positive floor}
+
+The failure is not caused by crossing the cone tip.  On the active real ray
+take, on a normalized circle,
+\[
+ u_0=C+A\cos Nx,\qquad
+ u_1=u_0+B\cos3Nx,                                        \tag{5.1}
+\]
+\[
+ C={101\over100},\qquad A=1,\qquad B=-{3\over400}.        \tag{5.2}
+\]
+Put $I(u)=\langle u^2u_x^2\rangle$.  Orthogonality gives
+\[
+ I(u_1)={N^2\over8}\left(
+ A^4+4A^3B+20A^2B^2+4A^2C^2+9B^4+36B^2C^2\right),        \tag{5.3}
+\]
+and the exact secant split is
+\[
+ I(u_1)-I(u_0)
+ =N^2\left\{
+ \underbrace{{A^3B\over2}}_{\rm cross}
+ +\underbrace{{B^2(20A^2+9B^2+36C^2)\over8}}_{
+      \rm retained\ positive\ square}\right\}.          \tag{5.4}
+\]
+At (5.2),
+\[
+ I(u_0)={12701\over20000}N^2,\qquad
+ {\rm cross}=-{3\over800}N^2,                            \tag{5.5}
+\]
+\[
+ {\rm square}={81682713\over204800000000}N^2,             \tag{5.6}
+\]
+\[
+ \boxed{I(u_1)-I(u_0)
+ =-{686317287\over204800000000}N^2<0.}                    \tag{5.7}
+\]
+
+Here only $m_3=\rho=u^2$ is active, so $J=2uu_x$.  The physical $J$-energy
+secant, including the outer factor $1/2$, is
+\[
+ \Delta E_J=2a\{I(u_1)-I(u_0)\}
+ =-{686317287\over102400000000}aN^2.                     \tag{5.8}
+\]
+Its cross is $-3aN^2/400$ and its retained positive square is
+$81682713aN^2/102400000000$.
+
+The full interpolation obeys
+\[
+ u_t\ge C-|A|-|B|={1\over400}>0.                          \tag{5.9}
+\]
+Indeed, writing $x=\cos Nx$ shows that $u_1$ is strictly increasing in
+$x\in[-1,1]$ and has the sharper minimum $7/400$.  Thus no zero, $0/0$
+convention, or cone-tip singularity is involved.  At positive floor,
+\[
+ K={e\over u^2+e}J=:\theta_e(u)J.                         \tag{5.10}
+\]
+For $e=10^{-12}$, (5.9) and $u_0\ge1/100$ give
+\[
+ \theta_1\le{1\over6250001},\qquad
+ \theta_0\le{1\over100000001}.                          \tag{5.11}
+\]
+The complete $b,c$ correction satisfies the rigorous bound
+\[
+ |\Delta E_{bc}|
+ \le4b(\theta_1I_1+\theta_0I_0)
+  +2c(\theta_1^2I_1+\theta_0^2I_0).                       \tag{5.12}
+\]
+For the production coefficients the right side is below
+$8.057\times10^{-10}N^2$, whereas (5.8) is
+$-3.01604\times10^{-5}N^2$.  Hence the full positive-floor
+$Q_{\rm II}$ secant is strictly negative with the positive square retained.
+Independent trapezoidal and Gauss--Legendre evaluations reproduce the same
+sign and value.
+
+This disproves only a termwise positivity or conditional coercivity route.
+It does not disprove the global gate.  If the carrier $u_0$ was created by an
+earlier control, its earlier positive energy belongs to the same global sum;
+if it came from noise, its energy belongs to the terminal/injection
+cancellation in (4.5).
+
+\section{Restricted adapted resonances are summable}
+
+The strongest elementary adapted variants of the preceding witness do not
+falsify the global theorem.  This subsection is an exact theorem for a
+zero-floor active-real scalar analogue; it is not silently promoted to the
+full heat-averaged six-real form.
+
+Let $X\sim\mathcal N(0,v_N)$ with $v_N=\chi N^{-4}$ and start from
+\[
+ u_0=C+X\cos Nx.                                           \tag{6.1}
+\]
+Allow an arbitrary strict-past feedback amplitude $B=B(X)$.  For a $2N$
+control, direct orthogonality gives
+\[
+ R_{2,N}=aN^2\left\{3CX^2B+
+ \left({5\over2}X^2+4C^2\right)B^2+B^4\right\}.            \tag{6.2}
+\]
+If the Cameron--Martin symbol obeys the high-frequency lower bound
+$\kappa(2N)^4$, pointwise completion against an allocation $\eta>0$ yields
+\[
+ R_{2,N}+\eta\kappa(2N)^4B^2
+ \ge-{9a^2C^2X^4\over64\eta\kappa}.                       \tag{6.3}
+\]
+Since $\E X^4=3v_N^2$, the expected loss is $O(N^{-8})$ per
+carrier.  Even $O(N^3)$ carriers leave $O(N^{-5})$ on a dyadic shell, hence a
+summable series.
+
+For an arbitrary $3N$ feedback,
+\[
+ R_{3,N}=aN^2\left\{X^3B+(5X^2+9C^2)B^2+{9\over4}B^4\right\},\tag{6.4}
+\]
+\[
+ R_{3,N}+\eta\kappa(3N)^4B^2
+ \ge-{a^2X^6\over324\eta\kappa}.                          \tag{6.5}
+\]
+Now $\E X^6=15v_N^3$, so the loss is $O(N^{-12})$ per
+carrier and $O(N^{-9})$ after shell multiplicity.  No endpoint sextic
+allocation is needed in either restricted bound.  The two executables use
+different quadratures and fixtures to verify (6.2)--(6.5), including the
+dyadic ratios $2^{-5}$ and $2^{-9}$.
+
+Adaptation can nevertheless make an individual expectation negative.  For
+$B=-tCX^2$, the leading term in $\E R_{2,N}/(aN^2)$ is
+$-9tC^2v_N^2$; for $C=0$ and $B=-tX^3$, the leading term in
+$\E R_{3,N}/(aN^2)$ is $-15tv_N^3$.  The positive higher powers make these
+losses finite and the preceding completions make them summable.
+
+For any fixed nonnegative raw energy $E$, pre-control state $U_{j-1}$,
+post-control state $V_j$, and post-noise state $U_j=V_j+G_j$, there is also
+the pathwise identity
+\[
+ \sum_{j=1}^m\{E(V_j)-E(U_{j-1})\}
+ =E(V_m)-E(U_0)-\sum_{j<m}\{E(U_j)-E(V_j)\}.               \tag{6.6}
+\]
+Thus controls telescope when no fresh noise intervenes.  A carrier created by
+an earlier control cannot be counted only at the later negative secant; its
+positive creation energy remains in the global sum.  A genuine falsifier must
+instead harvest fresh Gaussian injection non-summably across orthogonal
+future shells while keeping both Cameron--Martin action and terminal sextic
+subcritical.  The principal isolated $1{:}2$ and $1{:}3$ resonances fail that
+test.
+
+There is, however, a decisive abstract no-go against a geometry-only proof.
+Take mutually orthogonal one-use coordinates $z_1,\ldots,z_J$, the flat
+CAT(0) target
+\[
+ \Phi(z)=\sum_kz_k\in\R,\qquad E(z)={1\over2}|\Phi(z)|^2,   \tag{6.7}
+\]
+and independent $g_j\sim\mathcal N(0,1)$.  At stage $j\ge2$, use the new
+coordinate once with the predictable reset
+$h_j=-\Phi(z_{<j})$.  Immediately before fresh noise the target is zero; after
+noise it is $g_j$.  Hence
+\[
+ \E\sum_{j=1}^J R_j=-{J-1\over2},\qquad
+ \E\sum_jh_j^2=J-1.                                       \tag{6.8}
+\]
+The physical coordinate vector has $z_1=g_1$ and
+$z_j=-g_{j-1}+g_j$ for $j\ge2$, so its additive sextic is
+\[
+ \E\sum_j|z_j|^6=15+120(J-1).                             \tag{6.9}
+\]
+Therefore
+\[
+ \E\sum_jR_j+\eta\E\sum_jh_j^2+\zeta\E\sum_j|z_j|^6
+ =\{-1/2+\eta+120\zeta\}(J-1)+15\zeta,                    \tag{6.10}
+\]
+which tends to $-\infty$ whenever $\eta+120\zeta<1/2$.
+Thus CAT(0), orthogonality, one-use, and even an additive endpoint sextic do
+not suffice without quantitative decay of target coupling.  This is not a
+production counterexample: $\Phi$ couples every coordinate equally and has
+none of the A1 Fourier/Cameron--Martin decay.
+
+The weighted flat model states the needed replacement exactly.  If
+$\Phi(z)=\sum_j\lambda_jz_j$ and the pre-control target is $S$, then
+\[
+ \inf_h\left\{S\lambda_jh+
+       \left({\lambda_j^2\over2}+\eta\right)h^2\right\}
+ =-{S^2\lambda_j^2\over2(\lambda_j^2+2\eta)}.              \tag{6.11}
+\]
+Equal $\lambda_j$ reproduce (6.10); a Carleson or $\ell^1$ condition on the
+effective weights makes the harvest summable.  The production harmonic
+calculations above exhibit strong decay, and A12 is the linearized
+source-square version of precisely this property.  The successor must prove
+its nonlinear geodesic-log analogue.
+
+\section{The exact successor theorem}
+
+Combining the previous A13 reduction with (3.7) and (4.5), the sole current
+analytic target for regular one-shot controls is
+\[
+\boxed{
+\E\sum_{j\ge j_0}(\mathfrak F_j+\mathfrak J_j)
+\ge-\zeta\E\|Z_J\|_6^6
+     -\eta\E\sum_j\|h_j\|^2-C_{\zeta,\eta,j_0},
+ \qquad \mathfrak J_j\ge
+ {1\over2}\|\nabla d_g(U_j,U_j^+)\|_2^2,}                 \tag{7.1}
+\]
+uniformly in $J$.  Equivalently, after the already controlled fixed low block,
+one must prove the same lower bound for the terminal raw energy minus the
+\emph{controlled} injection sum in (4.5).  This is named
+\[
+ \texttt{A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE}.\tag{7.2}
+\]
+
+A successful proof must preserve the joint balance.  It may not invoke
+shellwise positivity, sum absolute values, delete $\mathfrak J_j$, use
+$\cR_j\ge-|w_j|_Q^2/2$, or spend the same past/control energy at every shell.
+It must also justify the cone-tip approximation and compare the target
+logarithmic displacement with the physical strict-past shell control.  The
+precise structural conflict is now visible: the cone logarithm
+$\operatorname{Log}_{\Phi(X+\xi)}\Phi(X+a_j+\xi)$ is nonlinear and generally
+contains all Fourier frequencies even when $a_j$ lies in one sharp shell, so
+A12's one-shot Bessel estimate does not apply directly.  Following the affine
+physical path preserves shell support but loses the Jacobi sign, as Section 5
+demonstrates.  The missing theorem is therefore a nonlinear
+NPC--Carleson/paradifferential bridge between geodesic positivity and
+strict-shell localization.  Only after (7.1) is closed can localization and
+lower semicontinuity extend the result to the declared finite-energy control
+class.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The coefficient factorisation proves one-use.''}
+\textbf{UPHELD as false.}  It proves an exact favorable geometry, but affine
+physical shell addition is not a cone geodesic and the signed first variation
+still requires a global stochastic estimate.
+
+\item \textbf{``Nonpositive smooth curvature automatically proves the global
+statement at $r=0$.''}  \textbf{VALID WITH MITIGATION.}  The canonical
+angle-clipped completion is CAT(0), but applying the exact second-variation
+identity to stochastic maps touching the tip requires approximation and lower
+semicontinuity.  This remains in the successor gate.
+
+\item \textbf{``The physical image must be geodesically convex.''}
+\textbf{VALID WITH MITIGATION.}  Endpoint Dirichlet energies may be compared
+in the ambient cone without a physical lift, but bounding the resulting cone
+logarithmic displacement by the physical control is not automatic and is not
+claimed.
+
+\item \textbf{``The nonnegative Jacobi term can now be discarded.''}
+\textbf{UPHELD as false.}  Its coupling to the signed first variation is the
+only available curvature compensation.  The first variation alone is the
+previous critical source channel.
+
+\item \textbf{``Terminal raw-energy positivity bounds the injection sum.''}
+\textbf{UPHELD as false.}  At zero control the two are equal shell by shell
+after expectation.  Separating them destroys their exact scale-zero
+cancellation.
+
+\item \textbf{``The harmonic witness is a zero-floor singularity.''}
+\textbf{DISMISSED.}  The full interpolation is bounded below by $1/400$, and
+the explicit $e=10^{-12}$ correction is more than four orders of magnitude
+smaller than the negative $J$-secant margin.
+
+\item \textbf{``A negative shellwise secant refutes the global theorem.''}
+\textbf{DISMISSED.}  Earlier carrier creation or Gaussian injection remains in
+the global telescope.  The witness retires only termwise positivity.
+\end{enumerate}
+
+\section{Reproduction}
+
+The fail-closed command is
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_npc_cone_martingale_injection_reduction_verify.py
+\end{verbatim}
+The primary route derives every model coefficient from the A1 and strict-past
+authorities, checks six-real Pauli--Fierz/factorisation identities, the cone
+metric, the positive-floor witness, and a controlled two-shell injection
+telescope, isolated adapted resonances, and the flat-CAT(0) reset no-go.  The
+non-importing route reconstructs complex Pauli matrices,
+uses exact rational Fourier convolution and independent Gauss--Legendre
+quadrature, finite-differences the radial map, and checks a distinct
+three-shell telescope.  Both write JSON artifacts.  The integrated verifier
+pins their hashes, assertion contracts, the proof note and PDF, and every
+claim/gate/ledger honesty boundary.
+
+\clearpage
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Tier:      T4 before / T4 after (no promotion)
+Closed:    exact Q diagonalisation; q=2(5/9); aggregate 113/32,
+           25/32 NPC cone; CAT(0) completion; smooth Jacobi remainder;
+           raw terminal-energy/injection telescope; positive-floor
+           retained-square shellwise positivity no-go
+Open:      A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE
+Umbrella:  A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE remains open
+Scope:     finite cutoff; fixed floor; common real-even mutually orthogonal
+           one-shot sharp shells; regular strict-past controls
+No claim:  global injection balance; arbitrary finite-energy extension;
+           one-use; Nelson; interacting measure; removal limits; T5--T7
+\end{verbatim}
+
+\noindent\textbf{Final boundary.}
+The averaged raw-current gate has been reduced to one geometrically exact
+NPC-cone martingale-injection balance.  The positive Jacobi form is retained,
+and every shellwise positivity shortcut has been explicitly falsified.  The
+global balance (7.1), not another local current estimate, is the next theorem.

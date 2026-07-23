@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-067](#r-067) | NPC-cone and martingale-injection reduction | Scoped T4 exact/analytic/executed subproof: the production current diagonalises at alpha=5/9 and q=10/9 into an aggregate CAT(0) cone; strong Jacobi and raw-injection telescopes isolate the nonlinear NPC--Carleson balance, while positive-floor and flat-model no-gos retire shellwise and geometry-only proofs; 118/118 aggregate assertions |
 | [R-066](#r-066) | Backward-heat martingale and square-coupled Cartan reduction | Scoped T4 exact/analytic/executed subproof: the retained-square Gibbs charge and terminal-backward heat martingale give an exact controlled telescope; finite-low and covariance-trace channels fall below arbitrary budgets for regular one-shot controls; the averaged raw-current/Cartan--Jacobi bound and finite-energy extension remain open |
 | [R-065](#r-065) | Strict-past joint-score and heat-current reduction | Scoped T4 exact/executed subproof: coefficient differentiation before completion gives the exact ell+m score and factor-four recovery; same-shell independence gives the heat-current identity, while an origin witness refutes shellwise positivity; the global joint-remainder/Cartan bound remains open |
 | [R-064](#r-064) | Strict-past PSD-resolvent one-use reduction | Scoped T4 exact/executed subproof: causal Gaussian conditioning retains the positive A11 shell block, gives the exact q-resolvent source rebate, and reduces one-use to one global signed coefficient-increment charge; the cutoff-uniform charge bound remains open |
@@ -85,6 +86,45 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-067"></a>
+### R-067 -- NPC-cone and martingale-injection reduction
+
+**Result ID.**
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION`.
+
+**Statement.** Exact rational diagonalisation of the A1 production current
+gives `alpha=5/9` and the previously fixed Nelson exponent `q=10/9=2 alpha`.
+The aggregate three-current target metric is
+`dR^2+R^2[(113/32)dOmega^2+(25/32)dz^2]`; its regular sectional curvatures are
+nonpositive and its standard angle-clipped completion is CAT(0). The raw
+secant therefore splits into the signed geodesic first variation and a strong
+Jacobi remainder bounded below by one half the squared spatial gradient of
+target distance. An exact second telescope identifies fresh raw-energy
+injection. A positive-floor witness refutes shellwise secant positivity even
+with the retained square. The isolated adapted `1:2` and `1:3` harmonic
+losses are summable after three-dimensional shell multiplicity, whereas a
+flat CAT(0) reset model proves that abstract geometry and one-use alone are
+insufficient. The flat model is not a production counterexample.
+
+**Proven in.** A13 /
+`classii-npc-cone-martingale-injection-reduction-260723-v1.0`, with primary
+24/24, non-importing independent 23/23, integrated aggregate 118/118, and a
+nine-page PDF passing form, zero-overfull, and direct all-page visual QA.
+
+**Reuse scope.** Weighted-current diagonalisation, CAT(0) target reformulation,
+strong Jacobi coercivity, controlled raw-energy/injection telescopes, and
+falsifier design for causal Gaussian shell transports at fixed positive floor.
+
+**Boundary.** The nonlinear NPC--Carleson/paradifferential injection balance,
+extension to every finite-energy drift, controlled-shell one-use estimate,
+Nelson theorem, and interacting measure remain open. Tier T4.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-059--R-066 after the NPC--Carleson balance, finite-energy extension, and
+one-use theorem are resolved.
+
+---
 
 <a id="r-066"></a>
 ### R-066 -- backward-heat martingale and square-coupled Cartan reduction

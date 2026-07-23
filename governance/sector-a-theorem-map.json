@@ -1,7 +1,7 @@
 {
   "schema": "tect/sector-a-theorem-map/1.0",
-  "version": "1.0.0",
-  "issued": "2026-07-22",
+  "version": "1.1.0",
+  "issued": "2026-07-23",
   "status": "ACTIVE",
   "purpose": "Separate durable Sector-A theorem families from branch packages, development anchors, and subproof gates without renumbering issued claim IDs.",
   "id_policy": {
@@ -146,10 +146,10 @@
     "host_claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
     "record_as": "SUBPROOF",
     "selected_subproof": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
-    "current_child": "A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND",
+    "current_child": "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
     "parent_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
     "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
-    "success_condition": "Prove the cutoff-uniform lower bound on the averaged raw-current/Cartan-Jacobi form with the positive square retained for regular one-shot controls, then extend it by localization and lower semicontinuity to the declared finite-energy drift class without termwise energy repayment."
+    "success_condition": "Prove A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE: a cutoff-uniform nonlinear NPC-Carleson or paradifferential lower bound coupling the retained geodesic Jacobi square to causally harvestable Gaussian injection through production Fourier/Cameron-Martin decay for regular one-shot controls, then extend it by localization and lower semicontinuity to the declared finite-energy drift class without shellwise positivity or separate terminal-energy repayment."
   },
   "subproof_taxonomy": {
     "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": [
@@ -186,6 +186,12 @@
           "classii-strict-past-signed-causal-reduction",
           "classii-strict-past-joint-score-heat-current-reduction",
           "classii-backward-heat-martingale-square-coupled-cartan-reduction"
+        ]
+      },
+      {
+        "name": "NPC-CONE-AND-MARTINGALE-INJECTION",
+        "lineage_prefixes": [
+          "classii-npc-cone-martingale-injection-reduction"
         ]
       }
     ]

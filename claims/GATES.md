@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-22.
+exist here. Last updated: 2026-07-23.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
@@ -401,11 +401,17 @@ genuinely triangular/flow transport or direct constructive estimate.
 Coefficient-one conditioning, the finite-bank Bellman class, repeated past
 energy, endpoint-only timewise Young, resolvent-only repair, and separate
 payment of the Ramer square plus inverse determinant are excluded.
-The backward-heat continuation now cancels the uncontrolled heat drift
-exactly and puts the finite-low and covariance-trace channels below arbitrary
-budgets for regular mutually orthogonal one-shot controls. The current child
-is `A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`; the extension
-to every finite-energy drift and the umbrella theorem remain open.
+The backward-heat continuation cancels the uncontrolled heat drift exactly
+and puts the finite-low and covariance-trace channels below arbitrary budgets
+for regular mutually orthogonal one-shot controls. The subsequent
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` diagonalises the current
+at the Nelson exponent, proves the aggregate CAT(0) cone and strong Jacobi
+remainder, and exposes the exact raw-energy/injection telescope. It also
+refutes shellwise raw-secant positivity at a positive floor and refutes a
+geometry-only abstract proof without producing a production counterexample.
+The current child is
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`; the extension to every
+finite-energy drift and the umbrella theorem remain open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -429,8 +435,8 @@ continuum limits, and reconstructs the full rational coefficient in the exact
 A7 scheme.  The finite `Sigma Q` conversion and every grouped lower chaos are
 retained.  This closes the enhanced deterministic Cameron--Martin model, not
 an adapted random-shift estimate.  The current child is
-`A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND`; termwise absolute
-paraproduct/Young absorption remains excluded.
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`; termwise absolute
+paraproduct/Young absorption and geometry-only one-use remain excluded.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
 
@@ -560,11 +566,48 @@ future field is forbidden. After the regular-control estimate, prove the
 localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
+**Status:** REDUCED-NOT-CLOSED (2026-07-23) by
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION`. Exact production
+diagonalisation gives `alpha=5/9` and `q=10/9=2 alpha`; the aggregate
+three-current target is the standard angle-clipped CAT(0) completion of
+`dR^2+R^2[(113/32)dOmega^2+(25/32)dz^2]`. The raw secant is the signed
+geodesic first variation plus a Jacobi remainder bounded below by one half of
+the squared spatial gradient of target distance. The exact raw-energy/noise-
+injection telescope shows why terminal raw energy and fresh injection may not
+be separated. A positive-floor witness refutes shellwise positivity even
+with the retained square, while the isolated adapted `1:2` and `1:3`
+resonance losses are summable. A flat CAT(0) reset model refutes a
+geometry-only one-use argument but is not a production counterexample. The
+successor below is required; finite-energy extension, one-use, Nelson, and
+tier promotion remain open.
+
+### **A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE**
+
+**Statement:** For every `zeta,eta>0`, prove uniformly in the terminal cutoff
+`J`, first for regular mutually orthogonal one-shot strict-past controls,
+`E sum_(j>=j0)(F_j+J_j) >= -zeta E||Z_J||_6^6
+-eta E sum_j||h_j||^2-C_(zeta,eta,j0)`, where `F_j` is the exact geodesic
+first variation for the production NPC target and
+`J_j >= ||nabla d_g(U_j,U_j^+)||_2^2/2` is retained. The argument must couple
+the causally harvestable raw-energy injection to production Fourier/
+Cameron--Martin decay through a nonlinear Carleson or paradifferential
+estimate compatible with the A12 source-square structure. It must address
+the fact that the geodesic logarithm spreads Fourier support, whereas affine
+physical interpolation preserves sharp-shell support but loses the Jacobi
+sign. Shellwise positivity, deletion of `J_j`, termwise absolute values, a
+geometry-only one-shot estimate, or separate payment of terminal raw energy
+and injection are forbidden. After the regular-control estimate, prove the
+localization/lower-semicontinuity extension to the declared finite-energy
+control class.
+
 **Status:** OPEN CURRENT CHILD (2026-07-23), proof-ordered after
-`A13-CLASSII-BACKWARD-HEAT-MARTINGALE-SQUARE-COUPLED-CARTAN-REDUCTION` and
-before `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. The latest result proves
-only the reduction to this form. It does not bound the form, extend it to all
-finite-energy drifts, prove one-use or Nelson, or promote A13 beyond T4.
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION` and before
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. Exact isolated `1:2` and `1:3`
+adapted harmonics have completed shell losses of orders `N^-5` and `N^-9`
+after three-dimensional multiplicity, so they do not falsify this global
+production statement. A nonsummable coupled multi-mode harvesting mechanism
+has not been excluded or constructed. The balance, finite-energy extension,
+one-use, Nelson theorem, and any tier promotion remain open.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 
