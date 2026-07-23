@@ -1,0 +1,292 @@
+% =============================================================================
+% Title: Strict-past Gaussian causalization and resolvent signed-charge reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-23; this version issued 2026-07-23
+% Status: T4 exact structural subproof; production signed charge and one-use gates open
+% =============================================================================
+
+\section*{Purpose and scope}
+
+This note proves the finite-dimensional strict-past identity that prevents a
+predictable shell source from charging the Gaussian past energy at every
+scale.  It closes the scoped child
+\begin{verbatim}
+A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION.
+\end{verbatim}
+The result converts the controlled-shell lower bound into one signed charge:
+the positive predictor square is kept together with the divergence of the
+innovation.  There is one control-energy payment, not one payment per shell.
+
+The theorem is exact for a finite ordered Gaussian filtration.  It does not
+bound the resulting production charge uniformly in the cutoff.  In
+particular, it does not by itself control the centered derivative-square
+tensor $Q$, the rational current, the translated-frame square, or the Cartan
+curvature term.  The current selected gate
+\begin{verbatim}
+A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND
+\end{verbatim}
+and its parent one-use/Nelson gate remain open.
+
+\section*{1. Ordered Gaussian convention}
+
+Let $\xi=(\xi_1,\ldots,\xi_N)$ be standard Gaussian and let
+$\mathcal F_j=\sigma(\xi_1,\ldots,\xi_j)$.  A map $a:\mathbb R^N\to
+\mathbb R^N$ is strictly past-adapted when $a_j$ is measurable with respect
+to $\mathcal F_{j-1}$.  For smooth $a$ define the Gaussian divergence
+\[
+ \delta a(z)=\sum_{j=1}^N\{z_j a_j(z)-\partial_j a_j(z)\}.       \tag{1.1}
+\]
+Let $h$ be strictly past-adapted and put $Z=\xi+h(\xi)$.  Let
+$b=b^{<}+r$, where $b^{<}$ is strictly past-adapted in its argument and $r$
+is the unstructured remainder.  The ordering may encode all coordinates in
+one sharp shell before moving to the next shell; strict past then means that
+the present shell never enters its own predictor.
+
+Strict triangularity implies
+\[
+ \partial_j b^{<}_j=0,
+ \qquad \operatorname{Tr}\{Db^{<}(Z)Dh(\xi)\}=0.               \tag{1.2}
+\]
+The second identity records the absence of same-shell feedback.  It is not a
+smallness estimate.
+
+\section*{2. Exact causalization lemma}
+
+\textbf{Lemma 2.1 (strict-past Gaussian causalization).}
+Assume that all expressions below are integrable.  Then
+\[
+ \mathbb E\,\delta b^{<}(Z)
+ =\mathbb E\,\langle h(\xi),b^{<}(Z)\rangle.                  \tag{2.1}
+\]
+
+\begin{proof}
+For each $j$, both $h_j(\xi)$ and $b^{<}_j(Z)$ are
+$\mathcal F_{j-1}$-measurable.  Indeed, the triangular recursion shows that
+$Z_1,\ldots,Z_{j-1}$ depend only on
+$\xi_1,\ldots,\xi_{j-1}$.  Hence $\xi_j$ is independent of
+$b^{<}_j(Z)$ and is centered.  By (1.2),
+\begin{align}
+ \mathbb E\,\delta b^{<}(Z)
+ &=\sum_j\mathbb E[(\xi_j+h_j(\xi))b^{<}_j(Z)]\\
+ &=\sum_j\mathbb E[h_j(\xi)b^{<}_j(Z)],
+\end{align}
+which is (2.1).
+\end{proof}
+
+The cancellation in (2.1) is conditional shell by shell, but the equality is
+an expectation identity.  The integrand $\delta b^{<}(Z)$ cannot in general
+be replaced pointwise by $h\cdot b^{<}(Z)$.
+
+\section*{3. One-use signed-charge reduction}
+
+Suppose the finite controlled interaction has the divergence form
+\[
+ 2V(Z)=\delta b(Z)=\delta b^{<}(Z)+\delta r(Z).                \tag{3.1}
+\]
+For $\varepsilon>0$ define the coupled signed charge
+\[
+ \mathcal S_\varepsilon(Z)
+ =\frac{|b^{<}(Z)|^2}{16\varepsilon}-\frac12\delta r(Z).       \tag{3.2}
+\]
+
+\textbf{Theorem 3.1 (one-use reduction).}
+Under the hypotheses of Lemma 2.1,
+\[
+ \mathbb E V(Z)
+ =-\varepsilon\mathbb E|h|^2
+  -\mathbb E\mathcal S_\varepsilon(Z)
+  +\varepsilon\mathbb E\left|h+\frac{b^{<}(Z)}{4\varepsilon}\right|^2,
+                                                                    \tag{3.3}
+\]
+and therefore
+\[
+ \mathbb E V(Z)\ge
+ -\varepsilon\mathbb E|h|^2-\mathbb E\mathcal S_\varepsilon(Z).    \tag{3.4}
+\]
+
+\begin{proof}
+Equations (3.1) and (2.1) give
+\[
+ \mathbb E V(Z)=\frac12\mathbb E\langle h,b^{<}(Z)\rangle
+                  +\frac12\mathbb E\delta r(Z).              \tag{3.5}
+\]
+Complete exactly one square:
+\[
+ \frac12\langle h,b^{<}\rangle
+ =-\varepsilon|h|^2-\frac{|b^{<}|^2}{16\varepsilon}
+   +\varepsilon\left|h+\frac{b^{<}}{4\varepsilon}\right|^2.  \tag{3.6}
+\]
+Substitution yields (3.3), and deletion of only the final nonnegative
+expectation yields (3.4).
+\end{proof}
+
+The source-square and the innovation divergence in (3.2) remain signed and
+coupled.  Applying absolute values or Young inequalities to their individual
+shell constituents would undo the theorem: it would reintroduce repeated
+past-energy costs and discard the cancellation still needed from the
+$Q$/current/Cartan structure.
+
+\section*{4. Positive affine block and resolvent completion}
+
+The production filtration contains more structure than Theorem 3.1 uses.
+Split the $j$th coordinate into a shell block and let
+$T_j=T_j(Z_{<j})$ be symmetric positive semidefinite and
+$\ell_j=\ell_j(Z_{<j})$ be strict-past measurable.  Define
+\[
+ a_j(Z)=T_jZ_j+2\ell_j.                                  \tag{4.1}
+\]
+Because $T_j$ and $\ell_j$ do not depend on $Z_j$,
+\[
+ {1\over2}\delta_ja_j(Z)
+ ={1\over2}\{Z_j^TT_jZ_j-\operatorname{Tr}T_j\}
+   +\langle\ell_j,Z_j\rangle.                          \tag{4.2}
+\]
+Conditioning on the strict past gives
+\[
+ \mathbb E_j{1\over2}\delta_ja_j(\xi+h)
+ ={1\over2}h_j^TT_jh_j+\langle\ell_j,h_j\rangle.      \tag{4.3}
+\]
+
+Put $q=(2\varepsilon)^{-1}$ and $R_{q,j}=(I+qT_j)^{-1}$.
+The exact metric completion is
+\begin{align}
+ {1\over2}h_j^TT_jh_j+\langle\ell_j,h_j\rangle
+ ={}&-\varepsilon|h_j|^2
+ -{q\over2}\langle\ell_j,R_{q,j}\ell_j\rangle\\
+ &+{1\over2}\left|
+ (T_j+q^{-1}I)^{1/2}(h_j+qR_{q,j}\ell_j)
+ \right|^2.                                           \tag{4.4}
+\end{align}
+Thus the positive present-shell quadratic form is not discarded into the
+remainder.  It rebates the raw source square by the resolvent $R_{q,j}$.
+For the production control allocation $\varepsilon=0.45$,
+\[
+ q={1\over0.9}={10\over9},                            \tag{4.5}
+\]
+which is exactly the Nelson exponent isolated by the earlier
+Boue--Dupuis equivalence, not a new fitted constant.
+
+\section*{5. Exact A11 production signed charge}
+
+Use the A11 notation
+\[
+ T_j=A_j^*A_j,\qquad \ell_j=A_j^*r_j,
+\qquad
+ I_j={1\over2}\{\langle\xi_j,T_j\xi_j\rangle-
+ \operatorname{Tr}T_j\}+\langle\ell_j,\xi_j\rangle.  \tag{5.1}
+\]
+Equation (4.2) says $I_j=\delta_ja_j/2$.  A11 also proves the exact
+finite-cutoff telescope
+\[
+ V_J^{\rm ren}=\sum_{j\le J}(I_j+\mathcal C_j),
+ \qquad V_0=0.                                        \tag{5.2}
+\]
+Let $b_J$ be the A13 whitened production divergence field, so that
+$2V_J^{\rm ren}=\delta b_J$, and set $r=b_J-a$.  Equations (5.1)--(5.2)
+then give the pointwise algebraic identity
+\[
+ {1\over2}\delta r=\sum_{j\le J}\mathcal C_j.         \tag{5.3}
+\]
+Combining (4.4) over the shells with (5.3) yields the exact one-use identity
+\begin{align}
+ \mathbb EV_J^{\rm ren}(X_J+h)
+ ={}&-\varepsilon\mathbb E\sum_j|h_j|^2
+      -\mathbb E\,\mathfrak S_{J,q}(X_J+h)\\
+ &+{1\over2}\mathbb E\sum_j\left|
+ (T_j+q^{-1}I)^{1/2}(h_j+qR_{q,j}\ell_j)
+ \right|^2,                                           \tag{5.4}
+\end{align}
+where
+\[
+ \boxed{
+ \mathfrak S_{J,q}(z)=
+ \sum_{j\le J}\left\{
+ {q\over2}\langle\ell_j,R_{q,j}\ell_j\rangle
+ -\mathcal C_j(z)\right\}.}                           \tag{5.5}
+\]
+Consequently the current child gate is reduced, without repeated past-energy
+payment, to
+\[
+ \mathbb E\,\mathfrak S_{J,10/9}(X_J+h)
+ \le \varepsilon_6\mathbb E\|X_J+h\|_6^6+C           \tag{5.6}
+\]
+uniformly for strict-past controls, with $\varepsilon_6<\gamma/6$.
+The endpoint Cameron--Martin norm is bounded by the Boue--Dupuis control
+energy, so (5.6) implies the umbrella one-use estimate.
+
+Formula (5.5) is the promised coupling.  The first term is the A11 positive
+source-square with its exact resolvent rebate; the second is the complete
+coefficient increment.  Its balanced A7 reconstruction contains the
+centered $Q$, rational current, translated-frame square, and Cartan curvature.
+The relative-phase factor-four effect has not vanished: it is retained in
+the dependence of $\mathcal C_j$ on the shifted current shell.  Therefore a
+termwise or one-shell bound on the two summands is still forbidden.  The
+remaining theorem is the global signed estimate (5.6), not a separated
+source bound and not a restatement of the Nelson moment.
+
+\section*{6. Executable adversarial audit}
+
+The primary fixture uses tensor Gauss--Hermite quadrature on a nonlinear
+three-coordinate triangular shift, predictor, and unrestricted innovation.
+It checks (2.1), the trace cancellation, (3.3), the PSD affine identity (4.3), the resolvent completion (4.4), retention of the innovation
+divergence, and a point at which the corresponding pointwise completion gap
+is negative.  The independent fixture does not import the primary program.
+It uses a different Hermite order and finite-difference Jacobians.  It also
+breaks strict-past adaptation in two ways: a present-coordinate shift and a
+future-dependent predictor produce nonzero residuals.  These are negative
+controls for the precise filtration hypothesis, not evidence for the
+infinite-dimensional production estimate.
+
+\section*{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED: the predictor cancellation is merely a fitted
+numerical pattern.}  Lemma 2.1 is an exact conditional-expectation proof; two
+quadrature implementations are regression tests for conventions and signs.
+
+\item \textbf{VALID WITH MITIGATION: (3.3) is a pointwise square identity.}
+Only (3.6) is pointwise after causalization.  Replacing
+$\delta b^{<}(Z)$ by $h\cdot b^{<}(Z)$ is legal only after expectation.  The
+primary negative control exhibits a negative pointwise gap.
+
+\item \textbf{UPHELD AGAINST NONCAUSAL USE: an adapted shift may depend on
+the present or future shell.}  Either dependence destroys the conditional
+centering step.  The independent negative controls fail by macroscopic
+residuals.
+
+\item \textbf{VALID WITH MITIGATION: the positive predictor square may be
+estimated separately from $\delta r_J$.}  Formula (4.2) is deliberately a
+signed coupled charge.  Separate absolute-value estimates can recreate the
+repeated energy loss that T-050 forbids.
+
+\item \textbf{UPHELD AGAINST PROMOTION: causalization proves the production
+one-use bound.}  It does not.  The cutoff-uniform bound on (4.2), with the
+full $Q$/current/frame/Cartan algebra, is still open, so A13 remains T4.
+\end{enumerate}
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID:               A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-
+                         REDUCTION
+Claim:                   A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Precise statement:       Strict-past causalization retains the PSD affine
+                         shell block and gives the exact q-resolvent charge.
+                         For A11, delta a/2=I_j and delta r/2=sum C_j, so
+                         one-use reduces to the global coupled charge
+                         sum_j[q<ell,R_q ell>/2-C_j].
+Parameter range:         Finite ordered standard Gaussian filtration;
+                         epsilon>0. The audit pins epsilon=0.45.
+Dependencies:            A11 true-increment divergence structure; A13
+                         one-use/Nelson budget and strict sharp-cube order.
+Tier before / after:     T4 / T4 (no tier change).
+Falsifiers:              Present/future-shell dependence; nonzero causal
+                         identity residual; wrong q/resolvent factor or sign; failed
+                         primary, independent, PDF, hash, or release check.
+No-overclaim:            No cutoff-uniform production signed-charge bound,
+                         one-use theorem, Nelson moment, Gibbs measure,
+                         floor/regulator removal, infinite volume, T5-T7.
+Next required action:    Bound S_(J,10/9) with centered Q, rational current,
+                         translated-frame square, and Cartan curvature kept
+                         coupled under strict-past conditioning.
+\end{verbatim}

@@ -15,10 +15,14 @@ set via git, honoring .gitignore including files committed-by-mistake
 Public API:
   real_files(repo)            -> sorted list[Path] of non-ignored working-tree files
   StatCache(cache_path)       -> incremental (size, mtime_ns)-keyed compute cache
+
+Changelog:
+  1.0.1 (2026-07-23) exclude workspace-local .venv, venv, and tmp trees in
+        the no-git fallback, matching the repository ignore contract.
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __first_issued__ = "2026-06-23"
-__version_issued__ = "2026-06-23"
+__version_issued__ = "2026-07-23"
 
 import hashlib
 import json
@@ -30,8 +34,9 @@ from pathlib import Path
 # Fallback denylist (only used when git is unavailable). Mirrors the .gitignore
 # Drive/transient sections so the fallback still excludes the junk class.
 _DENY_PARTS = {
-    ".git", "internal", "__pycache__", ".pytest_cache", "build", ".cache",
-    ".tmp.driveupload", ".tmp.drivedownload", ".driveupload", ".drivedownload",
+    ".git", ".venv", "venv", "internal", "tmp", "__pycache__",
+    ".pytest_cache", "build", ".cache", ".tmp.driveupload",
+    ".tmp.drivedownload", ".driveupload", ".drivedownload",
 }
 
 

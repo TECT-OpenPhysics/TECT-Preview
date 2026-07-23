@@ -29,10 +29,12 @@ Changelog:
         of rglob+SKIP_DIRS; per-file intrinsics cached in verification/.cache/ keyed on
         (size, mtime_ns) so unchanged files are never re-read. Kills the 45s Drive-junk timeout;
         regen becomes O(changed). SKIP_DIRS retained only for the no-git fallback.
+  1.2.1 (2026-07-23) harden the no-git fallback: exclude .venv, venv, and tmp so a
+        workspace-local document toolchain cannot pollute generated catalog surfaces.
 """
-__version__ = "1.2.0"
+__version__ = "1.2.1"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-06-05"
+__version_issued__ = "2026-07-23"
 
 import argparse
 import datetime as _dt
@@ -51,7 +53,7 @@ CATALOG_JSON = REPO / "verification" / "catalog.json"
 
 VER_RE = re.compile(r"-(\d{6})(?:-(\d{6}))?-v(\d+)\.(\d+)\.(?:md|tex\.txt|txt|pdf)$")
 TAG_RE = re.compile(r"(Math\d+)")
-SKIP_DIRS = {".git", "internal", "__pycache__", ".pytest_cache", "build", ".cache"}
+SKIP_DIRS = {".git", ".venv", "venv", "internal", "tmp", "__pycache__", ".pytest_cache", "build", ".cache"}
 SKIP_NAMES = {"CATALOG.md", "catalog.json", ".gitkeep"}
 
 KINDS = [

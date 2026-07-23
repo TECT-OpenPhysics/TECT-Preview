@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Harden catalog fallback for workspace-local toolchains] - 2026-07-23
+
+The no-git repository inventory fallback now excludes .venv, venv, and tmp, matching .gitignore. This prevents a workspace-local PDF/TeX toolchain from polluting CATALOG.md and verification/catalog.json when git is not on PATH. Regression: fallback catalog generation produced 2332 entries, zero ignored-path leaks, and retained all new A13 note, PDF, run, and source entries.
+
+## [Bind A13 strict-past result identifier] - 2026-07-23
+
+The exact result identifier for the preceding strict-past package is A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION. This append-only follow-up supplies the identifier required by integrated verification; it changes no theorem scope, tier, or open gate.
+
+## [A13 strict-past resolvent signed-charge reduction] - 2026-07-23
+
+Closed the scoped T4 strict-past causal/PSD-resolvent reduction. For q=(2 epsilon_v)^(-1), conditional metric completion retains T_j and produces (q/2)<ell_j,(I+qT_j)^(-1)ell_j>. The exact A11 telescope identifies the remaining divergence with sum_j C_j, so the umbrella one-use problem is reduced to one global coupled signed charge. At epsilon_v=0.45, q=10/9 exactly. The cutoff-uniform global Q/current/translated-frame/Cartan bound, one-use theorem, Nelson moment, and interacting measure remain open. Primary 12/12 and independent 11/11 pass; the five-page PDF passes form, zero-overfull, and automated render QA.
+
 ## [Close A13 balanced coefficient-jet continuum and exact A7 reconstruction] - 2026-07-22
 
 Close the scoped T4 child A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION. Replace the impossible literal full-product jets by high-against-root-shell P3/P4 homogeneous chaoses. Prove Fourier-variance bounds <n>^(-2+epsilon) and <n>^(-3+epsilon), coupled-cutoff convergence in every finite probability moment at H^(alpha-1-kappa) and H^(2alpha-1-kappa), and parenthesisation agreement without intermediate projection. Reconstruct the full rational B(X):Q and deterministic-H2 translated coefficient through an exact order-two chart in the same-regulator A7 covariance-normal scheme, retaining P1/P2/P0 corrections and finite Sigma_Lambda Q_Lambda. Primary 35/35 and non-importing independent 26/26 pass; the integrated verifier and six-page PDF are hash-pinned. A13 remains T4. Adapted shift control, the strict-past signed one-use bound, Nelson moment, interacting measure, T5, T6, and T7 remain open. The next child is A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND.

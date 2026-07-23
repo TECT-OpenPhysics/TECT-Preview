@@ -141,10 +141,14 @@ high-against-root-shell `P3/P4` variances obey `<n>^(-2+epsilon)` and
 `<n>^(-3+epsilon)`; the coupled-cutoff limits exist in every finite moment at
 the target Sobolev orders. An exact second-order chart reconstructs the full
 rational translated coefficient in the A7 covariance-normal scheme, retaining
-every grouped lower chaos and finite `Sigma Q`. The current child is
-`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`, which must keep the
-centered `Q`, current, positive square, and Cartan curvature coupled for an
-adapted shift.
+every grouped lower chaos and finite `Sigma Q`. `A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION` now closes
+the causal/PSD completion at scoped T4. It derives `q=10/9` from the one-use
+control allocation and reduces the remaining problem exactly to
+`sum_j[(q/2)<ell_j,(I+qT_j)^(-1)ell_j>-C_j]`.
+The current child remains
+`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`, which must bound this
+global charge while keeping centered `Q`, current, positive square, and
+Cartan curvature coupled for an adapted shift.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -230,7 +234,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-22)
+## Current priority view (refreshed 2026-07-23)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -251,8 +255,12 @@ preserved in git/changelog rather than treated as current gates.
    are also closed at scoped T4. The latter proves the top-jet `-2/-3`
    variance rates, every-finite-moment coupled-cutoff convergence, and the
    exact grouped full-rational A7 reconstruction while retaining `Sigma Q`.
-   Next prove `A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`, keeping
-   the positive square, centered `Q`, current, and Cartan curvature coupled.
+   The strict-past causal/PSD-resolvent continuation is also closed: at
+   `epsilon_v=0.45`, `q=10/9`, and one-use is reduced to the global charge
+   `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]` without repeated past-energy payment.
+   Next prove `A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND` for that
+   charge, keeping the positive square, centered `Q`, current, and Cartan
+   curvature coupled.
    Do not use termwise paraproduct Young absorption.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a

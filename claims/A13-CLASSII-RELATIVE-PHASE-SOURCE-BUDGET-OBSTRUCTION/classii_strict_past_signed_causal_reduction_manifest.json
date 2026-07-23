@@ -1,0 +1,103 @@
+{
+  "schema": "tect/a13-classii-strict-past-resolvent-signed-charge-reduction/1.0",
+  "package_version": "1.0.0",
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "result_id": "A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION",
+  "frozen_on": "2026-07-23",
+  "status": "T4 EXACT STRICT-PAST RESOLVENT SIGNED-CHARGE REDUCTION CLOSED; GLOBAL PRODUCTION CHARGE OPEN",
+  "authority": {
+    "a11_true_increment_manifest": {
+      "path": "claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/classii_true_increment_determinant_manifest.json",
+      "sha256": "4d40921f333adb6c9e547abb22db932ec7fcc1fc9285c47b54c706372e08a8e3"
+    },
+    "a13_translation_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_translation_model_reduction_manifest.json",
+      "sha256": "de737fb0a23a588861b5c95e760636524b260178b41f9cffceaa399f123b932b"
+    },
+    "a13_balanced_model_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_balanced_coefficient_jet_continuum_manifest.json",
+      "sha256": "3ef0a619df679f28624711f153bfb13bdd538f91f664da8664b2e7063ff3b67e"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_strict_past_signed_causal_reduction.py",
+      "sha256": "95dc98d7f312315cb30b28f143e52c230617ccb95fcfecdcade72c7f25da3c13",
+      "version": "1.1.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_strict_past_signed_causal_reduction_independent.py",
+      "sha256": "aed3666a1b164d6a1a76758d308098281d3769582bc14e7de4f4fd44133b1c21",
+      "version": "1.1.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py",
+      "sha256": "199beb4bddb0e71fc0058432ccae73a9b2b40b4354b97b8b027f2d3ffea521b8",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-strict-past-signed-causal-reduction-260723-v1.0.tex.txt",
+      "sha256": "599bedb7a1bb6937f5b9074dc5183d541942f74883d46b0f0b4bd32be2af9c91",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-strict-past-signed-causal-reduction-260723-v1.0.pdf",
+    "sha256": "c3c3355e612e02e8d135c2d58556a23b5c7b9f486f2b75059ed6d93879fc1257",
+    "version": "1.0",
+    "pages": 5,
+    "size_bytes": 304499,
+    "form_check": "PASS",
+    "overfull_hbox_count": 0,
+    "visual_qa": "AUTOMATED-RENDER-PASS",
+    "visual_qa_note": "All five 1020x1320 rendered pages passed nonblank, edge-clearance, black-block, extracted-text, and required-token checks. Direct model image viewing was unavailable because the app sandbox helper failed to initialize."
+  },
+  "scope": "Finite ordered standard Gaussian shell filtration with strict-past triangular shifts; finite-cutoff A11 true increments for the fixed-floor six-real A1/A7 production model; positive semidefinite frozen shell blocks T_j; exact A11 coefficient increments C_j; epsilon=0.45 audit point and q=10/9. No cutoff-uniform bound on the resulting global production signed charge is asserted.",
+  "theorem": {
+    "causal_identity": "E delta b_<(xi+h)=E<h,b_<(xi+h)> for strict-past b_< and h",
+    "affine_block": "a_j(z)=T_j(z_<j)z_j+2ell_j(z_<j), with T_j positive semidefinite",
+    "metric_completion": "E delta_j a_j/2=-epsilon E|h_j|^2-(q/2)E<ell_j,(I+qT_j)^-1ell_j>+(1/2)E|(T_j+q^-1I)^1/2(h_j+qR_q,j ell_j)|^2",
+    "production_telescope": "delta a/2=sum_j I_j and delta(b-a)/2=sum_j C_j",
+    "signed_charge": "S_J,q=sum_j[(q/2)<ell_j,(I+qT_j)^-1ell_j>-C_j]",
+    "one_use_reduction": "A cutoff-uniform E S_J,10/9(X+h)<=epsilon_6 E||X+h||_6^6+C implies the controlled-shell one-use inequality without repeated past-energy payment"
+  },
+  "audit": {
+    "epsilon_control": 0.45,
+    "q_from_epsilon": 1.1111111111111112,
+    "primary_gauss_hermite_order": 12,
+    "independent_gauss_hermite_order": 13,
+    "primary_tolerance": 1e-11,
+    "independent_tolerance": 2e-10
+  },
+  "independent_audit": {
+    "finite_difference_step": 2e-5,
+    "negative_control_minimum": 0.001
+  },
+  "integrated_audit": {
+    "cross_tolerance": 1e-9
+  },
+  "run_contract": {
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-primary-strict-past-signed-causal-reduction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-independent-strict-past-signed-causal-reduction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-integrated-strict-past-signed-causal-reduction/result.json",
+    "primary_assertions": 12,
+    "independent_assertions": 11,
+    "command": "python codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py"
+  },
+  "consequence": {
+    "result_ledger_id": "R-064",
+    "closed_subgate": "A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION",
+    "next_subgate": "A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND",
+    "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+  },
+  "claims_not_established": {
+    "global_signed_charge_bound": false,
+    "production_signed_charge_bound": false,
+    "one_use_bound": false,
+    "nelson_bound": false,
+    "interacting_measure": false,
+    "floor_or_regulator_removal": false,
+    "tier_promotion": false
+  },
+  "honesty_boundary": "This scoped T4 result proves exact strict-past causalization, the positive-semidefinite affine resolvent completion, q=10/9 agreement, and the A11 reduction to one global signed coefficient-increment charge. It does not bound that production charge, prove the one-use or Nelson estimate, construct an interacting measure, remove the floor or regulator, take infinite volume, or justify T5, T6, or T7. The relative-phase factor-four effect remains inside the shifted coefficient increment and forbids a separated one-shell reading."
+}

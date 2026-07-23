@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE)_
-  - A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-AND-A7-RECONSTRUCTION is closed at scoped T4. High-against-root-shell P3/P4 variances satisfy <n>^(-2+epsilon) and <n>^(-3+epsilon); coupled-cutoff convergence holds in every finite probability moment at H^(alpha-1-kappa) and H^(2alpha-1-kappa). The exact second-order full-rational chart retains P1/P2/P0 corrections and finite Sigma_Lambda Q_Lambda in the A7 covariance-normal scheme. Primary 35/35 and non-importing independent 26/26 pass; integrated package and six-page PDF are hash-pinned. Current child: A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND. Prove the adapted strict-past signed Q/current/positive-square/Cartan-curvature form estimate without termwise Young absorption. No A14 claim.
-  - _updated 2026-07-22_
+  - A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION is closed at scoped T4. Strict-past Gaussian causalization retains the PSD A11 shell block and yields the exact source rebate (q/2)<ell_j,(I+qT_j)^(-1)ell_j>, with q=10/9 at epsilon_v=0.45. The A11 telescope reduces one-use to the global signed charge sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j] without repeated past-energy payment. Primary 12/12 and non-importing independent 11/11 pass; five-page PDF passes form, zero-overfull, and automated render QA. Current child remains A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND: prove a cutoff-uniform global bound with centered Q, rational current, translated-frame square, and Cartan curvature coupled. No A14 claim.
+  - _updated 2026-07-23_
 
 ## Next up
 

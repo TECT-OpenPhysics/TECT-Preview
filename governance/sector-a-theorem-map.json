@@ -23,9 +23,18 @@
       "title": "Shared kernel, convention, and branch pinning",
       "kind": "FOUNDATION",
       "claims": [
-        {"id": "A1-KERNEL-CONV", "role": "CANONICAL_INPUT"},
-        {"id": "A1-KERNEL-IDENTITY", "role": "CONDITIONAL_THEOREM"},
-        {"id": "A1-PRODUCTION-KERNEL-MANIFEST", "role": "BRIDGE"}
+        {
+          "id": "A1-KERNEL-CONV",
+          "role": "CANONICAL_INPUT"
+        },
+        {
+          "id": "A1-KERNEL-IDENTITY",
+          "role": "CONDITIONAL_THEOREM"
+        },
+        {
+          "id": "A1-PRODUCTION-KERNEL-MANIFEST",
+          "role": "BRIDGE"
+        }
       ]
     },
     {
@@ -33,11 +42,26 @@
       "title": "Scalar analytic, PDE, perturbative, and constructive continuum branch",
       "kind": "THEOREM_BRANCH",
       "claims": [
-        {"id": "A1-SCALAR-ANALYTIC-BRANCH", "role": "BRANCH_THEOREM"},
-        {"id": "A2-PDE-WELLPOSED", "role": "BRANCH_THEOREM"},
-        {"id": "A3-UV-SUPERRENORMALISABILITY", "role": "BRANCH_THEOREM"},
-        {"id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS", "role": "BRANCH_THEOREM"},
-        {"id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE", "role": "BRANCH_THEOREM"}
+        {
+          "id": "A1-SCALAR-ANALYTIC-BRANCH",
+          "role": "BRANCH_THEOREM"
+        },
+        {
+          "id": "A2-PDE-WELLPOSED",
+          "role": "BRANCH_THEOREM"
+        },
+        {
+          "id": "A3-UV-SUPERRENORMALISABILITY",
+          "role": "BRANCH_THEOREM"
+        },
+        {
+          "id": "A3-PERTURBATIVE-CONTINUUM-CORRELATORS",
+          "role": "BRANCH_THEOREM"
+        },
+        {
+          "id": "A4-SCALAR-SPECTRAL-CONSTRUCTIVE-MEASURE",
+          "role": "BRANCH_THEOREM"
+        }
       ]
     },
     {
@@ -45,9 +69,18 @@
       "title": "Full production variational, PDE, and spectral-continuum branch",
       "kind": "THEOREM_BRANCH",
       "claims": [
-        {"id": "A1-PRODUCTION-FUNCTIONAL-REALISATION", "role": "CANONICAL_OBJECT"},
-        {"id": "A2-FULL-PRODUCTION-WELLPOSED", "role": "BRANCH_THEOREM"},
-        {"id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM", "role": "BRANCH_THEOREM"}
+        {
+          "id": "A1-PRODUCTION-FUNCTIONAL-REALISATION",
+          "role": "CANONICAL_OBJECT"
+        },
+        {
+          "id": "A2-FULL-PRODUCTION-WELLPOSED",
+          "role": "BRANCH_THEOREM"
+        },
+        {
+          "id": "A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM",
+          "role": "BRANCH_THEOREM"
+        }
       ]
     },
     {
@@ -55,7 +88,10 @@
       "title": "Branch-aware conditional composition",
       "kind": "SYNTHESIS",
       "claims": [
-        {"id": "A5-SECTOR-A-SYNTHESIS", "role": "TOP_LEVEL_THEOREM"}
+        {
+          "id": "A5-SECTOR-A-SYNTHESIS",
+          "role": "TOP_LEVEL_THEOREM"
+        }
       ]
     },
     {
@@ -66,15 +102,42 @@
       "active_subproof_host": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
       "terminal_gate": "A7-CLASSII-NELSON-EXPONENTIAL-BOUND",
       "claims": [
-        {"id": "A6-CLASSII-UV-POWER-COUNTING", "role": "FOUNDATION"},
-        {"id": "A6-CLASSII-K-COMPOSITE-DEFINITION", "role": "CANONICAL_OBJECT"},
-        {"id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE", "role": "LONG_TERM_THEOREM_ANCHOR"},
-        {"id": "A8-CLASSII-DECOUPLED-NELSON-BOUND", "role": "REFERENCE_ENDPOINT"},
-        {"id": "A9-CLASSII-SMART-PATH-CANCELLATION", "role": "INTERPOLATION_BRIDGE"},
-        {"id": "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION", "role": "DEVELOPMENT_ANCHOR"},
-        {"id": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION", "role": "DEVELOPMENT_ANCHOR"},
-        {"id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION", "role": "DEVELOPMENT_ANCHOR"},
-        {"id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION", "role": "ACTIVE_SUBPROOF_HOST"}
+        {
+          "id": "A6-CLASSII-UV-POWER-COUNTING",
+          "role": "FOUNDATION"
+        },
+        {
+          "id": "A6-CLASSII-K-COMPOSITE-DEFINITION",
+          "role": "CANONICAL_OBJECT"
+        },
+        {
+          "id": "A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE",
+          "role": "LONG_TERM_THEOREM_ANCHOR"
+        },
+        {
+          "id": "A8-CLASSII-DECOUPLED-NELSON-BOUND",
+          "role": "REFERENCE_ENDPOINT"
+        },
+        {
+          "id": "A9-CLASSII-SMART-PATH-CANCELLATION",
+          "role": "INTERPOLATION_BRIDGE"
+        },
+        {
+          "id": "A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION",
+          "role": "DEVELOPMENT_ANCHOR"
+        },
+        {
+          "id": "A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION",
+          "role": "DEVELOPMENT_ANCHOR"
+        },
+        {
+          "id": "A12-CLASSII-SOURCE-SQUARE-REDUCTION",
+          "role": "DEVELOPMENT_ANCHOR"
+        },
+        {
+          "id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+          "role": "ACTIVE_SUBPROOF_HOST"
+        }
       ]
     }
   ],
@@ -86,21 +149,27 @@
     "current_child": "A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND",
     "parent_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
     "umbrella_gate": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
-    "success_condition": "Use the closed universal-Q and balanced rational A7 model to prove the adapted strict-past signed Q/current/positive-square/Cartan-curvature form bound without termwise energy repayment."
+    "success_condition": "Prove a cutoff-uniform global bound on S_J,10/9=sum_j[(q/2)<ell_j,(I+qT_j)^(-1)ell_j>-C_j], keeping the centered Q, rational current, translated-frame square, and Cartan curvature coupled without termwise energy repayment."
   },
   "subproof_taxonomy": {
     "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": [
       {
         "name": "PHASE-SOURCE-GEOMETRY",
-        "lineage_prefixes": ["classii-relative-phase-source-budget-obstruction"]
+        "lineage_prefixes": [
+          "classii-relative-phase-source-budget-obstruction"
+        ]
       },
       {
         "name": "JOINT-SOURCE-POTENTIAL",
-        "lineage_prefixes": ["classii-joint-source-potential-reduction"]
+        "lineage_prefixes": [
+          "classii-joint-source-potential-reduction"
+        ]
       },
       {
         "name": "TRANSLATED-CURRENT-MODEL",
-        "lineage_prefixes": ["classii-translation-model-reduction"]
+        "lineage_prefixes": [
+          "classii-translation-model-reduction"
+        ]
       },
       {
         "name": "UNIVERSAL-Q-AND-COEFFICIENT-JETS",
@@ -109,6 +178,12 @@
           "classii-coefficient-jet-forest-classification",
           "classii-balanced-coefficient-jet-continuum-and-a7-reconstruction",
           "classii-coefficient-jet-renormalisation-classification"
+        ]
+      },
+      {
+        "name": "STRICT-PAST-SIGNED-CHARGE",
+        "lineage_prefixes": [
+          "classii-strict-past-signed-causal-reduction"
         ]
       }
     ]

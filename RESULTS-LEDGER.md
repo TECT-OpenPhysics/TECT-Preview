@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-064](#r-064) | Strict-past PSD-resolvent one-use reduction | Scoped T4 exact/executed subproof: causal Gaussian conditioning retains the positive A11 shell block, gives the exact q-resolvent source rebate, and reduces one-use to one global signed coefficient-increment charge; the cutoff-uniform charge bound remains open |
 | [R-063](#r-063) | Balanced coefficient-jet continuum and exact rational A7 reconstruction | Scoped T4 analytic/exact/executed subproof: high-against-root P3/P4 jets have Fourier variances bounded by <n>^(-2+epsilon) and <n>^(-3+epsilon), converge across coupled cutoffs in every finite moment at the target Sobolev orders, and reconstruct the full rational translated coefficient in the exact grouped A7 scheme with every lower chaos and finite Sigma Q retained |
 | [R-062](#r-062) | Finite-cutoff coefficient-jet Wiener forest and complete-sector cancellation | Scoped T4 analytic/exact/executed subproof: exact 2, 4+2, 5+2, and 3+0 forest classification; both non-aliased sharp-cube parenthesisations reconstruct the complete product; entrywise-even A1 parity cancels net value-derivative/double-cross terms while retaining finite tensor Sigma_Lambda Q_Lambda; 82/82 aggregate assertions |
 | [R-061](#r-061) | Universal derivative-square tensor and raw coefficient-jet obstruction | Scoped T4 analytic/executed result: universal Q converges in every finite Lp(H^(-1-kappa)) with deterministic H2 Cameron--Martin continuity; literal full jets miss the L2 target and a cone-localized nested subdiagram has logarithmically growing fixed-sign magnitude, without a total-tree noncancellation claim |
@@ -82,6 +83,37 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-064"></a>
+### R-064 -- strict-past PSD-resolvent one-use reduction
+
+**Result ID.**
+`A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION`.
+
+**Statement.** For a finite ordered Gaussian shell filtration, strict-past
+triangular shifts and predictors satisfy an exact causal divergence identity.
+Retaining the positive A11 block `T_j` gives the metric completion
+`(q/2)<ell_j,(I+qT_j)^(-1)ell_j>`, where `q=(2 epsilon_v)^(-1)`.
+The exact A11 telescope identifies the remaining divergence with
+`sum_j C_j`. Thus at `epsilon_v=0.45`, one-use reduces without repeated
+past-energy payment to the single global charge
+`sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]` at `q=10/9`.
+
+**Proven in.** A13 /
+`classii-strict-past-signed-causal-reduction-260723-v1.0`, with primary
+12/12, non-importing independent 11/11, integrated hash-pinned verification,
+and five-page PDF form, zero-overfull, and automated render QA.
+
+**Reuse scope.** Gaussian filtrations, progressive-control lower bounds,
+noncentral determinant/source-square estimates, and proofs that must retain a
+signed nonlinear increment instead of repeatedly paying past energy.
+
+**Tier.** T4 exact/executed structural subproof. The cutoff-uniform global
+charge bound, one-use theorem, Nelson moment, and interacting measure are not
+proved.
+
+**Publication target.** Stochastic-analysis methods note with R-059--R-063
+after the global signed Q/current/Cartan estimate is resolved.
 
 <a id="r-063"></a>
 ### R-063 -- balanced coefficient-jet continuum and exact rational A7 reconstruction

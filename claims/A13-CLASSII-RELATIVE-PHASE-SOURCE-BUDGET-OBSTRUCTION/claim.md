@@ -69,6 +69,14 @@ the following structural results and proof-architecture boundaries hold.
    chart reconstructs the full rational `B(X+h)-B(X)` coefficient in the A7
    covariance-normal scheme for deterministic `h in H2`. It retains all
    `P1/P2/P0` corrections and the finite `Sigma_Lambda Q_Lambda` conversion.
+7. `A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION` proves the
+   exact strict-past conditional identity while retaining the positive A11
+   shell block `T_j`. With `q=(2 epsilon_v)^(-1)`, metric completion gives
+   the rebated source `(q/2)<ell_j,(I+qT_j)^(-1)ell_j>`. The A11 telescope
+   identifies the remainder divergence with `sum_j C_j`, reducing one-use to
+   the single global signed charge
+   `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]`. At `epsilon_v=0.45`,
+   `q=10/9` exactly. The global cutoff-uniform bound remains open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -83,7 +91,8 @@ is a scoped T4 subproof and does not promote A13.
 | Universal Q | All finite moments and deterministic H2 translation | T4 child gate closed |
 | Coefficient-jet forest | Finite-cutoff Wiener forest and complete-sector parity cancellation | T4 child subproof closed |
 | Balanced coefficient jets | Coupled-cutoff P3/P4 convergence and exact grouped rational A7 reconstruction | T4 child subproof closed |
-| Controlled-shell one-use | Signed strict-past stochastic form bound | OPEN umbrella gate |
+| Strict-past resolvent charge | Exact causal/PSD completion and A11 signed-charge reduction | T4 child subproof closed |
+| Controlled-shell one-use | Global signed Q/current/Cartan form bound | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -135,33 +144,35 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_balanced_coefficient_jet_continuum_verify.py
+python codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `35/35`;
-- non-importing independent `26/26`;
-- integrated `48/48` and aggregate `109/109` pass;
-- `A13-CLASSII-BALANCED-COEFFICIENT-JET-CONTINUUM-INTEGRATED-PASS`;
+- primary `12/12`;
+- non-importing independent `11/11`;
+- integrated and aggregate assertions pass;
+- `A13-CLASSII-STRICT-PAST-RESOLVENT-SIGNED-CHARGE-REDUCTION-INTEGRATED-PASS`;
 - exit code zero.
 
-The proof note is six pages and passes the standard form check, zero-overfull
-gate, and rendered-page visual QA.
+The five-page proof note passes the standard form check, zero-overfull gate,
+and automated rendered-page QA. Direct model image viewing was unavailable
+because the app sandbox helper failed to initialize; that limitation is
+recorded in the manifest rather than reported as manual visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_balanced_coefficient_jet_continuum_manifest.json`
-- `notes/classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0.tex.txt`
-- `notes/classii-balanced-coefficient-jet-continuum-and-a7-reconstruction-260722-v1.0.pdf`
-- `../../codes/foundations/a13_classii_balanced_coefficient_jet_continuum.py`
-- `../../codes/foundations/a13_classii_balanced_coefficient_jet_continuum_independent.py`
-- `../../codes/foundations/a13_classii_balanced_coefficient_jet_continuum_verify.py`
-- `runs/2026-07-22-primary-balanced-coefficient-jet-continuum/result.json`
-- `runs/2026-07-22-independent-balanced-coefficient-jet-continuum/result.json`
-- `runs/2026-07-22-integrated-balanced-coefficient-jet-continuum/result.json`
+- `classii_strict_past_signed_causal_reduction_manifest.json`
+- `notes/classii-strict-past-signed-causal-reduction-260723-v1.0.tex.txt`
+- `notes/classii-strict-past-signed-causal-reduction-260723-v1.0.pdf`
+- `../../codes/foundations/a13_classii_strict_past_signed_causal_reduction.py`
+- `../../codes/foundations/a13_classii_strict_past_signed_causal_reduction_independent.py`
+- `../../codes/foundations/a13_classii_strict_past_signed_causal_reduction_verify.py`
+- `runs/2026-07-23-primary-strict-past-signed-causal-reduction/result.json`
+- `runs/2026-07-23-independent-strict-past-signed-causal-reduction/result.json`
+- `runs/2026-07-23-integrated-strict-past-signed-causal-reduction/result.json`
 
 Earlier current packages remain binding within their own scopes:
 
@@ -207,6 +218,11 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
    channels to standalone continuum objects.
 9. **UPHELD AGAINST PROMOTION: this balanced theorem proves the Nelson moment or
    interacting measure.** It proves neither; A13 remains T4.
+10. **VALID WITH MITIGATION: strict-past divergence may be replaced by the
+    shift pairing pointwise.** The causal replacement is valid only after
+    conditional expectation. The primary negative control exhibits a negative
+    pointwise completion gap; the metric-resolvent identity is likewise an
+    expected shell statement before the A11 algebraic telescope is applied.
 
 ## Falsifier
 
@@ -264,3 +280,7 @@ T5, T6, or T7.
   Sobolev orders, and the full rational chart retains every lower chaos and
   `Sigma Q`. The strict-past signed form bound is now the current child; tier
   remains T4.
+- 2026-07-23: Closed the strict-past causal/PSD-resolvent reduction at T4.
+  The exact A11 telescope reduces one-use to the single global charge
+  `sum_j[(q/2)<ell_j,R_q,j ell_j>-C_j]`, with `q=10/9` at the production
+  control allocation. The global signed Q/current/Cartan bound remains open.
