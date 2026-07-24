@@ -451,9 +451,18 @@ no-revisit class. It reduces the far feedback block by orthogonal square
 completion to one localized predictable base-current tail and narrows the near
 residual to a predictable explicit payload plus a hidden future-adapted
 coefficient. The current regular-class child remains
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`. R-080 also corrects
-the synthesis scope: R-075 graph recovery does not extend a restricted lower
-bound to every progressive/revisit control. The separate successor
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`. R-081 then proves
+the exact polynomial/Cartan current split, eliminates the polynomial far
+channel, proves a deterministic relative-gap current theorem, and isolates
+the missing martingale-root-resolved sum at the half-derivative endpoint. It
+also proves the vector-valued input budget and exact gain ledger for an
+explicitly factorised first-order NEAR response. The complete nonlinear
+coefficient additionally contains an upper-triangular Jensen defect invisible
+to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
+complete adapted operator and a signed control--control balanced-root lemma.
+R-080/R-081 correct the synthesis
+scope: R-075 graph recovery does not extend a restricted lower bound to every
+progressive/revisit control. The separate successor
 `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
 one-use. The umbrella theorem remains open.
 
@@ -944,6 +953,28 @@ positivity is false. The FAR and NEAR production bounds, complete regular
 packet lower bound, full-progressive extension, controlled-shell one-use,
 Nelson, and Sector A remain open.
 
+R-081, `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION`, sharpens
+both production branches without closing them. The heat-averaged production
+current is exactly a quadratic polynomial channel plus one nonlinear Cartan
+quotient-vector channel. The polynomial far channel vanishes identically and,
+for every `0<s<1`, the remaining deterministic current has relative-gap bound
+`2^(-2sC)X^(1/2)Y^(1/2)`. A rootwise sum repeats that critical budget;
+fixed predictable Gaussian injection is governed by an `H^(1/2)` triangular
+norm, and an explicit uniformly `H^(1/2-delta)` sequence diverges there.
+Accordingly FAR is now the complete ROOT-RESOLVED martingale paracomposition
+estimate retaining derivative injection, value innovation, and heat
+compensator. In NEAR, vector Doob--Burkholder interpolation proves the exact
+input powers `X_D^(1/10)Y_D^(2/15)` for a response already factorised through
+`D_j=d_jA*`. A later two-root production witness has `d_jA=d_jDA=0` but
+nonzero coefficient-trace innovation. The exact secant--Jensen decomposition
+therefore leaves an upper-triangular conditional Jensen defect in the complete
+signed packet. A gain `gamma` has slack `gamma/6` and moment `6/gamma` on the
+factorised first-order branch, but the Jensen-defect/lower-chaos-complete
+adapted operator is unproved. Absolute control--control pair-high extraction has slack
+`(gamma-1-2 theta)/6<0`; that branch must remain signed with square, trace,
+forest, compensator, and paid subtraction. These are exact reductions and
+method no-gos, not a regular packet lower bound.
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
 **Statement:** Starting from a cutoff-uniform lower bound for the complete
@@ -956,8 +987,10 @@ semicontinuity, with no new interaction counterterm or infinity-minus-infinity
 defect. An equivalent all-tilted-law entropy inequality is an admissible
 alternative.
 
-**Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080
-`A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`. R-075 proves
+**Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
+sharpened by R-081
+`A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
+`A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
 closure of regular whole-shell controls. Variational inclusion has the wrong
 direction for promoting a lower bound on that restricted class to all
@@ -967,6 +1000,21 @@ quadratic; cancellation, if present, must occur in the complete later packet.
 This is a method and scope obstruction, not a counterexample to the full
 action. The gate is logically after the regular FAR/NEAR packet bound and
 before controlled-shell one-use and `q=10/9` Nelson synthesis.
+
+R-081 proves the exact positive temporal algebra and the exact density
+obstruction. For every bounded simple progressive time packet,
+`L_k L_k^* <= |I_k| Delta C_k`; Douglas factorisation gives
+`a_k=Delta C_k^(1/2)h_k` and
+`||h_k||^2<=|I_k|||u_k||^2`. Thus strict-past causalisation and the complete
+R-079 packet identity survive even when physical covariance ranges overlap.
+However, at one scalar cutoff,
+`u_t=tanh(W_(1/2))1_(1/2,1]` has positive terminal-`L2` distance from every
+initially measurable one-shot displacement, including those using independent
+auxiliary randomness. The correct successor is therefore a time-mesh- and
+revisit-uniform overlap-stable lower bound for the recombined bounded-simple
+complete packet, followed by fixed-cutoff admissible-core truncation, terminal
+graph continuity, auxiliary conditioning, and lower semicontinuity. Separate
+low/current pieces may not be passed to the temporal limit.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

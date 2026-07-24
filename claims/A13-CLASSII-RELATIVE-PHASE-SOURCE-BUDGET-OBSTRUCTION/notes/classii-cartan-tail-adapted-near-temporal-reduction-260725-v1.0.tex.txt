@@ -1,0 +1,761 @@
+% =============================================================================
+% Title: Cartan current tails, adapted near budgets, and temporal packet reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION
+% Ledger: R-081
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 analytic/exact reduction; FAR, NEAR, and overlap-stable progression open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-25): proves the exact polynomial/Cartan production-current
+% split, a deterministic relative-gap FAR theorem, the fixed-coefficient
+% injection reduction and endpoint obstruction, the vector-valued adapted
+% factorised NEAR input budget, the nonlinear-D_j factorisation boundary, the
+% absolute pair-high no-go, temporal packet factorisation,
+% complete-packet algebraic temporalisation, and one-shot graph non-density.
+% Pre-release repair (2026-07-25): identifies the relative-gap object explicitly as the
+% heat-averaged Cartan quotient vector, adds executable complete-packet
+% cross-term fixtures, and strengthens the manifest/claim-surface verifier.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+
+\section{Purpose and scope}
+
+R-080 left three analytic inputs between the exact R-079 complete packet and
+the controlled-shell one-use theorem: FAR, NEAR, and the full
+progressive/revisit extension.  This note does not declare any of those three
+inputs complete.  It replaces each broad label by a sharper theorem or
+obstruction and proves every step that does not require the missing
+root-resolved production estimate.
+
+The new positive statements are:
+\begin{enumerate}
+\item the production current splits exactly into a spatially quadratic
+      polynomial channel and one heat-averaged nonlinear Cartan channel;
+\item the polynomial channel vanishes identically at sufficiently separated
+      output shells;
+\item every band-limited deterministic Cartan current has a genuine relative-gap
+      tail of order $N^{-2s}$ for $0<s<1$, with the exact critical budget
+      $X^{1/2}Y^{1/2}$;
+\item predictable fixed-coefficient Gaussian injection reduces to a
+      triangular half-derivative coefficient norm;
+\item an explicitly factorised first-order NEAR martingale response has the
+      required vector-valued Cameron--Martin and terminal-sixth-moment
+      budgets, and therefore its conditional gain ledger is exact on the
+      stochastic-input side;
+\item every bounded simple progressive time packet admits strict-past
+      covariance factorisation, and the complete R-079 algebra extends to
+      overlapping temporal packets.
+\end{enumerate}
+
+The new negative statements are equally load-bearing.  Summing the
+deterministic FAR estimate separately over probability roots repeats a
+critical global budget.  Subcritical $H^{1/2-}$ coefficient control does not
+bound the triangular injection norm.  A complete nonlinear coefficient
+innovation does not factor through $D_j=d_jA^*$ alone; its exact Jensen defect
+can be nonzero when $D_j=0$.  An absolute control--control pair-high
+extraction is supercritical for the entire candidate NEAR gain range.
+Finally, the R-075 one-shot graph is not dense in the progressive class even
+at one scalar mode and in terminal $L^2$.
+
+All statements are at finite cutoff, fixed positive production floor, common
+even regulator, exact products, and the hash-pinned A1 production frame.
+No root-resolved FAR bound, adapted lower-chaos-complete NEAR operator bound,
+signed control--control NEAR theorem, overlap-stable progressive packet lower
+bound, controlled-shell one-use estimate, Nelson bound, measure theorem,
+removal limit, or Sector-A closure is asserted.  The claim remains T4.
+
+\section{Authority and production current coordinates}
+
+Suppress the spatial direction and the positive $Q_{\rm II}$ contraction.
+For each symmetric production generator $S_A$, define
+\[
+ \rho_e(z)=|z|^2+e,\qquad n_A(z)=z^TS_Az,
+ \qquad q_A(z)={n_A(z)\over\rho_e(z)},                    \tag{2.1}
+\]
+and
+\[
+ p_A(z)=2S_Az,\qquad
+ r_A(z)=(S_A-q_A(z)\Id)z,\qquad
+ v_A(z)=2r_A(z).                                          \tag{2.2}
+\]
+The exact production frame is $M_A=[p_A,v_A]$.  The R-068 production
+identities give
+\[
+ |q_A(z)|\le1,\qquad |r_A(z)|\le|z|,
+ \qquad Dq_A(z)[h]={2r_A(z)\cdot h\over\rho_e(z)}.       \tag{2.3}
+\]
+R-079 supplies the complete expectation-level current/feedback identity,
+R-080 its regular low bounds and far square completion, and R-063 the
+deterministic translated balanced-jet reconstruction.  Those authorities are
+used only within their declared scopes.
+
+Introduce the quotient vector
+\[
+ F_A(z)=q_A(z)z.                                          \tag{2.4}
+\]
+It is odd, vanishes at zero, and is globally Lipschitz uniformly in the
+positive floor.  Indeed
+\[
+ DF_A(z)[h]=q_A(z)h+zDq_A(z)[h]
+\]
+and (2.3) gives
+\[
+ |DF_A(z)[h]|
+ \le |h|+2{|z|^2\over\rho_e(z)}|h|\le3|h|.              \tag{2.5}
+\]
+For any centered target Gaussian covariance $\Sigma$, translation coupling
+therefore gives
+\[
+ \operatorname{Lip}(P_\Sigma F_A)\le3,\qquad
+ (P_\Sigma F_A)(0)=0.                                    \tag{2.6}
+\]
+The constants in later generic current estimates may depend on the fixed
+floor through higher frame derivatives, but (2.5)--(2.6) do not.
+
+\section{Exact polynomial--Cartan current split}
+
+\textbf{Theorem 3.1 (production current split).}
+For every spatially differentiable $z$,
+\[
+ p_A(z)^TDz=Dn_A(z),                                     \tag{3.1}
+\]
+and
+\[
+ v_A(z)^TDz
+ =Dn_A(z)-q_A(z)D\rho_e(z)
+ =\rho_e(z)Dq_A(z).                                      \tag{3.2}
+\]
+Moreover, for centered target heat,
+\[
+ P_\Sigma p_A=p_A,\qquad
+ P_\Sigma v_A=p_A-2P_\Sigma F_A.                        \tag{3.3}
+\]
+Consequently the two columns of the heat-averaged spatial current are
+\[
+ Dn_A(z),\qquad
+ Dn_A(z)-2(P_\Sigma F_A)(z)^TDz.                         \tag{3.4}
+\]
+
+\emph{Proof.}
+Symmetry of $S_A$ gives
+$Dn_A=2(S_Az)^TDz=p_A^TDz$.  Since
+$D\rho_e=2z^TDz$ and
+$v_A=p_A-2q_Az$, the first equality in (3.2) follows.
+Differentiating $n_A=q_A\rho_e$ gives the second.  The map $p_A$ is linear
+and the target Gaussian is centered, while
+$v_A=p_A-2F_A$; this proves (3.3) and (3.4). \hfill$\square$
+
+If $z$ has spatial Fourier support in $|k|\le c\Lambda$, then $Dn_A(z)$
+has support in $|k|\le2c\Lambda$.  Hence for a sufficiently large fixed
+dyadic separation $C_0$,
+\[
+ \Pi_mDn_A(z)=0\qquad(m\ge j+C_0,\ \Lambda=2^j).         \tag{3.5}
+\]
+Thus R-080's far loss has no genuinely nonlinear contribution from the
+$p_A$ column or the $Dn_A$ part of the $v_A$ column.  The sole load-bearing
+spatial tail is the heat-averaged quotient-vector, or Cartan, part of the
+second column.  This is an exact production simplification, not a bound for
+the full $S_C$ sum.
+
+\section{Deterministic FAR theorem and its critical ledger}
+
+Let $\Pi_{\ge N\Lambda}$ be a smooth high-frequency projector, let
+$0<s<1$, and let $z$ be spatially band-limited to $c\Lambda$.  Put
+$\overline F_A=P_\Sigma F_A$ for any centered target covariance.  This is
+the nonlinear Cartan coefficient isolated in (3.4), not the full two-column
+frame $M_A$.
+
+\textbf{Theorem 4.1 (relative-gap current tail).}
+At the fixed floor,
+\[
+ \|\Pi_{\ge N\Lambda}[\overline F_A(z)^TDz]\|_2^2
+ \le C_{e,s}N^{-2s}\|z\|_6^2\|Dz\|_3^2                \tag{4.1}
+\]
+and therefore
+\[
+ \|\Pi_{\ge N\Lambda}[\overline F_A(z)^TDz]\|_2^2
+ \le C_{e,s}N^{-2s}\|z\|_{H^2}\|z\|_6^3.             \tag{4.2}
+\]
+
+\emph{Proof.}
+Oddness gives $\overline F_A(0)=0$, and (2.6) gives the uniform Lipschitz
+ceiling three after target convolution.  The fractional product and Nemytskii
+estimates give
+\[
+ \|\overline F_A(z)^TDz\|_{H^s_2}
+ \lesssim
+ \|\overline F_A(z)\|_6\|Dz\|_{W^{s,3}}
+ +\|\overline F_A(z)\|_{W^{s,6}}\|Dz\|_3.            \tag{4.3}
+\]
+Lipschitz composition and Bernstein bound the right side by
+$C_{e,s}\Lambda^s\|z\|_6\|Dz\|_3$.  The high-frequency tail estimate
+$\|\Pi_{\ge N\Lambda}f\|_2\lesssim(N\Lambda)^{-s}
+\|f\|_{H^s_2}$ proves (4.1).  Finally the three-dimensional interpolation
+\[
+ \|Dz\|_3\lesssim
+ \|z\|_{H^2}^{1/2}\|z\|_6^{1/2}                       \tag{4.4}
+\]
+gives (4.2). \hfill$\square$
+
+With $X=\|z\|_{H^2}^2$ and $Y=\|z\|_6^6$, the right side of (4.2) is
+\[
+ C_{e,s}N^{-2s}X^{1/2}Y^{1/2}.                          \tag{4.5}
+\]
+There is a genuine and arbitrarily high subunit relative-gap exponent in
+$N$, but the energy ledger at one probability root is exactly critical.
+If a root-resolved theorem allowed the factor $2^{-\theta C}$ to remain
+after the $j$ sum, a sufficiently large fixed $C$ and scalar Young would pay
+arbitrary $\eta\E X+\zeta\E Y+C_{\eta,\zeta}$.  Applying (4.2)
+independently for every $j$ instead repeats the same global $X/Y$ payment and
+does not prove R-080's
+\[
+ S_C=\E\sum_j\sum_{m\ge j+C}
+       \|\Pi_m d_j\cJ_j\|_{Q_{\rm II}}^2.               \tag{4.6}
+\]
+
+The precise sufficient FAR successor is a martingale-root-resolved estimate
+of the form
+\[
+ \sum_j\E\|\Pi_{\ge j+C}d_j\cJ_j\|_{Q_{\rm II}}^2
+ \le C2^{-\theta C}
+ \{1+\E[X^{1/2}Y^{1/2}]\},\qquad\theta>0,               \tag{4.7}
+\]
+with derivative injection, value innovation, and heat compensator retained
+together.  Neither R-050's unshifted enhancement nor R-063's deterministic
+translation theorem supplies (4.7) for random predictable translations.
+
+\section{Fixed-coefficient injection and the half-derivative endpoint}
+
+The predictable part of derivative injection can be isolated exactly.  Let
+$g_j$ be a fresh Gaussian shell and let $f$ be independent of $g_j$.  Fourier
+support gives, for $m\ge j+C$,
+\[
+ \Pi_m(fDg_j)=\Pi_m\{(\widetilde\Pi_m f)Dg_j\}.          \tag{5.1}
+\]
+Using the derivative-shell covariance
+$\E|Dg_j(x)|^2\lesssim2^j$ yields
+\[
+ \E_{g_j}\|\Pi_m(fDg_j)\|_2^2
+ \lesssim2^j\|\widetilde\Pi_m f\|_2^2.                 \tag{5.2}
+\]
+If the same coefficient $f$ occurs at every $j$, summing first in $j$ gives
+\[
+ \sum_m\sum_{j\le m-C}
+ \E\|\Pi_m(fDg_j)\|_2^2
+ \lesssim2^{-C}\|f\|_{H^{1/2}}^2.                      \tag{5.3}
+\]
+For predictable coefficients $f_j$, the exact sufficient object becomes the
+triangular norm
+\[
+ \mathfrak C_C(f_\bullet)
+ =\sum_m\sum_{j\le m-C}2^j
+   \E\|\widetilde\Pi_m f_j\|_2^2.                       \tag{5.4}
+\]
+For production the natural predictable coefficient is
+$f_j=(P_{\Sigma_{j+1:J}}F_A)(Z_{j-1})$.  The rest of the base increment still
+contains the same-shell nonlinear difference and the heat compensator, so
+(5.4) is a sharp subchannel reduction, not an identity for all of $S_C$.
+
+The exponent $1/2$ in (5.3) is a true endpoint.  Take orthogonal dyadic
+coefficients with
+\[
+ \|\Pi_m f^{(J)}\|_2^2=2^{-m},\qquad1\le m\le J.         \tag{5.5}
+\]
+For every $\delta>0$,
+\[
+ \sup_J\|f^{(J)}\|_{H^{1/2-\delta}}^2
+ =\sup_J\sum_{m=1}^J2^{-2\delta m}<\infty,              \tag{5.6}
+\]
+whereas (5.4) with the same coefficient at every root grows as
+\[
+ \sum_{m>C}2^{-m}\sum_{j\le m-C}2^j
+ \asymp2^{-C}J.                                          \tag{5.7}
+\]
+Therefore an $H^{1/2-}$ coefficient theorem alone cannot close FAR.  The
+balanced R-063 subtraction, square--trace cancellation, or a genuine
+martingale Carleson estimate must create the missing root summation.  This is
+a method no-go, not a counterexample to the complete production packet.
+
+\section{NEAR: vector budget and nonlinear factorisation boundary}
+
+Let $\ell$ be the fixed low cutoff and define the high terminal control
+martingale differences
+\[
+ D_j=d_j(A^*-P_\ell A^*),\qquad D=(D_j)_j.               \tag{6.1}
+\]
+All spatial norms below are taken with values in $\ell^2_j$.  Hilbert-valued
+Doob orthogonality and the control-energy identification give
+\[
+ \E\|D\|_{H^2_x(\ell^2)}^2\lesssim\E X.                 \tag{6.2}
+\]
+Pointwise scalar Burkholder followed by spatial integration gives, up to the
+already fixed-low term,
+\[
+ \E\|D\|_{L^6_x(\ell^2)}^6\lesssim\E Y.                 \tag{6.3}
+\]
+The vector-valued version of the R-079 interpolation is
+\[
+ \|D\|_{H^{2/5}_x(\ell^2)}
+ \lesssim
+ \|D\|_{H^2_x(\ell^2)}^{1/5}
+ \|D\|_{L^6_x(\ell^2)}^{4/5}.                           \tag{6.4}
+\]
+Thus every response branch already factorised linearly through $D_j$ has the
+exact stochastic input cost
+\[
+ X_D^{1/10}Y_D^{2/15}.                                   \tag{6.5}
+\]
+
+It is essential not to promote (6.5) to the whole nonlinear future
+coefficient.  Such a coefficient is not determined by $D_j$.  Let
+$\varepsilon_r=\operatorname{sgn}g_r$, where $g_j,g_{j+1}$ are independent
+fresh Gaussian roots (bounded smooth approximants give the same limit), let
+$\psi_p$ be a nonzero bounded deterministic carrier in a later shell
+$p>j+1$, and take the progressive control
+\[
+ A(x)=\lambda\varepsilon_{j+1}(1+c\varepsilon_j)\psi_p(x)e_1,
+ \qquad 0<c<1.                                           \tag{6.6}
+\]
+Then
+\[
+ d_jA=d_jDA=0,\qquad
+ d_j|A|^2=2c\lambda^2\varepsilon_j|\psi_p|^2.
+                                                                \tag{6.7}
+\]
+This blind spot occurs in the actual production coefficient.  With
+$\alpha=5/9$ and the positive diagonal current weights $c_0,c_1$, the
+pure-doublet production trace is
+\[
+ h(t):=\operatorname{Tr}B(te_1)
+ =12c_0t^2+c_1\left\{12t^2-{8\alpha t^4\over t^2+e}
+ +{4\alpha^2t^6\over(t^2+e)^2}\right\}.                 \tag{6.8}
+\]
+Consequently
+\[
+ d_jh(A)={\varepsilon_j\over2}
+ \{h(\lambda(1+c)\psi_p)-h(\lambda(1-c)\psi_p)\}
+ =24(c_0+c_1)c\lambda^2\varepsilon_j\psi_p^2
+  +O_e(\lambda^4|\psi_p|^4)\ne0                       \tag{6.9}
+\]
+as a nonzero function in $L^1_x$ for all sufficiently small nonzero
+$\lambda$.  Thus this production trace component is not determined by $D_j$.
+The witness does not by itself exclude cancellation after recombination with
+the complete square--trace--forest packet; rather, no componentwise or
+complete representation can be inferred from $D_j$ alone without first
+proving cancellation of this Jensen defect.
+
+There is a canonical nonduplicating split of this blind spot.  Put
+$a_j=P_jA^*$ and, for a deterministic $C^1$ coefficient $H$, define its
+conditional Jensen defect
+\[
+ \mathfrak D_j^H=P_jH(A^*)-H(a_j).                       \tag{6.10}
+\]
+For every active root, $D_j=a_j-a_{j-1}$ and exactly
+\[
+ d_jH(A^*)=
+ \int_0^1DH(a_{j-1}+tD_j)D_j\dd t
+ +(\mathfrak D_j^H-\mathfrak D_{j-1}^H).                \tag{6.11}
+\]
+The first term is the genuine $D_j$ secant.  The second is an upper-triangular
+conditional-variance/all-higher-chaos feedback generated by later roots; it
+is the nonzero term in (6.9).  Production rational coefficients have no
+finite-chaos truncation, so this Jensen-defect branch must remain complete.
+Identity (6.11) is for one fixed deterministic or predictable $H$.  If the
+coefficient family itself changes with the root, the additional heat or
+projector compensator
+$[H_j-H_{j-1}](a_{j-1})$ must also be retained.
+
+There is nevertheless a precise conditional first-order route.  If an
+explicitly projected response branch $R_j^{(1)}$ has the exact factorisation
+$R_j^{(1)}=\mathbb K_j^{\rm near}[D_j]$, a sufficient vector-valued adapted
+estimate is
+\[
+ \|\{\mathbb K_j^{\rm near}[D_j]\}_j\|_
+       {H^{-3/5+\gamma}_x(\ell^2)}
+ \le R_\gamma\|D\|_{H^{2/5}_x(\ell^2)},
+ \qquad R_\gamma\in\bigcap_{p<\infty}L^p.               \tag{6.12}
+\]
+If (6.12) holds for any $\gamma>0$, pairing it with the R-078 payload at
+$\beta=3/5-\gamma$ gives
+\[
+ R_\gamma X^{1/2-\gamma/4}Y^{1/2+\gamma/12}.            \tag{6.13}
+\]
+The exact ledger is
+\[
+ a={1\over2}-{\gamma\over4},\qquad
+ b={1\over2}+{\gamma\over12},\qquad
+ c=1-a-b={\gamma\over6},\qquad
+ p_R={6\over\gamma}.                                    \tag{6.14}
+\]
+At $\gamma=1/20$ this is
+\[
+ (a,b,c,p_R)=
+ \left({39\over80},{121\over240},{1\over120},120\right).
+                                                               \tag{6.15}
+\]
+The budgets (6.2)--(6.5) and ledger (6.13)--(6.15) are proved for that
+declared factorised branch,
+conditional on (6.12).  The remaining nonlinear oscillation coordinate
+\[
+ \Omega_j(H)=d_jH(A^*)                                  \tag{6.16}
+\]
+must be estimated as a coefficient/complete-packet martingale square
+function in its own right and kept with the trace and forest.  R-063 proves
+deterministic translated finite-forest bounds, not either adapted extension.
+
+Strict-past measurability does not freeze the coefficient at probability root
+$j$.  For $p>j$, a bounded centered $\phi(\xi_j)$ gives the admissible later
+control
+\[
+ a_p=K_p[\phi(\xi_j)e_p],\qquad d_ja_p=a_p\ne0.           \tag{6.17}
+\]
+Its canonical weight
+$2^{4p}\E\|d_ja_p\|_2^2$ is independent of $p-j$ after normalization.
+Hence the hidden future coefficient in R-080 cannot be replaced by an
+$\cF_{j-1}$-measurable deterministic translate.
+
+\section{The control--control pair-high branch must remain signed}
+
+A fresh-Gaussian/control high pair may be compatible with (6.12), because the
+balanced Gaussian jet can in principle create gain without spending another
+control factor.  The pure control--control pair-high route is different.
+Suppose an absolute estimate exposes one additional comparable control factor
+with interpolation fraction $\vartheta\in[0,1]$.  Its budget is
+\[
+ 2^{-\vartheta p}X^{\vartheta/2}
+ Y^{(1-\vartheta)/6}.                                    \tag{7.1}
+\]
+Adding (7.1) to the first-order gain ledger (6.13) changes the Young slack to
+\[
+ c_{\rm pair}
+ ={\gamma\over6}-{\vartheta\over2}
+  -{1-\vartheta\over6}
+ ={\gamma-1-2\vartheta\over6}<0                         \tag{7.2}
+\]
+for every $0<\gamma<1/10$ and every $\vartheta\ge0$.
+At $\vartheta=0$ the loss is already $(\gamma-1)/6$.
+
+Therefore the control--control pair-high branch cannot be closed by exposing
+and absolutely paying another control factor.  It must remain signed with the
+terminal current square, covariance trace, paid subtraction, and complete
+R-063 forest.  R-080's exact negative root fixture already excludes universal
+pointwise square--trace positivity.  The precise second NEAR successor is thus
+a production-specific signed control--control balanced-root lemma.  Equation
+(7.2) forbids one architecture; it does not falsify that signed lemma or the
+complete one-use estimate.
+
+\section{Progressive temporal packet factorisation}
+
+Let $I_k=(t_{k-1},t_k]$ be one interval of a finite time partition and let
+$u_t=u_k$ there, with $u_k$ bounded, cylindrical, and
+$\cF_{t_{k-1}}$-measurable.  Put
+\[
+ \Delta C_k=\int_{I_k}J_tJ_t^*\dd t,\qquad
+ L_k=\int_{I_k}J_t\dd t,\qquad a_k=L_ku_k.              \tag{8.1}
+\]
+
+\textbf{Theorem 8.1 (strict-past temporal factorisation).}
+There is a predictable $h_k$ such that
+\[
+ a_k=\Delta C_k^{1/2}h_k,
+ \qquad\|h_k\|^2\le |I_k|\|u_k\|^2.                    \tag{8.2}
+\]
+
+\emph{Proof.}
+Operator Cauchy--Schwarz gives
+\[
+ L_kL_k^*\preceq |I_k|\Delta C_k.                        \tag{8.3}
+\]
+Douglas factorisation writes
+$L_k=\Delta C_k^{1/2}R_k$ with
+$\|R_k\|\le|I_k|^{1/2}$.  Take $h_k=R_ku_k$. \hfill$\square$
+
+The Gaussian increment on $I_k$ has covariance $\Delta C_k$ and is
+independent of $\cF_{t_{k-1}}$, so every bounded simple progressive packet
+enters the R-064 strict-past causalisation exactly.  The ranges
+$\operatorname{Ran}\Delta C_k$ for different $k$ may overlap or coincide.
+That overlap does not damage Hilbert martingale orthogonality, the deterministic
+covariance split, or the simultaneous complete-coefficient split.  Therefore
+the complete-current and complete-safe-packet algebra of R-079 temporalises
+verbatim, including the $f_k$--$i_k$ cross term.
+
+What does not temporalise is just as important.  The R-075 whole-shell graph,
+R-066 cumulative orthogonal-energy calculation, and R-080 separate low and
+far estimates use mutually orthogonal physical ranges.  They cannot be
+applied packet by packet after the ranges overlap.  The complete endpoint
+must first be recombined, and only then estimated uniformly in time mesh and
+revisit multiplicity.
+
+\section{Exact non-density of the one-shot graph}
+
+The progressive gap is not a technical density omission.  It is already
+visible at one scalar cutoff.  Let $J_t=1$ and let $W$ be one Brownian mode.
+The bounded simple progressive control
+\[
+ u_t=\tanh(W_{1/2})\mathbf1_{(1/2,1]}(t)                 \tag{9.1}
+\]
+has terminal displacement
+\[
+ A(u)={1\over2}\tanh(W_{1/2}).                           \tag{9.2}
+\]
+Any regular one-shot displacement in this only physical range is
+$\cF_0$-measurable.  Even if independent auxiliary randomness is placed in
+$\cF_0$, it remains independent of $W_{1/2}$.  Since $\E A(u)=0$, for every
+such displacement $a$,
+\[
+ \E|A(u)-a|^2
+ =\E|A(u)|^2+\E|a|^2
+ \ge\E|A(u)|^2>0.                                       \tag{9.3}
+\]
+Thus there is no terminal-$L^2$ approximation, hence no approximation in the
+stronger R-075 graph containing terminal $L^6$.
+
+Refining time makes each temporal packet strict-past but leaves every packet
+in the same physical covariance range.  Orthogonalising the noise coordinates
+does not make those physical ranges orthogonal while preserving the original
+filtration and causality.  This proves that regular one-shot graph density is
+not a route to the full progressive theorem.
+
+The exact progressive successor is an overlap-stable complete-packet bound.
+Writing
+\[
+ G_J(\phi)=V_J^{\rm ren}(\phi)+\epsilon_6\|\phi\|_6^6,
+\]
+one must prove, uniformly in $J$, in the time partition, and in revisit
+multiplicity,
+\[
+ \E G_J(X_J+h_J(u))
+ +\epsilon_v\E\sum_k|I_k|\|u_k\|^2\ge-C               \tag{9.4}
+\]
+for every bounded cylindrical simple progressive control.  Only after (9.4)
+may one use fixed-cutoff admissible-core truncation, auxiliary conditioning,
+terminal graph continuity, and lower semicontinuity to reach every finite-
+energy Boue--Dupuis control.  Predictable $L^2$ density alone does not control
+the terminal $L^6$ coordinate or an infinity-minus-infinity limit.
+
+\section{Exact successor theorem and conditional synthesis}
+
+R-081 reduces the immediate frontier to the following three inputs:
+\begin{enumerate}
+\item[(FAR)] the root-resolved complete-current estimate (4.7), or an
+      equivalent signed square--trace--forest theorem;
+\item[(NEAR-G)] an exact first-order branch projection followed by the
+      vector-valued adapted estimate (6.12) for one $\gamma>0$ on the
+      fresh-Gaussian/control response;
+\item[(NEAR-C)] a production-specific signed theorem for the nonlinear
+      Jensen-defect oscillations (6.11)/(6.16) and control--control balanced
+      roots, retaining every
+      square, trace, forest, compensator, and paid subtraction;
+\item[(PROG)] the overlap-stable bounded-simple complete-packet lower bound
+      (9.4), followed by the fixed-cutoff variational extension.
+\end{enumerate}
+NEAR-G and NEAR-C are two branches of the single NEAR gate, not two new
+claim cards.  The witness (6.6)--(6.9) forbids merging NEAR-C into a map of
+$D_j$ alone.  FAR and NEAR may eventually be proved by one vector-valued
+martingale paracomposition theorem, but no such theorem is attributed here.
+
+Once these inputs are available, the exact R-080 conditional arithmetic is
+unchanged.  With
+\[
+ \epsilon_6=0.15,\qquad\epsilon_v=0.45,\qquad p={11\over10},
+\]
+the sextic margin is $0.27-0.06-0.15=0.06$, the control margin is
+\[
+ {1\over2p}-\epsilon_v={1\over220},                       \tag{10.1}
+\]
+and
+\[
+ q={1\over2\epsilon_v}={10\over9},
+ \qquad q-p={1\over90}.                                  \tag{10.2}
+\]
+These equations prove budget compatibility only.  They do not prove the
+one-use inequality, the Nelson exponential moment, or a Gibbs measure.
+
+\section{Evidence map, failures, and research roadmap}
+
+The proof map after R-081 is
+\[
+\begin{array}{c}
+\text{R-079 complete current}\longrightarrow\text{R-080 LOW and far square}
+\\[2mm]
+\downarrow\\[-1mm]
+\boxed{\text{polynomial FAR vanishes}}
+\quad
+\boxed{\text{Cartan FAR has deterministic gap}}
+\\[1mm]
+\boxed{\text{factorised NEAR input budget closes}}
+\\[2mm]
+\downarrow\quad
+\text{FAR + complete NEAR still required}
+\\[2mm]
+\text{regular complete packet lower bound}
+\\[2mm]
+\downarrow\quad
+\text{overlap-stable packet bound required}
+\\[2mm]
+\text{full progressive one-use}
+\longrightarrow q=10/9\text{ Nelson, conditionally.}
+\end{array}                                               \tag{11.1}
+\]
+
+The reusable successes and failed routes are:
+\begin{itemize}
+\item \textbf{Closed:} exact polynomial/Cartan current split and far
+      disappearance of the polynomial channel.
+\item \textbf{Closed:} deterministic relative-gap current tail for every
+      $0<s<1$.
+\item \textbf{Failed route:} summing that deterministic lemma independently
+      over roots; it repeats a critical global budget.
+\item \textbf{Closed reduction:} fixed-coefficient injection is governed by
+      a triangular half-derivative norm.
+\item \textbf{Failed route:} using only $H^{1/2-}$ coefficient regularity;
+      the explicit endpoint sequence grows linearly.
+\item \textbf{Closed:} vector-valued adapted input budget and exact
+      positive-gain ledger for an explicitly factorised first-order NEAR
+      response.
+\item \textbf{Failed route:} representing the whole nonlinear future
+      coefficient through $D_j=d_jA^*$; (6.6)--(6.9) give $D_j=0$ but a
+      nonzero production coefficient innovation.
+\item \textbf{Failed route:} absolute control--control pair-high harvest;
+      its slack is strictly negative throughout the candidate range.
+\item \textbf{Closed:} bounded-simple temporal covariance factorisation and
+      algebraic temporalisation of the complete R-079 packet.
+\item \textbf{Failed route:} density of the R-075 one-shot graph in general
+      progressive controls, already at terminal $L^2$ in one mode.
+\end{itemize}
+
+The next proof effort should not retry generic target heat smoothing, a
+shellwise deterministic FAR sum, coefficient freezing, an absolute extra
+control factor, or one-shot density.  It should construct a single
+vector-valued martingale paracomposition estimate that retains the complete
+square--trace--forest block and controls the nonlinear oscillations (6.16),
+then prove its overlap-stable temporal version.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: ``The polynomial/Cartan split already proves FAR.''}
+\textbf{UPHELD as false.}  It removes the polynomial channel.  The nonlinear
+Cartan current, its value innovation, and heat compensator remain in (4.7).
+
+\item \textbf{Objection: ``The factor $2^{-2sC}$ can be made small and paid
+root by root.''}  \textbf{UPHELD as false.}  Each use costs the same critical
+$X^{1/2}Y^{1/2}$ budget.  A cutoff-uniform proof must retain the gain after
+the martingale-root sum.
+
+\item \textbf{Objection: ``The Lipschitz coefficient is automatically
+$H^{1/2}$.''}  \textbf{UPHELD as false.}  The production field is naturally
+at the $1/2-$ endpoint.  Equations (5.5)--(5.7) show that every fixed
+$H^{1/2-\delta}$ bound is compatible with linear triangular divergence.
+
+\item \textbf{Objection: ``Equation (5.4) is the whole FAR current.''}
+\textbf{UPHELD as false.}  It covers the predictable fixed-coefficient
+injection subchannel.  The same-shell nonlinear difference and heat
+compensator must remain in the complete root-resolved theorem.
+
+\item \textbf{Objection: ``The NEAR adapted operator is now proved.''}
+\textbf{UPHELD as false.}  Equations (6.2)--(6.5) prove the $D_j$ input budget
+and (6.13)--(6.15) its conditional ledger only after an exact first-order
+factorisation.  Equations (6.6)--(6.9) prove that the complete nonlinear
+coefficient does not factor through $D_j$; (6.11), (6.12), (6.16), and the signed
+control--control branch remain hypotheses.
+
+\item \textbf{Objection: ``Pair-high failure disproves NEAR.''}
+\textbf{DISMISSED.}  Equation (7.2) refutes only absolute extraction of an
+extra control factor.  A signed production cancellation retaining the
+complete companions remains possible.
+
+\item \textbf{Objection: ``Temporal factorisation proves the progressive
+lower bound.''}  \textbf{UPHELD as false.}  It proves strict-past packet
+representation and complete algebra.  Range overlap invalidates the separate
+R-080 estimates, so (9.4) remains a new analytic theorem.
+
+\item \textbf{Objection: ``Auxiliary randomness repairs one-shot density.''}
+\textbf{UPHELD as false.}  Independent auxiliary randomness has zero cross
+term with the centered witness (9.2), so the positive distance (9.3)
+persists.
+
+\item \textbf{Objection: ``The exact margins (10.1)--(10.2) prove Nelson.''}
+\textbf{UPHELD as an overclaim.}  They become operative only after FAR,
+NEAR, and PROG close.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable checks the production quotient identities, the
+uniform Lipschitz ceiling, target-heat contraction, exact Fourier support,
+fixed-coefficient injection covariance, the half-derivative endpoint
+sequence, FAR and NEAR rational ledgers, finite-tree Doob/Burkholder fixtures,
+temporal Cauchy--Douglas factorisation, a complete R-079 packet identity with
+nonzero injected/future cross term, the progressive non-density witness,
+and the conditional Nelson arithmetic.  The non-importing executable uses an
+alternate Pauli generator, finite differences, random Fourier data, an
+independent endpoint sequence, a three-level martingale, a matrix Douglas
+factorisation, and Gauss--Hermite quadrature.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_cartan_tail_adapted_near_temporal_reduction_verify.py
+\end{verbatim}
+The child contracts are primary $60/60$ and non-importing independent
+$47/47$.  The integrated verifier pins R-063, R-075, R-079, and R-080;
+checks source, note, PDF, manifest, run, result, negative-result, gate,
+roadmap, task, claim, exploration, and honesty surfaces; and fails closed if
+any FAR, NEAR, progressive, one-use, Nelson, measure, or Sector-A flag is
+promoted.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-
+           REDUCTION
+Precise statement:       The production current has an exact quadratic-
+                         polynomial/heat-Cartan split. The polynomial far
+                         channel vanishes; the Cartan current has a genuine
+                         deterministic relative-gap bound but still needs a
+                         martingale-root-resolved sum. An explicitly
+                         factorised first-order NEAR input has the exact
+                         vector Doob-Burkholder budget, but the complete
+                         nonlinear coefficient has an additional Jensen-
+                         defect innovation. Absolute control-control pair-
+                         high payment is supercritical.
+                         Bounded-simple progressive packets factor causally
+                         and preserve complete algebra, but the R-075 one-shot
+                         graph is not progressive-dense.
+Scope:                   Finite cutoff; fixed positive floor; common even
+                         regulator; exact products; hash-pinned production
+                         frame; constants cutoff-uniform only where stated.
+Dependencies:            A1; R-050; R-063; R-064; R-066; R-070; R-075;
+                         R-078; R-079; R-080.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_cartan_tail_adapted_near_temporal_
+                         reduction_verify.py
+Expected output:          Primary 60/60; independent 47/47; manifest-pinned
+                         integrated and aggregate PASS; exit zero.
+Falsification gate:      Failure of the current split, relative-gap theorem,
+                         endpoint sequence, vector budget, nonlinear-D_j
+                         witness, Jensen split, pair-high ledger, temporal
+                         factorisation, non-density witness, evidence hash,
+                         PDF contract, or honesty flag.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No root-resolved FAR theorem, complete NEAR theorem,
+                         overlap-stable progressive lower bound, controlled-
+                         shell one-use, Nelson bound, measure theorem, removal
+                         limit, or Sector-A closure is proved.
+Next required action:    Prove the complete root-resolved FAR estimate and
+                         adapted/signed NEAR theorem, then prove the overlap-
+                         stable bounded-simple packet lower bound and its
+                         variational extension.
+\end{verbatim}
+\endgroup

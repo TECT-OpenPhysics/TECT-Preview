@@ -1,0 +1,440 @@
+{
+  "assertions": [
+    {
+      "actual": 0.43750000000000006,
+      "expected": "|q|<=1",
+      "name": "production_q_bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3628009988622698,
+      "expected": "<=1.5264337522473748",
+      "name": "production_r_bounded",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.40000000000000013,
+      "expected": 0.40000000000000013,
+      "name": "p_current_is_dn",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4850000000000003,
+      "expected": 1.4850000000000005,
+      "name": "v_current_is_dn_minus_qdrho",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4850000000000003,
+      "expected": 1.4850000000000003,
+      "name": "v_current_is_rho_dq",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -0.5687500000000001,
+        0.3500000000000001
+      ],
+      "expected": [
+        -0.5687500000000001,
+        0.3500000000000001
+      ],
+      "name": "quotient_vector_is_odd",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.9754895742289909,
+      "expected": "<=3",
+      "name": "quotient_vector_lipschitz_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.6,
+        -0.9
+      ],
+      "expected": [
+        1.6,
+        -0.9
+      ],
+      "name": "target_heat_preserves_linear_p",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5263837683045662,
+      "expected": "<=3",
+      "name": "target_heat_preserves_lipschitz_ceiling",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.62454767193376e-16,
+      "expected": "<1e-12",
+      "name": "quadratic_channel_support_at_most_twice_input",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2(P_Sigma F)(z)^T Dz",
+      "expected": "only nonlinear Cartan column",
+      "name": "far_load_bearing_channel_is_quotient",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.125,
+      "expected": "2^(-2sC)",
+      "name": "far_relative_gap_s_1_4",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.015625,
+      "expected": "2^(-2sC)",
+      "name": "far_relative_gap_s_1_2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.001953125,
+      "expected": "2^(-2sC)",
+      "name": "far_relative_gap_s_3_4",
+      "status": "PASS"
+    },
+    {
+      "actual": "X^(1/2)",
+      "expected": "X^(1/2)",
+      "name": "far_GN_energy_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "Y^(1/2)",
+      "expected": "Y^(1/2)",
+      "name": "far_GN_sextic_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "far_single_root_Young_slack_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "N^(-2s), 0<s<1",
+      "expected": "proved",
+      "name": "far_deterministic_tail_has_real_spatial_gain",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "far_root_resolved_sum_not_supplied",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.081616,
+      "expected": 0.081616,
+      "name": "fixed_coefficient_injection_covariance_formula",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.081616,
+      "expected": 0.106816,
+      "name": "fixed_coefficient_injection_localized_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.483616960157807,
+        6.716358214425437,
+        6.725012792350748
+      ],
+      "expected": "uniform",
+      "name": "H_half_minus_sequence_uniform",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        24.0,
+        48.0,
+        96.0
+      ],
+      "expected": "linear",
+      "name": "H_half_endpoint_grows_linearly",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.2631577811412953,
+        2.116279069767439
+      ],
+      "expected": "approximately linear",
+      "name": "triangular_tail_grows_with_cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "endpoint triangular divergence",
+      "expected": "method no-go",
+      "name": "H_half_minus_alone_cannot_close_far",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/5",
+      "expected": "1/5",
+      "name": "near_vector_interpolation_H2_fraction",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/5",
+      "expected": "4/5",
+      "name": "near_vector_interpolation_L6_fraction",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/10",
+      "expected": "1/10",
+      "name": "near_vector_energy_budget_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/15",
+      "expected": "2/15",
+      "name": "near_vector_sextic_budget_power",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.0,
+      "expected": 2.0,
+      "name": "near_Hilbert_Doob_orthogonality",
+      "status": "PASS"
+    },
+    {
+      "actual": 32.0,
+      "expected": "<=64.0",
+      "name": "near_L6_Burkholder_finite_fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "39/80",
+      "expected": "39/80",
+      "name": "near_gamma_1_20_energy_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "121/240",
+      "expected": "121/240",
+      "name": "near_gamma_1_20_sextic_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/120",
+      "expected": "1/120",
+      "name": "near_gamma_1_20_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "120",
+      "expected": "120",
+      "name": "near_gamma_1_20_random_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "-19/120",
+        "-23/120",
+        "-13/40"
+      ],
+      "expected": "all negative",
+      "name": "control_control_pair_high_absolute_slack_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "square+trace+forest",
+      "expected": "required",
+      "name": "control_control_pair_must_remain_signed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "adapted_near_operator_still_open",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "signed_control_control_near_still_open",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "name": "hidden_coefficient_root_gap_saturates_CM",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "d_j_A": {
+          "-1": "0",
+          "1": "0"
+        },
+        "d_j_abs_A_sq": {
+          "-1": "-4/5",
+          "1": "4/5"
+        }
+      },
+      "expected": {
+        "d_j_A": "zero",
+        "d_j_abs_A_sq": "nonzero"
+      },
+      "name": "nonlinear_coefficient_not_determined_by_DjA",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.25,
+      "expected": "<=2.5",
+      "name": "temporal_operator_Cauchy",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.5,
+      "expected": 4.5,
+      "name": "temporal_Douglas_factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": 8.1,
+      "expected": "<=9.0",
+      "name": "temporal_Douglas_energy_contraction",
+      "status": "PASS"
+    },
+    {
+      "actual": "u_k in F_(t_(k-1))",
+      "expected": "causal",
+      "name": "temporal_packet_is_strict_past",
+      "status": "PASS"
+    },
+    {
+      "actual": "same scalar physical mode",
+      "expected": "overlap allowed algebraically",
+      "name": "temporal_packet_ranges_may_overlap",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "residual": 1.1102230246251565e-16,
+        "retained_f_i_cross": 0.24
+      },
+      "expected": {
+        "residual": 0.0,
+        "retained_f_i_cross": "nonzero"
+      },
+      "name": "R079_complete_packet_algebra_temporalizes",
+      "status": "PASS"
+    },
+    {
+      "actual": "revisit quartic fixture",
+      "expected": "complete packet required",
+      "name": "R080_separate_low_bound_does_not_temporalize",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0684190769841838,
+      "expected": ">0.01",
+      "name": "progressive_single_mode_endpoint_nontrivial",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0684190769841838,
+      "expected": ">0",
+      "name": "one_shot_graph_positive_L2_distance",
+      "status": "PASS"
+    },
+    {
+      "actual": "E|A-a|^2=E|A|^2+E|a|^2",
+      "expected": ">=E|A|^2",
+      "name": "independent_auxiliary_randomness_cannot_help",
+      "status": "PASS"
+    },
+    {
+      "actual": "same mode on all subintervals",
+      "expected": "not R075 orthogonal graph",
+      "name": "temporal_refinement_keeps_physical_range_overlap",
+      "status": "PASS"
+    },
+    {
+      "actual": "already fails terminal L2",
+      "expected": "exact no-go",
+      "name": "regular_graph_is_not_progressive_dense",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "overlap_stable_complete_packet_bound_open",
+      "status": "PASS"
+    },
+    {
+      "actual": "10/9",
+      "expected": "10/9",
+      "name": "conditional_nelson_q",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/90",
+      "expected": "1/90",
+      "name": "conditional_q_minus_p",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/220",
+      "expected": "1/220",
+      "name": "conditional_control_margin",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "controlled_shell_one_use_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "nelson_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "sector_A_not_closed",
+      "status": "PASS"
+    }
+  ],
+  "assertions_passed": 60,
+  "assertions_total": 60,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "claims_not_established": {
+    "controlled_shell_one_use": false,
+    "full_progressive_revisit_extension": false,
+    "interacting_measure": false,
+    "nelson_bound": false,
+    "overlap_stable_progressive_packet_bound": false,
+    "production_far_root_resolved_tail": false,
+    "production_near_adapted_operator": false,
+    "production_near_signed_control_control": false,
+    "sector_a_closure": false,
+    "tier_promotion": false
+  },
+  "endpoint_variance": 0.0684190769841838,
+  "far_result": "exact polynomial/Cartan split and deterministic relative-gap tail; root-resolved summation remains open",
+  "near_result": "vector Doob-Burkholder budget closes; adapted complete-forest operator and signed control-control branch remain open",
+  "progressive_result": "temporal complete-packet algebra extends, while the R-075 one-shot graph is not progressive-dense",
+  "result_id": "A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION",
+  "schema": "tect/a13-cartan-tail-adapted-near-temporal-primary/1.0",
+  "source_version": "1.0.2",
+  "status": "PASS"
+}

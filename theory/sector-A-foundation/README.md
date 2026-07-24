@@ -60,9 +60,20 @@ localized predictable base-current tail `S_C`, and isolates the hidden
 future-adapted coefficient in the near branch. Target heat gives no automatic
 spatial gap and bounded near width gives no Young slack. R-080 also exposes a
 separate synthesis requirement: R-075 graph recovery does not extend the
-regular estimate to every progressive/revisit control. FAR, NEAR, and the
-full-progressive extension remain before the umbrella one-use estimate and
-the conditional `q=10/9` Nelson/A7 reconstruction.
+regular estimate to every progressive/revisit control. R-081,
+`A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION`, proves the exact
+polynomial/Cartan current split and deterministic far relative-gap theorem,
+but identifies a half-derivative-critical martingale-root sum. It proves the
+vector-valued stochastic budget and exact gain ledger for an explicitly
+factorised first-order NEAR response. A two-root witness and the exact
+secant--Jensen split expose an upper-triangular nonlinear defect invisible to
+`D_jA`; this defect remains with the complete signed packet. Absolute
+control--control pair-high payment is also supercritical.
+It also causally factorises overlapping bounded-simple temporal packets and
+extends the complete R-079 algebra, while proving that the one-shot graph is
+not progressive-dense. Root-resolved FAR, adapted/signed NEAR, and an overlap-
+stable full-progressive packet lower bound remain before the umbrella one-use
+estimate and the conditional `q=10/9` Nelson/A7 reconstruction.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

@@ -234,6 +234,25 @@ endpoint theorem.
     FAR and NEAR remain the current regular packet gate; the new full-
     progressive/revisit extension is a separate gate before one-use and the
     conditional `q=10/9` Nelson arithmetic.
+22. **Cartan tail, adapted NEAR budget, and temporal packet reduction.**
+    R-081, `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION`,
+    splits the heat-averaged production current exactly into a quadratic
+    polynomial channel and one nonlinear Cartan quotient-vector channel. The
+    polynomial far channel vanishes, and a fractional Leibniz/Nemytskii
+    theorem gives genuine deterministic relative-gap decay for every
+    `0<s<1`; the root-resolved sum remains open because its budget is critical
+    and fixed-coefficient injection is `H^(1/2)`-endpoint. Vector-valued
+    Doob--Burkholder interpolation proves the exact stochastic input budget and
+    gain ledger for an explicitly factorised first-order NEAR response. A
+    two-root production witness has `d_jA=d_jDA=0` but nonzero coefficient-
+    trace innovation; the exact secant--Jensen split leaves an upper-triangular
+    nonlinear defect in the signed complete packet. Absolute control--control
+    pair-high extraction is also supercritical. Temporal Cauchy--Douglas factorisation extends strict-past
+    causalisation and the complete R-079 algebra to overlapping bounded-simple
+    packets. An exact single-mode witness proves one-shot graph non-density:
+    the R-075 graph is not progressive-dense. The remaining targets are the complete root-
+    resolved FAR estimate, adapted/signed NEAR theorem, and overlap-stable
+    complete-packet lower bound plus variational extension.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

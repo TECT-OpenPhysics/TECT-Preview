@@ -236,11 +236,26 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
   residual to a predictable explicit payload plus a hidden future-adapted
-  coefficient. It also exposes the separate
+  coefficient. R-081,
+  `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION`, splits the
+  production current exactly into a far-vanishing quadratic channel and one
+  nonlinear Cartan channel. It proves a deterministic relative-gap tail but
+  shows that rootwise summation is half-derivative critical; FAR is now the
+  complete root-resolved FAR martingale paracomposition estimate. It also proves
+  the vector-valued input budget and exact positive-gain ledger for an
+  explicitly factorised first-order NEAR response. A two-root witness has
+  `d_jA=d_jDA=0` but nonzero nonlinear coefficient innovation, so the exact
+  secant--Jensen split leaves an upper-triangular Jensen defect inside the
+  adapted lower-chaos-complete signed packet. Absolute control--control pair-
+  high payment is also excluded.
+  R-080/R-081 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
-  control. FAR, NEAR, and that progression theorem remain before one-use and
-  `q=10/9` Nelson.
+  control, and an exact one-mode witness proves non-density. Temporal Douglas
+  factorisation preserves the complete packet algebra for overlapping
+  bounded-simple packets, so the remaining PROG input is an overlap-stable
+  lower bound plus the variational limit. FAR, NEAR, and that progression
+  theorem remain before one-use and `q=10/9` Nelson.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -404,16 +419,24 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
    child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-   narrowed by R-080. R-080 closes the two distinct low objects for regular
+   narrowed by R-080 and R-081. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
    In the near region the explicit residual `A^2 DA` payload is predictable,
    but a hidden future high--high-to-low coefficient remains; bounded width
-   has zero Young slack and universal rootwise positivity is false. Prove FAR
-   and NEAR while retaining every present/future block, square, trace,
+   has zero Young slack and universal rootwise positivity is false. R-081
+   eliminates the polynomial far channel and proves genuine deterministic
+   relative-gap decay for the Cartan current, but summing it rootwise repeats
+   the critical `X^(1/2)Y^(1/2)` budget and the fixed-coefficient injection
+   norm is `H^(1/2)`-critical. Its vector-valued Doob--Burkholder theorem closes
+   the explicitly factorised first-order NEAR input budget, not the complete
+   nonlinear coefficient: an exact secant--Jensen split exposes an upper-
+   triangular defect invisible to `D_jA`. Prove the complete root-resolved
+   FAR and adapted/signed NEAR estimates while retaining every present/future block, square, trace,
    innovation, compensator, forest term, and paid subtraction. Then apply
-   R-075 only within its declared graph and prove the distinct
+   temporal Douglas factorisation from R-081, not one-shot density, and prove
+   an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
    `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling
    controlled-shell one-use through R-066 and returning to `q=10/9` Nelson.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for

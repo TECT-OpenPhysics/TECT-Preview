@@ -77,9 +77,21 @@ objects for the declared no-revisit one-shot class, reduces far feedback to
 one localized predictable base-current tail, and narrows the near residual to
 a predictable explicit payload plus a hidden future-adapted coefficient. It
 also corrects the downstream scope: R-075 graph recovery covers its specified
-regular graph, not all progressive/revisit controls. The regular FAR/NEAR
-bound and a separate full-progressive extension are both required before the
-umbrella one-use/`q=10/9` Nelson bound.
+regular graph, not all progressive/revisit controls. R-081,
+`A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION`, then proves the
+exact polynomial/Cartan current split, removes the polynomial far channel,
+and proves deterministic relative-gap decay. The remaining FAR theorem is
+root-resolved because a shellwise root sum is half-derivative critical. In
+NEAR, vector-valued Doob--Burkholder interpolation closes the stochastic input
+budget and exact gain ledger only for an explicitly factorised first-order
+response. A two-root witness and the exact secant--Jensen split expose an
+upper-triangular nonlinear defect invisible to `D_jA`; that defect, the
+adapted complete-forest operator, and the signed control--control branch
+remain. Temporal Douglas factorisation extends
+the complete packet algebra to overlapping bounded-simple packets, while a
+one-mode witness proves that the R-075 graph is not progressive-dense. The
+regular root-resolved FAR/NEAR bound and an overlap-stable full-progressive
+extension are both required before the umbrella one-use/`q=10/9` Nelson bound.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

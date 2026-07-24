@@ -371,6 +371,48 @@ the following structural results and proof-architecture boundaries hold.
     adapted fixture refutes automatic bracket-plus-square positivity. The
     exact full packet-to-bracket reconstruction and the spatially weighted
     future-control innovation bound remain open.
+22. `A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`
+    reconstructs the complete covariance-normal endpoint in one Hilbert
+    current.  At each probability root it splits the base-current increment
+    into the injected-current difference and terminal future-feedback
+    innovation, retaining their cross term, both positive squares, both
+    covariance traces, the complete R-063 forest, and the already paid
+    orientation exactly once.  Hilbert martingale orthogonality gives the
+    spatially weighted Cameron--Martin square function, and predictable target
+    heat gives the three-channel base-current formula.  Generic weighted
+    Cauchy and automatic square--trace positivity both fail, so the production
+    near/far estimate remains the analytic child.
+23. `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY` closes the
+    conditional-low current and complete low safe endpoint for the regular
+    mutually orthogonal no-revisit class.  Orthogonal spatial square
+    completion absorbs both future-feedback channels in FAR and reduces its
+    loss to the localized predictable base-current tail `S_C`.  NEAR is
+    narrowed to a predictable explicit payload and a hidden future-adapted
+    coefficient.  Target heat does not create a spatial gap, finite near
+    width gives zero Young slack, universal rootwise positivity is false, and
+    regular graph recovery has the wrong variational direction for all
+    progressive controls.  FAR, NEAR, and the separate progressive extension
+    therefore remain open.
+24. `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` splits the
+    heat-averaged production current into a far-vanishing quadratic channel
+    and one nonlinear Cartan quotient-vector channel.  For every `0<s<1` the
+    latter has deterministic relative-gap decay
+    `2^(-2sC)X^(1/2)Y^(1/2)`, but rootwise repetition is critical and a fixed-
+    coefficient model shows that `H^(1/2-)` alone cannot control the
+    triangular injection norm.  Vector Doob--Burkholder interpolation closes
+    the input budget `X_D^(1/10)Y_D^(2/15)` and gives the exact conditional
+    gain ledger for a response already factorised to first order through
+    `D_j=d_jA*`.  A later two-root production witness has `d_jA=d_jDA=0`
+    but nonzero coefficient-trace innovation.  The exact repair splits the
+    nonlinear innovation into its `D_j` secant and an upper-triangular
+    conditional Jensen defect, which remains with the signed complete packet;
+    absolute control--control pair-high extraction is likewise supercritical.
+    Temporal Cauchy--Douglas factorisation
+    admits bounded simple progressive packets and preserves the complete
+    R-079 algebra even with overlapping covariance ranges.  An exact
+    one-mode witness proves the R-075 one-shot graph is not progressive-dense.
+    Root-resolved FAR, complete adapted/signed NEAR, and an overlap-stable
+    progressive complete-packet bound remain before one-use and Nelson.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -400,6 +442,9 @@ is a scoped T4 subproof and does not promote A13.
 | Signed transport ledger / sharp cubic Besov / shifted-resonance boundary | Exact nonduplicating endpoint ledger, input-maximum `X^(2/5)Y^(8/15)` payment, control-independent and nonresonant closure, and Bregman/separated-multiplier no-gos | T4 analytic subbranches closed; all three proposed largest-root causal branch estimates open |
 | Causal packet / payload-comparable resonance | Exact complete-packet Doob cancellation, full `m<=r+L` fifteenth-moment closure, and disjoint coefficient-dominant high--high-to-low residual | T4 fresh-root and payload-comparable branches closed; one signed packet open |
 | Hessian-difference / safe packet / Doob bracket | Exact `A^2 DA` coordinate and `30/7` payment, canonical complete-companion packet, factorised-bilinear innovation lemma and unweighted square-function identity, high-`U` `60/19` closure, and two method no-gos | T4 reduction closed; exact full packet reconstruction and weighted innovation bound open |
+| Full safe packet / frame current / Doob decomposition | Exact full-current and complete-safe-packet root decomposition with cross term, square, trace, forest, and paid subtraction retained; weighted CM square function and predictable base-current heat identity | T4 algebraic decomposition closed; production near/far estimate open |
+| Regular low objects / far square / progressive boundary | Both regular no-revisit low objects, exact far feedback square completion, localized base-current successor, hidden near coefficient, and variational-scope no-gos | T4 regular low/far reduction closed; FAR, NEAR, and full progression open |
+| Cartan tail / adapted NEAR budget / temporal packets | Exact polynomial--Cartan split, deterministic relative-gap tail, half-derivative boundary, factorised first-order vector budget, secant--Jensen split and nonlinear `D_j` no-go, pair-high no-go, temporal Douglas factorisation, and one-shot graph non-density | T4 analytic/exact reduction closed; root-resolved FAR, Jensen-defect/complete NEAR, and overlap-stable progression open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -493,6 +538,23 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   high-`U` theorem closes only the declared principal, and the negative adapted
   fixture refutes generic positivity rather than the production packet lower
   bound. Every term in the full low-end safe endpoint remains retained.
+- R-079 is an exact expectation-level finite-cutoff decomposition.  Its
+  root-first current identity retains the injected/future cross term and the
+  complete square--trace--forest companions.  The weighted control square
+  function and predictable base-current heat formula do not by themselves
+  prove the production packet lower bound.
+- R-080's low theorems use the regular mutually orthogonal one-shot
+  no-revisit class and a fixed sufficiently large low threshold.  Its far
+  square completion is exact, but `S_C`, the adapted NEAR branch, and the
+  full progressive/revisit extension remain unproved.
+- R-081 is fixed-floor and finite-cutoff for the exact current, temporal, and
+  non-density identities; its deterministic Cartan tail and explicitly
+  factorised first-order input budget are cutoff-uniform in their stated
+  norms.  The exact secant--Jensen identity exposes an upper-triangular
+  nonlinear branch that is not controlled by `D_j` alone.  R-081 does not
+  supply the martingale-root-resolved FAR sum, an estimate for that Jensen
+  defect, the complete adapted/signed NEAR theorem, or an overlap-stable
+  progressive packet lower bound.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -519,54 +581,57 @@ Current analytic child:
 
 Current subordinate order:
 
-1. derive the exact full packet-to-bracket/commutator decomposition for the
-   canonical safe packet with both restored R-073 first variations,
-   terminal-square polarization, coefficient curvature, the complete R-063
-   forest, R-066 trace transport, and every term in the low-end safe endpoint;
-2. prove the resulting spatially weighted future-control innovation-Carleson
-   lower bound without separating those companions;
-3. apply R-075 fixed-cutoff predictable graph recovery only after that
-   regular-control packet inequality, then assemble controlled-shell one-use;
-4. return to the A7 Nelson and finite-volume measure gates.
+1. prove the root-resolved complete-current FAR estimate while retaining
+   derivative injection, value innovation, heat compensator, square, trace,
+   and forest;
+2. use the exact secant--Jensen split to estimate the factorised first-order
+   NEAR branch while retaining the upper-triangular Jensen defect inside the
+   lower-chaos-complete square--trace--forest packet, and prove a production-
+   specific signed control--control balanced-root lemma;
+3. prove an overlap-stable bounded-simple complete-packet lower bound
+   uniformly in time mesh and revisit multiplicity, then pass through the
+   fixed-cutoff Boue--Dupuis admissible core;
+4. assemble controlled-shell one-use and execute the already checked
+   `q=10/9` Nelson/A7 synthesis.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_verify.py
+python codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `33/33`;
-- non-importing independent `24/24`;
-- integrated `176/176` and aggregate `233/233` are pinned by the R-078
-  manifest;
-- exact cubic/Hessian Taylor agreement, complete endpoint subtraction,
-  independently derived `30/7` and `60/19` ledgers, finite-tree Doob brackets,
-  Hilbert square functions, Gaussian anti-centering and opposite-carrier
-  fixtures, predecessor-result/source/PDF/surface contracts, and T4 scope
-  firewalls;
+- primary `60/60`;
+- non-importing independent `47/47`;
+- manifest-pinned integrated and aggregate contracts;
+- exact polynomial--Cartan current algebra, deterministic FAR ledger,
+  half-derivative endpoint sequence, factorised first-order vector Doob--
+  Burkholder budget, nonlinear `D_j` witness and secant--Jensen split,
+  pair-high obstruction, matrix/scalar temporal Douglas fixtures, complete
+  packet cross-term identities, progressive non-density, predecessor/source/
+  PDF/surface contracts, and T4 scope firewalls;
 - exit code zero.
 
-The nine-page proof note passes the standard form check, zero-overfull gate,
+The eleven-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_hessian_difference_safe_packet_doob_bracket_manifest.json`
-- `notes/classii-hessian-difference-safe-packet-doob-bracket-reduction-260725-v1.0.tex.txt`
-- `notes/classii-hessian-difference-safe-packet-doob-bracket-reduction-260725-v1.0.pdf`
-- `../../codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket.py`
-- `../../codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_independent.py`
-- `../../codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_verify.py`
-- `runs/2026-07-25-primary-hessian-difference-safe-packet-doob-bracket/result.json`
-- `runs/2026-07-25-independent-hessian-difference-safe-packet-doob-bracket/result.json`
-- `runs/2026-07-25-integrated-hessian-difference-safe-packet-doob-bracket/result.json`
-- `../../negative-results/registry.md#audit-2026-07-25-a13-r077-packet-definition`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-ahigh-absolute-and-automatic-bracket`
-- `../../negative-results/registry.md#audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution`
+- `classii_cartan_tail_adapted_near_temporal_reduction_manifest.json`
+- `notes/classii-cartan-tail-adapted-near-temporal-reduction-260725-v1.0.tex.txt`
+- `notes/classii-cartan-tail-adapted-near-temporal-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction.py`
+- `../../codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction_independent.py`
+- `../../codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction_verify.py`
+- `runs/2026-07-25-primary-cartan-tail-adapted-near-temporal-reduction/result.json`
+- `runs/2026-07-25-independent-cartan-tail-adapted-near-temporal-reduction/result.json`
+- `runs/2026-07-25-integrated-cartan-tail-adapted-near-temporal-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-rootwise-deterministic-far-and-half-derivative`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-absolute-control-control-pair-high`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-oneshot-graph-progressive-nondensity`
 
 The resonant phase-root predecessor remains binding:
 
@@ -1189,6 +1254,18 @@ source or rendered PDF, a source/PDF hash mismatch, failed nine-page PDF QA,
 or failure of the primary `24/24`, independent `15/15`, integrated `92/92`,
 and aggregate `131/131` contracts.
 
+The R-081 continuation is additionally falsified by failure of the exact
+production polynomial--Cartan current split, the quotient-vector Lipschitz
+ceiling, far support disappearance, deterministic relative-gap theorem,
+fixed-coefficient injection covariance, half-derivative endpoint sequence,
+factorised first-order vector Doob--Burkholder budget, the nonlinear `D_j`
+witness, exact secant--Jensen decomposition, gain or pair-high ledger, temporal
+Cauchy--Douglas factorisation, the executed complete-packet cross-term
+identity, the one-mode non-density witness, any predecessor/source/note/PDF
+hash pin, the eleven-page zero-form visual-QA contract, any manifest-pinned
+primary/independent/integrated/aggregate count, or any promoted FAR, NEAR,
+progressive, one-use, Nelson, measure, or Sector-A honesty flag.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1317,6 +1394,20 @@ complete packet lower bound, its extension to every finite-energy drift,
 controlled-shell one-use, Nelson, an
 interacting measure, floor/regulator removal, infinite volume, phase
 transition, BCC selection, Sector-A closure, or T5--T7. A13 remains T4.
+
+The full-current/low-object/Cartan-tail chain R-079--R-081 closes the exact
+complete packet algebra, both regular no-revisit low objects, far feedback
+square completion, the production polynomial--Cartan localization,
+deterministic Cartan relative-gap decay, the explicitly factorised first-order
+NEAR input budget, the exact secant--Jensen decomposition, and temporal packet
+factorisation.  These reductions do not estimate the upper-triangular Jensen
+defect or prove the martingale-root-resolved complete-current FAR sum, a lower-
+chaos-complete adapted NEAR operator, a signed control--control balanced-root estimate, an
+overlap-stable progressive packet lower bound, or the variational extension.
+They therefore do not establish controlled-shell one-use, Nelson, an
+interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
+one-shot non-density theorem rules out only that approximation route; it is
+not a counterexample to the complete progressive action.
 
 ## History
 
@@ -1480,3 +1571,25 @@ transition, BCC selection, Sector-A closure, or T5--T7. A13 remains T4.
   `176/176` and aggregate `233/233` are pinned in the manifest. The nine-page PDF passed
   direct all-page visual QA. The full packet reconstruction, weighted
   innovation bound, one-use, Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-079. The complete covariance-normal current and
+  safe packet now have an exact root-first Doob decomposition retaining the
+  injected/future cross term, positive squares, covariance traces, forest,
+  low boundary, and paid subtraction. The weighted control square function
+  is one-use and the predictable base-current heat identity is exact, but
+  generic weighted Cauchy and automatic square--trace positivity fail.
+- 2026-07-25: Registered R-080. Both low objects close in the regular
+  mutually orthogonal no-revisit class, and far feedback square completion
+  reduces FAR to `S_C`. NEAR is localized to one hidden adapted coefficient;
+  target heat, bounded near width, universal rootwise sign, and variational
+  inclusion do not close the remaining gates.
+- 2026-07-25: Registered R-081 and its v1.0.2 adversarial repair. The current
+  splits into a far-vanishing polynomial channel and one heat-Cartan channel;
+  deterministic relative-gap decay, the half-derivative boundary, factorised
+  first-order NEAR input budget, exact secant--Jensen split, nonlinear `D_j`
+  factorisation no-go, pair-high no-go, temporal Douglas factorisation, and
+  one-shot progressive non-density are proved. Executable complete-packet
+  cross-term fixtures replace self-attestation, the Cartan symbol is explicit,
+  the claim surface is current, and the integrated verifier enforces its
+  manifest counts. The witness does not preclude a cancellation after full
+  packet recombination, so FAR, Jensen-defect/complete NEAR, overlap-stable progression, one-use,
+  Nelson, and Sector A remain open; tier stays T4.

@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-081 adversarial contract and nonlinear-NEAR repair] - 2026-07-25
+
+Supersedes the initial pre-audit R-081 run counts. The verifier now enforces manifest counts and the live claim surface; both child audits execute a nonzero complete-packet cross term; the Cartan theorem names the heat-averaged quotient vector explicitly. A production two-root shell-carrier witness disproves complete nonlinear coefficient factorisation through D_j alone and yields the exact secant-plus-Jensen split, with no claim against possible cancellation after full packet recombination. The final contracts are primary 60/60, independent 47/47, integrated 148/148, aggregate 255/255. The rebuilt eleven-page PDF has zero overfull boxes, no forms or encryption, and all pages passed direct Poppler-render visual QA. Tier remains T4; FAR, Jensen-defect/complete NEAR, PROG, one-use, Nelson, and Sector A remain open.
+
+## [R-081 Cartan tail, adapted NEAR budget, and temporal packet reduction] - 2026-07-25
+
+Recorded the exact polynomial/Cartan production-current split, deterministic relative-gap FAR theorem, fixed-coefficient half-derivative boundary, vector-valued adapted NEAR budget and exact gain ledger, absolute control-control pair-high no-go, temporal Cauchy-Douglas factorisation, complete-packet algebraic temporalisation, and one-shot graph non-density. Primary 60/60, non-importing independent 47/47, integrated 133/133, aggregate 240/240. The ten-page zero-form PDF passed Poppler render and visual QA; the first inspection caught literal qquad/le3 markup, which was corrected and re-rendered before acceptance. Root-resolved FAR, complete adapted/signed NEAR, overlap-stable progression, controlled-shell one-use, Nelson, and Sector-A closure remain open.
+
 ## [R-080 regular low-object closure, far square reduction, and progressive boundary] - 2026-07-25
 
 Closed both distinct R-079 low objects for the declared regular no-revisit one-shot class. Exact orthogonal square completion reduces far terminal feedback to the localized predictable base-current tail S_C; the near residual has predictable explicit payload but a hidden future-adapted coefficient. Registered the target-heat/root-gap, bounded-near/rootwise-sign, and regular-graph-to-progressive no-gos. FAR, NEAR, full-progressive extension, one-use, Nelson, and Sector A remain open. Primary 51/51, independent 35/35, integrated 123/123, aggregate 209/209; nine-page PDF visually verified.

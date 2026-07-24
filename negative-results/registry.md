@@ -6,6 +6,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL](#audit-2026-07-25-a13-r081-pre-release-contract-symbol) | R-081 pre-release manifest, claim-card, symbol, and executable-evidence audit | the first package did not enforce manifest run counts, left `claim.md` at R-078, used an undefined `Mbar` in the Cartan tail theorem, and self-attested complete-packet temporalisation without executing its cross term; all four defects were repaired before commit |
+| [NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE](#ng-2026-07-25-a13-rootwise-deterministic-far-and-half-derivative) | A13 FAR closure by summing deterministic spatial tails rootwise or using only `H^(1/2-)` coefficient regularity | the deterministic current has real relative-gap decay, but its ledger is critical at every root; the fixed-coefficient triangular injection norm is `H^(1/2)`-critical and an explicit uniformly `H^(1/2-delta)` sequence diverges linearly |
+| [NG-2026-07-25-A13-ABSOLUTE-CONTROL-CONTROL-PAIR-HIGH](#ng-2026-07-25-a13-absolute-control-control-pair-high) | A13 NEAR route based on absolutely extracting another comparable control factor | the exact Young slack becomes `(gamma-1-2 theta)/6<0` throughout `0<gamma<1/10`, so the control--control branch must remain signed with the complete square--trace--forest packet |
+| [NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION](#ng-2026-07-25-a13-nonlinear-coefficient-dja-factorisation) | A13 complete nonlinear NEAR coefficient represented only through `D_j=d_jA*` | an admissible two-root later control has `d_jA=d_jDA=0` but a nonzero production coefficient-curvature innovation; the exact conditional Jensen defect is an additional upper-triangular branch |
+| [NG-2026-07-25-A13-ONESHOT-GRAPH-PROGRESSIVE-NONDENSITY](#ng-2026-07-25-a13-oneshot-graph-progressive-nondensity) | A13 approximation of all progressive controls by the R-075 one-shot graph | a bounded one-mode progressive control has a terminal displacement at positive `L2` distance from every initially measurable one-shot displacement, even with independent auxiliary randomness |
 | [NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP](#ng-2026-07-25-a13-target-heat-root-shell-gap) | A13 far gain from target heat projection or canonical weighted CM control alone | target heat acts in the six-real value variable rather than physical space, while strict-past later-shell controls saturate the canonical weights independently of the probability-root/spatial-shell gap |
 | [NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY](#ng-2026-07-25-a13-near-width-and-rootwise-positivity) | A13 near route using bounded shell width or universal rootwise PSD/Ward sign | bounded width corresponds to zero gain and zero Young slack; an exact production square--trace--forest fixture is strictly negative, although a coupled frequency-local budgeted estimate is not refuted |
 | [NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT](#ng-2026-07-25-a13-regular-graph-progressive-revisit) | A13 inference from regular one-shot graph recovery to all progressive/revisit controls | the variational infimum direction is wrong for this inference, and a same-range cancellation makes the separate conditional-low loss quartic while final charge is fixed and control cost is quadratic |
@@ -77,6 +82,138 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-25-a13-r081-pre-release-contract-symbol"></a>
+### AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL -- manifest, claim surface, Cartan symbol, and executable evidence repaired
+
+**Failure mode:** The first R-081 integrated wrapper recomputed its own row
+count but never compared it with `manifest.run_contract`, so the package called
+the integrated and aggregate counts manifest-pinned without enforcing that
+claim.  The live claim card ended at R-078, although the ledger and status
+surfaces cited R-079--R-081.  The relative-gap theorem wrote an undefined
+`Mbar`, obscuring whether it meant the full frame or the nonlinear Cartan
+coefficient.  Finally, complete-packet temporalisation was represented by a
+literal true assertion rather than an executed identity retaining the
+injected/future cross term.
+
+**Evidence:** Verifier v1.0.1 checks the manifest primary, independent,
+integrated, and aggregate counts against the computed final row total and now
+requires both the claim and changelog surfaces.  The claim card records
+R-079--R-081 and their open boundaries.  The theorem now defines
+`P_Sigma F_A` explicitly as the heat-averaged Cartan quotient vector.  Both
+executables evaluate complete packet identities in overlapping physical
+ranges with a nonzero `f_j i_j` cross term.  The note/PDF and all hashes are
+rebuilt after these repairs.
+
+**Consequence:** No Cartan sign, factor, relative-gap exponent, NEAR ledger,
+Douglas factorisation, or non-density conclusion changed.  The repair makes
+the evidence contract fail closed; R-081 remains T4 and FAR, complete NEAR,
+overlap-stable progression, one-use, Nelson, and Sector A remain open.
+
+<a id="ng-2026-07-25-a13-nonlinear-coefficient-dja-factorisation"></a>
+### NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION -- complete nonlinear coefficient innovation is not determined by `d_jA*`
+
+**Failure mode:** Treat the complete future-adapted coefficient, covariance
+trace, or square--trace--forest innovation as a linear or Lipschitz operator
+of the single diagonal control martingale difference `D_j=d_jA*`.
+
+**Evidence:** Let `eps_j,eps_(j+1)` be independent Rademacher roots and insert
+the later admissible control
+`A=lambda eps_(j+1)(1+c eps_j)e_1` at a shell `p>j+1`.  Then
+`d_jA=d_jDA=0`, but `d_j|A|^2=2c lambda^2 eps_j`.  More specifically, for
+the production trace along the pure-doublet ray,
+
+`h(t)=12c_0t^2+c_1[12t^2-8 alpha t^4/(t^2+e)
++4 alpha^2t^6/(t^2+e)^2]`, `alpha=5/9`,
+
+one has
+`d_jh(A)=24(c_0+c_1)c lambda^2 eps_j+O(lambda^4)`, which is nonzero for
+small nonzero `lambda`.  Both executables reproduce the zero linear root and
+nonzero quadratic root with independent coefficient choices.
+
+**Consequence:** For `a_j=P_jA*` and
+`D_j=a_j-a_(j-1)`, the exact nonduplicating identity is
+
+`d_jH(A*)=integral_0^1 DH(a_(j-1)+tD_j)D_j dt
++(Dfrak_j^H-Dfrak_(j-1)^H)`, where
+`Dfrak_j^H=P_jH(A*)-H(a_j)`.
+
+Only the first secant may enter the diagonal vector estimate based on `D_j`.
+The upper-triangular Jensen-defect/all-higher-chaos branch must remain with the
+signed square, trace, forest, compensator, and control--control terms.  This
+narrows NEAR-G/NEAR-C without refuting a complete adapted NEAR theorem.
+
+<a id="ng-2026-07-25-a13-rootwise-deterministic-far-and-half-derivative"></a>
+### NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE -- deterministic FAR decay does not supply the martingale-root sum
+
+**Failure mode:** Close R-080's localized base-current tail by applying an
+ordinary deterministic spatial tail estimate separately at every probability
+root, or by combining fixed-coefficient injection with only the natural
+`H^(1/2-delta)` regularity of the production coefficient.
+
+**Evidence:** R-081 proves for every `0<s<1` the genuine relative-gap estimate
+`||Pi_(>=N Lambda)[(P_Sigma F_A)(z)^T Dz]||_2^2 <=
+C_(e,s)N^(-2s)||z||_(H2)||z||_6^3`.  Its one-root budget is exactly
+`N^(-2s)X^(1/2)Y^(1/2)`, so a rootwise application repeats the same global
+critical payment.  Independently, predictable fixed-coefficient Gaussian
+injection is bounded by
+`sum_m sum_(j<=m-C)2^j||Pi_m f_j||_2^2`.  The sequence
+`||Pi_m f^(J)||_2^2=2^(-m)` is uniformly bounded in every
+`H^(1/2-delta)`, while the triangular norm grows as `2^(-C)J`.  Primary and
+independent Fourier audits reproduce both ledgers.
+
+**Consequence:** The deterministic relative-gap theorem and exact production
+polynomial/Cartan split remain valid advances.  FAR requires a martingale-root-
+resolved paracomposition/Carleson estimate, or an equivalent signed square--
+trace--forest cancellation, retaining derivative injection, value innovation,
+and heat compensator together.  This is not a counterexample to the complete
+packet, one-use, or Nelson.
+
+<a id="ng-2026-07-25-a13-absolute-control-control-pair-high"></a>
+### NG-2026-07-25-A13-ABSOLUTE-CONTROL-CONTROL-PAIR-HIGH -- absolute pair-high harvest is supercritical
+
+**Failure mode:** Obtain the missing NEAR gain by exposing one additional
+comparable control factor in the pure control--control high pair and paying
+that factor in absolute value from Cameron--Martin and terminal-sextic budgets.
+
+**Evidence:** R-081 first proves the vector-valued adapted input budget
+`X_D^(1/10)Y_D^(2/15)`.  If the desired lower-chaos-complete operator supplies
+gain `gamma`, the base ledger has slack `gamma/6`.  An additional control
+factor with interpolation fraction `theta` costs
+`X^(theta/2)Y^((1-theta)/6)`, leaving the exact slack
+`(gamma-1-2 theta)/6<0` for every `0<gamma<1/10` and `theta>=0`.  Two
+non-importing rational implementations verify the sign throughout the
+declared range.
+
+**Consequence:** The pure control--control branch must remain signed with the
+terminal current square, covariance trace, heat compensator, paid subtraction,
+and complete R-063 forest.  A fresh-Gaussian/control adapted operator route and
+a production-specific signed control--control lemma remain admissible.  The
+no-go does not falsify NEAR or the complete one-use theorem.
+
+<a id="ng-2026-07-25-a13-oneshot-graph-progressive-nondensity"></a>
+### NG-2026-07-25-A13-ONESHOT-GRAPH-PROGRESSIVE-NONDENSITY -- the regular one-shot graph is not progressive-dense
+
+**Failure mode:** Prove the full progressive/revisit theorem by approximating
+every Boue--Dupuis control with the mutually orthogonal one-shot whole-shell
+graph covered by R-075.
+
+**Evidence:** At one scalar cutoff with `J_t=1`, the bounded simple progressive
+control `u_t=tanh(W_(1/2))1_(1/2,1]` has endpoint
+`A=(1/2)tanh(W_(1/2))`.  Every one-shot displacement in the only physical
+range is initially measurable.  Even with independent auxiliary randomness,
+centering and independence give
+`E|A-a|^2=E|A|^2+E|a|^2>=E|A|^2>0`.  Simpson and independent Gauss--Hermite
+quadratures reproduce the strictly positive endpoint variance.  Refining time
+creates strict-past packets but all covariance ranges remain the same physical
+mode.
+
+**Consequence:** R-075 remains correct in its declared graph.  R-081 instead
+proves causal Douglas factorisation and complete R-079 algebraic temporalisation
+for overlapping bounded-simple packets.  The missing theorem is an overlap-
+stable lower bound for the recombined complete packet, followed by fixed-cutoff
+admissible-core/truncation and lower-semicontinuity arguments.  This no-density
+result is not a counterexample to that lower bound, one-use, or Nelson.
 
 <a id="ng-2026-07-25-a13-target-heat-root-shell-gap"></a>
 ### NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP -- target heat and canonical CM weights do not create a far gap

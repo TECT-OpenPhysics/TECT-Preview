@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-081](#r-081) | Cartan current tails, adapted near budgets, and temporal packet reduction | Scoped T4 analytic/exact/executed reduction: the production current splits into a quadratic polynomial channel and one heat-averaged nonlinear Cartan channel; the polynomial channel vanishes at separated outputs, while a deterministic relative-gap theorem gives `2^(-2sC)X^(1/2)Y^(1/2)` for every `0<s<1`. Fixed predictable Gaussian injection is governed by a triangular `H^(1/2)` endpoint norm, and `H^(1/2-)` alone is insufficient. Vector-valued Doob--Burkholder interpolation closes the input budget and exact gain ledger for an explicitly factorised first-order NEAR response. A production two-root witness has `d_jA=0` but nonzero coefficient innovation, so the complete nonlinear branch also requires its upper-triangular Jensen defect; absolute control--control pair-high extraction is supercritical. Bounded-simple progressive packets factor causally and preserve the complete R-079 algebra despite range overlap, while an exact one-mode witness proves that the R-075 one-shot graph is not progressive-dense. Root-resolved FAR, complete NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-080](#r-080) | Regular low-object absorption, far square completion, and progressive-revisit boundary | Scoped T4 analytic/exact/executed reduction: both R-079 low objects admit arbitrary terminal-sextic absorption uniformly in the cutoff for mutually orthogonal strict-past one-shot controls with no low-range revisit. Orthogonal far-shell completion retains both feedback channels and reduces the far loss to one localized predictable base-current tail; the near residual has predictable explicit `A^2 DA` payload but a hidden future-adapted high--high-to-low coefficient. Target heat and weighted CM identities give no automatic root/shell gap, bounded near width gives zero Young slack, universal rootwise positivity fails, and R-075 graph recovery does not extend a restricted lower bound to every progressive/revisit control. FAR, NEAR, and full-progressive extension remain open; one-use, Nelson, and Sector A are not closed; assertion count is pinned by the manifest |
 | [R-079](#r-079) | Full safe-packet frame-current Doob decomposition and weighted-route boundary | Scoped T4 exact/analytic/executed reduction: the complete renormalised frame-current endpoint has an exact Hilbert-current Doob decomposition into one conditional low-current term, present-control increments, and future-control innovations, with the future cross term retained. Subtracting the already paid `N3_nr+T_<=` block gives the canonical safe packet without deleting the complete low endpoint. A spatially weighted Cameron--Martin square function spends control energy once, and a backward-heat formula exactly projects the base current. The terminal future-feedback current still contains coefficient and derivative-feedback commutators. Generic Cauchy/weighted-square-function, expected-budget-to-BMO, spatial-gain, and adapted Wick carre-du-champ shortcuts fail; a positive `gamma`-gain estimate would close by a finite moment, but the production near/far theorem, one-use bound, Nelson synthesis, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-078](#r-078) | Hessian-difference safe packet and Doob-bracket reduction | Scoped T4 exact/analytic/executed reduction: the R-076 third-order transport has an exact bounded Hessian-difference representation with `A^2 DA` payload. At `s=3/5` the input-maximum payment is `X^(2/5)Y^(11/30)` with slack `7/30` and moment `30/7`. Subtraction from the complete endpoint followed by one causal projection defines the canonical safe packet; exact Doob algebra identifies the future-control innovation-bracket mechanism for factorised bilinear components, whose unweighted coefficient coordinate has one square-function bound. The declared high-`U` principal closes with moment `60/19`. Absolute `A`-high summation and automatic bracket-plus-square positivity fail; exact full-packet bracket reconstruction, its weighted bound, and Sector A remain open; assertion count is pinned by the manifest |
@@ -100,7 +101,79 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
-<a id="r-079"></a>
+<a id="r-081"></a>
+### R-081 -- Cartan current tails, adapted near budgets, and temporal packet reduction
+
+**Result ID.**
+`A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION`.
+
+**Statement.** For each production generator, write
+`rho_e=|z|^2+e`, `n_A=z^T S_A z`, `q_A=n_A/rho_e`, and `F_A=q_A z`.
+Then the heat-averaged current columns are exactly
+`D n_A` and `D n_A-2(P_Sigma F_A)(z)^T Dz`.  The quotient vector is odd
+and globally Lipschitz with production ceiling three, target heat preserves
+that ceiling, and the polynomial `D n_A` channel has no output sufficiently
+far above a band-limited input.
+
+For `0<s<1`, a `2^j`-band-limited deterministic field obeys the relative-gap
+bound
+`||Pi_(>=j+C)[(P_Sigma F_A)(z)^T Dz]||_2^2 <= C_(e,s) 2^(-2sC)
+||z||_(H2)||z||_6^3`.  Its budget is exactly
+`2^(-2sC)X^(1/2)Y^(1/2)`.  This is genuine spatial decay but not the
+root-resolved FAR theorem: applying it independently at every martingale root
+repeats a critical global budget.  Predictable fixed-coefficient injection
+reduces to a triangular half-derivative norm, and an explicit dyadic sequence
+is uniformly `H^(1/2-delta)` for every `delta>0` while that triangular norm
+grows linearly.
+
+For the NEAR martingale differences `D_j=d_j(A*-P_ell A*)`, Hilbert Doob,
+`L6`-valued Burkholder, and vector interpolation give the exact input cost
+`X_D^(1/10)Y_D^(2/15)` for a response already factorised through `D_j`.  A
+gain `gamma>0` would therefore have powers
+`a=1/2-gamma/4`, `b=1/2+gamma/12`, slack `gamma/6`, and random moment
+`6/gamma`; at `gamma=1/20` these are `39/80`, `121/240`, `1/120`, and
+`120`.  This is not the complete nonlinear coefficient: an admissible
+two-Rademacher later control has `d_jA=d_jDA=0` but a nonzero root of the
+actual production coefficient trace.  Exactly, if `a_j=P_jA*` and
+`Dfrak_j^H=P_jH(A*)-H(a_j)`, then `d_jH(A*)` is the `D_j` secant plus
+`Dfrak_j^H-Dfrak_(j-1)^H`.  The latter upper-triangular Jensen-defect branch
+must remain in the signed complete packet.  Exposing one extra comparable control factor makes the pure
+control--control pair-high slack `(gamma-1-2 theta)/6<0`, so that branch must
+remain signed with square, trace, compensator, paid subtraction, and forest.
+
+Every bounded simple progressive time packet satisfies
+`a_k=Delta C_k^(1/2)h_k` with
+`||h_k||^2<=|I_k|||u_k||^2`.  Hence the complete R-079 packet algebra
+temporalizes even when physical covariance ranges overlap.  The R-075
+one-shot graph does not: the one-mode control
+`u_t=tanh(W_(1/2))1_(1/2,1]` has positive terminal `L2` distance from every
+initially measurable one-shot displacement, even with independent auxiliary
+randomness.  The successor is an overlap-stable complete-packet lower bound,
+not a one-shot density argument.
+
+**Boundary.** Root-resolved FAR, the adapted lower-chaos-complete NEAR
+operator, the signed control--control NEAR lemma, the overlap-stable
+progressive packet lower bound and variational extension, controlled-shell
+one-use, `q=10/9` Nelson, the interacting measure, removal limits, and
+Sector-A closure remain open. Tier stays T4.
+
+**Proven in.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-cartan-tail-adapted-near-temporal-reduction-260725-v1.0`, with
+primary 60/60, non-importing independent 47/47, and manifest-pinned integrated
+verification.
+
+**Reuse scope.** Rational-frame current decompositions, stochastic
+paracomposition at a half-derivative endpoint, vector-valued adapted-control
+budgets, and temporal covariance-packet factorisation.
+
+**Publication target.** Stochastic geometric/paracontrolled methods note with
+R-050, R-063, and R-075--R-080 after root-resolved FAR, signed/adapted NEAR,
+one-use, and Nelson synthesis are resolved.
+
+---
+
+<a id="r-080"></a>
 ### R-080 -- Regular low-object absorption, far square completion, and progressive-revisit boundary
 
 **Result ID.**
@@ -156,6 +229,7 @@ paper after FAR, NEAR, and progression close.  The full progressive estimate,
 controlled-shell one-use, Nelson bound, interacting measure, removal limits,
 and Sector-A closure remain open.
 
+<a id="r-079"></a>
 ### R-079 -- Full safe-packet frame-current Doob decomposition and weighted-route boundary
 
 **Result ID.**

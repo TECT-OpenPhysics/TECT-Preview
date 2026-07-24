@@ -45,6 +45,11 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL | manifest, claim surface, Cartan symbol, and executable evide | The first R-081 integrated wrapper recomputed its own row |
+| NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION | complete nonlinear coefficient innovation is not determined  | Treat the complete future-adapted coefficient, covariance |
+| NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE | deterministic FAR decay does not supply the martingale-root  | Close R-080's localized base-current tail by applying an |
+| NG-2026-07-25-A13-ABSOLUTE-CONTROL-CONTROL-PAIR-HIGH | absolute pair-high harvest is supercritical | Obtain the missing NEAR gain by exposing one additional |
+| NG-2026-07-25-A13-ONESHOT-GRAPH-PROGRESSIVE-NONDENSITY | the regular one-shot graph is not progressive-dense | Prove the full progressive/revisit theorem by approximating |
 | NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP | target heat and canonical CM weights do not create a far gap | Use the R-079 predictable base-current heat projection, or |
 | NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY | bounded near width and universal rootwise sign do not close  | Treat `\|m-j\|<=C` as an analytic gain, or declare the complete |
 | NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT | regular graph recovery does not imply the full progressive b | After proving a lower bound for mutually orthogonal |
