@@ -1,0 +1,206 @@
+{
+  "anti_centering": {
+    "bracket": -0.19245008972987515,
+    "carrier_imag": 2.9615290531833046e-19,
+    "carrier_real": 1.0,
+    "charged": -0.31221877153331623,
+    "mean_h": 0.5773502691896255,
+    "threshold": 6.7597346921555435,
+    "variance": 0.05694013108331229
+  },
+  "assertions": [
+    {
+      "actual": -2.914335439641036e-16,
+      "expected": 0.0,
+      "name": "quadrature_cubic_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.942890293094024e-16,
+      "expected": 0.0,
+      "name": "quadrature_hessian_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.6236126038934344e-11,
+      "expected": 0.0,
+      "name": "finite_difference_dA_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": -7.228015685978306e-10,
+      "expected": 0.0,
+      "name": "finite_difference_dU_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": -1.9984014443252818e-15,
+      "expected": 0.0,
+      "name": "independent_endpoint_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.4207189720640397,
+      "expected": ">0",
+      "name": "independent_metric_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.5681900222830335e-17,
+      "expected": 0.0,
+      "name": "independent_doob_bracket",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551115123125783e-17,
+      "expected": 0.0,
+      "name": "independent_polarization",
+      "status": "PASS"
+    },
+    {
+      "actual": -2.7755575615628914e-17,
+      "expected": 0.0,
+      "name": "independent_square_function",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.19519350334329091,
+      "expected": ">0",
+      "name": "independent_square_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/5",
+      "expected": "2/5",
+      "name": "independent_payload_x",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/30",
+      "expected": "11/30",
+      "name": "independent_payload_y",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/30",
+      "expected": "7/30",
+      "name": "independent_payload_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "30/7",
+      "expected": "30/7",
+      "name": "independent_payload_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/40",
+      "expected": "11/40",
+      "name": "independent_high_x",
+      "status": "PASS"
+    },
+    {
+      "actual": "49/120",
+      "expected": "49/120",
+      "name": "independent_high_y",
+      "status": "PASS"
+    },
+    {
+      "actual": "19/60",
+      "expected": "19/60",
+      "name": "independent_high_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "60/19",
+      "expected": "60/19",
+      "name": "independent_high_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "-121/600",
+      "expected": "<-1/5",
+      "name": "independent_a_high_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5773502691896255,
+      "expected": "1/sqrt(3)",
+      "name": "gh_mean",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.19245008972987515,
+      "expected": "-1/(3sqrt(3))",
+      "name": "gh_negative_bracket",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.05694013108331229,
+      "expected": ">0",
+      "name": "gh_variance_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.31221877153331623,
+      "expected": "<0",
+      "name": "gh_charged_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        1.0,
+        2.9615290531833046e-19
+      ],
+      "expected": [
+        1.0,
+        0.0
+      ],
+      "name": "complex_carrier_one",
+      "status": "PASS"
+    }
+  ],
+  "assertions_passed": 24,
+  "assertions_total": 24,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "claims_not_established": {
+    "controlled_shell_one_use": false,
+    "nelson_bound": false,
+    "sector_a_closure": false,
+    "weighted_innovation_bracket": false
+  },
+  "doob": {
+    "bracket_error": 1.5681900222830335e-17,
+    "polarization_error": 5.551115123125783e-17,
+    "square_error": -2.7755575615628914e-17,
+    "square_sum": 0.19519350334329091
+  },
+  "endpoint": {
+    "metric_floor": 0.4207189720640397,
+    "residual": -1.9984014443252818e-15
+  },
+  "exponents": {
+    "a_high_limit": "-1/5",
+    "a_high_slack": "-121/600",
+    "high_moment": "60/19",
+    "high_slack": "19/60",
+    "high_x": "11/40",
+    "high_y": "49/120",
+    "payload_moment": "30/7",
+    "payload_slack": "7/30",
+    "payload_x": "2/5",
+    "payload_y": "11/30"
+  },
+  "imports_primary": false,
+  "result_id": "A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION",
+  "schema": "tect/a13-hessian-safe-packet-doob-independent/1.0",
+  "source_version": "1.0.0",
+  "status": "PASS",
+  "taylor": {
+    "cubic_error": -2.914335439641036e-16,
+    "d_a_error": 4.6236126038934344e-11,
+    "d_x_error": -7.228015685978306e-10,
+    "direct": 0.05706591137478001,
+    "hessian_error": 1.942890293094024e-16
+  }
+}

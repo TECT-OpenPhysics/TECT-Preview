@@ -181,6 +181,22 @@ endpoint theorem.
     `m>r+L` high-high-to-low signed packet, retained with both first
     variations, terminal square, full Wick forest, curvature, trace, and
     finite-low boundary before graph recovery, one-use, and Nelson synthesis.
+19. **Hessian-difference safe packet and innovation-bracket frontier.**
+    R-078, `A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`,
+    reassembles the exact third-order transport through the bounded Hessian
+    difference with `A^2 DA` payload. At `s=3/5` the payment becomes
+    `X^(2/5)Y^(11/30)` with slack `7/30` and moment `30/7`. Subtraction from
+    the complete endpoint followed by one causal projection gives the
+    canonical safe packet and repairs R-077's descriptive companion list.
+    Exact Doob algebra identifies the future-control innovation-bracket
+    mechanism for each factorised bilinear component, whose unweighted
+    coefficient coordinate has one Hilbert square-function bound. It does not
+    yet decompose the entire nonlinear safe packet. The declared high-`U`
+    principal closes through R-050 with moment `60/19`. Termwise absolute
+    `A`-high summation and automatic bracket-plus-square positivity are retired;
+    exact full-packet reconstruction and the spatially weighted innovation
+    bound remain the current child before graph recovery, one-use, and Nelson
+    synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

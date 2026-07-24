@@ -19,7 +19,7 @@ A6 UV and K definitions
   -> A8 decoupled Nelson reference
   -> A9 interpolation cancellation
   -> A10-A13 replacement/no-go lineage
-  -> A13 coefficient-dominant signed packet and one-use estimate (open)
+  -> A13 future-control weighted innovation bracket and one-use estimate (open)
   -> A7 Nelson/Gibbs reassembly (open)
 ```
 
@@ -37,9 +37,18 @@ and both nonresonant paraproducts, while exact fixtures exclude affine
 positivity and a separated shifted-multiplier route. R-077 then proves that
 complete fresh-Gaussian endpoint packets are Doob differences with zero signed
 expectation and closes every payload-comparable `m<=r+L` shifted-resonance
-orientation with the same fifteenth moment. The current child is now
-`A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`, the complementary
-`m>r+L` signed block with the complete endpoint forest retained, followed by
+orientation with the same fifteenth moment. R-078,
+`A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`,
+reassembles the exact transport through a bounded Hessian difference with
+`A^2 DA` payload and moment `30/7`, and defines the canonical safe packet. Its
+exact bilinear Doob lemma identifies a future-control innovation-bracket
+mechanism only for factorised components. The unweighted coefficient square
+function is one-use and the declared high-`U` principal closes with moment
+`60/19`, but the exact full-packet reconstruction and required spatial weight
+remain open. The current child is now
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, beginning with the
+exact packet-to-bracket/commutator identity and the complete endpoint forest,
+followed by
 R-075 graph recovery and the umbrella one-use estimate.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.

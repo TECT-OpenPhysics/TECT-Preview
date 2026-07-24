@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET)_
-  - R-077 proves exact signed cancellation of complete fresh-Gaussian Doob packets and closes the entire payload-comparable shifted-resonance block with the existing fifteenth moment, including ties and payload high--high-to-low interactions. The pair-high thirtieth-moment refinement is valid but dominated, and AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY corrects the old raw monomial root map. The sole remaining analytic gate is the coefficient-dominant high--high-to-low signed packet coupled to both R-073 first variations, terminal-square polarization, coefficient curvature, the complete R-063 forest, R-066 trace, and finite-low terms. After that bound, apply R-075 graph recovery, R-066 one-use, and q=10/9 Nelson synthesis.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
+  - R-078 proves the exact Hessian-difference A^2 DA coordinate with moment 30/7, the canonical safe-packet definition, a factorised-bilinear Doob innovation lemma with one unweighted Hilbert square-function use, and the declared high-U principal with moment 60/19. Pre-release audit records that the full nonlinear packet-to-bracket/commutator decomposition was not proved and that every term in the complete low-end safe endpoint must be retained. First derive that exact decomposition; then prove the spatially weighted innovation-Carleson lower bound, apply R-075 graph recovery, assemble controlled-shell one-use, and return to q=10/9 Nelson. Sector A remains open.
   - _updated 2026-07-24_
 
 ## Next up

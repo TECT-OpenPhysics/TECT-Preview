@@ -437,11 +437,16 @@ ledger and an input-maximum Besov proof with energy powers
 `X^(2/5)Y^(8/15)`, Young slack `1/15`, and a fifteenth moment. R-077 then
 replaces the proposed raw three-class taxonomy: complete fresh-Gaussian Doob
 packets cancel in signed expectation, and the entire payload-comparable
-`m<=r+L` shifted-resonance form closes with the same fifteenth moment. The
-current child is
-`A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`; its `m>r+L`
-residual must retain every lower chaos and restored endpoint term in one
-signed causal identity. The umbrella theorem remains open.
+`m<=r+L` shifted-resonance form closes with the same fifteenth moment. R-078
+reassembles the exact transport through a bounded Hessian difference with
+`A^2 DA` payload, improves the comparable payment to moment `30/7`, defines
+the safe packet by canonical subtraction and one causal projection, and
+identifies the future-control innovation-bracket mechanism for each factorised
+bilinear component. The current child is
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`; it must first derive
+the exact full-packet bracket/commutator identity, with every lower chaos and
+restored endpoint term retained in one signed causal identity.
+The umbrella theorem remains open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -469,12 +474,15 @@ recovery. R-076 then proves the exact endpoint ledger and sharp
 control-independent cubic Besov payment. R-077 replaces its proposed raw root
 taxonomy by complete-packet Doob centering and a direct two-way scale split.
 The fresh-Gaussian packets cancel only in signed expectation and every
-payload-comparable `m<=r+L` orientation closes with the fifteenth moment. The
-current child is the coefficient-dominant `m>r+L` signed packet. Arbitrary
-adapted substitution has infinite Hermite content, so R-063's deterministic
-finite forest cannot simply be relabelled as complete. A separated shifted
-multiplier, automatic Wick centering, and geometry-only one-use remain
-excluded.
+payload-comparable `m<=r+L` orientation closes with the fifteenth moment.
+R-078 gives the exact `A^2 DA` Hessian coordinate and moment `30/7`, the
+canonical complete-companion packet, the exact factorised-bilinear innovation
+lemma, and a moment-`60/19` high-`U` principal. The exact full-packet bracket
+reconstruction and its spatially weighted future-control bound are the current
+child. Arbitrary adapted substitution
+has infinite Hermite content, so R-063's deterministic finite forest cannot
+simply be relabelled as complete. A separated shifted multiplier, automatic
+Wick centering, and geometry-only one-use remain excluded.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
 
@@ -723,9 +731,13 @@ and equal-frequency fixtures exclude positivity and separated shifted-
 multiplier shortcuts. R-077 replaces the proposed raw root classes by complete
 fresh-Gaussian Doob packets and a direct two-way scale split. It closes the
 signed fresh-root packet expectation and the whole payload-comparable
-`m<=r+L` orientation; the coefficient-dominant `m>r+L` signed packet is the
-current child below. Exact isolated `1:2` and `1:3` adapted harmonics remain
-summable and do not falsify the global statement. This signed remainder,
+`m<=r+L` orientation. R-078 reassembles the exact remainder in the bounded
+Hessian-difference coordinate, improves its comparable moment to `30/7`, and
+defines the canonical safe packet. Its generic bilinear Doob lemma identifies
+a future-control innovation-bracket mechanism, but does not decompose the
+entire nonlinear packet. The unweighted coefficient square function and
+high-`U` principal do not provide the required spatial weight. Exact isolated `1:2` and `1:3` adapted harmonics
+remain summable and do not falsify the global statement. The weighted bracket,
 one-use, Nelson theorem, and any tier promotion remain open.
 
 ### **A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY**
@@ -741,7 +753,7 @@ phase-root cancellation or a genuinely adapted two-control derivative gain
 `rho=gamma-delta>0` with probability moments strictly above `3/rho`.
 R-063's unshifted coefficient-jet regularity is not such a theorem.
 
-**Status:** REDUCED THROUGH R-077 (2026-07-25). R-073 proves exact
+**Status:** REDUCED THROUGH R-078 (2026-07-25). R-073 proves exact
 familywise reassembly, the full raw-current telescope identity,
 projector-free completion on the kernel-projector rank-2/3/6 strata, and
 exact terminal-kernel cancellation after both separated first variations are
@@ -756,10 +768,13 @@ complete nonduplicating endpoint ledger, proves the sharp input-maximum cubic
 Besov payment, and closes the control-independent and nonresonant analytic
 branches. R-077 proves exact signed-expectation cancellation for complete
 fresh-Gaussian Doob packets and closes the full payload-comparable
-`m<=r+L` shifted-resonance block with the fifteenth moment. The unresolved
-content is precisely the coefficient-dominant `m>r+L` high--high-to-low
-signed packet below, not an undifferentiated phase-root positivity claim.
-Tier remains T4.
+`m<=r+L` shifted-resonance block with the fifteenth moment. R-078 replaces the
+globally nonoptimal cubic coordinate by the exact `A^2 DA` Hessian difference,
+defines the complete safe packet canonically, and identifies the factorised-
+bilinear future-control innovation mechanism. The gate below must first derive
+the exact full packet-to-bracket/commutator decomposition and then its spatially
+weighted lower bound. This is not an
+undifferentiated phase-root positivity claim. Tier remains T4.
 
 ### **A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM**
 
@@ -777,7 +792,7 @@ resonance-subtracted positive-gain construction is admissible only if its
 subtraction and every lower-chaos replacement are proved inside the same
 signed endpoint identity.
 
-**Status:** REDUCED THROUGH R-077 (2026-07-25). R-075 proves a global
+**Status:** REDUCED THROUGH R-078 (2026-07-25). R-075 proves a global
 projector-free invariant-current representation and exact Taylor chart across
 the rank-jumping strata. Its principal unshifted tensor is a canonical
 `C^(-1/2-kappa)` R-050 one-form with every finite moment and the required
@@ -789,11 +804,14 @@ positivity and a separated shifted multiplier are unavailable. It does not
 call the invariant variables a nondegenerate tip coordinate, the principal
 tensor gauge-complete, or a standalone rough resonance constructed. R-077
 Doob-centers only complete fresh-root packets and closes every
-payload-comparable `m<=r+L` orientation. The complementary coefficient-
-dominant `m>r+L` form must still retain the R-063 lower chaoses, both restored
-first variations, terminal square, coefficient-curvature/Wick channel, trace
-transport, and finite-low boundary in the signed successor below. Tier
-remains T4.
+payload-comparable `m<=r+L` orientation. R-078 then gives the exact `A^2 DA`
+Hessian coordinate, canonical complete-companion safe packet, factorised-
+bilinear innovation lemma, and declared high-`U` moment `60/19`. The exact
+full-packet bracket reconstruction and spatially weighted future-control bound
+must still retain the R-063 lower chaoses,
+both restored first variations, terminal square, coefficient-curvature/Wick
+channel, trace transport, and finite-low boundary in the signed successor
+below. Tier remains T4.
 
 ### **A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER**
 
@@ -812,7 +830,7 @@ for all `eta,zeta>0`, uniformly in the cutoff. A valid proof may use a signed
 Ward/martingale telescope, causal freezing relative to each fresh root, or a
 proved adapted arbitrary-multiplier shifted-enhancement theorem.
 
-**Status:** REDUCED THROUGH R-077 (2026-07-25). R-076
+**Status:** REDUCED THROUGH R-078 (2026-07-25). R-076
 `A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION` gives
 the exact nonduplicating ledger and corrects the coarse R-075 estimate:
 `R X^(2/5)Y^(8/15)` has `1/15` Young slack and closes the control-independent
@@ -825,8 +843,13 @@ raw monomial trichotomy by an exact sequential split. Complete
 fresh-Gaussian endpoint packets are Doob differences with zero signed
 expectation, while the entire payload-comparable `m<=r+L` shifted-resonance
 orientation closes by one global Young inequality and the fifteenth moment.
-The disjoint complement is the coefficient-dominant `m>r+L` high--high-to-low
-packet below. Do not claim absolute Doob summability, center lower chaoses
+R-078 reassembles the same exact transport through the bounded Hessian
+difference with payload `A^2 DA`, proving the sharper moment `30/7`; it
+defines the residual by subtraction from the complete endpoint and one causal
+projection. Exact Doob algebra identifies a future-control innovation bracket
+for each factorised bilinear component. The gate below must derive the exact
+full nonlinear packet decomposition before proving its weighted bound. Do not
+claim absolute Doob summability, center lower chaoses
 separately, construct a standalone `L-infinity times C^(-s)` resonance,
 suppress the transport tail, freeze a terminal adapted coefficient as finite
 chaos, omit the `DA=0` channel, split away either first variation, or use a
@@ -849,16 +872,45 @@ conditional compensator, and the finite-low boundary. Doob-center only a
 complete largest-fresh-root endpoint packet. Any input-frequency rooting must
 remain valid under ties, Wick contraction, and high--high-to-low output.
 
-**Status:** OPEN CURRENT CHILD (2026-07-25), isolated by R-077
-`A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION`. The complementary
-payload-comparable orientation and complete fresh-Gaussian Doob packets are
-closed. Opposite Fourier carriers show that `T_>` has a nonzero low output,
-so deterministic support separation provides no decay. The restricted pair-
-high estimate is valid but dominated and does not control this full signed
-packet. Once this regular-control inequality is established, apply R-075
-fixed-cutoff predictable graph recovery, assemble
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE` through the R-066 one-use
-ledger, and return to `q=10/9` Nelson synthesis. Tier remains T4.
+**Status:** REDUCED TO AN EXACT FULL-PACKET RECONSTRUCTION AND WEIGHTED
+INNOVATION GATE THROUGH R-078 (2026-07-25). The Hessian reassembly supersedes the cubic
+coordinate for this transport: its explicit payload is `A^2 DA`, with moment
+`30/7`. R-077's descriptive companion list is repaired by subtracting every
+proved orientation from the complete endpoint and applying one causal
+projection. The coefficient-dominant problem is not closed; exact Doob
+algebra identifies the innovation-bracket mechanism for factorised bilinear
+components, while the next gate must reconstruct the entire nonlinear packet
+before estimating it.
+
+### **A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET**
+
+**Statement:** For regular mutually orthogonal whole-shell strict-past
+controls and uniformly in the terminal cutoff, prove the lower bound for the
+canonical safe packet `B_(J,safe)^>`, defined by subtracting every proved
+orientation from the complete endpoint and applying the causal projection
+once. First derive an exact packet-to-bracket/commutator identity for the full
+nonlinear packet. Then control the resulting spatially weighted bracket
+between each future-control coefficient innovation and complete current
+innovation, together with the high-coefficient commutators, so that for every
+`eta,zeta>0`,
+
+`E B_(J,safe)^> >= -eta E X-zeta E Y-C_(eta,zeta,e,j0)`.
+
+Terminal-square polarization, coefficient curvature, both R-073 restored
+first variations, the complete R-063 forest, R-066 trace transport, and every
+term in the low-end safe endpoint must be retained in that exact decomposition
+before the weighted innovation-Carleson estimate is applied.
+
+**Status:** OPEN CURRENT CHILD (2026-07-25), isolated by R-078
+`A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`. The
+`A^2 DA` payload-comparable block closes with moment `30/7`, the factorised-
+bilinear coefficient innovation obeys one Hilbert square-function estimate,
+and the declared high-`U` principal closes with moment `60/19`. R-078 does not
+prove that the entire nonlinear safe packet admits this bracket form, and
+neither proved estimate supplies the required spatial weight. Termwise absolute `A`-high summation has negative
+Young slack, and an exact bounded adapted fixture refutes automatic bracket-
+plus-square positivity; these are method no-gos, not production
+counterexamples. Controlled-shell one-use, Nelson, and Sector A remain open.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

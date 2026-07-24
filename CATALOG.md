@@ -6,7 +6,7 @@
 
 Generated: 2026-07-25
 
-**2456 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**2465 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -92,13 +92,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_sharp_cube_budget_obstruction_manifest.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `e16ad41f1925` |
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/classii_source_square_reduction_manifest.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `f1e12ad869ff` |
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/status.json` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `e2bfaa8bc00b` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/LINEAGE.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `366b3c6f3b7e` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/claim.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `2591a10b898a` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/LINEAGE.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `ab5b869c9b5f` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/claim.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `1d0a07c0cbef` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_backward_heat_martingale_square_coupled_cartan_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `e87295342b51` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_balanced_coefficient_jet_continuum_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `3ef0a619df67` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_causal_packet_payload_resonance_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `8c0681561b8e` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_coefficient_jet_forest_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `d75158604bcc` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_endpoint_lifted_schur_causal_grouping_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `0d0880c00284` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_hessian_difference_safe_packet_doob_bracket_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `fca05c997d6c` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_invariant_current_principal_oneform_graph_recovery_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `bd4dfd72e3a3` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_joint_source_potential_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `fcfc084bd152` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_npc_cone_martingale_injection_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `19be437a6b6d` |
@@ -113,8 +114,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_translation_model_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `de737fb0a23a` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_universal_q_cm_translation_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `b5d3976a6275` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_wick_doob_terminal_resolvent_reduction_manifest.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `f9976cbdc01e` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/lineage-narrative.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `c44c5b6f96d1` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `f0c564e2e14d` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/lineage-narrative.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `949b8f1527ad` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `66a63d68df6a` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/LINEAGE.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `04ace7f6a3b6` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/MANIFEST.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `7a17dd8d9ed3` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/README.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `ef36d86e3e97` |
@@ -592,6 +593,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-coefficient-jet-forest-classification-260722-v1.0.tex.txt` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-22 | 2026-07-22 | v1.0 | ACTIVE | `3a4d1bcec06e` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0.pdf` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-24 | 2026-07-24 | v1.0 | ACTIVE | `73d0b2f3c8c4` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0.tex.txt` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-24 | 2026-07-24 | v1.0 | ACTIVE | `5fb13e659f44` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-hessian-difference-safe-packet-doob-bracket-reduction-260725-v1.0.pdf` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-25 | 2026-07-25 | v1.0 | ACTIVE | `e7891ec88f62` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-hessian-difference-safe-packet-doob-bracket-reduction-260725-v1.0.tex.txt` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-25 | 2026-07-25 | v1.0 | ACTIVE | `dc87ac0a19d2` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0.pdf` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-24 | 2026-07-24 | v1.0 | ACTIVE | `77af079bb287` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0.tex.txt` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-24 | 2026-07-24 | v1.0 | ACTIVE | `c41e2ed40409` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-joint-source-potential-reduction-260721-260722-v1.1.pdf` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-21 | 2026-07-22 | v1.1 | ACTIVE | `d8ec8e710a93` |
@@ -1770,8 +1773,11 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-signed-transport-besov-bregman-resonance/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `8ddf8c5c7f91` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-wick-doob-terminal-resolvent-reduction/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | 2026-07-24 | 2026-07-24 | — | ACTIVE | `824ab130da10` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-25-independent-causal-packet-payload-resonance/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `674fcc3cdcd2` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-25-independent-hessian-difference-safe-packet-doob-bracket/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `33e60ed8c57a` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-25-integrated-causal-packet-payload-resonance/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `2864f37990f2` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-25-integrated-hessian-difference-safe-packet-doob-bracket/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `e55a74594b73` |
 | `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-25-primary-causal-packet-payload-resonance/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `992985b250a5` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-25-primary-hessian-difference-safe-packet-doob-bracket/result.json` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `710e6e0f5b6f` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-coercivity-baseline/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `b9df1470a98f` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-energy-continuation-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `21c7f16a6bc5` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/bundle/A2-Full-Production-WellPosedness-T6-260717/claims/A2-FULL-PRODUCTION-WELLPOSED/runs/2026-07-17-nonlinear-mapping-audit/result.json` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `37d0dd3a37b7` |
@@ -2150,6 +2156,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction.py` | — | 2026-07-24 | 2026-07-24 | v1.0.0 | ACTIVE | `2b74aba80b40` |
 | `codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_independent.py` | — | 2026-07-24 | 2026-07-24 | v1.0.0 | ACTIVE | `e34bf2714b69` |
 | `codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_verify.py` | — | 2026-07-24 | 2026-07-24 | v1.0.0 | ACTIVE | `883b2d18ad02` |
+| `codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket.py` | — | 2026-07-25 | 2026-07-25 | v1.0.0 | ACTIVE | `2c014bbd9ef2` |
+| `codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_independent.py` | — | 2026-07-25 | 2026-07-25 | v1.0.0 | ACTIVE | `60ace7a897b7` |
+| `codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_verify.py` | — | 2026-07-25 | 2026-07-25 | v1.0.0 | ACTIVE | `45e532454fbc` |
 | `codes/foundations/a13_classii_joint_source_potential_reduction.py` | — | 2026-07-21 | 2026-07-22 | v1.0.1 | ACTIVE | `4b3289356318` |
 | `codes/foundations/a13_classii_joint_source_potential_reduction_independent.py` | — | 2026-07-21 | 2026-07-22 | v1.0.1 | ACTIVE | `0bc07dee8d39` |
 | `codes/foundations/a13_classii_joint_source_potential_reduction_verify.py` | — | 2026-07-21 | 2026-07-22 | v1.0.1 | ACTIVE | `44357fe1cbbd` |
@@ -2350,7 +2359,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `7725f73e1254` |
+| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `66557e1ad19e` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
 | `verification/scripts/build_dossier.py` | — | — | — | v1.0.1 | ACTIVE | `0606af696b63` |
@@ -2411,7 +2420,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION/INDEX.md` | A10-CLASSII-RELATIVE-COMMUTATOR-REDUCTION | — | — | — | ACTIVE | `1180b452b238` |
 | `claims/A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION/INDEX.md` | A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION | — | — | — | ACTIVE | `36f88dfa22f3` |
 | `claims/A12-CLASSII-SOURCE-SQUARE-REDUCTION/INDEX.md` | A12-CLASSII-SOURCE-SQUARE-REDUCTION | — | — | — | ACTIVE | `50046bd653a2` |
-| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `ee1d27a395cc` |
+| `claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/INDEX.md` | A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION | — | — | — | ACTIVE | `1b8b793cddf7` |
 | `claims/A2-FULL-PRODUCTION-WELLPOSED/INDEX.md` | A2-FULL-PRODUCTION-WELLPOSED | — | — | — | ACTIVE | `2a71ae9f614f` |
 | `claims/A2-PDE-WELLPOSED/INDEX.md` | A2-PDE-WELLPOSED | — | — | — | ACTIVE | `8c5bd466dd45` |
 | `claims/A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM/INDEX.md` | A3-FULL-PRODUCTION-DISCRETIZATION-CONTINUUM | — | — | — | ACTIVE | `eef78219b446` |
@@ -2429,9 +2438,9 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/B3-BCC-STRUCT/INDEX.md` | B3-BCC-STRUCT | — | — | — | ACTIVE | `bff9174efdd8` |
 | `claims/B4-MASS-GAP/INDEX.md` | B4-MASS-GAP | — | — | — | ACTIVE | `b6f0151ce96a` |
 | `claims/B5-BEYOND-LAYER-BOUND/INDEX.md` | B5-BEYOND-LAYER-BOUND | — | — | — | ACTIVE | `327466118728` |
-| `claims/GATES.md` | — | — | — | — | ACTIVE | `3d44677f4655` |
-| `claims/INDEX.md` | — | — | — | — | ACTIVE | `10e35ec1259e` |
-| `negative-results/registry.md` | — | — | — | — | ACTIVE | `d8f8338f6c85` |
+| `claims/GATES.md` | — | — | — | — | ACTIVE | `c353cf28b8c6` |
+| `claims/INDEX.md` | — | — | — | — | ACTIVE | `77ae77e203cd` |
+| `negative-results/registry.md` | — | — | — | — | ACTIVE | `fbb6a0554977` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
 | `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83bfdd2f5b48` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `cff4e6dca4b9` |
@@ -2453,7 +2462,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `governance/proof-exploration-ledger.md` | — | — | — | — | ACTIVE | `cc1168a535ac` |
 | `governance/publication-tiers.md` | — | — | — | — | ACTIVE | `fbd6ff2c40e7` |
 | `governance/reproduction-bundle-policy.md` | — | — | — | — | ACTIVE | `7ed313152f47` |
-| `governance/sector-a-theorem-map.json` | — | — | — | — | ACTIVE | `1ccf39c74b2b` |
+| `governance/sector-a-theorem-map.json` | — | — | — | — | ACTIVE | `438f83def9c3` |
 | `governance/sector-dossier.md` | — | — | — | — | ACTIVE | `50615cb99e21` |
 | `governance/tier-system.md` | — | — | — | — | ACTIVE | `cb629bcfc7d5` |
 | `governance/toe-completeness-audit-260609.md` | — | — | — | — | ACTIVE | `e11733e4cbd2` |
@@ -2465,16 +2474,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `6b0ebac5fdaa` |
-| `CLAIMS.md` | — | — | — | — | ACTIVE | `b327a243a7e2` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `dce95d153862` |
+| `CLAIMS.md` | — | — | — | — | ACTIVE | `bcb2cf54e7eb` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
 | `README.md` | — | — | — | — | ACTIVE | `6e6f51f5a6af` |
-| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `798c416822eb` |
+| `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `b43887728269` |
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `b5e54659ddf5` |
-| `ROADMAP.md` | — | — | — | — | ACTIVE | `63027b09b374` |
+| `ROADMAP.md` | — | — | — | — | ACTIVE | `17d1bb5d6ad5` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `af8ecee121e9` |
-| `TODO.md` | — | — | — | — | ACTIVE | `a9ee694232ca` |
+| `TODO.md` | — | — | — | — | ACTIVE | `7e9fb800d8e0` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `a916258ff44b` |
 
 ## Other tracked files
@@ -2484,8 +2493,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `40c1a72e0187` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `f710ca1b8155` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `0175cab7cac1` |
+| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `74323a93f326` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -2526,19 +2535,19 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
-| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `36bf83bedad6` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `2418abc7dbc7` |
-| `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `4f859384aa7c` |
+| `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `9b0ee9c1bfc3` |
+| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `b2f1e4512cbc` |
+| `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `15bd24e010b1` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
 | `theory/sector-D-gauge-matter/README.md` | — | — | — | — | ACTIVE | `1285bbca6f1a` |
 | `theory/sector-E-constants/README.md` | — | — | — | — | ACTIVE | `47ecae72f999` |
 | `theory/sector-F-cosmology/README.md` | — | — | — | — | ACTIVE | `22c6652a7226` |
-| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `a711493bb2ba` |
+| `theory/sectors/A.md` | — | — | — | — | ACTIVE | `bc82451d40ee` |
 | `theory/sectors/B.md` | — | — | — | — | ACTIVE | `0348e578f8e7` |
 | `theory/sectors/C.md` | — | — | — | — | ACTIVE | `2a9a223ee980` |
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `a4f8eba2a79e` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `c22a362480ee` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `5e65f7f63d2e` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `1a94e2ae7236` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `b9febf2371f0` |
 

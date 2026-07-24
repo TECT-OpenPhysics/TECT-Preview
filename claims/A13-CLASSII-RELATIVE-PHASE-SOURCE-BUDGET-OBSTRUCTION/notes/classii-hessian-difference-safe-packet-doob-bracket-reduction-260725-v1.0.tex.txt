@@ -1,0 +1,692 @@
+% =============================================================================
+% Title: Hessian-difference transport, canonical safe packet, and Doob bracket
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION
+% Ledger: R-078
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 exact/analytic reduction; weighted innovation bracket open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-25): exact Hessian-difference representation of the R-076
+% third-order transport; improved A^2 DA Besov/Young ledger; an unambiguous
+% complete-companion packet; an exact bilinear Doob innovation lemma and
+% square-function identity; high-U principal enhancement; and sharp method
+% counterfixtures.  A pre-release audit narrowed the packet-to-bracket scope,
+% repaired the complete low-end endpoint, and added direct R-069/R-070 credit.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Id}{\mathrm I}
+
+\section{Purpose and scope}
+
+R-077 closed complete fresh-Gaussian Doob packets in signed expectation and
+the payload-comparable part of the R-076 shifted resonance.  It left a
+coefficient-dominant form $T_>$ and described a complete signed companion
+packet $\mathfrak B_J^>$ by listing the terms which it should contain.
+
+This note makes two corrections before another inequality is attempted.
+First, the cubic Taylor representation used in R-076 is exact but is not the
+best global coordinate.  The same remainder has an exact Hessian-difference
+representation with explicit payload $A^2DA$, not $A^3DA$.  This improves the
+payload-comparable Young remainder from moment $15$ to moment $30/7$.
+
+Second, the descriptive list in R-077 does not uniquely assign the terminal
+square, coefficient curvature, lower Wick chaoses, trace, and finite-low
+boundary to individual Bony channels.  Such an assignment is not canonical:
+R-063 proves equality of its two second-jet parenthesisations only after the
+complete forest is summed.  We therefore define the remaining packet by
+subtracting proved orientations from the complete endpoint functional and
+apply the causal projection once to that whole bracket.
+
+The resulting probability algebra is exact for every packet component which
+admits the predictable-multiplier/current-increment factorisation displayed
+below.  A coefficient predictable before that current increment centers, but
+a later adapted coefficient leaves its Doob innovation.  This identifies a
+predictable quadratic-covariation mechanism, not an exact bracket
+representation of the entire nonlinear safe packet.  Its unweighted
+coefficient coordinate obeys one Hilbert square-function bound.  The high-$U$
+principal orientation is closed by the canonical R-050 enhancement with
+moment $60/19$.  The exact full-packet reconstruction and its future-control
+weighted bound are not closed here: a termwise absolute route has negative
+Young slack, and an exact bounded adapted fixture shows that a bracket plus
+its positive square has no automatic sign.
+
+All statements are at finite cutoff and uniformly in that cutoff at a fixed
+positive production floor.  The physical covariance and filtration remain
+the pinned common real-even sharp cubes.  Smooth Littlewood--Paley blocks are
+used only for analysis.  This result does not prove the weighted bracket,
+controlled-shell one-use, the $q=10/9$ Nelson moment, an interacting measure,
+floor or regulator removal, infinite volume, or Sector-A closure.
+
+\section{Exact Hessian-difference transport}
+
+Suppress generator, spatial-direction, and tensor sums.  Put
+\[
+ M_0=M(U),\qquad M_1=M(U+A),\qquad D=DM(U)[A],             \tag{2.1}
+\]
+\[
+ E=M_1-M_0-D=E_2+E_3,\qquad
+ E_2={1\over2}D^2M(U)[A,A].                               \tag{2.2}
+\]
+R-076 used
+\[
+ E_3={1\over2}\int_0^1(1-t)^2
+             D^3M(U+tA)[A,A,A]\dd t.                       \tag{2.3}
+\]
+Integrating the fundamental theorem of calculus in the opposite order gives
+the exact alternative
+\[
+ \boxed{
+ E_3=\int_0^1(1-t)\widehat K_t[A,A]\dd t,
+ \qquad
+ \widehat K_t=D^2M(U+tA)-D^2M(U).}                         \tag{2.4}
+\]
+Indeed,
+\[
+ \int_0^1(1-t)\int_0^t f(s)\dd s\dd t
+ ={1\over2}\int_0^1(1-s)^2f(s)\dd s.                     \tag{2.5}
+\]
+Thus (2.3) and (2.4) are identical at every smooth cutoff.  No Taylor order
+is discarded.
+
+The production frame has bounded derivatives of every fixed order at the
+fixed positive floor.  In particular, (2.4) gives
+\[
+ |E_3|\le 2\sup_z\|D^2M(z)\|\,|A|^2.                       \tag{2.6}
+\]
+There are also exact tame derivative identities
+\[
+ D_AE_3[h]
+ =\{DM(U+A)-DM(U)-D^2M(U)[A]\}[h],                        \tag{2.7}
+\]
+\[
+ \begin{split}
+ D_UE_3[h]={}&DM(U+A)[h]-DM(U)[h]-D^2M(U)[h,A]\\
+ &-{1\over2}D^3M(U)[h,A,A].
+ \end{split}                                               \tag{2.8}
+\]
+The first right side is a first-order remainder of $DM$ and the second is a
+second-order remainder of $DM$.  Combining their small-$A$ integral forms
+with the global bounded-derivative forms yields
+\[
+ \boxed{
+ |D_AE_3[h]|\le C_e|A||h|,
+ \qquad |D_UE_3[h]|\le C_e|A|^2|h|.}                      \tag{2.9}
+\]
+Consequently, schematically but with tensorwise bounded coefficients,
+\[
+ D_xE_3=O_e(A^2)DU+O_e(A)DA.                              \tag{2.10}
+\]
+The earlier cubic formula remains useful near $A=0$, but a proof which treats
+its $A^3$ payload and shifted $D^3M$ multiplier separately destroys the
+global quadratic cancellation in (2.4).
+
+Let
+\[
+ J=M(U)^TDU.                                                \tag{2.11}
+\]
+The R-076 $E_3$--$C$ transport is now
+\[
+ \boxed{
+ N_3=\int_0^1(1-t)
+ \langle J,Q_{\rm II}[\widehat K_t[A,A]]^TDA\rangle\dd t.} \tag{2.12}
+\]
+This is the coordinate used below.
+
+\section{Sharpened quadratic-payload Besov theorem}
+
+Let $0<s<1$ and $A\in H^2(\mathbb T_L^3)\cap L^6$.  Assign every monomial
+in $A^2DA$ to its largest input Littlewood--Paley index, with a fixed tie
+rule, and write
+\[
+ A^2DA=\sum_{r\ge-1}H_r.                                  \tag{3.1}
+\]
+Every $H_r$ is supported in a ball of radius $C2^r$, including its
+high--high-to-low outputs.  The same input-maximum proof as in R-076, now
+with two undifferentiated factors, gives
+\[
+ \|H_r\|_{B^s_{1,1}}
+ \lesssim 2^{(1+s)r}\|\Delta_rA\|_2\|A\|_6^2.             \tag{3.2}
+\]
+The fixed torus embeds the intermediate $L^{6/5}$ product into $L^1$.
+Summing and using the R-076 interpolation
+\[
+ \|A\|_{B^{1+s}_{2,1}}
+ \lesssim\|A\|_{H^2}^{(1+s)/2}\|A\|_6^{(1-s)/2}          \tag{3.3}
+\]
+proves
+\[
+ \boxed{
+ \|A^2DA\|_{B^s_{1,1}}
+ \lesssim_s
+ \|A\|_{H^2}^{(1+s)/2}\|A\|_6^{(5-s)/2}.}               \tag{3.4}
+\]
+
+Let $X=\|A\|_{H^2}^2$, $Y=\|A\|_6^6$, and let $R$ be the
+$\cC^{-s}$ norm of a control-independent reconstructed current.  Then
+\[
+ R\|A^2DA\|_{B^s_{1,1}}
+ \lesssim RX^aY^b,\qquad
+ a={1+s\over4},\quad b={5-s\over12},\quad
+ c=1-a-b={2-s\over6}.                                    \tag{3.5}
+\]
+One global weighted Young inequality gives
+\[
+ \boxed{
+ RX^aY^b\le\eta X+\zeta Y+
+ C_s\eta^{-a/c}\zeta^{-b/c}R^{1/c}.}                    \tag{3.6}
+\]
+At the existing $s=3/5$,
+\[
+ (a,b,c)=\left({2\over5},{11\over30},{7\over30}\right),
+ \quad {1\over c}={30\over7},                            \tag{3.7}
+\]
+and hence
+\[
+ \boxed{
+ RX^{2/5}Y^{11/30}
+ \le\eta X+\zeta Y+
+ C\eta^{-12/7}\zeta^{-11/7}R^{30/7}.}                   \tag{3.8}
+\]
+Every finite moment is available for the R-050 current.  Therefore the
+nonresonant and payload-comparable orientations of (2.12) close with moment
+$30/7$.  R-077's moment-$15$ cubic-coordinate estimate remains correct, but
+it is superseded for this exact transport by (3.8).
+
+\section{Canonical complete-companion packet}
+
+Put $G=DU$, $C=DA$ and
+\[
+ w=M_0^TG,\qquad \Delta w=(D+E_2+E_3)^TG,
+ \qquad c=M_1^TC,                                        \tag{4.1}
+\]
+\[
+ Q_J=G\otimes G-\Gamma_J,\qquad
+ F_A=B(U+A)-B(U)-DB(U)[A].                                \tag{4.2}
+\]
+The exact covariance-normal first variation is
+\[
+ \mathcal S_{0,\Gamma}
+ ={1\over2}\langle DB(U)[A],Q_J\rangle
+ +\langle M_0^TG,Q_{\rm II}M_0^TC\rangle.                \tag{4.3}
+\]
+Define
+\[
+ L=\langle w,Q_{\rm II}D^TC\rangle,\qquad
+ N_2=\langle w,Q_{\rm II}E_2^TC\rangle,                  \tag{4.4}
+\]
+and retain the complete endpoint bracket
+\[
+ \mathcal P
+ ={1\over2}\langle F_A,Q_J\rangle
+ +\langle\Delta w,Q_{\rm II}c\rangle
+ +{1\over2}|c|_{Q_{\rm II}}^2.                            \tag{4.5}
+\]
+R-075 (3.8) and R-076 (2.6) give exactly
+\[
+ \boxed{
+ \Delta V_J^{\rm ren}
+ =\mathcal S_{0,\Gamma}+L+N_2+N_3+\mathcal P.}           \tag{4.6}
+\]
+Here $\mathcal S_{0,\Gamma}$ contains both R-073 restored first
+variations and their Wick trace.  Also,
+\[
+ \mathcal P
+ =\langle w,Q_{\rm II}(E_2+E_3)^TG\rangle
+ +{1\over2}|\Delta w+c|_{Q_{\rm II}}^2
+ -{1\over2}F_A:\Gamma_J,                                 \tag{4.7}
+\]
+so the terminal square and coefficient curvature occur exactly once.
+
+Use the same smooth analysis partition in (2.12).  Split
+\[
+ N_3=N_{3,{\rm nr}}+\widehat T_{\le}+\widehat T_>,        \tag{4.8}
+\]
+where $N_{3,{\rm nr}}$ contains the two nonresonant paraproducts and
+\[
+ \widehat T_{\le}
+ =\int_0^1(1-t)\sum_r
+ \sum_{\substack{|m-n|\le L\\m\le r+L}}
+ \int\langle(\Delta_m\widehat K_t)(\Delta_nJ),
+ Q_{\rm II}H_r\rangle\dd x\dd t,                         \tag{4.9}
+\]
+\[
+ \widehat T_>
+ =\int_0^1(1-t)\sum_r
+ \sum_{\substack{|m-n|\le L\\m>r+L}}
+ \int\langle(\Delta_m\widehat K_t)(\Delta_nJ),
+ Q_{\rm II}H_r\rangle\dd x\dd t.                        \tag{4.10}
+\]
+Equality belongs to $\widehat T_{\le}$.  Equations (4.8)--(4.10) are a
+disjoint exhaustive cutoff identity.
+
+The algebraic safe remainder is defined by subtraction from the complete
+functional:
+\[
+ \boxed{
+ \mathfrak B_{J,{\rm alg}}^>
+ :=\Delta V_J^{\rm ren}-N_{3,{\rm nr}}-\widehat T_{\le}
+ =\mathcal S_{0,\Gamma}+L+N_2+\widehat T_>+\mathcal P.}  \tag{4.11}
+\]
+This definition, unlike the descriptive R-077 list, assigns no individual
+lower chaos or square fragment to $\widehat T_>$.  The whole
+$F_A:Q_J$ term is interpreted only through the complete R-063
+$\mathrm P_3/\mathrm P_1$ and
+$\mathrm P_4/\mathrm P_2/\Sigma Q/\mathrm P_0$ forest.
+
+For a terminal functional $F(A)$ define the complete predictable projection
+\[
+ \mathcal C_JF
+ :=\sum_{k=j_0}^J
+ \E[ F(A^{(k)})-F(A^{(k-1)})\mid\cF_{k-1}].              \tag{4.12}
+\]
+Then
+\[
+ \E\mathcal C_JF
+ =\E\{F(A^{(J)})-F(A^{(j_0-1)})\}.                      \tag{4.13}
+\]
+The canonical causal packet is
+\[
+ \boxed{
+ \mathfrak B_{J,{\rm safe}}^>
+ :=\mathcal C_J[\mathfrak B_{J,{\rm alg}}^>].}          \tag{4.14}
+\]
+The initial endpoint in (4.13) is
+$\mathfrak B_{J,{\rm alg}}^>(A^{(j_0-1)})$.  Its $\Delta V_{\rm ren}$
+component is the R-066 finite-low endpoint; the values
+$N_{3,{\rm nr}}(A^{(j_0-1)})$ and
+$\widehat T_{\le}(A^{(j_0-1)})$ are also retained and must be absorbed by the
+fixed-low estimate.  No low-end term is discarded or asserted to vanish.
+Crucially, $\mathcal C_J$ is applied once to the complete bracket.  Applying
+it separately to forest or square fragments would change the packet and can
+reintroduce the R-063 associator.
+
+{\raggedright
+The correction of the previous descriptive object is recorded as
+\texttt{AUDIT-2026-07-25-A13-R077-PACKET-DEFINITION}.  It changes no proved
+R-077 identity or bound.\par}
+
+\section{Exact bilinear innovation-bracket lemma}
+
+Let $P_j=\E[\,\cdot\mid\cF_j]$ and $d_j=P_j-P_{j-1}$.  Let $Y_j=d_jY$ be a
+complete Hilbert-valued current packet, let $H$ be a terminal adapted
+coefficient, let $P$ be $\cF_{j-1}$-measurable, and let $\Lambda$ be any
+deterministic continuous bilinear spatial contraction.  Then
+\[
+ \boxed{
+ \E\Lambda(P,H,Y_j)=\E\Lambda(P,d_jH,Y_j).}             \tag{5.1}
+\]
+Indeed $P_jH=P_{j-1}H+d_jH$, and the predictable term centers against
+$Y_j$.  Equivalently, for $H_j=P_jH$ and $Y_j=P_jY$,
+\[
+ \boxed{
+ \E_{j-1}[\langle H_j,Y_j\rangle-
+             \langle H_{j-1},Y_{j-1}\rangle]
+ =\E_{j-1}\langle d_jH,d_jY\rangle.}                    \tag{5.2}
+\]
+Thus, for every component admitting the factorisation in (5.1), complete Doob
+projection replaces the terminal coefficient by its innovation and leaves a
+predictable quadratic-covariation bracket, not zero and not a Malliavin
+derivative.  Equations (4.14) and (5.1) do not by themselves prove that the
+terminal square, coefficient curvature, complete Wick forest, trace, and
+low-end terms in the entire nonlinear safe packet admit one such bracket
+representation.  That exact packet-to-bracket reconstruction remains part of
+the successor gate.
+
+If the exact companion in one fixed Hilbert metric is
+$\|d_jH\|^2/2$, ordinary polarization gives
+\[
+ \boxed{
+ \langle d_jH,d_jY\rangle+{1\over2}\|d_jH\|^2
+ ={1\over2}\{\|d_j(H+Y)\|^2-\|d_jY\|^2\}.}             \tag{5.3}
+\]
+The final negative term is the fresh injection restored by the R-069/R-070
+raw-to-Wick trace.  In an adapted production metric, curvature and Wick
+compensators remain; (5.3) supplies no standalone sign.
+
+The Hilbert martingale square function is nevertheless genuinely one-use:
+\[
+ \sum_j\E\|d_jH\|^2
+ =\E\|H-P_{j_0-1}H\|^2\le\E\|H\|^2.                    \tag{5.4}
+\]
+Conditional projections commute with deterministic smooth spatial blocks,
+so the same statement holds after summing their $L_x^2$ squares.  Since
+\[
+ |\widehat K_t|
+ \le t\sup_z\|D^3M(z)\|\,|A|,                            \tag{5.5}
+\]
+one obtains
+\[
+ \boxed{
+ \int_0^1(1-t)\sum_{j,m}\E
+ \|\Delta_m d_j\widehat K_t\|_2^2\dd t
+ \lesssim_e\E\|A\|_2^2.}                               \tag{5.6}
+\]
+This controls the unweighted innovation coordinate once.  It does not yet
+control the spatially weighted bracket in (4.14).
+
+\section{The high-$U$ principal orientation}
+
+First paralinearisation of the Hessian difference gives
+\[
+ \widehat K_t
+ =T_{C_t}U+tT_{D^3M(U+tA)}A+\widehat K_t^\sharp,
+ \qquad C_t=D^3M(U+tA)-D^3M(U).                         \tag{6.1}
+\]
+The rough principal of $J$ is $T_{M(U)^T}DU$.  Define the oriented high-$U$
+principal by
+\[
+ \mathfrak J_{U,t}
+ :=T_{C_tM(U)^T}(U\circ DU).                             \tag{6.2}
+\]
+This is an exact declared Bony subterm, not a claim that every commutator has
+already been assigned.  At fixed floor $C_t$ is uniformly bounded, while
+$M(U)$ has every finite $L^p(\Omega;L^\infty)$ moment.  R-050 supplies the
+canonical enhancement $U\circ DU\in\cC^{-\varepsilon}$ in every finite
+moment.  Hence
+\[
+ R_U:=\sup_{t\in[0,1]}\|\mathfrak J_{U,t}\|_{\cC^{-\varepsilon}}
+ \in\bigcap_{p<\infty}L^p(\Omega),                       \tag{6.3}
+\]
+with a norm independent of the chosen control magnitude.
+
+Pairing (6.2) with the quadratic payload and using (3.4) at
+$s=\varepsilon$ gives
+\[
+ |T_{U,{\rm pr}}|
+ \lesssim R_U X^{(1+\varepsilon)/4}Y^{(5-\varepsilon)/12}.
+                                                                    \tag{6.4}
+\]
+Its slack and moment are
+\[
+ c_U={2-\varepsilon\over6},\qquad p_U={6\over2-\varepsilon}. \tag{6.5}
+\]
+At $\varepsilon=1/10$,
+\[
+ X^{11/40}Y^{49/120},\qquad c_U={19\over60},\qquad
+ p_U={60\over19},                                        \tag{6.6}
+\]
+and
+\[
+ \boxed{
+ |T_{U,{\rm pr}}|
+ \le\eta X+\zeta Y+
+ C\eta^{-33/38}\zeta^{-49/38}R_U^{60/19}.}              \tag{6.7}
+\]
+This closes the declared principal subterm.  High coefficients inside the
+commutator and the $A$-principal in (6.1) remain in the safe packet.
+
+\section{Why the remaining absolute routes fail}
+
+For an $A$-high coefficient shell $m$ use the R-073 interpolation
+\[
+ \|a_m\|_6\lesssim
+ N_m^{-\theta}x_m^{\theta/2}y_m^{(1-\theta)/6}.          \tag{7.1}
+\]
+For the payload-maximal shell $r$ in $A^2DA$, use a fraction $\phi$ of its
+control gain.  With raw current order $s$ the separated kernel is
+\[
+ N_m^{s-\theta}N_r^{1-\phi},\qquad m>r+L.                \tag{7.2}
+\]
+Summability requires
+\[
+ \theta>s,\qquad \phi>1+s-\theta,\qquad
+ q:=\theta+\phi>1+s.                                    \tag{7.3}
+\]
+Sequence Holder leaves
+\[
+ R X^{q/2}Y^{(4-q)/6}.                                   \tag{7.4}
+\]
+Its Young slack is
+\[
+ \boxed{
+ c_A=1-{q\over2}-{4-q\over6}={1-q\over3}<-{s\over3}.}  \tag{7.5}
+\]
+At $s=3/5$, $c_A<-1/5$.  Thus the Hessian-difference improvement reduces the
+amplitude degree but does not make a termwise absolute coefficient-$A$-high
+route subcritical.  Unlike the old cubic coordinate, a direct high-shell
+Schur remainder now has amplitude degree six, not eight; it is a viable
+candidate only if terminal-square/trace polarization supplies the required
+frequency-weighted absorption before Young.
+
+Automatic bracket positivity also fails.  Let $\xi\sim N(0,1)$ and, on a
+normalised torus, set
+\[
+ \begin{aligned}
+ Y_N&=(\xi^2-1)\cos Nx,\\
+ H_N&=e^{-\xi^2}\cos Nx.
+ \end{aligned}                                             \tag{7.6}
+\]
+Then
+\[
+ \E e^{-\xi^2}={1\over\sqrt3},\qquad
+ \E\xi^2e^{-\xi^2}={1\over3\sqrt3},                    \tag{7.7}
+\]
+and therefore
+\[
+ \boxed{\E\int H_NY_N\dd x=-{1\over3\sqrt3}}            \tag{7.8}
+\]
+for every $N$.  The predictable part of $H_N$ centers, so (7.8) equals the
+innovation bracket with
+\[
+ dH_N=(e^{-\xi^2}-1/\sqrt3)\cos Nx.                      \tag{7.9}
+\]
+Moreover
+\[
+ \E\int\left\{\lambda(dH_N)Y_N
+       +{\lambda^2\over2}|dH_N|^2\right\}\dd x
+ =-{\lambda\over3\sqrt3}
+ +{\lambda^2\over4}\left({1\over\sqrt5}-{1\over3}\right), \tag{7.10}
+\]
+which is negative for
+\[
+ 0<\lambda<
+ {4\over3\sqrt3(1/\sqrt5-1/3)}
+ =6.759734692\ldots.                                     \tag{7.11}
+\]
+This is a finite adapted high--high-to-low method counterfixture, not a
+production counterexample to (4.14).  It omits the production curvature,
+complete forest, restored first variations, trace, and low boundary.
+
+Equations (7.5) and (7.10) are recorded as
+\texttt{NG-2026-07-25-A13-AHIGH-ABSOLUTE-}\allowbreak
+\texttt{AND-AUTOMATIC-BRACKET}.
+They rule out only the stated shortcuts.
+
+\section{Exact successor and proof roadmap}
+
+After (2.4), (4.14), (5.1), and (6.7), a candidate unresolved stochastic
+mechanism is the spatially weighted bracket between a future-control
+coefficient innovation and a complete current packet, together with the
+high-coefficient commutators left by (6.1).  Before it can be used for the
+whole endpoint, one must derive an exact packet-to-bracket/commutator
+decomposition retaining the terminal square, curvature, forest, trace, and
+the complete low-end safe endpoint.  If $a_k$ is the strict-past control at
+shell $k$, then
+\[
+ d_j a_k=0\quad(k\le j),
+ \qquad d_jA=\sum_{k>j}d_ja_k.                            \tag{8.1}
+\]
+Thus only later feedback survives in each bilinear component covered by
+(5.1).  It need not contain two comparable control factors, so the optional
+R-077 pair-high estimate cannot be invoked.
+
+The next theorem must first prove the exact full-packet decomposition just
+described and then establish the production-specific bound
+\[
+ \boxed{
+ \E\mathfrak B_{J,{\rm safe}}^>
+ \ge-\eta\E X-\zeta\E Y-C_{\eta,\zeta,e,j_0},}          \tag{8.2}
+\]
+by a weighted innovation-Carleson estimate after, not before,
+terminal-square polarization and R-063/R-066 trace reconstruction.  The
+unweighted input (5.6), the reduced quadratic amplitude, and every term in the
+exact low-end safe endpoint in (4.13) must all be retained.
+
+If (8.2) closes, R-075 fixed-cutoff graph recovery extends the regular result
+to the declared finite-energy class, R-066 completes controlled-shell
+one-use, and only then may the existing $q=10/9$ equivalence be used for
+Nelson synthesis.
+
+\section{Failed-route and evidence map}
+
+\begin{enumerate}
+\item \textbf{Cubic payload is correct but nonoptimal.}  Equations
+(2.3)--(2.5) show that its shifted $D^3M$ multiplier and base-frozen term
+recombine into the bounded Hessian difference with payload $A^2DA$.
+
+\item \textbf{A descriptive companion list is not a packet definition.}
+Individual R-063 parenthesisations differ before the complete forest sum.
+Definition (4.14) is by subtraction from the complete endpoint and is
+therefore nonduplicating.
+
+\item \textbf{Repeated Doob centering fails for a bilinear packet term.}
+The exact survivor of the factorised term is $d_jH\,d_jY$ in
+(5.1)--(5.2), not zero.  This is not yet a decomposition of the whole packet.
+
+\item \textbf{The Doob square function is useful but unweighted.}
+Equation (5.6) spends the coefficient coordinate once; it does not supply the
+spatial Carleson weight required by (8.2).
+
+\item \textbf{The high-$U$ principal is cheaper than the old current.}
+The R-050 second level changes the random order from $-3/5$ to
+$-1/10$ for the declared principal, giving moment $60/19$.
+
+\item \textbf{A-high absolute summation remains supercritical.}
+The exact conflict is (7.3)--(7.5), even after the payload-degree repair.
+
+\item \textbf{Bracket plus square is not automatically positive.}
+The exact Gaussian fixture (7.6)--(7.11) has a nondecaying negative low mode.
+
+\item \textbf{Stein and Clark--Ocone are not substitutes.}  Differentiating
+a later feedback control introduces uncontrolled first and second Malliavin
+derivatives, as already diagnosed by R-066/R-077.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``Equation (2.4) approximates the cubic remainder.''}
+\textbf{DISMISSED.}  Fubini identity (2.5) proves exact equality at every
+smooth cutoff.
+
+\item \textbf{``The improved moment contradicts R-077.''}
+\textbf{DISMISSED.}  R-077 bounded a different exact decomposition.  Its
+moment-$15$ theorem remains valid; the reassembled Hessian coordinate is
+strictly more efficient.
+
+\item \textbf{``One may distribute the lower chaoses among convenient Bony
+channels.''} \textbf{UPHELD as false.}  R-063 fixes equality only after the
+complete forest.  Definition (4.14) forbids such redistribution.
+
+\item \textbf{``A predictable coefficient and an adapted terminal
+coefficient center in the same way.''} \textbf{UPHELD as false.}  Equation
+(5.1) leaves the terminal coefficient innovation.
+
+\item \textbf{``The square function (5.6) proves (8.2).''}
+\textbf{UPHELD as an overclaim.}  It has no spatial weight and does not yet
+couple the terminal square, curvature, or trace.
+
+\item \textbf{``The generic bilinear lemma (5.1) is already an exact
+decomposition of the entire safe packet.''} \textbf{UPHELD as false.}  The
+endpoint algebra and the bilinear Doob lemma are separately exact, but no
+displayed identity yet factors every square, curvature, forest, trace, and
+low-end term into (5.1).  The successor must prove that reconstruction before
+using the weighted bracket estimate.
+
+\item \textbf{``All high-$U$ commutators are closed by (6.7).''}
+\textbf{UPHELD as false.}  Only the explicitly defined principal (6.2) is
+closed.  High coefficients in commutators remain in the safe packet.
+
+\item \textbf{``The negative Gaussian fixture refutes the production
+theorem.''} \textbf{DISMISSED.}  It refutes generic centering and positivity
+only; it deliberately omits the production companions.
+
+\item \textbf{``The optional pair-high estimate closes later feedback.''}
+\textbf{UPHELD as false.}  A single later control can depend on an earlier
+root, so no second comparable explicit input is forced.
+
+\item \textbf{``This proves one-use, Nelson, or Sector A.''}
+\textbf{UPHELD as an overclaim.}  The weighted innovation bracket (8.2)
+remains open and the tier stays T4.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable derives both Taylor representations symbolically,
+checks the tame remainder identities, reconstructs the endpoint packet in a
+generic matrix fixture, proves the finite-tree innovation identities and
+square-function equality, derives every rational exponent, and evaluates the
+Gaussian anti-centering fixture.  The non-importing executable uses separate
+finite differences, Gauss--Hermite quadrature, a different probability tree,
+independent fraction arithmetic, and opposite complex Fourier carriers.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_hessian_difference_safe_packet_doob_bracket_verify.py
+\end{verbatim}
+The integrated verifier pins R-050, R-063, R-066, R-069, R-070, R-073,
+R-075, R-076, and R-077; checks the source, PDF, manifest, run records, and
+repository surfaces; and rejects any assertion that (8.2), one-use, Nelson,
+or Sector A is closed.
+
+{\raggedright
+The pre-release attribution repair is recorded as
+\texttt{AUDIT-2026-07-25-A13-R078-}\allowbreak
+\texttt{PRE-RELEASE-PACKET-TO-}\allowbreak\texttt{BRACKET-ATTRIBUTION}.
+It changes no Hessian identity, tame bound,
+exponent ledger, generic Doob identity, or counterfixture.\par}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-
+           REDUCTION
+Precise statement:       The R-076 E3 transport has an exact bounded
+                         Hessian-difference representation with A^2 DA
+                         payload.  Its comparable block requires moment
+                         30/7.  Subtraction from the complete endpoint gives
+                         one canonical companion packet.  Complete causal
+                         projection identifies the future-control Doob-
+                         innovation-bracket mechanism for factorised
+                         bilinear components; its unweighted coefficient
+                         square function is one-use.  The declared high-U
+                         principal closes with moment 60/19.
+Scope:                   Fixed positive floor; finite cutoff and uniform
+                         cutoff estimates; common real-even regulators;
+                         strict whole-shell one-shot controls; smooth LP
+                         analysis blocks; complete R-063/R-066 companions.
+Dependencies:            A1; R-050; R-063; R-066; R-069; R-070; R-073;
+                         R-075; R-076; R-077.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_hessian_difference_safe_packet_
+                         doob_bracket_verify.py
+Expected output:          Primary 33/33; non-importing independent 24/24;
+                         manifest-pinned integrated and aggregate PASS;
+                         exit zero.
+Falsification gate:      Disagreement of (2.3) and (2.4); failure of the
+                         2/5, 11/30, 7/30, 30/7 or high-U 11/40, 49/120,
+                         19/60, 60/19 ledgers; failure of (4.6), (5.1), or
+                         (5.4); disappearance of the negative fixture; any
+                         missing forest companion; or evidence/hash drift.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  The exact full nonlinear packet-to-bracket
+                         decomposition, its spatially weighted future-control
+                         bound, complete packet lower bound, finite-energy
+                         extension, controlled-shell one-use, q=10/9 Nelson,
+                         interacting measure, all removal limits, and
+                         Sector-A closure remain open.
+Next required action:    Derive the exact full packet-to-bracket/commutator
+                         decomposition, retaining every low-end safe term;
+                         then prove (8.2) with square, curvature, complete
+                         Wick forest, and trace retained before R-075/R-066.
+\end{verbatim}
+\endgroup

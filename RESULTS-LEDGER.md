@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-078](#r-078) | Hessian-difference safe packet and Doob-bracket reduction | Scoped T4 exact/analytic/executed reduction: the R-076 third-order transport has an exact bounded Hessian-difference representation with `A^2 DA` payload. At `s=3/5` the input-maximum payment is `X^(2/5)Y^(11/30)` with slack `7/30` and moment `30/7`. Subtraction from the complete endpoint followed by one causal projection defines the canonical safe packet; exact Doob algebra identifies the future-control innovation-bracket mechanism for factorised bilinear components, whose unweighted coefficient coordinate has one square-function bound. The declared high-`U` principal closes with moment `60/19`. Absolute `A`-high summation and automatic bracket-plus-square positivity fail; exact full-packet bracket reconstruction, its weighted bound, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-077](#r-077) | Causal Doob packets and payload-comparable shifted-resonance closure | Scoped T4 exact/analytic/executed reduction: complete fresh-Gaussian endpoint packets are Doob differences and therefore cancel exactly in signed expectation, with the full Wick/lower-chaos forest and endpoint companions retained. A direct smooth-Littlewood--Paley cutoff form closes every payload-comparable orientation `m<=r+L` by the R-076 `X^(2/5)Y^(8/15)` estimate and fifteenth moment, including ties and payload high--high-to-low outputs. The exact complement is one coefficient-dominant high--high-to-low signed packet; the raw three-class monomial taxonomy is retired and Sector A remains open; assertion count is pinned by the manifest |
 | [R-076](#r-076) | Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary | Scoped T4 analytic/exact/executed reduction: the complete transported endpoint has one nonduplicating second-jet/third-transport/terminal-square/Wick ledger; an input-maximum dyadic proof gives cubic powers `X^(2/5)Y^(8/15)` and fifteenth-moment slack, closing the control-independent cubic one-form and both nonresonant paraproducts. Exact affine-Bregman and equal-frequency multiplier fixtures retire convexity and separated shifted-current shortcuts. The analytic split leaves the paired adapted shifted high--high resonance, while all three proposed largest-root causal branch estimates remain open; assertion count is pinned by the manifest |
 | [R-075](#r-075) | Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery | Scoped T4 analytic/exact/executed reduction: the production current has a global projector-free algebraic invariant representation, its principal unshifted second-order Taylor tensor is a canonical `C^(-1/2-kappa)` one-form with a cutoff-uniform sixth moment, and fixed-cutoff predictable recovery is valid in the Cameron--Martin/terminal-`L6` graph norm. Exact fixtures show that the transported third-order tail survives horizontally, a one-form-only endpoint omits a load-bearing Wick channel, and a smooth adapted counterexample shows that arbitrary adapted substitution need not preserve a finite R-063 chaos forest. R-076 corrects R-075's overbroad absolute-route verdict: only the coarse payload is critical; the paired shifted resonance remains open; 132/132 aggregate assertions |
@@ -96,6 +97,57 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-078"></a>
+### R-078 -- Hessian-difference safe packet and Doob-bracket reduction
+
+**Result ID.**
+`A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`.
+
+**Statement.** If `E3` denotes the exact third-order transport remainder, then
+
+`E3 = integral_0^1 (1-t)[D^2M(U+tA)-D^2M(U)][A,A] dt`.
+
+This is exactly the R-076 cubic Taylor integral after Fubini, but exposes only
+the quadratic payload `A^2 DA`. For `0<s<1`,
+
+`||A^2 DA||_(B^s_(1,1)) <=
+C_e||A||_H2^((1+s)/2)||A||_6^((5-s)/2)`.
+
+At `s=3/5` the powers are `X^(2/5)Y^(11/30)`, the Young slack is `7/30`,
+and the random moment is `30/7`. R-077's moment-fifteen theorem remains valid
+for its cubic coordinate but is superseded for this exact transport.
+
+The remaining algebraic packet is defined canonically by subtracting every
+proved orientation from the complete R-063/R-066 endpoint and applying the
+causal projection once. For each component admitting a predictable
+multiplier/current-increment factorisation, a predictable `P`, terminal
+coefficient `H`, and martingale increment `d_jY`, exact Doob algebra gives
+
+`E Lambda(P,H,d_jY)=E Lambda(P,d_jH,d_jY)`.
+
+This generic lemma does not yet give an exact bracket representation of every
+terminal-square, curvature, forest, trace, and low-end term in the nonlinear
+safe packet. The unweighted coefficient innovation obeys one Hilbert square-
+function bound. The declared high-`U` principal routes through the R-050 enhancement
+with powers `X^(11/40)Y^(49/120)`, slack `19/60`, and moment `60/19`.
+Termwise absolute `A`-high summation nevertheless has negative Young slack,
+and an exact adapted Gaussian high--high-to-low fixture shows that a bracket
+plus its positive innovation square has no automatic sign. These are method
+no-gos, not counterexamples to the complete production packet.
+
+**Evidence.** Primary `33/33` and non-importing independent `24/24` executable
+audits pass. The fail-closed integrated and aggregate counts, A1/R-050/R-063/
+R-066/R-069/R-070/R-073/R-075/R-076/R-077 authority hashes, source hashes,
+and the visually checked nine-page PDF are pinned by
+`classii_hessian_difference_safe_packet_doob_bracket_manifest.json`.
+
+**Boundary.** The exact full nonlinear packet-to-bracket/commutator
+decomposition, its spatially weighted future-control lower bound, complete
+safe-packet lower bound, finite-energy extension, controlled-shell one-use,
+`q=10/9` Nelson synthesis, and Sector A remain open. Tier stays T4. The
+pre-release attribution correction is retained under
+`AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION`.
 
 <a id="r-077"></a>
 ### R-077 -- Causal Doob packets and payload-comparable shifted-resonance closure

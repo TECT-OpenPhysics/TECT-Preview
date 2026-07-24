@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION](#audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution) | R-078 pre-release packet-to-bracket attribution and low-end endpoint | the first draft promoted a generic bilinear Doob lemma to a full nonlinear safe-packet decomposition and identified only the R-066 component of the complete low-end endpoint; both attributions were narrowed before release |
+| [AUDIT-2026-07-25-A13-R077-PACKET-DEFINITION](#audit-2026-07-25-a13-r077-packet-definition) | R-077 descriptive companion packet | the listed companions did not uniquely define a packet because R-063 parenthesisations agree only after the complete forest sum; R-078 repairs this by subtraction from the complete endpoint followed by one causal projection |
+| [NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET](#ng-2026-07-25-a13-ahigh-absolute-and-automatic-bracket) | A13 termwise absolute A-high summation and generic bracket-plus-square positivity | even after the Hessian repair the A-high route has negative Young slack, while an exact adapted high--high-to-low fixture keeps the innovation bracket plus its positive square negative on a nonempty parameter interval |
 | [AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY](#audit-2026-07-25-a13-r076-root-taxonomy) | R-076 raw monomial largest-root taxonomy | raw monomial ownership is not a causal theorem: ties lack a unique owner, Wick contraction can change root ownership, adapted coefficients generate an unbounded forest, and output roots do not control high--high-to-low leakage |
 | [AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR](#audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair) | R-076 proof-note, PDF, verifier, independence, and scope audit | the first draft wrote an invalid output-frequency split for an input-maximum proof, rendered bare `qquad` text, accepted contradictory predecessor records, repeated the exponent formulas, hardcoded a report, and overstated a proposed causal classification |
 | [AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS](#audit-2026-07-25-a13-r076-predecessor-pass-schemas) | R-076 integrated-verifier predecessor PASS validation | the first wrapper accepted only a modern summary verdict, while six pinned predecessors use three historical contracts: suffixed verdict strings, zero-failure count summaries, and a boolean `pass` field |
@@ -69,6 +72,100 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution"></a>
+### AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION -- generic Doob lemma was over-attributed to the full safe packet
+
+**Failure mode:** Promote the exact generic bilinear identity
+`E Lambda(P,H,d_jY)=E Lambda(P,d_jH,d_jY)` to an exact decomposition of the
+entire nonlinear canonical safe packet, although no displayed identity had
+factored every terminal-square, coefficient-curvature, full-forest, trace, and
+low-end term into that form. The same draft called the initial endpoint in the
+causal telescope only the R-066 finite-low boundary, omitting the displayed
+low-end values of the subtracted nonresonant and payload-comparable forms.
+
+**Evidence:** The R-078 endpoint-subtraction algebra and the bilinear Doob lemma
+are separately exact, and both executable implementations test them
+separately. Neither script proves their composite packet-to-bracket identity.
+Moreover, substituting the low control `A^(j0-1)` into the definition gives the
+full endpoint `B_alg^>(A^(j0-1))`: its `Delta V_ren` component contains the
+R-066 finite-low endpoint, while `N3_nr(A^(j0-1))` and
+`T_<=(A^(j0-1))` are also present unless separately shown to vanish.
+
+**Correction:** State the Doob result only for packet components which admit
+the predictable-multiplier/current-increment factorisation. Retain the complete
+low-end safe endpoint and absorb all of its fixed-low pieces into the finite-low
+constant. Make the exact full packet-to-bracket/commutator reconstruction the
+first step of the successor gate. Add direct R-069/R-070 dependency credit for
+the trace/injection identity used in the polarization discussion.
+
+**Consequence:** The exact Hessian identity, `A^2 DA` tame estimate, moments
+`30/7` and `60/19`, generic Doob and square-function identities, and adapted
+counterfixture remain unchanged. R-078 does not establish a full nonlinear
+packet-to-bracket decomposition or its weighted lower bound. The tier remains
+T4, and controlled-shell one-use, Nelson synthesis, and Sector A remain open.
+
+<a id="audit-2026-07-25-a13-r077-packet-definition"></a>
+### AUDIT-2026-07-25-A13-R077-PACKET-DEFINITION -- descriptive companions were not a canonical algebraic packet
+
+**Failure mode:** Treat the R-077 phrase “the coefficient-dominant form with
+all endpoint companions retained” as a unique algebraic definition and assign
+individual R-063 lower chaoses to convenient Bony channels before the complete
+forest is summed.
+
+**Evidence:** The alternative R-063 second-jet parenthesisations agree only
+after the complete `P3/P1` and `P4/P2/Sigma Q/P0` forest is reassembled.
+Before that sum, distributing a lower chaos among the shifted resonance,
+terminal square, curvature, or trace channel changes the displayed packet and
+can duplicate or omit a term. The R-077 Doob and `m<=r+L` estimates do not
+select one such distribution.
+
+**Correction:** Define the algebraic residual by subtraction from the complete
+endpoint:
+
+`B_alg^> = Delta V_ren-N3_nr-T_hat_<=`,
+
+and only then apply the causal projection once to the whole bracket. This
+retains both restored first variations, terminal-square polarization,
+coefficient curvature, the complete forest, trace, and finite-low boundary
+without an arbitrary parenthesisation.
+
+**Consequence:** R-077's actual complete-packet Doob cancellation and
+payload-comparable bound survive unchanged. R-078 supplies the unique safe
+packet used by the successor theorem. No weighted lower bound, one-use,
+Nelson theorem, tier promotion, or Sector-A closure follows from the repair.
+
+<a id="ng-2026-07-25-a13-ahigh-absolute-and-automatic-bracket"></a>
+### NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET -- two post-Hessian shortcuts fail
+
+**Failure mode:** After replacing the cubic transport coordinate by its exact
+Hessian difference, either sum coefficient-`A`-high pieces termwise in
+absolute value or infer that the Doob innovation bracket becomes nonnegative
+when its positive innovation square is restored.
+
+**Evidence:** For raw current order `s`, coefficient interpolation parameters
+must satisfy `q=theta+phi>1+s`. The remaining Young slack is
+
+`c_A=1-q/2-(4-q)/6=(1-q)/3<-s/3`.
+
+At `s=3/5`, `c_A<-1/5`, so the termwise absolute route remains
+supercritical. Independently, for a standard Gaussian `xi` and normalized
+spatial mode, take `Y_N=(xi^2-1)cos(Nx)` and
+`H_N=exp(-xi^2)cos(Nx)`. Its centered innovation bracket is
+`-1/(3 sqrt(3))`, and the bracket plus its positive innovation square remains
+negative for a nonempty interval `0<lambda<6.759734692...`. Opposite carriers
+also produce an exact low mode.
+
+**Correction:** Retain the complete canonical safe packet and seek a
+production-specific spatially weighted innovation-Carleson estimate only
+after terminal-square polarization, curvature, the full Wick forest, trace,
+and finite-low reconstruction. Do not apply Young shell by shell and do not
+replace the signed bracket by generic positivity.
+
+**Consequence:** These fixtures rule out only the two named shortcuts. They
+are not counterexamples to the complete production lower bound. The
+future-control weighted innovation bracket, controlled-shell one-use, Nelson,
+and Sector A remain open.
 
 <a id="audit-2026-07-25-a13-r076-root-taxonomy"></a>
 ### AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY -- A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION coefficient-dominant boundary

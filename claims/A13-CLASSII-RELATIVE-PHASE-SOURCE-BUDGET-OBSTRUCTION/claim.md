@@ -350,6 +350,27 @@ the following structural results and proof-architecture boundaries hold.
     the complete endpoint companions. The old pair-high shell harvest is a
     valid but dominated thirtieth-moment refinement, not a separate top-level
     gate.
+21. `A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`
+    reassembles the R-076 third-order transport exactly through the bounded
+    Hessian difference `D^2M(U+tA)-D^2M(U)`, with explicit payload `A^2 DA`.
+    The input-maximum theorem becomes
+    `||A^2 DA||_(B^s_(1,1)) <=
+    C||A||_H2^((1+s)/2)||A||_6^((5-s)/2)`. At `s=3/5` this gives
+    `X^(2/5)Y^(11/30)`, Young slack `7/30`, and moment `30/7`.
+    Subtracting every proved orientation from the complete endpoint and then
+    applying one causal projection defines the canonical safe packet; this
+    repairs R-077's descriptive companion list without changing its proved
+    Doob and payload bounds. For every component admitting the displayed
+    predictable-multiplier/current-increment factorisation, exact Doob algebra
+    replaces the terminal coefficient by its innovation:
+    `E Lambda(P,H,d_jY)=E Lambda(P,d_jH,d_jY)`. Its unweighted coefficient
+    coordinate obeys one Hilbert square-function bound. This does not yet
+    decompose the entire nonlinear safe packet into brackets. The declared
+    high-`U` principal closes through the R-050 enhancement with moment `60/19`.
+    Termwise absolute `A`-high summation has negative Young slack and an exact
+    adapted fixture refutes automatic bracket-plus-square positivity. The
+    exact full packet-to-bracket reconstruction and the spatially weighted
+    future-control innovation bound remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -378,7 +399,8 @@ is a scoped T4 subproof and does not promote A13.
 | Invariant-current Taylor chart / principal one-form / graph recovery | Projector-free algebraic chart, principal `C^(-1/2-kappa)` sixth-moment one-form, exact omission and transport diagnostics, and fixed-cutoff predictable graph recovery | T4 principal and recovery subgates closed; signed transported endpoint open |
 | Signed transport ledger / sharp cubic Besov / shifted-resonance boundary | Exact nonduplicating endpoint ledger, input-maximum `X^(2/5)Y^(8/15)` payment, control-independent and nonresonant closure, and Bregman/separated-multiplier no-gos | T4 analytic subbranches closed; all three proposed largest-root causal branch estimates open |
 | Causal packet / payload-comparable resonance | Exact complete-packet Doob cancellation, full `m<=r+L` fifteenth-moment closure, and disjoint coefficient-dominant high--high-to-low residual | T4 fresh-root and payload-comparable branches closed; one signed packet open |
-| Controlled-shell one-use | Coefficient-dominant high--high signed packet, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
+| Hessian-difference / safe packet / Doob bracket | Exact `A^2 DA` coordinate and `30/7` payment, canonical complete-companion packet, factorised-bilinear innovation lemma and unweighted square-function identity, high-`U` `60/19` closure, and two method no-gos | T4 reduction closed; exact full packet reconstruction and weighted innovation bound open |
+| Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -462,6 +484,15 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   `L-infinity times C^(-s)` resonance. The remaining `m>r+L`
   coefficient-dominant form is not bounded in isolation and must retain all
   signed endpoint companions.
+- R-078 is exact at finite cutoff and cutoff-uniform for its analytic payload
+  estimates at every fixed positive floor. Its Hessian-difference coordinate
+  reduces explicit amplitude but does not prove the spatially weighted
+  innovation-Carleson estimate. Its generic Doob lemma is exact for factorised
+  bilinear components but does not prove an exact bracket representation of
+  the entire nonlinear packet. The Hilbert square function is unweighted, the
+  high-`U` theorem closes only the declared principal, and the negative adapted
+  fixture refutes generic positivity rather than the production packet lower
+  bound. Every term in the full low-end safe endpoint remains retained.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -484,54 +515,58 @@ Active umbrella gate:
 
 Current analytic child:
 
-- `A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`
+- `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`
 
 Current subordinate order:
 
-1. prove the coefficient-dominant `m>r+L` signed packet with
-   both restored R-073 first variations, terminal square,
-   coefficient-curvature/Wick channel, exact trace transport, and finite-low
-   boundary retained;
-2. apply R-075 fixed-cutoff predictable graph recovery only after that
+1. derive the exact full packet-to-bracket/commutator decomposition for the
+   canonical safe packet with both restored R-073 first variations,
+   terminal-square polarization, coefficient curvature, the complete R-063
+   forest, R-066 trace transport, and every term in the low-end safe endpoint;
+2. prove the resulting spatially weighted future-control innovation-Carleson
+   lower bound without separating those companions;
+3. apply R-075 fixed-cutoff predictable graph recovery only after that
    regular-control packet inequality, then assemble controlled-shell one-use;
-3. return to the A7 Nelson and finite-volume measure gates.
+4. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_causal_packet_payload_resonance_verify.py
+python codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_verify.py
 ```
 
 Expected output:
 
-- primary `35/35`;
-- non-importing independent `26/26`;
-- integrated `110/110` and aggregate `171/171` are pinned by the R-077
+- primary `33/33`;
+- non-importing independent `24/24`;
+- integrated `176/176` and aggregate `233/233` are pinned by the R-078
   manifest;
-- exact Gaussian and finite-tree Doob packets, complete scalar Wick forests,
-  independently derived payload and optional pair-high exponents, exhaustive
-  two-way block ownership, opposite-frequency high--high-to-low fixtures,
-  authority/PDF/surface contracts, and T4 scope firewalls;
+- exact cubic/Hessian Taylor agreement, complete endpoint subtraction,
+  independently derived `30/7` and `60/19` ledgers, finite-tree Doob brackets,
+  Hilbert square functions, Gaussian anti-centering and opposite-carrier
+  fixtures, predecessor-result/source/PDF/surface contracts, and T4 scope
+  firewalls;
 - exit code zero.
 
-The eight-page proof note passes the standard form check, zero-overfull gate,
+The nine-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_causal_packet_payload_resonance_manifest.json`
-- `notes/classii-causal-packet-payload-resonance-reduction-260725-v1.0.tex.txt`
-- `notes/classii-causal-packet-payload-resonance-reduction-260725-v1.0.pdf`
-- `../../codes/foundations/a13_classii_causal_packet_payload_resonance.py`
-- `../../codes/foundations/a13_classii_causal_packet_payload_resonance_independent.py`
-- `../../codes/foundations/a13_classii_causal_packet_payload_resonance_verify.py`
-- `runs/2026-07-25-primary-causal-packet-payload-resonance/result.json`
-- `runs/2026-07-25-independent-causal-packet-payload-resonance/result.json`
-- `runs/2026-07-25-integrated-causal-packet-payload-resonance/result.json`
-- `../../negative-results/registry.md#audit-2026-07-25-a13-r076-root-taxonomy`
-- `../../negative-results/registry.md#audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair`
+- `classii_hessian_difference_safe_packet_doob_bracket_manifest.json`
+- `notes/classii-hessian-difference-safe-packet-doob-bracket-reduction-260725-v1.0.tex.txt`
+- `notes/classii-hessian-difference-safe-packet-doob-bracket-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket.py`
+- `../../codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_independent.py`
+- `../../codes/foundations/a13_classii_hessian_difference_safe_packet_doob_bracket_verify.py`
+- `runs/2026-07-25-primary-hessian-difference-safe-packet-doob-bracket/result.json`
+- `runs/2026-07-25-independent-hessian-difference-safe-packet-doob-bracket/result.json`
+- `runs/2026-07-25-integrated-hessian-difference-safe-packet-doob-bracket/result.json`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r077-packet-definition`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-ahigh-absolute-and-automatic-bracket`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution`
 
 The resonant phase-root predecessor remains binding:
 
@@ -1271,6 +1306,18 @@ that missing inequality, controlled-shell one-use, Nelson, interacting-measure
 construction, floor/regulator removal, infinite volume, phase transition,
 BCC selection, Sector-A closure, and T5--T7 remain open. A13 stays T4.
 
+The Hessian-difference/safe-packet/Doob-bracket theorem closes the exact
+transport reassembly, the `A^2 DA` payment with moment `30/7`, the canonical
+packet definition, the factorised-bilinear innovation lemma, the unweighted
+innovation square function, and the declared high-`U` principal with moment
+`60/19`. It does not prove an exact bracket representation of the entire
+nonlinear safe packet, a spatially weighted innovation-Carleson estimate,
+generic bracket positivity, termwise absolute `A`-high summability, the
+complete packet lower bound, its extension to every finite-energy drift,
+controlled-shell one-use, Nelson, an
+interacting measure, floor/regulator removal, infinite volume, phase
+transition, BCC selection, Sector-A closure, or T5--T7. A13 remains T4.
+
 ## History
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
@@ -1415,3 +1462,21 @@ BCC selection, Sector-A closure, and T5--T7 remain open. A13 stays T4.
   executable audits pass; integrated 110/110 and aggregate 171/171 are pinned
   in the manifest. The eight-page PDF passed direct
   all-page visual QA. Tier stays T4.
+- 2026-07-25: Registered R-078. The R-076 cubic transport was reassembled
+  exactly through a bounded Hessian difference, lowering its explicit payload
+  from `A^3 DA` to `A^2 DA` and the comparable moment from fifteen to `30/7`.
+  Canonical subtraction from the complete endpoint followed by one causal
+  projection repairs the descriptive R-077 packet list. For each factorised
+  bilinear component, exact Doob algebra identifies the future-control
+  innovation-bracket mechanism; its unweighted coefficient square function is
+  one-use, and the declared R-050 high-`U` principal closes with moment `60/19`.
+  Pre-release audit
+  `AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION`
+  records that the exact full nonlinear packet reconstruction and complete
+  low-end absorption remain in the successor gate. Termwise absolute `A`-high
+  summation and automatic
+  bracket-plus-square positivity are preserved as method no-gos. Primary
+  `33/33` and non-importing independent `24/24` audits pass; integrated
+  `176/176` and aggregate `233/233` are pinned in the manifest. The nine-page PDF passed
+  direct all-page visual QA. The full packet reconstruction, weighted
+  innovation bound, one-use, Nelson, and Sector A remain open; tier stays T4.

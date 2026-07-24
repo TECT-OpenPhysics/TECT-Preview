@@ -53,12 +53,23 @@ both nonresonant paraproducts. R-077 replaces its proposed raw three-class
 root taxonomy by complete fresh-Gaussian Doob packets and a disjoint scale
 orientation. The complete packets cancel in signed expectation, and the full
 payload-comparable `m<=r+L` shifted-resonance form closes with the fifteenth
-moment. The exact current child is the coefficient-dominant `m>r+L`
-high--high-to-low signed packet: retain every R-063 lower chaos, both restored
-first variations, terminal-square polarization, coefficient curvature,
-Wick/trace channel, and finite-low boundary in one causal identity, followed
-by R-075 graph recovery and the umbrella one-use/Nelson bound. This family is
-not a new premise of A5 and has no current PUBLISHED measure theorem.
+moment. R-078,
+`A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`,
+reassembles the exact transport through a bounded Hessian difference with
+`A^2 DA` payload and moment `30/7`, defines the canonical safe packet by
+subtraction followed by one causal projection, and identifies the exact
+future-control innovation-bracket mechanism for each factorised bilinear
+component. Its unweighted coefficient square function is one-use and the
+declared high-`U` principal closes with moment `60/19`, but R-078 neither
+decomposes the entire nonlinear packet nor supplies the spatial weight. The
+exact current child is
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`: first derive the exact
+full packet-to-bracket/commutator identity and retain every R-063
+lower chaos, both restored first variations, terminal-square polarization,
+coefficient curvature, Wick/trace channel, and finite-low boundary before
+R-075 graph recovery and the umbrella one-use/Nelson bound. Sector A remains
+open. This family is not a new premise of A5 and has no current PUBLISHED
+measure theorem.
 
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 
