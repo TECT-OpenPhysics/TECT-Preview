@@ -165,6 +165,22 @@ endpoint theorem.
     explicit-payload-high, and coefficient-only balanced-root estimates all
     remain open and must be proved inside the complete signed endpoint before
     R-075 graph recovery, controlled-shell one-use, or Nelson synthesis.
+18. **Complete Doob packets and payload-comparable resonance closure.**
+    R-077, `A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION`, replaces
+    the raw three-class monomial-root proposal by a canonical
+    sequential endpoint decomposition. Each partial-control terminal increment
+    is its strict-past conditional baseline plus complete Doob differences, so
+    the complete fresh-Gaussian packets have exactly zero signed expectation;
+    no `P1/P2/Sigma Q/P0` companion is centered separately. A direct smooth-LP
+    cutoff form then splits the shifted resonance by coefficient/current scale
+    `m` versus largest payload-input scale `r`. Every `m<=r+L` orientation,
+    including ties and payload high--high-to-low outputs, obeys the R-076
+    `X^(2/5)Y^(8/15)` payment and closes with the fifteenth moment after one
+    global Young inequality. The pair-high thirtieth-moment refinement is valid
+    but dominated. The sole remaining child is the coefficient-dominant
+    `m>r+L` high-high-to-low signed packet, retained with both first
+    variations, terminal square, full Wick forest, curvature, trace, and
+    finite-low boundary before graph recovery, one-use, and Nelson synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

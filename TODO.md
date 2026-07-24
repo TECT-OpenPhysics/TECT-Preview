@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER)_
-  - R-076 gives the exact nonduplicating endpoint ledger, proves the input-maximum X^(2/5)Y^(8/15) Besov payment with 1/15 Young slack, and closes the control-independent cubic plus both nonresonant paraproduct branches using the fifteenth moment. Exact Bregman, path, and equal-frequency fixtures retire positivity and separated shifted-multiplier shortcuts. Its three largest-root classes are a proposal, not causal closures. Next prove the fresh-root expansion with uniform conditional summability, the no-reuse explicit-payload-high shell harvest, and the coefficient-only balanced-root signed Carleson component inside the complete R-063/terminal-square/trace/finite-low block; only then apply R-075 graph recovery, assemble one-use through R-066, and return to q=10/9 Nelson.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET)_
+  - R-077 proves exact signed cancellation of complete fresh-Gaussian Doob packets and closes the entire payload-comparable shifted-resonance block with the existing fifteenth moment, including ties and payload high--high-to-low interactions. The pair-high thirtieth-moment refinement is valid but dominated, and AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY corrects the old raw monomial root map. The sole remaining analytic gate is the coefficient-dominant high--high-to-low signed packet coupled to both R-073 first variations, terminal-square polarization, coefficient curvature, the complete R-063 forest, R-066 trace, and finite-low terms. After that bound, apply R-075 graph recovery, R-066 one-use, and q=10/9 Nelson synthesis.
   - _updated 2026-07-24_
 
 ## Next up

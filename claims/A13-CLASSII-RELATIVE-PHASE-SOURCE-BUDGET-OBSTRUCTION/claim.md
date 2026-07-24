@@ -332,6 +332,24 @@ the following structural results and proof-architecture boundaries hold.
     high--high resonance. A three-class largest-root decomposition is recorded
     as a successor proposal, but its fresh-root, explicit-payload-high, and
     coefficient-only balanced-root estimates are all still open.
+20. `A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION` replaces that
+    proposed raw-monomial taxonomy by a canonical sequential packet split.
+    Every complete partial-control endpoint increment is its strict-past
+    conditional baseline plus Doob differences, so the complete
+    fresh-Gaussian Doob packets have exactly zero signed expectation at every
+    cutoff. This cancellation retains the terminal square, both restored
+    first variations, trace, finite-low term, and the complete R-063
+    `P3/P1` and `P4/P2/Sigma Q/P0` forest. For the remaining shifted
+    resonance, smooth analysis blocks give a disjoint split by whether the
+    multiplier/current scale `m` satisfies `m<=r+L`, where `r` is the largest
+    explicit payload input. The entire payload-comparable block obeys the
+    R-076 `X^(2/5)Y^(8/15)` payment with `1/15` slack and the existing
+    fifteenth moment, including unique maxima, ties, and payload
+    high--high-to-low outputs. Its complement `m>r+L` is one genuine
+    coefficient-dominant high--high-to-low form. It must remain signed with
+    the complete endpoint companions. The old pair-high shell harvest is a
+    valid but dominated thirtieth-moment refinement, not a separate top-level
+    gate.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -359,7 +377,8 @@ is a scoped T4 subproof and does not promote A13.
 | Resonant phase root / pure phase orbit / Besov payment | Exact bare-resonance and adapted-centering no-gos; exact local phase-orbit current invariance; finite relative-phase Wick anomaly; deterministic sixth-moment Besov payment | T4 phase subchannel and payment closed; complete horizontal one-form open |
 | Invariant-current Taylor chart / principal one-form / graph recovery | Projector-free algebraic chart, principal `C^(-1/2-kappa)` sixth-moment one-form, exact omission and transport diagnostics, and fixed-cutoff predictable graph recovery | T4 principal and recovery subgates closed; signed transported endpoint open |
 | Signed transport ledger / sharp cubic Besov / shifted-resonance boundary | Exact nonduplicating endpoint ledger, input-maximum `X^(2/5)Y^(8/15)` payment, control-independent and nonresonant closure, and Bregman/separated-multiplier no-gos | T4 analytic subbranches closed; all three proposed largest-root causal branch estimates open |
-| Controlled-shell one-use | Signed coefficient-transport endpoint remainder, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
+| Causal packet / payload-comparable resonance | Exact complete-packet Doob cancellation, full `m<=r+L` fifteenth-moment closure, and disjoint coefficient-dominant high--high-to-low residual | T4 fresh-root and payload-comparable branches closed; one signed packet open |
+| Controlled-shell one-use | Coefficient-dominant high--high signed packet, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -435,6 +454,14 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   bounded-coefficient paraproducts. The largest-root discussion is a proposed
   causal decomposition: no fresh-root, explicit-payload-high, or
   coefficient-only balanced-root branch estimate is claimed.
+- R-077 is fixed-floor and expectation-level for the complete Doob packet.
+  It proves no absolute `sum |G_(r,k)|` estimate. Its payload-comparable
+  estimate uses smooth Littlewood--Paley analysis blocks while preserving the
+  physical sharp-cube regulator and defines the oriented cutoff trilinear
+  form directly; it does not construct a standalone
+  `L-infinity times C^(-s)` resonance. The remaining `m>r+L`
+  coefficient-dominant form is not bounded in isolation and must retain all
+  signed endpoint companions.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -457,57 +484,53 @@ Active umbrella gate:
 
 Current analytic child:
 
-- `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`
+- `A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`
 
 Current subordinate order:
 
-1. prove the fresh-Gaussian-root expansion with every R-063 lower chaos and a
-   cutoff-uniform conditional shell sum;
-2. prove a no-reuse Cameron--Martin shell harvest and residual dyadic estimate
-   for the explicit-payload-high class;
-3. prove the coefficient-only balanced-root signed Carleson component with
+1. prove the coefficient-dominant `m>r+L` signed packet with
    both restored R-073 first variations, terminal square,
    coefficient-curvature/Wick channel, exact trace transport, and finite-low
    boundary retained;
-4. apply R-075 fixed-cutoff predictable graph recovery only after all three
-   regular-control branch estimates, then assemble controlled-shell one-use;
-5. return to the A7 Nelson and finite-volume measure gates.
+2. apply R-075 fixed-cutoff predictable graph recovery only after that
+   regular-control packet inequality, then assemble controlled-shell one-use;
+3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_signed_transport_besov_bregman_resonance_verify.py
+python codes/foundations/a13_classii_causal_packet_payload_resonance_verify.py
 ```
 
 Expected output:
 
-- primary `24/24`;
-- non-importing independent `15/15`;
-- integrated `92/92`, hence aggregate `131/131`;
-- exact signed-ledger reassembly, independently derived input-maximum
-  Besov/Young allocation, affine and centered-selector Bregman fixtures, exact
-  path split, radial shifted-multiplier leakage, direct predecessor-contract
-  and PDF-debris rejection, and T4 scope firewalls;
+- primary `35/35`;
+- non-importing independent `26/26`;
+- integrated `110/110` and aggregate `171/171` are pinned by the R-077
+  manifest;
+- exact Gaussian and finite-tree Doob packets, complete scalar Wick forests,
+  independently derived payload and optional pair-high exponents, exhaustive
+  two-way block ownership, opposite-frequency high--high-to-low fixtures,
+  authority/PDF/surface contracts, and T4 scope firewalls;
 - exit code zero.
 
-The nine-page proof note passes the standard form check, zero-overfull gate,
+The eight-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_signed_transport_besov_bregman_resonance_manifest.json`
-- `notes/classii-signed-transport-besov-bregman-resonance-reduction-260724-v1.0.tex.txt`
-- `notes/classii-signed-transport-besov-bregman-resonance-reduction-260724-v1.0.pdf`
-- `../../codes/foundations/a13_classii_signed_transport_besov_bregman_resonance.py`
-- `../../codes/foundations/a13_classii_signed_transport_besov_bregman_resonance_independent.py`
-- `../../codes/foundations/a13_classii_signed_transport_besov_bregman_resonance_verify.py`
-- `runs/2026-07-24-primary-signed-transport-besov-bregman-resonance/result.json`
-- `runs/2026-07-24-independent-signed-transport-besov-bregman-resonance/result.json`
-- `runs/2026-07-24-integrated-signed-transport-besov-bregman-resonance/result.json`
-- `../../negative-results/registry.md#audit-2026-07-25-a13-r075-coarse-transport-criticality`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-bregman-and-separated-shifted-multiplier`
+- `classii_causal_packet_payload_resonance_manifest.json`
+- `notes/classii-causal-packet-payload-resonance-reduction-260725-v1.0.tex.txt`
+- `notes/classii-causal-packet-payload-resonance-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_causal_packet_payload_resonance.py`
+- `../../codes/foundations/a13_classii_causal_packet_payload_resonance_independent.py`
+- `../../codes/foundations/a13_classii_causal_packet_payload_resonance_verify.py`
+- `runs/2026-07-25-primary-causal-packet-payload-resonance/result.json`
+- `runs/2026-07-25-independent-causal-packet-payload-resonance/result.json`
+- `runs/2026-07-25-integrated-causal-packet-payload-resonance/result.json`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r076-root-taxonomy`
 - `../../negative-results/registry.md#audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair`
 
 The resonant phase-root predecessor remains binding:
@@ -1236,6 +1259,18 @@ extension of that unproved bound, controlled-shell one-use, Nelson, an
 interacting measure, floor/regulator removal, infinite volume, phase
 transition, BCC selection, or T5--T7. A13 remains T4.
 
+The causal-packet/payload-resonance theorem closes only the signed expectation
+of complete fresh-Gaussian Doob packets and the full payload-comparable
+`m<=r+L` orientation. It does not prove absolute summability of the Doob
+differences, separately center any R-063 lower chaos, construct a standalone
+shifted resonant product, or control the coefficient-dominant `m>r+L`
+high--high-to-low packet. The latter must still be coupled to both restored
+first variations, terminal square, coefficient curvature, complete Wick
+forest, trace transport, and finite-low boundary. Finite-energy extension of
+that missing inequality, controlled-shell one-use, Nelson, interacting-measure
+construction, floor/regulator removal, infinite volume, phase transition,
+BCC selection, Sector-A closure, and T5--T7 remain open. A13 stays T4.
+
 ## History
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
@@ -1367,3 +1402,16 @@ transition, BCC selection, or T5--T7. A13 remains T4.
   131/131 are the final contracts; all three proposed largest-root causal
   branch estimates, the complete endpoint, one-use, and Nelson remain open.
   Tier stays T4.
+- 2026-07-25: Registered R-077. The complete fresh-Gaussian endpoint packets
+  are exact Doob differences with zero signed expectation, while a smooth
+  input-scale split pays the whole `m<=r+L` shifted-resonance orientation by
+  the existing `X^(2/5)Y^(8/15)` estimate and fifteenth moment. Unique
+  payload maxima, ties, and payload high--high-to-low outputs are included.
+  The earlier pair-high no-reuse route remains as a valid but dominated
+  thirtieth-moment refinement. Raw three-class monomial ownership is repaired
+  because ties and Wick contractions change root attribution. The sole
+  remaining child is the complete coefficient-dominant `m>r+L` signed
+  high--high-to-low packet. Primary 35/35 and non-importing independent 26/26
+  executable audits pass; integrated 110/110 and aggregate 171/171 are pinned
+  in the manifest. The eight-page PDF passed direct
+  all-page visual QA. Tier stays T4.

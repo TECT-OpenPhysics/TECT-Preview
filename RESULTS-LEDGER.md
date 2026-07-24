@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-077](#r-077) | Causal Doob packets and payload-comparable shifted-resonance closure | Scoped T4 exact/analytic/executed reduction: complete fresh-Gaussian endpoint packets are Doob differences and therefore cancel exactly in signed expectation, with the full Wick/lower-chaos forest and endpoint companions retained. A direct smooth-Littlewood--Paley cutoff form closes every payload-comparable orientation `m<=r+L` by the R-076 `X^(2/5)Y^(8/15)` estimate and fifteenth moment, including ties and payload high--high-to-low outputs. The exact complement is one coefficient-dominant high--high-to-low signed packet; the raw three-class monomial taxonomy is retired and Sector A remains open; assertion count is pinned by the manifest |
 | [R-076](#r-076) | Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary | Scoped T4 analytic/exact/executed reduction: the complete transported endpoint has one nonduplicating second-jet/third-transport/terminal-square/Wick ledger; an input-maximum dyadic proof gives cubic powers `X^(2/5)Y^(8/15)` and fifteenth-moment slack, closing the control-independent cubic one-form and both nonresonant paraproducts. Exact affine-Bregman and equal-frequency multiplier fixtures retire convexity and separated shifted-current shortcuts. The analytic split leaves the paired adapted shifted high--high resonance, while all three proposed largest-root causal branch estimates remain open; assertion count is pinned by the manifest |
 | [R-075](#r-075) | Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery | Scoped T4 analytic/exact/executed reduction: the production current has a global projector-free algebraic invariant representation, its principal unshifted second-order Taylor tensor is a canonical `C^(-1/2-kappa)` one-form with a cutoff-uniform sixth moment, and fixed-cutoff predictable recovery is valid in the Cameron--Martin/terminal-`L6` graph norm. Exact fixtures show that the transported third-order tail survives horizontally, a one-form-only endpoint omits a load-bearing Wick channel, and a smooth adapted counterexample shows that arbitrary adapted substitution need not preserve a finite R-063 chaos forest. R-076 corrects R-075's overbroad absolute-route verdict: only the coarse payload is critical; the paired shifted resonance remains open; 132/132 aggregate assertions |
 | [R-074](#r-074) | Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction | Scoped T4 exact/analytic/executed subproof: the mismatched nonlinear secant coefficient has an exact nondecaying high--high-to-low resonance, so a bare positive separation gain is unavailable; automatic adapted Wick centering is false. Genuine local phase orbits preserve the complete raw current exactly, and their relative-phase Wick anomaly is cutoff-uniform with an `O(Lambda^-3)` tail while the common-phase anomaly vanishes. The cubic horizontal payload has a direct `H2`/sextic/sixth-moment Besov payment, but the complete adapted gauge-quotient one-form and finite-energy recovery remain open; 110/110 aggregate assertions |
@@ -95,6 +96,81 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-077"></a>
+### R-077 -- Causal Doob packets and payload-comparable shifted-resonance closure
+
+**Result ID.**
+`A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION`.
+
+**Statement.** Let `A^(k)` be the partial strict-past control and let
+`Phi_k` be its complete terminal endpoint increment. At every finite cutoff,
+
+`Phi_k=E[Phi_k|F_(k-1)]+sum_(r=k)^J G_(r,k)`,
+
+where
+
+`G_(r,k)=E[Phi_k|F_r]-E[Phi_k|F_(r-1)]`.
+
+Consequently `E[G_(r,k)|F_(r-1)]=0` and the sum of all complete
+fresh-Gaussian packets has exactly zero signed expectation. This is not an
+absolute `E sum |G_(r,k)|` estimate. The packet contains the complete R-063
+`P3/P1` and `P4/P2/Sigma Q/P0` forest, both R-073 restored first variations,
+the terminal square, curvature/Wick conversion, R-066 trace channel, and the
+finite-low boundary; none of those companions centers separately.
+
+For smooth inhomogeneous Littlewood--Paley analysis blocks, define the
+finite-cutoff shifted-resonance form directly and let `r` be the largest input
+scale of the cubic payload `A^3 DA`. If the comparable coefficient/current
+scale satisfies `m<=r+L`, then for every `0<s<1`,
+
+`|T_<=| <= C_e R sum_r 2^(sr)||G_r||_1`
+
+`<= C_e R ||A||_H2^((1+s)/2)||A||_6^((7-s)/2)`.
+
+At `s=3/5`, one global Young inequality after all shell sums gives
+
+`|T_<=| <= eta X+zeta Y+C eta^-6 zeta^-8 R^15`.
+
+Thus the entire payload-comparable orientation closes with the fifteenth
+moment already supplied by R-050/R-063. It includes unique payload maxima,
+ties, mixed ties, and payload high--high-to-low outputs; no shellwise reuse of
+the Cameron--Martin or sextic budgets occurs. The restricted pair-high
+refinement is valid but dominated: it uses `X^(9/20)Y^(31/60)`, slack `1/30`,
+a thirtieth moment, and an `N_j0^-3` factor.
+
+The disjoint complement `m>r+L` is a genuine coefficient-dominant
+high--high-to-low form. Opposite Fourier carriers produce a nonzero low mode,
+so deterministic support separation cannot remove it. This residual must be
+estimated only as one signed packet together with all endpoint companions.
+
+**Proven in.** A13 /
+`classii-causal-packet-payload-resonance-reduction-260725-v1.0`, with primary
+symbolic/tensor/finite-tree tests, a non-importing independent probability-
+tree and Fourier audit, authority/source/PDF hashes, surface contracts, and
+scope checks: primary 35/35, independent 26/26, integrated 110/110, and
+aggregate 171/171 PASS. The eight-page PDF
+passes the form check, zero-overfull audit, Poppler rendering, and direct
+all-page visual QA.
+
+**Reuse scope.** Complete-packet Doob centering for sequential adapted
+endpoint increments; direct cutoff-form treatment of rough resonances;
+payload-comparable shell closure by a single post-summation Young inequality;
+and a canonical two-way orientation that survives ties and Wick contraction.
+
+**Boundary.** The result does not prove absolute fresh-root summability,
+construct a standalone `L-infinity times C^(-s)` resonance, control the
+coefficient-dominant `m>r+L` signed packet, extend that missing estimate to
+every finite-energy drift, close controlled-shell one-use or the `q=10/9`
+Nelson theorem, construct an interacting measure, remove the fixed floor or
+regulator, take infinite volume, close Sector A, or justify T5--T7. Tier T4;
+no promotion.
+
+**Publication target.** Stochastic geometric/paracontrolled methods note with
+R-050, R-063, and R-066--R-076 after the coefficient-dominant signed packet,
+one-use, and Nelson synthesis are resolved.
+
+---
 
 <a id="r-076"></a>
 ### R-076 -- Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary

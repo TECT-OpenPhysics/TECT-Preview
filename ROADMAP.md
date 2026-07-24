@@ -40,7 +40,7 @@ counterterms, PDE well-posedness.
 **Exit condition**: no convention ambiguity remains; the convention registry is
 the single normative source.
 
-**Status — Sector A refreshed 2026-07-22**: the convention and exact kernel
+**Status — Sector A refreshed 2026-07-25**: the convention and exact kernel
 identity are fixed, with `r_zero` and `mu2_shell` kept distinct. The canonical
 full-production branch is
 
@@ -208,12 +208,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   branches. Exact affine-Bregman, path, and equal-frequency fixtures exclude
   positivity and a separated shifted-current multiplier estimate. R-076
   records a three-class largest-root successor decomposition but proves no
-  causal branch estimate. The regular-control subgate therefore requires a
-  fresh-root expansion with uniform conditional summability, a no-reuse
-  explicit-payload-high shell harvest, and the coefficient-only balanced-root
-  signed Carleson component, all with every R-063 lower chaos, both restored
-  first variations, terminal square, trace/Wick channel, and finite-low
-  boundary retained in one signed causal identity.
+  causal branch estimate. R-077,
+  `A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION`, replaces that raw
+  taxonomy by a canonical sequential packet split. Complete fresh-Gaussian endpoint packets are exact
+  Doob differences and cancel in signed expectation, and the whole
+  payload-comparable `m<=r+L` shifted-resonance orientation is paid by the
+  R-076 fifteenth moment after one global Young inequality. The remaining
+  regular-control subgate is the disjoint coefficient-dominant `m>r+L`
+  high--high-to-low signed packet, with every R-063 lower chaos, both restored
+  first variations, terminal square, coefficient-curvature/Wick channel,
+  R-066 trace transport, and finite-low boundary retained in one identity.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -362,14 +366,17 @@ preserved in git/changelog rather than treated as current gates.
    endpoint without duplication, sharpens the bare cubic payment to
    `X^(2/5)Y^(8/15)` with fifteenth-moment slack, and closes the
    control-independent cubic and nonresonant paraproduct branches. The current
-   child remains
-   `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`. R-076 proposes
-   three largest-root classes but closes none causally: prove the fresh-root
-   expansion and conditional shell sum, the no-reuse explicit-payload-high
-   harvest, and the coefficient-only balanced-root signed Carleson component
-   for the paired adapted shifted resonance coupled to every R-063 lower
-   chaos, both restored first variations, terminal square, trace/Wick channel,
-   and finite-low boundary.
+   R-077 replaces the proposed raw three-class root ownership by an exact Doob
+   packet decomposition. It closes complete fresh-Gaussian packets in signed
+   expectation and every payload-comparable `m<=r+L` orientation with the
+   fifteenth moment, including ties and payload high--high-to-low outputs. The
+   current child is
+   `A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`: prove the
+   complementary `m>r+L` lower bound coupled to every R-063 lower chaos, both
+   restored first variations, terminal-square polarization, coefficient
+   curvature, trace/Wick channel, and finite-low boundary. Only then apply
+   R-075 graph recovery, assemble controlled-shell one-use through R-066, and
+   return to `q=10/9` Nelson synthesis.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

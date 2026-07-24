@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-23.
+exist here. Last updated: 2026-07-25.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
@@ -434,12 +434,13 @@ Besov sixth-moment payment. R-075 closes the projector-free invariant-current
 chart, the principal unshifted one-form and its sixth moment, and fixed-cutoff
 predictable graph recovery. R-076 adds the exact nonduplicating endpoint
 ledger and an input-maximum Besov proof with energy powers
-`X^(2/5)Y^(8/15)`, Young slack `1/15`, and a fifteenth moment. This closes the
-control-independent cubic and both nonresonant paraproducts, but proves none
-of its three proposed largest-root causal branches. The current child is
-`A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: prove the
-fresh-root, explicit-payload-high, and coefficient-only balanced-root
-estimates while retaining every lower chaos and restored endpoint term in one
+`X^(2/5)Y^(8/15)`, Young slack `1/15`, and a fifteenth moment. R-077 then
+replaces the proposed raw three-class taxonomy: complete fresh-Gaussian Doob
+packets cancel in signed expectation, and the entire payload-comparable
+`m<=r+L` shifted-resonance form closes with the same fifteenth moment. The
+current child is
+`A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`; its `m>r+L`
+residual must retain every lower chaos and restored endpoint term in one
 signed causal identity. The umbrella theorem remains open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
@@ -465,14 +466,15 @@ A7 scheme.  The finite `Sigma Q` conversion and every grouped lower chaos are
 retained.  This closes the enhanced deterministic Cameron--Martin model, not
 an adapted random-shift estimate.  R-075 further closes the principal unshifted one-form and fixed-cutoff graph
 recovery. R-076 then proves the exact endpoint ledger and sharp
-control-independent cubic Besov payment, but its largest-root trichotomy is a
-successor proposal rather than a causal estimate. The current child is
-`A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`; arbitrary
+control-independent cubic Besov payment. R-077 replaces its proposed raw root
+taxonomy by complete-packet Doob centering and a direct two-way scale split.
+The fresh-Gaussian packets cancel only in signed expectation and every
+payload-comparable `m<=r+L` orientation closes with the fifteenth moment. The
+current child is the coefficient-dominant `m>r+L` signed packet. Arbitrary
 adapted substitution has infinite Hermite content, so R-063's deterministic
 finite forest cannot simply be relabelled as complete. A separated shifted
 multiplier, automatic Wick centering, and geometry-only one-use remain
-excluded; fresh-root, explicit-payload-high, and coefficient-only signed
-causal estimates remain to be proved.
+excluded.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
 
@@ -718,10 +720,11 @@ corrects the overbroad consequence: a maximal-input dyadic proof gives
 `X^(2/5)Y^(8/15)` with `1/15` slack and closes the control-independent cubic
 and both nonresonant paraproducts with a fifteenth moment. Exact Bregman, path,
 and equal-frequency fixtures exclude positivity and separated shifted-
-multiplier shortcuts. R-076 proposes three largest-root classes but proves no
-fresh-root, explicit-payload-high, or coefficient-only causal branch estimate.
-The current child is the complete signed coefficient-transport endpoint
-remainder below. Exact isolated `1:2` and `1:3` adapted harmonics remain
+multiplier shortcuts. R-077 replaces the proposed raw root classes by complete
+fresh-Gaussian Doob packets and a direct two-way scale split. It closes the
+signed fresh-root packet expectation and the whole payload-comparable
+`m<=r+L` orientation; the coefficient-dominant `m>r+L` signed packet is the
+current child below. Exact isolated `1:2` and `1:3` adapted harmonics remain
 summable and do not falsify the global statement. This signed remainder,
 one-use, Nelson theorem, and any tier promotion remain open.
 
@@ -738,7 +741,7 @@ phase-root cancellation or a genuinely adapted two-control derivative gain
 `rho=gamma-delta>0` with probability moments strictly above `3/rho`.
 R-063's unshifted coefficient-jet regularity is not such a theorem.
 
-**Status:** REDUCED AND SPLIT THROUGH R-076 (2026-07-25). R-073 proves exact
+**Status:** REDUCED THROUGH R-077 (2026-07-25). R-073 proves exact
 familywise reassembly, the full raw-current telescope identity,
 projector-free completion on the kernel-projector rank-2/3/6 strata, and
 exact terminal-kernel cancellation after both separated first variations are
@@ -751,11 +754,12 @@ complete raw current, and their relative-phase anomaly has a uniform
 sixth-moment one-form, and fixed-cutoff graph recovery. R-076 then records the
 complete nonduplicating endpoint ledger, proves the sharp input-maximum cubic
 Besov payment, and closes the control-independent and nonresonant analytic
-branches. Its three largest-root classes are proposals only. The unresolved
-content is the fresh-root conditional sum, explicit-payload-high no-reuse
-harvest, and coefficient-only balanced-root signed Carleson component inside
-the named signed coefficient-transport endpoint remainder below, not an
-undifferentiated phase-root positivity claim. Tier remains T4.
+branches. R-077 proves exact signed-expectation cancellation for complete
+fresh-Gaussian Doob packets and closes the full payload-comparable
+`m<=r+L` shifted-resonance block with the fifteenth moment. The unresolved
+content is precisely the coefficient-dominant `m>r+L` high--high-to-low
+signed packet below, not an undifferentiated phase-root positivity claim.
+Tier remains T4.
 
 ### **A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM**
 
@@ -773,7 +777,7 @@ resonance-subtracted positive-gain construction is admissible only if its
 subtraction and every lower-chaos replacement are proved inside the same
 signed endpoint identity.
 
-**Status:** REDUCED AND SPLIT BY R-076 (2026-07-25). R-075 proves a global
+**Status:** REDUCED THROUGH R-077 (2026-07-25). R-075 proves a global
 projector-free invariant-current representation and exact Taylor chart across
 the rank-jumping strata. Its principal unshifted tensor is a canonical
 `C^(-1/2-kappa)` R-050 one-form with every finite moment and the required
@@ -783,11 +787,13 @@ exact nonduplicating endpoint ledger and sharp input-maximum cubic payment,
 closing the control-independent and nonresonant pieces while showing that
 positivity and a separated shifted multiplier are unavailable. It does not
 call the invariant variables a nondegenerate tip coordinate, the principal
-tensor gauge-complete, or any proposed largest-root class proved. The fresh-
-root, explicit-payload-high, and coefficient-only balanced-root estimates must
-still retain the R-063 lower chaoses, both restored first variations, terminal
-square, coefficient-curvature/Wick channel, trace transport, and finite-low
-boundary in the signed successor below. Tier remains T4.
+tensor gauge-complete, or a standalone rough resonance constructed. R-077
+Doob-centers only complete fresh-root packets and closes every
+payload-comparable `m<=r+L` orientation. The complementary coefficient-
+dominant `m>r+L` form must still retain the R-063 lower chaoses, both restored
+first variations, terminal square, coefficient-curvature/Wick channel, trace
+transport, and finite-low boundary in the signed successor below. Tier
+remains T4.
 
 ### **A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER**
 
@@ -806,25 +812,53 @@ for all `eta,zeta>0`, uniformly in the cutoff. A valid proof may use a signed
 Ward/martingale telescope, causal freezing relative to each fresh root, or a
 proved adapted arbitrary-multiplier shifted-enhancement theorem.
 
-**Status:** OPEN CURRENT CHILD (2026-07-25), reduced through R-076
-`A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION`. R-076 gives
+**Status:** REDUCED THROUGH R-077 (2026-07-25). R-076
+`A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION` gives
 the exact nonduplicating ledger and corrects the coarse R-075 estimate:
 `R X^(2/5)Y^(8/15)` has `1/15` Young slack and closes the control-independent
 cubic plus both nonresonant paraproducts with a fifteenth moment. The unshifted
 high--high resonance is already enhanced. Exact affine-Bregman, path, and
 equal-frequency fixtures show that positivity and a separated shifted-
-multiplier bound are unavailable. What remains is the paired adapted shifted
-high--high resonance inside the complete signed endpoint. R-076 classifies
-three candidate largest-root branches but proves none: a fresh-Gaussian-root
-expansion with uniform conditional summability, a no-reuse explicit-payload-
-high shell harvest, and a coefficient-only balanced-root signed Carleson
-component. Do not call the classification a theorem, suppress the transport
-tail or lower chaoses, freeze a terminal adapted coefficient as finite chaos,
-omit the `DA=0` channel, split away either first variation, or use a singular
-phase projector. Once all three regular-control causal estimates are proved,
-apply R-075 fixed-cutoff graph recovery, assemble
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, and return to the `q=10/9`
-Nelson theorem. Tier remains T4.
+multiplier bound are unavailable. R-077
+`A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION` replaces the proposed
+raw monomial trichotomy by an exact sequential split. Complete
+fresh-Gaussian endpoint packets are Doob differences with zero signed
+expectation, while the entire payload-comparable `m<=r+L` shifted-resonance
+orientation closes by one global Young inequality and the fifteenth moment.
+The disjoint complement is the coefficient-dominant `m>r+L` high--high-to-low
+packet below. Do not claim absolute Doob summability, center lower chaoses
+separately, construct a standalone `L-infinity times C^(-s)` resonance,
+suppress the transport tail, freeze a terminal adapted coefficient as finite
+chaos, omit the `DA=0` channel, split away either first variation, or use a
+singular phase projector. Tier remains T4.
+
+### **A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET**
+
+**Statement:** For regular mutually orthogonal whole-shell strict-past
+controls and uniformly in the terminal cutoff, let `T_>` be the direct smooth-
+analysis-block shifted-resonance form whose coefficient/current scale `m` and
+largest cubic-payload input scale `r` satisfy `m>r+L`. Prove the coupled lower
+bound
+
+`E B_J^> >= -eta E sum_j||h_j||_2^2-zeta E||Z_J||_6^6-C_(eta,zeta,j0)`
+
+for every `eta,zeta>0`, where `B_J^>` retains both R-073 restored first
+variations, terminal-square polarization, coefficient curvature, the full
+R-063 `P3/P1` and `P4/P2/Sigma Q/P0` forest, R-066 trace transport, every
+conditional compensator, and the finite-low boundary. Doob-center only a
+complete largest-fresh-root endpoint packet. Any input-frequency rooting must
+remain valid under ties, Wick contraction, and high--high-to-low output.
+
+**Status:** OPEN CURRENT CHILD (2026-07-25), isolated by R-077
+`A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION`. The complementary
+payload-comparable orientation and complete fresh-Gaussian Doob packets are
+closed. Opposite Fourier carriers show that `T_>` has a nonzero low output,
+so deterministic support separation provides no decay. The restricted pair-
+high estimate is valid but dominated and does not control this full signed
+packet. Once this regular-control inequality is established, apply R-075
+fixed-cutoff predictable graph recovery, assemble
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE` through the R-066 one-use
+ledger, and return to `q=10/9` Nelson synthesis. Tier remains T4.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

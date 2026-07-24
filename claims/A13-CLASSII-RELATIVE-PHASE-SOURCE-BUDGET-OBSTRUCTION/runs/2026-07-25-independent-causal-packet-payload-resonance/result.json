@@ -1,0 +1,210 @@
+{
+  "assertions": [
+    {
+      "actual": 1.1102230246251565e-16,
+      "expected": "< 1e-12",
+      "name": "tree_phi1_rebuild_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "< 1e-12",
+      "name": "tree_phi2_rebuild_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.938893903907228e-18,
+      "expected": "< 1e-12",
+      "name": "tree_d11_conditional_center",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.469446951953614e-18,
+      "expected": "< 1e-12",
+      "name": "tree_d21_conditional_center",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3877787807814457e-17,
+      "expected": "< 1e-12",
+      "name": "tree_d22_conditional_center",
+      "status": "PASS"
+    },
+    {
+      "actual": -2.0816681711721685e-17,
+      "expected": "< 1e-12",
+      "name": "tree_total_fresh_mean",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4210854715202004e-14,
+      "expected": "< 1e-12",
+      "name": "forest_p3_p1_pointwise",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.684341886080802e-14,
+      "expected": "< 5e-12",
+      "name": "forest_p4_lower_pointwise",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.7111336793645312,
+      "expected": "> 0.1",
+      "name": "forest_p1_nonzero_l2",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.4818748122133716,
+      "expected": "> 0.1",
+      "name": "forest_sigma_q_nonzero_l2",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/5",
+      "expected": "3/5",
+      "name": "independent_s",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/5",
+      "expected": "2/5",
+      "name": "independent_h2_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/15",
+      "expected": "8/15",
+      "name": "independent_l6_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/15",
+      "expected": "1/15",
+      "name": "independent_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "name": "independent_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/10",
+      "expected": "1/10",
+      "name": "independent_pair_theta",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/20",
+      "expected": "9/20",
+      "name": "independent_pair_h2",
+      "status": "PASS"
+    },
+    {
+      "actual": "31/60",
+      "expected": "31/60",
+      "name": "independent_pair_l6",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/30",
+      "expected": "1/30",
+      "name": "independent_pair_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "30",
+      "expected": "30",
+      "name": "independent_pair_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": 33.57112667024851,
+      "expected": "finite",
+      "name": "dyadic_finite_geometric_ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "dyadic_partition_exhaustive",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "high": 270,
+        "low": 315
+      },
+      "expected": "both positive",
+      "name": "dyadic_both_orientations",
+      "status": "PASS"
+    },
+    {
+      "actual": 210,
+      "expected": "> 0",
+      "name": "dyadic_ties_present",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": 1.0,
+      "name": "complex_high_high_zero_mode_real",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4776769231002345e-19,
+      "expected": "< 1e-12",
+      "name": "complex_high_high_zero_mode_imag",
+      "status": "PASS"
+    }
+  ],
+  "assertions_passed": 26,
+  "assertions_total": 26,
+  "doob_tree": {
+    "d11_conditional_center": 6.938893903907228e-18,
+    "d21_conditional_center": 3.469446951953614e-18,
+    "d22_conditional_center": 1.3877787807814457e-17,
+    "phi1_rebuild_error": 1.1102230246251565e-16,
+    "phi2_rebuild_error": 0.0,
+    "total_fresh_mean": -2.0816681711721685e-17
+  },
+  "dyadic": {
+    "assignment_errors": 0,
+    "finite_ratio": 33.57112667024851,
+    "high_count": 270,
+    "low_count": 315,
+    "low_total": 107.6757471502026,
+    "payload_besov_sum": 3.2073915245039206,
+    "tie_count": 210
+  },
+  "high_high_low": {
+    "zero_mode_imag_abs": 1.4776769231002345e-19,
+    "zero_mode_real": 1.0
+  },
+  "honesty_boundary": "This independent audit verifies the signed Doob cancellation, complete lower-chaos algebra, payload-comparable exponent ledger, and a nonzero coefficient-dominant high-high-to-low fixture.  It does not prove the remaining coupled signed packet inequality.",
+  "imports_primary": false,
+  "ledger": {
+    "h2_power": "2/5",
+    "l6_power": "8/15",
+    "moment": "15",
+    "pair_h2": "9/20",
+    "pair_l6": "31/60",
+    "pair_moment": "30",
+    "pair_remainder": "1/30",
+    "pair_theta": "1/10",
+    "remainder": "1/15",
+    "s": "3/5"
+  },
+  "result_id": "A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION",
+  "schema": "tect/a13-causal-packet-payload-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0",
+  "wick_forest": {
+    "first_max_error": 1.4210854715202004e-14,
+    "p1_l2": 0.7111336793645312,
+    "second_max_error": 5.684341886080802e-14,
+    "sigma_q_l2": 2.4818748122133716
+  }
+}

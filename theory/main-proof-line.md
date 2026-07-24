@@ -49,14 +49,16 @@ off-diagonal telescope, resonant phase-root, invariant-current principal
 one-form, and fixed-cutoff graph-recovery reductions are closed at scoped T4.
 R-076 adds the nonduplicating endpoint ledger and the sharp maximal-input
 `X^(2/5)Y^(8/15)` Besov payment, closing the control-independent cubic and
-both nonresonant paraproducts. Its largest-root decomposition is a proposal,
-not a causal theorem. The exact current child is the signed coefficient-
-transport endpoint remainder: prove the fresh-root, explicit-payload-high,
-and coefficient-only balanced-root estimates while retaining every R-063
-lower chaos, both restored first variations, the terminal square, Wick/trace
-channel, and finite-low boundary in one causal identity, followed by the
-umbrella one-use/Nelson bound. This family is not a new premise of A5 and has
-no current PUBLISHED measure theorem.
+both nonresonant paraproducts. R-077 replaces its proposed raw three-class
+root taxonomy by complete fresh-Gaussian Doob packets and a disjoint scale
+orientation. The complete packets cancel in signed expectation, and the full
+payload-comparable `m<=r+L` shifted-resonance form closes with the fifteenth
+moment. The exact current child is the coefficient-dominant `m>r+L`
+high--high-to-low signed packet: retain every R-063 lower chaos, both restored
+first variations, terminal-square polarization, coefficient curvature,
+Wick/trace channel, and finite-low boundary in one causal identity, followed
+by R-075 graph recovery and the umbrella one-use/Nelson bound. This family is
+not a new premise of A5 and has no current PUBLISHED measure theorem.
 
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 

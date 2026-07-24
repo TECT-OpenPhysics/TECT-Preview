@@ -19,7 +19,7 @@ A6 UV and K definitions
   -> A8 decoupled Nelson reference
   -> A9 interpolation cancellation
   -> A10-A13 replacement/no-go lineage
-  -> A13 signed coefficient-transport endpoint and one-use estimate (open)
+  -> A13 coefficient-dominant signed packet and one-use estimate (open)
   -> A7 Nelson/Gibbs reassembly (open)
 ```
 
@@ -34,10 +34,13 @@ then gives the nonduplicating signed endpoint ledger and replaces R-075's
 coarse Young-criticality verdict by an input-maximum Besov theorem with
 `X^(2/5)Y^(8/15)` and `1/15` slack. This closes the control-independent cubic
 and both nonresonant paraproducts, while exact fixtures exclude affine
-positivity and a separated shifted-multiplier route. The current child remains
-`A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: its proposed
-fresh-root, explicit-payload-high, and coefficient-only balanced-root causal
-estimates are all open, followed by the umbrella one-use estimate.
+positivity and a separated shifted-multiplier route. R-077 then proves that
+complete fresh-Gaussian endpoint packets are Doob differences with zero signed
+expectation and closes every payload-comparable `m<=r+L` shifted-resonance
+orientation with the same fifteenth moment. The current child is now
+`A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET`, the complementary
+`m>r+L` signed block with the complete endpoint forest retained, followed by
+R-075 graph recovery and the umbrella one-use estimate.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

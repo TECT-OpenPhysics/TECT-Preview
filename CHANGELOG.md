@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Prove A13 causal Doob-packet and payload-comparable resonance reduction] - 2026-07-25
+
+Established R-077 under A13. Complete fresh-Gaussian endpoint packets are exact Doob differences and cancel in signed expectation without termwise Wick centering or an absolute Carleson estimate. A direct smooth-Littlewood--Paley trilinear estimate closes the entire payload-comparable shifted-resonance block, including unique maxima, ties, mixed ties, and payload high--high-to-low interactions. At s=3/5 the one-use allocation is X^(2/5)Y^(8/15), slack 1/15, and eta^-6 zeta^-8 R^15. The restricted pair-high route is valid but dominated, requiring moment 30. AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY replaces the noncausal raw monomial coloring by the canonical Doob-baseline and T_<=/T_> sequence. The exact remaining gate is A13-CLASSII-COEFFICIENT-DOMINANT-HIGH-HIGH-SIGNED-PACKET. Controlled-shell one-use, q=10/9 Nelson synthesis, and Sector-A closure remain open.
+
 ## [R-076 fixed-time quantifier and fail-closed verifier hardening] - 2026-07-25
 
 Second-pass adversarial review found that the shifted-multiplier zero-mode sentence had silently included t=0, although K_0=0. The proof note now fixes each nontrivial t in (0,1], displays the leading (t/2) v^(4)(sqrt(e)) delta N^s coefficient, records the trivial endpoint, and rebuilds the nine-page PDF with all-page visual QA. Verifier v1.0.3 additionally pins predecessor schema/claim/result identity and aggregate counts, pins current-child schema/source/hash/rowwise PASS, and rejects explicit failure fields. The final contract remains primary 24/24, independent 15/15, integrated 92/92, aggregate 131/131; no theorem scope, tier, one-use, Nelson, or Sector-A closure changes.

@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY](#audit-2026-07-25-a13-r076-root-taxonomy) | R-076 raw monomial largest-root taxonomy | raw monomial ownership is not a causal theorem: ties lack a unique owner, Wick contraction can change root ownership, adapted coefficients generate an unbounded forest, and output roots do not control high--high-to-low leakage |
 | [AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR](#audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair) | R-076 proof-note, PDF, verifier, independence, and scope audit | the first draft wrote an invalid output-frequency split for an input-maximum proof, rendered bare `qquad` text, accepted contradictory predecessor records, repeated the exponent formulas, hardcoded a report, and overstated a proposed causal classification |
 | [AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS](#audit-2026-07-25-a13-r076-predecessor-pass-schemas) | R-076 integrated-verifier predecessor PASS validation | the first wrapper accepted only a modern summary verdict, while six pinned predecessors use three historical contracts: suffixed verdict strings, zero-failure count summaries, and a boolean `pass` field |
 | [AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY](#audit-2026-07-25-a13-r075-coarse-transport-criticality) | R-075 classification of the absolute third-order payload | the recorded `H2*L6^3` estimate is valid but nonsharp; a largest-input split gives powers `X^(2/5)Y^(8/15)` and positive slack `1/15`, so the old no-go is narrowed to that coarse estimate |
@@ -68,6 +69,34 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-25-a13-r076-root-taxonomy"></a>
+### AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY -- A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION coefficient-dominant boundary
+
+**Failure mode:** Treat the coefficient-dominant high-high-to-low residual and
+the three R-076 raw monomial largest-root classes as a disjoint causal
+decomposition and infer that fresh-root and
+explicit-payload-high branches are already closed.
+
+**Evidence:** Coefficient/payload ties have no declared unique owner; Wick
+contraction can remove the nominal largest Gaussian pair; a smooth adapted
+coefficient generally carries an infinite Hermite forest; and output-root
+ownership is unsafe because high--high inputs may produce arbitrarily low
+output. The exact carrier `e^(iNx)e^(-iNx)=1` prevents deterministic
+shell-separation decay. R-077 instead first decomposes complete terminal
+increments into Doob packets and predictable baselines, then splits only the
+shifted resonance into the disjoint forms `T_<=` and `T_>`.
+
+**Correction:** Use the sequential proof map: cancel complete fresh-Gaussian
+Doob packets in signed expectation, retain the predictable baseline, pay the
+entire payload-comparable form `T_<=` once, and keep `T_>` with every signed
+terminal-square, curvature, lower-chaos, trace, and finite-low companion.
+
+**Consequence:** The R-076 analytic identities and Besov theorem are
+unchanged, but its raw monomial taxonomy remains only a superseded proposal.
+R-077 closes the complete fresh-packet and payload-comparable portions. The
+coefficient-dominant high--high-to-low signed packet remains open; no one-use,
+Nelson, tier promotion, or Sector-A closure follows.
 
 <a id="audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair"></a>
 ### AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR -- adversarial review found proof, PDF, verifier, independence, and scope defects

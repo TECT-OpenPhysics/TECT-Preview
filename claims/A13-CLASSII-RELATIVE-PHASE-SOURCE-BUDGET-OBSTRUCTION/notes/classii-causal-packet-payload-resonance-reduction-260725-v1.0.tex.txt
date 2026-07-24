@@ -1,0 +1,574 @@
+% =============================================================================
+% Title: Causal Doob packets, payload-comparable resonance, and the coefficient-dominant boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION
+% Ledger: R-077
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 exact/analytic subproof; coefficient-dominant signed packet open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-25): complete-packet Doob cancellation of the fresh-root
+% class; smooth-LP payload-comparable trilinear closure with the existing
+% fifteenth moment; exact high-high-to-low residual; repair of the proposed
+% monomial three-class ownership rule; and one-block successor theorem.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Id}{\mathrm I}
+
+\section{Purpose and scope}
+
+R-076 left three proposed largest-root classes: a fresh Gaussian root, a
+largest explicit control payload, and a coefficient-only balanced root.  The
+proposal correctly identified the causal issue, but it was not yet a
+disjoint theorem.  Ties between coefficient and payload inputs, and Wick
+contractions which remove a nominal top Gaussian pair, make a raw-monomial
+ownership rule unsafe.
+
+This note replaces that proposal by two exact operations performed in a
+fixed order.
+
+First, every complete terminal control increment is decomposed into its
+strict-past conditional mean and complete Doob differences.  The latter are
+the canonical fresh-Gaussian packets.  Their signed expectation is exactly
+zero at every cutoff.  The cancellation includes the current square,
+coefficient Wick term, both restored first variations, every R-063 lower
+chaos, and the trace companion; none of those terms centers separately.
+
+Second, inside the remaining predictable endpoint algebra, the only new
+R-076 shifted resonance is split by smooth Littlewood--Paley input indices.
+If the multiplier/current resonance scale is no larger than the largest
+explicit payload scale, the complete block is bounded by the sharpened
+R-076 Besov theorem and the already available fifteenth moment.  The
+complement is one genuine coefficient-dominant high--high-to-low form.
+
+Thus the old three proposed estimates are replaced by one exact cancellation,
+one proved absolute estimate, and one smaller signed successor.  The last
+successor, controlled-shell one-use, the $q=10/9$ Nelson theorem, an
+interacting measure, floor or regulator removal, and infinite volume are not
+proved here.  All statements use the fixed positive production floor,
+common real-even regulators, the strict whole-shell filtration, regular
+one-shot controls, exact non-aliased products, the R-066 finite-low
+convention, and smooth inhomogeneous Littlewood--Paley blocks for analysis.
+The physical sharp-cube regulator is not changed.
+
+\section{Canonical complete-packet Doob decomposition}
+
+Fix a terminal shell $J$.  Let $(g_r,d_r)$ be the value and derivative
+Gaussian increments and let
+\[
+ X_r=\sum_{\ell\le r}g_\ell,\qquad
+ DX_r=\sum_{\ell\le r}d_\ell .                          \tag{2.1}
+\]
+Write the partial control shifts, including the fixed low block, as
+\[
+ A^{(k)}=A_{<j_0}+\sum_{j_0\le\ell\le k}a_\ell,
+ \qquad C^{(k)}=DA^{(k)},                               \tag{2.2}
+\]
+and set $A^{(j_0-1)}=A_{<j_0}$.  Since $a_\ell$ is
+$\cF_{\ell-1}$-measurable, $A^{(k)}$ and $C^{(k)}$ are
+$\cF_{k-1}$-measurable.
+
+For any shift $H$ measurable before the next Gaussian shell define
+\[
+ \mathcal W_r^{(J)}(H)
+ :=W_r^{(J)}(X_r+H,DX_r+DH),                             \tag{2.3}
+\]
+where $W_r^{(J)}$ is the R-066 terminal-backward heat energy.  The terminal
+increment created by control shell $k$ is
+\[
+ \Phi_k=\mathcal W_J^{(J)}(A^{(k)})
+       -\mathcal W_J^{(J)}(A^{(k-1)}).                  \tag{2.4}
+\]
+
+\subsection{Exact theorem}
+
+For $j_0\le k\le r\le J$ put
+\[
+\begin{aligned}
+ \mathfrak G_{r,k}:={}&
+ \{\mathcal W_r^{(J)}(A^{(k)})
+   -\mathcal W_r^{(J)}(A^{(k-1)})\}\\
+ &-\{\mathcal W_{r-1}^{(J)}(A^{(k)})
+   -\mathcal W_{r-1}^{(J)}(A^{(k-1)})\}.
+\end{aligned}                                             \tag{2.5}
+\]
+Iterating the R-066 backward-heat martingale from $J$ down to $r$ gives
+\[
+ \E[\Phi_k\mid\cF_r]
+ =\mathcal W_r^{(J)}(A^{(k)})
+  -\mathcal W_r^{(J)}(A^{(k-1)}).                       \tag{2.6}
+\]
+Consequently
+\[
+ \mathfrak G_{r,k}
+ =\E[\Phi_k\mid\cF_r]-\E[\Phi_k\mid\cF_{r-1}],       \tag{2.7}
+\]
+and therefore
+\[
+ \boxed{
+ \E[\mathfrak G_{r,k}\mid\cF_{r-1}]=0.}               \tag{2.8}
+\]
+The finite Doob sum is the exact identity
+\[
+ \boxed{
+ \Phi_k=\mathfrak P_k+
+          \sum_{r=k}^{J}\mathfrak G_{r,k},
+ \qquad
+ \mathfrak P_k:=
+ \mathcal W_{k-1}^{(J)}(A^{(k)})
+ -\mathcal W_{k-1}^{(J)}(A^{(k-1)}).}                   \tag{2.9}
+\]
+In particular,
+\[
+ \boxed{
+ \E\sum_{k=j_0}^{J}\sum_{r=k}^{J}\mathfrak G_{r,k}=0}
+ \quad\hbox{for every }J.                               \tag{2.10}
+\]
+No dyadic estimate or probability moment is used in (2.10).  Summing the
+predictable baselines $\mathfrak P_k$ gives exactly the R-066 controlled
+discrete Ito formula.  Thus the fresh-root branch is not a new absolute
+Carleson estimate: in the complete signed endpoint it is already the
+martingale part removed by the backward-heat coordinate.
+
+This statement is deliberately weaker than
+\[
+ \sup_J\E\sum_{k\le r}|\mathfrak G_{r,k}|<\infty.        \tag{2.11}
+\]
+Equation (2.11) is neither needed nor proved.  Taking absolute values before
+the conditional cancellation would return to the critical architectures
+excluded by R-073 and R-076.
+
+\section{Why the complete Wick forest must stay inside the packet}
+
+At finite cutoff, condition on $\cF_{r-1}$.  Both partial shifts in (2.5)
+are now deterministic relative to the fresh shell $r$.  The heat-averaged
+coefficient increment has the form
+\[
+ F_{r,k}^{(J)}(x)
+ =B_r^{(J)}(x+A^{(k)})-B_r^{(J)}(x+A^{(k-1)}).           \tag{3.1}
+\]
+The R-063 Taylor/Wick algebra applies conditionally.  With its root-shell
+notation, the complete coefficient bracket is
+\[
+\begin{aligned}
+ \sum_\ell\{&F_{r,k}^{(J)}(x_\ell):Q_\ell\\
+ &+DF_{r,k}^{(J)}(x_\ell):
+       (\mathrm P_3+\mathrm P_1)\\
+ &+\tfrac12D^2F_{r,k}^{(J)}(x_\ell):
+   (\mathrm P_4+\mathrm P_2^{\rm cross}
+      +\Sigma_\ell Q_\ell+\mathrm P_0^{\rm cross})\\
+ &+\mathcal R_{3,\ell}^{F_{r,k}^{(J)}}:Q_\ell\}.
+\end{aligned}                                             \tag{3.2}
+\]
+Here (3.2) is a finite-cutoff conditional equality, not a claim that an
+arbitrary adapted terminal coefficient has a finite global chaos expansion.
+It is accompanied by the derivative-current pieces of $\mathcal W$.
+
+The scalar identities expose the issue:
+\[
+ Z(Y^2-\gamma)=:ZYY:+2kY,                               \tag{3.3}
+\]
+\[
+ Z^2(Y^2-\gamma)=:ZZYY:+\sigma(Y^2-\gamma)
+                  +4k:ZY:+2k^2.                        \tag{3.4}
+\]
+The lower terms in (3.3)--(3.4) are generally nonzero.  A contraction may
+turn a nominal top Gaussian pair into $\Sigma Q$, a second chaos, or a zero
+chaos.  It is therefore false to give the top chaos one causal owner and
+discard or separately center its companions.
+
+R-073 restores both first variations and the terminal square before
+raw-to-Wick conversion.  R-066 transports the covariance trace and retains
+the finite-low boundary.  Equations (2.5)--(2.10) apply to that complete
+packet.  They do not assert
+\[
+ \E\mathrm P_1=\E\mathrm P_2
+ =\E(\Sigma Q)=\E\mathrm P_0=0                          \tag{3.5}
+\]
+term by term.  This is the precise sense in which the R-063 forest
+``reassembles after conditioning.''
+
+Combining (2.10) with the already proved R-066 trace and low-block bounds
+gives, for every $\eta,\zeta>0$ and the corresponding fixed $j_0$,
+\[
+ \E\{\mathcal F_J^{\rm fresh}+\mathcal T_J
+        +\mathcal L_{<j_0}\}
+ \ge-\eta\E\sum_j\|h_j\|_{\mathcal H_j}^2
+     -\zeta\E\|Z_J\|_6^6-C_{\eta,\zeta,j_0},           \tag{3.6}
+\]
+uniformly in $J$, where
+$\E\mathcal F_J^{\rm fresh}=0$.  The signed trace and finite-low estimates,
+not a fictional termwise forest centering, supply the right side.
+
+\section{Payload-comparable resonance theorem}
+
+Use a smooth inhomogeneous Littlewood--Paley analysis partition
+$(\Delta_m)_{m\ge-1}$.  This is an analysis device; the physical regulator
+may remain the pinned sharp cube.  Let
+\[
+ J=M(U)^TDU,
+ \qquad K_t=D^3M(U+tA)-D^3M(U).                          \tag{4.1}
+\]
+At the fixed positive floor,
+\[
+ \sup_{t\in[0,1]}\|K_t\|_\infty
+ \le2\sup_z\|D^3M(z)\|<\infty.                         \tag{4.2}
+\]
+R-050/R-075 give, for $s=1/2+\kappa<1$ and every finite $p$,
+\[
+ R:=\|J\|_{\cC^{-s}}\in L^p(\Omega).                   \tag{4.3}
+\]
+
+Let the R-076 input-maximum expansion, with a fixed labelled tie rule, be
+\[
+ A^3DA=\sum_{r\ge-1}G_r.                                \tag{4.4}
+\]
+Every $G_r$ contains each four-input monomial exactly once and has Fourier
+support in a ball of radius $C2^r$, even when its inputs make a low output.
+For a fixed resonance width $L$, define directly at finite cutoff
+\[
+\begin{aligned}
+ T_{\le}:={1\over2}\int_0^1(1-t)^2
+ \sum_r\sum_{\substack{|m-n|\le L\\m\le r+L}}
+ \int\langle(\Delta_mK_t)(\Delta_nJ),Q_{\rm II}G_r\rangle
+ \dd x\dd t .
+\end{aligned}                                             \tag{4.5}
+\]
+Formula (4.5), rather than a prior claim that $K_t\circ J$ exists, is the
+definition of the cutoff trilinear form.
+
+\subsection{Block estimate}
+
+Smooth analysis blocks are uniformly bounded on $L^\infty$, and (4.3)
+gives
+\[
+ \|\Delta_mK_t\|_\infty\lesssim_e1,
+ \qquad
+ \|\Delta_nJ\|_\infty\lesssim2^{sn}R.                  \tag{4.6}
+\]
+Since $s>0$,
+\[
+ \sum_{m\le r+L}\sum_{|m-n|\le L}2^{sn}
+ \le C_{s,L}2^{sr}.                                    \tag{4.7}
+\]
+Thus
+\[
+ \boxed{
+ |T_{\le}|
+ \le C_{e,s,L}R\sum_r2^{sr}\|G_r\|_1.}                \tag{4.8}
+\]
+The estimate is pathwise.  It uses no independence, Malliavin derivative,
+or control-dependent multiplier norm.  Adaptation is harmless in this
+orientation because only the uniform bound (4.2) is used.
+
+R-076 already proved
+\[
+ \sum_r2^{sr}\|G_r\|_1
+ \lesssim\|A\|_{H^2}^{(1+s)/2}\|A\|_6^{(7-s)/2}.        \tag{4.9}
+\]
+Put $X=\|A\|_{H^2}^2$ and $Y=\|A\|_6^6$.  Then
+\[
+ |T_{\le}|\lesssim RX^aY^b,
+ \quad a={1+s\over4},\quad b={7-s\over12},
+ \quad c=1-a-b={1-s\over6}.                            \tag{4.10}
+\]
+One weighted Young inequality, after both shell sums, yields
+\[
+ \boxed{
+ |T_{\le}|
+ \le\eta X+\zeta Y
+ +C_{e,s,L}\eta^{-{3(1+s)\over2(1-s)}}
+  \zeta^{-{7-s\over2(1-s)}}R^{6/(1-s)}.}                \tag{4.11}
+\]
+At $\kappa=1/10$ and $s=3/5$,
+\[
+ (a,b,c)=\left({2\over5},{8\over15},{1\over15}\right),
+ \qquad
+ \boxed{
+ |T_{\le}|\le\eta X+\zeta Y
+ +C_e\eta^{-6}\zeta^{-8}R^{15}.}                       \tag{4.12}
+\]
+The fifteenth moment is already supplied by (4.3).  No shellwise Young
+inequality is used, so the Cameron--Martin energy and sextic budget are each
+spent once.
+
+The branch $m\le r+L$ includes a unique maximal payload input, payload ties,
+mixed coefficient/payload ties, and the old pair-high cases.  A second
+explicit high input is not required.  High--high-to-low interactions inside
+$G_r$ are retained because (4.8) uses the input scale and $L^1$ norm, not an
+output projection.
+
+\subsection{A valid but dominated pair-high refinement}
+
+One explored route first extracted a restricted subfamily with two
+comparable explicit high inputs.  If a fraction $\theta$ of the companion
+shell's Cameron--Martin gain is used before sequence Holder, it gives
+\[
+ |T_{\rm pair}|
+ \lesssim N_{j_0}^{-\theta}R X^\alpha Y^\beta,
+ \quad
+ \alpha={1+s+2\theta\over4},\quad
+ \beta={7-s-2\theta\over12}.                            \tag{4.13}
+\]
+The admissible interval is $0<\theta<(1-s)/2$.  Choosing
+$\theta=(1-s)/4$ gives, at $s=3/5$,
+\[
+ \theta={1\over10},\quad
+ \alpha={9\over20},\quad
+ \beta={31\over60},\quad
+ 1-\alpha-\beta={1\over30},                             \tag{4.14}
+\]
+and hence
+\[
+ |T_{\rm pair}|
+ \le\eta X+\zeta Y
+ +C\eta^{-27/2}\zeta^{-31/2}N_{j_0}^{-3}R^{30}.         \tag{4.15}
+\]
+This is a valid restricted refinement and records the earlier no-reuse
+search.  It is not the primary proof: (4.12) covers the entire
+payload-comparable block with the smaller fifteenth moment and without
+extracting a pair.  The refinement may still be useful if an explicit
+high-floor decay is later needed.
+
+\section{The exact coefficient-dominant residual}
+
+The complement of (4.5) is
+\[
+\begin{aligned}
+ T_{>}:={1\over2}\int_0^1(1-t)^2
+ \sum_r\sum_{\substack{|m-n|\le L\\m>r+L}}
+ \int\langle(\Delta_mK_t)(\Delta_nJ),Q_{\rm II}G_r\rangle
+ \dd x\dd t .
+\end{aligned}                                             \tag{5.1}
+\]
+Equations (4.5) and (5.1) are a disjoint exhaustive partition of the shifted
+resonance at every finite cutoff.  Equality is assigned to $T_{\le}$.
+
+Because $G_r$ is ball-supported, a fixed enlargement $L_*$ gives
+\[
+ T_{>}=\sum_r\int
+ S_{r+L_*}\left[
+  \sum_{\substack{|m-n|\le L\\m>r+L}}
+   (\Delta_mK_t)(\Delta_nJ)\right]G_r,                  \tag{5.2}
+\]
+with the path weight and tensor contractions suppressed.  This is a genuine
+high--high-to-low form.  Its two high factors may create arbitrarily low
+output.  The elementary carrier
+\[
+ e^{iNx}e^{-iNx}=1                                     \tag{5.3}
+\]
+shows that no deterministic separation decay follows from $m-r\to\infty$.
+The zero-mode fixture in R-076 is the corresponding production-frame
+diagnostic.
+
+The proper remaining object is not isolated $T_{>}$.  Let
+$\mathfrak B_J^{>}$ denote the nonduplicating predictable block containing
+
+\begin{enumerate}
+\item $T_{>}$ and the base-frozen term not already paid by R-075/R-076;
+\item both R-073 restored first variations;
+\item the corresponding terminal-square polarization;
+\item coefficient curvature and the complete R-063
+$\mathrm P_3/\mathrm P_1$ and
+$\mathrm P_4/\mathrm P_2/\Sigma Q/\mathrm P_0$ conversion;
+\item R-066 trace transport and the finite-low boundary.
+\end{enumerate}
+
+The Doob projection of Section 2 may be applied only to complete fresh-root
+packets inside this list.  Its conditional compensator, Wick contractions,
+mixed ties, and coefficient-control-high pieces remain in
+$\mathfrak B_J^{>}$.  The smallest honest successor is
+\[
+ \boxed{
+ \E\mathfrak B_J^{>}
+ \ge-\eta\E\sum_j\|h_j\|_{\mathcal H_j}^2
+     -\zeta\E\|Z_J\|_6^6-C_{\eta,\zeta,e,j_0}}
+                                                               \tag{5.4}
+\]
+uniformly in $J$, for regular one-shot strict-past controls.  If (5.4) is
+proved, R-075 graph recovery supplies the fixed-cutoff finite-energy
+extension and R-066 completes controlled-shell one-use.  Only then may the
+existing $q=10/9$ equivalence be used for Nelson synthesis.
+
+\section{Correction of the old root map and failed routes}
+
+The exact proof map after this note is sequential, not a raw three-coloring
+of monomials:
+
+\begin{enumerate}
+\item Decompose every complete terminal shell increment by (2.9).  The Doob
+part has zero signed expectation; retain the predictable baseline.
+
+\item In the exact endpoint representation of that baseline, split only the
+shifted resonance by (4.5) and (5.1).  Pay $T_{\le}$ once by (4.11).
+
+\item Keep $T_{>}$ with every signed companion listed below (5.3), and prove
+the single lower bound (5.4).
+\end{enumerate}
+
+This ordering prevents duplication: Section 2 acts on the complete endpoint
+packet, while Section 4 subtracts one proved form from its predictable
+baseline.
+
+The investigated alternatives are now completely recorded.
+
+\begin{enumerate}
+\item \textbf{Raw monomial largest-root ownership fails as a theorem.}
+Coefficient/payload ties have no declared unique owner, and Wick contraction
+can remove the nominal largest Gaussian pair.  This is recorded as
+\texttt{AUDIT-2026-07-25-A13-R076-ROOT-TAXONOMY}.  The proposal in R-076 was
+explicitly open; the correction changes no earlier proved identity.
+
+\item \textbf{Termwise forest centering fails.}  Equations (3.3)--(3.4)
+contain nonzero lower chaoses.  Only the complete packet has the martingale
+cancellation (2.10).
+
+\item \textbf{Absolute fresh-root summability is unnecessary and unproved.}
+The required variational quantity is signed expectation.  Replacing (2.10)
+by (2.11) discards the load-bearing cancellation.
+
+\item \textbf{A standalone shifted resonance is not constructed.}
+$L^\infty\times\cC^{-s}$ does not canonically define $K_t\circ J$.
+Equation (4.5) defines and bounds the cutoff trilinear form directly.
+
+\item \textbf{Raw sharp projectors are not used in (4.6).}  Their
+$L^\infty$ operator norms are not uniformly controlled.  Smooth analysis
+blocks supply the required uniform kernel bound without altering the
+physical sharp regulator.
+
+\item \textbf{Output support does not kill $T_{>}$.}  Equation (5.3) is an
+exact counterexample.  The low-output insertion in (5.2) isolates rather
+than removes the obstruction.
+
+\item \textbf{The pair-high harvest is valid but dominated.}  It gives
+(4.15), but the simpler geometric sum proves (4.12) for the whole
+payload-comparable orientation with a smaller moment.
+
+\item \textbf{Gaussian integration by parts is not a substitute.}  Applied
+to a later adapted control it differentiates an uncontrolled Malliavin
+direction.  The Doob packet uses only strict-past measurability and avoids
+that derivative.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``Each R-063 chaos centers separately.''}
+\textbf{UPHELD as false.}  The lower-chaos polynomials in (3.3)--(3.4) are
+nonzero.  Equation (2.8) is asserted only for the complete endpoint packet.
+
+\item \textbf{``Doob cancellation proves an absolute Carleson estimate.''}
+\textbf{UPHELD as false.}  It proves (2.10), not (2.11).  The signed
+expectation is exactly the quantity needed at this stage.
+
+\item \textbf{``Later adapted controls can be frozen before every earlier
+root.''} \textbf{UPHELD as false.}  Partial controls are frozen only after
+the causal shell telescope.  Formula (2.9) never freezes the terminal shift
+wholesale.
+
+\item \textbf{``The $T_{\le}$ estimate assumes probabilistic independence
+from the control.''} \textbf{DISMISSED.}  It is pathwise.  Control
+independence means only that $R=\|J\|_{\cC^{-s}}$ has a cutoff-uniform moment
+not growing with the chosen control.
+
+\item \textbf{``A bounded $K_t$ defines $K_t\circ J$.''}
+\textbf{UPHELD as false.}  Only the oriented finite trilinear form (4.5) is
+defined.  This avoids repeating the separated-multiplier error of R-076.
+
+\item \textbf{``High--high-to-low inside the payload was discarded.''}
+\textbf{DISMISSED.}  The input-maximum $G_r$ blocks retain it.  No output
+projection appears in (4.8)--(4.9).
+
+\item \textbf{``High--high-to-low in the multiplier/current product is also
+harmless.''} \textbf{UPHELD as false.}  It is exactly $T_{>}$, and (5.3)
+shows why spatial separation gives no decay.
+
+\item \textbf{``Every payload tie contains two maximal explicit factors.''}
+\textbf{UPHELD as false.}  A unique maximal input and mixed ties occur.
+The proof of (4.8) needs no pair extraction.
+
+\item \textbf{``The optional thirtieth-moment refinement is the main
+closure.''} \textbf{DISMISSED.}  The broader fifteenth-moment theorem
+(4.12) is stronger for the present gate.  The restricted refinement is kept
+only as an audited route and possible future tail tool.
+
+\item \textbf{``Smooth analysis blocks change the sharp-cube model.''}
+\textbf{DISMISSED.}  They are used only for Bony analysis of an already
+regularized product.  The physical covariance and filtration remain the
+pinned sharp cubes.
+
+\item \textbf{``This closes controlled-shell one-use or Sector A.''}
+\textbf{UPHELD as an overclaim.}  The complete coefficient-dominant bound
+(5.4), one-use, and Nelson synthesis remain open.  The tier stays T4.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable derives every exponent from $\kappa=1/10$, proves an
+exact two-shell Gaussian backward-heat/Doob polynomial fixture, checks the
+complete scalar Wick forests, exhaustively partitions finite block-index
+triples, evaluates the high--high zero mode, and tests the weighted AM--GM
+normalization.  It also derives the optional pair-high exponents rather than
+copying them.
+
+The non-importing executable uses a finite probability tree for Doob
+centering, correlated-normal arrays for the forest identities, a separately
+implemented block enumeration, an independent exponent route, and complex
+opposite-frequency carriers.  It does not import the primary executable.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/a13_classii_causal_packet_payload_resonance_verify.py
+\end{verbatim}
+The integrated verifier is fail-closed: it pins the R-063, R-066, R-069,
+R-073, R-075, and R-076 authorities; reruns both executables; checks the
+proof source, PDF, manifest, and repository surfaces; and rejects any
+overclaim of (5.4), one-use, Nelson, or Sector-A closure.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-CAUSAL-PACKET-PAYLOAD-RESONANCE-REDUCTION
+Precise statement:       Complete fresh-Gaussian Doob packets have exactly
+                         zero signed expectation.  The complete smooth-LP
+                         payload-comparable shifted-resonance block obeys
+                         the R-076 one-use Besov payment and, at s=3/5,
+                         requires only the available fifteenth moment.
+                         The complement is one exact coefficient-dominant
+                         high-high-to-low signed packet.
+Scope:                   Fixed positive floor; finite cutoff and uniform
+                         cutoff estimates; common real-even regulators;
+                         strict whole-shell one-shot controls; smooth LP
+                         analysis blocks; R-066 finite-low convention.
+Dependencies:            A1; R-050; R-063; R-066; R-069; R-073; R-075;
+                         R-076.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_causal_packet_payload_resonance_verify.py
+Expected output:         primary 35/35 + independent 26/26 + manifest-pinned
+                         integrated/aggregate PASS.
+Falsification gate:      Nonzero conditional mean in (2.8); missing lower
+                         chaos in (3.2); failure of (4.7); disagreement of
+                         2/5, 8/15, 1/15, or moment 15; overlap/gap in the
+                         two-way split; disappearance of (5.3); or any
+                         authority, source, PDF, run, or surface mismatch.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  The coefficient-dominant inequality (5.4), every-
+                         finite-energy extension, controlled-shell one-use,
+                         q=10/9 Nelson, interacting measure, all removal
+                         limits, and Sector-A closure remain open.
+Next required action:    Prove the complete coefficient-dominant m>r+L
+                         high-high-to-low signed packet with both first
+                         variations, terminal square, curvature, full Wick
+                         forest, trace, and finite-low boundary retained.
+Evidence summary:        Exact Doob/tower proof; complete conditional Wick
+                         forest; analytic trilinear/Besov/Young proof;
+                         primary and non-importing executable audits; PDF.
+\end{verbatim}
+\endgroup
