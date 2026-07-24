@@ -1,0 +1,88 @@
+{
+  "schema": "tect/a13-off-diagonal-telescope-critical-phase-root-reduction/1.0",
+  "result_id": "A13-CLASSII-OFF-DIAGONAL-TELESCOPE-CRITICAL-PHASE-ROOT-REDUCTION",
+  "result_ledger_id": "R-073",
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "date": "2026-07-24",
+  "tier": "T4",
+  "authority": {
+    "governance": {
+      "path": "GOVERNANCE.md",
+      "sha256": "ad8b22e1437d2b4a2e48d29753c7ac5f913c374f2d11236902cd1893f1e1e7f4"
+    },
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r069_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_endpoint_lifted_schur_causal_grouping_reduction_manifest.json",
+      "sha256": "0d0880c00284cee8e5c0364d745d21eb722d9119ff2bc11634a59811c98e4240"
+    },
+    "r070_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_wick_doob_terminal_resolvent_reduction_manifest.json",
+      "sha256": "f9976cbdc01e27972b5e0b777569a36c7b841f492cd2f810f4d97af16d36a072"
+    },
+    "r071_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_one_form_sobolev_linear_closure_manifest.json",
+      "sha256": "1a03d266aeddb96734f8d43b64d0998ab28f1bea0219d4ca549c1bf0b5abb915"
+    },
+    "r072_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_phase_kernel_causal_diagonal_reduction_manifest.json",
+      "sha256": "43e9f4b03decd74aea998a5b0314df5943895f973a13e55994d633a8e2ad92bd"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction.py",
+      "sha256": "3f7eee5926fb6c9647525679cd4ed03cc22a99e9feea9c31e93b57f7cc1a48bd",
+      "version": "1.0.1"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_independent.py",
+      "sha256": "eec1ea27f0d0325141169ee4d5a49593623768f41fac6415807c1c9d6a1cf603",
+      "version": "1.0.1"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py",
+      "sha256": "322e1d93a6301a64a8e20d6280e381e6f5dc464ae07f12d2786457f565254a10",
+      "version": "1.0.1"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0.tex.txt",
+      "sha256": "3d96e40fd64c10a85aba8a1e100d65143f0bb15cf28ffede55aa7d2ee08b222a",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0.pdf",
+    "sha256": "1836c0bb8b30a3cdcdb70b6e495732d4a93ee66f1ce5a579a94f5142ecf34c1d",
+    "pages": 7,
+    "size_bytes": 95479,
+    "form_check": "PASS",
+    "overfull_hboxes": 0,
+    "visual_qa": "PASS: all 7 final pages were rendered with Poppler and inspected after the last rebuild; equations 2.1--7.2, rank strata, boxed completions, headings, footer, margins, and page breaks are legible with no clipping, overlap, literal control-sequence debris, black boxes, or blank spill page"
+  },
+  "theorem": {
+    "familywise_reassembly": "O1 replaces each local nonlinear root w_j by w_0; O2 supplies every mismatched E_j--b_l pair; O3 transports DM_0[a_j] to DM_j[a_j] and does not cancel the R-071 linear term. Exactly L+D+O=<w_0,Q(M_T-M_0)^T C>.",
+    "raw_current_telescope": "With the R-069 mixed, control, and raw Gaussian polarizations retained, L+N_G+D+O+|Delta w+c_T|_Q^2/2=sum_j(R_j^{G,raw}+R_j^x+R_j^C)-S_G-S_C. The finite-low boundary survives Wick conversion.",
+    "projector_free_completion": "For P_mix=<w_0,QE_tot^T C>+<Delta w,Qc_T>+|c_T|_Q^2/2, restoring S_C and L gives S_C+L+P_mix=<w_T,Qc_T>+|c_T|_Q^2/2, and adding |w_T|_Q^2/2 gives |w_T+c_T|_Q^2/2 on every rank stratum without a pseudoinverse.",
+    "phase_kernel": "The explicit terminal kernel projector has ranks 2, 3, and 6 on the generic, s=0, and u=0 strata. After S_C and L are separated, its square-invisible component is nonzero; for every C in the terminal kernel, restoring both first variations gives S_C+L+<w_0,QE_tot^T C>=0 exactly.",
+    "explicit_phase_vector": "With ell_r=Dq_r(z)[A], epsilon_r=q_r(z+A)-q_r(z)-ell_r, and beta_r=e_2^TQw_{r,0}, the nonlinear vector is k=-2[(sum beta_r epsilon_r)(z+A)+(sum beta_r ell_r)A]. The R-071 fixture has nonlinear, linear, and base slopes 0.0674999999999706, 0.0108750000000198, and -0.0783749999999904, whose sum is zero.",
+    "absolute_route_boundary": "In the declared raw termwise absolute largest-shell architecture, value-high O2 needs theta>1/4 for decay and theta<1/4 for random slack; value-high O3 needs theta>1/2 and theta<1/2. Both endpoints have deterministic budget exponent one and zero dyadic decay.",
+    "positive_gain_discriminator": "An adapted root improving H^{-1/2-delta} by gamma derivatives has rho=gamma-delta. This route opens only for rho>0 and requires moments strictly above 3/rho after endpoint losses. R-063 does not supply the required adapted two-control theorem."
+  },
+  "verification": {
+    "primary_assertions": 35,
+    "independent_assertions": 27,
+    "integrated_assertions": 51,
+    "aggregate_assertions": 113,
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-off-diagonal-telescope-critical-phase-root-reduction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-independent-off-diagonal-telescope-critical-phase-root-reduction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-integrated-off-diagonal-telescope-critical-phase-root-reduction/result.json"
+  },
+  "negative_result": "NG-2026-07-24-A13-RAW-ABSOLUTE-OFFDIAGONAL-CARLESON",
+  "verification_audit_record": "AUDIT-2026-07-24-A13-R073-PREDECESSOR-CONTRACT-SCHEMA",
+  "successor_gate": "A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY",
+  "successor": "Prove either a signed strict-past terminal phase-root coercivity theorem exploiting the exact restored completion while retaining the range square and finite-low boundary, or an adapted positive-gain root with rho>0 and p>3/rho for the two value-high branches. Then perform finite-energy extension, controlled-shell one-use, and q=10/9 Nelson synthesis.",
+  "honesty_boundary": "This scoped T4 continuation proves exact familywise off-diagonal reassembly, the full raw current-telescope identity, projector-free restoration on every production-frame rank stratum, exact phase-kernel cancellation after both separated first variations are restored, and the endpoint conflict of the narrowly declared raw termwise absolute value-high Carleson route. It does not prove a cutoff-uniform stochastic terminal lower bound, an adapted positive-gain root, arbitrary finite-energy drift extension, controlled-shell one-use, the q=10/9 Nelson theorem, an interacting measure, floor or regulator removal, infinite volume, or T5--T7."
+}

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-073](#r-073) | Exact off-diagonal telescope reassembly and critical phase-root boundary | Scoped T4 exact/analytic/executed subproof: all three R-072 off-diagonal families and the R-071 linear term reconstruct the R-069 raw current telescope exactly; restoring both separated first variations gives a projector-free terminal square and cancels every terminal-kernel component on the kernel-projector rank-2/3/6 strata. After Wick subtraction this is the still-open adapted terminal coercivity, not a lower bound. The declared termwise absolute value-high route is endpoint-critical at `theta=1/4` and `theta=1/2`; 113/113 aggregate assertions |
 | [R-072](#r-072) | Gauge-kernel strata and causal same-shell diagonal one-use reduction | Scoped T4 exact/analytic/executed subproof: the production frame has the exact local phase-gauge kernel, a differentiated gauge identity converts its nonlinear leakage to a quadratic control displacement, and one sequence Holder plus one weighted AM--GM pays the matched strict-past same-shell diagonal with one cutoff-independent integrable random constant and an `O(N_j0^-3)` sixth-moment tail. The exact terminal expansion contains a load-bearing off-diagonal remainder, larger than the diagonal by a factor above 4087 in an independent fixture; 95/95 aggregate assertions |
 | [R-071](#r-071) | One-form Sobolev linear-frame completion and terminal-frame kernel leakage | Scoped T4 analytic/exact/executed subproof: the R-070 `H^{-1-1/10}` raw attribution is false by strict low--high blocks; the R-050 enhancement reconstructs the full matrix one-form in `H^{-1/2-delta}`, and generalized symmetric/Cartan interpolation closes the complete fixed-floor linear frame. An exact common terminal-frame kernel carries nonzero nonlinear leakage, retiring pointwise square closure; the integrated strict-past Cameron--Martin/frequency estimate remains; 77/77 aggregate assertions |
 | [R-070](#r-070) | Wick--Doob terminalization and adapted-resolvent boundary | Scoped T4 exact/analytic/executed subproof: the full current terminalizes as one covariance-normal CC/GG/mixed boundary; raw/Wick and Abel--Hardy trace channels close; terminal Schur pays the Hilbert--Schmidt trace; the full weighted linear frame has an exact symmetric--Cartan split. Automatic adapted centering is false; R-071 corrects the initial raw linear regularity/payment claim and closes the full linear frame at the honest weaker order; the coupled nonlinear rational-frame/cross-square bound remains; 85/85 aggregate assertions |
@@ -91,6 +92,76 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-073"></a>
+### R-073 -- Exact off-diagonal telescope reassembly and critical phase-root boundary
+
+**Result ID.**
+`A13-CLASSII-OFF-DIAGONAL-TELESCOPE-CRITICAL-PHASE-ROOT-REDUCTION`.
+
+**Statement.** Let `M_j=M(z_<j)`, `D_j=DM_j[a_j]`,
+`E_j=M_(j+1)-M_j-D_j`, and
+`F_(k,j)=(DM(z_<=k)-DM(z_<k))[a_j]`.  Then
+`sum_(k<j)F_(k,j)=(DM_j-DM_0)[a_j]`.  Consequently the three R-072
+off-diagonal families have exact, distinct jobs: the first transports the
+nonlinear root from `w_j` to `w_0`, the second supplies every mismatched
+`E_j--b_l` pair, and the third transports `DM_0` to `DM_j`.  The third family
+does not cancel the R-071 linear term `L`.  With the matched diagonal
+`Dcal`, their sum `Ocal` instead obeys
+
+`L+Dcal+Ocal=<w_0,Q(M_T-M_0)^T C>`.
+
+Restoring the R-069 mixed, control, and raw-Gaussian polarizations gives the
+full raw current telescope exactly, with its finite-low boundary.  In
+particular, if `P_mix` is the complete mixed terminal polarization, then
+
+`S_C+L+P_mix=<w_T,Q c_T>+|c_T|_Q^2/2`,
+
+and adding `|w_T|_Q^2/2` yields the projector-free square
+`|w_T+c_T|_Q^2/2`.  This identity holds on the generic, `s=0`, and `u=0`
+production-frame strata, whose terminal-kernel ranks are respectively 2, 3,
+and 6.  Thus for every terminal-kernel vector `C`, the apparently irreducible
+piece satisfies
+`S_C+L+<w_0,Q E_tot^T C>=0` once both separated first variations are restored.
+The R-071 fixture recomputes nonlinear, linear, and base slopes as
+`0.0674999999999706`, `0.0108750000000198`, and
+`-0.0783749999999904`, with zero sum to floating-point tolerance.
+
+The narrowly declared raw termwise absolute value-high route cannot close:
+the `O2` family needs `theta>1/4` for dyadic separation decay but
+`theta<1/4` for random-budget slack, while `O3` needs both `theta>1/2` and
+`theta<1/2`.  At either endpoint the deterministic budget exponent is one
+and the shell decay is zero.  A genuine adapted derivative gain
+`rho=gamma-delta>0` would reopen this architecture, but would require moments
+strictly above `3/rho`; R-063's unshifted coefficient-jet gain is not the
+needed two-control adapted theorem.
+
+**Proven in.** A13 /
+`classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0`, with
+primary 35/35, non-importing independent 27/27, integrated 51/51, aggregate
+113/113, and a seven-page PDF passing form, zero-overfull, and direct all-page
+visual QA.
+
+**Reuse scope.** Exact familywise reassembly; raw-current telescope recovery;
+projector-free terminal completion across kernel-projector rank jumps; explicit
+phase-kernel cancellation after first-variation restoration; and a sharp
+threshold audit for the declared termwise absolute two-budget route.
+
+**Boundary.** The exact reassembly returns the Wick form to the adapted
+terminal coercivity problem; it does not prove that coercivity or any new
+lower bound.  The no-go is scoped to termwise absolute value-high
+interpolation and does not exclude signed phase-root cancellation or a
+positive adapted regularity gain.  Finite-energy extension, controlled-shell
+one-use, `q=10/9` Nelson synthesis, interacting-measure construction, floor
+and regulator removal, infinite volume, and T5--T7 remain open. Tier T4; no
+promotion.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-050 and R-059--R-072, after adapted terminal phase-root coercivity,
+finite-energy extension, controlled-shell one-use, and Nelson synthesis are
+resolved.
+
+---
 
 <a id="r-072"></a>
 ### R-072 -- Gauge-kernel strata and causal same-shell diagonal one-use reduction

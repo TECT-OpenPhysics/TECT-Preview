@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-24-A13-R073-PREDECESSOR-CONTRACT-SCHEMA](#audit-2026-07-24-a13-r073-predecessor-contract-schema) | R-073 integrated-verifier predecessor preflight | the first wrapper assumed every R-069--R-072 manifest used `verification` and every result used `aggregate_assertion_count`; R-069 instead uses `run_contract` and `aggregate_assertions` |
+| [NG-2026-07-24-A13-RAW-ABSOLUTE-OFFDIAGONAL-CARLESON](#ng-2026-07-24-a13-raw-absolute-offdiagonal-carleson) | A13 termwise absolute value-high control of the R-072 off-diagonal families at the raw R-050 regularity | the O2 interpolation needs both `theta>1/4` and `theta<1/4`, while O3 needs both `theta>1/2` and `theta<1/2`; the endpoints have no dyadic separation decay and use the full deterministic budget |
 | [NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE](#ng-2026-07-24-a13-diagonal-to-terminal-collapse) | A13 replacement of the full terminal nonlinear leakage by its matched strict-past diagonal | the exact terminal expansion has three off-diagonal families; an independent production fixture makes their combined magnitude more than 4087 times the matched diagonal |
 | [NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR](#ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur) | A13 raw linear-model attribution and pointwise nonlinear terminal-square closure | strict low--high blocks falsify the `H^{-1-1/10}` raw attribution, while a common terminal-frame kernel carries nonzero nonlinear leakage invisible to the terminal square |
 | [AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP](#audit-2026-07-24-a13-r071-successor-state-and-import-bootstrap) | R-071 standalone and predecessor verification boundary | the first wrapper re-ran R-070 against successor-mutated live status, while both child scripts relied on an undeclared external `PYTHONPATH` |
@@ -54,6 +56,59 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-24-a13-r073-predecessor-contract-schema"></a>
+### AUDIT-2026-07-24-A13-R073-PREDECESSOR-CONTRACT-SCHEMA -- predecessor contracts used two historical schemas
+
+**Failure mode:** The first R-073 integrated wrapper attempted to validate all
+four predecessor packages through `manifest["verification"]` and
+`result["aggregate_assertion_count"]`. R-069 predates that convention and
+stores the same contract under `run_contract` and `aggregate_assertions`, so
+the verifier stopped fail-closed with `KeyError: verification` before running
+either R-073 child.
+
+**Evidence:** Direct JSON inspection shows R-069's integrated path and counts
+under `run_contract`, while R-070--R-072 use `verification`. Its result uses
+`aggregate_assertions`; the later results use `aggregate_assertion_count`.
+Verifier v1.0.1 normalizes only these two declared historical spellings,
+checks the same manifest digest, result ID, PASS state, integrated count,
+aggregate count, row count, and all-row PASS contract for every predecessor,
+and then completes 51/51 integrated and 113/113 aggregate assertions.
+
+**Consequence:** Future successor wrappers must normalize a predecessor's
+declared manifest/result contract before validating it, rather than infer a
+single schema from the latest package. No proof equation, source/PDF evidence,
+assertion total, theorem scope, negative mathematical result, or tier changed.
+
+<a id="ng-2026-07-24-a13-raw-absolute-offdiagonal-carleson"></a>
+### NG-2026-07-24-A13-RAW-ABSOLUTE-OFFDIAGONAL-CARLESON -- the raw termwise value-high route is endpoint-critical
+
+**Failure mode:** After grouping the exact R-072 off-diagonal families by the
+largest shell, try to pay every value-high factor separately by interpolating
+the raw R-050 one-form order against Cameron--Martin control and the terminal
+sextic.  This architecture requires strict dyadic decay and strict slack in
+the deterministic/random budget at the same interpolation parameter.
+
+**Evidence:** For the `O2` family, the largest-shell coefficient is
+`N_j^(1/2-2 theta) N_l^-1`, so summable separation requires `theta>1/4`.
+The corresponding deterministic exponent is
+`5/6+2 theta/3`, and strict random-budget slack requires `theta<1/4`.
+For `O3`, the coefficient `N_j^(1/2-theta)N_l^-1` requires `theta>1/2`,
+whereas its deterministic exponent `5/6+theta/3` requires `theta<1/2`.
+At `theta=1/4` and `theta=1/2`, respectively, the dyadic decay is exactly
+zero and the deterministic exponent is exactly one.  Primary and
+non-importing independent implementations verify these exponents and their
+strict inequalities; R-073 records the complete shell calculation.
+
+**Consequence:** Retire only the raw, termwise absolute, two-budget
+value-high Carleson architecture.  This is not a counterexample to A13 and
+does not exclude signed cancellation in the exact R-069/R-073 telescope.  A
+genuine adapted derivative gain `rho=gamma-delta>0` would restore strict
+decay, at the price of probability moments strictly above `3/rho`; R-063's
+unshifted coefficient jets do not supply that two-control adapted estimate.
+The current child is
+`A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`; finite-energy
+extension, controlled-shell one-use, and Nelson remain open. Tier stays T4.
 
 <a id="ng-2026-07-24-a13-diagonal-to-terminal-collapse"></a>
 ### NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE -- the matched diagonal is not the full terminal leakage

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-073 exact off-diagonal telescope and critical phase-root boundary] - 2026-07-24
+
+R-073 reassembles all three R-072 off-diagonal families and the R-071 linear term into the exact R-069 raw-current telescope. Restoring both separated first variations gives a projector-free terminal square and cancels every terminal-kernel component on kernel-projector ranks 2, 3, and 6; after Wick subtraction this is the still-open adapted terminal coercivity, not a lower bound. The scoped raw termwise absolute O2/O3 route is endpoint-critical at theta=1/4 and theta=1/2. Primary 35/35, non-importing independent 27/27, integrated 51/51, and aggregate 113/113 assertions pass. The seven-page PDF passes form, zero-overfull, and final all-page Poppler visual QA. The first integrated wrapper exposed and repaired the historical predecessor-contract schema split. Tier remains T4; the next child is A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY, followed by finite-energy extension, controlled-shell one-use, and Nelson.
+
 ## [Audit: correct R-072 exploration evidence fragments] - 2026-07-24
 
 Pre-release audit found that the coarse line fragment in EXP-000027 extended beyond the 486-line proof note. Because explorations/log.jsonl is append-only, EXP-000028 records the exact section ranges for EXP-000024 through EXP-000027 without rewriting history. No proof equation, assertion count, scope, tier, or negative result changed.

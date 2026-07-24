@@ -162,7 +162,7 @@ Nelson-aligned current factorisation, aggregate CAT(0) cone, strong Jacobi
 remainder, and raw-energy/injection telescope. It refutes shellwise positivity
 at a positive floor, proves the isolated adapted `1:2` and `1:3` losses
 summable, and uses a flat CAT(0) reset model to retire geometry-only one-use
-without producing a production counterexample. The current child is
+without producing a production counterexample. The parent gate is
 `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`.  The tip-safe grouped-
 harvest reduction proves the nonlinear harvest, conservative-score Carleson
 bound, uncontrolled-Gaussian tails, CAT(0) whole secant, and global centered-
@@ -188,11 +188,15 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   random constant and an `O(N_j0^-3)` sixth-moment tail. Exact terminal shell
   expansion nevertheless leaves three load-bearing off-diagonal families; an
   independent production fixture makes their combined magnitude more than
-  4087 times the diagonal. The next regular-control subgate is therefore a
-  terminal-range-square-preserving largest-shell triangular two-parameter
-  Carleson/paradifferential estimate, or an exact cancellation back into the
-  R-069 control/mixed telescope, followed by the declared finite-energy
-  extension.
+  4087 times the diagonal. R-073 reassembles all three families and the R-071
+  linear term into the R-069 raw current telescope exactly. Restoring both
+  separated first variations gives a projector-free terminal square and
+  cancels every phase-kernel component across the kernel-projector rank-2/3/6
+  strata. The new
+  regular-control subgate is
+  `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`: prove a signed
+  Wick-subtracted lower bound or a genuine two-control adapted gain before the
+  declared finite-energy extension.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -329,10 +333,13 @@ preserved in git/changelog rather than treated as current gates.
    phase-gauge kernel, avoids a singular frame inverse, and closes the matched
    strict-past same-shell diagonal with a single cutoff-independent random
    constant. Its exact terminal expansion proves that three off-diagonal
-   families remain load-bearing. Next group those families by largest shell
-   and prove a terminal-square-preserving two-parameter triangular Carleson
-   bound, or return them exactly to the R-069 telescope, before the finite-
-   energy extension. Do not spatially differentiate the heat dummy, reuse
+   families remain load-bearing. R-073 returns those families and the R-071
+   linear term exactly to the R-069 telescope; after both first variations are
+   restored the rank-jumping phase kernel cancels inside a projector-free
+   terminal square. The current child is
+   `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`. Prove its signed
+   Wick-subtracted lower bound or a genuine adapted derivative gain before the
+   finite-energy extension. Do not spatially differentiate the heat dummy, reuse
    uncontrolled tails for an adapted coefficient, pay terminal raw energy and
    injection separately, or assume unproved Malliavin regularity.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the

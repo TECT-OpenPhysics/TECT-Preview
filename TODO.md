@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE)_
-  - R-072 A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION classifies the exact phase-gauge kernel, proves the differentiated gauge identity and inverse-free completion, and closes the matched strict-past same-shell nonlinear leakage with one Cameron--Martin allocation, one terminal sextic allocation, and one cutoff-independent sixth-moment random constant. Exact terminal expansion leaves three load-bearing off-diagonal families; an independent production fixture gives |O|/|diagonal|>4087. Next group O by largest shell and prove a terminal-range-square-preserving two-parameter triangular Carleson/paradifferential estimate, or return it exactly to the R-069 control/mixed telescope, without reusing the R-071 linear payment. Then perform finite-energy extension, controlled-shell one-use, and Nelson synthesis.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY)_
+  - R-073 exactly reassembles all R-072 off-diagonal families and the R-071 linear term into the R-069 raw-current telescope. Restoring both first variations gives a projector-free terminal square, but the Wick-subtracted adapted terminal coercivity remains open. The raw termwise absolute O2/O3 route is endpoint-critical. Next prove signed adapted phase-root coercivity or a genuine adapted gain rho>0 with p>3/rho, then finite-energy extension, one-use, and Nelson.
   - _updated 2026-07-24_
 
 ## Next up

@@ -257,6 +257,21 @@ the following structural results and proof-architecture boundaries hold.
     next theorem is a largest-shell triangular two-parameter Carleson estimate
     or an exact return of these families to the R-069 control/mixed telescope,
     with the terminal range square retained.
+16. `A13-CLASSII-OFF-DIAGONAL-TELESCOPE-CRITICAL-PHASE-ROOT-REDUCTION`
+    performs that exact return.  The three off-diagonal families have distinct
+    roles: root transport, completion of mismatched shell pairs, and transport
+    of `DM_0` to the local derivative.  Together with the R-071 linear term
+    they reconstruct the R-069 raw current telescope exactly once.  Restoring
+    both separated base first variations gives a projector-free terminal
+    current-square completion on all kernel-projector rank-2, rank-3, and
+    rank-6 strata;
+    every terminal-kernel component then cancels algebraically.  After Wick
+    subtraction this is exactly the still-open adapted terminal coercivity,
+    not a new lower bound.  The alternative raw termwise absolute route is
+    endpoint-critical: value-high `O2` requires both `theta>1/4` and
+    `theta<1/4`, while value-high `O3` requires both `theta>1/2` and
+    `theta<1/2`.  A positive adapted gain `rho` would reopen this route with
+    moments strictly above `3/rho`; R-063 does not prove that adapted model.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -280,7 +295,8 @@ is a scoped T4 subproof and does not promote A13.
 | Wick--Doob terminal/resolvent reduction | Full-coefficient Wick transport, terminal normal current, trace/Hardy payment, adapted-resolver no-go, and exact symmetric--Cartan split | T4 child reduction closed; its initial raw regularity attribution is corrected by R-071 |
 | One-form Sobolev linear-frame completion / kernel leakage | Fixed-floor matrix one-form lift, generalized symmetric/Cartan one-use payments, exact low--high correction, and terminal-frame kernel no-go | T4 linear subgate closed; one integrated nonlinear successor |
 | Phase-kernel / causal diagonal one-use | Exact gauge-kernel strata, differentiated gauge identity, inverse-free completion, and matched same-shell one-use with one random constant | T4 diagonal subgate closed; full terminal off-diagonal remainder open |
-| Controlled-shell one-use | Largest-shell off-diagonal bound, finite-energy extension, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
+| Off-diagonal telescope / critical phase root | Exact familywise reassembly, raw-current telescope, projector-free restored completion, and scoped absolute-route endpoint no-go | T4 algebraic coupling closed; adapted terminal coercivity open |
+| Controlled-shell one-use | Adapted terminal phase-root coercivity, finite-energy extension, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -329,6 +345,11 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   and the actual sharp-cube Littlewood--Paley constant is retained in the
   terminal sextic conversion.  It closes only the matched diagonal, not the
   full terminal leakage.
+- R-073 is an exact finite-cutoff reassembly for the same regular whole-shell
+  class.  Its projector-free completion is uniform across frame rank jumps,
+  but its Wick form is only an equivalence to the open adapted terminal
+  coercivity.  Its exponent obstruction applies only to the declared raw,
+  termwise absolute, two-budget largest-shell architecture.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -349,12 +370,17 @@ Active umbrella gate:
 
 - `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`
 
+Current analytic child:
+
+- `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`
+
 Current subordinate order:
 
-1. group the exact R-072 off-diagonal remainder by the largest shell and prove
-   a terminal-range-square-preserving two-parameter triangular Carleson/
-   paradifferential estimate, or an exact cancellation back into the R-069
-   control/mixed telescope;
+1. turn the exact R-073 restored terminal completion into a cutoff-uniform
+   signed strict-past coercivity theorem, or prove an adapted positive-gain
+   root with `rho>0` and probability moments strictly above `3/rho` for the
+   two value-high branches, while retaining the range square and finite-low
+   boundary;
 2. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
@@ -362,17 +388,17 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_verify.py
+python codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `32/32`;
-- non-importing independent `26/26`;
-- integrated `37/37`, hence aggregate `95/95`;
-- exact gauge-kernel strata and differentiated gauge identities, inverse-free
-  completion, the `1/432` diagonal one-use constant, sixth-moment dyadic tail,
-  terminal sextic retuning, and exact nonzero off-diagonal decomposition;
+- primary `35/35`;
+- non-importing independent `27/27`;
+- integrated `51/51`, hence aggregate `113/113`;
+- all familywise and full telescopes, rank-stratified projectors,
+  projector-free terminal completion, restored phase cancellation, and the
+  two endpoint exponent conflicts;
 - exit code zero.
 
 The seven-page proof note passes the standard form check, zero-overfull gate,
@@ -382,16 +408,23 @@ and direct rendered-page visual QA.
 
 The latest subproof package is:
 
+- `classii_off_diagonal_telescope_critical_phase_root_reduction_manifest.json`
+- `notes/classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0.tex.txt`
+- `notes/classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction.py`
+- `../../codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_independent.py`
+- `../../codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py`
+- `runs/2026-07-24-primary-off-diagonal-telescope-critical-phase-root-reduction/result.json`
+- `runs/2026-07-24-independent-off-diagonal-telescope-critical-phase-root-reduction/result.json`
+- `runs/2026-07-24-integrated-off-diagonal-telescope-critical-phase-root-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-raw-absolute-offdiagonal-carleson`
+
+The phase-kernel/diagonal predecessor remains binding:
+
 - `classii_phase_kernel_causal_diagonal_reduction_manifest.json`
 - `notes/classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0.tex.txt`
 - `notes/classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0.pdf`
-- `../../codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction.py`
-- `../../codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_independent.py`
 - `../../codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_verify.py`
-- `runs/2026-07-24-primary-phase-kernel-causal-diagonal-reduction/result.json`
-- `runs/2026-07-24-independent-phase-kernel-causal-diagonal-reduction/result.json`
-- `runs/2026-07-24-integrated-phase-kernel-causal-diagonal-reduction/result.json`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-diagonal-to-terminal-collapse`
 
 The immediate one-form predecessor remains binding:
 
@@ -723,6 +756,27 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     diagonal families. In an independent production fixture their combined
     magnitude exceeds the diagonal by a factor above 4087, so they are a
     load-bearing successor rather than an error term.
+51. **UPHELD AGAINST LOCAL CANCELLATION: the third off-diagonal family cancels
+    the R-071 linear term.**  It instead transports `DM_0[a_j]` to
+    `DM_j[a_j]`; both terms remain in the exact endpoint Taylor increment.
+52. **VALID WITH MITIGATION: the terminal kernel leakage is irreducible.**
+    It is irreducible to the terminal square after `S_C` and the R-071 linear
+    term are separated.  Restoring both gives exact cancellation on the
+    complete kernel and a projector-free terminal square on every rank
+    stratum.  This restoration returns to the open terminal coercivity and is
+    not itself a lower bound.
+53. **UPHELD AGAINST TERMINAL CARTAN CANCELLATION: terminal phase curvature
+    cancels the nonlinear phase slope.**  A terminal phase displacement kills
+    the terminal current, `d rho`, and every `d m_r`, while the recomputed
+    nonlinear slope remains positive.  Only the full first-variation
+    restoration cancels it.
+54. **UPHELD AGAINST ENDPOINT INTERPOLATION: choosing `theta=1/4` or
+    `theta=1/2` closes the raw absolute route.**  At those values both shell
+    decay and random Young slack vanish.  Moving to either side repairs one
+    condition and violates the other.
+55. **DISMISSED: the endpoint conflict disproves A13.**  It retires only the
+    declared raw termwise absolute two-budget architecture.  Signed adapted
+    coercivity, null structure, and a positive-gain root remain viable.
 
 ## Falsifier
 
@@ -811,6 +865,17 @@ fixture, a source/PDF hash mismatch, failed seven-page PDF QA, or failure of
 the primary `32/32`, independent `26/26`, integrated `37/37`, and aggregate
 `95/95` verifier contracts.
 
+The off-diagonal telescope continuation is additionally falsified by failure
+of either elementary frame telescope, any of the three familywise
+reassemblies, the mixed/control/raw-Gaussian polarizations, the boxed full
+raw-current identity, the rank-2/3/6 projector formulas, the explicit
+nonlinear phase vector, restored kernel cancellation, or projector-free
+terminal completion.  A different endpoint threshold than `1/4` for the
+value-high `O2` branch or `1/2` for the value-high `O3` branch, deletion of the
+finite-low boundary, a source/PDF hash mismatch, failed seven-page PDF QA, or
+failure of the primary `35/35`, independent `27/27`, integrated `51/51`, and
+aggregate `113/113` contracts also falsifies R-073.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -872,6 +937,15 @@ does not close the integrated nonlinear kernel theorem, extend to every
 finite-energy drift, prove controlled-shell one-use or Nelson, construct an
 interacting measure, remove a floor or regulator, take infinite volume, prove
 phase transition or BCC selection, or justify T5--T7. A13 stays T4.
+
+The off-diagonal telescope theorem closes the algebraic coupling, including
+all phase-kernel rank strata, but its restored Wick form is the existing
+adapted terminal coercivity rather than a new estimate.  Its absolute-route
+no-go is scoped to raw termwise two-budget interpolation and does not exclude
+signed cancellation or a positive-gain adapted root.  It proves no stochastic
+terminal lower bound, finite-energy extension, controlled-shell one-use,
+Nelson theorem, interacting measure, floor/regulator removal, infinite
+volume, phase transition, BCC selection, or T5--T7. A13 remains T4.
 
 ## History
 
@@ -959,3 +1033,11 @@ phase transition or BCC selection, or justify T5--T7. A13 stays T4.
   magnitude over 4087 times the diagonal in the fixture. The next child is a
   largest-shell triangular Carleson/telescope bound; finite-energy, one-use,
   and Nelson remain open and the tier stays T4.
+- 2026-07-24: Reassembled all three off-diagonal families and the R-071 linear
+  term into the exact R-069 raw current telescope.  Restoring both separated
+  first variations gives a projector-free terminal square and cancels every
+  terminal-kernel component on the rank-2/3/6 strata, but after Wick
+  subtraction this is the open adapted terminal coercivity, not a lower
+  bound.  The raw termwise absolute value-high route is endpoint-critical at
+  `theta=1/4` and `theta=1/2`; the next child is an adapted signed phase-root
+  coercivity or positive-gain theorem. Tier remains T4.

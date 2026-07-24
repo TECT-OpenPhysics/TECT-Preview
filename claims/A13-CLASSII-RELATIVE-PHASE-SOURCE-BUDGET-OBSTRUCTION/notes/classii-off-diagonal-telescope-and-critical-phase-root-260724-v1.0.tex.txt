@@ -1,0 +1,513 @@
+% Title: Exact off-diagonal telescope reassembly and critical phase-root boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact/analytic structural reduction; terminal coercivity open
+% Result: A13-CLASSII-OFF-DIAGONAL-TELESCOPE-CRITICAL-PHASE-ROOT-REDUCTION
+% Ledger: R-073
+%
+% v1.0 (2026-07-24): exact familywise off-diagonal reassembly; full raw
+% current telescope and projector-free terminal completion; phase-kernel
+% cancellation after restoration of both separated first variations; scoped
+% value-high absolute-route saturation; positive-gain root discriminator.
+
+\section{Purpose and scope}
+
+R-072 proved the matched same-shell phase-kernel leakage estimate and left
+three explicit off-diagonal shell families.  This note determines exactly
+where those families go.  They do not vanish and none may be discarded.
+Together with the R-071 linear term they reconstruct the R-069 mixed and
+control-current telescope exactly once.
+
+The reconstruction yields a second exact fact.  The apparent terminal
+phase-kernel leakage cancels on every rank stratum after restoring both the
+old-frame mixed first variation and the R-071 linear first variation.  The
+result is a projector-free terminal current square.  This is an algebraic
+completion, not a stochastic lower bound: after Wick subtraction it is the
+same adapted terminal coercivity problem isolated by R-069 and R-070.
+
+The other possible route is audited as well.  Within the declared termwise
+absolute largest-shell architecture at the raw R-050 root order, the two
+value-high branches are exactly critical.  One branch requires
+$\theta>1/4$ for shell decay and $\theta<1/4$ for probability slack; the
+other requires simultaneously $\theta>1/2$ and $\theta<1/2$.  The endpoint
+has neither decay nor a finite random Young exponent.  This is a no-go only
+for that narrowly specified proof architecture.  It is not a counterexample
+to A13 and not a no-go for signed cancellation, multilinear null structure,
+or an adapted root with positive causal gain.
+
+All statements use the hash-pinned A1 production coefficients, the R-066
+strict sharp-cube filtration, a fixed positive density floor, whole-shell
+predictable regular controls, and the six-real convention.  The finite-low
+boundary is retained.  Arbitrary finite-energy controls, controlled-shell
+one-use, the $q=10/9$ Nelson theorem, floor removal, and infinite volume are
+not proved here.
+
+\section{Exact shell notation and the finite-low convention}
+
+Fix a high block $j_0\le j\le J$ and start at
+\[
+ z_0=U_J+A_{<j_0},\qquad
+ z_{<j}=z_0+\sum_{j_0\le k<j}a_k.                         \tag{2.1}
+\]
+Suppress the production generator and spatial-direction sums and write
+\[
+ M_j=M(z_{<j}),\quad M_{j+1}=M(z_{<j}+a_j),\quad
+ D_j=DM_j[a_j],\quad E_j=M_{j+1}-M_j-D_j.                \tag{2.2}
+\]
+Put
+\[
+ A=\sum_ja_j,\qquad C=\sum_\ell b_\ell,\qquad
+ M_T=M(z_0+A),                                           \tag{2.3}
+\]
+and, for $k<j$,
+\[
+ F_{k,j}=[DM(z_{\le k})-DM(z_{<k})][a_j].                \tag{2.4}
+\]
+The two elementary telescopes are
+\[
+ \sum_{k<j}F_{k,j}=(DM_j-DM_0)[a_j],                     \tag{2.5}
+\]
+\[
+ E_{\rm tot}:=M_T-M_0-DM_0[A]
+ =\sum_jE_j+\sum_{k<j}F_{k,j}.                           \tag{2.6}
+\]
+
+Let
+\[
+ w_j=M_j^TG,\qquad \Delta w=(M_T-M_0)^TG,\qquad
+ C_j=\sum_{\ell<j}b_\ell,\qquad c_j=M_j^TC_j,\qquad
+ c_T=M_T^TC.                                             \tag{2.7}
+\]
+If a low control current is present, $C_j$ in (2.7) begins with
+$C_{<j_0}$ and every telescope below has its corresponding nonzero initial
+boundary.  It is never reset to zero by notation.
+
+Define the matched R-072 diagonal
+\[
+ \mathcal D=\sum_j\langle w_j,QE_j^Tb_j\rangle,          \tag{2.8}
+\]
+the R-071 linear term
+\[
+ L=\langle w_0,QDM_0[A]^TC\rangle,                       \tag{2.9}
+\]
+and the three off-diagonal families
+\[
+ \begin{split}
+ \mathcal O_1&=\sum_j\langle w_0-w_j,QE_j^Tb_j\rangle,\\
+ \mathcal O_2&=\sum_j\sum_{\ell\ne j}
+                 \langle w_0,QE_j^Tb_\ell\rangle,\\
+ \mathcal O_3&=\sum_{k<j}\sum_\ell
+                 \langle w_0,QF_{k,j}^Tb_\ell\rangle,
+ \end{split}                                             \tag{2.10}
+\]
+with $\mathcal O=\mathcal O_1+\mathcal O_2+\mathcal O_3$.
+
+\section{Familywise off-diagonal reassembly}
+
+Each family has one precise role.  First,
+\[
+ \mathcal D+\mathcal O_1
+ =\sum_j\langle w_0,QE_j^Tb_j\rangle.                   \tag{3.1}
+\]
+Thus $\mathcal O_1$ transports the nonlinear remainder root from $w_j$ to
+$w_0$.  Second,
+\[
+ \mathcal D+\mathcal O_1+\mathcal O_2
+ =\sum_{j,\ell}\langle w_0,QE_j^Tb_\ell\rangle.         \tag{3.2}
+\]
+Thus $\mathcal O_2$ supplies all mismatched $E_j$--$b_\ell$ pairs.  Finally,
+(2.5) gives
+\[
+ L+\mathcal O_3
+ =\sum_{j,\ell}\langle w_0,QDM_j[a_j]^Tb_\ell\rangle. \tag{3.3}
+\]
+In particular, $\mathcal O_3$ does not cancel $L$.  It transports the base
+derivative $DM_0$ to the local derivative $DM_j$.
+
+Adding (3.1)--(3.3) and using (2.6) proves the exact endpoint identity
+\[
+ \boxed{
+ L+\mathcal D+\mathcal O
+ =\langle w_0,Q(M_T-M_0)^TC\rangle.}                     \tag{3.4}
+\]
+No inequality, conditioning, or rank assumption is used.  In particular,
+the independent R-072 fixture with
+$|\mathcal O|/|\mathcal D|>4087$ is not an anomaly: the full endpoint
+transport is stored predominantly in the off-diagonal families in that
+fixture.
+
+\section{Return to the R-069 current telescope}
+
+Define the separated base first variations
+\[
+ S_C=\langle w_0,QM_0^TC\rangle,
+ \qquad S_G=\langle w_0,QDM_0[A]^TG\rangle,              \tag{4.1}
+\]
+and
+\[
+ N_G=\langle w_0,QE_{\rm tot}^TG\rangle.                 \tag{4.2}
+\]
+For an empty initial high-control current, the R-069 polarizations give
+\[
+ \sum_j\mathcal R_j^\times=\langle c_T,Qw_T\rangle,
+ \qquad
+ \sum_j\mathcal R_j^C={1\over2}|c_T|_Q^2,               \tag{4.3}
+\]
+where $w_T=w_0+\Delta w$.  The raw Gaussian channel gives
+\[
+ \sum_j\mathcal R_j^{G,{\rm raw}}
+ =S_G+N_G+{1\over2}|\Delta w|_Q^2.                       \tag{4.4}
+\]
+Equations (3.4) and (4.3) imply
+\[
+ \boxed{
+ \mathcal D+\mathcal O+{1\over2}|\Delta w+c_T|_Q^2
+ =\sum_j(\mathcal R_j^\times+\mathcal R_j^C)
+   -S_C-L+{1\over2}|\Delta w|_Q^2.}                     \tag{4.5}
+\]
+Adding (4.4) yields the decisive full identity
+\[
+ \boxed{
+ L+N_G+\mathcal D+\mathcal O
+ +{1\over2}|\Delta w+c_T|_Q^2
+ =\sum_j(\mathcal R_j^{G,{\rm raw}}
+          +\mathcal R_j^\times+\mathcal R_j^C)
+   -S_G-S_C.}                                            \tag{4.6}
+\]
+
+At the stochastic level, raw-to-Wick conversion restores the exact R-066
+trace channel.  The finite-low version retains
+\[
+ \mathbb E\sum_{j=j_0}^J
+ (\mathcal R_j^{G,{\rm Wick}}+\mathcal R_j^\times
+  +\mathcal R_j^C)
+ =\mathbb E(\mathcal W_{J+1}-\mathcal W_{j_0}).          \tag{4.7}
+\]
+Consequently, (4.6) is an exact equivalence back to the terminal translated
+current coercivity isolated in R-070.  It is not a new lower bound.  Dropping
+$\mathcal W_{j_0}$ or citing the desired Nelson moment to bound
+$\mathcal W_{J+1}$ would be respectively false or circular.
+
+\section{Projector-free completion and the phase kernel}
+
+It is useful to see precisely why the terminal square appeared blind in
+R-071.  Put
+\[
+ \mathfrak P_{\rm mix}(C)
+ =\langle w_0,QE_{\rm tot}^TC\rangle
+  +\langle\Delta w,Qc_T\rangle+{1\over2}|c_T|_Q^2.       \tag{5.1}
+\]
+If $B_x=\sum_rM_r(x)QM_r(x)^T$, then the same tensor is
+\[
+ \mathfrak P_{\rm mix}(C)
+ =C^T\{[B_T-B_0]G-DM_0[A]QM_0^TG\}
+  +{1\over2}C^TB_TC.                                    \tag{5.2}
+\]
+The terms $M_TQ\Delta w$ and $B_T$ in (5.2) are visible to the terminal
+analysis map $T_TC=(M_{r,T}^TC)_r$.  After $S_C$ and $L$ have been split
+away, the square-invisible quotient is
+\[
+ (P_{\ker T_T}C)\cdot
+ \sum_rE_{r,{\rm tot}}Qw_{r,0}.                          \tag{5.3}
+\]
+It is irreducible to the terminal square alone, but it is not irreducible in
+the full signed energy.
+
+Indeed, ordinary algebra gives on every rank stratum
+\[
+ \boxed{
+ S_C+L+\mathfrak P_{\rm mix}(C)
+ =\langle w_T,Qc_T\rangle+{1\over2}|c_T|_Q^2.}           \tag{5.4}
+\]
+Therefore
+\[
+ \boxed{
+ {1\over2}|w_T|_Q^2+S_C+L+\mathfrak P_{\rm mix}(C)
+ ={1\over2}|w_T+c_T|_Q^2.}                              \tag{5.5}
+\]
+No projector or pseudoinverse occurs.  In particular, if $C\in\ker T_T$,
+then
+\[
+ S_C+L+\langle w_0,QE_{\rm tot}^TC\rangle=0.            \tag{5.6}
+\]
+The apparent kernel obstruction is created by separating terms which the
+full Taylor identity $M_0+DM_0[A]+E_{\rm tot}=M_T$ couples exactly.
+
+For completeness, write a terminal value as $x=z+A=(u,s)$ and set
+\[
+ n_D=J_Dx,\qquad n_S=J_Sx.                               \tag{5.7}
+\]
+The exact Euclidean kernel projector is
+\[
+ P_{\ker T_x}=
+ \begin{cases}
+ {n_Dn_D^T\over|u|^2}+{n_Sn_S^T\over|s|^2},
+      &u\ne0,\ s\ne0,\\[3pt]
+ {n_Dn_D^T\over|u|^2}+P_S,&u\ne0,\ s=0,\\[3pt]
+ I_6,&u=0.
+ \end{cases}                                             \tag{5.8}
+\]
+Its ranks are $2$, $3$, and $6$, so a smooth fixed-rank inverse cannot
+replace (5.5).
+
+There is also an explicit formula for the nonlinear vector in (5.3).  Write
+\[
+ M_r=[p_r,v_r],\quad
+ \ell_r=Dq_r(z)[A],\quad
+ \epsilon_r=q_r(x)-q_r(z)-\ell_r,                        \tag{5.9}
+\]
+\[
+ \beta_r=e_2^TQw_{r,0},\qquad
+ \mathcal L_\beta=\sum_r\beta_r\ell_r,\qquad
+ \mathcal E_\beta=\sum_r\beta_r\epsilon_r.                    \tag{5.10}
+\]
+Since $p_r$ is linear, the following identities are exact:
+\[
+ E_r^p=0,\qquad E_r^v=-2(\epsilon_rx+\ell_rA),\qquad
+ k:=\sum_rE_rQw_{r,0}=-2(\mathcal E_\beta x+\mathcal L_\beta A).         \tag{5.11}
+\]
+On the generic stratum this gives
+\[
+ (P_{\ker T_x}C)\cdot k
+ =-2\mathcal L_\beta\left\{
+ { (C\cdot n_D)(A\cdot n_D)\over|u|^2}
+ +{ (C\cdot n_S)(A\cdot n_S)\over|s|^2}\right\}.       \tag{5.12}
+\]
+At $s=0$, the second summand in braces is replaced by
+$(P_SC)\cdot(P_SA)$.  At $u=0$, the whole target is the kernel and one uses
+(5.11) directly.  These formulas explain the rank jumps, while (5.4)--(5.5)
+show that no division by a small field is needed in the complete energy.
+
+For either genuine phase line, R-072 differentiation gives
+\[
+ n_\alpha\cdot k
+ =-\sum_r\langle DM_r(z)[A]^TJ_\alpha A,Qw_{r,0}\rangle
+ =-2\mathcal L_\beta(n_\alpha\cdot A).                           \tag{5.13}
+\]
+This identity says nothing about the extra singlet radial kernel at $s=0$,
+or the full kernel at $u=0$; (5.5) covers those strata instead.
+
+The R-071 production fixture is decisive.  At the pinned floor the three
+slopes, all recomputed by the executable, are
+\[
+ N'=0.0674999999999706,\quad
+ L'=0.0108750000000198,\quad
+ S_C'=-0.0783749999999904.                               \tag{5.14}
+\]
+Thus the separated linear term reinforces the nonlinear leakage.  Only the
+restored base first variation gives $S_C'+L'+N'=0$.  Moreover terminal phase
+directions satisfy $d\rho_x[n_\alpha]=dm_{r,x}[n_\alpha]=0$, hence the
+terminal Cartan curvature and Jacobi square do not cancel $N'$.
+
+\section{Scoped largest-shell absolute-route audit}
+
+Let
+\[
+ x_j=\|h_j\|_{\mathcal H_j}^2,\qquad
+ y_j=\|a_j\|_6^6,\qquad N_j=2^j.                          \tag{6.1}
+\]
+The declared raw estimates are
+\[
+ \|b_j\|_2\lesssim N_j^{-1}x_j^{1/2},                   \tag{6.2}
+\]
+\[
+ \|a_j\|_6\lesssim
+ N_j^{-\theta}x_j^{\theta/2}y_j^{(1-\theta)/6},
+ \qquad0\le\theta\le1.                                 \tag{6.3}
+\]
+After expanding a term and choosing its largest control index $r$, exact
+strict-past causalization gives a normalized Gaussian factor
+\[
+ \|G_r\|_6\lesssim N_r^{1/2}\mathfrak g_r,               \tag{6.4}
+\]
+with every fixed finite moment.  The base-current difference family has an
+extra $N_j^{-1/2}$ and closes with budgets $X^{1/2}Y^{1/3}$ and a sixth
+moment.  Comparable-index and derivative-high parts of the other two
+families also retain negative dyadic powers.  Two value-high orientations
+are different.
+
+For $\mathcal O_2$ with $j\gg\ell$, (6.2)--(6.4) give the dyadic weight
+\[
+ N_j^{1/2-2\theta}N_\ell^{-1}.                            \tag{6.5}
+\]
+Decay in the largest shell requires $\theta>1/4$.  The total deterministic
+budget exponent is
+\[
+ \alpha_2=\theta+{1\over2}+{1-\theta\over3}
+ ={5\over6}+{2\theta\over3}.                             \tag{6.6}
+\]
+A finite random Young exponent requires $\alpha_2<1$, or
+$\theta<1/4$.  At $\theta=1/4$, (6.5) has no separation decay and
+$\alpha_2=1$.
+
+For $\mathcal O_3$ with $j\gg k,\ell$, the weight is
+\[
+ N_j^{1/2-\theta}N_\ell^{-1},                             \tag{6.7}
+\]
+which requires $\theta>1/2$.  Its deterministic exponent is
+\[
+ \alpha_3={1\over2}+{\theta\over2}
+           +{1-\theta\over6}+{1\over6}
+ ={5\over6}+{\theta\over3},                              \tag{6.8}
+\]
+so random slack requires $\theta<1/2$.  Again the endpoint has zero decay
+and $\alpha_3=1$.
+
+This is a formal obstruction to the stated termwise absolute two-budget
+Young architecture.  At $\alpha=1$, scaling both abstract positive budgets
+by a common factor leaves the unbounded random multiplier in the leading
+coefficient, while every additive random remainder is lower order in that
+scale.  Moving $\theta$ to either side fixes one condition and violates the
+other.  This argument does not exclude cancellations unavailable after
+absolute values, and it is not an integrated production counterexample.
+
+A separated controlled finite-low factor produces the same endpoint warning:
+the schematic budget is $X^{1/2}Y^{1/2}$.  It must remain in the signed
+finite-low telescope rather than be assigned a second absolute payment.
+
+\section{The positive-gain discriminator}
+
+Suppose a future adapted two-parameter root theorem improves the raw
+$H^{-1/2-\delta}$ order by $\gamma$ derivatives.  Put
+\[
+ \rho=\gamma-\delta,\qquad
+ \sigma={1\over2}-\rho.                                  \tag{7.1}
+\]
+The conflicts in (6.5)--(6.8) open precisely when $\rho>0$.  The limiting
+Young exponent is
+\[
+ \boxed{p>{3\over\rho}={3\over\gamma-\delta},}           \tag{7.2}
+\]
+where strict inequality allows the dyadic endpoint losses.  Equivalently,
+the missing model has effective regularity $H^{-1/2+\rho}$, is tame under
+strict-past controls, retains every lower-chaos conversion, and has an
+$L^p(\Omega)$ norm for (7.2).
+
+R-063's unshifted second balanced jet suggests an effective order near
+$H^{-0.3}$, corresponding formally to $\rho\simeq0.2$ and ideal endpoint
+$p=15$.  R-063 explicitly does not prove the adapted, two-control,
+lower-chaos-complete operator-valued theorem required here.  Substituting its
+unshifted estimate would therefore be an overclaim.
+
+\section{Evidence map, failed routes, and successor}
+
+The reusable proof map is now:
+\begin{enumerate}
+\item \textbf{Closed:} equations (3.1)--(3.4) classify every off-diagonal
+family.  Each appears exactly once; none cancels locally.
+\item \textbf{Closed:} equations (4.3)--(4.6) return the complete remainder
+to the R-069 raw current telescope, with the R-071 linear payment and both
+base first variations counted exactly once.
+\item \textbf{Closed algebraically:} equations (5.4)--(5.5) give a
+projector-free terminal completion on the generic, singlet-tip, and
+doublet-collapse strata.  For terminal-kernel controls, (5.6) is the exact
+signed cancellation.
+\item \textbf{Failed route:} terminal square alone, terminal Cartan alone,
+or the already-separated R-071 linear term does not cancel the phase
+leakage.  The exact production fixture (5.14) fixes the sign and attribution.
+\item \textbf{Failed route:} the raw termwise absolute value-high
+$\mathcal O_2/\mathcal O_3$ Carleson architecture is endpoint-critical by
+(6.5)--(6.8).  This is registered as
+\texttt{NG-2026-07-24-A13-RAW-ABSOLUTE-OFFDIAGONAL-CARLESON}.
+\item \textbf{Still open:} converting the signed terminal completion into a
+cutoff-uniform stochastic lower bound.  Returning to (4.7) reconstructs the
+already-open terminal coercivity and supplies no new sign.
+\end{enumerate}
+
+The smallest honest successor has two possible forms.  Either prove a signed
+strict-past terminal phase-root coercivity theorem which exploits (5.4) while
+retaining the range square and $-\mathcal W_{j_0}$, or prove the adapted
+positive-gain root described by (7.1)--(7.2) and use it only on the two
+value-high branches.  Only then may localization and lower semicontinuity
+extend the result to every finite-energy drift, followed by controlled-shell
+one-use and Nelson synthesis.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``Exact reassembly proves coercivity.''}
+\textbf{UPHELD as false.}  Equation (4.7) shows that reassembly lands on the
+adapted terminal current itself.  Bounding it with the desired Nelson moment
+would be circular.
+
+\item \textbf{``The third off-diagonal family cancels the R-071 linear
+term.''}  \textbf{UPHELD as false.}  Equation (3.3) transports $DM_0$ to
+$DM_j$; both contributions remain with the same endpoint Taylor increment.
+
+\item \textbf{``The terminal square sees every derivative displacement.''}
+\textbf{UPHELD as false after the first variations are separated.}  The
+rank-$2/3/6$ kernel in (5.8) and the nonzero fixture (5.14) refute that
+claim.  The mitigation is the full signed completion (5.5), not a singular
+pseudoinverse.
+
+\item \textbf{``The terminal Cartan or Jacobi term cancels the gauge
+leakage.''}  \textbf{UPHELD as false.}  A terminal phase displacement kills
+$d\rho$, every $dm_r$, and the terminal current, while (5.13)--(5.14) remain
+nonzero.
+
+\item \textbf{``The endpoint choices $\theta=1/4$ and $\theta=1/2$ close
+the absolute estimate.''}  \textbf{UPHELD as false.}  They make the dyadic
+decay and the random Young slack vanish simultaneously.
+
+\item \textbf{``The exponent conflict disproves A13.''}
+\textbf{DISMISSED.}  It retires only the declared raw, termwise absolute,
+two-budget architecture.  Signed telescope cancellation and a positive-gain
+adapted model remain viable.
+
+\item \textbf{``R-063 already supplies the gain in (7.2).''}
+\textbf{UPHELD as false.}  Its theorem is unshifted or deterministically
+shifted and explicitly excludes the adapted random-shift estimate needed
+here.
+
+\item \textbf{``The high block has zero initial current by definition.''}
+\textbf{VALID with mitigation.}  This is true only after absorbing the
+finite-low block into $z_0$ and retaining the corresponding
+$-\mathcal W_{j_0}$ boundary.  No low term is deleted.
+
+\item \textbf{``This result proves finite-energy one-use or Nelson.''}
+\textbf{UPHELD as an overclaim.}  It closes the algebraic coupling and a
+scoped route audit only.  The stochastic coercivity, finite-energy extension,
+controlled-shell one-use, and Nelson gates remain open.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable derives the production $Q_{\rm II}$ and floor from
+A1, checks one-, two-, and four-shell cases, verifies every familywise and
+full telescope identity, reconstructs the rank-stratified projectors, checks
+the explicit nonlinear vector, and recomputes the R-071 phase slopes.  The
+non-importing executable rebuilds the Pauli frames and production
+coefficients, uses a different seed and two-to-four-shell fixtures, and
+independently checks the same completion and exponent boundary.  The
+integrated verifier hash-pins R-069--R-072, the sources, note, PDF, and
+manifest before executing both children.
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-OFF-DIAGONAL-TELESCOPE-CRITICAL-PHASE-ROOT-REDUCTION
+Precise statement:       The R-072 off-diagonal families and R-071 linear
+                         term reconstruct R-069; both restored first
+                         variations give a projector-free terminal square.
+Scope:                   Fixed-floor A1/R-066; regular shell-predictable
+                         controls; finite-low boundary retained.
+Dependencies:            A1; R-050; R-063; R-066; R-069--R-072.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py
+Expected output:         35/35 + 27/27 + 51/51 = 113/113; exit 0.
+Falsification gate:      A telescope, completion, kernel rank, phase,
+                         exponent, hash, or assertion gate fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No stochastic lower bound, adapted gain, finite-
+                         energy one-use, Nelson, measure, removal, or T5--T7.
+Next required action:    Prove adapted phase-root coercivity or a two-control
+                         gain rho>0, p>3/rho; then one-use and Nelson.
+\end{verbatim}
+\endgroup

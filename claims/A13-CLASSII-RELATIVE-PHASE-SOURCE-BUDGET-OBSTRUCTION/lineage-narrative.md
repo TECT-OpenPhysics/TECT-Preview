@@ -107,11 +107,24 @@ endpoint theorem.
     tail is `O(N_j0^-3)`. This does not equal the terminal leakage: exact shell
     expansion leaves three off-diagonal families, and an independent
     production fixture makes their combined magnitude over 4087 times the
-    diagonal. The current child is therefore a largest-shell triangular two-
-    parameter Carleson estimate, or an exact cancellation back into the R-069
-    control/mixed telescope, with the terminal range square retained. Only
-    after that may finite-energy extension, controlled-shell one-use, and
-    Nelson be attempted.
+    diagonal. R-073 resolves the algebraic branch by returning all three
+    families and the R-071 linear term to the R-069 control/mixed telescope
+    exactly; it does not obtain the Wick-subtracted lower bound.
+14. **Off-diagonal telescope and critical phase-root boundary.** R-073 sums
+    the derivative-increment triangle first, so O1 transports the nonlinear
+    root to the base frame, O2 supplies every mismatched nonlinear/control
+    pair, and O3 transports the base derivative to its local frame without
+    cancelling the R-071 linear term. Together they reconstruct the R-069 raw
+    current telescope exactly with the finite-low boundary retained. Restoring
+    both separated first variations gives a projector-free terminal square
+    and cancels every terminal-kernel component across the generic, `s=0`,
+    and `u=0` rank strata. After Wick subtraction this is the open adapted
+    terminal coercivity, not a new lower bound. The termwise absolute value-
+    high route is endpoint-critical at `theta=1/4` for O2 and `theta=1/2` for
+    O3. The current child is therefore
+    `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`: prove signed
+    strict-past cancellation or a genuine two-control adapted gain before
+    finite-energy extension, controlled-shell one-use, and Nelson.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

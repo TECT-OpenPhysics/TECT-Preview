@@ -410,7 +410,7 @@ remainder, and exposes the exact raw-energy/injection telescope. It also
 refutes shellwise raw-secant positivity at a positive floor and refutes a
 geometry-only abstract proof without producing a production counterexample.
 The current child is
-`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`. R-070 adds the exact
+`A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`. R-070 adds the exact
 Wick--Doob terminalization: all CC/GG/mixed current increments reduce to the
 terminal translated-current with the finite-low boundary retained, the
 raw/Wick covariance trace and transported tail are paid, and terminal Schur
@@ -422,11 +422,15 @@ attribution and closes the complete fixed-floor symmetric--Cartan frame
 through the R-050 enhancement. R-072 classifies the exact phase-gauge kernel,
 proves an inverse-free completion, and pays the matched strict-past same-shell
 nonlinear leakage with one accumulated integrable random constant and an
-`O(N_j0^-3)` sixth-moment tail. The full terminal expansion has three load-
-bearing off-diagonal families, larger than the diagonal by a factor above
-4087 in an independent fixture. Their largest-shell triangular Carleson/
-telescope bound, the extension to every finite-energy drift, and the umbrella
-theorem remain open.
+`O(N_j0^-3)` sixth-moment tail. R-073 then reassembles all three load-bearing
+off-diagonal families and the R-071 linear term into the R-069 raw current
+telescope exactly. Restoring both separated first variations gives a
+projector-free terminal square and cancels every terminal-kernel component on
+the kernel-projector rank-2/3/6 strata. After Wick subtraction this is the open adapted
+terminal phase-root coercivity, not a lower bound. The raw termwise absolute
+route is endpoint-critical at `theta=1/4` and `theta=1/2`. That coercivity,
+the extension to every finite-energy drift, and the umbrella theorem remain
+open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -450,7 +454,7 @@ continuum limits, and reconstructs the full rational coefficient in the exact
 A7 scheme.  The finite `Sigma Q` conversion and every grouped lower chaos are
 retained.  This closes the enhanced deterministic Cameron--Martin model, not
 an adapted random-shift estimate.  The current child is
-`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`; termwise absolute
+`A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`; termwise absolute
 paraproduct/Young absorption and geometry-only one-use remain excluded.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
@@ -580,10 +584,11 @@ full weighted symmetric--Cartan linear-frame split. Its Cartan and `q11`
 pure-`pp` pieces reduce to pinned one-use estimates. R-071 corrects the raw
 regularity and closes the remaining linear frame. R-072 proves the exact
 phase-gauge kernel and closes the matched same-shell nonlinear diagonal with
-one cutoff-independent sixth-moment random constant, but its exact terminal
-expansion leaves a load-bearing three-family off-diagonal remainder. A
-largest-shell triangular two-parameter Carleson estimate or exact return to
-the R-069 telescope remains.
+one cutoff-independent sixth-moment random constant. R-073 reassembles its
+three off-diagonal families and the R-071 linear term into the R-069
+telescope, restores both separated first variations, and obtains a
+projector-free terminal square across every kernel-projector rank stratum. The Wick-
+subtracted adapted terminal coercivity remains.
 
 ### **A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND**
 
@@ -627,11 +632,12 @@ equivalent to one adapted centered-resolvent chaos and that automatic
 centering and a derivative-free Stein closure fail. R-071 closes the complete
 fixed-floor linear frame at the corrected weaker order. R-072 then closes the
 matched strict-past same-shell nonlinear leakage using the exact gauge-kernel
-identity and one accumulated random constant, but proves that the full
-terminal object contains three non-negligible off-diagonal families. The
-remaining finite-cutoff analytic core is their terminal-range-square-
-preserving largest-shell triangular Carleson/paradifferential bound or exact
-cancellation into the R-069 control/mixed telescope.
+identity and one accumulated random constant. R-073 reassembles the complete
+off-diagonal remainder and the R-071 linear term into the R-069 control/mixed
+telescope exactly; restoring both first variations gives a projector-free
+terminal square and cancels the phase kernel algebraically. The remaining
+finite-cutoff analytic core is the Wick-subtracted adapted terminal phase-root
+coercivity.
 
 ### **A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE**
 
@@ -657,8 +663,7 @@ regular-control estimate, prove the
 localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
-**Status:** REDUCED-NOT-CLOSED CURRENT CHILD (2026-07-24), proof-ordered after
-R-072 `A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION` and before
+**Status:** REDUCED-NOT-CLOSED PARENT (2026-07-24), proof-ordered before
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. R-068 proves the nonlinear
 harvest, full-score Carleson estimate, uncontrolled-base Gaussian tails, tip-
 safe secant, physical distance, and global centered form. R-069 then falsifies
@@ -680,13 +685,43 @@ Stein closure would require uncontrolled Malliavin derivatives. R-072 then
 classifies the exact gauge kernel and closes the matched strict-past same-shell
 nonlinear diagonal with one accumulated random constant. Exact terminal
 expansion and an independent production fixture prove that the three-family
-off-diagonal remainder is load-bearing. The next successor groups that
-remainder by largest shell and proves a terminal-square-preserving triangular
-two-parameter Carleson estimate, or cancels it exactly into the R-069
-control/mixed telescope. Exact isolated `1:2`
+off-diagonal remainder is load-bearing. R-073 cancels it exactly into the
+R-069 control/mixed telescope together with the R-071 linear term and restores
+the two separated first variations as a projector-free terminal square. The
+new current child is the adapted terminal phase-root coercivity below. Exact
+isolated `1:2`
 and `1:3` adapted harmonics
 remain summable and do not falsify that global statement. This bound, finite-
 energy extension, one-use, Nelson theorem, and any tier promotion remain open.
+
+### **A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY**
+
+**Statement:** For every `zeta,eta>0`, first for regular mutually orthogonal
+one-shot strict-past controls and uniformly in the terminal cutoff, retain the
+complete R-069/R-073 signed current telescope after Wick subtraction and
+prove its terminal phase-root contribution is bounded below by
+`-zeta E||Z_J||_6^6-eta E sum_j||h_j||^2-C_(zeta,eta,j0)`. The proof may use
+the projector-free terminal completion but must retain its range-visible
+square and finite-low boundary. It must obtain either a strict-past signed
+phase-root cancellation or a genuinely adapted two-control derivative gain
+`rho=gamma-delta>0` with probability moments strictly above `3/rho`.
+R-063's unshifted coefficient-jet regularity is not such a theorem.
+
+**Status:** OPEN CURRENT CHILD (2026-07-24), created by R-073
+`A13-CLASSII-OFF-DIAGONAL-TELESCOPE-CRITICAL-PHASE-ROOT-REDUCTION`. R-073
+proves exact familywise reassembly, the full raw-current telescope identity,
+projector-free completion on the kernel-projector rank-2/3/6 strata, and
+exact terminal-kernel cancellation after both separated first variations are
+restored. It also proves that the raw termwise absolute value-high route is
+endpoint-critical: O2 requires both `theta>1/4` and `theta<1/4`, while O3
+requires both `theta>1/2` and `theta<1/2`. Those conflicts retire only that
+narrow architecture. The Wick-subtracted signed expectation is not yet
+bounded below, automatic adapted terminal centering is false by R-070, and no
+undeclared Malliavin derivative or singular frame projector may be used.
+After this regular finite-cutoff gate closes, extend by localization and lower
+semicontinuity to every declared finite-energy drift, assemble
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, and return to the `q=10/9`
+Nelson theorem. Tier remains T4.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 
