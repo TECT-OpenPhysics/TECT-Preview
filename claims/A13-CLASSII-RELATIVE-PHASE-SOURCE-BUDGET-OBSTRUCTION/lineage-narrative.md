@@ -197,6 +197,27 @@ endpoint theorem.
     exact full-packet reconstruction and the spatially weighted innovation
     bound remain the current child before graph recovery, one-use, and Nelson
     synthesis.
+20. **Full frame-current Doob decomposition and weighted-route boundary.**
+    R-079, `A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`,
+    closes the algebraic gap left by R-078. The complete renormalised
+    frame-current endpoint is one Hilbert-current functional, and its exact
+    Doob polarization splits into the conditional low-current term, present-
+    control increments, and future-control innovations while retaining the
+    nonzero present/future cross term. Subtracting the already paid
+    `N3_nr+T_<=` functional gives the canonical safe packet without replacing
+    the complete low endpoint by the R-066 finite-low trace. A spatially
+    weighted Cameron--Martin square function spends strict-past control energy
+    once, and the base or predictably translated current has an exact backward-
+    heat projection. Neither statement closes the terminal feedback current:
+    its exact commutator retains both coefficient and derivative-feedback
+    channels. Generic Cauchy plus weighted square function has Young deficit
+    `-4/15`; expected budgets do not imply conditional BMO; generic spatial
+    gain and automatic adapted Wick carre-du-champ positivity also fail.
+    These failures are method no-gos, not production counterexamples. The
+    current child is therefore the production near/far commutator estimate
+    inside the complete R-079 identity, followed by the weighted packet lower
+    bound, R-075 graph recovery, controlled-shell one-use, and Nelson
+    synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

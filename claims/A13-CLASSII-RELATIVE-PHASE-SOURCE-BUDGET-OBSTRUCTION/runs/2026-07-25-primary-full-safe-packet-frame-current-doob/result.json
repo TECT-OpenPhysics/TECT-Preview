@@ -1,0 +1,471 @@
+{
+  "adapted_wick_no_go": {
+    "exponential_amplitude": "1/4",
+    "exponential_frame_floor": 1.0,
+    "exponential_remainder": -0.011180339887498949,
+    "exponential_square": 0.002795084971874737,
+    "exponential_trace": -0.013975424859373685,
+    "forest_error": "0",
+    "hermite_error": "0",
+    "normalized_first_variation": "2",
+    "normalized_innovation_energy": "2",
+    "normalized_remainder": "-2",
+    "normalized_square": "7/2",
+    "normalized_trace": "-11/2"
+  },
+  "assertions": [
+    {
+      "actual": 5.204170427930421e-18,
+      "expected": 0.0,
+      "name": "energy_identity_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "safe_telescope_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "complete_endpoint_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.551115123125783e-17,
+      "expected": 0.0,
+      "name": "increment_reassembly_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "name": "commutator_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0842021724855044e-19,
+      "expected": 0.0,
+      "name": "trace_split_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "predictability_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.469446951953614e-18,
+      "expected": 0.0,
+      "name": "past_increment_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.0816681711721685e-17,
+      "expected": 0.0,
+      "name": "joined_causal_decomposition_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.5612511283791264e-17,
+      "expected": 0.0,
+      "name": "joined_endpoint_safe_error",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1186520959234125,
+      "expected": ">1",
+      "name": "frame_uniformly_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0037157638381040653,
+      "expected": ">0",
+      "name": "future_square_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.00019440273886292073,
+      "expected": "nonzero",
+      "name": "cross_term_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0009400259000000002,
+      "expected": "nonzero",
+      "name": "paid_difference_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.410100000000001e-05,
+      "expected": ">0",
+      "name": "low_paid_endpoint_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/5",
+      "expected": "2/5",
+      "name": "exponent_payload_x",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/30",
+      "expected": "11/30",
+      "name": "exponent_payload_y",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "name": "exponent_square_function_x",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10",
+      "expected": "9/10",
+      "name": "exponent_combined_x",
+      "status": "PASS"
+    },
+    {
+      "actual": "11/30",
+      "expected": "11/30",
+      "name": "exponent_combined_y",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4/15",
+      "expected": "-4/15",
+      "name": "exponent_combined_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4/15",
+      "expected": "-4/15",
+      "name": "exponent_general_slack_at_s",
+      "status": "PASS"
+    },
+    {
+      "actual": "-4/15",
+      "expected": "<0",
+      "name": "square_function_only_supercritical",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "hermite_second_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "scalar_complete_hermite_product",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2",
+      "expected": "-2",
+      "name": "adapted_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/2",
+      "expected": "7/2",
+      "name": "terminal_square",
+      "status": "PASS"
+    },
+    {
+      "actual": "-11/2",
+      "expected": "-11/2",
+      "name": "wick_trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "innovation_energy",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "energy": "2",
+        "remainder": "-2"
+      },
+      "expected": "remainder=-energy",
+      "name": "wrong_sign_carre_du_champ",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "name": "first_variation_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.011180339887498949,
+      "expected": "<0",
+      "name": "bounded_smooth_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.0,
+      "expected": ">0",
+      "name": "bounded_smooth_frame_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "rare_branch_expected_energy",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "name": "rare_branch_expected_sextic",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": "64",
+      "name": "rare_branch_conditional_peak",
+      "status": "PASS"
+    },
+    {
+      "actual": "64",
+      "expected": "64",
+      "name": "expected_budgets_not_bmo",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.32250000000000006,
+      "expected": ">0",
+      "name": "weighted_cm_square_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.08999999999999991,
+      "expected": ">=0",
+      "name": "weighted_cm_one_use",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/40",
+      "expected": "17/40",
+      "name": "conditional_gain_x_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/40",
+      "expected": "21/40",
+      "name": "conditional_gain_y_power",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/20",
+      "expected": "1/20",
+      "name": "conditional_gain_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "20",
+      "expected": "20",
+      "name": "conditional_gain_random_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "17/2",
+      "expected": "17/2",
+      "name": "conditional_gain_eta_loss",
+      "status": "PASS"
+    },
+    {
+      "actual": "21/2",
+      "expected": "21/2",
+      "name": "conditional_gain_zeta_loss",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -1.7411011265922482,
+        -2.6390158215457884,
+        -3.999999999999999,
+        -6.062866266041592
+      ],
+      "expected": "all <0",
+      "name": "generic_spatial_brackets_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.4822022531844965,
+        5.278031643091578,
+        8.0,
+        12.125732532083187
+      ],
+      "expected": "strictly increasing",
+      "name": "generic_spatial_ratio_grows",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.3306690738754696e-16,
+      "expected": 0.0,
+      "name": "generic_spatial_scaling",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "name": "generic_negative_norm_constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "base_current_heat_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-35025/52822",
+      "expected": "nonzero",
+      "name": "base_current_identity_nonzero",
+      "status": "PASS"
+    }
+  ],
+  "assertions_passed": 51,
+  "assertions_total": 51,
+  "base_current_heat_identity": {
+    "difference": "0",
+    "heat_frame_times_past": "-35025/52822",
+    "projected_current": "-35025/52822"
+  },
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "claims_not_established": {
+    "complete_packet_lower_bound": false,
+    "controlled_shell_one_use": false,
+    "nelson_bound": false,
+    "sector_a_closure": false,
+    "weighted_production_lower_bound": false
+  },
+  "conditional_positive_gain_ledger": {
+    "eta_loss": "17/2",
+    "gamma": "3/10",
+    "random_moment": "20",
+    "slack": "1/20",
+    "x_power": "17/40",
+    "y_power": "21/40",
+    "zeta_loss": "21/2"
+  },
+  "exponents": {
+    "combined_slack": "-4/15",
+    "combined_x": "9/10",
+    "combined_y": "11/30",
+    "general_slack_at_s": "-4/15",
+    "payload_x": "2/5",
+    "payload_y": "11/30",
+    "s": "3/5",
+    "square_function_x": "1/2"
+  },
+  "full_current_decomposition": {
+    "commutator_error": 1.1102230246251565e-16,
+    "complete_endpoint_error": 0.0,
+    "cross_sum": 0.00019440273886292073,
+    "energy_identity_error": 5.204170427930421e-18,
+    "frame_floor": 1.1186520959234125,
+    "future_square_sum": 0.0037157638381040653,
+    "future_total": 0.01475016481458536,
+    "increment_reassembly_error": 5.551115123125783e-17,
+    "injected_total": -0.00065297663884842,
+    "joined_causal_decomposition_error": 2.0816681711721685e-17,
+    "joined_endpoint_safe_error": 1.5612511283791264e-17,
+    "low_paid_endpoint": 4.410100000000001e-05,
+    "low_term": -8.093086415820365e-05,
+    "paid_difference": 0.0009400259000000002,
+    "past_increment_error": 3.469446951953614e-18,
+    "predictability_error": 0.0,
+    "safe_identity_error": 5.204170427930421e-18,
+    "safe_telescope_error": 0.0,
+    "shells": [
+      {
+        "depth": 1,
+        "future": 0.012597569581200799,
+        "future_square": 0.002342613341793207,
+        "injected": -0.00031839402430900636
+      },
+      {
+        "depth": 2,
+        "future": 0.0021525952333845627,
+        "future_square": 0.0013731504963108584,
+        "injected": -0.0001725074230225333
+      },
+      {
+        "depth": 3,
+        "future": 0.0,
+        "future_square": 0.0,
+        "injected": -0.00016207519151688042
+      }
+    ],
+    "trace_split_error": 1.0842021724855044e-19
+  },
+  "generic_spatial_no_go": {
+    "bracket_ratios": [
+      3.4822022531844965,
+      5.278031643091578,
+      8.0,
+      12.125732532083187
+    ],
+    "fitted_exponents": [
+      0.6000000000000002,
+      0.6,
+      0.6000000000000003
+    ],
+    "frequencies": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "h_squares": [
+      0.5,
+      0.4999999999999999,
+      0.4999999999999999,
+      0.4999999999999999
+    ],
+    "negative_brackets": [
+      -1.7411011265922482,
+      -2.6390158215457884,
+      -3.999999999999999,
+      -6.062866266041592
+    ],
+    "regularity": 0.6,
+    "scaling_error": 3.3306690738754696e-16,
+    "weighted_y_norm_spread": 1.1102230246251565e-16,
+    "weighted_y_norms": [
+      0.7071067811865476,
+      0.7071067811865475,
+      0.7071067811865476,
+      0.7071067811865476
+    ]
+  },
+  "rare_branch_bmo_no_go": {
+    "amplitude_squared": "64",
+    "bmo_to_energy_ratio": "64",
+    "conditional_peak": "64",
+    "expected_energy": "1",
+    "expected_sextic": "1",
+    "rare_probability": "1/64",
+    "shell_frequency": "2"
+  },
+  "result_id": "A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION",
+  "safe_subtractor_fixture_scope": "The nonzero paid functional is a structural W-P sign/telescope fixture. The production identification P=N3_nr+T_le is proved analytically from the hash-pinned R-078 definition and is not numerically reconstructed here.",
+  "schema": "tect/a13-full-safe-packet-frame-current-doob-primary/1.0",
+  "source_version": "1.0.0",
+  "status": "PASS",
+  "weighted_cm_square_function": {
+    "cm_energy": 0.4125,
+    "margin": 0.08999999999999991,
+    "weighted_square": 0.32250000000000006
+  }
+}

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-079 full safe-packet frame-current Doob decomposition] - 2026-07-25
+
+Closed the exact expectation-level full frame-current and canonical safe-packet reconstruction, retaining both low objects, the present/future cross term, squares, Wick traces, derivative feedback, complete forest, and paid endpoint difference. Proved the spatially weighted Cameron--Martin control square function and predictable base-current heat projection. Registered generic weighted-Doob and adapted Wick carre-du-champ method no-gos. The production near/far current-trace estimate, low-object bounds, controlled-shell one-use, q=10/9 Nelson synthesis, and Sector A remain open at T4. Primary 51/51 and independent 42/42 pass; integrated 157/157 and aggregate 250/250 are fail-closed by the manifest; ten-page PDF was rebuilt and visually checked.
+
 ## [Narrow R-078 packet-to-bracket attribution before release] - 2026-07-25
 
 Pre-release adversarial review found that the exact generic bilinear Doob lemma had been attributed to the entire nonlinear canonical safe packet without a displayed composite decomposition, and that the causal telescope's low-end endpoint had been identified only with its R-066 component. The proof note and live surfaces now restrict the lemma to factorised bilinear components, retain the complete low-end safe endpoint, add direct R-069/R-070 dependency credit, and make the exact full packet-to-bracket/commutator reconstruction the first step of the successor gate. No Hessian identity, tame bound, exponent ledger, generic Doob identity, square-function estimate, high-U principal estimate, assertion count, tier, or Sector-A status changed. EXP-000069 and AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION preserve the failed attribution route.

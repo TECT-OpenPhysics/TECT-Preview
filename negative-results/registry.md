@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS](#ng-2026-07-25-a13-generic-weighted-doob-shortcuts) | A13 generic weighted-Doob closure by Cauchy, expected-budget Carleson, or abstract spatial gain | square-function Cauchy has Young deficit `-4/15`; expected energy plus sextic budgets do not imply predictable BMO/Carleson control; and an unweighted bracket has no generic spatial gain |
+| [NG-2026-07-25-A13-ADAPTED-WICK-CARRE-DU-CHAMP](#ng-2026-07-25-a13-adapted-wick-carre-du-champ) | A13 universal adapted Wick-square/trace positivity | the complete positive current square plus Wick trace can equal the negative of the coefficient innovation energy, including for a bounded smooth positive frame |
 | [AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION](#audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution) | R-078 pre-release packet-to-bracket attribution and low-end endpoint | the first draft promoted a generic bilinear Doob lemma to a full nonlinear safe-packet decomposition and identified only the R-066 component of the complete low-end endpoint; both attributions were narrowed before release |
 | [AUDIT-2026-07-25-A13-R077-PACKET-DEFINITION](#audit-2026-07-25-a13-r077-packet-definition) | R-077 descriptive companion packet | the listed companions did not uniquely define a packet because R-063 parenthesisations agree only after the complete forest sum; R-078 repairs this by subtraction from the complete endpoint followed by one causal projection |
 | [NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET](#ng-2026-07-25-a13-ahigh-absolute-and-automatic-bracket) | A13 termwise absolute A-high summation and generic bracket-plus-square positivity | even after the Hessian repair the A-high route has negative Young slack, while an exact adapted high--high-to-low fixture keeps the innovation bracket plus its positive square negative on a nonempty parameter interval |
@@ -72,6 +74,72 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-generic-weighted-doob-shortcuts"></a>
+### NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS -- three generic weighted-Doob closures fail
+
+**Failure mode:** After the exact R-079 full-current decomposition, close the
+future bracket either by applying Cauchy directly to the weighted control
+square function, by upgrading the two expected Boue--Dupuis budgets to a
+predictable BMO/Carleson norm, or by inferring a spatial gain from an
+unweighted Hilbert bracket.
+
+**Evidence:** R-078 gives the payload powers
+`X^((1+s)/4)Y^((5-s)/12)`.  Spending the control square function as
+`X^(1/2)` gives
+`a=(3+s)/4`, `b=(5-s)/12`, and `c=-(1+s)/6`; at `s=3/5` this is
+`X^(9/10)Y^(11/30)` with deficit `-4/15`.  Independently, on an event of
+probability `p=N^-6`, the normalized one-carrier choice
+`h=p^-1/2 1_E e_N`, `a=N^-2 h` has expected CM energy and expected sextic
+both equal to one while its conditional future energy on `E` is `N^6`.
+Finally, with `epsilon` a centered Rademacher root,
+`H_N=epsilon cos(Nx)` and
+`Y_N=-epsilon N^s cos(Nx)` have bounded `L2` and homogeneous `H^-s`
+coordinates but bracket `-epsilon^2 N^s/2`.  The primary 51/51 and
+non-importing independent 42/42 R-079 audits verify the rational ledger,
+weighted shell identity, rare branch, and multi-frequency scaling.
+
+**Correction:** Use the weighted control square function only after a
+production-specific probability-root/spatial-shell split.  Prove a far-root
+heat-current tail and retain the exact square--trace--forest block in the
+near region.  Do not import an essential-sup Carleson norm from expected
+budgets.
+
+**Consequence:** The three named generic shortcuts are unavailable.  This is
+not a counterexample to the complete production packet.  The R-079 exact
+decomposition and weighted control square function remain valid; the
+production near/far lower bound, controlled-shell energy one-use, Nelson,
+and Sector A remain open.
+
+<a id="ng-2026-07-25-a13-adapted-wick-carre-du-champ"></a>
+### NG-2026-07-25-A13-ADAPTED-WICK-CARRE-DU-CHAMP -- exact square and trace have no universal adapted sign
+
+**Failure mode:** Infer that the future-feedback current bracket becomes
+nonnegative after its positive innovation square and exact Wick covariance
+trace are restored, or represent every adapted remainder as a sum of
+nonnegative rootwise carre-du-champ terms.
+
+**Evidence:** For `xi~N(0,1)`, scalar frame `m(A)=1+A`, and zero derivative
+control, the exact post-first-variation remainder is
+`R(A)=A^2(xi^2-1)/2=(A xi)^2/2-A^2/2`.  With
+`A=alpha(xi^2-4)`, the complete Hermite product gives
+`E R=-2 alpha^2`, while the square and trace are respectively
+`7 alpha^2/2` and `-11 alpha^2/2`; moreover
+`E|dA|^2=2 alpha^2`, so `E R=-E|dA|^2`.  This is not an omitted-chaos
+effect.  The bounded smooth choice `A=a exp(-xi^2)`, `a>0`, has frame floor
+at least one and exact remainder `-2a^2/(5 sqrt(5))`.  A two-component
+diagonal matrix lift has the same sign.  Both R-079 executable routes verify
+the polynomial and bounded fixtures independently.
+
+**Correction:** Retain the production frequency geometry, terminal square,
+trace, heat compensator, complete R-063 forest, derivative feedback, paid
+subtraction, and both low objects in one signed estimate.  Universal adapted
+rootwise positivity is not an admissible proof step.
+
+**Consequence:** This abstract scalar/matrix root fixture is not a production
+`B^>` counterexample.  It rules out only generic Wick/carre-du-champ
+positivity.  The production near/far estimate and all umbrella conclusions
+remain open.
 
 <a id="audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution"></a>
 ### AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION -- generic Doob lemma was over-attributed to the full safe packet

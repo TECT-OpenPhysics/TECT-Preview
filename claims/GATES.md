@@ -442,10 +442,13 @@ reassembles the exact transport through a bounded Hessian difference with
 `A^2 DA` payload, improves the comparable payment to moment `30/7`, defines
 the safe packet by canonical subtraction and one causal projection, and
 identifies the future-control innovation-bracket mechanism for each factorised
-bilinear component. The current child is
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`; it must first derive
-the exact full-packet bracket/commutator identity, with every lower chaos and
-restored endpoint term retained in one signed causal identity.
+bilinear component. R-079 closes the exact full-current and canonical safe-
+packet Doob reconstruction with every low, square, trace, forest, cross, and
+paid term retained. It also proves one weighted Cameron--Martin control square-
+function use and the predictable base-current heat projection. The current
+child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
+narrowed to the production near/far current-trace estimate and separate bounds
+for the conditional low current and complete low safe endpoint.
 The umbrella theorem remains open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
@@ -753,7 +756,7 @@ phase-root cancellation or a genuinely adapted two-control derivative gain
 `rho=gamma-delta>0` with probability moments strictly above `3/rho`.
 R-063's unshifted coefficient-jet regularity is not such a theorem.
 
-**Status:** REDUCED THROUGH R-078 (2026-07-25). R-073 proves exact
+**Status:** REDUCED THROUGH R-079 (2026-07-25). R-073 proves exact
 familywise reassembly, the full raw-current telescope identity,
 projector-free completion on the kernel-projector rank-2/3/6 strata, and
 exact terminal-kernel cancellation after both separated first variations are
@@ -771,9 +774,12 @@ fresh-Gaussian Doob packets and closes the full payload-comparable
 `m<=r+L` shifted-resonance block with the fifteenth moment. R-078 replaces the
 globally nonoptimal cubic coordinate by the exact `A^2 DA` Hessian difference,
 defines the complete safe packet canonically, and identifies the factorised-
-bilinear future-control innovation mechanism. The gate below must first derive
-the exact full packet-to-bracket/commutator decomposition and then its spatially
-weighted lower bound. This is not an
+bilinear future-control innovation mechanism. R-079 closes the exact complete-
+current and canonical safe-packet reconstruction, proves one spatially weighted
+Cameron--Martin control square-function use, and proves the predictable base-
+current heat projection. The gate below is now the production near/far current-
+trace lower bound, with the conditional low current and complete low safe
+endpoint bounded separately. This is not an
 undifferentiated phase-root positivity claim. Tier remains T4.
 
 ### **A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM**
@@ -792,7 +798,7 @@ resonance-subtracted positive-gain construction is admissible only if its
 subtraction and every lower-chaos replacement are proved inside the same
 signed endpoint identity.
 
-**Status:** REDUCED THROUGH R-078 (2026-07-25). R-075 proves a global
+**Status:** REDUCED THROUGH R-079 (2026-07-25). R-075 proves a global
 projector-free invariant-current representation and exact Taylor chart across
 the rank-jumping strata. Its principal unshifted tensor is a canonical
 `C^(-1/2-kappa)` R-050 one-form with every finite moment and the required
@@ -806,12 +812,13 @@ tensor gauge-complete, or a standalone rough resonance constructed. R-077
 Doob-centers only complete fresh-root packets and closes every
 payload-comparable `m<=r+L` orientation. R-078 then gives the exact `A^2 DA`
 Hessian coordinate, canonical complete-companion safe packet, factorised-
-bilinear innovation lemma, and declared high-`U` moment `60/19`. The exact
-full-packet bracket reconstruction and spatially weighted future-control bound
-must still retain the R-063 lower chaoses,
-both restored first variations, terminal square, coefficient-curvature/Wick
-channel, trace transport, and finite-low boundary in the signed successor
-below. Tier remains T4.
+bilinear innovation lemma, and declared high-`U` moment `60/19`. R-079 closes
+the exact full-current reconstruction and proves the weighted control square
+function plus predictable base-current heat projection. The production
+near/far estimate must still retain the R-063 lower chaoses, both restored
+first variations, terminal square, coefficient-curvature/Wick channel, trace
+transport, paid subtraction, conditional low current, and complete low safe
+endpoint in the signed successor below. Tier remains T4.
 
 ### **A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER**
 
@@ -830,7 +837,7 @@ for all `eta,zeta>0`, uniformly in the cutoff. A valid proof may use a signed
 Ward/martingale telescope, causal freezing relative to each fresh root, or a
 proved adapted arbitrary-multiplier shifted-enhancement theorem.
 
-**Status:** REDUCED THROUGH R-078 (2026-07-25). R-076
+**Status:** REDUCED THROUGH R-079 (2026-07-25). R-076
 `A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION` gives
 the exact nonduplicating ledger and corrects the coarse R-075 estimate:
 `R X^(2/5)Y^(8/15)` has `1/15` Young slack and closes the control-independent
@@ -847,8 +854,10 @@ R-078 reassembles the same exact transport through the bounded Hessian
 difference with payload `A^2 DA`, proving the sharper moment `30/7`; it
 defines the residual by subtraction from the complete endpoint and one causal
 projection. Exact Doob algebra identifies a future-control innovation bracket
-for each factorised bilinear component. The gate below must derive the exact
-full nonlinear packet decomposition before proving its weighted bound. Do not
+for each factorised bilinear component. R-079 closes the exact full nonlinear
+current and safe-packet decomposition and isolates the two-channel terminal
+feedback commutator. The gate below must prove its production near/far current-
+trace bound and the two distinct low-object bounds. Do not
 claim absolute Doob summability, center lower chaoses
 separately, construct a standalone `L-infinity times C^(-s)` resonance,
 suppress the transport tail, freeze a terminal adapted coefficient as finite
@@ -872,45 +881,53 @@ conditional compensator, and the finite-low boundary. Doob-center only a
 complete largest-fresh-root endpoint packet. Any input-frequency rooting must
 remain valid under ties, Wick contraction, and high--high-to-low output.
 
-**Status:** REDUCED TO AN EXACT FULL-PACKET RECONSTRUCTION AND WEIGHTED
-INNOVATION GATE THROUGH R-078 (2026-07-25). The Hessian reassembly supersedes the cubic
+**Status:** REDUCED TO A PRODUCTION NEAR/FAR CURRENT-TRACE GATE THROUGH R-079
+(2026-07-25). The Hessian reassembly supersedes the cubic
 coordinate for this transport: its explicit payload is `A^2 DA`, with moment
 `30/7`. R-077's descriptive companion list is repaired by subtracting every
 proved orientation from the complete endpoint and applying one causal
 projection. The coefficient-dominant problem is not closed; exact Doob
 algebra identifies the innovation-bracket mechanism for factorised bilinear
-components, while the next gate must reconstruct the entire nonlinear packet
-before estimating it.
+components. R-079 closes the exact expectation-level full-current and canonical
+safe-packet reconstruction, retaining the conditional low current, complete
+low safe endpoint, cross term, squares, traces, forest, and paid endpoint
+difference. It also proves a weighted Cameron--Martin control square function
+and predictable base-current heat projection. The coefficient-dominant problem
+is now the production near/far current-trace estimate and separate control of
+the two low objects.
 
 ### **A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET**
 
 **Statement:** For regular mutually orthogonal whole-shell strict-past
 controls and uniformly in the terminal cutoff, prove the lower bound for the
-canonical safe packet `B_(J,safe)^>`, defined by subtracting every proved
-orientation from the complete endpoint and applying the causal projection
-once. First derive an exact packet-to-bracket/commutator identity for the full
-nonlinear packet. Then control the resulting spatially weighted bracket
-between each future-control coefficient innovation and complete current
-innovation, together with the high-coefficient commutators, so that for every
-`eta,zeta>0`,
+canonical safe packet `B_(J,safe)^>` using the exact R-079 full-current
+decomposition. Split each probability root from the spatial current shell only
+after that identity. In the far region `m>=j+C`, prove a production heat-tail
+gain and combine it with the weighted Cameron--Martin control square function.
+In the near region `|m-j|<=C`, prove either a direct signed Schur bound or a
+genuine positive-gain estimate, so that for every `eta,zeta>0`,
 
 `E B_(J,safe)^> >= -eta E X-zeta E Y-C_(eta,zeta,e,j0)`.
 
-Terminal-square polarization, coefficient curvature, both R-073 restored
-first variations, the complete R-063 forest, R-066 trace transport, and every
-term in the low-end safe endpoint must be retained in that exact decomposition
-before the weighted innovation-Carleson estimate is applied.
+Both present/future blocks, all positive squares and covariance traces, value
+innovations, heat compensators, derivative feedback, both R-073 restored first
+variations, the complete R-063 forest, R-066/R-070 trace transport, and the
+paid subtraction must remain coupled. The conditional low current and complete
+low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-25), isolated by R-078
-`A13-CLASSII-HESSIAN-DIFFERENCE-SAFE-PACKET-DOOB-BRACKET-REDUCTION`. The
-`A^2 DA` payload-comparable block closes with moment `30/7`, the factorised-
-bilinear coefficient innovation obeys one Hilbert square-function estimate,
-and the declared high-`U` principal closes with moment `60/19`. R-078 does not
-prove that the entire nonlinear safe packet admits this bracket form, and
-neither proved estimate supplies the required spatial weight. Termwise absolute `A`-high summation has negative
-Young slack, and an exact bounded adapted fixture refutes automatic bracket-
-plus-square positivity; these are method no-gos, not production
-counterexamples. Controlled-shell one-use, Nelson, and Sector A remain open.
+**Status:** OPEN CURRENT CHILD (2026-07-25), narrowed by R-079
+`A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`. R-079 proves
+the exact expectation-level full-current and canonical safe-packet identity,
+one spatially weighted Cameron--Martin control square-function use, and the
+predictable base-current heat projection. The terminal feedback current still
+contains coefficient and derivative-feedback channels. Direct Cauchy has
+Young deficit `-4/15`; expected energy and sextic budgets do not imply
+predictable BMO/Carleson control; an unweighted bracket has no generic spatial
+gain; and square plus trace has no universal adapted sign. These are method
+no-gos, not production counterexamples. A genuine gain `gamma>0` would be
+subcritical, with moment `6/gamma`, but that production estimate is unproved.
+The production near/far current-trace lower bound, both low-object bounds,
+controlled-shell one-use, Nelson, and Sector A remain open.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

@@ -44,12 +44,17 @@ reassembles the exact transport through a bounded Hessian difference with
 exact bilinear Doob lemma identifies a future-control innovation-bracket
 mechanism only for factorised components. The unweighted coefficient square
 function is one-use and the declared high-`U` principal closes with moment
-`60/19`, but the exact full-packet reconstruction and required spatial weight
-remain open. The current child is now
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, beginning with the
-exact packet-to-bracket/commutator identity and the complete endpoint forest,
-followed by
-R-075 graph recovery and the umbrella one-use estimate.
+`60/19`. R-079,
+`A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`, then proves
+the exact complete-current Doob polarization and reconstructs the canonical
+safe packet with its conditional low-current boundary and present/future
+cross term intact. It also proves the spatially weighted Cameron--Martin
+square function and base-current heat projection. The exact terminal feedback
+commutator retains coefficient and derivative-feedback channels, so the
+current child remains
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, narrowed to the
+production near/far estimate and complete weighted packet lower bound,
+followed by R-075 graph recovery and the umbrella one-use estimate.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

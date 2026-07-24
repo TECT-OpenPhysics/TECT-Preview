@@ -1,0 +1,683 @@
+% =============================================================================
+% Title: Full safe-packet frame-current Doob decomposition
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION
+% Ledger: R-079
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 exact/analytic decomposition; production weighted lower bound open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-25): exact root-first Hilbert-current decomposition of the
+% complete canonical safe packet; weighted Cameron--Martin square-function
+% one-use; exact predictable base-current heat projection; sharp failures of
+% generic Cauchy, BMO/Carleson, spatial-gain, and adapted-Wick positivity;
+% and a conditional positive-gain ledger for the production successor.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+
+\section{Purpose and scope}
+
+R-078 defined the remaining coefficient-dominant object without assigning
+individual lower Wick chaoses to arbitrary Bony channels.  Its definition is
+canonical: subtract the already paid nonresonant and payload-comparable
+orientations from the complete translated endpoint, then apply the causal
+projection once to the whole residual.  R-078 proved a Doob bracket identity
+for factorised bilinear components, but deliberately left the exact
+full-packet reconstruction open.
+
+This note supplies that reconstruction.  The complete translated current is
+placed in one Hilbert space carrying the spatial integral, generator sum,
+direction sum, and the positive $Q_{\rm II}$ metric.  Martingale
+orthogonality is then applied to the full terminal current, not term by term
+to its Taylor forest.  A root-first insertion of the partial-control current
+produces three exact blocks: a low conditional-current term, a current-control
+injection term, and a future-feedback innovation term.  Each shell retains
+its positive polarization square and its exact Wick covariance trace.  The
+safe-packet identity then subtracts the two already paid orientations at
+both endpoints.  Consequently both R-073 first variations, the terminal
+square, coefficient curvature, the complete R-063 forest, the R-066/R-070
+trace, and the complete low safe endpoint remain exactly once.
+
+The reconstruction is an algebraic advance, not the desired lower bound.
+Neither of the two shell blocks has a generic sign.  The low term contains a
+conditional mean of the terminal future-controlled current and is not merely
+the R-066 finite-low boundary.  The future innovation has both a coefficient
+channel and a derivative-feedback channel.  A sharp one-root example remains
+negative after the positive current square and Wick trace are put back.
+
+Two useful positive facts do survive.  First, the controlled shells obey a
+genuinely spatially weighted Cameron--Martin square-function estimate with
+one use of the total control energy.  Second, the uncontrolled or predictable
+translated base current has an exact same-point heat-semigroup projection,
+because future field values and derivatives are independent under the common
+even covariance.  These facts identify the production-specific near/far
+continuation, but do not prove its far-tail estimate.
+
+All exact identities are at finite cutoff, at a fixed positive production
+floor, with deterministic $Q_{\rm II}$ and deterministic covariance
+increments.  The controls are strict-past predictable, mutually orthogonal,
+one-shot whole-shell controls.  This note does not prove the production
+weighted packet lower bound, controlled-shell one-use for the energy, the
+$q=10/9$ Nelson moment, a measure theorem, cutoff or floor removal, infinite
+volume, or Sector-A closure.  The tier remains T4.
+
+\section{The complete current endpoint}
+
+Let $\ell=j_0-1$, $A^*=A^{(J)}$, and
+$A^0=A^{(\ell)}=A_{<j_0}$.  For a partial control $H$, define the complete
+$Q_{\rm II}$-weighted current
+\[
+ \cJ(H)_{\alpha i}(x)
+ =Q_{\rm II}^{1/2}M_\alpha(U+H)^T
+       \{D_iU+D_iH\}.                                      \tag{2.1}
+\]
+All generator and direction coordinates and the spatial $L^2$ integral are
+part of one real Hilbert space $\mathcal H$.  Put
+\[
+ \cB(H)=B(U+H),                                             \tag{2.2}
+\]
+and
+\[
+ \mathcal W_J(H)
+ ={1\over2}\|\cJ(H)\|_{\mathcal H}^2
+ -{1\over2}\sum_i\int \cB(H):\Gamma_{J,i}\dd x.          \tag{2.3}
+\]
+The R-070 terminal identity gives, exactly,
+\[
+ \Delta V_J^{\rm ren}(U;H)=\mathcal W_J(H)-\mathcal W_J(0).
+                                                                  \tag{2.4}
+\]
+Thus (2.3) is not a model replacement: it is the complete covariance-normal
+translated current endpoint already reached by R-066, R-069, and R-070.
+
+Write
+\[
+ \cJ_* =\cJ(A^*),\qquad \cJ_0=\cJ(A^0),\qquad
+ \cJ_j=\cJ(A^{(j)}),                                       \tag{2.5}
+\]
+and use the same subscripts for $\cB$.  Let
+\[
+ P_jX=\E[X\mid\cF_j],\qquad d_j=P_j-P_{j-1}.               \tag{2.6}
+\]
+At finite cutoff $P_J$ is the identity on every terminal current.  Define
+the root-first increments
+\[
+ f_j=d_j(\cJ_j-\cJ_0),\qquad
+ i_j=d_j(\cJ_*-\cJ_j).                                     \tag{2.7}
+\]
+They obey
+\[
+ f_j+i_j=d_j(\cJ_*-\cJ_0),\qquad
+ d_j\cJ_j=d_j\cJ_0+f_j.                                   \tag{2.8}
+\]
+The sequence $f_j$ is not the martingale-difference sequence of one fixed
+terminal variable: its middle current $\cJ_j$ changes with $j$.  This point
+prevents an automatic reuse of R-077 fresh-packet cancellation.
+
+\section{Exact root-first Doob decomposition}
+
+Assume the deterministic covariance split
+\[
+ \Gamma_J=\Gamma_\ell+
+       \sum_{j=j_0}^{J}\Delta\Gamma_j.                     \tag{3.1}
+\]
+Define the low conditional-current block
+\[
+ \begin{split}
+ \mathfrak L_\ell={}&{1\over2}\E\{
+  \|P_\ell\cJ_*\|_{\mathcal H}^2
+  -\|P_\ell\cJ_0\|_{\mathcal H}^2\}\;\\
+ &-{1\over2}\E\sum_i\int
+  (\cB_*-\cB_0):\Gamma_{\ell,i}\dd x .
+ \end{split}                                               \tag{3.2}
+\]
+For every active root define the injected-current block
+\[
+ \begin{split}
+ \mathfrak F_j={}&\E\left\{
+  \ip{d_j\cJ_0}{f_j}+{1\over2}\|f_j\|_{\mathcal H}^2
+  \right\}\\
+ &-{1\over2}\E\sum_i\int
+  (\cB_j-\cB_0):\Delta\Gamma_{j,i}\dd x,
+ \end{split}                                               \tag{3.3}
+\]
+and the future-feedback innovation block
+\[
+ \begin{split}
+ \mathfrak I_j={}&\E\left\{
+  \ip{d_j\cJ_j}{i_j}+{1\over2}\|i_j\|_{\mathcal H}^2
+  \right\}\\
+ &-{1\over2}\E\sum_i\int
+  (\cB_*-\cB_j):\Delta\Gamma_{j,i}\dd x.
+ \end{split}                                               \tag{3.4}
+\]
+
+\paragraph{Theorem 3.1 (full-current identity).}
+Under the hypotheses above,
+\[
+ \boxed{
+ \E\{\mathcal W_J(A^*)-\mathcal W_J(A^0)\}
+ =\mathfrak L_\ell+
+  \sum_{j=j_0}^{J}(\mathfrak F_j+\mathfrak I_j).}          \tag{3.5}
+\]
+
+\paragraph{Proof.}
+Hilbert martingale orthogonality gives, for $H=*$ and $H=0$,
+\[
+ \E\|\cJ_H\|_{\mathcal H}^2
+ =\E\|P_\ell\cJ_H\|_{\mathcal H}^2
+  +\sum_{j=j_0}^{J}\E\|d_j\cJ_H\|_{\mathcal H}^2.       \tag{3.6}
+\]
+The difference of the $j$th squares is
+\[
+ \begin{split}
+ &\ip{d_j\cJ_0}{f_j+i_j}+{1\over2}\|f_j+i_j\|^2\\
+ &\quad=\ip{d_j\cJ_0}{f_j}+{1\over2}\|f_j\|^2
+ +\ip{d_j\cJ_j}{i_j}+{1\over2}\|i_j\|^2.
+ \end{split}                                               \tag{3.7}
+\]
+In particular, the easy-to-miss cross term $\ip{f_j}{i_j}$ is contained in
+$\ip{d_j\cJ_j}{i_j}$.  The coefficient difference has the simultaneous
+split
+\[
+ \cB_*-\cB_0=(\cB_j-\cB_0)+(\cB_*-\cB_j).                \tag{3.8}
+\]
+Insert (3.7) and (3.8) into (3.6), use (3.1), and compare with (2.3).
+This proves (3.5).  No inequality or termwise forest assignment has entered.
+\hfill$\square$
+
+The future block also has the exact polarization
+\[
+ \ip{d_j\cJ_j}{i_j}+{1\over2}\|i_j\|^2
+ ={1\over2}\{\|d_j\cJ_*\|^2-\|d_j\cJ_j\|^2\}.           \tag{3.9}
+\]
+Equation (3.9) is signless after the trace in (3.4) is restored.  In
+particular, the trace is not generally the negative of the second square.
+
+\section{Exact reconstruction of the canonical safe packet}
+
+Let the already paid orientation be
+\[
+ \cR_{\le}(H)=N_{3,{\rm nr}}(H)+\widehat T_{\le}(H).       \tag{4.1}
+\]
+R-078 defines
+\[
+ \mathfrak B_{J,{\rm alg}}^>(H)
+ =\Delta V_J^{\rm ren}(U;H)-\cR_{\le}(H),                 \tag{4.2}
+\]
+then applies its causal projection once to the whole bracket.  Therefore
+\[
+ \E\mathfrak B_{J,{\rm safe}}^>
+ =\E\{\mathfrak B_{J,{\rm alg}}^>(A^*)
+       -\mathfrak B_{J,{\rm alg}}^>(A^0)\}.               \tag{4.3}
+\]
+Combining (2.4), (3.5), and (4.2) proves the exact full-packet identity
+\[
+ \boxed{
+ \begin{split}
+ \E\mathfrak B_{J,{\rm safe}}^>
+ ={}&\mathfrak L_\ell+
+       \sum_{j=j_0}^{J}(\mathfrak F_j+\mathfrak I_j)\\
+ &-\E\{\cR_{\le}(A^*)-\cR_{\le}(A^0)\}.
+ \end{split}}                                              \tag{4.4}
+\]
+This closes the algebraic reconstruction left open by R-078.  It does not
+replace the right-hand side by a single future-coefficient bracket.
+
+Two distinct low objects must be kept straight.  First, reconstructing the
+complete terminal endpoint from the packet gives
+\[
+ \E\mathfrak B_{J,{\rm alg}}^>(A^*)
+ =\E\mathfrak B_{J,{\rm alg}}^>(A^0)
+  +\E\mathfrak B_{J,{\rm safe}}^>.                         \tag{4.5}
+\]
+The first term on the right is the complete low safe endpoint
+\[
+ \Delta V_J^{\rm ren}(A^0)-N_{3,{\rm nr}}(A^0)
+ -\widehat T_{\le}(A^0),                                  \tag{4.6}
+\]
+not only the R-066 finite-low current boundary.  Second, $\mathfrak L_\ell$
+in (3.2) contains $P_\ell\cJ_*$ and hence a conditional mean of the entire
+future-controlled current.  It is not presently bounded by the finite-low
+estimate for (4.6).
+
+For every endpoint $H$, R-078 also gives the exact companion expansion
+\[
+ \mathfrak B_{J,{\rm alg}}^>(H)
+ =\mathcal S_{0,\Gamma}(H)+L(H)+N_2(H)
+  +\widehat T_>(H)+\mathcal P(H).                          \tag{4.7}
+\]
+The first variation $\mathcal S_{0,\Gamma}$ contains both the restored
+R-073 Gaussian and control-current variations.  Moreover,
+\[
+ \mathcal P(H)=
+ \ip{w}{Q_{\rm II}(E_2+E_3)^TG}
+ +{1\over2}|\Delta w+c|_{Q_{\rm II}}^2
+ -{1\over2}F_H:\Gamma_J.                                  \tag{4.8}
+\]
+Thus the projector-free square, coefficient curvature, and trace occur once.
+The coefficient term $F_H$ means the complete R-063
+$P_4/P_2/\Sigma Q/P_0$ and $P_3/P_1$ forest after reassembly; (4.4) never
+distributes those lower chaoses separately.  This is why (4.4) preserves the
+R-063, R-066, R-070, and R-073 authorities simultaneously.
+
+\section{The future-control commutator has two channels}
+
+Set
+\[
+ R_j^{\rm f}=A^*-A^{(j)},\qquad
+ \Delta_j^{\rm f}M=M(U+A^*)-M(U+A^{(j)}).                 \tag{5.1}
+\]
+Direct expansion of (2.1) gives
+\[
+ \boxed{
+ \begin{split}
+ \cJ_*-\cJ_j=Q_{\rm II}^{1/2}\{&
+  (\Delta_j^{\rm f}M)^T(DU+DA^{(j)})\\
+  &+M(U+A^*)^TDR_j^{\rm f}\}.
+ \end{split}}                                              \tag{5.2}
+\]
+Consequently $i_j=d_j(\cJ_*-\cJ_j)$ contains both a future coefficient
+innovation and a future derivative-control innovation.  Strict-past
+predictability yields
+\[
+ R_j^{\rm f}=\sum_{k>j}a_k,\qquad
+ d_jR_j^{\rm f}=\sum_{k>j}d_ja_k,                         \tag{5.3}
+\]
+but does not make (5.3) vanish.  A reduction to coefficient innovation alone
+would delete the second line of (5.2).
+
+The coefficient companion is likewise exact:
+\[
+ \begin{split}
+ \cB_*-\cB_j=\sum_\alpha\{&
+  M_{\alpha,j}Q_{\rm II}(\Delta_j^{\rm f}M_\alpha)^T
+ +(\Delta_j^{\rm f}M_\alpha)Q_{\rm II}M_{\alpha,j}^T\\
+ &+(\Delta_j^{\rm f}M_\alpha)Q_{\rm II}
+        (\Delta_j^{\rm f}M_\alpha)^T\}.
+ \end{split}                                               \tag{5.4}
+\]
+The last line is coefficient curvature.  Equations (3.9) and (5.4) show
+precisely why the future block must retain square and trace together.
+
+\section{Two exact positive tools}
+
+\subsection{Spatially weighted Cameron--Martin square function}
+
+Write each one-shot control shell as $a_k=K_kh_k$, where $a_k$ is
+$\cF_{k-1}$-measurable, supported in shell $k$, and
+\[
+ \|K_k\|_{\mathcal H_k\to L^2}\lesssim 2^{-2k}.           \tag{6.1}
+\]
+Then $d_ja_k=0$ for $j\geq k$.  Hilbert martingale orthogonality gives
+\[
+ \sum_{j<k}\E\|d_ja_k\|_2^2\leq\E\|a_k\|_2^2.          \tag{6.2}
+\]
+Multiplying by $2^{4k}$, using (6.1), and summing the mutually orthogonal
+spatial shells proves
+\[
+ \boxed{
+ \sum_k\sum_{j<k}2^{4k}\E\|d_ja_k\|_2^2
+ \lesssim\E\sum_k\|h_k\|_{\mathcal H_k}^2.}              \tag{6.3}
+\]
+Equivalently, with the standard shell norm,
+\[
+ \sum_j\E\|d_jA\|_{H^2}^2\lesssim \E X.                 \tag{6.4}
+\]
+This is a genuine weighted one-use result for the control coordinate.  It is
+not yet a bound for the current bracket in (3.3)--(3.4), because the other
+factor has no proved compensating negative spatial regularity.
+
+\subsection{Predictable base-current heat projection}
+
+Let $U=U_j+V_{>j}$ and $DU=DU_j+DV_{>j}$.  For a common real-even
+covariance,
+\[
+ {\rm Cov}\{V_{>j}(x),D_iV_{>j}(x)\}=0.                  \tag{6.5}
+\]
+Joint Gaussianity makes the two variables independent at each $x$.  If
+\[
+ \overline M_j=P_{\Sigma_{j+1:J}}M,                       \tag{6.6}
+\]
+then the base current satisfies
+\[
+ \boxed{
+ P_j\{M(U)^TD_iU\}
+ =\overline M_j(U_j)^TD_iU_j.}                            \tag{6.7}
+\]
+The same formula holds after an $\cF_{j-1}$-predictable translation, with
+$U_j,DU_j$ translated by that control.  Subtracting the $j-1$ formula gives
+\[
+ \begin{split}
+ d_j\cJ_i={}&\overline M_j(U_j)^Td_{j,i}\\
+ &+\{\overline M_j(U_j)-\overline M_j(U_{j-1})\}^TD_iU_{j-1}\\
+ &+\{\overline M_j-\overline M_{j-1}\}(U_{j-1})^TD_iU_{j-1}.
+ \end{split}                                               \tag{6.8}
+\]
+These are respectively the derivative injection, centered value innovation,
+and heat compensator.  Formula (6.7) does not apply to $\cJ_*$ when the
+terminal future feedback itself depends on root $j$.
+
+\section{Why the generic weighted shortcuts fail}
+
+\subsection{Square-function Cauchy is exponent-supercritical}
+
+R-078 proves, for a raw-current order $s$,
+\[
+ \|A^2DA\|_{B^s_{1,1}}
+ \lesssim X^{(1+s)/4}Y^{(5-s)/12}.                        \tag{7.1}
+\]
+Spending (6.4) by Cauchy contributes $X^{1/2}$.  The resulting powers are
+\[
+ a={3+s\over4},\qquad b={5-s\over12},\qquad
+ c=1-a-b=-{1+s\over6}.                                   \tag{7.2}
+\]
+At $s=3/5$ this is
+\[
+ X^{9/10}Y^{11/30},\qquad c=-{4\over15}.                  \tag{7.3}
+\]
+There is no positive Young slack and hence no finite random Young remainder.
+The exact square, trace, forest, and paid subtraction must be used before
+Cauchy; (6.3) alone cannot close the packet.
+
+\subsection{Expected budgets do not imply predictable Carleson control}
+
+Fix a shell frequency $N$ and an event $E\in\cF_j$ of probability
+$p=N^{-6}$.  On one normalized carrier set
+\[
+ h_{j+1}=p^{-1/2}{\bf1}_E e_N,\qquad
+ a_{j+1}=N^{-2}h_{j+1}.                                   \tag{7.4}
+\]
+Then, up to the fixed carrier normalization,
+\[
+ \E\|h_{j+1}\|^2=1,\qquad
+ \E\|a_{j+1}\|_6^6
+ =p\{N^{-2}p^{-1/2}\}^6=1.                               \tag{7.5}
+\]
+But on $E$ the conditional future energy is
+\[
+ \E[\|h_{j+1}\|^2\mid\cF_j]=p^{-1}=N^6.                \tag{7.6}
+\]
+Thus the two expected Bou\'e--Dupuis budgets do not control an essential-sup
+martingale BMO or predictable Carleson norm.
+
+\subsection{An unweighted bracket has no generic spatial gain}
+
+On a one-step symmetric tree let $\varepsilon\in\{-1,1\}$ be the centered
+Rademacher root, $\E\varepsilon=0$, and take
+\[
+ H_N=\varepsilon\cos(Nx),\qquad
+ Y_N=-\varepsilon N^s\cos(Nx).                            \tag{7.7}
+\]
+The $L^2$ square function of $H_N$ and the homogeneous $H^{-s}$ norm of $Y_N$ stay
+bounded, whereas
+\[
+ \E\int H_NY_N\dd x=-{1\over2}\varepsilon^2N^s.         \tag{7.8}
+\]
+Therefore the unweighted R-078 Doob identity cannot imply the missing
+spatially weighted bracket estimate by an abstract embedding.
+
+\section{Adapted Wick--carr\'e-du-champ no-go}
+
+The positive innovation square also has no universal sign once its exact
+trace is restored.  Let $\xi\sim N(0,1)$,
+$H_2(\xi)=\xi^2-1$, $Q=\Gamma=1$, and use the scalar frame $m(a)=1+a$.
+Allow a later value control $A=A(\xi)$ and set its spatial derivative control
+to zero.  After subtracting the base term and all first variations, the exact
+remainder is
+\[
+ \cR(A)={1\over2}A^2H_2
+ ={1\over2}(A\xi)^2-{1\over2}A^2.                         \tag{8.1}
+\]
+The two terms on the right are exactly the terminal current square and Wick
+trace.
+
+For $A_\alpha=\alpha(\xi^2-4)=\alpha(H_2-3)$, probabilists' Hermites give
+\[
+ A_\alpha^2=\alpha^2(H_4-2H_2+11),                       \tag{8.2}
+\]
+\[
+ A_\alpha^2H_2
+ =\alpha^2(H_6+6H_4+15H_2-4).                            \tag{8.3}
+\]
+Consequently
+\[
+ \E\cR(A_\alpha)=-2\alpha^2,                            \tag{8.4}
+\]
+while
+\[
+ {1\over2}\E(A_\alpha\xi)^2={7\over2}\alpha^2,\qquad
+ -{1\over2}\E A_\alpha^2=-{11\over2}\alpha^2.          \tag{8.5}
+\]
+Moreover
+\[
+ dA_\alpha=A_\alpha-\E A_\alpha=\alpha H_2,\qquad
+ \E|dA_\alpha|^2=2\alpha^2,                             \tag{8.6}
+\]
+so the natural coefficient carr\'e-du-champ occurs with exactly the wrong
+sign:
+\[
+ \boxed{\E\cR(A_\alpha)=-\E|dA_\alpha|^2.}               \tag{8.7}
+\]
+This is not an omitted-chaos artefact: (8.3) displays the complete finite
+forest including its negative zero chaos.
+
+There is also a bounded positive-frame fixture.  For $a>0$ take
+$A=a\exp(-\xi^2)$, so $m(A)\geq1$.  Direct Gaussian integration gives
+\[
+ {1\over2}\E(A\xi)^2={a^2\over10\sqrt5},\qquad
+ -{1\over2}\E A^2=-{a^2\over2\sqrt5},                   \tag{8.8}
+\]
+and hence
+\[
+ \E\cR(A)=-{2a^2\over5\sqrt5}<0.                        \tag{8.9}
+\]
+A diagonal two-component matrix lift leaves the first channel unchanged.
+Thus positive $Q$, a matrix-square coefficient, a bounded smooth adapted
+control, and the positive current square do not yield generic positivity.
+
+This is an abstract adapted root counterexample, not a production
+$\mathfrak B^>$ counterexample.  It omits the production frequency geometry,
+harmonic enhancement, exact paid subtraction, and the remaining signed
+companions.  It forbids only a universal rootwise positivity or nonnegative
+carr\'e-du-champ proof.
+
+\section{Conditional positive-gain ledger and successor}
+
+The failed routes identify a quantitative target.  Suppose that, after the
+exact square--trace--forest reassembly, the remaining production adapted
+coefficient obeys for some $\gamma>0$
+\[
+ \|\mathbb K_\gamma(A)\|_{H^{-3/5+\gamma}}
+ \leq R_\gamma\|A\|_{H^{2/5}},\qquad
+ R_\gamma\in\bigcap_{p<\infty}L^p.                        \tag{9.1}
+\]
+This is an assumption, not a theorem of R-063 for adapted controls.  The
+standard interpolation gives
+\[
+ \|A\|_{H^{2/5}}\lesssim X^{1/10}Y^{2/15}.                \tag{9.2}
+\]
+Apply the R-078 payload estimate at
+$\beta=3/5-\gamma$.  The resulting term has powers
+\[
+ R_\gamma X^{1/2-\gamma/4}Y^{1/2+\gamma/12}.              \tag{9.3}
+\]
+The exact Young ledger is
+\[
+ a={1\over2}-{\gamma\over4},\qquad
+ b={1\over2}+{\gamma\over12},\qquad
+ c={\gamma\over6},\qquad p_R={6\over\gamma}.             \tag{9.4}
+\]
+For the R-063-inspired target $\gamma=3/10$,
+\[
+ (a,b,c)=\left({17\over40},{21\over40},{1\over20}\right),
+ \qquad p_R=20,                                           \tag{9.5}
+\]
+with Young losses $\eta^{-17/2}\zeta^{-21/2}$.  At
+$\gamma=0$ the route is exactly critical.  Thus any successful absolute
+near-block theorem must produce a genuine positive gain, or instead prove a
+direct signed production Schur inequality.
+
+The safest continuation is now precise.
+\begin{enumerate}
+\item Split probability root $j$ from spatial output shell $m$ only after
+the exact identity (4.4).
+\item In the far region $m\geq j+C$, prove a production current-tail estimate
+from the heat formula (6.7)--(6.8), and combine it with (6.3).  No such tail
+is claimed here.
+\item In the near region $|m-j|\leq C$, retain
+$\mathfrak F_j+\mathfrak I_j$ with both positive squares, both traces, the
+value-innovation and heat compensator, the complete R-063 forest, and the
+paid subtraction.  Prove either (9.1) or a direct signed Schur bound.
+\item Bound the conditional low current $\mathfrak L_\ell$ separately and
+then add the complete low endpoint (4.6).  Neither may be renamed as the
+other.
+\end{enumerate}
+
+\section{Evidence map and route decisions}
+
+The exact dependency chain is
+\[
+ \begin{aligned}
+ \hbox{R-063 forest}&\to\hbox{R-066 current/trace}
+ \to\hbox{R-070 terminal current}\\
+ &\to\hbox{R-073 first variations}
+ \to\hbox{R-078 safe packet}\\
+ &\to\hbox{R-079 full decomposition}.
+ \end{aligned}                                             \tag{10.1}
+\]
+The decisions recorded at this checkpoint are:
+\begin{itemize}
+\item \textbf{Advanced:} full safe-packet reconstruction by the complete
+Hilbert current, with all companions retained.
+\item \textbf{Advanced:} spatially weighted Cameron--Martin square-function
+one-use and predictable base-current heat projection.
+\item \textbf{Failed:} square-function Cauchy at critical regularity, by the
+exact deficit $-4/15$.
+\item \textbf{Failed:} replacement of expected energy and sextic budgets by
+a predictable BMO/Carleson norm, by the rare-branch fixture.
+\item \textbf{Failed:} generic spatial gain from an unweighted bracket, by
+the opposite-carrier fixture.
+\item \textbf{Failed:} universal adapted Wick/carr\'e-du-champ positivity,
+even with the exact positive square and trace.
+\item \textbf{Parked with a quantitative resume condition:} the positive
+gain route (9.1), which becomes subcritical for every $\gamma>0$.
+\end{itemize}
+
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{``The cross term $\ip{f_j}{i_j}$ was lost.''}
+\textbf{DISMISSED.}  It is contained in
+$\ip{d_j\cJ_j}{i_j}$ because $d_j\cJ_j=d_j\cJ_0+f_j$;
+equation (3.7) verifies the polarization literally.
+
+\item \textbf{``The low term is already the R-066 finite-low endpoint.''}
+\textbf{UPHELD as false.}  The complete low endpoint is (4.6), whereas
+$\mathfrak L_\ell$ contains $P_\ell\cJ_*$.  Both remain.
+
+\item \textbf{``R-077 fresh-packet cancellation kills $\mathfrak F_j$.''}
+\textbf{UPHELD as unproved.}  The middle current changes with $j$, so
+$f_j$ is not the difference sequence of one fixed terminal random variable.
+
+\item \textbf{``The innovation is only a future coefficient.''}
+\textbf{UPHELD as false.}  The derivative-feedback term on the second line
+of (5.2) is exact and generally nonzero.
+
+\item \textbf{``The positive square makes the trace harmless.''}
+\textbf{UPHELD as false.}  Equations (8.8)--(8.9) give a bounded smooth
+positive-frame counterexample.
+
+\item \textbf{``The weighted control square function proves the packet
+bound.''} \textbf{UPHELD as false.}  Cauchy yields the exact negative slack
+$-4/15$, and (7.8) rules out generic spatial repair.
+
+\item \textbf{``Expected Bou\'e--Dupuis budgets imply the required
+Carleson norm.''} \textbf{UPHELD as false.}  The two expected budgets in
+(7.5) stay one while the conditional energy in (7.6) grows as $N^6$.
+
+\item \textbf{``R-063 already supplies $\gamma=3/10$ in (9.1).''}
+\textbf{UPHELD as false.}  R-063 reconstructs deterministic translated
+forests; later adapted controls require a new theorem.
+
+\item \textbf{``This closes controlled-shell one-use, Nelson, or Sector A.''}
+\textbf{UPHELD as an overclaim.}  The production near/far lower bound and
+the conditional low-current estimate remain open; the tier stays T4.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable checks a coherent finite-tree current and coefficient
+frame, the low/injected/future trace split, the safe causal telescope, the
+future derivative commutator, all exact rational ledgers, the Hermite forest,
+the bounded Gaussian fixture, the weighted control square function, the
+rare-branch obstruction, and the base-current heat identity.  The independent
+executable uses a two-component matrix frame, four probability roots, a
+different covariance split, four-node Gaussian quadrature, high-order
+Gauss--Hermite quadrature, and separately derived fractions.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_full_safe_packet_frame_current_doob_verify.py
+\end{verbatim}
+The child contracts are primary $51/51$ and non-importing independent
+$42/42$.  The integrated verifier additionally pins the direct R-063,
+R-066, R-070, R-073, R-077, and R-078 authorities; checks source, note, PDF,
+manifest, run, negative-result, roadmap, gate, and claim surfaces; and fails
+closed if any lower-bound or Sector-A flag is promoted.
+The two finite-tree paid functionals are deliberately generic nonzero
+structural fixtures: they test the sign and telescope of $\mathcal W-P$.
+The production identification $P=N_{3,{\rm nr}}+\widehat T_{\le}$ is the
+analytic substitution (4.1)--(4.4), pinned directly to R-078; the synthetic
+fixtures do not claim to reconstruct those production tensors numerically.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-
+           DECOMPOSITION
+Precise statement:       The complete canonical R-078 safe packet has the
+                         exact expectation identity (4.4): low conditional
+                         current plus injected-current and future-feedback
+                         innovation blocks, their positive squares and Wick
+                         traces, minus the paid endpoint difference.  The
+                         control coordinate has the weighted one-use square
+                         function (6.3), and predictable base currents obey
+                         the heat projection (6.7).  Generic weighted-Doob
+                         shortcuts fail; the production lower bound is open.
+Scope:                   Finite cutoff; fixed positive floor; deterministic
+                         QII and covariance increments; common even
+                         regulator; strict-past one-shot shell controls;
+                         exact products; complete R-063/R-066 companions.
+Dependencies:            A1; R-063; R-066; R-070; R-073; R-077; R-078.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_full_safe_packet_frame_current_doob_
+                         verify.py
+Expected output:          Primary 51/51; independent 42/42; manifest-pinned
+                         integrated and aggregate PASS; exit zero.
+Falsification gate:      Failure of (3.5), (4.4), (5.2), (6.3), or (6.7);
+                         omission of square, trace, forest, derivative
+                         feedback, paid subtraction, or either low object;
+                         exponent-ledger disagreement; or evidence drift.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No production weighted packet lower bound, complete
+                         packet lower bound, finite-energy extension,
+                         controlled-shell energy one-use, q=10/9 Nelson,
+                         measure theorem, removal limit, or Sector-A closure
+                         is proved.
+Next required action:    Prove a production near/far current--trace estimate:
+                         far-root heat-tail gain plus weighted CM square
+                         function, and a near-root signed Schur or gamma>0
+                         bound with the full forest and both low terms.
+\end{verbatim}
+\endgroup

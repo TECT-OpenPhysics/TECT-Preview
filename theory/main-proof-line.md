@@ -60,16 +60,21 @@ reassembles the exact transport through a bounded Hessian difference with
 subtraction followed by one causal projection, and identifies the exact
 future-control innovation-bracket mechanism for each factorised bilinear
 component. Its unweighted coefficient square function is one-use and the
-declared high-`U` principal closes with moment `60/19`, but R-078 neither
-decomposes the entire nonlinear packet nor supplies the spatial weight. The
-exact current child is
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`: first derive the exact
-full packet-to-bracket/commutator identity and retain every R-063
-lower chaos, both restored first variations, terminal-square polarization,
-coefficient curvature, Wick/trace channel, and finite-low boundary before
-R-075 graph recovery and the umbrella one-use/Nelson bound. Sector A remains
-open. This family is not a new premise of A5 and has no current PUBLISHED
-measure theorem.
+declared high-`U` principal closes with moment `60/19`. R-079,
+`A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`, now closes
+the exact full-current algebra: one conditional low-current term, present-
+control increments, and future-control innovations reconstruct the complete
+safe packet, with the present/future cross term and the complete low endpoint
+retained. It also proves a spatially weighted Cameron--Martin square function
+that spends control energy once and an exact backward-heat projection for the
+base or predictably translated current. The terminal feedback commutator still
+contains coefficient and derivative-feedback channels. Generic weighted
+shortcuts fail, so the exact current child remains
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now narrowed to the
+production near/far commutator estimate and complete weighted packet lower
+bound before R-075 graph recovery and the umbrella one-use/Nelson bound.
+Sector A remains open. This family is not a new premise of A5 and has no
+current PUBLISHED measure theorem.
 
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)
 

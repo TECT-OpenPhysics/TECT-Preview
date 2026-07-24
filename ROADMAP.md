@@ -222,13 +222,17 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   one causal projection. For each factorised bilinear component, exact Doob
   algebra identifies a future-control innovation bracket; the unweighted
   coefficient coordinate has one square-function bound and the declared
-  high-`U` principal closes with moment `60/19`. The exact decomposition of the
-  entire nonlinear safe packet into bracket/commutator terms is not yet proved.
-  The current regular-control subgate is
-  `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, with every R-063
-  lower chaos, both restored first variations, terminal-square polarization,
-  coefficient-curvature/Wick channel, R-066 trace transport, and finite-low
-  boundary retained in one identity.
+  high-`U` principal closes with moment `60/19`. R-079,
+  `A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`, closes the
+  exact full-current and canonical safe-packet reconstruction with the
+  conditional low-current block, present-control increments, future-feedback
+  innovations, cross term, squares, traces, forest, paid difference, and
+  complete low endpoint retained. It proves a spatially weighted Cameron--
+  Martin control square function and the predictable base-current heat
+  projection. The current regular-control subgate remains
+  `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now narrowed to the
+  production near/far current-trace estimate and separate bounds for the two
+  low objects.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -314,7 +318,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-24)
+## Current priority view (refreshed 2026-07-25)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -387,20 +391,29 @@ preserved in git/changelog rather than treated as current gates.
    The exact bilinear Doob lemma identifies the future-control innovation-
    bracket mechanism only for components admitting its factorisation. Its
    unweighted coefficient coordinate has one square-function bound, and the
-   declared high-`U` principal closes with moment `60/19`. The current child is
-   `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`: first derive the
-   exact full packet-to-bracket/commutator decomposition and then prove its
-   spatially weighted lower bound, retaining terminal-square polarization,
-   curvature, the complete R-063 forest, R-066 trace transport, both restored
-   first variations, and every term in the low-end safe endpoint. Only then apply R-075 graph
-   recovery, assemble controlled-shell one-use through R-066, and return to
-   `q=10/9` Nelson synthesis.
+   declared high-`U` principal closes with moment `60/19`. R-079 closes the
+   exact expectation-level full-current and canonical safe-packet Doob
+   decomposition, proves one weighted Cameron--Martin control square-function
+   use, and proves the predictable base-current heat projection. The current
+   child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
+   narrowed to a production near/far current-trace estimate. In the far region,
+   prove a production heat-tail gain and combine it with the weighted control
+   square function. In the near region, prove either a signed Schur bound or a
+   genuine positive-gain estimate while retaining every present/future block,
+   square, trace, innovation, compensator, forest term, and paid subtraction.
+   Bound the conditional low current and complete low safe endpoint separately.
+   Only then apply R-075 graph recovery, assemble controlled-shell one-use
+   through R-066, and return to `q=10/9` Nelson synthesis.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume
    automatic centering or unproved Malliavin regularity, call the principal
    tensor gauge-complete, freeze an arbitrary adapted coefficient as finite
    chaos, or suppress the R-074 resonant branch.
+   Do not spend the weighted control square function by a global Cauchy
+   estimate, infer predictable BMO/Carleson control from expected budgets,
+   manufacture spatial gain from an unweighted bracket, or assert generic
+   adapted Wick carre-du-champ positivity.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

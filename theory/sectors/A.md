@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS | three generic weighted-Doob closures fail | After the exact R-079 full-current decomposition, close the |
+| NG-2026-07-25-A13-ADAPTED-WICK-CARRE-DU-CHAMP | exact square and trace have no universal adapted sign | Infer that the future-feedback current bracket becomes |
 | AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION | generic Doob lemma was over-attributed to the full safe pack | Promote the exact generic bilinear identity |
 | AUDIT-2026-07-25-A13-R077-PACKET-DEFINITION | descriptive companions were not a canonical algebraic packet | Treat the R-077 phrase “the coefficient-dominant form with |
 | NG-2026-07-25-A13-AHIGH-ABSOLUTE-AND-AUTOMATIC-BRACKET | two post-Hessian shortcuts fail | After replacing the cubic transport coordinate by its exact |

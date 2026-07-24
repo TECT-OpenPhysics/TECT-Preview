@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-079](#r-079) | Full safe-packet frame-current Doob decomposition and weighted-route boundary | Scoped T4 exact/analytic/executed reduction: the complete renormalised frame-current endpoint has an exact Hilbert-current Doob decomposition into one conditional low-current term, present-control increments, and future-control innovations, with the future cross term retained. Subtracting the already paid `N3_nr+T_<=` block gives the canonical safe packet without deleting the complete low endpoint. A spatially weighted Cameron--Martin square function spends control energy once, and a backward-heat formula exactly projects the base current. The terminal future-feedback current still contains coefficient and derivative-feedback commutators. Generic Cauchy/weighted-square-function, expected-budget-to-BMO, spatial-gain, and adapted Wick carre-du-champ shortcuts fail; a positive `gamma`-gain estimate would close by a finite moment, but the production near/far theorem, one-use bound, Nelson synthesis, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-078](#r-078) | Hessian-difference safe packet and Doob-bracket reduction | Scoped T4 exact/analytic/executed reduction: the R-076 third-order transport has an exact bounded Hessian-difference representation with `A^2 DA` payload. At `s=3/5` the input-maximum payment is `X^(2/5)Y^(11/30)` with slack `7/30` and moment `30/7`. Subtraction from the complete endpoint followed by one causal projection defines the canonical safe packet; exact Doob algebra identifies the future-control innovation-bracket mechanism for factorised bilinear components, whose unweighted coefficient coordinate has one square-function bound. The declared high-`U` principal closes with moment `60/19`. Absolute `A`-high summation and automatic bracket-plus-square positivity fail; exact full-packet bracket reconstruction, its weighted bound, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-077](#r-077) | Causal Doob packets and payload-comparable shifted-resonance closure | Scoped T4 exact/analytic/executed reduction: complete fresh-Gaussian endpoint packets are Doob differences and therefore cancel exactly in signed expectation, with the full Wick/lower-chaos forest and endpoint companions retained. A direct smooth-Littlewood--Paley cutoff form closes every payload-comparable orientation `m<=r+L` by the R-076 `X^(2/5)Y^(8/15)` estimate and fifteenth moment, including ties and payload high--high-to-low outputs. The exact complement is one coefficient-dominant high--high-to-low signed packet; the raw three-class monomial taxonomy is retired and Sector A remains open; assertion count is pinned by the manifest |
 | [R-076](#r-076) | Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary | Scoped T4 analytic/exact/executed reduction: the complete transported endpoint has one nonduplicating second-jet/third-transport/terminal-square/Wick ledger; an input-maximum dyadic proof gives cubic powers `X^(2/5)Y^(8/15)` and fifteenth-moment slack, closing the control-independent cubic one-form and both nonresonant paraproducts. Exact affine-Bregman and equal-frequency multiplier fixtures retire convexity and separated shifted-current shortcuts. The analytic split leaves the paired adapted shifted high--high resonance, while all three proposed largest-root causal branch estimates remain open; assertion count is pinned by the manifest |
@@ -97,6 +98,86 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-079"></a>
+### R-079 -- Full safe-packet frame-current Doob decomposition and weighted-route boundary
+
+**Result ID.**
+`A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`.
+
+**Statement.** In the complete Hilbert current space, set
+
+`J(H)=Q_II^(1/2)M(U+H)^T(DU+DH)`
+
+and
+
+`W_J(H)=1/2||J(H)||^2-1/2 sum_i integral B(U+H):Gamma_(J,i)`.
+
+Then the renormalised frame-current endpoint is exactly
+`Delta V_J^ren(U;H)=W_J(H)-W_J(0)`. Let `P_j=E[.|F_j]`,
+`d_j=P_j-P_(j-1)`, `ell=j0-1`,
+
+`f_j=d_j(J_j-J_0)`, and `i_j=d_j(J_*-J_j)`.
+
+With the conditional low-current term `L_ell`, present-control term `F_j`,
+and future-control term `I_j` defined in the proof note, the full endpoint
+obeys the exact identity
+
+`E[W_J(A_*)-W_J(A_0)]=L_ell+sum_j(F_j+I_j)`.
+
+The polarization `E< f_j,i_j >` is retained inside
+`E<d_jJ_j,i_j>`; it is not discarded by separate centering. If
+`R_le=N3_nr+T_hat_le` denotes the already paid packet, then
+
+`E B_safe^>=L_ell+sum_j(F_j+I_j)-E[R_le(A_*)-R_le(A_0)]`.
+
+Here `R_le` denotes the complete paid functional, while complete
+endpoint reconstruction separately retains `B_alg(A_0)`. In particular,
+`L_ell` contains `P_ell J_*` and is not merely the R-066 finite-low term.
+
+For a predictable shell multiplier `a_k=K_kh_k`, supported on shell `k`
+with `||K_k||<=C2^(-2k)`, strict-past orthogonality gives the one-use weighted
+Cameron--Martin square function
+
+`sum_k sum_(j<k) 2^(4k)E||d_ja_k||^2 <= C E sum_k||h_k||^2`.
+
+For the base or predictably translated current, even covariance and
+same-point future value/derivative independence also give the exact heat
+projection
+
+`P_j[M(U)^T D_iU]=(P_(Sigma_(j+1:J))M)(U_j)^T D_iU_j`.
+
+The terminal feedback current is different. Its exact future commutator is
+
+`J_*-J_j=Q_II^(1/2)[(M_*-M_j)^T(DU+DA^j)+M_*^T D(A_*-A^j)]`,
+
+so both coefficient and derivative-feedback channels remain in the
+production near/far problem.
+
+**Adversarial boundary.** Cauchy followed only by the weighted square
+function produces `X^(9/10)Y^(11/30)` at `s=3/5`, with Young slack `-4/15`.
+Expected energy and sextic budgets do not imply a conditional BMO/Carleson
+bound; a rare-event fixture keeps both expected budgets equal to one while
+its conditional future energy diverges. A deterministic opposite-frequency
+fixture rules out a generic spatial gain, and an adapted Wick fixture has
+negative expected carre-du-champ remainder even for a bounded smooth positive
+frame. These are method no-gos, not counterexamples to the complete
+production safe packet. Conditionally, a production estimate with a genuine
+Sobolev gain `gamma=3/10` would have powers `X^(17/40)Y^(21/40)`, slack
+`1/20`, and moment `20`; that gain is a target, not a theorem.
+
+**Evidence.** Primary `51/51` and non-importing independent `42/42`
+executable audits pass. The fail-closed integrated and aggregate counts,
+R-063/R-066/R-070/R-073/R-077/R-078 authority hashes, source hashes, and the
+visually checked ten-page PDF are pinned by
+`classii_full_safe_packet_frame_current_doob_manifest.json`.
+
+**Boundary.** The exact algebraic full-current and safe-packet decomposition
+is closed, as are the abstract weighted Cameron--Martin one-use square
+function and the base-current heat projection. The production near/far
+commutator estimate, the complete weighted packet lower bound, finite-energy
+extension, controlled-shell one-use, `q=10/9` Nelson synthesis, and Sector A
+remain open. Tier stays T4.
 
 <a id="r-078"></a>
 ### R-078 -- Hessian-difference safe packet and Doob-bracket reduction
