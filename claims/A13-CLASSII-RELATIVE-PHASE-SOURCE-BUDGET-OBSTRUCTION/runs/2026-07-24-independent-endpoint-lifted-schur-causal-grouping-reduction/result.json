@@ -1,0 +1,194 @@
+{
+  "assertion_count": 20,
+  "assertions": [
+    {
+      "actual": false,
+      "expected": false,
+      "name": "non_importing_source",
+      "pass": true
+    },
+    {
+      "actual": 72426031,
+      "expected": "not primary seed",
+      "name": "distinct_random_seed",
+      "pass": true
+    },
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "minimum > 0",
+      "name": "q_matrix_positive",
+      "pass": true
+    },
+    {
+      "actual": 1.7216394545551658e-07,
+      "expected": 2e-07,
+      "name": "finite_difference_frame_jet",
+      "pass": true
+    },
+    {
+      "actual": 0.2604302858962124,
+      "expected": "<0.30 when the centered-difference step is halved",
+      "name": "finite_difference_second_order_convergence",
+      "pass": true
+    },
+    {
+      "actual": 2.4453706399235658e-12,
+      "expected": 2e-08,
+      "name": "delta_identity",
+      "pass": true
+    },
+    {
+      "actual": 5.226466424901842e-11,
+      "expected": 2e-08,
+      "name": "secant_identity",
+      "pass": true
+    },
+    {
+      "actual": 173,
+      "expected": ">0",
+      "name": "good_cases_present",
+      "pass": true
+    },
+    {
+      "actual": 107,
+      "expected": ">0",
+      "name": "bad_cases_present",
+      "pass": true
+    },
+    {
+      "actual": 3.8858508530408815e-05,
+      "expected": ">=-2e-07",
+      "name": "good_bound",
+      "pass": true
+    },
+    {
+      "actual": 0.014342148485955188,
+      "expected": ">=-2e-07",
+      "name": "bad_bound",
+      "pass": true
+    },
+    {
+      "actual": 5.8755314996486125e-05,
+      "expected": ">=-2e-07",
+      "name": "global_bound",
+      "pass": true
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "rotating_raw_zero",
+      "pass": true
+    },
+    {
+      "actual": 0.029132812499992715,
+      "expected": 0.02913281249999271,
+      "name": "rotating_affine_formula",
+      "pass": true
+    },
+    {
+      "actual": {
+        "affine_tangent": 0.029132812499992715,
+        "curvature": 0.0,
+        "endpoint_tangent": 0.0,
+        "expected_affine": 0.02913281249999271,
+        "jacobi": 0.0,
+        "raw": 0.0
+      },
+      "expected": "endpoint pieces zero",
+      "name": "rotating_endpoint_repair",
+      "pass": true
+    },
+    {
+      "actual": 6.938893903907228e-18,
+      "expected": 2e-08,
+      "name": "coherent_split",
+      "pass": true
+    },
+    {
+      "actual": 1.734723475976807e-18,
+      "expected": 0.0,
+      "name": "control_telescope",
+      "pass": true
+    },
+    {
+      "actual": -1.734723475976807e-18,
+      "expected": 0.0,
+      "name": "cross_noise_telescope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "absolute": 7.926338787052624e-05,
+        "order": 11,
+        "signed": 7.312745486280696e-22
+      },
+      "expected": "signed zero; absolute nonzero",
+      "name": "independent_fresh_noise_center",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c_hash": 1.0196115487028556,
+        "c_star": 1.5397534378598672
+      },
+      "expected": "0<C#<C*<2",
+      "name": "reported_constant_order",
+      "pass": true
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "computed": {
+    "coherent_causal": {
+      "control_telescope": 1.734723475976807e-18,
+      "cross_telescope": -1.734723475976807e-18,
+      "split_max": 6.938893903907228e-18
+    },
+    "fresh_noise_cross": {
+      "absolute": 7.926338787052624e-05,
+      "order": 11,
+      "signed": 7.312745486280696e-22
+    },
+    "random": {
+      "bad_count": 107,
+      "c_hash": 1.0196115487028556,
+      "c_star": 1.5397534378598672,
+      "good_count": 173,
+      "lambda_q": 0.005584738499072227,
+      "max_delta_residual": 2.4453706399235658e-12,
+      "max_finite_difference_coarse_residual": 6.610749777548067e-07,
+      "max_finite_difference_residual": 1.7216394545551658e-07,
+      "max_secant_residual": 5.226466424901842e-11,
+      "min_bad_margin": 0.014342148485955188,
+      "min_global_margin": 5.8755314996486125e-05,
+      "min_good_margin": 3.8858508530408815e-05,
+      "theta_hash": 0.25637440844670695,
+      "theta_star": 0.5075774975293578
+    },
+    "rotating_kernel": {
+      "affine_tangent": 0.029132812499992715,
+      "curvature": 0.0,
+      "endpoint_tangent": 0.0,
+      "expected_affine": 0.02913281249999271,
+      "jacobi": 0.0,
+      "raw": 0.0
+    }
+  },
+  "date": "2026-07-24",
+  "generated_at_utc": "2026-07-24T05:22:51.719274+00:00",
+  "honesty_boundary": "Independent finite-dimensional and causal audits only. The adapted Gaussian-rooted transported-current lower bound remains unproved.",
+  "imports_primary": false,
+  "inputs": {
+    "finite_difference_coarse_step": 2e-05,
+    "finite_difference_step": 1e-05,
+    "hermite_order": 11,
+    "random_cases": 280,
+    "random_seed": 72426031
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION",
+  "schema": "tect/a13-endpoint-lifted-schur-causal-independent/1.0",
+  "script_version": "1.0.0"
+}

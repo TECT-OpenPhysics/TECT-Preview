@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Prove A13 endpoint-lifted Schur and coherent causal-grouping reduction] - 2026-07-24
+
+Registered R-069 at T4 with no promotion. The old-endpoint affine full-score tangent is falsified by rotating phase kernels. The hybrid endpoint lift proves optimized floor-uniform good/bad and global Schur bounds, while coherent target-space frozen-value grouping telescopes pure-control current creation pathwise and the fresh derivative-noise correction in expectation. The centered scalar Gaussian defect transfers once to the R-068 global form; the terminal current boundary remains. A two-shell scaling fixture also retires separate pure-control-defect payment. The adapted Gaussian-rooted transported-current/GG lower bound, finite-energy extension, controlled-shell one-use, and Nelson theorem remain open.
+
 ## [Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24
 
 Added a canonical append-only proof-exploration ledger for every substantive route assessment: precise question, finite checks, finding, scoped verdict, decision reason, honest boundary, evidence, and next or revisit condition. The CLI has add, search, verify, and self-test operations but deliberately no edit or delete command; verification enforces canonical sequential JSONL, structured reference resolution, backward-only relations, and preservation of the Git HEAD prefix after CRLF/LF normalization. The shared readiness and release spine now checks ledger integrity before checking its complete proof-map projection.

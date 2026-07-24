@@ -1,0 +1,237 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "minimum > 0",
+      "name": "q_matrix_positive",
+      "pass": true
+    },
+    {
+      "actual": 0.005584738499072227,
+      "expected": 0.005584738499072228,
+      "name": "lambda_formula",
+      "pass": true
+    },
+    {
+      "actual": 2.828307400970918,
+      "expected": 2.8284271247461903,
+      "name": "frame_bound",
+      "pass": true
+    },
+    {
+      "actual": 3.8980957262833713,
+      "expected": 8.246211251235321,
+      "name": "first_frame_jet_bound",
+      "pass": true
+    },
+    {
+      "actual": 5.271778969431549,
+      "expected": 32.0,
+      "name": "second_frame_jet_bound",
+      "pass": true
+    },
+    {
+      "actual": 6.75903291308465e-12,
+      "expected": 4e-10,
+      "name": "endpoint_delta_identity",
+      "pass": true
+    },
+    {
+      "actual": 2.9103830456733704e-11,
+      "expected": 4e-10,
+      "name": "endpoint_secant_identity",
+      "pass": true
+    },
+    {
+      "actual": 234,
+      "expected": ">0",
+      "name": "good_region_populated",
+      "pass": true
+    },
+    {
+      "actual": 126,
+      "expected": ">0",
+      "name": "bad_region_populated",
+      "pass": true
+    },
+    {
+      "actual": 8.329069266086301e-06,
+      "expected": ">=-2e-09",
+      "name": "optimized_good_bound",
+      "pass": true
+    },
+    {
+      "actual": 0.000184988065043966,
+      "expected": ">=-2e-09",
+      "name": "optimized_bad_bound",
+      "pass": true
+    },
+    {
+      "actual": 1.2578602643418723e-05,
+      "expected": ">=-2e-09",
+      "name": "global_transport_bound",
+      "pass": true
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "rotating_raw_zero",
+      "pass": true
+    },
+    {
+      "actual": 0.029662499999992584,
+      "expected": 0.02966249999999258,
+      "name": "rotating_affine_tangent",
+      "pass": true
+    },
+    {
+      "actual": -0.029662499999992584,
+      "expected": "< -1e-3",
+      "name": "rotating_affine_remainder_negative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "endpoint_curvature": 0.0,
+        "endpoint_jacobi": 0.0,
+        "endpoint_tangent": 0.0
+      },
+      "expected": "all zero",
+      "name": "rotating_endpoint_lift_cancels",
+      "pass": true
+    },
+    {
+      "actual": 1.6653345369377348e-16,
+      "expected": 4e-10,
+      "name": "causal_polarization_identity",
+      "pass": true
+    },
+    {
+      "actual": 8.630249292984615e-17,
+      "expected": 4e-10,
+      "name": "mixed_current_endpoint_identity",
+      "pass": true
+    },
+    {
+      "actual": -5.551115123125783e-17,
+      "expected": 0.0,
+      "name": "control_current_telescopes",
+      "pass": true
+    },
+    {
+      "actual": 5.551115123125783e-17,
+      "expected": 0.0,
+      "name": "mixed_current_noise_telescope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "absolute_expectation": 0.0005494647687944313,
+        "order": 9,
+        "signed_expectation": 2.301424874862795e-21
+      },
+      "expected": "signed zero; absolute nonzero",
+      "name": "fresh_derivative_cross_centers",
+      "pass": true
+    },
+    {
+      "actual": {
+        "eta_test_input": 1e-05,
+        "h2_coefficient": 8.5,
+        "h2_growth_power": 6.0,
+        "interaction_coefficient": 0.25,
+        "interaction_growth_power": 6.0,
+        "scaled_margin": 0.2498478125,
+        "sextic_growth_power": 6.0,
+        "sixth_coefficient": 6.718749999999997,
+        "zeta_test_input": 1e-05
+      },
+      "expected": "positive margin with all three cutoff powers equal to 6",
+      "name": "separate_pure_control_payment_fails",
+      "pass": true
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "computed": {
+    "coherent_causal": {
+      "control_telescoping_residual": -5.551115123125783e-17,
+      "cross_telescoping_residual": 5.551115123125783e-17,
+      "max_cross_residual": 8.630249292984615e-17,
+      "max_split_residual": 1.6653345369377348e-16,
+      "shell_count": 7,
+      "sum_control": 0.32719286016327065,
+      "sum_cross": 0.26724314687453565,
+      "sum_gaussian": 0.014190113959943247,
+      "sum_raw": 0.6086261209977493
+    },
+    "fresh_noise_cross": {
+      "absolute_expectation": 0.0005494647687944313,
+      "order": 9,
+      "signed_expectation": 2.301424874862795e-21
+    },
+    "local": {
+      "bad_cases": 126,
+      "c_global": 1.5397534378598672,
+      "c_good_bad": 1.0196115487028556,
+      "good_cases": 234,
+      "lambda_q": 0.005584738499072227,
+      "max_delta_residual": 6.75903291308465e-12,
+      "max_derivative_ratio": 3.8980957262833713,
+      "max_frame_ratio": 2.828307400970918,
+      "max_secant_residual": 2.9103830456733704e-11,
+      "max_second_ratio": 5.271778969431549,
+      "min_bad_margin": 0.000184988065043966,
+      "min_global_margin": 1.2578602643418723e-05,
+      "min_good_margin": 8.329069266086301e-06,
+      "random_cases": 360,
+      "theta_global": 0.5075774975293578,
+      "theta_good_bad": 0.25637440844670695
+    },
+    "pure_control_separate_payment_nogo": {
+      "eta_test_input": 1e-05,
+      "h2_coefficient": 8.5,
+      "h2_growth_power": 6.0,
+      "interaction_coefficient": 0.25,
+      "interaction_growth_power": 6.0,
+      "scaled_margin": 0.2498478125,
+      "sextic_growth_power": 6.0,
+      "sixth_coefficient": 6.718749999999997,
+      "zeta_test_input": 1e-05
+    },
+    "rotating_kernel": {
+      "affine_remainder": -0.029662499999992584,
+      "affine_tangent": 0.029662499999992584,
+      "endpoint_current_change_norm": 0.0,
+      "endpoint_curvature": 0.0,
+      "endpoint_jacobi": 0.0,
+      "endpoint_tangent": 0.0,
+      "epsilon": 0.1,
+      "expected_affine_tangent": 0.02966249999999258,
+      "raw_secant": 0.0,
+      "vertical_amplitude": 7.0
+    }
+  },
+  "date": "2026-07-24",
+  "generated_at_utc": "2026-07-24T05:22:51.463215+00:00",
+  "honesty_boundary": "The endpoint-lifted local Schur bounds and coherent frozen-value causal polarization are verified. The adapted Gaussian-rooted transported-current bound, finite-energy extension, one-use, and Nelson estimate remain open.",
+  "inputs": {
+    "bound_tolerance": 2e-09,
+    "identity_tolerance": 4e-10,
+    "positive_floor": 1e-12,
+    "production_coefficients": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414
+    },
+    "random_cases": 360,
+    "random_seed": 26072413
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION",
+  "schema": "tect/a13-endpoint-lifted-schur-causal-primary/1.0",
+  "script_version": "1.0.0"
+}

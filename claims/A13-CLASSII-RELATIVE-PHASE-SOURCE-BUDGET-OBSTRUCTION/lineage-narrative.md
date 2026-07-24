@@ -60,16 +60,26 @@ endpoint theorem.
    `10/3` at `kappa=1/10`. Exact scalar and gauge fixtures retire direct
    absolute score integration and correct the full nonlinear-remainder decay
    claim. A finite first variation at every tip contact is not asserted.
-10. **Current subproof.** Prove the finite-cutoff tip-safe production good/bad
-    Schur--Jacobi inequality under
-    `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`. On the good region,
-    complete derivative displacement against the current/Jacobi square; on
-    the bad cone-tip region, retain the whole secant without an invalid
-    derivative-linear tangent. Group the coefficient-curvature term into the
-    global centered form, telescope pure-control current creation, and invoke
-    Gaussian tails only on Gaussian-rooted terms. Then extend from regular
-    controls to the declared finite-energy class, close the umbrella one-use
-    theorem, and return to the A7 Nelson and finite-volume measure gates.
+10. **Endpoint-lifted Schur and coherent causal grouping.**
+    `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION` falsifies the
+    literal old-endpoint affine full-score tangent by an exact rotating phase-
+    kernel fixture. Its hybrid endpoint lift removes the derivative
+    displacement from the curvature remainder and proves optimized floor-
+    uniform good/bad and global Schur bounds. Coherent target-space frozen-
+    value grouping then telescopes pure-control current creation pathwise and
+    the fresh derivative-noise mixed correction in expectation. Applying the
+    lift only to the Gaussian derivative leaves no accumulated control
+    derivative; the centered scalar defect is paid once by the R-068 global
+    form. A two-shell scaling fixture shows why separate pure-control payment
+    cannot meet arbitrary budgets.
+11. **Current subproof.** Prove the adapted Gaussian-rooted transported-
+    current/GG lower bound under
+    `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, retaining the terminal
+    control-current square, finite-low boundary, and mixed secant. Only its
+    genuinely centered scalar component may be reduced to the pinned global
+    quadratic form plus covariance trace. Then extend from regular controls to
+    the declared finite-energy class, close the umbrella one-use theorem, and
+    return to the A7 Nelson and finite-volume measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

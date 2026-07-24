@@ -169,6 +169,34 @@ the following structural results and proof-architecture boundaries hold.
     groups the coefficient-curvature remainder before applying the global
     centered-form lemma and restricts Gaussian tail estimates to
     Gaussian-rooted terms.
+12. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION` closes the
+    local Schur and pure-control bookkeeping parts of that successor.  The
+    literal old-endpoint affine full-score tangent is false: rotating phase-
+    kernel directions violate its necessary Schur range condition.  With
+
+    \[
+    L_A=DM_A(z)[a]^T y+M_A(z+a)^T b,
+    \qquad
+    E_A=[M_A(z+a)-M_A(z)-DM_A(z)[a]]^T y,
+    \]
+
+    the exact increment is `delta_A=L_A+E_A`, and the curvature remainder is
+    independent of the arbitrary derivative displacement `b`.  Uniform frame
+    jets give the optimized safe-envelope constant
+    `C_#=3 lambda_Q(1+sqrt(1+32sqrt(2)))^2=1.0196115487028556` and the global
+    constant `C_*=24 lambda_Q(sqrt(34)+4sqrt(2))=1.5397534378598672`.
+    Coherent target-space heat-value coupling then polarizes the current into
+    pure-control, Gaussian, and mixed pieces.  The pure-control current
+    telescopes pathwise, while the fresh derivative-noise correction in the
+    mixed current centers in expectation under strict-past predictability and
+    same-point value--derivative independence.  Applying the endpoint lift
+    only to the Gaussian derivative leaves `C_*|a_j|^2|G_j|^2`, with no
+    accumulated control derivative.  Its centered scalar component transfers
+    by conditional expectation to one terminal R-068 pairing and is paid once
+    after summation.  The terminal control-current square and finite-low
+    boundary remain intact.  The remaining analytic core is the adapted
+    Gaussian-rooted transported-current/GG lower bound, not another local
+    Schur completion.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -188,6 +216,7 @@ is a scoped T4 subproof and does not promote A13.
 | Backward heat / square-coupled Cartan | Exact martingale, retained-square charge, finite-low and trace-tail reduction | T4 child subproof closed |
 | NPC cone / martingale injection | Nelson-aligned current factorisation, CAT(0) target, strong Jacobi remainder, exact injection telescope, and shellwise/geometry-only boundaries | T4 child reduction closed |
 | Tip-safe grouped harvest / Carleson reduction | Exact nonlinear harvest, full conservative-score and Gaussian-tail estimates, CAT(0) whole secant through the tip, centered-form one-use lemma, and corrected remainder boundary | T4 child reduction closed |
+| Endpoint-lifted Schur / coherent causal grouping | Hybrid endpoint lift, optimized safe-envelope bounds, exact pure-control and mixed-current telescopes, and scalar centered-defect transfer | T4 child reduction closed |
 | Controlled-shell one-use | Nonlinear NPC--Carleson injection balance and finite-energy extension | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -217,6 +246,10 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
 - The latest Gaussian score-tail theorem is an uncontrolled-base
   infinitesimal statement.  It is not applied after an adapted control has
   changed the conditional law.
+- The endpoint-lifted theorem is finite-cutoff and floor-uniform for every
+  positive density floor.  Its causal insertion is for regular mutually
+  orthogonal one-shot strict-past controls and a target-space heat-value
+  coupling.  The future heat dummy is never spatially differentiated.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -239,8 +272,9 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. the finite-cutoff tip-safe production good/bad Schur--Jacobi inequality,
-   including causal current grouping and the global centered-form estimate,
+1. the adapted Gaussian-rooted transported-current/GG lower bound, retaining
+   the exact terminal control-current square and reducing only its genuinely
+   centered scalar component to the R-068 global quadratic-form theorem,
    under `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`;
 2. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
@@ -249,17 +283,17 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_tip_safe_grouped_harvest_carleson_reduction_verify.py
+python codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `27/27`;
-- non-importing independent `22/22`;
-- integrated `61/61`, hence aggregate `110/110`;
-- exact nonlinear-harvest, full-score, Gaussian-tail, CAT(0) secant,
-  centered-form, scalar-Schur, gauge-beat, and corrected-remainder diagnostics
-  below their asserted tolerances;
+- primary `22/22`;
+- non-importing independent `20/20`;
+- integrated `70/70`, hence aggregate `112/112`;
+- exact endpoint identity, optimized good/bad and global bounds, rotating-
+  kernel falsifier, coherent causal telescopes, fresh-noise centering, and
+  pure-control scaling no-go below their asserted tolerances;
 - exit code zero.
 
 The nine-page proof note passes the standard form check, zero-overfull gate,
@@ -268,6 +302,19 @@ and direct rendered-page visual QA.
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_endpoint_lifted_schur_causal_grouping_reduction_manifest.json`
+- `notes/classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0.tex.txt`
+- `notes/classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction.py`
+- `../../codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_independent.py`
+- `../../codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_verify.py`
+- `runs/2026-07-24-primary-endpoint-lifted-schur-causal-grouping-reduction/result.json`
+- `runs/2026-07-24-independent-endpoint-lifted-schur-causal-grouping-reduction/result.json`
+- `runs/2026-07-24-integrated-endpoint-lifted-schur-causal-grouping-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-affine-schur-and-pure-control-payment`
+
+The immediate predecessor package remains binding:
 
 - `classii_tip_safe_grouped_harvest_carleson_reduction_manifest.json`
 - `notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt`
@@ -280,7 +327,7 @@ The latest subproof package is:
 - `runs/2026-07-23-integrated-tip-safe-grouped-harvest-carleson-reduction/result.json`
 - `../../negative-results/registry.md#ng-2026-07-23-a13-absolute-score-and-full-remainder`
 
-The immediate predecessor package remains binding:
+The preceding NPC-cone package remains binding:
 
 - `classii_npc_cone_martingale_injection_reduction_manifest.json`
 - `notes/classii-npc-cone-martingale-injection-reduction-260723-v1.0.tex.txt`
@@ -446,6 +493,38 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     Its exact completed Cameron--Martin threshold requires an `AC` fluctuation
     of order `N^2`; the resulting Gaussian tail is summable even after
     three-dimensional mode multiplicity.
+29. **UPHELD AGAINST THE OLD AFFINE TANGENT: positivity of the endpoint Jacobi
+    square makes the full affine remainder uniform in every derivative
+    displacement.**  A lower bound requires
+    `[B(z+a)-B(z)]y in Ran B(z+a)`.  Rotating production phase kernels violate
+    this condition, and the exact fixture has zero raw secant but an affine
+    remainder `-beta_0 epsilon t`.
+30. **DISMISSED: the endpoint lift merely hides the same kernel defect.**
+    Evaluating the derivative-displacement column at `z+a` removes `b` from
+    `E_A` algebraically before any inequality.  Both optimized bounds are
+    therefore uniform in vertical kernel directions.
+31. **UPHELD AGAINST DIFFERENTIATING THE HEAT DUMMY: the future heat remainder
+    may be treated as the actual future spatial field.**  The coupling is only
+    in target-space values.  Spatially differentiating the dummy introduces a
+    future derivative absent from the R-066 backward-heat identity.
+32. **UPHELD AGAINST UNQUALIFIED GAUSSIAN-ROOT TRANSFER: every term containing
+    `G_j` inherits the uncontrolled `N^(-1)`/`N^(-2)` tails.**  The adapted
+    transported coefficient in the remaining GG form is control-dependent.
+    Only the explicitly centered scalar component has been transferred to the
+    R-068 terminal model norm.
+33. **UPHELD AGAINST DROPPING THE TERMINAL MIXED CURRENT: interior fresh-noise
+    centering removes the full mixed term.**  It removes only the fresh
+    derivative-noise correction in expectation.  The terminal cross remains
+    coupled with the CC and GG terms as the full terminal current square.
+34. **UPHELD AGAINST SEPARATE PURE-CONTROL PAYMENT: the defect
+    `sum_j|a_j|^2|DA_<j|^2` can be absorbed by arbitrary `H2` and `L6`
+    budgets.**  A two-shell family puts the defect and both budgets at order
+    `N^6` and leaves a positive coefficient for small prescribed budgets.  The
+    exact pathwise CC telescope is essential.
+35. **UPHELD AGAINST CLOSURE: the local endpoint lift proves controlled-shell
+    one-use.**  The adapted Gaussian-rooted transported-current/GG lower bound,
+    finite-energy extension, one-use, and Nelson steps remain open.  No tier
+    change follows.
 
 ## Falsifier
 
@@ -492,6 +571,16 @@ gauge-beat fixtures, a source/PDF hash mismatch, failed PDF QA, or failure of
 the primary `27/27`, independent `22/22`, integrated `61/61`, and aggregate
 `110/110` verifier contracts.
 
+The endpoint-lifted continuation is additionally falsified by failure of the
+exact hybrid identity `delta=L+E`, dependence of `E` on the derivative
+displacement, failure of either optimized safe-envelope constant, failure of
+the pathwise pure-control or expectation-level fresh-noise telescopes, spatial
+differentiation of the target-space heat dummy, omission of the terminal
+control-current or finite-low boundary, transfer of more than the centered
+scalar Gaussian defect to R-068, a source/PDF hash mismatch, failed PDF QA, or
+failure of the primary `22/22`, independent `20/20`, integrated `70/70`, and
+aggregate `112/112` verifier contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -516,6 +605,14 @@ prove the production good/bad Schur--Jacobi inequality, identify a finite
 first variation at every tip contact, extend to arbitrary finite-energy
 drifts, or close one-use or Nelson.  It is a T4 reduction, not a tier
 promotion.
+
+The endpoint-lifted theorem closes the finite-dimensional production Schur
+completion and pure-control causal bookkeeping, but not the adapted
+Gaussian-rooted transported-current/GG estimate.  Its frozen-value heat
+coupling is pointwise/marginal and expectation-level; it is not a pathwise
+identification with the future spatial field.  It does not extend the regular
+one-shot class, close NPC--martingale injection balance, one-use, Nelson, or
+any measure/removal theorem.  A13 remains T4.
 
 ## History
 
@@ -569,3 +666,9 @@ promotion.
   retire absolute score integration and correct the nonlinear-remainder decay.
   The production tip-safe good/bad Schur--Jacobi lemma and finite-energy
   extension remain open; tier stays T4.
+- 2026-07-24: Falsified the literal affine full-score tangent and separate
+  pure-control-defect payment, proved the hybrid endpoint-lifted good/bad and
+  global Schur bounds, and established coherent frozen-value causal grouping
+  with exact pure-control and interior mixed-current telescopes.  The centered
+  scalar Gaussian defect transfers once to R-068; the adapted transported-
+  current/GG lower bound is the remaining finite-cutoff core. Tier stays T4.

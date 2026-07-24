@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT](#ng-2026-07-24-a13-affine-schur-and-pure-control-payment) | A13 affine full-score Schur tangent and separate pure-control-defect payment | rotating phase kernels violate the required range condition, while a two-shell family puts the defect and both proposed budgets at the same N^6 scale |
 | [AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION](#audit-2026-07-24-proof-map-semantic-association) | proof-evidence-map generator pre-commit adversarial audit | free-form family tokens, leaked section boundaries, and platform-sensitive inventory rules produced false or unstable projections |
 | [NG-2026-legacy-convention](#ng-2026-legacy-convention) | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | [NG-2026-legacy-ordered-vacuum](#ng-2026-legacy-ordered-vacuum) | fixed ordered BCC vacuum as ground state | fluctuation restoration |
@@ -47,6 +48,43 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-24-a13-affine-schur-and-pure-control-payment"></a>
+### NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT -- affine Schur and separate pure-control payment fail
+
+**Failure mode:** Two candidate continuations of the R-068 production
+Schur--Jacobi gate were invalid. First, the literal full-score affine tangent
+was retained uniformly in the derivative displacement. For
+`B(z)=sum_A M_A(z) Q M_A(z)^T`, its derivative-displacement Schur quadratic is
+
+`b^T B(z+a)b/2 + b^T[B(z+a)-B(z)]y`,
+
+which is bounded below only if
+`[B(z+a)-B(z)]y in Ran B(z+a)`. The production phase-kernel directions rotate,
+so this range condition fails. Second, the resulting pure-control defect
+`sum_j |a_j|^2 |D A_<j|^2` was proposed for separate absorption by arbitrary
+small Cameron--Martin and sextic budgets.
+
+**Evidence:** In the exact six-real production fixture
+`z=(1,0)`, `a=(0,epsilon)`, `y=(0,i)`, and
+`b=t i(z+a)` in active-doublet notation, the new current equals the old current
+for every positive floor. The raw secant is therefore zero, but the old affine
+tangent is `beta_0 epsilon t`; at `epsilon=0.1`, `t=7`, it is `0.0296625`, so
+the affine remainder is `-0.0296625` and becomes unbounded along the kernel.
+Independently, on a normalized circle the controls
+`a_N=tN cos(Nx)` and `a_2N=tN cos(2Nx)` make the separate defect, leading H2
+cost, and terminal L6 sixth power all scale as `N^6`. Their respective leading
+coefficients are `t^4/4`, `17t^2/2`, and `215t^6/32`, leaving a positive margin
+for sufficiently small prescribed budgets. Primary 22/22 and non-importing
+independent 20/20 audits reproduce the kernel fixture, endpoint repair,
+causal telescopes, and independent centering diagnostics.
+
+**Consequence:** Only these two architectures are retired. Evaluating the
+derivative-displacement column at the new endpoint removes `b` from the frame-
+curvature remainder, and coherent frozen-value causal grouping telescopes the
+pure-control current exactly. The adapted Gaussian-rooted transported-current/
+GG lower bound, the full NPC--martingale injection balance, finite-energy
+extension, one-use, and Nelson remain open.
 
 <a id="audit-2026-07-24-proof-map-semantic-association"></a>
 ### AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION -- proof-map semantic association and portability defects

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-069](#r-069) | Endpoint-lifted Schur and coherent causal-grouping reduction | Scoped T4 exact/analytic/executed subproof: rotating phase kernels falsify the old affine full-score tangent; a hybrid endpoint lift proves floor- and derivative-displacement-uniform good/bad and global Schur bounds, while coherent frozen-value grouping telescopes pure-control current creation and transfers the centered scalar component of the Gaussian quadratic defect to the R-068 global centered form; the adapted transported-current/GG lower bound remains open; 112/112 aggregate assertions |
 | [R-068](#r-068) | Tip-safe grouped-harvest and Gaussian-Carleson reduction | Scoped T4 exact/analytic/executed subproof: exact nonlinear harvest, full conservative-score Carleson bound, uncontrolled-Gaussian N^-1/N^-2 tails, CAT(0) whole secant through the tip, floor-uniform physical distance, and a global centered-form one-use estimate with exponent 10/3 at kappa=1/10; absolute score integration and the claimed full N^-3/2 remainder are retired; 110/110 aggregate assertions |
 | [R-067](#r-067) | NPC-cone and martingale-injection reduction | Scoped T4 exact/analytic/executed subproof: the production current diagonalises at alpha=5/9 and q=10/9 into an aggregate CAT(0) cone; strong Jacobi and raw-injection telescopes isolate the nonlinear NPC--Carleson balance, while positive-floor and flat-model no-gos retire shellwise and geometry-only proofs; 118/118 aggregate assertions |
 | [R-066](#r-066) | Backward-heat martingale and square-coupled Cartan reduction | Scoped T4 exact/analytic/executed subproof: the retained-square Gibbs charge and terminal-backward heat martingale give an exact controlled telescope; finite-low and covariance-trace channels fall below arbitrary budgets for regular one-shot controls; the averaged raw-current/Cartan--Jacobi bound and finite-energy extension remain open |
@@ -87,6 +88,58 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-069"></a>
+### R-069 -- Endpoint-lifted Schur and coherent causal-grouping reduction
+
+**Result ID.**
+`A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION`.
+
+**Statement.** For the production current frames
+`M_A(z)=[2S_A z,2(S_A-q_A(z)I)z]`, the literal affine full-score tangent is not
+uniform in the derivative displacement: rotating phase-kernel directions
+violate its necessary Schur range condition. The hybrid endpoint lift
+
+`L_A=DM_A(z)[a]^T y+M_A(z+a)^T b`
+
+removes `b` from the exact curvature remainder. Uniform frame-jet bounds then
+give the optimized safe-envelope good/bad constant
+`C_#=3 lambda_Q(1+sqrt(1+32sqrt(2)))^2=1.0196115487028556` and the global
+constant
+`C_*=24 lambda_Q(sqrt(34)+4sqrt(2))=1.5397534378598672`.
+Under the pointwise/marginal frozen-value heat coupling, exact polarization
+telescopes the pure-control current pathwise and the interior mixed-current
+correction in expectation. Applying the local bound only to the Gaussian
+derivative leaves `C_*|a_j|^2|G_j|^2` and no accumulated-control derivative.
+Strict-past conditional expectation transfers its centered scalar part to one
+terminal R-068 negative-Sobolev pairing; the covariance trace is summable.
+
+**Proven in.** A13 /
+`classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0`, with
+primary 22/22, non-importing independent 20/20, integrated 70/70, aggregate
+112/112, and a nine-page PDF passing form, zero-overfull, and direct all-page
+visual QA.
+
+**Reuse scope.** Finite-cutoff production current frames at any positive
+density floor; hybrid endpoint-lifted Schur estimates uniform in derivative
+displacement; whole-shell strict-past one-shot controls; target-space heat
+value couplings which are never spatially differentiated; and sum-first
+centered quadratic-form payment on the fixed torus.
+
+**Boundary.** The endpoint lift is not the old-endpoint Frechet derivative.
+Fresh-noise mixed-current centering is expectation-only and uses the pinned
+common real-even regulator, same-point value--derivative independence,
+whole-shell predictability, and integrability. The terminal control-current
+square and finite-low boundary must be retained. The adapted Gaussian-rooted
+transported-current/GG lower bound, full NPC--martingale injection balance,
+finite-energy extension, controlled-shell one-use, Nelson theorem, and
+interacting measure remain open. Tier T4; no promotion.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-059--R-068 after the adapted transported-current/GG bound, finite-energy
+extension, and one-use theorem are resolved.
+
+---
 
 <a id="r-068"></a>
 ### R-068 -- Tip-safe grouped-harvest and Gaussian-Carleson reduction

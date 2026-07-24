@@ -555,8 +555,11 @@ bound, the uncontrolled-Gaussian `N^(-1)`/`N^(-2)` score tails, the CAT(0)
 whole-secant inequality through the tip, and the global centered
 `H^(-1-kappa)` one-use form estimate. Its scalar and gauge fixtures retire
 absolute score integration and correct the nonlinear coefficient-curvature
-remainder. The remaining production good/bad Schur--Jacobi lemma must group
-that curvature term with the positive current/Jacobi square.
+remainder. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION`
+then closes the local production Schur estimate and pure-control bookkeeping:
+the hybrid endpoint lift removes the derivative-displacement kernel defect,
+and coherent frozen-value grouping telescopes pure-control current creation.
+The adapted Gaussian-rooted transported-current/GG lower bound remains.
 
 ### **A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND**
 
@@ -589,8 +592,11 @@ successor below is required; finite-energy extension, one-use, Nelson, and
 tier promotion remain open. The successor has now been reduced further by
 `A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION`: every
 uncontrolled-Gaussian infinitesimal tail and the global centered form are
-controlled, leaving the production tip-safe good/bad Schur--Jacobi inequality
-and causal grouping as the exact finite-cutoff analytic core.
+controlled. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION`
+subsequently proves the endpoint-lifted production Schur bounds, exact pure-
+control telescope, and centered scalar-defect transfer. The adapted Gaussian-
+rooted transported-current/GG lower bound, with terminal current boundary
+retained, is now the exact finite-cutoff analytic core.
 
 ### **A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE**
 
@@ -610,28 +616,29 @@ the fact that the geodesic logarithm spreads Fourier support, whereas affine
 physical interpolation preserves sharp-shell support but loses the Jacobi
 sign. Shellwise positivity, deletion of `J_j`, termwise absolute values, a
 geometry-only one-shot estimate, or separate payment of terminal raw energy
-and injection are forbidden. After the regular-control estimate, prove the
+and injection are forbidden. The literal old-endpoint affine tangent and a
+separate payment of `sum_j |a_j|^2 |D A_<j|^2` are also forbidden. After the
+regular-control estimate, prove the
 localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
-**Status:** REDUCED-NOT-CLOSED CURRENT CHILD (2026-07-23), proof-ordered after
-`A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION` and before
-`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. The reduction proves the exact
-nonlinear Tikhonov harvest; full-score Carleson estimate; uncontrolled-base
-`N^-1`/`N^-2` Gaussian tails; CAT(0) whole-secant through the tip; floor-uniform
-physical distance; and, for `0<kappa<1`, the global centered-form bound with
-random-norm exponent `3/(1-kappa)` (`10/3` at `kappa=1/10`). It also proves
-that direct absolute-score integration cannot meet arbitrary budgets and that
-only the second product in the nonlinear current remainder has the advertised
-standalone `N^-3/2` decay. The exact successor is a finite-cutoff production
-good/bad Schur--Jacobi inequality: complete the derivative displacement on the
-good region, use the whole secant without the invalid tangent on the bad
-tip-region, leave only the global centered `Q` form plus an `N^-3` trace term,
-telescope pure-control current creation, and use Gaussian score tails only on
-Gaussian-rooted terms. Exact isolated `1:2` and `1:3` adapted harmonics remain
-summable and do not falsify this global statement. The production lemma,
-finite-energy extension, one-use, Nelson theorem, and any tier promotion
-remain open.
+**Status:** REDUCED-NOT-CLOSED CURRENT CHILD (2026-07-24), proof-ordered after
+`A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION` and before
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. R-068 proves the nonlinear
+harvest, full-score Carleson estimate, uncontrolled-base Gaussian tails, tip-
+safe secant, physical distance, and global centered form. R-069 then falsifies
+the literal affine full-score tangent, proves a hybrid endpoint lift uniform in
+derivative displacement with optimized good/bad and global constants, and
+uses coherent target-space frozen-value grouping to telescope pure-control
+current creation pathwise and the fresh derivative-noise correction in
+expectation. Only the centered scalar Gaussian defect is transferred to the
+R-068 form; the terminal control-current square remains. A two-shell scaling
+fixture proves that the pure-control defect cannot instead be paid separately
+with arbitrary budgets. The exact successor is the adapted Gaussian-rooted
+transported-current/GG lower bound. Exact isolated `1:2` and `1:3` adapted
+harmonics remain summable and do not falsify that global statement. The
+adapted bound, finite-energy extension, one-use, Nelson theorem, and any tier
+promotion remain open.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

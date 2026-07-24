@@ -1,0 +1,596 @@
+% =============================================================================
+% Title: Endpoint-lifted Schur and coherent causal grouping reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact/analytic subproof; adapted Gaussian-rooted current bound open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-24): rotating-phase-kernel falsifier for the old affine
+% tangent; floor-uniform endpoint-lifted good/bad and global Schur bounds;
+% coherent frozen-value causal polarization; pathwise pure-control telescope;
+% fresh-noise mixed-current centering; and separate-payment scaling no-go.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cH}{\mathcal H}
+
+\section*{Purpose and scope}
+
+This note continues the single live A13 child gate
+\texttt{A13-CLASSII-NPC-CONE-}\allowbreak
+\texttt{MARTINGALE-INJECTION-BALANCE}.  It records one
+failed route and one repaired route without creating a peer-level claim or
+promoting the A13 tier.  The failed route is the literal full-score affine
+tangent, which cannot be bounded uniformly in the derivative displacement
+because the production current matrix has rotating phase kernels.  The
+repair evaluates the derivative-displacement column at the new endpoint.
+That endpoint lift removes the kernel defect exactly and gives a
+floor-uniform finite-dimensional Schur estimate.
+
+The repaired local estimate is then inserted into a coherent frozen-value
+causal grouping.  The control-derivative current telescopes pathwise, the
+interior mixed current telescopes after conditional expectation, and the
+only quadratic defect left by the local estimate contains the old Gaussian
+derivative, not the accumulated control derivative.  This closes the local
+Schur part and the pure-control bookkeeping part of the R-068 successor.
+
+\begin{center}
+\fbox{\parbox{0.91\textwidth}{
+\textbf{Closed here.}  The affine full-score tangent is falsified by an exact
+production fixture.  The endpoint-lifted current identity, optimized
+good/bad bound, global bound, coherent causal polarization, pathwise
+pure-control telescope, and fresh-noise mixed-current cancellation are
+proved at finite cutoff and uniformly in the positive density floor.
+
+\medskip
+\textbf{Still open.}  The adapted Gaussian-rooted transported-current/GG
+lower bound; the resulting full NPC--martingale injection balance; extension
+from regular one-shot controls to the declared finite-energy class; one-use;
+Nelson; and every floor, regulator, volume, and measure-construction limit.
+}}
+\end{center}
+
+All spatial integrations and sums over the three production generators and
+spatial directions are suppressed until Section 6.  The local argument is
+pointwise.  The fixed production matrix is $Q=Q_{\rm II}>0$, and
+\[
+ \lambda_Q=\|Q\|_{\rm op}
+ ={219+3\sqrt{2129}\over16000P},\qquad
+ P=4+10^{-12},                                           \tag{0.1}
+\]
+so $\lambda_Q=0.005584738499072227$.  Numerical values below are regression
+data derived from the pinned coefficients, not inputs to the proof.  The
+density floor $e$ in $d_e$ is conceptually distinct from the mass denominator
+$P=M_X^2+\text{classii\_mass\_regularizer}$ in $Q_{\rm II}$, although the
+pinned production fixture uses $10^{-12}$ in both regularizers.
+
+\section{The current frame and its exact jets}
+
+Let $S_A$, $A=1,2,3$, be the six-real symmetric Pauli generators.  If
+$P_D$ denotes the active-doublet projector, then $S_A^2=P_D$.  For a
+positive floor $e$ put
+\[
+ d_e(z)=|z|^2+e,\qquad
+ q_A(z)={z^TS_Az\over d_e(z)},\qquad
+ r_A(z)=(S_A-q_A(z)\Id)z,                                \tag{1.1}
+\]
+and introduce the two-column current frame
+\[
+ M_A(z)=\bigl[\,2S_Az,\ 2r_A(z)\,\bigr].                \tag{1.2}
+\]
+For a derivative vector $y\in\R^6$, the corresponding two-current is
+$M_A(z)^Ty$.  Since
+\[
+ |r_A|^2=|P_Dz|^2-q_A^2(|z|^2+2e)\le |z|^2,             \tag{1.3}
+\]
+one has the floor-uniform frame bound
+\[
+ \boxed{\ \|M_A(z)\|_F\le\sqrt8\,|z|.\ }             \tag{1.4}
+\]
+
+Direct differentiation gives
+\[
+ Dq_A(z)[h]={2r_A(z)\cdot h\over d_e(z)},                \tag{1.5}
+\]
+\[
+ D^2q_A(z)[h,k]
+ ={2h\cdot(S_A-q_A\Id)k\over d_e}
+ -{4(r_A\cdot k)(z\cdot h)\over d_e^2}
+ -{4(r_A\cdot h)(z\cdot k)\over d_e^2}.                \tag{1.6}
+\]
+Writing $s_e(z)=\sqrt{d_e(z)}$, the elementary bounds
+$|q_A|\le1$, $|r_A|\le|z|\le s_e$, and
+$\|S_A-q_A\Id\|_{\rm op}\le2$ yield
+\[
+ \boxed{\ \|DM_A(z)[h]\|_F\le\sqrt{68}|h|,\qquad
+ \|D^2M_A(z)[h,k]\|_F
+ \le {32|h||k|\over s_e(z)}.\ }                         \tag{1.7}
+\]
+Indeed $|Dq[h]|\le2|h|/s_e$, $|D^2q[h,k]|\le
+12|h||k|/s_e^2$, and
+\[
+ D^2(qz)[h,k]=D^2q[h,k]z+Dq[h]k+Dq[k]h,                 \tag{1.8}
+\]
+whose norm is at most $16|h||k|/s_e$; only the second
+column of $D^2M_A$ is nonzero and contributes the remaining factor two.
+
+\section{Why the affine full-score tangent fails}
+
+Set
+\[
+ B(z)=\sum_A M_A(z)QM_A(z)^T,\qquad
+ f(z,y)={1\over2}y^TB(z)y.                               \tag{2.1}
+\]
+For fixed $z,a,y$, the affine Taylor remainder in an arbitrary derivative
+displacement $b$ contains
+\[
+ {1\over2}b^TB(z+a)b+b^T[B(z+a)-B(z)]y.                  \tag{2.2}
+\]
+Because $B(z+a)$ is merely positive semidefinite, (2.2) is bounded below in
+$b$ if and only if
+\[
+ [B(z+a)-B(z)]y\in\Ran B(z+a).                           \tag{2.3}
+\]
+The production frames do not satisfy (2.3): they contain phase-kernel
+directions which rotate with $z$.
+
+An exact six-real fixture makes the failure explicit.  Take
+\[
+ z=(1,0,0,0,0,0),\quad a=(0,\varepsilon,0,0,0,0),
+ \quad y=(0,0,0,0,1,0),                                  \tag{2.4}
+\]
+and choose the new-endpoint vertical direction
+\[
+ b=t(0,0,0,1,\varepsilon,0).                             \tag{2.5}
+\]
+For every positive floor, $M_A(z+a)^T(y+b)=M_A(z)^Ty$ for all $A$.
+Consequently the raw secant is zero, whereas the old affine tangent equals
+\[
+ \cT_{\rm aff}=\beta_0\varepsilon t,\qquad
+ \beta_0=4(a_{\rm prod}+2b_{\rm prod}+c_{\rm prod})
+ ={339\over2000P}>0.                                     \tag{2.6}
+\]
+Thus the affine remainder is $-\beta_0\varepsilon t$ and has no uniform
+lower bound.  At $\varepsilon=0.1$ and $t=7$, the exact values are
+\[
+ \cR=0,\qquad \cT_{\rm aff}=0.0296625,\qquad
+ \cR-\cT_{\rm aff}=-0.0296625.                          \tag{2.7}
+\]
+This falsifies only the affine-tangent architecture.  It is not a
+counterexample to the raw secant theorem or to the endpoint-lifted repair.
+
+\section{The endpoint-lifted identity}
+
+Define the old current, exact increment, endpoint-lifted linear part, and
+frame-curvature remainder by
+\[
+ w_A=M_A(z)^Ty,                                           \tag{3.1}
+\]
+\[
+ \delta_A=M_A(z+a)^T(y+b)-M_A(z)^Ty,                     \tag{3.2}
+\]
+\[
+ L_A=DM_A(z)[a]^Ty+M_A(z+a)^Tb,                          \tag{3.3}
+\]
+\[
+ E_A=[M_A(z+a)-M_A(z)-DM_A(z)[a]]^Ty.                    \tag{3.4}
+\]
+Then
+\[
+ \boxed{\ \delta_A=L_A+E_A.\ }                         \tag{3.5}
+\]
+The crucial point is that $E_A$ is independent of $b$.  With
+$\langle u,Qv\rangle_A=\sum_Au_A^TQv_A$ and
+$|u|_Q^2=\langle u,Qu\rangle_A$, the raw current secant is
+\[
+ \cR=\langle w,Q\delta\rangle_A+{1\over2}|\delta|_Q^2.
+                                                                    \tag{3.6}
+\]
+Therefore, exactly,
+\[
+ \boxed{
+ \cR=\cT_{\rm end}+\cJ_{\rm end}
+       +\sum_A\langle w_A,QE_A\rangle,}                 \tag{3.7}
+\]
+where
+\[
+ \cT_{\rm end}=\langle w,QL\rangle_A,
+ \qquad \cJ_{\rm end}={1\over2}|\delta|_Q^2\ge0.      \tag{3.8}
+\]
+The object $L$ is a hybrid endpoint lift, not the Fr\'echet derivative at the
+old endpoint: its $a$ column is differentiated at $z$, while its $b$ column
+is evaluated at $z+a$.  This precise asymmetry is what removes the rotating-
+kernel obstruction.
+The full exact Jacobi square is retained; no completion divides by a
+possibly singular current matrix.
+
+\section{Optimized good/bad and global Schur bounds}
+
+Fix $0<\theta<1$.  In the good region $|a|\le\theta s_e(z)$, every point of
+the segment satisfies
+\[
+ s_e(z+ta)\ge s_e(z)-t|a|\ge(1-\theta)s_e(z).            \tag{4.1}
+\]
+Taylor's integral formula and (1.7) give
+\[
+ \|M_A(z+a)-M_A(z)-DM_A(z)[a]\|_F
+ \le {16|a|^2\over(1-\theta)s_e(z)}.                    \tag{4.2}
+\]
+Combining (4.2) with (1.4) and summing the three generators gives
+\[
+ \left|\sum_A\langle w_A,QE_A\rangle\right|
+ \le {48\sqrt8\lambda_Q\over1-\theta}|a|^2|y|^2.
+                                                                    \tag{4.3}
+\]
+
+In the bad region $|a|>\theta s_e(z)$, positivity of the new current square
+in (3.6) gives
+\[
+ \cR\ge-{1\over2}|w|_Q^2
+ \ge-12\lambda_Q|z|^2|y|^2
+ \ge-{12\lambda_Q\over\theta^2}|a|^2|y|^2.             \tag{4.4}
+\]
+Hence the resulting literal good/bad statement is
+\[
+ \boxed{
+ \cR\ge
+ \mathbf1_{\{|a|\le\theta s_e(z)\}}
+ (\cT_{\rm end}+\cJ_{\rm end})
+ -C_\theta|a|^2|y|^2,}                                  \tag{4.5}
+\]
+\[
+ C_\theta=\max\left\{
+ {48\sqrt8\lambda_Q\over1-\theta},
+ {12\lambda_Q\over\theta^2}\right\}.                 \tag{4.6}
+\]
+Optimizing these two safe envelopes gives (not a claim of global sharpness)
+\[
+ \theta_\#={2\over1+\sqrt{1+32\sqrt2}}
+ =0.25637440844670695,                                   \tag{4.7}
+\]
+\[
+ \boxed{C_\#=3\lambda_Q(1+\sqrt{1+32\sqrt2})^2
+ =1.0196115487028556.}                                   \tag{4.8}
+\]
+
+There is also a weaker but globally endpoint-lifted form.  The global
+Lipschitz bound in (1.7) implies $\|E_A\|\le2\sqrt{68}|a||y|$.  On the bad
+region, $|z|<|a|/\theta$, so
+\[
+ \left|\sum_A\langle w_A,QE_A\rangle\right|
+ \le {24\sqrt{34}\lambda_Q\over\theta}|a|^2|y|^2.
+                                                                    \tag{4.9}
+\]
+Balancing (4.3) with (4.9) gives
+\[
+ \theta_*={\sqrt{34}\over\sqrt{34}+4\sqrt2}
+ =0.5075774975293578,                                    \tag{4.10}
+\]
+and the floor- and $b$-uniform inequality
+\[
+ \boxed{
+ \cR\ge\cT_{\rm end}+\cJ_{\rm end}
+          -C_*|a|^2|y|^2,\qquad
+ C_*=24\lambda_Q(\sqrt{34}+4\sqrt2)
+ =1.5397534378598672.}                                   \tag{4.11}
+\]
+
+\section{Coherent frozen-value causal grouping}
+
+For a terminal shell $J$, couple only the heat-dummy values by
+\[
+ r_{j:J}=\sum_{k=j}^J\xi_k,\qquad
+ U=X_{<j}+r_{j:J}=\sum_{k\le J}\xi_k.                   \tag{5.1}
+\]
+Thus $U$ is the same value variable at every shell.  Equation (5.1) is a
+target-space heat coupling: $r_{j:J}$ is never spatially differentiated and
+must not be identified with the actual future spatial field.  This is exactly
+the backward-heat convention proved in R-066.
+
+Write
+\[
+ z_j=U+A_{<j},\qquad z_{j+1}=z_j+a_j,                    \tag{5.2}
+\]
+\[
+ G_{j,i}=D_iX_{<j},\qquad C_{j,i}=D_iA_{<j},
+ \qquad C_{j+1,i}=C_{j,i}+b_{j,i}.                       \tag{5.3}
+\]
+For every generator and spatial direction suppress the indices and set
+\[
+ c_j=M(z_j)^TC_j,\quad g_j=M(z_j)^TG_j,                  \tag{5.4}
+\]
+\[
+ c_{j+1}=M(z_{j+1})^T(C_j+b_j),\quad
+ g_j^+=M(z_{j+1})^TG_j.                                  \tag{5.5}
+\]
+Let $\delta_j^C=c_{j+1}-c_j$ and
+$\delta_j^G=g_j^+-g_j$.  Polarization gives the exact split
+\[
+ \cR_j=\cR_j^C+\cR_j^G+\cR_j^\times,                   \tag{5.6}
+\]
+\[
+ \cR_j^C={1\over2}(|c_{j+1}|_Q^2-|c_j|_Q^2),            \tag{5.7}
+\]
+\[
+ \cR_j^G={1\over2}(|g_j^+|_Q^2-|g_j|_Q^2),              \tag{5.8}
+\]
+\[
+ \begin{split}
+ \cR_j^\times={}&\langle c_j,Q\delta_j^G\rangle
+ +\langle g_j,Q\delta_j^C\rangle
+ +\langle\delta_j^C,Q\delta_j^G\rangle\\
+ ={}&\langle c_{j+1},Qg_j^+\rangle
+    -\langle c_j,Qg_j\rangle .
+ \end{split}                                             \tag{5.9}
+\]
+In particular, the pure-control current creation telescopes pathwise:
+\[
+ \boxed{
+ \sum_{j=j_0}^J\cR_j^C
+ ={1\over2}|c_{J+1}|_Q^2-{1\over2}|c_{j_0}|_Q^2.}       \tag{5.10}
+\]
+For an empty initial high-block control the right-hand side is nonnegative;
+otherwise only the fixed low boundary remains.
+
+If $G_{j+1}=G_j+d_j$ and
+$n_j=M(z_{j+1})^Td_j$, then
+\[
+ g_{j+1}=g_j^++n_j.                                      \tag{5.11}
+\]
+Strict-past adaptation makes the control pre-shell, while $c_{j+1}$ may still
+depend on the current value $\xi_j$ through $z_{j+1}$.  It is, however,
+pre-derivative-increment.  For the common real-even regulator, the same-point
+value $\xi_j$ and derivative increment $d_j$ are independent, so
+\[
+ \E_j\langle c_{j+1},Qn_j\rangle=0.                     \tag{5.12}
+\]
+Thus the interior terms of (5.9) telescope in expectation.  The terminal
+mixed current is not discarded: it must remain coupled to the terminal
+$CC+GG$ terms as the full terminal current square.
+
+For completeness, the exact Gaussian companion identity is
+\[
+ \cR_j^G={1\over2}(|g_{j+1}|_Q^2-|g_j|_Q^2)
+ -\langle g_j^+,Qn_j\rangle-{1\over2}|n_j|_Q^2,          \tag{5.13}
+\]
+and the same conditional independence gives
+\[
+ \E_j\langle g_j^+,Qn_j\rangle=0.                       \tag{5.14}
+\]
+Thus the exact, unreplaced $GG$ sum has the usual terminal-square minus
+fresh-injection telescope.  Together with (5.10) and (5.9), its terminal
+three terms form $|c_{J+1}+g_{J+1}|_Q^2/2$.  This exact identity is logically
+separate from Section 6, where $\cR_j^G$ is replaced by a lower bound.
+
+This cancellation is pointwise/marginal in the target-space heat coupling
+and expectation-only.  Analytically it uses whole-shell
+$\mathcal F_{j-1}$-measurability, integrability/Fubini, and the pinned identity
+$\E[\xi_j(x)\otimes d_{j,i}(x)]=0$.  It is neither a pathwise cancellation nor
+a license for progressive within-shell feedback.  If summation begins after
+a finite-low split, the combined exact telescope retains the full initial
+boundary $-|c_{j_0}+g_{j_0}|_Q^2/2$ until the existing finite-low estimate
+absorbs it.
+
+\section{What the repaired lemma buys}
+
+Apply (4.11) only to $\cR_j^G$, with $y=G_j$ and $b=0$.  Define
+\[
+ E_j^G=[M(z_j+a_j)-M(z_j)-DM(z_j)[a_j]]^TG_j,            \tag{6.1}
+\]
+\[
+ L_j^G=DM(z_j)[a_j]^TG_j,\qquad
+ \delta_j^G=L_j^G+E_j^G.                                \tag{6.2}
+\]
+Then
+\[
+ \boxed{
+ \cR_j^G\ge\cT_j^G+\cJ_j^G-C_*|a_j|^2|G_j|^2,}        \tag{6.3}
+\]
+where
+\[
+ \cT_j^G=\langle g_j,Q L_j^G\rangle,\qquad
+ \cJ_j^G={1\over2}|\delta_j^G|_Q^2.                    \tag{6.4}
+\]
+The important structural fact is literal: (6.3) has no factor
+$|C_j|^2$.  The dangerous defect
+\[
+ \sum_j|a_j|^2|D A_{<j}|^2                               \tag{6.5}
+\]
+has disappeared because its underlying $CC$ energy was telescoped exactly
+in (5.10).
+
+After normal ordering, the $GG$ coefficient secant is
+\[
+ {1\over2}[B(z_{j+1})-B(z_j)]:
+ \bigl(G_j\otimes G_j-\Gamma_{j-1}\bigr).               \tag{6.6}
+\]
+The transfer of the centered scalar defect to R-068 is an expectation
+identity, not a pathwise identification with a spatial projection.  Sum over
+the suppressed spatial directions and trace the six-real field indices:
+\[
+ \widetilde q_J=\sum_i(|G_{J+1,i}|^2-\operatorname{Tr}\Gamma_{J,i}),
+ \quad
+ \widetilde q^{<j}=\sum_i(|G_{j,i}|^2-\operatorname{Tr}\Gamma_{j-1,i}).
+                                                                    \tag{6.6a}
+\]
+Independence of future derivative shells gives
+$\widetilde q^{<j}=\E[\widetilde q_J\mid\mathcal F_{j-1}]$.
+Since $|a_j|^2$ is $\mathcal F_{j-1}$-measurable,
+\[
+ \E\sum_j\langle\widetilde q^{<j},|a_j|^2\rangle
+ =\E\left\langle\widetilde q_J,\Pi_0(a)\right\rangle,
+ \qquad \Pi_0(a)=\sum_j|a_j|^2.                         \tag{6.6b}
+\]
+If $A=(\sum_j|a_j|^2)^{1/2}$, $X=\sum_j\|a_j\|_{H^2}^2$,
+and $Y=\|A\|_6^6$, then
+\[
+ \|\Pi_0(a)\|_2\le\|A\|_4^2\le C_LY^{1/3},\qquad
+ \|\Pi_0(a)\|_{H^2}\le C_HX.                          \tag{6.6c}
+\]
+Interpolation and the same three-factor Young inequality as R-068 therefore
+pay (6.6b) once from the terminal $H^{-1-\kappa}$ model norm.  The covariance
+trace costs $O(N_j^{-3})\|h_j\|_{\cH_j}^2$.  This argument applies to the
+displayed quadratic defect only.  It does not make every expression
+containing a Gaussian derivative eligible for the uncontrolled
+$N^{-1}/N^{-2}$ score tails.
+
+Combining (5.10), (5.12), and (6.3) reduces the remaining load-bearing
+statement to one adapted Gaussian-rooted transported-current estimate.  In
+particular, the terminal control-current square may not be dropped:
+\[
+ \boxed{
+ \E\sum_{j=j_0}^{J}
+ (\cT_j^G+\cJ_j^G+\cR_j^\times)
+ +{1\over2}\E\bigl(|c_{J+1}|_Q^2-|c_{j_0}|_Q^2\bigr)
+ \ge-\eta\E\sum_j\|h_j\|_{\cH_j}^2
+      -\zeta\E\|Z_J\|_6^6-C_{\eta,\zeta,j_0}.}         \tag{6.7}
+\]
+The coefficient in (6.7) depends on the adapted past control.  Existing
+Gaussian tails cannot be cited until (6.7) is reduced pathwise to the pinned
+global centered form plus its covariance trace.  The control-current boundary
+in (6.7) cannot be omitted because the mixed term by itself has no lower
+bound.  Eventual terminal bookkeeping may recombine it with the corresponding
+mixed and Gaussian boundaries, but no such additional telescope is claimed
+here.  Equation (6.7), with the exact control boundary and intact mixed
+secant, is a sufficient next analytic target.
+
+\section{Why the pure-control defect cannot be paid separately}
+
+There is also a scaling reason not to return to (6.5).  On the normalized
+circle take two shells
+\[
+ a_N=tN\cos Nx,\qquad a_{2N}=tN\cos2Nx.                 \tag{7.1}
+\]
+At the second shell,
+\[
+ \int |a_{2N}|^2|Da_N|^2
+ ={1\over4}t^4N^6,                                      \tag{7.2}
+\]
+whereas the leading inhomogeneous $H^2$ cost and terminal sextic cost are
+\[
+ \sum\|a_j\|_{H^2}^2={17\over2}t^2N^6+O(N^4),
+ \qquad
+ \|a_N+a_{2N}\|_6^6={215\over32}t^6N^6.                \tag{7.3}
+\]
+All three terms have the same cutoff power.  For arbitrarily small prescribed
+$\eta$ and $\zeta$, the coefficient
+\[
+ {t^4\over4}-{17\eta t^2\over2}-{215\zeta t^6\over32}  \tag{7.4}
+\]
+is positive for a suitable fixed $t$; at $t=1$ and
+$\eta=\zeta=10^{-5}$ it is $0.2498478125$.  Hence a direct separate estimate
+of (6.5) cannot meet the required arbitrary budgets uniformly in $N$.  This
+is an architecture no-go, not a counterexample to the exact telescope.
+
+\section{Independent execution and proof boundary}
+
+The primary executable derives $Q$, every displayed constant, the exact
+frame jets, the endpoint identity, both Schur bounds, the rotating-kernel
+fixture, the coherent polarization, ninth-order Gauss--Hermite fresh-noise
+centering, and the two-shell scaling fixture.  It passes $22/22$ assertions.
+The non-importing executable reconstructs the Pauli frames and production
+coefficients, uses a different random seed and eleventh-order Hermite rule,
+checks centered finite-difference second-order convergence, and passes
+$20/20$ assertions.  In the independent audit, halving the centered-
+difference step reduces the worst frame-jet error from
+$6.61075\times10^{-7}$ to $1.72164\times10^{-7}$.
+
+The Gauss--Hermite fixtures illustrate centering under an independent
+value/derivative product law.  The proof of (5.12) is instead the analytic
+strict-past argument with the pinned common real-even regulator and the
+integrability assumptions stated after (5.12).
+
+These finite-dimensional executions are regression and falsification
+evidence.  They do not replace the analytic estimates (1.4)--(7.4), and they
+do not test arbitrary adapted fields.  The fail-closed package command is
+\begin{quote}
+\texttt{python }\path{codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_verify.py}
+\end{quote}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The old affine tangent is uniformly valid because the
+Jacobi term is positive.''}  \textbf{UPHELD as false.}  The Schur quadratic
+is bounded below only under the range condition (2.3).  The rotating-kernel
+fixture violates it and makes the affine remainder linear and unbounded in
+the vertical amplitude.
+
+\item \textbf{``The endpoint lift merely hides the same kernel problem.''}
+\textbf{DISMISSED.}  Equations (3.3)--(3.5) remove $b$ from the remainder
+algebraically before estimation.  Bounds (4.5) and (4.11) are consequently
+uniform in $b$, including vertical kernel directions.
+
+\item \textbf{``The future heat dummy may be differentiated as a future
+spatial field.''}  \textbf{UPHELD as false.}  The coupling (5.1) is only a
+target-space value coupling.  Differentiating $r_{j:J}$ would add a future
+derivative not present in the backward-heat identity.
+
+\item \textbf{``Every term with a Gaussian root inherits the R-068
+$N^{-1}/N^{-2}$ tails.''}  \textbf{UPHELD as false.}  Those tails are proved
+at the uncontrolled Gaussian base.  The adapted coefficient in (6.7) is the
+remaining theorem, not an already centered test function.
+
+\item \textbf{``The mixed current can be discarded after its interior
+increments center.''}  \textbf{UPHELD as false.}  Only the fresh-noise
+interior correction in (5.12) centers.  The terminal cross must remain with
+the terminal $CC+GG$ square; separating it can create a negative $-G^2$
+term even in a flat scalar diagnostic.
+
+\item \textbf{``The pure-control defect can simply be absorbed by $H^2$
+and $L^6$.''}  \textbf{UPHELD as false.}  Equations (7.1)--(7.4) put all
+three quantities at order $N^6$ and leave a positive coefficient for small
+arbitrary budgets.  The exact telescope (5.10) is essential.
+
+\item \textbf{``This reduction proves controlled-shell one-use.''}
+\textbf{UPHELD as false.}  The adapted lower bound (6.7), finite-energy
+extension, and downstream one-use/Nelson steps remain open.  No tier change
+is justified.
+\end{enumerate}
+
+\clearpage
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID:               A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-
+                         REDUCTION
+Precise statement:       The hybrid endpoint lift removes derivative
+                         displacement from the curvature remainder and gives
+                         optimized floor-uniform good/bad and global bounds;
+                         coherent value grouping telescopes pure-control and
+                         fresh derivative-noise currents in their stated sense.
+Scope:                   Fixed finite cutoff; every positive floor; regular
+                         strict-past one-shot shells; target-space heat values.
+Dependencies:            A1 production functional; R-066; R-067; R-068.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_endpoint_lifted_schur_causal_grouping_
+                         reduction_verify.py
+Expected output:         primary 22/22; independent 20/20; integrated 70/70;
+                         aggregate 112/112; exit 0.
+Falsification gate:      Endpoint identity or constants fail; a causal
+                         telescope, source/PDF hash, PDF QA, or assertion fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  The adapted transported-current/GG bound, arbitrary
+                         finite-energy drift, one-use, Nelson, measure, and
+                         floor/regulator/volume limits remain open.
+Next required action:    Prove (6.7) with the terminal current square and mixed
+                         secant retained, then make the finite-energy extension.
+\end{verbatim}
+
+\noindent\textbf{Final boundary.}
+The local production Schur estimate and the pure-control causal bookkeeping
+are no longer the obstruction.  The exact remaining bottleneck is (6.7): an
+adapted Gaussian-rooted transported-current/GG lower bound which preserves
+the mixed secant and reduces its genuinely centered part to the existing
+R-068 global quadratic-form theorem.

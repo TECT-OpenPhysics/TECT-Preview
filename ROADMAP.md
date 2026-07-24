@@ -163,17 +163,19 @@ remainder, and raw-energy/injection telescope. It refutes shellwise positivity
 at a positive floor, proves the isolated adapted `1:2` and `1:3` losses
 summable, and uses a flat CAT(0) reset model to retire geometry-only one-use
 without producing a production counterexample. The current child is
-`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`.  The new
-tip-safe grouped-harvest reduction proves the exact nonlinear Tikhonov harvest,
-conservative-score Carleson square bound, the uncontrolled-Gaussian
-`N^(-1)`/`N^(-2)` score tails, the CAT(0) whole-secant inequality through the
-tip, and the global centered-form one-use estimate with exponent `10/3` at
-`kappa=1/10`.  It also retires direct absolute-score integration and corrects
-the nonlinear remainder: the coefficient-curvature term cannot be assigned a
-standalone `N^(-3/2)` gain.  The current child is therefore the finite-cutoff
-tip-safe production Schur--Jacobi good/bad lemma, with the coefficient-curvature
-piece grouped into the positive current square and global centered form before
-the declared finite-energy extension.
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`.  The tip-safe grouped-
+harvest reduction proves the nonlinear harvest, conservative-score Carleson
+bound, uncontrolled-Gaussian tails, CAT(0) whole secant, and global centered-
+form lemma. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION` now
+closes the local production Schur step and pure-control bookkeeping: the old-
+endpoint affine tangent is falsified by rotating phase kernels, while the
+hybrid endpoint lift is uniform in derivative displacement and coherent
+frozen-value causal grouping telescopes pure-control current creation.  A
+two-shell scaling fixture also retires separate payment of that pure-control
+defect.  The exact remaining regular-control core is the adapted Gaussian-
+rooted transported-current/GG lower bound with its terminal current boundary
+intact; only its centered scalar component has been transferred to the global
+R-068 form.  The declared finite-energy extension follows that bound.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -259,7 +261,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-23)
+## Current priority view (refreshed 2026-07-24)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -293,16 +295,20 @@ preserved in git/changelog rather than treated as current gates.
    positive-floor shellwise no-go and a geometry-only flat-model no-go. The
    isolated `1:2` and `1:3` adapted losses are summable rather than global
    falsifiers.  `A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION`
-   then closes the nonlinear harvest, full-score Carleson, uncontrolled
-   Gaussian-tail, CAT(0) tip-secant, physical-distance, and global
-   centered-form sublemmas.  Next prove the finite-cutoff tip-safe production
-   good/bad Schur--Jacobi inequality under
-   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`: complete derivative
-   displacement only on the good region, use the whole secant at the bad
-   cone-tip region, telescope pure-control current creation, and invoke the
-   `N^(-1)`/`N^(-2)` tails only on Gaussian-rooted terms.  Then make the
-   finite-energy extension. Do not use shellwise positivity, delete the Jacobi
-   remainder, or pay terminal raw energy and injection separately.
+   closes the nonlinear harvest, full-score Carleson, uncontrolled Gaussian-
+   tail, CAT(0) tip-secant, physical-distance, and global centered-form
+   sublemmas. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION`
+   then proves the hybrid endpoint-lifted good/bad and global Schur bounds and
+   coherent frozen-value causal grouping. It retires the literal affine full-
+   score tangent and separate pure-control-defect payment, telescopes pure-
+   control current creation exactly, and transfers only the centered scalar
+   Gaussian defect to R-068. Next prove the adapted Gaussian-rooted
+   transported-current/GG lower bound under
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, retaining the terminal
+   control-current square and mixed secant. Then make the finite-energy
+   extension. Do not spatially differentiate the heat dummy, reuse
+   uncontrolled tails for an adapted coefficient, or pay terminal raw energy
+   and injection separately.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

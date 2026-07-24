@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT | affine Schur and separate pure-control payment fail | Two candidate continuations of the R-068 production |
 | AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER | absolute score and full fast remainder fail | Two proposed continuations attempted to close the production |
 | NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY | shellwise raw positivity and geometry-only one-use fail | Two proposed shortcuts attempted to close the averaged |
