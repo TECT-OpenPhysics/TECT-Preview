@@ -12,7 +12,7 @@ Usage:
     python verification/scripts/build_proof_evidence_map.py --self-test
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 import argparse
 import hashlib
@@ -35,6 +35,7 @@ from evidence_paths import (
     manifest_paths,
     unordered_root_note_paths,
 )
+from exploration import LOG as EXPLORATIONS, verify as verify_explorations
 
 
 REPO = Path(__file__).resolve().parents[2]
@@ -522,6 +523,13 @@ def load_tasks() -> list[dict[str, object]]:
     return tasks
 
 
+def load_explorations() -> list[dict[str, object]]:
+    records, errors = verify_explorations()
+    if errors:
+        raise ValueError("invalid exploration ledger: " + "; ".join(errors))
+    return records
+
+
 def claim_reference_context(
     cards: list[dict[str, object]],
 ) -> tuple[set[str], dict[str, list[str]]]:
@@ -698,7 +706,7 @@ def attach_result_event_links(
 
 
 def source_hashes(status_paths: list[Path]) -> dict[str, str]:
-    sources = [RESULTS, NEGATIVES, CHANGELOG, TODO, GATES] + status_paths
+    sources = [RESULTS, NEGATIVES, EXPLORATIONS, CHANGELOG, TODO, GATES] + status_paths
     return {
         path.relative_to(REPO).as_posix(): sha256(path)
         for path in sorted(sources, key=lambda item: item.relative_to(REPO).as_posix())
@@ -730,6 +738,7 @@ def build_graph(
     cards: list[dict[str, object]],
     results: list[dict[str, object]],
     negatives: list[dict[str, object]],
+    explorations: list[dict[str, object]],
     events: list[dict[str, object]],
     tasks: list[dict[str, object]],
     gate_definitions: dict[str, dict[str, str]],
@@ -750,6 +759,10 @@ def build_graph(
         str(value)
         for card in cards
         for value in list(card.get("open_gates", [])) + list(card.get("hypotheses", []))
+    } | {
+        str(value)
+        for record in explorations
+        for value in record.get("gate_ids", [])
     }
     for card in cards:
         identifier = str(card["id"])
@@ -773,6 +786,14 @@ def build_graph(
             str(record["kind"]),
             collapse(record["branch"] or record["detail_title"]),
             f"negative-results/registry.md#{record['anchor']}",
+        )
+    for record in explorations:
+        identifier = str(record["id"])
+        add_node(
+            f"exploration:{identifier}",
+            "proof_exploration",
+            collapse(record["title"]),
+            "explorations/log.jsonl",
         )
     for event in events:
         identifier = str(event["id"])
@@ -803,6 +824,29 @@ def build_graph(
         for claim in record.get("claim_refs", []):
             basis = str(record.get("claim_ref_basis", {}).get(claim, "canonical"))
             add_edge(f"negative:{record['tag']}", "bears_on", f"claim:{claim}", basis)
+    for record in explorations:
+        node = f"exploration:{record['id']}"
+        for claim in record.get("claim_ids", []):
+            add_edge(node, "assesses", f"claim:{claim}", "structured_claim_id")
+        task_id = record.get("task_id")
+        if task_id:
+            add_edge(node, "records_task", f"task:{task_id}", "structured_task_id")
+        for gate in record.get("gate_ids", []):
+            add_edge(node, "assesses_gate", f"gate:{gate}", "structured_gate_id")
+        formal = record.get("formal_refs", {})
+        for result in formal.get("results", []):
+            add_edge(node, "references_result", f"result:{result}", "structured_formal_ref")
+        for negative in formal.get("negatives", []):
+            add_edge(node, "references_negative", f"negative:{negative}", "structured_formal_ref")
+        for event in formal.get("events", []):
+            add_edge(node, "references_event", f"event:{event}", "structured_formal_ref")
+        for relation in record.get("related", []):
+            add_edge(
+                node,
+                str(relation["relation"]),
+                f"exploration:{relation['id']}",
+                "structured_related_ref",
+            )
     for event in events:
         for claim in event.get("claim_refs", []):
             if claim in known_claims:
@@ -864,7 +908,7 @@ def build_graph(
             raise ValueError(f"unresolved graph edge: {edge}")
     edges.sort(key=lambda edge: (edge["from"], edge["relation"], edge["to"], edge["basis"]))
     return {
-        "namespace_contract": "claim:, result:, negative:, event:, gate:, task:",
+        "namespace_contract": "claim:, result:, negative:, exploration:, event:, gate:, task:",
         "nodes": [nodes[key] for key in sorted(nodes)],
         "edges": edges,
     }
@@ -874,6 +918,7 @@ def build_data() -> dict[str, object]:
     cards = load_cards()
     results = parse_results()
     negatives = parse_negatives()
+    explorations = load_explorations()
     process_grade_lessons = parse_process_grade_lessons()
     events = load_events()
     tasks = load_tasks()
@@ -928,6 +973,10 @@ def build_data() -> dict[str, object]:
 
     result_index = reference_index(results, "id")
     negative_index = reference_index(negatives, "tag")
+    exploration_index: dict[str, list[str]] = defaultdict(list)
+    for record in explorations:
+        for claim in record.get("claim_ids", []):
+            exploration_index[str(claim)].append(str(record["id"]))
     event_index = reference_index(events, "id")
     event_by_id = {str(event["id"]): event for event in events}
     for card in cards:
@@ -936,6 +985,12 @@ def build_data() -> dict[str, object]:
         card["evidence_links"] = {
             "result_ids": result_index.get(identifier, []),
             "negative_tags": negative_index.get(identifier, []),
+            "exploration_ids": exploration_index.get(identifier, []),
+            "latest_exploration_id": (
+                exploration_index.get(identifier, [""])[-1]
+                if exploration_index.get(identifier)
+                else ""
+            ),
             "accepted_event_ids": accepted,
             "latest_event_id": accepted[-1] if accepted else "",
         }
@@ -1029,7 +1084,9 @@ def build_data() -> dict[str, object]:
     for event in events:
         event.pop("sequence", None)
 
-    graph = build_graph(cards, results, negatives, events, tasks, gate_definitions)
+    graph = build_graph(
+        cards, results, negatives, explorations, events, tasks, gate_definitions
+    )
 
     status_paths = [REPO / str(card["paths"]["status"]) for card in cards]
     coverage = {
@@ -1038,6 +1095,11 @@ def build_data() -> dict[str, object]:
         "refuted_claims": sum(card.get("lifecycle") == "REFUTED" for card in cards),
         "reusable_results": len(results),
         "negative_records": len(negatives),
+        "proof_explorations": len(explorations),
+        "exploration_verdicts": {
+            verdict: sum(record["verdict"] == verdict for record in explorations)
+            for verdict in ("advanced", "failed", "inconclusive", "parked")
+        },
         "process_grade_lessons": len(process_grade_lessons),
         "accepted_events": len(events),
         "tasks": len(tasks),
@@ -1132,9 +1194,14 @@ def build_data() -> dict[str, object]:
             if unknown
         ],
         "footer_enforcement_date": FOOTER_ENFORCEMENT_DATE,
+        "exploration_prospective_coverage_from": "2026-07-24",
+        "historical_backfill_explorations": sum(
+            record.get("provenance") == "historical-backfill"
+            for record in explorations
+        ),
     }
     return {
-        "schema": "tect/proof-evidence-map/1.0",
+        "schema": "tect/proof-evidence-map/1.1",
         "generator": {
             "path": "verification/scripts/build_proof_evidence_map.py",
             "version": __version__,
@@ -1142,8 +1209,8 @@ def build_data() -> dict[str, object]:
         "authority_boundary": (
             "This projection is complete by reference but is not a tier or proof "
             "authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, "
-            "negative-results/registry.md, changelog/log.jsonl, todo/todo.json, "
-            "and claims/GATES.md remain canonical."
+            "negative-results/registry.md, explorations/log.jsonl, "
+            "changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical."
         ),
         "source_hashes": source_hashes(status_paths),
         "coverage": coverage,
@@ -1154,6 +1221,12 @@ def build_data() -> dict[str, object]:
         "claims": cards,
         "reusable_results": results,
         "negative_records": negatives,
+        "proof_explorations": explorations,
+        "inconclusive_or_parked_exploration_ids": [
+            str(record["id"])
+            for record in explorations
+            if record["verdict"] in {"inconclusive", "parked"}
+        ],
         "process_grade_lessons": process_grade_lessons,
         "accepted_events": events,
         "all_tasks": tasks,
@@ -1178,6 +1251,8 @@ def compact_links(identifiers: list[str], kind: str, maximum: int = 2) -> str:
     shown = identifiers[:maximum]
     if kind == "result":
         links = [f"[{value}](../RESULTS-LEDGER.md#{value.lower()})" for value in shown]
+    elif kind == "exploration":
+        links = [f"[{value}](#{value.lower()})" for value in shown]
     else:
         links = [
             f"[{value}](../negative-results/registry.md#{markdown_anchor(value)})"
@@ -1186,6 +1261,13 @@ def compact_links(identifiers: list[str], kind: str, maximum: int = 2) -> str:
     if len(identifiers) > maximum:
         links.append(f"+{len(identifiers) - maximum}")
     return ", ".join(links)
+
+
+def exploration_evidence_link(reference: str) -> str:
+    path, _, locator = reference.partition("#")
+    label = path.replace("|", "\\|")
+    suffix = f" ({locator})" if locator else ""
+    return f"[`{label}`](../{path}){suffix}"
 
 
 def mermaid_id(identifier: str) -> str:
@@ -1253,6 +1335,10 @@ def render_markdown(data: dict[str, object]) -> str:
     cards = data["claims"]
     results = data["reusable_results"]
     negatives = data["negative_records"]
+    explorations = data["proof_explorations"]
+    exploration_by_id = {
+        str(record["id"]): record for record in explorations
+    }
     process_grade_lessons = data["process_grade_lessons"]
     live_tasks = data["live_tasks"]
     events = data["accepted_events"]
@@ -1266,7 +1352,7 @@ def render_markdown(data: dict[str, object]) -> str:
         "",
         "Use this page to see what succeeded, what failed and why, what remains open,",
         "and where each assertion can be reproduced. The linked claim card, proof note/run,",
-        "result ledger, negative-result entry, gate definition, task ledger, or changelog entry",
+        "result ledger, exploration record, negative-result entry, gate definition, task ledger, or changelog entry",
         "always remains authoritative.",
         "",
         "## One-glance record flow",
@@ -1274,14 +1360,19 @@ def render_markdown(data: dict[str, object]) -> str:
         "```mermaid",
         "flowchart LR",
         '  P["Proof note + reproducible run"] --> C["Claim current state"]',
+        '  P --> E["Append-only route assessment"]',
         '  P --> S["Accepted reusable result / RESULTS-LEDGER"]',
         '  P --> F["Failed route / negative registry"]',
+        '  E --> S',
+        '  E --> F',
+        '  E --> G',
         '  S --> G["Open gate"]',
         '  F --> G',
         '  G --> T["Live TODO frontier"]',
         '  C --> M["This generated evidence map"]',
         '  S --> M',
         '  F --> M',
+        '  E --> M',
         '  T --> M',
         "```",
         "",
@@ -1292,6 +1383,12 @@ def render_markdown(data: dict[str, object]) -> str:
         f"| Status cards | {coverage['status_cards']} | {coverage['active_claims']} active; {coverage['refuted_claims']} refuted |",
         f"| Reusable result records | {coverage['reusable_results']} | Curated theorems, reductions, partial advances, and no-go lemmas with proof anchors |",
         f"| Negative/audit records | {coverage['negative_records']} indexed + {coverage['process_grade_lessons']} legacy process lessons | No-go, falsifier, retraction, and process-audit trust assets with evidence and consequence |",
+        f"| Proof explorations | {coverage['proof_explorations']} | Route decisions: "
+        + ", ".join(
+            f"{verdict} {count}"
+            for verdict, count in coverage["exploration_verdicts"].items()
+        )
+        + "; non-tier-bearing |",
         f"| Accepted chronological events | {coverage['accepted_events']} | Complete history is preserved in the JSON map and `CHANGELOG.md` |",
         f"| Tasks | {coverage['tasks']} | {coverage['live_tasks']} live; {coverage['completed_tasks']} completed |",
         f"| Current route gates | {coverage['current_route_gates']} | {coverage['open_gates']} claim-card gates plus live-task child targets, deduplicated |",
@@ -1311,6 +1408,7 @@ def render_markdown(data: dict[str, object]) -> str:
         f"| Completed-task references to retired gate identifiers | {len(data['coverage_diagnostics']['historical_task_gate_references'])} | Preserved as `historical_gate_reference` nodes anchored to `todo/todo.json`, never mislinked to the current gate registry |",
         f"| Changelog tokens that are not current claim-card IDs | {sum(len(item['claim_ids']) for item in data['coverage_diagnostics']['historical_event_noncard_claim_ids'])} | Preserved in event metadata but never promoted to claim edges; many are historical proof-unit IDs from the legacy extractor |",
         f"| Changelog negative tags absent from the indexed registry | {sum(len(item['tags']) for item in data['coverage_diagnostics']['event_unregistered_negative_tags'])} | Preserved as historical event text, rendered without a false registry anchor, and excluded from negative graph edges |",
+        f"| Historical exploration backfill | {data['coverage_diagnostics']['historical_backfill_explorations']} | Directly recovered from cited tracked evidence; pre-{data['coverage_diagnostics']['exploration_prospective_coverage_from']} chat-only deliberation is explicitly not claimed complete |",
         "",
         "## Current proof-route roadmap",
         "",
@@ -1376,6 +1474,98 @@ def render_markdown(data: dict[str, object]) -> str:
 
     lines += [
         "",
+        "## Proof-exploration decision record",
+        "",
+        "This is the complete projection of `explorations/log.jsonl`. It records",
+        "researcher-reusable route decisions, not private token-by-token reasoning.",
+        "`advanced` is not proof; `failed` is not a formal global no-go unless an",
+        "explicit negative-registry reference is present. Prospective mandatory",
+        f"coverage begins {data['coverage_diagnostics']['exploration_prospective_coverage_from']}; "
+        "older backfill is evidence-limited.",
+        "",
+        "### Recorded inconclusive or parked route assessments",
+        "",
+        "This table is a review aid, not a substitute for the live TODO order.",
+        "",
+        "| Exploration | Reviewed | Verdict | Claim / gate | Finding | Next or resume condition |",
+        "|---|---|---|---|---|---|",
+    ]
+    for record in sorted(
+        [
+            exploration_by_id[identifier]
+            for identifier in data["inconclusive_or_parked_exploration_ids"]
+        ],
+        key=lambda item: (str(item["reviewed_on"]), str(item["id"])),
+    ):
+        owners = ", ".join(claim_link(str(value)) for value in record["claim_ids"])
+        gates = ", ".join(gate_link(str(value)) for value in record["gate_ids"])
+        lines.append(
+            f"| [{record['id']}](#{str(record['id']).lower()}) {pipe(record['title'])} | "
+            f"{record['reviewed_on']} | {record['verdict']} | {owners}"
+            f"{'<br/>' + gates if gates else ''} | {pipe_full(record['finding'])} | "
+            f"{pipe_full(record['next_action'])} |"
+        )
+
+    lines += [
+        "",
+        "### Complete reviewed chronology",
+        "",
+    ]
+    negative_anchors = {
+        str(record["tag"]): str(record["anchor"]) for record in negatives
+    }
+    for record in sorted(
+        explorations,
+        key=lambda item: (str(item["reviewed_on"]), str(item["id"])),
+    ):
+        identifier = str(record["id"])
+        claims_text = ", ".join(
+            claim_link(str(value)) for value in record["claim_ids"]
+        )
+        gates_text = ", ".join(
+            gate_link(str(value)) for value in record["gate_ids"]
+        ) or "-"
+        task_text = f"`{record['task_id']}`" if record.get("task_id") else "-"
+        formal = record["formal_refs"]
+        formal_links = [
+            f"[{value}](../RESULTS-LEDGER.md#{str(value).lower()})"
+            for value in formal["results"]
+        ]
+        formal_links.extend(
+            f"[{value}](../negative-results/registry.md#{negative_anchors[value]})"
+            for value in formal["negatives"]
+        )
+        formal_links.extend(f"`event:{value}`" for value in formal["events"])
+        related = ", ".join(
+            f"{item['relation']} [{item['id']}](#{str(item['id']).lower()})"
+            for item in record["related"]
+        ) or "-"
+        lines += [
+            f'<a id="{identifier.lower()}"></a>',
+            f"#### {identifier} — {record['title']}",
+            "",
+            f"- **Review metadata:** reviewed {record['reviewed_on']}; recorded "
+            f"{record['recorded_at']}; `{record['provenance']}`; verdict "
+            f"**{record['verdict']}**.",
+            f"- **Structured scope:** claim {claims_text}; gate {gates_text}; task {task_text}.",
+            f"- **Question:** {record['question']}",
+            "- **Finite checks:** " + " ".join(
+                f"({number}) {method}" for number, method in enumerate(record["method"], start=1)
+            ),
+            f"- **Finding:** {record['finding']}",
+            f"- **Decision reason:** {record['decision_reason']}",
+            f"- **Boundary:** {record['boundary']}",
+            f"- **Next / revisit condition:** {record['next_action']}",
+            f"- **Related explorations:** {related}",
+            f"- **Formal authorities:** {', '.join(formal_links) or '-'}",
+            "- **Located evidence:** " + "; ".join(
+                exploration_evidence_link(value) for value in record["evidence_refs"]
+            ),
+            "",
+        ]
+
+    lines += [
+        "",
         "## Claim evidence matrix",
         "",
         "Each row links current state, accepted evidence, retired routes, open gates,",
@@ -1390,8 +1580,8 @@ def render_markdown(data: dict[str, object]) -> str:
         lines += [
             f"### Sector {sector}",
             "",
-            "| Claim | State | Evidence grade | Proof trail | Accepted reusable results | Negative/audit history | Current route gates | Latest accepted step | Reproduce |",
-            "|---|---|---|---|---|---|---|---|---|",
+            "| Claim | State | Evidence grade | Proof trail | Accepted reusable results | Negative/audit history | Explorations | Current route gates | Latest accepted step | Reproduce |",
+            "|---|---|---|---|---|---|---|---|---|---|",
         ]
         for card in sector_cards:
             links = card["evidence_links"]
@@ -1419,6 +1609,7 @@ def render_markdown(data: dict[str, object]) -> str:
                 f"{trail} | "
                 f"{compact_links(links.get('result_ids', []), 'result')} | "
                 f"{compact_links(links.get('negative_tags', []), 'negative')} | "
+                f"{compact_links(links.get('exploration_ids', []), 'exploration')} | "
                 f"{gate_text} | {pipe(latest_text)} | {reproduce} |"
             )
         lines.append("")
@@ -1514,13 +1705,15 @@ def render_markdown(data: dict[str, object]) -> str:
         "| `claims/*/status.json` | Current statement, scope, tier, lifecycle, dependencies, evidence grade, falsifier, gate, next action, and reproduction command |",
         "| `RESULTS-LEDGER.md` | Every indexed reusable success and its detailed proof/boundary fields |",
         "| `negative-results/registry.md` | Every indexed failed/retracted/audit route and its failure/evidence/consequence fields |",
+        "| `explorations/log.jsonl` | Every append-only proof-route question, finite check, verdict, boundary, next/revisit condition, and structured formal link |",
         "| `changelog/log.jsonl` | Every accepted chronological event, note, script, claim, and negative-result link |",
         "| `todo/todo.json` | Live route order, ownership, blockers, and completed-work coverage |",
         "| `claims/GATES.md` | Definitions and registered status of every claim-card or live-task current route gate |",
         "",
         "The generator fails on duplicate IDs, missing result/negative detail or index entries,",
-        "unknown task claims, undefined live-task/current route gates, post-policy footer",
-        "omissions, malformed JSON, unresolved graph edges, or stale output.",
+        "unknown task claims, undefined live-task/current route gates, rewritten or",
+        "unresolved exploration entries, post-policy footer omissions, malformed JSON,",
+        "unresolved graph edges, or stale output.",
         "It writes both outputs atomically and is part of `regen_all.py`, `doctor.py`, and",
         "`release_check.py` through the shared gate list.",
         "",
@@ -1528,9 +1721,10 @@ def render_markdown(data: dict[str, object]) -> str:
         "python verification/scripts/build_proof_evidence_map.py",
         "python verification/scripts/build_proof_evidence_map.py --check",
         "python verification/scripts/build_proof_evidence_map.py --self-test",
+        "python verification/scripts/exploration.py verify",
         "```",
         "",
-        "For token-efficient research, search this map by claim, result, failure tag, or gate",
+        "For token-efficient research, search this map by claim, result, exploration, failure tag, or gate",
         "instead of loading it in full; open only the linked canonical records needed for the task.",
         "",
     ]
@@ -1600,6 +1794,7 @@ def main() -> int:
             f"({coverage['status_cards']} status cards; "
             f"{coverage['reusable_results']} results; "
             f"{coverage['negative_records']} negative records; "
+            f"{coverage['proof_explorations']} explorations; "
             f"{coverage['accepted_events']} events; "
             f"{coverage['tasks']} tasks)"
         )
@@ -1614,6 +1809,7 @@ def main() -> int:
         f"({coverage['status_cards']} status cards; "
         f"{coverage['reusable_results']} results; "
         f"{coverage['negative_records']} negative records; "
+        f"{coverage['proof_explorations']} explorations; "
         f"{coverage['accepted_events']} events; "
         f"{coverage['tasks']} tasks)"
     )

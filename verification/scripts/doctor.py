@@ -16,9 +16,9 @@ verification-first workflow. No physics constants are hardcoded; the only
 literal is the minimum supported Python version (a tooling requirement, not a
 result).
 """
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 __first_issued__ = "2026-06-07"
-__version_issued__ = "2026-07-23"
+__version_issued__ = "2026-07-24"
 
 import importlib.util
 import shutil
@@ -84,7 +84,8 @@ def main() -> int:
     # 3. canonical files present (resume needs these readable)
     needed = ["CLAUDE.md", "GOVERNANCE.md", "CLAIMS.md", "ROADMAP.md",
               "CHANGELOG.md", "TODO.md", "todo/todo.json",
-              "negative-results/registry.md", "SESSION.md"]
+              "negative-results/registry.md", "explorations/log.jsonl",
+              "SESSION.md"]
     missing = [f for f in needed if not (REPO / f).exists()]
     record(not missing, "canonical-files",
            "all present" if not missing else f"MISSING: {missing}")

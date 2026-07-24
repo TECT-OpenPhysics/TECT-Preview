@@ -5,6 +5,12 @@ not pillar counts.
 
 ---
 
+## [Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24
+
+Added a canonical append-only proof-exploration ledger for every substantive route assessment: precise question, finite checks, finding, scoped verdict, decision reason, honest boundary, evidence, and next or revisit condition. The CLI has add, search, verify, and self-test operations but deliberately no edit or delete command; verification enforces canonical sequential JSONL, structured reference resolution, backward-only relations, and preservation of the Git HEAD prefix after CRLF/LF normalization. The shared readiness and release spine now checks ledger integrity before checking its complete proof-map projection.
+
+Recovered thirteen previously unindexed A13 route assessments directly from tracked notes, runs, and changelog evidence, including adapted-control nontransfer, expectation-only causal completion, heat-current covariance scope, circular normalizer reformulations, the heat-dummy misidentification, progressive range revisits, the NPC localization fork, the cone-tip transition, the linear-Carleson versus finite-secant boundary, the cone-sign correction, unreconstructible v1.0 provenance, and shellwise repeated-Young loss. The ten already formal A13 negative/audit records remain in the negative registry and are linked rather than duplicated. Prospective mandatory coverage begins 2026-07-24; earlier chat-only deliberation is explicitly not claimed complete or reconstructed. No claim tier, lifecycle, gate, or mathematical theorem changed.
+
 ## [Reject and repair semantically unsafe proof-map draft] - 2026-07-24
 
 The pre-commit adversarial audit rejected whole-record family inference, leaking registry boundaries, platform-sensitive source hashes and manifest discovery, omitted live child-gate ownership, and clipped honesty boundaries. The generator now derives claim edges only from structured or explicit canonical fields, preserves legacy/unindexed diagnostics, uses cross-platform deterministic evidence classes, and tests the concrete false-edge and bypass cases. No claim tier changed.

@@ -29,10 +29,12 @@ Changelog:
         every tracked bundle MANIFEST has a stamped repo_commit, not the publish placeholder.
   1.2.0 (2026-07-23) shared gates include the complete-by-reference global proof
         evidence map and its registry/graph/staleness checks.
+  1.3.0 (2026-07-24) shared gates verify the append-only proof-exploration
+        ledger before checking its complete evidence-map projection.
 """
-__version__ = "1.2.0"
+__version__ = "1.3.0"
 __first_issued__ = "2026-06-05"
-__version_issued__ = "2026-07-23"
+__version_issued__ = "2026-07-24"
 
 import ast
 import json

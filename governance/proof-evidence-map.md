@@ -2,8 +2,9 @@
 
 **Binding from:** 2026-07-23. The proof evidence map is the global navigation
 and audit surface for the complete TECT development record. It exists to make
-successful advances, failed routes, reasons for failure, current gates, and
-reproduction anchors visible together without creating a second truth store.
+successful advances, proof-route explorations, failed routes, reasons for
+failure, current gates, and reproduction anchors visible together without
+creating a second truth store.
 
 ## 1. Generated surfaces
 
@@ -24,8 +25,9 @@ gate, verdict, reproduction contract, or proof boundary. Authority remains:
 4. `todo/todo.json` for current work order and blockers;
 5. `RESULTS-LEDGER.md` for accepted reusable results;
 6. `negative-results/registry.md` for failed, retracted, and audit routes;
-7. `changelog/log.jsonl` for accepted chronology;
-8. `CATALOG.md` / `verification/catalog.json` for file inventory and hashes.
+7. `explorations/log.jsonl` for non-tier-bearing route assessments;
+8. `changelog/log.jsonl` for accepted chronology;
+9. `CATALOG.md` / `verification/catalog.json` for file inventory and hashes.
 
 If map prose conflicts with an authority, the authority wins and the generated
 map is stale or defective.
@@ -33,8 +35,9 @@ map is stale or defective.
 ## 3. Coverage contract
 
 Every real claim status card (excluding scaffolds), reusable-result index/detail
-pair, negative-result index/detail pair, accepted changelog event, task, and
-current claim-card/live-task route gate is projected. Per-claim lineage-note,
+pair, negative-result index/detail pair, proof-exploration record, accepted
+changelog event, task, and current claim-card/live-task route gate is projected.
+Per-claim lineage-note,
 legacy unordered root-note, PDF, run-JSON, claim-level manifest, top-level
 bundle manifest, and frozen embedded-manifest paths are inventoried in disjoint
 classes. The generated `LINEAGE.md` remains the ordered drill-down.
@@ -47,6 +50,7 @@ The generator fails rather than silently omit data when it encounters:
 - duplicate identifiers;
 - a result or negative entry whose index and detail sections do not match;
 - a negative entry lacking `Failure mode`, `Evidence`, or `Consequence`;
+- a malformed, rewritten, noncanonical, or unresolved proof-exploration record;
 - an invalid task status, unknown task claim, unresolved `T-NNN` blocker, or
   undefined gate target on a live task;
 - an unknown hard/soft dependency;
@@ -74,15 +78,18 @@ consolidation. Negative records retain distinct kinds: retraction, fired
 falsifier, no-go, and audit.
 
 Graph node identifiers are namespaced (`claim:`, `result:`, `negative:`,
-`event:`, `gate:`, `task:`). Exact claim references are preferred. A short
+`exploration:`, `event:`, `gate:`, `task:`). Exact claim references are preferred. A short
 family reference such as `A13` is attached only when it occurs in a structured
 host field and that family has exactly one real claim card. Result ownership is
 derived only from `Proven in`; chronology uses only explicit known
 `claim_ids`; negative/audit ownership uses structured fields and explicit
 negative-event links. Free-form fixture tokens never create claim edges, every
 inference basis is recorded, and ambiguous references remain unbound. The
-generator never invents a proof-successor or route-replacement edge from prose;
-current route order comes from TODO and registered gate ownership.
+generator never invents a proof-successor or route-replacement edge from prose.
+Exploration edges come only from its structured claim/task/gate/formal/related
+fields; `advanced` never becomes a proof edge and `failed` never becomes a
+formal no-go edge without an explicit registry reference. Current route order
+comes from TODO and registered gate ownership.
 
 A completed task may preserve a retired gate identifier that no longer has a
 current `claims/GATES.md` definition. Such a node is explicitly typed
@@ -95,7 +102,7 @@ Linux generate byte-identical projections from the same tracked content.
 
 ## 5. Update workflow
 
-Normal claim, result, failure, changelog, gate, or TODO updates require no
+Normal claim, result, failure, exploration, changelog, gate, or TODO updates require no
 separate map edit. Regenerate all derived surfaces:
 
 ```bash
@@ -107,6 +114,7 @@ Direct checks are:
 ```bash
 python verification/scripts/build_proof_evidence_map.py --self-test
 python verification/scripts/build_proof_evidence_map.py --check
+python verification/scripts/exploration.py verify
 ```
 
 The map check is registered once in `verification/scripts/gates.py`; therefore
@@ -128,6 +136,8 @@ This preserves the full record while minimizing repeated context loading.
 
 ## 7. History
 
+- 2026-07-24: v1.1 added complete append-only proof-exploration projection,
+  structured graph edges, and the exploration-integrity prerequisite.
 - 2026-07-23: v1 policy established the generated Markdown/JSON evidence map,
   complete registry projection, namespaced graph, staleness gate, atomic
   writes, and token-efficient lookup rule.

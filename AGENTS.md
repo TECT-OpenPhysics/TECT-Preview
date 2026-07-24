@@ -11,7 +11,8 @@ is only the session protocol.
 3. `ROADMAP.md` (priority queue)
 4. `CHANGELOG.md` (top entry)
 5. `negative-results/registry.md` (top entries)
-6. `TODO.md` (live task ledger — what is in progress / next)
+6. `explorations/log.jsonl` (latest proof-route decisions)
+7. `TODO.md` (live task ledger — what is in progress / next)
 
 Then run `date -u +"%Y-%m-%d (%A)"` as the first shell command and emit one
 status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
@@ -54,9 +55,14 @@ Do not load the complete map when a narrow lookup is sufficient.
   file add/move/version; CI checks sync.
 - `theory/proof-evidence-map.md` + `verification/proof-evidence-map.json` are
   generated — never hand-edit. They project all current claims, accepted
-  reusable results, failed routes, events, tasks, gates, and evidence paths.
+  reusable results, proof explorations, failed routes, events, tasks, gates,
+  and evidence paths.
   Regenerate with `python verification/scripts/build_proof_evidence_map.py`;
   policy: `governance/proof-evidence-map.md`.
+- `explorations/log.jsonl` is append-only — never edit or delete an existing
+  line. Add one record or a batch with `python verification/scripts/exploration.py
+  add --file ...`; corrections are new records. Policy:
+  `governance/proof-exploration-ledger.md`.
 - `TODO.md` is generated from `todo/todo.json` — never hand-edit; manage with
   `python verification/scripts/todo.py {list,add,start,done,block,set,render}`.
 - `CHANGELOG.md` is generated from `changelog/log.jsonl` (append-only) — never
@@ -80,6 +86,16 @@ Do not load the complete map when a narrow lookup is sufficient.
   respect for the T7 prohibition list (GOVERNANCE.md §5).
 - Every numerical claim needs a reproducible script + self-test asserts + JSON
   artefact under `claims/<ID>/runs/` before it is cited as evidence.
+- **File-write-before-route-verdict:** before reporting a substantive proof
+  route as advanced, failed, inconclusive, parked, repaired, or superseded,
+  append the researcher-reusable decision to `explorations/log.jsonl` in the
+  same response. Capture the exact question, finite checks, finding, reason,
+  boundary, evidence, and next/revisit condition — not private token-by-token
+  reasoning or trivial algebra. Formal successes and failures must still be
+  promoted to their existing proof/result/negative authorities. Accumulate
+  exploration entries during a proof-first batch and perform formal notes,
+  PDFs, regeneration, verification, commit, and push once at the next logical
+  checkpoint rather than once per entry.
 
 ## 4. Commit discipline
 

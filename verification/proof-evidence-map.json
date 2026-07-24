@@ -1,13 +1,13 @@
 {
-  "schema": "tect/proof-evidence-map/1.0",
+  "schema": "tect/proof-evidence-map/1.1",
   "generator": {
     "path": "verification/scripts/build_proof_evidence_map.py",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
-  "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
+  "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "2d84d9c82ccef9b9fc118f935b8699705f4b6adaba24be8a8fa01fbce83f5997",
-    "changelog/log.jsonl": "b8dd09a3815af3fdfed70904c1856b6ebe263ecb168a8d98abfe4d6bdd68556d",
+    "changelog/log.jsonl": "fd082dab0a6c39f1406bfd8688c35369e7a1f85228f07a7a6f80cd418b62a310",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,6 +58,7 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "aa38f4ca093a3aca17b6018a1605f9fcdcd122512307d31d0caad41de68984cd",
+    "explorations/log.jsonl": "bdf99877c5390f9d697b28caaa62bd89cbda10256792ac4e6c019426727b3008",
     "negative-results/registry.md": "f6a188aabc1b2ab4202a3811f6a6fc92e378d10687af47718e483c96b46c1022",
     "todo/todo.json": "7a532e57a0ba3417e3c0a06e492b795b9a96658e223c7d7e0f0541a82c312422"
   },
@@ -67,8 +68,15 @@
     "refuted_claims": 1,
     "reusable_results": 68,
     "negative_records": 40,
+    "proof_explorations": 13,
+    "exploration_verdicts": {
+      "advanced": 1,
+      "failed": 5,
+      "inconclusive": 5,
+      "parked": 2
+    },
     "process_grade_lessons": 3,
-    "accepted_events": 351,
+    "accepted_events": 352,
     "tasks": 51,
     "live_tasks": 7,
     "completed_tasks": 44,
@@ -1998,7 +2006,9 @@
         ]
       }
     ],
-    "footer_enforcement_date": "2026-07-24"
+    "footer_enforcement_date": "2026-07-24",
+    "exploration_prospective_coverage_from": "2026-07-24",
+    "historical_backfill_explorations": 13
   },
   "sectors": [
     {
@@ -2608,6 +2618,8 @@
           "AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT",
           "NG-2026-legacy-convention"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -2701,6 +2713,8 @@
         "negative_tags": [
           "AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-a1-split-identity-branch-manifest",
           "20260623-a1-manifest-v11-vacuous-gate-fix",
@@ -2804,6 +2818,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260717-register-p1-production-functional-variational-a",
           "20260717-close-p1-reference-functional-variational-scaff",
@@ -2986,6 +3002,8 @@
         "negative_tags": [
           "AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-a1-split-identity-branch-manifest",
           "20260623-a1-manifest-v11-vacuous-gate-fix",
@@ -3074,6 +3092,8 @@
         "negative_tags": [
           "AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-a1-split-identity-branch-manifest",
           "20260623-a1-manifest-v11-vacuous-gate-fix",
@@ -3182,6 +3202,8 @@
           "F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM",
           "F-2026-07-21-A10-NAIVE-ACTION-COMPOSITION"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260721-prove-a10-relative-commutator-structural-reduct",
           "20260721-repair-a10-covariance-normalization-and-isolate",
@@ -3288,6 +3310,8 @@
         "negative_tags": [
           "F-2026-07-21-A10-PAST-ENERGY-UPPER-FORM"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260721-a11-true-increment-determinant-closes-action-re"
         ],
@@ -3398,6 +3422,8 @@
         "negative_tags": [
           "NG-2026-07-21-A12-SHARP-CUBE-SCALAR-BUDGET"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260721-prove-the-sharp-cube-class-ii-source-square-ana",
           "20260721-refute-the-separated-sharp-cube-source-budget-a",
@@ -3716,6 +3742,22 @@
           "NG-2026-07-21-A13-RELATIVE-PHASE-SOURCE-BUDGET",
           "NG-2026-07-21-A13-LOCAL-BELLMAN-BARRIER"
         ],
+        "exploration_ids": [
+          "EXP-000001",
+          "EXP-000002",
+          "EXP-000003",
+          "EXP-000004",
+          "EXP-000005",
+          "EXP-000006",
+          "EXP-000007",
+          "EXP-000008",
+          "EXP-000009",
+          "EXP-000010",
+          "EXP-000011",
+          "EXP-000012",
+          "EXP-000013"
+        ],
+        "latest_exploration_id": "EXP-000013",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -3733,9 +3775,10 @@
           "20260723-a13-strict-past-joint-score-and-heat-current-re",
           "20260723-a13-backward-heat-martingale-and-square-coupled",
           "20260723-a13-npc-cone-and-martingale-injection-reduction",
-          "20260723-a13-tip-safe-grouped-harvest-reduction-2026-07"
+          "20260723-a13-tip-safe-grouped-harvest-reduction-2026-07",
+          "20260724-add-append-only-proof-exploration-ledger-and-a1"
         ],
-        "latest_event_id": "20260723-a13-tip-safe-grouped-harvest-reduction-2026-07",
+        "latest_event_id": "20260724-add-append-only-proof-exploration-ledger-and-a1",
         "live_task_gate_ids": [
           "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
         ],
@@ -3825,6 +3868,8 @@
         "negative_tags": [
           "AUDIT-2026-07-20-SECTOR-A-BASELINE-STATUS-DRIFT"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260717-start-a2-full-production-pde-proof-candidate-20",
           "20260717-close-a2-full-production-nonlinear-mapping-audi",
@@ -3929,6 +3974,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-a2-pde-wellposedness-t6-conditional",
@@ -4071,6 +4118,8 @@
         "negative_tags": [
           "AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260717-register-p3-full-production-discretization-scaf",
           "20260717-close-p3-finite-time-manufactured-and-cross-gri",
@@ -4175,6 +4224,8 @@
         "negative_tags": [
           "AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-a3-split-uv-t6-correlators-open",
           "20260623-a3-graphwise-convergence-proved-t6",
@@ -4281,6 +4332,8 @@
         "negative_tags": [
           "AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-a3-split-uv-t6-correlators-open",
           "20260623-a3uv-t6-approved-correlators-resubmit-corrections",
@@ -4398,6 +4451,8 @@
           "AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT",
           "AUDIT-2026-07-19-A4-Q0-ZERO-SHELL-BOUNDARY"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260718-p4-scalar-spectral-constructive-measure-closed",
           "20260718-p4-integrated-evidence-boundary-aligned-with-t5",
@@ -4575,6 +4630,8 @@
           "AUDIT-2026-07-19-A5-DEPENDENCY-PIN-DRIFT",
           "AUDIT-2026-07-19-A5-BUNDLE-NOTE-PDF-COMPLETENESS"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260718-p5-branch-aware-sector-a-synthesis-prepared-for",
           "20260719-enact-operator-confirmed-a5-branch-aware-synthe",
@@ -4663,6 +4720,8 @@
           "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM",
           "NG-2026-07-20-A6-BARE-CLASSII-L1"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260720-close-the-fixed-floor-class-ii-k-current-and-sp"
         ],
@@ -4748,6 +4807,8 @@
           "NG-2026-07-20-A6-NAIVE-W-SUBTRACTION-NONUNIFORM",
           "NG-2026-07-20-A6-BARE-CLASSII-L1"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260720-prove-a6-derivative-class-ii-uv-power-counting",
           "20260720-bound-a6-counterterm-conclusion-against-bare-co",
@@ -4845,6 +4906,8 @@
           "F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM",
           "NG-2026-07-20-A7-W-ZEROSET-BARE-INFERENCE"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260720-a7-full-class-ii-renormalised-energy-composite",
           "20260720-a7-adversarial-repair-closes-the-rational-coeff"
@@ -4939,6 +5002,8 @@
           "R-052"
         ],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260720-close-the-decoupled-class-ii-nelson-theorem-and",
           "20260720-complete-the-a8-closure-record-after-empty-stdi"
@@ -5066,6 +5131,8 @@
         "negative_tags": [
           "F-2026-07-21-A7-INFINITESIMAL-COMMUTATOR-FORM"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260720-a9-exact-smart-path-cancellation-and-frozen-she",
           "20260721-falsify-a7-infinitesimal-tilted-commutator-boun"
@@ -5566,6 +5633,8 @@
           "R-2026-legacy-rh-overclaim",
           "NG-2026-legacy-ordered-vacuum"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -5929,6 +5998,8 @@
           "R-011"
         ],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260605-m1-migration-sector-b-evidence-chain-migrated-r",
           "20260605-m1-reorg-archive-per-tag-layout-first-tsv2-theo",
@@ -6061,6 +6132,8 @@
           "R-2026-07-16-N001-BCC-SEED-COLLAPSE",
           "R-2026-06-23-b3-bcc-structural-selection"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-migration-batch4-b3-reframe-continuum",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -6126,6 +6199,8 @@
         "negative_tags": [
           "R-2026-06-23-b3-bcc-structural-selection"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope"
         ],
@@ -6184,6 +6259,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-operator-review2-a2v12-b4-open-c6-blocked",
           "20260623-a2-t6-approved-b4-footer-fixed"
@@ -6248,6 +6325,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260623-migration-batch3-b4-massgap-verbatim",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -7119,6 +7198,8 @@
           "AUDIT-2026-06-08-scscope-lift-overclaim",
           "NG-2026-06-07-scscope-endpoint-joint"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260605-step-5b-reduction-pattern-generic-gershgorin-re",
           "20260605-step-5b-closed-region-matching-lemmas-derived-n",
@@ -7254,6 +7335,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7310,6 +7393,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7363,6 +7448,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7417,6 +7504,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7478,6 +7567,8 @@
         "negative_tags": [
           "R-2026-legacy-newtonG-label"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7536,6 +7627,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever",
           "20260623-operator-verdicts-b3-retire-b4-massgap-scope",
@@ -7597,6 +7690,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7652,6 +7747,8 @@
         "negative_tags": [
           "F-2026-04-30-flat-cartan"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7705,6 +7802,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7758,6 +7857,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7813,6 +7914,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -7869,6 +7972,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -7925,6 +8030,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -7980,6 +8087,8 @@
         "negative_tags": [
           "NG-2026-legacy-classical-hbar"
         ],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-reviewer-facing-comprehensive-proof-unit-index",
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
@@ -8039,6 +8148,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -8099,6 +8210,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -8158,6 +8271,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -8217,6 +8332,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -8275,6 +8392,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [],
         "latest_event_id": "",
         "live_task_gate_ids": [],
@@ -8333,6 +8452,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -8392,6 +8513,8 @@
       "evidence_links": {
         "result_ids": [],
         "negative_tags": [],
+        "exploration_ids": [],
+        "latest_exploration_id": "",
         "accepted_event_ids": [
           "20260609-toe-completeness-audit-ledger-18-29-claims-ever"
         ],
@@ -11762,6 +11885,541 @@
       },
       "family_refs": []
     }
+  ],
+  "proof_explorations": [
+    {
+      "boundary": "This does not refute an adapted signed global estimate or the one-use theorem.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The available estimates have the wrong law or regularity scope for the adapted one-use theorem.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-translation-model-reduction-260722-v1.0.tex.txt#L414-L417",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-universal-q-cm-translation-260722-v1.0.tex.txt#L394-L397",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L585-L605",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt#L518-L521"
+      ],
+      "finding": "The deterministic statements and uncontrolled-base tails do not control the adapted tilted law; direct Malliavin integration by parts introduces an unpaid derivative of the control.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-060",
+          "R-061",
+          "R-066",
+          "R-068"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000001",
+      "method": [
+        "Compare the deterministic translation and universal-Q hypotheses with the adapted-shift target.",
+        "Test whether Gaussian integration by parts differentiates the control and whether the Boue-Dupuis cost pays that derivative.",
+        "Check the probability-law scope of the score-tail estimate."
+      ],
+      "next_action": "Isolate Gaussian-rooted terms and prove a signed global relative-form or backward log-Laplace estimate without differentiating the control.",
+      "provenance": "historical-backfill",
+      "question": "Can deterministic translation positivity, deterministic Cameron-Martin continuity, or uncontrolled Gaussian score tails be reused after the control becomes adapted?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Deterministic and Gaussian-base estimates do not transfer to adapted control",
+      "verdict": "inconclusive"
+    },
+    {
+      "boundary": "This is distinct from the formal endpoint-timewise Young no-go and does not refute a coupled signed reconstruction.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The decoupled architecture manufactures false coercivity and exhausts the moment budget before the signed reconstruction is used.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-translation-model-reduction-260722-v1.0.tex.txt#L408-L412",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-translation-model-reduction-260722-v1.0.tex.txt#L430-L433"
+      ],
+      "finding": "Separate absolute values lose the centered Gaussian cancellation, while endpoint paraproduct Young estimates consume the available moment and leave no absorption slot.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-060"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT"
+      ],
+      "id": "EXP-000002",
+      "method": [
+        "Separate the translated identity into termwise absolute-value estimates.",
+        "Track the centered Gaussian cancellation and the endpoint random-moment budget."
+      ],
+      "next_action": "Do not retry termwise decoupling unless a new identity preserves the centered signed cancellation and supplies an independent moment reserve.",
+      "provenance": "historical-backfill",
+      "question": "Can the first translation terms be estimated separately by absolute values and ordinary paraproduct Young inequalities?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Termwise absolute-value decoupling destroys the translated cancellation",
+      "verdict": "failed"
+    },
+    {
+      "boundary": "The valid strict-past expectation identity and its signed-charge reduction remain intact.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The required conditional independence is absent pointwise and under noncausal predictors.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-strict-past-signed-causal-reduction-260723-v1.0.tex.txt#L247-L255",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-primary-strict-past-signed-causal-reduction/result.json#completion_is_expectation_only_not_pointwise",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-independent-strict-past-signed-causal-reduction/result.json#negative-controls"
+      ],
+      "finding": "The identity holds after conditional expectation only; the pointwise gap is negative in the executable witness, and present-shell or future dependence destroys centering.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-064"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND"
+      ],
+      "id": "EXP-000003",
+      "method": [
+        "Compare conditional expectation cancellation with the pointwise integrand.",
+        "Run the registered pointwise-gap and noncausal negative controls."
+      ],
+      "next_action": "Do not extend the lemma beyond strict past without a separate noncausal or anticipating identity.",
+      "provenance": "historical-backfill",
+      "question": "Can the strict-past causal completion be promoted to a pointwise square identity or extended to present-shell and future-dependent predictors?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Strict-past causal completion is expectation-only",
+      "verdict": "failed"
+    },
+    {
+      "boundary": "This does not invalidate the heat-current identity in its declared covariance scope.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The identity is exact only under the pinned covariance, and an additional global Cartan/form inequality is still missing.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-strict-past-joint-score-heat-current-reduction-260723-v1.0.tex.txt#L74-L81",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-23-independent-strict-past-joint-score-heat-current-reduction/result.json#correlated_failure"
+      ],
+      "finding": "The correlated synthetic control produces a nonzero failure, and the heat-semigroup formula identifies curvature without estimating its global sum.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-065"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND"
+      ],
+      "id": "EXP-000004",
+      "method": [
+        "Replace the pinned entrywise-real-even covariance by a correlated synthetic covariance.",
+        "Separate exact curvature identification from cutoff-uniform summation."
+      ],
+      "next_action": "Retain the covariance restriction or prove a replacement decorrelation identity, then establish the cutoff-uniform Cartan/form bound.",
+      "provenance": "historical-backfill",
+      "question": "Does the conditional heat-current identity survive correlated value-derivative covariance and already bound the global shell sum?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Heat-current identity depends on pinned covariance and is not a global estimate",
+      "verdict": "inconclusive"
+    },
+    {
+      "boundary": "The Gibbs-Pythagoras identity itself remains exact and useful.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "Every proposed reformulation is circular at the missing lower-bound step.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L599-L605",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L627-L630"
+      ],
+      "finding": "The normalizers remain past-dependent, and the reformulations rename the same unresolved averaged raw-current form without supplying an estimate.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-066"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND"
+      ],
+      "id": "EXP-000005",
+      "method": [
+        "Track the filtration dependence of each normalizer.",
+        "Rewrite the unresolved form in entropy, HJB, and drift language and check whether any new lower bound appears."
+      ],
+      "next_action": "Independently lower-bound the averaged raw-current/Cartan-Jacobi form before invoking any equivalent entropy or drift representation.",
+      "provenance": "historical-backfill",
+      "question": "Can Gibbs-Pythagoras and its past-dependent sequential normalizers close Nelson by entropy, HJB, or Foellmer-drift reformulation alone?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Sequential normalizers do not close the Nelson estimate",
+      "verdict": "inconclusive"
+    },
+    {
+      "boundary": "The terminal-backward heat-martingale construction with a genuinely constant dummy is unaffected.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The substitution changes the differentiated object and is not an identity.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L372-L373",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L632-L636"
+      ],
+      "finding": "The actual future field has a spatial derivative that the heat dummy does not; identifying them deletes a term and corrupts the Cartan formula.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-066"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND"
+      ],
+      "id": "EXP-000006",
+      "method": [
+        "Differentiate both substitutions spatially and compare the Cartan terms.",
+        "Audit the omitted future-field derivative."
+      ],
+      "next_action": "Do not reuse this substitution; any actual-field derivation must retain and control the omitted derivative.",
+      "provenance": "historical-backfill",
+      "question": "Can the spatially constant heat dummy be replaced pathwise by the actual future Gaussian field in the Cartan calculation?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Heat dummy cannot be identified with the future Gaussian field",
+      "verdict": "failed"
+    },
+    {
+      "boundary": "This is a scope boundary, not a counterexample to the ordered one-shot theorem.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The current reduction is proved only for mutually orthogonal one-shot shell controls.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L543-L551",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt#L642-L646"
+      ],
+      "finding": "The identity Z_(j0-1)=P_<j0 Z_J fails and the low-block estimate needs an additional control term.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-066"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND"
+      ],
+      "id": "EXP-000007",
+      "method": [
+        "Recompute the terminal low projection after a later control revisits the range.",
+        "Check whether the one-shot orthogonal-shell hypothesis can be removed without a new term."
+      ],
+      "next_action": "Resume only with a separate progressive-flow reduction that pays the revisit term.",
+      "provenance": "historical-backfill",
+      "question": "Does the finite-low-block identity remain valid when a progressive control later revisits an already used low Fourier range?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Ordered one-shot shell proof does not cover progressive range revisits",
+      "verdict": "parked"
+    },
+    {
+      "boundary": "Neither failure refutes a grouped nonlinear NPC-Carleson or paradifferential bridge.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "Each natural path preserves only one of the two load-bearing properties.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-npc-cone-martingale-injection-reduction-260723-v1.0.tex.txt#L490-L523"
+      ],
+      "finding": "The cone logarithm contains all Fourier frequencies, so the one-shot Bessel estimate does not apply directly; the affine path preserves shell support but loses the Jacobi sign.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-067"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
+      ],
+      "id": "EXP-000008",
+      "method": [
+        "Inspect Fourier support of the nonlinear cone logarithm.",
+        "Compare Jacobi convexity along the affine physical path."
+      ],
+      "next_action": "Combine localization and sign through the finite-cutoff production good/bad Schur-Jacobi lemma.",
+      "provenance": "historical-backfill",
+      "question": "Can either the cone logarithm or the affine physical path alone localize the shell increment while retaining the Jacobi sign?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "NPC logarithmic path and affine physical path leave opposite gaps",
+      "verdict": "inconclusive"
+    },
+    {
+      "boundary": "No finite first-variation theorem at every cone-tip contact is claimed.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The proof route was repaired by changing from a tangent formula to a strong whole-secant inequality.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-npc-cone-martingale-injection-reduction-260723-v1.0.tex.txt#L533-L543",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/status.json#scope",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_tip_safe_grouped_harvest_carleson_reduction_manifest.json#scope"
+      ],
+      "finding": "The later whole-secant and physical endpoint-distance estimates resolve tip crossing without a tangent, but they do not identify a finite separate first variation at every tip contact.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-067",
+          "R-068"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
+      ],
+      "id": "EXP-000009",
+      "method": [
+        "Audit the r=0 completion by approximation and lower semicontinuity.",
+        "Compare cone-log displacement with the production physical endpoint distance.",
+        "Recheck the issue after the tip-safe grouped-harvest result."
+      ],
+      "next_action": "Use the whole secant in the good/bad Schur-Jacobi lemma; revisit a separate tangent only if a later argument genuinely requires it.",
+      "provenance": "historical-backfill",
+      "question": "Can smooth nonpositive curvature be used directly at the cone tip, and does ambient cone comparison control physical displacement?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000008",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Cone-tip whole secant is closed but separate first variation remains open",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "The linear Carleson theorem and uncontrolled-base covariance-tail rates remain valid in their stated scope.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The estimate controls the complete linearized score, not the grouped finite secant under adapted control.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt#L175-L184",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt#L513-L521"
+      ],
+      "finding": "Finite path integration creates an unresolved nonlinear coefficient-curvature term, and the linear estimate has a fixed coefficient rather than the arbitrary allocation needed for closure.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-068"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
+      ],
+      "id": "EXP-000010",
+      "method": [
+        "Integrate the linear score along a finite path and retain the coefficient-curvature remainder.",
+        "Check whether the fixed Carleson coefficient can be made into an arbitrary absorption allocation."
+      ],
+      "next_action": "Prove a grouped good/bad finite-secant estimate and apply Gaussian tails only after causal Gaussian-root isolation.",
+      "provenance": "historical-backfill",
+      "question": "Does the complete linearized conservative-score Carleson bound already control the finite inserted-shell path?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000009",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Linear score Carleson control is not a grouped finite-secant estimate",
+      "verdict": "inconclusive"
+    },
+    {
+      "boundary": "The universal-Q theorem survives, and later complete-tree classification and balanced reconstruction supply the valid replacement.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The earlier sign and total-tree inference exceeded what the localized calculation proved.",
+      "evidence_refs": [
+        "changelog/log.jsonl#event-20260722-correct-a13-cone-contraction-sign-and-total-tre",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-universal-q-cm-translation-260722-v1.0.tex.txt#cone-localized-certificate"
+      ],
+      "finding": "The coefficient is negative and equals minus twice the previously recorded positive magnitude; one c log Lambda component does not establish noncancellation of the total tree.",
+      "formal_refs": {
+        "events": [
+          "20260722-correct-a13-cone-contraction-sign-and-total-tre"
+        ],
+        "negatives": [
+          "NG-2026-07-22-A13-RAW-DIAMOND-JET"
+        ],
+        "results": [
+          "R-061",
+          "R-062",
+          "R-063"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION"
+      ],
+      "id": "EXP-000011",
+      "method": [
+        "Recompute the derivative-convention sign of the two-matching cone coefficient.",
+        "Separate one localized contraction class from the complete symmetric tree."
+      ],
+      "next_action": "Use the complete forest and balanced reconstruction; never infer a total-tree result from one localized component.",
+      "provenance": "historical-backfill",
+      "question": "Did the localized cone calculation have the recorded sign, and did its logarithmic component prove noncancellation of the full symmetric Littlewood-Paley tree?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Cone-contraction sign and total-tree noncancellation overclaim were corrected",
+      "verdict": "failed"
+    },
+    {
+      "boundary": "This is an evidence-lineage limitation, not a defect in the hash-pinned v1.1 mathematical package.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The original hash-matching source and PDF are absent, making exact v1.0 reconstruction impossible from the current tree.",
+      "evidence_refs": [
+        "changelog/log.jsonl#event-20260722-classify-unreconstructible-a13-v1-0-joint-sourc",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-joint-source-potential-reduction-260721-v1.0.tex.txt#supersession-pointer",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-21-primary-joint-source-potential-reduction/result.json#source-and-pdf-hashes"
+      ],
+      "finding": "The current source is a supersession pointer and the PDF hash differs, so the old runs are development provenance only; v1.1 is the sole current package.",
+      "formal_refs": {
+        "events": [
+          "20260722-classify-unreconstructible-a13-v1-0-joint-sourc"
+        ],
+        "negatives": [],
+        "results": []
+      },
+      "gate_ids": [
+        "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE"
+      ],
+      "id": "EXP-000012",
+      "method": [
+        "Compare the source and PDF hashes pinned by the 2026-07-21 runs with the current same-named artifacts.",
+        "Inspect the current source for supersession-pointer content."
+      ],
+      "next_action": "Reopen only if the original hash-matching v1.0 artifacts are recovered; otherwise cite v1.1 for current evidence.",
+      "provenance": "historical-backfill",
+      "question": "Can the three original v1.0 run JSONs be reproduced from the files currently bearing the v1.0 source and PDF names?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [],
+      "reviewed_on": "2026-07-22",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Joint-source v1.0 run provenance is not reconstructible from current same-named files",
+      "verdict": "parked"
+    },
+    {
+      "boundary": "The globally summed centered-form one-use lemma remains valid.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The shell count turns an otherwise valid local inequality into a divergent global constant.",
+      "evidence_refs": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt#L529-L531"
+      ],
+      "finding": "Shellwise payment creates one Young constant per shell and therefore a cutoff-dependent loss; the centered forms must be summed before the model norm is paid once.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [],
+        "results": [
+          "R-068"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
+      ],
+      "id": "EXP-000013",
+      "method": [
+        "Apply the interpolation and Young inequality shellwise.",
+        "Count the constant remainder across the number of shells."
+      ],
+      "next_action": "Group the centered form causally across shells, sum first, and apply the model-norm Young bound once.",
+      "provenance": "historical-backfill",
+      "question": "Can the global centered-form one-use estimate be applied independently on every shell?",
+      "recorded_at": "2026-07-24T03:19:54Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000010",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-07-23",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "Paying the centered form shell by shell repeats the Young constant",
+      "verdict": "failed"
+    }
+  ],
+  "inconclusive_or_parked_exploration_ids": [
+    "EXP-000001",
+    "EXP-000004",
+    "EXP-000005",
+    "EXP-000007",
+    "EXP-000008",
+    "EXP-000010",
+    "EXP-000012"
   ],
   "process_grade_lessons": [
     "Round-summary over-claim incident (legacy 2026-04-24): higher-tier summaries may never outrun pillar-level notes → single-source-of-truth rule (`status.json` → generated `CLAIMS.md`).",
@@ -22627,6 +23285,42 @@
       "result_ids": [],
       "linked_result_ids": [],
       "result_link_basis": {}
+    },
+    {
+      "id": "20260724-add-append-only-proof-exploration-ledger-and-a1",
+      "date": "2026-07-24",
+      "header": "[Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "keywords": [
+        "A13",
+        "exploration-ledger",
+        "failed-routes",
+        "proof-evidence-map",
+        "verification-first"
+      ],
+      "negative_results": [],
+      "notes": [
+        "explorations/log.jsonl",
+        "governance/proof-exploration-ledger.md",
+        "theory/proof-evidence-map.md"
+      ],
+      "scripts": [
+        "verification/scripts/exploration.py",
+        "verification/scripts/build_proof_evidence_map.py"
+      ],
+      "raw": "## [Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24\n\nAdded a canonical append-only proof-exploration ledger for every substantive route assessment: precise question, finite checks, finding, scoped verdict, decision reason, honest boundary, evidence, and next or revisit condition. The CLI has add, search, verify, and self-test operations but deliberately no edit or delete command; verification enforces canonical sequential JSONL, structured reference resolution, backward-only relations, and preservation of the Git HEAD prefix after CRLF/LF normalization. The shared readiness and release spine now checks ledger integrity before checking its complete proof-map projection.\n\nRecovered thirteen previously unindexed A13 route assessments directly from tracked notes, runs, and changelog evidence, including adapted-control nontransfer, expectation-only causal completion, heat-current covariance scope, circular normalizer reformulations, the heat-dummy misidentification, progressive range revisits, the NPC localization fork, the cone-tip transition, the linear-Carleson versus finite-secant boundary, the cone-sign correction, unreconstructible v1.0 provenance, and shellwise repeated-Young loss. The ten already formal A13 negative/audit records remain in the negative registry and are linked rather than duplicated. Prospective mandatory coverage begins 2026-07-24; earlier chat-only deliberation is explicitly not claimed complete or reconstructed. No claim tier, lifecycle, gate, or mathematical theorem changed.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [],
+      "linked_result_ids": [],
+      "result_link_basis": {}
     }
   ],
   "all_tasks": [
@@ -23304,7 +23998,7 @@
     }
   ],
   "graph": {
-    "namespace_contract": "claim:, result:, negative:, event:, gate:, task:",
+    "namespace_contract": "claim:, result:, negative:, exploration:, event:, gate:, task:",
     "nodes": [
       {
         "id": "claim:A1-KERNEL-CONV",
@@ -25695,6 +26389,12 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260724-add-append-only-proof-exploration-ledger-and-a1",
+        "kind": "accepted_event",
+        "label": "[Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260724-harden-proof-map-verification-runtime-on-window",
         "kind": "accepted_event",
         "label": "[Harden proof-map verification runtime on Windows] - 2026-07-24",
@@ -25705,6 +26405,84 @@
         "kind": "accepted_event",
         "label": "[Reject and repair semantically unsafe proof-map draft] - 2026-07-24",
         "authority": "CHANGELOG.md"
+      },
+      {
+        "id": "exploration:EXP-000001",
+        "kind": "proof_exploration",
+        "label": "Deterministic and Gaussian-base estimates do not transfer to adapted control",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000002",
+        "kind": "proof_exploration",
+        "label": "Termwise absolute-value decoupling destroys the translated cancellation",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000003",
+        "kind": "proof_exploration",
+        "label": "Strict-past causal completion is expectation-only",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000004",
+        "kind": "proof_exploration",
+        "label": "Heat-current identity depends on pinned covariance and is not a global estimate",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000005",
+        "kind": "proof_exploration",
+        "label": "Sequential normalizers do not close the Nelson estimate",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000006",
+        "kind": "proof_exploration",
+        "label": "Heat dummy cannot be identified with the future Gaussian field",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000007",
+        "kind": "proof_exploration",
+        "label": "Ordered one-shot shell proof does not cover progressive range revisits",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000008",
+        "kind": "proof_exploration",
+        "label": "NPC logarithmic path and affine physical path leave opposite gaps",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000009",
+        "kind": "proof_exploration",
+        "label": "Cone-tip whole secant is closed but separate first variation remains open",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000010",
+        "kind": "proof_exploration",
+        "label": "Linear score Carleson control is not a grouped finite-secant estimate",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000011",
+        "kind": "proof_exploration",
+        "label": "Cone-contraction sign and total-tree noncancellation overclaim were corrected",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000012",
+        "kind": "proof_exploration",
+        "label": "Joint-source v1.0 run provenance is not reconstructible from current same-named files",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000013",
+        "kind": "proof_exploration",
+        "label": "Paying the centered form shell by shell repeats the Young constant",
+        "authority": "explorations/log.jsonl"
       },
       {
         "id": "gate:A1-KERNEL-CONV",
@@ -25755,6 +26533,24 @@
         "authority": "claims/GATES.md#a12-classii-sharp-cube-l6-vector-norm-enclosure"
       },
       {
+        "id": "gate:A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND",
+        "kind": "gate",
+        "label": "A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND",
+        "authority": "claims/GATES.md#a13-classii-averaged-raw-current-cartan-jacobi-form-bound"
+      },
+      {
+        "id": "gate:A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+        "kind": "gate",
+        "label": "A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+        "authority": "claims/GATES.md#a13-classii-cameron-martin-translated-current-model-lift"
+      },
+      {
+        "id": "gate:A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION",
+        "kind": "gate",
+        "label": "A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION",
+        "authority": "claims/GATES.md#a13-classii-coefficient-jet-renormalisation-classification"
+      },
+      {
         "id": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
         "kind": "gate",
         "label": "A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
@@ -25765,6 +26561,12 @@
         "kind": "gate",
         "label": "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
         "authority": "claims/GATES.md#a13-classii-npc-cone-martingale-injection-balance"
+      },
+      {
+        "id": "gate:A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND",
+        "kind": "gate",
+        "label": "A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND",
+        "authority": "claims/GATES.md#a13-classii-strict-past-joint-remainder-cartan-form-bound"
       },
       {
         "id": "gate:A2-FULL-ENERGY-CONTINUATION-AUDIT",
@@ -31523,10 +32325,394 @@
         "basis": "explicit_claim_ids"
       },
       {
+        "from": "event:20260724-add-append-only-proof-exploration-ledger-and-a1",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
         "from": "event:20260724-reject-and-repair-semantically-unsafe-proof-map",
         "relation": "records_negative",
         "to": "negative:AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION",
         "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "references_result",
+        "to": "result:R-060",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "references_result",
+        "to": "result:R-061",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "references_result",
+        "to": "result:R-066",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000001",
+        "relation": "references_result",
+        "to": "result:R-068",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000002",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000002",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000002",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000002",
+        "relation": "references_result",
+        "to": "result:R-060",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000003",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000003",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000003",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000003",
+        "relation": "references_result",
+        "to": "result:R-064",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000004",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000004",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-STRICT-PAST-JOINT-REMAINDER-CARTAN-FORM-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000004",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000004",
+        "relation": "references_result",
+        "to": "result:R-065",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000005",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000005",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000005",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000005",
+        "relation": "references_result",
+        "to": "result:R-066",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000006",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000006",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000006",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000006",
+        "relation": "references_result",
+        "to": "result:R-066",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000007",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000007",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000007",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000007",
+        "relation": "references_result",
+        "to": "result:R-066",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000008",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000008",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000008",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000008",
+        "relation": "references_result",
+        "to": "result:R-067",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000009",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000009",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000009",
+        "relation": "continues",
+        "to": "exploration:EXP-000008",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000009",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000009",
+        "relation": "references_result",
+        "to": "result:R-067",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000009",
+        "relation": "references_result",
+        "to": "result:R-068",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000010",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000010",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000010",
+        "relation": "continues",
+        "to": "exploration:EXP-000009",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000010",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000010",
+        "relation": "references_result",
+        "to": "result:R-068",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-COEFFICIENT-JET-RENORMALISATION-CLASSIFICATION",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "references_event",
+        "to": "event:20260722-correct-a13-cone-contraction-sign-and-total-tre",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "references_negative",
+        "to": "negative:NG-2026-07-22-A13-RAW-DIAMOND-JET",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "references_result",
+        "to": "result:R-061",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "references_result",
+        "to": "result:R-062",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000011",
+        "relation": "references_result",
+        "to": "result:R-063",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000012",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000012",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000012",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000012",
+        "relation": "references_event",
+        "to": "event:20260722-classify-unreconstructible-a13-v1-0-joint-sourc",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000013",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000013",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000013",
+        "relation": "continues",
+        "to": "exploration:EXP-000010",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000013",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000013",
+        "relation": "references_result",
+        "to": "result:R-068",
+        "basis": "structured_formal_ref"
       },
       {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
@@ -43494,6 +44680,42 @@
         "raw": "## [Make commit watcher resolve repository toolchains] - 2026-07-23\n\ncommit_watcher.ps1 v1.7.0 now resolves the adjacent external TECT.venv first, then a workspace venv or PATH Python, and resolves Git from PATH or the Codex bundled runtime. It fails before touching the queue if either tool is unavailable. This prevents desktop-agent shells with a sparse PATH from moving a valid request to EMPTYDIFF or running the release gate under the wrong Python. A no-alias -Once smoke run selected E:/Dev/TECT.venv/Scripts/python.exe and the bundled Git executable successfully.\n\n",
         "claim_refs": [],
         "claim_ref_basis": {},
+        "unresolved_claim_ids": [],
+        "result_ids": [],
+        "linked_result_ids": [],
+        "result_link_basis": {}
+      },
+      "20260724-add-append-only-proof-exploration-ledger-and-a1": {
+        "id": "20260724-add-append-only-proof-exploration-ledger-and-a1",
+        "date": "2026-07-24",
+        "header": "[Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24",
+        "claim_ids": [
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+        ],
+        "keywords": [
+          "A13",
+          "exploration-ledger",
+          "failed-routes",
+          "proof-evidence-map",
+          "verification-first"
+        ],
+        "negative_results": [],
+        "notes": [
+          "explorations/log.jsonl",
+          "governance/proof-exploration-ledger.md",
+          "theory/proof-evidence-map.md"
+        ],
+        "scripts": [
+          "verification/scripts/exploration.py",
+          "verification/scripts/build_proof_evidence_map.py"
+        ],
+        "raw": "## [Add append-only proof-exploration ledger and A13 route recovery] - 2026-07-24\n\nAdded a canonical append-only proof-exploration ledger for every substantive route assessment: precise question, finite checks, finding, scoped verdict, decision reason, honest boundary, evidence, and next or revisit condition. The CLI has add, search, verify, and self-test operations but deliberately no edit or delete command; verification enforces canonical sequential JSONL, structured reference resolution, backward-only relations, and preservation of the Git HEAD prefix after CRLF/LF normalization. The shared readiness and release spine now checks ledger integrity before checking its complete proof-map projection.\n\nRecovered thirteen previously unindexed A13 route assessments directly from tracked notes, runs, and changelog evidence, including adapted-control nontransfer, expectation-only causal completion, heat-current covariance scope, circular normalizer reformulations, the heat-dummy misidentification, progressive range revisits, the NPC localization fork, the cone-tip transition, the linear-Carleson versus finite-secant boundary, the cone-sign correction, unreconstructible v1.0 provenance, and shellwise repeated-Young loss. The ten already formal A13 negative/audit records remain in the negative registry and are linked rather than duplicated. Prospective mandatory coverage begins 2026-07-24; earlier chat-only deliberation is explicitly not claimed complete or reconstructed. No claim tier, lifecycle, gate, or mathematical theorem changed.\n\n",
+        "claim_refs": [
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+        ],
+        "claim_ref_basis": {
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+        },
         "unresolved_claim_ids": [],
         "result_ids": [],
         "linked_result_ids": [],

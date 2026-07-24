@@ -16,8 +16,9 @@ index/changelog/dossier gates that `doctor.py` lacked — is the failure mode th
 prevents.
 
 The executable list in `gates.py` is the only gate count. It covers ledger,
-catalog, lineage, index, TODO, changelog render/integrity, dossier, and the
-global proof evidence map; policy prose must not duplicate a numeric count.
+catalog, lineage, index, TODO, changelog render/integrity, dossier,
+append-only proof-exploration integrity, and the global proof evidence map;
+policy prose must not duplicate a numeric count.
 
 ## 2. Three enforcement points
 
@@ -41,16 +42,21 @@ ENFORCED (a gate fails the commit): generated surface stale; broken JSON / Pytho
 Hangul in a publishable file; no-overclaim phrase on a claim/theory/publish
 surface; P0 fence; catalog drift.
 
-PARTIALLY ENFORCED COMPLETENESS: the proof-evidence-map gate requires exact
-index/detail coverage for reusable and negative results, all real status cards,
-all tasks/events, definitions for every currently open gate and hypothesis,
-resolvable graph edges, and a complete per-claim evidence-path inventory.
+PARTIALLY ENFORCED COMPLETENESS: the exploration gate preserves every registered
+route decision as an immutable Git-prefix extension, and the proof-evidence-map
+gate requires exact projection of those explorations, reusable and negative
+results, all real status cards, all tasks/events, definitions for every
+currently open gate and hypothesis, resolvable graph edges, and a complete
+per-claim evidence-path inventory.
 
 STILL DISCIPLINE (not yet gated): every accepted claim change carrying the full
 atomic claim/changelog/generated-surface set. The spine proves that registered
 records are present and synchronized; it cannot prove that an unrecorded idea
 or omitted claim change never existed. A version-control diff completeness
-linter remains a possible later hardening step.
+linter remains a possible later hardening step. The binding
+file-write-before-route-verdict rule in `governance/proof-exploration-ledger.md`
+reduces this gap but cannot let a static checker discover an idea that was
+never written.
 
 ## 5. Cross-OS determinism (generators)
 

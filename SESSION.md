@@ -48,7 +48,8 @@ research state lives in the cowork app; it all lives in tracked files here.
 
 2. **Session-entry prelude** (CLAUDE.md §1, the AI does this automatically):
    read `GOVERNANCE.md` → `CLAIMS.md` → `ROADMAP.md` → `CHANGELOG.md` (top) →
-   `negative-results/registry.md` → **`TODO.md`**, run `date -u`, and emit
+   `negative-results/registry.md` → `explorations/log.jsonl` (latest) →
+   **`TODO.md`**, run `date -u`, and emit
    `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
 
 3. **Pick up the work** — the live task ledger:
@@ -68,8 +69,12 @@ research state lives in the cowork app; it all lives in tracked files here.
    ```
 
    It links accepted results, failed routes and reasons, current gates/tasks,
-   lineages, and reproduction entrypoints. The linked source remains
-   authoritative.
+   proof explorations, lineages, and reproduction entrypoints. The linked
+   source remains authoritative. For a precise prior route verdict:
+
+   ```bash
+   python verification/scripts/exploration.py search --claim <ID>
+   ```
 
 4. **Operator only — start the commit daemon** (Windows PowerShell), so the
    AI's queued commits are recorded with the maintainer signature:
@@ -92,8 +97,8 @@ research state lives in the cowork app; it all lives in tracked files here.
 python verification/scripts/release_check.py     # must reach exit 0
 ```
 
-`release_check` runs the ledger/catalog/lineage/**todo**/proof-evidence-map sync
-checks, the English-only and no-overclaim scans, and file hygiene. A session
+`release_check` runs the ledger/catalog/lineage/**todo**/exploration-integrity/
+proof-evidence-map checks, the English-only and no-overclaim scans, and file hygiene. A session
 may not end with it failing.
 
 ---
@@ -120,7 +125,8 @@ may not end with it failing.
 | `GOVERNANCE.md` | constitution: tiers, gates, registration rules |
 | `CLAIMS.md` / `CATALOG.md` | generated ledgers (start reading at `CLAIMS.md`) |
 | `ROADMAP.md` | 6-stage roadmap + current status |
-| `theory/proof-evidence-map.md` / `verification/proof-evidence-map.json` | generated human/machine map of proof advances, failures, gates, tasks, and evidence paths |
+| `theory/proof-evidence-map.md` / `verification/proof-evidence-map.json` | generated human/machine map of proof advances, explorations, failures, gates, tasks, and evidence paths |
+| `explorations/log.jsonl` | canonical append-only proof-route decisions; add/search/verify with `exploration.py` |
 | `TODO.md` / `todo/todo.json` | live task ledger (this resume system) |
 | `claims/<ID>/` | per-claim card + `status.json` + `notes/` + `runs/` + lineage |
 | `claims/GATES.md` | open gates / hypotheses registry |

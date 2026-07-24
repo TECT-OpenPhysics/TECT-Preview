@@ -11,10 +11,22 @@ cat claims/INDEX.md                # top-down claim/proof-unit hierarchy
 ```
 
 `theory/proof-evidence-map.md` is the generated cross-cutting audit map. It
-places accepted reusable results, failed/retracted routes and their reasons,
-live gates/tasks, claim state, lineage, and reproduction entrypoints on one
-linked surface. Its machine-complete companion is
+places accepted reusable results, append-only proof explorations,
+failed/retracted routes and their reasons, live gates/tasks, claim state,
+lineage, and reproduction entrypoints on one linked surface. Its
+machine-complete companion is
 `verification/proof-evidence-map.json`; neither overrides the linked authority.
+
+For the exact route question, finite checks, verdict boundary, and revisit
+condition, search the canonical exploration source directly:
+
+```bash
+python verification/scripts/exploration.py search --claim <ID>
+python verification/scripts/exploration.py search --verdict failed
+```
+
+An exploration verdict is non-tier-bearing: `advanced` is not a proof, and
+`failed` is not a formal global no-go unless it links the negative registry.
 
 `claims/INDEX.md` is the generated top-down map: the six sectors A–F, every
 claim with its tier, named hypotheses, and open gates, and — for the populated

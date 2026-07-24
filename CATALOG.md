@@ -6,7 +6,7 @@
 
 Generated: 2026-07-24
 
-**2371 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**2375 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -2269,14 +2269,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `8da02d966557` |
+| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `294694d7145e` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
 | `verification/scripts/build_dossier.py` | — | — | — | v1.0.1 | ACTIVE | `0606af696b63` |
 | `verification/scripts/build_index.py` | — | — | — | v1.2.0 | ACTIVE | `5db6179121e4` |
 | `verification/scripts/build_lineage.py` | — | 2026-06-06 | 2026-07-24 | v1.1.0 | ACTIVE | `b98dd95908a1` |
 | `verification/scripts/build_note_pdf.py` | — | — | — | — | ACTIVE | `086d3a3857a0` |
-| `verification/scripts/build_proof_evidence_map.py` | — | — | — | v1.0.0 | ACTIVE | `5cf6a2d853b0` |
+| `verification/scripts/build_proof_evidence_map.py` | — | — | — | v1.1.0 | ACTIVE | `4b838e83b4f9` |
 | `verification/scripts/build_reproduction_bundle.py` | — | 2026-06-10 | 2026-07-20 | v1.9.5 | ACTIVE | `a179e61ba323` |
 | `verification/scripts/build_wiki.py` | — | 2026-06-05 | 2026-06-05 | v1.1.0 | ACTIVE | `19bcfd95a617` |
 | `verification/scripts/bundle_coverage.py` | — | 2026-06-10 | 2026-07-20 | v2.0.1 | ACTIVE | `9b5ecfd546e1` |
@@ -2284,20 +2284,22 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `verification/scripts/check_path_lengths.py` | — | — | — | v1.0.0 | ACTIVE | `602c2d51cf1b` |
 | `verification/scripts/check_sector_a_taxonomy.py` | — | 2026-07-22 | 2026-07-22 | v1.0.0 | ACTIVE | `e8632391bd51` |
 | `verification/scripts/commit_watcher.ps1` | — | — | — | — | ACTIVE | `fe73bf240e42` |
-| `verification/scripts/doctor.py` | — | 2026-06-07 | 2026-07-23 | v1.2.0 | ACTIVE | `8cc879a424ab` |
+| `verification/scripts/doctor.py` | — | 2026-06-07 | 2026-07-24 | v1.3.0 | ACTIVE | `3c0b3a831c80` |
 | `verification/scripts/evidence_paths.py` | — | — | — | — | ACTIVE | `530204e18134` |
-| `verification/scripts/gates.py` | — | — | — | v1.1.0 | ACTIVE | `7ec3afba2565` |
+| `verification/scripts/exploration.py` | — | 2026-07-24 | 2026-07-24 | v1.0.0 | ACTIVE | `e4d84d2440a3` |
+| `verification/scripts/gates.py` | — | — | — | v1.2.0 | ACTIVE | `a50c0c672cf5` |
 | `verification/scripts/lint_claims.py` | — | 2026-06-05 | 2026-07-22 | v1.3.0 | ACTIVE | `e8e52cc5fee1` |
 | `verification/scripts/regen_all.py` | — | — | — | v1.1.0 | ACTIVE | `e88f10adb6ae` |
-| `verification/scripts/release_check.py` | — | 2026-06-05 | 2026-07-23 | v1.2.0 | ACTIVE | `dfd110acba1e` |
+| `verification/scripts/release_check.py` | — | 2026-06-05 | — | v1.3.0 | ACTIVE | `428cca57265c` |
 | `verification/scripts/repo_inventory.py` | — | 2026-06-23 | 2026-07-23 | v1.0.1 | ACTIVE | `29cb57b3fbe1` |
 | `verification/scripts/todo.py` | — | 2026-06-07 | 2026-07-24 | v1.0.1 | ACTIVE | `3abceacda0f4` |
 | `verification/scripts/verify_claim.py` | — | 2026-07-17 | 2026-07-17 | v1.0.0 | ACTIVE | `af64c2df23a7` |
 | `verification/scripts/verify_note_pdfs.py` | — | 2026-06-10 | 2026-07-23 | v1.1.0 | ACTIVE | `6e32612248fd` |
 | `verification/templates/note-preamble.tex` | — | — | — | — | ACTIVE | `dd2322641f9b` |
 | `verification/templates/note-skeleton.tex.txt` | — | — | — | — | ACTIVE | `2dce540b6619` |
+| `verification/tests/test_exploration.py` | — | — | — | — | ACTIVE | `7ad64348d0b0` |
 | `verification/tests/test_lint_claims.py` | — | — | — | — | ACTIVE | `405b8440d403` |
-| `verification/tests/test_proof_evidence_map.py` | — | — | — | — | ACTIVE | `b6531fb75f97` |
+| `verification/tests/test_proof_evidence_map.py` | — | — | — | — | ACTIVE | `7a8bb36710eb` |
 
 ## Papers (publication layer)
 
@@ -2362,11 +2364,12 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `governance/changelog-db.md` | — | — | — | — | ACTIVE | `ba7ba50edca4` |
 | `governance/claim-standard.md` | — | — | — | — | ACTIVE | `a754753e6496` |
 | `governance/claims-restructure-proposal-260609.md` | — | — | — | — | ACTIVE | `3b0f614958b5` |
-| `governance/development-history.md` | — | — | — | — | ACTIVE | `76b5db299f2c` |
-| `governance/enforcement-spine.md` | — | — | — | — | ACTIVE | `9ebb2f8c5ad3` |
+| `governance/development-history.md` | — | — | — | — | ACTIVE | `57fb91079b47` |
+| `governance/enforcement-spine.md` | — | — | — | — | ACTIVE | `0c2944765ea8` |
 | `governance/migration-plan.md` | — | — | — | — | ACTIVE | `8391b2c83152` |
 | `governance/naming-and-versioning.md` | — | — | — | — | ACTIVE | `3cfcede1b9ac` |
-| `governance/proof-evidence-map.md` | — | — | — | — | ACTIVE | `0c31ceeffe10` |
+| `governance/proof-evidence-map.md` | — | — | — | — | ACTIVE | `a293520f01aa` |
+| `governance/proof-exploration-ledger.md` | — | — | — | — | ACTIVE | `cc1168a535ac` |
 | `governance/publication-tiers.md` | — | — | — | — | ACTIVE | `fbd6ff2c40e7` |
 | `governance/reproduction-bundle-policy.md` | — | — | — | — | ACTIVE | `7ed313152f47` |
 | `governance/sector-a-theorem-map.json` | — | — | — | — | ACTIVE | `d05ecac9c037` |
@@ -2380,16 +2383,16 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
-| `AGENTS.md` | — | — | — | — | ACTIVE | `7f7dc411fd25` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `7a9ed75ff3c8` |
+| `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `7b3d07bd9150` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `5df06d960e7c` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
-| `README.md` | — | — | — | — | ACTIVE | `295398fcdbab` |
+| `README.md` | — | — | — | — | ACTIVE | `6e6f51f5a6af` |
 | `RESULTS-LEDGER.md` | — | — | — | — | ACTIVE | `2d84d9c82cce` |
-| `REVIEWING.md` | — | — | — | — | ACTIVE | `bbf06d9b5113` |
+| `REVIEWING.md` | — | — | — | — | ACTIVE | `b5e54659ddf5` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `89cace265681` |
-| `SESSION.md` | — | — | — | — | ACTIVE | `5a6fc6251ba0` |
+| `SESSION.md` | — | — | — | — | ACTIVE | `af8ecee121e9` |
 | `TODO.md` | — | — | — | — | ACTIVE | `60bedc8afb54` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `a916258ff44b` |
 
@@ -2400,7 +2403,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `0fc46ee64dd1` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `376e1835feac` |
+| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `bdf99877c539` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -2442,7 +2446,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `7ac07d81b271` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `222151ff69c2` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `3a4f0ce9f067` |
+| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `554c8cf02e94` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `f442f3268418` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |

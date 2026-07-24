@@ -1,6 +1,7 @@
 """Coverage and staleness tests for the generated global proof evidence map."""
 
 import importlib.util
+import hashlib
 import json
 import re
 import subprocess
@@ -41,6 +42,7 @@ def test_machine_map_has_complete_unique_coverage():
     assert coverage["status_cards"] == len(data["claims"])
     assert coverage["reusable_results"] == len(data["reusable_results"])
     assert coverage["negative_records"] == len(data["negative_records"])
+    assert coverage["proof_explorations"] == len(data["proof_explorations"])
     assert coverage["process_grade_lessons"] == len(data["process_grade_lessons"])
     assert coverage["accepted_events"] == len(data["accepted_events"])
     assert coverage["tasks"] == len(data["all_tasks"])
@@ -54,6 +56,7 @@ def test_machine_map_has_complete_unique_coverage():
         (data["claims"], "id"),
         (data["reusable_results"], "id"),
         (data["negative_records"], "tag"),
+        (data["proof_explorations"], "id"),
         (data["accepted_events"], "id"),
         (data["all_tasks"], "id"),
     ):
@@ -64,6 +67,18 @@ def test_machine_map_has_complete_unique_coverage():
         assert record["detail"]["failure_mode"]
         assert record["detail"]["evidence"]
         assert record["detail"]["consequence"]
+    assert sum(coverage["exploration_verdicts"].values()) == len(
+        data["proof_explorations"]
+    )
+    for record in data["proof_explorations"]:
+        assert record["question"]
+        assert record["method"]
+        assert record["finding"]
+        assert record["decision_reason"]
+        assert record["boundary"]
+        assert record["next_action"]
+        for reference in record["evidence_refs"]:
+            assert (REPO / reference.split("#", 1)[0]).is_file()
 
 
 def test_graph_edges_and_authority_paths_resolve():
@@ -160,6 +175,23 @@ def test_associations_use_canonical_structured_sources_only():
         assert "<a id=" not in fields
         assert "## Process-grade" not in fields
 
+    exploration_claim_edges = {
+        (edge["from"].split(":", 1)[1], edge["to"].split(":", 1)[1])
+        for edge in data["graph"]["edges"]
+        if edge["from"].startswith("exploration:")
+        and edge["relation"] == "assesses"
+    }
+    assert exploration_claim_edges == {
+        (record["id"], claim)
+        for record in data["proof_explorations"]
+        for claim in record["claim_ids"]
+    }
+    assert all(
+        edge["basis"].startswith("structured_")
+        for edge in data["graph"]["edges"]
+        if edge["from"].startswith("exploration:")
+    )
+
 
 def test_current_child_gate_and_honest_a13_boundary_are_visible():
     data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
@@ -241,6 +273,10 @@ def test_manifest_classification_is_case_stable_and_disjoint(tmp_path):
 def test_shared_gate_wiring_keeps_catalog_last():
     gates = load_module(REPO / "verification" / "scripts" / "gates.py", "tect_gates")
     assert (
+        "exploration-integrity",
+        ["exploration.py", "verify"],
+    ) in gates.SYNC_GATES
+    assert (
         "proof-evidence-map",
         ["build_proof_evidence_map.py", "--check"],
     ) in gates.SYNC_GATES
@@ -248,3 +284,110 @@ def test_shared_gate_wiring_keeps_catalog_last():
     assert "build_proof_evidence_map.py" in scripts
     assert scripts[-1] == "build_catalog.py"
     assert scripts.index("build_proof_evidence_map.py") < scripts.index("build_catalog.py")
+    labels = [label for label, _ in gates.SYNC_GATES]
+    assert labels.index("exploration-integrity") < labels.index("proof-evidence-map")
+
+
+def test_exploration_projection_and_historical_boundary_are_visible():
+    data = json.loads(MAP_JSON.read_text(encoding="utf-8"))
+    records = data["proof_explorations"]
+    assert records
+    canonical_records = [
+        json.loads(line)
+        for line in (REPO / "explorations" / "log.jsonl")
+        .read_text(encoding="utf-8")
+        .splitlines()
+        if line.strip()
+    ]
+    assert records == canonical_records
+    canonical_bytes = (REPO / "explorations" / "log.jsonl").read_bytes()
+    expected_hash = hashlib.sha256(
+        canonical_bytes.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    ).hexdigest()
+    assert data["source_hashes"]["explorations/log.jsonl"] == expected_hash
+    assert data["coverage_diagnostics"]["exploration_prospective_coverage_from"] == (
+        "2026-07-24"
+    )
+    assert data["coverage_diagnostics"]["historical_backfill_explorations"] == sum(
+        record["provenance"] == "historical-backfill" for record in records
+    )
+    text = MAP_MARKDOWN.read_text(encoding="utf-8")
+    for record in records:
+        assert text.count(f'<a id="{record["id"].lower()}"></a>') == 1
+    a13 = next(
+        claim
+        for claim in data["claims"]
+        if claim["id"] == "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+    )
+    assert a13["evidence_links"]["exploration_ids"] == [
+        record["id"]
+        for record in records
+        if a13["id"] in record["claim_ids"]
+    ]
+
+    outgoing = {
+        record["id"]: {
+            (edge["relation"], edge["to"], edge["basis"])
+            for edge in data["graph"]["edges"]
+            if edge["from"] == f"exploration:{record['id']}"
+        }
+        for record in records
+    }
+    for record in records:
+        expected = {
+            ("assesses", f"claim:{claim}", "structured_claim_id")
+            for claim in record["claim_ids"]
+        }
+        expected |= {
+            ("assesses_gate", f"gate:{gate}", "structured_gate_id")
+            for gate in record["gate_ids"]
+        }
+        if record["task_id"]:
+            expected.add(
+                ("records_task", f"task:{record['task_id']}", "structured_task_id")
+            )
+        expected |= {
+            ("references_result", f"result:{value}", "structured_formal_ref")
+            for value in record["formal_refs"]["results"]
+        }
+        expected |= {
+            ("references_negative", f"negative:{value}", "structured_formal_ref")
+            for value in record["formal_refs"]["negatives"]
+        }
+        expected |= {
+            ("references_event", f"event:{value}", "structured_formal_ref")
+            for value in record["formal_refs"]["events"]
+        }
+        expected |= {
+            (
+                relation["relation"],
+                f"exploration:{relation['id']}",
+                "structured_related_ref",
+            )
+            for relation in record["related"]
+        }
+        assert outgoing[record["id"]] == expected
+
+    expected_current_gates = {
+        gate
+        for claim in data["claims"]
+        for gate in claim["open_gates"]
+    } | {
+        task["gate"] for task in data["live_tasks"] if task.get("gate")
+    }
+    assert {gate["id"] for gate in data["open_gate_index"]} == expected_current_gates
+
+
+def test_map_loader_refuses_exploration_integrity_errors(monkeypatch):
+    module = load_module(BUILDER, "proof_evidence_map_exploration_loader")
+    monkeypatch.setattr(
+        module,
+        "verify_explorations",
+        lambda: ([], ["fixture integrity failure"]),
+    )
+    try:
+        module.load_explorations()
+    except ValueError as error:
+        assert "fixture integrity failure" in str(error)
+    else:
+        raise AssertionError("exploration integrity error was silently bypassed")
