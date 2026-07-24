@@ -159,6 +159,96 @@ def run(manifest_path: Path, output_path: Path) -> int:
     if not all(row["status"] == "PASS" for row in rows):
         return stop_before_stale_read("hash_and_pdf_preflight")
 
+    # The primary child imports the R-069 helper, which in turn imports the
+    # NPC, translation, and UV helpers.  Verify that complete runtime closure
+    # before executing either child; post-execution detection is not fail-closed.
+    prior_manifest_record = manifest["authority"]["r069_manifest"]
+    prior_manifest_path = REPO / prior_manifest_record["path"]
+    prior_manifest_actual = digest(prior_manifest_path)
+    prior_manifest = json.loads(prior_manifest_path.read_text(encoding="utf-8"))
+    prior_output = REPO / prior_manifest["run_contract"]["integrated_output"]
+    prior = json.loads(prior_output.read_text(encoding="utf-8"))
+    dependency_actual: dict[str, Any] = {}
+    dependency_expected: dict[str, Any] = {}
+
+    def pin_runtime_record(label: str, record: dict[str, Any]) -> bool:
+        relative = str(record["path"])
+        try:
+            actual_hash = digest(REPO / relative)
+        except OSError as exc:
+            actual_hash = f"ERROR:{type(exc).__name__}:{exc}"
+        dependency_actual[label] = {"path": relative, "sha256": actual_hash}
+        dependency_expected[label] = {
+            "path": relative,
+            "sha256": record["sha256"],
+        }
+        return actual_hash == record["sha256"]
+
+    dependency_ok = True
+    prior_helper = prior_manifest["sources"]["primary"]
+    expected_helper_path = (
+        "codes/foundations/"
+        "a13_classii_endpoint_lifted_schur_causal_grouping_reduction.py"
+    )
+    dependency_actual["r069_helper_path"] = prior_helper["path"]
+    dependency_expected["r069_helper_path"] = expected_helper_path
+    dependency_ok = prior_helper["path"] == expected_helper_path
+    dependency_ok = pin_runtime_record("r069_helper", prior_helper) and dependency_ok
+    for key, record in prior_manifest["authority"].items():
+        dependency_ok = pin_runtime_record(f"r069_authority_{key}", record) and dependency_ok
+
+    npc_record = prior_manifest["authority"]["a13_npc_cone_manifest"]
+    npc_manifest_path = REPO / npc_record["path"]
+    npc_manifest_hash_ok = digest(npc_manifest_path) == npc_record["sha256"]
+    if npc_manifest_hash_ok:
+        npc_manifest = json.loads(npc_manifest_path.read_text(encoding="utf-8"))
+        for key, record in npc_manifest["authority"].items():
+            dependency_ok = pin_runtime_record(f"npc_authority_{key}", record) and dependency_ok
+        runtime_source_paths = {
+            "primary": (
+                "codes/foundations/"
+                "a13_classii_npc_cone_martingale_injection_reduction.py"
+            ),
+            "a13_translation_source": (
+                "codes/foundations/a13_classii_translation_model_reduction.py"
+            ),
+            "a6_uv_source": "codes/foundations/a6_classii_uv_power_counting.py",
+        }
+        for key, expected_path in runtime_source_paths.items():
+            record = npc_manifest["sources"][key]
+            dependency_actual[f"npc_source_path_{key}"] = record["path"]
+            dependency_expected[f"npc_source_path_{key}"] = expected_path
+            dependency_ok = record["path"] == expected_path and dependency_ok
+            dependency_ok = pin_runtime_record(f"npc_source_{key}", record) and dependency_ok
+    else:
+        dependency_actual["npc_runtime_closure"] = "SKIPPED_UNTRUSTED_MANIFEST"
+        dependency_expected["npc_runtime_closure"] = "PINNED_MANIFEST_REQUIRED"
+        dependency_ok = False
+
+    prior_evidence_ok = (
+        prior.get("pass") is True
+        and prior.get("manifest_sha256") == prior_manifest_actual
+        and prior.get("assertion_count") == prior_integrated_expected
+    )
+    add(
+        rows,
+        "r069_prior_and_runtime_dependency_closure",
+        prior_evidence_ok and dependency_ok,
+        {
+            "prior_pass": prior.get("pass"),
+            "prior_manifest_sha256": prior.get("manifest_sha256"),
+            "runtime_dependencies": dependency_actual,
+        },
+        {
+            "prior_pass": True,
+            "prior_manifest_sha256": prior_manifest_actual,
+            "runtime_dependencies": dependency_expected,
+        },
+    )
+    add(rows, "r069_prior_assertions", prior.get("assertion_count") == prior_integrated_expected, prior.get("assertion_count"), prior_integrated_expected)
+    if not all(row["status"] == "PASS" for row in rows):
+        return stop_before_stale_read("runtime_dependency_preflight")
+
     primary_path = REPO / manifest["sources"]["primary"]["path"]
     independent_path = REPO / manifest["sources"]["independent"]["path"]
     primary_run = execute(primary_path)
@@ -190,35 +280,6 @@ def run(manifest_path: Path, output_path: Path) -> int:
     independent_imports = imported_modules(independent_path)
     forbidden_imports = [item for item in independent_imports if "wick_doob_terminal_resolvent_reduction" in item or "endpoint_lifted" in item]
     add(rows, "independent_non_importing", not forbidden_imports, forbidden_imports, [])
-
-    prior_manifest_record = manifest["authority"]["r069_manifest"]
-    prior_manifest_path = REPO / prior_manifest_record["path"]
-    prior_manifest = json.loads(
-        prior_manifest_path.read_text(encoding="utf-8")
-    )
-    prior_output = REPO / prior_manifest["run_contract"]["integrated_output"]
-    prior = json.loads(prior_output.read_text(encoding="utf-8"))
-    prior_helper = prior_manifest["sources"]["primary"]
-    prior_helper_actual = digest(REPO / prior_helper["path"])
-    prior_manifest_actual = digest(prior_manifest_path)
-    add(
-        rows,
-        "r069_prior_pass_and_imported_helper_pin",
-        prior.get("pass") is True
-        and prior.get("manifest_sha256") == prior_manifest_actual
-        and prior_helper_actual == prior_helper["sha256"],
-        {
-            "prior_pass": prior.get("pass"),
-            "prior_manifest_sha256": prior.get("manifest_sha256"),
-            "helper_sha256": prior_helper_actual,
-        },
-        {
-            "prior_pass": True,
-            "prior_manifest_sha256": prior_manifest_actual,
-            "helper_sha256": prior_helper["sha256"],
-        },
-    )
-    add(rows, "r069_prior_assertions", prior.get("assertion_count") == prior_integrated_expected, prior.get("assertion_count"), prior_integrated_expected)
 
     token_checks: list[tuple[str, str, list[str]]] = [
         (
@@ -276,17 +337,17 @@ def run(manifest_path: Path, output_path: Path) -> int:
         (
             "negative",
             "negative-results/registry.md",
-            ["NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE", "AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION", "Malliavin"],
+            ["NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE", "AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION", "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP", "Malliavin"],
         ),
         (
             "explorations",
             "explorations/log.jsonl",
-            ["Wick--Doob terminalization", "terminal resolvent", "EXP-000018"],
+            ["Wick--Doob terminalization", "terminal resolvent", "EXP-000018", "EXP-000019"],
         ),
         (
             "changelog",
             "CHANGELOG.md",
-            ["Prove A13 Wick--Doob terminalization", "Repair R-070 weighted linear-frame decomposition", "R-070"],
+            ["Prove A13 Wick--Doob terminalization", "Repair R-070 weighted linear-frame decomposition", "Repair R-070 transitive dependency preflight", "R-070"],
         ),
         (
             "lineage",

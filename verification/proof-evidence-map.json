@@ -7,7 +7,7 @@
   "authority_boundary": "This projection is complete by reference but is not a tier or proof authority. Claim status cards, proof notes/runs, RESULTS-LEDGER.md, negative-results/registry.md, explorations/log.jsonl, changelog/log.jsonl, todo/todo.json, and claims/GATES.md remain canonical.",
   "source_hashes": {
     "RESULTS-LEDGER.md": "76bb0922c562eff3b3052e9b534182b678b7707634a23e1aaa2af8b9374b9514",
-    "changelog/log.jsonl": "90a4a1878042e9d3ba7272433659ba36203e51a3d0cb204ac56b63f75e68216b",
+    "changelog/log.jsonl": "6e61b7f2162c0d8565829675b71886287a9f826cf5ddfec61e64d638faf0f2bd",
     "claims/A1-KERNEL-CONV/status.json": "e5dd2b08ce58f1c3d2680b907e1469b828b2b6a3929d773f7bd84137efe36509",
     "claims/A1-KERNEL-IDENTITY/status.json": "dbaf6f1e80d994b94c9746cc7d342592fbc3638abb372d8e1c02841bb4e4d477",
     "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/status.json": "202e7514bb2d6fc029e61de95386981aedca15d81e9d6f71fc1570d77049d554",
@@ -58,8 +58,8 @@
     "claims/F2-BARYOGENESIS/status.json": "de39e5132355707dd49d4da4ef2da7b64d5f69802609c2f867d658114c3523a4",
     "claims/F3-INFLATION-CMB/status.json": "04b783d1f49f0ee453d4ccc3eff93cc7bca3c084dcdcdd036a023dd76d62331c",
     "claims/GATES.md": "f5e4633ef0760994aac62fa372eb89ec23e1592ec11c919e3a4a6ece0531d999",
-    "explorations/log.jsonl": "d96ee4df6123f31493280626a02abee7275ec828be23dd62b0ad55c496fa32c6",
-    "negative-results/registry.md": "d06aa5e4f6e2558f5de23e7fd9ec7275de879c5ddbbf55c7d53b8384855b7fcd",
+    "explorations/log.jsonl": "867f8c293d23c142e972b22e09e7d5ef59340f2b164dcc1c75e3d053228f9c5b",
+    "negative-results/registry.md": "dc9695e3dbf708d5bd9a2a9b43656693b33c2ede68e2272a89c2d794f020530b",
     "todo/todo.json": "0dfb40318174eef908ade9e6b08f9830116f519b97d133de9296ed03f56b1c5a"
   },
   "coverage": {
@@ -67,16 +67,16 @@
     "active_claims": 48,
     "refuted_claims": 1,
     "reusable_results": 70,
-    "negative_records": 43,
-    "proof_explorations": 18,
+    "negative_records": 44,
+    "proof_explorations": 19,
     "exploration_verdicts": {
-      "advanced": 4,
+      "advanced": 5,
       "failed": 7,
       "inconclusive": 5,
       "parked": 2
     },
     "process_grade_lessons": 3,
-    "accepted_events": 356,
+    "accepted_events": 357,
     "tasks": 51,
     "live_tasks": 7,
     "completed_tasks": 44,
@@ -3748,6 +3748,7 @@
           "NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE",
           "NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT",
           "AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION",
+          "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
           "NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY",
           "NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE",
           "NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER",
@@ -3777,9 +3778,10 @@
           "EXP-000015",
           "EXP-000016",
           "EXP-000017",
-          "EXP-000018"
+          "EXP-000018",
+          "EXP-000019"
         ],
-        "latest_exploration_id": "EXP-000018",
+        "latest_exploration_id": "EXP-000019",
         "accepted_event_ids": [
           "20260721-close-t-049-negatively-with-the-a13-relative-ph",
           "20260721-complete-a13-gate-record-synchronization-and-re",
@@ -3802,9 +3804,10 @@
           "20260724-prove-a13-endpoint-lifted-schur-and-coherent-ca",
           "20260724-prove-a13-wick-doob-terminalization-and-adapted",
           "20260724-repair-r-070-weighted-linear-frame-decompositio",
-          "20260724-finalize-corrected-r-070-audit-and-ten-page-cer"
+          "20260724-finalize-corrected-r-070-audit-and-ten-page-cer",
+          "20260724-repair-r-070-transitive-dependency-preflight-20"
         ],
-        "latest_event_id": "20260724-finalize-corrected-r-070-audit-and-ten-page-cer",
+        "latest_event_id": "20260724-repair-r-070-transitive-dependency-preflight-20",
         "live_task_gate_ids": [
           "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
         ],
@@ -8586,9 +8589,11 @@
       "accepted_event_ids": [
         "20260724-prove-a13-wick-doob-terminalization-and-adapted",
         "20260724-repair-r-070-weighted-linear-frame-decompositio",
-        "20260724-finalize-corrected-r-070-audit-and-ten-page-cer"
+        "20260724-finalize-corrected-r-070-audit-and-ten-page-cer",
+        "20260724-repair-r-070-transitive-dependency-preflight-20"
       ],
       "co_recorded_negative_tags": [
+        "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
         "AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION",
         "NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE"
       ]
@@ -8624,9 +8629,11 @@
         "A13"
       ],
       "accepted_event_ids": [
-        "20260724-prove-a13-endpoint-lifted-schur-and-coherent-ca"
+        "20260724-prove-a13-endpoint-lifted-schur-and-coherent-ca",
+        "20260724-repair-r-070-transitive-dependency-preflight-20"
       ],
       "co_recorded_negative_tags": [
+        "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
         "NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT"
       ]
     },
@@ -11182,6 +11189,28 @@
       ]
     },
     {
+      "tag": "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
+      "anchor": "audit-2026-07-24-a13-r070-dependency-preflight-gap",
+      "branch": "R-070 integrated verifier runtime dependency closure",
+      "summary": "the initial verifier checked the imported R-069 helper only after child execution and did not preflight its transitive NPC/translation/UV dependency closure",
+      "detail_title": "imported runtime closure was checked too late",
+      "detail": {
+        "failure_mode": "The first integrated R-070 verifier pinned its own sources and the R-069 manifest before execution, but it checked the R-069 primary helper hash only after running the R-070 children. That helper imports the NPC, translation, and UV modules, and the NPC helper reads the translation and strict-past manifests. Those transitive runtime inputs were not all checked before import. A changed helper could therefore execute before the verifier reported the mismatch.",
+        "evidence": "Static import tracing gives the runtime chain `R070 primary -> R069 primary -> {NPC, translation, UV}`. The pinned R-069 manifest points to the NPC manifest; that manifest pins the NPC, translation, and UV sources and the authority manifests read at runtime. The repaired verifier traverses this pinned chain, compares every source and authority hash, binds the prior R-069 result to its manifest hash, and stops before any child process if one comparison fails. Success retains the existing 47/47 integrated and 85/85 aggregate contracts.",
+        "consequence": "Earlier successful numerical results are not retracted, but their initial integrated wrapper did not meet the repository's strongest fail-closed standard. The wrapper now performs a complete trusted preflight before child execution. This is a reproducibility repair only; it changes no equation, theorem boundary, tier, or open A13 subgate."
+      },
+      "kind": "audit",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "structured_unique_family:A13"
+      },
+      "family_refs": [
+        "A13"
+      ]
+    },
+    {
       "tag": "NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY",
       "anchor": "ng-2026-07-23-a13-shellwise-raw-secant-positivity",
       "branch": "A13 shellwise raw-secant positivity and geometry-only one-use routes",
@@ -12806,6 +12835,53 @@
       "schema": "tect/proof-exploration/1.0",
       "task_id": "T-050",
       "title": "Adversarial audit repairs the R-070 weighted linear-frame decomposition",
+      "verdict": "advanced"
+    },
+    {
+      "boundary": "This is a verifier reproducibility repair. It does not add mathematical evidence for the non-pp model attribution, the nonlinear rational-frame/cross-square inequality, finite-energy extension, one-use, or Nelson.",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "decision_reason": "The import graph and pinned manifests provide a complete finite dependency closure, so moving those checks to preflight removes the execute-before-detect window without changing the mathematical evidence or assertion totals.",
+      "evidence_refs": [
+        "codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py#runtime-dependency-preflight",
+        "negative-results/registry.md#audit-2026-07-24-a13-r070-dependency-preflight-gap",
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt#Reproduction"
+      ],
+      "finding": "The first integrated wrapper checked the imported R-069 helper after child execution and did not preflight its NPC/translation/UV closure. The repaired wrapper traverses the pinned R-069 and NPC manifests, validates all runtime source and authority hashes plus the prior manifest-bound result, and fails before execution on any mismatch.",
+      "formal_refs": {
+        "events": [],
+        "negatives": [
+          "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP"
+        ],
+        "results": [
+          "R-070"
+        ]
+      },
+      "gate_ids": [
+        "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE"
+      ],
+      "id": "EXP-000019",
+      "method": [
+        "Trace local imports from the R-070 primary through the R-069 endpoint helper into the NPC, translation, and UV helpers.",
+        "Trace manifests read at runtime by the NPC helper and locate their transitive source and authority pins.",
+        "Move prior-result and dependency-closure validation ahead of child execution and preserve the existing success-count contract."
+      ],
+      "next_action": "Run the corrected fail-closed wrapper, rebuild the PDF and generated evidence surfaces, pass release_check, and publish the corrective commit before resuming the non-pp model lemma.",
+      "provenance": "contemporaneous",
+      "question": "Does the integrated verifier reject every changed imported runtime dependency before any R-070 child can execute?",
+      "recorded_at": "2026-07-24T07:07:04Z",
+      "recorded_by": "Codex",
+      "related": [
+        {
+          "id": "EXP-000018",
+          "relation": "continues"
+        }
+      ],
+      "reviewed_on": "2026-07-24",
+      "schema": "tect/proof-exploration/1.0",
+      "task_id": "T-050",
+      "title": "R-070 verifier moves the transitive runtime closure before child execution",
       "verdict": "advanced"
     }
   ],
@@ -23894,6 +23970,49 @@
       "result_link_basis": {
         "R-070": "explicit_result_id"
       }
+    },
+    {
+      "id": "20260724-repair-r-070-transitive-dependency-preflight-20",
+      "date": "2026-07-24",
+      "header": "[Repair R-070 transitive dependency preflight] - 2026-07-24",
+      "claim_ids": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "keywords": [
+        "R-070",
+        "dependency-closure",
+        "fail-closed",
+        "preflight"
+      ],
+      "negative_results": [
+        "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP"
+      ],
+      "notes": [
+        "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt"
+      ],
+      "scripts": [
+        "codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py"
+      ],
+      "raw": "## [Repair R-070 transitive dependency preflight] - 2026-07-24\n\nThe final verifier audit found an execute-before-detect window: the R-069 imported helper was checked only after R-070 child execution, and its transitive NPC/translation/UV inputs were not fully preflighted. The integrated verifier now traverses the pinned R-069 and NPC manifests, validates the helper sources and every runtime authority manifest, binds the prior R-069 output to its manifest hash, and fails before child execution on any mismatch. The mathematical result and 47/47 integrated, 85/85 aggregate success contracts are unchanged.\n\n",
+      "claim_refs": [
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+      ],
+      "claim_ref_basis": {
+        "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+      },
+      "unresolved_claim_ids": [],
+      "result_ids": [
+        "R-069",
+        "R-070"
+      ],
+      "linked_result_ids": [
+        "R-069",
+        "R-070"
+      ],
+      "result_link_basis": {
+        "R-069": "explicit_result_id",
+        "R-070": "explicit_result_id"
+      }
     }
   ],
   "all_tasks": [
@@ -26998,6 +27117,12 @@
         "authority": "CHANGELOG.md"
       },
       {
+        "id": "event:20260724-repair-r-070-transitive-dependency-preflight-20",
+        "kind": "accepted_event",
+        "label": "[Repair R-070 transitive dependency preflight] - 2026-07-24",
+        "authority": "CHANGELOG.md"
+      },
+      {
         "id": "event:20260724-repair-r-070-weighted-linear-frame-decompositio",
         "kind": "accepted_event",
         "label": "[Repair R-070 weighted linear-frame decomposition] - 2026-07-24",
@@ -27109,6 +27234,12 @@
         "id": "exploration:EXP-000018",
         "kind": "proof_exploration",
         "label": "Adversarial audit repairs the R-070 weighted linear-frame decomposition",
+        "authority": "explorations/log.jsonl"
+      },
+      {
+        "id": "exploration:EXP-000019",
+        "kind": "proof_exploration",
+        "label": "R-070 verifier moves the transitive runtime closure before child execution",
         "authority": "explorations/log.jsonl"
       },
       {
@@ -27482,6 +27613,12 @@
         "kind": "audit",
         "label": "A13 v1.1 one-use field budget",
         "authority": "negative-results/registry.md#audit-2026-07-22-a13-half-sextic-overrestriction"
+      },
+      {
+        "id": "negative:AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
+        "kind": "audit",
+        "label": "R-070 integrated verifier runtime dependency closure",
+        "authority": "negative-results/registry.md#audit-2026-07-24-a13-r070-dependency-preflight-gap"
       },
       {
         "id": "negative:AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION",
@@ -33060,6 +33197,30 @@
         "basis": "explicit_negative_tag"
       },
       {
+        "from": "event:20260724-repair-r-070-transitive-dependency-preflight-20",
+        "relation": "records",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "explicit_claim_ids"
+      },
+      {
+        "from": "event:20260724-repair-r-070-transitive-dependency-preflight-20",
+        "relation": "records_negative",
+        "to": "negative:AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
+        "basis": "explicit_negative_tag"
+      },
+      {
+        "from": "event:20260724-repair-r-070-transitive-dependency-preflight-20",
+        "relation": "records_result",
+        "to": "result:R-069",
+        "basis": "explicit_result_id"
+      },
+      {
+        "from": "event:20260724-repair-r-070-transitive-dependency-preflight-20",
+        "relation": "records_result",
+        "to": "result:R-070",
+        "basis": "explicit_result_id"
+      },
+      {
         "from": "event:20260724-repair-r-070-weighted-linear-frame-decompositio",
         "relation": "records",
         "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
@@ -33624,6 +33785,42 @@
         "basis": "structured_formal_ref"
       },
       {
+        "from": "exploration:EXP-000019",
+        "relation": "assesses",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_claim_id"
+      },
+      {
+        "from": "exploration:EXP-000019",
+        "relation": "assesses_gate",
+        "to": "gate:A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE",
+        "basis": "structured_gate_id"
+      },
+      {
+        "from": "exploration:EXP-000019",
+        "relation": "continues",
+        "to": "exploration:EXP-000018",
+        "basis": "structured_related_ref"
+      },
+      {
+        "from": "exploration:EXP-000019",
+        "relation": "records_task",
+        "to": "task:T-050",
+        "basis": "structured_task_id"
+      },
+      {
+        "from": "exploration:EXP-000019",
+        "relation": "references_negative",
+        "to": "negative:AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
+        "basis": "structured_formal_ref"
+      },
+      {
+        "from": "exploration:EXP-000019",
+        "relation": "references_result",
+        "to": "result:R-070",
+        "basis": "structured_formal_ref"
+      },
+      {
         "from": "negative:AUDIT-2026-06-08-scscope-lift-overclaim",
         "relation": "bears_on",
         "to": "claim:B1-RH-ENUM",
@@ -33727,6 +33924,12 @@
       },
       {
         "from": "negative:AUDIT-2026-07-22-A13-HALF-SEXTIC-OVERRESTRICTION",
+        "relation": "bears_on",
+        "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+        "basis": "structured_unique_family:A13"
+      },
+      {
+        "from": "negative:AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP",
         "relation": "bears_on",
         "to": "claim:A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
         "basis": "structured_unique_family:A13"
@@ -45854,6 +46057,49 @@
         "result_ids": [],
         "linked_result_ids": [],
         "result_link_basis": {}
+      },
+      "20260724-repair-r-070-transitive-dependency-preflight-20": {
+        "id": "20260724-repair-r-070-transitive-dependency-preflight-20",
+        "date": "2026-07-24",
+        "header": "[Repair R-070 transitive dependency preflight] - 2026-07-24",
+        "claim_ids": [
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+        ],
+        "keywords": [
+          "R-070",
+          "dependency-closure",
+          "fail-closed",
+          "preflight"
+        ],
+        "negative_results": [
+          "AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP"
+        ],
+        "notes": [
+          "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt"
+        ],
+        "scripts": [
+          "codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py"
+        ],
+        "raw": "## [Repair R-070 transitive dependency preflight] - 2026-07-24\n\nThe final verifier audit found an execute-before-detect window: the R-069 imported helper was checked only after R-070 child execution, and its transitive NPC/translation/UV inputs were not fully preflighted. The integrated verifier now traverses the pinned R-069 and NPC manifests, validates the helper sources and every runtime authority manifest, binds the prior R-069 output to its manifest hash, and fails before child execution on any mismatch. The mathematical result and 47/47 integrated, 85/85 aggregate success contracts are unchanged.\n\n",
+        "claim_refs": [
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
+        ],
+        "claim_ref_basis": {
+          "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION": "explicit_claim_ids"
+        },
+        "unresolved_claim_ids": [],
+        "result_ids": [
+          "R-069",
+          "R-070"
+        ],
+        "linked_result_ids": [
+          "R-069",
+          "R-070"
+        ],
+        "result_link_basis": {
+          "R-069": "explicit_result_id",
+          "R-070": "explicit_result_id"
+        }
       },
       "20260724-repair-r-070-weighted-linear-frame-decompositio": {
         "id": "20260724-repair-r-070-weighted-linear-frame-decompositio",

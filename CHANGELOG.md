@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [Repair R-070 transitive dependency preflight] - 2026-07-24
+
+The final verifier audit found an execute-before-detect window: the R-069 imported helper was checked only after R-070 child execution, and its transitive NPC/translation/UV inputs were not fully preflighted. The integrated verifier now traverses the pinned R-069 and NPC manifests, validates the helper sources and every runtime authority manifest, binds the prior R-069 output to its manifest hash, and fails before child execution on any mismatch. The mathematical result and 47/47 integrated, 85/85 aggregate success contracts are unchanged.
+
 ## [Finalize corrected R-070 audit and ten-page certificate] - 2026-07-24
 
 Supersedes the initial R-070 event's eight-page and complete-linear-frame descriptions. The corrected ten-page certificate retains the exact full Q_II-weighted symmetric--Cartan split, pays the Cartan and q11 pure-pp pieces only, and leaves the non-pp balanced model attribution followed by the nonlinear coupled rational-frame/cross-square bound. Nonzero resonant p-column oracles and same-fixture coarse/fine envelopes are enforced. Primary 22/22, non-importing independent 16/16, integrated 47/47, and aggregate 85/85 pass; all ten rendered PDF pages pass visual QA. Tier remains T4.

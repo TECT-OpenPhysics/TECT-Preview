@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP](#audit-2026-07-24-a13-r070-dependency-preflight-gap) | R-070 integrated verifier runtime dependency closure | the initial verifier checked the imported R-069 helper only after child execution and did not preflight its transitive NPC/translation/UV dependency closure |
 | [AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION](#audit-2026-07-24-a13-r070-linear-frame-omission) | R-070 initial linear-frame reduction | the first draft omitted the production `q11` weight and generator sum in the pure-`pp` channel and replaced `Delta M` by its nonlinear FTC remainder, thereby deleting a nonzero full weighted linear term |
 | [NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE](#ng-2026-07-24-a13-doob-resolvent-closure) | A13 Doob terminalization, automatic terminal-resolver centering, and derivative-free Stein closure | terminalization is exact but equivalent to the target; an adapted terminal coefficient has strictly negative centered-resolvent expectation, while Stein differentiation demands undeclared Malliavin control derivatives |
 | [NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT](#ng-2026-07-24-a13-affine-schur-and-pure-control-payment) | A13 affine full-score Schur tangent and separate pure-control-defect payment | rotating phase kernels violate the required range condition, while a two-shell family puts the defect and both proposed budgets at the same N^6 scale |
@@ -50,6 +51,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-24-a13-r070-dependency-preflight-gap"></a>
+### AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP -- imported runtime closure was checked too late
+
+**Failure mode:** The first integrated R-070 verifier pinned its own sources
+and the R-069 manifest before execution, but it checked the R-069 primary
+helper hash only after running the R-070 children.  That helper imports the
+NPC, translation, and UV modules, and the NPC helper reads the translation and
+strict-past manifests.  Those transitive runtime inputs were not all checked
+before import.  A changed helper could therefore execute before the verifier
+reported the mismatch.
+
+**Evidence:** Static import tracing gives the runtime chain
+`R070 primary -> R069 primary -> {NPC, translation, UV}`.  The pinned R-069
+manifest points to the NPC manifest; that manifest pins the NPC, translation,
+and UV sources and the authority manifests read at runtime.  The repaired
+verifier traverses this pinned chain, compares every source and authority
+hash, binds the prior R-069 result to its manifest hash, and stops before any
+child process if one comparison fails.  Success retains the existing 47/47
+integrated and 85/85 aggregate contracts.
+
+**Consequence:** Earlier successful numerical results are not retracted, but
+their initial integrated wrapper did not meet the repository's strongest
+fail-closed standard.  The wrapper now performs a complete trusted preflight
+before child execution.  This is a reproducibility repair only; it changes no
+equation, theorem boundary, tier, or open A13 subgate.
 
 <a id="audit-2026-07-24-a13-r070-linear-frame-omission"></a>
 ### AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION -- the first R-070 draft deleted a weighted linear channel

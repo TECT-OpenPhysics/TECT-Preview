@@ -606,12 +606,16 @@ orders are independently asserted.  All quantities use the nondimensional A1
 normalization.  Same-fixture coarse/fine quadrature and Fourier envelopes test
 convergence; every diagnostic is recomputed rather than pasted, with zero-
 control, deterministic, positive-floor, and adapted-scalar limit cases.  These
-are regression checks, not a proof of (8.10).
+are regression checks, not a proof of (8.10).  Before child execution the
+integrated verifier also hash-checks the pinned R-069 helper and its complete
+NPC/translation/UV runtime dependency closure, including the translation and
+strict-past manifests read by the NPC helper.
 
 \section{Reproduction}
 
-The fail-closed verifier runs primary, non-importing independent, prior R-069,
-source/PDF hash, and repository-integration gates:
+The fail-closed verifier first checks R-070 source/PDF hashes and the transitive
+R-069 runtime dependency closure.  Only then does it run the primary,
+non-importing independent, prior-evidence, and repository-integration gates:
 \begin{verbatim}
 python codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py
 \end{verbatim}
