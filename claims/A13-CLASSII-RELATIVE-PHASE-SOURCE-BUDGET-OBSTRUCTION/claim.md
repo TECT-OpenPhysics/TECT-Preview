@@ -272,6 +272,27 @@ the following structural results and proof-architecture boundaries hold.
     `theta<1/4`, while value-high `O3` requires both `theta>1/2` and
     `theta<1/2`.  A positive adapted gain `rho` would reopen this route with
     moments strictly above `3/rho`; R-063 does not prove that adapted model.
+17. `A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION` resolves that fork
+    without claiming the horizontal coercivity theorem.  At the production
+    frame, the mismatched nonlinear `E_x--b_l` secant coefficient has the exact
+    frozen value `-27/[200P(1+e)]` and a finite high--high-to-low branch
+    independent of shell separation.  Thus no bare positive regularity gain is
+    available for that coefficient, although the witness does not evaluate or
+    refute the complete signed R-073 telescope.  A smooth bounded value-only
+    phase feedback also has strictly negative Wick expectation, disproving
+    automatic adapted centering.  In contrast, every genuine regular local
+    doublet/singlet phase orbit preserves the complete raw current exactly.
+    Its common-phase Wick anomaly vanishes, while its relative-phase anomaly
+    has a cutoff-uniform `O(Lambda^-3)` tail and is paid by one arbitrarily
+    small sextic allocation.  The R-071 periodic kernel lift optimizes to a
+    dyadically summable `O_eta(N^-2)` loss.  Finally, for
+    `0<kappa<1/2`,
+    `||A tensor A tensor DA||_(B^(1/2+kappa)_(1,1))`
+    is bounded by `C||A||_(H2)||A||_6^2`, so an adapted
+    `C^(-1/2-kappa)` one-form with a uniform sixth moment would close the
+    horizontal cubic payload.  Constructing that lower-chaos-complete signed
+    one-form and proving predictable graph-norm finite-energy recovery are the
+    next two steps.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -296,7 +317,8 @@ is a scoped T4 subproof and does not promote A13.
 | One-form Sobolev linear-frame completion / kernel leakage | Fixed-floor matrix one-form lift, generalized symmetric/Cartan one-use payments, exact low--high correction, and terminal-frame kernel no-go | T4 linear subgate closed; one integrated nonlinear successor |
 | Phase-kernel / causal diagonal one-use | Exact gauge-kernel strata, differentiated gauge identity, inverse-free completion, and matched same-shell one-use with one random constant | T4 diagonal subgate closed; full terminal off-diagonal remainder open |
 | Off-diagonal telescope / critical phase root | Exact familywise reassembly, raw-current telescope, projector-free restored completion, and scoped absolute-route endpoint no-go | T4 algebraic coupling closed; adapted terminal coercivity open |
-| Controlled-shell one-use | Adapted terminal phase-root coercivity, finite-energy extension, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
+| Resonant phase root / pure phase orbit / Besov payment | Exact bare-resonance and adapted-centering no-gos; exact local phase-orbit current invariance; finite relative-phase Wick anomaly; deterministic sixth-moment Besov payment | T4 phase subchannel and payment closed; complete horizontal one-form open |
+| Controlled-shell one-use | Adapted gauge-quotient Taylor one-form, finite-energy graph-norm recovery, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -350,6 +372,13 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   but its Wick form is only an equivalence to the open adapted terminal
   coercivity.  Its exponent obstruction applies only to the declared raw,
   termwise absolute, two-budget largest-shell architecture.
+- R-074 retains that signed boundary.  Its finite secant evaluates the
+  mismatched nonlinear coefficient root, not every term of the signed R-073
+  telescope.  Its value-only phase feedback is a centering diagnostic, not a
+  spatial control, while its local phase-orbit theorem applies to genuine
+  differentiable doublet/singlet phase rotations.  The covariance norms in
+  its Wick-anomaly bound are operator norms.  Its Besov lemma is deterministic;
+  the complete adapted horizontal one-form and its sixth moment remain open.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -372,52 +401,62 @@ Active umbrella gate:
 
 Current analytic child:
 
-- `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`
+- `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`
 
 Current subordinate order:
 
-1. turn the exact R-073 restored terminal completion into a cutoff-uniform
-   signed strict-past coercivity theorem, or prove an adapted positive-gain
-   root with `rho>0` and probability moments strictly above `3/rho` for the
-   two value-high branches, while retaining the range square and finite-low
-   boundary;
-2. localization/lower-semicontinuity extension to the declared finite-energy
-   control class and the controlled-shell one-use estimate;
+1. construct the complete lower-chaos adapted horizontal Taylor one-form
+   after quotienting the two local phase directions, retain the explicit R-074
+   resonance, both restored R-073 first variations, terminal square, and
+   finite-low boundary, and prove its signed endpoint reconstruction and a
+   cutoff-uniform sixth moment;
+2. use the R-074 Besov payment, then prove predictable graph-norm recovery for
+   the declared finite-energy class, controlling Cameron--Martin energy,
+   terminal `L6`, and the positive raw-current functional, and assemble the
+   controlled-shell one-use estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py
+python codes/foundations/a13_classii_resonant_phase_root_besov_reduction_verify.py
 ```
 
 Expected output:
 
 - primary `35/35`;
-- non-importing independent `27/27`;
-- integrated `51/51`, hence aggregate `113/113`;
-- all familywise and full telescopes, rank-stratified projectors,
-  projector-free terminal completion, restored phase cancellation, and the
-  two endpoint exponent conflicts;
+- non-importing independent `17/17`;
+- integrated `58/58`, hence aggregate `110/110`;
+- frame-derived Pauli contributions, two-resolution secant and Gaussian
+  quadratures, exact local phase covariance, the `O(Lambda^-3)` covariance
+  tail, Cameron--Martin rescue slope, and Besov sixth-moment exponents;
 - exit code zero.
 
-The seven-page proof note passes the standard form check, zero-overfull gate,
+The eight-page proof note passes the standard form check, zero-overfull gate,
 and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
+- `classii_resonant_phase_root_besov_reduction_manifest.json`
+- `notes/classii-resonant-phase-root-besov-reduction-260724-v1.0.tex.txt`
+- `notes/classii-resonant-phase-root-besov-reduction-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_resonant_phase_root_besov_reduction.py`
+- `../../codes/foundations/a13_classii_resonant_phase_root_besov_reduction_independent.py`
+- `../../codes/foundations/a13_classii_resonant_phase_root_besov_reduction_verify.py`
+- `runs/2026-07-24-primary-resonant-phase-root-besov-reduction/result.json`
+- `runs/2026-07-24-independent-resonant-phase-root-besov-reduction/result.json`
+- `runs/2026-07-24-integrated-resonant-phase-root-besov-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-raw-bare-positive-gain-root`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-automatic-adapted-wick-centering`
+
+The off-diagonal telescope predecessor remains binding:
+
 - `classii_off_diagonal_telescope_critical_phase_root_reduction_manifest.json`
 - `notes/classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0.tex.txt`
 - `notes/classii-off-diagonal-telescope-and-critical-phase-root-260724-v1.0.pdf`
-- `../../codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction.py`
-- `../../codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_independent.py`
 - `../../codes/foundations/a13_classii_off_diagonal_telescope_critical_phase_root_reduction_verify.py`
-- `runs/2026-07-24-primary-off-diagonal-telescope-critical-phase-root-reduction/result.json`
-- `runs/2026-07-24-independent-off-diagonal-telescope-critical-phase-root-reduction/result.json`
-- `runs/2026-07-24-integrated-off-diagonal-telescope-critical-phase-root-reduction/result.json`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-raw-absolute-offdiagonal-carleson`
 
 The phase-kernel/diagonal predecessor remains binding:
 
@@ -777,6 +816,42 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
 55. **DISMISSED: the endpoint conflict disproves A13.**  It retires only the
     declared raw termwise absolute two-budget architecture.  Signed adapted
     coercivity, null structure, and a positive-gain root remain viable.
+56. **UPHELD AGAINST A COMPLETE-ROOT READING: the R-074 finite secant evaluates
+    every term of the signed R-073 telescope.**  It evaluates the frozen
+    principal coefficient and the mismatched nonlinear `E_x--b_l` branch.
+    The complete telescope retains both first variations, the terminal square,
+    Wick subtraction, and Cameron--Martin weights.
+57. **UPHELD AGAINST AUTOMATIC CENTERING: strict-past measurability and Wick
+    ordering force the terminal coefficient to have mean zero.**  The smooth
+    bounded value-only phase feedback has exact mean
+    `-lambda_e t^2/(3 sqrt(3))`, independently confirmed by two-resolution
+    Gaussian quadrature.
+58. **DISMISSED: the negative value-only phase diagnostic contradicts local
+    gauge invariance.**  It freezes the derivative while rotating the value.
+    A genuine differentiable phase orbit rotates the spatial derivative too,
+    and its complete raw current is exactly invariant.
+59. **VALID WITH MITIGATION: the A1 covariance destroys the pure phase-orbit
+    theorem.**  Only its doublet--singlet noncommuting block survives.  The
+    common phase commutes exactly, while the relative-phase derivative
+    covariance has summand `O(|k|^-6)` and cutoff tail `O(Lambda^-3)`, so its
+    finite anomaly is paid once by the terminal sextic.
+60. **UPHELD AGAINST A COERCIVITY NO-GO: absence of bare separation gain proves
+    the weighted lower bound false.**  The actual controls carry fourth-order
+    Cameron--Martin frequency cost.  The known periodic terminal-kernel lift
+    optimizes to `O_eta(N^-2)` and is dyadically summable.
+61. **DISMISSED: the Cameron--Martin rescue coefficient is a pasted numerical
+    oracle.**  Both executables reconstruct the R-071 terminal-frame fixture
+    directly and compare its slope with the exact formula before optimizing
+    the loss.
+62. **UPHELD AGAINST CLOSURE: the Besov product lemma alone proves horizontal
+    terminal coercivity.**  It proves only the deterministic payment.  The
+    complete lower-chaos adapted gauge-quotient one-form, its signed endpoint
+    identity, and its cutoff-uniform sixth moment have not been constructed.
+63. **UPHELD AGAINST AUTOMATIC FINITE-ENERGY EXTENSION: predictable `L2`
+    density and lower semicontinuity transfer the regular-control bound.**
+    Approximants may carry excess positive raw-current or sextic energy, whose
+    semicontinuity has the wrong direction.  A predictable graph-norm recovery
+    or a declared biting/uniform-integrability substitute remains necessary.
 
 ## Falsifier
 
@@ -876,6 +951,20 @@ finite-low boundary, a source/PDF hash mismatch, failed seven-page PDF QA, or
 failure of the primary `35/35`, independent `27/27`, integrated `51/51`, and
 aggregate `113/113` contracts also falsifies R-073.
 
+The resonant phase-root/Besov continuation is additionally falsified by a
+wrong frozen principal coefficient, nonvanishing cancellation from either
+other Pauli generator, failure of the two-resolution finite-secant formula or
+its small-amplitude principal cross-check, a nonnegative or quadrature-
+inconsistent adapted phase-feedback expectation, failure of exact local phase
+current invariance, loss of common-phase covariance commutation, a relative-
+phase covariance tail inconsistent with the analytic `O(Lambda^-3)` resolvent
+power, a wrong Cameron--Martin fixture slope, a Besov order outside
+`0<kappa<1/2`, a random Young exponent other than six, omission of either
+direct runtime dependency hash, deletion of the finite-low boundary, a source
+or PDF hash mismatch, failed eight-page PDF QA, or failure of the primary
+`35/35`, independent `17/17`, integrated `58/58`, and aggregate `110/110`
+contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -946,6 +1035,17 @@ signed cancellation or a positive-gain adapted root.  It proves no stochastic
 terminal lower bound, finite-energy extension, controlled-shell one-use,
 Nelson theorem, interacting measure, floor/regulator removal, infinite
 volume, phase transition, BCC selection, or T5--T7. A13 remains T4.
+
+The resonant phase-root/Besov theorem closes the genuine local phase-orbit
+subchannel and the deterministic cubic payment, and it retires the named bare
+gain and automatic-centering routes.  Its finite secant is only the mismatched
+nonlinear coefficient branch, not the complete signed R-073 telescope.  The
+value-only feedback is only a centering diagnostic, not a spatial control.
+The result does not construct the complete horizontal adapted gauge-quotient
+one-form, prove its sixth moment or signed endpoint identity, extend to every
+finite-energy drift, close controlled-shell one-use or Nelson, construct an
+interacting measure, remove a floor or regulator, take infinite volume, prove
+phase transition or BCC selection, or justify T5--T7. A13 remains T4.
 
 ## History
 
@@ -1041,3 +1141,14 @@ volume, phase transition, BCC selection, or T5--T7. A13 remains T4.
   bound.  The raw termwise absolute value-high route is endpoint-critical at
   `theta=1/4` and `theta=1/2`; the next child is an adapted signed phase-root
   coercivity or positive-gain theorem. Tier remains T4.
+- 2026-07-24: Proved the exact nondecaying resonance of the mismatched
+  nonlinear coefficient root and refuted automatic adapted Wick centering,
+  while showing that neither witness defeats Cameron--Martin-weighted
+  coercivity.  Genuine local phase orbits preserve the complete raw current;
+  their common-phase Wick anomaly vanishes and their relative-phase anomaly
+  has a cutoff-uniform `O(Lambda^-3)` tail.  A direct Besov lemma pays the
+  remaining cubic payload with one `H2` factor, one sextic factor, and a sixth
+  random moment.  Pre-release audit replaced correlated evidence checks and
+  normalized the distinct issued R-050/R-063/R-073 predecessor contracts. The
+  complete lower-chaos adapted gauge-quotient one-form and predictable finite-
+  energy graph-norm recovery remain open; tier stays T4.

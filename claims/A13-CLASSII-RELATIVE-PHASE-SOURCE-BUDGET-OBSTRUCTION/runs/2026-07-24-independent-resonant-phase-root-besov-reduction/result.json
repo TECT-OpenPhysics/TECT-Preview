@@ -1,0 +1,285 @@
+{
+  "assertion_count": 17,
+  "assertions": [
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": ">0",
+      "name": "independent_Q_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.03374999999995781,
+      "expected": "nonzero",
+      "name": "independent_principal_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "per_generator": [
+          -0.03374996625077192,
+          0.0,
+          0.0
+        ],
+        "total_error": 3.374918588344711e-08
+      },
+      "expected": "total error and other generators<3e-7",
+      "name": "independent_finite_difference_principal",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "formula": 2.7755575615628914e-17,
+        "refinement": 1.3877787807814457e-17
+      },
+      "expected": "<5e-10",
+      "name": "independent_secant_quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "<5e-10",
+      "name": "independent_no_bare_separation_gain",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.469446951953614e-18,
+      "expected": "<5e-10",
+      "name": "independent_phase_lambda_formula",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "formula": -0.0005542562584223641,
+        "quadrature": {
+          "40": -0.0005542562583987769,
+          "80": -0.0005542562584223643
+        }
+      },
+      "expected": "negative with refinement/formula error<5e-10",
+      "name": "independent_phase_feedback_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.08374879954879e-15,
+      "expected": "<5e-10",
+      "name": "independent_frame_equivariance",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.4047456679787536e-15,
+      "expected": "<5e-10",
+      "name": "independent_integrable_phase_current_invariance",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.005687543394415989,
+      "expected": ">0",
+      "name": "independent_covariance_anomaly_is_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00013423581215840562,
+        1.686471200591416e-05,
+        2.198031553139437e-06,
+        2.8437147765411464e-07
+      ],
+      "expected": "strictly decreasing",
+      "name": "independent_covariance_increments_decay",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -2.992690025731207,
+        -2.9397236803607965,
+        -2.9503634209947847
+      ],
+      "expected": "last slope<-2.8",
+      "name": "independent_covariance_tail_has_cubic_rate",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "derived": 0.06749999997375403,
+        "error": 2.6233459848867824e-11,
+        "oracle": 0.06749999999998749
+      },
+      "expected": "error<2e-8",
+      "name": "independent_CM_kernel_slope_is_rederived",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -7.417582411814073e-05,
+        -1.9466474390052793e-05,
+        -4.924536041038388e-06,
+        -1.234754920195536e-06,
+        -3.089150411513461e-07
+      ],
+      "expected": "decreasing absolute dyadic losses",
+      "name": "independent_CM_kernel_loss_is_summable",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.6,
+      "expected": "<1",
+      "name": "independent_Besov_order_below_one",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "X": 0.5,
+        "Y": 0.3333333333333333,
+        "random": 0.16666666666666666
+      },
+      "expected": "sum=1",
+      "name": "independent_Besov_budget_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "no adapted Taylor one-form or coercivity claimed",
+      "expected": "open",
+      "name": "independent_scope_firewall",
+      "status": "PASS"
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "CM_fixture": {
+      "derived": 0.06749999997375403,
+      "error": 2.6233459848867824e-11,
+      "oracle": 0.06749999999998749
+    },
+    "CM_losses": [
+      -7.417582411814073e-05,
+      -1.9466474390052793e-05,
+      -4.924536041038388e-06,
+      -1.234754920195536e-06,
+      -3.089150411513461e-07
+    ],
+    "covariance_tail": {
+      "N3_scaled_increments": [
+        0.00859109197813796,
+        0.00863473254702805,
+        0.009003137241659133,
+        0.009318284579770028
+      ],
+      "analytic_resolvent_tail": "derivative weight |k|^2 times anisotropic resolvent remainder O(|k|^-8) gives sum tail O(N^-3)",
+      "cutoffs": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "perpendicular_norms": [
+        0.005533996653821062,
+        0.005668200912849811,
+        0.0056850615857988816,
+        0.005687259091018072,
+        0.005687543394415989
+      ],
+      "successive_increments": [
+        0.00013423581215840562,
+        1.686471200591416e-05,
+        2.198031553139437e-06,
+        2.8437147765411464e-07
+      ],
+      "successive_slopes": [
+        -2.992690025731207,
+        -2.9397236803607965,
+        -2.9503634209947847
+      ]
+    },
+    "phase": {
+      "frame_equivariance_error": 2.08374879954879e-15,
+      "lambda_error": 3.469446951953614e-18,
+      "lambda_expected": 0.018000000000010497,
+      "lambda_values": [
+        0.0180000000000105,
+        0.018000000000010497,
+        0.018000000000010497,
+        0.0180000000000105,
+        0.0180000000000105,
+        0.0180000000000105,
+        0.0180000000000105,
+        0.018000000000010497,
+        0.018000000000010497
+      ],
+      "local_phase_current_error": 6.4047456679787536e-15,
+      "negative_feedback_mean": -0.0005542562584223641,
+      "quadrature_feedback_means": {
+        "40": -0.0005542562583987769,
+        "80": -0.0005542562584223643
+      },
+      "quadrature_formula_error": 2.168404344971009e-19,
+      "quadrature_refinement_error": 2.3587360363508392e-14
+    },
+    "principal_and_secant": {
+      "exact_principal": -0.03374999999995781,
+      "finite_difference_principal": -0.03374996625077192,
+      "generator_contractions": [
+        -0.03374996625077192,
+        0.0,
+        0.0
+      ],
+      "principal_error": 3.374918588344711e-08,
+      "secant_integral_error": 2.7755575615628914e-17,
+      "secant_refinement_error": 1.3877787807814457e-17,
+      "secant_rows": [
+        {
+          "branch": -0.003050461341238156,
+          "closed": 0.09038403974041243,
+          "integral": 0.0903840397404124,
+          "k": 7,
+          "n": 3,
+          "refinement_error": 0.0
+        },
+        {
+          "branch": -0.003050461341238156,
+          "closed": 0.09038403974041243,
+          "integral": 0.0903840397404124,
+          "k": 15,
+          "n": 3,
+          "refinement_error": 0.0
+        },
+        {
+          "branch": -0.003050461341238156,
+          "closed": 0.09038403974041243,
+          "integral": 0.0903840397404124,
+          "k": 31,
+          "n": 3,
+          "refinement_error": 0.0
+        },
+        {
+          "branch": -0.003050461341238156,
+          "closed": 0.09038403974041243,
+          "integral": 0.0903840397404124,
+          "k": 63,
+          "n": 3,
+          "refinement_error": 1.3877787807814457e-17
+        }
+      ],
+      "secant_spread": 0.0
+    }
+  },
+  "honesty_boundary": "Independent diagnostics establish the scoped route boundaries and pure phase-orbit identity only; horizontal adapted coercivity, finite-energy recovery, one-use, and Nelson remain open.",
+  "pass": true,
+  "result_id": "A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION",
+  "run_kind": "independent-non-importing",
+  "schema": "tect/a13-resonant-phase-root-besov-reduction-run/1.0",
+  "source": {
+    "path": "codes/foundations/a13_classii_resonant_phase_root_besov_reduction_independent.py",
+    "sha256": "ac39e165d237e883422d2ddc82b4d7e6883b7bc9fe83a4d5671bd0a5b747315f",
+    "version": "1.0.1"
+  },
+  "summary": {
+    "passed": 17,
+    "status": "PASS",
+    "total": 17
+  },
+  "timestamp_utc": "2026-07-24T14:39:00.140271+00:00"
+}

@@ -121,10 +121,23 @@ endpoint theorem.
     and `u=0` rank strata. After Wick subtraction this is the open adapted
     terminal coercivity, not a new lower bound. The termwise absolute value-
     high route is endpoint-critical at `theta=1/4` for O2 and `theta=1/2` for
-    O3. The current child is therefore
-    `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`: prove signed
-    strict-past cancellation or a genuine two-control adapted gain before
-    finite-energy extension, controlled-shell one-use, and Nelson.
+    O3. R-074 resolves the phase fork below without claiming the remaining
+    horizontal coercivity.
+15. **Resonant phase root, pure phase orbit, and Besov payment.** R-074 proves
+    that the mismatched nonlinear coefficient has an exact nondecaying
+    high--high-to-low resonance, so the bare positive-gain route is unavailable,
+    and a smooth strict-past value-only phase feedback refutes automatic Wick
+    centering. Neither witness is a Cameron--Martin-weighted counterexample.
+    Genuine differentiable doublet/singlet phase orbits preserve the complete
+    raw current exactly. The common-phase Wick anomaly vanishes, while the
+    relative-phase covariance block has derivative-weighted summand
+    `O(|k|^-6)` and tail `O(Lambda^-3)`. A direct endpoint Besov lemma pays the
+    horizontal cubic payload with one `H2` factor, one sextic factor, and a
+    sixth current moment. The current child is
+    `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`: construct the complete
+    lower-chaos signed one-form and its cutoff-uniform sixth moment, then prove
+    predictable graph-norm finite-energy recovery before controlled-shell
+    one-use and Nelson.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

@@ -1,0 +1,518 @@
+% Title: Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact/analytic structural reduction; horizontal terminal coercivity open
+% Result: A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION
+% Ledger: R-074
+%
+% v1.0 (2026-07-24): exact high--high-to-low resonance and bare-gain
+% obstruction; exact production adapted-centering diagnostic; pure local
+% phase-orbit raw invariance and cutoff-uniform Wick anomaly; CM rescue
+% boundary; direct Besov one-use discriminator and finite-energy warning.
+
+\section{Purpose and scope}
+
+R-073 reduced the unresolved nonlinear part of A13 to adapted terminal
+phase-root coercivity.  It left two possible proof mechanisms: a signed
+strict-past cancellation or a positive regularity gain for the value-high
+Taylor branches.  This note decides three parts of that fork.
+
+First, the unsubtracted nonlinear secant remainder has a nonzero
+high--high-to-low production resonance in its mismatched $E_x$--$b_\ell$
+branch.  Its bare low Fourier coefficient is independent of shell separation.
+Therefore no coefficient-blind theorem can place that bare root in
+$H^{-1/2+\rho}$ with $\rho>0$, and R-063's balanced jet gain may
+not be imported before the resonance and all lower chaoses are identified.
+
+Second, strict-past dependence and phase-root algebra do not automatically
+center the terminal Wick coefficient.  A smooth production-frame diagnostic
+has a strictly negative expectation.  It is not a coercivity counterexample:
+it rotates a value while freezing its derivative and has no ultraviolet
+replication defeating Cameron--Martin cost.
+
+Third, a genuine integrable local phase orbit is much better.  The full raw
+current is exactly invariant.  The only Wick change is the phase-noncommuting
+part of the A1 derivative covariance.  A resolvent identity makes that part
+cutoff-uniform with an $O(\Lambda^{-3})$ tail, so the anomaly is paid by one
+arbitrarily small terminal sextic allocation.  Thus the pure phase-orbit
+subchannel closes; the remaining gate is the adapted gauge-quotient,
+horizontal Taylor one-form.
+
+The note also proves the deterministic Besov product estimate which would
+pay that horizontal root once at the raw R-050 order.  It needs a sixth
+moment, not a positive regularity gain.  Constructing the corresponding
+adapted, lower-chaos-complete one-form is still open.  This result does not
+prove terminal coercivity, finite-energy recovery, controlled-shell one-use,
+the $q=10/9$ Nelson theorem, an interacting measure, removal of the density
+floor or regulator, or infinite volume.
+
+All production statements use the hash-pinned A1 coefficients, fixed
+$\epsilon_\rho>0$, the six-real Pauli convention, the common real-even
+regulator class, and the R-066/R-073 finite-low convention.
+
+\section{Production frames and notation}
+
+Let $S_1,S_2,S_3$ be the realified Pauli generators, and write
+\[
+ q_r(z)={z^TS_rz\over |z|^2+e},\qquad
+ p_r(z)=2S_rz,\qquad
+ v_r(z)=2(S_r-q_r(z)I)z,                                  \tag{2.1}
+\]
+\[
+ M_r(z)=[p_r(z),v_r(z)],\qquad
+ B(z)=\sum_{r=1}^3M_r(z)Q_{\rm II}M_r(z)^T.              \tag{2.2}
+\]
+Put
+\[
+ P=M_X^2+\mu_X,\qquad
+ Q_{\rm II}=\begin{pmatrix}q_{11}&q_{12}\\q_{12}&q_{22}\end{pmatrix}.
+                                                                    \tag{2.3}
+\]
+At the production values,
+\[
+ q_{12}+q_{22}={27\over1600P}.                            \tag{2.4}
+\]
+For a smooth six-real field $z$, the cutoff covariance-normal current is
+\[
+ \mathcal W_\Lambda(z)={1\over2}\sum_i\int
+ B(z):(D_iz\otimes D_iz-\Gamma_{\Lambda,i})\,dx.        \tag{2.5}
+\]
+The elementary frame bounds are
+\[
+ \|p_r(z)\|\le2|z|,\qquad \|v_r(z)\|\le2|z|,
+ \qquad\operatorname{Tr}B(z)\le24\lambda_Q|z|^2.       \tag{2.6}
+\]
+For the second inequality, expand
+$|(S_r-q_rI)z|^2$ and use
+$q_r=(z^TS_rz)/(|z|^2+e)$; the two $q_r$ terms have a nonpositive net
+correction to $|S_rz|^2\le|z|^2$.
+
+\section{Frozen principal resonance}
+
+Take $z=e_1$ and $a=G=e_2$.  Only the real $\sigma_x$ frame survives after
+projection on $e_2$.  Direct differentiation gives
+\[
+ M_x(e_1)^Te_2=(2,2),\qquad
+ {1\over2}D^2p_x(e_1)[e_2,e_2]=0,                       \tag{3.1}
+\]
+\[
+ {1\over2}D^2v_x(e_1)[e_2,e_2]=-{4\over1+e}e_2.        \tag{3.2}
+\]
+The other two Pauli generators have zero $e_2$ projection.  Equations
+(2.4), (3.1), and (3.2) therefore yield the exact principal coefficient
+\[
+ \boxed{
+ e_2\cdot{1\over2}\sum_rD^2M_r(e_1)[e_2,e_2]
+ Q_{\rm II}M_r(e_1)^Te_2
+ =-{27\over200P(1+e)}.}                                  \tag{3.3}
+\]
+It equals $-0.0337499999999578\ldots$ at the pinned parameters and is
+strictly nonzero.
+
+There is an exact finite-secant version.  On the normalized one-dimensional
+torus put
+\[
+ a_j(x)=t e_2\cos(kx),\qquad
+ G(x)=g e_2\cos(nx),\qquad
+ b_\ell(x)=b e_2\cos(nx),\qquad k>n.                    \tag{3.4}
+\]
+For $E_x=M_x(e_1+a_j)-M_x(e_1)-DM_x(e_1)[a_j]$,
+\[
+ E_x^p=0,\qquad
+ e_2\cdot E_x^v=-{4t^2\cos^2(kx)\over
+                         1+e+t^2\cos^2(kx)}.             \tag{3.5}
+\]
+Thus the raw mismatched branch is
+\[
+ \Lambda_{k,n}=-8(q_{12}+q_{22})gb\int
+ {t^2\cos^2(kx)\over1+e+t^2\cos^2(kx)}\cos^2(nx)\,d\bar x.
+                                                                    \tag{3.6}
+\]
+The first factor has Fourier support only at multiples of $2k$.  Since
+$k>n$, its nonzero modes are orthogonal to $\cos(2nx)$, and
+\[
+ \boxed{
+ \Lambda_{k,n}=-4(q_{12}+q_{22})gb
+ \left(1-\sqrt{{1+e\over1+e+t^2}}\right).}              \tag{3.7}
+\]
+It is independent of $k/n$.  The zero Fourier mode of the nonlinear
+multiplier is nonzero, so multiplying a Gaussian derivative at frequency
+$n$ retains a positive multiple of its variance.  No bare factor
+$2^{-\rho(j-\ell)}$ and no raw $H^{-1/2+\rho}$ improvement can follow from
+the production coefficient alone.
+
+This is the exact content of
+\texttt{NG-2026-07-24-A13-RAW-BARE-POSITIVE-GAIN-ROOT}.  It does not rule
+out Cameron--Martin frequency weights, explicit resonance subtraction, a
+lower-chaos-complete adapted reconstruction, or the signed R-073 telescope.
+
+\section{Automatic adapted centering is false}
+
+Let $J_D$ be the doublet phase generator, $z=e_1$, and $y=J_Dz=e_4$.
+For $R_\theta=\exp(\theta J_D)$, exact frame evaluation gives
+\[
+ y^TB(R_\theta z)y=\lambda_e\sin^2\theta,\qquad
+ \lambda_e={3(113e^2+136e+48)\over
+                   2000P(1+e)^2}>0.                         \tag{4.1}
+\]
+Let $\xi\sim N(0,1)$ be an earlier derivative innovation and choose the
+smooth bounded strict-past angle
+\[
+ \theta_t(\xi)=\arcsin(te^{-\xi^2/2}),\qquad0<t<1.       \tag{4.2}
+\]
+If one rotates the terminal value but freezes the derivative carrier, the
+one-coordinate Wick diagnostic is
+\[
+ W={\lambda_et^2\over2}e^{-\xi^2}(\xi^2-1).             \tag{4.3}
+\]
+Since
+\[
+ \mathbb E e^{-\xi^2}={1\over\sqrt3},\qquad
+ \mathbb E\xi^2e^{-\xi^2}={1\over3\sqrt3},             \tag{4.4}
+\]
+one obtains
+\[
+ \boxed{\mathbb EW=-{\lambda_et^2\over3\sqrt3}<0.}     \tag{4.5}
+\]
+At the pinned parameters $\lambda_e=0.0180000000000105\ldots$.
+
+Equation (4.5) refutes automatic conditional centering of an adapted terminal
+coefficient and is registered as
+\texttt{NG-2026-07-24-A13-AUTOMATIC-ADAPTED-WICK-CENTERING}.  It is not a
+production coercivity counterexample.  The frozen derivative in (4.3) is not
+the derivative of the rotated spatial field, and the example supplies no
+cutoff sequence whose negative budgeted expectation diverges.
+
+\section{Pure phase-orbit Wick theorem}
+
+Let $J_D,J_S$ be the commuting doublet and singlet phase generators and
+\[
+ R(x)=\exp\{\theta_D(x)J_D+\theta_S(x)J_S\}.             \tag{5.1}
+\]
+Both generators commute with every $S_r$.  Hence
+\[
+ q_r(Rz)=q_r(z),\qquad M_r(Rz)=RM_r(z),                  \tag{5.2}
+\]
+and the phase roots obey
+\[
+ M_r(z)^TJ_\alpha z=0,qquad\alpha\in\{D,S\}.           \tag{5.3}
+\]
+Differentiating the actual rotated field gives
+\[
+ D_i(Rz)=R\left(D_iz+\sum_\alpha
+                   (\partial_i\theta_\alpha)J_\alpha z\right).
+                                                                    \tag{5.4}
+\]
+Combining (5.2)--(5.4) proves the pathwise identity
+\[
+ \boxed{M_r(Rz)^TD_i(Rz)=M_r(z)^TD_iz.}                 \tag{5.5}
+\]
+Thus the complete raw terminal current square is exactly invariant under any
+regular local phase orbit.  Randomness of the angles is irrelevant to this
+pointwise identity; no conditioning, projector, pseudoinverse, or Malliavin
+derivative is used.  An additive displacement $Rz-z$ need not itself be an
+admissible strict-past control, so (5.5) closes a geometric subchannel rather
+than the whole control class.
+
+For the Wick term, average a covariance over the compact phase group:
+\[
+ \Gamma_{\Lambda,i}^{\parallel}
+ =\int_{\mathbb T^2}R_\vartheta^T\Gamma_{\Lambda,i}
+                       R_\vartheta\,d\vartheta,
+ \qquad
+ \Gamma_{\Lambda,i}^{\perp}
+ =\Gamma_{\Lambda,i}-\Gamma_{\Lambda,i}^{\parallel}.   \tag{5.6}
+\]
+The parallel part commutes with every phase.  Using
+$B(Rz)=RB(z)R^T$ and (5.5),
+\[
+ \boxed{
+ \mathcal W_\Lambda(Rz)-\mathcal W_\Lambda(z)
+ =-{1\over2}\sum_i\int
+ \operatorname{Tr}\{[RB(z)R^T-B(z)]
+                       \Gamma_{\Lambda,i}^{\perp}\}\,dx.}    \tag{5.7}
+\]
+
+The A1 Fourier symbol is
+\[
+ A(k)=K(k)I+H,\qquad
+ K(k)=r+Z|k|^2+Y|k|^4.                                  \tag{5.8}
+\]
+The scalar resolvent is phase commuting, and
+\[
+ (K I+H)^{-1}-K^{-1}I=-K^{-1}(K I+H)^{-1}H.             \tag{5.9}
+\]
+For sufficiently large $|k|$, (5.9) gives
+\[
+ \|\mathrm P_\perp A(k)^{-1}\|\lesssim |k|^{-8}.       \tag{5.10}
+\]
+The derivative covariance contributes a $k_i^2$ weight.  Therefore
+\[
+ k_i^2\|\mathrm P_\perp A(k)^{-1}\|\lesssim |k|^{-6},
+ \qquad
+ \sum_{|k|>\Lambda}|k|^{-6}\lesssim\Lambda^{-3}.       \tag{5.11}
+\]
+Consequently
+\[
+ \boxed{
+ \sup_\Lambda\|\Gamma_{\Lambda,i}^{\perp}\|<\infty,
+ \qquad
+ \|\Gamma_{\infty,i}^{\perp}
+       -\Gamma_{\Lambda,i}^{\perp}\|\lesssim\Lambda^{-3}.} \tag{5.12}
+\]
+All covariance norms in (5.12)--(5.13) are operator norms.
+Equations (2.6), (5.7), and (5.12) yield
+\[
+ |\mathcal W_\Lambda(Rz)-\mathcal W_\Lambda(z)|
+ \le72\lambda_Q\max_i\|\Gamma_{\Lambda,i}^{\perp}\|
+       \|z\|_2^2
+ \le\zeta\|z\|_6^6+C_\zeta.                         \tag{5.13}
+\]
+The terminal sextic is spent once.  The common phase $J_D+J_S$ commutes with
+the entire complex A1 covariance, so its anomaly is exactly zero.  Only
+relative doublet--singlet phase sees the finite defect.  In the R-070
+telescope the finite-low boundary $-\mathcal W_{j_0}$ remains intact; (5.13)
+does not reset or discard it.
+
+\section{Cameron--Martin rescue boundary}
+
+The R-071 terminal-kernel fixture has the exact affine slope
+\[
+ c_e={27(6e^2+22e+27)\over400(e+3)^3}>0.                \tag{6.1}
+\]
+Its periodic production lift has averaged leakage
+$(c_e/2)t+O(N^{-2})$ and oscillatory $H^2$ cost
+\[
+ {3t^2\over2}(N^2+1+N^{-2}).                            \tag{6.2}
+\]
+After adding an $\eta$ Cameron--Martin allocation and optimizing in $t$,
+\[
+ \inf_t\left\{{c_e\over2}t+{3\eta\over2}
+ (N^2+1+N^{-2})t^2\right\}
+ =-{c_e^2\over24\eta(N^2+1+N^{-2})}.                  \tag{6.3}
+\]
+This is $O_\eta(N^{-2})$ and is dyadically summable.
+
+The same distinction applies to (3.7).  Realizing
+$t\cos(kx)$ through the A1 Cameron--Martin map costs at least the fourth-order
+frequency weight $ct^2\langle k\rangle^4$; realizing the low derivative
+$b\cos(nx)$ costs a further positive low-shell energy.  Thus the lack of a
+\emph{bare coefficient} separation gain is not a failure of the
+Cameron--Martin-weighted coercivity theorem.  Any fixed finite-mode negative
+diagnostic is also absorbed into $C_{\eta,\zeta,j_0}$.  A genuine falsifier
+would require a cutoff sequence with unbounded negative budgeted expectation.
+No registered witness has that property.
+
+\section{Besov one-use discriminator}
+
+The resonance should not be estimated by the R-073 termwise shell norms.
+After the exact endpoint grouping, its deterministic payload is cubic in a
+total control and has the form $A\otimes A\otimes DA$.  The correct duality is
+the endpoint Besov pairing, not a fictitious positive regularity gain.
+
+\begin{lemma}[cubic control payload]
+For $0<\kappa<1/2$ and $A\in H^2(\mathbb T^3)\cap L^6(\mathbb T^3)$,
+\[
+ \boxed{
+ \|A\otimes A\otimes DA\|_{B^{1/2+\kappa}_{1,1}}
+ \le C_\kappa\|A\|_{H^2}\|A\|_6^2.}                 \tag{7.1}
+\]
+\end{lemma}
+
+\begin{proof}
+Use an inhomogeneous Littlewood--Paley partition and expand the three factors
+by largest input frequency.  If the differentiated factor has largest scale
+$2^j$, put it in $L^2$ and the other two factors in $L^4$; the weighted sum is
+bounded by
+\[
+ \|A\|_6^2\sum_j2^{(3/2+\kappa)j}\|\Delta_jA\|_2.
+\]
+If an undifferentiated factor has the largest scale, put that factor in
+$L^2$, the other value factor in $L^6$, and use
+$\|D S_jA\|_3\lesssim2^j\|A\|_6$ for the lower factor.  Comparable-largest
+terms are assigned to either largest factor and obey the same bound by the
+vector-valued square-function inequality.  Finally Cauchy--Schwarz against
+$\sum_j2^{4j}\|\Delta_jA\|_2^2$ converges because
+$3/2+\kappa<2$.  The finite low block is controlled by the inhomogeneous
+norm.  Summing the finitely many Bony orientations proves (7.1).
+\end{proof}
+
+Let $\mathfrak J$ be a reconstructed adapted Taylor one-form at the honest
+R-050 order
+\[
+ \mathfrak J\in C^{-1/2-\kappa}
+ =B^{-1/2-\kappa}_{\infty,\infty}.                       \tag{7.2}
+\]
+Besov duality and (7.1), with
+$X=\|A\|_{H^2}^2$ and $Y=\|A\|_6^6$, give
+\[
+ |\langle\mathfrak J,A^2DA\rangle|
+ \le C\|\mathfrak J\|X^{1/2}Y^{1/3}.                  \tag{7.3}
+\]
+The exponents $2,3,6$ are conjugate.  Weighted Young therefore yields
+\[
+ \boxed{
+ |\langle\mathfrak J,A^2DA\rangle|
+ \le\eta X+\zeta Y
+ +C\eta^{-3}\zeta^{-2}\|\mathfrak J\|^6.}            \tag{7.4}
+\]
+There is positive probability slack $1/6$.  R-050 supplies every finite
+moment for its unshifted current, so the required sixth moment is compatible
+with the existing enhancement.  What remains unproved is that the complete
+R-073 horizontal Taylor root, including the resonance and all R-063 lower
+chaoses, reconstructs as such an adapted $\mathfrak J$ with a cutoff-uniform
+sixth moment and with the terminal square and finite-low boundary retained.
+
+\section{Finite-energy recovery is not automatic}
+
+Once a uniform regular one-shot control inequality is proved, stopping and
+smooth cylindrical approximation are natural candidates for extending it.
+Plain lower semicontinuity or Fatou, however, has the wrong direction for a
+lower bound if approximants carry excess positive sextic or raw-current
+energy.  Predictability also forbids a terminal-event truncation.
+
+The nontrivial finite-energy successor must construct predictable recovery
+sequences converging simultaneously in the Cameron--Martin norm, terminal
+$L^6$, and the positive raw-current graph functional (or prove a biting and
+uniform-integrability substitute).  At each fixed cutoff the negative part
+has the useful bound
+\[
+ \mathcal W_J(z)^-\le C_J(1+\|z\|_2^2),                 \tag{8.1}
+\]
+but (8.1) alone does not control excess positive energy.  Accordingly this
+note records the density shortcut as unresolved rather than claiming the
+finite-energy extension.
+
+\section{Evidence map and successor}
+
+The proof map after R-074 is:
+\begin{enumerate}
+\item \textbf{Closed negatively:} the raw unsubtracted positive-gain root is
+impossible by (3.3)--(3.7).  The obstruction is an exact production
+high--high-to-low resonance, not a fitted slope.
+\item \textbf{Closed negatively:} strict-past dependence plus Wick ordering
+does not imply exact centering; (4.1)--(4.5) give a smooth production
+diagnostic.
+\item \textbf{Closed positively:} a genuine local phase orbit preserves the
+complete raw current exactly.  Its relative-phase Wick anomaly is
+cutoff-uniform and potential-grade by (5.7)--(5.13); the common phase anomaly
+vanishes exactly.
+\item \textbf{Closed as a deterministic payment:} an order
+$C^{-1/2-\kappa}$ adapted current pairs with the cubic control payload using
+one $H^2$ payment, one sextic payment, and a sixth random moment by (7.1)--
+(7.4).  No positive gain is needed for this pairing.
+\item \textbf{Not a counterexample:} the terminal-kernel and frozen-resonance
+witnesses acquire summable or stronger Cameron--Martin costs, as in (6.3).
+\item \textbf{Still open:} construct the lower-chaos-complete adapted
+gauge-quotient Taylor one-form, prove its signed endpoint reconstruction and
+sixth-moment bound, then establish a predictable graph-norm recovery theorem.
+\end{enumerate}
+
+The smallest honest successor is
+\[
+ \boxed{\texttt{A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM}.}
+                                                                    \tag{9.1}
+\]
+It must keep the R-073 terminal square, both restored first variations, the
+explicit resonant low output, every R-063 lower chaos, and the finite-low
+boundary.  It may close either by the direct Besov payment (7.4) or by a
+resonance-subtracted positive gain.  It may not claim gain for the complete
+raw root.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``R-063 already gives the needed adapted gain.''}
+\textbf{UPHELD as false.}  Equation (3.7) retains a nonzero unbalanced low
+mode at arbitrary separation.  R-063 concerns balanced unshifted jets and
+explicitly excludes the adapted two-control theorem.
+
+\item \textbf{``No bare gain means coercivity is false.''}
+\textbf{DISMISSED.}  The actual controls carry fourth-order
+Cameron--Martin weights.  Equations (6.2)--(6.3) show the strongest known
+kernel lift is saved by a summable loss.
+
+\item \textbf{``Strict-past adaptation centers the terminal Wick form.''}
+\textbf{UPHELD as false.}  Equation (4.5) is strictly negative.  Stein or
+Clark--Ocone repair would introduce undeclared Malliavin derivatives of the
+control.
+
+\item \textbf{``The negative phase diagnostic contradicts gauge
+invariance.''}  \textbf{DISMISSED.}  The diagnostic rotates the value and
+freezes its derivative.  A true spatial phase differentiates according to
+(5.4), and its raw current is exactly invariant by (5.5).
+
+\item \textbf{``The Wick covariance spoils the pure phase theorem.''}
+\textbf{DISMISSED with a finite mitigation.}  The commuting covariance
+part cancels.  The remaining relative-phase block has the summable resolvent
+tail (5.11), and (5.13) pays it once from the sextic.
+
+\item \textbf{``The Besov lemma proves terminal coercivity.''}
+\textbf{UPHELD as an overclaim.}  The deterministic payment is closed, but
+the complete adapted horizontal one-form and its sixth moment have not been
+constructed.
+
+\item \textbf{``Ordinary $L^2$ density proves the finite-energy
+extension.''}  \textbf{UPHELD as false.}  Lower semicontinuity acts in the
+wrong direction for excess positive raw energy.  A predictable graph-norm
+recovery theorem is required.
+
+\item \textbf{``The phase projector may replace the signed terminal
+completion.''}  \textbf{UPHELD as false.}  R-073's rank jumps and restored
+first variations remain binding.  The present phase-orbit theorem uses no
+projector and does not alter the R-073 identity.
+
+\item \textbf{``This result proves one-use or Nelson.''}
+\textbf{UPHELD as an overclaim.}  Horizontal adapted coercivity,
+finite-energy recovery, controlled-shell one-use, and Nelson remain open.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable derives $Q_{\rm II}$, $e$, and $P$ from A1; evaluates
+all three six-real frames; checks the exact principal coefficient, finite
+secant integral, value-only phase diagnostic, local phase covariance,
+phase-group covariance tail, Cameron--Martin scaling, Besov exponent ledger,
+and the quadratic coefficient bound.  The non-importing executable rebuilds
+the complex Pauli representation, sharp-cube covariance, finite-difference
+principal, quadrature, phase orbit, and tail independently.  The integrated
+verifier hash-pins R-050, R-063, R-073, the sources, note, PDF, and manifest
+before executing both children.
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_resonant_phase_root_besov_reduction_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION
+Precise statement:       The unsubtracted nonlinear secant remainder has an
+                         exact nondecaying high-high-to-low bare-coefficient
+                         resonance in its mismatched branch; automatic
+                         adapted Wick centering is false; genuine local
+                         phase orbits are raw-invariant with a UV-finite
+                         potential-grade Wick anomaly; and an order -1/2-
+                         current pays the cubic control payload by a sixth
+                         moment Besov one-use inequality.
+Scope:                   Fixed-floor A1/R-050/R-063/R-073; common real-even
+                         cutoffs; regular local phase orbits; one-shot
+                         strict-past successor class; finite-low retained.
+Dependencies:            A1; R-050; R-063; R-066; R-069--R-073.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_resonant_phase_root_besov_reduction_verify.py
+Expected output:         primary + independent + integrated aggregate PASS.
+Falsification gate:      A principal, secant, phase, covariance-tail,
+                         Besov-exponent, hash, PDF, or scope assertion fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No horizontal adapted coercivity, finite-energy
+                         recovery, controlled-shell one-use, Nelson,
+                         measure, removal, infinite volume, or T5--T7.
+Next required action:    Construct the adapted gauge-quotient Taylor
+                         one-form and close it by the direct Besov payment
+                         or an explicitly resonance-subtracted gain.
+\end{verbatim}
+\endgroup

@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [A13 R-074 predecessor contract normalization] - 2026-07-24
+
+The first R-074 integrated wrapper repeated the known assumption that all predecessors use the modern verification/pass/count schema. Verifier v1.0.2 now validates the issued R-050, R-063, and R-073 schemas separately, including their manifest digests, PASS signals, row counts, aggregate counts, and all-row status. The correction changes no mathematics, scope, PDF, tier, or 58/58 integrated and 110/110 aggregate contract.
+
+## [A13 R-074 resonant phase-root and Besov reduction] - 2026-07-24
+
+R-074 proves the exact nondecaying mismatched nonlinear resonance, refutes automatic adapted Wick centering, closes genuine regular local phase orbits up to a cutoff-uniform relative-phase Wick anomaly, and proves the deterministic Besov sixth-moment payment. Pre-release adversarial review replaced correlated or vacuous checks with frame-derived generator contributions, two-resolution secant and Gaussian quadratures, a reconstructed Cameron--Martin fixture, and direct runtime dependency hashes. The complete lower-chaos adapted gauge-quotient one-form, predictable finite-energy graph-norm recovery, controlled-shell one-use, and Nelson synthesis remain open at T4.
+
 ## [R-073 exact off-diagonal telescope and critical phase-root boundary] - 2026-07-24
 
 R-073 reassembles all three R-072 off-diagonal families and the R-071 linear term into the exact R-069 raw-current telescope. Restoring both separated first variations gives a projector-free terminal square and cancels every terminal-kernel component on kernel-projector ranks 2, 3, and 6; after Wick subtraction this is the still-open adapted terminal coercivity, not a lower bound. The scoped raw termwise absolute O2/O3 route is endpoint-critical at theta=1/4 and theta=1/2. Primary 35/35, non-importing independent 27/27, integrated 51/51, and aggregate 113/113 assertions pass. The seven-page PDF passes form, zero-overfull, and final all-page Poppler visual QA. The first integrated wrapper exposed and repaired the historical predecessor-contract schema split. Tier remains T4; the next child is A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY, followed by finite-energy extension, controlled-shell one-use, and Nelson.

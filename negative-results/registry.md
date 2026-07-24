@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-24-A13-R074-PREDECESSOR-CONTRACT-SCHEMAS](#audit-2026-07-24-a13-r074-predecessor-contract-schemas) | R-074 integrated-verifier predecessor validation | the first wrapper again assumed a modern `verification`/`pass` contract, but R-050 has no manifest run contract and R-063 uses `run_contract`, `verdict`, `summary`, and `cross_assertions` |
+| [AUDIT-2026-07-24-A13-R074-EXECUTABLE-INDEPENDENCE](#audit-2026-07-24-a13-r074-executable-independence) | R-074 pre-release executable audit | the first package used a vacuous other-generator check, duplicated the Wick and Cameron--Martin formulas across implementations, checked one quadrature resolution, tested separation through the closed formula, and pinned runtime dependencies only transitively |
+| [NG-2026-07-24-A13-RAW-BARE-POSITIVE-GAIN-ROOT](#ng-2026-07-24-a13-raw-bare-positive-gain-root) | A13 bare positive-gain treatment of the mismatched nonlinear phase-root coefficient | an exact high--high-to-low finite secant is independent of shell separation; no unsubtracted coefficient-blind `H^(-1/2+rho)` gain is available for that branch |
+| [NG-2026-07-24-A13-AUTOMATIC-ADAPTED-WICK-CENTERING](#ng-2026-07-24-a13-automatic-adapted-wick-centering) | A13 automatic centering of an adapted terminal Wick coefficient | a smooth bounded strict-past value-only phase feedback has exact strictly negative Wick expectation |
 | [AUDIT-2026-07-24-A13-R073-PREDECESSOR-CONTRACT-SCHEMA](#audit-2026-07-24-a13-r073-predecessor-contract-schema) | R-073 integrated-verifier predecessor preflight | the first wrapper assumed every R-069--R-072 manifest used `verification` and every result used `aggregate_assertion_count`; R-069 instead uses `run_contract` and `aggregate_assertions` |
 | [NG-2026-07-24-A13-RAW-ABSOLUTE-OFFDIAGONAL-CARLESON](#ng-2026-07-24-a13-raw-absolute-offdiagonal-carleson) | A13 termwise absolute value-high control of the R-072 off-diagonal families at the raw R-050 regularity | the O2 interpolation needs both `theta>1/4` and `theta<1/4`, while O3 needs both `theta>1/2` and `theta<1/2`; the endpoints have no dyadic separation decay and use the full deterministic budget |
 | [NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE](#ng-2026-07-24-a13-diagonal-to-terminal-collapse) | A13 replacement of the full terminal nonlinear leakage by its matched strict-past diagonal | the exact terminal expansion has three off-diagonal families; an independent production fixture makes their combined magnitude more than 4087 times the matched diagonal |
@@ -56,6 +60,107 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-24-a13-r074-predecessor-contract-schemas"></a>
+### AUDIT-2026-07-24-A13-R074-PREDECESSOR-CONTRACT-SCHEMAS -- predecessor verification must normalize three issued schemas
+
+**Failure mode:** The first corrected R-074 wrapper still passed every pinned
+predecessor through a modern `verification`/`pass` contract. R-050 predates a
+manifest run contract and reports its 19+29+16=64 assertions through
+`assertion_summary`, `source_reports`, and an integrated PASS sentinel. R-063
+uses `run_contract` with `integrated_own_assertions` and
+`expected_total_assertions`, while its result uses `verdict`, `summary`, and
+`cross_assertions`. The wrapper therefore failed closed before executing the
+R-074 children.
+
+**Evidence:** Verifier v1.0.2 dispatches by the predecessor's issued schema.
+For R-050 it checks the exact sentinel, empty failure list, manifest digest,
+19/19 integrated rows, 29 primary, 16 independent, and 64 aggregate. For
+R-063 it checks the result ID and manifest digest, integrated PASS sentinel,
+zero failures, 48 cross rows, and 109 aggregate. For modern contracts such as
+R-073 it checks `pass`, result ID, manifest digest, integrated count, aggregate
+count, row count, and every row status. The completed R-074 wrapper then passes
+58/58 integrated and 110/110 aggregate assertions.
+
+**Consequence:** Historical verification schemas are immutable evidence and
+must be normalized explicitly, not guessed from the newest package. This
+repeated the R-073 defect class and is recorded separately so the successor
+wrapper starts from schema-aware validation. No equation, theorem scope,
+negative mathematical result, PDF contract, tier, or assertion total changed.
+
+<a id="audit-2026-07-24-a13-r074-executable-independence"></a>
+### AUDIT-2026-07-24-A13-R074-EXECUTABLE-INDEPENDENCE -- pre-release checks were not sufficiently independent
+
+**Failure mode:** The first R-074 executable draft tested the two inactive
+Pauli-generator contributions through arrays initialized to zero, copied the
+closed phase-feedback expectation and Cameron--Martin slope into both child
+implementations, evaluated each quadrature at only one resolution, measured
+the separation spread from the explicitly separation-independent closed
+formula, and relied on predecessor manifests to pin the two modules imported
+at runtime.
+
+**Evidence:** Adversarial code review identified each masking mechanism before
+release. Version 1.0.1 now computes all three finite-difference generator
+contributions, evaluates the direct finite secant at two resolutions and
+crosses its small-amplitude limit against one quarter of the independently
+derived principal coefficient, evaluates the adapted Wick mean by independent
+two-resolution Gauss--Hermite quadrature, reconstructs the R-071
+Cameron--Martin fixture slope from the production frames in both children, and
+directly hash-pins the R-072 and A6 UV runtime manifests and sources. The
+corrected contracts pass primary 35/35, non-importing independent 17/17, and
+integrated 58/58, for 110/110 aggregate assertions.
+
+**Consequence:** The mathematical formulas and theorem scope survive, but only
+the corrected v1.0.1 executables are evidence. A future verifier must test a
+derived quantity through a computation capable of failing independently and
+must pin every directly imported research module. The initial 33/33 and 16/16
+draft counts are development provenance, not the released contract.
+
+<a id="ng-2026-07-24-a13-raw-bare-positive-gain-root"></a>
+### NG-2026-07-24-A13-RAW-BARE-POSITIVE-GAIN-ROOT -- the mismatched coefficient has no bare separation gain
+
+**Failure mode:** Promote the R-063 unshifted balanced-jet gain to the adapted
+R-073 terminal coefficient, or estimate the mismatched nonlinear root by an
+unsubtracted coefficient-blind `H^(-1/2+rho)` norm with `rho>0`.
+
+**Evidence:** At `z=e1` and `a=G=e2`, one half of the second frame derivative
+contracts to `-27/[200P(1+e)]`; the other two Pauli generators contribute
+zero. For `a_j=t e2 cos(kx)`, `G=g e2 cos(nx)`, and
+`b_l=b e2 cos(nx)`, `k>n`, the exact mismatched `E_x--b_l` branch is
+`-4(q12+q22)gb[1-sqrt((1+e)/(1+e+t^2))]`, independent of `k/n` and with a
+nonzero retained low Fourier mode. Primary and non-importing independent
+implementations verify the frame coefficient, direct two-resolution
+quadrature, separation spread, and small-amplitude principal cross-check.
+
+**Consequence:** Retire only a bare positive-gain theorem for this
+unsubtracted coefficient root. The witness does not evaluate or refute the
+complete signed R-073 telescope, whose restored first variations, terminal
+square, Wick subtraction, and Cameron--Martin frequency weights remain
+load-bearing. The viable successor is the lower-chaos-complete adapted
+gauge-quotient one-form paid by the R-074 Besov sixth-moment inequality, or an
+explicitly proved resonance subtraction inside the same signed endpoint
+identity.
+
+<a id="ng-2026-07-24-a13-automatic-adapted-wick-centering"></a>
+### NG-2026-07-24-A13-AUTOMATIC-ADAPTED-WICK-CENTERING -- strict-past Wick coefficients need not center
+
+**Failure mode:** Infer that strict-past measurability plus covariance-normal
+Wick ordering makes every adapted terminal coefficient have zero expectation,
+without a signed martingale identity or controlled Malliavin derivative.
+
+**Evidence:** At `z=e1`, `y=e4`, and doublet phase rotation `R_theta`, exact
+frame evaluation gives `y^T B(R_theta z)y=lambda_e sin^2(theta)` with
+`lambda_e>0`. The smooth bounded strict-past value-only feedback
+`theta_t(xi)=arcsin(t exp(-xi^2/2))` produces the exact Wick mean
+`-lambda_e t^2/(3 sqrt(3))<0`. Independent Gauss--Hermite calculations at two
+resolutions reproduce its sign and coefficient.
+
+**Consequence:** Automatic centering and a derivative-free Stein shortcut are
+unavailable. This diagnostic rotates the value while freezing the derivative,
+so it is not a spatial phase orbit or a coercivity counterexample. Genuine
+regular local phase orbits instead preserve the raw current exactly; only the
+cutoff-uniform relative-phase covariance anomaly remains. The horizontal
+adapted gauge-quotient one-form must supply the missing signed structure.
 
 <a id="audit-2026-07-24-a13-r073-predecessor-contract-schema"></a>
 ### AUDIT-2026-07-24-A13-R073-PREDECESSOR-CONTRACT-SCHEMA -- predecessor contracts used two historical schemas

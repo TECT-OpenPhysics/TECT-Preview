@@ -192,11 +192,15 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   linear term into the R-069 raw current telescope exactly. Restoring both
   separated first variations gives a projector-free terminal square and
   cancels every phase-kernel component across the kernel-projector rank-2/3/6
-  strata. The new
-  regular-control subgate is
-  `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`: prove a signed
-  Wick-subtracted lower bound or a genuine two-control adapted gain before the
-  declared finite-energy extension.
+  strata. R-074 proves that the bare mismatched nonlinear coefficient has an
+  exact nondecaying high--high-to-low resonance and that strict-past Wick
+  centering is not automatic. It closes genuine local phase orbits by exact
+  raw-current invariance and a cutoff-uniform relative-phase Wick anomaly with
+  `O(Lambda^-3)` tail, and supplies the deterministic Besov sixth-moment
+  payment for the remaining horizontal cubic payload. The new regular-control
+  subgate is `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`: construct
+  the complete lower-chaos adapted horizontal one-form and its uniform sixth
+  moment before the declared finite-energy graph-norm recovery.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -336,12 +340,17 @@ preserved in git/changelog rather than treated as current gates.
    families remain load-bearing. R-073 returns those families and the R-071
    linear term exactly to the R-069 telescope; after both first variations are
    restored the rank-jumping phase kernel cancels inside a projector-free
-   terminal square. The current child is
-   `A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY`. Prove its signed
-   Wick-subtracted lower bound or a genuine adapted derivative gain before the
-   finite-energy extension. Do not spatially differentiate the heat dummy, reuse
-   uncontrolled tails for an adapted coefficient, pay terminal raw energy and
-   injection separately, or assume unproved Malliavin regularity.
+   terminal square. R-074 isolates the exact bare resonance, refutes automatic
+   adapted Wick centering, closes the genuine local phase-orbit channel
+   including its finite Wick anomaly, and proves the Besov sixth-moment
+   payment. The current child is
+   `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`. Construct its complete
+   lower-chaos signed endpoint representation and cutoff-uniform sixth moment,
+   then prove predictable graph-norm finite-energy recovery. Do not spatially
+   differentiate the heat dummy, reuse uncontrolled tails for an adapted
+   coefficient, pay terminal raw energy and injection separately, assume
+   automatic centering or unproved Malliavin regularity, or suppress the R-074
+   resonant branch.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

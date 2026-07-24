@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-074](#r-074) | Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction | Scoped T4 exact/analytic/executed subproof: the mismatched nonlinear secant coefficient has an exact nondecaying high--high-to-low resonance, so a bare positive separation gain is unavailable; automatic adapted Wick centering is false. Genuine local phase orbits preserve the complete raw current exactly, and their relative-phase Wick anomaly is cutoff-uniform with an `O(Lambda^-3)` tail while the common-phase anomaly vanishes. The cubic horizontal payload has a direct `H2`/sextic/sixth-moment Besov payment, but the complete adapted gauge-quotient one-form and finite-energy recovery remain open; 110/110 aggregate assertions |
 | [R-073](#r-073) | Exact off-diagonal telescope reassembly and critical phase-root boundary | Scoped T4 exact/analytic/executed subproof: all three R-072 off-diagonal families and the R-071 linear term reconstruct the R-069 raw current telescope exactly; restoring both separated first variations gives a projector-free terminal square and cancels every terminal-kernel component on the kernel-projector rank-2/3/6 strata. After Wick subtraction this is the still-open adapted terminal coercivity, not a lower bound. The declared termwise absolute value-high route is endpoint-critical at `theta=1/4` and `theta=1/2`; 113/113 aggregate assertions |
 | [R-072](#r-072) | Gauge-kernel strata and causal same-shell diagonal one-use reduction | Scoped T4 exact/analytic/executed subproof: the production frame has the exact local phase-gauge kernel, a differentiated gauge identity converts its nonlinear leakage to a quadratic control displacement, and one sequence Holder plus one weighted AM--GM pays the matched strict-past same-shell diagonal with one cutoff-independent integrable random constant and an `O(N_j0^-3)` sixth-moment tail. The exact terminal expansion contains a load-bearing off-diagonal remainder, larger than the diagonal by a factor above 4087 in an independent fixture; 95/95 aggregate assertions |
 | [R-071](#r-071) | One-form Sobolev linear-frame completion and terminal-frame kernel leakage | Scoped T4 analytic/exact/executed subproof: the R-070 `H^{-1-1/10}` raw attribution is false by strict low--high blocks; the R-050 enhancement reconstructs the full matrix one-form in `H^{-1/2-delta}`, and generalized symmetric/Cartan interpolation closes the complete fixed-floor linear frame. An exact common terminal-frame kernel carries nonzero nonlinear leakage, retiring pointwise square closure; the integrated strict-past Cameron--Martin/frequency estimate remains; 77/77 aggregate assertions |
@@ -92,6 +93,88 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-074"></a>
+### R-074 -- Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction
+
+**Result ID.**
+`A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION`.
+
+**Statement.** At the production frame point `z=e1` and directions
+`a=G=e2`, the frozen second-order coefficient is exactly
+
+`-(27)/(200 P (1+e))`.
+
+For `a_j=t e2 cos(kx)`, `G=g e2 cos(nx)`, and `b_l=b e2 cos(nx)`, with
+`k>n`, the mismatched `E_x--b_l` nonlinear secant branch is
+
+`-4(q12+q22)gb[1-sqrt((1+e)/(1+e+t^2))]`,
+
+independent of `k/n`. Thus this unsubtracted bare coefficient root has no
+positive separation or `H^(-1/2+rho)` gain. This witness does not evaluate or
+refute the complete signed R-073 telescope, whose Cameron--Martin weights are
+load-bearing.
+
+Strict-past measurability plus Wick ordering also does not imply automatic
+centering. For the smooth bounded value-only phase feedback
+`theta_t(xi)=arcsin(t exp(-xi^2/2))`, the exact one-coordinate diagnostic has
+mean `-lambda_e t^2/(3 sqrt(3))<0`. Conversely, a genuine regular local phase
+orbit `R(x)=exp(theta_D J_D+theta_S J_S)` obeys
+
+`M_r(Rz)^T D_i(Rz)=M_r(z)^T D_i z`
+
+pathwise, so the complete raw current is invariant. Its Wick change depends
+only on the phase-noncommuting covariance block. The A1 resolvent identity
+gives a derivative-weighted summand `O(|k|^-6)` and hence an
+`O(Lambda^-3)` three-dimensional cutoff tail. The common phase anomaly
+vanishes exactly; the relative-phase anomaly is cutoff-uniform and satisfies
+
+`|Delta W_phase| <= zeta ||z||_6^6+C_zeta`.
+
+The known terminal-kernel periodic lift optimizes against Cameron--Martin cost
+to `O_eta(N^-2)` and is dyadically summable. For every
+`0<kappa<1/2`, the deterministic endpoint estimate
+
+`||A tensor A tensor DA||_(B^(1/2+kappa)_(1,1))`
+`<=C_kappa ||A||_(H2)||A||_6^2`
+
+therefore provides the viable horizontal payment. Pairing an adapted
+`C^(-1/2-kappa)` Taylor one-form yields
+
+`eta X+zeta Y+C eta^-3 zeta^-2 ||J||^6`.
+
+The missing theorem is construction of the complete lower-chaos adapted
+gauge-quotient one-form with a cutoff-uniform sixth moment and signed endpoint
+reconstruction. Plain lower semicontinuity or predictable `L2` density does
+not then extend the result automatically, because excess positive raw-current
+and sextic energy has the wrong semicontinuity direction.
+
+**Proven in.** A13 /
+`classii-resonant-phase-root-besov-reduction-260724-v1.0`, with primary
+35/35, non-importing independent 17/17, integrated 58/58, aggregate 110/110,
+and an eight-page PDF passing form, zero-overfull, and direct all-page visual
+QA. The final executable additionally rederives every Pauli contribution,
+checks secant and Gaussian quadratures at two resolutions, rederives the
+Cameron--Martin fixture slope, and directly hash-pins both runtime dependency
+sources.
+
+**Reuse scope.** Exact bare-resonance discriminator; no automatic adapted
+centering; raw invariance and finite Wick anomaly of genuine local phase
+orbits; Cameron--Martin rescue scaling; deterministic Besov sixth-moment
+payment; and the finite-energy recovery warning.
+
+**Boundary.** The result does not construct the complete horizontal adapted
+one-form, prove terminal coercivity, extend to every finite-energy drift,
+close controlled-shell one-use or the `q=10/9` Nelson theorem, construct an
+interacting measure, remove the floor or regulator, take infinite volume, or
+justify T5--T7. Tier T4; no promotion.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-050 and R-059--R-073, after the adapted gauge-quotient one-form,
+finite-energy recovery, controlled-shell one-use, and Nelson synthesis are
+resolved.
+
+---
 
 <a id="r-073"></a>
 ### R-073 -- Exact off-diagonal telescope reassembly and critical phase-root boundary

@@ -1,0 +1,107 @@
+{
+  "schema": "tect/a13-resonant-phase-root-besov-reduction/1.0",
+  "result_id": "A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION",
+  "result_ledger_id": "R-074",
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "date": "2026-07-24",
+  "tier": "T4",
+  "authority": {
+    "governance": {
+      "path": "GOVERNANCE.md",
+      "sha256": "ad8b22e1437d2b4a2e48d29753c7ac5f913c374f2d11236902cd1893f1e1e7f4"
+    },
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r050_manifest": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/classii_k_composite_manifest.json",
+      "sha256": "c65e7296efa7ab3dd7ec4105f26129e02f7adf6a722714551f5b39ed6357055d"
+    },
+    "r063_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_balanced_coefficient_jet_continuum_manifest.json",
+      "sha256": "3ef0a619df679f28624711f153bfb13bdd538f91f664da8664b2e7063ff3b67e"
+    },
+    "r073_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_off_diagonal_telescope_critical_phase_root_reduction_manifest.json",
+      "sha256": "9ebb46c40b7a4ab9075ec0a80bb3513553b7c99909f4d4eb1cbcaa910531df87"
+    },
+    "r072_runtime_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_phase_kernel_causal_diagonal_reduction_manifest.json",
+      "sha256": "43e9f4b03decd74aea998a5b0314df5943895f973a13e55994d633a8e2ad92bd"
+    },
+    "r072_runtime_source": {
+      "path": "codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction.py",
+      "sha256": "0a4f9dcd0d068f46954342407184e653faca6c2dd435722864b12464e794d6e6"
+    },
+    "uv_runtime_manifest": {
+      "path": "claims/A6-CLASSII-UV-POWER-COUNTING/classii_uv_power_counting_manifest.json",
+      "sha256": "2fb1bbc997a3e832bd1c16748eb6a2b9ccb2844280fdaa9029289dc860ea0cd9"
+    },
+    "uv_runtime_source": {
+      "path": "codes/foundations/a6_classii_uv_power_counting.py",
+      "sha256": "2537c71312d214d9d8f3a043194cc50f99131dba7b35f4e7f2bc20b596dcc15c"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_resonant_phase_root_besov_reduction.py",
+      "sha256": "3a06f5507b5419c931378969f175cc39d787dfac317ad1c42d583a14f9b6697e",
+      "version": "1.0.1"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_resonant_phase_root_besov_reduction_independent.py",
+      "sha256": "ac39e165d237e883422d2ddc82b4d7e6883b7bc9fe83a4d5671bd0a5b747315f",
+      "version": "1.0.1"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_resonant_phase_root_besov_reduction_verify.py",
+      "sha256": "b971fe6eaa5a51617fb74837d64915676dd717c0cd8c99cf1edb67b95bc39ed1",
+      "version": "1.0.2"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-resonant-phase-root-besov-reduction-260724-v1.0.tex.txt",
+      "sha256": "25ab2a2ced15735a29b888e07dafe28987c17e2d42cebfdc54e6e89abcee5b8f",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-resonant-phase-root-besov-reduction-260724-v1.0.pdf",
+    "sha256": "67bf2d10d13586ca130f183d3ca11259d642ad150e7b3ae252d654ddabc3ca0f",
+    "pages": 8,
+    "size_bytes": 100969,
+    "form_check": "PASS",
+    "overfull_hboxes": 0,
+    "visual_qa": "PASS: all 8 final pages were rendered with Poppler and inspected after the final rebuild; equations 2.1--9.1, boxed identities, headings, proof, result footer, margins, and page breaks are legible with no clipping, overlap, literal control-sequence debris, black boxes, or blank spill page"
+  },
+  "theorem": {
+    "frozen_principal_resonance": "At z=e1 and a=G=e2, the production contraction of one half D2M[a,a] against Q_II M(z)^T G is exactly -27/[200 P (1+e)] and receives no cancellation from the other two Pauli generators.",
+    "finite_secant_no_gain": "For a_j=t e2 cos(kx), G=g e2 cos(nx), and b_l=b e2 cos(nx), k>n, the exact raw mismatched E_x--b_l nonlinear secant branch is -4(q12+q22)gb[1-sqrt((1+e)/(1+e+t^2))], independent of k/n. Therefore this unsubtracted bare coefficient root has no positive separation or H^(-1/2+rho) gain; the full signed R-073 telescope is not evaluated by this witness.",
+    "adapted_centering_diagnostic": "For the value-only phase rotation theta_t(xi)=arcsin(t exp(-xi^2/2)), the exact production Wick diagnostic has mean -lambda_e t^2/(3 sqrt(3))<0. This refutes automatic adapted centering but is not a spatially integrable phase transform or a coercivity counterexample.",
+    "pure_phase_orbit": "For R(x)=exp(theta_D J_D+theta_S J_S), M_r(Rz)=R M_r(z) and M_r(z)^T J_alpha z=0, hence M_r(Rz)^T D_i(Rz)=M_r(z)^T D_i z pathwise. The complete raw terminal current is invariant.",
+    "phase_Wick_anomaly": "The phase-commuting covariance block cancels. Resolvent identity for A(k)=K(k)I+H gives the derivative-weighted noncommuting summand O(|k|^-6) and tail O(Lambda^-3). Thus the relative-phase Wick anomaly is cutoff-uniform and bounded by zeta||z||_6^6+C_zeta; the common-phase anomaly vanishes exactly.",
+    "cameron_martin_boundary": "The periodic lift of the R-071 kernel slope optimizes to -c_e^2/[24 eta (N^2+1+N^-2)], an O_eta(N^-2) dyadically summable loss. The raw no-gain witness also carries fourth-order high-frequency control cost, so neither is a weighted coercivity counterexample.",
+    "besov_payment": "For 0<kappa<1/2, ||A tensor A tensor DA||_{B^(1/2+kappa)_(1,1)}<=C_kappa||A||_H2||A||_6^2. Pairing an adapted C^(-1/2-kappa) Taylor one-form gives eta X+zeta Y+C eta^-3 zeta^-2||J||^6, so the direct route needs a sixth moment rather than positive gain.",
+    "finite_energy_boundary": "Ordinary lower semicontinuity or L2 predictable density does not by itself transfer a lower bound because excess positive raw-current and sextic energy has the wrong semicontinuity direction. A predictable graph-norm recovery or biting/uniform-integrability theorem remains required."
+  },
+  "verification": {
+    "primary_assertions": 35,
+    "independent_assertions": 17,
+    "integrated_assertions": 58,
+    "aggregate_assertions": 110,
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-resonant-phase-root-besov-reduction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-independent-resonant-phase-root-besov-reduction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-integrated-resonant-phase-root-besov-reduction/result.json"
+  },
+  "negative_results": [
+    "NG-2026-07-24-A13-RAW-BARE-POSITIVE-GAIN-ROOT",
+    "NG-2026-07-24-A13-AUTOMATIC-ADAPTED-WICK-CENTERING"
+  ],
+  "audit_results": [
+    "AUDIT-2026-07-24-A13-R074-EXECUTABLE-INDEPENDENCE",
+    "AUDIT-2026-07-24-A13-R074-PREDECESSOR-CONTRACT-SCHEMAS"
+  ],
+  "successor_gate": "A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM",
+  "successor": "Construct the complete adapted horizontal Taylor one-form with the explicit low resonance and all R-063 lower chaoses retained, prove a cutoff-uniform sixth moment and signed endpoint reconstruction, and close it by the direct Besov payment or an explicitly resonance-subtracted positive gain. Then prove predictable graph-norm finite-energy recovery, controlled-shell one-use, and q=10/9 Nelson synthesis.",
+  "honesty_boundary": "This scoped T4 continuation proves an exact raw high-high-to-low resonance and bare-gain no-go for the mismatched nonlinear secant coefficient root, an exact production diagnostic against automatic adapted Wick centering, exact raw invariance of genuine regular local phase orbits, a cutoff-uniform potential-grade relative-phase Wick anomaly with O(Lambda^-3) tail, the Cameron--Martin rescue scaling of known kernel witnesses, and the deterministic Besov sixth-moment payment. The secant witness does not evaluate or refute the complete signed R-073 telescope. The result does not construct the full adapted gauge-quotient Taylor one-form, prove horizontal terminal coercivity, extend to every finite-energy drift, prove controlled-shell one-use or the q=10/9 Nelson theorem, construct an interacting measure, remove the density floor or regulator, take infinite volume, or promote to T5--T7."
+}

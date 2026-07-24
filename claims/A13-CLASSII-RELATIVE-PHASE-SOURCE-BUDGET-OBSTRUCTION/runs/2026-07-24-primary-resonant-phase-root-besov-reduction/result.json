@@ -1,0 +1,601 @@
+{
+  "assertion_count": 35,
+  "assertions": [
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": ">0",
+      "name": "production_Q_is_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0042187499999989456,
+      "expected": 0.0042187499999989456,
+      "name": "q12_plus_q22_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.03374999999995781,
+      "expected": -0.03374999999995781,
+      "name": "principal_contraction_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.03374999999995781,
+      "expected": "nonzero",
+      "name": "principal_contraction_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.329181702203197e-09,
+      "expected": "<2e-7",
+      "name": "finite_difference_confirms_principal",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -0.033749998670776105,
+        0.0,
+        0.0
+      ],
+      "expected": "generators 2 and 3 vanish",
+      "name": "other_generators_do_not_cancel_principal",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "formula": 5.551115123125783e-17,
+        "refinement": 0.0
+      },
+      "expected": "<2e-10",
+      "name": "secant_integrals_match_closed_form",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.734723475976807e-18,
+      "expected": "<2e-10",
+      "name": "secant_branches_match_closed_form",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.336808689942018e-19,
+      "expected": "0",
+      "name": "bare_separation_gain_is_absent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "limit": -0.008437499999989453,
+        "ratio": -0.008436867240219215
+      },
+      "expected": "absolute error<2e-6",
+      "name": "secant_small_amplitude_matches_principal_quarter",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.048018478674848174,
+      "expected": ">0",
+      "name": "low_mode_variance_is_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "mean": 0.0180000000000105,
+        "spread": 3.469446951953614e-18
+      },
+      "expected": 0.018000000000010497,
+      "name": "phase_feedback_lambda_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "0",
+      "name": "base_phase_direction_is_kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "formula": -0.0005542562584223641,
+        "quadrature": {
+          "48": -0.000554256258422254,
+          "96": -0.0005542562584223642
+        }
+      },
+      "expected": "negative and formula error<2e-12",
+      "name": "smooth_adapted_phase_feedback_has_negative_Wick_mean",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1015494072452725e-16,
+      "expected": "<2e-12",
+      "name": "Gaussian_feedback_quadrature_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.1706208825930276e-15,
+      "expected": "<3e-11",
+      "name": "local_phase_frames_are_covariant",
+      "status": "PASS"
+    },
+    {
+      "actual": 7.70465983141898e-15,
+      "expected": "<3e-11",
+      "name": "integrable_local_phase_currents_are_invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.5861456034352215e-16,
+      "expected": "<3e-11",
+      "name": "coefficient_matrix_is_phase_covariant",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<3e-11",
+      "name": "isotropic_counterterm_is_phase_invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.7763568394002505e-15,
+      "expected": "<3e-11",
+      "name": "phase_vectors_are_in_frame_kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "derived": 0.06749999999997061,
+        "oracle": 0.06749999999998749
+      },
+      "expected": "error<3e-11",
+      "name": "kernel_witness_CM_slope_is_frame_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0011868131868121533,
+        0.001245854361931143,
+        0.001260681227485109,
+        0.0012643890392623905,
+        0.0012653160095387954
+      ],
+      "expected": "convergent",
+      "name": "kernel_witness_CM_optimization_decays_N_minus_2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.00010536575317373638,
+      "expected": "finite positive",
+      "name": "kernel_witness_CM_losses_are_dyadically_summable",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.6,
+      "expected": "<1",
+      "name": "Besov_duality_order_is_subunit",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.16666666666666669,
+      "expected": "1/6",
+      "name": "Besov_control_budget_has_positive_Young_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.999999999999999,
+      "expected": "6",
+      "name": "Besov_route_requires_sixth_current_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        2.0,
+        3.0,
+        6.0
+      ],
+      "expected": "reciprocals sum to one",
+      "name": "Holder_exponents_are_conjugate",
+      "status": "PASS"
+    },
+    {
+      "actual": -6.571620469869564e-17,
+      "expected": ">=0",
+      "name": "production_coefficient_is_PSD",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.04224987868948215,
+      "expected": 0.13403372397773344,
+      "name": "production_coefficient_obeys_derived_quadratic_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00015362291520660716,
+        1.9387105159037917e-05,
+        2.5223931544805063e-06,
+        3.2436160134186923e-07,
+        3.999012368775474e-08
+      ],
+      "expected": "strict tail decay",
+      "name": "phase_covariance_noncommuting_block_is_UV_finite",
+      "status": "PASS"
+    },
+    {
+      "actual": -2.98950280311814,
+      "expected": "diagnostic slope<-2; analytic power=-3",
+      "name": "phase_covariance_tail_matches_resolvent_power",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "covariance": 0.005687583374966336,
+        "mass": 0.09999999999999999
+      },
+      "expected": "both nonzero",
+      "name": "phase_covariance_anisotropy_is_nontrivial_but_finite",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "common": 0.0,
+        "doublet": 0.008043457546005134,
+        "singlet": 0.008043457546005134
+      },
+      "expected": "common=0",
+      "name": "common_phase_covariance_anomaly_vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "common": 0.0,
+        "doublet": 0.008043457546005134,
+        "singlet": 0.008043457546005134
+      },
+      "expected": "doublet,singlet>0",
+      "name": "relative_phase_covariance_anomaly_is_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "route reduction only",
+      "expected": "no coercivity/Nelson claim",
+      "name": "scope_keeps_terminal_coercivity_open",
+      "status": "PASS"
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "besov_budget": {
+      "analytic_product_lemma": "||A^2 grad A||_{B^(1/2+kappa)_(1,1)} <= C ||A||_H2 ||A||_6^2 for 0<kappa<1/2",
+      "besov_order_below_one": true,
+      "control_budget_power": 0.5,
+      "current_order": -0.6,
+      "dual_besov_order": 0.6,
+      "holder_conjugates": [
+        2.0,
+        3.0,
+        6.0
+      ],
+      "kappa": 0.1,
+      "random_moment_power": 5.999999999999999,
+      "sextic_budget_power": 0.3333333333333333,
+      "weighted_random_remainder": "C eta^(-3) zeta^(-2) ||J||^6",
+      "young_slack": 0.16666666666666669
+    },
+    "cameron_martin_rescue": {
+      "dyadic_absolute_sum_upper": 0.00010536575317373638,
+      "eta": 0.15,
+      "kernel_slope": 0.06749999999997061,
+      "kernel_slope_error": 1.687538997430238e-14,
+      "kernel_slope_oracle": 0.06749999999998749,
+      "rows": [
+        {
+          "H2_weight": 25.59375,
+          "N2_scaled_loss": 0.0011868131868121533,
+          "frequency": 4,
+          "optimized_loss": -7.417582417575958e-05
+        },
+        {
+          "H2_weight": 97.5234375,
+          "N2_scaled_loss": 0.001245854361931143,
+          "frequency": 8,
+          "optimized_loss": -1.946647440517411e-05
+        },
+        {
+          "H2_weight": 385.505859375,
+          "N2_scaled_loss": 0.001260681227485109,
+          "frequency": 16,
+          "optimized_loss": -4.924536044863707e-06
+        },
+        {
+          "H2_weight": 1537.50146484375,
+          "N2_scaled_loss": 0.0012643890392623905,
+          "frequency": 32,
+          "optimized_loss": -1.2347549211546782e-06
+        },
+        {
+          "H2_weight": 6145.5003662109375,
+          "N2_scaled_loss": 0.0012653160095387954,
+          "frequency": 64,
+          "optimized_loss": -3.0891504139130746e-07
+        }
+      ]
+    },
+    "coefficient_growth": {
+      "analytic_operator_bound_over_rho": 0.13403372397773344,
+      "fixed_cutoff_negative_part": "W_J(z) >= -(1/2) integral Tr(B(z) Gamma_J), hence >= -C_J ||z||_2^2",
+      "lambda_Q": 0.005584738499072227,
+      "sample_max_operator_over_rho": 0.04224987868948215,
+      "sample_min_eigenvalue": -6.571620469869564e-17
+    },
+    "local_phase_covariance": {
+      "current_invariance_error": 7.70465983141898e-15,
+      "frame_covariance_error": 2.1706208825930276e-15,
+      "isotropic_counterterm_error": 4.440892098500626e-16,
+      "matrix_covariance_error": 2.5861456034352215e-16,
+      "phase_kernel_error": 1.7763568394002505e-15
+    },
+    "phase_covariance_anomaly": {
+      "analytic_tail_identity": "Pi_perp[(K I+M)^-1]=-K^-1 Pi_perp[(K I+M)^-1 M]",
+      "analytic_tail_power": -3.0,
+      "cutoffs": [
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "diagnostic_tail_slope": -2.98950280311814,
+      "mass_perpendicular_norm": 0.09999999999999999,
+      "phase_commutator_norms": {
+        "common": 0.0,
+        "doublet": 0.008043457546005134,
+        "singlet": 0.008043457546005134
+      },
+      "reference_cutoff": 192,
+      "reference_perpendicular_norm": 0.005687583374966336,
+      "reference_symbol_minimum": 0.2881161723445904,
+      "rows": [
+        {
+          "N3_scaled_tail": 0.009831866573222858,
+          "cutoff": 4,
+          "perpendicular_norm": 0.005533996653821062,
+          "quadratic_symbol_minimum": 0.2881161723445904,
+          "reference_tail": 0.00015362291520660716
+        },
+        {
+          "N3_scaled_tail": 0.009926197841427413,
+          "cutoff": 8,
+          "perpendicular_norm": 0.005668200912849811,
+          "quadratic_symbol_minimum": 0.2881161723445904,
+          "reference_tail": 1.9387105159037917e-05
+        },
+        {
+          "N3_scaled_tail": 0.010331722360752154,
+          "cutoff": 16,
+          "perpendicular_norm": 0.0056850615857988816,
+          "quadratic_symbol_minimum": 0.2881161723445904,
+          "reference_tail": 2.5223931544805063e-06
+        },
+        {
+          "N3_scaled_tail": 0.010628680952770371,
+          "cutoff": 32,
+          "perpendicular_norm": 0.005687259091018072,
+          "quadratic_symbol_minimum": 0.2881161723445904,
+          "reference_tail": 3.2436160134186923e-07
+        },
+        {
+          "N3_scaled_tail": 0.010483170984002779,
+          "cutoff": 64,
+          "perpendicular_norm": 0.005687543394415989,
+          "quadratic_symbol_minimum": 0.2881161723445904,
+          "reference_tail": 3.999012368775474e-08
+        }
+      ],
+      "wick_anomaly_bound": "|Delta W_phase| <= 72 lambda_Q max_i||Gamma_i^perp||_op ||z||_2^2 <= zeta ||z||_6^6 + C_zeta, uniformly in cutoff"
+    },
+    "phase_feedback": {
+      "angles": [
+        0.0,
+        0.17,
+        0.43,
+        0.91,
+        1.37
+      ],
+      "base_kernel_value": 0.0,
+      "exact_wick_expectation": -0.0005542562584223641,
+      "feedback_amplitude": 0.4,
+      "gaussian_moments": {
+        "E_exp_minus_xi2": 0.5773502691896258,
+        "E_xi2_exp_minus_xi2": 0.19245008972987526
+      },
+      "lambda_formula": 0.018000000000010497,
+      "lambda_ratios": [
+        0.018000000000010497,
+        0.0180000000000105,
+        0.0180000000000105,
+        0.0180000000000105
+      ],
+      "lambda_spread": 3.469446951953614e-18,
+      "quadratic_values": [
+        0.0,
+        0.0005152080102451845,
+        0.003128062786525358,
+        0.011219690789726053,
+        0.017283956558301908
+      ],
+      "quadrature_formula_error": 1.0842021724855044e-19,
+      "quadrature_refinement_error": 1.1015494072452725e-16,
+      "quadrature_wick_expectations": {
+        "48": -0.000554256258422254,
+        "96": -0.0005542562584223642
+      }
+    },
+    "principal": {
+      "analytic_contraction": -0.03374999999995781,
+      "analytic_expected": -0.03374999999995781,
+      "finite_difference_contraction": -0.033749998670776105,
+      "finite_difference_error": 1.329181702203197e-09,
+      "finite_difference_generator_contractions": [
+        -0.033749998670776105,
+        0.0,
+        0.0
+      ],
+      "half_hessian_sigma_x_e2": [
+        -0.0,
+        -3.9999999999959996,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "mass_denominator": 4.000000000001,
+      "other_generator_projection": 0.0,
+      "q12_plus_q22": 0.0042187499999989456,
+      "q12_plus_q22_expected": 0.0042187499999989456,
+      "sigma_x_current": [
+        2.0,
+        2.0
+      ]
+    },
+    "separation": {
+      "principal_quarter_limit": -0.008437499999989453,
+      "retained_low_mode_variance_ratio": 0.048018478674848174,
+      "rows": [
+        {
+          "amplitude": 0.35,
+          "branch_error": 1.1926223897340549e-18,
+          "closed_branch": -0.0009473902363223513,
+          "closed_integral": 0.028070821816965574,
+          "direct_branch": -0.0009473902363223501,
+          "integral_error": 3.469446951953614e-17,
+          "k": 5.0,
+          "n": 2.0,
+          "quadrature_integral": 0.02807082181696554,
+          "quadrature_refinement_error": 0.0,
+          "zero_mode_multiplier": 0.05614164363393115
+        },
+        {
+          "amplitude": 0.8,
+          "branch_error": 0.0,
+          "closed_branch": -0.0036978388406453677,
+          "closed_integral": 0.10956559527840865,
+          "direct_branch": -0.0036978388406453677,
+          "integral_error": 0.0,
+          "k": 9.0,
+          "n": 3.0,
+          "quadrature_integral": 0.10956559527840865,
+          "quadrature_refinement_error": 0.0,
+          "zero_mode_multiplier": 0.2191311905568173
+        },
+        {
+          "amplitude": 1.2,
+          "branch_error": 1.734723475976807e-18,
+          "closed_branch": -0.006071888255657197,
+          "closed_integral": 0.1799078001676656,
+          "direct_branch": -0.006071888255657195,
+          "integral_error": 5.551115123125783e-17,
+          "k": 17.0,
+          "n": 5.0,
+          "quadrature_integral": 0.17990780016766555,
+          "quadrature_refinement_error": 0.0,
+          "zero_mode_multiplier": 0.3598156003353312
+        }
+      ],
+      "same_amplitude_rows": [
+        {
+          "amplitude": 0.8,
+          "branch_error": 0.0,
+          "closed_branch": -0.0036978388406453677,
+          "closed_integral": 0.10956559527840865,
+          "direct_branch": -0.0036978388406453677,
+          "integral_error": 0.0,
+          "k": 7.0,
+          "n": 3.0,
+          "quadrature_integral": 0.10956559527840865,
+          "quadrature_refinement_error": 0.0,
+          "zero_mode_multiplier": 0.2191311905568173
+        },
+        {
+          "amplitude": 0.8,
+          "branch_error": 0.0,
+          "closed_branch": -0.0036978388406453677,
+          "closed_integral": 0.10956559527840865,
+          "direct_branch": -0.0036978388406453677,
+          "integral_error": 0.0,
+          "k": 13.0,
+          "n": 3.0,
+          "quadrature_integral": 0.10956559527840865,
+          "quadrature_refinement_error": 0.0,
+          "zero_mode_multiplier": 0.2191311905568173
+        },
+        {
+          "amplitude": 0.8,
+          "branch_error": 0.0,
+          "closed_branch": -0.0036978388406453677,
+          "closed_integral": 0.10956559527840865,
+          "direct_branch": -0.0036978388406453677,
+          "integral_error": 0.0,
+          "k": 29.0,
+          "n": 3.0,
+          "quadrature_integral": 0.10956559527840865,
+          "quadrature_refinement_error": 0.0,
+          "zero_mode_multiplier": 0.2191311905568173
+        },
+        {
+          "amplitude": 0.8,
+          "branch_error": 4.336808689942018e-19,
+          "closed_branch": -0.0036978388406453677,
+          "closed_integral": 0.10956559527840865,
+          "direct_branch": -0.003697838840645368,
+          "integral_error": 1.3877787807814457e-17,
+          "k": 61.0,
+          "n": 3.0,
+          "quadrature_integral": 0.10956559527840866,
+          "quadrature_refinement_error": 1.3877787807814457e-17,
+          "zero_mode_multiplier": 0.2191311905568173
+        }
+      ],
+      "separation_spread": 4.336808689942018e-19,
+      "small_amplitude_ratio": -0.008436867240219215,
+      "small_amplitude_row": {
+        "amplitude": 0.01,
+        "branch_error": 1.920647207899126e-19,
+        "closed_branch": -8.436867240221136e-07,
+        "closed_integral": 2.499812515621702e-05,
+        "direct_branch": -8.436867240219215e-07,
+        "integral_error": 5.692061405548898e-18,
+        "k": 37.0,
+        "n": 3.0,
+        "quadrature_integral": 2.499812515621133e-05,
+        "quadrature_refinement_error": 0.0,
+        "zero_mode_multiplier": 4.999625031243404e-05
+      }
+    }
+  },
+  "honesty_boundary": "The exact witnesses refute bare positive separation gain and automatic signed centering only. The Cameron--Martin-weighted signed terminal theorem, adapted Taylor one-form construction, finite-energy recovery, one-use, and Nelson remain open.",
+  "inputs": {
+    "besov_kappa": 0.1,
+    "floor": 1e-12,
+    "mass_denominator": 4.000000000001,
+    "quadrature_points": 32768,
+    "random_cases": 96,
+    "random_seed": 24077413
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-RESONANT-PHASE-ROOT-BESOV-REDUCTION",
+  "run_kind": "primary",
+  "schema": "tect/a13-resonant-phase-root-besov-reduction-run/1.0",
+  "source": {
+    "path": "codes/foundations/a13_classii_resonant_phase_root_besov_reduction.py",
+    "sha256": "3a06f5507b5419c931378969f175cc39d787dfac317ad1c42d583a14f9b6697e",
+    "version": "1.0.1"
+  },
+  "summary": {
+    "passed": 35,
+    "status": "PASS",
+    "total": 35
+  },
+  "timestamp_utc": "2026-07-24T14:38:59.982195+00:00"
+}

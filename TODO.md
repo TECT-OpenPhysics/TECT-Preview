@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY)_
-  - R-073 exactly reassembles all R-072 off-diagonal families and the R-071 linear term into the R-069 raw-current telescope. Restoring both first variations gives a projector-free terminal square, but the Wick-subtracted adapted terminal coercivity remains open. The raw termwise absolute O2/O3 route is endpoint-critical. Next prove signed adapted phase-root coercivity or a genuine adapted gain rho>0 with p>3/rho, then finite-energy extension, one-use, and Nelson.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM)_
+  - R-074 isolates the exact bare mismatched resonance, refutes automatic adapted Wick centering, closes genuine local phase orbits including their finite Wick anomaly, and proves the deterministic Besov sixth-moment payment. Next construct the complete lower-chaos adapted gauge-quotient Taylor one-form with signed endpoint reconstruction and a cutoff-uniform sixth moment; then prove predictable graph-norm finite-energy recovery, one-use, and Nelson.
   - _updated 2026-07-24_
 
 ## Next up
