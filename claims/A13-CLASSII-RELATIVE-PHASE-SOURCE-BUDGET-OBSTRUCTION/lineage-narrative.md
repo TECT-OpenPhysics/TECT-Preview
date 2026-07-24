@@ -218,6 +218,22 @@ endpoint theorem.
     inside the complete R-079 identity, followed by the weighted packet lower
     bound, R-075 graph recovery, controlled-shell one-use, and Nelson
     synthesis.
+21. **Regular low closure, localized far successor, and progression scope.**
+    R-080, `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes
+    both distinct R-079 low objects for mutually orthogonal strict-past
+    one-shot controls with no low-range revisit. Orthogonal far-shell square
+    completion retains both terminal-feedback channels and reduces their loss
+    to the localized predictable base-current tail `S_C`. In the near
+    residual, the explicit `A^2 DA` payload is predictable, but a future-
+    adapted high--high-to-low coefficient remains. Exact fixtures show that
+    target heat and the canonical weighted CM identity give no automatic
+    root/shell gap, bounded near width has zero Young slack, and universal
+    rootwise positivity fails. A same-range revisit and the variational
+    infimum direction also correct the successor scope: R-075 graph recovery
+    does not extend the regular lower bound to every progressive control.
+    FAR and NEAR remain the current regular packet gate; the new full-
+    progressive/revisit extension is a separate gate before one-use and the
+    conditional `q=10/9` Nelson arithmetic.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

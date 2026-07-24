@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP](#ng-2026-07-25-a13-target-heat-root-shell-gap) | A13 far gain from target heat projection or canonical weighted CM control alone | target heat acts in the six-real value variable rather than physical space, while strict-past later-shell controls saturate the canonical weights independently of the probability-root/spatial-shell gap |
+| [NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY](#ng-2026-07-25-a13-near-width-and-rootwise-positivity) | A13 near route using bounded shell width or universal rootwise PSD/Ward sign | bounded width corresponds to zero gain and zero Young slack; an exact production square--trace--forest fixture is strictly negative, although a coupled frequency-local budgeted estimate is not refuted |
+| [NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT](#ng-2026-07-25-a13-regular-graph-progressive-revisit) | A13 inference from regular one-shot graph recovery to all progressive/revisit controls | the variational infimum direction is wrong for this inference, and a same-range cancellation makes the separate conditional-low loss quartic while final charge is fixed and control cost is quadratic |
 | [NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS](#ng-2026-07-25-a13-generic-weighted-doob-shortcuts) | A13 generic weighted-Doob closure by Cauchy, expected-budget Carleson, or abstract spatial gain | square-function Cauchy has Young deficit `-4/15`; expected energy plus sextic budgets do not imply predictable BMO/Carleson control; and an unweighted bracket has no generic spatial gain |
 | [NG-2026-07-25-A13-ADAPTED-WICK-CARRE-DU-CHAMP](#ng-2026-07-25-a13-adapted-wick-carre-du-champ) | A13 universal adapted Wick-square/trace positivity | the complete positive current square plus Wick trace can equal the negative of the coefficient innovation energy, including for a bounded smooth positive frame |
 | [AUDIT-2026-07-25-A13-R078-PRE-RELEASE-PACKET-TO-BRACKET-ATTRIBUTION](#audit-2026-07-25-a13-r078-pre-release-packet-to-bracket-attribution) | R-078 pre-release packet-to-bracket attribution and low-end endpoint | the first draft promoted a generic bilinear Doob lemma to a full nonlinear safe-packet decomposition and identified only the R-066 component of the complete low-end endpoint; both attributions were narrowed before release |
@@ -74,6 +77,80 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-target-heat-root-shell-gap"></a>
+### NG-2026-07-25-A13-TARGET-HEAT-ROOT-SHELL-GAP -- target heat and canonical CM weights do not create a far gap
+
+**Failure mode:** Use the R-079 predictable base-current heat projection, or
+the spatially weighted Cameron--Martin square function by itself, to infer an
+extra positive factor `2^(-theta(k-j))` between a probability root `j` and a
+later spatial control shell `k`.
+
+**Evidence:** The heat semigroup acts on the six-real target value of the
+frame.  For the exact model `H(u)=u^3`, target heat gives
+`P_sigma H(u)=u^3+3 sigma u`; composing with `u(x)=r cos(Nx)` preserves the
+nonzero `3N` harmonic.  Independently, take a centered strict-past root
+`phi(xi_j)` and the admissible later one-shot control
+`h_k=phi(xi_j)e_k`, `a_k=K_k h_k`.  Then `d_j a_k=a_k` and the normalized
+order-minus-two multiplier gives
+`2^(4k) E||d_j a_k||_2^2=1` for every gap `k-j`; derivative feedback likewise
+saturates its canonical weight.  Both executable routes reproduce the
+fixtures.
+
+**Consequence:** No far-root decay may be attributed to target heat or the CM
+identity alone.  The R-080 far square completion remains valid and reduces
+the production problem to the localized predictable base-current tail `S_C`.
+A production paracomposition/current-tail theorem or signed cancellation is
+still admissible.  This is not a counterexample to the complete packet,
+one-use, or Nelson.
+
+<a id="ng-2026-07-25-a13-near-width-and-rootwise-positivity"></a>
+### NG-2026-07-25-A13-NEAR-WIDTH-AND-ROOTWISE-POSITIVITY -- bounded near width and universal rootwise sign do not close the near block
+
+**Failure mode:** Treat `|m-j|<=C` as an analytic gain, or declare the complete
+production root contribution nonnegative after restoring its current square,
+covariance trace, and Wick forest.
+
+**Evidence:** At gain `gamma=0`, the R-079 ledger is
+`X^(1/2)Y^(1/2)` and has zero Young slack; finite shell width removes a count
+but changes no homogeneity.  For the production fixture
+`z=e1+e3`, `a=e1-e3`, `y=e3`, and
+`A=a 1_(|xi|>r)` with `DA=0`, the complete covariance-normal root value is
+`-3 r phi(r)/[80 P(2+e)^2]<0`.  The terminal square, trace, and complete forest
+are retained.  The primary and independent audits evaluate the sign at
+different positive parameters.
+
+**Consequence:** The residual near term needs either a genuine positive gain
+or a production-specific signed estimate.  R-080 nevertheless narrows it:
+with `L>=C`, explicit future `A^2 DA` payloads lie in the already paid branch,
+leaving a predictable explicit payload and a hidden future-adapted
+high--high-to-low coefficient.  The sign fixture is not a counterexample to a
+frequency-local budgeted near theorem.
+
+<a id="ng-2026-07-25-a13-regular-graph-progressive-revisit"></a>
+### NG-2026-07-25-A13-REGULAR-GRAPH-PROGRESSIVE-REVISIT -- regular graph recovery does not imply the full progressive bound
+
+**Failure mode:** After proving a lower bound for mutually orthogonal
+strict-past one-shot controls and applying R-075's fixed-cutoff graph closure,
+infer the same lower bound for every Boue--Dupuis progressive control,
+including same-range revisits.
+
+**Evidence:** For restricted controls
+`A_reg subset A_prog`, the direction is
+`inf_(A_prog) F <= inf_(A_reg) F`; a lower bound on the restricted infimum is
+insufficient.  More concretely, choose a low production mode `f` with
+`D(f^T S_r f)` nonzero, first set `A0=t f`, and later revisit the same range
+with `-t f`, so the final control is zero.  The conditional low current has a
+positive-metric leading square `c t^4`, hence its separate R-079 low block is
+`-c t^4/2+O(t^3)`, while final sextic charge is independent of `t` and the two
+control costs are quadratic.  The executable cosine-mode fixtures reproduce
+the scaling.
+
+**Consequence:** R-075 remains correct in its declared graph.  A new
+`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` theorem, or an equivalent
+all-tilted-law entropy estimate, is mandatory before canonical one-use.  The
+later current blocks may cancel the displayed low loss, so this is not a
+counterexample to the complete action, one-use, or Nelson.
 
 <a id="ng-2026-07-25-a13-generic-weighted-doob-shortcuts"></a>
 ### NG-2026-07-25-A13-GENERIC-WEIGHTED-DOOB-SHORTCUTS -- three generic weighted-Doob closures fail

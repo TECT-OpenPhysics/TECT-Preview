@@ -53,8 +53,16 @@ square function and base-current heat projection. The exact terminal feedback
 commutator retains coefficient and derivative-feedback channels, so the
 current child remains
 `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, narrowed to the
-production near/far estimate and complete weighted packet lower bound,
-followed by R-075 graph recovery and the umbrella one-use estimate.
+production near/far estimate and complete weighted packet lower bound. R-080,
+`A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
+objects for the regular no-revisit class, reduces far feedback to the
+localized predictable base-current tail `S_C`, and isolates the hidden
+future-adapted coefficient in the near branch. Target heat gives no automatic
+spatial gap and bounded near width gives no Young slack. R-080 also exposes a
+separate synthesis requirement: R-075 graph recovery does not extend the
+regular estimate to every progressive/revisit control. FAR, NEAR, and the
+full-progressive extension remain before the umbrella one-use estimate and
+the conditional `q=10/9` Nelson/A7 reconstruction.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

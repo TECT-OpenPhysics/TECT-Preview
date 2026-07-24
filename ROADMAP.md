@@ -231,8 +231,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   Martin control square function and the predictable base-current heat
   projection. The current regular-control subgate remains
   `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now narrowed to the
-  production near/far current-trace estimate and separate bounds for the two
-  low objects.
+  production near/far current-trace estimate. R-080,
+  `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
+  objects for the declared no-revisit one-shot class, reduces the far feedback
+  loss to one localized predictable base-current tail, and narrows the near
+  residual to a predictable explicit payload plus a hidden future-adapted
+  coefficient. It also exposes the separate
+  `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
+  not promote the regular lower bound to every Boue--Dupuis progressive
+  control. FAR, NEAR, and that progression theorem remain before one-use and
+  `q=10/9` Nelson.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -396,14 +404,18 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
    child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-   narrowed to a production near/far current-trace estimate. In the far region,
-   prove a production heat-tail gain and combine it with the weighted control
-   square function. In the near region, prove either a signed Schur bound or a
-   genuine positive-gain estimate while retaining every present/future block,
-   square, trace, innovation, compensator, forest term, and paid subtraction.
-   Bound the conditional low current and complete low safe endpoint separately.
-   Only then apply R-075 graph recovery, assemble controlled-shell one-use
-   through R-066, and return to `q=10/9` Nelson synthesis.
+   narrowed by R-080. R-080 closes the two distinct low objects for regular
+   no-revisit controls. Far-shell square completion retains both feedback
+   channels and leaves the localized predictable base-current tail `S_C`;
+   target heat and the CM square function alone supply no root/shell decay.
+   In the near region the explicit residual `A^2 DA` payload is predictable,
+   but a hidden future high--high-to-low coefficient remains; bounded width
+   has zero Young slack and universal rootwise positivity is false. Prove FAR
+   and NEAR while retaining every present/future block, square, trace,
+   innovation, compensator, forest term, and paid subtraction. Then apply
+   R-075 only within its declared graph and prove the distinct
+   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling
+   controlled-shell one-use through R-066 and returning to `q=10/9` Nelson.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume
@@ -413,7 +425,9 @@ preserved in git/changelog rather than treated as current gates.
    Do not spend the weighted control square function by a global Cauchy
    estimate, infer predictable BMO/Carleson control from expected budgets,
    manufacture spatial gain from an unweighted bracket, or assert generic
-   adapted Wick carre-du-champ positivity.
+   adapted Wick carre-du-champ positivity. Do not identify target-space heat
+   with spatial smoothing, treat bounded near width as positive Young slack,
+   or infer a full progressive lower bound from the restricted R-075 graph.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

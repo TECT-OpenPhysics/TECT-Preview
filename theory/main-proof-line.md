@@ -71,8 +71,15 @@ base or predictably translated current. The terminal feedback commutator still
 contains coefficient and derivative-feedback channels. Generic weighted
 shortcuts fail, so the exact current child remains
 `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now narrowed to the
-production near/far commutator estimate and complete weighted packet lower
-bound before R-075 graph recovery and the umbrella one-use/Nelson bound.
+production near/far commutator estimate. R-080,
+`A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
+objects for the declared no-revisit one-shot class, reduces far feedback to
+one localized predictable base-current tail, and narrows the near residual to
+a predictable explicit payload plus a hidden future-adapted coefficient. It
+also corrects the downstream scope: R-075 graph recovery covers its specified
+regular graph, not all progressive/revisit controls. The regular FAR/NEAR
+bound and a separate full-progressive extension are both required before the
+umbrella one-use/`q=10/9` Nelson bound.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

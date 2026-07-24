@@ -1,0 +1,624 @@
+% =============================================================================
+% Title: Regular low-object absorption, far square completion, and progressive boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY
+% Ledger: R-080
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 analytic/exact boundary; regular near/far and full progression open
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-25): closes both low objects in the declared no-revisit
+% one-shot class; reduces the far future-feedback block by orthogonal square
+% completion; narrows the near residual; proves root/shell and progressive-
+% revisit method boundaries; and states the exact conditional Nelson chain.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cJ}{\mathcal J}
+\newcommand{\cB}{\mathcal B}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+
+\section{Purpose and scope}
+
+R-079 gave the exact expectation-level decomposition of the complete
+canonical safe packet.  It left four items in its immediate work list: the
+conditional low-current block, the complete low safe endpoint, a far-root
+production estimate, and a near-root production estimate.  This note closes
+the first two in the declared regular control class and makes the last two
+strictly more precise.
+
+There is also a necessary scope correction.  The fixed-cutoff graph recovery
+of R-075 is a closure theorem for the mutually orthogonal, whole-shell,
+strict-past one-shot class used throughout R-066--R-079.  It is not a density
+theorem for every Boue--Dupuis progressive covariance-flow control.  In
+particular it does not create within-shell temporal feedback, repeated use of
+the same spatial range, or auxiliary randomness.  A lower bound on that
+restricted class cannot by itself lower-bound the infimum over the larger
+progressive class.  A full-progressive/revisit extension is therefore a
+separate load-bearing theorem between the regular packet estimate and the
+canonical one-use inequality.
+
+The positive result of this note is consequently scoped as follows.  Fix the
+terminal cutoff $J$, the positive production floor, the common even
+regulator, the A1 production frame, and a sufficiently large but fixed
+$j_0$.  Controls are regular, mutually orthogonal, one-shot whole-shell
+controls with $h_j$ measurable with respect to $\cF_{j-1}$.  No later control
+revisits a low spatial range.  All constants in the two low estimates are
+uniform in $J$ but may depend on $j_0$, the floor, and the declared budgets.
+
+Within this scope:
+\begin{enumerate}
+\item the R-079 conditional low current is below arbitrary terminal-sextic
+      budget plus a constant;
+\item the distinct complete low safe endpoint obeys the same type of bound;
+\item orthogonal far-shell square completion absorbs both terminal-feedback
+      channels and leaves one localized predictable base-current tail;
+\item the residual near payload is predictable, but a future-adapted
+      high--high-to-low coefficient branch remains;
+\item target-variable heat projection and the weighted Cameron--Martin
+      square function do not automatically supply a probability-root/spatial-
+      shell gap;
+\item general progressive/revisit extension remains unproved and cannot be
+      inferred from R-075.
+\end{enumerate}
+No regular near/far production bound, full progressive extension,
+controlled-shell one-use theorem, Nelson estimate, measure theorem, or
+Sector-A closure is asserted.  The tier stays T4.
+
+\section{Authority and the two low objects}
+
+Put $\ell=j_0-1$, $A^*=A^{(J)}$, $A^0=A^{(\ell)}$, and
+$Z^*=U+A^*$.  R-079 places the complete current in the Hilbert space carrying
+the spatial integral, generator and direction sums, and the positive
+$Q_{\rm II}$ metric:
+\[
+ \cJ(H)_{\alpha i}
+ =Q_{\rm II}^{1/2}M_\alpha(U+H)^T(D_iU+D_iH).
+                                                               \tag{2.1}
+\]
+Let $P_\ell=\E[\,\cdot\mid\cF_\ell]$ and let
+$B(z)=\sum_\alpha M_\alpha(z)Q_{\rm II}M_\alpha(z)^T$.  The first low
+object in the exact R-079 identity is
+\[
+ \begin{split}
+ \mathfrak L_\ell={}&{1\over2}\E\bigl(
+  \|P_\ell\cJ(A^*)\|_{\cH}^2-
+  \|P_\ell\cJ(A^0)\|_{\cH}^2\bigr)\\
+ &-{1\over2}\E\sum_i\int
+  \{B(Z^*)-B(U+A^0)\}:\Gamma_{\ell,i}\dd x .
+ \end{split}                                                  \tag{2.2}
+\]
+The second low object is the complete low safe endpoint
+\[
+ \mathfrak B_{\rm low}
+ =\Delta V_J^{\rm ren}(U;A^0)
+  -N_{3,{\rm nr}}(U;A^0)-\widehat T_{\le}(U;A^0).
+                                                               \tag{2.3}
+\]
+Equation (2.3), not merely its R-066 finite-low component, is what appears in
+the canonical safe packet.  Equations (2.2) and (2.3) are different objects
+and will not be conflated.
+
+The production frame bounds used below are the R-066/R-069 estimates
+\[
+ |M(z)|\le C_M|z|,
+ \qquad |M(z+a)-M(z)|\le C_{\rm Lip}|a|,
+                                                               \tag{2.4}
+\]
+with $C_M=\sqrt{20}$ sufficient, and hence
+\[
+ 0\le B(z)\le C_Q|z|^2 I.                                    \tag{2.5}
+\]
+The future value covariance is uniformly bounded at fixed positive floor.
+The heat-averaged frame therefore satisfies
+\[
+ |\overline M_\ell(z)|\le C_e(|z|+\sigma_>).                 \tag{2.6}
+\]
+
+\section{Closure of both regular low objects}
+
+\subsection{Conditional low current}
+
+\textbf{Theorem 3.1 (regular conditional-low absorption).}
+For every $\zeta>0$, under the scope of Section 1,
+\[
+ \boxed{\displaystyle
+ \mathfrak L_\ell\ge
+ -\zeta\E\|Z^*\|_6^6-C_{\zeta,e,j_0}.}                    \tag{3.1}
+\]
+The constant is uniform in the terminal cutoff $J$.
+
+\textbf{Proof.}
+Both $B$ and each $\Gamma_{\ell,i}$ are positive semidefinite.  In (2.2)
+drop the positive $\|P_\ell\cJ(A^*)\|^2$ term and the positive
+$B(U+A^0):\Gamma_\ell$ term.  By (2.5),
+\[
+ \mathfrak L_\ell\ge
+ -{1\over2}\E\|P_\ell\cJ(A^0)\|_{\cH}^2
+ -C_{e,j_0}\E\|Z^*\|_2^2 .                                \tag{3.2}
+\]
+The no-revisit property is now used exactly once.  With
+$Z_\ell=P_{<j_0}Z^*$, the predictable translation version of the R-079 heat
+identity gives
+\[
+ P_\ell\cJ(A^0)
+ =Q_{\rm II}^{1/2}\overline M_\ell(Z_\ell)^TDZ_\ell .       \tag{3.3}
+\]
+Because $Z_\ell$ has fixed spatial frequency, Bernstein and (2.6) imply
+\[
+ \|P_\ell\cJ(A^0)\|_2^2
+ \le C_{e,j_0}\{1+\|Z_\ell\|_6^4\}
+ \le C_{e,j_0}\{1+\|Z^*\|_6^4\}.                          \tag{3.4}
+\]
+The last projection constant is fixed once $j_0$ is fixed.  The scalar
+Young inequalities
+\[
+ x^4\le\zeta x^6+{4\over27\zeta^2},
+ \qquad
+ x^2\le\zeta x^6+{2\over3\sqrt{3\zeta}}                   \tag{3.5}
+\]
+permit the coefficients in (3.2)--(3.4) to be absorbed into an arbitrarily
+prescribed terminal-sextic budget after rescaling $\zeta$.  This proves
+(3.1).  No control-energy allocation is required. \hfill$\square$
+
+\subsection{Complete low safe endpoint}
+
+\textbf{Theorem 3.2 (regular complete-low absorption).}
+For every $\zeta>0$, under the same scope,
+\[
+ \boxed{\displaystyle
+ \E\mathfrak B_{\rm low}\ge
+ -\zeta\E\|Z^*\|_6^6-C_{\zeta,e,j_0}.}                    \tag{3.6}
+\]
+
+\textbf{Proof.}
+R-066 proves the finite-low estimate for the complete translated
+renormalised-energy block before the R-078 paid subtraction:
+\[
+ \E\Delta V_J^{\rm ren}(U;A^0)
+ \ge-\zeta_1\E\|Z^*\|_6^6-C_{\zeta_1,e,j_0}.              \tag{3.7}
+\]
+R-078 pays $N_{3,{\rm nr}}+\widehat T_{\le}$ by arbitrary internal
+energy and sextic budgets and an R-050 random remainder with moment $30/7$.
+At $A^0$ every control factor lies in the fixed finite-dimensional low
+range.  Moreover the no-revisit identity writes
+\[
+ A^0=P_{<j_0}Z^*-P_{<j_0}U.                                \tag{3.8}
+\]
+Fixed-low Bernstein, the bounded low Gaussian moments of $U$, and (3.5)
+therefore turn both internal $X_0$ and $Y_0$ payments into
+$\zeta_2\E\|Z^*\|_6^6+C_{\zeta_2,e,j_0}$.  Choose the internal
+budgets so that $\zeta_1+\zeta_2\le\zeta$.  Combining with (3.7) gives
+(3.6). \hfill$\square$
+
+The two theorems remove the low range as a UV obstruction in the regular
+one-shot class.  They do not say that the two objects can be bounded
+separately after a later control revisits and cancels the low range; Section 6
+shows that statement is false.
+
+\section{Far region: exact square completion and the true successor}
+
+Let $\Pi_m$ denote orthogonal spatial Fourier-shell projections.  In the
+R-079 future block put
+\[
+ b_{j,m}=\Pi_m d_j\cJ_j,
+ \qquad q_{j,m}=\Pi_m i_j,                                 \tag{4.1}
+\]
+where $i_j$ is the complete terminal future-feedback current.  It includes
+both
+\[
+ d_j\{(\Delta_j^{\rm f}M)^T(DU+DA^{(j)})\},
+ \qquad d_j\{M(U+A^*)^TDR_j^{\rm f}\}.                    \tag{4.2}
+\]
+For every coordinate in the positive $Q_{\rm II}$ Hilbert metric,
+\[
+ \ip{b_{j,m}}{q_{j,m}}_{Q_{\rm II}}
+ +{1\over2}\|q_{j,m}\|_{Q_{\rm II}}^2
+ =-{1\over2}\|b_{j,m}\|_{Q_{\rm II}}^2
+  +{1\over2}\|b_{j,m}+q_{j,m}\|_{Q_{\rm II}}^2.          \tag{4.3}
+\]
+Consequently, on the far region $m\ge j+C$, both feedback channels can be
+retained and absorbed by their positive square.  The entire new far loss is
+the localized predictable base-current tail
+\[
+ S_C=E\sum_j\sum_{m\ge j+C}
+       \|\Pi_m d_j\cJ_j\|_{Q_{\rm II}}^2.                 \tag{4.4}
+\]
+This is stronger and cleaner than estimating coefficient feedback and
+derivative feedback separately.  It is also only a reduction: no
+cutoff-uniform bound for (4.4) is currently available.
+
+For the $\cF_{j-1}$-predictable partial control let
+$Z_{j-1}=U_{j-1}+A^{(j)}$ and let $g_j$ be the fresh Gaussian shell.  The
+R-079 heat projection expands the base increment exactly into
+\[
+ \begin{split}
+ d_j\cJ_j={}&
+ \overline M_j(Z_{j-1}+g_j)^TDg_j\\
+ &+\{\overline M_j(Z_{j-1}+g_j)-\overline M_j(Z_{j-1})\}^T
+       DZ_{j-1}\\
+ &+\{\overline M_j-\overline M_{j-1}\}(Z_{j-1})^TDZ_{j-1}.
+ \end{split}                                                  \tag{4.5}
+\]
+These are derivative injection, value innovation, and the heat compensator.
+The scale data are
+\[
+ \E\|g_j\|_2^2\lesssim2^{-j},\qquad
+ \E\|Dg_j\|_2^2\lesssim2^j,\qquad
+ \|\Sigma_j\|\lesssim2^{-j}.                              \tag{4.6}
+\]
+Thus the heat compensator is the easier term.  The missing theorem is the
+spatial root-output tail for the derivative-injection/value-innovation pair
+under a random predictable translation.
+
+The covariance trace is not a new far obstruction.  It must remain in the
+R-070 Abel-summed form, for which
+\[
+ |\mathcal P_J|\lesssim\sum_k\left[
+ 2^{-k}\|U_J+A_k\|_2\|h_k\|+2^{-3k}\|h_k\|^2\right].       \tag{4.7}
+\]
+Dyadic Hardy and Young allocate (4.7) below arbitrary global budgets.  An
+artificial spatial-$m$ trace split would discard this proved cancellation.
+
+A sufficient far theorem would give, for some $\gamma>0$, the localized
+gain
+\[
+ \|\Pi_{\ge j+C}\mathbb K_{\gamma,j}(A)\|_{H^{-3/5}}
+ \le 2^{-\gamma C}R_\gamma\|A\|_{H^{2/5}},
+ \qquad R_\gamma\in\bigcap_{p<\infty}L^p.                  \tag{4.8}
+\]
+The R-078/R-079 ledger would then be
+\[
+ 2^{-\gamma C}R_\gamma
+ X^{1/2-\gamma/4}Y^{1/2+\gamma/12}.                        \tag{4.9}
+\]
+Its Young slack is $\gamma/6$ and the required random moment is $6/\gamma$.
+At $\gamma=3/10$ the powers are $17/40,21/40$, the slack is $1/20$, and
+the random moment is $20$.  R-063 motivates a possible sewing range but does
+not prove (4.8) for random predictable translations.
+
+\section{Why heat projection does not manufacture spatial gap}
+
+The semigroup in (4.5) acts on the six-real target variable of $M$.  It is
+not a Fourier multiplier in $x$.  A simple exact model already separates the
+two operations.  For $H(u)=u^3$,
+\[
+ P_\sigma H(u)=u^3+3\sigma u.                              \tag{5.1}
+\]
+If $u(x)=r\cos(Nx)$, the $3N$ Fourier coefficient of the first term is
+$r^3/4$ before and after target heat averaging.  Target heat changes the
+lower harmonic but does not spatially bandlimit the nonlinear composition.
+The production rational frame has the same general composition issue; a
+production paracomposition estimate, not the word ``heat'', must prove any
+spatial tail.
+
+There is also an admissible root/shell saturation fixture.  Take $j<k$, a
+centered bounded function $\phi(\xi_j)$, and the later one-shot control
+\[
+ h_k=\phi(\xi_j)e_k,\qquad a_k=K_kh_k.                      \tag{5.2}
+\]
+Then $h_k$ is $\cF_{k-1}$-measurable and $d_ja_k=a_k$.  With the normalized
+order-minus-two multiplier,
+\[
+ 2^{4k}\E\|d_ja_k\|_2^2=1                                \tag{5.3}
+\]
+for every gap $k-j$.  At a predictable background with
+$M(z_0)^Te_k\ne0$, derivative feedback likewise has
+\[
+ 2^k\|d_jDa_k\|_2\asymp1.                                 \tag{5.4}
+\]
+Thus no extra $2^{-\theta(k-j)}$, $\theta>0$, follows from the weighted
+Cameron--Martin identity or base-current heat identity alone.  Equations
+(5.1)--(5.4) are method boundaries, not counterexamples to the complete
+production packet or to a production-specific signed far estimate.
+
+\section{Near region: predictable payload, hidden coefficient}
+
+Use the corrected R-078 transport coordinate
+\[
+ N_3=\int_0^1(1-t)
+ \ip{\cJ}{Q[\widehat K_t[A,A]]^TDA}\dd t,
+ \qquad
+ \widehat K_t=D^2M(U+tA)-D^2M(U).                          \tag{6.1}
+\]
+Let $r$ be the largest explicit input shell of the $A^2DA$ payload and use
+the R-077/R-078 split $\widehat T_{>}$ with $m>r+L$.  Choose $L\ge C$.
+In the near-root region $|m-j|\le C$, any explicit future control shell
+$k>j$ would force
+\[
+ r\ge k>j,\qquad m\le j+C\le r+L,                         \tag{6.2}
+\]
+which places that monomial in the already paid $\widehat T_{\le}$ branch.
+Hence the explicit residual payload is $\cF_{j-1}$-measurable.
+
+This does not close the near term.  The coefficient
+$\Delta_m\widehat K_t$ can hide later adapted high--high-to-low control
+inputs inside the nonlinear composition.  R-063 treats deterministic
+translates and their balanced jets, not this future-random coefficient.  A
+largest coefficient-input shell split gives the honest successor:
+\begin{itemize}
+\item $p\le j+O(1)$ is the candidate conditional R-063/R-050 jet branch;
+\item $p\gg j$ is a genuine pair-high Cameron--Martin harvest or
+      production-specific signed-cancellation branch.
+\end{itemize}
+
+If the first branch could be reduced to a truly predictable translation,
+the balanced-jet regularity would permit a candidate
+\[
+ 0<\gamma<\alpha-{2\over5}-\kappa<{1\over10}.              \tag{6.3}
+\]
+For example $\gamma=1/20$ gives
+\[
+ X^{39/80}Y^{121/240}R_{1/20},\qquad
+ 1-{39\over80}-{121\over240}={1\over120},\qquad
+ p_R=120.                                                   \tag{6.4}
+\]
+This is a viable conditional ledger, not an established adapted operator
+bound.  Merely restricting $|m-j|\le C$ corresponds to $\gamma=0$, giving
+$X^{1/2}Y^{1/2}$ and zero Young slack.  Bounded shell width removes counting
+but does not create absorption slack.
+
+Universal pointwise/rootwise positivity is unavailable even for the actual
+production frame.  For the exact fixture
+$z=e_1+e_3$, $a=e_1-e_3$, $y=e_3$, and
+$A=a\mathbf 1_{\{|\xi|>r\}}$ with $DA=0$, the complete covariance-normal
+root contribution satisfies
+\[
+ \E\{W(A)-W(0)\}
+ =-{3\over80P(2+e)^2}\,r\varphi(r)<0.                      \tag{6.5}
+\]
+The terminal square, trace, and complete forest are present; derivative
+feedback and the paid $N_3$ vanish.  Equation (6.5) refutes a universal
+PSD/Ward/pointwise Schur claim.  It does not refute a frequency-local,
+budgeted production near estimate.
+
+\section{Progressive revisits: a separate theorem is mandatory}
+
+The low proofs use $Z_\ell=P_{<j_0}Z^*$, which is true for the declared
+orthogonal no-revisit class.  It fails for a general progressive control that
+later reuses the same spatial range.  The failure is not cosmetic.
+
+Choose a non-null low production mode $f$ with
+$D(f^TS_rf)\ne0$.  First use a low control $A^0=tf$ and later revisit the
+same range with $-tf$, so $A^*=0$.  The production current contains
+\[
+ J_{r,i}(U+tf)=t^2D_i(f^TS_rf)+O(t).                        \tag{7.1}
+\]
+The positive $Q_{\rm II}$ current metric has
+$c_0=3/(250P)>0$, and conditional heat projection preserves the deterministic
+leading term.  Therefore
+\[
+ \|P_\ell\cJ(A^0)\|^2=c t^4+O(t^3),\qquad c>0,             \tag{7.2}
+\]
+while the covariance trace and the two control costs are $O(t^2)$.  Since
+the final field is independent of $t$, (2.2) gives
+\[
+ \mathfrak L_\ell=-{c\over2}t^4+O(t^3).                   \tag{7.3}
+\]
+No estimate of $\mathfrak L_\ell$ separately by an arbitrary small multiple
+of progressive control energy plus final sextic charge can hold on this
+larger class.  The later current blocks may cancel (7.3), so this is not a
+counterexample to the complete action or to canonical one-use.
+
+The logical order is equally decisive.  If
+$\mathcal A_{\rm reg}\subset\mathcal A_{\rm prog}$, then
+\[
+ \inf_{\mathcal A_{\rm prog}}F
+ \le\inf_{\mathcal A_{\rm reg}}F.                          \tag{7.4}
+\]
+A lower bound for the right side supplies no lower bound for the left side.
+R-075 graph recovery closes the regular class in its declared fixed-cutoff
+Cameron--Martin/terminal-$L^6$ graph norm; it does not reverse (7.4).
+
+The required new gate can be closed in either of two ways:
+\begin{enumerate}
+\item extend the complete endpoint lower bound to every finite-energy
+progressive covariance-flow control, including within-shell adaptation,
+same-range revisits, temporal refinement, auxiliary randomness,
+localization, and lower semicontinuity, with no new counterterm; or
+\item prove the equivalent all-tilted-law entropy inequality directly.
+\end{enumerate}
+The finite-$L^6$ restriction also needs a variational truncation showing that
+finite-objective controls can be approximated without an
+$\infty-\infty$ defect.
+
+\section{Exact conditional Nelson chain}
+
+The present state can now be stated without a hidden implication.
+
+\textbf{Conditional Theorem 8.1.}
+Assume the following three new inputs, uniformly in the cutoff:
+\begin{enumerate}
+\item[(FAR)] a bound for (4.4), or the localized gain (4.8), after complete
+R-063/R-070 reconstruction;
+\item[(NEAR)] a direct signed near-root bound or a genuine $\gamma>0$
+lower-chaos-complete adapted coefficient estimate for Section 6;
+\item[(PROG)] the full progressive/revisit extension of Section 7.
+\end{enumerate}
+Then the R-079 identity, Theorems 3.1--3.2, R-078 paid orientations, and
+R-066/R-070 trace payments yield the full progressive controlled-shell
+one-use estimate.  With
+\[
+ \epsilon_6=0.15,
+ \qquad \epsilon_v=0.45,
+ \qquad p={11\over10},                                     \tag{8.1}
+\]
+the production potential allocation has strict sextic margin
+\[
+ 0.27-0.06-0.15=0.06,                                     \tag{8.2}
+\]
+and the control margin is
+\[
+ {1\over2p}-\epsilon_v={5\over11}-{9\over20}={1\over220}.
+                                                               \tag{8.3}
+\]
+Exact Boue--Dupuis then gives
+\[
+ q={1\over2\epsilon_v}={10\over9},
+ \qquad q-p={1\over90}>0,                                 \tag{8.4}
+\]
+and hence
+\[
+ \sup_J\E\exp\left[-{10\over9}
+ \{V_J^{\rm ren}+0.15\|\phi_J\|_6^6\}\right]<\infty.    \tag{8.5}
+\]
+The remaining $0.06$ production sextic margin and $q>p$ give the A7
+$p=1.1$ Nelson bound.  The already proved A7 measure-theoretic implications
+then yield the fixed-volume full-sequence Gibbs limit and smeared-correlation
+convergence at the fixed floor. \hfill$\square$
+
+The theorem is conditional because FAR, NEAR, and PROG are all open.  In
+particular, (8.5) is not a conclusion of this note.
+
+\section{Evidence map, failures, and remaining work}
+
+The proof map after R-080 is:
+\[
+ \begin{array}{c}
+ \text{R-079 exact complete packet}\\
+ \downarrow\\
+ \boxed{\text{LOW-1 closed}}\quad
+ \boxed{\text{LOW-2 closed}}\quad
+ \boxed{\text{FAR reduced to }S_C}\quad
+ \boxed{\text{NEAR narrowed}}\\
+ \downarrow\quad\text{FAR+NEAR still required}\\
+ \text{regular packet lower bound}\\
+ \downarrow\quad\text{PROG still required}\\
+ \text{full progressive one-use}\\
+ \downarrow\quad\text{exact arithmetic already checked}\\
+ q=10/9\text{ Nelson and fixed-floor A7 construction.}
+ \end{array}                                                \tag{9.1}
+\]
+
+Successful steps and failed routes are deliberately recorded together:
+\begin{itemize}
+\item \textbf{Closed:} both low objects in the regular no-revisit class.
+\item \textbf{Closed reduction:} far feedback is absorbed by orthogonal
+square completion; only the predictable base-current tail remains.
+\item \textbf{Narrowed:} the residual near explicit payload is predictable;
+the hidden adapted coefficient is not.
+\item \textbf{Failed route:} target-space heat projection as an automatic
+spatial tail, by (5.1)--(5.4).
+\item \textbf{Failed route:} bounded-width near localization as a source of
+Young slack; its slack is zero.
+\item \textbf{Failed route:} universal near-root PSD/Ward positivity, by
+(6.5).
+\item \textbf{Failed implication:} regular graph recovery to full
+progressive Boue--Dupuis control, by (7.3)--(7.4).
+\end{itemize}
+
+For the fixed-floor A13/A7 branch, three substantive analytic inputs remain:
+FAR, NEAR, and PROG.  FAR and NEAR may ultimately be proved by one common
+production paracomposition theorem, but no such theorem currently exists.
+After those inputs, budget allocation and the Nelson/A7 synthesis are
+moderate bookkeeping rather than a fourth unknown mechanism.  For all of
+Sector A, the separate A6 full-field bare-concentration branch remains a
+major independent block; floor removal and infinite volume remain outside
+the present theorem scope.  A descriptive estimate is that roughly
+$85$--$90$ percent of the A13 algebraic architecture is mapped, but the
+remaining bridges are the hardest analytic ones, so that percentage is not a
+time-to-completion forecast.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: ``Dropping PSD terms in (3.2) silently merges the
+two low objects.''}  \textbf{DISMISSED.}  Theorem 3.1 uses only (2.2).
+Theorem 3.2 separately starts from (2.3) and invokes R-066 plus the exact
+R-078 paid terms.
+
+\item \textbf{Objection: ``The low estimates are uniform over every
+progressive drift.''}  \textbf{UPHELD as false with mitigation.}  The scope
+is explicitly no-revisit.  Equations (7.1)--(7.3) give a quartic termwise
+counterfixture outside that class, and the new PROG gate is registered.
+
+\item \textbf{Objection: ``R-075 density already supplies PROG.''}
+\textbf{UPHELD as false.}  R-075 closes a specified graph of orthogonal
+one-shot controls.  It neither generates same-range revisits nor changes the
+infimum direction (7.4).
+
+\item \textbf{Objection: ``Far square completion proves the far bound.''}
+\textbf{UPHELD as false.}  It reduces the feedback loss to $S_C$ in (4.4).
+The localized predictable base-current tail remains a new theorem.
+
+\item \textbf{Objection: ``The heat semigroup gives the missing spatial
+decay.''}  \textbf{UPHELD as false.}  It acts in target space.  The third
+harmonic in (5.1) and the strict-past gap saturation (5.3) survive.
+
+\item \textbf{Objection: ``Near-root bounded width is automatically
+subcritical.''}  \textbf{UPHELD as false.}  At $\gamma=0$ the energy and
+sextic powers sum to one.  A genuine gain or signed production cancellation
+is necessary.
+
+\item \textbf{Objection: ``The negative fixture (6.5) disproves one-use.''}
+\textbf{DISMISSED.}  It disproves universal rootwise positivity only.  A
+frequency-local budgeted signed estimate may couple roots and shells.
+
+\item \textbf{Objection: ``The arithmetic (8.2)--(8.4) proves Nelson.''}
+\textbf{UPHELD as an overclaim.}  It proves only that the budgets close once
+FAR, NEAR, and PROG have been supplied.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable checks the PSD low-current drop, optimal scalar Young
+fixtures, far-shell square completion, root-gap saturation, target-heat
+harmonics, near gain ledgers, the production sign fixture, revisit quartic
+scaling, variational direction, and the exact Nelson margins.  The
+non-importing independent executable uses complex Hilbert coordinates, a
+direct discrete Fourier transform, a separate spatial grid, alternate
+parameters, and separately derived rational ledgers.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_low_object_far_square_progressive_boundary_verify.py
+\end{verbatim}
+The child contracts are primary $51/51$ and non-importing independent
+$35/35$.  The integrated verifier pins R-066, R-075, R-078, and R-079;
+checks sources, note, PDF, manifest, run, result, negative-result, gate,
+roadmap, task, and claim surfaces; and fails closed if any open production,
+progressive, one-use, Nelson, measure, or Sector-A flag is promoted.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-
+           BOUNDARY
+Precise statement:       For regular mutually orthogonal one-shot shell
+                         controls with no low-range revisit, both the R-079
+                         conditional low current and complete low endpoint
+                         are absorbed below arbitrary terminal-sextic budget.
+                         Orthogonal far-shell completion reduces all future
+                         feedback to the predictable base-current tail S_C.
+                         The near explicit payload is predictable, but its
+                         hidden future coefficient remains. R-075 does not
+                         extend these results to all progressive controls.
+Scope:                   Finite cutoff; fixed floor; common even regulator;
+                         exact products; strict-past one-shot whole shells;
+                         no later low-range revisit; constants J-uniform.
+Dependencies:            A1; R-050; R-063; R-066; R-070; R-075; R-078;
+                         R-079.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_low_object_far_square_progressive_
+                         boundary_verify.py
+Expected output:          Primary 51/51; independent 35/35; manifest-pinned
+                         integrated and aggregate PASS; exit zero.
+Falsification gate:      Failure of either low theorem, far completion,
+                         root-gap/revisit fixture, rational ledger, evidence
+                         hash, PDF contract, or honesty flag.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No production far tail, near signed/gain theorem,
+                         full-progressive extension, controlled-shell
+                         one-use, Nelson bound, measure theorem, removal
+                         limit, or Sector-A closure is proved.
+Next required action:    Prove FAR and NEAR for the complete regular packet,
+                         then prove the full progressive/revisit extension;
+                         only then invoke the q=10/9 conditional synthesis.
+\end{verbatim}
+\endgroup

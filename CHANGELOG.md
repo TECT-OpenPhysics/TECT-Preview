@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-080 regular low-object closure, far square reduction, and progressive boundary] - 2026-07-25
+
+Closed both distinct R-079 low objects for the declared regular no-revisit one-shot class. Exact orthogonal square completion reduces far terminal feedback to the localized predictable base-current tail S_C; the near residual has predictable explicit payload but a hidden future-adapted coefficient. Registered the target-heat/root-gap, bounded-near/rootwise-sign, and regular-graph-to-progressive no-gos. FAR, NEAR, full-progressive extension, one-use, Nelson, and Sector A remain open. Primary 51/51, independent 35/35, integrated 123/123, aggregate 209/209; nine-page PDF visually verified.
+
 ## [R-079 full safe-packet frame-current Doob decomposition] - 2026-07-25
 
 Closed the exact expectation-level full frame-current and canonical safe-packet reconstruction, retaining both low objects, the present/future cross term, squares, Wick traces, derivative feedback, complete forest, and paid endpoint difference. Proved the spatially weighted Cameron--Martin control square function and predictable base-current heat projection. Registered generic weighted-Doob and adapted Wick carre-du-champ method no-gos. The production near/far current-trace estimate, low-object bounds, controlled-shell one-use, q=10/9 Nelson synthesis, and Sector A remain open at T4. Primary 51/51 and independent 42/42 pass; integrated 157/157 and aggregate 250/250 are fail-closed by the manifest; ten-page PDF was rebuilt and visually checked.

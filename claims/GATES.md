@@ -383,7 +383,7 @@ new interaction counterterm is generated.  A shell-by-shell sum of the A13
 one-shell estimate is forbidden because its `H_A(x)` term repeatedly pays
 Gaussian past energy, whose expectation grows with the cutoff by A11.
 
-**Status:** OPEN (reviewed 2026-07-24), SOLE CANONICAL OBJECTIVE AFTER THE
+**Status:** OPEN (reviewed 2026-07-25), SOLE CANONICAL OBJECTIVE AFTER THE
 ARCHITECTURE NOGOS.  The translation-model reduction proves the exact
 finite-cutoff translation and Cartan identities and deterministic-shift
 expectation positivity.  It admits the explicit candidate
@@ -445,11 +445,17 @@ identifies the future-control innovation-bracket mechanism for each factorised
 bilinear component. R-079 closes the exact full-current and canonical safe-
 packet Doob reconstruction with every low, square, trace, forest, cross, and
 paid term retained. It also proves one weighted Cameron--Martin control square-
-function use and the predictable base-current heat projection. The current
-child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-narrowed to the production near/far current-trace estimate and separate bounds
-for the conditional low current and complete low safe endpoint.
-The umbrella theorem remains open.
+function use and the predictable base-current heat projection. R-080 closes
+both distinct low objects for the declared mutually orthogonal one-shot
+no-revisit class. It reduces the far feedback block by orthogonal square
+completion to one localized predictable base-current tail and narrows the near
+residual to a predictable explicit payload plus a hidden future-adapted
+coefficient. The current regular-class child remains
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`. R-080 also corrects
+the synthesis scope: R-075 graph recovery does not extend a restricted lower
+bound to every progressive/revisit control. The separate successor
+`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
+one-use. The umbrella theorem remains open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -926,8 +932,41 @@ predictable BMO/Carleson control; an unweighted bracket has no generic spatial
 gain; and square plus trace has no universal adapted sign. These are method
 no-gos, not production counterexamples. A genuine gain `gamma>0` would be
 subcritical, with moment `6/gamma`, but that production estimate is unproved.
-The production near/far current-trace lower bound, both low-object bounds,
-controlled-shell one-use, Nelson, and Sector A remain open.
+R-080 closes both low-object bounds in the declared no-revisit class and
+sharpens the remaining production estimate. In the far region, exact
+orthogonal square completion retains both feedback channels and leaves only
+`S_C=E sum_j sum_(m>=j+C)||Pi_m d_j J_j||_(Q_II)^2`; target heat and the
+weighted CM identity do not themselves give a root/shell gap. In the near
+region, `L>=C` makes the explicit residual `A^2 DA` payload predictable, but a
+future-adapted high--high-to-low coefficient remains hidden inside
+`D2M(U+tA)-D2M(U)`. Bounded width has zero Young slack and universal rootwise
+positivity is false. The FAR and NEAR production bounds, complete regular
+packet lower bound, full-progressive extension, controlled-shell one-use,
+Nelson, and Sector A remain open.
+
+### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
+
+**Statement:** Starting from a cutoff-uniform lower bound for the complete
+canonical packet on the regular mutually orthogonal one-shot shell class,
+extend the bound to every finite-energy progressive covariance-flow control
+required by the Boue--Dupuis variational formula. The theorem must cover
+within-shell temporal adaptation, repeated use of one spatial range, temporal
+refinement, auxiliary randomness, localization, graph truncation, and lower
+semicontinuity, with no new interaction counterterm or infinity-minus-infinity
+defect. An equivalent all-tilted-law entropy inequality is an admissible
+alternative.
+
+**Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080
+`A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`. R-075 proves
+fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
+closure of regular whole-shell controls. Variational inclusion has the wrong
+direction for promoting a lower bound on that restricted class to all
+progressive controls. A same-range revisit can make the separate R-079
+conditional-low loss quartic while final charge is fixed and control cost is
+quadratic; cancellation, if present, must occur in the complete later packet.
+This is a method and scope obstruction, not a counterexample to the full
+action. The gate is logically after the regular FAR/NEAR packet bound and
+before controlled-shell one-use and `q=10/9` Nelson synthesis.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-080](#r-080) | Regular low-object absorption, far square completion, and progressive-revisit boundary | Scoped T4 analytic/exact/executed reduction: both R-079 low objects admit arbitrary terminal-sextic absorption uniformly in the cutoff for mutually orthogonal strict-past one-shot controls with no low-range revisit. Orthogonal far-shell completion retains both feedback channels and reduces the far loss to one localized predictable base-current tail; the near residual has predictable explicit `A^2 DA` payload but a hidden future-adapted high--high-to-low coefficient. Target heat and weighted CM identities give no automatic root/shell gap, bounded near width gives zero Young slack, universal rootwise positivity fails, and R-075 graph recovery does not extend a restricted lower bound to every progressive/revisit control. FAR, NEAR, and full-progressive extension remain open; one-use, Nelson, and Sector A are not closed; assertion count is pinned by the manifest |
 | [R-079](#r-079) | Full safe-packet frame-current Doob decomposition and weighted-route boundary | Scoped T4 exact/analytic/executed reduction: the complete renormalised frame-current endpoint has an exact Hilbert-current Doob decomposition into one conditional low-current term, present-control increments, and future-control innovations, with the future cross term retained. Subtracting the already paid `N3_nr+T_<=` block gives the canonical safe packet without deleting the complete low endpoint. A spatially weighted Cameron--Martin square function spends control energy once, and a backward-heat formula exactly projects the base current. The terminal future-feedback current still contains coefficient and derivative-feedback commutators. Generic Cauchy/weighted-square-function, expected-budget-to-BMO, spatial-gain, and adapted Wick carre-du-champ shortcuts fail; a positive `gamma`-gain estimate would close by a finite moment, but the production near/far theorem, one-use bound, Nelson synthesis, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-078](#r-078) | Hessian-difference safe packet and Doob-bracket reduction | Scoped T4 exact/analytic/executed reduction: the R-076 third-order transport has an exact bounded Hessian-difference representation with `A^2 DA` payload. At `s=3/5` the input-maximum payment is `X^(2/5)Y^(11/30)` with slack `7/30` and moment `30/7`. Subtraction from the complete endpoint followed by one causal projection defines the canonical safe packet; exact Doob algebra identifies the future-control innovation-bracket mechanism for factorised bilinear components, whose unweighted coefficient coordinate has one square-function bound. The declared high-`U` principal closes with moment `60/19`. Absolute `A`-high summation and automatic bracket-plus-square positivity fail; exact full-packet bracket reconstruction, its weighted bound, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-077](#r-077) | Causal Doob packets and payload-comparable shifted-resonance closure | Scoped T4 exact/analytic/executed reduction: complete fresh-Gaussian endpoint packets are Doob differences and therefore cancel exactly in signed expectation, with the full Wick/lower-chaos forest and endpoint companions retained. A direct smooth-Littlewood--Paley cutoff form closes every payload-comparable orientation `m<=r+L` by the R-076 `X^(2/5)Y^(8/15)` estimate and fifteenth moment, including ties and payload high--high-to-low outputs. The exact complement is one coefficient-dominant high--high-to-low signed packet; the raw three-class monomial taxonomy is retired and Sector A remains open; assertion count is pinned by the manifest |
@@ -100,6 +101,61 @@ policy in `governance/development-history.md`.
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
 <a id="r-079"></a>
+### R-080 -- Regular low-object absorption, far square completion, and progressive-revisit boundary
+
+**Result ID.**
+`A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`.
+
+**Statement.**  Fix a positive production floor, a finite terminal cutoff,
+and sufficiently large fixed `j0`.  For regular mutually orthogonal
+whole-shell strict-past one-shot controls with no later low-range revisit, the
+R-079 conditional low current and the distinct complete low safe endpoint
+both obey, for every `zeta>0`, a lower bound
+`-zeta E||U+A*||_6^6-C_(zeta,e,j0)` with a constant uniform in the terminal
+cutoff.  The proof uses the predictable heat projection, fixed-low Bernstein,
+the R-066 finite-low theorem, the exact R-078 paid subtraction, and scalar
+Young; the two objects are never identified.
+
+For orthogonal spatial current shells, exact Hilbert square completion keeps
+both terminal-feedback channels and reduces the far loss to
+`S_C=E sum_j sum_(m>=j+C)||Pi_m d_j J_j||_(Q_II)^2`.  The R-070 Abel--Hardy
+trace stays globally paid.  In the near residual, `L>=C` forces every explicit
+future `A^2 DA` payload into the already paid branch, so the remaining explicit
+payload is predictable; a future-adapted high--high-to-low coefficient hidden
+inside `D2M(U+tA)-D2M(U)` remains.
+
+The boundary is sharp at the level claimed.  Target-variable heat averaging
+does not spatially bandlimit nonlinear composition, and admissible strict-past
+controls saturate the canonical CM weights for arbitrarily large root/shell
+gaps.  Near bounded width has zero Young slack.  An exact production fixture
+rules out universal rootwise PSD/Ward positivity without refuting a signed
+frequency-local estimate.  A same-range revisit produces a separate
+conditional-low loss `-c t^4+O(t^3)` against only quadratic control cost and
+fixed final charge.  Hence R-075's fixed-cutoff graph closure of the one-shot
+class cannot be promoted by variational logic to every Boue--Dupuis
+progressive/revisit control.
+
+**Where proved.**
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-low-object-far-square-progressive-boundary-260725-v1.0.tex.txt`,
+primary and non-importing independent executables, and the manifest-pinned
+integrated verifier.
+
+**Reuse scope.**  The two low theorems are reusable only in the declared
+no-revisit one-shot class.  The far square-completion identity is an abstract
+Hilbert lemma, but its production tail `S_C` remains unproved.  The exact
+conditional synthesis requires three new inputs: FAR, NEAR, and a
+full-progressive/revisit extension.  Once all three hold, the already checked
+budgets `epsilon_6=0.15`, `epsilon_v=0.45`, `p=11/10` give margins `0.06` and
+`1/220`, hence `q=10/9` with `q-p=1/90`.  This conditional arithmetic is not a
+one-use or Nelson theorem.
+
+**Tier / publication target.**  T4 exact/analytic/executed boundary, no tier
+promotion.  Candidate component of a future Class-II constructive-measure
+paper after FAR, NEAR, and progression close.  The full progressive estimate,
+controlled-shell one-use, Nelson bound, interacting measure, removal limits,
+and Sector-A closure remain open.
+
 ### R-079 -- Full safe-packet frame-current Doob decomposition and weighted-route boundary
 
 **Result ID.**
