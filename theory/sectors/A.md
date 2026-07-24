@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION | the first R-070 draft deleted a weighted linear channel | The initial Section 8 reduction made two load-bearing |
+| NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE | Doob terminalization and terminal-resolvent centering do not | Three plausible shortcuts fail.  First, summing the exact |
 | NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT | affine Schur and separate pure-control payment fail | Two candidate continuations of the R-068 production |
 | AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER | absolute score and full fast remainder fail | Two proposed continuations attempted to close the production |

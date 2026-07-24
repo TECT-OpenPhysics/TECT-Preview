@@ -1,0 +1,657 @@
+% Title: Wick--Doob terminalization and adapted-resolvent boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact analytic reduction; no tier promotion
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-24): R-070 full-coefficient Wick--Doob terminalization;
+% raw/Wick trace restoration; terminal Schur boundary; adapted-centering and
+% Stein route no-gos; adversarial repair of the full QII-weighted linear frame;
+% exact symmetric--Cartan split and two-stage successor.
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+
+\section{Purpose and scope}
+
+This note continues R-069 from its displayed finite-cutoff target (6.7).
+The setting is the hash-pinned six-real production model on the torus of side
+$L=16$, at fixed positive density floor, with common entrywise real-even
+regulation and mutually orthogonal one-shot strict-past controls.  The purpose
+is to decide whether the remaining Gaussian-rooted current can be closed by a
+conditional Gaussian, paraproduct, or retained-resolvent argument.
+
+The main positive result is an exact Wick--Doob product identity.  It combines
+the $GG$, $CC$, and mixed-current channels into the terminal covariance-normal
+current form while retaining the complete finite-low boundary.  The
+transported covariance trace is already an R-066 summable channel, and the
+R-069 endpoint-curvature defect is already an R-068 one-use centered form.
+Thus the covariance and endpoint-curvature side-channel bookkeeping is
+closed; the full linear-frame model attribution is not.
+
+The result does \emph{not} prove the remaining lower bound.  Terminalization
+lands exactly on the adapted translated-current stochastic coercivity problem
+which A13 was designed to prove.  A second exact identity retains the terminal
+Schur resolvent and pays its Hilbert--Schmidt trace, but leaves one adapted
+centered-resolvent chaos.  A scalar diagnostic proves that covariance normal
+ordering does not center this term when its coefficient is adapted.  The
+smallest non-circular successor consequently has two stages: first the
+balanced non-$pp$ linear-frame model attribution, then a coupled nonlinear
+rational-frame/cross-square estimate.  A7 existence or the desired Nelson
+moment cannot be cited as either proof.
+
+All identities below are finite-cutoff statements.  They use only pointwise
+conditional independence of a fresh derivative shell from the same-point
+value variables.  They do not identify the target-space heat dummy with a
+future spatial field and never spatially differentiate it.
+
+\section{Strict-past fields and normal current}
+
+Let
+\[
+ \mathcal F_j=\sigma(\omega_k:k\le j),\qquad
+ (a_j,b_{j,i})\ \hbox{be }\mathcal F_{j-1}\hbox{-measurable}.       \tag{2.1}
+\]
+For one terminal shell $J$, use the coherent value coupling
+\[
+ U_J(x)=\sum_{k\le J}\xi_k(x),                                  \tag{2.2}
+\]
+and define
+\[
+ G_{j,i}=\sum_{k<j}d_{k,i},\qquad
+ \Gamma_{j-1,i}=\operatorname{Cov}G_{j,i},                       \tag{2.3}
+\]
+\[
+ A_j=A_{<j},\qquad C_{j,i}=D_iA_j,                               \tag{2.4}
+\]
+\[
+ A_{j+1}=A_j+a_j,\qquad C_{j+1,i}=C_{j,i}+b_{j,i}.                \tag{2.5}
+\]
+The future heat variable in (2.2) is frozen under $D_i$; therefore $G_{j,i}$
+contains only exposed spatial derivative shells.
+
+Write the production coefficient in its current frame as
+\[
+ B(z)=\sum_{A=1}^3M_A(z)Q_{\rm II}M_A(z)^T,\qquad B_j=B(U_J+A_j), \tag{2.6}
+\]
+and put
+\[
+ Q_{j,i}=G_{j,i}^{\otimes2}-\Gamma_{j-1,i}.                      \tag{2.7}
+\]
+The covariance-normal current energy at the pre-control endpoint is
+\[
+ \mathcal W_j={1\over2}\sum_i\int
+ B_j:\left[(G_{j,i}+C_{j,i})^{\otimes2}-\Gamma_{j-1,i}\right]
+ \dd x.                                                         \tag{2.8}
+\]
+At the post-control, pre-noise endpoint define
+\[
+ \widehat{\mathcal W}_j={1\over2}\sum_i\int
+ B_{j+1}:\left[(G_{j,i}+C_{j+1,i})^{\otimes2}
+                    -\Gamma_{j-1,i}\right]\dd x.               \tag{2.9}
+\]
+
+\section{Exact Wick--Doob transport}
+
+Fix $x$ and enlarge the strict-past sigma field only by the same-point future
+values:
+\[
+ \mathcal G_{j,x}=\mathcal F_{j-1}\vee
+             \sigma(\xi_k(x):k\ge j).                           \tag{3.1}
+\]
+Common real-even covariance and shell independence give
+\[
+ \E[d_{j,i}(x)\mid\mathcal G_{j,x}]=0,\qquad
+ \E[d_{j,i}(x)^{\otimes2}\mid\mathcal G_{j,x}]
+       =\Delta\Gamma_{j,i}.                                     \tag{3.2}
+\]
+The fields $B_{j+1}(x)$, $G_{j,i}(x)$, and $C_{j+1,i}(x)$ are
+$\mathcal G_{j,x}$-measurable.  Since
+\[
+ G_{j+1,i}=G_{j,i}+d_{j,i},\qquad
+ \Gamma_{j,i}=\Gamma_{j-1,i}+\Delta\Gamma_{j,i},                \tag{3.3}
+\]
+equation (3.2), followed by spatial Fubini, proves
+\[
+ \boxed{\ \E\mathcal W_{j+1}=\E\widehat{\mathcal W}_j.\ }     \tag{3.4}
+\]
+This is a pointwise conditional statement.  It does not assert independence
+of the complete value and derivative fields.
+
+Polarizing (2.8)--(2.9) gives exactly
+\[
+ \widehat{\mathcal W}_j-\mathcal W_j
+ =\mathcal R_j^C+\mathcal R_j^\times
+  +\mathcal R_j^{G,{\rm Wick}},                                 \tag{3.5}
+\]
+where $\mathcal R_j^C$ and $\mathcal R_j^\times$ are R-069
+(5.7) and (5.9), and
+\[
+ \mathcal R_j^{G,{\rm Wick}}
+ ={1\over2}\sum_i\int(B_{j+1}-B_j):Q_{j,i}\dd x.               \tag{3.6}
+\]
+Summing (3.4)--(3.6) proves the first main identity:
+\[
+ \boxed{
+ \E\sum_{j=j_0}^J
+ (\mathcal R_j^C+\mathcal R_j^\times
+                 +\mathcal R_j^{G,{\rm Wick}})
+ =\E\mathcal W_{J+1}-\E\mathcal W_{j_0}.}                       \tag{3.7}
+\]
+In particular, the $GG$ coefficient alone obeys the Wick--Doob product rule
+\[
+ \boxed{
+ \E\sum_{j=j_0}^J{1\over2}\sum_i\int
+ (B_{j+1}-B_j):Q_{j,i}\dd x
+ ={1\over2}\E\sum_i\int
+ (B_{J+1}:Q_{J+1,i}-B_{j_0}:Q_{j_0,i})\dd x.}                    \tag{3.8}
+\]
+Unlike the R-069 scalar-envelope transfer, (3.8) transports the full
+coefficient increment.  Its price is that the result is the intact terminal
+rough form, not a smooth deterministic multiplier.
+
+At the terminal endpoint $U_J=X_J$, $G_{J+1}=DX_J$,
+$A_{J+1}=A$, and $C_{J+1}=DA$.  Therefore
+\[
+ \boxed{
+ \mathcal W_{J+1}={1\over2}\sum_i\int
+ B(Z_J):\left[(D_iZ_J)^{\otimes2}-\Gamma_{J,i}\right]\dd x,}    \tag{3.9}
+\]
+which is exactly the finite-cutoff A7 covariance-normal current form.  The
+initial term in (3.7) is the \emph{full} finite-low boundary and is retained
+until the R-066 low-block estimate is applied.
+
+\section{Raw terminal-minus-injection form and trace restoration}
+
+Let
+\[
+ \mathcal E_j^{\rm raw}={1\over2}\sum_i\int
+ (G_{j,i}+C_{j,i})^TB_j(G_{j,i}+C_{j,i})\dd x.                   \tag{4.1}
+\]
+Fresh-noise centering also gives the equivalent raw identity
+\[
+ \boxed{
+ \E\sum_{j=j_0}^J
+ (\mathcal R_j^C+\mathcal R_j^\times+\mathcal R_j^{G,{\rm raw}})
+ =\E\mathcal E_{J+1}^{\rm raw}-\E\mathcal E_{j_0}^{\rm raw}
+ -{1\over2}\E\sum_{j,i}\int
+ \operatorname{Tr}(B_{j+1}\Delta\Gamma_{j,i})\dd x.}           \tag{4.2}
+\]
+Thus terminal raw energy and injection may not be estimated separately: at
+zero control they cancel exactly shell by shell after expectation.
+
+The discrete integration-by-parts identity
+\[
+ \begin{split}
+ B_{J+1}\Gamma_J-B_{j_0}\Gamma_{j_0-1}
+ =\sum_{j=j_0}^J\{&(B_{j+1}-B_j)\Gamma_{j-1}\\
+                  &+B_{j+1}\Delta\Gamma_j\}
+ \end{split}                                                    \tag{4.3}
+\]
+converts (4.2) into (3.7).  Consequently the raw R-069 target (6.7) must not
+be silently called the Wick terminal form: the previously separated trace
+channel
+\[
+ {1\over2}\sum_{j,i}\int
+ \operatorname{Tr}[(B_{j+1}-B_j)\Gamma_{j-1,i}]\dd x            \tag{4.4}
+\]
+must first be restored or charged to its existing budget.
+
+R-066 already proves that (4.4) is a one-use summable channel.  For clarity,
+write $N_j=2^j$, $a_j=K_jh_j$, and use
+\[
+ \|\Gamma_{j-1}\|_{\rm op}\le C_\Gamma N_j,\qquad
+ \|K_jh_j\|_2\le C_KN_j^{-2}\|h_j\|_{\mathcal H_j}.           \tag{4.5}
+\]
+The frame increment gives a mixed term
+$CN_j^{-1}\|U_J+A_j\|_2\|h_j\|$ and a quadratic term
+$CN_j^{-3}\|h_j\|^2$.  Orthogonality and dyadic Cauchy--Schwarz then yield,
+for a sufficiently large fixed $j_0$ and every $\eta>0$,
+\[
+ \E |(4.4)|\le
+ \eta\E\sum_j\|h_j\|_{\mathcal H_j}^2+C_{\eta,j_0}.           \tag{4.6}
+\]
+
+There is an equivalent transported-covariance tail.  If $A=A_{J+1}$, put
+\[
+ \mathcal P_J={1\over2}\sum_{j,i}\int
+ \operatorname{Tr}\{[B(U_J+A)-B(U_J+A_{j+1})]
+                      \Delta\Gamma_{j,i}\}\dd x.               \tag{4.7}
+\]
+Discrete Abel summation gives exactly
+\[
+ \mathcal P_J={1\over2}\sum_{k,i}\int
+ \operatorname{Tr}[(B_{k+1}-B_k)\Gamma_{k-1,i}^{\rm hi}]\dd x,
+ \quad
+ \Gamma_{k-1}^{\rm hi}=\sum_{j_0\le j<k}\Delta\Gamma_j.        \tag{4.8}
+\]
+The same bounds prove
+\[
+ |\mathcal P_J|\le C\sum_k\left[
+ N_k^{-1}\|U_J+A_k\|_2\|h_k\|_{\mathcal H_k}
+ +N_k^{-3}\|h_k\|_{\mathcal H_k}^2\right].                    \tag{4.9}
+\]
+If $X=\sum_k\|h_k\|^2$ and
+$W=\sum_kN_k^{-2}\|U_J+A_k\|_2^2$, the dyadic Hardy estimate is
+\[
+ W\le {8\over3}N_{j_0}^{-2}\|U_J\|_2^2
+       +{2C_K^2\over3}N_{j_0}^{-6}X.                            \tag{4.10}
+\]
+Hence (4.9) has the same arbitrary control allocation as (4.6), without a
+sextic allocation.  No paraproduct theorem is needed for the covariance tail.
+
+\section{Endpoint curvature and exact terminal equivalence}
+
+Use the R-069 endpoint lift on the Gaussian derivative only and define
+\[
+ \varepsilon_j=\sum_{A,i}\int
+ \langle g_{j,A,i},Q_{\rm II}E^G_{j,A,i}\rangle\dd x.           \tag{5.1}
+\]
+Then, exactly,
+\[
+ \mathcal R_j^{G,{\rm raw}}
+ =\mathcal T_j^G+\mathcal J_j^G+\varepsilon_j.                  \tag{5.2}
+\]
+The absolute form of the global R-069 estimate is
+\[
+ |\varepsilon_j|\le C_*\int|a_j|^2|G_j|^2\dd x,\qquad
+ C_*=24\lambda_Q(\sqrt{34}+4\sqrt2).                            \tag{5.3}
+\]
+R-068/R-069 transfer the centered scalar part of (5.3) once to the terminal
+$H^{-1-\kappa}$ model and pay its covariance trace at order $N_j^{-3}$.
+
+Combining (3.7), (4.4), and (5.2) shows that the correctly normal-ordered
+R-069 target is
+\[
+ \boxed{
+ \E(\mathcal W_{J+1}-\mathcal W_{j_0})
+ -\E\sum_{j=j_0}^J\varepsilon_j.}                               \tag{5.4}
+\]
+Equivalently, the literal raw target (6.7) is (5.4) plus the trace channel
+(4.4).  Since (4.4) and (5.3) already have arbitrary one-use allocations,
+the desired bound for (6.7) is equivalent, up to already proved budgets, to
+\[
+ \E\mathcal W_{J+1}
+ \ge-\eta\E\sum_j\|h_j\|_{\mathcal H_j}^2
+      -\zeta\E\|Z_J\|_6^6-C_{\eta,\zeta,j_0}.                  \tag{5.5}
+\]
+Equation (5.5) is the terminal translated-current stochastic coercivity
+problem itself.  Thus Wick--Doob transport closes the shell bookkeeping but
+does not provide a new lower-bound mechanism.
+
+\section{Exact retained terminal resolvent}
+
+There is a second useful exact reduction.  Whiten the terminal Gaussian as
+$\xi$, write its Cameron--Martin displacement as $\widehat h$, and, at the
+actual endpoint $z=K_J(\xi+\widehat h)$, define
+\[
+ L_z=M_{B(z)}^{1/2}DK_J,\qquad T_z=L_z^*L_z\succeq0.            \tag{6.1}
+\]
+For $p>0$ put
+\[
+ R_z=(I+pT_z)^{-1},\qquad S_z=T_zR_z.                            \tag{6.2}
+\]
+Although $T_z$ is random, the following is a pointwise Hilbert-space
+completion and uses no independence:
+\[
+ \begin{split}
+ V_J^{\rm ren}(z)+{1\over2p}\|\widehat h\|^2
+ ={}&{1\over2}\{\langle\xi,S_z\xi\rangle-\operatorname{Tr}S_z\}
+ -{p\over2}\operatorname{Tr}(T_z^2R_z)\\
+ &+{1\over2}\|(T_z+p^{-1}I)^{1/2}
+       (\widehat h+pR_zT_z\xi)\|^2.
+ \end{split}                                                    \tag{6.3}
+\]
+To verify the trace term, use
+$S_z=T_z-pT_z^2R_z$.  To verify the square, expand it and use
+$(T_z+p^{-1}I)R_z=p^{-1}I$.
+
+The deterministic trace loss closes:
+\[
+ \operatorname{Tr}(T_z^2R_z)\le\|T_z\|_{\mathfrak S_2}^2
+ \le C\|B(z)\|_2^2\le C\|z\|_4^4.                             \tag{6.4}
+\]
+Consequently, for every $\zeta>0$,
+\[
+ {p\over2}\operatorname{Tr}(T_z^2R_z)
+ \le\zeta\|z\|_6^6+C_{p,\zeta}.                               \tag{6.5}
+\]
+The sole unresolved term in (6.3) is therefore
+\[
+ \boxed{
+ {1\over2}\E\{\langle\xi,S_{Z_J}\xi\rangle
+                         -\operatorname{Tr}S_{Z_J}\}.}          \tag{6.6}
+\]
+If $S$ were deterministic or independent of $\xi$, (6.6) would vanish and
+the A9 frozen-shell theorem would close the form.  At the adapted terminal
+endpoint it is neither.
+
+\section{Adapted centering and Stein no-go diagnostics}
+
+The failure of automatic centering is already visible in one Gaussian
+coordinate.  Let $\xi\sim\mathcal N(0,1)$ and choose the bounded adapted
+coefficient
+\[
+ z(\xi)=A\mathbf1_{\{|\xi|\le a\}}.                             \tag{7.1}
+\]
+Smooth approximations give the same limiting conclusion.  Since
+\[
+ \int_{-a}^a(x^2-1)\varphi(x)\dd x=-2a\varphi(a),               \tag{7.2}
+\]
+one has
+\[
+ \E\,{1\over2}z(\xi)^2(\xi^2-1)=-a\varphi(a)A^2<0.             \tag{7.3}
+\]
+For the scalar resolvent $S=z^2/(1+pz^2)$ the same calculation gives
+\[
+ \E\,{1\over2}S(\xi)(\xi^2-1)
+ =-{a\varphi(a)A^2\over1+pA^2}<0.                              \tag{7.4}
+\]
+This is a route diagnostic, not a production counterexample: realizing
+(7.1) as a spatial Cameron--Martin control has a cost which the diagnostic
+does not model.  It proves only that covariance normal ordering and a terminal
+resolvent do not themselves center an adapted coefficient.
+
+Direct Gaussian integration by parts also leaves an unauthorized norm.  If
+$G=L\omega$, $U=K\omega$, and the same-point evenness gives $LK^*=0$, then for
+an adapted shift $A(\omega)$,
+\[
+ \E[:G^{\otimes2}:F(U+A)]
+ =\E\operatorname{Tr}\{L^*D_\omega^2[F(U+A)]L\}.                \tag{7.5}
+\]
+The right side contains
+\[
+ D^2F[DA,DA]+DF[D^2A],                                         \tag{7.6}
+\]
+and the mixed current similarly contains $DA$ and $DC$.  Strict-past
+adaptation kills only the same-shell diagonal derivative; a later control may
+still differentiate an earlier innovation.  For example
+\[
+ h_2^{(n)}(\omega_1)=\sin(n\omega_1)                            \tag{7.7}
+\]
+has uniformly bounded $L^2$ control energy but Malliavin derivative norm of
+order $n$.  The declared Boue--Dupuis cost controls no such derivative.
+Therefore a pure Stein proof would impose an additional hypothesis and would
+not extend to the stated finite-energy drift class.
+
+Finally, a global entropy shortcut is circular.  Applying the Gibbs
+variational formula directly to (5.5) bounds it by
+$-\log\E\exp(-pV_J^{\rm ren}(X_J))$, which is precisely the open Nelson
+moment.  A7 supplies existence and convergence of the composite, not this
+negative exponential bound.
+
+\section{The exact non-circular successor}
+
+Write $U=X_J$, $A=Z_J-X_J$, $G_i=D_iU$, $C_i=D_iA$, and
+\[
+ M_{r,0}=M_r(U),\quad M_{r,1}=M_r(U+A),\quad
+ \Delta M_r=M_{r,1}-M_{r,0},\qquad r=1,2,3.                    \tag{8.1}
+\]
+The terminal translated form is exactly
+\[
+ \begin{split}
+ \Delta V_J^{\rm ren}(U;A)={}&{1\over2}
+   \langle B(U+A)-B(U),Q_J\rangle\\
+ &+\sum_{r,i}\langle M_{r,1}^TG_i,Q_{\rm II}M_{r,1}^TC_i\rangle
+ +{1\over2}\sum_{r,i}|M_{r,1}^TC_i|_{Q_{\rm II}}^2,
+ \end{split}                                                    \tag{8.2}
+\]
+where $Q_J=\sum_i(G_i^{\otimes2}-\Gamma_{J,i})$.
+
+Subtract the uncontrolled conservative first variation
+\[
+ \mathcal S_0(U;A)={1\over2}\langle DB(U)[A],Q_J\rangle
+ +\sum_{r,i}\langle M_{r,0}^TG_i,Q_{\rm II}M_{r,0}^TC_i\rangle. \tag{8.3}
+\]
+Then ordinary algebra gives
+\[
+ \begin{split}
+ \Delta V_J^{\rm ren}-\mathcal S_0={}&{1\over2}
+ \langle B(U+A)-B(U)-DB(U)[A],Q_J\rangle\\
+ &+\sum_{r,i}\{\langle M_{r,0}^TG_i,Q_{\rm II}(\Delta M_r)^TC_i\rangle\\
+ &\quad+\langle(\Delta M_r)^TG_i,Q_{\rm II}M_{r,1}^TC_i\rangle
+       +{1\over2}|M_{r,1}^TC_i|_{Q_{\rm II}}^2\}.
+ \end{split}                                                    \tag{8.4}
+\]
+The exact surviving transported-current paraproduct is
+\[
+ \boxed{
+ \mathcal C_J=\sum_{r,i}\langle M_{r,0}^TG_i,
+ Q_{\rm II}(\Delta M_r)^TC_i\rangle.}                         \tag{8.5}
+\]
+The fundamental theorem of calculus must retain its linear part:
+\[
+ \Delta M_r=DM_r(U)[A]+E_r^M,\qquad
+ E_r^M=\int_0^1[DM_r(U+tA)-DM_r(U)][A]\dd t,
+\]
+and hence $\mathcal C_J=\mathcal L_J+\mathcal N_J$, where
+\[
+ \mathcal L_J=\sum_{r,i}\langle M_{r,0}^TG_i,Q_{\rm II}
+ DM_r(U)[A]^TC_i\rangle,\quad
+ \mathcal N_J=\sum_{r,i}\langle M_{r,0}^TG_i,Q_{\rm II}
+ (E_r^M)^TC_i\rangle.                                         \tag{8.6}
+\]
+Write $Q_{\rm II}=(q_{mn})_{m,n=1}^2$ and $M_r=[p_r,v_r]$.  Put
+\[
+ P_{r,i}=p_r(U)\cdot G_i,\qquad V_{r,i}=v_r(U)\cdot G_i,
+\]
+and, with $\rho=|U|^2$, $m_r=U^TS_rU$,
+\[
+ K_{r,p}=2S_r,\qquad
+ K_{r,v}=2(S_r-q_rI)-{v_rU^T+Uv_r^T\over\rho+e},\qquad
+ d\omega_r={d\rho\wedge dm_r\over\rho+e}.
+\]
+Direct differentiation gives the exact symmetric--Cartan split
+\[
+ Dp_r(U)[A]\cdot C_i=A^TK_{r,p}C_i,\quad
+ Dv_r(U)[A]\cdot C_i=A^TK_{r,v}C_i
+       +{1\over2}d\omega_r(U)[A,C_i].
+\]
+Consequently
+\[
+ \mathcal L_J=\mathcal L_J^{\rm sym}+\mathcal L_J^{\rm Car},
+\]
+where
+\[
+ \begin{split}
+ \mathcal L_J^{\rm sym}=\sum_{r,i}\int\{&
+ q_{11}P_{r,i}A^TK_{r,p}C_i\\
+ &+q_{12}[P_{r,i}A^TK_{r,v}C_i
+             +V_{r,i}A^TK_{r,p}C_i]\\
+ &+q_{22}V_{r,i}A^TK_{r,v}C_i\}\dd x,
+ \end{split}
+\]
+and
+\[
+ \mathcal L_J^{\rm Car}={1\over2}\sum_{r,i}\int
+ (q_{12}P_{r,i}+q_{22}V_{r,i})
+ d\omega_r(U)[A,C_i]\dd x.
+\]
+Since $K_{r,p}$ and $K_{r,v}$ are symmetric, torus integration by parts gives
+\[
+ \mathcal L_J^{\rm sym}
+ =\sum_r\langle\mathbb Q_r^{\rm lin}(U),A^{\otimes2}\rangle,
+\]
+\[
+ \mathbb Q_r^{\rm lin}=-{1\over2}\sum_i\partial_i[
+ q_{11}P_{r,i}K_{r,p}
+ +q_{12}(P_{r,i}K_{r,v}+V_{r,i}K_{r,p})
+ +q_{22}V_{r,i}K_{r,v}].
+\]
+The pure $p$--$p$ subchannel is therefore
+\[
+ \begin{split}
+ \mathcal L_J^{pp}
+ &=q_{11}\sum_{r,i}\int
+ \partial_i(U^TS_rU)\,\partial_i(A^TS_rA)\dd x\\
+ &=-q_{11}\sum_r\langle\Delta(U^TS_rU),A^TS_rA\rangle.
+ \end{split}                                                    \tag{8.7}
+\]
+After covariance centering, R-068 pays (8.7) once.  The production weight
+$q_{11}$ and the sum over all generators are essential.  The same payment for
+all of $\mathcal L_J^{\rm sym}$ additionally requires the balanced
+rational-current model lemma
+$\mathbb Q_r^{\rm lin}\in L^p(\Omega;H^{-1-\kappa})$; R-070 has not yet
+proved or pinned that lemma for the non-$pp$ terms.
+
+The exact $\mathcal L_J^{\rm Car}$ is a Gaussian-current pairing with
+$A\wedge DA$.  If
+$X=\|A\|_{H^2}^2$, $Y=\|A\|_6^6$, and
+$\theta=(1+2\kappa)/3$, interpolation gives
+\[
+ \|A\wedge DA\|_{H^\kappa}
+ \le C X^{(1+\theta)/2}Y^{(1-\theta)/6}.
+\]
+At $\kappa=1/10$, the powers are $X^{7/10}Y^{1/10}$, and weighted Young gives
+\[
+ |\langle\mathbb J,A\wedge DA\rangle|
+ \le\eta X+\zeta Y+C\eta^{-7/2}\zeta^{-1/2}
+ \|\mathbb J\|_{H^{-1/10}}^5.                                \tag{8.8}
+\]
+The balanced Gaussian-current model has the required fifth moment, so (8.8)
+pays $\mathcal L_J^{\rm Car}$.  This does not prove the missing
+$H^{-1-\kappa}$ model attribution for the non-$pp$ part of
+$\mathcal L_J^{\rm sym}$.
+
+With $d_{r,i}=(\Delta M_r)^TG_i$ and $c_{r,i}=M_{r,1}^TC_i$, define
+\[
+ \begin{split}
+ \mathcal R_{\rm shift}={}&\mathcal N_J
+ +\sum_{r,i}\{\langle d_{r,i},Q_{\rm II}c_{r,i}\rangle
+                  +{1\over2}|c_{r,i}|_{Q_{\rm II}}^2\}\\
+ &+{1\over2}\langle B(U+A)-B(U)-DB(U)[A],Q_J\rangle.
+ \end{split}                                                    \tag{8.9}
+\]
+The exact identity is
+\[
+ \Delta V_J^{\rm ren}-\mathcal S_0
+ =\mathcal L_J^{\rm sym}+\mathcal L_J^{\rm Car}
+  +\mathcal R_{\rm shift}.
+\]
+The terms in (8.9) must remain coupled.  Separating them recreates the old
+saturated rational-frame paraproduct, while completing the cross/square
+globally creates $|A|^2|DU|^2$ with terminal covariance and destroys the
+shellwise $N_j^{-3}$ trace gain.  The smallest honest successor is therefore:
+\begin{quote}
+\textbf{Successor (8.10).}  First prove the balanced model attribution for the
+non-$pp$ part of $\mathbb Q_r^{\rm lin}$ and pay
+$\mathcal L_J^{\rm sym}$ once through R-068.  Then prove a full
+$Q_{\rm II}$-weighted predictable rational-frame/cross-square inequality for
+(8.9), retaining $\mathcal N_J$, the coefficient remainder, and terminal
+square jointly and using no Malliavin derivative of the control.
+\end{quote}
+Only after (8.10) is closed can localization and lower semicontinuity extend
+the result to all declared finite-energy drifts, followed by controlled-shell
+one-use and the $q=10/9$ Nelson theorem.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The full coefficient Wick product may be transported to the
+terminal shell.''}  \textbf{DISMISSED as an objection.}  Equations
+(3.1)--(3.8) prove this exactly, using only same-point fresh-noise centering.
+The terminal rough form and full finite-low boundary are retained.
+
+\item \textbf{``The raw R-069 expression already equals the Wick terminal
+form.''}  \textbf{VALID WITH MITIGATION.}  The statement is true only after
+restoring the trace channel (4.4).  R-066 proves that channel summable, but it
+may not be silently omitted from the identity.
+
+\item \textbf{``Terminalization proves (6.7).''}
+\textbf{UPHELD as false.}  Equations (5.4)--(5.5) show that it lands on the
+terminal translated-current coercivity theorem itself.  Using the desired
+Nelson moment there is circular.
+
+\item \textbf{``The retained resolvent centers the terminal quadratic.''}
+\textbf{UPHELD as false.}  Equations (7.1)--(7.4) give a bounded scalar
+adapted coefficient for which the centered resolvent expectation is strictly
+negative.  This is a route no-go, not a production counterexample.
+
+\item \textbf{``Stein integration uses only the control energy.''}
+\textbf{UPHELD as false.}  Equations (7.5)--(7.7) exhibit uncontrolled first
+and second Malliavin derivatives of later controls.
+
+\item \textbf{``The covariance tail needs a new paraproduct theorem.''}
+\textbf{DISMISSED.}  Abel summation, R-066 frame bounds, orthogonal ranges,
+and the dyadic Hardy estimate (4.10) give an arbitrary one-use allocation.
+
+\item \textbf{``The pure $p$--$p$ integration-by-parts channel has unit
+weight and exhausts the linear frame.''}  \textbf{UPHELD as false.}
+Equation (8.7) carries the production factor $q_{11}$ and the generator sum.
+The $q_{12}$/$q_{22}$ rational-frame terms remain in
+$\mathbb Q_r^{\rm lin}$ and require the stated balanced-model attribution.
+
+\item \textbf{``The nonlinear integral in (8.6) equals $\Delta M_r$.''}
+\textbf{UPHELD as false.}  It equals
+$\Delta M_r-DM_r(U)[A]$.  Dropping the linear term loses
+$\mathcal L_J$; equations (8.6)--(8.9) retain it exactly.
+
+\item \textbf{``Termwise absolute bounds on (8.4) are sufficient.''}
+\textbf{UPHELD as false.}  They destroy the coupled
+$\langle d,c\rangle+|c|^2/2$ structure and recreate the previously registered
+critical saturation.  The next estimate must retain the positive square.
+
+\item \textbf{``This result proves finite-energy one-use or Nelson.''}
+\textbf{UPHELD as an overclaim.}  It proves an exact finite-cutoff reduction
+for regular one-shot controls and sharpens the successor.  The full weighted
+rational-frame/cross-square residual, finite-energy extension, one-use,
+Nelson theorem, interacting measure, floor removal, and infinite volume
+remain open.
+\end{enumerate}
+
+\noindent\textbf{Executed code-discipline audit.}
+Signs, $q_{11}$/half-factors, regulator/covariance conventions, and Sobolev
+orders are independently asserted.  All quantities use the nondimensional A1
+normalization.  Same-fixture coarse/fine quadrature and Fourier envelopes test
+convergence; every diagnostic is recomputed rather than pasted, with zero-
+control, deterministic, positive-floor, and adapted-scalar limit cases.  These
+are regression checks, not a proof of (8.10).
+
+\section{Reproduction}
+
+The fail-closed verifier runs primary, non-importing independent, prior R-069,
+source/PDF hash, and repository-integration gates:
+\begin{verbatim}
+python codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py
+\end{verbatim}
+
+The primary route checks polarization, the full weighted frame-linearization
+split, Wick/raw telescopes, traces, Hardy, Schur completion, and adapted
+centering.  Both routes report same-fixture coarse/fine envelopes.  Neither
+executable claims to prove (8.10).
+
+\section*{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION (R-070)
+Precise statement:       The full coefficient Wick current telescopes into
+                         the terminal covariance-normal current; raw/Wick
+                         trace and transported tail are paid; exact terminal
+                         Schur completion isolates one adapted resolver chaos;
+                         the full linear frame is decomposed without deletion.
+Scope:                   Fixed finite cutoff; regular mutually orthogonal
+                         strict-past one-shot controls; positive density floor.
+Dependencies:            A1 production functional; R-066; R-068; R-069.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_wick_doob_terminal_resolvent_reduction_
+                         verify.py
+Expected output:         primary 22/22; independent 16/16; integrated 47/47;
+                         aggregate 85/85; exit 0.
+Falsification gate:      A conditional moment, telescope, q11/frame split,
+                         trace, Hardy, Schur, hash, PDF QA, or assertion fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  The non-pp symmetric-model attribution, shifted
+                         rational-frame/cross-square bound, finite-energy,
+                         one-use, Nelson, and all removal limits remain open.
+Next required action:    Prove the balanced linear-frame model lemma and then
+                         the coupled residual (8.9)--(8.10).
+\end{verbatim}
+
+\noindent\textbf{Final boundary.}
+This result terminalizes R-069 (6.7), proves that its covariance and endpoint
+curvature side channels are already one-use, and isolates one adapted
+centered-resolvent/transported-current problem.  It does not prove the non-$pp$
+linear-frame model attribution, the coupled nonlinear lower bound, or any
+downstream constructive claim.

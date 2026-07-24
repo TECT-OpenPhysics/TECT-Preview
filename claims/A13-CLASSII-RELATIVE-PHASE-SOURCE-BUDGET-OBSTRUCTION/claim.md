@@ -197,6 +197,31 @@ the following structural results and proof-architecture boundaries hold.
     boundary remain intact.  The remaining analytic core is the adapted
     Gaussian-rooted transported-current/GG lower bound, not another local
     Schur completion.
+13. `A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION` closes the covariance
+    and endpoint-curvature side-channel bookkeeping without claiming the
+    lower bound.  For the full tensor
+    `Q_j=G_j tensor G_j-Gamma_<j`, same-point fresh-noise conditioning proves
+
+    \[
+    \mathbb E\sum_j{1\over2}(B_{j+1}-B_j):Q_j
+    ={1\over2}\mathbb E[B_{J+1}:Q_{J+1}-B_{j_0}:Q_{j_0}].
+    \]
+
+    Adding the exact `CC` and mixed polarizations gives the terminal
+    covariance-normal current `W_{J+1}-W_{j0}` with the full finite-low
+    boundary retained.  The raw form differs by precisely the R-066 summable
+    covariance trace; its transported-tail version closes by Abel summation
+    and a dyadic Hardy inequality.  An exact terminal Schur completion pays
+    the Hilbert--Schmidt trace but leaves one adapted centered-resolvent chaos.
+    A bounded scalar adapted coefficient proves that normal ordering and the
+    resolver do not center this term.  The full `Q_II`-weighted linear frame
+    splits exactly into symmetric and Cartan channels.  Its Cartan channel and
+    the `q11`-weighted pure `p_A=2S_Az` subchannel are paid, but the non-`pp`
+    symmetric part still needs a balanced `H^{-1-kappa}` model attribution.
+    After that first subgate, the nonlinear coefficient remainder and
+    `(<d,Qc>+|c|_Q^2/2)` must remain coupled in a rational-frame/cross-square
+    estimate.  Stein integration would require uncontrolled Malliavin
+    derivatives, while invoking Nelson at the terminal form is circular.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -217,7 +242,8 @@ is a scoped T4 subproof and does not promote A13.
 | NPC cone / martingale injection | Nelson-aligned current factorisation, CAT(0) target, strong Jacobi remainder, exact injection telescope, and shellwise/geometry-only boundaries | T4 child reduction closed |
 | Tip-safe grouped harvest / Carleson reduction | Exact nonlinear harvest, full conservative-score and Gaussian-tail estimates, CAT(0) whole secant through the tip, centered-form one-use lemma, and corrected remainder boundary | T4 child reduction closed |
 | Endpoint-lifted Schur / coherent causal grouping | Hybrid endpoint lift, optimized safe-envelope bounds, exact pure-control and mixed-current telescopes, and scalar centered-defect transfer | T4 child reduction closed |
-| Controlled-shell one-use | Nonlinear NPC--Carleson injection balance and finite-energy extension | OPEN umbrella gate |
+| Wick--Doob terminal/resolvent reduction | Full-coefficient Wick transport, terminal normal current, trace/Hardy payment, adapted-resolver no-go, exact symmetric--Cartan split, and `q11` pure-`pp` payment | T4 child reduction closed with two explicit successors |
+| Controlled-shell one-use | Non-`pp` balanced linear-frame model attribution, coupled rational-frame/cross-square inequality, and finite-energy extension | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -250,6 +276,11 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   positive density floor.  Its causal insertion is for regular mutually
   orthogonal one-shot strict-past controls and a target-space heat-value
   coupling.  The future heat dummy is never spatially differentiated.
+- The Wick--Doob theorem uses pointwise same-point conditional centering, not
+  independence of the complete value and derivative fields.  It retains the
+  full terminal covariance-normal current and finite-low boundary.  Its
+  adapted-coefficient and Stein diagnostics are route no-gos, not production
+  counterexamples.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -272,36 +303,53 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. the adapted Gaussian-rooted transported-current/GG lower bound, retaining
-   the exact terminal control-current square and reducing only its genuinely
-   centered scalar component to the R-068 global quadratic-form theorem,
-   under `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`;
-2. localization/lower-semicontinuity extension to the declared finite-energy
+1. the balanced `H^{-1-kappa}` model attribution for the non-`pp` symmetric
+   part of the exact `Q_II`-weighted linear frame in R-070 (8.6)--(8.8), paid
+   once through R-068;
+2. the coupled predictable rational-frame/cross-square bound in R-070
+   (8.9)--(8.10), keeping the nonlinear coefficient remainder and terminal
+   square together under
+   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`;
+3. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
-3. return to the A7 Nelson and finite-volume measure gates.
+4. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_endpoint_lifted_schur_causal_grouping_reduction_verify.py
+python codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py
 ```
 
 Expected output:
 
 - primary `22/22`;
-- non-importing independent `20/20`;
-- integrated `70/70`, hence aggregate `112/112`;
-- exact endpoint identity, optimized good/bad and global bounds, rotating-
-  kernel falsifier, coherent causal telescopes, fresh-noise centering, and
-  pure-control scaling no-go below their asserted tolerances;
+- non-importing independent `16/16`;
+- integrated `47/47`, hence aggregate `85/85`;
+- exact Wick--Doob and raw terminal telescopes, trace restoration, endpoint-
+  curvature equivalence, covariance-tail Hardy bound, terminal resolvent,
+  adapted-centering diagnostic, exact full weighted linear-frame split, and
+  nonzero `q11` pure-`pp` integration by parts;
 - exit code zero.
 
-The nine-page proof note passes the standard form check, zero-overfull gate,
+The ten-page proof note passes the standard form check, zero-overfull gate,
 and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_wick_doob_terminal_resolvent_reduction_manifest.json`
+- `notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt`
+- `notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction.py`
+- `../../codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_independent.py`
+- `../../codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py`
+- `runs/2026-07-24-primary-wick-doob-terminal-resolvent-reduction/result.json`
+- `runs/2026-07-24-independent-wick-doob-terminal-resolvent-reduction/result.json`
+- `runs/2026-07-24-integrated-wick-doob-terminal-resolvent-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-doob-resolvent-closure`
+
+The immediate endpoint-lifted predecessor remains binding:
 
 - `classii_endpoint_lifted_schur_causal_grouping_reduction_manifest.json`
 - `notes/classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0.tex.txt`
@@ -522,9 +570,33 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     `N^6` and leaves a positive coefficient for small prescribed budgets.  The
     exact pathwise CC telescope is essential.
 35. **UPHELD AGAINST CLOSURE: the local endpoint lift proves controlled-shell
-    one-use.**  The adapted Gaussian-rooted transported-current/GG lower bound,
+    one-use.**  R-070 terminalizes the adapted current but proves only an exact
+    equivalence.  The non-`pp` balanced linear-frame model attribution, the
+    subsequent coupled nonlinear rational-frame/cross-square lower bound,
     finite-energy extension, one-use, and Nelson steps remain open.  No tier
     change follows.
+36. **DISMISSED: the full coefficient Wick product cannot be transported.**
+    The R-070 pointwise conditional identity transports it exactly and combines
+    `CC/GG/mixed` into the terminal covariance-normal current.  The raw form
+    still requires restoration of the already controlled R-066 trace channel.
+37. **UPHELD AGAINST A DOOB CLOSURE: terminalization proves the lower bound.**
+    After the covariance trace and endpoint defect are paid, the terminal form
+    is exactly the translated-current stochastic coercivity theorem itself.
+    Invoking the desired Nelson moment at that point is circular.
+38. **UPHELD AGAINST ADAPTED RESOLVENT CENTERING: covariance normal ordering
+    centers the retained terminal resolver.**  The bounded scalar coefficient
+    `A 1_{|xi|<=a}` leaves the strictly negative expectation
+    `-a phi(a) A^2/(1+pA^2)`.  This is a route diagnostic, not a production
+    counterexample.
+39. **UPHELD AGAINST A PURE STEIN ROUTE: strict-past adaptation removes every
+    control derivative.**  It removes only the same-shell diagonal derivative;
+    later controls retain uncontrolled first and second Malliavin derivatives
+    of earlier innovations.
+40. **DISMISSED: every production frame channel remains open.**  The exact
+    full weighted linear frame has a symmetric--Cartan split.  Its Cartan
+    channel and the `q11`-weighted pure `p_A=2S_Az` subchannel are paid.  This
+    does not close the `q12`/`q22` non-`pp` symmetric frame, whose balanced
+    model attribution remains open before the nonlinear coupled residual.
 
 ## Falsifier
 
@@ -581,6 +653,17 @@ scalar Gaussian defect to R-068, a source/PDF hash mismatch, failed PDF QA, or
 failure of the primary `22/22`, independent `20/20`, integrated `70/70`, and
 aggregate `112/112` verifier contracts.
 
+The Wick--Doob/resolvent continuation is additionally falsified by failure of
+the pointwise fresh-noise conditional moments, the full-coefficient Wick
+product identity, the `CC/GG/mixed` terminal normal-current telescope, raw/Wick
+trace restoration, the dyadic Hardy covariance-tail bound, the exact terminal
+Schur completion, the adapted scalar no-go formula, the exact `Q_II`-weighted
+symmetric--Cartan split, the nonzero `q11` pure-`pp` integration-by-parts
+oracle, retention of the full finite-low boundary, a source/PDF
+hash mismatch, failed ten-page PDF QA, or failure of the primary `22/22`,
+independent `16/16`, integrated `47/47`, and aggregate `85/85` verifier
+contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -613,6 +696,15 @@ coupling is pointwise/marginal and expectation-level; it is not a pathwise
 identification with the future spatial field.  It does not extend the regular
 one-shot class, close NPC--martingale injection balance, one-use, Nelson, or
 any measure/removal theorem.  A13 remains T4.
+
+The Wick--Doob/resolvent theorem closes the covariance and endpoint-curvature
+side channels and deterministic Hilbert--Schmidt resolver trace, but it does
+not lower-bound the adapted centered-resolvent chaos.  Its scalar adapted
+coefficient and Malliavin examples refute only the named proof shortcuts.  It
+does not prove the non-`pp` balanced linear-frame model attribution or the
+coupled rational-frame/cross-square lemma, extend to arbitrary finite-energy
+drifts, close one-use or Nelson, or prove any measure/removal theorem.  A13
+remains T4.
 
 ## History
 
@@ -672,3 +764,14 @@ any measure/removal theorem.  A13 remains T4.
   with exact pure-control and interior mixed-current telescopes.  The centered
   scalar Gaussian defect transfers once to R-068; the adapted transported-
   current/GG lower bound is the remaining finite-cutoff core. Tier stays T4.
+- 2026-07-24: Proved the full-coefficient Wick--Doob product identity and the
+  exact `CC/GG/mixed` terminal covariance-normal current telescope, restored
+  the raw/Wick trace, and closed the transported covariance tail by Abel--Hardy
+  summation.  The exact terminal resolver pays its Hilbert--Schmidt trace but a
+  bounded adapted scalar coefficient falsifies automatic resolver centering;
+  Stein would require unauthorized Malliavin norms.  The full weighted linear
+  frame instead splits into symmetric and Cartan channels: the Cartan and
+  `q11` pure-`pp` pieces are paid, while the non-`pp` symmetric-model
+  attribution remains open.  The subsequent coupled rational-frame/
+  cross-square lemma and finite-energy extension also remain open; tier stays
+  T4.

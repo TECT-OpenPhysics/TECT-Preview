@@ -1,0 +1,220 @@
+{
+  "assertion_count": 16,
+  "assertions": [
+    {
+      "actual": {
+        "coarse_order": 3,
+        "fine_order": 5,
+        "maximum_absolute_increment": 31.53428854634006,
+        "maximum_conditional_residual": 9.947598300641403e-14,
+        "resolution_envelope": 1.4210854715202004e-13
+      },
+      "expected": "centered; coarse/fine envelope < tolerance",
+      "name": "matrix_fresh_wick_step",
+      "pass": true
+    },
+    {
+      "actual": 31.53428854634006,
+      "expected": "nonzero",
+      "name": "matrix_step_nontrivial",
+      "pass": true
+    },
+    {
+      "actual": -1.457167719820518e-16,
+      "expected": 0.0,
+      "name": "quartic_coefficient_raw_telescope",
+      "pass": true
+    },
+    {
+      "actual": 9.020562075079397e-17,
+      "expected": 0.0,
+      "name": "quartic_coefficient_wick_telescope",
+      "pass": true
+    },
+    {
+      "actual": {
+        "coarse_order": 7.0,
+        "fine_order": 9.0,
+        "nonzero_terminal_wick": 0.023116270752557375,
+        "raw_terminal_residual": -1.457167719820518e-16,
+        "resolution_envelope": 2.463307335887066e-16,
+        "trace_restoration_residual": -9.194034422677078e-17,
+        "wick_terminal_residual": 9.020562075079397e-17
+      },
+      "expected": "trace restored; coarse/fine envelope < tolerance",
+      "name": "quartic_trace_restoration",
+      "pass": true
+    },
+    {
+      "actual": 0.023116270752557375,
+      "expected": "nonzero",
+      "name": "adapted_telescope_nontrivial",
+      "pass": true
+    },
+    {
+      "actual": 1.4210854715202004e-14,
+      "expected": 3e-10,
+      "name": "independent_schur_completion",
+      "pass": true
+    },
+    {
+      "actual": 0.6348007260198907,
+      "expected": ">=0",
+      "name": "independent_trace_bound",
+      "pass": true
+    },
+    {
+      "actual": {
+        "formula": -0.3280188027877255,
+        "raw": -0.3280188027877255,
+        "resolved": -0.13631950245723656
+      },
+      "expected": "raw=formula",
+      "name": "indicator_formula",
+      "pass": true
+    },
+    {
+      "actual": -0.3280188027877255,
+      "expected": "<0",
+      "name": "indicator_centering_negative",
+      "pass": true
+    },
+    {
+      "actual": -0.13631950245723656,
+      "expected": "<0",
+      "name": "indicator_resolver_negative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "background": -0.6,
+        "correlation": -0.2,
+        "formula": 0.24
+      },
+      "expected": "nonzero",
+      "name": "asymmetric_covariance_nonzero",
+      "pass": true
+    },
+    {
+      "actual": {
+        "adjacent_scale_ratio": 2.0,
+        "geometric_tail_factor": 0.3333333333333333,
+        "infinite": 1.186799866386177e-06,
+        "left": 1.18679984855269e-06,
+        "rearranged": 1.1867998485526906e-06
+      },
+      "expected": "left=rearranged",
+      "name": "hardy_rearrangement",
+      "pass": true
+    },
+    {
+      "actual": {
+        "adjacent_scale_ratio": 2.0,
+        "geometric_tail_factor": 0.3333333333333333,
+        "infinite": 1.186799866386177e-06,
+        "left": 1.18679984855269e-06,
+        "rearranged": 1.1867998485526906e-06
+      },
+      "expected": "left<=infinite",
+      "name": "hardy_geometric_bound",
+      "pass": true
+    },
+    {
+      "actual": {
+        "analytic_oracle": 0.185,
+        "coarse_grid": 192,
+        "fine_grid": 384,
+        "left": 0.185,
+        "moment": 5.0,
+        "resolution_envelope": 2.7755575615628914e-17,
+        "right": 0.185,
+        "test_weight": 0.37
+      },
+      "expected": "nonzero test_weight/2 oracle; weighted left=right; coarse/fine envelope < tolerance",
+      "name": "independent_weighted_p_column_parts",
+      "pass": true
+    },
+    {
+      "actual": 5.0,
+      "expected": "5",
+      "name": "independent_fifth_moment",
+      "pass": true
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "computed": {
+    "adapted_indicator": {
+      "formula": -0.3280188027877255,
+      "raw": -0.3280188027877255,
+      "resolved": -0.13631950245723656
+    },
+    "asymmetric_covariance": {
+      "background": -0.6,
+      "correlation": -0.2,
+      "formula": 0.24
+    },
+    "dyadic_hardy": {
+      "adjacent_scale_ratio": 2.0,
+      "geometric_tail_factor": 0.3333333333333333,
+      "infinite": 1.186799866386177e-06,
+      "left": 1.18679984855269e-06,
+      "rearranged": 1.1867998485526906e-06
+    },
+    "matrix_wick_step": {
+      "coarse_order": 3,
+      "fine_order": 5,
+      "maximum_absolute_increment": 31.53428854634006,
+      "maximum_conditional_residual": 9.947598300641403e-14,
+      "resolution_envelope": 1.4210854715202004e-13
+    },
+    "p_column_parts": {
+      "analytic_oracle": 0.185,
+      "coarse_grid": 192,
+      "fine_grid": 384,
+      "left": 0.185,
+      "moment": 5.0,
+      "resolution_envelope": 2.7755575615628914e-17,
+      "right": 0.185,
+      "test_weight": 0.37
+    },
+    "terminal_schur": {
+      "maximum_residual": 1.4210854715202004e-14,
+      "minimum_trace_margin": 0.6348007260198907
+    },
+    "two_shell_telescope": {
+      "coarse_order": 7.0,
+      "fine_order": 9.0,
+      "nonzero_terminal_wick": 0.023116270752557375,
+      "raw_terminal_residual": -1.457167719820518e-16,
+      "resolution_envelope": 2.463307335887066e-16,
+      "trace_restoration_residual": -9.194034422677078e-17,
+      "wick_terminal_residual": 9.020562075079397e-17
+    }
+  },
+  "date": "2026-07-24",
+  "generated_at_utc": "2026-07-24T06:59:15.927020+00:00",
+  "honesty_boundary": "This non-importing finite-dimensional audit checks the exact Wick--Doob, raw/Wick trace, terminal Schur, adapted-centering, Hardy, weighted p-p, and two-resolution identities. It does not prove the full QII-weighted production rational-frame/cross-square residual.",
+  "inputs": {
+    "cases": 180,
+    "fourier_grids": [
+      192,
+      384
+    ],
+    "gauss_hermite_orders": [
+      7,
+      9
+    ],
+    "kappa": "1/10",
+    "matrix_gauss_hermite_orders": [
+      3,
+      5
+    ],
+    "p_column_test_weight": 0.37,
+    "seed": 70240724,
+    "tolerance": 3e-10
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION",
+  "schema": "tect/a13-wick-doob-terminal-resolvent-independent/1.0",
+  "script_version": "1.0.0"
+}

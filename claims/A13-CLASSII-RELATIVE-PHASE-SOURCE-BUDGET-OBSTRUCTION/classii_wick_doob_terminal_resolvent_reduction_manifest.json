@@ -1,0 +1,91 @@
+{
+  "schema": "tect/a13-wick-doob-terminal-resolvent-reduction/1.0",
+  "result_id": "A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION",
+  "result_ledger_id": "R-070",
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "date": "2026-07-24",
+  "tier": "T4",
+  "authority": {
+    "governance": {
+      "path": "GOVERNANCE.md",
+      "sha256": "ad8b22e1437d2b4a2e48d29753c7ac5f913c374f2d11236902cd1893f1e1e7f4"
+    },
+    "a7_composite": {
+      "path": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/notes/classii-renormalised-energy-composite-260720-v1.0.tex.txt",
+      "sha256": "d9f74e7448d8e784c065da7eaeba93ecbe97bbb9a15cdc260b88d191e3c2d1b7"
+    },
+    "a9_smart_path": {
+      "path": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/notes/classii-smart-path-cancellation-260720-v1.0.tex.txt",
+      "sha256": "58a04ab27e544ba263a720503fdf507ea433212aa7c99f0f0a4d332596e43ff8"
+    },
+    "r066_backward_heat": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt",
+      "sha256": "b411b8d88ff9689b9dc4aca9e2797877ea187e7c6675d8b4df34888c10fd890d"
+    },
+    "r068_grouped_harvest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt",
+      "sha256": "6f2b1fc05cd54371a87a474a5ac881852a86386e39a724ea5f8f4e5fc9ae7994"
+    },
+    "r069_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_endpoint_lifted_schur_causal_grouping_reduction_manifest.json",
+      "sha256": "0d0880c00284cee8e5c0364d745d21eb722d9119ff2bc11634a59811c98e4240"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction.py",
+      "sha256": "bba6b4ef9084350ccf2ce9dee8e276ae40b53998b5bbea94bbab9cf79062a052",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_independent.py",
+      "sha256": "1c6115c8b5cfdff9b7992e8d07a06832d6dfa6033f6e32b7a7fc8d55120b8fbb",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py",
+      "sha256": "d1b1acc29ef4bb03b8b83e4cfe743e21ec0ca115e1995c8a7e72807dd7e73755",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt",
+      "sha256": "0d3d33fce9f02780e010cdb1830d583cbc89efc5bab5c8f6ec6acb1797d90c2a",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.pdf",
+    "sha256": "45c69c6692981c429bf7698260dae491b59d2a136cc5f0c4b936f38df93fae8c",
+    "pages": 10,
+    "size_bytes": 110267,
+    "form_check": "PASS",
+    "overfull_hboxes": 0,
+    "visual_qa": "PASS: all 10 rendered pages inspected; equations, headings, footer, margins, and page breaks are legible with no clipping, overlap, black boxes, or literal control-sequence debris"
+  },
+  "theorem": {
+    "wick_doob": "For Q_{j,i}=G_{j,i}^{tensor 2}-Gamma_{j-1,i}, strict-past same-point fresh-noise centering gives E sum_j (B_{j+1}-B_j):Q_j/2 = E(B_{J+1}:Q_{J+1}-B_{j0}:Q_{j0})/2.",
+    "full_current": "Adding the exact CC and mixed polarizations gives E sum_j(R_j^C+R_j^cross+R_j^{G,Wick})=E W_{J+1}-E W_{j0}, with the full finite-low boundary retained.",
+    "trace_restoration": "The literal raw R-069 target differs from the Wick terminal form by one half sum_j Tr[(B_{j+1}-B_j)Gamma_{j-1}], exactly the R-066 summable covariance-trace channel.",
+    "transported_tail": "Discrete Abel summation plus Gamma_{<j}=O(N_j), K_j=O(N_j^-2), orthogonal ranges, and a dyadic Hardy inequality pay the transported covariance tail with an arbitrary one-use control allocation and no sextic allocation.",
+    "endpoint_defect": "The endpoint-curvature remainder obeys |epsilon_j|<=C_* integral |a_j|^2|G_j|^2 and is paid once by R-068/R-069.",
+    "terminal_equivalence": "After those already controlled channels, R-069 (6.7) is equivalent to the terminal translated covariance-normal current coercivity theorem; Wick--Doob terminalization is not itself a lower bound.",
+    "retained_resolvent": "The exact pointwise completion retains S_z=T_z(I+pT_z)^-1, pays Tr(T_z^2(I+pT_z)^-1) by the Hilbert--Schmidt/sextic budget, and leaves only the adapted centered-resolvent chaos.",
+    "adapted_no_go": "For z(xi)=A 1_{|xi|<=a}, the centered scalar expectation is -a phi(a)A^2 and the retained-resolvent expectation remains -a phi(a)A^2/(1+pA^2); normal ordering does not center an adapted coefficient.",
+    "weighted_linear_split": "The complete Q_II-weighted linear frame splits exactly as L_sym+L_Cartan. Existing fifth-moment current control pays L_Cartan; the pure-pp subchannel is -q11 sum_r <Delta(U^T S_r U),A^T S_r A> and is paid once through R-068. The production q11 factor and all three generators are essential. The non-pp part of L_sym is not claimed closed.",
+    "two_stage_successor": "First prove the balanced H^{-1-kappa} model attribution for the non-pp symmetric linear-frame model and pay it once through R-068. Then prove the coupled full-Q_II nonlinear rational-frame/cross-square bound for R_shift, retaining the FTC coefficient remainder and terminal square jointly without Malliavin derivatives of the control."
+  },
+  "verification": {
+    "primary_assertions": 22,
+    "independent_assertions": 16,
+    "integrated_assertions": 47,
+    "aggregate_assertions": 85,
+    "prior_integrated_assertions": 70,
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-wick-doob-terminal-resolvent-reduction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-independent-wick-doob-terminal-resolvent-reduction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-integrated-wick-doob-terminal-resolvent-reduction/result.json"
+  },
+  "negative_result": "NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE",
+  "audit_record": "AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION",
+  "successor": "A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE now has two exact non-circular stages: the non-pp balanced H^{-1-kappa} linear-frame model attribution in R-070 (8.6)-(8.8), then the coupled nonlinear rational-frame/cross-square inequality in (8.9)-(8.10), followed by finite-energy extension.",
+  "honesty_boundary": "This scoped T4 result proves exact finite-cutoff Wick--Doob full-coefficient transport, the complete terminal covariance-normal current identity, raw/Wick trace restoration, a summable transported covariance tail, exact terminal retained-resolvent completion, an adapted-centering no-go, the complete weighted symmetric--Cartan linear-frame split, Cartan payment, and the q11 pure-pp integration-by-parts identity. It does not prove the non-pp balanced linear-frame model attribution, the coupled nonlinear rational-frame/cross-square inequality, extension to every finite-energy drift, controlled-shell one-use or the q=10/9 Nelson moment, an interacting measure, floor or regulator removal, infinite volume, or T5, T6, or T7."
+}

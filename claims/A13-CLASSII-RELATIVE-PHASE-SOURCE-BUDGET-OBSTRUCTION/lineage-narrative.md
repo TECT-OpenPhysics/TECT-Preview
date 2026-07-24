@@ -72,14 +72,26 @@ endpoint theorem.
     derivative; the centered scalar defect is paid once by the R-068 global
     form. A two-shell scaling fixture shows why separate pure-control payment
     cannot meet arbitrary budgets.
-11. **Current subproof.** Prove the adapted Gaussian-rooted transported-
-    current/GG lower bound under
-    `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, retaining the terminal
-    control-current square, finite-low boundary, and mixed secant. Only its
-    genuinely centered scalar component may be reduced to the pinned global
-    quadratic form plus covariance trace. Then extend from regular controls to
-    the declared finite-energy class, close the umbrella one-use theorem, and
-    return to the A7 Nelson and finite-volume measure gates.
+11. **Wick--Doob terminalization and adapted-resolvent boundary.** R-070 proves
+    the exact full-coefficient Wick--Doob product identity and combines the
+    CC/GG/mixed channels into the terminal covariance-normal current with the
+    finite-low boundary retained. Raw-to-Wick conversion restores exactly the
+    R-066 trace, Abel--Hardy summation pays its transported tail, and terminal
+    Schur completion pays the Hilbert--Schmidt trace. A bounded adapted scalar
+    coefficient refutes automatic resolver centering and direct Stein closure
+    requires undeclared Malliavin derivatives. The full weighted linear frame
+    splits exactly into symmetric and Cartan channels; the Cartan and `q11`
+    pure-`pp` pieces are paid, while the non-`pp` symmetric model attribution
+    remains open.
+12. **Current subproof.** First prove the balanced `H^{-1-kappa}` attribution
+    for the non-`pp` symmetric linear frame in R-070 (8.6)--(8.8). Then prove
+    the coupled nonlinear rational-frame/cross-square estimate from
+    (8.9)--(8.10) under
+    `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, retaining its
+    coefficient remainder and terminal square as one object. Finally extend
+    from regular controls to the declared finite-energy class, close the
+    umbrella one-use theorem, and return to the A7 Nelson and finite-volume
+    measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

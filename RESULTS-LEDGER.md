@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-070](#r-070) | Wick--Doob terminalization and adapted-resolvent boundary | Scoped T4 exact/analytic/executed subproof: the full current terminalizes as one covariance-normal CC/GG/mixed boundary; raw/Wick and Abel--Hardy trace channels close; terminal Schur pays the Hilbert--Schmidt trace; the full weighted linear frame has an exact symmetric--Cartan split and its Cartan plus `q11` pure-`pp` pieces close. Automatic adapted centering is false; the non-`pp` model attribution and coupled nonlinear rational-frame/cross-square bound remain; 85/85 aggregate assertions |
 | [R-069](#r-069) | Endpoint-lifted Schur and coherent causal-grouping reduction | Scoped T4 exact/analytic/executed subproof: rotating phase kernels falsify the old affine full-score tangent; a hybrid endpoint lift proves floor- and derivative-displacement-uniform good/bad and global Schur bounds, while coherent frozen-value grouping telescopes pure-control current creation and transfers the centered scalar component of the Gaussian quadratic defect to the R-068 global centered form; the adapted transported-current/GG lower bound remains open; 112/112 aggregate assertions |
 | [R-068](#r-068) | Tip-safe grouped-harvest and Gaussian-Carleson reduction | Scoped T4 exact/analytic/executed subproof: exact nonlinear harvest, full conservative-score Carleson bound, uncontrolled-Gaussian N^-1/N^-2 tails, CAT(0) whole secant through the tip, floor-uniform physical distance, and a global centered-form one-use estimate with exponent 10/3 at kappa=1/10; absolute score integration and the claimed full N^-3/2 remainder are retired; 110/110 aggregate assertions |
 | [R-067](#r-067) | NPC-cone and martingale-injection reduction | Scoped T4 exact/analytic/executed subproof: the production current diagonalises at alpha=5/9 and q=10/9 into an aggregate CAT(0) cone; strong Jacobi and raw-injection telescopes isolate the nonlinear NPC--Carleson balance, while positive-floor and flat-model no-gos retire shellwise and geometry-only proofs; 118/118 aggregate assertions |
@@ -88,6 +89,69 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-070"></a>
+### R-070 -- Wick--Doob terminalization and adapted-resolvent boundary
+
+**Result ID.**
+`A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION`.
+
+**Statement.** For the A13 finite-cutoff, regular mutually orthogonal one-shot
+strict-past class, conditioning at a fixed spatial point after adjoining the
+future target-space values gives the exact full-coefficient Wick--Doob product
+identity.  The control--control, Gaussian--Gaussian, and mixed currents
+therefore combine into one terminal covariance-normal current, with the full
+finite-low boundary retained.  The literal raw-current identity differs by
+exactly the covariance trace isolated in R-066.  Abel summation and the dyadic
+Hardy inequality put its transported tail below arbitrary control and sextic
+budgets without a shell-count loss.  The R-069 endpoint defect is precisely
+the single R-068 centered scalar form already budgeted there.
+
+Whitening the terminal Gaussian and completing the Schur square gives an exact
+positive-square formula.  Its deterministic trace correction is controlled by
+the Hilbert--Schmidt norm and the terminal sextic model norm.  The only
+unresolved term in this route is an adapted centered-resolvent chaos.  A
+bounded scalar adapted terminal coefficient makes that chaos strictly
+negative, so normal ordering plus the resolver does not center it.  Direct
+Gaussian Stein integration differentiates the adapted control and would need
+undeclared first and second Malliavin estimates.  After subtracting the exact
+first variation, the full `Q_II`-weighted linear production frame splits into
+symmetric and Cartan channels.  The Cartan channel and the `q11`-weighted
+pure-`pp` integration-by-parts term are paid.  The first non-circular successor
+is the balanced `H^{-1-kappa}` attribution for the non-`pp` symmetric frame;
+the second is the coupled nonlinear rational-frame/cross-square estimate with
+the coefficient remainder and terminal square retained.
+
+**Proven in.** A13 /
+`classii-wick-doob-terminal-resolvent-reduction-260724-v1.0`, with primary
+22/22, non-importing independent 16/16, integrated 47/47, aggregate 85/85,
+and a ten-page PDF passing form, zero-overfull, and direct all-page visual
+QA.
+
+**Reuse scope.** Full-coefficient martingale terminalization for the pinned
+same-point real-even derivative-noise filtration; exact raw/Wick trace
+restoration; dyadic covariance-tail payment; terminal Schur completion; exact
+weighted symmetric--Cartan linear-frame decomposition; Cartan payment; and
+`q11` pure-`pp` integration by parts for regular finite-cutoff controls.  The
+same-point conditional identity is not a global value--derivative independence
+statement.
+
+**Boundary.** This result proves an exact equivalence and removes the trace,
+Cartan-linear, and pure-`pp` side channels; it does not prove the non-`pp`
+balanced linear-frame model attribution or a lower bound for the adapted
+centered-resolvent/coupled nonlinear rational-frame/cross-square object.  The
+scalar and Stein calculations are route diagnostics, not production
+counterexamples.  Finite-energy extension, controlled-shell one-use, the
+`q=10/9` Nelson theorem, interacting measure, regulator/floor removal,
+infinite volume, phase transition, BCC selection, and T5--T7 remain open.
+Tier T4; no promotion.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-059--R-069 after the non-`pp` linear-frame model attribution, coupled
+rational-frame/cross-square lemma, finite-energy extension, and one-use theorem
+are resolved.
+
+---
 
 <a id="r-069"></a>
 ### R-069 -- Endpoint-lifted Schur and coherent causal-grouping reduction

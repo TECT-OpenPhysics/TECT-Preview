@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION](#audit-2026-07-24-a13-r070-linear-frame-omission) | R-070 initial linear-frame reduction | the first draft omitted the production `q11` weight and generator sum in the pure-`pp` channel and replaced `Delta M` by its nonlinear FTC remainder, thereby deleting a nonzero full weighted linear term |
+| [NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE](#ng-2026-07-24-a13-doob-resolvent-closure) | A13 Doob terminalization, automatic terminal-resolver centering, and derivative-free Stein closure | terminalization is exact but equivalent to the target; an adapted terminal coefficient has strictly negative centered-resolvent expectation, while Stein differentiation demands undeclared Malliavin control derivatives |
 | [NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT](#ng-2026-07-24-a13-affine-schur-and-pure-control-payment) | A13 affine full-score Schur tangent and separate pure-control-defect payment | rotating phase kernels violate the required range condition, while a two-shell family puts the defect and both proposed budgets at the same N^6 scale |
 | [AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION](#audit-2026-07-24-proof-map-semantic-association) | proof-evidence-map generator pre-commit adversarial audit | free-form family tokens, leaked section boundaries, and platform-sensitive inventory rules produced false or unstable projections |
 | [NG-2026-legacy-convention](#ng-2026-legacy-convention) | old $r=K(0)$ no-condensation convention | wrong variable convention |
@@ -48,6 +50,70 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-24-a13-r070-linear-frame-omission"></a>
+### AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION -- the first R-070 draft deleted a weighted linear channel
+
+**Failure mode:** The initial Section 8 reduction made two load-bearing
+algebraic omissions.  Its pure `p`-frame formula suppressed the production
+factor `q11=Q_II[0,0]` and the sum over all three generators.  More seriously,
+it used the nonlinear fundamental-theorem-of-calculus remainder as though it
+were `Delta M`.  In fact
+`Delta M=DM(U)[A]+integral_0^1(DM(U+tA)-DM(U))[A]dt`, so the discarded
+`DM(U)[A]` contribution is generally nonzero.
+
+**Evidence:** Direct differentiation of all production frames gives the exact
+`Q_II`-weighted split `L=L_sym+L_Cartan`.  The pure channel is
+`L_pp=-q11 sum_r <Delta(U^T S_r U),A^T S_r A>`.  The `q12` and `q22`
+off-diagonal linear remainder is nonzero in randomized production fixtures.
+The repaired primary audit checks the full local symmetric--Cartan identity,
+and both primary and independent Fourier regressions use a resonant nonzero
+anchor whose two integration-by-parts sides equal their analytic weight/2
+oracle.  This prevents a reversed sign, missing weight, or vacuous
+phase-orthogonal test from passing.
+
+**Consequence:** The statement that the complete linear frame was already
+closed, and hence that only one shifted nonlinear residual remained, is
+withdrawn.  The corrected exact identity is
+`Delta V^ren-S_0=L_sym+L_Cartan+R_shift`.  Existing fifth-moment Cartan and
+R-068 estimates pay `L_Cartan` and the `q11` pure-`pp` piece.  The honest
+successor has two stages: prove the balanced `H^{-1-kappa}` model attribution
+for the non-`pp` part of `L_sym`, then prove the coupled nonlinear
+rational-frame/cross-square bound for `R_shift`.  No tier was promoted by the
+superseded draft.
+
+<a id="ng-2026-07-24-a13-doob-resolvent-closure"></a>
+### NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE -- Doob terminalization and terminal-resolvent centering do not close A13
+
+**Failure mode:** Three plausible shortcuts fail.  First, summing the exact
+Wick--Doob increment identity does not itself yield positivity: after all
+interior terms telescope, the result is precisely the terminal
+covariance-normal translated current that still requires a lower bound.
+Second, whitening that terminal field and completing the Schur square leaves
+`(<xi,S_Z xi>-Tr S_Z)/2`; dependence of `S_Z` on the same terminal Gaussian
+prevents automatic centering.  Third, applying Gaussian Stein integration to
+the adapted coefficient differentiates the control, producing first and
+second Malliavin derivatives absent from the declared finite-energy class.
+
+**Evidence:** For a scalar standard Gaussian and bounded adapted terminal
+coefficient `z(xi)=A 1_{|xi|<=a}`, direct integration gives
+`E[z(xi)^2(xi^2-1)]/2=-a phi(a)A^2<0`.  The exact resolver changes this to
+`-a phi(a)A^2/(1+pA^2)<0`, so neither normal ordering nor the positive
+resolver centers the term.  Symbolic second differentiation of
+`F(U+A(omega))` contains both `D^2F[DA,DA]` and `DF[D^2A]`; the bounded-energy
+family `h_2^n(omega_1)=sin(n omega_1)` keeps its control norm bounded while its
+derivative norm grows like `n`.  Primary 22/22 and non-importing independent
+16/16 checks reproduce the Wick--Doob telescope, terminal Schur identity,
+scalar sign, and derivative-growth diagnostic.
+
+**Consequence:** These are route no-gos, not counterexamples to the production
+bound.  R-070 retains the exact terminal translated-current and subtracts its
+first variation.  Its full weighted linear production frame splits into
+symmetric and Cartan pieces; the Cartan and `q11` pure-`pp` terms are paid,
+while the non-`pp` symmetric model attribution remains open.  The following
+non-circular successor is the coupled nonlinear rational-frame/cross-square
+bound with the coefficient remainder and terminal square retained.
+Finite-energy extension, one-use, and Nelson remain open.
 
 <a id="ng-2026-07-24-a13-affine-schur-and-pure-control-payment"></a>
 ### NG-2026-07-24-A13-AFFINE-SCHUR-AND-PURE-CONTROL-PAYMENT -- affine Schur and separate pure-control payment fail

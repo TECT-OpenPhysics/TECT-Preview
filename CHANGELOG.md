@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Finalize corrected R-070 audit and ten-page certificate] - 2026-07-24
+
+Supersedes the initial R-070 event's eight-page and complete-linear-frame descriptions. The corrected ten-page certificate retains the exact full Q_II-weighted symmetric--Cartan split, pays the Cartan and q11 pure-pp pieces only, and leaves the non-pp balanced model attribution followed by the nonlinear coupled rational-frame/cross-square bound. Nonzero resonant p-column oracles and same-fixture coarse/fine envelopes are enforced. Primary 22/22, non-importing independent 16/16, integrated 47/47, and aggregate 85/85 pass; all ten rendered PDF pages pass visual QA. Tier remains T4.
+
+## [Repair R-070 weighted linear-frame decomposition] - 2026-07-24
+
+The final adversarial audit found that the first R-070 draft omitted the production q11 weight and three-generator sum in the pure-pp formula and replaced Delta M by only its nonlinear FTC remainder, deleting a generally nonzero weighted linear term. The note and executable evidence now retain the exact full Q_II-weighted symmetric--Cartan split. Existing estimates pay the Cartan and q11 pure-pp pieces; the non-pp balanced H^{-1-kappa} model attribution remains an explicit first successor, followed by the coupled nonlinear rational-frame/cross-square bound. Nonzero resonant Fourier oracles replace vacuous phase-orthogonal tests. Tier remains T4.
+
+## [Prove A13 Wick--Doob terminalization and adapted-resolvent boundary (R-070)] - 2026-07-24
+
+Registered the scoped T4 R-070 exact reduction without tier promotion. The full coefficient Wick current terminalizes into one CC/GG/mixed covariance-normal boundary; raw/Wick trace restoration, Abel--Hardy transported-tail payment, the endpoint-defect equivalence, terminal Schur completion, Hilbert--Schmidt trace payment, and the exact linear production-frame integration by parts are proved. A bounded adapted coefficient falsifies automatic resolver centering, and direct Stein closure requires undeclared Malliavin derivatives. The sole regular finite-cutoff successor is the coupled shifted rational-frame Cartan paraproduct/positive-square estimate, followed by finite-energy extension, controlled-shell one-use, and Nelson. The primary 22/22, non-importing independent 16/16, integrated 47/47, and aggregate 85/85 contracts pass; the eight-page PDF passes form, zero-overfull, and all-page visual QA.
+
 ## [Prove A13 endpoint-lifted Schur and coherent causal-grouping reduction] - 2026-07-24
 
 Registered R-069 at T4 with no promotion. The old-endpoint affine full-score tangent is falsified by rotating phase kernels. The hybrid endpoint lift proves optimized floor-uniform good/bad and global Schur bounds, while coherent target-space frozen-value grouping telescopes pure-control current creation pathwise and the fresh derivative-noise correction in expectation. The centered scalar Gaussian defect transfers once to the R-068 global form; the terminal current boundary remains. A two-shell scaling fixture also retires separate pure-control-defect payment. The adapted Gaussian-rooted transported-current/GG lower bound, finite-energy extension, controlled-shell one-use, and Nelson theorem remain open.

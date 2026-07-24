@@ -1,0 +1,309 @@
+{
+  "assertion_count": 22,
+  "assertions": [
+    {
+      "actual": {
+        "c_star": 1.5397534378598672,
+        "max_cartan_channel_magnitude": 0.06380178441395487,
+        "max_cross_endpoint_residual": 2.220446049250313e-16,
+        "max_endpoint_defect_ratio": 0.011947496964865516,
+        "max_endpoint_lift_identity_residual": 2.445960101127298e-16,
+        "max_frame_linearization_split_residual": 3.642919299551295e-17,
+        "max_polarization_residual": 1.27675647831893e-15,
+        "max_symmetric_cartan_split_residual": 4.1823098803628334e-17,
+        "max_weighted_offdiagonal_linear_remainder": 0.1268943750177218,
+        "minimum_endpoint_defect_margin": 0.11517998178532227
+      },
+      "expected": "polarization, DeltaM=DM[A]+E, and symmetric--Cartan split exact; Cartan and weighted off-diagonal linear channels nonzero",
+      "name": "production_current_and_frame_linearization",
+      "pass": true
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": 2e-10,
+      "name": "production_mixed_endpoint_identity",
+      "pass": true
+    },
+    {
+      "actual": 2.445960101127298e-16,
+      "expected": 2e-10,
+      "name": "endpoint_lift_identity",
+      "pass": true
+    },
+    {
+      "actual": {
+        "c_star": 1.5397534378598672,
+        "max_cartan_channel_magnitude": 0.06380178441395487,
+        "max_cross_endpoint_residual": 2.220446049250313e-16,
+        "max_endpoint_defect_ratio": 0.011947496964865516,
+        "max_endpoint_lift_identity_residual": 2.445960101127298e-16,
+        "max_frame_linearization_split_residual": 3.642919299551295e-17,
+        "max_polarization_residual": 1.27675647831893e-15,
+        "max_symmetric_cartan_split_residual": 4.1823098803628334e-17,
+        "max_weighted_offdiagonal_linear_remainder": 0.1268943750177218,
+        "minimum_endpoint_defect_margin": 0.11517998178532227
+      },
+      "expected": "margin >= 0",
+      "name": "endpoint_defect_two_sided_bound",
+      "pass": true
+    },
+    {
+      "actual": 3.677613769070831e-16,
+      "expected": 0.0,
+      "name": "raw_terminal_minus_injection",
+      "pass": true
+    },
+    {
+      "actual": -1.0200174038743626e-15,
+      "expected": 0.0,
+      "name": "wick_doob_terminalization",
+      "pass": true
+    },
+    {
+      "actual": 8.396061623727746e-16,
+      "expected": 0.0,
+      "name": "raw_wick_trace_restoration",
+      "pass": true
+    },
+    {
+      "actual": {
+        "coarse_order": 5.0,
+        "fine_order": 7.0,
+        "fresh_wick_residual_sum": 3.0473195731421647e-16,
+        "raw_sum": 0.05568148302477572,
+        "raw_terminal_residual": 3.677613769070831e-16,
+        "resolution_envelope": 1.1275702593849246e-15,
+        "terminal_raw_minus_injection": 0.05568148302477535,
+        "terminal_wick_difference": 0.034420678024775817,
+        "trace_restoration_residual": 8.396061623727746e-16,
+        "trace_sum": 0.021260805000000084,
+        "wick_sum": 0.034420678024774796,
+        "wick_terminal_residual": -1.0200174038743626e-15
+      },
+      "expected": "centered; coarse/fine envelope < tolerance",
+      "name": "fresh_wick_step_centers",
+      "pass": true
+    },
+    {
+      "actual": 0.034420678024774796,
+      "expected": "nonzero",
+      "name": "adapted_fixture_nontrivial",
+      "pass": true
+    },
+    {
+      "actual": 1.3234889800848443e-23,
+      "expected": 0.0,
+      "name": "dyadic_hardy_fubini",
+      "pass": true
+    },
+    {
+      "actual": 1.535019629733404e-14,
+      "expected": ">=0",
+      "name": "dyadic_hardy_bound",
+      "pass": true
+    },
+    {
+      "actual": 1.0658141036401503e-14,
+      "expected": 2e-10,
+      "name": "terminal_resolvent_completion",
+      "pass": true
+    },
+    {
+      "actual": 0.10479248865280077,
+      "expected": ">=0",
+      "name": "resolvent_trace_hs_bound",
+      "pass": true
+    },
+    {
+      "actual": {
+        "amplitude": 1.7,
+        "direct_centered_expectation": -0.5087343971744127,
+        "formula_centered_expectation": -0.5087343971744127,
+        "p": 1.1,
+        "resolvent_direct": -0.12173591700751679,
+        "resolvent_formula": -0.12173591700751679,
+        "threshold": 0.5
+      },
+      "expected": "direct=formula",
+      "name": "adapted_centering_formula",
+      "pass": true
+    },
+    {
+      "actual": -0.5087343971744127,
+      "expected": "<0",
+      "name": "adapted_centering_is_negative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "amplitude": 1.7,
+        "direct_centered_expectation": -0.5087343971744127,
+        "formula_centered_expectation": -0.5087343971744127,
+        "p": 1.1,
+        "resolvent_direct": -0.12173591700751679,
+        "resolvent_formula": -0.12173591700751679,
+        "threshold": 0.5
+      },
+      "expected": "direct=formula",
+      "name": "adapted_resolvent_formula",
+      "pass": true
+    },
+    {
+      "actual": -0.12173591700751679,
+      "expected": "<0",
+      "name": "adapted_resolvent_remains_negative",
+      "pass": true
+    },
+    {
+      "actual": {
+        "coarse_order": 7,
+        "coarse_quadrature": 0.5600000000000004,
+        "correlation": 0.35,
+        "fine_order": 9,
+        "formula": 0.5599999999999999,
+        "quadrature": 0.5600000000000003,
+        "resolution_envelope": 1.1102230246251565e-16
+      },
+      "expected": "2*z0*rho, nonzero; coarse/fine envelope < tolerance",
+      "name": "correlated_value_derivative_drift",
+      "pass": true
+    },
+    {
+      "actual": {
+        "analytic_oracle": 0.0022499999999994373,
+        "coarse_grid": 256,
+        "fine_grid": 512,
+        "integration_by_parts_left": 0.0022499999999994373,
+        "integration_by_parts_right": 0.0022499999999994373,
+        "kappa": 0.1,
+        "model_moment_exponent": 5.0,
+        "q11": 0.004499999999998875,
+        "residual": 0.0,
+        "resolution_envelope": 0.0,
+        "theta": 0.39999999999999997,
+        "x_exponent": 0.7,
+        "y_exponent": 0.10000000000000002
+      },
+      "expected": "nonzero q11/2 oracle; q11-weighted identity; coarse/fine envelope < tolerance",
+      "name": "weighted_p_column_integration_by_parts",
+      "pass": true
+    },
+    {
+      "actual": 0.7,
+      "expected": "7/10",
+      "name": "cartan_control_x_exponent",
+      "pass": true
+    },
+    {
+      "actual": 0.10000000000000002,
+      "expected": "1/10",
+      "name": "cartan_control_y_exponent",
+      "pass": true
+    },
+    {
+      "actual": 5.0,
+      "expected": "5",
+      "name": "cartan_model_fifth_moment",
+      "pass": true
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "computed": {
+    "adapted_centering": {
+      "amplitude": 1.7,
+      "direct_centered_expectation": -0.5087343971744127,
+      "formula_centered_expectation": -0.5087343971744127,
+      "p": 1.1,
+      "resolvent_direct": -0.12173591700751679,
+      "resolvent_formula": -0.12173591700751679,
+      "threshold": 0.5
+    },
+    "correlated_covariance": {
+      "coarse_order": 7,
+      "coarse_quadrature": 0.5600000000000004,
+      "correlation": 0.35,
+      "fine_order": 9,
+      "formula": 0.5599999999999999,
+      "quadrature": 0.5600000000000003,
+      "resolution_envelope": 1.1102230246251565e-16
+    },
+    "dyadic_hardy": {
+      "adjacent_scale_ratio": 2.0,
+      "bound_margin": 1.535019629733404e-14,
+      "finite_fubini_rhs": 6.42701304800175e-08,
+      "fubini_residual": 1.3234889800848443e-23,
+      "geometric_tail_factor": 0.3333333333333333,
+      "infinite_geometric_bound": 6.427014583021381e-08,
+      "lhs": 6.427013048001752e-08
+    },
+    "exact_p_column": {
+      "analytic_oracle": 0.0022499999999994373,
+      "coarse_grid": 256,
+      "fine_grid": 512,
+      "integration_by_parts_left": 0.0022499999999994373,
+      "integration_by_parts_right": 0.0022499999999994373,
+      "kappa": 0.1,
+      "model_moment_exponent": 5.0,
+      "q11": 0.004499999999998875,
+      "residual": 0.0,
+      "resolution_envelope": 0.0,
+      "theta": 0.39999999999999997,
+      "x_exponent": 0.7,
+      "y_exponent": 0.10000000000000002
+    },
+    "production_frame": {
+      "c_star": 1.5397534378598672,
+      "max_cartan_channel_magnitude": 0.06380178441395487,
+      "max_cross_endpoint_residual": 2.220446049250313e-16,
+      "max_endpoint_defect_ratio": 0.011947496964865516,
+      "max_endpoint_lift_identity_residual": 2.445960101127298e-16,
+      "max_frame_linearization_split_residual": 3.642919299551295e-17,
+      "max_polarization_residual": 1.27675647831893e-15,
+      "max_symmetric_cartan_split_residual": 4.1823098803628334e-17,
+      "max_weighted_offdiagonal_linear_remainder": 0.1268943750177218,
+      "minimum_endpoint_defect_margin": 0.11517998178532227
+    },
+    "scalar_wick_doob": {
+      "coarse_order": 5.0,
+      "fine_order": 7.0,
+      "fresh_wick_residual_sum": 3.0473195731421647e-16,
+      "raw_sum": 0.05568148302477572,
+      "raw_terminal_residual": 3.677613769070831e-16,
+      "resolution_envelope": 1.1275702593849246e-15,
+      "terminal_raw_minus_injection": 0.05568148302477535,
+      "terminal_wick_difference": 0.034420678024775817,
+      "trace_restoration_residual": 8.396061623727746e-16,
+      "trace_sum": 0.021260805000000084,
+      "wick_sum": 0.034420678024774796,
+      "wick_terminal_residual": -1.0200174038743626e-15
+    },
+    "terminal_resolvent": {
+      "max_completion_residual": 1.0658141036401503e-14,
+      "minimum_hilbert_schmidt_trace_margin": 0.10479248865280077
+    }
+  },
+  "date": "2026-07-24",
+  "generated_at_utc": "2026-07-24T06:59:14.652260+00:00",
+  "honesty_boundary": "The exact Wick--Doob terminalization, trace restoration, covariance-tail bookkeeping, retained resolvent, adapted-centering no-go, exact weighted p-p integration by parts, and the nonzero remaining frame linearization are verified. The non-pp balanced linear-frame model attribution, full QII-weighted rational-frame/cross-square residual, finite-energy extension, one-use, and Nelson theorem remain open.",
+  "inputs": {
+    "bound_tolerance": 3e-10,
+    "correlated_gauss_hermite_orders": [
+      7,
+      9
+    ],
+    "fourier_grids": [
+      256,
+      512
+    ],
+    "gauss_hermite_fine_order": 7,
+    "gauss_hermite_order": 5,
+    "identity_tolerance": 2e-10,
+    "kappa": "1/10",
+    "random_cases": 240,
+    "random_seed": 26072470
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION",
+  "schema": "tect/a13-wick-doob-terminal-resolvent-primary/1.0",
+  "script_version": "1.0.0"
+}

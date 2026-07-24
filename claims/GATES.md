@@ -410,8 +410,16 @@ remainder, and exposes the exact raw-energy/injection telescope. It also
 refutes shellwise raw-secant positivity at a positive floor and refutes a
 geometry-only abstract proof without producing a production counterexample.
 The current child is
-`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`; the extension to every
-finite-energy drift and the umbrella theorem remain open.
+`A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`. R-070 adds the exact
+Wick--Doob terminalization: all CC/GG/mixed current increments reduce to the
+terminal translated-current with the finite-low boundary retained, the
+raw/Wick covariance trace and transported tail are paid, and terminal Schur
+completion leaves one adapted centered-resolvent object. The adapted terminal
+coefficient is not automatically centered. The exact full weighted linear
+frame then splits into symmetric and Cartan channels: its Cartan and `q11`
+pure-`pp` pieces are paid, but its non-`pp` symmetric model attribution remains
+open. The following nonlinear rational-frame/cross-square estimate, the
+extension to every finite-energy drift, and the umbrella theorem remain open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -559,7 +567,12 @@ remainder. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION`
 then closes the local production Schur estimate and pure-control bookkeeping:
 the hybrid endpoint lift removes the derivative-displacement kernel defect,
 and coherent frozen-value grouping telescopes pure-control current creation.
-The adapted Gaussian-rooted transported-current/GG lower bound remains.
+R-070 then proves the complete Wick--Doob current telescope, raw/Wick trace
+restoration, covariance-tail payment, terminal Schur completion, and the exact
+full weighted symmetric--Cartan linear-frame split. Its Cartan and `q11`
+pure-`pp` pieces reduce to pinned one-use estimates. The non-`pp` symmetric
+model attribution and the subsequent nonlinear rational-frame/cross-square
+lower bound remain.
 
 ### **A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND**
 
@@ -576,7 +589,7 @@ future field is forbidden. After the regular-control estimate, prove the
 localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
-**Status:** REDUCED-NOT-CLOSED (2026-07-23) by
+**Status:** REDUCED-NOT-CLOSED (2026-07-24) by
 `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-REDUCTION`. Exact production
 diagonalisation gives `alpha=5/9` and `q=10/9=2 alpha`; the aggregate
 three-current target is the standard angle-clipped CAT(0) completion of
@@ -594,9 +607,17 @@ tier promotion remain open. The successor has now been reduced further by
 uncontrolled-Gaussian infinitesimal tail and the global centered form are
 controlled. `A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION`
 subsequently proves the endpoint-lifted production Schur bounds, exact pure-
-control telescope, and centered scalar-defect transfer. The adapted Gaussian-
-rooted transported-current/GG lower bound, with terminal current boundary
-retained, is now the exact finite-cutoff analytic core.
+control telescope, and centered scalar-defect transfer. R-070 proves that the
+full coefficient Wick current terminalizes exactly, that raw-to-Wick
+conversion restores only the already summable R-066 trace, and that the
+transported covariance tail and terminal Hilbert--Schmidt trace are below the
+declared budgets. It also proves that the terminal translated-current is
+equivalent to one adapted centered-resolvent chaos and that automatic
+centering and a derivative-free Stein closure fail. The exact finite-cutoff
+analytic core therefore has two ordered subgates: the balanced
+`H^{-1-kappa}` model attribution for the non-`pp` symmetric linear frame, then
+the coupled nonlinear rational-frame/cross-square object with its coefficient
+remainder and terminal square retained.
 
 ### **A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE**
 
@@ -623,7 +644,7 @@ localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
 **Status:** REDUCED-NOT-CLOSED CURRENT CHILD (2026-07-24), proof-ordered after
-`A13-CLASSII-ENDPOINT-LIFTED-SCHUR-CAUSAL-GROUPING-REDUCTION` and before
+R-070 `A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION` and before
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. R-068 proves the nonlinear
 harvest, full-score Carleson estimate, uncontrolled-base Gaussian tails, tip-
 safe secant, physical distance, and global centered form. R-069 then falsifies
@@ -634,11 +655,19 @@ current creation pathwise and the fresh derivative-noise correction in
 expectation. Only the centered scalar Gaussian defect is transferred to the
 R-068 form; the terminal control-current square remains. A two-shell scaling
 fixture proves that the pure-control defect cannot instead be paid separately
-with arbitrary budgets. The exact successor is the adapted Gaussian-rooted
-transported-current/GG lower bound. Exact isolated `1:2` and `1:3` adapted
-harmonics remain summable and do not falsify that global statement. The
-adapted bound, finite-energy extension, one-use, Nelson theorem, and any tier
-promotion remain open.
+with arbitrary budgets. R-070 terminalizes the full coefficient current into
+the exact terminal translated-current, restores and pays the raw/Wick trace,
+pays the transported covariance tail, completes the terminal Schur square,
+and decomposes the full weighted linear production frame exactly into
+symmetric and Cartan channels. The Cartan channel and `q11` pure-`pp` term are
+paid; the non-`pp` symmetric part still needs its balanced model attribution.
+A bounded adapted terminal coefficient refutes automatic resolvent centering;
+Stein closure would require uncontrolled Malliavin derivatives. The next
+successor is the coupled nonlinear rational-frame/cross-square estimate with
+its coefficient remainder and terminal square retained. Exact isolated `1:2`
+and `1:3` adapted harmonics
+remain summable and do not falsify that global statement. This bound, finite-
+energy extension, one-use, Nelson theorem, and any tier promotion remain open.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 
