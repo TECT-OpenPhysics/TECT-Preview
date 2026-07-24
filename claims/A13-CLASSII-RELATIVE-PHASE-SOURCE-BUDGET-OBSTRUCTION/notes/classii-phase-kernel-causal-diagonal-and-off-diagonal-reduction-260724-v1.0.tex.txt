@@ -1,0 +1,486 @@
+% Title: Phase-kernel classification, causal-diagonal one-use, and exact off-diagonal reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact/analytic diagonal sublemma and exact successor reduction;
+% no tier promotion
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-24): exact gauge-kernel strata and differentiated identity;
+% inverse-free regularized completion; strict-past same-shell diagonal one-use
+% with one cutoff-independent random constant; exact terminal off-diagonal
+% decomposition and load-bearing witness; quantitative Sobolev discriminator.
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cO}{\mathcal O}
+
+\section{Purpose and scope}
+
+R-071 closes the complete fixed-floor linear production frame and proves that
+the nonlinear terminal current square has a genuine kernel leakage.  This note
+identifies that kernel exactly, proves the strict-past one-use estimate for the
+matched same-shell part of the leakage, and expands the full terminal leakage
+into that diagonal plus one explicit off-diagonal remainder.
+
+The diagonal estimate is cutoff-uniform and uses one Cameron--Martin
+allocation, one terminal sextic allocation, and one integrable random
+constant.  It does not close the full nonlinear subgate: the off-diagonal
+remainder is nonzero and can dominate the diagonal.  The next theorem must
+triangularly group that remainder together with the range-visible terminal
+square.  No finite-energy extension, controlled-shell one-use theorem, or
+Nelson estimate is asserted here.
+
+All statements use the hash-pinned A1 production coefficients, the R-050/A7
+common real-even scalar regulator, the R-066 strict sharp-cube filtration, a
+fixed positive density floor, and regular whole-shell predictable controls.
+The finite-low boundary is retained.
+
+\section{The stacked production frame has an exact gauge kernel}
+
+Write a field value as $x=(u,s)\in\mathbb C^2\oplus\mathbb C$.  For the
+three embedded Pauli generators put
+\[
+ p_r(x)=2(\sigma_ru,0),\qquad
+ v_r(x)=p_r(x)-2q_r(x)x,\qquad
+ M_r(x)=[p_r(x),v_r(x)],\qquad\text{(2.1)}
+\]
+and define the stacked current map
+\[
+ T_xb=(M_r(x)^Tb)_{r=1}^3.\qquad\text{(2.2)}
+\]
+The production matrix $Q_{\rm II}$ is positive definite, so weighting (2.2)
+does not change its kernel.
+
+Let $J_D(u,s)=(iu,0)$ and $J_S(u,s)=(0,is)$.  Then
+\[
+ \boxed{
+ \ker T_x=
+ \begin{cases}
+ \operatorname{span}_{\mathbb R}\{J_Dx,J_Sx\},
+     &u\ne0,\ s\ne0,\\
+ \operatorname{span}_{\mathbb R}\{J_Dx\}\oplus
+     (\{0\}\times\mathbb C),&u\ne0,\ s=0,\\
+ \mathbb R^6,&u=0.
+ \end{cases}}\qquad\text{(2.3)}
+\]
+
+Indeed, the three vectors $\sigma_ru$ are mutually orthogonal in the real
+pairing and have common squared norm $|u|^2$.  Their real orthogonal
+complement is therefore $\mathbb R,iu$.  The Pauli/Hopf identity
+\[
+ \sum_{r=1}^3m_r\sigma_ru=|u|^2u,
+ \qquad m_r=u^\dagger\sigma_ru.\qquad\text{(2.4)}
+\]
+shows that the $v_r$ conditions additionally impose
+$\operatorname{Re}(\bar t s)=0$ on a singlet displacement $t$.  This proves
+(2.3), including both degenerate strata.  It also proves that a globally
+smooth inverse or fixed-rank pseudoinverse cannot be part of the argument.
+
+The realified Pauli matrices commute with both $J_D$ and $J_S$.  Hence
+\[
+ M_r(x)^TJ_\alpha x=0,\qquad \alpha\in\{D,S\}.\qquad\text{(2.5)}
+\]
+Differentiating (2.5) at $z$ along $a$ gives
+\[
+ DM_r(z)[a]^TJ_\alpha z+M_r(z)^TJ_\alpha a=0.\qquad\text{(2.6)}
+\]
+For
+\[
+ E_r=M_r(z+a)-M_r(z)-DM_r(z)[a].\qquad\text{(2.7)}
+\]
+one obtains the exact nonlinear gauge identity
+\[
+ \boxed{E_r^TJ_\alpha(z+a)=-DM_r(z)[a]^TJ_\alpha a.}\qquad\text{(2.8)}
+\]
+
+The R-071 fixture is precisely this mechanism.  Its recorded vector
+$n=(-1,0,0,1,-1,0)$ equals $J_D(z+a)$, not an accidental exceptional
+nullvector.  Equation (2.8) reproduces the positive leakage slope
+\[
+ n\cdot\sum_rE_rQ_{\rm II}M_r(z)^Ty
+ ={27(6e^2+22e+27)\over400(e+3)^3}>0.\qquad\text{(2.9)}
+\]
+
+\section{Inverse-free local completion}
+
+Let $T=T_x$, $H=T^*Q_{\rm II}T\succeq0$, $d\in\mathbb R^6$ denote stacked
+terminal-current data in its natural target coordinates, and let
+$k\in\mathbb R^6$ be a derivative-displacement coefficient.  For every
+$0<\vartheta<1$ and $\tau>0$, completion with the strictly positive matrix
+$\vartheta H+\tau I$ gives
+\[
+\begin{split}
+ {1\over2}|d+T b|_Q^2+k\cdot b\ge{}&
+ {1-\vartheta\over2}|d+Tb|_Q^2-{\tau\over2}|b|^2
+ +{\vartheta\over2}|d|_Q^2\\
+ &-{1\over2}(\vartheta T^*Qd+k)^T
+ (\vartheta H+\tau I)^{-1}(\vartheta T^*Qd+k).\qquad\text{(3.1)}
+\end{split}
+\]
+No singular frame inverse occurs, and a fraction $1-\vartheta$ of the terminal
+square remains.  On an exact gauge direction, however, the last term can grow
+like $|k_{\ker}|^2/\tau$ as $\tau\downarrow0$.  Thus $\tau$ must be supplied
+by Cameron--Martin energy; (3.1) is an architecture, not by itself a closure.
+
+For the actual frame set
+\[
+ w_r=M_r(z)^Ty,\qquad k(z,a,y)=\sum_{r=1}^3E_rQ_{\rm II}w_r.\qquad\text{(3.2)}
+\]
+The R-069 good/bad split gives the inverse-free global estimate
+\[
+ \boxed{|k(z,a,y)|\le C_*|a|^2|y|.}\qquad\text{(3.3)}
+\]
+\[
+ C_*=24\|Q_{\rm II}\|_{\rm op}(\sqrt{34}+4\sqrt2)
+ =1.5397534378598672.\qquad\text{(3.4)}
+\]
+For completeness, on $|a|\le\theta s_e(z)$ Taylor's formula gives the safe
+constant $48\sqrt8\|Q\|/(1-\theta)$.  On the complement, global frame
+Lipschitz continuity and $|z|<|a|/\theta$ give
+$24\sqrt{34}\|Q\|/\theta$.  They agree at
+\[
+ \theta={\sqrt{34}\over\sqrt{34}+4\sqrt2}.\qquad\text{(3.5)}
+\]
+which proves (3.3)--(3.4) uniformly in the positive floor.
+
+\section{Strict-past diagonal one-use theorem}
+
+Fix a high block $j_0\le j\le J$, $N_j=2^j$, and write
+\[
+ a_j=K_jh_j,\qquad b_{j,i}=D_i a_j,\qquad
+ z_{<j}=U_J+A_{<j}.\qquad\text{(4.1)}
+\]
+Here $h_j$, $a_j$, and $b_j$ are $\mathcal F_{j-1}$-measurable; $U_J$ is the
+coherent terminal heat-value variable and is not spatially differentiated.
+Put
+\[
+ E_{r,j}=M_r(z_{<j}+a_j)-M_r(z_{<j})-DM_r(z_{<j})[a_j].\qquad\text{(4.2)}
+\]
+and, with $G_{j,i}=D_iX_{<j}$,
+\[
+ \Lambda_j=\sum_{r,i}\int
+ \langle M_r(z_{<j})^TG_{j,i},Q_{\rm II}E_{r,j}^Tb_{j,i}\rangle
+ \dd x.\qquad\text{(4.3)}
+\]
+
+Use full-gradient constants
+\[
+ \|Da_j\|_2\le C_\nabla N_j^{-1}\|h_j\|_{\cH_j},
+ \qquad
+ \operatorname{Tr}\operatorname{Cov}G_j(x)\le C_DN_j.\qquad\text{(4.4)}
+\]
+The second trace is for the full eighteen-real-component vector: six target
+components times three spatial directions.  If R-066's $C_G$ is used one
+direction at a time, $C_\nabla=\sqrt3C_G$; the corresponding directional
+trace bounds are summed into $C_D$.
+
+Equation (3.3), spatial Holder, and (4.4) give
+\[
+ |\Lambda_j|\le m_jx_j^{1/2}y_j^{1/3}.\qquad\text{(4.5)}
+\]
+\[
+ x_j=\|h_j\|_{\cH_j}^2,\qquad y_j=\|a_j\|_6^6,\qquad
+ m_j=C_*C_\nabla N_j^{-1}\|G_j\|_6.\qquad\text{(4.6)}
+\]
+Apply sequence Holder once, with exponents $(2,3,6)$:
+\[
+ \sum_j|\Lambda_j|
+ \le X^{1/2}Y_d^{1/3}R_\infty^{1/6}.\qquad\text{(4.7)}
+\]
+\[
+ X=\sum_jx_j,\qquad Y_d=\sum_jy_j,\qquad
+ R_\infty=\sum_{j\ge j_0}m_j^6.\qquad\text{(4.8)}
+\]
+One weighted AM--GM inequality then gives, pathwise,
+\[
+ \boxed{
+ \sum_{j=j_0}^J|\Lambda_j|
+ \le\eta X+\zeta_dY_d+{R_\infty\over432\eta^3\zeta_d^2}.}\qquad\text{(4.9)}
+\]
+This is not shellwise Young with an arbitrary constant at every scale.  It is
+one inequality with one accumulated random constant.
+
+For a centered Gaussian vector $g$ with covariance $\Sigma$,
+\[
+ \E|g|^6=(\operatorname{Tr}\Sigma)^3
+ +6\operatorname{Tr}\Sigma\operatorname{Tr}(\Sigma^2)
+ +8\operatorname{Tr}(\Sigma^3)
+ \le15(\operatorname{Tr}\Sigma)^3.\qquad\text{(4.10)}
+\]
+Therefore
+\[
+ \boxed{
+ \E R_\infty\le15L^3(C_*C_\nabla)^6C_D^3
+ {8\over7}N_{j_0}^{-3}.}\qquad\text{(4.11)}
+\]
+Before conversion to the terminal sextic, the deterministic expected
+remainder in (4.9) is
+\[
+ {5\over126}L^3(C_*C_\nabla)^6C_D^3
+ \eta^{-3}\zeta_d^{-2}N_{j_0}^{-3}.\qquad\text{(4.12)}
+\]
+Only a sixth Gaussian moment is used.
+
+\subsection{Exactly one terminal sextic and one cutoff-independent constant}
+
+Pointwise,
+\[
+ Y_d\le\left\|\left(\sum_j|a_j|^2\right)^{1/2}\right\|_6^6.\qquad\text{(4.13)}
+\]
+The existing sharp-cube Littlewood--Paley theorem, with its actual constant
+$C_{\rm LP}$ rather than one, gives
+\[
+ Y_d\le C_{\rm LP}^6\|A^{\rm hi}\|_6^6.\qquad\text{(4.14)}
+\]
+For every $\alpha>1$ there is $C_\alpha<\infty$ such that
+\[
+ |Z-U|^6\le\alpha|Z|^6+C_\alpha|U|^6.\qquad\text{(4.15)}
+\]
+Choose $\zeta_d=\zeta/(\alpha C_{\rm LP}^6)$.  If
+\[
+ U_*:=\int\sup_J|U_J(x)|^6\dd x.\qquad\text{(4.16)}
+\]
+then the vector martingale Doob inequality gives
+\[
+ \E U_*\le(6/5)^6\E\|U_\infty\|_6^6<\infty.\qquad\text{(4.17)}
+\]
+Consequently (4.9) spends precisely $\zeta\|Z_J\|_6^6$ and leaves the single
+cutoff-independent integrable random constant
+\[
+ \boxed{
+ C_{\eta,\zeta}(\omega)=
+ {\alpha^2C_{\rm LP}^{12}\over432\eta^3\zeta^2}R_\infty
+ +{\zeta C_\alpha\over\alpha}U_*.}\qquad\text{(4.18)}
+\]
+No Nelson exponential moment and no Malliavin norm is used.
+
+\subsection{Causalization is expectation-only}
+
+The terminal root in the algebra is $G=D X_J$, not $G_j$.  At each spatial
+point condition on $\mathcal F_{j-1}$ enlarged by all future same-point value
+variables.  Real-even covariance makes every fresh/future derivative
+increment centered and independent of that enlarged value sigma-field.
+Thus spatial Fubini gives exactly
+\[
+ \E\Lambda_j(G)=\E\Lambda_j(G_j).\qquad\text{(4.19)}
+\]
+Equation (4.19) is not a pathwise replacement and not global field
+value--derivative independence.  It fails for progressive within-shell
+feedback.
+
+\section{Exact off-diagonal remainder}
+
+The diagonal theorem is not the terminal theorem.  To state the exact gap
+without dropping a finite-low boundary, start the high expansion at
+\[
+ z_0=U_J+A_{<j_0},\qquad
+ A^{\rm hi}=\sum_{j=j_0}^Ja_j,\qquad
+ C^{\rm hi}=\sum_{\ell=j_0}^Jb_\ell.\qquad\text{(5.1)}
+\]
+The R-066 finite-low estimate retains the difference between $U_J$ and $z_0$.
+For $z_{<j}=z_0+\sum_{j_0\le k<j}a_k$, set
+\[
+ E_j=M(z_{<j}+a_j)-M(z_{<j})-DM(z_{<j})[a_j].\qquad\text{(5.2)}
+\]
+\[
+ F_{k,j}=[DM(z_{\le k})-DM(z_{<k})][a_j],\qquad k<j.\qquad\text{(5.3)}
+\]
+Two telescopes give
+\[
+ \boxed{
+ E_{\rm tot}:=M(z_0+A^{\rm hi})-M(z_0)-DM(z_0)[A^{\rm hi}]
+ =\sum_jE_j+\sum_{k<j}F_{k,j}.}\qquad\text{(5.4)}
+\]
+
+Suppress generator and spatial-direction sums, put
+$w_0=M(z_0)^TG$ and $w_{<j}=M(z_{<j})^TG$, and define
+\[
+\begin{split}
+ \cO={}&\sum_j\langle w_0-w_{<j},QE_j^Tb_j\rangle\\
+ &+\sum_j\sum_{\ell\ne j}\langle w_0,QE_j^Tb_\ell\rangle\\
+ &+\sum_{k<j}\sum_\ell\langle w_0,QF_{k,j}^Tb_\ell\rangle.\qquad\text{(5.5)}
+\end{split}
+\]
+Then
+\[
+ \boxed{
+ \langle w_0,QE_{\rm tot}^TC^{\rm hi}\rangle
+ =\sum_j\langle w_{<j},QE_j^Tb_j\rangle+\cO.}\qquad\text{(5.6)}
+\]
+The first sum is the matched diagonal covered by Section 4 after (4.19).
+The remainder $\cO$ is exact and load-bearing.  In the independent production
+fixture,
+\[
+ \mathrm{LHS}=0.0583409867702,\qquad
+ \mathrm{diagonal}=1.42693028427\times10^{-5},\qquad
+ \cO=0.0583267174674.\qquad\text{(5.7)}
+\]
+so $|\cO|/|\mathrm{diagonal}|>4087$.  Calling it a small bookkeeping error is
+therefore false.
+
+Terms in (5.5) with $b_\ell$ from a later shell can depend on intervening
+derivative innovations.  Applying (4.19) to them before triangular expansion
+would require Malliavin derivatives of future controls.  R-069 instead shows
+that accumulated past control currents and their mixed currents telescope
+when kept together with the terminal square.  The missing compatibility
+lemma must prove, without double counting the R-071 linear payment, that
+(5.5) either returns to that telescope or satisfies a two-parameter
+largest-shell Carleson estimate with the range square retained.
+
+\section{Quantitative discriminator for the next root model}
+
+Let $X=\|A\|_{H^2}^2$ and $Y=\|A\|_6^6$.  For $0\le\sigma\le1$, endpoint
+product estimates followed by Sobolev interpolation give
+\[
+ \boxed{
+ \|A^2DA\|_{H^\sigma}
+ \le C X^{(1+\sigma)/2}Y^{(2-\sigma)/6}.}\qquad\text{(6.1)}
+\]
+At $\sigma=0$, use
+$\|A^2DA\|_2\le\|A\|_6^2\|DA\|_6$.  At $\sigma=1$, use
+$\|A\|_\infty^2\lesssim\|A\|_{H^2}\|A\|_6$ and the
+Leibniz rule.  Interpolation proves (6.1).
+
+If a root model has norm $M$ in $H^{-\sigma}$, termwise duality leaves room
+for one random constant exactly when $\sigma<1/2$.  Weighted Young then needs
+\[
+ M^{6/(1-2\sigma)},\qquad
+ \eta^{-3(1+\sigma)/(1-2\sigma)},\qquad
+ \zeta^{-(2-\sigma)/(1-2\sigma)}.\qquad\text{(6.2)}
+\]
+At $\sigma=1/2$, (6.1) is the saturated product
+$X^{3/4}Y^{1/4}$ and leaves no exponent for an unbounded random norm.
+Therefore a raw $H^{-1/2-\delta}$ kernel-root model must gain more than
+$\delta$ derivatives from causal structure.  If the gain is $\gamma$, its
+required moment is
+\[
+ \boxed{p={3\over\gamma-\delta},\qquad\gamma>\delta.}\qquad\text{(6.3)}
+\]
+This is a discriminator for an absolute Sobolev fallback, not a no-go against
+signed range-square cancellation.
+
+\section{Why the local fixture is not an integrated counterexample}
+
+On a normalized circle lift the R-071 jet by
+\[
+ U_N=z+N^{-1}\sin(Ns)y,\qquad
+ A_{N,t}=a+tN^{-1}\sin(Ns)n.\qquad\text{(7.1)}
+\]
+Then $DU_N=\cos(Ns)y$, $DA_{N,t}=t\cos(Ns)n$, and the mean local leakage
+retains the affine slope from (2.9).  However
+\[
+ \|A_{N,t}\|_{H^2}^2
+ =6+{3t^2\over2}(N^2+1+N^{-2}).\qquad\text{(7.2)}
+\]
+while the terminal sextic tends to $|z+a|^6=27$.  The Cameron--Martin cost
+therefore grows like $N^2$.  This route does not disprove the integrated
+theorem; it confirms that derivative energy is the necessary missing input.
+
+\section{Evidence map and successor}
+
+\begin{enumerate}
+\item \textbf{Closed:} exact gauge-kernel classification on every rank
+stratum, including the doublet and singlet tips.
+\item \textbf{Closed:} differentiated gauge identity (2.8) and the exact
+interpretation of the R-071 fixture.
+\item \textbf{Closed:} inverse-free local bound (3.3) and regularized
+completion (3.1), with no pseudoinverse at the cone tip.
+\item \textbf{Closed:} matched same-shell strict-past diagonal leakage with
+one CM allocation, one terminal sextic allocation, and the single integrable
+constant (4.18).  Its ultraviolet tail is $O(N_{j_0}^{-3})$ and needs only a
+sixth Gaussian moment.
+\item \textbf{Retired:} identifying the diagonal with the full terminal
+leakage.  Equations (5.4)--(5.7) expose a nonzero, load-bearing off-diagonal
+remainder.
+\item \textbf{Next:} group $\cO$ by its largest shell index while retaining
+the terminal range square and the R-069 control/mixed telescope.  Prove a
+two-parameter Carleson estimate or an exact cancellation compatible with the
+already-paid R-071 linear model.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{DISMISSED: ``The R-071 nullvector is an exceptional numerical
+accident.''}  Equation (2.3) classifies it as the exact active-doublet gauge
+direction, and (2.8) reproduces its slope.
+
+\item \textbf{VALID with mitigation: ``A frame inverse is singular at the
+tip.''}  Equation (3.1) inverts only $\vartheta H+\tau I$.  The price is the
+explicit CM allocation $\tau|b|^2/2$.
+
+\item \textbf{DISMISSED: ``Shellwise Young creates infinitely many
+constants.''}  Sequence Holder is applied before one AM--GM step.  The only
+remainder is $R_\infty$, whose expectation is (4.11).
+
+\item \textbf{UPHELD against a hidden dimension convention: ``The scalar
+$C_D$ was used for an eighteen-component derivative vector.''}  Equation
+(4.4) explicitly defines $C_D$ as the full trace and $C_\nabla$ as the full
+gradient constant.
+
+\item \textbf{UPHELD against unit sharp-cube constants: ``$Y_d$ is already
+the terminal sextic.''}  The actual $C_{\rm LP}$ is retained in
+(4.14)--(4.18); it is not set to one.
+
+\item \textbf{UPHELD against pathwise centering: ``Terminal $G$ equals
+$G_j$.''}  Only the expectation identity (4.19) holds, under the same-point
+value conditioning and real-even regulator.
+
+\item \textbf{UPHELD against a missing low boundary: ``The high expansion
+may start at $U$ after deleting lower controls.''}  Equation (5.1) starts at
+$z_0=U+A_{<j_0}$ and retains the R-066 finite-low boundary.
+
+\item \textbf{UPHELD against diagonal closure: ``The off-diagonal remainder
+is negligible.''}  The exact independent fixture has ratio greater than
+$4087$ in (5.7).
+
+\item \textbf{UPHELD against full closure: ``The diagonal theorem proves
+controlled-shell one-use.''}  The triangular off-diagonal range-square
+estimate, finite-energy extension, umbrella one-use, and Nelson synthesis
+remain open.  Tier stays T4.
+\end{enumerate}
+
+\section*{Result footer}
+
+The primary executable derives the production constant, tests all kernel
+strata and gauge identities, checks the local bound and regularized
+completion, verifies the one-constant sequence algebra and Gaussian moment,
+and executes the exact off-diagonal identity.  The non-importing executable
+rebuilds complex Pauli frames, uses finite-difference derivatives, and checks
+an independent load-bearing off-diagonal fixture.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION
+Precise statement:       The stacked production frame has exactly the local
+                         doublet/singlet gauge kernel. The matched strict-past
+                         same-shell nonlinear leakage has one-use budgets and
+                         an O(N_j0^-3) sixth-moment tail. The terminal leakage
+                         equals this diagonal plus an exact nonzero off-
+                         diagonal remainder.
+Scope:                   Fixed floor; common real-even sharp-cube regulator;
+                         regular whole-shell predictable high controls with
+                         the finite-low boundary retained.
+Dependencies:            A1; R-050; R-066; R-068--R-071.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_phase_kernel_causal_diagonal_reduction_verify.py
+Expected output:         primary 32/32; independent 26/26; integrated and
+                         aggregate counts as pinned in the manifest; exit 0.
+Falsification gate:      A kernel stratum, gauge derivative, production
+                         constant, one-constant tail, causal boundary,
+                         off-diagonal identity, source/PDF hash, or assertion
+                         fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  The off-diagonal range-square Carleson estimate,
+                         finite-energy extension, controlled-shell one-use,
+                         Nelson, floor/regulator/volume removal, T5--T7, phase
+                         transition, and BCC selection remain open.
+Next required action:    Prove the largest-shell triangular two-parameter
+                         Carleson estimate for O with the terminal range
+                         square and R-069 telescope retained.
+\end{verbatim}
+
+This result does not construct an interacting measure, remove any regulator,
+or take infinite volume.  It proves no phase transition or BCC selection.

@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Audit: correct R-072 exploration evidence fragments] - 2026-07-24
+
+Pre-release audit found that the coarse line fragment in EXP-000027 extended beyond the 486-line proof note. Because explorations/log.jsonl is append-only, EXP-000028 records the exact section ranges for EXP-000024 through EXP-000027 without rewriting history. No proof equation, assertion count, scope, tier, or negative result changed.
+
+## [R-072 phase-kernel and causal same-shell diagonal reduction] - 2026-07-24
+
+Classified the exact production phase-gauge kernel, derived the differentiated gauge identity, and supplied an inverse-free regularized completion. Closed the matched strict-past same-shell nonlinear leakage with one accumulated sixth-moment random constant and O(N_j0^-3) tail. Exact terminal expansion exposes three load-bearing off-diagonal families; an independent production fixture has remainder-to-diagonal ratio above 4087. Added primary 32/32, independent 26/26, integrated 37/37, aggregate 95/95 verification, a seven-page rendered and visually checked PDF, four exploration records, and the formal diagonal-to-terminal no-go. Tier remains T4; the largest-shell triangular off-diagonal estimate, finite-energy extension, one-use, and Nelson remain open.
+
 ## [Repair the R-071 successor-state and standalone import verification boundary] - 2026-07-24
 
 Results: R-071

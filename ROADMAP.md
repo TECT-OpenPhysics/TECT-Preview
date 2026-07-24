@@ -180,12 +180,19 @@ trace, Abel--Hardy summation pays its transported tail, and the R-069 endpoint
 defect is the single R-068 centered form.  Terminal Schur completion pays the
 Hilbert--Schmidt trace but cannot center an adapted terminal coefficient; the
 scalar diagnostic and the derivative-demanding Stein route retire those two
-  shortcuts.  The full weighted linear frame splits exactly into symmetric and
-  Cartan channels; the Cartan and `q11` pure-`pp` pieces are paid.  The next
-  regular-control subgate is the balanced `H^{-1-kappa}` model attribution for
-  the non-`pp` symmetric frame.  Only then comes the coupled nonlinear
-  rational-frame/cross-square estimate with its coefficient remainder and
-  terminal square retained, followed by the declared finite-energy extension.
+  shortcuts. R-071 corrects the false raw linear regularity attribution and
+  closes the full fixed-floor symmetric--Cartan frame through the R-050
+  enhanced one-form. R-072 then classifies the exact production phase-gauge
+  kernel, proves an inverse-free regularized completion, and pays the matched
+  strict-past same-shell nonlinear leakage with one accumulated integrable
+  random constant and an `O(N_j0^-3)` sixth-moment tail. Exact terminal shell
+  expansion nevertheless leaves three load-bearing off-diagonal families; an
+  independent production fixture makes their combined magnitude more than
+  4087 times the diagonal. The next regular-control subgate is therefore a
+  terminal-range-square-preserving largest-shell triangular two-parameter
+  Carleson/paradifferential estimate, or an exact cancellation back into the
+  R-069 control/mixed telescope, followed by the declared finite-energy
+  extension.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -317,12 +324,15 @@ preserved in git/changelog rather than treated as current gates.
    tail payment, endpoint-defect equivalence, terminal Schur completion, and
    exact full weighted linear-frame symmetric--Cartan split. It also proves
    that automatic adapted resolver centering and a derivative-free Stein
-   closure are invalid. The `q11` pure-`pp` and Cartan linear pieces are paid;
-   next prove the balanced `H^{-1-kappa}` model attribution for the non-`pp`
-   symmetric frame. Then prove the coupled rational-frame/cross-square bound
-   under `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, retaining the
-   nonlinear coefficient remainder and terminal square jointly, before the
-   finite-energy extension. Do not spatially differentiate the heat dummy, reuse
+   closure are invalid. R-071 corrects the false raw regularity attribution
+   and closes the complete fixed-floor linear frame. R-072 classifies the
+   phase-gauge kernel, avoids a singular frame inverse, and closes the matched
+   strict-past same-shell diagonal with a single cutoff-independent random
+   constant. Its exact terminal expansion proves that three off-diagonal
+   families remain load-bearing. Next group those families by largest shell
+   and prove a terminal-square-preserving two-parameter triangular Carleson
+   bound, or return them exactly to the R-069 telescope, before the finite-
+   energy extension. Do not spatially differentiate the heat dummy, reuse
    uncontrolled tails for an adapted coefficient, pay terminal raw energy and
    injection separately, or assume unproved Malliavin regularity.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the

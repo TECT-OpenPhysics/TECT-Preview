@@ -1,0 +1,85 @@
+{
+  "schema": "tect/a13-phase-kernel-causal-diagonal-reduction/1.0",
+  "result_id": "A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION",
+  "result_ledger_id": "R-072",
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "date": "2026-07-24",
+  "tier": "T4",
+  "authority": {
+    "governance": {
+      "path": "GOVERNANCE.md",
+      "sha256": "ad8b22e1437d2b4a2e48d29753c7ac5f913c374f2d11236902cd1893f1e1e7f4"
+    },
+    "a1_manifest": {
+      "path": "claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/production_functional_manifest.json",
+      "sha256": "88da7764302b20b0dde6e10902e94b1e26ec3c5274759c7fa51ca6302868b565"
+    },
+    "r066_backward_heat": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-backward-heat-martingale-square-coupled-cartan-reduction-260723-v1.0.tex.txt",
+      "sha256": "b411b8d88ff9689b9dc4aca9e2797877ea187e7c6675d8b4df34888c10fd890d"
+    },
+    "r069_endpoint_causal": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-endpoint-lifted-schur-causal-grouping-reduction-260724-v1.0.tex.txt",
+      "sha256": "5fb13e659f440d6775204a88155431ddd40d4bca083a2cbf83efa6009ed8f7c6"
+    },
+    "r071_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_one_form_sobolev_linear_closure_manifest.json",
+      "sha256": "1a03d266aeddb96734f8d43b64d0998ab28f1bea0219d4ca549c1bf0b5abb915"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction.py",
+      "sha256": "0a4f9dcd0d068f46954342407184e653faca6c2dd435722864b12464e794d6e6",
+      "version": "1.0.0"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_independent.py",
+      "sha256": "41c3e05c9fc5b12b7cac5047b13df914bb9abc80a31f2295e216a72cdc73102e",
+      "version": "1.0.0"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_verify.py",
+      "sha256": "06002063a92ce148b00703d1b524abeafe07ee06c478ce52d50493986a05ab6d",
+      "version": "1.0.0"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0.tex.txt",
+      "sha256": "a85a41cddd1e47c710fbf9df29e000184af2065c5bdd58397760874718ee31be",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0.pdf",
+    "sha256": "edd6491ad3e51bc65c3e4ff1bf637bc8c947a50b81ac03e4d2b3eda9206ad012",
+    "pages": 7,
+    "size_bytes": 93682,
+    "form_check": "PASS",
+    "overfull_hboxes": 0,
+    "visual_qa": "PASS: all 7 pages rendered with Poppler and inspected after the final rebuild; kernel strata, boxed inequalities, off-diagonal formulas, headings, footer, margins, and page breaks are legible with no clipping, overlap, literal control-sequence debris, or black boxes"
+  },
+  "theorem": {
+    "gauge_kernel": "For x=(u,s) in C2 plus C, the stacked production-frame kernel is span_R{(iu,0),(0,is)} on the generic stratum; at s=0 the whole singlet plane joins the doublet phase, and at u=0 the frame is zero. No fixed-rank inverse exists.",
+    "differentiated_gauge": "For either local phase generator J_alpha, E_r=M_r(z+a)-M_r(z)-DM_r(z)[a] satisfies E_r^T J_alpha(z+a)=-DM_r(z)[a]^T J_alpha a. The R-071 fixture is exactly the doublet phase direction.",
+    "inverse_free_completion": "A tau-regularized completion inverts only theta T^*QT+tau I and retains a 1-theta fraction of the terminal square. The Cameron-Martin cost must supply tau on gauge directions.",
+    "local_bound": "The nonlinear derivative-displacement vector k=sum_r E_r Q_II M_r(z)^T y obeys |k|<=C_*|a|^2|y| uniformly in the fixed positive floor, with C_*=24||Q_II||op(sqrt(34)+4sqrt(2))=1.5397534378598672.",
+    "diagonal_one_use": "For whole-shell predictable a_j=K_j h_j, the matched same-shell leakage is bounded after one sequence Holder and one weighted AM-GM step by eta X+zeta_d Y_d+R_infty/(432 eta^3 zeta_d^2). R_infty is one cutoff-independent random constant, not one constant per shell.",
+    "sixth_moment_tail": "If C_D N_j bounds the full 18-real-component derivative covariance trace and C_nabla is the full-gradient smoothing constant, E R_infty<=15 L^3(C_*C_nabla)^6 C_D^3(8/7)N_j0^-3. Before terminal-sextic retuning the expected Young remainder coefficient is 5/126.",
+    "terminal_sextic": "The actual sharp-cube Littlewood-Paley constant is retained. With zeta_d=zeta/(alpha C_LP^6), the single cutoff-independent remainder is alpha^2 C_LP^12 R_infty/(432 eta^3 zeta^2)+zeta C_alpha U_*/alpha, where U_*=int sup_J |U_J|^6 is integrable by Doob.",
+    "causalization": "Replacing terminal G by strict-past G_j is an exact expectation identity after conditioning on future same-point values. It is not pathwise or global value-derivative independence and does not apply to within-shell feedback.",
+    "off_diagonal_reduction": "For a high block based at z_0=U+A_<j0, E_tot=sum_j E_j+sum_{k<j}F_kj and the terminal leakage equals the matched diagonal plus the explicit three-family off-diagonal remainder O. An independent production fixture has |O|/|diagonal|>4087, so O is load-bearing.",
+    "sobolev_discriminator": "A generic root payment obeys ||A^2 DA||_{H^sigma}<=C X^((1+sigma)/2)Y^((2-sigma)/6). It leaves a random-constant exponent only for sigma<1/2; an H^{-1/2-delta} root needs causal gain gamma>delta and moment 3/(gamma-delta)."
+  },
+  "verification": {
+    "primary_assertions": 32,
+    "independent_assertions": 26,
+    "integrated_assertions": 37,
+    "aggregate_assertions": 95,
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-phase-kernel-causal-diagonal-reduction/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-independent-phase-kernel-causal-diagonal-reduction/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-integrated-phase-kernel-causal-diagonal-reduction/result.json"
+  },
+  "negative_result": "NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE",
+  "successor": "Prove a largest-shell triangular two-parameter Carleson estimate for the exact off-diagonal remainder, or an exact cancellation returning it to the R-069 control/mixed telescope, while retaining the terminal range square and avoiding double use of the R-071 linear payment. Then perform finite-energy extension, controlled-shell one-use, and Nelson synthesis.",
+  "honesty_boundary": "This scoped T4 continuation proves the exact gauge-kernel strata, differentiated gauge identity, inverse-free regularized completion, and the matched strict-past same-shell diagonal one-use estimate with one cutoff-independent integrable random constant and O(N_j0^-3) sixth-moment tail. It also proves the exact nonzero terminal off-diagonal remainder and a quantitative Sobolev discriminator. It does not control or cancel that off-diagonal remainder, close the integrated nonlinear kernel theorem, extend to every finite-energy drift, prove controlled-shell one-use or the q=10/9 Nelson theorem, construct an interacting measure, remove the floor or regulator, take infinite volume, or justify T5, T6, or T7."
+}

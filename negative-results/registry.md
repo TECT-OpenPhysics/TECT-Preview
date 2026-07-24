@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE](#ng-2026-07-24-a13-diagonal-to-terminal-collapse) | A13 replacement of the full terminal nonlinear leakage by its matched strict-past diagonal | the exact terminal expansion has three off-diagonal families; an independent production fixture makes their combined magnitude more than 4087 times the matched diagonal |
 | [NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR](#ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur) | A13 raw linear-model attribution and pointwise nonlinear terminal-square closure | strict low--high blocks falsify the `H^{-1-1/10}` raw attribution, while a common terminal-frame kernel carries nonzero nonlinear leakage invisible to the terminal square |
 | [AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP](#audit-2026-07-24-a13-r071-successor-state-and-import-bootstrap) | R-071 standalone and predecessor verification boundary | the first wrapper re-ran R-070 against successor-mutated live status, while both child scripts relied on an undeclared external `PYTHONPATH` |
 | [AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP](#audit-2026-07-24-a13-r070-dependency-preflight-gap) | R-070 integrated verifier runtime dependency closure | the initial verifier checked the imported R-069 helper only after child execution and did not preflight its transitive NPC/translation/UV dependency closure |
@@ -53,6 +54,38 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-24-a13-diagonal-to-terminal-collapse"></a>
+### NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE -- the matched diagonal is not the full terminal leakage
+
+**Failure mode:** The strict-past same-shell calculation replaces the terminal
+Gaussian derivative by its predictable part and pays the matched pair
+`E_j^T D a_j`.  That calculation is exact for its diagonal, but identifying it
+with the full terminal nonlinear translated-current leakage deletes
+cross-shell derivative displacements and the change of nonlinear coefficient
+between earlier and later base points.
+
+**Evidence:** With the finite-low block retained in
+`z_0=U+A_<j0`, exact telescoping gives
+`E_tot=sum_j E_j+sum_(k<j) F_kj`.  Pairing against the terminal current and
+`D A=sum_l D a_l` gives the matched diagonal plus three explicit families:
+the base-current difference paired with `E_j^T D a_j`, every
+`E_j^T D a_l` with `l != j`, and every `F_kj^T D a_l`.  In a non-importing
+production-frame fixture the full left side is `0.0583409867702`, the matched
+diagonal is `1.42693028427e-5`, and the exact remainder is
+`0.0583267174674`, so `|remainder|/|diagonal|>4087`.  Primary and independent
+implementations verify the algebra and numeric fixture; R-072 records the
+complete formulas and boundary.
+
+**Consequence:** Diagonal causalization may be used once, but it cannot be
+advertised as the integrated nonlinear kernel theorem.  Applying terminal
+conditioning before the exact shell expansion would expose undeclared
+Malliavin derivatives of future controls and is not a repair.  The viable
+successor is an exact grouping of the three off-diagonal families by their
+largest shell index, retaining the terminal range-visible square, followed by
+a two-parameter triangular Carleson/paradifferential estimate or an exact
+return to the R-069 control/mixed telescope.  Finite-energy extension,
+controlled-shell one-use, and Nelson remain open; tier stays T4.
 
 <a id="ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur"></a>
 ### NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR -- raw linear regularity and pointwise terminal-square closure fail

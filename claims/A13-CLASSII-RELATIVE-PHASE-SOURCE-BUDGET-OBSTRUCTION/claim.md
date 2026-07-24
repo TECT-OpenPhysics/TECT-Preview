@@ -238,6 +238,25 @@ the following structural results and proof-architecture boundaries hold.
     This retires pointwise terminal-square absorption and leaves one
     integrated strict-past Cameron--Martin/frequency estimate for the kernel
     leakage.
+15. `A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION` resolves the
+    matched same-shell part of that successor and identifies the exact
+    remaining obstruction.  The stacked production frame has precisely the
+    doublet and singlet local phase directions as its generic real kernel,
+    with the expected rank drops at `s=0` and `u=0`; hence a fixed-rank inverse
+    is impossible.  Differentiating gauge invariance converts the endpoint
+    kernel leakage to a quadratic control displacement, and a regularized
+    completion inverts only `theta T^*Q T+tau I` while retaining part of the
+    terminal square.  The floor-uniform local bound
+    `C_*|a|^2|G|`, followed by one shell-sequence Holder and one weighted
+    AM--GM step, pays the matched strict-past diagonal with one control
+    allocation, one sextic allocation, and one cutoff-independent integrable
+    random constant.  Its sixth-moment tail is `O(N_j0^-3)`.  However, exact
+    terminal shell expansion leaves three off-diagonal families.  An
+    independent production fixture makes their combined magnitude more than
+    4087 times the diagonal, so diagonal-to-terminal collapse is false.  The
+    next theorem is a largest-shell triangular two-parameter Carleson estimate
+    or an exact return of these families to the R-069 control/mixed telescope,
+    with the terminal range square retained.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -260,7 +279,8 @@ is a scoped T4 subproof and does not promote A13.
 | Endpoint-lifted Schur / coherent causal grouping | Hybrid endpoint lift, optimized safe-envelope bounds, exact pure-control and mixed-current telescopes, and scalar centered-defect transfer | T4 child reduction closed |
 | Wick--Doob terminal/resolvent reduction | Full-coefficient Wick transport, terminal normal current, trace/Hardy payment, adapted-resolver no-go, and exact symmetric--Cartan split | T4 child reduction closed; its initial raw regularity attribution is corrected by R-071 |
 | One-form Sobolev linear-frame completion / kernel leakage | Fixed-floor matrix one-form lift, generalized symmetric/Cartan one-use payments, exact low--high correction, and terminal-frame kernel no-go | T4 linear subgate closed; one integrated nonlinear successor |
-| Controlled-shell one-use | Integrated strict-past kernel-leakage bound, finite-energy extension, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
+| Phase-kernel / causal diagonal one-use | Exact gauge-kernel strata, differentiated gauge identity, inverse-free completion, and matched same-shell one-use with one random constant | T4 diagonal subgate closed; full terminal off-diagonal remainder open |
+| Controlled-shell one-use | Largest-shell off-diagonal bound, finite-energy extension, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -303,6 +323,12 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   `H^(-3/2-delta)` divergence bounds are not uniform as the floor tends to
   zero.  The terminal-frame fixture refutes a pointwise bound, not an
   integrated Cameron--Martin estimate.
+- R-072 uses whole-shell predictable controls and causalizes terminal
+  derivatives only in expectation after same-point conditioning.  Its
+  covariance constant controls the full 18-real-component gradient vector,
+  and the actual sharp-cube Littlewood--Paley constant is retained in the
+  terminal sextic conversion.  It closes only the matched diagonal, not the
+  full terminal leakage.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -325,9 +351,10 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. the integrated strict-past terminal-frame kernel-leakage bound identified
-   in R-071, using one Cameron--Martin allocation, one terminal sextic
-   allocation, one integrable random constant, and no singular frame inverse;
+1. group the exact R-072 off-diagonal remainder by the largest shell and prove
+   a terminal-range-square-preserving two-parameter triangular Carleson/
+   paradifferential estimate, or an exact cancellation back into the R-069
+   control/mixed telescope;
 2. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
@@ -335,17 +362,17 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_one_form_sobolev_linear_closure_verify.py
+python codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `21/21`;
-- non-importing independent `21/21`;
-- integrated `35/35`, hence aggregate `77/77`;
-- exact full polynomial/rational frame split, nonzero low--high symbols,
-  derived symmetric/Cartan Young exponents, common terminal-frame kernel,
-  positive nonlinear leakage slope, and prior R-070 execution;
+- primary `32/32`;
+- non-importing independent `26/26`;
+- integrated `37/37`, hence aggregate `95/95`;
+- exact gauge-kernel strata and differentiated gauge identities, inverse-free
+  completion, the `1/432` diagonal one-use constant, sixth-moment dyadic tail,
+  terminal sextic retuning, and exact nonzero off-diagonal decomposition;
 - exit code zero.
 
 The seven-page proof note passes the standard form check, zero-overfull gate,
@@ -354,6 +381,19 @@ and direct rendered-page visual QA.
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_phase_kernel_causal_diagonal_reduction_manifest.json`
+- `notes/classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0.tex.txt`
+- `notes/classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction.py`
+- `../../codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_independent.py`
+- `../../codes/foundations/a13_classii_phase_kernel_causal_diagonal_reduction_verify.py`
+- `runs/2026-07-24-primary-phase-kernel-causal-diagonal-reduction/result.json`
+- `runs/2026-07-24-independent-phase-kernel-causal-diagonal-reduction/result.json`
+- `runs/2026-07-24-integrated-phase-kernel-causal-diagonal-reduction/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-diagonal-to-terminal-collapse`
+
+The immediate one-form predecessor remains binding:
 
 - `classii_one_form_sobolev_linear_closure_manifest.json`
 - `notes/classii-one-form-sobolev-linear-closure-and-kernel-leakage-260724-v1.0.tex.txt`
@@ -366,8 +406,8 @@ The latest subproof package is:
 - `runs/2026-07-24-integrated-one-form-sobolev-linear-closure/result.json`
 - `../../negative-results/registry.md#ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur`
 
-The immediate Wick--Doob predecessor remains binding subject to the R-071
-regularity correction:
+The Wick--Doob predecessor remains binding subject to the R-071 regularity
+correction:
 
 - `classii_wick_doob_terminal_resolvent_reduction_manifest.json`
 - `notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt`
@@ -602,9 +642,10 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     exact pathwise CC telescope is essential.
 35. **UPHELD AGAINST CLOSURE: the local endpoint lift proves controlled-shell
     one-use.**  R-070 terminalizes the adapted current and R-071 pays its full
-    linear symmetric--Cartan frame at the honest weaker Sobolev order, but the
-    coupled nonlinear rational-frame/cross-square lower bound, finite-energy
-    extension, one-use, and Nelson steps remain open.  No tier change follows.
+    linear symmetric--Cartan frame at the honest weaker Sobolev order. R-072
+    pays the matched nonlinear same-shell diagonal, but the terminal off-
+    diagonal lower bound, finite-energy extension, one-use, and Nelson steps
+    remain open. No tier change follows.
 36. **DISMISSED: the full coefficient Wick product cannot be transported.**
     The R-070 pointwise conditional identity transports it exactly and combines
     `CC/GG/mixed` into the terminal covariance-normal current.  The raw form
@@ -652,9 +693,36 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     coupling, Cameron--Martin energy, spatial frequency localization, or the
     integrated covariance-normal cancellations.
 45. **UPHELD AGAINST A13 CLOSURE: paying the full linear frame proves one-use.**
-    R-071 closes only the linear fixed-floor subgate.  The integrated
-    strict-past nonlinear kernel leakage, finite-energy extension,
-    controlled-shell one-use, and Nelson/measure synthesis remain open.
+    R-071 closes only the linear fixed-floor subgate. R-072 additionally
+    closes the matched same-shell diagonal, not the full terminal leakage.
+    The off-diagonal triangular bound, finite-energy extension, controlled-
+    shell one-use, and Nelson/measure synthesis remain open.
+46. **DISMISSED: the common terminal-frame kernel requires an inverse on its
+    range.**  The exact kernel strata are phase-gauge directions, with further
+    rank loss on singular strata. The regularized completion inverts only
+    `theta T^*Q T+tau I`, retains a `1-theta` fraction of the terminal square,
+    and assigns the kernel cost to Cameron--Martin energy.
+47. **DISMISSED: the R-071 invisible direction defeats every integrated
+    estimate.**  It is exactly the endpoint doublet phase direction. The
+    differentiated gauge identity turns its nonlinear leakage into a term
+    quadratic in the control displacement, giving the floor-uniform local
+    bound `C_*|a|^2|G|` and the matched diagonal one-use estimate.
+48. **VALID WITH MITIGATION: the sixth-moment random remainder is one constant
+    per shell and therefore diverges.**  Sequence Holder is applied before
+    Young, producing the single sum `R_infty`. Its expectation is bounded by
+    `15 L^3(C_*C_nabla)^6 C_D^3(8/7)N_j0^-3`, where the covariance trace is
+    for the full 18-component gradient vector. The terminal sextic conversion
+    retains the actual Littlewood--Paley constant and one Doob maximal norm.
+49. **UPHELD AGAINST PATHWISE CAUSALIZATION: terminal `G` can be replaced by
+    strict-past `G_j` in every term.**  The replacement is exact only in
+    expectation for the matched diagonal after conditioning on future same-
+    point values. It is neither a global value--derivative independence nor a
+    license to differentiate future adapted controls.
+50. **UPHELD AGAINST DIAGONAL-TO-TERMINAL COLLAPSE: the matched same-shell term
+    is the full nonlinear leakage.**  Exact expansion leaves three off-
+    diagonal families. In an independent production fixture their combined
+    magnitude exceeds the diagonal by a factor above 4087, so they are a
+    load-bearing successor rather than an error term.
 
 ## Falsifier
 
@@ -731,6 +799,18 @@ leakage slope.  A source/PDF hash mismatch, failed seven-page PDF QA, or
 failure of the primary `21/21`, independent `21/21`, integrated `35/35`, and
 aggregate `77/77` verifier contracts also falsifies this continuation.
 
+The phase-kernel/causal-diagonal continuation is additionally falsified by a
+wrong kernel stratum, failure of either differentiated gauge identity,
+inversion of a singular terminal frame, failure of the floor-uniform
+`C_*|a|^2|G|` bound or the `1/432` weighted AM--GM coefficient, use of a
+per-shell rather than accumulated random constant, omission of the full
+18-component covariance trace or the sharp-cube Littlewood--Paley constant,
+pathwise use of the expectation-only causalization, deletion of the finite-low
+boundary or any off-diagonal family, failure of the independent load-bearing
+fixture, a source/PDF hash mismatch, failed seven-page PDF QA, or failure of
+the primary `32/32`, independent `26/26`, integrated `37/37`, and aggregate
+`95/95` verifier contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -781,6 +861,17 @@ does not refute or prove the integrated strict-past Cameron--Martin/frequency
 estimate.  Finite-energy extension, controlled-shell one-use, Nelson,
 interacting-measure construction, floor/regulator removal, infinite volume,
 phase transition, BCC selection, and T5--T7 remain open.  A13 stays T4.
+
+The phase-kernel/causal-diagonal theorem classifies the exact gauge kernel,
+avoids a singular inverse, and pays only the matched strict-past same-shell
+nonlinear leakage. Its causalization is expectation-only, its sixth-moment
+bound uses the whole gradient covariance, and its terminal sextic retuning
+retains the actual sharp-cube Littlewood--Paley constant. The exact terminal
+off-diagonal remainder is not controlled or cancelled. Consequently R-072
+does not close the integrated nonlinear kernel theorem, extend to every
+finite-energy drift, prove controlled-shell one-use or Nelson, construct an
+interacting measure, remove a floor or regulator, take infinite volume, prove
+phase transition or BCC selection, or justify T5--T7. A13 stays T4.
 
 ## History
 
@@ -859,3 +950,12 @@ phase transition, BCC selection, and T5--T7 remain open.  A13 stays T4.
   positive nonlinear leakage retires pointwise square closure but leaves the
   integrated strict-past Cameron--Martin/frequency theorem open.  Finite-
   energy extension, one-use, and Nelson remain; tier stays T4.
+- 2026-07-24: Classified the exact production phase-gauge kernel, proved the
+  differentiated gauge identity and inverse-free regularized completion, and
+  paid the matched strict-past same-shell nonlinear leakage with one control
+  allocation, one terminal sextic allocation, and one cutoff-independent
+  sixth-moment random constant. Exact terminal expansion and an independent
+  fixture show that three off-diagonal families are load-bearing, with
+  magnitude over 4087 times the diagonal in the fixture. The next child is a
+  largest-shell triangular Carleson/telescope bound; finite-energy, one-use,
+  and Nelson remain open and the tier stays T4.

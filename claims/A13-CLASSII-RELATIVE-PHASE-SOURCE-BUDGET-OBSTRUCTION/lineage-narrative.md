@@ -97,6 +97,21 @@ endpoint theorem.
     for that leakage. After it, extend from regular controls to the declared
     finite-energy class, close controlled-shell one-use, and return to Nelson
     and the finite-volume measure gates.
+13. **Phase-kernel and causal diagonal reduction.** R-072 classifies the exact
+    doublet/singlet phase-gauge kernel of the stacked production frame and
+    replaces every singular frame inverse by a regularized completion that
+    retains part of the terminal square. A differentiated gauge identity and
+    the floor-uniform bound `C_* |a|^2 |G|` close the matched strict-past same-
+    shell leakage with one Cameron--Martin allocation, one terminal sextic
+    allocation, and one cutoff-independent random constant whose sixth-moment
+    tail is `O(N_j0^-3)`. This does not equal the terminal leakage: exact shell
+    expansion leaves three off-diagonal families, and an independent
+    production fixture makes their combined magnitude over 4087 times the
+    diagonal. The current child is therefore a largest-shell triangular two-
+    parameter Carleson estimate, or an exact cancellation back into the R-069
+    control/mixed telescope, with the terminal range square retained. Only
+    after that may finite-energy extension, controlled-shell one-use, and
+    Nelson be attempted.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

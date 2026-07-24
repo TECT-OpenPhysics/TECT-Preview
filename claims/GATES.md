@@ -417,9 +417,16 @@ raw/Wick covariance trace and transported tail are paid, and terminal Schur
 completion leaves one adapted centered-resolvent object. The adapted terminal
 coefficient is not automatically centered. The exact full weighted linear
 frame then splits into symmetric and Cartan channels: its Cartan and `q11`
-pure-`pp` pieces are paid, but its non-`pp` symmetric model attribution remains
-open. The following nonlinear rational-frame/cross-square estimate, the
-extension to every finite-energy drift, and the umbrella theorem remain open.
+pure-`pp` pieces are paid. R-071 corrects the false raw linear regularity
+attribution and closes the complete fixed-floor symmetric--Cartan frame
+through the R-050 enhancement. R-072 classifies the exact phase-gauge kernel,
+proves an inverse-free completion, and pays the matched strict-past same-shell
+nonlinear leakage with one accumulated integrable random constant and an
+`O(N_j0^-3)` sixth-moment tail. The full terminal expansion has three load-
+bearing off-diagonal families, larger than the diagonal by a factor above
+4087 in an independent fixture. Their largest-shell triangular Carleson/
+telescope bound, the extension to every finite-energy drift, and the umbrella
+theorem remain open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -570,9 +577,13 @@ and coherent frozen-value grouping telescopes pure-control current creation.
 R-070 then proves the complete Wick--Doob current telescope, raw/Wick trace
 restoration, covariance-tail payment, terminal Schur completion, and the exact
 full weighted symmetric--Cartan linear-frame split. Its Cartan and `q11`
-pure-`pp` pieces reduce to pinned one-use estimates. The non-`pp` symmetric
-model attribution and the subsequent nonlinear rational-frame/cross-square
-lower bound remain.
+pure-`pp` pieces reduce to pinned one-use estimates. R-071 corrects the raw
+regularity and closes the remaining linear frame. R-072 proves the exact
+phase-gauge kernel and closes the matched same-shell nonlinear diagonal with
+one cutoff-independent sixth-moment random constant, but its exact terminal
+expansion leaves a load-bearing three-family off-diagonal remainder. A
+largest-shell triangular two-parameter Carleson estimate or exact return to
+the R-069 telescope remains.
 
 ### **A13-CLASSII-AVERAGED-RAW-CURRENT-CARTAN-JACOBI-FORM-BOUND**
 
@@ -613,11 +624,14 @@ conversion restores only the already summable R-066 trace, and that the
 transported covariance tail and terminal Hilbert--Schmidt trace are below the
 declared budgets. It also proves that the terminal translated-current is
 equivalent to one adapted centered-resolvent chaos and that automatic
-centering and a derivative-free Stein closure fail. The exact finite-cutoff
-analytic core therefore has two ordered subgates: the balanced
-`H^{-1-kappa}` model attribution for the non-`pp` symmetric linear frame, then
-the coupled nonlinear rational-frame/cross-square object with its coefficient
-remainder and terminal square retained.
+centering and a derivative-free Stein closure fail. R-071 closes the complete
+fixed-floor linear frame at the corrected weaker order. R-072 then closes the
+matched strict-past same-shell nonlinear leakage using the exact gauge-kernel
+identity and one accumulated random constant, but proves that the full
+terminal object contains three non-negligible off-diagonal families. The
+remaining finite-cutoff analytic core is their terminal-range-square-
+preserving largest-shell triangular Carleson/paradifferential bound or exact
+cancellation into the R-069 control/mixed telescope.
 
 ### **A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE**
 
@@ -644,7 +658,7 @@ localization/lower-semicontinuity extension to the declared finite-energy
 control class.
 
 **Status:** REDUCED-NOT-CLOSED CURRENT CHILD (2026-07-24), proof-ordered after
-R-070 `A13-CLASSII-WICK-DOOB-TERMINAL-RESOLVENT-REDUCTION` and before
+R-072 `A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION` and before
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`. R-068 proves the nonlinear
 harvest, full-score Carleson estimate, uncontrolled-base Gaussian tails, tip-
 safe secant, physical distance, and global centered form. R-069 then falsifies
@@ -659,12 +673,17 @@ with arbitrary budgets. R-070 terminalizes the full coefficient current into
 the exact terminal translated-current, restores and pays the raw/Wick trace,
 pays the transported covariance tail, completes the terminal Schur square,
 and decomposes the full weighted linear production frame exactly into
-symmetric and Cartan channels. The Cartan channel and `q11` pure-`pp` term are
-paid; the non-`pp` symmetric part still needs its balanced model attribution.
+symmetric and Cartan channels. R-071 corrects its raw regularity attribution
+and pays the complete fixed-floor linear frame through the R-050 enhancement.
 A bounded adapted terminal coefficient refutes automatic resolvent centering;
-Stein closure would require uncontrolled Malliavin derivatives. The next
-successor is the coupled nonlinear rational-frame/cross-square estimate with
-its coefficient remainder and terminal square retained. Exact isolated `1:2`
+Stein closure would require uncontrolled Malliavin derivatives. R-072 then
+classifies the exact gauge kernel and closes the matched strict-past same-shell
+nonlinear diagonal with one accumulated random constant. Exact terminal
+expansion and an independent production fixture prove that the three-family
+off-diagonal remainder is load-bearing. The next successor groups that
+remainder by largest shell and proves a terminal-square-preserving triangular
+two-parameter Carleson estimate, or cancels it exactly into the R-069
+control/mixed telescope. Exact isolated `1:2`
 and `1:3` adapted harmonics
 remain summable and do not falsify that global statement. This bound, finite-
 energy extension, one-use, Nelson theorem, and any tier promotion remain open.

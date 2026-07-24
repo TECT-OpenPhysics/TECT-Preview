@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-072](#r-072) | Gauge-kernel strata and causal same-shell diagonal one-use reduction | Scoped T4 exact/analytic/executed subproof: the production frame has the exact local phase-gauge kernel, a differentiated gauge identity converts its nonlinear leakage to a quadratic control displacement, and one sequence Holder plus one weighted AM--GM pays the matched strict-past same-shell diagonal with one cutoff-independent integrable random constant and an `O(N_j0^-3)` sixth-moment tail. The exact terminal expansion contains a load-bearing off-diagonal remainder, larger than the diagonal by a factor above 4087 in an independent fixture; 95/95 aggregate assertions |
 | [R-071](#r-071) | One-form Sobolev linear-frame completion and terminal-frame kernel leakage | Scoped T4 analytic/exact/executed subproof: the R-070 `H^{-1-1/10}` raw attribution is false by strict low--high blocks; the R-050 enhancement reconstructs the full matrix one-form in `H^{-1/2-delta}`, and generalized symmetric/Cartan interpolation closes the complete fixed-floor linear frame. An exact common terminal-frame kernel carries nonzero nonlinear leakage, retiring pointwise square closure; the integrated strict-past Cameron--Martin/frequency estimate remains; 77/77 aggregate assertions |
 | [R-070](#r-070) | Wick--Doob terminalization and adapted-resolvent boundary | Scoped T4 exact/analytic/executed subproof: the full current terminalizes as one covariance-normal CC/GG/mixed boundary; raw/Wick and Abel--Hardy trace channels close; terminal Schur pays the Hilbert--Schmidt trace; the full weighted linear frame has an exact symmetric--Cartan split. Automatic adapted centering is false; R-071 corrects the initial raw linear regularity/payment claim and closes the full linear frame at the honest weaker order; the coupled nonlinear rational-frame/cross-square bound remains; 85/85 aggregate assertions |
 | [R-069](#r-069) | Endpoint-lifted Schur and coherent causal-grouping reduction | Scoped T4 exact/analytic/executed subproof: rotating phase kernels falsify the old affine full-score tangent; a hybrid endpoint lift proves floor- and derivative-displacement-uniform good/bad and global Schur bounds, while coherent frozen-value grouping telescopes pure-control current creation and transfers the centered scalar component of the Gaussian quadratic defect to the R-068 global centered form; the adapted transported-current/GG lower bound remains open; 112/112 aggregate assertions |
@@ -90,6 +91,77 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-072"></a>
+### R-072 -- Gauge-kernel strata and causal same-shell diagonal one-use reduction
+
+**Result ID.**
+`A13-CLASSII-PHASE-KERNEL-CAUSAL-DIAGONAL-ONE-USE-REDUCTION`.
+
+**Statement.**  Let `T_x b=(M_r(x)^T b)_(r=1)^3` for
+`x=(u,s) in C^2 plus C`.  On the generic stratum its exact real kernel is
+`span_R{(iu,0),(0,is)}`; at `s=0` the whole singlet plane joins the doublet
+phase, and at `u=0` the frame vanishes.  Thus no fixed-rank terminal-frame
+inverse exists.  For either phase generator `J_alpha`, the exact nonlinear
+remainder
+`E_r=M_r(z+a)-M_r(z)-DM_r(z)[a]` obeys
+`E_r^T J_alpha(z+a)=-DM_r(z)[a]^T J_alpha a`.  The R-071 invisible fixture is
+exactly the doublet phase direction.
+
+The floor-uniform local estimate
+`|sum_r E_r Q_II M_r(z)^T y| <= C_* |a|^2 |y|` holds with
+`C_*=24 ||Q_II||_op(sqrt(34)+4sqrt(2))=1.5397534378598672`.  For predictable
+whole-shell controls `a_j=K_j h_j`, the matched same-shell diagonal therefore
+satisfies
+
+`sum_j |Lambda_j| <= eta X+zeta_d Y_d+R_infty/(432 eta^3 zeta_d^2)`.
+
+Here `X=sum_j||h_j||^2`, `Y_d=sum_j||a_j||_6^6`, and `R_infty` is one
+accumulated random constant.  If `C_D N_j` bounds the full 18-real-component
+derivative covariance trace and `C_nabla` is the full-gradient smoothing
+constant, then
+`E R_infty <= 15 L^3(C_* C_nabla)^6 C_D^3(8/7)N_j0^-3`.  Retuning through the
+actual sharp-cube Littlewood--Paley constant and the terminal sextic preserves
+one cutoff-independent Doob-integrable remainder.  Replacing terminal `G` by
+strict-past `G_j` is an expectation identity after same-point conditioning,
+not a pathwise independence statement.
+
+For the high block based at `z_0=U+A_<j0`, the full terminal leakage is exactly
+the matched diagonal plus three explicit off-diagonal families.  An
+independent production fixture gives LHS `0.0583409867702`, diagonal
+`1.42693028427e-5`, and off-diagonal remainder `0.0583267174674`; hence its
+absolute ratio to the diagonal exceeds `4087`.  The off-diagonal remainder is
+therefore load-bearing.  A regularized completion can avoid a singular frame
+inverse by inverting only `theta T^*Q T+tau I`, retaining a `1-theta` fraction
+of the terminal square; the Cameron--Martin cost must supply `tau` on gauge
+directions.
+
+**Proven in.** A13 /
+`classii-phase-kernel-causal-diagonal-and-off-diagonal-reduction-260724-v1.0`,
+with primary 32/32, non-importing independent 26/26, integrated 37/37,
+aggregate 95/95, and a seven-page PDF passing form, zero-overfull, and direct
+all-page visual QA.
+
+**Reuse scope.** Exact gauge-kernel classification for the production frame;
+inverse-free regularized completion; floor-uniform quadratic leakage bound;
+strict-past same-shell one-use allocation; sixth-moment dyadic summation; and
+the exact diagonal/off-diagonal terminal decomposition.  The terminal
+`G -> G_j` step is expectation-only, and the stated covariance constant is
+for the complete 18-component gradient vector.
+
+**Boundary.** The matched same-shell diagonal is closed, but the exact
+off-diagonal terminal remainder is not controlled or cancelled.  Therefore
+R-072 does not close the integrated nonlinear kernel theorem, extend to every
+finite-energy drift, prove controlled-shell one-use or the `q=10/9` Nelson
+theorem, construct an interacting measure, remove the floor or regulator,
+take infinite volume, or justify T5--T7.  Tier T4; no promotion.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-050 and R-059--R-071, after a largest-shell triangular two-parameter
+Carleson estimate or exact telescope controls the off-diagonal remainder and
+the finite-energy, one-use, and Nelson gates are resolved.
+
+---
 
 <a id="r-071"></a>
 ### R-071 -- One-form Sobolev linear-frame completion and terminal-frame kernel leakage

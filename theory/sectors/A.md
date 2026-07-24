@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-24-A13-DIAGONAL-TO-TERMINAL-COLLAPSE | the matched diagonal is not the full terminal leakage | The strict-past same-shell calculation replaces the terminal |
 | NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR | raw linear regularity and pointwise terminal-square closure  | Two successive shortcuts fail. First, the R-070 proposal |
 | AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP | verification depended on mutable successor state and an unde | The first R-071 integrated wrapper executed the complete |
 | AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP | imported runtime closure was checked too late | The first integrated R-070 verifier pinned its own sources |
