@@ -19,6 +19,10 @@ status line: `[ENTRY-OK] <date> | claims: <n> | top priority: <gate>`.
 On a freshly copied workspace, run `python verification/scripts/doctor.py`
 first (readiness gate) and follow `SESSION.md` to resume.
 
+For cross-claim route planning, search `theory/proof-evidence-map.md` by the
+relevant claim/result/failure/gate ID and open only the linked authorities.
+Do not load the complete map when a narrow lookup is sufficient.
+
 ## 2. Write discipline
 
 - All tracked files are **English-only**. Korean stays in chat.
@@ -48,6 +52,11 @@ first (readiness gate) and follow `SESSION.md` to resume.
 - `CATALOG.md` + `verification/catalog.json` are generated — never hand-edit.
   Regenerate with `python verification/scripts/build_catalog.py` after any
   file add/move/version; CI checks sync.
+- `theory/proof-evidence-map.md` + `verification/proof-evidence-map.json` are
+  generated — never hand-edit. They project all current claims, accepted
+  reusable results, failed routes, events, tasks, gates, and evidence paths.
+  Regenerate with `python verification/scripts/build_proof_evidence_map.py`;
+  policy: `governance/proof-evidence-map.md`.
 - `TODO.md` is generated from `todo/todo.json` — never hand-edit; manage with
   `python verification/scripts/todo.py {list,add,start,done,block,set,render}`.
 - `CHANGELOG.md` is generated from `changelog/log.jsonl` (append-only) — never

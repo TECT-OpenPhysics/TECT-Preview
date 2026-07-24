@@ -12,12 +12,12 @@ Tier profile: T6x2 T5x1 T3x1 T1x2
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
-| [`D1-SO10-BUNDLE`](../../claims/D1-SO10-BUNDLE/INDEX.md) | T6 | H-LEGACY-CHAIN, H-CP2-BUNDLE-DATA | — | SO(10) emergence via BCC defect bundle on CP2 |
-| [`D2-GAUGE-FORCING`](../../claims/D2-GAUGE-FORCING/INDEX.md) | T3 | — | — | Gauge-group emergence by flat-Cartan forcing (post-rollback) |
-| [`D3-CHIRALITY`](../../claims/D3-CHIRALITY/INDEX.md) | T6 | H-LEGACY-CHAIN | — | Chirality with protected zeros |
-| [`D4-QUANTUM-CONSISTENCY`](../../claims/D4-QUANTUM-CONSISTENCY/INDEX.md) | T5 | — | CP-UNITARITY | Quantum consistency per generation |
-| [`D5-GENERATIONS`](../../claims/D5-GENERATIONS/INDEX.md) | T1 | — | — | Three fermion generations from the defect-bundle topology |
-| [`D6-GUT-BREAKING`](../../claims/D6-GUT-BREAKING/INDEX.md) | T1 | — | — | SO(10) to Standard-Model symmetry-breaking cascade |
+| [`D1-SO10-BUNDLE`](../../claims/D1-SO10-BUNDLE/claim.md) | T6 | H-LEGACY-CHAIN, H-CP2-BUNDLE-DATA | — | SO(10) emergence via BCC defect bundle on CP2 |
+| [`D2-GAUGE-FORCING`](../../claims/D2-GAUGE-FORCING/claim.md) | T3 | — | — | Gauge-group emergence by flat-Cartan forcing (post-rollback) |
+| [`D3-CHIRALITY`](../../claims/D3-CHIRALITY/claim.md) | T6 | H-LEGACY-CHAIN | — | Chirality with protected zeros |
+| [`D4-QUANTUM-CONSISTENCY`](../../claims/D4-QUANTUM-CONSISTENCY/claim.md) | T5 | — | CP-UNITARITY | Quantum consistency per generation |
+| [`D5-GENERATIONS`](../../claims/D5-GENERATIONS/claim.md) | T1 | — | — | Three fermion generations from the defect-bundle topology |
+| [`D6-GUT-BREAKING`](../../claims/D6-GUT-BREAKING/claim.md) | T1 | — | — | SO(10) to Standard-Model symmetry-breaking cascade |
 
 **Open named hypotheses (sector union):** H-CP2-BUNDLE-DATA, H-LEGACY-CHAIN  
 **Open gates (sector union):** CP-UNITARITY

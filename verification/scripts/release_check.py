@@ -9,7 +9,7 @@ become public satisfies the publication invariants
 (governance/publication-tiers.md):
 
   1. claim ledger valid + CLAIMS.md / BY-CLAIM.md in sync (lint_claims)
-  2. catalog in sync (build_catalog --check)
+  2. all shared generated surfaces in sync, including the proof evidence map
   3. P0 fence: `internal/` is gitignored and never referenced from P1/P2 text
   4. English-only policy: no Hangul in any publishable file
   5. no-overclaim phrase scan on claim/theory/publish surfaces
@@ -27,8 +27,10 @@ Changelog:
         skips the .tmp.driveupload junk class. SKIP_DIRS kept for the no-git fallback only.
   1.1.0 (2026-07-17) enforce P0 verification baseline: verify_claim entrypoint exists and
         every tracked bundle MANIFEST has a stamped repo_commit, not the publish placeholder.
+  1.2.0 (2026-07-23) shared gates include the complete-by-reference global proof
+        evidence map and its registry/graph/staleness checks.
 """
-__version__ = "1.1.1"
+__version__ = "1.2.0"
 __first_issued__ = "2026-06-05"
 __version_issued__ = "2026-07-23"
 

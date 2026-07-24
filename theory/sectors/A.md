@@ -12,7 +12,7 @@ Tier profile: T6x9 T5x7 T4x5
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
-| [`A1-KERNEL-CONV`](../../claims/A1-KERNEL-CONV/INDEX.md) | T5 | — | — | Production-kernel convention and G6 recomputation cascade |
+| [`A1-KERNEL-CONV`](../../claims/A1-KERNEL-CONV/claim.md) | T5 | — | — | Production-kernel convention and G6 recomputation cascade |
 | [`A1-KERNEL-IDENTITY`](../../claims/A1-KERNEL-IDENTITY/INDEX.md) | T6 | A1-KERNEL-CONV | — | Kernel complete-the-square identity (zero-momentum vs shell mass) |
 | [`A1-PRODUCTION-FUNCTIONAL-REALISATION`](../../claims/A1-PRODUCTION-FUNCTIONAL-REALISATION/INDEX.md) | T5 | — | — | Full production functional realisation: standalone variational backend |
 | [`A1-PRODUCTION-KERNEL-MANIFEST`](../../claims/A1-PRODUCTION-KERNEL-MANIFEST/INDEX.md) | T5 | — | — | Canonical N-001 production-kernel manifest: scalar-slice consistency gates |
@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER | absolute score and full fast remainder fail | Two proposed continuations attempted to close the production |
 | NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY | shellwise raw positivity and geometry-only one-use fail | Two proposed shortcuts attempted to close the averaged |
 | NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE | shellwise heat and separated charge routes fail | A forward proof attempted to bound each conditional heat |

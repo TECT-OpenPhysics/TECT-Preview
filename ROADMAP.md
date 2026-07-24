@@ -5,6 +5,10 @@
 `RESULTS-LEDGER.md`, and `TODO.md`. The legacy `TOE-FACT-SHEET.md` snapshot is
 bootstrap provenance only and is not a current-status authority.
 
+The generated cross-route view is `theory/proof-evidence-map.md`: it joins
+accepted results, failed routes and reasons, open gates, live tasks, lineages,
+and reproduction entrypoints by reference without becoming a status authority.
+
 Stages are sequential in their exit conditions but parallel in day-to-day work.
 A stage is closed only when its exit condition is met at the stated tier with a
 verification package. The publication-complete deliverable of each claim is a

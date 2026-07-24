@@ -3,7 +3,7 @@
 Generated from `todo/todo.json` by `verification/scripts/todo.py` -- **never hand-edit**; run `todo.py render`.
 Portable: copying the TECT folder carries this ledger; a fresh cowork session reads it in the session-entry prelude (CLAUDE.md §1).
 
-Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
+Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
@@ -19,6 +19,9 @@ Counts: In progress 1 · Next up 1 · Blocked 1 · Backlog 3 · Done (recent) 44
 
 ## Blocked
 
+- **T-032** Operator-independent certification and main-proof-line decision for the canonical N-001 scalar-slice manifest before any T5 package  _(owner: operator; claim: A1-PRODUCTION-KERNEL-MANIFEST)_
+  - Promotion package reconciled 2026-07-16: v1.6 verifier 14/14 PASS; historical bundles are pre-certification evidence with verified manifests. Required: independent run, ratify eps_Z/eps_m/eps_r plus config and three source hashes, then decide main-line status. No tier action until those decisions.
+  - _updated 2026-07-24_
 - **T-048** A11: prove the true-increment stabilised relative log-Laplace bound  _(owner: Codex; claim: A11-CLASSII-TRUE-INCREMENT-DETERMINANT-REDUCTION; gate: A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE; blocked by: T-050)_
   - Blocked by T-050 at A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE. A13 v1.1 proves exact equivalence to the q=10/9 Nelson moment and retires local Bellman, endpoint-only timewise Young, repeated past-energy, and direct one-shot Ramer repairs. Only after a signed global cancellation closes the one-use theorem may the A11 stabilised relative log-Laplace statement be reformulated; no unique successor method is assumed.
   - _updated 2026-07-21_

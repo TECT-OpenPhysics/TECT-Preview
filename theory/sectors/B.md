@@ -15,8 +15,8 @@ Tier profile: T7x3 T5x1 T4x1 T1x1 T0x1
 | [`B1-RH-ENUM`](../../claims/B1-RH-ENUM/INDEX.md) | T7 | A1-KERNEL-CONV | — | Reading-H selection within enumerated condensate ensembles |
 | [`B2-PROPA-HLAYER`](../../claims/B2-PROPA-HLAYER/INDEX.md) | T7 | A1-KERNEL-CONV | — | Proposition A: the isotropic Gaussian-Hartree layer is the strict comparison inf |
 | [`B3-BCC-STRUCT`](../../claims/B3-BCC-STRUCT/INDEX.md) | T0 | — | — | BCC structural selection among tested ordered condensates |
-| [`B3-RH-TESTED-STRUCTURE-RANKING`](../../claims/B3-RH-TESTED-STRUCTURE-RANKING/INDEX.md) | T4 | — | ESTIMATOR-UPGRADE | Reading-H is selected within the tested ordered-reading ensemble (estimator grad |
-| [`B4-CONE-CURVATURE-ANCHOR`](../../claims/B4-CONE-CURVATURE-ANCHOR/INDEX.md) | T5 | — | — | BCC single-mode-cone uniqueness + positive local curvature anchor (metastable br |
+| [`B3-RH-TESTED-STRUCTURE-RANKING`](../../claims/B3-RH-TESTED-STRUCTURE-RANKING/claim.md) | T4 | — | ESTIMATOR-UPGRADE | Reading-H is selected within the tested ordered-reading ensemble (estimator grad |
+| [`B4-CONE-CURVATURE-ANCHOR`](../../claims/B4-CONE-CURVATURE-ANCHOR/claim.md) | T5 | — | — | BCC single-mode-cone uniqueness + positive local curvature anchor (metastable br |
 | [`B4-MASS-GAP`](../../claims/B4-MASS-GAP/INDEX.md) | T1 | — | — | BCC ground-state uniqueness within the single-mode constraint cone |
 | [`B5-BEYOND-LAYER-BOUND`](../../claims/B5-BEYOND-LAYER-BOUND/INDEX.md) | T7 | A1-KERNEL-CONV | — | Pattern-generic Gershgorin reduction of the beyond-layer bound |
 
@@ -31,6 +31,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-legacy-ordered-vacuum | fixed ordered BCC vacuum as ground state | fluctuation restoration |
 | R-2026-legacy-rh-overclaim | estimator-only Reading-H claim above T5 | controlled error bound missing |
 | NG-2026-06-07-scscope-endpoint-joint | SC-SCOPE all-orders endpoint (B5/B1) | the individually-positive third-order channels (sunset x1.13, quartic-difference x1.29, tadpole 0) JOINTLY over-consume the endpoint layer m |
@@ -39,7 +40,8 @@ _None linked to this sector._
 | AUDIT-2026-06-09-res5-survival-overclaim | RES-5 "survives at STRONG EVIDENCE, thin" (B1; certificate v | the higher-skeleton tail bound $C_{\rm higher}\le\text{leading}/(1-0.49)\approx2\times\text{leading}$ is SAME-ORDER (screened-finite), NOT s |
 | F-2026-06-10-res5-projection-route | RES-5 endpoint closure via the pattern projection $\chi_{\rm | the screened response at the BCC $\{110\}$ modulation transfers gives $\chi_{\rm proj}=f_{\rm avg}/C_G=0.613/0.492=1.25>1$ -- the bubble $\c |
 | R-2026-06-23-b3-bcc-structural-selection | fixed-ordered BCC structural selection ($F_{\rm BCC}<F_{\rm  | single-shell SMA ranking inversion + disordered collapse |
-| R-2026-07-16-N001-BCC-SEED-COLLAPSE | ??N-001 q1a BCC-seed sweep does not retain a q0-shell BCC br | all 48 stored `q1a_bcc_search` N32 outputs that contained both |
+| AUDIT-2026-06-08-scscope-lift-overclaim | SC-SCOPE endpoint-lift bookkeeping overclaim | The withdrawn SC-SCOPE all-orders endpoint lift |
+| R-2026-07-16-N001-BCC-SEED-COLLAPSE | N-001 q1a BCC-seed sweep does not retain a q0-shell BCC bran | all 48 stored `q1a_bcc_search` N32 outputs that contained both |
 
 ---
 

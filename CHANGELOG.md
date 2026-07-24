@@ -5,6 +5,18 @@ not pillar counts.
 
 ---
 
+## [Reject and repair semantically unsafe proof-map draft] - 2026-07-24
+
+The pre-commit adversarial audit rejected whole-record family inference, leaking registry boundaries, platform-sensitive source hashes and manifest discovery, omitted live child-gate ownership, and clipped honesty boundaries. The generator now derives claim edges only from structured or explicit canonical fields, preserves legacy/unindexed diagnostics, uses cross-platform deterministic evidence classes, and tests the concrete false-edge and bypass cases. No claim tier changed.
+
+## [Harden proof-map verification runtime on Windows] - 2026-07-24
+
+Added pytest to the reproducible environment and doctor readiness gate; made subprocess tests explicitly UTF-8; added local-link, graph-authority, live-gate, historical-gate, and non-bypassable footer enforcement checks. Completed tasks retaining retired gate names are now typed as historical references instead of being mislinked to current GATES anchors.
+
+## [Add global proof evidence map and coverage gate] - 2026-07-23
+
+Added a deterministic global proof evidence map in human Markdown and machine JSON. It projects all real claim cards, accepted reusable results, failed/retracted/audit routes with reasons and consequences, accepted events, tasks, open gates, graph edges, and per-claim proof evidence paths while preserving canonical authority boundaries. The shared regeneration/readiness/release spine now rejects stale or incomplete maps. The audit also restored the missing B3 structural-selection retraction index row, normalized T-032 blocked status, and made sector dossiers fall back to claim.md when INDEX.md is absent.
+
 ## [A13 tip-safe grouped-harvest reduction] - 2026-07-23
 
 Recorded A13-CLASSII-TIP-SAFE-GROUPED-HARVEST-CARLESON-REDUCTION at scoped T4. The package proves the exact nonlinear harvest, full conservative-score square estimate, uncontrolled-Gaussian N^-1/N^-2 tails, CAT(0) whole secant through tip crossings, floor-uniform physical distance, and the global centered H^(-1-kappa) one-use form with exponent 10/3 at kappa=1/10. Scalar Schur and gauge-beat fixtures retire direct absolute-score integration and correct the full nonlinear-remainder decay claim. The finite-cutoff production good/bad Schur--Jacobi lemma, finite-energy extension, one-use, and Nelson remain open.

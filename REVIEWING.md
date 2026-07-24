@@ -6,8 +6,15 @@ where the weakest joints are and how to hit them.
 ## 1. The map — start here (2 minutes)
 
 ```bash
-cat claims/INDEX.md            # the whole theory on one screen
+cat theory/proof-evidence-map.md   # results, failures, reasons, gates, route
+cat claims/INDEX.md                # top-down claim/proof-unit hierarchy
 ```
+
+`theory/proof-evidence-map.md` is the generated cross-cutting audit map. It
+places accepted reusable results, failed/retracted routes and their reasons,
+live gates/tasks, claim state, lineage, and reproduction entrypoints on one
+linked surface. Its machine-complete companion is
+`verification/proof-evidence-map.json`; neither overrides the linked authority.
 
 `claims/INDEX.md` is the generated top-down map: the six sectors A–F, every
 claim with its tier, named hypotheses, and open gates, and — for the populated

@@ -15,7 +15,9 @@ drift between them. The 2026-06-09 divergence — `release_check` gained
 index/changelog/dossier gates that `doctor.py` lacked — is the failure mode this
 prevents.
 
-Gates (7): ledger, catalog, lineage, index, todo, changelog, dossier.
+The executable list in `gates.py` is the only gate count. It covers ledger,
+catalog, lineage, index, TODO, changelog render/integrity, dossier, and the
+global proof evidence map; policy prose must not duplicate a numeric count.
 
 ## 2. Three enforcement points
 
@@ -39,11 +41,16 @@ ENFORCED (a gate fails the commit): generated surface stale; broken JSON / Pytho
 Hangul in a publishable file; no-overclaim phrase on a claim/theory/publish
 surface; P0 fence; catalog drift.
 
-STILL DISCIPLINE (not yet gated): COMPLETENESS — e.g. "every accepted claim change
-carries a CHANGELOG entry / the full atomic set". The spine guarantees that what IS
-written is consistent and in sync; it does not yet prove that nothing was OMITTED.
-A completeness linter (claim-card change vs. changelog reference) is the next
-hardening step if required.
+PARTIALLY ENFORCED COMPLETENESS: the proof-evidence-map gate requires exact
+index/detail coverage for reusable and negative results, all real status cards,
+all tasks/events, definitions for every currently open gate and hypothesis,
+resolvable graph edges, and a complete per-claim evidence-path inventory.
+
+STILL DISCIPLINE (not yet gated): every accepted claim change carrying the full
+atomic claim/changelog/generated-surface set. The spine proves that registered
+records are present and synchronized; it cannot prove that an unrecorded idea
+or omitted claim change never existed. A version-control diff completeness
+linter remains a possible later hardening step.
 
 ## 5. Cross-OS determinism (generators)
 

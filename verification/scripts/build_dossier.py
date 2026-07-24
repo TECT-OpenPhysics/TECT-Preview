@@ -18,8 +18,10 @@ Usage:
 Changelog:
   1.0.0 (2026-06-09) first issue. Generated sector dossiers (folder-structure
         increment 2: gather-by-reference instead of physical nesting).
+  1.0.1 (2026-07-23) link scaffold claims without a generated INDEX.md to
+        claim.md, eliminating broken dossier targets.
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 import argparse, json, os, re, sys, tempfile
 from pathlib import Path
@@ -40,6 +42,12 @@ def atomic_write(path: Path, text: str):
 
 def pipe(s):
     return str(s).replace("|", "\\|")
+
+
+def claim_target(cid):
+    index = REPO / "claims" / cid / "INDEX.md"
+    leaf = "INDEX.md" if index.exists() else "claim.md"
+    return f"../../claims/{cid}/{leaf}"
 
 
 def load_claims():
@@ -159,7 +167,7 @@ def render_sector(s, claims, preds, negs):
     for cid, c in sorted(claims):
         hyp = ", ".join(c.get("hypotheses", [])) or "—"
         gates = ", ".join(c.get("open_gates", [])) or "—"
-        L.append(f"| [`{cid}`](../../claims/{cid}/INDEX.md) | {c.get('tier','?')} | "
+        L.append(f"| [`{cid}`]({claim_target(cid)}) | {c.get('tier','?')} | "
                  f"{pipe(hyp)} | {pipe(gates)} | {pipe(c.get('title','')[:80])} |")
     # aggregate gates/hypotheses
     allhyp = sorted({h for _, c in claims for h in c.get("hypotheses", [])})
@@ -172,7 +180,7 @@ def render_sector(s, claims, preds, negs):
         L += ["| Prediction | Quantity | Output | Status | Claim |", "|---|---|---|---|---|"]
         for p in preds:
             L.append(f"| {pipe(p['pid'])} | {pipe(p['qty'])} | {pipe(p['out'])} | "
-                     f"{pipe(p['status'])} | [`{p['claim']}`](../../claims/{p['claim']}/INDEX.md) |")
+                     f"{pipe(p['status'])} | [`{p['claim']}`]({claim_target(p['claim'])}) |")
     else:
         L += ["_None linked to this sector._"]
     L += [""]

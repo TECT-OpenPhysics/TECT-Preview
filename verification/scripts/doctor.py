@@ -10,12 +10,13 @@ generated ledger is in sync with its source.
     python verification/scripts/doctor.py
 
 Exit 0 iff READY. Each failed check prints an actionable fix. Readiness now
-includes the Python PDF-inspection packages and a working TeX engine because
-proof-note PDF creation is part of the verification-first workflow. No physics
-constants are hardcoded; the only literal is the minimum supported Python
-version (a tooling requirement, not a result).
+includes the Python test/PDF-inspection packages and a working TeX engine
+because executable tests and proof-note PDF creation are part of the
+verification-first workflow. No physics constants are hardcoded; the only
+literal is the minimum supported Python version (a tooling requirement, not a
+result).
 """
-__version__ = "1.1.1"
+__version__ = "1.2.0"
 __first_issued__ = "2026-06-07"
 __version_issued__ = "2026-07-23"
 
@@ -67,9 +68,12 @@ def main() -> int:
            f"{sys.version_info.major}.{sys.version_info.minor} "
            f"(need >= {MIN_PY[0]}.{MIN_PY[1]})")
 
-    # 2. Python dependencies for numerical and PDF verification
+    # 2. Python dependencies for numerical, test, and PDF verification
     record(importlib.util.find_spec("numpy") is not None, "numpy",
            "import numpy OK" if importlib.util.find_spec("numpy")
+           else "MISSING -- run: pip install -r requirements.txt")
+    record(importlib.util.find_spec("pytest") is not None, "test-runtime",
+           "import pytest OK" if importlib.util.find_spec("pytest")
            else "MISSING -- run: pip install -r requirements.txt")
     pdf_packages = ("pypdf", "pdfplumber", "reportlab")
     missing_pdf = [name for name in pdf_packages if importlib.util.find_spec(name) is None]

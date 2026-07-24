@@ -12,12 +12,12 @@ Tier profile: T4x1 T2x1 T1x4
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
-| [`E1-HIGGS-EW`](../../claims/E1-HIGGS-EW/INDEX.md) | T4 | — | GAP-3 | Higgs mechanism, EW scale, GUT embedding |
-| [`E2-HBAR-ORIGIN`](../../claims/E2-HBAR-ORIGIN/INDEX.md) | T2 | — | — | Origin of hbar: phase-transition programme |
-| [`E3-GAUGE-COUPLINGS`](../../claims/E3-GAUGE-COUPLINGS/INDEX.md) | T1 | — | GAP-3 | Standard-Model gauge couplings and unification |
-| [`E4-FERMION-MASSES`](../../claims/E4-FERMION-MASSES/INDEX.md) | T1 | — | GAP-3 | Charged-fermion mass spectrum and Yukawa hierarchy |
-| [`E5-CKM-MIXING`](../../claims/E5-CKM-MIXING/INDEX.md) | T1 | — | GAP-3 | Quark flavour mixing (CKM matrix) |
-| [`E6-PMNS-NEUTRINO`](../../claims/E6-PMNS-NEUTRINO/INDEX.md) | T1 | — | GAP-3 | Neutrino masses and lepton mixing (PMNS) |
+| [`E1-HIGGS-EW`](../../claims/E1-HIGGS-EW/claim.md) | T4 | — | GAP-3 | Higgs mechanism, EW scale, GUT embedding |
+| [`E2-HBAR-ORIGIN`](../../claims/E2-HBAR-ORIGIN/claim.md) | T2 | — | — | Origin of hbar: phase-transition programme |
+| [`E3-GAUGE-COUPLINGS`](../../claims/E3-GAUGE-COUPLINGS/claim.md) | T1 | — | GAP-3 | Standard-Model gauge couplings and unification |
+| [`E4-FERMION-MASSES`](../../claims/E4-FERMION-MASSES/claim.md) | T1 | — | GAP-3 | Charged-fermion mass spectrum and Yukawa hierarchy |
+| [`E5-CKM-MIXING`](../../claims/E5-CKM-MIXING/claim.md) | T1 | — | GAP-3 | Quark flavour mixing (CKM matrix) |
+| [`E6-PMNS-NEUTRINO`](../../claims/E6-PMNS-NEUTRINO/claim.md) | T1 | — | GAP-3 | Neutrino masses and lepton mixing (PMNS) |
 
 **Open named hypotheses (sector union):** —  
 **Open gates (sector union):** GAP-3
@@ -30,6 +30,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 | NG-2026-legacy-classical-hbar | classical-field-theoretic derivation of $\hbar$ (8 routes) | each route fails (4 Math59 + 3 Math59-v3 + 1 R5) |
 
 ---

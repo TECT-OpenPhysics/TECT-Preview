@@ -12,9 +12,9 @@ Tier profile: T4x1 T1x2
 
 | Claim | Tier | Named hypotheses | Open gates | Title |
 |---|---|---|---|---|
-| [`F1-COSMO-DARK-SECTOR`](../../claims/F1-COSMO-DARK-SECTOR/INDEX.md) | T4 | — | GAP-4 | Cosmological sector programme (Lambda, dark sector) |
-| [`F2-BARYOGENESIS`](../../claims/F2-BARYOGENESIS/INDEX.md) | T1 | — | GAP-4 | Matter-antimatter asymmetry (baryogenesis) |
-| [`F3-INFLATION-CMB`](../../claims/F3-INFLATION-CMB/INDEX.md) | T1 | — | GAP-4 | Primordial cosmology and CMB constraints |
+| [`F1-COSMO-DARK-SECTOR`](../../claims/F1-COSMO-DARK-SECTOR/claim.md) | T4 | — | GAP-4 | Cosmological sector programme (Lambda, dark sector) |
+| [`F2-BARYOGENESIS`](../../claims/F2-BARYOGENESIS/claim.md) | T1 | — | GAP-4 | Matter-antimatter asymmetry (baryogenesis) |
+| [`F3-INFLATION-CMB`](../../claims/F3-INFLATION-CMB/claim.md) | T1 | — | GAP-4 | Primordial cosmology and CMB constraints |
 
 **Open named hypotheses (sector union):** —  
 **Open gates (sector union):** GAP-4
@@ -23,12 +23,14 @@ Tier profile: T4x1 T1x2
 
 | Prediction | Quantity | Output | Status | Claim |
 |---|---|---|---|---|
-| PRED-DM | dark-matter relic | $\Omega_{\rm DM}$ | OPEN | [`F1-COSMO-DARK-SECTOR`](../../claims/F1-COSMO-DARK-SECTOR/INDEX.md) |
-| PRED-GW | phase-transition relic | GW spectrum | OPEN | [`F1-COSMO-DARK-SECTOR`](../../claims/F1-COSMO-DARK-SECTOR/INDEX.md) |
+| PRED-DM | dark-matter relic | $\Omega_{\rm DM}$ | OPEN | [`F1-COSMO-DARK-SECTOR`](../../claims/F1-COSMO-DARK-SECTOR/claim.md) |
+| PRED-GW | phase-transition relic | GW spectrum | OPEN | [`F1-COSMO-DARK-SECTOR`](../../claims/F1-COSMO-DARK-SECTOR/claim.md) |
 
 ## Negative results (trust assets)
 
-_None referencing this sector's claims._
+| Tag | Branch / claim | Failure mode |
+|---|---|---|
+| AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION | proof-map semantic association and portability defects | The first pre-commit generator scanned entire free-form |
 
 ---
 

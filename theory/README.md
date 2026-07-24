@@ -3,6 +3,11 @@
 This folder is NOT the working-note area. It is the **synthesis layer**: the
 consolidated, readable exposition of TECT, rebuilt from the claim ledger.
 
+Start cross-claim navigation at `proof-evidence-map.md`. It is a generated,
+complete-by-reference view of accepted results, failed/retracted routes and
+their reasons, current gates/tasks, claim lineages, and reproduction paths.
+It is not a proof or tier authority; follow its links into Layer 1.
+
 ## The three-layer architecture
 
 | Layer | Folders | Content | Rule |

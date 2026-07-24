@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION](#audit-2026-07-24-proof-map-semantic-association) | proof-evidence-map generator pre-commit adversarial audit | free-form family tokens, leaked section boundaries, and platform-sensitive inventory rules produced false or unstable projections |
 | [NG-2026-legacy-convention](#ng-2026-legacy-convention) | old $r=K(0)$ no-condensation convention | wrong variable convention |
 | [NG-2026-legacy-ordered-vacuum](#ng-2026-legacy-ordered-vacuum) | fixed ordered BCC vacuum as ground state | fluctuation restoration |
 | [R-2026-legacy-newtonG-label](#r-2026-legacy-newtong-label) | Newton $G$ "independently predicted / T7" label | independent prediction missing … |
@@ -16,9 +17,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-06-09-res5-bare-susceptibility-ratio](#ng-2026-06-09-res5-bare-susceptibility-ratio) | RES-5/GAP-2 closure via the BARE susceptibility-ratio bound (B1) | the bare Gaussian-sea ratio … |
 | [R-2026-06-09-res5-ca0-doublecount](#r-2026-06-09-res5-ca0-doublecount) | RES-5 a0-skeleton estimate $c\,a_0\sim0.002$ (B1) | the estimate took $\|\Sigma_2^{\rm pd}\|/\Delta F_{\rm margin}\sim0.04$ … |
 | [AUDIT-2026-06-09-res5-survival-overclaim](#audit-2026-06-09-res5-survival-overclaim) | RES-5 "survives at STRONG EVIDENCE, thin" (B1; certificate v1.0) | the higher-skeleton tail bound … |
+| [AUDIT-2026-06-08-scscope-lift-overclaim](#audit-2026-06-08-scscope-lift-overclaim) | SC-SCOPE all-orders endpoint lift (B5/B1) | a local joint-pairing formula was used outside its valid scaling regime |
 | [F-2026-06-10-res5-projection-route](#f-2026-06-10-res5-projection-route) | RES-5 endpoint closure via the pattern projection $\chi_{\rm proj}\le0.82$ (B1) | the screened response at the BCC $\{110\}$ modulation transfers gives … |
 
 | [R-2026-07-16-N001-BCC-SEED-COLLAPSE](#r-2026-07-16-n001-bcc-seed-collapse) | N-001 q1a BCC-seed sweep | stored fields do not retain q0-shell BCC modulation |
+| [R-2026-06-23-b3-bcc-structural-selection](#r-2026-06-23-b3-bcc-structural-selection) | B3 fixed-ordered BCC structural selection | single-shell ranking inversion and disordered collapse retire the original BCC-selection claim |
 | [AUDIT-2026-07-17-A3-GALERKIN-BALL-UNDERBOUND](#audit-2026-07-17-a3-galerkin-ball-underbound) | A3 full-production discretization T6 v2.1 | continuum H2 ball reused for exact-Galerkin trajectory without proof |
 | [AUDIT-2026-07-19-A3-SHARED-BUNDLE-INTEGRITY](#audit-2026-07-19-a3-shared-bundle-integrity) | A3 shared renormalisation bundle | stale MANIFEST listed two absent notes and a mismatched README hash |
 | [AUDIT-2026-07-19-A4-VERIFIER-TIER-DRIFT](#audit-2026-07-19-a4-verifier-tier-drift) | A4 constructive one-command verifier | v1.0.0 still emitted its pre-promotion T5-to-T6 boundary after T6 enactment |
@@ -44,6 +47,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-24-proof-map-semantic-association"></a>
+### AUDIT-2026-07-24-PROOF-MAP-SEMANTIC-ASSOCIATION -- proof-map semantic association and portability defects
+
+**Failure mode:** The first pre-commit generator scanned entire free-form
+records for short claim-family tokens. Mathematical fixture labels such as
+`F1` and `E4/E5/E6` therefore created false claim edges. Detail parsing ended
+only at the next recognized identifier heading, so anchors and an unindexed
+legacy audit leaked into preceding semantic fields. Manifest globbing and raw
+source-byte hashes were also filesystem-case and line-ending sensitive, and
+generic table clipping hid decisive open-boundary text.
+
+**Evidence:** Independent semantic and integrated-verifier audits reproduced a
+few-circles result falsely attached to Sector F, T-030 chronology falsely
+attached to three Sector-E cards, and the A3 Galerkin audit falsely attached to
+B1. They found anchor leakage in 67 of 68 result records and 37 of 38 indexed
+negative records, Windows/Linux manifest-count divergence, CRLF/LF hash drift,
+and omission of the live A13 child gate from the ownership table.
+
+**Consequence:** The draft map was rejected before commit. Associations now use
+only structured `Proven in` fields, structured negative fields, and explicit
+known changelog IDs; section boundaries stop at anchors or headings; source
+hashes normalize newlines; manifest classes are case-stable and disjoint;
+claim-card umbrellas and live-task child gates are displayed together; honest
+boundaries and failure consequences are not clipped. Regression tests pin each
+defect class. This tooling audit changes no theory claim or tier.
 
 <a id="ng-2026-07-23-a13-absolute-score-and-full-remainder"></a>
 ### NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER -- absolute score and full fast remainder fail
@@ -733,30 +762,37 @@ are separately closed.
 
 - 2026-06-05 — Registry seeded from the legacy record during bootstrap.
 
-## AUDIT-2026-06-08-scscope-lift-overclaim
+<a id="audit-2026-06-08-scscope-lift-overclaim"></a>
+### AUDIT-2026-06-08-scscope-lift-overclaim -- SC-SCOPE endpoint-lift bookkeeping overclaim
 
-**Type**: AUDIT (self-caught overclaim; result downgraded, not a counterexample).
+**Type:** AUDIT (self-caught overclaim; result downgraded, not a counterexample).
 
-**Claim withdrawn**: the SC-SCOPE all-orders endpoint LIFT (scscope-floor-sharpening v1.1/v1.2, R-029;
-B1 {H-LAYER,SC-SCOPE}->{H-LAYER}).
+**Failure mode:** The withdrawn SC-SCOPE all-orders endpoint lift
+(`scscope-floor-sharpening` v1.1/v1.2, R-029; B1
+`{H-LAYER,SC-SCOPE}->{H-LAYER}`) computed endpoint closure with
+`rho_lat/(1+max[R_s+R_q])=rho_lat/2.872`. That joint-pairing formula scales
+linearly in `rho` only as a local approximation at `rho=2.6`. The physically
+correct additive bookkeeping treats the sunset as an absolute third-cumulant
+cost `C_sunset=composed/1.13`, which does not vanish when the second-order floor
+thickens; the joint ratio saturates at `x1.13` rather than growing linearly.
+The sharpened floor therefore gives `x0.945` (conservative
+`K_floor<=T'`) to `x1.026` (verified `K_floor<=0.52T'`) -- marginal, not the
+claimed `x2.28`; the true threshold is `rho>=9.85`, not `3.9`.
 
-**Error**: the lift computed the endpoint closure as paired = rho_lat/(1+max[R_s+R_q]) = rho_lat/2.872 (the
-joint-PAIRING formula). That formula's linear-in-rho scaling is only a LOCAL approximation at rho=2.6. The
-physically-correct ADDITIVE bookkeeping (scscope_joint_endpoint.py) treats the sunset as an ABSOLUTE third-cumulant
-cost C_sunset = composed/1.13, which does NOT vanish as the second-order floor thickens; the joint ratio therefore
-SATURATES at x1.13 rather than growing linearly. Under it the sharpened floor gives x0.945 (conservative K_floor<=T')
-to x1.026 (verified K_floor<=0.52T') -- MARGINAL, not the claimed x2.28; the true threshold is rho>=9.85, not 3.9.
+**Evidence:** `scscope_joint_endpoint.py` supplies the additive bookkeeping;
+`scscope_joint_correction.py` verifies the correction 5/5.
 
-**Disposition**: SC-SCOPE RESTORED as a B1 named hypothesis; B1 {H-LAYER} -> {H-LAYER, SC-SCOPE}, tier UNCHANGED T6.
-The PROVED floor sharpening (K_floor <= T'(M), R-029) stands as a real PARTIAL advance (additive endpoint joint
-x0.757 -> x0.95-1.03). scscope_joint_correction.py 5/5 verifies the corrected bookkeeping.
+**Consequence:** SC-SCOPE was restored as a B1 named hypothesis; B1
+`{H-LAYER}->{H-LAYER,SC-SCOPE}` with tier unchanged at T6. The proved floor
+sharpening `K_floor<=T'(M)` (R-029) remains a real partial advance (additive
+endpoint joint `x0.757 -> x0.95--1.03`).
 
-**Lesson**: run the conservative/established bookkeeping (not a favorable local formula) before claiming a closure.
-This is the adversarial-self-review the meta-feedback requires; it was omitted in the lift and caught during the
-follow-up rigorization.
+**Lesson:** Run the conservative established bookkeeping, not a favorable local
+formula, before claiming closure. The required adversarial self-review was
+omitted in the lift and caught during follow-up rigorization.
 
 <a id="r-2026-07-16-n001-bcc-seed-collapse"></a>
-### R-2026-07-16-N001-BCC-SEED-COLLAPSE ??N-001 q1a BCC-seed sweep does not retain a q0-shell BCC branch
+### R-2026-07-16-N001-BCC-SEED-COLLAPSE -- N-001 q1a BCC-seed sweep does not retain a q0-shell BCC branch
 
 **Failure mode:** all 48 stored `q1a_bcc_search` N32 outputs that contained both
 `Psi_star.npy` and `proof_results.json` lost their intended q0-shell/BCC

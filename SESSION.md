@@ -60,6 +60,17 @@ research state lives in the cowork app; it all lives in tracked files here.
    `TODO.md` is the human-readable view; `todo/todo.json` is the source. Manage
    it with `todo.py add/start/done/block/set` (never hand-edit `TODO.md`).
 
+   For a cross-claim proof route, search the generated evidence map without
+   loading it in full:
+
+   ```bash
+   rg -n "<claim-or-gate-id>" theory/proof-evidence-map.md
+   ```
+
+   It links accepted results, failed routes and reasons, current gates/tasks,
+   lineages, and reproduction entrypoints. The linked source remains
+   authoritative.
+
 4. **Operator only — start the commit daemon** (Windows PowerShell), so the
    AI's queued commits are recorded with the maintainer signature:
 
@@ -81,9 +92,9 @@ research state lives in the cowork app; it all lives in tracked files here.
 python verification/scripts/release_check.py     # must reach exit 0
 ```
 
-`release_check` runs the ledger/catalog/lineage/**todo** sync checks, the
-English-only and no-overclaim scans, and file hygiene. A session may not end
-with it failing.
+`release_check` runs the ledger/catalog/lineage/**todo**/proof-evidence-map sync
+checks, the English-only and no-overclaim scans, and file hygiene. A session
+may not end with it failing.
 
 ---
 
@@ -109,6 +120,7 @@ with it failing.
 | `GOVERNANCE.md` | constitution: tiers, gates, registration rules |
 | `CLAIMS.md` / `CATALOG.md` | generated ledgers (start reading at `CLAIMS.md`) |
 | `ROADMAP.md` | 6-stage roadmap + current status |
+| `theory/proof-evidence-map.md` / `verification/proof-evidence-map.json` | generated human/machine map of proof advances, failures, gates, tasks, and evidence paths |
 | `TODO.md` / `todo/todo.json` | live task ledger (this resume system) |
 | `claims/<ID>/` | per-claim card + `status.json` + `notes/` + `runs/` + lineage |
 | `claims/GATES.md` | open gates / hypotheses registry |

@@ -29,9 +29,9 @@ No numeric literals are hardcoded into task data; IDs are derived from
 `next_id`, dates from the system clock at mutation time (stored, not
 re-derived at render). Exit 0 iff the operation (or check) succeeds.
 """
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __first_issued__ = "2026-06-07"
-__version_issued__ = "2026-06-07"
+__version_issued__ = "2026-07-24"
 
 import argparse
 import json
@@ -72,7 +72,7 @@ def atomic_write(path: Path, content: str) -> None:
 
 
 def today() -> str:
-    return datetime.datetime.utcnow().strftime("%Y-%m-%d")
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
 
 
 def load(path: Path = DATA) -> dict:

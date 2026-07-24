@@ -7,7 +7,7 @@ dependency order (build_catalog LAST). One command to clear all staleness.
 --check runs release_check.py afterwards (exit code propagated).
 Gate/order source: gates.py (shared with doctor.py + release_check.py).
 """
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 import subprocess
 import sys
