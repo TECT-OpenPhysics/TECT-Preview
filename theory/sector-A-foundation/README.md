@@ -29,10 +29,15 @@ reconstruction, backward-heat, NPC-cone, tip-safe grouped-harvest, exact
 off-diagonal telescope, resonant phase-root, invariant-current principal
 one-form, and fixed-cutoff graph-recovery reductions are closed at scoped T4.
 R-075 proves the exact projector-free Taylor chart, the principal unshifted
-one-form and its uniform sixth moment, and predictable graph recovery. Its
-horizontal radial, constant-control, and Hermite diagnostics leave the current
-child `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`, followed
-by the umbrella one-use estimate.
+one-form and its uniform sixth moment, and predictable graph recovery. R-076
+then gives the nonduplicating signed endpoint ledger and replaces R-075's
+coarse Young-criticality verdict by an input-maximum Besov theorem with
+`X^(2/5)Y^(8/15)` and `1/15` slack. This closes the control-independent cubic
+and both nonresonant paraproducts, while exact fixtures exclude affine
+positivity and a separated shifted-multiplier route. The current child remains
+`A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: its proposed
+fresh-root, explicit-payload-high, and coefficient-only balanced-root causal
+estimates are all open, followed by the umbrella one-use estimate.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

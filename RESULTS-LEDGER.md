@@ -19,7 +19,8 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
-| [R-075](#r-075) | Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery | Scoped T4 analytic/exact/executed reduction: the production current has a global projector-free algebraic invariant representation, its principal unshifted second-order Taylor tensor is a canonical `C^(-1/2-kappa)` one-form with a cutoff-uniform sixth moment, and fixed-cutoff predictable recovery is valid in the Cameron--Martin/terminal-`L6` graph norm. Exact fixtures show that the transported third-order tail survives horizontally, a one-form-only endpoint omits a load-bearing Wick channel, and a smooth adapted counterexample shows that arbitrary adapted substitution need not preserve a finite R-063 chaos forest. The signed coefficient-transport endpoint remainder remains open; 132/132 aggregate assertions |
+| [R-076](#r-076) | Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary | Scoped T4 analytic/exact/executed reduction: the complete transported endpoint has one nonduplicating second-jet/third-transport/terminal-square/Wick ledger; an input-maximum dyadic proof gives cubic powers `X^(2/5)Y^(8/15)` and fifteenth-moment slack, closing the control-independent cubic one-form and both nonresonant paraproducts. Exact affine-Bregman and equal-frequency multiplier fixtures retire convexity and separated shifted-current shortcuts. The analytic split leaves the paired adapted shifted high--high resonance, while all three proposed largest-root causal branch estimates remain open; assertion count is pinned by the manifest |
+| [R-075](#r-075) | Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery | Scoped T4 analytic/exact/executed reduction: the production current has a global projector-free algebraic invariant representation, its principal unshifted second-order Taylor tensor is a canonical `C^(-1/2-kappa)` one-form with a cutoff-uniform sixth moment, and fixed-cutoff predictable recovery is valid in the Cameron--Martin/terminal-`L6` graph norm. Exact fixtures show that the transported third-order tail survives horizontally, a one-form-only endpoint omits a load-bearing Wick channel, and a smooth adapted counterexample shows that arbitrary adapted substitution need not preserve a finite R-063 chaos forest. R-076 corrects R-075's overbroad absolute-route verdict: only the coarse payload is critical; the paired shifted resonance remains open; 132/132 aggregate assertions |
 | [R-074](#r-074) | Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction | Scoped T4 exact/analytic/executed subproof: the mismatched nonlinear secant coefficient has an exact nondecaying high--high-to-low resonance, so a bare positive separation gain is unavailable; automatic adapted Wick centering is false. Genuine local phase orbits preserve the complete raw current exactly, and their relative-phase Wick anomaly is cutoff-uniform with an `O(Lambda^-3)` tail while the common-phase anomaly vanishes. The cubic horizontal payload has a direct `H2`/sextic/sixth-moment Besov payment, but the complete adapted gauge-quotient one-form and finite-energy recovery remain open; 110/110 aggregate assertions |
 | [R-073](#r-073) | Exact off-diagonal telescope reassembly and critical phase-root boundary | Scoped T4 exact/analytic/executed subproof: all three R-072 off-diagonal families and the R-071 linear term reconstruct the R-069 raw current telescope exactly; restoring both separated first variations gives a projector-free terminal square and cancels every terminal-kernel component on the kernel-projector rank-2/3/6 strata. After Wick subtraction this is the still-open adapted terminal coercivity, not a lower bound. The declared termwise absolute value-high route is endpoint-critical at `theta=1/4` and `theta=1/2`; 113/113 aggregate assertions |
 | [R-072](#r-072) | Gauge-kernel strata and causal same-shell diagonal one-use reduction | Scoped T4 exact/analytic/executed subproof: the production frame has the exact local phase-gauge kernel, a differentiated gauge identity converts its nonlinear leakage to a quadratic control displacement, and one sequence Holder plus one weighted AM--GM pays the matched strict-past same-shell diagonal with one cutoff-independent integrable random constant and an `O(N_j0^-3)` sixth-moment tail. The exact terminal expansion contains a load-bearing off-diagonal remainder, larger than the diagonal by a factor above 4087 in an independent fixture; 95/95 aggregate assertions |
@@ -95,6 +96,88 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-076"></a>
+### R-076 -- Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary
+
+**Result ID.**
+`A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION`.
+
+**Statement.** With
+
+`D=DM(U)[A]`,
+`E=M(U+A)-M(U)-D=E2+E3`,
+`w=M(U)^T DU`,
+`Delta w=(D+E)^T DU`, and
+`c=M(U+A)^T DA`,
+
+the signed transported endpoint after separating the principal `E2-DA`
+one-form has the exact nonduplicating form
+
+`<w,Q E2^T DU> + <w,Q E3^T(DU+DA)>`
+
+`+ (1/2)|Delta w+c|_Q^2 - (1/2)F_A:Gamma`.
+
+The R-063 `P3/P1` and `P4/P2/Sigma Q/P0` lower chaoses belong to the
+coefficient-Wick block exactly once. This is an identity ledger, not a sign
+theorem.
+
+For every `0<s<1`, the cubic payload obeys the sharpened estimate
+
+`||A^3 DA||_(B^s_(1,1))`
+
+`<= C_s ||A||_H2^((1+s)/2)||A||_6^((7-s)/2)`.
+
+Writing `X=||A||_H2^2`, `Y=||A||_6^6`, the powers are
+`a=(1+s)/4`, `b=(7-s)/12`, and the Young slack is
+`c=(1-s)/6`. At the audited `s=3/5`,
+
+`R X^(2/5)Y^(8/15)`
+
+`<= eta X+zeta Y+C eta^-6 zeta^-8 R^15`.
+
+R-050/R-063 provide every finite moment. Consequently the base-frozen cubic
+one-form, the unshifted resonance, and both Bony paraproduct branches are
+closed. If `H_t=D^3M(U+tA)` and `J=M(U)DU`, the only new rough product is
+
+`[D^3M(U+tA)-D^3M(U)] circle J`.
+
+It may not be separated from the endpoint. On an exact production affine
+fixture, coefficient curvature is negative four times the retained square
+and the full Bregman remainder is
+
+`-9/[160 P(2+e)^2]=-0.0035156249999956...`.
+
+On the radial production column `v(r)=2er/(r^2+e)`, equal high frequencies
+leak a zero mode because `v''''(sqrt(e))=-6e^(-3/2)`. A separated multiplier
+norm adds `H2^(s/2)` and raises the deterministic exponent to `13/12` at
+`s=3/5`. These are method no-gos, not one-use counterexamples.
+
+**Proven in.** A13 /
+`classii-signed-transport-besov-bregman-resonance-reduction-260724-v1.0`,
+with independent frame, finite-difference, quadrature, Taylor-jet, hash, PDF,
+and scope verification: primary 24/24, non-importing independent 15/15,
+integrated 92/92, and aggregate 131/131 PASS. The nine-page PDF passes the
+proof-note form check, zero-overfull audit, Poppler rendering, and direct
+all-page visual QA.
+
+**Reuse scope.** Mixed `H2`--`L6` Besov control of `A^3 DA`; weighted Young
+moment ledger; exact square/curvature/Wick endpoint accounting; negative-
+regularity multiplier discriminator; and the proposed largest-root decomposition
+frontier (not a proved causal branch estimate).
+
+**Boundary.** The result does not construct or bound the coefficient-only
+balanced-high adapted resonance or prove either proposed fresh-root or
+explicit-payload-high causal branch estimate. It does not prove the complete
+signed coefficient-transport endpoint, close controlled-shell one-use or the
+`q=10/9` Nelson theorem, construct an interacting measure, remove the floor
+or regulator, take infinite volume, or justify T5--T7. Tier T4; no promotion.
+
+**Publication target.** Stochastic geometric/paracontrolled methods note with
+R-050, R-063, and R-071--R-075 after all three largest-root branch lemmas,
+one-use, and Nelson synthesis are resolved.
+
+---
+
 <a id="r-075"></a>
 ### R-075 -- Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery
 
@@ -130,9 +213,11 @@ This closes the principal unshifted subterm, not the full path coefficient.
 Exact adversarial fixtures identify four necessary boundaries. First, the
 complete canonical resonance coefficient is positive even though the isolated
 R-074 branch is negative, so every restored generator must be retained.
-Second, the third-order transported tail has the natural product
+Second, the third-order transported tail has the valid coarse product
 `||A||_H2 ||A||_6^3=X^(1/2)Y^(1/2)`, which exhausts Young's inequality, and a
-horizontal radial fixture gives a nonzero positive tail. Third, when `DA=0`,
+horizontal radial fixture gives a nonzero positive tail. R-076 subsequently
+proved a sharper payload with positive slack and narrowed this no-go to the
+coarse estimate and separated shifted-multiplier architecture. Third, when `DA=0`,
 the raw Taylor remainder is negative although the retained square is positive;
 the omitted coefficient-curvature/Wick channel is larger in magnitude.
 Fourth, `exp(-X^2)(X^2-1)` has nonzero Hermite coefficients at every even

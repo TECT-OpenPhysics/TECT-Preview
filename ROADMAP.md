@@ -200,14 +200,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   payment for the remaining horizontal cubic payload. R-075 then proves the
   projector-free invariant-current Taylor chart, closes the principal
   unshifted one-form with a cutoff-uniform sixth moment, and establishes the
-  declared fixed-cutoff predictable graph-norm recovery. Exact horizontal,
-  constant-control, and Hermite fixtures show that the remaining path tail
-  cannot be paid termwise, omitted, or treated as a finite adapted forest. The
-  new regular-control subgate is
-  `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: reconstruct
-  the transported tail, every R-063 lower chaos, both restored first
-  variations, terminal square, trace/Wick channel, and finite-low boundary in
-  one signed causal identity.
+  declared fixed-cutoff predictable graph-norm recovery. R-076 gives the
+  nonduplicating signed endpoint ledger and corrects the R-075 coarse
+  criticality verdict: the bare cubic payload obeys the sharper
+  `X^(2/5)Y^(8/15)` estimate with `1/15` Young slack, so its fifteenth moment
+  closes the control-independent cubic one-form and both nonresonant Bony
+  branches. Exact affine-Bregman, path, and equal-frequency fixtures exclude
+  positivity and a separated shifted-current multiplier estimate. R-076
+  records a three-class largest-root successor decomposition but proves no
+  causal branch estimate. The regular-control subgate therefore requires a
+  fresh-root expansion with uniform conditional summability, a no-reuse
+  explicit-payload-high shell harvest, and the coefficient-only balanced-root
+  signed Carleson component, all with every R-063 lower chaos, both restored
+  first variations, terminal square, trace/Wick channel, and finite-low
+  boundary retained in one signed causal identity.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -352,16 +358,24 @@ preserved in git/changelog rather than treated as current gates.
    including its finite Wick anomaly, and proves the Besov sixth-moment
    payment. R-075 proves the projector-free invariant-current Taylor chart,
    the principal unshifted one-form and its sixth moment, and fixed-cutoff
-   predictable graph recovery. The current child is
-   `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`. Reconstruct
-   the horizontal transported tail with every R-063 lower chaos, both restored
-   first variations, terminal square, trace/Wick channel, and finite-low
-   boundary in one signed causal identity. Do not spatially differentiate the
-   heat dummy, reuse uncontrolled tails for an adapted coefficient, pay
-   terminal raw energy and injection separately, assume automatic centering
-   or unproved Malliavin regularity, call the principal tensor gauge-complete,
-   freeze an arbitrary adapted coefficient as finite chaos, or suppress the
-   R-074 resonant branch.
+   predictable graph recovery. R-076 then reconstructs the complete signed
+   endpoint without duplication, sharpens the bare cubic payment to
+   `X^(2/5)Y^(8/15)` with fifteenth-moment slack, and closes the
+   control-independent cubic and nonresonant paraproduct branches. The current
+   child remains
+   `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`. R-076 proposes
+   three largest-root classes but closes none causally: prove the fresh-root
+   expansion and conditional shell sum, the no-reuse explicit-payload-high
+   harvest, and the coefficient-only balanced-root signed Carleson component
+   for the paired adapted shifted resonance coupled to every R-063 lower
+   chaos, both restored first variations, terminal square, trace/Wick channel,
+   and finite-low boundary.
+   Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
+   an adapted coefficient, separate the shifted multiplier from its signed
+   endpoint block, pay terminal raw energy and injection separately, assume
+   automatic centering or unproved Malliavin regularity, call the principal
+   tensor gauge-complete, freeze an arbitrary adapted coefficient as finite
+   chaos, or suppress the R-074 resonant branch.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

@@ -5,6 +5,22 @@ not pillar counts.
 
 ---
 
+## [R-076 fixed-time quantifier and fail-closed verifier hardening] - 2026-07-25
+
+Second-pass adversarial review found that the shifted-multiplier zero-mode sentence had silently included t=0, although K_0=0. The proof note now fixes each nontrivial t in (0,1], displays the leading (t/2) v^(4)(sqrt(e)) delta N^s coefficient, records the trivial endpoint, and rebuilds the nine-page PDF with all-page visual QA. Verifier v1.0.3 additionally pins predecessor schema/claim/result identity and aggregate counts, pins current-child schema/source/hash/rowwise PASS, and rejects explicit failure fields. The final contract remains primary 24/24, independent 15/15, integrated 92/92, aggregate 131/131; no theorem scope, tier, one-use, Nelson, or Sector-A closure changes.
+
+## [R-076 pre-release proof and evidence repair] - 2026-07-25
+
+Adversarial review rejected the first R-076 draft despite its numerical PASS. The note had described an input-maximum Littlewood--Paley proof with false output projections, the PDF visibly rendered eighteen bare qquad tokens, verifier v1.0.1 accepted contradictory predecessor records, the independent exponent route repeated the primary formulas, the primary report hardcoded derived values, and live summaries overstated a proposed causal classification. The repaired note groups monomials by maximal input index and retains high--high-to-low output, the nine-page PDF was rebuilt and inspected, the independent route derives interpolation allocations, and verifier v1.0.2 is fail-closed with direct debris and contradiction tests. All fresh-root, explicit-payload-high, and coefficient-only causal estimates remain open. Final contracts are primary 24/24, independent 15/15, integrated 92/92, aggregate 131/131; tier remains T4.
+
+## [R-076 predecessor PASS-schema compatibility audit] - 2026-07-25
+
+The first integrated wrapper passed all direct mathematics, hash, PDF, cross-value, and scope checks but rejected six pinned predecessors because it recognized only one modern PASS contract. Verifier v1.0.1 now recognizes the three issued historical forms: result-specific *-PASS verdicts, zero-failure count summaries, and boolean pass=true records, with a nonempty all-PASS assertion-list fallback. Pinned hashes remain mandatory. The rerun is 87/87 integrated and 126/126 aggregate PASS; mathematics, scope, and tier are unchanged.
+
+## [R-076 signed transport Besov correction and shifted-resonance boundary] - 2026-07-25
+
+Established the exact nonduplicating endpoint ledger and corrected R-075's coarse absolute-route verdict: the bare cubic payload has X^(2/5)Y^(8/15) scaling with 1/15 Young slack, so a fifteenth moment closes the control-independent cubic and both nonresonant paraproduct branches. Recorded exact affine-Bregman, path-positivity, and separated shifted-multiplier failures. The paired adapted shifted high--high resonance remains coupled to the complete lower-chaos, terminal-square, trace, and finite-low block; the next gate is the coefficient-only balanced-root signed Carleson lemma. No one-use, Nelson, or tier promotion is claimed.
+
 ## [R-075 principal Taylor one-form and graph recovery reduction] - 2026-07-24
 
 Recorded R-075 as a scoped T4 subproof under A13. The exact projector-free invariant-current Taylor chart and principal C^(-1/2-kappa) Taylor one-form are established, and predictable recovery closes on the declared fixed-cutoff Cameron--Martin/terminal-L6 graph domain. Independent diagnostics show that the signed transported endpoint remains open: the absolute third-order route is Young-critical, a horizontal radial tail survives, a one-form-only endpoint omits a coefficient-curvature/Wick channel, and a smooth adapted counterexample has infinitely many even chaoses. The successor is A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER; controlled-shell one-use and q=10/9 Nelson synthesis remain open. The package carries primary 36, independent 20, integrated 76, and aggregate 132 assertions with a ten-page rendered proof PDF.

@@ -45,7 +45,11 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
-| NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT | the transported Taylor tail has no termwise Young slack | Bound the exact third-order coefficient-transport tail by |
+| AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR | adversarial review found proof, PDF, verifier, independence, | Accept the first R-076 package because its numerical |
+| AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS | the first integrated wrapper repeated a historical-schema as | Treat every pinned predecessor result as if PASS were |
+| AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY | the R-075 payload estimate was valid but nonsharp | Promote the valid coarse estimate |
+| NG-2026-07-25-A13-BREGMAN-AND-SEPARATED-SHIFTED-MULTIPLIER | two signed-transport shortcuts fail | Close the signed coefficient transport either by convexity |
+| NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT | the coarse transported-tail estimate has no Young slack | Bound the exact third-order coefficient-transport tail by |
 | NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION | a cubic one-form plus terminal square omits the constant-con | Treat the signed endpoint as a positive terminal square plus |
 | NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER | correlated adapted substitution need not preserve a finite f | Substitute an arbitrary terminal adapted control into the |
 | NG-2026-07-24-A13-L2-ONLY-PREDICTABLE-RECOVERY | Cameron--Martin density alone loses terminal sextic energy | Extend a regular strict-past endpoint inequality to every |

@@ -1,0 +1,654 @@
+% Title: Signed transport ledger, sharpened Besov payment, and shifted-resonance boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact/analytic reduction; paired adapted shifted resonance open
+% Result: A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION
+% Ledger: R-076
+%
+% v1.0 (2026-07-24): nonduplicating signed endpoint ledger; correction of
+% the coarse R-075 transport-criticality diagnosis; sharpened cubic Besov
+% payment; closure of the control-independent cubic one-form and both
+% nonresonant paraproduct branches; affine-Bregman and separated shifted-
+% multiplier no-gos; three-class largest-root causal frontier.
+
+\section{Purpose and scope}
+
+R-075 reconstructed the complete invariant-current Taylor chart, proved the
+principal second-order one-form, and identified a third-order transported
+tail.  It then used
+\[
+ \|A^3DA\|_{B^s_{1,1}}
+ \lesssim \|A\|_{H^2}\|A\|_6^3,
+ \qquad s={1\over2}+\kappa,                              \tag{1.1}
+\]
+which gives $X^{1/2}Y^{1/2}$ for
+$X=\|A\|_{H^2}^2$ and $Y=\|A\|_6^6$.  That particular
+estimate has zero Young slack.  The conclusion recorded in R-075 was too
+broad: (1.1) is not the sharp mixed $H^2$--$L^6$ estimate.
+
+This note corrects that diagnosis.  For $0<s<1$,
+\[
+ \boxed{
+ \|A^3DA\|_{B^s_{1,1}}
+ \lesssim_s
+ \|A\|_{H^2}^{(1+s)/2}\|A\|_6^{(7-s)/2}.}               \tag{1.2}
+\]
+At the audited $\kappa=1/10$, hence $s=3/5$, the associated
+pairing has positive Young slack $1/15$.  Any already constructed
+control-independent $L^{15}(\Omega;C^{-3/5})$ current can therefore be
+paid with arbitrary Cameron--Martin and terminal-sextic allocations.  This
+closes the base-frozen cubic one-form inside the R-075 transported tail and
+both nonresonant shifted-multiplier paraproducts.
+
+The full signed endpoint still does not close.  The remaining analytic
+object is the high--high resonance of the shifted coefficient with the
+uncontrolled geometric current.  It cannot first be converted into an
+$A$-uniform multiplier norm.  Nor is the complete physical affine-current
+Bregman remainder positive: an exact production fixture has negative
+curvature four times the retained square.  The residual resonance must be
+kept with the terminal square, coefficient-curvature/Wick block, every
+R-063 lower chaos, R-066 trace transport, and the finite-low boundary in a
+single causal signed argument.
+
+Thus this is a scoped T4 reduction and correction, not a tier promotion.  It
+does not prove the paired adapted shifted enhancement, the signed endpoint
+lower bound, controlled-shell one-use, the $q=10/9$ Nelson theorem, an
+interacting measure, floor or regulator removal, or infinite volume.  All
+statements use the fixed positive production floor, common real-even
+regulators, exact non-aliased products, and the R-066 finite-low convention.
+
+\section{The nonduplicating signed endpoint ledger}
+
+Suppress the generator and spatial sums.  Put
+\[
+ M_0=M(U),\qquad M_1=M(U+A),\qquad D=DM(U)[A],            \tag{2.1}
+\]
+\[
+ E=M_1-M_0-D=E_2+E_3,\qquad
+ E_2={1\over2}D^2M(U)[A,A],                              \tag{2.2}
+\]
+\[
+ E_3={1\over2}\int_0^1(1-t)^2
+        D^3M(U+tA)[A,A,A],dt.                           \tag{2.3}
+\]
+For $G=DU$, $C=DA$, define
+\[
+ w=M_0^TG,\qquad \Delta w=(D+E)^TG,\qquad c=M_1^TC,       \tag{2.4}
+\]
+and
+\[
+ F_A=B(U+A)-B(U)-DB(U)[A],\qquad
+ Q_J=G\otimes G-\Gamma_J.                               \tag{2.5}
+\]
+
+After the R-075 principal $E_2$--$C$ one-form has been separated, the exact
+remaining endpoint block is
+\[
+ \Xi_J=
+ \langle w,Q_{\rm II}E_3^TC\rangle
+ +{1\over2}\langle F_A,Q_J\rangle
+ +\langle\Delta w,Q_{\rm II}c\rangle
+ +{1\over2}|c|_{Q_{\rm II}}^2.                          \tag{2.6}
+\]
+Because
+\[
+ {1\over2}F_A:(G\otimes G)
+ =\langle w,Q_{\rm II}E^TG\rangle
+  +{1\over2}|\Delta w|_{Q_{\rm II}}^2,                  \tag{2.7}
+\]
+(2.6) reassembles without duplication as
+\[
+ \boxed{
+ \begin{aligned}
+ \Xi_J={}&\langle w,Q_{\rm II}E_2^TG\rangle
+ +\langle w,Q_{\rm II}E_3^T(G+C)\rangle\\
+ &+{1\over2}|\Delta w+c|_{Q_{\rm II}}^2
+ -{1\over2}F_A:\Gamma_J .
+ \end{aligned}}                                          \tag{2.8}
+\]
+The full R-075 remainder is the R-071 linear $D$--$C$ term, the principal
+$E_2$--$C$ term, and (2.8).  Thus every diagonal and off-diagonal current
+appears once, the full terminal current square remains positive, and the
+coefficient-curvature/Wick channel remains signed.
+
+For a deterministic or conditionally legitimate frozen shift, the
+coefficient term in (2.6) is one half of the complete R-063 chart:
+\[
+ \begin{aligned}
+ \sum_j\{&F_A(x_j):Q_j
+ +DF_A(x_j):(\mathrm{P}_3+\mathrm{P}_1)\\
+ &+{1\over2}D^2F_A(x_j):
+ (\mathrm{P}_4+\mathrm{P}_2^{\rm cross}
+   +\Sigma_jQ_j+\mathrm{P}_0^{\rm cross})
+ +\mathcal R_{3,j}^{F_A}:Q_j\}.
+ \end{aligned}                                               \tag{2.9}
+\]
+Equation (2.9) is an equality ledger, not a positivity statement.  In
+particular, $\Sigma Q$ and the lower chaoses may not be merged into the trace
+a second time.
+
+\section{A sharpened cubic Besov theorem}
+
+\subsection{Statement and proof}
+
+Let $0<s<1$ and $A\in H^2(\mathbb T_L^3)\cap L^6$.  Then (1.2) holds.
+The estimate is tensor-entrywise, so finite component contractions change
+only its constant.
+
+Let $\Delta_j$ be inhomogeneous Littlewood--Paley blocks.  Expand the four
+inputs and assign each monomial to its largest \emph{input} dyadic index
+$j$, resolving ties by a fixed ordering.  Write the resulting sum as
+\[
+ A^3DA=\sum_{j\ge-1}G_j.                               \tag{3.1}
+\]
+Every $G_j$ has Fourier support in a ball of radius $C2^j$, even when two
+high inputs produce a low output.  Hence
+$\|G_j\|_{B^s_{1,1}}\lesssim2^{sj}\|G_j\|_1$.  If the
+differentiated input is maximal, put $\Delta_jDA$ in $L^2$ and the other
+three partial sums in $L^6$.  If an undifferentiated input is maximal, put
+that $\Delta_jA$ in $L^2$ and use
+$\|DS_jA\|_6\lesssim2^j\|A\|_6$ for the differentiated partial sum.
+The finitely many tie patterns obey the same estimate, so
+\[
+ \|G_j\|_{B^s_{1,1}}
+ \lesssim 2^{(1+s)j}\|\Delta_jA\|_2\|A\|_6^3.          \tag{3.2}
+\]
+This input-maximum decomposition, rather than an output projection, retains
+all high--high-to-low interactions.  Summing (3.2) gives the multilinear
+paraproduct bound
+\[
+ \|A^3DA\|_{B^s_{1,1}}
+ \lesssim \|A\|_{B^{1+s}_{2,1}}\|A\|_6^3               \tag{3.3}
+\]
+with no frequency-separation hypothesis.
+
+It remains to interpolate the single-input Besov norm.  Split its dyadic
+sum, now legitimately by the input index, at $K$.  Cauchy--Schwarz gives
+\[
+ \sum_{j\le K}2^{(1+s)j}\|\Delta_jA\|_2
+ \lesssim2^{(1+s)K}\|A\|_2,
+\]
+whereas
+\[
+ \sum_{j>K}2^{(1+s)j}\|\Delta_jA\|_2
+ \lesssim2^{-(1-s)K}\|A\|_{H^2}.
+\]
+Balancing $2^{2K}\simeq\|A\|_{H^2}/\|A\|_2$ proves
+\[
+ \|A\|_{B^{1+s}_{2,1}}
+ \lesssim
+ \|A\|_{H^2}^{(1+s)/2}\|A\|_2^{(1-s)/2}               \tag{3.4}
+\]
+and (1.2) follows from $\|A\|_2\lesssim\|A\|_6$ on the fixed torus.
+The inhomogeneous bottom block and the zero cases are absorbed into the
+fixed-volume constant.
+
+\subsection{The exact Young ledger}
+
+Let $R\ge0$ be the $C^{-s}$ norm of a reconstructed current.  From (1.2),
+\[
+ R\|A^3DA\|_{B^s_{1,1}}
+ \lesssim R X^aY^b,\qquad
+ a={1+s\over4},\quad b={7-s\over12}.                    \tag{3.5}
+\]
+The unused exponent is
+\[
+ c=1-a-b={1-s\over6}>0.                                  \tag{3.6}
+\]
+Weighted AM--GM therefore yields, for every $\eta,\zeta>0$,
+\[
+ \boxed{
+ RX^aY^b
+ \le \eta X+\zeta Y
+ +C_s\eta^{-a/c}\zeta^{-b/c}R^{1/c}.}                  \tag{3.7}
+\]
+The required random moment is $6/(1-s)$.  At $\kappa=1/10$,
+\[
+ s={3\over5},\quad a={2\over5},\quad b={8\over15},
+ \quad c={1\over15},                                    \tag{3.8}
+\]
+and hence
+\[
+ \boxed{
+ RX^{2/5}Y^{8/15}
+ \le\eta X+\zeta Y+C\eta^{-6}\zeta^{-8}R^{15}.}       \tag{3.9}
+\]
+R-050 and R-063 supply every finite moment for their unshifted enhanced
+currents, so the fifteenth moment in (3.9) is available.
+
+\section{What the correction closes}
+
+Let
+\[
+ J=M(U)^TDU,\qquad H_t=D^3M(U+tA).                        \tag{4.1}
+\]
+At fixed positive floor, $D^3M$ is globally bounded.  The R-050/R-071
+one-form argument gives $J\in L^p(\Omega;C^{-s})$ for every finite $p$ and
+the same is true after multiplication by a smooth coefficient depending
+only on $U$.
+
+First freeze the third derivative at the uncontrolled field.  The
+base-frozen cubic branch is
+\[
+ \mathcal N_{3,0}
+ ={1\over6}\left\langle
+ M(U)^TDU,\,Q_{\rm II}
+ [D^3M(U)[A,A,A]]^TDA\right\rangle.                     \tag{4.2}
+\]
+Its coefficient is a finite smooth geometric one-form in $U$, independent
+of the chosen control in the norm estimate.  It has every finite
+$L^p(C^{-s})$ moment, so (3.7), and in particular (3.9), closes (4.2).
+Here ``independent of the control'' does not mean probabilistic independence;
+it means that the random norm and its moment bound do not grow with $A$.
+
+There is a second useful reduction.  At a smooth cutoff, use Bony's split
+\[
+ H_tJ=T_{H_t}J+T_JH_t+H_t\circ J.                        \tag{4.3}
+\]
+For $s>0$, both paraproducts need only the boundedness of $H_t$:
+\[
+ \|T_{H_t}J\|_{C^{-s}}+\|T_JH_t\|_{C^{-s}}
+ \lesssim \|H_t\|_\infty\|J\|_{C^{-s}}.                \tag{4.4}
+\]
+For the second estimate,
+$\|S_{j-1}J\|_\infty\lesssim2^{sj}\|J\|_{C^{-s}}$ and
+$\|\Delta_jH_t\|_\infty\lesssim\|H_t\|_\infty$.
+Thus (3.7) closes both nonresonant branches with a control-independent
+random constant.
+
+Write
+\[
+ H_t=H_0+K_t,\qquad
+ K_t=D^3M(U+tA)-D^3M(U).                                 \tag{4.5}
+\]
+The resonance $H_0\circ J$ is part of the existing R-050/R-063 smooth
+geometric enhancement and is also closed by (3.7).  Consequently the only
+new rough multiplier product in the R-075 $E_3$--$C$ tail is
+\[
+ \boxed{K_t\circ J.}                                     \tag{4.6}
+\]
+This statement is an algebraic/analytic branch reduction.  It does not yet
+construct (4.6) for an arbitrary adapted control or prove its signed lower
+bound.
+
+\section{Why the shifted resonance cannot be separated}
+
+Boundedness of $D^3M$ does not make multiplication by $H_t$ continuous on
+$C^{-s}$.  The obstruction occurs in the actual production frame.  On the
+active-real $\sigma_3$ radial line, its nonlinear column is
+\[
+ v(r)={2er\over r^2+e},\qquad
+ v^{(4)}(\sqrt e)=-{6\over e^{3/2}}\ne0.                 \tag{5.1}
+\]
+Take on a one-dimensional spatial carrier
+\[
+ U=\sqrt e,\qquad A_N=\delta\cos(Nx),\qquad
+ J_N=N^s\cos(Nx),                                       \tag{5.2}
+\]
+with $0<\delta\ll\sqrt e$, and fix $t\in(0,1]$.  Then
+$\|J_N\|_{C^{-s}}\asymp1$, whereas
+\[
+ J_N\{v'''(U+tA_N)-v'''(U)\}                            \tag{5.3}
+\]
+has zero Fourier mode
+$\tfrac12t v^{(4)}(\sqrt e)\delta N^s+O(t^2\delta^2N^s)$.
+For each fixed $t>0$ this is comparable to $\delta N^s$ when $\delta$ is
+small.  At $t=0$ the difference is identically zero, as it must be.  Hence no
+$A$-uniform separated estimate for a nontrivial path time
+\[
+ \|K_tJ\|_{C^{-s}}\le C(\omega)                         \tag{5.4}
+\]
+can follow from $\|K_t\|_\infty$ and
+$\|J\|_{C^{-s}}$.
+
+Moreover $\|A_N\|_{H^2}\asymp\delta N^2$, so the separated multiplier
+loss behaves like $\|A_N\|_{H^2}^{s/2}$.  Appending this loss to (3.5)
+changes the total deterministic exponent from $(5+s)/6$ to
+\[
+ {5+s\over6}+{s\over4}={10+5s\over12}.                  \tag{5.5}
+\]
+At $s=3/5$, (5.5) is $13/12>1$.  The separated-multiplier architecture is
+therefore supercritical even though the corrected bare payload is not.
+This is a method counterexample, not a counterexample to the complete paired
+endpoint (2.8).
+
+Taylor iteration does not repair the problem.  Exactly,
+\[
+ E_3={1\over6}D^3M(U)[A,A,A]+E_4,                        \tag{5.6}
+\]
+\[
+ E_4={1\over6}\int_0^1(1-r)^3
+ D^4M(U+rA)[A,A,A,A],dr.                               \tag{5.7}
+\]
+The $C$-branch of (5.7) has the payload $A^4DA$; assigning one factor to
+$H^2$ and four to $L^6$ already gives $1/2+4/6=7/6>1$ in spatial Holder.
+Thus an infinite base-point Taylor expansion worsens the deterministic
+budget.
+
+The correct object to retain is the exact paired remainder
+\[
+ \mathcal E_3(U,A)=M(U+A)-M(U)-DM(U)[A]
+                   -{1\over2}D^2M(U)[A,A].               \tag{5.8}
+\]
+At fixed floor,
+\[
+ |\mathcal E_3(U,A)|\lesssim_e|A|^3,\qquad
+ |D_A\mathcal E_3(U,A)|\lesssim_e|A|^2,                 \tag{5.9}
+\]
+and, schematically,
+\[
+ \begin{aligned}
+ |\delta\mathcal E_3|
+ \lesssim_e{}&(|A|^2+|A'|^2)|\delta A|\\
+ &+(|A|^3+|A'|^3)|\delta U|.
+ \end{aligned}                                           \tag{5.10}
+\]
+The explicit control-high part remains degree four.  The second line of
+(5.10), in which rough $U$ enters an adapted shifted coefficient, is exactly
+the missing paired enhancement rather than an extra deterministic power.
+
+\section{Affine Bregman and path positivity are false shortcuts}
+
+For
+\[
+ F(z,y)={1\over2}\sum_r|M_r(z)^Ty|_{Q_{\rm II}}^2,       \tag{6.1}
+\]
+put $z_1=z+A$, $y_1=y+C$, $w_0=M(z)^Ty$, and
+\[
+ \delta w=M(z_1)^Ty_1-M(z)^Ty,\qquad
+ \ell=DM(z)[A]^Ty+M(z)^TC.                              \tag{6.2}
+\]
+The remainder after both Frechet first variations is exactly
+\[
+ F(z_1,y_1)-F(z,y)-DF(z,y)[A,C]
+ ={1\over2}|\delta w|_Q^2+\langle w_0,Q(\delta w-\ell)\rangle.
+                                                               \tag{6.3}
+\]
+Although (6.3) is an affine Bregman remainder, $F$ is not convex in the
+physical field variables.
+
+Take
+\[
+ z=e_1+e_3,\qquad A=e_1-e_3,\qquad y=e_3,\qquad C=0,
+ \qquad d=2+e.                                           \tag{6.4}
+\]
+Only the $r=3$ nonlinear current survives, and
+\[
+ w_0=(0,-2/d),\qquad w_1=0,\qquad
+ \ell=(0,-2/d).                                         \tag{6.5}
+\]
+With $q_{22}=3/(320P)$, the two terms in (6.3) are
+\[
+ {1\over2}|\delta w|_Q^2={2q_{22}\over d^2},\qquad
+ \langle w_0,Q(\delta w-\ell)\rangle=-{8q_{22}\over d^2},
+                                                               \tag{6.6}
+\]
+\noindent The signed remainder is therefore
+\nopagebreak[4]
+\[
+ \boxed{
+ D_F=-{6q_{22}\over d^2}
+ =-{9\over160P(2+e)^2}
+ =-0.0035156249999956\ldots .}                           \tag{6.7}
+\]
+The curvature is negative four times the retained square, and the full
+remainder is negative three times the base raw energy.  More generally, if
+the endpoint is $ce_1$, then
+\[
+ {D_F(c)\over F_0}
+ =-{4c(e+1)-5e-2\over e+2}\longrightarrow-\infty.       \tag{6.8}
+\]
+This rules out convex Bregman, square-only, and fixed-multiple-of-base-energy
+shortcuts.  Since $|A|^2\sim c^2$, it does not refute a Cameron--Martin-cost
+lower bound.
+
+The exact affine path makes the same point.  Let
+\[
+ Z_t=U+tA,\qquad Y_t=G+tC,\qquad w_r(t)=M_r(Z_t)^TY_t.    \tag{6.9}
+\]
+Then
+\[
+ \dot w_r=DM_r(Z_t)[A]^TY_t+M_r(Z_t)^TC,                 \tag{6.10}
+\]
+\[
+ \ddot w_r=D^2M_r(Z_t)[A,A]^TY_t+2DM_r(Z_t)[A]^TC,      \tag{6.11}
+\]
+and
+\[
+ F(1)-F(0)-F'(0)
+ =\int_0^1(1-t)\sum_r
+ \{|\dot w_r|_Q^2+\langle w_r,Q\ddot w_r\rangle\},dt.\tag{6.12}
+\]
+At zero floor, the fixture (6.4) has the normalized current
+\[
+ k(t)={(t-1)(t+1)^2\over1+t^2}.                          \tag{6.13}
+\]
+Its positive and curvature integrals are exactly
+\[
+ \int_0^1(1-t)(k')^2dt={7\over2}-\log4-{\pi\over2}
+ =0.5429093120\ldots,                                   \tag{6.14}
+\]
+\[
+ \int_0^1(1-t)kk''dt=-5+\log4+{\pi\over2}
+ =-2.0429093120\ldots.                                  \tag{6.15}
+\]
+Their sum is $-3/2$.  Wick ordering subtracts the matching second variation
+$D^2B(Z_t)[A,A]:\Gamma/2$ and supplies no new sign.
+
+There is also a finite-dimensional adapted centering diagnostic.  If a
+strict-past scalar $X\sim N(0,1)$ supplies $G=Xe_3$, the control (6.4) is
+activated on $\{|X|>a\}$, and $\Gamma=e_3e_3^T$, then
+\[
+ \mathbb E D_{F_\Gamma}
+ =-{6q_{22}\over d^2}\,
+   \mathbb E[(X^2-1){\bf1}_{\{|X|>a\}}]
+ =-{6q_{22}\over d^2}\,2a\varphi(a)<0.                 \tag{6.16}
+\]
+At $a=1$ the value is $-0.0017013566567\ldots$; smooth selectors preserve
+the sign.  This is a causal finite-dimensional diagnostic, not a complete
+spatial one-use counterexample.
+
+\section{The exact causal frontier}
+
+The terminal shift cannot simply be frozen at every Gaussian root.  If
+$g_1,g_2$ are successive fresh shells and the strict-past second control is
+$a_2=f(g_1)$, then $a_2$ is admissible at shell two but the terminal shift
+$A=a_2$ is not measurable before root one.  R-075's smooth infinite-Hermite
+example makes this failure explicit.  A valid proof must assign every
+monomial to its largest causal root rather than condition on the terminal
+coefficient wholesale.
+
+The largest-root audit suggests the following three candidate classes.  It
+is a causal decomposition proposal; this note does not prove the uniform
+root expansion, conditional moment, or shell summability for the first two
+classes.
+\begin{enumerate}
+\item If a fresh Gaussian root is largest, all earlier and equal-shell
+strict-past controls may be conditionally frozen at that root.  A successor
+must still prove that the exact R-063
+$\mathrm{P}_3/\mathrm{P}_1$ and
+$\mathrm{P}_4/\mathrm{P}_2/\Sigma Q/\mathrm{P}_0$ compensators reassemble
+and sum uniformly after this conditioning.
+
+\item If a largest control pair lies among the explicit $A^3DA$ factors,
+the candidate move is to charge that pair first to its own shell
+Cameron--Martin energy and use the remaining positive slack.  The no-reuse
+shell charge and the residual dyadic summation are not proved here.
+
+\item The hard branch has its largest control roots only inside the shifted
+coefficient $K_t$, while the explicit $A^3DA$ payload is lower.  Absolute
+fractional multiplier estimates are incompatible with both shell summability
+and Young slack for $s>1/2$.  This coefficient-only balanced-high branch must
+remain signed and cancel against the terminal square, coefficient curvature,
+R-063 lower chaoses, and trace transport.
+\end{enumerate}
+
+The smallest honest successor is therefore a three-class largest-root
+proposition.  Its apparently hardest component is a
+\emph{coefficient-only balanced-root signed Carleson lemma}: after the R-073
+endpoint is reassembled exactly, the complete block containing (4.6), the
+corresponding terminal-square polarization, the coefficient Wick forest,
+R-066 trace, and finite-low term would have to obey
+\[
+ \mathbb E\mathcal B_J(A)
+ \ge-\eta\,\mathbb EX-\zeta\,\mathbb EY-C_{\eta,\zeta}
+                                                               \tag{7.1}
+\]
+uniformly in $J$.  The notation $\mathcal B_J$ refers to that complete
+nonduplicating block, not to the isolated resonance.  Only after the
+fresh-root, explicit-payload-high, and coefficient-only estimates are all
+proved for regular strict-past controls may one invoke R-075 graph recovery.
+The remaining R-066 reductions would then give controlled-shell one-use,
+after which the already established $q=10/9$ equivalence returns the proof
+to the Nelson synthesis.
+
+\section{Evidence and failure map}
+
+The proof route after R-076 is:
+\begin{enumerate}
+\item \textbf{Exact ledger closed:} (2.8) puts the second-order curvature,
+third-order transport, terminal square, and Wick trace into one
+nonduplicating endpoint identity.
+
+\item \textbf{Previous diagnosis corrected:} R-075's coarse estimate (1.1)
+is Young-critical, but the sharp mixed estimate (1.2) has slack
+$(1-s)/6$.  The old negative result is retained historically and narrowed;
+the overbroad conclusion is recorded as
+\texttt{AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY}.
+
+\item \textbf{Closed analytically:} the base-frozen cubic one-form, both
+nonresonant paraproducts, and the unshifted resonance are paid by (3.7).  At
+$s=3/5$ the required moment is fifteen.
+
+\item \textbf{Closed negatively:} the physical affine Bregman remainder and
+its path-square completion are not positive, by (6.7) and (6.14)--(6.15).
+
+\item \textbf{Closed negatively:} a separated shifted-multiplier norm is
+false by the zero-mode fixture (5.1)--(5.5).  These two shortcut failures are
+registered together as
+\texttt{NG-2026-07-25-A13-BREGMAN-AND-SEPARATED-SHIFTED-MULTIPLIER}.
+
+\item \textbf{Still open:} prove the three proposed largest-root branch
+estimates.  The fresh-root and explicit-payload-high branches need their own
+uniform expansion and summability lemmas; the coefficient-only balanced-high
+branch must remain with the complete lower-chaos, square, trace, and
+finite-low channels and is conjectured to satisfy (7.1).
+\end{enumerate}
+
+No route inspected in this note is left implicit.  A base-point Taylor
+iteration fails by the $A^4DA$ spatial budget; terminal root freezing fails
+causally; affine and Wick Bregman positivity fail on an exact fixture;
+separated multiplier control is supercritical; and the three largest-root
+branches are a recorded successor decomposition rather than proved branch
+closures.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``R-075's third-order no-go remains valid without change.''}
+\textbf{UPHELD only for its coarse estimate, rejected as a general no-go.}
+Equation (1.2) leaves positive slack.  The registry wording is corrected
+rather than silently deleted.
+
+\item \textbf{``The fifteenth moment closes the entire shifted tail.''}
+\textbf{UPHELD as false.}  It closes only currents whose norm is independent
+of the chosen control, plus the two nonresonant paraproducts.  The shifted
+resonance (4.6) is not covered.
+
+\item \textbf{``Bounded $D^3M$ is an $A$-uniform multiplier theorem.''}
+\textbf{UPHELD as false.}  Equal high frequencies in (5.2)--(5.3) leak a
+zero mode of size $\delta N^s$.
+
+\item \textbf{``Taylor expansion around $U$ removes the shifted
+coefficient.''} \textbf{UPHELD as false.}  The next exact remainder carries
+$A^4DA$ and is spatially supercritical by (5.7).
+
+\item \textbf{``The retained path square makes the affine remainder
+positive.''} \textbf{UPHELD as false.}  In (6.6) curvature is negative four
+times the square.
+
+\item \textbf{``Wick subtraction repairs affine convexity.''}
+\textbf{UPHELD as false.}  Equation (6.16) has strictly negative centered
+expectation; Wick ordering supplies the trace identity, not a sign.
+
+\item \textbf{``Every strict-past terminal control can be frozen before
+every root.''} \textbf{UPHELD as false.}  Later controls may depend on an
+earlier Gaussian root.  Largest-root causal assignment is necessary.
+
+\item \textbf{``The fresh-root and explicit-payload-high classes are already
+closed.''} \textbf{UPHELD as false.}  This note identifies the conditional
+freezing and shell-harvest candidates but proves neither the complete root
+expansion nor a cutoff-uniform dyadic summation for those classes.
+
+\item \textbf{``The multiplier fixture disproves one-use.''}
+\textbf{DISMISSED.}  It disproves only the separated norm architecture.  The
+complete paired endpoint may cancel through channels absent from the fixture.
+
+\item \textbf{``The affine Bregman fixture disproves a Cameron--Martin
+bound.''} \textbf{DISMISSED.}  Its large endpoint family has quadratic
+control cost.  It excludes convexity and repeated base-energy payment, not
+the requested one-use inequality.
+
+\item \textbf{``The zero-mode multiplier witness is nonzero also at
+$t=0$.''} \textbf{UPHELD as false.}  Since $K_0=0$, the witness vanishes at
+the initial path time.  Equation (5.3) fixes $t\in(0,1]$ and displays the
+leading factor $t/2$; the separated-multiplier no-go survives at every fixed
+nontrivial path time.
+
+\item \textbf{``This result closes Sector A.''} \textbf{UPHELD as an
+overclaim.}  The signed paired resonance, one-use, and Nelson theorem remain
+open; the tier stays T4.
+\end{enumerate}
+
+\clearpage
+\section{Reproduction and independent audit}
+
+The primary executable derives every production coefficient from A1, checks
+the signed endpoint identity on random six-real fixtures, derives the exact
+Besov/Young exponents, evaluates the affine and centered selector fixtures,
+integrates the path square and curvature, and verifies the radial multiplier
+leakage.  The non-importing executable rebuilds the complex Pauli frames,
+uses finite differences for the endpoint ledger, composite Simpson
+quadrature for the path, and an automatic Taylor-jet algebra for the radial
+derivatives.
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_signed_transport_besov_bregman_resonance_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION
+Precise statement:       The exact signed endpoint has the nonduplicating
+                         form (2.8). The sharp cubic Besov payload has Young
+                         slack (1-s)/6, closing the control-independent cubic
+                         one-form and both nonresonant paraproducts. The only
+                         new rough product in that analytic split is the
+                         paired adapted shifted high-high resonance;
+                         affine-Bregman and separated multiplier shortcuts
+                         are false. No causal largest-root branch is closed.
+Scope:                   Fixed-floor A1/R-050/R-063/R-066/R-071/R-073/R-075;
+                         common real-even cutoffs; regular whole-shell
+                         strict-past controls; finite-low retained.
+Dependencies:            A1; R-050; R-063; R-066; R-071; R-073--R-075.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_signed_transport_besov_bregman_resonance_verify.py
+Expected output:         primary + independent + integrated aggregate PASS.
+Falsification gate:      A signed-ledger, exponent, Bregman, path, multiplier,
+                         hash, PDF, scope, or release assertion fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No largest-root branch theorem, paired adapted
+                         shifted enhancement, complete signed endpoint lower
+                         bound, one-use, Nelson, measure, removal, infinite
+                         volume, or T5--T7.
+Next required action:    Prove the fresh-root and explicit-payload-high branch
+                         lemmas and the coefficient-only balanced-root signed
+                         Carleson component with every R-063 lower chaos,
+                         terminal square, R-066 trace, and finite-low boundary
+                         retained.
+\end{verbatim}
+\endgroup

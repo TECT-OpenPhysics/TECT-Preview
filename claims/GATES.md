@@ -432,10 +432,15 @@ phase orbits by exact raw-current invariance and a cutoff-uniform
 `O(Lambda^-3)` relative-phase Wick anomaly, and proves the deterministic
 Besov sixth-moment payment. R-075 closes the projector-free invariant-current
 chart, the principal unshifted one-form and its sixth moment, and fixed-cutoff
-predictable graph recovery. The current child is
-`A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: reconstruct the
-transport tail with every lower chaos and restored endpoint term in one signed
-causal identity. The umbrella theorem remains open.
+predictable graph recovery. R-076 adds the exact nonduplicating endpoint
+ledger and an input-maximum Besov proof with energy powers
+`X^(2/5)Y^(8/15)`, Young slack `1/15`, and a fifteenth moment. This closes the
+control-independent cubic and both nonresonant paraproducts, but proves none
+of its three proposed largest-root causal branches. The current child is
+`A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: prove the
+fresh-root, explicit-payload-high, and coefficient-only balanced-root
+estimates while retaining every lower chaos and restored endpoint term in one
+signed causal identity. The umbrella theorem remains open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -458,13 +463,16 @@ probability moment.  The balanced continuation replaces the impossible full
 continuum limits, and reconstructs the full rational coefficient in the exact
 A7 scheme.  The finite `Sigma Q` conversion and every grouped lower chaos are
 retained.  This closes the enhanced deterministic Cameron--Martin model, not
-an adapted random-shift estimate.  R-075 further closes only the principal
-unshifted one-form and fixed-cutoff graph recovery. The current child is
+an adapted random-shift estimate.  R-075 further closes the principal unshifted one-form and fixed-cutoff graph
+recovery. R-076 then proves the exact endpoint ledger and sharp
+control-independent cubic Besov payment, but its largest-root trichotomy is a
+successor proposal rather than a causal estimate. The current child is
 `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`; arbitrary
 adapted substitution has infinite Hermite content, so R-063's deterministic
-finite forest cannot simply be relabelled as complete. Termwise absolute
-paraproduct/Young absorption, automatic Wick centering, and geometry-only
-one-use remain excluded.
+finite forest cannot simply be relabelled as complete. A separated shifted
+multiplier, automatic Wick centering, and geometry-only one-use remain
+excluded; fresh-root, explicit-payload-high, and coefficient-only signed
+causal estimates remain to be proved.
 
 ### **A13-CLASSII-UNIVERSAL-Q-ALL-MOMENTS-AND-CM-TRANSLATION**
 
@@ -705,14 +713,17 @@ invariance and a cutoff-uniform relative-phase Wick anomaly with
 R-075 then supplies the exact projector-free invariant-current Taylor chart,
 closes the principal unshifted `C^(-1/2-kappa)` one-form with a uniform sixth
 moment, and proves predictable graph-norm finite-energy recovery at every
-fixed cutoff. It also proves that the transported third-order tail survives
-on a horizontal radial line, the termwise absolute route is Young-critical, a
-one-form-only endpoint omits a load-bearing Wick channel, and arbitrary
-adapted substitution does not preserve the finite R-063 chaos forest. The new
-current child is the signed coefficient-transport endpoint remainder below.
-Exact isolated `1:2` and `1:3` adapted harmonics remain summable and do not
-falsify the global statement. This signed remainder, one-use, Nelson theorem,
-and any tier promotion remain open.
+fixed cutoff. Its coarse third-order estimate is Young-critical, but R-076
+corrects the overbroad consequence: a maximal-input dyadic proof gives
+`X^(2/5)Y^(8/15)` with `1/15` slack and closes the control-independent cubic
+and both nonresonant paraproducts with a fifteenth moment. Exact Bregman, path,
+and equal-frequency fixtures exclude positivity and separated shifted-
+multiplier shortcuts. R-076 proposes three largest-root classes but proves no
+fresh-root, explicit-payload-high, or coefficient-only causal branch estimate.
+The current child is the complete signed coefficient-transport endpoint
+remainder below. Exact isolated `1:2` and `1:3` adapted harmonics remain
+summable and do not falsify the global statement. This signed remainder,
+one-use, Nelson theorem, and any tier promotion remain open.
 
 ### **A13-CLASSII-ADAPTED-TERMINAL-PHASE-ROOT-COERCIVITY**
 
@@ -727,24 +738,24 @@ phase-root cancellation or a genuinely adapted two-control derivative gain
 `rho=gamma-delta>0` with probability moments strictly above `3/rho`.
 R-063's unshifted coefficient-jet regularity is not such a theorem.
 
-**Status:** REDUCED AND SPLIT THROUGH R-075 (2026-07-24). R-073 proves exact
+**Status:** REDUCED AND SPLIT THROUGH R-076 (2026-07-25). R-073 proves exact
 familywise reassembly, the full raw-current telescope identity,
 projector-free completion on the kernel-projector rank-2/3/6 strata, and
 exact terminal-kernel cancellation after both separated first variations are
 restored. R-074 shows that the raw mismatched `E_x--b_l` coefficient has an
-exact nondecaying high--high-to-low resonance, so the bare positive-gain fork
-is unavailable, and a smooth value-only phase feedback refutes automatic
-adapted Wick centering. Neither diagnostic is a Cameron--Martin-weighted
+exact nondecaying high--high-to-low resonance and that automatic adapted Wick
+centering is false; neither diagnostic is a Cameron--Martin-weighted
 coercivity counterexample. Genuine regular local phase orbits preserve the
-complete raw current exactly; their common-phase Wick anomaly vanishes and
-their relative-phase anomaly has a uniform `O(Lambda^-3)` tail paid by the
-terminal sextic. R-075 supplies the projector-free invariant-current chart,
-closes the principal sixth-moment one-form, and proves fixed-cutoff predictable
-graph recovery. Its horizontal radial and constant-control fixtures prove that
-the transported tail and coefficient-curvature/Wick channel survive. The
-unresolved content is therefore the named signed coefficient-transport
-endpoint remainder below, not an undifferentiated phase-root positivity claim.
-Tier remains T4.
+complete raw current, and their relative-phase anomaly has a uniform
+`O(Lambda^-3)` tail. R-075 supplies the invariant-current chart, principal
+sixth-moment one-form, and fixed-cutoff graph recovery. R-076 then records the
+complete nonduplicating endpoint ledger, proves the sharp input-maximum cubic
+Besov payment, and closes the control-independent and nonresonant analytic
+branches. Its three largest-root classes are proposals only. The unresolved
+content is the fresh-root conditional sum, explicit-payload-high no-reuse
+harvest, and coefficient-only balanced-root signed Carleson component inside
+the named signed coefficient-transport endpoint remainder below, not an
+undifferentiated phase-root positivity claim. Tier remains T4.
 
 ### **A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM**
 
@@ -762,19 +773,21 @@ resonance-subtracted positive-gain construction is admissible only if its
 subtraction and every lower-chaos replacement are proved inside the same
 signed endpoint identity.
 
-**Status:** REDUCED AND SPLIT BY R-075 (2026-07-24). R-075 proves a global
+**Status:** REDUCED AND SPLIT BY R-076 (2026-07-25). R-075 proves a global
 projector-free invariant-current representation and exact Taylor chart across
 the rank-jumping strata. Its principal unshifted tensor is a canonical
 `C^(-1/2-kappa)` R-050 one-form with every finite moment and the required
-cutoff-uniform sixth moment, so R-074 pays that subterm. The same result proves
-fixed-cutoff predictable graph-norm recovery for any already established
-regular-control endpoint inequality. It does not call the invariant variables
-a nondegenerate tip coordinate or the principal tensor gauge-complete. The
-exact path coefficient retains a nonzero horizontal third-order transport
-tail, and the full endpoint retains the R-063 lower chaoses, both restored
-first variations, the terminal square, coefficient-curvature/Wick channel,
-trace transport, and finite-low boundary. Those unresolved terms are now the
-signed successor below. Tier remains T4.
+cutoff-uniform sixth moment, and it proves fixed-cutoff graph recovery for any
+already established regular-control endpoint inequality. R-076 gives the
+exact nonduplicating endpoint ledger and sharp input-maximum cubic payment,
+closing the control-independent and nonresonant pieces while showing that
+positivity and a separated shifted multiplier are unavailable. It does not
+call the invariant variables a nondegenerate tip coordinate, the principal
+tensor gauge-complete, or any proposed largest-root class proved. The fresh-
+root, explicit-payload-high, and coefficient-only balanced-root estimates must
+still retain the R-063 lower chaoses, both restored first variations, terminal
+square, coefficient-curvature/Wick channel, trace transport, and finite-low
+boundary in the signed successor below. Tier remains T4.
 
 ### **A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER**
 
@@ -793,19 +806,23 @@ for all `eta,zeta>0`, uniformly in the cutoff. A valid proof may use a signed
 Ward/martingale telescope, causal freezing relative to each fresh root, or a
 proved adapted arbitrary-multiplier shifted-enhancement theorem.
 
-**Status:** OPEN CURRENT CHILD (2026-07-24), created by R-075
-`A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION`. The
-termwise absolute estimate gives `R X^(1/2)Y^(1/2)` and has zero Young slack;
-a horizontal radial fixture proves the tail is not a phase artifact. A
-constant-control fixture proves that a terminal square plus only `A^2 DA`
-omits a negative coefficient-curvature channel, and an exact Hermite formula
-provides a smooth counterexample showing that arbitrary terminal adapted
-substitution need not preserve a finite R-063
-forest. Do not call the principal tensor gauge-complete, suppress the
-transport tail or lower chaoses, freeze a terminal adapted coefficient as
-finite chaos, omit the `DA=0` channel, split away either first variation, or
-use a singular phase projector. Once the regular-control signed identity is
-proved, apply the R-075 fixed-cutoff graph recovery, assemble
+**Status:** OPEN CURRENT CHILD (2026-07-25), reduced through R-076
+`A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION`. R-076 gives
+the exact nonduplicating ledger and corrects the coarse R-075 estimate:
+`R X^(2/5)Y^(8/15)` has `1/15` Young slack and closes the control-independent
+cubic plus both nonresonant paraproducts with a fifteenth moment. The unshifted
+high--high resonance is already enhanced. Exact affine-Bregman, path, and
+equal-frequency fixtures show that positivity and a separated shifted-
+multiplier bound are unavailable. What remains is the paired adapted shifted
+high--high resonance inside the complete signed endpoint. R-076 classifies
+three candidate largest-root branches but proves none: a fresh-Gaussian-root
+expansion with uniform conditional summability, a no-reuse explicit-payload-
+high shell harvest, and a coefficient-only balanced-root signed Carleson
+component. Do not call the classification a theorem, suppress the transport
+tail or lower chaoses, freeze a terminal adapted coefficient as finite chaos,
+omit the `DA=0` channel, split away either first variation, or use a singular
+phase projector. Once all three regular-control causal estimates are proved,
+apply R-075 fixed-cutoff graph recovery, assemble
 `A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE`, and return to the `q=10/9`
 Nelson theorem. Tier remains T4.
 

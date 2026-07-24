@@ -151,6 +151,20 @@ endpoint theorem.
     substitution is not a finite R-063 forest. The current child is
     `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`, followed by
     controlled-shell one-use and Nelson synthesis.
+17. **Signed endpoint ledger, sharp cubic payment, and causal frontier.**
+    R-076 records the transported Taylor endpoint without duplicating its
+    second jet, third transport, terminal square, or R-063 Wick/lower-chaos
+    terms. Grouping monomials by their maximal input dyadic index proves
+    `||A^3 DA||_(B^s_(1,1)) <=
+    C||A||_H2^((1+s)/2)||A||_6^((7-s)/2)` while retaining high--high-to-low
+    output. At `s=3/5` this gives `X^(2/5)Y^(8/15)`, `1/15` Young slack, and
+    a fifteenth-moment payment, closing the control-independent cubic and both
+    nonresonant paraproducts. Exact affine-Bregman, path, and equal-frequency
+    fixtures retire positivity and separated shifted-multiplier routes. The
+    largest-root trichotomy is only a successor proposal: fresh-root,
+    explicit-payload-high, and coefficient-only balanced-root estimates all
+    remain open and must be proved inside the complete signed endpoint before
+    R-075 graph recovery, controlled-shell one-use, or Nelson synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

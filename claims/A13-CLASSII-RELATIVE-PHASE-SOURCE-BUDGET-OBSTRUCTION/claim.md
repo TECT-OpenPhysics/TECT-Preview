@@ -317,6 +317,21 @@ the following structural results and proof-architecture boundaries hold.
     once the regular-control signed endpoint inequality is proved. The current
     child is the coupled signed coefficient-transport remainder, not another
     independent recovery theorem.
+19. `A13-CLASSII-SIGNED-TRANSPORT-BESOV-BREGMAN-RESONANCE-REDUCTION` gives one
+    exact nonduplicating endpoint ledger after the R-071 linear and R-075
+    principal terms are separated. An input-maximum Littlewood--Paley
+    decomposition, which retains high--high-to-low outputs, proves
+    `||A^3 DA||_(B^s_(1,1)) <=
+    C||A||_H2^((1+s)/2)||A||_6^((7-s)/2)` for `0<s<1`. At `s=3/5` the
+    energy powers are `2/5` and `8/15`, the slack is `1/15`, and the required
+    random moment is fifteen. This closes the control-independent cubic
+    one-form, both nonresonant paraproducts, and the already enhanced
+    unshifted resonance. Exact affine-Bregman, path, and equal-frequency
+    fixtures disprove convexity and a separated shifted-multiplier norm. The
+    only new rough product in the analytic split is the paired adapted shifted
+    high--high resonance. A three-class largest-root decomposition is recorded
+    as a successor proposal, but its fresh-root, explicit-payload-high, and
+    coefficient-only balanced-root estimates are all still open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -343,6 +358,7 @@ is a scoped T4 subproof and does not promote A13.
 | Off-diagonal telescope / critical phase root | Exact familywise reassembly, raw-current telescope, projector-free restored completion, and scoped absolute-route endpoint no-go | T4 algebraic coupling closed; adapted terminal coercivity open |
 | Resonant phase root / pure phase orbit / Besov payment | Exact bare-resonance and adapted-centering no-gos; exact local phase-orbit current invariance; finite relative-phase Wick anomaly; deterministic sixth-moment Besov payment | T4 phase subchannel and payment closed; complete horizontal one-form open |
 | Invariant-current Taylor chart / principal one-form / graph recovery | Projector-free algebraic chart, principal `C^(-1/2-kappa)` sixth-moment one-form, exact omission and transport diagnostics, and fixed-cutoff predictable graph recovery | T4 principal and recovery subgates closed; signed transported endpoint open |
+| Signed transport ledger / sharp cubic Besov / shifted-resonance boundary | Exact nonduplicating endpoint ledger, input-maximum `X^(2/5)Y^(8/15)` payment, control-independent and nonresonant closure, and Bregman/separated-multiplier no-gos | T4 analytic subbranches closed; all three proposed largest-root causal branch estimates open |
 | Controlled-shell one-use | Signed coefficient-transport endpoint remainder, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -413,6 +429,12 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   recovery extends an already proved regular-control endpoint inequality with
   the same cutoff-uniform constant; it does not prove that inequality or a
   cutoff-removal theorem.
+- R-076 is fixed-floor and proves an algebraic endpoint ledger plus an
+  input-maximum deterministic Besov theorem. Its fifteenth-moment payment
+  applies only to control-independent reconstructed currents and the two
+  bounded-coefficient paraproducts. The largest-root discussion is a proposed
+  causal decomposition: no fresh-root, explicit-payload-high, or
+  coefficient-only balanced-root branch estimate is claimed.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -439,52 +461,54 @@ Current analytic child:
 
 Current subordinate order:
 
-1. reconstruct and lower-bound the transported third-order tail together with
-   every R-063 lower chaos, both restored R-073 first variations, terminal
-   square, coefficient-curvature/Wick channel, exact trace transport, and
-   finite-low boundary in one causally valid signed endpoint identity;
-2. apply the R-075 fixed-cutoff predictable graph recovery to the resulting
-   regular-control inequality and assemble the controlled-shell one-use
-   estimate;
-3. return to the A7 Nelson and finite-volume measure gates.
+1. prove the fresh-Gaussian-root expansion with every R-063 lower chaos and a
+   cutoff-uniform conditional shell sum;
+2. prove a no-reuse Cameron--Martin shell harvest and residual dyadic estimate
+   for the explicit-payload-high class;
+3. prove the coefficient-only balanced-root signed Carleson component with
+   both restored R-073 first variations, terminal square,
+   coefficient-curvature/Wick channel, exact trace transport, and finite-low
+   boundary retained;
+4. apply R-075 fixed-cutoff predictable graph recovery only after all three
+   regular-control branch estimates, then assemble controlled-shell one-use;
+5. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_verify.py
+python codes/foundations/a13_classii_signed_transport_besov_bregman_resonance_verify.py
 ```
 
 Expected output:
 
-- primary `36/36`;
-- non-importing independent `20/20`;
-- integrated `76/76`, hence aggregate `132/132`;
-- projector-free current and Taylor identities, Nelson-aligned diagonalisation,
-  isolated/full resonance reassembly, exact omission and radial-tail fixtures,
-  two-resolution Hermite audit, critical Young budgets, and two graph-recovery
-  sequences;
+- primary `24/24`;
+- non-importing independent `15/15`;
+- integrated `92/92`, hence aggregate `131/131`;
+- exact signed-ledger reassembly, independently derived input-maximum
+  Besov/Young allocation, affine and centered-selector Bregman fixtures, exact
+  path split, radial shifted-multiplier leakage, direct predecessor-contract
+  and PDF-debris rejection, and T4 scope firewalls;
 - exit code zero.
 
-The ten-page proof note passes the standard form check, zero-overfull gate,
-and direct rendered-page visual QA.
+The nine-page proof note passes the standard form check, zero-overfull gate,
+extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_invariant_current_principal_oneform_graph_recovery_manifest.json`
-- `notes/classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0.tex.txt`
-- `notes/classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0.pdf`
-- `../../codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery.py`
-- `../../codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_independent.py`
-- `../../codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_verify.py`
-- `runs/2026-07-24-primary-principal-taylor-oneform-graph-recovery/result.json`
-- `runs/2026-07-24-independent-principal-taylor-oneform-graph-recovery/result.json`
-- `runs/2026-07-24-integrated-principal-taylor-oneform-graph-recovery/result.json`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-absolute-third-order-transport`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-oneform-only-endpoint-omission`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-adapted-finite-chaos-transfer`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-l2-only-predictable-recovery`
+- `classii_signed_transport_besov_bregman_resonance_manifest.json`
+- `notes/classii-signed-transport-besov-bregman-resonance-reduction-260724-v1.0.tex.txt`
+- `notes/classii-signed-transport-besov-bregman-resonance-reduction-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_signed_transport_besov_bregman_resonance.py`
+- `../../codes/foundations/a13_classii_signed_transport_besov_bregman_resonance_independent.py`
+- `../../codes/foundations/a13_classii_signed_transport_besov_bregman_resonance_verify.py`
+- `runs/2026-07-24-primary-signed-transport-besov-bregman-resonance/result.json`
+- `runs/2026-07-24-independent-signed-transport-besov-bregman-resonance/result.json`
+- `runs/2026-07-24-integrated-signed-transport-besov-bregman-resonance/result.json`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r075-coarse-transport-criticality`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-bregman-and-separated-shifted-multiplier`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair`
 
 The resonant phase-root predecessor remains binding:
 
@@ -939,6 +963,36 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     Nelson.** It closes only the principal subterm and fixed-cutoff recovery.
     The signed coefficient-transport endpoint, umbrella one-use, and
     `q=10/9` Nelson synthesis remain open.
+74. **UPHELD AGAINST THE FIRST R-076 PROOF DISPLAY: an output projection may
+    replace the maximal-input split.** High--high inputs leak to low output,
+    so the first displayed `P_(<=K)` estimate was false. The repaired proof
+    assigns every monomial to its maximal input index and only splits the
+    resulting single-input Besov sum.
+75. **UPHELD AGAINST A CAUSAL-CLOSURE READING: fresh-root and
+    explicit-payload-high branches are already proved.** R-076 records the
+    conditional-freezing and shell-harvest candidates but proves neither a
+    complete root expansion nor a cutoff-uniform residual shell sum.
+76. **UPHELD AGAINST DECLARATIVE VISUAL QA: a matching PDF hash and `PASS:`
+    string exclude rendered debris.** The first pinned PDF visibly contained
+    eighteen bare `qquad` tokens. The final verifier extracts every page and
+    rejects those tokens directly.
+77. **UPHELD AGAINST PERMISSIVE PREDECESSOR NORMALIZATION: a top-level PASS
+    signal may override failed rows.** Verifier v1.0.3 rejects contradictory
+    verdict, summary, boolean, status, failed-row, and empty-row fixtures
+    before accepting any historical schema.
+78. **UPHELD AGAINST CORRELATED EXPONENT EVIDENCE: repeating the primary
+    closed formulas is an independent derivation.** The final independent
+    route computes an interpolation parameter and residual `L6` power first;
+    it does not contain the primary `x=(1+s)/4`, `y=(7-s)/12` formulas.
+79. **UPHELD AGAINST R-076 UMBRELLA CLOSURE: the sharp Besov theorem proves
+    one-use or Nelson.** It closes only the control-independent and
+    nonresonant analytic branches. All three causal largest-root estimates,
+    graph-recovered endpoint, one-use, and Nelson remain open.
+80. **UPHELD AGAINST AN ALL-TIMES MULTIPLIER LEAKAGE READING: the zero-mode
+    witness is nonzero also at `t=0`.** Since `K_0=0`, the zero mode vanishes
+    there. The corrected statement fixes `t in (0,1]` and derives the leading
+    coefficient `(t/2)v^(4)(sqrt(e)) delta N^s`; this still disproves the
+    separated multiplier estimate at every nontrivial fixed path time.
 
 ## Falsifier
 
@@ -1064,6 +1118,19 @@ omission of a direct runtime or predecessor hash, a source/PDF hash mismatch,
 failed ten-page PDF QA, or failure of the primary `36/36`, independent
 `20/20`, integrated `76/76`, and aggregate `132/132` contracts.
 
+The signed-transport/Besov/Bregman continuation is additionally falsified by
+failure of the exact nonduplicating endpoint ledger, an input-maximum Besov
+proof that loses high--high-to-low interactions, powers other than `2/5` and
+`8/15`, Young slack other than `1/15`, loss of the fifteenth-moment payment,
+failure of either nonresonant paraproduct estimate, a nonnegative affine or
+centered-selector fixture, a path total other than `-3/2`, absence of the
+equal-frequency multiplier leakage or its `13/12` separated exponent, a
+contradictory predecessor record accepted as PASS, a copied independent
+allocation formula, a hardcoded derived report, literal control debris in the
+source or rendered PDF, a source/PDF hash mismatch, failed nine-page PDF QA,
+or failure of the primary `24/24`, independent `15/15`, integrated `92/92`,
+and aggregate `131/131` contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1151,11 +1218,23 @@ global algebraic chart, the principal unshifted sixth-moment one-form, and
 finite-energy recovery only at each fixed cutoff after a regular-control
 endpoint inequality is available. The chart is degenerate at a pure-singlet
 tip, the principal tensor is not Ward-complete, and the transported third-order
-tail is nonzero and Young-critical. The theorem does not reconstruct or bound
-the complete signed adapted coefficient-transport endpoint, close
+tail is nonzero; only the coarse R-075 payment is Young-critical, while R-076
+proves a sharper control-independent payment. The theorem does not reconstruct
+or bound the complete signed adapted coefficient-transport endpoint, close
 controlled-shell one-use or Nelson, construct an interacting measure, remove
 the floor or regulator, take infinite volume, prove phase transition or BCC
 selection, or justify T5--T7. A13 remains T4.
+
+The signed-transport/Besov/Bregman theorem closes the exact endpoint ledger,
+the input-maximum cubic payment for control-independent currents, both
+nonresonant paraproducts, and the already enhanced unshifted resonance. Its
+affine, path, and equal-frequency fixtures exclude only the named positivity
+and separated-multiplier architectures. The three largest-root classes are a
+successor proposal, not proved causal estimates. It does not prove the paired
+shifted enhancement, the complete signed endpoint lower bound, finite-energy
+extension of that unproved bound, controlled-shell one-use, Nelson, an
+interacting measure, floor/regulator removal, infinite volume, phase
+transition, BCC selection, or T5--T7. A13 remains T4.
 
 ## History
 
@@ -1273,3 +1352,18 @@ selection, or justify T5--T7. A13 remains T4.
   contracts; the ten-page PDF passed all-page visual QA. The signed
   coefficient-transport endpoint remainder is the current child; tier stays
   T4.
+- 2026-07-25: Registered R-076 after an adversarial repair cycle. The exact
+  nonduplicating endpoint ledger survives, and a maximal-input dyadic proof
+  replaces R-075's coarse criticality verdict by the sharp
+  `X^(2/5)Y^(8/15)` payment with `1/15` slack and a fifteenth moment. This
+  closes the control-independent cubic one-form and both nonresonant Bony
+  branches. Exact affine-Bregman, path, and equal-frequency fixtures retire
+  positivity and separated shifted-multiplier shortcuts. The first draft's
+  false output-frequency display, literal PDF control debris, permissive
+  predecessor parser, correlated exponent audit, hardcoded report, causal
+  overstatement, and the second-pass `t=0` multiplier quantifier defect are
+  preserved in the audit ledger and repaired through verifier v1.0.3 and the final
+  proof note. Primary 24/24, independent 15/15, integrated 92/92, and aggregate
+  131/131 are the final contracts; all three proposed largest-root causal
+  branch estimates, the complete endpoint, one-use, and Nelson remain open.
+  Tier stays T4.

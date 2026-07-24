@@ -6,7 +6,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
-| [NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT](#ng-2026-07-24-a13-absolute-third-order-transport) | A13 termwise absolute payment of the transported third-order Taylor tail | the natural product is `R X^(1/2)Y^(1/2)` and exhausts Young's inequality; a non-tip horizontal radial fixture has a nonzero surviving tail |
+| [AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR](#audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair) | R-076 proof-note, PDF, verifier, independence, and scope audit | the first draft wrote an invalid output-frequency split for an input-maximum proof, rendered bare `qquad` text, accepted contradictory predecessor records, repeated the exponent formulas, hardcoded a report, and overstated a proposed causal classification |
+| [AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS](#audit-2026-07-25-a13-r076-predecessor-pass-schemas) | R-076 integrated-verifier predecessor PASS validation | the first wrapper accepted only a modern summary verdict, while six pinned predecessors use three historical contracts: suffixed verdict strings, zero-failure count summaries, and a boolean `pass` field |
+| [AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY](#audit-2026-07-25-a13-r075-coarse-transport-criticality) | R-075 classification of the absolute third-order payload | the recorded `H2*L6^3` estimate is valid but nonsharp; a largest-input split gives powers `X^(2/5)Y^(8/15)` and positive slack `1/15`, so the old no-go is narrowed to that coarse estimate |
+| [NG-2026-07-25-A13-BREGMAN-AND-SEPARATED-SHIFTED-MULTIPLIER](#ng-2026-07-25-a13-bregman-and-separated-shifted-multiplier) | A13 affine-Bregman positivity and separated shifted-multiplier closure | exact production curvature is negative four times the retained square, while equal high frequencies make the shifted multiplier leak a zero mode and raise the deterministic budget to `13/12` |
+| [NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT](#ng-2026-07-24-a13-absolute-third-order-transport) | A13 coarse absolute payment of the transported third-order Taylor tail | the specific estimate `R X^(1/2)Y^(1/2)` exhausts Young's inequality and the tail survives; R-076 corrects the overbroad route consequence because a sharper payload has slack, leaving only the paired shifted resonance open |
 | [NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION](#ng-2026-07-24-a13-oneform-only-endpoint-omission) | A13 endpoint closure by the terminal square plus only the `A^2 DA` one-form | an exact `DA=0` fixture has negative raw Taylor remainder because the omitted coefficient-curvature/Wick channel is larger than the retained positive square |
 | [NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER](#ng-2026-07-24-a13-adapted-finite-chaos-transfer) | A13 transfer of the deterministic R-063 finite forest to arbitrary correlated adapted coefficients | a smooth bounded adapted factor has nonzero Hermite coefficients at every even order, so finite-chaos completion is not automatic |
 | [NG-2026-07-24-A13-L2-ONLY-PREDICTABLE-RECOVERY](#ng-2026-07-24-a13-l2-only-predictable-recovery) | A13 finite-energy extension by predictable Cameron--Martin `L2` density alone | a predictable spike sequence has vanishing `L2` energy but constant terminal `L6` sixth moment, so the sextic graph coordinate is necessary |
@@ -65,8 +69,135 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
 
+<a id="audit-2026-07-25-a13-r076-pre-release-proof-and-evidence-repair"></a>
+### AUDIT-2026-07-25-A13-R076-PRE-RELEASE-PROOF-AND-EVIDENCE-REPAIR -- adversarial review found proof, PDF, verifier, independence, and scope defects
+
+**Failure mode:** Accept the first R-076 package because its numerical
+oracles and release spine passed, without checking whether the written
+Littlewood--Paley split matched the proof, the rendered equations contained
+literal control text, the predecessor normalizer rejected contradictory
+records, the exponent audit used a genuinely distinct derivation, every
+reported number came from its computed payload, and the causal frontier was
+proved rather than proposed.
+
+**Evidence:** The first note displayed output projections `P_(<=K)` and
+`P_(>K)` while its argument selected a largest input block; high--high inputs
+can leak to low output, so the literal low-output estimate was false even
+though the final mixed Besov theorem and exponents were correct. Fourteen
+source lines contained eighteen bare `qquad` tokens, visibly rendered on PDF
+pages 1--6 despite a `PASS:` visual-QA string. Verifier v1.0.1 returned true
+for top-level PASS signals paired with failed or empty assertion rows. The
+independent exponent function repeated the primary closed formulas, and the
+primary terminal report hardcoded the derived powers. Finally, the first
+causal-frontier wording treated fresh-root and explicit-payload-high branch
+estimates as available without a root expansion, conditional moment, or
+uniform shell sum. A second-pass audit found that the shifted-multiplier
+sentence also included the trivial path time `t=0`, although `K_0=0`; the
+claimed nonzero leakage requires a fixed `t>0`.
+
+**Correction:** The note now groups every monomial by its maximal input
+dyadic index, retains high--high-to-low interactions, proves the resulting
+`B^(1+s)_(2,1)` product bound, and only then splits the single-input Besov
+sum. Every bare control token was repaired; the final nine-page PDF was
+rebuilt, Poppler-rendered, and inspected page by page. Verifier v1.0.2 made every present assertion group fail-closed and added
+contradiction/debris tests. Verifier v1.0.3 additionally pins predecessor
+schema, claim, result identity, aggregate-count relations, current-child
+source identity and rowwise PASS, and rejects nonempty `failures` or non-null
+`failure_stage` signals. The independent audit derives
+the allocation from its interpolation parameter and residual `L6` power, and
+the primary report reads its computed budget. The multiplier fixture is now
+quantified for each fixed `t in (0,1]`, with leading zero mode proportional to
+`t v-fourth(sqrt(e)) delta N^s`, and explicitly records the trivial `t=0`
+case. The causal section and every live summary now call all three largest-
+root branch estimates open.
+
+**Consequence:** The repaired package has primary 24/24, independent 15/15,
+integrated 92/92, and aggregate 131/131 contracts. The exact signed ledger,
+sharp Besov theorem, analytic branch closures, and two method no-gos survive;
+the causal frontier is narrower in authority than the first draft. No tier
+promotion, one-use, Nelson, or Sector-A closure follows. Future proof-note
+verification must test mathematical split semantics and rendered text rather
+than trust a declarative visual-QA field.
+
+<a id="audit-2026-07-25-a13-r076-predecessor-pass-schemas"></a>
+### AUDIT-2026-07-25-A13-R076-PREDECESSOR-PASS-SCHEMAS -- the first integrated wrapper repeated a historical-schema assumption
+
+**Failure mode:** Treat every pinned predecessor result as if PASS were
+encoded only by `summary.verdict="PASS"` with equal `passed` and `total`, or
+by a top-level literal `verdict="PASS"` or `status="PASS"`.
+
+**Evidence:** The first R-076 integrated run passed all direct, hash, PDF,
+note, cross-value, and scope checks but reported 81/87 because its six pinned
+predecessors use three issued contracts. R-050 and R-063/R-066 encode PASS as
+a result-specific `*-PASS` verdict, R-063/R-066 also use
+`summary={failed:0,passed:total}`, and R-071/R-073/R-075 use a top-level
+boolean `pass=true` with all assertion rows marked PASS.
+
+**Correction:** Verifier v1.0.1 first recognized those issued signals, and the
+adversarial follow-up found that it returned before checking contradictory
+assertion rows. Version 1.0.2 first required every present assertion group to be nonempty
+and all-PASS and rejected four contradictory regression fixtures. Version
+1.0.3 also validates predecessor schema/claim/result identity, aggregate-count
+relations, current-child source and row contracts, and explicit `failures` and
+`failure_stage` signals while retaining every pinned result hash.
+
+**Consequence:** The final rerun is 92/92 integrated and 131/131 aggregate
+PASS. This changes no mathematics or tier. Future A13 wrappers must inspect
+predecessor schemas before execution instead of copying one generation's
+PASS parser, and every normalizer must carry contradiction fixtures.
+
+<a id="audit-2026-07-25-a13-r075-coarse-transport-criticality"></a>
+### AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY -- the R-075 payload estimate was valid but nonsharp
+
+**Failure mode:** Promote the valid coarse estimate
+`||A^3 DA||_(B^s_(1,1))<=C||A||_H2||A||_6^3` into a no-go for every
+absolute payment of a control-independent third-order current.
+
+**Evidence:** A largest-input Littlewood--Paley split gives instead
+`||A^3 DA||_(B^s_(1,1))<=C||A||_H2^((1+s)/2)
+||A||_6^((7-s)/2)`.  With `s=3/5`, `X=||A||_H2^2`, and
+`Y=||A||_6^6`, the powers are `X^(2/5)Y^(8/15)` and leave Young slack
+`1/15`.  Thus an already reconstructed control-independent current needs
+only its fifteenth moment, with loss `eta^-6 zeta^-8 R^15`; R-050/R-063
+provide every finite moment.  Primary and non-importing independent
+executables derive the same exponents rather than storing them as literals.
+
+**Consequence:** Correct, do not erase, the historical R-075 route verdict.
+The coarse `X^(1/2)Y^(1/2)` payment is retired, but the base-frozen cubic
+one-form and both nonresonant paraproducts are payable.  The remaining no-go
+concerns only a separated norm for the adapted shifted high--high resonance;
+the complete signed endpoint remains open.
+
+<a id="ng-2026-07-25-a13-bregman-and-separated-shifted-multiplier"></a>
+### NG-2026-07-25-A13-BREGMAN-AND-SEPARATED-SHIFTED-MULTIPLIER -- two signed-transport shortcuts fail
+
+**Failure mode:** Close the signed coefficient transport either by convexity
+of the physical affine-current Bregman remainder or by first constructing an
+`A`-uniform `C^(-s)` norm of the shifted multiplier and then using absolute
+Young absorption.
+
+**Evidence:** On the exact production fixture
+`U=e1+e3`, `A=e1-e3`, `G=e3`, and `DA=0`, the retained square is
+`2 q22/(2+e)^2`, the curvature term is `-8 q22/(2+e)^2`, and the
+remainder is
+`-9/[160 P(2+e)^2]=-0.0035156249999956...`.  Along the zero-floor affine
+path the positive and curvature integrals are respectively
+`7/2-log(4)-pi/2` and `-5+log(4)+pi/2`, with total `-3/2`.
+Separately, on the active radial production column
+`v(r)=2er/(r^2+e)`, `v''''(sqrt(e))=-6e^(-3/2)`.  Equal high-frequency
+modes `A_N=delta cos(Nx)` and `J_N=N^s cos(Nx)` make the shifted coefficient
+product leak a zero mode of size `delta N^s`.  Since
+`||A_N||_H2~delta N^2`, the separated architecture changes the corrected
+budget exponent to `(10+5s)/12=13/12` at `s=3/5`.
+
+**Consequence:** Neither affine/Wick Bregman positivity nor a separated
+shifted-current norm is a valid successor.  These are method no-gos, not
+counterexamples to one-use.  The exact paired shifted remainder must stay
+with the terminal square, coefficient-curvature/Wick forest, R-063 lower
+chaoses, R-066 trace, and finite-low boundary in a causal signed estimate.
+
 <a id="ng-2026-07-24-a13-absolute-third-order-transport"></a>
-### NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT -- the transported Taylor tail has no termwise Young slack
+### NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT -- the coarse transported-tail estimate has no Young slack
 
 **Failure mode:** Bound the exact third-order coefficient-transport tail by
 absolute Besov duality and absorb it using only Cameron--Martin energy,
@@ -83,11 +214,18 @@ bookkeeping warning: on the active-real sigma-3 radial line with
 `0.0073125 e/P>0` on a non-tip horizontal direction, approximately
 `0.001828125 e` at the pinned production `P=4+10^(-12)`.
 
-**Consequence:** Retire the termwise absolute third-order route. The tail is
-not a local-phase artifact and cannot be deleted. The viable successor must
-combine it with the restored endpoint, lower-chaos, square, and Wick/trace
-terms through a signed Ward/martingale telescope, causal root freezing, or a
-proved adapted shifted-enhancement theorem.
+**Correction:** The displayed coarse estimate remains a valid failure, and
+the tail is not a local-phase artifact. The broader conclusion was corrected
+by R-076 and
+`AUDIT-2026-07-25-A13-R075-COARSE-TRANSPORT-CRITICALITY`: a sharper
+largest-input estimate has positive slack and pays any already reconstructed
+control-independent cubic current.
+
+**Consequence:** What remains excluded is the coarse `X^(1/2)Y^(1/2)` route
+and, by the new shifted-multiplier fixture, any attempt to form an `A`-uniform
+separated multiplier norm. The paired adapted high--high resonance must still
+be combined with the restored endpoint, lower-chaos, square, and Wick/trace
+terms.
 
 <a id="ng-2026-07-24-a13-oneform-only-endpoint-omission"></a>
 ### NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION -- a cubic one-form plus terminal square omits the constant-control channel
@@ -984,7 +1122,8 @@ negative quartic; it was a convenient split, not a necessary restriction.
 **Evidence:** For every `delta>0` and `r>=0`,
 [
  {lambdaover4}r^2+{gammaover6}r^3
- geleft({gammaover6}-deltaight)r^3
+ geleft({gammaover6}-delta
+ight)r^3
  -{|lambda|^3over432delta^2}.
 ]
 The auxiliary inequality is sharp at
