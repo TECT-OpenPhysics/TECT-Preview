@@ -290,9 +290,33 @@ the following structural results and proof-architecture boundaries hold.
     `||A tensor A tensor DA||_(B^(1/2+kappa)_(1,1))`
     is bounded by `C||A||_(H2)||A||_6^2`, so an adapted
     `C^(-1/2-kappa)` one-form with a uniform sixth moment would close the
-    horizontal cubic payload.  Constructing that lower-chaos-complete signed
-    one-form and proving predictable graph-norm finite-energy recovery are the
-    next two steps.
+    horizontal cubic payload. R-075 closes the principal unshifted one-form and
+    fixed-cutoff graph-recovery parts without closing the full transported
+    signed endpoint.
+18. `A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION` gives the
+    projector-free invariant-current chart. With `rho=z^Tz`, `d=rho+e`, and
+    `m_r=z^TS_rz`, one has exactly
+    `M_r(z)^Ty=(D_i m_r,D_i m_r-m_rD_i log d)`. Completing `Q_II`
+    diagonalises the current at `alpha=5/9`, hence `2 alpha=10/9`, without a
+    singular phase projector. The representation is algebraically global but
+    is not a nondegenerate coordinate at a pure-singlet tip. Its exact Taylor
+    chart retains `A DA`, `A^2 DU`, terminal-square, radial, and cone-tip
+    channels. Freezing only the Hessian produces a canonical
+    `C^(-1/2-kappa)` R-050 one-form with every finite probability moment and a
+    cutoff-uniform sixth moment, so R-074 pays its `A^2 DA` pairing. The full
+    path coefficient still has a third-order tail: its absolute product is
+    `X^(1/2)Y^(1/2)` with zero Young slack, and an exact horizontal radial
+    fixture proves it survives. A `DA=0` fixture proves that a terminal square
+    plus the cubic one-form omits a load-bearing coefficient-curvature/Wick
+    term, while an exact Hermite formula provides a smooth adapted
+    counterexample with infinitely many chaoses. Finally, at each fixed cutoff,
+    bounded smooth
+    past-cylindrical controls are dense in the Cameron--Martin/terminal-`L6`
+    graph norm; the raw current, Wick trace, and cubic payload are continuous
+    in the corresponding topology. Thus finite-energy recovery is available
+    once the regular-control signed endpoint inequality is proved. The current
+    child is the coupled signed coefficient-transport remainder, not another
+    independent recovery theorem.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -318,7 +342,8 @@ is a scoped T4 subproof and does not promote A13.
 | Phase-kernel / causal diagonal one-use | Exact gauge-kernel strata, differentiated gauge identity, inverse-free completion, and matched same-shell one-use with one random constant | T4 diagonal subgate closed; full terminal off-diagonal remainder open |
 | Off-diagonal telescope / critical phase root | Exact familywise reassembly, raw-current telescope, projector-free restored completion, and scoped absolute-route endpoint no-go | T4 algebraic coupling closed; adapted terminal coercivity open |
 | Resonant phase root / pure phase orbit / Besov payment | Exact bare-resonance and adapted-centering no-gos; exact local phase-orbit current invariance; finite relative-phase Wick anomaly; deterministic sixth-moment Besov payment | T4 phase subchannel and payment closed; complete horizontal one-form open |
-| Controlled-shell one-use | Adapted gauge-quotient Taylor one-form, finite-energy graph-norm recovery, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
+| Invariant-current Taylor chart / principal one-form / graph recovery | Projector-free algebraic chart, principal `C^(-1/2-kappa)` sixth-moment one-form, exact omission and transport diagnostics, and fixed-cutoff predictable graph recovery | T4 principal and recovery subgates closed; signed transported endpoint open |
+| Controlled-shell one-use | Signed coefficient-transport endpoint remainder, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -379,6 +404,15 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   differentiable doublet/singlet phase rotations.  The covariance norms in
   its Wick-anomaly bound are operator norms.  Its Besov lemma is deterministic;
   the complete adapted horizontal one-form and its sixth moment remain open.
+- R-075 is fixed-floor and fixed-terminal-cutoff. Its invariant variables give
+  a global algebraic current representation but not a nondegenerate or
+  bi-Lipschitz quotient coordinate at a pure-singlet tip. Its principal
+  unshifted tensor has the required sixth moment but is not individually
+  gauge-horizontal; Ward completion needs the transported tail, both restored
+  first variations, terminal square, and Wick/lower-chaos channels. Graph
+  recovery extends an already proved regular-control endpoint inequality with
+  the same cutoff-uniform constant; it does not prove that inequality or a
+  cutoff-removal theorem.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -401,55 +435,63 @@ Active umbrella gate:
 
 Current analytic child:
 
-- `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`
+- `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`
 
 Current subordinate order:
 
-1. construct the complete lower-chaos adapted horizontal Taylor one-form
-   after quotienting the two local phase directions, retain the explicit R-074
-   resonance, both restored R-073 first variations, terminal square, and
-   finite-low boundary, and prove its signed endpoint reconstruction and a
-   cutoff-uniform sixth moment;
-2. use the R-074 Besov payment, then prove predictable graph-norm recovery for
-   the declared finite-energy class, controlling Cameron--Martin energy,
-   terminal `L6`, and the positive raw-current functional, and assemble the
-   controlled-shell one-use estimate;
+1. reconstruct and lower-bound the transported third-order tail together with
+   every R-063 lower chaos, both restored R-073 first variations, terminal
+   square, coefficient-curvature/Wick channel, exact trace transport, and
+   finite-low boundary in one causally valid signed endpoint identity;
+2. apply the R-075 fixed-cutoff predictable graph recovery to the resulting
+   regular-control inequality and assemble the controlled-shell one-use
+   estimate;
 3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_resonant_phase_root_besov_reduction_verify.py
+python codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_verify.py
 ```
 
 Expected output:
 
-- primary `35/35`;
-- non-importing independent `17/17`;
-- integrated `58/58`, hence aggregate `110/110`;
-- frame-derived Pauli contributions, two-resolution secant and Gaussian
-  quadratures, exact local phase covariance, the `O(Lambda^-3)` covariance
-  tail, Cameron--Martin rescue slope, and Besov sixth-moment exponents;
+- primary `36/36`;
+- non-importing independent `20/20`;
+- integrated `76/76`, hence aggregate `132/132`;
+- projector-free current and Taylor identities, Nelson-aligned diagonalisation,
+  isolated/full resonance reassembly, exact omission and radial-tail fixtures,
+  two-resolution Hermite audit, critical Young budgets, and two graph-recovery
+  sequences;
 - exit code zero.
 
-The eight-page proof note passes the standard form check, zero-overfull gate,
+The ten-page proof note passes the standard form check, zero-overfull gate,
 and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
+- `classii_invariant_current_principal_oneform_graph_recovery_manifest.json`
+- `notes/classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0.tex.txt`
+- `notes/classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery.py`
+- `../../codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_independent.py`
+- `../../codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_verify.py`
+- `runs/2026-07-24-primary-principal-taylor-oneform-graph-recovery/result.json`
+- `runs/2026-07-24-independent-principal-taylor-oneform-graph-recovery/result.json`
+- `runs/2026-07-24-integrated-principal-taylor-oneform-graph-recovery/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-absolute-third-order-transport`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-oneform-only-endpoint-omission`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-adapted-finite-chaos-transfer`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-l2-only-predictable-recovery`
+
+The resonant phase-root predecessor remains binding:
+
 - `classii_resonant_phase_root_besov_reduction_manifest.json`
 - `notes/classii-resonant-phase-root-besov-reduction-260724-v1.0.tex.txt`
 - `notes/classii-resonant-phase-root-besov-reduction-260724-v1.0.pdf`
-- `../../codes/foundations/a13_classii_resonant_phase_root_besov_reduction.py`
-- `../../codes/foundations/a13_classii_resonant_phase_root_besov_reduction_independent.py`
 - `../../codes/foundations/a13_classii_resonant_phase_root_besov_reduction_verify.py`
-- `runs/2026-07-24-primary-resonant-phase-root-besov-reduction/result.json`
-- `runs/2026-07-24-independent-resonant-phase-root-besov-reduction/result.json`
-- `runs/2026-07-24-integrated-resonant-phase-root-besov-reduction/result.json`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-raw-bare-positive-gain-root`
-- `../../negative-results/registry.md#ng-2026-07-24-a13-automatic-adapted-wick-centering`
 
 The off-diagonal telescope predecessor remains binding:
 
@@ -852,6 +894,51 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     Approximants may carry excess positive raw-current or sextic energy, whose
     semicontinuity has the wrong direction.  A predictable graph-norm recovery
     or a declared biting/uniform-integrability substitute remains necessary.
+64. **UPHELD AGAINST A GLOBAL-COORDINATE READING: the invariants are a smooth
+    nondegenerate quotient chart on every stratum.** At a nonzero pure singlet
+    the production frame has rank zero while `D rho` has rank one. R-075 uses
+    only the exact projector-free current identity and claims no inverse or
+    bi-Lipschitz coordinate.
+65. **UPHELD AGAINST PRINCIPAL CLOSURE: the principal second-order tensor is
+    the completed gauge-horizontal one-form.** A constant phase-tangent fixture
+    has nonzero principal contraction although the exact rotated raw energy is
+    invariant. Ward completion needs the orbit acceleration, transported tail,
+    both restored first variations, and terminal square.
+66. **DISMISSED: the isolated negative R-074 coefficient keeps its sign after
+    exact reassembly.** On the same canonical fixture, the complete
+    three-generator `t^2 ell` coefficient is positive. This is an attribution
+    oracle and proves no global positivity.
+67. **UPHELD AGAINST MOMENT REPAIR: every finite moment of the transported
+    random current makes the absolute third-order estimate admissible.** The
+    deterministic factor is already `X^(1/2)Y^(1/2)` and exhausts Young's
+    inequality. No probability exponent remains for an unbounded multiplier.
+68. **UPHELD AGAINST PHASE DELETION: Ward cancellation removes the transported
+    third-order tail.** The exact active-real radial fixture is horizontal,
+    non-tip, and has `N_(>=3)=0.0073125 e/P>0`, approximately
+    `0.001828125 e` at the pinned production `P=4+10^(-12)`.
+69. **UPHELD AGAINST A ONE-FORM-ONLY ENDPOINT: the terminal square controls the
+    entire `DA=0` channel.** The exact constant-control fixture has negative
+    raw Taylor remainder, positive square, and a coefficient-curvature term
+    whose magnitude is larger than that square. The Wick/trace channel remains
+    load-bearing.
+70. **UPHELD AGAINST FINITE-FOREST TRANSFER: arbitrary adapted substitution
+    preserves R-063's finite chaos list.** The exact Hermite generating
+    function for `exp(-X^2)(X^2-1)` has nonzero coefficients at every even
+    order. Causal freezing or an arbitrary-multiplier shifted enhancement is
+    required.
+71. **UPHELD AGAINST `L2`-ONLY RECOVERY: predictable Cameron--Martin density
+    controls terminal sextic energy.** The sequence
+    `h_n=n^(1/6)1_(E_n)f`, `P(E_n)=1/n`, converges in `L2` but has constant
+    terminal sixth moment. The graph norm repairs exactly this loss.
+72. **DISMISSED: graph recovery requires a `6+epsilon` one-form moment.** Strong
+    `L^(6/5)` convergence of `A^2 DA` and uniform sixth-moment integrability are
+    exactly dual, provided the one-form is identified in probability along the
+    recovery sequence. Moment boundedness without graph identification is not
+    enough.
+73. **UPHELD AGAINST UMBRELLA CLOSURE: R-075 proves controlled-shell one-use or
+    Nelson.** It closes only the principal subterm and fixed-cutoff recovery.
+    The signed coefficient-transport endpoint, umbrella one-use, and
+    `q=10/9` Nelson synthesis remain open.
 
 ## Falsifier
 
@@ -965,6 +1052,18 @@ or PDF hash mismatch, failed eight-page PDF QA, or failure of the primary
 `35/35`, independent `17/17`, integrated `58/58`, and aggregate `110/110`
 contracts.
 
+The invariant-current/principal-one-form/graph-recovery continuation is
+additionally falsified by failure of the projector-free current or Taylor
+identity, a diagonal coefficient other than `alpha=5/9` or Nelson exponent
+other than `10/9`, an incorrect pure-singlet rank warning, loss of the
+principal `C^(-1/2-kappa)` sixth moment, disagreement of the isolated/full
+resonance coefficients, failure of the constant-control or horizontal-radial
+oracles, a finite Hermite termination for the declared adapted factor, a
+noncritical absolute transport budget, nonconvergence of either graph fixture,
+omission of a direct runtime or predecessor hash, a source/PDF hash mismatch,
+failed ten-page PDF QA, or failure of the primary `36/36`, independent
+`20/20`, integrated `76/76`, and aggregate `132/132` contracts.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1046,6 +1145,17 @@ one-form, prove its sixth moment or signed endpoint identity, extend to every
 finite-energy drift, close controlled-shell one-use or Nelson, construct an
 interacting measure, remove a floor or regulator, take infinite volume, prove
 phase transition or BCC selection, or justify T5--T7. A13 remains T4.
+
+The invariant-current/principal-one-form/graph-recovery theorem closes the
+global algebraic chart, the principal unshifted sixth-moment one-form, and
+finite-energy recovery only at each fixed cutoff after a regular-control
+endpoint inequality is available. The chart is degenerate at a pure-singlet
+tip, the principal tensor is not Ward-complete, and the transported third-order
+tail is nonzero and Young-critical. The theorem does not reconstruct or bound
+the complete signed adapted coefficient-transport endpoint, close
+controlled-shell one-use or Nelson, construct an interacting measure, remove
+the floor or regulator, take infinite volume, prove phase transition or BCC
+selection, or justify T5--T7. A13 remains T4.
 
 ## History
 
@@ -1152,3 +1262,14 @@ phase transition or BCC selection, or justify T5--T7. A13 remains T4.
   normalized the distinct issued R-050/R-063/R-073 predecessor contracts. The
   complete lower-chaos adapted gauge-quotient one-form and predictable finite-
   energy graph-norm recovery remain open; tier stays T4.
+- 2026-07-24: Derived the exact projector-free invariant-current Taylor chart,
+  proved that its principal unshifted tensor is a canonical
+  `C^(-1/2-kappa)` one-form with a cutoff-uniform sixth moment, and established
+  fixed-cutoff predictable Cameron--Martin/terminal-`L6` graph recovery. Exact
+  full-resonance, constant-control, horizontal-radial, Hermite, and predictable
+  spike fixtures show that the remaining transported endpoint must retain the
+  complete lower-chaos/Wick signed identity. Primary 36/36, non-importing
+  independent 20/20, integrated 76/76, and aggregate 132/132 are the released
+  contracts; the ten-page PDF passed all-page visual QA. The signed
+  coefficient-transport endpoint remainder is the current child; tier stays
+  T4.

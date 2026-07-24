@@ -19,19 +19,20 @@ A6 UV and K definitions
   -> A8 decoupled Nelson reference
   -> A9 interpolation cancellation
   -> A10-A13 replacement/no-go lineage
-  -> A13 adapted gauge-quotient Taylor one-form and one-use estimate (open)
+  -> A13 signed coefficient-transport endpoint and one-use estimate (open)
   -> A7 Nelson/Gibbs reassembly (open)
 ```
 
 A7 is the long-term theorem anchor; A13 is the current subproof host. Its
 finite forest, balanced coefficient-jet continuum, exact grouped rational A7
 reconstruction, backward-heat, NPC-cone, tip-safe grouped-harvest, exact
-off-diagonal telescope, and resonant phase-root reductions are closed at
-scoped T4. R-074 proves the exact bare resonance and automatic-centering
-no-gos, closes genuine local phase orbits including their finite Wick anomaly,
-and supplies the deterministic Besov sixth-moment payment. The current child
-is `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`, followed by predictable
-graph-norm finite-energy recovery and the umbrella one-use estimate.
+off-diagonal telescope, resonant phase-root, invariant-current principal
+one-form, and fixed-cutoff graph-recovery reductions are closed at scoped T4.
+R-075 proves the exact projector-free Taylor chart, the principal unshifted
+one-form and its uniform sixth moment, and predictable graph recovery. Its
+horizontal radial, constant-control, and Hermite diagnostics leave the current
+child `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`, followed
+by the umbrella one-use estimate.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

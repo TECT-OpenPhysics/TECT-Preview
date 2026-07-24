@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM)_
-  - R-074 isolates the exact bare mismatched resonance, refutes automatic adapted Wick centering, closes genuine local phase orbits including their finite Wick anomaly, and proves the deterministic Besov sixth-moment payment. Next construct the complete lower-chaos adapted gauge-quotient Taylor one-form with signed endpoint reconstruction and a cutoff-uniform sixth moment; then prove predictable graph-norm finite-energy recovery, one-use, and Nelson.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER)_
+  - R-075 proves the exact projector-free invariant-current Taylor chart, the principal unshifted C^(-1/2-kappa) one-form with a cutoff-uniform sixth moment, and fixed-cutoff predictable Cameron--Martin/terminal-L6 graph recovery. Exact horizontal-radial, DA=0 omission, and Hermite fixtures retire termwise absolute transport, one-form-only endpoint, and automatic adapted finite-forest shortcuts. Next reconstruct and lower-bound N_(>=3) with every R-063 lower chaos, both R-073 restored first variations, terminal square, Wick/trace channel, and finite-low boundary in one causal signed identity; then apply graph recovery, assemble one-use, and return to q=10/9 Nelson.
   - _updated 2026-07-24_
 
 ## Next up

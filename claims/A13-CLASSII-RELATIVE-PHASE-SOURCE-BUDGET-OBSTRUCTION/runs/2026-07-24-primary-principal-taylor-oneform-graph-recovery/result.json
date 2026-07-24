@@ -1,0 +1,618 @@
+{
+  "assertion_count": 36,
+  "assertions": [
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": ">0",
+      "name": "production_Q_is_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.735271748797871e-15,
+      "expected": "<2e-12",
+      "name": "frame_currents_equal_invariant_J_K_currents",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "alpha": 0.5555555555555555,
+        "c0": 0.0029999999999992494,
+        "c1": 0.007593749999998099,
+        "two_alpha": 1.111111111111111
+      },
+      "expected": "error<2e-12, alpha=5/9",
+      "name": "Nelson_aligned_invariant_diagonalization_is_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.839878497975292e-16,
+      "expected": "<5e-12",
+      "name": "invariant_current_Taylor_chart_is_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.775252800944171e-16,
+      "expected": "<2e-12",
+      "name": "phase_verticals_annihilate_invariant_currents",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "frame": 0,
+        "invariants": 1
+      },
+      "expected": "0 versus 1",
+      "name": "quotient_chart_preserves_tip_rank_warning",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.329181702203197e-09,
+      "expected": "<2e-7",
+      "name": "principal_isolated_resonance_is_reproduced",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "error": 2.658363414814735e-09,
+        "value": 0.018000000597522423
+      },
+      "expected": "positive, error<2e-7",
+      "name": "full_resonance_reassembly_is_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.060851489460447e-09,
+      "expected": "<2e-7",
+      "name": "resonance_reassembly_converges_in_step",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "full": -0.0674999994024037,
+          "isolated_E_b": -0.03374999970120185,
+          "restored_base": -0.03374999970120185,
+          "transported_linear": 0.0
+        },
+        {
+          "full": 0.0,
+          "isolated_E_b": 0.0,
+          "restored_base": 0.0,
+          "transported_linear": 0.0
+        },
+        {
+          "full": 0.08549999999992612,
+          "isolated_E_b": 0.0,
+          "restored_base": 0.0,
+          "transported_linear": 0.08549999999992612
+        }
+      ],
+      "expected": "full three-generator sum retained",
+      "name": "other_generator_restores_the_isolated_sign",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.409065789444957e-08,
+      "expected": "<2e-05",
+      "name": "exact_Taylor_integral_matches_frame_secant",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.092552429417861e-10,
+      "expected": "<2e-05",
+      "name": "principal_plus_transport_reconstructs_E_DA_branch",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "cases": 24,
+        "reconstruction_refinement_error": 2.3681192423685715e-10
+      },
+      "expected": {
+        "cases": 24,
+        "reconstruction_refinement_error": "<2e-05"
+      },
+      "name": "Taylor_split_is_checked_on_multiple_fixtures",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.01977052360149721,
+      "expected": "<-1e-3",
+      "name": "constant_control_raw_remainder_is_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.017906322569599346,
+      "expected": ">1e-3",
+      "name": "constant_control_retained_square_is_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "coefficient_curvature_pair": -0.03767684617109654,
+        "raw_taylor_remainder": -0.01977052360149721,
+        "reassembly_error": 1.3877787807814457e-17,
+        "retained_square": 0.017906322569599346
+      },
+      "expected": "negative magnitude exceeds square",
+      "name": "coefficient_curvature_channel_is_load_bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3877787807814457e-17,
+      "expected": "<1e-14",
+      "name": "constant_control_reassembly_is_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "exact_v_remainder_over_sqrt_floor": -0.2,
+        "expected_transport_contraction": 1.828124999999543e-15,
+        "phase_overlap": 0.0,
+        "principal_v_over_sqrt_floor": -0.5000002499944004,
+        "relative_error": 8.333146680872193e-07,
+        "transport_contraction": 1.8281265234029206e-15,
+        "transport_v_over_sqrt_floor": 0.30000024999440045
+      },
+      "expected": "positive, relative error<2e-5",
+      "name": "horizontal_radial_transport_remainder_is_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "0",
+      "name": "radial_transport_is_not_a_phase_Ward_channel",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": -0.3849001794597505,
+        "10": 4.619858121087541e-05,
+        "12": -2.933243251484153e-06,
+        "14": 1.5713803132950817e-07,
+        "16": -7.2749088578476e-09,
+        "18": 2.963851756900875e-10,
+        "2": 0.19245008972987526,
+        "20": -1.0777642752366816e-11,
+        "4": -0.04276668660663895,
+        "6": 0.005939817584255409,
+        "8": -0.000593981758425541
+      },
+      "expected": "orders 0 through 20 all nonzero",
+      "name": "adapted_feedback_has_infinitely_many_even_chaoses",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        5.551115123125783e-17,
+        0.0,
+        2.55351295663786e-15
+      ],
+      "expected": "<2e-10",
+      "name": "Hermite_generating_function_cross_check",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.176336318279077,
+      "expected": "<20 (analytic per-frame bound 14)",
+      "name": "production_frames_have_global_sample_Lipschitz_bound",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.8236207876770134,
+      "expected": "<4",
+      "name": "production_frames_have_linear_growth",
+      "status": "PASS"
+    },
+    {
+      "actual": -1.010816879067103e-15,
+      "expected": ">-1e-12",
+      "name": "production_coefficient_is_PSD",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "control_power": 0.5,
+        "current_moment": 5.999999999999999,
+        "product": "||A^2 DA||_B <= C ||A||_H2 ||A||_6^2",
+        "sextic_power": 0.3333333333333333,
+        "young_slack": 0.16666666666666669
+      },
+      "expected": "slack=1/6",
+      "name": "principal_Besov_route_has_one_sixth_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.999999999999999,
+      "expected": 6.0,
+      "name": "principal_oneform_needs_exactly_sixth_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "control_power": 0.5,
+        "critical_deficits": [
+          8.8,
+          88.0,
+          880.0
+        ],
+        "necessary_absolute_multiplier_threshold": 0.11832159566199232,
+        "product": "||A^3 DA||_B <= C ||A||_H2 ||A||_6^3",
+        "sextic_power": 0.5,
+        "test_multiplier": 1.0,
+        "young_slack": 0.0
+      },
+      "expected": "0",
+      "name": "transport_remainder_has_zero_Young_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        8.8,
+        88.0,
+        880.0
+      ],
+      "expected": "strict growth",
+      "name": "absolute_transport_deficit_grows_with_budget_scale",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.24999999999999994,
+        0.11111111111111109,
+        0.0625,
+        0.04000000000000001,
+        0.027777777777777773,
+        0.020408163265306117
+      ],
+      "expected": "decreases to zero",
+      "name": "L2_only_predictable_sequence_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.9999999999999994,
+        0.9999999999999996,
+        1.0,
+        1.0000000000000004,
+        0.9999999999999994,
+        0.9999999999999993
+      ],
+      "expected": "identically one",
+      "name": "L2_only_sequence_does_not_converge_in_terminal_L6",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.7465572817878865,
+        0.5249073947676868,
+        0.3006850311251017,
+        0.17328671306011786
+      ],
+      "expected": "strict decrease",
+      "name": "graph_recovery_H2_errors_decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.05729327290107637,
+        0.01478790698304783,
+        0.0030708076415572627,
+        0.0009370665063603555
+      ],
+      "expected": "strict decrease",
+      "name": "graph_recovery_L6_errors_decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.006191619951578591,
+        0.003779281454094996,
+        0.0009738355645260576,
+        0.0005514123620645407
+      ],
+      "expected": "strict decrease",
+      "name": "production_current_graph_errors_decrease",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0005514123620645407,
+      "expected": "<1e-3",
+      "name": "production_current_graph_final_error_is_small",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        6.0,
+        1.2
+      ],
+      "expected": "conjugate",
+      "name": "graph_payload_duality_uses_six_and_six_fifths",
+      "status": "PASS"
+    },
+    {
+      "actual": "The principal unshifted second-order Taylor one-form and fixed-cutoff predictable graph recovery are closed. The adapted coefficient-transport remainder, complete lower-chaos signed endpoint estimate, one-use theorem, and Nelson bound remain open.",
+      "expected": "explicit open coefficient-transport, one-use, and Nelson boundary",
+      "name": "scope_keeps_signed_transport_open",
+      "status": "PASS"
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "adapted_infinite_chaos": {
+      "coefficients": {
+        "0": -0.3849001794597505,
+        "10": 4.619858121087541e-05,
+        "12": -2.933243251484153e-06,
+        "14": 1.5713803132950817e-07,
+        "16": -7.2749088578476e-09,
+        "18": 2.963851756900875e-10,
+        "2": 0.19245008972987526,
+        "20": -1.0777642752366816e-11,
+        "4": -0.04276668660663895,
+        "6": 0.005939817584255409,
+        "8": -0.000593981758425541
+      },
+      "exact_generating_function": "3^(-1/2) exp(-t^2/3) (t^2/9-2/3)",
+      "generating_function_errors": [
+        5.551115123125783e-17,
+        0.0,
+        2.55351295663786e-15
+      ],
+      "minimum_nonzero_magnitude": 1.0777642752366816e-11
+    },
+    "budget": {
+      "payload_probability_duality": [
+        6.0,
+        1.2
+      ],
+      "predictable_L2_counterexample": [
+        {
+          "L2_energy": 0.24999999999999994,
+          "n": 8,
+          "terminal_L6_sixth": 0.9999999999999994
+        },
+        {
+          "L2_energy": 0.11111111111111109,
+          "n": 27,
+          "terminal_L6_sixth": 0.9999999999999996
+        },
+        {
+          "L2_energy": 0.0625,
+          "n": 64,
+          "terminal_L6_sixth": 1.0
+        },
+        {
+          "L2_energy": 0.04000000000000001,
+          "n": 125,
+          "terminal_L6_sixth": 1.0000000000000004
+        },
+        {
+          "L2_energy": 0.027777777777777773,
+          "n": 216,
+          "terminal_L6_sixth": 0.9999999999999994
+        },
+        {
+          "L2_energy": 0.020408163265306117,
+          "n": 343,
+          "terminal_L6_sixth": 0.9999999999999993
+        }
+      ],
+      "principal": {
+        "control_power": 0.5,
+        "current_moment": 5.999999999999999,
+        "product": "||A^2 DA||_B <= C ||A||_H2 ||A||_6^2",
+        "sextic_power": 0.3333333333333333,
+        "young_slack": 0.16666666666666669
+      },
+      "transport": {
+        "control_power": 0.5,
+        "critical_deficits": [
+          8.8,
+          88.0,
+          880.0
+        ],
+        "necessary_absolute_multiplier_threshold": 0.11832159566199232,
+        "product": "||A^3 DA||_B <= C ||A||_H2 ||A||_6^3",
+        "sextic_power": 0.5,
+        "test_multiplier": 1.0,
+        "young_slack": 0.0
+      }
+    },
+    "constant_control_omission": {
+      "coefficient_curvature_pair": -0.03767684617109654,
+      "raw_taylor_remainder": -0.01977052360149721,
+      "reassembly_error": 1.3877787807814457e-17,
+      "retained_square": 0.017906322569599346
+    },
+    "exact_taylor_split": {
+      "cases": 24,
+      "direct_refinement_error": 2.3681192423685715e-10,
+      "max_integral_error": 6.409065789444957e-08,
+      "max_split_error": 3.092552429417861e-10,
+      "sample": {
+        "integral_error": 1.2587508768507706e-08,
+        "reconstruction": -0.0014069958745597897,
+        "split_error": 1.0802185816845278e-10
+      }
+    },
+    "frame_lipschitz": {
+      "sample_max_linear_growth_ratio": 2.8236207876770134,
+      "sample_max_lipschitz_ratio": 3.176336318279077,
+      "sample_min_coefficient_eigenvalue": -1.010816879067103e-15
+    },
+    "graph_recovery": {
+      "H2_errors": [
+        0.7465572817878865,
+        0.5249073947676868,
+        0.3006850311251017,
+        0.17328671306011786
+      ],
+      "L6_errors": [
+        0.05729327290107637,
+        0.01478790698304783,
+        0.0030708076415572627,
+        0.0009370665063603555
+      ],
+      "analytic_continuity": "F(u_n)->F(u) in L2(Omega;L2) from strong L2(H2) and L6(L6)",
+      "current_errors": [
+        0.006191619951578591,
+        0.003779281454094996,
+        0.0009738355645260576,
+        0.0005514123620645407
+      ],
+      "rows": [
+        {
+          "current_L2_error": 0.006191619951578591,
+          "cutoff": 2.0,
+          "difference_H2": 0.7465572817878865,
+          "difference_L6": 0.05729327290107637,
+          "endpoint_H2": 1.9914514237851864,
+          "endpoint_L6": 1.056772145500431
+        },
+        {
+          "current_L2_error": 0.003779281454094996,
+          "cutoff": 4.0,
+          "difference_H2": 0.5249073947676868,
+          "difference_L6": 0.01478790698304783,
+          "endpoint_H2": 2.08544792289231,
+          "endpoint_L6": 1.062573328744939
+        },
+        {
+          "current_L2_error": 0.0009738355645260576,
+          "cutoff": 8.0,
+          "difference_H2": 0.3006850311251017,
+          "difference_L6": 0.0030708076415572627,
+          "endpoint_H2": 2.1354102707113727,
+          "endpoint_L6": 1.0622913501023816
+        },
+        {
+          "current_L2_error": 0.0005514123620645407,
+          "cutoff": 12.0,
+          "difference_H2": 0.17328671306011786,
+          "difference_L6": 0.0009370665063603555,
+          "endpoint_H2": 2.1474928210275848,
+          "endpoint_L6": 1.0623005112008863
+        }
+      ]
+    },
+    "invariant_quotient_chart": {
+      "diagonal_coefficients": {
+        "alpha": 0.5555555555555555,
+        "c0": 0.0029999999999992494,
+        "c1": 0.007593749999998099,
+        "two_alpha": 1.111111111111111
+      },
+      "generic_frame_ranks": [
+        4
+      ],
+      "max_diagonalization_error": 8.881784197001252e-16,
+      "max_exact_taylor_chart_error": 4.839878497975292e-16,
+      "max_frame_current_error": 3.735271748797871e-15,
+      "max_phase_vertical_error": 5.775252800944171e-16,
+      "pure_singlet_frame_rank": 0,
+      "pure_singlet_invariant_rank": 1,
+      "q_entries": {
+        "a": 0.004499999999998875,
+        "b": 0.0018749999999995311,
+        "c": 0.002343749999999414
+      },
+      "tip_boundary": "algebraic invariant-current representation, not a nondegenerate or bi-Lipschitz global quotient coordinate"
+    },
+    "radial_transport_oracle": {
+      "exact_v_remainder_over_sqrt_floor": -0.2,
+      "expected_transport_contraction": 1.828124999999543e-15,
+      "phase_overlap": 0.0,
+      "principal_v_over_sqrt_floor": -0.5000002499944004,
+      "relative_error": 8.333146680872193e-07,
+      "transport_contraction": 1.8281265234029206e-15,
+      "transport_v_over_sqrt_floor": 0.30000024999440045
+    },
+    "resonance_reassembly": {
+      "expected_full": 0.018000000000010497,
+      "expected_isolated": -0.03374999999995781,
+      "full_error": 2.658363414814735e-09,
+      "isolated_error": 1.329181702203197e-09,
+      "refinement_error": 2.060851489460447e-09,
+      "resolutions": [
+        {
+          "full": 0.018000002658373912,
+          "generators": [
+            {
+              "full": -0.06749999734155221,
+              "isolated_E_b": -0.033749998670776105,
+              "restored_base": -0.033749998670776105,
+              "transported_linear": 0.0
+            },
+            {
+              "full": 0.0,
+              "isolated_E_b": 0.0,
+              "restored_base": 0.0,
+              "transported_linear": 0.0
+            },
+            {
+              "full": 0.08549999999992612,
+              "isolated_E_b": 0.0,
+              "restored_base": 0.0,
+              "transported_linear": 0.08549999999992612
+            }
+          ],
+          "isolated": -0.033749998670776105,
+          "step": 0.0002
+        },
+        {
+          "full": 0.018000000597522423,
+          "generators": [
+            {
+              "full": -0.0674999994024037,
+              "isolated_E_b": -0.03374999970120185,
+              "restored_base": -0.03374999970120185,
+              "transported_linear": 0.0
+            },
+            {
+              "full": 0.0,
+              "isolated_E_b": 0.0,
+              "restored_base": 0.0,
+              "transported_linear": 0.0
+            },
+            {
+              "full": 0.08549999999992612,
+              "isolated_E_b": 0.0,
+              "restored_base": 0.0,
+              "transported_linear": 0.08549999999992612
+            }
+          ],
+          "isolated": -0.03374999970120185,
+          "step": 0.0001
+        }
+      ]
+    }
+  },
+  "honesty_boundary": "The principal unshifted second-order Taylor one-form and fixed-cutoff predictable graph recovery are closed. The adapted coefficient-transport remainder, complete lower-chaos signed endpoint estimate, one-use theorem, and Nelson bound remain open.",
+  "inputs": {
+    "floor": 1e-12,
+    "graph_points": 4096,
+    "kappa": 0.1,
+    "mass_denominator": 4.000000000001,
+    "random_cases": 24,
+    "random_seed": 24077501
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION",
+  "run_kind": "primary",
+  "schema": "tect/a13-principal-taylor-oneform-graph-recovery-run/1.0",
+  "source": {
+    "path": "codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery.py",
+    "sha256": "9ed7f72c3e479960fa6798b9c8e6ca300c8856d0d8e8cfcd332222103553e117",
+    "version": "1.0.1"
+  },
+  "summary": {
+    "passed": 36,
+    "status": "PASS",
+    "total": 36
+  },
+  "timestamp_utc": "2026-07-24T16:01:49.435989+00:00"
+}

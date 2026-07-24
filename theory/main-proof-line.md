@@ -45,11 +45,12 @@ and interpolation identities. A10--A13 retain the exact replacement/no-go
 lineage. A13 is the active subproof host: its universal $Q$, finite-cutoff
 coefficient-jet forest, balanced-jet continuum, exact grouped A7
 reconstruction, backward-heat, NPC-cone, tip-safe grouped-harvest,
-off-diagonal telescope, and resonant phase-root reductions are closed at
-scoped T4. The exact current child is the adapted lower-chaos-complete
-gauge-quotient Taylor one-form with a cutoff-uniform sixth moment, followed by
-predictable graph-norm finite-energy recovery and the umbrella one-use/Nelson
-bound. This family is not a new premise
+off-diagonal telescope, resonant phase-root, invariant-current principal
+one-form, and fixed-cutoff graph-recovery reductions are closed at scoped T4.
+The exact current child is the signed coefficient-transport endpoint
+remainder, retaining every R-063 lower chaos, both restored first variations,
+the terminal square, Wick/trace channel, and finite-low boundary in one causal
+identity, followed by the umbrella one-use/Nelson bound. This family is not a new premise
 of A5 and has no current PUBLISHED measure theorem.
 
 ## Auxiliary / cited (DRAFT bundle only -- NO referee package, NOT a coverage obligation)

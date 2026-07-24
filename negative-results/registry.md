@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT](#ng-2026-07-24-a13-absolute-third-order-transport) | A13 termwise absolute payment of the transported third-order Taylor tail | the natural product is `R X^(1/2)Y^(1/2)` and exhausts Young's inequality; a non-tip horizontal radial fixture has a nonzero surviving tail |
+| [NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION](#ng-2026-07-24-a13-oneform-only-endpoint-omission) | A13 endpoint closure by the terminal square plus only the `A^2 DA` one-form | an exact `DA=0` fixture has negative raw Taylor remainder because the omitted coefficient-curvature/Wick channel is larger than the retained positive square |
+| [NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER](#ng-2026-07-24-a13-adapted-finite-chaos-transfer) | A13 transfer of the deterministic R-063 finite forest to arbitrary correlated adapted coefficients | a smooth bounded adapted factor has nonzero Hermite coefficients at every even order, so finite-chaos completion is not automatic |
+| [NG-2026-07-24-A13-L2-ONLY-PREDICTABLE-RECOVERY](#ng-2026-07-24-a13-l2-only-predictable-recovery) | A13 finite-energy extension by predictable Cameron--Martin `L2` density alone | a predictable spike sequence has vanishing `L2` energy but constant terminal `L6` sixth moment, so the sextic graph coordinate is necessary |
 | [AUDIT-2026-07-24-A13-R074-PREDECESSOR-CONTRACT-SCHEMAS](#audit-2026-07-24-a13-r074-predecessor-contract-schemas) | R-074 integrated-verifier predecessor validation | the first wrapper again assumed a modern `verification`/`pass` contract, but R-050 has no manifest run contract and R-063 uses `run_contract`, `verdict`, `summary`, and `cross_assertions` |
 | [AUDIT-2026-07-24-A13-R074-EXECUTABLE-INDEPENDENCE](#audit-2026-07-24-a13-r074-executable-independence) | R-074 pre-release executable audit | the first package used a vacuous other-generator check, duplicated the Wick and Cameron--Martin formulas across implementations, checked one quadrature resolution, tested separation through the closed formula, and pinned runtime dependencies only transitively |
 | [NG-2026-07-24-A13-RAW-BARE-POSITIVE-GAIN-ROOT](#ng-2026-07-24-a13-raw-bare-positive-gain-root) | A13 bare positive-gain treatment of the mismatched nonlinear phase-root coefficient | an exact high--high-to-low finite secant is independent of shell separation; no unsubtracted coefficient-blind `H^(-1/2+rho)` gain is available for that branch |
@@ -60,6 +64,92 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-24-a13-absolute-third-order-transport"></a>
+### NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT -- the transported Taylor tail has no termwise Young slack
+
+**Failure mode:** Bound the exact third-order coefficient-transport tail by
+absolute Besov duality and absorb it using only Cameron--Martin energy,
+terminal sextic energy, and arbitrary finite moments of an unbounded random
+current.
+
+**Evidence:** Taylor's integral formula gives the payload `A^3 DA`. Its natural
+endpoint estimate is
+`||A^3 DA||_(B^(1/2+kappa)_(1,1))<=C||A||_H2||A||_6^3`, hence the random
+pairing is `R X^(1/2)Y^(1/2)`. The deterministic powers already sum to one, so
+Young's inequality has no exponent left for unbounded `R`. This is not only a
+bookkeeping warning: on the active-real sigma-3 radial line with
+`U=A=sqrt(e)e1` and `G=DA=e1`, the exact transported tail is
+`0.0073125 e/P>0` on a non-tip horizontal direction, approximately
+`0.001828125 e` at the pinned production `P=4+10^(-12)`.
+
+**Consequence:** Retire the termwise absolute third-order route. The tail is
+not a local-phase artifact and cannot be deleted. The viable successor must
+combine it with the restored endpoint, lower-chaos, square, and Wick/trace
+terms through a signed Ward/martingale telescope, causal root freezing, or a
+proved adapted shifted-enhancement theorem.
+
+<a id="ng-2026-07-24-a13-oneform-only-endpoint-omission"></a>
+### NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION -- a cubic one-form plus terminal square omits the constant-control channel
+
+**Failure mode:** Treat the signed endpoint as a positive terminal square plus
+only the `A^2 DA` Taylor one-form and infer that setting `DA=0` removes every
+remaining nonlinear channel.
+
+**Evidence:** For the independently generated production fixture recorded by
+R-075, `DA=0` and the raw Taylor remainder is
+`-0.0197705236015`. The retained square is `+0.0179063225696`, while the exact
+coefficient-curvature pair is `-0.0376768461711`; their reassembly residual is
+below numerical precision. Thus the omitted `A^2G^2` coefficient-curvature/
+Wick channel is load-bearing and larger in magnitude than the square.
+
+**Consequence:** Every complete endpoint proof must retain the R-063 lower
+chaoses, A7 covariance-normal Wick conversion, exact R-066 trace transport,
+and the `DA=0` channel. R-075 closes only the principal unshifted one-form, not
+the full signed endpoint.
+
+<a id="ng-2026-07-24-a13-adapted-finite-chaos-transfer"></a>
+### NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER -- correlated adapted substitution need not preserve a finite forest
+
+**Failure mode:** Substitute an arbitrary terminal adapted control into the
+deterministic-shift R-063 coefficient chart and continue to invoke its finite
+`P3/P1` and `P4/P2/Sigma Q/P0` chaos list and hypercontractive proof without a
+new adapted theorem.
+
+**Evidence:** For `X~N(0,1)`, the smooth factor
+`f(X)=exp(-X^2)(X^2-1)` has generating function
+`3^(-1/2)exp(-t^2/3)(t^2/9-2/3)`. Hence
+`c0=-2/(3sqrt(3))` and
+`c_(2m)=(-1)^(m-1)(m+2)/(sqrt(3)3^(m+1)m!)` is nonzero for every `m>=1`.
+Independent Gauss--Hermite quadrature reproduces the analytic coefficients at
+two resolutions.
+
+**Consequence:** This counterexample refutes automatic finite-forest transfer;
+it does not say every adapted coefficient has infinite chaos. A valid proof
+must causally freeze controls relative to each fresh root or establish an
+arbitrary-multiplier/shifted-enhancement theorem with the complete lower-chaos
+identity retained.
+
+<a id="ng-2026-07-24-a13-l2-only-predictable-recovery"></a>
+### NG-2026-07-24-A13-L2-ONLY-PREDICTABLE-RECOVERY -- Cameron--Martin density alone loses terminal sextic energy
+
+**Failure mode:** Extend a regular strict-past endpoint inequality to every
+finite-energy control using predictable `L2` approximation alone, without
+controlling terminal `L6` or the current graph.
+
+**Evidence:** On a fixed shell choose `E_n` in the strict past with
+`P(E_n)=1/n` and set
+`h_n=n^(1/6)1_(E_n)K_j^(-1)f` for a nonzero shell function `f`. Then the
+Cameron--Martin `L2` energy tends to zero like `n^(-2/3)`, while the physical
+control `K_jh_n` has constant terminal `L6` sixth moment. Primary and
+independent spectral fixtures also show simultaneous convergence only after
+the terminal-`L6` graph coordinate is imposed.
+
+**Consequence:** Use the R-075 fixed-cutoff graph norm combining
+Cameron--Martin energy and terminal `L6`, with the production raw current and
+Wick trace identified continuously. This closes recovery only after the
+regular-control signed endpoint inequality exists and does not remove the
+terminal cutoff.
 
 <a id="audit-2026-07-24-a13-r074-predecessor-contract-schemas"></a>
 ### AUDIT-2026-07-24-A13-R074-PREDECESSOR-CONTRACT-SCHEMAS -- predecessor verification must normalize three issued schemas

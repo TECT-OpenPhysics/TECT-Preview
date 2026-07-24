@@ -1,0 +1,414 @@
+{
+  "assertion_count": 20,
+  "assertions": [
+    {
+      "actual": 2.808666774861361e-15,
+      "expected": "<3e-12",
+      "name": "complex_frames_match_invariant_currents",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "alpha": 0.5555555555555555,
+        "c0": 0.0029999999999992494,
+        "c1": 0.007593749999998103,
+        "current_error": 2.808666774861361e-15,
+        "diagonal_error": 1.3322676295501878e-15,
+        "pure_singlet_frame_rank": 0,
+        "pure_singlet_invariant_rank": 1,
+        "q": 1.111111111111111
+      },
+      "expected": "error<3e-12 and alpha=5/9",
+      "name": "independent_Nelson_diagonalization",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.111111111111111,
+      "expected": 1.1111111111111112,
+      "name": "q_is_twice_the_geometric_exponent",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "alpha": 0.5555555555555555,
+        "c0": 0.0029999999999992494,
+        "c1": 0.007593749999998103,
+        "current_error": 2.808666774861361e-15,
+        "diagonal_error": 1.3322676295501878e-15,
+        "pure_singlet_frame_rank": 0,
+        "pure_singlet_invariant_rank": 1,
+        "q": 1.111111111111111
+      },
+      "expected": "frame 0, invariants 1",
+      "name": "pure_singlet_tip_is_rank_degenerate",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "expected_full": 0.018000000000010497,
+        "expected_isolated": -0.03374999999995781,
+        "full_error": 2.6740201615471637e-09,
+        "isolated_error": 2.020661415969016e-12,
+        "refinement": 2.3852447794681098e-09,
+        "rows": [
+          {
+            "full": 0.017999999711235115,
+            "isolated": -0.033749999997937145,
+            "step": 0.002
+          },
+          {
+            "full": 0.017999997325990336,
+            "isolated": -0.033749999999635,
+            "step": 0.001
+          }
+        ]
+      },
+      "expected": "<2e-7",
+      "name": "two_dimensional_stencil_recovers_full_resonance",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.020661415969016e-12,
+      "expected": "<2e-7",
+      "name": "independent_stencil_recovers_isolated_branch",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "full": 0.018000000000010497,
+        "isolated": -0.03374999999995781
+      },
+      "expected": "+/-",
+      "name": "full_resonance_is_positive_while_isolated_is_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "curvature": -0.037676846171117925,
+        "raw_remainder": -0.01977052360151857,
+        "residual": 1.3877787807814457e-17,
+        "square": 0.017906322569599346
+      },
+      "expected": "residual<2e-10",
+      "name": "constant_control_omission_reassembles",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "curvature": -0.037676846171117925,
+        "raw_remainder": -0.01977052360151857,
+        "residual": 1.3877787807814457e-17,
+        "square": 0.017906322569599346
+      },
+      "expected": "curvature<-square<0",
+      "name": "constant_control_coefficient_curvature_is_load_bearing",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "expected": 1.828124999999543e-15,
+        "relative_error": 8.495576162931627e-10,
+        "value": 1.8281249984464454e-15
+      },
+      "expected": "positive, relative error<2e-4",
+      "name": "horizontal_radial_N3_survives",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "<2e-10",
+      "name": "two_resolution_Hermite_quadrature_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "<2e-10",
+      "name": "Hermite_coefficients_match_generating_function",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": -0.3849001794597503,
+        "10": 4.619858121087537e-05,
+        "12": -2.9332432514841505e-06,
+        "14": 1.57138031329508e-07,
+        "16": -7.274908857847592e-09,
+        "2": 0.19245008972987515,
+        "4": -0.04276668660663891,
+        "6": 0.005939817584255406,
+        "8": -0.0005939817584255405
+      },
+      "expected": "all tested even orders through 16 nonzero",
+      "name": "tested_even_Hermite_orders_are_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.16666666666666669,
+      "expected": "1/6",
+      "name": "principal_payload_has_positive_slack",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "0",
+      "name": "transport_payload_is_critical",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.5293092240073562,
+        0.32114492372664083,
+        0.17922582841793225,
+        0.09583235605253361
+      ],
+      "expected": "strict decrease",
+      "name": "graph_H2_sequence_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.022468951828133084,
+        0.005220525495682761,
+        0.0012372268163436694,
+        0.0004095847801690054
+      ],
+      "expected": "strict decrease",
+      "name": "graph_L6_sequence_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.01259950584083904,
+        0.005179844393018921,
+        0.0018848506051443179,
+        0.000867845978203146
+      ],
+      "expected": "strict decrease",
+      "name": "graph_current_sequence_converges",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        {
+          "L2": 0.25,
+          "L6_sixth": 1.0,
+          "n": 8
+        },
+        {
+          "L2": 0.11111111111111112,
+          "L6_sixth": 1.0,
+          "n": 27
+        },
+        {
+          "L2": 0.06250000000000001,
+          "L6_sixth": 1.0,
+          "n": 64
+        },
+        {
+          "L2": 0.04000000000000001,
+          "L6_sixth": 1.0,
+          "n": 125
+        },
+        {
+          "L2": 0.027777777777777783,
+          "L6_sixth": 1.0,
+          "n": 216
+        }
+      ],
+      "expected": "L2 down, L6 sixth fixed",
+      "name": "predictable_L2_spike_vanishes_only_in_L2",
+      "status": "PASS"
+    },
+    {
+      "actual": "Independent finite-dimensional and graph-core audit only; signed adapted coefficient transport, full Wick/lower-chaos reconstruction, one-use, and Nelson remain open.",
+      "expected": "explicit open coefficient-transport, one-use, and Nelson boundary",
+      "name": "scope_keeps_complete_adapted_gate_open",
+      "status": "PASS"
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "derived": {
+    "graph": {
+      "H2": [
+        0.5293092240073562,
+        0.32114492372664083,
+        0.17922582841793225,
+        0.09583235605253361
+      ],
+      "L6": [
+        0.022468951828133084,
+        0.005220525495682761,
+        0.0012372268163436694,
+        0.0004095847801690054
+      ],
+      "current": [
+        0.01259950584083904,
+        0.005179844393018921,
+        0.0018848506051443179,
+        0.000867845978203146
+      ],
+      "q_sqrt_reconstruction_error": 2.168404344971009e-18,
+      "rows": [
+        {
+          "H2": 0.5293092240073562,
+          "L6": 0.022468951828133084,
+          "current": 0.01259950584083904,
+          "cutoff": 3
+        },
+        {
+          "H2": 0.32114492372664083,
+          "L6": 0.005220525495682761,
+          "current": 0.005179844393018921,
+          "cutoff": 6
+        },
+        {
+          "H2": 0.17922582841793225,
+          "L6": 0.0012372268163436694,
+          "current": 0.0018848506051443179,
+          "cutoff": 10
+        },
+        {
+          "H2": 0.09583235605253361,
+          "L6": 0.0004095847801690054,
+          "current": 0.000867845978203146,
+          "cutoff": 14
+        }
+      ]
+    },
+    "hermite": {
+      "all_nonzero": true,
+      "exact": {
+        "0": -0.3849001794597505,
+        "10": 4.619858121087541e-05,
+        "12": -2.933243251484153e-06,
+        "14": 1.5713803132950817e-07,
+        "16": -7.2749088578476e-09,
+        "2": 0.19245008972987526,
+        "4": -0.04276668660663895,
+        "6": 0.005939817584255409,
+        "8": -0.000593981758425541
+      },
+      "max_error": 2.220446049250313e-16,
+      "quadratures": {
+        "128": {
+          "0": -0.3849001794597503,
+          "10": 4.619858121087537e-05,
+          "12": -2.9332432514841505e-06,
+          "14": 1.57138031329508e-07,
+          "16": -7.274908857847592e-09,
+          "2": 0.19245008972987515,
+          "4": -0.04276668660663891,
+          "6": 0.005939817584255406,
+          "8": -0.0005939817584255405
+        },
+        "64": {
+          "0": -0.3849001794597505,
+          "10": 4.6198581210849875e-05,
+          "12": -2.933243251475856e-06,
+          "14": 1.5713803132745406e-07,
+          "16": -7.274908857443864e-09,
+          "2": 0.19245008972987523,
+          "4": -0.04276668660663887,
+          "6": 0.0059398175842553256,
+          "8": -0.0005939817584254845
+        }
+      },
+      "refinement": 2.220446049250313e-16
+    },
+    "omission": {
+      "curvature": -0.037676846171117925,
+      "raw_remainder": -0.01977052360151857,
+      "residual": 1.3877787807814457e-17,
+      "square": 0.017906322569599346
+    },
+    "predictable_spike": [
+      {
+        "L2": 0.25,
+        "L6_sixth": 1.0,
+        "n": 8
+      },
+      {
+        "L2": 0.11111111111111112,
+        "L6_sixth": 1.0,
+        "n": 27
+      },
+      {
+        "L2": 0.06250000000000001,
+        "L6_sixth": 1.0,
+        "n": 64
+      },
+      {
+        "L2": 0.04000000000000001,
+        "L6_sixth": 1.0,
+        "n": 125
+      },
+      {
+        "L2": 0.027777777777777783,
+        "L6_sixth": 1.0,
+        "n": 216
+      }
+    ],
+    "principal_slack": 0.16666666666666669,
+    "quotient": {
+      "alpha": 0.5555555555555555,
+      "c0": 0.0029999999999992494,
+      "c1": 0.007593749999998103,
+      "current_error": 2.808666774861361e-15,
+      "diagonal_error": 1.3322676295501878e-15,
+      "pure_singlet_frame_rank": 0,
+      "pure_singlet_invariant_rank": 1,
+      "q": 1.111111111111111
+    },
+    "radial_tail": {
+      "expected": 1.828124999999543e-15,
+      "relative_error": 8.495576162931627e-10,
+      "value": 1.8281249984464454e-15
+    },
+    "resonance": {
+      "expected_full": 0.018000000000010497,
+      "expected_isolated": -0.03374999999995781,
+      "full_error": 2.6740201615471637e-09,
+      "isolated_error": 2.020661415969016e-12,
+      "refinement": 2.3852447794681098e-09,
+      "rows": [
+        {
+          "full": 0.017999999711235115,
+          "isolated": -0.033749999997937145,
+          "step": 0.002
+        },
+        {
+          "full": 0.017999997325990336,
+          "isolated": -0.033749999999635,
+          "step": 0.001
+        }
+      ]
+    },
+    "transport_slack": 0.0
+  },
+  "honesty_boundary": "Independent finite-dimensional and graph-core audit only; signed adapted coefficient transport, full Wick/lower-chaos reconstruction, one-use, and Nelson remain open.",
+  "inputs": {
+    "floor": 1e-12,
+    "graph_points": 3072,
+    "random_cases": 80,
+    "random_seed": 7512407,
+    "stencil_steps": [
+      0.002,
+      0.001
+    ]
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION",
+  "run_kind": "independent",
+  "schema": "tect/a13-principal-taylor-oneform-graph-recovery-independent-run/1.0",
+  "source": {
+    "path": "codes/foundations/a13_classii_principal_taylor_oneform_graph_recovery_independent.py",
+    "sha256": "e969c50ca4c89c355bd890cd9f84dace2a9eaad789693b79314d54a049c7f311",
+    "version": "1.0.1"
+  },
+  "summary": {
+    "passed": 20,
+    "status": "PASS",
+    "total": 20
+  },
+  "timestamp_utc": "2026-07-24T16:01:50.167692+00:00"
+}

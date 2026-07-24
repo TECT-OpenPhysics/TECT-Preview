@@ -1,7 +1,7 @@
 # Sector-A claim taxonomy and subproof plan
 
 **Date:** 2026-07-22  
-**Status:** ACTIVE DECISION RECORD, non-tier-bearing  
+**Status:** ACTIVE TAXONOMY DECISION; proof-frontier text below is a 2026-07-22 checkpoint, non-tier-bearing
 **Authority:** `governance/claim-standard.md`,
 `governance/claims-restructure-proposal-260609.md`, and
 `governance/sector-a-theorem-map.json`
@@ -60,7 +60,7 @@ package exist. The present programme has not reached that point.
 | C2: reference endpoint | A8 | Proves the independent/decoupled Nelson theorem only |
 | C3: coupling bridge | A9 | Gives the exact interpolation cancellation and frozen control |
 | C4: adversarial reductions | A10--A13 | Records exact mismatches, failed enclosures, and the surviving one-use route |
-| C5: current open subproof | A13 coefficient-jet classification | Must classify lower-chaos corrections in the exact A7 scheme |
+| C5: 2026-07-22 open-subproof checkpoint | A13 coefficient-jet classification | Closed later in the A13 lineage; the live child is authoritative only in `governance/sector-a-theorem-map.json` |
 | C6: target | A13 one-use, then A7 Nelson | Produces the self-coupled fixed-floor finite-volume measure if closed |
 
 ## A13 internal subproofs
@@ -107,9 +107,10 @@ Its high-against-root `P3/P4` jets have the proved `-2+epsilon` and
 `-3+epsilon` variance bounds, converge across coupled cutoffs in every finite
 moment at the target Sobolev orders, and reconstruct the full rational
 translated coefficient in the exact grouped A7 scheme with every lower chaos
-and finite `Sigma Q` retained. The current child is
-`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`. The A13 tier remains
-T4. The executable exact-cover audit is frozen at
+and finite `Sigma Q` retained. At this dated checkpoint the current child was
+`A13-CLASSII-STRICT-PAST-SIGNED-Q-CURRENT-FORM-BOUND`; subsequent R-064--R-075
+work is recorded in the A13 lineage, and the live child is maintained only in
+`governance/sector-a-theorem-map.json`. The A13 tier remains T4. The executable exact-cover audit is frozen at
 `reviews/2026-07-22-sector-a-theorem-family-taxonomy-audit.json` and reports
 21 cards, five families, and zero unclassified cards.
 

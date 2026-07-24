@@ -1,0 +1,700 @@
+% Title: Invariant-current Taylor chart, principal one-form, and predictable graph recovery
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 exact/analytic structural reduction; signed coefficient transport open
+% Result: A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION
+% Ledger: R-075
+%
+% v1.0 (2026-07-24): projector-free invariant-current Taylor chart;
+% principal unshifted Taylor one-form with cutoff-uniform sixth moment;
+% full resonance reassembly; exact coefficient-transport criticality;
+% one-form-only and adapted finite-chaos no-gos; fixed-cutoff predictable
+% graph recovery.
+
+\section{Purpose and scope}
+
+R-074 isolated a nondecaying bare coefficient resonance and supplied the
+Besov payment which would close a horizontal cubic payload once a complete
+adapted one-form with a sixth moment had been constructed.  This note makes
+three rigorous advances and isolates the remaining obstruction more sharply.
+
+First, the production current admits a global, projector-free invariant
+representation.  It gives an exact Taylor chart through the generic,
+singlet-zero, and collapsed strata and keeps all $A\,DA$ and $A^2DU$
+channels.  It is an algebraic current representation, not a nondegenerate
+coordinate chart at the cone tip.
+
+Second, the frozen second-order Taylor coefficient is a canonical R-050
+geometric one-form.  It converges in every finite probability moment in
+$C^{-1/2-\kappa}$ and therefore has the sixth moment required by R-074.  The
+negative isolated R-074 coefficient is retained, while the complete
+three-generator raw-energy coefficient on the same canonical fixture is
+strictly positive after all restored terms are included.  The latter is an
+attribution oracle, not a global positivity theorem.
+
+Third, for every fixed terminal cutoff, bounded smooth past-cylindrical
+controls are dense in the declared Cameron--Martin/terminal-$L^6$ graph
+domain.  The positive raw current, its Wick trace, the retained finite-low
+term, and the cubic payload are continuous in that topology.  Thus a
+cutoff-uniform endpoint inequality assembled from these graph-continuous
+terms passes from regular strict-past controls to every control in that graph
+domain at the same cutoff and with the same constant.  Uniform $L^6$
+boundedness of the one-form is exactly sufficient for the cubic pairing,
+provided the one-form is sequentially identified in probability along the
+graph recovery sequence.
+
+The full adapted gate does not close.  The path coefficient has a genuine
+third-order transport tail.  Its absolute Besov payment is
+$X^{1/2}Y^{1/2}$ and has no random Young slack.  It survives on a non-tip
+horizontal radial line.  Moreover, a constant-control fixture shows that a
+positive terminal square plus the $A^2DA$ one-form omits a load-bearing
+$A^2G^{\otimes2}$ coefficient-curvature/Wick channel.  Finally, a smooth
+adapted coefficient can have infinitely many Wiener chaoses, so R-063's
+finite unshifted forest cannot simply be relabelled as an arbitrary-adapted
+theorem.
+
+Accordingly this note does not prove the signed coefficient-transport
+remainder, the complete adapted gauge-quotient one-form, controlled-shell
+one-use, the $q=10/9$ Nelson moment, an interacting measure, floor or
+regulator removal, or infinite volume.  All statements use the fixed positive
+production floor, common real-even cutoffs, exact non-aliased products, the
+R-066 finite-low convention, and mutually orthogonal whole-shell strict-past
+controls.  We use $0<\kappa<1/2$.  For the displayed production decimals,
+$e=10^{-12}$ and $P=M_X^2+\mu_X=4+10^{-12}$; the analytic identities retain
+$e$ and $P$ symbolically.
+
+\section{Production currents and the projector-free invariant chart}
+
+Let $S_1,S_2,S_3$ be the realified Pauli generators.  Put
+\[
+ \rho=z^Tz,\qquad d=\rho+e,\qquad s=\log d,
+ \qquad m_r=z^TS_rz.                                      \tag{2.1}
+\]
+For a spatial derivative $y=D_i z$, define
+\[
+ J_{r,i}=D_i m_r,\qquad
+ K_{r,i}=D_i m_r-m_rD_i s.                                \tag{2.2}
+\]
+The production frames satisfy the exact identity
+\[
+ \boxed{M_r(z)^Ty=(J_{r,i},K_{r,i}).}                      \tag{2.3}
+\]
+Indeed $p_r\cdot y=2S_rz\cdot y=D_i m_r$, while
+\[
+ v_r\cdot y=D_i m_r-{m_r\over d}D_i\rho
+             =D_i m_r-m_rD_i\log d.                       \tag{2.4}
+\]
+
+Write
+\[
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix},
+ \quad
+ a={9\over500P},\quad b={3\over400P},\quad c={3\over320P}.
+                                                                    \tag{2.5}
+\]
+Set
+\[
+ c_0={ac-b^2\over c}={3\over250P},\qquad
+ c_1=c\left(1+{b\over c}\right)^2={243\over8000P},
+ \qquad \alpha={c\over b+c}={5\over9},                  \tag{2.6}
+\]
+and
+\[
+ L_{r,i}=J_{r,i}-\alpha m_rD_i s
+         =d^\alpha D_i(m_rd^{-\alpha}).                   \tag{2.7}
+\]
+Completing the fixed $2\times2$ quadratic form gives globally
+\[
+ \boxed{
+ (J_{r,i},K_{r,i})Q_{\rm II}(J_{r,i},K_{r,i})^T
+ =c_0|J_{r,i}|^2+c_1|L_{r,i}|^2.}                         \tag{2.8}
+\]
+In particular $2\alpha=10/9$, exactly the Nelson exponent already derived
+by R-064 and R-067.
+
+Both $d\rho$ and every $dm_r$ annihilate the doublet and singlet local phase
+directions.  Equations (2.3)--(2.8) therefore require no phase projector,
+pseudoinverse, or division by the doublet or singlet amplitude.  They remain
+algebraically valid on every R-073 rank stratum.
+
+There is an essential tip warning.  Generically the production frame and
+$D(\rho,m_1,m_2,m_3)$ both have rank four, and on the singlet-zero stratum
+both have rank three.  At a nonzero pure singlet, however, the production
+frame has rank zero while $D\rho$ has rank one.  Thus $(\rho,m)$ is a global
+algebraic representation of the currents, not a nondegenerate or
+bi-Lipschitz quotient coordinate.  No inverse estimate at that stratum is
+used below.
+
+\section{Exact invariant-current Taylor remainder}
+
+Let $U$ be the uncontrolled endpoint, $A$ a regular control, $G_i=D_iU$,
+and $C_i=D_iA$.  Write
+\[
+ \mu_r=2U^TS_rA,\qquad \eta_r=A^TS_rA,
+ \qquad r_1=2U\cdot A,\qquad r_2=|A|^2,                  \tag{3.1}
+\]
+\[
+ \Delta s=\log {d+r_1+r_2\over d},
+ \qquad R_s=\Delta s-{r_1\over d}.                       \tag{3.2}
+\]
+Let $\delta J_r$ and $\delta L_r$ denote the complete endpoint current
+increments and let $\delta J_r^{(1)},\delta L_r^{(1)}$ denote their
+Frechet first variations at $U$ in direction $A$.  Direct differentiation
+gives
+\[
+ \boxed{\delta J_r-\delta J_r^{(1)}=D\eta_r,}             \tag{3.3}
+\]
+\[
+ \boxed{
+ \delta L_r-\delta L_r^{(1)}
+ =D\eta_r-\alpha\{m_rDR_s+\mu_rD\Delta s
+                  +\eta_rD\log(d+r_1+r_2)\}.}             \tag{3.4}
+\]
+Consequently the full raw-energy Taylor remainder after its conservative
+first variation is exactly
+\[
+ \boxed{
+ \begin{aligned}
+ \mathcal R_{\rm inv}=
+ \sum_{r,i}\{&c_0\langle J_{r,i},
+                  \delta J_{r,i}-\delta J_{r,i}^{(1)}\rangle
+       +{c_0\over2}|\delta J_{r,i}|^2\\
+ &+c_1\langle L_{r,i},
+                  \delta L_{r,i}-\delta L_{r,i}^{(1)}\rangle
+       +{c_1\over2}|\delta L_{r,i}|^2\}.
+ \end{aligned}}                                             \tag{3.5}
+\]
+This identity is finite-cutoff algebra.  It simultaneously retains the
+range-visible squares, the phase Ward cancellation, the radial channel, and
+the cone-tip degeneration.  Equations (3.3)--(3.4) show why a completed
+horizontal formula cannot contain only $A^2DA$: the exact $L$ remainder also
+contains $A\,DA$ and $A^2DU$ terms through $D\Delta s$ and $DR_s$.
+
+For comparison with the earlier frame notation, set
+\[
+ M_{r,0}=M_r(U),\quad M_{r,1}=M_r(U+A),\quad
+ D_r=DM_r(U)[A],\quad E_r=M_{r,1}-M_{r,0}-D_r,           \tag{3.6}
+\]
+\[
+ w_{r,i}=M_{r,0}^TG_i,\quad
+ d_{r,i}=(D_r+E_r)^TG_i,\quad c_{r,i}=M_{r,1}^TC_i.     \tag{3.7}
+\]
+If $F_A(U)=B(U+A)-B(U)-DB(U)[A]$ and $\mathcal S_0$ is the R-070
+conservative first variation, then
+\[
+ \boxed{
+ \begin{aligned}
+ \Delta V_\Lambda^{\rm ren}-\mathcal S_0
+ ={}&L+N+\sum_{r,i}\{\langle d_{r,i},Q_{\rm II}c_{r,i}\rangle
+                      +\tfrac12|c_{r,i}|_{Q_{\rm II}}^2\}\\
+ &+\tfrac12\langle F_A(U),Q_\Lambda\rangle,
+ \end{aligned}}                                             \tag{3.8}
+\]
+where
+\[
+ L=\sum_{r,i}\langle w_{r,i},Q_{\rm II}D_r^TC_i\rangle,
+ \qquad
+ N=\sum_{r,i}\langle w_{r,i},Q_{\rm II}E_r^TC_i\rangle.
+                                                                    \tag{3.9}
+\]
+Equations (3.5) and (3.8) are two exact representations of the same raw
+endpoint geometry before the A7 Wick conversion.  The R-063 lower-chaos
+chart and the R-066 trace transport must still accompany them.
+
+\section{The principal unshifted Taylor one-form}
+
+Taylor's integral formula gives
+\[
+ E_r(U,A)=\int_0^1(1-t)D^2M_r(U+tA)[A,A],dt.             \tag{4.1}
+\]
+Thus the complete $E$--$DA$ branch has the exact path one-form
+\[
+ N=\sum_{i,a,b,c}\langle
+       \mathfrak J^{\rm path}_{i,abc}(U,A),
+       A^aA^bD_iA^c\rangle,                              \tag{4.2}
+\]
+\[
+ \mathfrak J^{\rm path}_{i,abc}(U,A)
+ =\sum_{r,\mu,\nu,d}M_{r,d\mu}(U)D_iU^dQ_{\mu\nu}
+   \int_0^1(1-t)\partial_{ab}M_{r,c\nu}(U+tA),dt.       \tag{4.3}
+\]
+Freeze only the Hessian coefficient at the uncontrolled field:
+\[
+ \boxed{
+ \mathfrak J^{(2)}_{i,abc}(U)
+ ={1\over2}\sum_{r,\mu,\nu,d}
+ M_{r,d\mu}(U)D_iU^dQ_{\mu\nu}
+ \partial_{ab}M_{r,c\nu}(U).}                           \tag{4.4}
+\]
+The factor $1/2$ is $\int_0^1(1-t)dt$.  At fixed positive floor the tensor
+\[
+ \Theta_{abc,d}(u)={1\over2}\sum_{r,\mu,\nu}
+ M_{r,d\mu}(u)Q_{\mu\nu}\partial_{ab}M_{r,c\nu}(u)      \tag{4.5}
+\]
+is smooth and all its derivatives have polynomial growth.  Hence
+$\mathfrak J^{(2)}=\Theta(U)DU$ is a finite smooth matrix one-form of the
+R-071 class.
+
+We record the Holder--Besov strengthening needed here.  Choose
+$\alpha\in(1/3,1/2)$ with $\alpha>1/2-\kappa$.  R-050 supplies
+\[
+ U\in\mathcal C^\alpha,\qquad DU\in\mathcal C^{\alpha-1},
+ \qquad U\circ DU\in\mathcal C^{-\varepsilon}             \tag{4.6}
+\]
+in every finite probability moment, with regulator-independent coupled
+cutoff convergence.  First-order paralinearisation gives
+\[
+ \Theta(U)=T_{D\Theta(U)}U+R_\Theta,\qquad
+ R_\Theta\in\mathcal C^{2\alpha}.                         \tag{4.7}
+\]
+The only nonclassical resonance is reconstructed from
+$D\Theta(U)(U\circ DU)$ plus the standard commutator.  The low--high term
+has order $\alpha-1>-1/2-\kappa$, and the remaining terms are better.
+Therefore, for every finite $p$,
+\[
+ \boxed{
+ \mathfrak J^{(2)}_\Lambda\longrightarrow\mathfrak J^{(2)}
+ \quad\hbox{in }L^p(\Omega;C^{-1/2-\kappa}),
+ \qquad
+ \sup_\Lambda\mathbb E
+ \|\mathfrak J^{(2)}_\Lambda\|_{C^{-1/2-\kappa}}^6<\infty.} \tag{4.8}
+\]
+Common real-even covariance makes
+$\operatorname{Cov}(U,D_iU)=0$, so no local first-derivative counterterm is
+created.  Since $M$ and $D^2M$ are odd, $\Theta$ is even; its Hermite
+expansion is even and multiplication by $DU$ produces the complete odd
+one-form chaoses.  In particular the first-chaos low--high root is retained.
+
+R-074 now applies exactly:
+\[
+ |\langle\mathfrak J^{(2)},A^{\otimes2}\otimes DA\rangle|
+ \le\eta X+\zeta Y
+ +C\eta^{-3}\zeta^{-2}
+       \|\mathfrak J^{(2)}\|_{C^{-1/2-\kappa}}^6,          \tag{4.9}
+\]
+where $X=\|A\|_{H^2}^2$ and $Y=\|A\|_6^6$.  This closes the principal
+unshifted subterm, not the path one-form (4.3).
+
+\section{\hspace{0.25em}The isolated resonance and its full reassembly}
+
+At $z=e_1$ and $A=G=C=e_2$, (4.4) contains the R-074 coefficient
+\[
+ -{27\over200P(1+e)}.                                    \tag{5.1}
+\]
+It is nonzero and has no bare shell-separation gain.  The complete raw
+energy on the same local fixture is a stronger attribution test.  Put
+\[
+ F(t,\ell)={1\over2}\sum_r
+ |M_r(e_1+te_2)^T(e_2+\ell e_2)|_{Q_{\rm II}}^2.          \tag{5.2}
+\]
+The exact $t^2\ell$ coefficient is
+\[
+ \boxed{
+ [t^2\ell]F={3(113e^2+136e+48)\over
+                    2000P(1+e)^2}>0.}                    \tag{5.3}
+\]
+The $\sigma_x$ contribution, including both symmetric positions of the
+second derivative, is
+\[
+ -{27\over100P(1+e)},                                    \tag{5.4}
+\]
+while the restored $\sigma_z$ transported-linear contribution is
+\[
+ {3(113e^2+316e+228)\over2000P(1+e)^2}.                  \tag{5.5}
+\]
+Their sum is (5.3); $\sigma_y$ vanishes.  At the pinned parameters (5.3) is
+$0.0180000000000105\ldots$, whereas (5.1) is
+$-0.0337499999999578\ldots$.
+
+This does not prove global raw or Wick positivity.  It proves that the exact
+R-074 negative branch is only one attribution inside the full signed
+endpoint and that a verifier which checks only its sign necessarily misses
+load-bearing restored terms.
+
+\section{The coefficient-transport boundary}
+
+Subtracting (4.4) from (4.3) gives exactly
+\[
+ N=N^{(2)}+N_{\ge3},                                     \tag{6.1}
+\]
+\[
+ \boxed{
+ N_{\ge3}={1\over2}\sum_{r,i}\int_0^1(1-s)^2
+ \left\langle M_r(U)^TG_i,Q_{\rm II}
+ [D^3M_r(U+sA)[A,A,A]]^TC_i\right\rangle ds.}           \tag{6.2}
+\]
+At fixed floor $D^3M$ is globally bounded.  The natural endpoint product
+estimate is
+\[
+ \|A^{\otimes3}\otimes DA\|_{B^{1/2+\kappa}_{1,1}}
+ \le C_\kappa\|A\|_{H^2}\|A\|_6^3.                    \tag{6.3}
+\]
+The proof is the R-074 largest-frequency argument with the three
+undifferentiated factors in $L^6$.  Pairing an order
+$C^{-1/2-\kappa}$ random current produces
+\[
+ R(\omega)X^{1/2}Y^{1/2}.                                \tag{6.4}
+\]
+The deterministic exponents already sum to one.  An inequality
+\[
+ R\sqrt{XY}\le\eta X+\zeta Y+C_R                           \tag{6.5}
+\]
+for all $X,Y\ge0$ requires $R\le2\sqrt{\eta\zeta}$; an additive constant
+cannot repair the large common scaling of $X$ and $Y$.  An unbounded random
+current therefore has no absolute Young route, even if it has every finite
+moment.  This scoped failure is registered as
+\texttt{NG-2026-07-24-A13-ABSOLUTE-THIRD-ORDER-TRANSPORT}.
+
+The tail is not a phase artifact.  On the active-real $\sigma_3$ radial line
+take
+\[
+ U=A=\sqrt e\,e_1,\qquad G=C=e_1.                       \tag{6.6}
+\]
+There $p(u)=2u$ and $v(u)=2eu/(u^2+e)$.  With
+$f(r)=2r/(1+r^2)$,
+\[
+ f(1)=1,\quad f(2)=4/5,\quad f'(1)=0,\quad f''(1)=-1.    \tag{6.7}
+\]
+Hence
+\[
+ E_v=-0.2\sqrt e,\qquad {1\over2}D^2v[A,A]=-0.5\sqrt e,
+ \qquad E_{3,v}=0.3\sqrt e,                              \tag{6.8}
+\]
+and
+\[
+ \boxed{N_{\ge3}=0.3e(2q_{12}+q_{22})
+ ={0.0073125\,e\over P}>0.}                              \tag{6.9}
+\]
+At the pinned production $P=4+10^{-12}$ this is approximately
+$0.001828125\,e$.
+This is a non-tip horizontal direction; neither local phase invariance nor
+terminal-kernel cancellation deletes it.
+
+Also, $\mathfrak J^{(2)}$ is not individually gauge-horizontal.  An
+independent constant phase-tangent fixture gives a nonzero principal
+contraction while the exact rotated raw energy is invariant.  The Ward
+cancellation uses the orbit's second-order radial acceleration, both R-073
+restored first variations, (6.2), and the terminal square.  Calling (4.4)
+the completed gauge-quotient one-form would therefore be false.
+
+\section{Two omitted-channel diagnostics}
+
+\subsection{Constant-control coefficient curvature}
+
+Let
+\[
+ F(z,y)={1\over2}\sum_r|M_r(z)^Ty|_{Q_{\rm II}}^2.       \tag{7.1}
+\]
+For fixed $z,a,y$, define
+\[
+ R_0=F(z+a,y)-F(z,y)-D_zF(z,y)[a].                       \tag{7.2}
+\]
+With
+\[
+ \delta j_r=[M_r(z+a)-M_r(z)]^Ty,\qquad
+ E_r=M_r(z+a)-M_r(z)-DM_r(z)[a],                         \tag{7.3}
+\]
+ordinary algebra gives
+\[
+ \boxed{
+ R_0={1\over2}\sum_r|\delta j_r|_Q^2
+       +\sum_r(M_r(z)^Ty)^TQ_{\rm II}(E_r^Ty).}           \tag{7.4}
+\]
+On the independently found production fixture recorded by the executables,
+\[
+ R_0=-0.01977052360318\ldots,\qquad
+ {1\over2}\sum_r|\delta j_r|_Q^2=0.01790632256879\ldots, \tag{7.5}
+\]
+\[
+ \sum_r(M_r(z)^Ty)^TQ(E_r^Ty)=-0.03767684617197\ldots.   \tag{7.6}
+\]
+Here $C=DA=0$, so every $A^2DA$ one-form vanishes.  The negative
+coefficient-curvature channel is larger than the retained square.  Therefore
+``positive square plus the cubic one-form'' is not the full endpoint.  The
+$A^2G^{\otimes2}$ Wick channel, R-063 lower chaoses, and exact trace transport
+must remain.  This is registered as
+\texttt{NG-2026-07-24-A13-ONEFORM-ONLY-ENDPOINT-OMISSION}.
+
+\subsection{An adapted coefficient can have an infinite forest}
+
+For $X\sim N(0,1)$ consider the smooth R-074 feedback factor
+\[
+ f(X)=e^{-X^2}(X^2-1).                                    \tag{7.7}
+\]
+If $H_n$ are the probabilists' Hermite polynomials and
+$c_n=\mathbb E[fH_n]/n!$, the generating function is
+\[
+ \sum_{n\ge0}c_nt^n
+ ={e^{-t^2/3}\over\sqrt3}\left({t^2\over9}-{2\over3}\right).
+                                                                    \tag{7.8}
+\]
+Thus
+\[
+ c_0=-{2\over3\sqrt3},\qquad
+ c_{2m}={(-1)^{m-1}(m+2)\over
+              \sqrt3\,3^{m+1}m!}\ne0\quad(m\ge1).      \tag{7.9}
+\]
+This smooth terminal adapted factor therefore has infinitely many chaoses,
+so an arbitrary adapted substitution need not have a finite forest. R-063's
+exact $P_3/P_1$ and
+$P_4/P_2/\Sigma Q/P_0$ forest remains the correct unshifted and deterministic-
+translation chart, but it is not automatically complete after a correlated
+adapted substitution.  A viable proof must causal-freeze controls relative
+to each fresh root or prove an arbitrary-multiplier/shifted-enhancement
+theorem.  This failure is registered as
+\texttt{NG-2026-07-24-A13-ADAPTED-FINITE-CHAOS-TRANSFER}.
+
+\section{Predictable fixed-cutoff graph recovery}
+
+Fix $J<\infty$.  For the mutually orthogonal strict sharp-cube controls put
+\[
+ a_j=K_jh_j,\qquad h_j\in L^0(\mathcal F_{j-1};\mathcal H_j),
+ \qquad
+ S_Jh=\left(\sum_{j\le J}|a_j|^2\right)^{1/2}.            \tag{8.1}
+\]
+Define
+\[
+ \mathcal A^2_{J,6}=\left\{h:\
+ \mathbb E\sum_{j\le J}\|h_j\|_{\mathcal H_j}^2
+ +\mathbb E\|S_Jh\|_6^6<\infty\right\},                \tag{8.2}
+\]
+with graph norm
+\[
+ \|h\|_{\mathcal G_J}
+ =\left(\mathbb E\sum_j\|h_j\|_{\mathcal H_j}^2\right)^{1/2}
+  +\left(\mathbb E\|S_Jh\|_6^6\right)^{1/6}.            \tag{8.3}
+\]
+Sharp-shell Littlewood--Paley equivalence identifies the second coordinate
+with the terminal $L^6(\Omega;L^6_x)$ control norm.  The shell control map
+also gives
+\[
+ \mathbb E\left\|\sum_jK_j(h_j-g_j)\right\|_{H^2}^2
+ \lesssim\mathbb E\sum_j\|h_j-g_j\|_{\mathcal H_j}^2.   \tag{8.4}
+\]
+
+At fixed $J$, each shell and its canonical Gaussian past are finite
+dimensional; the declared filtration carries no additional unapproximated
+auxiliary randomness. Shell projection and inversion show that terminal
+$L^6$ control implies each $h_j$ belongs to
+$L^6(\Omega;\mathcal H_j)$.  Radially truncate $h_j$ itself, which preserves
+$\mathcal F_{j-1}$-measurability, then approximate the bounded function of
+the finite Gaussian past by a smooth cylinder.  Doing this shell by shell
+produces bounded smooth past-cylindrical $h^{(n)}$ with
+\[
+ \boxed{\|h^{(n)}-h\|_{\mathcal G_J}\longrightarrow0.}   \tag{8.5}
+\]
+No terminal-event truncation is used.
+
+It remains to identify the positive current graph.  Put
+\[
+ \mathbf F_e(u)=
+ (Q_{\rm II}^{1/2}M_r(u)^T\partial_i u)_{r,i}.            \tag{8.6}
+\]
+The production frame is globally Lipschitz and has linear growth:
+\[
+ |M_r(u)|\le C|u|,\qquad |M_r(u)-M_r(v)|\le C|u-v|.       \tag{8.7}
+\]
+Indeed $|q|\le1$ and $|z||Dq(z)[w]|\le4|w|$, so
+$|Dv(z)[w]|\le12|w|$, uniformly over positive floors.  The interpolation
+\[
+ \|\nabla u\|_3\le C\|u\|_6^{1/2}\|u\|_{H^2}^{1/2}      \tag{8.8}
+\]
+implies
+\[
+ \|\mathbf F_e(u)\|_2
+ \le C\|u\|_6^{3/2}\|u\|_{H^2}^{1/2}.                  \tag{8.9}
+\]
+For $d=u-v$,
+\[
+ \begin{aligned}
+ \|\mathbf F_e(u)-\mathbf F_e(v)\|_2\le C\{&
+ \|d\|_6\|u\|_6^{1/2}\|u\|_{H^2}^{1/2}\\
+ &+\|v\|_6\|d\|_6^{1/2}\|d\|_{H^2}^{1/2}\}.
+ \end{aligned}                                             \tag{8.10}
+\]
+Holder in probability, with exponents $(3,6,2)$ in the first term and
+$(3,6,2)$ in the second, proves
+\[
+ \mathbf F_e(U_J+A_n)\longrightarrow\mathbf F_e(U_J+A)
+ \quad\hbox{in }L^2(\Omega;L^2_x).                        \tag{8.11}
+\]
+Hence the positive raw current converges in $L^1(\Omega)$.  At fixed cutoff
+the Wick trace satisfies
+\[
+ |T_J(u)-T_J(v)|
+ \le C_J(\|u\|_2+\|v\|_2)\|u-v\|_2,                     \tag{8.12}
+\]
+so the covariance-normal endpoint and the retained finite-low endpoint also
+converge in $L^1$.  Any endpoint lower bound assembled from these
+graph-continuous production terms and whose constant is uniform in $J$
+therefore passes from regular controls to every
+$h\in\mathcal A^2_{J,6}$ with the same constant.  The approximation constants
+may depend on fixed $J$; no removal limit is asserted.
+
+Plain predictable $L^2$ density is insufficient.  If
+$E_n\in\mathcal F_{j-1}$ has probability $1/n$ and
+\[
+ h_n=n^{1/6}{\bf1}_{E_n}K_j^{-1}f,                        \tag{8.13}
+\]
+then
+\[
+ \mathbb E\|h_n\|_{\mathcal H_j}^2
+ =n^{-2/3}\|K_j^{-1}f\|_{\mathcal H_j}^2\to0,
+ \qquad
+ \mathbb E\|K_jh_n\|_6^6=\|f\|_6^6.                    \tag{8.14}
+\]
+This registers
+\texttt{NG-2026-07-24-A13-L2-ONLY-PREDICTABLE-RECOVERY} and explains why
+the sextic graph coordinate in (8.3) is necessary.
+
+Finally, polarization of R-074 gives
+\[
+ \begin{aligned}
+ \|A^2DA-B^2DB\|_{B^{1/2+\kappa}_{1,1}}\lesssim{}&
+ \|A-B\|_{H^2}(\|A\|_6+\|B\|_6)^2\\
+ &+\|A-B\|_6(\|A\|_6+\|B\|_6)
+   (\|A\|_{H^2}+\|B\|_{H^2}).
+ \end{aligned}                                             \tag{8.15}
+\]
+Thus the payload converges strongly in
+$L^{6/5}(\Omega;B^{1/2+\kappa}_{1,1})$.  Uniform $L^6$ boundedness of an
+adapted one-form, together with convergence in probability along (8.5), is
+exactly enough to pass its expected pairing: truncate the one-form norm, use
+probability convergence on the bounded part, and use $L^6$--$L^{6/5}$ duality
+on the payload tail. No $6+\varepsilon$ moment is needed.  Moment boundedness
+alone is not graph identification: an alternating sequence
+$(-1)^n\mathfrak J_0$ has all moments but no pairing limit.
+
+\section{\hspace{0.25em}Evidence map and successor}
+
+The proof map after R-075 is:
+\begin{enumerate}
+\item \textbf{Closed algebraically:} (2.3)--(3.5) give the complete
+projector-free invariant-current Taylor chart, with the tip degeneration
+stated rather than inverted.
+\item \textbf{Closed analytically:} the principal unshifted tensor (4.4) is
+a canonical $C^{-1/2-\kappa}$ R-050 one-form with every finite moment and
+the required cutoff-uniform sixth moment.  R-074 pays its $A^2DA$ pairing.
+\item \textbf{Closed as attribution:} (5.3)--(5.5) reassemble the negative
+isolated resonance into the positive complete coefficient on the canonical
+fixture.  This is not a global sign theorem.
+\item \textbf{Closed negatively:} the absolute $N_{\ge3}$ route is
+Young-critical; a horizontal radial fixture proves the tail survives.
+\item \textbf{Closed negatively:} a one-form-only endpoint omits the
+coefficient-curvature/Wick channel, and a smooth adapted counterexample shows
+that arbitrary adapted substitution need not preserve a finite R-063 forest.
+\item \textbf{Closed conditionally on the regular endpoint inequality:}
+the predictable fixed-cutoff graph recovery extends that inequality to the
+declared graph domain, and uniform $L^6$ boundedness plus graph identification
+passes the cubic pairing.
+\item \textbf{Still open:} reconstruct and bound $N_{\ge3}$ together with
+the R-063 Wick/lower-chaos channel, both R-073 restored first variations, the
+terminal square, and the finite-low boundary by one signed causal identity.
+\end{enumerate}
+
+The smallest honest successor is
+\[
+ \boxed{\texttt{A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER}.}
+                                                                    \tag{9.1}
+\]
+It may close through a signed Ward/martingale telescope or an adapted
+arbitrary-multiplier shifted enhancement.  It may not use a termwise absolute
+third-order Besov payment, call the principal tensor gauge-complete, freeze a
+terminal adapted coefficient as a finite chaos, omit the $C=0$ Wick channel,
+or use a singular phase projector.  Once it closes for regular controls,
+Section 8 removes the separate fixed-cutoff density obstruction; the umbrella
+one-use and $q=10/9$ Nelson synthesis then remain.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The invariant variables are a smooth global quotient
+coordinate.''} \textbf{UPHELD as false.}  The pure-singlet rank is zero for
+the production frame and one for $D\rho$.  Only the projector-free current
+identity is asserted.
+
+\item \textbf{``The principal tensor is the completed horizontal
+one-form.''} \textbf{UPHELD as false.}  It is nonzero on a constant phase
+tangent; Ward completion needs the second-order orbit acceleration, restored
+first variations, $N_{\ge3}$, and the terminal square.
+
+\item \textbf{``The R-074 negative coefficient survives with the same sign
+in the full canonical fixture.''} \textbf{DISMISSED.}  Exact reassembly gives
+the positive coefficient (5.3).  No global positivity is inferred.
+
+\item \textbf{``Every-moment control of the transported current repairs the
+third-order estimate.''} \textbf{UPHELD as false for the absolute route.}
+The deterministic powers in (6.4) already exhaust Young's inequality.
+
+\item \textbf{``The terminal square makes the $C=0$ channel harmless.''}
+\textbf{UPHELD as false.}  The fixture (7.5)--(7.6) has a negative curvature
+pair larger than the positive square.
+
+\item \textbf{``R-063's finite forest remains finite after arbitrary adapted
+substitution.''} \textbf{UPHELD as false.}  Equations (7.8)--(7.9) give
+infinitely many nonzero even chaoses.
+
+\item \textbf{``Ordinary predictable $L^2$ density is enough.''}
+\textbf{UPHELD as false.}  The exact spike (8.13)--(8.14) loses the terminal
+sextic coordinate.  The graph norm (8.3) repairs it.
+
+\item \textbf{``Graph recovery needs a $6+\varepsilon$ one-form moment.''}
+\textbf{DISMISSED.}  Strong $L^{6/5}$ payload convergence and uniform $L^6$
+boundedness suffice by truncation, provided the one-form is identified in
+probability.
+
+\item \textbf{``This closes one-use or Nelson.''} \textbf{UPHELD as an
+overclaim.}  The signed coefficient-transport endpoint remainder, umbrella
+one-use, and Nelson synthesis remain open.
+\end{enumerate}
+
+\section{Reproduction and independent audit}
+
+The primary executable derives all production constants from A1, verifies
+the invariant-current and Nelson-aligned diagonalizations, the exact Taylor
+chart, two-resolution principal/path split, full resonance reassembly,
+constant-control omission, horizontal radial tail, exact Hermite generating
+function, frame Lipschitz bounds, critical exponent ledger, predictable
+$L^2$ spike, and a spectral graph-recovery sequence.  The non-importing
+executable rebuilds the complex Pauli frames, uses fourth-order stencils,
+two-dimensional resonance extraction, two-resolution Gauss--Hermite
+quadrature, a different graph fixture, and the same exact omission oracle.
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_principal_taylor_oneform_graph_recovery_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION
+Precise statement:       The production current has an exact projector-free
+                         invariant Taylor chart. Its principal unshifted
+                         second-order one-form is canonical in every finite
+                         Lp(C^(-1/2-kappa)) with a cutoff-uniform sixth
+                         moment. Fixed-cutoff predictable graph recovery is
+                         valid. The signed coefficient-transport tail remains.
+Scope:                   Fixed-floor A1/R-050/R-063/R-071/R-073/R-074;
+                         common real-even cutoffs; regular whole-shell then
+                         finite-energy strict-past controls at each fixed J;
+                         finite-low retained.
+Dependencies:            A1; R-050; R-063; R-066--R-074.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_principal_taylor_oneform_graph_recovery_verify.py
+Expected output:         primary + independent + integrated aggregate PASS.
+Falsification gate:      An invariant-current, Taylor, resonance, omission,
+                         radial-tail, Hermite, graph, hash, PDF, or scope
+                         assertion fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No completed adapted gauge-quotient one-form,
+                         signed coefficient transport, one-use, Nelson,
+                         measure, removal, infinite volume, or T5--T7.
+Next required action:    Prove the signed coefficient-transport endpoint
+                         remainder with the R-063 lower chaoses, restored
+                         first variations, terminal square, and finite-low
+                         boundary retained in one causal identity.
+\end{verbatim}
+\endgroup

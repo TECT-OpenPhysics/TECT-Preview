@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-075 principal Taylor one-form and graph recovery reduction] - 2026-07-24
+
+Recorded R-075 as a scoped T4 subproof under A13. The exact projector-free invariant-current Taylor chart and principal C^(-1/2-kappa) Taylor one-form are established, and predictable recovery closes on the declared fixed-cutoff Cameron--Martin/terminal-L6 graph domain. Independent diagnostics show that the signed transported endpoint remains open: the absolute third-order route is Young-critical, a horizontal radial tail survives, a one-form-only endpoint omits a coefficient-curvature/Wick channel, and a smooth adapted counterexample has infinitely many even chaoses. The successor is A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER; controlled-shell one-use and q=10/9 Nelson synthesis remain open. The package carries primary 36, independent 20, integrated 76, and aggregate 132 assertions with a ten-page rendered proof PDF.
+
 ## [A13 R-074 predecessor contract normalization] - 2026-07-24
 
 The first R-074 integrated wrapper repeated the known assumption that all predecessors use the modern verification/pass/count schema. Verifier v1.0.2 now validates the issued R-050, R-063, and R-073 schemas separately, including their manifest digests, PASS signals, row counts, aggregate counts, and all-row status. The correction changes no mathematics, scope, PDF, tier, or 58/58 integrated and 110/110 aggregate contract.

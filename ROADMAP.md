@@ -197,10 +197,17 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   centering is not automatic. It closes genuine local phase orbits by exact
   raw-current invariance and a cutoff-uniform relative-phase Wick anomaly with
   `O(Lambda^-3)` tail, and supplies the deterministic Besov sixth-moment
-  payment for the remaining horizontal cubic payload. The new regular-control
-  subgate is `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`: construct
-  the complete lower-chaos adapted horizontal one-form and its uniform sixth
-  moment before the declared finite-energy graph-norm recovery.
+  payment for the remaining horizontal cubic payload. R-075 then proves the
+  projector-free invariant-current Taylor chart, closes the principal
+  unshifted one-form with a cutoff-uniform sixth moment, and establishes the
+  declared fixed-cutoff predictable graph-norm recovery. Exact horizontal,
+  constant-control, and Hermite fixtures show that the remaining path tail
+  cannot be paid termwise, omitted, or treated as a finite adapted forest. The
+  new regular-control subgate is
+  `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`: reconstruct
+  the transported tail, every R-063 lower chaos, both restored first
+  variations, terminal square, trace/Wick channel, and finite-low boundary in
+  one signed causal identity.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -343,14 +350,18 @@ preserved in git/changelog rather than treated as current gates.
    terminal square. R-074 isolates the exact bare resonance, refutes automatic
    adapted Wick centering, closes the genuine local phase-orbit channel
    including its finite Wick anomaly, and proves the Besov sixth-moment
-   payment. The current child is
-   `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`. Construct its complete
-   lower-chaos signed endpoint representation and cutoff-uniform sixth moment,
-   then prove predictable graph-norm finite-energy recovery. Do not spatially
-   differentiate the heat dummy, reuse uncontrolled tails for an adapted
-   coefficient, pay terminal raw energy and injection separately, assume
-   automatic centering or unproved Malliavin regularity, or suppress the R-074
-   resonant branch.
+   payment. R-075 proves the projector-free invariant-current Taylor chart,
+   the principal unshifted one-form and its sixth moment, and fixed-cutoff
+   predictable graph recovery. The current child is
+   `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`. Reconstruct
+   the horizontal transported tail with every R-063 lower chaos, both restored
+   first variations, terminal square, trace/Wick channel, and finite-low
+   boundary in one signed causal identity. Do not spatially differentiate the
+   heat dummy, reuse uncontrolled tails for an adapted coefficient, pay
+   terminal raw energy and injection separately, assume automatic centering
+   or unproved Malliavin regularity, call the principal tensor gauge-complete,
+   freeze an arbitrary adapted coefficient as finite chaos, or suppress the
+   R-074 resonant branch.
 3. **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE** — blocked until the
    A13 redesign fixes the relative variable and budget. Do not reuse a
    standalone source-square antecedent or the historical

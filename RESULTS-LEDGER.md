@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-075](#r-075) | Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery | Scoped T4 analytic/exact/executed reduction: the production current has a global projector-free algebraic invariant representation, its principal unshifted second-order Taylor tensor is a canonical `C^(-1/2-kappa)` one-form with a cutoff-uniform sixth moment, and fixed-cutoff predictable recovery is valid in the Cameron--Martin/terminal-`L6` graph norm. Exact fixtures show that the transported third-order tail survives horizontally, a one-form-only endpoint omits a load-bearing Wick channel, and a smooth adapted counterexample shows that arbitrary adapted substitution need not preserve a finite R-063 chaos forest. The signed coefficient-transport endpoint remainder remains open; 132/132 aggregate assertions |
 | [R-074](#r-074) | Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction | Scoped T4 exact/analytic/executed subproof: the mismatched nonlinear secant coefficient has an exact nondecaying high--high-to-low resonance, so a bare positive separation gain is unavailable; automatic adapted Wick centering is false. Genuine local phase orbits preserve the complete raw current exactly, and their relative-phase Wick anomaly is cutoff-uniform with an `O(Lambda^-3)` tail while the common-phase anomaly vanishes. The cubic horizontal payload has a direct `H2`/sextic/sixth-moment Besov payment, but the complete adapted gauge-quotient one-form and finite-energy recovery remain open; 110/110 aggregate assertions |
 | [R-073](#r-073) | Exact off-diagonal telescope reassembly and critical phase-root boundary | Scoped T4 exact/analytic/executed subproof: all three R-072 off-diagonal families and the R-071 linear term reconstruct the R-069 raw current telescope exactly; restoring both separated first variations gives a projector-free terminal square and cancels every terminal-kernel component on the kernel-projector rank-2/3/6 strata. After Wick subtraction this is the still-open adapted terminal coercivity, not a lower bound. The declared termwise absolute value-high route is endpoint-critical at `theta=1/4` and `theta=1/2`; 113/113 aggregate assertions |
 | [R-072](#r-072) | Gauge-kernel strata and causal same-shell diagonal one-use reduction | Scoped T4 exact/analytic/executed subproof: the production frame has the exact local phase-gauge kernel, a differentiated gauge identity converts its nonlinear leakage to a quadratic control displacement, and one sequence Holder plus one weighted AM--GM pays the matched strict-past same-shell diagonal with one cutoff-independent integrable random constant and an `O(N_j0^-3)` sixth-moment tail. The exact terminal expansion contains a load-bearing off-diagonal remainder, larger than the diagonal by a factor above 4087 in an independent fixture; 95/95 aggregate assertions |
@@ -93,6 +94,85 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-075"></a>
+### R-075 -- Projector-free invariant-current Taylor chart, principal Taylor one-form, and predictable graph recovery
+
+**Result ID.**
+`A13-CLASSII-PRINCIPAL-TAYLOR-ONE-FORM-GRAPH-RECOVERY-REDUCTION`.
+
+**Statement.** Put `rho=z^Tz`, `d=rho+e`, `s=log d`, and
+`m_r=z^T S_r z`. The production current has the exact projector-free
+representation
+
+`M_r(z)^T y=(D_i m_r,D_i m_r-m_rD_i s)`.
+
+Completing the production `Q_II` form gives
+
+`c0|D_i m_r|^2+c1|D_i m_r-alpha m_rD_i s|^2`,
+
+where `c0=3/(250P)`, `c1=243/(8000P)`, `alpha=5/9`, and
+`2 alpha=10/9`. This identity is globally algebraic through the generic,
+singlet-zero, and collapsed strata, but is not a nondegenerate quotient
+coordinate at a pure-singlet tip.
+
+The exact invariant-current Taylor chart retains the `A DA`, `A^2 DU`,
+range-visible square, radial, and cone-tip channels. Freezing only its Hessian
+coefficient produces the principal tensor
+
+`J^(2)=(1/2) sum_r M_r(U)^T DU Q_II D^2M_r(U)`.
+
+At fixed positive floor this is a canonical R-050 geometric one-form,
+converging in every finite `Lp(Omega;C^(-1/2-kappa))` with a cutoff-uniform
+sixth moment. The R-074 Besov lemma therefore pays its `A^2 DA` pairing.
+This closes the principal unshifted subterm, not the full path coefficient.
+
+Exact adversarial fixtures identify four necessary boundaries. First, the
+complete canonical resonance coefficient is positive even though the isolated
+R-074 branch is negative, so every restored generator must be retained.
+Second, the third-order transported tail has the natural product
+`||A||_H2 ||A||_6^3=X^(1/2)Y^(1/2)`, which exhausts Young's inequality, and a
+horizontal radial fixture gives a nonzero positive tail. Third, when `DA=0`,
+the raw Taylor remainder is negative although the retained square is positive;
+the omitted coefficient-curvature/Wick channel is larger in magnitude.
+Fourth, `exp(-X^2)(X^2-1)` has nonzero Hermite coefficients at every even
+order, so arbitrary correlated adapted substitution does not preserve the
+finite R-063 forest.
+
+For each fixed terminal cutoff, bounded smooth strict-past cylindrical
+controls are dense in the graph norm combining Cameron--Martin energy and
+terminal `L6`. Strong graph convergence makes the production raw current and
+fixed-cutoff Wick trace continuous in `L1`. The cubic payload converges in
+`L^(6/5)`, so a uniformly sixth-integrable one-form pairing passes whenever
+the one-form is sequentially identified in probability. Plain predictable
+`L2` density is insufficient, as an exact spike sequence has vanishing `L2`
+energy but constant terminal sixth moment.
+
+**Proven in.** A13 /
+`classii-invariant-current-principal-oneform-graph-recovery-260724-v1.0`, with
+primary 36/36, non-importing independent 20/20, integrated 76/76, aggregate
+132/132, and a ten-page PDF passing form, zero-overfull, and direct all-page
+visual QA. The verifier pins R-050, R-063, R-071, R-073, R-074, and every
+direct runtime authority; the independent child rebuilds the complex Pauli
+frames and uses distinct resonance stencils, Gauss--Hermite quadrature, and a
+different graph fixture.
+
+**Reuse scope.** Projector-free current/Taylor algebra; the principal
+`C^(-1/2-kappa)` one-form and sixth-moment route; isolated-versus-complete
+resonance attribution; adapted infinite-chaos discriminator; and
+fixed-cutoff predictable graph recovery.
+
+**Boundary.** The result does not prove the signed adapted
+coefficient-transport remainder, reconstruct its complete R-063 lower-chaos
+and Wick channels, close controlled-shell one-use or the `q=10/9` Nelson
+theorem, construct an interacting measure, remove the floor or regulator,
+take infinite volume, or justify T5--T7. Tier T4; no promotion.
+
+**Publication target.** Stochastic geometric-analysis methods note with
+R-050 and R-059--R-074 after the signed coefficient-transport endpoint,
+controlled-shell one-use, and Nelson synthesis are resolved.
+
+---
 
 <a id="r-074"></a>
 ### R-074 -- Resonant phase-root boundary, pure phase-orbit Wick control, and Besov one-use reduction

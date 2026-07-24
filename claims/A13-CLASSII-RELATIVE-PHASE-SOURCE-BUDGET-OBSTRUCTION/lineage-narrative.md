@@ -133,11 +133,24 @@ endpoint theorem.
     relative-phase covariance block has derivative-weighted summand
     `O(|k|^-6)` and tail `O(Lambda^-3)`. A direct endpoint Besov lemma pays the
     horizontal cubic payload with one `H2` factor, one sextic factor, and a
-    sixth current moment. The current child is
-    `A13-CLASSII-ADAPTED-GAUGE-QUOTIENT-TAYLOR-ONE-FORM`: construct the complete
-    lower-chaos signed one-form and its cutoff-uniform sixth moment, then prove
-    predictable graph-norm finite-energy recovery before controlled-shell
-    one-use and Nelson.
+    sixth current moment. R-075 resolves the principal one-form and recovery
+    parts of this fork without claiming the transported endpoint remainder.
+16. **Invariant-current chart, principal Taylor one-form, and graph recovery.**
+    R-075 rewrites every production current through the projector-free
+    invariants `rho` and `m_r`, diagonalises the fixed `Q_II` form at
+    `alpha=5/9`, and derives the exact endpoint Taylor chart without inverting
+    a rank-jumping phase frame. The frozen second-order tensor is a canonical
+    `C^(-1/2-kappa)` R-050 one-form with a cutoff-uniform sixth moment, so the
+    R-074 Besov estimate closes that principal subterm. At every fixed cutoff,
+    predictable Cameron--Martin/terminal-`L6` graph recovery extends an
+    established regular-control endpoint inequality to the declared
+    finite-energy class. Exact radial, constant-control, and Hermite fixtures
+    show why the full gate remains: the third-order transport tail survives
+    horizontally and exhausts termwise Young slack; a one-form-only endpoint
+    omits the coefficient-curvature/Wick channel; and arbitrary adapted
+    substitution is not a finite R-063 forest. The current child is
+    `A13-CLASSII-SIGNED-COEFFICIENT-TRANSPORT-ENDPOINT-REMAINDER`, followed by
+    controlled-shell one-use and Nelson synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
