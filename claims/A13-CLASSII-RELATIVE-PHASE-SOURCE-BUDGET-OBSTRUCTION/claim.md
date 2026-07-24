@@ -215,13 +215,29 @@ the following structural results and proof-architecture boundaries hold.
     the Hilbert--Schmidt trace but leaves one adapted centered-resolvent chaos.
     A bounded scalar adapted coefficient proves that normal ordering and the
     resolver do not center this term.  The full `Q_II`-weighted linear frame
-    splits exactly into symmetric and Cartan channels.  Its Cartan channel and
-    the `q11`-weighted pure `p_A=2S_Az` subchannel are paid, but the non-`pp`
-    symmetric part still needs a balanced `H^{-1-kappa}` model attribution.
-    After that first subgate, the nonlinear coefficient remainder and
-    `(<d,Qc>+|c|_Q^2/2)` must remain coupled in a rational-frame/cross-square
-    estimate.  Stein integration would require uncontrolled Malliavin
-    derivatives, while invoking Nelson at the terminal form is circular.
+    splits exactly into symmetric and Cartan channels.  R-070 proposed an
+    `H^{-1-1/10}` payment for its Cartan and `q11` pure-`pp` pieces and left
+    the non-`pp` symmetric attribution open.  R-071 below corrects that
+    regularity claim while preserving the exact algebra.  Stein integration
+    would require uncontrolled Malliavin derivatives, while invoking Nelson
+    at the terminal form is circular.
+14. `A13-CLASSII-ONE-FORM-SOBOLEV-LINEAR-CLOSURE-AND-KERNEL-LEAKAGE`
+    proves the corrected fixed-floor linear theorem.  The nominal non-`pp`
+    bracket contains the nonzero polynomial core
+    `(2q12+q22) P Kp`; its raw divergence, the pure-`pp` Laplacian, and the
+    Cartan coefficient all retain a strict low--high principal symbol.  Thus
+    the R-070 `kappa=1/10` raw attributions are false.  The R-050 Gaussian
+    second level instead reconstructs every smooth finite matrix one-form in
+    all finite `Lp(Omega;H^(-1/2-delta))`.  Extending the R-068 interpolation
+    to `s=3/2+delta` pays the complete symmetric frame, while a separate
+    `A wedge DA` interpolation pays the Cartan frame.  At `delta=1/10` the
+    required moments are respectively `15/2` and `45/4`, both available.
+    Hence the full weighted linear subgate is closed.  An exact production
+    fixture then places `DA` in the common terminal-frame kernel while the
+    nonlinear coefficient remainder has a strictly positive affine slope.
+    This retires pointwise terminal-square absorption and leaves one
+    integrated strict-past Cameron--Martin/frequency estimate for the kernel
+    leakage.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -242,8 +258,9 @@ is a scoped T4 subproof and does not promote A13.
 | NPC cone / martingale injection | Nelson-aligned current factorisation, CAT(0) target, strong Jacobi remainder, exact injection telescope, and shellwise/geometry-only boundaries | T4 child reduction closed |
 | Tip-safe grouped harvest / Carleson reduction | Exact nonlinear harvest, full conservative-score and Gaussian-tail estimates, CAT(0) whole secant through the tip, centered-form one-use lemma, and corrected remainder boundary | T4 child reduction closed |
 | Endpoint-lifted Schur / coherent causal grouping | Hybrid endpoint lift, optimized safe-envelope bounds, exact pure-control and mixed-current telescopes, and scalar centered-defect transfer | T4 child reduction closed |
-| Wick--Doob terminal/resolvent reduction | Full-coefficient Wick transport, terminal normal current, trace/Hardy payment, adapted-resolver no-go, exact symmetric--Cartan split, and `q11` pure-`pp` payment | T4 child reduction closed with two explicit successors |
-| Controlled-shell one-use | Non-`pp` balanced linear-frame model attribution, coupled rational-frame/cross-square inequality, and finite-energy extension | OPEN umbrella gate |
+| Wick--Doob terminal/resolvent reduction | Full-coefficient Wick transport, terminal normal current, trace/Hardy payment, adapted-resolver no-go, and exact symmetric--Cartan split | T4 child reduction closed; its initial raw regularity attribution is corrected by R-071 |
+| One-form Sobolev linear-frame completion / kernel leakage | Fixed-floor matrix one-form lift, generalized symmetric/Cartan one-use payments, exact low--high correction, and terminal-frame kernel no-go | T4 linear subgate closed; one integrated nonlinear successor |
+| Controlled-shell one-use | Integrated strict-past kernel-leakage bound, finite-energy extension, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
 `A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE`. A13 remains the active proof host
@@ -281,6 +298,11 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   full terminal covariance-normal current and finite-low boundary.  Its
   adapted-coefficient and Stein diagnostics are route no-gos, not production
   counterexamples.
+- The R-071 one-form theorem is fixed-floor and uses the common R-050
+  geometric enhancement.  Its `H^(-1/2-delta)` current and
+  `H^(-3/2-delta)` divergence bounds are not uniform as the floor tends to
+  zero.  The terminal-frame fixture refutes a pointwise bound, not an
+  integrated Cameron--Martin estimate.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -303,40 +325,49 @@ Active umbrella gate:
 
 Current subordinate order:
 
-1. the balanced `H^{-1-kappa}` model attribution for the non-`pp` symmetric
-   part of the exact `Q_II`-weighted linear frame in R-070 (8.6)--(8.8), paid
-   once through R-068;
-2. the coupled predictable rational-frame/cross-square bound in R-070
-   (8.9)--(8.10), keeping the nonlinear coefficient remainder and terminal
-   square together under
-   `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`;
-3. localization/lower-semicontinuity extension to the declared finite-energy
+1. the integrated strict-past terminal-frame kernel-leakage bound identified
+   in R-071, using one Cameron--Martin allocation, one terminal sextic
+   allocation, one integrable random constant, and no singular frame inverse;
+2. localization/lower-semicontinuity extension to the declared finite-energy
    control class and the controlled-shell one-use estimate;
-4. return to the A7 Nelson and finite-volume measure gates.
+3. return to the A7 Nelson and finite-volume measure gates.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_wick_doob_terminal_resolvent_reduction_verify.py
+python codes/foundations/a13_classii_one_form_sobolev_linear_closure_verify.py
 ```
 
 Expected output:
 
-- primary `22/22`;
-- non-importing independent `16/16`;
-- integrated `47/47`, hence aggregate `85/85`;
-- exact Wick--Doob and raw terminal telescopes, trace restoration, endpoint-
-  curvature equivalence, covariance-tail Hardy bound, terminal resolvent,
-  adapted-centering diagnostic, exact full weighted linear-frame split, and
-  nonzero `q11` pure-`pp` integration by parts;
+- primary `21/21`;
+- non-importing independent `21/21`;
+- integrated `35/35`, hence aggregate `77/77`;
+- exact full polynomial/rational frame split, nonzero low--high symbols,
+  derived symmetric/Cartan Young exponents, common terminal-frame kernel,
+  positive nonlinear leakage slope, and prior R-070 execution;
 - exit code zero.
 
-The ten-page proof note passes the standard form check, zero-overfull gate,
+The seven-page proof note passes the standard form check, zero-overfull gate,
 and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_one_form_sobolev_linear_closure_manifest.json`
+- `notes/classii-one-form-sobolev-linear-closure-and-kernel-leakage-260724-v1.0.tex.txt`
+- `notes/classii-one-form-sobolev-linear-closure-and-kernel-leakage-260724-v1.0.pdf`
+- `../../codes/foundations/a13_classii_one_form_sobolev_linear_closure.py`
+- `../../codes/foundations/a13_classii_one_form_sobolev_linear_closure_independent.py`
+- `../../codes/foundations/a13_classii_one_form_sobolev_linear_closure_verify.py`
+- `runs/2026-07-24-primary-one-form-sobolev-linear-closure/result.json`
+- `runs/2026-07-24-independent-one-form-sobolev-linear-closure/result.json`
+- `runs/2026-07-24-integrated-one-form-sobolev-linear-closure/result.json`
+- `../../negative-results/registry.md#ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur`
+
+The immediate Wick--Doob predecessor remains binding subject to the R-071
+regularity correction:
 
 - `classii_wick_doob_terminal_resolvent_reduction_manifest.json`
 - `notes/classii-wick-doob-terminal-resolvent-reduction-260724-v1.0.tex.txt`
@@ -570,11 +601,10 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     `N^6` and leaves a positive coefficient for small prescribed budgets.  The
     exact pathwise CC telescope is essential.
 35. **UPHELD AGAINST CLOSURE: the local endpoint lift proves controlled-shell
-    one-use.**  R-070 terminalizes the adapted current but proves only an exact
-    equivalence.  The non-`pp` balanced linear-frame model attribution, the
-    subsequent coupled nonlinear rational-frame/cross-square lower bound,
-    finite-energy extension, one-use, and Nelson steps remain open.  No tier
-    change follows.
+    one-use.**  R-070 terminalizes the adapted current and R-071 pays its full
+    linear symmetric--Cartan frame at the honest weaker Sobolev order, but the
+    coupled nonlinear rational-frame/cross-square lower bound, finite-energy
+    extension, one-use, and Nelson steps remain open.  No tier change follows.
 36. **DISMISSED: the full coefficient Wick product cannot be transported.**
     The R-070 pointwise conditional identity transports it exactly and combines
     `CC/GG/mixed` into the terminal covariance-normal current.  The raw form
@@ -592,11 +622,39 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     control derivative.**  It removes only the same-shell diagonal derivative;
     later controls retain uncontrolled first and second Malliavin derivatives
     of earlier innovations.
-40. **DISMISSED: every production frame channel remains open.**  The exact
-    full weighted linear frame has a symmetric--Cartan split.  Its Cartan
-    channel and the `q11`-weighted pure `p_A=2S_Az` subchannel are paid.  This
-    does not close the `q12`/`q22` non-`pp` symmetric frame, whose balanced
-    model attribution remains open before the nonlinear coupled residual.
+40. **UPHELD AGAINST THE R-070 RAW REGULARITY: every linear frame lies in
+    `H^(-1-1/10)`.**  Strict low--high blocks survive in the pure-`pp`,
+    non-`pp`, and Cartan symbols.  Their dyadic variance grows at the rate
+    incompatible with that attribution.  The exact algebraic split survives,
+    but its original regularity/payment interpretation does not.
+41. **DISMISSED: the weaker raw order cannot be used once.**  R-050's enhanced
+    Gaussian second level reconstructs a smooth finite matrix one-form in
+    every finite `Lp(Omega;H^(-1/2-delta))`.  Its divergence lies in
+    `H^(-3/2-delta)`.  Extending R-068 to every `1<s<2` pays that pairing.  At
+    `delta=1/10`, the symmetric Young factor is
+    `eta^(-6) zeta^(-1/2)||Q||^(15/2)`.
+42. **DISMISSED: the Cartan coefficient needs a separate undeclared model.**
+    It is another smooth finite matrix one-form over the same R-050
+    enhancement.  Pairing the reconstructed current with `A wedge DA` and
+    interpolating gives, at `delta=1/10`, an `eta^(-39/4)` cost and a finite
+    `45/4` current moment.  Thus the complete fixed-floor linear frame closes.
+43. **UPHELD AGAINST POINTWISE TERMINAL-SQUARE CLOSURE: the terminal frame sees
+    every nonlinear residual direction.**  The exact vector
+    `n=(-1,0,0,1,-1,0)` lies in the common kernel of all three terminal frames
+    at the recorded fixture, while the nonlinear translated remainder has
+    positive slope
+    `27(6 epsilon^2+22 epsilon+27)/(400(epsilon+3)^3)` along `t n`.
+    Therefore no pointwise bound by the terminal current/cross/square data can
+    be uniform in `t`.
+44. **UPHELD AGAINST A PRODUCTION COUNTEREXAMPLE: the common-kernel fixture
+    falsifies the integrated one-use theorem.**  It is a local algebraic
+    no-go only.  It does not satisfy or test the strict-past stochastic
+    coupling, Cameron--Martin energy, spatial frequency localization, or the
+    integrated covariance-normal cancellations.
+45. **UPHELD AGAINST A13 CLOSURE: paying the full linear frame proves one-use.**
+    R-071 closes only the linear fixed-floor subgate.  The integrated
+    strict-past nonlinear kernel leakage, finite-energy extension,
+    controlled-shell one-use, and Nelson/measure synthesis remain open.
 
 ## Falsifier
 
@@ -664,6 +722,15 @@ hash mismatch, failed ten-page PDF QA, or failure of the primary `22/22`,
 independent `16/16`, integrated `47/47`, and aggregate `85/85` verifier
 contracts.
 
+The one-form Sobolev continuation is additionally falsified by failure of the
+strict low--high obstruction at the R-070 target order, the common-real-even
+matrix one-form lift from the R-050 enhancement, the generalized R-068
+`1<s<2` interpolation, the separate Cartan payment, the exact full polynomial
+core coefficient, the common terminal-frame kernel, or the positive nonlinear
+leakage slope.  A source/PDF hash mismatch, failed seven-page PDF QA, or
+failure of the primary `21/21`, independent `21/21`, integrated `35/35`, and
+aggregate `77/77` verifier contracts also falsifies this continuation.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -701,10 +768,19 @@ The Wick--Doob/resolvent theorem closes the covariance and endpoint-curvature
 side channels and deterministic Hilbert--Schmidt resolver trace, but it does
 not lower-bound the adapted centered-resolvent chaos.  Its scalar adapted
 coefficient and Malliavin examples refute only the named proof shortcuts.  It
-does not prove the non-`pp` balanced linear-frame model attribution or the
+does not itself prove the linear-frame attribution corrected in R-071 or the
 coupled rational-frame/cross-square lemma, extend to arbitrary finite-energy
 drifts, close one-use or Nelson, or prove any measure/removal theorem.  A13
 remains T4.
+
+The one-form Sobolev theorem corrects the false R-070 raw regularity target and
+closes the complete symmetric--Cartan linear frame only at a fixed positive
+floor, using the already admitted R-050 enhancement.  Its terminal-frame
+kernel fixture retires pointwise and derivative-energy-free Schur closure; it
+does not refute or prove the integrated strict-past Cameron--Martin/frequency
+estimate.  Finite-energy extension, controlled-shell one-use, Nelson,
+interacting-measure construction, floor/regulator removal, infinite volume,
+phase transition, BCC selection, and T5--T7 remain open.  A13 stays T4.
 
 ## History
 
@@ -775,3 +851,11 @@ remains T4.
   attribution remains open.  The subsequent coupled rational-frame/
   cross-square lemma and finite-energy extension also remain open; tier stays
   T4.
+- 2026-07-24: The strict low--high audit falsified the R-070
+  `H^(-1-1/10)` raw linear attribution.  The R-050 enhanced Gaussian instead
+  yields every smooth finite matrix one-form in
+  `H^(-1/2-delta)`; generalized R-068 and Cartan interpolations pay the full
+  symmetric--Cartan linear frame.  An exact common-terminal-frame kernel with
+  positive nonlinear leakage retires pointwise square closure but leaves the
+  integrated strict-past Cameron--Martin/frequency theorem open.  Finite-
+  energy extension, one-use, and Nelson remain; tier stays T4.

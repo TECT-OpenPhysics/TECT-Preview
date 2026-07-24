@@ -80,18 +80,23 @@ endpoint theorem.
     Schur completion pays the Hilbert--Schmidt trace. A bounded adapted scalar
     coefficient refutes automatic resolver centering and direct Stein closure
     requires undeclared Malliavin derivatives. The full weighted linear frame
-    splits exactly into symmetric and Cartan channels; the Cartan and `q11`
-    pure-`pp` pieces are paid, while the non-`pp` symmetric model attribution
-    remains open.
-12. **Current subproof.** First prove the balanced `H^{-1-kappa}` attribution
-    for the non-`pp` symmetric linear frame in R-070 (8.6)--(8.8). Then prove
-    the coupled nonlinear rational-frame/cross-square estimate from
-    (8.9)--(8.10) under
-    `A13-CLASSII-NPC-CONE-MARTINGALE-INJECTION-BALANCE`, retaining its
-    coefficient remainder and terminal square as one object. Finally extend
-    from regular controls to the declared finite-energy class, close the
-    umbrella one-use theorem, and return to the A7 Nelson and finite-volume
-    measure gates.
+    splits exactly into symmetric and Cartan channels. Its proposed
+    `H^{-1-1/10}` attribution and partial payment are corrected by R-071.
+12. **One-form Sobolev closure and nonlinear kernel leakage.** R-071 finds
+    strict low--high blocks in the pure-`pp`, non-`pp`, and Cartan symbols, so
+    the R-070 raw regularity target is false. The already admitted R-050
+    enhanced Gaussian instead reconstructs every smooth finite matrix one-form
+    in all finite `Lp(Omega;H^{-1/2-delta})`. Generalizing the R-068 one-use
+    interpolation to `1<s<2`, together with a separate `A wedge DA` estimate,
+    pays the complete symmetric--Cartan linear frame at a fixed positive
+    floor. An exact common-kernel fixture then shows that the terminal
+    current/cross/square data cannot pointwise control the nonlinear remainder:
+    an invisible direction carries a strictly positive affine leakage. This is
+    a local route no-go, not a production counterexample. The current subproof
+    is therefore the integrated strict-past Cameron--Martin/frequency estimate
+    for that leakage. After it, extend from regular controls to the declared
+    finite-energy class, close controlled-shell one-use, and return to Nelson
+    and the finite-volume measure gates.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR](#ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur) | A13 raw linear-model attribution and pointwise nonlinear terminal-square closure | strict low--high blocks falsify the `H^{-1-1/10}` raw attribution, while a common terminal-frame kernel carries nonzero nonlinear leakage invisible to the terminal square |
+| [AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP](#audit-2026-07-24-a13-r071-successor-state-and-import-bootstrap) | R-071 standalone and predecessor verification boundary | the first wrapper re-ran R-070 against successor-mutated live status, while both child scripts relied on an undeclared external `PYTHONPATH` |
 | [AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP](#audit-2026-07-24-a13-r070-dependency-preflight-gap) | R-070 integrated verifier runtime dependency closure | the initial verifier checked the imported R-069 helper only after child execution and did not preflight its transitive NPC/translation/UV dependency closure |
 | [AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION](#audit-2026-07-24-a13-r070-linear-frame-omission) | R-070 initial linear-frame reduction | the first draft omitted the production `q11` weight and generator sum in the pure-`pp` channel and replaced `Delta M` by its nonlinear FTC remainder, thereby deleting a nonzero full weighted linear term |
 | [NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE](#ng-2026-07-24-a13-doob-resolvent-closure) | A13 Doob terminalization, automatic terminal-resolver centering, and derivative-free Stein closure | terminalization is exact but equivalent to the target; an adapted terminal coefficient has strictly negative centered-resolvent expectation, while Stein differentiation demands undeclared Malliavin control derivatives |
@@ -51,6 +53,63 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-24-a13-raw-linear-regularity-and-kernel-schur"></a>
+### NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR -- raw linear regularity and pointwise terminal-square closure fail
+
+**Failure mode:** Two successive shortcuts fail. First, the R-070 proposal
+placed the raw pure-`pp`, non-`pp`, and Cartan linear frames in
+`H^{-1-1/10}`. Strict low--high interactions survive in every channel and
+violate that order. Second, the terminal current/cross/square data do not see
+every direction of the nonlinear translated remainder, so no pointwise bound
+depending only on those terminal data can close the residual.
+
+**Evidence:** On a low--high dyadic block, the non-`pp` axis symbol is
+`4L[q12+(q12+q22)epsilon/(L^2+epsilon)]`, and the corresponding Sobolev
+variance grows like `Lambda^(1-2 kappa)` at the proposed order. The pure-`pp`
+and Cartan symbols have the same strict low--high obstruction. For
+`z=(-1,-1,0,0,-1,0)`, `a=(2,0,0,1,1,0)`, and
+`n=(-1,0,0,1,-1,0)`, direct exact algebra gives
+`M_A(z+a)^T n=0` for all three production frames, while along `b=t n` the
+nonlinear remainder has positive slope
+`27(6 epsilon^2+22 epsilon+27)/(400(epsilon+3)^3)`. The R-071 primary,
+independent, and integrated runs check these identities and their independent
+reconstruction; its proof note records the Fourier and kernel derivations.
+
+**Consequence:** The false raw attribution and every pointwise or derivative-
+energy-free terminal-square closure are retired. They do not refute the A13
+objective. R-071 repairs and closes the complete fixed-floor linear frame via
+the R-050 enhanced matrix one-form at `H^{-1/2-delta}` and generalized R-068/
+Cartan payments. The honest successor is an integrated strict-past Cameron--
+Martin/frequency estimate for the kernel leakage, followed by finite-energy
+extension, controlled-shell one-use, and Nelson. Tier stays T4.
+
+<a id="audit-2026-07-24-a13-r071-successor-state-and-import-bootstrap"></a>
+### AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP -- verification depended on mutable successor state and an undeclared import path
+
+**Failure mode:** The first R-071 integrated wrapper executed the complete
+R-070 verifier. That predecessor verifier correctly binds the claim card's
+then-current open-gate wording, so it failed after R-071 legitimately replaced
+the live status with its successor boundary. Independently, the R-071 primary
+and non-importing child used package imports before adding the repository root
+to `sys.path`; direct documented execution therefore failed with
+`ModuleNotFoundError` unless an external `PYTHONPATH` happened to be present.
+
+**Evidence:** After the R-071 claim/status update, the predecessor execution
+reported the new `rational-frame/cross-square` status as a mismatch. Once that
+state-coupled call was removed, both children exited before assertions with
+`No module named 'codes'`. Direct execution after the repair yields primary
+`21/21`, independent `21/21`, and integrated `35/35`, with aggregate `77/77`.
+The integrated wrapper now checks the manifest-bound immutable R-070 result
+ID, manifest hash, PASS bit, all 47 assertion statuses, and the 85 aggregate
+contract without asking an old verifier to reinterpret successor state.
+
+**Consequence:** This is a fail-closed reproducibility repair, not a change to
+the R-071 theorem or a retraction of R-070. Both child scripts now bootstrap
+the repository root explicitly, so the advertised standalone commands work in
+the external venv without ambient shell configuration. Future successor
+verifiers must bind predecessor artefacts and contracts, not re-run mutable
+claim-state assertions from an earlier result.
 
 <a id="audit-2026-07-24-a13-r070-dependency-preflight-gap"></a>
 ### AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP -- imported runtime closure was checked too late
@@ -103,11 +162,12 @@ phase-orthogonal test from passing.
 closed, and hence that only one shifted nonlinear residual remained, is
 withdrawn.  The corrected exact identity is
 `Delta V^ren-S_0=L_sym+L_Cartan+R_shift`.  Existing fifth-moment Cartan and
-R-068 estimates pay `L_Cartan` and the `q11` pure-`pp` piece.  The honest
-successor has two stages: prove the balanced `H^{-1-kappa}` model attribution
-for the non-`pp` part of `L_sym`, then prove the coupled nonlinear
-rational-frame/cross-square bound for `R_shift`.  No tier was promoted by the
-superseded draft.
+R-068 estimates motivated the attempted partial payment, but the subsequent
+R-071 low--high audit rejects its raw Sobolev order. R-071 repairs and closes
+the full linear frame through the R-050 enhanced matrix one-form at the honest
+weaker order. The remaining successor is the integrated coupled nonlinear
+rational-frame/cross-square bound for `R_shift`. No tier was promoted by the
+superseded draft or its repair.
 
 <a id="ng-2026-07-24-a13-doob-resolvent-closure"></a>
 ### NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE -- Doob terminalization and terminal-resolvent centering do not close A13

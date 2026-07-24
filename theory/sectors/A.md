@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR | raw linear regularity and pointwise terminal-square closure  | Two successive shortcuts fail. First, the R-070 proposal |
+| AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP | verification depended on mutable successor state and an unde | The first R-071 integrated wrapper executed the complete |
 | AUDIT-2026-07-24-A13-R070-DEPENDENCY-PREFLIGHT-GAP | imported runtime closure was checked too late | The first integrated R-070 verifier pinned its own sources |
 | AUDIT-2026-07-24-A13-R070-LINEAR-FRAME-OMISSION | the first R-070 draft deleted a weighted linear channel | The initial Section 8 reduction made two load-bearing |
 | NG-2026-07-24-A13-DOOB-RESOLVENT-CLOSURE | Doob terminalization and terminal-resolvent centering do not | Three plausible shortcuts fail.  First, summing the exact |

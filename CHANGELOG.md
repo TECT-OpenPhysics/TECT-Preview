@@ -5,6 +5,22 @@ not pillar counts.
 
 ---
 
+## [Repair the R-071 successor-state and standalone import verification boundary] - 2026-07-24
+
+Results: R-071
+
+Negative results: AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP
+
+The first R-071 wrapper re-executed R-070 against the successor-mutated live claim status, and both child scripts relied on an ambient PYTHONPATH. The fail-closed repair now validates the immutable manifest-bound R-070 PASS artefact and its full 47/85 assertion contracts, while each R-071 child explicitly bootstraps the repository root. Direct external-venv execution returns primary 21/21, independent 21/21, integrated 35/35, aggregate 77/77. No theorem equation, scope, tier, or open gate changed.
+
+## [Close the A13 linear frame at the honest Sobolev order and expose nonlinear kernel leakage] - 2026-07-24
+
+Results: R-071
+
+Negative results: NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR
+
+A strict low--high audit falsified the R-070 H^{-1-1/10} raw attribution in the pure-pp, non-pp, and Cartan channels. Reusing the R-050 enhanced Gaussian reconstructs the complete smooth finite matrix one-form in H^{-1/2-delta}; generalized R-068 and Cartan interpolations close the full fixed-floor linear frame. An exact common terminal-frame kernel carries a positive nonlinear leakage invisible to pointwise current/cross/square data, so pointwise Schur closure is retired. The integrated strict-past Cameron--Martin/frequency estimate, finite-energy extension, controlled-shell one-use, and Nelson synthesis remain open. Primary 21/21, independent 21/21, integrated 35/35, aggregate 77/77; the seven-page PDF passed form, zero-overfull, and all-page visual QA.
+
 ## [Repair R-070 transitive dependency preflight] - 2026-07-24
 
 The final verifier audit found an execute-before-detect window: the R-069 imported helper was checked only after R-070 child execution, and its transitive NPC/translation/UV inputs were not fully preflighted. The integrated verifier now traverses the pinned R-069 and NPC manifests, validates the helper sources and every runtime authority manifest, binds the prior R-069 output to its manifest hash, and fails before child execution on any mismatch. The mathematical result and 47/47 integrated, 85/85 aggregate success contracts are unchanged.

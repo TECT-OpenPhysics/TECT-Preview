@@ -1,0 +1,81 @@
+{
+  "schema": "tect/a13-one-form-sobolev-linear-closure/1.0",
+  "result_id": "A13-CLASSII-ONE-FORM-SOBOLEV-LINEAR-CLOSURE-AND-KERNEL-LEAKAGE",
+  "result_ledger_id": "R-071",
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "date": "2026-07-24",
+  "tier": "T4",
+  "authority": {
+    "governance": {
+      "path": "GOVERNANCE.md",
+      "sha256": "ad8b22e1437d2b4a2e48d29753c7ac5f913c374f2d11236902cd1893f1e1e7f4"
+    },
+    "a6_canonical_current": {
+      "path": "claims/A6-CLASSII-K-COMPOSITE-DEFINITION/notes/classii-k-composite-and-renormalisation-split-260720-v1.0.tex.txt",
+      "sha256": "38f3ea8461852e5b3853de2959ded2b3e1bbc2237189528421e85f8e00bdb3df"
+    },
+    "r068_grouped_harvest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-tip-safe-grouped-harvest-carleson-reduction-260723-v1.0.tex.txt",
+      "sha256": "6f2b1fc05cd54371a87a474a5ac881852a86386e39a724ea5f8f4e5fc9ae7994"
+    },
+    "r070_manifest": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/classii_wick_doob_terminal_resolvent_reduction_manifest.json",
+      "sha256": "f9976cbdc01e27972b5e0b777569a36c7b841f492cd2f810f4d97af16d36a072"
+    }
+  },
+  "sources": {
+    "primary": {
+      "path": "codes/foundations/a13_classii_one_form_sobolev_linear_closure.py",
+      "sha256": "a3b6c2207a01aada04506bf44f80c0e24bbd3af6cd79aa31a80c2ca57f404b9d",
+      "version": "1.0.1"
+    },
+    "independent": {
+      "path": "codes/foundations/a13_classii_one_form_sobolev_linear_closure_independent.py",
+      "sha256": "9eaac0f32c02172790d3c8d354aac6ef1788da5ee7024d689bda924af613c9a6",
+      "version": "1.0.1"
+    },
+    "verifier": {
+      "path": "codes/foundations/a13_classii_one_form_sobolev_linear_closure_verify.py",
+      "sha256": "d05ff4db271f5cea8456d55044ec48e37e649f40b8f6b51d0386cb93311768ab",
+      "version": "1.0.1"
+    },
+    "proof_note": {
+      "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-one-form-sobolev-linear-closure-and-kernel-leakage-260724-v1.0.tex.txt",
+      "sha256": "7360ac7cbd0708ac5b42faf545e37060db82391392528ae898d79fe86b7bc250",
+      "version": "1.0"
+    }
+  },
+  "proof_pdf": {
+    "path": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-one-form-sobolev-linear-closure-and-kernel-leakage-260724-v1.0.pdf",
+    "sha256": "df2d90d3aad84b9cf2d9b767d1777ef67a74927d4711840f9a50ea068b51c1c3",
+    "pages": 7,
+    "size_bytes": 93046,
+    "form_check": "PASS",
+    "overfull_hboxes": 0,
+    "visual_qa": "PASS: all 7 rendered pages inspected after the final rebuild; equations, boxed estimates, headings, footer, margins, and page breaks are legible with no clipping, overlap, black boxes, or literal control-sequence debris"
+  },
+  "theorem": {
+    "raw_regularity_no_go": "The literal full symmetric current has a nonzero strict low-high principal coefficient. After divergence its variance is asymptotically constant on a cone, so its truncated H^{-1-kappa} second moment grows as Lambda^{1-2kappa}; the kappa=1/10 attribution in R-070 is false for pp and non-pp pieces and covariance centering cannot remove it.",
+    "polynomial_core": "The nominal non-pp block contains (2q12+q22) P Kp, and the complete polynomial core is (q11+2q12+q22) P Kp. Both coefficients are nonzero at the production point.",
+    "one_form_lift": "For every smooth finite matrix one-form with polynomial-growth derivatives at fixed floor, common real-even spectral approximations converge canonically in every finite Lp(Omega;H^{-1/2-delta}). The reconstruction uses exactly the R-050 Gaussian second level and has no first-derivative current counterterm.",
+    "covariance_normal_divergence": "The exact split div[f(U) grad U]=Df(U):(grad U tensor grad U-Gamma)+f(U) diamond Delta U retains two opposite covariance terms. A balanced derivative-square jet may not be cited while deleting the Wick second-derivative current.",
+    "symmetric_payment": "R-068 extends to every 1<s<2 with eta exponent 3s/[2(2-s)] and model moment 3/(2-s). At s=8/5 the full symmetric frame is paid once with eta^{-6}, zeta^{-1/2}, and moment 15/2.",
+    "cartan_payment": "The Cartan coefficient is also a matrix one-form current at H^{-1/2-delta}. At delta=1/10 its corrected payment uses eta^{-39/4}, zeta^{-1/2}, and moment 45/4. All moments are finite.",
+    "linear_subgate": "The complete Q_II-weighted symmetric and Cartan linear frame in R-070 is closed at fixed floor by the one-form Sobolev lift and generalized one-use interpolations.",
+    "kernel_leakage": "An exact six-real production fixture has a derivative direction in the common terminal-frame kernel while the nonlinear coefficient-remainder slope is 27(6e^2+22e+27)/[400(e+3)^3]>0. The terminal square is blind to this direction, and R_shift is affine and unbounded below along it.",
+    "refined_successor": "The remaining finite-cutoff theorem is an integrated strict-past range/kernel grouped estimate. It must pay the kernel leakage using Cameron-Martin H2 cost and causal frequency structure, retain the range-visible part in the positive square, use a tip-safe whole secant, and spend no Malliavin derivatives or per-shell random constants."
+  },
+  "verification": {
+    "primary_assertions": 21,
+    "independent_assertions": 21,
+    "integrated_assertions": 35,
+    "aggregate_assertions": 77,
+    "primary_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-primary-one-form-sobolev-linear-closure/result.json",
+    "independent_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-independent-one-form-sobolev-linear-closure/result.json",
+    "integrated_output": "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/runs/2026-07-24-integrated-one-form-sobolev-linear-closure/result.json"
+  },
+  "negative_result": "NG-2026-07-24-A13-RAW-LINEAR-REGULARITY-AND-KERNEL-SCHUR",
+  "verification_audit_record": "AUDIT-2026-07-24-A13-R071-SUCCESSOR-STATE-AND-IMPORT-BOOTSTRAP",
+  "successor": "Prove the integrated strict-past terminal-frame kernel-leakage estimate with one Cameron-Martin allocation, one terminal sextic allocation, and one integrable random constant; then extend regular controls by localization and lower semicontinuity before assembling controlled-shell one-use and Nelson.",
+  "honesty_boundary": "This scoped T4 continuation proves the fixed-floor matrix one-form Sobolev lift, corrects and closes the complete R-070 symmetric and Cartan linear frame, and exactly falsifies pointwise terminal-square absorption of the nonlinear coefficient remainder. It does not prove the integrated strict-past kernel-leakage bound, extend to every finite-energy drift, close controlled-shell one-use or the q=10/9 Nelson theorem, construct an interacting measure, remove the floor or regulator, take infinite volume, or justify T5, T6, or T7."
+}

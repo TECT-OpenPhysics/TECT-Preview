@@ -1,0 +1,190 @@
+{
+  "assertion_count": 21,
+  "assertions": [
+    {
+      "actual": [
+        0.0012590115009260615,
+        0.005584738499072227
+      ],
+      "expected": "> 0",
+      "name": "production_q_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.006093749999998476,
+      "expected": "nonzero",
+      "name": "non_pp_polynomial_core_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.010593749999997352,
+      "expected": "q11+2q12+q22",
+      "name": "full_polynomial_core_is_sum",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.4896093821205104e-15,
+      "expected": 2e-10,
+      "name": "full_current_exact_split",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.6482684859953943e-15,
+      "expected": 2e-10,
+      "name": "non_pp_current_exact_split",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.007500000000015002,
+      "expected": "nonzero",
+      "name": "non_pp_low_high_symbol_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0255000000000105,
+      "expected": "nonzero",
+      "name": "full_low_high_symbol_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.033749999999957814,
+      "expected": "nonzero",
+      "name": "cartan_low_high_symbol_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/5",
+      "expected": "> 0",
+      "name": "raw_h_minus_one_growth_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/5",
+      "expected": "8/5",
+      "name": "corrected_s_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/5",
+      "expected": "4/5",
+      "name": "corrected_theta_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "name": "symmetric_eta_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/2",
+      "expected": "15/2",
+      "name": "symmetric_moment_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "39/4",
+      "expected": "39/4",
+      "name": "cartan_eta_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "45/4",
+      "expected": "45/4",
+      "name": "cartan_moment_oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/5",
+      "expected": "current order + 1",
+      "name": "current_to_divergence_order",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 2e-10,
+      "name": "terminal_frame_kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.06749999999997061,
+      "expected": "> 0",
+      "name": "kernel_leakage_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.6645352591003757e-15,
+      "expected": 2e-10,
+      "name": "kernel_residual_affine",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.718447854656915e-16,
+      "expected": 2e-10,
+      "name": "terminal_square_blind_to_kernel",
+      "status": "PASS"
+    },
+    {
+      "actual": -6.69281249999707,
+      "expected": "< 0",
+      "name": "kernel_route_unbounded_sample",
+      "status": "PASS"
+    }
+  ],
+  "claim": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "date": "2026-07-24",
+  "derived": {
+    "algebra": {
+      "max_full_split_error": 1.4896093821205104e-15,
+      "max_non_pp_split_error": 1.6482684859953943e-15
+    },
+    "exponents": {
+      "cartan_eta": "39/4",
+      "cartan_moment": "45/4",
+      "current_order": "3/5",
+      "divergence_order": "8/5",
+      "raw_false_growth": "4/5",
+      "s": "8/5",
+      "symmetric_eta": "6",
+      "symmetric_moment": "15/2",
+      "theta": "4/5"
+    },
+    "full_polynomial_core": 0.010593749999997352,
+    "kernel_leakage": {
+      "affine_residual": 2.6645352591003757e-15,
+      "finite_difference_slope": 0.06749999999997063,
+      "kernel_current_norm": 0.0,
+      "leakage_slope": 0.06749999999997061,
+      "shifted_piece_minus_100": -6.69281249999707,
+      "shifted_piece_plus_100": 6.807187499997054,
+      "shifted_piece_zero": 0.057187499999990704,
+      "square_spread": 4.718447854656915e-16
+    },
+    "low_high": {
+      "cartan_entry_12": 0.033749999999957814,
+      "full_entry_12": 0.0255000000000105,
+      "non_pp_entry_12": 0.007500000000015002
+    },
+    "non_pp_polynomial_core": 0.006093749999998476
+  },
+  "generated_at_utc": "2026-07-24T11:19:03.055045+00:00",
+  "honesty_boundary": "The executable checks exact finite-dimensional algebra, derived exponents, and falsifier fixtures.  The continuum one-form lift is the analytic theorem in the paired note.  The integrated nonlinear kernel-leakage estimate, finite-energy extension, one-use, and Nelson theorem remain open.",
+  "inputs": {
+    "delta": "1/10",
+    "q_matrix": [
+      [
+        0.004499999999998875,
+        0.0018749999999995311
+      ],
+      [
+        0.0018749999999995311,
+        0.002343749999999414
+      ]
+    ],
+    "rho_regularizer": 1e-12
+  },
+  "pass": true,
+  "result_id": "A13-CLASSII-ONE-FORM-SOBOLEV-LINEAR-CLOSURE-AND-KERNEL-LEAKAGE",
+  "schema": "tect/a13-one-form-sobolev-linear-primary/1.0",
+  "script_version": "1.0.1"
+}

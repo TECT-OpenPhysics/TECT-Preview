@@ -1,0 +1,503 @@
+% Title: One-form Sobolev linear-frame completion and terminal-frame kernel leakage
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Result: A13-CLASSII-ONE-FORM-SOBOLEV-LINEAR-CLOSURE-AND-KERNEL-LEAKAGE
+% Version: v1.0 -- first issued 2026-07-24; this version issued 2026-07-24
+% Status: T4 analytic closure of the R-070 linear subgate plus an exact no-go;
+% no tier promotion
+%
+% Revision history (cumulative):
+% v1.0 (2026-07-24): R-071 low--high audit; fixed-floor matrix one-form
+% Sobolev lift; generalized centered-form and Cartan payments; full linear
+% closure; exact terminal-frame kernel-leakage fixture; refined successor.
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cH}{\mathcal H}
+
+\section{Purpose and scope}
+
+R-070 reduced the remaining regular finite-cutoff problem to a weighted
+linear production frame and a coupled nonlinear shifted residual.  It proposed
+to put the raw non-$pp$ symmetric coefficient in $H^{-1-\kappa}$ at
+$\kappa=1/10$, pay it by R-068, and then use the terminal current square on
+the nonlinear remainder.
+
+Both proposed steps require correction.  The raw symmetric coefficient has a
+nonzero strict low--high principal term and is only in
+$H^{-3/2-\delta}$ after taking its spatial divergence.  The same issue affects
+the R-070 regularity attribution of the pure-$pp$ and Cartan currents.
+Covariance centering does not remove this nonzero-frequency term.  This note
+proves the correct fixed-floor matrix one-form lift in
+$H^{-1/2-\delta}$, extends the R-068 payment to every $1<s<2$, and thereby
+closes the complete symmetric and Cartan linear frame with larger but finite
+probability moments.
+
+The nonlinear terminal square also has a genuine frame kernel.  An exact
+production fixture makes the remaining nonlinear coefficient term affine and
+unbounded along a derivative-displacement direction invisible to that square.
+Thus the next theorem must be an integrated Cameron--Martin/strict-past
+estimate for the kernel leakage, not a pointwise Schur absorption.
+
+All statements use the hash-pinned A1 covariance on the fixed torus, the A7
+covariance-normal convention, fixed $e>0$, and common scalar real-even
+spectral approximations.  The linear-frame completion is a continuum model
+statement.
+The kernel fixture is finite-dimensional and exact for every $e>0$.  No
+finite-energy one-use or Nelson conclusion is asserted.
+
+\section{Exact weighted one-form and its polynomial core}
+
+Use the R-070 notation
+\[
+ \rho=|U|^2,\quad m_r=U^TS_rU,\quad q_r={m_r\over\rho+e},
+ \quad p_r=2S_rU,\quad v_r=2(S_r-q_rI)U,
+\]
+\[
+ P_{r,i}=p_r\cdot\partial_iU,\qquad
+ V_{r,i}=v_r\cdot\partial_iU,
+\]
+and
+\[
+ K_{r,p}=2S_r,\qquad
+ K_{r,v}=2(S_r-q_rI)-{v_rU^T+Uv_r^T\over\rho+e}.
+\]
+The complete symmetric current preceding the R-070 divergence is
+\[
+ \begin{split}
+ \mathcal J_{r,i}^{\rm lin}={}&q_{11}P_{r,i}K_{r,p}
+ +q_{12}(P_{r,i}K_{r,v}+V_{r,i}K_{r,p})\\
+ &+q_{22}V_{r,i}K_{r,v},
+ \end{split}                                                   \tag{2.1}
+\]
+and
+\[
+ \mathbb Q_r^{\rm lin}=-{1\over2}\sum_i\partial_i
+ \mathcal J_{r,i}^{\rm lin}.                                 \tag{2.2}
+\]
+
+Put $R_i=\partial_i\rho$ and $H_r=K_{r,v}-K_{r,p}$.  Directly,
+\[
+ V_{r,i}=P_{r,i}-q_rR_i,                                     \tag{2.3}
+\]
+\[
+ \begin{split}
+ P_{r,i}K_{r,v}&=P_{r,i}K_{r,p}+P_{r,i}H_r,\\
+ V_{r,i}K_{r,p}&=P_{r,i}K_{r,p}-q_rR_iK_{r,p},\\
+ V_{r,i}K_{r,v}&=P_{r,i}K_{r,p}+P_{r,i}H_r
+                 -q_rR_iK_{r,p}-q_rR_iH_r.
+ \end{split}                                                  \tag{2.4}
+\]
+Consequently the full polynomial core of (2.1), not merely its visibly
+labelled $pp$ summand, is
+\[
+ (q_{11}+2q_{12}+q_{22})P_{r,i}K_{r,p}.                       \tag{2.5}
+\]
+At the production point
+\[
+ 2q_{12}+q_{22}=0.00609374999999848\ne0,
+ \qquad q_{11}+2q_{12}+q_{22}=0.0105937499999974.             \tag{2.6}
+\]
+Thus the nominal non-$pp$ block contains a nonzero copy of the same
+polynomial current.  Equation (2.5) is useful bookkeeping, but extracting it
+does not improve the generic regularity of the remaining rational one-form.
+
+Entrywise there is a smooth matrix one-form $\Theta_r$ such that
+\[
+ (\mathcal J_{r,i}^{\rm lin})_{\mu\nu}
+ =\Theta_{r,\mu\nu,a}(U)\,\partial_iU^a.                    \tag{2.7}
+\]
+The positive floor makes all derivatives of $\Theta_r$ smooth with at most
+polynomial growth.  This is the correct model class.
+
+\section{The raw one-tenth attribution is false}
+
+Take a nonzero constant low-frequency background $x$ and a high-frequency
+Gaussian perturbation $z_n$.  Near the origin at fixed floor,
+\[
+ q_r(x)=O(|x|^2/e),\quad v_r(x)=p_r(x)+O(|x|^3/e),\quad
+ K_{r,v}(x)=K_{r,p}+O(|x|^2/e).
+\]
+Hence the nominal non-$pp$ one-form coefficient has the principal part
+\[
+ \Theta_r^{\rm np}(x)
+ =(2q_{12}+q_{22})p_r(x)K_{r,p}+O(|x|^3/e),                  \tag{3.1}
+\]
+which is nonzero for a suitable $r,x$ by (2.6).  The strict low--high
+contribution to (2.2) then contains
+\[
+ -{1\over2}\Theta_r^{\rm np}(x)\Delta z_n.                  \tag{3.2}
+\]
+Since the production covariance is comparable to $\langle n\rangle^{-4}$,
+the Fourier variance of (3.2) is bounded below and above by nonzero constants
+on a fixed cone.  Therefore
+\[
+ \E\|\mathbb Q_{r,\Lambda}^{\rm np}\|_{H^{-1-\kappa}}^2
+ \gtrsim\sum_{|n|\le\Lambda}\langle n\rangle^{-2-2\kappa}
+ \asymp\Lambda^{1-2\kappa}.                                \tag{3.3}
+\]
+The raw attribution fails for $\kappa\le1/2$; at $\kappa=1/10$ the growth is
+$\Lambda^{4/5}$.  Subtracting a same-point covariance changes only the
+zero-frequency contraction channel and cannot cancel (3.2).
+
+The pure polynomial term has the same low--high principal symbol, so the
+R-070 statement that the raw pure-$pp$ Laplacian is an
+$H^{-1-1/10}$ centered derivative-square model is also withdrawn.  Likewise,
+the Gaussian coefficient in the Cartan term is a first-derivative one-form
+current with generic regularity $H^{-1/2-\delta}$, not $H^{-1/10}$.
+
+R-063 does not contradict this conclusion.  Its improved jets explicitly
+remove the low-value/high-root region and retain the omitted lower chaoses in
+the exact grouped reconstruction.  They cannot be relabelled as the literal
+full product in (2.7).
+
+\section{Fixed-floor matrix one-form Sobolev lift}
+
+\subsection{Statement}
+
+Let $U$ be a centered stationary finite-dimensional Gaussian field on
+$\mathbb T_L^3$ with even matrix covariance
+\[
+ c\langle k\rangle^{-4}I\le\widehat C(k)
+ \le C\langle k\rangle^{-4}I.                              \tag{4.1}
+\]
+Let $U_\Lambda=R_\Lambda U$, where $R_\Lambda$ is any admitted common
+real-even scalar approximation from R-050.  Let
+$\Theta:\mathbb R^d\to\mathbb R^{m\times d}$ be smooth, with every
+derivative of polynomial growth.  Define smooth currents
+\[
+ \mathcal J_{\Theta,i}^{(\Lambda)}
+ =\Theta(U_\Lambda)\partial_iU_\Lambda.                    \tag{4.2}
+\]
+
+\noindent\textbf{Matrix one-form Sobolev lift.}
+For every finite $p$ and every $\delta>0$, (4.2) converges to one regulator-
+independent canonical geometric current in
+\[
+ L^p(\Omega;H^{-1/2-\delta}).                              \tag{4.3}
+\]
+The current is a continuous reconstruction from the R-050 enhanced field
+$(U,\mathbb X)$, where
+\[
+ \mathbb X_i^{ab}=U^a\circ\partial_iU^b.                   \tag{4.4}
+\]
+No first-derivative current counterterm occurs in the admitted regulator
+class.
+
+\subsection{Proof}
+
+Fix $\alpha\in(1/3,1/2)$.  R-050 gives, in every finite probability moment,
+\[
+ U\in\mathcal C^\alpha\cap H^{1/2-\epsilon},\qquad
+ \partial_iU\in H^{-1/2-\epsilon},                        \tag{4.5}
+\]
+and the Fourier--Wick estimate
+\[
+ \E|\widehat{\mathbb X_i^{ab}}(n)|^2
+ \lesssim\langle n\rangle^{-3}.                          \tag{4.6}
+\]
+Thus $\mathbb X_i^{ab}\in H^{-\epsilon}$ in every finite probability
+moment, and the coupled-cutoff tails converge there.  Gaussian
+hypercontractivity upgrades the second-moment estimate to every finite $p$.
+
+Bony decomposition first puts the strict low--high term in the target space:
+\[
+ T_{\Theta(U)}\partial_iU\in H^{-1/2-\epsilon},            \tag{4.7}
+\]
+because $\Theta(U)$ is bounded pathwise and its bound has every finite
+moment.  For the only nonclassical resonant term, first-order
+paralinearisation gives
+\[
+ \Theta_a(U)=T_{\partial_b\Theta_a(U)}U^b+R_{\Theta,a},
+ \qquad R_{\Theta,a}\in\mathcal C^{2\alpha}.             \tag{4.8}
+\]
+The leading resonance is reconstructed as
+\[
+ \partial_b\Theta_a(U)\,\mathbb X_i^{ba}                 \tag{4.9}
+\]
+plus the standard paraproduct commutator.  Multiplication in (4.9) is
+classical after choosing $\epsilon<\alpha$.  The remainder resonance has
+regularity $3\alpha-1>0$.  The high--low paraproduct is no rougher than
+(4.7).  The same $L^2$ Littlewood--Paley estimates apply to matrix entries;
+only finitely many entries are present.
+
+Equations (4.7)--(4.9) define a locally Lipschitz map from
+\[
+ (U,\mathbb X)\longmapsto\mathcal J_\Theta
+ \quad\hbox{in }H^{-1/2-\delta}.                          \tag{4.10}
+\]
+Polynomial-growth coefficient bounds are integrable because the Gaussian
+$\mathcal C^\alpha$ norm has every finite moment.  Convergence and scheme
+independence of the R-050 enhancement therefore imply (4.3).  Finally,
+Gaussian integration by parts gives
+\[
+ \E[\Theta_a(U_\Lambda)\partial_iU_\Lambda^a]
+ =\E[\partial_b\Theta_a(U_\Lambda)]
+   \operatorname{Cov}(U_\Lambda^b,\partial_iU_\Lambda^a)=0,\tag{4.11}
+\]
+because the common covariance is even.  This proves the no-current-
+counterterm assertion.
+
+The corresponding covariance-normal divergence identity is worth recording.
+At every finite cutoff,
+\[
+ \begin{split}
+ \partial_i[\Theta_a(U)\partial_iU^a]
+ ={}&\partial_b\Theta_a(U)
+   (\partial_iU^b\partial_iU^a-\Gamma_i^{ba})\\
+ &+\Theta_a(U)\diamond\partial_i^2U^a,
+ \end{split}                                               \tag{4.12}
+\]
+where
+\[
+ \Theta_a(U)\diamond\partial_i^2U^a
+ :=\Theta_a(U)\partial_i^2U^a
+   +\Gamma_i^{ba}\partial_b\Theta_a(U).                  \tag{4.13}
+\]
+The two covariance terms in (4.12) cancel exactly.  Keeping only the first
+line or citing a balanced derivative-square jet while deleting (4.13) would
+break the finite-cutoff identity.
+
+\section{Complete linear payment}
+
+Apply the theorem entrywise to (2.7).  For every finite $p$ and $\delta>0$,
+\[
+ \mathcal J_r^{\rm lin}\in L^p(\Omega;H^{-1/2-\delta}),
+ \qquad
+ \mathbb Q_r^{\rm lin}\in L^p(\Omega;H^{-3/2-\delta}).    \tag{5.1}
+\]
+
+The R-068 deterministic payment extends without change of architecture.
+For $1<s<2$, its low and high endpoints give
+\[
+ \|\Pi(A)\|_{H^s}
+ \le C X^{s/2}Y^{(2-s)/6},                               \tag{5.2}
+\]
+where
+\[
+ X=\sum_j\|A_j\|_{H^2}^2,\qquad
+ Y=\left\|\left(\sum_j|A_j|^2\right)^{1/2}\right\|_6^6.
+\]
+If $M_s=\|Q\|_{H^{-s}}$, three-factor weighted Young gives
+\[
+ \boxed{
+ |\langle Q,\Pi(A)\rangle|
+ \le\eta X+\zeta Y
+ +C_s\eta^{-{3s\over2(2-s)}}\zeta^{-1/2}
+ M_s^{3/(2-s)}.}                                         \tag{5.3}
+\]
+Set $s=3/2+\delta$, $0<\delta<1/2$.  Then (5.1)--(5.3) pay the
+entire symmetric linear frame, including the polynomial and rational,
+$pp$ and non-$pp$ pieces, in one global allocation.  At $\delta=1/10$,
+\[
+ |\mathcal L_J^{\rm sym}|
+ \le\eta X+\zeta Y+C\eta^{-6}\zeta^{-1/2}
+ \|\mathcal J^{\rm lin}\|_{H^{-3/5}}^{15/2}.             \tag{5.4}
+\]
+Here the displayed norm is that of the undifferentiated current; its
+divergence is tested in $H^{-8/5}$.  Every required moment is supplied by
+(4.3).
+
+The R-070 Cartan coefficient is also a finite smooth matrix one-form in $U$.
+The same theorem gives a model $\mathbb J^{\rm Car}$ in
+$H^{-1/2-\delta}$.  The deterministic interpolation used in R-070, now at
+$\kappa=1/2+\delta$, yields
+\[
+ \|A\wedge DA\|_{H^{1/2+\delta}}
+ \le C X^{(5+2\delta)/6}Y^{(1-2\delta)/18}.              \tag{5.5}
+\]
+Therefore
+\[
+ \boxed{
+ |\langle\mathbb J^{\rm Car},A\wedge DA\rangle|
+ \le\eta X+\zeta Y
+ +C\eta^{-{3(5+2\delta)\over2(1-2\delta)}}\zeta^{-1/2}
+ \|\mathbb J^{\rm Car}\|_{H^{-1/2-\delta}}^{9/(1-2\delta)}.}
+                                                                    \tag{5.6}
+\]
+At $\delta=1/10$, the negative $\eta$ exponent is $39/4$ and the model
+moment is $45/4$.  These are finite.  Equations (5.4) and (5.6) replace the
+false $\kappa=1/10$ attributions in R-070 and close its full weighted linear
+subgate.
+
+\section{The nonlinear terminal square has kernel leakage}
+
+For one generator and direction suppress indices and put
+\[
+ z=U,\quad a=A,\quad y=G_i,\quad b=C_i,
+\]
+\[
+ M_0=M(z),\quad M_1=M(z+a),\quad
+ E=M_1-M_0-DM(z)[a],\quad w=M_0^Ty,                       \tag{6.1}
+\]
+\[
+ \delta=M_1^T(y+b)-M_0^Ty.                               \tag{6.2}
+\]
+Combining the $G\otimes G$ part of the coefficient remainder with
+$\mathcal N_J$, the cross, and the terminal square gives the exact local
+identity
+\[
+ \sum_r\left\{\langle w_r,Q_{\rm II}E_r^T(y+b)\rangle
+       +{1\over2}|\delta_r|_{Q_{\rm II}}^2\right\}.       \tag{6.3}
+\]
+The remaining covariance part is
+\[
+ -{1\over2}[B(z+a)-B(z)-DB(z)[a]]:\Gamma_i,              \tag{6.4}
+\]
+which is independent of $b$.
+
+The following six-real production fixture is exact:
+\[
+ \begin{split}
+ z&=(-1,-1,0,0,-1,0),\\
+ x=z+a&=(1,-1,0,1,0,0),\\
+ a&=(2,0,0,1,1,0),\qquad y=(1,0,0,0,0,0),\\
+ n&=(-1,0,0,1,-1,0),\qquad b=tn.
+ \end{split}                                               \tag{6.5}
+\]
+For every $e>0$ and every $r=1,2,3$,
+\[
+ M_r(x)^Tn=0.                                               \tag{6.6}
+\]
+Indeed $n\cdot x=n\cdot S_rx=0$.  Hence the terminal current square in
+(6.3) is independent of $t$, and its $c=M_1^Tb$ cross and square pieces
+vanish.  Direct production-frame algebra gives
+\[
+ n\cdot\sum_r E_rQ_{\rm II}w_r
+ ={27(6e^2+22e+27)\over400(e+3)^3}>0.                    \tag{6.7}
+\]
+At $e=10^{-12}$ this coefficient is
+$0.06749999999997061$.  Consequently
+\[
+ \mathcal R_{\rm shift}(z,a,y,tn)=C(z,a,y,\Gamma)+t,c_e,
+ \qquad c_e>0,                                             \tag{6.8}
+\]
+and it is unbounded below as $t\to-\infty$.
+
+This is not a counterexample to an integrated estimate: a spatial field with
+large $b=DA$ also spends Cameron--Martin energy.  It does prove that the
+terminal square alone cannot absorb $\mathcal N_J$, and that no pointwise or
+derivative-energy-free version of the R-070 successor can hold.  Even adding
+back the separated linear frame does not remove the need for an energy or
+expectation mechanism; the old-frame first variation carries the compensating
+derivative displacement in the exact untranslated identity.
+
+\section{Evidence map and refined successor}
+
+The proof route is now:
+\begin{enumerate}
+\item \textbf{Closed:} R-050 supplies the common geometric second level.
+The $L^2$ Littlewood--Paley version of the same reconstruction proves the
+matrix one-form lift (4.3).
+\item \textbf{Retired:} literal raw
+$\mathbb Q_r^{\rm lin}\in H^{-1-1/10}$, including the nominally paid pure
+$pp$ attribution.  The low--high term (3.2) is nonzero.
+\item \textbf{Closed:} extend R-068 from $s=1+\kappa$ to every $1<s<2$.
+At $s=8/5$ the full symmetric frame is paid with moment $15/2$.
+\item \textbf{Corrected and closed:} the Cartan current is paid at
+$H^{-3/5}$, with moment $45/4$, rather than at $H^{-1/10}$ with moment five.
+\item \textbf{Retired:} pointwise absorption of the nonlinear coefficient
+remainder by the terminal square.  Fixture (6.5)--(6.8) exposes an exact
+kernel leakage.
+\item \textbf{Still open:} an integrated strict-past kernel-leakage estimate.
+It must use the Cameron--Martin $H^2$ cost and causal frequency structure,
+while retaining the range-visible part inside the positive square and the
+bad/tip region as a whole secant.  It may not invoke Malliavin derivatives of
+the control or count one random constant per shell.
+\end{enumerate}
+
+The smallest honest next statement is therefore a range/kernel grouped form:
+decompose the nonlinear derivative-displacement coefficient relative to the
+terminal stacked frame.  Keep its range component with
+$|M(U+A)^T(G+DA)-M(U)^TG|_{Q_{\rm II}}^2/2$.  Pay the kernel component only
+after spatial integration, with one arbitrary Cameron--Martin allocation,
+one terminal sextic allocation, and one integrable random constant.  The
+decomposition must be implemented without a singular inverse at the cone tip;
+the R-068 good/bad whole-secant architecture remains load-bearing.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{UPHELD against the old target: ``The non-$pp$ current is a
+balanced $H^{-1-1/10}$ model.''}  The coefficient (2.6) and low--high block
+(3.2) give the divergent lower bound (3.3).
+
+\item \textbf{UPHELD against the old pure-$pp$ payment: ``Covariance
+centering turns $\Delta(U^TS_rU)$ into an $H^{-1-1/10}$ model.''}  Centering
+does not remove its nonzero-frequency low--high principal symbol.  The term is
+paid at $H^{-3/2-\delta}$ instead.
+
+\item \textbf{DISMISSED: ``The weaker regularity loses one-use.''}  R-068
+already permits every $s<2$.  Equation (5.3) requires moment $15/2$ at
+$s=8/5$, and the one-form lift supplies every finite moment.
+
+\item \textbf{VALID with mitigation: ``A6 only stated one special current in
+$\mathcal C^{-1/2-}$.''}  Section 4 records the needed matrix-valued
+$H^{-1/2-}$ strengthening.  It uses exactly the same canonical second level,
+but the $L^2$ estimate is written out rather than inferred from the Holder
+statement.
+
+\item \textbf{DISMISSED: ``A new current counterterm is hidden in the
+divergence.''}  Evenness gives (4.11), and the two covariance terms in
+(4.12)--(4.13) cancel exactly.
+
+\item \textbf{UPHELD against the R-070 Cartan exponent: ``The Cartan model is
+$H^{-1/10}$ with a fifth moment.''}  Its generic low--high regularity is
+$H^{-1/2-\delta}$.  Equation (5.6) repairs the payment with finite moment
+$45/4$ at $\delta=1/10$.
+
+\item \textbf{UPHELD against pointwise Schur closure: ``The terminal square
+controls every derivative displacement.''}  The vector $n$ in (6.5) is in
+the common terminal-frame kernel, while (6.7) is strictly positive.
+
+\item \textbf{VALID with mitigation: ``The kernel fixture disproves the
+desired stochastic theorem.''}  It disproves only a pointwise or
+derivative-energy-free bound.  Integrated $H^2$ absorption and strict-past
+frequency gains remain available and form the next gate.
+
+\item \textbf{UPHELD against termwise absolute payment: ``The leakage can be
+bounded as a generic $\mathbb J\,A^2DA$ term.''}  The scaling has the critical
+allocation $X^{3/4}Y^{1/4}$ at the endpoint and leaves no exponent for an
+unbounded random norm.  The range square and causal grouping must remain.
+
+\item \textbf{UPHELD against closure: ``The full linear payment proves
+controlled-shell one-use.''}  The nonlinear integrated kernel leakage,
+finite-energy extension, umbrella one-use estimate, and Nelson theorem remain
+open.  No tier promotion follows.
+\end{enumerate}
+
+\section*{Result footer}
+
+The primary executable derives the weighted frame split and Sobolev/Young
+exponents from the production source, evaluates the low--high obstruction,
+and checks the exact kernel fixture.  The non-importing executable rebuilds
+the frames and the same diagnostics independently.  The integrated wrapper
+hash-pins the A6, R-068, R-070, source, note, and PDF authorities before child
+execution.
+
+\begin{verbatim}
+Result ID: A13-CLASSII-ONE-FORM-SOBOLEV-LINEAR-CLOSURE-AND-KERNEL-LEAKAGE
+Precise statement:       At fixed positive floor, the R-050 enhancement
+                         reconstructs the full matrix one-form in
+                         H^{-1/2-delta}; generalized symmetric and Cartan
+                         interpolation pays the complete linear frame.
+Scope:                   Smooth finite matrix one-forms; common real-even
+                         spectral approximation; regular strict-past class.
+Dependencies:            A1 production functional; R-050; R-068; R-070.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_one_form_sobolev_linear_closure_verify.py
+Expected output:         primary 21/21; independent 21/21; integrated 35/35;
+                         aggregate 77/77; exit 0.
+Falsification gate:      A low-high symbol, one-form lift, interpolation,
+                         kernel/slope, hash, PDF QA, or assertion fails.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  Pointwise square closure is retired, but integrated
+                         strict-past leakage, finite-energy, one-use, Nelson,
+                         and every removal limit remain open.
+Next required action:    Prove the integrated strict-past Cameron--Martin/
+                         frequency bound for terminal-frame kernel leakage.
+\end{verbatim}
+
+This result neither constructs an interacting measure nor removes the density
+floor, regulator, or volume cutoff.  It proves no phase transition, BCC
+selection, T5, T6, or T7 statement.
