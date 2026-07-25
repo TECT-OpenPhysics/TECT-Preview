@@ -109,7 +109,15 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   is now explicit; an adapted zero-rational-row fixture has negative zero chaos
   in a linear row. Correlated or signed Cartan CFAR, recombined complete signed
   NEAR, and an overlap-stable full-progressive extension are required before
-  the umbrella one-use/`q=10/9` Nelson bound.
+  the umbrella one-use/`q=10/9` Nelson bound. R-084,
+  `A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION`,
+  now gives the exact root-diagonal Cartan identity and conditional far-
+  projected OU-gradient representation. A cumulative-tree witness excludes
+  root orthogonality alone as a one-use proof. In parallel, all three linear
+  Pauli--Fierz NEAR rows are form-absorbed for regular mutually orthogonal
+  strict-past one-shot controls. The production Cartan OU-gradient estimate,
+  nonlinear rational row, complete signed recombination, and progression are
+  still required before one-use and Nelson.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

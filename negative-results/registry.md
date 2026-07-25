@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT](#audit-2026-07-25-a13-r084-manifest-count-contract) | R-084 pre-release integrated/aggregate assertion-count enforcement | verifier v1.0.0 checked only the 50 primary and 40 independent counts, so placeholder integrated/aggregate values could pass; v1.0.1 now enforces 131 integrated, 221 aggregate, and its own final row count |
+| [NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE](#ng-2026-07-25-a13-root-orthogonality-one-use) | R-084/A13 one-use closure from complete probability-root orthogonality or unweighted Gaussian Poincare alone | an exact cumulative finite-tree model has unit input energy but output energy `N`, and its sharp cumulative-matrix norm grows like `N^2`; production spatial paracomposition or another weighted cancellation is indispensable |
 | [NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY](#ng-2026-07-25-a13-k-smoothing-output-orthogonality) | A13 derivation of global nonlinear output-increment orthogonality from the canonical `K_k` input smoothing | two successive production scalar-ray increments have a strictly positive exact-harmonic cross product, including after exact rescaling to the pinned density floor; this refutes only the raw-output pairwise-orthogonality premise, not far-only or correlated martingale estimates |
 | [NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY](#ng-2026-07-25-a13-linear-pf-adapted-positivity) | A13 standalone positivity or deletion of the three linear Pauli--Fierz rows in adapted NEAR | a heat-lifted adapted fixture makes the rational row and two linear rows vanish while the remaining horizontal linear row has exact mean `-8(c0+c1)lambda^2<0`; the complete paid linear-plus-rational packet may still admit a lower bound |
 | [AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL](#audit-2026-07-25-a13-r081-pre-release-contract-symbol) | R-081 pre-release manifest, claim-card, symbol, and executable-evidence audit | the first package did not enforce manifest run counts, left `claim.md` at R-078, used an undefined `Mbar` in the Cartan tail theorem, and self-attested complete-packet temporalisation without executing its cross term; all four defects were repaired before commit |
@@ -84,6 +86,55 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-25-a13-r084-manifest-count-contract"></a>
+### AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT -- R-084 verifier now fails closed on all assertion counts
+
+**Failure mode:** Treat verifier v1.0.0 as enforcing the manifest-pinned
+integrated and aggregate contracts when its `manifest_run_counts` row checked
+only the primary `50` and independent `40` values. The placeholder manifest
+values `0` and `90` would therefore have passed that row.
+
+**Evidence:** A read-only pre-release surface audit counted exactly `131`
+integrated rows and aggregate `221`. Verifier v1.0.1 adds explicit package
+contract oracles for both values, checks the manifest fields, and checks
+`len(rows)+1=131` so its own final count row is included. The corrected
+manifest contains `50`, `40`, `131`, and `221`; mutation regressions and the
+full integrated run fail closed if these values drift.
+
+**Consequence:** This was caught before commit or publication and changes no
+mathematical statement. It closes a verification-contract gap of the same
+class as the earlier R-081 manifest-count audit. Future R-084 verification
+must use v1.0.1 or later and may not infer integrated-count enforcement from a
+PASS marker alone.
+
+<a id="ng-2026-07-25-a13-root-orthogonality-one-use"></a>
+### NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE -- R-084 root orthogonality alone does not spend a cumulative control once
+
+**Failure mode:** Infer the controlled Cartan one-use estimate solely from
+orthogonality of the complete probability-root martingale differences, or
+apply an unweighted Gaussian Poincare/Ornstein--Uhlenbeck estimate before
+recovering the production spatial weights.
+
+**Evidence:** On independent standard roots `xi_1,...,xi_N`, fix a unit vector
+`e` and set `Delta_k=u_k sum_(r=k)^N xi_r e` and
+`G_j=sum_(k<=j)Delta_k`. Then
+`d_jG_j=(sum_(k<=j)u_k)xi_j e`, so the root-diagonal output energy is exactly
+`||L_Nu||_2^2` for the lower-triangular cumulative matrix `L_N`. With
+`u=e_1`, input energy is one and output energy is `N`. For normalized equal
+inputs the output is `(N+1)(2N+1)/6`, hence `51/2` at `N=8`. The exact sharp
+norm is
+`||L_N||_op^2=[4 sin^2(pi/(4N+2))]^-1`, approximately
+`29.365297894371945` at `N=8`. Exact enumeration and an independent inverse-
+tridiagonal spectral calculation reproduce these values.
+
+**Consequence:** Root-first diagonalisation and the conditional OU identity
+are valid reductions, but neither root orthogonality nor unweighted Poincare
+contains the spatial input-scale decay needed for one-use. The next theorem
+must use production spatial paracomposition, the far projection, or another
+weighted signed cancellation. This abstract finite-tree model is not a
+counterexample to production controlled Cartan CFAR or the complete paid
+packet.
 
 <a id="ng-2026-07-25-a13-k-smoothing-output-orthogonality"></a>
 ### NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY -- input smoothing does not manufacture global nonlinear output orthogonality

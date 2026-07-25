@@ -1,0 +1,716 @@
+% Title: Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; REGULAR ONE-SHOT LINEAR PF NEAR CLOSED; CONTROLLED CARTAN CFAR, RATIONAL NEAR, PROGRESSION, ONE-USE, AND NELSON OPEN
+% Result: A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION
+% Ledger: R-084
+
+\section{Purpose and scope}
+
+This note advances both open branches left by R-083 without weakening its
+negative results.
+
+For controlled FAR, the input increments are recombined before probability
+projection.  The resulting root currents are genuine martingale differences,
+so the three Cartan CFAR squares diagonalise exactly over probability roots.
+This bypasses the false input-scale output-orthogonality premise isolated in
+R-083.  Conditioning on the past then gives an exact Ornstein--Uhlenbeck
+energy representation of every root.  Its derivative has three explicit
+channels and contains no Malliavin derivative of the predictable control.
+The remaining analytic target is one summed far-projected OU-gradient
+estimate.  A lower-triangular finite tree proves that root orthogonality or an
+unweighted Gaussian Poincare inequality alone cannot spend an old control
+input once.
+
+For NEAR, the three linear Pauli--Fierz rows are no longer left at the
+algebraic forest stage.  Their complete heat-lifted endpoint difference has
+an exact polynomial identity.  It contains two covariance-normal model
+pairings, three unshifted geometric-current payloads, a heat cross term, and
+positive terminal squares.  R-063, R-068, R-071, and the R-076/R-078
+input-maximum interpolation pay these terms globally with strict Young
+slack.  Thus the complete three-row linear contribution is form-absorbable
+for the regular mutually orthogonal strict-past one-shot class.  It is not
+pointwise positive: the R-083 negative fixture remains valid and is now
+shown explicitly to have a finite Cameron--Martin/sextic lower envelope.
+
+The nonlinear rational Pauli--Fierz row remains open.  No complete signed
+NEAR theorem, overlap/revisit extension, controlled-shell one-use theorem,
+$q=10/9$ Nelson estimate, interacting measure, or Sector-A closure is
+asserted.  All statements are at fixed positive density floor and finite
+cutoff.  Uniformity in the cutoff is asserted only for the accepted model
+and form bounds stated below.
+
+\section{Authorities and fixed constants}
+
+The load-bearing authorities are R-050 for the canonical geometric current,
+R-063 for the complete covariance-normal coefficient-jet forest, R-068 for
+the global centered quadratic form, R-071 for smooth matrix one-forms in
+$H^{-1/2-\delta}$, R-076/R-078 for input-maximum Besov payloads, R-079 for
+complete endpoint reassembly, R-080 for the distinct fixed-low bounds, R-081
+for the production Cartan current, R-082 for stopped FAR and heat-lifted
+Pauli--Fierz coordinates, and R-083 for the controlled polynomial closure,
+Cartan input telescope, and exact three-row linear forest.
+
+The A1 coefficients give
+\[
+ P=M_X^2+\epsilon_\rho=4+10^{-12},
+ \qquad \alpha={5\over9},
+ \tag{2.1}
+\]
+\[
+ c_0={3\over250P},\qquad
+ c_1={243\over8000P},\qquad
+ c_S=c_0+c_1={339\over8000P}.
+ \tag{2.2}
+\]
+The R-083 controlled Cartan prefactor is therefore
+\[
+ 4\alpha^2c_1={3\over80P}.
+ \tag{2.3}
+\]
+
+Let $P_j=\mathbb E[\,\cdot\mid\mathcal F_j]$ and
+$d_j=P_j-P_{j-1}$.  For each production Pauli generator $S_A$, put
+\[
+ q_A(z)={z^TS_Az\over |z|^2+\epsilon_\rho},
+ \qquad F_A(z)=q_A(z)z,
+ \tag{2.4}
+\]
+and write
+\[
+ \mathcal C_A(H)=F_A(U+H)^TD(U+H).
+ \tag{2.5}
+\]
+For overlapping Littlewood--Paley blocks define the square-function far map
+\[
+ \mathrm Q_{j,C}f=(\Pi_mf)_{m\ge j+C}.
+ \tag{2.6}
+\]
+For sharp orthogonal blocks, its squared norm is the usual sum of squared
+far-shell norms.
+
+\section{Root-first Cartan CFAR diagonalisation}
+
+R-083 defines the low input $\Delta_{A,\ell}$ and input increments
+$\Delta_{A,k}$ so that
+\[
+ \mathcal C_A(A^{(j)})-\mathcal C_A(0)
+ =\Delta_{A,\ell}+\sum_{k=j_0}^j\Delta_{A,k}.
+ \tag{3.1}
+\]
+Set
+\[
+ G_{A,j}:=\mathcal C_A(A^{(j)})-\mathcal C_A(0).
+ \tag{3.2}
+\]
+
+\subsection*{Theorem 3.1 (exact root-first CFAR identity)}
+
+For every deterministic stop $n$,
+\[
+ R_{A,n}=\sum_{j=j_0}^n d_jG_{A,j}.
+ \tag{3.3}
+\]
+Although $G_{A,j}$ changes with $j$, the terms in (3.3) are martingale
+differences.  Consequently
+\[
+ \boxed{
+ S_C^{\rm ctrl}
+ ={3\over80P}\sum_{A=1}^3\sum_{j=j_0}^J
+ \mathbb E\|\mathrm Q_{j,C}d_jG_{A,j}\|_{\ell_m^2L_x^2}^2.}
+ \tag{3.4}
+\]
+
+\emph{Proof.}
+Equation (3.3) is R-083 (4.4) after inserting (3.1).  If $i<j$, then
+$\Pi_md_iG_{A,i}$ is $\mathcal F_i$-measurable and
+\[
+ \mathbb E[d_jG_{A,j}\mid\mathcal F_{j-1}]=0.
+\]
+Hence
+\[
+ \mathbb E\langle\Pi_md_iG_{A,i},\Pi_md_jG_{A,j}\rangle=0.
+\]
+Use this identity in every stopped square of R-083 (4.10), then interchange
+the two finite deterministic sums in $j$ and $m$.  This proves (3.4).
+\hfill$\square$
+
+The input index $k$ is entirely inside $G_{A,j}$ before orthogonality is
+used.  Thus (3.4) does not assume the false pairwise orthogonality of the
+nonlinear output increments $\Pi_m\Delta_{A,k}$.  The low input, moving
+endpoint, value drift, derivative drift, raw innovation, and heat
+compensator remain present through the R-083 identity.
+
+\section{Exact predictable-root OU energy}
+
+Fix $A,j$ and condition on $\mathcal F_{j-1}$.  Write
+\[
+ z=U_{j-1},\qquad a=A^{(j)},\qquad
+ \Phi_j=P_{\Sigma_{j+1:J}}F_A,
+ \tag{4.1}
+\]
+and let $g=g_j$ be the fresh Gaussian root.  Define
+\[
+ J_a(g)=\Phi_j(z+a+g)^T(Dz+Da+Dg),
+ \tag{4.2}
+\]
+\[
+ H_{A,j,a}(g)=J_a(g)-J_0(g).
+ \tag{4.3}
+\]
+Common real-even covariance gives the exact conditional centering
+\[
+ d_jG_{A,j}=H_{A,j,a}(g_j)-\mathbb E_{g_j}H_{A,j,a}(g_j).
+ \tag{4.4}
+\]
+In particular, raw value innovation is not centered after deleting its heat
+compensator.
+
+Whiten the finite-dimensional root shell.  Let $P_t^{(j)}$ be its standard
+OU semigroup and $\mathbb D_j$ its Cameron--Martin derivative.
+
+\subsection*{Theorem 4.1 (conditional OU-resolvent identity)}
+
+At every finite cutoff,
+\[
+ \boxed{
+ \begin{aligned}
+ &\mathbb E_{j-1}\|\mathrm Q_{j,C}d_jG_{A,j}\|^2\\
+ &\quad=2\int_0^\infty e^{-2t}\,
+ \mathbb E_{j-1}\|\mathrm Q_{j,C}P_t^{(j)}
+ \mathbb D_jH_{A,j,a}\|_{\rm HS(\mathcal H_j,\ell_m^2L_x^2)}^2\,dt.
+ \end{aligned}}
+ \tag{4.5}
+\]
+Therefore
+\[
+ \boxed{
+ S_C^{\rm ctrl}
+ ={3\over40P}\sum_{A,j}\int_0^\infty e^{-2t}
+ \mathbb E\|\mathrm Q_{j,C}P_t^{(j)}
+ \mathbb D_jH_{A,j,A^{(j)}}\|_{\rm HS}^2\,dt.}
+ \tag{4.6}
+\]
+
+\emph{Proof.}
+Expand a centered Hilbert-valued function of the whitened root into
+homogeneous Gaussian chaoses.  On chaos $n$, its variance is its squared
+norm, its derivative has squared norm multiplied by $n$, and
+$P_t\mathbb D$ contributes $e^{-(n-1)t}$.  Hence
+\[
+ 2\int_0^\infty e^{-2t}n e^{-2(n-1)t}\,dt=1.
+\]
+Sum the orthogonal chaoses and use (4.4).  Equation (4.6) follows from
+(3.4). \hfill$\square$
+
+For a root Cameron--Martin direction $v$ the derivative in (4.5) is exactly
+\[
+ \boxed{
+ \begin{aligned}
+ \mathbb D_jH[v]={}&
+ \{D\Phi_j(z+a+g)[v]-D\Phi_j(z+g)[v]\}^T(Dz+Dg)\\
+ &+D\Phi_j(z+a+g)[v]^TDa\\
+ &+\{\Phi_j(z+a+g)-\Phi_j(z+g)\}^TDv.
+ \end{aligned}}
+ \tag{4.7}
+\]
+The three lines are respectively the coefficient-Jacobian difference,
+control-derivative injection, and derivative-of-root injection.  The control
+$a=A^{(j)}$ is $\mathcal F_{j-1}$-measurable, so
+$\mathbb D_ja=0$.  Replacing it by the terminal future-adapted $A^*$ would
+introduce uncontrolled Malliavin derivatives and is forbidden.
+
+The conditional Gaussian Poincare bound follows by deleting OU damping:
+\[
+ \mathbb E_{j-1}\|\mathrm Q_{j,C}d_jG_{A,j}\|^2
+ \le\mathbb E_{j-1}\|\mathrm Q_{j,C}\mathbb D_jH\|_{\rm HS}^2.
+ \tag{4.8}
+\]
+It is only a reduction.  A proof must retain the far projection and the
+coupled three-channel derivative.
+
+\section{\enspace Root orthogonality alone is not one-use}
+
+Let $\xi_1,\ldots,\xi_N$ be independent centered variance-one roots and let
+$e$ be a spatial unit vector in one shell $m_*=N+C$.  For deterministic
+input amplitudes $u_k$, define terminal increments
+\[
+ \Delta_k=u_k\sum_{r=k}^N\xi_re.
+ \tag{5.1}
+\]
+Then
+\[
+ d_j\Delta_k={\bf1}_{\{k\le j\}}u_k\xi_je.
+ \tag{5.2}
+\]
+If $G_j=\sum_{k\le j}\Delta_k$, every output survives the relative far
+projection and
+\[
+ d_jG_j=\left(\sum_{k\le j}u_k\right)\xi_je.
+ \tag{5.3}
+\]
+Thus root orthogonality is exact, while
+\[
+ \boxed{
+ S_{\rm tree}(u)=\sum_{j=1}^N\left|\sum_{k=1}^ju_k\right|^2
+ =\|L_Nu\|_{\ell^2}^2,}
+ \tag{5.4}
+\]
+where $L_N$ is the lower-triangular matrix of ones.
+
+For one old input $u=e_1$,
+\[
+ \|u\|_2^2=1,\qquad S_{\rm tree}=N.
+ \tag{5.5}
+\]
+For $u_k=N^{-1/2}$,
+\[
+ \|u\|_2^2=1,\qquad
+ S_{\rm tree}={(N+1)(2N+1)\over6}.
+ \tag{5.6}
+\]
+At $N=8$ the last value is $51/2$.  The exact squared operator norm is
+\[
+ \boxed{
+ \|L_N\|^2={1\over4\sin^2(\pi/(4N+2))}
+ \sim{4N^2\over\pi^2}.}
+ \tag{5.7}
+\]
+Numerically $\|L_8\|^2=29.365297894371945\ldots$.
+
+For the linear root function $f_j(g)=s_jg$ with
+$s_j=\sum_{k\le j}u_k$, the OU identity gives
+\[
+ 2\int_0^\infty e^{-2t}|P_tDf_j|^2dt=s_j^2.
+ \tag{5.8}
+\]
+Thus unweighted OU energy reproduces rather than removes the triangular
+growth.
+
+This fires
+\texttt{NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE}.  It refutes only
+root orthogonality by itself, charging every root solely to the
+contemporaneous input, and an unweighted Poincare closure.  The fixture
+deliberately omits production spatial paracomposition decay and is not a
+counterexample to controlled Cartan CFAR.
+
+The precise remaining CFAR theorem is
+\[
+ \boxed{
+ \begin{aligned}
+ &\sum_{A,j}\int_0^\infty e^{-2t}
+ \mathbb E\|\mathrm Q_{j,C}P_t^{(j)}
+ \mathbb D_jH_{A,j,A^{(j)}}\|_{\rm HS}^2dt\\
+ &\qquad\le K_e2^{-\theta C}
+ \{1+\mathbb E[X^{1/2}Y^{1/2}]\},\qquad\theta>0.
+ \end{aligned}}
+ \tag{5.9}
+\]
+No cited predecessor proves (5.9).
+
+\section{Exact linear Pauli--Fierz endpoint identity}
+
+Let $T=A_\nu$, $0\le\nu\le2$, be one of the three R-083 constant row
+matrices.  For value covariance $\Sigma$ and derivative covariance $\Gamma$
+put
+\[
+ H_{\Sigma,T}=T^T\Sigma T,
+ \tag{6.1}
+\]
+\[
+ \mathcal W_{T,\Sigma}(z,y)
+ ={1\over2}\{(z^TTy)^2-(T^Tz)^T\Gamma(T^Tz)\}
+ +{1\over2}H_{\Sigma,T}:(y^{\otimes2}-\Gamma).
+ \tag{6.2}
+\]
+The last trace is constant in $z,y$ and cancels between translated
+endpoints.
+
+Put
+\[
+ G=DU,\qquad c=Da,\qquad Q=G\otimes G-\Gamma,
+ \tag{6.3}
+\]
+\[
+ x=U^TTG,\qquad p=a^TTG,
+ \qquad d=(U+a)^TTc.
+ \tag{6.4}
+\]
+
+\subsection*{Theorem 6.1 (complete heat-lifted linear endpoint)}
+
+At every smooth cutoff,
+\[
+ \boxed{
+ \begin{aligned}
+ \Delta\mathcal W_{T,\Sigma}={}&
+ (T^TU)^TQ(T^Ta)+{1\over2}(T^Ta)^TQ(T^Ta)\\
+ &+(x+p)d+{1\over2}d^2\\
+ &+G^TH_{\Sigma,T}c+{1\over2}c^TH_{\Sigma,T}c.
+ \end{aligned}}
+ \tag{6.5}
+\]
+
+\emph{Proof.}
+The translated row current is $x+p+d$.  Expanding
+$\{(x+p+d)^2-x^2\}/2$ gives the four square terms.  The two contractions of
+$Q$ subtract exactly the translated coefficient trace.  The heat lift is
+constant in the value variable and its derivative translation is
+$G^TH_{\Sigma,T}c+c^TH_{\Sigma,T}c/2$. \hfill$\square$
+
+The two last squares in (6.5) are nonnegative.  The mixed current expands as
+\[
+ \begin{aligned}
+ (x+p)d={}&
+ (U^TTG)(U^TTc)\\
+ &+(U^TTG)(a^TTc)+(a^TTG)(U^TTc)\\
+ &+(a^TTG)(a^TTc).
+ \end{aligned}
+ \tag{6.6}
+\]
+These are exactly a quadratic smooth matrix one-form in $U$ paired with
+$c$, two linear matrix one-forms paired with $ac$, and the unshifted
+derivative current paired with $a^2c$.  No shifted rational coefficient and
+no conditional covariance assumption occurs.
+
+R-079 reassembles the complete root forest to the endpoint before (6.5) is
+estimated; R-080 separately pays the fixed-low boundary.  R-083 heat
+additivity ensures that moving heat edges give precisely the constant term
+in (6.5), rather than one cost per root.
+
+\section{Global form payment for the three linear rows}
+
+Let
+\[
+ X=\|a\|_{H^2}^2,
+ \qquad Y=\|U+a\|_6^6.
+ \tag{7.1}
+\]
+The inequality $\|a\|_6\le\|U+a\|_6+\|U\|_6$ transfers pure-control
+$L^6$ factors to $Y$ plus an all-moment Gaussian random constant.
+
+For the first line of (6.5), use the complete R-063 $UQ$ and $Q$ forests,
+including $P_3/P_1$, $P_2/P_0$, and $\Sigma Q$ conversion.  At
+$\kappa=1/10$, conservative $H^{-11/10}$ duality and interpolation give
+\[
+ |\langle\mathbb UQ,a\rangle|
+ \lesssim R_1X^{11/40}Y^{3/40},
+ \qquad {11\over40}+{3\over40}={7\over20}<1.
+ \tag{7.2}
+\]
+The R-068 centered-form estimate gives
+\[
+ |\langle Q,a^{\otimes2}\rangle|
+ \lesssim R_2X^{11/20}Y^{3/20},
+ \qquad {11\over20}+{3\over20}={7\over10}<1.
+ \tag{7.3}
+\]
+Here $R_1,R_2$ have every finite probability moment.  The symbols in
+(7.2)--(7.3) denote the complete reconstructed models, never a raw
+unbalanced product.
+
+R-071 applies to every smooth polynomial-growth matrix one-form
+$\Theta(U)G$ and places it in $H^{-3/5}$ with every finite moment.  The
+input-maximum proof used in R-076/R-078, with zero, one, or two
+undifferentiated controls, gives
+\[
+ \|Da\|_{B^{3/5}_{1,1}}
+ \lesssim X^{2/5}Y^{1/30},
+ \qquad {2\over5}+{1\over30}={13\over30}<1,
+ \tag{7.4}
+\]
+\[
+ \|aDa\|_{B^{3/5}_{1,1}}
+ \lesssim X^{2/5}Y^{1/5},
+ \qquad {2\over5}+{1\over5}={3\over5}<1,
+ \tag{7.5}
+\]
+\[
+ \|a^2Da\|_{B^{3/5}_{1,1}}
+ \lesssim X^{2/5}Y^{11/30},
+ \qquad {2\over5}+{11\over30}={23\over30}<1.
+ \tag{7.6}
+\]
+The corresponding Young slacks are
+\[
+ {13\over20},\quad {3\over10},\quad
+ {17\over30},\quad {2\over5},\quad {7\over30}.
+ \tag{7.7}
+\]
+The largest required random moment is $30/7$, already available.  The heat
+cross term uses (7.4), because the target value covariance and hence
+$H_{\Sigma,T}$ are uniformly bounded.  Its companion square is positive.
+
+\subsection*{Theorem 7.1 (linear Pauli--Fierz NEAR absorption)}
+
+For every $\eta,\zeta>0$, the sum of the three complete heat-lifted linear
+row endpoints satisfies
+\[
+ \boxed{
+ \mathbb E\Delta\mathcal W_{L,\Sigma}
+ \ge-\eta\,\mathbb EX-\zeta\,\mathbb EY
+ -C_{\eta,\zeta,\epsilon_\rho,j_0},}
+ \tag{7.8}
+\]
+uniformly in the terminal cutoff for regular mutually orthogonal strict-past
+one-shot controls.
+
+\emph{Proof.}
+Apply deterministic duality to (7.2)--(7.6) at each outcome and one global
+weighted Young inequality to the finite list of model norms.  Every total
+degree is strictly below one by (7.7), so all random powers are finite.
+Discard the two positive squares in (6.5), sum the three rows and spatial
+directions, and use the exact endpoint/low reassembly described after
+(6.6). \hfill$\square$
+
+Adaptation does not invalidate this proof.  The random control is used
+pathwise as the $H^2\cap L^6$ test function against unshifted accepted
+models.  No independence, finite-chaos substitution, or conditional
+centering is asserted.  R-075 graph recovery may extend a cutoff-uniform
+regular endpoint inequality after all remaining packet terms are proved;
+(7.8) alone does not supply the full progressive/revisit theorem.
+
+\section{Sharp linear floor and the R-083 fixture}
+
+For arbitrary derivative covariance $\Gamma\succeq0$ define
+\[
+ H_\Gamma=\sum_{\nu=0}^2A_\nu\Gamma A_\nu^T.
+ \tag{8.1}
+\]
+The three-row packet has the sharp algebraic floor
+\[
+ \boxed{
+ \mathcal W_L(z,y)
+ \ge-{1\over2}z^TH_\Gamma z.}
+ \tag{8.2}
+\]
+Indeed every row square is nonnegative.  Sharpness follows by taking a
+centered covariance-one law with an atom at $y=0$ and choosing $z$ in a top
+eigendirection only on that atom.
+
+For $\Gamma=I$ the R-083 matrices give
+\[
+ H_I=(4c_0+8c_S)P_{\rm dbl},
+ \tag{8.3}
+\]
+so the full sharp coefficient is
+\[
+ {1\over2}\lambda_{\max}(H_I)
+ =2c_0+4c_S={387\over2000P}
+ =0.0483749999999879\ldots.
+ \tag{8.4}
+\]
+For one horizontal row it is
+\[
+ 2c_S={339\over4000P}
+ =0.0211874999999947\ldots.
+ \tag{8.5}
+\]
+These numbers are finite-root algebraic diagnostics, not a replacement for
+the covariance-normal forest in Theorem 7.1.  A trace-only estimate at the
+unshifted Gaussian baseline would recreate the divergent running mass even
+though the exact Wick baseline has mean zero.
+
+For the R-083 Gaussian fixture $a=\lambda(\xi^2-4)$,
+\[
+ \mathbb E a^2=11\lambda^2,\qquad
+ \mathbb E a^6=3187\lambda^6,\qquad
+ \mathbb E\mathcal W=-8c_S\lambda^2<0.
+ \tag{8.6}
+\]
+After adding $\eta X+\zeta Y$, put $d=8c_S-11\eta$.  If $d\le0$ the
+infimum over $\lambda$ is zero.  If $d>0$, it is exactly
+\[
+ -{2d^{3/2}\over3\sqrt{3\cdot3187\,\zeta}}.
+ \tag{8.7}
+\]
+Thus the fixture still refutes standalone positivity, while (8.7) proves
+that it does not obstruct Cameron--Martin/sextic form absorption.
+
+\section{Evidence map and remaining theorem}
+
+The R-084 proof map is
+\[
+ \begin{array}{c}
+ \text{R-083 Cartan input telescope}
+ \longrightarrow\text{root-first martingale diagonalisation}
+ \longrightarrow\text{exact OU energy}\\[1mm]
+ \hfill\downarrow\\[-1mm]
+ \boxed{\text{production far-projected OU-gradient estimate (5.9) open}}
+ \end{array}
+ \tag{9.1}
+\]
+and
+\[
+ \begin{array}{c}
+ \text{R-083 linear heat/forest algebra}
+ \longrightarrow\text{endpoint identity (6.5)}
+ \longrightarrow\boxed{\text{three linear NEAR rows paid}}\\[1mm]
+ \hfill\downarrow\\[-1mm]
+ \boxed{\text{nonlinear rational signed NEAR row open}}.
+ \end{array}
+ \tag{9.2}
+\]
+
+The reusable successes are:
+\begin{itemize}
+\item controlled CFAR is exactly diagonal in complete probability-root
+      currents, with no input-output orthogonality assumption;
+\item each predictable root has the exact OU representation (4.5) and
+      three-channel derivative (4.7);
+\item all three linear Pauli--Fierz NEAR rows have the endpoint identity
+      (6.5) and global form bound (7.8);
+\item the negative R-083 linear fixture is consistent with, and explicitly
+      absorbed by, the form theorem.
+\end{itemize}
+
+The failed or insufficient routes are:
+\begin{itemize}
+\item root martingale orthogonality alone does not imply one-use; the
+      cumulative matrix $L_N$ has norm of order $N$;
+\item deleting the far projection or bounding the three OU-gradient
+      channels separately loses the missing production gain;
+\item terminal future controls cannot replace predictable $A^{(j)}$ inside
+      (4.7), because that would require uncontrolled Malliavin derivatives;
+\item trace-only positivity cannot replace the Wick forest;
+\item the rational shifted secant remains subject to the existing
+      high--high resonance and separated-multiplier no-go.
+\end{itemize}
+
+The next proof must establish (5.9), prove the complete signed rational-row
+endpoint with all lower chaoses and paid companions retained, and combine
+those results with the R-081 temporal factorisation.  Only then may the
+overlap-stable progressive extension, controlled-shell one-use synthesis,
+and conditional
+\[
+ \epsilon_6=0.15,
+ \qquad\epsilon_v=0.45,
+ \qquad p={11\over10},
+ \qquad q={1\over2\epsilon_v}={10\over9}
+ \tag{9.3}
+\]
+Nelson step be invoked.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: ``R-083 already had root orthogonality.''}
+\textbf{VALID WITH NARROWING.}  R-082 had martingale orthogonality for a
+changing current, but R-083 reorganised the controlled remainder by input
+scale and then tested a stronger false orthogonality.  Theorem 3.1 proves
+that the input increments must first be recombined.  Its new content is the
+exact Cartan-specific diagonal target (3.4), not a CFAR bound.
+
+\item \textbf{Objection: ``OU integration is merely Poincare in disguise.''}
+\textbf{DISMISSED.}  Equation (4.5) retains the exact chaos-dependent OU
+damping and the far spatial projection.  Poincare is only the weaker
+corollary (4.8).  The lower-triangular fixture proves that the weaker route
+cannot close one-use by itself.
+
+\item \textbf{Objection: ``The OU derivative differentiates an adapted
+control.''}  \textbf{DISMISSED within scope.}  The root control $A^{(j)}$ is
+strict-past predictable, so its derivative with respect to $g_j$ is zero.
+The objection becomes \textbf{UPHELD} if one substitutes the terminal $A^*$;
+that substitution is not made.
+
+\item \textbf{Objection: ``R-083 proves a negative linear row, so Theorem
+7.1 contradicts it.''}  \textbf{DISMISSED.}  R-083 refutes positivity.
+Theorem 7.1 is an infinitesimal form bound using Cameron--Martin and sextic
+budgets.  Formula (8.7) displays the distinction on the same fixture.
+
+\item \textbf{Objection: ``R-063 deterministic shifts cannot be cited for
+adapted controls.''}  \textbf{DISMISSED for the polynomial linear rows.}
+Identity (6.5) contains only unshifted accepted model distributions paired
+pathwise with the random control.  No adapted substitution into a rational
+coefficient or finite Gaussian forest occurs.  The objection remains
+\textbf{UPHELD} for the open rational row.
+
+\item \textbf{Objection: ``A finite list of subcritical terms may spend the
+budget repeatedly.''}  \textbf{DISMISSED.}  The endpoint is assembled before
+duality, and one global weighted Young inequality is applied to five fixed
+families.  There is no shell-dependent constant.  The finite allocations
+can be divided below any prescribed total $\eta,\zeta$.
+
+\item \textbf{Objection: ``This proves complete NEAR, one-use, or Nelson.''}
+\textbf{UPHELD as an overclaim.}  The rational row, controlled Cartan CFAR,
+progressive/revisit extension, and final synthesis remain open.
+\end{enumerate}
+
+External adversarial review is invited for the factor two in (4.5), the
+predictability used in (4.7), the cumulative-matrix spectrum (5.7), every
+trace sign in (6.5), the complete R-063 lower-chaos attribution in
+(7.2)--(7.3), all five Young totals, and the distinction between positivity
+and form absorption in (8.7).
+
+\section{Reproduction and independent audit}
+
+The primary executable derives all production coefficients from the A1
+manifest; enumerates exact finite filtrations; checks root orthogonality and
+square diagonalisation; verifies the cumulative matrix, inverse spectrum,
+OU chaos identity, and production quotient-vector derivative; reconstructs
+the three row matrices; tests the sharp selector floor; checks the complete
+endpoint and heat identities; and derives every Young exponent and fixture
+moment.
+
+The non-importing executable uses Decimal coefficient arithmetic, a distinct
+exact conditional-expectation tree, the inverse tridiagonal spectrum,
+Gauss--Hermite quadrature for OU energy and fixture moments, complex-step
+Cartan differentiation, and independently assembled linear row matrices.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_root_diagonal_cartan_ou_linear_pf_absorption_
+  verify.py
+\end{verbatim}
+The child contracts are primary $50/50$ and non-importing independent
+$40/40$.  The integrated verifier pins the A1, R-050, R-063, R-071, R-079,
+and R-083 authorities; compares every shared derived quantity; checks the
+note, PDF, manifest, result, negative-result, exploration, claim, roadmap,
+gate, task, lineage, and honesty surfaces; and fails closed if any downstream
+gate is promoted.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-
+           PAULI-FIERZ-ABSORPTION
+Precise statement:       Controlled Cartan CFAR is exactly diagonal over
+                         complete probability-root currents with coefficient
+                         3/(80P). Each predictable root has an exact far-
+                         projected OU-gradient representation with three
+                         retained derivative channels. Root orthogonality
+                         alone is not one-use. The three heat-lifted linear
+                         Pauli--Fierz NEAR rows have an exact endpoint
+                         identity and a cutoff-uniform arbitrary-budget form
+                         lower bound for regular orthogonal strict-past
+                         one-shot controls. Their negative adapted fixture is
+                         form-absorbable but remains nonpositive.
+Scope:                   Finite cutoff; fixed floor; common real-even
+                         regulator; exact products; regular mutually
+                         orthogonal strict-past one-shot controls for the
+                         linear form theorem.
+Dependencies:            A1; R-050; R-063; R-068; R-071; R-076--R-083.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_root_diagonal_cartan_ou_linear_pf_
+                         absorption_verify.py
+Expected output:          Primary 50/50; independent 40/40; manifest-pinned
+                         integrated and aggregate PASS; exit zero.
+Falsification gate:      Failure of root reindexing, martingale
+                         orthogonality, OU factor two, predictable derivative,
+                         cumulative-tree growth, linear endpoint or heat
+                         algebra, sharp floor, any Young slack, evidence hash,
+                         PDF contract, or honesty flag.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No production Cartan OU-gradient estimate, complete
+                         CFAR, nonlinear rational or complete signed NEAR,
+                         progressive/revisit extension, controlled-shell one-
+                         use, Nelson bound, measure theorem, removal limit, or
+                         Sector-A closure is proved.
+Next required action:    Prove the summed far-projected Cartan OU-gradient
+                         estimate (5.9) and the complete signed rational-row
+                         endpoint; then progression, one-use, and Nelson.
+\end{verbatim}
+\endgroup

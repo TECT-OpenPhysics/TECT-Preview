@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-084](#r-084) | Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption | Scoped T4 analytic/exact/executed reduction: the R-083 controlled Cartan remainder diagonalises exactly over complete probability-root martingale differences with coefficient `3/(80P)`, and every root has an exact conditional Ornstein--Uhlenbeck gradient representation retaining coefficient, derivative-injection, and value-innovation channels. A cumulative-tree witness proves that root orthogonality or an unweighted Gaussian Poincare estimate alone cannot spend the control once. For regular mutually orthogonal strict-past one-shot controls, the complete three-row linear Pauli--Fierz NEAR endpoint is nevertheless arbitrarily form-absorbed by terminal sextic and Cameron--Martin budgets; all five degree families have positive Young slack and worst required moment `30/7`. The nonlinear rational row, summed production far-projected Cartan OU-gradient estimate, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-083](#r-083) | Controlled polynomial CFAR and linear Pauli--Fierz forest reduction | Scoped T4 analytic/exact/executed reduction: in the fixed root-preserving six-current coordinate, every controlled polynomial `J_A=Dm_A` row vanishes in the complete stopped FAR object for `C>=3`, including both endpoints and both predictable drifts. Controlled CFAR is thereby reduced exactly to three Cartan input-scale telescopes with coefficient `3/(80P)`. The canonical `K_k` smoothing pays the input coordinate once but does not create the global raw-output pairwise orthogonality assumed by the sufficient R-082 Carleson lemma; an exact production-floor-rescaled harmonic witness records that method no-go without excluding far-only or correlated martingale estimates. The three linear Pauli--Fierz rows have exact Gram, heat, secant, covariance-defect, and nine-block forest algebra, but an adapted heat-lifted fixture with zero rational row has negative linear-row zero chaos. Controlled Cartan CFAR, recombined complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; 58/58 primary, 43/43 independent, 103/103 integrated, 204/204 aggregate assertions |
 | [R-082](#r-082) | Stopped-current FAR and complete-current NEAR coordinate reduction | Scoped T4 analytic/exact/executed reduction: the entire FAR wedge is one deterministic stopped-current square retaining its moving endpoint and both predictable control drifts; raw value innovation centers only with its heat compensator. The uncontrolled production FAR contribution now closes cutoff-uniformly with decay `2^(-2 beta C)` for every `beta<3 alpha-1`, by a support-refined R-050 paracontrolled remainder. An orthogonal causal Carleson lemma has the sharp `s>1/2` threshold and would spend the Cameron--Martin input once if the missing balanced production decomposition were proved. The production current has a global four-coordinate Pauli--Fierz square and exact conditional-covariance positivity criterion; state-dependent compression is not rootwise, heat must average the Gram matrix, and future covariance defects remain signed. Controlled FAR, complete signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-081](#r-081) | Cartan current tails, adapted near budgets, and temporal packet reduction | Scoped T4 analytic/exact/executed reduction: the production current splits into a quadratic polynomial channel and one heat-averaged nonlinear Cartan channel; the polynomial channel vanishes at separated outputs, while a deterministic relative-gap theorem gives `2^(-2sC)X^(1/2)Y^(1/2)` for every `0<s<1`. Fixed predictable Gaussian injection is governed by a triangular `H^(1/2)` endpoint norm, and `H^(1/2-)` alone is insufficient. Vector-valued Doob--Burkholder interpolation closes the input budget and exact gain ledger for an explicitly factorised first-order NEAR response. A production two-root witness has `d_jA=0` but nonzero coefficient innovation, so the complete nonlinear branch also requires its upper-triangular Jensen defect; absolute control--control pair-high extraction is supercritical. Bounded-simple progressive packets factor causally and preserve the complete R-079 algebra despite range overlap, while an exact one-mode witness proves that the R-075 one-shot graph is not progressive-dense. Root-resolved FAR, complete NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
@@ -102,6 +103,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-084"></a>
+### R-084 -- Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption
+
+**Result ID.**
+`A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION`.
+
+**Statement.** Write the three R-083 Cartan stopped currents as
+`G_(A,j)=C_A(A^(j))-C_A(0)` and resolve each through the complete probability
+filtration. Martingale orthogonality gives the exact root-first identity
+
+`S_C^ctrl=(3/(80P)) sum_(A,j) E ||Q_(j,C) d_j G_(A,j)||_2^2`.
+
+Conditionally on the strict past, each summand has an exact Gaussian
+Ornstein--Uhlenbeck representation with factor two. Its root derivative keeps
+three channels: the coefficient difference against the unshifted derivative,
+the shifted coefficient against the predictable derivative injection, and the
+coefficient difference against the fresh value innovation. Predictability
+means the control increment itself is not differentiated. Thus controlled
+Cartan CFAR is reduced to one summed far-projected OU-gradient estimate, but
+that estimate is not proved here.
+
+Root orthogonality does not by itself make this estimate one-use. For the
+cumulative finite tree `Delta_k=u_k sum_(r=k)^N xi_r e`, the output energy is
+`||L_Nu||_2^2`, where `L_N` is the lower-triangular cumulative matrix and
+`||L_N||_op^2=[4 sin^2(pi/(4N+2))]^-1`. The unit input `u=e_1` already gives
+output `N`; at `N=8` the normalized equal input gives `51/2` and the sharp
+operator square is about `29.365297894371945`. This is a method no-go for
+root orthogonality and unweighted Gaussian Poincare alone, not a production
+CFAR counterexample.
+
+For the three linear Pauli--Fierz rows, the exact heat-lifted endpoint expands
+into centered-Gram, derivative, current, heat, and mixed terms. In the regular
+mutually orthogonal strict-past one-shot class, R-063/R-068/R-071/R-076/R-078
+bound the five nonlinear degree families with total endpoint exponents
+`7/20, 7/10, 13/30, 3/5, 23/30`. Their Young slacks are respectively
+`13/20, 3/10, 17/30, 2/5, 7/30`; the worst required random moment is `30/7`.
+Consequently, for every positive `eta,zeta`, the entire three-row linear NEAR
+contribution is bounded below by `-eta X-zeta Y-C_(eta,zeta)`, uniformly in
+the cutoff within that regular class. This is form absorption, not positivity.
+
+**Boundary.** The production summed far-projected Cartan OU-gradient estimate,
+the nonlinear rational Pauli--Fierz row, the complete signed NEAR packet,
+overlap-stable progression and variational extension, controlled-shell
+one-use, `q=10/9` Nelson, the interacting measure, removal limits, and
+Sector-A closure remain open. Tier stays T4.
+
+**Proven in.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-root-diagonal-cartan-ou-linear-pauli-fierz-absorption-260725-v1.0`,
+with primary 50/50, non-importing independent 40/40, integrated 131/131, and
+aggregate 221/221 verification.
+
+**Reuse scope.** Root-first stopped-current martingale diagonalisation,
+conditional OU-gradient identities, cumulative-filtration diagnostics, and
+regular one-shot linear Pauli--Fierz form bounds.
+
+**Publication target.** Stochastic geometric/paracontrolled methods note with
+R-050, R-063, R-071, and R-079--R-083 after the remaining Cartan, rational,
+progressive, one-use, and Nelson gates are resolved.
+
+---
 
 <a id="r-083"></a>
 ### R-083 -- Controlled polynomial CFAR and linear Pauli--Fierz forest reduction

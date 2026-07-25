@@ -298,6 +298,24 @@ endpoint theorem.
     correlated or signed Cartan CFAR estimate and a recombined linear-plus-
     rational signed NEAR packet, followed by overlap-stable progression,
     one-use, and Nelson synthesis.
+25. **Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption.**
+    R-084,
+    `A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION`,
+    changes the Cartan organisation from input-scale output increments to
+    complete probability-root martingale differences. This gives an exact
+    root-diagonal CFAR identity with coefficient `3/(80P)` and an exact
+    conditional OU-gradient representation retaining coefficient,
+    predictable derivative-injection, and fresh value-innovation channels.
+    The cumulative finite-tree countermodel shows why root orthogonality alone
+    cannot finish one-use: a unit input may create root-diagonal energy `N`.
+    The production spatial far projection must therefore enter the estimate.
+    Independently, the full three-row linear Pauli--Fierz endpoint is form-
+    absorbed for the regular orthogonal strict-past one-shot class by five
+    positive-slack Young ledgers, with worst random moment `30/7`. This closes
+    the linear NEAR subbranch in that class without asserting positivity. The
+    frontier is now the production far-projected Cartan OU-gradient estimate
+    and the nonlinear rational Pauli--Fierz endpoint, followed by complete
+    signed recombination, progression, one-use, and Nelson synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

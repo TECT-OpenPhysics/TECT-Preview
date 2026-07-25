@@ -92,7 +92,14 @@ nine-block forest are explicit, while an adapted fixture rules out standalone
 linear-row positivity. Correlated or signed Cartan CFAR, recombined complete
 signed NEAR, and an overlap-stable full-progressive lower bound remain before
 the umbrella one-use estimate and the conditional `q=10/9` Nelson/A7
-reconstruction.
+reconstruction. R-084,
+`A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION`,
+diagonalises the Cartan remainder over complete probability roots and gives
+its exact conditional far-projected OU-gradient representation. Root
+orthogonality alone is not one-use. For regular orthogonal strict-past one-
+shot controls it also form-absorbs all three linear Pauli--Fierz rows, leaving
+the production Cartan OU estimate, nonlinear rational row, complete signed
+recombination, and progression open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

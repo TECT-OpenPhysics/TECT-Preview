@@ -274,7 +274,17 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   nine-block forest algebra. An adapted rational-zero fixture has negative
   linear-row zero chaos, so NEAR must keep the linear and rational rows
   recombined with the paid packet.
-  R-080--R-083 also expose the separate
+  R-084,
+  `A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION`,
+  diagonalises that Cartan square over complete probability roots and gives
+  the exact far-projected OU-gradient target with all three derivative
+  channels retained. A cumulative-tree model shows that root orthogonality or
+  unweighted Poincare alone is not one-use; production spatial paracomposition
+  remains essential. R-084 also form-absorbs the complete three-row linear
+  Pauli--Fierz NEAR endpoint for regular orthogonal strict-past one-shot
+  controls, with worst moment `30/7`. The nonlinear rational row and complete
+  signed recombination remain open. Sector A remains open.
+  R-080--R-084 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
@@ -446,7 +456,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
     child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-083. R-080 closes the two distinct low objects for regular
+     narrowed by R-080--R-084. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -475,10 +485,17 @@ preserved in git/changelog rather than treated as current gates.
      does not supply global pairwise output orthogonality, so prove a correlated
      or signed Cartan CFAR estimate instead. R-083 also gives the complete
      linear Pauli--Fierz heat/forest algebra, while an adapted rational-zero
-     fixture has negative linear-row zero chaos. Therefore prove the recombined
-     linear-plus-rational heat-lifted adapted/signed NEAR estimate while
+     fixture has negative linear-row zero chaos. At R-083 the NEAR target was
+     the recombined linear-plus-rational heat-lifted adapted/signed estimate,
+     retaining
      retaining every present/future block, square, trace, innovation,
-     compensator, forest term, and paid subtraction. Then apply
+     compensator, forest term, and paid subtraction. R-084 now gives the exact
+     root-diagonal Cartan and conditional OU-gradient formulation. Prove its
+     summed production far-projected OU-gradient bound; root orthogonality
+     alone is insufficient. Its arbitrary-budget theorem closes all three
+     linear Pauli--Fierz rows for the regular orthogonal one-shot class, so the
+     remaining NEAR target is the nonlinear rational row recombined with the
+     full signed paid packet. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
    an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
    `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling

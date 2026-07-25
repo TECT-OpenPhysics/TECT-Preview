@@ -481,7 +481,13 @@ to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
  Gram, heat, secant, conditional-covariance, and nine-block forest algebra, but
  an adapted fixture has negative linear-row zero chaos. Thus only a recombined
  linear-plus-rational complete signed NEAR estimate can close the branch.
- R-080--R-083 correct the synthesis
+ R-084 passes the Cartan square to a complete probability-root diagonal and an
+ exact conditional far-projected OU-gradient identity retaining all three
+ derivative channels. A cumulative-tree no-go shows that root orthogonality
+ or unweighted Poincare alone is not one-use. In the regular orthogonal strict-
+ past one-shot class, R-084 does form-absorb all three linear Pauli--Fierz rows;
+ the nonlinear rational row and complete signed recombination remain open.
+ R-080--R-084 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
 progressive/revisit control. The separate successor
 `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
@@ -1026,6 +1032,18 @@ not yield the output orthogonality assumed by the sufficient R-082 Carleson
 lemma. Complete controlled Cartan CFAR therefore still needs a correlated or
 signed estimate.
 
+R-084,
+`A13-CLASSII-ROOT-DIAGONAL-CARTAN-OU-LINEAR-PAULI-FIERZ-ABSORPTION`,
+rewrites this exact remainder as
+`(3/(80P)) sum_(A,j) E||Q_(j,C)d_jG_(A,j)||_2^2` and represents every
+summand by an exact conditional OU-resolvent energy. The Malliavin derivative
+retains the coefficient-difference, predictable derivative-injection, and
+fresh value-innovation channels. Root orthogonality alone cannot close the
+sum: the exact cumulative-tree matrix has norm square
+`[4 sin^2(pi/(4N+2))]^-1`. The remaining FAR gate is therefore the summed
+production far-projected OU-gradient estimate with spatial paracomposition or
+an equivalent weighted signed cancellation.
+
 For NEAR, R-082 diagonalises the production current globally into four
 Pauli--Fierz rows, three linear and one rational with Lipschitz ceiling `19/9`.
 The fixed six-current preserves R-079 roots, but the state-dependent four-row
@@ -1041,6 +1059,13 @@ problem must recombine the linear and rational rows with paid subtraction and
 the full forest. Complete controlled Cartan CFAR, complete signed NEAR, and the
 regular packet lower bound remain open.
 
+For the regular mutually orthogonal strict-past one-shot class, R-084 closes
+the full three-row linear Pauli--Fierz subbranch by arbitrary-budget form
+absorption. The five degree families have positive Young slacks and worst
+moment `30/7`. This is not positivity and does not cover the rational row.
+The complete NEAR gate is now the nonlinear rational endpoint recombined with
+the linear form bound, covariance defects, full forest, and paid subtraction.
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
 **Statement:** Starting from a cutoff-uniform lower bound for the complete
@@ -1054,7 +1079,7 @@ defect. An equivalent all-tilted-law entropy inequality is an admissible
 alternative.
 
 **Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
-sharpened by R-081--R-083
+sharpened by R-081--R-084
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

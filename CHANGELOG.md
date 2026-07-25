@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Audit R-084 manifest assertion-count enforcement] - 2026-07-25
+
+A pre-release read-only audit found that verifier v1.0.0 checked the primary and independent manifest counts but not the integrated or aggregate fields. Verifier v1.0.1 now enforces 50, 40, 131, and 221 and checks that its own final row count remains 131. No mathematical scope or tier changed.
+
+## [R-084 root-diagonal Cartan OU and linear Pauli--Fierz absorption] - 2026-07-25
+
+Diagonalised the exact controlled Cartan square over complete probability roots and derived its conditional far-projected OU-gradient representation with all three derivative channels. Registered the cumulative-tree obstruction to root-only one-use. Proved arbitrary-budget form absorption of all three linear Pauli--Fierz NEAR rows for regular orthogonal strict-past one-shot controls. The production Cartan OU-gradient estimate, nonlinear rational row, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open.
+
 ## [R-083 controlled polynomial CFAR and linear Pauli--Fierz forest reduction] - 2026-07-25
 
 Recorded the exact C>=3 vanishing of all three controlled polynomial stopped-FAR rows, retaining both endpoints and both predictable drifts, and reduced the complete remaining CFAR object to the three Cartan input-scale telescope squares with factor 3/(80P). The canonical K-shell input-coordinate estimate is one-use, but exact cubic and rational mode-three fixtures refute automatic nonlinear output orthogonality. Derived the exact linear Pauli--Fierz Gram, heat, secant, conditional-covariance, and nine-block forest algebra; an adapted zero-rational-row fixture refutes universal standalone linear-row positivity. Primary 58/58, non-importing independent 43/43, integrated 103/103, and aggregate 204/204 pass. The ten-page zero-form PDF passed Poppler rendering and direct all-page visual QA. Tier remains T4; controlled Cartan CFAR, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open.
