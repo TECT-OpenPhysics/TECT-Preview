@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER](#ng-2026-07-25-a13-global-unprojected-cartan-coefficient-ledger) | R-089 (3.12), the cutoff-uniform global unprojected Sobolev coefficient ledger | a fixed active-shell secant has a current-root first-chaos component whose weighted contribution stays positive at every later root for every `s>0`, so the ledger grows linearly with cutoff; the witness is root-diagonal and removed by the relative FAR projector, which remains viable and open |
+| [AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS](#audit-2026-07-25-a13-r089-rational-forest-disjointness) | R-089 conditional-covariance attribution and undefined extra rational forest | the branch switch is covariance matched only unconditionally, and R-063 lower chaoses reconstruct the literal coefficient--Wick product rather than supplement it; a complete endpoint must occur once and R-079 must provide the nonduplicating temporal decomposition |
 | [AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE](#audit-2026-07-25-a13-r088-progressive-terminal-cm-bridge) | R-088 restriction of its pure-control quartic terminal bridge to the regular orthogonal one-shot class | the global identity `C=T T^*` and polar/Douglas decomposition control the terminal Cameron--Martin norm of every finite-cutoff cylindrical-simple progressive control, independent of partition, range overlap, and revisit multiplicity; the restriction is lifted for the terminal quartic payload, not for the complete nonlinear packet |
 | [AUDIT-2026-07-25-A13-OVERLAP-NELSON-CHAIN](#audit-2026-07-25-a13-overlap-nelson-chain) | A13 roadmap ordering of full OVERLAP, R-087 CORE, R-066 one-use, and Nelson | R-087 CORE is an exact variational equality, so a uniform full OVERLAP lower bound is already equivalent to the q=10/9 Nelson estimate; R-066 and complete temporal packet assembly are inputs inside/before OVERLAP, not a later implication |
 | [NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY](#ng-2026-07-25-a13-pure-quartic-cartan-homogeneity) | A13 complete production Cartan far atom controlled by a homogeneous pure-quartic payload alone | an exact production scalar ray has a nonzero frequency-32 linearised atom, so its squared far energy is order c^2 while the quartic payload is order c^4; lower-order background/control coefficient tails, model moments, or form constants cannot be deleted |
@@ -95,6 +97,64 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-global-unprojected-cartan-coefficient-ledger"></a>
+### NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER -- root-diagonal chaos defeats the global Sobolev relaxation
+
+**Failure mode:** Replace the relative coefficient projector in the exact
+Cartan trace by a full global Sobolev norm and claim the cutoff-uniform R-089
+bound (3.12) for some `s>0` on the full stated control class.
+
+**Evidence:** The exact chain rule gives `b=grad c`. Choose a deterministic
+control in one fixed active shell, a separate finite-low background, and the
+current root first Gaussian chaos. Gaussian-heat injectivity supplies a
+nonzero smoothed mixed Hessian; A1's two-sided order-four sharp-cube symbol
+gives
+
+`E||c_(j,t)||_(H^s)^2 >= K_s exp(-2t) 2^((2s-1)j)`.
+
+The R-089 weight `2^((1-2s)j)` cancels this shell power, and the gradient
+channel cancels identically. The current-root OU factor gives time integral
+`1/4`, so `E_(s,J)>=c_s(J-j_*)` for every `s>0`, while the fixed smooth
+control has uniform CM and terminal `L6` budgets. Primary and independent
+executables verify the exact exponent arithmetic and near-root support.
+
+**Consequence:** R-089 (3.12) is retired as a global cutoff-uniform target.
+The witness lies at coefficient frequency `j+O(1)` and is killed by
+`Q_(j,C-2)^coef` at fixed large gap. This does not refute R-089 (3.9), the
+exact conservative Cartan trace, projected CFAR, A13, or Sector A. The
+successor must retain the relative projector until after expectation and the
+root sum.
+
+<a id="audit-2026-07-25-a13-r089-rational-forest-disjointness"></a>
+### AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS -- reconstruct the Wick endpoint exactly once
+
+**Failure mode:** Call the R-089 branch switch conditionally covariance
+matched, or append a generic lower-chaos forest to an already unexpanded
+coefficient--Wick endpoint without an exact term map.
+
+**Evidence:** For `H=sigma(|G|>=1)`, both conditional means vanish but the
+conditional variances are
+
+`V_+=2.525135276160981...` and `V_-=0.291125094772793...`.
+
+Only their probability-weighted average is one. Separately, R-063 is an exact
+reconstruction identity; the scalar instance
+`G^2(G^2-1)=H_4+5H_2+2` shows that adding the lower chaoses to the literal left
+side double-counts. The complete local rational endpoint has the exact adapted
+expectation
+
+`-(35840/13689)c1 e phi(1)<0`,
+
+so no automatic forest, eta, Jensen, or small-heat positivity is available.
+
+**Consequence:** If `L:Q` denotes the full reconstructed product, its R-063
+forest is internal. If a declared top-chaos/Bony piece is used, define its
+complement by exact subtraction from the complete endpoint. R-066/R-070
+supply the heat-transported endpoint and R-079 gives its nonduplicating
+temporal decomposition; they are not generic additive repairs. The local sign
+fixture is not a full torus/A1 control counterexample, and the complete signed
+NEAR lower bound remains open.
 
 <a id="audit-2026-07-25-a13-r088-progressive-terminal-cm-bridge"></a>
 ### AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE -- the terminal CM bridge is globally progressive

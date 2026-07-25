@@ -325,27 +325,43 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   terminal-shell one-use ledger and extends R-088's pure-control quartic
   terminal bridge to the general progressive class. Summing all physical
   control shells before squaring also gives an exact first-order Cartan
-  Fourier trace and reduces direct integrated CFAR to the nonlinear
+  Fourier trace and proposed a reduction through the global nonlinear
   coefficient-tail energy (3.12). At `s=1/4` the quartic subledger has powers
   `5/16,9/16` and slack `1/8`, but an exact harmonic rules out deleting the
   lower-order coefficient tails. On the rational branch, the
   Taylor-coordinate conditional form is universally nonnegative under
   covariance matching iff `L>=0` and `B_T+2 eta I>=0`. The production ray has
-  `L/e=-1/432`, and a centered covariance-matched same-root fixture is
-  negative, so the complete heat/lower-chaos forest remains load-bearing.
+  `L/e=-1/432`, and a centered same-root fixture is negative before the
+  complete endpoint is assembled.
   Finally, R-087 CORE makes full OVERLAP exactly equivalent to the `q=10/9`
   Nelson estimate. Complete temporal packets and controlled-shell assembly
   must therefore occur inside/before full OVERLAP, not after it.
   Sector A remains open.
-  R-080--R-089 also expose the separate
+  R-090,
+  `A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`,
+  proves `b=grad c` and compresses the Cartan trace to one conservative
+  coefficient. It then falsifies the global unprojected cutoff-uniform
+  Sobolev relaxation R-089 (3.12) for every `s>0`: a fixed active-shell,
+  current-root first-chaos component contributes once per root. That witness
+  is root-diagonal and removed by the relative FAR projector, so projected
+  CFAR remains viable and open. R-090 also corrects the R-089 branch
+  conditioning (the two conditional variances are not one), proves the local
+  raw rational endpoint expectation
+  `-(35840/13689)c1 e phi(1)<0`, and enforces R-063 forest nonduplication.
+  The sufficient frontier is now `H_C` for projected Cartan FAR, `H_N` for
+  the complete nonduplicating signed rational/linear NEAR packet, and `H_A`
+  for progressive complete-packet assembly inside OVERLAP. These are
+  non-interchangeable obligations, not an iff decomposition. No gate status
+  flips; Sector A remains open.
+  R-080--R-090 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
   factorisation preserves the complete packet algebra, while R-089 removes
   terminal CM revisit multiplicity altogether. The remaining PROG input is
   the nonlinear complete-packet lower bound, uniformly over the R-087 core.
-  Controlled Cartan coefficient energy, complete same-root rational NEAR,
-  REG, and full OVERLAP remain. Once full OVERLAP is proved, R-087 CORE gives
+  Projected Cartan `H_C`, complete signed NEAR `H_N`, assembly `H_A`, REG,
+  and full OVERLAP remain. Once full OVERLAP is proved, R-087 CORE gives
   `q=10/9` Nelson directly.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
@@ -571,14 +587,16 @@ preserved in git/changelog rather than treated as current gates.
      is a registered no-go. Then apply
    R-089's global progressive covariance compression and Hilbert martingale
    ledger, not one-shot density. The pure-control quartic terminal bridge is
-   now valid on the full cylindrical-simple progressive class. For Cartan,
-   use the exact complete-cross-shell Fourier trace and prove its sole
-   nonlinear coefficient-tail energy (R-089 (3.12)); the exact harmonic no-go
-   forbids a homogeneous quartic-only replacement. For rational NEAR, prove
-   the complete residual (R-089 (5.11)) with endpoint square, backward heat,
-   and lower-chaos forest retained; eta, centering, and covariance matching
-   alone fail on the production same-root fixture. Assemble these estimates,
-   R-066 controlled-shell one-use, and all temporal companions inside a
+   now valid on the full cylindrical-simple progressive class. Apply R-090:
+   for Cartan, use `b=grad c` and prove projected `H_C` with the relative
+   coefficient projector retained through expectation and the root sum; do
+   not use the falsified global unprojected ledger R-089 (3.12). For
+   rational/linear NEAR, prove `H_N` from one full reconstructed Wick endpoint
+   and the exact nonduplicating R-079 temporal decomposition after declared
+   paid subtraction; do not append a generic R-063 forest or reuse the
+   incorrect conditional-covariance attribution. Then prove `H_A` by
+   assembling `H_C`, `H_N`, R-066 controlled-shell one-use, R-079 low/future
+   feedback, and all temporal companions inside a
    cutoff-, partition-, and revisit-uniform full OVERLAP lower bound on the
    R-087 cylindrical-simple core. Then invoke R-087 CORE directly: full
    OVERLAP is already equivalent to the q=10/9 Nelson estimate. Sector A

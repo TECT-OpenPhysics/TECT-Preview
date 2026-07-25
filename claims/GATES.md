@@ -1171,24 +1171,42 @@ class. This does not close the nonlinear complete packet.
 
 For controlled Cartan CFAR, summing every physical control shell before the
 square yields one exact first-order operator and the full-cross-shell Fourier
-trace. The far output is bounded by two nonlinear coefficient tails, reducing
-the gate exactly to R-089 (3.12). The `s=1/4` quartic subledger has powers
+trace. R-089 proposed the global unprojected coefficient ledger (3.12). The
+`s=1/4` quartic subledger has powers
 `5/16,9/16` and slack `1/8`, but an exact frequency-32 harmonic proves that a
 homogeneous quartic-only bridge cannot pay the lower-order coefficient
 channels. For rational NEAR, the Taylor-coordinate conditional identity gives
 universal covariance-matched positivity iff `L>=0` and
-`B_T+2 eta I>=0`. The production ray has `L/e=-1/432` and a centered
-covariance-matched same-root fixture is negative. Hence the complete endpoint
-square, backward heat, and lower-chaos forest residual R-089 (5.11) remains
-load-bearing.
+`B_T+2 eta I>=0`. The production ray has `L/e=-1/432`; its same-root switch
+has a negative expectation but is covariance matched only unconditionally.
 
 R-089 also corrects the final implication order. R-087 CORE says full
 OVERLAP is exactly equivalent to the `q=10/9` Nelson bound. R-066
 controlled-shell one-use and every temporal packet are therefore inputs to
 the full OVERLAP lower bound, not a separate step after it. The current gate
-is narrowed to the nonlinear Cartan coefficient energy and complete same-root
-rational heat/forest residual, followed by their assembly inside full
-OVERLAP. No gate status flips.
+is narrowed by R-090 as follows. The chain rule gives `b=grad c`, compressing
+the exact Cartan trace to one conservative coefficient. A fixed active-shell,
+current-root first-chaos witness proves that the global unprojected R-089
+ledger (3.12) diverges linearly for every `s>0`, but the relative FAR
+projector removes that witness. The Cartan obligation `H_C` is therefore the
+expectation-inside projected coefficient-tail estimate with
+`Q_(j,C-2)^coef` retained through the root sum.
+
+For rational/linear NEAR, R-063 lower chaoses reconstruct the literal Wick
+product and may not be appended to an already complete endpoint. R-066/R-070
+supply the heat-transported endpoint and R-079 gives its nonduplicating
+temporal decomposition. The obligation `H_N` is a complete signed NEAR lower
+bound with one reconstructed endpoint plus explicitly mapped native heat,
+temporal, paid, linear, and low companions. The local raw rational endpoint
+has exact expectation `-(35840/13689)c1 e phi(1)<0`, so no automatic forest,
+eta, Jensen, or small-heat positivity replaces that bound.
+
+Finally `H_A` must assemble the complete packet uniformly in cutoff,
+partition, and revisit inside full OVERLAP, preserving R-079 future feedback
+and R-080 low/revisit cancellation. `H_C`, `H_N`, and `H_A` are
+non-interchangeable sufficient obligations, not a pairwise-independence or iff
+theorem. R-090 changes the target, not the gate status. Projected CFAR,
+complete signed NEAR, assembly, OVERLAP, and Nelson remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -1202,7 +1220,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
-sharpened by R-081--R-089
+sharpened by R-081--R-090
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1212,8 +1230,11 @@ progressive controls. A same-range revisit can make the separate R-079
 conditional-low loss quartic while final charge is fixed and control cost is
 quadratic; cancellation, if present, must occur in the complete later packet.
 This is a method and scope obstruction, not a counterexample to the full
-action. The gate is logically after the regular FAR/NEAR packet bound and
-before controlled-shell one-use and `q=10/9` Nelson synthesis.
+action. R-090 names this complete recombination obligation `H_A`; it retains
+the regular projected FAR obligation `H_C`, the complete signed NEAR
+obligation `H_N`, R-066 one-use, and all temporal/low companions inside full
+OVERLAP. It is not bookkeeping after separately completed pieces. Once full
+OVERLAP is proved, R-087 CORE gives `q=10/9` Nelson directly.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

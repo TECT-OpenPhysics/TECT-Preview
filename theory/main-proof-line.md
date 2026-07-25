@@ -162,17 +162,27 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   restriction from the pure-control quartic terminal bridge. Its Hilbert
   martingale ledger spends the terminal coordinate once despite range overlap
   or revisit. Summing every physical shell before squaring gives the exact
-  complete-cross-shell Cartan Fourier trace and reduces direct CFAR to the
-  nonlinear coefficient-tail energy (3.12), still open. The `s=1/4` ledger
+  complete-cross-shell Cartan Fourier trace and proposed the global nonlinear
+  coefficient-tail energy (3.12). The `s=1/4` ledger
   has slack `1/8`, while an exact harmonic rules out a homogeneous
   quartic-only replacement. The rational Taylor-coordinate criterion and the
-  production value `L/e=-1/432` show that eta and covariance matching cannot
-  replace the complete same-root heat/forest residual (5.11). Full OVERLAP is
+  production value `L/e=-1/432` show that eta alone cannot replace the
+  complete same-root endpoint. Full OVERLAP is
   exactly equivalent through R-087 CORE to `q=10/9` Nelson; R-066 one-use and
-  all complete temporal packets therefore belong inside/before OVERLAP. The
-  remaining chain is coefficient-tail energy plus the complete same-root
-  rational residual, REG, their assembly into full OVERLAP, R-087 CORE, and
-  Nelson.
+  all complete temporal packets therefore belong inside/before OVERLAP.
+  R-090,
+  A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY,
+  proves `b=grad c` and compresses the trace to one conservative coefficient.
+  It falsifies only the global unprojected R-089 ledger (3.12) for every
+  `s>0`; the root-diagonal witness is removed by the relative FAR projector,
+  so projected CFAR remains open. It corrects the branch conditioning,
+  proves the local raw rational endpoint sign
+  `-(35840/13689)c1 e phi(1)<0`, and enforces R-063 forest nonduplication with
+  R-079 as the canonical temporal decomposition. The remaining chain is
+  projected Cartan `H_C`, complete signed rational/linear NEAR `H_N`,
+  progressive assembly `H_A` inside full OVERLAP, R-087 CORE, and Nelson.
+  These are non-interchangeable sufficient obligations, not an iff
+  decomposition.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

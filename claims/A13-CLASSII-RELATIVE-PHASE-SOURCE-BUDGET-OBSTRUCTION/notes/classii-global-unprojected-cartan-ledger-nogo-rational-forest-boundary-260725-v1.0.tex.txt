@@ -1,0 +1,622 @@
+% Title: Global unprojected Cartan coefficient-ledger no-go and rational forest boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT/EXECUTED BOUNDARY; CONSERVATIVE CARTAN COMPRESSION, GLOBAL UNPROJECTED LEDGER NO-GO, RATIONAL ENDPOINT SIGN, AND FOREST BOOKKEEPING CLOSED; PROJECTED CFAR, COMPLETE SIGNED NEAR, ASSEMBLY, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY
+% Ledger: R-090
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-089 reduced the controlled Cartan contribution to coefficient tails and
+proposed the global Sobolev ledger (3.12).  It also described a rational
+same-root residual by appending a generic backward-heat and lower-chaos
+forest to a Taylor/Wick packet.  This note stress-tests both steps before
+they are used in the full progressive assembly.
+
+Four conclusions are proved.
+\begin{enumerate}
+\item The two Cartan coefficients of R-089 are not independent:
+$b_{A,j}=\nabla c_{A,j}$.  Their Fourier multipliers recombine exactly to
+$iq\widehat c(q-p)$.  Thus the complete controlled Cartan trace is a single
+conservative coefficient trace.
+\item The cutoff-uniform, unprojected global Sobolev ledger R-089 (3.12) is
+false for every $s>0$ in the pinned sharp-cube/A1 setting.  A fixed active
+control shell produces a current-root first Gaussian chaos whose contribution
+is bounded below once per root.  The witness remains root-diagonal and is
+removed by the relative FAR projector, so it does not refute R-089 (3.9) or
+controlled Cartan CFAR.
+\item The R-089 switch is centered and covariance matched only before
+conditioning, not conditionally on its branch event.  More strongly, the
+complete local scalar raw rational endpoint has an exact negative adapted
+fixture.  This rules out automatic algebraic positivity of the local endpoint,
+but not Cameron--Martin or sextic absorption and not the full torus packet.
+\item R-063 lower chaoses reconstruct the literal coefficient--Wick product;
+they are not an additional physical term.  The rational successor must begin
+from the complete endpoint and use the nonduplicating R-079 temporal
+decomposition.  Three non-interchangeable proof obligations remain: projected
+Cartan FAR, complete signed NEAR, and progressive assembly inside OVERLAP.
+\end{enumerate}
+
+The host claim stays T4.  This note proves neither the projected coefficient
+tail, the complete signed rational/linear NEAR form, REG, progressive assembly,
+uniform OVERLAP, R-066 one-use in that assembly, Nelson, an interacting measure,
+nor Sector-A closure.  It does not invalidate R-089's progressive covariance
+compression, exact Fourier trace, quartic terminal lemma, or conditional
+Taylor algebra.
+
+The load-bearing authorities are A1, R-063, R-066/R-070, R-078, R-079,
+R-084, R-086, and R-089.  A1 supplies the two-sided order-four root symbol on
+the sharp cube.  R-063 supplies exact Wick reconstruction.  R-079 supplies the
+complete-current temporal identity.  R-086 fixes the paid coefficient-dominant
+orientations.  No open A11 theorem is used; only its already accepted
+finite-cutoff algebra is inherited.
+
+\section{Exact conservative Cartan compression}
+
+Use the R-089 notation
+\[
+ Z_j^-=w_j+A^{(\ell)},\qquad
+ a^{[j]}=A^{(j)}-A^{(\ell)},\qquad Z_j^+=Z_j^-+a^{[j]},
+ \tag{2.1}
+\]
+and, for a production map $\Phi=\Phi_{A,j}$,
+\[
+ c_{A,j}=\Phi(Z_j^+)-\Phi(Z_j^-).
+ \tag{2.2}
+\]
+R-089 defined
+\[
+ \begin{aligned}
+ b_{A,j,i}={}&[D\Phi(Z_j^+)-D\Phi(Z_j^-)]^T\partial_iZ_j^-\\
+ &+D\Phi(Z_j^+)^T\partial_i a^{[j]}.
+ \end{aligned}
+ \tag{2.3}
+\]
+
+\subsection*{Theorem 2.1 (conservative coefficient identity)}
+
+At every finite cutoff and positive floor,
+\[
+ \boxed{b_{A,j,i}=\partial_i c_{A,j},\qquad
+ L_{A,j}v=\nabla(c_{A,j}^Tv).}
+ \tag{2.4}
+\]
+If $P_t^{(j)}$ is the current-root Ornstein--Uhlenbeck semigroup and
+$c_{A,j,t}=P_t^{(j)}c_{A,j}$, then
+\[
+ b_{A,j,t,i}=\partial_i c_{A,j,t}.
+ \tag{2.5}
+\]
+
+\emph{Proof.}
+Differentiate (2.2).  The two chain-rule terms are exactly (2.3), with no
+remainder.  Substitution in the R-089 first-order operator gives the second
+identity.  Spatial derivatives commute with the probability-space OU
+semigroup, proving (2.5). \hfill$\square$
+
+For a root covariance eigenvector
+$v_{p,\mu}=\sqrt{\lambda_{j,p}}e^{ipx}e_\mu$ and output $q$, put $r=q-p$.
+Equation (2.5) gives
+\[
+ \widehat b_{A,j,t,i}(r)+ip_i\widehat c_{A,j,t}(r)
+ =ir_i\widehat c_{A,j,t}(r)+ip_i\widehat c_{A,j,t}(r)
+ =iq_i\widehat c_{A,j,t}(r).
+ \tag{2.6}
+\]
+Therefore R-089 (3.7) sharpens to the exact one-coefficient identity
+\[
+ \boxed{
+ \|\Pi_mL_{A,j,t}\Gamma_j^{1/2}\|_{\rm HS}^2
+ =\sum_{\mu,p}\lambda_{j,p}\sum_q|\pi_m(q)|^2|q|^2
+ |\widehat c_{A,j,t}(q-p)^Te_\mu|^2.}
+ \tag{2.7}
+\]
+This equality is unconditional and keeps every physical-shell cross term.
+
+Under the pinned LP convention
+\[
+ |\pi_m|\le1,\qquad |q|_\infty\le2^{m+1},
+ \tag{2.8}
+\]
+one has $|q|^2\le12\,2^{2m}$.  With
+$\Lambda_{0,j}\le\kappa_0 2^{-j}$ and the R-084 prefactor $3/(40P)$,
+\[
+ \boxed{
+ S_C^{\rm ctrl}\le {9\kappa_0\over10P}
+ \sum_{A,j}\int_0^\infty e^{-2t}2^{-j}
+ \sum_{m\ge j+C}2^{2m}
+ \mathbb E\|\widetilde\Pi_m c_{A,j,t}\|_2^2dt.}
+ \tag{2.9}
+\]
+The constant $9/10$ is conditional on (2.8); the exact $q$-weighted trace
+(2.7) is not.  Formula (2.9) is the corrected one-coefficient localized CFAR
+target.
+
+\section{The global unprojected Sobolev ledger fails}
+
+By (2.4), the R-089 quantity (3.11) is exactly
+\[
+ \begin{aligned}
+ \mathfrak E_s(J)=\sum_{A,j\le J}\int_0^\infty e^{-2t}\mathbb E\big[&
+ \kappa_0 2^{-(2s+1)j}\|c_{A,j,t}\|_{\dot H^{s+1}}^2\\
+ &+\kappa_1 2^{(1-2s)j}\|c_{A,j,t}\|_{\dot H^s}^2\big]dt.
+ \end{aligned}
+ \tag{3.1}
+\]
+
+\subsection*{Theorem 3.1 (uniform no-go for every positive exponent)}
+
+For every $s>0$, there is a fixed finite-energy cylindrical-simple
+deterministic control and constants $c_s>0$, $j_*>0$ such that
+\[
+ \boxed{\mathfrak E_s(J)\ge c_s(J-j_*)\quad(J\ge j_*).}
+ \tag{3.2}
+\]
+For the same fixture,
+\[
+ \sup_J\{1+\mathbb E[X_J^{1/2}Y_J^{1/2}]\}<\infty.
+ \tag{3.3}
+\]
+Consequently no $s>0$ makes the cutoff-uniform claim R-089 (3.12) true for
+the full stated control class.
+
+\emph{Proof.}
+First isolate a genuinely nonlinear production direction.  On a normalized
+eigenray,
+\[
+ F_e(x)={x^3\over e+x^2},\qquad
+ F_e''(x)=-{2ex(x^2-3e)\over(e+x^2)^3},\qquad F_1''(1)={1\over2}.
+ \tag{3.4}
+\]
+This is only an unsmoothed nonaffinity witness.  Let $P_{C_\infty}$ denote
+Gaussian convolution by all other roots and the accepted target heat.
+Gaussian convolution is injective because its Fourier multiplier never
+vanishes.  Hence $P_{C_\infty}F_A$ is not affine.  Choose a finite-low
+background $z_0$ and directions $u,h$ so that
+\[
+ M_\infty=D^2(P_{C_\infty}F_A)(z_0)[u,h]\ne0.
+ \tag{3.5}
+\]
+Finite-cutoff covariance convergence gives $|M_j|\ge m_*>0$ for all large
+$j$.  No claim is made that the particular point in (3.4) survives heat;
+(3.5) is the load-bearing generic choice.
+
+Next choose a fixed deterministic control in one active shell
+$k_0\ge j_0$, not solely in the subtracted finite-low bucket:
+\[
+ a^{[j]}(x)=\delta a_0(x)u\qquad(j\ge k_0),
+ \tag{3.6}
+\]
+where $a_0$ is a real trigonometric mode and $\delta>0$ is fixed and small.
+The finite-low background producing $z_0$ is kept separately.  Thus the same
+active secant persists once in every later root coefficient while the control
+CM and spatial costs do not grow with $J$.
+
+Whiten the current root $g_j^h$.  Project $c_{A,j}$ onto the first Wiener
+chaos of this root and onto constants in every other root.  Gaussian
+integration by parts and a Taylor expansion in $\delta$ give
+\[
+ \operatorname{Proj}^{(1)}_{g_j^h}c_{A,j}
+ =\delta M_j a_0g_j^h+O(\delta^2)
+ \tag{3.7}
+\]
+uniformly for large $j$.  Choose $\delta$ so the error is at most half of the
+main coefficient.  The current-root semigroup multiplies (3.7) by $e^{-t}$;
+this is distinct from the injective target heat used in (3.5).
+
+The A1 two-sided order-four symbol and the sharp-cube convention provide an
+interior annular subset $S_j^\circ$ of positive density for which
+\[
+ \sum_{p\in S_j^\circ}\lambda_{j,p}\ge\underline\kappa,2^{-j}.
+ \tag{3.8}
+\]
+For a real field, retain one member of each antipodal pair and its cosine or
+sine coordinate; fixed multiplication by $a_0$ causes only finitely many
+collisions, and deleting them preserves positive density.  Orthogonal chaos
+projection and (3.7)--(3.8) then imply
+\[
+ \mathbb E\|c_{A,j,t}\|_{\dot H^s}^2
+ \ge K_s\delta^2e^{-2t}2^{(2s-1)j}.
+ \tag{3.9}
+\]
+Since $b=\nabla c$, the other channel obeys the corresponding lower bound
+$K_{s+1}\delta^2e^{-2t}2^{(2s+1)j}$.
+
+Both weights in (3.1) cancel the shell powers:
+\[
+ 2^{(1-2s)j}2^{(2s-1)j}=1,
+ \qquad
+ 2^{-(2s+1)j}2^{(2s+1)j}=1.
+ \tag{3.10}
+\]
+Moreover
+$\int_0^\infty e^{-2t}e^{-2t}dt=1/4$.  Summation over large roots proves
+(3.2).  Finally the fixed smooth control has cutoff-independent CM cost;
+the A1 order-four Gaussian shell exponent is geometrically summable, giving
+uniform point moments and hence a uniform terminal $L^6$ moment.  This proves
+(3.3) and the contradiction. \hfill$\square$
+
+The theorem fires
+\url{NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER}.
+Its scope is exact: the bad coefficient frequencies lie at $j+O(1)$.
+For a sufficiently large fixed gap, $Q^{\rm coef}_{j,C-2}$ removes this
+selected component.  The numerical FFT fixture verifies only that component's
+near-root support; it does not assert that the complete nonlinear coefficient
+has zero far tail.  Thus (3.2) falsifies the unprojected relaxation (3.12),
+not the projected estimate (3.9).
+
+The correct successor is the expectation-inside localized estimate
+\[
+ \sum_{A,j}\int_0^\infty e^{-2t}2^{-j}
+ \sum_{m\ge j+C}2^{2m}
+ \mathbb E\|\widetilde\Pi_mP_t^{(j)}c_{A,j}\|_2^2dt
+ \lesssim2^{-2\beta C}
+ \{1+\mathbb E[X^{1/2}Y^{1/2}]\}
+ \tag{3.11}
+\]
+for some $\beta>0$, with the relative projector retained until after the root
+sum.  An elementary excess-tail extraction beginning five coefficient shells
+above the root is available, but the uniform bound on that excess ledger is
+still open.
+
+\section{Rational conditioning correction and raw endpoint sign}
+
+Let $G\sim N(0,1)$, $Q=G^2-1$, and
+$E_+=\{|G|\ge1\}$ with probabilities
+$p_+=2\overline\Phi(1)$ and $p_-=1-p_+$.  For
+$\mathcal H=\sigma(E_+)$, symmetry gives conditional mean zero, but
+\[
+ V_+=1+{2\varphi(1)\over p_+}=2.525135276160981\ldots,
+ \qquad
+ V_-=1-{2\varphi(1)\over p_-}=0.291125094772793\ldots.
+ \tag{4.1}
+\]
+Only $p_+V_++p_-V_-=1$.  Therefore R-089 (5.9) is unconditionally centered
+and covariance matched; it does not satisfy the conditional $V=\Gamma$
+hypothesis of R-089 Theorem 5.1.  This attribution correction is included in
+\url{AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS}.
+
+There is nevertheless a stronger local endpoint statement that needs no
+Taylor attribution.  Put
+\[
+ b_e(u)=4c_1\left(u-{5\over9}{u^3\over u^2+e}\right)^2,
+ \quad z=\sqrt e,
+ \quad a=\sqrt e\,C(G),
+ \tag{4.2}
+\]
+where $C=-1/2$ on $Q\ge0$ and $C=+1/2$ on $Q<0$, and take $Da=0$ in this
+local scalar fixture.  Direct arithmetic gives
+\[
+ {b_e(z)\over4c_1e}={169\over324},\qquad
+ {b_e(z-\sqrt e/2)\over4c_1e}={16\over81},\qquad
+ {b_e(z+\sqrt e/2)\over4c_1e}={144\over169}.
+ \tag{4.3}
+\]
+Hence
+\[
+ \Delta W_R={1\over2}[b_e(z+a)-b_e(z)]Q<0
+ \quad\hbox{for }Q\ne0,
+ \tag{4.4}
+\]
+and, using
+$\mathbb E[Q\mathbf1_{Q\ge0}]=2\varphi(1)$,
+\[
+ \boxed{
+ \mathbb E\Delta W_R
+ =-{35840\over13689}c_1e\,\varphi(1)
+ =-0.633518209275045\ldots,c_1e.}
+ \tag{4.5}
+\]
+The symbolic $c_1$ dependence in (4.5) is essential.  A decimal multiple of
+$e$ alone is valid only after separately pinning $c_1$.
+
+For the smooth bounded even rule
+\[
+ C_M(G)=-{1\over2}\tanh(M(G^2-1)),
+ \tag{4.6}
+\]
+write
+$h(s)=s(9+4s^2)/[9(1+s^2)]$.  Since
+\[
+ h'(s)={9+3s^2+4s^4\over9(1+s^2)^2}>0\qquad(s>0),
+ \tag{4.7}
+\]
+the integrand in (4.4) stays negative for every $M>0$.  Dominated convergence
+recovers (4.5).  The independent executable checks $M=2,4,8$ numerically;
+the universal statement follows from (4.7), not from those samples.
+
+This is a complete local scalar raw endpoint, containing its current square,
+Wick trace, and exact R-063 reconstruction once.  It is not a torus/A1
+strict-past control counterexample.  It omits realization as $T_Jv$, global
+$c=Da$, spatial derivative channels, six-component frame, regulator, paid
+subtractions, low objects, and exact CM/sextic costs.  Those positive costs
+can absorb a fixed local loss.  Small future covariance preserves the local
+negative expectation by continuity, but no production covariance threshold
+is claimed.
+
+\section{Forest nonduplication and canonical rational target}
+
+R-063's lower chaoses are an identity reconstructing a literal Wick product,
+not extra energy.  The scalar diagnostic
+\[
+ G^2(G^2-1)=H_4(G)+5H_2(G)+2
+ \tag{5.1}
+\]
+makes the rule visible: if the left side is already present, adding
+$5H_2+2$ again changes the endpoint.  Consequently R-089's undefined
+$\mathcal F$ is unsafe.  If $L:Q$ denotes the complete R-063 reconstructed
+product, no R-063 forest is appended.  If it denotes a declared top-chaos or
+Bony piece, its complement must be defined exactly by subtraction from the
+complete endpoint.  This is a bookkeeping audit, not a claim that every
+possible interpretation of $\mathcal F$ double-counts.
+
+The canonical rational row is
+\[
+ C_R(z)=2\sqrt{c_1}\,g(z)^T,
+ \qquad B_R(z)=C_R(z)^TC_R(z),
+ \tag{5.2}
+\]
+with current and heat-transported endpoint
+\[
+ J_R(H)_i=C_R(U+H)(D_iU+D_iH),
+ \tag{5.3}
+\]
+\[
+ W_R(H)={1\over2}\|J_R(H)\|^2
+ -{1\over2}\sum_i\int B_R(U+H):\Gamma_{J,i}.
+ \tag{5.4}
+\]
+For the R-079 fields $A^*,A^0,A^{(j)}$ and
+$d_j=P_j-P_{j-1}$, define
+\[
+ f_j^R=d_j[J_R(A^{(j)})-J_R(A^0)],\qquad
+ i_j^R=d_j[J_R(A^*)-J_R(A^{(j)})].
+ \tag{5.5}
+\]
+The rational projection of the R-079 identity is
+\[
+ \boxed{
+ \mathbb E[W_R(A^*)-W_R(A^0)]
+ =L_\ell^R+\sum_j(F_j^R+I_j^R),}
+ \tag{5.6}
+\]
+where
+\[
+ \begin{aligned}
+ I_j^R={}&\mathbb E\left[\langle d_jJ_R(A^{(j)}),i_j^R\rangle
+ +{1\over2}\|i_j^R\|^2\right]\\
+ &-{1\over2}\mathbb E\sum_i\int
+ [B_R(A^*)-B_R(A^{(j)})]:\Delta\Gamma_{j,i}.
+ \end{aligned}
+ \tag{5.7}
+\]
+The current difference contains both coupled channels
+\[
+ \begin{aligned}
+ J_R(A^*)-J_R(A^{(j)})={}&
+ [C_R(U+A^*)-C_R(U+A^{(j)})](DU+DA^{(j)})\\
+ &+C_R(U+A^*)D(A^*-A^{(j)}).
+ \end{aligned}
+ \tag{5.8}
+\]
+Thus coefficient Jensen defect, derivative feedback, square, and trace may
+not be estimated as unrelated additions.
+
+After the canonical R-086 paid subtraction, the remaining rational target is
+\[
+ \boxed{
+ L_\ell^R+\sum_j(F_j^R+I_j^R)
+ -\mathbb E[R_{\le,R}(A^*)-R_{\le,R}(A^0)].}
+ \tag{5.9}
+\]
+The missing identification is to prove that the R-086 coefficient-dominant
+Bony projection commutes with this R-079 decomposition without duplication.
+R-066/R-070 supply the already heat-transported endpoint, while R-079
+decomposes it temporally; they are not independent terms to append to one
+another.
+
+\section{Complete packet and the remaining proof architecture}
+
+At the full endpoint, the complete unpaid packet is the exact identity
+\[
+ \begin{aligned}
+ {\cal U}_{J,\pi}:={}&\mathbb E B_{\rm alg}^{>}(A^0)
+ +L_\ell+\sum_k(F_k+I_k)\\
+ &-\mathbb E[R_{\le}(A^*)-R_{\le}(A^0)]
+ =\mathbb E B_{\rm alg}^{>}(A^*).
+ \end{aligned}
+ \tag{6.1}
+\]
+The R-080 revisit fixture shows why no isolated low-object inequality is
+available: its separate low loss is of order $-ct^4/2+O(t^3)$ while the
+displayed costs and trace are $O(t^2)$, and cancellation can occur only in
+the complete packet.
+
+A sufficient modular route now has three non-interchangeable proof
+obligations.
+\begin{description}
+\item[$H_C$ (projected Cartan FAR).]
+Prove (3.11), or the exact $q$-weighted version (2.7), with
+$Q^{\rm coef}_{j,C-2}$ retained and a cutoff-uniform far-gap gain.
+\item[$H_N$ (complete signed NEAR).]
+Bound the full reconstructed rational and linear Pauli--Fierz NEAR packet,
+with the literal Wick endpoint present once and all endpoint-square, native
+heat, temporal, paid, and low companions explicitly mapped.
+\item[$H_A$ (progressive assembly).]
+Recombine the complete packet uniformly in cutoff, partition, and revisit,
+preserving the R-079 low and future-feedback cross terms and every one-use
+budget inside full OVERLAP.
+\end{description}
+
+These are not asserted to be a pairwise-logically-independent theorem.
+$H_C$ does not control the same-root rational sign defect.  A componentwise
+$H_N$ does not presently imply $H_C$.  Conversely, cross-cancellation in a
+future full endpoint proof could close $H_A$ without proving the two pieces
+separately.  What is proved is the non-implication needed for workflow:
+closing one named component does not by itself establish complete assembly.
+
+The remaining arithmetic is compatible but not a proof.  With the already
+reserved charges,
+\[
+ {27\over100}-{6\over100}-{15\over100}={3\over50},
+ \qquad
+ {1\over2(11/10)}-{9\over20}={1\over220},
+ \qquad
+ {10\over9}-{11\over10}={1\over90}.
+ \tag{6.2}
+\]
+Thus the sextic, control, and exponent ledgers have positive formal margins.
+No estimate in $H_C$, $H_N$, or $H_A$ is inferred from those margins.
+
+\section{Attempt and evidence map}
+
+\begin{enumerate}
+\item \textbf{Two Cartan coefficient tails -- superseded.}
+The chain rule proves $b=\nabla c$ and the exact conservative trace (2.7).
+This is a successful simplification.
+\item \textbf{Global Sobolev extraction -- falsified.}
+The fixed active-shell/current-root first-chaos witness makes every positive
+$s$ critical and gives linear root accumulation.
+\item \textbf{Past-root witness -- unnecessary branch.}
+A past-root chaos would have OU time integral $1/2$; the registered proof uses
+the current root, whose $e^{-t}$ attenuation gives $1/4$ and matches the
+executable.
+\item \textbf{Fixed unsmoothed Hessian -- insufficient.}
+$F_1''(1)=1/2$ detects nonaffinity but does not survive target heat by fiat.
+Injectivity of Gaussian convolution supplies the generic smoothed background
+and directions used in (3.5).
+\item \textbf{Projected coefficient tail -- viable and open.}
+The no-go witness is root-diagonal and the FAR projection deletes it.  No
+counterexample to (2.9) or (3.11) was found.
+\item \textbf{Conditional covariance match -- corrected.}
+The two branch variances are (4.1), although their weighted average is one.
+\item \textbf{Taylor-fragment positivity -- failed.}
+R-089 already found a negative Taylor direction; (4.5) strengthens the local
+statement to the unexpanded raw scalar endpoint.
+\item \textbf{Automatic forest repair -- falsified as a method.}
+R-063 reconstructs rather than supplements the product.  A generic extra
+forest is not a well-defined cancellation mechanism.
+\item \textbf{Canonical temporal recombination -- identified.}
+Equations (5.2)--(5.9) give the nonduplicating rational successor; its bound
+is not proved.
+\item \textbf{REG/OVERLAP shortcut -- rejected.}
+Projected FAR and signed NEAR do not by themselves pay low/revisit assembly.
+The sufficient roadmap is $H_C$, $H_N$, then $H_A$ inside OVERLAP.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} $b=\nabla c$ holds only before OU averaging.
+\textbf{DISMISSED.}  Spatial differentiation commutes with the root OU
+semigroup, so (2.5) is exact.
+\item \textbf{Objection:} the $9/10$ prefactor is universal.
+\textbf{VALID WITH MITIGATION.}  It uses the pinned upper LP support (2.8).
+The exact trace (2.7) remains valid without that convention.
+\item \textbf{Objection:} the control witness lies only in
+$A^{(\ell)}$ and cancels from the secant.
+\textbf{DISMISSED.}  The secant direction occupies a fixed active shell
+$k_0\ge j_0$ and persists in $a^{[j]}$ for all later roots.  The finite-low
+field is a separate background.
+\item \textbf{Objection:} $F_1''(1)=1/2$ proves the smoothed chaos coefficient
+is nonzero at the same point.  \textbf{UPHELD AND REPAIRED.}  The proof does
+not make that inference; Gaussian-heat injectivity gives some generic
+$z_0,u,h$, followed by finite-cutoff convergence.
+\item \textbf{Objection:} the time factor should be $1/2$.
+\textbf{DISMISSED FOR THE REGISTERED FIXTURE.}  The witness is current-root
+first chaos, so the squared OU attenuation supplies another $e^{-2t}$ and
+the integral is $1/4$.  A past-root construction would indeed use $1/2$.
+\item \textbf{Objection:} real Fourier antipodes can cancel the lower bound.
+\textbf{DISMISSED.}  Select one cosine/sine representative from each pair and
+delete the finite collision set generated by the fixed multiplier.  A
+positive-density interior subset remains.
+\item \textbf{Objection:} Theorem 3.1 disproves controlled Cartan CFAR.
+\textbf{DISMISSED.}  It disproves only the stronger unprojected Sobolev
+relaxation.  Its selected component is annihilated by the relative FAR
+projector; the complete projected tail stays open.
+\item \textbf{Objection:} the switch satisfies the conditional theorem because
+$\mathbb EG^2=1$.  \textbf{DISMISSED.}  Conditional variances are (4.1).
+With the trivial sigma-field the coefficient switch is not measurable.
+\item \textbf{Objection:} the raw endpoint is already a full A13
+counterexample.  \textbf{DISMISSED.}  It is a local scalar sign fixture and
+omits the global control realization, spatial packet, paid terms, CM, sextic,
+and low objects.
+\item \textbf{Objection:} R-063 lower chaoses may always be appended as a
+positive forest.  \textbf{DISMISSED.}  They reconstruct the product.  Adding
+them to an unexpanded endpoint gives the explicit double count (5.1).
+\item \textbf{Objection:} $H_C+H_N$ establishes progressive OVERLAP.
+\textbf{DISMISSED.}  R-079 future feedback and R-080 low/revisit cancellation
+remain in $H_A$.  The modular route is sufficient architecture, not an iff.
+\end{enumerate}
+
+\section{Executable verification and no-overclaim statement}
+
+The primary executable checks the conservative Fourier identity, LP
+constant, exact shell-power cancellation, current-root OU integral, rational
+fractions, conditional variances, Hermite reconstruction, R-079 polarization,
+and budget arithmetic.  The independent executable shares no imports with it;
+it uses explicit shell loops, random complex Fourier frequencies,
+high-precision Gaussian integration, smooth endpoint quadrature,
+Gauss--Hermite projection, and separate packet polarization.
+Run
+\begin{verbatim}
+python codes/foundations/a13_classii_cartan_excess_tail_rational_forest_nonduplication_boundary_verify.py
+\end{verbatim}
+
+R-090 proves the conservative single-coefficient trace, falsifies only the
+global unprojected cutoff-uniform ledger R-089 (3.12), corrects the conditional
+covariance attribution, proves a local raw rational endpoint sign no-go, and
+repairs forest/temporal bookkeeping.  Projected CFAR, complete signed NEAR,
+REG, progressive assembly/full OVERLAP, one-use in that assembly, Nelson,
+measure construction, and Sector A remain open.  Tier stays T4; no promotion
+is made.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-
+           LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY
+Ledger:                  R-090.
+Precise statement:       The complete controlled Cartan trace compresses
+                         exactly to one conservative coefficient. The
+                         global unprojected Sobolev ledger proposed in
+                         R-089 (3.12) fails for every s>0 by a fixed active-
+                         shell/current-root first-chaos witness, while the
+                         relative FAR target survives. The R-089 branch is
+                         not conditionally covariance matched; the local
+                         raw rational endpoint is strictly negative. R-063
+                         forests reconstruct once and R-079 is the canonical
+                         nonduplicating temporal assembly.
+Scope:                   Finite cutoff, positive floor, pinned sharp-cube/A1
+                         conventions. The no-go concerns the unprojected
+                         ledger, not projected CFAR or the full A13 form.
+Dependencies:            A1; R-063; R-066/R-070; R-078; R-079; R-084;
+                         R-086; R-089.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:    python codes/foundations/a13_classii_cartan_excess_
+                         tail_rational_forest_nonduplication_boundary_verify.py
+Expected output:         Primary 57/57; independent 52/52; integrated
+                         152/152; aggregate 261/261 PASS; exit zero.
+Audit:                   AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-
+                         DISJOINTNESS.
+Negative result:         NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-
+                         COEFFICIENT-LEDGER.
+Falsification gate:      Failure of chain-rule/Fourier compression, sharp-
+                         cube/A1 shell scaling, chaos accumulation, rational
+                         arithmetic, forest reconstruction, packet
+                         polarization, evidence hashes, PDF, or counts.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No projected Cartan CFAR, complete signed NEAR,
+                         REG, progressive assembly, full OVERLAP, one-use,
+                         Nelson, interacting measure, removal limit, or
+                         Sector-A closure.
+Next required action:    Prove H_C with relative projection retained; define
+                         and prove the nonduplicating complete signed H_N;
+                         then prove H_A inside full OVERLAP.
+\end{verbatim}
+\endgroup

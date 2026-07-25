@@ -414,7 +414,28 @@ endpoint theorem.
     before/inside OVERLAP. Nonlinear Cartan coefficient energy, the complete
     same-root rational residual, REG, OVERLAP, Nelson, and Sector A remain
     open. R-090 should attack the coupled coefficient/forest frontier without
-    re-proving the terminal compression lemma.
+    re-proving the terminal compression lemma. R-090 subsequently corrects
+    the global-ledger and conditional-covariance attributions below.
+31. **Global unprojected Cartan coefficient-ledger no-go and rational forest
+    boundary.** R-090,
+    `A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`,
+    proves the exact conservative identity `b=grad c`; the full R-089 Fourier
+    multiplier is therefore `i q c_hat(q-p)`, a single coefficient rather
+    than two independent tails. A fixed active-shell/current-root first-chaos
+    construction then makes the global unprojected R-089 Sobolev ledger grow
+    linearly with cutoff for every `s>0`. Its support is root-diagonal and is
+    removed by the relative FAR projector, so projected CFAR survives as the
+    open obligation `H_C`. On the rational side, the R-089 switch has
+    conditional variances `2.525135276160981...` and
+    `0.291125094772793...`, not one. The complete local scalar raw endpoint
+    has expectation `-(35840/13689)c1 e phi(1)<0`. R-063 lower chaoses
+    reconstruct the literal Wick product and cannot be appended to it again;
+    R-079 provides the canonical nonduplicating temporal target for complete
+    signed NEAR `H_N`. The remaining progressive recombination is `H_A`,
+    retaining low/revisit and future-feedback terms inside full OVERLAP.
+    These are non-interchangeable sufficient obligations, not an iff
+    decomposition. REG, OVERLAP, Nelson, measure construction, and Sector A
+    remain open; tier stays T4.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

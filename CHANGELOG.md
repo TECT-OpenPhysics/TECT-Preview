@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-090 global unprojected Cartan ledger no-go and rational forest boundary] - 2026-07-25
+
+Registered R-090 under the existing A13 host. Proved the exact conservative single-coefficient Cartan trace; falsified only the global unprojected R-089 (3.12) ledger for every positive Sobolev exponent while retaining projected CFAR as open; corrected the R-089 conditional-covariance attribution; proved the complete local scalar raw rational endpoint sign; and replaced the ambiguous extra forest by the R-063/R-079 nonduplicating convention. Primary 57/57 and independent 52/52 passed, and the nine-page proof PDF passed form, zero-overfull, extraction, and Poppler visual QA. Tier remains T4; Sector A remains open at H_C, H_N, and H_A.
+
 ## [R-089 progressive covariance compression and rational mean-spectral boundary] - 2026-07-25
 
 Proved global progressive terminal covariance compression and Hilbert martingale/spatial one-use ledgers; extended the pure-control quartic terminal bridge to general cylindrical-simple progressive controls; proved the exact complete-cross-shell Cartan Fourier trace reduction; derived the s=1/4 slack ledger; recorded exact pure-quartic and rational same-root method no-gos; and corrected the final chain because full OVERLAP is already equivalent through R-087 CORE to q=10/9 Nelson. The nonlinear Cartan coefficient-tail energy, complete same-root heat/forest residual, REG, OVERLAP, Nelson, and Sector A remain open. Primary 56/56 and independent 44/44 pass; the nine-page PDF passed zero-overfull Poppler visual QA.

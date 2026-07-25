@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-090](#r-090) | Global unprojected Cartan coefficient-ledger no-go and rational forest boundary | Scoped T4 analytic/exact/executed boundary: the R-089 Cartan coefficients obey `b=grad c`, so the full Fourier trace compresses exactly to one conservative `|q|^2|c_hat(q-p)|^2` trace. A fixed active-shell/current-root first-chaos witness proves that the global unprojected cutoff-uniform ledger R-089 (3.12) grows linearly for every `s>0`; the witness is root-diagonal and removed by the relative FAR projector, so projected CFAR remains viable and open. The R-089 rational switch has conditional variances `2.525135276160981...` and `0.291125094772793...`, not one. The complete local scalar raw endpoint has expectation `-(35840/13689)c1 e phi(1)<0`. R-063 lower chaoses reconstruct the literal Wick product and may not be appended to it again; R-079 supplies the canonical nonduplicating temporal target. The sufficient frontier is projected Cartan `H_C`, complete signed rational/linear NEAR `H_N`, then progressive assembly `H_A` inside OVERLAP. No projected CFAR, complete NEAR, REG, OVERLAP, Nelson, or Sector-A closure is asserted; assertion counts are pinned by the manifest |
 | [R-089](#r-089) | Progressive covariance compression, direct Cartan Fourier trace, and rational mean-spectral boundary | Scoped T4 analytic/exact/executed reduction: the global polar/Douglas identity `T T^*=C` gives a pathwise Cameron--Martin contraction for every finite-cutoff cylindrical-simple progressive control, independent of time partition, range overlap, and revisit multiplicity. Hilbert martingale orthogonality supplies a weighted terminal-shell one-use ledger and extends the pure-control quartic terminal bridge to the general progressive class. Summing all physical control shells before squaring turns the complete Cartan derivative into one first-order operator; an exact Fourier trace reduces controlled CFAR to two nonlinear coefficient tails, whose energy bound remains open. At `s=1/4` the quartic ledger has powers `5/16,9/16`, slack `1/8`, eighth model moment, and gap `2^(-C/2)`. An exact harmonic rules out a homogeneous quartic-only Cartan implication. The rational packet has an exact Taylor-coordinate conditional form and is universally nonnegative under covariance matching iff `L>=0` and `B_T+2 eta I>=0`; the actual production scalar ray has `L/e=-1/432`, and a centered covariance-matched same-root fixture is negative. Finally, full OVERLAP is exactly equivalent through R-087 CORE to the `q=10/9` Nelson bound, so complete packet/one-use assembly belongs before OVERLAP. The nonlinear Cartan coefficient-tail energy, complete same-root heat/forest packet, REG, OVERLAP, Nelson, and Sector A remain open; 56/56 primary, 44/44 independent, 169/169 integrated, and 269/269 aggregate assertions are pinned by the manifest |
 | [R-088](#r-088) | Direct-root Cartan Schur, sequential secants, quartic Besov payload, and rational conditional trace reduction | Scoped T4 analytic/exact/executed reduction: a normalization audit shows that the exact R-084 OU target has no outer `2^j`; a direct nonorthogonal Schur theorem therefore needs only `s>0` and `sum_k q_k`. At `s=7/12` its balanced constant is `16.30295538482827...` with gap `2^(-7C/6)`. Sequential physical-shell secants give an exact three-channel Cartan atom with no future control shells in the kth coefficient path, and `||A^3 DA||_(B^s_1,1) <= C_s ||A||_H2 ||A||_6^3` for `0<s<1` supplies the pure-control critical payload. The rational `K_eta` square, transformed Wick term, and eta debt obey an exact three-term null identity; retained-square variance cancels the debt only on centered covariance-matched predictable blocks. A conditional theorem isolates mean/covariance defects, while the matrix-fractional Jensen defect is PSD but has no sign after Wick contraction. The production Cartan two-point bridge/direct CFAR, same-root rational causal packet, REG, OVERLAP, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-087](#r-087) | Cartan spatial decay, rational trace, and fixed-cutoff variational-core reduction | Scoped T4 analytic/exact/executed reduction: a reproduced order-two paralinearisation with an explicit smooth LP convention kills every Cartan principal contribution for `m>=j+5` and proves the spatial atom bound for `1/3<alpha<1/2` and `1/2<s<3alpha-1/2`; at `alpha=2/5`, `s=7/12` has root/gap margins `7/30` and `13/30`. The explicit `q_k^mod` is not yet one-use summable, and a rare-event fixture refutes pathwise translated-model-norm extraction without refuting the directly averaged atom. An exact rational eta-Schur/Wick completion removes the endpoint kernel but retains an indefinite model packet and an `eta^(-1)` trace debt. At each fixed cutoff, under the declared continuous bounded-below/local-polynomial-envelope and canonical-filtration hypotheses, the Boue--Dupuis infimum equals its bounded smooth cylindrical-simple restriction, so a uniform OVERLAP bound on that class would imply Nelson without a separate packetwise all-control theorem. Cartan (4.11), the rational packet, REG, OVERLAP, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
@@ -109,6 +110,83 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-090"></a>
+### R-090 -- Global unprojected Cartan coefficient-ledger no-go and rational forest boundary
+
+**Result ID.**
+`A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`.
+
+**Statement.** In the R-089 notation, direct differentiation of the production
+secant gives
+
+`b_(A,j,i)=partial_i c_(A,j)` and `L_(A,j)v=grad(c_(A,j)^T v)`.
+
+Consequently the root Fourier multiplier recombines exactly:
+
+`b_hat_i(q-p)+i p_i c_hat(q-p)=i q_i c_hat(q-p)`.
+
+The complete controlled Cartan trace is therefore one conservative
+`|q|^2|c_hat(q-p)|^2` trace. Under the pinned LP upper support and A1 mass
+bound this gives the localized target
+
+`S_C^ctrl <= (9 kappa_0)/(10P) sum_(A,j) int exp(-2t) 2^(-j)
+ sum_(m>=j+C) 2^(2m) E||tildePi_m c_(A,j,t)||_2^2 dt`.
+
+The stronger global unprojected Sobolev relaxation R-089 (3.12) is false for
+every `s>0`. Put a deterministic control in one fixed active shell, choose a
+separate finite-low background by Gaussian-heat injectivity so the smoothed
+mixed production Hessian is nonzero, and project onto the current-root first
+chaos. The A1 two-sided order-four sharp-cube symbol yields
+
+`E||c_(A,j,t)||_(H^s)^2 >= K_s exp(-2t) 2^((2s-1)j)`.
+
+The R-089 weight cancels the shell power for every `s`; the current-root OU
+integral is `1/4`, so `E_(s,J)>=c_s(J-j_*)` while the fixed control budgets
+stay uniform. This fires
+`NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER`.
+The witness is at coefficient frequency `j+O(1)` and is killed by the
+relative FAR projector. Thus R-089 (3.9), projected CFAR, and A13 are not
+refuted.
+
+For the rational branch event `|G|>=1`, both conditional means vanish but the
+conditional variances are `2.525135276160981...` and
+`0.291125094772793...`; only their weighted average is one. R-089's switch is
+therefore not conditionally covariance matched. The complete local scalar raw
+endpoint is more sharply negative:
+
+`E Delta W_R=-(35840/13689)c1 e phi(1)<0`.
+
+This is a local sign no-go, not a torus/A1 control counterexample; CM, sextic,
+spatial, paid, and low terms may absorb it. R-063 lower chaoses reconstruct
+the literal coefficient--Wick product exactly once. If that complete product
+is present, adding a generic lower-chaos forest double-counts. The canonical
+rational successor is the R-079 temporal decomposition of the full
+heat-transported endpoint after the declared R-086 paid subtraction. This
+fires `AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS`.
+
+The remaining sufficient architecture has three non-interchangeable proof
+obligations: projected Cartan FAR `H_C`, the complete nonduplicating signed
+rational/linear NEAR form `H_N`, and cutoff/partition/revisit-uniform assembly
+`H_A` inside full OVERLAP. This is not asserted to be a pairwise logical
+independence theorem or an iff decomposition.
+
+**Where proved.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-global-unprojected-cartan-ledger-nogo-rational-forest-boundary-260725-v1.0.tex.txt`,
+manifest
+`classii_global_unprojected_cartan_ledger_nogo_rational_forest_boundary_manifest.json`.
+
+**Reuse scope.** Conservative first-order production currents; sharp-cube
+order-four Gaussian shell ledgers; relative FAR localization; conditional
+Gaussian branch audits; exact Wick reconstruction; nonduplicating
+complete-current temporal decompositions.
+
+**Honest tier.** T4 analytic/exact/executed boundary. The conservative trace,
+global unprojected no-go, conditional covariance correction, local raw
+rational sign, and forest rule are established. Projected CFAR `H_C`, complete
+signed NEAR `H_N`, progressive assembly `H_A`, REG, uniform OVERLAP, Nelson,
+an interacting measure, and Sector-A closure remain open.
+
 <a id="r-089"></a>
 ### R-089 -- Progressive covariance compression, direct Cartan Fourier trace, and rational mean-spectral boundary
 
@@ -139,8 +217,11 @@ Parseval gives the exact full-cross-shell trace, and for `m>=j+3`,
  <=2 Lambda_(0,j)||tildePi_m b_(A,j)||_2^2
    +2 Lambda_(1,j)||tildePi_m c_(A,j)||_2^2`.
 
-This proves a direct integrated reduction with gap `2^(-2s(C-2))` to one
-explicit nonlinear coefficient energy. It does not prove that energy bound.
+This proves a direct integrated reduction with gap `2^(-2s(C-2))` to a
+proposed global nonlinear coefficient energy. R-090 subsequently proves
+`b=grad c`, compresses the trace to one conservative coefficient, and
+falsifies that unprojected cutoff-uniform Sobolev relaxation for every
+`s>0`. The relative-projected R-089 trace remains valid and open.
 At `s=1/4`, the stronger quartic interpolation has energy/sextic powers
 `5/16,9/16`, slack `1/8`, eighth model moment, direct Schur constant
 `134.874781327179...`, and gap `2^(-C/2)`. An exact scalar harmonic
@@ -157,9 +238,11 @@ For the rational packet,
 When `V=Gamma`, universal nonnegativity is equivalent to
 `L>=0` and `B_T+2 eta I>=0`. The actual normalized production ray has
 `L(-1/2)=-1/432`; eta cannot repair its conditional-mean channel. A centered
-covariance-matched same-root Gaussian fixture has expected packet
-`-(688/13689)c_1 e phi(1)<0`, so the complete backward-heat/lower-chaos
-forest must remain.
+same-root Gaussian fixture, covariance matched only before conditioning on
+its branch event, has expected Taylor packet
+`-(688/13689)c_1 e phi(1)<0`. R-090 corrects this attribution and proves that
+R-063 lower chaoses reconstruct the literal Wick product rather than being a
+generic extra forest.
 
 Finally, R-087 CORE gives
 `inf_v I_J(v)=-(9/10) log E exp[-(10/9)G_J]`. Uniform full OVERLAP is
@@ -181,9 +264,11 @@ log-Laplace lower bounds.
 
 **Honest tier.** T4 analytic/exact/executed reduction. Global progressive
 terminal compression, the terminal martingale ledger, the complete-cross-
-shell Cartan trace reduction, rational mean-spectral boundary, and
-OVERLAP--Nelson equivalence are established. The nonlinear Cartan
-coefficient-tail energy, complete same-root rational heat/forest residual,
+shell Cartan trace reduction, rational Taylor-coordinate algebra, and
+OVERLAP--Nelson equivalence are established. R-090 retires the global
+unprojected coefficient ledger and replaces the ambiguous rational forest
+target by the nonduplicating complete endpoint. Projected Cartan CFAR,
+complete same-root signed NEAR,
 full REG, uniform OVERLAP, Nelson, an interacting measure, and Sector-A
 closure remain open.
 

@@ -724,54 +724,55 @@ Current analytic child:
 
 Current subordinate order:
 
-1. prove the complete mixed Cartan production atom estimates (4.10)--(4.11)
-   with exponent `s>1/2`; R-085's nonorthogonal Schur theorem then performs
-   the triangular root/input summation without output orthogonality;
-2. prove the coupled signed rational bound (6.5) for the shifted-Hessian pair
-   plus its retained positive translated square, then reassemble REG with the
-   five paid rational families, the form-absorbed linear rows, covariance
-   defects, forest, and paid subtraction;
-3. prove an overlap-stable bounded-simple complete-packet lower bound
-   uniformly in time mesh and revisit multiplicity, then pass through the
-   fixed-cutoff Boue--Dupuis admissible core;
-4. assemble controlled-shell one-use and execute the already checked
-   `q=10/9` Nelson/A7 synthesis.
+1. prove projected Cartan `H_C` from the exact conservative single-coefficient
+   trace, retaining `Q_(j,C-2)^coef` through expectation and the root sum; the
+   global unprojected R-089 Sobolev ledger is falsified by R-090;
+2. define and prove complete signed rational/linear NEAR `H_N` from one R-063
+   reconstructed Wick endpoint and the nonduplicating R-079 temporal
+   decomposition after every declared paid subtraction;
+3. prove progressive assembly `H_A`, uniformly in cutoff, time mesh, and
+   revisit multiplicity, with R-079 low/future feedback, R-080 revisit
+   cancellation, and R-066 controlled-shell one-use all retained inside full
+   OVERLAP;
+4. invoke the R-087 variational CORE to obtain the already checked `q=10/9`
+   Nelson/A7 synthesis. `H_C`, `H_N`, and `H_A` are non-interchangeable
+   sufficient obligations, not an iff decomposition.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_verify.py
+python codes/foundations/a13_classii_cartan_excess_tail_rational_forest_nonduplication_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `66/66`;
-- non-importing independent `95/95`;
+- primary `57/57`;
+- non-importing independent `52/52`;
 - integrated and aggregate manifest-pinned PASS;
-- direct-root Schur normalization, sequential three-channel secants, quartic
-  Besov payload, conditional rational trace cancellation, mean/covariance
-  defects, matrix-fractional Jensen boundary, predecessor/source/PDF/surface
-  contracts, and T4 scope firewalls;
+- conservative Cartan compression, global unprojected-ledger no-go, relative
+  FAR survival, conditional covariance correction, raw rational endpoint sign,
+  R-063 forest nonduplication, R-079 packet polarization, predecessor/source/
+  PDF/surface contracts, and T4 scope firewalls;
 - exit code zero.
 
-The eleven-page proof note passes the standard form check, zero-overfull gate,
+The nine-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_manifest.json`
-- `notes/classii-direct-root-cartan-schur-sequential-secant-rational-conditional-trace-reduction-260725-v1.0.tex.txt`
-- `notes/classii-direct-root-cartan-schur-sequential-secant-rational-conditional-trace-reduction-260725-v1.0.pdf`
-- `../../codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction.py`
-- `../../codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_independent.py`
-- `../../codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_verify.py`
-- `runs/2026-07-25-primary-direct-root-cartan-schur-sequential-secant-rational-conditional-trace/result.json`
-- `runs/2026-07-25-independent-direct-root-cartan-schur-sequential-secant-rational-conditional-trace/result.json`
-- `runs/2026-07-25-integrated-direct-root-cartan-schur-sequential-secant-rational-conditional-trace/result.json`
-- `../../negative-results/registry.md#audit-2026-07-25-a13-r085-cartan-outer-weight-normalization`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-rational-standalone-eta-debt-and-k-heat`
+- `classii_global_unprojected_cartan_ledger_nogo_rational_forest_boundary_manifest.json`
+- `notes/classii-global-unprojected-cartan-ledger-nogo-rational-forest-boundary-260725-v1.0.tex.txt`
+- `notes/classii-global-unprojected-cartan-ledger-nogo-rational-forest-boundary-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_cartan_excess_tail_rational_forest_nonduplication_boundary.py`
+- `../../codes/foundations/a13_classii_cartan_excess_tail_rational_forest_nonduplication_boundary_independent.py`
+- `../../codes/foundations/a13_classii_cartan_excess_tail_rational_forest_nonduplication_boundary_verify.py`
+- `runs/2026-07-25-primary-cartan-excess-tail-rational-forest-nonduplication/result.json`
+- `runs/2026-07-25-independent-cartan-excess-tail-rational-forest-nonduplication/result.json`
+- `runs/2026-07-25-integrated-cartan-excess-tail-rational-forest-nonduplication/result.json`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-global-unprojected-cartan-coefficient-ledger`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r089-rational-forest-disjointness`
 
 The immediate R-087 Cartan-spatial/rational-trace/variational-CORE
 predecessor remains binding:
@@ -1965,3 +1966,22 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   QA. The nonlinear Cartan coefficient-tail energy, complete same-root
   rational heat/forest packet, REG, uniform OVERLAP, Nelson, interacting
   measure, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-090,
+  `A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`.
+  The chain rule gives `b=grad c`, so the R-089 Cartan Fourier trace
+  compresses exactly to one conservative `q`-weighted secant coefficient.
+  A fixed active-shell/current-root first-chaos witness then proves that the
+  global unprojected cutoff-uniform ledger R-089 (3.12) grows linearly for
+  every `s>0`; its root-diagonal support is removed by the relative FAR
+  projector, so projected CFAR remains viable and open. The R-089 event switch
+  is covariance matched only unconditionally. The complete local scalar raw
+  rational endpoint has exact expectation
+  `-(35840/13689)c1 e phi(1)<0`. R-063 lower chaoses reconstruct the literal
+  Wick product and may not be appended again; R-079 gives the canonical
+  nonduplicating temporal target. Primary `57/57` and non-importing
+  independent `52/52` checks pass; integrated and aggregate counts are
+  manifest-pinned, and the nine-page PDF passed form, zero-overfull,
+  extraction, and all-page Poppler visual QA. The next sufficient frontier is
+  projected Cartan `H_C`, complete signed rational/linear NEAR `H_N`, then
+  progressive assembly `H_A` inside OVERLAP. REG, Nelson, measure construction,
+  and Sector A remain open; tier stays T4.

@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
-  - R-089 proves global progressive covariance compression, the terminal martingale/spatial one-use ledger, general-progressive pure-control quartic bridge, complete-cross-shell Cartan Fourier trace, rational mean-spectral boundary, and the exact OVERLAP--Nelson equivalence. Sector A remains open: prove the nonlinear Cartan coefficient-tail energy (3.12), the complete same-root rational endpoint-square/backward-heat/lower-chaos residual (5.11), REG, and assemble R-066 one-use plus all temporal packets inside full OVERLAP; R-087 CORE then yields q=10/9 Nelson.
+  - R-090 proves the conservative single-coefficient Cartan trace, falsifies only the global unprojected R-089 (3.12) ledger for every s>0 while projected CFAR survives, corrects the rational conditional-covariance attribution, and enforces R-063/R-079 forest nonduplication. Next prove projected H_C, complete signed rational/linear NEAR H_N, then progressive complete-packet assembly H_A inside OVERLAP. Sector A remains open.
   - _updated 2026-07-25_
 
 ## Next up
