@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-091](#r-091) | Projected Cartan output ledger, full-frame Schur--Jensen boundary, and temporal scope | Scoped T4 analytic/exact/executed boundary: the exact output-projected Cartan energy satisfies `H_C(C)<=2^(-2 gamma(C-5)) B_gamma^out` for the smooth-LP safe gap `C>=5`, with no coefficient-annulus two-shell loss. R-087 bounds `B_gamma^out` by a cumulative `Z^6` majorant, but a predictable rare fixture makes that majorant `N^3` while all budgets stay `O(1)`; this rejects the majorant, not projected CFAR. For `F(x)=x^3/(1+x^2)`, the exact one-mode series pays the same fixture by CM plus quartic scaling and gives fixed-gap expectation `O(N^-4)`; its linearized harmonics are nonzero at every dyadic gap but have a superexponential gap tail. The complete linear+rational endpoint has exact conditional Schur and same-root Jensen forms, no fixed `eta` gives universal positivity, and a local full-frame fixture has expectation `-(3708/(21125P))e phi(1)<0` without furnishing a post-paid counterexample. Terminal paid subtraction is exactly nonduplicating. The remaining targets are saturation-aware vector `H_C`, signed Schur--Carleson `H_N`, and overlap-stable temporal `H_A`; no REG, OVERLAP, Nelson, or Sector-A closure is asserted; assertion counts are pinned by the manifest |
 | [R-090](#r-090) | Global unprojected Cartan coefficient-ledger no-go and rational forest boundary | Scoped T4 analytic/exact/executed boundary: the R-089 Cartan coefficients obey `b=grad c`, so the full Fourier trace compresses exactly to one conservative `|q|^2|c_hat(q-p)|^2` trace. A fixed active-shell/current-root first-chaos witness proves that the global unprojected cutoff-uniform ledger R-089 (3.12) grows linearly for every `s>0`; the witness is root-diagonal and removed by the relative FAR projector, so projected CFAR remains viable and open. The R-089 rational switch has conditional variances `2.525135276160981...` and `0.291125094772793...`, not one. The complete local scalar raw endpoint has expectation `-(35840/13689)c1 e phi(1)<0`. R-063 lower chaoses reconstruct the literal Wick product and may not be appended to it again; R-079 supplies the canonical nonduplicating temporal target. The sufficient frontier is projected Cartan `H_C`, complete signed rational/linear NEAR `H_N`, then progressive assembly `H_A` inside OVERLAP. No projected CFAR, complete NEAR, REG, OVERLAP, Nelson, or Sector-A closure is asserted; assertion counts are pinned by the manifest |
 | [R-089](#r-089) | Progressive covariance compression, direct Cartan Fourier trace, and rational mean-spectral boundary | Scoped T4 analytic/exact/executed reduction: the global polar/Douglas identity `T T^*=C` gives a pathwise Cameron--Martin contraction for every finite-cutoff cylindrical-simple progressive control, independent of time partition, range overlap, and revisit multiplicity. Hilbert martingale orthogonality supplies a weighted terminal-shell one-use ledger and extends the pure-control quartic terminal bridge to the general progressive class. Summing all physical control shells before squaring turns the complete Cartan derivative into one first-order operator; an exact Fourier trace reduces controlled CFAR to two nonlinear coefficient tails, whose energy bound remains open. At `s=1/4` the quartic ledger has powers `5/16,9/16`, slack `1/8`, eighth model moment, and gap `2^(-C/2)`. An exact harmonic rules out a homogeneous quartic-only Cartan implication. The rational packet has an exact Taylor-coordinate conditional form and is universally nonnegative under covariance matching iff `L>=0` and `B_T+2 eta I>=0`; the actual production scalar ray has `L/e=-1/432`, and a centered covariance-matched same-root fixture is negative. Finally, full OVERLAP is exactly equivalent through R-087 CORE to the `q=10/9` Nelson bound, so complete packet/one-use assembly belongs before OVERLAP. The nonlinear Cartan coefficient-tail energy, complete same-root heat/forest packet, REG, OVERLAP, Nelson, and Sector A remain open; 56/56 primary, 44/44 independent, 169/169 integrated, and 269/269 aggregate assertions are pinned by the manifest |
 | [R-088](#r-088) | Direct-root Cartan Schur, sequential secants, quartic Besov payload, and rational conditional trace reduction | Scoped T4 analytic/exact/executed reduction: a normalization audit shows that the exact R-084 OU target has no outer `2^j`; a direct nonorthogonal Schur theorem therefore needs only `s>0` and `sum_k q_k`. At `s=7/12` its balanced constant is `16.30295538482827...` with gap `2^(-7C/6)`. Sequential physical-shell secants give an exact three-channel Cartan atom with no future control shells in the kth coefficient path, and `||A^3 DA||_(B^s_1,1) <= C_s ||A||_H2 ||A||_6^3` for `0<s<1` supplies the pure-control critical payload. The rational `K_eta` square, transformed Wick term, and eta debt obey an exact three-term null identity; retained-square variance cancels the debt only on centered covariance-matched predictable blocks. A conditional theorem isolates mean/covariance defects, while the matrix-fractional Jensen defect is PSD but has no sign after Wick contraction. The production Cartan two-point bridge/direct CFAR, same-root rational causal packet, REG, OVERLAP, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
@@ -109,6 +110,98 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-091"></a>
+### R-091 -- Projected Cartan output ledger, full-frame Schur--Jensen boundary, and temporal scope
+
+**Result ID.**
+`A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`.
+
+**Statement.** Keep the R-090 exact output trace intact and write
+
+`E_(A,j,m)=int_0^infinity exp(-2t) E||Pi_m P_t^(j) D_j H_(A,j,A^(j))||_HS^2 dt`.
+
+R-087's smooth-LP support theorem kills the complete principal part for
+`m>=j+5`. Therefore, for
+
+`B_gamma^out=sum_(A,j) sum_(m>=j+5) 2^(2 gamma(m-j-5)) E_(A,j,m)`,
+
+one has the exact lossless sequence inequality
+
+`H_C(C)<=2^(-2 gamma(C-5)) B_gamma^out`, `C>=5`.
+
+At `alpha=2/5`, `gamma=7/12`, the two R-087 weighted remainder margins are
+`13/30` and `37/30`, and the gap exponent is `7/6`. Their cumulative
+`Z^6` majorant nevertheless cannot prove one-use. On an event of probability
+`N^-6`, take `h=N^3 e_N` and `a=N e_N`. Both majorant terms scale as `N^3`,
+while control, sextic, and mixed budgets are `O(1)`. This fires
+`NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT`. Since the
+majorant is not equivalent to the exact trace, projected CFAR is not refuted.
+
+The scalar production map `F(x)=x^3/(1+x^2)` exhibits the missing saturation.
+For `d=sqrt(1+A^2)`, `rho=(d-1)/(d+1)`, and
+`u=2A/[d(d+1)]`, its nonlinear Fourier tail is explicit:
+
+`A cos(theta)/(1+A^2 cos(theta)^2)=u sum_(k>=0)(-rho)^k cos((2k+1)theta)`.
+
+The one-mode derivative tail is paid by CM plus quartic scaling for
+`1/2<=s<=3/2`; the rare fixture above has fixed-gap expected trace `O(N^-4)`.
+The first-variation coefficient at frequency `2n` is
+
+`h_(2n)=(-(3-2 sqrt(2)))^n(2n-3 sqrt(2)/2)`, `n>=2`.
+
+Every dyadic gap is therefore populated, but the tail at gap `2^C` is
+`O(2^(4C)(3-2 sqrt(2))^(2^C))`, superexponential. This proves a positive
+one-mode saturation boundary, not the vector/multimode theorem.
+
+Stacking the three linear Pauli--Fierz rows with the rational row gives the
+exact endpoint
+
+`Delta W_LR=1/2(B1-B0):(GG^T-Gamma)+G^T B1 c+1/2 c^T B1 c`.
+
+Conditionally, with mean `mu` and covariance `V`, its eta-completed infimum is
+
+`1/2(B1-B0):(V-Gamma)+1/2 mu^T[2 eta B1(B1+2 eta I)^(-1)-B0]mu`.
+
+The positive matrix term is bounded by `2 eta I`, while production `B0` is
+unbounded, so no fixed eta gives universal positivity. This fires
+`NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY`. When coefficients are
+not predictable-root measurable, the exact completion retains
+`r_C=E[(C-C_hat)^T(G-mu)|H]` and the quadratic Jensen defect `J_D`. The
+remaining signed object is a Schur--Carleson packet, not a list of absolute
+terms.
+
+On the pure-doublet scalar ray, the complete linear+rational local fixture has
+
+`E Delta W_tot=-(3708/(21125P)) e phi(1)<0`.
+
+It is not a post-paid or global form-bound counterexample. Finally, for any
+exact terminal split `B_alg=B_alg^>+R_<=`, R-079 gives
+
+`E B_alg^>(A0)+L_low+sum(F+I)-E[R_<=(A*)-R_<=(A0)]=E B_alg^>(A*)`.
+
+This closes terminal nonduplication. It does not prove uniform analytic
+control for overlapping and revisited progressive temporal packets. The
+distinction is recorded as
+`AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE`: REG is sufficient regular
+architecture, whereas full OVERLAP on the bounded cylindrical-simple class is
+already equivalent through fixed-cutoff CORE to the `q=10/9` Nelson estimate.
+
+**Where proved.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-projected-cartan-full-frame-temporal-boundary-260725-v1.0.tex.txt`,
+manifest `classii_projected_cartan_full_frame_temporal_boundary_manifest.json`.
+
+**Reuse scope.** Exact nonnegative output-tail ledgers; analytic saturation
+tests for rational production maps; arbitrary-gap harmonic diagnostics;
+conditional Gram/Schur and same-root Jensen completions; exact terminal
+Bony/Doob nonduplication; variational-scope audits.
+
+**Honest tier.** T4 analytic/exact/executed boundary. The output-gap ledger,
+scalar saturation model, full-frame identities, local sign, and terminal
+algebra are established. Projected Cartan output-ledger one-use and CFAR,
+signed Schur--Carleson NEAR, overlap-stable progressive assembly, REG, uniform
+OVERLAP, Nelson, an interacting measure, and Sector-A closure remain open.
 
 <a id="r-090"></a>
 ### R-090 -- Global unprojected Cartan coefficient-ledger no-go and rational forest boundary

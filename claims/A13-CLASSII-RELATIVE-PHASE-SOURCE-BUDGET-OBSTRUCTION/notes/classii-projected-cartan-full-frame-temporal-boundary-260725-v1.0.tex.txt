@@ -1,0 +1,703 @@
+% Title: Projected Cartan output ledger, full-frame Schur--Jensen boundary, and temporal scope
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT/EXECUTED BOUNDARY; OUTPUT GAP LEDGER, SCALAR SATURATION, FULL-FRAME SCHUR--JENSEN REDUCTION, AND TERMINAL NONDUPLICATION CLOSED; PROJECTED ONE-USE, SIGNED NEAR, PROGRESSIVE ASSEMBLY, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY
+% Ledger: R-091
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-090 left three deliberately separate obligations: the projected Cartan
+FAR estimate $H_C$, the complete signed linear--rational NEAR estimate $H_N$,
+and the cutoff/partition/revisit-uniform progressive assembly $H_A$.  This
+note advances all three without identifying a local algebraic reduction with
+the missing form bound.
+
+The results are as follows.
+\begin{enumerate}
+\item The exact output-projected Cartan trace admits a lossless relative-gap
+ledger beginning at the smooth-Littlewood--Paley safe separation $C_0=5$.
+The ledger gains $2^{-2\gamma(C-5)}$ and avoids the two-shell loss introduced
+by a coefficient-annulus replacement.
+\item Applying the existing R-087 remainders to this ledger produces an
+explicit cumulative $Z^6$ majorant.  The accepted predictable rare-event
+fixture makes that majorant grow like $N^3$ while every available energy
+budget stays of order one.  This is a proof-method no-go, not a Cartan
+counterexample.
+\item In the exact scalar one-mode production map, the same rare fixture is
+instead paid by Cameron--Martin plus quartic scaling and its fixed-gap trace
+decays like $N^{-4}$.  Every dyadic FAR gap is genuinely populated, but the
+gap tail is superexponentially small in the linearized scalar model.  Thus
+saturation repairs the fixture and identifies the missing theorem as a
+cumulative, expectation-inside, vector paracomposition estimate.
+\item Stacking all three linear Pauli--Fierz rows with the rational row gives
+an exact full-frame conditional Schur formula.  Its same-root version has an
+explicit signed Jensen residual.  No fixed local derivative payment can make
+the raw conditional endpoint universally positive; a complete local scalar
+fixture is strictly negative even after the linear radial row is included.
+This rejects automatic positivity, not the global form bound.
+\item A terminal paid split gives the R-090 unpaid endpoint exactly and
+without a duplicated forest.  It closes endpoint bookkeeping once the paid
+functional is declared exactly.  It does not supply the overlap-stable
+temporal Cartan theorem needed for arbitrary progressive revisits.
+\end{enumerate}
+
+The host claim remains T4.  Projected CFAR, the output-ledger one-use bound,
+the complete signed NEAR packet, progressive assembly, REG, full OVERLAP,
+Nelson, an interacting measure, and Sector-A closure remain open.
+
+\section{Exact output-projected Cartan ledger}
+
+Retain R-090's exact conservative identity $b_{A,j}=\nabla c_{A,j}$ and its
+output multiplier $q$.  For each production row $A$, current root $j$, and
+output shell $m$, define the nonnegative exact block
+\[
+ \begin{aligned}
+ \mathcal E_{A,j,m}:={}&\int_0^\infty e^{-2t}
+ \mathbb E\|\Pi_mP_t^{(j)}\mathbb D_j
+ H_{A,j,A^{(j)}}\|_{\rm HS}^{2}\,dt\\
+ ={}&\int_0^\infty e^{-2t}\mathbb E
+ \sum_{\mu,p}\lambda_{j,p}\sum_q|\pi_m(q)|^2|q|^2
+ |\widehat c_{A,j,t}(q-p)^Te_\mu|^2\,dt .
+ \end{aligned}
+ \tag{2.1}
+\]
+No expectation, OU average, root sum, output multiplier, or physical-shell
+cross term has been moved outside this definition.  The controlled Cartan
+FAR energy is
+\[
+ S_C^{\rm ctrl}={3\over40P}\mathcal H_C(C),\qquad
+ \mathcal H_C(C)=\sum_{A,j}\sum_{m\ge j+C}\mathcal E_{A,j,m}.
+                                                                    \tag{2.2}
+\]
+
+R-087 proved for the declared smooth analytic LP convention that every
+principal contribution lies below $Q_{j+4}$:
+\[
+ \mathcal E^{\rm principal}_{A,j,m}=0\qquad(m\ge j+5).
+                                                                    \tag{2.3}
+\]
+The value $5$ is the safe smooth-LP constant.  The sharper formal paraproduct
+value and the polynomial $C\ge3$ convention are not substituted here.
+
+For $\gamma>0$, introduce the exact output excess ledger
+\[
+ \mathcal B_\gamma^{\rm out}
+ :=\sum_{A,j}\sum_{m\ge j+5}
+ 2^{2\gamma(m-j-5)}\mathcal E_{A,j,m}.                              \tag{2.4}
+\]
+
+\subsection*{Theorem 2.1 (lossless output-gap extraction)}
+
+For every $C\ge5$ and every $\gamma>0$,
+\[
+ \boxed{\mathcal H_C(C)\le
+ 2^{-2\gamma(C-5)}\mathcal B_\gamma^{\rm out}.}                    \tag{2.5}
+\]
+
+\emph{Proof.}
+For $m\ge j+C$, the weight in (2.4) is at least
+$2^{2\gamma(C-5)}$.  Multiply each nonnegative block by the reciprocal and
+sum.  Equation (2.3) ensures that no principal piece has been discarded.
+\hfill$\square$
+
+The gain is $C-5$, not $C-7$.  The latter appears only after replacing the
+exact $q$-weighted trace by the two-shell-enlarged coefficient projector.
+Theorem 2.1 is an exact reduction; it becomes a one-use theorem only after
+$\mathcal B_\gamma^{\rm out}$ is controlled by the available energies.
+
+\section{The cumulative remainder majorant and its failure}
+
+Write
+\[
+ a_j=A^{(j)}-A^{(\ell)},\quad
+ u_{j,r}=w_j+A^{(\ell)}+ra_j,\quad
+ Z_{j,r}=1+\|u_{j,r}\|_{\mathcal C^\alpha}.                         \tag{3.1}
+\]
+Applying R-087 (5.3)--(5.5) before physical-shell atomization gives, for
+$m\ge j+5$,
+\[
+ \begin{aligned}
+ \mathcal E_{A,j,m}\lesssim\mathbb E\int_0^1Z_{j,r}^6\big[&
+ 2^{-4\alpha m}2^{(1-2\alpha)j}\|a_j\|_2^2\\
+ &+2^{-6\alpha m}2^{-j}\|Da_j\|_2^2
+ +2^{-6\alpha m}2^j\|a_j\|_2^2\big]\,dr .
+ \end{aligned}
+ \tag{3.2}
+\]
+Consequently, when $1/3<\alpha<1/2$ and $0<\gamma<2\alpha$,
+\[
+ \mathcal B_\gamma^{\rm out}\lesssim_{\alpha,\gamma,e}
+ \mathcal Z_\alpha,                                                \tag{3.3}
+\]
+where
+\[
+ \boxed{\mathcal Z_\alpha=
+ \sum_j\mathbb E\int_0^1Z_{j,r}^6\left[
+ 2^{-(6\alpha-1)j}\|a_j\|_2^2+
+ 2^{-(6\alpha+1)j}\|Da_j\|_2^2\right]dr.}                        \tag{3.4}
+\]
+The two geometric denominators are
+\[
+ {2^{-20\alpha}\over1-2^{-(4\alpha-2\gamma)}} ,\qquad
+ {2^{-30\alpha}\over1-2^{-(6\alpha-2\gamma)}} .                 \tag{3.5}
+\]
+At the production values
+\[
+ \alpha={2\over5},\qquad\gamma={7\over12},                       \tag{3.6}
+\]
+the margins are
+\[
+ 4\alpha-2\gamma={13\over30},\qquad
+ 6\alpha-2\gamma={37\over30},                                    \tag{3.7}
+\]
+and (2.5) reads
+\[
+ \mathcal H_C(C)\le2^{-7(C-5)/6}\mathcal B_{7/12}^{\rm out}.
+                                                                    \tag{3.8}
+\]
+
+The majorant (3.4) cannot close one-use.  Let $N=2^k$, choose a predictable
+event $E\in\mathcal F_{k-1}$ of probability $N^{-6}$, and set
+\[
+ h_k=N^3\mathbf1_Ee_N,\qquad a_k=K_kh_k=N\mathbf1_Ee_N.            \tag{3.9}
+\]
+On a fixed positive-length interval of secant parameters,
+$Z_{k,r}\asymp N^{1+\alpha}$.  The value and derivative summands in (3.4)
+both have exact scale power
+\[
+ \begin{aligned}
+ -6-(6\alpha-1)+6(1+\alpha)+2&=3,\\
+ -6-(6\alpha+1)+6(1+\alpha)+4&=3.
+ \end{aligned}
+ \tag{3.10}
+\]
+In contrast, the control, sextic, and mixed budgets all have scale power
+zero.  Thus
+\[
+ \boxed{\mathcal Z_\alpha\not\lesssim
+ 1+\mathbb E\sqrt{XY}.}                                            \tag{3.11}
+\]
+This registers
+\[
+ \texttt{NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT}.
+                                                                    \tag{3.12}
+\]
+Because $\mathcal Z_\alpha$ is only an upper bound, (3.11) refutes neither
+$\mathcal B_\gamma^{\rm out}$ nor $\mathcal H_C$.
+
+\section{Exact scalar saturation repairs the rare fixture}
+
+The production slice
+\[
+ F(x)={x^3\over1+x^2}                                               \tag{4.1}
+\]
+is bounded at the derivative level and cannot be faithfully represented by
+the unbounded pathwise multiplier $Z^6$.  Let
+\[
+ d=(1+A^2)^{1/2},\qquad
+ \rho={d-1\over d+1},\qquad
+ u={2A\over d(d+1)}.                                                \tag{4.2}
+\]
+The elementary generating function gives
+\[
+ {A\cos\theta\over1+A^2\cos^2\theta}
+ =u\sum_{k=0}^\infty(-\rho)^k\cos((2k+1)\theta).                   \tag{4.3}
+\]
+Indeed, the series equals
+\[
+ {u(1+\rho)\cos\theta\over
+ (1-\rho)^2+4\rho\cos^2\theta}
+ ={A\cos\theta\over1+A^2\cos^2\theta}.                           \tag{4.4}
+\]
+Since $F(A\cos\theta)=A\cos\theta$ minus (4.3), every nonlinear odd
+harmonic is explicit.  For a carrier $N$ and $K\ge1$, its exact derivative
+tail is
+\[
+ {N^2u^2\over2}\sum_{k\ge K}(2k+1)^2\rho^{2k}.                    \tag{4.5}
+\]
+With $x=\rho^2$, the sum is
+\[
+ x^K\left\{
+ {(2K+1)^2\over1-x}+{4(2K+1)x\over(1-x)^2}
+ +{4x(1+x)\over(1-x)^3}\right\}.                                 \tag{4.6}
+\]
+
+\subsection*{Lemma 4.1 (one-mode energy scaling)}
+
+For every $s\ge0$,
+\[
+ \text{(4.5)}\lesssim_s
+ N^2(2K+1)^{-2s}(A^2+A^{1+2s}).                                    \tag{4.7}
+\]
+After the order-four root value mass $N^{-1}$ is inserted, and for
+$1/2\le s\le3/2$,
+\[
+ \boxed{\text{scalar trace tail}\lesssim_s(2K+1)^{-2s}
+ (A^2N^4+A^4N^2).}                                                  \tag{4.8}
+\]
+
+\emph{Proof.}
+Insert $(2k+1)^{-2s}(2k+1)^{2s}$ in (4.5).  The identities
+$1-\rho=2/(d+1)$ and $u=2A/[d(d+1)]$, followed by the standard geometric
+moment bound, give
+\[
+ u^2\sum_{k\ge0}(2k+1)^{2+2s}\rho^{2k}
+ \lesssim_s A^2+A^{1+2s}.
+\]
+This proves (4.7).  If $A\le1$, $A^{1+2s}\le A^2$; if $A\ge1$ and
+$s\le3/2$, $A^{1+2s}\le A^4$.  Since $N\ge1$, multiplication by $N^{-1}$
+proves (4.8). \hfill$\square$
+
+For the rare fixture $\mathbb P(E)=N^{-6}$ and $A=N$, the fixed-gap exact
+quantity in (4.5), including root mass and probability, is $O(N^{-4})$.
+The independent executable measures successive dyadic slopes converging to
+$-4$.  Thus the $N^3$ divergence in (3.10) is genuinely an artefact of the
+extracted $Z^6$ majorant.
+
+This scalar result is not full $H_C$.  Arbitrary vector and multimode
+secants, adapted Gaussian backgrounds, target heat, root summation, and
+coherent output collisions remain outside Lemma 4.1.
+
+\section{Every gap survives, but the scalar tail is superexponential}
+
+Finite Taylor support is also unavailable.  Put
+\[
+ H(\theta)=F'(\cos\theta)\cos^2\theta
+ ={\cos^4\theta(3+\cos^2\theta)\over(1+\cos^2\theta)^2}.            \tag{5.1}
+\]
+If $y=\cos2\theta$, then
+\[
+ H={y\over2}+{3\over2}-{6\over3+y}+{8\over(3+y)^2}.               \tag{5.2}
+\]
+Let
+\[
+ r=3-2\sqrt2,\qquad x=r^2=17-12\sqrt2.                            \tag{5.3}
+\]
+Differentiating the classical Fourier series of $(a+\cos t)^{-1}$ with
+respect to $a$ gives, for every $n\ge2$,
+\[
+ \boxed{h_{2n}=(-r)^n\left(2n-{3\sqrt2\over2}\right),}            \tag{5.4}
+\]
+where $h_{2n}$ is the cosine coefficient of $H$.  Every coefficient in
+(5.4) is nonzero.  In particular, choosing $n=2^{C-1}$ produces a genuine
+output at the relative gap $2^C$.
+
+For $R\ge2$, define the linearized derivative-tail energy
+\[
+ T_R={1\over2}\sum_{n=R}^\infty(2nh_{2n})^2.                       \tag{5.5}
+\]
+With $S_k(R,x)=\sum_{n\ge R}n^kx^n$ and
+$a=3\sqrt2/2$,
+\[
+ T_R=8S_4(R,x)-8aS_3(R,x)+2a^2S_2(R,x).                            \tag{5.6}
+\]
+The shifted geometric moments give the closed forms, and the simple bound
+\[
+ \boxed{T_R\le8C_xR^4x^R,\qquad
+ C_x={1+11x+11x^2+x^3\over(1-x)^5}
+ =1.54821660985479\ldots .}                                       \tag{5.7}
+\]
+For $R=2^{C-1}$, this is $O(2^{4C}r^{2^C})$, superexponential in the gap.
+
+For the rescaled first variation,
+\[
+ T_\varepsilon[v]=\varepsilon N H'(Nx_1)+O(\varepsilon^2),         \tag{5.8}
+\]
+so (5.5) is multiplied by $\varepsilon^2N^2$ to leading order.  Equations
+(5.4)--(5.8) refute exact finite-support or finite-Taylor-tree closure and the
+claim that FAR must live only in high current-root chaos.  They do not refute
+a decaying FAR estimate.
+
+If $|p|_\infty\le2^j$, $|r|_\infty\ge2^{j+\Delta}$, and $q=r+p$, then
+\[
+ (1-2^{-\Delta})^2|r|_\infty^2
+ \le|q|_2^2\le3(1+2^{-\Delta})^2|r|_\infty^2.                     \tag{5.9}
+\]
+At $\Delta=5$, the upper constant is $3267/1024$.  This is only a
+coefficient-to-output comparison for the scalar diagnostic; the exact
+production theorem should retain $|q|^2$ as in (2.1).
+
+\section{Complete linear--rational endpoint and conditional Schur form}
+
+Stack the three linear rows and rational row:
+\[
+ C(z)=\binom{C_L(z)}{C_R(z)},\qquad
+ B(z)=C(z)^TC(z)=B_L(z)+B_R(z).                                    \tag{6.1}
+\]
+Target-value heat acts on the Gram:
+\[
+ \bar B_\Sigma(z)=B_L(z)+H_\Sigma+P_\Sigma B_R(z).                 \tag{6.2}
+\]
+Let
+\[
+ Z_0=U+A^0,\quad G=DZ_0,\quad a=A^*-A^0,\quad c=Da,               \tag{6.3}
+\]
+and set
+\[
+ B_0=\bar B_\Sigma(Z_0),\qquad
+ B_1=\bar B_\Sigma(Z_0+a),\qquad D=B_1-B_0.                       \tag{6.4}
+\]
+Expanding the complete endpoint once gives
+\[
+ \boxed{\Delta W_{LR}={1\over2}D:(GG^T-\Gamma)
+ +G^TB_1c+{1\over2}c^TB_1c.}                                     \tag{6.5}
+\]
+The current square, Wick trace, target heat, and literal R-063
+reconstruction each occur once.
+
+Let a conditional sigma-field contain $B_0,B_1,c,\Gamma$, and put
+\[
+ \mu=\mathbb E[G\mid\mathcal H],\qquad
+ V=\operatorname{Cov}(G\mid\mathcal H).                           \tag{6.6}
+\]
+
+\subsection*{Theorem 6.1 (conditional full-frame identity)}
+
+\[
+ \boxed{\mathbb E[\Delta W_{LR}\mid\mathcal H]
+ ={1\over2}(c+\mu)^TB_1(c+\mu)-{1\over2}\mu^TB_0\mu
+ +{1\over2}(B_1-B_0):(V-\Gamma).}                                 \tag{6.7}
+\]
+If $\eta|c|^2$ is added and $A_\eta=B_1+2\eta I$, then
+\[
+ \boxed{\inf_c\mathbb E[\Delta W_{LR}+\eta|c|^2\mid\mathcal H]
+ ={1\over2}D:(V-\Gamma)
+ +{1\over2}\mu^T[2\eta B_1A_\eta^{-1}-B_0]\mu.}                \tag{6.8}
+\]
+
+\emph{Proof.}
+Use $\mathbb E[GG^T\mid\mathcal H]=V+\mu\mu^T$ in (6.5) and collect the
+quadratic terms.  Completing the $A_\eta$ square gives (6.8).  The identity
+$B_1-B_1A_\eta^{-1}B_1=2\eta B_1A_\eta^{-1}$ follows by functional calculus.
+\hfill$\square$
+
+When $V=\Gamma$, universal conditional positivity is equivalent to
+\[
+ \begin{pmatrix}B_1-B_0&B_1\\B_1&A_\eta\end{pmatrix}\succeq0,
+ \quad\text{or}\quad
+ 2\eta B_1(B_1+2\eta I)^{-1}-B_0\succeq0.                         \tag{6.9}
+\]
+But
+\[
+ 2\eta B_1(B_1+2\eta I)^{-1}\preceq2\eta I,                      \tag{6.10}
+\]
+whereas the production $B_0$ is unbounded.  No fixed $\eta$ makes (6.9)
+universal.  This registers
+\[
+ \texttt{NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY}.     \tag{6.11}
+\]
+It is a no-go for a positivity proof, not for infinitesimal form absorption.
+
+\section{Same-root Schur--Jensen residual}
+
+At the predictable-root conditioning actually needed by a progressive
+packet, the coefficients need not be measurable.  Consider
+\[
+ \mathcal E={1\over2}D:(GG^T-\Gamma)+G^TCc+{1\over2}c^TBc.        \tag{7.1}
+\]
+Write conditional averages with hats and define
+\[
+ \begin{aligned}
+ r_C&=\mathbb E[(C-\widehat C)^T(G-\mu)\mid\mathcal H],\\
+ J_D&={1\over2}\mathbb E[(D-\widehat D):
+ \{GG^T-(V+\mu\mu^T)\}\mid\mathcal H],\\
+ h&=\widehat C^T\mu+r_C,\qquad A_\eta=\widehat B+2\eta I.
+ \end{aligned}
+ \tag{7.2}
+\]
+Direct conditional averaging and one square completion yield
+\[
+ \boxed{\begin{aligned}
+ \mathbb E[\mathcal E+\eta|c|^2\mid\mathcal H]
+ ={}&{1\over2}(c+A_\eta^{-1}h)^TA_\eta(c+A_\eta^{-1}h)\\
+ &+{1\over2}\mu^T\widehat D\mu
+ +{1\over2}\widehat D:(V-\Gamma)+J_D
+ -{1\over2}h^TA_\eta^{-1}h .
+ \end{aligned}}
+ \tag{7.3}
+\]
+Thus the exact signed remainder is
+\[
+ \boxed{\mathfrak S_{\eta,\mathcal H}
+ ={1\over2}\mu^T\widehat D\mu
+ +{1\over2}\widehat D:(V-\Gamma)+J_D
+ -{1\over2}h^TA_\eta^{-1}h.}                                     \tag{7.4}
+\]
+The $r_C$ and $J_D$ terms are genuine same-root coefficient/Gaussian
+correlations.  A terminal martingale difference of the control alone does
+not determine them.  The missing $H_N$ theorem is a signed Schur--Carleson
+estimate for the complete R-079 future-feedback block, with low and paid
+companions retained; an absolute factorization of the terms in (7.4) is not
+available.
+
+\section{Exact local full-frame sign fixture}
+
+On the pure-doublet scalar ray, the complete four-row coefficient is
+\[
+ b_{\rm tot}(u)=4c_0u^2+4c_1\left(
+ u-{5\over9}{u^3\over u^2+e}\right)^2,                             \tag{8.1}
+\]
+where
+\[
+ c_0={3\over250P},\qquad c_1={243\over8000P},\qquad P=4+10^{-12}.  \tag{8.2}
+\]
+Take $z=\sqrt e$, $Q=G^2-1$, and the branch shift
+\[
+ a=-{z\over2}\quad(Q\ge0),\qquad
+ a=+{z\over2}\quad(Q<0),\qquad c=0.                              \tag{8.3}
+\]
+The exact coefficient changes are
+\[
+ \Delta b_-=-e\left(3c_0+{35\over27}c_1\right)<0,                 \tag{8.4}
+\]
+\[
+ \Delta b_+=e\left(5c_0+{18095\over13689}c_1\right)>0.           \tag{8.5}
+\]
+Therefore ${1\over2}\Delta b,Q<0$ away from $Q=0$.  Since
+$\mathbb E[Q\mathbf1_{|G|\ge1}]=2\varphi(1)$ and the complementary value is
+$-2\varphi(1)$,
+\[
+ \boxed{\mathbb E\Delta W_{\rm tot}
+ =-e\varphi(1)\left(8c_0+{35840\over13689}c_1\right)
+ =-{3708\over21125P}e\varphi(1)<0.}                               \tag{8.6}
+\]
+The linear radial row reinforces the rational loss; the two horizontal rows
+vanish on this ray.
+
+This remains a local sign fixture.  It omits the torus/A1 control
+realization, spatial shells, $a=T_Jv$, global $c=Da$, paid subtraction, low
+objects, and the actual CM/sextic payments.  Those payments absorb a fixed
+local loss.  Equation (8.6) is not a post-paid $H_N$ counterexample.
+
+\section{Terminal nonduplication and the temporal boundary}
+
+Let the complete endpoint be split exactly as
+\[
+ B_{\rm alg}(H)=B_{\rm alg}^{>}(H)+R_{\le}(H).                     \tag{9.1}
+\]
+R-079 gives the full-current endpoint difference
+\[
+ L_\ell+\sum_k(F_k+I_k)
+ =\mathbb E[B_{\rm alg}(A^*)-B_{\rm alg}(A^0)].                   \tag{9.2}
+\]
+Substitution of (9.1) proves the terminal identity
+\[
+ \boxed{\begin{aligned}
+ \mathcal U_{J,\pi}:={}&\mathbb EB_{\rm alg}^{>}(A^0)
+ +L_\ell+\sum_k(F_k+I_k)\\
+ &-\mathbb E[R_{\le}(A^*)-R_{\le}(A^0)]
+ =\mathbb EB_{\rm alg}^{>}(A^*).
+ \end{aligned}}
+ \tag{9.3}
+\]
+This proves endpoint nonduplication for any exactly declared terminal paid
+functional.  It also keeps $\mathbb EB_{\rm alg}^{>}(A^0)$ and the conditional
+low-current term $L_\ell$ distinct.
+
+For one scalar current, the indispensable future cross is visible in
+\[
+ {1\over2}\{(w+f+i)^2-w^2\}
+ =wf+{f^2\over2}+(w+f)i+{i^2\over2}.                              \tag{9.4}
+\]
+Replacing $(w+f)i$ by $wi$ loses $fi$.  In the actual R-079 packet, the
+future current contains both the coefficient change on the accumulated
+derivative and the derivative feedback of the future control.  Neither may
+be bounded as an unrelated addition.
+
+Equation (9.3) does not show that the R-086 coefficient-dominant spatial
+classification supplies a cutoff-, partition-, and revisit-uniform estimate.
+The Cartan results R-084/R-087 are regular strict-past one-shot estimates,
+whereas full $H_A$ quantifies over bounded cylindrical-simple progressive
+controls whose physical covariance ranges can overlap or coincide.  The
+required statement is
+\[
+ \boxed{\mathbb E G_J(X_J+T_Jv)
+ +{9\over20}\mathbb E\sum_k|I_k|\|u_k\|^2\ge-C}                  \tag{9.5}
+\]
+uniformly in $J$, time partition, and revisit multiplicity, with the complete
+low/future/paid packet assembled before estimation.  This registers
+\[
+ \texttt{AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE}.         \tag{9.6}
+\]
+
+\section{CORE, OVERLAP, and REG are not interchangeable}
+
+For
+\[
+ G_J=V_J^{\rm ren}+{3\over20}\|\cdot\|_6^6,\qquad q={10\over9},  \tag{10.1}
+\]
+the fixed-cutoff variational CORE theorem gives
+\[
+ -{9\over10}\log\mathbb E e^{-(10/9)G_J(X_J)}
+ =\inf_{v\in\mathcal A_{cs}}\mathbb E\left[
+ G_J(X_J+T_Jv)+{9\over20}\int|v|^2\right],                       \tag{10.2}
+\]
+and the same infimum over the full, bounded, or bounded cylindrical-simple
+classes.  Hence the uniform full-OVERLAP lower bound on $\mathcal A_{cs}$ is
+equivalent to the uniform $q=10/9$ Nelson estimate.  No density direction is
+missing.
+
+REG is useful sufficient architecture for the regular packet.  It is not a
+hypothesis of the equivalence (10.2), and a regular one-shot bound does not
+imply the progressive inequality (9.5).  The class inclusion and temporal
+overlap go in the wrong direction.  The honest logical map is therefore
+\[
+ \boxed{\text{fixed-}J\ \mathrm{CORE}
+ \quad+\quad\text{uniform full packet bound}
+ \quad\Longleftrightarrow\quad q=10/9\ \mathrm{Nelson},}           \tag{10.3}
+\]
+with REG, $H_C$, and $H_N$ serving as possible proof architecture rather
+than logically necessary labels.
+
+\section{Attempt, failure, and evidence map}
+
+\begin{enumerate}
+\item \textbf{Exact output projection --- proved reduction.}  Keep $q$, OU,
+expectation, and the root sum together; the lossless gain is $C-5$.
+\item \textbf{Extracted cumulative $Z^6$ --- method falsified.}  The rare
+fixture gives $N^3$ with order-one budgets; do not retry this extraction.
+\item \textbf{Exact scalar saturation --- positive boundary.}  The same
+fixture gives $N^{-4}$; CM plus quartic scaling pays the one-mode tail.
+\item \textbf{Finite Taylor support --- falsified.}  Every dyadic gap has a
+nonzero harmonic, so decay rather than exact support is required.
+\item \textbf{High-chaos-only FAR --- falsified as a route.}  First variation
+reaches every gap, although its tail is superexponential.
+\item \textbf{Raw conditional positivity --- method falsified.}  The
+full-frame Schur complement contains $-B_0$ and cannot be uniformly positive
+for fixed $\eta$.
+\item \textbf{Linear rows repair the rational sign --- falsified locally.}
+The radial linear row reinforces the exact negative scalar fixture.
+\item \textbf{Forest appended as repair --- forbidden.}  R-063 reconstructs
+the endpoint; the paid complement is exact subtraction.
+\item \textbf{Terminal Bony/Doob split --- proved algebra.}  Equation (9.3)
+closes nonduplication, not analytic progressive estimates.
+\item \textbf{REG implies OVERLAP --- rejected.}  General revisit/overlap
+needs the complete temporal theorem (9.5).
+\end{enumerate}
+
+The remaining Cartan target can now be stated without the failed majorant:
+\[
+ \boxed{\mathcal B_{7/12}^{\rm out}
+ \lesssim1+\mathbb E\sqrt{XY}}                                    \tag{11.1}
+\]
+or a form-sufficient version with an absorbable $\mathbb EX$ term.  It must
+be proved by a saturation-aware, expectation-inside, cumulative vector
+paracomposition theorem.  The remaining NEAR target is a signed estimate of
+(7.4) after the exact R-079 future/low/paid recombination.  The remaining
+assembly target is (9.5).
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} The output-gap ledger proves $H_C$ because its gap
+factor is summable.  \textbf{DISMISSED.}  Summability is conditional on
+$\mathcal B_\gamma^{\rm out}<\infty$ with the required energy bound.  That
+one-use estimate is exactly (11.1) and remains open.
+\item \textbf{Objection:} The rare fixture disproves projected CFAR.
+\textbf{DISMISSED.}  It diverges only after the non-equivalent $Z^6$
+majorization.  The exact saturated scalar trace decreases like $N^{-4}$.
+\item \textbf{Objection:} Scalar saturation proves the vector theorem.
+\textbf{VALID WITH MITIGATION.}  It proves a genuine model estimate and
+identifies the missing saturation mechanism, but does not control coherent
+multimode collisions, target heat, adapted backgrounds, or the full root sum.
+No $H_C$ closure is claimed.
+\item \textbf{Objection:} Nonzero coefficients at every gap rule out FAR
+decay.  \textbf{DISMISSED.}  Formula (5.7) is superexponential in the dyadic
+gap.  Nonzero support and strong decay are compatible.
+\item \textbf{Objection:} The $C_0=5$ separation is unnecessarily weak.
+\textbf{VALID WITH MITIGATION.}  It is the proved safe value for the declared
+smooth analytic LP.  Sharper constants require a different multiplier
+theorem and are not silently imported from the polynomial case.
+\item \textbf{Objection:} Adding all linear rows restores conditional
+positivity.  \textbf{DISMISSED.}  Equations (6.8)--(6.10) include the complete
+linear--rational Gram, and the exact local coefficient (8.6) remains negative.
+\item \textbf{Objection:} The local negative fixture falsifies the desired
+form bound.  \textbf{DISMISSED.}  It has a fixed loss absorbed by CM/sextic
+costs and omits the post-paid global spatial packet.  It falsifies only an
+automatic positivity proof.
+\item \textbf{Objection:} The Jensen residual can be omitted after replacing
+coefficients by conditional means.  \textbf{DISMISSED.}  The independent
+finite-ensemble audit verifies both $r_C$ and $J_D$ with nonsymmetric $C$;
+omitting either changes (7.3).
+\item \textbf{Objection:} Equation (9.3) proves $H_A$.
+\textbf{DISMISSED.}  It proves endpoint algebra.  Uniform control under
+overlapping covariance ranges and repeated visits is the separate analytic
+statement (9.5).
+\item \textbf{Objection:} REG is part of the OVERLAP--Nelson equivalence.
+\textbf{DISMISSED.}  CORE identifies the variational classes directly.  REG
+is a sufficient proof architecture, not a necessary logical label.
+\end{enumerate}
+
+\section{Executable verification and no-overclaim statement}
+
+The primary executable checks authority tokens, the exact output-sequence
+lemma, all exponent margins, the rare-event scale powers, the scalar
+generating function and geometric tail, exact arbitrary-gap coefficients,
+three-dimensional $q$-shift constants, scalar and matrix Schur formulas,
+the nonsymmetric same-root Jensen identity, exact local fractions, and
+terminal polarization.  It passes 72 of 72 assertions.
+
+The independent executable imports no primary code.  It uses random
+nonnegative output arrays, high-precision Fourier and Gaussian quadrature,
+an exact fixed-gap rare-tail asymptotic, random finite conditional ensembles,
+Schur stationarity, Jensen defects, and independent terminal sampling.  It
+passes 24 of 24 assertions.  Run
+\begin{verbatim}
+python codes/foundations/a13_classii_projected_cartan_full_frame_temporal_boundary_verify.py
+\end{verbatim}
+
+R-091 proves an exact output-gap reduction, diagnoses and replaces a failed
+scalar majorant, derives the full-frame Schur--Jensen boundary, and closes
+terminal nonduplication algebra.  It does not prove projected Cartan one-use,
+complete signed NEAR, overlap-stable progressive assembly, REG, full OVERLAP,
+Nelson, an interacting measure, or Sector-A closure.  Tier stays T4.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-
+           JENSEN-TEMPORAL-BOUNDARY
+Ledger:                  R-091.
+Precise statement:       The exact projected Cartan energy has a lossless
+                         C-5 output-gap ledger. The extracted cumulative Z^6
+                         majorant fails, while exact scalar saturation pays
+                         the same rare fixture and has a superexponential
+                         linearized gap tail. The complete linear+rational
+                         endpoint has exact conditional Schur and same-root
+                         Jensen forms. Fixed-eta positivity fails. Terminal
+                         paid subtraction is exactly nonduplicating, while
+                         overlap-stable temporal assembly remains open.
+Scope:                   Finite cutoff and positive floor under the pinned
+                         A1/R-079/R-084/R-087/R-089/R-090 conventions. Scalar
+                         saturation is one-mode; sign loss is local and not
+                         post-paid; temporal result is endpoint algebra.
+Dependencies:            A1; R-063; R-079; R-081; R-084; R-085; R-086;
+                         R-087; R-089; R-090.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:    python codes/foundations/a13_classii_projected_
+                         cartan_full_frame_temporal_boundary_verify.py
+Expected output:         Primary 72/72; independent 24/24; integrated and
+                         aggregate counts pinned by the manifest; exit zero.
+Negative results:        NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-
+                         MAJORANT; NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-
+                         POSITIVITY.
+Audit:                   AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE.
+Falsification gate:      Failure of output-gap arithmetic, R-087 remainder
+                         exponents, scalar series/tails, Schur/Jensen
+                         identities, local fractions, nonduplication,
+                         evidence hashes, PDF, or assertion counts.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No projected CFAR, output one-use, complete signed
+                         NEAR, REG, progressive H_A, full OVERLAP, Nelson,
+                         interacting measure, removal limit, or Sector A.
+Next required action:    Prove the saturation-aware vector output-ledger
+                         bound; prove the signed Schur--Carleson NEAR packet;
+                         then prove overlap-stable temporal assembly.
+\end{verbatim}
+\endgroup

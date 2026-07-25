@@ -985,8 +985,9 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-25), narrowed by R-079
-`A13-CLASSII-FULL-SAFE-PACKET-FRAME-CURRENT-DOOB-DECOMPOSITION`. R-079 proves
+**Status:** OPEN CURRENT CHILD (2026-07-25), narrowed through R-091
+`A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`.
+R-079 proves
 the exact expectation-level full-current and canonical safe-packet identity,
 one spatially weighted Cameron--Martin control square-function use, and the
 predictable base-current heat projection. The terminal feedback current still
@@ -1201,11 +1202,53 @@ temporal, paid, linear, and low companions. The local raw rational endpoint
 has exact expectation `-(35840/13689)c1 e phi(1)<0`, so no automatic forest,
 eta, Jensen, or small-heat positivity replaces that bound.
 
+R-091,
+`A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`,
+then keeps the exact output-projected Cartan trace intact. If
+`E_(A,j,m)` denotes its nonnegative output block, smooth-LP principal support
+vanishes for `m>=j+5`, and
+`B_gamma^out=sum 2^(2 gamma(m-j-5))E_(A,j,m)` obeys
+`H_C(C)<=2^(-2 gamma(C-5))B_gamma^out` for every `C>=5`. At
+`alpha=2/5`, `gamma=7/12`, the inherited R-087 remainder margins are `13/30`
+and `37/30`. However, the cumulative extracted `Z^6` majorant grows like
+`N^3` on a predictable rare fixture whose accepted budgets are `O(1)`. This
+fires `NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT` and rejects
+only that majorant route.
+
+The same scalar one-mode fixture is positively repaired by the exact
+production series: its fixed-gap expected trace is `O(N^-4)`, and its
+linearized harmonics are nonzero at every dyadic gap with superexponential
+gap tail. Thus the revised Cartan load-bearing target is the saturation-aware,
+expectation-inside cumulative vector estimate
+`B_(7/12)^out <= 1+E sqrt(XY)`, or a form-sufficient version with an
+absorbable `E X` term, retaining target heat and coherent multimode outputs.
+No projected CFAR or one-use bound is yet proved.
+
+For NEAR, R-091 stacks the three linear rows and rational row before
+conditioning. It proves the exact conditional Schur formula and, at the
+predictable-root sigma-field, the same-root residual containing both
+`r_C=E[(C-C_hat)^T(G-mu)|H]` and `J_D`. The positive Schur term is bounded by
+`2 eta I` while production `B0` is unbounded, so no fixed eta gives universal
+positivity; the exact local full-frame loss is
+`-(3708/(21125P))e phi(1)<0`. These fire only a positivity-method no-go. The
+revised NEAR target is a signed Schur--Carleson estimate for the complete
+R-079 future/low/paid packet, not an absolute termwise estimate and not a
+post-paid counterexample.
+
+Finally, R-091 proves the terminal Bony/Doob nonduplication identity once
+`R_<=` is declared as an exact terminal paid functional. This closes endpoint
+bookkeeping but not its cutoff/partition/revisit-uniform estimate. The scope
+audit `AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE` records that REG is
+only sufficient regular architecture. Fixed-cutoff CORE plus the full uniform
+packet lower bound is equivalent to `q=10/9` Nelson; a regular one-shot Cartan
+bound cannot substitute for overlap-stable temporal control.
+
 Finally `H_A` must assemble the complete packet uniformly in cutoff,
 partition, and revisit inside full OVERLAP, preserving R-079 future feedback
 and R-080 low/revisit cancellation. `H_C`, `H_N`, and `H_A` are
 non-interchangeable sufficient obligations, not a pairwise-independence or iff
-theorem. R-090 changes the target, not the gate status. Projected CFAR,
+theorem. R-091 sharpens all three targets without changing the gate status.
+Projected CFAR,
 complete signed NEAR, assembly, OVERLAP, and Nelson remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
@@ -1220,7 +1263,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
-sharpened by R-081--R-090
+sharpened by R-081--R-091
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1230,7 +1273,9 @@ progressive controls. A same-range revisit can make the separate R-079
 conditional-low loss quartic while final charge is fixed and control cost is
 quadratic; cancellation, if present, must occur in the complete later packet.
 This is a method and scope obstruction, not a counterexample to the full
-action. R-090 names this complete recombination obligation `H_A`; it retains
+action. R-090 names this complete recombination obligation `H_A`; R-091
+proves only its terminal nonduplication algebra and confirms that the temporal
+estimate is still load-bearing. It retains
 the regular projected FAR obligation `H_C`, the complete signed NEAR
 obligation `H_N`, R-066 one-use, and all temporal/low companions inside full
 OVERLAP. It is not bookkeeping after separately completed pieces. Once full

@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
-  - R-090 proves the conservative single-coefficient Cartan trace, falsifies only the global unprojected R-089 (3.12) ledger for every s>0 while projected CFAR survives, corrects the rational conditional-covariance attribution, and enforces R-063/R-079 forest nonduplication. Next prove projected H_C, complete signed rational/linear NEAR H_N, then progressive complete-packet assembly H_A inside OVERLAP. Sector A remains open.
+  - R-091 proves the exact output-gap reduction H_C(C)<=2^(-2 gamma(C-5)) B_gamma^out, falsifies only the extracted cumulative Z^6 majorant, and shows exact scalar saturation repairs that fixture. It also proves the complete full-frame conditional Schur/Jensen identity and terminal nonduplication, while fixed-eta positivity fails. Next prove saturation-aware vector/multimode H_C, signed Schur--Carleson H_N, and overlap-stable temporal H_A. REG, full OVERLAP, Nelson, and Sector A remain open.
   - _updated 2026-07-25_
 
 ## Next up

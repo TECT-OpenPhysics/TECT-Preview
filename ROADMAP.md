@@ -353,7 +353,25 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   for progressive complete-packet assembly inside OVERLAP. These are
   non-interchangeable obligations, not an iff decomposition. No gate status
   flips; Sector A remains open.
-  R-080--R-090 also expose the separate
+  R-091,
+  `A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`,
+  now proves the exact output-projected `C-5` gap ledger. At
+  `alpha=2/5`, `gamma=7/12`, its weighted margins are `13/30` and `37/30`,
+  and `H_C(C)<=2^(-7(C-5)/6)B_(7/12)^out`. The inherited cumulative `Z^6`
+  upper majorant fails on a predictable rare fixture (`N^3` versus `O(1)`
+  budgets), but the exact scalar one-mode production series repairs the same
+  fixture with fixed-gap expectation `O(N^-4)` and a superexponential
+  arbitrary-gap tail. The next Cartan theorem is therefore a saturation-aware,
+  expectation-inside cumulative vector paracomposition bound, not another
+  extracted translated-model norm.
+  On NEAR, R-091 proves the complete linear+rational conditional Schur identity
+  and the same-root Jensen residual retaining `r_C` and `J_D`. No fixed eta
+  yields universal positivity, and the exact local full-frame loss is
+  `-(3708/(21125P))e phi(1)<0`, without producing a post-paid counterexample.
+  The next NEAR theorem is a signed Schur--Carleson estimate for the complete
+  R-079 future/low/paid packet. Terminal paid nonduplication is now exact
+  algebra; its uniform progressive estimate is not closed.
+  R-080--R-091 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
@@ -587,14 +605,18 @@ preserved in git/changelog rather than treated as current gates.
      is a registered no-go. Then apply
    R-089's global progressive covariance compression and Hilbert martingale
    ledger, not one-shot density. The pure-control quartic terminal bridge is
-   now valid on the full cylindrical-simple progressive class. Apply R-090:
-   for Cartan, use `b=grad c` and prove projected `H_C` with the relative
-   coefficient projector retained through expectation and the root sum; do
-   not use the falsified global unprojected ledger R-089 (3.12). For
-   rational/linear NEAR, prove `H_N` from one full reconstructed Wick endpoint
-   and the exact nonduplicating R-079 temporal decomposition after declared
-   paid subtraction; do not append a generic R-063 forest or reuse the
-   incorrect conditional-covariance attribution. Then prove `H_A` by
+   now valid on the full cylindrical-simple progressive class. Apply R-091:
+   for Cartan, use the exact output ledger and prove
+   `B_(7/12)^out <= 1+E sqrt(XY)`, or a form-sufficient variant with an
+   absorbable `E X`, by a saturation-aware expectation-inside cumulative
+   vector paracomposition estimate. Retain target heat, coherent multimode
+   outputs, and the exact `q` multiplier; do not use either the falsified
+   global unprojected R-089 ledger or the cumulative extracted `Z^6` majorant.
+   For rational/linear NEAR, prove a signed Schur--Carleson bound for the full
+   R-079 future/low/paid packet with `r_C` and `J_D` retained. Use one full
+   reconstructed Wick endpoint and the exact terminal nonduplication identity;
+   do not append a generic R-063 forest, assume fixed-eta positivity, or treat
+   the local sign fixture as post-paid. Then prove `H_A` by
    assembling `H_C`, `H_N`, R-066 controlled-shell one-use, R-079 low/future
    feedback, and all temporal companions inside a
    cutoff-, partition-, and revisit-uniform full OVERLAP lower bound on the

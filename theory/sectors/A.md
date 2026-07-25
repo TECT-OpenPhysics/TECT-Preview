@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT | extracted translated-model growth erases saturation | Bound the exact output-projected Cartan excess ledger by |
+| NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY | no fixed derivative payment makes the raw endpoint positive | Choose one fixed `eta>0` and infer universal conditional |
+| AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE | terminal bookkeeping is not progressive temporal assembly | Promote the regular orthogonal one-shot Cartan estimates or |
 | NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER | root-diagonal chaos defeats the global Sobolev relaxation | Replace the relative coefficient projector in the exact |
 | AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS | reconstruct the Wick endpoint exactly once | Call the R-089 branch switch conditionally covariance |
 | AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE | the terminal CM bridge is globally progressive | Treat R-079's regular orthogonal no-revisit square-function |

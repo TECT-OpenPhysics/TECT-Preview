@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-091 A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY] - 2026-07-25
+
+R-091 records the exact lossless output-gap Cartan reduction, the sharp cumulative Z^6-majorant no-go, the exact scalar saturation repair and arbitrary-gap harmonic tail, the complete full-frame conditional Schur--Jensen identity, the fixed-eta conditional-positivity no-go, and terminal endpoint nonduplication. The primary 72-assertion and independent 24-assertion executables pass; the integrated count is finalized after generated-ledger synchronization. Tier remains T4. Projected one-use, signed NEAR, overlap-stable progressive assembly, REG, full OVERLAP, q=10/9 Nelson, and Sector-A closure remain open.
+
 ## [R-090 global unprojected Cartan ledger no-go and rational forest boundary] - 2026-07-25
 
 Registered R-090 under the existing A13 host. Proved the exact conservative single-coefficient Cartan trace; falsified only the global unprojected R-089 (3.12) ledger for every positive Sobolev exponent while retaining projected CFAR as open; corrected the R-089 conditional-covariance attribution; proved the complete local scalar raw rational endpoint sign; and replaced the ambiguous extra forest by the R-063/R-079 nonduplicating convention. Primary 57/57 and independent 52/52 passed, and the nine-page proof PDF passed form, zero-overfull, extraction, and Poppler visual QA. Tier remains T4; Sector A remains open at H_C, H_N, and H_A.

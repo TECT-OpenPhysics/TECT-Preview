@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT](#ng-2026-07-25-a13-projected-cartan-cumulative-z6-majorant) | R-091 projected Cartan output ledger closed through an extracted cumulative translated-model `Z^6` norm | a predictable rare single-mode control makes the extracted majorant grow like `N^3` while CM, terminal sextic, and mixed budgets stay bounded; the exact saturated scalar Cartan trace instead decays like `N^-4`, so only the premature majorant is retired |
+| [NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY](#ng-2026-07-25-a13-full-frame-conditional-positivity) | R-091 raw full linear--rational conditional endpoint made positive by one fixed derivative payment | the exact Schur complement is `2 eta B1(B1+2 eta I)^(-1)-B0`, whose positive part is bounded by `2 eta I` while `B0` is not; an exact local full-frame fixture remains strictly negative |
+| [AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE](#audit-2026-07-25-a13-reg-overlap-temporal-scope) | R-091 terminal nonduplication and regular one-shot estimates promoted to arbitrary progressive overlap/revisit assembly | terminal algebra is exact, but covariance ranges can overlap and be revisited; REG is only a sufficient architecture, while full OVERLAP is already equivalent through CORE to the `q=10/9` Nelson bound |
 | [NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER](#ng-2026-07-25-a13-global-unprojected-cartan-coefficient-ledger) | R-089 (3.12), the cutoff-uniform global unprojected Sobolev coefficient ledger | a fixed active-shell secant has a current-root first-chaos component whose weighted contribution stays positive at every later root for every `s>0`, so the ledger grows linearly with cutoff; the witness is root-diagonal and removed by the relative FAR projector, which remains viable and open |
 | [AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS](#audit-2026-07-25-a13-r089-rational-forest-disjointness) | R-089 conditional-covariance attribution and undefined extra rational forest | the branch switch is covariance matched only unconditionally, and R-063 lower chaoses reconstruct the literal coefficient--Wick product rather than supplement it; a complete endpoint must occur once and R-079 must provide the nonduplicating temporal decomposition |
 | [AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE](#audit-2026-07-25-a13-r088-progressive-terminal-cm-bridge) | R-088 restriction of its pure-control quartic terminal bridge to the regular orthogonal one-shot class | the global identity `C=T T^*` and polar/Douglas decomposition control the terminal Cameron--Martin norm of every finite-cutoff cylindrical-simple progressive control, independent of partition, range overlap, and revisit multiplicity; the restriction is lifted for the terminal quartic payload, not for the complete nonlinear packet |
@@ -97,6 +100,83 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-projected-cartan-cumulative-z6-majorant"></a>
+### NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT -- extracted translated-model growth erases saturation
+
+**Failure mode:** Bound the exact output-projected Cartan excess ledger by
+first extracting the cumulative translated-model factor
+`Z_(j,r)^6=(1+||u_(j,r)||_(C^alpha))^6`, and then pay the resulting weighted
+root sum using only the accepted Cameron--Martin, terminal sextic, and mixed
+energy--sextic budgets.
+
+**Evidence:** For `N=2^k`, choose a predictable event of probability `N^-6`
+and the single-mode control `h_k=N^3 1_E e_N`, so that the smoothed secant is
+`a_k=N 1_E e_N`. On a fixed `r` interval,
+`Z_(k,r) asymp N^(1+alpha)`. Both terms of the R-087-derived cumulative
+majorant then equal order `N^3`, whereas the Cameron--Martin energy, terminal
+sixth moment, and their geometric mean remain order one. This is sharp for
+the extracted majorant. In contrast, the exact saturated scalar map
+`F(x)=x^3/(1+x^2)` has an explicit rational Fourier series: for the same rare
+fixture its fixed-gap Cartan trace is `O(N^-4)`, and its arbitrary-gap tail is
+superexponential.
+
+**Consequence:** Retire the cumulative `Z^6` extraction as a route to
+projected one-use. The fixture does not refute the exact output ledger,
+projected CFAR, or A13. The remaining `H_C` theorem must keep expectation
+inside a saturation-aware cumulative vector/multimode paracomposition bound,
+including target heat and coherent nonlinear output collisions.
+
+<a id="ng-2026-07-25-a13-full-frame-conditional-positivity"></a>
+### NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY -- no fixed derivative payment makes the raw endpoint positive
+
+**Failure mode:** Choose one fixed `eta>0` and infer universal conditional
+positivity of the complete raw linear--rational endpoint from its exact
+full-frame Schur completion.
+
+**Evidence:** For the raw endpoint the measurable-coefficient Schur
+complement reduces exactly to
+
+`S=2 eta B1(B1+2 eta I)^(-1)-B0`.
+
+The first term is positive semidefinite but bounded above by `2 eta I`, while
+the admissible positive matrix `B0` has no corresponding fixed upper bound.
+With outcome-dependent coefficients the exact conditional identity also
+contains the covariance mismatch, coefficient covariance residual, and
+quadratic Jensen residual. The matrix-fractional Jensen defect is positive
+semidefinite, but its Wick contraction has no universal sign. An exact local
+production fixture that stacks the three linear Pauli--Fierz rows with the
+rational row gives expected first variation
+`-(3708/(21125 P)) e phi(1)<0`.
+
+**Consequence:** Fixed-`eta` raw conditional positivity is a method no-go,
+not a counterexample to the post-paid global form bound. The complete
+square--trace--heat--forest packet must remain signed, and `H_N` must control
+the Schur debt together with the covariance and Jensen residuals rather than
+discarding them termwise.
+
+<a id="audit-2026-07-25-a13-reg-overlap-temporal-scope"></a>
+### AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE -- terminal bookkeeping is not progressive temporal assembly
+
+**Failure mode:** Promote the regular orthogonal one-shot Cartan estimates or
+the exact terminal paid/unpaid split to a cutoff-, partition-, overlap-, and
+revisit-uniform theorem for arbitrary cylindrical-simple progressive
+controls.
+
+**Evidence:** R-079 fixes the fresh--future cross algebraically and R-091's
+terminal split reconstructs the unpaid endpoint exactly once, so no second
+forest may be appended. Those identities do not show that the R-086
+coefficient-dominant projection commutes with temporal decomposition, nor do
+they estimate cross covariances when control ranges overlap or a spatial
+range is revisited. The global Cameron--Martin terminal bridge survives those
+features, but the nonlinear Cartan and signed NEAR packets have not yet been
+temporalised. Independently, R-087 CORE proves that full OVERLAP is equivalent
+to the `q=10/9` Nelson bound; REG is only a useful sufficient assembly
+architecture and is not a necessary stage of that equivalence.
+
+**Consequence:** Keep the terminal nonduplication theorem, but leave `H_A`,
+full OVERLAP, Nelson, and Sector-A closure open. The successor must prove an
+overlap-stable temporal `H_C+H_N` packet estimate before CORE can be invoked.
 
 <a id="ng-2026-07-25-a13-global-unprojected-cartan-coefficient-ledger"></a>
 ### NG-2026-07-25-A13-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER -- root-diagonal chaos defeats the global Sobolev relaxation
