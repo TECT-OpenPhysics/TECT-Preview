@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION](#audit-2026-07-25-a13-r085-cartan-outer-weight-normalization) | R-085 application of its stronger weighted Schur theorem to the exact R-084 OU target | R-084 (4.6) has no outer `2^j`, so its direct sufficient ledger is `sum_k q_k` and its Schur threshold is `s>0`; R-085 remains valid for the stronger weighted expression and is not withdrawn |
+| [NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT](#ng-2026-07-25-a13-rational-standalone-eta-debt-and-k-heat) | A13 payment of the rational eta trace debt after deleting its retained square, or separate backward-heat transport of `K_eta=L A_eta^(-1)L` | at fixed target dimension the debt grows with the covariance trace while the original centered covariance-matched packet has zero mean; the exact cancellation is a three-term K-square--Wick--debt identity, and the PSD matrix-fractional Jensen defect has a signed Wick contraction, so square, trace, native heat, and lower-chaos forest must remain coupled |
 | [NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION](#ng-2026-07-25-a13-pathwise-translated-model-norm-extraction) | A13 Cartan one-use closure by extracting the translated `C^alpha` model norm before expectation | a predictable rare-event single-mode family keeps the Cameron--Martin energy, terminal sextic moment, and mixed energy-sextic budget of order one while the extracted `q_k` ledger grows like `p^(-1)`; the remaining theorem must keep expectation inside the exact Cartan remainder atoms |
 | [NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR](#ng-2026-07-25-a13-rational-translated-wick-separation-and-heat-schur) | A13 rational shifted-Hessian closure by Taylor-Gram positivity, endpoint-square-only Schur, or uniform heat-Gram inversion | the quadratic Taylor Gram is exactly negative on a production scalar ray, a two-coordinate endpoint kernel leaves a nonzero affine cross remainder, and heat lifts that kernel only by `O(sigma^2)`; the coefficient-dominant packet must retain its square, Wick trace, heat packet, and control energy |
 | [NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR](#ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur) | A13 rational Pauli--Fierz endpoint shortcut by deleting the shifted-Hessian pair, asserting positivity, or comparing the defect with a fixed multiple of the rational square | the production rational Gram has nonzero third derivative, while an exact rational-only path makes the first variation divided by the baseline square tend to negative infinity; the coupled shifted-Hessian pair and retained positive square must remain together |
@@ -89,6 +91,65 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-25-a13-r085-cartan-outer-weight-normalization"></a>
+### AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION -- the exact R-084 OU target is unweighted in the root scale
+
+**Failure mode:** Treat the valid R-085 outer-`2^j` Schur theorem as the
+normalization inherited by the exact R-084 root-diagonal OU target, thereby
+requiring `s>1/2` and `sum_k 2^k q_k`.
+
+**Evidence:** R-084 (4.6) is
+
+`sum_(A,j) int exp(-2t) E ||Q_(j,C) P_t^(j) D_j H||_HS^2 dt`
+
+with no outer root factor. Direct weighted Cauchy--Schwarz and the substitutions
+`r=j-k`, `m>=j+C` give
+
+`2^(-2sC) sum_k q_k /
+ [(1-2^(-eta))(1-2^(-2s))(1-2^(eta-2s))]`
+
+for every `s>0` and `0<eta<2s`. At `s=eta=7/12` the constant is
+`16.30295538482827...` and the gap is `2^(-7C/6)`. At `s=0`, one atom may
+occupy every later output shell, so the output truncation diverges linearly.
+
+**Consequence:** The direct R-084 sufficient threshold is `s>0` with
+`sum_k q_k`. R-085's theorem is still correct for its stronger
+outer-`2^j` expression and is not retracted. The production atom ledger
+itself remains open.
+
+<a id="ng-2026-07-25-a13-rational-standalone-eta-debt-and-k-heat"></a>
+### NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT -- the eta debt and nonlinear heat coefficient cannot be separated from their packet
+
+**Failure mode:** Complete the rational square, discard the retained positive
+square, pay `D_eta=Tr(L A_eta^(-1)L Gamma)/2` as an independent loss, and
+transport `K_eta=L A_eta^(-1)L` by the native linear backward-heat identity.
+
+**Evidence:** With `Q=GG^T-Gamma`,
+
+`G^T K_eta G/2-K_eta:Q/2-D_eta=0`
+
+pointwise. For `B_1=0`, `L=ell I_6`, `c=0`, and centered covariance-matched
+`G` with `Gamma_N=rho_N I_6`, the original packet has mean zero while
+`D_(eta,N)=ell^2 Tr(Gamma_N)/(4eta)=6 rho_N ell^2/(4eta)`; the retained-square
+variance is exactly the same quantity. Thus standalone payment manufactures
+an unbounded loss as the fixed-target covariance scale grows. If the
+coefficient and carrier share a root, the scalar alignment
+`L=2eta`, `c=-G`, `Gamma=1` gives
+`P+eta c^2=-eta` pathwise.
+
+For an averaging operator `P`,
+
+`P(L A^(-1)L)-(PL)(PA)^(-1)(PL)`
+
+is a PSD matrix-fractional Jensen defect, but its contraction with
+`Q=GG^T-Gamma` has either sign. Hence `K_eta:Q` does not inherit a separately
+favorable native heat telescope.
+
+**Consequence:** Keep the endpoint square, transformed Wick term, trace,
+backward-heat transport, and complete lower-chaos forest in one causal packet.
+The fixtures are method no-gos, not counterexamples to a production coupled
+form bound. The coefficient-dominant same-root rational packet remains open.
 
 <a id="ng-2026-07-25-a13-pathwise-translated-model-norm-extraction"></a>
 ### NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION -- translated model-norm extraction cannot prove the Cartan one-use ledger

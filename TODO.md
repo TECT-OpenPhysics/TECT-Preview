@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
-  - R-087 proves the spatial Cartan atom inequality (4.10) for 1/3<alpha<1/2 and every 1/2<s<3alpha-1/2; at alpha=2/5, s=7/12 has margins 7/30 and 13/30. The directly averaged Cartan one-use q-ledger (4.11) remains open, and a rare-event fixture rules out pathwise translated-model extraction only. The exact rational eta-completion exposes an indefinite transformed packet and an eta^(-1) trace debt. Under the declared continuous bounded-below/local-polynomial-envelope and canonical-filtration hypotheses, the fixed-cutoff Boue--Dupuis infimum equals its bounded smooth cylindrical-simple restriction, so after REG the required progression is uniform OVERLAP on that core followed by invocation of R-087 CORE. Next prove Cartan one-use and the coefficient-dominant rational packet/trace debt, reassemble REG, then OVERLAP, controlled-shell one-use, and q=10/9 Nelson. Sector A remains open.
+  - R-088 proves the exact direct-root unweighted Schur summation for s>0, the three-channel sequential Cartan secant, the quartic Besov payload, and the rational conditional mean/covariance criterion. Sector A remains open: prove the expectation-inside sequential two-point far estimate plus unweighted q-ledger (or direct integrated CFAR), the complete same-root rational square/trace/heat/Jensen/forest packet, REG, uniform OVERLAP, invoke R-087 CORE and R-066 one-use, then q=10/9 Nelson.
   - _updated 2026-07-25_
 
 ## Next up

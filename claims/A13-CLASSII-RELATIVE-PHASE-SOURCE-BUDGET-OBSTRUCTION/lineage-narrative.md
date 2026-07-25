@@ -369,6 +369,27 @@ endpoint theorem.
     invocation of this variational CORE; a separate packetwise theorem for
     every finite-energy control is not needed for Nelson. Sector A remains
     open.
+29. **Direct-root Cartan Schur, sequential secants, and rational conditional
+    trace reduction.** R-088,
+    `A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION`,
+    audits the exact R-084 OU formula against the stronger R-085 theorem.
+    The former has no outer `2^j`, so its direct nonorthogonal Schur threshold
+    is `s>0` with the unweighted ledger `sum_k q_k`. At `s=eta=7/12`, the
+    balanced constant is `16.30295538482827...` and the far-gap factor is
+    `2^(-7C/6)`. A sequential physical-shell telescope gives an exact
+    three-channel Cartan atom whose kth coefficient path contains no later
+    control shells. The deterministic quartic Besov lemma
+    `||A^3 D A||_(B^s_(1,1)) <= C_s ||A||_H2 ||A||_6^3` holds for every
+    `0<s<1`, giving the pure-control critical one-use payload. The missing
+    Cartan step is now a production two-point secant-to-quartic estimate with
+    expectation retained inside, or an equivalent direct integrated CFAR
+    bound. On the rational branch, the eta debt is exactly the covariance
+    part of the retained square on centered matched predictable blocks. A
+    conditional theorem isolates mean and covariance defects, and the
+    matrix-fractional Jensen defect is PSD but signed after Wick contraction.
+    Standalone debt and separate nonlinear heat transport are therefore
+    retired. The same-root rational causal packet, REG, uniform OVERLAP,
+    controlled-shell one-use, Nelson, and Sector A remain open.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

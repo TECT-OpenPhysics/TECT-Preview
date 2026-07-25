@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-088 Direct-root Cartan Schur surface-token correction] - 2026-07-25
+
+Corrected the generated changelog surface contract by recording the exact verifier token Direct-root Cartan Schur. This is a metadata-only correction: no theorem, proof, numerical result, tier, or open-gate status changed.
+
+## [R-088 direct-root Cartan Schur, sequential secant, and rational conditional trace reduction] - 2026-07-25
+
+R-088 proves the exact unweighted direct-root Schur theorem for s>0, the exact three-channel sequential Cartan secant, the high--high-to-low-complete quartic Besov payload, and the rational three-term square--Wick--debt null identity with its conditional mean/covariance criterion. Hostile audit demoted N^(-5/6) to an unproved toy-ansatz diagnostic, restricted the terminal-field bridge to the R-079 one-shot class, and replaced dimension growth by a fixed-six-dimensional covariance-scale fixture. Primary 66/66 and non-importing independent 95/95 pass; the manifest pins integrated 165/165 and aggregate 326/326. The production Cartan bridge/direct CFAR, complete same-root rational packet, REG, OVERLAP, one-use, Nelson, measure, and Sector A remain open.
+
 ## [R-087 Cartan spatial decay, rational trace, and variational CORE reduction] - 2026-07-25
 
 Registered R-087 at scoped T4. It proves smooth-LP spatial decay for the complete mixed Cartan remainder beyond the nonorthogonal Schur threshold, records why pathwise translated-model extraction does not yield the one-use ledger, derives the exact rational eta-completion and trace debt, and proves the fixed-cutoff bounded cylindrical variational core. Cartan (4.11), the coefficient-dominant rational packet, REG, OVERLAP, Nelson, and Sector A remain open.

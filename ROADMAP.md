@@ -304,16 +304,29 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   packet coupled to its endpoint square, Wick trace, and lower-chaos forest.
   Exact Taylor-Gram, endpoint-kernel, and vanishing-heat fixtures prohibit
   splitting it by positivity or a uniform inverse-Gram Schur complement.
+  R-087 proves the complete mixed Cartan remainder's spatial estimate for
+  `1/3<alpha<1/2` and `1/2<s<3alpha-1/2`, gives the exact rational
+  eta-completion, and identifies the fixed-cutoff bounded smooth
+  cylindrical-simple Boue--Dupuis core. R-088 then audits the exact R-084
+  normalization: no outer `2^j` is present, so direct nonorthogonal Schur
+  needs only `s>0` and `sum_k q_k`; at `s=eta=7/12` its constant is
+  `16.30295538482827...`. Its exact sequential three-channel Cartan secant
+  removes later control shells from the kth coefficient path, and its
+  quartic Besov lemma gives the pure-control critical payload for `0<s<1`.
+  The production two-point secant-to-quartic bridge or direct integrated CFAR
+  remains open. On the rational branch, the eta debt cancels through the
+  retained square only on centered covariance-matched predictable blocks;
+  mean/covariance defects and the complete same-root causal packet survive.
   Sector A remains open.
-  R-080--R-086 also expose the separate
+  R-080--R-088 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
   factorisation preserves the complete packet algebra for overlapping
   bounded-simple packets, so the remaining PROG input is an overlap-stable
-  lower bound plus the variational limit. The controlled Cartan CFAR, complete signed
-  NEAR, and that progression theorem remain before one-use and `q=10/9`
-  Nelson.
+  lower bound on the R-087 variational core. The controlled Cartan CFAR,
+  complete signed NEAR, REG, and uniform OVERLAP remain before one-use and
+  `q=10/9` Nelson.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -527,7 +540,15 @@ preserved in git/changelog rather than treated as current gates.
      Cartan one-use ledger (4.11)
      without extracting a pathwise translated model norm. R-087 also gives an
      exact rational eta-completion, but its trace debt and coefficient-
-     dominant packet remain open. Then apply
+     dominant packet remain open. R-088 corrects the exact target
+     normalization: use the direct unweighted `s>0` Schur theorem, not the
+     stronger outer-`2^j` sufficient architecture. Its sequential shell
+     secant and quartic Besov lemma reduce the Cartan target to an
+     expectation-inside production two-point bridge, or an equivalent direct
+     integrated CFAR bound. For the rational target, keep the endpoint square,
+     transformed Wick term, trace, backward heat, matrix-fractional Jensen
+     defect, and lower-chaos forest inseparable; standalone eta-debt payment
+     is a registered no-go. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
    a uniform OVERLAP lower bound for the bounded cylindrical-simple complete
    packet.

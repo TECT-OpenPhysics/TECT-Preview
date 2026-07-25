@@ -123,6 +123,22 @@ Boue--Dupuis core. The remaining order is Cartan one-use, the rational packet,
 REG, uniform OVERLAP on that core, invocation of R-087 CORE, controlled-shell
 one-use, and q=10/9 Nelson. Sector A remains open.
 
+R-088,
+A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION,
+audits the exact R-084 normalization and proves the direct nonorthogonal Schur
+summation for every `s>0` with the unweighted ledger `sum_k q_k`; the production
+choice `s=eta=7/12` has constant `16.30295538482827` and gap `2^(-7C/6)`.
+R-085 remains valid for its stronger outer-`2^j` quantity. R-088 additionally
+proves the exact three-channel sequential Cartan secant and the quartic Besov
+payload, but not the expectation-inside two-point far estimate or the
+unweighted production ledger. Its rational pointwise three-term square--Wick--debt null identity
+and conditional mean/covariance formula close only the centered covariance-
+matched branch; the same-root square, trace, heat/Jensen defect, and lower-
+chaos forest must still be estimated together. The remaining chain is the
+sequential Cartan bridge or direct integrated CFAR, the complete rational
+packet, REG, uniform OVERLAP, R-087 CORE, R-066 controlled-shell one-use, and
+`q=10/9` Nelson. Sector A remains open.
+
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's
 logical subproof grouping without moving stable evidence paths. New work in

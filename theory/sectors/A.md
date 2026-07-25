@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION | the exact R-084 OU target is unweighted in the root scale | Treat the valid R-085 outer-`2^j` Schur theorem as the |
+| NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT | the eta debt and nonlinear heat coefficient cannot be separa | Complete the rational square, discard the retained positive |
 | NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION | translated model-norm extraction cannot prove the Cartan one | Start from the R-087 spatial atom estimate, use the |
 | NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR | the translated-Wick rational packet cannot be separated by p | Prove the R-085 coupled rational shifted-Hessian bound by |
 | NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR | the rational shifted-Hessian pair cannot be deleted or paid  | Close the nonlinear rational Pauli--Fierz NEAR row by |

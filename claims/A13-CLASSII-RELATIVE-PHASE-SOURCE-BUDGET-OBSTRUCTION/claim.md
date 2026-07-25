@@ -482,6 +482,41 @@ the following structural results and proof-architecture boundaries hold.
     third derivative and a rational-only fixed-Schur fixture refute deletion,
     positivity, and fixed-multiple square shortcuts, but not the coupled form
     bound (6.5). REG, progression, one-use, Nelson, and Sector A remain open.
+29. `A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`
+    is R-086. It rewrites the shifted-Hessian pair plus endpoint square as
+    one exact translated-Wick normal form, pays the base-frozen model and all
+    nonresonant or payload-comparable branches, and leaves exactly one
+    coefficient-dominant high--high-to-low packet with endpoint square, Wick
+    trace, backward heat, and lower-chaos forest inseparable. The payable
+    totals are `13/15`, `7/10`, and `23/30`, with positive slack in their
+    stated branches. Exact Taylor-Gram, endpoint-kernel, and heat-lift fixtures
+    refute positivity, endpoint-square-only Schur, and uniform inverse-heat-
+    Gram shortcuts without refuting a coupled spatial form bound.
+30. `A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION`
+    is R-087. It fixes a compactly supported smooth analytic LP convention,
+    kills every complete Cartan principal for `m>=j+5`, and proves the spatial
+    atom estimate for `1/3<alpha<1/2` and
+    `1/2<s<3alpha-1/2`. At `alpha=2/5`, `s=7/12` has margins `7/30` and
+    `13/30`. The explicit translated-model ledger is not one-use; its rare
+    branch is a method no-go, not a production counterexample. R-087 also
+    proves the exact rational eta-completion and equality of the fixed-cutoff
+    Boue--Dupuis infimum with its bounded smooth cylindrical-simple core.
+31. `A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION`
+    is R-088. A formula-level audit shows that the exact R-084 OU target has
+    no outer `2^j`, so direct nonorthogonal Schur requires only `s>0` and
+    `sum_k q_k`. At `s=eta=7/12`, the constant is
+    `16.30295538482827...` with gap `2^(-7C/6)`. Sequential physical-shell
+    secants give an exact three-channel Cartan atom whose kth coefficient
+    path has no later control shells, and the deterministic quartic Besov
+    lemma pays `||A||_H2 ||A||_6^3` for `0<s<1`; its terminal-field payment is
+    currently restricted to the R-079 regular orthogonal no-revisit class.
+    The rational `K_eta` square, transformed Wick term, and eta debt obey an
+    exact three-term null identity; retained-square variance cancels the debt
+    only on centered covariance-matched predictable blocks. A conditional
+    theorem isolates mean and covariance defects, while the PSD matrix-
+    fractional Jensen defect has no fixed Wick sign. The production Cartan bridge/direct CFAR,
+    complete same-root rational causal packet, REG, OVERLAP, one-use, Nelson,
+    and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -518,6 +553,9 @@ is a scoped T4 subproof and does not promote A13.
 | Controlled polynomial CFAR / linear Pauli--Fierz forest | Exact disappearance of all three controlled polynomial stopped-FAR rows, exact three-Cartan input telescope with factor `3/(80P)`, one-use input-coordinate ledger, production-floor output-orthogonality no-go, exact linear-row Gram/heat/secant/covariance/nine-block forest, and adapted linear-row positivity no-go | T4 analytic/exact reduction closed; correlated Cartan CFAR, recombined signed NEAR, and overlap-stable progression open |
 | Root-diagonal Cartan OU / linear Pauli--Fierz absorption | Exact root-first CFAR diagonalisation and conditional OU-gradient identity; cumulative-tree root-orthogonality one-use no-go; arbitrary-budget form absorption of all three linear Pauli--Fierz rows for regular orthogonal strict-past one-shot controls | T4 analytic/exact reduction closed; production far-projected OU-gradient estimate, nonlinear rational NEAR, and progression open |
 | Nonorthogonal Cartan Schur / rational shifted-Hessian boundary | Conditional nonorthogonal `s>1/2` Schur summation; exact seven-part rational endpoint; five-family form absorption; shifted-Hessian and fixed-Schur no-gos | T4 conditional/analytic reduction closed; production atom, coupled rational packet, REG, and progression open |
+| Rational translated-Wick / payload-comparable reduction | Exact translated-Wick normal form, cubic Sobolev payment, nonresonant and payload-comparable closure, and Taylor-Gram/kernel/heat method no-gos | T4 analytic/exact reduction closed; one coefficient-dominant same-root packet open |
+| Cartan spatial decay / rational trace / variational CORE | Smooth-LP principal annihilation, complete remainder spatial decay, eta-completion, rare-event extraction boundary, and fixed-cutoff cylindrical-simple Boue--Dupuis core | T4 analytic/exact reduction closed; Cartan one-use, rational packet, REG, and OVERLAP open |
+| Direct-root Cartan Schur / sequential secant / conditional trace | Exact unweighted `s>0` Schur summation, sequential three-channel atom, quartic Besov one-use payload, rational conditional moment criterion, and matrix-fractional heat boundary | T4 analytic/exact reduction closed; production Cartan bridge/direct CFAR and complete same-root rational causal packet open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -702,37 +740,53 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_nonorthogonal_cartan_schur_rational_hessian_boundary_verify.py
+python codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `50/50`;
-- non-importing independent `36/36`;
-- integrated `130/130` and aggregate `216/216`;
-- complete mixed Cartan variation, conditional nonorthogonal Schur theorem and
-  sharp half-derivative boundary, exact rational seven-part endpoint, five
-  positive-slack families, shifted-Hessian and fixed-Schur diagnostics,
-  predecessor/source/PDF/surface contracts, and T4 scope firewalls;
+- primary `66/66`;
+- non-importing independent `95/95`;
+- integrated and aggregate manifest-pinned PASS;
+- direct-root Schur normalization, sequential three-channel secants, quartic
+  Besov payload, conditional rational trace cancellation, mean/covariance
+  defects, matrix-fractional Jensen boundary, predecessor/source/PDF/surface
+  contracts, and T4 scope firewalls;
 - exit code zero.
 
-The nine-page proof note passes the standard form check, zero-overfull gate,
+The eleven-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_nonorthogonal_cartan_schur_rational_hessian_boundary_manifest.json`
-- `notes/classii-nonorthogonal-cartan-schur-rational-shifted-hessian-boundary-260725-v1.0.tex.txt`
-- `notes/classii-nonorthogonal-cartan-schur-rational-shifted-hessian-boundary-260725-v1.0.pdf`
-- `../../codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption.py`
-- `../../codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption_independent.py`
-- `../../codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption_verify.py`
-- `runs/2026-07-25-primary-root-diagonal-cartan-ou-linear-pf-absorption/result.json`
-- `runs/2026-07-25-independent-root-diagonal-cartan-ou-linear-pf-absorption/result.json`
-- `runs/2026-07-25-integrated-root-diagonal-cartan-ou-linear-pf-absorption/result.json`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-root-orthogonality-one-use`
+- `classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_manifest.json`
+- `notes/classii-direct-root-cartan-schur-sequential-secant-rational-conditional-trace-reduction-260725-v1.0.tex.txt`
+- `notes/classii-direct-root-cartan-schur-sequential-secant-rational-conditional-trace-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction.py`
+- `../../codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_independent.py`
+- `../../codes/foundations/a13_classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_verify.py`
+- `runs/2026-07-25-primary-direct-root-cartan-schur-sequential-secant-rational-conditional-trace/result.json`
+- `runs/2026-07-25-independent-direct-root-cartan-schur-sequential-secant-rational-conditional-trace/result.json`
+- `runs/2026-07-25-integrated-direct-root-cartan-schur-sequential-secant-rational-conditional-trace/result.json`
+- `../../negative-results/registry.md#audit-2026-07-25-a13-r085-cartan-outer-weight-normalization`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-rational-standalone-eta-debt-and-k-heat`
+
+The immediate R-087 Cartan-spatial/rational-trace/variational-CORE
+predecessor remains binding:
+
+- `classii_cartan_spatial_decay_rational_trace_variational_core_reduction_manifest.json`
+- `notes/classii-cartan-spatial-decay-rational-trace-variational-core-reduction-260725-v1.0.tex.txt`
+- `notes/classii-cartan-spatial-decay-rational-trace-variational-core-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_cartan_spatial_decay_rational_trace_variational_core_reduction_verify.py`
+
+The immediate R-086 translated-Wick predecessor remains binding:
+
+- `classii_rational_translated_wick_payload_comparable_reduction_manifest.json`
+- `notes/classii-rational-translated-wick-payload-comparable-reduction-260725-v1.0.tex.txt`
+- `notes/classii-rational-translated-wick-payload-comparable-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_rational_translated_wick_payload_comparable_reduction_verify.py`
 
 The immediate R-083 controlled-polynomial/linear-forest predecessor remains
 binding:
@@ -1863,3 +1917,24 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   49/49, non-importing independent 53/53, integrated 132/132, and aggregate
   234/234 audits pass. The Cartan one-use ledger, coefficient-dominant rational
   packet, REG, OVERLAP, Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-088,
+  `A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION`.
+  A formula-level normalization audit corrects the application of R-085 to
+  the exact R-084 OU target: no outer `2^j` is present, so direct
+  nonorthogonal Schur uses `s>0` and `sum_k q_k`. At `s=eta=7/12`, the exact
+  balanced constant is `16.30295538482827...` with gap `2^(-7C/6)`.
+  Sequential physical-shell secants give an exact three-channel Cartan atom
+  and tame root envelope without future-control self-contamination. A new
+  quartic Besov lemma pays the pure-control
+  `X_A^(1/2)Y_A^(1/2)` payload for `0<s<1`; on the regular orthogonal
+  no-revisit one-shot class, R-079's square-function comparison makes the
+  terminal Gaussian cross form-payable, but this does not prove the literal
+  Cartan ledger or cover general revisiting controls. The rational `K_eta`
+  square, transformed Wick term, and trace debt obey an exact three-term null
+  identity; retained-square variance cancels the debt on centered matched
+  blocks, while conditional mean/covariance defects and a
+  signed matrix-fractional Jensen contraction remain. Standalone debt and
+  separate nonlinear heat transport are registered as a method no-go. The
+  production sequential Cartan bridge/direct CFAR, same-root rational causal
+  packet, REG, OVERLAP, one-use, Nelson, and Sector A remain open; tier stays
+  T4.

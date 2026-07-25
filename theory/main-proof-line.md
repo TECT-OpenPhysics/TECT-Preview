@@ -140,6 +140,22 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   controls. The remaining order is Cartan (4.11), the rational packet, REG,
   uniform OVERLAP on that core, invocation of R-087 CORE, controlled-shell
   one-use, and q=10/9 Nelson.
+  R-088,
+  A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION,
+  corrects the application-level normalization without retracting R-085: the
+  exact R-084 root sum has no outer `2^j`, so its direct nonorthogonal Schur
+  summation needs only `s>0` and the unweighted ledger `sum_k q_k`. At
+  `s=eta=7/12` its constant is `16.30295538482827` and its gap is
+  `2^(-7C/6)`. R-088 also proves the exact three-channel sequential Cartan
+  secant and the quartic Besov payload, while leaving the expectation-inside
+  two-point far estimate and its unweighted production ledger open. On the
+  rational branch it proves the exact pointwise three-term square--Wick--debt null identity and the
+  conditional mean/covariance formula; only the centered covariance-matched
+  branch closes. The complete same-root square/trace/heat/Jensen/forest packet
+  remains inseparable. The remaining order is the sequential Cartan bridge or
+  a direct integrated CFAR theorem, that complete rational packet, REG,
+  uniform OVERLAP, invocation of R-087 CORE, R-066 controlled-shell one-use,
+  and `q=10/9` Nelson.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

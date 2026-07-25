@@ -501,8 +501,20 @@ to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
  Its directly averaged Cartan one-use ledger (4.11) remains open; pathwise
  translated-model extraction is a registered method no-go. R-087 also gives
  an exact rational eta-completion, but its trace debt and coefficient-dominant
- packet remain open. Neither complete controlled Cartan CFAR nor the final
- rational packet is proved. R-080--R-087 correct the synthesis
+ packet remain open. R-088 audits the exact R-084 normalization: the target
+ has no outer `2^j`, so a direct nonorthogonal Schur theorem needs only
+ `s>0` and `sum_k q_k`; at `s=eta=7/12` its constant is
+ `16.30295538482827...`. Sequential physical-shell secants give an exact
+ three-channel Cartan atom without later control shells in the kth
+ coefficient path, and a quartic Besov lemma pays the pure-control critical
+ payload for `0<s<1`. The missing Cartan theorem is now the
+ expectation-inside production secant-to-quartic bridge, or a direct
+ integrated CFAR substitute. On the rational branch, the eta debt is exactly
+ paired with the retained square on centered covariance-matched predictable
+ blocks, but mean/covariance and same-root defects survive. Standalone debt
+ and separate nonlinear heat transport are registered method no-gos.
+ Neither complete controlled Cartan CFAR nor the final rational packet is
+ proved. R-080--R-088 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
 progressive/revisit control. R-087 instead proves equality of the fixed-cutoff
 Boue--Dupuis infimum on bounded smooth cylindrical-simple controls. The
@@ -1134,6 +1146,19 @@ eta-completion removes the endpoint kernel but leaves an indefinite
 coefficient-dominant Wick packet and an eta^(-1) trace debt. Hence rational
 NEAR remains open as well.
 
+R-088,
+A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION,
+corrects the exact Cartan target to an unweighted root sum and proves direct
+Schur for every s>0. At s=eta=7/12 the constant is
+16.30295538482827... with gap 2^(-7C/6). Its sequential three-channel secant
+and quartic Besov lemma identify the production two-point
+secant-to-quartic estimate, or direct integrated CFAR, as the only remaining
+Cartan analytic input. Its rational conditional theorem proves that the
+eta debt cancels only inside the retained square on centered
+covariance-matched predictable blocks. Mean/covariance defects, the signed
+matrix-fractional Jensen contraction, and the coefficient-dominant same-root
+square/trace/forest packet remain. No gate status flips.
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
 **Statement:** Prove a cutoff-, partition-, and revisit-uniform lower bound
@@ -1146,7 +1171,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
-sharpened by R-081--R-087
+sharpened by R-081--R-088
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

@@ -1,0 +1,886 @@
+% Title: Direct-root Cartan Schur, sequential secants, and rational conditional trace reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; DIRECT-ROOT SCHUR, SEQUENTIAL SECANT, QUARTIC BESOV, AND CONDITIONAL TRACE IDENTITIES CLOSED; PRODUCTION CARTAN BRIDGE, RATIONAL CAUSAL PACKET, REG, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION
+% Ledger: R-088
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-084 reduced controlled Cartan CFAR exactly to a root-diagonal
+Ornstein--Uhlenbeck gradient square.  R-085 then proved a valid
+nonorthogonal Schur theorem for a stronger expression carrying an additional
+outer factor $2^j$.  R-087 proved its spatial atom estimate but not the
+one-use ledger.  A formula-level audit now shows that the exact R-084 target
+does not carry that outer factor.
+
+This note makes four advances.
+
+\begin{enumerate}
+\item The exact R-084 target obeys a direct-root nonorthogonal Schur theorem
+for every $s>0$, with the unweighted ledger $\sum_kq_k$.  At $s=7/12$ the
+balanced constant is
+\[
+ 16.30295538482827\ldots
+\]
+and the far-gap factor remains $2^{-7C/6}$.
+\item A sequential physical-shell secant gives an exact three-channel Cartan
+atom.  Future control shells are absent from the coefficient path of the
+$k$th atom, and its pointwise envelope has no artificial sixth power of the
+complete translated model norm.
+\item For $0<s<1$, the deterministic quartic payload satisfies
+\[
+ \|A^{\otimes3}\otimes DA\|_{B^s_{1,1}}
+ \lesssim_s\|A\|_{H^2}\|A\|_6^3.
+\]
+Its right side is exactly the critical pure-control product
+$X_A^{1/2}Y_A^{1/2}$.
+\item The rational $K_\eta$ square, transformed Wick term, and $\eta$-trace
+debt obey an exact pointwise three-term null identity.  A conditional moment
+theorem identifies precisely when retained-square variance cancels the debt
+and precisely which mean and covariance defects survive.
+\end{enumerate}
+
+These results do not prove the production sequential
+secant-to-quartic estimate, direct integrated Cartan CFAR, the
+coefficient-dominant rational causal packet, REG, uniform OVERLAP,
+controlled-shell one-use, Nelson, an interacting measure, or Sector-A
+closure.  Tier stays T4.
+
+The load-bearing internal authorities are R-050, R-066, R-074, R-077,
+R-079, R-081, and R-083--R-087.  A targeted search of the external
+\texttt{Contents} archive found no relevant Cartan-current, OU-gradient,
+paracomposition, or rational trace theorem; its Cartan material concerns an
+unrelated Lie-algebra problem.
+
+\section{Exact target and normalization audit}
+
+Write
+\[
+ \mathrm Q_{j,C}f=(\Pi_mf)_{m\ge j+C}.
+ \tag{2.1}
+\]
+After separating the accepted finite-low object, absorb the OU action into
+the atoms by defining
+\[
+ v_{A,j,k,t}:=P_t^{(j)}u_{A,j,k,t}.
+ \tag{2.2a}
+\]
+The linearity of $P_t^{(j)}$ then puts the exact R-084 target in the form
+\[
+ \boxed{
+ \mathcal S_C=
+ \sum_{A,j}\int_0^\infty e^{-2t}
+ \mathbb E\left\|
+ \mathrm Q_{j,C}\sum_{k\le j}v_{A,j,k,t}
+ \right\|_{\rm HS}^2dt.}
+ \tag{2.2}
+\]
+The controlled Cartan coefficient is
+\[
+ S_C^{\rm ctrl}={3\over40P}\mathcal S_C.
+ \tag{2.3}
+\]
+There is no factor $2^j$ outside the root sum in (2.2).
+
+By contrast, R-085 Theorem 4.1 proves a correct theorem for
+\[
+ \sum_m\sum_{j\le m-C}2^j
+ \mathbb E\|\Pi_mf_j\|^2.
+ \tag{2.4}
+\]
+The audit therefore narrows the sufficient architecture; it does not
+withdraw the stronger R-085 theorem.  If a hidden rescaling
+$u_{j,k}=2^{-j/2}\widetilde u_{j,k}$ is intended, it must be stated and
+checked against the unscaled atoms in R-087.  No such rescaling occurs in
+the current formulas.
+
+This fires
+\texttt{AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION}.
+The correction changes the sufficient ledger and threshold, not any
+already-proved R-085 inequality.
+
+\section{Direct-root nonorthogonal Schur theorem}
+
+\subsection*{Theorem 3.1}
+
+Let $v_{A,j,k,t}$ be Hilbert-valued atoms for $k\le j$, and suppose that for
+$m\ge j+C_0$,
+\[
+ \sum_A\int_0^\infty e^{-2t}
+ \mathbb E\|\Pi_mv_{A,j,k,t}\|_{\rm HS}^2dt
+ \le 2^{-2s(m-k)}q_k
+ \tag{3.1}
+\]
+with $s>0$ and deterministic $q_k\ge0$.  For every $C\ge C_0$ and
+$0<\eta<2s$,
+\[
+ \boxed{
+ \begin{aligned}
+ &\sum_{A,j}\int_0^\infty e^{-2t}
+ \mathbb E\left\|
+ \mathrm Q_{j,C}\sum_{k\le j}v_{A,j,k,t}
+ \right\|_{\rm HS}^2dt\\
+ &\quad\le
+ {2^{-2sC}\over
+ (1-2^{-\eta})(1-2^{-2s})(1-2^{\eta-2s})}
+ \sum_kq_k .
+ \end{aligned}}
+ \tag{3.2}
+\]
+No orthogonality between different $k$ is assumed.
+
+\emph{Proof.}
+For fixed $A,j,m,t$, weighted Cauchy--Schwarz gives
+\[
+ \left\|\sum_{k\le j}\Pi_mv_{A,j,k,t}\right\|^2
+ \le {1\over1-2^{-\eta}}
+ \sum_{k\le j}2^{\eta(j-k)}
+ \|\Pi_mv_{A,j,k,t}\|^2.
+ \tag{3.3}
+\]
+Insert (3.1), exchange nonnegative sums, and put $r=j-k$.  Then
+\[
+ \sum_{m\ge j+C}2^{-2s(m-k)}
+ ={2^{-2s(C+r)}\over1-2^{-2s}},
+ \tag{3.4}
+\]
+while
+\[
+ \sum_{r\ge0}2^{(\eta-2s)r}
+ ={1\over1-2^{\eta-2s}}.
+ \tag{3.5}
+\]
+The latter converges exactly when $\eta<2s$.  Combining
+(3.3)--(3.5) proves (3.2). \hfill$\square$
+
+\subsection*{Balanced value and sharp threshold}
+
+For fixed $s$, the two $\eta$-dependent factors are balanced at $\eta=s$.
+Indeed, if $a=2^{-\eta}$ and $b=2^{-(2s-\eta)}$, then $ab=2^{-2s}$ and
+$(1-a)(1-b)$ is maximal at $a=b$.  Hence
+\[
+ C_s^{\rm dir}
+ ={1\over(1-2^{-s})^2(1-2^{-2s})}.
+ \tag{3.6}
+\]
+At $s=7/12$,
+\[
+ C_{7/12}^{\rm dir}
+ =16.30295538482827\ldots,\qquad
+ 2^{-2sC}=2^{-7C/6}.
+ \tag{3.7}
+\]
+
+The threshold $s>0$ is sharp under only (3.1).  At $s=0$, one fixed
+$j,k$ may have a unit component in every output shell $m\ge j+C$.  The
+atom hypothesis still holds with $q_k=1$, but the squared
+$\ell_m^2$ norm grows linearly with the output truncation.  Thus no
+cutoff-uniform conclusion follows at $s=0$.
+
+\subsection*{Conditional Cartan corollary}
+
+If the production atoms satisfy (3.1) and
+\[
+ \boxed{
+ \sum_kq_k\le K_e\left\{
+ 1+\mathbb E[X^{1/2}Y^{1/2}]
+ \right\},}
+ \tag{3.8}
+\]
+then
+\[
+ S_C^{\rm ctrl}
+ \le {3K_e\over40P}C_{s,\eta}^{\rm dir}2^{-2sC}
+ \left\{1+\mathbb E[X^{1/2}Y^{1/2}]\right\}.
+ \tag{3.9}
+\]
+Equation (3.8), not the Schur summation, remains open.  The direct-root
+sufficient threshold is $s>0$, not $s>1/2$.
+
+\section{Exact sequential Cartan secant}
+
+Fix the generator and root scale and write
+\[
+ \Phi=\Phi_{A,j},\qquad
+ \mathcal C_\Phi(z)=\Phi(z)^TDz.
+ \tag{4.1}
+\]
+Let
+\[
+ A^{(k)}=A^{(\ell)}+\sum_{r=j_0}^ka_r,\qquad
+ B_{j,k}=w_j+A^{(k-1)}.
+ \tag{4.2}
+\]
+Define
+\[
+ \Theta_{A,j,k}
+ =\mathcal C_\Phi(B_{j,k}+a_k)-\mathcal C_\Phi(B_{j,k}).
+ \tag{4.3}
+\]
+Then the physical-shell telescope is exact:
+\[
+ \sum_{k=j_0}^j\Theta_{A,j,k}
+ =\mathcal C_\Phi(w_j+A^{(j)})
+ -\mathcal C_\Phi(w_j+A^{(\ell)}).
+ \tag{4.4}
+\]
+The second endpoint belongs to the accepted finite-low object.
+
+Every $a_k$, $k\le j$, is $\mathcal F_{j-1}$-measurable, so its Malliavin
+derivative in a fresh root direction $v$ vanishes.  Differentiating (4.3)
+gives the complete atom
+\[
+ \boxed{
+ \begin{aligned}
+ T_{A,j,k}[v]={}&
+ \{D\Phi(B_{j,k}+a_k)-D\Phi(B_{j,k})\}[v]^TDB_{j,k}\\
+ &+D\Phi(B_{j,k}+a_k)[v]^TDa_k\\
+ &+\{\Phi(B_{j,k}+a_k)-\Phi(B_{j,k})\}^TDv .
+ \end{aligned}}
+ \tag{4.5}
+\]
+Equivalently,
+\[
+ \begin{aligned}
+ T_{A,j,k}[v]
+ =\int_0^1\{&
+ D^2\Phi(B_{j,k}+ra_k)[a_k,v]^TD(B_{j,k}+ra_k)\\
+ &+D\Phi(B_{j,k}+ra_k)[v]^TDa_k\\
+ &+D\Phi(B_{j,k}+ra_k)[a_k]^TDv\}\,dr .
+ \end{aligned}
+ \tag{4.6}
+\]
+Thus
+\[
+ \sum_{k=j_0}^jT_{A,j,k}
+ =\mathbb D_j\{
+ \mathcal C_\Phi(w_j+A^{(j)})
+ -\mathcal C_\Phi(w_j+A^{(\ell)})\}.
+ \tag{4.7}
+\]
+All three R-084 derivative channels are retained.  The $k$th coefficient
+path contains only control shells below or equal to $k$; future control
+shells are absent.
+
+R-081 gives $\|D\Phi\|_\infty\le3$, while the fixed floor and target heat
+give $\|D^2\Phi\|_\infty\le M_{e,2}$.  Therefore
+\[
+ \boxed{
+ |T_{A,j,k}[v]|
+ \le M_{e,2}|a_k||v||DB_{j,k}|
+ +3|v||Da_k|+3|a_k||Dv|.}
+ \tag{4.8}
+\]
+If the root basis obeys
+\[
+ \sum_h|v_h|^2\le\kappa_02^{-j},\qquad
+ \sum_h|Dv_h|^2\le\kappa_12^j,
+ \tag{4.9}
+\]
+then the elementary three-term square inequality yields
+\[
+ \sum_h|T_{A,j,k}[v_h]|^2
+ \le C_e\{
+ 2^{-j}|a_k|^2|DB_{j,k}|^2
+ +2^{-j}|Da_k|^2+2^j|a_k|^2\}.
+ \tag{4.10}
+\]
+
+Equations (4.8)--(4.10) remove the artificial complete translated
+$Z^6$ multiplier from the algebraic endpoint.  They do not prove
+far-frequency decay.  The two-point Nemytskii secants in (4.5) still require
+a production paracomposition estimate, and distinct $k$ atoms remain
+nonorthogonal after squaring.
+
+For the exact sequential atoms, set
+$v_{A,j,k,t}=P_t^{(j)}T_{A,j,k}$.  The exact missing bridge is: for some
+$s>0$,
+\[
+ \sum_A\int_0^\infty e^{-2t}
+ \mathbb E\|\Pi_mP_t^{(j)}T_{A,j,k}\|_{\rm HS}^2dt
+ \le2^{-2s(m-k)}\widetilde q_k,
+ \qquad m\ge j+C_0,
+ \tag{4.11}
+\]
+together with
+\[
+ \sum_k\widetilde q_k
+ \lesssim1+\mathbb E[X^{1/2}Y^{1/2}].
+ \tag{4.12}
+\]
+Theorem 3.1 would then close the exact Cartan OU target.  A direct integrated
+CFAR estimate, summing moderate harmonics before taking an extreme-tail
+bound, would also suffice; a per-atom ledger is a sufficient architecture,
+not a logical necessity.
+
+\section{Quartic Besov one-use payload}
+
+\subsection*{Lemma 5.1}
+
+Let $0<s<1$ and
+$A\in H^2(\mathbb T_L^3)\cap L^6(\mathbb T_L^3)$.  Then
+\[
+ \boxed{
+ \|A^{\otimes3}\otimes DA\|_{B^s_{1,1}}
+ \le C_{s,L}\|A\|_{H^2}\|A\|_6^3.}
+ \tag{5.1}
+\]
+The statement applies componentwise to the production vector field.
+
+\emph{Proof.}
+Use a smooth inhomogeneous Littlewood--Paley partition and assign ties by a
+fixed ordering.  If the differentiated factor has largest frequency $j$,
+Holder gives
+\[
+ \|\Delta_jDA\,A^3\|_1
+ \le C2^j\|\Delta_jA\|_2\|A^3\|_2
+ \le C2^j\|\Delta_jA\|_2\|A\|_6^3.
+ \tag{5.2}
+\]
+If an undifferentiated factor $\Delta_jA$ has largest frequency, two other
+undifferentiated factors are placed in $L^6$, and Bernstein gives
+\[
+ \|DS_{j+c}A\|_6\le C2^j\|A\|_6.
+ \tag{5.3}
+\]
+Consequently
+\[
+ \|\Delta_jA\,A\,A\,DS_{j+c}A\|_1
+ \le C2^j\|\Delta_jA\|_2\|A\|_6^3.
+ \tag{5.4}
+\]
+Let $P_j$ denote any product family whose largest input scale is $j$.
+Although its output may lie arbitrarily below $j$ through high--high-to-low
+interactions, it always has output scales $n\le j+c$.  The uniform
+$L^1$ multiplier bound and $s>0$ give the geometric low-output summation
+\[
+ \sum_{n\le j+c}2^{sn}\|\Delta_nP_j\|_1
+ \le C_s2^{sj}\|P_j\|_1.
+ \tag{5.5}
+\]
+Combining (5.2)--(5.5) over the finitely many largest-input product families
+reduces the Besov norm to
+\[
+ \sum_j2^{(s+1)j}\|\Delta_jA\|_2.
+ \tag{5.6}
+\]
+Finally,
+\[
+ \begin{aligned}
+ \sum_j2^{(s+1)j}\|\Delta_jA\|_2
+ &=\sum_j2^{-(1-s)j}
+ \{2^{2j}\|\Delta_jA\|_2\}\\
+ &\le
+ \left(\sum_j2^{-2(1-s)j}\right)^{1/2}\|A\|_{H^2}.
+ \end{aligned}
+ \tag{5.7}
+\]
+The final series converges exactly when $s<1$; the low-output sum used
+$s>0$.  This proves (5.1), including high--high-to-low outputs.
+\hfill$\square$
+
+With
+\[
+ X_A=\|A\|_{H^2}^2,\qquad Y_A=\|A\|_6^6,
+ \tag{5.8}
+\]
+the right side of (5.1) is $X_A^{1/2}Y_A^{1/2}$: one use of each critical
+control budget.  Equivalently, for
+$R\in B^{-s}_{\infty,\infty}$,
+\[
+ |\langle R,A^{\otimes3}\otimes DA\rangle|
+ \le C_s\|R\|_{B^{-s}_{\infty,\infty}}
+ X_A^{1/2}Y_A^{1/2}.
+ \tag{5.9}
+\]
+
+The terminal variational sextic is
+\[
+ Y=\|U+A\|_6^6,
+ \tag{5.10}
+\]
+not $Y_A$.  The triangle inequality gives
+\[
+ \|A\|_6^3
+ \le C\{\|U+A\|_6^3+\|U\|_6^3\}.
+ \tag{5.11}
+\]
+On the regular orthogonal no-revisit one-shot shell class, the canonical
+$K_k$ smoothing and R-079 (6.4) give the pathwise square-function comparison
+$X_A=\|A\|_{H^2}^2\le C X$.  Only on this explicitly stated class,
+(5.11) yields
+\[
+ \mathbb E[X_A^{1/2}Y_A^{1/2}]
+ \le C\mathbb E[X^{1/2}Y^{1/2}]
+ +C(\mathbb EX)^{1/2}
+   (\mathbb E\|U\|_6^6)^{1/2}.
+ \tag{5.12}
+\]
+The last term is bounded by
+\[
+ \delta\mathbb EX+C_{\delta,L}
+ \tag{5.13}
+\]
+using the canonical sixth moment.  This is form-payable with an arbitrarily
+small energy allocation, but it is not literally the right side of (4.12)
+without another bridge.  No such pathwise comparison is asserted for a
+general progressive revisiting control.
+
+\section{Corrected translated-model obstruction}
+
+R-087's extracted majorant has the form
+\[
+ q_k^{\rm mod}
+ =C_e2^{-(6\alpha-1)k}
+ \sup_{j\ge k}\sum_A\mathbb E\int_0^1
+ Z_{j,r}^6
+ \{\|a_k\|_2^2+\|Da_k\|_2^2\}\,dr.
+ \tag{6.1}
+\]
+The direct-root theorem asks only for $\sum_kq_k^{\rm mod}$.  Nevertheless,
+the R-087 predictable rare branch still prevents this extraction.  Let
+$N=2^k$, let $E\in\mathcal F_{k-1}$ have probability $p=N^{-6}$, and take
+\[
+ h_k=N^3\mathbf1_Ee_N,\qquad
+ a_k=K_kh_k=N\mathbf1_Ee_N.
+ \tag{6.2}
+\]
+Then
+\[
+ \mathbb EX\asymp\mathbb EY
+ \asymp\mathbb E\sqrt{XY}\asymp1,
+ \tag{6.3}
+\]
+but, with $\beta=6\alpha-1$,
+\[
+ q_k^{\rm mod}\asymp
+ N^{-\beta}pN^{6(1+\alpha)}N^4=N^5=p^{-5/6}.
+ \tag{6.4}
+\]
+The stronger weighted ledger grows as $N^6=p^{-1}$.  The normalization
+repair saves one spatial power but does not rescue this majorant.
+
+This fixture does not evaluate the exact complete production atom, so it is
+not a counterexample to that atom.  For bookkeeping only, impose the
+\emph{unproved toy ansatz} that its one-shell contribution has size
+\[
+ pN^2A^{2+2s}.
+ \tag{6.5}
+\]
+Under $pN^4A^2\le1$ and $pA^6\le1$, arithmetic within that ansatz gives its
+maximum at $A=N$, namely $N^{-2+2s}$; at $s=7/12$ this is $N^{-5/6}$.
+Neither the sequential identity nor the executables derive the ansatz
+(6.5), because its factor $2^{-s(m-k)}$ is precisely the open far-frequency
+theorem.  The value $N^{-5/6}$ is therefore a conditional diagnostic and is
+not evidence for the production atom.  The only rigorous conclusion here is
+that the $N^5$ fixture refutes the extracted $Z^6$ majorant route, not the
+exact atom.
+
+\section{Rational completion as a conditional packet}
+
+Let
+\[
+ \begin{gathered}
+ A_\eta=B_1+2\eta I,\qquad
+ K_\eta=LA_\eta^{-1}L,\qquad
+ M_\eta=L-K_\eta,\\
+ Q=GG^T-\Gamma,\qquad
+ D_\eta={1\over2}K_\eta:\Gamma,
+ \end{gathered}
+ \tag{7.1}
+\]
+and
+\[
+ \mathcal P
+ ={1\over2}L:Q+G^TLc+{1\over2}c^TB_1c.
+ \tag{7.2}
+\]
+R-087 proved
+\[
+ \mathcal P+\eta|c|^2
+ ={1\over2}
+ (c+A_\eta^{-1}LG)^TA_\eta
+ (c+A_\eta^{-1}LG)
+ +{1\over2}M_\eta:Q-D_\eta.
+ \tag{7.3}
+\]
+
+\subsection*{Pointwise null identity}
+
+The apparent debt is not an independent loss:
+\[
+ \boxed{
+ {1\over2}G^TK_\eta G
+ -{1\over2}K_\eta:Q-D_\eta=0.}
+ \tag{7.4}
+\]
+Indeed, $K_\eta:Q=G^TK_\eta G-K_\eta:\Gamma$.  Hence the debt is exactly
+paired with the $K_\eta$ part of the retained square and transformed Wick
+term.  Paying it after deleting its companion can manufacture a
+cutoff-divergent loss.
+
+\subsection*{Theorem 7.1 (conditional moment criterion)}
+
+Let $\eta>0$.  On a fixed finite-dimensional real space suppose that
+$B_1$ and $\Gamma$ are symmetric positive semidefinite, $L$ is symmetric,
+$A_\eta=B_1+2\eta I$ is positive definite, and
+$B_1,L,c,\Gamma$ are measurable with respect to a sigma-field $\mathcal H$.
+Assume that $G$ has a finite conditional second moment and that every
+displayed product is integrable.  Put
+\[
+ \mu=\mathbb E[G\mid\mathcal H],\qquad
+ V=\operatorname{Cov}(G\mid\mathcal H).
+ \tag{7.5}
+\]
+Then
+\[
+ \boxed{
+ \begin{aligned}
+ \mathbb E[\mathcal P+\eta|c|^2\mid\mathcal H]
+ ={}&{1\over2}
+ (c+A_\eta^{-1}L\mu)^TA_\eta
+ (c+A_\eta^{-1}L\mu)\\
+ &+{1\over2}M_\eta:\mu\mu^T
+ +{1\over2}L:(V-\Gamma).
+ \end{aligned}}
+ \tag{7.6}
+\]
+Conditional Gaussianity is unnecessary.
+
+\emph{Proof.}
+Take conditional expectation in (7.3).  Since
+\[
+ \mathbb E[GG^T\mid\mathcal H]=V+\mu\mu^T,
+ \tag{7.7}
+\]
+the square contributes its mean square plus
+$K_\eta:V/2$.  Combining that covariance term with
+$M_\eta:V/2$ gives $L:V/2$, while
+$-(K_\eta+M_\eta):\Gamma/2=-L:\Gamma/2$.  The mean terms combine as shown
+in (7.6). \hfill$\square$
+
+If $\mu=0$ and $V=\Gamma$, then
+\[
+ \mathbb E[\mathcal P\mid\mathcal H]
+ ={1\over2}c^TB_1c\ge0.
+ \tag{7.8}
+\]
+The retained-square variance cancels $D_\eta$ exactly.  This recovers the
+fresh predictable covariance-matched branch already closed more generally
+by the complete R-077 Doob cancellation.  It does not close the surviving
+coefficient-dominant packet, whose coefficient and carrier may share a
+probability root.
+
+A nonzero conditional mean leaves
+$M_\eta:\mu\mu^T/2$, and covariance mismatch leaves
+$L:(V-\Gamma)/2$.  Neither defect is repaired by changing $\eta$.  In the
+scalar fixtures
+\[
+ \eta=1,\quad B_1=0,\quad L=-1,\quad V=\Gamma=1,\quad
+ \mu=t,\quad c=t/2,
+ \tag{7.9}
+\]
+formula (7.6) equals $-3t^2/4$.  With
+$\mu=c=0$, $L=-1$, $V=2$, and $\Gamma=1$, it equals $-1/2$.
+
+\subsection*{Standalone-debt and adapted-alignment no-go}
+
+For a production-shaped cutoff diagnostic keep the target dimension fixed,
+say $d=6$, and take
+\[
+ B_1=0,\quad L=\ell I_6,\quad c=0,\quad
+ \Gamma_N=\rho_N I_6,\qquad \mathbb EG=0,\quad
+ \operatorname{Cov}(G)=\Gamma_N,\qquad \rho_N\uparrow\infty.
+ \tag{7.10}
+\]
+Then $\mathbb E\mathcal P=0$, while
+\[
+ D_{\eta,N}={\ell^2\over4\eta}\operatorname{Tr}\Gamma_N
+ ={6\rho_N\ell^2\over4\eta}.
+ \tag{7.11}
+\]
+The expected completed-square variance is exactly the same quantity.
+Therefore standalone payment can diverge with cutoff covariance at fixed
+target dimension even though the original packet has zero mean.
+
+The same-root alignment
+\[
+ B_1=0,\quad L=2\eta,\quad \Gamma=1,\quad c=-G
+ \tag{7.12}
+\]
+has $M_\eta=0$, zero completed square, and
+\[
+ \mathcal P+\eta c^2=-\eta
+ \tag{7.13}
+\]
+pathwise.  This is a method no-go, not a production counterexample: $c$ is
+not predictable relative to $G$.  Together (7.11)--(7.13) fire
+\texttt{NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT}.
+
+\section{Matrix-fractional heat boundary}
+
+Let $P$ be an averaging operator, let $A$ be positive definite and $L$
+symmetric, and write $\bar A=PA$, $\bar L=PL$.  Direct expansion gives
+\[
+ \boxed{
+ \begin{aligned}
+ &P(LA^{-1}L)-\bar L\bar A^{-1}\bar L\\
+ &\quad=P\!\left[
+ (L-\bar L\bar A^{-1}A)A^{-1}
+ (L-A\bar A^{-1}\bar L)\right]\succeq0.
+ \end{aligned}}
+ \tag{8.1}
+\]
+The second factor is the transpose of the first.  Thus
+$A\mapsto LA^{-1}L$ has a positive matrix-fractional Jensen defect.
+
+This positivity does not give a sign after Wick contraction.  If
+$\mathcal J$ denotes the left side of (8.1), then
+$\mathcal J:Q$ may have either sign; for example $G=0$ and
+$\Gamma=I$ give $Q=-I$ and
+$\mathcal J:Q=-\operatorname{Tr}\mathcal J$.  Therefore $K_\eta$ does not
+inherit the native linear backward-heat telescope of $B_1$ in a form that
+can be separated from $Q$.
+
+The genuine open rational object is
+\[
+ \boxed{
+ \text{endpoint square}
+ +{1\over2}M_\eta:Q-D_\eta
+ +\text{backward-heat transport}
+ +\text{complete lower-chaos forest}.}
+ \tag{8.2}
+\]
+These pieces must remain together.  The complete fresh-root forest cancels
+under R-077; the same-root adapted defect in (8.2) does not.
+
+\subsection*{Correct completion-parameter budget}
+
+The pinned control coefficient is
+\[
+ \epsilon_v={9\over20},\qquad
+ q={1\over2\epsilon_v}={10\over9}.
+ \tag{8.3}
+\]
+If $\eta$ is reallocated inside this $9/20$, $q$ remains $10/9$.
+The number
+\[
+ {1\over2p}-\epsilon_v
+ ={5\over11}-{9\over20}
+ ={1\over220},\qquad p={11\over10},
+ \tag{8.4}
+\]
+is only the strict comparison margin when $\eta$ is added on top of
+$9/20$.  In that added mode,
+\[
+ q_\eta={10\over9+20\eta},\qquad
+ q_\eta-p={1-220\eta\over90+200\eta},
+ \tag{8.5}
+\]
+so strict comparison requires $\eta<1/220$.  No universal
+$1/220$ cap applies to an internal allocation.
+
+\section{Attempt and evidence map}
+
+\begin{tabularx}{\textwidth}{@{}p{0.27\textwidth}p{0.18\textwidth}Y@{}}
+\toprule
+Route & Verdict & Exact consequence\\
+\midrule
+R-084 normalization audit & corrected attribution &
+The exact OU target has no outer $2^j$.\\
+Direct-root Schur & proved &
+$s>0$, unweighted $\sum_kq_k$, constant (3.6).\\
+R-085 weighted Schur & retained &
+Valid for its stronger $2^j$-weighted expression.\\
+Sequential shell telescope & exact &
+Three channels retained; no future control shell in the $k$th path.\\
+Sequential tame envelope & proved &
+Removes the generic total-$Z^6$ algebraic multiplier.\\
+Sequential far atom & open &
+Requires the production two-point estimate (4.11).\\
+Quartic Besov payload & proved &
+$0<s<1$ and pure-control $X_A^{1/2}Y_A^{1/2}$.\\
+Terminal sextic bridge & form-payable &
+Adds $\delta\mathbb EX+C_{\delta,L}$, not literally (4.12).\\
+Old $q_k^{\rm mod}$ extraction & failed method &
+Unweighted growth $N^5$; weighted growth $N^6$.\\
+Toy secant ansatz & conditional diagnostic only &
+$N^{-5/6}$ follows only after assuming the unproved far-decay ansatz (6.5).\\
+Fresh-root or Wick alone & insufficient &
+Conditional zero chaos and same-root coefficient defects survive.\\
+Localization or BMO & failed method &
+Expected budgets do not yield predictable essential-supremum control.\\
+Standalone trace payment & failed method &
+Creates $(\ell^2/(4\eta))\operatorname{Tr}\Gamma_N$ while the original mean can be zero.\\
+Conditional rational theorem & exact criterion &
+Closes only centered covariance-matched predictable blocks.\\
+Matrix-fractional Jensen & PSD but signed after $Q$ &
+No separate backward-heat telescope for $K_\eta:Q$.\\
+\bottomrule
+\end{tabularx}
+
+The minimal remaining dependency chain is
+\[
+ \begin{aligned}
+ &\text{sequential Cartan two-point bridge or direct integrated CFAR}\\
+ &+\text{complete rational same-root causal square/trace/forest bound}\\
+ &\Longrightarrow \text{REG}\\
+ &\Longrightarrow \text{uniform OVERLAP on the R-087 variational core}\\
+ &\Longrightarrow \text{R-066 one-use synthesis}
+ \Longrightarrow q=10/9\text{ Nelson}.
+ \end{aligned}
+ \tag{9.1}
+\]
+R-080 supplies the low object, R-083 the polynomial CFAR and full
+Pauli--Fierz forest, R-084 the linear rows, R-086 the paid rational branches,
+and R-087 the fixed-cutoff variational CORE.  No all-progressive packet
+theorem is needed between OVERLAP and that CORE invocation.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The direct-root theorem dropped a required $2^j$.''}
+\textbf{DISMISSED within the stated target.}
+Equation (2.2) is the exact R-084 expression and has no such factor.  The
+R-085 theorem remains valid for (2.4).  Any rescaling must be exhibited
+explicitly.
+
+\item \textbf{``The weaker threshold proves Cartan CFAR.''}
+\textbf{UPHELD as an overclaim.}
+Theorem 3.1 only performs the triangular summation.  The production bridge
+(4.11)--(4.12), or a direct integrated substitute, remains open.
+
+\item \textbf{``R-087's old $q_k^{\rm mod}$ now satisfies the ledger.''}
+\textbf{DISMISSED.}
+The rare branch gives $q_k^{\rm mod}\asymp N^5$.  The repair saves one
+power but does not make the extracted majorant bounded.
+
+\item \textbf{``The rare branch refutes the exact Cartan atom.''}
+\textbf{DISMISSED.}
+It evaluates the generic $Z^6$ majorant, not the exact atom.  The
+$N^{-5/6}$ arithmetic uses the explicitly unproved toy ansatz (6.5) and
+cannot be used as positive evidence either.
+
+\item \textbf{``Sequential telescoping makes control shells orthogonal.''}
+\textbf{DISMISSED.}
+The telescope occurs before the Hilbert--Schmidt square.  Cross-$k$ terms
+remain and are handled only conditionally by Theorem 3.1.
+
+\item \textbf{``The quartic Besov lemma proves the literal terminal
+ledger.''}
+\textbf{VALID WITH MITIGATION.}
+It proves the pure-control critical product.  Passing to $U+A$ adds
+(5.11)--(5.13) on the stated one-shot class, which is form-payable but not
+literally (4.12).
+
+\item \textbf{``The trace debt can be paid separately by Young.''}
+\textbf{DISMISSED.}
+Equation (7.4) and the fixed-target-dimension fixture (7.10) show that the
+debt is the variance part of the retained square.  Separating it can create
+a cutoff-covariance-divergent loss from a zero-mean packet.
+
+\item \textbf{``Conditional centering closes the rational remainder.''}
+\textbf{UPHELD as an overclaim.}
+The centered covariance-matched branch was already closed by R-077.  The
+coefficient-dominant residual can have nonzero conditional mean, covariance
+defect, and same-root lower chaoses.
+
+\item \textbf{``Positive Jensen defect gives a favorable Wick sign.''}
+\textbf{DISMISSED.}
+A PSD matrix contracted with $Q=GG^T-\Gamma$ has no fixed sign.
+
+\item \textbf{``The value $1/220$ caps every completion parameter.''}
+\textbf{DISMISSED.}
+It caps only an additional charge if strict $p<q_\eta$ is required.  An
+internal share of the pinned $9/20$ leaves $q=10/9$ unchanged.
+\end{enumerate}
+
+\section{Executable verification and next theorem}
+
+The primary executable verifies the two predecessor normalizations directly
+from their notes, all three geometric factors, aligned finite Schur
+fixtures, the sharp $s=0$ boundary, symbolic sequential and radial secant
+identities, non-tautological tame-current fixtures, root Hilbert--Schmidt
+bookkeeping, quartic dyadic summation, the old-majorant exponents and
+conditional toy-ansatz arithmetic, rational completion and conditional identities,
+standalone-debt and adapted fixtures, matrix-fractional Jensen, signed Wick
+contraction, and the $\eta$ budget.
+
+The non-importing audit independently uses seeded vector Schur tests, direct
+finite differences of a nonlinear current, shell telescopes, dyadic
+Cauchy tests, random positive matrix conditional moments, pointwise trace
+null tests, random matrix-fractional Jensen tests, and every no-go fixture.
+It imports no primary module.
+
+Run from the repository root:
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_direct_root_cartan_schur_sequential_secant_
+  rational_conditional_trace_reduction_verify.py
+\end{verbatim}
+
+The next analytic theorem should keep expectation inside the exact
+sequential coefficients and prove (4.11)--(4.12), or prove the direct
+integrated CFAR target without a per-atom ledger.  In parallel, it should
+bound the complete object (8.2), not its trace debt in isolation.  Only
+after both are available can REG and uniform OVERLAP be assembled.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-DIRECT-ROOT-CARTAN-SCHUR-SEQUENTIAL-
+           SECANT-RATIONAL-CONDITIONAL-TRACE-REDUCTION
+Ledger:                  R-088.
+Precise statement:       The exact unweighted R-084 OU target has a
+                         nonorthogonal Schur bound for every s>0. At
+                         s=7/12 its balanced constant is
+                         16.30295538482827... and its gap is 2^(-7C/6).
+                         Sequential physical-shell secants give an exact
+                         three-channel Cartan atom and tame root envelope.
+                         A quartic Besov lemma pays the pure-control
+                         X_A^(1/2)Y_A^(1/2) payload for 0<s<1. The rational
+                         K_eta square, K_eta:Q Wick term, and eta debt obey
+                         an exact three-term null identity; centered matched
+                         square variance cancels the debt conditionally. A
+                         conditional theorem isolates mean/covariance defects,
+                         and matrix-fractional Jensen does not give a Wick sign.
+Scope:                   Finite cutoff and fixed positive floor, under the
+                         hash-pinned R-084--R-087 conventions. The analytic
+                         Besov lemma is deterministic. Rational conditional
+                         statements assume the displayed measurability and
+                         finite conditional second moments.
+Dependencies:            R-050; R-066; R-074; R-077; R-079; R-081;
+                         R-083--R-087.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/a13_classii_direct_root_
+                         cartan_schur_sequential_secant_rational_conditional_
+                         trace_reduction_verify.py
+Expected output:          Primary, non-importing independent, integrated, and
+                         aggregate manifest-pinned PASS; exit zero.
+Audit:                   AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-
+                         NORMALIZATION.
+Negative result:         NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-
+                         K-HEAT (method no-go, not production counterexample).
+Falsification gate:      Failure of a geometric factor, secant identity,
+                         Besov exponent, rational conditional identity,
+                         Jensen certificate, evidence hash, PDF, or assertion
+                         contract.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No production sequential secant-to-quartic bridge,
+                         direct integrated Cartan CFAR, coefficient-dominant
+                         rational causal packet, REG, uniform OVERLAP,
+                         controlled-shell one-use, Nelson, measure theorem,
+                         removal limit, or Sector-A closure.
+Next required action:    Prove the expectation-inside sequential Cartan bridge
+                         or direct integrated CFAR and the complete rational
+                         same-root square/trace/forest causal packet; then
+                         reassemble REG and prove uniform OVERLAP.
+\end{verbatim}
+\endgroup
