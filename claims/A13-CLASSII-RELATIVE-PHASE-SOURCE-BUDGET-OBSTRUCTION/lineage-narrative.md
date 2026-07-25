@@ -275,6 +275,29 @@ endpoint theorem.
     future feedback leaves a signed defect. The new frontier is controlled
     CFAR, the complete heat-lifted signed NEAR square--trace--forest packet,
     and overlap-stable progression before one-use and Nelson synthesis.
+24. **Controlled polynomial CFAR and linear Pauli--Fierz forest reduction.**
+    R-083,
+    `A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`,
+    passes from the R-082 stopped square to the fixed root-preserving
+    six-current coordinate. Sharp-cube support removes all three controlled
+    polynomial `J_A=Dm_A` rows for `C>=3`, including the moving endpoint, the
+    pre-`j0` low endpoint, and both predictable drifts. The exact remaining
+    controlled CFAR object is the sum of three Cartan input-scale telescope
+    squares with coefficient `3/(80P)`. The canonical `K_k` estimate spends
+    its input coordinate once, but an exact production-floor-rescaled harmonic
+    witness proves that it does not manufacture the global raw-output
+    orthogonality assumed by the sufficient R-082 Carleson lemma. The
+    output orthogonality no-go leaves far-only and correlated martingale routes
+    open. The three linear
+    Pauli--Fierz rows now have exact Gram, heat lift, quadratic secant,
+    conditional cross-covariance, trace, and nine-block forest algebra. A
+    separate adapted heat-lifted fixture makes the rational row vanish while
+    the surviving horizontal linear row has negative zero chaos, so universal
+    standalone linear-row positivity also fails. The linear-row obstruction
+    leaves the new frontier as a
+    correlated or signed Cartan CFAR estimate and a recombined linear-plus-
+    rational signed NEAR packet, followed by overlap-stable progression,
+    one-use, and Nelson synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

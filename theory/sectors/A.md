@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY | input smoothing does not manufacture global nonlinear output | Infer the pairwise orthogonality of nonlinear production |
+| NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY | the linear Pauli--Fierz subpacket is not universally positiv | Delete the three linear Pauli--Fierz rows from NEAR because |
 | AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL | manifest, claim surface, Cartan symbol, and executable evide | The first R-081 integrated wrapper recomputed its own row |
 | NG-2026-07-25-A13-NONLINEAR-COEFFICIENT-DJA-FACTORISATION | complete nonlinear coefficient innovation is not determined  | Treat the complete future-adapted coefficient, covariance |
 | NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE | deterministic FAR decay does not supply the martingale-root  | Close R-080's localized base-current tail by applying an |

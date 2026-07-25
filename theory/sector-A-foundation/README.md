@@ -81,9 +81,17 @@ Carleson route requires `s>1/2`, while the missing balanced controlled
 production decomposition remains open. R-082 also gives a global four-row
 Pauli--Fierz Gram coordinate for the complete current. The state-dependent
 compression is not rootwise, heat acts on `C^T C`, and general future
-covariance defects remain signed. Controlled CFAR, the complete heat-lifted
-signed NEAR packet, and an overlap-stable full-progressive lower bound remain
-before the umbrella one-use estimate and the conditional `q=10/9` Nelson/A7
+covariance defects remain signed. R-083,
+`A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`,
+closes all three controlled polynomial stopped-FAR rows for `C>=3` with both
+endpoints and both predictable drifts retained. The remaining controlled CFAR
+is exactly the three Cartan input-scale telescopes with coefficient `3/(80P)`.
+Input one-use under `K_k` does not imply nonlinear output orthogonality. The
+linear Pauli--Fierz Gram, heat lift, quadratic secant, covariance defect, and
+nine-block forest are explicit, while an adapted fixture rules out standalone
+linear-row positivity. Correlated or signed Cartan CFAR, recombined complete
+signed NEAR, and an overlap-stable full-progressive lower bound remain before
+the umbrella one-use estimate and the conditional `q=10/9` Nelson/A7
 reconstruction.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.

@@ -431,6 +431,24 @@ the following structural results and proof-architecture boundaries hold.
     and later feedback can leave a signed conditional covariance defect.
     Controlled FAR, complete heat-lifted signed NEAR, overlap-stable
     progression, one-use, and Nelson remain open.
+26. `A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`
+    closes the full polynomial subbranch of the R-082 controlled stopped-FAR
+    object. In the fixed root-preserving six-current coordinate, all three
+    `J_A=Dm_A` rows vanish for `C>=3`, with the moving endpoint, pre-`j0` low
+    endpoint, and both predictable control drifts retained. The remaining
+    controlled CFAR is exactly the sum of three Cartan input-scale telescopes
+    with coefficient `4 alpha^2 c1=3/(80P)`. The canonical `K_k` smoothing
+    pays its input coordinate once, but an exact harmonic-3 witness, rescaled
+    by `F_epsilon(sqrt(epsilon)y)=sqrt(epsilon)F_1(y)` to the pinned floor,
+    proves that it does not create the global raw-output pairwise orthogonality
+    assumed by the sufficient R-082 Carleson lemma. This does not exclude a
+    far-only or correlated martingale estimate. On the NEAR side, the three
+    linear Pauli--Fierz rows have exact Gram, heat, secant, conditional cross-
+    covariance, trace, and nine-block forest formulas. An adapted heat-lifted
+    fixture with zero rational row has negative horizontal linear-row zero
+    chaos, so the linear and rational rows must remain recombined with the paid
+    packet. Controlled Cartan CFAR, complete signed NEAR, overlap-stable
+    progression, one-use, and Nelson remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -464,6 +482,7 @@ is a scoped T4 subproof and does not promote A13.
 | Regular low objects / far square / progressive boundary | Both regular no-revisit low objects, exact far feedback square completion, localized base-current successor, hidden near coefficient, and variational-scope no-gos | T4 regular low/far reduction closed; FAR, NEAR, and full progression open |
 | Cartan tail / adapted NEAR budget / temporal packets | Exact polynomial--Cartan split, deterministic relative-gap tail, half-derivative boundary, factorised first-order vector budget, secant--Jensen split and nonlinear `D_j` no-go, pair-high no-go, temporal Douglas factorisation, and one-shot graph non-density | T4 analytic/exact reduction closed; root-resolved FAR, Jensen-defect/complete NEAR, and overlap-stable progression open |
 | Stopped-current FAR / complete-current NEAR coordinate | Exact changing-current stopped square with predictable drift, raw-value/heat centering correction, cutoff-uniform uncontrolled FAR, sharp orthogonal `s>1/2` Carleson route, global four-row Pauli--Fierz Gram coordinate, heat lift, covariance criterion, and signed edge flux | T4 analytic/exact reduction closed; controlled CFAR, complete signed NEAR, and overlap-stable progression open |
+| Controlled polynomial CFAR / linear Pauli--Fierz forest | Exact disappearance of all three controlled polynomial stopped-FAR rows, exact three-Cartan input telescope with factor `3/(80P)`, one-use input-coordinate ledger, production-floor output-orthogonality no-go, exact linear-row Gram/heat/secant/covariance/nine-block forest, and adapted linear-row positivity no-go | T4 analytic/exact reduction closed; correlated Cartan CFAR, recombined signed NEAR, and overlap-stable progression open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -581,6 +600,14 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   causal production decomposition with `s>1/2`; that decomposition, the
   controlled endpoint-minus-drift estimate, the complete signed NEAR packet,
   and the progressive extension are not proved.
+- R-083 is fixed-floor and finite-cutoff for its exact controlled polynomial
+  support elimination, Cartan input-scale telescope, and linear Pauli--Fierz
+  heat/forest algebra. Its harmonic fixture refutes only global raw-output
+  pairwise orthogonality from `K_k` smoothing; it has no martingale projection
+  and does not exclude far-only or correlated estimates. Its adapted negative
+  fixture refutes universal standalone linear-row positivity but has no
+  spatial Cameron--Martin payment. Controlled Cartan CFAR and the recombined
+  paid linear-plus-rational NEAR bound remain unproved.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -607,13 +634,13 @@ Current analytic child:
 
 Current subordinate order:
 
-1. prove the root-resolved complete-current FAR estimate while retaining
-   derivative injection, value innovation, heat compensator, square, trace,
-   and forest;
-2. use the exact secant--Jensen split to estimate the factorised first-order
-   NEAR branch while retaining the upper-triangular Jensen defect inside the
-   lower-chaos-complete square--trace--forest packet, and prove a production-
-   specific signed control--control balanced-root lemma;
+1. prove a correlated or signed paracomposition estimate for the three Cartan
+   input-scale telescopes, retaining both predictable drifts, derivative
+   injection, raw value innovation, and heat compensation without imposing
+   pairwise raw-output orthogonality;
+2. prove the recombined linear-plus-rational heat-lifted signed NEAR square--
+   trace--forest estimate, retaining both conditional covariance defects, the
+   upper-triangular Jensen branch, mixed baseline, and paid subtraction;
 3. prove an overlap-stable bounded-simple complete-packet lower bound
    uniformly in time mesh and revisit multiplicity, then pass through the
    fixed-cutoff Boue--Dupuis admissible core;
@@ -623,41 +650,47 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction_verify.py
+python codes/foundations/a13_classii_controlled_polynomial_cfar_linear_pf_forest_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `60/60`;
-- non-importing independent `47/47`;
-- manifest-pinned integrated and aggregate contracts;
-- exact polynomial--Cartan current algebra, deterministic FAR ledger,
-  half-derivative endpoint sequence, factorised first-order vector Doob--
-  Burkholder budget, nonlinear `D_j` witness and secant--Jensen split,
-  pair-high obstruction, matrix/scalar temporal Douglas fixtures, complete
-  packet cross-term identities, progressive non-density, predecessor/source/
-  PDF/surface contracts, and T4 scope firewalls;
+- primary `58/58`;
+- non-importing independent `43/43`;
+- integrated `103/103` and aggregate `204/204`;
+- exact controlled polynomial stopped-FAR elimination, three-Cartan input
+  telescope and `3/(80P)` factor, production-floor harmonic no-go, exact
+  linear Pauli--Fierz Gram/heat/secant/covariance/nine-block forest, adapted
+  negative fixture, predecessor/source/PDF/surface contracts, and T4 scope
+  firewalls;
 - exit code zero.
 
-The eleven-page proof note passes the standard form check, zero-overfull gate,
+The ten-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_cartan_tail_adapted_near_temporal_reduction_manifest.json`
-- `notes/classii-cartan-tail-adapted-near-temporal-reduction-260725-v1.0.tex.txt`
-- `notes/classii-cartan-tail-adapted-near-temporal-reduction-260725-v1.0.pdf`
-- `../../codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction.py`
-- `../../codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction_independent.py`
-- `../../codes/foundations/a13_classii_cartan_tail_adapted_near_temporal_reduction_verify.py`
-- `runs/2026-07-25-primary-cartan-tail-adapted-near-temporal-reduction/result.json`
-- `runs/2026-07-25-independent-cartan-tail-adapted-near-temporal-reduction/result.json`
-- `runs/2026-07-25-integrated-cartan-tail-adapted-near-temporal-reduction/result.json`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-rootwise-deterministic-far-and-half-derivative`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-absolute-control-control-pair-high`
-- `../../negative-results/registry.md#ng-2026-07-25-a13-oneshot-graph-progressive-nondensity`
+- `classii_controlled_polynomial_cfar_linear_pf_forest_manifest.json`
+- `notes/classii-controlled-polynomial-cfar-linear-pauli-fierz-forest-reduction-260725-v1.0.tex.txt`
+- `notes/classii-controlled-polynomial-cfar-linear-pauli-fierz-forest-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_controlled_polynomial_cfar_linear_pf_forest_reduction.py`
+- `../../codes/foundations/a13_classii_controlled_polynomial_cfar_linear_pf_forest_reduction_independent.py`
+- `../../codes/foundations/a13_classii_controlled_polynomial_cfar_linear_pf_forest_reduction_verify.py`
+- `runs/2026-07-25-primary-controlled-polynomial-cfar-linear-pf-forest/result.json`
+- `runs/2026-07-25-independent-controlled-polynomial-cfar-linear-pf-forest/result.json`
+- `runs/2026-07-25-integrated-controlled-polynomial-cfar-linear-pf-forest/result.json`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-k-smoothing-output-orthogonality`
+- `../../negative-results/registry.md#ng-2026-07-25-a13-linear-pf-adapted-positivity`
+
+The immediate R-082 stopped-current/complete-current predecessor remains
+binding:
+
+- `classii_stopped_current_far_complete_current_near_reduction_manifest.json`
+- `notes/classii-stopped-current-far-complete-current-near-coordinate-reduction-260725-v1.0.tex.txt`
+- `notes/classii-stopped-current-far-complete-current-near-coordinate-reduction-260725-v1.0.pdf`
+- `../../codes/foundations/a13_classii_stopped_current_far_complete_current_near_reduction_verify.py`
 
 The resonant phase-root predecessor remains binding:
 
@@ -1304,6 +1337,18 @@ contract, any manifest-pinned primary/independent/integrated/aggregate count,
 or any promoted controlled-FAR, complete-NEAR, progressive, one-use, Nelson,
 measure, or Sector-A honesty flag.
 
+The R-083 continuation is additionally falsified by failure of the controlled
+polynomial support gap or any endpoint/drift elimination, the exact Cartan
+input-scale telescope or `3/(80P)` factor, the three-channel heat-centering
+identity, the production-floor rescaling identity, either independent
+harmonic coefficient, the linear Pauli--Fierz matrices, Gram/heat/secant/
+nine-block forest identities, conditional covariance-defect formula, adapted
+negative-sign or rational-row-zero fixture, any predecessor/source/note/PDF
+hash pin, the ten-page zero-form visual-QA contract, the primary `58/58`,
+independent `43/43`, integrated `103/103`, or aggregate `204/204` contract,
+or any promoted controlled-Cartan-CFAR, complete-signed-NEAR, progressive,
+one-use, Nelson, measure, or Sector-A honesty flag.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1433,23 +1478,29 @@ controlled-shell one-use, Nelson, an
 interacting measure, floor/regulator removal, infinite volume, phase
 transition, BCC selection, Sector-A closure, or T5--T7. A13 remains T4.
 
-The full-current/low-object/Cartan-tail/stopped-current chain R-079--R-082
+The full-current/low-object/Cartan-tail/stopped-current/controlled-polynomial
+chain R-079--R-083
 closes the exact
 complete packet algebra, both regular no-revisit low objects, far feedback
 square completion, the production polynomial--Cartan localization,
 deterministic Cartan relative-gap decay, the explicitly factorised first-order
 NEAR input budget, the exact secant--Jensen decomposition, temporal packet
 factorisation, exact stopped-current reordering, cutoff-uniform uncontrolled
-FAR, and the global complete-current Pauli--Fierz Gram coordinate.  These
-reductions do not prove the controlled stopped endpoint-minus-drift estimate,
-the required balanced `s>1/2` production decomposition, the upper-triangular
-Jensen/covariance-defect estimate, a lower-chaos-complete adapted NEAR
-operator, a signed control--control balanced-root estimate, an
+  FAR, the global complete-current Pauli--Fierz Gram coordinate, all three
+  controlled polynomial FAR rows, the exact three-Cartan input telescope with
+  factor `3/(80P)`, and the complete linear-row heat/forest algebra.  These
+  reductions do not prove a correlated or signed bound for the remaining
+  Cartan telescope, the upper-triangular Jensen/covariance-defect estimate, a
+  recombined lower-chaos-complete adapted linear-plus-rational NEAR operator,
+  a signed control--control balanced-root estimate, an
 overlap-stable progressive packet lower bound, or the variational extension.
 They therefore do not establish controlled-shell one-use, Nelson, an
 interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
-one-shot non-density theorem rules out only that approximation route; it is
-not a counterexample to the complete progressive action.
+  one-shot non-density theorem rules out only that approximation route; it is
+  not a counterexample to the complete progressive action. Likewise, the
+  R-083 harmonic witness rules out only global raw-output pairwise
+  orthogonality, and its adapted linear fixture rules out only universal
+  standalone rowwise positivity.
 
 ## History
 
@@ -1645,3 +1696,19 @@ not a counterexample to the complete progressive action.
   overtransport and a symmetric heat fixture enforces averaging `C^T C`.
   Controlled CFAR, complete heat-lifted signed NEAR, overlap-stable
   progression, one-use, Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-083 after an independent adversarial repair. In the
+  fixed root-preserving coordinate, every controlled polynomial `J_A` row
+  vanishes in the complete stopped-FAR object for `C>=3`, including both
+  endpoints and both predictable drifts. The exact remainder is the three-
+  Cartan input-scale square with coefficient `3/(80P)`. K-shell smoothing
+  pays its input coordinate once, but a production-floor-rescaled exact-
+  harmonic fixture refutes automatic global nonlinear-output orthogonality;
+  the initial `Pi_3` label was corrected to the exact `p=+-3` projection before
+  release. The linear Pauli--Fierz Gram, heat, secant, covariance, and nine-
+  block forest algebra closes, while an adapted rational-zero fixture has
+  negative linear-row zero chaos. Both method failures are registered with
+  narrow boundaries. Primary 58/58, independent 43/43, integrated 103/103,
+  and aggregate 204/204 are the final contracts; the ten-page PDF passed
+  direct all-page visual QA. Controlled Cartan CFAR, recombined complete
+  signed NEAR, progression, one-use, Nelson, and Sector A remain open; tier
+  stays T4.

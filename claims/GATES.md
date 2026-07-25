@@ -469,8 +469,19 @@ to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
  production decomposition required for controlled CFAR is not proved. R-082
  also gives a global four-row Pauli--Fierz coordinate for the complete current;
  state-dependent compression is not rootwise, heat acts on the Gram matrix,
- and the complete signed NEAR covariance defect remains open.
- R-080--R-082 correct the synthesis
+ and the complete signed NEAR covariance defect remains open. R-083 then
+ returns to the fixed root-preserving six-current coordinate. Sharp-cube
+ support kills all three controlled polynomial stopped-FAR rows exactly for
+ `C>=3`, including the moving endpoint, low endpoint, value drift, and
+ derivative drift. The remaining controlled object is precisely the three-
+ channel Cartan input-scale telescope with prefactor `3/(80P)`. The canonical
+ `K_k` estimate spends each control input once, but nonlinear composition does
+ not imply output orthogonality; a correlated or signed Cartan estimate is
+ still required. For NEAR, the three linear Pauli--Fierz rows now have exact
+ Gram, heat, secant, conditional-covariance, and nine-block forest algebra, but
+ an adapted fixture has negative linear-row zero chaos. Thus only a recombined
+ linear-plus-rational complete signed NEAR estimate can close the branch.
+ R-080--R-083 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
 progressive/revisit control. The separate successor
 `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
@@ -1003,6 +1014,18 @@ predictable drifts. An orthogonal causal input-scale decomposition would sum
 it once for `s>1/2`, while the half-derivative endpoint diverges; proving that
 production decomposition is the remaining FAR theorem.
 
+R-083,
+`A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`,
+uses the fixed root-preserving six-current coordinate to close every
+controlled polynomial stopped-FAR row exactly for `C>=3`. Both endpoints and
+both predictable drifts are included. What remains is the exact Cartan
+input-scale telescope
+`(3/(80P)) sum_(m,A) E||Pi_m R_(A,n_C(m))||_2^2`. The `K_k` coordinate ledger
+is one-use at the input, but an exact mode-three fixture proves that it does
+not yield the output orthogonality assumed by the sufficient R-082 Carleson
+lemma. Complete controlled Cartan CFAR therefore still needs a correlated or
+signed estimate.
+
 For NEAR, R-082 diagonalises the production current globally into four
 Pauli--Fierz rows, three linear and one rational with Lipschitz ceiling `19/9`.
 The fixed six-current preserves R-079 roots, but the state-dependent four-row
@@ -1010,8 +1033,13 @@ compression preserves only endpoint energy and the Gram matrix, not
 individual Doob blocks. Target heat therefore uses the Hilbert lift
 `C(z+r)y`, and conditional square--trace positivity requires explicit
 conditional mean/covariance preservation. General future feedback leaves a
-signed covariance defect. The complete heat-lifted square--trace--forest NEAR
-packet, controlled CFAR, and the regular packet lower bound remain open.
+signed covariance defect. R-083 derives the exact linear Pauli--Fierz Gram,
+heat lift, quadratic secant, conditional-covariance defect, and complete nine-
+block forest. An adapted fixture with zero rational row nevertheless has a
+strictly negative linear-row zero chaos. Consequently the complete signed NEAR
+problem must recombine the linear and rational rows with paid subtraction and
+the full forest. Complete controlled Cartan CFAR, complete signed NEAR, and the
+regular packet lower bound remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -1026,7 +1054,7 @@ defect. An equivalent all-tilted-law entropy inequality is an admissible
 alternative.
 
 **Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
-sharpened by R-081/R-082
+sharpened by R-081--R-083
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

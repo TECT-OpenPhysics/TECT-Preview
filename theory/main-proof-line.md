@@ -98,9 +98,18 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   `s=1/2`, but the balanced controlled production decomposition is open. The
   complete current also has a global four-row Pauli--Fierz Gram coordinate;
   state-dependent compression is not rootwise, target heat acts on `C^T C`,
-  and future conditional covariance defects remain signed. The controlled
-  CFAR/complete heat-lifted signed NEAR bound and an overlap-stable full-progressive
-extension are both required before the umbrella one-use/`q=10/9` Nelson bound.
+  and future conditional covariance defects remain signed. R-083,
+  `A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`,
+  closes every controlled polynomial stopped-FAR row for `C>=3`, including
+  both endpoints and both predictable drifts, and leaves exactly three Cartan
+  input-scale telescope squares with coefficient `3/(80P)`. The canonical
+  `K_k` input ledger is one-use, but an exact production-floor harmonic
+  fixture shows that nonlinear output orthogonality does not follow. On the
+  NEAR side, the exact linear Pauli--Fierz Gram/heat/secant/nine-block forest
+  is now explicit; an adapted zero-rational-row fixture has negative zero chaos
+  in a linear row. Correlated or signed Cartan CFAR, recombined complete signed
+  NEAR, and an overlap-stable full-progressive extension are required before
+  the umbrella one-use/`q=10/9` Nelson bound.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

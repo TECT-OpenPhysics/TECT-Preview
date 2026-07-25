@@ -1,0 +1,484 @@
+{
+  "adapted_linear_fixture": {
+    "expected_formula": -0.0116022749999971,
+    "expected_packet": -0.011602274999997097,
+    "hermite_coefficients": [
+      -0.5475999999999999,
+      0.0,
+      2.0535,
+      0.0,
+      0.8214,
+      0.0,
+      0.1369
+    ],
+    "lambda": 0.37,
+    "tau": 0.61
+  },
+  "assertions": [
+    {
+      "actual": "tect/a1-production-functional-realisation/1.0",
+      "expected": "tect/a1-production-functional-realisation/1.0",
+      "name": "model_schema",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.000000000001,
+      "expected": "M_X^2+rho_regularizer",
+      "name": "production_denominator_derived",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.004499999999998875,
+        0.0018749999999995311,
+        0.002343749999999414
+      ],
+      "expected": "positive definite",
+      "name": "production_Q_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.5555555555555555,
+      "expected": "5/9",
+      "name": "diagonal_alpha",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.00299999999999925,
+      "expected": "3/(250 P)",
+      "name": "diagonal_c0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.007593749999998103,
+      "expected": "243/(8000 P)",
+      "name": "diagonal_c1",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "A0_symmetric",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "A1_skew",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "A2_skew",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.440892098500626e-16,
+      "expected": "<1e-13",
+      "name": "six_real_linear_current",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.1102230246251565e-16,
+      "expected": "<1e-14",
+      "name": "linear_Gram_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.71445146547012e-17,
+      "expected": "<1e-13",
+      "name": "full_Gram_linear_plus_rational",
+      "status": "PASS"
+    },
+    {
+      "actual": 9.957312752106873e-16,
+      "expected": "<2e-12",
+      "name": "linear_heat_lift",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.734723475976807e-18,
+      "expected": 0.0,
+      "name": "heat_compensator_additive",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.163336342344337e-17,
+      "expected": 0.0,
+      "name": "linear_Gram_exact_secant",
+      "status": "PASS"
+    },
+    {
+      "actual": 4.163336342344337e-17,
+      "expected": 0.0,
+      "name": "linear_Gram_no_higher_Taylor_remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": -6.661338147750939e-16,
+      "expected": 0.0,
+      "name": "linear_forest_nine_block_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 2,
+        "4": 1
+      },
+      "expected": {
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 2,
+        "4": 1
+      },
+      "name": "linear_forest_chaos_counts",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.006117601814025847,
+        0.007328606530751297,
+        0.00359719612166239
+      ],
+      "expected": "three finite blocks",
+      "name": "heat_forest_has_P2_P1_P0",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": "0; each block is 1/2*T(Sigma_h,C_k)",
+      "name": "heat_forest_outer_factors",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.13566636087864054,
+      "expected": ">=0",
+      "name": "conditional_covariance_preserved_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.4310180755452994,
+      "expected": "<0",
+      "name": "conditional_covariance_defect_can_be_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3877787807814457e-17,
+      "expected": "<1e-13",
+      "name": "linear_current_conditional_cross_covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.3877787807814457e-17,
+      "expected": "<1e-13",
+      "name": "linear_current_Doob_increment_four_terms",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        -0.5475999999999999,
+        0.0,
+        2.0535,
+        0.0,
+        0.8214,
+        0.0,
+        0.1369
+      ],
+      "expected": [
+        -0.5476,
+        0.0,
+        2.0535,
+        0.0,
+        0.8213999999999999,
+        0.0,
+        0.1369
+      ],
+      "name": "adapted_fixture_Hermite_coefficients",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.011602274999997097,
+      "expected": -0.0116022749999971,
+      "name": "linear_horizontal_adapted_mean_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": 5.587012767999878e-18,
+      "expected": 0.0,
+      "name": "heat_dummy_changes_only_centered_H2",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "adapted_fixture_rational_row_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        "<1e-14"
+      ],
+      "name": "adapted_fixture_other_linear_rows_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.5,
+      "expected": -0.5,
+      "name": "independent_three_point_negative_fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.010593749999997352,
+      "expected": -0.010593749999997352,
+      "name": "three_point_linear_packet_mean",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        64,
+        128
+      ],
+      "expected": "strictly separated",
+      "name": "controlled_polynomial_support_gap",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        64,
+        128
+      ],
+      "expected": "strictly separated",
+      "name": "controlled_polynomial_moving_endpoint_FAR_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        64,
+        128
+      ],
+      "expected": "strictly separated",
+      "name": "controlled_polynomial_value_drift_FAR_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        64,
+        128
+      ],
+      "expected": "strictly separated",
+      "name": "controlled_polynomial_derivative_drift_FAR_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": 2.220446049250313e-16,
+      "expected": "<1e-13",
+      "name": "Cartan_input_scale_telescope",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        7.204847710556568e-18,
+        0.22990215309996556
+      ],
+      "expected": "nonzero stopped low-input increment",
+      "name": "Cartan_low_endpoint_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "name": "Cartan_predictable_drift_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.009374999999997654,
+      "expected": 0.009374999999997656,
+      "name": "fixed_coordinate_CFar_factor",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.009374999999997656,
+      "expected": "3/(80 P)",
+      "name": "fixed_coordinate_CFar_factor_production",
+      "status": "PASS"
+    },
+    {
+      "actual": 6.938893903907228e-18,
+      "expected": "<1e-14",
+      "name": "Cartan_input_root_three_channel_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "name": "Cartan_input_derivative_injection_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": -6.505213034913027e-19,
+      "expected": 0.0,
+      "name": "Cartan_input_raw_plus_heat_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.004204497378720504,
+      "expected": "nonzero",
+      "name": "Cartan_input_heat_compensator_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 19.853782000000002,
+      "expected": "<=19.853782000000006",
+      "name": "K_shell_one_use_coordinate_ledger",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.00390625,
+        0.024750000000000005,
+        9.667968750000002e-05
+      ],
+      "expected": ">0",
+      "name": "cubic_input_increment_cross_positive",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        3.619922102104774e-09,
+        2.0785528647497697e-08,
+        4.163336342344337e-17
+      ],
+      "expected": [
+        ">0",
+        ">0",
+        "<1e-14"
+      ],
+      "name": "rational_input_increment_mode3_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": 3.762099727750443e-17,
+      "expected": ">0",
+      "name": "rational_input_increment_not_orthogonal",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "R082_orthogonal_Carleson_not_triggered_by_K_smoothing",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "controlled_Cartan_CFar_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "linear_NEAR_signed_bound_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "rational_NEAR_signed_bound_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "complete_regular_packet_lower_bound_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "overlap_stable_progression_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "controlled_shell_one_use_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "Nelson_not_established",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "Sector_A_not_closed",
+      "status": "PASS"
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "tier_promotion_not_claimed",
+      "status": "PASS"
+    }
+  ],
+  "assertions_passed": 58,
+  "assertions_total": 58,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "claims_not_established": {
+    "complete_controlled_CFar": false,
+    "complete_regular_packet_lower_bound": false,
+    "complete_signed_NEAR": false,
+    "controlled_Cartan_CFar": false,
+    "controlled_shell_one_use": false,
+    "full_progressive_revisit_extension": false,
+    "interacting_measure": false,
+    "linear_NEAR_signed_bound": false,
+    "nelson_bound": false,
+    "overlap_stable_progressive_packet_bound": false,
+    "rational_NEAR_signed_bound": false,
+    "sector_a_closure": false,
+    "tier_promotion": false
+  },
+  "derived_constants": {
+    "C_poly": 3,
+    "QII": {
+      "a": 0.004499999999998875,
+      "b": 0.0018749999999995311,
+      "c": 0.002343749999999414
+    },
+    "alpha": 0.5555555555555555,
+    "c0": 0.00299999999999925,
+    "c1": 0.007593749999998103,
+    "c_sum": 0.010593749999997352
+  },
+  "negative_scope": "K-shell smoothing alone does not imply the global raw-output pairwise orthogonality assumed in R-082 Lemma 6.1; this does not exclude far-only or correlated martingale estimates. The rational row is not the sole signed NEAR obstruction because a heat-lifted adapted linear-row fixture has negative zero chaos.",
+  "proved_scope": "controlled polynomial fixed-coordinate FAR vanishes beyond C_poly; remaining controlled CFAR is exactly the Cartan input-scale telescope; the linear Pauli--Fierz Gram/heat/secant/nine-block forest algebra is exact",
+  "rational_mode3_fixture": {
+    "amplitude_one": 0.25,
+    "amplitude_two": 0.2,
+    "coefficient_increment_one": 0.0036199221021047745,
+    "coefficient_increment_two": 0.0207855286474977,
+    "cross_product": 7.524199455500888e-05,
+    "production_coefficient_increment_one": 3.619922102104774e-09,
+    "production_coefficient_increment_two": 2.0785528647497697e-08,
+    "production_floor": 1e-12,
+    "production_normalized_cross": 3.762099727750443e-17,
+    "rescaling_residual": 4.163336342344337e-17
+  },
+  "result_id": "A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION",
+  "schema": "tect/a13-controlled-polynomial-cfar-linear-pf-forest-primary/1.0",
+  "source_version": "1.0.1",
+  "status": "PASS"
+}

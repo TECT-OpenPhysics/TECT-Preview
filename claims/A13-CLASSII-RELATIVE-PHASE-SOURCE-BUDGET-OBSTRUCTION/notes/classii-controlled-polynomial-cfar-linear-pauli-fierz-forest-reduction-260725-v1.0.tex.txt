@@ -1,0 +1,748 @@
+% Title: Controlled polynomial CFAR and linear Pauli--Fierz forest reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; CONTROLLED POLYNOMIAL FAR CLOSED; CONTROLLED CARTAN FAR, COMPLETE SIGNED NEAR, PROGRESSION, ONE-USE, AND NELSON OPEN
+% Result: A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION
+% Ledger: R-083
+
+\section{Purpose and scope}
+
+This note advances the R-082 frontier in two directions while retaining its
+honesty boundary.
+
+For FAR, the root-preserving six-coordinate current is used rather than the
+state-dependent four-row compression.  The three polynomial currents
+$J_A=Dm_A$ are shown to vanish identically in the complete controlled stopped
+FAR wedge, including the moving endpoint, the low endpoint, and both
+predictable control drifts.  The remaining controlled CFAR object is written
+as one exact input-scale telescope of three Cartan currents.  This is a real
+closed subbranch and an exact reduction, not a bound for the remaining
+Cartan telescope.  The canonical $K_k$ smoothing closes the control-coordinate
+square function once, but a production scalar-ray fixture proves that it does
+not create the output orthogonality assumed in the sufficient R-082
+Carleson lemma.
+
+For NEAR, the three linear rows of the R-082 Pauli--Fierz coordinate are
+separated exactly from the rational row.  Their Gram coefficient, target-heat
+lift, backward compensator, quadratic secant, conditional cross-covariance,
+and complete nine-block Wiener forest are now explicit.  This finishes their
+algebraic bookkeeping.  It does not make them positive under adapted future
+feedback.  A heat-lifted Gaussian fixture leaves the rational row identically
+zero and produces a strictly negative zero chaos in one horizontal linear
+row.  Thus the rational row is not the sole signed NEAR obstruction.
+
+All statements are finite-cutoff statements for the hash-pinned A1
+production coefficients, fixed positive density floor, common real-even
+regulators, exact non-aliased products, and the R-079 regular strict-past
+one-shot control class where a control statement is made.  Controlled Cartan
+CFAR, a signed linear- or rational-row NEAR lower bound, the complete regular
+packet lower bound, overlap-stable progression, controlled-shell one-use,
+$q=10/9$ Nelson, and Sector-A closure remain open.
+
+\section{Authorities and fixed coordinates}
+
+The load-bearing authorities are R-050 for the enhanced production current,
+R-063 for the complete lower-chaos forest, R-069--R-070 for the raw/Wick
+current telescope, R-075 for the production metric, R-079 for the exact full
+safe packet, R-080 for FAR square completion, R-081 for the
+polynomial--Cartan split, and R-082 for the stopped-current representation and
+global Pauli--Fierz coordinate.
+
+The A1 manifest gives
+\[
+ P=M_X^2+\epsilon_\rho=4+10^{-12},
+\]
+\[
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix},
+ \quad
+ a={9\over500P},\quad b={3\over400P},\quad c={3\over320P}.
+ \tag{2.1}
+\]
+Diagonalisation is derived, rather than inserted:
+\[
+ \alpha={c\over b+c}={5\over9},\qquad
+ c_1={c\over\alpha^2}={243\over8000P},\qquad
+ c_0=a-{b^2\over c}={3\over250P}.
+ \tag{2.2}
+\]
+
+For each embedded Pauli generator put
+\[
+ m_A(z)=z^TS_Az,\qquad
+ F_A(z)=q_A(z)z,\qquad
+ q_A(z)={m_A(z)\over |z|^2+\epsilon_\rho}.
+ \tag{2.3}
+\]
+For a translation $H$ of the terminal Gaussian $U$, define
+\[
+ \mathcal P_A(H)=Dm_A(U+H),
+ \qquad
+ \mathcal C_A(H)=F_A(U+H)^TD(U+H),
+ \tag{2.4}
+\]
+and
+\[
+ \mathcal L_A(H)=\mathcal P_A(H)-2\alpha\mathcal C_A(H).
+ \tag{2.5}
+\]
+The fixed root-preserving current is
+\[
+ \mathcal I_T(H)=
+ \bigl(\sqrt{c_0}\mathcal P_A(H),
+       \sqrt{c_1}\mathcal L_A(H)\bigr)_{A=1}^3.
+ \tag{2.6}
+\]
+Unlike the four-row Pauli--Fierz compression, (2.6) is related to the R-079
+$Q_{\rm II}^{1/2}$ current by one fixed orthogonal transformation.  It
+therefore preserves every conditional root block.
+
+\section{The complete controlled polynomial FAR subbranch closes}
+
+Let $\ell=j_0-1$ and
+\[
+ A^{(k)}=A^{(\ell)}+\sum_{r=j_0}^ka_r,
+ \qquad a_k=K_kh_k\in\mathcal F_{k-1}.
+ \tag{3.1}
+\]
+Use the sharp cubes
+\[
+ Q_j=\{p\in\mathbb Z^3:|p|_\infty\le2^j\},
+ \tag{3.2}
+\]
+and suppose $U_j,A^{(j)}$ are supported in $Q_j$.  Let $\Pi_m$ be supported
+where $|p|_\infty>2^{m-1}$.
+
+\subsection*{Theorem 3.1 (controlled polynomial stopped FAR is zero)}
+
+For every $C\ge C_{\rm poly}=3$, every stopped index
+\[
+ n_C(m)=\min\{J,m-C\},
+ \]
+and every generator $A$, the complete controlled stopped bracket of
+$\mathcal P_A=Dm_A$ obeys
+\[
+ \boxed{\Pi_mR^{\mathcal P}_{A,n_C(m)}=0.}
+ \tag{3.3}
+\]
+This includes the moving endpoint, the low endpoint, the predictable
+control-value drift, and the predictable control-derivative drift.
+
+\emph{Proof.}
+The current $Dm_A(z)=2(S_Az)^TDz$ is quadratic.  If $z$ is supported in
+$Q_n$, its current is supported in $Q_{n+1}$.  Conditional expectation over
+future Gaussian shells preserves this support.  The only possible future
+contraction is
+$\mathbb E[V^TS_ADV]$, which vanishes for a common real-even covariance;
+even without that cancellation it would be a zero mode.  The same argument
+applies to each conditional input increment and to both predictable drift
+channels.  For $m\ge n+3$,
+\[
+ 2^{m-1}\ge2^{n+2}>2^{n+1},
+\]
+so $\Pi_m$ kills every term.  Terminal saturation $n_C(m)=J$ changes no
+support inequality.  This proves (3.3). \hfill$\square$
+
+The safety choice $C_{\rm poly}=3$ avoids any boundary convention at
+$|p|_\infty=2^{n+1}$.  The theorem strengthens the R-081 polynomial support
+observation to the entire R-082 controlled stopped object; no drift has been
+silently discarded.
+
+\section{Exact Cartan input-scale telescope}
+
+Define terminal input increments before probability projection by
+\[
+ \Delta_{A,\ell}=\mathcal C_A(A^{(\ell)})-\mathcal C_A(0),
+ \tag{4.1}
+\]
+and, for $k\ge j_0$,
+\[
+ \Delta_{A,k}
+ =\mathcal C_A(A^{(k)})-\mathcal C_A(A^{(k-1)}).
+ \tag{4.2}
+\]
+They give the pathwise input telescope
+\[
+ \mathcal C_A(A^{(n)})-\mathcal C_A(0)
+ =\Delta_{A,\ell}+\sum_{k=j_0}^n\Delta_{A,k}.
+ \tag{4.3}
+\]
+Let $P_j=\mathbb E[\,\cdot\mid\mathcal F_j]$ and $d_j=P_j-P_{j-1}$.
+
+\subsection*{Theorem 4.1 (nonduplicating stopped input telescope)}
+
+The complete controlled Cartan bracket is exactly
+\begin{align*}
+ R_{A,n}
+ :={}&P_n\{\mathcal C_A(A^{(n)})-\mathcal C_A(0)\}
+      -P_\ell\Delta_{A,\ell}
+      -\sum_{k=j_0}^nP_{k-1}\Delta_{A,k}\\
+ ={}&(P_n-P_\ell)\Delta_{A,\ell}
+      +\sum_{k=j_0}^n(P_n-P_{k-1})\Delta_{A,k}\\
+ ={}&\sum_{j=j_0}^n d_j
+       \left(\Delta_{A,\ell}+\sum_{k=j_0}^j\Delta_{A,k}\right).
+ \tag{4.4}
+\end{align*}
+Both endpoints occur exactly once.  Equation (4.4) is a finite algebraic
+identity, not optional stopping.
+
+\emph{Proof.}
+Apply $P_n$ to (4.3), subtract $P_\ell\Delta_{A,\ell}$ and the predictable
+increments $P_{k-1}\Delta_{A,k}$.  Alternatively expand
+$P_n-P_{k-1}=\sum_{j=k}^nd_j$ and interchange the finite sums. \hfill$\square$
+
+For $Z_k^-=U+A^{(k-1)}$, each input has the exact value/derivative split
+\begin{align*}
+ \Delta_{A,k}^{\rm val}
+ &=\{F_A(Z_k^-+a_k)-F_A(Z_k^-)\}^TDZ_k^-,\\
+ \Delta_{A,k}^{\rm der}
+ &=F_A(Z_k^-+a_k)^TDa_k.
+ \tag{4.5}
+\end{align*}
+Writing $z_k^-=U_{k-1}+A^{(k-1)}$ and
+$\Phi_{A,k-1}=P_{\Sigma_{k:J}}F_A$, common real-even covariance gives
+\begin{align*}
+ P_{k-1}\Delta_{A,k}^{\rm val}
+ &=\{\Phi_{A,k-1}(z_k^-+a_k)-\Phi_{A,k-1}(z_k^-)\}^TDz_k^-,\\
+ P_{k-1}\Delta_{A,k}^{\rm der}
+ &=\Phi_{A,k-1}(z_k^-+a_k)^TDa_k.
+ \tag{4.6}
+\end{align*}
+These are exactly the two predictable drifts in R-082.
+
+For every $k\le j$, the root $d_j\Delta_{A,k}$ is the difference of the
+R-082 three-channel formula at backgrounds with and without $a_k$.  With
+$g_j=U_j-U_{j-1}$ and $\Phi_j=P_{\Sigma_{j+1:J}}F_A$, write
+\begin{align*}
+ \iota_{j,k}^\Delta
+ &=[\Phi_j(Z+a_k+g_j)-\Phi_j(Z+g_j)]^TDg_j,\\
+ \nu_{j,k}^\Delta
+ &=[\Phi_j(Z+a_k+g_j)-\Phi_j(Z+a_k)]^T(DZ+Da_k)\\
+ &\quad-[\Phi_j(Z+g_j)-\Phi_j(Z)]^TDZ,\\
+ \kappa_{j,k}^\Delta
+ &=[\Phi_j-\Phi_{j-1}](Z+a_k)^T(DZ+Da_k)
+       -[\Phi_j-\Phi_{j-1}](Z)^TDZ.
+ \tag{4.7}
+\end{align*}
+Then
+\[
+ d_j\Delta_{A,k}=\iota_{j,k}^\Delta+
+                  \nu_{j,k}^\Delta+
+                  \kappa_{j,k}^\Delta,
+ \tag{4.8}
+\]
+\[
+ \mathbb E_{j-1}\iota_{j,k}^\Delta=0,
+ \qquad
+ \mathbb E_{j-1}(\nu_{j,k}^\Delta+\kappa_{j,k}^\Delta)=0.
+ \tag{4.9}
+\]
+Thus raw value innovation is never called centered without its heat
+compensator.
+
+Combining (2.5), (3.3), and (4.4) proves the exact controlled-CFAR reduction
+\[
+ \boxed{
+ S_C^{\rm ctrl}
+ ={3\over80P}\sum_m\sum_{A=1}^3
+   \mathbb E\|\Pi_mR_{A,n_C(m)}\|_2^2,
+ \qquad C\ge3.}
+ \tag{4.10}
+\]
+Indeed $4\alpha^2c_1=3/(80P)$.  Equation (4.10) closes all three polynomial
+rows and nothing more: the three Cartan rows on its right remain open.
+
+\section{The control-coordinate ledger and the orthogonality boundary}
+
+If
+\[
+ \|K_k\|\le\kappa_K2^{-2k},
+ \qquad
+ \|Da_k\|_2\le\kappa_B2^k\|a_k\|_2,
+ \tag{5.1}
+\]
+then spatial shell orthogonality gives the genuine one-use coordinate bound
+\[
+\sum_k\left\{2^{4k}\mathbb E\|a_k\|_2^2
+             +2^{2k}\mathbb E\|Da_k\|_2^2\right\}
+ \le\kappa_K^2(1+\kappa_B^2)
+       \mathbb E\sum_k\|h_k\|_{\mathcal H_k}^2.
+ \tag{5.2}
+\]
+This is useful input control.  It does not imply that nonlinear output
+increments $\Pi_m\Delta_{A,k}$ are pairwise orthogonal.
+
+\subsection*{Proposition 5.1 (production output-orthogonality no-go)}
+
+On a scalar doublet ray at unit floor let
+\[
+ F(x)={x^3\over1+x^2},\qquad
+ a_1={1\over4}\cos x,\qquad
+ a_2={1\over5}\cos3x,
+ \tag{5.3}
+\]
+\[
+ \Delta_1=F(a_1),\qquad
+ \Delta_2=F(a_1+a_2)-F(a_1).
+ \tag{5.4}
+\]
+For the cosine coefficient
+\[
+ c_3(f)={1\over\pi}\int_0^{2\pi}f(x)\cos3x\,dx,
+\]
+let $\mathrm P_{\lvert p\rvert=3}$ denote the exact orthogonal projection onto
+the two harmonics $p=\pm3$ (not the relative-FAR cutoff $\Pi_3$).  Direct
+periodic quadrature gives
+\begin{align*}
+ c_3(\Delta_1)&=0.003619922102104775\ldots,\\
+ c_3(\Delta_2)&=0.020785528647497703\ldots,
+ \tag{5.5}
+\end{align*}
+and hence
+\[
+ \langle\mathrm P_{\lvert p\rvert=3}\Delta_1,
+          \mathrm P_{\lvert p\rvert=3}\Delta_2\rangle_{\rm mean}
+ ={1\over2}c_3(\Delta_1)c_3(\Delta_2)
+ =0.00003762099727750446\ldots>0.
+ \tag{5.6}
+\]
+This unit-floor computation lies exactly in the pinned production-floor
+family.  If
+\[
+ F_\epsilon(x)={x^3\over\epsilon+x^2},
+ \qquad
+ F_\epsilon(\sqrt\epsilon\,y)=\sqrt\epsilon\,F(y),
+ \tag{5.7}
+\]
+then the physical inputs are
+$a_1=\sqrt{\epsilon_\rho}\cos x/4$ and
+$a_2=\sqrt{\epsilon_\rho}\cos3x/5$.  Each coefficient in (5.5) is multiplied
+by $\sqrt{\epsilon_\rho}$, so the positive mean cross becomes
+$3.762099727750446\ldots\times10^{-17}$ at
+$\epsilon_\rho=10^{-12}$.
+The structural failure is already exact for the leading production jet
+$F_0(x)=x^3$.  For $a_1=A\cos x$, $a_2=B\cos3x$,
+\[
+ c_3(\Delta_1)={A^3\over4},
+ \qquad
+ c_3(\Delta_2)={3\over2}A^2B+{3\over4}B^3,
+ \tag{5.8}
+\]
+so the projected cross is positive for $A,B>0$.  Analytic continuity
+transfers this to the rational production coefficient for small amplitudes;
+(5.5) checks the full rational function directly.
+
+Thus $K_k$ smoothing and spatial input-shell orthogonality do not verify the
+output orthogonality hypothesis of R-082 Lemma 6.1.  This fires the method
+no-go
+\texttt{NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY}.
+The fixture contains no martingale projection, and its second input is not
+placed in the relative-FAR range.  It therefore refutes only the global raw
+output pairwise-orthogonality premise as written.  It is not a counterexample
+to (4.10), does not exclude a far-only or correlated martingale estimate, and
+does not refute a correlated/signed Cartan Carleson theorem or complete
+controlled CFAR.
+
+\section{The exact linear Pauli--Fierz subpacket}
+
+Use the pinned six-real ordering
+\[
+ z=(x_1,x_2,x_3,y_1,y_2,y_3)
+ =({\rm Re}\,\psi_1,{\rm Re}\,\psi_2,{\rm Re}\,\chi,
+   {\rm Im}\,\psi_1,{\rm Im}\,\psi_2,{\rm Im}\,\chi),
+ \tag{6.1}
+\]
+and put $P_{\rm dbl}=\operatorname{diag}(1,1,0,1,1,0)$ and
+$c_S=c_0+c_1$.  Define
+\[
+ A_0=2\sqrt{c_0}P_{\rm dbl},
+ \tag{6.2}
+\]
+\[
+ A_1=2\sqrt{c_S}
+ \begin{pmatrix}
+ 0&1&0&0&0&0\\-1&0&0&0&0&0\\0&0&0&0&0&0\\
+ 0&0&0&0&-1&0\\0&0&0&1&0&0\\0&0&0&0&0&0
+ \end{pmatrix},
+ \tag{6.3}
+\]
+\[
+ A_2=2\sqrt{c_S}
+ \begin{pmatrix}
+ 0&0&0&0&1&0\\0&0&0&-1&0&0\\0&0&0&0&0&0\\
+ 0&1&0&0&0&0\\-1&0&0&0&0&0\\0&0&0&0&0&0
+ \end{pmatrix}.
+ \tag{6.4}
+\]
+Then $A_0$ is symmetric, $A_1,A_2$ are skew, and
+\[
+ z^TA_0\dot z=\sqrt{c_0}\,dr,
+ \quad z^TA_1\dot z=2\sqrt{c_S}\,{\rm Re}\,h,
+ \quad z^TA_2\dot z=2\sqrt{c_S}\,{\rm Im}\,h.
+ \tag{6.5}
+\]
+
+Let $C_L(z)$ have rows $z^TA_\nu$, $0\le\nu\le2$.  Its Gram matrix is
+\[
+ \boxed{B_L(z)=C_L(z)^TC_L(z)
+ =\sum_{\nu=0}^2A_\nu^Tzz^TA_\nu.}
+ \tag{6.6}
+\]
+The fourth row is
+\[
+ C_R(z)=2\sqrt{c_1}\,g(z)^T,
+ \qquad
+ g(z)=P_{\rm dbl}z-\alpha{z^TP_{\rm dbl}z\over z^Tz+\epsilon_\rho}z,
+ \tag{6.7}
+\]
+and the full R-082 Gram matrix splits exactly as
+\[
+ B(z)=B_L(z)+C_R(z)^TC_R(z).
+ \tag{6.8}
+\]
+
+For centered target heat with covariance $\Sigma$ put
+\[
+ H_\Sigma=\sum_{\nu=0}^2A_\nu^T\Sigma A_\nu.
+ \tag{6.9}
+\]
+Quadraticity gives
+\[
+ \boxed{P_\Sigma B_L(z)=B_L(z)+H_\Sigma,}
+ \qquad
+ H_{\Sigma_1+\Sigma_2}=H_{\Sigma_1}+H_{\Sigma_2}.
+ \tag{6.10}
+\]
+Thus the heat-lifted linear packet is
+\[
+ \mathcal W_{L,\Sigma}(z,y)
+ ={1\over2}\{B_L(z)+H_\Sigma\}:
+       (y^{\otimes2}-\Gamma).
+ \tag{6.11}
+\]
+The outer factor $1/2$ is load-bearing.  Exposing a value shell transfers its
+$H_{\Delta\Sigma}$ exactly into $B_L$; exposing a derivative shell changes
+$\Gamma$.  The coefficient secant also closes exactly:
+\[
+ B_L(z+a)-B_L(z)=DB_L(z)[a]+B_L(a).
+ \tag{6.12}
+\]
+There is no higher coefficient Taylor remainder in the linear rows.
+
+\section{Complete forest and conditional covariance defects}
+
+For symmetric matrices $S,T$ define the fixed Gram contraction
+\[
+\mathcal T(S,T)=\sum_{\nu=0}^2
+       {\rm Tr}(A_\nu^TSA_\nu T).
+ \tag{7.1}
+\]
+Let $X,Y$ be centered jointly Gaussian exposed value and derivative vectors
+with $\operatorname{Cov}(X,Y)=0$, value covariance $\Sigma_X$, derivative
+covariance $\Gamma$, predictable controls $A,b$, and independent target-heat
+covariance $\Sigma_h$.  Put
+\[
+ \begin{array}{lll}
+ R_2={:}XX{:},&R_1=XA^T+AX^T,&
+ R_0=AA^T+\Sigma_X+\Sigma_h,\\
+ C_2={:}YY{:},&C_1=Yb^T+bY^T,&C_0=bb^T.
+ \end{array}
+ \tag{7.2}
+\]
+
+\subsection*{Theorem 7.1 (complete linear-row forest)}
+
+The heat-lifted covariance-normal packet is the exact nine-block identity
+\[
+ \boxed{2\mathcal W_L
+=\mathcal T(R_2+R_1+R_0,C_2+C_1+C_0).}
+ \tag{7.3}
+\]
+The homogeneous block counts are
+\[
+ P_4:1,\qquad P_3:2,\qquad P_2:3,
+ \qquad P_1:2,\qquad P_0:1.
+ \tag{7.4}
+\]
+Target heat supplies exactly
+\[
+{1\over2}\mathcal T(\Sigma_h,C_2),\qquad
+{1\over2}\mathcal T(\Sigma_h,C_1),\qquad
+{1\over2}\mathcal T(\Sigma_h,C_0).
+ \tag{7.5}
+\]
+These are block counts inside the linear coordinate.  They do not replace
+the R-063 tensor-family classification for the complete production frame.
+
+\emph{Proof.}
+The sums in (7.2) are
+\[
+ R_2+R_1+R_0=(X+A)(X+A)^T+\Sigma_h,
+\]
+and
+\[
+ C_2+C_1+C_0=(Y+b)(Y+b)^T-\Gamma.
+\]
+Bilinearity of $\mathcal T$ gives all nine blocks and (7.3). \hfill$\square$
+
+There are two distinct adapted covariance defects.  For a terminal bilinear
+row $Z^TA_\nu Y$, let
+\[
+ Z_j=P_jZ,\qquad Y_j=P_jY,
+ \qquad K_j=P_j[(Z-Z_j)(Y-Y_j)^T].
+ \tag{7.6}
+\]
+Then
+\[
+ P_j[Z^TA_\nu Y]=Z_j^TA_\nu Y_j+A_\nu:K_j,
+ \tag{7.7}
+\]
+and hence
+\begin{align*}
+ d_j[Z^TA_\nu Y]
+ ={}&Z_{j-1}^TA_\nu d_jY+(d_jZ)^TA_\nu Y_{j-1}\\
+ &+(d_jZ)^TA_\nu d_jY
+   +A_\nu:(K_j-K_{j-1}).
+ \tag{7.8}
+\end{align*}
+The last line is a conditional value--derivative cross-covariance defect.
+
+Even if $K_j=0$, derivative covariance may remain signed.  If
+$\mu=\mathbb E[Y\mid\mathcal A]$ and
+$V=\operatorname{Cov}(Y\mid\mathcal A)$, the difference of two linear-row
+packets has conditional expectation
+\begin{align*}
+ \mathbb E[\Delta\mathcal W_L\mid\mathcal A]
+ ={}&{1\over2}\overline B_1:
+       \{V+(\mu+b)^{\otimes2}-\Gamma\}\\
+ &-{1\over2}\overline B_0:
+       \{V+\mu^{\otimes2}-\Gamma\},
+ \tag{7.9}
+\end{align*}
+where $\overline B_k=B_L(z_k)+H_\Sigma$.  Under
+$\mu=0$ and $V=\Gamma$, (7.9) reduces to the positive square
+$\overline B_1:b^{\otimes2}/2$.  These are clean sufficient conditions
+(and the generic uniform ones); adapted future feedback does not guarantee
+them, though special configurations may cancel accidentally.
+
+\section{An adapted linear row has negative zero chaos}
+
+Let $\xi\sim N(0,1)$, $\lambda\ne0$, and
+\[
+ A=\lambda(\xi^2-4),\qquad z=Ae_1,\qquad y=\xi e_2.
+ \tag{8.1}
+\]
+Allow an independent centered target-heat dummy $R=\tau\zeta e_1$.  Then
+\[
+ dr=d\rho=0,\qquad h=(A+R)\xi.
+ \tag{8.2}
+\]
+The rational row, radial linear row, and imaginary horizontal row vanish
+identically.  The entire packet is the real horizontal linear row
+\[
+ \mathcal W=2c_S(A^2+\tau^2)(\xi^2-1).
+ \tag{8.3}
+\]
+
+Writing $H_k$ for probabilists' Hermites,
+\[
+ A^2=\lambda^2(H_4-2H_2+11),
+ \tag{8.4}
+\]
+and the complete lower-chaos identity is
+\[
+ A^2H_2
+ =\lambda^2(H_6+6H_4+15H_2-4).
+ \tag{8.5}
+\]
+Therefore
+\[
+ \mathcal W
+ =2c_S\lambda^2H_6+12c_S\lambda^2H_4
+ +(30c_S\lambda^2+2c_S\tau^2)H_2
+ -8c_S\lambda^2,
+ \tag{8.6}
+\]
+and
+\[
+ \boxed{\mathbb E\mathcal W=-8c_S\lambda^2<0.}
+ \tag{8.7}
+\]
+Heat adds only the centered $2c_S\tau^2H_2$ term.  It cannot change the
+negative zero chaos.
+
+A separate three-point law gives the same sign without Gaussian Hermite
+algebra:
+\[
+ \mathbb P(\xi=0)={1\over2},\qquad
+ \mathbb P(\xi=\sqrt2)=\mathbb P(\xi=-\sqrt2)={1\over4},
+ \tag{8.8}
+\]
+and $A=1-\xi^2/2$ gives
+\[
+ \mathbb E[A^2(\xi^2-1)]=-{1\over2},
+ \qquad \mathbb E\mathcal W=-c_S.
+ \tag{8.9}
+\]
+
+This fires
+\texttt{NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY}.
+It is an exact finite-root algebraic no-go to universal linear-row positivity
+and to declaring the rational row the sole signed obstruction.  It is not a
+spatial Cameron--Martin counterexample and does not falsify a lower bound for
+the recombined, paid production packet.
+
+\section{Evidence map and successor}
+
+The accepted and failed routes now form the following map.
+
+\begin{enumerate}
+\item \emph{Controlled polynomial FAR: closed exactly.}  The fixed
+root-preserving coordinate and sharp-cube support eliminate all three
+$J_A$ rows, including endpoints and drifts, for $C\ge3$.
+
+\item \emph{Controlled Cartan FAR: exact target, open estimate.}  Equation
+(4.4) assigns every input once and (4.10) is the complete remaining CFAR
+square.  No inequality for that square is claimed.
+
+\item \emph{Control-coordinate smoothing: closed but insufficient.}
+Equation (5.2) spends Cameron--Martin input once.  Equations (5.5)--(5.8)
+show that exact-harmonic nonlinear outputs are correlated, so R-082 global
+raw-output orthogonal Carleson cannot be invoked from this fact alone; a
+far-only correlated martingale estimate remains possible.
+
+\item \emph{Linear Pauli--Fierz algebra: closed.}  Gram, heat, secant,
+cross-covariance, trace, and all nine forest blocks are explicit.
+
+\item \emph{Linear Pauli--Fierz adapted sign: failed as a standalone route.}
+The rational row can vanish while the linear packet has negative expectation.
+The linear and rational rows must remain together with the paid subtraction
+and complete spatial budget.
+\end{enumerate}
+
+The next FAR attack must prove a correlated or signed paracomposition bound
+for the Cartan input telescope (4.4); imposing pairwise orthogonality is not
+available.  The next NEAR attack must estimate both the linear covariance
+defects (7.8)--(7.9) and the rational secant--Jensen defect inside one
+heat-lifted square--trace--forest packet.  Only after controlled CFAR and the
+complete signed NEAR estimate may the R-081 temporal Douglas factorisation be
+used for overlap-stable progression, followed by one-use and $q=10/9$ Nelson.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: ``R-081 already closed the complete polynomial
+controlled FAR bracket.''}  \textbf{VALID with mitigation.}  R-081 proved the
+underlying support simplification.  R-083 upgrades it to the exact R-082
+stopped object and explicitly keeps the moving endpoint, low endpoint, and
+both drifts.  No new analytic decay is attributed to the polynomial rows.
+
+\item \textbf{Objection: ``Equation (4.4) duplicates early roots of a later
+control.''}  \textbf{DISMISSED.}  The input $k$ begins at $P_n-P_{k-1}$;
+roots earlier than $k$ belong to the predictable drift and are subtracted
+once.  The pre-$j_0$ input is separately $(P_n-P_\ell)\Delta_{A,\ell}$.
+
+\item \textbf{Objection: ``The heat compensator was absorbed into raw value
+innovation.''}  \textbf{DISMISSED.}  It is the explicit third line of (4.7),
+and only $\nu^\Delta+\kappa^\Delta$ is centered.
+
+\item \textbf{Objection: ``The positive $K_k$ ledger proves the R-082
+Carleson hypothesis.''}  \textbf{UPHELD as false.}  The exact cubic and full
+rational fixtures have positive exact-harmonic cross products, including
+after rescaling to the pinned production floor.  They do not test a weaker
+far-only correlated martingale estimate.
+
+\item \textbf{Objection: ``Three linear rows can be removed from NEAR because
+their coefficient is polynomial.''}  \textbf{UPHELD as false.}  Polynomial
+heat algebra is finite, but adapted covariance defects are signed.  The
+fixture (8.1) leaves only a linear horizontal row and has negative mean.
+
+\item \textbf{Objection: ``The negative fixture disproves controlled-shell
+one-use.''}  \textbf{UPHELD as an overclaim.}  It has no spatial shell or
+Cameron--Martin payment and therefore tests only universal rowwise sign.
+
+\item \textbf{Objection: ``The nine blocks replace the R-063 forest.''}
+\textbf{UPHELD as false.}  They are the exact block expansion of the linear
+Gram tensor.  The rational tensor families and the complete paid packet
+remain governed by R-063/R-079.
+\end{enumerate}
+
+External adversarial review is invited for the support boundary $C=3$, the
+low-input term in (4.4), the common-even contraction in (4.6), the factor
+$3/(80P)$, the two independent Fourier coefficient calculations, the outer
+$1/2$ in (6.11) and (7.3), and the zero-chaos sign in (8.6).
+
+\section{Reproduction and independent audit}
+
+The primary executable derives every production constant from the A1
+manifest, verifies the six-real matrices and Gram split, performs an exact
+quadratic heat average, checks the secant and nine-block forest, executes a
+finite-tree conditional cross-covariance identity, derives the Gaussian
+Hermite coefficients, tests the discrete sign fixture, verifies the complete
+input telescope and three root channels, checks the $K_k$ ledger, and
+computes the rational Fourier cross by a $2^{16}$-point periodic rule.
+
+The non-importing executable uses Decimal production arithmetic, exact
+Fraction filtrations and heat channels, a scalar forest derivation, normal
+moments and power matching instead of the primary Hermite conversion, the
+three-point law, exact cubic coefficients, and a separate $2^{15}$-point
+periodic quadrature.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_controlled_polynomial_cfar_linear_pf_forest_
+  reduction_verify.py
+\end{verbatim}
+The child contracts are primary $58/58$ and non-importing independent
+$43/43$.  The integrated verifier pins R-082 and the A1 manifest, compares
+independently computed constants and Fourier coefficients, checks every
+authority, note, PDF, manifest, result, negative-result, exploration, task,
+gate, roadmap, claim, lineage, and honesty surface, and fails closed on any
+promotion of the remaining gates.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-
+           PAULI-FIERZ-FOREST-REDUCTION
+Precise statement:       For C>=3, all three controlled polynomial J_A FAR
+                         rows vanish in the complete stopped-current object,
+                         with both endpoints and predictable drifts retained.
+                         Controlled CFAR reduces exactly to the three Cartan
+                         input-scale telescopes with coefficient 3/(80P).
+                         K-shell smoothing pays the input coordinate once but
+                         does not make nonlinear output increments orthogonal.
+                         The three linear Pauli--Fierz rows have an exact Gram,
+                         heat, secant, cross-covariance, trace, and nine-block
+                         forest algebra. An adapted heat-lifted fixture with
+                         zero rational row has negative linear-row zero chaos.
+Scope:                   Finite cutoff; fixed positive floor; common real-even
+                         regulator; exact products; fixed root-preserving
+                         coordinate for CFAR; regular strict-past controls.
+Dependencies:            A1 manifest; R-050; R-063; R-069--R-070; R-075;
+                         R-079; R-080; R-081; R-082.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_controlled_polynomial_cfar_linear_pf_
+                         forest_reduction_verify.py
+Expected output:          Primary 58/58; independent 43/43; manifest-pinned
+                         integrated and aggregate PASS; exit zero.
+Falsification gate:      Failure of polynomial stopped support, either
+                         endpoint or drift, the Cartan input telescope or
+                         3/(80P) factor, three-channel centering, rational
+                         cross fixture, linear Gram/heat/secant/forest,
+                         conditional defect, adapted sign, evidence hash,
+                         PDF contract, or honesty flag.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No controlled Cartan or complete CFAR estimate,
+                         signed linear/rational/complete NEAR lower bound,
+                         regular complete-packet lower bound, overlap-stable
+                         progressive extension, controlled-shell one-use,
+                         Nelson bound, measure theorem, removal limit, or
+                         Sector-A closure is proved.
+Next required action:    Prove a correlated/signed Cartan input-scale CFAR
+                         estimate and a recombined linear+rational heat-lifted
+                         NEAR bound; then progression, one-use, and Nelson.
+\end{verbatim}
+\endgroup

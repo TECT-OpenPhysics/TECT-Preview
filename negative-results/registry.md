@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY](#ng-2026-07-25-a13-k-smoothing-output-orthogonality) | A13 derivation of global nonlinear output-increment orthogonality from the canonical `K_k` input smoothing | two successive production scalar-ray increments have a strictly positive exact-harmonic cross product, including after exact rescaling to the pinned density floor; this refutes only the raw-output pairwise-orthogonality premise, not far-only or correlated martingale estimates |
+| [NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY](#ng-2026-07-25-a13-linear-pf-adapted-positivity) | A13 standalone positivity or deletion of the three linear Pauli--Fierz rows in adapted NEAR | a heat-lifted adapted fixture makes the rational row and two linear rows vanish while the remaining horizontal linear row has exact mean `-8(c0+c1)lambda^2<0`; the complete paid linear-plus-rational packet may still admit a lower bound |
 | [AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL](#audit-2026-07-25-a13-r081-pre-release-contract-symbol) | R-081 pre-release manifest, claim-card, symbol, and executable-evidence audit | the first package did not enforce manifest run counts, left `claim.md` at R-078, used an undefined `Mbar` in the Cartan tail theorem, and self-attested complete-packet temporalisation without executing its cross term; all four defects were repaired before commit |
 | [NG-2026-07-25-A13-ROOTWISE-DETERMINISTIC-FAR-AND-HALF-DERIVATIVE](#ng-2026-07-25-a13-rootwise-deterministic-far-and-half-derivative) | A13 FAR closure by summing deterministic spatial tails rootwise or using only `H^(1/2-)` coefficient regularity | the deterministic current has real relative-gap decay, but its ledger is critical at every root; the fixed-coefficient triangular injection norm is `H^(1/2)`-critical and an explicit uniformly `H^(1/2-delta)` sequence diverges linearly |
 | [NG-2026-07-25-A13-ABSOLUTE-CONTROL-CONTROL-PAIR-HIGH](#ng-2026-07-25-a13-absolute-control-control-pair-high) | A13 NEAR route based on absolutely extracting another comparable control factor | the exact Young slack becomes `(gamma-1-2 theta)/6<0` throughout `0<gamma<1/10`, so the control--control branch must remain signed with the complete square--trace--forest packet |
@@ -82,6 +84,60 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-k-smoothing-output-orthogonality"></a>
+### NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY -- input smoothing does not manufacture global nonlinear output orthogonality
+
+**Failure mode:** Infer the pairwise orthogonality of nonlinear production
+output increments required by the sufficient R-082 causal Carleson lemma from
+the spatial shell orthogonality and `2^(-2k)` smoothing of the control map
+`a_k=K_kh_k`.
+
+**Evidence:** On a scalar doublet ray write
+`F_1(x)=x^3/(1+x^2)`, `a_1=cos(x)/4`, and `a_2=cos(3x)/5`. For
+`Delta_1=F_1(a_1)` and `Delta_2=F_1(a_1+a_2)-F_1(a_1)`, two independent
+periodic quadratures give the harmonic-3 cosine coefficients
+`0.003619922102104775...` and `0.020785528647497703...`. Their exact-harmonic
+mean cross product is `0.00003762099727750446...>0`. This is the projection
+onto `p=+-3`, not the relative-FAR cutoff `Pi_3`. The exact identity
+`F_epsilon(sqrt(epsilon)y)=sqrt(epsilon)F_1(y)` moves the fixture to the pinned
+`epsilon_rho=10^(-12)` production floor, where the cross remains positive and
+equals `3.762099727750446...e-17`. The leading cubic coefficients independently
+give `c_3(Delta_1)=A^3/4` and
+`c_3(Delta_2)=(3/2)A^2B+(3/4)B^3`.
+
+**Consequence:** The `K_k` coordinate ledger genuinely spends the input
+square function once, but R-082 Lemma 6.1 cannot be invoked by declaring its
+nonlinear outputs orthogonal. The fixture has no martingale projection and
+does not place the second input in the relative-FAR range, so it does not
+exclude a far-only, correlated, or signed martingale/paracomposition estimate
+and is not a counterexample to controlled CFAR.
+
+<a id="ng-2026-07-25-a13-linear-pf-adapted-positivity"></a>
+### NG-2026-07-25-A13-LINEAR-PF-ADAPTED-POSITIVITY -- the linear Pauli--Fierz subpacket is not universally positive under adapted feedback
+
+**Failure mode:** Delete the three linear Pauli--Fierz rows from NEAR because
+their Gram coefficient is quadratic, or prove them separately by a universal
+conditional positivity claim and assign all signed difficulty to the rational
+row.
+
+**Evidence:** Let `xi` be standard Gaussian,
+`A=lambda(xi^2-4)`, `z=Ae_1`, and `y=xi e_2`, with an optional independent
+target-heat dummy `R=tau zeta e_1`. The rational row, radial linear row, and
+imaginary horizontal row vanish identically. The surviving real horizontal
+packet is `W=2(c0+c1)(A^2+tau^2)(xi^2-1)`. Exact Hermite algebra gives
+`A^2 H_2=lambda^2(H_6+6H_4+15H_2-4)`, hence
+`E W=-8(c0+c1)lambda^2<0`; target heat changes only the centered `H_2` term.
+A separate three-point law gives the same negative sign without Gaussian
+Hermite conversion. Both executable audits evaluate the matrices and rational
+row directly rather than self-attesting their zeros.
+
+**Consequence:** Polynomial heat algebra and the exact nine-block forest are
+finite bookkeeping, not a standalone sign theorem. The linear and rational
+rows, conditional covariance defects, paid subtraction, and spatial budget
+must remain recombined. This fixture has no spatial Cameron--Martin payment
+and therefore does not falsify a lower bound for the complete paid production
+packet, controlled-shell one-use, or Nelson synthesis.
 
 <a id="audit-2026-07-25-a13-r081-pre-release-contract-symbol"></a>
 ### AUDIT-2026-07-25-A13-R081-PRE-RELEASE-CONTRACT-SYMBOL -- manifest, claim surface, Cartan symbol, and executable evidence repaired

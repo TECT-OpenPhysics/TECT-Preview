@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-083 controlled polynomial CFAR and linear Pauli--Fierz forest reduction] - 2026-07-25
+
+Recorded the exact C>=3 vanishing of all three controlled polynomial stopped-FAR rows, retaining both endpoints and both predictable drifts, and reduced the complete remaining CFAR object to the three Cartan input-scale telescope squares with factor 3/(80P). The canonical K-shell input-coordinate estimate is one-use, but exact cubic and rational mode-three fixtures refute automatic nonlinear output orthogonality. Derived the exact linear Pauli--Fierz Gram, heat, secant, conditional-covariance, and nine-block forest algebra; an adapted zero-rational-row fixture refutes universal standalone linear-row positivity. Primary 58/58, non-importing independent 43/43, integrated 103/103, and aggregate 204/204 pass. The ten-page zero-form PDF passed Poppler rendering and direct all-page visual QA. Tier remains T4; controlled Cartan CFAR, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open.
+
 ## [R-082 stopped-current FAR and complete-current NEAR coordinate reduction] - 2026-07-25
 
 Recorded the exact changing-current stopped-square identity with both predictable drifts, corrected raw-value/heat centering, closed the uncontrolled production FAR subbranch for every strict beta<3 alpha-1, proved the sharp orthogonal s>1/2 causal Carleson summation lemma, and derived the global four-row complete-current Pauli--Fierz Gram coordinate with heat-lift and conditional-covariance boundaries. Primary 54/54, non-importing independent 52/52, integrated 103/103, and aggregate 209/209 are manifest-pinned. The twelve-page zero-form PDF passed Poppler render and final all-page visual QA after one literal qquads markup repair. Controlled CFAR, complete heat-lifted signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open.

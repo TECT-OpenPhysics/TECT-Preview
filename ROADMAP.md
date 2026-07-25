@@ -261,14 +261,26 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   one row is rational, but state-dependent compression is not rootwise,
   target heat must average the Gram matrix, and future conditional covariance
   defects remain signed. Complete heat-lifted signed NEAR is therefore still
-  open.
-  R-080--R-082 also expose the separate
+  open. R-083,
+  `A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`,
+  closes all three controlled polynomial `J_A` FAR rows in the complete
+  stopped object for `C>=3`, with both endpoints and both predictable drifts
+  retained. The exact remaining controlled CFAR object is the sum of three
+  Cartan input-scale telescope squares with factor `3/(80P)`. The canonical
+  `K_k` estimate spends the input coordinate once, but a production-floor-
+  rescaled exact-harmonic witness refutes automatic global nonlinear-output
+  orthogonality without excluding far-only or correlated martingale routes.
+  R-083 also closes the exact linear Pauli--Fierz Gram/heat/secant/covariance/
+  nine-block forest algebra. An adapted rational-zero fixture has negative
+  linear-row zero chaos, so NEAR must keep the linear and rational rows
+  recombined with the paid packet.
+  R-080--R-083 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
   factorisation preserves the complete packet algebra for overlapping
   bounded-simple packets, so the remaining PROG input is an overlap-stable
-  lower bound plus the variational limit. Controlled FAR, complete signed
+  lower bound plus the variational limit. The controlled Cartan CFAR, complete signed
   NEAR, and that progression theorem remain before one-use and `q=10/9`
   Nelson.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
@@ -434,7 +446,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
     child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-    narrowed by R-080--R-082. R-080 closes the two distinct low objects for regular
+     narrowed by R-080--R-083. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -457,9 +469,16 @@ preserved in git/changelog rather than treated as current gates.
     current to four global Pauli--Fierz rows, only one rational, but proves that
     this state-dependent compression does not preserve individual root blocks
     and that target heat must act on `C^T C`, not on `C` before squaring.
-    Prove controlled CFAR and the complete heat-lifted adapted/signed NEAR
-    estimate while retaining every present/future block, square, trace,
-    innovation, compensator, forest term, and paid subtraction. Then apply
+     R-083 removes every controlled polynomial row from this stopped object and
+     identifies the exact three-Cartan input telescope with factor `3/(80P)`.
+     Its production-floor harmonic fixture shows that `K_k` input smoothing
+     does not supply global pairwise output orthogonality, so prove a correlated
+     or signed Cartan CFAR estimate instead. R-083 also gives the complete
+     linear Pauli--Fierz heat/forest algebra, while an adapted rational-zero
+     fixture has negative linear-row zero chaos. Therefore prove the recombined
+     linear-plus-rational heat-lifted adapted/signed NEAR estimate while
+     retaining every present/future block, square, trace, innovation,
+     compensator, forest term, and paid subtraction. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
    an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
    `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling

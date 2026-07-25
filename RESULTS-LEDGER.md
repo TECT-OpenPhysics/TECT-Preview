@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-083](#r-083) | Controlled polynomial CFAR and linear Pauli--Fierz forest reduction | Scoped T4 analytic/exact/executed reduction: in the fixed root-preserving six-current coordinate, every controlled polynomial `J_A=Dm_A` row vanishes in the complete stopped FAR object for `C>=3`, including both endpoints and both predictable drifts. Controlled CFAR is thereby reduced exactly to three Cartan input-scale telescopes with coefficient `3/(80P)`. The canonical `K_k` smoothing pays the input coordinate once but does not create the global raw-output pairwise orthogonality assumed by the sufficient R-082 Carleson lemma; an exact production-floor-rescaled harmonic witness records that method no-go without excluding far-only or correlated martingale estimates. The three linear Pauli--Fierz rows have exact Gram, heat, secant, covariance-defect, and nine-block forest algebra, but an adapted heat-lifted fixture with zero rational row has negative linear-row zero chaos. Controlled Cartan CFAR, recombined complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; 58/58 primary, 43/43 independent, 103/103 integrated, 204/204 aggregate assertions |
 | [R-082](#r-082) | Stopped-current FAR and complete-current NEAR coordinate reduction | Scoped T4 analytic/exact/executed reduction: the entire FAR wedge is one deterministic stopped-current square retaining its moving endpoint and both predictable control drifts; raw value innovation centers only with its heat compensator. The uncontrolled production FAR contribution now closes cutoff-uniformly with decay `2^(-2 beta C)` for every `beta<3 alpha-1`, by a support-refined R-050 paracontrolled remainder. An orthogonal causal Carleson lemma has the sharp `s>1/2` threshold and would spend the Cameron--Martin input once if the missing balanced production decomposition were proved. The production current has a global four-coordinate Pauli--Fierz square and exact conditional-covariance positivity criterion; state-dependent compression is not rootwise, heat must average the Gram matrix, and future covariance defects remain signed. Controlled FAR, complete signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-081](#r-081) | Cartan current tails, adapted near budgets, and temporal packet reduction | Scoped T4 analytic/exact/executed reduction: the production current splits into a quadratic polynomial channel and one heat-averaged nonlinear Cartan channel; the polynomial channel vanishes at separated outputs, while a deterministic relative-gap theorem gives `2^(-2sC)X^(1/2)Y^(1/2)` for every `0<s<1`. Fixed predictable Gaussian injection is governed by a triangular `H^(1/2)` endpoint norm, and `H^(1/2-)` alone is insufficient. Vector-valued Doob--Burkholder interpolation closes the input budget and exact gain ledger for an explicitly factorised first-order NEAR response. A production two-root witness has `d_jA=0` but nonzero coefficient innovation, so the complete nonlinear branch also requires its upper-triangular Jensen defect; absolute control--control pair-high extraction is supercritical. Bounded-simple progressive packets factor causally and preserve the complete R-079 algebra despite range overlap, while an exact one-mode witness proves that the R-075 one-shot graph is not progressive-dense. Root-resolved FAR, complete NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-080](#r-080) | Regular low-object absorption, far square completion, and progressive-revisit boundary | Scoped T4 analytic/exact/executed reduction: both R-079 low objects admit arbitrary terminal-sextic absorption uniformly in the cutoff for mutually orthogonal strict-past one-shot controls with no low-range revisit. Orthogonal far-shell completion retains both feedback channels and reduces the far loss to one localized predictable base-current tail; the near residual has predictable explicit `A^2 DA` payload but a hidden future-adapted high--high-to-low coefficient. Target heat and weighted CM identities give no automatic root/shell gap, bounded near width gives zero Young slack, universal rootwise positivity fails, and R-075 graph recovery does not extend a restricted lower bound to every progressive/revisit control. FAR, NEAR, and full-progressive extension remain open; one-use, Nelson, and Sector A are not closed; assertion count is pinned by the manifest |
@@ -101,6 +102,65 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-083"></a>
+### R-083 -- Controlled polynomial CFAR and linear Pauli--Fierz forest reduction
+
+**Result ID.**
+`A13-CLASSII-CONTROLLED-POLYNOMIAL-CFAR-LINEAR-PAULI-FIERZ-FOREST-REDUCTION`.
+
+**Statement.** In the fixed root-preserving coordinate
+`(sqrt(c0) P_A,sqrt(c1)(P_A-2 alpha C_A))_(A=1)^3`, the three polynomial
+currents `P_A=Dm_A` have support at most `Q_(n+1)`. Thus for the sharp-cube
+relative-FAR cutoff and `C>=3`, every polynomial contribution to the complete
+R-082 stopped object is exactly zero. This retains the moving endpoint, the
+pre-`j0` low endpoint, and the predictable control-value and control-derivative
+drifts. With `alpha=5/9`, `c1=243/(8000P)`, the complete remaining controlled
+CFAR square is exactly the sum of three Cartan input-scale telescopes with
+coefficient `4 alpha^2 c1=3/(80P)`.
+
+The canonical `K_k` bound closes the spatial input-coordinate square function
+once. It does not imply global pairwise orthogonality after the nonlinear
+production map. An exact projection onto harmonics `p=+-3` gives a positive
+cross product for two successive scalar-ray output increments. The identity
+`F_epsilon(sqrt(epsilon)y)=sqrt(epsilon)F_1(y)` places the witness at the
+pinned `epsilon_rho=10^(-12)` production floor. This is a no-go only for the
+raw-output orthogonality premise of R-082 Lemma 6.1: the fixture has no
+martingale projection and does not exclude far-only or correlated martingale
+estimates.
+
+For NEAR, the three linear Pauli--Fierz rows split exactly from the rational
+row. Their Gram matrix is quadratic, target heat is additive, the coefficient
+secant has no higher remainder, and the complete value/derivative expansion is
+a nine-block forest with homogeneous counts `1,2,3,2,1`. Conditional
+projection carries a value--derivative cross-covariance defect. Moreover, a
+heat-lifted adapted fixture with the rational row and two linear rows
+identically zero has expectation `-8(c0+c1)lambda^2<0` in the remaining
+horizontal linear row. Hence neither the rational row alone nor standalone
+linear-row positivity captures the complete signed obstruction.
+
+**Boundary.** The three Cartan input-scale CFAR estimate, recombined
+linear-plus-rational heat-lifted signed NEAR lower bound, complete regular
+packet lower bound, overlap-stable progression and variational extension,
+controlled-shell one-use, `q=10/9` Nelson, the interacting measure, removal
+limits, and Sector-A closure remain open. Tier stays T4.
+
+**Proven in.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-controlled-polynomial-cfar-linear-pauli-fierz-forest-reduction-260725-v1.0`,
+with primary 58/58, non-importing independent 43/43, integrated 103/103, and
+aggregate 204/204 verification.
+
+**Reuse scope.** Root-preserving controlled-current coordinates, exact
+stopped input telescopes, sharp support elimination, nonlinear-output
+orthogonality diagnostics, Pauli--Fierz heat lifts, covariance defects, and
+finite Wiener forests.
+
+**Publication target.** Stochastic geometric/paracontrolled methods note with
+R-050, R-063, and R-075--R-082 after controlled Cartan CFAR, complete signed
+NEAR, one-use, and Nelson synthesis are resolved.
+
+---
 
 <a id="r-082"></a>
 ### R-082 -- Stopped-current FAR and complete-current NEAR coordinate reduction
