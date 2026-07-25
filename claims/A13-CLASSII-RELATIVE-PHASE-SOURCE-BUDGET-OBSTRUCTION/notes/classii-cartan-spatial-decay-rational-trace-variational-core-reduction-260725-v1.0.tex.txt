@@ -1,0 +1,723 @@
+% Title: Cartan spatial decay, rational trace, and variational-core reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; CARTAN SPATIAL HALF AND FIXED-CUTOFF VARIATIONAL CORE CLOSED; CARTAN ONE-USE LEDGER, RATIONAL PACKET, REG, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION
+% Ledger: R-087
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-085 left two explicit analytic inputs: the complete mixed Cartan atom
+estimates (4.10)--(4.11), and the coupled rational shifted-Hessian form bound
+(6.5).  R-086 then reduced the latter to one coefficient-dominant
+translated-Wick packet.  This note advances both inputs and also removes an
+unnecessary downstream CORE burden.
+
+The first result closes the \emph{spatial} half of the Cartan atom.  A fixed
+compactly supported smooth Littlewood--Paley decomposition gives exact
+principal support below $Q_{j+4}$.  The complete remainder has conditional
+Hilbert--Schmidt decay
+
+\[
+ 2^{-2s(m-k)},\qquad
+ {1\over3}<\alpha<{1\over2},\quad
+ {1\over2}<s<3\alpha-{1\over2}.
+ \tag{1.1}
+\]
+
+At the production value $\alpha=2/5$, the choice $s=7/12$ has strict squared
+root and gap margins $7/30$ and $13/30$.  This proves R-085 (4.10) for an
+explicit translated-model sequence $q_k^{\rm mod}$.  It does \emph{not}
+prove the one-use summability (4.11).  A rare-event fixture shows why pulling
+the translated $\mathcal C^\alpha$ norm outside expectation cannot prove it.
+
+The second result is an exact $\eta$-regularised Schur/Wick completion of the
+R-086 rational packet.  It removes the endpoint kernel for fixed $\eta>0$,
+but creates a nonnegative trace debt of size at most $\eta^{-1}$ times a
+quadratic Wick trace.  The leading coefficient-dominant resonance remains.
+
+The third result proves, at every fixed cutoff, that the Boue--Dupuis
+variational infimum is unchanged when restricted to bounded smooth
+cylindrical simple progressive controls.  Therefore a uniform OVERLAP lower
+bound on that class would directly imply the $q=10/9$ Nelson moment.  A
+separate packetwise graph theorem for every finite-energy control is not
+needed for this scalar application.  OVERLAP itself remains open.
+
+The binding internal dependencies are R-075, R-081, R-084, R-085, and R-086.
+The deterministic paralinearisation is pinned to Bailleul--Bernicot and is
+reproduced below for the compactly supported Fourier convention used here.
+The variational formula is pinned to Hariya--Watanabe and Boue--Dupuis.  A
+targeted audit of the external Contents archive found no theorem that closes
+the remaining adapted one-use or coefficient-dominant packet.
+
+\section{The complete mixed Cartan input atom}
+
+Let $Q_j=\{\xi\in\mathbb Z^3:|\xi|_\infty\le2^j\}$ be the physical sharp
+cutoff.  For a production Cartan generator $A$, put
+
+\[
+ \Phi_{A,j}=P_{\Sigma_{j+1:J}}F_A,
+ \qquad F_A(z)=q_A(z)z,
+ \qquad q_A(z)={z^TS_Az\over |z|^2+\epsilon_\rho}.
+ \tag{2.1}
+\]
+
+Target heat convolution is a probability convolution and therefore
+contracts derivative sup norms.  The positive floor gives
+
+\[
+ \sup_{j,\Sigma}\max_{1\le r\le5}
+ \|D^r\Phi_{A,j}\|_\infty\le M_{\epsilon_\rho,5}<\infty.
+ \tag{2.2}
+\]
+
+Condition on $\mathcal F_{j-1}$.  Write
+
+\[
+ w_j=U_{j-1}+g_j,\qquad
+ u_{j,r}=w_j+rA^{(j)},\qquad
+ A^{(j)}=A^{(\ell)}+\sum_{k=j_0}^ja_k,\qquad a_k=K_kh_k.
+ \tag{2.3}
+\]
+
+All fields in (2.3) are supported in $Q_j$.  Linearity of the $a$ and
+$Da$ slots in R-085 (3.1) gives the exact atomisation
+
+\[
+ \mathbb D_jH_{A,j,A^{(j)}}
+ =\mathcal M_{A,j,\ell}+\sum_{k=j_0}^j\mathcal M_{A,j,k},
+ \tag{2.4}
+\]
+
+where the finite-low atom $\mathcal M_{A,j,\ell}$ stays under the accepted
+R-080 low-object bound, and
+
+\[
+\begin{aligned}
+ \mathcal M_{A,j,k}[v]=\int_0^1\{&
+ D^2\Phi_{A,j}(u_{j,r})[a_k,v]^TDu_{j,r}\\
+ &+D\Phi_{A,j}(u_{j,r})[v]^TDa_k
+ +D\Phi_{A,j}(u_{j,r})[a_k]^TDv\}\,dr .
+\end{aligned}
+ \tag{2.5}
+\]
+
+No channel in (2.5) is discarded.  Predictability says
+$\mathbb D_ja_k=0$; it does not say $Da_k=0$.
+
+\section{A reproduced order-two paralinearisation lemma}
+
+Fix $\chi\in C_c^\infty(\mathbb R^3)$, equal to one on
+$\{|\xi|_\infty\le3/4\}$ and supported in
+$\{|\xi|_\infty\le4/3\}$.  Put
+
+\[
+ S_n=\chi(2^{-n}D),\qquad
+ \Delta_n=S_n-S_{n-1},\qquad
+ T_fg=\sum_nS_{n-2}f\,\Delta_ng.
+ \tag{3.1}
+\]
+
+These smooth analytic blocks are distinct from, but compatible with, the
+sharp physical filtration $Q_j$.  They are used only to decompose the exact
+finite-cutoff function.
+
+For a smooth vector- or tensor-valued map $G$, define
+
+\[
+ \mathcal P_1[G,u]=T_{DG(u)}u,
+ \tag{3.2}
+\]
+
+and
+
+\[
+ \mathcal P_2[G,u]=T_{DG(u)}u+{1\over2}
+ \{T_{D^2G(u)}(u\otimes u)-2T_{D^2G(u)[u]}u\}.
+ \tag{3.3}
+\]
+
+\subsection*{Lemma 3.1 (order-one and order-two remainders)}
+
+If $0<\alpha<1$, $u\in\mathcal C^\alpha$, and the derivatives of $G$ needed
+below are bounded, then, componentwise,
+
+\[
+ \|\Delta_n\{G(u)-\mathcal P_1[G,u]\}\|_\infty
+ \le C_{G,\alpha}2^{-2\alpha n}
+ (1+\|u\|_{\mathcal C^\alpha})^2,
+ \tag{3.4}
+\]
+
+\[
+ \|\Delta_n\{G(u)-\mathcal P_2[G,u]\}\|_\infty
+ \le C_{G,\alpha}2^{-3\alpha n}
+ (1+\|u\|_{\mathcal C^\alpha})^3.
+ \tag{3.5}
+\]
+
+\emph{Proof.}
+Let $K_n$ be the kernel of $\Delta_n$.  Its zero integral lets one write each
+block of $G(u)$ as an integral of $G(u(y))-G(u(x))$.  Insert the first-order
+Taylor formula around the low-frequency value $S_{n-2}u(x)$.  Subtracting
+$S_{n-2}DG(u)\Delta_nu$ leaves two increments of $u$; each is bounded by
+$C2^{-\alpha n}\|u\|_{\mathcal C^\alpha}$.  The uniformly integrable smooth
+kernels give (3.4).
+
+For the next order, expand once more.  The quadratic Taylor contribution is
+exactly
+
+\[
+ {1\over2}\{T_{D^2G(u)}(u\otimes u)
+              -2T_{D^2G(u)[u]}u\}.
+\]
+
+The two terms are both required: they remove the dependence on the chosen
+low-frequency base point.  The integral remainder contains three increments
+of $u$, hence $2^{-3\alpha n}$.  Summing the finitely overlapping smooth
+kernels proves (3.5).  This is the compact Fourier version of the high-order
+Taylor expansion in Bailleul--Bernicot, Forum of Mathematics, Sigma 7
+(2019), e44, Section 2 and Appendix B. \hfill$\square$
+
+Apply (3.4) to $G=D^2\Phi$ and (3.5) to $G=D\Phi$.  With
+
+\[
+ \mathcal R_2(u)=D^2\Phi(u)-\mathcal P_1[D^2\Phi,u],
+ \qquad
+ \mathcal R_3(u)=D\Phi(u)-\mathcal P_2[D\Phi,u],
+ \tag{3.6}
+\]
+
+and $Z=1+\|u\|_{\mathcal C^\alpha}$, equations (2.2), (3.4), and (3.5)
+give
+
+\[
+ \|\Delta_n\mathcal R_2(u)\|_\infty
+ \le C_e2^{-2\alpha n}Z^2,\qquad
+ \|\Delta_n\mathcal R_3(u)\|_\infty
+ \le C_e2^{-3\alpha n}Z^3.
+ \tag{3.7}
+\]
+
+\section{Exact principal support and the safe separation}
+
+The explicit mask in (3.1) fixes the support constant, rather than hiding it
+in $O(1)$.  A $Q_j$-supported input has no $\Delta_n$ block above $j+1$;
+its square has no block above $j+2$.  The support of one paraproduct summand
+is contained in $(5/3)Q_n$.  Therefore
+
+\[
+ \operatorname{supp}\mathcal P_1[D^2\Phi,u]
+ \subset {10\over3}Q_j,\qquad
+ \operatorname{supp}\mathcal P_2[D\Phi,u]
+ \subset {20\over3}Q_j.
+ \tag{4.1}
+\]
+
+After inserting the remaining factors in (2.5), the first principal channel
+has radius at most $(10/3+3)2^j=19\,2^j/3$.  The other two have radius at
+most $(20/3+2)2^j=26\,2^j/3$.  Hence every principal contribution lies in
+$Q_{j+4}$.  Since $\Pi_m$ is supported where
+$|\xi|_\infty>2^{m-1}$,
+
+\[
+ \boxed{\Pi_m\mathcal M^{\rm principal}_{A,j,k}=0
+        \quad(m\ge j+5).}
+ \tag{4.2}
+\]
+
+Thus $C_0=5$ is a safe explicit constant for the declared smooth analytic
+partition.  The sharper value four belongs to a formal sharp paraproduct and
+is not used, because sharp partial-sum kernels are not uniformly $L^1$.
+Conditional OU averaging and target heat act in probability and target
+variables, respectively, so both preserve (4.2).
+
+There is no algebraic cancellation claim here.  On the two-dimensional slice
+$\Phi(z)=q(z)z$, $q=(x^2-y^2)/(x^2+y^2+e)$, the coefficient one-form has
+
+\[
+ d(\Phi\cdot dz)={4xy\over x^2+y^2+e}\,dx\wedge dy.
+ \tag{4.3}
+\]
+
+For $w=(1,1)$, $a=\varepsilon\sin(Kx)e_1$, and
+$v=\cos(Jx)e_2$, the first-order mixed principal is
+
+\[
+ -{\varepsilon\over2+e}\{(K+J)\cos((J-K)x)
+ +(K-J)\cos((J+K)x)\}.
+ \tag{4.4}
+\]
+
+It is nonzero, but has only the sum and difference carriers and is therefore
+killed in the far region (4.2).
+
+\section{Hilbert--Schmidt decay of the complete remainder}
+
+Let $(v_h)_h$ be an orthonormal fresh-root Cameron--Martin basis.  The
+three-dimensional $|q|^{-4}$ shell covariance gives the exact scale powers
+
+\[
+ \sup_x\sum_h|v_h(x)|^2\le\kappa_0\,2^{-j},\qquad
+ \sup_x\sum_h|Dv_h(x)|^2\le\kappa_1\,2^j.
+ \tag{5.1}
+\]
+
+Band limitation also gives
+
+\[
+ \|Du_{j,r}\|_\infty
+ \le C_\alpha2^{(1-\alpha)j}Z_{j,r},\qquad
+ Z_{j,r}=1+\|u_{j,r}\|_{\mathcal C^\alpha}.
+ \tag{5.2}
+\]
+
+When $m\ge j+5$, Fourier support forces the output frequency into
+$\mathcal R_2$ or $\mathcal R_3$.  Square (3.7), sum the fresh roots
+pointwise using (5.1), and then integrate the control factor in $L^2$.  This
+gives
+
+\[
+\begin{aligned}
+ \sum_h\|\Pi_m[\mathcal R_2(u)[a_k,v_h]^TDu]\|_2^2
+ &\le C_e2^{-4\alpha m}2^{(1-2\alpha)j}
+ Z^6\|a_k\|_2^2,\\
+ \sum_h\|\Pi_m[\mathcal R_3(u)[v_h]^TDa_k]\|_2^2
+ &\le C_e2^{-6\alpha m}2^{-j}
+ Z^6\|Da_k\|_2^2,\\
+ \sum_h\|\Pi_m[\mathcal R_3(u)[a_k]^TDv_h]\|_2^2
+ &\le C_e2^{-6\alpha m}2^j
+ Z^6\|a_k\|_2^2.
+\end{aligned}
+ \tag{5.3--5.5}
+\]
+
+There is no $2^{3k}$ Bernstein loss in (5.3): after the pointwise root sum,
+$a_k$ remains in $L^2$.  Cross-channel orthogonality is not assumed; the
+elementary three-term square inequality pays a fixed factor.
+
+Put $\beta=6\alpha-1$ and $d=m-j$.  The two critical right-hand sides become
+
+\[
+ C_e2^{-\beta j}2^{-4\alpha d}Z^6\|a_k\|_2^2,\qquad
+ C_e2^{-\beta j}2^{-6\alpha d}Z^6\|a_k\|_2^2.
+ \tag{5.6}
+\]
+
+The middle channel is stronger.  Conditional OU contraction gives
+
+\[
+ \int_0^\infty e^{-2\tau}
+ \mathbb E\|P_\tau^{(j)}X\|^2d\tau
+ \le {1\over2}\mathbb E\|X\|^2.
+ \tag{5.7}
+\]
+
+Jensen in $r$ and (5.3)--(5.7) now prove the spatial atom theorem.
+
+\subsection*{Theorem 5.1 (the spatial half of R-085 (4.10))}
+
+Assume $1/3<\alpha<1/2$ and $1/2<s<3\alpha-1/2$.  The upper
+restriction on $\alpha$ implies
+$3\alpha-1/2<2\alpha$, so both decay conditions
+$\beta-2s>0$ and $4\alpha-2s>0$ hold.  Define
+
+\[
+ W_k=\sup_{j\ge k}\sum_A\mathbb E\int_0^1
+ Z_{j,r}^6(\|a_k\|_2^2+\|Da_k\|_2^2)\,dr,
+ \tag{5.8}
+\]
+
+\[
+ q_k^{\rm mod}=C_e2^{-(6\alpha-1)k}W_k.
+ \tag{5.9}
+\]
+
+Then for $m\ge j+5$,
+
+\[
+ \boxed{
+ \sum_A\int_0^\infty e^{-2\tau}
+ \mathbb E\|\Pi_mP_\tau^{(j)}
+ \mathcal M_{A,j,k}\|_{\rm HS}^2d\tau
+ \le2^{-2s(m-k)}q_k^{\rm mod}.}
+ \tag{5.10}
+\]
+
+Indeed, after writing $j=k+r$, the excess powers are
+
+\[
+ (\beta-2s)r+(4\alpha-2s)d\ge0.
+ \tag{5.11}
+\]
+
+At $\alpha=2/5$ and $s=7/12$,
+
+\[
+ \beta={7\over5},\qquad
+ \beta-2s={7\over30},\qquad
+ 4\alpha-2s={13\over30},
+ \tag{5.12}
+\]
+
+so the R-085 nonorthogonal Schur threshold is crossed with strict room.
+
+\section{The exact Cartan one-use obstruction}
+
+The Cameron--Martin multiplier gives
+
+\[
+ \|a_k\|_2^2\lesssim2^{-4k}\|h_k\|_2^2,\qquad
+ \|Da_k\|_2^2\lesssim2^{-2k}\|h_k\|_2^2.
+ \tag{6.1}
+\]
+
+Using (6.1) in (5.9) and extracting the translated model norm would require
+
+\[
+ \sum_k2^{-(\beta+1)k}
+ \sup_{j\ge k}\mathbb E[Z_j^6\|h_k\|_2^2]
+ \lesssim1+\mathbb E[X^{1/2}Y^{1/2}].
+ \tag{6.2}
+\]
+
+This implication is false as a general energy argument.  Let an event $E$
+have probability $p=N^{-6}$ and take one predictable physical mode
+
+\[
+ h=N^3\mathbf1_Ee_N,\qquad a=K_Nh=N\mathbf1_Ee_N.
+ \tag{6.3}
+\]
+
+Then $\mathbb EX\asymp\mathbb EY\asymp\mathbb E\sqrt{XY}\asymp1$, while
+$Z\asymp N^{1+\alpha}$ on $E$.  Since $\beta+1=6\alpha$, the corresponding
+extracted summand in (6.2) is of order $N^6=p^{-1}$.
+
+This registers
+
+\[
+ \texttt{NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION}.
+ \tag{6.4}
+\]
+
+It is a proof-method no-go, not a counterexample to (5.10) or to the directly
+averaged complete atom.  The remaining Cartan lemma must keep expectation
+inside the three exact remainders and prove
+
+\[
+ \sum_k2^kq_k\lesssim1+\mathbb E[X^{1/2}Y^{1/2}]
+ \tag{6.5}
+\]
+
+without extracting an unbounded translated model multiplier.  Thus R-085
+(4.11), controlled Cartan CFAR, and REG remain open.
+
+\section{Exact rational eta-completion and trace debt}
+
+Use the R-086 notation
+
+\[
+ \mathcal P={1\over2}L:Q+G^TLc+{1\over2}c^TB_1c,\qquad
+ Q=G\otimes G-\Gamma.
+ \tag{7.1}
+\]
+
+For $\eta>0$, put
+
+\[
+ A_\eta=B_1+2\eta I,\qquad
+ M_\eta=L-LA_\eta^{-1}L.
+ \tag{7.2}
+\]
+
+Since $B_1\succeq0$, $A_\eta\succ0$ even on the endpoint kernel.  Completing
+the $c$ square gives the exact identity
+
+\[
+\boxed{
+\begin{aligned}
+ \mathcal P+\eta|c|^2={}&{1\over2}
+ (c+A_\eta^{-1}LG)^TA_\eta(c+A_\eta^{-1}LG)\\
+ &+{1\over2}M_\eta:Q
+ -{1\over2}\operatorname{Tr}(LA_\eta^{-1}L\Gamma).
+\end{aligned}}
+ \tag{7.3}
+\]
+
+Expanding the square proves (7.3); the two $\Gamma$ contractions recombine
+to $-L:\Gamma/2$.  For $\Gamma\succeq0$ the trace debt
+
+\[
+ \mathfrak D_\eta={1\over2}\operatorname{Tr}
+ (LA_\eta^{-1}L\Gamma)
+ \tag{7.4}
+\]
+
+is nonnegative, and congruence of
+$A_\eta^{-1}\preceq(2\eta)^{-1}I$ gives
+
+\[
+ 0\le\mathfrak D_\eta
+ \le {1\over4\eta}\operatorname{Tr}(L^2\Gamma).
+ \tag{7.5}
+\]
+
+This is a useful kernel-free normal form but not a form bound.  In general
+$M_\eta$ is indefinite.  If $L=O(a^3)$ at fixed $\eta$, then
+
+\[
+ M_\eta=L+O_\eta(a^6),
+ \tag{7.6}
+\]
+
+so the leading coefficient-dominant $L:Q$ resonance survives.  The old
+$O(\sigma^{-2})$ inverse-heat loss has been traded for an $O(\eta^{-1})$
+trace debt.  No cutoff-uniform bound on that debt or on the complete rational
+packet is asserted.
+
+\section{Fixed-cutoff bounded cylindrical variational core}
+
+Fix a cutoff $J$.  Let $B$ be a finite-dimensional Brownian motion on its
+completed canonical filtration, let $H_J$ be finite-dimensional, and let
+
+\[
+ X_J=\int_0^TK_J(t)\,dB_t,\qquad
+ T_Jv=\int_0^TK_J(t)v_t\,dt,\qquad K_J\in L^2_t.
+ \tag{8.1}
+\]
+
+Assume $G_J:H_J\to\mathbb R$ is continuous, bounded below, and, for every
+$R<\infty$, obeys the local polynomial envelope
+
+\[
+ \sup_{\|y\|\le R}|G_J(x+y)|
+ \le C_{J,R}(1+\|x\|^{r_J}).
+ \tag{8.2}
+\]
+
+Let $\mathcal A$ be the finite-energy progressive controls,
+$\mathcal A_b$ the bounded progressive controls, and $\mathcal A_{cs}$ the
+bounded smooth cylindrical simple progressive controls.  Thus elements of
+$\mathcal A_{cs}$ have the form
+
+\[
+ v_t=\sum_{\ell=1}^N
+ \Psi_\ell(B_{r_{\ell,1}},\ldots,B_{r_{\ell,m_\ell}})
+ \mathbf1_{(t_{\ell-1},t_\ell]}(t),\qquad
+ r_{\ell,i}\le t_{\ell-1},
+ \tag{8.3}
+\]
+
+with bounded smooth $\Psi_\ell$.
+
+\subsection*{Theorem 8.1 (fixed-cutoff variational CORE)}
+
+For every $q>0$,
+
+\[
+\boxed{
+ -{1\over q}\log\mathbb E e^{-qG_J(X_J)}
+ =\inf_{v\in\mathcal A}\mathbb E\left[
+ G_J(X_J+T_Jv)+{1\over2q}\int_0^T|v_t|^2dt\right]}
+ \tag{8.4}
+\]
+
+and the infimum is unchanged when $\mathcal A$ is replaced by
+$\mathcal A_b$ or $\mathcal A_{cs}$.
+
+\emph{Proof.}
+Put $F=-qG_J(X_J)$.  If $m_J=\inf G_J$, then
+$F\le-qm_J$ and $e^F$ is integrable.  The polynomial envelope and Gaussian
+moments give $\mathbb EF^-<\infty$.  Hariya--Watanabe, Theorem 1.1 and
+Corollary 2.1, therefore give the Boue--Dupuis identity and permit restriction
+to bounded drifts.  This uses only the fixed-$J$ lower bound and local
+polynomial envelope; no Nelson estimate is assumed.
+
+For $v\in\mathcal A_b$, bounded simple progressive approximants $v_n$ can be
+chosen with the same deterministic bound and
+$v_n\to v$ in $L^2(\Omega\times[0,T])$.  Hence
+
+\[
+ \|T_J(v_n-v)\|_{L^2(\Omega;H_J)}
+ \le\|K_J\|_{L^2_t}\|v_n-v\|_{L^2_{\Omega,t}},
+ \tag{8.5}
+\]
+
+and the quadratic costs converge.  Also
+$\|T_Jv_n\|\le M\int_0^T\|K_J(t)\|_{\rm op}dt$.  Continuity, convergence in
+probability, and the common Gaussian-polynomial dominator from (8.2) imply
+$G_J(X_J+T_Jv_n)\to G_J(X_J+T_Jv)$ in $L^1$.
+
+Finally approximate each bounded past-measurable simple coefficient in
+$L^2$ by bounded smooth functions of finitely many past Brownian evaluations.
+Repeating (8.5) proves equality with the cylindrical-simple infimum.
+Independent auxiliary randomisation cannot lower the value: condition on
+the complete independent seed, apply the canonical lower bound sectionwise,
+and integrate.  Correlated future information or auxiliary randomness in
+the payoff is not covered. \hfill$\square$
+
+At the A13 values
+
+\[
+ q={10\over9},\qquad {1\over2q}={9\over20},\qquad
+ q-{11\over10}={1\over90},\qquad
+ {1\over2(11/10)}-{9\over20}={1\over220}.
+ \tag{8.6}
+\]
+
+Thus a cutoff-, partition-, and revisit-uniform OVERLAP estimate
+$I_{J,10/9}(v)\ge-C$ for $v\in\mathcal A_{cs}$ would imply
+
+\[
+ \mathbb E e^{-(10/9)G_J}\le e^{(10/9)C}.
+ \tag{8.7}
+\]
+
+The theorem bypasses a direct all-control \emph{packetwise} extension.  It
+does not prove OVERLAP, termwise packet convergence, graph recovery for every
+finite-energy control, or the Nelson lower bound itself.
+
+\section{Proof-and-failure map}
+
+\begin{center}
+\begin{tabular}{p{0.31\linewidth}|p{0.20\linewidth}|p{0.37\linewidth}}
+\textbf{Branch}&\textbf{Verdict}&\textbf{Next consequence}\\ \hline
+Complete Cartan atomisation&Exact&(2.4)--(2.5) retain all channels\\
+Order-two principal&Far-supported&(4.2), safe $C_0=5$\\
+Cartan remainder spatial decay&Proved&(5.10), every $1/2<s<7/10$\\
+Translated model-norm extraction&Failed method&(6.3)--(6.4), growth $p^{-1}$\\
+Cartan one-use ledger&Open&Prove expectation-inside (6.5)\\
+Rational endpoint kernel&Regularised&(7.3), fixed $\eta>0$\\
+Rational trace debt&Open&Control (7.4) with complete Wick forest\\
+Fixed-cutoff variational CORE&Proved&Invoke after uniform OVERLAP\\
+REG and OVERLAP&Open&Reassemble after both analytic packets close
+\end{tabular}
+\end{center}
+
+The revised dependency line is
+
+\[
+ \text{Cartan (4.11) + rational packet}
+ \Longrightarrow\text{REG}\Longrightarrow\text{OVERLAP}
+ \Longrightarrow\text{invoke Theorem 8.1}\Longrightarrow\text{Nelson}.
+ \tag{9.2}
+\]
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The sharp physical cutoff makes Lemma 3.1 automatic with
+$C_0=4$.''}  \textbf{VALID WITH MITIGATION.}  Sharp partial-sum kernels are
+not uniformly $L^1$.  The proof instead declares a smooth analytic LP
+partition and uses the conservative, verified value $C_0=5$.
+
+\item \textbf{``The three Cartan channels cancel algebraically.''}
+\textbf{DISMISSED.}  The curvature and two-mode fixture (4.3)--(4.4) are
+nonzero.  The accepted mechanism is far-support annihilation plus remainder
+decay.
+
+\item \textbf{``Equation (5.10) proves controlled Cartan CFAR.''}
+\textbf{UPHELD as false.}  R-085 also requires the one-use sum (6.5).  That
+ledger is explicitly open.
+
+\item \textbf{``The rare-event fixture disproves the production atom.''}
+\textbf{DISMISSED.}  It tests only the stronger pathwise extraction (6.2).
+The expectation-inside Fourier/Wick estimate may still hold.
+
+\item \textbf{``Adding $\eta|c|^2$ closes rational NEAR.''}
+\textbf{UPHELD as false.}  The trace debt is $O(\eta^{-1})$, $M_\eta$ is
+indefinite, and the leading $L:Q$ packet remains.
+
+\item \textbf{``Density plus lower semicontinuity transfers every packet
+lower bound to all controls.''}  \textbf{UPHELD as false.}  Lower
+semicontinuity gives the wrong inequality direction for that claim.  Theorem
+8.1 instead identifies the scalar variational infimum using the bounded-drift
+version of Boue--Dupuis and $L^1$ payoff convergence.
+
+\item \textbf{``CORE proves Nelson now.''}  \textbf{UPHELD as false.}
+The complete uniform OVERLAP lower bound remains missing.
+\end{enumerate}
+
+\section{Authorities and executable verification}
+
+External analytic authorities:
+
+\begin{itemize}
+\item I. Bailleul and F. Bernicot, ``High order paracontrolled calculus,''
+Forum Math. Sigma 7 (2019), e44, arXiv:1609.06966,
+doi:10.1017/fms.2019.44.
+\item Y. Hariya and S. Watanabe, ``The Boue--Dupuis formula and the
+exponential hypercontractivity in the Gaussian space,'' Electron. Commun.
+Probab. 27 (2022), Paper 13, arXiv:2110.14852,
+doi:10.1214/22-ECP461.
+\item M. Boue and P. Dupuis, ``A variational representation for certain
+functionals of Brownian motion,'' Ann. Probab. 26 (1998), 1641--1659,
+doi:10.1214/aop/1022855876.
+\end{itemize}
+
+The primary executable checks the support radii, every exact exponent margin,
+Cartan curvature, rare-event scaling, symbolic rational completion, trace
+debt bounds, small-amplitude order, and A13 variational coefficients.  The
+non-importing audit uses handwritten rational matrix algebra, a noncommuting
+three-dimensional fixture, mutation tests, seeded PSD stress tests, a
+finite-difference/FFT two-mode Cartan check, rare events, and a solvable
+linear Gaussian variational fixture.
+
+Run from the repository root:
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_cartan_spatial_decay_rational_trace_
+  variational_core_reduction_verify.py
+\end{verbatim}
+
+The integrated verifier pins authorities and evidence hashes, reruns both
+children, inspects the proof PDF and tracked status surfaces, and fails closed
+on every open downstream flag.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-
+           VARIATIONAL-CORE-REDUCTION
+Precise statement:       The complete mixed Cartan atom has exact far
+                         principal support and remainder decay for every
+                         1/3<alpha<1/2 and 1/2<s<3alpha-1/2; at alpha=2/5,
+                         s=7/12 has margins
+                         7/30 and 13/30. This proves the spatial half (4.10)
+                         with an explicit q_k^mod, not the one-use ledger
+                         (4.11). The rational packet has an exact eta-Schur/
+                         Wick completion with a retained trace debt. At each
+                         fixed cutoff, the Boue--Dupuis infimum equals its
+                         bounded smooth cylindrical-simple restriction.
+Scope:                   Finite cutoff; fixed positive floor; declared smooth
+                         analytic LP partition; canonical Brownian filtration;
+                         continuous bounded-below payoff with the local
+                         polynomial envelope of Theorem 8.1.
+Dependencies:            R-075; R-081; R-084--R-086; cited external theorems.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/a13_classii_cartan_spatial_
+                         decay_rational_trace_variational_core_reduction_
+                         verify.py
+Expected output:          Primary, non-importing independent, integrated, and
+                         aggregate manifest-pinned PASS; exit zero.
+Negative result:         NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-
+                         EXTRACTION (method no-go only).
+Falsification gate:      Failure of a paralinearisation remainder, support
+                         radius, HS power, exponent, rational identity, CORE
+                         hypothesis, evidence hash, PDF, or assertion contract.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No Cartan one-use q-ledger, complete production atom,
+                         controlled Cartan CFAR, coefficient-dominant rational
+                         bound, rational or signed NEAR, REG, OVERLAP, Nelson,
+                         measure theorem, removal limit, or Sector-A closure.
+Next required action:    Prove the expectation-inside Cartan one-use lemma and
+                         the rational coefficient-dominant trace/model packet;
+                         then reassemble REG and prove uniform OVERLAP.
+\end{verbatim}
+\endgroup

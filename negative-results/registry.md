@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION](#ng-2026-07-25-a13-pathwise-translated-model-norm-extraction) | A13 Cartan one-use closure by extracting the translated `C^alpha` model norm before expectation | a predictable rare-event single-mode family keeps the Cameron--Martin energy, terminal sextic moment, and mixed energy-sextic budget of order one while the extracted `q_k` ledger grows like `p^(-1)`; the remaining theorem must keep expectation inside the exact Cartan remainder atoms |
 | [NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR](#ng-2026-07-25-a13-rational-translated-wick-separation-and-heat-schur) | A13 rational shifted-Hessian closure by Taylor-Gram positivity, endpoint-square-only Schur, or uniform heat-Gram inversion | the quadratic Taylor Gram is exactly negative on a production scalar ray, a two-coordinate endpoint kernel leaves a nonzero affine cross remainder, and heat lifts that kernel only by `O(sigma^2)`; the coefficient-dominant packet must retain its square, Wick trace, heat packet, and control energy |
 | [NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR](#ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur) | A13 rational Pauli--Fierz endpoint shortcut by deleting the shifted-Hessian pair, asserting positivity, or comparing the defect with a fixed multiple of the rational square | the production rational Gram has nonzero third derivative, while an exact rational-only path makes the first variation divided by the baseline square tend to negative infinity; the coupled shifted-Hessian pair and retained positive square must remain together |
 | [AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT](#audit-2026-07-25-a13-r084-manifest-count-contract) | R-084 pre-release integrated/aggregate assertion-count enforcement | verifier v1.0.0 checked only the 50 primary and 40 independent counts, so placeholder integrated/aggregate values could pass; v1.0.1 now enforces 131 integrated, 221 aggregate, and its own final row count |
@@ -88,6 +89,37 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-pathwise-translated-model-norm-extraction"></a>
+### NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION -- translated model-norm extraction cannot prove the Cartan one-use ledger
+
+**Failure mode:** Start from the R-087 spatial atom estimate, use the
+Cameron--Martin smoothing bounds for `a_k`, and pull the random translated
+`C^alpha` norm outside the exact expectation in order to deduce R-085
+(4.11) from the scalar energy and sextic budgets alone.
+
+**Evidence:** R-087 proves (4.10) with
+
+`q_k^mod=C_e 2^(-(6alpha-1)k) sup_(j>=k) sum_A E int Z_(j,r)^6
+ (||a_k||_2^2+||D a_k||_2^2) dr`.
+
+The derivative smoothing term would require control of
+
+`sum_k 2^(-(beta+1)k) sup_(j>=k) E[Z_j^6 ||h_k||_2^2]`,
+
+where `beta=6alpha-1`. Let `E` have probability `p=N^(-6)` and take one
+predictable mode `h=N^3 1_E e_N`, so `a=K_N h=N 1_E e_N`. Then the
+Cameron--Martin energy `X`, terminal sextic quantity `Y`, and
+`E sqrt(XY)` are all of order one. On `E`, however,
+`Z` is of order `N^(1+alpha)`. Since `beta+1=6alpha`, the extracted ledger
+is of order `N^6=p^(-1)`.
+
+**Consequence:** A generic pathwise translated-model multiplier cannot be
+extracted before expectation in the Cartan proof. The remaining one-use
+lemma must average the three exact tangent-paracomposition remainders first
+and exploit their adapted Fourier/Wick structure. This is a method no-go,
+not a counterexample to R-087 (4.10), the directly averaged complete Cartan
+atom, controlled Cartan CFAR, or the Nelson objective.
 
 <a id="ng-2026-07-25-a13-rational-translated-wick-separation-and-heat-schur"></a>
 ### NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR -- the translated-Wick rational packet cannot be separated by positivity or uniform heat inversion

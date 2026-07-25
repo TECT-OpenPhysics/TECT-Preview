@@ -1844,3 +1844,22 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   pinned contracts; the eight-page PDF passed direct all-page visual QA. The
   coefficient-dominant rational packet, production mixed Cartan atom, REG,
   OVERLAP, CORE, one-use, Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-087,
+  A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION.
+  A smooth compactly supported analytic Littlewood--Paley convention makes
+  every order-one/order-two Cartan principal vanish for m>=j+5, and the
+  complete mixed remainder satisfies the R-085 spatial atom inequality for
+  1/3<alpha<1/2 and every 1/2<s<3alpha-1/2. At alpha=2/5, s=7/12 has squared
+  root and far-gap margins 7/30 and 13/30. This proves (4.10) for an explicit
+  translated-model
+  q_k, but not its one-use summability (4.11); a rare-event fixture shows why
+  extracting the pathwise translated model norm cannot supply that ledger.
+  The rational eta-completion is exact and removes the endpoint kernel while
+  exposing an eta^(-1) covariance trace debt and an indefinite leading model
+  packet. At each fixed cutoff, the Boue--Dupuis scalar infimum agrees over
+  finite-energy progressive, bounded progressive, and bounded smooth
+  cylindrical-simple controls. Thus uniform OVERLAP on the last class would
+  imply Nelson without a direct packetwise all-control extension. Primary
+  49/49, non-importing independent 53/53, integrated 132/132, and aggregate
+  234/234 audits pass. The Cartan one-use ledger, coefficient-dominant rational
+  packet, REG, OVERLAP, Nelson, and Sector A remain open; tier stays T4.

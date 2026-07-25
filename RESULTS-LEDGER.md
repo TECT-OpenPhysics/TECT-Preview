@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-087](#r-087) | Cartan spatial decay, rational trace, and fixed-cutoff variational-core reduction | Scoped T4 analytic/exact/executed reduction: a reproduced order-two paralinearisation with an explicit smooth LP convention kills every Cartan principal contribution for `m>=j+5` and proves the spatial atom bound for `1/3<alpha<1/2` and `1/2<s<3alpha-1/2`; at `alpha=2/5`, `s=7/12` has root/gap margins `7/30` and `13/30`. The explicit `q_k^mod` is not yet one-use summable, and a rare-event fixture refutes pathwise translated-model-norm extraction without refuting the directly averaged atom. An exact rational eta-Schur/Wick completion removes the endpoint kernel but retains an indefinite model packet and an `eta^(-1)` trace debt. At each fixed cutoff, under the declared continuous bounded-below/local-polynomial-envelope and canonical-filtration hypotheses, the Boue--Dupuis infimum equals its bounded smooth cylindrical-simple restriction, so a uniform OVERLAP bound on that class would imply Nelson without a separate packetwise all-control theorem. Cartan (4.11), the rational packet, REG, OVERLAP, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-086](#r-086) | Rational translated-Wick normal form and payload-comparable reduction | Scoped T4 analytic/exact/executed reduction: the R-085 shifted-Hessian pair plus endpoint square is one exact translated-Wick third-remainder normal form. A sharp cubic Sobolev estimate closes the base-frozen `Q` model with total `13/15`, slack `2/15`, and moment `15/2`; all coefficient-nonresonant and payload-comparable shifted branches close with `Q/G` totals `7/10` and `23/30`. The sole rational remainder is a coefficient-dominant high--high-to-low packet coupled to the endpoint square, Wick trace, and lower-chaos forest. Exact scalar, kernel, and small-heat fixtures refute Taylor-Gram positivity, endpoint-square-only Schur absorption, and uniform inverse-heat-Gram closure without refuting the spatial form bound. Complete rational NEAR, the Cartan production atom, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-085](#r-085) | Nonorthogonal Cartan Schur and rational shifted-Hessian boundary | Scoped T4 analytic/exact/executed reduction: a weighted causal Schur theorem controls the nonorthogonal triangular root/input sum whenever the complete production atom has decay exponent `s>1/2`; at `s=7/12`, `eta=1/12` its exact constant is `572.4472106721531...` and its gap factor is `2^(-7C/6)`. The required production atom estimate is not proved. The nonlinear rational Pauli--Fierz endpoint splits exactly into five unshifted form-payable families, one signed shifted-Hessian pair, and one retained positive translated square. The five totals are `7/20,7/10,13/30,3/5,23/30`, with worst moment `30/7`. A production third-derivative diagnostic and a rational-only fixture refute deletion, positivity, and fixed-multiple square Schur shortcuts, but not a coupled form bound. The production atom, coupled shifted-Hessian bound, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-084](#r-084) | Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption | Scoped T4 analytic/exact/executed reduction: the R-083 controlled Cartan remainder diagonalises exactly over complete probability-root martingale differences with coefficient `3/(80P)`, and every root has an exact conditional Ornstein--Uhlenbeck gradient representation retaining coefficient, derivative-injection, and value-innovation channels. A cumulative-tree witness proves that root orthogonality or an unweighted Gaussian Poincare estimate alone cannot spend the control once. For regular mutually orthogonal strict-past one-shot controls, the complete three-row linear Pauli--Fierz NEAR endpoint is nevertheless arbitrarily form-absorbed by terminal sextic and Cameron--Martin budgets; all five degree families have positive Young slack and worst required moment `30/7`. The nonlinear rational row, summed production far-projected Cartan OU-gradient estimate, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
@@ -105,6 +106,67 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-087"></a>
+### R-087 -- Cartan spatial decay, rational trace, and fixed-cutoff variational-core reduction
+
+**Result ID.**
+`A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION`.
+
+**Statement.** For the complete R-085 mixed Cartan atom, use a compactly
+supported smooth analytic Littlewood--Paley partition compatible with the
+sharp physical cubes. Its order-one and order-two principal tensors have
+support radii at most `10/3` and `20/3` in units of `2^j`; after the remaining
+band-limited factors are inserted, every principal term lies in `Q_(j+4)`.
+Thus `Pi_m M_principal=0` for `m>=j+5`. The exact remainder satisfies the
+R-085 spatial atom inequality for every
+
+`1/3<alpha<1/2` and `1/2<s<3alpha-1/2`.
+
+At `alpha=2/5`, the maximum is `7/10`; the chosen `s=7/12` has squared root
+margin `7/30` and far-gap margin `13/30`. This proves (4.10) with
+
+`q_k^mod=C_e 2^(-(6alpha-1)k) sup_(j>=k) sum_A E int Z_(j,r)^6
+ (||a_k||_2^2+||D a_k||_2^2) dr`.
+
+It does not prove the one-use sum (4.11). A predictable rare-event fixture
+keeps `E X`, `E Y`, and `E sqrt(XY)` of order one while the pathwise-extracted
+translated-model ledger grows like `p^(-1)`. This is a method no-go only.
+
+For the R-086 rational packet, set `A_eta=B_1+2eta I` and
+`M_eta=L-L A_eta^(-1)L`. Then exactly
+
+`P+eta|c|^2=(1/2)|A_eta^(1/2)(c+A_eta^(-1)LG)|^2
+ +(1/2)M_eta:Q-(1/2)Tr(L A_eta^(-1)L Gamma)`.
+
+The trace debt is nonnegative and at most
+`Tr(L^2 Gamma)/(4eta)`, but `M_eta` is generally indefinite and equals
+`L+O_eta(a^6)` when `L=O(a^3)`. Hence the coefficient-dominant packet remains.
+
+Finally, at every fixed cutoff and under the stated continuous bounded-below
+payoff, local polynomial envelope, and canonical-filtration hypotheses, the Boue--Dupuis scalar
+variational infimum is identical over all finite-energy progressive,
+bounded progressive, and bounded smooth cylindrical-simple progressive
+controls. At `q=10/9` the energy coefficient is `9/20`; therefore a uniform
+OVERLAP lower bound on the cylindrical-simple class would imply Nelson.
+
+**Where proved.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-cartan-spatial-decay-rational-trace-variational-core-reduction-260725-v1.0.tex.txt`,
+manifest
+`classii_cartan_spatial_decay_rational_trace_variational_core_reduction_manifest.json`,
+and its primary, non-importing independent, and integrated executable audits.
+
+**Reuse.** The explicit smooth-LP support/HS theorem is a reusable spatial
+half-derivative crossing for mixed tangent paracompositions. The rational
+identity is a kernel-free exact normal form with a visible trace price. The
+fixed-cutoff variational CORE theorem reduces Nelson applications to uniform
+lower bounds on bounded cylindrical-simple controls.
+
+**Honesty boundary.** R-087 does not prove the Cartan one-use `q_k` ledger,
+complete production Cartan atom, controlled Cartan CFAR, coefficient-dominant
+rational packet, complete rational or signed NEAR, REG, OVERLAP, Nelson, a
+measure theorem, or Sector-A closure. Tier remains T4.
 
 <a id="r-086"></a>
 ### R-086 -- Rational translated-Wick normal form and payload-comparable reduction

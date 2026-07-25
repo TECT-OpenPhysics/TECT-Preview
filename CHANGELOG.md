@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-087 Cartan spatial decay, rational trace, and variational CORE reduction] - 2026-07-25
+
+Registered R-087 at scoped T4. It proves smooth-LP spatial decay for the complete mixed Cartan remainder beyond the nonorthogonal Schur threshold, records why pathwise translated-model extraction does not yield the one-use ledger, derives the exact rational eta-completion and trace debt, and proves the fixed-cutoff bounded cylindrical variational core. Cartan (4.11), the coefficient-dominant rational packet, REG, OVERLAP, Nelson, and Sector A remain open.
+
 ## [R-086 rational translated-Wick payload-comparable reduction] - 2026-07-25
 
 Established the exact translated-Wick normal form for the R-085 signed shifted-Hessian pair plus endpoint square. Proved the sharp cubic Sobolev payment with total 13/15, slack 2/15, and moment 15/2, and closed the coefficient-nonresonant and payload-comparable rational branches with Q/G totals 7/10 and 23/30 on the regular mutually orthogonal strict-past one-shot class. Exact Taylor-Gram, endpoint-kernel, and heat-lift diagnostics rule out positivity, endpoint-square-only Schur separation, and uniform inverse-heat-Gram shortcuts. The sole rational remainder is the coefficient-dominant high--high-to-low packet with square, Wick trace, backward heat, and lower-chaos forest retained. Primary 39/39, independent 38/38, integrated 127/127, aggregate 204/204 are the pinned targets. Tier stays T4; Cartan, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open.

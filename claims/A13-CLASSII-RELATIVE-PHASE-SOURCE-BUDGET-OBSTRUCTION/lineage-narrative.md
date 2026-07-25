@@ -350,6 +350,25 @@ endpoint theorem.
     refuting the spatial form bound. The Cartan atom remains independent and
     open; the subsequent order is rational packet, Cartan atom, REG, OVERLAP,
     CORE, one-use, then Nelson.
+28. **Cartan spatial decay, rational trace, and variational CORE reduction.**
+    R-087,
+    A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION,
+    fixes a smooth compactly supported analytic Littlewood--Paley convention
+    and proves the complete R-085 mixed Cartan remainder's spatial estimate
+    (4.10) for 1/3<alpha<1/2 and every 1/2<s<3alpha-1/2. At alpha=2/5,
+    s=7/12 has margins 7/30 and 13/30. The explicit q_k still contains an
+    averaged translated-model
+    factor, and a rare-event witness rules out extracting that factor
+    pathwise; the Cartan one-use estimate (4.11) remains open. An exact
+    rational eta-Schur completion removes the endpoint kernel but leaves an
+    indefinite transformed Wick packet and an eta^(-1) trace debt, so it is a
+    reduction rather than closure of (6.5). Finally, at fixed cutoff the
+    Boue--Dupuis infimum is unchanged when restricted to bounded smooth
+    cylindrical-simple progressive controls. The downstream burden is now
+    REG, a uniform revisit-stable OVERLAP estimate on that class, and
+    invocation of this variational CORE; a separate packetwise theorem for
+    every finite-energy control is not needed for Nelson. Sector A remains
+    open.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

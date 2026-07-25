@@ -111,6 +111,18 @@ total `13/15`, and all nonresonant/payload-comparable shifted payments. The
 remaining rational object is only the coefficient-dominant high--high-to-low
 packet coupled to the endpoint square, Wick trace, and lower-chaos forest.
 
+R-087,
+A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION,
+proves the spatial Cartan atom estimate (4.10) beyond the Schur threshold; at
+alpha=2/5 the choice s=7/12 has margins 7/30 and 13/30. The Cartan one-use
+ledger (4.11) is still open, and pathwise translated-model extraction is a
+registered no-go. Its exact rational eta-completion leaves an indefinite
+model packet plus trace debt. Its fixed-cutoff variational CORE identifies
+bounded smooth cylindrical-simple progressive controls as a sufficient
+Boue--Dupuis core. The remaining order is Cartan one-use, the rational packet,
+REG, uniform OVERLAP on that core, invocation of R-087 CORE, controlled-shell
+one-use, and q=10/9 Nelson. Sector A remains open.
+
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's
 logical subproof grouping without moving stable evidence paths. New work in

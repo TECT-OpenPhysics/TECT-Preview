@@ -129,6 +129,17 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   base-frozen, nonresonant, and payload-comparable branches. The only rational
   term still needing proof is the coefficient-dominant high--high-to-low
   packet with endpoint square, Wick trace, and lower-chaos forest retained.
+  R-087,
+  A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION,
+  proves the spatial Cartan atom estimate (4.10) for 1/3<alpha<1/2 and every
+  1/2<s<3alpha-1/2; the production choice alpha=2/5, s=7/12 has margins 7/30
+  and 13/30. Its Cartan one-use ledger (4.11) remains open. The exact rational
+  eta-completion exposes rather than pays the trace debt and leaves the
+  coefficient-dominant packet. At fixed cutoff, its variational CORE reduces
+  the all-control Boue--Dupuis infimum to bounded smooth cylindrical-simple
+  controls. The remaining order is Cartan (4.11), the rational packet, REG,
+  uniform OVERLAP on that core, invocation of R-087 CORE, controlled-shell
+  one-use, and q=10/9 Nelson.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

@@ -521,11 +521,20 @@ preserved in git/changelog rather than treated as current gates.
      payload-comparable shifted branch. Prove only its coefficient-dominant
      high--high-to-low remainder with the endpoint square, Wick trace, and
      lower-chaos forest retained, then reassemble REG with the full paid
-     packet. Then apply
+     packet. R-087 now proves the spatial half (4.10) of the complete mixed
+     Cartan atom for 1/3<alpha<1/2 and every 1/2<s<3alpha-1/2; at alpha=2/5,
+     s=7/12 has margins 7/30 and 13/30. Prove its directly averaged
+     Cartan one-use ledger (4.11)
+     without extracting a pathwise translated model norm. R-087 also gives an
+     exact rational eta-completion, but its trace debt and coefficient-
+     dominant packet remain open. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
-   an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
-   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling
-   controlled-shell one-use through R-066 and returning to `q=10/9` Nelson.
+   a uniform OVERLAP lower bound for the bounded cylindrical-simple complete
+   packet.
+   Invoke the R-087 fixed-cutoff variational CORE/BD theorem directly; a
+   separate packetwise extension to every finite-energy progressive control
+   is not required for Nelson. Then assemble controlled-shell one-use through
+   R-066 and return to q=10/9 Nelson. Sector A remains open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

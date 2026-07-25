@@ -495,12 +495,19 @@ to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
  form-absorbs its base-frozen, nonresonant, and payload-comparable branches.
  The rational remainder is only the coefficient-dominant high--high-to-low
  packet coupled to the endpoint square, Wick trace, and lower-chaos forest.
- Neither the production Cartan atom nor that final rational packet is proved.
- R-080--R-086 correct the synthesis
+ R-087 proves the spatial Cartan atom inequality (4.10) for
+ 1/3<alpha<1/2 and every 1/2<s<3alpha-1/2, with s=7/12 and margins 7/30
+ and 13/30 at alpha=2/5.
+ Its directly averaged Cartan one-use ledger (4.11) remains open; pathwise
+ translated-model extraction is a registered method no-go. R-087 also gives
+ an exact rational eta-completion, but its trace debt and coefficient-dominant
+ packet remain open. Neither complete controlled Cartan CFAR nor the final
+ rational packet is proved. R-080--R-087 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
-progressive/revisit control. The separate successor
-`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
-one-use. The umbrella theorem remains open.
+progressive/revisit control. R-087 instead proves equality of the fixed-cutoff
+Boue--Dupuis infimum on bounded smooth cylindrical-simple controls. The
+remaining successor is uniform OVERLAP on that core, followed by invocation
+of the R-087 variational CORE. The umbrella one-use theorem remains open.
 
 ### **A13-CLASSII-CAMERON-MARTIN-TRANSLATED-CURRENT-MODEL-LIFT**
 
@@ -1113,20 +1120,33 @@ Gram has a kernel-leakage fixture, and heat lifts that kernel only by
 inverse-heat-Gram routes are closed. These are method no-gos, not
 counterexamples to the remaining spatial form bound.
 
+R-087,
+A13-CLASSII-CARTAN-SPATIAL-DECAY-RATIONAL-TRACE-VARIATIONAL-CORE-REDUCTION,
+uses an explicit smooth compactly supported analytic Littlewood--Paley
+convention to kill all Cartan principals for m>=j+5 and proves the complete
+remainder's spatial atom inequality (4.10) for 1/3<alpha<1/2 and every
+1/2<s<3alpha-1/2. At alpha=2/5, s=7/12 has squared root and far-gap margins
+7/30 and 13/30. The explicit q_k is not one-use summable from the accepted
+budgets: a rare-event fixture refutes extracting the pathwise translated
+model norm, without refuting a directly averaged Cartan theorem. Thus Cartan
+one-use (4.11) remains the FAR load-bearing estimate. The exact rational
+eta-completion removes the endpoint kernel but leaves an indefinite
+coefficient-dominant Wick packet and an eta^(-1) trace debt. Hence rational
+NEAR remains open as well.
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
-**Statement:** Starting from a cutoff-uniform lower bound for the complete
-canonical packet on the regular mutually orthogonal one-shot shell class,
-extend the bound to every finite-energy progressive covariance-flow control
-required by the Boue--Dupuis variational formula. The theorem must cover
-within-shell temporal adaptation, repeated use of one spatial range, temporal
-refinement, auxiliary randomness, localization, graph truncation, and lower
-semicontinuity, with no new interaction counterterm or infinity-minus-infinity
-defect. An equivalent all-tilted-law entropy inequality is an admissible
-alternative.
+**Statement:** Prove a cutoff-, partition-, and revisit-uniform lower bound
+for the complete canonical packet on bounded smooth cylindrical-simple
+progressive controls, including within-shell temporal adaptation and repeated
+use of one spatial range. Then invoke the R-087 fixed-cutoff variational CORE
+to identify the same Boue--Dupuis infimum as on all finite-energy progressive
+controls. A stronger direct packetwise all-control or all-tilted-law theorem
+is admissible but is not required for the Nelson application.
 
-**Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
-sharpened by R-081--R-086
+**Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
+OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
+sharpened by R-081--R-087
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1148,11 +1168,15 @@ R-079 packet identity survive even when physical covariance ranges overlap.
 However, at one scalar cutoff,
 `u_t=tanh(W_(1/2))1_(1/2,1]` has positive terminal-`L2` distance from every
 initially measurable one-shot displacement, including those using independent
-auxiliary randomness. The correct successor is therefore a time-mesh- and
-revisit-uniform overlap-stable lower bound for the recombined bounded-simple
-complete packet, followed by fixed-cutoff admissible-core truncation, terminal
-graph continuity, auxiliary conditioning, and lower semicontinuity. Separate
-low/current pieces may not be passed to the temporal limit.
+auxiliary randomness. The correct successor is therefore a time-mesh-,
+cutoff-, and revisit-uniform OVERLAP lower bound for the recombined bounded
+cylindrical-simple complete packet. R-087 proves that this class has the same
+fixed-cutoff variational infimum as all finite-energy progressive controls and
+that independent payoff-free auxiliary randomization cannot lower it. Hence
+no direct packetwise graph-continuity/lower-semicontinuity extension is
+required for Nelson. That stronger theorem, correlated future information,
+and OVERLAP itself remain unproved. Separate low/current pieces may not be
+passed to the temporal limit.
 
 ### **A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE**
 
