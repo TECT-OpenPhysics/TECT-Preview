@@ -282,9 +282,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   unweighted Poincare alone is not one-use; production spatial paracomposition
   remains essential. R-084 also form-absorbs the complete three-row linear
   Pauli--Fierz NEAR endpoint for regular orthogonal strict-past one-shot
-  controls, with worst moment `30/7`. The nonlinear rational row and complete
-  signed recombination remain open. Sector A remains open.
-  R-080--R-084 also expose the separate
+  controls, with worst moment `30/7`. R-085,
+  `A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`,
+  replaces the false output-orthogonality step by a nonorthogonal weighted
+  causal Schur theorem. It would spend the triangular Cartan root/input sum
+  once from a complete mixed production atom estimate with `s>1/2`; at
+  `s=7/12`, `eta=1/12` its constant is `572.4472106721531...` and its gap
+  factor is `2^(-7C/6)`. The atom estimates (4.10)--(4.11) remain unproved.
+  R-085 also expands the rational endpoint exactly, form-absorbs its five
+  unshifted families, and isolates the remaining coupled target (6.5): the
+  signed shifted-Hessian pair plus the retained positive translated square.
+  Third-derivative and rational-only fixtures rule out deletion, positivity,
+  and fixed-square Schur shortcuts without refuting that coupled form bound.
+  Sector A remains open.
+  R-080--R-085 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
@@ -456,7 +467,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
     child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-084. R-080 closes the two distinct low objects for regular
+     narrowed by R-080--R-085. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -487,15 +498,17 @@ preserved in git/changelog rather than treated as current gates.
      linear Pauli--Fierz heat/forest algebra, while an adapted rational-zero
      fixture has negative linear-row zero chaos. At R-083 the NEAR target was
      the recombined linear-plus-rational heat-lifted adapted/signed estimate,
-     retaining
      retaining every present/future block, square, trace, innovation,
      compensator, forest term, and paid subtraction. R-084 now gives the exact
-     root-diagonal Cartan and conditional OU-gradient formulation. Prove its
-     summed production far-projected OU-gradient bound; root orthogonality
-     alone is insufficient. Its arbitrary-budget theorem closes all three
+     root-diagonal Cartan and conditional OU-gradient formulation; root
+     orthogonality alone is insufficient. Its arbitrary-budget theorem closes all three
      linear Pauli--Fierz rows for the regular orthogonal one-shot class, so the
-     remaining NEAR target is the nonlinear rational row recombined with the
-     full signed paid packet. Then apply
+     remaining NEAR target was the nonlinear rational row. R-085 now replaces
+     the orthogonality route by a conditional nonorthogonal Schur theorem:
+     prove the complete mixed production atom estimates (4.10)--(4.11) with
+     `s>1/2`. It also form-absorbs all five unshifted rational families; prove
+     the coupled signed shifted-Hessian-plus-positive-square bound (6.5) and
+     reassemble REG with the full paid packet. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
    an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
    `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling

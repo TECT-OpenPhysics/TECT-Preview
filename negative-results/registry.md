@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR](#ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur) | A13 rational Pauli--Fierz endpoint shortcut by deleting the shifted-Hessian pair, asserting positivity, or comparing the defect with a fixed multiple of the rational square | the production rational Gram has nonzero third derivative, while an exact rational-only path makes the first variation divided by the baseline square tend to negative infinity; the coupled shifted-Hessian pair and retained positive square must remain together |
 | [AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT](#audit-2026-07-25-a13-r084-manifest-count-contract) | R-084 pre-release integrated/aggregate assertion-count enforcement | verifier v1.0.0 checked only the 50 primary and 40 independent counts, so placeholder integrated/aggregate values could pass; v1.0.1 now enforces 131 integrated, 221 aggregate, and its own final row count |
 | [NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE](#ng-2026-07-25-a13-root-orthogonality-one-use) | R-084/A13 one-use closure from complete probability-root orthogonality or unweighted Gaussian Poincare alone | an exact cumulative finite-tree model has unit input energy but output energy `N`, and its sharp cumulative-matrix norm grows like `N^2`; production spatial paracomposition or another weighted cancellation is indispensable |
 | [NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY](#ng-2026-07-25-a13-k-smoothing-output-orthogonality) | A13 derivation of global nonlinear output-increment orthogonality from the canonical `K_k` input smoothing | two successive production scalar-ray increments have a strictly positive exact-harmonic cross product, including after exact rescaling to the pinned density floor; this refutes only the raw-output pairwise-orthogonality premise, not far-only or correlated martingale estimates |
@@ -86,6 +87,48 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur"></a>
+### NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR -- the rational shifted-Hessian pair cannot be deleted or paid by a fixed square
+
+**Failure mode:** Close the nonlinear rational Pauli--Fierz NEAR row by
+retaining only the five unshifted degree families, asserting positivity after
+the three linear rows are recombined, or bounding the remaining first
+variation below by a cutoff-independent fixed multiple of the baseline
+rational square.
+
+**Evidence:** On the production real-doublet ray,
+`B_R(x)=4c1[x-alpha_R x^3/(x^2+e)]^2` satisfies
+
+`B_R'''(sqrt(e))=6 alpha_R^2 c1/sqrt(e)=14062.499999996484375...`
+
+at `e=10^(-12)`. Hence
+`K_t=D^2 Bbar(U+ta)-D^2 Bbar(U)` is genuinely nonzero, and the exact rational
+endpoint contains the signed shifted-Hessian packet
+
+`H_R=int_0^1(1-t){(1/2)K_t[a,a]:Q+G^T K_t[a,a]c}dt`.
+
+Independently, take `z_0=e_1+e_3`, `z_1=C e_1`, `y=e_3`, `c=0`, and
+`Sigma=0`. All three linear Pauli--Fierz rows vanish. With
+`q_22=3/(320P)` and `d_0=2+e`, the rational baseline and first variation obey
+
+`F_0=2q_22/d_0^2>0`,
+`D_R(C)/F_0=-[4C(e+1)-5e-2]/(e+2) -> -infinity`.
+
+At `C=2`, `D_R=-3F_0`. Primary symbolic differentiation and an independent
+high-precision matrix audit reproduce the nonzero shifted Hessian and the
+unbounded negative ratio.
+
+**Consequence:** The five unshifted families are form-absorbable, but their
+deletion leaves a real signed term. Positivity and any fixed-multiple
+rational-square Schur shortcut are invalid. The exact remaining target is the
+coupled form bound for
+
+`H_R+(1/2)c^T Bbar(U+a)c`.
+
+This is a method no-go, not a form-bound counterexample: along the fixed-Schur
+path the Cameron--Martin control cost grows quadratically in `C`. It does not
+falsify complete rational NEAR, controlled-shell one-use, or Nelson synthesis.
 
 <a id="audit-2026-07-25-a13-r084-manifest-count-contract"></a>
 ### AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT -- R-084 verifier now fails closed on all assertion counts

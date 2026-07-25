@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR | the rational shifted-Hessian pair cannot be deleted or paid  | Close the nonlinear rational Pauli--Fierz NEAR row by |
 | AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT | R-084 verifier now fails closed on all assertion counts | Treat verifier v1.0.0 as enforcing the manifest-pinned |
 | NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE | R-084 root orthogonality alone does not spend a cumulative c | Infer the controlled Cartan one-use estimate solely from |
 | NG-2026-07-25-A13-K-SMOOTHING-OUTPUT-ORTHOGONALITY | input smoothing does not manufacture global nonlinear output | Infer the pairwise orthogonality of nonlinear production |

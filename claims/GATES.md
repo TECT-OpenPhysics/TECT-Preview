@@ -487,7 +487,12 @@ to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
  or unweighted Poincare alone is not one-use. In the regular orthogonal strict-
  past one-shot class, R-084 does form-absorb all three linear Pauli--Fierz rows;
  the nonlinear rational row and complete signed recombination remain open.
- R-080--R-084 correct the synthesis
+ R-085 replaces the false output-orthogonality step by a nonorthogonal weighted
+ causal Schur theorem conditional on a complete mixed production atom estimate
+ with `s>1/2`. It also form-absorbs the five unshifted rational families and
+ isolates the signed shifted-Hessian pair plus its retained positive square.
+ Neither the production atom nor that coupled rational bound is proved.
+ R-080--R-085 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
 progressive/revisit control. The separate successor
 `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
@@ -1044,6 +1049,19 @@ sum: the exact cumulative-tree matrix has norm square
 production far-projected OU-gradient estimate with spatial paracomposition or
 an equivalent weighted signed cancellation.
 
+R-085,
+`A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`,
+proves the required triangular summation without any nonlinear-output
+orthogonality: an atom estimate
+`E||Pi_m u_(j,k)||_2^2<=2^(-2s(m-k))q_k` with `s>1/2` implies a one-use
+root/input sum with constant
+`[(1-2^-eta)(1-2^-2s)(1-2^(1+eta-2s))]^-1`.
+At `s=7/12`, `eta=1/12`, the constant is `572.4472106721531...` and the gap
+factor is `2^(-7C/6)`. This is conditional and does not supply the complete
+mixed production atom estimates (4.10)--(4.11). The accepted first-order gain
+`1/5` is below the sharp threshold; the candidate `3/5` gain remains an
+unproved order-two principal-cancellation problem.
+
 For NEAR, R-082 diagonalises the production current globally into four
 Pauli--Fierz rows, three linear and one rational with Lipschitz ceiling `19/9`.
 The fixed six-current preserves R-079 roots, but the state-dependent four-row
@@ -1066,6 +1084,15 @@ moment `30/7`. This is not positivity and does not cover the rational row.
 The complete NEAR gate is now the nonlinear rational endpoint recombined with
 the linear form bound, covariance defects, full forest, and paid subtraction.
 
+R-085 gives the exact rational endpoint and closes its five unshifted degree
+families on that regular class. The remaining nonlinear packet is precisely
+the signed shifted-Hessian term `H_R` coupled to the retained positive square
+`(1/2)c^T Bbar(U+a)c`, target (6.5). A nonzero production third derivative and
+a rational-only ratio tending to negative infinity refute deletion,
+positivity, and fixed-multiple square Schur shortcuts. They do not refute an
+arbitrary-budget coupled form bound. Complete signed NEAR and REG therefore
+remain open at (6.5).
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
 **Statement:** Starting from a cutoff-uniform lower bound for the complete
@@ -1079,7 +1106,7 @@ defect. An equivalent all-tilted-law entropy inequality is an admissible
 alternative.
 
 **Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
-sharpened by R-081--R-084
+sharpened by R-081--R-085
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

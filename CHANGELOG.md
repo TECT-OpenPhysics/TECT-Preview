@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-085 nonorthogonal Cartan Schur and rational shifted-Hessian boundary] - 2026-07-25
+
+Proved a nonorthogonal weighted causal Schur summation lemma, conditional on a complete production mixed-Cartan atom estimate with exponent s>1/2. At s=7/12 and eta=1/12 its exact constant is 572.4472106721531... and its gap factor is 2^(-7C/6). Derived the exact rational endpoint decomposition into five unshifted subcritical families, one signed shifted-Hessian pair, and one retained positive square. The five families are arbitrarily form-absorbed on the regular mutually orthogonal strict-past one-shot class. Registered the production third-derivative and rational-only fixed-square no-go. Primary 50/50, independent 36/36, and the final integrated and aggregate manifest-pinned contracts pass. Tier remains T4; the production Cartan atom, coupled rational bound, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open.
+
 ## [Audit R-084 manifest assertion-count enforcement] - 2026-07-25
 
 A pre-release read-only audit found that verifier v1.0.0 checked the primary and independent manifest counts but not the integrated or aggregate fields. Verifier v1.0.1 now enforces 50, 40, 131, and 221 and checks that its own final row count remains 131. No mathematical scope or tier changed.

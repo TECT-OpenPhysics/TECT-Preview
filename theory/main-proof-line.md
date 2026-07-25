@@ -115,9 +115,15 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   projected OU-gradient representation. A cumulative-tree witness excludes
   root orthogonality alone as a one-use proof. In parallel, all three linear
   Pauli--Fierz NEAR rows are form-absorbed for regular mutually orthogonal
-  strict-past one-shot controls. The production Cartan OU-gradient estimate,
-  nonlinear rational row, complete signed recombination, and progression are
-  still required before one-use and Nelson.
+  strict-past one-shot controls. R-085,
+  `A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`,
+  replaces the failed output-orthogonality route by a nonorthogonal weighted
+  Schur theorem conditional on complete mixed production atoms with `s>1/2`.
+  It also expands the rational endpoint exactly and form-absorbs its five
+  unshifted families. The remaining analytic order is now precise: prove the
+  mixed Cartan atom estimates (4.10)--(4.11), prove the coupled signed
+  shifted-Hessian-plus-positive-square bound (6.5), reassemble REG, then prove
+  OVERLAP, CORE, controlled-shell one-use, and `q=10/9` Nelson.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

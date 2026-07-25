@@ -465,6 +465,23 @@ the following structural results and proof-architecture boundaries hold.
     production far-projected Cartan OU-gradient estimate nor the nonlinear
     rational row. Complete CFAR, complete signed NEAR, progression, one-use,
     Nelson, and Sector A remain open.
+28. `A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`
+    is R-085. It recombines the three R-084 Cartan derivative channels into
+    one complete mixed translated variation and proves a nonorthogonal
+    weighted causal Schur theorem conditional on production atom decay with
+    `s>1/2`. At `s=7/12`, `eta=1/12`, the exact constant is
+    `572.4472106721531...` and the gap factor is `2^(-7C/6)`. This repairs the
+    triangular root summation without output orthogonality, but the production
+    atom estimates (4.10)--(4.11) remain unproved. The accepted first-order
+    gain is only `1/5`; the candidate order-two `3/5` gain remains conditional
+    on a new complete principal cancellation. R-085 also splits the rational
+    endpoint exactly into five unshifted families, one signed shifted-Hessian
+    pair, and one retained positive square. The five families are form-
+    absorbed on the regular orthogonal strict-past one-shot class, with totals
+    `7/20,7/10,13/30,3/5,23/30` and worst moment `30/7`. A nonzero production
+    third derivative and a rational-only fixed-Schur fixture refute deletion,
+    positivity, and fixed-multiple square shortcuts, but not the coupled form
+    bound (6.5). REG, progression, one-use, Nelson, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -500,6 +517,7 @@ is a scoped T4 subproof and does not promote A13.
 | Stopped-current FAR / complete-current NEAR coordinate | Exact changing-current stopped square with predictable drift, raw-value/heat centering correction, cutoff-uniform uncontrolled FAR, sharp orthogonal `s>1/2` Carleson route, global four-row Pauli--Fierz Gram coordinate, heat lift, covariance criterion, and signed edge flux | T4 analytic/exact reduction closed; controlled CFAR, complete signed NEAR, and overlap-stable progression open |
 | Controlled polynomial CFAR / linear Pauli--Fierz forest | Exact disappearance of all three controlled polynomial stopped-FAR rows, exact three-Cartan input telescope with factor `3/(80P)`, one-use input-coordinate ledger, production-floor output-orthogonality no-go, exact linear-row Gram/heat/secant/covariance/nine-block forest, and adapted linear-row positivity no-go | T4 analytic/exact reduction closed; correlated Cartan CFAR, recombined signed NEAR, and overlap-stable progression open |
 | Root-diagonal Cartan OU / linear Pauli--Fierz absorption | Exact root-first CFAR diagonalisation and conditional OU-gradient identity; cumulative-tree root-orthogonality one-use no-go; arbitrary-budget form absorption of all three linear Pauli--Fierz rows for regular orthogonal strict-past one-shot controls | T4 analytic/exact reduction closed; production far-projected OU-gradient estimate, nonlinear rational NEAR, and progression open |
+| Nonorthogonal Cartan Schur / rational shifted-Hessian boundary | Conditional nonorthogonal `s>1/2` Schur summation; exact seven-part rational endpoint; five-family form absorption; shifted-Hessian and fixed-Schur no-gos | T4 conditional/analytic reduction closed; production atom, coupled rational packet, REG, and progression open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -633,6 +651,15 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   The summed production far-projected OU-gradient bound, nonlinear rational
   row, complete signed NEAR, progressive/revisit extension, one-use, and
   Nelson remain unproved.
+- R-085 is finite-cutoff and fixed-floor for its exact mixed-variation and
+  rational endpoint identities. Its weighted causal Schur theorem is
+  genuinely nonorthogonal but conditional on the unproved complete production
+  atom estimates (4.10)--(4.11) with `s>1/2`. The five rational unshifted
+  families are form-absorbed only on the regular mutually orthogonal strict-
+  past one-shot class. The signed shifted-Hessian pair must remain coupled to
+  the positive translated square in (6.5). Its third-derivative and fixed-
+  Schur fixtures are method no-gos, not counterexamples to a coupled form
+  bound. REG, OVERLAP, CORE, one-use, and Nelson remain unproved.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -659,12 +686,13 @@ Current analytic child:
 
 Current subordinate order:
 
-1. prove the summed production far-projected Cartan OU-gradient estimate for
-   the exact R-084 three-channel derivative, using spatial paracomposition or
-   another weighted signed cancellation rather than root orthogonality alone;
-2. prove the nonlinear rational Pauli--Fierz endpoint and recombine it with
-   the now form-absorbed linear rows, both conditional covariance defects, the
-   upper-triangular Jensen branch, mixed baseline, and paid subtraction;
+1. prove the complete mixed Cartan production atom estimates (4.10)--(4.11)
+   with exponent `s>1/2`; R-085's nonorthogonal Schur theorem then performs
+   the triangular root/input summation without output orthogonality;
+2. prove the coupled signed rational bound (6.5) for the shifted-Hessian pair
+   plus its retained positive translated square, then reassemble REG with the
+   five paid rational families, the form-absorbed linear rows, covariance
+   defects, forest, and paid subtraction;
 3. prove an overlap-stable bounded-simple complete-packet lower bound
    uniformly in time mesh and revisit multiplicity, then pass through the
    fixed-cutoff Boue--Dupuis admissible core;
@@ -674,30 +702,30 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption_verify.py
+python codes/foundations/a13_classii_nonorthogonal_cartan_schur_rational_hessian_boundary_verify.py
 ```
 
 Expected output:
 
 - primary `50/50`;
-- non-importing independent `40/40`;
-- integrated `131/131` and aggregate `221/221`;
-- exact root-first Cartan CFAR diagonalisation, the conditional OU factor two
-  and three derivative channels, cumulative-tree one-use obstruction, exact
-  linear heat-lifted endpoint, five positive Young slacks, sharp linear floor,
+- non-importing independent `36/36`;
+- integrated `130/130` and aggregate `216/216`;
+- complete mixed Cartan variation, conditional nonorthogonal Schur theorem and
+  sharp half-derivative boundary, exact rational seven-part endpoint, five
+  positive-slack families, shifted-Hessian and fixed-Schur diagnostics,
   predecessor/source/PDF/surface contracts, and T4 scope firewalls;
 - exit code zero.
 
-The ten-page proof note passes the standard form check, zero-overfull gate,
+The nine-page proof note passes the standard form check, zero-overfull gate,
 extracted-text debris check, and direct rendered-page visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
 
-- `classii_root_diagonal_cartan_ou_linear_pf_absorption_manifest.json`
-- `notes/classii-root-diagonal-cartan-ou-linear-pauli-fierz-absorption-260725-v1.0.tex.txt`
-- `notes/classii-root-diagonal-cartan-ou-linear-pauli-fierz-absorption-260725-v1.0.pdf`
+- `classii_nonorthogonal_cartan_schur_rational_hessian_boundary_manifest.json`
+- `notes/classii-nonorthogonal-cartan-schur-rational-shifted-hessian-boundary-260725-v1.0.tex.txt`
+- `notes/classii-nonorthogonal-cartan-schur-rational-shifted-hessian-boundary-260725-v1.0.pdf`
 - `../../codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption.py`
 - `../../codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption_independent.py`
 - `../../codes/foundations/a13_classii_root_diagonal_cartan_ou_linear_pf_absorption_verify.py`
@@ -1390,6 +1418,18 @@ integrated or aggregate contract, or any promoted controlled-Cartan-CFAR,
 complete-signed-NEAR, progressive, one-use, Nelson, measure, or Sector-A
 honesty flag.
 
+The R-085 continuation is additionally falsified by failure of the complete
+three-channel mixed Cartan variation, the nonorthogonal weighted Schur theorem
+or its strict `s>1/2` boundary, the exact `s=7/12`, `eta=1/12` constant, the
+rational seven-part endpoint split, any five-family degree or Young slack, the
+indefinite shifted-Hessian fixture or hidden signed contraction, the production
+scalar third-derivative formula, the rational-only fixed-Schur ratio, any
+predecessor/source/note/PDF hash pin, the nine-page zero-form visual-QA
+contract, the primary `50/50`, independent `36/36`, integrated `130/130`, or
+aggregate `216/216` contract, or any promoted production atom, controlled
+Cartan CFAR, complete rational/signed NEAR, REG, progressive, one-use, Nelson,
+measure, or Sector-A honesty flag.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1520,7 +1560,7 @@ interacting measure, floor/regulator removal, infinite volume, phase
 transition, BCC selection, Sector-A closure, or T5--T7. A13 remains T4.
 
 The full-current/low-object/Cartan-tail/stopped-current/controlled-polynomial
-chain R-079--R-083
+chain R-079--R-085
 closes the exact
 complete packet algebra, both regular no-revisit low objects, far feedback
 square completion, the production polynomial--Cartan localization,
@@ -1530,9 +1570,12 @@ factorisation, exact stopped-current reordering, cutoff-uniform uncontrolled
   FAR, the global complete-current Pauli--Fierz Gram coordinate, all three
   controlled polynomial FAR rows, the exact three-Cartan input telescope with
   factor `3/(80P)`, and the complete linear-row heat/forest algebra.  These
-  reductions do not prove a correlated or signed bound for the remaining
-  Cartan telescope, the upper-triangular Jensen/covariance-defect estimate, a
-  recombined lower-chaos-complete adapted linear-plus-rational NEAR operator,
+  R-084 then supplies the root-diagonal OU formulation and form-absorbs the
+  three linear Pauli--Fierz rows. R-085 supplies a conditional nonorthogonal
+  Schur summation and pays all five unshifted rational families. These
+  reductions do not prove the required production mixed-Cartan atom estimate,
+  the coupled rational shifted-Hessian packet, a recombined lower-chaos-
+  complete adapted signed NEAR operator,
   a signed control--control balanced-root estimate, an
 overlap-stable progressive packet lower bound, or the variational extension.
 They therefore do not establish controlled-shell one-use, Nelson, an
@@ -1769,3 +1812,18 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   production Cartan OU-gradient estimate, nonlinear
   rational row, complete signed NEAR, progression, one-use, Nelson, and
   Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-085. The three Cartan OU derivative channels are
+  now one complete mixed translated variation, and a nonorthogonal weighted
+  causal Schur theorem closes the triangular root/input summation conditional
+  on production atom decay `s>1/2`. At `s=7/12`, `eta=1/12`, its exact
+  constant is `572.4472106721531...` and its gap factor is `2^(-7C/6)`. The
+  accepted first-order gain `1/5` misses the sharp threshold; the candidate
+  `3/5` gain remains conditional on a new complete order-two cancellation.
+  The rational endpoint is exactly five unshifted form-payable families, a
+  signed shifted-Hessian pair, and a retained positive square. Production
+  third-derivative and rational-only fixtures register the narrow deletion/
+  positivity/fixed-Schur no-go without refuting a coupled form bound. Primary
+  50/50, independent 36/36, integrated 130/130, and aggregate 216/216 are the
+  pinned contracts; the nine-page PDF passed direct all-page visual QA. The
+  production atom, coupled rational bound, REG, OVERLAP, CORE, one-use,
+  Nelson, and Sector A remain open; tier stays T4.

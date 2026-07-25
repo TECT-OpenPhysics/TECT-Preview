@@ -316,6 +316,25 @@ endpoint theorem.
     frontier is now the production far-projected Cartan OU-gradient estimate
     and the nonlinear rational Pauli--Fierz endpoint, followed by complete
     signed recombination, progression, one-use, and Nelson synthesis.
+26. **Nonorthogonal Cartan Schur and rational shifted-Hessian boundary.**
+    R-085,
+    `A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`,
+    turns the R-084 root-orthogonality failure into a conditional
+    nonorthogonal theorem. The three derivative channels first recombine as
+    one mixed translated variation; a weighted causal Schur argument then
+    spends the triangular root/input sum once from any complete production
+    atom estimate with `s>1/2`. At `s=7/12`, `eta=1/12`, its constant is
+    `572.4472106721531...` and its gap decay is `2^(-7C/6)`. The missing step
+    is now sharply named: prove the mixed production atom estimates
+    (4.10)--(4.11), since the accepted first-order gain is only `1/5` and the
+    formal `3/5` gain lacks a principal-cancellation theorem. On the NEAR
+    branch, R-084's linear-row absorption is extended by an exact rational
+    seven-part endpoint. Five unshifted rational families are paid, while the
+    signed shifted-Hessian pair remains coupled to its positive translated
+    square. A nonzero production third derivative and a rational-only fixture
+    retire deletion, positivity, and fixed-square Schur routes without
+    refuting the coupled form bound (6.5). The remaining order is REG,
+    OVERLAP, CORE, one-use, then Nelson.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

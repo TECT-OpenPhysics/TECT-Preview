@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-085](#r-085) | Nonorthogonal Cartan Schur and rational shifted-Hessian boundary | Scoped T4 analytic/exact/executed reduction: a weighted causal Schur theorem controls the nonorthogonal triangular root/input sum whenever the complete production atom has decay exponent `s>1/2`; at `s=7/12`, `eta=1/12` its exact constant is `572.4472106721531...` and its gap factor is `2^(-7C/6)`. The required production atom estimate is not proved. The nonlinear rational Pauli--Fierz endpoint splits exactly into five unshifted form-payable families, one signed shifted-Hessian pair, and one retained positive translated square. The five totals are `7/20,7/10,13/30,3/5,23/30`, with worst moment `30/7`. A production third-derivative diagnostic and a rational-only fixture refute deletion, positivity, and fixed-multiple square Schur shortcuts, but not a coupled form bound. The production atom, coupled shifted-Hessian bound, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-084](#r-084) | Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption | Scoped T4 analytic/exact/executed reduction: the R-083 controlled Cartan remainder diagonalises exactly over complete probability-root martingale differences with coefficient `3/(80P)`, and every root has an exact conditional Ornstein--Uhlenbeck gradient representation retaining coefficient, derivative-injection, and value-innovation channels. A cumulative-tree witness proves that root orthogonality or an unweighted Gaussian Poincare estimate alone cannot spend the control once. For regular mutually orthogonal strict-past one-shot controls, the complete three-row linear Pauli--Fierz NEAR endpoint is nevertheless arbitrarily form-absorbed by terminal sextic and Cameron--Martin budgets; all five degree families have positive Young slack and worst required moment `30/7`. The nonlinear rational row, summed production far-projected Cartan OU-gradient estimate, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-083](#r-083) | Controlled polynomial CFAR and linear Pauli--Fierz forest reduction | Scoped T4 analytic/exact/executed reduction: in the fixed root-preserving six-current coordinate, every controlled polynomial `J_A=Dm_A` row vanishes in the complete stopped FAR object for `C>=3`, including both endpoints and both predictable drifts. Controlled CFAR is thereby reduced exactly to three Cartan input-scale telescopes with coefficient `3/(80P)`. The canonical `K_k` smoothing pays the input coordinate once but does not create the global raw-output pairwise orthogonality assumed by the sufficient R-082 Carleson lemma; an exact production-floor-rescaled harmonic witness records that method no-go without excluding far-only or correlated martingale estimates. The three linear Pauli--Fierz rows have exact Gram, heat, secant, covariance-defect, and nine-block forest algebra, but an adapted heat-lifted fixture with zero rational row has negative linear-row zero chaos. Controlled Cartan CFAR, recombined complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; 58/58 primary, 43/43 independent, 103/103 integrated, 204/204 aggregate assertions |
 | [R-082](#r-082) | Stopped-current FAR and complete-current NEAR coordinate reduction | Scoped T4 analytic/exact/executed reduction: the entire FAR wedge is one deterministic stopped-current square retaining its moving endpoint and both predictable control drifts; raw value innovation centers only with its heat compensator. The uncontrolled production FAR contribution now closes cutoff-uniformly with decay `2^(-2 beta C)` for every `beta<3 alpha-1`, by a support-refined R-050 paracontrolled remainder. An orthogonal causal Carleson lemma has the sharp `s>1/2` threshold and would spend the Cameron--Martin input once if the missing balanced production decomposition were proved. The production current has a global four-coordinate Pauli--Fierz square and exact conditional-covariance positivity criterion; state-dependent compression is not rootwise, heat must average the Gram matrix, and future covariance defects remain signed. Controlled FAR, complete signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
@@ -103,6 +104,67 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-085"></a>
+### R-085 -- Nonorthogonal Cartan Schur and rational shifted-Hessian boundary
+
+**Result ID.**
+`A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`.
+
+**Statement.** The complete derivative of each R-084 translated-minus-
+unshifted Cartan current is one mixed variation containing coefficient
+curvature, predictable derivative injection, and fresh value innovation.
+If its production spatial atoms satisfy
+
+`E ||Pi_m u_(j,k)||_2^2 <= 2^(-2s(m-k)) q_k`, `s>1/2`,
+
+then weighted Cauchy--Schwarz and three geometric sums give the genuinely
+nonorthogonal causal estimate
+
+`sum_m sum_(j<=m-C) 2^j E||Pi_m sum_(k<=j)u_(j,k)||_2^2
+ <= C_(s,eta) 2^(-2sC) sum_k 2^k q_k`,
+
+where
+`C_(s,eta)=[(1-2^-eta)(1-2^-2s)(1-2^(1+eta-2s))]^-1`
+for `0<eta<2s-1`. At `s=7/12`, `eta=1/12`, the constant is
+`572.4472106721531...` and the decay is `2^(-7C/6)`. This repairs the false
+output-orthogonality route, but it is conditional: the complete mixed
+production atom estimates (4.10)--(4.11) are still unproved. The accepted
+first-order gain is only `3 alpha-1=1/5`; the candidate order-two gain
+`4 alpha-1=3/5` requires a new principal-cancellation theorem.
+
+For the nonlinear rational Pauli--Fierz row, the exact translated endpoint is
+the sum of five unshifted families, the signed shifted-Hessian pair
+
+`H_R=int_0^1(1-t){(1/2)K_t[a,a]:Q+G^T K_t[a,a]c}dt`,
+
+and the retained positive square `(1/2)c^T Bbar(U+a)c`. The five unshifted
+families have total degrees `7/20,7/10,13/30,3/5,23/30`, so the existing
+regular one-shot estimates form-absorb all five with worst moment `30/7`.
+They do not control `H_R`. On the production scalar ray,
+`B_R'''(sqrt(e))=14062.499999996484...`, proving that the shifted Hessian is
+genuine. In a rational-only fixture with `C=2`,
+`F_0=0.001171874999998535...` and
+`D_R=-0.003515624999995605...=-3F_0`; the ratio tends to negative infinity.
+Thus deletion, positivity, and a fixed-multiple rational-square Schur shortcut
+fail. This is not a counterexample to the required coupled form bound
+
+`H_R+(1/2)c^T Bbar(U+a)c >= -eta X-zeta Y-C_(eta,zeta)`.
+
+**Where proved.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-nonorthogonal-cartan-schur-rational-shifted-hessian-boundary-260725-v1.0.tex.txt`,
+manifest `classii_nonorthogonal_cartan_schur_rational_hessian_boundary_manifest.json`,
+and its primary, independent, and integrated executable audits.
+
+**Reuse.** The Schur lemma is a standalone nonorthogonal causal triangular
+summation tool. The rational endpoint is a reusable exact Taylor ledger and
+method boundary for state-dependent Gram energies.
+
+**Honesty boundary.** R-085 proves neither the production atom hypothesis nor
+the coupled rational shifted-Hessian bound. REG, complete signed NEAR,
+OVERLAP, CORE, controlled-shell one-use, `q=10/9` Nelson, a measure theorem,
+and Sector-A closure remain open.
 
 <a id="r-084"></a>
 ### R-084 -- Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption

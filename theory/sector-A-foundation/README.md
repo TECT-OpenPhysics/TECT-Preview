@@ -98,8 +98,13 @@ diagonalises the Cartan remainder over complete probability roots and gives
 its exact conditional far-projected OU-gradient representation. Root
 orthogonality alone is not one-use. For regular orthogonal strict-past one-
 shot controls it also form-absorbs all three linear Pauli--Fierz rows, leaving
-the production Cartan OU estimate, nonlinear rational row, complete signed
-recombination, and progression open.
+the production Cartan OU estimate and nonlinear rational row open. R-085,
+`A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY`, proves a
+nonorthogonal weighted causal Schur theorem conditional on complete production
+atom decay `s>1/2`, and pays all five unshifted rational endpoint families.
+It does not prove that atom estimate or the remaining coupled signed shifted-
+Hessian-plus-positive-square packet. The canonical order is (4.10)--(4.11),
+(6.5), REG, OVERLAP, CORE, controlled-shell one-use, then `q=10/9` Nelson.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

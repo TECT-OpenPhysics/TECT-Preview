@@ -1,0 +1,722 @@
+% Title: Nonorthogonal Cartan Schur and rational shifted-Hessian boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; NONORTHOGONAL SCHUR REPAIR AND FIVE RATIONAL FAMILIES CLOSED; PRODUCTION CARTAN ATOM, SHIFTED HESSIAN, PROGRESSION, ONE-USE, AND NELSON OPEN
+% Result: A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-HESSIAN-BOUNDARY
+% Ledger: R-085
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-084 left two analytic terms between the regular low-object theorem and a
+complete regular packet lower bound: the far-projected Cartan
+Ornstein--Uhlenbeck gradient sum and the nonlinear rational
+Pauli--Fierz row.  This note advances both without asserting either final
+bound.
+
+For Cartan CFAR, the output-orthogonality premise tested in R-082 and refuted
+in R-083 is removed.  A weighted Cauchy--Schwarz argument gives a genuinely
+nonorthogonal causal Schur lemma.  It spends every input weight once whenever
+the complete mixed Cartan atom has spatial off-diagonal decay with exponent
+$s>1/2$.  At the convenient production audit values
+
+\[
+ s={7\over12},\qquad \eta={1\over12},
+ \tag{1.1}
+\]
+
+the exact Schur constant is $572.4472106721531\ldots$ and the gap factor is
+$2^{-7C/6}$.  This is a conditional implication, not the missing production
+atom theorem.  The already proved first-order gain is only
+$3\alpha-1=1/5$ at $\alpha=2/5$.  A tempting second-order value
+$4\alpha-1=3/5$ is available only after a new cancellation theorem for the
+complete mixed root derivative.  No cited authority proves that theorem.
+
+For rational NEAR, the exact endpoint is expanded one order farther.  Five
+unshifted model families have exactly the R-084 Young totals
+
+\[
+ {7\over20},\quad {7\over10},\quad {13\over30},\quad
+ {3\over5},\quad {23\over30}.
+ \tag{1.2}
+\]
+
+They are therefore arbitrarily form-absorbable by the existing R-063,
+R-068, and R-071 estimates.  The expansion also exposes one signed
+shifted-Hessian pair.  It is zero for every linear row and nonzero for the
+production rational row.  This pair, together with its retained positive
+square, is the exact remaining rational NEAR target.
+
+No production Cartan atom estimate, controlled Cartan CFAR, complete signed
+NEAR theorem, complete regular packet bound, overlap/revisit theorem,
+controlled-shell one-use estimate, $q=10/9$ Nelson moment, measure theorem,
+or Sector-A closure is asserted.  The tier remains T4.
+
+\newpage
+\section{Authorities, variables, and coefficients}
+
+The load-bearing authorities are R-050 for the production current, R-063 for
+the complete covariance-normal coefficient model, R-068 for centered
+quadratic-form duality, R-071 for smooth matrix one-forms, R-079 for complete
+endpoint reassembly, R-080 for the two regular low objects, R-081 for the
+Cartan tail and progressive boundary, R-082 for the stopped FAR and global
+Pauli--Fierz coordinate, R-083 for controlled polynomial CFAR, and R-084 for
+the root-diagonal Cartan OU identity and the complete linear-row form bound.
+
+The production coefficients are
+
+\[
+ P=4+10^{-12},\qquad
+ c_0={3\over250P},\qquad
+ c_1={243\over8000P},\qquad \alpha_R={5\over9}.
+ \tag{2.1}
+\]
+
+In six real coordinates let $P_{\rm dbl}$ project onto the four doublet
+coordinates and put
+
+\[
+ r=|P_{\rm dbl}z|^2,\qquad d=|z|^2+\epsilon_\rho,
+ \qquad
+ g(z)=P_{\rm dbl}z-\alpha_R {r\over d}z.
+ \tag{2.2}
+\]
+
+The rational row coefficient and Gram matrix are
+
+\[
+ \kappa=2\sqrt{c_1},\qquad
+ C_R(z)y=\kappa g(z)^Ty,\qquad
+ B_R(z)=\kappa^2g(z)\otimes g(z).
+ \tag{2.3}
+\]
+
+For value heat covariance $\Sigma$ define
+
+\[
+ \overline B_\Sigma=P_\Sigma B_R.
+ \tag{2.4}
+\]
+
+For the translated field and derivative put
+
+\[
+ U=\hbox{base field},\quad a=\hbox{control field},\quad
+ G=DU,\quad c=Da,\quad Q=G\otimes G-\Gamma.
+ \tag{2.5}
+\]
+
+All endpoint identities below are finite-cutoff pathwise algebra.  The form
+statements use the regular mutually orthogonal strict-past one-shot class of
+R-080--R-084.
+
+\section{The complete Cartan mixed variation}
+
+Let $\Phi$ be one production Cartan coefficient, let $w$ contain the past and
+fresh value root, and let $a$ be predictable at that root.  The Cartan
+current increment may be written as a translated coefficient-current
+difference.  Differentiating it in a fresh Malliavin direction $v$ gives the
+single mixed second variation
+
+\[
+ \boxed{
+ \begin{aligned}
+ \mathbb D_jH[v]
+ =\int_0^1\{&D^2\Phi(w+sa)[a,v]^T D(w+sa)\\
+             &+D\Phi(w+sa)[v]^TDa
+              +D\Phi(w+sa)[a]^TDv\}\,ds .
+ \end{aligned}}
+ \tag{3.1}
+\]
+
+The three lines are respectively the coefficient-Jacobian difference, the
+predictable derivative injection, and the value-innovation channel in
+R-084.  Formula (3.1) is one object: estimating the three lines separately
+destroys the translated cancellation that a far-support theorem would need.
+Predictability gives $\mathbb D_ja=0$; it does not set $Da$ to zero.
+
+R-084 reduces controlled Cartan CFAR to
+
+\[
+ \sum_{A,j}\int_0^\infty e^{-2t}
+ \mathbb E\|Q_{j,C}P_t^{(j)}\mathbb D_jH_{A,j,A^{(j)}}\|_{\rm HS}^2dt
+ \le K_e2^{-\theta C}
+ \{1+\mathbb E[X^{1/2}Y^{1/2}]\}.
+ \tag{3.2}
+\]
+
+The exact identity (3.1) sharpens what must be decomposed in (3.2), but does
+not prove its spatial decay.
+
+\subsection*{Why second-order paralinearisation is not yet a theorem}
+
+At the production regularity $\alpha=2/5$, the proved first-order
+support-refined current remainder has gain
+
+\[
+ 3\alpha-1={1\over5}<{1\over2}.
+ \tag{3.3}
+\]
+
+A formal order-two remainder would suggest
+
+\[
+ 4\alpha-1={3\over5}>{1\over2}.
+ \tag{3.4}
+\]
+
+However, the root derivative in (3.1) can remove one regularity leg.  To use
+(3.4), one must prove that every principal term of order at most two cancels
+after the complete stopped-current sum, the heat compensator, both
+predictable drifts, and far projection are assembled.  One must also prove a
+locally uniform translated-model norm for random $H^2$ controls.  R-050,
+R-063, and R-081 prove neither assertion.  Thus $3/5$ is a candidate atom
+exponent, not an accepted production estimate.
+
+\section{Nonorthogonal weighted causal Schur lemma}
+
+\subsection*{Theorem 4.1}
+
+Let $u_{j,k}$ be Hilbert-valued atoms for $k\le j$ and set
+
+\[
+ f_j=\sum_{k\le j}u_{j,k}.
+ \tag{4.1}
+\]
+
+Assume that for output shells $m\ge j+C$,
+
+\[
+ \mathbb E\|\Pi_m u_{j,k}\|^2
+ \le 2^{-2s(m-k)}q_k,\qquad s>{1\over2}.
+ \tag{4.2}
+\]
+
+No orthogonality between the $u_{j,k}$ is assumed.  For every
+$0<\eta<2s-1$,
+
+\[
+ \boxed{
+ \sum_m\sum_{j\le m-C}2^j\mathbb E\|\Pi_mf_j\|^2
+ \le C_{s,\eta}2^{-2sC}\sum_k2^kq_k,}
+ \tag{4.3}
+\]
+
+where
+
+\[
+ \boxed{
+ C_{s,\eta}=
+ {1\over
+ (1-2^{-\eta})(1-2^{-2s})(1-2^{1+\eta-2s})}.}
+ \tag{4.4}
+\]
+
+\emph{Proof.}
+Weighted Cauchy--Schwarz gives
+
+\[
+ \left\|\sum_{k\le j}\Pi_mu_{j,k}\right\|^2
+ \le {1\over1-2^{-\eta}}
+ \sum_{k\le j}2^{\eta(j-k)}\|\Pi_mu_{j,k}\|^2.
+ \tag{4.5}
+\]
+
+Insert (4.2), use nonnegativity to exchange the three sums, and write
+$j=k+r$:
+
+\[
+ \begin{aligned}
+ &\sum_m\sum_{j\le m-C}2^j\mathbb E\|\Pi_mf_j\|^2\\
+ &\quad\le {1\over1-2^{-\eta}}
+ \sum_kq_k\sum_{r\ge0}2^{k+r}2^{\eta r}
+ \sum_{m\ge k+r+C}2^{-2s(m-k)}\\
+ &\quad={2^{-2sC}\over
+ (1-2^{-\eta})(1-2^{-2s})}
+ \sum_k2^kq_k\sum_{r\ge0}2^{(1+\eta-2s)r}.
+ \end{aligned}
+ \tag{4.6}
+\]
+
+The last series converges exactly when $\eta<2s-1$, proving (4.3).
+\hfill$\square$
+
+For fixed $s$, the two factors containing $\eta$ are balanced at
+
+\[
+ \eta={2s-1\over2}.
+ \tag{4.7}
+\]
+
+Taking (1.1) gives
+
+\[
+ C_{7/12,1/12}=572.4472106721531\ldots,\qquad
+ 2^{-2sC}=2^{-7C/6}.
+ \tag{4.8}
+\]
+
+The executable checks four aligned worst-direction fixtures and four
+independent changing-sign vector fixtures against (4.3).
+
+\subsection*{Sharp boundary}
+
+At $s=1/2$, take one input $u_0$ with
+$\mathbb E\|\Pi_mu_0\|^2=2^{-m}$ and $f_j=u_0$.  The truncation through
+shell $M$ is
+
+\[
+ \sum_{m=C}^M2^{-m}\sum_{j=0}^{m-C}2^j
+ =\sum_{m=C}^M\{2^{1-C}-2^{-m}\},
+ \tag{4.9}
+\]
+
+which grows linearly in $M$.  Hence $s>1/2$ is not a cosmetic constant
+choice for this triangular architecture.
+
+\subsection*{Exact conditional Cartan contract}
+
+To apply Theorem 4.1 to (3.2), the complete mixed variation (3.1) must be
+decomposed into atoms $u_{A,j,k,t}$ satisfying the integrated analogue
+
+\[
+ \sum_A\int_0^\infty e^{-2t}
+ \mathbb E\|\Pi_m u_{A,j,k,t}\|_{\rm HS}^2dt
+ \le K2^{-2s(m-k)}q_k
+ \tag{4.10}
+\]
+
+with $s>1/2$ and
+
+\[
+ \sum_k2^kq_k\lesssim 1+\mathbb E[X^{1/2}Y^{1/2}].
+ \tag{4.11}
+\]
+
+Equations (4.10)--(4.11), with the exact normalization inherited from the
+R-082 stopped square, are the missing production atom theorem.  Theorem 4.1
+then supplies the root/input summation without output orthogonality.  It does
+not supply (4.10).
+
+\section{Exact rational endpoint and Taylor boundary}
+
+The heat-lifted rational row functional is
+
+\[
+ \mathcal W_R(z,y)={1\over2}\overline B_\Sigma(z):
+ (y\otimes y-\Gamma).
+ \tag{5.1}
+\]
+
+\subsection*{Theorem 5.1 (exact endpoint)}
+
+At every smooth cutoff,
+
+\[
+ \boxed{
+ \begin{aligned}
+ \Delta\mathcal W_R={}&{1\over2}
+ [\overline B_\Sigma(U+a)-\overline B_\Sigma(U)]:Q\\
+ &+G^T\overline B_\Sigma(U+a)c
+ +{1\over2}c^T\overline B_\Sigma(U+a)c.
+ \end{aligned}}
+ \tag{5.2}
+\]
+
+\emph{Proof.}
+Expand $(G+c)\otimes(G+c)-\Gamma$, subtract the base term, and group the
+two mixed tensors by symmetry of $\overline B_\Sigma$.  The last term is
+nonnegative because heat preserves positive semidefiniteness.
+\hfill$\square$
+
+Put
+
+\[
+ K_t=D^2\overline B_\Sigma(U+ta)-D^2\overline B_\Sigma(U).
+ \tag{5.3}
+\]
+
+Taylor's formula in (5.2) gives the exact seven-part split
+
+\[
+ \begin{aligned}
+ \Delta\mathcal W_R={}&
+ {1\over2}D\overline B(U)[a]:Q
+ +{1\over4}D^2\overline B(U)[a,a]:Q\\
+ &+G^T\overline B(U)c
+ +G^TD\overline B(U)[a]c
+ +{1\over2}G^TD^2\overline B(U)[a,a]c\\
+ &+\int_0^1(1-t)\left\{
+ {1\over2}K_t[a,a]:Q+G^TK_t[a,a]c\right\}dt\\
+ &+{1\over2}c^T\overline B(U+a)c.
+ \end{aligned}
+ \tag{5.4}
+\]
+
+Here and below $\overline B=\overline B_\Sigma$.  Define the signed shifted
+Hessian packet
+
+\[
+ \boxed{
+ \mathcal H_R=\int_0^1(1-t)\left\{
+ {1\over2}K_t[a,a]:Q+G^TK_t[a,a]c\right\}dt.}
+ \tag{5.5}
+\]
+
+For a linear Pauli--Fierz row, $\overline B$ is quadratic and $K_t=0$.
+Thus (5.5) is precisely the nonlinear term absent from R-084.
+
+\section{The five unshifted families are paid}
+
+The first two terms in (5.4) are the R-063/R-068 covariance-normal models;
+the next three are R-071 smooth one-forms with zero, one, or two undifferentiated
+controls.  With
+
+\[
+ X=\|a\|_{H^2}^2,\qquad Y=\|U+a\|_6^6,
+ \tag{6.1}
+\]
+
+their pathwise bounds have the following exponent ledger:
+
+\[
+\begin{array}{c|c|c|c}
+\hbox{family}&X\hbox{ exponent}&Y\hbox{ exponent}&\hbox{total/slack}\\ \hline
+D\overline B(U)[a]:Q&11/40&3/40&7/20\,/\,13/20\\
+D^2\overline B(U)[a,a]:Q&11/20&3/20&7/10\,/\,3/10\\
+G^T\overline B(U)c&2/5&1/30&13/30\,/\,17/30\\
+G^TD\overline B(U)[a]c&2/5&1/5&3/5\,/\,2/5\\
+G^TD^2\overline B(U)[a,a]c&2/5&11/30&23/30\,/\,7/30
+\end{array}
+\tag{6.2}
+\]
+
+Every total is strictly below one.  The required random moments are bounded
+by the worst value
+
+\[
+ {1\over7/30}={30\over7},
+ \tag{6.3}
+\]
+
+which the accepted model supplies.
+
+\subsection*{Theorem 6.1 (five-family form absorption)}
+
+For every $\eta,\zeta>0$, the sum $\mathcal U_R$ of the first five terms in
+(5.4) obeys
+
+\[
+ \boxed{
+ \mathbb E\mathcal U_R
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C_{\eta,\zeta,\epsilon_\rho,j_0}}
+ \tag{6.4}
+\]
+
+uniformly in the terminal cutoff on the regular mutually orthogonal
+strict-past one-shot class.
+
+\emph{Proof.}
+The fixed floor makes $\overline B$ and its derivatives smooth with the
+polynomial-growth bounds required by R-063 and R-071.  Apply the five
+accepted model estimates represented in (6.2), transfer pure-control
+$L^6$ powers to $Y$ plus Gaussian moments, and use one weighted Young
+allocation.  The positive slacks in (6.2) give (6.4).
+\hfill$\square$
+
+\pagebreak[2]
+Combining (5.4) and (6.4), complete rational NEAR is reduced exactly to a
+signed lower bound for
+
+\[
+ \boxed{\mathcal H_R+{1\over2}c^T\overline B(U+a)c.}
+ \tag{6.5}
+\]
+
+The positive square must remain coupled to $\mathcal H_R$; discarding it may
+destroy the only available square completion.
+
+\section{Why the shifted Hessian cannot be deleted}
+
+\subsection*{Production scalar-ray diagnostic}
+
+On a real doublet ray set
+
+\[
+ f_e(x)=x-\alpha_R{x^3\over x^2+e},\qquad
+ B_R(x)=4c_1f_e(x)^2.
+ \tag{7.1}
+\]
+
+Direct differentiation gives
+
+\[
+ \boxed{B_R'''(\sqrt e)={6\alpha_R^2c_1\over\sqrt e}.}
+ \tag{7.2}
+\]
+
+At $e=10^{-12}$ this is
+
+\[
+ 14062.499999996484375\ldots\ne0.
+ \tag{7.3}
+\]
+
+Thus the rational Gram is not quadratic, $K_t$ is genuinely present, and a
+five-family truncation is not an identity.  Moreover, a high-frequency test
+of the signed $Q$ member creates a leading cubic coefficient proportional to
+$B_R'''(\sqrt e)\delta^3N^s$.  Boundedness of $D^2B_R$ alone does not turn
+$K_t$ into a control-independent multiplier against the distribution $Q$.
+
+\subsection*{Rational-only fixed-Schur no-go}
+
+There is also an exact path for which all three linear Pauli--Fierz rows
+vanish.  Take
+
+\[
+ z_0=e_1+e_3,\qquad z_1=Ce_1,\qquad y=e_3,\qquad c=0,\qquad\Sigma=0.
+ \tag{7.4}
+\]
+
+Put $q_{22}=c_1\alpha_R^2=3/(320P)$ and $d_0=2+e$.  The baseline rational
+square and exact first variation are
+
+\[
+ F_0={2q_{22}\over d_0^2},\qquad
+ D_R(C)=-{2q_{22}\{4C(e+1)-5e-2\}\over d_0^3}.
+ \tag{7.5}
+\]
+
+Consequently
+
+\[
+ {D_R(C)\over F_0}
+ =-{4C(e+1)-5e-2\over e+2}\longrightarrow-\infty.
+ \tag{7.6}
+\]
+
+At $C=2$,
+
+\[
+ F_0=0.00117187499999853515625\ldots,
+ \tag{7.7}
+\]
+
+\[
+ D_R=-0.00351562499999560546875\ldots=-3F_0.
+ \tag{7.8}
+\]
+
+Therefore neither positivity, recombination with the vanished linear rows,
+nor a fixed-multiple rational-square Schur estimate proves rational NEAR.
+This is a method no-go, not a counterexample to a form bound: the control
+cost grows quadratically in $C$.
+
+This fires
+\texttt{NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR}.
+It forbids deleting $\mathcal H_R$ and forbids a fixed-multiple positivity
+shortcut.  It does not forbid a coupled shifted-Hessian form estimate.
+
+\section{The four-stage completion map}
+
+The remaining synthesis is sequential, not a collection of interchangeable
+hypotheses.
+
+\paragraph{REG.}
+Prove (4.10)--(4.11) for the complete mixed Cartan atom and prove the signed
+bound (6.5).  Reassemble these with the R-080 low objects, R-083 polynomial
+CFAR, R-084 linear NEAR, heat traces, forest terms, and paid subtraction.
+Only then is the complete regular packet lower bound available.
+
+\paragraph{OVERLAP.}
+For every finite cutoff, bounded cylindrical simple predictable control,
+time partition, and revisit multiplicity, prove the partition-uniform full
+packet inequality
+
+\[
+ \mathbb E\,G_J(X_J+h_J(u))
+ +0.45\,\mathbb E\sum_k|I_k|\|u_k\|_2^2\ge-C,
+ \tag{8.1}
+\]
+
+where
+
+\[
+ G_J(\phi)=V_J^{\rm ren}(\phi)+0.15\|\phi\|_6^6.
+ \tag{8.2}
+\]
+
+Regular one-shot estimates do not imply (8.1): the class inclusion has the
+wrong direction and temporal packets have overlapping physical covariance
+ranges.
+
+\paragraph{CORE.}
+Extend (8.1) from the bounded-simple admissible core to all finite-energy
+progressive controls.  The extension must include finite-objective
+truncation, auxiliary conditioning, terminal $L^6$ graph continuity, and
+lower semicontinuity.  Plain $L^2$ predictable density is insufficient and
+can create infinity minus infinity.
+
+\paragraph{BD.}
+After OVERLAP and CORE, Boue--Dupuis is exact bookkeeping:
+
+\[
+ \inf_u\mathbb E\{G_J(X_J+h_J(u))+0.45\mathcal E(u)\}
+ =-0.9\log\mathbb E e^{-(10/9)G_J}.
+ \tag{8.3}
+\]
+
+The current budget arithmetic is
+
+\[
+ 0.27-0.06-0.15=0.06,
+ \tag{8.4}
+\]
+
+\[
+ {1\over2(11/10)}-0.45={1\over220},
+ \qquad {10\over9}-{11\over10}={1\over90}.
+ \tag{8.5}
+\]
+
+Thus $q=10/9$ follows after one-use.  Equation (8.3) cannot be used to prove
+one-use: doing so would assume the desired Nelson moment.  The older
+$\epsilon_6=0.13$ allocation is superseded and is not mixed into (8.4).
+
+\section{Proof-and-failure map}
+
+\[
+\begin{array}{c|c|c}
+\hbox{route}&\hbox{verdict}&\hbox{reason or surviving target}\\ \hline
+\hbox{output orthogonality}&\hbox{failed}&\hbox{R-083 smoothing witness}\\
+\hbox{root orthogonality alone}&\hbox{failed}&\hbox{R-084 cumulative tree}\\
+\hbox{nonorthogonal Schur}&\hbox{proved conditional}&\hbox{needs }s>1/2\hbox{ atom}\\
+\hbox{first-order Cartan tail}&\hbox{insufficient}&3\alpha-1=1/5\\
+\hbox{formal order-two tail}&\hbox{open}&\hbox{mixed principal cancellation absent}\\
+\hbox{linear PF NEAR}&\hbox{closed regular}&\hbox{R-084}\\
+\hbox{five rational families}&\hbox{closed regular}&\hbox{Theorem 6.1}\\
+\hbox{delete shifted Hessian}&\hbox{failed}&B_R'''(\sqrt e)\ne0\\
+\hbox{fixed-square Schur}&\hbox{failed}&D_R/F_0\to-\infty\\
+\hbox{coupled rational packet}&\hbox{open}&\mathcal H_R+\tfrac12c^T\bar Bc\\
+\hbox{regular to progressive}&\hbox{not implied}&\hbox{overlap/revisit theorem needed}\\
+\hbox{BD as proof}&\hbox{circular}&\hbox{exactly equivalent after CORE}
+\end{array}
+\]
+
+This map records both the successful reductions and the reasons the tempting
+shortcuts fail.  A future proof should start at (4.10) and (6.5), not rerun
+the refuted orthogonality, five-term deletion, or fixed-Schur routes.
+
+\section{Devil's-advocate}
+
+\begin{enumerate}
+\item \textbf{DISMISSED: Theorem 4.1 secretly assumes orthogonality.}
+Equation (4.5) is weighted Cauchy--Schwarz and retains every cross term
+through a deterministic majorant.  No probability or output orthogonality is
+used.
+
+\item \textbf{VALID WITH MITIGATION: the constant $572.447\ldots$ proves
+Cartan CFAR.}  It does not.  It is the exact constant in a conditional Schur
+implication.  The production atom estimate (4.10) is explicitly unproved.
+
+\item \textbf{UPHELD AGAINST PROMOTION: $4\alpha-1=3/5$ is already a
+production decay theorem.}  The mixed root derivative may remove a
+regularity leg.  Complete order-two principal cancellation and a translated
+adapted norm theorem are missing.
+
+\item \textbf{DISMISSED: the rational endpoint has more than the seven
+families in (5.4).}  Taylor's integral formula is exact.  The first five,
+$\mathcal H_R$, and the final square exhaust (5.2).
+
+\item \textbf{UPHELD AGAINST FIVE-TERM CLOSURE: bounded $D^2B_R$ permits
+deleting $\mathcal H_R$.}  The coefficient multiplies the distribution $Q$
+and depends on the shifted random field.  Equations (7.2)--(7.3) show the
+remainder is nonzero; boundedness is not a multiplication theorem.
+
+\item \textbf{VALID WITH MITIGATION: the rational fixture disproves every
+form bound.}  It disproves positivity and fixed-multiple square Schur only.
+Its control cost grows like $C^2$, so arbitrary-budget form absorption is not
+falsified.
+
+\item \textbf{UPHELD AGAINST PROGRESSIVE CLOSURE: REG implies OVERLAP.}
+Regular one-shot controls form a smaller class.  R-081 temporal factorisation
+preserves cost but not the disjoint physical ranges used by regular estimates.
+
+\item \textbf{UPHELD AGAINST ONE-USE/NELSON CLOSURE.}  Neither (8.1) nor its
+admissible-core extension is proved.  Boue--Dupuis cannot provide the missing
+lower bound without circularity.
+\end{enumerate}
+
+\section{Executable verification}
+
+The primary program derives the Pauli--Fierz coefficients from the A1
+manifest, evaluates the Schur constant and finite aligned fixtures, verifies
+the critical $s=1/2$ divergence, differentiates the normalized rational Gram
+symbolically at the production floor, checks the exact endpoint and
+five-plus-Hessian-plus-square split, derives all Young slacks, and evaluates
+the rational-only no-go and synthesis budgets.
+
+The non-importing audit uses high-precision directional differentiation,
+changing-sign two-coordinate Schur fixtures, independent matrix contraction,
+direct scalar-ray differentiation, and separately recomputed production
+budgets.  It imports no code from the primary executable.
+
+Run from the repository root:
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_nonorthogonal_cartan_schur_rational_hessian_
+  boundary_verify.py
+\end{verbatim}
+
+The child contracts are primary $50/50$ and independent $36/36$.  The
+integrated verifier pins every authority and evidence hash, reruns both
+children, compares the common numerical quantities, checks the PDF and all
+status surfaces, and fails closed if Cartan CFAR, rational NEAR, REG,
+OVERLAP, CORE, one-use, Nelson, or Sector A is promoted.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-NONORTHOGONAL-CARTAN-SCHUR-RATIONAL-
+           HESSIAN-BOUNDARY
+Precise statement:       A nonorthogonal weighted causal Schur lemma closes
+                         the triangular root/input sum conditionally on an
+                         s>1/2 production atom estimate. The exact rational
+                         endpoint splits into five unshifted subcritical
+                         families, one signed shifted-Hessian pair, and one
+                         retained positive square. The five families are
+                         form-absorbed; the shifted-Hessian pair is the exact
+                         remaining rational target. Explicit production
+                         fixtures refute its deletion, positivity, and a
+                         fixed-multiple rational-square Schur shortcut.
+Scope:                   Fixed positive floor; finite cutoff; common real-
+                         even regulator; exact products. Five-family form
+                         theorem only on the regular orthogonal strict-past
+                         one-shot class. Schur result is conditional on its
+                         displayed atom hypothesis.
+Dependencies:            A1; R-050; R-063; R-068; R-071; R-079--R-084.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED, CONDITIONAL ATOM ROUTE.
+Reproduction command:    python codes/foundations/a13_classii_nonorthogonal_
+                         cartan_schur_rational_hessian_boundary_verify.py
+Expected output:          Primary 50/50; independent 36/36; integrated and
+                         aggregate manifest-pinned PASS; exit zero.
+Negative result:         NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-
+                         FIXED-SCHUR (method no-go only).
+Falsification gate:      Failure of any mixed-variation, Schur, rational-
+                         split, hash, PDF, surface, or assertion contract.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No production Cartan atom or OU-gradient estimate,
+                         controlled Cartan CFAR, complete rational or signed
+                         NEAR, complete regular packet bound, progressive/
+                         revisit theorem, one-use, Nelson bound, measure
+                         theorem, removal limit, or Sector-A closure.
+Next required action:    Prove the complete mixed Cartan atom estimate
+                         (4.10)--(4.11) and the coupled signed rational bound
+                         (6.5); then REG, OVERLAP, CORE, and BD in order.
+\end{verbatim}
+\endgroup
