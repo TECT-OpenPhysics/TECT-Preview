@@ -247,15 +247,30 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   `d_jA=d_jDA=0` but nonzero nonlinear coefficient innovation, so the exact
   secant--Jensen split leaves an upper-triangular Jensen defect inside the
   adapted lower-chaos-complete signed packet. Absolute control--control pair-
-  high payment is also excluded.
-  R-080/R-081 also expose the separate
+  high payment is also excluded. R-082,
+  `A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`,
+  rewrites the whole FAR wedge as one deterministic stopped-current square,
+  retaining the moving endpoint and both predictable control drifts. It
+  corrects the centering ledger: raw value innovation centers only with its
+  heat compensator. The uncontrolled production FAR subbranch is now closed
+  cutoff-uniformly by the support-refined R-050 remainder, with decay
+  `2^(-2 beta C)` for every `beta<3 alpha-1`. An orthogonal causal Carleson
+  lemma identifies the sharp `s>1/2` sufficient threshold, but the balanced
+  production decomposition needed for controlled CFAR is open. R-082 also
+  gives a global four-row Pauli--Fierz square for the complete current. Only
+  one row is rational, but state-dependent compression is not rootwise,
+  target heat must average the Gram matrix, and future conditional covariance
+  defects remain signed. Complete heat-lifted signed NEAR is therefore still
+  open.
+  R-080--R-082 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
   factorisation preserves the complete packet algebra for overlapping
   bounded-simple packets, so the remaining PROG input is an overlap-stable
-  lower bound plus the variational limit. FAR, NEAR, and that progression
-  theorem remain before one-use and `q=10/9` Nelson.
+  lower bound plus the variational limit. Controlled FAR, complete signed
+  NEAR, and that progression theorem remain before one-use and `q=10/9`
+  Nelson.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -418,8 +433,8 @@ preserved in git/changelog rather than treated as current gates.
    exact expectation-level full-current and canonical safe-packet Doob
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
-   child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-   narrowed by R-080 and R-081. R-080 closes the two distinct low objects for regular
+    child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
+    narrowed by R-080--R-082. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -432,9 +447,19 @@ preserved in git/changelog rather than treated as current gates.
    norm is `H^(1/2)`-critical. Its vector-valued Doob--Burkholder theorem closes
    the explicitly factorised first-order NEAR input budget, not the complete
    nonlinear coefficient: an exact secant--Jensen split exposes an upper-
-   triangular defect invisible to `D_jA`. Prove the complete root-resolved
-   FAR and adapted/signed NEAR estimates while retaining every present/future block, square, trace,
-   innovation, compensator, forest term, and paid subtraction. Then apply
+    triangular defect invisible to `D_jA`. R-082 sums the FAR wedge first as
+    one deterministic stopped-current square and closes its uncontrolled
+    production part with support-refined `3 alpha-1` regularity. The exact
+    remaining CFAR object contains the controlled moving endpoint and both
+    predictable drifts. Its verified orthogonal causal Carleson route requires
+    strict `s>1/2`; proving the balanced production input-scale decomposition
+    is the next FAR task. For NEAR, R-082 compresses the complete production
+    current to four global Pauli--Fierz rows, only one rational, but proves that
+    this state-dependent compression does not preserve individual root blocks
+    and that target heat must act on `C^T C`, not on `C` before squaring.
+    Prove controlled CFAR and the complete heat-lifted adapted/signed NEAR
+    estimate while retaining every present/future block, square, trace,
+    innovation, compensator, forest term, and paid subtraction. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
    an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
    `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling

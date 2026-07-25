@@ -89,8 +89,17 @@ upper-triangular nonlinear defect invisible to `D_jA`; that defect, the
 adapted complete-forest operator, and the signed control--control branch
 remain. Temporal Douglas factorisation extends
 the complete packet algebra to overlapping bounded-simple packets, while a
-one-mode witness proves that the R-075 graph is not progressive-dense. The
-regular root-resolved FAR/NEAR bound and an overlap-stable full-progressive
+  one-mode witness proves that the R-075 graph is not progressive-dense. R-082,
+  `A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`,
+  then rewrites the complete FAR wedge as one deterministic stopped-current
+  square with both predictable drifts retained and closes the uncontrolled
+  production FAR contribution by the support-refined R-050
+  `C^(3 alpha-1)` remainder. Its orthogonal causal Carleson route is sharp at
+  `s=1/2`, but the balanced controlled production decomposition is open. The
+  complete current also has a global four-row Pauli--Fierz Gram coordinate;
+  state-dependent compression is not rootwise, target heat acts on `C^T C`,
+  and future conditional covariance defects remain signed. The controlled
+  CFAR/complete heat-lifted signed NEAR bound and an overlap-stable full-progressive
 extension are both required before the umbrella one-use/`q=10/9` Nelson bound.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.

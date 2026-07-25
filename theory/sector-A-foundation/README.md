@@ -71,9 +71,20 @@ secant--Jensen split expose an upper-triangular nonlinear defect invisible to
 control--control pair-high payment is also supercritical.
 It also causally factorises overlapping bounded-simple temporal packets and
 extends the complete R-079 algebra, while proving that the one-shot graph is
-not progressive-dense. Root-resolved FAR, adapted/signed NEAR, and an overlap-
-stable full-progressive packet lower bound remain before the umbrella one-use
-estimate and the conditional `q=10/9` Nelson/A7 reconstruction.
+not progressive-dense. R-082,
+`A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`,
+rewrites the entire FAR wedge as one deterministic stopped-current square,
+retains both predictable drifts, corrects raw-value/heat centering, and closes
+the uncontrolled production FAR subbranch with support-refined
+`2^(-2 beta C)` decay for every strict `beta<3 alpha-1`. Its orthogonal causal
+Carleson route requires `s>1/2`, while the missing balanced controlled
+production decomposition remains open. R-082 also gives a global four-row
+Pauli--Fierz Gram coordinate for the complete current. The state-dependent
+compression is not rootwise, heat acts on `C^T C`, and general future
+covariance defects remain signed. Controlled CFAR, the complete heat-lifted
+signed NEAR packet, and an overlap-stable full-progressive lower bound remain
+before the umbrella one-use estimate and the conditional `q=10/9` Nelson/A7
+reconstruction.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

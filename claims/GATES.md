@@ -459,8 +459,18 @@ also proves the vector-valued input budget and exact gain ledger for an
 explicitly factorised first-order NEAR response. The complete nonlinear
 coefficient additionally contains an upper-triangular Jensen defect invisible
 to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
-complete adapted operator and a signed control--control balanced-root lemma.
-R-080/R-081 correct the synthesis
+  complete adapted operator and a signed control--control balanced-root lemma.
+ R-082 rewrites the complete FAR wedge as one deterministic stopped-current
+ square retaining its moving endpoint and both predictable drifts, corrects
+ raw-value centering by pairing it with the heat compensator, and closes the
+ uncontrolled production FAR subbranch with cutoff-uniform
+ `2^(-2 beta C)` decay for every `beta<3 alpha-1`. Its orthogonal causal
+ Carleson lemma has the sharp sufficient threshold `s>1/2`, but the balanced
+ production decomposition required for controlled CFAR is not proved. R-082
+ also gives a global four-row Pauli--Fierz coordinate for the complete current;
+ state-dependent compression is not rootwise, heat acts on the Gram matrix,
+ and the complete signed NEAR covariance defect remains open.
+ R-080--R-082 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
 progressive/revisit control. The separate successor
 `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
@@ -973,7 +983,35 @@ factorised first-order branch, but the Jensen-defect/lower-chaos-complete
 adapted operator is unproved. Absolute control--control pair-high extraction has slack
 `(gamma-1-2 theta)/6<0`; that branch must remain signed with square, trace,
 forest, compensator, and paid subtraction. These are exact reductions and
-method no-gos, not a regular packet lower bound.
+ method no-gos, not a regular packet lower bound.
+
+R-082,
+`A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`,
+then performs the root summation before any budget allocation. With
+`Y_j=P_j J_j`, `b_j=d_jJ_j`, and
+`c_j=P_(j-1)(J_j-J_(j-1))`, the FAR wedge is exactly the sum of the squared
+stopped currents
+`Y_(min(J,m-C))-Y_ell-sum c_j`. A deterministic changing-current fixture
+shows that `c_j` cannot be omitted, and `M(x)=x^2` shows that raw value
+innovation is centered only after adding its heat compensator. For the
+uncontrolled production current, support removes every rough high factor in
+the relative-far region; the R-050 `C^(2 alpha)` paralinear remainder leaves a
+`C^(3 alpha-1)` high channel. Hence uncontrolled FAR decays as
+`2^(-2 beta C)` for each strict `beta<3 alpha-1`, uniformly in the cutoff.
+The exact controlled target is the combined stopped endpoint minus both
+predictable drifts. An orthogonal causal input-scale decomposition would sum
+it once for `s>1/2`, while the half-derivative endpoint diverges; proving that
+production decomposition is the remaining FAR theorem.
+
+For NEAR, R-082 diagonalises the production current globally into four
+Pauli--Fierz rows, three linear and one rational with Lipschitz ceiling `19/9`.
+The fixed six-current preserves R-079 roots, but the state-dependent four-row
+compression preserves only endpoint energy and the Gram matrix, not
+individual Doob blocks. Target heat therefore uses the Hilbert lift
+`C(z+r)y`, and conditional square--trace positivity requires explicit
+conditional mean/covariance preservation. General future feedback leaves a
+signed covariance defect. The complete heat-lifted square--trace--forest NEAR
+packet, controlled CFAR, and the regular packet lower bound remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -988,7 +1026,7 @@ defect. An equivalent all-tilted-law entropy inequality is an admissible
 alternative.
 
 **Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
-sharpened by R-081
+sharpened by R-081/R-082
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

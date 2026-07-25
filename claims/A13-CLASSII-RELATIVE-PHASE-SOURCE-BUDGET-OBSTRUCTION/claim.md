@@ -411,8 +411,26 @@ the following structural results and proof-architecture boundaries hold.
     admits bounded simple progressive packets and preserves the complete
     R-079 algebra even with overlapping covariance ranges.  An exact
     one-mode witness proves the R-075 one-shot graph is not progressive-dense.
-    Root-resolved FAR, complete adapted/signed NEAR, and an overlap-stable
-    progressive complete-packet bound remain before one-use and Nelson.
+     Root-resolved FAR, complete adapted/signed NEAR, and an overlap-stable
+     progressive complete-packet bound remain before one-use and Nelson.
+25. `A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`
+    rewrites the entire FAR wedge as one deterministic stopped-current square
+    and keeps the moving endpoint plus both predictable control drifts.  A
+    deterministic changing current proves the drift cannot be deleted, while
+    the `M(x)=x^2` fixture proves that raw value innovation centers only with
+    its heat compensator.  The uncontrolled production FAR subbranch now
+    closes cutoff-uniformly with `2^(-2 beta C)` for every strict
+    `beta<3 alpha-1`, because support removes all rough high factors and leaves
+    the R-050 `C^(3 alpha-1)` paralinear remainder.  An exact orthogonal causal
+    Carleson lemma has the sharp sufficient threshold `s>1/2`; the missing
+    production input is a balanced causal decomposition of the controlled
+    stopped endpoint and both drifts.  The complete `Q_II` current also has a
+    global four-row Pauli--Fierz square, including at zero doublet amplitude,
+    with only one rational row and Lipschitz ceiling `19/9`.  The state-
+    dependent compression is not rootwise, target heat must average `C^T C`,
+    and later feedback can leave a signed conditional covariance defect.
+    Controlled FAR, complete heat-lifted signed NEAR, overlap-stable
+    progression, one-use, and Nelson remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -445,6 +463,7 @@ is a scoped T4 subproof and does not promote A13.
 | Full safe packet / frame current / Doob decomposition | Exact full-current and complete-safe-packet root decomposition with cross term, square, trace, forest, and paid subtraction retained; weighted CM square function and predictable base-current heat identity | T4 algebraic decomposition closed; production near/far estimate open |
 | Regular low objects / far square / progressive boundary | Both regular no-revisit low objects, exact far feedback square completion, localized base-current successor, hidden near coefficient, and variational-scope no-gos | T4 regular low/far reduction closed; FAR, NEAR, and full progression open |
 | Cartan tail / adapted NEAR budget / temporal packets | Exact polynomial--Cartan split, deterministic relative-gap tail, half-derivative boundary, factorised first-order vector budget, secant--Jensen split and nonlinear `D_j` no-go, pair-high no-go, temporal Douglas factorisation, and one-shot graph non-density | T4 analytic/exact reduction closed; root-resolved FAR, Jensen-defect/complete NEAR, and overlap-stable progression open |
+| Stopped-current FAR / complete-current NEAR coordinate | Exact changing-current stopped square with predictable drift, raw-value/heat centering correction, cutoff-uniform uncontrolled FAR, sharp orthogonal `s>1/2` Carleson route, global four-row Pauli--Fierz Gram coordinate, heat lift, covariance criterion, and signed edge flux | T4 analytic/exact reduction closed; controlled CFAR, complete signed NEAR, and overlap-stable progression open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -553,8 +572,15 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   norms.  The exact secant--Jensen identity exposes an upper-triangular
   nonlinear branch that is not controlled by `D_j` alone.  R-081 does not
   supply the martingale-root-resolved FAR sum, an estimate for that Jensen
-  defect, the complete adapted/signed NEAR theorem, or an overlap-stable
-  progressive packet lower bound.
+   defect, the complete adapted/signed NEAR theorem, or an overlap-stable
+   progressive packet lower bound.
+- R-082 is fixed-floor and finite-cutoff for its exact stopped-current,
+  Pauli--Fierz, heat-lift, covariance, and edge-flux identities.  Its
+  support-refined uncontrolled FAR estimate is cutoff-uniform for every strict
+  `beta<3 alpha-1`.  Its Carleson theorem is conditional on an orthogonal
+  causal production decomposition with `s>1/2`; that decomposition, the
+  controlled endpoint-minus-drift estimate, the complete signed NEAR packet,
+  and the progressive extension are not proved.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -1266,6 +1292,18 @@ hash pin, the eleven-page zero-form visual-QA contract, any manifest-pinned
 primary/independent/integrated/aggregate count, or any promoted FAR, NEAR,
 progressive, one-use, Nelson, measure, or Sector-A honesty flag.
 
+The R-082 continuation is additionally falsified by failure of the changing-
+current telescope, martingale orthogonality, deterministic stopped-square
+identity, either predictable drift channel, raw-value/heat cancellation,
+support-refined R-050 tail or its strict exponent range, the orthogonal
+Carleson constant or half-derivative countersequence, the global Fierz and
+`B=C^T C` identities, the two-root compression redistribution, the heat-lift
+variance witness, conditional square--trace formula, moving-edge cancellation,
+any predecessor/source/note/PDF hash pin, the twelve-page zero-form visual-QA
+contract, any manifest-pinned primary/independent/integrated/aggregate count,
+or any promoted controlled-FAR, complete-NEAR, progressive, one-use, Nelson,
+measure, or Sector-A honesty flag.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1395,14 +1433,18 @@ controlled-shell one-use, Nelson, an
 interacting measure, floor/regulator removal, infinite volume, phase
 transition, BCC selection, Sector-A closure, or T5--T7. A13 remains T4.
 
-The full-current/low-object/Cartan-tail chain R-079--R-081 closes the exact
+The full-current/low-object/Cartan-tail/stopped-current chain R-079--R-082
+closes the exact
 complete packet algebra, both regular no-revisit low objects, far feedback
 square completion, the production polynomial--Cartan localization,
 deterministic Cartan relative-gap decay, the explicitly factorised first-order
-NEAR input budget, the exact secant--Jensen decomposition, and temporal packet
-factorisation.  These reductions do not estimate the upper-triangular Jensen
-defect or prove the martingale-root-resolved complete-current FAR sum, a lower-
-chaos-complete adapted NEAR operator, a signed control--control balanced-root estimate, an
+NEAR input budget, the exact secant--Jensen decomposition, temporal packet
+factorisation, exact stopped-current reordering, cutoff-uniform uncontrolled
+FAR, and the global complete-current Pauli--Fierz Gram coordinate.  These
+reductions do not prove the controlled stopped endpoint-minus-drift estimate,
+the required balanced `s>1/2` production decomposition, the upper-triangular
+Jensen/covariance-defect estimate, a lower-chaos-complete adapted NEAR
+operator, a signed control--control balanced-root estimate, an
 overlap-stable progressive packet lower bound, or the variational extension.
 They therefore do not establish controlled-shell one-use, Nelson, an
 interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
@@ -1593,3 +1635,13 @@ not a counterexample to the complete progressive action.
   manifest counts. The witness does not preclude a cancellation after full
   packet recombination, so FAR, Jensen-defect/complete NEAR, overlap-stable progression, one-use,
   Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-082. The FAR wedge is now one exact deterministic
+  stopped-current square with predictable drift retained, raw value innovation
+  is correctly paired with its heat compensator, and the uncontrolled
+  production FAR subbranch closes cutoff-uniformly through the support-refined
+  R-050 remainder. The orthogonal causal Carleson route is sharp at `s=1/2`.
+  The complete production current has a global four-row Pauli--Fierz Gram
+  coordinate, while an independent two-root regression prevents rootwise
+  overtransport and a symmetric heat fixture enforces averaging `C^T C`.
+  Controlled CFAR, complete heat-lifted signed NEAR, overlap-stable
+  progression, one-use, Nelson, and Sector A remain open; tier stays T4.

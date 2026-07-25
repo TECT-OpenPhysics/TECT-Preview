@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-082](#r-082) | Stopped-current FAR and complete-current NEAR coordinate reduction | Scoped T4 analytic/exact/executed reduction: the entire FAR wedge is one deterministic stopped-current square retaining its moving endpoint and both predictable control drifts; raw value innovation centers only with its heat compensator. The uncontrolled production FAR contribution now closes cutoff-uniformly with decay `2^(-2 beta C)` for every `beta<3 alpha-1`, by a support-refined R-050 paracontrolled remainder. An orthogonal causal Carleson lemma has the sharp `s>1/2` threshold and would spend the Cameron--Martin input once if the missing balanced production decomposition were proved. The production current has a global four-coordinate Pauli--Fierz square and exact conditional-covariance positivity criterion; state-dependent compression is not rootwise, heat must average the Gram matrix, and future covariance defects remain signed. Controlled FAR, complete signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-081](#r-081) | Cartan current tails, adapted near budgets, and temporal packet reduction | Scoped T4 analytic/exact/executed reduction: the production current splits into a quadratic polynomial channel and one heat-averaged nonlinear Cartan channel; the polynomial channel vanishes at separated outputs, while a deterministic relative-gap theorem gives `2^(-2sC)X^(1/2)Y^(1/2)` for every `0<s<1`. Fixed predictable Gaussian injection is governed by a triangular `H^(1/2)` endpoint norm, and `H^(1/2-)` alone is insufficient. Vector-valued Doob--Burkholder interpolation closes the input budget and exact gain ledger for an explicitly factorised first-order NEAR response. A production two-root witness has `d_jA=0` but nonzero coefficient innovation, so the complete nonlinear branch also requires its upper-triangular Jensen defect; absolute control--control pair-high extraction is supercritical. Bounded-simple progressive packets factor causally and preserve the complete R-079 algebra despite range overlap, while an exact one-mode witness proves that the R-075 one-shot graph is not progressive-dense. Root-resolved FAR, complete NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-080](#r-080) | Regular low-object absorption, far square completion, and progressive-revisit boundary | Scoped T4 analytic/exact/executed reduction: both R-079 low objects admit arbitrary terminal-sextic absorption uniformly in the cutoff for mutually orthogonal strict-past one-shot controls with no low-range revisit. Orthogonal far-shell completion retains both feedback channels and reduces the far loss to one localized predictable base-current tail; the near residual has predictable explicit `A^2 DA` payload but a hidden future-adapted high--high-to-low coefficient. Target heat and weighted CM identities give no automatic root/shell gap, bounded near width gives zero Young slack, universal rootwise positivity fails, and R-075 graph recovery does not extend a restricted lower bound to every progressive/revisit control. FAR, NEAR, and full-progressive extension remain open; one-use, Nelson, and Sector A are not closed; assertion count is pinned by the manifest |
 | [R-079](#r-079) | Full safe-packet frame-current Doob decomposition and weighted-route boundary | Scoped T4 exact/analytic/executed reduction: the complete renormalised frame-current endpoint has an exact Hilbert-current Doob decomposition into one conditional low-current term, present-control increments, and future-control innovations, with the future cross term retained. Subtracting the already paid `N3_nr+T_<=` block gives the canonical safe packet without deleting the complete low endpoint. A spatially weighted Cameron--Martin square function spends control energy once, and a backward-heat formula exactly projects the base current. The terminal future-feedback current still contains coefficient and derivative-feedback commutators. Generic Cauchy/weighted-square-function, expected-budget-to-BMO, spatial-gain, and adapted Wick carre-du-champ shortcuts fail; a positive `gamma`-gain estimate would close by a finite moment, but the production near/far theorem, one-use bound, Nelson synthesis, and Sector A remain open; assertion count is pinned by the manifest |
@@ -100,6 +101,75 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-082"></a>
+### R-082 -- Stopped-current FAR and complete-current NEAR coordinate reduction
+
+**Result ID.**
+`A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`.
+
+**Statement.** Let `Y_j=P_j J_j`, `b_j=d_j J_j`, and
+`c_j=P_(j-1)(J_j-J_(j-1))` for the complete current already carrying
+`Q_II^(1/2)`. Then
+`sum_(j0<=j<=n)b_j=Y_n-Y_ell-sum_(j0<=j<=n)c_j`. Martingale
+orthogonality turns the full FAR wedge exactly into the deterministic stopped
+square at `n_C(m)=min(J,m-C)`. Both predictable control-value and
+control-derivative drifts are load-bearing. At each root, derivative
+injection is centered, while raw value innovation is centered only after the
+heat compensator is included; `M(x)=x^2` is the exact regression fixture.
+
+For the uncontrolled production current, the R-050 first
+paralinearisation remainder has regularity `2 alpha`. Above the input support,
+all rough high-factor terms vanish and the only surviving low--high term has
+regularity `3 alpha-1`. Hence, for `1/3<alpha<1/2` and every strict
+`beta<3 alpha-1`, the stopped uncontrolled FAR loss is
+`O(2^(-2 beta C))` uniformly in the ultraviolet cutoff. At `alpha=2/5`, any
+`beta<1/5` is available. This does not prove the controlled stopped-current
+estimate.
+
+If a controlled coefficient admits an orthogonal causal input-scale
+decomposition with shell decay `2^(-2s(m-k))`, an exact discrete Carleson
+lemma sums the triangular derivative weight for `s>1/2` and costs at most
+`C_s 2^(-2sC) sum_k 2^k q_k`. The half-derivative endpoint diverges linearly.
+With `q_k<=2^(-4k)||h_k||^2`, this route uses the Cameron--Martin energy once,
+but the balanced production decomposition of the combined moving endpoint,
+value/derivative drift, nonlinear innovation, and heat compensator remains
+open.
+
+The production `Q_II` current also has the global chart-free coordinate
+`Xi=(sqrt(c0)dr, sqrt(c1)(dr-(5/9)(r/d)d rho),
+2sqrt(c0+c1)Re h, 2sqrt(c0+c1)Im h)`, where
+`h=u_1v_2-u_2v_1`. Its squared norm is the complete current energy even at
+`r=0`, and `B=C^T C`. The corresponding fixed six-current preserves every
+R-079 root block, but the four-coordinate Pauli--Fierz compression is
+state-dependent and redistributes individual Doob-root energies. Target heat
+therefore acts through the Hilbert lift `C(z+r)y`, not by squaring `P_Sigma C`.
+Conditional square--trace positivity is exact only when the fresh derivative
+has the declared conditional mean and covariance; future feedback leaves a
+signed covariance defect. Moving sharp-shell edge flux cancels across
+low/near/high and supplies no new absolute pair-high payment.
+
+**Boundary.** Controlled stopped-current FAR, the complete heat-lifted signed
+NEAR square--trace--forest estimate, overlap-stable progressive packet lower
+bound and variational extension, controlled-shell one-use, `q=10/9` Nelson,
+the interacting measure, removal limits, and Sector-A closure remain open.
+Tier stays T4.
+
+**Proven in.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-stopped-current-far-complete-current-near-coordinate-reduction-260725-v1.0`,
+with primary 54/54, non-importing independent 52/52, and manifest-pinned
+integrated verification.
+
+**Reuse scope.** Changing-current martingale telescopes, stopped FAR wedges,
+support-refined paracomposition, half-derivative causal Carleson thresholds,
+Pauli--Fierz Gram coordinates, and conditional square--trace criteria.
+
+**Publication target.** Stochastic geometric/paracontrolled methods note with
+R-050, R-063, and R-075--R-081 after controlled FAR, complete signed NEAR,
+one-use, and Nelson synthesis are resolved.
+
+---
 
 <a id="r-081"></a>
 ### R-081 -- Cartan current tails, adapted near budgets, and temporal packet reduction

@@ -1,0 +1,904 @@
+% Title: Stopped-current FAR and complete-current NEAR coordinates
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; UNCONTROLLED FAR CLOSED; CONTROLLED FAR, COMPLETE SIGNED NEAR, PROGRESSION, ONE-USE, AND NELSON OPEN
+% Result: A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION
+% Ledger: R-082
+
+\section{Purpose and scope}
+
+This note advances the R-081 frontier without asserting the still missing
+Sector-A estimate.  It has four positive conclusions.
+
+First, the root-resolved FAR loss is rewritten exactly as one deterministic
+stopped-current square.  The formula keeps the moving endpoint and both
+predictable control drifts; it is not an optional-stopping argument.  Second,
+the uncontrolled production FAR contribution is closed uniformly in the
+cutoff by extracting a support-refined positive-regularity corollary from the
+R-050 paracontrolled reconstruction.  Third, an exact orthogonal causal
+Carleson lemma identifies the strict half-derivative threshold for one
+factorised controlled route.  Fourth, the production $Q_{\rm II}$ current is
+put in a global four-coordinate Pauli--Fierz square, and the exact
+conditional-covariance criterion for a positive square--trace branch is
+isolated.
+
+The note also records the load-bearing negative boundaries.  The predictable
+drift cannot be omitted.  The raw value innovation is not centered without
+its heat compensator.  The four-coordinate Pauli--Fierz map preserves
+pointwise energy and the Wick Gram matrix but not the individual martingale
+root blocks of the fixed six-current.  Conditional covariance preservation
+is not automatic under future feedback.  Moving sharp-shell edge flux is a
+signed repartition, not a new positive payment.  Consequently controlled
+FAR, the complete signed NEAR packet, overlap-stable progression,
+controlled-shell one-use, the $q=10/9$ Nelson estimate, and Sector-A closure
+remain open.
+
+All statements are at finite cutoff, on the pinned production model, at fixed
+positive density floor, with a common even regulator and exact non-aliased
+products.  Constants declared uniform in the cutoff may depend on the floor,
+the fixed low root, and the indicated regularity exponents.
+
+\section{Authority and notation}
+
+The load-bearing authorities are R-050 for the enhanced Gaussian current and
+its first paralinearisation remainder, R-063 for the complete balanced
+square--trace--forest packet, R-069--R-070 for exact current telescopes and
+trace bookkeeping, R-075 for the production $Q_{\rm II}$ frame, R-079 for the
+complete heat-projected current identity, R-080 for FAR square completion,
+and R-081 for the polynomial/Cartan split and the secant--Jensen boundary.
+
+Let $(\mathcal F_j)_{j=\ell}^J$ be the root filtration, where
+$\ell=j_0-1$, and let
+\[
+ P_j=\mathbb E[\,\cdot\mid\mathcal F_j],
+ \qquad d_j=P_j-P_{j-1}.
+\]
+The spatial Littlewood--Paley projector is denoted by $\Pi_m$; it is
+deterministic and therefore commutes with conditional expectation.  The
+complete current already contains the fixed factor $Q_{\rm II}^{1/2}$ and is
+written $\mathcal J_j=\mathcal J(A^{(j)})$.  All current norms below are
+ordinary Hilbert norms.  Applying an additional $Q_{\rm II}$ norm would count
+the production matrix twice.
+
+Put
+\[
+ Y_j=P_j\mathcal J_j,
+ \qquad b_j=d_j\mathcal J_j,
+ \qquad c_j=P_{j-1}(\mathcal J_j-\mathcal J_{j-1}).
+\]
+The FAR separation is $C$, chosen at least as large as the harmless support
+constant that appears below.
+
+\section{The exact stopped-current representation}
+
+\subsection*{Theorem 3.1 (changing-current telescope)}
+
+For every $j_0\leq j\leq J$,
+\[
+ \boxed{Y_j-Y_{j-1}=b_j+c_j.}
+ \tag{3.1}
+\]
+Consequently, for $n\geq j_0$,
+\[
+ \boxed{
+ B_n:=\sum_{j=j_0}^{n}b_j
+ =Y_n-Y_\ell-\sum_{j=j_0}^{n}c_j.}
+ \tag{3.2}
+\]
+
+\emph{Proof.}
+Insert and subtract $P_{j-1}\mathcal J_j$:
+\begin{align*}
+Y_j-Y_{j-1}
+&=(P_j-P_{j-1})\mathcal J_j
+  +P_{j-1}(\mathcal J_j-\mathcal J_{j-1})\\
+&=b_j+c_j.
+\end{align*}
+Summing gives (3.2).  No limiting operation is involved. \hfill$\square$
+
+Because $b_j$ is a martingale difference, the vectors $\Pi_m b_j$ are
+pairwise orthogonal in $L^2(\Omega;H)$ for fixed $m$.  Define the deterministic
+index
+\[
+ n_C(m)=\min\{J,m-C\},
+\]
+and interpret every sum ending below $j_0$ as zero.
+
+\subsection*{Theorem 3.2 (FAR wedge as a stopped square)}
+
+The R-080 FAR quantity satisfies the exact identity
+\begin{align*}
+ S_C
+ &:={\sum_{j=j_0}^{J}\sum_{m\geq j+C}}
+     \mathbb E\|\Pi_m b_j\|^2\\
+ &=\sum_m\sum_{j=j_0}^{n_C(m)}
+     \mathbb E\|\Pi_m b_j\|^2\\
+ &=\boxed{
+   \sum_m\mathbb E\left\|
+   \Pi_m\left[
+      Y_{n_C(m)}-Y_\ell
+      -\sum_{j=j_0}^{n_C(m)}c_j
+   \right]\right\|^2.}
+ \tag{3.3}
+\end{align*}
+
+\emph{Proof.}
+Exchange the two deterministic sums.  Martingale orthogonality turns the
+inner sum of squares into the square of $B_{n_C(m)}$.  Apply (3.2).  Since
+$n_C(m)$ is deterministic, no stopping-time hypothesis or optional-stopping
+theorem is used. \hfill$\square$
+
+\subsection*{The predictable drift is load-bearing}
+
+For $Z_j^-=U_{j-1}+A^{(j-1)}$, $a_j=A^{(j)}-A^{(j-1)}$, and the R-079
+heat-projected coefficient
+\[
+ \overline M_{j-1}=P_{\Sigma_{j:J}}M,
+\]
+the drift has the exact two-channel form
+\begin{align*}
+c_j={}&Q_{\rm II}^{1/2}
+ [\overline M_{j-1}(Z_j^-+a_j)
+  -\overline M_{j-1}(Z_j^-)]^T DZ_j^-\\
+&+Q_{\rm II}^{1/2}
+ \overline M_{j-1}(Z_j^-+a_j)^TDa_j.
+\tag{3.4}
+\end{align*}
+The first line is predictable control-value injection and the second is
+predictable control-derivative injection.  In the deterministic changing
+current example $\mathcal J_j=x_j$, every $b_j$ is zero while
+$Y_n-Y_\ell=\sum_jc_j=x_n-x_\ell$.  Thus deletion of $c_j$ makes (3.2)
+false even before any analytic estimate is attempted.
+
+\section{The heat compensator and the three root channels}
+
+Let
+\[
+ Z=U_{j-1}+A^{(j)},\qquad g_j=U_j-U_{j-1},
+\]
+and set
+\[
+ \overline M_j=P_{\Sigma_{j+1:J}}M,
+ \qquad
+ \overline M_{j-1}=P_{\Delta\Sigma_j}\overline M_j.
+\]
+R-079 expands a root exactly as
+\[
+ b_j=\iota_j+\nu_j+\kappa_j,
+ \tag{4.1}
+\]
+where
+\begin{align*}
+\iota_j
+ &=Q_{\rm II}^{1/2}\overline M_j(Z+g_j)^TDg_j,\\
+\nu_j
+ &=Q_{\rm II}^{1/2}
+   [\overline M_j(Z+g_j)-\overline M_j(Z)]^TDZ,\\
+\kappa_j
+ &=Q_{\rm II}^{1/2}
+   [\overline M_j-\overline M_{j-1}](Z)^TDZ.
+\tag{4.2}
+\end{align*}
+These are derivative injection, raw value innovation, and heat compensator.
+For a common real-even covariance the root value $g_j(x)$ and root derivative
+$Dg_j(x)$ are independent.  Therefore
+\[
+ \mathbb E_{j-1}\iota_j=0,
+ \qquad
+ \mathbb E_{j-1}\nu_j=-\kappa_j.
+ \tag{4.3}
+\]
+The centered object is $\nu_j+\kappa_j$, not $\nu_j$ alone.
+
+The scalar fixture $M(x)=x^2$, with a centered root of variance $\sigma$,
+detects the error immediately:
+\[
+ \mathbb E_{j-1}\nu_j=\sigma DZ,
+ \qquad
+ \kappa_j=-\sigma DZ.
+ \tag{4.4}
+\]
+This corrects any informal use of ``centered value innovation'' in which the
+heat compensator was not explicitly joined to it.
+
+For the production Cartan quotient, write
+\[
+ F_A(z)=q_A(z)z,
+ \qquad
+ \Phi_{A,j}=P_{\Sigma_{j+1:J}}F_A.
+\]
+Up to the fixed factor $-2$ and the finite $Q_{\rm II}$ coordinates, the
+Cartan root is
+\begin{align*}
+b_{A,j}^{\rm Car}=-2\{&
+ \Phi_{A,j}(Z+g_j)^TDg_j\\
+&+[\Phi_{A,j}(Z+g_j)-\Phi_{A,j}(Z)]^TDZ\\
+&+[\Phi_{A,j}-\Phi_{A,j-1}](Z)^TDZ\}.
+\tag{4.5}
+\end{align*}
+The safe centered split is
+\[
+ p_{A,j}=\Phi_{A,j}(Z)^TDg_j
+ \tag{4.6}
+\]
+and
+\begin{align*}
+r_{A,j}={}&
+[\Phi_{A,j}(Z+g_j)-\Phi_{A,j}(Z)]^T(DZ+Dg_j)\\
+&+[\Phi_{A,j}-\Phi_{A,j-1}](Z)^TDZ.
+\tag{4.7}
+\end{align*}
+Both $p_{A,j}$ and $r_{A,j}$ have conditional mean zero.  The second object
+keeps the raw value innovation, nonlinear derivative injection, and heat
+compensator in one balanced block.  It must not be factorised through
+$D_jA$; the R-081 witness already rules out that factorisation.
+
+\section{The uncontrolled FAR channel closes}
+
+Set $A^{(j)}\equiv0$ and write $\mathcal J^0$ for the resulting current.  It
+does not change with $j$, hence $c_j=0$ and
+\[
+ B_n^0=(P_n-P_\ell)\mathcal J^0.
+ \tag{5.1}
+\]
+The FAR loss is therefore
+\[
+ S_C^0=\sum_m\mathbb E\left\|
+ \Pi_m(P_{n_C(m)}-P_\ell)\mathcal J^0
+ \right\|^2.
+ \tag{5.2}
+\]
+
+The global R-050 conclusion
+$\mathcal J^0\in\mathcal C^{-1/2-\kappa}$ does not by itself sum (5.2).
+The needed improvement is localised to the region $m\geq n+C$.
+
+\subsection*{Lemma 5.1 (support-refined R-050 tail)}
+
+Fix
+\[
+ \frac13<\alpha<\frac12,
+ \qquad 0<\beta<3\alpha-1.
+\]
+For the heat-projected uncontrolled current and $m\geq n+C_0$,
+\[
+ \boxed{
+ \mathbb E\|\Pi_mP_n\mathcal J^0\|_{L^2_x}^2
+ \leq C_{\alpha,\beta,e},2^{-2\beta m}.}
+ \tag{5.3}
+\]
+The constant is uniform in $n$ and the ultraviolet cutoff.
+
+\emph{Proof.}
+Conditional expectation over future roots gives a smooth heat-averaged
+coefficient evaluated on the band-limited field $U_n$ and paired with
+$DU_n$.  The common even covariance eliminates the local coefficient--future
+derivative contraction.  R-050 gives, uniformly in the target heat,
+\[
+ F_n(U_n)=T_{DF_n(U_n)}U_n+R_n,
+ \qquad R_n\in\mathcal C^{2\alpha},
+ \tag{5.4}
+\]
+with all required second moments bounded independently of the cutoff.
+
+The high factor in $T_{DF_n(U_n)}U_n$ is a block of $U_n$, so this term has
+spatial support at frequencies at most a fixed multiple of $2^n$.  After
+multiplication by $DU_n$, every low--high or resonant term whose high factor
+is $U_n$ or $DU_n$ has the same support.  It vanishes when
+$m\geq n+C_0$.
+
+In that relative-far region, the only possible high factor is the
+paralinearisation remainder $R_n$.  Its low--high product with $DU_n$ has
+regularity
+\[
+ (\alpha-1)+2\alpha=3\alpha-1>0.
+ \tag{5.5}
+\]
+The other Bony pieces again have their high factor in $DU_n$ and vanish by
+support.  Thus the relative-far part is bounded in
+$L^2(\Omega;\mathcal C^{3\alpha-1-})$.  Littlewood--Paley projection gives
+(5.3) for every strict $\beta<3\alpha-1$. \hfill$\square$
+
+The strict inequality is load-bearing.  At the convenient value
+$\alpha=2/5$, every $\beta<1/5$ is admitted, but $\beta=1/5$ is not claimed.
+Although $\alpha$ may approach $1/2$, no endpoint half derivative is claimed.
+
+\subsection*{Theorem 5.2 (cutoff-uniform uncontrolled FAR)}
+
+For $C\geq C_0+1$ and every exponent in Lemma 5.1,
+\[
+ \boxed{S_C^0\leq
+ C_{\alpha,\beta,e,j_0},2^{-2\beta C}.}
+ \tag{5.6}
+\]
+
+\emph{Proof.}
+For every nonempty stopped term, $n_C(m)=m-C$ unless the terminal cutoff has
+already been reached; in either case $m\geq n_C(m)+C_0$.  Apply (5.3) to the
+moving endpoint and to the fixed endpoint $P_\ell\mathcal J^0$, use
+$\|x-y\|^2\leq2\|x\|^2+2\|y\|^2$, and sum the geometric series beginning at
+$m\geq j_0+C$.  The terminally saturated range is bounded by the same
+estimate and does not introduce a factor depending on $J$. \hfill$\square$
+
+This theorem closes only the uncontrolled contribution.  It does not turn a
+deterministic relative-gap estimate into the complete controlled root sum.
+
+\section{The exact controlled FAR target and a sufficient route}
+
+Define
+\[
+ \delta Y_j=P_j(\mathcal J_j-\mathcal J^0).
+\]
+Subtracting the uncontrolled telescope from (3.2) gives
+\[
+ \sum_{j=j_0}^{n}d_j(\mathcal J_j-\mathcal J^0)
+ =\delta Y_n-\delta Y_\ell-\sum_{j=j_0}^{n}c_j.
+ \tag{6.1}
+\]
+Thus the exact remaining controlled FAR theorem is the following estimate,
+not an estimate on any one channel separately:
+\begin{align*}
+&\sum_m\mathbb E\left\|
+ \Pi_m\left[
+ \delta Y_{n_C(m)}-\delta Y_\ell
+ -\sum_{j=j_0}^{n_C(m)}
+   (c_j^{\rm val}+c_j^{\rm der})
+ \right]\right\|^2\\
+&\hspace{25mm}\leq
+ K_e2^{-\theta C}
+ \left(1+\mathbb E[X^{1/2}Y^{1/2}]\right),
+ \qquad \theta>0.
+\tag{CFAR}
+\end{align*}
+Here
+\[
+ X=\int\|h_s\|_2^2\,ds,
+ \qquad Y=\|U+A^*\|_6^6.
+\]
+The estimate must be uniform in the cutoff and in the declared regular
+control class.  A large fixed $C$ would then make the mixed coefficient small
+enough for the single Young allocation
+\[
+ K_e2^{-\theta C}\mathbb E\sqrt{XY}
+ \leq\eta\mathbb EX+\zeta\mathbb EY.
+ \tag{6.2}
+\]
+
+The following exact lemma shows one possible analytic route.
+
+\subsection*{Lemma 6.1 (orthogonal causal Carleson summation)}
+
+Suppose
+\[
+ f_j=\sum_{k\leq j}u_k,
+\]
+and, for every fixed output shell $m$, the vectors $\Pi_mu_k$ are pairwise
+orthogonal in $L^2(\Omega;H)$.  If
+\[
+ \mathbb E\|\Pi_mu_k\|^2
+ \leq2^{-2s(m-k)}q_k,
+ \qquad m\geq k+C_0,\qquad s>\frac12,
+ \tag{6.3}
+\]
+then
+\[
+ \boxed{
+ \sum_m\sum_{j\leq m-C}2^j
+ \mathbb E\|\Pi_mf_j\|^2
+ \leq C_s2^{-2sC}\sum_k2^kq_k,}
+ \tag{6.4}
+\]
+where one may take
+\[
+ C_s=\frac{1}{
+ (1-2^{1-2s})(1-2^{-2s})}.
+ \tag{6.5}
+\]
+
+\emph{Proof.}
+Orthogonality removes every $k\neq k'$ cross term.  All terms are
+nonnegative, so the summations may be rearranged:
+\begin{align*}
+\sum_m\sum_{j\leq m-C}2^j\|\Pi_mf_j\|_2^2
+&\leq\sum_kq_k\sum_{j\geq k}2^j
+       \sum_{m\geq j+C}2^{-2s(m-k)}\\
+&=\frac{2^{-2sC}}{1-2^{-2s}}
+  \sum_k2^kq_k\sum_{r\geq0}2^{(1-2s)r},
+\end{align*}
+which is (6.4). \hfill$\square$
+
+The threshold is sharp for this triangular architecture.  At $s=1/2$, take
+only $u_0$ and prescribe
+$\mathbb E\|\Pi_m u_0\|^2=2^{-m}$.  Then the contribution of each large
+$m$ is bounded below by a positive constant because
+$\sum_{j\leq m-C}2^j\asymp2^{m-C}$.  The truncated sum grows linearly.
+
+If production analysis supplied
+\[
+ q_k\lesssim2^{-4k}\mathbb E\|h_k\|_2^2,
+\]
+then
+\[
+ \sum_k2^kq_k
+ \lesssim2^{-3j_0}\mathbb EX,
+ \tag{6.6}
+\]
+so this channel would use the Cameron--Martin budget once.  The missing step
+is precisely a causal, adapted, balanced input-scale decomposition with
+$s>1/2$ for the combined stopped endpoint and predictable drift, retaining
+(4.7).  R-081 shows that such a decomposition cannot be built from $D_jA$
+alone.  Lemma 6.1 is therefore a verified sufficient condition, not the
+complete controlled FAR theorem.
+
+\section{Global production current coordinates}
+
+Write the field and tangent as
+\[
+ \Psi=(u_1,u_2,\chi),
+ \qquad \dot\Psi=(v_1,v_2,w),
+\]
+and put
+\[
+ r=|u|^2,
+ \quad \rho=r+|\chi|^2,
+ \quad d=\rho+e,
+ \quad dr=2\operatorname{Re}(u^*v),
+ \quad d\rho=2\operatorname{Re}(u^*v+\overline\chi w).
+\]
+For the Pauli generators let
+\[
+ m_A=u^*\sigma_Au,
+ \qquad J_A=dm_A,
+ \qquad K_A=dm_A-m_A\frac{d\rho}{d}.
+\]
+R-075 gives
+\[
+ Q_{\rm II}=\begin{pmatrix}a&b\\b&c\end{pmatrix},
+ \quad
+ a=\frac9{500P},\quad b=\frac3{400P},\quad
+ c=\frac3{320P},\quad P=4+10^{-12}.
+ \tag{7.1}
+\]
+Define the derived constants
+\[
+ c_0=\frac3{250P},
+ \qquad c_1=\frac{243}{8000P},
+ \qquad \alpha=\frac59.
+ \tag{7.2}
+\]
+Then
+\[
+ T=\begin{pmatrix}
+ \sqrt{c_0}&0\\
+ \sqrt{c_1}(1-\alpha)&\sqrt{c_1}\alpha
+ \end{pmatrix},
+ \qquad T^TT=Q_{\rm II}.
+ \tag{7.3}
+\]
+Thus $T(J_A,K_A)^T=(\sqrt{c_0}J_A,\sqrt{c_1}L_A)^T$, where
+\[
+ L_A=(1-\alpha)J_A+\alpha K_A
+ =J_A-\alpha m_A\frac{d\rho}{d}.
+ \tag{7.4}
+\]
+The resulting six-coordinate current is a fixed orthogonal representation of
+the R-079 $Q_{\rm II}^{1/2}$ current and preserves its individual
+conditional root blocks.
+
+\subsection*{Theorem 7.1 (global Pauli--Fierz square)}
+
+Let
+\[
+ h=u_1v_2-u_2v_1
+\]
+and define
+\[
+ \boxed{
+ \Xi(\Psi,\dot\Psi)=
+ \begin{pmatrix}
+ \sqrt{c_0}\,dr\\
+ \sqrt{c_1}\left(dr-\alpha\dfrac r d\,d\rho\right)\\
+ 2\sqrt{c_0+c_1}\operatorname{Re}h\\
+ 2\sqrt{c_0+c_1}\operatorname{Im}h
+ \end{pmatrix}.}
+ \tag{7.5}
+\]
+Then, globally including $r=0$,
+\[
+ \boxed{
+ \sum_{A=1}^3 |(J_A,K_A)|_{Q_{\rm II}}^2
+ =|\Xi(\Psi,\dot\Psi)|^2.}
+ \tag{7.6}
+\]
+The physical energy has the outer factor $1/2$.
+
+\emph{Proof.}
+The Pauli completeness relation gives the chart-free Fierz identities
+\[
+ \sum_AJ_A^2=(dr)^2+4|h|^2,
+ \tag{7.7}
+\]
+and
+\[
+ \sum_AL_A^2=
+ \left(dr-\alpha\frac r d\,d\rho\right)^2+4|h|^2.
+ \tag{7.8}
+\]
+Equation (7.3) diagonalises each $A$ block.  Summing
+$c_0J_A^2+c_1L_A^2$ and applying (7.7)--(7.8) gives (7.6).  The determinant
+$h$ avoids division by $r$, so the formula remains valid at $u=0$.
+\hfill$\square$
+
+In the six-real ordering
+\[
+ (\operatorname{Re}\psi_1,\operatorname{Re}\psi_2,
+   \operatorname{Re}\psi_3,
+   \operatorname{Im}\psi_1,\operatorname{Im}\psi_2,
+   \operatorname{Im}\psi_3),
+\]
+write $C(z)y=\Xi(z,y)$.  Polarisation of (7.6) gives
+\[
+ \boxed{B(z)=C(z)^TC(z),}
+ \tag{7.9}
+\]
+where $C$ is $4\times6$.  When a complex covariance is converted to these
+real coordinates, the convention is
+$\Gamma_{\mathbb R}=\frac12\operatorname{realify}(D_{\mathbb C})$.
+
+Only the second row of (7.5) is rational.  If $P_{\rm dbl}$ is the projector
+onto the doublet coordinates, its coefficient is
+\[
+ g(z)=P_{\rm dbl}z-\alpha\frac r d z.
+\]
+The elementary estimates $r/d\leq1$ and
+$|z|\,|\nabla(r/d)|\leq1$ yield
+\[
+ \|Dg\|_{\rm op}\leq1+2\alpha=\frac{19}{9}.
+ \tag{7.10}
+\]
+Thus the complete current reduces to three linear rows and one globally
+Lipschitz rational row.  This is a genuine simplification, but it is not a
+signed NEAR estimate.
+
+\subsection*{Why the four-coordinate compression is not rootwise}
+
+The map from the fixed six-current to (7.5) depends on the state.  It
+preserves pointwise norm, $B$, and the Wick trace, but conditional expectation
+does not commute with that state-dependent compression.  The independent
+two-root regression has equal pointwise and terminal energies but different
+first- and second-root Doob squares.  Therefore R-079 rootwise bounds may be
+rerun directly in $\Xi$ space, but may not be transported block by block from
+the fixed six-current merely from (7.6).
+
+For a terminal pair $\Xi_*$ and baseline $\Xi_0$, let
+\[
+ R_j=d_j(\Xi_*-\Xi_0).
+\]
+The exact resummed current identity is
+\begin{align*}
+\mathbb E[\mathcal W_J(A^*)-\mathcal W_J(A^0)]
+={}&\frac12\mathbb E
+ (\|P_\ell\Xi_*\|^2-\|P_\ell\Xi_0\|^2)
+ -\frac12\mathbb E(B_*-B_0):\Gamma_\ell\\
+&+\sum_j\left[
+ \mathbb E\langle d_j\Xi_0,R_j\rangle
+ +\frac12\mathbb E\|R_j\|^2
+ -\frac12\mathbb E(B_*-B_0):\Delta\Gamma_j
+ \right].
+\tag{7.11}
+\end{align*}
+This equals the re-summed R-079 injected/future-current algebra.  The positive
+Doob square does not control the mixed baseline, Wick trace, paid subtraction,
+or R-063 forest.
+
+\section{Heat lifting and the exact covariance criterion}
+
+Target heat must act on the Gram matrix, not on $C$ before squaring.  The
+correct enlarged Hilbert coordinate is
+\[
+ \Xi_\Sigma(z,y)(r)=C(z+r)y
+ \in L^2(\mu_\Sigma;\mathbb R^4),
+ \tag{8.1}
+\]
+so that
+\[
+ \|\Xi_\Sigma(z,y)\|^2
+ =y^T(P_\Sigma B)(z)y.
+ \tag{8.2}
+\]
+In contrast,
+\[
+ P_\Sigma B-(P_\Sigma C)^T(P_\Sigma C)
+ =\mathbb E[(C-P_\Sigma C)^T(C-P_\Sigma C)]\succeq0.
+ \tag{8.3}
+\]
+At $z=0$ under the symmetric law $r=\pm te_1$, one has
+$P_\Sigma C=0$ but $P_\Sigma B=B(te_1)\neq0$.  This also shows why changing
+heat covariance across roots requires the compensator in Section 4.
+
+\subsection*{Theorem 8.1 (conditional square--trace identity)}
+
+Let $C(z)$ and a derivative control $c$ be measurable with respect to a
+sigma-algebra $\mathcal A$.  For a fresh derivative vector $G$, put
+\[
+ \mu=\mathbb E[G\mid\mathcal A],
+ \qquad
+ \Sigma_c=\operatorname{Cov}(G\mid\mathcal A),
+ \qquad B=C^TC.
+\]
+Then
+\begin{align*}
+&\mathbb E\left[
+ \frac12|C(z)(G+c)|^2-\frac12\operatorname{Tr}(B(z)\Gamma)
+ \mathrel{\Big|}\mathcal A\right]\\
+&\qquad=
+ \boxed{
+ \frac12|C(z)(c+\mu)|^2
+ +\frac12\operatorname{Tr}
+ [B(z)(\Sigma_c-\Gamma)].}
+\tag{8.4}
+\end{align*}
+
+\emph{Proof.}
+Write $G+c=(G-\mu)+(c+\mu)$.  The conditional mixed term vanishes.  The
+conditional expectation of the centered square is
+$\operatorname{Tr}(B\Sigma_c)$, which gives (8.4). \hfill$\square$
+
+If $\mu=0$ and $\Sigma_c=\Gamma$, (8.4) is the nonnegative square
+$\frac12|C(z)c|^2$.  This closes the predictable coefficient/fresh derivative
+subbranch.  General later feedback changes $\mu$ or $\Sigma_c$; the remaining
+trace defect is signed.  The two conditional laws $G=0$ and
+$G=\pm\sqrt2$ relative to $\Gamma=1$ give defects $-1/2$ and $+1/2$.
+Accordingly, covariance preservation is a hypothesis to prove, not a
+consequence of adaptedness.
+
+\section{Moving shell edges are a signed repartition}
+
+Let $L_j\leq U_j$ be nested exact orthogonal spatial projectors commuting
+with the target quadratic form.  At a fixed complete current $c$, divide
+space into low $L_j$, near $U_j-L_j$, and high $I-U_j$.  In the forward
+partition convention the edge fluxes are
+\begin{align*}
+ \Phi_{\rm low}
+ &=+\frac12\|\Delta L_jc\|_Q^2,\\
+ \Phi_{\rm near}
+ &=+\frac12\|\Delta U_jc\|_Q^2
+   -\frac12\|\Delta L_jc\|_Q^2,\\
+ \Phi_{\rm high}
+ &=-\frac12\|\Delta U_jc\|_Q^2.
+ \tag{9.1}
+\end{align*}
+Therefore
+\[
+ \Phi_{\rm low}+\Phi_{\rm near}+\Phi_{\rm high}=0.
+ \tag{9.2}
+\]
+All signs reverse in the backward/loss convention.  This identity is the
+sharp-shell repartition of the R-069 pure-control telescope.  It does not
+create a positive absolute pair-high term and does not control smooth
+Littlewood--Paley commutators, the covariance trace, paid terms, or the
+forest.
+
+\section{Evidence map: successes, failed routes, and reuse}
+
+The proof search is recorded by mathematical route rather than only by its
+successful endpoint.
+
+\begin{enumerate}
+\item \emph{Direct rootwise FAR summation.}  R-081 found the critical repeated
+$X^{1/2}Y^{1/2}$ loss.  Verdict: failed as a one-use argument.  Reuse: it
+identified the need to sum orthogonally before applying Young.
+
+\item \emph{Stopped-current reordering.}  The deterministic wedge and
+martingale orthogonality give (3.3).  Verdict: exact success.  Boundary: the
+moving endpoint and $c_j$ remain inside the norm.
+
+\item \emph{Dropping predictable drift.}  A deterministic changing current
+has $b_j=0$ and nonzero $c_j$.  Verdict: falsified.  Reuse: (CFAR) now keeps
+both drift channels explicitly.
+
+\item \emph{Calling the raw value innovation centered.}  The $M(x)=x^2$
+fixture gives (4.4).  Verdict: falsified.  Reuse: value innovation and heat
+compensator are joined in the balanced block (4.7).
+
+\item \emph{Using only the global R-050 negative regularity.}  That estimate
+does not sum the stopped FAR wedge.  Verdict: insufficient.  Reuse: spatial
+support isolates the $3\alpha-1$ paralinear remainder and proves Lemma 5.1.
+
+\item \emph{Uncontrolled support-refined FAR.}  Lemma 5.1 and the stopped
+identity give Theorem 5.2.  Verdict: success, uniformly in the cutoff.
+
+\item \emph{A factorised controlled coefficient with causal input scales.}
+Orthogonal Carleson summation succeeds for $s>1/2$ and fails sharply at
+$s=1/2$.  Verdict: conditional success.  Missing input: the production
+balanced decomposition for the full endpoint--drift combination.
+
+\item \emph{Factoring the nonlinear current through $D_jA$.}  The R-081
+upper-triangular Jensen witness has zero $D_jA$ and nonzero coefficient
+innovation.  Verdict: falsified.  Reuse: retain the secant, derivative,
+value, and heat terms jointly.
+
+\item \emph{Diagonalising the production current.}  The fixed bridge (7.3)
+and Pauli completeness give the global four-coordinate square (7.5).
+Verdict: exact success, including $r=0$.
+
+\item \emph{Transporting individual root blocks through Pauli--Fierz
+compression.}  The state-dependent map redistributes two-root Doob energy.
+Verdict: falsified.  Reuse: apply Doob directly in $\Xi$ space and preserve
+the complete packet.
+
+\item \emph{Squaring the heat-averaged coordinate.}  Formula (8.3) and the
+symmetric heat witness show that $(P_\Sigma C)^T(P_\Sigma C)$ loses a positive
+variance.  Verdict: falsified.  Reuse: lift $C(z+r)$ into the heat Hilbert
+space.
+
+\item \emph{Conditional covariance preservation.}  The fresh independent
+subbranch becomes a positive square by (8.4); future feedback has a signed
+covariance defect.  Verdict: exact conditional success, general closure
+absent.
+
+\item \emph{Using moving edge flux as a new payment.}  The three regions
+cancel exactly by (9.2).  Verdict: bookkeeping success, positivity claim
+falsified.  Reuse: preserve the signed complete current telescope.
+\end{enumerate}
+
+No new negative-result card is needed for the recurring nonlinear,
+covariance, or absolute pair-high obstructions: the existing A13 negative
+records already govern them.  The new centering correction and compression
+regression are retained in both executables and this evidence map so that
+they cannot silently regress.
+
+\section{Remaining route to Sector A}
+
+After R-082 the narrow proof order is:
+\[
+ \boxed{\text{controlled (CFAR)}}
+ \longrightarrow
+ \boxed{\text{complete signed NEAR square--trace--forest}}
+ \longrightarrow
+ \boxed{\text{overlap-stable progression}}
+ \tag{11.1}
+\]
+followed by
+\[
+ \boxed{\text{controlled-shell one-use}}
+ \longrightarrow
+ \boxed{q=10/9\ \text{Nelson synthesis}}
+ \longrightarrow
+ \boxed{\text{Sector-A closure audit}}.
+ \tag{11.2}
+\]
+
+The next controlled-FAR attempt should prove the balanced causal input-scale
+decomposition required after Lemma 6.1, with the stopped endpoint and both
+predictable drifts treated together.  In parallel, the NEAR proof should use
+the four-row coordinate (7.5) but retain the heat Hilbert lift, the mixed
+baseline, the covariance trace, the R-063 forest, and the existing paid
+subtraction.  The only rational row has the global Lipschitz ceiling $19/9$;
+the other three rows are linear.  Any positivity step must state its
+measurability and conditional-covariance hypotheses.
+
+The arithmetic target remains conditional:
+\[
+ \varepsilon_V=\frac9{20},
+ \qquad q=\frac1{2\varepsilon_V}=\frac{10}{9},
+ \qquad q-\frac{11}{10}=\frac1{90}.
+ \tag{11.3}
+\]
+These equalities do not establish one-use, Nelson, an interacting measure, a
+removal limit, or Sector-A closure.
+
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{Objection:} (3.3) double-counts $Q_{\rm II}$ or uses optional
+stopping.  \textbf{DISMISSED.}  The current already carries
+$Q_{\rm II}^{1/2}$, the norm is the ordinary Hilbert norm, and $n_C(m)$ is a
+deterministic index.
+
+\item \textbf{Objection:} the endpoint formula may omit the changing-control
+drift.  \textbf{VALID WITH MITIGATION.}  The omission is false; (3.4), the
+deterministic counterfixture, (CFAR), and both executables retain it.
+
+\item \textbf{Objection:} Lemma 5.1 follows from the global R-050 regularity
+alone.  \textbf{UPHELD against that argument.}  The proof instead uses the
+band support of every rough high factor and the positive
+$3\alpha-1$ remainder.  Only strict $\beta<3\alpha-1$ is asserted.
+
+\item \textbf{Objection:} the Carleson lemma proves controlled FAR.
+\textbf{UPHELD.}  It is only a sufficient summation lemma.  The causal
+production decomposition (6.3), jointly for endpoint and drift, is open.
+
+\item \textbf{Objection:} the four-coordinate norm identity transports all
+R-079 root blocks.  \textbf{UPHELD.}  Only the fixed six-current does so.  The
+Pauli--Fierz compression is state-dependent and the independent two-root
+fixture explicitly redistributes root energy.
+
+\item \textbf{Objection:} heat averaging commutes with the square root
+coordinate.  \textbf{UPHELD.}  Formula (8.3) gives the missing positive
+variance.  The heat-lifted coordinate (8.1) is used instead.
+
+\item \textbf{Objection:} complete-current positivity implies translated
+convexity.  \textbf{UPHELD.}  The existing production Bregman fixture has
+negative second derivative.  The square, trace, mixed, paid, and forest terms
+must remain together.
+
+\item \textbf{Objection:} (9.1) supplies a new positive pair-high payment.
+\textbf{UPHELD.}  The three edge fluxes sum to zero.  It is only a signed
+repartition of the pure-control telescope.
+\end{enumerate}
+
+External adversarial review is invited specifically for the support-refined
+step in Lemma 5.1, the orthogonality hypothesis in Lemma 6.1, the real/complex
+covariance convention under (7.9), and the conditional covariance hypothesis
+in (8.4).
+
+\section{Reproduction and independent audit}
+
+The primary executable checks the changing-current telescope, martingale
+orthogonality, stopped FAR square, nonzero predictable drift, quadratic heat
+compensator, support and exponent ledgers, the orthogonal Carleson threshold,
+the global Fierz coordinate, complete-current Doob variance, conditional
+square--trace identity, Bregman negative control, moving edge flux, and
+honesty flags.  The non-importing executable uses an alternate finite
+filtration, random Fourier data, direct NumPy Gram matrices, the two-root
+state-dependent compression regression, the symmetric heat witness, and
+independent covariance and edge fixtures.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_stopped_current_far_complete_current_near_
+  reduction_verify.py
+\end{verbatim}
+The child contracts are primary $54/54$ and non-importing independent
+$52/52$.  The integrated verifier pins R-050, R-063, R-075, R-079, R-080,
+and R-081; checks the note, PDF, manifest, run, result, roadmap, gate, task,
+claim, exploration, and honesty surfaces; and fails closed if controlled FAR,
+complete signed NEAR, progression, one-use, Nelson, measure, or Sector-A
+closure is promoted.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-
+           NEAR-COORDINATE-REDUCTION
+Precise statement:       The FAR wedge is exactly one deterministic stopped-
+                         current square retaining the moving endpoint and
+                         predictable value/derivative drift. The raw value
+                         innovation centers only with its heat compensator.
+                         The uncontrolled production FAR loss decays
+                         cutoff-uniformly as 2^(-2 beta C) for every
+                         beta<3 alpha-1. An orthogonal causal Carleson lemma
+                         has the sharp s>1/2 threshold. The complete
+                         production current has a global four-coordinate
+                         Pauli--Fierz square and an exact conditional-
+                         covariance positivity criterion, but the compression
+                         is not rootwise and future covariance defects remain.
+Scope:                   Finite cutoff; fixed positive floor; common even
+                         regulator; exact products; pinned production frame;
+                         constants cutoff-uniform only where stated.
+Dependencies:            R-050; R-063; R-069; R-070; R-075; R-079; R-080;
+                         R-081.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/
+                         a13_classii_stopped_current_far_complete_current_
+                         near_reduction_verify.py
+Expected output:          Primary 54/54; independent 52/52; manifest-pinned
+                         integrated and aggregate PASS; exit zero.
+Falsification gate:      Failure of the stopped identity, drift or heat
+                         centering, support-refined tail, Carleson threshold,
+                         Fierz/Gram identity, compression regression, heat
+                         lift, covariance identity, edge cancellation,
+                         evidence hash, PDF contract, or honesty flag.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No controlled FAR theorem, complete signed NEAR
+                         theorem, overlap-stable progressive lower bound,
+                         controlled-shell one-use, Nelson bound, measure
+                         theorem, removal limit, or Sector-A closure is proved.
+Next required action:    Prove balanced causal controlled CFAR with s>1/2,
+                         then the complete heat-lifted signed NEAR packet and
+                         overlap-stable progression before one-use synthesis.
+\end{verbatim}
+\endgroup

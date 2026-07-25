@@ -253,6 +253,28 @@ endpoint theorem.
     the R-075 graph is not progressive-dense. The remaining targets are the complete root-
     resolved FAR estimate, adapted/signed NEAR theorem, and overlap-stable
     complete-packet lower bound plus variational extension.
+23. **Stopped-current FAR and complete-current NEAR coordinate reduction.**
+    R-082,
+    `A13-CLASSII-STOPPED-CURRENT-FAR-COMPLETE-CURRENT-NEAR-COORDINATE-REDUCTION`,
+    sums the complete stopped-current FAR wedge before any Young allocation. The changing-
+    current telescope retains its moving endpoint and both predictable control
+    drifts, and the raw value innovation is centered only after adding its heat
+    compensator. Once the uncontrolled current is separated, spatial support
+    removes every rough high factor in the relative-far region; the R-050
+    first paralinearisation remainder yields cutoff-uniform
+    `2^(-2 beta C)` decay for every strict `beta<3 alpha-1`. An exact
+    orthogonal causal Carleson lemma identifies `s>1/2` as the sharp sufficient
+    threshold for spending the controlled input once, but the balanced
+    production endpoint-drift decomposition is not yet proved. On the NEAR
+    side, the complete production current has a global four-row Pauli--Fierz
+    Gram coordinate, including at zero doublet amplitude, with three linear
+    rows and one rational row. Independent regressions show that this state-
+    dependent compression does not preserve individual Doob blocks and that
+    target heat must average `C^T C`, not square `P_Sigma C`. Conditional
+    covariance preservation closes only the fresh derivative subbranch;
+    future feedback leaves a signed defect. The new frontier is controlled
+    CFAR, the complete heat-lifted signed NEAR square--trace--forest packet,
+    and overlap-stable progression before one-use and Nelson synthesis.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

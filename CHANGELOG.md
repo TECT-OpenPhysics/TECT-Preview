@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-082 stopped-current FAR and complete-current NEAR coordinate reduction] - 2026-07-25
+
+Recorded the exact changing-current stopped-square identity with both predictable drifts, corrected raw-value/heat centering, closed the uncontrolled production FAR subbranch for every strict beta<3 alpha-1, proved the sharp orthogonal s>1/2 causal Carleson summation lemma, and derived the global four-row complete-current Pauli--Fierz Gram coordinate with heat-lift and conditional-covariance boundaries. Primary 54/54, non-importing independent 52/52, integrated 103/103, and aggregate 209/209 are manifest-pinned. The twelve-page zero-form PDF passed Poppler render and final all-page visual QA after one literal qquads markup repair. Controlled CFAR, complete heat-lifted signed NEAR, overlap-stable progression, one-use, Nelson, and Sector A remain open.
+
 ## [R-081 adversarial contract and nonlinear-NEAR repair] - 2026-07-25
 
 Supersedes the initial pre-audit R-081 run counts. The verifier now enforces manifest counts and the live claim surface; both child audits execute a nonzero complete-packet cross term; the Cartan theorem names the heat-averaged quotient vector explicitly. A production two-root shell-carrier witness disproves complete nonlinear coefficient factorisation through D_j alone and yields the exact secant-plus-Jensen split, with no claim against possible cancellation after full packet recombination. The final contracts are primary 60/60, independent 47/47, integrated 148/148, aggregate 255/255. The rebuilt eleven-page PDF has zero overfull boxes, no forms or encryption, and all pages passed direct Poppler-render visual QA. Tier remains T4; FAR, Jensen-defect/complete NEAR, PROG, one-use, Nelson, and Sector A remain open.
