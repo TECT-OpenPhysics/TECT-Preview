@@ -1159,6 +1159,37 @@ covariance-matched predictable blocks. Mean/covariance defects, the signed
 matrix-fractional Jensen contraction, and the coefficient-dominant same-root
 square/trace/forest packet remain. No gate status flips.
 
+R-089,
+A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY,
+closes the terminal-Cameron--Martin part of the progressive covariance
+problem. For every finite-cutoff cylindrical-simple progressive control,
+`T T^*=C` and polar/Douglas decomposition give a pathwise contraction with no
+partition, range-overlap, or revisit multiplicity. Hilbert martingale
+orthogonality then gives a weighted terminal-shell one-use ledger and extends
+the R-088 pure-control quartic terminal bridge to the general progressive
+class. This does not close the nonlinear complete packet.
+
+For controlled Cartan CFAR, summing every physical control shell before the
+square yields one exact first-order operator and the full-cross-shell Fourier
+trace. The far output is bounded by two nonlinear coefficient tails, reducing
+the gate exactly to R-089 (3.12). The `s=1/4` quartic subledger has powers
+`5/16,9/16` and slack `1/8`, but an exact frequency-32 harmonic proves that a
+homogeneous quartic-only bridge cannot pay the lower-order coefficient
+channels. For rational NEAR, the Taylor-coordinate conditional identity gives
+universal covariance-matched positivity iff `L>=0` and
+`B_T+2 eta I>=0`. The production ray has `L/e=-1/432` and a centered
+covariance-matched same-root fixture is negative. Hence the complete endpoint
+square, backward heat, and lower-chaos forest residual R-089 (5.11) remains
+load-bearing.
+
+R-089 also corrects the final implication order. R-087 CORE says full
+OVERLAP is exactly equivalent to the `q=10/9` Nelson bound. R-066
+controlled-shell one-use and every temporal packet are therefore inputs to
+the full OVERLAP lower bound, not a separate step after it. The current gate
+is narrowed to the nonlinear Cartan coefficient energy and complete same-root
+rational heat/forest residual, followed by their assembly inside full
+OVERLAP. No gate status flips.
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
 **Statement:** Prove a cutoff-, partition-, and revisit-uniform lower bound
@@ -1171,7 +1202,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
-sharpened by R-081--R-088
+sharpened by R-081--R-089
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

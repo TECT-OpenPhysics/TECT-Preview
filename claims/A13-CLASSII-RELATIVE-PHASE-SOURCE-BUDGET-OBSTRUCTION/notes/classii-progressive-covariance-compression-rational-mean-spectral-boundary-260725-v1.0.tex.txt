@@ -1,0 +1,675 @@
+% Title: Progressive covariance compression, direct Cartan Fourier trace, and rational mean-spectral boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT/EXECUTED REDUCTION; GLOBAL PROGRESSIVE TERMINAL COMPRESSION, DIRECT CARTAN FOURIER TRACE, AND RATIONAL MEAN-SPECTRAL BOUNDARY CLOSED; NONLINEAR COEFFICIENT LEDGER, COMPLETE SAME-ROOT FOREST, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY
+% Ledger: R-089
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-088 left two central analytic questions.  First, its quartic terminal
+bridge was stated only for a regular orthogonal one-shot control class.
+Second, its production Cartan estimate was organized atom by atom even
+though the exact root expression permits all physical control shells to be
+summed before the Hilbert--Schmidt square.  The rational packet also retained
+a same-root conditional defect whose sign had not been tested on the actual
+production scalar ray.
+
+This note proves four results and records two exact method no-gos.
+
+\begin{enumerate}
+\item A global polar/Douglas contraction controls the terminal
+Cameron--Martin norm of every finite-cutoff cylindrical-simple progressive
+control, independently of time partition, range overlap, or revisit
+multiplicity.  Hilbert-valued martingale orthogonality then gives a genuine
+one-use terminal-shell ledger.  Consequently the R-088 pure-control quartic
+terminal bridge extends to the full progressive class.
+\item The complete sum over physical control shells in the Cartan derivative
+is one first-order operator.  An exact Fourier trace identity, retaining all
+cross-shell terms, reduces its far output to two nonlinear coefficient
+tails.  This avoids both output orthogonality and a per-atom ledger.
+\item The rational conditional packet has a simpler Taylor-coordinate
+normal form.  Under covariance matching it is universally nonnegative
+exactly when two displayed matrices are positive semidefinite.  The actual
+production scalar ray has a negative mean matrix, and a centered,
+covariance-matched, same-root adapted fixture has strictly negative expected
+packet.
+\item The R-087 variational CORE is exactly equivalent to the uniform
+$q=10/9$ Nelson estimate.  Therefore full OVERLAP must already contain the
+complete temporal packet and controlled-shell assembly; invoking those
+ingredients again after CORE is logically redundant.
+\end{enumerate}
+
+The note does not prove the nonlinear Cartan coefficient-tail energy, the
+complete same-root rational heat/forest packet, full REG, uniform OVERLAP,
+the Nelson estimate, an interacting measure, or Sector-A closure.  Tier
+stays T4.
+
+The load-bearing internal authorities are A8 and R-076, R-081, R-084,
+R-087, and R-088.  The A8 covariance symbol and regulator bounds are used
+only for the Cameron--Martin to $H^2$ comparison.  R-087 supplies the exact
+root-diagonal Cartan target and variational CORE.  R-088 supplies the
+sequential secant and quartic Besov endpoint.
+
+\section{Global progressive covariance compression}
+
+Fix a finite cutoff $J$.  Let ${\cal U}=L^2([0,1];H_0)$ be the control
+space, let $H_J$ be the finite-dimensional terminal Gaussian space, and let
+\[
+ T_Jv=\int_0^1K_J(t)v_t\,dt,\qquad
+ C_J=T_JT_J^*=\int_0^1K_J(t)K_J(t)^*\,dt.
+ \tag{2.1}
+\]
+No disjoint-range or one-shot assumption is imposed on $K_J(t)$.
+
+\subsection*{Theorem 2.1 (pathwise global contraction)}
+
+For every $v\in{\cal U}$,
+\[
+ \boxed{\|C_J^{\dagger/2}T_Jv\|_{H_J}^2
+ \le\int_0^1\|v_t\|_{H_0}^2dt.}
+ \tag{2.2}
+\]
+Here $\dagger$ is the Moore--Penrose inverse, so the left side is the
+canonical Cameron--Martin norm on $\operatorname{Ran}C_J^{1/2}$.
+
+\emph{Proof.}
+The polar decomposition of $T_J$ can be written
+\[
+ T_J=C_J^{1/2}R_J,
+ \tag{2.3}
+\]
+where $R_J:{\cal U}\to H_J$ is a contraction whose range lies in
+$\overline{\operatorname{Ran}C_J}$.  Thus
+$C_J^{\dagger/2}T_J=P_{\operatorname{Ran}C_J}R_J$ and has operator norm at
+most one.  Squaring proves (2.2). \hfill$\square$
+
+The theorem is deterministic and pathwise.  It therefore applies to a
+random progressive $v$ after fixing the sample.  In particular, revisiting
+the same terminal direction many times cannot create a multiplicity loss:
+the same overlap appears in both $T_Jv$ and $C_J=T_JT_J^*$ and is normalized
+by the pseudoinverse.
+
+Under the A8 production symbol bound
+\[
+ \mathcal A(k)\succeq c_{\rm sym}\langle k\rangle^4I
+ \tag{2.4}
+\]
+and the regulator multiplier bound $\|R_J\|\le M_R$, (2.2) yields
+\[
+ \boxed{\|T_Jv\|_{H^2}^2
+ \le {M_R^2\over c_{\rm sym}}
+ \int_0^1\|v_t\|^2dt.}
+ \tag{2.5}
+\]
+This is the finite-cutoff Cameron--Martin embedding with constants uniform
+in $J$.
+
+\subsection*{Hilbert martingale and spatial ledgers}
+
+Let ${\cal F}_j$ reveal the Gaussian roots in increasing order and put
+\[
+ d_jA=\mathbb E[A\mid{\cal F}_j]
+      -\mathbb E[A\mid{\cal F}_{j-1}],\qquad A=T_Jv.
+ \tag{2.6}
+\]
+Martingale differences are orthogonal in the Cameron--Martin Hilbert space,
+hence
+\[
+ \sum_j\mathbb E\|d_jA\|_{\rm CM}^2
+ \le\mathbb E\|A\|_{\rm CM}^2
+ \le\mathbb E\int_0^1\|v_t\|^2dt.
+ \tag{2.7}
+\]
+The same argument after the deterministic $H^2$ multiplier in (2.5) gives
+\[
+ \sum_j\mathbb E\|d_jA\|_{H^2}^2
+ \le {M_R^2\over c_{\rm sym}}\mathbb E\int_0^1\|v_t\|^2dt.
+ \tag{2.8}
+\]
+For an inhomogeneous Littlewood--Paley decomposition, every $0<s\le2$, and
+roots $j\ge j_0$,
+\[
+ \boxed{
+ \sum_{j,m}2^{2s(m-j)}
+ \mathbb E\|\Delta_md_jA\|_2^2
+ \le C_{s,j_0}{M_R^2\over c_{\rm sym}}
+ \mathbb E\int_0^1\|v_t\|^2dt.}
+ \tag{2.9}
+\]
+Indeed, $2^{-2sj}\|d_jA\|_{H^s}^2$ is bounded by a constant times
+$\|d_jA\|_{H^2}^2$, and (2.8) sums the latter exactly once.  Restricting
+(2.9) to $m\ge j+C$ gives the far gain
+\[
+ \sum_j\sum_{m\ge j+C}\mathbb E\|\Delta_md_jA\|_2^2
+ \le C_{s,j_0}2^{-2sC}{M_R^2\over c_{\rm sym}}
+ \mathbb E\int_0^1\|v_t\|^2dt.
+ \tag{2.10}
+\]
+
+\subsection*{General progressive quartic terminal bridge}
+
+R-088 proved, for $0<s<1$,
+\[
+ \|A^{\otimes3}\otimes DA\|_{B^s_{1,1}}
+ \lesssim_s\|A\|_{H^2}\|A\|_6^3.
+ \tag{2.11}
+\]
+Equation (2.5) removes its former one-shot restriction.  If
+$X=\int_0^1\|v_t\|^2dt$ and $Y=\|U+A\|_6^6$, then
+\[
+ \mathbb E[\|A\|_{H^2}\|A\|_6^3]
+ \le C\mathbb E[X^{1/2}Y^{1/2}]
+   +\delta\mathbb EX+C_{\delta}\mathbb E\|U\|_6^6.
+ \tag{2.12}
+\]
+The final model moment is uniform by the accepted Gaussian input.  Thus the
+pure-control quartic terminal payload is form-payable for arbitrary
+finite-cutoff cylindrical-simple progressive controls.  This conclusion
+does not estimate the lower-order random coefficient tails in the full
+Cartan atom.
+
+\section{Direct integrated Cartan Fourier trace}
+
+Fix a generator $A$ and root $j$.  Sum the R-088 sequential physical shells
+before taking any square.  Write
+\[
+ Z_j^-=w_j+A^{(\ell)},\qquad
+ a^{[j]}=A^{(j)}-A^{(\ell)},\qquad
+ Z_j^+=Z_j^-+a^{[j]}.
+ \tag{3.1}
+\]
+For the production map $\Phi=\Phi_{A,j}$ define
+\[
+ c_{A,j}=\Phi(Z_j^+)-\Phi(Z_j^-)
+ \tag{3.2}
+\]
+and, for each spatial coordinate $i$,
+\[
+ \begin{aligned}
+ b_{A,j,i}={}&[D\Phi(Z_j^+)-D\Phi(Z_j^-)]^T\partial_iZ_j^-\\
+ &+D\Phi(Z_j^+)^T\partial_i a^{[j]}.
+ \end{aligned}
+ \tag{3.3}
+\]
+The exact telescope and the product rule give
+\[
+ \boxed{\sum_{k\le j}T_{A,j,k}[v]=L_{A,j}v,\qquad
+ (L_{A,j}v)_i=b_{A,j,i}^Tv+c_{A,j}^T\partial_iv.}
+ \tag{3.4}
+\]
+This identity contains every cross term between different physical control
+shells.  Ornstein--Uhlenbeck averaging preserves the first-order form; below
+$b_{A,j,t}$ and $c_{A,j,t}$ denote the averaged coefficients.
+
+Let the root covariance have Fourier eigenvectors
+\[
+ v_{p,\mu}(x)=\sqrt{\lambda_{j,p}}e^{ipx}e_\mu,
+ \qquad p\in S_j\subset Q_j,
+ \tag{3.5}
+\]
+and suppose
+\[
+ \Lambda_{0,j}:=\sum_{p,\mu}\lambda_{j,p}\le\kappa_02^{-j},
+ \qquad
+ \Lambda_{1,j}:=\sum_{p,\mu}\lambda_{j,p}|p|^2\le\kappa_12^j.
+ \tag{3.6}
+\]
+
+\subsection*{Theorem 3.1 (exact trace and two-tail bound)}
+
+For an output multiplier $\Pi_m$ and $m\ge j+3$,
+\[
+ \begin{aligned}
+ \|\Pi_mL_{A,j,t}\Gamma_j^{1/2}\|_{\rm HS}^2
+ ={}&\sum_{\mu,p}\lambda_{j,p}\sum_q|\pi_m(q)|^2\\
+ &\quad\times\sum_i|\widehat b_{A,j,t,i}(q-p)e_\mu
+       +ip_i\widehat c_{A,j,t}(q-p)e_\mu|^2.
+ \end{aligned}
+ \tag{3.7}
+\]
+If $\widetilde\Pi_m$ selects
+$2^{m-2}<|r|_\infty\le2^{m+2}$, then
+\[
+ \boxed{
+ \|\Pi_mL_{A,j,t}\Gamma_j^{1/2}\|_{\rm HS}^2
+ \le2\Lambda_{0,j}\|\widetilde\Pi_mb_{A,j,t}\|_2^2
+   +2\Lambda_{1,j}\|\widetilde\Pi_mc_{A,j,t}\|_2^2.}
+ \tag{3.8}
+\]
+
+\emph{Proof.}
+Apply (3.4) to each vector (3.5).  The Fourier coefficient at output $q$
+is exactly the vector displayed in (3.7), so Parseval and summation over the
+root basis give equality.  When $q$ is in shell $m$, $p$ is in shell $j$,
+and $m\ge j+3$, the difference $q-p$ lies in the enlarged annulus.  Apply
+$|x+y|^2\le2|x|^2+2|y|^2$, sum first in $q$, and then use (3.6).  This proves
+(3.8). \hfill$\square$
+
+The enlarged annuli have overlap at most five.  Summing (3.8) over
+$m\ge j+C$ and restoring the R-084 prefactor $3/(40P)$ yields
+\[
+ \boxed{
+ S_C^{\rm ctrl}\le {3\over4P}\sum_{A,j}\int_0^\infty e^{-2t}\mathbb E
+ \left[\kappa_02^{-j}\|Q^{\rm coef}_{j,C-2}b_{A,j,t}\|_2^2
+ +\kappa_12^j\|Q^{\rm coef}_{j,C-2}c_{A,j,t}\|_2^2\right]dt.}
+ \tag{3.9}
+\]
+No output orthogonality and no per-$k$ quantity $q_k$ was used.
+
+For $s>0$, Sobolev tail extraction reduces (3.9) to
+\[
+ S_C^{\rm ctrl}\le {3\over4P}2^{-2s(C-2)}\mathfrak E_s,
+ \tag{3.10}
+\]
+where
+\[
+ \boxed{
+ \mathfrak E_s=
+ \sum_{A,j}\int_0^\infty e^{-2t}\mathbb E\left[
+ \kappa_02^{-(2s+1)j}\|b_{A,j,t}\|_{\dot H^s}^2
+ +\kappa_12^{(1-2s)j}\|c_{A,j,t}\|_{\dot H^s}^2
+ \right]dt.}
+ \tag{3.11}
+\]
+The remaining Cartan theorem is exactly
+\[
+ \mathfrak E_s\lesssim
+ 1+\mathbb E[X^{1/2}Y^{1/2}]
+ \tag{3.12}
+\]
+for some $s>0$.  Equations (3.7)--(3.11) prove the direct integrated
+reduction, not (3.12).
+
+\section{A subcritical quartic route and its exact boundary}
+
+The R-076 interpolation proof gives the stronger family
+\[
+ \|A^{\otimes3}\otimes DA\|_{B^s_{1,1}}
+ \lesssim_s
+ \|A\|_{H^2}^{(1+s)/2}\|A\|_6^{(7-s)/2},
+ \qquad0<s<1.
+ \tag{4.1}
+\]
+At $s=1/4$, in terms of $X_A=\|A\|_{H^2}^2$ and
+$Y_A=\|A\|_6^6$, its powers are
+\[
+ X_A^{5/16}Y_A^{9/16}.
+ \tag{4.2}
+\]
+There is Young slack $1/8$, so a model coefficient requires only an eighth
+moment; the corresponding small-parameter losses are
+$\eta^{-5/2}$ and $\zeta^{-9/2}$.  The direct Schur constant and gap are
+\[
+ {1\over(1-2^{-1/4})^2(1-2^{-1/2})}
+ =134.874781327179\ldots,
+ \qquad2^{-C/2}.
+ \tag{4.3}
+\]
+This subcritical ledger has genuine slack and is a plausible route for the
+quartic part of (3.12).  It does not control the lower-order $b,c$ terms.
+
+\subsection*{Exact no-go for a pure homogeneous quartic bridge}
+
+The missing lower-order terms cannot be deleted.  On the normalized scalar
+production ray let
+\[
+ F(x)={x^3\over1+x^2},\qquad B(x)=\cos x,\qquad
+ a_c(x)=c\cos x,\qquad v(x)=\cos x.
+ \tag{4.4}
+\]
+The exact sequential atom is
+\[
+ T_c[v]={d\over dx}\{[F(B+a_c)-F(B)]v\}
+       =cH'(x)+O(c^2),
+ \tag{4.5}
+\]
+where
+\[
+ H(x)=F'(\cos x)\cos^2x
+ ={\cos^4x(3+\cos^2x)\over(1+\cos^2x)^2}.
+ \tag{4.6}
+\]
+Its cosine harmonic at frequency $32$ is exactly
+\[
+ h_{32}={\sqrt2\over2}(102\sqrt2-137)(3-2\sqrt2)^{15}
+ =1.684765541129627\times10^{-11}>0.
+ \tag{4.7}
+\]
+Hence $H'$ has sine coefficient $-32h_{32}$ and normalized shell energy
+\[
+ {(32h_{32})^2\over2}
+ =1.453278683431837\times10^{-19}>0.
+ \tag{4.8}
+\]
+The squared atom therefore scales as $c^2$, while
+$\|a_c^{\otimes3}Da_c\|$ and
+$X_{a_c}^{1/2}Y_{a_c}^{1/2}$ scale as $c^4$.  No uniform homogeneous bound
+using only that quartic payload can imply the complete production far atom.
+The statement fires
+\url{NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY}.
+It does not refute a form bound with additive constants, model moments, or
+the lower-order background/control coefficient tails retained.  The
+positive floor transfers by $F_e(\sqrt e,y)=\sqrt e,F_1(y)$.
+
+\section{Rational Taylor-coordinate normal form}
+
+Use the R-088 notation
+\[
+ Q=GG^T-\Gamma,\qquad B_1=B_T+L,
+ \tag{5.1}
+\]
+and
+\[
+ \mathcal P={1\over2}L:Q+G^TLc+{1\over2}c^TB_1c.
+ \tag{5.2}
+\]
+Let $\mathcal H$ contain the coefficients and put
+$\mu=\mathbb E[G\mid\mathcal H]$ and
+$V=\operatorname{Cov}(G\mid\mathcal H)$.  Direct conditional expectation
+and completion in Taylor coordinates give the exact identity
+\[
+ \boxed{
+ \begin{aligned}
+ \mathbb E[\mathcal P+\eta|c|^2\mid\mathcal H]
+ ={}&{1\over2}(c+\mu)^TL(c+\mu)\\
+ &+{1\over2}c^T(B_T+2\eta I)c
+ +{1\over2}L:(V-\Gamma).
+ \end{aligned}}
+ \tag{5.3}
+\]
+This is algebraically equivalent to the R-088 Feshbach form but exposes the
+two independent spectral channels.
+
+\subsection*{Theorem 5.1 (mean-spectral criterion)}
+
+Assume $V=\Gamma$.  The right side of (5.3) is nonnegative for every
+$c,\mu$ if and only if
+\[
+ \boxed{L\succeq0\quad\hbox{and}\quad B_T+2\eta I\succeq0.}
+ \tag{5.4}
+\]
+
+\emph{Proof.}
+Put $x=c+\mu$.  The pair $(x,c)$ ranges independently over the product
+space, and (5.3) becomes
+$x^TLx/2+c^T(B_T+2\eta I)c/2$.  Nonnegativity for all pairs is therefore
+equivalent to the two matrix inequalities. \hfill$\square$
+
+In particular, increasing $\eta$ cannot repair a negative direction of
+$L$: choose $c=0$ and put the conditional mean in that direction.
+
+\subsection*{Production scalar obstruction}
+
+Remove the harmless positive rational prefactor and scale the floor to one.
+For
+\[
+ f(u)=u-{5\over9}{u^3\over1+u^2},\qquad B(u)=f(u)^2,
+ \tag{5.5}
+\]
+take base point $z=1$ and increment $a=C$.  The endpoint-minus-quadratic
+Taylor remainder is
+\[
+ L_{\rm norm}(C)=
+ {5C^3(13C^3+36C^2+51C+20)
+  \over324(C^2+2C+2)^2}.
+ \tag{5.6}
+\]
+At $C=-1/2$,
+\[
+ {B_1\over e}={16\over81},\qquad
+ {B_T\over e}={259\over1296},\qquad
+ {L\over e}=-{1\over432}.
+ \tag{5.7}
+\]
+Restoring $B_R=4c_1B$, choosing $c=0$, $V=\Gamma$, and a scalar mean
+$\mu=t$ makes (5.3)
+\[
+ -{c_1e\over216}t^2<0,
+ \tag{5.8}
+\]
+for every $\eta$.  This is a production-coefficient method no-go, not a
+counterexample to the full heat/forest form.
+
+There is also a centered covariance-matched same-root fixture.  Let
+$G\sim N(0,1)$, $Q=G^2-1$, $c=0$, and choose
+\[
+ C(G)=\begin{cases}-1/2,&Q\ge0,\\+1/2,&Q<0.\end{cases}
+ \tag{5.9}
+\]
+The other Taylor remainder is
+$L_{\rm norm}(1/2)=2245/219024$.  Since
+$\mathbb E[Q\mathbf1_{\{Q\ge0\}}]=2\varphi(1)$,
+\[
+ \boxed{\mathbb E\mathcal P
+ =-{688\over13689}c_1e\,\varphi(1)<0.}
+ \tag{5.10}
+\]
+Smooth bounded even cylindrical approximations to (5.9) preserve the sign
+by dominated convergence.  Thus fresh-root centering, covariance matching,
+Jensen, and the completion parameter alone cannot close the same-root
+production packet.  This fires
+\url{NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE}.
+
+If $\mathcal F$ denotes the complete backward-heat and lower-chaos forest,
+define the exact residual
+\[
+ \begin{aligned}
+ \mathcal R_{\mathcal H}:={}&
+ \mathbb E[\mathcal F\mid\mathcal H]+\mu^TLc
+ +{1\over2}\mu^TL\mu+{1\over2}L:(V-\Gamma).
+ \end{aligned}
+ \tag{5.11}
+\]
+Then
+\[
+ \boxed{
+ \mathbb E[\mathcal P+\eta|c|^2+\mathcal F\mid\mathcal H]
+ ={1\over2}c^T(B_1+2\eta I)c+\mathcal R_{\mathcal H}.}
+ \tag{5.12}
+\]
+The remaining rational theorem is a production spatial/causal lower bound
+on $\mathcal R_{\mathcal H}$ with the endpoint square retained.  The
+fixture (5.10) shows why the forest cannot be omitted.
+
+\section{OVERLAP--Nelson equivalence and corrected order}
+
+Put
+\[
+ G_J=V_J^{\rm ren}+{3\over20}\|\,\cdot\,\|_6^6,
+ \qquad
+ I_J(v)=\mathbb EG_J(X_J+T_Jv)
+       +{9\over20}\mathbb E\int_0^1|v_t|^2dt.
+ \tag{6.1}
+\]
+The R-087 CORE identity is
+\[
+ \boxed{
+ \inf_{v\in{\cal A}_{\rm cs}}I_J(v)
+ =-{9\over10}\log\mathbb E
+ \exp\{-{10\over9}G_J(X_J)\}.}
+ \tag{6.2}
+\]
+Consequently, for the same constant $C$,
+\[
+ I_J(v)\ge-C\quad\hbox{for every }J,v
+ \tag{6.3}
+\]
+is equivalent to
+\[
+ \sup_J\mathbb E\exp\{-{10\over9}G_J(X_J)\}
+ \le e^{10C/9}.
+ \tag{6.4}
+\]
+Thus full OVERLAP is already the $q=10/9$ Nelson theorem in variational
+coordinates.  The proof order must be
+\[
+ \boxed{\begin{gathered}
+ \hbox{complete temporal packets and controlled-shell assembly}\\
+ \Downarrow\\
+ \hbox{full OVERLAP}\Longrightarrow\hbox{R-087 CORE}
+ \Longrightarrow\hbox{Nelson}
+ \end{gathered}}
+ \tag{6.5}
+\]
+Placing R-066 one-use after full OVERLAP would count a necessary input as a
+later consequence.  REG and separately named packets remain useful
+sufficient architecture, but they are not logically necessary labels for
+the equivalence (6.2).  This correction is registered as
+\url{AUDIT-2026-07-25-A13-OVERLAP-NELSON-CHAIN}.
+
+\section{Attempt and evidence map}
+
+\begin{enumerate}
+\item \textbf{Global polar/Douglas compression -- proved.}
+Arbitrary progressive revisit has no terminal CM multiplicity loss;
+(2.2)--(2.10).
+\item \textbf{R-088 quartic terminal bridge -- extended.}
+The pure-control quartic payload is form-payable for the full
+cylindrical-simple progressive class.
+\item \textbf{Complete cross-$k$ Cartan sum -- proved reduction.}
+The exact first-order operator, Fourier trace, and two coefficient tails are
+(3.4)--(3.11).
+\item \textbf{Nonlinear coefficient energy -- open.}
+The exact remaining estimate is (3.12); lower-order $b,c$ tails are not paid.
+\item \textbf{$s=1/4$ quartic interpolation -- proved.}
+The powers are $5/16,9/16$, the slack is $1/8$, the model moment is eight,
+and the gap is $2^{-C/2}$.
+\item \textbf{Pure homogeneous quartic closure -- ruled out.}
+The exact harmonic $h_{32}>0$ forces squared response $c^2$ against quartic
+payload $c^4$.
+\item \textbf{Rational Taylor coordinates -- proved.}
+The conditional identity is (5.3) and the spectral criterion is (5.4).
+\item \textbf{Eta repairs the production mean -- ruled out.}
+The actual scalar ray has $L/e=-1/432$ for every eta.
+\item \textbf{Centered same-root rational packet alone -- ruled out.}
+The covariance-matched adapted fixture (5.10) is strictly negative; the
+complete forest is needed.
+\item \textbf{OVERLAP then one-use -- corrected.}
+Full OVERLAP is already equivalent to Nelson; packet assembly belongs before
+it.
+\end{enumerate}
+
+The next analytic target, R-090, should attack (3.12) and (5.11) as a coupled
+coefficient/forest problem.  The successful terminal compression should be
+treated as an available lemma, not reproved shell by shell.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} (2.2) silently assumes disjoint time ranges or a
+one-shot control.  \textbf{DISMISSED.}  The identity $C_J=T_JT_J^*$ and
+polar decomposition use the complete operator; overlap and repetition are
+inside both sides.  A repeated one-dimensional range saturates, rather than
+violates, the contraction.
+\item \textbf{Objection:} martingale orthogonality in (2.7) is scalar only.
+\textbf{DISMISSED.}  Conditional expectation is an orthogonal projection on
+Hilbert-valued $L^2$.  At finite cutoff take the target Hilbert space to be
+$H_{\rm CM}$.  The deterministic $H^2$ multiplier may be applied before the
+same argument.
+\item \textbf{Objection:} (3.7) loses cross terms between physical shells.
+\textbf{DISMISSED.}  Those shells are summed exactly into $b$ and $c$ in
+(3.2)--(3.4) before squaring.  Only the elementary split between the value
+and derivative coefficient is estimated in (3.8).
+\item \textbf{Objection:} the two-tail bound proves controlled Cartan CFAR.
+\textbf{VALID WITH BOUNDARY.}  It proves the exact reduction (3.10).
+The nonlinear coefficient energy (3.12) is unproved, so CFAR and OVERLAP
+remain open.
+\item \textbf{Objection:} the $h_{32}$ fixture refutes every possible
+quartic Cartan estimate.  \textbf{DISMISSED.}  It refutes only a homogeneous
+pure-quartic implication.  Additive form constants, model moments, and the
+lower-order coefficient channels are outside the no-go.
+\item \textbf{Objection:} the rational fixture is not centered.
+\textbf{DISMISSED.}  The fixture (5.9) uses $G\sim N(0,1)$ with
+$\mathbb EG=0$ and $V=\Gamma=1$.  Its failure is same-root coefficient
+alignment, not a missing first-moment centering assumption.
+\item \textbf{Objection:} (5.10) disproves the global shifted-Hessian form.
+\textbf{DISMISSED.}  It tests the Taylor/Wick subpacket with its coefficient
+but omits the complete backward-heat/lower-chaos forest.  It is a method
+no-go and identifies the required residual (5.11), not a global
+counterexample.
+\item \textbf{Objection:} CORE plus Nelson still needs R-066 afterward.
+\textbf{DISMISSED.}  Equation (6.2) is an equality of infimum and logarithmic
+moment.  R-066 is an input to proving the uniform lower bound (6.3), not an
+extra implication after it.
+\end{enumerate}
+
+\section{Executable verification and no-overclaim statement}
+
+The primary executable verifies the exact rational arithmetic, the
+harmonic coefficient, the Fourier trace fixture, subcritical exponent
+ledger, and finite-dimensional compression fixtures.  The independent
+executable shares no imports with it and reconstructs the polar
+contraction by SVD, the martingale ledger by exact enumeration, the Fourier
+trace from an explicit operator matrix, the harmonic by high-precision
+quadrature, and the rational identities from independent random matrices.
+Run
+\begin{verbatim}
+cd codes/foundations
+python a13_classii_progressive_covariance_compression_rational_mean_spectral_boundary_verify.py
+\end{verbatim}
+The manifest also records the equivalent one-line command from the
+repository root.
+
+R-089 establishes global progressive terminal covariance compression and
+its martingale/spatial ledgers, the resulting general-progressive
+pure-control quartic terminal bridge, the exact complete-cross-shell Cartan
+Fourier trace reduction, the $s=1/4$ subcritical quartic ledger, the exact
+pure-homogeneous-quartic no-go, the rational Taylor-coordinate criterion and
+production mean-spectral obstruction, and the OVERLAP--Nelson chain
+correction.  It does not establish (3.12), the complete rational residual
+bound (5.11), full REG, uniform OVERLAP, Nelson, an interacting measure, or
+Sector-A closure.  No tier promotion is made.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-
+           RATIONAL-MEAN-SPECTRAL-BOUNDARY
+Ledger:                  R-089.
+Precise statement:       Global polar/Douglas compression controls every
+                         finite-cutoff cylindrical-simple progressive
+                         terminal CM coordinate without partition, overlap,
+                         or revisit loss. Hilbert martingale orthogonality
+                         gives weighted terminal one-use. The complete
+                         cross-shell Cartan derivative has an exact first-
+                         order Fourier trace and two-tail reduction. The
+                         rational packet has an exact Taylor-coordinate
+                         mean-spectral criterion. Full OVERLAP is equivalent
+                         through R-087 CORE to q=10/9 Nelson.
+Scope:                   Fixed finite cutoff and positive floor, under the
+                         hash-pinned A8, R-087, and R-088 conventions.
+                         The Cartan result reduces to coefficient energy
+                         (3.12); the rational forest residual (5.11) is open.
+Dependencies:            A8; R-076; R-081; R-084; R-087; R-088.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/a13_classii_progressive_
+                         covariance_compression_rational_mean_spectral_
+                         boundary_verify.py
+Expected output:          Primary 56/56; independent 44/44; integrated
+                         169/169; aggregate 269/269 PASS; exit zero.
+Audits:                  AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-
+                         CM-BRIDGE; AUDIT-2026-07-25-A13-OVERLAP-NELSON-
+                         CHAIN.
+Negative results:        NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY;
+                         NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-
+                         CLOSURE. Both are method no-gos.
+Falsification gate:      Failure of global compression, martingale ledger,
+                         Cartan Fourier trace, harmonic, rational identity,
+                         production sign, CORE equivalence, evidence hash,
+                         PDF contract, or assertion count.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No nonlinear Cartan coefficient-tail energy,
+                         complete same-root rational heat/forest packet,
+                         REG, uniform OVERLAP, Nelson, interacting measure,
+                         removal limit, or Sector-A closure.
+Next required action:    Prove coefficient energy (3.12) and complete rational
+                         residual (5.11), then assemble them, R-066 one-use,
+                         and all temporal packets inside full OVERLAP.
+\end{verbatim}
+\endgroup

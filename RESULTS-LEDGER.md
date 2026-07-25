@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-089](#r-089) | Progressive covariance compression, direct Cartan Fourier trace, and rational mean-spectral boundary | Scoped T4 analytic/exact/executed reduction: the global polar/Douglas identity `T T^*=C` gives a pathwise Cameron--Martin contraction for every finite-cutoff cylindrical-simple progressive control, independent of time partition, range overlap, and revisit multiplicity. Hilbert martingale orthogonality supplies a weighted terminal-shell one-use ledger and extends the pure-control quartic terminal bridge to the general progressive class. Summing all physical control shells before squaring turns the complete Cartan derivative into one first-order operator; an exact Fourier trace reduces controlled CFAR to two nonlinear coefficient tails, whose energy bound remains open. At `s=1/4` the quartic ledger has powers `5/16,9/16`, slack `1/8`, eighth model moment, and gap `2^(-C/2)`. An exact harmonic rules out a homogeneous quartic-only Cartan implication. The rational packet has an exact Taylor-coordinate conditional form and is universally nonnegative under covariance matching iff `L>=0` and `B_T+2 eta I>=0`; the actual production scalar ray has `L/e=-1/432`, and a centered covariance-matched same-root fixture is negative. Finally, full OVERLAP is exactly equivalent through R-087 CORE to the `q=10/9` Nelson bound, so complete packet/one-use assembly belongs before OVERLAP. The nonlinear Cartan coefficient-tail energy, complete same-root heat/forest packet, REG, OVERLAP, Nelson, and Sector A remain open; 56/56 primary, 44/44 independent, 169/169 integrated, and 269/269 aggregate assertions are pinned by the manifest |
 | [R-088](#r-088) | Direct-root Cartan Schur, sequential secants, quartic Besov payload, and rational conditional trace reduction | Scoped T4 analytic/exact/executed reduction: a normalization audit shows that the exact R-084 OU target has no outer `2^j`; a direct nonorthogonal Schur theorem therefore needs only `s>0` and `sum_k q_k`. At `s=7/12` its balanced constant is `16.30295538482827...` with gap `2^(-7C/6)`. Sequential physical-shell secants give an exact three-channel Cartan atom with no future control shells in the kth coefficient path, and `||A^3 DA||_(B^s_1,1) <= C_s ||A||_H2 ||A||_6^3` for `0<s<1` supplies the pure-control critical payload. The rational `K_eta` square, transformed Wick term, and eta debt obey an exact three-term null identity; retained-square variance cancels the debt only on centered covariance-matched predictable blocks. A conditional theorem isolates mean/covariance defects, while the matrix-fractional Jensen defect is PSD but has no sign after Wick contraction. The production Cartan two-point bridge/direct CFAR, same-root rational causal packet, REG, OVERLAP, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-087](#r-087) | Cartan spatial decay, rational trace, and fixed-cutoff variational-core reduction | Scoped T4 analytic/exact/executed reduction: a reproduced order-two paralinearisation with an explicit smooth LP convention kills every Cartan principal contribution for `m>=j+5` and proves the spatial atom bound for `1/3<alpha<1/2` and `1/2<s<3alpha-1/2`; at `alpha=2/5`, `s=7/12` has root/gap margins `7/30` and `13/30`. The explicit `q_k^mod` is not yet one-use summable, and a rare-event fixture refutes pathwise translated-model-norm extraction without refuting the directly averaged atom. An exact rational eta-Schur/Wick completion removes the endpoint kernel but retains an indefinite model packet and an `eta^(-1)` trace debt. At each fixed cutoff, under the declared continuous bounded-below/local-polynomial-envelope and canonical-filtration hypotheses, the Boue--Dupuis infimum equals its bounded smooth cylindrical-simple restriction, so a uniform OVERLAP bound on that class would imply Nelson without a separate packetwise all-control theorem. Cartan (4.11), the rational packet, REG, OVERLAP, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-086](#r-086) | Rational translated-Wick normal form and payload-comparable reduction | Scoped T4 analytic/exact/executed reduction: the R-085 shifted-Hessian pair plus endpoint square is one exact translated-Wick third-remainder normal form. A sharp cubic Sobolev estimate closes the base-frozen `Q` model with total `13/15`, slack `2/15`, and moment `15/2`; all coefficient-nonresonant and payload-comparable shifted branches close with `Q/G` totals `7/10` and `23/30`. The sole rational remainder is a coefficient-dominant high--high-to-low packet coupled to the endpoint square, Wick trace, and lower-chaos forest. Exact scalar, kernel, and small-heat fixtures refute Taylor-Gram positivity, endpoint-square-only Schur absorption, and uniform inverse-heat-Gram closure without refuting the spatial form bound. Complete rational NEAR, the Cartan production atom, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
@@ -107,6 +108,84 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-089"></a>
+### R-089 -- Progressive covariance compression, direct Cartan Fourier trace, and rational mean-spectral boundary
+
+**Result ID.**
+`A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY`.
+
+**Statement.** At every finite cutoff let `T v=int K(t)v_t dt` and
+`C=T T^*`. Polar decomposition gives the pathwise contraction
+
+`||C^(dagger/2) T v||^2 <= int ||v_t||^2 dt`
+
+for every cylindrical-simple progressive control. It has no dependence on
+time partition, range overlap, or revisit multiplicity. With the A8 symbol
+coercivity and regulator bound this controls `||T v||_H2^2`; Hilbert-valued
+martingale orthogonality then gives
+
+`sum_(j,m) 2^(2s(m-j)) E||Delta_m d_j A||_2^2 <= C_s E int||v_t||^2 dt`,
+
+for every `0<s<=2`. Thus the pure-control quartic terminal bridge is valid
+for the general progressive class, not only R-088's one-shot subclass.
+
+For the Cartan term, sum the complete sequential telescope before squaring.
+It becomes one first-order operator
+`(L_(A,j)v)_i=b_(A,j,i)^T v+c_(A,j)^T partial_i v`. In a root Fourier basis,
+Parseval gives the exact full-cross-shell trace, and for `m>=j+3`,
+
+`||Pi_m L_(A,j) Gamma_j^(1/2)||_HS^2
+ <=2 Lambda_(0,j)||tildePi_m b_(A,j)||_2^2
+   +2 Lambda_(1,j)||tildePi_m c_(A,j)||_2^2`.
+
+This proves a direct integrated reduction with gap `2^(-2s(C-2))` to one
+explicit nonlinear coefficient energy. It does not prove that energy bound.
+At `s=1/4`, the stronger quartic interpolation has energy/sextic powers
+`5/16,9/16`, slack `1/8`, eighth model moment, direct Schur constant
+`134.874781327179...`, and gap `2^(-C/2)`. An exact scalar harmonic
+`h_32=1.684765541129627e-11` proves that a homogeneous pure-quartic payload
+cannot control the complete atom: its squared response is order `c^2` while
+the proposed payload is order `c^4`.
+
+For the rational packet,
+
+`E[P+eta|c|^2|H]
+ = (c+mu)^T L(c+mu)/2
+ + c^T(B_T+2 eta I)c/2 + L:(V-Gamma)/2`.
+
+When `V=Gamma`, universal nonnegativity is equivalent to
+`L>=0` and `B_T+2 eta I>=0`. The actual normalized production ray has
+`L(-1/2)=-1/432`; eta cannot repair its conditional-mean channel. A centered
+covariance-matched same-root Gaussian fixture has expected packet
+`-(688/13689)c_1 e phi(1)<0`, so the complete backward-heat/lower-chaos
+forest must remain.
+
+Finally, R-087 CORE gives
+`inf_v I_J(v)=-(9/10) log E exp[-(10/9)G_J]`. Uniform full OVERLAP is
+therefore equivalent to the uniform `q=10/9` Nelson estimate. Complete
+temporal packets and controlled-shell assembly must be proved inside/before
+OVERLAP, not invoked afterward.
+
+**Where proved.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-progressive-covariance-compression-rational-mean-spectral-boundary-260725-v1.0.tex.txt`,
+manifest
+`classii_progressive_covariance_compression_rational_mean_spectral_boundary_manifest.json`.
+
+**Reuse scope.** Finite-dimensional Gaussian control maps with overlapping
+ranges; Hilbert-valued martingale decompositions; first-order random
+coefficient Fourier traces; subcritical Besov/Young ledgers; conditional
+quadratic packets with random same-root coefficients; variational
+log-Laplace lower bounds.
+
+**Honest tier.** T4 analytic/exact/executed reduction. Global progressive
+terminal compression, the terminal martingale ledger, the complete-cross-
+shell Cartan trace reduction, rational mean-spectral boundary, and
+OVERLAP--Nelson equivalence are established. The nonlinear Cartan
+coefficient-tail energy, complete same-root rational heat/forest residual,
+full REG, uniform OVERLAP, Nelson, an interacting measure, and Sector-A
+closure remain open.
 
 <a id="r-088"></a>
 ### R-088 -- Direct-root Cartan Schur, sequential secants, and rational conditional trace reduction

@@ -139,6 +139,22 @@ sequential Cartan bridge or direct integrated CFAR, the complete rational
 packet, REG, uniform OVERLAP, R-087 CORE, R-066 controlled-shell one-use, and
 `q=10/9` Nelson. Sector A remains open.
 
+R-089,
+A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY,
+proves global progressive covariance compression and a Hilbert
+martingale/spatial terminal one-use ledger, so the pure-control quartic
+terminal bridge is no longer restricted to one-shot controls. Its exact
+complete-cross-shell Cartan Fourier trace reduces controlled CFAR to the
+nonlinear coefficient-tail energy (3.12); the `s=1/4` quartic ledger has
+slack `1/8` but an exact harmonic prevents a homogeneous quartic-only
+closure. The rational Taylor-coordinate criterion, production
+`L/e=-1/432`, and centered covariance-matched same-root negative fixture
+leave the complete heat/lower-chaos residual (5.11). R-087 CORE makes full
+OVERLAP exactly equivalent to `q=10/9` Nelson, so controlled-shell one-use
+and every complete temporal packet must be assembled before/inside OVERLAP.
+The nonlinear Cartan coefficient energy, complete rational residual, REG,
+full OVERLAP, Nelson, and Sector A remain open.
+
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's
 logical subproof grouping without moving stable evidence paths. New work in

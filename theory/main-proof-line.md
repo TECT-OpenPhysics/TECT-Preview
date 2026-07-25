@@ -156,6 +156,23 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   a direct integrated CFAR theorem, that complete rational packet, REG,
   uniform OVERLAP, invocation of R-087 CORE, R-066 controlled-shell one-use,
   and `q=10/9` Nelson.
+  R-089,
+  A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY,
+  proves global progressive covariance compression and removes the one-shot
+  restriction from the pure-control quartic terminal bridge. Its Hilbert
+  martingale ledger spends the terminal coordinate once despite range overlap
+  or revisit. Summing every physical shell before squaring gives the exact
+  complete-cross-shell Cartan Fourier trace and reduces direct CFAR to the
+  nonlinear coefficient-tail energy (3.12), still open. The `s=1/4` ledger
+  has slack `1/8`, while an exact harmonic rules out a homogeneous
+  quartic-only replacement. The rational Taylor-coordinate criterion and the
+  production value `L/e=-1/432` show that eta and covariance matching cannot
+  replace the complete same-root heat/forest residual (5.11). Full OVERLAP is
+  exactly equivalent through R-087 CORE to `q=10/9` Nelson; R-066 one-use and
+  all complete temporal packets therefore belong inside/before OVERLAP. The
+  remaining chain is coefficient-tail energy plus the complete same-root
+  rational residual, REG, their assembly into full OVERLAP, R-087 CORE, and
+  Nelson.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

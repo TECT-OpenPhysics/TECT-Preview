@@ -390,6 +390,31 @@ endpoint theorem.
     Standalone debt and separate nonlinear heat transport are therefore
     retired. The same-root rational causal packet, REG, uniform OVERLAP,
     controlled-shell one-use, Nelson, and Sector A remain open.
+30. **Progressive covariance compression, direct Cartan Fourier trace, and
+    rational mean-spectral boundary.** R-089,
+    `A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY`,
+    replaces the one-shot terminal comparison by the global operator identity
+    `T T^*=C` and polar/Douglas contraction. It applies pathwise to every
+    finite-cutoff cylindrical-simple progressive control, irrespective of
+    time partition, range overlap, or revisit multiplicity. Hilbert
+    martingale orthogonality gives the weighted terminal-shell one-use ledger
+    and extends the pure-control quartic terminal bridge to that full class.
+    Summing the R-088 sequential telescope before squaring yields one exact
+    first-order Cartan operator. Its Fourier trace retains all physical-shell
+    cross terms and reduces direct integrated CFAR to the explicit nonlinear
+    coefficient energy (3.12), still open. The `s=1/4` quartic route has
+    powers `5/16,9/16` and slack `1/8`, while an exact frequency-32 harmonic
+    rules out a homogeneous quartic-only replacement. The rational packet
+    diagonalises in Taylor coordinates; covariance-matched universal
+    positivity is equivalent to `L>=0` and `B_T+2 eta I>=0`. The production
+    scalar ray has `L/e=-1/432`, and a centered covariance-matched same-root
+    fixture is negative, so the complete heat/lower-chaos forest remains.
+    R-087 CORE also makes full OVERLAP exactly equivalent to `q=10/9` Nelson.
+    Complete temporal packets and controlled-shell assembly therefore belong
+    before/inside OVERLAP. Nonlinear Cartan coefficient energy, the complete
+    same-root rational residual, REG, OVERLAP, Nelson, and Sector A remain
+    open. R-090 should attack the coupled coefficient/forest frontier without
+    re-proving the terminal compression lemma.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

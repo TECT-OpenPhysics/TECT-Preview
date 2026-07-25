@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE | the terminal CM bridge is globally progressive | Treat R-079's regular orthogonal no-revisit square-function |
+| AUDIT-2026-07-25-A13-OVERLAP-NELSON-CHAIN | controlled-shell assembly belongs before full OVERLAP | Order the last steps as full OVERLAP, then R-087 CORE, then |
+| NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY | a homogeneous quartic payload misses the linear Cartan respo | Infer the complete production Cartan far atom from a bound |
+| NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE | eta and covariance matching do not control the same-root mea | Close the coefficient-dominant rational packet by choosing |
 | AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION | the exact R-084 OU target is unweighted in the root scale | Treat the valid R-085 outer-`2^j` Schur theorem as the |
 | NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT | the eta debt and nonlinear heat coefficient cannot be separa | Complete the rational square, discard the retained positive |
 | NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION | translated model-norm extraction cannot prove the Cartan one | Start from the R-087 spatial atom estimate, use the |

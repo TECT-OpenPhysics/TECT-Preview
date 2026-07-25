@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE](#audit-2026-07-25-a13-r088-progressive-terminal-cm-bridge) | R-088 restriction of its pure-control quartic terminal bridge to the regular orthogonal one-shot class | the global identity `C=T T^*` and polar/Douglas decomposition control the terminal Cameron--Martin norm of every finite-cutoff cylindrical-simple progressive control, independent of partition, range overlap, and revisit multiplicity; the restriction is lifted for the terminal quartic payload, not for the complete nonlinear packet |
+| [AUDIT-2026-07-25-A13-OVERLAP-NELSON-CHAIN](#audit-2026-07-25-a13-overlap-nelson-chain) | A13 roadmap ordering of full OVERLAP, R-087 CORE, R-066 one-use, and Nelson | R-087 CORE is an exact variational equality, so a uniform full OVERLAP lower bound is already equivalent to the q=10/9 Nelson estimate; R-066 and complete temporal packet assembly are inputs inside/before OVERLAP, not a later implication |
+| [NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY](#ng-2026-07-25-a13-pure-quartic-cartan-homogeneity) | A13 complete production Cartan far atom controlled by a homogeneous pure-quartic payload alone | an exact production scalar ray has a nonzero frequency-32 linearised atom, so its squared far energy is order c^2 while the quartic payload is order c^4; lower-order background/control coefficient tails, model moments, or form constants cannot be deleted |
+| [NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE](#ng-2026-07-25-a13-rational-eta-mean-spectral-closure) | A13 same-root rational packet closed by eta, centering, covariance matching, or Jensen without the complete heat/forest companion | the exact Taylor-coordinate criterion requires L PSD independently of eta; the production scalar ray has L/e=-1/432, and a centered covariance-matched same-root Gaussian fixture has expectation -(688/13689)c1 e phi(1)<0 |
 | [AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION](#audit-2026-07-25-a13-r085-cartan-outer-weight-normalization) | R-085 application of its stronger weighted Schur theorem to the exact R-084 OU target | R-084 (4.6) has no outer `2^j`, so its direct sufficient ledger is `sum_k q_k` and its Schur threshold is `s>0`; R-085 remains valid for the stronger weighted expression and is not withdrawn |
 | [NG-2026-07-25-A13-RATIONAL-STANDALONE-ETA-DEBT-AND-K-HEAT](#ng-2026-07-25-a13-rational-standalone-eta-debt-and-k-heat) | A13 payment of the rational eta trace debt after deleting its retained square, or separate backward-heat transport of `K_eta=L A_eta^(-1)L` | at fixed target dimension the debt grows with the covariance trace while the original centered covariance-matched packet has zero mean; the exact cancellation is a three-term K-square--Wick--debt identity, and the PSD matrix-fractional Jensen defect has a signed Wick contraction, so square, trace, native heat, and lower-chaos forest must remain coupled |
 | [NG-2026-07-25-A13-PATHWISE-TRANSLATED-MODEL-NORM-EXTRACTION](#ng-2026-07-25-a13-pathwise-translated-model-norm-extraction) | A13 Cartan one-use closure by extracting the translated `C^alpha` model norm before expectation | a predictable rare-event single-mode family keeps the Cameron--Martin energy, terminal sextic moment, and mixed energy-sextic budget of order one while the extracted `q_k` ledger grows like `p^(-1)`; the remaining theorem must keep expectation inside the exact Cartan remainder atoms |
@@ -91,6 +95,102 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-25-a13-r088-progressive-terminal-cm-bridge"></a>
+### AUDIT-2026-07-25-A13-R088-PROGRESSIVE-TERMINAL-CM-BRIDGE -- the terminal CM bridge is globally progressive
+
+**Failure mode:** Treat R-079's regular orthogonal no-revisit square-function
+comparison as the only way to bound the terminal `H2` coordinate, and
+therefore leave the R-088 pure-control quartic terminal bridge restricted to
+that one-shot class.
+
+**Evidence:** At finite cutoff let `T v=int K(t)v_t dt` and `C=T T^*`. Polar
+decomposition gives `T=C^(1/2)R` with `||R||<=1`, hence
+
+`||C^(dagger/2)T v||^2<=int||v_t||^2dt`
+
+pathwise. The argument uses the complete control operator, so time-range
+overlap and repeated visits are normalized by the same covariance. A8 symbol
+coercivity and the regulator bound transfer this to `H2`. Hilbert martingale
+orthogonality then spends the terminal coordinate once and supplies the
+weighted spatial ledger for every `0<s<=2`.
+
+**Consequence:** The pure-control quartic terminal bridge extends to every
+finite-cutoff cylindrical-simple progressive control. This audit does not
+extend R-080's low/current packet estimates, prove the nonlinear Cartan
+coefficient energy, or close full progressive OVERLAP.
+
+<a id="audit-2026-07-25-a13-overlap-nelson-chain"></a>
+### AUDIT-2026-07-25-A13-OVERLAP-NELSON-CHAIN -- controlled-shell assembly belongs before full OVERLAP
+
+**Failure mode:** Order the last steps as full OVERLAP, then R-087 CORE, then
+R-066 controlled-shell one-use, then Nelson.
+
+**Evidence:** With
+`I_J(v)=E G_J(X_J+T_Jv)+(9/20)E int|v|^2`, R-087 CORE gives exactly
+
+`inf_v I_J(v)=-(9/10) log E exp[-(10/9)G_J(X_J)]`.
+
+Thus `I_J(v)>=-C` uniformly for all cutoff cylindrical-simple controls iff
+`sup_J E exp[-(10/9)G_J]<=exp(10C/9)`.
+
+**Consequence:** R-066 one-use and every complete temporal packet are inputs
+to proving full OVERLAP. Once that lower bound is available, CORE yields the
+`q=10/9` Nelson estimate directly. REG and separately named packets remain
+useful sufficient architecture, not extra implications after OVERLAP.
+
+<a id="ng-2026-07-25-a13-pure-quartic-cartan-homogeneity"></a>
+### NG-2026-07-25-A13-PURE-QUARTIC-CARTAN-HOMOGENEITY -- a homogeneous quartic payload misses the linear Cartan response
+
+**Failure mode:** Infer the complete production Cartan far atom from a bound
+whose only control payload is `A^3 D A` or
+`X_A^(1/2)Y_A^(1/2)`, with no additive form constant, model moment, or
+lower-order background/control coefficient tail.
+
+**Evidence:** On the normalized production scalar ray
+`F(x)=x^3/(1+x^2)`, `B=v=cos x`, and `a_c=c cos x`, the exact sequential atom
+is `c H'(x)+O(c^2)`. The frequency-32 coefficient is
+
+`h_32=(sqrt(2)/2)(102sqrt(2)-137)(3-2sqrt(2))^15
+=1.684765541129627e-11>0`,
+
+so the normalized squared shell energy is
+`(32h_32)^2/2=1.453278683431837e-19`. The squared atom is order `c^2`,
+whereas every homogeneous quartic payload is order `c^4`.
+
+**Consequence:** The direct Cartan coefficient energy must retain lower-order
+background/control tails and any form-payable constants or model moments.
+This does not refute R-088 (4.11)--(4.12), R-089 (3.12), or any coupled form
+bound carrying those terms.
+
+<a id="ng-2026-07-25-a13-rational-eta-mean-spectral-closure"></a>
+### NG-2026-07-25-A13-RATIONAL-ETA-MEAN-SPECTRAL-CLOSURE -- eta and covariance matching do not control the same-root mean matrix
+
+**Failure mode:** Close the coefficient-dominant rational packet by choosing
+eta, centering the carrier, matching its covariance, or applying
+matrix-fractional Jensen, without retaining the complete backward-heat and
+lower-chaos forest.
+
+**Evidence:** The exact conditional Taylor-coordinate form is
+
+`E[P+eta|c|^2|H]
+=(c+mu)^T L(c+mu)/2+c^T(B_T+2eta I)c/2+L:(V-Gamma)/2`.
+
+When `V=Gamma`, universal nonnegativity holds iff both `L` and
+`B_T+2eta I` are PSD. Eta cannot repair a negative `L` direction. On the
+actual normalized production scalar ray at increment `C=-1/2`,
+`B_1/e=16/81`, `B_T/e=259/1296`, and `L/e=-1/432`. More strongly, for
+`G~N(0,1)` and the same-root coefficient selecting `C=-1/2` when
+`G^2-1>=0` and `C=1/2` otherwise, `E G=0` and `V=Gamma=1` but
+
+`E P=-(688/13689)c_1 e phi(1)<0`.
+
+Smooth bounded even cylindrical approximations preserve the sign.
+
+**Consequence:** The endpoint square, conditional mean/covariance terms,
+backward heat, and complete lower-chaos forest must remain in one production
+residual. The fixture is a method no-go, not a counterexample to the full
+same-root coupled form, whose forest may cancel the defect.
 
 <a id="audit-2026-07-25-a13-r085-cartan-outer-weight-normalization"></a>
 ### AUDIT-2026-07-25-A13-R085-CARTAN-OUTER-WEIGHT-NORMALIZATION -- the exact R-084 OU target is unweighted in the root scale

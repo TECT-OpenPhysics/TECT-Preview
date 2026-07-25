@@ -1938,3 +1938,30 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   production sequential Cartan bridge/direct CFAR, same-root rational causal
   packet, REG, OVERLAP, one-use, Nelson, and Sector A remain open; tier stays
   T4.
+- 2026-07-25: Registered R-089,
+  `A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY`.
+  The global identity `T T^*=C` and polar decomposition give a pathwise
+  Cameron--Martin contraction for every finite-cutoff cylindrical-simple
+  progressive control, independent of time partition, terminal range overlap,
+  and revisit multiplicity. Hilbert martingale orthogonality supplies a
+  weighted terminal-shell one-use ledger and extends the pure-control quartic
+  terminal bridge to the general progressive class. Summing every physical
+  control shell before squaring gives an exact first-order Cartan Fourier trace
+  and reduces controlled CFAR to the explicit nonlinear coefficient energy
+  (3.12); that bound remains open. The `s=1/4` quartic route has powers
+  `5/16,9/16`, slack `1/8`, and an eighth model moment, while an exact
+  nonzero frequency-32 harmonic rules out a homogeneous quartic-only closure.
+  The rational conditional packet diagonalises in Taylor coordinates:
+  covariance-matched universal nonnegativity holds iff `L>=0` and
+  `B_T+2 eta I>=0`. This is the exact rational mean-spectral boundary. The
+  production ray has `L/e=-1/432`, and a centered
+  covariance-matched same-root fixture has strictly negative expectation, so
+  the complete backward-heat/lower-chaos forest remains necessary. R-087 CORE
+  makes full OVERLAP exactly equivalent to the `q=10/9` Nelson bound;
+  controlled-shell one-use and complete temporal packets must be assembled
+  inside/before OVERLAP. Primary `56/56`, non-importing independent `44/44`,
+  integrated `169/169`, and aggregate `269/269` are manifest-pinned; the
+  nine-page PDF passed form, zero-overfull, extraction, and all-page visual
+  QA. The nonlinear Cartan coefficient-tail energy, complete same-root
+  rational heat/forest packet, REG, uniform OVERLAP, Nelson, interacting
+  measure, and Sector A remain open; tier stays T4.

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-089 progressive covariance compression and rational mean-spectral boundary] - 2026-07-25
+
+Proved global progressive terminal covariance compression and Hilbert martingale/spatial one-use ledgers; extended the pure-control quartic terminal bridge to general cylindrical-simple progressive controls; proved the exact complete-cross-shell Cartan Fourier trace reduction; derived the s=1/4 slack ledger; recorded exact pure-quartic and rational same-root method no-gos; and corrected the final chain because full OVERLAP is already equivalent through R-087 CORE to q=10/9 Nelson. The nonlinear Cartan coefficient-tail energy, complete same-root heat/forest residual, REG, OVERLAP, Nelson, and Sector A remain open. Primary 56/56 and independent 44/44 pass; the nine-page PDF passed zero-overfull Poppler visual QA.
+
 ## [R-088 Direct-root Cartan Schur surface-token correction] - 2026-07-25
 
 Corrected the generated changelog surface contract by recording the exact verifier token Direct-root Cartan Schur. This is a metadata-only correction: no theorem, proof, numerical result, tier, or open-gate status changed.
