@@ -335,6 +335,21 @@ endpoint theorem.
     retire deletion, positivity, and fixed-square Schur routes without
     refuting the coupled form bound (6.5). The remaining order is REG,
     OVERLAP, CORE, one-use, then Nelson.
+27. **Rational translated-Wick and payload-comparable reduction.** R-086,
+    `A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`,
+    proves that the R-085 shifted-Hessian pair plus endpoint square is one
+    exact translated-Wick third-remainder normal form. A new cubic Sobolev
+    theorem pays the base-frozen `Q` model with total `13/15`, slack `2/15`,
+    and moment `15/2`. Input-maximum Bony decomposition then pays all
+    nonresonant and payload-comparable shifted branches with `Q/G` totals
+    `7/10` and `23/30`. The rational frontier is reduced to the single
+    coefficient-dominant high--high-to-low packet coupled to its endpoint
+    square, Wick trace, and lower-chaos forest. Exact negative Taylor-Gram,
+    endpoint-kernel, and vanishing-heat fixtures retire positivity,
+    endpoint-square-only Schur, and uniform inverse-heat-Gram routes without
+    refuting the spatial form bound. The Cartan atom remains independent and
+    open; the subsequent order is rational packet, Cartan atom, REG, OVERLAP,
+    CORE, one-use, then Nelson.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

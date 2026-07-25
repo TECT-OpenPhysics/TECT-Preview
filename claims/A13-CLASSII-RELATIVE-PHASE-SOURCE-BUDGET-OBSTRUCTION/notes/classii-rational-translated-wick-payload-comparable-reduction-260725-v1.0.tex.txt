@@ -1,0 +1,625 @@
+% Title: Rational translated-Wick normal form and payload-comparable reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT REDUCTION; RATIONAL NONRESONANT AND PAYLOAD-COMPARABLE BRANCHES CLOSED; COEFFICIENT-DOMINANT RESONANCE, CARTAN ATOM, REG, OVERLAP, ONE-USE, AND NELSON OPEN
+% Result: A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION
+% Ledger: R-086
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-085 reduced the nonlinear rational Pauli--Fierz row to the signed packet
+
+\[
+ \mathcal H_R+{1\over2}c^T\overline B(U+a)c,             \tag{1.1}
+\]
+
+where $\mathcal H_R$ is the shifted-Hessian pair.  This note proves three
+further facts about (1.1).
+
+First, the three displayed terms in R-085 are one exact translated-Wick
+normal form.  If $L$ is the second-order Taylor remainder of the heat-lifted
+Gram, then
+
+\[
+ \boxed{
+ \mathcal H_R+{1\over2}c^T\overline B(U+a)c
+ ={1\over2}L:\{(G+c)^{\otimes2}-\Gamma\}
+  +{1\over2}c^TB_Tc,}                                   \tag{1.2}
+\]
+
+where $B_T$ is the quadratic Taylor polynomial at $U$.  This is an identity,
+not a positivity statement.
+
+Second, all coefficient-nonresonant and payload-comparable dyadic pieces of
+(1.1) are form-payable by the accepted R-063, R-068, R-071, R-076, and R-078
+estimates.  The $Q$ branch retains the R-085 quadratic-payload total $7/10$;
+the $G$ branch retains the R-078 $a^2Da$ total $23/30$ and moment $30/7$.
+An independent base-frozen cubic coordinate has total $13/15$, slack $2/15$,
+and moment $15/2$.  Thus the whole rational question is reduced to one
+coefficient-dominant high--high-to-low shifted resonance, with the endpoint
+square and Wick trace retained.
+
+Third, exact production fixtures show why the remaining coupling cannot be
+split.  The Taylor Gram $B_T$ can be negative.  A two-coordinate endpoint
+kernel makes the rational square vanish while the cross remainder is affine
+and unbounded below in a free derivative jet.  Small heat convolution lifts
+that kernel only by $O(\sigma^2)$, while the cross remainder stays nonzero,
+so an inverse Schur estimate loses $O(\sigma^{-2})$.  These are method
+obstructions only: Cameron--Martin derivative energy and the complete
+backward-heat/trace packet are absent from the local fixtures.
+
+No complete rational NEAR bound, production Cartan atom estimate, controlled
+Cartan CFAR, REG, OVERLAP, progressive theorem, controlled-shell one-use
+estimate, Nelson moment, measure theorem, or Sector-A closure is asserted.
+The tier remains T4.
+
+\section{Authorities and exact variables}
+
+The load-bearing authorities are R-050 for the production current, R-063 for
+the balanced coefficient-jet models, R-068 for centered-form duality, R-071
+for smooth matrix one-forms, R-076--R-078 for input-maximum payloads and the
+coefficient-dominant taxonomy, and R-084--R-085 for the heat-lifted endpoint
+and five-family payment.
+
+Write
+
+\[
+ B_0=\overline B_\Sigma(U),\qquad
+ B_1=\overline B_\Sigma(U+a),\qquad
+ G=DU,\qquad c=Da,                                     \tag{2.1}
+\]
+
+\[
+ Q=G^{\otimes2}-\Gamma,\qquad
+ Q^a=(G+c)^{\otimes2}-\Gamma.                           \tag{2.2}
+\]
+
+The production rational map and Gram are
+
+\[
+ g(z)=P_{\rm dbl}z-{5\over9}{|P_{\rm dbl}z|^2
+          \over |z|^2+\epsilon_\rho}z,\qquad
+ B_R(z)=4c_1g(z)\otimes g(z),                            \tag{2.3}
+\]
+
+\[
+ c_1={243\over8000(4+10^{-12})},\qquad
+ \overline B_\Sigma=P_\Sigma B_R.                      \tag{2.4}
+\]
+
+All algebra below is finite-cutoff and pathwise.  The form estimates are on
+the regular mutually orthogonal strict-past one-shot class used in
+R-080--R-085.  The density floor is fixed and positive.
+
+\section{Exact translated-Wick normal form}
+
+Put
+
+\[
+ K_t=D^2\overline B_\Sigma(U+ta)-D^2\overline B_\Sigma(U) \tag{3.1}
+\]
+
+and define
+
+\[
+ \boxed{
+ L=\int_0^1(1-t)K_t[a,a]\,dt
+ =B_1-B_0-D\overline B(U)[a]
+       -{1\over2}D^2\overline B(U)[a,a].}               \tag{3.2}
+\]
+
+The equality is Taylor's theorem in the opposite integration order.  The
+same remainder also has the cubic coordinate
+
+\[
+ \boxed{
+ L={1\over2}\int_0^1(1-t)^2
+       D^3\overline B(U+ta)[a,a,a]\,dt.}                \tag{3.3}
+\]
+
+Let
+
+\[
+ B_T=B_0+D\overline B(U)[a]
+             +{1\over2}D^2\overline B(U)[a,a],          \tag{3.4}
+\]
+
+so $B_1=B_T+L$.  R-085's shifted-Hessian pair is exactly
+
+\[
+ \mathcal H_R={1\over2}L:Q+G^TLc.                      \tag{3.5}
+\]
+
+Since
+
+\[
+ {1\over2}L:Q^a
+ ={1\over2}L:Q+G^TLc+{1\over2}c^TLc,                  \tag{3.6}
+\]
+
+adding $c^TB_1c/2$ and using $B_1-L=B_T$ proves (1.2):
+
+\[
+ \boxed{
+ \mathcal H_R+{1\over2}c^TB_1c
+ ={1\over2}L:Q^a+{1\over2}c^TB_Tc.}                   \tag{3.7}
+\]
+
+The importance of (3.7) is negative as well as positive.  It identifies the
+right stochastic object as an adapted translated-Wick third remainder, but
+it does not license separate lower bounds for its two terms.  Section 7
+gives exact cancellation fixtures.
+
+\section{A sharp cubic Sobolev payment}
+
+Let $a$ be a finite-dimensional vector field on the fixed three-torus, with
+$a\in H^2\cap L^6$.  Tensor contractions and finite component sums are
+suppressed.
+
+\subsection*{Theorem 4.1}
+
+For $0\le s\le2$,
+
+\[
+ \boxed{
+ \|a^{\otimes3}\|_{H^s}
+ \le C_s\|a\|_{H^2}^{s}\|a\|_6^{3-s}.}                \tag{4.1}
+\]
+
+\emph{Proof.}
+At the low endpoint,
+
+\[
+ \|a^{\otimes3}\|_2\le C\|a\|_6^3.                  \tag{4.2}
+\]
+
+At the high endpoint, the three-dimensional Gagliardo--Nirenberg inequality
+gives
+
+\[
+ \|a\|_\infty^2\le C\|a\|_{H^2}\|a\|_6.             \tag{4.3}
+\]
+
+The zeroth and first derivatives are bounded by the right side below using
+$H^2\hookrightarrow W^{1,6}\cap L^6$.  For the second derivative, the only
+types are $a^2D^2a$ and $a(Da)^2$, and hence
+
+\[
+ \begin{aligned}
+ \|a^{\otimes3}\|_{H^2}
+ &\le C\{\|a\|_\infty^2\|a\|_{H^2}
+          +\|a\|_6\|Da\|_6^2\}\\
+ &\le C\|a\|_{H^2}^2\|a\|_6.
+ \end{aligned}                                           \tag{4.4}
+\]
+
+Sobolev interpolation of the fixed tensor $a^{\otimes3}$ between (4.2) and
+(4.4) proves (4.1). \hfill$\square$
+
+Put
+
+\[
+ X=\|a\|_{H^2}^2,\qquad Y=\|a\|_6^6.                 \tag{4.5}
+\]
+
+If $M_s$ is a control-independent $H^{-s}$ model norm, (4.1) yields
+
+\[
+ |\langle\mathbb Q,a^{\otimes3}\rangle|
+ \le C M_sX^{s/2}Y^{(3-s)/6}.                           \tag{4.6}
+\]
+
+At $s=11/10$ the exponent ledger is
+
+\[
+ {s\over2}={11\over20},\qquad
+ {3-s\over6}={19\over60},\qquad
+ {11\over20}+{19\over60}={13\over15},                \tag{4.7}
+\]
+
+with slack $2/15$.  One three-factor weighted Young inequality therefore
+gives
+
+\[
+ \boxed{
+ M_{11/10}X^{11/20}Y^{19/60}
+ \le\eta X+\zeta Y
+ +C\eta^{-33/8}\zeta^{-19/8}M_{11/10}^{15/2}.}         \tag{4.8}
+\]
+
+The R-063 balanced coefficient-jet theorem supplies every finite moment of
+the base-frozen decorated model
+$D^3\overline B(U)\diamond Q$.  Thus the base-frozen part of (3.3) closes
+with moment $15/2$.  Formula (4.8) is sharper than multiplying the old
+single-control ledger three times, which would give the false impression of
+the supercritical total $21/20$.
+
+The qualification ``base-frozen'' is load-bearing.  R-063's translation is
+for deterministic $H^2$ shifts.  It does not turn
+$D^3\overline B(U+ta)-D^3\overline B(U)$ under an adapted random shift into
+a control-independent model norm.
+
+\section{Dyadic closure of the payable orientations}
+
+Use one smooth inhomogeneous analysis partition $(\Delta_m)_{m\ge-1}$.
+Assign every monomial in $a\otimes a$ and $a\otimes a\otimes c$ to its
+largest control input, with a fixed tie rule:
+
+\[
+ a\otimes a=\sum_rP_r,\qquad
+ a\otimes a\otimes c=\sum_rH_r.                         \tag{5.1}
+\]
+
+Every $P_r$ and $H_r$ is supported in a ball of radius $C2^r$, including
+high--high-to-low output.  Expand the finite-cutoff contractions in (3.5).
+The only dangerous Bony orientation is a resonance between the shifted
+coefficient and the Gaussian model.  With a fixed resonance width $L_0$,
+split it at the payload scale:
+
+\[
+ \begin{aligned}
+ T_Q^{\le}={1\over2}\int_0^1(1-t)
+ \sum_r\sum_{\substack{|m-n|\le L_0\\m\le r+L_0}}
+ \int (\Delta_mK_t)[P_r]:\Delta_nQ\,dx\,dt,
+ \end{aligned}                                           \tag{5.2}
+\]
+
+\[
+ \begin{aligned}
+ T_G^{\le}=\int_0^1(1-t)
+ \sum_r\sum_{\substack{|m-n|\le L_0\\m\le r+L_0}}
+ \int \langle\Delta_nG,(\Delta_mK_t)[H_r]\rangle
+ \,dx\,dt.
+ \end{aligned}                                           \tag{5.3}
+\]
+
+Equality belongs to the $\le$ branch.  The two nonresonant paraproducts are
+included with (5.2)--(5.3) in the payable packet.
+
+At fixed floor,
+
+\[
+ \sup_{t,z}\|D^2\overline B(z+ta)-D^2\overline B(z)\|
+ \le2\sup_z\|D^2\overline B(z)\|<\infty.              \tag{5.4}
+\]
+
+For the $Q$ branch, the direct block sum uses the R-068
+$H^{-1-\kappa}$ centered model and the quadratic input-maximum theorem.
+At $\kappa=1/10$ it has
+
+\[
+ \boxed{|T_Q^{\le}|\lesssim M_QX^{11/20}Y^{3/20},}
+ \qquad {11\over20}+{3\over20}={7\over10}.             \tag{5.5}
+\]
+
+For the $G$ branch, R-078's exact quadratic-payload Besov theorem gives at
+$s_G=3/5$
+
+\[
+ \boxed{|T_G^{\le}|\lesssim M_GX^{2/5}Y^{11/30},}
+ \qquad {2\over5}+{11\over30}={23\over30}.             \tag{5.6}
+\]
+
+The corresponding slacks are $3/10$ and $7/30$; the worse required moment
+is $30/7$.  All these moments are accepted.  Summing the shell blocks before
+Young spends one control allocation, one sextic allocation, and one random
+constant.  No adapted multiplier norm is asserted.
+
+\subsection*{Theorem 5.1}
+
+For every $\eta,\zeta>0$, the sum $\mathcal P_R^{\rm pay}$ of the two
+nonresonant orientations, (5.2), (5.3), and the base-frozen cubic model
+obeys
+
+\[
+ \boxed{
+ \mathbb E\mathcal P_R^{\rm pay}
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C_{\eta,\zeta,
+ \epsilon_\rho,L_0}.}                                  \tag{5.7}
+\]
+
+The constant is uniform in the terminal cutoff on the declared regular
+one-shot class.  The proof is (4.8), (5.5), (5.6), followed by one global
+weighted Young allocation.  The finite number of Bony orientations changes
+only the constant.
+
+\section{The single surviving coefficient-dominant packet}
+
+The exact complements of (5.2)--(5.3) are
+
+\[
+ \begin{aligned}
+ T_Q^>={1\over2}\int_0^1(1-t)
+ \sum_r\sum_{\substack{|m-n|\le L_0\\m>r+L_0}}
+ \int (\Delta_mK_t)[P_r]:\Delta_nQ\,dx\,dt,
+ \end{aligned}                                           \tag{6.1}
+\]
+
+\[
+ \begin{aligned}
+ T_G^>=\int_0^1(1-t)
+ \sum_r\sum_{\substack{|m-n|\le L_0\\m>r+L_0}}
+ \int \langle\Delta_nG,(\Delta_mK_t)[H_r]\rangle
+ \,dx\,dt.
+ \end{aligned}                                           \tag{6.2}
+\]
+
+They are high--high-to-low forms: the shifted coefficient and $Q$ or $G$
+are comparable and strictly higher than every explicit payload input.  No
+frequency separation follows from their product, since opposite carriers
+can create the zero mode.
+
+Combining Theorem 5.1 with the exact R-085 endpoint leaves precisely
+
+\[
+ \boxed{
+ \mathcal P_R^>=T_Q^>+T_G^>
+             +{1\over2}c^T\overline B(U+a)c.}           \tag{6.3}
+\]
+
+The rational NEAR successor is a lower form bound for (6.3), with the Wick
+trace and lower-chaos forest retained.  There is no remaining list of five
+unclassified rational families.
+
+A first paralinearisation separates a base $U$ principal, an $a$ principal,
+and commutators.  The sharper cubic theorem pays the base-frozen coordinate,
+but extracting the fully shifted $a$-dependent coefficient as a random
+multiplier is forbidden: its high--high-to-low resonance is exactly (6.1)--
+(6.2).  The next proof must use a largest-root/Doob or backward-heat
+cancellation on the complete packet rather than another absolute
+coefficient estimate.
+
+\section{Exact inseparability diagnostics}
+
+\subsection*{The scalar Taylor Gram is indefinite}
+
+Remove the harmless positive factor $4c_1$ and put
+
+\[
+ f_e(x)=x-{5\over9}{x^3\over x^2+e},\qquad B(x)=f_e(x)^2. \tag{7.1}
+\]
+
+At $z=\sqrt e$ and $a=C\sqrt e$, direct differentiation gives
+
+\[
+ \boxed{B_T={e\over324}(169+208C-C^2).}                 \tag{7.2}
+\]
+
+Thus $B_T<0$ when
+
+\[
+ C<104-13\sqrt{65}\quad\hbox{or}\quad
+ C>104+13\sqrt{65}.                                    \tag{7.3}
+\]
+
+At either $C=-1$ or $C=209$,
+
+\[
+ B_T=-{10e\over81},\qquad B_{R,T}=-{40c_1e\over81}.   \tag{7.4}
+\]
+
+For $C=-1$ the endpoint is zero, so $B_1=0$ and $L=-B_T$.  In a local jet
+with $G=0$, $\Gamma=0$, the two terms of (3.7) cancel exactly for every $c$.
+Treating either one in isolation creates a false sign.
+
+\subsection*{Endpoint-kernel leakage}
+
+On the doublet/singlet slice take
+
+\[
+ z=(1,1),\qquad a=(1,-1),\qquad z+a=(2,0).              \tag{7.5}
+\]
+
+At $e=0$, for the normalized Gram $g\otimes g$,
+
+\[
+ B_1={1\over81}\begin{pmatrix}64&0\\0&0\end{pmatrix},
+ \qquad
+ B_T={1\over81}\begin{pmatrix}-1&5\\5&0\end{pmatrix}, \tag{7.6}
+\]
+
+\[
+ L={1\over81}\begin{pmatrix}65&-5\\-5&0\end{pmatrix}. \tag{7.7}
+\]
+
+At positive floor,
+
+\[
+ L_{21}={5(27e^2+40e-8)\over81(e+2)^3}<0               \tag{7.8}
+\]
+
+for $e=10^{-12}$.  Take $G=e_1$, $c=te_2$, and $\Gamma=0$.
+Because $e_2\in\ker B_1$, the endpoint $c$ square and its cross vanish, but
+the packet contains $tL_{12}$ and is unbounded below as $t\to+\infty$.
+This refutes pointwise and derivative-cost-free rational Schur absorption.
+It is not a spatial form counterexample because a field realizing large
+$Da$ pays Cameron--Martin energy.
+
+\subsection*{Heat ellipticity degenerates at the endpoint}
+
+Let $P_{\sigma^2I}$ be isotropic value heat convolution.  At $(2,0)$ the
+kernel vector is $e_2$, and
+
+\[
+ \partial_y g_2(2,0)=-{20\over9(4+e)}.                  \tag{7.9}
+\]
+
+Consequently
+
+\[
+ e_2^T(P_{\sigma^2I}B_R)(2,0)e_2
+ =4c_1\sigma^2\left\{{20\over9(4+e)}\right\}^2
+ +O(\sigma^4).                                         \tag{7.10}
+\]
+
+The cross coefficient in (7.8) approaches a nonzero constant while this
+eigenvalue is $O(\sigma^2)$.  A direct inverse-Gram Schur complement therefore
+costs $O(\sigma^{-2})$.  Since $\Sigma=0$ is an actual heat endpoint, heat
+positivity alone is not uniform.  Any successful heat argument must cancel
+this loss with the backward-heat/trace packet.
+
+The three diagnostics fire
+\texttt{NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-}
+\linebreak
+\texttt{SEPARATION-AND-HEAT-SCHUR}.
+They forbid Taylor-Gram positivity, endpoint-square-only absorption, and
+uniform inverse-heat-Gram Schur closure.  They do not refute (6.3).
+
+\section{Updated completion map}
+
+\paragraph{Rational NEAR.}
+The five R-085 families and the R-086 payable shifted orientations are
+closed on the regular one-shot class.  Prove (6.3) by a complete
+coefficient-dominant largest-root/Doob or backward-heat argument.
+
+\paragraph{Cartan CFAR.}
+The R-085 production atom estimates (4.10)--(4.11), with exponent $s>1/2$,
+remain open.  Nothing in the rational reduction supplies spatial Cartan
+off-diagonal decay.
+
+\paragraph{REG.}
+After rational NEAR and Cartan CFAR, reassemble R-080 low objects, R-083
+polynomial CFAR, R-084 linear rows, traces, forest terms, and paid
+subtraction into the complete regular packet lower bound.
+
+\paragraph{OVERLAP and CORE.}
+REG does not imply a partition/revisit-uniform bound.  OVERLAP remains a
+separate complete-packet theorem.  A graph-core extension may be proved only
+after that lower bound exists; it cannot repair a missing analytic estimate.
+
+\paragraph{One-use and Nelson.}
+Only after the all-progressive lower bound may the $0.45$ control allocation
+and $0.15$ sextic allocation be inserted into Boue--Dupuis.  The target
+$q=10/9$ remains conditional.
+
+\section{Proof-and-failure map}
+
+\[
+\begin{array}{l|l}
+\hbox{route}&\hbox{verdict and target}\\ \hline
+\hbox{five unshifted families}&\hbox{closed in R-085}\\
+\hbox{translated-Wick form}&\hbox{exact, (3.7)}\\
+\hbox{base-frozen cubic }Q&\hbox{closed, }13/15,\ M^{15/2}\\
+\hbox{nonresonant shifted}&\hbox{closed, Theorem 5.1}\\
+\hbox{payload-comparable}&\hbox{closed, }7/10,\ 23/30\\
+\hbox{Taylor Gram positive}&\hbox{failed, }B_T=-10e/81\\
+\hbox{endpoint-square Schur}&\hbox{failed, }\ker B_1\hbox{ leakage}\\
+\hbox{uniform heat Schur}&\hbox{failed, }\lambda_{\min}=O(\sigma^2)\\
+\hbox{coefficient-dominant}&\hbox{open, }\mathcal P_R^>\\
+\hbox{rational NEAR}&\hbox{open, requires }\mathcal P_R^>\\
+\hbox{Cartan atom}&\hbox{open, R-085 (4.10)--(4.11)}
+\end{array}                                             \tag{9.1}
+\]
+
+The map is cumulative.  Future work starts at (6.3), not at the already paid
+five families or the three refuted pointwise Schur routes.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{``The exact normal form proves positivity.''}
+\textbf{UPHELD as false.}  Equation (7.2) makes $B_T$ negative.  Equation
+(3.7) is useful because it enforces coupling, not because either term has a
+sign.
+
+\item \textbf{``The cubic Sobolev theorem closes every shifted multiplier.''}
+\textbf{UPHELD as false.}  It closes a control-independent decorated model
+and the declared payable dyadic orientations.  R-063 does not authorize
+adapted random translation of its model norm; (6.1)--(6.2) remain.
+
+\item \textbf{``A bounded Hessian difference is a harmless multiplier.''}
+\textbf{UPHELD as false.}  Boundedness closes only coefficient-nonresonant
+and payload-comparable blocks.  A bounded high coefficient resonating with a
+rough model can create a zero mode.
+
+\item \textbf{``Heat convolution makes the Gram uniformly invertible.''}
+\textbf{UPHELD as false.}  Equation (7.10) gives only $O(\sigma^2)$ lifting at
+the actual zero-heat endpoint, so the inverse costs $O(\sigma^{-2})$.
+
+\item \textbf{``Kernel leakage disproves the desired spatial form bound.''}
+\textbf{DISMISSED.}  The local derivative jet omits Cameron--Martin $H^2$
+energy and the complete Wick/heat/forest packet.  It refutes a method, not
+the theorem.
+
+\item \textbf{``Rational progress also closes Cartan CFAR.''}
+\textbf{UPHELD as false.}  The two gates use different stochastic and
+spatial mechanisms.  The complete mixed Cartan atom still needs decay
+$s>1/2$.
+
+\item \textbf{``REG can now be promoted.''}
+\textbf{UPHELD as false.}  Both (6.3) and the Cartan atom remain open, so
+complete regular reassembly has not started.
+\end{enumerate}
+
+\section{Executable verification}
+
+The primary executable derives the rational parameters from the A1 manifest,
+checks the exact normal form on symbolic matrices, derives the cubic Sobolev
+and Young ledgers, proves the scalar Taylor formula, evaluates the exact
+two-coordinate kernel matrices and positive-floor sign, and derives the heat
+kernel coefficient.  It leaves every downstream gate false.
+
+The non-importing audit uses high-precision directional differentiation,
+independent finite differences for the normal form, numerical Gaussian heat
+quadrature at several variances, and separately recomputed exponent ledgers.
+It imports no code from the primary executable.
+
+Run from the repository root:
+
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_rational_translated_wick_payload_comparable_
+  reduction_verify.py
+\end{verbatim}
+
+The integrated verifier pins the authority and evidence hashes, reruns both
+children, compares their common quantities, checks this PDF and every status
+surface, and fails closed if the coefficient-dominant packet, complete
+rational NEAR, Cartan CFAR, REG, OVERLAP, CORE, one-use, Nelson, or Sector A
+is promoted.
+
+\enlargethispage{4\baselineskip}
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-
+           COMPARABLE-REDUCTION
+Precise statement:       The R-085 shifted-Hessian pair plus endpoint square
+                         has one exact translated-Wick normal form. A sharp
+                         cubic Sobolev theorem pays its base-frozen Q model
+                         with total 13/15 and moment 15/2. All nonresonant and
+                         payload-comparable shifted branches are form-paid;
+                         their Q/G totals are 7/10 and 23/30. The sole
+                         rational remainder is a coefficient-dominant high-
+                         high-to-low packet coupled to the endpoint square.
+Scope:                   Fixed positive floor; finite cutoff; common real-
+                         even regulator; exact products; regular mutually
+                         orthogonal strict-past one-shot controls.
+Dependencies:            A1; R-050; R-063; R-068; R-071; R-076--R-085.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED.
+Reproduction command:    python codes/foundations/a13_classii_rational_
+                         translated_wick_payload_comparable_reduction_
+                         verify.py
+Expected output:          Primary, independent, integrated, and aggregate
+                         manifest-pinned PASS; exit zero.
+Negative result:         NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-
+                         SEPARATION-AND-HEAT-SCHUR (method no-go only).
+Falsification gate:      Failure of any normal-form identity, exponent,
+                         fixture, heat asymptotic, hash, PDF, surface, or
+                         assertion contract.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No coefficient-dominant rational packet bound,
+                         complete rational or signed NEAR, production Cartan
+                         atom, controlled Cartan CFAR, REG, OVERLAP, CORE,
+                         one-use, Nelson bound, measure theorem, removal
+                         limit, or Sector-A closure.
+Next required action:    Prove the coefficient-dominant packet (6.3) by a
+                         largest-root/Doob or backward-heat/trace estimate;
+                         independently prove R-085 (4.10)--(4.11), then REG.
+\end{verbatim}
+\endgroup

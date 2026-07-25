@@ -294,8 +294,18 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   signed shifted-Hessian pair plus the retained positive translated square.
   Third-derivative and rational-only fixtures rule out deletion, positivity,
   and fixed-square Schur shortcuts without refuting that coupled form bound.
+  R-086,
+  `A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`,
+  rewrites that coupled target as one exact translated-Wick third-remainder
+  normal form. A sharp cubic Sobolev theorem pays the base-frozen `Q` model
+  with total `13/15` and moment `15/2`; all nonresonant and payload-comparable
+  shifted branches are form-absorbed with `Q/G` totals `7/10` and `23/30`.
+  The rational frontier is now only the coefficient-dominant high--high-to-low
+  packet coupled to its endpoint square, Wick trace, and lower-chaos forest.
+  Exact Taylor-Gram, endpoint-kernel, and vanishing-heat fixtures prohibit
+  splitting it by positivity or a uniform inverse-Gram Schur complement.
   Sector A remains open.
-  R-080--R-085 also expose the separate
+  R-080--R-086 also expose the separate
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: R-075 graph recovery does
   not promote the regular lower bound to every Boue--Dupuis progressive
   control, and an exact one-mode witness proves non-density. Temporal Douglas
@@ -467,7 +477,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
     child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-085. R-080 closes the two distinct low objects for regular
+     narrowed by R-080--R-086. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -506,9 +516,12 @@ preserved in git/changelog rather than treated as current gates.
      remaining NEAR target was the nonlinear rational row. R-085 now replaces
      the orthogonality route by a conditional nonorthogonal Schur theorem:
      prove the complete mixed production atom estimates (4.10)--(4.11) with
-     `s>1/2`. It also form-absorbs all five unshifted rational families; prove
-     the coupled signed shifted-Hessian-plus-positive-square bound (6.5) and
-     reassemble REG with the full paid packet. Then apply
+     `s>1/2`. It also form-absorbs all five unshifted rational families. R-086
+     gives the exact translated-Wick normal form and pays every nonresonant or
+     payload-comparable shifted branch. Prove only its coefficient-dominant
+     high--high-to-low remainder with the endpoint square, Wick trace, and
+     lower-chaos forest retained, then reassemble REG with the full paid
+     packet. Then apply
    temporal Douglas factorisation from R-081, not one-shot density, and prove
    an overlap-stable bounded-simple complete-packet lower bound followed by the distinct
    `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` before assembling

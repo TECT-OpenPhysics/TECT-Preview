@@ -123,7 +123,12 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   unshifted families. The remaining analytic order is now precise: prove the
   mixed Cartan atom estimates (4.10)--(4.11), prove the coupled signed
   shifted-Hessian-plus-positive-square bound (6.5), reassemble REG, then prove
-  OVERLAP, CORE, controlled-shell one-use, and `q=10/9` Nelson.
+  OVERLAP, CORE, controlled-shell one-use, and `q=10/9` Nelson. R-086,
+  `A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`,
+  now rewrites (6.5) as an exact translated-Wick normal form and pays its
+  base-frozen, nonresonant, and payload-comparable branches. The only rational
+  term still needing proof is the coefficient-dominant high--high-to-low
+  packet with endpoint square, Wick trace, and lower-chaos forest retained.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

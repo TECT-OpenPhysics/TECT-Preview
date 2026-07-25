@@ -1827,3 +1827,20 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   pinned contracts; the nine-page PDF passed direct all-page visual QA. The
   production atom, coupled rational bound, REG, OVERLAP, CORE, one-use,
   Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-086,
+  `A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`.
+  The signed shifted-Hessian pair plus endpoint square has the exact
+  translated-Wick normal form
+  `H_R+(1/2)c^T B_1 c=(1/2)L:Q^a+(1/2)c^T B_T c`. A sharp cubic Sobolev
+  payment closes the base-frozen `Q` branch with total `13/15`, slack `2/15`,
+  and moment `15/2`; the coefficient-nonresonant and payload-comparable
+  `Q/G` branches close with totals `7/10` and `23/30`. The sole rational
+  remainder is the coefficient-dominant high--high-to-low packet with the
+  endpoint square, Wick trace, backward heat, and lower-chaos forest retained.
+  Exact scalar Taylor-Gram, endpoint-kernel, and heat-lift fixtures register
+  the narrow separation/positivity/inverse-heat-Gram method no-go without
+  refuting the missing spatial form estimate. Primary `39/39`, non-importing
+  independent `38/38`, integrated `127/127`, and aggregate `204/204` are the
+  pinned contracts; the eight-page PDF passed direct all-page visual QA. The
+  coefficient-dominant rational packet, production mixed Cartan atom, REG,
+  OVERLAP, CORE, one-use, Nelson, and Sector A remain open; tier stays T4.

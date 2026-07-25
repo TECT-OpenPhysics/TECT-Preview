@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-086](#r-086) | Rational translated-Wick normal form and payload-comparable reduction | Scoped T4 analytic/exact/executed reduction: the R-085 shifted-Hessian pair plus endpoint square is one exact translated-Wick third-remainder normal form. A sharp cubic Sobolev estimate closes the base-frozen `Q` model with total `13/15`, slack `2/15`, and moment `15/2`; all coefficient-nonresonant and payload-comparable shifted branches close with `Q/G` totals `7/10` and `23/30`. The sole rational remainder is a coefficient-dominant high--high-to-low packet coupled to the endpoint square, Wick trace, and lower-chaos forest. Exact scalar, kernel, and small-heat fixtures refute Taylor-Gram positivity, endpoint-square-only Schur absorption, and uniform inverse-heat-Gram closure without refuting the spatial form bound. Complete rational NEAR, the Cartan production atom, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-085](#r-085) | Nonorthogonal Cartan Schur and rational shifted-Hessian boundary | Scoped T4 analytic/exact/executed reduction: a weighted causal Schur theorem controls the nonorthogonal triangular root/input sum whenever the complete production atom has decay exponent `s>1/2`; at `s=7/12`, `eta=1/12` its exact constant is `572.4472106721531...` and its gap factor is `2^(-7C/6)`. The required production atom estimate is not proved. The nonlinear rational Pauli--Fierz endpoint splits exactly into five unshifted form-payable families, one signed shifted-Hessian pair, and one retained positive translated square. The five totals are `7/20,7/10,13/30,3/5,23/30`, with worst moment `30/7`. A production third-derivative diagnostic and a rational-only fixture refute deletion, positivity, and fixed-multiple square Schur shortcuts, but not a coupled form bound. The production atom, coupled shifted-Hessian bound, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-084](#r-084) | Root-diagonal Cartan OU reduction and linear Pauli--Fierz absorption | Scoped T4 analytic/exact/executed reduction: the R-083 controlled Cartan remainder diagonalises exactly over complete probability-root martingale differences with coefficient `3/(80P)`, and every root has an exact conditional Ornstein--Uhlenbeck gradient representation retaining coefficient, derivative-injection, and value-innovation channels. A cumulative-tree witness proves that root orthogonality or an unweighted Gaussian Poincare estimate alone cannot spend the control once. For regular mutually orthogonal strict-past one-shot controls, the complete three-row linear Pauli--Fierz NEAR endpoint is nevertheless arbitrarily form-absorbed by terminal sextic and Cameron--Martin budgets; all five degree families have positive Young slack and worst required moment `30/7`. The nonlinear rational row, summed production far-projected Cartan OU-gradient estimate, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; assertion count is pinned by the manifest |
 | [R-083](#r-083) | Controlled polynomial CFAR and linear Pauli--Fierz forest reduction | Scoped T4 analytic/exact/executed reduction: in the fixed root-preserving six-current coordinate, every controlled polynomial `J_A=Dm_A` row vanishes in the complete stopped FAR object for `C>=3`, including both endpoints and both predictable drifts. Controlled CFAR is thereby reduced exactly to three Cartan input-scale telescopes with coefficient `3/(80P)`. The canonical `K_k` smoothing pays the input coordinate once but does not create the global raw-output pairwise orthogonality assumed by the sufficient R-082 Carleson lemma; an exact production-floor-rescaled harmonic witness records that method no-go without excluding far-only or correlated martingale estimates. The three linear Pauli--Fierz rows have exact Gram, heat, secant, covariance-defect, and nine-block forest algebra, but an adapted heat-lifted fixture with zero rational row has negative linear-row zero chaos. Controlled Cartan CFAR, recombined complete signed NEAR, progression, one-use, Nelson, and Sector A remain open; 58/58 primary, 43/43 independent, 103/103 integrated, 204/204 aggregate assertions |
@@ -104,6 +105,63 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-086"></a>
+### R-086 -- Rational translated-Wick normal form and payload-comparable reduction
+
+**Result ID.**
+`A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`.
+
+**Statement.** Let
+
+`L=Bbar(U+a)-Bbar(U)-DBbar(U)[a]-(1/2)D2Bbar(U)[a,a]`
+
+and
+
+`B_T=Bbar(U)+DBbar(U)[a]+(1/2)D2Bbar(U)[a,a]`.
+
+The exact R-085 rational remainder has the translated-Wick normal form
+
+`H_R+(1/2)c^T Bbar(U+a)c
+ =(1/2)L:((G+c)^(tensor 2)-Gamma)+(1/2)c^T B_T c`.
+
+For `0<=s<=2`, the deterministic cubic theorem
+
+`||a^(tensor 3)||_(H^s) <= C_s ||a||_(H^2)^s ||a||_6^(3-s)`
+
+pays the base-frozen decorated `Q` model. At `s=11/10` its `X/Y` exponents
+are `11/20` and `19/60`, total `13/15`, slack `2/15`, and required model
+moment `15/2`. A direct input-maximum Bony partition then pays every
+coefficient-nonresonant and payload-comparable shifted branch. The `Q`
+branch has total `7/10`; the `G` branch is the R-078 `a^2 Da` payment with
+total `23/30` and moment `30/7`.
+
+The exact remaining rational packet is therefore only the
+coefficient-dominant high--high-to-low resonance, coupled to
+`(1/2)c^T Bbar(U+a)c`, its Wick trace, and the lower-chaos forest. It cannot be
+split by a pointwise Schur argument. On a scalar production ray the quadratic
+Taylor Gram equals `e(169+208C-C^2)/324` and is `-10e/81` at `C=-1` or
+`C=209`. A two-coordinate endpoint has a true Gram kernel while the cross
+remainder remains nonzero. Heat convolution lifts that kernel only by
+`O(sigma^2)`, so inverse-Gram Schur loses `O(sigma^(-2))` at the actual
+zero-heat endpoint. These fixtures are method no-gos, not spatial form-bound
+counterexamples.
+
+**Where proved.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-rational-translated-wick-payload-comparable-reduction-260725-v1.0.tex.txt`,
+manifest `classii_rational_translated_wick_payload_comparable_reduction_manifest.json`,
+and its primary, independent, and integrated executable audits.
+
+**Reuse.** The cubic Sobolev theorem and translated-Wick normal form apply to
+smooth state-dependent Gram energies. The dyadic split gives the canonical
+boundary between payable payload-comparable terms and the single adapted
+coefficient-dominant resonance.
+
+**Honesty boundary.** R-086 does not prove the coefficient-dominant packet or
+complete rational NEAR. The R-085 Cartan atom, REG, OVERLAP, CORE,
+controlled-shell one-use, `q=10/9` Nelson, a measure theorem, and Sector-A
+closure remain open.
 
 <a id="r-085"></a>
 ### R-085 -- Nonorthogonal Cartan Schur and rational shifted-Hessian boundary

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-086 rational translated-Wick payload-comparable reduction] - 2026-07-25
+
+Established the exact translated-Wick normal form for the R-085 signed shifted-Hessian pair plus endpoint square. Proved the sharp cubic Sobolev payment with total 13/15, slack 2/15, and moment 15/2, and closed the coefficient-nonresonant and payload-comparable rational branches with Q/G totals 7/10 and 23/30 on the regular mutually orthogonal strict-past one-shot class. Exact Taylor-Gram, endpoint-kernel, and heat-lift diagnostics rule out positivity, endpoint-square-only Schur separation, and uniform inverse-heat-Gram shortcuts. The sole rational remainder is the coefficient-dominant high--high-to-low packet with square, Wick trace, backward heat, and lower-chaos forest retained. Primary 39/39, independent 38/38, integrated 127/127, aggregate 204/204 are the pinned targets. Tier stays T4; Cartan, REG, OVERLAP, CORE, one-use, Nelson, and Sector A remain open.
+
 ## [R-085 nonorthogonal Cartan Schur and rational shifted-Hessian boundary] - 2026-07-25
 
 Proved a nonorthogonal weighted causal Schur summation lemma, conditional on a complete production mixed-Cartan atom estimate with exponent s>1/2. At s=7/12 and eta=1/12 its exact constant is 572.4472106721531... and its gap factor is 2^(-7C/6). Derived the exact rational endpoint decomposition into five unshifted subcritical families, one signed shifted-Hessian pair, and one retained positive square. The five families are arbitrarily form-absorbed on the regular mutually orthogonal strict-past one-shot class. Registered the production third-derivative and rational-only fixed-square no-go. Primary 50/50, independent 36/36, and the final integrated and aggregate manifest-pinned contracts pass. Tier remains T4; the production Cartan atom, coupled rational bound, complete signed NEAR, progression, one-use, Nelson, and Sector A remain open.

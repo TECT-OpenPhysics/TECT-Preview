@@ -491,8 +491,12 @@ to `D_jA`; the remaining NEAR pieces are that defect inside the lower-chaos-
  causal Schur theorem conditional on a complete mixed production atom estimate
  with `s>1/2`. It also form-absorbs the five unshifted rational families and
  isolates the signed shifted-Hessian pair plus its retained positive square.
- Neither the production atom nor that coupled rational bound is proved.
- R-080--R-085 correct the synthesis
+ R-086 rewrites that pair as one exact translated-Wick normal form and
+ form-absorbs its base-frozen, nonresonant, and payload-comparable branches.
+ The rational remainder is only the coefficient-dominant high--high-to-low
+ packet coupled to the endpoint square, Wick trace, and lower-chaos forest.
+ Neither the production Cartan atom nor that final rational packet is proved.
+ R-080--R-086 correct the synthesis
 scope: R-075 graph recovery does not extend a restricted lower bound to every
 progressive/revisit control. The separate successor
 `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION` is mandatory before canonical
@@ -1093,6 +1097,22 @@ positivity, and fixed-multiple square Schur shortcuts. They do not refute an
 arbitrary-budget coupled form bound. Complete signed NEAR and REG therefore
 remain open at (6.5).
 
+R-086,
+`A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`,
+proves the exact identity
+`H_R+(1/2)c^T Bbar(U+a)c=(1/2)L:Q^a+(1/2)c^T B_T c`, where
+`L` is the second-order Taylor remainder and `B_T` the quadratic Taylor
+polynomial. A sharp cubic Sobolev theorem pays the base-frozen decorated `Q`
+model with total `13/15`, slack `2/15`, and moment `15/2`. Every
+coefficient-nonresonant and payload-comparable shifted branch is also paid;
+the `Q/G` totals are `7/10` and `23/30`. The exact surviving object is the
+coefficient-dominant high--high-to-low packet with endpoint square, Wick trace,
+and lower-chaos forest retained. The Taylor Gram can be negative, the endpoint
+Gram has a kernel-leakage fixture, and heat lifts that kernel only by
+`O(sigma^2)`, so positivity, endpoint-square-only Schur, and uniform
+inverse-heat-Gram routes are closed. These are method no-gos, not
+counterexamples to the remaining spatial form bound.
+
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
 **Statement:** Starting from a cutoff-uniform lower bound for the complete
@@ -1106,7 +1126,7 @@ defect. An equivalent all-tilted-law entropy inequality is an admissible
 alternative.
 
 **Status:** OPEN SEPARATE SYNTHESIS GATE (2026-07-25), exposed by R-080 and
-sharpened by R-081--R-085
+sharpened by R-081--R-086
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

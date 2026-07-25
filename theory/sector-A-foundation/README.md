@@ -105,6 +105,11 @@ atom decay `s>1/2`, and pays all five unshifted rational endpoint families.
 It does not prove that atom estimate or the remaining coupled signed shifted-
 Hessian-plus-positive-square packet. The canonical order is (4.10)--(4.11),
 (6.5), REG, OVERLAP, CORE, controlled-shell one-use, then `q=10/9` Nelson.
+R-086, `A13-CLASSII-RATIONAL-TRANSLATED-WICK-PAYLOAD-COMPARABLE-REDUCTION`,
+proves the exact translated-Wick normal form for (6.5), a cubic payment with
+total `13/15`, and all nonresonant/payload-comparable shifted payments. The
+remaining rational object is only the coefficient-dominant high--high-to-low
+packet coupled to the endpoint square, Wick trace, and lower-chaos forest.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

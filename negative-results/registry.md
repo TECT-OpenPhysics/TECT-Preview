@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR](#ng-2026-07-25-a13-rational-translated-wick-separation-and-heat-schur) | A13 rational shifted-Hessian closure by Taylor-Gram positivity, endpoint-square-only Schur, or uniform heat-Gram inversion | the quadratic Taylor Gram is exactly negative on a production scalar ray, a two-coordinate endpoint kernel leaves a nonzero affine cross remainder, and heat lifts that kernel only by `O(sigma^2)`; the coefficient-dominant packet must retain its square, Wick trace, heat packet, and control energy |
 | [NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR](#ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur) | A13 rational Pauli--Fierz endpoint shortcut by deleting the shifted-Hessian pair, asserting positivity, or comparing the defect with a fixed multiple of the rational square | the production rational Gram has nonzero third derivative, while an exact rational-only path makes the first variation divided by the baseline square tend to negative infinity; the coupled shifted-Hessian pair and retained positive square must remain together |
 | [AUDIT-2026-07-25-A13-R084-MANIFEST-COUNT-CONTRACT](#audit-2026-07-25-a13-r084-manifest-count-contract) | R-084 pre-release integrated/aggregate assertion-count enforcement | verifier v1.0.0 checked only the 50 primary and 40 independent counts, so placeholder integrated/aggregate values could pass; v1.0.1 now enforces 131 integrated, 221 aggregate, and its own final row count |
 | [NG-2026-07-25-A13-ROOT-ORTHOGONALITY-ONE-USE](#ng-2026-07-25-a13-root-orthogonality-one-use) | R-084/A13 one-use closure from complete probability-root orthogonality or unweighted Gaussian Poincare alone | an exact cumulative finite-tree model has unit input energy but output energy `N`, and its sharp cumulative-matrix norm grows like `N^2`; production spatial paracomposition or another weighted cancellation is indispensable |
@@ -87,6 +88,52 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-25-a13-rational-translated-wick-separation-and-heat-schur"></a>
+### NG-2026-07-25-A13-RATIONAL-TRANSLATED-WICK-SEPARATION-AND-HEAT-SCHUR -- the translated-Wick rational packet cannot be separated by positivity or uniform heat inversion
+
+**Failure mode:** Prove the R-085 coupled rational shifted-Hessian bound by
+declaring its quadratic Taylor Gram positive, absorbing its cross term only in
+the endpoint rational square, or inverting the heat-averaged Gram with a
+cutoff-uniform ellipticity constant.
+
+**Evidence:** With the harmless positive production factor removed, let
+`f_e(x)=x-(5/9)x^3/(x^2+e)` and `B=f_e^2`. At `z=sqrt(e)` and
+`a=C sqrt(e)`, the exact quadratic Taylor polynomial is
+
+`B_T=e(169+208C-C^2)/324`.
+
+It equals `-10e/81` at `C=-1` and `C=209`; restoring the rational scale gives
+`-40c1 e/81`. Thus the exact translated-Wick normal form cannot assign a
+positive sign to its Taylor derivative square.
+
+On the normalized two-coordinate slice, take `z=(1,1)`, `a=(1,-1)`, and
+endpoint `(2,0)`. At zero floor,
+
+`B_1=[[64,0],[0,0]]/81`,
+`B_T=[[-1,5],[5,0]]/81`, and
+`L=[[65,-5],[-5,0]]/81`.
+
+At the production floor,
+
+`L_21=5(27e^2+40e-8)/[81(e+2)^3]<0`.
+
+Taking `G=e1`, `c=t e2`, and `Gamma=0` kills the endpoint square but leaves an
+affine term `t L_12`, unbounded below without derivative energy. Finally,
+isotropic heat variance `sigma^2` lifts the endpoint kernel by
+
+`4c1 sigma^2 [20/(9(4+e))]^2+O(sigma^4)`,
+
+while `L_21` stays nonzero. Direct inverse-Gram Schur therefore loses
+`O(sigma^(-2))` as the actual zero-heat endpoint is approached.
+
+**Consequence:** The coefficient-dominant high--high-to-low rational packet
+must retain the endpoint square, Wick trace, backward-heat compensation,
+lower-chaos forest, and Cameron--Martin energy. Taylor-Gram positivity,
+endpoint-square-only absorption, and uniform heat-Gram inversion are invalid.
+This is a method no-go, not a counterexample to the spatial form bound: the
+local free derivative jet omits its Cameron--Martin cost and the complete
+stochastic packet.
 
 <a id="ng-2026-07-25-a13-rational-pf-five-degree-and-fixed-schur"></a>
 ### NG-2026-07-25-A13-RATIONAL-PF-FIVE-DEGREE-AND-FIXED-SCHUR -- the rational shifted-Hessian pair cannot be deleted or paid by a fixed square
