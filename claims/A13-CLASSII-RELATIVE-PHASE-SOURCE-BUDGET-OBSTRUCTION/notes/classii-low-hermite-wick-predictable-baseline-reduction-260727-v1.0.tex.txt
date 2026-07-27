@@ -1,0 +1,706 @@
+% Title: Gram-first predictable-baseline support collapse and low-Hermite Wick boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED REDUCTION AND BOUNDARY; COMPLETE H_N, REG, OVERLAP_SRC, NELSON, MEASURE, AND SECTOR A OPEN
+% Result: A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION
+% Ledger: R-096
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-095 showed that replacing the rootwise future-feedback reserve by a
+fraction of the global terminal square creates a sign-indefinite moving-prefix
+defect.  The honest successor must therefore preserve the complete R-077 and
+R-079 packets before applying the R-085/R-086 rational Gram decomposition.
+This note performs that reordering and identifies the smallest remaining
+analytic target.
+
+There are five exact advances.  First, the R-079 rational row embeds into the
+R-085/R-086 translated-Wick decomposition once, with the endpoint square,
+Wick trace, and R-063 forest assigned to unique owners.  Second, spatial-first
+and root-first Doob decompositions agree only after an exact transfer defect
+is retained.  Third, after the complete R-077 fresh-root cancellation, the
+genuine coefficient-dominant $T_{Q,k}^>$ and $T_{G,k}^>$ regions of every
+predictable baseline are empty by Fourier support; a fixed boundary collar is
+payable.  Fourth, a raw quadratic Wick contraction sees only coordinate
+Hermite ranks zero, one, and two of an arbitrary same-root coefficient.
+Fifth, the conditional coefficient means occupy different low-Hermite
+sectors: the raw centered Wick term sees rank two, while $q$ and the
+transformed mean $r$ see rank one.
+
+These reductions do not prove payability at the moving adapted base.  Hermite
+orthogonality gives no spatial or root-scale gain, and Gaussian integration by
+parts differentiates later adapted controls.  The remaining target is one
+global expectation-inside lower form bound for all predictable baselines,
+with the non-rational heat, low, trace, and forest owners retained once.
+Complete $H_N$, REG, progressive/revisit $H_A$,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, a measure, and Sector A
+remain open.  Tier stays T4.
+
+The binding authorities are R-063 for the complete coefficient-jet forest,
+R-077 for complete-packet fresh-root cancellation, R-079 for the full safe
+current packet, R-085 for the five unshifted and shifted-Hessian families,
+R-086 for the translated-Wick normal form and payload split, and R-095 for
+the moving-prefix and mean-ownership boundary.
+
+\section{Complete cancellation must precede rational projection}
+
+Put
+\[
+ Z_0=U+A^0,\qquad a=A^*-A^0,\qquad
+ G=DZ_0,\qquad c=Da,                                      \tag{2.1}
+\]
+and
+\[
+ B_0=\overline B(Z_0),\qquad B_1=\overline B(Z_0+a),
+ \qquad {\mathcal Q}=G^{\otimes2}-\Gamma_J.               \tag{2.2}
+\]
+The third Taylor remainder and its second-order truncation are
+\[
+\begin{aligned}
+ L={}&B_1-B_0-D\overline B(Z_0)[a]
+       -{1\over2}D^2\overline B(Z_0)[a,a],\\
+ B_T={}&B_0+D\overline B(Z_0)[a]
+       +{1\over2}D^2\overline B(Z_0)[a,a].
+\end{aligned}                                               \tag{2.3}
+\]
+Write the five unshifted R-085 families as
+\[
+\begin{aligned}
+ {\cal U}_R={}&{1\over2}D\overline B(Z_0)[a]:{\mathcal Q}
+ +{1\over4}D^2\overline B(Z_0)[a,a]:{\mathcal Q}\\
+ &+G^TB_0c+G^TD\overline B(Z_0)[a]c
+ +{1\over2}G^TD^2\overline B(Z_0)[a,a]c .
+\end{aligned}                                               \tag{2.4}
+\]
+
+% evidence-anchor: theorem-2.1-once-only-rational-embedding
+\subsection*{Theorem 2.1 (once-only rational-row embedding)}
+
+At finite cutoff and positive floor, pathwise,
+\[
+ \Delta{\cal W}_R={\cal U}_R+{\cal H}_R+{1\over2}c^TB_1c, \tag{2.5}
+\]
+and the exact R-086 normal form gives
+\[
+\begin{aligned}
+ {\cal H}_R+{1\over2}c^TB_1c
+ &={1\over2}L:{\mathcal Q}^{,a}+{1\over2}c^TB_Tc\\
+ &={\cal P}_R^{\rm pay}+T_Q^>+T_G^>
+   +{1\over2}c^TB_1c.                                     
+\end{aligned}                                               \tag{2.6}
+\]
+Consequently the exact nonlinear rational-row extraction $\Pi_R$ satisfies
+\[
+\boxed{
+ \Pi_R\!\left({\mathfrak L}_\ell+
+       \sum_j({\mathfrak F}_j+{\mathfrak I}_j)\right)
+ =\mathbb E{\cal U}_R+\mathbb E{\cal P}_R^{\rm pay}
+  +\mathbb ET_Q^>+\mathbb ET_G^>
+  +{1\over2}\mathbb E c^TB_1c.}                            \tag{2.7}
+\]
+Thus the full safe packet is
+\[
+\boxed{
+\begin{aligned}
+ \mathbb E{\mathfrak B}_{J,{\rm safe}}^>
+={}&(I-\Pi_R)\!\left[{\mathfrak L}_\ell+
+       \sum_j({\mathfrak F}_j+{\mathfrak I}_j)\right]\\
+ &+\mathbb E{\cal U}_R+\mathbb E{\cal P}_R^{\rm pay}
+ +\mathbb ET_Q^>+\mathbb ET_G^>
+ +{1\over2}\mathbb E c^TB_1c
+ -\mathbb E\Delta{\cal R}_{\le}.
+\end{aligned}}                                              \tag{2.8}
+\]
+
+\emph{Proof.}
+Equation (2.5) is the exact R-085 seven-family Taylor partition.  R-086
+(3.7) groups the shifted-Hessian pair and endpoint square into the first
+line of (2.6), and R-086 (6.3) partitions its spatial frequencies into the
+payable and coefficient-dominant branches.  Applying the rational-row
+extraction to the exact R-079 identity gives (2.7), and adding the untouched
+complement gives (2.8).  No inequality has been used.  The Wick trace is
+already inside ${\mathcal Q}$, while the R-063 forest reconstructs the
+heat-lifted coefficient in (2.5).  Appending either again would duplicate an
+owner. \qed
+
+This identity also fixes the legal order inherited from R-077.  If
+\[
+ \Phi_k={\mathfrak P}_k+\sum_{r=k}^J{\mathfrak G}_{r,k},     \tag{2.9}
+\]
+the complete Wick/trace/forest theorem gives
+\[
+ \mathbb E\sum_k\sum_{r=k}^J{\mathfrak G}_{r,k}=0.         \tag{2.10}
+\]
+The cancellation is an assertion about the complete endpoint packet, not
+about its rational row or an individual Hermite chaos.  Hence (2.10) must be
+used before applying $\Pi_R$ to each predictable baseline
+${\mathfrak P}_k$.
+
+\section{Spatial-first Doob ledger and the product defect}
+
+Let
+\[
+ \rho=Q_{\rm II}^{1/2}M(Z_0+a)^Tc,
+ \qquad \|\rho\|^2=c^TB_1c.                               \tag{3.1}
+\]
+For $s=\ell$ put $D_s=P_\ell$, and for a probability root put $D_s=d_j$.
+Define
+\[
+ {\mathcal D}_s(X,Y)=\mathbb E\langle D_sX,D_sY\rangle.    \tag{3.2}
+\]
+For the R-086 factors write
+\[
+ C^Q_{t,r,m}=(\Delta_mK_t)[P_r],\quad
+ Z^Q_n=\Delta_n{\mathcal Q},\qquad
+ C^G_{t,r,m}=(\Delta_mK_t)[H_r],\quad
+ Z^G_n=\Delta_nG.                                          \tag{3.3}
+\]
+With separate resonance and payload widths, set
+\[
+\begin{aligned}
+ {\cal K}_s^>={}&{1\over2}\int_0^1(1-t)
+ \sum_{\substack{r,\ |m-n|\le L_{\rm res}\\m>r+L_{\rm gap}}}
+ {\mathcal D}_s(C^Q_{t,r,m},Z^Q_n)\,dt\\
+ &+\int_0^1(1-t)
+ \sum_{\substack{r,\ |m-n|\le L_{\rm res}\\m>r+L_{\rm gap}}}
+ {\mathcal D}_s(Z^G_n,C^G_{t,r,m})\,dt
+ +{1\over2}\mathbb E\|D_s\rho\|^2.
+\end{aligned}                                               \tag{3.4}
+\]
+Cross-Doob Pythagoras gives the exact terminal ledger
+\[
+ \boxed{\mathbb E{\cal P}_R^>
+       ={\cal K}_\ell^>+\sum_{j=j_0}^J{\cal K}_j^>.}       \tag{3.5}
+\]
+In particular $d_j\rho=\zeta_j+y_j$, so
+\[
+ {1\over2}\mathbb E\|d_j\rho\|^2
+ ={1\over2}\mathbb E\|y_j\|^2
+ +{1\over2}\mathbb E\|\zeta_j\|^2
+ +\mathbb E\langle\zeta_j,y_j\rangle.                   \tag{3.6}
+\]
+Thus the spatial-first ledger preserves, rather than removes, the R-095
+moving-prefix defect.
+
+% evidence-anchor: proposition-3.1-doob-product-commutator
+\subsection*{Proposition 3.1 (Doob/product commutator)}
+
+Deterministic Littlewood--Paley projections commute with probability
+conditioning, $[d_j,\Delta_m]=0$.  A bilinear product does not.  For a
+continuous bilinear map ${\mathrm m}$ put
+\[
+ {\rm Cov}^{\mathrm m}_j(X,Y)
+ =P_j{\mathrm m}(X,Y)-{\mathrm m}(P_jX,P_jY).               \tag{3.7}
+\]
+Then
+\[
+\boxed{
+\begin{aligned}
+ d_j{\mathrm m}(X,Y)={}&
+ {\mathrm m}(d_jX,P_{j-1}Y)+{\mathrm m}(P_{j-1}X,d_jY)\\
+ &+{\mathrm m}(d_jX,d_jY)
+ +{\rm Cov}^{\mathrm m}_j(X,Y)
+ -{\rm Cov}^{\mathrm m}_{j-1}(X,Y).
+\end{aligned}}                                              \tag{3.8}
+\]
+
+\emph{Proof.}
+Expand $P_jX=P_{j-1}X+d_jX$ and the analogous expression for $Y$ inside
+the definition (3.7), then subtract the level $j-1$ identity. \qed
+
+For one Rademacher root, $X=Y=\xi$ and $P_0\xi=0$, one has
+\[
+ d_1(XY)=0,\qquad (d_1X)(d_1Y)=1,                           \tag{3.9}
+\]
+and the covariance increment in (3.8) equals $-1$.  Factorwise conditioning
+without this term is therefore false.  For Gaussian roots,
+\[
+\boxed{
+ d_j{\mathcal Q}=G_{j-1}\otimes g_j+g_j\otimes G_{j-1}
+ +g_j^{\otimes2}-\Delta\Gamma_j.}                           \tag{3.10}
+\]
+The rootwise Wick trace is again internal to the complete terminal variable.
+
+The alternative moving-middle R-079 split differs from (3.5) by an exact
+transfer ${\mathfrak C}_j$.  If $b_j=d_j{\cal J}_0$,
+$k_j=d_j\kappa$, $r_j=d_j\rho$, and
+$s_j=f_j-k_j=r_j-i_j$, then
+\[
+ {\mathfrak F}_j=\widetilde{\mathfrak F}_j+{\mathfrak C}_j,
+ \qquad
+ {\mathfrak I}_j=\widetilde{\mathfrak I}_j-{\mathfrak C}_j, \tag{3.11}
+\]
+where
+\[
+ {\mathfrak C}_j=
+ \mathbb E\langle b_j+k_j,s_j\rangle
+ +{1\over2}\mathbb E\|s_j\|^2
+ +{1\over2}\mathbb E(B_1-B_j):\Delta\Gamma_j.             \tag{3.12}
+\]
+The two orders agree on the complete block, but mixing their internal
+coefficient and future pieces loses or duplicates (3.12).
+
+\section{Predictable-baseline support collapse}
+
+After (2.10), consider
+\[
+ {\mathfrak P}_k
+ ={\cal W}_{k-1}^{(J)}(A^{(k)})
+  -{\cal W}_{k-1}^{(J)}(A^{(k-1)}),                         \tag{4.1}
+\]
+and put
+\[
+ Z_k=X_{k-1}+A^{(k-1)},\qquad G_k=DZ_k,\qquad c_k=Da_k.     \tag{4.2}
+\]
+
+% evidence-anchor: theorem-4.1-predictable-baseline-support-collapse
+\subsection*{Theorem 4.1 (genuine large-gap residual is empty)}
+
+For the R-077 regular mutually orthogonal strict-past no-revisit whole-shell
+class, there is a fixed $C_{\rm supp}$ such that
+\[
+ \Delta_nG_k\ne0\quad\hbox{or}\quad
+ \Delta_n(G_k^{\otimes2}-\Gamma_{k-1})\ne0
+ \quad\Longrightarrow\quad n\le k+C_{\rm supp}.           \tag{4.3}
+\]
+Every R-086 payload produced by the single shift $a_k$ has largest-input
+label $r=k$.  If
+\[
+ L_{\rm gap}>C_{\rm supp}+L_{\rm res},                     \tag{4.4}
+\]
+then
+\[
+ \boxed{T_{Q,k}^>=T_{G,k}^>=0.}                            \tag{4.5}
+\]
+
+\emph{Proof.}
+Whole-shell support gives (4.3), including the product support of the raw
+Wick factor.  Resonance requires $|m-n|\le L_{\rm res}$, hence
+$m\le k+C_{\rm supp}+L_{\rm res}$.  This contradicts the
+coefficient-dominant requirement $m>k+L_{\rm gap}$ under (4.4). \qed
+
+The coefficient $\Delta_mK_{t,k}$ need not be band limited: nonlinear
+composition may generate arbitrarily high $m$.  The vanishing is caused by
+the cutoff of its resonant partner $G_k$ or
+$G_k^{\otimes2}-\Gamma_{k-1}$.  If the historical symbol $L_0$ is used for
+both widths, a fixed $O(1)$ boundary collar may remain.  Enlarging the
+payload-comparable branch by $C_{\rm supp}$ assigns that collar to the
+payable owner; it is not a genuine large-gap residual.
+
+Consequently each rational predictable baseline reduces to
+\[
+\boxed{
+ {\mathfrak P}_{k,R}={\cal U}_{R,k}+{\cal P}_{R,k}^{\rm pay}
+ +{1\over2}c_k^TB_{1,k}c_k,}                               \tag{4.6}
+\]
+up to that fixed payable collar.  This is a support theorem, not yet a lower
+form estimate.
+
+\section{Conditional low-Hermite Wick compression}
+
+Condition on a sigma field ${\cal F}$ and write
+\[
+ G=\mu+g,\qquad g\mid{\cal F}\sim N(0,\Sigma),\qquad
+ \Gamma=\Gamma_-+\Sigma.                                  \tag{5.1}
+\]
+For any square-integrable symmetric coefficient $B$, replace it inside the
+contraction by
+$\widehat B=\mathbb E[B\mid{\cal F}\vee\sigma(g)]$ and let
+$\Pi_n\widehat B$ denote the conditional Hermite projection in $g$.
+
+% evidence-anchor: theorem-5.1-low-hermite-wick-compression
+\subsection*{Theorem 5.1 (only ranks zero, one, and two survive)}
+
+One has the exact conditional identity
+\[
+\boxed{
+\begin{aligned}
+ \mathbb E_{\cal F}[B:(GG^T-\Gamma)]={}&
+ \langle\Pi_0\widehat B,\mu\mu^T-\Gamma_-\rangle\\
+ &+\mathbb E_{\cal F}
+ [\Pi_1\widehat B:(\mu g^T+g\mu^T)]\\
+ &+\mathbb E_{\cal F}
+ [\Pi_2\widehat B:(gg^T-\Sigma)].
+\end{aligned}}                                              \tag{5.2}
+\]
+Every coefficient Hermite rank $n\ge3$ is orthogonal to the raw quadratic
+Wick factor.
+
+\emph{Proof.}
+Expand
+\[
+ GG^T-\Gamma=(\mu\mu^T-\Gamma_-)
+ +(\mu g^T+g\mu^T)+(gg^T-\Sigma).                          \tag{5.3}
+\]
+The three terms belong respectively to the zeroth, first, and second
+Gaussian chaoses in $g$.  Conditional Hermite orthogonality proves (5.2).
+\qed
+
+Put
+\[
+ \beta_n^2=\mathbb E_{\cal F}\|\Pi_n\widehat B\|_{\rm HS}^2,
+ \quad \kappa_0=\|\mu\mu^T-\Gamma_-\|_{\rm HS},           \tag{5.4}
+\]
+\[
+ \kappa_1^2=2|\mu|^2{\rm tr}\Sigma+2\mu^T\Sigma\mu,
+ \qquad
+ \kappa_2^2=({\rm tr}\Sigma)^2+{\rm tr}(\Sigma^2).        \tag{5.5}
+\]
+Block Cauchy--Schwarz gives
+\[
+ \left|\mathbb E_{\cal F}[B:(GG^T-\Gamma)]\right|
+ \le\sum_{n=0}^2\beta_n\kappa_n
+ \le\left(\sum_{n=0}^2\beta_n^2\right)^{1/2}
+     \left(\sum_{n=0}^2\kappa_n^2\right)^{1/2}.            \tag{5.6}
+\]
+With conditional Gaussian $W^{2,1}$ regularity, two integrations by parts
+give the equivalent Stein form
+\[
+\boxed{
+ \mathbb E_{\cal F}[B:(GG^T-\Gamma)]
+ =\overline B:(\mu\mu^T-\Gamma_-)
+ +2\mu\cdot\mathbb E_{\cal F}{\rm div}_\Sigma B
+ +\mathbb E_{\cal F}{\rm div}_\Sigma^2B.}                 \tag{5.7}
+\]
+Similarly,
+\[
+ q=\mathbb E_{\cal F}(BG)
+ =\overline B\mu+\mathbb E_{\cal F}{\rm div}_\Sigma B.   \tag{5.8}
+\]
+For $C=\Theta_R(B)^{1/2}$, whenever the same regularity is justified,
+\[
+ r=\mathbb E_{\cal F}(CG)
+ =\overline C\mu+\mathbb E_{\cal F}{\rm div}_\Sigma C.   \tag{5.9}
+\]
+
+The theorem also tensorizes without differentiating an adapted coefficient.
+Let independent Gaussian roots $d_j$ build
+\[
+ G_j=G_{j-1}+d_j,\qquad
+ \Gamma_j=\Gamma_{j-1}+\Delta\Gamma_j.                    \tag{5.10}
+\]
+Then
+\[
+ Q_J=Q_\ell+\sum_j\{2G_{j-1}\mathbin\odot d_j
+       +(d_j^{\otimes2}-\Delta\Gamma_j)\}.                 \tag{5.11}
+\]
+If $\Pi_n^{(j)}$ is the coordinate Hermite projection in $d_j$, conditioned
+on all other roots, then
+\[
+\boxed{
+\begin{aligned}
+ \mathbb E[B:Q_J]=\mathbb E[B:Q_\ell]
+ +\sum_j\{&\mathbb E[\Pi_1^{(j)}B:2G_{j-1}\mathbin\odot d_j]\\
+           &+\mathbb E[\Pi_2^{(j)}B:
+                   (d_j^{\otimes2}-\Delta\Gamma_j)]\}.
+\end{aligned}}                                              \tag{5.12}
+\]
+Componentwise,
+\[
+ \mathbb E(BG_J)=\mathbb E(BG_\ell)
+ +\sum_j\mathbb E[(\Pi_1^{(j)}B)d_j].                      \tag{5.13}
+\]
+Deterministic spatial projections commute with these coordinate Hermite
+projections.  The identities compress the probability chaoses but do not
+bound the surviving spatial fields.
+
+\section{Mean ownership and the full square}
+
+In the centered one-root case, the raw Wick term sees only $\Pi_2B$, while
+$q$ sees $\Pi_1B$ and $r$ sees $\Pi_1C$.  Hence the R-063 forest, whose owner
+is the raw Wick product, cannot cancel the two conditional means.
+
+Let $\overline A=\overline B+2R$ and define
+\[
+ {\mathfrak D}_R
+ =\mathbb E_{\cal F}[B:{\mathcal Q}]
+ -q^T\overline A^{-1}q-|r|^2.                              \tag{6.1}
+\]
+The retained full-square block is exactly
+\[
+\boxed{
+\begin{aligned}
+ {\cal S}_0(c)
+ &={1\over2}\|c+\overline A^{-1}q\|_{\overline A}^2
+  +{1\over2}\{\mathbb E_{\cal F}[B:{\mathcal Q}]
+                    -q^T\overline A^{-1}q\}\\
+ &={1\over2}\|c+\overline A^{-1}q\|_{\overline A}^2
+  +{1\over2}{\mathfrak D}_R+{1\over2}|r|^2.
+\end{aligned}}                                              \tag{6.2}
+\]
+Thus the transformed-mean debt $r$ is restored by the retained terminal mean
+energy.  The coefficient mean $q$ remains coupled to the completed $c$ square.
+
+% evidence-anchor: fixture-6.1-smooth-mean-ownership
+\subsection*{Fixture 6.1 (raw Wick zero, both means nonzero)}
+
+Let $g\sim N(0,1)$ and
+\[
+ B(g)=2+{1\over2}\tanh g,\qquad R=1.                       \tag{6.3}
+\]
+This is smooth and strictly positive.  Parity and Stein's identity give
+\[
+ \mathbb E[B(g)(g^2-1)]=0,\qquad
+ q={1\over2}\mathbb E\,\mathrm{sech}^2g>0.                \tag{6.4}
+\]
+Since
+\[
+ C(g)=\left({2B(g)\over B(g)+2}\right)^{1/2}               \tag{6.5}
+\]
+is strictly increasing, $r=\mathbb E[gC(g)]=\mathbb EC'(g)>0$.
+The primary executable recomputes
+\[
+ q=0.302852754801081\ldots,\quad
+ r=0.0385455306276297\ldots,                               \tag{6.6}
+\]
+\[
+ {\mathfrak D}_R=-0.0244157057040153\ldots,\qquad
+ \inf_c{\cal S}_0(c)=-0.0114649738863249\ldots.           \tag{6.7}
+\]
+The raw owner is exactly zero while both mean sectors survive.  Equation
+(6.2), not an additional forest correction, restores the $r$ contribution.
+
+\section{Why low Hermite does not yet close the sum}
+
+For an adapted coefficient $C(\xi,A(\xi))$, Gaussian integration by parts
+gives
+\[
+ \mathbb E[\xi C]=\mathbb E[C_\xi+C_AA'],                 \tag{7.1}
+\]
+and
+\[
+\begin{aligned}
+ \mathbb E[(\xi^2-1)C]=\mathbb E[&C_{\xi\xi}
+ +2C_{\xi A}A'+C_{AA}(A')^2+C_AA''].
+\end{aligned}                                               \tag{7.2}
+\]
+The independent executable checks exact polynomial fixtures in which each
+selector term in (7.1)--(7.2) is nonzero.  Existing strict-past one-shot
+theorems control Doob differences; they do not control these same-root
+Malliavin derivatives of later controls.
+
+% evidence-anchor: proposition-7.1-unweighted-hermite-boundary
+\subsection*{Proposition 7.1 (Hermite compression supplies no gain)}
+
+For $h_L(\xi)=-\tanh(L\xi)$ define
+\[
+ \mu_L=-\mathbb E[\xi h_L]
+ =L\mathbb E\,\mathrm{sech}^2(L\xi),\qquad
+ \nu_L=\mathbb E h_L^2.                                   \tag{7.3}
+\]
+Then
+\[
+ \mu_L\longrightarrow\sqrt{2/\pi},\qquad
+ \nu_L\longrightarrow1,                                  \tag{7.4}
+\]
+and
+\[
+ \min_\lambda\{-\lambda\mu_L+{1\over2}\lambda^2\nu_L\}
+ =-{\mu_L^2\over2\nu_L}\longrightarrow-{1\over\pi}.     \tag{7.5}
+\]
+On the other hand,
+\[
+ \mathbb E|h_L'|^2
+ \sim {4\over3\sqrt{2\pi}}L.                             \tag{7.6}
+\]
+
+\emph{Proof.}
+Dominated convergence gives (7.4); completing the scalar square gives (7.5).
+For (7.6), set $u=L\xi$ and use
+$\int_{\mathbb R}\mathrm{sech}^4u\,du=4/3$. \qed
+
+There is likewise no deterministic spatial gain.  On the unit circle let
+\[
+ \phi_N(x)=\sqrt2\cos(Nx),\qquad
+ B_N(x,g)=\phi_N(x)H_2(g),\qquad
+ Q_N(x,g)=\phi_N(x)H_2(g).                                 \tag{7.7}
+\]
+For every integer $N$,
+\[
+ \|\phi_N\|_2^2=1,\qquad \mathbb E\int B_NQ_N=2.          \tag{7.8}
+\]
+The second Hermite projection leaves the full spatial carrier untouched.
+Thus the exact useful reduction is a weighted block target such as
+\[
+\begin{aligned}
+ \left|\sum_\alpha\mathbb E\langle F_\alpha,Q_\alpha\rangle\right|
+ \le\sum_{s=0}^2
+ &\left(\sum_\alpha w_\alpha\|\Pi_sF_\alpha\|_2^2\right)^{1/2}\\
+ &\times\left(\sum_\alpha w_\alpha^{-1}
+                    \|\Pi_sQ_\alpha\|_2^2\right)^{1/2},
+\end{aligned}                                               \tag{7.9}
+\]
+provided a production-specific spatial weight can actually be proved.
+
+\section{The adapted-prefix frontier}
+
+The support collapse (4.5) leaves
+\[
+ Z_k=X_{k-1}+A^{(k-1)}                                      \tag{8.1}
+\]
+as a moving base correlated with the past Gaussian field.  The decorated
+model in the remaining payable branch contains
+\[
+ D^3\overline B_{k-1}^{(J)}(Z_k)\diamond{\mathcal Q}_k.     \tag{8.2}
+\]
+R-063 proves deterministic $H^2$ translation and reconstruction.  It does
+not turn (8.2) into a control-independent model norm.  Applying Young's
+inequality separately for every $k$ would repeatedly consume the same prefix
+energy and terminal sextic budget.
+
+The smallest honest successor is therefore
+\[
+\boxed{
+ \sum_k\mathbb E\left[{\cal U}_{R,k}
+ +{\cal P}_{R,k}^{\rm pay}+{1\over2}c_k^TB_{1,k}c_k\right]
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C_{\eta,\zeta},}       \tag{8.3}
+\]
+assembled with every non-rational predictable-baseline owner and one global
+allocation.  A sufficient new input would be a weighted conditional estimate
+for $\Pi_0,Pi_1,Pi_2$ with a positive production root/shell gain.  The
+alternative is a direct signed Schur/cancellation estimate that avoids
+Malliavin differentiation.
+
+\section{Updated proof and failure map}
+
+\[
+\begin{array}{c}
+ \text{R-077 complete fresh-root cancellation}\
+ \downarrow\\
+ \text{predictable baselines }{\mathfrak P}_k\\
+ \downarrow\\
+ \boxed{\text{R-085/R-086 Gram/Taylor split at each baseline}}\\
+ \downarrow\hspace{18mm}\downarrow\\
+ \boxed{T_{Q,k}^>=T_{G,k}^>=0\text{ by support}}
+ \qquad
+ \boxed{\text{raw Wick sees only }\Pi_0,\Pi_1,\Pi_2}\\
+ \downarrow\hspace{18mm}\downarrow\\
+ \text{fixed collar is payable}
+ \qquad
+ \text{means }q,r\text{ retain separate owners}\\
+ \downarrow\\
+ \boxed{\text{next: one adapted-prefix global payment (8.3)}}\\
+ \downarrow\\
+ H_N\ \longrightarrow\ {\rm REG}\ \longrightarrow\
+ H_A/\mathrm{OVERLAP}_{\rm src}\ \longrightarrow\ {\rm Nelson}.
+\end{array}                                                  \tag{9.1}
+\]
+
+\begin{center}
+\begin{tabular}{p{0.29\textwidth}p{0.16\textwidth}p{0.45\textwidth}}
+Route & Verdict & Reason / successor\\ \hline
+Project rational row before R-077 & failed & Cancellation is proved only for
+the complete Wick/trace/forest packet.\\
+Factorwise Doob Leibniz & failed & The conditional covariance increment
+(3.8) is indispensable.\\
+Predictable large-gap resonance & eliminated & Support and a widened fixed
+collar give (4.5).\\
+Support collapse implies payment & failed & The moving adapted base (8.1)
+is outside the existing deterministic-translation theorem.\\
+Low-Hermite compression & advanced & Only ranks zero through two survive,
+without differentiating the coefficient.\\
+Stein/Doob closure & failed by present inputs & Selector derivatives survive
+and no spatial gain is created.\\
+Global baseline sum & open / required & Prove (8.3) with all owners used once.\\
+\end{tabular}
+\end{center}
+
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{Objection: Once $T_{Q,k}^>=T_{G,k}^>=0$, the rational
+predictable baseline is proved.}
+\textbf{UPHELD as false.}  Support removes only the genuine large-gap
+resonance.  The remaining families live at the moving adapted base and their
+one-use global sum is not an existing theorem.
+
+\item \textbf{Objection: The rational row may be projected before R-077
+cancellation.}
+\textbf{UPHELD as false.}  R-077 cancellation requires the complete
+Wick/trace/forest endpoint packet.  Its individual rational or Hermite pieces
+need not be centered.
+
+\item \textbf{Objection: Doob differences commute with Littlewood--Paley
+projections, so factorwise conditioning is legitimate.}
+\textbf{UPHELD as false.}  Spatial projections commute, but bilinear
+evaluation produces the covariance defect (3.8).  Fixture (3.9) has unit
+error if it is omitted.
+
+\item \textbf{Objection: Only three Hermite ranks remain, so the coefficient
+is automatically small.}
+\textbf{UPHELD as false.}  Orthogonality deletes high coordinate ranks but
+does not bound the surviving projections or change their spatial frequency;
+fixture (7.7)--(7.8) is frequency independent.
+
+\item \textbf{Objection: Gaussian integration by parts converts the low
+Hermite projections to the accepted Doob square.}
+\textbf{UPHELD as false.}  Equations (7.1)--(7.2) differentiate the selector.
+The $\tanh$ family retains an order-one negative bracket while its derivative
+energy diverges.
+
+\item \textbf{Objection: The R-063 forest cancels $q$ and $r$.}
+\textbf{UPHELD as an ownership error.}  The forest reconstructs raw Wick.
+The smooth fixture has raw Wick zero with both means nonzero; $r$ is restored
+only by the retained terminal mean energy in (6.2).
+
+\item \textbf{Objection: The two method fixtures disprove complete $H_N$.}
+\textbf{DISMISSED.}  They omit complete signed companion terms and refute
+only support-implies-payment and unweighted Stein/Doob shortcuts.  A direct
+signed global estimate remains possible.
+\end{enumerate}
+
+\section{Executable evidence}
+
+The primary executable uses non-unit Gaussian Hermite quadrature, an exact
+three-root tensor product, the smooth positive $\tanh$ mean fixture, bounded
+selector and spatial-carrier families, support enumeration, and a product
+commutator fixture.  The non-importing independent executable uses exact
+Fraction product-Hermite coefficient ledgers, exact selector-chain and
+Rademacher identities, and a standard-library adaptive Simpson integrator.
+The integrated verifier runs both children afresh, hash-pins all authorities,
+checks the note, PDF, manifest, registry, explorations, claim and public
+surfaces, and fails closed on any promotion.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_low_hermite_wick_predictable_baseline_reduction_verify.py
+\end{verbatim}
+
+\section{Result footer}
+
+\begingroup\scriptsize
+\begin{verbatim}
+Result ID: A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-
+           BASELINE-REDUCTION
+Precise statement: Complete cancellation precedes Gram projection. On each
+                   predictable baseline the genuine large-gap T_Q and T_G
+                   sets are support-empty after a fixed payable collar. Raw
+                   Wick sees only coordinate Hermite ranks 0--2; q and r
+                   retain distinct rank-one/full-square ownership.
+Scope:             Finite cutoff, positive floor, R-077 regular strict-past
+                   no-revisit whole-shell class, widened fixed collar, and
+                   exact R-063/R-079/R-085/R-086/R-095 conventions.
+Dependencies:      R-063; R-077; R-079; R-085; R-086; R-095.
+Evidence grade:    ANALYTIC, EXACT, EXECUTED, REDUCTION, BOUNDARY.
+Reproduction command: python codes/foundations/
+                   a13_classii_low_hermite_wick_predictable_
+                   baseline_reduction_verify.py
+Expected output:   Primary 69, independent 50, integrated manifest-pinned,
+                   and aggregate manifest-pinned assertions PASS; exit zero.
+Falsification gate: Any identity, support collar, Hermite/mean ownership,
+                   fixture, authority, hash, PDF, count, public-link, or T4
+                   scope assertion fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: Adapted-prefix payment, complete H_N, REG, H_A,
+                   OVERLAP_src, Nelson, removals, measure, Sector A, and
+                   T5--T7 remain open.
+Next required action: Prove one global adapted-prefix payable form (8.3),
+                   using either weighted Pi_0/Pi_1/Pi_2 spatial gain or a
+                   direct signed cancellation, with every owner used once.
+\end{verbatim}
+\endgroup

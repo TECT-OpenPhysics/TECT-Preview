@@ -190,10 +190,19 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  positivity holds exactly under `2R>=theta B`; the conditional resolvent and
  transformed-mean debts remain, and no decaying fraction closes both current
  absolute ledgers. Near `T_G^>` has bounded Cartan curvature and is disjoint
- from regular Cartan FAR ownership. The optional R-093 zero-slack rows remain
+ from regular Cartan FAR ownership. R-096 now enforces complete R-077 fresh-
+ root cancellation before rational projection. On every resulting regular
+ predictable baseline, a widened fixed payload collar makes the genuine
+ coefficient-dominant `T_Q^>,T_G^>` region support-empty. Conditional raw
+ Wick sees only coordinate Hermite ranks zero through two, while `q` and
+ transformed `r` retain distinct low-Hermite/full-square owners. This
+ compression has no automatic spatial gain, and direct Stein differentiation
+ exposes adapted-selector derivatives. The optional R-093 zero-slack rows remain
  superseded coarse estimates, while absolute per-revisit sixth-moment
- summation remains invalid. The next target retains the full rootwise square
- in one moving-prefix--near--heat--Wick--forest form. Complete `H_N`, REG,
+ summation remains invalid. The next target is one global moving adapted-base
+ payable form with the full heat--low--trace--forest and square owners used
+ once, via either a weighted low-Hermite spatial gain or direct signed
+ cancellation. Complete `H_N`, REG,
  `OVERLAP_src`, Nelson, and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.

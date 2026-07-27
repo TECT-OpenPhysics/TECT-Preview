@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY | support collapse does not pay the moving adapted base | Apply the R-086 Gram/Taylor split to every R-077 |
+| NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE | Hermite orthogonality is not a spatial or adapted-derivative | Project the same-root coefficient to its low Hermite |
 | NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION | a rootwise future reserve is not a fraction of the terminal  | The R-094 payment by a declared fraction of the rootwise |
 | NG-2026-07-27-A13-SCALE-DEPENDENT-FRACTION-ABSOLUTE-CLOSURE | the two current root weights meet critically | Choose |
 | AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION | the strong factor and the positive square have narrower owne | The R-093 scaling diagnostic `2^(j-4k)` was promoted to |

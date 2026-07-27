@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY](#ng-2026-07-27-a13-predictable-baseline-support-implies-payability) | close each R-077 rational predictable baseline immediately after the R-086 genuine large-gap `T_Q^>,T_G^>` support sets become empty | support removes the terminal coefficient-dominant resonance after a fixed payable collar, but the remaining five-family and shifted terms are evaluated at the moving adapted base `X_(k-1)+A^(k-1)`; existing deterministic-translation/payment theorems do not sum that base uniformly, and rootwise Young would duplicate the global energy and sextic budgets |
+| [NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE](#ng-2026-07-27-a13-low-hermite-stein-derivative-closure) | close the same-root Wick and conditional-mean debts by low-Hermite projection followed by Gaussian integration by parts and the accepted Doob square | raw Wick sees only coordinate ranks zero through two, but Stein differentiation of an adapted coefficient produces selector derivatives `A'`, `A''`, and mixed terms; the bounded `-tanh(L xi)` fixture retains a nonzero limiting negative bracket while derivative energy grows linearly, and Hermite projection leaves an arbitrary spatial carrier unchanged |
 | [NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION](#ng-2026-07-27-a13-fractional-feedback-global-square-identification) | replacement of a declared fraction of the global terminal derivative square by the sum of rootwise future-feedback squares | the exact moving-prefix identity leaves low, present-prefix, and present--future cross terms with no sign; a centered scalar root gives defect `-1/4`, while fractional matrix-perspective positivity requires the new condition `2R >= theta B`, which no fixed production-independent reserve satisfies globally |
 | [NG-2026-07-27-A13-SCALE-DEPENDENT-FRACTION-ABSOLUTE-CLOSURE](#ng-2026-07-27-a13-scale-dependent-fraction-absolute-closure) | repair of the fractional feedback allocation by a root-decaying schedule `theta_j` under the presently proved absolute ledgers | the actual moving-prefix estimate requires decay exponent `alpha<1`, whereas the crude root mean/covariance debt requires `alpha>1`; at the critical exponent their two weights have product one, so no absolute schedule closes both sums without a new signed packet estimate |
 | [AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION](#audit-2026-07-27-a13-r093-root-factor-square-allocation) | R-093 root-local `2^(j-4k)` prototype and partial R-079 square completions | the strong factor belongs only to the positive quadratic Gram-curvature atom; the full mixed secant starts at `2^(j-2k)`, and every partial completion must reserve the unused feedback-square fraction for the coupled `T_G^>`/Jensen packet |
@@ -117,6 +119,58 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-27-a13-predictable-baseline-support-implies-payability"></a>
+### NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY -- support collapse does not pay the moving adapted base
+
+**Failure mode:** Apply the R-086 Gram/Taylor split to every R-077
+predictable baseline and declare the rational baseline closed as soon as the
+coefficient-dominant `T_Q^>` and `T_G^>` regions are empty.
+
+**Evidence:** The complete R-077 fresh-root cancellation must be performed
+before rational projection.  On the resulting `k`th baseline, both `G_k` and
+`G_k tensor G_k-Gamma_(k-1)` have Fourier support below
+`k+C_supp`, while the single-shell payload has largest-input label `r=k`.
+Thus `|m-n|<=L_res` and `m>k+L_gap` are incompatible when
+`L_gap>C_supp+L_res`; the historical one-width convention leaves at most a
+fixed collar, which belongs to the payable branch.  What remains is evaluated
+at `Z_k=X_(k-1)+A^(k-1)`.  R-063 controls deterministic `H2` translations,
+not a control-independent norm for this moving adapted decorated model, and
+using Young separately at every root would repeatedly spend the same prefix
+and terminal sextic budgets.  The R-096 primary and independent executables
+enumerate the support collar and the exact product/Doob covariance defect.
+
+**Consequence:** The genuine predictable-baseline large-gap resonance is
+eliminated, but payability is not.  Revisit only after proving one global
+expectation-inside lower bound for the adapted-base five-family terms,
+payable shifted terms, retained endpoint squares, and all non-rational owners.
+This is a method no-go, not a counterexample to the complete `H_N` inequality.
+
+<a id="ng-2026-07-27-a13-low-hermite-stein-derivative-closure"></a>
+### NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE -- Hermite orthogonality is not a spatial or adapted-derivative gain
+
+**Failure mode:** Project the same-root coefficient to its low Hermite
+chaoses, use Gaussian integration by parts, and pay the resulting derivatives
+from the already accepted Doob square.
+
+**Evidence:** R-096 proves exactly that a raw quadratic Wick contraction sees
+only coefficient Hermite ranks zero, one, and two.  In the centered root the
+raw term sees rank two, while the coefficient mean `q` and transformed mean
+`r` see rank one of different coefficients.  For an adapted coefficient
+`C(xi,A(xi))`, Stein differentiation produces `C_A A'` at first order and
+`2 C_(xi A)A' + C_(AA)(A')^2 + C_A A''` at second order.  Exact polynomial
+fixtures make every selector term nonzero.  The bounded family
+`h_L=-tanh(L xi)` has optimized bracket tending to `-1/pi` while
+`E|h_L'|^2` grows like `4L/(3 sqrt(2pi))`.  Independently,
+`sqrt(2)cos(Nx) H_2(g)` has the same rank-two pairing for every `N`, so the
+projection creates no spatial decay.  Both R-096 executables reproduce these
+facts without importing each other.
+
+**Consequence:** Low-Hermite compression is a reusable exact reduction, but
+the current unweighted Stein/Doob route has no positive root/shell gain.
+Revisit after a production-specific weighted estimate for `Pi_0,Pi_1,Pi_2`
+or a direct signed cancellation avoiding adapted-control differentiation.
+This does not refute either route with a new gain or the complete `H_N` form.
 
 <a id="ng-2026-07-27-a13-fractional-feedback-global-square-identification"></a>
 ### NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION -- a rootwise future reserve is not a fraction of the terminal square

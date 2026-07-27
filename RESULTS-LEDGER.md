@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-096](#r-096) | Gram-first predictable-baseline support collapse and low-Hermite Wick boundary | Scoped T4 analytic/exact/executed reduction: complete R-077 fresh-root cancellation must precede rational projection. On each resulting regular strict-past no-revisit predictable baseline, the R-086 rough partners are supported below `k+C_supp`, so after a fixed widened payable collar the genuine coefficient-dominant `T_Q^>,T_G^>` regions are empty. The remaining problem is the once-only global payment at the moving adapted base `X_(k-1)+A^(k-1)`, not terminal large-gap resonance. Independently, an arbitrary same-root raw quadratic Wick contraction sees only coordinate Hermite ranks zero through two; centered raw Wick, coefficient mean `q`, and transformed mean `r` occupy distinct rank-two/rank-one owners. Hermite compression creates no spatial gain, and direct Stein differentiation exposes uncontrolled adapted-selector derivatives. The next target is one global adapted-prefix payable form with all heat, low, trace, forest, and non-rational owners retained once. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-095](#r-095) | Fractional feedback-square perspective and near-Cartan ownership boundary | Scoped T4 analytic/exact/executed boundary: the rootwise future-feedback reserve differs from the global terminal derivative square by an exact moving-prefix defect containing low, present-prefix, and present--future cross terms with no sign; a scalar fixture gives `-1/4`. Retaining only `1-theta` of the endpoint coefficient square leaves a PSD matrix perspective exactly when `2R>=theta B`, while conditioning creates an explicit resolvent-gap debt and an indispensable terminal mean energy. The production Gram is unbounded, so no fixed reserve enforces the new domination globally. Under the actually proved prefix and absolute mean ledgers, a decaying `theta_j` requires simultaneously `alpha<1` and `alpha>1`. The surviving near-root `T_G^>` has an exact divergence-plus-bounded-Cartan-curvature homotopy and is disjoint from regular Cartan FAR. These are ownership and method boundaries, not a counterexample to the complete action; the full signed rootwise heat--Wick--forest packet, `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-094](#r-094) | Root-local Gram secants and the nonduplicating feedback boundary | Scoped T4 analytic/exact/executed advance: the positive quadratic Gram-curvature atom has the proposed `2^(j-4k)` scale, while the complete mixed centered secant starts at `2^(j-2k)` but is still form-subcritical on the regular one-shot class by weighted Hardy and product-space `L2`--`L6` interpolation, with mixed budget `X^(1/2)Y^(1/6)` and slack `1/3`. The isolated fresh derivative form has slack `1/6`, and the combined value--heat control prefix is paid once from a declared fraction of the retained feedback square at cost `O(2^(-3j0)X)`. An exact square-allocation identity leaves the adapted `T_G^>`/Jensen branch, coefficient/derivative cross, conditional mean debts, and once-only heat--low--trace--forest embedding open. The two zero-slack R-093 BG rows are superseded coarse estimates, not current atoms. Absolute per-revisit sixth-moment summation fails. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-093](#r-093) | Augmented perspective covariance, paid cutoff-two coercivity, and source-union Gibbs boundary | Scoped T4 analytic/exact/executed advance: the complete augmented one-reveal density has an exact unconditional normal form and, for symmetric even reveals, is precisely a coefficient/quadratic covariance. A bounded smooth reveal constructed from the complete four-row production coefficient makes that local density strictly negative for every fixed payment, but the genuine cutoff-two torus action is coercive on the bounded smooth predictable shell-two class: `I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`, so amplitude scaling cannot produce a paid counterexample there. Conditioning on the same-root coefficient costs mutual information and is infinite for the smooth reveal. The triangular source action equals the Nelson free energy only over the directed union of temporally faithful refinements, not in each fixed chart; its exact Gibbs gap forces both physical and fibre entropy gaps to zero on near minimisers. Thus an independent uniform fibre reserve, free coefficient conditioning, fixed-chart attainment, and causal orthogonal QR are retired; coupled use of the actual fibre term is not excluded. Uniform coefficient-unconditioned `H_N`, full packet assembly/`OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -114,6 +115,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-096"></a>
+### R-096 -- Gram-first predictable-baseline support collapse and low-Hermite Wick boundary
+
+**Result ID.**
+`A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION`.
+
+**Tier.** T4 scoped analytic/exact/executed reduction and method boundary. No
+tier promotion.
+
+**Complete-packet ordering.** The exact R-079 rational row is the sum of the
+five unshifted R-085 families, R-086 payable terms, coefficient-dominant
+`T_Q^>+T_G^>`, and the retained endpoint coefficient square. Its Wick trace
+and R-063 forest are internal owners. R-077 fresh-root cancellation applies
+only to the complete Wick/trace/forest endpoint packet, so it must precede
+rational or Hermite projection. A factorwise Doob product rule is false: the
+exact conditional-covariance increment is indispensable, with unit error on
+one Rademacher root if omitted.
+
+**Predictable-baseline support theorem.** After complete cancellation, the
+`k`th predictable baseline has rough partners `G_k` and
+`G_k tensor G_k-Gamma_(k-1)` supported below shell `k+C_supp`, while its
+single-shell payload has largest-input label `r=k`. Resonance
+`|m-n|<=L_res` is therefore incompatible with coefficient dominance
+`m>k+L_gap` whenever `L_gap>C_supp+L_res`. Hence the genuine
+`T_(Q,k)^>,T_(G,k)^>` sets are empty; the historical single-width convention
+leaves only a fixed collar reassigned to the payable branch. The nonlinear
+coefficient itself need not be band limited.
+
+**Low-Hermite theorem.** For `G=mu+g`, conditionally Gaussian
+`g~N(0,Sigma)`, and arbitrary same-root symmetric coefficient `B`, the raw
+contraction `E[B:(G tensor G-Gamma)]` is exactly the sum of the rank-zero
+pairing with `mu mu^T-Gamma_-`, the rank-one pairing with
+`mu g^T+g mu^T`, and the rank-two pairing with `g g^T-Sigma`; every
+coordinate rank at least three vanishes. The identity tensorizes root by
+root without differentiating adapted coefficients. In the centered case raw
+Wick sees rank two, while the coefficient mean `q` and transformed mean `r`
+see rank one of different coefficients. The full endpoint square restores
+the `r` debt; the raw R-063 forest does not cancel either mean.
+
+**Method boundary and successor.** Hermite projection is unweighted and
+leaves a normalized spatial carrier `sqrt(2)cos(Nx)` unchanged at every
+frequency. Gaussian integration by parts of `C(xi,A(xi))` produces `A'`,
+`A''`, and mixed derivatives not controlled by the accepted Doob square.
+The bounded family `-tanh(L xi)` keeps an order-one negative optimized
+bracket while same-root derivative energy grows linearly. Thus support
+collapse and low-chaos compression do not prove payment. The precise
+successor is one cutoff-uniform global lower form for the adapted-base
+five-family and payable shifted terms plus retained squares and all
+non-rational owners, using one `X/Y` allocation.
+
+**Evidence.** Proof note
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-low-hermite-wick-predictable-baseline-reduction-260727-v1.0.tex.txt`
+and its paired PDF; primary and standard-library non-importing independent
+executables plus a hash-pinned integrated verifier and JSON artefacts under
+the A13 runs tree.
+
+**Boundary.** R-096 does not prove the adapted-prefix payable sum, a positive
+Hermite root/spatial gain, a Malliavin derivative estimate for adapted
+controls, the complete coefficient-unconditioned `H_N`, REG,
+progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, an
+interacting measure, Sector-A closure, or a higher tier.
 
 <a id="r-095"></a>
 ### R-095 -- Fractional feedback-square perspective and near-Cartan ownership boundary

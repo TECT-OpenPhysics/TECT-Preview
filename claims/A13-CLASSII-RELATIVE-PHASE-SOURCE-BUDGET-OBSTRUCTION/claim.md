@@ -587,6 +587,23 @@ the following structural results and proof-architecture boundaries hold.
     curvature homotopy and is not owned by regular Cartan FAR. These are
     ownership and method boundaries; the complete signed rootwise packet,
     `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
+39. `A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION` is R-096.
+    It proves that complete R-077 fresh-root cancellation must precede
+    rational projection and gives the exact product/Doob conditional-
+    covariance defect. On every resulting regular strict-past no-revisit
+    whole-shell predictable baseline, the rough R-086 partners are supported
+    below `k+C_supp`; after one fixed widened payable collar the genuine
+    coefficient-dominant `T_Q^>` and `T_G^>` regions are empty. Thus the
+    remaining rational problem is global payment at the moving adapted base
+    `X_(k-1)+A^(k-1)`, not terminal large-gap resonance. Independently, a raw
+    quadratic Wick contraction sees only coordinate Hermite ranks zero
+    through two. In a centered root raw Wick sees rank two, whereas `q` and
+    transformed `r` have distinct rank-one/full-square owners. The retained
+    terminal mean energy restores `r`; the R-063 raw forest does not cancel
+    either mean. Hermite projection supplies no spatial gain, and direct
+    Stein differentiation produces uncontrolled adapted-selector
+    derivatives. Adapted-prefix payment, complete `H_N`, REG,
+    `OVERLAP_src`, Nelson, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -632,6 +649,7 @@ is a scoped T4 subproof and does not promote A13.
 | Augmented covariance / Gibbs-information boundary | Unconditional perspective normal form, production sign fixture, cutoff-two paid coercivity, coefficient-reveal information price, source-union Gibbs equality, and fibre/causal no-gos | T4 analytic/exact reduction; root-local unconditioned `H_N`, `OVERLAP_src`, and Nelson open |
 | Root-local Gram secant / feedback-square boundary | Quadratic-versus-mixed factor audit, weighted-Hardy centered secant, fresh derivative form, value--heat control-prefix payment, fractional square allocation, BG-row correction, and revisit no-go | T4 analytic/exact/executed advance; complete rootwise packet embedding, `H_N`, REG, progression, and Nelson open |
 | Fractional feedback-square / perspective ownership boundary | Exact moving-prefix defect, fractional matrix-perspective iff, conditional resolvent-gap identity, critical absolute allocation schedule, and near-`T_G^>` Cartan homotopy | T4 analytic/exact/executed boundary; complete signed rootwise packet, `H_N`, REG, progression, and Nelson open |
+| Gram-first predictable baselines / low-Hermite Wick boundary | Complete-cancellation-first ordering, product/Doob covariance defect, fixed-collar support collapse of genuine baseline `T_Q^>,T_G^>`, coordinate Hermite rank-zero-to-two compression, and full-square `q/r` ownership | T4 analytic/exact/executed reduction; global moving adapted-base payment, complete `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -805,6 +823,12 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   reduced perspective is positive exactly under `2R>=theta B`. It also
   isolates the conditional resolvent debt, critical absolute schedule, and
   near-`T_G^>` Cartan ownership. It does not bound their complete signed sum.
+- R-096 proves that R-077 complete cancellation comes before rational
+  projection, eliminates the genuine coefficient-dominant rational resonance
+  on each predictable baseline after a fixed payable collar, and compresses
+  the raw same-root Wick coefficient to Hermite ranks zero through two. It
+  does not pay the remaining terms at the moving adapted base or create a
+  positive spatial/root gain for the low-Hermite projections.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -833,19 +857,22 @@ Current subordinate order:
 
 1. keep the R-092 regular one-shot `H_C` theorem as a closed sufficient
    module; do not promote it to progressive/revisit controls;
-2. retain the full rootwise square through the perspective reconstruction
-   and carry the R-095 moving-prefix defect explicitly; do not replace the
-   rootwise future reserve by a fraction of the global terminal square unless
-   the restrictive pure-future identity or predictable `2R>=theta B`
-   domination is proved;
-3. prove one cutoff-uniform expectation-inside lower form bound for the
-   moving-prefix, near `T_Q^>+T_G^>`, conditional resolvent and terminal-mean
-   debts, base heat, low, paid, Wick trace, and complete R-063 forest, each
-   retained exactly once;
-4. assemble the complete R-079 packet into the temporally faithful refinement-
+2. apply the R-077 complete fresh-root Wick/trace/forest cancellation before
+   rational or Hermite projection, then pass each predictable baseline to the
+   R-085/R-086 Gram/Taylor coordinates;
+3. use distinct resonance and payload-collar constants with
+   `L_gap>C_supp+L_res`; the genuine baseline `T_Q^>,T_G^>` regions are then
+   support-empty and the fixed boundary collar belongs to the payable branch;
+4. prove one cutoff-uniform expectation-inside lower form for the global sum
+   of moving adapted-base five-family terms, payable shifted terms, retained
+   endpoint squares, and every non-rational heat, low, trace, and R-063 forest
+   owner, using one `X/Y` allocation. Supply either a production-weighted
+   `Pi_0/Pi_1/Pi_2` spatial square-function gain or a direct signed
+   cancellation avoiding adapted-control Malliavin differentiation;
+5. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
-5. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
+6. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
    directly. R-087 CORE and R-093 show that `OVERLAP_src` and Nelson are the
    same variational objective. Free coefficient conditioning, fixed-chart
    attainment, an independent uniform fibre-entropy reserve, causal
@@ -855,14 +882,14 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary_verify.py
+python codes/foundations/a13_classii_low_hermite_wick_predictable_baseline_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `246/246`;
-- non-importing independent `56/56`;
-- integrated `152/152` and aggregate `454/454`;
+- primary `69/69`;
+- non-importing independent `50/50`;
+- integrated `153/153` and aggregate `272/272`;
 - exact finite-tree moving-prefix, fractional perspective, conditional mean,
   critical schedule, Cartan homotopy, predecessor/source/PDF/surface
   contracts, and T4 scope firewalls;
@@ -1657,6 +1684,18 @@ primary `246/246`, independent `56/56`, integrated `152/152`, or aggregate
 `454/454`; or any promoted complete rootwise packet, `H_N`, REG,
 `OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
 
+The R-096 continuation is additionally falsified by failure of the complete-
+cancellation-first rational embedding; the spatial-first/moving-middle
+transfer identity; the product/Doob conditional-covariance formula or its
+Rademacher fixture; the predictable-baseline support implication or fixed-
+collar assignment; the conditional or tensorized low-Hermite Wick identity;
+the `q/r` full-square ownership or smooth positive tanh fixture; the selector-
+chain, derivative-growth, or spatial-carrier no-gain boundaries; any
+authority, source, note, PDF, manifest, registry, exploration, or public-
+surface pin; primary `69/69`, independent `50/50`, integrated `153/153`, or
+aggregate `272/272`; or any promoted adapted-prefix payment, complete `H_N`,
+REG, `OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1838,6 +1877,15 @@ defect, dominate the unbounded production Gram by a fixed reserve, sum the
 conditional resolvent and transformed-mean debts, or lower-bound near
 `T_G^>` separately. Therefore it does not prove the complete R-079/R-086
 rootwise packet, `H_N`, REG, arbitrary progressive/revisit `H_A`,
+`OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
+closure, or T5--T7. Tier stays T4.
+
+R-096 proves exact ordering, support, Hermite-compression, and conditional-
+mean ownership results. It does not prove the global lower form at the moving
+adapted base, a production-weighted spatial/root gain for the surviving
+`Pi_0/Pi_1/Pi_2` projections, or same-root Malliavin derivative control for
+adapted selectors. Therefore it does not prove complete coefficient-
+unconditioned `H_N`, REG, arbitrary progressive/revisit `H_A`,
 `OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
 closure, or T5--T7. Tier stays T4.
 
@@ -2232,4 +2280,19 @@ closure, or T5--T7. Tier stays T4.
   aggregate `454/454` are manifest-pinned; the eight-page PDF passed form,
   zero-overfull, extraction, and all-page visual QA. The complete signed
   rootwise packet, `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain
+  open; tier stays T4.
+- 2026-07-27: Registered R-096. Complete R-077 fresh-root cancellation now
+  precedes rational projection, the exact product/Doob covariance defect is
+  retained, and each regular predictable baseline loses its genuine R-086
+  coefficient-dominant `T_Q^>,T_G^>` region after one fixed widened payable
+  collar. The surviving target is the global moving adapted-base payment.
+  Conditional and tensorized raw Wick contractions see only coordinate
+  Hermite ranks zero through two; centered raw Wick, `q`, and transformed `r`
+  retain distinct rank-two/rank-one/full-square owners. Smooth tanh and
+  spatial-carrier fixtures retire support-implies-payability and unweighted
+  Stein/Doob closure without refuting a weighted or direct signed proof.
+  Primary `69/69`, non-importing independent `50/50`, integrated `153/153`,
+  and aggregate `272/272` are manifest-pinned; the nine-page PDF passed form,
+  zero-overfull, extraction, and all-page Poppler visual QA. Adapted-prefix
+  payment, complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain
   open; tier stays T4.

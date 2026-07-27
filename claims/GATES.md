@@ -985,12 +985,12 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-27), narrowed through R-095; regular
+**Status:** OPEN CURRENT CHILD (2026-07-27), narrowed through R-096; regular
 one-shot `H_C` and the centered Gram-secant/value--heat prefix sublemmas are
 closed, while their once-only embedding into coefficient-unconditioned
 root-local `H_N` and lossless progressive/revisit `H_A` assembly into
 `OVERLAP_src` remain open
-`A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-PERSPECTIVE-DOMINATION-BOUNDARY`.
+`A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION`.
 R-079 proves
 the exact expectation-level full-current and canonical safe-packet identity,
 one spatially weighted Cameron--Martin control square-function use, and the
@@ -1288,6 +1288,22 @@ conditional mean debts, near `T_G^>`, and the complete R-063 forest retained
 exactly once. The `theta_j` schedule conflict is only a no-go for the presently
 proved separate absolute bounds, not for this coupled signed target.
 
+R-096 fixes the legal order of attack: the complete R-077 fresh-root Wick,
+trace, and forest cancellation must occur before the once-only R-086
+rational/Hermite projection. On every R-077 regular strict-past no-revisit
+whole-shell predictable baseline, rough partner support is confined to
+`n<=k+C_supp`; hence `L_gap>C_supp+L_res` makes the genuine coefficient-
+dominant `T_Q,k^>` and `T_G,k^>` regions empty, leaving only a fixed payable
+collar. Conditional raw Wick depends only on coordinate Hermite ranks zero,
+one, and two, but this algebraic compression supplies no spatial/root gain,
+and an adapted Stein route differentiates the selector. The remaining target
+is therefore one global expectation-inside payment at the moving base
+`Z_k=X_(k-1)+A^(k-1)` for the five rational owner families, payable shifted
+terms, retained endpoint square, heat, both low objects, trace, the complete
+R-063 forest, and conditional mean debts, with one `X/Y` allocation and every
+owner used exactly once. This is a support and ownership reduction, not the
+complete `H_N` lower bound.
+
 Accordingly `H_A` is only the lossless assembly of the complete packet,
 uniformly in cutoff, partition, and revisit, into `OVERLAP_src`, preserving
 R-079 future feedback and R-080 low/revisit cancellation. The uniform
@@ -1308,7 +1324,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-27). The gate was exposed by R-080 and
-sharpened by R-081--R-095
+sharpened by R-081--R-096
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

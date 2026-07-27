@@ -436,8 +436,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   resolvent-gap and terminal-mean debt, and the present absolute ledgers give
   incompatible `alpha<1` and `alpha>1` schedule requirements. Near `T_G^>`
   retains bounded Cartan curvature and is not paid by regular Cartan FAR.
-  The next target must therefore retain the full rootwise square and prove the
-  complete expectation-inside moving-prefix--near--heat--Wick--forest form.
+  R-096,
+  `A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION`, now fixes
+  the order: perform the complete R-077 fresh-root cancellation before
+  rational projection, then analyze each predictable baseline. With
+  `L_gap>C_supp+L_res`, its genuine coefficient-dominant `T_Q^>,T_G^>`
+  region is support-empty and the fixed boundary collar is payable. Raw Wick
+  also compresses exactly to coordinate Hermite ranks zero through two, but
+  this supplies no spatial gain and direct Stein differentiation exposes
+  adapted-selector derivatives. The next target is therefore one global
+  moving adapted-base payment with all non-rational owners retained once.
   The two R-093 coarse critical rows and absolute per-revisit sixth-moment
   summation remain retired; complete `H_N`, REG, `OVERLAP_src`, Nelson, and
   Sector A remain open.
@@ -682,11 +690,17 @@ preserved in git/changelog rather than treated as current gates.
    replace the rootwise reserve by a global terminal-square fraction unless
    the pure-future identity or predictable domination `2R>=theta B` is proved;
    a decaying `theta_j` does not repair the current separate absolute ledgers.
-   Prove one expectation-inside lower form bound for the moving-prefix, near
-   `T_Q^>+T_G^>`, conditional resolvent and transformed-mean debts,
-   predictable base-current heat term, both distinct low objects, paid term,
-   Wick trace, and complete R-063 forest inside the same once-only identity
-   before taking the conditional covariance sum. Do not condition on the same-root coefficient for
+   Apply R-096 next: cancel the complete R-077 fresh-root packet before any
+   rational/Hermite projection, use a widened fixed payload collar so the
+   genuine predictable-baseline `T_Q^>+T_G^>` region is support-empty, and do
+   not infer payability from that support collapse. Prove one expectation-
+   inside lower form bound for the global sum of moving adapted-base five-
+   family terms, payable shifted terms, retained endpoint squares, predictable
+   base-current heat, both distinct low objects, Wick trace, and the complete
+   R-063 forest inside the same once-only identity. Supply either a
+   production-weighted `Pi_0/Pi_1/Pi_2` spatial square-function gain or a
+   direct signed cancellation avoiding adapted-selector differentiation.
+   Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower
    triangular source map, or amplify the local sign fixture into a paid

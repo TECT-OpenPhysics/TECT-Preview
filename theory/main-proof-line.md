@@ -222,8 +222,14 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   `2R>=theta B`, conditioning produces a resolvent and transformed-mean debt,
   and the present absolute ledgers admit no root-decaying fraction window.
   Near `T_G^>` retains bounded Cartan curvature outside regular Cartan FAR
-  ownership. The next target retains the full rootwise square and proves one
-  expectation-inside moving-prefix--near--heat--Wick--forest form. Complete
+  ownership. R-096 now proves that complete R-077 fresh-root cancellation
+  must precede rational projection. On each resulting predictable baseline,
+  the genuine R-086 coefficient-dominant `T_Q^>,T_G^>` region is support-
+  empty after a fixed widened payable collar. Raw Wick compresses exactly to
+  coordinate Hermite ranks zero through two, but this provides no spatial
+  gain and Stein differentiation exposes adapted-selector derivatives. The
+  next target is one global moving adapted-base payment with every heat, low,
+  trace, forest, square, and non-rational owner retained once. Complete
   `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.

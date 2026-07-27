@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-096 Gram-first predictable-baseline support collapse and low-Hermite Wick boundary] - 2026-07-27
+
+Registered the complete-cancellation-first R-077/R-086 ordering, the exact Doob/product covariance defect, predictable-baseline support collapse of the genuine large-gap T_Q and T_G regions after a fixed payable collar, and conditional/tensorized low-Hermite Wick compression with full-square q/r mean ownership. Primary 69/69, non-importing independent 50/50, integrated target 153/153, aggregate target 272/272. The paired nine-page PDF passed all-page visual QA. The global moving adapted-base payment, complete H_N, REG, OVERLAP_src, Nelson, measure construction, and Sector A remain open at T4.
+
 ## [R-095 fractional feedback-square perspective ownership boundary] - 2026-07-27
 
 Registered the exact moving-prefix square defect, the sharp fractional matrix-perspective criterion 2R>=theta B, the conditional resolvent and transformed-mean debts, the critical absolute theta_j schedule, and the near-root Cartan homotopy/ownership boundary. Primary 246/246 and independent 56/56 checks pass; the integrated contract is pinned at 152/152 and aggregate 454/454. Complete rootwise packet embedding, H_N, REG, OVERLAP_src, Nelson, measure construction, and Sector A remain open at T4.
