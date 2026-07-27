@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION](#ng-2026-07-27-a13-fractional-feedback-global-square-identification) | replacement of a declared fraction of the global terminal derivative square by the sum of rootwise future-feedback squares | the exact moving-prefix identity leaves low, present-prefix, and present--future cross terms with no sign; a centered scalar root gives defect `-1/4`, while fractional matrix-perspective positivity requires the new condition `2R >= theta B`, which no fixed production-independent reserve satisfies globally |
+| [NG-2026-07-27-A13-SCALE-DEPENDENT-FRACTION-ABSOLUTE-CLOSURE](#ng-2026-07-27-a13-scale-dependent-fraction-absolute-closure) | repair of the fractional feedback allocation by a root-decaying schedule `theta_j` under the presently proved absolute ledgers | the actual moving-prefix estimate requires decay exponent `alpha<1`, whereas the crude root mean/covariance debt requires `alpha>1`; at the critical exponent their two weights have product one, so no absolute schedule closes both sums without a new signed packet estimate |
 | [AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION](#audit-2026-07-27-a13-r093-root-factor-square-allocation) | R-093 root-local `2^(j-4k)` prototype and partial R-079 square completions | the strong factor belongs only to the positive quadratic Gram-curvature atom; the full mixed secant starts at `2^(j-2k)`, and every partial completion must reserve the unused feedback-square fraction for the coupled `T_G^>`/Jensen packet |
 | [AUDIT-2026-07-27-A13-R093-BG-CRITICAL-ROW-SCOPE](#audit-2026-07-27-a13-r093-bg-critical-row-scope) | R-093 optional enhanced-model BG exponent table | its two zero-slack entries were historical coarse bounds: accepted R-074/R-075 and R-076 estimates replace them by `X^(1/2)Y^(1/3)` with slack `1/6` and `X^(2/5)Y^(8/15)` with slack `1/15`; the complete shifted expectation-inside reconstruction remains open |
 | [NG-2026-07-27-A13-ABSOLUTE-REVISIT-SECANT-SUM](#ng-2026-07-27-a13-absolute-revisit-secant-sum) | extension of the regular centered-secant proof by absolute per-revisit sixth-moment summation | two equal and opposite same-range controls have bounded source cost and zero terminal shift while their smoothed increments have summed sixth moments proportional to `p^(-2)`; arbitrary revisits require complete signed endpoint assembly |
@@ -115,6 +117,60 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-27-a13-fractional-feedback-global-square-identification"></a>
+### NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION -- a rootwise future reserve is not a fraction of the terminal square
+
+**Failure mode:** The R-094 payment by a declared fraction of the rootwise
+future-feedback squares was embedded into R-086 by subtracting the same
+fraction of the global terminal derivative square, with no moving-prefix
+correction.
+
+**Evidence:** In the fixed-terminal current coordinates of R-095, write
+`rho_*=rho_j^-+rho_j^+`, `zeta_j=delta_j^D rho_j^-`, and
+`y_j=delta_j^D rho_j^+`.  Doob Pythagoras gives the exact defect
+`theta E||P_low rho_*||^2/2 + theta sum E||zeta_j||^2/2 + theta sum
+E<zeta_j,y_j>`.  It has no sign: on one centered scalar root,
+`rho_j^-=xi`, `rho_j^+=-xi`, `rho_*=0`, and `theta=1/2`, both sides equal
+`-1/4`.  If only `1-theta` of the global coefficient square is retained,
+the exact Schur complement is
+`Theta_(theta,R)(B)=B-B((1-theta)B+2R)^(-1)B`, which is positive if and only
+if `2R>=theta B`.  The production Gram is unbounded on a pure-doublet ray,
+so no fixed predictable matrix `R` supplies this condition globally.  The
+primary and non-importing independent R-095 executables reproduce the tree,
+scalar, and noncommuting matrix identities.
+
+**Consequence:** The future-square payment is valid only in the restrictive
+pure-future subcase or under the explicit domination hypothesis.  In the
+production problem the complete moving-prefix defect, endpoint square, Wick
+trace, heat, low, paid, R-063 forest, and conditional means must be estimated
+as one expectation-inside packet.  This is a method no-go, not a
+counterexample to the complete `H_N` inequality.
+
+<a id="ng-2026-07-27-a13-scale-dependent-fraction-absolute-closure"></a>
+### NG-2026-07-27-A13-SCALE-DEPENDENT-FRACTION-ABSOLUTE-CLOSURE -- the two current root weights meet critically
+
+**Failure mode:** Choose
+`theta_j=theta_* 2^(-alpha(j-j0))` and separately sum the R-094
+moving-prefix payment and the R-095 conditional mean/covariance resolvent
+loss, expecting a nonempty exponent window.
+
+**Evidence:** The proved prefix estimate is
+`E||x_j||^2 <= C 2^(-j) E||H_j||_2^2`, with
+`H_j=sum_(k<=j) Da_k`; it is not a root-local `2^(-3j)X` bound.  The
+nonorthogonal triangular calculation makes
+`sum theta_j^(-1)E||x_j||^2` cutoff-uniform only for `alpha<1`.  Even the
+optimistic absolute root envelope `q_j^T Abar_j^(-1)q_j <= C 2^j` makes the
+resolvent gaps summable only for `alpha>1`.  At `alpha=1`, the two per-root
+weights `2^(-j)/theta_j` and `theta_j 2^j` are both constant and their
+product is exactly one.  Both R-095 executables verify finite truncations of
+this criticality.
+
+**Consequence:** There is no scale-dependent allocation closing both debts
+from the currently accepted absolute estimates.  This does not exclude
+signed cancellation in the complete heat--Wick--forest packet or a genuinely
+new root-local estimate.  The successor must keep the full square through
+the perspective reconstruction or prove the complete signed packet directly.
 
 <a id="audit-2026-07-27-a13-r093-root-factor-square-allocation"></a>
 ### AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION -- the strong factor and the positive square have narrower ownership

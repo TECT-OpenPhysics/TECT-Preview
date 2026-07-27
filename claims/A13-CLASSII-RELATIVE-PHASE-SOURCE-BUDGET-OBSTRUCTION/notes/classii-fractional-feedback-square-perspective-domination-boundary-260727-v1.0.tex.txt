@@ -1,0 +1,580 @@
+% Title: Fractional feedback square, perspective domination, and near Cartan ownership boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED OWNERSHIP BOUNDARY; COMPLETE H_N, REG, OVERLAP_SRC, NELSON, MEASURE, AND SECTOR A OPEN
+% Result: A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-PERSPECTIVE-DOMINATION-BOUNDARY
+% Ledger: R-095
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-094 paid the value--heat control prefix against a declared fraction
+$\theta$ of the rootwise future-feedback squares.  It explicitly left open
+the identity embedding those rootwise squares into the global R-086 endpoint
+square.  This note resolves that algebraic question and audits the resulting
+matrix perspective.
+
+There are four exact conclusions.  First, a moving-prefix defect separates
+the sum of future-feedback Doob squares from the global terminal derivative
+square.  The defect contains a low projection, present-prefix squares, and
+present--future crosses, and has no sign.  Second, after only the fraction
+$1-\theta$ of the endpoint coefficient square is retained, the R-092
+perspective energy is positive if and only if a new matrix domination
+$2R\succeq\theta B$ holds.  Third, the same loss appears after conditioning
+as an explicit positive resolvent-gap debt.  Fourth, the currently proved
+absolute root estimates admit no scale-dependent fraction that simultaneously
+pays the R-094 prefix and suppresses a root covariance debt of scale $2^j$.
+
+The analysis also fixes the ownership of the surviving R-086 term $T_G^>$.
+It has an exact divergence plus bounded exterior-curvature homotopy.  Its
+near-root projector is disjoint from the regular Cartan FAR theorem of R-092,
+so that theorem does not pay $T_G^>$.  Conversely, adding an unprojected
+Cartan square while retaining $T_G^>$ would duplicate the same Taylor/Gram
+channel.
+
+These are an exact ownership theorem, a restricted positive criterion, and
+method no-gos.  They are not a counterexample to the complete production
+action.  The full rootwise packet with its moving-prefix defect, Wick trace,
+backward heat, low and paid terms, R-063 forest, and conditional means remains
+to be bounded.  Complete $H_N$, REG, $\mathrm{OVERLAP}_{\rm src}$, Nelson,
+a measure, and Sector A remain open.  Tier stays T4.
+
+The binding authorities are R-079 for the exact current Doob decomposition,
+R-086 for the translated-Wick coefficient-dominant packet, R-092 for the
+matrix-perspective telescope and regular Cartan FAR theorem, R-093 for the
+augmented conditional normal form, and R-094 for the rootwise fractional
+square allocation.
+
+\section{The exact rootwise packet remains the starting point}
+
+Use the R-094 notation
+\[
+ i_j=u_j+y_j,\qquad
+ \delta_j^{\rm D}\mathcal J_j=p_j+x_j,
+ \qquad
+ \tau_j={1\over2}\mathbb E\int
+ (\mathcal B_* -\mathcal B_j):\Delta\Gamma_j .       \tag{2.1}
+\]
+For $0<\theta<1$, define
+\[
+\begin{aligned}
+ \mathcal N_{j,\theta}:={}&
+ \mathbb E\langle p_j+x_j,u_j\rangle
+ +{1\over2}\mathbb E\|u_j\|^2-\tau_j\\
+ &+\mathbb E\langle p_j+u_j,y_j\rangle
+ +{1-\theta\over2}\mathbb E\|y_j\|^2,\\
+ \mathcal V_{j,\theta}:={}&
+ \mathbb E\langle x_j,y_j\rangle
+ +{\theta\over2}\mathbb E\|y_j\|^2 .
+\end{aligned}                                                \tag{2.2}
+\]
+R-094 (6.4) is exactly
+\[
+ \mathfrak I_j=\mathcal N_{j,\theta}
+                    +\mathcal V_{j,\theta}.           \tag{2.3}
+\]
+Therefore R-079 (4.4), before any spatial rational projection, is
+\[
+\boxed{
+ \mathbb E\mathfrak B_{J,{\rm safe}}^>
+ =\mathfrak L_\ell+
+   \sum_j\{\mathfrak F_j+\mathcal N_{j,\theta}
+                         +\mathcal V_{j,\theta}\}
+ -\mathbb E\Delta\mathcal R_{\le}.}                  \tag{2.4}
+\]
+This is the strongest unconditional once-only embedding presently available.
+The combined value innovation and backward-heat compensator is owned by
+$p_j,x_j$; the covariance traces are owned by $\mathfrak F_j,\tau_j$; and
+the R-063 lower-chaos forest is internal to the reconstruction of the Wick
+coefficient.  None is an additional correction to append after (2.4).
+
+R-094 proves
+\[
+ \sum_j\mathcal V_{j,\theta}
+ \ge-{1\over2}\sum_j\theta^{-1}\mathbb E\|x_j\|^2,
+ \qquad
+ \sum_j\mathbb E\|x_j\|^2
+ \le C{16\over7}2^{-3j_0}X.                           \tag{2.5}
+\]
+What remained conditional was the replacement of the rootwise reserve
+$\sum_j\|y_j\|^2$ by a fraction of the global R-086 terminal square.  The
+next section computes the exact difference.
+
+\section{The moving-prefix square defect}
+
+Let the terminal coefficient be held fixed in the following Hilbert-current
+coordinates:
+\[
+\begin{aligned}
+ \rho_*&=Q_{\rm II}^{1/2}M_*^T D(A^*-A^0),\\
+ \rho_j^-&=Q_{\rm II}^{1/2}M_*^T D(A^{(j)}-A^0),\\
+ \rho_j^+&=Q_{\rm II}^{1/2}M_*^T D(A^*-A^{(j)}).
+\end{aligned}                                                \tag{3.1}
+\]
+Thus $\rho_* =\rho_j^-+\rho_j^+$ for every $j$.  Put
+\[
+ \zeta_j=\delta_j^{\rm D}\rho_j^- ,\qquad
+ y_j=\delta_j^{\rm D}\rho_j^+ .                       \tag{3.2}
+\]
+The symbol $y_j$ agrees with the future derivative-feedback coordinate in
+the fixed-terminal lift; it is not a spatial Gaussian derivative.
+
+% evidence-anchor: theorem-3.1-moving-prefix-square-defect
+\subsection*{Theorem 3.1 (exact moving-prefix square defect)}
+
+For every square-integrable terminal current and every $0<\theta<1$,
+\[
+\boxed{
+\begin{aligned}
+ &{\theta\over2}\mathbb E\|\rho_*\|^2
+ -{\theta\over2}\sum_j\mathbb E\|y_j\|^2\\
+ &\quad={\theta\over2}\mathbb E\|P_\ell\rho_*\|^2
+ +{\theta\over2}\sum_j\mathbb E\|\zeta_j\|^2
+ +\theta\sum_j\mathbb E\langle\zeta_j,y_j\rangle .
+\end{aligned}}                                                \tag{3.3}
+\]
+
+\emph{Proof.}
+Applying $\delta_j^{\rm D}$ to $\rho_* =\rho_j^-+\rho_j^+$ gives
+\[
+ \delta_j^{\rm D}\rho_*=\zeta_j+y_j.                 \tag{3.4}
+\]
+Doob Pythagoras for the fixed terminal random variable $\rho_*$ gives
+\[
+ \mathbb E\|\rho_*\|^2
+ =\mathbb E\|P_\ell\rho_*\|^2
+ +\sum_j\mathbb E\|\zeta_j+y_j\|^2.                 \tag{3.5}
+\]
+Expand (3.5), subtract $\sum_j\mathbb E\|y_j\|^2$, and multiply by
+$\theta/2$. \hfill$\square$
+
+The right side of (3.3) is not nonnegative.  On one centered scalar root
+$\xi$ with $\mathbb E\xi^2=1$, take
+\[
+ \rho_j^-=\xi,\qquad \rho_j^+=-\xi,\qquad \rho_*=0.
+                                                               \tag{3.6}
+\]
+Then $\zeta_j=\xi$, $y_j=-\xi$, and $P_\ell\rho_*=0$.  At
+$\theta=1/2$, both sides of (3.3) equal
+\[
+ -{1\over4}={1\over4}-{1\over2}.                      \tag{3.7}
+\]
+This is an algebraic method fixture, not a production counterexample.  It
+proves that using $\theta\sum_j\|y_j\|^2/2$ is not the same operation as
+removing $\theta\|\rho_*\|^2/2$ from the global terminal square.
+
+The substitution is valid in the restrictive pure-future subcase
+\[
+ P_\ell\rho_*=0,\qquad \zeta_j=0\quad\hbox{for every }j, \tag{3.8}
+\]
+because then (3.3) vanishes.  The full terminal feedback does not satisfy
+(3.8): its terminal coefficient and later selectors can depend on earlier
+roots, and the moving prefix is generally nonzero.
+
+\section{Fractional matrix perspective and its sharp boundary}
+
+Let $B=B^T\succeq0$, let $R=R^T\succ0$, and put
+\[
+ A_\theta=(1-\theta)B+2R,\qquad
+ \Theta_{\theta,R}(B)=B-BA_\theta^{-1}B.              \tag{4.1}
+\]
+The baseline-restored reduced endpoint is
+\[
+ \mathcal E_{\theta,R}
+ ={1\over2}G^TBG+G^TBc+{1\over2}c^TA_\theta c
+  -{1\over2}B:\Gamma.                                 \tag{4.2}
+\]
+
+% evidence-anchor: theorem-4.1-fractional-perspective
+\subsection*{Theorem 4.1 (exact fractional perspective criterion)}
+
+One has
+\[
+\boxed{
+ \mathcal E_{\theta,R}
+ ={1\over2}\|c+A_\theta^{-1}BG\|_{A_\theta}^2
+ +{1\over2}G^T\Theta_{\theta,R}(B)G
+ -{1\over2}B:\Gamma,}                                 \tag{4.3}
+\]
+and
+\[
+\boxed{
+ \Theta_{\theta,R}(B)\succeq0
+ \quad\Longleftrightarrow\quad
+ 2R\succeq\theta B.}                                  \tag{4.4}
+\]
+
+\emph{Proof.}
+Expansion of the square in (4.3) proves the first identity.  Since
+$A_\theta\succ0$, the Schur complement gives
+\[
+ \Theta_{\theta,R}(B)\succeq0
+ \quad\Longleftrightarrow\quad
+ \begin{pmatrix}B&B\\B&A_\theta\end{pmatrix}\succeq0.
+                                                               \tag{4.5}
+\]
+The quadratic form of the block matrix is
+\[
+ (x+y)^TB(x+y)+y^T(2R-\theta B)y,                      \tag{4.6}
+\]
+so (4.5) is equivalent to $2R-\theta B\succeq0$.
+\hfill$\square$
+
+The failure below the threshold is already exact in one dimension.  Let
+\[
+ B=1,\qquad \theta={1\over2},\qquad R={1\over8},\qquad
+ G=1,\qquad\Gamma=0.                                   \tag{4.7}
+\]
+Then
+\[
+ A_\theta={3\over4},\qquad
+ \Theta_{\theta,R}=-{1\over3},\qquad
+ c_*=-{4\over3},                                      \tag{4.8}
+\]
+and the optimized value of (4.2) is $-1/6$.  The threshold is exactly
+$R=1/4$.
+
+The new domination cannot be supplied by one fixed matrix in the production
+problem.  On a pure-doublet ray,
+\[
+ g(te_1)=t\left(1-{5\over9}{t^2\over t^2+e}\right)e_1,
+ \qquad B_R(te_1)=4c_1g(te_1)\otimes g(te_1),          \tag{4.9}
+\]
+and therefore
+\[
+ t^{-2}B_R(te_1)\longrightarrow {64c_1\over81}
+ e_1\otimes e_1.                                      \tag{4.10}
+\]
+No fixed past payment $R$ dominates $\theta B_R$ for all fields.  Choosing
+$R$ from the same-root $B_R$ breaks the past-measurability used in the R-092
+perspective telescope and creates the moving-$R_k$ defect already isolated
+there.
+
+% evidence-anchor: corollary-4.2-restricted-positive-branch
+\subsection*{Corollary 4.2 (restricted positive branch)}
+
+The R-092 one-reveal augmented argument survives fractional square use if
+the derivative displacement is past-measurable, the conditional value law is
+moment matched, and $2R\succeq\theta B$ almost surely.  In that case repeat
+the R-092 completion with $A_\theta$ and $\Theta_{\theta,R}$.  This covers
+the frozen or explicitly coefficient-conditioned branch satisfying the new
+domination.  It does not cover the unbounded multistep production feedback.
+
+\section{The conditional mean shadow}
+
+Condition on a past sigma field $\mathcal F$.  In the R-093 notation let
+\[
+ \bar B=\mathbb E_{\mathcal F}B,\quad
+ q=\mathbb E_{\mathcal F}(Bz),\quad
+ \bar A=\bar B+2R,\quad
+ \bar A_\theta=(1-\theta)\bar B+2R,                   \tag{5.1}
+\]
+and let
+\[
+ r=\mathbb E_{\mathcal F}\Theta_R(B)^{1/2}z,\qquad
+ \Theta_R(B)=B-B(B+2R)^{-1}B.                         \tag{5.2}
+\]
+Define the reduced conditional raw block
+\[
+ \mathcal S_\theta(c)
+ ={1\over2}\{\mathbb E_{\mathcal F}z^TBz-\bar B:\Gamma\}
+ +c^Tq+{1\over2}c^T\bar A_\theta c.                  \tag{5.3}
+\]
+
+% evidence-anchor: theorem-5.1-conditional-resolvent-gap
+\subsection*{Theorem 5.1 (conditional resolvent-gap identity)}
+
+If $\mathfrak D_R$ denotes the complete R-093 augmented density, then
+\[
+\boxed{
+\begin{aligned}
+ \mathcal S_\theta(c)={}&{1\over2}\mathfrak D_R
+ +{1\over2}|r|^2
+ +{1\over2}\|c+\bar A_\theta^{-1}q\|_{\bar A_\theta}^2\\
+ &-{1\over2}q^T(\bar A_\theta^{-1}-\bar A^{-1})q .
+\end{aligned}}                                                \tag{5.4}
+\]
+Moreover,
+\[
+\begin{aligned}
+ 0\le G_\theta(q)
+ &:={1\over2}q^T(\bar A_\theta^{-1}-\bar A^{-1})q\\
+ &={1\over2}\int_{1-\theta}^{1}
+ \|\bar B^{1/2}(s\bar B+2R)^{-1}q\|^2\,ds\\
+ &\le {\theta\over2(1-\theta)}q^T\bar A^{-1}q .
+\end{aligned}                                                \tag{5.5}
+\]
+
+\emph{Proof.}
+Complete the $c$ square in (5.3), then add and subtract the two mean debts in
+R-093 (2.5).  For (5.5), differentiate
+$q^T(s\bar B+2R)^{-1}q$ in $s$ and integrate.  Finally
+$\bar A_\theta\succeq(1-\theta)\bar A$ gives the last bound.
+\hfill$\square$
+
+Thus the two R-093 mean debts are not missing-baseline artifacts.  With the
+full square, their exact endpoint companions are visible.  Fractional square
+use creates the additional nonnegative debt $G_\theta$.  The pointwise loss
+in (4.3) and the conditional loss in (5.4) are the same resolvent mechanism.
+
+The terminal $|r|^2$ companion is also indispensable.  On four equiprobable
+atoms let
+\[
+ {z\over t}=(1,-1,2,-2),\qquad
+ B=(0,2,3/2,1/2),\qquad R=1.                           \tag{5.6}
+\]
+Then
+\[
+ \bar B=1,\quad \Gamma={5\over2}t^2,\quad q=0,\quad
+ \mathbb E(Bz^2)=\bar B\Gamma,                        \tag{5.7}
+\]
+but
+\[
+ r={t\over4}\left[-1+2\sqrt{6\over7}
+                         -2\sqrt{2\over5}\right]\ne0. \tag{5.8}
+\]
+Hence $\mathfrak D_R=-|r|^2$, while restoring the terminal mean energy makes
+the complete raw Wick contribution zero.
+
+For terminal future feedback, later selectors may depend on root $j$.
+Taking the past at $j-1$ retains $\Delta\Gamma_j$ but the derivative
+displacement is not past-measurable; taking it at $j$ restores measurability
+but loses that covariance increment.  This filtration mismatch is exactly
+why the one-reveal positive branch does not prove multistep $H_N$.
+
+\section{Scale-dependent fractions are critical under the present bounds}
+
+Let $\theta_j=\theta_*2^{-\alpha(j-j_0)}$.  R-094 proves only
+\[
+ \mathbb E\|x_j\|^2\lesssim
+ 2^{-j}\mathbb E\|H_j\|_2^2,\qquad
+ H_j=\sum_{k\le j}Da_k,                                \tag{6.1}
+\]
+and the shell smoothing gives
+$\|Da_k\|_2^2\lesssim2^{-2k}\|h_k\|^2$.  The resulting
+nonorthogonal triangular Hilbert--Schmidt calculation is
+\[
+\boxed{
+ \sum_j\theta_j^{-1}\mathbb E\|x_j\|^2
+ \lesssim
+ {\theta_*^{-1}2^{-3j_0}\over
+ (1-2^{-(1-\alpha)})(1-2^{-(3-\alpha)})}\,X,}         \tag{6.2}
+\]
+and is cutoff-uniform only for $\alpha<1$.
+
+Conversely, an absolute mean/covariance envelope at the natural derivative
+root scale $2^j$ would require
+\[
+ \sum_j\theta_j2^j<\infty,                            \tag{6.3}
+\]
+which for this schedule requires $\alpha>1$.  At $\alpha=1$ both summands
+are constant in $j$.  More invariantly, the two per-root weights
+\[
+ {2^{-j}\over\theta_j},\qquad \theta_j2^j             \tag{6.4}
+\]
+have product one, so no positive sequence makes both corresponding infinite
+sums finite.
+
+This is a boundary of the present absolute estimates, not a no-go for a
+joint signed packet.  The tempting window $1<\alpha<3$ would require the
+unproved root-local replacement
+$\|H_j\|^2\lesssim2^{-2j}X$ and would delete the old prefixes $k\ll j$.
+Paying (5.5) from the terminal perspective submartingale would instead reuse
+the R-092 endpoint already partitioned into its positive increments unless
+an independent terminal reserve were first proved.
+
+\section{Near $T_G^>$ has an exact Cartan homotopy but no separate payment}
+
+Let
+\[
+ F(z)=q(z)z,\qquad q(z)={z^TSz\over |z|^2+e},\qquad
+ g(z)=P_{\rm dbl}z-{5\over9}F(z).                     \tag{7.1}
+\]
+Put $\varrho=|z|^2+e$ and $r_S=(S-qI)z$.  The exterior curvature of the
+one-form $F(z)\cdot dz$ is
+\[
+\boxed{
+ \Omega_z(h,k)=DF(z)[h]\cdot k-DF(z)[k]\cdot h
+ ={2\over\varrho}
+ \{(r_S\cdot h)(z\cdot k)-(r_S\cdot k)(z\cdot h)\}.} \tag{7.2}
+\]
+Since $r_S\wedge z=Sz\wedge z$ and $\|S\|_{\rm op}\le1$,
+\[
+ \|\Omega_z\|={2|r_S\wedge z|\over |z|^2+e}
+ \le {2\|S\|_{\rm op}|z|^2\over |z|^2+e}\le2.      \tag{7.3}
+\]
+
+For $u_t=z+ta$, $G_i=D_iz$, and $c_i=D_ia$, the homotopy formula gives
+\[
+\boxed{
+\begin{aligned}
+ &g(z+a)\cdot(G_i+c_i)-g(z)\cdot G_i\\
+ &\quad=D_i\Psi(z,a)
+ -{5\over9}\int_0^1\Omega_{u_t}(a,G_i+tc_i)\,dt.
+\end{aligned}}                                                \tag{7.4}
+\]
+where
+\[
+ \Psi(z,a)={1\over2}\{(z+a)^TP_{\rm dbl}(z+a)-z^TP_{\rm dbl}z\}
+ -{5\over9}\int_0^1F(u_t)\cdot a\,dt .               \tag{7.5}
+\]
+Thus a divergence shortcut alone is false: the bounded Cartan curvature is
+load-bearing.
+
+The rational Gram satisfies
+\[
+ D^2B_R[h,h]=4c_1\{D^2g[h,h]\otimes g
+ +g\otimes D^2g[h,h]+2Dg[h]\otimes Dg[h]\}.          \tag{7.6}
+\]
+Because $Dg=P_{\rm dbl}-(5/9)DF$ and
+$D^2g=-(5/9)D^2F$, (7.6) uses the same coefficient primitives as the
+complete R-087 Cartan mixed variation.  The projectors nevertheless keep the
+proved and open pieces disjoint.  R-092 regular Cartan FAR has probability
+root $j$ and output $m\ge j+5$; the surviving R-086 $T_G^>$ is a near-root
+piece with $|m-j|\le C$ and explicit payload scale $r<j$.  Hence FAR cannot
+be cited as its payment.  An unprojected Cartan square cannot be added while
+$T_G^>$ is also retained.
+
+Conditional centering merely replaces the coefficient by its same-root
+Doob innovation:
+\[
+ \mathbb E\langle\Delta_nDg_j,(\Delta_mK_t)[H_r]\rangle
+ =\mathbb E\langle\Delta_nDg_j,
+       (\Delta_m\delta_j^{\rm D}K_t)[H_r]\rangle.      \tag{7.7}
+\]
+It does not make the term zero.  Gaussian integration by parts at the
+terminal coefficient differentiates later controls and leaves the accepted
+one-use budget.  Therefore $T_G^>$ must remain inside the complete
+heat-lifted, moving-prefix, perspective/Wick packet.
+
+\section{Updated proof and failure map}
+
+\[
+\begin{array}{c}
+ \text{R-079 exact rootwise packet}+\text{R-094 prefix payment}\\
+ \downarrow\\
+ \boxed{\text{Theorem 3.1: moving-prefix square defect}}\\
+ \downarrow\hspace{18mm}\downarrow\\
+ \text{global fractional-square shortcut fails}
+ \qquad
+ \boxed{2R\succeq\theta B\text{ is exact}}\\[2mm]
+ \text{conditional mean shadow}=G_\theta(q)
+ \qquad
+ \text{absolute }\theta_j\text{ schedules are critical}\\[2mm]
+ \text{near }T_G^>\text{ retains bounded Cartan curvature}\\
+ \downarrow\\
+ \boxed{\text{next: full rootwise heat--Wick--forest form bound,}}
+ \quad\boxed{\text{without global square substitution.}}
+\end{array}                                                    \tag{8.1}
+\]
+
+The route decisions are:
+\begin{center}
+\begin{tabular}{p{0.30\textwidth}p{0.15\textwidth}p{0.45\textwidth}}
+Route & Verdict & Reason / successor\\ \hline
+Future square $\to$ terminal fraction & failed & Exact defect (3.3) has a
+negative scalar fixture.\\
+Fractional perspective positivity & conditional & Necessary and sufficient
+domination is $2R\succeq\theta B$; production $B$ is unbounded.\\
+Scale-dependent $\theta_j$ & failed by present bounds & Prefix needs
+$\alpha<1$, covariance debt needs $\alpha>1$.\\
+Free mean-debt cancellation & failed & The $q$ resolvent gap and terminal
+$r$ companion are exact and load-bearing.\\
+Cartan FAR pays $T_G^>$ & failed by ownership & FAR and near-root projectors
+are disjoint; unprojected reuse would duplicate the channel.\\
+Rootwise complete packet & open / required & Keep the moving-prefix defect,
+full Wick/heat/forest ownership, and conditional means in one form.\\
+\end{tabular}
+\end{center}
+
+% evidence-anchor: section-9-devils-advocate
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{Objection: The low and present-prefix terms in (3.3) are
+positive, so the defect is harmless.}
+\textbf{UPHELD as false.}  The cross
+$\sum_j\mathbb E\langle\zeta_j,y_j\rangle$ has no sign, and (3.6)--(3.7)
+makes the total defect exactly negative.
+
+\item \textbf{Objection: A small fixed $\theta$ preserves the R-092
+perspective positivity.}
+\textbf{UPHELD as false without a new hypothesis.}  The exact condition is
+$2R\succeq\theta B$.  Fixture (4.7)--(4.8) fails at $\theta=1/2$, and
+production growth (4.10) defeats every fixed $R$ globally.
+
+\item \textbf{Objection: Letting $\theta_j$ decay with the root closes both
+losses.}
+\textbf{UPHELD as false for the currently proved absolute ledgers.}
+Equations (6.2)--(6.4) give incompatible strict inequalities.  This does not
+exclude a signed cancellation inside the complete packet.
+
+\item \textbf{Objection: The R-093 mean debts disappear after the $B_0$
+baseline is restored.}
+\textbf{UPHELD as false.}  R-092 restores that baseline before R-093; (5.4)
+then derives the additional fractional resolvent debt.  Fixture (5.6)--(5.8)
+shows that the terminal mean energy is also indispensable.
+
+\item \textbf{Objection: Regular Cartan FAR already proves $T_G^>$.}
+\textbf{UPHELD as an ownership error.}  The probability-root/output
+projectors are disjoint.  Formula (7.6) explains the shared primitives but
+does not identify the two projected pieces.
+
+\item \textbf{Objection: These fixtures disprove the complete $H_N$ lower
+bound.}
+\textbf{DISMISSED.}  They omit some or all of the heat, low, paid, trace, and
+R-063 forest companions.  They refute only the listed substitutions and
+termwise positivity routes.
+\end{enumerate}
+
+\section{Executable evidence}
+
+The primary executable uses exact rational arithmetic, finite Rademacher
+trees, random positive matrices, the scalar perspective fixture, the
+four-atom mean fixture, and finite critical-fraction sums.  The independent
+executable rebuilds the finite filtrations by leaf enumeration, uses a
+noncommuting generalized-eigenvalue fixture, and derives every scalar value
+independently.  The integrated verifier hash-pins R-079, R-086, R-092,
+R-093, and R-094; validates the note, PDF, manifest, claim, result, negative,
+exploration, task, roadmap, and honesty surfaces; and fails closed on any
+downstream promotion.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_fractional_feedback_square_perspective_boundary_verify.py
+\end{verbatim}
+
+\section{Result footer}
+
+\begingroup\scriptsize
+\begin{verbatim}
+Result ID: A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-
+           PERSPECTIVE-DOMINATION-BOUNDARY
+Precise statement: The rootwise/global square difference is the signed
+                   moving-prefix defect (3.3). Fractional perspective is PSD
+                   iff 2R >= theta B; conditioning gives (5.5). Current
+                   absolute theta_j schedules are critical. Near T_G^>
+                   retains bounded Cartan curvature outside regular FAR.
+Scope:             Finite cutoff and positive floor; exact R-079/R-086/
+                   R-092/R-093/R-094 conventions and algebraic fixtures.
+Dependencies:      R-079; R-086; R-092; R-093; R-094.
+Evidence grade:    ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command: python codes/foundations/
+                   a13_classii_fractional_feedback_square_
+                   perspective_boundary_verify.py
+Expected output:   Primary 246, independent 56, integrated 152, aggregate
+                   454 assertions PASS; exit zero.
+Falsification gate: Any identity, fixture, ownership, hash, PDF, count,
+                   public-link, or T4-scope assertion fails.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement: Complete rootwise form, H_N, REG, H_A, OVERLAP_src,
+                   Nelson, removals, measure, Sector A, and T5--T7 are open.
+Next required action: Retain the full rootwise square and prove one signed
+                   moving-prefix--near--heat--Wick--forest--mean form; only
+                   then assemble progressive/revisit H_A.
+\end{verbatim}
+\endgroup

@@ -570,6 +570,23 @@ the following structural results and proof-architecture boundaries hold.
     mean debts, covariance trace, backward heat, low and paid terms, and the
     complete R-063 forest for the successor. Complete `H_N`, REG,
     `OVERLAP_src`, Nelson, and Sector A remain open.
+38. `A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-PERSPECTIVE-DOMINATION-BOUNDARY`
+    is R-095. It proves the exact moving-prefix identity separating the
+    rootwise future-feedback squares from the fixed global terminal
+    derivative square; the defect contains low, present-prefix, and signed
+    present--future terms and equals `-1/4` in a centered scalar fixture.
+    After retaining only `1-theta` of the endpoint coefficient square, the
+    exact matrix perspective is positive semidefinite if and only if
+    `2R>=theta B`; a scalar below-threshold fixture has optimized value
+    `-1/6`, and the unbounded production Gram prevents one fixed reserve from
+    satisfying this domination globally. Conditioning exposes the same loss
+    as a resolvent-gap debt and leaves an indispensable terminal transformed-
+    mean energy. The presently proved absolute ledgers give incompatible
+    requirements `alpha<1` and `alpha>1` for a root-decaying fraction. The
+    surviving near-root `T_G^>` has an exact divergence-plus-bounded-Cartan-
+    curvature homotopy and is not owned by regular Cartan FAR. These are
+    ownership and method boundaries; the complete signed rootwise packet,
+    `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -614,6 +631,7 @@ is a scoped T4 subproof and does not promote A13.
 | Normalized regular Cartan / augmented perspective | Corrected two-field normalized finite forest, whole-product estimate, regular one-shot `H_C`, augmented perspective, covariance union, and triangular entropy accounting | T4 analytic/exact reduction; regular `H_C` closed, general progression and signed `H_N` open |
 | Augmented covariance / Gibbs-information boundary | Unconditional perspective normal form, production sign fixture, cutoff-two paid coercivity, coefficient-reveal information price, source-union Gibbs equality, and fibre/causal no-gos | T4 analytic/exact reduction; root-local unconditioned `H_N`, `OVERLAP_src`, and Nelson open |
 | Root-local Gram secant / feedback-square boundary | Quadratic-versus-mixed factor audit, weighted-Hardy centered secant, fresh derivative form, value--heat control-prefix payment, fractional square allocation, BG-row correction, and revisit no-go | T4 analytic/exact/executed advance; complete rootwise packet embedding, `H_N`, REG, progression, and Nelson open |
+| Fractional feedback-square / perspective ownership boundary | Exact moving-prefix defect, fractional matrix-perspective iff, conditional resolvent-gap identity, critical absolute allocation schedule, and near-`T_G^>` Cartan homotopy | T4 analytic/exact/executed boundary; complete signed rootwise packet, `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -782,6 +800,11 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   positive square. It does not identify those sublemmas with the complete
   R-079/R-086 packet. The adapted `T_G^>`/Jensen branch, conditional mean
   debts, and once-only heat--low--trace--forest embedding remain open.
+- R-095 proves that the proposed rootwise-to-global fractional-square
+  identification has a sign-indefinite moving-prefix defect and that the
+  reduced perspective is positive exactly under `2R>=theta B`. It also
+  isolates the conditional resolvent debt, critical absolute schedule, and
+  near-`T_G^>` Cartan ownership. It does not bound their complete signed sum.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -810,15 +833,19 @@ Current subordinate order:
 
 1. keep the R-092 regular one-shot `H_C` theorem as a closed sufficient
    module; do not promote it to progressive/revisit controls;
-2. use R-094's proved centered-secant and control-prefix bounds inside one
-   rootwise identity, and prove the reduced-square coefficient-dominant lower
-   bound `T_Q^>+T_G^>+(1-theta)c^T Bbar c/2` together with the conditional
-   mean debts, base heat, low, paid, trace, and complete R-063 forest, each
+2. retain the full rootwise square through the perspective reconstruction
+   and carry the R-095 moving-prefix defect explicitly; do not replace the
+   rootwise future reserve by a fraction of the global terminal square unless
+   the restrictive pure-future identity or predictable `2R>=theta B`
+   domination is proved;
+3. prove one cutoff-uniform expectation-inside lower form bound for the
+   moving-prefix, near `T_Q^>+T_G^>`, conditional resolvent and terminal-mean
+   debts, base heat, low, paid, Wick trace, and complete R-063 forest, each
    retained exactly once;
-3. assemble the complete R-079 packet into the temporally faithful refinement-
+4. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
-4. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
+5. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
    directly. R-087 CORE and R-093 show that `OVERLAP_src` and Nelson are the
    same variational objective. Free coefficient conditioning, fixed-chart
    attainment, an independent uniform fibre-entropy reserve, causal
@@ -828,16 +855,16 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary_verify.py
+python codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `303/303`;
-- non-importing independent `89/89`;
-- integrated `151/151` and aggregate `543/543`;
-- exact dyadic kernels, weighted Hardy, product interpolation, mixed Hermite
-  fixture, partial-square and revisit audits, predecessor/source/PDF/surface
+- primary `246/246`;
+- non-importing independent `56/56`;
+- integrated `152/152` and aggregate `454/454`;
+- exact finite-tree moving-prefix, fractional perspective, conditional mean,
+  critical schedule, Cartan homotopy, predecessor/source/PDF/surface
   contracts, and T4 scope firewalls;
 - exit code zero.
 
@@ -848,20 +875,19 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_root_local_gram_secant_feedback_boundary_manifest.json`
-- `notes/classii-root-local-gram-secant-feedback-boundary-260727-v1.0.tex.txt`
-- `notes/classii-root-local-gram-secant-feedback-boundary-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary.py`
-- `../../codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary_independent.py`
-- `../../codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary_verify.py`
-- `runs/2026-07-27-primary-root-local-gram-secant-feedback-boundary/result.json`
-- `runs/2026-07-27-independent-root-local-gram-secant-feedback-boundary/result.json`
-- `runs/2026-07-27-integrated-root-local-gram-secant-feedback-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-094`
-- `../../negative-results/registry.md#audit-2026-07-27-a13-r093-root-factor-square-allocation`
-- `../../negative-results/registry.md#audit-2026-07-27-a13-r093-bg-critical-row-scope`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-absolute-revisit-secant-sum`
-- `../../explorations/log.jsonl` (`EXP-000192`--`EXP-000199`)
+- `classii_fractional_feedback_square_perspective_boundary_manifest.json`
+- `notes/classii-fractional-feedback-square-perspective-domination-boundary-260727-v1.0.tex.txt`
+- `notes/classii-fractional-feedback-square-perspective-domination-boundary-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary.py`
+- `../../codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary_independent.py`
+- `../../codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary_verify.py`
+- `runs/2026-07-27-primary-fractional-feedback-square-perspective-boundary/result.json`
+- `runs/2026-07-27-independent-fractional-feedback-square-perspective-boundary/result.json`
+- `runs/2026-07-27-integrated-fractional-feedback-square-perspective-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-095`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-fractional-feedback-global-square-identification`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-scale-dependent-fraction-absolute-closure`
+- `../../explorations/log.jsonl` (`EXP-000200`--`EXP-000206`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1619,6 +1645,18 @@ hash or all-page visual-QA contract, primary `303/303`, independent `89/89`,
 integrated `151/151`, or aggregate `543/543`, or any promoted complete `H_N`, REG, `OVERLAP_src`,
 Nelson, measure, Sector-A, or tier claim.
 
+The R-095 continuation is additionally falsified by failure of the exact
+moving-prefix identity or its `-1/4` fixture; the fractional square
+completion, `Theta_(theta,R)>=0` if and only if `2R>=theta B`, or the scalar
+`-1/3` perspective and `-1/6` optimized value; the conditional resolvent-gap
+identity or four-atom terminal-mean fixture; the `alpha<1` versus `alpha>1`
+absolute schedule audit; the normalized Cartan homotopy or curvature bound
+two; the near-`T_G^>`/regular-Cartan-FAR ownership separation; any authority,
+source, note, PDF, manifest, registry, exploration, or public-surface pin;
+primary `246/246`, independent `56/56`, integrated `152/152`, or aggregate
+`454/454`; or any promoted complete rootwise packet, `H_N`, REG,
+`OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1793,6 +1831,15 @@ does not prove the rootwise packet embedding, adapted `T_G^>`/Jensen bound,
 conditional mean-debt control, complete `H_N`, REG, arbitrary progressive/
 revisit assembly, `OVERLAP_src`, Nelson, floor or cutoff removal, a measure
 theorem, Sector-A closure, or T5--T7. Tier stays T4.
+
+R-095 proves exact ownership identities and method boundaries for fractional
+feedback-square use. It does not control the sign-indefinite moving-prefix
+defect, dominate the unbounded production Gram by a fixed reserve, sum the
+conditional resolvent and transformed-mean debts, or lower-bound near
+`T_G^>` separately. Therefore it does not prove the complete R-079/R-086
+rootwise packet, `H_N`, REG, arbitrary progressive/revisit `H_A`,
+`OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
+closure, or T5--T7. Tier stays T4.
 
 ## History
 
@@ -2174,3 +2221,15 @@ theorem, Sector-A closure, or T5--T7. Tier stays T4.
   heat--low--trace--forest embedding open. The R-093 coarse critical rows are
   superseded, and absolute revisit sixth-moment summation is retired. Complete
   `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open; tier stays T4.
+- 2026-07-27: Registered R-095. The exact moving-prefix identity shows that
+  a rootwise future-feedback reserve is not a fraction of the global terminal
+  square and has a `-1/4` sign fixture. Fractional matrix-perspective
+  positivity holds exactly under `2R>=theta B`; conditioning exposes the
+  corresponding resolvent and terminal-mean debts, and the current absolute
+  ledgers admit no decaying-fraction exponent window. Near `T_G^>` retains a
+  bounded Cartan curvature and is not owned by regular Cartan FAR. Primary
+  `246/246`, non-importing independent `56/56`, integrated `152/152`, and
+  aggregate `454/454` are manifest-pinned; the eight-page PDF passed form,
+  zero-overfull, extraction, and all-page visual QA. The complete signed
+  rootwise packet, `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain
+  open; tier stays T4.

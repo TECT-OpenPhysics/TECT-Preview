@@ -215,11 +215,16 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   quadratic curvature; the complete mixed secant starts at `2^(j-2k)` but
   closes by weighted Hardy and product-space interpolation with slack `1/3`.
   Conditional Gaussian Poincare pays the combined value--heat control prefix
-  from a declared fraction of the retained feedback square. Exact
-  nonduplication leaves the reduced-square adapted `T_G^>`/Jensen branch,
-  conditional mean debts, and one R-079/R-086 heat--low--paid--trace--forest
-  embedding. Complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain
-  open.
+  from a declared fraction of the retained feedback square. R-095 proves that
+  the corresponding rootwise future reserve is not the same fraction of the
+  global terminal square: their exact moving-prefix defect has no sign and a
+  scalar value `-1/4`. The reduced perspective is positive exactly under
+  `2R>=theta B`, conditioning produces a resolvent and transformed-mean debt,
+  and the present absolute ledgers admit no root-decaying fraction window.
+  Near `T_G^>` retains bounded Cartan curvature outside regular Cartan FAR
+  ownership. The next target retains the full rootwise square and proves one
+  expectation-inside moving-prefix--near--heat--Wick--forest form. Complete
+  `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

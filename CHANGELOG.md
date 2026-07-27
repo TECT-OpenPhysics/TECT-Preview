@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-095 fractional feedback-square perspective ownership boundary] - 2026-07-27
+
+Registered the exact moving-prefix square defect, the sharp fractional matrix-perspective criterion 2R>=theta B, the conditional resolvent and transformed-mean debts, the critical absolute theta_j schedule, and the near-root Cartan homotopy/ownership boundary. Primary 246/246 and independent 56/56 checks pass; the integrated contract is pinned at 152/152 and aggregate 454/454. Complete rootwise packet embedding, H_N, REG, OVERLAP_src, Nelson, measure construction, and Sector A remain open at T4.
+
 ## [R-094 release-audit source-image and verifier corrections] - 2026-07-27
 
 Hostile release audit separated the revisit source h from its smoothing image a=Kh, repaired the exact divergence coefficient to 2||K e_H||_6^6 p^(-2), distinguished the Gaussian spatial derivative from the Doob difference, and separated the R-079 coefficient line from the conditional R-086 derivative target. EXP-000199 appends the correction without rewriting history. The integrated verifier now counts both terminal contract rows, scans recursively resolved PDF names deterministically, contains no Hangul literals, and pins the updated contract at primary 303, independent 89, integrated 151, aggregate 543. Tier remains T4 and the complete R-079/R-086 embedding remains open.

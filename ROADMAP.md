@@ -427,11 +427,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   confines `2^(j-4k)` to positive quadratic curvature, pays the complete
   mixed secant by weighted Hardy with slack `1/3`, and pays the combined
   value--heat control prefix from only a fraction of the feedback square.
-  The remaining exact target is the reduced-square adapted
-  `T_Q^>+T_G^>` packet, conditional mean debts, and the once-only R-079/R-086
-  heat--low--paid--trace--forest embedding. The two R-093 coarse critical rows
-  and absolute per-revisit sixth-moment summation are retired; complete
-  `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
+  R-095,
+  `A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-PERSPECTIVE-DOMINATION-BOUNDARY`,
+  corrects the proposed reduced-global-square successor. The rootwise future
+  reserve differs from the terminal square by an exact sign-indefinite
+  moving-prefix defect, with scalar value `-1/4`. Fractional perspective
+  positivity holds exactly under `2R>=theta B`; conditioning produces a
+  resolvent-gap and terminal-mean debt, and the present absolute ledgers give
+  incompatible `alpha<1` and `alpha>1` schedule requirements. Near `T_G^>`
+  retains bounded Cartan curvature and is not paid by regular Cartan FAR.
+  The next target must therefore retain the full rootwise square and prove the
+  complete expectation-inside moving-prefix--near--heat--Wick--forest form.
+  The two R-093 coarse critical rows and absolute per-revisit sixth-moment
+  summation remain retired; complete `H_N`, REG, `OVERLAP_src`, Nelson, and
+  Sector A remain open.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -594,8 +603,8 @@ preserved in git/changelog rather than treated as current gates.
    exact expectation-level full-current and canonical safe-packet Doob
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
-    child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-094. R-080 closes the two distinct low objects for regular
+   child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
+     narrowed by R-080--R-095. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -668,11 +677,16 @@ preserved in git/changelog rather than treated as current gates.
    root-local identity for the complete R-079 future/low/paid packet. The
    factor `2^(j-4k)` is now certified only for positive quadratic Gram
    curvature; the complete mixed secant uses `2^(j-2k)` and weighted Hardy.
-   Fix `0<theta<1` and prove the reduced-square packet
-   `T_Q^>+T_G^>+(1-theta)c^T Bbar c/2`, including conditional mean debts.
-   Cancel the predictable base-current heat term, both distinct low objects,
-   and the complete R-063 forest inside the same once-only identity before
-   taking the conditional covariance sum. Do not condition on the same-root coefficient for
+   Apply R-095: retain the full rootwise square through the perspective
+   reconstruction and carry the sign-indefinite moving-prefix defect. Do not
+   replace the rootwise reserve by a global terminal-square fraction unless
+   the pure-future identity or predictable domination `2R>=theta B` is proved;
+   a decaying `theta_j` does not repair the current separate absolute ledgers.
+   Prove one expectation-inside lower form bound for the moving-prefix, near
+   `T_Q^>+T_G^>`, conditional resolvent and transformed-mean debts,
+   predictable base-current heat term, both distinct low objects, paid term,
+   Wick trace, and complete R-063 forest inside the same once-only identity
+   before taking the conditional covariance sum. Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower
    triangular source map, or amplify the local sign fixture into a paid

@@ -184,12 +184,17 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  curvature scale. Weighted Hardy and product-space interpolation give slack
  `1/3`; the fresh derivative form has slack `1/6`. The combined value--heat
  control prefix is paid from a declared fraction of the feedback square at
- cost `O(2^(-3j0)X)`. Exact square allocation leaves the reduced-square
- adapted `T_G^>`/Jensen branch, conditional mean debts, and one once-only
- R-079/R-086 heat--low--paid--trace--forest embedding. The optional R-093
- zero-slack rows are superseded coarse estimates, while absolute per-revisit
- sixth-moment summation is invalid. Complete `H_N`, REG, `OVERLAP_src`,
- Nelson, and Sector A remain open.
+ cost `O(2^(-3j0)X)`. R-095 proves that this rootwise reserve cannot be
+ replaced by the same fraction of the global terminal square: the exact
+ moving-prefix defect has no sign and a `-1/4` fixture. Fractional perspective
+ positivity holds exactly under `2R>=theta B`; the conditional resolvent and
+ transformed-mean debts remain, and no decaying fraction closes both current
+ absolute ledgers. Near `T_G^>` has bounded Cartan curvature and is disjoint
+ from regular Cartan FAR ownership. The optional R-093 zero-slack rows remain
+ superseded coarse estimates, while absolute per-revisit sixth-moment
+ summation remains invalid. The next target retains the full rootwise square
+ in one moving-prefix--near--heat--Wick--forest form. Complete `H_N`, REG,
+ `OVERLAP_src`, Nelson, and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

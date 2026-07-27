@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-095](#r-095) | Fractional feedback-square perspective and near-Cartan ownership boundary | Scoped T4 analytic/exact/executed boundary: the rootwise future-feedback reserve differs from the global terminal derivative square by an exact moving-prefix defect containing low, present-prefix, and present--future cross terms with no sign; a scalar fixture gives `-1/4`. Retaining only `1-theta` of the endpoint coefficient square leaves a PSD matrix perspective exactly when `2R>=theta B`, while conditioning creates an explicit resolvent-gap debt and an indispensable terminal mean energy. The production Gram is unbounded, so no fixed reserve enforces the new domination globally. Under the actually proved prefix and absolute mean ledgers, a decaying `theta_j` requires simultaneously `alpha<1` and `alpha>1`. The surviving near-root `T_G^>` has an exact divergence-plus-bounded-Cartan-curvature homotopy and is disjoint from regular Cartan FAR. These are ownership and method boundaries, not a counterexample to the complete action; the full signed rootwise heat--Wick--forest packet, `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-094](#r-094) | Root-local Gram secants and the nonduplicating feedback boundary | Scoped T4 analytic/exact/executed advance: the positive quadratic Gram-curvature atom has the proposed `2^(j-4k)` scale, while the complete mixed centered secant starts at `2^(j-2k)` but is still form-subcritical on the regular one-shot class by weighted Hardy and product-space `L2`--`L6` interpolation, with mixed budget `X^(1/2)Y^(1/6)` and slack `1/3`. The isolated fresh derivative form has slack `1/6`, and the combined value--heat control prefix is paid once from a declared fraction of the retained feedback square at cost `O(2^(-3j0)X)`. An exact square-allocation identity leaves the adapted `T_G^>`/Jensen branch, coefficient/derivative cross, conditional mean debts, and once-only heat--low--trace--forest embedding open. The two zero-slack R-093 BG rows are superseded coarse estimates, not current atoms. Absolute per-revisit sixth-moment summation fails. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-093](#r-093) | Augmented perspective covariance, paid cutoff-two coercivity, and source-union Gibbs boundary | Scoped T4 analytic/exact/executed advance: the complete augmented one-reveal density has an exact unconditional normal form and, for symmetric even reveals, is precisely a coefficient/quadratic covariance. A bounded smooth reveal constructed from the complete four-row production coefficient makes that local density strictly negative for every fixed payment, but the genuine cutoff-two torus action is coercive on the bounded smooth predictable shell-two class: `I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`, so amplitude scaling cannot produce a paid counterexample there. Conditioning on the same-root coefficient costs mutual information and is infinite for the smooth reveal. The triangular source action equals the Nelson free energy only over the directed union of temporally faithful refinements, not in each fixed chart; its exact Gibbs gap forces both physical and fibre entropy gaps to zero on near minimisers. Thus an independent uniform fibre reserve, free coefficient conditioning, fixed-chart attainment, and causal orthogonal QR are retired; coupled use of the actual fibre term is not excluded. Uniform coefficient-unconditioned `H_N`, full packet assembly/`OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-092](#r-092) | Normalized regular Cartan closure, augmented perspective innovation, and causal entropy-union frontier | Scoped T4 analytic/exact/executed advance and predecessor audit: `J=qI+2nn^T S-2qnn^T` is bounded and every secant term factors through `Delta n`, but `J` is nonsymmetric and the R-090 claim `b=grad c` is false. R-092 repairs R-090/R-091 with the exact R-089 two-tail trace, controlling the actual transposed coefficient `b` and `g=grad c` by the same whole-product estimate. At `(gamma,sigma,theta,p,q)=(1/4,4/15,3/10,6,3)`, the root surplus is `7/30`, Young slack `1/30`, and the R-075 physical prefix ledger proves `H_C^reg(C)<=const 2^(-(C-5)/2)(C_(epsilon,delta)+epsilon E X+delta E Y)` for the R-079 regular no-revisit one-shot class. Terminal `Theta_R(B_1)` energy augments the perspective density to `K_k+P_(k-1)|d_ky|^2-B_(k-1):DeltaGamma_k`; its coefficient-conditioned moment-matched one-reveal branch is nonnegative, while a general weighted covariance defect and the exact `-623/5440` fixture keep full `H_N` open. Exact covariance union plus triangular entropy disintegration removes overlap multiplicity and stores kernel/revisit cost as fibre entropy, but the remaining free energy is exactly Nelson, so `H_A`, OVERLAP, Nelson, a measure, and Sector A remain open; assertion counts are pinned by the manifest |
@@ -113,6 +114,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-095"></a>
+### R-095 -- Fractional feedback-square perspective and near-Cartan ownership boundary
+
+**Result ID.**
+`A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-PERSPECTIVE-DOMINATION-BOUNDARY`.
+
+**Tier.** T4 scoped analytic/exact/executed ownership boundary. No tier
+promotion.
+
+**Moving-prefix theorem.** In fixed-terminal current coordinates,
+`rho_*=rho_j^-+rho_j^+`, `zeta_j=delta_j^D rho_j^-`, and
+`y_j=delta_j^D rho_j^+`.  Doob Pythagoras gives the exact difference between
+`theta E||rho_*||^2/2` and `theta sum_j E||y_j||^2/2` as the sum of the low
+terminal projection, the present-prefix squares, and the signed
+present--future crosses.  It has no sign: the centered scalar fixture
+`rho_j^-=xi`, `rho_j^+=-xi`, `rho_*=0`, `theta=1/2` gives `-1/4` on both
+sides.  Thus the R-094 rootwise reserve cannot be identified with the same
+fraction of the global R-086 square.
+
+**Fractional perspective theorem.** With
+`A_theta=(1-theta)B+2R` and
+`Theta_(theta,R)=B-B A_theta^(-1)B`, exact square completion shows
+`Theta_(theta,R)>=0` if and only if `2R>=theta B`.  The scalar choice
+`B=1`, `R=1/8`, `theta=1/2` has `A_theta=3/4`,
+`Theta_(theta,R)=-1/3`, optimizer `c=-4/3`, and minimum `-1/6`.  On a
+pure-doublet production ray, `t^(-2)B_R(te_1)` converges to a nonzero matrix,
+so no fixed predictable reserve dominates every production coefficient.
+The restricted branch satisfying the displayed domination remains valid.
+
+**Conditional mean shadow.** After the R-093 baseline is restored, reducing
+the square creates exactly
+`G_theta(q)=q^T(Abar_theta^(-1)-Abar^(-1))q/2`, with a positive resolvent
+integral representation and upper bound
+`theta q^T Abar^(-1)q/(2(1-theta))`.  The separate terminal mean energy is
+load-bearing: an explicit four-atom fixture has zero raw covariance and
+`q=0` but nonzero transformed mean `r`.
+
+**Critical allocation and Cartan ownership.** For
+`theta_j=theta_*2^(-alpha(j-j0))`, the actually proved moving-prefix bound is
+summable only for `alpha<1`, while the present absolute root covariance
+envelope is summable only for `alpha>1`; their critical weights have product
+one.  This is a boundary of separate absolute estimates, not of a coupled
+signed proof.  The surviving near-root `T_G^>` has an exact homotopy into a
+spatial divergence plus exterior Cartan curvature of norm at most `2`.
+Although it uses the same `D Phi` and `D^2 Phi` primitives as regular Cartan
+FAR, their probability-root/output projectors are disjoint.  An unprojected
+Cartan square cannot be added while `T_G^>` is retained.
+
+**Evidence.** Proof note
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-fractional-feedback-square-perspective-domination-boundary-260727-v1.0.tex.txt`
+and its paired PDF; primary and non-importing independent executables plus a
+hash-pinned integrated verifier and JSON artefacts under the A13 runs tree.
+
+**Boundary.** R-095 proves exact ownership obstructions and a restricted
+positive criterion.  It does not prove the complete R-079/R-086 rootwise
+form bound, `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson,
+floor or cutoff removal, an interacting measure, Sector-A closure, or a
+higher tier.  The successor must retain the full rootwise square through the
+perspective reconstruction and estimate the moving-prefix, near
+`T_Q^>+T_G^>`, Wick trace, heat, low, paid, R-063 forest, and conditional
+means as one expectation-inside signed packet.
 
 <a id="r-094"></a>
 ### R-094 -- Root-local Gram secants and the nonduplicating feedback boundary
