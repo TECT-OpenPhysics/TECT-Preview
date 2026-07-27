@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-103 complete-owner publication surface correction] - 2026-07-28
+
+This append-only correction makes the R-103 complete-owner coordinate explicit on the rendered changelog surface. It changes no theorem: complete regular H_N and REG close only in the declared regular class; progressive/revisit H_A, OVERLAP_src, Nelson, removals, measure construction, and Sector A remain open.
+
+## [R-103 closes complete regular H_N and REG by exact owner reassembly] - 2026-07-28
+
+R-103 proves a disjoint expectation-level owner partition for the regular annular mutually orthogonal strict-past no-revisit complete packet. Fixed-low raw Wick remains in the R-080/R-063 low owners; only the future reveal is a separate residual; one signed R-078 paid difference is bounded under the R-096 collar; R-086 duplicate orientations and current charge are refunded; and the R-102 terminal square is reserved. Seven modules close complete regular H_N and eight close REG with eta*=1/440 and zeta*=3/100. The naked posterior bracket and standalone R-085 (4.11)/(6.5) remain unproved and non-load-bearing. The active child advances to progressive/revisit H_A and OVERLAP_src; Nelson, removals, measure construction, and Sector A remain open.
+
 ## [R-102 regular future-insertion current and K_R closure after fixed-low freeze repair] - 2026-07-28
 
 Register R-102 at scoped T4. Refund the separate provisional R-076 base-cubic allocation before using the complete second-Hessian secant, and refund the separate R-086 T_G<= current charge in the active chronological coordinate without withdrawing either theorem. Finite j<k Fubini and whole-product strict-past conditioning convert the exact future-feedback residual into predictable last-insertion columns. The derivative branch has slack 1/6; the limiting high-prefix coefficient branch has X^(9/14)(1+Y)^(2/7), shell decay 2^(-k/14), slack 1/14, and moment 14. EXP-000257 repairs the freeze-review omission by retaining the fixed-low branch `X^(1/7)(1+Y)^(19/42)`, slack 17/42, moment 42/17, and its separate remainder. The expectation is taken after the pathwise shell bounds. Hence the regular future-insertion current and K_R lower form close uniformly in cutoff and deterministic PSD target and future heat with the entire terminal square unspent. Primary 106/106, independent 79/79, integrated 339/339, and aggregate 524/524 are manifest-pinned; the seventeen-page PDF passes form, zero-overfull, extraction, and all-page Poppler QA. The full-frame bracket, complete H_N, REG, progressive/revisit H_A, OVERLAP_src, Nelson, removals, measure construction, Sector A, and tier promotion remain open.

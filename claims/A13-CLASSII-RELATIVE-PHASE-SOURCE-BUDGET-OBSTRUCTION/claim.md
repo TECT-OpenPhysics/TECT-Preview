@@ -751,6 +751,28 @@ the following structural results and proof-architecture boundaries hold.
     is refunded in this active coordinate. The full-frame bracket, complete
     `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson, removals, a
     measure, and Sector A remain open; tier stays T4.
+46. `A13-CLASSII-REGULAR-COMPLETE-PACKET-OWNERSHIP-HN-REG-CLOSURE`
+    is R-103. Starting from the exact R-079 expectation-level endpoint, it
+    proves one disjoint physical-owner partition for the finite-cutoff,
+    fixed-floor, deterministic-PSD-heat, annular mutually orthogonal strict-
+    past no-revisit class. The fixed-low raw-Wick difference remains inside
+    the two R-080/R-063 low owners; only the R-100/R-101 future reveal is a
+    separate residual. R-084 owns the complete linear rows, only R-099
+    current families three through five enter the unshifted rational owner,
+    R-102 owns the shifted current with the terminal square reserved, and one
+    signed R-078 paid difference is bounded under the fixed R-096 collar. The
+    separate R-086 `Q` orientations and `T_G^<=` charge, old raw-Q Taylor
+    rows, R-076 base cubic, second R-094 secant, appended forest, and extra
+    `q/r` or Schur reserve have zero extra multiplicity. Seven modules close
+    complete regular `H_N`; adding R-083/R-092 FAR gives the eight-module REG
+    bound. The conservative choices `eta*=1/440`, `zeta*=3/100` use
+    `1/3080`, `3/700` per `H_N` module and `1/3520`, `3/800` per REG module,
+    leaving action reserves `197/440`, `3/25`. The literal naked posterior
+    bracket, standalone R-085 (4.11), and old (6.5) remain unproved and are
+    non-load-bearing for this regular closure. `EXP-000258--EXP-000259`
+    record the successful route and that boundary. Progressive/revisit
+    `H_A`, `OVERLAP_src`, Nelson, removals, a measure, and Sector A remain
+    open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -803,6 +825,7 @@ is a scoped T4 subproof and does not promote A13.
 | Owner gauge / heat-centred full-Wick / covariance debt | Exact payment-gauge collapse, complete-owner row additivity, revelation mean/covariance exchange, posterior covariance-debt normal form, regular heat-centred full-Wick residual payment, abstract X/Y-only debt no-go, and reduced production-ray direction diagnostic | T4 analytic/exact/executed advance and method boundary; moving heat-baseline production debt bound, rational (6.5), `H_N`, REG, progression, and Nelson open |
 | Raw-Wick heat-baseline / rational current reduction | Exact fresh value-gradient orthogonality, cross-Doob terminalization of the complete raw block, derivative-current/control-square telescope, heat-lifted rational `K_R` frontier reduction, and production rational range contraction | T4 analytic/exact/executed advance; heat-lifted coefficient-balanced rational-current Carleson form, fixed-heat coercivity, `H_N`, REG, progression, and Nelson open |
 | Full-Hessian heat / chronological future-insertion current | Complete-`L` owner refund, normalized heat-uniform Hessian bound, all-PSD Laplace--Wick representation, active/kernel heat geometry, exact global-current cross-Doob residual, shortcut no-gos, chronological last-insertion identity, shell decay `2^(-k/14)`, and regular `K_R` closure with square unspent | T4 analytic/exact/executed regular closure and progressive boundary; full-frame bracket, `H_N`, REG, progression, and Nelson open |
+| Regular complete-packet ownership / H_N and REG | Exact R-079 expectation identity, fixed-low versus future raw-Wick split, one signed paid difference, complete-owner row additivity, refund ledger, seven/eight-module rational budget simplices, and terminal-square reservation | T4 analytic/exact/executed regular closure; complete regular `H_N` and `REG` closed, while naked posterior positivity, progressive/revisit `H_A`, `OVERLAP_src`, and Nelson remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1020,7 +1043,7 @@ Active umbrella gate:
 
 Current analytic child:
 
-- `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`
+- `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`
 
 Current subordinate order:
 
@@ -1057,15 +1080,19 @@ Current subordinate order:
     condition the complete product at its strict past, and use the annular
     shell/prefix ledgers before one global Young inequality. This closes the
     regular current and `K_R` with the terminal square unspent; refund the
-    separate R-086 `T_G^<=` current charge. Now reassemble regular complete
-    `H_N` and REG with the fixed low, raw-Wick, linear, heat, trace, `q/r`,
-    actual Cameron--Martin payment, R-100 residual, and R-063 forest exactly
-    once. Uniform `D^2` bounds, all-PSD Gram positivity, predictable-baseline
-    support, inverse-Gram Schur, factorwise centering, and the formal Fourier
-    diagnostic alone do not prove the chronological form;
-6. assemble the complete R-079 packet into the temporally faithful refinement-
-   union action without loss or duplication. This assembly is `H_A`; the
-   resulting union inequality is `OVERLAP_src`, not a separate weaker module;
+    separate R-086 `T_G^<=` current charge. R-103 completes the exact regular
+    owner reassembly: keep fixed-low raw Wick in the R-080/R-063 low owners,
+    pay only the future raw-Wick residual separately, use one signed R-078
+    difference under the R-096 collar, refund the separate R-086 `Q`
+    orientations, and preserve the terminal square. Seven modules close
+    complete regular `H_N`; eight close `REG`. Uniform `D^2` bounds, all-PSD
+    Gram positivity, predictable-baseline support, inverse-Gram Schur,
+    factorwise centering, and the formal Fourier diagnostic alone do not prove
+    the progressive theorem;
+6. now assemble the R-103 complete regular owner into the temporally faithful
+   refinement-union action without loss or duplication, including repeated
+   use of one spatial range. This assembly is `H_A`; the resulting uniform
+   source-action inequality is `OVERLAP_src`, not a separate weaker module;
 7. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
    directly. R-087 CORE and R-093 show that `OVERLAP_src` and Nelson are the
    same variational objective. Free coefficient conditioning, fixed-chart
@@ -1076,19 +1103,19 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure_verify.py
 ```
 
 Expected output:
 
-- primary `106/106`;
-- standard-library exact independent `79/79`;
-- manifest-pinned integrated `339/339` and aggregate `524/524` PASS;
-- exact full-Hessian owner recombination, normalized Hessian identity,
-  all-PSD Laplace--Wick constants and singular-heat checks, isotropic ridge,
-  active/kernel geometry, Gaussian cross-Doob bridge, chronological
-  whole-product conditioning and shell/Young ledger, Cartan curl,
-  predecessor/source/PDF/surface contracts, and T4 firewalls;
+- primary `137/137`;
+- standard-library exact independent `69/69`;
+- manifest-pinned integrated `379/379` and aggregate `585/585` PASS;
+- exact endpoint and complete-owner identities, fixed-low/future raw-Wick
+  split, owner/refund incidence, direct scalar expansion with sign/factor
+  mutant rejection, singular and zero PSD endpoints, seven/eight-module
+  budget simplices, predecessor/source/PDF/surface contracts, and T4
+  firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1098,19 +1125,17 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_full_hessian_laplace_wick_future_feedback_boundary_manifest.json`
-- `notes/classii-full-hessian-laplace-wick-future-feedback-boundary-260728-v1.0.tex.txt`
-- `notes/classii-full-hessian-laplace-wick-future-feedback-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary.py`
-- `../../codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary_independent.py`
-- `../../codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary_verify.py`
-- `runs/2026-07-28-primary-full-hessian-laplace-wick-future-feedback-boundary/result.json`
-- `runs/2026-07-28-independent-full-hessian-laplace-wick-future-feedback-boundary/result.json`
-- `runs/2026-07-28-integrated-full-hessian-laplace-wick-future-feedback-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-102`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-global-to-predictable-current-bridge`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-full-hessian-cartan-chain-primitive`
-- `../../explorations/log.jsonl` (`EXP-000250`--`EXP-000257`)
+- `classii_regular_complete_packet_ownership_hn_reg_closure_manifest.json`
+- `notes/classii-regular-complete-packet-ownership-hn-reg-closure-260728-v1.0.tex.txt`
+- `notes/classii-regular-complete-packet-ownership-hn-reg-closure-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure.py`
+- `../../codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure_independent.py`
+- `../../codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure_verify.py`
+- `runs/2026-07-28-primary-regular-complete-packet-ownership-hn-reg-closure/result.json`
+- `runs/2026-07-28-independent-regular-complete-packet-ownership-hn-reg-closure/result.json`
+- `runs/2026-07-28-integrated-regular-complete-packet-ownership-hn-reg-closure/result.json`
+- `../../RESULTS-LEDGER.md#r-103`
+- `../../explorations/log.jsonl` (`EXP-000258`--`EXP-000259`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -2242,6 +2267,19 @@ full-frame posterior-covariance bracket, complete `H_N`, REG,
 arbitrary progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff/floor
 removal, a measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
 
+R-103 uses the R-097--R-102 complete-owner coordinate to close complete
+regular `H_N` and regular `REG` by exact expectation-level reassembly and a
+finite rational budget split. It does not prove the stronger naked posterior-
+covariance bracket: that historical gate is superseded only as a load-bearing
+premise for regular REG. Fixed-low raw Wick remains inside the R-080/R-063 low
+owners and only the future reveal is a separate residual. The single R-078
+paid difference is bounded under the R-096 collar; no separate R-086 payment
+is restored. The conclusion requires deterministic PSD target/future heat and
+the annular mutually orthogonal strict-past no-revisit class. R-103 does not
+prove standalone R-085 (4.11), old (6.5), random control-dependent heat,
+arbitrary progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff/floor
+removal, a measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
+
 ## History
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
@@ -2762,3 +2800,20 @@ removal, a measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
   EXP-000250--EXP-000257 preserve the advances, failed shortcuts,
   chronological repair, and freeze-review fixed-low correction. Complete `H_N`, REG,
   progression, Nelson, the measure, and Sector A remain open; tier stays T4.
+- 2026-07-28: Registered R-103. The exact R-079 expectation endpoint and
+  R-100 row-additive physical owner give a disjoint complete-packet ledger.
+  The fixed-low raw-Wick difference stays in the R-080/R-063 low owners; only
+  the future reveal is a separate residual; one signed R-078 paid difference
+  is bounded under the fixed R-096 collar; the separate R-086 `Q`
+  orientations and `T_G^<=` charge are refunded; and the R-102 terminal
+  square is reserved. Seven modules close complete regular `H_N` and eight
+  close `REG`. The exact allocations are `eta*=1/440`, `zeta*=3/100`, with
+  H_N shares `1/3080`, `3/700`, REG shares `1/3520`, `3/800`, and residual
+  action reserves `197/440`, `3/25`. Primary `137/137`, standard-library
+  independent `69/69`, integrated `379/379`, and aggregate `585/585` checks
+  are manifest-pinned. The nine-page PDF passed form, zero-overfull,
+  extraction, and all-page Poppler QA. `EXP-000258--EXP-000259` preserve the
+  successful route and the boundary that naked posterior positivity and the
+  old standalone atoms remain unproved. The live child is progressive/revisit
+  `H_A` and `OVERLAP_src`; Nelson, removals, the measure, and Sector A remain
+  open; tier stays T4.

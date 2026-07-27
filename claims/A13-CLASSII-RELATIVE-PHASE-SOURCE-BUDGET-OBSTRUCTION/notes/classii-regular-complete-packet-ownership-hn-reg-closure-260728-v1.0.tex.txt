@@ -1,0 +1,626 @@
+% Title: Regular complete-packet ownership and H_N/REG closure
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; REGULAR COMPLETE H_N AND REG CLOSED; PROGRESSIVE/REVISIT H_A, OVERLAP_SRC, NELSON, REMOVALS, MEASURE, AND SECTOR A OPEN
+% Result: A13-CLASSII-REGULAR-COMPLETE-PACKET-OWNERSHIP-HN-REG-CLOSURE
+% Ledger: R-103
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope: corrected conclusion}
+
+R-102 closed the last analytic term in the regular rational current,
+\[
+ \mathcal K_R=G^TLc+{1\over2}c^TB_1c,
+ \qquad B_1=(P_{\Sigma_{\rm tar}}B_R)(U+a),             \tag{1.1}
+\]
+uniformly in the terminal cutoff and deterministic positive-semidefinite
+target and future heat.  Its proof leaves the full heat-lifted terminal
+square in (1.1) unspent.  The open question after R-102 was not another
+multiplier estimate.  It was whether the accepted low, FAR, linear, raw-Wick,
+unshifted-current, shifted-current, payment, heat, trace, conditional-mean,
+and forest authorities really reconstruct the complete regular packet with
+every owner used exactly once.
+
+The two global budgets used throughout are, pathwise,
+\[
+ x_k=\|h_k\|_{\mathcal H_k}^2,\qquad
+ X=\sum_{k>\ell}x_k,\qquad Y=\|U+A^*\|_6^6.             \tag{1.1a}
+\]
+Thus $X$ is the accepted high-shell Cameron--Martin energy, not a terminal
+$H^2$ norm, and $Y$ is the terminal sextic stabilizer.
+
+This note proves that reconstruction.  There are two conclusions.
+
+\begin{enumerate}
+\item The complete signed linear--rational NEAR packet on the R-079 regular
+mutually orthogonal strict-past no-revisit class satisfies, for every
+$\eta,\zeta>0$,
+\[
+ \boxed{
+ \mathbb E\mathfrak H_N^{\rm reg}
+ \ge-\eta\mathbb EX-\zeta\mathbb EY
+      -C_{\eta,\zeta,e,j_0}.}                            \tag{1.2}
+\]
+
+\item Adding R-083 polynomial FAR and R-092 regular projected Cartan FAR
+closes the regular packet architecture REG.  With the production action
+coefficients
+\[
+ c_X={9\over20},\qquad c_Y={3\over20},                   \tag{1.3}
+\]
+one may choose the conservative downstream-compatible allocations
+$\eta_*=1/440$ and $\zeta_*=3/100$ and obtain
+\[
+ \boxed{
+ \mathbb E\left[\mathfrak P_{\rm reg}+c_XX+c_YY\right]
+ \ge (c_X-\eta_*)\mathbb EX+(c_Y-\zeta_*)\mathbb EY-C
+ \ge-C.}                                                \tag{1.4}
+\]
+The constant is uniform in the terminal cutoff.
+\end{enumerate}
+
+The source coefficient is $c_X=1/(2q)$ at $q=10/9$.  For compatibility with
+the optional R-088 comparison coordinate, put $p=11/10$ and
+$\epsilon_v=9/20$.  Then
+\[
+ \eta_*={1\over2}\left({1\over2p}-\epsilon_v\right)
+ ={1\over440},\qquad
+ \zeta_*={c_Y\over5}={3\over100}.                       \tag{1.5}
+\]
+Thus the eight-module allocation uses $1/3520$ and $3/800$ per
+module.  The R-088 number $1/220$ is only the strict threshold for an
+\emph{additional} comparison charge, not a universal cap on internal
+allocations.  Here it is merely a conservative benchmark.  The proof itself
+only needs positive finite allocations strictly below the full action
+coefficients in (1.3).
+
+The scope is deliberately unchanged: finite cutoff, fixed positive floor,
+the A1 production frame, common real-even local regulators, deterministic
+positive-semidefinite heat increments, the fixed R-096 collar, and annular
+mutually orthogonal strict-past no-revisit physical-shell controls with the
+accepted pathwise prefix ledgers.  No arbitrary progressive/revisit theorem,
+$\mathrm{OVERLAP}_{\rm src}$ bound, Nelson estimate, cutoff or floor removal,
+interacting measure, or Sector-A closure is claimed.
+
+The standalone R-085 averaged Cartan atom (4.11) is not proved here.  R-092
+provides a different integrated regular Cartan theorem.  Likewise the old
+R-085 rational form (6.5) is not proved term by term: R-101 showed that such a
+proof would duplicate its raw-Wick owner, replaced the true frontier by
+(1.1), and R-102 closed that smaller frontier.  These two old standalone
+statements are superseded as necessary premises for regular REG, not promoted
+to theorems.
+
+\section{Canonical packet and exact spatial partition}
+
+Put $\ell=j_0-1$, $A^*=A^{(J)}$, $A^0=A^{(\ell)}$, and write the complete
+R-079 current as
+\[
+ \mathcal J(H)_{\alpha i}
+ =Q_{\rm II}^{1/2}M_\alpha(U+H)^T(D_iU+D_iH).            \tag{2.1}
+\]
+The covariance-normal endpoint is
+\[
+ \mathcal W_J(H)
+ ={1\over2}\|\mathcal J(H)\|_{\mathcal H}^2
+ -{1\over2}\sum_i\int B(U+H):\Gamma_{J,i}\,dx.        \tag{2.2}
+\]
+R-079 Theorem 3.1 and equation (4.4) give the exact safe-packet identity
+\[
+ \mathbb E\mathfrak B_{J,{\rm safe}}^>
+ =\mathfrak L_\ell+\sum_{j=j_0}^J
+   (\mathfrak F_j+\mathfrak I_j)
+ -\mathbb E\{\mathcal R_{\le}(A^*)-\mathcal R_{\le}(A^0)\},
+                                                               \tag{2.3}
+\]
+and its endpoint reconstruction
+\[
+ \mathbb E\mathfrak B_{J,{\rm alg}}^>(A^*)
+ =\mathbb E\mathfrak B_{J,{\rm alg}}^>(A^0)
+ +\mathbb E\mathfrak B_{J,{\rm safe}}^>.               \tag{2.4}
+\]
+The first term on the right of (2.4) is the complete low safe endpoint,
+\[
+ \mathfrak B_{\rm low}
+ =\Delta V_J^{\rm ren}(U;A^0)
+  -N_{3,{\rm nr}}(U;A^0)-\widehat T_{\le}(U;A^0),       \tag{2.5}
+\]
+and is different from the conditional-low current $\mathfrak L_\ell$ in
+(2.3).
+
+Apply the exact R-083 physical-shell FAR/NEAR projections to (2.3), before
+any estimate.  They are a partition of the already reconstructed endpoint.
+The three controlled polynomial stopped-FAR rows vanish for the declared
+collar.  The remaining FAR term is the projected Cartan block.  The NEAR
+term is the direct sum of the three linear Pauli--Fierz rows and the single
+rational row.  No coefficient, root, heat, trace, or forest term is created
+by this partition.
+
+Write $\langle Z\rangle=\mathbb EZ$.  Let
+$\mathfrak C_{\rm far}^{\rm reg}$, $\Delta\mathcal W_{L,\Sigma}$, and
+$\Delta\mathcal W_R$ denote the signed random Cartan, complete-linear, and
+rational blocks after the R-096 complete-cancellation-first ordering.  Define
+the one signed paid difference by
+\[
+ \mathfrak P_{\rm paid}
+ :=-\{\mathcal R_{\le}(A^*)-\mathcal R_{\le}(A^0)\},
+ \qquad
+ \mathcal R_{\le}(H)=N_{3,{\rm nr}}(H)+\widehat T_{\le}(H). \tag{2.5a}
+\]
+Then the definitions give the exact expectation-level decomposition
+\[
+ \boxed{
+ \langle\mathfrak P_{\rm reg}\rangle
+ =\langle\mathfrak B_{\rm low}\rangle+\mathfrak L_\ell
+  +\langle\mathfrak C_{\rm far}^{\rm reg}\rangle
+  +\langle\Delta\mathcal W_{L,\Sigma}\rangle
+  +\langle\Delta\mathcal W_R\rangle
+  +\langle\mathfrak P_{\rm paid}\rangle.}              \tag{2.6}
+\]
+The fixed R-096 collar is a hypothesis used to bound (2.5a), not a second
+algebraic term.  The separate R-086 $Q$ orientations and $T_G^{\le}$ current
+charge are not appended to (2.5a): their active pieces are reassigned by the
+R-101 raw-Wick coordinate and R-102 complete-current coordinate below.
+Formula (2.6) is simply the expectation of (2.3)--(2.5) after the lossless
+R-083 row and spatial projections.
+
+\section{The rational row has exactly three owners}
+
+At the heat-lifted rational endpoint set
+\[
+ \overline B=P_{\Sigma_{\rm tar}}B_R,
+ \quad B_0=\overline B(U),\quad B_1=\overline B(U+a),
+ \quad Q=G^{\otimes2}-\Gamma,\quad c=Da.                \tag{3.1}
+\]
+R-101 Theorem 6.1 proves the exact nonduplicating identity
+\[
+ \boxed{
+ \Delta\mathcal W_R=\mathcal R_Q+\mathcal M_U+\mathcal K_R,}
+                                                               \tag{3.2}
+\]
+where
+\[
+ \mathcal R_Q={1\over2}(B_1-B_0):Q,                    \tag{3.3}
+\]
+\[
+ \begin{split}
+ \mathcal M_U={}&G^TB_0c+G^TD\overline B(U)[a]c
+ +{1\over2}G^TD^2\overline B(U)[a,a]c,
+ \end{split}                                            \tag{3.4}
+\]
+and $\mathcal K_R$ is (1.1), with
+\[
+ L=B_1-B_0-D\overline B(U)[a]
+       -{1\over2}D^2\overline B(U)[a,a].                \tag{3.5}
+\]
+
+Equation (3.2), rather than the old five-family split, is the active owner
+coordinate.  Its three terms are assigned as follows.
+
+\begin{enumerate}
+\item \textbf{Raw-Wick residual owner $\mathcal R_{Q,>}$.}
+Apply R-101 Theorems 3.1 and 4.1 separately to the terminal and base
+coefficient processes $\mathcal B^{(1)}$ and $\mathcal B^{(0)}$, whose endpoint
+difference is $B_1-B_0$.  If
+$F^{(s)}_j=\mathbb E_j\mathcal B^{(s)}(Z_*)$ for $s\in\{0,1\}$, subtraction
+gives the exact expectation identity
+\[
+ \langle\mathcal R_Q\rangle
+ =\underbrace{{1\over2}\mathbb E\langle
+ F^{(1)}_\ell-F^{(0)}_\ell,Q_\ell\rangle}_{\mathcal R_{Q,{\rm low}}}
+ +\underbrace{{1\over2}\sum_{j>\ell}\mathbb E\langle
+ [\mathcal B^{(1)}(Z_*)-\mathcal B^{(1)}(Z_j)]
+ -[\mathcal B^{(0)}(Z_*)-\mathcal B^{(0)}(Z_j)],\Delta Q_j\rangle}
+ _{\mathcal R_{Q,>}}.                                   \tag{3.6}
+\]
+The fixed-low difference $\mathcal R_{Q,{\rm low}}$ is already inside the two
+R-080/R-063 low owners in (2.6); it receives no new row allowance.  R-100
+Theorem 5.1 pays only the future residual $\mathcal R_{Q,>}$ with one
+full-Wick R-094 secant allocation.  Its covariance trace and complete R-063
+forest are internal coordinates, not terms appended after (3.6).  In
+particular, the old raw-Q Taylor families
+\[
+ {1\over2}D\overline B(U)[a]:Q,
+ \qquad {1\over4}D^2\overline B(U)[a,a]:Q               \tag{3.7}
+\]
+must not be charged again.
+
+\item \textbf{Unshifted current owner $\mathcal M_U$.}
+The three terms in (3.4), and only those three terms, are the accepted
+R-071/R-085 current families.  They are the last three rows of the R-099
+five-family table.  Their individual exponents are strictly subcritical, so
+the proof of R-099 Theorem 7.1 applies to this subset without invoking the
+two forbidden raw-Q rows (3.7).
+
+\item \textbf{Shifted current owner $\mathcal K_R$.}
+R-102 Theorem 9.2 and Corollary 9.3 prove
+\[
+ \mathbb E\mathcal K_R
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C_{\eta,\zeta,e,j_0}
+ +{1\over2}\mathbb E\sum_i\int c_i^TB_1c_i\,dx,        \tag{3.8}
+\]
+in the declared regular class.  Thus the entire terminal rational square is
+available as nonnegative reserve.  The complete Hessian choice in R-102
+requires refund of the separate provisional R-076 base-cubic allocation;
+the chronological coordinate also refunds the separate R-086
+$T_G^{\le}$ current charge.  Neither predecessor theorem is withdrawn.
+\end{enumerate}
+
+These assignments exhaust (3.2).  The R-086 Q-oriented shifted diagnostics,
+a second R-094 secant, the R-076 base cubic, and the R-086 $T_G^{\le}$ charge
+therefore have zero multiplicity in the active lower-bound ledger.
+
+\section{Complete-owner coordinate and posterior bookkeeping}
+
+The R-097 posterior bracket is
+\[
+ \mathfrak C_{\rm post}
+ =J_B+\mathbb E_{\mathcal F}[B:(V_B-\Gamma)]
+ =\mathfrak D_R+\sum_i\int|r_i|^2dx.                    \tag{4.1}
+\]
+For clarity, the complete R-100 physical owner used below is
+\[
+ \mathcal O_{\mathcal F}(B,R)
+ :=S_R(B)+{1\over2}\mathfrak C_{\rm post}(B;R)
+   -P_R(B,R)-W_0(B).                                    \tag{4.1a}
+\]
+The second term in the first expression has no standalone sign.  R-100
+Theorem 3.1 nevertheless proves exact row additivity of the physical complete
+owner.  With matching row, payment, and baseline splits,
+\[
+ \mathfrak C_{\rm post}(B;R)
+  -\sum_a\mathfrak C_{\rm post}(B_a;R_a)=D_{\rm row},   \tag{4.2}
+\]
+\[
+ S_R(B)-\sum_aS_{R_a}(B_a)=-{1\over2}D_{\rm row},       \tag{4.3}
+\]
+and hence
+\[
+ \boxed{
+ \mathcal O_{\mathcal F}(B,R)
+ =\sum_a\mathcal O_{\mathcal F}(B_a,R_a).}             \tag{4.4}
+\]
+
+For the production split into three linear rows and one rational row,
+(4.4) says that the Schur rebate, $q/r$ conditional means, actual
+Cameron--Martin matrix payment, covariance trace, and posterior variance are
+internal coordinates of the row endpoints in (2.6).  They are not additional
+terms.  The positive cross-row Schur gap in (4.2) is cancelled exactly by
+(4.3); retaining both it and the complete endpoint would double count.
+
+% evidence-anchor: theorem-4.1-regular-complete-owner-partition
+\subsection*{Theorem 4.1 (regular complete-owner partition)}
+
+On the declared regular class, (2.6) and (3.2) form a disjoint exact owner
+partition.  Every term in the complete R-079 endpoint has multiplicity one,
+except the explicitly refunded provisional charges, which have multiplicity
+zero.  The naked lower bound
+\[
+ \mathbb E\mathfrak C_{\rm post}
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C                 \tag{4.5}
+\]
+is not required for this partition and is not asserted.
+
+\emph{Proof.}
+Start from the exact R-079 identities (2.3)--(2.5).  Apply the R-096
+complete-cancellation-first ordering before the rational projection.  The
+R-083 row identity partitions the production Gram into its three linear rows
+and one rational row, while its FAR/NEAR projections partition the spatial
+output.  R-083 polynomial FAR vanishes.  R-084 owns each complete linear-row
+ endpoint.  R-101 partitions the rational endpoint by (3.2).  Equation (3.6)
+ assigns the fixed-low raw-Wick difference to the already listed low owners
+ and leaves exactly one future raw-Wick residual; (3.4) owns the three
+ unshifted current families, and (3.8) owns the complete shifted current.
+ R-080 keeps the two distinct low objects (2.3) and (2.5) once, while (2.5a)
+ keeps the one R-078 paid difference, bounded with the declared R-096 collar.
+ No second R-086 payment is present.  Finally, (4.4) proves that changing from the
+endpoint coordinate to $S_R$, $\mathfrak C_{\rm post}$, $q/r$, and payment
+coordinates has zero net remainder.  The listed terms exhaust the exact
+partitions, proving the claim. \hfill$\square$
+
+The theorem makes the full-frame posterior-covariance gate non-load-bearing
+for regular $H_N$/REG: its physical complete-owner target is supplied without
+the naked inequality.  It does \emph{not} close the gate's literal stronger
+naked-bracket statement (4.5), which remains unproved and is recorded as
+superseded rather than proved.
+
+\section{Finite budget allocation closes complete regular H_N}
+
+Define the random variable $\mathfrak H_N^{\rm reg}$ to be the complete NEAR
+packet whose expectation is the NEAR part of (2.6), with the two low objects
+and the one paid difference retained as required by R-091, R-096, and R-100.
+By Theorem 4.1 its negative contributions occur in the following finite list:
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.24\linewidth}p{0.40\linewidth}}
+\hline
+Owner & Authority & Active rule \\
+\hline
+Conditional low & R-080 Thm. 3.1 & Sextic form bound; distinct from low endpoint.\\
+Complete low endpoint & R-080 Thm. 3.2 & Sextic form bound after paid subtraction.\\
+Three linear rows & R-084 Thm. 7.1 & Complete heat-lifted endpoints once.\\
+Rational raw-Wick residual & R-100 Thm. 5.1; R-101 Thm. 4.1 & Future residual only; fixed low already in the first two rows.\\
+Rational unshifted current & R-071/R-085; R-099 (7.1)--(7.5) & Use only current families three through five.\\
+Rational shifted current & R-102 Thm. 9.2, Cor. 9.3 & Keep terminal square unspent.\\
+Paid difference & R-078/R-096 & The single signed difference (2.5a); fixed collar is a bound hypothesis.\\
+\hline
+\end{tabular}
+\end{center}
+
+% evidence-anchor: theorem-5.1-complete-regular-hn-closure
+\subsection*{Theorem 5.1 (complete regular $H_N$ closure)}
+
+For every $\eta,\zeta>0$, (1.2) holds uniformly in the terminal cutoff and
+deterministic positive-semidefinite target/future heat.
+
+\emph{Proof.}
+Give each of the seven rows in the table the internal allowances
+$\eta/7$ and $\zeta/7$; rows using only one budget simply leave the other
+allowance unused.  R-080 proves the first two bounds.  R-084 proves the third.
+R-100/R-101 prove the fourth after the complete raw-Wick telescope.  The
+termwise inequalities underlying R-099 Theorem 7.1 prove the fifth for the
+three current families.  R-102 proves the sixth, and the last row is the
+accepted R-078/R-096 payable remainder.  Each bound is uniform in the
+terminal cutoff in the stated common scope.  The sum of the seven allowances
+is at most $(\eta,\zeta)$.  The exact partition of Theorem 4.1 proves (1.2).
+\hfill$\square$
+
+The proof uses a finite allocation after all root and shell sums have been
+performed inside their authorities.  It does not apply Young's inequality
+root by root, and it creates no new moment requirement.  The limiting moment
+remains the R-102 high-prefix moment $14$; its fixed-low branch requires only
+$42/17$, while older complete-linear/current models have smaller accepted
+requirements.
+For the conservative choice (1.5), the seven NEAR shares are $1/3080$ and
+$3/700$, while the eight REG shares are $1/3520$ and $3/800$.
+
+\section{Cartan FAR and REG}
+
+The exact R-083 stopped-current theorem kills every controlled polynomial FAR
+row for the declared collar.  For the Cartan row, R-092 proves
+\[
+ \mathcal H_C^{\rm reg}(C)
+ \le 2^{-(C-5)/2}\mathcal B_{1/4}^{\rm out},            \tag{6.1}
+\]
+and
+\[
+ \mathcal B_{1/4}^{\rm out}
+ \le C_{e,L}\{C_{\epsilon,\delta,e,L}
+ +\epsilon\mathbb EX+\delta\mathbb EY\}.               \tag{6.2}
+\]
+The actual signed Cartan FAR contribution carries only its fixed production
+prefactor, so (6.1)--(6.2) give an arbitrary $X/Y$ form allocation.  For
+example $C=15$ makes the explicit gap in (6.1) equal to $2^{-5}=1/32$; no
+special value of $C$ is needed for the theorem.
+
+% evidence-anchor: theorem-6.1-regular-reg-closure
+\subsection*{Theorem 6.1 (regular REG closure)}
+
+For every $\eta,\zeta>0$,
+\[
+ \boxed{
+ \mathbb E\mathfrak P_{\rm reg}
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C_{\eta,\zeta,e,j_0,C}.}
+                                                               \tag{6.3}
+\]
+Consequently (1.4) holds with the explicit choice (1.5).
+
+\emph{Proof.}
+Use Theorem 5.1 for complete NEAR and its low/paid companions.  Add the zero
+R-083 polynomial FAR term and (6.1)--(6.2) for Cartan FAR.  Equivalently,
+allocate $(\eta/8,\zeta/8)$ to the eight modules consisting of the seven
+rows in Section 5 and the Cartan FAR module.  Their exact sum is (2.6), so
+(6.3) follows.  Choose $\eta=\eta_*=1/440$ and
+$\zeta=\zeta_*=3/100$ and add the stabilizers in (1.3).  Since
+\[
+ c_X-\eta_*={197\over440}>0,\qquad
+ c_Y-\zeta_*={3\over25}>0,                              \tag{6.4}
+\]
+equation (1.4) follows.
+\hfill$\square$
+
+This is REG in its intended sense: a cutoff-uniform lower bound on the
+complete packet for the regular graph class.  It is a sufficient proof
+architecture, not part of the R-087 CORE equivalence and not a theorem for
+all progressive controls.
+
+\section{Ownership audit and forbidden duplicate routes}
+
+The complete multiplicity ledger is
+\[
+\begin{array}{c|c|c}
+\text{quantity}&\text{active owner count}&\text{reason}\\ \hline
+\text{two low objects}&1\text{ each}&\text{R-080 distinguishes them}\\
+\text{linear row heat/trace/forest}&1&\text{inside R-084 endpoint}\\
+\text{future raw-Wick residual/trace/forest}&1&\text{low part already in R-080 rows}\\
+\text{R-094 full-Wick secant}&1&\text{inside R-100 residual}\\
+q/r\text{ and Schur rebate}&0\text{ extra}&\text{coordinate identity (4.4)}\\
+\text{R-078 paid difference}&1&\text{R-096 collar bounds the same term}\\
+\text{terminal rational square}&1\text{ positive}&\text{reserved by R-102}\\
+\text{R-076 base cubic}&0&\text{refunded for complete }L\\
+\text{R-086 }T_G^{\le}\text{ charge}&0&\text{refunded in chronological coordinate}\\
+\text{R-086 separate }Q\text{ orientations}&0&\text{inside low/raw-Wick split (3.6)}\\
+\text{old raw-Q Taylor charges}&0&\text{contained in raw-Wick owner}
+\end{array}                                                \tag{7.1}
+\]
+
+The following tempting conclusions remain invalid.
+
+\begin{enumerate}
+\item A lower bound for the naked $\mathfrak C_{\rm post}$ is not obtained by
+discarding the complete Schur square.  The abstract R-097/R-100 negative
+fixtures remain valid method boundaries.
+
+\item R-085 (4.11) is not recovered by summing pathwise translated atoms.
+Regular Cartan FAR is closed by the integrated normalized-lift theorem R-092.
+
+\item Old R-085 (6.5) is not recovered by separately paying $L:Q/2$ and
+$G^TLc$.  The first lies in (3.6); the second lies in (3.8).
+
+\item REG does not imply $H_A$ or $\mathrm{OVERLAP}_{\rm src}$.  A revisit can
+have small or zero terminal displacement and a large intermediate prefix.
+The R-080/R-091/R-094 counterexamples remain outside the regular class and
+still block this inference.
+\end{enumerate}
+
+% evidence-anchor: attempt-failure-and-evidence-map
+\section{Attempt, failure, and evidence map}
+
+The successful proof path is
+\[
+\begin{array}{c}
+ \text{R-079 exact endpoint and safe-packet reconstruction}\\
+ \downarrow\\
+ \text{R-080 two low owners; R-083 exact FAR/NEAR and row partition}\\
+ \downarrow\\
+ \text{R-092 regular }H_C\quad+\quad\text{R-084 complete linear NEAR}\\
+ \downarrow\\
+ \text{R-096 cancellation first; R-100/R-101 raw-Wick ownership}\\
+ \downarrow\\
+ \text{R-101 }\Delta\mathcal W_R=\mathcal R_Q+\mathcal M_U+\mathcal K_R\\
+ \downarrow\\
+ \text{R-071/R-085 unshifted current}\quad+\quad\text{R-102 }\mathcal K_R\\
+ \downarrow\\
+ \boxed{\text{R-103 complete regular }H_N\text{ and REG}}\\
+ \downarrow\\
+ \boxed{\text{next: progressive/revisit }H_A\text{ and }\mathrm{OVERLAP}_{\rm src}}.
+\end{array}                                                \tag{8.1}
+\]
+
+The reusable route decisions are recorded in
+\texttt{explorations/log.jsonl}.  They include the successful exact-owner
+reassembly and the boundary that standalone posterior positivity and the old
+R-085 atom statements are unnecessary, not retroactively proved.  No new
+negative-result entry is required: the relevant duplicate-owner and
+regular-to-progressive failures were already registered by R-091,
+R-094--R-101.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the sign-indefinite posterior covariance deficit is
+still open.}  \textbf{DISMISSED for regular complete-owner closure; VALID for
+the stronger naked bracket.}  Equations (4.2)--(4.4) show that its rowwise
+Schur gap cancels the complete-square gap.  The physical endpoint, not the
+naked bracket, is the target.  No positivity of (4.5) is claimed.
+
+\item \textbf{Objection: R-099 already spent all five rational families, so
+R-101 spends the first two again.}  \textbf{DISMISSED by the active ledger.}
+R-103 uses only R-099 families three through five.  Families one and two are
+inside the single R-101 raw-Wick owner (3.6).
+
+\item \textbf{Objection: the R-102 complete Hessian and R-076 cubic are both
+needed.}  \textbf{UPHELD as a duplicate-charge warning.}  The active proof
+refunds the provisional R-076 cubic before taking the complete Hessian.
+R-076 remains valid in its complementary coordinate.
+
+\item \textbf{Objection: q, r, trace, heat, and the forest are absent from
+(2.6).}  \textbf{DISMISSED.}  They are internal coordinates of the complete
+row endpoints.  Equations (3.6) and (4.4) show why appending them would be a
+second copy, not a repair.
+
+\item \textbf{Objection: the terminal square is secretly used by R-100 or
+R-102.}  \textbf{DISMISSED.}  R-100 pays only the signed future raw-Wick
+residual.  R-102 proves an absolute current estimate and Corollary 9.3 leaves
+the entire square as the explicit positive term in (3.8).
+
+\item \textbf{Objection: regular REG plus R-087 CORE proves Nelson.}
+\textbf{UPHELD as false.}  CORE identifies variational classes only after a
+uniform bound on bounded smooth cylindrical-simple progressive controls.
+The missing theorem is the lossless revisit/overlap-stable $H_A$ assembly and
+its uniform source-action lower bound.
+
+\item \textbf{Objection: deterministic PSD heat covers control-dependent
+heat.}  \textbf{UPHELD as false.}  R-102 conditions through deterministic
+heat composition.  Random control-dependent target heat is outside the
+theorem.
+\end{enumerate}
+
+External adversarial review is invited for the exact equality (2.6), the
+three-owner rational split (3.2), the zero-extra-owner interpretation of
+$q/r$ in (4.4), the refund rows in (7.1), and the regular/progressive scope
+boundary.
+
+\section{Executable verification}
+
+The primary executable checks the exact rational endpoint algebra on
+deterministic exact rational matrix fixtures, rejects wrong raw-Wick,
+shifted-current-sign, and terminal-square factors, and includes rank-one and
+zero PSD terminal matrices.  It also checks the owner-incidence partition,
+active/refund multiplicities, seven- and eight-module budget simplices,
+production stabilizer reserve, the $C=15$ R-092 Cartan separation gap (distinct
+from the R-096 payable collar), and predecessor contracts.  The independent
+executable imports no primary implementation; it uses standard-library
+\texttt{Fraction} arithmetic, a separately expanded scalar endpoint including
+the zero-PSD limit and mutant rejection, and an independently ordered owner
+incidence audit.
+
+The integrated verifier runs both executables from fresh outputs, pins every
+authority and evidence hash, checks the note and PDF, verifies the exploration
+records, result ledger, current claim surface, gate and task states, and fails
+closed on any promotion to progression, Nelson, removals, a measure, Sector A,
+or a higher tier.
+
+Run from the repository root:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+  a13_classii_regular_complete_packet_ownership_hn_reg_closure_verify.py
+\end{verbatim}
+
+The PDF is built from this source with the repository PDF builder and rendered
+page by page with Poppler before release.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-REGULAR-COMPLETE-PACKET-OWNERSHIP-HN-REG-CLOSURE
+Ledger:    R-103.
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement:
+           The R-079 regular complete packet has one exact disjoint owner
+           partition. R-080 owns its two low objects, R-083/R-092 own FAR,
+           R-084 owns the complete linear rows, and R-101 splits the rational
+           row into a low-owned raw-Wick part, one future raw-Wick residual,
+           three unshifted currents, and K_R. R-100/R-101,
+           R-071/R-085, and R-102 bound those three rational owners, while
+           q/r, heat, trace, payment, and the R-063 forest remain internal
+           coordinates. Seven-module and eight-module finite allocations
+           close complete regular H_N and REG. The conservative allocations
+           1/440 and 3/100 retain positive action reserves 197/440 and 3/25;
+           1/220 is only an optional R-088 comparison threshold.
+Scope:     Finite cutoff, fixed positive floor, A1 production frame, common
+           real-even local regulators, deterministic PSD target/future heat,
+           fixed R-096 collar, and annular mutually orthogonal strict-past
+           no-revisit physical-shell controls with accepted prefix ledgers.
+Dependencies:
+           R-063, R-071, R-076, R-078--R-080, R-083--R-086, R-088,
+           R-091--R-094, R-096--R-097, R-099--R-102.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, REGULAR-CLOSURE.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+           a13_classii_regular_complete_packet_ownership_hn_reg_closure_verify.py
+Expected output:
+           Manifest-pinned primary, independent, integrated, and aggregate
+           assertions PASS; exit zero.
+Falsification gate:
+           Failure of the R-079 endpoint identity, R-083 partition, R-100
+           row additivity, R-101 rational split/raw-Wick ownership, R-102 K_R
+           bound, any owner multiplicity, finite allocation, authority hash,
+           PDF, exploration, public-surface, or scope assertion.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No naked posterior-bracket positivity, standalone R-085 (4.11) or
+           old (6.5), arbitrary progressive/revisit H_A, OVERLAP_src, Nelson,
+           cutoff/floor removal, interacting measure, T5--T7, or Sector-A
+           closure is proved.
+Next required action:
+           Prove lossless progressive/revisit H_A assembly and the uniform
+           OVERLAP_src lower bound on the R-087 bounded smooth cylindrical-
+           simple variational core, then invoke CORE for q=10/9 Nelson.
+\end{verbatim}
+\endgroup

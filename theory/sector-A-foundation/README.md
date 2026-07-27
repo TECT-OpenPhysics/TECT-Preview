@@ -50,17 +50,17 @@ the exact complete-current Doob polarization and reconstructs the canonical
 safe packet with its conditional low-current boundary and present/future
 cross term intact. It also proves the spatially weighted Cameron--Martin
 square function and base-current heat projection. The exact terminal feedback
-commutator retains coefficient and derivative-feedback channels. R-097
-completes the heat-lifted Gram telescope and terminal `theta=0` Schur
-reduction; R-100 identifies the exact complete owner and pays the regular
-future-control reveal once. R-101 centres the isolated moving heat-baseline/
-raw-Wick cross, terminalises the complete raw block, and reduces the rational
-row to `K_R=G^T L c+c^T B_1 c/2`, where
-`B_1=(P_(Sigma_tar)B_R)(U+a)`. The current child remains
-`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: prove its heat-lifted
-coefficient-balanced rational-current Carleson lower form uniformly over the
-admissible target heats, with every owner retained once. Unheated or zero-
-heat-uniform Schur fails; fixed-positive-heat coercivity remains unproved.
+commutator retains coefficient and derivative-feedback channels. R-097--
+R-102 terminalise the heat-lifted Gram form, identify the exact complete
+owner, separate the fixed-low raw-Wick endpoint from its future residual, and
+close the regular shifted current `K_R` with its terminal square unspent.
+R-103 then proves the disjoint expectation-level complete-owner partition.
+Its seven modules close complete regular `H_N`, and adding the R-083/R-092 FAR
+owners gives the eight-module regular `REG` bound. The literal naked posterior
+bracket remains unproved and is non-load-bearing for this regular conclusion.
+The current child is now `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`:
+extend the signed complete packet losslessly across progressive/revisit
+controls and prove its uniform `OVERLAP_src` source-action lower bound.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the
@@ -207,19 +207,16 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  compression has no automatic spatial gain, and direct Stein differentiation
  exposes adapted-selector derivatives. The optional R-093 zero-slack rows remain
  superseded coarse estimates, while absolute per-revisit sixth-moment
- summation remains invalid. R-097 terminalises the global Gram form; R-100
- proves complete-owner gauge invariance, exact row additivity, and one-use
- future-control reveal payment. R-101 proves same-point moving raw-Wick heat-
- baseline orthogonality and cross-Doob reduction, telescopes the control-only
- square, and replaces old rational (6.5) by
- `K_R=G^T L c+c^T B_1 c/2`, with
- `B_1=(P_(Sigma_tar)B_R)(U+a)`. The live target is the heat-lifted coefficient-
- balanced rational-current Carleson lower form for `K_R`, uniformly over the
- admissible target heats, retaining a fixed positive fraction of that same
- heat-lifted terminal square and the low, heat,
- trace, `q/r`, payment, and R-063 forest owners exactly once. Complete
- coefficient-unconditioned `H_N`, REG,
- progressive/revisit `H_A`, `OVERLAP_src`, Nelson, and Sector A remain open.
+ summation remains invalid. R-097--R-102 terminalise the global Gram form,
+ prove complete-owner gauge invariance and exact row additivity, separate the
+ fixed-low raw-Wick endpoint from its future reveal, and close the regular
+ shifted current. R-103 supplies the once-only owner audit: fixed-low raw Wick
+ remains in the R-080/R-063 low objects, only the future reveal is a separate
+ residual, one signed R-078 paid difference is bounded under the R-096
+ collar, and the separate R-086 `Q` orientations and `T_G^<=` charge are
+ refunded. Seven modules close complete regular `H_N`; eight close regular
+ `REG`, while the terminal square remains reserved. Progressive/revisit
+ `H_A`, `OVERLAP_src`, Nelson, and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

@@ -69,17 +69,17 @@ retained. It also proves a spatially weighted Cameron--Martin square function
 that spends control energy once and an exact backward-heat projection for the
 base or predictably translated current. The terminal feedback commutator still
 contains coefficient and derivative-feedback channels. Generic weighted
-shortcuts fail. R-097 completes the heat-lifted Gram telescope and terminal
-`theta=0` Schur reduction; R-100 identifies the exact complete owner and pays
-its future-control reveal residual once. R-101 then centres the isolated
-moving heat-baseline/raw-Wick cross, terminalises the complete raw block, and
-reduces the regular rational row to the single signed current-square packet
-`K_R=G^T L c+c^T B_1 c/2`, where
-`B_1=(P_(Sigma_tar)B_R)(U+a)`. The exact current child remains
-`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: prove the heat-lifted
-coefficient-balanced rational-current Carleson lower form uniformly over the
-admissible target heats, with all owners retained once. Unheated or zero-heat-
-uniform Schur fails; fixed-positive-heat coercivity remains unproved.
+shortcuts fail. R-097--R-102 terminalise the heat-lifted Gram form, identify
+the exact complete owner, separate the fixed-low raw-Wick endpoint from its
+future residual, and close the regular shifted current `K_R` with its terminal
+square unspent. R-103 then proves the disjoint expectation-level complete-
+owner partition. Its seven modules close complete regular `H_N`, and adding
+the R-083/R-092 FAR owners gives the eight-module regular `REG` bound. The
+literal naked posterior bracket remains unproved and is non-load-bearing for
+this regular conclusion. The exact current child is now
+`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`: extend the signed complete
+packet losslessly across progressive/revisit controls and prove its uniform
+`OVERLAP_src` source-action lower bound.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to
@@ -237,20 +237,17 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   empty after a fixed widened payable collar. Raw Wick compresses exactly to
   coordinate Hermite ranks zero through two, but this provides no spatial
   gain and Stein differentiation exposes adapted-selector derivatives. The
-  R-097 terminalises the global Gram form; R-100 proves complete-owner payment-
-  gauge invariance, exact row additivity, and one-use payment of the regular
-  future-control reveal. R-101 proves the missing same-point moving raw-Wick
-  heat-baseline orthogonality and cross-Doob reduction, then telescopes the
-  control-only square and replaces the old rational (6.5) frontier by
-  `K_R=G^T L c+c^T B_1 c/2`, with
-  `B_1=(P_(Sigma_tar)B_R)(U+a)`. The next target is the heat-lifted
-  coefficient-balanced rational-current Carleson lower form for `K_R`,
-  uniformly over the admissible target heats, retaining a fixed positive
-  fraction of that same heat-lifted terminal
-  square and the low, heat, trace, `q/r`, payment, and R-063 forest owners
-  exactly once. Complete coefficient-unconditioned `H_N`, REG,
-  progressive/revisit assembly, `OVERLAP_src`, Nelson, and Sector A remain
-  open.
+  R-097--R-102 terminalise the global Gram form, prove complete-owner payment-
+  gauge invariance and exact row additivity, separate the fixed-low raw-Wick
+  endpoint from its future reveal, and replace the old rational (6.5)
+  frontier by a closed regular `K_R=G^T L c+c^T B_1 c/2` estimate. R-103
+  supplies the missing once-only owner audit: fixed-low raw Wick stays in the
+  R-080/R-063 low objects, only the future reveal is a separate residual, one
+  signed R-078 paid difference is bounded under the R-096 collar, and the
+  separate R-086 `Q` orientations and `T_G^<=` charge are refunded. Seven
+  modules close complete regular `H_N`; eight close regular `REG`, while the
+  terminal square remains reserved. Progressive/revisit `H_A`,
+  `OVERLAP_src`, Nelson, and Sector A remain open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

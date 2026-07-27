@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-103](#r-103) | Regular complete-packet ownership and H_N/REG closure | Scoped T4 analytic/exact/executed regular closure: the exact R-079 endpoint, R-083 FAR/NEAR and row partitions, R-100 complete-owner row additivity, and R-101 three-owner rational split form one disjoint expectation-level owner partition. R-080/R-063 retain the fixed-low raw-Wick difference inside the two low objects; only the R-100/R-101 future reveal is a separate raw-Wick residual. R-084 owns all complete linear rows; only R-099 current families three through five enter the unshifted rational owner; R-102 owns the shifted current while leaving its terminal square reserved; and one signed R-078 paid difference is bounded under the fixed R-096 collar. The separate R-086 Q orientations and `T_G^<=` charge, provisional raw-Q, base-cubic, earlier shifted-current, second-secant, appended-forest, and extra q/r/Schur charges have multiplicity zero. Seven modules close complete regular H_N and eight modules close REG. The conservative allocation `eta*=1/440`, `zeta*=3/100` spends `1/3080`, `3/700` per H_N module and `1/3520`, `3/800` per REG module, leaving action reserves `197/440`, `3/25`. This does not prove the stronger naked posterior bracket, standalone R-085 (4.11), old (6.5), progressive/revisit `H_A`, `OVERLAP_src`, Nelson, removals, a measure, or Sector A |
 | [R-102](#r-102) | Full-Hessian heat representation and regular future-insertion rational-current closure | Scoped T4 analytic/exact/executed advance and method boundary: use of the complete rational second-Hessian secant requires refunding its separate provisional base-cubic allocation, without withdrawing R-076 in its own owner or restoring the R-101 raw-Wick block. Normalization gives a target-heat-uniform bounded Hessian, and Gaussian completion gives an exact Laplace--Wick representation for every PSD target covariance, including singular ones. Exact ridge, active-subspace, and kernel calculations rule out uniform full-space inverse-Gram coercivity. Cross-Doob decomposition leaves a future-feedback innovation. In the regular annular mutually orthogonal strict-past no-revisit class, swapping the finite `j<k` sums before conditioning the complete product turns it into predictable last-insertion columns. The high-prefix branch has limiting Young slack `1/14`; the retained fixed-low derivative branch has `X^(1/7)(1+Y)^(19/42)`, slack `17/42`, and moment `42/17`. The whole current closes uniformly in cutoff and deterministic PSD target and future heat, so regular `K_R` closes with its terminal square unspent and the separate R-086 current suballocation refunded. Exact Gaussian, Jensen, and Cartan fixtures still refute shortcut factorizations, while the Fourier triad is only a diagnostic. Full-frame bracket, complete `H_N`, REG, progression, Nelson, a measure, and Sector A remain open |
 | [R-101](#r-101) | Raw-Wick heat-baseline orthogonality and rational current reduction | Scoped T4 analytic/exact/executed advance: for a pointwise coefficient, real-even Gaussian covariance, and regular strict-past control, the moving heat coefficient is conditionally orthogonal to the fresh full-Wick increment. Cross-Doob terminalization therefore assigns the complete terminal raw-Wick block to one fixed low endpoint plus exactly the R-100 future-control residual, with no second secant charge. Exact derivative-current and Taylor ledgers telescope the control-only square and reduce the rational row from old (6.5) to the single signed packet `K_R=G^T L c+c^T(P_(Sigma_tar)B_R)(U+a)c/2`. The retained square is heat-lifted. The production rational vector satisfies an exact norm contraction, but Wick order and the heat-lifted coefficient-balanced rational-current Carleson inequality remain open. Unheated or zero-heat-uniform Schur completion fails; fixed-positive-heat coercivity is unproved. Complete `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, the measure, and Sector A remain open |
 | [R-100](#r-100) | Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier | Scoped T4 analytic/exact/executed advance and method boundary: the complete R-099 owner is exactly the conditional terminal Wick increment and is independent of its matching ridge/payment coordinate. Under matching coefficient, payment, and baseline splits it is exactly row-additive: the R-098 posterior Schur gap cancels an equal opposite complete-square gap. Finer coefficient revelation likewise exchanges covariance mass with posterior-mean mass without changing the owner. The target is exactly posterior mean current minus covariance debt. For regular mutually orthogonal strict-past no-revisit controls, the heat-centred split `F_j=L_j+H_j` and a full-Wick extension of the R-094 secant estimate pay the entire future-control/Jensen `H_j` residual with one `X/Y` allocation. A three-atom family proves that PSD Gram structure and separate `X/Y` moments alone cannot control abstract covariance debt, while a reduced complete-production-frame ray retains `c=Da`, has rational quadratic coefficient `-9/400`, and is `H2`-subcritical with ratio `3/57800`; it is a zero-floor diagnostic, not a production counterexample. The moving heat-baseline production debt bound, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -121,6 +122,59 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-103"></a>
+### R-103 -- Regular complete-packet ownership and H_N/REG closure
+
+**Result ID.**
+`A13-CLASSII-REGULAR-COMPLETE-PACKET-OWNERSHIP-HN-REG-CLOSURE`.
+
+**Statement.** On the finite-cutoff, fixed-floor A1 production frame with
+common real-even local regulators, deterministic PSD target/future heat, the
+fixed R-096 collar, and annular mutually orthogonal strict-past no-revisit
+physical-shell controls, the complete R-079 packet has one exact disjoint
+expectation-level owner partition. R-080 owns its two distinct low objects;
+their R-063 reconstruction already contains the fixed-low raw-Wick difference,
+while only the R-100/R-101 future reveal is a separate raw-Wick residual.
+R-083/R-092 own FAR; R-084 owns the complete linear rows; R-071/R-085 with
+R-099 own only current families three through five; R-102 owns the shifted
+current with its terminal square retained; and the single signed R-078 paid
+difference is bounded under the fixed R-096 collar. The separate R-086
+`Q` orientations and `T_G^<=` current charge are refunded, as are every other
+provisional duplicate.
+
+Consequently, for every positive `eta,zeta`, the seven complete-NEAR modules
+give
+
+`E H_N^reg >= -eta E X-zeta E Y-C`,
+
+uniformly in the terminal cutoff. Adding the zero controlled-polynomial FAR
+rows and the R-092 regular Cartan FAR theorem gives the corresponding
+eight-module REG bound. With `eta*=1/440`, `zeta*=3/100`, each H_N module uses
+`1/3080`, `3/700`, and each REG module uses `1/3520`, `3/800`, leaving positive
+production reserves `197/440`, `3/25`.
+Thus R-103 closes complete regular H_N and REG without consuming the R-102
+terminal square.
+
+**Owner correction.** The old R-085 averaged Cartan atom (4.11) and old
+rational form (6.5) are not retroactively proved. They are non-load-bearing
+for this regular architecture because R-092 supplies the integrated Cartan
+theorem and R-101/R-102 supply the nonduplicating rational theorem. Likewise,
+R-100 cancels the posterior and complete-square row gaps inside the physical
+owner; no naked posterior-covariance lower bound is asserted.
+
+**Evidence.** The proof note
+`classii-regular-complete-packet-ownership-hn-reg-closure-260728-v1.0`, its
+PDF, primary and non-importing independent exact executables, integrated
+hash-pinned verifier, manifest, and `EXP-000258--EXP-000259`.
+
+**Boundary.** R-103 does not prove the stronger naked posterior bracket,
+standalone R-085 (4.11), old (6.5), arbitrary progressive/revisit `H_A`,
+`OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff/floor removal, an
+interacting measure, Sector-A closure, or T5--T7. Tier remains T4. The live
+child is `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`.
+
+---
 
 <a id="r-102"></a>
 ### R-102 -- Full-Hessian heat representation and regular future-insertion rational-current closure

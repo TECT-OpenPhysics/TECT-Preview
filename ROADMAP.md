@@ -40,7 +40,7 @@ counterterms, PDE well-posedness.
 **Exit condition**: no convention ambiguity remains; the convention registry is
 the single normative source.
 
-**Status — Sector A refreshed 2026-07-25**: the convention and exact kernel
+**Status — Sector A refreshed 2026-07-28**: the convention and exact kernel
 identity are fixed, with `r_zero` and `mu2_shell` kept distinct. The canonical
 full-production branch is
 
@@ -229,24 +229,21 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   innovations, cross term, squares, traces, forest, paid difference, and
   complete low endpoint retained. It proves a spatially weighted Cameron--
   Martin control square function and the predictable base-current heat
-  projection. R-097--R-102 have now terminalised and recoordinated this
-  regular-control algebra at the exact
-  `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: the backward-heat Gram
-  row telescopes, the complete owner is payment-gauge invariant and exactly
-  row-additive, and its future-control/Jensen reveal residual is form-paid by
-  the full-Wick R-094 extension. R-101 proves that the isolated moving heat
-  coefficient is orthogonal to the fresh raw-Wick increment and reduces the
-  rational regular owner to `K_R=G^T L c+c^T B_1 c/2`, where
-  `B_1=(P_(Sigma_tar)B_R)(U+a)`. R-102 refunds the duplicate base-cubic and
-  separate R-086 current allocations, swaps the exact future-feedback `j<k`
-  sum into predictable last-insertion columns, and closes the whole regular
-  rational current. The high-prefix coefficient branch has limiting Young
-  slack `1/14`; EXP-000257 repairs the freeze-review omission by retaining
-  the fixed-low branch `X^(1/7)(1+Y)^(19/42)`, with slack `17/42` and
-  moment `42/17`. The estimate is uniform in cutoff and deterministic PSD
-  target and future heat. Thus regular `K_R` is closed with its
-  terminal square unspent. The next regular target is the nonduplicating
-  complete `H_N` and REG reassembly. R-080,
+  projection. R-097--R-102 terminalise and recoordinate this regular-control
+  algebra in the exact complete-owner coordinate. R-101 separates the fixed-
+  low raw-Wick endpoint from the future residual, and R-102 closes the whole
+  regular shifted current `K_R=G^T L c+c^T B_1 c/2` uniformly in the cutoff
+  and deterministic PSD target/future heat, with the terminal square unspent.
+  R-103 now proves the disjoint expectation-level owner partition: the two
+  R-080/R-063 low objects retain the fixed-low raw-Wick difference, only the
+  R-100/R-101 future reveal is a separate residual, the single signed R-078
+  paid difference is bounded under the R-096 collar, and all duplicate R-086
+  orientations/current charges are refunded. Seven modules close complete
+  regular `H_N` and eight modules close `REG`; the allocation
+  `eta*=1/440`, `zeta*=3/100` leaves reserves `197/440`, `3/25` and preserves
+  the terminal square. The literal naked posterior bracket remains unproved
+  and is non-load-bearing for this regular closure. The active child is now
+  `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -626,8 +623,10 @@ preserved in git/changelog rather than treated as current gates.
    exact expectation-level full-current and canonical safe-packet Doob
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
-   child is `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`, narrowed by
-   R-080--R-102. R-080 closes the two distinct low objects for regular
+   child is `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, after R-103
+   closed complete regular `H_N` and `REG` without proving the stronger naked
+   posterior bracket. The route to that closure was narrowed by R-080--R-102.
+   R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -705,7 +704,8 @@ preserved in git/changelog rather than treated as current gates.
    replace the rootwise reserve by a global terminal-square fraction unless
    the pure-future identity or predictable domination `2R>=theta B` is proved;
    a decaying `theta_j` does not repair the current separate absolute ledgers.
-    Apply R-097--R-102 next. The complete heat-lifted Gram row telescopes to its
+    R-097--R-102 complete the heat-lifted Gram and regular rational-current
+   route. The complete heat-lifted Gram row telescopes to its
    terminal value, and the full R-099 owner
    `S_R+C_post/2-P_R-W_0` is exactly the ridge-independent terminal Wick
    increment. Under matching row/payment/baseline splits it is row-additive:
@@ -728,15 +728,22 @@ preserved in git/changelog rather than treated as current gates.
     `X^(1/7)(1+Y)^(19/42)` has slack `17/42` and moment `42/17`.
     The estimate is uniform in cutoff and deterministic PSD target and future
     heat and leaves the complete heat-lifted
-    terminal square unused. Reassemble regular complete `H_N` and REG next,
-    retaining the heat/low/trace/payment/`q/r` owners and R-063 forest exactly
-    once. Absolute balanced summation, separated multipliers, inverse-Gram
-    Schur, and predictable-baseline deletion remain invalid shortcuts.
+    terminal square unused. R-103 then performs the exact nonduplicating
+   reassembly. The fixed-low raw-Wick difference remains in the two R-080/
+   R-063 low owners and only its future reveal is a separate residual; the
+   single signed R-078 paid difference is bounded under the fixed R-096
+   collar; the separate R-086 `Q` orientations and `T_G^<=` current charge
+   have zero extra multiplicity. Seven modules close complete regular `H_N`
+   and eight modules close `REG`, with per-module shares `1/3080`, `3/700`
+   and `1/3520`, `3/800`, respectively. Absolute balanced summation,
+   separated multipliers, inverse-Gram Schur, and predictable-baseline
+   deletion remain invalid shortcuts.
    Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower
    triangular source map, or amplify the local sign fixture into a paid
-   counterexample. After coefficient-unconditioned `H_N`, `H_A` names only
+   counterexample. After the R-103 complete regular `H_N` and `REG` closure,
+   `H_A` names only
    lossless assembly of `H_C`, `H_N`, R-066 one-use, R-079 low/future feedback,
    and every temporal companion into `OVERLAP_src`. The uniform directed
    source-union inequality is already the `q=10/9` Nelson objective through

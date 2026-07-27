@@ -383,7 +383,7 @@ new interaction counterterm is generated.  A shell-by-shell sum of the A13
 one-shell estimate is forbidden because its `H_A(x)` term repeatedly pays
 Gaussian past energy, whose expectation grows with the cutoff by A11.
 
-**Status:** OPEN (reviewed 2026-07-25), SOLE CANONICAL OBJECTIVE AFTER THE
+**Status:** OPEN (reviewed 2026-07-28), SOLE CANONICAL OBJECTIVE AFTER THE
 ARCHITECTURE NOGOS.  The translation-model reduction proves the exact
 finite-cutoff translation and Cartan identities and deterministic-shift
 expectation positivity.  It admits the explicit candidate
@@ -450,8 +450,10 @@ both distinct low objects for the declared mutually orthogonal one-shot
 no-revisit class. It reduces the far feedback block by orthogonal square
 completion to one localized predictable base-current tail and narrows the near
 residual to a predictable explicit payload plus a hidden future-adapted
-coefficient. The current regular-class child remains
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`. R-081 then proves
+coefficient. At the R-080 stage the regular-class child was
+`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`; R-103 has since
+closed that gate in the regular complete-owner coordinate and moved the live
+child to `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`. R-081 then proves
 the exact polynomial/Cartan current split, eliminates the polynomial far
 channel, proves a deterministic relative-gap current theorem, and isolates
 the missing martingale-root-resolved sum at the half-derivative endpoint. It
@@ -985,13 +987,17 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** REDUCED-NOT-CLOSED; CURRENT CHILD MOVED BY R-097 (2026-07-27).
-The regular
-one-shot `H_C` and the centered Gram-secant/value--heat prefix sublemmas are
-closed, while their once-only embedding into coefficient-unconditioned
-root-local `H_N` and lossless progressive/revisit `H_A` assembly into
-`OVERLAP_src` remain open
-`A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION`.
+**Status:** CLOSED@REGULAR-COMPLETE-OWNER-HN-REG BY R-103 (2026-07-28);
+PROGRESSIVE/REVISIT EXTENSION OPEN. The regular one-shot `H_C` and the
+centered Gram-secant/value--heat prefix sublemmas were closed first. R-097--
+R-102 then changed to the exact complete-owner coordinate and closed the last
+regular rational current. R-103 proves the once-only seven-module complete
+regular `H_N` and eight-module REG allocation. This closure is only for the
+finite-cutoff, fixed-floor, deterministic-PSD-heat, annular mutually
+orthogonal strict-past no-revisit class; it is not a standalone positivity
+theorem for each future-control innovation block. Lossless progressive/revisit
+`H_A` assembly into `OVERLAP_src` remains open. The paragraphs below retain
+the route history and method boundaries.
 R-079 proves
 the exact expectation-level full-current and canonical safe-packet identity,
 one spatially weighted Cameron--Martin control square-function use, and the
@@ -1313,19 +1319,29 @@ cross-Doob identity require no selector differentiation. Two tempting closure
 routes nevertheless fail exactly: repeated second-Hermite rows grow
 quadratically under predictability-only aggregation, and an abstract finite
 posterior covariance deficit can be negative. These are method counterexamples,
-not counterexamples to the production torus packet. The remaining target is
-therefore the single production-weighted full-frame posterior-covariance
-bracket above, with all positive and negative owners kept together. The
-standalone Cartan atom (4.11), rational shifted-Hessian atom (6.5), complete
-`H_N`, REG, and assembly remain open.
+not counterexamples to the production torus packet.
+
+R-098--R-102 replace the stronger naked-bracket route by the exact physical
+complete-owner coordinate and close its last regular rational current. R-103
+then proves the disjoint expectation-level owner partition for the finite-
+cutoff, fixed-floor, deterministic-PSD-heat, annular mutually orthogonal
+strict-past no-revisit class. The fixed-low raw-Wick difference remains in the
+R-080/R-063 low owners; only the R-100/R-101 future reveal is a separate
+residual. One signed R-078 paid difference is bounded under the fixed R-096
+collar, the R-086 `Q` orientations and `T_G^<=` charge are refunded, and the
+R-102 terminal square remains unspent. Seven modules close complete regular
+`H_N`; adding the R-083/R-092 FAR owners gives the eight-module regular REG
+bound. The literal naked posterior bracket, standalone Cartan atom (4.11), and
+old rational form (6.5) remain unproved and are not load-bearing for this
+regular conclusion.
 
 Accordingly `H_A` is only the lossless assembly of the complete packet,
 uniformly in cutoff, partition, and revisit, into `OVERLAP_src`, preserving
 R-079 future feedback and R-080 low/revisit cancellation. The uniform
 source-union inequality is already the Nelson objective through R-087 CORE,
-not a separate post-assembly theorem. `H_C`, `H_N`, and `H_A` remain
-non-interchangeable obligations. Complete coefficient-unconditioned NEAR,
-progressive/revisit assembly, `OVERLAP_src`, and Nelson remain open.
+not a separate post-assembly theorem. `H_C`, regular `H_N`, and `H_A` remain
+non-interchangeable obligations. R-103 closes only complete regular `H_N` and
+REG; progressive/revisit assembly, `OVERLAP_src`, and Nelson remain open.
 
 ### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
 
@@ -1337,31 +1353,22 @@ Martin matrix payment, paid subtraction, `q/r` means, covariance trace, Wick
 terms, and the complete R-063 forest in one identity, with every owner used
 exactly once.
 
-**Status:** OPEN CURRENT CHILD (reviewed 2026-07-27 after R-101). R-097 proves
-the complete backward-heat Gram telescope and posterior normal form; R-098--
-R-100 identify the matching-payment, complete-owner, and future-control reveal
-coordinates. R-101 now proves the missing isolated raw-Wick centering: for a
-pointwise coefficient, real-even Gaussian covariance, and strict-past control,
-`E_(j-1)<L_j,Delta Q_j>=0`. Cross-Doob terminalization therefore assigns the
-complete terminal raw-Wick block to one fixed low endpoint plus exactly the
-already-paid R-100 residual. No second R-094 secant or separate raw Taylor
-charge is permitted. Exact derivative-current algebra telescopes the control-
-only square; complete-owner row additivity and R-084 remove the three linear
-rows, while R-071/R-085 pay the three unshifted rational current families. The
-unique remaining regular rational packet is
-`K_R=G^T L c+c^T B_1 c/2`, where
-`B_1=(P_(Sigma_tar)B_R)(U+a)`. The next theorem is the heat-lifted
-coefficient-balanced rational-current Carleson lower form for this packet,
-uniformly over the admissible target heats, retaining a fixed positive
-fraction of that same heat-lifted terminal square and the low,
-heat, trace, `q/r`, actual payment, and R-063 forest owners exactly once.
-Absolute balanced summation and separated shifted-multiplier routes are
-supercritical. Unheated or zero-heat-uniform terminal-square Schur has
-rational kernel leakage; fixed-positive-heat coercivity remains unproved.
-These are method boundaries, not production counterexamples. Complete
-coefficient-unconditioned `H_N`, REG,
-lossless `H_A` assembly, `OVERLAP_src`, Nelson, interacting-measure
-construction, and Sector A remain open.
+**Status:** SUPERSEDED AS A LOAD-BEARING REGULAR GATE (reviewed 2026-07-28
+after R-103); THE LITERAL STRONGER STATEMENT REMAINS UNPROVED. R-097 proves
+the complete backward-heat Gram telescope and posterior normal form, and it
+also supplies finite fixtures where an abstract posterior covariance deficit
+is negative. R-098--R-100 identify the matching-payment, complete-owner, and
+future-control reveal coordinates. R-101 separates the fixed-low raw-Wick
+endpoint from the future residual, and R-102 closes the remaining regular
+shifted current `K_R` while preserving its terminal square. R-103 proves that
+the physical complete owner, with coefficient `C_post/2`, is exactly row-
+additive and has a disjoint seven-module complete regular `H_N` and eight-
+module REG allocation. Thus no naked lower bound for `C_post` is needed for
+regular REG. This gate is removed from the active claim-card gates, but its
+literal statement is not marked proved and may not be cited as posterior-
+covariance positivity. Standalone R-085 (4.11), old (6.5), progressive/revisit
+`H_A`, `OVERLAP_src`, Nelson, removals, interacting-measure construction, and
+Sector A remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -1373,9 +1380,9 @@ to identify the same Boue--Dupuis infimum as on all finite-energy progressive
 controls. A stronger direct packetwise all-control or all-tilted-law theorem
 is admissible but is not required for the Nelson application.
 
-**Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
-OVERLAP OPEN (reviewed 2026-07-27). The gate was exposed by R-080 and
-sharpened by R-081--R-097
+**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE
+PROVED, OVERLAP OPEN (reviewed 2026-07-28 after R-103). The gate was exposed
+by R-080 and sharpened by R-081--R-103
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1390,10 +1397,12 @@ proves terminal nonduplication, and R-092 closes only the regular one-shot
 `H_C` branch. R-093 shows that `H_A` must not be counted as a new analytic
 source-union inequality: it is lossless assembly of complete packets into
 `OVERLAP_src`, while the uniform directed source-union bound is already the
-open Nelson objective. Complete coefficient-unconditioned `H_N`, R-066
-one-use, and all temporal/low companions therefore remain inside that
-assembly. Once `OVERLAP_src` is proved, R-087 CORE gives `q=10/9` Nelson
-directly.
+open Nelson objective. R-103 now supplies the exact complete regular `H_N`
+and REG base case, including the once-only low/residual split and payment
+audit, but it gives no revisit-stable decomposition and no uniform source-
+action lower bound. R-066 one-use and all temporal/low companions therefore
+remain inside this assembly. Once `OVERLAP_src` is proved, R-087/R-093 CORE
+gives `q=10/9` Nelson directly.
 
 R-094 additionally rules out extending its regular centered-secant proof by
 absolute per-revisit sixth-moment summation: two equal and opposite same-range
