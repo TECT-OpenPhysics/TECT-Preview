@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-094 release-audit source-image and verifier corrections] - 2026-07-27
+
+Hostile release audit separated the revisit source h from its smoothing image a=Kh, repaired the exact divergence coefficient to 2||K e_H||_6^6 p^(-2), distinguished the Gaussian spatial derivative from the Doob difference, and separated the R-079 coefficient line from the conditional R-086 derivative target. EXP-000199 appends the correction without rewriting history. The integrated verifier now counts both terminal contract rows, scans recursively resolved PDF names deterministically, contains no Hangul literals, and pins the updated contract at primary 303, independent 89, integrated 151, aggregate 543. Tier remains T4 and the complete R-079/R-086 embedding remains open.
+
+## [R-094 root-local Gram secant and feedback boundary] - 2026-07-27
+
+Proved the regular centered Gram-secant bound with mixed scale 2^(j-2k), Young slack 1/3, and product-space L2-L6 interpolation; isolated the stronger 2^(j-4k) factor to the positive quadratic curvature atom. Proved the fresh derivative form and a one-use value-heat control-prefix payment, then recorded the exact fractional square-allocation identity. Hostile reuse review leaves the rootwise R-079/R-086 embedding, adapted T_G^>, and conditional mean debts open, and the absolute per-revisit sixth-moment route is formally blocked. Tier remains T4. Primary 303/303, independent 89/89, integrated 148/148, and aggregate 540/540 checks are pinned; the eight-page PDF passed all-page visual QA.
+
 ## [R-093 augmented perspective and Gibbs-gap boundary] - 2026-07-27
 
 Recorded the exact unconditional augmented normal form, its covariance classifier, the bounded smooth negative local production fixture, and the genuine cutoff-two paid coercivity bound. Retired free same-root coefficient conditioning, fixed-chart Nelson attainment, an independent uniform fibre reserve, and causal orthogonal QR while preserving coupled fibre use. The temporally faithful directed source union equals R-087 CORE under its payoff and finite-entropy hypotheses. Sector A remains open at coefficient-unconditioned root-local H_N and lossless H_A assembly into OVERLAP_src.

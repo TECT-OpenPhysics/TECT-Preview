@@ -179,6 +179,17 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  entropy. Thus the remaining analytic target is coefficient-unconditioned
  root-local `H_N`; `H_A` is only lossless assembly into `OVERLAP_src`, whose
  uniform inequality is already Nelson. Sector A remains open.
+ R-094 now proves the complete regular centered Gram secant and separates its
+ mixed `2^(j-2k)` scale from the stronger `2^(j-4k)` positive quadratic
+ curvature scale. Weighted Hardy and product-space interpolation give slack
+ `1/3`; the fresh derivative form has slack `1/6`. The combined value--heat
+ control prefix is paid from a declared fraction of the feedback square at
+ cost `O(2^(-3j0)X)`. Exact square allocation leaves the reduced-square
+ adapted `T_G^>`/Jensen branch, conditional mean debts, and one once-only
+ R-079/R-086 heat--low--paid--trace--forest embedding. The optional R-093
+ zero-slack rows are superseded coarse estimates, while absolute per-revisit
+ sixth-moment summation is invalid. Complete `H_N`, REG, `OVERLAP_src`,
+ Nelson, and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

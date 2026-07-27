@@ -558,6 +558,18 @@ the following structural results and proof-architecture boundaries hold.
     shifted-packet theorem. Uniform
     coefficient-unconditioned `H_N`, `OVERLAP_src`, Nelson, floor removal,
     measure construction, and Sector A remain open.
+37. `A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY` is R-094. It
+    proves that `2^(j-4k)` belongs to the positive quadratic Gram-curvature
+    atom only. The full centered mixed secant starts at `2^(j-2k)` but is
+    form-subcritical on the regular one-shot class by weighted Hardy and
+    product-space `L2`--`L6` interpolation, with mixed slack `1/3`. The fresh
+    derivative form has slack `1/6`, and the combined value--heat control
+    prefix is paid from a declared fraction of the retained feedback square
+    at cost `O(2^(-3j0)X)`. The exact fractional square ledger preserves the
+    adapted `T_G^>`/Jensen branch, coefficient/derivative cross, conditional
+    mean debts, covariance trace, backward heat, low and paid terms, and the
+    complete R-063 forest for the successor. Complete `H_N`, REG,
+    `OVERLAP_src`, Nelson, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -601,6 +613,7 @@ is a scoped T4 subproof and does not promote A13.
 | Global/projected Cartan temporal audits | Global unprojected ledger no-go, rational forest nonduplication, definition-level projected output ledger, scalar saturation, and complete four-row Schur/Jensen boundary | T4 exact boundary; conservative transpose compression withdrawn by R-092 |
 | Normalized regular Cartan / augmented perspective | Corrected two-field normalized finite forest, whole-product estimate, regular one-shot `H_C`, augmented perspective, covariance union, and triangular entropy accounting | T4 analytic/exact reduction; regular `H_C` closed, general progression and signed `H_N` open |
 | Augmented covariance / Gibbs-information boundary | Unconditional perspective normal form, production sign fixture, cutoff-two paid coercivity, coefficient-reveal information price, source-union Gibbs equality, and fibre/causal no-gos | T4 analytic/exact reduction; root-local unconditioned `H_N`, `OVERLAP_src`, and Nelson open |
+| Root-local Gram secant / feedback-square boundary | Quadratic-versus-mixed factor audit, weighted-Hardy centered secant, fresh derivative form, value--heat control-prefix payment, fractional square allocation, BG-row correction, and revisit no-go | T4 analytic/exact/executed advance; complete rootwise packet embedding, `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -764,6 +777,11 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   counterexample; the cutoff-two coercive constant is not uniform. Source-
   union equality requires temporally faithful refinements, and fibre entropy
   has no uniform reserve. `OVERLAP_src`, Nelson, and Sector A remain open.
+- R-094 proves the regular centered Gram secant and two one-use subchannels,
+  while correcting the ownership of `2^(j-4k)` and preserving a fractional
+  positive square. It does not identify those sublemmas with the complete
+  R-079/R-086 packet. The adapted `T_G^>`/Jensen branch, conditional mean
+  debts, and once-only heat--low--trace--forest embedding remain open.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -792,10 +810,11 @@ Current subordinate order:
 
 1. keep the R-092 regular one-shot `H_C` theorem as a closed sufficient
    module; do not promote it to progressive/revisit controls;
-2. prove a coefficient-unconditioned root-local paid `H_N` estimate after the
-   base heat/low/R-063 forest cancellation, retaining the exact augmented
-   perspective endpoint once and testing the summable future-shell prototype
-   `2^(j-4k)` for `k>j`;
+2. use R-094's proved centered-secant and control-prefix bounds inside one
+   rootwise identity, and prove the reduced-square coefficient-dominant lower
+   bound `T_Q^>+T_G^>+(1-theta)c^T Bbar c/2` together with the conditional
+   mean debts, base heat, low, paid, trace, and complete R-063 forest, each
+   retained exactly once;
 3. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
@@ -809,17 +828,16 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary_verify.py
+python codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `71/71`;
-- non-importing independent `34/34`;
-- integrated `288/288` and aggregate `393/393`;
-- augmented normal form, production covariance fixture, cutoff-two paid
-  coercivity, information boundary, fixed-chart obstruction, source-union
-  Gibbs equality, fibre/causal boundaries, predecessor/source/PDF/surface
+- primary `303/303`;
+- non-importing independent `89/89`;
+- integrated `151/151` and aggregate `543/543`;
+- exact dyadic kernels, weighted Hardy, product interpolation, mixed Hermite
+  fixture, partial-square and revisit audits, predecessor/source/PDF/surface
   contracts, and T4 scope firewalls;
 - exit code zero.
 
@@ -830,24 +848,20 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_augmented_perspective_gibbs_gap_information_boundary_manifest.json`
-- `notes/classii-augmented-perspective-gibbs-gap-information-boundary-260727-v1.0.tex.txt`
-- `notes/classii-augmented-perspective-gibbs-gap-information-boundary-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary.py`
-- `../../codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary_independent.py`
-- `../../codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary_verify.py`
-- `runs/2026-07-27-primary-augmented-perspective-gibbs-gap-information-boundary/result.json`
-- `runs/2026-07-27-independent-augmented-perspective-gibbs-gap-information-boundary/result.json`
-- `runs/2026-07-27-integrated-augmented-perspective-gibbs-gap-information-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-093`
-- `../../negative-results/registry.md#audit-2026-07-27-a13-r092-augmented-production-covariance`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-local-perspective-paid-scaling`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-coefficient-reveal-free-conditioning`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-fixed-source-chart-gibbs-attainment`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-fibre-entropy-uniform-reserve`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-causal-orthogonal-qr`
-- `../../explorations/log.jsonl` (`EXP-000180`--`EXP-000191`; the final three
-  records append stable evidence-locator/scope corrections)
+- `classii_root_local_gram_secant_feedback_boundary_manifest.json`
+- `notes/classii-root-local-gram-secant-feedback-boundary-260727-v1.0.tex.txt`
+- `notes/classii-root-local-gram-secant-feedback-boundary-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary.py`
+- `../../codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary_independent.py`
+- `../../codes/foundations/a13_classii_root_local_gram_secant_feedback_boundary_verify.py`
+- `runs/2026-07-27-primary-root-local-gram-secant-feedback-boundary/result.json`
+- `runs/2026-07-27-independent-root-local-gram-secant-feedback-boundary/result.json`
+- `runs/2026-07-27-integrated-root-local-gram-secant-feedback-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-094`
+- `../../negative-results/registry.md#audit-2026-07-27-a13-r093-root-factor-square-allocation`
+- `../../negative-results/registry.md#audit-2026-07-27-a13-r093-bg-critical-row-scope`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-absolute-revisit-secant-sum`
+- `../../explorations/log.jsonl` (`EXP-000192`--`EXP-000199`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1595,6 +1609,16 @@ orthogonal-map no-go; by any source, authority, note, PDF, hash, visual-QA,
 or manifest-pinned assertion failure; or by any promoted uniform `H_N`,
 `OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
 
+The R-094 continuation is additionally falsified by failure of the exact
+dyadic constants `8/105`, `4/45`, or `16/7`, the weighted Hardy constant
+`3+2sqrt(2)`, product-space interpolation, the mixed Hermite formula or its
+negative paid minimum, the value--heat conditional variance bound, fractional
+square identity, repaired BG slacks `1/6` and `1/15`, the revisit source/image
+cost distinction, cancellation, or `p^-2` scaling, any authority/source/note/PDF
+hash or all-page visual-QA contract, primary `303/303`, independent `89/89`,
+integrated `151/151`, or aggregate `543/543`, or any promoted complete `H_N`, REG, `OVERLAP_src`,
+Nelson, measure, Sector-A, or tier claim.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1760,6 +1784,14 @@ triangular charts need not attain CORE, fibre entropy has no uniform reserve,
 and causal orthogonal QR cannot remove revisits. The result does not prove a
 coefficient-unconditioned uniform `H_N`, exact progressive/revisit `H_A`
 assembly, `OVERLAP_src`, `q=10/9` Nelson, floor or cutoff removal, a measure
+theorem, Sector-A closure, or T5--T7. Tier stays T4.
+
+R-094 proves the regular centered-secant, fresh-derivative, and value--heat
+control-prefix sublemmas plus an exact fractional square ledger. The strong
+`2^(j-4k)` factor applies only to positive quadratic curvature. The result
+does not prove the rootwise packet embedding, adapted `T_G^>`/Jensen bound,
+conditional mean-debt control, complete `H_N`, REG, arbitrary progressive/
+revisit assembly, `OVERLAP_src`, Nelson, floor or cutoff removal, a measure
 theorem, Sector-A closure, or T5--T7. Tier stays T4.
 
 ## History
@@ -2132,3 +2164,13 @@ theorem, Sector-A closure, or T5--T7. Tier stays T4.
   uniform target is `OVERLAP_src`/Nelson. Uniform root-local unconditioned
   `H_N`, exact `H_A` packet assembly, Nelson, and Sector A remain open; tier
   stays T4.
+- 2026-07-27: Registered R-094. The quadratic Gram-curvature atom has the
+  proposed `2^(j-4k)` scale, while the complete centered mixed secant starts
+  at `2^(j-2k)` but closes on the regular one-shot class with weighted Hardy,
+  product-space interpolation, and slack `1/3`. The fresh derivative form and
+  value--heat control prefix also close, with a declared fractional use of the
+  feedback square. Exact nonduplication leaves the reduced-square adapted
+  `T_G^>`/Jensen packet, conditional mean debts, and once-only R-079/R-086
+  heat--low--trace--forest embedding open. The R-093 coarse critical rows are
+  superseded, and absolute revisit sixth-moment summation is retired. Complete
+  `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open; tier stays T4.

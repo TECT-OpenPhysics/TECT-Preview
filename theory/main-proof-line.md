@@ -208,6 +208,18 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   coefficient-unconditioned root-local `H_N` bound; `H_A` then only assembles
   complete packets losslessly into `OVERLAP_src`, already the Nelson
   objective. Sector A remains open.
+  R-094,
+  A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY,
+  proves the regular centered Gram-secant theorem and two one-use feedback
+  subchannels. The strong `2^(j-4k)` scale is valid only for positive
+  quadratic curvature; the complete mixed secant starts at `2^(j-2k)` but
+  closes by weighted Hardy and product-space interpolation with slack `1/3`.
+  Conditional Gaussian Poincare pays the combined value--heat control prefix
+  from a declared fraction of the retained feedback square. Exact
+  nonduplication leaves the reduced-square adapted `T_G^>`/Jensen branch,
+  conditional mean debts, and one R-079/R-086 heat--low--paid--trace--forest
+  embedding. Complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain
+  open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

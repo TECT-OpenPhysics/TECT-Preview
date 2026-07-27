@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION | the strong factor and the positive square have narrower owne | The R-093 scaling diagnostic `2^(j-4k)` was promoted to |
+| AUDIT-2026-07-27-A13-R093-BG-CRITICAL-ROW-SCOPE | the zero-slack rows were superseded coarse estimates | The two zero-slack rows in R-093 Section 9 were treated as |
+| NG-2026-07-27-A13-ABSOLUTE-REVISIT-SECANT-SUM | terminal cancellation does not control per-increment sixth m | The regular one-shot centered Gram-secant theorem was |
 | AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE | deprecated short chronology alias | The first append-only R-093 changelog event cited the |
 | AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE | the complete sign is a weighted covariance | R-092's coefficient-conditioned moment-matched one-reveal |
 | NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING | the first genuine paid lift is coercive | Amplify the smooth local anti-monotone coefficient fixture |

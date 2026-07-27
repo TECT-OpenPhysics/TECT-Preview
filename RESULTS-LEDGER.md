@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-094](#r-094) | Root-local Gram secants and the nonduplicating feedback boundary | Scoped T4 analytic/exact/executed advance: the positive quadratic Gram-curvature atom has the proposed `2^(j-4k)` scale, while the complete mixed centered secant starts at `2^(j-2k)` but is still form-subcritical on the regular one-shot class by weighted Hardy and product-space `L2`--`L6` interpolation, with mixed budget `X^(1/2)Y^(1/6)` and slack `1/3`. The isolated fresh derivative form has slack `1/6`, and the combined value--heat control prefix is paid once from a declared fraction of the retained feedback square at cost `O(2^(-3j0)X)`. An exact square-allocation identity leaves the adapted `T_G^>`/Jensen branch, coefficient/derivative cross, conditional mean debts, and once-only heat--low--trace--forest embedding open. The two zero-slack R-093 BG rows are superseded coarse estimates, not current atoms. Absolute per-revisit sixth-moment summation fails. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-093](#r-093) | Augmented perspective covariance, paid cutoff-two coercivity, and source-union Gibbs boundary | Scoped T4 analytic/exact/executed advance: the complete augmented one-reveal density has an exact unconditional normal form and, for symmetric even reveals, is precisely a coefficient/quadratic covariance. A bounded smooth reveal constructed from the complete four-row production coefficient makes that local density strictly negative for every fixed payment, but the genuine cutoff-two torus action is coercive on the bounded smooth predictable shell-two class: `I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`, so amplitude scaling cannot produce a paid counterexample there. Conditioning on the same-root coefficient costs mutual information and is infinite for the smooth reveal. The triangular source action equals the Nelson free energy only over the directed union of temporally faithful refinements, not in each fixed chart; its exact Gibbs gap forces both physical and fibre entropy gaps to zero on near minimisers. Thus an independent uniform fibre reserve, free coefficient conditioning, fixed-chart attainment, and causal orthogonal QR are retired; coupled use of the actual fibre term is not excluded. Uniform coefficient-unconditioned `H_N`, full packet assembly/`OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-092](#r-092) | Normalized regular Cartan closure, augmented perspective innovation, and causal entropy-union frontier | Scoped T4 analytic/exact/executed advance and predecessor audit: `J=qI+2nn^T S-2qnn^T` is bounded and every secant term factors through `Delta n`, but `J` is nonsymmetric and the R-090 claim `b=grad c` is false. R-092 repairs R-090/R-091 with the exact R-089 two-tail trace, controlling the actual transposed coefficient `b` and `g=grad c` by the same whole-product estimate. At `(gamma,sigma,theta,p,q)=(1/4,4/15,3/10,6,3)`, the root surplus is `7/30`, Young slack `1/30`, and the R-075 physical prefix ledger proves `H_C^reg(C)<=const 2^(-(C-5)/2)(C_(epsilon,delta)+epsilon E X+delta E Y)` for the R-079 regular no-revisit one-shot class. Terminal `Theta_R(B_1)` energy augments the perspective density to `K_k+P_(k-1)|d_ky|^2-B_(k-1):DeltaGamma_k`; its coefficient-conditioned moment-matched one-reveal branch is nonnegative, while a general weighted covariance defect and the exact `-623/5440` fixture keep full `H_N` open. Exact covariance union plus triangular entropy disintegration removes overlap multiplicity and stores kernel/revisit cost as fibre entropy, but the remaining free energy is exactly Nelson, so `H_A`, OVERLAP, Nelson, a measure, and Sector A remain open; assertion counts are pinned by the manifest |
 | [R-091](#r-091) | Projected Cartan output ledger, full-frame Schur--Jensen boundary, and temporal scope | Scoped T4 analytic/exact/executed boundary, audited by R-092: the definition-level nonnegative output energy satisfies `H_C(C)<=2^(-2 gamma(C-5)) B_gamma^out` for `C>=5`. Its displayed replacement by a single conservative `q`-weighted coefficient trace is false for nonsymmetric production Jacobians and is superseded by R-092's exact two-field trace. The cumulative `Z^6` majorant fails on a predictable rare fixture, while scalar saturation repairs that fixture without giving vector-uniform decay. The complete linear+rational endpoint has exact conditional Schur and same-root Jensen forms, no fixed `eta` gives universal positivity, and terminal paid subtraction is nonduplicating. R-092 closes only regular one-shot `H_C`; signed `H_N`, progressive `H_A`, OVERLAP, Nelson, and Sector A remain open; assertion counts are pinned by the manifest |
@@ -112,6 +113,70 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-094"></a>
+### R-094 -- Root-local Gram secants and the nonduplicating feedback boundary
+
+**Result ID.**
+`A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY`.
+
+**Tier.** T4 scoped analytic/exact/executed advance. No tier promotion.
+
+**Factor theorem.** For a probability root `j` and a later regular physical
+control shell `k>j`, the positive quadratic Gram-curvature atom, with its
+positive square retained, is bounded below by
+`-C 2^(j-4k) q_k`. Its dimensionless triangular kernel sums exactly to
+`(8/105)2^(-3j0)`. This strong factor does not belong to the full Gram
+secant: an exact Hermite fixture has a linear mixed term and starts at
+`2^(j-2k)`. The post-Young squared mixed kernel still sums, with exact
+constant `(4/45)2^(-2j0)`.
+
+**Centered-secant theorem.** On the regular mutually orthogonal strict-past
+one-shot class, the complete centered production Gram secant obeys
+`S_sec <= C 2^(-j0) X^(1/2)(1+Y)^(1/6)`. The proof uses the exact weighted
+Hardy constant `3+2sqrt(2)` and the product-space interpolation
+`||a_k||_3^2<=||a_k||_2||a_k||_6`; it does not require selector independence
+or a higher source moment. The mixed Young slack is `1/3`. The isolated fresh
+derivative form similarly has budget `X^(1/2)(1+Y^(1/3))` and slack `1/6`.
+
+**One-use prefix and nonduplication.** The combined value innovation and
+heat compensator is conditionally centered and has variance `O(2^-j)`.
+Against the accumulated control derivative its total square is at most
+`C(16/7)2^(-3j0)X`, or the sharper orthogonal constant `2`. Completing it
+against only a declared fraction `theta` of the derivative-feedback square
+costs `C theta^-1 2^(-3j0)X`. An exact expansion retains the other fraction,
+the coefficient square, the coefficient/derivative cross, and the covariance
+trace once.
+
+**Audited boundary.** The rootwise Doob-to-terminal embedding is not yet
+proved. In R-086 coordinates the successor is the reduced-square packet
+`T_Q^>+T_G^>+(1-theta)c^T Bbar c/2`, with backward heat, low and paid terms,
+the Wick trace, and the complete R-063 forest each retained once. The adapted
+same-root `T_G^>` multiplier and the R-093 conditional mean debts remain.
+The two zero-slack rows in the optional R-093 BG table were historical coarse
+unshifted estimates already sharpened to slacks `1/6` and `1/15`; correcting
+them does not supply the missing shifted reconstruction. A cancelling
+same-range revisit keeps source cost bounded and terminal shift zero while
+its smoothed per-increment sixth moments grow proportionally to `p^-2`, so the regular proof
+cannot be extended by absolute revisit summation.
+
+**Reuse scope.** The weighted Hardy/product-space secant estimate, the
+value--heat prefix bound, and the fractional square ledger apply to regular
+one-shot packet architectures satisfying the stated covariance, Lipschitz,
+smoothing, and sixth-moment hypotheses. They are not an arbitrary-progressive
+control theorem.
+
+**Evidence.** Proof note
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-root-local-gram-secant-feedback-boundary-260727-v1.0.tex.txt`
+and its paired PDF; primary and non-importing independent executables plus a
+hash-pinned integrated verifier and JSON artefacts under the A13 runs tree.
+
+**Boundary.** Complete rootwise packet embedding, uniform `H_N`, REG,
+arbitrary progressive/revisit assembly, `OVERLAP_src`, `q=10/9` Nelson,
+floor removal, an interacting measure, and Sector-A closure remain open. The
+next exact target is the reduced-square expectation-inside lower bound for
+the coefficient-dominant `T_Q^>+T_G^>` packet together with conditional mean
+debts and the once-only R-079/R-086 heat--low--trace--forest identity.
 
 <a id="r-093"></a>
 ### R-093 -- Augmented perspective covariance, paid coercivity, and source-union Gibbs boundary

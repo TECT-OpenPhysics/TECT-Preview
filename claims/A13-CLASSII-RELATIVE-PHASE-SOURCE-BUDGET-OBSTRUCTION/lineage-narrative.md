@@ -491,6 +491,26 @@ endpoint theorem.
     static `q=10/9` Nelson estimate. Uniform `H_N`, `OVERLAP_src`, Nelson,
     floor removal, measure construction, and Sector A remain open; tier stays
     T4.
+35. **Root-local Gram secants and the nonduplicating feedback boundary.**
+    R-094, `A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY`, audits the
+    R-093 root-local factor before another packet expansion. The positive
+    quadratic Gram-curvature atom has the proposed `2^(j-4k)` scale, but an
+    exact Hermite fixture shows that the complete mixed secant begins at
+    `2^(j-2k)`. Weighted Hardy with exact constant `3+2sqrt(2)` and
+    product-space `L2`--`L6` interpolation still close the complete regular
+    centered secant with mixed slack `1/3`, without selector independence or
+    higher source moments. The isolated fresh derivative form has slack
+    `1/6`. Conditional Gaussian Poincare and the exact derivative-prefix
+    kernel pay the combined value--heat control prefix at
+    `O(theta^-1 2^(-3j0)X)` from only a declared fraction of the retained
+    feedback square. The exact fractional square ledger then exposes the
+    surviving adapted `T_G^>`/Jensen branch, coefficient/derivative cross,
+    conditional mean debts, and once-only heat--low--trace--forest embedding.
+    The two R-093 zero-slack rows are superseded coarse unshifted estimates,
+    while a cancelling rare revisit retires absolute per-increment sixth-
+    moment summation. Complete `H_N`, REG, progressive/revisit assembly,
+    `OVERLAP_src`, Nelson, floor removal, measure construction, and Sector A
+    remain open; tier stays T4.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

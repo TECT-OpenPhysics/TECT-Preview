@@ -421,6 +421,17 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   root-local `H_N` estimate and lossless `H_A` packet assembly into
   `OVERLAP_src` remain open; that source-union inequality is already the
   Nelson objective, not a separate downstream theorem.
+  R-094,
+  `A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY`, proves the regular
+  centered Gram-secant estimate and two one-use feedback subchannels. It
+  confines `2^(j-4k)` to positive quadratic curvature, pays the complete
+  mixed secant by weighted Hardy with slack `1/3`, and pays the combined
+  value--heat control prefix from only a fraction of the feedback square.
+  The remaining exact target is the reduced-square adapted
+  `T_Q^>+T_G^>` packet, conditional mean debts, and the once-only R-079/R-086
+  heat--low--paid--trace--forest embedding. The two R-093 coarse critical rows
+  and absolute per-revisit sixth-moment summation are retired; complete
+  `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -584,7 +595,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
     child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-093. R-080 closes the two distinct low objects for regular
+     narrowed by R-080--R-094. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -652,12 +663,16 @@ preserved in git/changelog rather than treated as current gates.
    vector paracomposition estimate. Retain target heat, coherent multimode
    outputs, and the exact `q` multiplier; do not use either the falsified
    global unprojected R-089 ledger or the cumulative extracted `Z^6` majorant.
-   For rational/linear NEAR, use R-093 to prove a coefficient-unconditioned
-   root-local lower bound for the complete R-079 future/low/paid packet with
-   `r_C` and `J_D` retained. Cancel the predictable base-current heat term,
-   both distinct low objects, and the complete R-063 forest before taking the
-   conditional covariance sum; test the candidate transfer gain `2^(j-4k)`
-   at that coupled level. Do not condition on the same-root coefficient for
+   For rational/linear NEAR, use R-094's proved regular centered-secant and
+   value--heat control-prefix sublemmas inside one coefficient-unconditioned
+   root-local identity for the complete R-079 future/low/paid packet. The
+   factor `2^(j-4k)` is now certified only for positive quadratic Gram
+   curvature; the complete mixed secant uses `2^(j-2k)` and weighted Hardy.
+   Fix `0<theta<1` and prove the reduced-square packet
+   `T_Q^>+T_G^>+(1-theta)c^T Bbar c/2`, including conditional mean debts.
+   Cancel the predictable base-current heat term, both distinct low objects,
+   and the complete R-063 forest inside the same once-only identity before
+   taking the conditional covariance sum. Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower
    triangular source map, or amplify the local sign fixture into a paid

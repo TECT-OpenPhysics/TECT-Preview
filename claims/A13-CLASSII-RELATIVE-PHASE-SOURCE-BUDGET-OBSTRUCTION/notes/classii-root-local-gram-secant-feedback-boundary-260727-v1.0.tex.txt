@@ -1,0 +1,553 @@
+% Title: Root-local Gram secants and the nonduplicating feedback boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; REGULAR CENTERED GRAM SECANT AND CONTROL-PREFIX PAYMENT CLOSED; COMPLETE H_N, REG, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY
+% Ledger: R-094
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-093 reduced the remaining regular one-shot problem to a coefficient-
+unconditioned root-local estimate for the complete R-079 future packet.  It
+suggested the scale $2^{j-4k}$ for a probability root $j$ and a later physical
+control shell $k>j$.  This note determines exactly where that scale is valid,
+proves the resulting centered Gram-secant estimate without assuming selector
+independence, and audits whether it closes the complete packet.
+
+There are four positive conclusions.  First, the literal positive quadratic
+Gram-curvature atom does have the scale $2^{j-4k}$.  Second, the full centered
+Gram secant contains a mixed term of the weaker scale $2^{j-2k}$, but its
+weighted Hardy sum is still form-subcritical: its mixed budget is
+$X^{1/2}Y^{1/6}$ and has Young slack $1/3$.  The proof uses product-space
+$L^2$--$L^6$ interpolation, not a pathwise Bernstein estimate that would ask
+for an unavailable higher selector moment.  Third, the isolated fresh
+derivative channel has budget $X^{1/2}Y^{1/3}$ and slack $1/6$.  Fourth, the
+combined value-innovation plus heat coefficient acting on the accumulated
+control derivative costs only $O(2^{-3j_0}X)$ when completed against a fixed
+fraction of the already retained derivative-feedback square.
+
+The hostile nonduplication audit is decisive.  These estimates do not yet
+embed themselves into the complete R-079 packet.  After the legitimate
+partial-square payment, the coefficient/derivative cross, the Gaussian value
+innovation and heat residual, the R-086 $T_G^>$ coefficient-dominant branch,
+and the R-093 conditional mean debts remain.  The square, covariance trace,
+backward heat, R-063 forest, low term, and paid subtraction must each occur
+once in the missing embedding identity.  Thus R-094 is a genuine analytic
+advance and a sharper boundary, not a proof of $H_N$, REG,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, a measure, or Sector A.  Tier stays T4.
+
+The result is for the regular mutually orthogonal strict-past one-shot class.
+A two-step cancelling revisit shows why its per-shell sixth-moment step cannot
+be summed absolutely for arbitrary temporal revisits.  The complete signed
+endpoint remains the required object there.
+
+\section{Regular hypotheses and budgets}
+
+Work on the normalized product space
+$S=\Omega\times\mathbb T^3$ and write $\|\cdot\|_p$ for $L^p(S)$.
+The probability filtration is $(\mathcal F_j)_{j\ge j_0-1}$.  The fresh
+Gaussian value root is $g_j$, its spatial derivative is $d_j=Dg_j$, and
+\[
+ \mathcal Q_j=d_j\otimes d_j-\Delta\Gamma_j.             \tag{2.1}
+\]
+The accepted fourth-order covariance scaling gives constants independent of
+the terminal cutoff such that
+\[
+ \|d_j\|_6\le \kappa_1 2^{j/2},\qquad
+ \|\mathcal Q_j\|_3\le\kappa_Q2^j,\qquad
+ \operatorname{tr}\Delta\Gamma_j\le\kappa_\Gamma2^j,   \tag{2.2}
+\]
+and the value covariance satisfies
+\[
+ \operatorname{tr}\Sigma_j^{\rm val}\le\kappa_0 2^{-j}.
+                                                                    \tag{2.3}
+\]
+
+Let $M$ be the complete production frame.  Its linear rows are linear and its
+normalized rational row has bounded first derivative by R-092.  Consequently,
+after the common target-value heat if present,
+\[
+ \|M(z+a)-M(z)\|\le L_M|a|,\qquad
+ |M(z)|\le L_M(1+|z|).                                  \tag{2.4}
+\]
+For $B(z)=M(z)Q_{\rm II}M(z)^T$, Gram expansion gives
+\[
+ |B(z+a)-B(z)|
+ \le L_B\{(1+|z|)|a|+|a|^2\}.                          \tag{2.5}
+\]
+
+The regular controls are
+\[
+ a_k=K_kh_k,\qquad a_k\in\mathcal F_{k-1},              \tag{2.6}
+\]
+with mutually orthogonal physical shells and
+\[
+ \|a_k\|_2\le\kappa_K2^{-2k}q_k^{1/2},\qquad
+ \|Da_k\|_2\le\kappa_D2^{-k}q_k^{1/2},\qquad
+ q_k=\mathbb E\|h_k\|_{\mathcal H_k}^2.               \tag{2.7}
+\]
+Put
+\[
+ X=\sum_kq_k,\qquad v_k=\|a_k\|_6,\qquad
+ A_{>j}=\sum_{k>j}a_k.                                  \tag{2.8}
+\]
+The regular Littlewood--Paley square function and the accepted base sixth
+moment give
+\[
+ \sum_kv_k^6\le C_{\rm LP}\{1+Y\},\qquad
+ Y=\mathbb E\|Z_*\|_6^6.                               \tag{2.9}
+\]
+This is the only sixth-moment input below.  No $L^p$ source moment with
+$p>2$ is assumed.
+
+\section{The factor audit: quadratic and mixed scales differ}
+
+% evidence-anchor: theorem-3.1-quadratic-gram-curvature
+\subsection*{Theorem 3.1 (quadratic Gram-curvature atom)}
+
+Let $E_k$ be a frame increment with $\|E_k\|\le L_M|a_k|$ and define
+\[
+ R^{(2)}_{j,k}={1\over2}\mathbb E\int
+ \left\{|Q_{\rm II}^{1/2}E_k^Td_j|^2
+ -(E_kQ_{\rm II}E_k^T):\Delta\Gamma_j\right\},
+ \qquad j<k.                                             \tag{3.1}
+\]
+Then
+\[
+ \boxed{R^{(2)}_{j,k}\ge-C_{\rm curv}2^{j-4k}q_k.}     \tag{3.2}
+\]
+Indeed, retain the first square and bound only the trace by (2.2), (2.4),
+and (2.7).  No independence between $E_k$ and root $j$ is used.  Summing gives
+\[
+ \sum_{j\ge j_0}\sum_{k>j}R^{(2)}_{j,k}
+ \ge-C2^{-3j_0}X.                                      \tag{3.3}
+\]
+The dimensionless triangular kernel has the exact diagnostic
+\[
+ \sum_{j\ge j_0}\sum_{k>j}2^{j-4k}
+ ={8\over105}2^{-3j_0}.                                \tag{3.4}
+\]
+
+The conclusion cannot be promoted to the mixed Gram term.  For
+$g=\sqrt\gamma\,\xi$, $H_2=\xi^2-1$,
+$m_0=1$, and $m_1=1-\varepsilon tH_2$, Gaussian moments give
+\[
+ {1\over2}\mathbb E[(m_1^2-m_0^2)(g^2-\gamma)]
+ =-2\gamma\varepsilon t+4\gamma\varepsilon^2t^2.       \tag{3.5}
+\]
+After adding $\rho t^2$, its minimum is
+\[
+ -{\gamma^2\varepsilon^2\over
+       \rho+4\gamma\varepsilon^2}<0.                  \tag{3.6}
+\]
+The linear secant therefore scales as $2^{j-2k}$; only its post-Young square
+has scale $2^{2j-4k}$.  The latter remains summable, with
+\[
+ \sum_{j\ge j_0}\sum_{k>j}2^{2j-4k}
+ ={4\over45}2^{-2j_0}.                                 \tag{3.7}
+\]
+Equations (3.2) and (3.5) are the factor correction to the R-093 prototype.
+
+\section{The complete centered Gram secant is form-subcritical}
+
+% evidence-anchor: theorem-4.1-centered-gram-secant
+\subsection*{Theorem 4.1 (regular centered Gram-secant bound)}
+
+Let $Z_j=Z_*-A_{>j}$ and define
+\[
+ \mathcal S_{\rm sec}=\sum_{j=j_0}^{J}
+ \left|\mathbb E\int
+  [B(Z_*)-B(Z_j)]:\mathcal Q_j\right|.                  \tag{4.1}
+\]
+Then, uniformly in $J$,
+\[
+ \boxed{
+ \mathcal S_{\rm sec}
+ \le C_{\rm sec}2^{-j_0}X^{1/2}(1+Y)^{1/6}.}           \tag{4.2}
+\]
+Consequently, for all $\eta,\zeta\in(0,1]$,
+\[
+ \boxed{
+ \mathcal S_{\rm sec}\le\eta X+\zeta Y
+ +C_{\eta,\zeta},}                                    \tag{4.3}
+\]
+where one may take
+\[
+ C_{\eta,\zeta}\le C\{1+\eta^{-1}
+       +\eta^{-3/2}\zeta^{-1/2}\}.                    \tag{4.4}
+\]
+
+\paragraph{Proof.}
+By (2.2), (2.5), and Holder on the product space,
+\[
+ \mathcal S_{\rm sec}\le C\sum_j2^j
+ \left\{(1+\|Z_*\|_6)\|A_{>j}\|_2
+             +\|A_{>j}\|_3^2\right\}.                \tag{4.5}
+\]
+For the linear part, Tonelli and (2.7) give
+\[
+ \sum_j2^j\|A_{>j}\|_2
+ \le\sum_k\|a_k\|_2\sum_{j<k}2^j
+ \le C\sum_k2^{-k}q_k^{1/2}
+ \le C2^{-j_0}X^{1/2}.                                 \tag{4.6}
+\]
+
+For the quadratic and cross-shell part, let $b_k=\|a_k\|_3$.  Under the
+change $c_k=2^{k/2}b_k$, the tail map is convolution by
+$2^{-n/2}\mathbf1_{n\ge1}$.  Its $\ell^1$ norm is $1+\sqrt2$.  Therefore
+\[
+ \sum_j2^j\left(\sum_{k>j}b_k\right)^2
+ \le(3+2\sqrt2)\sum_k2^kb_k^2.                         \tag{4.7}
+\]
+The load-bearing interpolation is on $S$, not pathwise:
+\[
+ b_k^2=\|a_k\|_3^2\le\|a_k\|_2\|a_k\|_6.             \tag{4.8}
+\]
+Using (2.7), Holder in the shell index, and (2.9),
+\[
+ \begin{split}
+ \sum_k2^kb_k^2
+ &\le\kappa_K\sum_k2^{-k}q_k^{1/2}v_k\\
+ &\le\kappa_KX^{1/2}
+       \left(\sum_k2^{-2k}v_k^2\right)^{1/2}\\
+ &\le C2^{-j_0}X^{1/2}
+       \left(\sum_kv_k^6\right)^{1/6}\\
+ &\le C2^{-j_0}X^{1/2}(1+Y)^{1/6}.
+ \end{split}                                             \tag{4.9}
+\]
+This proves (4.2).  The mixed power $X^{1/2}Y^{1/6}$ has slack
+$1-1/2-1/6=1/3$, and multifactor Young proves (4.3)--(4.4).
+\hfill$\square$
+
+The theorem is expectation-inside and tolerates arbitrary strict-past
+selectors in the declared regular class.  A spatial Bernstein estimate for
+each selected shell would incorrectly demand a higher probability moment.
+
+\section{Two genuine one-use payments}
+
+% evidence-anchor: lemma-5.1-fresh-derivative-form
+\subsection*{Lemma 5.1 (isolated fresh derivative form)}
+
+For the isolated form
+\[
+ \mathcal T_{\rm fresh}=\sum_{j<k}
+ \left|\mathbb E\int (Dg_j)^TB(Z_*)Da_k\right|,          \tag{5.1}
+\]
+the quadratic growth of the production Gram gives
+$\|B(Z_*)\|_3\le C(1+Y^{1/3})$.  Holder with exponents
+$(6,3,2)$, (2.2), and (2.7) yield
+\[
+ \boxed{
+ \mathcal T_{\rm fresh}
+ \le C2^{-j_0/2}X^{1/2}(1+Y^{1/3}).}                   \tag{5.2}
+\]
+Here $\sum_{j<k}2^{j/2}\le(1+\sqrt2)2^{k/2}$.  Thus
+\[
+ \mathcal T_{\rm fresh}\le\eta X+\zeta Y
+ +C\{1+\eta^{-1}+\eta^{-3}\zeta^{-2}\}.              \tag{5.3}
+\]
+The mixed power has slack $1/6$.  This is a valid analytic form bound; it is
+not yet an identification with all of the adapted R-079 derivative-feedback
+term, whose coefficient is evaluated at $U+A^*$.
+
+% evidence-anchor: theorem-5.2-value-heat-control-prefix
+\subsection*{Theorem 5.2 (combined value--heat control prefix)}
+
+Let $\overline M_j=P_{\Sigma_{j+1:J}}M$ and let $W_{j-1}$ be the predictable
+translated background.  Define
+\[
+ \delta_jM=\overline M_j(W_{j-1}+g_j)
+             -\overline M_{j-1}(W_{j-1}).               \tag{5.4}
+\]
+This is exactly the value innovation plus heat compensator in R-079 (6.8).
+It is conditionally centered.  Gaussian Poincare, the common-coupling
+Lipschitz bound, and (2.3) give
+\[
+ \mathbb E_{j-1}|\delta_jM|^2\le L_M^2\kappa_0 2^{-j}.
+                                                                    \tag{5.5}
+\]
+Let
+\[
+ H_j=D(A^{(j)}-A^0)=\sum_{k\le j}Da_k,\qquad
+ x_j=Q_{\rm II}^{1/2}(\delta_jM)^TH_j.                  \tag{5.6}
+\]
+Then
+\[
+ \sum_j\mathbb E\|x_j\|^2
+ \le C\sum_j2^{-j}\mathbb E\|H_j\|_2^2.              \tag{5.7}
+\]
+Without physical orthogonality, the prefix matrix
+$T_{jk}=2^{-j/2}2^{-k}\mathbf1_{k\le j}$ has
+\[
+ \|T\|_{\rm HS}^2
+ =\sum_{j\ge j_0}\sum_{k=j_0}^j2^{-j-2k}
+ ={16\over7}2^{-3j_0}.                                 \tag{5.8}
+\]
+Hence
+\[
+ \boxed{\sum_j\mathbb E\|x_j\|^2
+ \le C{16\over7}2^{-3j_0}X.}                          \tag{5.9}
+\]
+Mutually orthogonal shells improve the dimensionless constant to $2$.
+
+For any derivative-feedback vector $y_j$ and $0<\theta<1$,
+\[
+ \mathbb E\langle x_j,y_j\rangle
+ +{\theta\over2}\mathbb E\|y_j\|^2
+ \ge-{1\over2\theta}\mathbb E\|x_j\|^2.             \tag{5.10}
+\]
+Thus this prefix uses only a declared fraction $\theta$ of the retained
+feedback square and costs $C\theta^{-1}2^{-3j_0}X$.  The fraction
+$1-\theta$ remains visible for the successor packet.
+
+\section{Exact nonduplication and the surviving packet}
+
+% evidence-anchor: theorem-6.1-exact-nonduplication-split
+\subsection*{Theorem 6.1 (exact square-allocation split)}
+
+In R-079 (5.2), write the future innovation as
+\[
+ i_j=u_j+y_j,                                             \tag{6.1}
+\]
+where $u_j$ is the R-079 future coefficient line and $y_j$ is the future
+derivative-control line.  Let $\delta_j^{\rm D}=P_j-P_{j-1}$ denote the Doob
+difference, distinct from the spatial Gaussian derivative $d_j=Dg_j$, and split
+\[
+ \delta_j^{\rm D}\mathcal J_j=p_j+x_j,                   \tag{6.2}
+\]
+where $x_j$ is (5.6) and $p_j$ contains the remaining fresh-Gaussian,
+Gaussian-background, and heat/current pieces.  Put
+\[
+ \tau_j={1\over2}\mathbb E\int
+   (\mathcal B_* -\mathcal B_j):\Delta\Gamma_j.          \tag{6.3}
+\]
+For every $0<\theta<1$, the future block has the exact identity
+\[
+\boxed{
+\begin{aligned}
+ \mathfrak I_j={}&
+ \left[\mathbb E\langle p_j+x_j,u_j\rangle
+       +{1\over2}\mathbb E\|u_j\|^2-\tau_j\right]\\
+ &+\mathbb E\langle p_j+u_j,y_j\rangle
+       +{1-\theta\over2}\mathbb E\|y_j\|^2\\
+ &+\left[\mathbb E\langle x_j,y_j\rangle
+       +{\theta\over2}\mathbb E\|y_j\|^2\right].
+\end{aligned}}                                           \tag{6.4}
+\]
+It is merely the expansion of R-079 (3.4), but it is the necessary
+nonduplication ledger.  The last line is paid by Theorem 5.2.  The first two
+lines remain one coupled object.  In particular, $\langle u_j,y_j\rangle$,
+the coefficient square, the trace, and the remaining feedback square occur
+exactly once.
+
+This exposes the error in a tempting assembly: Theorem 4.1 cannot consume the
+whole coefficient square and then permit a second completion of the full
+$u_j+y_j$ square.  If $y_j=-u_j$, then
+\[
+ \langle u_j,y_j\rangle+{1\over2}\|y_j\|^2
+ =-{1\over2}\|u_j\|^2,                                 \tag{6.5}
+\]
+so the leftover has no standalone sign.
+
+% evidence-anchor: section-6-surviving-coefficient-dominant-packet
+Under the R-086 spatial decomposition, a conservative sufficient successor
+target, conditional on the missing once-only rootwise embedding, is the
+reduced-square coefficient-dominant packet
+\[
+ \boxed{
+ \mathcal P_{R,\theta}^>
+ =T_Q^>+T_G^>+{1-\theta\over2}c^T\overline B(U+a)c,}     \tag{6.6}
+\]
+where $c=D(A^*-A^0)$ is the R-086 spatial derivative variable and is distinct
+from the R-079 coefficient line $u_j$ in (6.1).
+The target retains the complete Wick trace and R-063 lower-chaos forest.  A bound
+for the full centered secant does not by itself bound $T_Q^>$ after pieces
+known only from below have been subtracted.  More importantly,
+\[
+ T_G^>=\int_0^1(1-t)
+ \sum_r\sum_{\substack{|m-n|\le L_0\\m>r+L_0}}
+ \int\langle\Delta_nG,(\Delta_mK_t)[H_r]\rangle
+ \,dx\,dt                                                \tag{6.7}
+\]
+has a high, adapted, same-root coefficient.  Boundedness is not a multiplier
+theorem for (6.7).  The predictable base-current heat identity also does not
+apply to the terminal current $\mathcal J_*$ when future controls depend on
+root $j$.
+
+Finally, the R-093 one-reveal normal form leaves, in general,
+\[
+ -q_B^T\overline A^{-1}q_B
+ -|\mathbb E_{\mathcal F}\Theta_R(B)^{1/2}z|^2.          \tag{6.8}
+\]
+The centered even-reveal specialization makes these vanish, but a regular
+multistep root has a past background and an adapted coefficient.  These mean
+debts must either be estimated or cancelled in the same missing embedding.
+
+The exact successor is therefore the uniform lower bound
+\[
+ \mathbb E\left[
+ \mathcal P_{R,\theta}^>
+ +\hbox{complete Wick trace and lower-chaos forest}
+ \right]
+ \ge-\eta\mathbb EX-\zeta\mathbb EY-C_{\eta,\zeta,e},   \tag{6.9}
+\]
+for one fixed $0<\theta<1$, together with the rootwise identity connecting
+(6.4) to (6.6), the backward heat, low, and paid terms.  Equivalently, it is
+the reduced-square version of R-092 (10.10) for the full derivative-feedback
+and Jensen packet.
+
+\section{Audit of the R-093 static exponent table}
+
+% evidence-anchor: section-7-bg-critical-row-audit
+The two zero-slack rows displayed in the optional R-093 BG table were
+historical coarse bounds, not surviving exact atoms.  The unshifted
+$A^2DA$ current is paid by R-074/R-075 with
+\[
+ R X^{1/2}Y^{1/3},\qquad s={1\over6},\qquad p_R=6,       \tag{7.1}
+\]
+and the unshifted $A^3DA$ graph term is sharpened by R-076 to
+\[
+ R X^{2/5}Y^{8/15},\qquad s={1\over15},\qquad p_R=15.   \tag{7.2}
+\]
+Thus neither old zero-slack row is the present obstruction.  This does not
+prove the R-093 static criterion: its hypothesis is a complete expectation-
+inside shifted reconstruction.  Equations (6.6)--(6.9), rather than model
+moments, are the current analytic gate.
+
+\section{Revisit and absolute-summation boundary}
+
+% evidence-anchor: section-8-revisit-sixth-moment-no-go
+Let $E\in\mathcal F$ have probability $p$.  Choose a unit source mode
+$e_{\mathcal H}$ for a nonzero smoothing range $K$ and put
+$\phi=Ke_{\mathcal H}\ne0$.  Two later uses of that same range may take
+\[
+ h_1=p^{-1/2}\mathbf1_Ee_{\mathcal H},\quad h_2=-h_1,
+ \qquad
+ a_1=Kh_1=p^{-1/2}\mathbf1_E\phi,\quad a_2=-a_1.         \tag{8.1}
+\]
+Smooth bounded approximations preserve the scaling.  Their source cost is
+\[
+ q_1+q_2
+ =\mathbb E\{\|h_1\|_{\mathcal H}^2+\|h_2\|_{\mathcal H}^2\}=2, \tag{8.2}
+\]
+and the terminal displacement is zero, but
+\[
+ \|a_1\|_6^6+\|a_2\|_6^6
+ =2\|\phi\|_{L^6(\mathbb T^3)}^6p^{-2}\longrightarrow\infty.
+                                                                    \tag{8.3}
+\]
+Therefore the regular estimate (2.9) cannot be applied separately to every
+revisit increment.  This is a no-go for absolute per-revisit secant
+summation, not a counterexample to the complete signed action, in which the
+two increments cancel.
+
+\section{Proof and failure evidence map}
+
+\[
+\begin{array}{c}
+ \text{R-093 root-local prototype}\longrightarrow
+ \boxed{\text{Theorem 3.1: }2^{j-4k}\text{ only for quadratic curvature}}\\[1mm]
+ \downarrow\\[-1mm]
+ \boxed{\text{Theorem 4.1: full centered secant is form-subcritical}}\\[1mm]
+ \downarrow\\[-1mm]
+ \boxed{\text{Theorem 5.2: value--heat control prefix is one-use}}\\[1mm]
+ \downarrow\\[-1mm]
+ \boxed{\text{Theorem 6.1: exact fractional square allocation}}\\[1mm]
+ \downarrow\\[-1mm]
+ \text{open: rootwise embedding + }T_G^>+\text{mean debts}\\[1mm]
+ \downarrow\\[-1mm]
+ H_N\ \longrightarrow\ \mathrm{OVERLAP}_{\rm src}
+ \equiv q=10/9\ {\rm Nelson}.
+\end{array}                                               \tag{9.1}
+\]
+
+The failed branches are retained rather than erased:
+\begin{itemize}
+\item promoting $2^{j-4k}$ to the complete mixed secant fails by (3.5);
+\item reusing the positive feedback square fails by (6.5);
+\item treating the unshifted $X^{1/2}Y^{1/3}$ form as the adapted $T_G^>$
+      multiplier estimate fails because (6.7) has a shifted same-root high
+      coefficient;
+\item termwise revisit sixth-moment summation fails by (8.1)--(8.3);
+\item the two R-093 zero-slack rows are superseded coarse estimates, but their
+      repair does not manufacture the missing shifted reconstruction.
+\end{itemize}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: The centered secant theorem already proves $H_N$.}
+\textbf{UPHELD against that conclusion.}  The theorem estimates (4.1), but
+the rootwise Doob-to-terminal embedding with backward heat, low, paid, trace,
+and forest companions is not proved.  Equation (6.4) displays the remaining
+atoms.
+
+\item \textbf{Objection: The quadratic $2^{j-4k}$ factor was assigned to the
+whole Gram increment.}  \textbf{UPHELD and repaired.}  It belongs only to
+(3.1).  The mixed scalar fixture (3.5) proves that the full secant begins at
+$2^{j-2k}$; Theorem 4.1 pays that weaker factor directly.
+
+\item \textbf{Objection: The $a_k^2$ estimate silently uses a higher moment of
+an adapted selector.}  \textbf{DISMISSED.}  Equation (4.8) is interpolation
+on $\Omega\times\mathbb T^3$, and (4.9) uses only source $L^2$ and the accepted
+terminal sixth moment.  No pathwise Bernstein step appears.
+
+\item \textbf{Objection: Partial completion spends the endpoint square twice.}
+\textbf{DISMISSED for Theorem 5.2, upheld for the naive full assembly.}
+Equation (6.4) labels the fraction $\theta$ used by (5.10) and leaves exactly
+$1-\theta$ in (6.6).  Any later proof must retain that reduced coefficient.
+
+\item \textbf{Objection: The fresh derivative bound controls $T_G^>$.}
+\textbf{UPHELD against that identification.}  Lemma 5.1 is an isolated
+unshifted form.  The shifted adapted coefficient in (6.7) requires a genuine
+expectation-inside multiplier or cancellation theorem.
+
+\item \textbf{Objection: Correcting the zero-slack rows proves Nelson.}
+\textbf{UPHELD against that conclusion.}  Positive arithmetic slack is only
+a budget check.  R-093 requires the full uniform shifted inequality before
+R-087 CORE can be invoked.
+
+\item \textbf{Objection: The revisit example falsifies the full action.}
+\textbf{DISMISSED.}  It falsifies absolute per-increment sixth-moment
+summation.  The terminal shift and the signed outgoing/return contribution
+cancel, so it supplies no negative divergence of the complete action.
+\end{enumerate}
+
+\section{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID:              A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY
+Ledger:                 R-094.
+Claim:                  A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement:      Quadratic curvature has scale 2^(j-4k); the complete
+                        centered Gram secant has mixed scale 2^(j-2k) and
+                        bound C2^-j0 X^1/2(1+Y)^1/6 with slack 1/3. The fresh
+                        derivative slack is 1/6; the value--heat prefix costs
+                        O(theta^-1 2^(-3j0)X) from a declared square fraction.
+Scope:                  Regular orthogonal strict-past one-shot controls;
+                        product L2--L6 interpolation; fixed positive floor.
+Dependencies:           R-063, R-066, R-074, R-076, R-079, R-086, R-092, R-093.
+Evidence grade:         ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:   python codes/foundations/a13_classii_root_local_
+                        gram_secant_feedback_boundary_verify.py
+Expected output:        Manifest-pinned primary, independent, integrated, and
+                        aggregate assertions PASS; exit zero.
+Negative results:       root-factor/square-allocation and BG-row-scope audits;
+                        absolute-revisit-sum no-go (all dated 2026-07-27).
+Falsification gate:     Failure of any dyadic, Hardy, interpolation, Hermite,
+                        prefix, split, revisit, hash, independent, PDF,
+                        public-link, count, or scope assertion.
+Tier before / after:    T4 / T4; no promotion.
+No-overclaim statement: Complete rootwise packet embedding, H_N, REG, and
+                        progressive/revisit control, OVERLAP_src, Nelson,
+                        cutoff/floor removal, a measure, Sector A, T5--T7 open.
+Next required action:   Prove (6.9), including T_G^>, conditional mean debts,
+                        and the once-only R-079/R-086 heat--low--trace--forest
+                        embedding; then assemble OVERLAP_src.
+\end{verbatim}
+\endgroup

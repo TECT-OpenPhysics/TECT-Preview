@@ -985,10 +985,12 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-27), narrowed through R-093; regular
-one-shot `H_C` is closed, while coefficient-unconditioned root-local `H_N`
-and lossless progressive/revisit `H_A` assembly into `OVERLAP_src` remain open
-`A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY`.
+**Status:** OPEN CURRENT CHILD (2026-07-27), narrowed through R-094; regular
+one-shot `H_C` and the centered Gram-secant/value--heat prefix sublemmas are
+closed, while their once-only embedding into coefficient-unconditioned
+root-local `H_N` and lossless progressive/revisit `H_A` assembly into
+`OVERLAP_src` remain open
+`A13-CLASSII-ROOT-LOCAL-GRAM-SECANT-FEEDBACK-BOUNDARY`.
 R-079 proves
 the exact expectation-level full-current and canonical safe-packet identity,
 one spatially weighted Cameron--Martin control square-function use, and the
@@ -1262,6 +1264,19 @@ Gibbs gap forces both physical and fibre entropy gaps to vanish along near
 minimisers. Only an independent uniform fibre reserve is retired; coupled use
 of the actual fibre term remains available.
 
+R-094 proves that the proposed `2^(j-4k)` factor belongs only to the positive
+quadratic Gram-curvature atom. The complete centered mixed secant begins at
+`2^(j-2k)` but is still form-subcritical on the regular one-shot class by
+weighted Hardy and product-space `L2`--`L6` interpolation, with slack `1/3`.
+The isolated fresh derivative form has slack `1/6`, and the combined value--
+heat control prefix is paid from a declared fraction of the retained feedback
+square at cost `O(2^(-3j0)X)`. The exact fractional square ledger leaves the
+adapted `T_G^>`/Jensen branch, coefficient/derivative cross, conditional mean
+debts, and the once-only backward-heat/low/paid/trace/R-063-forest embedding.
+Thus the remaining obstruction is no longer dyadic summability of the
+centered secant; it is the complete reduced-square packet identity and lower
+bound.
+
 Accordingly `H_A` is only the lossless assembly of the complete packet,
 uniformly in cutoff, partition, and revisit, into `OVERLAP_src`, preserving
 R-079 future feedback and R-080 low/revisit cancellation. The uniform
@@ -1282,7 +1297,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-27). The gate was exposed by R-080 and
-sharpened by R-081--R-093
+sharpened by R-081--R-094
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1301,6 +1316,13 @@ open Nelson objective. Complete coefficient-unconditioned `H_N`, R-066
 one-use, and all temporal/low companions therefore remain inside that
 assembly. Once `OVERLAP_src` is proved, R-087 CORE gives `q=10/9` Nelson
 directly.
+
+R-094 additionally rules out extending its regular centered-secant proof by
+absolute per-revisit sixth-moment summation: two equal and opposite same-range
+increments have bounded source cost and zero terminal displacement while the
+sum of their smoothed sixth moments grows proportionally to `p^(-2)`. This is not a counterexample to
+the signed action; it confirms that the complete endpoint must be assembled
+before revisit-uniform estimates are taken.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

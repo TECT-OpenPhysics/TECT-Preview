@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION](#audit-2026-07-27-a13-r093-root-factor-square-allocation) | R-093 root-local `2^(j-4k)` prototype and partial R-079 square completions | the strong factor belongs only to the positive quadratic Gram-curvature atom; the full mixed secant starts at `2^(j-2k)`, and every partial completion must reserve the unused feedback-square fraction for the coupled `T_G^>`/Jensen packet |
+| [AUDIT-2026-07-27-A13-R093-BG-CRITICAL-ROW-SCOPE](#audit-2026-07-27-a13-r093-bg-critical-row-scope) | R-093 optional enhanced-model BG exponent table | its two zero-slack entries were historical coarse bounds: accepted R-074/R-075 and R-076 estimates replace them by `X^(1/2)Y^(1/3)` with slack `1/6` and `X^(2/5)Y^(8/15)` with slack `1/15`; the complete shifted expectation-inside reconstruction remains open |
+| [NG-2026-07-27-A13-ABSOLUTE-REVISIT-SECANT-SUM](#ng-2026-07-27-a13-absolute-revisit-secant-sum) | extension of the regular centered-secant proof by absolute per-revisit sixth-moment summation | two equal and opposite same-range controls have bounded source cost and zero terminal shift while their smoothed increments have summed sixth moments proportional to `p^(-2)`; arbitrary revisits require complete signed endpoint assembly |
 | [AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE](#audit-2026-07-27-r092-augmented-production-covariance) | R-093 append-only chronology metadata | deprecated short alias created when the first R-093 changelog event omitted the `A13` namespace; it resolves only to the canonical `AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE` authority and adds no mathematical result |
 | [AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE](#audit-2026-07-27-a13-r092-augmented-production-covariance) | R-092 augmented perspective one-reveal frontier | the complete unconditional density equals a weighted coefficient/quadratic covariance after both positive squares are retained; a bounded smooth even reveal built from the exact four-row production coefficient makes it strictly negative for every fixed payment, without constituting a paid torus counterexample |
 | [NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING](#ng-2026-07-27-a13-local-perspective-paid-scaling) | amplification of the local production covariance fixture into a paid two-shell counterexample | the exact cutoff-two full action is bounded below by `0.388476791102297 E||v||^2-11.859877653941` for every bounded smooth predictable shell-two source, so amplitude scaling is coercive on that class; only the cutoff-uniform root-local problem remains |
@@ -112,6 +115,75 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-27-a13-r093-root-factor-square-allocation"></a>
+### AUDIT-2026-07-27-A13-R093-ROOT-FACTOR-SQUARE-ALLOCATION -- the strong factor and the positive square have narrower ownership
+
+**Failure mode:** The R-093 scaling diagnostic `2^(j-4k)` was promoted to
+the complete future Gram secant, or a positive feedback square used in the
+centered coefficient estimate was reused to complete the derivative-feedback
+channel.
+
+**Evidence:** R-094 Theorem 3.1 retains the positive quadratic square and
+bounds only its covariance trace, giving `2^(j-4k)`.  The exact Hermite
+fixture instead gives the mixed density
+`-2 gamma epsilon t+4 gamma epsilon^2 t^2`, whose paid minimum is strictly
+negative and whose linear scale is `2^(j-2k)`.  R-094 Theorem 6.1 expands the
+R-079 future block with a parameter `0<theta<1`: only `theta/2` of the
+derivative-feedback square pays the value--heat control prefix, while
+`(1-theta)/2` remains in the coupled R-079 coefficient/derivative block.
+Conditional on the missing once-only embedding, the conservative R-086
+successor retains that reduced endpoint square alongside `T_G^>`.  The
+primary and independent R-094 executables reproduce the dyadic
+sums, Hermite moments, and partial-square identity.
+
+**Consequence:** The complete centered secant remains form-subcritical by a
+different weighted-Hardy argument, but it is not the complete `H_N` packet.
+Any successor must prove a once-only R-079/R-086 embedding and retain the
+reduced positive square, covariance trace, backward heat, low term, paid
+subtraction, and complete R-063 forest.
+
+<a id="audit-2026-07-27-a13-r093-bg-critical-row-scope"></a>
+### AUDIT-2026-07-27-A13-R093-BG-CRITICAL-ROW-SCOPE -- the zero-slack rows were superseded coarse estimates
+
+**Failure mode:** The two zero-slack rows in R-093 Section 9 were treated as
+surviving exact atoms and hence as the present obstruction to the static
+enhanced-model criterion.
+
+**Evidence:** The row labelled coarse critical current is the unshifted
+`A^2 DA` form already sharpened by R-074/R-075 to
+`R X^(1/2)Y^(1/3)`, with slack `1/6` and sixth model moment.  The row labelled
+coarse graph term is the unshifted `A^3 DA` form sharpened by R-076 to
+`R X^(2/5)Y^(8/15)`, with slack `1/15` and fifteenth moment.  R-094 Section 7
+and two non-importing executables recompute both exponent ledgers exactly.
+
+**Consequence:** Polynomial model moments are not the current bottleneck.
+This audit does not prove Nelson: R-093 still requires a cutoff-uniform,
+expectation-inside reconstruction of the complete shifted signed packet, and
+R-094 leaves precisely the adapted `T_G^>`, conditional mean debts, and
+once-only packet embedding open.
+
+<a id="ng-2026-07-27-a13-absolute-revisit-secant-sum"></a>
+### NG-2026-07-27-A13-ABSOLUTE-REVISIT-SECANT-SUM -- terminal cancellation does not control per-increment sixth moments
+
+**Failure mode:** The regular one-shot centered Gram-secant theorem was
+extended to arbitrary temporal revisits by applying its Littlewood--Paley
+sixth-moment estimate separately to every revisit increment and summing
+absolute values.
+
+**Evidence:** If `P(E)=p`, choose a unit source mode `e_H` with nonzero image
+`phi=K e_H` for the revisited smoothing range.  Take
+`h_1=p^(-1/2)1_E e_H`, `h_2=-h_1`, and `a_i=K h_i`, using smooth bounded
+approximations if required.  The source cost `q_1+q_2` is exactly `2`, the
+terminal displacement is zero, but the summed increment sixth moments equal
+`2||phi||_6^6 p^(-2)` and diverge as `p` tends to zero.  Both R-094
+executables reproduce the source/image distinction on finite rare-event
+arrays.
+
+**Consequence:** This refutes only absolute per-revisit secant summation; it
+is not a counterexample to the complete action because the outgoing and
+return increments cancel in the signed endpoint.  Arbitrary progressive
+revisits remain inside the exact `H_A`/`OVERLAP_src` assembly gate.
 
 <a id="audit-2026-07-27-r092-augmented-production-covariance"></a>
 ### AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE -- deprecated short chronology alias
