@@ -45,6 +45,10 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY | total thermodynamic integration is the endpoint target |  |
+| NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY | fixed pointwise sextic and Cameron--Martin payments cannot d |  |
+| NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION | exact production 1:2 merge defeats a universal bounded input |  |
+| AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION | corrected stabilized coefficient and physical-radius variabl |  |
 | NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION | labelled rational owners do not descend to the subdivision q |  |
 | NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY | PSD and sextic coercivity do not force A9 monotonicity |  |
 | NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET | the all-finite-entropy pointwise A9 bracket forces a noninte |  |

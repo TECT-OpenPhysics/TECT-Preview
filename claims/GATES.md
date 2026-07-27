@@ -2,7 +2,7 @@
 
 Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
-exist here. Last updated: 2026-07-25.
+exist here. Last updated: 2026-07-28.
 
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
@@ -1356,6 +1356,18 @@ critical-Young obstruction and the physical cross-mode failure of the
 artificial one-pair tensorization, the unresolved gate remains the uniform
 complete source action `=OVERLAP_src`.
 
+R-106 fixes the next analytic boundary. The actual Gibbs endpoint likelihood,
+both KL orientations, and thermodynamic-integration identity are exact, but
+the total time integral alone is the endpoint gap and supplies no independent
+root-local estimate. A constant production ray rules out pointwise endpoint-
+likelihood coercivity, while the exact same-root `1:2` production merge rules
+out a universal bounded raw input-mode leaf correction and its leafwise sextic
+repair. R-082's complete coherent output-frequency square survives as a legal
+candidate only after the nonlinear current is fully assembled; no current
+authority bounds that packet or makes it unique. The equivalent direct
+complete source-action route remains live, and uniform `OVERLAP_src` remains
+the unresolved gate.
+
 ### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
 
 **Statement:** Uniformly in the terminal cutoff, prove a production-weighted
@@ -1393,10 +1405,11 @@ to identify the same Boue--Dupuis infimum as on all finite-energy progressive
 controls. A stronger direct packetwise all-control or all-tilted-law theorem
 is admissible but is not required for the Nelson application.
 
-**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; R-104 FIXED-CHART ASSEMBLY AND
-R-105 COMMON-ROOT REPRESENTATION AUDIT COMPLETE; UNIFORM `OVERLAP_src`/NELSON
-INEQUALITY OPEN (reviewed 2026-07-28 after R-105). The gate was exposed
-by R-080 and sharpened by R-081--R-105
+**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; R-104 FIXED-CHART ASSEMBLY,
+R-105 COMMON-ROOT REPRESENTATION AUDIT, AND R-106 GIBBS-ENDPOINT/PRODUCTION-
+MERGE BOUNDARY COMPLETE; UNIFORM `OVERLAP_src`/NELSON INEQUALITY OPEN
+(reviewed 2026-07-28 after R-106). The gate was exposed by R-080 and sharpened
+by R-081--R-106
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1448,6 +1461,20 @@ cross-mode resonance prevents physical tensorization. None of these is a
 Gibbs-path or Nelson counterexample. The remaining analytic alternatives are
 a complete signed same-root cross-mode/forest packet or a Gibbs-specific/
 time-integrated signed A9 cancellation.
+
+R-106 makes the actual Gibbs alternative exact at the endpoint: its
+log-likelihood, forward/reverse KL formulae, and thermodynamic integral are
+proved. The integrated identity is circular as a closure mechanism without an
+independent local estimate. Pointwise endpoint-likelihood coercivity fails on
+a Gaussian-null constant production ray, and the exact production radial
+Fierz law plus a same-root `1:2` packet disproves bounded raw input-leaf merge
+tensorization and the leafwise sextic repair. These are method no-gos, not a
+determinant, complete-action, Gibbs-integral, or Nelson counterexample. The
+prioritized next coordinate is the R-082 complete coherent output-frequency
+square with heat, covariance trace, mixed baseline, R-063 forest, and one
+parent/root sextic kept together. That packet has no proved root-local lower
+bound, is not asserted unique, and the direct complete source-action route
+remains equally admissible.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-106](#r-106) | Gibbs endpoint likelihood and exact production radial merge boundary | Scoped T4 analytic/exact/executed boundary: the actual finite-cutoff Gibbs endpoints have exact likelihood, dual relative-entropy, variational, and thermodynamic-integration identities. The total A9 time integral is exactly the unknown endpoint free-energy difference and supplies no estimate by itself. A constant active-doublet ray rules out fixed pointwise likelihood domination by sextic plus Cameron--Martin payments without refuting the Gibbs integral. The exact production radial Fierz coefficient yields a same-root `1:2` input merge defect `<=-c lambda^4+O(lambda^2)` and negative leafwise sextic merge, retiring universal bounded raw input-leaf reassembly. R-082's complete coherent output-frequency square remains a legal candidate coordinate only after the nonlinear current is fully assembled with heat, trace, baseline, R-063 forest, and one parent/root sextic. No bound on that packet is proved; both actual-Gibbs/time-integrated and direct complete source-action formulations remain open, as do `OVERLAP_src`, Nelson, removals, a measure, and Sector A |
 | [R-105](#r-105) | Cartan endpoint quotient, rational subdivision boundary, and A9 route boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete common-root value-plus-heat Cartan edges telescope before the expectation-inside grouped square, so representation-preserving subdivisions have one endpoint quotient and no edge multiplicity. On the normalized active production fibre `c1=e=Gamma0=1`, the historical rational `F_6.5` and fixed-chart `K_R` change sign under an exact subdivision, while the complete R-101 endpoint remains `1600/81` because its three labelled defects cancel; general parameters supply one common positive factor. Generic A9 monotonicity, the registered pathwise/absolute critical-Young extraction, and the all-law pointwise relative bracket fail. The last failure is production-specific at one fixed cutoff and forces `b(t)>=3/t`, but it is not a Gibbs-path or Nelson counterexample. An exact determinant bound survives only in an artificial scalar quadratic one-pair mode-diagonal model; a sign-indefinite two-mode cross-mode resonance blocks tensorization. The remaining theorem is the uniform complete source action, equivalently the full signed `OVERLAP_src`/Nelson target, through a complete signed packet or a Gibbs-specific/time-integrated A9 argument. Nelson, removals, a measure, and Sector A remain open |
 | [R-104](#r-104) | Fixed-chart endpoint-owner assembly and Douglas-slack boundary | Scoped T4 analytic/exact/executed algebraic identity and method boundary: every finite-cutoff bounded smooth cylindrical-simple progressive control has a temporally faithful strict-triangular source representation with the same terminal displacement. On each fixed chart, the exact R-079/R-081/R-091 endpoint reconstruction followed by the exact R-083 and R-100--R-102 algebra has zero endpoint-owner defect; R-103 supplies the seven-NEAR/eight-REG owner nomenclature and incidence template, not progressive visitwise estimates. A representation-preserving subdivision preserves only the recombined endpoint, not individual Doob or owner summands. The physical action equals the source action plus the nonnegative Douglas slack `(9/20) E[int ||u_t||^2 dt-sum_k ||h_k||^2]`. Predictable fresh-root-independent heat may be disintegrated, while an exact same-root PSD fixture proves that no automatic extension to arbitrary anticipative heat exists. This proves no uniform `OVERLAP_src` lower bound, Nelson estimate, removals, measure, or Sector A |
 | [R-103](#r-103) | Regular complete-packet ownership and H_N/REG closure | Scoped T4 analytic/exact/executed regular closure: the exact R-079 endpoint, R-083 FAR/NEAR and row partitions, R-100 complete-owner row additivity, and R-101 three-owner rational split form one disjoint expectation-level owner partition. R-080/R-063 retain the fixed-low raw-Wick difference inside the two low objects; only the R-100/R-101 future reveal is a separate raw-Wick residual. R-084 owns all complete linear rows; only R-099 current families three through five enter the unshifted rational owner; R-102 owns the shifted current while leaving its terminal square reserved; and one signed R-078 paid difference is bounded under the fixed R-096 collar. The separate R-086 Q orientations and `T_G^<=` charge, provisional raw-Q, base-cubic, earlier shifted-current, second-secant, appended-forest, and extra q/r/Schur charges have multiplicity zero. Seven modules close complete regular H_N and eight modules close REG. The conservative allocation `eta*=1/440`, `zeta*=3/100` spends `1/3080`, `3/700` per H_N module and `1/3520`, `3/800` per REG module, leaving action reserves `197/440`, `3/25`. This does not prove the stronger naked posterior bracket, standalone R-085 (4.11), old (6.5), progressive/revisit `H_A`, `OVERLAP_src`, Nelson, removals, a measure, or Sector A |
@@ -125,6 +126,72 @@ policy in `governance/development-history.md`.
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
 
+<a id="r-106"></a>
+### R-106 -- Gibbs endpoint likelihood and exact production radial merge boundary
+
+**Result ID.**
+`A13-CLASSII-GIBBS-ENDPOINT-PRODUCTION-MERGE-BOUNDARY`.
+
+**Gibbs endpoint identities.** With `q=10/9`, the self-coupled and independent
+endpoints have exact log likelihood
+
+`L_J=(1/2)log det(I+qT_J)-(q/2)x^T T_J x`.
+
+Hence
+
+`Phi_0-Phi_1=E_(nu_0)L_J-H(nu_0|nu_1)
+             =E_(nu_1)L_J+H(nu_1|nu_0)`,
+
+and the entropy-compensated variational supremum is attained at `nu_0`. The
+exact thermodynamic integral is `(q/2)int E_(nu_t)B_t dt=Phi_1-Phi_0`; without
+an independent root-local bound this is the endpoint target, not a proof.
+
+**Pointwise and merge boundaries.** Covariance ellipticity and the exact
+positive production radial eigenvalue give endpoint likelihood at least
+`cA^2N` on a constant active-doublet ray. With `A=sigma N^(1/4)` and small
+fixed `sigma`, no fixed pointwise sextic plus Cameron--Martin payment dominates
+it. The field is Gaussian-null, so the Gibbs integral is not refuted. On the
+exact production radial fibre,
+
+`B(fu)=f^2 B_inf(u)+delta_epsilon(f)u tensor u`,
+`B_inf(u)u=4au`, and `0<=delta_epsilon<=epsilon(8b+c)`.
+
+For the same-root `1:2` packet, the raw covariance-normal merge obeys
+
+`Delta_lambda<=-(a|k|^2r^2/2)lambda^4
+               +(K_epsilon|k|^2(r^2+4)/2)lambda^2
+               +K_epsilon g_(Gamma,u)`,
+
+and tends to negative infinity. Its leafwise sextic merge is exactly
+`-15r^2(9r^2+2)/32`. Thus a universal bounded input-leaf correction and its
+leafwise sextic repair fail; this is not a blanket determinant or complete-
+action no-go.
+
+**Surviving candidate coordinate.** R-082 supplies a nonnegative Parseval
+square only after all input convolutions reaching each output frequency are
+coherently summed. A legal candidate packet therefore retains the complete
+output current, heat lift, covariance trace, mixed baseline, R-063 forest, and
+one parent/root sextic. No current authority bounds this packet. The
+actual-Gibbs/time-integrated and equivalent direct complete source-action
+formulations both remain live.
+
+**Evidence.** The proof note
+`classii-gibbs-endpoint-production-merge-boundary-260728-v1.0`, its eight-page
+PDF, primary symbolic and independent standard-library exact certificates,
+integrated verifier, manifest, four negative/audit authorities, and
+`EXP-000270--EXP-000275`. The pinned contract is primary `46/46`, independent
+`59/59`, integrated `337/337`, and aggregate `442/442` PASS. The final PDF
+passes form, zero-overfull, extraction, and all-page Poppler visual QA. R-105
+is separately reissued v1.1 with `u_6=3L^3/64` and physical radius `N`; its
+ratio `3/t`, verdicts, and tier are unchanged.
+
+**Boundary.** R-106 proves no root-local coherent-output or Gibbs lower bound,
+uniform `OVERLAP_src`, Nelson estimate, cutoff/floor removal, interacting
+measure, Sector-A closure, or T5--T7 promotion. It does not exclude the direct
+complete source-action route. Tier remains T4.
+
+---
+
 <a id="r-105"></a>
 ### R-105 -- Cartan endpoint quotient, rational subdivision boundary, and A9 route boundary
 
@@ -176,13 +243,15 @@ costs. A two-mode cross-mode resonance `k^2 r^2 u(6A+5u)/4` blocks
 tensorization to the physical field.
 
 **Evidence.** The proof note
-`classii-cartan-rational-subdivision-smart-path-boundary-260728-v1.0`, its
-PDF, primary symbolic and independent standard-library rational/Fourier
+`classii-cartan-rational-subdivision-smart-path-boundary-260728-260728-v1.1`,
+its PDF, primary symbolic and independent standard-library rational/Fourier
 certificates, integrated verifier, manifest, five negative authorities, and
-`EXP-000263--EXP-000269`. The pinned contract is primary `111/111`,
-independent `111/111`, integrated `416/416`, and aggregate `638/638` PASS. The
-final PDF passes form, zero-overfull, extraction,
-and all-page Poppler visual QA.
+`EXP-000263--EXP-000269`. The immutable v1.1 reissue corrects only the
+top-shell coefficient to `u_6=3L^3/64` and the physical cutoff notation to
+radius `N=2^J`; the ratio `3/t`, route verdicts, and tier are unchanged. The
+correction run contract is primary `111/111`, independent `111/111`,
+integrated `416/416`, and aggregate `638/638` PASS. The final PDF passes form,
+zero-overfull, extraction, and all-page Poppler visual QA.
 
 **Boundary.** R-105 proves no distinct-root Cartan estimate, visitwise
 rational estimate, Gibbs-specific or time-integrated A9 bracket, uniform

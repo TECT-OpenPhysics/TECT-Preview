@@ -1,0 +1,610 @@
+% =============================================================================
+% Title: Gibbs endpoint likelihood and exact production radial merge boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED BOUNDARY; NELSON AND SECTOR A OPEN
+% Result: A13-CLASSII-GIBBS-ENDPOINT-PRODUCTION-MERGE-BOUNDARY
+% Ledger: R-106
+% v1.0 (2026-07-28): exact Gibbs endpoint/KL boundary, pointwise-likelihood
+% no-go, production 1:2 merge no-go, and coherent-output candidate coordinate.
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\dd}{\,\mathrm d}
+
+\section{Purpose and scope}
+
+R-105 left two possible continuations of the exact remaining
+$q=10/9$ Nelson problem: an estimate along the actual Gibbs smart path, or a
+complete signed same-root cross-mode/forest packet.  This note attacks both
+routes before introducing another owner decomposition.
+
+The outcome is a boundary theorem with four parts.
+\begin{enumerate}
+\item The actual Gibbs path has an exact endpoint likelihood and relative-
+      entropy representation.  Its total time integral is precisely the
+      unknown self-coupled versus decoupled free-energy difference.  Thus
+      thermodynamic integration alone is an identity, not an estimate.
+\item At a constant active-doublet field the endpoint likelihood has a lower
+      bound of order $A^2N$, where $N$ is the physical sharp-cube Fourier
+      radius.  Taking
+      $A=\sigma N^{1/4}$ defeats every fixed pointwise sextic plus
+      Cameron--Martin payment.  Entropy or full Gaussian integration cannot
+      be discarded.
+\item On an exact production radial fibre, a $1{:}2$ same-root Fourier
+      inclusion--exclusion has merge defect $-c\lambda^4+O(\lambda^2)$.
+      Hence a universal bounded inclusion--exclusion input-leaf correction of
+      the form (6.11) is impossible.  A leafwise sextic split is not
+      superadditive either.
+\item A surviving candidate square coordinate is the coherent
+      \emph{output}-frequency
+      current obtained after the complete nonlinear production current is
+      assembled.  It must remain with its heat lift, covariance trace, mixed
+      baseline, R-063 forest, and one parent/root sextic term.
+\end{enumerate}
+
+The note also corrects two R-105 notation defects.  The stabilising top-shell
+coefficient is $3L^3/64$, not the coefficient inherited from A9's original
+physical potential, and the linearly divergent sharp-cube variable is the
+physical radius $N$, not a dyadic index $J$.  Neither correction changes the
+R-105 ratio $3/t$, route verdicts, or tier.
+
+All statements are finite-cutoff and fixed-positive-floor.  The production
+merge theorem is deterministic and therefore rules out only a bounded
+pointwise input-leaf reconstruction.  It is not a counterexample to the
+Gaussian/Gibbs integral, $\mathrm{OVERLAP}_{\rm src}$, Nelson, cutoff or floor
+removal, a measure theorem, or Sector-A closure.  Tier stays T4.
+
+\section{Exact Gibbs path and endpoint likelihood}
+
+Fix a finite cutoff $J$ and write $q=10/9$.  Throughout this note the
+R-093 stabilized potential and energy are
+\[
+ U_J(\phi):={3\over20}\|\phi\|_6^6,\qquad
+ G_J(x):=U_J(K_Jx)+{1\over2}\{x^TT_J(x)x-\Tr T_J(x)\}. \tag{2.0}
+\]
+Let $T_J(x)\succeq0$ be the self-coupled coefficient operator and put
+\[
+ z_t=\sqrt{1-t}\,x+\sqrt t\,y,
+ \qquad 0\le t\le1,                                  \tag{2.1}
+\]
+for independent standard Gaussian sources $x,y$.  The lifted Gibbs law is
+\[
+ \dd\widehat\nu_{J,t}(x,y)
+ ={1\over Z_{J,t}}\exp\left[-qU_J(K_Jx)
+ -{q\over2}\{z_t^TT_J(x)z_t-\Tr T_J(x)\}\right]
+ \dd\gamma_J(x)\dd\gamma_J(y).                     \tag{2.2}
+\]
+Integrating $y$ gives A9's marginal
+\[
+ \dd\nu_{J,t}=e^{W_{J,t}-\Phi_{J,t}}\dd\gamma_J,
+ \qquad Z_{J,t}=\E_{\gamma_J}e^{W_{J,t}},
+ \qquad\Phi_{J,t}=\log Z_{J,t}.                     \tag{2.3}
+\]
+The endpoints are
+\[
+ W_{J,0}=-qU_J+{q\over2}\{\Tr T_J-x^TT_Jx\},       \tag{2.4}
+\]
+\[
+ W_{J,1}=-qU_J-{1\over2}\log\det{}_2(\Id+qT_J)
+ =-qU_J+{q\over2}\Tr T_J
+  -{1\over2}\log\det(\Id+qT_J).                   \tag{2.5}
+\]
+Thus $t=0$ is the self-coupled endpoint and $t=1$ is the controlled A8
+independent-carrier endpoint.
+
+% evidence-anchor: theorem-2.1-gibbs-endpoint-likelihood
+\subsection*{Theorem 2.1 (exact endpoint likelihood and entropy identities)}
+
+Define
+\[
+ \boxed{
+ \mathcal L_J(x):=W_{J,0}(x)-W_{J,1}(x)
+ ={1\over2}\log\det(\Id+qT_J(x))
+  -{q\over2}x^TT_J(x)x.}                              \tag{2.6}
+\]
+The potential and the full linear trace cancel exactly.  Moreover
+\[
+ {\dd\nu_{J,0}\over\dd\nu_{J,1}}
+ =\exp\{\mathcal L_J-(\Phi_{J,0}-\Phi_{J,1})\},      \tag{2.7}
+\]
+and therefore
+\[
+ \boxed{
+ \Phi_{J,0}-\Phi_{J,1}
+ =\E_{\nu_{J,0}}\mathcal L_J
+   -H(\nu_{J,0}\mid\nu_{J,1})}                      \tag{2.8}
+\]
+as well as
+\[
+ \boxed{
+ \Phi_{J,0}-\Phi_{J,1}
+ =\E_{\nu_{J,1}}\mathcal L_J
+   +H(\nu_{J,1}\mid\nu_{J,0}).}                     \tag{2.9}
+\]
+More generally the Gibbs variational formula gives
+\[
+ \boxed{
+ \sup_\nu\{\E_\nu\mathcal L_J-H(\nu\mid\nu_{J,1})\}
+ =\log\E_{\nu_{J,1}}e^{\mathcal L_J}
+ =\Phi_{J,0}-\Phi_{J,1},}                            \tag{2.10}
+\]
+and the optimiser is $\nu_{J,0}$.
+
+\emph{Proof.}
+Subtract (2.5) from (2.4) to obtain (2.6).  Dividing the two normalized
+densities in (2.3) gives (2.7).  Integrating its logarithm first against
+$\nu_{J,0}$ and then against $\nu_{J,1}$ proves (2.8)--(2.9).  Exponentiating
+(2.7) gives $Z_{J,0}/Z_{J,1}=\E_{\nu_{J,1}}e^{\mathcal L_J}$, and the Gibbs
+variational formula proves (2.10). \hfill$\square$
+
+The signs in (2.8)--(2.9) are load-bearing.  Forward entropy has a minus sign
+but is taken under the unknown self-coupled Gibbs law.  Reverse entropy is
+available from the controlled endpoint only with a plus sign and hence does
+not upper-bound the desired free energy.
+
+% evidence-anchor: proposition-3.1-total-a9-time-integration-boundary
+\section{Why total time integration is not a new estimate}
+
+Let $\mathfrak B_{J,t}$ denote the complete A9 bracket from A9-(3.8).  At
+every finite cutoff ordinary differentiation gives
+\[
+ \Phi'_{J,t}={q\over2}\E_{\nu_{J,t}}\mathfrak B_{J,t}. \tag{3.1}
+\]
+Consequently
+\[
+ {q\over2}\int_0^1\E_{\nu_{J,t}}\mathfrak B_{J,t}\dd t
+ =\Phi_{J,1}-\Phi_{J,0}.                              \tag{3.2}
+\]
+Equation (3.2) is exact thermodynamic integration.  It does not supply a
+lower bound for its right side.
+
+The independent endpoint is bounded on both sides uniformly in the cutoff.
+A8 gives the upper bound.  Since $T_J\succeq0$ implies
+$-\frac12\log\det_2(\Id+qT_J)\ge0$, Jensen gives
+\[
+ Z_{J,1}\ge\E e^{-qU_J}\ge e^{-q\E U_J},             \tag{3.3}
+\]
+and the regulated point covariance makes $\sup_J\E U_J<\infty$.  Therefore a
+uniform lower bound for the integral in (3.2) is equivalent, up to this
+already controlled endpoint, to the missing upper bound for $\Phi_{J,0}$.
+
+The same boundary appears in R-093 source coordinates.  There
+$\nu_{J,0}=\nu_J^*$ and, for a temporally faithful source chart $h$ with
+fibre entropy $\Phi_h$,
+\[
+ q\mathcal A_J(h)
+ =-\Phi_{J,1}
+  +H(\nu_h\mid\nu_{J,1})
+  -\E_{\nu_h}\mathcal L_J+\Phi_h.                    \tag{3.4}
+\]
+Taking the directed-union infimum of the last three terms gives exactly
+$\Phi_{J,1}-\Phi_{J,0}$.  R-093 near minimisers make the excess
+$H(\nu_h\mid\nu_{J,0})+\Phi_h$ tend to zero.  This is the only nonnegative
+excess over $-\Phi_{J,0}$.  The term $H(\nu_h\mid\nu_{J,1})$ is not an
+independent reserve because (3.4) pairs it exactly with
+$-\E_{\nu_h}\mathcal L_J$.
+
+This fires the narrow route verdict
+\texttt{NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY}: reporting
+(3.2), (2.10), or (3.4) as an estimate without a separately proved root-local
+production lower bound is circular.  A Gibbs-only \emph{local} differential
+estimate or a root-summed signed estimate remains open.
+
+% evidence-anchor: proposition-4.1-pointwise-endpoint-likelihood-coercivity-nogo
+\section{Pointwise endpoint-likelihood coercivity fails}
+
+Let $Q_N=\{n\in\mathbb Z^3:|n|_\infty\le N\}$ be an admitted common
+sharp-cube cutoff.  The letter $N$ here is the physical Fourier radius; in a
+dyadic convention $N=2^J$.  Let $u$ be a real active-doublet unit vector and
+choose the constant physical configuration
+\[
+ K_Nx_A=Au.                                            \tag{4.1}
+\]
+Then $DK_Nx_A=0$, hence
+\[
+ x_A^TT_N(x_A)x_A=0.                                  \tag{4.2}
+\]
+The accepted two-sided production covariance ellipticity gives, on every
+outer-shell mode $N/2\le|n|_\infty\le N$,
+\[
+ \widehat C_N(k_n)\succeq c_C\langle k_n\rangle^{-4}\Id. \tag{4.3}
+\]
+The exact production radial formula proved again in Section 5 gives an
+active eigenvalue at least $4aA^2$.  Since $T_N$ is Fourier block diagonal at
+the constant field, every outer block has an eigenvalue at least
+$c_1A^2/N^2$.  There are at least $c_{\rm sh}N^3$ retained real degrees of
+freedom for a fixed $c_{\rm sh}>0$, and for
+$A^2/N^2$ sufficiently small, $\log(1+s)\ge s/2$ gives
+\[
+ \log\det(\Id+qT_N(x_A))\ge c_2A^2N.                 \tag{4.4}
+\]
+Equations (2.6), (4.2), and (4.4) imply
+\[
+ \mathcal L_N(x_A)\ge c_3A^2N.                       \tag{4.5}
+\]
+
+The configuration $x_A$ uses only the zero mode.  Since the admitted
+covariance has $\widehat C(0)>0$, its Cameron--Martin norm obeys
+$\|x_A\|^2=c_{\rm CM}A^2$ with $c_{\rm CM}$ independent of $N$.
+Take $A=\sigma N^{1/4}$.  For any fixed $\zeta,\eta\ge0$,
+\[
+ \mathcal L_N(x_A)-\zeta\|Au\|_6^6-\eta\|x_A\|^2
+ \ge N^{3/2}\{c_3\sigma^2-\zeta L^3\sigma^6\}
+      -O_\eta(N^{1/2}).                               \tag{4.6}
+\]
+Choosing $\sigma>0$ sufficiently small makes (4.6) tend to $+\infty$.
+Therefore no cutoff-uniform pointwise upper bound of the likelihood by any
+fixed sextic plus Cameron--Martin payment exists.
+
+This fires
+\texttt{NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY}.  The
+constant field is a Gaussian-null configuration.  Suppressing all nonconstant
+modes has an entropic cost invisible in a pointwise inequality, so (4.6) is
+not a Gibbs or Nelson counterexample.
+
+\section{Exact production radial coefficient}
+
+Use the pinned fixed floor $\epsilon=10^{-12}$ and
+\[
+ P=4+10^{-12},\qquad
+ a={9\over500P},\quad b={3\over400P},\quad
+ c={3\over320P},\quad d=a+2b+c.                       \tag{5.1}
+\]
+Let $E_Z$ be the active four-real doublet projector, let $J$ be its phase
+rotation, and fix a real active-doublet unit vector $u$.  On $X=fu$, put
+$y=f^2$ and $R=y+\epsilon$.  The accepted A13 Fierz formula gives
+\[
+ B(fu)=yB_\infty(u)+\delta_\epsilon(f)u\otimes u,      \tag{5.2}
+\]
+\[
+ B_\infty(u)=4d(E_Z-Ju\otimes Ju)-(8b+4c)u\otimes u, \tag{5.3}
+\]
+\[
+ \delta_\epsilon(f)
+ ={8b\epsilon y\over y+\epsilon}
+  +{4c\epsilon^2y\over(y+\epsilon)^2}.               \tag{5.4}
+\]
+In particular
+\[
+ B_\infty(u)u=4au,\qquad
+ 0\le\delta_\epsilon(f)\le K_\epsilon,\qquad
+ K_\epsilon:=\epsilon(8b+c).                          \tag{5.5}
+\]
+
+\emph{Proof.}
+The radial Fierz identities are
+\[
+ \mathcal P=4y\{E_Z-(Ju)\otimes(Ju)\},\quad
+ Z\otimes X+X\otimes Z=2y\,u\otimes u,\quad
+ X\otimes X=y\,u\otimes u.                         \tag{5.6}
+\]
+Substitution and collection of the zero-floor part gives (5.2)--(5.4).
+Since $4d-(8b+4c)=4a$, (5.5)'s eigenvalue follows.  Finally
+$y/(y+\epsilon)\le1$ and
+$4\epsilon y\le(y+\epsilon)^2$ prove the upper bound. \hfill$\square$
+
+There is an independent check from the R-082 global square.  With
+\[
+ c_0={3\over250P},\qquad c_1={243\over8000P},\qquad
+ \alpha={5\over9},                                    \tag{5.7}
+\]
+its radial eigenvalue is
+\[
+ 4y\left[c_0+c_1\left(1-\alpha{y\over y+\epsilon}\right)^2\right], \tag{5.8}
+\]
+and the exact identity
+\[
+ c_0+c_1(1-\alpha t)^2
+ =a+2b(1-t)+c(1-t)^2                                  \tag{5.9}
+\]
+reproduces (5.2).
+
+\section{The production $1{:}2$ merge obstruction}
+
+Let $k$ and $2k$ both lie inside one fixed cutoff, put
+$\theta=k\cdot x$, and use normalized torus average $\langle\cdot\rangle$.
+For fixed positive-semidefinite derivative covariance matrices $\Gamma_i$,
+define
+\[
+ V_\Gamma(X)={1\over2}\left\langle
+ \sum_i(\partial_iX)^TB(X)\partial_iX
+ -\sum_iB(X):\Gamma_i\right\rangle,                  \tag{6.1}
+\]
+\[
+ g_{\Gamma,u}:=\sum_i u^T\Gamma_i u<\infty.           \tag{6.2}
+\]
+For fixed $r\ne0$ set
+\[
+ F=1+r\cos\theta-\cos2\theta,\quad
+ F_1=1+r\cos\theta,\quad
+ F_2=1-\cos2\theta,\quad F_0=1.                     \tag{6.3}
+\]
+The inclusion--exclusion merge defect is
+\[
+ \Delta_\lambda
+ :=V_\Gamma(\lambda Fu)-V_\Gamma(\lambda F_1u)
+   -V_\Gamma(\lambda F_2u)+V_\Gamma(\lambda F_0u).   \tag{6.4}
+\]
+
+% evidence-anchor: theorem-6.1-production-radial-merge-nogo
+\subsection*{Theorem 6.1 (exact production radial merge boundary)}
+
+For every $\lambda>0$,
+\[
+ \boxed{
+ \Delta_\lambda\le
+ -{a|k|^2r^2\over2}\lambda^4
+ +{K_\epsilon|k|^2(r^2+4)\over2}\lambda^2
+ +K_\epsilon g_{\Gamma,u}.}                           \tag{6.5}
+\]
+In particular $\Delta_\lambda\to-\infty$ as
+$\lambda\to\infty$.  More explicitly, if
+\[
+ A={a|k|^2r^2\over2},\quad
+ B={K_\epsilon|k|^2(r^2+4)\over2},\quad
+ C=K_\epsilon g_{\Gamma,u},                           \tag{6.6}
+\]
+then $\Delta_\lambda<-M$ whenever
+\[
+ \lambda^2>{B+\sqrt{B^2+4A(C+M)}\over2A}.             \tag{6.7}
+\]
+
+\emph{Proof.}
+Exact trigonometric integration gives
+\[
+ \left\langle F^2|F'|^2-F_1^2|F_1'|^2-F_2^2|F_2'|^2\right\rangle
+ =-{r^2\over4},                                      \tag{6.8}
+\]
+\[
+ \langle F^2-F_1^2-F_2^2+F_0^2\rangle=0,             \tag{6.9}
+\]
+and
+\[
+ \langle|F'|^2+|F_1'|^2+|F_2'|^2\rangle=r^2+4.       \tag{6.10}
+\]
+By (5.5), the zero-floor raw defect is exactly
+$-(a|k|^2r^2/2)\lambda^4$, including the physical outer factor $1/2$.
+Its covariance trace cancels by (6.9).  Bounding every rational raw term in
+absolute value by $K_\epsilon$ and using (6.10) gives the quadratic term in
+(6.5).  Four numbers in $[0,K_\epsilon]$ have the signed
+inclusion--exclusion magnitude at most $2K_\epsilon$; the outer $1/2$ leaves
+the last term in (6.5).  Solving the quadratic inequality in $\lambda^2$
+proves (6.7). \hfill$\square$
+
+Thus there is no finite fixed-cutoff constant $K_J$ for which
+\[
+ V_\Gamma(\lambda Fu)\ge
+ V_\Gamma(\lambda F_1u)+V_\Gamma(\lambda F_2u)
+ -V_\Gamma(\lambda F_0u)-K_J                         \tag{6.11}
+\]
+holds at every amplitude.  This fires
+\texttt{NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-}\allowbreak
+\texttt{MERGE-TENSORIZATION}.
+It strengthens R-105's scalar sign diagnostic to the exact production
+coefficient, same-root covariance-normal coordinate.
+
+The stabilising sextic cannot be split among these leaves either.  Exact
+integration gives
+\[
+ \boxed{
+ \langle F^6-F_1^6-F_2^6+F_0^6\rangle
+ =-{15r^2(9r^2+2)\over32}<0.}                         \tag{6.12}
+\]
+This does not say that the physical sextic or complete action is negative.
+It says only that a leafwise inclusion--exclusion duplicates the sextic with
+the wrong superadditivity sign.  Keeping the sextic once at the parent/root
+remains viable and is mandatory for this candidate route.
+
+% evidence-anchor: section-7-coherent-output-frequency-successor
+\section{A coherent output-frequency square is a surviving coordinate}
+
+R-082 Theorem 7.1 gives the exact global Pauli--Fierz square
+\[
+ {1\over2}\sum_i\|\Xi(X,\partial_iX)\|_{L^2}^2
+ ={1\over2}\sum_{i,n}
+   |\widehat{\Xi(X,\partial_iX)}(n)|^2.                \tag{7.1}
+\]
+This is genuine nonnegative additivity for disjoint \emph{output}-frequency
+projectors, applied only after the full nonlinear current is formed.  It is
+not additivity over input modes or Gaussian roots.  Different input
+convolutions can land at the same output $n$ and interfere before the square;
+Theorem 6.1 is an exact such interference fixture.
+
+The covariance trace in (6.1) is not itself an output square.  Moreover the
+coefficient $C(X)$ in $B(X)=C(X)^TC(X)$ is same-root and state dependent.
+It therefore lies outside the determinant theorem for a predictable
+coefficient and a fresh derivative.  The valid root-local successor must
+preserve, for every output $n$,
+\[
+ \widehat\Xi(n)=\sum_{\alpha\to n}\widehat\Xi_\alpha(n), \tag{7.2}
+\]
+where $\alpha$ ranges over every input convolution reaching $n$, before
+squaring.  The proof must retain the complete heat lift, covariance trace,
+mixed baseline, R-063 forest, and parent/root sextic in the same signed
+packet.
+
+No current authority bounds this residual.  R-077 cancels a complete fresh
+packet before projection; R-096 compresses a same-root coefficient to
+Hermite ranks $0,1,2$ but supplies no spatial/root gain; R-097 retains its
+posterior covariance deficit; and A9-(3.8) retains the same-root Gibbs
+bracket.  R-089/R-099 control the Cameron--Martin coordinates, not this
+nonlinear coefficient.
+
+The narrowest currently identified analytic target in the audited
+factorisation coordinate is a root-local, actual-Gibbs time-integrated bound
+for the complete coherent-output packet (7.2), with a summable root loss.
+The equivalent direct complete signed source-action route remains open; this
+section does not assert uniqueness.  In either formulation, do not split the
+packet into input-mode leaves, do not split the sextic, and do not count the
+total endpoint integral (3.2) as the estimate.
+
+% evidence-anchor: audit-8.1-r105-sextic-coefficient-cutoff-notation
+\section{R-105 correction audit}
+
+R-105 Proposition 6.2 used the stabilized Nelson functional
+\[
+ G_J=V_J^{\rm ren}+{3\over20}\|\phi\|_6^6.             \tag{8.1}
+\]
+For the top-shell wave $g=\cos(k\cdot x)$,
+$\langle g^6\rangle=5/16$, so R-105-(6.20) must read
+\[
+ U_6(Ae)=u_6A^6,\qquad
+ \boxed{u_6={3\over20}{5\over16}L^3={3L^3\over64}>0.} \tag{8.2}
+\]
+The former $5\gamma L^3/96$ belonged to A9's original
+$(\gamma/6)\|\phi\|_6^6$ physical potential and was imported into the wrong
+functional.  Euler homogeneity still gives
+$\langle DU_6(e),e\rangle=6u_6$, and both the bracket and free-energy leading
+terms contain the same $u_6$.  Hence the forced ratio $b(t)\ge3/t$ and every
+R-105 verdict are unchanged.
+
+R-105-(7.1)--(7.3) also used the letter $J$ for the physical sharp-cube
+radius.  The authority is linear in $N$ for $Q_N$, with $N=2^J$ under dyadic
+indexing.  The corrected proof note uses $N$ and leaves the stored slope and
+method no-go unchanged.
+
+This audit is registered as
+\texttt{AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION}.
+
+\section{Attempt, failure, and evidence map}
+
+\[
+\begin{array}{c}
+ \text{actual A9 Gibbs lift}
+ \longrightarrow
+ \boxed{\text{endpoint likelihood and KL identities}}\\[1mm]
+ \downarrow\\[-1mm]
+ \text{integrate the complete bracket over }t
+ \longrightarrow
+ \boxed{\Phi_{J,1}-\Phi_{J,0}\text{ exactly; no bound}}\\[2mm]
+ \text{constant production field}
+ \longrightarrow
+ \boxed{\mathcal L_N\gtrsim A^2N}
+ \longrightarrow
+ \text{pointwise sextic/CM coercivity fails}\\[2mm]
+ \text{exact radial Fierz coefficient}+1{:}2\text{ orbit}
+ \longrightarrow
+ \boxed{\Delta_\lambda=-c\lambda^4+O(\lambda^2)}\\[1mm]
+ \downarrow\\[-1mm]
+ \text{input leaves and leafwise sextic fail}
+ \quad\Longrightarrow\quad
+ \boxed{\text{test a complete coherent output packet at each root}.}
+\end{array}                                             \tag{9.1}
+\]
+
+\begin{center}
+\begin{tabular}{p{0.30\textwidth}p{0.17\textwidth}p{0.43\textwidth}}
+Route & Verdict & Exact reason / successor\\ \hline
+Total A9 time integral & failed as a proof & It is the endpoint free-energy
+difference (3.2); prove a root-local lower bound first.\\
+Endpoint KL reserve & boundary only & Forward entropy is under the unknown
+self Gibbs law; reverse entropy has the wrong sign.\\
+Pointwise likelihood payment & failed & The constant ray has
+$\mathcal L_N\gtrsim A^2N$ and defeats fixed sextic/CM payment.\\
+Bounded inclusion--exclusion input-leaf reassembly & failed & Exact
+production merge defect tends to $-\infty$ by Theorem 6.1.\\
+Leafwise sextic repair & failed & The exact merge (6.12) is negative.\\
+Coherent output packet & open candidate & Form the complete current first;
+retain heat, trace, forest, baseline, and sextic once at the root.\\
+\end{tabular}
+\end{center}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{DISMISSED -- ``The endpoint KL identity proves Nelson because
+entropy is nonnegative.''}  In (2.8) entropy is subtracted but the expectation
+is under the unknown self-coupled law.  In (2.9) the controlled law comes with
+positive entropy.  The variational identity (2.10) is exactly the missing
+free energy.
+
+\item \textbf{DISMISSED -- ``The all-law top-shell no-go already refutes the
+actual Gibbs path.''}  R-105 used narrow translated Gaussian laws.  The
+actual $\nu_{J,t}$ is the marginal of (2.2) and retains the same-root
+$x$--$z_t$ correlations.  Only an unconditional all-law pointwise theorem was
+refuted.
+
+\item \textbf{VALID WITH MITIGATION -- ``The constant ray is Gaussian-null.''}
+Correct.  Section 4 is a method no-go for pointwise extraction only.  The
+candidate proof must keep entropy or perform the full root integration.
+
+\item \textbf{VALID WITH MITIGATION -- ``A negative merge defect is not a
+negative complete action.''}  Correct.  Every individual raw production
+square remains nonnegative and has positive quartic growth.  Theorem 6.1
+rejects only bounded input-leaf reassembly.
+
+\item \textbf{DISMISSED -- ``The positive sextic repairs the input-leaf
+factorisation automatically.''}  Equation (6.12) has the opposite
+inclusion--exclusion sign.  The sextic remains useful only when kept once at
+the parent/root.
+
+\item \textbf{UPHELD -- ``No cutoff-uniform coherent-output Gibbs estimate is
+proved.''}  This is the exact remaining obstruction.  R-106 narrows its legal
+coordinate but does not bound it; Nelson and Sector A remain open.
+\end{enumerate}
+
+\section{Executable verification}
+
+The primary certificate derives the endpoint algebra, corrected sextic
+coefficient, physical-radius scaling, exact production radial eigenvalue,
+R-082 radial identity, all trigonometric merges, the divergence threshold,
+and the coherent-output cross terms symbolically.  A non-importing
+standard-library implementation checks the endpoint KL identities on an
+unrelated finite law and computes the Fourier averages with exact rational
+Laurent polynomials.
+
+Run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_verify.py
+\end{verbatim}
+from the repository root.  The integrated verifier reruns both implementations,
+checks the note, PDF, manifest, authority pins, public surfaces, exploration
+records, negative registry, and the R-105 correction.
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-GIBBS-ENDPOINT-PRODUCTION-MERGE-BOUNDARY
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-106
+Status:    T4 ANALYTIC/EXACT/EXECUTED BOUNDARY; NELSON AND SECTOR A OPEN
+Scope:     Fixed cutoff/floor; q=10/9 Gibbs endpoints; active-doublet radial
+           fibre; admitted k, 2k; fixed PSD merge covariance.
+Precise statement: exact endpoint likelihood/KL/variation and time-integral
+           boundary; pointwise likelihood no-go; exact radial coefficient;
+           unbounded 1:2 input merge and leafwise-sextic non-superadditivity.
+Identified (not bounded): a complete coherent output-frequency square with
+           heat, trace, forest, baseline, and one parent/root sextic.
+Dependencies: A9; R-063, R-077, R-082, R-089, R-093, R-096, R-097,
+              R-099, R-104, R-105.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_verify.py
+Expected output:
+           Primary 46/46; independent 59/59; integrated 337/337;
+           aggregate 442/442 PASS.
+Negative results: NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY;
+           NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY;
+           NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION.
+Correction audit: R-105 reissued with u6=3 L^3/64 and physical radius N;
+           ratio 3/t and route verdicts unchanged.
+Falsification gate: failure of endpoint/KL/time orientation, ray scaling,
+           radial Fierz or merge identities, any evidence/hash/PDF/ledger/
+           public-surface contract, or any scope firewall.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           no root-local Gibbs or coherent-output lower bound is proved;
+           the direct source-action route is not excluded; no OVERLAP_src,
+           Nelson, removal, measure, Sector-A, or T5--T7 conclusion follows.
+Next required action: prove one summable root-local coherent-output estimate
+           or the direct source-action bound, retaining one root sextic.
+\end{verbatim}
+\endgroup

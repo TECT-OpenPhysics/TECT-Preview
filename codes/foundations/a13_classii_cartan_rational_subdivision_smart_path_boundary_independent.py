@@ -3,6 +3,10 @@
 
 This route uses second-order rational jets and a tiny bivariate-polynomial
 engine.  It does not import SymPy, NumPy, or the primary certificate.
+
+Changelog:
+* 1.1.0 (2026-07-28): use the stabilized top-shell coefficient 3/64 and
+  write future direct runs to the immutable v1.1 correction folder.
 """
 
 from __future__ import annotations
@@ -19,10 +23,13 @@ from pathlib import Path
 
 
 SCHEMA = "tect/a13-cartan-rational-subdivision-smart-path-boundary-independent/1.0"
-VERSION = "1.0.0"
+__version__ = "1.1.0"
+__first_issued__ = "2026-07-28"
+__version_issued__ = "2026-07-28"
+VERSION = __version__
 DEFAULT_OUTPUT = Path(
     "claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/"
-    "runs/2026-07-28-independent-cartan-rational-subdivision-smart-path-boundary/"
+    "runs/2026-07-28-independent-cartan-rational-subdivision-smart-path-boundary-v1-1-correction/"
     "result.json"
 )
 REPO = Path(__file__).resolve().parents[2]
@@ -467,7 +474,7 @@ def main() -> int:
         exact_gap = 1 / (p_value * time_value * (1 + p_value * time_value * amplitude_square * tau_value))
         checks.require(f"independent resolvent saturation identity {index}", limit_value - finite_value == exact_gap)
     for index, time_value in enumerate((Fraction(1), Fraction(1, 2), Fraction(1, 7)), start=1):
-        u6_value = Fraction(5, 96)
+        u6_value = Fraction(3, 64)
         saturation_limit = 1 / (p_value * time_value)
         bracket_leading = p_value / 2 * (-p_value * 6 * u6_value * saturation_limit)
         free_leading = p_value * u6_value

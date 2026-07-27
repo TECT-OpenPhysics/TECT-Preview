@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
-"""Integrated hash-pinned verifier for the scoped R-105 package.
-
-Changelog:
-* 1.1.0 (2026-07-28): verify the immutable v1.1 note/PDF reissue and write
-  fresh correction runs instead of overwriting the issued v1.0 run folders.
-"""
+"""Integrated hash-pinned verifier for the scoped R-106 package."""
 
 from __future__ import annotations
 
-__version__ = "1.1.0"
+__version__ = "1.0.0"
 __first_issued__ = "2026-07-28"
 __version_issued__ = "2026-07-28"
 
@@ -20,7 +15,6 @@ import re
 import subprocess
 import sys
 import tempfile
-from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
@@ -29,136 +23,112 @@ from pypdf import PdfReader
 
 REPO = Path(__file__).resolve().parents[2]
 CLAIM = "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION"
-RESULT_ID = "A13-CLASSII-CARTAN-RATIONAL-SUBDIVISION-SMART-PATH-BOUNDARY"
+RESULT_ID = "A13-CLASSII-GIBBS-ENDPOINT-PRODUCTION-MERGE-BOUNDARY"
 CLAIM_DIR = REPO / "claims" / CLAIM
-PRIMARY = REPO / "codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary.py"
-INDEPENDENT = REPO / "codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_independent.py"
-NOTE = CLAIM_DIR / "notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-260728-v1.1.tex.txt"
-PDF = CLAIM_DIR / "notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-260728-v1.1.pdf"
-MANIFEST = CLAIM_DIR / "classii_cartan_rational_subdivision_smart_path_boundary_manifest.json"
-PRIMARY_RESULT = CLAIM_DIR / "runs/2026-07-28-primary-cartan-rational-subdivision-smart-path-boundary-v1-1-correction/result.json"
-INDEPENDENT_RESULT = CLAIM_DIR / "runs/2026-07-28-independent-cartan-rational-subdivision-smart-path-boundary-v1-1-correction/result.json"
-OUTPUT = CLAIM_DIR / "runs/2026-07-28-integrated-cartan-rational-subdivision-smart-path-boundary-v1-1-correction/result.json"
+PRIMARY = REPO / "codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary.py"
+INDEPENDENT = REPO / "codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_independent.py"
+NOTE = CLAIM_DIR / "notes/classii-gibbs-endpoint-production-merge-boundary-260728-v1.0.tex.txt"
+PDF = CLAIM_DIR / "notes/classii-gibbs-endpoint-production-merge-boundary-260728-v1.0.pdf"
+MANIFEST = CLAIM_DIR / "classii_gibbs_endpoint_production_merge_boundary_manifest.json"
+PRIMARY_RESULT = CLAIM_DIR / "runs/2026-07-28-primary-gibbs-endpoint-production-merge-boundary/result.json"
+INDEPENDENT_RESULT = CLAIM_DIR / "runs/2026-07-28-independent-gibbs-endpoint-production-merge-boundary/result.json"
+OUTPUT = CLAIM_DIR / "runs/2026-07-28-integrated-gibbs-endpoint-production-merge-boundary/result.json"
+R105_NOTE = CLAIM_DIR / "notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-260728-v1.1.tex.txt"
+R105_PDF = CLAIM_DIR / "notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-260728-v1.1.pdf"
+R105_MANIFEST = CLAIM_DIR / "classii_cartan_rational_subdivision_smart_path_boundary_manifest.json"
 
-PRIMARY_ASSERTION_ORACLE = 111
-INDEPENDENT_ASSERTION_ORACLE = 111
+PRIMARY_ASSERTION_ORACLE = 46
+INDEPENDENT_ASSERTION_ORACLE = 59
 
 AUTHORITY_MANIFESTS = {
-    "a7": "claims/A7-CLASSII-RENORMALISED-ENERGY-COMPOSITE/classii_renormalised_energy_manifest.json",
-    "a9": "claims/A9-CLASSII-SMART-PATH-CANCELLATION/classii_smart_path_manifest.json",
-    "r085": f"claims/{CLAIM}/classii_nonorthogonal_cartan_schur_rational_hessian_boundary_manifest.json",
-    "r088": f"claims/{CLAIM}/classii_direct_root_cartan_schur_sequential_secant_rational_conditional_trace_reduction_manifest.json",
-    "r092": f"claims/{CLAIM}/classii_normalized_cartan_perspective_covariance_frontier_manifest.json",
+    "r063": f"claims/{CLAIM}/classii_balanced_coefficient_jet_continuum_manifest.json",
+    "r077": f"claims/{CLAIM}/classii_causal_packet_payload_resonance_manifest.json",
+    "r082": f"claims/{CLAIM}/classii_stopped_current_far_complete_current_near_reduction_manifest.json",
+    "r089": f"claims/{CLAIM}/classii_progressive_covariance_compression_rational_mean_spectral_boundary_manifest.json",
     "r093": f"claims/{CLAIM}/classii_augmented_perspective_gibbs_gap_information_boundary_manifest.json",
-    "r098": f"claims/{CLAIM}/classii_signed_first_cartan_rational_ridge_boundary_manifest.json",
+    "r096": f"claims/{CLAIM}/classii_low_hermite_wick_predictable_baseline_reduction_manifest.json",
+    "r097": f"claims/{CLAIM}/classii_global_gram_terminalization_covariance_deficit_reduction_manifest.json",
     "r099": f"claims/{CLAIM}/classii_extended_state_cartan_doob_rational_recovery_manifest.json",
-    "r100": f"claims/{CLAIM}/classii_owner_gauge_heat_centered_covariance_debt_reduction_manifest.json",
-    "r101": f"claims/{CLAIM}/classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_manifest.json",
-    "r102": f"claims/{CLAIM}/classii_full_hessian_laplace_wick_future_feedback_boundary_manifest.json",
-    "r103": f"claims/{CLAIM}/classii_regular_complete_packet_ownership_hn_reg_closure_manifest.json",
     "r104": f"claims/{CLAIM}/classii_lossless_progressive_complete_owner_assembly_heat_boundary_manifest.json",
+    "r105": f"claims/{CLAIM}/classii_cartan_rational_subdivision_smart_path_boundary_manifest.json",
 }
 
 PRIMARY_LOAD_BEARING = (
-    "one exact K_R",
-    "one exact F_6_5",
-    "one exact Delta",
-    "split exact K_R",
-    "split exact F_6_5",
-    "split exact Delta",
-    "labelled-owner defects cancel",
-    "all common-root partitions have same grouped square",
-    "closed extended loop has zero grouped charge",
-    "edgewise square is a subdivision artefact",
-    "heat compensator is necessary",
-    "IBP coefficient is strictly negative",
-    "critical three-quarter Young threshold",
-    "full-budget pointwise minimum diverges",
-    "production horizontal coefficient reduces to four a",
-    "production horizontal coefficient is positive",
-    "top-shell cubic harmonic decomposition",
-    "top-shell quintic harmonic decomposition",
-    "top-shell sextic average",
-    "top-shell projected current stays active",
-    "top-shell resolvent range saturation",
-    "all-law relative bracket leading ratio",
-    "all-law relative bracket requires nonintegrable b",
-    "one-pair covariance-normal energy identity",
-    "noncentral Gaussian Laplace completion",
-    "one-pair mu summability exponent",
-    "one-pair alpha-square summability exponent",
-    "cross-mode resonance identity",
-    "cross-mode resonance has negative production-shaped example",
+    "endpoint likelihood cancels trace",
+    "forward KL orientation",
+    "reverse KL orientation",
+    "thermodynamic derivative",
+    "total time integral is endpoint difference",
+    "corrected top-shell u6",
+    "R-105 ratio unchanged",
+    "constant-ray determinant scale",
+    "constant-ray sextic scale",
+    "CM payment is lower order",
+    "small-sigma leading coefficient",
+    "radial Fierz split",
+    "radial asymptotic eigenvalue",
+    "delta bound factorisation",
+    "R-082 radial diagonalisation agrees",
+    "quartic raw merge",
+    "quadratic trace merge cancels",
+    "derivative norm envelope",
+    "sextic merge",
+    "merge tends to minus infinity",
+    "threshold solves target crossing",
+    "coherent square retains cross terms",
+    "coherent and leaf squares differ",
 )
 
 INDEPENDENT_LOAD_BEARING = (
-    "independent one exact K_R",
-    "independent one exact F_6_5",
-    "independent one exact Delta",
-    "independent split exact K_R",
-    "independent split exact F_6_5",
-    "independent split exact Delta",
-    "independent defects cancel",
-    "independent grouped Cartan quotient",
-    "independent closed Cartan charge zero",
-    "independent edgewise artefact positive",
-    "independent smart-path first variation negative",
-    "independent critical Young saturating ratio",
-    "independent full-budget pointwise minimum diverges",
-    "independent production horizontal coefficient reduces to four a",
-    "independent production horizontal coefficient is positive",
-    "independent top-shell cubic projection",
-    "independent top-shell quintic projection",
-    "independent top-shell sextic average",
-    "independent top-shell projected current stays active",
-    "independent resolvent saturation identity 1",
-    "independent resolvent saturation identity 2",
-    "independent resolvent saturation identity 3",
-    "independent all-law relative bracket ratio 1",
-    "independent all-law relative bracket ratio 2",
-    "independent all-law relative bracket ratio 3",
-    "independent required b dyadic integral grows linearly",
-    "independent one-pair covariance-normal identity 1",
-    "independent one-pair log-bound derivative 8",
-    "independent one-pair mu summability exponent",
-    "independent one-pair alpha-square summability exponent",
-    "independent cross-mode resonance 4",
-    "independent cross-mode negative resonance fixture",
+    "forward endpoint KL",
+    "reverse endpoint KL",
+    "likelihood partition identity",
+    "independent thermodynamic integral",
+    "corrected u6 factor",
+    "bracket/free ratio numerator",
+    "d exact",
+    "all coefficients positive",
+    "global-square radial agreement 4",
+    "raw merge 1/3",
+    "trace merge 1",
+    "derivative envelope 5/2",
+    "sextic merge 1",
+    "sextic sign 5/2",
+    "merge upper bound eventually decreases",
+    "merge upper bound negative",
+    "outer cube count N=100",
+    "coherent cross identity",
+    "coherent differs from leaf sum",
 )
 
 NOTE_TOKENS = (
-    "R-105",
-    "evidence-anchor: theorem-2.1-complete-common-root-cartan-quotient",
-    "evidence-anchor: proposition-5.1-rational-owner-subdivision-nogo",
-    "evidence-anchor: theorem-6.1-relative-bracket-successor",
-    "evidence-anchor: proposition-6.2-all-law-relative-bracket-nogo",
-    r"b(t)\ge {3\over t}",
-    "Gibbs-law-only or time-integrated",
-    "evidence-anchor: theorem-8.1-one-fourier-pair-source-bound",
-    r"F_{6.5}",
-    r"\mathcal K_R",
-    "1600/81",
-    r"80\over9",
-    r"\mathrm{OVERLAP}_{\rm src}",
-    "T4",
+    "R-106",
+    "evidence-anchor: theorem-2.1-gibbs-endpoint-likelihood",
+    "evidence-anchor: theorem-6.1-production-radial-merge-nogo",
+    r"{\dd\nu_{J,0}\over\dd\nu_{J,1}}",
+    r"\Phi_{J,0}-\Phi_{J,1}",
+    r"B_\infty(u)u=4au",
+    r"-{15r^2(9r^2+2)\over32}",
+    "complete coherent output",
+    "root-local Gibbs or coherent-output lower bound",
+    r"u_6={3\over20}{5\over16}L^3={3L^3\over64}",
+    "NELSON AND SECTOR A OPEN",
 )
 
 EXPLORATIONS = {
-    "EXP-000263": "advanced",
-    "EXP-000264": "failed",
-    "EXP-000265": "failed",
-    "EXP-000266": "advanced",
-    "EXP-000267": "failed",
-    "EXP-000268": "advanced",
-    "EXP-000269": "failed",
+    "EXP-000270": "advanced",
+    "EXP-000271": "failed",
+    "EXP-000272": "failed",
+    "EXP-000273": "failed",
+    "EXP-000274": "advanced",
+    "EXP-000275": "advanced",
 }
 
 NEGATIVE_IDS = (
-    "NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION",
-    "NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY",
-    "NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET",
-    "NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG",
-    "NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION",
+    "NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY",
+    "NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY",
+    "NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION",
+    "AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION",
 )
 
 
@@ -189,6 +159,10 @@ def repo_path(path: Path) -> str:
     return path.relative_to(REPO).as_posix()
 
 
+def normalized(value: str) -> str:
+    return re.sub(r"\s+", " ", value)
+
+
 def source_version(path: Path) -> str | None:
     match = re.search(
         r'^(?:__version__|VERSION)\s*=\s*["\']([^"\']+)["\']',
@@ -198,29 +172,26 @@ def source_version(path: Path) -> str | None:
     return None if match is None else match.group(1)
 
 
-def normalized(value: str) -> str:
-    return re.sub(r"\s+", " ", value)
-
-
 def result_passes(record: dict[str, Any]) -> bool:
     total = record.get("assertions_total")
     names = record.get("assertion_names")
-    assertion_rows = record.get("assertions")
-    shape_ok = (
+    rows = record.get("assertions")
+    detailed_shape_ok = (
         isinstance(names, list)
+        and isinstance(total, int)
         and len(names) == total
         and len(set(names)) == total
-    ) or (
-        isinstance(assertion_rows, list)
-        and len(assertion_rows) == total
-    )
-    return (
+    ) or (isinstance(rows, list) and isinstance(total, int) and len(rows) == total)
+    counted_legacy_ok = (
         str(record.get("status", "")).upper() == "PASS"
         and isinstance(total, int)
         and total > 0
         and record.get("assertions_passed") == total
-        and shape_ok
+        and record.get("assertions_failed", 0) == 0
+        and (detailed_shape_ok or (not isinstance(names, list) and not isinstance(rows, list)))
     )
+    verdict_legacy_ok = str(record.get("verdict", "")).upper().endswith("-PASS")
+    return counted_legacy_ok or verdict_legacy_ok
 
 
 def canonical_results_hash(record: dict[str, Any]) -> str:
@@ -246,6 +217,14 @@ def authority_result_path(manifest_path: Path) -> Path | None:
     return REPO / output if output else None
 
 
+def assertion_names(record: dict[str, Any]) -> set[str]:
+    names = record.get("assertion_names")
+    if isinstance(names, list):
+        return {str(name) for name in names}
+    rows = record.get("assertions", [])
+    return {str(row.get("name")) for row in rows if isinstance(row, dict)}
+
+
 def main() -> int:
     count_only = "--count-only" in sys.argv
     rows: list[dict[str, Any]] = []
@@ -262,27 +241,25 @@ def main() -> int:
         )
 
     records: dict[str, dict[str, Any]] = {}
-    for label, script, result_path, expected_count, expected_schema, expected_version in (
+    for label, script, result_path, expected_count, expected_schema in (
         (
             "primary",
             PRIMARY,
             PRIMARY_RESULT,
             PRIMARY_ASSERTION_ORACLE,
-            "tect/a13-cartan-rational-subdivision-smart-path-boundary-primary/1.0",
-            "1.0.0",
+            "tect/a13-gibbs-endpoint-production-merge-boundary-primary/1.0",
         ),
         (
             "independent",
             INDEPENDENT,
             INDEPENDENT_RESULT,
             INDEPENDENT_ASSERTION_ORACLE,
-            "tect/a13-cartan-rational-subdivision-smart-path-boundary-independent/1.0",
-            "1.1.0",
+            "tect/a13-gibbs-endpoint-production-merge-boundary-independent/1.0",
         ),
     ):
         result_path.unlink(missing_ok=True)
         completed = subprocess.run(
-            [sys.executable, str(script), "--output", str(result_path)],
+            [sys.executable, str(script)],
             cwd=REPO,
             capture_output=True,
             text=True,
@@ -301,7 +278,7 @@ def main() -> int:
         records[label] = record
         add("execution", f"{label}_passes", result_passes(record), record.get("status"), "PASS")
         add("execution", f"{label}_schema", record.get("schema") == expected_schema, record.get("schema"), expected_schema)
-        add("execution", f"{label}_version", record.get("version") == expected_version, record.get("version"), expected_version)
+        add("execution", f"{label}_version", record.get("version") == "1.0.0", record.get("version"), "1.0.0")
         add("execution", f"{label}_assertion_count", record.get("assertions_total") == expected_count, record.get("assertions_total"), expected_count)
         names = record.get("assertion_names", [])
         add("execution", f"{label}_assertion_names_complete", isinstance(names, list) and len(names) == expected_count, len(names) if isinstance(names, list) else type(names).__name__, expected_count)
@@ -311,139 +288,48 @@ def main() -> int:
 
     primary = records["primary"]
     independent = records["independent"]
-    primary_names = set(primary.get("assertion_names", []))
-    independent_names = set(independent.get("assertion_names", []))
+    primary_names = assertion_names(primary)
+    independent_names = assertion_names(independent)
     for name in PRIMARY_LOAD_BEARING:
         add("load_bearing", f"primary_{name}", name in primary_names, name if name in primary_names else "missing", name)
     for name in INDEPENDENT_LOAD_BEARING:
         add("load_bearing", f"independent_{name}", name in independent_names, name if name in independent_names else "missing", name)
 
-    p = primary.get("results", {}) if isinstance(primary.get("results"), dict) else {}
-    i = independent.get("results", {}) if isinstance(independent.get("results"), dict) else {}
-    for section in (
-        "jets",
-        "one_chart",
-        "split_sum",
-        "one_minus_split",
-        "smart_path",
-        "relative_bracket_boundary",
-    ):
-        add("cross_route", f"{section}_exact_match", p.get(section) == i.get(section), [p.get(section), i.get(section)], "exact match")
-    shared_verdicts = (
-        "common_root_signed_grouping",
-        "generic_A9_monotonicity",
-        "all_law_relative_A9_bracket",
-        "historical_F_6_5_progressive_owner",
-        "nelson_q_10_9",
-        "sector_a",
-        "uniform_overlap_src",
-    )
-    for key in shared_verdicts:
-        actual_pair = [p.get("route_verdicts", {}).get(key), i.get("route_verdicts", {}).get(key)]
-        add("cross_route", f"route_verdict_{key}", actual_pair[0] == actual_pair[1], actual_pair, "exact match")
-    add(
-        "cross_route",
-        "all_law_relative_A9_bracket_verdict",
-        p.get("route_verdicts", {}).get("all_law_relative_A9_bracket")
-        == "failed-production-top-shell-ray",
-        p.get("route_verdicts", {}).get("all_law_relative_A9_bracket"),
-        "failed-production-top-shell-ray",
-    )
-    add("cross_route", "fixed_chart_K_R_scoped", p.get("route_verdicts", {}).get("fixed_chart_K_R") == "retained-only-in-declared-regular-scope", p.get("route_verdicts", {}).get("fixed_chart_K_R"), "retained-only-in-declared-regular-scope")
-
-    rational_expectations = {
-        ("jets", "bpp0"): "8",
-        ("jets", "b1"): "169/81",
-        ("jets", "bp1"): "208/81",
-        ("jets", "bpp1"): "-2/81",
-        ("jets", "b2"): "400/81",
-        ("one_chart", "K_R"): "-992/81",
-        ("one_chart", "F_6_5"): "-992/81",
-        ("one_chart", "Delta"): "1600/81",
-        ("split_sum", "K_R"): "355/162",
-        ("split_sum", "F_6_5"): "427/162",
-        ("split_sum", "Delta"): "1600/81",
-        ("one_minus_split", "R_Q"): "-77/18",
-        ("one_minus_split", "M_U"): "1516/81",
-        ("one_minus_split", "K_R"): "-2339/162",
-        ("one_minus_split", "Delta"): "0",
-    }
-    for (section, key), expected in rational_expectations.items():
-        actual = p.get(section, {}).get(key)
-        add("rational", f"{section}_{key}", actual == expected, actual, expected)
-
-    cartan_expected = {
-        "coarse_grouped_square": "3626",
-        "refined_grouped_square": "3626",
-        "closed_loop_grouped_square": "0",
-        "closed_loop_edgewise_square": "62132",
-    }
-    for key, expected in cartan_expected.items():
-        actual_pair = [p.get("cartan", {}).get(key), i.get("cartan", {}).get(key)]
-        add("cartan", key, actual_pair == [expected, expected], actual_pair, [expected, expected])
-    add("cartan", "heat_compensator_required", p.get("cartan", {}).get("complete_heat_compensator_required") is True, p.get("cartan", {}).get("complete_heat_compensator_required"), True)
-
-    smart = p.get("smart_path", {})
+    p_results = primary.get("results", {})
+    i_results = independent.get("results", {})
+    p_derived = p_results.get("derived", {}) if isinstance(p_results, dict) else {}
+    i_derived = i_results.get("derived", {}) if isinstance(i_results, dict) else {}
+    p_routes = p_results.get("route_verdicts", {}) if isinstance(p_results, dict) else {}
+    i_routes = i_results.get("route_verdicts", {}) if isinstance(i_results, dict) else {}
+    for key in ("production_a", "production_b", "production_c"):
+        add("cross_route", f"{key}_exact_match", p_derived.get(key) == i_derived.get(key), [p_derived.get(key), i_derived.get(key)], "exact match")
     for key, expected in {
-        "p": "10/9",
-        "lambda": "3/20",
-        "radial_tilt_a": "4/3",
-        "first_variation_factor_times_positive_EY4": "-80/9",
-        "generic_monotonicity": False,
-        "production_specific_counterexample": False,
+        "q": "10/9",
+        "corrected_top_shell_u6": "3*L**3/64",
+        "forced_all_law_ratio": "3/t_top",
+        "quartic_merge": "-r**2/4",
+        "sextic_merge": "-15*r**2*(9*r**2 + 2)/32",
     }.items():
-        add("smart_path", key, smart.get(key) == expected, smart.get(key), expected)
-
-    pdet = p.get("deterministic_method_boundaries", {})
-    idet = i.get("deterministic_method_boundaries", {})
+        add("exact", key, p_derived.get(key) == expected, p_derived.get(key), expected)
     for key, expected in {
-        "critical_three_quarter_threshold": "3/5",
-        "full_energy_budget": "9/20",
-        "full_sextic_budget": "3/20",
-        "pathwise_uniform_coercivity": False,
-        "nelson_counterexample": False,
-        "upstream_constant_mode_counterterm_slope": "0.0012483343933611451",
+        "corrected_top_shell_u6_factor": "3/64",
+        "quartic_merge": "-1/4*r^2",
+        "sextic_merge": "-15/32*r^2*(9*r^2+2)",
     }.items():
-        actual_pair = [pdet.get(key), idet.get(key)]
-        add("deterministic_boundary", key, actual_pair == [expected, expected], actual_pair, [expected, expected])
-    coefficient_gap = abs(
-        Decimal(str(pdet.get("constant_mode_minimum_coefficient_decimal", "nan")))
-        - Decimal(str(idet.get("constant_mode_minimum_coefficient_decimal", "nan")))
-    )
-    add("deterministic_boundary", "constant_mode_independent_tolerance", coefficient_gap <= Decimal("1e-14"), str(coefficient_gap), "<=1e-14")
-
-    ppair = p.get("one_fourier_pair", {})
-    ipair = i.get("one_fourier_pair", {})
-    pair_shared = (
-        "alpha_square_summability_exponent",
-        "conditional_log_bound",
-        "covariance_normal_identity",
-        "full_physical_mode_factorization",
-        "mu_summability_exponent",
-        "t_definition",
-        "uniform_in_past_shift",
-    )
-    for key in pair_shared:
-        add("one_pair", f"{key}_match", ppair.get(key) == ipair.get(key), [ppair.get(key), ipair.get(key)], "exact match")
-    add("one_pair", "mu_exponent", ppair.get("mu_summability_exponent") == 6, ppair.get("mu_summability_exponent"), 6)
-    add("one_pair", "alpha_square_exponent", ppair.get("alpha_square_summability_exponent") == 4, ppair.get("alpha_square_summability_exponent"), 4)
-    add("one_pair", "primary_resonance", ppair.get("cross_mode_resonance") == "r^2*u*(6*A+5*u)/4", ppair.get("cross_mode_resonance"), "r^2*u*(6*A+5*u)/4")
-    add("one_pair", "independent_resonance", ipair.get("cross_mode_resonance") == "k^2*r^2*u*(6*A+5*u)/4", ipair.get("cross_mode_resonance"), "k^2*r^2*u*(6*A+5*u)/4")
-    add("one_pair", "negative_fixture_primary", ppair.get("cross_mode_negative_fixture") == "A=1,u=-1,r=2 gives -1", ppair.get("cross_mode_negative_fixture"), "A=1,u=-1,r=2 gives -1")
-    add("one_pair", "negative_fixture_independent", ipair.get("cross_mode_negative_fixture") == "A=1,u=-1,r=2,k=1 gives -1", ipair.get("cross_mode_negative_fixture"), "A=1,u=-1,r=2,k=1 gives -1")
-
-    relative = p.get("relative_bracket_boundary", {})
+        add("exact", f"independent_{key}", i_derived.get(key) == expected, i_derived.get(key), expected)
     for key, expected in {
-        "active_horizontal_coefficient": "4*a with pinned a>0",
-        "all_law_pointwise_integrable_ab": False,
-        "all_law_required_b_lower": "b(t)>=3/t",
-        "gibbs_specific_or_time_integrated_bracket": "open",
-        "resolvent_range_limit": "A^2*T0*(I+q*t*A^2*T0)^-1 -> P_Ran(T0)/(q*t)",
-        "sextic_average": "5/16",
-        "top_shell_cubic_projection": "P_J cos(kx)^3=(3/4)cos(kx)",
-        "top_shell_quintic_projection": "P_J cos(kx)^5=(10/16)cos(kx)",
+        "total_time_integration_without_root_local_bound": "tautological-endpoint-identity",
+        "pointwise_endpoint_likelihood_sextic_cm_coercivity": "failed-constant-ray",
+        "input_mode_leaf_tensorization": "failed-exact-production-1-to-2-merge",
+        "leafwise_sextic_merge_repair": "failed-not-superadditive",
+        "coherent_output_frequency_square": "retained-exact-coordinate",
+        "nelson": "open",
+        "sector_a": "open",
     }.items():
-        add("relative_bracket", key, relative.get(key) == expected, relative.get(key), expected)
+        add("route", key, p_routes.get(key) == expected, p_routes.get(key), expected)
+    add("route", "independent_endpoint_boundary", i_routes.get("endpoint_likelihood_identity") == "exact-boundary-only", i_routes.get("endpoint_likelihood_identity"), "exact-boundary-only")
+    add("route", "independent_nelson_open", i_routes.get("nelson") == "open", i_routes.get("nelson"), "open")
+    add("route", "independent_sector_a_open", i_routes.get("sector_a") == "open", i_routes.get("sector_a"), "open")
 
     imports = imported_roots(INDEPENDENT)
     forbidden_imports = sorted(imports & {"numpy", "sympy", "scipy"})
@@ -451,6 +337,7 @@ def main() -> int:
     add("independence", "forbidden_imports", not forbidden_imports, forbidden_imports, [])
     add("independence", "no_primary_import", PRIMARY.stem not in independent_text, PRIMARY.stem if PRIMARY.stem in independent_text else "absent", "absent")
     add("independence", "fraction_engine", "from fractions import Fraction" in independent_text, "present" if "from fractions import Fraction" in independent_text else "missing", "present")
+    add("independence", "custom_laurent_engine", "def multiply(left: Laurent, right: Laurent)" in independent_text, "present" if "def multiply(left: Laurent, right: Laurent)" in independent_text else "missing", "present")
 
     try:
         manifest = load_json(MANIFEST)
@@ -462,6 +349,9 @@ def main() -> int:
     add("manifest", "result_id", manifest.get("result_id") == RESULT_ID, manifest.get("result_id"), RESULT_ID)
     add("manifest", "tier_t4", [manifest.get("tier_before"), manifest.get("tier_after")] == ["T4", "T4"], [manifest.get("tier_before"), manifest.get("tier_after")], ["T4", "T4"])
     add("manifest", "proof_incomplete", manifest.get("proof_complete") is False, manifest.get("proof_complete"), False)
+    add("manifest", "status_boundary", "BOUNDARY" in str(manifest.get("status", "")) and "OPEN" in str(manifest.get("status", "")), manifest.get("status"), "contains BOUNDARY and OPEN")
+    add("manifest", "scope_fixed_cutoff", "Finite cutoff" in str(manifest.get("scope", "")), manifest.get("scope"), "contains Finite cutoff")
+    add("manifest", "no_overclaim_text", all(token in str(manifest.get("no_overclaim", "")) for token in ("Nelson", "Sector A", "does not prove")), manifest.get("no_overclaim"), "Nelson/Sector A/do-not-prove boundary")
 
     sources = manifest.get("sources", {}) if isinstance(manifest.get("sources"), dict) else {}
     for label, path in (
@@ -474,7 +364,7 @@ def main() -> int:
         add("manifest", f"{label}_path", entry.get("path") == repo_path(path), entry.get("path"), repo_path(path))
         expected_hash = digest(path) if path.is_file() else "file"
         add("manifest", f"{label}_hash", path.is_file() and entry.get("sha256") == expected_hash, entry.get("sha256"), expected_hash)
-        expected_version = "1.1" if label == "proof_note" else source_version(path)
+        expected_version = "1.0" if label == "proof_note" else source_version(path)
         add("manifest", f"{label}_version", entry.get("version") == expected_version, entry.get("version"), expected_version)
 
     authority_root = manifest.get("authority", {}) if isinstance(manifest.get("authority"), dict) else {}
@@ -493,11 +383,8 @@ def main() -> int:
             add("authority", f"{label}_manifest_contract", False, repr(error), "readable")
         else:
             add("authority", f"{label}_manifest_contract", True, "readable", "readable")
-        result_entry = entry.get("result") if isinstance(entry, dict) else None
-        if result_path is None:
-            add("authority", f"{label}_grandfathered_result", result_entry is None, result_entry, None)
-        else:
-            result_entry = result_entry if isinstance(result_entry, dict) else {}
+        result_entry = entry.get("result", {}) if isinstance(entry.get("result"), dict) else {}
+        if result_path is not None:
             add("authority", f"{label}_result_exists", result_path.is_file(), repo_path(result_path), "file")
             add("authority", f"{label}_result_path", result_entry.get("path") == repo_path(result_path), result_entry.get("path"), repo_path(result_path))
             expected_result_hash = digest(result_path) if result_path.is_file() else "file"
@@ -515,6 +402,7 @@ def main() -> int:
     for index, token in enumerate(NOTE_TOKENS):
         add("proof_note", f"token_{index:02d}", token in note_scan, token if token in note_scan else "missing", token)
     add("proof_note", "no_replacement", "\ufffd" not in note_text, note_text.count("\ufffd"), 0)
+    add("proof_note", "no_bare_qquad", re.search(r"(?<!\\)qquad", note_text) is None, "absent" if re.search(r"(?<!\\)qquad", note_text) is None else "present", "absent")
     add("proof_note", "fragment", "\\documentclass" not in note_text, "fragment", "fragment")
 
     add("proof_pdf", "exists", PDF.is_file(), repo_path(PDF), "file")
@@ -529,27 +417,37 @@ def main() -> int:
         page_texts = [(page.extract_text() or "") for page in reader.pages]
         nonempty_pages = sum(bool(value.strip()) for value in page_texts)
         pdf_text = normalized("\n".join(page_texts))
-    add("proof_pdf", "page_count_positive", page_count > 0, page_count, ">0")
+    add("proof_pdf", "page_count", page_count == 8, page_count, 8)
     add("proof_pdf", "all_pages_nonempty", nonempty_pages == page_count and page_count > 0, nonempty_pages, page_count)
     add("proof_pdf", "no_fields", fields == 0, fields, 0)
-    add("proof_pdf", "title", "Common-root Cartan quotient" in pdf_text, "present" if "Common-root Cartan quotient" in pdf_text else "missing", "present")
-    footer_tokens = (
-        "R-105",
-        "1600",
-        "ALL-LAW-POINTWISE-RELATIVE-BRACKET",
-        "Gibbs-law-only or time-integrated",
-        "OVERLAP",
-        "Sector-A closure",
-    )
+    add("proof_pdf", "title", "Gibbs endpoint likelihood" in pdf_text, "present" if "Gibbs endpoint likelihood" in pdf_text else "missing", "present")
+    footer_tokens = ("R-106", "PRODUCTION-INPUT-MODE", "3 L^3", "Nelson", "Sector-A closure")
     add("proof_pdf", "scope_tokens", all(token in pdf_text for token in footer_tokens), [token in pdf_text for token in footer_tokens], [True] * len(footer_tokens))
     proof_pdf = manifest.get("proof_pdf", {}) if isinstance(manifest.get("proof_pdf"), dict) else {}
     add("proof_pdf", "manifest_path", proof_pdf.get("path") == repo_path(PDF), proof_pdf.get("path"), repo_path(PDF))
     add("proof_pdf", "manifest_hash", PDF.is_file() and proof_pdf.get("sha256") == digest(PDF), proof_pdf.get("sha256"), digest(PDF) if PDF.is_file() else "file")
-    add("proof_pdf", "manifest_pages", proof_pdf.get("pages") == page_count and page_count > 0, proof_pdf.get("pages"), page_count)
+    add("proof_pdf", "manifest_pages", proof_pdf.get("pages") == page_count == 8, proof_pdf.get("pages"), page_count)
     add("proof_pdf", "manifest_size", proof_pdf.get("size_bytes") == (PDF.stat().st_size if PDF.is_file() else -1), proof_pdf.get("size_bytes"), PDF.stat().st_size if PDF.is_file() else -1)
     add("proof_pdf", "manifest_form", proof_pdf.get("form_check") == "PASS", proof_pdf.get("form_check"), "PASS")
     add("proof_pdf", "manifest_overfull", proof_pdf.get("overfull_hbox_count") == 0, proof_pdf.get("overfull_hbox_count"), 0)
     add("proof_pdf", "manifest_visual_qa", proof_pdf.get("visual_qa") == "PASS", proof_pdf.get("visual_qa"), "PASS")
+
+    r105_note_text = R105_NOTE.read_text(encoding="utf-8") if R105_NOTE.is_file() else ""
+    add("correction", "r105_u6_corrected", r"u_6={3\over20}{5\over16}L^3={3L^3\over64}" in normalized(r105_note_text), "present" if r"u_6={3\over20}{5\over16}L^3={3L^3\over64}" in normalized(r105_note_text) else "missing", "present")
+    add("correction", "r105_old_u6_absent", r"5\gamma L^3\over96" not in r105_note_text, "absent" if r"5\gamma L^3\over96" not in r105_note_text else "present", "absent")
+    add("correction", "r105_cutoff_N", r"V_N^{\rm ren}" in r105_note_text and r"N=2^J" in r105_note_text, [r"V_N^{\rm ren}" in r105_note_text, r"N=2^J" in r105_note_text], [True, True])
+    try:
+        r105_manifest = load_json(R105_MANIFEST)
+    except Exception as error:
+        r105_manifest = {}
+        add("correction", "r105_manifest_json", False, repr(error), "valid JSON")
+    else:
+        add("correction", "r105_manifest_json", True, "valid JSON", "valid JSON")
+    r105_sources = r105_manifest.get("sources", {}) if isinstance(r105_manifest.get("sources"), dict) else {}
+    add("correction", "r105_note_hash", r105_sources.get("proof_note", {}).get("sha256") == digest(R105_NOTE), r105_sources.get("proof_note", {}).get("sha256"), digest(R105_NOTE))
+    r105_pdf_entry = r105_manifest.get("proof_pdf", {}) if isinstance(r105_manifest.get("proof_pdf"), dict) else {}
+    add("correction", "r105_pdf_hash", r105_pdf_entry.get("sha256") == digest(R105_PDF), r105_pdf_entry.get("sha256"), digest(R105_PDF))
+    add("correction", "r105_pdf_size", r105_pdf_entry.get("size_bytes") == R105_PDF.stat().st_size, r105_pdf_entry.get("size_bytes"), R105_PDF.stat().st_size)
 
     exploration_rows: dict[str, dict[str, Any]] = {}
     for line in (REPO / "explorations/log.jsonl").read_text(encoding="utf-8").splitlines():
@@ -572,17 +470,25 @@ def main() -> int:
         add("negative", negative_id, negative_id in negative_scan, negative_id if negative_id in negative_scan else "missing", negative_id)
 
     surface_tokens = {
-        "results_ledger": (REPO / "RESULTS-LEDGER.md", ("R-105", "all-law pointwise", "cross-mode")),
-        "claim_card": (CLAIM_DIR / "claim.md", (RESULT_ID, "R-105", "EXP-000269")),
-        "status": (CLAIM_DIR / "status.json", ("R-106", "R-105 is reissued v1.1", "Sector A remains open")),
-        "lineage_narrative": (CLAIM_DIR / "lineage-narrative.md", ("R-105", "all-law pointwise", "Gibbs-specific")),
-        "gates": (REPO / "claims/GATES.md", ("R-105", "all-law pointwise", "OVERLAP_src")),
-        "roadmap": (REPO / "ROADMAP.md", ("R-105", "Gibbs-specific", "OVERLAP_src")),
+        "results_ledger": (REPO / "RESULTS-LEDGER.md", ("R-106", "endpoint likelihood", "coherent output")),
+        "claim_card": (CLAIM_DIR / "claim.md", (RESULT_ID, "R-106", "EXP-000274")),
+        "status": (CLAIM_DIR / "status.json", ("R-106", "coherent output", "Sector A remains open")),
+        "lineage_narrative": (CLAIM_DIR / "lineage-narrative.md", ("R-106", "endpoint likelihood", "coherent output")),
+        "gates": (REPO / "claims/GATES.md", ("R-106", "coherent output", "OVERLAP_src")),
+        "roadmap": (REPO / "ROADMAP.md", ("R-106", "Gibbs", "OVERLAP_src")),
         "todo": (REPO / "TODO.md", ("T-050", "R-106", "coherent output")),
-        "changelog": (REPO / "CHANGELOG.md", ("R-105", "Cartan", "all-law pointwise")),
-        "proof_map": (REPO / "theory/proof-evidence-map.md", ("R-105", "EXP-000263", "EXP-000269")),
-        "main_proof": (REPO / "theory/main-proof-line.md", ("R-105", "all-law pointwise", "Sector A remains open")),
-        "sector_readme": (REPO / "theory/sector-A-foundation/README.md", ("R-105", "Gibbs-specific", "Sector A remains open")),
+        "changelog": (REPO / "CHANGELOG.md", ("R-106", "endpoint likelihood", "production merge")),
+        "proof_map": (REPO / "theory/proof-evidence-map.md", ("R-106", "EXP-000270", "EXP-000274")),
+        "main_proof": (REPO / "theory/main-proof-line.md", ("R-106", "coherent output", "Sector A remains open")),
+        "sector_readme": (REPO / "theory/sector-A-foundation/README.md", ("R-106", "coherent output", "Sector A remains open")),
+        "sector_a": (
+            REPO / "theory/sectors/A.md",
+            (
+                CLAIM,
+                "NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY",
+                "NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION",
+            ),
+        ),
         "theorem_map": (REPO / "governance/sector-a-theorem-map.json", ("R-106", "coherent output", "endpoint likelihood")),
     }
     for label, (path, tokens) in surface_tokens.items():
@@ -602,21 +508,13 @@ def main() -> int:
 
     contract = manifest.get("run_contract", {}) if isinstance(manifest.get("run_contract"), dict) else {}
     canonical_command = contract.get("command", "")
-    current_reproduction = status.get("reproduction", {}).get("command", "")
-    add(
-        "surfaces",
-        "status_reproduction",
-        canonical_command.endswith("a13_classii_cartan_rational_subdivision_smart_path_boundary_verify.py")
-        and current_reproduction.endswith("a13_classii_gibbs_endpoint_production_merge_boundary_verify.py"),
-        [canonical_command, current_reproduction],
-        ["immutable R-105 verifier command", "current R-106 verifier command"],
-    )
+    add("surfaces", "status_reproduction", status.get("reproduction", {}).get("command") == canonical_command, status.get("reproduction", {}).get("command"), canonical_command)
     add("contract", "primary_count", contract.get("primary_assertions") == primary.get("assertions_total") == PRIMARY_ASSERTION_ORACLE, contract.get("primary_assertions"), PRIMARY_ASSERTION_ORACLE)
     add("contract", "independent_count", contract.get("independent_assertions") == independent.get("assertions_total") == INDEPENDENT_ASSERTION_ORACLE, contract.get("independent_assertions"), INDEPENDENT_ASSERTION_ORACLE)
     for label, expected_schema in (
         ("primary", primary.get("schema")),
         ("independent", independent.get("schema")),
-        ("integrated", "tect/a13-cartan-rational-subdivision-smart-path-boundary-integrated/1.0"),
+        ("integrated", "tect/a13-gibbs-endpoint-production-merge-boundary-integrated/1.0"),
     ):
         add("contract", f"{label}_schema", contract.get(f"{label}_schema") == expected_schema, contract.get(f"{label}_schema"), expected_schema)
     for label, path in (("primary", PRIMARY_RESULT), ("independent", INDEPENDENT_RESULT), ("integrated", OUTPUT)):
@@ -624,16 +522,15 @@ def main() -> int:
 
     consequence = manifest.get("consequence", {}) if isinstance(manifest.get("consequence"), dict) else {}
     consequence_expectations = {
-        "common_root_cartan_endpoint_quotient": True,
-        "regular_cartan_subdivision_transport": True,
-        "distinct_root_cartan_estimate": False,
-        "rational_labelled_owner_subdivision_invariance": False,
-        "rational_complete_endpoint_subdivision_invariance": True,
-        "generic_a9_monotonicity": False,
-        "all_law_pointwise_relative_bracket": False,
-        "gibbs_specific_or_time_integrated_bracket": False,
-        "one_fourier_pair_uniform_source_bound": True,
-        "full_mode_product_factorization": False,
+        "gibbs_endpoint_likelihood_identity": True,
+        "thermodynamic_integration_identity": True,
+        "independent_root_local_gibbs_bound": False,
+        "pointwise_endpoint_likelihood_coercivity": False,
+        "exact_production_radial_fierz": True,
+        "input_mode_leaf_tensorization": False,
+        "leafwise_sextic_merge_repair": False,
+        "coherent_output_frequency_coordinate": True,
+        "full_root_local_coherent_packet_bound": False,
         "full_overlap_src": False,
         "nelson": False,
         "sector_a_closure": False,
@@ -643,9 +540,8 @@ def main() -> int:
 
     not_established = manifest.get("claims_not_established", {}) if isinstance(manifest.get("claims_not_established"), dict) else {}
     for key in (
-        "distinct_root_cartan",
-        "visitwise_rational_owner_bound",
-        "gibbs_specific_or_time_integrated_bracket",
+        "gibbs_root_local_bound",
+        "full_root_local_coherent_packet_bound",
         "full_overlap_src",
         "nelson",
         "cutoff_removal",
@@ -672,7 +568,7 @@ def main() -> int:
         return 0
 
     payload = {
-        "schema": "tect/a13-cartan-rational-subdivision-smart-path-boundary-integrated/1.0",
+        "schema": "tect/a13-gibbs-endpoint-production-merge-boundary-integrated/1.0",
         "package_version": __version__,
         "claim_id": CLAIM,
         "result_id": RESULT_ID,
@@ -696,12 +592,11 @@ def main() -> int:
             "aggregate": primary.get("assertions_total", 0) + independent.get("assertions_total", 0) + len(rows),
         },
         "no_overclaim": (
-            "R-105 proves the complete common-root Cartan endpoint quotient, exact noninvariance of labelled "
-            "rational owners under one production-fibre subdivision, scoped method no-gos, and a uniform "
-            "one-Fourier-pair conditional bound. It proves no distinct-root Cartan estimate, visitwise rational "
-            "owner estimate, Gibbs-specific or time-integrated relative bracket, OVERLAP_src, Nelson estimate, "
-            "removal, interacting measure, tier promotion, or Sector A closure.  The all-finite-entropy-law "
-            "pointwise relative bracket is instead disproved at one fixed production cutoff."
+            "R-106 proves exact Gibbs endpoint-likelihood, entropy, thermodynamic-integration, "
+            "production radial Fierz, and fixed-cutoff 1:2 merge identities. It retires pointwise "
+            "endpoint-likelihood coercivity, deterministic input-mode leaf tensorization, and a "
+            "leafwise sextic repair. It does not prove the root-local coherent Gibbs packet, "
+            "OVERLAP_src, Nelson, removals, an interacting measure, tier promotion, or Sector A closure."
         ),
     }
     atomic_json(OUTPUT, payload)

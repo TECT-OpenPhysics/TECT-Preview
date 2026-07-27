@@ -1,0 +1,427 @@
+{
+  "assertion_names": [
+    "endpoint likelihood cancels trace",
+    "endpoint likelihood cancels local potential",
+    "endpoint likelihood is trace free",
+    "forward KL orientation",
+    "reverse KL orientation",
+    "forward entropy has minus sign",
+    "reverse entropy has plus sign",
+    "thermodynamic derivative",
+    "total time integral is endpoint difference",
+    "cosine sixth average",
+    "stabilising sextic budget",
+    "corrected top-shell u6",
+    "R-105 ratio unchanged",
+    "constant-ray determinant scale",
+    "constant-ray sextic scale",
+    "CM payment is lower order",
+    "small-sigma leading coefficient",
+    "outer cube count exceeds seven N cubed",
+    "d definition",
+    "a positive",
+    "b positive",
+    "c positive",
+    "global square c0 positive",
+    "global square c1 positive",
+    "radial Fierz split",
+    "radial asymptotic eigenvalue",
+    "delta nonnegative",
+    "delta zero at zero amplitude",
+    "delta asymptote",
+    "floor square inequality",
+    "delta bound factorisation",
+    "delta bound numerator positive",
+    "R-082 radial diagonalisation agrees",
+    "quartic raw merge",
+    "quadratic trace merge cancels",
+    "derivative norm envelope",
+    "sextic merge",
+    "sextic merge negative off zero",
+    "negative quartic coefficient",
+    "positive quadratic envelope",
+    "finite trace envelope",
+    "merge tends to minus infinity",
+    "threshold solves target crossing",
+    "coherent square retains cross terms",
+    "coherent and leaf squares differ",
+    "complete output square factor"
+  ],
+  "assertions": [
+    {
+      "actual": "logdet/2 - 5*xTx/9",
+      "expected": "logdet/2 - 5*xTx/9",
+      "group": "gibbs",
+      "name": "endpoint likelihood cancels trace",
+      "status": "PASS"
+    },
+    {
+      "actual": "logdet/2 - 5*xTx/9",
+      "expected": "U absent",
+      "group": "gibbs",
+      "name": "endpoint likelihood cancels local potential",
+      "status": "PASS"
+    },
+    {
+      "actual": "logdet/2 - 5*xTx/9",
+      "expected": "TrT absent",
+      "group": "gibbs",
+      "name": "endpoint likelihood is trace free",
+      "status": "PASS"
+    },
+    {
+      "actual": "E0L - H01",
+      "expected": "E_nu0 L-H(nu0|nu1)",
+      "group": "gibbs",
+      "name": "forward KL orientation",
+      "status": "PASS"
+    },
+    {
+      "actual": "E1L + H10",
+      "expected": "E_nu1 L+H(nu1|nu0)",
+      "group": "gibbs",
+      "name": "reverse KL orientation",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1",
+      "expected": "-1",
+      "group": "gibbs",
+      "name": "forward entropy has minus sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "gibbs",
+      "name": "reverse entropy has plus sign",
+      "status": "PASS"
+    },
+    {
+      "actual": "(b0*p0*exp(b0*t) + b1*p1*exp(b1*t))/(p0*exp(b0*t) + p1*exp(b1*t))",
+      "expected": "(b0*p0*exp(b0*t) + b1*p1*exp(b1*t))/(p0*exp(b0*t) + p1*exp(b1*t))",
+      "group": "gibbs",
+      "name": "thermodynamic derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "-log(1 + p1/p0) + log(exp(b0) + p1*exp(b1)/p0)",
+      "expected": "-log(p0 + p1) + log(p0*exp(b0) + p1*exp(b1))",
+      "group": "gibbs",
+      "name": "total time integral is endpoint difference",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/16",
+      "expected": "5/16",
+      "group": "correction",
+      "name": "cosine sixth average",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/20",
+      "expected": "3/20",
+      "group": "correction",
+      "name": "stabilising sextic budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*L**3/64",
+      "expected": "3*L**3/64",
+      "group": "correction",
+      "name": "corrected top-shell u6",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3/t_top",
+      "expected": "-3/t_top",
+      "group": "correction",
+      "name": "R-105 ratio unchanged",
+      "status": "PASS"
+    },
+    {
+      "actual": "N**(3/2)*c_det*sigma**2",
+      "expected": "N**(3/2)*c_det*sigma**2",
+      "group": "likelihood_nogo",
+      "name": "constant-ray determinant scale",
+      "status": "PASS"
+    },
+    {
+      "actual": "L**3*N**(3/2)*sigma**6*zeta",
+      "expected": "L**3*N**(3/2)*sigma**6*zeta",
+      "group": "likelihood_nogo",
+      "name": "constant-ray sextic scale",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "likelihood_nogo",
+      "name": "CM payment is lower order",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma**2*(-L**3*sigma**4*zeta + c_det)",
+      "expected": "-L**3*sigma**6*zeta + c_det*sigma**2",
+      "group": "likelihood_nogo",
+      "name": "small-sigma leading coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "7*N**3 + 9*N**2 + 3*N",
+      "expected": ">=7N^3",
+      "group": "likelihood_nogo",
+      "name": "outer cube count exceeds seven N cubed",
+      "status": "PASS"
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "42375000000/4000000000001",
+      "group": "production",
+      "name": "d definition",
+      "status": "PASS"
+    },
+    {
+      "actual": "18000000000/4000000000001",
+      "expected": ">0",
+      "group": "production",
+      "name": "a positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "7500000000/4000000000001",
+      "expected": ">0",
+      "group": "production",
+      "name": "b positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "9375000000/4000000000001",
+      "expected": ">0",
+      "group": "production",
+      "name": "c positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "12000000000/4000000000001",
+      "expected": ">0",
+      "group": "production",
+      "name": "global square c0 positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "30375000000/4000000000001",
+      "expected": ">0",
+      "group": "production",
+      "name": "global square c1 positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1500000000*y*(25*y**2 - 90*y*(eps + y) + 113*(eps + y)**2)/(4000000000001*(eps + y)**2)",
+      "expected": "7500000000*eps*y*(13*eps + 8*y)/(4000000000001*(eps + y)**2) + 72000000000*y/4000000000001",
+      "group": "production",
+      "name": "radial Fierz split",
+      "status": "PASS"
+    },
+    {
+      "actual": "72000000000/4000000000001",
+      "expected": "72000000000/4000000000001",
+      "group": "production",
+      "name": "radial asymptotic eigenvalue",
+      "status": "PASS"
+    },
+    {
+      "actual": "7500000000*eps*y*(13*eps + 8*y)/(4000000000001*(eps + y)**2)",
+      "expected": ">0",
+      "group": "production",
+      "name": "delta nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "production",
+      "name": "delta zero at zero amplitude",
+      "status": "PASS"
+    },
+    {
+      "actual": "60000000000*eps/4000000000001",
+      "expected": "60000000000*eps/4000000000001",
+      "group": "production",
+      "name": "delta asymptote",
+      "status": "PASS"
+    },
+    {
+      "actual": "eps**2 - 2*eps*y + y**2",
+      "expected": "(-eps + y)**2",
+      "group": "production",
+      "name": "floor square inequality",
+      "status": "PASS"
+    },
+    {
+      "actual": "1875000000*eps*(37*eps**2 + 22*eps*y + 5*y**2)/(4000000000001*(eps + y)**2)",
+      "expected": "eps*(60000000000*eps*(eps + y)/4000000000001 + 9375000000*(-eps + y)**2/4000000000001)/(eps + y)**2",
+      "group": "production",
+      "name": "delta bound factorisation",
+      "status": "PASS"
+    },
+    {
+      "actual": "eps*(60000000000*eps*(eps + y)/4000000000001 + 9375000000*(-eps + y)**2/4000000000001)",
+      "expected": ">0",
+      "group": "production",
+      "name": "delta bound numerator positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "9375000000*tau**2/4000000000001 - 33750000000*tau/4000000000001 + 42375000000/4000000000001",
+      "expected": "9375000000*tau**2/4000000000001 - 33750000000*tau/4000000000001 + 42375000000/4000000000001",
+      "group": "production",
+      "name": "R-082 radial diagonalisation agrees",
+      "status": "PASS"
+    },
+    {
+      "actual": "-r**2/4",
+      "expected": "-r**2/4",
+      "group": "merge",
+      "name": "quartic raw merge",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "merge",
+      "name": "quadratic trace merge cancels",
+      "status": "PASS"
+    },
+    {
+      "actual": "r**2 + 4",
+      "expected": "r**2 + 4",
+      "group": "merge",
+      "name": "derivative norm envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "15*r**2*(-9*r**2 - 2)/32",
+      "expected": "-15*r**2*(9*r**2 + 2)/32",
+      "group": "merge",
+      "name": "sextic merge",
+      "status": "PASS"
+    },
+    {
+      "actual": "-165/32",
+      "expected": "<0",
+      "group": "merge",
+      "name": "sextic merge negative off zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "9000000000*ksq*r_sq/4000000000001",
+      "expected": ">0",
+      "group": "merge",
+      "name": "negative quartic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "34687500000*eps*ksq*(r_sq + 4)/4000000000001",
+      "expected": ">0",
+      "group": "merge",
+      "name": "positive quadratic envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "69375000000*eps*gGamma/4000000000001",
+      "expected": ">0",
+      "group": "merge",
+      "name": "finite trace envelope",
+      "status": "PASS"
+    },
+    {
+      "actual": "-oo",
+      "expected": "-oo",
+      "group": "merge",
+      "name": "merge tends to minus infinity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-M",
+      "expected": "-M",
+      "group": "merge",
+      "name": "threshold solves target crossing",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*x1*x2 + 2*x1*x3 + 2*x2*x3",
+      "expected": "2*x1*x2 + 2*x1*x3 + 2*x2*x3",
+      "group": "output",
+      "name": "coherent square retains cross terms",
+      "status": "PASS"
+    },
+    {
+      "actual": "x1**2 + 2*x1*x2 + 2*x1*x3 + x2**2 + 2*x2*x3 + x3**2",
+      "expected": "not leaf sum",
+      "group": "output",
+      "name": "coherent and leaf squares differ",
+      "status": "PASS"
+    },
+    {
+      "actual": "(x1 + x2 + x3)**2",
+      "expected": "(x1 + x2 + x3)**2",
+      "group": "output",
+      "name": "complete output square factor",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 46,
+  "assertions_total": 46,
+  "derived": {
+    "K_epsilon": "69375000000*eps/4000000000001",
+    "corrected_top_shell_u6": "3*L**3/64",
+    "forced_all_law_ratio": "3/t_top",
+    "merge_upper_bound": "69375000000*eps*gGamma/4000000000001 + 34687500000*eps*ksq*lambda**2*(r_sq + 4)/4000000000001 - 9000000000*ksq*lambda**4*r_sq/4000000000001",
+    "production_a": "18000000000/4000000000001",
+    "production_b": "7500000000/4000000000001",
+    "production_c": "9375000000/4000000000001",
+    "production_d": "42375000000/4000000000001",
+    "q": "10/9",
+    "quartic_merge": "-r**2/4",
+    "sextic_merge": "-15*r**2*(9*r**2 + 2)/32"
+  },
+  "results": {
+    "derived": {
+      "K_epsilon": "69375000000*eps/4000000000001",
+      "corrected_top_shell_u6": "3*L**3/64",
+      "forced_all_law_ratio": "3/t_top",
+      "merge_upper_bound": "69375000000*eps*gGamma/4000000000001 + 34687500000*eps*ksq*lambda**2*(r_sq + 4)/4000000000001 - 9000000000*ksq*lambda**4*r_sq/4000000000001",
+      "production_a": "18000000000/4000000000001",
+      "production_b": "7500000000/4000000000001",
+      "production_c": "9375000000/4000000000001",
+      "production_d": "42375000000/4000000000001",
+      "q": "10/9",
+      "quartic_merge": "-r**2/4",
+      "sextic_merge": "-15*r**2*(9*r**2 + 2)/32"
+    },
+    "route_verdicts": {
+      "coherent_output_frequency_square": "retained-exact-coordinate",
+      "input_mode_leaf_tensorization": "failed-exact-production-1-to-2-merge",
+      "leafwise_sextic_merge_repair": "failed-not-superadditive",
+      "nelson": "open",
+      "pointwise_endpoint_likelihood_sextic_cm_coercivity": "failed-constant-ray",
+      "sector_a": "open",
+      "total_time_integration_without_root_local_bound": "tautological-endpoint-identity"
+    }
+  },
+  "results_sha256": "64e7c3d9bc6265118aa5cac4ff19e204e7a6edfd3459567d30743ebec0cc6b52",
+  "route_verdicts": {
+    "coherent_output_frequency_square": "retained-exact-coordinate",
+    "input_mode_leaf_tensorization": "failed-exact-production-1-to-2-merge",
+    "leafwise_sextic_merge_repair": "failed-not-superadditive",
+    "nelson": "open",
+    "pointwise_endpoint_likelihood_sextic_cm_coercivity": "failed-constant-ray",
+    "sector_a": "open",
+    "total_time_integration_without_root_local_bound": "tautological-endpoint-identity"
+  },
+  "schema": "tect/a13-gibbs-endpoint-production-merge-boundary-primary/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

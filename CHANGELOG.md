@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-106 Gibbs endpoint likelihood and production merge boundary] - 2026-07-28
+
+R-106 proves the exact actual-Gibbs endpoint likelihood, dual KL, variational, thermodynamic-integration, and production radial Fierz identities. It records that total time integration alone is circular, and retires pointwise endpoint-likelihood coercivity plus the tested bounded raw input-mode production merge and leafwise sextic repairs. The complete coherent output-frequency packet is an identified candidate only; the equivalent direct source-action route, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open. R-105 is immutably reissued as v1.1 with top-shell coefficient 3L^3/64 and physical radius N=2^J; its 3/t ratio, verdicts, and tier are unchanged.
+
 ## [Clarify R-105 all-law pointwise boundary] - 2026-07-28
 
 Scope clarification: R-105 disproves the all-law pointwise relative A9 bracket at one fixed production cutoff. It does not disprove a Gibbs-specific or time-integrated signed bracket, OVERLAP_src, or Nelson.

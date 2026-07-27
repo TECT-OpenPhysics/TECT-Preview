@@ -96,6 +96,16 @@ sign-indefinite cross-mode resonances. The proof line therefore returns to the
 uniform complete source action through either a complete signed cross-mode/
 forest packet or a Gibbs-specific/time-integrated A9 cancellation. Sector A
 remains open.
+R-106 proves the exact Gibbs endpoint likelihood, both KL orientations, and
+the thermodynamic-integration identity. The total time integral is only the
+endpoint target until an independent root-local estimate is supplied. A
+constant production ray rules out pointwise endpoint-likelihood coercivity,
+and the exact same-root `1:2` production merge rules out bounded raw input-mode
+leaf tensorization and its leafwise sextic repair. R-082's complete coherent
+output-frequency square is a legal prioritized coordinate, not yet a bound and
+not claimed unique; the equivalent direct complete source-action route remains
+live. Uniform `OVERLAP_src`, Nelson, removals, the interacting measure, and
+Sector A remain open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

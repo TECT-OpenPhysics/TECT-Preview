@@ -6,10 +6,14 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY](#ng-2026-07-28-a13-total-a9-time-integration-identity) | use the exact total A9 thermodynamic integral itself as the missing uniform estimate | `(q/2) int_0^1 E_(nu_t) B_t dt=Phi_1-Phi_0` is exactly the unknown self-coupled versus controlled endpoint difference. R-093 rewrites the same equality in source coordinates; near minimizers leave no independent entropy reserve. A new root-local bound is still required |
+| [NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY](#ng-2026-07-28-a13-pointwise-endpoint-likelihood-coercivity) | upper-bound the endpoint likelihood pointwise by fixed sextic plus Cameron--Martin payments | the constant active-doublet production ray has likelihood at least `c A^2 N`; taking `A=sigma N^(1/4)` with small fixed `sigma` makes likelihood minus any fixed sextic/CM payment diverge. The field is Gaussian-null, so this is a pointwise-method no-go, not a Nelson counterexample |
+| [NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION](#ng-2026-07-28-a13-production-input-mode-merge-tensorization) | reassemble deterministic production input leaves through a universal bounded inclusion--exclusion raw covariance-normal correction, or repair it by leafwise sextic splitting | an exact same-root `1:2` Fourier merge has raw correction `<=-c lambda^4+O(lambda^2)` and sextic merge `-15r^2(9r^2+2)/32<0`. This does not refute the complete coherent output square, complete action, or Nelson |
+| [AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION](#audit-2026-07-28-a13-r105-sextic-coefficient-cutoff-notation) | R-105 stabilized top-shell coefficient and sharp-cube radius notation | the stabilized coefficient is `(3/20)(5/16)L^3=3L^3/64`, and the constant-ray divergence is linear in physical radius `N` with `N=2^J`, not in the dyadic index. R-105 is reissued v1.1; the ratio `3/t`, all route verdicts, tier, and open frontier are unchanged |
 | [NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION](#ng-2026-07-28-a13-rational-taylor-owner-subdivision) | temporalize the historical rational `F_6.5` or fixed-chart `K_R` visit by visit across representation-preserving subdivisions | on the exact active production scalar fibre, one chart has `F_6.5=K_R=-992/81`, while a two-step subdivision with the same total endpoint has `F_6.5=427/162` and `K_R=355/162`. The complete endpoint increment stays `1600/81`; the `R_Q`, `M_U`, and `K_R` defects cancel exactly. This does not refute the one-chart identity or R-102's fixed regular estimate |
 | [NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY](#ng-2026-07-28-a13-generic-smart-path-monotonicity) | close A9 from PSD, divergence freedom, quadratic coefficient growth, and sextic coercivity alone | an exact two-dimensional PSD divergence-free quadratic matrix with sextic tilt has first smart-path variation `-(80/9) E_mu[Y^4]<0` at `q=10/9`; independent blocks amplify the loss linearly. This is not a production counterexample. A production-specific full relative-bracket/Gronwall theorem remains possible |
 | [NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET](#ng-2026-07-28-a13-all-law-pointwise-relative-bracket) | prove a pointwise-in-time relative A9 bracket with integrable coefficients for every finite-entropy law | one fixed-cutoff production top-shell ray and a countable family of translated Gaussian laws force the free-energy coefficient to scale as `q u_6 A^6`, the bracket coefficient as `-3q u_6 A^6/t`, and hence `b(t)>=3/t` almost everywhere. This excludes the all-law theorem but not a Gibbs-only or time-integrated bracket |
-| [NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG](#ng-2026-07-28-a13-full-budget-critical-young) | replace the signed expected source action by pathwise coercivity or absolute critical-homogeneity Young extraction, even using the full `9/20` energy and `3/20` sextic budgets | the Gaussian-null constant active mode has a paid minimum `-(4 sqrt(5)/9)L^3 d_J^(3/2)` with `d_J~0.001248334393361145 J`, while `R E^(3/4)Y^(1/4)` has the exact finite-remainder threshold `R<=3/5`. The Gaussian coefficient norm is unbounded, so neither pathwise route closes Nelson; expectation-level Wick cancellation remains indispensable |
+| [NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG](#ng-2026-07-28-a13-full-budget-critical-young) | replace the signed expected source action by pathwise coercivity or absolute critical-homogeneity Young extraction, even using the full `9/20` energy and `3/20` sextic budgets | the Gaussian-null constant active mode has a paid minimum `-(4 sqrt(5)/9)L^3 d_N^(3/2)` with `d_N~0.001248334393361145 N`, while `R E^(3/4)Y^(1/4)` has the exact finite-remainder threshold `R<=3/5`. The Gaussian coefficient norm is unbounded, so neither pathwise route closes Nelson; expectation-level Wick cancellation remains indispensable |
 | [NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION](#ng-2026-07-28-a13-one-pair-product-factorization) | multiply exact one-Fourier-pair determinant bounds to control the full physical nonlinear field | the single pair is uniformly controlled, but for `X=A+r cos x+u cos 2x` the cross-mode raw resonance relative to isolated pairs is `r^2 u(6A+5u)/4`, which is negative at `A=1,u=-1`. The complete raw square remains nonnegative; this blocks only factorization and leaves complete cross-mode/forest tilted-law control open |
 | [NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING](#ng-2026-07-28-a13-anticipative-random-heat-conditioning) | extend deterministic-heat Wick centering to arbitrary same-root or control-dependent random PSD heat by conditioning | predictable fresh-root-independent heat disintegrates correctly, but for `G~N(0,1)`, `Q=G^2-1`, and `Sigma(G)=G^2`, `E[Sigma Q]=3-1=2`. Thus there is no automatic extension to arbitrary anticipative heat. This is not a necessary-and-sufficient classifier: the same-root PSD heat `(G^2-3)^2` has zero defect. It is a method no-go, not a complete-action, `OVERLAP_src`, or Nelson counterexample |
 | [NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE](#ng-2026-07-28-a13-global-to-predictable-current-bridge) | delete the global R-101/R-102 rational current by applying R-096 predictable-baseline support collapse root by root, or by retaining only martingale differences of the future control and tangent | R-096 removes the genuine large-gap branch only on each predictable partial-control baseline. Exact cross-Doob decomposition leaves the future-feedback innovation `R_cur=sum_(j<k) E<d_j G_J, Delta_k Psi^(k)>` together with product-increment and covariance-difference companions. An exact two-root scalar filtration has first innovation bracket `-70 lambda/27`; a separate future-insertion fixture has `d_ja=d_jc_a=0` but a strictly negative nonlinear current. These are method no-gos, not paid production counterexamples |
@@ -135,6 +139,82 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
 
+<a id="ng-2026-07-28-a13-total-a9-time-integration-identity"></a>
+### NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY -- total thermodynamic integration is the endpoint target
+
+**Failure mode.** Treat the exact integral of the A9 Gibbs bracket as a new
+lower estimate without first proving an independent root-local bound.
+
+**Evidence.** R-106 Proposition 3.1 proves
+`(q/2) int_0^1 E_(nu_(J,t)) B_(J,t) dt=Phi_(J,1)-Phi_(J,0)` exactly. The
+endpoint-likelihood identities give the same free-energy difference in both
+relative-entropy orientations. In R-093 source coordinates the directed-union
+near-minimizer excess is exactly `H(nu_h|nu_(J,0))+Phi_h` and tends to zero;
+`H(nu_h|nu_(J,1))` is paired exactly with `-E_(nu_h) L_J`, not an independent
+reserve.
+
+**Consequence.** Thermodynamic integration remains a legal framework, but its
+total integral alone is circular. Closure still requires a summable root-local
+actual-Gibbs bound or the equivalent direct complete signed source-action
+estimate. No Nelson, removal, measure, or Sector-A counterexample is asserted.
+
+<a id="ng-2026-07-28-a13-pointwise-endpoint-likelihood-coercivity"></a>
+### NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY -- fixed pointwise sextic and Cameron--Martin payments cannot dominate the endpoint likelihood
+
+**Failure mode.** Discard entropy and bound the exact endpoint likelihood
+pointwise by fixed sextic and Cameron--Martin payments, uniformly in the
+physical sharp-cube radius `N`.
+
+**Evidence.** On the constant active-doublet production field, the raw
+quadratic term vanishes while covariance ellipticity and the exact positive
+radial eigenvalue give `log det(I+qT_N)>=c A^2 N`. The zero-mode
+Cameron--Martin norm is `c_CM A^2`. With `A=sigma N^(1/4)`, likelihood and
+sextic both scale as `N^(3/2)`, but a sufficiently small fixed `sigma` leaves a
+positive leading coefficient; the Cameron--Martin cost is only `O(N^(1/2))`.
+
+**Consequence.** This rejects only pointwise likelihood coercivity. The
+constant field is Gaussian-null, and full entropy/Gaussian integration, a
+root-local Gibbs estimate, the complete source action, `OVERLAP_src`, and
+Nelson remain open.
+
+<a id="ng-2026-07-28-a13-production-input-mode-merge-tensorization"></a>
+### NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION -- exact production 1:2 merge defeats a universal bounded input-leaf correction
+
+**Failure mode.** Reassemble deterministic production input leaves using a
+universal bounded inclusion--exclusion correction for the raw covariance-
+normal functional, or repair that reassembly by splitting the sextic over the
+same leaves.
+
+**Evidence.** For `F=1+r cos(theta)-cos(2theta)` and its two input leaves, the
+exact production radial formula gives
+`Delta_lambda<=-(a|k|^2r^2/2)lambda^4+O(lambda^2)`, hence the correction tends
+to negative infinity at every fixed cutoff. The exact leafwise sextic merge is
+`-15r^2(9r^2+2)/32<0`. Primary symbolic and independent exact Laurent-
+polynomial certificates verify both identities.
+
+**Consequence.** Only schemes requiring such a bounded deterministic raw
+input-leaf correction are retired. The theorem is not a blanket determinant
+no-go and does not refute the complete coherent output-frequency square,
+parent/root sextic, complete signed action, Gibbs law, `OVERLAP_src`, or Nelson.
+
+<a id="audit-2026-07-28-a13-r105-sextic-coefficient-cutoff-notation"></a>
+### AUDIT-2026-07-28-A13-R105-SEXTIC-COEFFICIENT-CUTOFF-NOTATION -- corrected stabilized coefficient and physical-radius variable
+
+**Failure mode.** R-105 v1.0 displayed the coefficient inherited from A9's
+original physical sextic in its stabilized Nelson ray and denoted the physical
+sharp-cube radius by the dyadic index letter `J`.
+
+**Evidence.** The stabilized budget is `3/20` and
+`<cos^6>=5/16`, so `u_6=3L^3/64`. The outer-shell determinant/counterterm count
+is linear in physical radius `N`, with `N=2^J` in a dyadic parametrization.
+R-106 and the corrected non-importing executable verify the coefficient and
+the homogeneous ratio independently.
+
+**Consequence.** R-105 is reissued as v1.1. Only the displayed stabilized
+coefficient and physical-radius notation change. The bracket/free-energy ratio
+`3/t`, constant-ray divergence verdict, every registered no-go, R-105 tier,
+and the open Sector-A frontier are unchanged.
+
 <a id="ng-2026-07-28-a13-rational-taylor-owner-subdivision"></a>
 ### NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION -- labelled rational owners do not descend to the subdivision quotient
 
@@ -193,7 +273,7 @@ retained and `3k,5k` removed, and a real active-doublet horizontal unit vector
 `u`. The exact production Fierz formula gives
 `B(Agu)u=4a_prod A^2 g^2 u+O(1)` with the pinned `a_prod>0`. Moreover,
 `P_J g^3=(3/4)g`, `P_J g^5=(10/16)g`, and the sextic coefficient is
-`u_6=5 gamma L^3/96>0`. If `T_infty` is the `A^2`-leading coefficient
+`u_6=(3/20)(5/16)L^3=3L^3/64>0`. If `T_infty` is the `A^2`-leading coefficient
 operator, then the projected sextic gradient is a positive multiple of
 `T_infty e`; hence it lies in `Ran T_infty` and its range-projection pairing
 with the ray is exactly `6u_6`. Finite-dimensional resolvent saturation gives
@@ -222,7 +302,7 @@ remainder.
 shift `h=te_1`, the accepted counterterm slope is
 `kappa=0.001248334393361145...`. With the entire energy/sextic budgets
 `eta=9/20`, `zeta=3/20`, the paid polynomial has minimum
-`-(4 sqrt(5)/9)L^3 d_J^(3/2)` with `d_J~kappa J`, hence diverges to negative
+`-(4 sqrt(5)/9)L^3 d_N^(3/2)` with `d_N~kappa N`, hence diverges to negative
 infinity. Separately, an inequality
 `R E^(3/4)Y^(1/4)<=eta E+zeta Y+F(R)` for every `E,Y>=0` has finite `F(R)`
 only when `R<=4 eta^(3/4)zeta^(1/4)/3^(3/4)=3/5`; set `Y/E=eta/(3zeta)`

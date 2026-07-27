@@ -629,6 +629,23 @@ endpoint theorem.
     complete signed packet or a Gibbs-specific/time-integrated A9 route.
     Sector A remains open at T4.
 
+47. **Gibbs endpoint likelihood and exact production radial merge boundary.**
+    R-106, `A13-CLASSII-GIBBS-ENDPOINT-PRODUCTION-MERGE-BOUNDARY`, derives the
+    exact stabilized Gibbs endpoint likelihood, both KL orientations, the
+    entropy variational identity, and the total thermodynamic integral. The
+    latter is exactly the unknown endpoint free-energy difference and cannot
+    serve as its own estimate. A Gaussian-null constant production ray rules
+    out fixed pointwise likelihood coercivity. The exact active-doublet radial
+    Fierz coefficient then gives an unbounded same-root `1:2` raw input merge
+    and a negative leafwise sextic merge, retiring only bounded input-leaf
+    reassembly of that form. R-082's coherent output-frequency square is a
+    legal candidate only after the complete nonlinear current is assembled
+    with heat, covariance trace, mixed baseline, R-063 forest, and one root
+    sextic. No bound or uniqueness is asserted; actual-Gibbs/time-integrated
+    and direct complete source-action formulations remain open. R-105 is
+    reissued v1.1 with `u_6=3L^3/64` and physical radius `N`; its ratio and
+    verdicts are unchanged. Sector A remains open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

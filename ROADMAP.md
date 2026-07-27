@@ -259,6 +259,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   physical cross-mode resonance blocks tensorization. The live routes are a
   complete signed cross-mode/forest packet or a Gibbs-specific/time-integrated
   A9 argument. Sector A remains open. R-080,
+  R-106 now makes the Gibbs branch exact at its endpoint: the log-likelihood,
+  both KL orientations, and thermodynamic-integration identity are proved, but
+  the total time integral alone is circular without an independent local
+  estimate. A constant production ray retires pointwise endpoint-likelihood
+  coercivity, and an exact same-root `1:2` production merge retires bounded
+  raw input-leaf tensorization and its leafwise sextic repair. The R-082
+  complete coherent output-frequency square is therefore a prioritized legal
+  candidate coordinate, not a proved or unique bound; the direct complete
+  source-action route remains live. Uniform `OVERLAP_src`, Nelson, removals,
+  the interacting measure, and Sector A remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -643,9 +653,14 @@ preserved in git/changelog rather than treated as current gates.
    chart endpoint-owner defect with an explicit nonnegative Douglas slack.
    R-105 then retires generic monotonicity, the registered pathwise/absolute
    critical-Young route, and the all-law pointwise relative bracket while
-   preserving a Gibbs-specific/time-integrated A9 successor. The uniform
-   source-action/Nelson inequality remains open. The route to the
-   regular closure was narrowed by R-080--R-102.
+   preserving a Gibbs-specific/time-integrated A9 successor. R-106 proves its
+   exact endpoint-likelihood/KL and thermodynamic identities, retires total
+   time integration as a standalone estimate, and rules out the tested
+   pointwise-likelihood and raw input-leaf merge repairs. The prioritized
+   coordinate is now a complete coherent output-frequency packet, with the
+   direct complete source action still live. The uniform source-action/Nelson
+   inequality remains open. The route to the regular closure was narrowed by
+   R-080--R-102.
    R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
@@ -775,6 +790,14 @@ preserved in git/changelog rather than treated as current gates.
    one-pair estimate cannot bypass physical cross-mode coupling. The exact
    successor is the uniform complete source action through a signed packet or
    Gibbs-specific/time-integrated A9 cancellation. Sector A remains open.
+   R-106 proves the exact endpoint-likelihood/KL and thermodynamic identities,
+   but shows that the total time integral by itself merely restates the open
+   endpoint gap. Pointwise endpoint coercivity and bounded raw input-leaf
+   merge tensorization, including the leafwise sextic repair, are now retired.
+   Continue with a root-local complete coherent output-frequency packet, while
+   retaining the equivalent direct complete source-action formulation as a
+   live alternative. `OVERLAP_src`, Nelson, removals, the interacting measure,
+   and Sector A remain open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

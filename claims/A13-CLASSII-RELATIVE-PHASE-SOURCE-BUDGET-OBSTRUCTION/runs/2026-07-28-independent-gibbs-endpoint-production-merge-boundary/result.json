@@ -1,0 +1,517 @@
+{
+  "assertion_names": [
+    "nu0 normalized",
+    "nu1 normalized",
+    "forward endpoint KL",
+    "reverse endpoint KL",
+    "forward KL nonnegative",
+    "reverse KL nonnegative",
+    "likelihood partition identity",
+    "independent thermodynamic integral",
+    "cosine sixth average",
+    "stabilising budget",
+    "corrected u6 factor",
+    "bracket/free ratio numerator",
+    "d exact",
+    "all coefficients positive",
+    "radial split sample 0",
+    "delta nonnegative sample 0",
+    "delta bounded sample 0",
+    "radial split sample 1",
+    "delta nonnegative sample 1",
+    "delta bounded sample 1",
+    "radial split sample 2",
+    "delta nonnegative sample 2",
+    "delta bounded sample 2",
+    "radial split sample 3",
+    "delta nonnegative sample 3",
+    "delta bounded sample 3",
+    "radial split sample 4",
+    "delta nonnegative sample 4",
+    "delta bounded sample 4",
+    "global-square radial agreement 0",
+    "global-square radial agreement 1",
+    "global-square radial agreement 2",
+    "global-square radial agreement 3",
+    "global-square radial agreement 4",
+    "raw merge 1/3",
+    "trace merge 1/3",
+    "derivative envelope 1/3",
+    "sextic merge 1/3",
+    "sextic sign 1/3",
+    "raw merge 1",
+    "trace merge 1",
+    "derivative envelope 1",
+    "sextic merge 1",
+    "sextic sign 1",
+    "raw merge 5/2",
+    "trace merge 5/2",
+    "derivative envelope 5/2",
+    "sextic merge 5/2",
+    "sextic sign 5/2",
+    "merge upper bound eventually decreases",
+    "merge upper bound negative",
+    "outer cube count N=2",
+    "outer cube count N=4",
+    "outer cube count N=10",
+    "outer cube count N=32",
+    "outer cube count N=100",
+    "coherent cross identity",
+    "coherent differs from leaf sum",
+    "coherent square nonnegative"
+  ],
+  "assertions": [
+    {
+      "actual": "1.0",
+      "expected": "1.0",
+      "group": "gibbs",
+      "name": "nu0 normalized",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": "1.0",
+      "group": "gibbs",
+      "name": "nu1 normalized",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1494052873818654",
+      "expected": "0.1494052873818654",
+      "group": "gibbs",
+      "name": "forward endpoint KL",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.1494052873818654",
+      "expected": "0.14940528738186537",
+      "group": "gibbs",
+      "name": "reverse endpoint KL",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.21827448684776699",
+      "expected": ">=0",
+      "group": "gibbs",
+      "name": "forward KL nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2595171177365999",
+      "expected": ">=0",
+      "group": "gibbs",
+      "name": "reverse KL nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.161143490663795",
+      "expected": "E_nu1 exp(L)",
+      "group": "gibbs",
+      "name": "likelihood partition identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7221603542692461",
+      "expected": "0.7221603542692461",
+      "group": "gibbs",
+      "name": "independent thermodynamic integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/16",
+      "expected": "5/16",
+      "group": "correction",
+      "name": "cosine sixth average",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/20",
+      "expected": "3/20",
+      "group": "correction",
+      "name": "stabilising budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/64",
+      "expected": "3/64",
+      "group": "correction",
+      "name": "corrected u6 factor",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3",
+      "expected": "-3",
+      "group": "correction",
+      "name": "bracket/free ratio numerator",
+      "status": "PASS"
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "42375000000/4000000000001",
+      "group": "production",
+      "name": "d exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "7500000000/4000000000001",
+      "expected": ">0",
+      "group": "production",
+      "name": "all coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1473/128000000000032000",
+      "expected": "1473/128000000000032000",
+      "group": "production",
+      "name": "radial split sample 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "141/25600000000006400",
+      "expected": ">=0",
+      "group": "production",
+      "name": "delta nonnegative sample 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "141/25600000000006400",
+      "expected": "111/6400000000001600",
+      "group": "production",
+      "name": "delta bounded sample 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "891/32000000000008000",
+      "expected": "891/32000000000008000",
+      "group": "production",
+      "name": "radial split sample 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/6400000000001600",
+      "expected": ">=0",
+      "group": "production",
+      "name": "delta nonnegative sample 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/6400000000001600",
+      "expected": "111/6400000000001600",
+      "group": "production",
+      "name": "delta bounded sample 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "72000000001428000000008305500000000/28000000000399000000001470000000000343",
+      "expected": "72000000001428000000008305500000000/28000000000399000000001470000000000343",
+      "group": "production",
+      "name": "radial split sample 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "60000000000682500000000/4000000000057000000000210000000000049",
+      "expected": ">=0",
+      "group": "production",
+      "name": "delta nonnegative sample 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "60000000000682500000000/4000000000057000000000210000000000049",
+      "expected": "111/6400000000001600",
+      "group": "production",
+      "name": "delta bounded sample 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "3000000000001700000000000282500000000/33333333333355000000000004666666666667",
+      "expected": "3000000000001700000000000282500000000/33333333333355000000000004666666666667",
+      "group": "production",
+      "name": "radial split sample 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "500000000000162500000000/33333333333355000000000004666666666667",
+      "expected": ">=0",
+      "group": "production",
+      "name": "delta nonnegative sample 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "500000000000162500000000/33333333333355000000000004666666666667",
+      "expected": "111/6400000000001600",
+      "group": "production",
+      "name": "delta bounded sample 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "72000000000000000000204000000000000000000169500000000000000000/4000000000001000000008000000000002000000004000000000001",
+      "expected": "72000000000000000000204000000000000000000169500000000000000000/4000000000001000000008000000000002000000004000000000001",
+      "group": "production",
+      "name": "radial split sample 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "60000000000000000000097500000000000000000/4000000000001000000008000000000002000000004000000000001",
+      "expected": ">=0",
+      "group": "production",
+      "name": "delta nonnegative sample 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "60000000000000000000097500000000000000000/4000000000001000000008000000000002000000004000000000001",
+      "expected": "111/6400000000001600",
+      "group": "production",
+      "name": "delta bounded sample 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "42375000000/4000000000001",
+      "expected": "42375000000/4000000000001",
+      "group": "production",
+      "name": "global-square radial agreement 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "34523437500/4000000000001",
+      "expected": "34523437500/4000000000001",
+      "group": "production",
+      "name": "global-square radial agreement 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "27843750000/4000000000001",
+      "expected": "27843750000/4000000000001",
+      "group": "production",
+      "name": "global-square radial agreement 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "18000000000/4000000000001",
+      "expected": "18000000000/4000000000001",
+      "group": "production",
+      "name": "global-square radial agreement 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "13500000000/4000000000001",
+      "expected": "13500000000/4000000000001",
+      "group": "production",
+      "name": "global-square radial agreement 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/36",
+      "expected": "-1/36",
+      "group": "merge",
+      "name": "raw merge 1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "merge",
+      "name": "trace merge 1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "37/9",
+      "expected": "37/9",
+      "group": "merge",
+      "name": "derivative envelope 1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5/32",
+      "expected": "-5/32",
+      "group": "merge",
+      "name": "sextic merge 1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5/32",
+      "expected": "<0",
+      "group": "merge",
+      "name": "sextic sign 1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/4",
+      "expected": "-1/4",
+      "group": "merge",
+      "name": "raw merge 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "merge",
+      "name": "trace merge 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "5",
+      "expected": "5",
+      "group": "merge",
+      "name": "derivative envelope 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-165/32",
+      "expected": "-165/32",
+      "group": "merge",
+      "name": "sextic merge 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-165/32",
+      "expected": "<0",
+      "group": "merge",
+      "name": "sextic sign 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-25/16",
+      "expected": "-25/16",
+      "group": "merge",
+      "name": "raw merge 5/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "merge",
+      "name": "trace merge 5/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "41/4",
+      "expected": "41/4",
+      "group": "merge",
+      "name": "derivative envelope 5/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-87375/512",
+      "expected": "-87375/512",
+      "group": "merge",
+      "name": "sextic merge 5/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-87375/512",
+      "expected": "<0",
+      "group": "merge",
+      "name": "sextic sign 5/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "[Fraction(-143999999999944241, 6400000000001600), Fraction(-14399999999999999444999741, 6400000000001600), Fraction(-14399999999999999999999444999999999741, 6400000000001600)]",
+      "expected": "strict decrease",
+      "group": "merge",
+      "name": "merge upper bound eventually decreases",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14399999999999999999999444999999999741/6400000000001600",
+      "expected": "<0",
+      "group": "merge",
+      "name": "merge upper bound negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "98",
+      "expected": ">=56",
+      "group": "likelihood_nogo",
+      "name": "outer cube count N=2",
+      "status": "PASS"
+    },
+    {
+      "actual": "604",
+      "expected": ">=448",
+      "group": "likelihood_nogo",
+      "name": "outer cube count N=4",
+      "status": "PASS"
+    },
+    {
+      "actual": "7930",
+      "expected": ">=7000",
+      "group": "likelihood_nogo",
+      "name": "outer cube count N=10",
+      "status": "PASS"
+    },
+    {
+      "actual": "238688",
+      "expected": ">=229376",
+      "group": "likelihood_nogo",
+      "name": "outer cube count N=32",
+      "status": "PASS"
+    },
+    {
+      "actual": "7090300",
+      "expected": ">=7000000",
+      "group": "likelihood_nogo",
+      "name": "outer cube count N=100",
+      "status": "PASS"
+    },
+    {
+      "actual": "-17",
+      "expected": "-17",
+      "group": "output",
+      "name": "coherent cross identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/4",
+      "expected": "77/4",
+      "group": "output",
+      "name": "coherent differs from leaf sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/4",
+      "expected": ">=0",
+      "group": "output",
+      "name": "coherent square nonnegative",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 59,
+  "assertions_total": 59,
+  "derived": {
+    "corrected_top_shell_u6_factor": "3/64",
+    "production_a": "18000000000/4000000000001",
+    "production_b": "7500000000/4000000000001",
+    "production_c": "9375000000/4000000000001",
+    "quartic_merge": "-1/4*r^2",
+    "sextic_merge": "-15/32*r^2*(9*r^2+2)"
+  },
+  "results": {
+    "derived": {
+      "corrected_top_shell_u6_factor": "3/64",
+      "production_a": "18000000000/4000000000001",
+      "production_b": "7500000000/4000000000001",
+      "production_c": "9375000000/4000000000001",
+      "quartic_merge": "-1/4*r^2",
+      "sextic_merge": "-15/32*r^2*(9*r^2+2)"
+    },
+    "route_verdicts": {
+      "coherent_output_frequency_square": "retained",
+      "endpoint_likelihood_identity": "exact-boundary-only",
+      "input_mode_leaf_tensorization": "failed-production-merge",
+      "nelson": "open",
+      "sector_a": "open"
+    }
+  },
+  "results_sha256": "f199e84a18117a1e0d29fada459ecdda4065f0a1bc5a9fc6f65b6d56e672b0dc",
+  "route_verdicts": {
+    "coherent_output_frequency_square": "retained",
+    "endpoint_likelihood_identity": "exact-boundary-only",
+    "input_mode_leaf_tensorization": "failed-production-merge",
+    "nelson": "open",
+    "sector_a": "open"
+  },
+  "schema": "tect/a13-gibbs-endpoint-production-merge-boundary-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -824,6 +824,29 @@ the following structural results and proof-architecture boundaries hold.
     `OVERLAP_src`/Nelson action, approached by a complete signed cross-mode/
     forest packet or a Gibbs-specific/time-integrated A9 inequality. Removals,
     a measure, and Sector A remain open; tier stays T4.
+49. `A13-CLASSII-GIBBS-ENDPOINT-PRODUCTION-MERGE-BOUNDARY` is R-106. For the
+    R-093 stabilized `q=10/9` Gibbs interpolation, the self-coupled and
+    independent endpoints have exact likelihood
+    `L_J=(1/2)log det(I+qT_J)-(q/2)x^T T_Jx`, dual KL identities, and the
+    entropy variational formula. The total A9 bracket integral equals the
+    unknown endpoint free-energy difference exactly and is therefore not an
+    independent estimate. A constant active-doublet ray has likelihood at
+    least `cA^2N`; `A=sigma N^(1/4)` rules out fixed pointwise sextic plus
+    Cameron--Martin domination but is Gaussian-null and does not refute the
+    Gibbs integral. On the exact production radial fibre,
+    `B(fu)=f^2B_inf(u)+delta_epsilon(f)u tensor u`, `B_inf(u)u=4au`, and
+    `0<=delta_epsilon<=epsilon(8b+c)`. An exact same-root `1:2` Fourier packet
+    has raw merge `<=-c lambda^4+O(lambda^2)` and sextic merge
+    `-15r^2(9r^2+2)/32`, excluding a universal bounded input-leaf correction
+    and leafwise sextic repair only. A legal candidate coordinate is the
+    complete coherent output-frequency current after every input convolution
+    is assembled, with heat, covariance trace, mixed baseline, R-063 forest,
+    and one parent/root sextic retained. No bound on that packet is proved;
+    actual-Gibbs/time-integrated and direct complete source-action formulations
+    remain open. `EXP-000270--EXP-000275` preserve the exact successes,
+    failures, successor, and R-105 v1.1 correction audit; in particular,
+    `EXP-000274` records the coherent-output candidate coordinate. `OVERLAP_src`, Nelson,
+    removals, a measure, and Sector A remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -879,6 +902,7 @@ is a scoped T4 subproof and does not promote A13.
 | Regular complete-packet ownership / H_N and REG | Exact R-079 expectation identity, fixed-low versus future raw-Wick split, one signed paid difference, complete-owner row additivity, refund ledger, seven/eight-module rational budget simplices, and terminal-square reservation | T4 analytic/exact/executed regular closure; complete regular `H_N` and `REG` closed, while naked posterior positivity, progressive/revisit `H_A`, `OVERLAP_src`, and Nelson remain open |
 | Fixed-chart progressive owner assembly | Zero endpoint-owner defect on each temporally faithful fixed chart, recombined-total invariance under representation-preserving subdivision, exact nonnegative Douglas cost slack, and anticipative-heat no-general-extension boundary | T4 analytic/exact/executed algebraic identity; fixed-chart assembly closed, while uniform `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Cartan/rational subdivision and static-source boundary | Common-root complete-heat endpoint quotient, exact rational labelled-owner sign flip with invariant complete endpoint, generic A9 and critical-Young no-gos, one-pair predictable-source determinant bound, and cross-mode factorization obstruction | T4 analytic/exact/executed advance and method boundary; exact source-action/relative-bracket theorem, Nelson, removals, measure construction, and Sector A remain open |
+| Gibbs endpoint likelihood / production input-merge boundary | Exact endpoint likelihood, dual KL and thermodynamic identities; pointwise likelihood no-go; exact radial Fierz coefficient; unbounded 1:2 raw input merge and leafwise sextic boundary; coherent output-frequency candidate coordinate | T4 analytic/exact/executed boundary; root-local coherent-output/source-action estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1163,27 +1187,34 @@ Current subordinate order:
    attainment, an independent uniform fibre-entropy reserve, causal
    orthogonal QR, local-fixture amplitude scaling, generic A9 monotonicity,
    pathwise coercivity, critical coefficient-norm Young extraction,
-   multiplication of one-pair bounds, and the all-law pointwise relative A9
-   bracket are retired. R-105 proves only an artificial scalar quadratic
-   one-pair mode-diagonal theorem. The live A9 route is Gibbs-specific or
-   time-integrated and signed; the live source route is the complete signed
-   cross-mode/forest packet.
+    multiplication of one-pair bounds, and the all-law pointwise relative A9
+    bracket are retired. R-106 additionally retires counting the total A9
+    thermodynamic integral itself as an estimate, fixed pointwise endpoint-
+    likelihood coercivity, and any bounded raw inclusion--exclusion input-leaf
+    merge repaired by leafwise sextic splitting. R-105 proves only an
+    artificial scalar quadratic one-pair mode-diagonal theorem. A prioritized
+    candidate coordinate coherently sums every input convolution at each
+    output frequency before squaring and retains heat, trace, baseline,
+    R-063 forest, and the sextic once at the root. The live A9 route is
+    Gibbs-specific/time-integrated and root-local; the equivalent live source
+    route is the direct complete signed cross-mode/forest packet. R-106 proves
+    neither bound and does not assert uniqueness.
 
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `111/111`;
-- standard-library exact independent `111/111`;
-- manifest-pinned integrated `416/416` and aggregate `638/638` PASS;
-- complete common-root endpoint quotient, exact production rational sign flip
-  with complete defect cancellation, A9 and full-budget method boundaries,
-  all-law pointwise relative-bracket no-go, artificial one-pair conditional
-  determinant theorem, and cross-mode obstruction,
+- primary `46/46`;
+- standard-library exact independent `59/59`;
+- manifest-pinned integrated `337/337` and aggregate `442/442` PASS;
+- exact endpoint likelihood, dual KL and thermodynamic-integration identities,
+  pointwise likelihood boundary, exact production radial coefficient, `1:2`
+  raw merge and leafwise sextic no-gos, coherent output-frequency candidate,
+  and the immutable R-105 v1.1 correction audit,
   predecessor/source/PDF/surface contracts, and T4 firewalls;
 - exit code zero.
 
@@ -1194,22 +1225,23 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_cartan_rational_subdivision_smart_path_boundary_manifest.json`
-- `notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-v1.0.tex.txt`
-- `notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary.py`
-- `../../codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_independent.py`
-- `../../codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_verify.py`
-- `runs/2026-07-28-primary-cartan-rational-subdivision-smart-path-boundary/result.json`
-- `runs/2026-07-28-independent-cartan-rational-subdivision-smart-path-boundary/result.json`
-- `runs/2026-07-28-integrated-cartan-rational-subdivision-smart-path-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-105`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-rational-taylor-owner-subdivision`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-generic-smart-path-monotonicity`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-all-law-pointwise-relative-bracket`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-full-budget-critical-young`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-one-pair-product-factorization`
-- `../../explorations/log.jsonl` (`EXP-000263`--`EXP-000269`)
+- `classii_gibbs_endpoint_production_merge_boundary_manifest.json`
+- `notes/classii-gibbs-endpoint-production-merge-boundary-260728-v1.0.tex.txt`
+- `notes/classii-gibbs-endpoint-production-merge-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary.py`
+- `../../codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_independent.py`
+- `../../codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_verify.py`
+- `runs/2026-07-28-primary-gibbs-endpoint-production-merge-boundary/result.json`
+- `runs/2026-07-28-independent-gibbs-endpoint-production-merge-boundary/result.json`
+- `runs/2026-07-28-integrated-gibbs-endpoint-production-merge-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-106`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-total-a9-time-integration-identity`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-pointwise-endpoint-likelihood-coercivity`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-production-input-mode-merge-tensorization`
+- `../../negative-results/registry.md#audit-2026-07-28-a13-r105-sextic-coefficient-cutoff-notation`
+- `../../explorations/log.jsonl` (`EXP-000270`--`EXP-000275`)
+- R-105 v1.1 correction package and immutable correction runs pinned by the
+  R-105 and R-106 manifests.
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1740,6 +1772,24 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     there. The corrected statement fixes `t in (0,1]` and derives the leading
     coefficient `(t/2)v^(4)(sqrt(e)) delta N^s`; this still disproves the
     separated multiplier estimate at every nontrivial fixed path time.
+81. **DISMISSED: the exact endpoint KL identity closes Nelson by entropy
+    positivity.** The forward entropy is subtracted from an expectation under
+    the unknown self-coupled law; the controlled reverse orientation carries
+    positive entropy. The variational identity is exactly the missing endpoint
+    free energy.
+82. **VALID WITH MITIGATION: the constant likelihood ray is Gaussian-null.**
+    Correct. It refutes only pointwise fixed-payment coercivity. Entropy and
+    full Gaussian/root integration remain indispensable and unrefuted.
+83. **VALID WITH MITIGATION: the negative `1:2` merge is not a negative
+    complete action.** Correct. It excludes a universal bounded raw input-leaf
+    inclusion--exclusion correction and leafwise sextic split only; the
+    complete coherent output square and direct signed source action remain
+    open.
+84. **UPHELD AGAINST R-106 CLOSURE: identifying a coherent output-frequency
+    candidate proves its root-local bound.** No accepted authority controls
+    the packet after heat, covariance trace, mixed baseline, R-063 forest, and
+    one root sextic are restored. `OVERLAP_src`, Nelson, and Sector A remain
+    open.
 
 ## Falsifier
 
@@ -2088,6 +2138,19 @@ any promotion to literal R-085 (4.11), distinct-root Cartan, visitwise
 `F_6.5`/`K_R`, a Gibbs-specific or time-integrated A9 closure, `OVERLAP_src`,
 Nelson, removals, a measure, Sector-A closure, or a higher tier.
 
+The R-106 continuation is additionally falsified by failure of the exact
+endpoint likelihood or either KL orientation; the entropy variational formula
+or thermodynamic-integral orientation; the constant-ray determinant, sextic,
+or Cameron--Martin scaling; the exact radial Fierz decomposition,
+`B_inf(u)u=4au`, or floor bound; any quartic, quadratic-trace, derivative,
+sextic, threshold, or coherent-output fixture in the `1:2` merge theorem; the
+immutable R-105 v1.1 correction; any R-106 authority, source, note, PDF,
+manifest, negative/audit authority, exploration, assertion-count, or public-
+surface pin including `EXP-000270--EXP-000275`; or any promotion to a
+root-local Gibbs/coherent-output lower bound, exclusion of the direct complete
+source-action route, `OVERLAP_src`, Nelson, removals, a measure, Sector-A
+closure, or a higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2409,6 +2472,16 @@ path or a time-integrated signed identity. Its one-Fourier-pair theorem is an
 artificial scalar quadratic mode-diagonal result that does not tensorize
 through the physical cross-mode/forest terms. R-105 does not prove a
 distinct-root estimate, Gibbs-specific or time-integrated A9 bracket,
+`OVERLAP_src`, Nelson, cutoff/floor removal, a measure theorem, Sector-A
+closure, or T5--T7. Tier stays T4.
+
+R-106 proves exact finite-cutoff endpoint-likelihood, KL, thermodynamic, radial
+Fierz, and `1:2` merge identities plus three scoped method no-gos. The
+constant-ray likelihood result is pointwise and Gaussian-null. The production
+merge result concerns a universal bounded raw input-leaf correction and does
+not make the complete action negative. Coherent output frequency is an
+identified candidate coordinate, not a proved or unique closure route. R-106
+does not prove a root-local Gibbs or direct source-action estimate,
 `OVERLAP_src`, Nelson, cutoff/floor removal, a measure theorem, Sector-A
 closure, or T5--T7. Tier stays T4.
 
@@ -2986,3 +3059,17 @@ closure, or T5--T7. Tier stays T4.
   time-integrated signed A9 route and the complete signed `OVERLAP_src`/Nelson
   theorem, removals, measure construction, and Sector A remain open; tier
   stays T4.
+- 2026-07-28: Registered R-106. Exact actual-Gibbs endpoint likelihood, dual
+  KL, variational, and thermodynamic identities isolate the total A9 integral
+  as the endpoint target rather than an estimate. A Gaussian-null constant ray
+  retires pointwise likelihood coercivity. The exact production radial Fierz
+  coefficient and `1:2` Fourier packet retire universal bounded raw input-leaf
+  reassembly and leafwise sextic repair. A complete coherent output-frequency
+  packet is identified as a legal candidate without excluding the equivalent
+  direct complete source-action route. `EXP-000270--EXP-000275` record the
+  successes, failures, candidate coordinate, and immutable R-105 v1.1
+  correction. Primary `46/46`, independent `59/59`, integrated `337/337`, and
+  aggregate `442/442` checks are manifest-pinned. The eight-page PDF passes
+  form, zero-overfull, extraction, and all-page Poppler QA. `OVERLAP_src`,
+  Nelson, removals, measure construction, and Sector A remain open; tier stays
+  T4.
