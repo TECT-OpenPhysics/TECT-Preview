@@ -985,7 +985,8 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-27), narrowed through R-096; regular
+**Status:** REDUCED-NOT-CLOSED; CURRENT CHILD MOVED BY R-097 (2026-07-27).
+The regular
 one-shot `H_C` and the centered Gram-secant/value--heat prefix sublemmas are
 closed, while their once-only embedding into coefficient-unconditioned
 root-local `H_N` and lossless progressive/revisit `H_A` assembly into
@@ -1304,6 +1305,20 @@ R-063 forest, and conditional mean debts, with one `X/Y` allocation and every
 owner used exactly once. This is a support and ownership reduction, not the
 complete `H_N` lower bound.
 
+R-097 completes the exact heat-lifted Gram telescope and the terminal
+`theta=0` Schur reduction. For the terminal strict-past fibre,
+`C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, where `J_B` is the nonnegative
+weighted conditional-mean variance. Predictable Wick terminalisation and the
+cross-Doob identity require no selector differentiation. Two tempting closure
+routes nevertheless fail exactly: repeated second-Hermite rows grow
+quadratically under predictability-only aggregation, and an abstract finite
+posterior covariance deficit can be negative. These are method counterexamples,
+not counterexamples to the production torus packet. The remaining target is
+therefore the single production-weighted full-frame posterior-covariance
+bracket above, with all positive and negative owners kept together. The
+standalone Cartan atom (4.11), rational shifted-Hessian atom (6.5), complete
+`H_N`, REG, and assembly remain open.
+
 Accordingly `H_A` is only the lossless assembly of the complete packet,
 uniformly in cutoff, partition, and revisit, into `OVERLAP_src`, preserving
 R-079 future feedback and R-080 low/revisit cancellation. The uniform
@@ -1311,6 +1326,29 @@ source-union inequality is already the Nelson objective through R-087 CORE,
 not a separate post-assembly theorem. `H_C`, `H_N`, and `H_A` remain
 non-interchangeable obligations. Complete coefficient-unconditioned NEAR,
 progressive/revisit assembly, `OVERLAP_src`, and Nelson remain open.
+
+### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
+
+**Statement:** Uniformly in the terminal cutoff, prove a production-weighted
+lower form for the complete R-097 posterior bracket
+`C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`. Keep the nonnegative Schur variance
+`J_B`, the signed posterior covariance deficit, low endpoint, one Cameron--
+Martin matrix payment, paid subtraction, `q/r` means, covariance trace, Wick
+terms, and the complete R-063 forest in one identity, with every owner used
+exactly once.
+
+**Status:** OPEN CURRENT CHILD (2026-07-27). R-097 proves the complete
+backward-heat Gram telescope, terminal `theta=0` Schur identity, posterior
+normal form, and derivative-free predictable Wick/cross-Doob terminalisation.
+It also proves two exact method boundaries: predictability alone cannot
+control repeated second-Hermite rows uniformly, and posterior covariance
+positivity is not automatic in abstract finite fibres. Neither fixture is a
+production torus counterexample. A valid proof must exploit the retained
+full-frame signed structure and genuine production spatial/root weights.
+The standalone Cartan one-use atom (4.11), rational shifted-Hessian atom
+(6.5), coefficient-unconditioned `H_N`, REG, lossless `H_A` assembly,
+`OVERLAP_src`, Nelson, interacting-measure construction, and Sector A remain
+open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -1324,7 +1362,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-27). The gate was exposed by R-080 and
-sharpened by R-081--R-096
+sharpened by R-081--R-097
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph

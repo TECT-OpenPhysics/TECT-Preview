@@ -229,9 +229,11 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   innovations, cross term, squares, traces, forest, paid difference, and
   complete low endpoint retained. It proves a spatially weighted Cameron--
   Martin control square function and the predictable base-current heat
-  projection. The current regular-control subgate remains
-  `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now narrowed to the
-  production near/far current-trace estimate. R-080,
+  projection. R-097 has now terminalised this regular-control algebra to the
+  exact `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: the backward-
+  heat Gram row telescopes, the terminal `theta=0` Schur identity closes, and
+  the only unresolved production form is the full-frame posterior-covariance
+  bracket with every owner retained once. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -611,8 +613,8 @@ preserved in git/changelog rather than treated as current gates.
    exact expectation-level full-current and canonical safe-packet Doob
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
-   child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-095. R-080 closes the two distinct low objects for regular
+   child is `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`, narrowed by
+   R-080--R-097. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -690,16 +692,16 @@ preserved in git/changelog rather than treated as current gates.
    replace the rootwise reserve by a global terminal-square fraction unless
    the pure-future identity or predictable domination `2R>=theta B` is proved;
    a decaying `theta_j` does not repair the current separate absolute ledgers.
-   Apply R-096 next: cancel the complete R-077 fresh-root packet before any
-   rational/Hermite projection, use a widened fixed payload collar so the
-   genuine predictable-baseline `T_Q^>+T_G^>` region is support-empty, and do
-   not infer payability from that support collapse. Prove one expectation-
-   inside lower form bound for the global sum of moving adapted-base five-
-   family terms, payable shifted terms, retained endpoint squares, predictable
-   base-current heat, both distinct low objects, Wick trace, and the complete
-   R-063 forest inside the same once-only identity. Supply either a
-   production-weighted `Pi_0/Pi_1/Pi_2` spatial square-function gain or a
-   direct signed cancellation avoiding adapted-selector differentiation.
+   Apply R-097 next: the complete heat-lifted Gram row now telescopes to its
+   terminal value, and the terminal `theta=0` Schur complement is exactly
+   `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`. Prove one
+   production-weighted full-frame lower bound for this complete posterior-
+   covariance bracket while retaining `J_B`, the low endpoint, the Cameron--
+   Martin matrix cost, paid subtraction, `q/r`, covariance trace, Wick terms,
+   and the R-063 forest exactly once. Predictability alone does not aggregate
+   repeated second-Hermite rows, and posterior covariance positivity is not
+   automatic; neither failed shortcut may be reused. The standalone Cartan
+   one-use atom (4.11) and rational shifted-Hessian atom (6.5) remain open.
    Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower

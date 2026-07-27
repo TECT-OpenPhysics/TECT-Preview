@@ -50,10 +50,11 @@ the exact complete-current Doob polarization and reconstructs the canonical
 safe packet with its conditional low-current boundary and present/future
 cross term intact. It also proves the spatially weighted Cameron--Martin
 square function and base-current heat projection. The exact terminal feedback
-commutator retains coefficient and derivative-feedback channels, so the
-current child remains
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, narrowed to the
-production near/far estimate and complete weighted packet lower bound. R-080,
+commutator retains coefficient and derivative-feedback channels. R-097
+completes the heat-lifted Gram telescope and terminal `theta=0` Schur
+reduction, so the current child is
+`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`, the complete weighted
+posterior form with every owner retained once. R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the
 localized predictable base-current tail `S_C`, and isolates the hidden
@@ -204,6 +205,16 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  once, via either a weighted low-Hermite spatial gain or direct signed
  cancellation. Complete `H_N`, REG,
  `OVERLAP_src`, Nelson, and Sector A remain open.
+ R-097 now terminalises that Gram form exactly. Its backward-heat martingale
+ telescope and terminal `theta=0` Schur identity give
+ `J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`, and predictable Wick/cross-
+ Doob terminalisation avoids selector derivatives. Exact finite fixtures show
+ that predictability-only aggregation and automatic posterior covariance
+ positivity are false shortcuts. The live target is therefore one production-
+ weighted full-frame posterior bracket retaining the low endpoint, matrix
+ cost, paid subtraction, `q/r`, trace, Wick terms, and forest exactly once.
+ Cartan (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson,
+ and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

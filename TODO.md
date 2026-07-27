@@ -7,8 +7,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 
 ## In progress
 
-- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
-  - R-096 proves the legal complete-cancellation-first order. After complete R-077 fresh-root cancellation, every regular strict-past no-revisit whole-shell predictable baseline has rough partners below k+C_supp, so L_gap>C_supp+L_res makes the genuine coefficient-dominant T_Q^> and T_G^> regions support-empty and leaves only a fixed payable collar. Conditional raw Wick sees only coordinate Hermite ranks 0-2, but this gives no spatial/root gain and Stein differentiates adapted selectors. Next: prove one global expectation-inside adapted-prefix payment for the five rational owner families, payable shifted terms, retained endpoint square, heat, both low objects, trace, the complete R-063 forest, and conditional mean debts using one X/Y allocation. Complete H_N, REG, OVERLAP_src, Nelson, and Sector A remain open.
+- **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET)_
+  - R-097 closed the heat-lifted Gram telescope, terminal theta=0 Schur identity, posterior normal form, and derivative-free predictable Wick/cross-Doob terminalisation. Next prove the production-weighted full-frame posterior-covariance bracket with every owner used once; Cartan (4.11), rational (6.5), H_N, REG, assembly, Nelson, and Sector A remain open.
   - _updated 2026-07-27_
 
 ## Next up

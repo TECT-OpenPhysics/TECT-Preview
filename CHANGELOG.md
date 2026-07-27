@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-097: terminalise the global Gram form to a posterior-covariance bracket] - 2026-07-27
+
+R-097 proves the backward-heat Gram telescope, terminal theta=0 Schur identity, exact posterior normal form C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2 with J_B nonnegative, and derivative-free predictable Wick/cross-Doob terminalisation. Exact finite fixtures reject predictability-only low-Hermite aggregation and automatic posterior-covariance positivity. The production-weighted full-frame bracket, Cartan (4.11), rational (6.5), complete H_N, REG, progressive/revisit assembly, OVERLAP_src, Nelson, and Sector A remain open.
+
 ## [R-096 Gram-first predictable-baseline support collapse and low-Hermite Wick boundary] - 2026-07-27
 
 Registered the complete-cancellation-first R-077/R-086 ordering, the exact Doob/product covariance defect, predictable-baseline support collapse of the genuine large-gap T_Q and T_G regions after a fixed payable collar, and conditional/tensorized low-Hermite Wick compression with full-square q/r mean ownership. Primary 69/69, non-importing independent 50/50, integrated target 153/153, aggregate target 272/272. The paired nine-page PDF passed all-page visual QA. The global moving adapted-base payment, complete H_N, REG, OVERLAP_src, Nelson, measure construction, and Sector A remain open at T4.

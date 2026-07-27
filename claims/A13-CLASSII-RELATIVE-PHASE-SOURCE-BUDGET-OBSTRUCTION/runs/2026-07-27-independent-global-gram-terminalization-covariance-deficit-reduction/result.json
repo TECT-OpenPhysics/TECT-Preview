@@ -1,0 +1,744 @@
+{
+  "assertion_summary": {
+    "failed": 0,
+    "groups": {
+      "contract": {
+        "failed": 0,
+        "passed": 1,
+        "total": 1
+      },
+      "covariance": {
+        "failed": 0,
+        "passed": 8,
+        "total": 8
+      },
+      "direct_sum": {
+        "failed": 0,
+        "passed": 5,
+        "total": 5
+      },
+      "doob_boundary": {
+        "failed": 0,
+        "passed": 6,
+        "total": 6
+      },
+      "forest": {
+        "failed": 0,
+        "passed": 11,
+        "total": 11
+      },
+      "independence": {
+        "failed": 0,
+        "passed": 3,
+        "total": 3
+      },
+      "mutations": {
+        "failed": 0,
+        "passed": 6,
+        "total": 6
+      },
+      "perspective": {
+        "failed": 0,
+        "passed": 2,
+        "total": 2
+      },
+      "rademacher": {
+        "failed": 0,
+        "passed": 9,
+        "total": 9
+      },
+      "schur": {
+        "failed": 0,
+        "passed": 11,
+        "total": 11
+      },
+      "telescope": {
+        "failed": 0,
+        "passed": 7,
+        "total": 7
+      }
+    },
+    "passed": 69,
+    "total": 69
+  },
+  "assertions": [
+    {
+      "actual": [
+        "__future__",
+        "argparse",
+        "ast",
+        "fractions",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "tempfile",
+        "typing"
+      ],
+      "expected": [
+        "__future__",
+        "argparse",
+        "ast",
+        "fractions",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "tempfile",
+        "typing"
+      ],
+      "group": "independence",
+      "name": "stdlib_import_roots",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "independence",
+      "name": "no_relative_imports",
+      "status": "PASS"
+    },
+    {
+      "actual": [],
+      "expected": [],
+      "group": "independence",
+      "name": "no_dynamic_code_calls",
+      "status": "PASS"
+    },
+    {
+      "actual": "736/105",
+      "expected": "736/105",
+      "group": "schur",
+      "name": "generic_completion_0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1024/945",
+      "expected": "1024/945",
+      "group": "schur",
+      "name": "generic_completion_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/10",
+      "expected": "7/10",
+      "group": "schur",
+      "name": "generic_completion_2",
+      "status": "PASS"
+    },
+    {
+      "actual": "11029/6720",
+      "expected": "11029/6720",
+      "group": "schur",
+      "name": "generic_completion_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "673/240",
+      "expected": "673/240",
+      "group": "schur",
+      "name": "block_determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/35",
+      "expected": "4/35",
+      "group": "schur",
+      "name": "theta_zero_fraction_positive_payment_0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/7",
+      "expected": "1/7",
+      "group": "schur",
+      "name": "theta_zero_fraction_partition_0",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/9",
+      "expected": "4/9",
+      "group": "schur",
+      "name": "theta_zero_fraction_positive_payment_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "schur",
+      "name": "theta_zero_fraction_partition_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "52/107",
+      "expected": "52/107",
+      "group": "schur",
+      "name": "theta_zero_fraction_positive_payment_2",
+      "status": "PASS"
+    },
+    {
+      "actual": "13/4",
+      "expected": "13/4",
+      "group": "schur",
+      "name": "theta_zero_fraction_partition_2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": 1,
+      "group": "rademacher",
+      "name": "probability_mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "rademacher",
+      "name": "centered_root",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1",
+        "3"
+      ],
+      "expected": "> 0",
+      "group": "rademacher",
+      "name": "positive_bounded_coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0",
+        "0"
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "group": "rademacher",
+      "name": "wick_zero_atomwise",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "!= 0",
+      "group": "rademacher",
+      "name": "mixed_mean_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-25/101",
+      "expected": "< 0",
+      "group": "rademacher",
+      "name": "completed_minimum_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2399/10100",
+      "expected": "< 0",
+      "group": "rademacher",
+      "name": "xy_paid_minimum_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "1/51",
+        "3/151",
+        0.0004621436588404526
+      ],
+      "expected": "strictly positive mean",
+      "group": "rademacher",
+      "name": "transformed_mean_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.49504950495049505,
+      "expected": -0.49504950495049505,
+      "group": "rademacher",
+      "name": "transformed_mean_restoration",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2399/10100",
+      "expected": "-2399/10100",
+      "group": "direct_sum",
+      "name": "actual_loop_scaling_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2399/5050",
+      "expected": "-2399/5050",
+      "group": "direct_sum",
+      "name": "actual_loop_scaling_2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-16793/10100",
+      "expected": "-16793/10100",
+      "group": "direct_sum",
+      "name": "actual_loop_scaling_7",
+      "status": "PASS"
+    },
+    {
+      "actual": "-74369/10100",
+      "expected": "-74369/10100",
+      "group": "direct_sum",
+      "name": "actual_loop_scaling_31",
+      "status": "PASS"
+    },
+    {
+      "actual": "-7197/1010",
+      "expected": "< -7",
+      "group": "direct_sum",
+      "name": "uniform_constant_defeated_abstractly",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": "5",
+        "1": "4",
+        "2": "1"
+      },
+      "expected": {
+        "0": "5",
+        "1": "4",
+        "2": "1"
+      },
+      "group": "forest",
+      "name": "b_reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": "-5",
+        "1": "-4",
+        "2": "4",
+        "3": "4",
+        "4": "1"
+      },
+      "expected": {
+        "0": "-5",
+        "1": "-4",
+        "2": "4",
+        "3": "4",
+        "4": "1"
+      },
+      "group": "forest",
+      "name": "product_reconstruction",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "0": "2",
+        "1": "8",
+        "2": "10",
+        "3": "4",
+        "4": "1"
+      },
+      "expected": "H0--H4 nonzero",
+      "group": "forest",
+      "name": "all_ranks_zero_through_four_present",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "group": "forest",
+      "name": "mean_from_h0",
+      "status": "PASS"
+    },
+    {
+      "actual": "4",
+      "expected": "4",
+      "group": "forest",
+      "name": "mixed_mean_from_h1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "forest",
+      "name": "raw_wick_from_h0",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "forest",
+      "name": "every_omission_detected",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "forest",
+      "name": "every_duplication_detected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-99/25",
+      "expected": "< 0",
+      "group": "forest",
+      "name": "gaussian_schur_determinant_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1077/6020",
+      "expected": "< 0",
+      "group": "forest",
+      "name": "abstract_sextic_paid_deficit",
+      "status": "PASS"
+    },
+    {
+      "actual": "-839801/3010000",
+      "expected": "< 0",
+      "group": "forest",
+      "name": "shifted_value_sextic_paid_deficit",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "telescope",
+      "name": "second_increment_centers_on_fibre_-1",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "-1/15",
+        "-1/15"
+      ],
+      "expected": "constant on future fibre",
+      "group": "telescope",
+      "name": "strict_past_constancy_-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "telescope",
+      "name": "second_increment_centers_on_fibre_1",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "11/15",
+        "11/15"
+      ],
+      "expected": "constant on future fibre",
+      "group": "telescope",
+      "name": "strict_past_constancy_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "telescope",
+      "name": "first_increment_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "telescope",
+      "name": "pathwise_endpoint_telescope",
+      "status": "PASS"
+    },
+    {
+      "actual": "54751/101250",
+      "expected": "54751/101250",
+      "group": "telescope",
+      "name": "expectation_endpoint_telescope",
+      "status": "PASS"
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "group": "mutations",
+      "name": "future_leak_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-365/1232",
+      "expected": "-365/1232",
+      "group": "covariance",
+      "name": "unconditional_q_r_normal_form",
+      "status": "PASS"
+    },
+    {
+      "actual": "-18/77",
+      "expected": "-18/77",
+      "group": "covariance",
+      "name": "posterior_bracket_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "10/11",
+      "expected": ">= 0",
+      "group": "covariance",
+      "name": "posterior_schur_compensation_nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "-18/77",
+      "expected": "-18/77",
+      "group": "covariance",
+      "name": "r_owner_restoration",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "1": [
+          "0",
+          "4"
+        ],
+        "2": [
+          "0",
+          "1"
+        ]
+      },
+      "expected": "means zero",
+      "group": "covariance",
+      "name": "conditional_means_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": {
+        "1": [
+          "0",
+          "4"
+        ],
+        "2": [
+          "0",
+          "1"
+        ]
+      },
+      "expected": "positive unequal",
+      "group": "covariance",
+      "name": "conditional_variances_nonzero_unequal",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": 0,
+      "group": "covariance",
+      "name": "symmetric_mixed_mean_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3/4",
+      "expected": "< 0",
+      "group": "covariance",
+      "name": "weighted_posterior_covariance_deficit_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "!= -3/4",
+      "group": "mutations",
+      "name": "unconditional_covariance_substitution_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-8/7",
+      "expected": "!= -18/77",
+      "group": "mutations",
+      "name": "omitted_j_b_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "12/35",
+      "expected": "!= 18/77",
+      "group": "mutations",
+      "name": "b_plus_r_instead_of_b_plus_2r_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "doob_boundary",
+      "name": "measured_h2_pairing_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "doob_boundary",
+      "name": "measured_h2_aggregate_norm_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "6",
+      "expected": "6",
+      "group": "doob_boundary",
+      "name": "measured_h2_pairing_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "18",
+      "expected": "18",
+      "group": "doob_boundary",
+      "name": "measured_h2_aggregate_norm_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": "16",
+      "group": "doob_boundary",
+      "name": "measured_h2_pairing_8",
+      "status": "PASS"
+    },
+    {
+      "actual": "128",
+      "expected": "128",
+      "group": "doob_boundary",
+      "name": "measured_h2_aggregate_norm_8",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": "!= 128",
+      "group": "mutations",
+      "name": "naive_linear_aggregate_norm_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/2",
+      "expected": "3/2",
+      "group": "perspective",
+      "name": "fixed_terminal_perspective_variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3/4",
+      "expected": "< 0",
+      "group": "perspective",
+      "name": "moving_base_defect_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3/4",
+      "expected": "!= innovation-only zero",
+      "group": "mutations",
+      "name": "omitted_moving_base_defect_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "group": "contract",
+      "name": "unique_assertion_names",
+      "status": "PASS"
+    }
+  ],
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "failures": [],
+  "fixtures": {
+    "covariance": {
+      "covariance_defect": "-8/7",
+      "j_b": "10/11",
+      "separate_negative_fixture": "-3/4"
+    },
+    "gaussian": {
+      "abstract_sixth": "15",
+      "forest_h0_to_h4": {
+        "0": "2",
+        "1": "8",
+        "2": "10",
+        "3": "4",
+        "4": "1"
+      },
+      "minimum": "-99/301",
+      "shifted_value_sixth": "499"
+    },
+    "moving_perspective_defect": "-3/4",
+    "rademacher": {
+      "abstract_direct_sum": {
+        "1": "-2399/10100",
+        "2": "-2399/5050",
+        "31": "-74369/10100",
+        "7": "-16793/10100"
+      },
+      "minimum": "-25/101",
+      "paid_minimum": "-2399/10100",
+      "r_float": 0.0004621436588404526
+    }
+  },
+  "independence": {
+    "import_roots": [
+      "__future__",
+      "argparse",
+      "ast",
+      "fractions",
+      "json",
+      "math",
+      "os",
+      "pathlib",
+      "tempfile",
+      "typing"
+    ],
+    "numerical_verifier_imported": false,
+    "stdlib_only": true
+  },
+  "inputs": {
+    "block_counts": [
+      1,
+      2,
+      7,
+      31
+    ],
+    "gaussian": {
+      "eta": "1/100",
+      "floor": "1",
+      "shift": "2",
+      "zeta_abstract": "1/100",
+      "zeta_value": "1/10000"
+    },
+    "perfect_square": {
+      "gamma": "1",
+      "payment": "1"
+    },
+    "rademacher": {
+      "base": "2",
+      "eta": "1/100",
+      "slope": "1",
+      "zeta": "1/100"
+    },
+    "schur": {
+      "bbar": "11/6",
+      "payment": "2/7",
+      "q": "-3/4",
+      "rho": "7/5"
+    },
+    "telescope": {
+      "a": "1/3",
+      "b": "2/5"
+    },
+    "test_constant": "7"
+  },
+  "result_id": "A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-COVARIANCE-DEFICIT-REDUCTION",
+  "schema": "tect/a13-global-gram-terminalization-covariance-deficit-reduction-independent/1.0",
+  "scope": {
+    "Nelson": "open",
+    "OVERLAP_src": "open",
+    "REG": "open",
+    "Sector_A": "open",
+    "cartan_one_use_4_11": "open",
+    "complete_H_N": "open",
+    "counterexample_scope": "finite abstract coefficient/direct-sum method fixtures only",
+    "no_overclaim": "Passing verifies exact algebra and abstract method boundaries; it neither proves nor refutes the production torus lower bound.",
+    "production_adapted_prefix_bound_8_3": "open",
+    "production_fourier_realizability": "not tested",
+    "universal_xy_only_abstract_statement": "falsified",
+    "verified": [
+      "exact finite Schur completions",
+      "complete endpoint expectation telescope",
+      "theta=0 fractional endpoint with positive payment",
+      "complete H0-H4 forest ownership",
+      "posterior covariance normal forms",
+      "predictability-only accumulation boundary",
+      "moving-perspective defect"
+    ]
+  },
+  "verdict": "A13-R097-INDEPENDENT-BOUNDARY-PASS"
+}

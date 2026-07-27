@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-097](#r-097) | Full-frame terminalization and posterior-covariance bracket boundary | Scoped T4 analytic/exact/executed reduction: complete heat-lifted Gram rows obey a backward-heat martingale identity, so all predictable rational baselines telescope in signed expectation after the necessary diagonal heat correction. The terminal endpoint plus one allocated matrix payment has an exact theta-zero Schur completion. Conditioning on the complete control and terminal Gram coefficient reduces its signed part to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick rows also terminalize into one aggregate coefficient and cross-Doob ledger without differentiating adapted selectors. Exact Rademacher, Gaussian-forest, repeated-H2, and moving-perspective fixtures refute automatic bracket positivity and predictability-only root-uniform aggregate control, but are not production torus counterexamples. The next target is one production-weighted full-frame posterior-covariance lower form retaining every owner once. Cartan one-use (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-096](#r-096) | Gram-first predictable-baseline support collapse and low-Hermite Wick boundary | Scoped T4 analytic/exact/executed reduction: complete R-077 fresh-root cancellation must precede rational projection. On each resulting regular strict-past no-revisit predictable baseline, the R-086 rough partners are supported below `k+C_supp`, so after a fixed widened payable collar the genuine coefficient-dominant `T_Q^>,T_G^>` regions are empty. The remaining problem is the once-only global payment at the moving adapted base `X_(k-1)+A^(k-1)`, not terminal large-gap resonance. Independently, an arbitrary same-root raw quadratic Wick contraction sees only coordinate Hermite ranks zero through two; centered raw Wick, coefficient mean `q`, and transformed mean `r` occupy distinct rank-two/rank-one owners. Hermite compression creates no spatial gain, and direct Stein differentiation exposes uncontrolled adapted-selector derivatives. The next target is one global adapted-prefix payable form with all heat, low, trace, forest, and non-rational owners retained once. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-095](#r-095) | Fractional feedback-square perspective and near-Cartan ownership boundary | Scoped T4 analytic/exact/executed boundary: the rootwise future-feedback reserve differs from the global terminal derivative square by an exact moving-prefix defect containing low, present-prefix, and present--future cross terms with no sign; a scalar fixture gives `-1/4`. Retaining only `1-theta` of the endpoint coefficient square leaves a PSD matrix perspective exactly when `2R>=theta B`, while conditioning creates an explicit resolvent-gap debt and an indispensable terminal mean energy. The production Gram is unbounded, so no fixed reserve enforces the new domination globally. Under the actually proved prefix and absolute mean ledgers, a decaying `theta_j` requires simultaneously `alpha<1` and `alpha>1`. The surviving near-root `T_G^>` has an exact divergence-plus-bounded-Cartan-curvature homotopy and is disjoint from regular Cartan FAR. These are ownership and method boundaries, not a counterexample to the complete action; the full signed rootwise heat--Wick--forest packet, `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-094](#r-094) | Root-local Gram secants and the nonduplicating feedback boundary | Scoped T4 analytic/exact/executed advance: the positive quadratic Gram-curvature atom has the proposed `2^(j-4k)` scale, while the complete mixed centered secant starts at `2^(j-2k)` but is still form-subcritical on the regular one-shot class by weighted Hardy and product-space `L2`--`L6` interpolation, with mixed budget `X^(1/2)Y^(1/6)` and slack `1/3`. The isolated fresh derivative form has slack `1/6`, and the combined value--heat control prefix is paid once from a declared fraction of the retained feedback square at cost `O(2^(-3j0)X)`. An exact square-allocation identity leaves the adapted `T_G^>`/Jensen branch, coefficient/derivative cross, conditional mean debts, and once-only heat--low--trace--forest embedding open. The two zero-slack R-093 BG rows are superseded coarse estimates, not current atoms. Absolute per-revisit sixth-moment summation fails. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -115,6 +116,63 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-097"></a>
+### R-097 -- Full-frame terminalization and posterior-covariance bracket boundary
+
+**Result ID.**
+`A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-COVARIANCE-DEFICIT-REDUCTION`.
+
+**Tier.** T4 scoped analytic/exact/executed reduction and method boundary. No
+tier promotion.
+
+**Complete Gram-row telescope.** For a heat-lifted covariance-normal Gram
+energy `W_(r,B)^(J)(H)` and every strict-past shift `H`, value--derivative
+independence and heat-semigroup composition give
+`E[W_(r,B)^(J)(H)|F_(r-1)]=W_(r-1,B)^(J)(H)`. The diagonal
+heat correction is conditionally centered, so the complete predictable
+baseline sum telescopes in expectation to one terminal endpoint difference.
+This is not a pathwise telescope and is legal only after complete R-077
+fresh-root cancellation and Gram-row reassembly.
+
+**Terminal Schur and posterior normal form.** Restoring the low endpoint and
+allocating one matrix payment `R`, the terminal endpoint has the exact
+theta-zero Schur square with `A=B_1+2R` and
+`Theta_R(B_1)=B_1-B_1 A^(-1)B_1`. If `F` contains the complete control,
+`Bbar=E_F B_1`, `q=E_F(B_1G)`,
+`mu_B=E[G|F,sigma(B_1)]`, and
+`V_B=Cov(G|F,sigma(B_1))`, then the remaining signed density is exactly
+
+`C_post = J_B + E_F[B_1:(V_B-Gamma)]`,
+
+where
+`J_B=E_F[mu_B^T B_1 mu_B]-q^T(Bbar+2R)^(-1)q>=0`.
+Equivalently `C_post=D_R+|r|^2`, so the raw forest, `q`, `r`, trace, low
+endpoint, and matrix payment each retain one owner.
+
+**Predictable terminalization and method boundaries.** Complete predictable
+Wick rows satisfy
+`sum_k E<B_k,T_kQ_(k-1)>=E<F_J,Q_J>` with
+`F_J=sum_k T_k^*B_k`, followed by an exact cross-Doob decomposition. Only
+conditional Hermite ranks one and two pair with a fresh quadratic Wick
+increment. Predictability alone is insufficient: repeated use of one old
+`H_2` root has aggregate norm `2N^2`. A bounded Rademacher Gram has zero raw
+Wick but a negative optimized Schur block, and a Gaussian Gram produces all
+forest ranks `H_0` through `H_4` with a negative determinant. These are exact
+abstract method obstructions, not production torus counterexamples.
+
+**Evidence.** Proof note
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-global-gram-terminalization-covariance-deficit-reduction-260727-v1.0.tex.txt`
+and its paired PDF; strengthened primary and standard-library exact
+independent executables plus a hash-pinned integrated verifier and JSON
+artefacts under the A13 runs tree.
+
+**Boundary.** R-097 does not prove the production-weighted posterior-
+covariance lower form, standalone Cartan one-use (4.11), rational shifted-
+Hessian form (6.5), complete coefficient-unconditioned `H_N`, REG,
+progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, an
+interacting measure, Sector-A closure, or a higher tier. R-087's spatial
+Cartan half (4.10) remains proved; (4.11) remains open.
 
 <a id="r-096"></a>
 ### R-096 -- Gram-first predictable-baseline support collapse and low-Hermite Wick boundary

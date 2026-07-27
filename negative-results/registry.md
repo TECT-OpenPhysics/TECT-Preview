@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE](#ng-2026-07-27-a13-predictability-only-low-hermite-aggregate) | root-uniform control of the terminalized low-Hermite coefficient from predictability and a local one-use estimate alone | reusing one old Gaussian `H_2` root in `N` predictable rows gives pairing `2N` but squared norm `2N^2`; terminalization is exact, but a production-weighted spatial/root gain or direct signed cancellation is still required |
+| [NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY](#ng-2026-07-27-a13-automatic-posterior-covariance-positivity) | close the terminal Schur packet by declaring `J_B+E[B:(V_B-Gamma)]` automatically nonnegative | bounded Rademacher and complete Gaussian-forest fixtures have a negative optimized bracket even after exact q/r ownership is restored; `J_B` must remain coupled to the covariance deficit, and the production-weighted full-frame lower form is still open |
 | [NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY](#ng-2026-07-27-a13-predictable-baseline-support-implies-payability) | close each R-077 rational predictable baseline immediately after the R-086 genuine large-gap `T_Q^>,T_G^>` support sets become empty | support removes the terminal coefficient-dominant resonance after a fixed payable collar, but the remaining five-family and shifted terms are evaluated at the moving adapted base `X_(k-1)+A^(k-1)`; existing deterministic-translation/payment theorems do not sum that base uniformly, and rootwise Young would duplicate the global energy and sextic budgets |
 | [NG-2026-07-27-A13-LOW-HERMITE-STEIN-DERIVATIVE-CLOSURE](#ng-2026-07-27-a13-low-hermite-stein-derivative-closure) | close the same-root Wick and conditional-mean debts by low-Hermite projection followed by Gaussian integration by parts and the accepted Doob square | raw Wick sees only coordinate ranks zero through two, but Stein differentiation of an adapted coefficient produces selector derivatives `A'`, `A''`, and mixed terms; the bounded `-tanh(L xi)` fixture retains a nonzero limiting negative bracket while derivative energy grows linearly, and Hermite projection leaves an arbitrary spatial carrier unchanged |
 | [NG-2026-07-27-A13-FRACTIONAL-FEEDBACK-GLOBAL-SQUARE-IDENTIFICATION](#ng-2026-07-27-a13-fractional-feedback-global-square-identification) | replacement of a declared fraction of the global terminal derivative square by the sum of rootwise future-feedback squares | the exact moving-prefix identity leaves low, present-prefix, and present--future cross terms with no sign; a centered scalar root gives defect `-1/4`, while fractional matrix-perspective positivity requires the new condition `2R >= theta B`, which no fixed production-independent reserve satisfies globally |
@@ -119,6 +121,53 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-27-a13-predictability-only-low-hermite-aggregate"></a>
+### NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE -- terminalization does not control aggregate reuse
+
+**Failure mode:** Terminalize every predictable quadratic-Wick row into one
+coefficient `F_J`, apply a local one-use estimate to each row, and infer a
+root-count-uniform bound for the aggregate from predictability alone.
+
+**Evidence:** Let one old centered Gaussian root be `xi_1` and set
+`B_k=H_2(xi_1)` for every later predictable row. Since
+`E H_2(xi_1)^2=2`, `N` uses have total pairing `2N`, while the terminalized
+coefficient is `F_J=N H_2(xi_1)` and therefore
+`E|F_J|^2=2N^2`. The R-097 primary executable evaluates the actual aggregate
+by quadrature and rejects the naive linear-norm mutant; the independent
+standard-library executable derives the same values by exact Gaussian
+moments. No adapted-selector derivative is involved.
+
+**Consequence:** Predictable terminalization and cross-Doob decomposition are
+exact reusable reductions, but predictability alone supplies no root-uniform
+aggregate norm. Revisit only with a production-weighted low-Hermite/Doob
+estimate having genuine spatial or root gain, or a direct signed cancellation.
+The fixture is abstract and does not refute the production torus form.
+
+<a id="ng-2026-07-27-a13-automatic-posterior-covariance-positivity"></a>
+### NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY -- the exact posterior bracket is signed
+
+**Failure mode:** After terminal Schur completion, discard the full positive
+square and declare
+`C_post=J_B+E[B:(V_B-Gamma)]` nonnegative solely because `J_B>=0` and
+`Theta_R(B)>=0`.
+
+**Evidence:** On a centered Rademacher root, take `B(xi)=2+xi` and
+`R=1/100`. The raw Wick term is zero atomwise, but `q=E(Bxi)=1`; the optimized
+paid block is `-1/(2(2+2R))<0`. The transformed mean `r` is nonzero and its
+restoration reproduces, rather than repairs, the same signed value. A second
+Gaussian fixture `B(g)=(g+2)^2+1` reconstructs the complete nonzero forest
+`H_4+4H_3+10H_2+8H_1+2H_0` and again has a negative Schur determinant.
+Exact conditional fixtures independently isolate a strictly negative
+weighted posterior-covariance deficit. All coefficients and moments are
+derived in both R-097 executables.
+
+**Consequence:** The nonnegative `J_B` term is load-bearing and must remain
+coupled to the covariance deficit; neither automatic moment matching nor raw-
+deficit estimation is legal. The successor is a production-weighted lower
+form for the complete full-frame bracket with every owner retained once.
+These finite abstract fixtures are method no-gos, not production torus
+counterexamples.
 
 <a id="ng-2026-07-27-a13-predictable-baseline-support-implies-payability"></a>
 ### NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY -- support collapse does not pay the moving adapted base

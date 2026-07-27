@@ -1,0 +1,715 @@
+% Title: Full-frame terminalization and posterior-covariance bracket boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED REDUCTION AND METHOD BOUNDARY; PRODUCTION COVARIANCE FORM, COMPLETE H_N, REG, OVERLAP_SRC, NELSON, MEASURE, AND SECTOR A OPEN
+% Result: A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-COVARIANCE-DEFICIT-REDUCTION
+% Ledger: R-097
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+
+\section{Purpose and scope}
+
+R-096 reduced every rational predictable baseline, after the complete R-077
+fresh-root cancellation, to
+\[
+ {\mathfrak P}_{k,R}
+ =\mathcal U_{R,k}+\widetilde{\mathcal P}_{R,k}^{\rm pay}
+  +{1\over2}c_k^TB_{1,k}c_k.                              \tag{1.1}
+\]
+Estimating this expression separately at each root spends the same prefix
+energy and terminal sextic reserve repeatedly.  R-097 instead recombines all
+complete Gram rows before applying an inequality.
+
+There are four exact advances.  First, a heat-lifted Gram row is a backward
+heat martingale, so its moving predictable baselines telescope in signed
+expectation.  Second, the single terminal endpoint has one matrix Schur
+completion at the previously singular boundary parameter $\theta=0$.
+Third, conditioning on the complete control and then on the terminal Gram
+coefficient reduces every remaining signed term to
+\[
+ \mathfrak C_{\rm post}
+ =J_B+\E_{\cF}\bigl[B:(V_B-\Gamma)\bigr],                \tag{1.2}
+\]
+where $J_B\geq0$ is an exact Schur compensation.  Fourth, a predictable
+Wick pairing terminalizes into one aggregate coefficient and admits a
+derivative-free cross-Doob decomposition.
+
+Equation (1.2) is a reduction, not a lower bound.  Automatic positivity is
+false, and predictability alone does not control the aggregate low-Hermite
+norm.  The remaining production target is one weighted lower form for the
+complete bracket, with $J_B$, the low endpoint, Cameron--Martin payment,
+trace, $q/r$ means, and the R-063 forest each used once.  The standalone
+Cartan root budget R-085 (4.11), rational shifted-Hessian form R-085 (6.5),
+complete $H_N$, REG, progressive/revisit $H_A$,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, a measure theorem, and
+Sector A remain open.  Tier stays T4.
+
+All identities below are finite-cutoff statements at fixed positive floor.
+The R-077 regular mutually orthogonal strict-past no-revisit whole-shell
+class and the fixed R-096 support collar remain the production hypotheses
+for the rational embedding.
+
+\section{Heat-lifted Gram coordinates}
+
+Fix a terminal root $J$.  Let
+\[
+ X_r=\sum_{s\leq r}g_s,\qquad
+ D_iX_r=\sum_{s\leq r}d_{s,i},                            \tag{2.1}
+\]
+where the shell increments are independent and jointly Gaussian.  Write
+\[
+ \Delta\Sigma_r=\operatorname{Cov}(g_r),\qquad
+ \Delta\Gamma_{r,i}=\operatorname{Cov}(d_{r,i}),\qquad
+ \Gamma_{r,i}=\sum_{s\leq r}\Delta\Gamma_{s,i}.         \tag{2.2}
+\]
+The common real-even regulator gives, pointwise,
+\[
+ \operatorname{Cov}(g_r(x),d_{r,i}(x))=0.                \tag{2.3}
+\]
+Thus value and derivative increments at one point are independent.
+
+Let $B:\mathbb R^N\to\operatorname{Sym}_N^+$ be a smooth Gram coefficient
+of polynomial growth.  The two choices used later are the rational Gram
+\[
+ B_R(z)=4c_1\,g(z)\otimes g(z)                            \tag{2.4}
+\]
+and the complete production Gram
+\[
+ B_{\rm fr}(z)
+ =\sum_\alpha M_\alpha(z)Q_{\rm II}M_\alpha(z)^T.       \tag{2.5}
+\]
+For future value covariance
+\[
+ \Sigma_{r+1:J}=\sum_{s=r+1}^J\Delta\Sigma_s,
+\]
+put
+\[
+ \overline B_r^{(J)}=P_{\Sigma_{r+1:J}}B.                \tag{2.6}
+\]
+For an $\cF_{r-1}$-measurable shift $H$, define
+\[
+ \mathcal W_{r,B}^{(J)}(H)
+ ={1\over2}\sum_i\int
+ \overline B_r^{(J)}(X_r+H):
+ \bigl((D_iX_r+D_iH)^{\otimes2}-\Gamma_{r,i}\bigr)
+ \,\mathrm dx.                                           \tag{2.7}
+\]
+At $r=J$ this is the literal terminal covariance-normal Gram energy.
+
+\section{Complete Gram-row heat telescope}
+
+% evidence-anchor: theorem-3.1-complete-gram-row-heat-telescope
+\subsection*{Theorem 3.1 (complete Gram-row heat martingale)}
+
+For every admissible $H\in\cF_{r-1}$,
+\[
+ \boxed{
+ \E\bigl[\mathcal W_{r,B}^{(J)}(H)\mid\cF_{r-1}\bigr]
+ =\mathcal W_{r-1,B}^{(J)}(H).}                           \tag{3.1}
+\]
+
+\emph{Proof.}
+Condition on $\cF_{r-1}$ and at one spatial point put
+\[
+ z=X_{r-1}+H,\qquad y_i=D_iX_{r-1}+D_iH.
+\]
+By (2.3), $g_r$ and $d_{r,i}$ are independent.  Hence
+\[
+\begin{aligned}
+ &\E_{r-1}\left[
+ \overline B_r^{(J)}(z+g_r):
+ \bigl((y_i+d_{r,i})^{\otimes2}-\Gamma_{r,i}\bigr)
+ \right]\\
+ &\quad=
+ \E_{g_r}\overline B_r^{(J)}(z+g_r):
+ \bigl(y_i^{\otimes2}-\Gamma_{r-1,i}\bigr).
+\end{aligned}                                             \tag{3.2}
+\]
+Heat-semigroup composition gives
+\[
+ \E_{g_r}\overline B_r^{(J)}(z+g_r)
+ =P_{\Delta\Sigma_r}\overline B_r^{(J)}(z)
+ =\overline B_{r-1}^{(J)}(z).                             \tag{3.3}
+\]
+Sum in $i$, integrate in $x$, and use finite-cutoff Fubini. \qed
+
+Let
+\[
+ a_k\in\cF_{k-1},\qquad
+ A^{(k)}=A^0+\sum_{j_0\leq s\leq k}a_s.                 \tag{3.4}
+\]
+Define
+\[
+ \mathfrak P_{k,B}
+ =\mathcal W_{k-1,B}^{(J)}(A^{(k)})
+  -\mathcal W_{k-1,B}^{(J)}(A^{(k-1)})                   \tag{3.5}
+\]
+and
+\[
+ \mathfrak M_{k,B}
+ =\mathcal W_{k,B}^{(J)}(A^{(k)})
+  -\mathcal W_{k-1,B}^{(J)}(A^{(k)}).                    \tag{3.6}
+\]
+Then
+\[
+ \E[\mathfrak M_{k,B}\mid\cF_{k-1}]=0                 \tag{3.7}
+\]
+and pathwise
+\[
+ \mathfrak P_{k,B}
+ =\mathcal W_{k,B}^{(J)}(A^{(k)})
+  -\mathcal W_{k-1,B}^{(J)}(A^{(k-1)})
+  -\mathfrak M_{k,B}.                                    \tag{3.8}
+\]
+The first two terms telescope, so
+\[
+ \boxed{
+ \E\sum_{k=j_0}^J\mathfrak P_{k,B}
+ =\E\left[
+ \mathcal W_{J,B}^{(J)}(A^*)
+ -\mathcal W_{j_0-1,B}^{(J)}(A^0)\right].}               \tag{3.9}
+\]
+This is an expectation identity.  The correction (3.6) remains pathwise.
+
+R-077 cancellation must be applied to the complete fresh-root packet before
+(3.1).  The theorem concerns a reassembled covariance-normal Gram row; it
+does not center an individual chaos, Taylor family, trace fragment, or
+rational projection.
+
+\section{Rational baseline terminalization}
+
+For $B=B_R$, R-096 identifies the exact complete rational baseline as
+\[
+ \mathfrak P_{k,R}
+ =\mathcal U_{R,k}+\widetilde{\mathcal P}_{R,k}^{\rm pay}
+  +{1\over2}c_k^TB_{1,k}c_k.                              \tag{4.1}
+\]
+The tilde includes the fixed payable R-096 collar.  Equations (3.9) and
+(4.1) imply
+\[
+\boxed{
+\begin{aligned}
+ &\E\sum_k\left[
+ \mathcal U_{R,k}+\widetilde{\mathcal P}_{R,k}^{\rm pay}
+ +{1\over2}c_k^TB_{1,k}c_k\right]\\
+ &\qquad=
+ \E\left[
+ \mathcal W_{J,R}^{(J)}(A^*)
+ -\mathcal W_{j_0-1,R}^{(J)}(A^0)\right].
+\end{aligned}}                                             \tag{4.2}
+\]
+All five R-085 Taylor families, every payable orientation, the collar, and
+the endpoint squares have been recombined before any inequality.  The R-063
+forest already reconstructs the coefficient--Wick product inside (4.2);
+adding another forest would duplicate its owner.
+
+\section{One terminal Schur completion}
+
+At the terminal scale put
+\[
+ z_0=X_J+A^0,\quad a=A^*-A^0,\quad
+ G_i=D_iz_0,\quad c_i=D_ia,                               \tag{5.1}
+\]
+and
+\[
+ B_0=B(z_0),\qquad B_1=B(z_0+a),\qquad
+ Q_i=G_i^{\otimes2}-\Gamma_{J,i}.                         \tag{5.2}
+\]
+Let $R=R^T\succ0$ be one allocated matrix payment and define
+\[
+ \mathcal A=B_1+2R,\qquad
+ \Theta_R(B_1)=B_1-B_1\mathcal A^{-1}B_1.               \tag{5.3}
+\]
+
+% evidence-anchor: theorem-5.1-terminal-theta-zero-schur
+\subsection*{Theorem 5.1 (terminal $\theta=0$ Schur identity)}
+
+At finite cutoff, pathwise,
+\[
+\boxed{
+\begin{aligned}
+ &\mathcal W_{J,B}^{(J)}(A^*)
+ -\mathcal W_{J,B}^{(J)}(A^0)
+ +\sum_i\int c_i^TRc_i\,\mathrm dx\\
+ &={1\over2}\sum_i\int
+ \|c_i+\mathcal A^{-1}B_1G_i\|_{\mathcal A}^2\,\mathrm dx\\
+ &\quad+{1\over2}\sum_i\int
+ \bigl(G_i^T\Theta_R(B_1)G_i-B_1:\Gamma_{J,i}\bigr)
+ \,\mathrm dx
+ -{1\over2}\sum_i\int B_0:Q_i\,\mathrm dx.
+\end{aligned}}                                             \tag{5.4}
+\]
+Restoring the once-only baseline gives
+\[
+\boxed{
+\begin{aligned}
+ &\mathcal W_{J,B}^{(J)}(A^*)
+ +\sum_i\int c_i^TRc_i\,\mathrm dx\\
+ &={1\over2}\sum_i\int
+ \|c_i+\mathcal A^{-1}B_1G_i\|_{\mathcal A}^2\,\mathrm dx\\
+ &\quad+{1\over2}\sum_i\int
+ \bigl(G_i^T\Theta_R(B_1)G_i-B_1:\Gamma_{J,i}\bigr)
+ \,\mathrm dx.
+\end{aligned}}                                             \tag{5.5}
+\]
+
+\emph{Proof.}
+The endpoint expansion is
+\[
+\begin{aligned}
+ &\mathcal W_{J,B}^{(J)}(A^*)
+ -\mathcal W_{J,B}^{(J)}(A^0)\\
+ &= {1\over2}\sum_i\int(B_1-B_0):Q_i\,\mathrm dx
+ +\sum_i\int G_i^TB_1c_i\,\mathrm dx
+ +{1\over2}\sum_i\int c_i^TB_1c_i\,\mathrm dx.
+\end{aligned}                                             \tag{5.6}
+\]
+Expanding the first square in (5.4) produces
+\[
+ {1\over2}c_i^T(B_1+2R)c_i+G_i^TB_1c_i
+ +{1\over2}G_i^TB_1\mathcal A^{-1}B_1G_i.               \tag{5.7}
+\]
+The $\Theta_R$ term cancels the last expression and leaves
+$G_i^TB_1G_i/2$.  The trace and baseline then recover (5.6). \qed
+
+This is the R-095 perspective identity at $\theta=0$.  Since $2R\succeq0$,
+$\Theta_R(B_1)\succeq0$.  Nevertheless neither positive term in (5.5) may
+be discarded before the trace is treated: both conditional variances are
+load-bearing.
+
+\section{Posterior-covariance normal form}
+
+Let $\cF$ make the complete terminal shift, $c_i$, and $R$ measurable.  Put
+\[
+ \overline B=\E_{\cF}B_1,\qquad
+ q_i=\E_{\cF}(B_1G_i),\qquad
+ \overline{\mathcal A}=\overline B+2R.                   \tag{6.1}
+\]
+Condition further on $B_1$ and define
+\[
+ \mu_{B,i}=\E[G_i\mid\cF\vee\sigma(B_1)],\qquad
+ V_{B,i}=\operatorname{Cov}(G_i\mid\cF\vee\sigma(B_1)). \tag{6.2}
+\]
+Then $q_i=\E_{\cF}(B_1\mu_{B,i})$.  Define
+\[
+ J_{B,i}
+ =\E_{\cF}[\mu_{B,i}^TB_1\mu_{B,i}]
+  -q_i^T\overline{\mathcal A}^{-1}q_i.                   \tag{6.3}
+\]
+
+% evidence-anchor: theorem-6.1-posterior-covariance-normal-form
+\subsection*{Theorem 6.1 (posterior-covariance bracket identity)}
+
+For every $i$, $J_{B,i}\geq0$, and
+\[
+\boxed{
+\begin{aligned}
+ \mathcal S_{0,B}(c)
+ :={}&{1\over2}\sum_i\int
+ \E_{\cF}[B_1:(G_i^{\otimes2}-\Gamma_{J,i})],\mathrm dx\\
+ &+\sum_i\int c_i^Tq_i\,\mathrm dx
+ +{1\over2}\sum_i\int
+ c_i^T\overline{\mathcal A}c_i\,\mathrm dx\\
+ ={}&{1\over2}\sum_i\int
+ \|c_i+\overline{\mathcal A}^{-1}q_i\|_{\overline{\mathcal A}}^2
+ \,\mathrm dx
+ +{1\over2}\mathfrak C_{\rm post},
+\end{aligned}}                                             \tag{6.4}
+\]
+where
+\[
+\boxed{
+ \mathfrak C_{\rm post}
+ =\sum_i\int\left\{
+ J_{B,i}+\E_{\cF}[B_1:(V_{B,i}-\Gamma_{J,i})]
+ \right\}\,\mathrm dx.}                                  \tag{6.5}
+\]
+
+\emph{Proof.}
+For fixed $i,x$, the block matrix
+\[
+ \begin{pmatrix}
+ B_1&B_1\mu_{B,i}\\
+ \mu_{B,i}^TB_1&\mu_{B,i}^TB_1\mu_{B,i}
+ \end{pmatrix}                                             \tag{6.6}
+\]
+is positive semidefinite.  Take $\E_{\cF}$, add $2R$ to its upper-left
+block, and take the Schur complement to obtain $J_{B,i}\geq0$.
+Furthermore,
+\[
+ \E_{\cF}[B_1:G_i^{\otimes2}]
+ =\E_{\cF}[B_1:V_{B,i}]
+ +\E_{\cF}[\mu_{B,i}^TB_1\mu_{B,i}].                    \tag{6.7}
+\]
+Completing the $c_i$ square gives
+\[
+ {1\over2}c_i^T\overline{\mathcal A}c_i+c_i^Tq_i
+ ={1\over2}\|c_i+\overline{\mathcal A}^{-1}q_i
+ \|_{\overline{\mathcal A}}^2
+ -{1\over2}q_i^T\overline{\mathcal A}^{-1}q_i.          \tag{6.8}
+\]
+Insert (6.7)--(6.8) into (6.4). \qed
+
+The second term in (6.5) is sign-indefinite.  The nonnegative $J_B$ must
+remain coupled to it; estimating the raw covariance deficit alone can lose
+an almost exact cancellation.
+
+\section{Mean and forest ownership}
+
+Let
+\[
+ C_1=\Theta_R(B_1)^{1/2},\qquad
+ r_i=\E_{\cF}(C_1G_i),                                   \tag{7.1}
+\]
+and define
+\[
+ \mathfrak D_R
+ =\sum_i\int\left\{
+ \E_{\cF}[B_1:(G_i^{\otimes2}-\Gamma_{J,i})]
+ -q_i^T\overline{\mathcal A}^{-1}q_i-|r_i|^2
+ \right\}\,\mathrm dx.                                  \tag{7.2}
+\]
+Equations (6.3)--(6.7) give
+\[
+ \boxed{
+ \mathfrak C_{\rm post}
+ =\mathfrak D_R+\sum_i\int|r_i|^2\,\mathrm dx.}          \tag{7.3}
+\]
+Thus the once-only owners are:
+\begin{enumerate}
+\item the raw Wick term owns the trace and complete R-063 forest;
+\item $q_i$ belongs to the mixed current and completed $c_i$ square;
+\item $r_i$ is restored by terminal perspective energy;
+\item $J_{B,i}$ is coefficient-reveal perspective variance;
+\item $B_0:Q_i/2$ is the low endpoint owner in (5.4); and
+\item the fixed R-096 collar stays in
+$\widetilde{\mathcal P}_{R,k}^{\rm pay}$.
+\end{enumerate}
+No item may be appended twice.  Under the extra R-096 conditional Gaussian
+hypothesis, the raw Wick owner sees only coefficient Hermite ranks zero,
+one, and two.  Theorem 6.1 itself differentiates no adapted selector.
+
+\section{Derivative-free predictable terminalization}
+
+Write $G_j=\sum_{s\leq j}g_s$, let
+$Q_j=G_j^{\otimes2}-\Gamma_j$ be the quadratic Wick martingale of the
+revealed roots, and let $B_k$ be predictable with deterministic spatial map
+$T_k$.  Define
+\[
+ F_J=\sum_kT_k^*B_k.                                      \tag{8.1}
+\]
+For $0\leq j\leq J$, set $F_j=\E[F_J\mid\cF_j]$.  For
+$1\leq j\leq J$, set $d_jF=F_j-F_{j-1}$ and
+$d_jQ=Q_j-Q_{j-1}$.  Then the tower property gives the exact terminalization
+\[
+ \boxed{
+ \sum_k\E\langle B_k,T_kQ_{k-1}\rangle
+ =\E\langle F_J,Q_J\rangle.}                             \tag{8.2}
+\]
+For every starting level $\ell$,
+\[
+ \E\langle F_J,Q_J\rangle
+ =\E\langle F_\ell,Q_\ell\rangle
+ +\sum_{j>\ell}\E\langle d_jF,d_jQ\rangle.              \tag{8.3}
+\]
+Writing $\Delta\Gamma_j=\operatorname{Cov}(g_j)$, the tensor identity is
+\[
+ d_jQ=G_{j-1}\otimes g_j+g_j\otimes G_{j-1}
+       +(g_j^{\otimes2}-\Delta\Gamma_j).                 \tag{8.4}
+\]
+After contraction with a symmetric scalar unit-variance coordinate this is
+the shorthand $d_jQ=2G_{j-1}g_j+H_2(g_j)$.  Hence only the first two
+conditional Hermite ranks of $d_jF$ pair with $d_jQ$.
+No Malliavin derivative of a selector is introduced.
+
+This identity does not itself provide a root-uniform estimate.  If one old
+Gaussian root $\xi_1$ is reused through
+\[
+ B_k=H_2(\xi_1)\qquad(k>1),                               \tag{8.5}
+\]
+then $N$ uses give pairing $2N$ but aggregate norm
+\[
+ \left\|\sum_{k=1}^NB_k\right\|_2^2=2N^2.               \tag{8.6}
+\]
+Thus predictability alone is insufficient.  A production proof needs a
+weighted low-Hermite/Doob norm with genuine spatial or root gain, or a
+direct signed cancellation.
+
+\section{Rational and full-frame consequences}
+
+% evidence-anchor: corollary-9.1-rational-global-terminalization
+\subsection*{Corollary 9.1 (rational terminal form)}
+
+Under the R-077/R-096 hypotheses,
+\[
+\boxed{
+\begin{aligned}
+ &\E\sum_k\left[
+ \mathcal U_{R,k}+\widetilde{\mathcal P}_{R,k}^{\rm pay}
+ +{1\over2}c_k^TB_{1,k}c_k\right]
+ +\E\mathcal W_{j_0-1,R}^{(J)}(A^0)\\
+ &\quad+\E\sum_i\int c_i^TRc_i\,\mathrm dx\\
+ &= {1\over2}\E\sum_i\int
+ \|c_i+\overline{\mathcal A}^{-1}q_i\|_{\overline{\mathcal A}}^2
+ \,\mathrm dx
+ +{1\over2}\E\mathfrak C_{\rm post}(B_R,G;R\mid\cF).
+\end{aligned}}                                             \tag{9.1}
+\]
+Consequently R-096 (8.3) is reduced to one lower form for the last bracket,
+the low endpoint, and the single allocated matrix payment.  No per-root
+adapted coefficient norm is needed.
+
+% evidence-anchor: corollary-9.2-full-frame-integrated-successor
+\subsection*{Corollary 9.2 (full-frame integrated successor)}
+
+For $B=B_{\rm fr}$, the same argument gives the sufficient new target
+\[
+\boxed{
+\begin{aligned}
+ &{1\over2}\E\mathfrak C_{\rm post}(B_{\rm fr},G;R\mid\cF)
+ -\E\mathcal W_{j_0-1,{\rm fr}}^{(J)}(A^0)\\
+ &\quad-\E\sum_i\int c_i^TRc_i\,\mathrm dx
+ -\E\Delta\mathcal R_{\leq}\\
+ &\qquad\geq-\eta\E X-\zeta\E Y-C_{\eta,\zeta}.
+\end{aligned}}                                             \tag{9.2}
+\]
+Here $X$ and $Y$ are the globally owned Cameron--Martin and terminal sextic
+budgets in the R-066/R-079 ledger, while $\Delta\mathcal R_{\leq}$ is exactly
+the low-frequency remainder of R-079 (4.2), carried through R-096 (2.8);
+none is newly estimated here.  Conditional on separate once-only inequalities
+paying those inherited owners with remaining $\eta/\zeta$ slack, the new
+analytic input sufficient for (9.2) is
+\[
+ \boxed{
+ \E\mathfrak C_{\rm post}(B_{\rm fr},G;R\mid\cF)
+ \geq-\eta\E X-\zeta\E Y-C_{\eta,\zeta}.}               \tag{9.3}
+\]
+The bracket is nonlinear in $B_{\rm fr}$, so cross-row Schur compensation
+is retained.  This creates a possible joint route for the rational mechanism
+R-085 (6.5) and the nonlinear full-frame mechanism whose separate Cartan
+architecture requires (4.10)--(4.11).
+
+Equation (9.3) does not prove the standalone Cartan spatial estimate (4.10),
+its one-use root budget (4.11), or the rational-only bound (6.5).  The spatial
+half (4.10) remains the earlier R-087 result; (4.11) remains open.  R-097 is
+an alternative integrated architecture, not a retroactive proof of those
+standalone statements.
+
+\section{Exact method boundaries}
+
+Two independent exact fixtures prevent false closure.
+
+First, take a Rademacher root $\xi\in\{-1,1\}$ and
+\[
+ B(\xi)=2+\xi,\qquad R=10^{-2}.                            \tag{10.1}
+\]
+Then $Q=\xi^2-1=0$ atomwise, while
+\[
+ \overline B=2,\qquad q=\E(B\xi)=1.                      \tag{10.2}
+\]
+The paid scalar block
+\[
+ \mathcal S_R(c)=qc+{1\over2}(\overline B+2R)c^2         \tag{10.3}
+\]
+has exact minimum
+\[
+ \inf_c\mathcal S_R(c)=-{1\over2(2+2R)}<0.              \tag{10.4}
+\]
+The transformed mean $r=\E[\Theta_R(B)^{1/2}\xi]$ is nonzero and restores
+its ownership exactly; it does not make (10.4) positive.  Direct sums show
+that bounded coefficients plus predictability alone cannot yield a
+root-count-uniform abstract constant.
+
+Second, let $g\sim N(0,1)$ and
+\[
+ B(g)=(g+2)^2+1,\qquad Q=H_2(g).                         \tag{10.5}
+\]
+The complete forest is derived rather than truncated:
+\[
+ BQ=H_4+4H_3+10H_2+8H_1+2H_0.                           \tag{10.6}
+\]
+Here $\overline B=6$, $q=4$, and $\E(BQ)=2$, so at
+$R=10^{-2}$ the terminal Schur determinant is negative.  Every rank zero
+through four is a genuine owner.  Omitting or duplicating any component
+breaks reconstruction.
+
+These fixtures are finite abstract coefficient/direct-sum method
+obstructions.  They are not counterexamples realized in the production
+torus geometry, and they neither prove nor refute (9.3).
+
+\section{Proof and failure map}
+
+\[
+\begin{array}{c}
+ \text{R-077 complete fresh-root cancellation}\\
+ \downarrow\\
+ \text{complete predictable Gram baselines}\\
+ \downarrow\quad\text{Theorem 3.1}\\
+ \boxed{\text{one terminal endpoint in expectation}}\\
+ \downarrow\quad\text{Theorem 5.1}\\
+ \boxed{\text{one terminal Schur square, perspective, and trace}}\\
+ \downarrow\quad\text{Theorem 6.1}\\
+ \boxed{\mathfrak C_{\rm post}
+ =J_B+\E_{\cF}[B:(V_B-\Gamma)]
+ =\mathfrak D_R+|r|^2}\\
+ \downarrow\\
+ \boxed{\text{next: production full-frame bound (9.2) or (9.3)}}\\
+ \downarrow\\
+ \mathrm{REG}\longrightarrow\mathrm{OVERLAP}_{\rm src}
+ \longrightarrow\mathrm{Nelson}.
+\end{array}
+\]
+
+The route verdicts are:
+\begin{itemize}
+\item complete Gram heat telescope: proved at finite cutoff;
+\item pathwise baseline telescope: false because (3.6) remains;
+\item terminal $\theta=0$ Schur identity: proved;
+\item posterior-covariance normal form: proved;
+\item automatic posterior-bracket positivity: false;
+\item predictability-only aggregate control: false;
+\item separate per-baseline Taylor payment: retired as primary route;
+\item production full-frame posterior form: open and required; and
+\item standalone rational (6.5) and Cartan (4.11): still open.
+\end{itemize}
+
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{Objection: rational projection may precede R-077
+cancellation.}
+
+\textbf{UPHELD as false.}  Theorem 3.1 applies only after the complete packet
+has been canceled and reassembled as a Gram row.  No individual fresh
+rational, trace, or forest fragment is centered.
+
+\item \textbf{Objection: predictable baselines telescope pathwise.}
+
+\textbf{UPHELD as false.}  Equation (3.8) contains the diagonal heat
+martingale $\mathfrak M_{k,B}$.  Only its signed conditional expectation
+vanishes.
+
+\item \textbf{Objection: $\Theta_R(B_1)\succeq0$ makes the endpoint
+nonnegative.}
+
+\textbf{UPHELD as false.}  The Wick trace remains signed.  Conditional
+variances from both positive terms in (5.5) are load-bearing.
+
+\item \textbf{Objection: the R-063 forest pays $q$ or $r$.}
+
+\textbf{UPHELD as an ownership error.}  The forest reconstructs raw $B:Q$.
+The mean $q$ belongs to the completed control square, while $r$ belongs to
+terminal perspective energy.
+
+\item \textbf{Objection: value--derivative independence implies
+$V_B=\Gamma$ after conditioning on an adapted selector.}
+
+\textbf{UPHELD as false.}  Unconditional heat independence does not preserve
+derivative covariance after coefficient or selector revelation.
+
+\item \textbf{Objection: $J_B$ may be discarded and the covariance deficit
+bounded alone.}
+
+\textbf{UPHELD as a potentially fatal loss.}  The positive Schur term can
+cancel almost all of the negative posterior covariance term.  Their sum is
+the exact target.
+
+\item \textbf{Objection: $R=B_1$ may be chosen without bookkeeping.}
+
+\textbf{UPHELD as false.}  The algebra allows random $R$, but the quadratic
+cost must come from an actual once-only Cameron--Martin reserve.  Moving or
+same-root choices also carry the R-092/R-095 defects.
+
+\item \textbf{Objection: (9.3) has already proved R-085 (4.11) and (6.5).}
+
+\textbf{UPHELD as an overclaim.}  Equation (9.3) is still open and is a joint
+full-frame successor.  It need not imply either standalone statement.
+
+\item \textbf{Objection: finite-cutoff identities give adapted continuum
+reconstruction.}
+
+\textbf{UPHELD as false.}  R-063 supplies deterministic $H^2$ translation,
+not a control-independent norm for an adapted terminal coefficient.
+
+\item \textbf{Objection: the finite fixtures disprove the production
+theorem.}
+
+\textbf{DISMISSED.}  They refute automatic algebraic positivity and an
+abstract predictability-only constant.  Production spatial/root structure
+may still prove (9.3).
+\end{enumerate}
+
+\section{Verification and authority map}
+
+The primary executable checks the heat telescope, five noncommuting matrix
+Schur fixtures, posterior conditional identities, cross-Doob decomposition,
+low-Hermite projection, repeated-root accumulation, complete Gaussian
+forest, and deliberate mutations.  The independent executable imports only
+the Python standard library and recomputes exact Fraction-valued Schur,
+telescope, forest, posterior covariance, direct-sum, and perspective
+certificates.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_global_gram_terminalization_
+  covariance_deficit_reduction_verify.py
+\end{verbatim}
+
+The authority chain is R-063 for the complete forest, R-066 for backward
+heat current identities, R-077 for complete fresh-root cancellation, R-079
+for the full safe frame, R-085/R-086 for Cartan and rational coordinates,
+R-087 for the Cartan spatial half, R-093/R-095 for perspective and
+conditional-mean debts, and R-096 for the adapted-prefix frontier.
+
+\section{Result footer}
+
+\begingroup\scriptsize
+\begin{verbatim}
+Result ID: A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-
+           COVARIANCE-DEFICIT-REDUCTION
+Ledger:    R-097.
+Title:     Full-frame terminalization and posterior-covariance bracket
+           boundary.
+Precise statement:
+           Complete heat-lifted Gram rows obey a backward-heat martingale
+           identity. Predictable Gram baselines telescope in expectation.
+           The terminal endpoint plus one matrix payment has an exact
+           theta=0 Schur form. Conditional completion isolates
+           C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2, J_B>=0.
+Scope:     Finite cutoff; positive floor; common real-even regulator;
+           strict-past controls for which every displayed polynomial Gram
+           and derivative product is integrable. Rational support collapse uses
+           the R-077 regular no-revisit whole-shell class and fixed collar.
+Dependencies:
+           R-063; R-066; R-077; R-079; R-085; R-086; R-087; R-093;
+           R-095; R-096.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, REDUCTION, METHOD BOUNDARY.
+Reproduction command:
+           python codes/foundations/a13_classii_global_gram_
+           terminalization_covariance_deficit_reduction_verify.py
+Expected output:
+           Primary 91/91; independent 69/69; integrated 189/189;
+           aggregate 349/349; exit zero.
+Falsification gate:
+           Any heat, Schur, covariance, Doob, forest, fixture, mutation,
+           authority, hash, PDF, count, ownership, or T4 scope check fails.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No production posterior-covariance lower form, Cartan one-use
+           (4.11), rational-only (6.5), complete H_N, REG, H_A,
+           OVERLAP_src, Nelson, removals, measure, T5--T7, or Sector-A
+           closure is proved.
+Next required action:
+           Prove the full-frame posterior bracket bound (9.2) or (9.3),
+           retaining J_B, low endpoint, CM payment, subtraction, q/r,
+           trace, and forest exactly once.
+\end{verbatim}
+\endgroup

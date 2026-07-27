@@ -69,9 +69,10 @@ retained. It also proves a spatially weighted Cameron--Martin square function
 that spends control energy once and an exact backward-heat projection for the
 base or predictably translated current. The terminal feedback commutator still
 contains coefficient and derivative-feedback channels. Generic weighted
-shortcuts fail, so the exact current child remains
-`A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now narrowed to the
-production near/far commutator estimate. R-080,
+shortcuts fail. R-097 now completes the heat-lifted Gram telescope and terminal
+`theta=0` Schur reduction, so the exact current child is
+`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: one production-weighted
+bound for `J_B+E[B:(V_B-Gamma)]`, with all owners retained once. R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to
 one localized predictable base-current tail, and narrows the near residual to
@@ -231,6 +232,16 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   next target is one global moving adapted-base payment with every heat, low,
   trace, forest, square, and non-rational owner retained once. Complete
   `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
+  R-097 now proves the backward-heat Gram telescope, its terminal `theta=0`
+  Schur identity, and the exact posterior normal form
+  `J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick and
+  cross-Doob terminalisation introduce no selector derivative. Exact finite
+  fixtures rule out both predictability-only low-Hermite aggregation and
+  automatic posterior-covariance positivity. Thus the next target is the one
+  production-weighted full-frame posterior bracket with low endpoint, matrix
+  cost, paid subtraction, `q/r`, trace, Wick terms, and forest inseparable.
+  Cartan (4.11), rational (6.5), complete `H_N`, REG, assembly, Nelson, and
+  Sector A remain open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

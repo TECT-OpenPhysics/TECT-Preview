@@ -604,6 +604,23 @@ the following structural results and proof-architecture boundaries hold.
     Stein differentiation produces uncontrolled adapted-selector
     derivatives. Adapted-prefix payment, complete `H_N`, REG,
     `OVERLAP_src`, Nelson, and Sector A remain open.
+40. `A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-COVARIANCE-DEFICIT-REDUCTION`
+    is R-097. It proves that every complete heat-lifted covariance-normal
+    Gram row is a backward-heat martingale, so the R-096 predictable baseline
+    sum telescopes in signed expectation to one terminal endpoint after the
+    diagonal heat correction. The endpoint plus one allocated matrix payment
+    has an exact theta-zero Schur completion. Conditioning on the complete
+    control and then on the terminal Gram coefficient reduces its signed part
+    to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0` by an exact
+    block Schur complement. Predictable Wick rows also terminalize to one
+    aggregate coefficient and a derivative-free cross-Doob ledger. Exact
+    repeated-Hermite, Rademacher, Gaussian-forest, posterior-covariance, and
+    moving-perspective fixtures show that predictability alone does not
+    control the aggregate and that the posterior bracket is not automatically
+    positive. These are abstract method boundaries, not production torus
+    counterexamples. The production full-frame posterior-covariance form,
+    Cartan one-use (4.11), rational (6.5), complete `H_N`, REG,
+    `OVERLAP_src`, Nelson, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -650,6 +667,7 @@ is a scoped T4 subproof and does not promote A13.
 | Root-local Gram secant / feedback-square boundary | Quadratic-versus-mixed factor audit, weighted-Hardy centered secant, fresh derivative form, value--heat control-prefix payment, fractional square allocation, BG-row correction, and revisit no-go | T4 analytic/exact/executed advance; complete rootwise packet embedding, `H_N`, REG, progression, and Nelson open |
 | Fractional feedback-square / perspective ownership boundary | Exact moving-prefix defect, fractional matrix-perspective iff, conditional resolvent-gap identity, critical absolute allocation schedule, and near-`T_G^>` Cartan homotopy | T4 analytic/exact/executed boundary; complete signed rootwise packet, `H_N`, REG, progression, and Nelson open |
 | Gram-first predictable baselines / low-Hermite Wick boundary | Complete-cancellation-first ordering, product/Doob covariance defect, fixed-collar support collapse of genuine baseline `T_Q^>,T_G^>`, coordinate Hermite rank-zero-to-two compression, and full-square `q/r` ownership | T4 analytic/exact/executed reduction; global moving adapted-base payment, complete `H_N`, REG, progression, and Nelson open |
+| Global Gram terminalization / posterior-covariance boundary | Complete Gram-row backward-heat telescope, theta-zero terminal Schur completion, posterior bracket `J_B+E[B:(V_B-Gamma)]`, derivative-free predictable terminalization, complete forest ownership, and exact accumulation/positivity no-gos | T4 analytic/exact/executed reduction; production full-frame posterior lower form, Cartan (4.11), rational (6.5), complete `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -829,6 +847,13 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   the raw same-root Wick coefficient to Hermite ranks zero through two. It
   does not pay the remaining terms at the moving adapted base or create a
   positive spatial/root gain for the low-Hermite projections.
+- R-097 terminalizes the complete predictable Gram rows in expectation,
+  proves the terminal theta-zero Schur completion, and reduces the signed
+  endpoint to the exact posterior bracket
+  `J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`. Its derivative-free predictable
+  terminalization preserves only low Hermite ranks, but exact fixtures rule
+  out automatic bracket positivity and predictability-only aggregate
+  control. The production-weighted full-frame bracket remains open.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -851,24 +876,24 @@ Active umbrella gate:
 
 Current analytic child:
 
-- `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`
+- `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`
 
 Current subordinate order:
 
 1. keep the R-092 regular one-shot `H_C` theorem as a closed sufficient
    module; do not promote it to progressive/revisit controls;
-2. apply the R-077 complete fresh-root Wick/trace/forest cancellation before
-   rational or Hermite projection, then pass each predictable baseline to the
-   R-085/R-086 Gram/Taylor coordinates;
-3. use distinct resonance and payload-collar constants with
-   `L_gap>C_supp+L_res`; the genuine baseline `T_Q^>,T_G^>` regions are then
-   support-empty and the fixed boundary collar belongs to the payable branch;
-4. prove one cutoff-uniform expectation-inside lower form for the global sum
-   of moving adapted-base five-family terms, payable shifted terms, retained
-   endpoint squares, and every non-rational heat, low, trace, and R-063 forest
-   owner, using one `X/Y` allocation. Supply either a production-weighted
-   `Pi_0/Pi_1/Pi_2` spatial square-function gain or a direct signed
-   cancellation avoiding adapted-control Malliavin differentiation;
+2. preserve R-077 complete fresh-root cancellation before Gram projection,
+   then use the R-097 backward-heat telescope on each reassembled complete
+   predictable Gram row; do not assert a pathwise telescope;
+3. apply the R-097 terminal theta-zero Schur completion once, restoring the
+   low endpoint and paying the matrix cost from one actual Cameron--Martin
+   reserve. Keep `q`, `r`, trace, and the complete R-063 forest in their
+   unique owners;
+4. prove one cutoff-uniform production-weighted lower form for the full-frame
+   posterior bracket `J_B+E[B:(V_B-Gamma)]`, retaining `J_B` with the signed
+   covariance deficit. Supply either a weighted aggregate low-Hermite/Doob
+   spatial/root gain or a direct signed cancellation. Do not use
+   predictability-only aggregation or automatic posterior positivity;
 5. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
@@ -882,17 +907,17 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_low_hermite_wick_predictable_baseline_reduction_verify.py
+python codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `69/69`;
-- non-importing independent `50/50`;
-- integrated `153/153` and aggregate `272/272`;
-- exact finite-tree moving-prefix, fractional perspective, conditional mean,
-  critical schedule, Cartan homotopy, predecessor/source/PDF/surface
-  contracts, and T4 scope firewalls;
+- primary `91/91`;
+- standard-library exact independent `69/69`;
+- integrated `189/189` and aggregate `349/349`;
+- exact heat telescope, noncommuting terminal Schur, posterior covariance,
+  complete Hermite forest, cross-Doob, repeated-root accumulation, deliberate
+  mutation, predecessor/source/PDF/surface contracts, and T4 firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -902,19 +927,19 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_fractional_feedback_square_perspective_boundary_manifest.json`
-- `notes/classii-fractional-feedback-square-perspective-domination-boundary-260727-v1.0.tex.txt`
-- `notes/classii-fractional-feedback-square-perspective-domination-boundary-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary.py`
-- `../../codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary_independent.py`
-- `../../codes/foundations/a13_classii_fractional_feedback_square_perspective_boundary_verify.py`
-- `runs/2026-07-27-primary-fractional-feedback-square-perspective-boundary/result.json`
-- `runs/2026-07-27-independent-fractional-feedback-square-perspective-boundary/result.json`
-- `runs/2026-07-27-integrated-fractional-feedback-square-perspective-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-095`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-fractional-feedback-global-square-identification`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-scale-dependent-fraction-absolute-closure`
-- `../../explorations/log.jsonl` (`EXP-000200`--`EXP-000206`)
+- `classii_global_gram_terminalization_covariance_deficit_reduction_manifest.json`
+- `notes/classii-global-gram-terminalization-covariance-deficit-reduction-260727-v1.0.tex.txt`
+- `notes/classii-global-gram-terminalization-covariance-deficit-reduction-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction.py`
+- `../../codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction_independent.py`
+- `../../codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction_verify.py`
+- `runs/2026-07-27-primary-global-gram-terminalization-covariance-deficit-reduction/result.json`
+- `runs/2026-07-27-independent-global-gram-terminalization-covariance-deficit-reduction/result.json`
+- `runs/2026-07-27-integrated-global-gram-terminalization-covariance-deficit-reduction/result.json`
+- `../../RESULTS-LEDGER.md#r-097`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-predictability-only-low-hermite-aggregate`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-automatic-posterior-covariance-positivity`
+- `../../explorations/log.jsonl` (`EXP-000214`--`EXP-000220`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1696,6 +1721,19 @@ surface pin; primary `69/69`, independent `50/50`, integrated `153/153`, or
 aggregate `272/272`; or any promoted adapted-prefix payment, complete `H_N`,
 REG, `OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
 
+The R-097 continuation is additionally falsified by failure of the complete
+Gram-row backward-heat identity or expectation telescope; any terminal
+theta-zero Schur identity, `B A^(-1)B+Theta_R(B)=B`, posterior second-moment
+tower, `J_B` block-Schur/variance certificate, or
+`C_post=D_R+|r|^2` ownership identity; the predictable terminalization,
+cross-Doob, or low-Hermite exhaustion; any complete `H_0`--`H_4` forest,
+repeated-`H_2`, Rademacher, posterior-deficit, or moving-perspective fixture;
+any deliberate mutation rejection, authority, source, note, PDF, manifest,
+registry, exploration, or public-surface pin; primary `91/91`, independent
+`69/69`, integrated `189/189`, or aggregate `349/349`; or any promoted
+production posterior-covariance form, Cartan (4.11), rational (6.5), complete
+`H_N`, REG, `OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1888,6 +1926,17 @@ adapted selectors. Therefore it does not prove complete coefficient-
 unconditioned `H_N`, REG, arbitrary progressive/revisit `H_A`,
 `OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
 closure, or T5--T7. Tier stays T4.
+
+R-097 proves exact complete Gram-row terminalization, the terminal theta-zero
+Schur completion, the posterior-covariance normal form, and derivative-free
+predictable terminalization. Its finite abstract fixtures refute only
+automatic bracket positivity and predictability-only aggregate control; they
+are not production torus counterexamples. R-097 does not prove the production-
+weighted full-frame posterior bracket, standalone Cartan one-use (4.11),
+rational shifted-Hessian form (6.5), complete coefficient-unconditioned
+`H_N`, REG, arbitrary progressive/revisit `H_A`, `OVERLAP_src`, Nelson,
+cutoff or floor removal, a measure theorem, Sector-A closure, or T5--T7.
+Tier stays T4.
 
 ## History
 
@@ -2296,3 +2345,17 @@ closure, or T5--T7. Tier stays T4.
   zero-overfull, extraction, and all-page Poppler visual QA. Adapted-prefix
   payment, complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain
   open; tier stays T4.
+- 2026-07-27: Registered R-097. Complete heat-lifted Gram baselines now
+  telescope in signed expectation after their diagonal heat correction. The
+  single terminal endpoint plus one matrix payment has an exact theta-zero
+  Schur form, and conditional completion isolates
+  `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2` with `J_B>=0`. Predictable Wick rows
+  also terminalize to one derivative-free cross-Doob ledger. Exact repeated-
+  Hermite, bounded Rademacher, complete Gaussian-forest, posterior-deficit,
+  and moving-perspective fixtures retire predictability-only aggregation and
+  automatic positivity without refuting the production torus form. Primary
+  `91/91`, standard-library independent `69/69`, integrated `189/189`, and
+  aggregate `349/349` are manifest-pinned; the ten-page PDF passed form,
+  zero-overfull, and all-page Poppler QA. The production posterior bracket,
+  Cartan (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson,
+  and Sector A remain open; tier stays T4.
