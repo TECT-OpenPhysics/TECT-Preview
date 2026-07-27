@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-099 adversarial boundary and certificate repair] - 2026-07-27
+
+Adversarial review repaired three scope/evidence defects without changing the R-099 theorem tier or open frontier. Equality of both extended heat/value endpoints is now stated only as a sufficient cancellation condition: noninjectivity permits distinct states with equal current values, while equal value endpoints alone do not generically cancel a heat change. The payment-gauge theorem now explicitly assumes a positive-semidefinite Gram so A is positive definite, and consistent joint ridge updates are sufficient but not necessary in degenerate fibres. Primary and independent reversal fixtures now construct actual opposite visits and reject a wrong-sign mutant; the independent certificate constructs an actual block direct sum. EXP-000234 records the append-only correction to EXP-000226. Full verification, PDF QA, regeneration, and release checks are rerun before publication.
+
+## [A13 R-099: extended-state Cartan, causal Doob, and rational recovery boundary] - 2026-07-27
+
+Registered R-099. Complete Cartan value and target-heat edges telescope exactly inside one unchanged Malliavin root, and the production heat derivative makes the heat owner mandatory. A repeated-range loop retires only a terminal-mixed-only arbitrary-progressive extension. Chronological Doob differences give the sharp causal control-coordinate one-use ledger; the full frame requires its Jensen/covariance residual, and exact product and spike fixtures retire same-level-only and absolute frame-square transfers. The five rational unshifted families admit two-sided regular one-shot bounds, while the payment-gauge identity reduces (6.5) to the complete signed posterior/source-action lower form. Primary 183/183 and independent 124/124 checks pass; the ten-page PDF passed form, extraction, zero-overfull, and all-page Poppler visual QA. The coefficient-unconditioned production lower form, rational (6.5), H_N, REG, progressive H_A, OVERLAP_src, Nelson, measure construction, and Sector A remain open; tier stays T4.
+
 ## [R-098 explicit three-atom symmetry verification repair] - 2026-07-27
 
 Repaired an adversarially detected evidence gap without changing the theorem. The primary certificate had accepted q=0 through a literal truth value, while the independent certificate used zero first moments separately from the declared squared atoms and neither executed the transformed-mean r=0 check. Both implementations now construct the same signed three-atom law G=0,+sqrt(2),-sqrt(2), verify Gamma=1 and q=0, and evaluate the even Theta_R(B) square-root at three positive payments to verify r=0. The integrated verifier pins all six symmetry assertions. Updated counts are primary 138/138, standard-library independent 111/111, integrated 208/208, and aggregate 457/457. The R-098 scope and T4 boundary are unchanged.

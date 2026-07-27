@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD](#ng-2026-07-27-a13-progressive-revisit-cartan-mixed-payload) | arbitrary-progressive extension of the R-085 Cartan one-use ledger using only the terminal `X^(1/2)Y^(1/2)` payload | an accepted repeated-range loop inserts `A f_epsilon` before one root and later reverses it, so `A*=0` and terminal `Y` is fixed, yet the first root retains a genuine production CFAR square `c_C A^2`; the mixed payload is only `O(A)`. Only the terminal mixed-only progressive extension is false: a once-only pure-`X` allowance, the complete signed packet, and R-092 regular no-revisit `H_C` remain available |
+| [NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER](#ng-2026-07-27-a13-absolute-last-root-frame-transfer) | close the nonlinear frame by same-level mean shifts or by squaring the R-098 secant before its signed cross pairing | the exact ordered reveal contains a Jensen/covariance increment. A bounded product has frame martingale mass `4^n-1` but same-level shift mass one; independently, unit control, sextic, and linear mixed budgets coexist with square multiplier `N^2` on a rare event. The causal Doob--Hardy control-coordinate theorem remains valid, and a signed linear complete-posterior estimate is not excluded |
 | [NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION](#ng-2026-07-27-a13-nonnegative-per-subvisit-cartan-atomization) | refinement-stable nonnegative per-subvisit extension of the R-085/R-088 Cartan atom ledger using only the mixed energy--terminal-sextic payload | two opposite subvisits of one source-block traverse, sharing the same fixed target heat and root derivative, cancel exactly when grouped signed but each has a nonzero far harmonic with squared size `cA^2`; the mixed payload is only `O(A)`. Only this per-subvisit architecture is retired: distinct temporal roots/heats, a once-only pure-`X` payment, the complete signed form, and the regular one-shot class remain open or intact |
 | [NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE](#ng-2026-07-27-a13-predictability-only-low-hermite-aggregate) | root-uniform control of the terminalized low-Hermite coefficient from predictability and a local one-use estimate alone | reusing one old Gaussian `H_2` root in `N` predictable rows gives pairing `2N` but squared norm `2N^2`; terminalization is exact, but a production-weighted spatial/root gain or direct signed cancellation is still required |
 | [NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY](#ng-2026-07-27-a13-automatic-posterior-covariance-positivity) | close the terminal Schur packet by declaring `J_B+E[B:(V_B-Gamma)]` automatically nonnegative | bounded Rademacher and complete Gaussian-forest fixtures have a negative optimized bracket even after exact q/r ownership is restored; `J_B` must remain coupled to the covariance deficit, and the production-weighted full-frame lower form is still open |
@@ -122,6 +124,68 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-27-a13-progressive-revisit-cartan-mixed-payload"></a>
+### NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD -- terminal mixed payload cannot pay arbitrary progressive Cartan revisits
+
+**Failure mode:** Extend the R-085 (4.11)-type Cartan one-use estimate from
+its regular one-shot setting to every finite progressive/revisit chart while
+retaining only `1+E[X^(1/2)Y^(1/2)]` as the growing right-hand payload.
+
+**Evidence:** In an accepted repeated-range temporal chart, insert the
+deterministic predictable shift `A f_epsilon` before a selected root and a
+later inverse shift `-A f_epsilon`. The terminal shift is zero, so terminal
+`Y` is independent of `A`, while `X=kappa_loop A^2`. R-098's actual nonzero
+production Cartan output gives the first root a CFAR lower bound `c_C A^2`
+for every fixed gap after selecting a nonzero output harmonic. The proposed
+mixed payload is only `O(1+A)`. The primary and independent R-099 executables
+check the nonzero coefficient, quadratic/linear scaling separation, terminal
+reversal, and deliberate cancellation mutants.
+
+**Consequence:** The terminal mixed-only arbitrary-progressive extension is
+false. The result does not reject an `eta X` allowance; on this loop its
+coefficient must exceed the explicit `3c_C/(40P kappa_loop)` threshold. It
+does not touch R-092's regular no-revisit theorem or refute the complete
+source action, R-097 posterior packet, `H_N`, `OVERLAP_src`, Nelson, or
+Sector-A closure. Those objects retain pure Cameron--Martin, heat, low,
+future, rational, trace, Schur, and forest companions.
+
+**Lesson:** Same-root extended-state subdivisions must be grouped before
+squaring, but fresh temporal roots remain distinct martingale-square owners.
+Use the complete signed posterior/source-action packet with the actual
+once-only pure-`X` term; do not promote a terminal mixed-only regular ledger to
+arbitrary revisits.
+
+<a id="ng-2026-07-27-a13-absolute-last-root-frame-transfer"></a>
+### NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER -- causal control ownership does not imply an absolute nonlinear-frame square
+
+**Failure mode:** After proving the causal Doob--Hardy one-use theorem for the
+terminal control coordinate, close the complete nonlinear Gram frame either
+from same-level mean increments alone or by applying the R-098 frame secant
+and squaring its value multiplier before the signed Wick cross pairing.
+
+**Evidence:** The exact ordered reveal is
+`d_j Bhat=B_fr(Z_j)-B_fr(Z_(j-1))+J_j-J_(j-1)`. For a quadratic Gram,
+`J_j` is conditional covariance. With independent three-point variables of
+mean zero, variance one, and fourth moment four, the product
+`Z=prod_(r=1)^n xi_r` has same-level mean-shift mass one but frame-martingale
+mass `4^n-1`. Separately, on an event of probability `N^(-6)`, the choices
+`u=N^3 1_E` and `z=N 1_E` give unit `E u^2`, `E z^6`, and
+`E(|u|z^3)` but `E(z^2u^2)=N^2`. Both computations are reproduced exactly by
+the primary and non-importing R-099 executables.
+
+**Consequence:** The Jensen/covariance residual is mandatory, and the frame
+secant must remain linearly paired with the Wick martingale. This is a method
+obstruction, not a production counterexample. It does not identify the
+abstract residual with the R-097 `J_B` or R-063 forest, does not invalidate
+R-098's weighted resampling estimate, and does not exclude a signed complete-
+posterior lower form.
+
+**Lesson:** Use chronological Doob differences to own and group the control
+coordinate once, then estimate the complete frame as a signed linear packet
+with its Jensen residual and global Schur compensation. Never infer nonlinear
+frame closure by squaring the secant multiplier against only separate `X,Y`
+budgets.
 
 <a id="ng-2026-07-27-a13-nonnegative-per-subvisit-cartan-atomization"></a>
 ### NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION -- nonnegative Cartan atoms are not stable under opposite subvisit refinement

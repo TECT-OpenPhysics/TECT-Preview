@@ -1,0 +1,715 @@
+% Title: Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY; FULL POSTERIOR PACKET, H_N, REG, OVERLAP_SRC, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-EXTENDED-STATE-CARTAN-DOOB-RATIONAL-RECOVERY
+% Ledger: R-099
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\HS}{\mathrm{HS}}
+
+\section{Purpose and scope}
+
+R-098 left three closely related questions at the A13 frontier.  Could a
+signed Cartan visit be grouped when its target heat changes?  Could the bare
+future-control response be assigned once without differentiating an adapted
+control?  Could the exact R-085 rational recovery be completed once an upper,
+rather than merely lower, estimate for its five unshifted families is known?
+
+This note answers all three questions at their honest scope and records two
+route exclusions.
+
+\begin{enumerate}
+\item A complete Cartan edge in the extended state $(\Sigma,z)$ telescopes
+exactly within one fixed Malliavin root.  The heat-change bracket is mandatory.
+Any common linear root derivative, Ornstein--Uhlenbeck operator, and FAR
+projection preserve the already-grouped identity.
+
+\item A later inverse visit carried by a fresh temporal root does not cancel
+the earlier nonnegative root square.  A production Cartan harmonic therefore
+rules out a cutoff/partition/revisit-uniform extension of the R-085 mixed-only
+ledger to arbitrary progressive controls.  The result does not touch R-092's
+regular no-revisit theorem and does not exclude a once-only pure-$X$ allowance.
+
+\item Chronological Doob differences give an exact derivative-free
+Doob--Hardy theorem.  Each Hoeffding component is owned at its last revealed
+root and all later smoothing shells are grouped before squaring.  This improves
+ownership and signed grouping; it does not invalidate the already-correct
+weighted resampling estimate of R-098.
+
+\item The complete nonlinear frame has an exact ordered-reveal decomposition
+into a mean secant and a Jensen residual.  A finite product fixture proves that
+the residual cannot be controlled by the same-level shift increment alone,
+and a rare-event spike rules out squaring the spatial frame secant before its
+signed cross pairing.
+
+\item The five R-085 unshifted rational families satisfy a two-sided form bound
+on the accepted fixed-floor regular strict-past one-shot class.  An exact
+payment-gauge identity then reduces rational (6.5) to a lower form for the
+complete owner packet, which is weaker than positivity of the posterior
+bracket alone.  The latter lower form is still open.
+\end{enumerate}
+
+The result is a T4 analytic/exact/executed advance and method boundary.  It
+does not prove the coefficient-unconditioned production posterior lower form,
+rational (6.5), complete $H_N$, REG, arbitrary progressive $H_A$,
+$\mathrm{OVERLAP}_{\rm src}$, the $q=10/9$ Nelson estimate, cutoff or floor
+removal, an interacting measure, or Sector-A closure.
+
+\section{Authorities, notation, and scope}
+
+The production Cartan current is based on a trace-free Cartan matrix $S$ and
+the quotient vector
+\[
+ F_S(z)={z^TSz\over e+|z|^2}z,
+ \qquad
+ J_\Sigma(z)=(P_\Sigma F_S)(z)^T Dz,                 \tag{2.1}
+\]
+where $e>0$ is the fixed floor and $P_\Sigma$ is the Gaussian heat operator
+with target covariance $\Sigma$.  Formula (2.1) is a one-form; $D_z$ below
+denotes a value derivative and $D_x$ a spatial derivative.
+
+R-083 supplies the exact raw value/heat telescope, R-084 the root-diagonal
+Cartan current and CFAR normalization, R-085 the targets (4.10)--(4.11) and
+(6.5), R-087 the accepted regular spatial decay, R-092 the regular
+mutually-orthogonal strict-past no-revisit Cartan theorem, R-097 the terminal
+Gram/posterior and cross-Doob owners, and R-098 the exact production harmonic,
+frame secant, rational ridge, payment split, and same-heat reverse refinement.
+Every use below is at finite cutoff and fixed positive floor.
+
+For the Doob theorem, $(\cF_j)_{j=j_0-1}^J$ is the chronological filtration
+of independent roots.  All operators $K_k$ are deterministic, and
+$h_k\in L^2(\cF_{k-1};H)$.  The base conditional mean is
+$\E_{j_0-1}h_k$, not necessarily the unconditional mean.
+
+\section{The extended-state signed Cartan telescope}
+
+Fix one Malliavin root $j$ and a finite path
+$(\Sigma_\ell,z_\ell)_{\ell=0}^L$.  Define the complete edge
+\[
+\begin{split}
+ E_\ell={}&J_{\Sigma_\ell}(z_\ell)
+             -J_{\Sigma_\ell}(z_{\ell-1})\\
+ &+J_{\Sigma_\ell}(z_{\ell-1})
+             -J_{\Sigma_{\ell-1}}(z_{\ell-1}).
+\end{split}                                            \tag{3.1}
+\]
+The first line is the value/source edge at the new heat and the second line is
+the target-heat compensator.
+
+% evidence-anchor: theorem-3.1-extended-state-cartan-telescope
+\subsection*{Theorem 3.1 (complete common-root telescope)}
+
+For every finite path, without a sign or monotonicity assumption,
+\[
+ \boxed{\sum_{\ell=1}^L E_\ell
+ =J_{\Sigma_L}(z_L)-J_{\Sigma_0}(z_0).}              \tag{3.2}
+\]
+Consequently, for a common root derivative, OU time, and FAR projector,
+\[
+ Q_{j,C}P_t^{(j)}\mathbb D_j\sum_{\ell=1}^LE_\ell
+ =Q_{j,C}P_t^{(j)}\mathbb D_j
+   \{J_{\Sigma_L}(z_L)-J_{\Sigma_0}(z_0)\}.          \tag{3.3}
+\]
+
+\emph{Proof.}
+Each complete edge is already
+$J_{\Sigma_\ell}(z_\ell)-J_{\Sigma_{\ell-1}}(z_{\ell-1})$.
+Summation gives (3.2).  Equation (3.3) follows by applying the same linear
+operator to the grouped identity.  \hfill$\square$
+
+Thus arbitrary signed subdivisions inside one root are partition invariant.
+Equality of both extended endpoints guarantees cancellation, but it is not
+necessary because $(\Sigma,z)\mapsto J_\Sigma(z)$ need not be injective; for
+example, distinct heats agree at $z=0$.  Equality of the value endpoints alone
+does not guarantee cancellation, and a heat change generically leaves the
+defect in (3.4).  At fixed heat the compensators vanish and Theorem 3.1 reduces
+to the R-098 same-root reverse cancellation.  Identifying
+the endpoint derivative with the accepted R-084 three-channel formula also
+requires the endpoint shift to be $\cF_{j-1}$-measurable; otherwise
+$\mathbb D_j a$ is a new channel.
+
+\subsection*{Omitted-heat defect}
+
+If the heat compensators are dropped, the source-only sum is
+\[
+\begin{split}
+ S_{\rm src}
+ ={}&J_{\Sigma_L}(z_L)-J_{\Sigma_0}(z_0)\\
+ &-\sum_{\ell=1}^L
+   [J_{\Sigma_\ell}-J_{\Sigma_{\ell-1}}](z_{\ell-1}).
+\end{split}                                            \tag{3.4}
+\]
+The last line is an exact defect, not an error term.
+
+For the production vector $F_S$ with $\operatorname{tr}S=0$, its cubic
+Taylor term gives
+\[
+ D_z(\Delta F_S)(0)={4S\over e},
+ \qquad
+ D_z(P_{\tau I}F_S)(0)={2\tau S\over e}+O(\tau^2).   \tag{3.5}
+\]
+Indeed,
+$\Delta[(z^TSz)z]=2(\operatorname{tr}S)z+4Sz$.
+For $f_\epsilon=(\sin\theta,\epsilon\cos\theta)$,
+$z=\delta f_\epsilon$, and a root direction
+$v=\sqrt\lambda f_\epsilon$, the leading omitted-heat derivative is
+\[
+ {2(\tau_1-\tau_2)\over e}\,
+ \delta\sqrt\lambda\,D_x(f_\epsilon^TSf_\epsilon)
+ +O\{\delta(\tau_1^2+\tau_2^2)+\delta^3\}.           \tag{3.6}
+\]
+For the selected Cartan harmonic,
+$D_x(f_\epsilon^TSf_\epsilon)$ is a nonzero multiple of
+$(1+\epsilon^2)\sin(2\theta)$.  Hence (3.4) is nonzero in the production
+current.  This low-harmonic diagnostic proves that deleting the heat owner is
+false; it is not by itself a FAR counterexample.
+
+\section{Progressive revisits: the terminal mixed-only extension is false}
+
+Theorem 3.1 does not combine distinct temporal roots.  Consider an admissible
+finite temporal chart in the repeated-range class already used in R-094.
+Before a selected root $j$, insert the deterministic predictable shift
+\[
+ a_j=A f_\epsilon.                                    \tag{4.1}
+\]
+At a later temporal packet, insert $-Af_\epsilon$.  The terminal shift is
+$A^*=0$, but the first root still sees $A^{(j)}=Af_\epsilon$.
+
+R-098 computes a nonzero output harmonic of the actual forward production
+operator.  For every fixed $C\geq5$, choose one nonzero output $m$; then for
+all sufficiently large $A$,
+\[
+ \int_0^\infty e^{-2t}
+ \E\|\Pi_mP_t^{(j)}\mathbb D_jH_{A,j,Af_\epsilon}\|_{\HS}^2\dd t
+ \geq c_{C,\epsilon,n_j}A^2,                          \tag{4.2}
+\]
+where $c_{C,\epsilon,n_j}>0$.  Before the fixed LP transfer, its squared
+coefficient contains
+\[
+ N_j^2\lambda_{n_j}\epsilon^2(1-\rho^2)^2
+ \rho^{2(k_C-1)},
+ \qquad \rho={1-\epsilon\over1+\epsilon}.             \tag{4.3}
+\]
+The R-084 CFAR normalization therefore gives
+\[
+ S_C^{\rm ctrl}\geq {3\over40P}c_{C,\epsilon,n_j}A^2. \tag{4.4}
+\]
+
+On this loop, the source cost is $X=\kappa_{\rm loop}A^2$ and
+$Y=\|U+A^*\|_6^6=\|U\|_6^6$ is independent of $A$.  Hence
+\[
+ 1+\E[X^{1/2}Y^{1/2}]=O(1+A),                         \tag{4.5}
+\]
+which cannot dominate (4.4) uniformly as $A\to\infty$.
+
+% evidence-anchor: theorem-4.1-progressive-revisit-mixed-payload-no-go
+\subsection*{Theorem 4.1 (scoped progressive mixed-payload no-go)}
+
+There is no cutoff/partition/revisit-uniform extension of the R-085
+(4.11)-type ledger to arbitrary progressive revisits if its only growing
+right-hand payload is the terminal mixed quantity
+$\E[X^{1/2}Y^{1/2}]$.
+
+The proof is (4.1)--(4.5).  It needs only the nonnegative first-root square;
+no identification of the later root operator with the first is required.
+The later inverse visit cannot delete a previously diagonalized root square.
+
+The theorem has four important exclusions.  It does not refute R-092's
+regular no-revisit $H_C$.  It does not exclude an $\eta X$ allowance; on this
+loop such an estimate needs a coefficient at least
+\[
+ \eta\geq {3c_C\over40P\kappa_{\rm loop}}.            \tag{4.6}
+\]
+It is not a counterexample to the complete source action or the R-097
+posterior packet, which retain the $9X/20$ action term and signed heat, low,
+future, rational, trace, and forest companions.  Finally it does not create a
+new positive reserve: terminal $A^*=0$ makes the terminal Gram difference
+zero while the intermediate root square remains.
+
+The method failure is registered as
+\url{NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD}.
+
+\section{Causal Doob--Hardy ownership}
+
+Let
+\[
+ A^*=\sum_{k=j_0}^{J+1}K_kh_k,
+ \qquad
+ d_j=\E[\,\cdot\mid\cF_j]-\E[\,\cdot\mid\cF_{j-1}], \tag{5.1}
+\]
+with deterministic $K_k:H\to V$, $h_k\in L^2(\cF_{k-1};H)$, and
+$\|K_k\|\leq\kappa2^{-\alpha k}$.
+
+% evidence-anchor: theorem-5.1-causal-doob-hardy-one-use
+\subsection*{Theorem 5.1 (last-root Doob--Hardy theorem)}
+
+For every $\beta>0$, set
+$S_\beta=\sum_{r\geq1}2^{-\beta r}=(2^\beta-1)^{-1}$.
+Then
+\[
+ d_jA^*=\sum_{k>j}K_kd_jh_k                                      \tag{5.2}
+\]
+and
+\[
+\boxed{
+ \sum_j2^{\beta j}\E\|d_jA^*\|_V^2
+ \leq S_\beta\kappa^2
+ \sum_k2^{-(2\alpha-\beta)k}
+       \sum_{j<k}\E\|d_jh_k\|_H^2.}                  \tag{5.3}
+\]
+Consequently,
+\[
+\boxed{
+ \sum_j2^{\beta j}\E\|d_jA^*\|_V^2
+ \leq S_\beta\kappa^2
+ \sum_k2^{-(2\alpha-\beta)k}
+ \E\|h_k-\E_{j_0-1}h_k\|_H^2.}                     \tag{5.4}
+\]
+
+\emph{Proof.}
+If $k\leq j$, then $h_k$ is already $\cF_{j-1}$-measurable, proving (5.2).
+For fixed $j$, weighted Cauchy--Schwarz gives
+\[
+ \left\|\sum_{k>j}K_kd_jh_k\right\|^2
+ \leq \kappa^2
+ \left(\sum_{k>j}2^{-\beta(k-j)}\right)
+ \sum_{k>j}2^{\beta(k-j)}2^{-2\alpha k}\|d_jh_k\|^2.
+\]
+Multiplying by $2^{\beta j}$ and summing proves (5.3).  Martingale
+orthogonality for each $h_k$ proves (5.4).  \hfill$\square$
+
+For the production $L^2$ smoothing exponent $\alpha=2$ and $\beta=1$,
+$S_1=1$, so
+\[
+ \sum_j2^j\E\|d_jA^*\|_2^2
+ \leq\kappa_K^2\sum_k2^{-3k}
+ \E\|h_k-\E_{j_0-1}h_k\|_2^2.                       \tag{5.5}
+\]
+The constant one is sharp in the limiting finite-array sense.  In three
+spatial dimensions, the accepted estimate
+\[
+ \|K_k\|_{L^2\to L^r}\lesssim
+ 2^{-(1/2+3/r)k},\qquad2\leq r\leq6,                 \tag{5.6}
+\]
+gives
+\[
+ \sum_j2^j\E\|d_jA^*\|_r^2
+ \lesssim\sum_k2^{-(6/r)k}
+ \E\|h_k-\E_{j_0-1}h_k\|_2^2.                      \tag{5.7}
+\]
+The decay powers at $r=2,3,6$ are $3,2,1$.
+
+\subsection*{Exact Hoeffding accounting}
+
+Write the orthogonal Hoeffding expansion over roots before $k$ as
+\[
+ h_k=\sum_{S\subset\{j_0,\ldots,k-1\}}h_{k,S}.        \tag{5.8}
+\]
+Chronological revelation yields
+\[
+ d_jh_k=\sum_{\max S=j}h_{k,S};                       \tag{5.9}
+\]
+each nonconstant component is owned exactly once.  Coordinate resampling
+instead satisfies
+\[
+ {1\over2}\E\|h_k-h_k^{(j)}\|^2
+ =\sum_{S\ni j}\|h_{k,S}\|_2^2,                     \tag{5.10}
+\]
+so its unweighted accounting sees a component $|S|$ times.  This is not a
+defect in R-098: the existing dyadic weights obey
+$\sum_{j\in S}2^j<2^k$ and retain its $2^{-3k}$ conclusion.  The new gain is
+chronological ownership, removal of the resampling factor, and signed grouping
+of every future $k$ before squaring.
+
+\section{The complete-frame ordered reveal}
+
+Let $Z$ be the terminal value field, assume
+$B_{\rm fr}(Z)\in L^2$, and define
+\[
+ Z_j=\E_jZ,\qquad
+ \widehat B_j=\E_jB_{\rm fr}(Z),\qquad
+ \mathcal J_j=\widehat B_j-B_{\rm fr}(Z_j).           \tag{6.1}
+\]
+
+% evidence-anchor: theorem-6.1-complete-frame-ordered-reveal
+\subsection*{Theorem 6.1 (mean secant plus Jensen residual)}
+
+For every reveal,
+\[
+ \boxed{d_j\widehat B
+ =B_{\rm fr}(Z_j)-B_{\rm fr}(Z_{j-1})
+   +\mathcal J_j-\mathcal J_{j-1}.}                   \tag{6.2}
+\]
+If $Q_j$ is the R-097 quadratic-Wick martingale, then for any base $\ell$,
+\[
+\begin{split}
+ \E\langle B_{\rm fr}(Z),Q_J\rangle
+ ={}&\E\langle\widehat B_\ell,Q_\ell\rangle\\
+ &+\sum_{j>\ell}\E\langle
+ B_{\rm fr}(Z_j)-B_{\rm fr}(Z_{j-1})
+ +\mathcal J_j-\mathcal J_{j-1},d_jQ\rangle.
+\end{split}                                            \tag{6.3}
+\]
+
+\emph{Proof.}
+Equation (6.2) follows by adding and subtracting the two mean frames.  Equation
+(6.3) is martingale orthogonality.  \hfill$\square$
+
+The decomposition is invariant under subdivisions that leave both the
+terminal field $Z$ and the filtration/reveal order unchanged.  It cannot be
+declared invariant after adding fresh roots or changing their order.  The
+global Schur mean
+\[
+ -q^T(\overline B+2R)^{-1}q                            \tag{6.4}
+\]
+also remains one unsplit owner; one must not condition on the full terminal
+control and then reuse the original root independence.
+
+For the quadratic Gram $B(z)=z^{\otimes2}$,
+$\mathcal J_j=\operatorname{Cov}(Z\mid\cF_j)$.  With
+$u_j=d_jZ$,
+\[
+\begin{split}
+ d_j\widehat B={}&Z_{j-1}\otimes u_j+u_j\otimes Z_{j-1}
+ +u_j\otimes u_j\\
+ &+\operatorname{Cov}(Z\mid\cF_j)
+  -\operatorname{Cov}(Z\mid\cF_{j-1}).
+\end{split}                                            \tag{6.5}
+\]
+The last line is a mandatory Jensen/covariance residual.  It is structurally
+the kind of residual the posterior/forest architecture must own, but this note
+does not identify it literally with the R-097 $J_B$ or the R-063 forest.
+
+\subsection*{A finite exponential separation}
+
+Let independent $\xi_r$ have
+\[
+ \Pr(\xi_r=\pm2)={1\over8},\qquad
+ \Pr(\xi_r=0)={3\over4}.                              \tag{6.6}
+\]
+Then $\E\xi_r=0$, $\E\xi_r^2=1$, and $\E\xi_r^4=4$.
+For $Z=\prod_{r=1}^n\xi_r$, one has $d_jZ=0$ for $j<n$ and
+$d_nZ=Z$, while
+\[
+ d_j\widehat B=\left(\prod_{r<j}\xi_r^2\right)(\xi_j^2-1),
+ \qquad
+ \E|d_j\widehat B|^2=3\,4^{j-1}.                     \tag{6.7}
+\]
+Therefore
+\[
+ \sum_{j=1}^n\E|d_j\widehat B|^2=4^n-1,
+ \qquad
+ \sum_{j=1}^n\E|d_jZ|^2=1.                           \tag{6.8}
+\]
+No cutoff-uniform nonlinear-frame estimate can use only the same-level mean
+shift $d_jZ$.
+
+\subsection*{Why the frame secant must remain linearly paired}
+
+R-098 gives
+\[
+ \|B_{\rm fr}(z)-B_{\rm fr}(w)\|_F
+ \leq C_B(|z|+|w|)|z-w|.                              \tag{6.9}
+\]
+Thus
+\[
+ \|B_{\rm fr}(Z_j)-B_{\rm fr}(Z_{j-1})\|_{L_x^2}
+ \leq C_B(\|Z_j\|_6+\|Z_{j-1}\|_6)\|d_jZ\|_3.       \tag{6.10}
+\]
+Keeping (6.10) linearly paired with $d_jQ$ has formal payload
+$X^{1/2}Y^{1/6}$ and total exponent $2/3<1$.  Squaring first creates
+$XY^{1/3}$ and total exponent $4/3>1$.
+
+This loss is real.  On an event $E$ with probability $N^{-6}$ set
+\[
+ u=N^3\mathbf1_E,\qquad z=N\mathbf1_E.                \tag{6.11}
+\]
+Then
+\[
+ \E u^2=\E z^6=\E(|u|z^3)=1,
+ \qquad \E(z^2u^2)=N^2.                              \tag{6.12}
+\]
+Equations (6.8) and (6.12) register the method failure
+\url{NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER}.
+They do not refute a signed linear estimate for the complete posterior packet.
+
+\section{Rational five-family two-sided form}
+
+On the fixed-floor regular mutually-orthogonal strict-past one-shot class,
+R-084 and R-085 give absolute pathwise estimates for the five unshifted
+families
+\[
+\begin{array}{lll}
+ U_1={1\over2}D\overline B(U)[a]:Q,&
+ U_2={1\over4}D^2\overline B(U)[a,a]:Q,&
+ U_3=G^T\overline B(U)c,\\
+ U_4=G^TD\overline B(U)[a]c,&
+ U_5={1\over2}G^TD^2\overline B(U)[a,a]c.&
+\end{array}                                                    \tag{7.1}
+\]
+Writing $X=\|a\|_{H^2}^2$, $Y=\|U+a\|_6^6$, they have the form
+\[
+ |U_\ell|\leq C_\ell M_\ell X^{x_\ell}Y^{y_\ell}, \tag{7.2}
+\]
+with the exact exponent ledger
+\[
+\begin{array}{c|c|c|c}
+ \ell&(x_\ell,y_\ell)&\sigma_\ell=1-x_\ell-y_\ell
+ &p_\ell=\sigma_\ell^{-1}\\ \hline
+ 1&(11/40,3/40)&13/20&20/13\\
+ 2&(11/20,3/20)&3/10&10/3\\
+ 3&(2/5,1/30)&17/30&30/17\\
+ 4&(2/5,1/5)&2/5&5/2\\
+ 5&(2/5,11/30)&7/30&30/7.
+\end{array}                                                    \tag{7.3}
+\]
+
+If $a+b+\sigma=1$, weighted Young gives
+\[
+\begin{split}
+ CMX^aY^b\leq{}&\eta X+\zeta Y\\
+ &+\sigma C^{1/\sigma}a^{a/\sigma}b^{b/\sigma}
+ \eta^{-a/\sigma}\zeta^{-b/\sigma}M^{1/\sigma}.
+\end{split}                                            \tag{7.4}
+\]
+Allocate $\eta/5$ and $\zeta/5$ to each family.  Every required moment is at
+most $30/7$, which is available in the accepted reconstructed model theory.
+
+% evidence-anchor: theorem-7.1-rational-five-family-two-sided-form
+\subsection*{Theorem 7.1 (two-sided unshifted form)}
+
+For every $\eta,\zeta>0$ in the declared regular one-shot class,
+\[
+ \boxed{\E|\mathcal U_R|
+ \leq\eta\E X+\zeta\E Y+C_{\eta,\zeta,e,j_0}.}       \tag{7.5}
+\]
+In particular, $\mathcal U_R$ has both lower and upper form bounds.  The
+result uses no independence of the adapted test $a$, but it is not a theorem
+for arbitrary progressive/revisit controls.
+
+\section{Payment gauge and the exact remaining rational owner}
+
+On one conditional fibre, set
+\[
+ K=\E_\cF B,\qquad q=\E_\cF(BG),\qquad A=K+2R,       \tag{8.1}
+\]
+where $B=B^T\succeq0$, $R\succ0$, and $c,R,\Gamma$ are $\cF$-measurable.  Assume all
+displayed terms are integrable.
+
+% evidence-anchor: theorem-8.1-payment-gauge-identity
+\subsection*{Theorem 8.1 (payment-gauge identity)}
+
+\[
+\boxed{
+\begin{split}
+ &{1\over2}\|c+A^{-1}q\|_A^2
+ +{1\over2}\{\E_\cF[B:(G^{\otimes2}-\Gamma)]-q^TA^{-1}q\}
+ -c^TRc\\
+ &\hspace{2.5cm}={1\over2}\E_\cF
+ [B:((G+c)^{\otimes2}-\Gamma)].
+\end{split}}                                           \tag{8.2}
+\]
+
+\emph{Proof.}
+Expanding the first square cancels $q^TA^{-1}q$, while
+\[
+ {1\over2}c^T(K+2R)c-c^TRc={1\over2}c^TKc.            \tag{8.3}
+\]
+The remaining terms are exactly the right side of (8.2).  \hfill$\square$
+
+Changing $R$ creates no sign provided the square, posterior bracket, and actual
+payment change together.  Changing only a subset has no general sign guarantee,
+although degenerate fibres may cancel accidentally.  In a row split one must
+still use $\sum_aR_a=R$; the full payment may not be copied into every row.
+
+Combining (8.2) with the R-098 owner identity gives
+\[
+ S_R+{1\over2}\mathfrak C_{\rm post}-P_R-\E W_0
+ =\E\Delta W_R
+ =\E\mathcal U_R+\E F_{6.5}.                         \tag{8.4}
+\]
+After Theorem 7.1, the desired lower form for $F_{6.5}$ is equivalent, up to
+arbitrarily small total $X,Y$ budgets, to
+\[
+ \E\left[S_R+{1\over2}\mathfrak C_{\rm post}-P_R-W_0\right]
+ \geq-\eta\E X-\zeta\E Y-C_{\eta,\zeta}.             \tag{8.5}
+\]
+The R-097 bracket-only lower bound is sufficient but strictly stronger because
+it discards the nonnegative Schur square $S_R$.
+
+An abstract rank-one Gram shows why an upper form was logically necessary.
+Let $B(z)=(z^2-1)^2$, $U=1$, $a=-2$, $G=t$, $c=0$, and $\Gamma=0$.  Then
+\[
+ B(1)=B(-1)=B'(1)=0,\quad B''(1)=8,\quad L=-16,       \tag{8.6}
+\]
+so
+\[
+ \mathcal U_R=8t^2,\qquad F_{6.5}=-8t^2,             \tag{8.7}
+\]
+while the complete endpoint owner vanishes.  Thus a lower estimate for
+$\mathcal U_R$ alone cannot control $F_{6.5}$.  This is an algebraic recovery
+fixture, not a production counterexample.
+
+\section{Once-only owner ledger and next theorem}
+
+The combined result fixes the following order of operations.
+
+\begin{enumerate}
+\item Inside one root, group the complete $(\Sigma,z)$ Cartan edge, including
+the heat compensator, before root differentiation, OU evolution, projection,
+or squaring.
+
+\item Across roots, use the actual Cameron--Martin cost $X$ once.  The later
+inverse visit does not erase an earlier martingale square, and the terminal
+mixed payload alone is not a progressive theorem.
+
+\item In control coordinates, use Theorem 5.1 to group all future smoothing
+shells before squaring.  Do not claim that it controls the nonlinear frame.
+
+\item For the frame, retain the mean secant and Jensen residual in the signed
+cross-Doob pairing.  Do not square the secant multiplier separately and do not
+identify the abstract residual with a production forest without proof.
+
+\item Retain the global Schur mean, low endpoint $W_0$, actual matrix payment,
+$q/r$ means, covariance trace, terminal $\Theta_R$ energy, and the R-063 forest
+exactly once.  The forest reconstructs the terminal raw $B_{\rm fr}:Q$ owner;
+it is not appended per visit.
+
+\item For the rational row, use the two-sided five-family form and the complete
+owner target (8.5).  Changing $R$ only repartitions its three matched owners.
+\end{enumerate}
+
+The next analytic target is therefore not a standalone progressive extension
+of R-085 (4.11).  It is a coefficient-unconditioned, cutoff-uniform lower form
+for the complete signed production packet in (8.5), simultaneously retaining
+the linear frame cross term, Jensen/covariance residual, Schur compensation,
+pure-$X$ allowance, low/heat/trace terms, and the forest.  Only after that
+$H_N$ theorem is proved should REG and the progressive source-union assembly
+be revisited.
+
+A narrow search of \texttt{E:\textbackslash Dev\textbackslash Contents} for
+posterior covariance/bracket, shifted/rational Hessian, Cartan one-use, and
+root-resampling/Doob statements found deterministic legacy definitions but no
+reusable theorem that closes this stochastic production packet.  This is a
+repository search result, not a claim about the external literature.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: Theorem 3.1 proves Cartan (4.11).}
+\textbf{UPHELD as an overclaim.}  The theorem proves exact subdivision
+invariance within one common root.  It supplies neither the spatial atom bound
+nor its mixed one-use summation.
+
+\item \textbf{Objection: terminal $A^*=0$ cancels the progressive loop.}
+\textbf{UPHELD as false.}  The first root square is nonnegative and already
+diagonalized; the later fresh root cannot cancel it.
+
+\item \textbf{Objection: the no-go also rejects an $\eta X$ estimate or R-092.}
+\textbf{DISMISSED.}  Theorem 4.1 excludes only a terminal mixed-only arbitrary-
+revisit extension.  Equation (4.6) records the necessary pure-$X$ coefficient,
+and R-092's regular no-revisit class is unchanged.
+
+\item \textbf{Objection: Hoeffding multiplicity invalidates R-098.}
+\textbf{DISMISSED.}  The dyadic weights already suppress it.  Theorem 5.1
+improves exact ownership and signed future-shell grouping.
+
+\item \textbf{Objection: Doob--Hardy controls the full nonlinear frame.}
+\textbf{UPHELD as false.}  Equations (6.8) and (6.12) isolate the missing
+Jensen residual and multiplier moment.
+
+\item \textbf{Objection: the Jensen residual is already exactly R-063.}
+\textbf{UPHELD as unproved.}  Only the abstract ordered-reveal identity is
+proved here; the production ownership identification remains part of the next
+theorem.
+
+\item \textbf{Objection: a favorable ridge $R$ creates positivity.}
+\textbf{UPHELD as false bookkeeping.}  The corresponding square and actual
+payment cancel the apparent change by (8.2).
+
+\item \textbf{Objection: Theorem 7.1 is progressive.}
+\textbf{UPHELD as an overclaim.}  Its authorities prove the absolute bounds
+only on the fixed-floor regular mutually-orthogonal strict-past one-shot class.
+\end{enumerate}
+
+External review should focus on the admissibility of the repeated-range loop,
+the heat convention in (3.5), the filtration base in (5.4), the distinction
+between the abstract Jensen residual and production forest, the familywise
+budget allocation in (7.5), and the payment signs in (8.2).
+
+\section{Executable verification}
+
+The primary executable uses exact fractions, finite Boolean cubes, random
+noncommuting positive matrices, and deliberate factor/ownership mutations.
+The independent executable imports no numerical package or primary module; it
+recomputes the telescopes, monomial heat contraction, Boolean conditional
+expectations, Hardy ratios, Jensen/product and spike fixtures, exponent ledger,
+non-diagonal payment identity, and Gram recovery with standard-library exact
+arithmetic.  The integrated verifier pins the load-bearing authorities,
+sources, proof note/PDF, both negative results, exploration decisions, public
+surfaces, and assertion counts.
+
+Run from the repository root:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+  a13_classii_extended_state_cartan_doob_rational_recovery_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-EXTENDED-STATE-CARTAN-DOOB-RATIONAL-RECOVERY
+Ledger:    R-099.
+Title:     Extended-state Cartan telescope, causal Doob one-use, and
+           rational recovery boundary.
+Precise statement:
+           Complete value plus heat Cartan edges telescope within a common
+           root. A genuine progressive reverse visit disproves only a
+           terminal mixed-only arbitrary-revisit extension. Chronological
+           Doob differences give an exact one-use Hardy ledger. The full
+           frame splits into mean secant plus mandatory Jensen residual, and
+           absolute frame-square transfer fails. The five rational unshifted
+           families have a two-sided regular one-shot form, and the exact
+           payment gauge reduces (6.5) to the complete owner lower form.
+Scope:     Finite cutoff and fixed positive floor. The Cartan telescope uses
+           one common root and common linear post-operators. The revisit
+           no-go leaves pure-X payment and R-092 intact. The rational form is
+           regular mutually-orthogonal strict-past one-shot only.
+Dependencies:
+           R-083; R-084; R-085; R-087; R-092; R-097; R-098.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+           a13_classii_extended_state_cartan_doob_rational_recovery_verify.py
+Expected output:
+           Manifest-pinned primary, standard-library independent,
+           integrated, and aggregate PASS; exit zero.
+Negative results:
+           NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD;
+           NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER.
+Falsification gate:
+           Failure of the extended telescope/heat defect, progressive
+           scaling, Doob-Hardy/last-root identity, ordered reveal/Jensen
+           residual, spike, rational exponents/Young estimate, payment gauge,
+           Gram recovery, authority/hash/PDF/ledger/count, or T4 scope check.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No production posterior lower form, rational (6.5), complete H_N,
+           REG, progressive H_A, OVERLAP_src, Nelson, floor removal, measure,
+           T5--T7, or Sector-A closure is proved.
+Next required action:
+           Prove the coefficient-unconditioned complete signed posterior/
+           source-action lower form, retaining pure X, linear frame/Jensen,
+           Schur, low, heat, trace, q/r, payment, and forest exactly once.
+\end{verbatim}
+\endgroup

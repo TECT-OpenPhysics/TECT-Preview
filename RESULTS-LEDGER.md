@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-099](#r-099) | Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete value plus target-heat Cartan edges telescope exactly inside one common Malliavin root before common linear differentiation, OU evolution, FAR projection, and squaring. A production repeated-range loop proves that terminal `X^(1/2)Y^(1/2)` alone cannot support an arbitrary-progressive extension: the first root retains a positive `c_C A^2` square although a later inverse visit makes `A*=0` and the mixed payload is only `O(A)`. This leaves a once-only pure-`X` allowance and R-092 regular `H_C` intact. Chronological Doob differences give a sharp derivative-free one-use Hardy ledger for the control coordinate, while the exact complete-frame ordered reveal retains a mandatory Jensen/covariance residual; product and spike fixtures exclude same-level-only and absolute frame-square transfers. The five rational unshifted families now have a two-sided form on the regular one-shot class, and an exact payment-gauge identity reduces (6.5) to the complete owner lower form. That production posterior/source-action lower form, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, measure construction, and Sector A remain open |
 | [R-098](#r-098) | Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary | Scoped T4 analytic/exact/executed advance and method boundary: the terminal posterior bracket is superadditive under, and only claims a theorem for, a matching split `B=sum_a B_a`, `R=sum_a R_a`; the production rational rank-one row is exactly a conditional ridge deficit. An exact recovery identity shows that standalone R-085 (6.5) still requires the low endpoint, once-only Cameron--Martin payment, and an upper form for the five unshifted families. An exact production-coefficient fibre has negative ridge deficit but is not a torus/control counterexample. For two oppositely oriented subvisits refining one source-block traverse and sharing the same fixed target heat and root derivative, each squared Cartan far atom is order `A^2` while the mixed `X^(1/2)Y^(1/2)` payload is only order `A`; the signed atoms cancel exactly before squaring. Hence refinement-stable nonnegative per-subvisit atomization is retired, while distinct temporal roots/heats, once-only pure-`X` payment, and the regular one-shot class are untouched. Derivative-free causal resampling supplies the bare kernel `<2^(-3k)`, but the signed grouped posterior form, standalone Cartan (4.11), rational (6.5), complete `H_N`, REG, arbitrary progressive assembly, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-097](#r-097) | Full-frame terminalization and posterior-covariance bracket boundary | Scoped T4 analytic/exact/executed reduction: complete heat-lifted Gram rows obey a backward-heat martingale identity, so all predictable rational baselines telescope in signed expectation after the necessary diagonal heat correction. The terminal endpoint plus one allocated matrix payment has an exact theta-zero Schur completion. Conditioning on the complete control and terminal Gram coefficient reduces its signed part to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick rows also terminalize into one aggregate coefficient and cross-Doob ledger without differentiating adapted selectors. Exact Rademacher, Gaussian-forest, repeated-H2, and moving-perspective fixtures refute automatic bracket positivity and predictability-only root-uniform aggregate control, but are not production torus counterexamples. The next target is one production-weighted full-frame posterior-covariance lower form retaining every owner once. Cartan one-use (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-096](#r-096) | Gram-first predictable-baseline support collapse and low-Hermite Wick boundary | Scoped T4 analytic/exact/executed reduction: complete R-077 fresh-root cancellation must precede rational projection. On each resulting regular strict-past no-revisit predictable baseline, the R-086 rough partners are supported below `k+C_supp`, so after a fixed widened payable collar the genuine coefficient-dominant `T_Q^>,T_G^>` regions are empty. The remaining problem is the once-only global payment at the moving adapted base `X_(k-1)+A^(k-1)`, not terminal large-gap resonance. Independently, an arbitrary same-root raw quadratic Wick contraction sees only coordinate Hermite ranks zero through two; centered raw Wick, coefficient mean `q`, and transformed mean `r` occupy distinct rank-two/rank-one owners. Hermite compression creates no spatial gain, and direct Stein differentiation exposes uncontrolled adapted-selector derivatives. The next target is one global adapted-prefix payable form with all heat, low, trace, forest, and non-rational owners retained once. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -117,6 +118,105 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-099"></a>
+### R-099 -- Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary
+
+**Result ID.**
+`A13-CLASSII-EXTENDED-STATE-CARTAN-DOOB-RATIONAL-RECOVERY`.
+
+**Tier.** T4 scoped analytic/exact/executed advance and method boundary. No
+tier promotion.
+
+**Common-root Cartan theorem.** For one fixed Malliavin root and any finite
+extended-state path `(Sigma_l,z_l)`, the complete edge
+`J_(Sigma_l)(z_l)-J_(Sigma_l)(z_(l-1))
++J_(Sigma_l)(z_(l-1))-J_(Sigma_(l-1))(z_(l-1))` telescopes exactly to the
+extended endpoint difference. The second bracket is the mandatory target-heat
+compensator. Applying the same linear root derivative, OU operator, and FAR
+projector after grouping preserves the identity. Equality of both extended
+endpoints guarantees cancellation but is not necessary because the current map
+need not be injective; equality of `z` endpoints alone does not guarantee it,
+and a heat change generically leaves the omitted-heat defect. For the production trace-free Cartan vector,
+`D_z Delta F_S(0)=4S/e` and the heat generator gives `2 tau S/e+O(tau^2)`, so
+omitting the heat owner leaves a genuine production defect; the low-harmonic
+diagnostic is not itself a FAR counterexample.
+
+**Progressive mixed-only no-go.** In an accepted repeated-range temporal chart,
+an early predictable `A f_epsilon` visit followed by a later inverse visit has
+terminal `A*=0`. The first root nevertheless contains an actual nonzero
+production Cartan output with CFAR lower bound `c_C A^2`, whereas
+`X=kappa_loop A^2`, terminal `Y` is fixed, and
+`1+E[X^(1/2)Y^(1/2)]=O(1+A)`. Therefore a cutoff/partition/revisit-uniform
+arbitrary-progressive extension using only that terminal mixed payload is
+false. This does not refute an `eta X` allowance, the complete signed source
+action/posterior packet, or R-092's regular no-revisit theorem.
+
+**Causal Doob--Hardy theorem.** If deterministic
+`||K_k||<=kappa 2^(-alpha k)` and
+`h_k in L2(F_(k-1);H)`, then
+`d_j A*=sum_(k>j) K_k d_j h_k` and, for `beta>0`,
+`sum_j 2^(beta j) E||d_jA*||^2` is at most
+`S_beta kappa^2 sum_k 2^(-(2alpha-beta)k)
+sum_(j<k)E||d_jh_k||^2`. Martingale orthogonality replaces the last sum by
+the variance relative to the base filtration. At the production `L2` exponent
+this is the sharp constant-one `2^(-3k)` ledger; at `r=2,3,6` the spatial
+decays are `3,2,1`. Chronological revelation owns each Hoeffding component at
+`max S`. R-098's weighted resampling estimate remains valid; the improvement
+is exact ownership, removal of the resampling factor, and signed grouping of
+all future smoothing shells before squaring.
+
+**Complete-frame boundary.** With `Z_j=E_j Z`,
+`Bhat_j=E_j B_fr(Z)`, and `J_j=Bhat_j-B_fr(Z_j)`,
+`d_jBhat=B_fr(Z_j)-B_fr(Z_(j-1))+J_j-J_(j-1)` exactly. For a quadratic Gram,
+`J_j` is conditional covariance. A bounded three-point product has frame
+martingale mass `4^n-1` but same-level shift mass one, so the Jensen residual
+cannot be discarded. The rare-event fixture
+`P(E)=N^(-6), u=N^3 1_E, z=N 1_E` has unit `E u^2`, `E z^6`, and
+`E(|u|z^3)` but `E(z^2u^2)=N^2`; the R-098 frame secant must remain linearly
+paired. The abstract Jensen residual is not identified here with the R-097
+`J_B` or R-063 forest.
+
+**Rational recovery.** The five R-085 unshifted families have exact
+`(X,Y)` powers `(11/40,3/40)`, `(11/20,3/20)`, `(2/5,1/30)`, `(2/5,1/5)`,
+and `(2/5,11/30)`. Their generalized-Young moments are at most `30/7`, so the
+accepted absolute estimates imply the two-sided form
+`E|U_R|<=eta E X+zeta E Y+C` on the fixed-floor regular mutually-orthogonal
+strict-past one-shot class. With `B` positive semidefinite,
+`K=E_F B`, `q=E_F(BG)`, and `A=K+2R`, the
+exact payment gauge
+`1/2||c+A^(-1)q||_A^2+1/2{E_F[B:(G^2-Gamma)]-q^TA^(-1)q}-c^TRc
+=1/2E_F[B:((G+c)^2-Gamma)]` shows that changing `R` only repartitions its
+matched square/bracket/payment owners. Consequently (6.5) reduces to a lower
+form for `S_R+C_post/2-P_R-W_0`, not to posterior-bracket positivity alone.
+
+**Adversarial review.** The theorem card explicitly upholds six objections:
+the telescope is not Cartan (4.11); terminal reversal does not cancel distinct
+root squares; Doob--Hardy does not control the nonlinear frame; the Jensen
+residual is not yet the production forest; a favorable ridge creates no free
+sign after actual payment; and the rational two-sided theorem is not
+progressive. It dismisses only the false claims that R-098 was invalidated by
+Hoeffding multiplicity or that the scoped revisit no-go withdraws R-092.
+
+**Evidence.** The self-contained referee note is
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-extended-state-cartan-doob-rational-recovery-260727-v1.0.tex.txt`
+and its paired ten-page PDF. Primary and standard-library independent
+executables, the hash-pinned integrated verifier, manifest, and JSON artifacts
+sit under the A13 code and runs trees. Primary `183/183`, independent
+`124/124`, integrated `240/240`, and aggregate `547/547` assertions pass; the
+PDF passed form, zero-overfull, and all-page Poppler visual QA.
+
+**Negative results.**
+`NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD` and
+`NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER`.
+
+**Boundary.** R-099 does not prove the coefficient-unconditioned production
+posterior/source-action lower form, rational shifted-Hessian (6.5), complete
+`H_N`, REG, arbitrary progressive `H_A`, `OVERLAP_src`, the `q=10/9` Nelson
+estimate, cutoff or floor removal, an interacting measure, Sector-A closure,
+or a higher tier. The next target is the complete signed owner form with
+pure `X`, linear frame/Jensen, Schur, low, heat, trace, `q/r`, payment, and the
+R-063 forest each retained exactly once.
 
 <a id="r-098"></a>
 ### R-098 -- Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary
