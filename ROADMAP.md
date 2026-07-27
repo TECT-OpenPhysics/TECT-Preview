@@ -229,7 +229,7 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   innovations, cross term, squares, traces, forest, paid difference, and
   complete low endpoint retained. It proves a spatially weighted Cameron--
   Martin control square function and the predictable base-current heat
-  projection. R-097--R-101 have now terminalised and recoordinated this
+  projection. R-097--R-102 have now terminalised and recoordinated this
   regular-control algebra at the exact
   `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: the backward-heat Gram
   row telescopes, the complete owner is payment-gauge invariant and exactly
@@ -237,10 +237,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   the full-Wick R-094 extension. R-101 proves that the isolated moving heat
   coefficient is orthogonal to the fresh raw-Wick increment and reduces the
   rational regular owner to `K_R=G^T L c+c^T B_1 c/2`, where
-  `B_1=(P_(Sigma_tar)B_R)(U+a)`. The only unresolved regular production form
-  is the heat-lifted coefficient-balanced rational-current Carleson
-  inequality, uniformly over the admissible target heats, with every owner
-  and scale weight retained once. R-080,
+  `B_1=(P_(Sigma_tar)B_R)(U+a)`. R-102 refunds the duplicate base-cubic and
+  separate R-086 current allocations, swaps the exact future-feedback `j<k`
+  sum into predictable last-insertion columns, and closes the whole regular
+  rational current. The high-prefix coefficient branch has limiting Young
+  slack `1/14`; EXP-000257 repairs the freeze-review omission by retaining
+  the fixed-low branch `X^(1/7)(1+Y)^(19/42)`, with slack `17/42` and
+  moment `42/17`. The estimate is uniform in cutoff and deterministic PSD
+  target and future heat. Thus regular `K_R` is closed with its
+  terminal square unspent. The next regular target is the nonduplicating
+  complete `H_N` and REG reassembly. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -543,7 +549,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-27)
+## Current priority view (refreshed 2026-07-28)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -621,7 +627,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
    child is `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`, narrowed by
-   R-080--R-101. R-080 closes the two distinct low objects for regular
+   R-080--R-102. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -699,7 +705,7 @@ preserved in git/changelog rather than treated as current gates.
    replace the rootwise reserve by a global terminal-square fraction unless
    the pure-future identity or predictable domination `2R>=theta B` is proved;
    a decaying `theta_j` does not repair the current separate absolute ledgers.
-    Apply R-097--R-101 next. The complete heat-lifted Gram row telescopes to its
+    Apply R-097--R-102 next. The complete heat-lifted Gram row telescopes to its
    terminal value, and the full R-099 owner
    `S_R+C_post/2-P_R-W_0` is exactly the ridge-independent terminal Wick
    increment. Under matching row/payment/baseline splits it is row-additive:
@@ -711,17 +717,21 @@ preserved in git/changelog rather than treated as current gates.
     raw-Wick block to the fixed low endpoint plus the already-paid R-100
     residual. Do not reuse the two raw Taylor families or apply another R-094
     secant. R-084 pays the three linear rows and R-071/R-085 pay the three
-    unshifted rational current families. Prove only the remaining coefficient-
-    balanced rational-current Carleson lower form, uniformly over the
-    admissible target heats, for
-    `K_R=G^T L c+c^T B_1 c/2`, with
-    `B_1=(P_(Sigma_tar)B_R)(U+a)`, retaining a fixed positive fraction of that
-    heat-lifted terminal square, the complete heat/low/trace/payment/`q/r`
-    owners, and the R-063 forest exactly once. Absolute balanced summation and
-    separated multiplier routes are supercritical. Unheated or zero-heat-
-    uniform pointwise Schur has rational kernel leakage; fixed-positive-heat
-    coercivity remains unproved. These are method boundaries, not production
-    counterexamples.
+    unshifted rational current families. R-102 now closes the remaining
+    `K_R=G^T L c+c^T B_1 c/2` row on the regular class: refund the separate
+    base-cubic and R-086 `T_G^<=` current allocations, swap the exact `j<k`
+    future-feedback sum into its later insertion index, condition the complete
+    product at the strict past, and apply the proved annular shell/prefix
+    ledger. The derivative column has slack `1/6`. The high-prefix
+    coefficient branch has decay `2^(-k/14)` and limiting slack `1/14`;
+    the separately retained fixed-low branch
+    `X^(1/7)(1+Y)^(19/42)` has slack `17/42` and moment `42/17`.
+    The estimate is uniform in cutoff and deterministic PSD target and future
+    heat and leaves the complete heat-lifted
+    terminal square unused. Reassemble regular complete `H_N` and REG next,
+    retaining the heat/low/trace/payment/`q/r` owners and R-063 forest exactly
+    once. Absolute balanced summation, separated multipliers, inverse-Gram
+    Schur, and predictable-baseline deletion remain invalid shortcuts.
    Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower

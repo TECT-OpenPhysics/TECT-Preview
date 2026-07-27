@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE](#ng-2026-07-28-a13-global-to-predictable-current-bridge) | delete the global R-101/R-102 rational current by applying R-096 predictable-baseline support collapse root by root, or by retaining only martingale differences of the future control and tangent | R-096 removes the genuine large-gap branch only on each predictable partial-control baseline. Exact cross-Doob decomposition leaves the future-feedback innovation `R_cur=sum_(j<k) E<d_j G_J, Delta_k Psi^(k)>` together with product-increment and covariance-difference companions. An exact two-root scalar filtration has first innovation bracket `-70 lambda/27`; a separate future-insertion fixture has `d_ja=d_jc_a=0` but a strictly negative nonlinear current. These are method no-gos, not paid production counterexamples |
+| [NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE](#ng-2026-07-28-a13-full-hessian-cartan-chain-primitive) | integrate the complete rational second-Hessian current as a field-space chain primitive | on the active/inactive two-dimensional production slice with floor one and `a=c=e_1`, the one-form `omega=Lc` has curl `partial_y omega_x-partial_x omega_y=-40/729` at `(1,1)`. A chain-rule exact part may be split off, but the Cartan/enhanced-current remainder cannot be deleted; this omits all paid companions and is not a production action counterexample |
 | [NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE](#ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve) | use R-098 posterior superadditivity as an additional positive reserve after restoring the complete R-099 Schur square and matching payment owner | for `B=sum B_a`, `R=sum R_a`, the posterior gap is `D_row>=0` but the complete-square gap is exactly `-D_row/2`; since the bracket enters with weight `1/2`, the two gaps cancel and the physical owner is exactly row-additive. R-098 bracket-only superadditivity remains valid, but counting it again in the complete owner duplicates ownership |
 | [NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT](#ng-2026-07-27-a13-abstract-fibre-xy-covariance-debt) | derive the complete posterior/source-action lower form from positive Gram structure, matching payment, and separate quadratic/sextic moment bounds alone | a centred three-atom family has `B=Z^2`, `X=E Z^2=N^-4`, `Y=E Z^6=1`, `q=0`, but complete owner `-N^2/2+N^-4/2`. This is an abstract non-Gaussian method no-go, not a production counterexample; the missing theorem must use production scale-weighted spatial/root covariance coupling or an equivalent signed Wick/forest estimate |
 | [NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD](#ng-2026-07-27-a13-progressive-revisit-cartan-mixed-payload) | arbitrary-progressive extension of the R-085 Cartan one-use ledger using only the terminal `X^(1/2)Y^(1/2)` payload | an accepted repeated-range loop inserts `A f_epsilon` before one root and later reverses it, so `A*=0` and terminal `Y` is fixed, yet the first root retains a genuine production CFAR square `c_C A^2`; the mixed payload is only `O(A)`. Only the terminal mixed-only progressive extension is false: a once-only pure-`X` allowance, the complete signed packet, and R-092 regular no-revisit `H_C` remain available |
@@ -126,6 +128,70 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-global-to-predictable-current-bridge"></a>
+### NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE -- predictable-baseline support does not delete the global current
+
+**Failure mode.** Apply R-096 support collapse to each predictable
+partial-control baseline and identify that local centering with the global
+R-101/R-102 rational current, thereby deleting the coefficient-dominant
+current after the fixed payable collar.
+The same failure includes replacing the nonlinear coefficient innovation by
+only the martingale differences of the future control and its tangent.
+
+**Evidence.** Put `Psi_*=L_(Sigma_tar)(U_J,A*)c*`, `F_j=P_j Psi_*`, and
+`Psi^(j)=L_(Sigma_tar)(U_J,A^(j))c^(j)`. R-101 locality and same-point
+value--gradient independence give only
+`E<d_jG_J,P_jPsi^(j)>=0`. Cross-Doob algebra instead gives
+`R_cur=sum_(j>ell) E<d_jG_J,P_j(Psi_*-Psi^(j))>
+=sum_(ell<j<k<=J) E<d_jG_J,Delta_kPsi^(k)>`. The exact product difference
+also retains `d_jc`, the product increment, and the conditional-covariance
+difference. On the normalized scalar ray,
+`partial_A ell(1,-1)=-70/27`; a genuine two-root Gaussian filtration therefore
+has first future-feedback bracket `-70 lambda/27` while its predictable
+constant baseline pairs to zero. The separate three-frequency calculation is
+only a bilinear carrier-overlap diagnostic and is not used as a complete
+production control.
+
+A sharper future-insertion fixture takes `t=1/10`, `q=1/2`, independent
+`xi~N(0,1)` and Rademacher `delta`, and
+`a=c_a=t delta(1+q sgn xi)` revealed strictly after the current root. Then
+`d_ja=d_jc_a=0`, while for `Psi(a)=ell(1,a)a` exact conditional averaging
+gives
+`R_cur=-sqrt(2/pi) 5087809298589293093756/
+67965137546788211215457205<0`. Thus the nonlinear product/covariance
+innovation is invisible to those two separate control increments.
+
+**Consequence.** Predictable-baseline support collapse remains valid, but it
+does not by itself close the global rational owner. R-102 repairs the problem
+by retaining the residual, swapping the finite `j<k` sum into the later
+insertion index, and conditioning the complete product before estimating it.
+That distinct chronological route closes regular `K_R`; it does not make the
+failed local-to-global identification true. The scalar fixtures omit
+Cameron--Martin payment, square, low, heat, trace, forest, and other rows, so
+they do not refute `K_R`, complete `H_N`, REG, Nelson, or Sector A.
+
+<a id="ng-2026-07-28-a13-full-hessian-cartan-chain-primitive"></a>
+### NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE -- the complete secant current is not an exact field-space one-form
+
+**Failure mode.** Replace the complete rational second-Hessian current by a
+field-space chain primitive after recombining the base cubic and balanced
+remainder.
+
+**Evidence.** On the two-dimensional active/inactive slice with
+`P=diag(1,0)`, floor one, and `a=c=e_1`, let
+`L=B(z+a)-B(z)-DB(z)[a]-D^2B(z)[a,a]/2` and `omega=Lc`. Exact bivariate
+rational differentiation gives
+`(partial_y omega_x-partial_x omega_y)(1,1)=-40/729`. Hence the complete
+secant one-form is not closed. The exact value is reproduced by independent
+symbolic and Fraction-jet certificates.
+
+**Consequence.** A genuine chain-rule exact component may still be separated,
+but the remaining Cartan/enhanced-current term cannot be deleted as a
+primitive. The fixture contains none of the Cameron--Martin, terminal-square,
+trace, forest, low, or other paid companions, so it is a method no-go rather
+than a counterexample to the complete action lower bound, `K_R`, REG, Nelson,
+or Sector A.
 
 <a id="ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve"></a>
 ### NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE -- the bracket gap cancels in the complete owner

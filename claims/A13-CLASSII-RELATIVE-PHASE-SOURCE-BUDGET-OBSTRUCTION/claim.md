@@ -710,6 +710,47 @@ the following structural results and proof-architecture boundaries hold.
     uniform Schur fails; fixed-positive-heat coercivity is unproved. Complete
     `H_N`, REG, progressive `H_A`,
     `OVERLAP_src`, Nelson, a measure, and Sector A remain open.
+45. `A13-CLASSII-FULL-HESSIAN-LAPLACE-WICK-FUTURE-FEEDBACK-BOUNDARY`
+    is R-102. It corrects the rational-current owner: using the complete
+    second-Hessian secant requires refunding the provisional separate R-076
+    base-cubic charge, while R-076 remains valid in its own owner and R-101
+    raw-Wick terminalization remains binding. With
+    `rho=(e+|z|^2)^(1/2)` and `n=z/rho`, the normalized Hessian of
+    `B_R=4c_1rho^2H(n)` is a finite polynomial, so
+    `sup_(Sigma>=0,z)||D^2(P_Sigma B_R)(z)||<infinity`. The whole heat-lifted
+    Gram has an exact Laplace--Wick representation for every PSD target
+    covariance, including singular covariances. Active directions have a
+    two-sided heat bound; the kernel asymptotic
+    `T^2k^T(P_(sigma I)B_R)(Tk)k -> 800c_1sigma^2/27` rules out uniform
+    full-space inverse-Gram coercivity. Exact cross-Doob algebra leaves
+    `R_cur=sum_(j<k)E<d_jG_J,Delta_kPsi^(k)>` and its product-covariance
+    companions; R-096 support collapse applies only to each predictable
+    baseline. A two-root Gaussian scalar fixture has first bracket
+    `-70lambda/27`. Summing all roots before square completion gives the sharp
+    deterministic-metric Doob/Bessel lower bound, but its norm does not match
+    the random, possibly singular terminal Gram reserve. A future-insertion
+    Jensen fixture has `d_ja=d_jc_a=0` while its nonlinear current is strictly
+    negative, and the complete-secant Cartan one-form has curl `-40/729`.
+    These falsify automatic global centering, reduction to future-control
+    increments, and a full-`L` chain primitive, respectively, but are not paid
+    production counterexamples.
+    The checked `-35/54` Fourier triad is only a selected bilinear overlap
+    diagnostic, not a complete control. The decisive chronological repair
+    swaps the finite `j<k` sums before conditioning the whole product at the
+    last future insertion. The derivative column has slack `1/6`. The
+    high-prefix coefficient branch has shell decay `2^(-k/14)`, budget
+    `X^(9/14)(1+Y)^(2/7)`, slack `1/14`, and Gaussian moment `14`.
+    The separately retained fixed-low derivative branch has budget
+    `X^(1/7)(1+Y)^(19/42)`, slack `17/42`, Gaussian moment `42/17`,
+    and remainder powers `eta^(-6/17)zeta^(-19/17)`; EXP-000257 records
+    the freeze-review repair. Weighted Gaussian-prefix sequence norms then
+    give `|R_cur|<=eta E X+zeta E Y+C` uniformly in cutoff and
+    deterministic PSD target and future heat. Thus the regular
+    one-shot innovation--Carleson form and `K_R` lower form close with the
+    entire terminal square unspent. The separate R-086 current suballocation
+    is refunded in this active coordinate. The full-frame bracket, complete
+    `H_N`, REG, progressive/revisit `H_A`, `OVERLAP_src`, Nelson, removals, a
+    measure, and Sector A remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -761,6 +802,7 @@ is a scoped T4 subproof and does not promote A13.
 | Extended-state Cartan / causal Doob / rational recovery | Common-root value-plus-heat telescope, production heat-defect diagnostic, progressive terminal-mixed-only no-go, sharp last-root Doob--Hardy ownership, exact frame reveal with mandatory Jensen residual, absolute frame-transfer no-go, rational five-family two-sided form, and payment-gauge identity | T4 analytic/exact/executed advance and method boundary; coefficient-unconditioned complete signed posterior/source-action lower form, rational (6.5), `H_N`, REG, progression, and Nelson open |
 | Owner gauge / heat-centred full-Wick / covariance debt | Exact payment-gauge collapse, complete-owner row additivity, revelation mean/covariance exchange, posterior covariance-debt normal form, regular heat-centred full-Wick residual payment, abstract X/Y-only debt no-go, and reduced production-ray direction diagnostic | T4 analytic/exact/executed advance and method boundary; moving heat-baseline production debt bound, rational (6.5), `H_N`, REG, progression, and Nelson open |
 | Raw-Wick heat-baseline / rational current reduction | Exact fresh value-gradient orthogonality, cross-Doob terminalization of the complete raw block, derivative-current/control-square telescope, heat-lifted rational `K_R` frontier reduction, and production rational range contraction | T4 analytic/exact/executed advance; heat-lifted coefficient-balanced rational-current Carleson form, fixed-heat coercivity, `H_N`, REG, progression, and Nelson open |
+| Full-Hessian heat / chronological future-insertion current | Complete-`L` owner refund, normalized heat-uniform Hessian bound, all-PSD Laplace--Wick representation, active/kernel heat geometry, exact global-current cross-Doob residual, shortcut no-gos, chronological last-insertion identity, shell decay `2^(-k/14)`, and regular `K_R` closure with square unspent | T4 analytic/exact/executed regular closure and progressive boundary; full-frame bracket, `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1003,20 +1045,24 @@ Current subordinate order:
     For distinct roots, use R-099 chronological Doob--Hardy ownership to group
     all future smoothing shells before squaring the control coordinate. Do not
     extend the terminal mixed-only Cartan ledger to arbitrary revisits and do
-    not square the nonlinear frame secant. In the regular class, use R-101:
-    the pointwise moving heat baseline is orthogonal to the fresh full-Wick
-    increment, and cross-Doob terminalization assigns the complete raw block
-    to the fixed low endpoint plus the already-paid R-100 residual. Do not
-    reuse the two raw Taylor families or charge another R-094 secant. R-084
-    pays the three linear rows and R-071/R-085 pay the three unshifted rational
-    current families. With `bar B=P_(Sigma_tar)B_R` and
-    `B_1=bar B(U+a)`, prove only the remaining heat-lifted coefficient-balanced
-    rational-current Carleson bound for `K_R=G^T L c+c^T B_1 c/2`, uniformly
-    over the admissible target heats, with a positive fraction of that same
-    heat-lifted terminal square, the actual Cameron--Martin payment, heat,
-    trace, `q/r`, and R-063 forest retained exactly once. The unheated or zero-
-    heat-uniform Schur route is retired; fixed-positive-heat coercivity remains
-    unproved;
+    not square the nonlinear frame secant. In the regular class, use R-101 to
+    assign the isolated raw-Wick block once, then apply R-102's owner
+    correction: do not charge the R-076 base cubic separately in this rational
+    owner; retain the complete full-Hessian secant. Use the normalized Hessian
+    and all-PSD Laplace--Wick formulas only as coefficient/diagnostic facts,
+    not as a multiplier or sign theorem. R-096 kills the genuine large-gap
+    term only on each predictable baseline. In the global current, preserve
+    `R_cur=sum_(j<k)E<d_jG_J,Delta_kPsi^(k)>`. Apply R-102's proved
+    chronological repair: swap the finite sums into the later insertion index,
+    condition the complete product at its strict past, and use the annular
+    shell/prefix ledgers before one global Young inequality. This closes the
+    regular current and `K_R` with the terminal square unspent; refund the
+    separate R-086 `T_G^<=` current charge. Now reassemble regular complete
+    `H_N` and REG with the fixed low, raw-Wick, linear, heat, trace, `q/r`,
+    actual Cameron--Martin payment, R-100 residual, and R-063 forest exactly
+    once. Uniform `D^2` bounds, all-PSD Gram positivity, predictable-baseline
+    support, inverse-Gram Schur, factorwise centering, and the formal Fourier
+    diagnostic alone do not prove the chronological form;
 6. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
@@ -1030,18 +1076,19 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `187/187`;
-- standard-library exact independent `38/38`;
-- integrated `276/276` and aggregate `501/501`;
-- exact moving heat-baseline raw-Wick orthogonality, cross-Doob terminalization,
-  derivative-current regrouping, matched control-square telescope, rational
-  `K_R` ownership, production range contraction, predecessor/source/PDF/
-  surface contracts, and T4 firewalls;
+- primary `106/106`;
+- standard-library exact independent `79/79`;
+- manifest-pinned integrated `339/339` and aggregate `524/524` PASS;
+- exact full-Hessian owner recombination, normalized Hessian identity,
+  all-PSD Laplace--Wick constants and singular-heat checks, isotropic ridge,
+  active/kernel geometry, Gaussian cross-Doob bridge, chronological
+  whole-product conditioning and shell/Young ledger, Cartan curl,
+  predecessor/source/PDF/surface contracts, and T4 firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1051,17 +1098,19 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_manifest.json`
-- `notes/classii-raw-wick-heat-baseline-orthogonality-rational-current-reduction-260727-v1.0.tex.txt`
-- `notes/classii-raw-wick-heat-baseline-orthogonality-rational-current-reduction-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction.py`
-- `../../codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_independent.py`
-- `../../codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_verify.py`
-- `runs/2026-07-27-primary-raw-wick-heat-baseline-orthogonality-rational-current-reduction/result.json`
-- `runs/2026-07-27-independent-raw-wick-heat-baseline-orthogonality-rational-current-reduction/result.json`
-- `runs/2026-07-27-integrated-raw-wick-heat-baseline-orthogonality-rational-current-reduction/result.json`
-- `../../RESULTS-LEDGER.md#r-101`
-- `../../explorations/log.jsonl` (`EXP-000243`--`EXP-000249`)
+- `classii_full_hessian_laplace_wick_future_feedback_boundary_manifest.json`
+- `notes/classii-full-hessian-laplace-wick-future-feedback-boundary-260728-v1.0.tex.txt`
+- `notes/classii-full-hessian-laplace-wick-future-feedback-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary.py`
+- `../../codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary_independent.py`
+- `../../codes/foundations/a13_classii_full_hessian_laplace_wick_future_feedback_boundary_verify.py`
+- `runs/2026-07-28-primary-full-hessian-laplace-wick-future-feedback-boundary/result.json`
+- `runs/2026-07-28-independent-full-hessian-laplace-wick-future-feedback-boundary/result.json`
+- `runs/2026-07-28-integrated-full-hessian-laplace-wick-future-feedback-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-102`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-global-to-predictable-current-bridge`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-full-hessian-cartan-chain-primitive`
+- `../../explorations/log.jsonl` (`EXP-000250`--`EXP-000257`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -2170,6 +2219,29 @@ complete `H_N`, REG, `H_A`,
 `OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
 closure, or T5--T7. Tier stays T4.
 
+R-102 corrects the rational-current owner by recombining the complete second-
+Hessian secant and proves heat-uniform tensor contraction, an all-PSD
+Laplace--Wick representation, exact isotropic-ridge coefficients, and
+active/kernel heat geometry. These are coefficient and diagnostic theorems,
+not a negative-regularity multiplier estimate or a signed lower form. Its
+exact cross-Doob identity leaves the future-feedback residual. The sharp
+deterministic-metric Doob/Bessel completion still mismatches the random,
+possibly singular terminal Gram reserve. Gaussian scalar, future-insertion
+Jensen, and Cartan fixtures refute only automatic predictable-baseline-to-
+global centering, reduction to increments of the future control/tangent, and
+a full-`L` chain primitive. The chronological last-insertion theorem does not
+use those shortcuts: it conditions the complete product after swapping the
+finite root sums and proves the regular innovation--Carleson and `K_R` lower
+forms with the terminal square unspent. The Fourier triad is explicitly only
+a selected bilinear overlap diagnostic. The fixtures omit the complete paid
+companions and are not production counterexamples. The coefficient estimate
+retains the high-prefix branch and the separate fixed-low derivative branch
+`X^(1/7)(1+Y)^(19/42)`; the latter has slack `17/42` and cannot be
+dropped. R-102 does not prove the
+full-frame posterior-covariance bracket, complete `H_N`, REG,
+arbitrary progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff/floor
+removal, a measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
+
 ## History
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
@@ -2666,3 +2738,27 @@ closure, or T5--T7. Tier stays T4.
   coefficient-balanced rational-current Carleson form, complete `H_N`, REG,
   progressive `H_A`, `OVERLAP_src`, Nelson, the measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-28: Registered R-102. The complete rational second-Hessian secant is
+  now an admissible single owner only after refunding its separate provisional
+  R-076 base-cubic allocation. The normalized Gram proves a target-heat-
+  uniform bounded Hessian, and the Laplace--Wick formula covers every PSD
+  covariance without inverting it. Exact ridge coefficients, active bounds,
+  and the kernel asymptotic exclude a uniform inverse-Gram shortcut. The
+  global cross-Doob identity leaves the future-feedback innovation and
+  product-covariance companions. The sharp deterministic-metric Doob/Bessel
+  completion still mismatches the production Gram reserve; a two-root
+  Gaussian fixture, a future-insertion Jensen blind spot, and exact Cartan
+  curl establish the surviving method boundaries. The Fourier triad remains
+  a formal bilinear diagnostic only. Swapping the finite `j<k` sum before
+  whole-product conditioning yields predictable last-insertion columns. Their
+  exact shell ledgers give derivative slack `1/6`, limiting high-prefix
+  coefficient slack `1/14`, and a retained fixed-low branch
+  `X^(1/7)(1+Y)^(19/42)` with slack `17/42`. One post-sum Young
+  estimate closes the regular future-feedback current and `K_R` uniformly
+  in cutoff and deterministic PSD target and future heat with the square
+  unspent. Primary `106/106`, standard-library independent `79/79`,
+  integrated `339/339`, and aggregate `524/524` checks pass. The
+  final PDF passed form, zero-overfull, extraction, and all-page Poppler QA.
+  EXP-000250--EXP-000257 preserve the advances, failed shortcuts,
+  chronological repair, and freeze-review fixed-low correction. Complete `H_N`, REG,
+  progression, Nelson, the measure, and Sector A remain open; tier stays T4.

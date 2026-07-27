@@ -1,0 +1,1166 @@
+% Title: Full-Hessian heat representation and regular future-insertion rational-current closure
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; REGULAR K_R CLOSED; H_N, REG, PROGRESSION, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-FULL-HESSIAN-LAPLACE-WICK-FUTURE-FEEDBACK-BOUNDARY
+% Ledger: R-102
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cR}{\mathcal R}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cC}{\mathcal C}
+
+\section{Purpose and scope: corrected conclusion}
+
+R-101 reduced the regular rational endpoint to
+\[
+ \cK_R=G^TL_\Sigma c+{1\over2}c^T\overline B_\Sigma(U+a)c,
+ \qquad G=DU,\quad c=Da,                                \tag{1.1}
+\]
+where $\overline B_\Sigma=P_\Sigma B_R$ and $L_\Sigma$ is the complete
+second-order Taylor remainder.  The proposed next move was to recombine the
+base cubic and balanced remainder, use the bounded second Hessian, and attach
+R-096 predictable-baseline support collapse to the global R-086 current.
+
+The recombination and bounded-Hessian observations are correct.  The direct
+R-096 attachment is not: passage from a predictable insertion to the global
+R-101 current leaves a genuine future-feedback innovation.  The decisive
+repair is to keep that innovation, interchange the finite $j<k$ sums, and
+condition the complete product at $\cF_{k-1}$.  Future heat then turns each
+column into one predictable physical-shell insertion.  Pathwise shell
+estimates and one post-sum Young allocation give a cutoff- and heat-uniform
+absolute bound for the whole residual with slack $1/14$.  This closes the
+regular one-shot $K_R$ lower form while leaving its entire terminal square
+unused.  Complete $H_N$, REG, and progression are still not claimed.
+
+This note records seven rigorous advances.
+\begin{enumerate}
+\item It corrects the owner ledger: the complete $L_\Sigma$ may be estimated
+as one Hessian secant only after refunding the provisional separate R-076
+base-cubic charge.  The R-076 theorem remains valid in its own owner.
+\item It proves a target-heat-uniform bound on $D^2P_\Sigma B_R$ for every
+positive-semidefinite covariance, including singular covariances.
+\item It gives an exact one-dimensional Laplace--Wick representation of the
+whole heat-lifted production rational Gram for every $\Sigma\succeq0$, and
+derives its isotropic scalar ridge expansion.
+\item It proves active-subspace coercivity, full-rank pointwise positivity,
+and a kernel asymptotic which rules out global uniform inverse-Gram coercivity.
+\item It derives the exact global-current cross-Doob decomposition, isolates
+the future-feedback residual, and falsifies the naive local-to-global bridge
+by an exact finite-mode fixture.
+\item It proves the sharp deterministic-metric global Doob--Bessel reduction
+and records why its norm does not match the random terminal Gram reserve.
+\item It closes the complete future-feedback residual on the regular mutually
+orthogonal strict-past one-shot class by swapping the root sums before
+estimation.  The bound uses one $X/Y$ allocation, is uniform in cutoff and
+all deterministic PSD target heats, and preserves the entire terminal square.
+\end{enumerate}
+
+The scope is finite cutoff and fixed positive density floor.  The exact heat
+formulas allow all finite-dimensional $\Sigma\succeq0$.  The stochastic
+owner and closure statements retain the R-101 locality, real-even
+value--gradient independence, deterministic target heat, and regular mutually
+orthogonal strict-past no-revisit physical-shell class.
+No arbitrary progressive/revisit control, cutoff or floor removal, Nelson
+estimate, interacting measure, or Sector-A closure is proved.  Tier stays T4.
+
+The binding authorities are R-050 and R-071 for canonical smooth one-form
+currents; R-075 and R-092 (6.8)--(6.9) for pathwise annular-shell and prefix
+budgets; R-076 and R-078 for the historical input-maximum and pure-$U$
+coordinates; R-080 for the fixed-low owner; R-086 for the exact earlier
+payable/coefficient-dominant split; R-096 for predictable-baseline support;
+R-099 for causal last-root ownership; and R-100 plus R-101 for the complete
+raw-Wick, heat, current, and square owners.  In the active closure coordinate,
+the earlier separate R-086 $T_G^{\le}$ current allocation is refunded rather
+than charged again; the R-086 theorem itself remains valid.
+
+\section{Full-Hessian owner recombination}
+
+For a smooth symmetric matrix field put
+\[
+ \begin{split}
+ L_\Sigma(u,a)
+  ={}&\overline B_\Sigma(u+a)-\overline B_\Sigma(u)
+       -D\overline B_\Sigma(u)[a]
+       -{1\over2}D^2\overline B_\Sigma(u)[a,a]\\
+  ={}&\int_0^1(1-t)
+  \{D^2\overline B_\Sigma(u+ta)-D^2\overline B_\Sigma(u)\}
+       [a,a]\dd t .
+ \end{split}                                               \tag{2.1}
+\]
+It also has the exact split
+\[
+ L_\Sigma={1\over6}D^3\overline B_\Sigma(u)[a,a,a]
+           +L_{{\rm bal},\Sigma}.                         \tag{2.2}
+\]
+
+% evidence-anchor: theorem-2.1-full-hessian-owner-recombination
+\subsection*{Theorem 2.1 (nonduplicating full-Hessian owner)}
+
+Inside the R-101 endpoint (1.1), using the complete secant (2.1) as one owner
+is legal only after refunding the separate R-076 base-cubic allocation.  If
+that allocation is retained, only its complementary remainder may be charged.
+The complete-secant choice does not restore $L:Q/2$.  That raw-Wick Taylor
+member was already terminalised by R-101 and remains unavailable.
+
+\paragraph{Proof.}
+Equation (2.2) is Taylor's theorem, so its two summands add to the same
+$G^TL_\Sigma c$ owner in (1.1).  Charging the first summand separately and
+then charging (2.1) counts it twice.  Conversely, refunding the separate
+charge changes no algebra and invalidates no R-076 theorem.  R-101 Theorem
+6.1 assigns $L:Q/2$ to the complete raw-Wick block before the current split;
+changing the current coordinate does not reverse that assignment. \qed
+
+This correction matters numerically.  On the normalized scalar ridge used
+below, the complete, cubic, and balanced coefficients are respectively
+\[
+ {40\over81},\qquad -{25\over81},\qquad {65\over81}.      \tag{2.3}
+\]
+The full coefficient is not an additional reserve on top of the last two.
+
+\section{Uniform second-Hessian theorem}
+
+Let $\Pi=P_{\rm dbl}$, $e=\epsilon_\rho=10^{-12}$,
+$p_0=4+e$, $c_1=243/(8000p_0)$, and $\alpha=5/9$.  The production rational
+row and Gram are
+\[
+ g(z)=\Pi z-\alpha{|\Pi z|^2\over e+|z|^2}z,
+ \qquad B_R(z)=4c_1g(z)\otimes g(z).                     \tag{3.1}
+\]
+Set
+\[
+ \rho=(e+|z|^2)^{1/2},\qquad n={z\over\rho},\qquad
+ h(n)=\Pi n-\alpha(n^T\Pi n)n,\qquad H=h\otimes h.      \tag{3.2}
+\]
+Then
+\[
+ g(z)=\rho h(n),\qquad B_R(z)=4c_1\rho^2H(n).            \tag{3.3}
+\]
+
+% evidence-anchor: lemma-3.1-uniform-second-hessian
+\subsection*{Lemma 3.1 (finite normalized Hessian)}
+
+For $R_n=I-nn^T$ and a direction $v$, define
+\[
+ A_v(n)=2(n\cdot v)H(n)+DH(n)[R_nv].                     \tag{3.4}
+\]
+Then, for every pair of directions $v,w$,
+\[
+ \boxed{
+ D^2\{\rho^2H(n)\}[v,w]
+ =(n\cdot w)A_v(n)+DA_v(n)[R_nw].}                       \tag{3.5}
+\]
+Consequently
+\[
+ M_2:=\sup_z\|D^2B_R(z)\|<\infty.                       \tag{3.6}
+\]
+
+\paragraph{Proof.}
+The elementary derivatives are
+\[
+ D\rho[v]=n\cdot v,\qquad Dn[v]={R_nv\over\rho}.        \tag{3.7}
+\]
+They give $D(\rho^2H)[v]=\rho A_v(n)$; one more derivative gives
+(3.5).  The map $h$ is a polynomial in $n$, so the right side of (3.5) is a
+finite polynomial on the closed unit ball $|n|\le1$.  It is therefore
+bounded. \qed
+
+% evidence-anchor: corollary-3.2-heat-hessian-contraction
+\subsection*{Corollary 3.2 (all-PSD heat contraction)}
+
+For every positive-semidefinite target covariance,
+\[
+ D^2P_\Sigma B_R=P_\Sigma D^2B_R,\qquad
+ \sup_z\|D^2P_\Sigma B_R(z)\|\le M_2.                   \tag{3.8}
+\]
+In particular,
+\[
+ \boxed{|L_\Sigma(u,a)|\le M_2|a|^2}                    \tag{3.9}
+\]
+uniformly in $\Sigma\succeq0$.
+
+\paragraph{Proof.}
+The bounded second derivative permits differentiation under Gaussian
+convolution, and averaging is an $L^\infty$ contraction.  The integrand in
+(2.1) is bounded by $2M_2|a|^2$; integration of $1-t$ gives (3.9). \qed
+
+This is a pointwise tensor theorem, not a multiplier theorem.  In the earlier
+R-086 split coordinate, (3.9) preserves the historical payload-comparable
+estimate
+\[
+ |T_G^{\le}|\lesssim M_GX^{2/5}Y^{11/30},                \tag{3.10}
+\]
+and the one-use Young bound
+\[
+ M_GX^{2/5}Y^{11/30}
+ \le\eta X+\zeta Y+C\eta^{-12/7}\zeta^{-11/7}M_G^{30/7}.
+                                                                    \tag{3.11}
+\]
+The exponent slack is $7/30$.  It does not control $T_G^>$ in that coordinate,
+where high adapted coefficient frequencies resonate with the high Gaussian
+current.  The active Theorem 9.2 estimates the complete current after
+chronological reindexing, so this separate $T_G^{\le}$ charge is refunded.
+
+The spatial audit sharpens that boundary.  R-078 already reconstructs the
+pure high-$U$ principal through $U\circ DU$; at $\varepsilon=1/10$ its powers
+are
+\[
+ X^{11/40}Y^{49/120},\qquad {\rm slack}={19\over60},
+ \qquad p={60\over19}.                                   \tag{3.12}
+\]
+Under the split alternative, the coefficient-low/high-$a$ principal is the
+available R-076 $a^3Da$ input-maximum payload,
+\[
+ X^{2/5}Y^{8/15},\qquad {\rm slack}={1\over15},
+ \qquad p=15.                                            \tag{3.13}
+\]
+It is historical support for that coordinate and is not charged in the active
+complete-$L$ ledger used below.
+The surviving high-$a$/mixed commutator has the absolute constraint
+\[
+ q>1+s,\qquad
+ 1-{q\over2}-{4-q\over6}={1-q\over3}<-{s\over3}.         \tag{3.14}
+\]
+At $s=3/5$ it has negative slack below $-1/5$.  Equivalently, isolating the
+balanced hidden control produces $X^{2/5}Y^{7/10}$, total $11/10$; a separated
+multiplier route has total $13/12$.  These failures identify the innovation
+branch below; they are not counterexamples to the signed paid form.
+
+\section{All-covariance Laplace--Wick representation}
+
+Let $h_\Sigma\sim N(0,\Sigma)$, $Y=z+h_\Sigma$, and retain
+\[
+ p_0=4+e,\qquad c_1={243\over8000p_0}.                    \tag{4.1}
+\]
+For $t\ge0$ define
+\[
+ A_t=I+2t\Sigma,\qquad m_t=A_t^{-1}z,\qquad
+ C_t=\Sigma A_t^{-1},                                    \tag{4.2}
+\]
+\[
+ \Psi_t(z,\xi)=\det(A_t)^{-1/2}
+ \exp\left\{-tz^TA_t^{-1}z+\xi^Tm_t+{1\over2}\xi^TC_t\xi\right\}.
+                                                                    \tag{4.3}
+\]
+For $k=1,2$, put
+\[
+ \mathfrak W_k(t,z)=
+ \left.
+ (\nabla_\xi\otimes\nabla_\xi)
+ (\nabla_\xi^T\Pi\nabla_\xi)^k\Psi_t(z,\xi)
+ \right|_{\xi=0}.                                       \tag{4.4}
+\]
+
+% evidence-anchor: theorem-4.1-all-psd-laplace-wick
+\subsection*{Theorem 4.1 (exact all-PSD rational heat formula)}
+
+For every finite-dimensional $\Sigma\succeq0$,
+\[
+ \mathfrak W_k(t,z)=
+ \E\left[e^{-t|Y|^2}(Y^T\Pi Y)^kY\otimes Y\right],      \tag{4.5}
+\]
+and
+\[
+\boxed{
+\begin{aligned}
+ (P_\Sigma B_R)(z)
+={}&{243\over2000p_0}\Pi(zz^T+\Sigma)\Pi\\
+&-{27\over400p_0}\int_0^\infty e^{-et}
+ \{\Pi\mathfrak W_1+\mathfrak W_1\Pi\}\dd t\\
+&+{3\over80p_0}\int_0^\infty te^{-et}
+ \mathfrak W_2\dd t .
+\end{aligned}}                                           \tag{4.6}
+\]
+
+\paragraph{Proof.}
+Completing the Gaussian square gives (4.3) for
+$\E e^{-t|Y|^2+\xi^TY}$, without inverting $\Sigma$.  Differentiating in
+$\xi$ proves (4.5), including singular $\Sigma$.  With
+$r=Y^T\Pi Y$ and $d=e+|Y|^2$,
+\[
+\begin{aligned}
+ g(Y)\otimes g(Y)
+={}&(\Pi Y)\otimes(\Pi Y)
+-\alpha{r\over d}\{\Pi Y\otimes Y+Y\otimes\Pi Y\}\\
+&+\alpha^2{r^2\over d^2}Y\otimes Y.
+\end{aligned}                                            \tag{4.7}
+\]
+Use
+\[
+ d^{-1}=\int_0^\infty e^{-td}\dd t,\qquad
+ d^{-2}=\int_0^\infty te^{-td}\dd t,                    \tag{4.8}
+\]
+then multiply by $4c_1$.  The three derived coefficients are
+$243/(2000p_0)$, $-27/(400p_0)$, and $3/(80p_0)$. \qed
+
+At fixed $e>0$, every required $z$-derivative along the compact Taylor segment
+is dominated by a Gaussian polynomial moment times
+$C(1+t)^N e^{-et}$.  This proves absolute convergence and justifies the
+differentiation and Taylor-remainder interchange used below.
+
+For the Taylor operator
+\[
+ \cR_q^aF(z)=F(z+a)-\sum_{\ell=0}^q{1\over\ell!}
+ D^\ell F(z)[a^\ell],                                    \tag{4.9}
+\]
+the polynomial first line of (4.6) vanishes when $q\ge2$.  Hence
+\[
+\begin{aligned}
+ L_\Sigma=\cR_2^aP_\Sigma B_R
+={}&-{27\over400p_0}\int_0^\infty e^{-et}
+ \cR_2^a\{\Pi\mathfrak W_1+\mathfrak W_1\Pi\}\dd t\\
+&+{3\over80p_0}\int_0^\infty te^{-et}
+ \cR_2^a\mathfrak W_2\dd t.
+\end{aligned}                                            \tag{4.10}
+\]
+The same formula with $\cR_3^a$ gives the balanced remainder.  Formula
+(4.10) removes the rational denominator analytically, but it creates no
+physical-space smoothing and supplies no sign for $G^TL_\Sigma c$.
+
+\section{Isotropic scalar ridge}
+
+Take dimension six, $\operatorname{rank}\Pi=4$,
+$\Sigma=\sigma I_6$, and $z=xe_1$ with $\Pi e_1=e_1$.  Put
+\[
+ s_t=1+2\sigma t,\qquad \lambda_t={t\over s_t}.          \tag{5.1}
+\]
+Gaussian moment contraction gives
+\[
+ F_1(t,x)=e^{-\lambda_tx^2}\left(
+ {x^4\over s_t^7}+{9\sigma x^2\over s_t^6}
+ +{6\sigma^2\over s_t^5}\right),                       \tag{5.2}
+\]
+\[
+ F_2(t,x)=e^{-\lambda_tx^2}\left(
+ {x^6\over s_t^9}+{21\sigma x^4\over s_t^8}
+ +{96\sigma^2x^2\over s_t^7}
+ +{48\sigma^3\over s_t^6}\right).                      \tag{5.3}
+\]
+Thus, for $\overline b_\sigma(x)=
+e_1^T(P_{\sigma I_6}B_R)(xe_1)e_1$,
+\[
+\boxed{
+ \overline b_\sigma(x)=4c_1\left[
+ x^2+\sigma-{10\over9}\int_0^\infty e^{-et}F_1\dd t
+ +{25\over81}\int_0^\infty te^{-et}F_2\dd t\right].}  \tag{5.4}
+\]
+
+At $u=\sqrt e$, $a=-\sqrt e$, define
+\[
+ L_\sigma=\overline b_\sigma(0)-\overline b_\sigma(\sqrt e)
+ +\sqrt e\,\overline b_\sigma'(\sqrt e)
+ -{e\over2}\overline b_\sigma''(\sqrt e),
+\]
+\[
+ L_{{\rm cubic},\sigma}=-{e^{3/2}\over6}
+ \overline b_\sigma'''(\sqrt e),\qquad
+ L_{{\rm bal},\sigma}=L_\sigma-L_{{\rm cubic},\sigma}.
+\]
+Then, as $\sigma/e\downarrow0$,
+\[
+ \overline b_\sigma(0)
+ =4c_1\sigma-{80\over3}c_1{\sigma^2\over e}
+ +O\left(c_1{\sigma^3\over e^2}\right),                 \tag{5.5}
+\]
+\[
+ L_\sigma={40\over81}c_1e+{65\over9}c_1\sigma
+ +O\left(c_1{\sigma^2\over e}\right),                   \tag{5.6}
+\]
+\[
+ L_{{\rm cubic},\sigma}
+ =-{25\over81}c_1e+{25\over3}c_1\sigma
+ +O\left(c_1{\sigma^2\over e}\right),                   \tag{5.7}
+\]
+\[
+ L_{{\rm bal},\sigma}
+ ={65\over81}c_1e-{10\over9}c_1\sigma
+ +O\left(c_1{\sigma^2\over e}\right).                   \tag{5.8}
+\]
+Writing $s=x/\sqrt e$, an independent derivation uses the exact first heat
+generator
+\[
+ {1\over2}\Delta_6B_{11}(\sqrt e\,s e_1)
+ ={4c_1(32s^8+68s^6-53s^4-162s^2+27)
+ \over27(1+s^2)^4}.                                      \tag{5.9}
+\]
+Equations (5.6)--(5.8) confirm the owner refund in Theorem 2.1.  They do not
+promote one scalar ray to an all-mode sign theorem.
+
+The exact scalar square completion still gives
+\[
+ \inf_c\left\{GL_{{\rm bal},\sigma}c
+ +{\theta\over2}\overline b_\sigma(0)c^2\right\}
+ =-{G^2L_{{\rm bal},\sigma}^2\over
+       2\theta\overline b_\sigma(0)}                    \tag{5.10}
+\]
+and therefore the leading loss
+\[
+ -{4225\over52488\theta}{c_1e^2\over\sigma}G^2.         \tag{5.11}
+\]
+This rules out an endpoint-square-only estimate uniform down to zero heat.
+It is not a counterexample once Cameron--Martin energy and the other owners
+are retained.
+
+\section{Active and kernel geometry}
+
+% evidence-anchor: theorem-6.1-active-kernel-heat-geometry
+\subsection*{Theorem 6.1 (active coercivity and kernel nonuniformity)}
+
+For $q\in\operatorname{Ran}\Pi$,
+\[
+\boxed{
+ {64c_1\over81}\{(q\cdot z)^2+q^T\Sigma q\}
+ \le q^T(P_\Sigma B_R)(z)q
+ \le4c_1\{(q\cdot z)^2+q^T\Sigma q\}.}                 \tag{6.1}
+\]
+If $\Sigma$ is positive definite, then $P_\Sigma B_R(z)$ is positive
+definite at every $z$.  Nevertheless, for $\sigma>0$, a unit $k\in\ker\Pi$,
+and $\Sigma=\sigma I_6$,
+\[
+ \boxed{
+ T^2k^T(P_{\sigma I_6}B_R)(Tk)k
+ \mathop{\longrightarrow}_{T\to\infty}{800\over27}c_1\sigma^2.} \tag{6.2}
+\]
+
+\paragraph{Proof.}
+For active $q$,
+\[
+ q\cdot g(Y)=\left(1-\alpha{|\Pi Y|^2\over e+|Y|^2}\right)q\cdot Y,
+                                                                    \tag{6.3}
+\]
+and the parenthesis lies in $[4/9,1]$.  Squaring and averaging proves
+(6.1).  If $c^TP_\Sigma B_R(z)c=0$ for full-rank heat, analyticity and full
+Gaussian support force $c\cdot g(y)=0$ for every $y$.  Testing active $y$
+first gives $\Pi c=0$; a mixed active/kernel $y$ then gives $c=0$.
+
+For (6.2), write $Y=Tk+h$.  Then
+$T\,k\cdot g(Y)\to-\alpha|\Pi h|^2$.  Since
+$\E|\Pi h|^4=4(4+2)\sigma^2=24\sigma^2$, multiplication by $4c_1$ gives
+$800c_1\sigma^2/27$. \qed
+
+Thus fixed full-rank heat fills the pointwise kernel but does not give a
+field-uniform smallest eigenvalue.  Active coercivity cannot be applied to a
+general $c$ by discarding its kernel component or the Gram cross block.
+
+\section{Exact global-current cross-Doob decomposition}
+
+Let $P_j=\E[\,\cdot\mid\cF_j]$, $d_j=P_j-P_{j-1}$, and
+$G_j=P_jG_J$.  Define the terminal current coefficient
+\[
+ \Psi_*=L_{\Sigma_{\rm tar}}(U_J,A^*)c^*,
+ \qquad c^*=DA^*,\qquad F_j=P_j\Psi_*.                  \tag{7.1}
+\]
+
+% evidence-anchor: theorem-7.1-global-current-cross-doob
+\subsection*{Theorem 7.1 (future-feedback residual identity)}
+
+For every fixed low level $\ell$,
+\[
+\boxed{
+ \E\langle G_J,\Psi_*\rangle
+ =\E\langle G_\ell,F_\ell\rangle
+ +\sum_{j>\ell}\E\langle d_jG_J,d_jF_j\rangle.}         \tag{7.2}
+\]
+For partial controls, put
+\[
+ \Psi^{(j)}=L_{\Sigma_{\rm tar}}(U_J,A^{(j)})c^{(j)},
+ \qquad \Lambda_j=P_j\Psi^{(j)}.                        \tag{7.3}
+\]
+Under the R-101 locality, real-even value--gradient independence, and
+strict-past hypotheses,
+\[
+ \E\langle d_jG_J,\Lambda_j\rangle=0.                   \tag{7.4}
+\]
+Consequently the exact survivor is
+\[
+\boxed{
+ \cR_{\rm cur}
+ =\sum_{j>\ell}\E\left\langle d_jG_J,
+ P_j(\Psi_*-\Psi^{(j)})\right\rangle.}                  \tag{7.5}
+\]
+If $\Delta_k\Psi^{(k)}=\Psi^{(k)}-\Psi^{(k-1)}$, then,
+with that sign convention,
+\[
+ \boxed{
+ \cR_{\rm cur}
+ =\sum_{\ell<j<k\le J}
+ \E\langle d_jG_J,\Delta_k\Psi^{(k)}\rangle.}          \tag{7.6}
+\]
+
+\paragraph{Proof.}
+Both $G_j$ and $F_j$ are Hilbert-valued martingales, so their cross-Doob
+increments prove (7.2).  The local partial coefficient in (7.3) depends on
+the fresh root only through its value coordinate; $c^{(j)}$ is predictable.
+The fresh derivative coordinate is independent at the same point, proving
+(7.4).  Since $d_jG_J$ centres every $\cF_{j-1}$ quantity, subtracting
+$\Lambda_j$ from the $j$th bracket gives (7.5).  Telescope
+$\Psi_*-\Psi^{(j)}$ over $k>j$ and use conditional Fubini to obtain (7.6).
+\qed
+
+The product structure cannot be suppressed.  For a bilinear multiplication
+$m(H,c)=Hc$, the exact difference is
+\[
+\begin{aligned}
+ d_jm(H,c)={}&m(d_jH,P_{j-1}c)
+ +m(P_{j-1}H,d_jc)+m(d_jH,d_jc)\\
+ &+\operatorname{Cov}^{m}_j(H,c)
+ -\operatorname{Cov}^{m}_{j-1}(H,c).
+\end{aligned}                                            \tag{7.7}
+\]
+Here $\operatorname{Cov}^{m}_j(H,c)=P_jm(H,c)-m(P_jH,P_jc)$.
+R-101 centres a coefficient against a fresh raw-Wick derivative increment;
+it does not delete $d_jc$, the product increment, or the covariance defect in
+(7.7).  R-096 applies to each predictable baseline after complete
+cancellation, but (7.5)--(7.7) are precisely what is lost when that local
+support result is identified with the global R-101 current.
+
+\section{Finite-mode bridge and Cartan counterfixtures}
+
+On the active scalar ray with $e=1$ and $c_1$ removed, the Gram is
+\[
+ b(x)={4x^2(4x^2+9)^2\over81(1+x^2)^2}.                  \tag{8.1}
+\]
+Define
+\[
+ \ell(x,A)=b(x+A)-b(x)-b'(x)A-{1\over2}b''(x)A^2,       \tag{8.2}
+\]
+\[
+ \ell_{\rm bal}(x,A)=\ell(x,A)-{1\over6}b'''(x)A^3.    \tag{8.3}
+\]
+Exact differentiation gives
+\[
+ b'(1)={208\over81},\qquad b''(1)=-{2\over81},
+ \qquad b'''(1)={50\over27},                            \tag{8.4}
+\]
+\[
+ \partial_A\ell(1,-1)=-{70\over27},\qquad
+ \partial_A\ell_{\rm bal}(1,-1)=-{95\over27}.          \tag{8.5}
+\]
+
+% evidence-anchor: proposition-8.1-future-feedback-bridge-counterfixture
+\subsection*{Proposition 8.1 (naive bridge is false)}
+
+Let $\xi\sim N(0,1)$ be an early derivative innovation and let a later
+strict-past control produce $A=-1+\lambda\xi$.  Then
+\[
+ \boxed{\E[\xi\ell(1,A)]=-{70\over27}\lambda}           \tag{8.6}
+\]
+exactly, while
+\[
+ \boxed{\E[\xi\ell_{\rm bal}(1,A)]
+ =-{95\over27}\lambda-{25\over27}\lambda^3.}           \tag{8.7}
+\]
+
+\paragraph{Proof.}
+The endpoint term $b(\lambda\xi)$ is even, so its product with $\xi$ has
+zero expectation.  The remaining terms in (8.2) use only the first two
+Gaussian moments and give (8.6).  Subtracting the cubic in (8.3), with
+$\E\xi^4=3$, gives (8.7). \qed
+
+For an exact two-root finite filtration, take independent standard Gaussian roots
+$\xi_1,\xi_2$, terminal coefficient
+$\psi=\ell(1,-1+\lambda\xi_1)$, and
+$G_0=2$, $G_1=2+\xi_1$, $G_2=2+\xi_1+\xi_2$.  With
+$F_j=\E_j\psi$, the fixed-low term $\E(G_0F_0)$ is nonzero, the first
+innovation bracket is $-70\lambda/27$, and the second is zero.  Thus the
+full cross-Doob identity retains both the low endpoint and a nonzero
+future-feedback bracket; the predictable constant baseline pairs to zero.
+
+% evidence-anchor: proposition-8.2-future-control-jensen-blind-spot
+\subsection*{Proposition 8.2 (future-control increments do not determine the
+nonlinear current)}
+
+Let $\xi\sim N(0,1)$ and let $\delta$ be an independent Rademacher sign.
+Use the filtration
+$\cF_{j-1}$ trivial, $\cF_j=\sigma(\xi)$,
+$\cF_{j+1}=\sigma(\xi,\delta)$, and insert at $k=j+2$ the strict-past scalar
+control and tangent
+\[
+ t={1\over10},\quad q={1\over2},\quad
+ a=c_a=t\delta(1+q\operatorname{sgn}\xi).              \tag{8.8}
+\]
+Put $G_{j-1}=0$, $G_j=G_J=-\xi$, and
+$\Psi(a)=\ell(1,a)a$.  Conditional averaging over $\delta$ gives
+\[
+ d_j a=d_jc_a=0.                                       \tag{8.9}
+\]
+Nevertheless, with $H(r)=\{\Psi(r)+\Psi(-r)\}/2$,
+\[
+ H(r)={-40r^4(2r^6+13r^2-10)\over
+ 81(r^2-2r+2)^2(r^2+2r+2)^2},                          \tag{8.10}
+\]
+and exact rational arithmetic gives
+\[
+ H(3/20)-H(1/20)
+ ={10175618597178586187512\over67965137546788211215457205}>0. \tag{8.11}
+\]
+Since $P_j\Psi=H(t(1+q\operatorname{sgn}\xi))$,
+\[
+ \boxed{\cR_{\rm cur}
+ =-\sqrt{2/\pi},{5087809298589293093756\over
+ 67965137546788211215457205}<0.}                       \tag{8.12}
+\]
+Thus even vanishing martingale differences of the future control and its
+tangent do not determine the nonlinear coefficient innovation.  This is a
+method no-go only: the terminal square, $X/Y$ payments, heat, trace, forest,
+and production companions are absent, so (8.12) does not refute (9.1).
+
+For comparison, an abstract real-even bilinear frequency diagnostic uses
+\[
+ c_r=h\cos(rx),\qquad
+ d_m=\gamma\{\xi\cos(mx)-\eta\sin(mx)\},                \tag{8.13}
+\]
+and a later shift
+\[
+ a_{m+r}=\sqrt e\,\lambda\xi\cos((m+r)x).               \tag{8.14}
+\]
+Since
+\[
+ \langle\cos(mx)\cos((m+r)x)\cos(rx)\rangle={1\over4}, \tag{8.15}
+\]
+the selected full bilinear coefficient is
+\[
+ -{35\over54}c_1e\,\gamma h\lambda,                     \tag{8.16}
+\]
+and the selected balanced bilinear coefficient is
+\[
+ -{95\over108}c_1e\,\gamma h\lambda+O(\lambda^3).       \tag{8.17}
+\]
+Equations (8.13)--(8.17) verify only a scalar-fibre coefficient and carrier
+overlap.  They do not impose a complete production control $c=Da$, restore
+the deterministic ridge background, or include the same-order
+value/derivative companion.  They are therefore a frequency diagnostic, not
+a production-current fixture and not evidence for deleting or retaining
+(7.5).  The exact two-root calculation above is the bridge no-go.
+
+There is also a field-space Cartan obstruction.  On the two-dimensional
+active/inactive slice, put
+\[
+ g(x,y)=\left(x-\alpha{x^3\over d},-\alpha{x^2y\over d}\right),
+ \quad d=1+x^2+y^2,\quad B=4g\otimes g.                  \tag{8.18}
+\]
+For $a=c=e_1$, let
+\[
+ L=B(z+a)-B(z)-DB(z)[a]-{1\over2}D^2B(z)[a,a],
+ \qquad\omega=Lc.                                       \tag{8.19}
+\]
+At $z=(1,1)$,
+\[
+ \boxed{\partial_y\omega_x-\partial_x\omega_y
+ =-{40\over729}\ne0.}                                  \tag{8.20}
+\]
+Thus even the complete full-$L$ current one-form is not a field-space
+gradient.  Chain-rule integration can split off an exact part but cannot
+delete the genuine Cartan/enhanced-current remainder.
+
+Neither (8.16), (8.12), nor (8.20) is a paid-form counterexample.  The endpoint
+square, Cameron--Martin energy, trace, forest, low term, and other production
+rows are intentionally absent.
+
+\section{Exact successor and proof map}
+
+% evidence-anchor: theorem-9.1-global-weighted-cross-doob-bessel
+\subsection*{Theorem 9.1 (strongest deterministic-metric Doob reduction)}
+
+Let $Q_\ell=I-P_\ell$.  The exact identity (7.2) can equivalently be
+written
+\[
+ \boxed{\cR_{\rm cur}=\E\langle Q_\ell G_J,Q_\ell\Psi_*\rangle.}
+                                                               \tag{9.0}
+\]
+Consequently, for every deterministic positive spatial multiplier $W$ for
+which the displayed terms are defined and every $\theta>0$,
+\[
+ \boxed{
+ \cR_{\rm cur}+{\theta\over2}\E\|WQ_\ell\Psi_*\|^2
+ \ge-{1\over2\theta}\E\|W^{-1}Q_\ell G_J\|^2.}       \tag{9.0a}
+\]
+Indeed, martingale orthogonality proves (9.0), and (9.0a) is the Hilbert-space
+completion of the square after all roots have been summed.  It is therefore
+the sharp generic Doob/Bessel reduction and avoids rootwise reuse of an
+energy budget.
+
+This theorem alone does not prove the production lower form below.  Its positive
+norm is the innovation of $\Psi_*=L_{\Sigma_{\rm tar}}c^*$ in a deterministic
+metric, whereas the available endpoint reserve is the random, possibly
+singular $B_1=(P_{\Sigma_{\rm tar}}B_R)(U_J+A^*)$ square.  No accepted result
+controls the inverse-metric norm on the right of (9.0a) by the one-use
+Cameron--Martin budget.  R-099 closes factorized linear future-tail
+subchannels, but the complete rational response does not factor through one
+predictable derivative increment; R-081's Jensen blind spot already permits
+vanishing partial coefficient derivatives with a surviving nonlinear
+coefficient innovation.  Thus a production-specific random-metric,
+product-covariance, square--trace--forest estimate would be required if one
+stayed in this coordinate.  The next theorem instead returns the complete
+product to its last future insertion before estimating it.
+
+For reference, the sufficient regular rational form is: for every fixed
+$0<\theta<1$,
+\[
+\boxed{
+ \cR_{\rm cur}
+ +{\theta\over2}\E\sum_i\int
+ (D_iA^*)^T(P_{\Sigma_{\rm tar}}B_R)(U_J+A^*)D_iA^*\dd x
+ \ge-\eta\E X-\zeta\E Y
+ -C_{\eta,\zeta,\theta,e,j_0}.}                         \tag{9.1}
+\]
+The proof must satisfy all of the following.
+\begin{enumerate}
+\item The constant is uniform in terminal cutoff and in the declared
+production family of positive-semidefinite target covariances, including its
+singular boundary if that boundary occurs in the production closure.
+\item The sum over $j<k$, spatial blocks, and product-covariance companions is
+performed before one global Young inequality.  No rootwise reuse of $X$ or
+$Y$ is allowed.
+\item The fixed-low endpoint, heat, trace, R-063 forest, and R-100 residual
+remain in their existing owners exactly once.
+\item The unused terminal-square fraction is reserved for the later
+full-frame assembly.
+\item No inverse-Gram bound, predictable BMO estimate, or Malliavin derivative
+of an admissible control is assumed.
+\end{enumerate}
+
+% evidence-anchor: theorem-9.2-regular-future-insertion-current-closure
+\subsection*{Theorem 9.2 (regular future-insertion current closure)}
+
+Assume the regular mutually orthogonal strict-past no-revisit physical-shell
+class.  Write
+\[
+ A^{(k)}=A^{(\ell)}+\sum_{r=\ell+1}^ka_r,\qquad
+ c^{(k)}=DA^{(k)},\qquad a_k=K_kh_k,\quad h_k\in\cF_{k-1},     \tag{9.2}
+\]
+and assume that the target and future heat covariances are deterministic PSD
+increments.  Then, for every $\eta,\zeta>0$,
+\[
+ \boxed{|\cR_{\rm cur}|
+ \le\eta\E X+\zeta\E Y+C_{\eta,\zeta,e,j_0},}          \tag{9.3}
+\]
+uniformly in the terminal cutoff and in the deterministic PSD target heat.
+Consequently (9.1) holds with the entire terminal square unspent.
+
+\paragraph{Exact last-insertion identity.}
+Finite Fubini in (7.6) gives
+\[
+ \cR_{\rm cur}
+ =\sum_{k>\ell}\E\langle G_{k-1}-G_\ell,
+                  \Delta_k\Psi^{(k)}\rangle.           \tag{9.4}
+\]
+Put $\widehat G_{k-1}=G_{k-1}-G_\ell$ and
+\[
+ \widetilde L_k=L_{\Sigma_{\rm tar}+\Sigma_{[k:J]}}.
+\]
+Both $A^{(k)}$ and $c^{(k)}$ are $\cF_{k-1}$-measurable.  Conditioning the
+\emph{whole product} in (9.4), then using heat composition and commutation of
+the value derivative with deterministic heat, yields the exact split
+\[
+\boxed{
+\begin{aligned}
+ \cR_{\rm cur}=\cR_D+\cR_C,\qquad
+ \cR_D={}&\sum_{k>\ell}\E\langle\widehat G_{k-1},
+       \widetilde L_k(U_{k-1},A^{(k)})Da_k\rangle,\\
+ \cR_C={}&\sum_{k>\ell}\E\langle\widehat G_{k-1},
+ \{\widetilde L_k(U_{k-1},A^{(k)})
+  -\widetilde L_k(U_{k-1},A^{(k-1)})\}c^{(k-1)}\rangle.
+\end{aligned}}                                                   \tag{9.5}
+\]
+No product covariance or Jensen term is discarded: both are already inside
+the conditioned complete-product difference in (9.5).
+
+From (2.1) and Corollary 3.2,
+\[
+ |\widetilde L_k(u,A)|\le M_2|A|^2,\qquad
+ |\widetilde L_k(u,A+a)-\widetilde L_k(u,A)|
+ \le2M_2\{|A||a|+|a|^2/2\}.                            \tag{9.6}
+\]
+The second inequality follows by differentiating the integral remainder:
+\[
+ D_A\widetilde L_k(u,A)[h]
+ =\int_0^1\{D^2\overline B(u+tA)-D^2\overline B(u)\}
+       [A,h]\dd t .                                    \tag{9.7}
+\]
+
+\paragraph{One-use shell ledger.}
+Set
+\[
+ x_k=\|h_k\|_{\mathcal H_k}^2,\qquad v_k=\|a_k\|_6,\qquad
+ R_k=2^{-k/2}\|\widehat G_{k-1}\|_6.                  \tag{9.8}
+\]
+Set, pathwise,
+\[
+ X=\sum_{k>\ell}x_k,\qquad Y=\|U+A^*\|_6^6,
+ \qquad\overline Y=1+Y.                                \tag{9.8a}
+\]
+Thus $X$ is the accepted high-shell Cameron--Martin energy, not a terminal
+$H^2$ norm.  The R-075/R-092 physical-shell bounds and the no-revisit identity
+give a cutoff-uniform Gaussian factor $\Gamma_U$ with every fixed moment such
+that
+\[
+ \sum_kx_k=X,\quad \sum_kv_k^6\lesssim\Gamma_U^6\overline Y,\quad
+ \|a_k\|_2\lesssim2^{-2k}x_k^{1/2},\quad
+ \|Da_k\|_2\lesssim2^{-k}x_k^{1/2},                   \tag{9.9}
+\]
+\[
+ \sup_k\|A^{(k)}\|_6\lesssim\Gamma_U\overline Y^{1/6},\qquad
+ \sup_k\|D(A^{(k)}-A^{(\ell)})\|_p\lesssim X^{1/2},
+ \quad2\le p\le6.                                     \tag{9.10}
+\]
+The full derivative is not silently replaced by the high prefix.  Write
+\[
+ c^{(k)}=c_{\rm low}+c_{\rm hi}^{(k)},\qquad
+ c_{\rm low}=DA^{(\ell)}.
+\]
+R-080's fixed-low Bernstein estimate and
+$A^{(\ell)}=P_{<j_0}(U+A^*)-P_{<j_0}U$ give another all-moment Gaussian factor
+$\Gamma_0$ such that
+\[
+ \|c_{\rm low}\|_p\lesssim\Gamma_0\overline Y^{1/6},\qquad
+ \|c_{\rm hi}^{(k)}\|_p\lesssim X^{1/2}.               \tag{9.10b}
+\]
+The two R-080 low boundary objects remain in their own owners; (9.10b) only
+keeps the low derivative that actually occurs in the present mixed current.
+
+Take absolute values in (9.5), move the triangle inequality inside each
+expectation, and only then apply the following pathwise shell estimates.
+Spatial H\"older with $(6,3,2)$ and shell Cauchy give
+\[
+ |\cR_D|\lesssim M_2\E\!\bigl[
+ \widehat{\mathcal Z}_DX^{1/2}\overline Y^{1/3}\bigr],\qquad
+ \mathcal Z_D=\left(\sum_k2^{-k}R_k^2\right)^{1/2},\qquad
+ \widehat{\mathcal Z}_D=\Gamma_U^2\mathcal Z_D.        \tag{9.11}
+\]
+For the $|A^{(k-1)}||a_k||c^{(k-1)}|$ part of $\cR_C$, use
+spatial exponents $(6,6,42/11,42/17)$ and
+\[
+ \|a_k\|_{42/11}
+ \le\|a_k\|_2^{2/7}\|a_k\|_6^{5/7}.
+\]
+For the $|a_k|^2|c^{(k-1)}|$ part, use
+$(6,14/3,14/3,42/17)$ and
+\[
+ \|a_k\|_{14/3}
+ \le\|a_k\|_2^{1/7}\|a_k\|_6^{6/7}.
+\]
+Both branches have the exact shell factor
+$2^{k/2}2^{-4k/7}=2^{-k/14}$.  H\"older in $k$, followed by the split
+(9.10b), gives the complete bound
+\[
+ \boxed{
+ |\cR_C|\lesssim M_2\E\!\bigl[
+ \widehat{\mathcal Z}_HX^{9/14}\overline Y^{2/7}
+ +\widehat{\mathcal Z}_LX^{1/7}\overline Y^{19/42}
+ \bigr].}                                              \tag{9.12}
+\]
+The second summand is the fixed-low derivative branch; omitting it would be
+incorrect.  Here
+\[
+ \begin{gathered}
+ \mathcal Z_1=\left(\sum_k2^{-3k/31}R_k^{42/31}\right)^{31/42},
+ \qquad
+ \mathcal Z_2=\left(\sum_k2^{-k/8}R_k^{7/4}\right)^{4/7},\\
+ \widehat{\mathcal Z}_H=\Gamma_U^{12/7}(\mathcal Z_1+\mathcal Z_2),
+ \qquad
+ \widehat{\mathcal Z}_L=\Gamma_0\widehat{\mathcal Z}_H.
+ \end{gathered}                                         \tag{9.13}
+\]
+The normalized Gaussian prefixes, $\Gamma_U$, and $\Gamma_0$ have every fixed
+moment.  Minkowski, Cauchy--Schwarz, and the geometric weights give
+\[
+ \begin{aligned}
+ \E\widehat{\mathcal Z}_D^6&\lesssim2^{-3j_0},\\
+ \E\widehat{\mathcal Z}_H^{14}&\lesssim2^{-j_0},\\
+ \E\widehat{\mathcal Z}_L^{42/17}&\lesssim2^{-3j_0/17}.
+ \end{aligned}                                          \tag{9.14}
+\]
+These bounds are uniform in $J$.  The three budget totals and Young slacks are
+\[
+ \begin{array}{c|c|c}
+ \text{branch}&\text{budget total}&\text{slack}\\ \hline
+ \cR_D&1/2+1/3=5/6&1/6\\
+ \cR_{C,\rm hi}&9/14+2/7=13/14&1/14\\
+ \cR_{C,\rm low}&1/7+19/42=25/42&17/42.
+ \end{array}                                             \tag{9.15}
+\]
+Applying generalized Young only after the complete sums in
+(9.11)--(9.12) proves (9.3).  Besides the derivative remainder, the two
+coefficient remainders have the explicit forms
+\[
+ C M_2^{14}2^{-j_0}\eta^{-9}\zeta^{-4}
+ +C M_2^{42/17}2^{-3j_0/17}
+       \eta^{-6/17}\zeta^{-19/17}.                     \tag{9.16}
+\]
+The first is dominant as the allocation parameters tend to zero.  These are
+fixed Gaussian moments, not higher control moments.
+\qed
+
+\paragraph{Corollary 9.3 (regular $K_R$ lower form).}
+Combine (9.3) with the fixed-low owner already paid by R-080 and the
+nonnegative heat-lifted terminal square in (1.1).  The regular one-shot
+$K_R$ lower form is proved with one $X/Y$ allocation and with the whole square
+reserved.  The active coordinate therefore refunds the earlier separate
+R-086 $T_G^{\le}$ current charge.  This does not withdraw R-086, and it does
+not prove complete $H_N$, REG, or a progressive/revisit estimate.
+
+The corrected proof map is
+\[
+\begin{array}{c}
+ \text{R-101 exact global }\cK_R\\
+ \downarrow\\
+ \boxed{\text{refund base cubic and use complete Hessian secant}}\\
+ \downarrow\\
+ \boxed{\text{retain R-086 diagnostics; refund its current charge}}\\
+ \downarrow\\
+ \boxed{\text{all-PSD Laplace--Wick diagnostics}}\\
+ \downarrow\\
+ \boxed{\text{cross-Doob leaves }\cR_{\rm cur}\text{; inverse-Gram shortcut fails}}\\
+ \downarrow\\
+ \boxed{\text{sharp deterministic-metric Bessel; metric mismatch}}\\
+ \downarrow\\
+ \boxed{\text{swap }j<k\text{; condition the whole insertion}}\\
+ \downarrow\\
+ \boxed{\text{regular }\cR_{\rm cur},K_R\text{ close; reserve the square}}\\
+ \downarrow\\
+ \boxed{\text{next: reassemble complete }H_N}\\
+ \downarrow\\
+ {\rm REG}\longrightarrow H_A/\mathrm{OVERLAP}_{\rm src}\\
+ \downarrow\\
+ \text{Nelson and measure construction}.
+\end{array}                                               \tag{9.17}
+\]
+
+The route decisions are recorded in EXP-000250--EXP-000257.  The final entry
+records and repairs the fixed-low derivative omission found during freeze
+review.  The false
+global-to-predictable identification and the failed chain primitive are
+registered respectively as
+\path{NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE} and
+\path{NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE}.
+
+\section{Failed routes and reusable conclusions}
+
+\begin{center}
+\begin{tabular}{p{0.27\linewidth}p{0.16\linewidth}p{0.47\linewidth}}
+\hline
+Route & Verdict & Reusable conclusion \\
+\hline
+Complete Hessian recombination & advanced & Legal only after refunding the
+separate base-cubic charge; gives payload $a^2Da$ and moment $30/7$.\\
+Bounded $D^2B_R$ as multiplier & failed & It is a pointwise tensor bound;
+high adapted coefficient and Gaussian-current blocks may resonate to low
+frequency.\\
+Pure high-$U$ principal & closed & R-078 and $U\circ DU$ give slack $19/60$
+and moment $60/19$.\\
+Coefficient-low/high-$a$ principal & split-only & R-076 input maximum gives
+slack $1/15$ and moment $15$ if the base cubic is retained; it is refunded in
+the active complete-$L$ coordinate.\\
+Absolute shifted commutator & failed & The exact slack is negative as in
+(3.14); the split balanced total is $11/10$.\\
+R-096 support implies global payment & failed & The cross-Doob passage leaves
+the future-feedback residual (7.5).\\
+Deterministic-metric Doob/Bessel & boundary & Summing all roots before square
+completion gives the exact sharp bound (9.0a), but its deterministic norm and
+inverse-current cost do not match the random, possibly singular $B_1$ reserve.\\
+Laplace--Wick positivity & boundary & Raw $\mathfrak W_2$ is PSD; its Taylor
+remainders and current are signless.\\
+Future-control increment reduction & failed & The exact fixture
+(8.8)--(8.12) has $d_ja=d_jc_a=0$ but a negative nonlinear current.\\
+Full-$L$ chain primitive & failed & The exact curl (8.20) is nonzero.\\
+Chronological future insertion & closed regular & Swapping the finite $j<k$
+sums before conditioning gives (9.5); the high and fixed-low branches have
+slacks $1/14$ and $17/42$, and the terminal square stays unspent.\\
+Weighted innovation--Carleson & closed regular & The stronger absolute bound
+(9.3) proves (9.1) for deterministic PSD heat on the one-shot class.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: Heat-uniform boundedness of $D^2B_R$ proves
+$\cK_R$ by itself.}  \textbf{UPHELD as false.}  It controls coefficient
+amplitude, not multiplication on $\cC^{-s}$ or the adapted innovation sum.
+The closure additionally needs the chronological identity (9.5), annular
+shell smoothing, prefix bounds, and one global Young allocation.
+
+\item \textbf{Objection: Refunding the cubic retracts R-076.}
+\textbf{DISMISSED.}  R-076 remains valid.  Only its duplicate use inside the
+alternative full-$L$ owner is forbidden.
+
+\item \textbf{Objection: R-096 deletes global $T_G^>$.}
+\textbf{UPHELD as false.}  It deletes the genuine large gap on each
+predictable single-insertion baseline.  Equations (7.5)--(7.7) restore the
+future-feedback innovation in the global coordinate.
+
+\item \textbf{Objection: R-101 value--gradient independence centres
+$d_j(Lc)$.}  \textbf{UPHELD as false.}  It centres the predictable local
+coefficient.  The $d_jc$, product, and covariance-difference terms survive.
+
+\item \textbf{Objection: Positivity of the Laplace--Wick formula gives
+positivity after taking its Taylor remainder.}  \textbf{UPHELD as false.}
+The raw $\mathfrak W_2$ contribution in (4.6) is PSD, but the $\cR_2^a$ and
+$\cR_3^a$ remainders in (4.10), and hence their current crosses, are signless.
+
+\item \textbf{Objection: The active lower bound applies to arbitrary $c$.}
+\textbf{UPHELD as false.}  It requires $c\in\operatorname{Ran}\Pi$, and no
+cross block may be discarded from a quadratic form.
+
+\item \textbf{Objection: The kernel asymptotic disproves the paid theorem.}
+\textbf{DISMISSED.}  It disproves global uniform inverse-Gram coercivity.  It
+does not include Cameron--Martin payment or the complete signed owner.
+
+\item \textbf{Objection: The finite-mode negative current is a Sector-A
+counterexample.}  \textbf{DISMISSED.}  It falsifies the naive bridge only;
+the square, payment, trace, forest, low term, and other rows are absent.
+
+\item \textbf{Objection: The isotropic ridge settles every target heat.}
+\textbf{UPHELD as unsupported.}  Formula (4.6) is all-covariance, but the
+ridge sign audit is one-dimensional and isotropic.
+
+\item \textbf{Objection: Apply Young separately to every $(j,k)$ pair.}
+\textbf{UPHELD as false.}  That repeats the same Cameron--Martin and sextic
+budgets and violates one-use.  Theorem 9.2 first swaps and sums every root.
+
+\item \textbf{Objection: All-PSD heat formulas include floor removal.}
+\textbf{UPHELD as false.}  The density floor remains fixed and positive.
+
+\item \textbf{Objection: The low cross-Doob endpoint vanishes.}
+\textbf{UPHELD as false.}  The term $\E\langle G_\ell,F_\ell\rangle$ in
+(7.2) is retained explicitly.
+
+\item \textbf{Objection: Conditioning (9.4) drops a product covariance.}
+\textbf{DISMISSED.}  Equation (9.5) conditions the complete product
+$\Delta_k\Psi^{(k)}$.  Product and Jensen effects are contained in its exact
+future-insertion difference; no factorwise conditional product is asserted.
+
+\item \textbf{Objection: A supremum over normalized Gaussian prefixes has a
+uniform moment.}  \textbf{UPHELD as unnecessary and unsupported.}  The proof
+uses only the geometrically weighted sequence norms (9.11), (9.13), whose
+sixth and fourteenth moments are summable by (9.14).
+
+\item \textbf{Objection: Keep the R-086 $T_G^{\le}$ payment after applying
+Theorem 9.2.}  \textbf{UPHELD as duplicate ownership.}  Theorem 9.2 estimates
+the complete current.  Its active coordinate refunds that earlier current
+suballocation while leaving the R-086 theorem valid.
+
+\item \textbf{Objection: Theorem 9.2 extends to arbitrary revisits.}
+\textbf{UPHELD as false.}  Its pathwise physical-shell prefix bounds and
+annular last-insertion smoothing are specific to the regular no-revisit
+class.  Overlapping progressive ranges require a separate complete-packet
+theorem.
+
+\item \textbf{Objection: The fixed-low derivative in $c^{(k)}$ is a harmless
+additive constant.}  \textbf{VALID with mitigation.}  It can depend on the
+terminal control and therefore cannot be dropped from (9.12).  Equation
+(9.10b) splits it explicitly; its monomial
+$X^{1/7}\overline Y^{19/42}$ has slack $17/42$ and produces the second
+remainder in (9.16).  The main $1/14$ slack remains the limiting branch.
+\end{enumerate}
+
+\paragraph{Executable adversarial audit.}
+The primary certificate derives every production constant from the A1
+manifest, symbolically computes the scalar owner values, first heat generator,
+and Cartan curl, and separately tests both isotropic Wick moments before their
+Laplace integration.  A genuinely rank-deficient target covariance checks
+the determinant, mean, covariance, $\mathfrak W_1$, and $\mathfrak W_2$
+tilting identities.  A two-root finite filtration checks the actual
+cross-Doob brackets.  A separate finite martingale array checks the $j<k$
+swap and whole-product conditioning, a quartic polynomial checks deterministic
+heat composition, and exact rational ledgers check both chronological H\"older,
+interpolation, shell-decay, Young-slack, and random-moment allocations.  Active
+and kernel heat geometry is tested on deterministic Gaussian quadrature, with
+the asymptotic proof remaining analytic.
+
+The independent certificate imports neither NumPy, SymPy, nor the primary
+program.  Exact Fraction Taylor jets reproduce all scalar owner and bridge
+coefficients; exact rank-one Woodbury equations test singular heat; a separate
+bivariate jet derives the curl; finite probability enumeration checks the
+two-root Doob identity; Gaussian moment combinatorics derives the isotropic
+Wick coefficients; and an implementation-independent Fraction ledger
+reconstructs the chronological closure.  External review is invited on the
+target-heat placement, physical-shell prefix hypotheses, R-086 refund,
+product-covariance owner, and sign convention in (7.6).
+
+\section{Executable verification}
+
+The primary executable passes 106 assertions and the standard-library
+independent executable passes 79 assertions.  The integrated verifier reruns
+both, checks their exact common oracles, pins the upstream authorities and all
+package files, checks the proof note and PDF, and audits every public no-
+overclaim surface.
+
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+  a13_classii_full_hessian_laplace_wick_future_feedback_boundary_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-FULL-HESSIAN-LAPLACE-WICK-FUTURE-
+           FEEDBACK-BOUNDARY
+Ledger:    R-102.
+Title:     Full-Hessian heat representation and regular future-insertion
+           rational-current closure.
+Precise statement:
+           At fixed positive floor, the complete rational second-Hessian
+           secant has a heat-uniform bounded tensor coefficient and an exact
+           Laplace-Wick representation for every PSD target covariance.
+           Full-L use requires refunding the separate base-cubic owner.
+           The global current cross-Doob identity leaves an explicit
+           future-feedback innovation residual. Swapping its finite j<k sums
+           before conditioning converts the whole residual into predictable
+           last-insertion columns. Pathwise annular-shell estimates retain
+           both the high-prefix and fixed-low derivative branches, with
+           limiting Young slack 1/14, uniformly in cutoff and deterministic
+           PSD target heat. Thus regular K_R closes with the terminal square
+           unspent. Exact scalar and Cartan fixtures still falsify shortcut
+           factorizations; the Fourier row is a scoped diagnostic only.
+Scope:     Finite cutoff; fixed positive floor; local real-even coefficient;
+           regular annular mutually orthogonal strict-past no-revisit
+           controls for the owner and closure statements. All deterministic
+           finite-dimensional PSD target covariances.
+Dependencies:
+           A1; R-050; R-071; R-075; R-076; R-078; R-080; R-086;
+           R-092; R-096; R-099; R-100; R-101.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, REGULAR-CLOSURE, BOUNDARY.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+           a13_classii_full_hessian_laplace_wick_future_feedback_
+           boundary_verify.py
+Expected output:
+           Manifest-pinned primary, standard-library independent,
+           integrated, and aggregate PASS; exit zero.
+Explorations:
+           EXP-000250--EXP-000257.
+Negative results:
+           NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE;
+           NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE.
+Falsification gate:
+           Failure of full-L owner recombination, normalized Hessian formula,
+           all-PSD Gaussian tilt or Laplace constants, isotropic Wick/ridge
+           coefficients, active/kernel geometry, global cross-Doob identity,
+           scalar bridge fixture, future-insertion identity, shell/Hoelder/
+           Young ledger, Fourier diagnostic, Cartan curl, authority/hash/PDF
+           checks, count contracts, or the stated T4 boundary.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           The weighted innovation-Carleson estimate and K_R lower form are
+           proved only for the regular one-shot class. No full-frame
+           posterior-covariance bracket, complete H_N, REG,
+           progressive/revisit H_A, OVERLAP_src, Nelson, cutoff/floor removal,
+           interacting measure, T5--T7 result, or Sector-A closure is proved.
+Next required action:
+           Reassemble regular complete H_N and REG from the now-closed K_R
+           row and the existing raw-Wick, low, linear, heat, trace, payment,
+           q/r, and forest owners exactly once; then attack progression.
+\end{verbatim}
+\endgroup

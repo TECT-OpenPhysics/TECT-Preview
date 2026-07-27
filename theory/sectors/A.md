@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE | predictable-baseline support does not delete the global curr |  |
+| NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE | the complete secant current is not an exact field-space one- |  |
 | NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE | the bracket gap cancels in the complete owner | Use the R-098 matching-payment posterior superadditivity |
 | NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT | PSD and separate X/Y moments do not control abstract covaria | Prove the complete posterior/source-action lower form from |
 | NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD | terminal mixed payload cannot pay arbitrary progressive Cart | Extend the R-085 (4.11)-type Cartan one-use estimate from |
