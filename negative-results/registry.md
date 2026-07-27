@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING](#ng-2026-07-28-a13-anticipative-random-heat-conditioning) | extend deterministic-heat Wick centering to arbitrary same-root or control-dependent random PSD heat by conditioning | predictable fresh-root-independent heat disintegrates correctly, but for `G~N(0,1)`, `Q=G^2-1`, and `Sigma(G)=G^2`, `E[Sigma Q]=3-1=2`. Thus there is no automatic extension to arbitrary anticipative heat. This is not a necessary-and-sufficient classifier: the same-root PSD heat `(G^2-3)^2` has zero defect. It is a method no-go, not a complete-action, `OVERLAP_src`, or Nelson counterexample |
 | [NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE](#ng-2026-07-28-a13-global-to-predictable-current-bridge) | delete the global R-101/R-102 rational current by applying R-096 predictable-baseline support collapse root by root, or by retaining only martingale differences of the future control and tangent | R-096 removes the genuine large-gap branch only on each predictable partial-control baseline. Exact cross-Doob decomposition leaves the future-feedback innovation `R_cur=sum_(j<k) E<d_j G_J, Delta_k Psi^(k)>` together with product-increment and covariance-difference companions. An exact two-root scalar filtration has first innovation bracket `-70 lambda/27`; a separate future-insertion fixture has `d_ja=d_jc_a=0` but a strictly negative nonlinear current. These are method no-gos, not paid production counterexamples |
 | [NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE](#ng-2026-07-28-a13-full-hessian-cartan-chain-primitive) | integrate the complete rational second-Hessian current as a field-space chain primitive | on the active/inactive two-dimensional production slice with floor one and `a=c=e_1`, the one-form `omega=Lc` has curl `partial_y omega_x-partial_x omega_y=-40/729` at `(1,1)`. A chain-rule exact part may be split off, but the Cartan/enhanced-current remainder cannot be deleted; this omits all paid companions and is not a production action counterexample |
 | [NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE](#ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve) | use R-098 posterior superadditivity as an additional positive reserve after restoring the complete R-099 Schur square and matching payment owner | for `B=sum B_a`, `R=sum R_a`, the posterior gap is `D_row>=0` but the complete-square gap is exactly `-D_row/2`; since the bracket enters with weight `1/2`, the two gaps cancel and the physical owner is exactly row-additive. R-098 bracket-only superadditivity remains valid, but counting it again in the complete owner duplicates ownership |
@@ -128,6 +129,28 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-anticipative-random-heat-conditioning"></a>
+### NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING -- deterministic heat cannot be conditioned through arbitrary same-root heat
+
+**Failure mode.** Treat an arbitrary control-dependent or same-root random
+positive-semidefinite heat as a frozen deterministic parameter and reuse the
+fresh-Wick centering identity without a measurability or independence check.
+
+**Evidence.** Let `G~N(0,1)` and `Q(G)=G^2-1`. If `Sigma` is measurable in a
+strict-past sigma-field conditionally independent of `G`, then conditional
+centering gives `E[Sigma Q]=0`. For the same-root PSD choice `Sigma(G)=G^2`,
+however,
+`E[Sigma(G)Q(G)]=E[G^4]-E[G^2]=3-1=2`.
+Same-root dependence is not itself a necessary-and-sufficient obstruction:
+the PSD choice `Sigma_0(G)=(G^2-3)^2` has
+`E[Sigma_0(G)Q(G)]=15-7*3+15-9=0`.
+
+**Consequence.** Deterministic-heat identities may be disintegrated through
+genuinely predictable fresh-root-independent heat, but there is no automatic
+extension to arbitrary anticipative heat. The fixture does not refute the
+R-103 deterministic-heat theorem, the R-104 fixed-chart endpoint-owner
+identity, the complete paid action, `OVERLAP_src`, Nelson, or Sector A.
 
 <a id="ng-2026-07-28-a13-global-to-predictable-current-bridge"></a>
 ### NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE -- predictable-baseline support does not delete the global current

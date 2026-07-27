@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING | deterministic heat cannot be conditioned through arbitrary s |  |
 | NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE | predictable-baseline support does not delete the global curr |  |
 | NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE | the complete secant current is not an exact field-space one- |  |
 | NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE | the bracket gap cancels in the complete owner | Use the R-098 matching-payment posterior superadditivity |

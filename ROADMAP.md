@@ -242,8 +242,14 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   regular `H_N` and eight modules close `REG`; the allocation
   `eta*=1/440`, `zeta*=3/100` leaves reserves `197/440`, `3/25` and preserves
   the terminal square. The literal naked posterior bracket remains unproved
-  and is non-load-bearing for this regular closure. The active child is now
-  `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`. R-080,
+  and is non-load-bearing for this regular closure. R-104 now closes the
+  fixed-chart algebraic assembly step: the R-079/R-091 endpoint has zero
+  defect against the recombined R-103 incidence template after the exact
+  R-083 and R-100--R-102 algebra is reapplied on each chart. A representation-
+  preserving subdivision preserves only the recombined total, and
+  `A_phys,J(u)=A_J(h)+D_CM(u,h)` with `D_CM>=0`. The active child remains
+  `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, narrowed to the uniform
+  `OVERLAP_src` source-action lower bound, equivalently `q=10/9` Nelson. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -624,8 +630,10 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
    child is `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, after R-103
-   closed complete regular `H_N` and `REG` without proving the stronger naked
-   posterior bracket. The route to that closure was narrowed by R-080--R-102.
+   closed complete regular `H_N` and `REG` and R-104 closed only the fixed-
+   chart endpoint-owner defect with an explicit nonnegative Douglas slack.
+   The uniform source-action/Nelson inequality remains open. The route to the
+   regular closure was narrowed by R-080--R-102.
    R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
@@ -742,12 +750,15 @@ preserved in git/changelog rather than treated as current gates.
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower
    triangular source map, or amplify the local sign fixture into a paid
-   counterexample. After the R-103 complete regular `H_N` and `REG` closure,
-   `H_A` names only
-   lossless assembly of `H_C`, `H_N`, R-066 one-use, R-079 low/future feedback,
-   and every temporal companion into `OVERLAP_src`. The uniform directed
-   source-union inequality is already the `q=10/9` Nelson objective through
-   R-087 CORE, not an additional entropy theorem. Sector A remains open.
+   counterexample. R-104 now proves the fixed-chart endpoint-owner identity:
+   every active owner is recomputed once, the Cartan FAR row is the eighth REG
+   module, and the terminal rational square stays internal to the shifted
+   module. Representation-preserving subdivisions keep only the recombined
+   endpoint; the source cost may be strictly smaller by the Douglas slack.
+   The uniform directed source-union inequality is already the `q=10/9`
+   Nelson objective through R-087/R-093, not an additional entropy theorem.
+   Predictable heat is sufficient for disintegration, but same-root PSD heat
+   admits no automatic extension. Sector A remains open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

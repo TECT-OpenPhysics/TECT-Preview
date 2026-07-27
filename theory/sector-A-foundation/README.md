@@ -58,9 +58,15 @@ R-103 then proves the disjoint expectation-level complete-owner partition.
 Its seven modules close complete regular `H_N`, and adding the R-083/R-092 FAR
 owners gives the eight-module regular `REG` bound. The literal naked posterior
 bracket remains unproved and is non-load-bearing for this regular conclusion.
-The current child is now `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`:
-extend the signed complete packet losslessly across progressive/revisit
-controls and prove its uniform `OVERLAP_src` source-action lower bound.
+R-104 then transports the exact owner incidence to each declared temporally
+faithful fixed source chart: the endpoint-owner defect is zero,
+representation-preserving subdivision invariance applies only after complete
+recombination, and `A_phys,J(u)=A_J(h)+D_CM(u,h)` with `D_CM>=0`. The current
+child remains `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, narrowed to
+the uniform `OVERLAP_src` source-action lower bound, which R-089/R-093 identify
+with the `q=10/9` Nelson theorem. The anticipative-heat witness is a no-
+automatic-extension boundary, not an action or Nelson counterexample. Sector
+A remains open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the

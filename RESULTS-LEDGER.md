@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-104](#r-104) | Fixed-chart endpoint-owner assembly and Douglas-slack boundary | Scoped T4 analytic/exact/executed algebraic identity and method boundary: every finite-cutoff bounded smooth cylindrical-simple progressive control has a temporally faithful strict-triangular source representation with the same terminal displacement. On each fixed chart, the exact R-079/R-081/R-091 endpoint reconstruction followed by the exact R-083 and R-100--R-102 algebra has zero endpoint-owner defect; R-103 supplies the seven-NEAR/eight-REG owner nomenclature and incidence template, not progressive visitwise estimates. A representation-preserving subdivision preserves only the recombined endpoint, not individual Doob or owner summands. The physical action equals the source action plus the nonnegative Douglas slack `(9/20) E[int ||u_t||^2 dt-sum_k ||h_k||^2]`. Predictable fresh-root-independent heat may be disintegrated, while an exact same-root PSD fixture proves that no automatic extension to arbitrary anticipative heat exists. This proves no uniform `OVERLAP_src` lower bound, Nelson estimate, removals, measure, or Sector A |
 | [R-103](#r-103) | Regular complete-packet ownership and H_N/REG closure | Scoped T4 analytic/exact/executed regular closure: the exact R-079 endpoint, R-083 FAR/NEAR and row partitions, R-100 complete-owner row additivity, and R-101 three-owner rational split form one disjoint expectation-level owner partition. R-080/R-063 retain the fixed-low raw-Wick difference inside the two low objects; only the R-100/R-101 future reveal is a separate raw-Wick residual. R-084 owns all complete linear rows; only R-099 current families three through five enter the unshifted rational owner; R-102 owns the shifted current while leaving its terminal square reserved; and one signed R-078 paid difference is bounded under the fixed R-096 collar. The separate R-086 Q orientations and `T_G^<=` charge, provisional raw-Q, base-cubic, earlier shifted-current, second-secant, appended-forest, and extra q/r/Schur charges have multiplicity zero. Seven modules close complete regular H_N and eight modules close REG. The conservative allocation `eta*=1/440`, `zeta*=3/100` spends `1/3080`, `3/700` per H_N module and `1/3520`, `3/800` per REG module, leaving action reserves `197/440`, `3/25`. This does not prove the stronger naked posterior bracket, standalone R-085 (4.11), old (6.5), progressive/revisit `H_A`, `OVERLAP_src`, Nelson, removals, a measure, or Sector A |
 | [R-102](#r-102) | Full-Hessian heat representation and regular future-insertion rational-current closure | Scoped T4 analytic/exact/executed advance and method boundary: use of the complete rational second-Hessian secant requires refunding its separate provisional base-cubic allocation, without withdrawing R-076 in its own owner or restoring the R-101 raw-Wick block. Normalization gives a target-heat-uniform bounded Hessian, and Gaussian completion gives an exact Laplace--Wick representation for every PSD target covariance, including singular ones. Exact ridge, active-subspace, and kernel calculations rule out uniform full-space inverse-Gram coercivity. Cross-Doob decomposition leaves a future-feedback innovation. In the regular annular mutually orthogonal strict-past no-revisit class, swapping the finite `j<k` sums before conditioning the complete product turns it into predictable last-insertion columns. The high-prefix branch has limiting Young slack `1/14`; the retained fixed-low derivative branch has `X^(1/7)(1+Y)^(19/42)`, slack `17/42`, and moment `42/17`. The whole current closes uniformly in cutoff and deterministic PSD target and future heat, so regular `K_R` closes with its terminal square unspent and the separate R-086 current suballocation refunded. Exact Gaussian, Jensen, and Cartan fixtures still refute shortcut factorizations, while the Fourier triad is only a diagnostic. Full-frame bracket, complete `H_N`, REG, progression, Nelson, a measure, and Sector A remain open |
 | [R-101](#r-101) | Raw-Wick heat-baseline orthogonality and rational current reduction | Scoped T4 analytic/exact/executed advance: for a pointwise coefficient, real-even Gaussian covariance, and regular strict-past control, the moving heat coefficient is conditionally orthogonal to the fresh full-Wick increment. Cross-Doob terminalization therefore assigns the complete terminal raw-Wick block to one fixed low endpoint plus exactly the R-100 future-control residual, with no second secant charge. Exact derivative-current and Taylor ledgers telescope the control-only square and reduce the rational row from old (6.5) to the single signed packet `K_R=G^T L c+c^T(P_(Sigma_tar)B_R)(U+a)c/2`. The retained square is heat-lifted. The production rational vector satisfies an exact norm contraction, but Wick order and the heat-lifted coefficient-balanced rational-current Carleson inequality remain open. Unheated or zero-heat-uniform Schur completion fails; fixed-positive-heat coercivity is unproved. Complete `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, the measure, and Sector A remain open |
@@ -122,6 +123,64 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-104"></a>
+### R-104 -- Fixed-chart endpoint-owner assembly and Douglas-slack boundary
+
+**Result ID.**
+`A13-CLASSII-LOSSLESS-PROGRESSIVE-COMPLETE-OWNER-ASSEMBLY-HEAT-BOUNDARY`.
+
+**Statement.** At finite cutoff and fixed positive floor, every bounded smooth
+cylindrical-simple progressive control has a temporally faithful strict-
+triangular source representation with the same terminal displacement and no
+larger source cost. On each fixed chart, the exact R-079/R-081/R-091 endpoint
+reconstruction followed by the exact R-083 and R-100--R-102 algebra gives
+
+`H_A^asm(J,pi,h) = literal endpoint - recombined owner endpoint = 0`.
+
+R-103 supplies the seven-NEAR/eight-REG owner nomenclature and incidence
+template only; none of its regular visitwise estimates is imported. A
+representation-preserving subdivision leaves the terminal Gaussian variable,
+shift, reveal order, used sigma-fields, and admissible controls unchanged. It
+preserves the recombined total, while individual Doob and owner summands may
+exchange conditional-covariance and posterior-mean mass.
+
+**Douglas slack.** For the R-081 representative,
+
+`A_phys,J(u) = A_J(h) + D_CM(u,h)`,
+
+where
+
+`D_CM=(9/20) E[int_0^1 ||u_t||^2 dt-sum_k ||h_k||^2] >= 0`.
+
+Thus the endpoint-owner defect is zero, but equality of the physical and
+source Cameron--Martin costs is not asserted. The remaining analytic theorem
+is the uniform lower bound for `A_J` over the R-093 directed source union,
+which is exactly `OVERLAP_src` and the `q=10/9` Nelson objective.
+
+**Heat boundary.** Deterministic-heat identities disintegrate through genuinely
+predictable fresh-root-independent heat. For `G~N(0,1)`, `Q=G^2-1`, and the
+same-root PSD heat `Sigma(G)=G^2`, however, `E[Sigma Q]=2`. Hence no automatic
+extension to arbitrary anticipative heat exists. This is not a complete
+classification: `(G^2-3)^2` is same-root PSD and has zero defect.
+
+**Evidence.** The proof note
+`classii-lossless-progressive-complete-owner-assembly-heat-boundary-260728-v1.0`,
+its PDF, primary NumPy and independent standard-library exact certificates,
+the integrated verifier, manifest, append-only exploration records, and
+`NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING`. The pinned contract
+is primary `93/93`, independent `66/66`, integrated `290/290`, and aggregate
+`449/449` PASS. The final nine-page PDF passes form, zero-overfull, extraction,
+and all-page Poppler visual QA.
+
+**Boundary.** R-104 proves no per-subvisit bound, ownerwise subdivision
+invariance, uniform source-action lower bound, arbitrary anticipative-heat
+extension, `OVERLAP_src`, Nelson, cutoff/floor removal, interacting measure,
+Sector-A closure, or T5--T7. Tier remains T4. The live child remains
+`A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, narrowed to the uniform
+source-action/Nelson theorem.
+
+---
 
 <a id="r-103"></a>
 ### R-103 -- Regular complete-packet ownership and H_N/REG closure

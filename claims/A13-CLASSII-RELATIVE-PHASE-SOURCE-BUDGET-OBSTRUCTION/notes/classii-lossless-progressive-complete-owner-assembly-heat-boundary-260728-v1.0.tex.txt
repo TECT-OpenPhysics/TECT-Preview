@@ -1,0 +1,616 @@
+% Title: Fixed-chart progressive complete-owner assembly and anticipative-heat boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; ALGEBRAIC ASSEMBLY DEFECT ZERO; OVERLAP_SRC, NELSON, REMOVALS, MEASURE, AND SECTOR A OPEN
+% Result: A13-CLASSII-LOSSLESS-PROGRESSIVE-COMPLETE-OWNER-ASSEMBLY-HEAT-BOUNDARY
+% Ledger: R-104
+
+\section{Purpose and scope}
+
+R-103 closes complete $H_N$ and REG only for the regular annular mutually
+orthogonal strict-past no-revisit class.  The live question is what part of
+that conclusion survives for bounded smooth cylindrical-simple progressive
+controls when one physical covariance range is used more than once.
+
+This note separates two statements which older roadmap prose sometimes called
+$H_A$ simultaneously.
+
+\begin{enumerate}
+\item The \emph{assembly statement} says that the complete R-079 endpoint and
+      R-091 terminal nonduplication can be reconstructed on each fixed finite
+      temporally faithful source chart, after which the exact R-083 and
+      R-100--R-102 algebra gives the R-103 owner nomenclature and incidence
+      template with no omitted cross term or duplicate owner.  We denote the
+      resulting algebraic defect by $H_A^{\rm asm}$.
+\item The \emph{analytic statement} says that the resulting source action is
+      bounded below uniformly in the cutoff, time mesh, and revisit
+      multiplicity.  R-093 identifies this statement with
+      $\mathrm{OVERLAP}_{\rm src}$ and hence with the $q=10/9$ Nelson bound.
+\end{enumerate}
+
+The first statement is proved here.  The second is not.  This distinction is
+not cosmetic: the complete endpoint temporalises exactly, whereas the seven
+R-103 NEAR estimates and the eighth Cartan FAR estimate do not temporalise
+visit by visit.
+
+The scope is fixed finite cutoff and fixed positive density floor, with the A1
+production frame, common bounded entrywise-real-even local regulators, the
+R-079 canonical complete packet, and bounded smooth cylindrical-simple
+progressive controls.  The temporal source chart must retain every past
+Brownian coordinate used by the controller, including kernel and auxiliary
+coordinates forgotten by the terminal physical map.  All identities are
+finite-dimensional before any cutoff limit.
+
+The note also records the exact heat measurability boundary.  Deterministic or
+strict-past predictable heat may be frozen before the fresh root is integrated.
+A positive-semidefinite heat depending on that same fresh root cannot be
+inserted into the deterministic-heat argument by conditioning.  An exact
+Gaussian second-chaos fixture detects the missing covariance.
+
+No uniform $\mathrm{OVERLAP}_{\rm src}$ lower bound, Nelson estimate, cutoff
+or floor removal, interacting measure, or Sector-A closure is claimed.  Tier
+stays T4.
+
+\section{Finite temporal source factorisation}
+
+Fix a finite time partition
+\[
+ 0=t_0<t_1<\cdots<t_K=1,
+ \qquad I_k=(t_{k-1},t_k].                              \tag{2.1}
+\]
+Let the control be $u_t=u_k$ on $I_k$, where $u_k$ is bounded, smooth
+cylindrical, and $\mathcal F_{t_{k-1}}$-measurable.  In the finite terminal
+Gaussian space $H_J$, set
+\[
+ \Delta C_k=\int_{I_k}J_tJ_t^*\,dt,
+ \qquad L_k=\int_{I_k}J_t\,dt,
+ \qquad a_k=L_ku_k.                                    \tag{2.2}
+\]
+No disjointness is assumed between the physical ranges
+$\operatorname{Ran}\Delta C_k$.  They may overlap or coincide.
+
+% evidence-anchor: theorem-2.1-strict-past-source-factorisation
+\subsection*{Theorem 2.1 (strict-past source factorisation and cost direction)}
+
+For every $k$ there is a contraction coordinate $R_k$ such that
+\[
+ L_k=\Delta C_k^{1/2}R_k,
+ \qquad \|R_k\|\le |I_k|^{1/2}.                        \tag{2.3}
+\]
+Consequently, with $S_k=\Delta C_k^{1/2}$ and $h_k=R_ku_k$,
+\[
+ \boxed{a_k=S_kh_k,
+ \qquad \|h_k\|^2\le |I_k|\|u_k\|^2.}                \tag{2.4}
+\]
+
+\emph{Proof.}
+Operator Cauchy--Schwarz gives
+\[
+ L_kL_k^*\preceq |I_k|\Delta C_k.                      \tag{2.5}
+\]
+Douglas range factorisation gives (2.3), including singular
+$\Delta C_k$.  Applying $R_k$ to $u_k$ proves (2.4). \hfill$\square$
+
+Let $\xi_k$ be the independent standard source block for $S_k$.  Add any
+kernel or auxiliary coordinates which the controller observes but the
+physical terminal map discards.  Then $h_k$ is a function only of earlier
+source and auxiliary blocks, and is therefore strictly triangular.  The
+physical terminal field and shift are
+\[
+ X_J\stackrel{\rm law}=S_\pi\xi:=\sum_{k=1}^KS_k\xi_k,
+ \qquad T_Ju=\sum_{k=1}^Ka_k=\sum_{k=1}^KS_kh_k.        \tag{2.6}
+\]
+Taking expectations in (2.4) yields
+\[
+ \boxed{
+ \mathbb E\sum_{k=1}^K\|h_k\|^2
+ \le \mathbb E\int_0^1\|u_t\|^2dt.}                 \tag{2.7}
+\]
+The direction in (2.7) is essential.  It is a contraction from a progressive
+control to a source chart, not chartwise equality of the two costs.
+
+\section{Complete endpoint and owner temporalisation}
+
+Write the endpoint-translation path as
+\[
+ Z_k=S_\pi\xi+\sum_{r\le k}S_rh_r,
+ \qquad Z_0=S_\pi\xi.                                 \tag{3.1}
+\]
+Here $S_\pi\xi$ is the already fixed terminal Gaussian base.  Thus $Z_k$ is
+an algebraic endpoint-translation path, not an $\mathcal F_{t_k}$-adapted
+physical evolution.
+For every finite-dimensional endpoint functional $F$,
+\[
+ \sum_{k=1}^K\{F(Z_k)-F(Z_{k-1})\}=F(Z_K)-F(Z_0)       \tag{3.2}
+\]
+pathwise.  The point of the R-079/R-091 algebra is that the same identity
+remains true after the production endpoint is expanded into its low, square,
+trace, heat, current, paid, and forest coordinates in expectation.
+
+For one scalar current the cross term which is easiest to lose is
+\[
+ {1\over2}\{(w+f+i)^2-w^2\}
+ =wf+{f^2\over2}+(w+f)i+{i^2\over2}.                  \tag{3.3}
+\]
+Replacing $(w+f)i$ by $wi$ deletes $fi$.  Under temporal refinement that
+deleted product is precisely a past/future or visit/revisit cross.  Thus the
+complete square must be expanded only after its full terminal endpoint has
+been fixed.
+
+Let $\mathfrak P_{J,\pi}^{\rm comp}$ denote the R-079 complete canonical
+packet on the temporal chart.  On this fixed chart, let the superscript
+$\pi$ mean that the exact R-083 spatial/production-row projections and the
+exact R-100/R-101/R-102 algebra are reapplied to the already reconstructed
+R-079 endpoint.  R-103 supplies the owner names and incidence template only;
+none of its seven/eight quantitative regular estimates is used below.
+
+% evidence-anchor: theorem-3.1-lossless-complete-owner-temporalisation
+\subsection*{Theorem 3.1 (exact fixed-chart complete-owner reconstruction)}
+
+For every fixed chart in the scope of Section 2,
+\[
+\boxed{
+\begin{aligned}
+ \langle\mathfrak P_{J,\pi}^{\rm comp}\rangle
+ ={}&\langle\mathfrak B_{\rm low}\rangle+\mathfrak L_\ell
+ +\langle\mathfrak C_{\rm far}^{\pi}\rangle
+ +\langle\Delta\mathcal W_{L,\Sigma}^{\pi}\rangle\\
+ &+\langle\Delta\mathcal W_R^{\pi}\rangle
+ +\langle\mathfrak P_{\rm paid}^{\pi}\rangle .
+\end{aligned}}                                         \tag{3.4}
+\]
+The rational endpoint has the exact three-owner split
+\[
+ \boxed{\Delta\mathcal W_R^{\pi}
+ =\mathcal R_Q^{\pi}+\mathcal M_U^{\pi}
+  +\mathcal K_R^{\pi}.}                               \tag{3.5}
+\]
+For a matching row, payment, and baseline split,
+\[
+ \boxed{\mathcal O_{\mathcal F}(B,R)
+ =\sum_a\mathcal O_{\mathcal F}(B_a,R_a).}            \tag{3.6}
+\]
+Equations (3.4)--(3.6) hold after the owner coordinates are recomputed on that
+fixed chart.  If $\pi'$ is a pure subdivision representation of the same
+terminal Gaussian field and the same terminal shift, with the filtration,
+reveal order, and admissible controls unchanged, then the recombined total on
+either side is unchanged.  The labelled Doob and owner summands are recomputed
+on $\pi'$ and are not asserted to agree term by term.
+
+Here a \emph{representation-preserving subdivision} means a coupled rewriting
+which leaves the terminal Gaussian random variable, terminal shift, original
+reveal order, and every sigma-field actually used by $h$ unchanged, and admits
+no new controls.  A split creating newly revealed independent coordinates is
+a new chart, not such a subdivision.
+
+\emph{Proof.}
+R-081 Theorem 8.1 puts every temporal displacement into a strict-past
+covariance-root block without requiring orthogonal physical ranges.  Its
+complete-packet temporalisation retains the injected/future cross in (3.3).
+R-079 then gives the complete-current and complete-safe-packet identity on
+these blocks.  R-091 equation (9.3) says that the low endpoint, paid
+subtraction, future insertion, and terminal endpoint occur once after the
+finite telescope.  Applying the R-083 FAR/NEAR and production-row partitions
+to that already reconstructed endpoint gives (3.4).
+
+The exact R-101 rational endpoint identity gives (3.5): the fixed-low
+raw-Wick difference stays inside the low
+owners, only the future full-Wick reveal belongs to $\mathcal R_Q^{\pi}$,
+current families three through five form $\mathcal M_U^{\pi}$, and the
+complete shifted current forms $\mathcal K_R^{\pi}$.  R-100 row additivity
+gives (3.6); its positive posterior row gap and negative complete-square gap
+cancel and cannot be retained as a second reserve.
+
+For a representation-preserving subdivision, intermediate endpoints inserted
+into (3.2) cancel before expectation.  Exact Doob polarisation may exchange
+conditional covariance with posterior-mean mass.  Both recomputations equal
+the same reconstructed terminal R-079 endpoint; R-100 separately gives exact
+row additivity inside each recomputation.  No invariance is claimed after
+adding fresh roots, changing reveal order, or enlarging the admissible-control
+class. \hfill$\square$
+
+The theorem is an expectation-level owner identity.  The endpoint telescope
+(3.2) is pathwise; the Wick--Doob cancellations used to identify individual
+owners are expectation identities.  No pointwise sign is asserted.
+
+\section{Owner incidence and refinement boundary}
+
+The R-103 incidence ledger is the algebraic template reapplied on each fixed
+temporal chart:
+
+\begin{center}
+\begin{tabular}{p{0.32\linewidth}p{0.20\linewidth}p{0.37\linewidth}}
+\hline
+Coordinate & Multiplicity & Temporal rule \\
+\hline
+Conditional and complete low & one each & Keep both distinct endpoints.\\
+Complete linear rows & one & Heat, trace, and forest remain internal.\\
+Future raw-Wick residual & one & Fixed-low raw Wick stays in the low owners.\\
+Unshifted rational current & one & Use only current families three through five.\\
+Shifted rational current & one & Retain the complete future insertion and its terminal-square subcoordinate.\\
+Paid difference & one & It is exact subtraction, not an added repair.\\
+Cartan FAR & one in REG & Eighth module; absent from the seven-module NEAR packet.\\
+$q/r$, Schur, matrix payment & zero extra & They are internal complete-owner coordinates.\\
+R-063 forest & zero extra & It reconstructs the endpoint once.\\
+R-076 base cubic, R-086 duplicate rows & zero extra & These are refunded in the active coordinate.\\
+\hline
+\end{tabular}
+\end{center}
+
+The first seven modules through the paid difference form the NEAR audit when
+the three complete linear rows are treated as their single accepted module.
+Cartan FAR is the eighth REG module.  The terminal rational square is an
+internal positive subcoordinate of the shifted-current module, not a ninth
+top-level module.  This table states multiplicities, not lower bounds.  In
+particular, the two following operations are different.
+
+\begin{enumerate}
+\item A representation-preserving subdivision only inserts cancelling
+      endpoints into (3.2), so the recombined endpoint is unchanged; its
+      individual owner coordinates need not be.
+\item A coarsening is causal only when every child control is measurable at
+      the left endpoint of the proposed coarse block.  If a child observes
+      noise created inside that block, the controls cannot be merged into one
+      strict-past shift.
+\end{enumerate}
+
+Nor can a causal orthogonal change of coordinates remove repeated physical
+ranges.  A block-lower-triangular orthogonal map has a block-lower-triangular
+inverse, but its inverse is also its block-upper-triangular transpose.  It is
+therefore block diagonal.  This is the R-093 causal-QR boundary.
+
+\section{Why the R-103 estimates do not temporalise}
+
+Theorem 3.1 does not apply the seven R-103 NEAR estimates or the eighth REG
+estimate to each visit.  Two exact fixtures show why.
+
+First take a scalar current $J(a)=a^2$.  Visit one physical range by $t$ and
+later revisit it by $-t$, so the final displacement is zero.  The isolated
+conditional-low loss may be
+\[
+ \mathfrak L_{\rm low}=-{t^4\over2},
+ \qquad X=2t^2,
+ \qquad Y=0.                                           \tag{5.1}
+\]
+No fixed $\eta,C$ makes
+$-t^4/2\ge-2\eta t^2-C$ for all $t$.  The matching complete-low endpoint is
+$+t^4/2$ and cancels (5.1) exactly.  Thus the complete owner survives while
+the visitwise low estimate is false.
+
+Second, on an event $E$ of probability $p$, let
+\[
+ h_1=p^{-1/2}{\bf1}_Ee,
+ \qquad h_2=-h_1,
+ \qquad \phi=Ke\ne0.                                  \tag{5.2}
+\]
+Then the total source cost is two and the final physical displacement is
+zero, but
+\[
+ \|Kh_1\|_6^6+\|Kh_2\|_6^6
+ =2\|\phi\|_6^6p^{-2}.                                \tag{5.3}
+\]
+Hence absolute sixth-moment summation over visits diverges as $p\downarrow0$.
+This is the R-094 revisit obstruction in the present complete-owner
+coordinate.
+
+Both fixtures leave the signed full endpoint intact.  Neither is a
+counterexample to $\mathrm{OVERLAP}_{\rm src}$ or Nelson.
+
+\section{Exact predictable versus anticipative heat boundary}
+
+Let $G$ be a standard real Gaussian and let
+\[
+ Q(G)=G^2-1.                                           \tag{6.1}
+\]
+If a nonnegative random heat $\Sigma$ is measurable in a strict-past sigma
+field independent of $G$, then
+\[
+ \mathbb E[\Sigma Q(G)]=0.                             \tag{6.2}
+\]
+Thus a deterministic-heat identity may be disintegrated over genuinely
+predictable heat, provided the fresh-root conditional law and the required
+uniform constants are retained.
+
+This argument fails for same-root heat.  Take the positive-semidefinite
+choice
+\[
+ \Sigma(G)=G^2.                                        \tag{6.3}
+\]
+Then
+\[
+ \boxed{
+ \mathbb E[\Sigma(G)Q(G)]
+ =\mathbb E[G^4]-\mathbb E[G^2]=3-1=2.}               \tag{6.4}
+\]
+The missing term is exactly a coefficient/heat--Wick covariance.  It has no
+reason to vanish when the heat sees the same innovation.
+
+% evidence-anchor: proposition-6.1-anticipative-heat-nogo
+\subsection*{Proposition 6.1 (conditioning boundary)}
+
+Uniform deterministic-PSD-heat identities disintegrate through a random heat
+when that heat is measurable before, and conditionally independent of, the
+fresh Gaussian root to which the identity is applied.  There is no general
+extension to arbitrary control-dependent or anticipative heat, even in one
+dimension.
+
+\emph{Proof.}
+Equation (6.2) is conditional centering.  Equations (6.3)--(6.4) give a
+positive-semidefinite same-root counterexample. \hfill$\square$
+
+This fires
+\texttt{NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING}.
+It narrows the R-103 heat boundary without refuting its deterministic-heat
+theorem.  Future heat generated by later adapted controls is not automatically
+predictable at the earlier root.
+
+\section{Closure of the algebraic assembly module}
+
+Put
+\[
+ G_J(\phi)=V_J^{\rm ren}(\phi)+{3\over20}\|\phi\|_6^6,
+ \qquad q={10\over9}.                                  \tag{7.1}
+\]
+For a temporally faithful triangular source chart define
+\[
+ \mathcal A_J(h)
+ =\mathbb E G_J(S_\pi(\xi+h))
+  +{9\over20}\mathbb E\sum_k\|h_k\|^2.               \tag{7.2}
+\]
+
+Define $\mathcal V_{J,\pi}^{\rm own}(h)$ to be the recombined right-hand side
+of (3.4), with the control-independent R-079 baseline restored, and define
+the endpoint/owner-coordinate defect by
+\[
+ H_A^{\rm asm}(J,\pi,h)
+ :=\mathbb E V_J^{\rm ren}(S_\pi(\xi+h))
+   -\mathcal V_{J,\pi}^{\rm own}(h).                   \tag{7.3}
+\]
+Set
+\[
+ \mathcal A_{J,\pi}^{\rm own}(h)
+ :=\mathcal V_{J,\pi}^{\rm own}(h)
+   +{3\over20}\mathbb E\|S_\pi(\xi+h)\|_6^6
+   +{9\over20}\mathbb E\sum_k\|h_k\|^2,             \tag{7.4}
+\]
+
+% evidence-anchor: theorem-7.1-lossless-h-a-assembly
+\subsection*{Theorem 7.1 (fixed-chart endpoint-owner identity and cost slack)}
+
+The complete R-079 packet on every finite bounded smooth
+cylindrical-simple progressive control admits a temporally faithful source
+realisation satisfying (2.6)--(2.7).  On that realisation, equations
+(3.4)--(3.6) reconstruct the physical endpoint in (7.2) exactly with every
+owner in the R-103 incidence template active once or refunded zero times.
+Therefore the algebraic assembly defect is zero:
+\[
+ \boxed{H_A^{\rm asm}(J,\pi,h)=0,\qquad
+ \mathcal A_{J,\pi}^{\rm own}(h)=\mathcal A_J(h).}    \tag{7.5}
+\]
+
+\emph{Proof.}
+The source realisation and cost direction are Theorem 2.1.  The expectation-
+level endpoint and owner identity is Theorem 3.1.  Restoring the fixed
+baseline proves the first equality in (7.5); adding the same stabiliser and
+source cost to both sides proves the second. \hfill$\square$
+
+For clarity, the original progressive action is
+\[
+ \mathcal A_J^{\rm phys}(u)
+ :=\mathbb E G_J(X_J+T_Ju)
+   +{9\over20}\mathbb E\int_0^1\|u_t\|^2dt.           \tag{7.6}
+\]
+Equations (2.6)--(2.7) give the separate one-way comparison
+\[
+ \boxed{
+ \mathcal A_J^{\rm phys}(u)=\mathcal A_J(h)+\mathfrak D_{\rm CM}(u,h),
+ \quad
+ \mathfrak D_{\rm CM}:={9\over20}\mathbb E\!\left[
+  \int_0^1\|u_t\|^2dt-\sum_k\|h_k\|^2\right]\ge0.}   \tag{7.7}
+\]
+$H_A^{\rm asm}$ is local notation for the endpoint/owner defect (7.3).
+Equation (7.5) is an identity only: it contains no sign, coercivity, mesh-
+uniform estimate, or equality of source and original progressive costs.  No
+assertion about any bare $H_A$ gate or the older Gaussian quadratic notation
+$H_A(x)=\langle x,Ax\rangle$ is made.
+
+\section{The exact remaining analytic theorem}
+
+Let $\mathfrak T_J$ be the R-093 directed union over all temporally faithful
+finite source refinements.  R-093 Theorem 6.2 gives
+\[
+ \boxed{
+ \inf_{(S_\pi,h)\in\mathfrak T_J}\mathcal A_J(h)
+ =-{9\over10}\log
+   \mathbb E\exp\{-{10\over9}G_J(X_J)\}.}             \tag{8.1}
+\]
+The corresponding exact Gibbs-gap identity is
+\[
+ \mathcal A_J(h)
+ =-{9\over10}\log Z_J
+  +{9\over10}H(\nu_h\mid\nu_J^*)
+  +{9\over10}\Phi_h,                                  \tag{8.2}
+\]
+where
+\[
+ Z_J=\mathbb E\exp\{-{10\over9}G_J(X_J)\}.            \tag{8.3}
+\]
+Both gap terms in (8.2) are nonnegative, but R-093 near minimisers make both
+tend to zero.  They are not an independent uniform reserve.
+
+Consequently the next assertion
+\[
+ \boxed{
+ \inf_{(S_\pi,h)\in\mathfrak T_J}\mathcal A_J(h)
+ \ge-C\quad\hbox{uniformly in }J}                     \tag{8.4}
+\]
+is precisely $\mathrm{OVERLAP}_{\rm src}$ and, by (8.1), precisely the
+$q=10/9$ Nelson estimate.  Theorem 7.1 removes an assembly ambiguity but does
+not prove (8.4).
+
+The strongest currently reusable progressive estimates remain the R-089
+global terminal Cameron--Martin contraction, its Hilbert martingale ledgers,
+the pure-control quartic terminal bridge, and the R-099 chronological
+Doob--Hardy coordinate ledger.  None controls the complete nonlinear
+coefficient/Jensen/low-prefix packet.  The explicit residual must remain
+inside the signed complete owner until (8.4) is proved.
+
+\section{Attempt, failure, and evidence map}
+
+\begin{center}
+\begin{tabular}{p{0.31\linewidth}p{0.16\linewidth}p{0.42\linewidth}}
+\hline
+Route & Verdict & Exact reason \\
+\hline
+R-081 Douglas source factorisation & closed & Terminal displacement is exact and source cost contracts.\\
+Complete packet temporalisation & closed & R-079/R-091 preserve the future cross and terminal endpoint.\\
+Fixed-chart owner recomputation & closed algebraically & The recombined owner has the R-103 incidence template; summands need not be termwise invariant.\\
+Apply seven/eight R-103 bounds per visit & failed & Opposite revisit has quartic isolated low loss against quadratic cost.\\
+Absolute revisit sixth moments & failed & Equation (5.3) grows like $p^{-2}$ at fixed source cost.\\
+Replace overlap by terminal polar control & failed & Terminal covariance compression need not preserve causality or coefficient coupling.\\
+Condition through arbitrary random heat & failed & Same-root PSD heat has covariance defect two in (6.4).\\
+Use fibre entropy as uniform reserve & failed & R-093 near minimisers force the fibre gap to zero.\\
+Uniform source action & open & By (8.1) it is the Nelson theorem itself.\\
+\hline
+\end{tabular}
+\end{center}
+
+The successful and failed routes are recorded in the append-only exploration
+ledger.  Existing R-080, R-089, R-093, and R-094 negative authorities remain
+binding and are not duplicated under new names.  Only the anticipative-heat
+conditioning failure receives a new negative-result entry.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: Theorem 7.1 proves the full progressive gate.}
+      \textbf{UPHELD as false.}  It proves the exact assembly defect is zero.
+      The gate statement is the uniform inequality (8.4), which remains open.
+
+\item \textbf{Objection: Exact temporalisation transfers the R-103 module
+      estimates.}  \textbf{UPHELD as false.}  Equations (5.1)--(5.3) show
+      that separate low and sixth-moment visit estimates fail even though the
+      complete signed endpoint cancels.
+
+\item \textbf{Objection: The cost in (2.7) is equal to the original control
+      cost.}  \textbf{VALID WITH CORRECTION.}  Douglas gives a non-increasing
+      cost.  Kernel directions may be removed.  Only the infimum over the
+      temporally faithful union is identified by R-093.
+
+\item \textbf{Objection: Refinement invariance permits arbitrary coarsening.}
+      \textbf{UPHELD as false.}  Coarsening loses strict-past measurability
+      whenever a child control observes noise produced inside the coarse
+      interval.
+
+\item \textbf{Objection: Source-block orthogonality makes repeated physical
+      ranges orthogonal.}  \textbf{UPHELD as false.}  Independent source
+      coordinates can map to the same physical range.  Causal orthogonal QR
+      cannot merge them.
+
+\item \textbf{Objection: R-103 deterministic heat automatically covers every
+      random heat.}  \textbf{UPHELD as false.}  Genuinely predictable heat
+      may be frozen before fresh-root integration, while equation (6.4)
+      shows that no automatic extension to arbitrary anticipative heat is
+      valid.  This is a sufficient condition and a no-general-extension
+      boundary, not a necessary-and-sufficient classification.
+
+\item \textbf{Objection: The exact Gibbs gap supplies a positive budget for
+      the remaining packet.}  \textbf{UPHELD as false.}  Both gap terms can
+      vanish along variational near minimisers.  Assuming a uniform reserve
+      would contradict R-093 Corollary 6.3.
+
+\item \textbf{Objection: The scalar fixtures disprove Nelson.}
+      \textbf{DISMISSED.}  They refute visitwise, anticipative-conditioning,
+      or noncausal-compression proof routes.  Every omitted complete owner is
+      required before a production counterexample could be claimed.
+\end{enumerate}
+
+Hardcode masking is rejected: source cost comes from event probability and
+amplitude, Douglas slack from the computed kernel-cost gap, and Gaussian
+moments from two algorithms.  The fixtures are dimensionless and finite-
+cutoff; no convergence or removal claim is made.
+
+External review should focus on the cost direction in (2.7), the expectation-
+level versus pathwise distinction in Theorem 3.1, the owner multiplicities,
+the causality condition for coarsening, and the firewall between (7.3) and
+(8.4).
+
+\section{Executable verification}
+
+The primary executable checks Douglas factorisation and its strict pure-kernel
+slack; endpoint, square, and expectation-only Doob telescopes; a rejected
+pathwise Doob mutant; noncausal covariance compression; the full eight-module
+R-103 owner/refund incidence, including Cartan FAR and the nested terminal
+square; revisit and heat fixtures; the $q=10/9$ coefficients; and every closure
+firewall.  Gaussian moments are generated by double factorials.
+
+The independent executable uses standard-library fractions, exact finite
+source enumeration, rational telescopes, an independently ordered owner audit,
+and a separate Gaussian recurrence; it imports neither the primary route nor
+NumPy, SymPy, or SciPy.  The integrated verifier reruns both, pins R-079, R-081,
+R-083, R-089, R-091, R-093, and R-099--R-103, audits every package surface, and
+rejects claims that $\mathrm{OVERLAP}_{\rm src}$, Nelson, or Sector A is closed.
+
+Run from the repository root:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe 
+  codes/foundations/
+  a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-LOSSLESS-PROGRESSIVE-COMPLETE-OWNER-
+           ASSEMBLY-HEAT-BOUNDARY
+Ledger:    R-104.
+Precise statement:
+           Every fixed-cutoff bounded smooth cylindrical-simple progressive
+           control has a temporally faithful strict-triangular source
+           realisation with the same terminal displacement and no larger
+           source cost. On each fixed chart the exact R-079/R-091 endpoint
+           and R-083/R-100--R-102 owner algebra reconstruct the endpoint
+           across overlapping physical ranges; R-103 supplies nomenclature
+           and incidence only. Representation-preserving subdivisions keep
+           only the recombined total, not the labelled owner summands. Thus
+           the endpoint-owner defect H_A^asm is zero. The physical action is
+           the source action plus the nonnegative Douglas cost slack.
+           Predictable fresh-root-independent heat can be disintegrated;
+           same-root PSD heat shows no arbitrary anticipative extension.
+Scope:     Finite cutoff, fixed positive floor, A1 production frame, common
+           real-even local regulators, finite temporally faithful source
+           refinements, and bounded smooth cylindrical-simple progressive
+           controls. Exact endpoint identities are pathwise; owner identities
+           involving Wick--Doob cancellation are expectation-level.
+Dependencies:
+           R-079, R-081, R-083, R-089, R-091, R-093, R-099--R-103.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, ALGEBRAIC-ENDPOINT-IDENTITY.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe
+           codes/foundations/
+           a13_classii_lossless_progressive_complete_owner_
+           assembly_heat_boundary_verify.py
+Expected output:
+           93/93 + 66/66 + 290/290 = 449/449 PASS; exit zero.
+Negative result:
+           NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING.
+Falsification gate:
+           Failure of Douglas factorisation/cost direction, terminal or
+           square telescope, R-079/R-091 temporalisation, fixed-chart
+           R-100--R-103 owner incidence, Douglas slack, predictable heat
+           centering, same-root heat fixture,
+           authority/hash/PDF/exploration/registry/count contracts, or scope
+           firewalls.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No visitwise extension of the seven/eight R-103 estimates,
+           cutoff-uniform OVERLAP_src lower bound, q=10/9 Nelson estimate,
+           cutoff/floor removal, interacting measure, T5--T7, or Sector-A
+           closure is proved.
+Next required action:
+           Prove (8.4), equivalently q=10/9 Nelson; then removals and measure.
+\end{verbatim}
+\endgroup

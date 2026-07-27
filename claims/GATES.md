@@ -1335,13 +1335,16 @@ bound. The literal naked posterior bracket, standalone Cartan atom (4.11), and
 old rational form (6.5) remain unproved and are not load-bearing for this
 regular conclusion.
 
-Accordingly `H_A` is only the lossless assembly of the complete packet,
-uniformly in cutoff, partition, and revisit, into `OVERLAP_src`, preserving
-R-079 future feedback and R-080 low/revisit cancellation. The uniform
-source-union inequality is already the Nelson objective through R-087 CORE,
-not a separate post-assembly theorem. `H_C`, regular `H_N`, and `H_A` remain
-non-interchangeable obligations. R-103 closes only complete regular `H_N` and
-REG; progressive/revisit assembly, `OVERLAP_src`, and Nelson remain open.
+R-104 closes the fixed-chart algebraic part of `H_A`: the endpoint-owner
+defect is zero after recombination, and a representation-preserving
+subdivision preserves the recombined total only. The physical action is the
+source action plus a nonnegative Douglas slack. This gives no per-subvisit
+estimate and no cutoff-uniform lower bound. The uniform source-union
+inequality is already the Nelson objective through R-087/R-093, not a
+separate post-assembly theorem. `H_C`, regular `H_N`, fixed-chart algebraic
+assembly, and uniform `OVERLAP_src` remain non-interchangeable obligations.
+R-103 closes complete regular `H_N` and REG; R-104 closes only the fixed-chart
+endpoint identity; `OVERLAP_src` and Nelson remain open.
 
 ### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
 
@@ -1380,9 +1383,10 @@ to identify the same Boue--Dupuis infimum as on all finite-energy progressive
 controls. A stronger direct packetwise all-control or all-tilted-law theorem
 is admissible but is not required for the Nelson application.
 
-**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE
-PROVED, OVERLAP OPEN (reviewed 2026-07-28 after R-103). The gate was exposed
-by R-080 and sharpened by R-081--R-103
+**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; FIXED-CHART ENDPOINT-OWNER
+ASSEMBLY IDENTITY PROVED BY R-104; UNIFORM `OVERLAP_src`/NELSON INEQUALITY
+OPEN (reviewed 2026-07-28 after R-104). The gate was exposed
+by R-080 and sharpened by R-081--R-104
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1394,15 +1398,21 @@ quadratic; cancellation, if present, must occur in the complete later packet.
 This is a method and scope obstruction, not a counterexample to the full
 action. R-090 names this complete recombination obligation `H_A`; R-091
 proves terminal nonduplication, and R-092 closes only the regular one-shot
-`H_C` branch. R-093 shows that `H_A` must not be counted as a new analytic
-source-union inequality: it is lossless assembly of complete packets into
-`OVERLAP_src`, while the uniform directed source-union bound is already the
-open Nelson objective. R-103 now supplies the exact complete regular `H_N`
-and REG base case, including the once-only low/residual split and payment
-audit, but it gives no revisit-stable decomposition and no uniform source-
-action lower bound. R-066 one-use and all temporal/low companions therefore
-remain inside this assembly. Once `OVERLAP_src` is proved, R-087/R-093 CORE
-gives `q=10/9` Nelson directly.
+`H_C` branch. R-093 shows that the algebraic endpoint assembly must not be
+counted as a new analytic source-union inequality: the uniform directed-union
+bound is already the open Nelson objective. R-103 supplies the exact complete
+regular `H_N` and REG base case. R-104 then proves zero endpoint-owner defect
+on each declared temporally faithful fixed chart by reapplying the exact
+R-083 and R-100--R-102 algebra to the reconstructed R-079/R-091 endpoint.
+R-103 supplies owner nomenclature and incidence only; no regular visitwise
+estimate is promoted. Representation-preserving subdivisions preserve the
+recombined endpoint, not individual owner terms. Moreover,
+`A_phys,J(u)=A_J(h)+D_CM(u,h)` with
+`D_CM=(9/20)E[int||u_t||^2-sum||h_k||^2]>=0`; a pure-kernel fixture makes the
+slack strict. Therefore the sole remaining analytic burden is the cutoff-
+uniform lower bound for `A_J` over the entire R-093 directed source union,
+namely `OVERLAP_src`. Once it is proved, R-087/R-093 gives `q=10/9` Nelson
+directly.
 
 R-094 additionally rules out extending its regular centered-secant proof by
 absolute per-revisit sixth-moment summation: two equal and opposite same-range
@@ -1410,6 +1420,13 @@ increments have bounded source cost and zero terminal displacement while the
 sum of their smoothed sixth moments grows proportionally to `p^(-2)`. This is not a counterexample to
 the signed action; it confirms that the complete endpoint must be assembled
 before revisit-uniform estimates are taken.
+
+R-104 also records the heat measurability boundary. Predictable fresh-root-
+independent heat can be disintegrated, but the exact same-root PSD fixture
+`Sigma(G)=G^2`, `Q(G)=G^2-1` has `E[Sigma Q]=2`. Hence deterministic-heat
+uniformity gives no automatic extension to arbitrary anticipative heat. This
+is a method no-go, not a complete-action or Nelson counterexample, and same-
+root dependence is not a complete classifier.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

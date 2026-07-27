@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-104 fixed-chart endpoint-owner assembly and Douglas-slack boundary] - 2026-07-28
+
+Registered R-104 at T4. The exact fixed-chart endpoint-owner defect vanishes after temporally faithful R-081 source factorisation and R-079/R-091/R-083/R-100--R-103 recombination. Representation-preserving subdivision preserves only the recombined total. The physical action equals the source action plus nonnegative Douglas slack, with a strict pure-kernel fixture. Predictable fresh-root-independent heat may be disintegrated; same-root PSD heat blocks automatic anticipative extension. Primary 93/93, independent 66/66, integrated 290/290, aggregate 449/449 PASS; the nine-page PDF passed form, zero-overfull, extraction, and all-page Poppler QA. OVERLAP_src, q=10/9 Nelson, removals, measure construction, Sector A, and tier promotion remain open.
+
 ## [R-103 complete-owner publication surface correction] - 2026-07-28
 
 This append-only correction makes the R-103 complete-owner coordinate explicit on the rendered changelog surface. It changes no theorem: complete regular H_N and REG close only in the declared regular class; progressive/revisit H_A, OVERLAP_src, Nelson, removals, measure construction, and Sector A remain open.

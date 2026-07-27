@@ -1,0 +1,684 @@
+{
+  "assertions": [
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "douglas",
+      "name": "singular_overlap_rank",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(2, 9), Fraction(4, 9)), (Fraction(4, 9), Fraction(8, 9)))",
+      "expected": "PSD",
+      "group": "douglas",
+      "name": "singular_overlap_loewner_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/3",
+      "expected": "<=13",
+      "group": "douglas",
+      "name": "singular_overlap_minimal_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "douglas",
+      "name": "singular_overlap_range_inclusion",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "douglas",
+      "name": "full_rank_rank",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(12, 5), Fraction(-6, 5)), (Fraction(-6, 5), Fraction(6, 5)))",
+      "expected": "PSD",
+      "group": "douglas",
+      "name": "full_rank_loewner_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": "2081/799",
+      "expected": "<=5",
+      "group": "douglas",
+      "name": "full_rank_minimal_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "douglas",
+      "name": "pure_kernel_rank",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(0, 1), Fraction(0, 1)), (Fraction(0, 1), Fraction(0, 1)))",
+      "expected": "PSD",
+      "group": "douglas",
+      "name": "pure_kernel_loewner_psd",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "<=1",
+      "group": "douglas",
+      "name": "pure_kernel_minimal_cost",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "douglas",
+      "name": "pure_kernel_range_inclusion",
+      "status": "PASS"
+    },
+    {
+      "actual": "((Fraction(0, 1), Fraction(0, 1)), Fraction(0, 1), Fraction(1, 1))",
+      "expected": "((0, 0), 0, 1)",
+      "group": "douglas",
+      "name": "pure_kernel_fixture_values",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(0, 1), Fraction(1, 1))",
+      "expected": "strict <",
+      "group": "douglas",
+      "name": "douglas_cost_equality_mutant_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "telescope",
+      "name": "five_edge_endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "-23/225",
+      "expected": "-23/225",
+      "group": "telescope",
+      "name": "square_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "-28/15",
+      "expected": "-28/15",
+      "group": "telescope",
+      "name": "square_cross_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "-28/15",
+      "expected": "nonzero",
+      "group": "telescope",
+      "name": "square_cross_nonzero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "doob",
+      "name": "doob_predictable_cross_mean_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 1), Fraction(1, 1))",
+      "expected": "(1, 1)",
+      "group": "doob",
+      "name": "doob_product_identity_in_expectation",
+      "status": "PASS"
+    },
+    {
+      "actual": "[(Fraction(3, 1), Fraction(1, 1)), (Fraction(-1, 1), Fraction(1, 1)), (Fraction(-1, 1), Fraction(1, 1)), (Fraction(3, 1), Fraction(1, 1))]",
+      "expected": "at least one unequal atom",
+      "group": "doob",
+      "name": "doob_pathwise_equality_mutant_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 1), Fraction(1, 1))",
+      "expected": "(1, 1)",
+      "group": "causality",
+      "name": "terminal_covariance_matched",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 1), Fraction(0, 1))",
+      "expected": "(1, 0)",
+      "group": "causality",
+      "name": "noncausal_mixed_correlation_changed",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "causality",
+      "name": "noncausal_l2_distance_two",
+      "status": "PASS"
+    },
+    {
+      "actual": "7",
+      "expected": "7",
+      "group": "ownership",
+      "name": "seven_near_modules",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "group": "ownership",
+      "name": "eight_reg_modules",
+      "status": "PASS"
+    },
+    {
+      "actual": "['cartan_far']",
+      "expected": "['cartan_far']",
+      "group": "ownership",
+      "name": "near_excludes_only_cartan_far",
+      "status": "PASS"
+    },
+    {
+      "actual": "((), ())",
+      "expected": "((), ())",
+      "group": "ownership",
+      "name": "module_table_complete",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "ownership",
+      "name": "atomic_owner_uniqueness",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "ownership",
+      "name": "cartan_output_once",
+      "status": "PASS"
+    },
+    {
+      "actual": "('future_current', 'terminal_square')",
+      "expected": "nested once",
+      "group": "ownership",
+      "name": "terminal_square_nested_in_shifted",
+      "status": "PASS"
+    },
+    {
+      "actual": "[]",
+      "expected": "[]",
+      "group": "ownership",
+      "name": "outer_internal_disjoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_paid_collar_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_complete_low_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_conditional_low_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_rational_shifted_current_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_rational_unshifted_current_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_rational_raw_wick_residual_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_linear_near_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "ownership",
+      "name": "module_cartan_far_nonempty",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_raw_q_taylor_u1_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_raw_q_taylor_u2_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_r076_base_cubic_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_r086_tg_low_current_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_r086_q_orientations_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_second_r094_secant_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_appended_r063_forest_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "refund",
+      "name": "refund_extra_q_r_schur_reserve_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-10368",
+      "expected": "<-289",
+      "group": "revisit",
+      "name": "visitwise_low_fails",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "revisit",
+      "name": "complete_low_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "revisit",
+      "name": "reverse_visit_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "revisit",
+      "name": "cost_two_d3",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/2",
+      "expected": "5/2",
+      "group": "revisit",
+      "name": "p_minus_two_d3",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "revisit",
+      "name": "cost_two_d7",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/2",
+      "expected": "5/2",
+      "group": "revisit",
+      "name": "p_minus_two_d7",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "revisit",
+      "name": "cost_two_d11",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/2",
+      "expected": "5/2",
+      "group": "revisit",
+      "name": "p_minus_two_d11",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "heat",
+      "name": "gaussian_m2_recurrence",
+      "status": "PASS"
+    },
+    {
+      "actual": "3",
+      "expected": "3",
+      "group": "heat",
+      "name": "gaussian_m4_recurrence",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "heat",
+      "name": "gaussian_m6_recurrence",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "heat",
+      "name": "wick_second_centered",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "heat",
+      "name": "predictable_g4_heat_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "heat",
+      "name": "same_root_g4_heat_defect_twelve",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "heat",
+      "name": "same_root_psd_zero_defect_guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/20",
+      "expected": "9/20",
+      "group": "variational",
+      "name": "source_weight_9_20",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/10",
+      "expected": "9/10",
+      "group": "variational",
+      "name": "gap_weight_9_10",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), (), (), 0, (), True)",
+      "expected": "(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), (), (), 0, (), True)",
+      "group": "variational",
+      "name": "assembly_identity_from_components",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 66,
+  "assertions_total": 66,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "consequence": {
+    "anticipative_heat_general_extension": false,
+    "douglas_slack_nonnegative": true,
+    "exact_h_a_packet_assembly": true,
+    "fixed_chart_owner_defect_zero": true,
+    "full_overlap_src": false,
+    "nelson": false,
+    "ownerwise_subdivision_invariance": false,
+    "physical_source_action_douglas_slack_identity": true,
+    "representation_preserving_subdivision_total_invariance": true,
+    "sector_a_closure": false
+  },
+  "diagnostics": {
+    "assembly": {
+      "components": [
+        "0",
+        "0",
+        "0",
+        "()",
+        "()",
+        "0",
+        "()",
+        "True"
+      ],
+      "douglas_cost_direction": true,
+      "douglas_reconstruction": true,
+      "identity_from_components": true,
+      "physical_source_cost_slack_strict_fixture": "9/20"
+    },
+    "causality": {
+      "adapted_correlation": "1",
+      "adapted_covariance": "1",
+      "compressed_correlation": "0",
+      "compressed_covariance": "1",
+      "l2_distance": "2"
+    },
+    "doob": {
+      "expectation_defect": "0",
+      "left_atoms": [
+        "3",
+        "-1",
+        "-1",
+        "3"
+      ],
+      "right_atoms": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "heat": {
+      "mean_q": "0",
+      "moments": {
+        "0": "1",
+        "2": "1",
+        "4": "3",
+        "6": "15"
+      },
+      "predictable_g4": "0",
+      "same_root_g4": "12",
+      "same_root_zero_defect_guard": "0"
+    },
+    "matrix_fixtures": {
+      "full_rank": {
+        "control_cost": "5",
+        "loewner": [
+          [
+            "12/5",
+            "-6/5"
+          ],
+          [
+            "-6/5",
+            "6/5"
+          ]
+        ],
+        "minimal_cost": "2081/799",
+        "rank": 2
+      },
+      "pure_kernel": {
+        "control_cost": "1",
+        "loewner": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "minimal_cost": "0",
+        "rank": 1
+      },
+      "singular_overlap": {
+        "control_cost": "13",
+        "loewner": [
+          [
+            "2/9",
+            "4/9"
+          ],
+          [
+            "4/9",
+            "8/9"
+          ]
+        ],
+        "minimal_cost": "25/3",
+        "rank": 1
+      }
+    },
+    "owners": {
+      "modules": {
+        "cartan_far": [
+          "cartan_output"
+        ],
+        "complete_low": [
+          "complete_low"
+        ],
+        "conditional_low": [
+          "conditional_low"
+        ],
+        "linear_near": [
+          "linear_rows",
+          "linear_heat_trace_forest"
+        ],
+        "paid_collar": [
+          "r078_paid_difference"
+        ],
+        "rational_raw_wick_residual": [
+          "raw_wick_future_residual",
+          "rational_heat_trace_forest",
+          "full_wick_secant"
+        ],
+        "rational_shifted_current": [
+          "future_current",
+          "terminal_square"
+        ],
+        "rational_unshifted_current": [
+          "current_u3",
+          "current_u4",
+          "current_u5"
+        ]
+      },
+      "near_modules": [
+        "paid_collar",
+        "complete_low",
+        "conditional_low",
+        "rational_shifted_current",
+        "rational_unshifted_current",
+        "rational_raw_wick_residual",
+        "linear_near"
+      ],
+      "refunded": [
+        "raw_q_taylor_u1",
+        "raw_q_taylor_u2",
+        "r076_base_cubic",
+        "r086_tg_low_current",
+        "r086_q_orientations",
+        "second_r094_secant",
+        "appended_r063_forest",
+        "extra_q_r_schur_reserve"
+      ]
+    },
+    "revisit": {
+      "cost": "288",
+      "low_companion": "10368",
+      "low_loss": "-10368",
+      "sixth": [
+        {
+          "denominator": "3",
+          "sixth_sum": "45/2",
+          "source_cost": "2"
+        },
+        {
+          "denominator": "7",
+          "sixth_sum": "245/2",
+          "source_cost": "2"
+        },
+        {
+          "denominator": "11",
+          "sixth_sum": "605/2",
+          "source_cost": "2"
+        }
+      ]
+    },
+    "telescope": {
+      "endpoint": "0",
+      "points": [
+        "-4/3",
+        "7/6",
+        "-7/12",
+        "73/60",
+        "-7/12",
+        "-4/3"
+      ],
+      "square_cross": "-28/15"
+    },
+    "variational": {
+      "exact_h_a_packet_assembly": true,
+      "gap_weight": "9/10",
+      "nelson": false,
+      "overlap_src": false,
+      "ownerwise_subdivision_invariance": false,
+      "q": "10/9",
+      "sector_a": false,
+      "source_weight": "9/20",
+      "visitwise_r103_extension": false
+    }
+  },
+  "no_overclaim": "The independent R-104 certificate verifies the finite fixed-chart endpoint-owner identity and Douglas slack only. It does not certify ownerwise subdivision invariance or the uniform source-action lower bound.",
+  "package_version": "1.0.0",
+  "result_id": "A13-CLASSII-LOSSLESS-PROGRESSIVE-COMPLETE-OWNER-ASSEMBLY-HEAT-BOUNDARY",
+  "schema": "tect/a13-lossless-progressive-complete-owner-assembly-heat-boundary-independent/1.0",
+  "status": "PASS"
+}

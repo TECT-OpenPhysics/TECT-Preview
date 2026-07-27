@@ -773,6 +773,29 @@ the following structural results and proof-architecture boundaries hold.
     record the successful route and that boundary. Progressive/revisit
     `H_A`, `OVERLAP_src`, Nelson, removals, a measure, and Sector A remain
     open; tier stays T4.
+47. `A13-CLASSII-LOSSLESS-PROGRESSIVE-COMPLETE-OWNER-ASSEMBLY-HEAT-BOUNDARY`
+    is R-104. Every finite-cutoff bounded smooth cylindrical-simple
+    progressive control has an R-081 temporally faithful strict-triangular
+    source representative with the same terminal displacement and no larger
+    source cost. On each fixed chart, exact R-079/R-081/R-091 endpoint
+    reconstruction followed by exact R-083 and R-100--R-102 algebra gives
+    zero endpoint-owner defect. R-103 supplies the seven-NEAR/eight-REG
+    owner names and incidence template only; none of its regular visitwise
+    estimates is imported. A representation-preserving subdivision keeps
+    the terminal Gaussian variable, terminal shift, reveal order, used sigma-
+    fields, and admissible controls fixed. Only the recombined endpoint is
+    invariant; individual Doob and owner summands may change. The physical
+    and source actions obey
+    `A_phys,J(u)=A_J(h)+D_CM(u,h)`, where
+    `D_CM=(9/20)E[int||u_t||^2dt-sum_k||h_k||^2]>=0`.
+    Thus `H_A^asm=0` is an endpoint identity, not equality of costs or a lower
+    bound. Predictable fresh-root-independent heat may be disintegrated, but
+    `G~N(0,1)`, `Q=G^2-1`, and same-root PSD heat `Sigma=G^2` give the exact
+    defect `E[Sigma Q]=2`, so arbitrary anticipative heat cannot be admitted
+    automatically. `EXP-000260--EXP-000262` record the successful assembly,
+    heat no-go, and exact remaining frontier. The uniform source-action lower
+    bound is still `OVERLAP_src`, hence already the `q=10/9` Nelson theorem by
+    R-089/R-093. Removals, a measure, and Sector A remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -826,6 +849,7 @@ is a scoped T4 subproof and does not promote A13.
 | Raw-Wick heat-baseline / rational current reduction | Exact fresh value-gradient orthogonality, cross-Doob terminalization of the complete raw block, derivative-current/control-square telescope, heat-lifted rational `K_R` frontier reduction, and production rational range contraction | T4 analytic/exact/executed advance; heat-lifted coefficient-balanced rational-current Carleson form, fixed-heat coercivity, `H_N`, REG, progression, and Nelson open |
 | Full-Hessian heat / chronological future-insertion current | Complete-`L` owner refund, normalized heat-uniform Hessian bound, all-PSD Laplace--Wick representation, active/kernel heat geometry, exact global-current cross-Doob residual, shortcut no-gos, chronological last-insertion identity, shell decay `2^(-k/14)`, and regular `K_R` closure with square unspent | T4 analytic/exact/executed regular closure and progressive boundary; full-frame bracket, `H_N`, REG, progression, and Nelson open |
 | Regular complete-packet ownership / H_N and REG | Exact R-079 expectation identity, fixed-low versus future raw-Wick split, one signed paid difference, complete-owner row additivity, refund ledger, seven/eight-module rational budget simplices, and terminal-square reservation | T4 analytic/exact/executed regular closure; complete regular `H_N` and `REG` closed, while naked posterior positivity, progressive/revisit `H_A`, `OVERLAP_src`, and Nelson remain open |
+| Fixed-chart progressive owner assembly | Zero endpoint-owner defect on each temporally faithful fixed chart, recombined-total invariance under representation-preserving subdivision, exact nonnegative Douglas cost slack, and anticipative-heat no-general-extension boundary | T4 analytic/exact/executed algebraic identity; fixed-chart assembly closed, while uniform `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1089,13 +1113,19 @@ Current subordinate order:
     Gram positivity, predictable-baseline support, inverse-Gram Schur,
     factorwise centering, and the formal Fourier diagnostic alone do not prove
     the progressive theorem;
-6. now assemble the R-103 complete regular owner into the temporally faithful
-   refinement-union action without loss or duplication, including repeated
-   use of one spatial range. This assembly is `H_A`; the resulting uniform
-   source-action inequality is `OVERLAP_src`, not a separate weaker module;
-7. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
-   directly. R-087 CORE and R-093 show that `OVERLAP_src` and Nelson are the
-   same variational objective. Free coefficient conditioning, fixed-chart
+6. R-104 now reconstructs the R-103 owner incidence template exactly on each
+   declared temporally faithful fixed source chart. Preserve only the
+   recombined endpoint under representation-preserving subdivisions; do not
+   claim invariance, positivity, or separate estimates for individual Doob
+   or revisit owners. Keep the exact cost relation
+   `A_phys,J(u)=A_J(h)+D_CM(u,h)` with `D_CM>=0`; a strict kernel fixture
+   excludes silent replacement by equality. Predictable heat is an admitted
+   sufficient scope, while the same-root fixture blocks only an automatic
+   arbitrary anticipative-heat extension;
+7. prove `A_J(h)>=-C` uniformly over the cutoff and the entire temporally
+   faithful directed source union. By R-089/R-093 this is `OVERLAP_src` and
+   already the static `q=10/9` Nelson free-energy bound, not a weaker
+   post-assembly module. Free coefficient conditioning, fixed-chart
    attainment, an independent uniform fibre-entropy reserve, causal
    orthogonal QR, and local-fixture amplitude scaling are retired; coupled
    use of the actual fibre term is not excluded.
@@ -1103,18 +1133,18 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `137/137`;
-- standard-library exact independent `69/69`;
-- manifest-pinned integrated `379/379` and aggregate `585/585` PASS;
-- exact endpoint and complete-owner identities, fixed-low/future raw-Wick
-  split, owner/refund incidence, direct scalar expansion with sign/factor
-  mutant rejection, singular and zero PSD endpoints, seven/eight-module
-  budget simplices, predecessor/source/PDF/surface contracts, and T4
+- primary `93/93`;
+- standard-library exact independent `66/66`;
+- manifest-pinned integrated `290/290` and aggregate `449/449` PASS;
+- Douglas reconstruction and strict kernel slack, exact endpoint/square and
+  expectation-only Doob telescopes, noncausal covariance-compression
+  rejection, canonical seven-NEAR/eight-REG owner incidence, independent heat
+  boundary fixtures, predecessor/source/PDF/surface contracts, and T4
   firewalls;
 - exit code zero.
 
@@ -1125,17 +1155,18 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_regular_complete_packet_ownership_hn_reg_closure_manifest.json`
-- `notes/classii-regular-complete-packet-ownership-hn-reg-closure-260728-v1.0.tex.txt`
-- `notes/classii-regular-complete-packet-ownership-hn-reg-closure-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure.py`
-- `../../codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure_independent.py`
-- `../../codes/foundations/a13_classii_regular_complete_packet_ownership_hn_reg_closure_verify.py`
-- `runs/2026-07-28-primary-regular-complete-packet-ownership-hn-reg-closure/result.json`
-- `runs/2026-07-28-independent-regular-complete-packet-ownership-hn-reg-closure/result.json`
-- `runs/2026-07-28-integrated-regular-complete-packet-ownership-hn-reg-closure/result.json`
-- `../../RESULTS-LEDGER.md#r-103`
-- `../../explorations/log.jsonl` (`EXP-000258`--`EXP-000259`)
+- `classii_lossless_progressive_complete_owner_assembly_heat_boundary_manifest.json`
+- `notes/classii-lossless-progressive-complete-owner-assembly-heat-boundary-260728-v1.0.tex.txt`
+- `notes/classii-lossless-progressive-complete-owner-assembly-heat-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary.py`
+- `../../codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_independent.py`
+- `../../codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_verify.py`
+- `runs/2026-07-28-primary-lossless-progressive-complete-owner-assembly-heat-boundary/result.json`
+- `runs/2026-07-28-independent-lossless-progressive-complete-owner-assembly-heat-boundary/result.json`
+- `runs/2026-07-28-integrated-lossless-progressive-complete-owner-assembly-heat-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-104`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-anticipative-random-heat-conditioning`
+- `../../explorations/log.jsonl` (`EXP-000260`--`EXP-000262`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1983,6 +2014,20 @@ square/revisit theorem, or of R-100 to the still-open moving heat-baseline
 debt bound, rational (6.5), complete `H_N`, REG, `H_A`, `OVERLAP_src`, Nelson,
 measure, Sector-A closure, or a higher tier.
 
+The R-104 continuation is additionally falsified by failure of the fixed-
+chart endpoint-owner defect zero identity; the precise representation-
+preserving-subdivision boundary; the exact physical/source Douglas-slack
+identity, slack nonnegativity, or strict pure-kernel fixture; the canonical
+seven-NEAR/eight-REG module map with Cartan FAR and the terminal square nested
+inside the shifted module; the expectation-only Doob firewall or noncausal
+covariance-compression fixture; predictable heat centering, either same-root
+heat defect, or the same-root zero-defect guard; any predecessor, source,
+note, PDF, manifest, registry, exploration, assertion-count, or public-surface
+pin including `EXP-000260--EXP-000262`; or any promotion to ownerwise
+subdivision invariance, visitwise R-103 estimates, arbitrary anticipative
+heat, `OVERLAP_src`, Nelson, removals, a measure, Sector-A closure, or a higher
+tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2279,6 +2324,19 @@ the annular mutually orthogonal strict-past no-revisit class. R-103 does not
 prove standalone R-085 (4.11), old (6.5), random control-dependent heat,
 arbitrary progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff/floor
 removal, a measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
+
+R-104 proves only that the fixed-chart renormalised endpoint equals the
+recombined owner endpoint and that the original physical action is the source
+action plus a nonnegative Douglas slack. It does not claim equality of the
+two Cameron--Martin costs. A representation-preserving subdivision preserves
+the recombined total only; individual Doob and owner summands may exchange
+mass, and a split that introduces new revealed coordinates is a new chart.
+R-103 supplies owner nomenclature and incidence but no visitwise estimate.
+The same-root heat fixture excludes only an automatic extension to arbitrary
+anticipative heat and is not an action counterexample or a complete
+measurability classification. R-104 does not prove `OVERLAP_src`, Nelson,
+cutoff/floor removal, a measure theorem, Sector-A closure, or T5--T7. Tier
+stays T4.
 
 ## History
 
@@ -2817,3 +2875,22 @@ removal, a measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
   old standalone atoms remain unproved. The live child is progressive/revisit
   `H_A` and `OVERLAP_src`; Nelson, removals, the measure, and Sector A remain
   open; tier stays T4.
+- 2026-07-28: Registered R-104. R-081 Douglas factorisation gives every
+  bounded smooth cylindrical-simple progressive control a temporally faithful
+  strict-triangular source representative with the same terminal displacement
+  and no larger cost. The R-079/R-091 endpoint and exact R-083/R-100--R-102
+  algebra now give zero fixed-chart endpoint-owner defect; R-103 supplies only
+  the seven-NEAR/eight-REG incidence template. Representation-preserving
+  subdivision invariance is restricted to the recombined endpoint. The exact
+  action relation retains the nonnegative Douglas slack, and a pure-kernel
+  fixture makes it strict. Expectation-only Doob and noncausal-compression
+  fixtures enforce the pathwise/causal boundaries. Predictable heat may be
+  disintegrated, while the same-root PSD defect two registers
+  `NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING`; a same-root PSD
+  zero-defect guard prevents overclassification. `EXP-000260--EXP-000262`
+  record the successful assembly, heat no-go, and exact Nelson frontier.
+  Primary `93/93`, standard-library independent `66/66`, integrated `290/290`,
+  and aggregate `449/449` checks are manifest-pinned. The final nine-page PDF
+  passed form, zero-overfull, extraction, and all-page Poppler QA. The uniform
+  `OVERLAP_src`/Nelson theorem, removals, measure construction, and Sector A
+  remain open; tier stays T4.
