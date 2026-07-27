@@ -249,7 +249,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   preserving subdivision preserves only the recombined total, and
   `A_phys,J(u)=A_J(h)+D_CM(u,h)` with `D_CM>=0`. The active child remains
   `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, narrowed to the uniform
-  `OVERLAP_src` source-action lower bound, equivalently `q=10/9` Nelson. R-080,
+  `OVERLAP_src` source-action lower bound, equivalently `q=10/9` Nelson.
+  R-105 now completes the common-root representation audit: only the complete
+  value-plus-heat endpoint survives subdivision, while the normalized rational
+  owners do not. Generic monotonicity, the registered pathwise/absolute
+  critical-Young extraction, and the all-law pointwise relative bracket are
+  retired; the last forces `b(t)>=3/t` at one fixed production cutoff. The
+  positive one-pair theorem is only an artificial mode-diagonal model and
+  physical cross-mode resonance blocks tensorization. The live routes are a
+  complete signed cross-mode/forest packet or a Gibbs-specific/time-integrated
+  A9 argument. Sector A remains open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -632,7 +641,10 @@ preserved in git/changelog rather than treated as current gates.
    child is `A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION`, after R-103
    closed complete regular `H_N` and `REG` and R-104 closed only the fixed-
    chart endpoint-owner defect with an explicit nonnegative Douglas slack.
-   The uniform source-action/Nelson inequality remains open. The route to the
+   R-105 then retires generic monotonicity, the registered pathwise/absolute
+   critical-Young route, and the all-law pointwise relative bracket while
+   preserving a Gibbs-specific/time-integrated A9 successor. The uniform
+   source-action/Nelson inequality remains open. The route to the
    regular closure was narrowed by R-080--R-102.
    R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
@@ -758,7 +770,11 @@ preserved in git/changelog rather than treated as current gates.
    The uniform directed source-union inequality is already the `q=10/9`
    Nelson objective through R-087/R-093, not an additional entropy theorem.
    Predictable heat is sufficient for disintegration, but same-root PSD heat
-   admits no automatic extension. Sector A remains open.
+   admits no automatic extension. R-105 shows that common-root endpoints, not
+   edgewise owners, are the invariant coordinates and that an artificial
+   one-pair estimate cannot bypass physical cross-mode coupling. The exact
+   successor is the uniform complete source action through a signed packet or
+   Gibbs-specific/time-integrated A9 cancellation. Sector A remains open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

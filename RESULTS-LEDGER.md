@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-105](#r-105) | Cartan endpoint quotient, rational subdivision boundary, and A9 route boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete common-root value-plus-heat Cartan edges telescope before the expectation-inside grouped square, so representation-preserving subdivisions have one endpoint quotient and no edge multiplicity. On the normalized active production fibre `c1=e=Gamma0=1`, the historical rational `F_6.5` and fixed-chart `K_R` change sign under an exact subdivision, while the complete R-101 endpoint remains `1600/81` because its three labelled defects cancel; general parameters supply one common positive factor. Generic A9 monotonicity, the registered pathwise/absolute critical-Young extraction, and the all-law pointwise relative bracket fail. The last failure is production-specific at one fixed cutoff and forces `b(t)>=3/t`, but it is not a Gibbs-path or Nelson counterexample. An exact determinant bound survives only in an artificial scalar quadratic one-pair mode-diagonal model; a sign-indefinite two-mode cross-mode resonance blocks tensorization. The remaining theorem is the uniform complete source action, equivalently the full signed `OVERLAP_src`/Nelson target, through a complete signed packet or a Gibbs-specific/time-integrated A9 argument. Nelson, removals, a measure, and Sector A remain open |
 | [R-104](#r-104) | Fixed-chart endpoint-owner assembly and Douglas-slack boundary | Scoped T4 analytic/exact/executed algebraic identity and method boundary: every finite-cutoff bounded smooth cylindrical-simple progressive control has a temporally faithful strict-triangular source representation with the same terminal displacement. On each fixed chart, the exact R-079/R-081/R-091 endpoint reconstruction followed by the exact R-083 and R-100--R-102 algebra has zero endpoint-owner defect; R-103 supplies the seven-NEAR/eight-REG owner nomenclature and incidence template, not progressive visitwise estimates. A representation-preserving subdivision preserves only the recombined endpoint, not individual Doob or owner summands. The physical action equals the source action plus the nonnegative Douglas slack `(9/20) E[int ||u_t||^2 dt-sum_k ||h_k||^2]`. Predictable fresh-root-independent heat may be disintegrated, while an exact same-root PSD fixture proves that no automatic extension to arbitrary anticipative heat exists. This proves no uniform `OVERLAP_src` lower bound, Nelson estimate, removals, measure, or Sector A |
 | [R-103](#r-103) | Regular complete-packet ownership and H_N/REG closure | Scoped T4 analytic/exact/executed regular closure: the exact R-079 endpoint, R-083 FAR/NEAR and row partitions, R-100 complete-owner row additivity, and R-101 three-owner rational split form one disjoint expectation-level owner partition. R-080/R-063 retain the fixed-low raw-Wick difference inside the two low objects; only the R-100/R-101 future reveal is a separate raw-Wick residual. R-084 owns all complete linear rows; only R-099 current families three through five enter the unshifted rational owner; R-102 owns the shifted current while leaving its terminal square reserved; and one signed R-078 paid difference is bounded under the fixed R-096 collar. The separate R-086 Q orientations and `T_G^<=` charge, provisional raw-Q, base-cubic, earlier shifted-current, second-secant, appended-forest, and extra q/r/Schur charges have multiplicity zero. Seven modules close complete regular H_N and eight modules close REG. The conservative allocation `eta*=1/440`, `zeta*=3/100` spends `1/3080`, `3/700` per H_N module and `1/3520`, `3/800` per REG module, leaving action reserves `197/440`, `3/25`. This does not prove the stronger naked posterior bracket, standalone R-085 (4.11), old (6.5), progressive/revisit `H_A`, `OVERLAP_src`, Nelson, removals, a measure, or Sector A |
 | [R-102](#r-102) | Full-Hessian heat representation and regular future-insertion rational-current closure | Scoped T4 analytic/exact/executed advance and method boundary: use of the complete rational second-Hessian secant requires refunding its separate provisional base-cubic allocation, without withdrawing R-076 in its own owner or restoring the R-101 raw-Wick block. Normalization gives a target-heat-uniform bounded Hessian, and Gaussian completion gives an exact Laplace--Wick representation for every PSD target covariance, including singular ones. Exact ridge, active-subspace, and kernel calculations rule out uniform full-space inverse-Gram coercivity. Cross-Doob decomposition leaves a future-feedback innovation. In the regular annular mutually orthogonal strict-past no-revisit class, swapping the finite `j<k` sums before conditioning the complete product turns it into predictable last-insertion columns. The high-prefix branch has limiting Young slack `1/14`; the retained fixed-low derivative branch has `X^(1/7)(1+Y)^(19/42)`, slack `17/42`, and moment `42/17`. The whole current closes uniformly in cutoff and deterministic PSD target and future heat, so regular `K_R` closes with its terminal square unspent and the separate R-086 current suballocation refunded. Exact Gaussian, Jensen, and Cartan fixtures still refute shortcut factorizations, while the Fourier triad is only a diagnostic. Full-frame bracket, complete `H_N`, REG, progression, Nelson, a measure, and Sector A remain open |
@@ -123,6 +124,74 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-105"></a>
+### R-105 -- Cartan endpoint quotient, rational subdivision boundary, and A9 route boundary
+
+**Result ID.**
+`A13-CLASSII-CARTAN-RATIONAL-SUBDIVISION-SMART-PATH-BOUNDARY`.
+
+**Cartan quotient.** For one fixed Malliavin root and complete value-plus-heat
+edges,
+
+`sum_l L E_l = L[J_(Sigma_L)(z_L)-J_(Sigma_0)(z_0)]`
+
+pathwise. Thus every representation-preserving common-root subdivision with
+the same extended endpoints has the same expectation-inside grouped square,
+and a closed extended loop has zero grouped charge. Edgewise nonnegative
+squares are not invariant. This transports R-092 through pure common-root
+subdivision but proves neither literal R-085 (4.11) nor a distinct-root
+progressive estimate.
+
+**Rational boundary.** The exact ownership correction is
+
+`F_6.5=(1/2)L:Q+K_R`,
+
+while the complete nonduplicating endpoint is
+
+`Delta W_R=R_Q+M_U+K_R`.
+
+On the normalized active production scalar fibre `c1=e=Gamma0=1`, one chart has
+`F_6.5=K_R=-992/81`. Its two-step representation-preserving subdivision has
+`F_6.5=427/162` and `K_R=355/162`. The complete endpoint is `1600/81` in
+both representations because the three labelled defects cancel. For general
+production parameters every displayed entry has the same positive factor
+`c1 e Gamma0`. Hence
+`F_6.5` and `K_R` may not be temporalized visit by visit; R-102's fixed
+regular estimate is unchanged.
+
+**Static and frequency boundaries.** A PSD divergence-free quadratic matrix
+under the `q=10/9`, `lambda=3/20` sextic tilt has exact A9 first variation
+`-(80/9) E_mu Y^4<0`; generic monotonicity is false. The registered
+full-budget pathwise/absolute coefficient-norm critical-Young extraction also
+fails without refuting Nelson. A stronger production-specific no-go holds for
+the all-law pointwise relative A9 bracket: one fixed-cutoff top-shell ray and
+countably many finite-entropy translated Gaussians force `b(t)>=3/t` almost
+everywhere, contradicting `b in L1(0,1)`. This does not exclude the actual
+Gibbs interpolation law or a time-integrated signed bracket. Conversely, the
+artificial scalar quadratic one-pair mode-diagonal model with an arbitrary
+strict-past shift has conditional log moment at most
+`4q mu+t-log(1+t)<=4q mu+t^2/2`, giving summable `|k|^-6` and `|k|^-4`
+costs. A two-mode cross-mode resonance `k^2 r^2 u(6A+5u)/4` blocks
+tensorization to the physical field.
+
+**Evidence.** The proof note
+`classii-cartan-rational-subdivision-smart-path-boundary-260728-v1.0`, its
+PDF, primary symbolic and independent standard-library rational/Fourier
+certificates, integrated verifier, manifest, five negative authorities, and
+`EXP-000263--EXP-000269`. The pinned contract is primary `111/111`,
+independent `111/111`, integrated `416/416`, and aggregate `638/638` PASS. The
+final PDF passes form, zero-overfull, extraction,
+and all-page Poppler visual QA.
+
+**Boundary.** R-105 proves no distinct-root Cartan estimate, visitwise
+rational estimate, Gibbs-specific or time-integrated A9 bracket, uniform
+`OVERLAP_src` lower bound, Nelson estimate, cutoff/floor removal, interacting
+measure, Sector-A closure, or T5--T7. Tier remains T4. The all-law pointwise
+relative bracket is disproved. The exact successor is either the full signed
+source-action theorem or a Gibbs-specific/time-integrated signed A9 estimate.
+
+---
 
 <a id="r-104"></a>
 ### R-104 -- Fixed-chart endpoint-owner assembly and Douglas-slack boundary

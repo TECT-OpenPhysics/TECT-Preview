@@ -796,6 +796,34 @@ the following structural results and proof-architecture boundaries hold.
     heat no-go, and exact remaining frontier. The uniform source-action lower
     bound is still `OVERLAP_src`, hence already the `q=10/9` Nelson theorem by
     R-089/R-093. Removals, a measure, and Sector A remain open; tier stays T4.
+48. `A13-CLASSII-CARTAN-RATIONAL-SUBDIVISION-SMART-PATH-BOUNDARY` is R-105.
+    For one fixed Malliavin root, complete value-plus-heat Cartan edges
+    telescope pathwise to the extended endpoint before the expectation-inside
+    grouped square. Pure representation-preserving common-root subdivisions
+    therefore carry no multiplicity, while edgewise squares are noninvariant.
+    This transports R-092 but proves neither literal R-085 (4.11) nor a
+    distinct-root theorem. The exact rational correction is
+    `F_6.5=(1/2)L:Q+K_R`, while the complete R-101 endpoint is
+    `Delta W_R=R_Q+M_U+K_R`. On the normalized active production scalar fibre
+    `c1=e=Gamma0=1`, one chart has `F_6.5=K_R=-992/81`, whereas its two-step subdivision has
+    `F_6.5=427/162`, `K_R=355/162`; the complete endpoint stays `1600/81`.
+    For general production parameters all displayed entries share the same
+    positive factor `c1 e Gamma0`. Thus neither labelled form may be
+    temporalized visit by visit. A generic
+    PSD divergence-free sextic A9 fixture has first variation
+    `-(80/9)E_mu[Y^4]<0`, and the registered full-budget pathwise/absolute
+    critical-Young extraction also fails without refuting Nelson. At one fixed
+    production cutoff, a top-shell ray additionally disproves the all-law
+    pointwise relative A9 bracket by forcing `b(t)>=3/t` almost everywhere.
+    This leaves Gibbs-specific or time-integrated signed A9 forms open.
+    Conversely, an artificial scalar quadratic strict-past-shifted one-pair
+    mode-diagonal model has the uniform exact bound
+    `4qmu+t-log(1+t)<=4qmu+t^2/2`; a sign-indefinite cross-mode resonance
+    blocks tensorization. `EXP-000263--EXP-000269` record every
+    successful and failed route. The remaining theorem is still the complete
+    `OVERLAP_src`/Nelson action, approached by a complete signed cross-mode/
+    forest packet or a Gibbs-specific/time-integrated A9 inequality. Removals,
+    a measure, and Sector A remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -850,6 +878,7 @@ is a scoped T4 subproof and does not promote A13.
 | Full-Hessian heat / chronological future-insertion current | Complete-`L` owner refund, normalized heat-uniform Hessian bound, all-PSD Laplace--Wick representation, active/kernel heat geometry, exact global-current cross-Doob residual, shortcut no-gos, chronological last-insertion identity, shell decay `2^(-k/14)`, and regular `K_R` closure with square unspent | T4 analytic/exact/executed regular closure and progressive boundary; full-frame bracket, `H_N`, REG, progression, and Nelson open |
 | Regular complete-packet ownership / H_N and REG | Exact R-079 expectation identity, fixed-low versus future raw-Wick split, one signed paid difference, complete-owner row additivity, refund ledger, seven/eight-module rational budget simplices, and terminal-square reservation | T4 analytic/exact/executed regular closure; complete regular `H_N` and `REG` closed, while naked posterior positivity, progressive/revisit `H_A`, `OVERLAP_src`, and Nelson remain open |
 | Fixed-chart progressive owner assembly | Zero endpoint-owner defect on each temporally faithful fixed chart, recombined-total invariance under representation-preserving subdivision, exact nonnegative Douglas cost slack, and anticipative-heat no-general-extension boundary | T4 analytic/exact/executed algebraic identity; fixed-chart assembly closed, while uniform `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Cartan/rational subdivision and static-source boundary | Common-root complete-heat endpoint quotient, exact rational labelled-owner sign flip with invariant complete endpoint, generic A9 and critical-Young no-gos, one-pair predictable-source determinant bound, and cross-mode factorization obstruction | T4 analytic/exact/executed advance and method boundary; exact source-action/relative-bracket theorem, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1113,7 +1142,7 @@ Current subordinate order:
     Gram positivity, predictable-baseline support, inverse-Gram Schur,
     factorwise centering, and the formal Fourier diagnostic alone do not prove
     the progressive theorem;
-6. R-104 now reconstructs the R-103 owner incidence template exactly on each
+6. R-104 reconstructs the R-103 owner incidence template exactly on each
    declared temporally faithful fixed source chart. Preserve only the
    recombined endpoint under representation-preserving subdivisions; do not
    claim invariance, positivity, or separate estimates for individual Doob
@@ -1121,31 +1150,41 @@ Current subordinate order:
    `A_phys,J(u)=A_J(h)+D_CM(u,h)` with `D_CM>=0`; a strict kernel fixture
    excludes silent replacement by equality. Predictable heat is an admitted
    sufficient scope, while the same-root fixture blocks only an automatic
-   arbitrary anticipative-heat extension;
+   arbitrary anticipative-heat extension. R-105 sharpens the invariant
+   coordinate: complete common-root Cartan edges must be signed and grouped
+   before squaring; historical `F_6.5` and fixed-chart `K_R` do not descend
+   to the subdivision quotient, while the complete R-101 rational endpoint
+   does. Do not retry edgewise Cartan multiplicity or visitwise rational
+   owner estimates;
 7. prove `A_J(h)>=-C` uniformly over the cutoff and the entire temporally
    faithful directed source union. By R-089/R-093 this is `OVERLAP_src` and
    already the static `q=10/9` Nelson free-energy bound, not a weaker
    post-assembly module. Free coefficient conditioning, fixed-chart
    attainment, an independent uniform fibre-entropy reserve, causal
-   orthogonal QR, and local-fixture amplitude scaling are retired; coupled
-   use of the actual fibre term is not excluded.
+   orthogonal QR, local-fixture amplitude scaling, generic A9 monotonicity,
+   pathwise coercivity, critical coefficient-norm Young extraction,
+   multiplication of one-pair bounds, and the all-law pointwise relative A9
+   bracket are retired. R-105 proves only an artificial scalar quadratic
+   one-pair mode-diagonal theorem. The live A9 route is Gibbs-specific or
+   time-integrated and signed; the live source route is the complete signed
+   cross-mode/forest packet.
 
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `93/93`;
-- standard-library exact independent `66/66`;
-- manifest-pinned integrated `290/290` and aggregate `449/449` PASS;
-- Douglas reconstruction and strict kernel slack, exact endpoint/square and
-  expectation-only Doob telescopes, noncausal covariance-compression
-  rejection, canonical seven-NEAR/eight-REG owner incidence, independent heat
-  boundary fixtures, predecessor/source/PDF/surface contracts, and T4
-  firewalls;
+- primary `111/111`;
+- standard-library exact independent `111/111`;
+- manifest-pinned integrated `416/416` and aggregate `638/638` PASS;
+- complete common-root endpoint quotient, exact production rational sign flip
+  with complete defect cancellation, A9 and full-budget method boundaries,
+  all-law pointwise relative-bracket no-go, artificial one-pair conditional
+  determinant theorem, and cross-mode obstruction,
+  predecessor/source/PDF/surface contracts, and T4 firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1155,18 +1194,22 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_lossless_progressive_complete_owner_assembly_heat_boundary_manifest.json`
-- `notes/classii-lossless-progressive-complete-owner-assembly-heat-boundary-260728-v1.0.tex.txt`
-- `notes/classii-lossless-progressive-complete-owner-assembly-heat-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary.py`
-- `../../codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_independent.py`
-- `../../codes/foundations/a13_classii_lossless_progressive_complete_owner_assembly_heat_boundary_verify.py`
-- `runs/2026-07-28-primary-lossless-progressive-complete-owner-assembly-heat-boundary/result.json`
-- `runs/2026-07-28-independent-lossless-progressive-complete-owner-assembly-heat-boundary/result.json`
-- `runs/2026-07-28-integrated-lossless-progressive-complete-owner-assembly-heat-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-104`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-anticipative-random-heat-conditioning`
-- `../../explorations/log.jsonl` (`EXP-000260`--`EXP-000262`)
+- `classii_cartan_rational_subdivision_smart_path_boundary_manifest.json`
+- `notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-v1.0.tex.txt`
+- `notes/classii-cartan-rational-subdivision-smart-path-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary.py`
+- `../../codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_independent.py`
+- `../../codes/foundations/a13_classii_cartan_rational_subdivision_smart_path_boundary_verify.py`
+- `runs/2026-07-28-primary-cartan-rational-subdivision-smart-path-boundary/result.json`
+- `runs/2026-07-28-independent-cartan-rational-subdivision-smart-path-boundary/result.json`
+- `runs/2026-07-28-integrated-cartan-rational-subdivision-smart-path-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-105`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-rational-taylor-owner-subdivision`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-generic-smart-path-monotonicity`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-all-law-pointwise-relative-bracket`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-full-budget-critical-young`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-one-pair-product-factorization`
+- `../../explorations/log.jsonl` (`EXP-000263`--`EXP-000269`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -2028,6 +2071,23 @@ subdivision invariance, visitwise R-103 estimates, arbitrary anticipative
 heat, `OVERLAP_src`, Nelson, removals, a measure, Sector-A closure, or a higher
 tier.
 
+The R-105 continuation is additionally falsified by failure of the complete
+common-root value-plus-heat endpoint quotient, grouped-square subdivision
+invariance, closed-loop zero charge, or mandatory heat compensator; the exact
+rational Taylor-owner correction, any production jet or one/split fraction,
+the labelled-owner sign flips, complete endpoint equality, or defect
+cancellation; the A9 PSD/divergence/radial identities or negative first
+variation; either full-budget critical threshold or constant-mode
+minimization; the exact positive horizontal production coefficient, top-shell
+harmonic projections, range-resolvent saturation, full-bracket order audit,
+or the forced nonintegrable bound `b(t)>=3/t`; the one-Fourier-pair covariance-normal identity, noncentral
+Laplace bound, summability exponents, or cross-mode resonance; any R-105
+authority, source, note, PDF, manifest, negative authority, exploration,
+assertion-count, or public-surface pin including `EXP-000263--EXP-000269`; or
+any promotion to literal R-085 (4.11), distinct-root Cartan, visitwise
+`F_6.5`/`K_R`, a Gibbs-specific or time-integrated A9 closure, `OVERLAP_src`,
+Nelson, removals, a measure, Sector-A closure, or a higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2337,6 +2397,20 @@ anticipative heat and is not an action counterexample or a complete
 measurability classification. R-104 does not prove `OVERLAP_src`, Nelson,
 cutoff/floor removal, a measure theorem, Sector-A closure, or T5--T7. Tier
 stays T4.
+
+R-105 proves an exact common-root Cartan subdivision quotient and an exact
+production-fibre failure of labelled rational-owner subdivision invariance.
+It transports only R-092's declared regular Cartan theorem and leaves R-102's
+fixed regular rational estimate intact. Its generic smart-path and registered
+full-budget pathwise/absolute fixtures are method no-gos, not production action
+counterexamples. Its fixed-cutoff production top-shell ray disproves only the
+all-finite-entropy-law pointwise relative bracket; it does not test the Gibbs
+path or a time-integrated signed identity. Its one-Fourier-pair theorem is an
+artificial scalar quadratic mode-diagonal result that does not tensorize
+through the physical cross-mode/forest terms. R-105 does not prove a
+distinct-root estimate, Gibbs-specific or time-integrated A9 bracket,
+`OVERLAP_src`, Nelson, cutoff/floor removal, a measure theorem, Sector-A
+closure, or T5--T7. Tier stays T4.
 
 ## History
 
@@ -2894,3 +2968,21 @@ stays T4.
   passed form, zero-overfull, extraction, and all-page Poppler QA. The uniform
   `OVERLAP_src`/Nelson theorem, removals, measure construction, and Sector A
   remain open; tier stays T4.
+- 2026-07-28: Registered R-105. Complete common-root Cartan edges now descend
+  exactly to an extended-endpoint grouped quotient; edgewise squares are
+  representation artefacts. The historical rational `F_6.5` and fixed-chart
+  `K_R` change sign under an exact production-fibre subdivision, while the
+  complete R-101 endpoint stays `1600/81` by exact labelled-defect
+  cancellation. Generic A9 monotonicity, the registered pathwise/absolute
+  critical-Young route, and the all-law pointwise relative bracket have exact
+  no-gos; the last is production-specific at one fixed cutoff and forces
+  `b(t)>=3/t`. An artificial scalar quadratic one-pair model has a uniform
+  noncentral determinant bound, but the exact two-mode resonance blocks
+  physical tensorization. `EXP-000263--EXP-000269` preserve every successful
+  and failed route. Primary `111/111`, standard-library independent `111/111`,
+  integrated `416/416`, and aggregate `638/638` checks
+  are manifest-pinned. The final PDF passes form,
+  zero-overfull, extraction, and all-page Poppler QA. A Gibbs-specific or
+  time-integrated signed A9 route and the complete signed `OVERLAP_src`/Nelson
+  theorem, removals, measure construction, and Sector A remain open; tier
+  stays T4.

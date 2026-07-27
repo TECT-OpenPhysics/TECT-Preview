@@ -67,6 +67,15 @@ the uniform `OVERLAP_src` source-action lower bound, which R-089/R-093 identify
 with the `q=10/9` Nelson theorem. The anticipative-heat witness is a no-
 automatic-extension boundary, not an action or Nelson counterexample. Sector
 A remains open.
+R-105 fixes the current Sector-A frontier. Complete common-root Cartan
+endpoints telescope, but edgewise squares and the rational owners do not
+survive subdivision. Generic monotonicity, the registered pathwise/absolute
+critical-Young estimate, and an all-law pointwise relative bracket are
+unavailable; the artificial one-pair determinant theorem does not tensorize to
+the physical field. What remains is the uniform complete source action,
+equivalently `OVERLAP_src` and the `q=10/9` Nelson estimate. The active
+alternatives are a complete signed cross-mode/forest packet and a
+Gibbs-specific/time-integrated signed A9 argument. Sector A remains open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the

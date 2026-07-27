@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Clarify R-105 all-law pointwise boundary] - 2026-07-28
+
+Scope clarification: R-105 disproves the all-law pointwise relative A9 bracket at one fixed production cutoff. It does not disprove a Gibbs-specific or time-integrated signed bracket, OVERLAP_src, or Nelson.
+
+## [R-105 common-root quotient and A9 route boundary] - 2026-07-28
+
+R-105 proves the complete common-root value-plus-heat Cartan endpoint quotient and the exact normalized rational-owner subdivision mismatch. It retires generic A9 monotonicity, the registered pathwise/absolute critical-Young extraction, and the all-finite-entropy-law pointwise relative bracket; a fixed-cutoff production top-shell ray forces b(t)>=3/t. The positive one-pair determinant theorem is confined to an artificial scalar quadratic mode-diagonal model because physical cross-mode resonance blocks tensorization. Two independent 111-assertion routes and a 416-assertion integrated audit give 638/638 PASS. Gibbs-specific or time-integrated signed A9 cancellation, the uniform complete OVERLAP_src/Nelson source action, removals, measure construction, and Sector A remain open at T4.
+
 ## [R-104 fixed-chart endpoint-owner assembly and Douglas-slack boundary] - 2026-07-28
 
 Registered R-104 at T4. The exact fixed-chart endpoint-owner defect vanishes after temporally faithful R-081 source factorisation and R-079/R-091/R-083/R-100--R-103 recombination. Representation-preserving subdivision preserves only the recombined total. The physical action equals the source action plus nonnegative Douglas slack, with a strict pure-kernel fixture. Predictable fresh-root-independent heat may be disintegrated; same-root PSD heat blocks automatic anticipative extension. Primary 93/93, independent 66/66, integrated 290/290, aggregate 449/449 PASS; the nine-page PDF passed form, zero-overfull, extraction, and all-page Poppler QA. OVERLAP_src, q=10/9 Nelson, removals, measure construction, Sector A, and tier promotion remain open.

@@ -512,6 +512,123 @@ endpoint theorem.
     `OVERLAP_src`, Nelson, floor removal, measure construction, and Sector A
     remain open; tier stays T4.
 
+36. **Fractional feedback-square perspective and near-Cartan ownership
+    boundary.** R-095,
+    `A13-CLASSII-FRACTIONAL-FEEDBACK-SQUARE-PERSPECTIVE-BOUNDARY`, proves the
+    exact moving-prefix defect between rootwise future feedback and the
+    terminal derivative square.  Retaining a fraction of the endpoint square
+    gives a matrix perspective precisely under `2R>=theta B`; conditional
+    compression then exposes a resolvent-gap and terminal-mean debt.  The
+    production Gram is unbounded, and the two available absolute ledgers
+    demand incompatible decay exponents.  A normalized near-root Cartan
+    homotopy survives, but only as a distinct owner.  The complete signed
+    packet, `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
+
+37. **Complete-cancellation-first and predictable-baseline boundary.** R-096,
+    `A13-CLASSII-LOW-HERMITE-WICK-PREDICTABLE-BASELINE-REDUCTION`, requires the
+    R-077 cancellation before rational projection.  On the regular
+    strict-past no-revisit baseline, a fixed collar empties the genuine
+    coefficient-dominant far support.  Same-root Wick contraction occupies
+    only Hermite ranks zero through two, separating coefficient mean,
+    transformed mean, and centered raw Wick, but selector differentiation and
+    spatially gainless compression prevent a standalone estimate.  The live
+    object is one complete adapted-prefix packet with each heat, low, trace,
+    forest, and square owner retained once.
+
+38. **Global Gram terminalization and posterior-covariance boundary.** R-097,
+    `A13-CLASSII-GLOBAL-GRAM-TERMINALIZATION-COVARIANCE-DEFICIT-REDUCTION`,
+    telescopes predictable heat-lifted Gram rows in signed expectation and
+    gives the exact terminal Schur completion.  Conditioning on the complete
+    coefficient reduces the remaining signed owner to a Jensen term plus
+    posterior covariance debt and mean energy.  Exact fixtures rule out
+    automatic positivity and predictability-only aggregate control without
+    constituting production counterexamples.  A production-weighted complete
+    posterior form is still required.
+
+39. **Signed-first refinement and rational ridge-deficit boundary.** R-098,
+    `A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY`, proves
+    superadditivity only for matching coefficient/payment splits and identifies
+    the rational row as a conditional ridge deficit.  Oppositely oriented
+    visits with one common root and heat cancel before squaring, while their
+    edgewise squares stay quadratic; refinement-stable nonnegative subvisit
+    atomization is therefore false.  The complete endpoint and once-only
+    payments survive.  Distinct roots/heats and the full signed source packet
+    remain outside this no-go.
+
+40. **Extended-state Cartan telescope, causal Doob one-use, and rational
+    recovery.** R-099,
+    `A13-CLASSII-EXTENDED-STATE-CARTAN-DOOB-RATIONAL-RECOVERY`, proves the
+    complete value-plus-target-heat Cartan telescope inside a common root and
+    a derivative-free chronological Doob--Hardy control ledger.  Complete-
+    frame ordered reveal retains a necessary Jensen/covariance residual, and
+    spike/product fixtures reject same-level-only transfers.  The five
+    unshifted rational families have a regular one-shot two-sided form, while
+    the shifted row is reduced to a complete owner lower form.
+
+41. **Owner gauge and heat-centred covariance debt.** R-100,
+    `A13-CLASSII-OWNER-GAUGE-HEAT-CENTERED-COVARIANCE-DEBT-REDUCTION`, proves
+    exact row additivity for matching coefficient, payment, and baseline
+    splits: posterior square and Schur gaps exchange equal opposite mass.
+    Heat-centred low/future decomposition pays the future full-Wick residual
+    on the regular class.  Abstract PSD Gram structure alone does not control
+    covariance debt; the reduced production ray is subcritical but only a
+    diagnostic.  The moving production debt and shifted rational row remain.
+
+42. **Raw-Wick heat-baseline orthogonality and rational current.** R-101,
+    `A13-CLASSII-RAW-WICK-HEAT-BASELINE-ORTHOGONALITY-RATIONAL-CURRENT-REDUCTION`,
+    proves conditional orthogonality between the moving heat coefficient and
+    fresh full-Wick increment.  Cross-Doob terminalization assigns one fixed
+    low endpoint and one future residual, and the control-square ledger reduces
+    the rational row to
+    `K_R=G^T Lc+c^T(P_(Sigma_tar)B_R)(U+a)c/2` with a retained terminal square.
+    Zero-heat-uniform coercivity fails; the fixed-positive-heat current remains
+    the scoped target.
+
+43. **Full-Hessian heat representation and regular rational-current closure.**
+    R-102,
+    `A13-CLASSII-FULL-HESSIAN-LAPLACE-WICK-FUTURE-FEEDBACK-BOUNDARY`, recombines
+    the complete Hessian owner, proves a target-heat-uniform contraction, and
+    gives an exact all-PSD Laplace--Wick representation including singular
+    heat.  Chronological last-insertion conditioning closes the shifted
+    rational current uniformly on the annular mutually orthogonal strict-past
+    no-revisit class, leaving its terminal square unspent.  Full-frame,
+    revisit, and coefficient-unconditioned brackets are not obtained.
+
+44. **Complete regular packet ownership and `H_N`/REG closure.** R-103,
+    `A13-CLASSII-REGULAR-COMPLETE-PACKET-OWNERSHIP-HN-REG-CLOSURE`, assembles
+    one disjoint expectation-level owner partition.  Fixed-low raw Wick stays
+    in the accepted low owners, future raw Wick is the sole separate residual,
+    provisional duplicate rational charges are refunded, and the terminal
+    square remains nested in the shifted owner.  Seven modules close complete
+    regular `H_N`; eight close REG with explicit positive reserves.  This is a
+    regular deterministic-heat no-revisit theorem, not progressive `H_A`.
+
+45. **Fixed-chart endpoint-owner assembly and Douglas-slack boundary.** R-104,
+    `A13-CLASSII-LOSSLESS-PROGRESSIVE-COMPLETE-OWNER-ASSEMBLY-HEAT-BOUNDARY`,
+    reconstructs the exact endpoint owner on every declared temporally
+    faithful fixed source chart.  Representation-preserving subdivision keeps
+    only the recombined endpoint invariant.  Physical action equals source
+    action plus a nonnegative Douglas slack, and predictable fresh-root-
+    independent heat can be disintegrated; a same-root fixture blocks an
+    automatic anticipative-heat extension.  Thus algebraic assembly is
+    complete, while the uniform source-action lower bound is still Nelson.
+
+46. **Common-root quotient, rational-owner subdivision, and A9 route
+    boundary.** R-105,
+    `A13-CLASSII-CARTAN-RATIONAL-SUBDIVISION-SMART-PATH-BOUNDARY`, proves that
+    complete common-root value-plus-heat Cartan edges telescope before the
+    grouped square and records the exact normalized rational mismatch showing
+    that `F_6.5` and `K_R` are not visitwise subdivision invariants. It then
+    separates three failed A9 strategies: generic monotonicity, the registered
+    pathwise/absolute critical-Young extraction, and an all-law pointwise
+    relative bracket. The last fails at one fixed production cutoff because a
+    top-shell ray forces `b(t)>=3/t`. An exact determinant bound survives for
+    an artificial scalar quadratic one-pair model, but sign-indefinite
+    cross-mode resonance blocks physical tensorization. The lineage therefore
+    returns to the exact `OVERLAP_src`/Nelson source-action target through a
+    complete signed packet or a Gibbs-specific/time-integrated A9 route.
+    Sector A remains open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

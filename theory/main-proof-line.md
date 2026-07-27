@@ -85,6 +85,17 @@ after complete recombination, and
 `OVERLAP_src` source-action lower bound, which R-089/R-093 identify with the
 `q=10/9` Nelson theorem. The anticipative-heat fixture is only a no-automatic-
 extension boundary, not an action or Nelson counterexample.
+R-105 completes the common-root representation audit: only the complete
+value-plus-heat endpoint is subdivision invariant, while the historical
+rational owners are not. It retires generic A9 monotonicity, the registered
+full-budget pathwise/absolute critical-Young extraction, and the all-law
+pointwise relative bracket; the last fails at one fixed production cutoff by
+forcing `b(t)>=3/t`. Its exact one-pair determinant theorem is confined to an
+artificial scalar quadratic mode-diagonal model because the physical field has
+sign-indefinite cross-mode resonances. The proof line therefore returns to the
+uniform complete source action through either a complete signed cross-mode/
+forest packet or a Gibbs-specific/time-integrated A9 cancellation. Sector A
+remains open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

@@ -1346,6 +1346,16 @@ assembly, and uniform `OVERLAP_src` remain non-interchangeable obligations.
 R-103 closes complete regular `H_N` and REG; R-104 closes only the fixed-chart
 endpoint identity; `OVERLAP_src` and Nelson remain open.
 
+R-105 fixes the next method boundary. Complete common-root Cartan endpoints
+are subdivision invariant, but the historical rational owners are not. A
+pointwise relative A9 bracket imposed on every finite-entropy law is impossible:
+a fixed-cutoff production top-shell ray forces `b(t)>=3/t` almost everywhere.
+This does not fire against a Gibbs-specific bracket or a time-integrated signed
+production bracket. Together with the registered pathwise/absolute
+critical-Young obstruction and the physical cross-mode failure of the
+artificial one-pair tensorization, the unresolved gate remains the uniform
+complete source action `=OVERLAP_src`.
+
 ### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
 
 **Statement:** Uniformly in the terminal cutoff, prove a production-weighted
@@ -1383,10 +1393,10 @@ to identify the same Boue--Dupuis infimum as on all finite-energy progressive
 controls. A stronger direct packetwise all-control or all-tilted-law theorem
 is admissible but is not required for the Nelson application.
 
-**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; FIXED-CHART ENDPOINT-OWNER
-ASSEMBLY IDENTITY PROVED BY R-104; UNIFORM `OVERLAP_src`/NELSON INEQUALITY
-OPEN (reviewed 2026-07-28 after R-104). The gate was exposed
-by R-080 and sharpened by R-081--R-104
+**Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; R-104 FIXED-CHART ASSEMBLY AND
+R-105 COMMON-ROOT REPRESENTATION AUDIT COMPLETE; UNIFORM `OVERLAP_src`/NELSON
+INEQUALITY OPEN (reviewed 2026-07-28 after R-105). The gate was exposed
+by R-080 and sharpened by R-081--R-105
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1427,6 +1437,17 @@ independent heat can be disintegrated, but the exact same-root PSD fixture
 uniformity gives no automatic extension to arbitrary anticipative heat. This
 is a method no-go, not a complete-action or Nelson counterexample, and same-
 root dependence is not a complete classifier.
+
+R-105 additionally retires three stronger shortcuts. Generic A9 monotonicity
+fails on an exact PSD divergence-free sextic fixture; the registered
+full-budget pathwise/absolute coefficient-norm critical-Young extraction is
+unavailable; and a production top-shell ray disproves the all-law pointwise
+relative bracket by forcing `b(t)>=3/t`. Its exact one-pair determinant theorem
+is an artificial scalar quadratic mode-diagonal result, and sign-indefinite
+cross-mode resonance prevents physical tensorization. None of these is a
+Gibbs-path or Nelson counterexample. The remaining analytic alternatives are
+a complete signed same-root cross-mode/forest packet or a Gibbs-specific/
+time-integrated signed A9 cancellation.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

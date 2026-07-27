@@ -6,6 +6,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION](#ng-2026-07-28-a13-rational-taylor-owner-subdivision) | temporalize the historical rational `F_6.5` or fixed-chart `K_R` visit by visit across representation-preserving subdivisions | on the exact active production scalar fibre, one chart has `F_6.5=K_R=-992/81`, while a two-step subdivision with the same total endpoint has `F_6.5=427/162` and `K_R=355/162`. The complete endpoint increment stays `1600/81`; the `R_Q`, `M_U`, and `K_R` defects cancel exactly. This does not refute the one-chart identity or R-102's fixed regular estimate |
+| [NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY](#ng-2026-07-28-a13-generic-smart-path-monotonicity) | close A9 from PSD, divergence freedom, quadratic coefficient growth, and sextic coercivity alone | an exact two-dimensional PSD divergence-free quadratic matrix with sextic tilt has first smart-path variation `-(80/9) E_mu[Y^4]<0` at `q=10/9`; independent blocks amplify the loss linearly. This is not a production counterexample. A production-specific full relative-bracket/Gronwall theorem remains possible |
+| [NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET](#ng-2026-07-28-a13-all-law-pointwise-relative-bracket) | prove a pointwise-in-time relative A9 bracket with integrable coefficients for every finite-entropy law | one fixed-cutoff production top-shell ray and a countable family of translated Gaussian laws force the free-energy coefficient to scale as `q u_6 A^6`, the bracket coefficient as `-3q u_6 A^6/t`, and hence `b(t)>=3/t` almost everywhere. This excludes the all-law theorem but not a Gibbs-only or time-integrated bracket |
+| [NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG](#ng-2026-07-28-a13-full-budget-critical-young) | replace the signed expected source action by pathwise coercivity or absolute critical-homogeneity Young extraction, even using the full `9/20` energy and `3/20` sextic budgets | the Gaussian-null constant active mode has a paid minimum `-(4 sqrt(5)/9)L^3 d_J^(3/2)` with `d_J~0.001248334393361145 J`, while `R E^(3/4)Y^(1/4)` has the exact finite-remainder threshold `R<=3/5`. The Gaussian coefficient norm is unbounded, so neither pathwise route closes Nelson; expectation-level Wick cancellation remains indispensable |
+| [NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION](#ng-2026-07-28-a13-one-pair-product-factorization) | multiply exact one-Fourier-pair determinant bounds to control the full physical nonlinear field | the single pair is uniformly controlled, but for `X=A+r cos x+u cos 2x` the cross-mode raw resonance relative to isolated pairs is `r^2 u(6A+5u)/4`, which is negative at `A=1,u=-1`. The complete raw square remains nonnegative; this blocks only factorization and leaves complete cross-mode/forest tilted-law control open |
 | [NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING](#ng-2026-07-28-a13-anticipative-random-heat-conditioning) | extend deterministic-heat Wick centering to arbitrary same-root or control-dependent random PSD heat by conditioning | predictable fresh-root-independent heat disintegrates correctly, but for `G~N(0,1)`, `Q=G^2-1`, and `Sigma(G)=G^2`, `E[Sigma Q]=3-1=2`. Thus there is no automatic extension to arbitrary anticipative heat. This is not a necessary-and-sufficient classifier: the same-root PSD heat `(G^2-3)^2` has zero defect. It is a method no-go, not a complete-action, `OVERLAP_src`, or Nelson counterexample |
 | [NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE](#ng-2026-07-28-a13-global-to-predictable-current-bridge) | delete the global R-101/R-102 rational current by applying R-096 predictable-baseline support collapse root by root, or by retaining only martingale differences of the future control and tangent | R-096 removes the genuine large-gap branch only on each predictable partial-control baseline. Exact cross-Doob decomposition leaves the future-feedback innovation `R_cur=sum_(j<k) E<d_j G_J, Delta_k Psi^(k)>` together with product-increment and covariance-difference companions. An exact two-root scalar filtration has first innovation bracket `-70 lambda/27`; a separate future-insertion fixture has `d_ja=d_jc_a=0` but a strictly negative nonlinear current. These are method no-gos, not paid production counterexamples |
 | [NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE](#ng-2026-07-28-a13-full-hessian-cartan-chain-primitive) | integrate the complete rational second-Hessian current as a field-space chain primitive | on the active/inactive two-dimensional production slice with floor one and `a=c=e_1`, the one-form `omega=Lc` has curl `partial_y omega_x-partial_x omega_y=-40/729` at `(1,1)`. A chain-rule exact part may be split off, but the Cartan/enhanced-current remainder cannot be deleted; this omits all paid companions and is not a production action counterexample |
@@ -129,6 +134,125 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-rational-taylor-owner-subdivision"></a>
+### NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION -- labelled rational owners do not descend to the subdivision quotient
+
+**Failure mode.** Treat the historical R-085 form `F_6.5` or the R-101/R-102
+fixed-chart coordinate `K_R` as a representation-invariant owner and estimate
+it separately on every progressive visit.
+
+**Evidence.** For the active production scalar coefficient
+`b(x)=4x^2(4x^2+9)^2/[81(1+x^2)^2]` and covariance one, compare the chart
+`(u,G)=(0,1)`, `(a,c)=(2,2)` with its two steps `(1,1)` and `(1,1)`. The
+one-chart values are `F_6.5=K_R=-992/81`. The step sums are
+`F_6.5=427/162` and `K_R=355/162`. Meanwhile the complete endpoint is
+`Delta W_R=1600/81` in both representations. The owner defects are
+`R_Q=-77/18`, `M_U=1516/81`, and `K_R=-2339/162`, whose sum is zero.
+Positive floor and covariance rescaling multiply every value by one common
+positive factor and preserve the signs.
+
+**Consequence.** The one-chart identity for `F_6.5` and R-102's fixed regular
+no-revisit estimate remain valid. Neither may be temporalized visit by visit.
+The representation-stable coordinate is the complete R-101 endpoint row in
+its stated heat/measurability scope. This is not a full action,
+`OVERLAP_src`, or Nelson counterexample.
+
+<a id="ng-2026-07-28-a13-generic-smart-path-monotonicity"></a>
+### NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY -- PSD and sextic coercivity do not force A9 monotonicity
+
+**Failure mode.** Prove the A9 interpolation monotone, or uniformly bound its
+negative variation, using only positive semidefiniteness, divergence freedom,
+quadratic coefficient growth, and a positive sextic potential.
+
+**Evidence.** On `R^2`, let `U=lambda|x|^6` and
+`T_0=[[x1^2+3x2^2,-2x1x2],[-2x1x2,3x1^2+x2^2]]`. Its eigenvalues are
+`|x|^2,3|x|^2`, `div T_0=0`, `T_0x=|x|^2x`, and
+`Tr T_0=4|x|^2`. Since `log det_2` has no linear term, at `q=10/9` and
+`lambda=3/20` the first variation of the endpoint difference at coefficient
+zero is `-(80/9)E_mu[Y^4]<0`, where `Y=|X|^2/2`. This follows exactly from
+integration by parts under density proportional to `exp(-y-(4/3)y^3)`.
+Independent block copies amplify the loss linearly.
+
+**Consequence.** A generic monotonicity theorem cannot close A9. The fixture
+is not the production coefficient and does not refute Nelson. A later
+production top-shell audit separately excludes the stronger all-law
+pointwise relative-bracket successor; Gibbs-specific and time-integrated
+signed A9 estimates remain possible.
+
+<a id="ng-2026-07-28-a13-all-law-pointwise-relative-bracket"></a>
+### NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET -- the all-finite-entropy pointwise A9 bracket forces a nonintegrable coefficient
+
+**Failure mode.** Seek cutoff-independent integrable `a,b>=0` such that
+`(q/2)E_nu B_(J,t)+b(t)F_(J,t)(nu)>=-a(t)` for every finite-entropy law
+`nu` and almost every interpolation time. This is stronger than the
+Gibbs-law estimate actually needed by the smart path.
+
+**Evidence.** Fix one sharp-cutoff top Fourier mode `g=cos(k.x)` with `k`
+retained and `3k,5k` removed, and a real active-doublet horizontal unit vector
+`u`. The exact production Fierz formula gives
+`B(Agu)u=4a_prod A^2 g^2 u+O(1)` with the pinned `a_prod>0`. Moreover,
+`P_J g^3=(3/4)g`, `P_J g^5=(10/16)g`, and the sextic coefficient is
+`u_6=5 gamma L^3/96>0`. If `T_infty` is the `A^2`-leading coefficient
+operator, then the projected sextic gradient is a positive multiple of
+`T_infty e`; hence it lies in `Ran T_infty` and its range-projection pairing
+with the ray is exactly `6u_6`. Finite-dimensional resolvent saturation gives
+`q t S_t(Ae)/A -> P_(Ran T_infty)e`. For a countable sequence of translated
+Gaussian laws with amplitudes tending to infinity, intersect their full-
+measure time sets and pass to the limit. The exact leading terms are
+`F_(J,t)=q u_6 A^6+o(A^6)` and
+`(q/2)E B_(J,t)=-3q u_6 A^6/t+o(A^6)`; entropy, quartic, determinant,
+coefficient-derivative, and divergence terms are lower order.
+
+**Consequence.** Dividing the proposed inequality by `q u_6 A^6` forces
+`b(t)>=3/t` almost everywhere, contradicting `b in L^1(0,1)`. Thus the
+all-law pointwise relative-bracket theorem is false already at one finite
+cutoff. This does not refute the actual Gibbs tilt, a time-integrated signed
+bracket, the complete source action, `OVERLAP_src`, or Nelson.
+
+<a id="ng-2026-07-28-a13-full-budget-critical-young"></a>
+### NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG -- full budgets do not rescue pathwise or critical Young extraction
+
+**Failure mode.** Replace expectation-level signed Wick cancellation by a
+cutoff-uniform pathwise deterministic bound, or extract an unbounded Gaussian
+coefficient norm from a critical `E^(3/4)Y^(1/4)` payload and leave a finite
+remainder.
+
+**Evidence.** At the Gaussian-null field `X=0` and constant active-doublet
+shift `h=te_1`, the accepted counterterm slope is
+`kappa=0.001248334393361145...`. With the entire energy/sextic budgets
+`eta=9/20`, `zeta=3/20`, the paid polynomial has minimum
+`-(4 sqrt(5)/9)L^3 d_J^(3/2)` with `d_J~kappa J`, hence diverges to negative
+infinity. Separately, an inequality
+`R E^(3/4)Y^(1/4)<=eta E+zeta Y+F(R)` for every `E,Y>=0` has finite `F(R)`
+only when `R<=4 eta^(3/4)zeta^(1/4)/3^(3/4)=3/5`; set `Y/E=eta/(3zeta)`
+and scale `E` to prove necessity.
+
+**Consequence.** The null-field fixture is not a Nelson counterexample, and
+the Gaussian coefficient norm is unbounded. The same-root coefficient
+increment must stay inside an expectation-level signed complete packet.
+Predictable frozen determinants remain a valid subcritical route.
+
+<a id="ng-2026-07-28-a13-one-pair-product-factorization"></a>
+### NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION -- exact pair bounds do not tensorize through physical cross-mode resonances
+
+**Failure mode.** Decompose the nonlinear physical field into independent
+Fourier pairs, apply the exact noncentral determinant bound to each pair, and
+multiply the resulting estimates as though the coefficient were mode
+diagonal.
+
+**Evidence.** A single scalar pair with quadratic coefficient is indeed
+uniformly controlled: its covariance-normal energy is
+`alpha(S_h-2)+mu(S_h^2-4S_h)` and its conditional log moment is at most
+`4q mu+t-log(1+t)`. For `X=A+r cos x+u cos 2x`, however, the raw energy
+contains the cross-mode resonance `r^2 u(6A+5u)/4` relative to the isolated
+pairs. It is negative for `A=1,u=-1`. Frequencies `k,2k` add the common
+factor `k^2`.
+
+**Consequence.** The one-pair theorem is retained and rules out a divergent
+same-pair family. Only the product/factorization step fails. The complete raw
+polynomial remains nonnegative, so this is not a full-action counterexample;
+the remaining task is signed cross-mode/forest control under the tilted law.
 
 <a id="ng-2026-07-28-a13-anticipative-random-heat-conditioning"></a>
 ### NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING -- deterministic heat cannot be conditioned through arbitrary same-root heat

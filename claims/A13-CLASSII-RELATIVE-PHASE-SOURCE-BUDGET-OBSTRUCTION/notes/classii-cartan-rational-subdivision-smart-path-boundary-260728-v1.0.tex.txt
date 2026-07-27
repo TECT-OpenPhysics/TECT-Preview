@@ -1,0 +1,799 @@
+% Title: Common-root Cartan quotient, rational Taylor-owner subdivision, and smart-path boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY; OVERLAP_SRC, NELSON, REMOVALS, MEASURE, AND SECTOR A OPEN
+% Result: A13-CLASSII-CARTAN-RATIONAL-SUBDIVISION-SMART-PATH-BOUNDARY
+% Ledger: R-105
+
+\section{Purpose and scope}
+
+R-103 closed the complete regular $H_N$/REG packet, and R-104 proved that
+the complete endpoint-owner algebra can be reconstructed without defect on
+each temporally faithful fixed source chart.  The remaining analytic theorem
+is nevertheless the uniform lower bound for the complete source action,
+which R-093 identifies exactly with $\mathrm{OVERLAP}_{\rm src}$ and the
+$q=10/9$ Nelson bound.  This note returns to the two historical R-085 atoms
+and asks which parts survive representation-preserving subdivision.  It also
+tests the most economical static continuation, the A9 smart path.
+
+The outcome has four parts.
+
+\begin{enumerate}
+\item Complete common-root Cartan edges have an exact signed-first endpoint
+      quotient.  Any two complete-heat subdivisions with the same extended
+      endpoints give the same grouped square.  A closed extended loop gives
+      zero grouped charge, even when the sum of edgewise squares is positive.
+\item The historical rational form $F_{6.5}$ and the later fixed-chart
+      coordinate $\mathcal K_R$ do not descend to the subdivision quotient.
+      An exact production-fibre subdivision changes the sign of both.  The
+      complete raw-Wick endpoint increment $\Delta W_R$ is unchanged because
+      the labelled-owner defects cancel exactly.
+\item Positive semidefiniteness, divergence freedom, quadratic coefficient
+      growth, and sextic coercivity do not imply A9 smart-path monotonicity.
+      A two-dimensional exact fixture has strictly negative first variation,
+      and independent block copies amplify it linearly.
+\item The natural all-finite-entropy pointwise relative-bracket theorem is a
+      sufficient route to Nelson but is itself false.  One exact production
+      top-shell ray and countably many translated Gaussian laws force its
+      putative coefficient to satisfy $b(t)\ge3/t$.  Only a Gibbs-law-specific
+      or time-integrated signed A9 estimate survives; invoking the complete
+      source-action lower bound directly would simply assume Nelson.
+\end{enumerate}
+
+The first two results are finite-cutoff, fixed-positive-floor algebraic
+statements in the A1 production frame.  The Cartan quotient uses one fixed
+Malliavin root and the complete value-plus-heat edge.  The rational fixture
+uses the exact active scalar production Gram and one common target heat.  The
+A9 fixture is a structural method no-go, not a production counterexample.
+No uniform $\mathrm{OVERLAP}_{\rm src}$ bound, Nelson estimate, cutoff or
+floor removal, interacting measure, or Sector-A closure is claimed.  Tier
+stays T4.
+
+\section{Complete common-root Cartan edges}
+
+Fix one Malliavin root $j$, one spatial output $m$, and one OU parameter
+$t$.  Write
+\[
+ \mathcal L_{j,m,t}:=\Pi_mP_t^{(j)}\mathbb D_j.       \tag{2.1}
+\]
+The point is that $\mathcal L_{j,m,t}$ is linear and remains fixed during a
+pure subdivision at that root.  Let
+\[
+  (\Sigma_0,z_0),(\Sigma_1,z_1),\ldots,(\Sigma_L,z_L) \tag{2.2}
+\]
+be a finite path in the extended value--heat state.  Its complete edge is
+\[
+\begin{split}
+ E_\ell={}&J_{\Sigma_\ell}(z_\ell)
+             -J_{\Sigma_\ell}(z_{\ell-1})\\
+          &+J_{\Sigma_\ell}(z_{\ell-1})
+             -J_{\Sigma_{\ell-1}}(z_{\ell-1}).
+\end{split}                                           \tag{2.3}
+\]
+The first line is the value edge.  The second is the heat compensator and is
+part of the complete R-099 coordinate.
+
+% evidence-anchor: theorem-2.1-complete-common-root-cartan-quotient
+\subsection*{Theorem 2.1 (complete common-root endpoint quotient)}
+
+Pathwise,
+\[
+ \boxed{
+ \sum_{\ell=1}^L\mathcal L_{j,m,t}E_\ell
+ =\mathcal L_{j,m,t}
+   \{J_{\Sigma_L}(z_L)-J_{\Sigma_0}(z_0)\}.}         \tag{2.4}
+\]
+Consequently,
+\[
+\begin{split}
+ &\int_0^\infty e^{-2t}\,
+   \mathbb E\left\|\sum_\ell\mathcal L_{j,m,t}E_\ell
+              \right\|_{\rm HS}^2\,dt\\
+ &\qquad=
+ \int_0^\infty e^{-2t}\,
+   \mathbb E\left\|\mathcal L_{j,m,t}
+       [J_{\Sigma_L}(z_L)-J_{\Sigma_0}(z_0)]
+              \right\|_{\rm HS}^2\,dt.
+\end{split}                                           \tag{2.5}
+\]
+
+\emph{Proof.}
+The two lines of (2.3) cancel at their common middle value and give
+\[
+ E_\ell=J_{\Sigma_\ell}(z_\ell)
+        -J_{\Sigma_{\ell-1}}(z_{\ell-1}).            \tag{2.6}
+\]
+Summation telescopes in the extended state.  Apply the fixed linear map
+$\mathcal L_{j,m,t}$, then square only after summation.  Integration and
+expectation preserve the exact identity. \hfill$\square$
+
+Two consequences are immediate.  Every complete common-root partition with
+the same extended endpoints has the same grouped energy.  If the endpoints
+agree, its grouped charge and grouped energy are exactly zero.  In contrast,
+\[
+ \sum_\ell\|\mathcal L E_\ell\|^2                  \tag{2.7}
+\]
+can be strictly positive on a closed loop.  Thus (2.7) is a representation
+artefact, not an invariant energy coordinate.  The executable uses a
+nonlinear two-component current and an exact closed loop for which the
+grouped square is zero and the edgewise square is $62132$.
+
+\subsection*{Why the heat compensator is mandatory}
+
+Keeping only the first line of (2.3) gives
+\[
+\begin{split}
+ S_{\rm src}
+  ={}&J_{\Sigma_L}(z_L)-J_{\Sigma_0}(z_0)\\
+    &-\sum_\ell
+      [J_{\Sigma_\ell}-J_{\Sigma_{\ell-1}}](z_{\ell-1}).
+\end{split}                                           \tag{2.8}
+\]
+The last sum is a genuine defect.  The quotient theorem is therefore a
+complete-heat theorem, not a value-edge theorem.
+
+\section{Relation to the R-085/R-088 Cartan ledger}
+
+The normalized R-084 target audited in R-088 has no outer $2^j$ weight.  Its
+direct Schur coordinate is
+\[
+ \mathcal S_C=
+ \sum_{A,j}\int_0^\infty e^{-2t}
+ \mathbb E\left\|Q_{j,C}\sum_{k\le j}v_{A,j,k,t}
+            \right\|_{\rm HS}^2dt.                  \tag{3.1}
+\]
+For a complete common-root subdivision, the correct coarse atom is
+\[
+ \bar v_{A,j,k,t}
+ :=\sum_{\ell\in I_k}\mathcal L_{j,\cdot,t}E_\ell, \tag{3.2}
+\]
+and one $q_k$ is attached to the coarse endpoint class.  Introducing a
+separate nonnegative $q_{k,\ell}$ for every artificial edge changes the
+coordinate and can recreate the R-098 $A^2$ loss.
+
+% evidence-anchor: corollary-3.1-regular-cartan-subdivision-transport
+\subsection*{Corollary 3.1 (lossless regular transport through pure subdivision)}
+
+If an R-092 regular chart is changed only by a representation-preserving
+complete common-root subdivision, with no new root, reveal, control, or
+extended endpoint, its accepted regular Cartan estimate is unchanged:
+\[
+ H_C^{\rm reg}(C)
+ \le C_{e,L}2^{-(C-5)/2}
+ \{C_{\varepsilon,\delta,e,L}
+   +\varepsilon\mathbb EX+\delta\mathbb EY\}.        \tag{3.3}
+\]
+
+This is a transport of the integrated R-092 theorem, not a proof of literal
+R-085 (4.11).  Distinct temporal roots carry different
+$\mathbb D_jP_t^{(j)}$ maps and cannot be combined by (2.4).  R-099's
+fresh-root inverse-visit fixture therefore remains outside the theorem and
+still rules out the arbitrary-progressive mixed-only extension of (4.11).
+
+\section{The exact rational ownership correction}
+
+Let $B_0=B_R(u)$ and $B_1=B_R(u+a)$.  Define the second Taylor polynomial and
+remainder by
+\[
+ B_T=B_0+DB_0[a]+\frac12D^2B_0[a,a],
+ \qquad L=B_1-B_T.                                   \tag{4.1}
+\]
+For a derivative value $G$, derivative shift $c$, and covariance $\Gamma$,
+put
+\[
+ Q=G^{\otimes2}-\Gamma,
+ \qquad Q^a=(G+c)^{\otimes2}-\Gamma.                 \tag{4.2}
+\]
+The three R-101 complete-owner labels are
+\[
+ \mathcal R_Q=\frac12(B_1-B_0):Q,\qquad
+ \mathcal M_U=G^TB_Tc,                               \tag{4.3}
+\]
+\[
+ \mathcal K_R=G^TLc+\frac12c^TB_1c.                 \tag{4.4}
+\]
+
+% evidence-anchor: theorem-4.1-rational-taylor-owner-correction
+\subsection*{Theorem 4.1 (Taylor-owner correction and complete endpoint)}
+
+The historical R-085 form satisfies
+\[
+\boxed{
+ F_{6.5}=\frac12L:Q^a+\frac12c^TB_Tc
+        =\frac12L:Q+\mathcal K_R.}                   \tag{4.5}
+\]
+The nonduplicating complete R-101 replacement is
+\[
+\boxed{
+ \Delta W_R
+ =\frac12B_1:Q^a-\frac12B_0:Q
+ =\mathcal R_Q+\mathcal M_U+\mathcal K_R.}           \tag{4.6}
+\]
+
+\emph{Proof.}
+Insert $Q^a=Q+G\otimes c+c\otimes G+c\otimes c$ into the first expression
+in (4.5), use symmetry of $L$, and substitute $B_1=B_T+L$.  For (4.6),
+expand the endpoint difference and group first the $Q$ coefficient change,
+then the Taylor mixed term, and finally the remainder mixed term together
+with the complete shifted square. \hfill$\square$
+
+Thus $L:Q/2$ is already inside the indivisible raw-Wick owner
+$\mathcal R_Q$.  Retaining it in $F_{6.5}$ while also using the R-101 split
+duplicates ownership.  The one-chart identity (4.5) remains correct; its use
+as a separate progressive owner is what fails below.
+
+\section{Rational subdivision no-go}
+
+On the active scalar production ray, normalize the positive coefficient
+$c_1$ and the floor $e$ to one.  The exact Gram coefficient is
+\[
+ b(x)=\frac{4x^2(4x^2+9)^2}{81(1+x^2)^2}.            \tag{5.1}
+\]
+Its exact jets are
+\[
+ b(0)=b'(0)=0,\quad b''(0)=8,                         \tag{5.2}
+\]
+\[
+ b(1)=\frac{169}{81},\quad b'(1)=\frac{208}{81},
+ \quad b''(1)=-\frac2{81},\quad b(2)=\frac{400}{81}.
+                                                               \tag{5.3}
+\]
+Hence
+\[
+ L(0,2)=-\frac{896}{81},\quad
+ L(0,1)=-\frac{155}{81},\quad L(1,1)=\frac8{27}.     \tag{5.4}
+\]
+
+Take $\Gamma=1$.  Compare the single chart
+\[
+ (u,G)=(0,1),\qquad(a,c)=(2,2)                       \tag{5.5}
+\]
+with the pure representation-preserving subdivision
+\[
+ (0,1)\mathop{\longrightarrow}^{(1,1)}(1,2)
+       \mathop{\longrightarrow}^{(1,1)}(2,3).       \tag{5.6}
+\]
+
+% evidence-anchor: proposition-5.1-rational-owner-subdivision-nogo
+\subsection*{Proposition 5.1 (labelled rational owners do not descend)}
+
+The exact values are
+\[
+\begin{array}{c|r|r|r}
+\text{quantity}&\text{one chart}&\text{two-step sum}&
+                  \text{one minus sum}\\ \hline
+\mathcal R_Q&0&77/18&-77/18\\
+\mathcal M_U&32&1076/81&1516/81\\
+\mathcal K_R&-992/81&355/162&-2339/162\\
+F_{6.5}&-992/81&427/162&-2411/162\\
+\Delta W_R&1600/81&1600/81&0
+\end{array}                                           \tag{5.7}
+\]
+In particular, both $F_{6.5}$ and $\mathcal K_R$ change sign under the
+subdivision, while
+\[
+ \operatorname{defect}(\mathcal R_Q)
+ +\operatorname{defect}(\mathcal M_U)
+ +\operatorname{defect}(\mathcal K_R)=0.             \tag{5.8}
+\]
+
+\emph{Proof.}
+Substitute (5.2)--(5.4) into (4.3)--(4.6).  For example, the one-chart
+values are
+\[
+ B_T=16,\quad Q=0,\quad
+ \mathcal M_U=32,\quad
+ \mathcal K_R=F_{6.5}=-\frac{992}{81}.               \tag{5.9}
+\]
+The two exact step expansions give the remaining entries of (5.7).
+Equation (4.6) proves (5.8) and the endpoint equality.  Both the symbolic
+certificate and a non-importing standard-library rational-jet certificate
+derive every fraction independently. \hfill$\square$
+
+The fixture is not an artefact of unit floor or covariance.  Since
+\[
+ B_e(\sqrt e\,s)=c_1e\,b(s),                         \tag{5.10}
+\]
+scaling value jets by $\sqrt e$, derivative jets by
+$\sqrt{\Gamma_0}$, and taking covariance $\Gamma_0>0$ multiplies every
+entry of (5.7) by the same positive number $c_1e\Gamma_0$.  The signs and
+zero endpoint defect persist.
+
+This is a production-fibre owner-coordinate no-go, not a globally realized
+torus control.  It does not refute R-102's fixed regular no-revisit
+$\mathcal K_R$ estimate.  It proves only that neither $F_{6.5}$ nor
+$\mathcal K_R$ may be temporalized visit by visit.  Across changing target
+heats, the invariant coordinate is the complete extended R-100/R-101 row in
+its stated conditional measurability scope; no pathwise additivity across
+different random heat operators is asserted.
+
+\section{A9 smart-path audit}
+
+Let $q=10/9$.  At the A9 interpolation time $t$, write
+\[
+ G_{J,t}:=-W_{J,t}/q,\qquad
+ \mathcal F_{J,t}(\nu)
+ :=H(\nu\mid\gamma_J)+q\mathbb E_\nu G_{J,t}.        \tag{6.1}
+\]
+For the exact Gibbs tilt $\nu_{J,t}$,
+\[
+ \mathcal F_{J,t}(\nu_{J,t})=-\Phi_{J,t}.            \tag{6.2}
+\]
+R-104 reconstructs the endpoint complete owner, but this supplies only the
+same variational action:
+\[
+ \mathcal F_{J,0}=q\mathcal A_J^{\rm own}
+                  =q\mathcal A_J,\qquad
+ \mathcal A_J^{\rm phys}=\mathcal A_J+\mathfrak D_{\rm CM},
+ \quad\mathfrak D_{\rm CM}\ge0.                    \tag{6.3}
+\]
+R-093 then gives
+\[
+ \inf_{\mathfrak T_J}\mathcal A_J
+ =-\frac9{10}\log\mathbb E
+       \exp\{-\tfrac{10}{9}G_J(X_J)\}.              \tag{6.4}
+\]
+Using a uniform lower bound for the left side inside the smart path is
+therefore circular: it is exactly Nelson.
+
+There is also a centering obstruction at intermediate time.  If a packet
+$M$ obeys $\mathbb E_\gamma[M\mid\mathcal F]=0$, then
+\[
+ \mathbb E_{\nu_t}M
+ ={1\over Z_t}\mathbb E_\gamma
+   \operatorname{Cov}_\gamma(M,e^{W_t}\mid\mathcal F). \tag{6.5}
+\]
+The same-root resolvent heat
+\[
+ S_t(x)=T(x)(I+qtT(x))^{-1}                          \tag{6.6}
+\]
+cannot be frozen using R-104's predictable fresh-root-independent heat
+scope.  The A9 coefficient and divergence corrections are exactly the
+missing covariance terms.
+
+\subsection*{An exact generic monotonicity no-go}
+
+On $\mathbb R^2$, set $U(x)=\lambda|x|^6$ and
+\[
+ T_c(x)=cT_0(x),\qquad
+ T_0(x)=
+ \begin{pmatrix}
+ x_1^2+3x_2^2&-2x_1x_2\\
+ -2x_1x_2&3x_1^2+x_2^2
+ \end{pmatrix}.                                      \tag{6.7}
+\]
+Direct algebra gives
+\[
+ \operatorname{spec}T_0=\{|x|^2,3|x|^2\},\quad
+ \operatorname{div}T_0=0,\quad
+ T_0x=|x|^2x,                                        \tag{6.8}
+\]
+\[
+ x^TT_0x=|x|^4,\qquad\operatorname{Tr}T_0=4|x|^2.   \tag{6.9}
+\]
+Because $\log\det_2$ has no term linear in $c$,
+\[
+ \left.\partial_c(\Phi_{c,1}-\Phi_{c,0})\right|_{c=0}
+ ={q\over2}\mathbb E_\mu(|X|^4-4|X|^2),            \tag{6.10}
+\]
+where $d\mu\propto e^{-q\lambda|x|^6}d\gamma_2$.
+Put $Y=|X|^2/2$ and $a=8q\lambda$.  Its density is proportional to
+$e^{-y-ay^3}$.  Integration of
+$(y^2e^{-y-ay^3})'$ gives
+\[
+ \mathbb E(Y^2)-2\mathbb EY=-3a\mathbb EY^4<0.      \tag{6.11}
+\]
+At $q=10/9$ and $\lambda=3/20$, $a=4/3$ and (6.10) equals
+\[
+ -{80\over9}\mathbb E_\mu Y^4<0.                  \tag{6.12}
+\]
+Independent block copies multiply this first variation by the number of
+blocks.  Thus PSD, divergence freedom, quadratic growth, and a positive
+sextic do not yield cutoff- or dimension-uniform A9 monotonicity.  This is
+not a production counterexample; additional production owner/covariance
+structure could still prove a relative estimate.
+
+% evidence-anchor: theorem-6.1-relative-bracket-successor
+\subsection*{Conditional implication 6.1 (relative-bracket Gronwall route)}
+
+Let $\mathfrak B_{J,t}$ denote the full exact A9 bracket.  A sufficient new
+theorem would produce cutoff-independent integrable $a,b\ge0$ such that,
+for every finite-entropy $\nu$ and almost every $t$,
+\[
+ {q\over2}\mathbb E_\nu\mathfrak B_{J,t}
+ +b(t)\mathcal F_{J,t}(\nu)\ge-a(t).                 \tag{6.13}
+\]
+At $\nu=\nu_{J,t}$ this becomes
+\[
+ \Phi'_{J,t}-b(t)\Phi_{J,t}\ge-a(t).                \tag{6.14}
+\]
+The integrating factor gives
+\[
+ \Phi_{J,0}
+ \le e^{-\int_0^1b}\Phi_{J,1}
+   +\int_0^1e^{-\int_0^s b}a(s)\,ds.                \tag{6.15}
+\]
+The independent endpoint is already controlled, so (6.13) would close
+Nelson.  This is a sufficient implication, not an equivalence.  The next
+proposition shows that its quantifier over every finite-entropy law is too
+strong.
+
+% evidence-anchor: proposition-6.2-all-law-relative-bracket-nogo
+\subsection*{Proposition 6.2 (production top-shell all-law no-go)}
+
+There are no cutoff-independent $a,b\in L^1(0,1)$, $a,b\ge0$, for which
+(6.13) holds for every finite-entropy law at almost every time.
+
+\emph{Proof.}
+It is enough to work at one fixed finite cutoff.  For the admitted sharp-cube
+family $Q_J=\{n:|n|_\infty\le2^J\}$, fix $J\ge1$, take
+$n=(2^{J-1},0,0)$ and $k=2\pi n/L$, and put $g(x)=\cos(k\cdot x)$.
+Then $k$ is retained while $3k$ and $5k$ are removed.  Let $u=e_{1,R}$ be
+a real unit active-doublet horizontal vector and choose the white-coordinate
+ray $e=K_J^{-1}(gu)$; this is legitimate because the pinned finite-cutoff A1
+covariance is positive definite.  With $P=4+10^{-12}$ and the exact
+production coefficient
+\[
+ a_{\rm prod}={9\over500P}>0,
+\]
+the production Fierz formula gives, uniformly on the amplitude ray,
+\[
+ B(Agu)u=4a_{\rm prod}A^2g^2u+O(1),
+ \qquad a_{\rm prod}>0.                               \tag{6.16}
+\]
+The two top-shell identities are
+\[
+ P_Jg^3={3\over4}g,\qquad P_Jg^5={10\over16}g,       \tag{6.17}
+\]
+and
+\[
+ P_JD^*(g^2Dg)={|k|^2\over4}g.                       \tag{6.18}
+\]
+
+If $T_\infty$ denotes the $A^2$-leading coefficient of $T(Ae)$, the A1
+positivity and (6.16)--(6.18) give
+\[
+ T(Ae)=A^2T_\infty+O(1),\qquad T_\infty\succeq0,
+ \qquad T_\infty e=a_{\rm prod}|k|^2K_J^*(gu)\ne0.       \tag{6.19}
+\]
+The projected sextic gradient $d:=DU_6(e)$ is a positive multiple of this
+same vector $T_\infty e$, hence $d\in\operatorname{Ran}T_\infty$.
+Consequently, if $P_\infty$ is the orthogonal projection onto
+$\operatorname{Ran}T_\infty$ and
+\[
+ U_6(Ae)=u_6A^6,
+ \qquad u_6={5\gamma L^3\over96}>0,                  \tag{6.20}
+\]
+then Euler homogeneity gives
+\[
+ \langle d,P_\infty e\rangle
+ =\langle DU_6(e),e\rangle=6u_6.                    \tag{6.21}
+\]
+The finite-dimensional range--kernel block decomposition and
+$S_t=(qt)^{-1}\{I-(I+qtT)^{-1}\}$ now yield, for every fixed $t>0$,
+\[
+ {qt\over A}S_t(Ae)\longrightarrow P_\infty e.      \tag{6.22}
+\]
+
+There is no hidden contribution at sextic order.  At fixed $t$,
+$\|S_t(Ae)\|=O_t(A)$ and $\|T_i(Ae)\|=O(A)$.  Formula A9-(3.5) gives
+$\|a_t(Ae)\|=O_t(A^3)$, so
+$\langle a_t,S_t(Ae)\rangle=O_t(A^4)$; likewise
+$\langle\operatorname{div}S_t,Ae\rangle=O_t(A^2)$.
+All quartic, determinant, trace, and covariance-normal terms are
+$O_t(A^4)$.  Thus only the sextic score contributes at order $A^6$.
+
+Take $A_n=2^n$ and the countable family of finite-entropy laws
+$\nu_n=N(A_ne,A_n^{-40}I)$.  Intersect the full-measure time sets on which
+(6.13) holds for these laws.  At every remaining fixed $t$, concentration,
+(6.21), and (6.22) give
+\[
+ \mathcal F_{J,t}(\nu_n)
+   =q u_6A_n^6+o(A_n^6),                              \tag{6.23}
+\]
+\[
+ {q\over2}\mathbb E_{\nu_n}\mathfrak B_{J,t}
+   =-{3q u_6\over t}A_n^6+o(A_n^6).                  \tag{6.24}
+\]
+The relative entropy is $O(A_n^2+\log A_n)$ and the shrinking covariance
+makes the concentration errors $o(A_n^6)$.  Divide (6.13) by
+$q u_6A_n^6$ and let $n\to\infty$.  Since $a(t)$ is finite almost
+everywhere,
+\[
+ b(t)\ge {3\over t}\quad\hbox{for almost every }t,   \tag{6.25}
+\]
+contradicting $b\in L^1(0,1)$. \hfill$\square$
+
+Proposition 6.2 does not test the actual Gibbs law $\nu_{J,t}$, whose
+coefficient correlations are load-bearing, and it does not test an estimate
+integrated in $t$ before absolute values.  A Gibbs-law-only or time-integrated
+signed bracket is therefore the surviving A9 form.  R-104 still cannot freeze
+the same-root resolvent heat.
+
+\section{Deterministic extraction boundaries}
+
+The translation authority already rules out a cutoff-uniform pathwise
+remainder.  At the Gaussian-null field $X=0$ and constant active-doublet
+shift $h=te_1$,
+\[
+ V_J^{\rm ren}(te_1)=-\mathcal C_J(te_1),\qquad
+ {\mathcal C_J(te_1)\over Jt^2L^3}\longrightarrow
+ \kappa=0.001248334393361145\ldots .                 \tag{7.1}
+\]
+Even using the entire R-104 source and sextic budgets
+$\eta=9/20$, $\zeta=3/20$, the large-$J$ paid polynomial has the form
+\[
+ P_J(t)=L^3\{-d_Jt^2+\zeta t^6\},\qquad d_J\sim\kappa J. \tag{7.2}
+\]
+Its minimizer satisfies $t^4=d_J/(3\zeta)$ and
+\[
+ \inf_tP_J(t)
+ =-{2\over3\sqrt{3\zeta}}L^3d_J^{3/2}
+ =-{4\sqrt5\over9}L^3d_J^{3/2}\longrightarrow-\infty. \tag{7.3}
+\]
+Since $X=0$ is Gaussian-null, this is a method no-go rather than a Nelson
+counterexample.  It proves that expectation-level Wick cancellation is
+indispensable.
+
+There is a second exact critical-homogeneity boundary.  Suppose absolute
+value extraction produces
+\[
+ CR E^{3/4}Y^{1/4}\le\eta E+\zeta Y+F(R)             \tag{7.4}
+\]
+for all $E,Y\ge0$.  Put $Y/E=\eta/(3\zeta)$ and let $E$ grow.  A finite
+$F(R)$ exists only if
+\[
+ CR\le {4\eta^{3/4}\zeta^{1/4}\over3^{3/4}}.        \tag{7.5}
+\]
+With the full budgets the threshold is exactly $3/5$.  A Gaussian current
+norm is unbounded, so extracting it before the signed expectation cannot
+leave a finite universal remainder.  The analogous half--half threshold is
+$2\sqrt{\eta\zeta}=3\sqrt3/10$.
+
+The viable frozen branch is different.  If $B$ is strict-past measurable and
+$Y_k$ is a fresh Gaussian derivative shell with covariance $\Gamma_k$, then
+\[
+\begin{split}
+ &\log\mathbb E\left[
+ e^{-\frac q2(Y_k^TBY_k-\operatorname{Tr}(B\Gamma_k))}
+ \mid\mathcal F_{k-1}\right]\\
+ &\qquad=-\frac12\log\det{}_2
+ (I+q\Gamma_k^{1/2}B\Gamma_k^{1/2})
+ \le {q^2\over4}
+ \|\Gamma_k^{1/2}B\Gamma_k^{1/2}\|_{\mathfrak S_2}^2.
+\end{split}                                           \tag{7.6}
+\]
+In three dimensions the frozen cost is quartic and sextic-subcritical.  The
+unresolved part is exactly the same-root coefficient increment.  Equations
+(7.3)--(7.5) say it must remain inside a centered signed Wick/current/square
+packet rather than another pathwise Young estimate.
+
+\section{Exact one-Fourier-pair theorem and cross-mode boundary}
+
+There is no divergence already inside one self-coupled Fourier pair.  On a
+normalized one-dimensional orbit, let
+\[
+ X=A+\sigma\{(\xi+h_1)\cos(kx)+(\eta+h_2)\sin(kx)\}, \tag{8.1}
+\]
+where $\xi,\eta$ are independent standard Gaussians and $h$ is measurable
+before this pair is revealed.  In the scalar quadratic coefficient model
+$B(z)=\beta z^2$, put
+\[
+ S_h=(\xi+h_1)^2+(\eta+h_2)^2,\qquad
+ \Gamma=k^2\sigma^2.                                 \tag{8.2}
+\]
+Exact trigonometric averaging of the covariance-normal energy gives
+\[
+ V=\alpha(S_h-2)+\mu(S_h^2-4S_h),                    \tag{8.3}
+\]
+\[
+ \alpha={\beta k^2A^2\sigma^2\over4},\qquad
+ \mu={\beta k^2\sigma^4\over16}.                    \tag{8.4}
+\]
+
+% evidence-anchor: theorem-8.1-one-fourier-pair-source-bound
+\subsection*{Theorem 8.1 (uniform predictable-source bound for one pair)}
+
+For every $q>0$ and every strict-past value of $h$,
+\[
+ \log\mathbb E_{\xi,\eta}e^{-qV}
+ \le4q\mu+t-\log(1+t)
+ \le4q\mu+{t^2\over2},\qquad t=2q\alpha.             \tag{8.5}
+\]
+
+\emph{Proof.}
+Since $S_h^2-4S_h=(S_h-2)^2-4\ge-4$,
+\[
+ -qV\le4q\mu+2q\alpha-q\alpha S_h.                 \tag{8.6}
+\]
+For $a\ge0$, completing the square in two independent Gaussians gives
+\[
+ \mathbb E e^{-a|\zeta+h|^2}
+ ={1\over1+2a}
+ \exp\left\{-{a|h|^2\over1+2a}\right\}
+ \le{1\over1+2a}.                                   \tag{8.7}
+\]
+Take $a=q\alpha$.  Finally,
+$t-\log(1+t)\le t^2/2$ because the difference is zero at $t=0$ and has
+derivative $t^2/(1+t)\ge0$. \hfill$\square$
+
+For production covariance $\sigma_k^2\lesssim\langle k\rangle^{-4}$ in
+three dimensions,
+\[
+ \sum_k\mu_k\lesssim\sum_k\langle k\rangle^{-6}<\infty,
+ \qquad
+ \sum_kt_k^2\lesssim A^4\sum_k\langle k\rangle^{-4}<\infty. \tag{8.8}
+\]
+The $A^4$ background cost is sextic-subcritical.  Thus the artificial
+mode-diagonal quadratic model has a cutoff-uniform conditional source bound.
+Its pathwise lower cost would instead be proportional to
+$\sum_k\langle k\rangle^{-2}$; expectation changes the linear determinant
+loss into the summable quadratic remainder $t-\log(1+t)$.
+
+The physical field is not a product of these pair models.  For
+\[
+ X=A+r\cos x+u\cos2x,                                 \tag{8.9}
+\]
+direct averaging gives
+\[
+ \langle X^2|\partial X|^2\rangle
+ ={4A^2r^2+16A^2u^2+12Ar^2u+r^4+10r^2u^2+4u^4\over8}. \tag{8.10}
+\]
+Relative to the two isolated diagonal raws, the cross-mode resonance is
+\[
+ {r^2u(6A+5u)\over4}.                                \tag{8.11}
+\]
+It is sign-indefinite; $A=1,u=-1$ gives $-r^2/4$.  Frequencies $k,2k$
+multiply (8.10)--(8.11) by $k^2$.  The complete raw polynomial remains
+nonnegative, so this is not a negative full-action direction.  It proves
+that the pair bounds cannot simply be multiplied for the physical field.
+The unresolved target is cross-mode/forest tilted-law control while keeping
+the complete covariance-normal packet intact.
+
+\section{Attempt, failure, and evidence map}
+
+\begin{center}
+\begin{tabular}{p{0.24\textwidth}p{0.22\textwidth}p{0.42\textwidth}}
+\hline
+Route & Verdict & Reusable reason \\
+\hline
+Complete common-root Cartan subdivision & advanced & Signed edges telescope
+to the extended endpoint before the square; no multiplicity loss.\\
+Edgewise nonnegative Cartan ledger & failed & Closed complete loops have zero
+grouped charge but positive edgewise square.\\
+Historical $F_{6.5}$ as progressive owner & superseded & Exact production
+subdivision changes its sign while preserving the complete endpoint.\\
+$\mathcal K_R$ visit by visit & failed & The same fixture changes its sign;
+R-102 remains valid only on its declared fixed regular chart.\\
+Complete rational endpoint & advanced algebraically & The three labelled
+defects cancel exactly in $\Delta W_R$.\\
+Generic A9 monotonicity & failed & A PSD divergence-free sextic fixture has
+negative first variation and block-linear amplification.\\
+R-104 at the A9 endpoint & circular & Its complete action is exactly the
+R-093 Nelson variational objective.\\
+Pathwise coercivity or critical Young & failed & The Gaussian-null constant
+mode diverges as $-J^{3/2}$; critical homogeneous extraction has a finite
+threshold but the Gaussian norm is unbounded.\\
+All-law pointwise relative A9 bracket & failed & The production top-shell ray
+forces $b(t)\ge3/t$ after a countable translated-law limit.\\
+Gibbs-only or time-integrated A9 bracket & open & Must retain the full
+same-root production correlations and signed time cancellation.\\
+One Fourier pair with predictable source & advanced & Exact noncentral
+Gaussian integration converts the nonsummable linear cost to summable
+$t-\log(1+t)$ and leaves only a summable quartic self-pair cost.\\
+Product of one-pair bounds for the physical field & failed & Cross-mode
+resonances are sign-indefinite and prevent factorization.\\
+\hline
+\end{tabular}
+\end{center}
+
+The evidence executables derive the production rational fractions, Cartan
+quotient fixtures, A9 polynomial identities, full-budget thresholds, and
+scope firewalls.  The primary route uses symbolic rational algebra.  The
+independent route uses only standard-library rational two-jets and a separate
+bivariate polynomial implementation.  Neither imports the other.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{DISMISSED -- the Cartan theorem proves R-085 (4.11).}
+      It proves an endpoint quotient and transports the already accepted
+      R-092 regular theorem through pure common-root subdivision.  It creates
+      no new $q_k$ ledger and does not cover distinct roots.
+\item \textbf{DISMISSED -- deleting the heat compensator preserves the
+      telescope.}  Equation (2.8) gives the exact nonzero defect.  The theorem
+      is explicitly complete-heat only.
+\item \textbf{DISMISSED -- the rational sign flip falsifies R-102.}
+      R-102 is a fixed regular no-revisit estimate.  The fixture falsifies
+      only its termwise temporalization under an artificial subdivision.
+\item \textbf{VALID-with-mitigation -- the rational fixture is only local.}
+      It is stated as a production-fibre owner-coordinate no-go, not as a
+      globally realized torus control or action counterexample.
+\item \textbf{DISMISSED -- generic A9 monotonicity follows from PSD and the
+      sextic.}  Equations (6.7)--(6.12) give a strict exact counterexample.
+      A Gibbs-specific or time-integrated production bracket remains possible.
+\item \textbf{DISMISSED -- R-104 supplies that relative-bracket theorem.}
+      It supplies the complete endpoint coordinate at $t=0$.  The
+      intermediate same-root resolvent heat and coefficient covariance are
+      outside its predictable-heat scope.
+\item \textbf{DISMISSED -- the pathwise constant-mode fixture refutes
+      Nelson.}  The tested base field has Gaussian probability zero.  The
+      fixture refutes only deterministic pointwise coercivity.
+\item \textbf{DISMISSED -- the all-law bracket no-go refutes Nelson.}
+      It does not.  Proposition 6.2 tests arbitrary translated laws, not the
+      actual Gibbs tilt, and leaves time-integrated signed cancellation open.
+\item \textbf{DISMISSED -- the final source-action lower bound is now proved.}
+      It is not.  R-093/R-104 identify it exactly with Nelson; Proposition
+      6.2 only retires one overstrong sufficient route.
+\end{enumerate}
+
+\section{Consequences and exact frontier}
+
+R-105 closes the representation audit that remained around the historical
+R-085 atoms.  The Cartan common-root subdivision artefact is removed exactly.
+The old rational $F_{6.5}$ is retained only as a one-chart identity and is
+superseded as a load-bearing progressive owner.  The R-101 complete endpoint
+is the only subdivision-stable rational coordinate in the stated common-heat
+scope.  R-103 regular $H_N$/REG and R-104 fixed-chart assembly are unchanged.
+
+The smallest live theorem is now unambiguous:
+\[
+ \boxed{
+ \inf_{(S_\pi,h)\in\mathfrak T_J}
+ \left[\mathbb E G_J(S_\pi(\xi+h))
+       +{9\over20}\mathbb E\sum_k\|h_k\|^2\right]
+ \ge-C\quad\text{uniformly in }J.}                  \tag{11.1}
+\]
+By R-093 this is exactly $\mathrm{OVERLAP}_{\rm src}$ and exactly the
+$q=10/9$ Nelson bound.  No post-assembly intermediate gate remains.  The two
+honest continuations are either a complete signed same-root packet estimate
+for (11.1), or a Gibbs-law-specific/time-integrated A9 estimate.  Repeating
+common-root subdivision, $F_{6.5}$, visitwise $\mathcal K_R$, generic A9
+monotonicity, the all-law pointwise bracket (6.13), or pathwise Young
+extraction cannot close the theorem.
+
+\section{Result footer}
+
+\begingroup\scriptsize
+\begin{verbatim}
+Result ID: A13-CLASSII-CARTAN-RATIONAL-SUBDIVISION-SMART-PATH-BOUNDARY
+Ledger ID: R-105
+Status:    T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY.
+Precise statement:
+           Complete common-root Cartan edges descend exactly to an extended-
+           endpoint quotient. F_6.5 and K_R change sign under exact production
+           subdivision while complete Delta W_R is invariant. Generic A9
+           monotonicity and the all-law pointwise relative bracket are false.
+Scope:     Fixed cutoff/floor; one Cartan root with complete heat edges; common
+           rational target heat. Method no-gos are not Nelson counterexamples.
+Dependencies:
+           R-085, R-088, R-092, R-093, R-098--R-104, A7, and A9.
+Evidence grade:
+           ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe
+           codes/foundations/
+           a13_classii_cartan_rational_subdivision_smart_path_boundary_verify.py
+Expected output:
+           111/111 + 111/111 + 416/416 = 638/638 PASS; exit zero.
+Negative results:
+           RATIONAL-TAYLOR-OWNER-SUBDIVISION; GENERIC-SMART-PATH-MONOTONICITY;
+           ALL-LAW-POINTWISE-RELATIVE-BRACKET; FULL-BUDGET-CRITICAL-YOUNG;
+           ONE-PAIR-PRODUCT-FACTORIZATION
+           (all prefixed NG-2026-07-28-A13- in the registry).
+Falsification gate:
+           Failure of the complete-heat Cartan quotient, normalized rational
+           values or defect cancellation, top-shell harmonic/range-resolvent
+           asymptotics, full-bracket order audit or b(t)>=3/t consequence,
+           one-pair/cross-mode identities, authority/hash/PDF/exploration/
+           registry/count contracts, or any scope firewall.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No distinct-root/visitwise theorem, Gibbs-specific/time-integrated
+           bracket, OVERLAP_src, Nelson, removal, measure, T5--T7, or Sector-A
+           closure is proved.
+Next required action:
+           Prove (11.1) by a complete signed packet or Gibbs/time-integrated A9.
+\end{verbatim}
+\endgroup

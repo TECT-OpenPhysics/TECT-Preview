@@ -45,6 +45,11 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION | labelled rational owners do not descend to the subdivision q |  |
+| NG-2026-07-28-A13-GENERIC-SMART-PATH-MONOTONICITY | PSD and sextic coercivity do not force A9 monotonicity |  |
+| NG-2026-07-28-A13-ALL-LAW-POINTWISE-RELATIVE-BRACKET | the all-finite-entropy pointwise A9 bracket forces a noninte |  |
+| NG-2026-07-28-A13-FULL-BUDGET-CRITICAL-YOUNG | full budgets do not rescue pathwise or critical Young extrac |  |
+| NG-2026-07-28-A13-ONE-PAIR-PRODUCT-FACTORIZATION | exact pair bounds do not tensorize through physical cross-mo |  |
 | NG-2026-07-28-A13-ANTICIPATIVE-RANDOM-HEAT-CONDITIONING | deterministic heat cannot be conditioned through arbitrary s |  |
 | NG-2026-07-28-A13-GLOBAL-TO-PREDICTABLE-CURRENT-BRIDGE | predictable-baseline support does not delete the global curr |  |
 | NG-2026-07-28-A13-FULL-HESSIAN-CARTAN-CHAIN-PRIMITIVE | the complete secant current is not an exact field-space one- |  |
