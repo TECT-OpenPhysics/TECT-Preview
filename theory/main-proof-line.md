@@ -192,9 +192,22 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   density with the Doob increments of the terminal positive energy, closing
   frozen and coefficient-conditioned moment-matched one-reveal subcases but
   not multistep derivative feedback. Exact covariance/entropy union removes
-  overlap multiplicity and retains kernel cost as fibre entropy, but its
-  remaining free energy is exactly Nelson. Complete `H_N`, progressive
-  `H_A`, OVERLAP, Nelson, and Sector A remain open.
+   overlap multiplicity and retains kernel cost as fibre entropy, but its
+   remaining free energy is exactly Nelson.
+  R-093,
+  A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY,
+  identifies the centered symmetric even augmented defect exactly as a
+  coefficient/quadratic covariance. Its bounded smooth production fixture is
+  locally negative for every fixed payment, while the genuine cutoff-two
+  torus action stays coercive on bounded smooth predictable shell-two sources.
+  Same-root coefficient revelation costs mutual information, fixed charts do
+  not generally attain Nelson, and causal orthogonal triangularisation cannot
+  mix time blocks. Under the R-087 payoff and finite-entropy hypotheses, the
+  directed union of temporally faithful charts equals fixed-cutoff CORE and
+  near minimisers close both Gibbs gaps. The remaining analytic step is the
+  coefficient-unconditioned root-local `H_N` bound; `H_A` then only assembles
+  complete packets losslessly into `OVERLAP_src`, already the Nelson
+  objective. Sector A remains open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

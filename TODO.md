@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
-  - R-092 audits the R-090 transpose error and closes regular mutually orthogonal no-revisit one-shot H_C through the exact two-tail normalized-lift estimate (gap 2^(-(C-5)/2), root surplus 7/30, Young slack 1/30). Next: control the augmented H_N density via its weighted conditional-covariance/multistep derivative-feedback deficit, then prove the complete triangular H_A packet. Covariance/entropy union now accounts exactly for overlap and kernel/revisit cost but leaves the Nelson free energy open.
-  - _updated 2026-07-25_
+  - R-093 gives the exact unconditional augmented normal form and identifies the centered symmetric even one-reveal defect as a coefficient/quadratic covariance. Its bounded smooth production fixture is locally negative for every fixed payment, but the genuine cutoff-two torus action is coercive on bounded smooth predictable shell-two sources, so amplitude scaling is not a paid counterexample. Same-root coefficient revelation is not free, fixed charts need not attain Nelson, an independent uniform fibre reserve is unavailable, and causal orthogonal QR is trivial. Next: prove a coefficient-unconditioned root-local H_N bound after cancelling base-current heat, both low objects, and the complete R-063 forest before the covariance sum; test 2^(j-4k). Then assemble packets losslessly through H_A into OVERLAP_src, which R-087 identifies with the q=10/9 Nelson objective.
+  - _updated 2026-07-27_
 
 ## Next up
 

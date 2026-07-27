@@ -6,6 +6,13 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE](#audit-2026-07-27-r092-augmented-production-covariance) | R-093 append-only chronology metadata | deprecated short alias created when the first R-093 changelog event omitted the `A13` namespace; it resolves only to the canonical `AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE` authority and adds no mathematical result |
+| [AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE](#audit-2026-07-27-a13-r092-augmented-production-covariance) | R-092 augmented perspective one-reveal frontier | the complete unconditional density equals a weighted coefficient/quadratic covariance after both positive squares are retained; a bounded smooth even reveal built from the exact four-row production coefficient makes it strictly negative for every fixed payment, without constituting a paid torus counterexample |
+| [NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING](#ng-2026-07-27-a13-local-perspective-paid-scaling) | amplification of the local production covariance fixture into a paid two-shell counterexample | the exact cutoff-two full action is bounded below by `0.388476791102297 E||v||^2-11.859877653941` for every bounded smooth predictable shell-two source, so amplitude scaling is coercive on that class; only the cutoff-uniform root-local problem remains |
+| [NG-2026-07-27-A13-COEFFICIENT-REVEAL-FREE-CONDITIONING](#ng-2026-07-27-a13-coefficient-reveal-free-conditioning) | reuse of unconditional Gaussian entropy after conditioning on the same-root production coefficient | coefficient conditioning costs `I(G;B)`; equiprobable `N`-bin reveals cost `log N`, and the smooth non-atomic deterministic production reveal has infinite mutual information |
+| [NG-2026-07-27-A13-FIXED-SOURCE-CHART-GIBBS-ATTAINMENT](#ng-2026-07-27-a13-fixed-source-chart-gibbs-attainment) | equality of a fixed finite strict-triangular source chart with the Gibbs/CORE infimum | with one source block and `G(x)=x^2/2`, translations have infimum `1/2`, strictly above `(9/20)log(19/9)`; equality holds only over the directed union of temporally faithful refinements retaining past Gaussian information |
+| [NG-2026-07-27-A13-FIBRE-ENTROPY-UNIFORM-RESERVE](#ng-2026-07-27-a13-fibre-entropy-uniform-reserve) | an action-gap-independent positive lower bound on triangular fibre entropy used as a standalone near-packet budget | the exact Gibbs-gap identity gives `A-F*=(9/10)(H(nu|nu*)+Phi)` and source-union near minimisers force both nonnegative gaps, including `Phi`, to zero; coupled use of the actual fibre term is not excluded |
+| [NG-2026-07-27-A13-CAUSAL-ORTHOGONAL-QR](#ng-2026-07-27-a13-causal-orthogonal-qr) | filtration-preserving orthogonal QR compression of repeated physical covariance ranges | every finite block-lower-triangular orthogonal map is block diagonal, so causal orthogonal changes cannot combine revisited ranges across time |
 | [AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE](#audit-2026-07-25-a13-r090-conservative-transpose) | R-090 `b=grad c` and R-091 single-`q` conservative output trace | the actual current coefficient uses transposed production Jacobians while the endpoint gradient uses untransposed Jacobians; `J^T-J=2(SP-PS)` is generally nonzero. R-092 replaces the false compression by the exact R-089 two-tail trace and still closes only regular one-shot `H_C` |
 | [NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY](#ng-2026-07-25-a13-scalar-superexponential-vector-uniformity) | R-091 scalar one-mode superexponential Cartan tail promoted uniformly to the production vector/multimode class | an anisotropic two-component production ray has geometric ratio `(1-epsilon)/(1+epsilon)->1`; R-092 replaces scalar-uniform decay by a normalized-lift whole-product fractional estimate and closes only regular one-shot `H_C` |
 | [NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY](#ng-2026-07-25-a13-perspective-innovation-termwise-positivity) | A13 `H_N` closed by separate positivity of Schur debt, covariance mismatch, `r_C`, `J_D`, or a newly adaptive derivative payment | the companions form one exact matrix-perspective telescope; a positive-frame all-residual fixture has completed expectation `-623/5440`, and changing the payment at each filtration level introduces a new sign-indefinite inverse-matrix defect |
@@ -105,6 +112,133 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-27-r092-augmented-production-covariance"></a>
+### AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE -- deprecated short chronology alias
+
+**Failure mode:** The first append-only R-093 changelog event cited the
+production-covariance audit without its canonical `A13` namespace.
+
+**Evidence:** Changelog event
+`20260727-r-093-augmented-perspective-and-gibbs-gap-bound` contains the short
+tag.  The mathematical authority was already registered, with the same event
+date and subject, as
+`AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE`.
+
+**Consequence:** This identifier is a deprecated metadata alias only.  It
+adds no result and no failed route; all mathematical citations and future
+events must use the canonical `A13`-namespaced authority.  The alias is kept
+solely because the changelog source is append-only.
+
+<a id="audit-2026-07-27-a13-r092-augmented-production-covariance"></a>
+### AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE -- the complete sign is a weighted covariance
+
+**Failure mode:** R-092's coefficient-conditioned moment-matched one-reveal
+positivity could be read as evidence that the complete augmented perspective
+density has a production sign after a suitable fixed derivative payment.
+
+**Evidence:** With `A=B+2R`, `m=A^-1 Bz`,
+`Theta=B-BA^-1B`, and the exact terminal Doob energy retained, direct
+completion gives
+`D_R=E[z^T Bz]-E[B]:Gamma-q_B^T(E[A])^-1q_B-|E[Theta^(1/2)z]|^2`.
+For a centered symmetric reveal and even coefficient this is exactly
+`E[B(g):(g tensor g-Gamma)]`, independent of `R`.  The exact positive-branch
+inverse of the R-091 four-row production scalar coefficient produces a
+bounded smooth even Gaussian reveal with strictly negative covariance.  The
+rational audit value is `-1236 e/(21125 P)`, or `-618 e/(21125 P)` after the
+outer half.
+
+**Consequence:** Preserve the full augmented perspective sum and treat its
+weighted covariance as signed.  This sharpens the existing perspective
+boundary but is not a torus/control/paid `H_N` counterexample.  The surviving
+route is coefficient-unconditioned root-local paid absorption.
+
+<a id="ng-2026-07-27-a13-local-perspective-paid-scaling"></a>
+### NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING -- the first genuine paid lift is coercive
+
+**Failure mode:** Amplify the smooth local anti-monotone coefficient fixture
+by a scalar amplitude and infer an unbounded negative canonical packet.
+
+**Evidence:** At the canonical cutoff `J=2`, finite symbol enumeration from
+the pinned A1 manifest gives `sum_i tr Gamma_(2,i)=0.22641824964318938`,
+`min_shell lambda(A)=0.31189768871064166`, and
+`E||X_2||_2^2=1236.1155477449483`.  The exact production bound and the full
+`9/20` Cameron--Martin payment yield, for every bounded smooth predictable
+shell-two source,
+`I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`; the nonnegative sextic
+was not needed.
+
+**Consequence:** No same-root selector or amplitude scaling produces a paid
+two-shell counterexample.  The finite theorem is not cutoff-uniform because
+its crude base constant uses total covariance.  Cancel the base heat/low/
+forest term root-locally before exploiting the favourable future-shell
+scaling.
+
+<a id="ng-2026-07-27-a13-coefficient-reveal-free-conditioning"></a>
+### NG-2026-07-27-A13-COEFFICIENT-REVEAL-FREE-CONDITIONING -- the reveal entropy cannot be omitted
+
+**Failure mode:** Condition the fresh Gaussian on its same-root coefficient,
+apply the R-092 moment-matched positivity criterion, and then reuse the
+unconditional Gaussian entropy budget without a new term.
+
+**Evidence:** Entropy disintegration identifies the missing term as
+`E_B H(Law(G|B)|gamma)=I(G;B)`.  An `N`-bin equiprobable deterministic reveal
+has information exactly `log N` at zero Cameron--Martin cost.  The smooth
+production reveal is a strictly monotone function of `G^2`; quantisation and
+data processing give `I(G;B)>=log N` for every `N`, hence infinity.
+
+**Consequence:** Coefficient-conditioned positivity is a diagnostic subcase,
+not a free module inside A9.  Any viable proof must remain unconditioned or
+explicitly pay the information term.  This does not refute `H_N`.
+
+<a id="ng-2026-07-27-a13-fixed-source-chart-gibbs-attainment"></a>
+### NG-2026-07-27-A13-FIXED-SOURCE-CHART-GIBBS-ATTAINMENT -- temporal refinement is essential
+
+**Failure mode:** Claim that every fixed finite covariance decomposition and
+strict-triangular source class attains the full Gibbs variational infimum.
+
+**Evidence:** For one standard source block and `G(x)=x^2/2`, strict
+triangular controls are constants and their action infimum is `1/2`.  At
+`q=10/9`, the Gibbs free energy is `(9/20)log(19/9)<1/2`.  R-081 plus R-087
+recover equality only after taking the directed union of temporally faithful
+refinements which retain all past Brownian coordinates used by the controller.
+
+**Consequence:** Interpret the R-092 source inequality over that directed
+union.  A fixed chart remains a useful sufficient subclass but is not
+variationally complete.
+
+<a id="ng-2026-07-27-a13-fibre-entropy-uniform-reserve"></a>
+### NG-2026-07-27-A13-FIBRE-ENTROPY-UNIFORM-RESERVE -- exact bookkeeping is noncoercive
+
+**Failure mode:** Assume an action-gap-independent positive lower bound on the
+source fibre entropy and spend it as a standalone budget for the remaining
+signed rational/linear near packet on every dangerous branch.
+
+**Evidence:** The exact identity at `q=10/9` is
+`A=F*+(9/10)H(nu|nu*)+(9/10)Phi`.  Over the temporally faithful source union,
+R-087 CORE supplies near minimisers of `F*`.  Their nonnegative relative-
+entropy and fibre gaps therefore both converge to zero; quantitatively each
+is at most `(10/9)` times the action gap.
+
+**Consequence:** Fibre entropy records kernel/revisit cost exactly but has no
+uniform positive lower bound. It cannot be spent as an independent uniform
+`H_N` budget; coupled use of the actual, possibly vanishing, fibre term is not
+excluded. Full source OVERLAP remains exactly the Nelson objective.
+
+<a id="ng-2026-07-27-a13-causal-orthogonal-qr"></a>
+### NG-2026-07-27-A13-CAUSAL-ORTHOGONAL-QR -- orthogonality and strict causality do not mix ranges
+
+**Failure mode:** Orthogonalise repeated physical covariance ranges while
+preserving the original filtration, then reuse the regular no-revisit proof.
+
+**Evidence:** A block-lower-triangular orthogonal map has a lower-triangular
+inverse, but its inverse is its block-upper-triangular transpose.  It is
+therefore block diagonal.  No nontrivial past-to-future orthogonal mixing is
+available.
+
+**Consequence:** Revisited ranges must be handled by the original triangular
+source coordinates and exact entropy/packet ledger, not by causal QR.  This
+is a method no-go, not a failure of covariance union.
 
 <a id="audit-2026-07-25-a13-r090-conservative-transpose"></a>
 ### AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE -- current Jacobian transpose is load-bearing

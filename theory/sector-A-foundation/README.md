@@ -166,9 +166,19 @@ progressive assembly `H_A` inside full OVERLAP. R-092's normalized-lift
 whole-product theorem closes regular no-revisit one-shot `H_C` with gap
 `2^(-(C-5)/2)`. Its augmented perspective density closes only the frozen and
 moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
-accounts for overlap and kernel cost but retains the open Nelson free energy.
-Complete `H_N`, progressive/revisit `H_A`, OVERLAP, Nelson, and Sector A
-remain open.
+ accounts for overlap and kernel cost but retains the open Nelson free energy.
+ R-093 gives the complete unconditional augmented normal form and identifies
+ its centered symmetric even defect as a coefficient/quadratic covariance.
+ A bounded smooth production fixture makes that local density negative for
+ every fixed payment, but the genuine cutoff-two action is coercive on bounded
+ smooth predictable shell-two sources. Same-root coefficient revelation is
+ not free, fixed source charts need not attain the Nelson value, and causal
+ orthogonal triangularisation is trivial. Under the R-087 payoff and
+ finite-entropy hypotheses, the temporally faithful directed source union
+ equals fixed-cutoff CORE and its Gibbs gap controls both physical and fibre
+ entropy. Thus the remaining analytic target is coefficient-unconditioned
+ root-local `H_N`; `H_A` is only lossless assembly into `OVERLAP_src`, whose
+ uniform inequality is already Nelson. Sector A remains open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

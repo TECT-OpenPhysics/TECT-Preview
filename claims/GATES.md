@@ -985,9 +985,10 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-25), narrowed through R-092; regular
-one-shot `H_C` closed, complete `H_N` and progressive/revisit `H_A` open
-`A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`.
+**Status:** OPEN CURRENT CHILD (2026-07-27), narrowed through R-093; regular
+one-shot `H_C` is closed, while coefficient-unconditioned root-local `H_N`
+and lossless progressive/revisit `H_A` assembly into `OVERLAP_src` remain open
+`A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY`.
 R-079 proves
 the exact expectation-level full-current and canonical safe-packet identity,
 one spatially weighted Cameron--Martin control square-function use, and the
@@ -1248,18 +1249,26 @@ only sufficient regular architecture. Fixed-cutoff CORE plus the full uniform
 packet lower bound is equivalent to `q=10/9` Nelson; a regular one-shot Cartan
 bound cannot substitute for overlap-stable temporal control.
 
-R-092 also proves exact covariance union and strict-triangular entropy
-disintegration. These remove overlap multiplicity and retain kernel/revisit
-cost as nonnegative fibre entropy, but the resulting free-energy lower bound
-contains exactly the open Nelson quantity.
+R-093 puts the augmented one-reveal density in exact unconditional normal
+form and shows that the symmetric even case is a coefficient/quadratic
+covariance. Its bounded smooth production fixture is locally negative for
+every fixed payment, but the genuine cutoff-two torus action is coercive on
+bounded smooth predictable shell-two sources, so no paid `H_N` counterexample
+has been produced. Revealing the same-root coefficient costs mutual
+information; a fixed source chart need not attain the Nelson value. Under the
+R-087 payoff and finite-entropy hypotheses, however, the directed union of
+temporally faithful charts equals the fixed-cutoff CORE value, and the exact
+Gibbs gap forces both physical and fibre entropy gaps to vanish along near
+minimisers. Only an independent uniform fibre reserve is retired; coupled use
+of the actual fibre term remains available.
 
-Finally `H_A` must assemble the complete packet uniformly in cutoff,
-partition, and revisit inside full OVERLAP, preserving R-079 future feedback
-and R-080 low/revisit cancellation. `H_C`, `H_N`, and `H_A` are
-non-interchangeable sufficient obligations, not a pairwise-independence or iff
-theorem. R-092 closes regular one-shot `H_C` and sharpens the remaining two
-targets without changing the host claim tier. Complete signed NEAR,
-progressive/revisit assembly, OVERLAP, and Nelson remain open.
+Accordingly `H_A` is only the lossless assembly of the complete packet,
+uniformly in cutoff, partition, and revisit, into `OVERLAP_src`, preserving
+R-079 future feedback and R-080 low/revisit cancellation. The uniform
+source-union inequality is already the Nelson objective through R-087 CORE,
+not a separate post-assembly theorem. `H_C`, `H_N`, and `H_A` remain
+non-interchangeable obligations. Complete coefficient-unconditioned NEAR,
+progressive/revisit assembly, `OVERLAP_src`, and Nelson remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -1272,8 +1281,8 @@ controls. A stronger direct packetwise all-control or all-tilted-law theorem
 is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
-OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
-sharpened by R-081--R-092
+OVERLAP OPEN (reviewed 2026-07-27). The gate was exposed by R-080 and
+sharpened by R-081--R-093
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1285,11 +1294,13 @@ quadratic; cancellation, if present, must occur in the complete later packet.
 This is a method and scope obstruction, not a counterexample to the full
 action. R-090 names this complete recombination obligation `H_A`; R-091
 proves terminal nonduplication, and R-092 closes only the regular one-shot
-`H_C` branch. R-092's covariance/entropy-union identity accounts exactly for
-overlap and kernel/revisit cost, but its free-energy term is already the open
-Nelson quantity. Complete `H_N`, R-066 one-use, and all temporal/low
-companions therefore remain inside full OVERLAP. Once full OVERLAP is proved,
-R-087 CORE gives `q=10/9` Nelson directly.
+`H_C` branch. R-093 shows that `H_A` must not be counted as a new analytic
+source-union inequality: it is lossless assembly of complete packets into
+`OVERLAP_src`, while the uniform directed source-union bound is already the
+open Nelson objective. Complete coefficient-unconditioned `H_N`, R-066
+one-use, and all temporal/low companions therefore remain inside that
+assembly. Once `OVERLAP_src` is proved, R-087 CORE gives `q=10/9` Nelson
+directly.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

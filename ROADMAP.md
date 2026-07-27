@@ -403,6 +403,24 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   retain kernel/revisit cost as fibre entropy, but the remaining free energy
   is exactly Nelson. Thus regular `H_C` is closed; complete `H_N`, triangular
   `H_A`, full OVERLAP, Nelson, and Sector A remain open.
+  R-093,
+  `A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY`,
+  puts the augmented one-reveal density in an exact unconditional normal form;
+  for centered symmetric even reveals it is precisely a coefficient/quadratic
+  covariance. The production coefficient admits a bounded smooth local
+  negative fixture for every fixed payment, but the genuine cutoff-two torus
+  action is coercive on bounded smooth predictable shell-two sources, so this
+  is not a paid counterexample. Same-root coefficient revelation costs mutual
+  information (infinite for the smooth deterministic reveal), fixed source
+  charts need not attain the Nelson value, and causal orthogonal triangular
+  mixing is block diagonal. Under the R-087 payoff and finite-entropy
+  hypotheses, the directed union of temporally faithful source charts equals
+  the fixed-cutoff CORE value; near minimisers force both physical and fibre
+  entropy gaps to zero. This retires only an independent uniform fibre reserve,
+  not coupled use of the actual fibre term. The coefficient-unconditioned
+  root-local `H_N` estimate and lossless `H_A` packet assembly into
+  `OVERLAP_src` remain open; that source-union inequality is already the
+  Nelson objective, not a separate downstream theorem.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,
@@ -488,7 +506,7 @@ D — Gauge/matter topology.
 
 ---
 
-## Current priority view (refreshed 2026-07-25)
+## Current priority view (refreshed 2026-07-27)
 
 The live task source is `TODO.md`; historical 2026-06-05 priorities are
 preserved in git/changelog rather than treated as current gates.
@@ -566,7 +584,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
     child remains `A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET`, now
-     narrowed by R-080--R-086. R-080 closes the two distinct low objects for regular
+     narrowed by R-080--R-093. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -634,17 +652,20 @@ preserved in git/changelog rather than treated as current gates.
    vector paracomposition estimate. Retain target heat, coherent multimode
    outputs, and the exact `q` multiplier; do not use either the falsified
    global unprojected R-089 ledger or the cumulative extracted `Z^6` majorant.
-   For rational/linear NEAR, prove a signed Schur--Carleson bound for the full
-   R-079 future/low/paid packet with `r_C` and `J_D` retained. Use one full
-   reconstructed Wick endpoint and the exact terminal nonduplication identity;
-   do not append a generic R-063 forest, assume fixed-eta positivity, or treat
-   the local sign fixture as post-paid. Then prove `H_A` by
-   assembling `H_C`, `H_N`, R-066 controlled-shell one-use, R-079 low/future
-   feedback, and all temporal companions inside a
-   cutoff-, partition-, and revisit-uniform full OVERLAP lower bound on the
-   R-087 cylindrical-simple core. Then invoke R-087 CORE directly: full
-   OVERLAP is already equivalent to the q=10/9 Nelson estimate. Sector A
-   remains open.
+   For rational/linear NEAR, use R-093 to prove a coefficient-unconditioned
+   root-local lower bound for the complete R-079 future/low/paid packet with
+   `r_C` and `J_D` retained. Cancel the predictable base-current heat term,
+   both distinct low objects, and the complete R-063 forest before taking the
+   conditional covariance sum; test the candidate transfer gain `2^(j-4k)`
+   at that coupled level. Do not condition on the same-root coefficient for
+   free, use a fixed source chart as a Nelson minimiser, posit an independent
+   uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower
+   triangular source map, or amplify the local sign fixture into a paid
+   counterexample. After coefficient-unconditioned `H_N`, `H_A` names only
+   lossless assembly of `H_C`, `H_N`, R-066 one-use, R-079 low/future feedback,
+   and every temporal companion into `OVERLAP_src`. The uniform directed
+   source-union inequality is already the `q=10/9` Nelson objective through
+   R-087 CORE, not an additional entropy theorem. Sector A remains open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-093 augmented perspective and Gibbs-gap boundary] - 2026-07-27
+
+Recorded the exact unconditional augmented normal form, its covariance classifier, the bounded smooth negative local production fixture, and the genuine cutoff-two paid coercivity bound. Retired free same-root coefficient conditioning, fixed-chart Nelson attainment, an independent uniform fibre reserve, and causal orthogonal QR while preserving coupled fibre use. The temporally faithful directed source union equals R-087 CORE under its payoff and finite-entropy hypotheses. Sector A remains open at coefficient-unconditioned root-local H_N and lossless H_A assembly into OVERLAP_src.
+
 ## [R-092 normalized Cartan closure and augmented perspective/entropy frontier] - 2026-07-25
 
 Corrected the R-090 current/gradient transpose error and retained the exact R-089 two-field trace. Proved the bounded normalized production finite-forest and an exhaustive whole-product fractional ledger, including hostile-review mixed branches with totals 14/15, 23/30, and 4/15; the worst remains 29/30, closing only the R-079 regular mutually orthogonal strict-past no-revisit one-shot H_C branch with gap 2^(-(C-5)/2). Proved the augmented matrix-perspective density, its frozen and coefficient-conditioned moment-matched one-reveal subcases, covariance-union contraction, and strict-triangular entropy disintegration. Complete signed H_N, general progressive/revisit H_C and H_A, full REG/OVERLAP, Nelson, floor removal, an interacting measure, and Sector A remain open. Primary 83/83 and non-importing independent 46/46 checks pass; the 15-page PDF passed render and visual QA.

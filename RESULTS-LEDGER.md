@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-093](#r-093) | Augmented perspective covariance, paid cutoff-two coercivity, and source-union Gibbs boundary | Scoped T4 analytic/exact/executed advance: the complete augmented one-reveal density has an exact unconditional normal form and, for symmetric even reveals, is precisely a coefficient/quadratic covariance. A bounded smooth reveal constructed from the complete four-row production coefficient makes that local density strictly negative for every fixed payment, but the genuine cutoff-two torus action is coercive on the bounded smooth predictable shell-two class: `I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`, so amplitude scaling cannot produce a paid counterexample there. Conditioning on the same-root coefficient costs mutual information and is infinite for the smooth reveal. The triangular source action equals the Nelson free energy only over the directed union of temporally faithful refinements, not in each fixed chart; its exact Gibbs gap forces both physical and fibre entropy gaps to zero on near minimisers. Thus an independent uniform fibre reserve, free coefficient conditioning, fixed-chart attainment, and causal orthogonal QR are retired; coupled use of the actual fibre term is not excluded. Uniform coefficient-unconditioned `H_N`, full packet assembly/`OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-092](#r-092) | Normalized regular Cartan closure, augmented perspective innovation, and causal entropy-union frontier | Scoped T4 analytic/exact/executed advance and predecessor audit: `J=qI+2nn^T S-2qnn^T` is bounded and every secant term factors through `Delta n`, but `J` is nonsymmetric and the R-090 claim `b=grad c` is false. R-092 repairs R-090/R-091 with the exact R-089 two-tail trace, controlling the actual transposed coefficient `b` and `g=grad c` by the same whole-product estimate. At `(gamma,sigma,theta,p,q)=(1/4,4/15,3/10,6,3)`, the root surplus is `7/30`, Young slack `1/30`, and the R-075 physical prefix ledger proves `H_C^reg(C)<=const 2^(-(C-5)/2)(C_(epsilon,delta)+epsilon E X+delta E Y)` for the R-079 regular no-revisit one-shot class. Terminal `Theta_R(B_1)` energy augments the perspective density to `K_k+P_(k-1)|d_ky|^2-B_(k-1):DeltaGamma_k`; its coefficient-conditioned moment-matched one-reveal branch is nonnegative, while a general weighted covariance defect and the exact `-623/5440` fixture keep full `H_N` open. Exact covariance union plus triangular entropy disintegration removes overlap multiplicity and stores kernel/revisit cost as fibre entropy, but the remaining free energy is exactly Nelson, so `H_A`, OVERLAP, Nelson, a measure, and Sector A remain open; assertion counts are pinned by the manifest |
 | [R-091](#r-091) | Projected Cartan output ledger, full-frame Schur--Jensen boundary, and temporal scope | Scoped T4 analytic/exact/executed boundary, audited by R-092: the definition-level nonnegative output energy satisfies `H_C(C)<=2^(-2 gamma(C-5)) B_gamma^out` for `C>=5`. Its displayed replacement by a single conservative `q`-weighted coefficient trace is false for nonsymmetric production Jacobians and is superseded by R-092's exact two-field trace. The cumulative `Z^6` majorant fails on a predictable rare fixture, while scalar saturation repairs that fixture without giving vector-uniform decay. The complete linear+rational endpoint has exact conditional Schur and same-root Jensen forms, no fixed `eta` gives universal positivity, and terminal paid subtraction is nonduplicating. R-092 closes only regular one-shot `H_C`; signed `H_N`, progressive `H_A`, OVERLAP, Nelson, and Sector A remain open; assertion counts are pinned by the manifest |
 | [R-090](#r-090) | Global unprojected Cartan coefficient-ledger no-go and rational forest boundary | Audited/corrected by R-092: the asserted identity `b=grad c` and the resulting conservative one-coefficient trace are false for a nonsymmetric production Jacobian; the actual current uses transposed Jacobians and the endpoint gradient does not. The independent rational-conditioning, forest-nonduplication, and projected-versus-global boundary results remain reusable, but any conclusion depending on the conservative trace is superseded by R-092's exact R-089 two-tail repair. Projected regular `H_C` is closed only by R-092; complete `H_N`, progressive `H_A`, OVERLAP, Nelson, and Sector A remain open |
@@ -111,6 +112,84 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-093"></a>
+### R-093 -- Augmented perspective covariance, paid coercivity, and source-union Gibbs boundary
+
+**Result ID.**
+`A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY`.
+
+**Tier.** T4 scoped analytic/exact/executed advance. No tier promotion.
+
+**Exact one-reveal theorem.** With `A=B+2R`, `m=A^-1 Bz`,
+`m0=(E A)^-1 E(Bz)`, `Theta=B-BA^-1B`, and `Y=Theta^(1/2)z`, the complete
+augmented density is
+`E[(m-m0)^T A(m-m0)+|Y-EY|^2]-E(B):Gamma`
+`=E(z^T Bz)-E(B):Gamma-E(Bz)^T(EA)^-1E(Bz)-|EY|^2`.
+For a centered symmetric reveal and even `B`, it is exactly
+`E[B(g):(g tensor g-Gamma)]`. This retains the perspective and terminal
+energy once and identifies the remaining sign as weighted covariance.
+
+**Production sign and paid boundary.** The complete four-row pure-doublet
+coefficient is strictly increasing on the positive interval from
+`sqrt(e)/2` to `3sqrt(e)/2`. Composing its positive-branch inverse with
+`b_-+Delta/(1+g^2)` gives a bounded smooth even same-root shift whose Gaussian
+augmented density is negative for every `R`; an exact three-point audit gives
+`-1236 e/(21125 P)`. This is not a paid torus counterexample. At canonical
+cutoff two, the hash-pinned finite symbol sums instead prove for every
+bounded smooth predictable shell-two source
+`I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`.
+Consequently amplitude scaling of the local fixture is coercive. The bound is
+finite-cutoff and its crude total-covariance constant is not uniform.
+
+**Information boundary.** Conditioning on a deterministic coefficient costs
+`I(G;B)`. Equiprobable `N`-bin reveals cost exactly `log N`; the smooth
+non-atomic production reveal determines `G^2`, so its mutual information is
+infinite. R-092's coefficient-conditioned positivity cannot be reused inside
+an unconditional entropy argument for free.
+
+**Gibbs-gap and chart correction.** For a bounded smooth strictly triangular
+source shift, at `q=10/9` the action equals
+`-(9/10)log Z+(9/10)H(nu_h|nu_J^*)+(9/10)Phi_h`.
+A fixed one-block quadratic chart has infimum `1/2`, strictly above
+`(9/20)log(19/9)`. Equality with R-087 CORE holds only over the directed
+union of temporally faithful source refinements retaining all past Gaussian
+coordinates used by the controller. Near minimisers force both entropy gaps,
+including fibre entropy, to zero. Hence the R-092 source inequality over this
+union is `OVERLAP_src`, already the Nelson objective; `H_A`, if retained,
+means only the exact packet-assembly step leading to it.
+
+**Static sufficient criterion.** A polynomial enhanced-model inequality
+`-Delta V<=C+sum Z_tau E^a_tau Y^b_tau` closes Nelson whenever
+`Z_tau>=0`, `a_tau+b_tau<1`, the base expectation is uniformly bounded
+below, the additive constant is uniform in the cutoff and shift, the Young
+allocations fit below `9/20` and `3/20`, and the Young remainder moments are
+summable uniformly in the cutoff. For a finite family the last condition is
+just finitely many uniform moments. The displayed candidate-pair table is
+only an arithmetic ledger under these hypotheses: its largest finite moment
+is `30`, while two coarse rows have zero slack. Existing A7 forests supply
+the individual unshifted moments, but not the complete shifted signed
+reconstruction or, for an infinite packet family, its summed remainder.
+R-087 also forbids pathwise translated-model extraction, so the
+expectation-inside reconstruction remains missing.
+
+**Reuse scope.** The augmented normal form and Gibbs-gap identity are finite-
+dimensional exact statements. The cutoff-two coercivity theorem is tied to
+the hash-pinned A1 symbol and six-real convention. The source-union equality
+is fixed-cutoff and requires temporally faithful refinements; it is not a
+uniform Nelson lower bound.
+
+**Evidence.** Proof note
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-augmented-perspective-gibbs-gap-information-boundary-260727-v1.0.tex.txt`
+and its paired PDF; primary and non-importing independent executables plus a
+hash-pinned integrated verifier and JSON artefacts under the A13 runs tree.
+
+**Boundary.** Complete coefficient-unconditioned uniform `H_N`, exact
+progressive packet assembly, `OVERLAP_src`, `q=10/9` Nelson, floor removal,
+an interacting measure, and Sector-A closure remain open. The favoured next
+route cancels the base heat/low/forest term root-locally before using the
+summable future-shell prototype `2^(j-4k)` for `k>j`; a direct static Nelson
+estimate remains the logically equivalent alternative.
 
 <a id="r-092"></a>
 ### R-092 -- Normalized regular Cartan closure, compensated perspective innovation, and triangular covariance frontier

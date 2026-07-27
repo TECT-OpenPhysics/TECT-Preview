@@ -45,6 +45,13 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-27-R092-AUGMENTED-PRODUCTION-COVARIANCE | deprecated short chronology alias | The first append-only R-093 changelog event cited the |
+| AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE | the complete sign is a weighted covariance | R-092's coefficient-conditioned moment-matched one-reveal |
+| NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING | the first genuine paid lift is coercive | Amplify the smooth local anti-monotone coefficient fixture |
+| NG-2026-07-27-A13-COEFFICIENT-REVEAL-FREE-CONDITIONING | the reveal entropy cannot be omitted | Condition the fresh Gaussian on its same-root coefficient, |
+| NG-2026-07-27-A13-FIXED-SOURCE-CHART-GIBBS-ATTAINMENT | temporal refinement is essential | Claim that every fixed finite covariance decomposition and |
+| NG-2026-07-27-A13-FIBRE-ENTROPY-UNIFORM-RESERVE | exact bookkeeping is noncoercive | Assume an action-gap-independent positive lower bound on the |
+| NG-2026-07-27-A13-CAUSAL-ORTHOGONAL-QR | orthogonality and strict causality do not mix ranges | Orthogonalise repeated physical covariance ranges while |
 | AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE | current Jacobian transpose is load-bearing | R-090 identified the actual current coefficient |
 | NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY | scalar tail ratio is not vector-uniform | Promote the exact R-091 scalar one-mode superexponential |
 | NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY | conditional companions have no separate sign | Close `H_N` by assigning independent signs or payments to |

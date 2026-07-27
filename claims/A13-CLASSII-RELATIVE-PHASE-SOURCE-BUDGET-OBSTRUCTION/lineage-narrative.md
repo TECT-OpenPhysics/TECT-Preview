@@ -466,6 +466,31 @@ endpoint theorem.
     the Nelson free energy. Full signed `H_N`, progressive/revisit `H_A`,
     complete REG/OVERLAP, controlled-shell one-use, Nelson, floor removal,
     measure construction, and Sector A remain open; tier stays T4.
+34. **Augmented covariance, paid cutoff-two coercivity, and Gibbs-information
+    boundary.** R-093,
+    `A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY`,
+    compresses the complete R-092 one-reveal expression to an unconditional
+    normal form. For centered symmetric even reveals its sign is exactly the
+    covariance of the production coefficient with the centered quadratic
+    increment. A bounded smooth reveal made from the exact four-row
+    production coefficient is strictly negative for every fixed perspective
+    payment, but it is only a local coordinate fixture. Its genuine canonical
+    cutoff-two lift is coercive after the full `9/20` Cameron--Martin payment,
+    so amplitude scaling cannot produce a paid counterexample. Conditioning
+    on the same-root coefficient has an unbounded information price and is
+    infinite for that smooth reveal. The source action has an exact Gibbs-gap
+    identity; equality with R-087 CORE requires the directed union of
+    temporally faithful refinements retaining auxiliary past Gaussian
+    coordinates, and fails in a fixed one-block chart. Near minimisers force
+    both Gibbs and fibre entropy gaps to zero, while causal orthogonal QR is
+    necessarily block diagonal. Consequently the union target is renamed
+    `OVERLAP_src` and is already the Nelson objective; `H_A` denotes only the
+    preceding exact packet assembly. The surviving analytic route is a
+    coefficient-unconditioned root-local paid production estimate with base
+    heat/low/forest cancellation before summation, or the equivalent direct
+    static `q=10/9` Nelson estimate. Uniform `H_N`, `OVERLAP_src`, Nelson,
+    floor removal, measure construction, and Sector A remain open; tier stays
+    T4.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

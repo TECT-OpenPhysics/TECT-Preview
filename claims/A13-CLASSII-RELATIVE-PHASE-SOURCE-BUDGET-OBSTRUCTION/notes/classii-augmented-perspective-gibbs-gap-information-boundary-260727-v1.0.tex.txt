@@ -1,0 +1,860 @@
+% Title: Augmented perspective covariance, Gibbs gap, and information boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; AUGMENTED ONE-REVEAL NORMAL FORM, FIXED-CUTOFF PAID COERCIVITY, AND SOURCE-UNION GIBBS EQUIVALENCE CLOSED; UNIFORM H_N, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY
+% Ledger: R-093
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-092 closed the normalized Cartan estimate only for the regular mutually
+orthogonal strict-past no-revisit one-shot class.  It left two proposed
+successors: a complete signed rational/linear near estimate, denoted $H_N$,
+and a progressive overlap/revisit assembly, denoted $H_A$.  This note tests
+the strongest remaining shortcuts before another long packet expansion.
+
+Four exact conclusions result.
+
+First, every term in the R-092 augmented one-reveal perspective expression
+has a shorter unconditional normal form.  For a symmetric reveal it becomes
+the covariance between the revealed coefficient and the centered quadratic
+increment.  This identifies the sign mechanism without discarding the
+perspective square or counting the terminal energy twice.
+
+Second, the complete four-row production coefficient admits a bounded smooth
+same-root Gaussian shift for which this augmented density is strictly
+negative for every derivative payment.  The example is production-specific,
+but it is not a torus control and is not a paid $H_N$ counterexample.  A
+separate exact cutoff-two theorem proves that the full $9/20$ Cameron--Martin
+payment dominates every amplitude scaling of every shell-two control.  Thus
+the local sign example diagnoses covariance, while its attempted paid scaling
+is closed negatively as a route to falsification.
+
+Third, conditioning on the same-root coefficient is not free.  The missing
+entropy is the mutual information between the Gaussian reveal and the
+coefficient.  It is $\log N$ for $N$ equiprobable coefficient bins and is
+infinite for the smooth non-atomic deterministic production reveal used
+below.  Hence the coefficient-conditioned R-092 positivity criterion cannot
+be inserted into the unconditional A9 entropy argument without paying a new
+information term.
+
+Fourth, triangular entropy disintegration has an exact Gibbs-gap form.  At
+$q=10/9$, both nonnegative gaps carry coefficient $9/10$, while the source
+energy carries $9/20$.  After taking the directed union of all temporally
+faithful finite source refinements, R-081 temporal factorisation and R-087
+CORE show that the infimum is exactly the Nelson free energy.  This statement
+is false for a fixed source chart.  Moreover near minimisers make both the
+Gibbs relative entropy and the fibre entropy tend to zero.  Fibre entropy is
+therefore exact bookkeeping, not a uniformly positive reserve with which to
+pay $H_N$.
+
+These conclusions materially shorten the roadmap.  The source-coordinate
+inequality called (11.8) in R-092 is full source OVERLAP and is already
+equivalent to Nelson over the refinement union.  If the name $H_A$ is retained,
+it must mean only the assembly defect required to derive that inequality from
+the exact R-079 packet.  The surviving analytic choices are a coefficient-
+unconditioned root-local paid production estimate or a direct static
+$q=10/9$ Nelson estimate.  Neither is proved here.  Complete uniform $H_N$,
+full OVERLAP, Nelson, floor removal, an interacting measure, and Sector A remain
+open.  Tier stays T4.
+
+The load-bearing authorities are R-079 for the nonduplicating endpoint,
+R-081 for strict-past temporal factorisation, R-087 for fixed-cutoff
+variational CORE, R-091 for the complete four-row scalar production
+coefficient, and R-092 for the augmented perspective and triangular entropy
+identities.  The cutoff-two theorem additionally uses the A7 exact
+renormalised counterterm and the A12 Pauli--Fierz operator bound
+$0\preceq B(z)\preceq\beta_{\rm op}|z|^2I_6$.
+
+% evidence-anchor: section-2-unconditional-augmented-normal-form
+\section{The unconditional augmented normal form}
+
+Let $\mathcal F$ be the past.  Write $z=G_0+g$, where $G_0$ is
+$\mathcal F$-measurable,
+\[
+ \mathbb E_{\mathcal F}g=0,
+ \qquad \Gamma=\mathbb E_{\mathcal F}(g\otimes g).
+ \tag{2.1}
+\]
+Let $B=B^T\succeq0$ be revealed at the new level and let
+$R=R^T\succ0$ be $\mathcal F$-measurable.  Define
+\[
+ A=B+2R,\qquad \bar B=\mathbb E_{\mathcal F}B,
+ \qquad \bar A=\bar B+2R,                              \tag{2.2}
+\]
+\[
+ q_B=\mathbb E_{\mathcal F}(Bz),\qquad
+ m=A^{-1}Bz,\qquad m_0=\bar A^{-1}q_B,                 \tag{2.3}
+\]
+and
+\[
+ \Theta_R(B)=B-B(B+2R)^{-1}B,\qquad
+ Y=\Theta_R(B)^{1/2}z,\qquad r=\mathbb E_{\mathcal F}Y. \tag{2.4}
+\]
+The principal square root is well-defined even when $B$ and $R$ do not
+commute.  Indeed,
+\[
+ \begin{pmatrix}B&B\\B&B+2R\end{pmatrix}\succeq0,
+ \qquad
+ (x,y)\longmapsto (x+y)^TB(x+y)+2y^TRy,
+\]
+so the Schur complement of $B+2R\succ0$ gives
+$\Theta_R(B)\succeq0$; also $\Theta_R(B)\preceq B$ because
+$B(B+2R)^{-1}B\succeq0$.
+All spaces in this theorem are finite-dimensional.  Assume the displayed
+conditional moments are finite, in particular
+$\mathbb E_{\mathcal F}\|B\|$, $\mathbb E_{\mathcal F}z^TBz$,
+$\mathbb E_{\mathcal F}\|Bz\|$, and
+$\mathbb E_{\mathcal F}\|Y\|^2$; hence $\bar B,q_B,r$ and every term below
+are well-defined.  The production fixtures satisfy these hypotheses.
+
+\subsection*{Theorem 2.1 (complete augmented one-reveal normal form)}
+
+The complete R-092 augmented density equals
+\[
+\boxed{
+\begin{aligned}
+ \mathfrak D_R
+ :={}&\mathbb E_{\mathcal F}\!\left[
+   (m-m_0)^TA(m-m_0)+|Y-r|^2\right]-\bar B:\Gamma\\
+ ={}&\mathbb E_{\mathcal F}(z^TBz)
+   -\bar B:\Gamma-q_B^T\bar A^{-1}q_B-|r|^2 .
+\end{aligned}}                                         \tag{2.5}
+\]
+No endpoint square is duplicated in this identity.
+
+\emph{Proof.}
+Since $Am=Bz$ and $\mathbb E_{\mathcal F}(Am)=q_B=\bar A m_0$,
+\[
+ \mathbb E_{\mathcal F}(m-m_0)^TA(m-m_0)
+ =\mathbb E_{\mathcal F}z^TBA^{-1}Bz
+  -q_B^T\bar A^{-1}q_B.                                \tag{2.6}
+\]
+Also
+\[
+ \mathbb E_{\mathcal F}|Y-r|^2
+ =\mathbb E_{\mathcal F}z^T\Theta_R(B)z-|r|^2.         \tag{2.7}
+\]
+The pointwise matrix identity
+\[
+ B(B+2R)^{-1}B+\Theta_R(B)=B                           \tag{2.8}
+\]
+then gives (2.5). \hfill$\square$
+
+The theorem is the unconditional compression of R-092 (9.11).  It keeps the
+Schur square, the terminal $\Theta_R$ martingale energy, and the covariance
+subtraction together.  In particular no conclusion can be drawn from the
+sign of any one of them separately.
+
+\subsection*{Corollary 2.2 (even-reveal covariance classifier)}
+
+Assume $G_0=0$, the conditional law of $g$ is centrally symmetric, and
+$B(-g)=B(g)$.  Then $q_B=r=0$, and
+\[
+ \boxed{\mathfrak D_R
+ =\mathbb E_{\mathcal F}\!\left[B(g):(g\otimes g-\Gamma)\right].}
+ \tag{2.9}
+\]
+For an independent copy $g'$ this can also be written
+\[
+ \mathfrak D_R={1\over2}\mathbb E_{\mathcal F}
+ \left[(B(g)-B(g')):(g\otimes g-g'\otimes g')\right]. \tag{2.10}
+\]
+In one dimension, if $B=\beta(g^2)$, then $\mathfrak D_R$ is nonnegative
+when $\beta$ is increasing and nonpositive when $\beta$ is decreasing.  The
+sign is strict when $g^2$
+is nondegenerate and $\beta$ is strictly monotone on its essential range;
+equivalently, for an independent $g'$, the product
+$(\beta(g^2)-\beta(g'^2))(g^2-g'^2)$ is nonzero with positive probability.
+The classification is independent of $R$, but only for the \emph{sum} in
+(2.5), not term by term.
+
+\section{The exact production-coefficient sign fixture}
+
+On the pure-doublet scalar ray the R-091 complete four-row coefficient is
+\[
+ b(u)=4c_0u^2+4c_1\left(u-{5\over9}{u^3\over u^2+e}\right)^2,
+ \qquad
+ c_0={3\over250P},\quad c_1={243\over8000P},            \tag{3.1}
+\]
+where $e>0$ is the density floor and $P=4+10^{-12}$.  Put
+$u=\sqrt e\,t$ and
+\[
+ \varrho(t)=t-{5\over9}{t^3\over1+t^2}
+ ={t(4t^2+9)\over9(1+t^2)}.                            \tag{3.2}
+\]
+Then
+\[
+ \varrho'(t)={4t^4+3t^2+9\over9(1+t^2)^2}>0,           \tag{3.3}
+\]
+and
+\[
+ {d\over dt}b(\sqrt e\,t)
+ =8e\{c_0t+c_1\varrho(t)\varrho'(t)\}>0
+ \qquad(t>0).                                          \tag{3.4}
+\]
+Thus the restriction of $b$ to the positive interval
+$[\sqrt e/2,3\sqrt e/2]$ has a smooth inverse.  Direct evaluation gives
+\[
+ b_-:=b(\sqrt e/2)={9e\over250P},\qquad
+ b_+:=b(3\sqrt e/2)={8937e\over42250P},                \tag{3.5}
+\]
+\[
+ \Delta:=b_+-b_-={3708e\over21125P}>0.                 \tag{3.6}
+\]
+
+Define the decreasing smooth function
+\[
+ \beta(s)=b_-+{\Delta\over1+s},\qquad s\ge0,           \tag{3.7}
+\]
+and, crucially, use the positive-branch inverse
+\[
+ u(s)=\left(b\big|_{[\sqrt e/2,3\sqrt e/2]}\right)^{-1}
+       (\beta(s)),\qquad a(g)=u(g^2)-\sqrt e.           \tag{3.8}
+\]
+The global even function $b$ has no global inverse; (3.8) is the correct
+definition.  The shift $a$ is bounded, smooth, and even, and its exact
+production coefficient is $B(g)=\beta(g^2)$.
+
+For a standard Gaussian $G$, Corollary 2.2 gives, for every $R>0$,
+\[
+\begin{aligned}
+ \mathfrak D_R
+ &=\Delta\,\mathbb E{G^2-1\over1+G^2}\\
+ &=\Delta\left\{1-2\mathbb E{1\over1+G^2}\right\}<0.
+\end{aligned} \tag{3.9}
+\]
+The strict inequality follows from strict Jensen because
+$s\mapsto(1+s)^{-1}$ is strictly convex and $\mathbb EG^2=1$.  The exact
+integral is
+\[
+ \mathbb E{1\over1+G^2}
+ =\sqrt{\pi\over2}\,e^{1/2}
+   \operatorname{erfc}(1/\sqrt2)
+ =0.655679542418798\ldots .                            \tag{3.10}
+\]
+
+An exact rational non-Gaussian audit makes the cancellation transparent.
+Let $g=0$ with probability $1/2$ and $g=\pm\sqrt2$ with probability $1/4$
+each.  Then $\Gamma=1$,
+\[
+ B(0)=b_+,\qquad
+ B(\pm\sqrt2)=b_-+{\Delta\over3}
+ ={3993e\over42250P},                                  \tag{3.11}
+\]
+\[
+ \mathbb EB={1293e\over8450P},                         \tag{3.12}
+\]
+and the complete augmented density is
+\[
+ \boxed{\mathfrak D_R=-{1236e\over21125P}<0},
+ \qquad {1\over2}\mathfrak D_R=-{618e\over21125P}.    \tag{3.13}
+\]
+For every $\eta>0$, the perspective square and terminal contribution obey
+pointwise
+\[
+ (B+2\eta)\left({Bg\over B+2\eta}\right)^2
+ +\left(B-{B^2\over B+2\eta}\right)g^2=Bg^2,          \tag{3.14}
+\]
+which proves the $\eta$-independence without deleting either term.
+
+Equations (3.9)--(3.14) sharpen the mechanism under the existing R-092
+perspective-positivity boundary.  They are a same-root scalar-coordinate
+fixture.  There is no torus realization $a=T_Jv$, no spatial shell, no
+$c=Da$, and no low, paid, heat, or forest accounting.  They do not refute a
+complete paid $H_N$ estimate.
+
+\section{The smallest genuine paid lift is coercive}
+
+The failed attempt to amplify the preceding local sign can be closed exactly
+at the first genuine two-shell cutoff.  Let $L=16$, $\omega=2\pi/L$, and
+\[
+ A(n)=\{r+Z\omega^2|n|^2+Y\omega^4|n|^4\}I_3
+ +\operatorname{diag}(m_1,m_2,m_3)+k_{\rm lock}(I-P_0) \tag{4.1}
+\]
+be the hash-pinned A1 precision symbol.  Let $X_2$ be the canonical
+six-real Gaussian with $\|n\|_\infty\le2$.  For every bounded smooth
+$\mathcal F_1$-measurable source $v$ supported in shell
+$\|n\|_\infty=2$, put $a=T_2v$.  The full endpoint action is
+\[
+ I_2(v)=\mathbb E\left[V_2^{\rm ren}(X_2+a)
+ +{3\over20}\|X_2+a\|_6^6+{9\over20}\|v\|^2\right]. \tag{4.2}
+\]
+Because (4.2) uses the unexpanded terminal functional, the complete
+six-real coefficient, current square, covariance trace, low endpoint, paid
+subtraction, heat transport, and R-063 forest occur exactly once.
+
+The A1 Pauli--Fierz bound is
+\[
+ 0\preceq B(z)\preceq\beta_{\rm op}|z|^2I_6,
+ \qquad \beta_{\rm op}=0.0423749999999894\ldots .       \tag{4.3}
+\]
+Dropping the nonnegative current square gives
+\[
+ V_2^{\rm ren}(z)\ge-c_2\|z\|_2^2,\qquad
+ c_2={\beta_{\rm op}\over2}
+ \sum_{i=1}^3\operatorname{tr}\Gamma_{2,i}.            \tag{4.4}
+\]
+Direct finite symbol summation, with the canonical complex-to-six-real factor
+two, gives
+\[
+ \sum_i\operatorname{tr}\Gamma_{2,i}
+ ={2\over L^3}\sum_{\|n\|_\infty\le2}
+ \omega^2|n|^2\operatorname{tr}A(n)^{-1}
+ =0.226418249643189\ldots,                              \tag{4.5}
+\]
+\[
+ c_2=0.00479723666431388\ldots .                        \tag{4.6}
+\]
+Exhaustive shell enumeration gives
+\[
+ \lambda_{2,\min}:=min_{\|n\|_\infty=2}
+ \lambda_{\min}A(n)=0.311897688710642\ldots,           \tag{4.7}
+\]
+and hence the conservative real-coordinate bound
+\[
+ \mathbb E\|T_2v\|_2^2\le\Lambda_2\mathbb E\|v\|^2,
+ \qquad \Lambda_2={2\over\lambda_{2,\min}}
+ =6.41235915619583\ldots .                              \tag{4.8}
+\]
+The same symbol sum gives
+\[
+ \mathbb E\|X_2\|_2^2
+ =2\sum_{\|n\|_\infty\le2}\operatorname{tr}A(n)^{-1}
+ =1236.11554774495\ldots .                              \tag{4.9}
+\]
+
+Using $\|X_2+a\|_2^2\le2\|X_2\|_2^2+2\|a\|_2^2$ and
+discarding the nonnegative sextic yields the finite-cutoff theorem
+\[
+\boxed{
+ I_2(v)\ge
+ 0.388476791102297\ldots\,\mathbb E\|v\|^2
+ -11.859877653941\ldots .}                             \tag{4.10}
+\]
+In particular $I_2(\lambda v)\to+\infty$ as
+$|\lambda|\to\infty$ for every nonzero $v$.  No same-root selector or
+amplitude scaling of the local fixture gives an unbounded negative paid
+two-shell packet.  This fires
+\texttt{NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING}.
+
+The theorem is finite-cutoff only.  Its crude $c_J$ uses the total covariance
+trace and grows with $J$.  It does not prove a cutoff-uniform $H_N$ estimate.
+
+\section{Coefficient reveal has an information price}
+
+Let $G$ have law $\gamma$ and let $B=f(G)$ be a same-root coefficient reveal.
+Disintegration gives
+\[
+ \mathbb E_B H(\mathcal L(G\mid B)\mid\gamma)=I(G;B).  \tag{5.1}
+\]
+Thus a proof that first conditions on $B$, applies the R-092
+coefficient-conditioned moment-matched criterion, and then reuses the
+unconditional Gaussian entropy must pay $I(G;B)$.
+
+For $N$ equiprobable bins of $B$,
+\[
+ I(G;B_N)=H(B_N)=\log N,                               \tag{5.2}
+\]
+even when the Cameron--Martin control is zero.  For the production reveal
+$B=\beta(G^2)$ in (3.7), $\beta$ is strictly monotone and $B$ determines
+$G^2$.  Its law is non-atomic.  Quantising into $N$ equiprobable bins and
+using data processing gives
+\[
+ I(G;B)\ge I(G;B_N)=\log N\qquad\hbox{for every }N,     \tag{5.3}
+\]
+so
+\[
+ \boxed{I(G;B)=+\infty.}                               \tag{5.4}
+\]
+Equivalently, the joint law of $(G,f(G))$ lies on a graph and is singular
+with respect to the product of its marginals when the reveal is non-atomic.
+
+This is a method no-go, not an $H_N$ counterexample.  A coefficient-
+unconditioned martingale proof may still control the covariance in (2.9).
+It fires
+\texttt{NG-2026-07-27-A13-COEFFICIENT-REVEAL-FREE-CONDITIONING}.
+
+\section{Exact Gibbs gap in source coordinates}
+
+Let $\gamma=\bigotimes_k\gamma_k$ be a finite standard Gaussian source,
+$S_\pi(\xi)=\sum_kS_k\xi_k$, and $\mu_C=(S_\pi)_\#\gamma$.  Let
+\[
+ T_h(\xi)=\xi+h(\xi),\qquad
+ h_k=h_k(\xi_1,\ldots,\xi_{k-1})                       \tag{6.1}
+\]
+be bounded, smooth, and strictly triangular.  Put
+$\rho_h=(T_h)_\#\gamma$, $\nu_h=(S_\pi)_\#\rho_h$, and let
+$\Phi_h$ be the R-092 fibre relative entropy.  Strict triangularity makes
+$T_h$ recursively invertible with determinant one, so
+\[
+ {1\over2}\mathbb E\sum_k\|h_k\|^2
+ =H(\rho_h\mid\gamma)
+ =H(\nu_h\mid\mu_C)+\Phi_h.                            \tag{6.2}
+\]
+
+Fix a cutoff $J$.  Throughout this section assume the R-087 CORE payoff hypotheses:
+$G_J$ is real-valued, continuous, bounded below, and satisfies the
+local polynomial envelope R-087 (8.2).  Thus, for $q>0$,
+$0<Z_J<\infty$, where
+\[
+ Z_J=\int e^{-qG_J}\,d\mu_C,\qquad
+ \nu_J^*=Z_J^{-1}e^{-qG_J}\mu_C.                      \tag{6.3}
+\]
+All charts below are bounded smooth cylindrical-simple triangular charts, so
+their source energy, payoff expectation, and displayed relative entropies are
+finite.  The identities extend only when both sides are well-defined; no
+undefined $\infty-\infty$ subtraction is intended.
+
+\subsection*{Theorem 6.1 (Gibbs-gap identity)}
+
+For every source chart and every strictly triangular $h$,
+\[
+\boxed{
+\begin{aligned}
+ \mathcal A_J(h)
+ &:={\mathbb E}G_J(S_\pi(\xi+h))
+   +{1\over2q}\mathbb E\sum_k\|h_k\|^2\\
+ &=-{1\over q}\log Z_J
+   +{1\over q}H(\nu_h\mid\nu_J^*)
+   +{1\over q}\Phi_h .
+\end{aligned}}                                         \tag{6.4}
+\]
+
+\emph{Proof.}
+The definition of $\nu_J^*$ gives
+\[
+ H(\nu_h\mid\nu_J^*)
+ =H(\nu_h\mid\mu_C)+q\mathbb E_{\nu_h}G_J+\log Z_J. \tag{6.5}
+\]
+Substitute (6.2) into the left side and rearrange. \hfill$\square$
+
+At the A13 value $q=10/9$,
+\[
+ {1\over2q}={9\over20},\qquad {1\over q}={9\over10}. \tag{6.6}
+\]
+The two gap terms therefore carry $9/10$, not $9/20$.
+
+\subsection*{A fixed chart does not attain the Gibbs infimum}
+
+Take one standard source block, $S=1$, and $G(x)=x^2/2$.  Strict
+triangularity forces $h$ to be a constant translation.  Hence
+\[
+ \inf_h\mathcal A(h)={1\over2},                        \tag{6.7}
+\]
+whereas
+\[
+ -{1\over q}\log\mathbb Ee^{-qG(G_0)}
+ ={1\over2q}\log(1+q)
+ ={9\over20}\log{19\over9}<{1\over2}.                \tag{6.8}
+\]
+Thus no equality may be claimed for each fixed decomposition.  This fires
+\texttt{NG-2026-07-27-A13-FIXED-SOURCE-CHART-GIBBS-ATTAINMENT}.
+
+\subsection*{The temporally faithful refinement union is exact}
+
+Let $\mathfrak T_J$ be the directed union over all finite temporal Gaussian
+source refinements which retain every past Brownian evaluation used by a
+bounded smooth cylindrical-simple control, including kernel or auxiliary
+coordinates when the terminal physical map forgets them.  The physical
+terminal map and source cost use the canonical covariance normalisation.
+
+% evidence-anchor: theorem-6.2-source-union-core-equality
+\subsection*{Theorem 6.2 (source-union/CORE equality)}
+
+At each fixed cutoff,
+\[
+ \boxed{
+ \inf_{(S_\pi,h)\in\mathfrak T_J}\mathcal A_J(h)
+ =-{1\over q}\log\mathbb E_{\mu_C}e^{-qG_J}.}          \tag{6.9}
+\]
+
+\emph{Proof.}
+The lower bound follows from (6.4).  For the reverse bound, choose an
+$\varepsilon$-minimising bounded smooth cylindrical-simple progressive drift
+from R-087 CORE.  Its finitely many past Brownian evaluations and terminal
+Gaussian image define a chart in $\mathfrak T_J$.  On every strict-past time
+interval, R-081 Douglas factorisation gives the same terminal displacement
+and a source shift whose squared norm is no larger than the original interval
+control cost.  The auxiliary coordinates retain the information required to
+make every shift a function of earlier source blocks.  Therefore the source
+action is no larger than the chosen Bou\'e--Dupuis action.  Letting
+$\varepsilon\downarrow0$ proves the reverse inequality. \hfill$\square$
+
+This theorem is a coordinate equivalence, not a lower bound uniform in $J$.
+It corrects the fixed-chart ambiguity in R-092 (11.8).
+
+\subsection*{Corollary 6.3 (near-minimiser rigidity)}
+
+If $\mathcal A_J(h_n)$ tends to the value in (6.9), then
+\[
+ H(\nu_{h_n}\mid\nu_J^*)+\Phi_{h_n}\longrightarrow0. \tag{6.10}
+\]
+Both nonnegative terms tend to zero separately.  Quantitatively, if the
+action gap is $\delta_n$, then
+\[
+ H(\nu_{h_n}\mid\nu_J^*)\le q\delta_n,\qquad
+ \Phi_{h_n}\le q\delta_n,                              \tag{6.11}
+\]
+and Pinsker gives
+\[
+ \|\nu_{h_n}-\nu_J^*\|_{\rm TV}
+ \le\sqrt{q\delta_n/2}=\sqrt{5\delta_n/9}.             \tag{6.12}
+\]
+
+Consequently no proof can assume a uniform positive fibre-entropy lower bound
+on every dangerous near-minimising branch.  This does not preclude using the
+actual, possibly vanishing, $\Phi_h$ inside a coupled estimate.  This fires
+\texttt{NG-2026-07-27-A13-FIBRE-ENTROPY-UNIFORM-RESERVE}.
+
+\section{Causal geometry does not supply the missing reserve}
+
+There is no filtration-preserving orthogonal QR compression of revisited
+physical ranges.  Indeed, a finite block-lower-triangular orthogonal operator
+$Q$ has a lower-triangular inverse, while $Q^{-1}=Q^T$ is block upper
+triangular.  Hence $Q^{-1}$ and $Q$ are block diagonal.  Induction over the
+diagonal blocks proves
+\[
+ \boxed{Q\hbox{ block lower triangular and orthogonal}
+ \quad\Longrightarrow\quad Q\hbox{ block diagonal}.}  \tag{7.1}
+\]
+Thus a causal orthogonal change of coordinates cannot coalesce repeated
+ranges across time.  This fires
+\texttt{NG-2026-07-27-A13-CAUSAL-ORTHOGONAL-QR}.
+
+Two exact entropy allocations show why levelwise physical accounting is not
+stable.  For $S_1=S_2=1/\sqrt2$ and $h=(t,0)$, the source relative entropy is
+$t^2/2$, the final physical entropy is $t^2/4$, and the fibre entropy is
+$t^2/4$.  The physical entropy of the first prefix alone is $t^2/2$ and then
+drops after the second independent range is added.
+
+For the strictly triangular feedback $h=(0,2\xi_1)$, the source entropy is
+$2$.  The terminal physical Gaussian has variance $5$, so
+\[
+ H(\nu_h\mid\mu_C)=2-{1\over2}\log5,\qquad
+ \Phi_h={1\over2}\log5.                               \tag{7.2}
+\]
+The split is exact but does not equal a fixed multiple of a polar-kernel norm.
+At the other extreme, a minimal deterministic source shift can have
+$\Phi_h=0$.  These examples are consistent with (6.10): fibre entropy stores
+some revisit loops but is not coercive on the full variational class.
+
+The semantic consequence is important.  The R-092 source action
+\[
+ \mathbb E G_J(S_\pi(\xi+h))
+ +{9\over20}\mathbb E\sum_k\|h_k\|^2                 \tag{7.3}
+\]
+over $\mathfrak T_J$ is full source OVERLAP, denoted
+$\mathrm{OVERLAP}_{\rm src}$ here.  By Theorem 6.2 its uniform lower bound is
+the $q=10/9$ Nelson bound itself.  It is not a weaker independent $H_A$
+module.  The label $H_A$ may still be used for the packet-assembly theorem
+which derives (7.3) from R-079 without loss or duplication.
+
+\section{Surviving route and root-local scaling}
+
+The finite-cutoff estimate (4.10) shows that payment strength is not the
+local obstruction.  Its failure to be uniform comes from bounding the entire
+base covariance trace before the exact heat/low/forest cancellation.  The
+next production-specific target must keep that cancellation root-local.
+
+At high root $j$, the order-four A1 precision gives
+\[
+ \operatorname{tr}\Delta\Gamma_j\asymp2^j.            \tag{8.1}
+\]
+For a future control shell $k>j$, the terminal covariance map has
+\[
+ \|C_k\|_{\rm op}\asymp2^{-4k}.                       \tag{8.2}
+\]
+Their control-dependent product therefore has the favourable prototype
+\[
+ 2^{j-4k},\qquad k>j,                                  \tag{8.3}
+\]
+whose triangular double sum is strongly convergent.  This is a scaling
+diagnostic, not yet a theorem: the coefficient secant, low object,
+backward heat, paid subtraction, and R-063 forest must be placed into the
+same root-local identity before (8.3) may be used.
+
+The exact next alternatives are therefore:
+\begin{enumerate}
+\item prove a coefficient-unconditioned root-local paid production estimate
+      for the full augmented $H_N$ packet, cancelling the cutoff-growing base
+      term before applying (8.3); or
+\item prove the static uniform free-energy bound
+\[
+ -{9\over10}\log\mathbb E e^{-(10/9)G_J}\ge-C         \tag{8.4}
+\]
+      directly, using an enhanced-model or integrated A9 smart-path estimate.
+\end{enumerate}
+By Theorem 6.2 the second alternative is not a shortcut around OVERLAP; it is
+exactly Nelson.  The first alternative remains a sufficient internal route
+to it.  Conditioning on $B$, fixed-chart optimisation, an independent uniform
+fibre reserve, causal orthogonal QR, and amplification of the local
+perspective sign are now retired.  Coupled use of the actual fibre term is not
+excluded.
+
+% evidence-anchor: section-9-enhanced-model-polynomial-bg-criterion
+\section{Enhanced-model polynomial BG criterion}
+
+There is one exact static sufficient criterion worth retaining.  Write
+\[
+ G_J(z)=V_J^{\rm ren}(z)+\varepsilon_*\|z\|_6^6,
+ \qquad \varepsilon_*={3\over20},                      \tag{9.1}
+\]
+and, for $h=T_Jv$,
+\[
+ E_v=\int|v_t|^2\,dt,\qquad Y_v=\|X_J+h\|_6^6.         \tag{9.2}
+\]
+Assume that an explicit finite or countable A7 model family
+$Z_{\tau,J}\ge0$ and exponents $a_\tau,b_\tau\ge0$ satisfy, for every
+finite-cutoff shift,
+\[
+ -\{V_J^{\rm ren}(X_J+h)-V_J^{\rm ren}(X_J)\}
+ \le C_0+\sum_\tau Z_{\tau,J}E_v^{a_\tau}Y_v^{b_\tau}, \tag{9.3}
+\]
+where $C_0$ is independent of $J$ and $h$, and assume
+\[
+ s_\tau:=1-a_\tau-b_\tau>0,\qquad
+ \inf_J\mathbb E V_J^{\rm ren}(X_J)>-\infty.          \tag{9.4}
+\]
+Multifactor Young gives, for arbitrary positive allocations,
+\[
+ ZE^aY^b\le\eta E+\zeta Y+C_{\eta,\zeta}Z^{1/(1-a-b)}.
+ \tag{9.5}
+\]
+If the allocations also obey
+\[
+ \sum_\tau\eta_\tau<{9\over20},\qquad
+ \sum_\tau\zeta_\tau<{3\over20},\qquad
+ \sum_\tau C_{\eta_\tau,\zeta_\tau}
+     \sup_J\mathbb E Z_{\tau,J}^{1/s_\tau}<\infty,   \tag{9.6}
+\]
+then (9.3)--(9.6), followed by R-087 CORE, prove the uniform $q=10/9$
+Nelson estimate.  For a finite family the last condition reduces to the
+corresponding finitely many uniform moments.  For an infinite family,
+individual moment bounds without the displayed weighted summability are not
+enough.
+
+For reference, the following is only the arithmetic ledger obtained by
+substituting the displayed candidate exponent pairs from the cited predecessor
+notes into $s=1-a-b$.  It is not a new transfer theorem or an authority for
+(9.3): every row must still be reconstructed inside the exact signed shifted
+packet before the criterion applies.
+\begin{center}
+\begin{tabular}{p{0.38\textwidth}cccc}
+Family & $a$ & $b$ & $s=1-a-b$ & moment $1/s$\\ \hline
+$Q$ against $h^2$, $\kappa=1/10$ & $21/40$ & $19/120$ & $19/60$ & $60/19$\\
+R-076 sharp base-frozen cubic & $2/5$ & $8/15$ & $1/15$ & $15$\\
+comparable rational cubic & $11/20$ & $19/60$ & $2/15$ & $15/2$\\
+rational $Q$ branch & $11/20$ & $3/20$ & $3/10$ & $10/3$\\
+$G$/Hessian branch & $2/5$ & $11/30$ & $7/30$ & $30/7$\\
+high-$U$ branch & $11/40$ & $49/120$ & $19/60$ & $60/19$\\
+R-092 worst regular control & $4/5$ & $1/6$ & $1/30$ & $30$\\
+R-092 regular root & $3/5$ & $1/3$ & $1/15$ & $15$\\
+coarse critical current & $3/4$ & $1/4$ & $0$ & not covered\\
+coarse graph term & $1/2$ & $1/2$ & $0$ & not covered\\
+\end{tabular}
+\end{center}
+The largest finite required moment in this finite inherited ledger is $30$,
+already available for the unshifted A7 forests.  The missing input is the
+complete shifted signed reconstruction (9.3), including a $J$- and
+$h$-uniform $C_0$ and, for any infinite packet family, the summed remainder
+condition in (9.6).  A7 already supplies the exact base centering
+$\mathbb E V_J^{\rm ren}(X_J)=0$, hence the lower bound in (9.4), for the
+actual model.  Extracting a translated model
+norm pathwise is forbidden by the R-087 rare-event example.  Exponentiating
+that norm is worse: homogeneous third- and fourth-chaos tails do not provide
+the exponential moments of their fifteenth or thirtieth powers.  Thus the
+expectation must remain inside the exact Cartan remainders.  The criterion is
+noncircular, but no current authority proves its hypothesis.
+
+\section{Proof and failure evidence map}
+
+\[
+\begin{array}{c}
+ \text{R-092 augmented perspective}\longrightarrow
+ \boxed{\text{Theorem 2.1 exact normal form}}\\[1mm]
+ \downarrow\\[-1mm]
+ \text{even production reveal}\longrightarrow
+ \boxed{\text{strict negative local covariance}}\\[1mm]
+ \downarrow\hspace{18mm}\downarrow\\[-1mm]
+ \text{condition on }B\;\;\text{fails by }I(G;B)=\infty
+ \qquad
+ \text{paid scaling fails by (4.10)}\\[2mm]
+ \text{R-092 entropy union}+\text{R-081}+\text{R-087}
+ \longrightarrow\boxed{\text{Theorem 6.2}}\\[1mm]
+ \downarrow\\[-1mm]
+ \mathrm{OVERLAP}_{\rm src}=\text{Nelson objective},\quad
+ \Phi_h\text{ has no uniform reserve}\\[2mm]
+ \boxed{\text{next: root-local unconditioned paid packet or direct Nelson}.}
+\end{array}                                             \tag{10.1}
+\]
+
+The route decisions are:
+\begin{center}
+\begin{tabular}{p{0.29\textwidth}p{0.16\textwidth}p{0.45\textwidth}}
+Route & Verdict & Reason / successor\\ \hline
+Separate augmented positivity & failed & Exact production covariance is
+negative for every $R$; keep the complete paid packet.\\
+Amplify the local fixture & failed & The cutoff-two full action satisfies
+(4.10); local amplitude scaling is coercive.\\
+Condition on $B$ for free & failed & The missing mutual information is
+unbounded and is infinite for the smooth reveal.\\
+Optimise one source chart & failed & The quadratic one-block gap
+(6.7)--(6.8) is strict.\\
+Uniform fibre reserve & failed & Near minimisers force $\Phi_h\to0$.\\
+Causal orthogonal QR & failed & Lower-triangular orthogonal maps are block
+diagonal.\\
+Temporal refinement union & exact & It reproduces CORE and hence the Nelson
+free energy, without proving a uniform bound.\\
+Root-local paid production & open / favoured & Cancel the base heat/forest
+term first; then exploit the summable scale (8.3).\\
+\end{tabular}
+\end{center}
+
+The new formal failure authorities are
+\begin{itemize}
+\item \texttt{AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-COVARIANCE};
+\item \texttt{NG-2026-07-27-A13-LOCAL-PERSPECTIVE-PAID-SCALING};
+\item \texttt{NG-2026-07-27-A13-COEFFICIENT-REVEAL-FREE-CONDITIONING};
+\item \texttt{NG-2026-07-27-A13-FIXED-SOURCE-CHART-GIBBS-ATTAINMENT};
+\item \texttt{NG-2026-07-27-A13-FIBRE-ENTROPY-UNIFORM-RESERVE};
+\item \texttt{NG-2026-07-27-A13-CAUSAL-ORTHOGONAL-QR}.
+\end{itemize}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} The negative density (3.9) is already a paid
+      production counterexample.  \textbf{UPHELD AGAINST THAT CLAIM.}  It is
+      only a scalar same-root coordinate fixture.  The genuine cutoff-two
+      paid lift instead satisfies the positive coercive margin (4.10).
+
+\item \textbf{Objection:} The inverse in (3.8) is ill-defined because $b$ is
+      even.  \textbf{VALID WITH REPAIR.}  The note uses only the strictly
+      increasing positive branch $b|_{[\sqrt e/2,3\sqrt e/2]}$; no global
+      inverse is asserted.
+
+\item \textbf{Objection:} The perspective payment $R$ could restore the
+      sign.  \textbf{DISMISSED FOR THE AUGMENTED LOCAL SUM.}  Identity (3.14)
+      proves exact $R$-independence after the terminal $\Theta_R$ energy is
+      included once.  Individual pieces remain $R$-dependent.
+
+\item \textbf{Objection:} Mutual information merely reflects a poor
+      discretisation.  \textbf{DISMISSED.}  Equiprobable quantisations give
+      the lower bound $\log N$ for every $N$; data processing then forces
+      infinite information in the non-atomic deterministic reveal.
+
+\item \textbf{Objection:} The source-infimum equality holds in the fixed
+      R-092 chart.  \textbf{DISMISSED.}  The explicit quadratic one-block
+      calculation gives a strict gap.  Equality requires the directed union
+      of temporally faithful refinements retaining the controller's past
+      Gaussian information.
+
+\item \textbf{Objection:} Fibre entropy has a uniform positive reserve which
+      can independently pay the remaining signed near term.
+      \textbf{UPHELD AS FALSE.}  The exact Gibbs gap forces $\Phi_h\to0$ on
+      every variational near-minimising sequence.  Coupled use of the actual
+      vanishing fibre term is not excluded.
+
+\item \textbf{Objection:} The finite-cutoff bound proves uniform $H_N$.
+      \textbf{UPHELD AS FALSE.}  Its crude constant contains the total
+      $\Gamma_J$ trace.  Uniformity requires the root-local heat/low/forest
+      cancellation before summation.
+
+\item \textbf{Objection:} The scale $2^{j-4k}$ closes the next theorem.
+      \textbf{UPHELD AS PREMATURE.}  It is only the favourable order-counting
+      of the covariance/control pair.  The full coefficient secant and exact
+      nonduplication ledger remain to be proved.
+
+\item \textbf{Objection:} A six-real or source-normalisation factor is hidden
+      in the cutoff-two constants.  \textbf{DISMISSED WITH EXECUTABLE
+      CROSS-CHECKS.}  The gradient trace uses $2/L^3$, the integrated field
+      trace uses the real-pairing factor $2$, and the source map uses
+      $\Lambda_2=2/\lambda_{2,\min}$.  Primary physical-coordinate summation
+      and independent spectral summation agree on all eight derived constants
+      and on the four defining identities.  All quantities are evaluated in
+      the same finite-torus action convention; no unrecorded unit conversion
+      is used.
+
+\item \textbf{Objection:} Literal output constants could mask a wrong
+      derivation.  \textbf{VALID WITH REPAIR.}  Every reported cutoff-two
+      number and density is recomputed from the pinned A1 inputs.  Exact
+      rationals occur only as labelled test oracles; the JSON payload stores
+      the computed expressions, and the integrated verifier checks their
+      algebraic relations and an independently implemented spectrum.
+
+\item \textbf{Objection:} The $J=2$ enumeration supports a convergence or
+      continuum claim.  \textbf{UPHELD AS FALSE.}  It is an exhaustive finite
+      enumeration only.  No cutoff extrapolation is made, and the total-field
+      covariance in its lower constant is precisely why (4.10) is not
+      uniform.
+
+\item \textbf{Objection:} Individual model moments make the countable BG sum
+      finite.  \textbf{UPHELD AS FALSE.}  Criterion (9.6) explicitly requires
+      the weighted sum of Young remainders.  A7 supplies exact base centering
+      and the finite listed moments, not the missing shifted reconstruction,
+      uniform $C_0$, or infinite-family summability.
+\end{enumerate}
+
+External review should concentrate on the source-union realisation in
+Theorem 6.2, the six-real normalisation in (4.5)--(4.9), and the root-local
+placement required before the scaling (8.3) is used.
+
+\section{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID:              A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-
+                        INFORMATION-BOUNDARY
+Ledger:                 R-093.
+Precise statement:      The complete augmented one-reveal density has the
+                        exact unconditional normal form (2.5); a centered
+                        symmetric even reveal reduces it to the covariance
+                        (2.9). The exact production coefficient gives a
+                        bounded smooth negative local fixture, while the
+                        genuine J=2 paid action is coercive on bounded smooth
+                        predictable shell-two sources. Coefficient revelation
+                        costs mutual information. Under R-087 hypotheses, the
+                        temporally faithful directed source union equals CORE
+                        and has the exact Gibbs gap (6.4).
+Scope:                  Finite-dimensional augmented identities; fixed-floor
+                        production sign diagnostic; canonical A1 cutoff J=2;
+                        bounded smooth predictable shell-two sources; and
+                        fixed-cutoff source refinements with the R-087 payoff
+                        and finite-entropy hypotheses. The BG statement is a
+                        conditional criterion requiring uniform shifted
+                        reconstruction and weighted remainder summability.
+Dependencies:           A1; A7; A12; R-079; R-081; R-087; R-091; R-092.
+Evidence grade:         ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:   python codes/foundations/a13_classii_augmented_
+                        perspective_gibbs_gap_information_boundary_verify.py
+Expected output:        Primary 71/71; independent 34/34; integrated 288/288;
+                        aggregate 393/393; exit zero.
+Negative results:       AUDIT-2026-07-27-A13-R092-AUGMENTED-PRODUCTION-
+                        COVARIANCE; NG-2026-07-27-A13-LOCAL-PERSPECTIVE-
+                        PAID-SCALING; NG-2026-07-27-A13-COEFFICIENT-REVEAL-
+                        FREE-CONDITIONING; NG-2026-07-27-A13-FIXED-SOURCE-
+                        CHART-GIBBS-ATTAINMENT; NG-2026-07-27-A13-FIBRE-
+                        ENTROPY-UNIFORM-RESERVE; NG-2026-07-27-A13-CAUSAL-
+                        ORTHOGONAL-QR.
+Falsification gate:     Failure of the Schur identity or positivity, normal
+                        form, covariance classifier, exact production values,
+                        any of the eight cutoff-two constants or four defining
+                        identities, information/Gibbs/source-union formulae,
+                        authority hashes, independent audit, PDF checks,
+                        exploration/registry links, counts, or scope firewall.
+Tier before / after:    T4 / T4; no promotion.
+No-overclaim statement: No paid torus H_N counterexample, cutoff-uniform H_N,
+                        exact H_A assembly, OVERLAP_src, Nelson estimate,
+                        cutoff or floor removal, interacting measure,
+                        Sector-A closure, or T5--T7 claim is established.
+Next required action:   Prove the coefficient-unconditioned root-local H_N
+                        bound after heat/low/forest cancellation, then assemble
+                        complete packets losslessly into OVERLAP_src; or prove
+                        the equivalent static q=10/9 Nelson estimate directly.
+\end{verbatim}
+\endgroup

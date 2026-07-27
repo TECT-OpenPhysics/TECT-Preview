@@ -517,6 +517,47 @@ the following structural results and proof-architecture boundaries hold.
     fractional Jensen defect has no fixed Wick sign. The production Cartan bridge/direct CFAR,
     complete same-root rational causal packet, REG, OVERLAP, one-use, Nelson,
     and Sector A remain open.
+32. `A13-CLASSII-PROGRESSIVE-COVARIANCE-COMPRESSION-RATIONAL-MEAN-SPECTRAL-BOUNDARY`
+    is R-089. It proves global progressive terminal Cameron--Martin
+    contraction, a weighted terminal-shell martingale ledger, the exact
+    two-field Cartan Fourier trace, a quartic `s=1/4` route, and the rational
+    conditional mean/covariance criterion. The global unprojected Cartan
+    coefficient ledger and the rational production sign remain open or
+    negative as recorded; R-092 later closes only the relative regular
+    one-shot Cartan branch.
+33. `A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`
+    is R-090, audited by R-092. Its global-ledger no-go, conditional-covariance
+    audit, rational sign fixture, and endpoint/forest nonduplication survive.
+    Its claimed identity `b=grad c` and conservative single-coefficient trace
+    are withdrawn because the current uses transposed production Jacobians.
+34. `A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`
+    is R-091. The definition-level output-gap ledger, scalar saturation,
+    complete four-row Schur/Jensen identities, and terminal nonduplication are
+    exact. Its inherited single-coefficient trace is superseded by R-092, and
+    neither its cumulative translated-model majorant nor fixed payment gives
+    progressive closure.
+35. `A13-CLASSII-NORMALIZED-CARTAN-COMPENSATED-PERSPECTIVE-TRIANGULAR-COVARIANCE-FRONTIER`
+    is R-092. It repairs the transpose error with the exact R-089 two-field
+    trace, proves a normalized finite forest and whole-product fractional
+    estimate, and closes `H_C` only for the R-079 regular mutually orthogonal
+    strict-past no-revisit one-shot class with gap `2^(-(C-5)/2)`. It also
+    supplies the load-bearing augmented perspective density and exact
+    covariance/triangular-entropy union identities.
+36. `A13-CLASSII-AUGMENTED-PERSPECTIVE-GIBBS-GAP-INFORMATION-BOUNDARY`
+    is R-093. It proves the unconditional augmented normal form and production
+    covariance sign fixture, then proves that the genuine cutoff-two paid lift
+    is coercive rather than a counterexample. Same-root coefficient
+    conditioning has infinite information cost for the smooth reveal. The
+    source action reaches the CORE/Gibbs infimum only over the directed union
+    of temporally faithful refinements, and near minimisers have vanishing
+    fibre surplus. Thus the union target is `OVERLAP_src`, already equivalent
+    to Nelson; `H_A` denotes only its exact packet assembly. Its optional
+    enhanced-model BG criterion also requires a uniform base lower bound, a
+    cutoff/shift-uniform additive constant, and summed Young remainders; the
+    displayed exponent pairs are arithmetic bookkeeping, not a transferred
+    shifted-packet theorem. Uniform
+    coefficient-unconditioned `H_N`, `OVERLAP_src`, Nelson, floor removal,
+    measure construction, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -556,6 +597,10 @@ is a scoped T4 subproof and does not promote A13.
 | Rational translated-Wick / payload-comparable reduction | Exact translated-Wick normal form, cubic Sobolev payment, nonresonant and payload-comparable closure, and Taylor-Gram/kernel/heat method no-gos | T4 analytic/exact reduction closed; one coefficient-dominant same-root packet open |
 | Cartan spatial decay / rational trace / variational CORE | Smooth-LP principal annihilation, complete remainder spatial decay, eta-completion, rare-event extraction boundary, and fixed-cutoff cylindrical-simple Boue--Dupuis core | T4 analytic/exact reduction closed; Cartan one-use, rational packet, REG, and OVERLAP open |
 | Direct-root Cartan Schur / sequential secant / conditional trace | Exact unweighted `s>0` Schur summation, sequential three-channel atom, quartic Besov one-use payload, rational conditional moment criterion, and matrix-fractional heat boundary | T4 analytic/exact reduction closed; production Cartan bridge/direct CFAR and complete same-root rational causal packet open |
+| Progressive covariance compression / rational spectral boundary | Global progressive terminal CM contraction, martingale one-use ledger, exact two-field Cartan trace, quartic route, and rational mean/covariance criterion | T4 analytic/exact reduction closed; general progressive Cartan and complete rational packet open |
+| Global/projected Cartan temporal audits | Global unprojected ledger no-go, rational forest nonduplication, definition-level projected output ledger, scalar saturation, and complete four-row Schur/Jensen boundary | T4 exact boundary; conservative transpose compression withdrawn by R-092 |
+| Normalized regular Cartan / augmented perspective | Corrected two-field normalized finite forest, whole-product estimate, regular one-shot `H_C`, augmented perspective, covariance union, and triangular entropy accounting | T4 analytic/exact reduction; regular `H_C` closed, general progression and signed `H_N` open |
+| Augmented covariance / Gibbs-information boundary | Unconditional perspective normal form, production sign fixture, cutoff-two paid coercivity, coefficient-reveal information price, source-union Gibbs equality, and fibre/causal no-gos | T4 analytic/exact reduction; root-local unconditioned `H_N`, `OVERLAP_src`, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -698,6 +743,27 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   the positive translated square in (6.5). Its third-derivative and fixed-
   Schur fixtures are method no-gos, not counterexamples to a coupled form
   bound. REG, OVERLAP, CORE, one-use, and Nelson remain unproved.
+- R-086 closes only the base-frozen and payload-comparable translated-Wick
+  branches. Its coefficient-dominant high--high-to-low rational packet must
+  retain the endpoint square, Wick trace, heat, and lower-chaos forest.
+- R-087 proves spatial Cartan decay and fixed-cutoff variational CORE, not a
+  uniform lower bound. Its rare-event example forbids extracting the
+  translated model norm pathwise before expectation.
+- R-088 and R-089 prove exact direct/progressive covariance and trace
+  reductions. Their conditional rational criteria do not supply the missing
+  production sign; full OVERLAP is already equivalent to Nelson through CORE.
+- R-090's conservative `b=grad c` compression is withdrawn by R-092. Its
+  independent global-ledger no-go, rational sign, and forest nonduplication
+  remain valid. R-091's definition-level output ledger and full-frame
+  identities remain valid, but do not imply progressive closure.
+- R-092 closes only the R-079 regular mutually orthogonal strict-past
+  no-revisit one-shot Cartan `H_C` branch. Its coefficient-conditioned
+  moment-matched perspective positivity is not unconditional `H_N`.
+- R-093 proves exact augmented and Gibbs-gap identities and finite-cutoff paid
+  coercivity. The negative local production covariance is not a paid torus
+  counterexample; the cutoff-two coercive constant is not uniform. Source-
+  union equality requires temporally faithful refinements, and fibre entropy
+  has no uniform reserve. `OVERLAP_src`, Nelson, and Sector A remain open.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -724,43 +790,67 @@ Current analytic child:
 
 Current subordinate order:
 
-1. prove projected Cartan `H_C` from the exact conservative single-coefficient
-   trace, retaining `Q_(j,C-2)^coef` through expectation and the root sum; the
-   global unprojected R-089 Sobolev ledger is falsified by R-090;
-2. define and prove complete signed rational/linear NEAR `H_N` from one R-063
-   reconstructed Wick endpoint and the nonduplicating R-079 temporal
-   decomposition after every declared paid subtraction;
-3. prove progressive assembly `H_A`, uniformly in cutoff, time mesh, and
-   revisit multiplicity, with R-079 low/future feedback, R-080 revisit
-   cancellation, and R-066 controlled-shell one-use all retained inside full
-   OVERLAP;
-4. invoke the R-087 variational CORE to obtain the already checked `q=10/9`
-   Nelson/A7 synthesis. `H_C`, `H_N`, and `H_A` are non-interchangeable
-   sufficient obligations, not an iff decomposition.
+1. keep the R-092 regular one-shot `H_C` theorem as a closed sufficient
+   module; do not promote it to progressive/revisit controls;
+2. prove a coefficient-unconditioned root-local paid `H_N` estimate after the
+   base heat/low/R-063 forest cancellation, retaining the exact augmented
+   perspective endpoint once and testing the summable future-shell prototype
+   `2^(j-4k)` for `k>j`;
+3. assemble the complete R-079 packet into the temporally faithful refinement-
+   union action without loss or duplication. This assembly is `H_A`; the
+   resulting union inequality is `OVERLAP_src`, not a separate weaker module;
+4. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
+   directly. R-087 CORE and R-093 show that `OVERLAP_src` and Nelson are the
+   same variational objective. Free coefficient conditioning, fixed-chart
+   attainment, an independent uniform fibre-entropy reserve, causal
+   orthogonal QR, and local-fixture amplitude scaling are retired; coupled
+   use of the actual fibre term is not excluded.
 
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_cartan_excess_tail_rational_forest_nonduplication_boundary_verify.py
+python codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `57/57`;
-- non-importing independent `52/52`;
-- integrated and aggregate manifest-pinned PASS;
-- conservative Cartan compression, global unprojected-ledger no-go, relative
-  FAR survival, conditional covariance correction, raw rational endpoint sign,
-  R-063 forest nonduplication, R-079 packet polarization, predecessor/source/
-  PDF/surface contracts, and T4 scope firewalls;
+- primary `71/71`;
+- non-importing independent `34/34`;
+- integrated `288/288` and aggregate `393/393`;
+- augmented normal form, production covariance fixture, cutoff-two paid
+  coercivity, information boundary, fixed-chart obstruction, source-union
+  Gibbs equality, fibre/causal boundaries, predecessor/source/PDF/surface
+  contracts, and T4 scope firewalls;
 - exit code zero.
 
-The nine-page proof note passes the standard form check, zero-overfull gate,
-extracted-text debris check, and direct rendered-page visual QA.
+The current proof note must pass the standard form check, zero-overfull gate,
+extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
 The latest subproof package is:
+
+- `classii_augmented_perspective_gibbs_gap_information_boundary_manifest.json`
+- `notes/classii-augmented-perspective-gibbs-gap-information-boundary-260727-v1.0.tex.txt`
+- `notes/classii-augmented-perspective-gibbs-gap-information-boundary-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary.py`
+- `../../codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary_independent.py`
+- `../../codes/foundations/a13_classii_augmented_perspective_gibbs_gap_information_boundary_verify.py`
+- `runs/2026-07-27-primary-augmented-perspective-gibbs-gap-information-boundary/result.json`
+- `runs/2026-07-27-independent-augmented-perspective-gibbs-gap-information-boundary/result.json`
+- `runs/2026-07-27-integrated-augmented-perspective-gibbs-gap-information-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-093`
+- `../../negative-results/registry.md#audit-2026-07-27-a13-r092-augmented-production-covariance`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-local-perspective-paid-scaling`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-coefficient-reveal-free-conditioning`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-fixed-source-chart-gibbs-attainment`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-fibre-entropy-uniform-reserve`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-causal-orthogonal-qr`
+- `../../explorations/log.jsonl` (`EXP-000180`--`EXP-000191`; the final three
+  records append stable evidence-locator/scope corrections)
+
+The audited R-090 predecessor remains binding subject to the R-092 transpose
+correction:
 
 - `classii_global_unprojected_cartan_ledger_nogo_rational_forest_boundary_manifest.json`
 - `notes/classii-global-unprojected-cartan-ledger-nogo-rational-forest-boundary-260725-v1.0.tex.txt`
@@ -1485,6 +1575,26 @@ aggregate `216/216` contract, or any promoted production atom, controlled
 Cartan CFAR, complete rational/signed NEAR, REG, progressive, one-use, Nelson,
 measure, or Sector-A honesty flag.
 
+The R-093 continuation is additionally falsified by failure of
+`B(B+2R)^{-1}B+Theta_R(B)=B`, the unconditional augmented normal form, or the
+symmetric-even covariance reduction; by failure of production monotonicity
+or any exact fixture value
+`b_-=9e/(250P)`, `b_+=8937e/(42250P)`,
+`Delta=3708e/(21125P)`, `B_tail=3993e/(42250P)`,
+`E B=1293e/(8450P)`, density `-1236e/(21125P)`, or outer half
+`-618e/(21125P)`; by failure of any canonical `J=2` six-real symbol sum,
+`beta_op=0.0423749999999894`, gradient trace `0.22641824964318938`, field
+trace `1236.1155477449483`, shell precision minimum
+`0.31189768871064166`, control-map bound `6.412359156195831`, paid margin
+`0.388476791102297`, or lower-bound constant `11.859877653941`; by failure
+of the `N`-bin information cost `log N`, the non-atomic infinite-information
+conclusion, the two `9/10` Gibbs-gap coefficients, the `9/20` source
+coefficient, the fixed-chart strict gap, temporally faithful source-union
+equality, near-minimiser fibre-gap conclusion, or block-lower-triangular
+orthogonal-map no-go; by any source, authority, note, PDF, hash, visual-QA,
+or manifest-pinned assertion failure; or by any promoted uniform `H_N`,
+`OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1640,6 +1750,17 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   R-083 harmonic witness rules out only global raw-output pairwise
   orthogonality, and its adapted linear fixture rules out only universal
   standalone rowwise positivity.
+
+R-093 proves exact finite-dimensional identities and a canonical fixed-cutoff
+paid lower bound. Its smooth negative coefficient reveal is only a
+production-coordinate local sign fixture, not a spatial torus or paid `H_N`
+counterexample. The `J=2` coercivity constant is not uniform in the cutoff.
+Coefficient-conditioned positivity cannot be imported for free, fixed
+triangular charts need not attain CORE, fibre entropy has no uniform reserve,
+and causal orthogonal QR cannot remove revisits. The result does not prove a
+coefficient-unconditioned uniform `H_N`, exact progressive/revisit `H_A`
+assembly, `OVERLAP_src`, `q=10/9` Nelson, floor or cutoff removal, a measure
+theorem, Sector-A closure, or T5--T7. Tier stays T4.
 
 ## History
 
@@ -1985,3 +2106,29 @@ interacting measure, any removal limit, Sector-A closure, or T5--T7.  The
   projected Cartan `H_C`, complete signed rational/linear NEAR `H_N`, then
   progressive assembly `H_A` inside OVERLAP. REG, Nelson, measure construction,
   and Sector A remain open; tier stays T4.
+- 2026-07-25: Registered R-091. The projected Cartan output tail is an exact
+  definition-level nonnegative ledger and the complete four-row conditional
+  endpoint has an exact Schur--Jensen boundary with terminal nonduplication.
+  Its attempted single conservative coefficient compression was later
+  withdrawn by R-092. Projected CFAR, complete signed `H_N`, temporal
+  assembly, Nelson, and Sector A remained open; tier T4.
+- 2026-07-25: Registered R-092 and its transpose audit. The actual current
+  coefficient and endpoint gradient are distinct two-tail fields. A bounded
+  normalized finite forest plus whole-product fractional estimate closes only
+  the regular mutually orthogonal strict-past no-revisit one-shot `H_C`
+  branch. The matrix-perspective telescope, augmented density,
+  covariance-union contraction, and triangular entropy disintegration are
+  exact; complete signed `H_N`, progressive/revisit assembly, Nelson, and
+  Sector A remained open; tier T4.
+- 2026-07-27: Registered R-093. The perspective square plus terminal
+  `Theta_R` energy has an exact unconditional covariance normal form. A
+  smooth exact production-coordinate reveal makes the local density negative
+  for every fixed payment, but the genuine A1 `J=2` paid lift is coercive on
+  bounded smooth predictable shell-two sources:
+  `I_2(v)>=0.388476791102297 E||v||^2-11.859877653941`. Free coefficient
+  conditioning, fixed-chart Gibbs attainment, uniform fibre reserve, causal
+  orthogonal QR, and local-fixture amplitude scaling are retired. The
+  temporally faithful source-refinement union equals fixed-cutoff CORE, so its
+  uniform target is `OVERLAP_src`/Nelson. Uniform root-local unconditioned
+  `H_N`, exact `H_A` packet assembly, Nelson, and Sector A remain open; tier
+  stays T4.
