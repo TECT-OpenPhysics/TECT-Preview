@@ -52,9 +52,16 @@ cross term intact. It also proves the spatially weighted Cameron--Martin
 square function and base-current heat projection. The exact terminal feedback
 commutator retains coefficient and derivative-feedback channels. R-097
 completes the heat-lifted Gram telescope and terminal `theta=0` Schur
-reduction, so the current child is
-`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`, the complete weighted
-posterior form with every owner retained once. R-080,
+reduction; R-100 identifies the exact complete owner and pays the regular
+future-control reveal once. R-101 centres the isolated moving heat-baseline/
+raw-Wick cross, terminalises the complete raw block, and reduces the rational
+row to `K_R=G^T L c+c^T B_1 c/2`, where
+`B_1=(P_(Sigma_tar)B_R)(U+a)`. The current child remains
+`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: prove its heat-lifted
+coefficient-balanced rational-current Carleson lower form uniformly over the
+admissible target heats, with every owner retained once. Unheated or zero-
+heat-uniform Schur fails; fixed-positive-heat coercivity remains unproved.
+R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the
 localized predictable base-current tail `S_C`, and isolates the hidden
@@ -200,21 +207,19 @@ moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
  compression has no automatic spatial gain, and direct Stein differentiation
  exposes adapted-selector derivatives. The optional R-093 zero-slack rows remain
  superseded coarse estimates, while absolute per-revisit sixth-moment
- summation remains invalid. The next target is one global moving adapted-base
- payable form with the full heat--low--trace--forest and square owners used
- once, via either a weighted low-Hermite spatial gain or direct signed
- cancellation. Complete `H_N`, REG,
- `OVERLAP_src`, Nelson, and Sector A remain open.
- R-097 now terminalises that Gram form exactly. Its backward-heat martingale
- telescope and terminal `theta=0` Schur identity give
- `J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`, and predictable Wick/cross-
- Doob terminalisation avoids selector derivatives. Exact finite fixtures show
- that predictability-only aggregation and automatic posterior covariance
- positivity are false shortcuts. The live target is therefore one production-
- weighted full-frame posterior bracket retaining the low endpoint, matrix
- cost, paid subtraction, `q/r`, trace, Wick terms, and forest exactly once.
- Cartan (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson,
- and Sector A remain open.
+ summation remains invalid. R-097 terminalises the global Gram form; R-100
+ proves complete-owner gauge invariance, exact row additivity, and one-use
+ future-control reveal payment. R-101 proves same-point moving raw-Wick heat-
+ baseline orthogonality and cross-Doob reduction, telescopes the control-only
+ square, and replaces old rational (6.5) by
+ `K_R=G^T L c+c^T B_1 c/2`, with
+ `B_1=(P_(Sigma_tar)B_R)(U+a)`. The live target is the heat-lifted coefficient-
+ balanced rational-current Carleson lower form for `K_R`, uniformly over the
+ admissible target heats, retaining a fixed positive fraction of that same
+ heat-lifted terminal square and the low, heat,
+ trace, `q/r`, payment, and R-063 forest owners exactly once. Complete
+ coefficient-unconditioned `H_N`, REG,
+ progressive/revisit `H_A`, `OVERLAP_src`, Nelson, and Sector A remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.
 The generated `claims/INDEX.md` provides the five-family view and A13's

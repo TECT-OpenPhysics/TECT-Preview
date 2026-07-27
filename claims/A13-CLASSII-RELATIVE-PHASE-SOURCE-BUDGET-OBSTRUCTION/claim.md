@@ -684,6 +684,32 @@ the following structural results and proof-architecture boundaries hold.
     baseline production covariance-debt bound, rational (6.5), complete
     `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, a measure, and
     Sector A remain open.
+44. `A13-CLASSII-RAW-WICK-HEAT-BASELINE-ORTHOGONALITY-RATIONAL-CURRENT-REDUCTION`
+    is R-101. Under a pointwise coefficient, real-even Gaussian covariance,
+    and strict-past control, the moving heat coefficient satisfies the exact
+    conditional orthogonality `E_(j-1)<L_j,Delta Q_j>=0`. Cross-Doob
+    terminalization therefore writes the complete terminal raw-Wick block as
+    one fixed low endpoint plus exactly the R-100 future-control residual; no
+    second R-094 secant charge is allowed. The consecutive derivative-current
+    increment splits exactly into that raw-Wick owner, a signed current, and a
+    matched control-square difference which telescopes to the terminal square.
+    At the rational endpoint set `bar B=P_(Sigma_tar)B_R` and
+    `B_1=bar B(U+a)`. This reduces the old R-085 (6.5) frontier to
+    `K_R=G^T L c+c^T B_1 c/2`: the old `L:Q/2` member already belongs to the
+    complete raw block, and the three unshifted current families are paid by
+    R-071/R-085. The endpoint square is the heat expectation of
+    `|C_R(U+a+h)c|^2/2`, not the unheated rational square. The production
+    rational vector also satisfies the exact norm contraction
+    `|g(z)|<=|P_dbl z|`, but Wick centering is not monotone under that
+    pointwise order. The remaining regular theorem is the heat-lifted
+    coefficient-balanced rational-current Carleson lower form, uniformly over
+    the admissible target heats, with a positive fraction of the actual
+    `P_(Sigma_tar)B_R` terminal square retained. On the normalized scalar ray,
+    the full remainder `40/81` splits into the assigned base cubic `-25/81`
+    and the unresolved balanced remainder `65/81`. Unheated or zero-heat-
+    uniform Schur fails; fixed-positive-heat coercivity is unproved. Complete
+    `H_N`, REG, progressive `H_A`,
+    `OVERLAP_src`, Nelson, a measure, and Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -734,6 +760,7 @@ is a scoped T4 subproof and does not promote A13.
 | Signed-first Cartan / rational ridge boundary | Matching-payment posterior superadditivity, exact rational ridge and R-085 (6.5) recovery identities, rational sign fixture, same-heat/root opposite-subvisit Cartan harmonic obstruction, finite-floor radial correction, and bare causal-resampling Hardy mass | T4 analytic/exact/executed advance and method boundary; signed grouped posterior spatial form, Cartan (4.11), rational (6.5), complete `H_N`, REG, progression, and Nelson open |
 | Extended-state Cartan / causal Doob / rational recovery | Common-root value-plus-heat telescope, production heat-defect diagnostic, progressive terminal-mixed-only no-go, sharp last-root Doob--Hardy ownership, exact frame reveal with mandatory Jensen residual, absolute frame-transfer no-go, rational five-family two-sided form, and payment-gauge identity | T4 analytic/exact/executed advance and method boundary; coefficient-unconditioned complete signed posterior/source-action lower form, rational (6.5), `H_N`, REG, progression, and Nelson open |
 | Owner gauge / heat-centred full-Wick / covariance debt | Exact payment-gauge collapse, complete-owner row additivity, revelation mean/covariance exchange, posterior covariance-debt normal form, regular heat-centred full-Wick residual payment, abstract X/Y-only debt no-go, and reduced production-ray direction diagnostic | T4 analytic/exact/executed advance and method boundary; moving heat-baseline production debt bound, rational (6.5), `H_N`, REG, progression, and Nelson open |
+| Raw-Wick heat-baseline / rational current reduction | Exact fresh value-gradient orthogonality, cross-Doob terminalization of the complete raw block, derivative-current/control-square telescope, heat-lifted rational `K_R` frontier reduction, and production rational range contraction | T4 analytic/exact/executed advance; heat-lifted coefficient-balanced rational-current Carleson form, fixed-heat coercivity, `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -976,14 +1003,20 @@ Current subordinate order:
     For distinct roots, use R-099 chronological Doob--Hardy ownership to group
     all future smoothing shells before squaring the control coordinate. Do not
     extend the terminal mixed-only Cartan ledger to arbitrary revisits and do
-    not square the nonlinear frame secant. In the regular class, use the R-100
-    heat-centred split `F_j=L_j+H_j` and spend the R-094 secant allowance once
-    on the signed full-Wick `H_j` residual. Then prove the remaining moving
-    heat-baseline covariance-debt inequality
-    `D_H<=M_H+2 eta X+2 zeta Y+C`, retaining the posterior-mean current,
-    low endpoint, diagonal heat correction, trace, `q/r`, actual matrix
-    payment, and R-063 forest exactly once. PSD and separate `X/Y` moments are
-    insufficient without production spatial/root coupling;
+    not square the nonlinear frame secant. In the regular class, use R-101:
+    the pointwise moving heat baseline is orthogonal to the fresh full-Wick
+    increment, and cross-Doob terminalization assigns the complete raw block
+    to the fixed low endpoint plus the already-paid R-100 residual. Do not
+    reuse the two raw Taylor families or charge another R-094 secant. R-084
+    pays the three linear rows and R-071/R-085 pay the three unshifted rational
+    current families. With `bar B=P_(Sigma_tar)B_R` and
+    `B_1=bar B(U+a)`, prove only the remaining heat-lifted coefficient-balanced
+    rational-current Carleson bound for `K_R=G^T L c+c^T B_1 c/2`, uniformly
+    over the admissible target heats, with a positive fraction of that same
+    heat-lifted terminal square, the actual Cameron--Martin payment, heat,
+    trace, `q/r`, and R-063 forest retained exactly once. The unheated or zero-
+    heat-uniform Schur route is retired; fixed-positive-heat coercivity remains
+    unproved;
 6. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
@@ -997,19 +1030,18 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `167/167`;
-- standard-library exact independent `84/84`;
-- integrated `202/202` and aggregate `453/453`;
-- exact complete-owner gauge, matching-row additivity and cancellation,
-  revelation exchange, posterior covariance-debt normal form, regular
-  heat-centred full-Wick residual, abstract three-atom no-go, reduced
-  production-ray direction diagnostic, predecessor/source/PDF/surface
-  contracts, and T4 firewalls;
+- primary `187/187`;
+- standard-library exact independent `38/38`;
+- integrated `276/276` and aggregate `501/501`;
+- exact moving heat-baseline raw-Wick orthogonality, cross-Doob terminalization,
+  derivative-current regrouping, matched control-square telescope, rational
+  `K_R` ownership, production range contraction, predecessor/source/PDF/
+  surface contracts, and T4 firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1019,19 +1051,17 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_owner_gauge_heat_centered_covariance_debt_reduction_manifest.json`
-- `notes/classii-owner-gauge-heat-centered-covariance-debt-reduction-260727-v1.0.tex.txt`
-- `notes/classii-owner-gauge-heat-centered-covariance-debt-reduction-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction.py`
-- `../../codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_independent.py`
-- `../../codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_verify.py`
-- `runs/2026-07-27-primary-owner-gauge-heat-centered-covariance-debt-reduction/result.json`
-- `runs/2026-07-27-independent-owner-gauge-heat-centered-covariance-debt-reduction/result.json`
-- `runs/2026-07-27-integrated-owner-gauge-heat-centered-covariance-debt-reduction/result.json`
-- `../../RESULTS-LEDGER.md#r-100`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-abstract-fibre-xy-covariance-debt`
-- `../../explorations/log.jsonl` (`EXP-000235`--`EXP-000242`)
+- `classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_manifest.json`
+- `notes/classii-raw-wick-heat-baseline-orthogonality-rational-current-reduction-260727-v1.0.tex.txt`
+- `notes/classii-raw-wick-heat-baseline-orthogonality-rational-current-reduction-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction.py`
+- `../../codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_independent.py`
+- `../../codes/foundations/a13_classii_raw_wick_heat_baseline_orthogonality_rational_current_reduction_verify.py`
+- `runs/2026-07-27-primary-raw-wick-heat-baseline-orthogonality-rational-current-reduction/result.json`
+- `runs/2026-07-27-independent-raw-wick-heat-baseline-orthogonality-rational-current-reduction/result.json`
+- `runs/2026-07-27-integrated-raw-wick-heat-baseline-orthogonality-rational-current-reduction/result.json`
+- `../../RESULTS-LEDGER.md#r-101`
+- `../../explorations/log.jsonl` (`EXP-000243`--`EXP-000249`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -2126,6 +2156,20 @@ not prove rational (6.5), complete `H_N`, REG, arbitrary progressive `H_A`,
 `OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
 closure, or T5--T7. Tier stays T4.
 
+R-101 corrects only the isolated raw-Wick part of R-100's moving-baseline
+boundary. Under locality, real-even value-gradient independence, and strict-
+past control, `E_(j-1)<L_j,Delta Q_j>=0`; the full raw terminal block is the
+fixed low endpoint plus the already-paid R-100 residual. This does not centre
+the complete covariance-normal row. Exact current and Taylor bookkeeping then
+reduces the rational regular owner to `K_R=G^T L c+c^T B_1 c/2`, with
+`B_1=(P_(Sigma_tar)B_R)(U+a)`. The retained endpoint square is therefore
+heat-lifted. R-101 does not prove the heat-lifted coefficient-balanced
+rational-current Carleson lower form, fixed-positive-heat coercivity, a bound
+uniform as target heat tends to zero, arbitrary progressive/revisit control,
+complete `H_N`, REG, `H_A`,
+`OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
+closure, or T5--T7. Tier stays T4.
+
 ## History
 
 - 2026-07-21: Registered the relative-phase source-budget obstruction at
@@ -2604,3 +2648,21 @@ closure, or T5--T7. Tier stays T4.
   counterexample. The moving heat-baseline production debt bound, rational
   (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open;
   tier stays T4.
+- 2026-07-27: Registered R-101. Same-point value-gradient independence now
+  proves exact orthogonality of the moving heat coefficient to the fresh
+  full-Wick increment. Cross-Doob terminalization assigns the complete raw
+  endpoint to the fixed low block and R-100 residual without a second secant
+  charge. Exact derivative-current and Taylor ledgers telescope the control
+  square and reduce old rational (6.5) to the single `K_R` current-square
+  packet with `B_1=(P_(Sigma_tar)B_R)(U+a)`. The retained square is heat-
+  lifted; the kernel no-go applies at zero heat or nonuniformly as heat tends
+  to zero, while fixed-positive-heat coercivity remains unproved. Primary
+  `187/187`, exact-rational independent `38/38`, integrated `276/276`, and
+  aggregate `501/501` are manifest-pinned; the eleven-page PDF passed form, zero-
+  overfull, extraction, and all-page Poppler QA. `EXP-000248` records the heat-
+  placement correction. `EXP-000249` separates the full `40/81` remainder,
+  assigned `-25/81` base cubic, and unresolved `65/81` balanced remainder and
+  requires uniformity over admissible target heats. The heat-lifted
+  coefficient-balanced rational-current Carleson form, complete `H_N`, REG,
+  progressive `H_A`, `OVERLAP_src`, Nelson, the measure, and Sector A remain
+  open; tier stays T4.

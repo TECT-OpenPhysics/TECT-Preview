@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-101](#r-101) | Raw-Wick heat-baseline orthogonality and rational current reduction | Scoped T4 analytic/exact/executed advance: for a pointwise coefficient, real-even Gaussian covariance, and regular strict-past control, the moving heat coefficient is conditionally orthogonal to the fresh full-Wick increment. Cross-Doob terminalization therefore assigns the complete terminal raw-Wick block to one fixed low endpoint plus exactly the R-100 future-control residual, with no second secant charge. Exact derivative-current and Taylor ledgers telescope the control-only square and reduce the rational row from old (6.5) to the single signed packet `K_R=G^T L c+c^T(P_(Sigma_tar)B_R)(U+a)c/2`. The retained square is heat-lifted. The production rational vector satisfies an exact norm contraction, but Wick order and the heat-lifted coefficient-balanced rational-current Carleson inequality remain open. Unheated or zero-heat-uniform Schur completion fails; fixed-positive-heat coercivity is unproved. Complete `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, the measure, and Sector A remain open |
 | [R-100](#r-100) | Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier | Scoped T4 analytic/exact/executed advance and method boundary: the complete R-099 owner is exactly the conditional terminal Wick increment and is independent of its matching ridge/payment coordinate. Under matching coefficient, payment, and baseline splits it is exactly row-additive: the R-098 posterior Schur gap cancels an equal opposite complete-square gap. Finer coefficient revelation likewise exchanges covariance mass with posterior-mean mass without changing the owner. The target is exactly posterior mean current minus covariance debt. For regular mutually orthogonal strict-past no-revisit controls, the heat-centred split `F_j=L_j+H_j` and a full-Wick extension of the R-094 secant estimate pay the entire future-control/Jensen `H_j` residual with one `X/Y` allocation. A three-atom family proves that PSD Gram structure and separate `X/Y` moments alone cannot control abstract covariance debt, while a reduced complete-production-frame ray retains `c=Da`, has rational quadratic coefficient `-9/400`, and is `H2`-subcritical with ratio `3/57800`; it is a zero-floor diagnostic, not a production counterexample. The moving heat-baseline production debt bound, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-099](#r-099) | Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete value plus target-heat Cartan edges telescope exactly inside one common Malliavin root before common linear differentiation, OU evolution, FAR projection, and squaring. A production repeated-range loop proves that terminal `X^(1/2)Y^(1/2)` alone cannot support an arbitrary-progressive extension: the first root retains a positive `c_C A^2` square although a later inverse visit makes `A*=0` and the mixed payload is only `O(A)`. This leaves a once-only pure-`X` allowance and R-092 regular `H_C` intact. Chronological Doob differences give a sharp derivative-free one-use Hardy ledger for the control coordinate, while the exact complete-frame ordered reveal retains a mandatory Jensen/covariance residual; product and spike fixtures exclude same-level-only and absolute frame-square transfers. The five rational unshifted families now have a two-sided form on the regular one-shot class, and an exact payment-gauge identity reduces (6.5) to the complete owner lower form. That production posterior/source-action lower form, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, measure construction, and Sector A remain open |
 | [R-098](#r-098) | Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary | Scoped T4 analytic/exact/executed advance and method boundary: the terminal posterior bracket is superadditive under, and only claims a theorem for, a matching split `B=sum_a B_a`, `R=sum_a R_a`; the production rational rank-one row is exactly a conditional ridge deficit. An exact recovery identity shows that standalone R-085 (6.5) still requires the low endpoint, once-only Cameron--Martin payment, and an upper form for the five unshifted families. An exact production-coefficient fibre has negative ridge deficit but is not a torus/control counterexample. For two oppositely oriented subvisits refining one source-block traverse and sharing the same fixed target heat and root derivative, each squared Cartan far atom is order `A^2` while the mixed `X^(1/2)Y^(1/2)` payload is only order `A`; the signed atoms cancel exactly before squaring. Hence refinement-stable nonnegative per-subvisit atomization is retired, while distinct temporal roots/heats, once-only pure-`X` payment, and the regular one-shot class are untouched. Derivative-free causal resampling supplies the bare kernel `<2^(-3k)`, but the signed grouped posterior form, standalone Cartan (4.11), rational (6.5), complete `H_N`, REG, arbitrary progressive assembly, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -119,6 +120,126 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-101"></a>
+### R-101 -- Raw-Wick heat-baseline orthogonality and rational current reduction
+
+**Result ID.**
+`A13-CLASSII-RAW-WICK-HEAT-BASELINE-ORTHOGONALITY-RATIONAL-CURRENT-REDUCTION`.
+
+**Tier.** T4 scoped analytic/exact/executed advance. No tier promotion.
+
+**Moving raw-Wick theorem.** Let `g_j` be independent Gaussian value roots,
+`d_(j,i)=D_i g_j`, `G_(j,i)=sum_(s<=j)d_(s,i)`, and
+`Q_(j,i)=G_(j,i) tensor G_(j,i)-Gamma_(j,i)`. For a real-even regulator,
+`Cov(g_j(x),d_(j,i)(x))=0`; joint Gaussianity gives same-point independence.
+If `a_j` is strict-past, `B` is pointwise, and
+
+`L_j=E_j B(U_J+A^(j))
+    =P_(Sigma[j+1:J])B(U_j+A^(j))`,
+
+then
+
+`E_(j-1)<L_j,Delta Q_(j,i)>=0`
+
+and therefore `E<Delta L_j,Delta Q_(j,i)>=0`. This is an exact centering of
+the isolated raw-Wick cross. It does not centre the complete moving
+covariance-normal row and does not apply to nonlocal coefficients,
+value-gradient-correlated roots, same-root controls, or revisits.
+
+**Cross-Doob terminalization.** With `F_j=E_jB(Z*)` and
+`H_j=E_j[B(Z*)-B(Z_j)]`, one has for every low root `ell`
+
+`E<B(Z*),Q_J>
+ =E<F_ell,Q_ell>
+  +sum_(j>ell) E<[B(Z*)-B(Z_j)],Delta Q_j>`.
+
+The sum is exactly the full-Wick future-control residual bounded by R-100.
+Thus the complete terminal raw-Wick coefficient costs one fixed low endpoint
+and the already-paid R-100 `eta X+zeta Y+C` allocation. No Taylor subpiece of
+the same raw block may receive a second R-094 secant charge. This narrows and
+supersedes R-100's phrase that the heat baseline has no standalone centering;
+the warning remains valid for the complete row, but not for this isolated
+cross.
+
+**Derivative-current telescope.** For consecutive symmetric endpoints
+`B_-`, `B_+`, Gaussian derivative prefix `G`, old control derivative `C`, and
+fresh derivative increment `b`, the full quadratic increment is exactly
+`Delta B:Q/2+K`, where
+
+`K=G^T{B_+(C+b)-B_-C}
+   +{(C+b)^TB_+(C+b)-C^TB_-C}/2`.
+
+The control-only bracket telescopes under the backward-heat endpoint matching
+to the terminal control square minus the fixed low square. Only the displayed
+current cross is signed.
+
+**Smaller rational frontier.** Put
+`bar B=P_(Sigma_tar)B_R`, `B_0=bar B(U)`, `B_1=bar B(U+a)`, `G=DU`,
+`c=Da`, and
+
+`L=B_1-B_0-D bar B(U)[a]-D^2 bar B(U)[a,a]/2`.
+
+The rational endpoint has the nonduplicating decomposition
+
+`Delta W_R=R_Q+M_U+K_R`,
+
+`R_Q=(B_1-B_0):Q/2`,
+
+`M_U=G^T{B_0+D bar B(U)[a]+D^2 bar B(U)[a,a]/2}c`,
+
+`K_R=G^T L c+c^T B_1 c/2`.
+
+The complete raw block `R_Q` is assigned by the cross-Doob theorem, while the
+three terms in `M_U` are the accepted R-071/R-085 unshifted current families.
+The old R-085 frontier was `L:Q/2+K_R`; its `L:Q/2` member is already inside
+`R_Q` and must not be estimated again. Exact complete-owner row additivity and
+R-084 remove the three linear Pauli--Fierz rows, so only rational `K_R`
+remains.
+
+**Production range lemma.** For
+`g(z)=P_dbl z-(5/9)|P_dbl z|^2 z/(|z|^2+epsilon_rho)`, set
+`r=|P_dbl z|^2` and `d=|z|^2+epsilon_rho`. Then
+
+`r-|g(z)|^2=(5/9)r^2 d^(-2){2d-(5/9)|z|^2}>=0`.
+
+Hence `B_R=4c_1 g tensor g<=4c_1 r I`. This pointwise coefficient geometry
+does not order Wick-centred forms.
+
+**Exact successor.** Since value differentiation commutes with the fixed
+target heat, `D^3 bar B=P_(Sigma_tar)D^3B_R`. After the raw block, three
+unshifted current families, and base-frozen cubic are assigned, the sole
+regular rational obstruction is the coefficient-balanced shifted-current
+packet coupled to a fixed positive fraction of the heat-lifted square
+`c^T(P_(Sigma_tar)B_R)(U+a)c/2`. Equivalently this square is the independent-
+heat expectation of `|C_R(U+a+h)c|^2/2`, not the unheated square. Absolute
+balanced summation has total power `11/10`, and separated shifted-multiplier
+summation has total `13/12`. At zero target heat, and nonuniformly as the heat
+tends to zero, pointwise Schur completion fails by rational-row kernel
+leakage. On the normalized scalar ray the full remainder is `40c_1e/81`, the
+already-assigned base cubic is `-25c_1e/81`, and the actual unresolved
+balanced remainder is `65c_1e/81`; exact certificates keep those owners
+separate. Fixed strictly positive heat may fill that kernel; no cutoff/root-
+uniform coercivity or pseudoinverse estimate has yet been proved or refuted.
+The next theorem must prove the signed heat-lifted coefficient-balanced
+rational-current Carleson form uniformly over the admissible target heats
+before complete regular `H_N` and REG can be reassembled.
+
+**Evidence.** The self-contained referee note is
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-raw-wick-heat-baseline-orthogonality-rational-current-reduction-260727-v1.0.tex.txt`
+and its paired eleven-page PDF. The primary executable passes `187/187`; the
+standard-library exact-rational independent executable passes `38/38`; the
+integrated verifier passes `276/276`, for an aggregate `501/501`. The hash-
+pinned manifest, final assertion counts, and all-page Poppler QA are part of
+the same R-101 package. `EXP-000248` records the adversarial heat-placement
+correction; `EXP-000249` records the balanced-ray and heat-uniformity audit.
+
+**Boundary.** R-101 does not prove the `K_R` lower form, complete rational
+`H_N`, REG, arbitrary progressive/revisit `H_A`, `OVERLAP_src`, the `q=10/9`
+Nelson estimate, cutoff or floor removal, an interacting measure, Sector-A
+closure, or a higher tier. The exact next gate is the heat-lifted coefficient-
+balanced rational-current Carleson inequality with the actual
+`P_(Sigma_tar)B_R` square and a positive terminal-square reserve.
 
 <a id="r-100"></a>
 ### R-100 -- Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier

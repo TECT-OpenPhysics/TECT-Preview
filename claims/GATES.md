@@ -1337,29 +1337,31 @@ Martin matrix payment, paid subtraction, `q/r` means, covariance trace, Wick
 terms, and the complete R-063 forest in one identity, with every owner used
 exactly once.
 
-**Status:** OPEN CURRENT CHILD (reviewed 2026-07-27 after R-100). R-097 proves
-the complete backward-heat Gram telescope and posterior normal form; R-098 and
-R-099 identify the matching-payment and complete-owner coordinates. R-100 now
-proves that `S_R+C_post/2-P_R-W_0` is exactly the ridge-independent terminal
-Wick increment. It is exactly additive under matching coefficient/payment/
-baseline row splits: the R-098 posterior Schur gap is canceled by an equal
-opposite complete-square gap. Finer coefficient revelation likewise exchanges
-covariance mass with posterior mean without changing the owner. The target is
-exactly `T=(M_H-D_H)/2`. In the regular mutually orthogonal strict-past no-
-revisit class, the heat-centred split `F_j=L_j+H_j` and a full-Wick extension
-of the R-094 secant theorem pay the entire future-control/Jensen `H_j` residual
-from one `eta X+zeta Y+C` allocation. The remaining regular theorem is the
-production scale-weighted moving heat-baseline bound
-`D_H<=M_H+2 eta X+2 zeta Y+C`, with the complete `L_j` covariance-normal row,
-low endpoint, diagonal heat correction, trace, `q/r`, actual payment, and
-R-063 forest retained once. PSD Gram structure and separate `X/Y` moments are
-insufficient by an exact abstract fibre, but that fibre is not a production
-counterexample. A reduced complete-frame ray with `c=Da` has a negative
-rational quadratic atom yet is `H2`-subcritical; it is a zero-floor direction
-diagnostic only. The standalone Cartan one-use atom (4.11), rational shifted-
-Hessian atom (6.5), coefficient-unconditioned `H_N`, REG, lossless `H_A`
-assembly, `OVERLAP_src`, Nelson, interacting-measure construction, and Sector
-A remain open.
+**Status:** OPEN CURRENT CHILD (reviewed 2026-07-27 after R-101). R-097 proves
+the complete backward-heat Gram telescope and posterior normal form; R-098--
+R-100 identify the matching-payment, complete-owner, and future-control reveal
+coordinates. R-101 now proves the missing isolated raw-Wick centering: for a
+pointwise coefficient, real-even Gaussian covariance, and strict-past control,
+`E_(j-1)<L_j,Delta Q_j>=0`. Cross-Doob terminalization therefore assigns the
+complete terminal raw-Wick block to one fixed low endpoint plus exactly the
+already-paid R-100 residual. No second R-094 secant or separate raw Taylor
+charge is permitted. Exact derivative-current algebra telescopes the control-
+only square; complete-owner row additivity and R-084 remove the three linear
+rows, while R-071/R-085 pay the three unshifted rational current families. The
+unique remaining regular rational packet is
+`K_R=G^T L c+c^T B_1 c/2`, where
+`B_1=(P_(Sigma_tar)B_R)(U+a)`. The next theorem is the heat-lifted
+coefficient-balanced rational-current Carleson lower form for this packet,
+uniformly over the admissible target heats, retaining a fixed positive
+fraction of that same heat-lifted terminal square and the low,
+heat, trace, `q/r`, actual payment, and R-063 forest owners exactly once.
+Absolute balanced summation and separated shifted-multiplier routes are
+supercritical. Unheated or zero-heat-uniform terminal-square Schur has
+rational kernel leakage; fixed-positive-heat coercivity remains unproved.
+These are method boundaries, not production counterexamples. Complete
+coefficient-unconditioned `H_N`, REG,
+lossless `H_A` assembly, `OVERLAP_src`, Nelson, interacting-measure
+construction, and Sector A remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 

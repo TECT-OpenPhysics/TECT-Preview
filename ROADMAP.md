@@ -229,14 +229,18 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   innovations, cross term, squares, traces, forest, paid difference, and
   complete low endpoint retained. It proves a spatially weighted Cameron--
   Martin control square function and the predictable base-current heat
-  projection. R-097--R-100 have now terminalised and recoordinated this
+  projection. R-097--R-101 have now terminalised and recoordinated this
   regular-control algebra at the exact
   `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: the backward-heat Gram
   row telescopes, the complete owner is payment-gauge invariant and exactly
   row-additive, and its future-control/Jensen reveal residual is form-paid by
-  the full-Wick R-094 extension. The only unresolved regular production form
-  is the moving heat-baseline covariance-debt inequality with every owner and
-  scale weight retained once. R-080,
+  the full-Wick R-094 extension. R-101 proves that the isolated moving heat
+  coefficient is orthogonal to the fresh raw-Wick increment and reduces the
+  rational regular owner to `K_R=G^T L c+c^T B_1 c/2`, where
+  `B_1=(P_(Sigma_tar)B_R)(U+a)`. The only unresolved regular production form
+  is the heat-lifted coefficient-balanced rational-current Carleson
+  inequality, uniformly over the admissible target heats, with every owner
+  and scale weight retained once. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -617,7 +621,7 @@ preserved in git/changelog rather than treated as current gates.
    decomposition, proves one weighted Cameron--Martin control square-function
    use, and proves the predictable base-current heat projection. The current
    child is `A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`, narrowed by
-   R-080--R-100. R-080 closes the two distinct low objects for regular
+   R-080--R-101. R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
    channels and leaves the localized predictable base-current tail `S_C`;
    target heat and the CM square function alone supply no root/shell decay.
@@ -695,25 +699,29 @@ preserved in git/changelog rather than treated as current gates.
    replace the rootwise reserve by a global terminal-square fraction unless
    the pure-future identity or predictable domination `2R>=theta B` is proved;
    a decaying `theta_j` does not repair the current separate absolute ledgers.
-   Apply R-097--R-100 next. The complete heat-lifted Gram row telescopes to its
+    Apply R-097--R-101 next. The complete heat-lifted Gram row telescopes to its
    terminal value, and the full R-099 owner
    `S_R+C_post/2-P_R-W_0` is exactly the ridge-independent terminal Wick
    increment. Under matching row/payment/baseline splits it is row-additive:
    the R-098 posterior Schur gap cancels against the R-100 complete-square
    gap, so never count both. Finer coefficient revelation only exchanges
-   covariance and posterior-mean mass. In the regular strict-past no-revisit
-   class, use the heat-centred split `F_j=L_j+H_j`; R-100's full-Wick R-094
-   extension pays the entire future-control/Jensen `H_j` residual with one
-   `X/Y` allocation. Prove only the remaining production scale-weighted
-   moving heat-baseline inequality
-   `D_H<=M_H+2 eta X+2 zeta Y+C`, while retaining the complete `L_j`
-   covariance-normal row, posterior-mean current, low endpoint, diagonal heat
-   correction, Cameron--Martin matrix cost, paid subtraction, `q/r`, trace,
-   Wick terms, and R-063 forest exactly once. PSD Gram structure plus separate
-   `X/Y` moments is insufficient abstractly; the reduced production ray instead
-   points to an `H2`/root-weight absorption. Neither diagnostic is a
-   production counterexample. The standalone Cartan one-use atom (4.11) and
-   rational shifted-Hessian atom (6.5) remain open.
+    covariance and posterior-mean mass. In the regular strict-past no-revisit
+    class, R-101 uses same-point value-gradient independence to prove
+    `E_(j-1)<L_j,Delta Q_j>=0`. Cross-Doob terminalization assigns the complete
+    raw-Wick block to the fixed low endpoint plus the already-paid R-100
+    residual. Do not reuse the two raw Taylor families or apply another R-094
+    secant. R-084 pays the three linear rows and R-071/R-085 pay the three
+    unshifted rational current families. Prove only the remaining coefficient-
+    balanced rational-current Carleson lower form, uniformly over the
+    admissible target heats, for
+    `K_R=G^T L c+c^T B_1 c/2`, with
+    `B_1=(P_(Sigma_tar)B_R)(U+a)`, retaining a fixed positive fraction of that
+    heat-lifted terminal square, the complete heat/low/trace/payment/`q/r`
+    owners, and the R-063 forest exactly once. Absolute balanced summation and
+    separated multiplier routes are supercritical. Unheated or zero-heat-
+    uniform pointwise Schur has rational kernel leakage; fixed-positive-heat
+    coercivity remains unproved. These are method boundaries, not production
+    counterexamples.
    Do not condition on the same-root coefficient for
    free, use a fixed source chart as a Nelson minimiser, posit an independent
    uniform fibre-entropy reserve, causally orthogonalise a nontrivial lower

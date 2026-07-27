@@ -69,10 +69,18 @@ retained. It also proves a spatially weighted Cameron--Martin square function
 that spends control energy once and an exact backward-heat projection for the
 base or predictably translated current. The terminal feedback commutator still
 contains coefficient and derivative-feedback channels. Generic weighted
-shortcuts fail. R-097 now completes the heat-lifted Gram telescope and terminal
-`theta=0` Schur reduction, so the exact current child is
-`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: one production-weighted
-bound for `J_B+E[B:(V_B-Gamma)]`, with all owners retained once. R-080,
+shortcuts fail. R-097 completes the heat-lifted Gram telescope and terminal
+`theta=0` Schur reduction; R-100 identifies the exact complete owner and pays
+its future-control reveal residual once. R-101 then centres the isolated
+moving heat-baseline/raw-Wick cross, terminalises the complete raw block, and
+reduces the regular rational row to the single signed current-square packet
+`K_R=G^T L c+c^T B_1 c/2`, where
+`B_1=(P_(Sigma_tar)B_R)(U+a)`. The exact current child remains
+`A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET`: prove the heat-lifted
+coefficient-balanced rational-current Carleson lower form uniformly over the
+admissible target heats, with all owners retained once. Unheated or zero-heat-
+uniform Schur fails; fixed-positive-heat coercivity remains unproved.
+R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to
 one localized predictable base-current tail, and narrows the near residual to
@@ -229,19 +237,20 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   empty after a fixed widened payable collar. Raw Wick compresses exactly to
   coordinate Hermite ranks zero through two, but this provides no spatial
   gain and Stein differentiation exposes adapted-selector derivatives. The
-  next target is one global moving adapted-base payment with every heat, low,
-  trace, forest, square, and non-rational owner retained once. Complete
-  `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
-  R-097 now proves the backward-heat Gram telescope, its terminal `theta=0`
-  Schur identity, and the exact posterior normal form
-  `J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick and
-  cross-Doob terminalisation introduce no selector derivative. Exact finite
-  fixtures rule out both predictability-only low-Hermite aggregation and
-  automatic posterior-covariance positivity. Thus the next target is the one
-  production-weighted full-frame posterior bracket with low endpoint, matrix
-  cost, paid subtraction, `q/r`, trace, Wick terms, and forest inseparable.
-  Cartan (4.11), rational (6.5), complete `H_N`, REG, assembly, Nelson, and
-  Sector A remain open.
+  R-097 terminalises the global Gram form; R-100 proves complete-owner payment-
+  gauge invariance, exact row additivity, and one-use payment of the regular
+  future-control reveal. R-101 proves the missing same-point moving raw-Wick
+  heat-baseline orthogonality and cross-Doob reduction, then telescopes the
+  control-only square and replaces the old rational (6.5) frontier by
+  `K_R=G^T L c+c^T B_1 c/2`, with
+  `B_1=(P_(Sigma_tar)B_R)(U+a)`. The next target is the heat-lifted
+  coefficient-balanced rational-current Carleson lower form for `K_R`,
+  uniformly over the admissible target heats, retaining a fixed positive
+  fraction of that same heat-lifted terminal
+  square and the low, heat, trace, `q/r`, payment, and R-063 forest owners
+  exactly once. Complete coefficient-unconditioned `H_N`, REG,
+  progressive/revisit assembly, `OVERLAP_src`, Nelson, and Sector A remain
+  open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 

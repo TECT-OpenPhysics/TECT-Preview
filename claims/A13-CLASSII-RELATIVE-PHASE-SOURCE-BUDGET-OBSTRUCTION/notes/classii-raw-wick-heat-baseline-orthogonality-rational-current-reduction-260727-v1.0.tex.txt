@@ -1,0 +1,796 @@
+% Title: Raw-Wick heat-baseline orthogonality and rational current reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; REGULAR MOVING RAW-WICK BASELINE CLOSED; RATIONAL K-CROSS, H_N, REG, OVERLAP_SRC, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-RAW-WICK-HEAT-BASELINE-ORTHOGONALITY-RATIONAL-CURRENT-REDUCTION
+% Ledger: R-101
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Cov}{\operatorname{Cov}}
+
+\section{Purpose and scope}
+
+R-100 wrote the regular coefficient martingale as $F_j=L_j+H_j$, paid the
+future-control residual $H_j$ by one full-Wick R-094 secant allocation, and
+left the moving heat baseline $L_j$ inside the complete covariance-normal
+row.  This note identifies an exact centering which was missed in that
+ledger.  It applies only to the isolated raw-Wick cross and therefore does
+not contradict R-100's warning about the complete row.
+
+There are five advances.
+\begin{enumerate}
+\item For a pointwise coefficient, real-even Gaussian covariance, and a
+strict-past control, the moving heat coefficient $L_j$ is conditionally
+orthogonal to the fresh full-Wick increment $\Delta Q_j$.
+
+\item Cross-Doob terminalization therefore reduces the complete terminal
+raw-Wick block to one fixed low endpoint plus exactly the R-100
+future-control residual.  A second R-094 charge would duplicate ownership.
+
+\item The derivative-current increment has an exact raw-Wick plus current
+decomposition.  Its control-only half telescopes to the terminal rational
+control square.
+
+\item At the rational endpoint, the old R-085 shifted-Hessian-plus-square
+frontier is reduced to the strictly smaller current packet
+\[
+ \mathcal K_R=G^TLc+{1\over2}c^TB_1c.                    \tag{1.1}
+\]
+The $L:Q/2$ member is not estimated separately: it is already inside the
+complete raw-Wick block.
+
+\item The production rational vector obeys an exact range identity and a
+pointwise norm contraction.  This gives a useful Gram upper bound but no sign
+for a Wick-centred form.
+\end{enumerate}
+
+The theorem is finite-cutoff and fixed-positive-floor, and its quantitative
+consequence uses the regular mutually orthogonal strict-past one-shot class.
+It does not prove a lower bound for $\mathcal K_R$, arbitrary progressive or
+revisit controls, complete rational $H_N$, REG, $H_A$,
+$\mathrm{OVERLAP}_{\rm src}$, the $q=10/9$ Nelson estimate, cutoff or floor
+removal, an interacting measure, or Sector A.  Tier stays T4.
+
+\section{Finite-cutoff setting and hypotheses}
+
+Let $g_j$ be independent centred Gaussian value roots and let
+$d_{j,i}=D_i g_j$ be the derivative of the $j$th root in direction $i$.
+Write
+\[
+ U_j=\sum_{s\le j}g_s,\qquad
+ G_{j,i}=D_iU_j=\sum_{s\le j}d_{s,i}.                    \tag{2.1}
+\]
+With
+\[
+ \Delta\Gamma_{j,i}=\Cov(d_{j,i}),\qquad
+ \Gamma_{j,i}=\sum_{s\le j}\Delta\Gamma_{s,i},          \tag{2.2}
+\]
+define the quadratic Wick martingale
+\[
+ Q_{j,i}=G_{j,i}^{\otimes2}-\Gamma_{j,i}.                \tag{2.3}
+\]
+Its increment is
+\[
+ \Delta Q_{j,i}
+ =2G_{j-1,i}\mathbin\odot d_{j,i}
+ +(d_{j,i}^{\otimes2}-\Delta\Gamma_{j,i}).              \tag{2.4}
+\]
+Thus $\E_{j-1}\Delta Q_{j,i}=0$.
+
+The regulator is real and even.  At every point $x$ this gives
+\[
+ \Cov(g_j(x),d_{j,i}(x))=0.                              \tag{2.5}
+\]
+Joint Gaussianity turns (2.5) into pointwise independence.  This is a
+same-point statement; $g_j(y)$ and $d_{j,i}(x)$ need not be independent when
+$x\ne y$.
+
+Let
+\[
+ a_j\in\cF_{j-1},\qquad
+ A^{(j)}=A^0+\sum_{j0\le s\le j}a_s,\qquad A^*=A^{(J)},  \tag{2.6}
+\]
+and put
+\[
+ Z_*=U_J+A^*,\qquad Z_j=U_J+A^{(j)}.                     \tag{2.7}
+\]
+For a pointwise matrix coefficient
+$B:\mathbb R^N\to\operatorname{Sym}_N$ of sufficient polynomial growth,
+define
+\[
+ F_j=\E_jB(Z_*),                                         \tag{2.8}
+\]
+\[
+ L_j=\E_jB(Z_j)
+ =P_{\Sigma[j+1:J]}B(U_j+A^{(j)}),                       \tag{2.9}
+\]
+and
+\[
+ H_j=\E_j[B(Z_*)-B(Z_j)].                               \tag{2.10}
+\]
+Then $F_j=L_j+H_j$ exactly.  For matrix fields, set
+\[
+ \langle C,Q\rangle=\sum_i\int C(x):Q_i(x)\dd x.        \tag{2.11}
+\]
+
+The exact theorem uses finite cutoff, conditional Fubini, independent
+Gaussian roots, (2.5), strict-past measurability in (2.6), and spatial
+locality of $B(Z)(x)$ in the value $Z(x)$.  The R-100 quantitative residual
+bound additionally uses regular mutually orthogonal one-shot controls.
+
+\section{Moving raw-Wick heat-baseline orthogonality}
+
+% evidence-anchor: theorem-3.1-moving-raw-wick-heat-baseline-orthogonality
+\subsection*{Theorem 3.1 (fresh value--gradient orthogonality)}
+
+For every $j$ and derivative direction $i$,
+\[
+ \boxed{\E_{j-1}\langle L_j,\Delta Q_{j,i}\rangle=0.}   \tag{3.1}
+\]
+Consequently,
+\[
+ \boxed{
+ \E\langle L_j-L_{j-1},\Delta Q_{j,i}\rangle=0.}        \tag{3.2}
+\]
+
+\paragraph{Proof.}
+Fix $x$ and condition on $\cF_{j-1}$.  Then $U_{j-1}(x)$,
+$A^{(j)}(x)$, and $G_{j-1,i}(x)$ are fixed.  There is a deterministic
+matrix-valued function
+\[
+ \Phi_{j,x}(v)=P_{\Sigma[j+1:J]}B
+ (U_{j-1}(x)+A^{(j)}(x)+v)                               \tag{3.3}
+\]
+such that $L_j(x)=\Phi_{j,x}(g_j(x))$.  By (2.5), $g_j(x)$ is independent of
+$d_{j,i}(x)$.  Hence
+\[
+ \begin{split}
+ &\E_{j-1}\!\left[L_j(x):
+ 2G_{j-1,i}(x)\mathbin\odot d_{j,i}(x)\right]=0,\\
+ &\E_{j-1}\!\left[L_j(x):
+ (d_{j,i}(x)^{\otimes2}-\Delta\Gamma_{j,i})\right]=0.
+ \end{split}                                             \tag{3.4}
+\]
+Equation (2.4) and conditional spatial Fubini prove (3.1).  Since
+$L_{j-1}$ is $\cF_{j-1}$-measurable,
+\[
+ \E\langle L_{j-1},\Delta Q_{j,i}\rangle
+ =\E\langle L_{j-1},\E_{j-1}\Delta Q_{j,i}\rangle=0,   \tag{3.5}
+\]
+which proves (3.2). \qed
+
+The scope is exact and narrow.  The theorem centres the isolated cross
+$\langle d_jL,d_jQ\rangle$.  It does not centre the complete moving
+covariance-normal row, which also contains control derivatives, the terminal
+square, heat and trace corrections, the fixed-low subtraction, payment, and
+the R-063 reconstruction forest.  R-100's broader warning remains correct
+for that complete row; its phrase ``no standalone centering'' is
+superseded only for the raw-Wick cross (3.2).
+
+The hypotheses are necessary in the following sense.  If value and gradient
+coordinates are correlated, a coefficient quadratic in the value has a
+nonzero cross with the centred derivative square.  If the coefficient is
+spatially nonlocal or depends directly on the fresh derivative, the
+factorisations in (3.4) are unavailable.  Same-root and revisit controls are
+also outside (2.6).
+
+\section{Cross-Doob terminalization without duplicate payment}
+
+% evidence-anchor: theorem-4.1-cross-doob-raw-wick-terminalization
+\subsection*{Theorem 4.1 (terminal raw-Wick identity)}
+
+For every starting root $\ell<J$,
+\[
+ \boxed{
+ \E\langle B(Z_*),Q_J\rangle
+ =\E\langle F_\ell,Q_\ell\rangle
+ +\sum_{j>\ell}\E\langle B(Z_*)-B(Z_j),\Delta Q_j\rangle.}
+                                                               \tag{4.1}
+\]
+
+\paragraph{Proof.}
+Both $F_j=\E_jB(Z_*)$ and $Q_j$ are martingales.  Their cross-Doob identity is
+\[
+ \E\langle F_j,Q_j\rangle-
+ \E\langle F_{j-1},Q_{j-1}\rangle
+ =\E\langle F_j-F_{j-1},\Delta Q_j\rangle.               \tag{4.2}
+\]
+Sum (4.2), write $F=L+H$, and use Theorem 3.1 on the $L$ increment.  The
+$H_{j-1}$ cross vanishes by prediction, while $\Delta Q_j$ is
+$\cF_j$-measurable, so
+\[
+ \E\langle H_j,\Delta Q_j\rangle
+ =\E\langle B(Z_*)-B(Z_j),\Delta Q_j\rangle.              \tag{4.3}
+\]
+Finally $F_J=B(Z_*)$. \qed
+
+Take $\ell=j_0-1$.  R-100 Theorem 5.1 proves
+\[
+ \sum_{j=j0}^J\left|
+ \E\int[B(Z_*)-B(Z_j)]:\Delta Q_j\dd x\right|
+ \le C_{\rm full}2^{-j0}X^{1/2}(1+Y)^{1/6},              \tag{4.4}
+\]
+and hence, for every $\eta,\zeta\in(0,1]$,
+\[
+ \left|\E\langle B(Z_*),Q_J\rangle
+ -\E\langle F_{j0-1},Q_{j0-1}\rangle\right|
+ \le\eta\E X+\zeta\E Y+C_{\eta,\zeta}.                \tag{4.5}
+\]
+
+Thus the entire terminal raw-Wick coefficient is assigned once: its fixed
+low endpoint is retained and its future-control reveal is paid by (4.4).
+No Taylor component of $B(Z_*):Q_J$ is paid separately after (4.5).  In
+particular, applying another R-094 secant to a shifted $L:Q$ component would
+double count the same raw-Wick owner.
+
+\section{Exact derivative-current remainder}
+
+Let $B_-$ and $B_+$ be symmetric matrices at two consecutive coefficient
+endpoints, let $G$ be the Gaussian derivative prefix, let $C$ be the old
+control derivative, let $b$ be its fresh strict-past increment, and let
+$\Gamma$ be the Gaussian derivative covariance.  Put
+\[
+ Q=G^{\otimes2}-\Gamma,\qquad \Delta B=B_+-B_-.           \tag{5.1}
+\]
+
+% evidence-anchor: lemma-5.1-exact-derivative-current-remainder
+\subsection*{Lemma 5.1 (raw-Wick plus current partition)}
+
+The full quadratic increment obeys
+\[
+ \begin{split}
+ &{1\over2}\left\{
+ B_+:((G+C+b)^{\otimes2}-\Gamma)
+ -B_-:((G+C)^{\otimes2}-\Gamma)\right\}\\
+ &\qquad={1\over2}\Delta B:Q+K,
+ \end{split}                                             \tag{5.2}
+\]
+where
+\[
+ \begin{split}
+ K={}&G^T\Delta B C+{1\over2}C^T\Delta B C
+ +(G+C)^TB_+b+{1\over2}b^TB_+b.
+ \end{split}                                             \tag{5.3}
+\]
+Moreover,
+\[
+ \boxed{
+ K=G^T\{B_+(C+b)-B_-C\}
+ +{1\over2}\{(C+b)^TB_+(C+b)-C^TB_-C\}.}               \tag{5.4}
+\]
+
+\paragraph{Proof.}
+Expand both symmetric quadratic forms.  The $G^{\otimes2}-\Gamma$ terms give
+$\Delta B:Q/2$; collecting the remaining mixed and control-only monomials
+gives (5.3).  Expanding (5.4) reproduces (5.3) term by term. \qed
+
+The square telescope is an expectation identity across different heat levels,
+not a pathwise identification.  Fix the mandatory target heat
+$\Sigma_{\rm tar}$ and put
+\[
+ \overline B_k^{(J)}=P_{\Sigma_{\rm tar}+\Sigma_{k+1:J}}B,
+ \qquad C^{(k)}=DA^{(k)}.                                \tag{5.5}
+\]
+For a predictable insertion, $A^{(k)},C^{(k)}\in\mathcal F_{k-1}$, and heat
+composition gives the exact conditional matching
+\[
+ \begin{split}
+ \E_{k-1}\!\left[
+ \overline B_k^{(J)}(U_k+A^{(k)})\right]
+ & =P_{\Delta\Sigma_k}P_{\Sigma_{\rm tar}+\Sigma_{k+1:J}}B
+       (U_{k-1}+A^{(k)})\\
+ & =\overline B_{k-1}^{(J)}(U_{k-1}+A^{(k)}).
+ \end{split}                                             \tag{5.6}
+\]
+Since $C^{(k)}$ is predictable, multiplication by its quadratic form and
+conditional Fubini show that the positive endpoint at level $k$ equals the
+matching negative endpoint in expectation.  Consequently the control-square
+parts of (5.4) telescope to
+\[
+ \begin{split}
+ {1\over2}\E\sum_i\int &(C_i^{(J)})^T
+ (P_{\Sigma_{\rm tar}}B)(U_J+A^*)C_i^{(J)}\dd x\\
+ -{1\over2}\E\sum_i\int &(C_i^{(j0-1)})^T
+ \overline B_{j0-1}^{(J)}(U_{j0-1}+A^{(j0-1)})
+ C_i^{(j0-1)}\dd x.
+ \end{split}                                             \tag{5.7}
+\]
+The fixed-low term is retained unless its control derivative is zero; the
+terminal member is nonnegative.  The only signed new part of (5.4) is therefore
+the current cross
+\[
+ G^T\{B_+(C+b)-B_-C\}.                                   \tag{5.8}
+\]
+This algebra does not assert that (5.8) has a sign.
+
+\section{Rational endpoint and the smaller $K$-frontier}
+
+At the reassembled rational endpoint put
+\[
+ \overline B:=\overline B_{\Sigma_{\rm tar}}
+ =P_{\Sigma_{\rm tar}}B_R,\qquad
+ B_0=\overline B(U),\quad B_1=\overline B(U+a),
+ \quad G=DU,\quad c=Da,                                  \tag{6.1}
+\]
+and $Q=G^{\otimes2}-\Gamma$.  Define
+\[
+ K_t=D^2\overline B(U+ta)-D^2\overline B(U),             \tag{6.2}
+\]
+\[
+ L=\int_0^1(1-t)K_t[a,a]\dd t.                          \tag{6.3}
+\]
+Taylor's theorem gives both exact forms
+\[
+ L=B_1-B_0-D\overline B(U)[a]
+ -{1\over2}D^2\overline B(U)[a,a],                       \tag{6.4}
+\]
+\[
+ L={1\over2}\int_0^1(1-t)^2
+ D^3\overline B(U+ta)[a,a,a]\dd t.                      \tag{6.5}
+\]
+At fixed positive floor, differentiation commutes with the deterministic
+target heat:
+\[
+ D^m\overline B=P_{\Sigma_{\rm tar}}D^mB_R.              \tag{6.5a}
+\]
+Set
+\[
+ B_T=B_0+D\overline B(U)[a]
+ +{1\over2}D^2\overline B(U)[a,a],                      \tag{6.6}
+\]
+so $B_1=B_T+L$.
+
+% evidence-anchor: theorem-6.1-rational-current-frontier-reduction
+\subsection*{Theorem 6.1 (exact nonduplicating endpoint ledger)}
+
+The rational endpoint increment
+\[
+ \Delta\mathcal W_R
+ ={1\over2}(B_1-B_0):Q+G^TB_1c+{1\over2}c^TB_1c          \tag{6.7}
+\]
+has the exact decomposition
+\[
+ \boxed{\Delta\mathcal W_R=\mathcal R_Q+\mathcal M_U+\mathcal K_R,} \tag{6.8}
+\]
+where
+\[
+ \mathcal R_Q={1\over2}(B_1-B_0):Q,                      \tag{6.9}
+\]
+\[
+ \begin{split}
+ \mathcal M_U=G^TB_Tc
+ ={}&G^TB_0c+G^TD\overline B(U)[a]c\\
+ &+{1\over2}G^TD^2\overline B(U)[a,a]c,
+ \end{split}                                             \tag{6.10}
+\]
+and
+\[
+ \boxed{
+ \mathcal K_R=G^TLc+{1\over2}c^TB_1c
+ =\int_0^1(1-t)G^TK_t[a,a]c\dd t+{1\over2}c^TB_1c.}    \tag{6.11}
+\]
+
+\paragraph{Proof.}
+Insert $B_1=B_T+L$ into the mixed term of (6.7), while keeping the raw-Wick
+difference intact. \qed
+
+R-085 used
+\[
+ \mathcal H_R={1\over2}L:Q+G^TLc                         \tag{6.12}
+\]
+and left the frontier
+\[
+ F_{6.5}=\mathcal H_R+{1\over2}c^TB_1c
+ ={1\over2}L:Q+\mathcal K_R.                             \tag{6.13}
+\]
+The new ledger does not estimate $L:Q/2$ alone.  Equation (6.9) retains
+\[
+ {1\over2}\left(D\overline B(U)[a]
+ +{1\over2}D^2\overline B(U)[a,a]+L\right):Q            \tag{6.14}
+\]
+as one raw-Wick block.  Apply Theorem 4.1 to the local coefficient
+$P_{\Sigma_{\rm tar}}B_R$: it assigns the complete terminal $B_1:Q/2$ member
+to the fixed low endpoint and R-100 residual, while the unshifted $B_0:Q/2$
+member remains in the accepted base Wick/forest owner.  The first two old
+covariance-normal Taylor families
+must therefore not be charged again.  R-071/R-085 pays the three unshifted
+current families in (6.10).  The honest remaining rational packet is
+$\mathcal K_R$, not $F_{6.5}$.
+
+Complete-owner row additivity is essential.  The three linear Pauli--Fierz
+rows have quadratic Gram matrices, hence $K_t=0$, and their complete endpoint
+is already paid by R-084.  Only the rational row contributes (6.11).
+
+\section{Production rational range identity}
+
+Let $P_{\rm dbl}$ be the real doublet projector and write
+\[
+ r=|P_{\rm dbl}z|^2,\qquad d=|z|^2+\epsilon_\rho,\qquad
+ \alpha={5\over9}.                                      \tag{7.1}
+\]
+The rational row vector and Gram matrix are
+\[
+ g(z)=P_{\rm dbl}z-\alpha{r\over d}z,\qquad
+ B_R(z)=4c_1g(z)\otimes g(z),                            \tag{7.2}
+\]
+with
+\[
+ c_0={3\over250P},\qquad c_1={243\over8000P},\qquad
+ P=4+10^{-12}.                                           \tag{7.3}
+\]
+These constants follow exactly from
+\[
+ Q_{\rm II}=
+ \begin{pmatrix}
+ 9/(500P)&3/(400P)\\
+ 3/(400P)&3/(320P)
+ \end{pmatrix}.                                         \tag{7.4}
+\]
+
+% evidence-anchor: lemma-7.1-production-rational-range-domination
+\subsection*{Lemma 7.1 (range contraction)}
+
+For every $z$ and positive floor,
+\[
+ \boxed{
+ r-|g(z)|^2
+ =\alpha{r^2\over d^2}\{2d-\alpha|z|^2\}\ge0.}        \tag{7.5}
+\]
+Consequently,
+\[
+ |g(z)|\le|P_{\rm dbl}z|,\qquad
+ 0\preceq B_R(z)\preceq4c_1r I.                         \tag{7.6}
+\]
+After target heat this gives only the upper estimate
+\[
+ 0\preceq\overline B(z)\preceq
+ 4c_1\left(|P_{\rm dbl}z|^2+\operatorname{tr}
+ (P_{\rm dbl}\Sigma_{\rm tar})\right)I.                 \tag{7.7}
+\]
+
+\paragraph{Proof.}
+Use $(P_{\rm dbl}z)\mathbin\cdot z=r$ to expand $|g|^2$.
+The bracket in (7.5) is nonnegative because $0<\alpha<2$ and
+$d>|z|^2$.  The rank-one inequality
+$g\otimes g\preceq|g|^2I$ proves (7.6). \qed
+
+These are upper-range statements.  Wick centering subtracts covariance and
+does not preserve pointwise matrix order, while an upper coefficient bound
+does not supply lower coercivity, so (7.6)--(7.7) do not prove the signed
+$\mathcal K_R$ lower form.
+
+\section{The exact remaining obstruction}
+
+The three unshifted families and the raw-Wick block are already assigned.
+Taylor's theorem and (6.5a) split
+\[
+ L={1\over6}D^3\overline B(U)[a,a,a]+L_{\rm bal},
+\]
+where
+\[
+ L_{\rm bal}=\int_0^1(1-t)\int_0^t
+ \{D^3\overline B(U+sa)-D^3\overline B(U)\}[a,a,a]
+ \dd s\dd t.
+\]
+The base-frozen current $G^TD^3\overline B(U)[a,a,a]c/6$ is assigned to the
+R-076 smooth geometric one-form model.  The unresolved heat-lifted balanced
+current is
+\[
+ \begin{split}
+ \mathcal H_{\rm bal}
+ =\sum_i\int\int_0^1(1-t)\int_0^t
+ G_i^T\{D^3\overline B(U+sa)-D^3\overline B(U)\}[a,a,a]c_i
+ \dd s\dd t\dd x.
+ \end{split}                                             \tag{8.1}
+\]
+Thus a sharp sufficient successor is the following, which is a target rather
+than a theorem of R-101: for fixed $0<\theta<1$, uniformly over the admissible
+target-heat family and terminal cutoff,
+\[
+ \boxed{
+ \E\mathcal H_{\rm bal}
+ +{\theta\over2}\E\sum_i\int
+ (D_i a)^T\overline B(U+a)D_i a\dd x
+ \ge-\eta\E X-\zeta\E Y
+ -C_{\eta,\zeta,\theta,e,j0}.}                         \tag{8.2}
+\]
+The constant in (8.2) is independent of the admissible
+$\Sigma_{\rm tar}$ and of the terminal cutoff.  Equivalently, a formulation
+with fixed-heat constants must prove their uniform supremum finite over the
+production-admissible heat family.
+Equivalently, for an independent centred target-heat variable
+$h_{\Sigma_{\rm tar}}$,
+\[
+ (D_i a)^T\overline B(U+a)D_i a
+ =\E_{h_{\Sigma_{\rm tar}}}
+ |C_R(U+a+h_{\Sigma_{\rm tar}})D_i a|^2.                \tag{8.2a}
+\]
+It is not generally the unheated square $|C_R(U+a)D_i a|^2$.  A positive
+$(1-\theta)$ fraction of the same heat-lifted terminal square is retained for
+later assembly.  Equation (8.2) is the heat-lifted coefficient-balanced
+rational-current Carleson gate.
+
+The present authorities do not prove (8.2).
+\begin{enumerate}
+\item R-096 removes coefficient outputs strictly above the control shell by a
+fixed gap.  The balanced $m=k+O(1)$ high--high-to-low branch survives.
+
+\item Absolute input-maximum control produces $X^{2/5}Y^{7/10}$, whose total
+power is $11/10>1$.
+
+\item Separating the shifted multiplier at the accepted $s=3/5$ produces the
+supercritical total
+\[
+ {5+s\over6}+{s\over4}={13\over12}.                      \tag{8.3}
+\]
+
+\item A shell-dependent square fraction cannot repair both the inverse
+Schur cost and the forward square telescope simultaneously.
+\end{enumerate}
+
+A square-only pointwise Schur proof cannot be uniform down to zero target
+heat.  At $\Sigma_{\rm tar}=0$, on the scalar rational ray with initial value
+$\sqrt e$ and endpoint approaching zero, the cubic Taylor remainder remains
+nonzero while the endpoint Gram vanishes quadratically.  For scalar target
+variance $\sigma\downarrow0$ at the endpoint zero,
+\[
+ (P_\sigma B_R)(0)=4c_1\sigma+O(\sigma^2/e),\qquad
+ L_\sigma={40\over81}c_1e+O(\sigma),
+\]
+but this is the full second-order remainder.  The already-assigned base cubic
+and the actual unresolved balanced remainder are
+\[
+ {1\over6}(P_\sigma B_R)'''(\sqrt e)(-\sqrt e)^3
+ =-{25\over81}c_1e+O(\sigma),\qquad
+ L_{{\rm bal},\sigma}={65\over81}c_1e+O(\sigma).
+\]
+Consequently the gate-specific optimised scalar square completion is
+\[
+ -{4225\over52488\,\theta}{c_1e^2\over\sigma}G^2+O(1),
+\]
+and diverges to negative infinity.  At a fixed
+strictly positive full-rank heat the convolution can fill the kernel, and no
+fixed-heat no-go is asserted.  The zero-heat-uniform obstruction is still not
+a counterexample to (8.2), because the spatial Cameron--Martin term may pay
+the derivative of the control.
+
+There is a second, independent diagnostic route.  For one paired real mode
+and the full mandatory future heat, the quadratic control coefficient can be
+written exactly as a Gaussian expectation of rational derivatives of $g$.
+Laplace representation of the denominator reduces it to a deterministic
+one-dimensional integral of a finite Wick polynomial against a tilted
+Gaussian covariance.  This supplies a viable interval-plus-asymptotic route,
+but no all-mode sign theorem has yet been proved.  Numerical sampling or a
+finite list of modes is not used as evidence for R-101.
+
+\section{Failed routes, corrections, and proof map}
+
+\begin{center}
+\begin{tabular}{p{0.25\linewidth}p{0.18\linewidth}p{0.47\linewidth}}
+\hline
+Route & Verdict & Reusable conclusion \\
+\hline
+Moving $L_j$ has no raw centering & corrected & The complete row has no
+standalone sign, but Theorem 3.1 centres its isolated raw-Wick cross exactly.\\
+Second secant on shifted $L:Q$ & failed & It duplicates the complete raw-Wick
+owner already terminalized by Theorem 4.1.\\
+Clark--Ocone alone & failed & It rewrites the cross as an innovation bracket
+without supplying a spatial or root weight.\\
+Gaussian integration by parts & failed & Differentiating adapted future
+controls introduces uncontrolled first and second Malliavin derivatives.\\
+Hermite ranks zero through two & boundary & They identify raw-Wick ownership
+but supply no spatial gain for the current cross.\\
+Zero-heat-uniform endpoint Schur & boundary & The unheated rational Gram has
+kernel leakage, but a fixed positive full-rank heat can fill that kernel; no
+uniform constant as target heat tends to zero follows.\\
+Absolute balanced summation & failed & The powers in (8.3) are supercritical.\\
+Full future-heat mode reduction & inconclusive & Exact one-dimensional
+Laplace--Wick certification is available; the uniform analytic tail is open.\\
+\hline
+\end{tabular}
+\end{center}
+
+The nonduplicating evidence path is
+\[
+ \begin{split}
+ &\text{R-063 forest and fixed low block}\\
+ &\quad\longrightarrow\text{R-097 heat matching}\\
+ &\quad\longrightarrow\text{R-100 full-Wick future residual}\\
+ &\quad\longrightarrow\text{R-101 heat-baseline orthogonality}\\
+ &\quad\longrightarrow\text{R-084 linear rows plus R-071/R-076 currents}\\
+ &\quad\longrightarrow\boxed{\text{heat-lifted }\mathcal K_R\text{ / gate (8.2)}}\\
+ &\quad\longrightarrow H_N\longrightarrow\mathrm{REG}
+ \longrightarrow H_A\longrightarrow\mathrm{OVERLAP}_{\rm src}
+ \longrightarrow\text{Nelson and measure construction}.
+ \end{split}                                             \tag{9.1}
+\]
+
+The exploration ledger records the decisions as EXP-000243--EXP-000249.
+EXP-000248 preserves the target-heat placement correction, while EXP-000249
+separates the total $40/81$ remainder from the actual balanced $65/81$
+successor and enforces target-heat uniformity.  These records continue and
+correct EXP-000238 and EXP-000242 without deleting historical decisions.
+
+% evidence-anchor: evidence-map-roadmap
+\subsection*{Proof-status map}
+
+\begin{center}
+\begin{tabular}{p{0.29\linewidth}p{0.19\linewidth}p{0.42\linewidth}}
+\hline
+Object & Status after R-101 & Next condition \\
+\hline
+Moving raw-Wick heat baseline & closed in regular strict-past class & Keep
+locality, value--gradient independence, low block, and R-100 residual once.\\
+Three linear production rows & accepted from R-084 & Do not reuse their
+complete endpoint companions.\\
+Rational raw-Wick block & reduced & Book only through Theorem 4.1 and the
+accepted base/low authority.\\
+Rational unshifted current & accepted from R-071/R-085 & Three families in
+(6.10), not the two raw Taylor families.\\
+Rational shifted current & open & Prove heat-lifted coefficient-balanced gate
+(8.2).\\
+Complete regular $H_N$ and REG & open & Reassemble only after (8.2).\\
+Progressive/revisit $H_A$ & open & Lossless extension beyond strict-past
+one-shot remains separate.\\
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, measure & open & Use R-087 CORE only
+after packet and one-use assembly.\\
+Sector A & open & No closure or tier promotion.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Devil's-advocate review}
+
+\paragraph{Objection 1: $L_j$ and $\Delta Q_j$ use the same Gaussian root.}
+\textbf{DISMISSED under the hypotheses.}  At a fixed spatial point, $L_j$
+uses the fresh value coordinate and $\Delta Q_j$ uses the fresh derivative
+coordinate.  Real-even covariance and Gaussianity give independence.
+\textbf{VALID outside the stated scope.}  A nonlocal coefficient can see
+$g_j(y)$ correlated with $d_j(x)$.
+
+\paragraph{Objection 2: a same-root control can be admitted by approximation.}
+\textbf{UPHELD as false.}  If $a_j$ sees the fresh root, (3.3) need not be a
+function of $g_j(x)$ alone after conditioning.  The theorem is strict-past
+and does not claim progressive density.
+
+\paragraph{Objection 3: Theorem 4.1 proves the complete owner positive.}
+\textbf{UPHELD as false.}  It controls only the terminal raw-Wick block.  The
+mixed derivative current, terminal control square, base, payment, heat,
+trace, and forest owners remain in the ledger.
+
+\paragraph{Objection 4: the first two R-085 Taylor families may still be used
+as an extra reserve.}
+\textbf{UPHELD as double counting.}  They are constituents of the complete
+raw block (6.14), which has already been terminalized and paid once.
+
+\paragraph{Objection 5: positivity of $B_1$ controls $G^TLc$ uniformly.}
+\textbf{UPHELD as unsupported.}  At fixed strictly positive target heat,
+$B_1=P_{\Sigma_{\rm tar}}B_R(U+a)$ can have better rank than the unheated
+Gram.  Square completion would nevertheless require a cutoff- and root-
+uniform estimate of $G^TLB_1^\dagger L^TG$ together with range control.  No
+current authority supplies it.  The exact unheated fixture proves only that
+such an estimate cannot be uniform as $\Sigma_{\rm tar}\downarrow0$.
+
+\paragraph{Objection 6: the unheated range contraction orders the heat-lifted
+Wick form.}
+\textbf{UPHELD as false.}  Heat averaging gives only the upper bound (7.7).
+Subtracting covariance is not monotone under coefficient PSD order, and an
+upper coefficient bound does not prove the missing signed inequality.
+
+\paragraph{Objection 7: the target square may be written without
+$P_{\Sigma_{\rm tar}}$.}
+\textbf{UPHELD as false.}  The endpoint coefficient in Section 6 is
+$B_1=P_{\Sigma_{\rm tar}}B_R(U+a)$.  Its square is the heat expectation
+(8.2a).  Dropping this heat changes the theorem.
+
+\paragraph{Objection 8: the finite-filtration executables prove the analytic
+theorem by enumeration.}
+\textbf{DISMISSED.}  The proof is (3.3)--(3.5) and (4.2)--(4.3).  The
+executables are adversarial certificates for the algebra, scope failures,
+Taylor ownership, and production constants; they are not a substitute for
+the conditional-Fubini proof.
+
+\paragraph{Objection 9: this finishes Sector A.}
+\textbf{UPHELD as false.}  Gate (8.2), complete $H_N$, REG, progressive
+assembly, $\mathrm{OVERLAP}_{\rm src}$, Nelson, cutoff/floor removal, and the
+measure theorem remain open.  Tier is T4 before and after.
+
+\paragraph{Executable adversarial audit.}
+Sign and factor checks retain the physical outer $1/2$, symmetric mixed
+contraction, and six-real $B_R=4c_1g\otimes g$ convention.  The target square
+uses $P_{\Sigma_{\rm tar}}$, not an unheated substitute.  Production constants
+and floor are derived from the hash-pinned A1 manifest; the independent route
+parses the same declared decimals into exact fractions without importing the
+primary code.  Limit fixtures include a nonzero fixed-low endpoint, correlated
+value--gradient roots, a derivative-dependent coefficient, a fresh-root
+control, a two-site nonlocal coefficient, zero and near-floor rational states,
+pure doublet and kernel states, and generic states.  No convergence as
+$J\to\infty$, $\epsilon_\rho\downarrow0$, or
+$\Sigma_{\rm tar}\downarrow0$ is asserted.  External review is invited on
+heat placement, the real/complex covariance factor, the endpoint-square
+telescope, the balanced-versus-total Taylor remainder, target-heat uniformity,
+and the no-double-counting ledger.
+
+\section{Executable verification}
+
+The primary verifier checks a nonlinear three-root filtration, a genuinely
+nonzero fixed-low endpoint, scope-breaking fixtures, random noncommuting
+derivative-current identities, the matched control-square telescope, exact
+Taylor ownership, constants and floor derived directly from the A1 manifest,
+and zero, near-floor, doublet, kernel, and generic rational range cases.  The
+independent verifier uses only the Python standard library, parses A1 decimals
+as exact fractions, and imports neither the primary verifier nor NumPy.  The
+two routes independently derive and assert the scalar coefficients $40/81$,
+$-25/81$, $65/81$, $4$, and $4225/52488$.  The
+integrated verifier reruns both, cross-checks their five production constants,
+pins upstream and package hashes, audits the proof note and PDF, and checks all
+public surfaces, count contracts, and no-overclaim flags.  The final contracts
+are primary $187/187$, independent $38/38$, integrated $276/276$, and aggregate
+$501/501$.
+
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+  a13_classii_raw_wick_heat_baseline_orthogonality_
+  rational_current_reduction_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-RAW-WICK-HEAT-BASELINE-ORTHOGONALITY-
+           RATIONAL-CURRENT-REDUCTION
+Ledger:    R-101.
+Title:     Raw-Wick heat-baseline orthogonality and rational
+           current reduction.
+Precise statement:
+           Under locality, real-even same-point value-gradient covariance,
+           and strict-past control, the moving heat coefficient is
+           conditionally orthogonal to the fresh full-Wick increment.
+           Cross-Doob terminalization assigns the complete heat-lifted raw
+           block once. The remaining regular rational packet is
+           K_R=G^T L c+c^T(P_Sigma B_R)(U+a)c/2.
+Scope:     Finite cutoff, fixed positive floor, local coefficient; regular
+           mutually orthogonal strict-past one-shot controls for the
+           quantitative residual. No same-root or revisit extension.
+Dependencies:
+           A1 production-functional manifest; R-063; R-071; R-076; R-083;
+           R-084; R-085; R-094; R-096; R-097; R-100.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+           a13_classii_raw_wick_heat_baseline_orthogonality_
+           rational_current_reduction_verify.py
+Expected output:
+           Manifest-pinned primary, standard-library independent,
+           integrated, and aggregate PASS; exit zero.
+Explorations:
+           EXP-000243--EXP-000249.
+Falsification gate:
+           Failure of locality/value-gradient independence/strict-past
+           scope, P_Sigma heat composition, the indexed square telescope,
+           cross-Doob identity, heat-lifted Taylor ownership, range identity,
+           upstream hashes, PDF QA, ledger/count, or T4 boundary.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No lower bound for the heat-lifted balanced K_R packet, no
+           fixed-heat coercivity theorem, no uniform Sigma->0 statement,
+           complete H_N, REG, progressive H_A, OVERLAP_src, Nelson,
+           cutoff/floor removal, measure construction, T5--T7, or Sector-A
+           closure is proved.
+Next required action:
+           Prove (8.2) uniformly over the admissible target heats with the
+           actual P_Sigma endpoint square, retaining a positive terminal-
+           square fraction, before regular H_N/REG reassembly and the
+           progressive R-087 CORE/Nelson bridge.
+\end{verbatim}
+\endgroup
