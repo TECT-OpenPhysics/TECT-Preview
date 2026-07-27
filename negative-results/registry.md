@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION](#ng-2026-07-27-a13-nonnegative-per-subvisit-cartan-atomization) | refinement-stable nonnegative per-subvisit extension of the R-085/R-088 Cartan atom ledger using only the mixed energy--terminal-sextic payload | two opposite subvisits of one source-block traverse, sharing the same fixed target heat and root derivative, cancel exactly when grouped signed but each has a nonzero far harmonic with squared size `cA^2`; the mixed payload is only `O(A)`. Only this per-subvisit architecture is retired: distinct temporal roots/heats, a once-only pure-`X` payment, the complete signed form, and the regular one-shot class remain open or intact |
 | [NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE](#ng-2026-07-27-a13-predictability-only-low-hermite-aggregate) | root-uniform control of the terminalized low-Hermite coefficient from predictability and a local one-use estimate alone | reusing one old Gaussian `H_2` root in `N` predictable rows gives pairing `2N` but squared norm `2N^2`; terminalization is exact, but a production-weighted spatial/root gain or direct signed cancellation is still required |
 | [NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY](#ng-2026-07-27-a13-automatic-posterior-covariance-positivity) | close the terminal Schur packet by declaring `J_B+E[B:(V_B-Gamma)]` automatically nonnegative | bounded Rademacher and complete Gaussian-forest fixtures have a negative optimized bracket even after exact q/r ownership is restored; `J_B` must remain coupled to the covariance deficit, and the production-weighted full-frame lower form is still open |
 | [NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY](#ng-2026-07-27-a13-predictable-baseline-support-implies-payability) | close each R-077 rational predictable baseline immediately after the R-086 genuine large-gap `T_Q^>,T_G^>` support sets become empty | support removes the terminal coefficient-dominant resonance after a fixed payable collar, but the remaining five-family and shifted terms are evaluated at the moving adapted base `X_(k-1)+A^(k-1)`; existing deterministic-translation/payment theorems do not sum that base uniformly, and rootwise Young would duplicate the global energy and sextic budgets |
@@ -121,6 +122,47 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-27-a13-nonnegative-per-subvisit-cartan-atomization"></a>
+### NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION -- nonnegative Cartan atoms are not stable under opposite subvisit refinement
+
+**Failure mode:** Extend the R-085 (4.10)--(4.11), or corrected R-088
+direct-root, architecture to arbitrary refinements by assigning a
+nonnegative atom ledger to every subvisit before signed grouping, and bound
+their sum uniformly by only the mixed Cameron--Martin-energy/terminal-sextic
+payload.
+
+**Evidence:** In the production Cartan slice `S=diag(1,-1)`, take
+`f_epsilon(theta)=(sin theta,epsilon cos theta)` and refine one deterministic
+source-block traverse into the opposite shifts
+`a_+=Af_epsilon`, `a_-=-Af_epsilon`. Both subvisits use the same fixed target
+heat and the same root derivative. Endpoint reversal gives the exact
+pathwise cancellation `T_A^-=-T_A^+` before squaring. For every fixed gap,
+however, the normalized large-`A` atom has nonzero far coefficients
+
+`[sin(k phi)]tau_epsilon
+ =-2epsilon(1-rho^2)rho^(k-1)`, `k>=2`,
+
+where `rho=(1-epsilon)/(1+epsilon)`. At `epsilon=1/2` these are
+`-8/3^(k+1)`, including `-8/27` and `-8/81`. Hence a fixed nonzero far
+Littlewood--Paley block forces each nonnegative subvisit ledger to contribute
+order `A^2`, so `q_++q_->=cA^2`. The complete loop has terminal shift zero,
+source cost `X=2kappa A^2`, and terminal sextic `Y` independent of `A`;
+therefore `1+E[X^(1/2)Y^(1/2)]=O(1+A)`. No constant uniform in `A` can give
+the proposed per-subvisit mixed-payload bound. The primary and independent
+R-098 executables separately verify the reverse cancellation, Fourier
+coefficients, floor correction, `A^2` scaling, and deliberately incorrect
+power/scaling mutants.
+
+**Consequence:** Nonnegative atomization before signed grouping is retired
+only for this partition-refinement scope. The valid successor must group the
+complete signed subvisit/terminal packet before squaring or use a genuinely
+once-only ledger. The fixture does not cover distinct temporal visits with
+different probability roots or target heats, and it does not contradict a
+once-only pure-`X` payment, the complete signed production form, R-085's
+regular physical-shell one-shot target, or R-092's regular no-revisit `H_C`
+theorem. It is a method no-go, not a counterexample to Sector A or the Nelson
+objective.
 
 <a id="ng-2026-07-27-a13-predictability-only-low-hermite-aggregate"></a>
 ### NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE -- terminalization does not control aggregate reuse

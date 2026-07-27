@@ -1,0 +1,833 @@
+{
+  "assertions": [
+    {
+      "actual": [],
+      "expected": [],
+      "group": "independence",
+      "name": "no_numerical_package_import",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "__future__",
+        "argparse",
+        "ast",
+        "fractions",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "tempfile",
+        "typing"
+      ],
+      "expected": "primary module absent",
+      "group": "independence",
+      "name": "does_not_import_primary_module",
+      "status": "PASS"
+    },
+    {
+      "actual": "26/15",
+      "expected": "26/15",
+      "group": "posterior",
+      "name": "strict_gap_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "26/15",
+      "expected": "26/15",
+      "group": "posterior",
+      "name": "fractional_square_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "26/15",
+      "expected": "26/15",
+      "group": "posterior",
+      "name": "wick_terms_cancel_in_superadditivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0/1",
+      "expected": "0/1",
+      "group": "posterior",
+      "name": "equality_characterization_fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/3",
+      "expected": "< 0",
+      "group": "posterior",
+      "name": "same_payment_reuse_mutant_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/125",
+      "expected": "3/125",
+      "group": "rational",
+      "name": "b_minus_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "2187/21125",
+      "expected": "2187/21125",
+      "group": "rational",
+      "name": "b_plus_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "336/4225",
+      "expected": "336/4225",
+      "group": "rational",
+      "name": "delta_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "-112/4225",
+      "expected": "-112/4225",
+      "group": "rational",
+      "name": "three_atom_cpost_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "-112/4225",
+      "expected": "< 0",
+      "group": "rational",
+      "name": "three_atom_cpost_negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1275544/78125",
+      "expected": "1275544/78125",
+      "group": "rational",
+      "name": "monotone_factor_identity_1/10",
+      "status": "PASS"
+    },
+    {
+      "actual": "1275544/78125",
+      "expected": "> 0",
+      "group": "rational",
+      "name": "monotone_derivative_positive_1/10",
+      "status": "PASS"
+    },
+    {
+      "actual": "100/1",
+      "expected": "100/1",
+      "group": "rational",
+      "name": "monotone_factor_identity_1/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "100/1",
+      "expected": "> 0",
+      "group": "rational",
+      "name": "monotone_derivative_positive_1/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "416/1",
+      "expected": "416/1",
+      "group": "rational",
+      "name": "monotone_factor_identity_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "416/1",
+      "expected": "> 0",
+      "group": "rational",
+      "name": "monotone_derivative_positive_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1944/1",
+      "expected": "1944/1",
+      "group": "rational",
+      "name": "monotone_factor_identity_3/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1944/1",
+      "expected": "> 0",
+      "group": "rational",
+      "name": "monotone_derivative_positive_3/2",
+      "status": "PASS"
+    },
+    {
+      "actual": "631304/1",
+      "expected": "631304/1",
+      "group": "rational",
+      "name": "monotone_factor_identity_4",
+      "status": "PASS"
+    },
+    {
+      "actual": "631304/1",
+      "expected": "> 0",
+      "group": "rational",
+      "name": "monotone_derivative_positive_4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1",
+      "expected": "1/1",
+      "group": "rational",
+      "name": "selector_gamma_one",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "0/1",
+        0.0
+      ],
+      "expected": [
+        "0/1",
+        0.0
+      ],
+      "group": "rational",
+      "name": "selector_q_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "group": "rational",
+      "name": "selector_r_zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-112/4225",
+      "expected": "-112/4225",
+      "group": "rational",
+      "name": "selector_sign_direct",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/250",
+      "expected": "9/250",
+      "group": "rational",
+      "name": "full_frame_minus_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "8937/42250",
+      "expected": "8937/42250",
+      "group": "rational",
+      "name": "full_frame_plus_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1236/21125",
+      "expected": "-1236/21125",
+      "group": "rational",
+      "name": "full_frame_cpost_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/25",
+      "expected": "-1/25",
+      "group": "ridge",
+      "name": "rank_one_colon_0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1429/2500",
+      "expected": "-1429/2500",
+      "group": "ridge",
+      "name": "rank_one_colon_1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2471/10000",
+      "expected": "-2471/10000",
+      "group": "ridge",
+      "name": "rank_one_colon_2",
+      "status": "PASS"
+    },
+    {
+      "actual": [
+        "583/10000",
+        "193/1250"
+      ],
+      "expected": [
+        "583/10000",
+        "193/1250"
+      ],
+      "group": "ridge",
+      "name": "stationarity_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "-267063281/848445000",
+      "expected": "-267063281/848445000",
+      "group": "ridge",
+      "name": "objective_at_minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": "1857/1000",
+      "expected": "1857/1000",
+      "group": "ridge",
+      "name": "completion_gap_(Fraction(1, 1), Fraction(0, 1))",
+      "status": "PASS"
+    },
+    {
+      "actual": "2293/1000",
+      "expected": "2293/1000",
+      "group": "ridge",
+      "name": "completion_gap_(Fraction(0, 1), Fraction(1, 1))",
+      "status": "PASS"
+    },
+    {
+      "actual": "40471/18750",
+      "expected": "40471/18750",
+      "group": "ridge",
+      "name": "completion_gap_(Fraction(2, 3), Fraction(-4, 5))",
+      "status": "PASS"
+    },
+    {
+      "actual": "-160107495424/519144753125",
+      "expected": "!= direct ridge",
+      "group": "ridge",
+      "name": "missing_factor_two_mutant_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-89/560",
+      "expected": "-89/560",
+      "group": "recovery",
+      "name": "owner_identity_exact_value",
+      "status": "PASS"
+    },
+    {
+      "actual": "-569/560",
+      "expected": "!= correct",
+      "group": "recovery",
+      "name": "unshifted_sign_mutant_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "-547/1680",
+      "expected": "!= correct",
+      "group": "recovery",
+      "name": "posterior_half_factor_mutant_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.19199999999999987,
+      "expected": -0.192,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_2",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.11519999999999968,
+      "expected": -0.1152,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_3",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.06911999999999988,
+      "expected": -0.06911999999999999,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_4",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.04147200000000047,
+      "expected": -0.041472,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_5",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.02488320000000045,
+      "expected": -0.024883199999999994,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_6",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.01492991999999959,
+      "expected": -0.014929919999999998,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_7",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.008957952000000017,
+      "expected": -0.008957951999999998,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.25_k_8",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.29629629629629917,
+      "expected": -0.2962962962962963,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_2",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.09876543209876504,
+      "expected": -0.09876543209876543,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_3",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.03292181069958872,
+      "expected": -0.032921810699588466,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_4",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.010973936899862756,
+      "expected": -0.010973936899862823,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_5",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.003657978966620788,
+      "expected": -0.0036579789666209405,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_6",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.0012193263222067018,
+      "expected": -0.00121932632220698,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_7",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.00040644210740226836,
+      "expected": -0.0004064421074023267,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.5_k_8",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.20991253644314734,
+      "expected": -0.20991253644314867,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_2",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.02998750520616395,
+      "expected": -0.029987505206164094,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_3",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.004283929315166268,
+      "expected": -0.004283929315166299,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_4",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.0006119899021666833,
+      "expected": -0.000611989902166614,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_5",
+      "status": "PASS"
+    },
+    {
+      "actual": -8.74271288809473e-05,
+      "expected": -8.742712888094486e-05,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_6",
+      "status": "PASS"
+    },
+    {
+      "actual": -1.2489589840191132e-05,
+      "expected": -1.2489589840134978e-05,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_7",
+      "status": "PASS"
+    },
+    {
+      "actual": -1.784227120007078e-06,
+      "expected": -1.7842271200192826e-06,
+      "group": "cartan",
+      "name": "independent_quadrature_eps_0.75_k_8",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.2962962962962963,
+      "expected": "-8/27",
+      "group": "cartan",
+      "name": "half_epsilon_exact_2",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.2962962962962963,
+      "expected": "-8/81",
+      "group": "cartan",
+      "name": "wrong_power_mutant_2",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.09876543209876543,
+      "expected": "-8/81",
+      "group": "cartan",
+      "name": "half_epsilon_exact_3",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.09876543209876543,
+      "expected": "-8/243",
+      "group": "cartan",
+      "name": "wrong_power_mutant_3",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.00013548070246744223,
+      "expected": "-8/59049",
+      "group": "cartan",
+      "name": "half_epsilon_exact_9",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.00013548070246744223,
+      "expected": "-8/177147",
+      "group": "cartan",
+      "name": "wrong_power_mutant_9",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.1043506841508392,
+      "expected": -0.10435068415145239,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.4_A_3.0_theta_0.31",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.6714564617223041,
+      "expected": 0.6714564617245603,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.4_A_3.0_theta_0.93",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.10665885544871766,
+      "expected": -0.10665885545078073,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.4_A_17.0_theta_0.31",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.6735280183588624,
+      "expected": 0.6735280183721024,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.4_A_17.0_theta_0.93",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.1927321913579179,
+      "expected": -0.1927321913618593,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.7_A_3.0_theta_0.31",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.27880243608729477,
+      "expected": 0.27880243608575145,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.7_A_3.0_theta_0.93",
+      "status": "PASS"
+    },
+    {
+      "actual": -0.19370913602442638,
+      "expected": -0.19370913602685164,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.7_A_17.0_theta_0.31",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.27944206647782,
+      "expected": 0.2794420664838356,
+      "group": "cartan",
+      "name": "finite_floor_current_eps_0.7_A_17.0_theta_0.93",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.0,
+      "expected": 0.0,
+      "group": "cartan",
+      "name": "same_heat_root_signed_cancellation",
+      "status": "PASS"
+    },
+    {
+      "actual": 1.8298998939376672,
+      "expected": "> 0.1",
+      "group": "cartan",
+      "name": "distinct_heat_mutant_not_cancelled",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/59049",
+      "expected": "16/59049",
+      "group": "cartan",
+      "name": "time_and_sine_half_factors_exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "262144/513",
+      "expected": "> 256",
+      "group": "cartan",
+      "name": "mixed_budget_ratio_diverges_fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1",
+      "expected": "1/1",
+      "group": "cartan",
+      "name": "pure_source_payment_is_critical",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.3350843099443337,
+      "expected": "<= 0.6178649384946187",
+      "group": "resampling",
+      "name": "polarization_factor_three_holds",
+      "status": "PASS"
+    },
+    {
+      "actual": 0.3350843099443337,
+      "expected": "> 0.2059549794982062",
+      "group": "resampling",
+      "name": "deleted_factor_three_rejected",
+      "status": "PASS"
+    },
+    {
+      "actual": "39/1",
+      "expected": "39/1",
+      "group": "resampling",
+      "name": "cube_second_moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "29/1",
+      "expected": "29/1",
+      "group": "resampling",
+      "name": "conditional_variance_left",
+      "status": "PASS"
+    },
+    {
+      "actual": "58/1",
+      "expected": "58/1",
+      "group": "resampling",
+      "name": "independent_resample_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/1",
+      "expected": "63/1",
+      "group": "resampling",
+      "name": "hoeffding_multiplicity_identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "50/1",
+      "expected": "50/1",
+      "group": "resampling",
+      "name": "two_root_interaction_counted_twice",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1024",
+      "expected": "1/1024",
+      "group": "resampling",
+      "name": "hardy_integer_sum_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/1024",
+      "expected": "< 1/512",
+      "group": "resampling",
+      "name": "hardy_strict_gain_3",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/16384",
+      "expected": "3/16384",
+      "group": "resampling",
+      "name": "hardy_integer_sum_4",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/16384",
+      "expected": "< 1/4096",
+      "group": "resampling",
+      "name": "hardy_strict_gain_4",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/262144",
+      "expected": "7/262144",
+      "group": "resampling",
+      "name": "hardy_integer_sum_5",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/262144",
+      "expected": "< 1/32768",
+      "group": "resampling",
+      "name": "hardy_strict_gain_5",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/4194304",
+      "expected": "15/4194304",
+      "group": "resampling",
+      "name": "hardy_integer_sum_6",
+      "status": "PASS"
+    },
+    {
+      "actual": "15/4194304",
+      "expected": "< 1/262144",
+      "group": "resampling",
+      "name": "hardy_strict_gain_6",
+      "status": "PASS"
+    },
+    {
+      "actual": "31/67108864",
+      "expected": "31/67108864",
+      "group": "resampling",
+      "name": "hardy_integer_sum_7",
+      "status": "PASS"
+    },
+    {
+      "actual": "31/67108864",
+      "expected": "< 1/2097152",
+      "group": "resampling",
+      "name": "hardy_strict_gain_7",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/1073741824",
+      "expected": "63/1073741824",
+      "group": "resampling",
+      "name": "hardy_integer_sum_8",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/1073741824",
+      "expected": "< 1/16777216",
+      "group": "resampling",
+      "name": "hardy_strict_gain_8",
+      "status": "PASS"
+    },
+    {
+      "actual": "127/17179869184",
+      "expected": "127/17179869184",
+      "group": "resampling",
+      "name": "hardy_integer_sum_9",
+      "status": "PASS"
+    },
+    {
+      "actual": "127/17179869184",
+      "expected": "< 1/134217728",
+      "group": "resampling",
+      "name": "hardy_strict_gain_9",
+      "status": "PASS"
+    },
+    {
+      "actual": "255/274877906944",
+      "expected": "255/274877906944",
+      "group": "resampling",
+      "name": "hardy_integer_sum_10",
+      "status": "PASS"
+    },
+    {
+      "actual": "255/274877906944",
+      "expected": "< 1/1073741824",
+      "group": "resampling",
+      "name": "hardy_strict_gain_10",
+      "status": "PASS"
+    },
+    {
+      "actual": "511/4398046511104",
+      "expected": "511/4398046511104",
+      "group": "resampling",
+      "name": "hardy_integer_sum_11",
+      "status": "PASS"
+    },
+    {
+      "actual": "511/4398046511104",
+      "expected": "< 1/8589934592",
+      "group": "resampling",
+      "name": "hardy_strict_gain_11",
+      "status": "PASS"
+    },
+    {
+      "actual": "1023/70368744177664",
+      "expected": "1023/70368744177664",
+      "group": "resampling",
+      "name": "hardy_integer_sum_12",
+      "status": "PASS"
+    },
+    {
+      "actual": "1023/70368744177664",
+      "expected": "< 1/68719476736",
+      "group": "resampling",
+      "name": "hardy_strict_gain_12",
+      "status": "PASS"
+    },
+    {
+      "actual": "31/67108864",
+      "expected": "31/67108864",
+      "group": "resampling",
+      "name": "hardy_trap_j0_2_k_7",
+      "status": "PASS"
+    },
+    {
+      "actual": "1519/838860800",
+      "expected": "2*kappa_K^2*mass",
+      "group": "resampling",
+      "name": "hardy_prefactor_retained",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/67108864",
+      "expected": "> 2^-21",
+      "group": "resampling",
+      "name": "include_j_equal_k_mutant_rejected",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 111,
+  "assertions_total": 111,
+  "claim_id": "A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION",
+  "diagnostics": {
+    "frame_secant_constant": 0.6178649384946187,
+    "full_frame_cpost_without_e_over_p": "-1236/21125",
+    "hardy_j0_2_k_7": "31/67108864",
+    "maximum_finite_floor_radial_error": 1.3239964680167304e-11,
+    "maximum_fourier_error": 2.886579864025407e-15,
+    "rational_cpost_without_e_over_p": "-112/4225",
+    "rational_three_atom_gamma": "1/1",
+    "rational_three_atom_max_abs_r": 0.0,
+    "rational_three_atom_q_sqrt2_coefficient": "0/1",
+    "strict_posterior_gap": "26/15"
+  },
+  "no_overclaim": "Independent exact and quadrature checks for the R-098 reductions and refinement-stable per-subvisit method boundary only; Sector A remains open.",
+  "package_version": "1.0.1",
+  "result_id": "A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY",
+  "schema": "tect/a13-signed-first-cartan-rational-ridge-boundary-independent/1.0",
+  "status": "PASS"
+}

@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET)_
-  - R-097 closed the heat-lifted Gram telescope, terminal theta=0 Schur identity, posterior normal form, and derivative-free predictable Wick/cross-Doob terminalisation. Next prove the production-weighted full-frame posterior-covariance bracket with every owner used once; Cartan (4.11), rational (6.5), H_N, REG, assembly, Nelson, and Sector A remain open.
+  - R-098 proves matching-payment posterior superadditivity, the exact rational ridge and R-085 (6.5) recovery boundaries, and a narrow same-heat/root partition-refinement no-go for nonnegative per-subvisit Cartan atoms. Next group signed refinements before squaring and prove a causal-resampling or direct signed spatial lower form for the production posterior bracket with every owner used once; Cartan (4.11), rational (6.5), H_N, REG, assembly, Nelson, and Sector A remain open.
   - _updated 2026-07-27_
 
 ## Next up

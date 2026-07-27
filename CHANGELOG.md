@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [R-098 explicit three-atom symmetry verification repair] - 2026-07-27
+
+Repaired an adversarially detected evidence gap without changing the theorem. The primary certificate had accepted q=0 through a literal truth value, while the independent certificate used zero first moments separately from the declared squared atoms and neither executed the transformed-mean r=0 check. Both implementations now construct the same signed three-atom law G=0,+sqrt(2),-sqrt(2), verify Gamma=1 and q=0, and evaluate the even Theta_R(B) square-root at three positive payments to verify r=0. The integrated verifier pins all six symmetry assertions. Updated counts are primary 138/138, standard-library independent 111/111, integrated 208/208, and aggregate 457/457. The R-098 scope and T4 boundary are unchanged.
+
+## [R-098 signed-first Cartan partition-refinement and rational ridge boundary] - 2026-07-27
+
+Registered R-098 at scoped T4. Matching row/payment splits make the terminal posterior bracket superadditive, the rational rank-one row is an exact conditional ridge deficit, and standalone R-085 (6.5) still requires an upper form for the five unshifted families. A same-heat/root opposite refinement forces separate Cartan squares of order A^2 against only an order-A mixed payload while cancelling exactly when grouped signed, so refinement-stable nonnegative per-subvisit atomization is retired in that narrow scope. Distinct temporal roots/heats, once-only pure-X payment, regular H_C, the signed grouped posterior form, Cartan (4.11), rational (6.5), H_N, REG, OVERLAP_src, Nelson, measure construction, and Sector A remain open. Primary 136/136 and independent 109/109 checks pass; integrated/release contracts pin 202/202 and aggregate 447/447.
+
 ## [A13 R-097: terminalise the global Gram form to a posterior-covariance bracket] - 2026-07-27
 
 R-097 proves the backward-heat Gram telescope, terminal theta=0 Schur identity, exact posterior normal form C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2 with J_B nonnegative, and derivative-free predictable Wick/cross-Doob terminalisation. Exact finite fixtures reject predictability-only low-Hermite aggregation and automatic posterior-covariance positivity. The production-weighted full-frame bracket, Cartan (4.11), rational (6.5), complete H_N, REG, progressive/revisit assembly, OVERLAP_src, Nelson, and Sector A remain open.

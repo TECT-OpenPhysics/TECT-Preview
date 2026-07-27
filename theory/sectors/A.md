@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION | nonnegative Cartan atoms are not stable under opposite subvi | Extend the R-085 (4.10)--(4.11), or corrected R-088 |
 | NG-2026-07-27-A13-PREDICTABILITY-ONLY-LOW-HERMITE-AGGREGATE | terminalization does not control aggregate reuse | Terminalize every predictable quadratic-Wick row into one |
 | NG-2026-07-27-A13-AUTOMATIC-POSTERIOR-COVARIANCE-POSITIVITY | the exact posterior bracket is signed | After terminal Schur completion, discard the full positive |
 | NG-2026-07-27-A13-PREDICTABLE-BASELINE-SUPPORT-IMPLIES-PAYABILITY | support collapse does not pay the moving adapted base | Apply the R-086 Gram/Taylor split to every R-077 |

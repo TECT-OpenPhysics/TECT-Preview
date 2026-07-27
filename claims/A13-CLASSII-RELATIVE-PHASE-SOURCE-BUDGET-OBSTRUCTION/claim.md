@@ -621,6 +621,24 @@ the following structural results and proof-architecture boundaries hold.
     counterexamples. The production full-frame posterior-covariance form,
     Cartan one-use (4.11), rational (6.5), complete `H_N`, REG,
     `OVERLAP_src`, Nelson, and Sector A remain open.
+41. `A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY` is R-098. It
+    proves posterior superadditivity under a matching row/payment split and
+    identifies the production rational rank-one row as an exact conditional
+    ridge deficit. Reconciliation with the R-097 terminal identity shows that
+    standalone R-085 (6.5) still needs the low endpoint, actual matrix payment,
+    and an upper form for the five unshifted families. A bounded production-
+    coefficient fibre has negative rational ridge deficit but is not a torus
+    control counterexample. An anisotropic production Cartan slice then shows
+    that two opposite subvisits refining one source-block secant, sharing the
+    same fixed target heat and root derivative, each have far squared size
+    `cA^2` although their mixed payload is only `O(A)`; their signed atoms
+    cancel exactly before squaring. This retires only refinement-stable
+    nonnegative per-subvisit atomization. It does not cover distinct temporal
+    roots/heats, a once-only pure-`X` payment, or the regular one-shot class.
+    Derivative-free resampling supplies the bare `2^(-3k)` Hardy mass but not a
+    once-only interaction ledger. The signed grouped posterior form, Cartan
+    (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, and
+    Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -668,6 +686,7 @@ is a scoped T4 subproof and does not promote A13.
 | Fractional feedback-square / perspective ownership boundary | Exact moving-prefix defect, fractional matrix-perspective iff, conditional resolvent-gap identity, critical absolute allocation schedule, and near-`T_G^>` Cartan homotopy | T4 analytic/exact/executed boundary; complete signed rootwise packet, `H_N`, REG, progression, and Nelson open |
 | Gram-first predictable baselines / low-Hermite Wick boundary | Complete-cancellation-first ordering, product/Doob covariance defect, fixed-collar support collapse of genuine baseline `T_Q^>,T_G^>`, coordinate Hermite rank-zero-to-two compression, and full-square `q/r` ownership | T4 analytic/exact/executed reduction; global moving adapted-base payment, complete `H_N`, REG, progression, and Nelson open |
 | Global Gram terminalization / posterior-covariance boundary | Complete Gram-row backward-heat telescope, theta-zero terminal Schur completion, posterior bracket `J_B+E[B:(V_B-Gamma)]`, derivative-free predictable terminalization, complete forest ownership, and exact accumulation/positivity no-gos | T4 analytic/exact/executed reduction; production full-frame posterior lower form, Cartan (4.11), rational (6.5), complete `H_N`, REG, progression, and Nelson open |
+| Signed-first Cartan / rational ridge boundary | Matching-payment posterior superadditivity, exact rational ridge and R-085 (6.5) recovery identities, rational sign fixture, same-heat/root opposite-subvisit Cartan harmonic obstruction, finite-floor radial correction, and bare causal-resampling Hardy mass | T4 analytic/exact/executed advance and method boundary; signed grouped posterior spatial form, Cartan (4.11), rational (6.5), complete `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -854,6 +873,15 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
   terminalization preserves only low Hermite ranks, but exact fixtures rule
   out automatic bracket positivity and predictability-only aggregate
   control. The production-weighted full-frame bracket remains open.
+- R-098 proves matching-payment posterior superadditivity, the rational
+  conditional ridge normal form, and the exact owner/sign boundary for
+  recovering standalone R-085 (6.5). It also proves that nonnegative
+  per-subvisit Cartan atoms are not stable under an opposite refinement of
+  one source-block secant when the subvisits share the same heat/root and only
+  the mixed payload is allowed. Signed grouping cancels that refinement
+  exactly. Distinct temporal roots/heats, a once-only pure-`X` reserve, and the
+  regular one-shot theorem are not covered. The resampling successor has only
+  a bare summable kernel; the signed grouped production form remains open.
 
 Tier: **T4**, lifecycle **ACTIVE**. The finite convolution, Hermite, carrier,
 cone, Ramer, and manufactured-mode computations are independent regression
@@ -889,15 +917,22 @@ Current subordinate order:
    low endpoint and paying the matrix cost from one actual Cameron--Martin
    reserve. Keep `q`, `r`, trace, and the complete R-063 forest in their
    unique owners;
-4. prove one cutoff-uniform production-weighted lower form for the full-frame
-   posterior bracket `J_B+E[B:(V_B-Gamma)]`, retaining `J_B` with the signed
-   covariance deficit. Supply either a weighted aggregate low-Hermite/Doob
-   spatial/root gain or a direct signed cancellation. Do not use
-   predictability-only aggregation or automatic posterior positivity;
-5. assemble the complete R-079 packet into the temporally faithful refinement-
+4. use R-098 payment superadditivity only with a matching split
+   `B=sum_a B_a`, `R=sum_a R_a`; never duplicate the full payment across
+   rows. For the rational row retain the exact ridge deficit and the R-098
+   recovery identity, including the upper-form requirement on the five
+   unshifted families. Do not infer positivity from a positive Gram;
+5. group every common-heat/common-root signed subvisit refinement before any
+   square or root allocation. Do not use refinement-stable nonnegative
+   per-subvisit Cartan atoms. Prove one cutoff-uniform causal-resampling or
+   direct signed lower form for the full-frame posterior bracket
+   `J_B+E[B:(V_B-Gamma)]`, retaining `J_B`, the spatial multiplier, Schur
+   mean, sextic growth, trace, heat, low endpoint, matrix payment, and R-063
+   forest exactly once. The bare `2^(-3k)` root mass is not an ANOVA ledger;
+6. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
-6. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
+7. equivalently, prove the uniform static `q=10/9` Nelson free-energy bound
    directly. R-087 CORE and R-093 show that `OVERLAP_src` and Nelson are the
    same variational objective. Free coefficient conditioning, fixed-chart
    attainment, an independent uniform fibre-entropy reserve, causal
@@ -907,17 +942,19 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-python codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction_verify.py
+python codes/foundations/a13_classii_signed_first_cartan_rational_ridge_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `91/91`;
-- standard-library exact independent `69/69`;
-- integrated `189/189` and aggregate `349/349`;
-- exact heat telescope, noncommuting terminal Schur, posterior covariance,
-  complete Hermite forest, cross-Doob, repeated-root accumulation, deliberate
-  mutation, predecessor/source/PDF/surface contracts, and T4 firewalls;
+- primary `138/138`;
+- standard-library exact independent `111/111`;
+- integrated `208/208` and aggregate `457/457`;
+- exact matching-payment posterior square, rational fractions/ridge/recovery,
+  three-atom `Gamma=1`, `q=r=0` symmetry, finite-floor Cartan radial identity,
+  corrected Fourier coefficients,
+  same-heat/root signed cancellation, factor-three and ANOVA-multiplicity
+  mutations, predecessor/source/PDF/surface contracts, and T4 firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -927,19 +964,18 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_global_gram_terminalization_covariance_deficit_reduction_manifest.json`
-- `notes/classii-global-gram-terminalization-covariance-deficit-reduction-260727-v1.0.tex.txt`
-- `notes/classii-global-gram-terminalization-covariance-deficit-reduction-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction.py`
-- `../../codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction_independent.py`
-- `../../codes/foundations/a13_classii_global_gram_terminalization_covariance_deficit_reduction_verify.py`
-- `runs/2026-07-27-primary-global-gram-terminalization-covariance-deficit-reduction/result.json`
-- `runs/2026-07-27-independent-global-gram-terminalization-covariance-deficit-reduction/result.json`
-- `runs/2026-07-27-integrated-global-gram-terminalization-covariance-deficit-reduction/result.json`
-- `../../RESULTS-LEDGER.md#r-097`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-predictability-only-low-hermite-aggregate`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-automatic-posterior-covariance-positivity`
-- `../../explorations/log.jsonl` (`EXP-000214`--`EXP-000220`)
+- `classii_signed_first_cartan_rational_ridge_boundary_manifest.json`
+- `notes/classii-signed-first-cartan-rational-ridge-boundary-260727-v1.0.tex.txt`
+- `notes/classii-signed-first-cartan-rational-ridge-boundary-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_signed_first_cartan_rational_ridge_boundary.py`
+- `../../codes/foundations/a13_classii_signed_first_cartan_rational_ridge_boundary_independent.py`
+- `../../codes/foundations/a13_classii_signed_first_cartan_rational_ridge_boundary_verify.py`
+- `runs/2026-07-27-primary-signed-first-cartan-rational-ridge-boundary/result.json`
+- `runs/2026-07-27-independent-signed-first-cartan-rational-ridge-boundary/result.json`
+- `runs/2026-07-27-integrated-signed-first-cartan-rational-ridge-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-098`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-nonnegative-per-subvisit-cartan-atomization`
+- `../../explorations/log.jsonl` (`EXP-000221`--`EXP-000225`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1734,6 +1770,22 @@ registry, exploration, or public-surface pin; primary `91/91`, independent
 production posterior-covariance form, Cartan (4.11), rational (6.5), complete
 `H_N`, REG, `OVERLAP_src`, Nelson, measure, Sector-A, or tier claim.
 
+The R-098 continuation is additionally falsified by failure of payment-split
+posterior superadditivity or its exact fractional-square certificate; reuse of
+the same full payment in every child; failure of the rational rank-one ridge
+or R-085 (6.5) recovery identity, any exact fraction or negative sign fixture;
+failure of the finite-floor radial formula, the coefficient
+`-8/3^(k+1)`, same-heat/root reverse cancellation, far `A^2` scaling, or
+mixed-budget `O(A)` separation; failure of the frame factor three,
+Efron--Stein resampling identity, Hoeffding multiplicity, retained
+`2 kappa_K^2` prefactor, or strict Hardy mass; any deliberate mutation,
+authority, source, note, PDF, manifest, registry, exploration, or public-
+surface pin; primary `138/138`, independent `111/111`, integrated `208/208`,
+or aggregate `457/457`; or any promotion to a no-go for distinct temporal
+roots/heats, a rejection of once-only pure-`X` payment or R-092 regular
+`H_C`, a production posterior lower form, Cartan (4.11), rational (6.5),
+complete `H_N`, REG, `OVERLAP_src`, Nelson, measure, Sector-A, or higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -1937,6 +1989,20 @@ rational shifted-Hessian form (6.5), complete coefficient-unconditioned
 `H_N`, REG, arbitrary progressive/revisit `H_A`, `OVERLAP_src`, Nelson,
 cutoff or floor removal, a measure theorem, Sector-A closure, or T5--T7.
 Tier stays T4.
+
+R-098 proves matching-payment posterior superadditivity, the rational
+conditional ridge and standalone recovery identities, the exact rational
+coefficient-fibre sign boundary, a finite-floor Cartan radial formula, and a
+narrow method no-go for refinement-stable nonnegative per-subvisit atoms.
+The signed cancellation assumes that the opposite subvisits refine one
+source-block secant and share the same fixed heat and root derivative. It does
+not apply automatically to distinct temporal roots/heats, refute a once-only
+pure-`X` payment, or alter R-092's regular one-shot theorem. The bare
+resampling Hardy mass is not a once-only ANOVA ledger. Consequently R-098
+does not prove a production posterior lower form, standalone Cartan (4.11),
+rational (6.5), complete coefficient-unconditioned `H_N`, REG, arbitrary
+progressive/revisit `H_A`, `OVERLAP_src`, Nelson, cutoff or floor removal, a
+measure theorem, Sector-A closure, or T5--T7. Tier stays T4.
 
 ## History
 
@@ -2357,5 +2423,22 @@ Tier stays T4.
   `91/91`, standard-library independent `69/69`, integrated `189/189`, and
   aggregate `349/349` are manifest-pinned; the ten-page PDF passed form,
   zero-overfull, and all-page Poppler QA. The production posterior bracket,
+  Cartan (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson,
+  and Sector A remain open; tier stays T4.
+- 2026-07-27: Registered R-098. The terminal posterior bracket is
+  superadditive under a matching row/payment split, and the rational row has
+  an exact conditional ridge form. The R-085 (6.5) recovery identity exposes
+  the still-missing upper form for the five unshifted families. An exact
+  rational coefficient fibre remains negative without constituting a torus
+  control. Opposite subvisits refining one source-block secant with the same
+  heat/root each have far squared size `A^2` while their mixed payload is only
+  `O(A)`; signed grouping cancels them before squaring. Thus nonnegative per-
+  subvisit atomization is retired only in this narrow refinement scope.
+  Finite-floor radial, corrected `-8/3^(k+1)` Fourier, frame-factor,
+  three-atom `Gamma=1`, `q=r=0` symmetry, resampling, interaction-multiplicity,
+  and Hardy checks all pass. Primary `138/138`, standard-library independent
+  `111/111`, integrated `208/208`, and aggregate `457/457` are manifest-pinned;
+  the nine-page PDF passed form,
+  zero-overfull, and all-page Poppler QA. The signed grouped posterior form,
   Cartan (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson,
   and Sector A remain open; tier stays T4.

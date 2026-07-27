@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-098](#r-098) | Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary | Scoped T4 analytic/exact/executed advance and method boundary: the terminal posterior bracket is superadditive under, and only claims a theorem for, a matching split `B=sum_a B_a`, `R=sum_a R_a`; the production rational rank-one row is exactly a conditional ridge deficit. An exact recovery identity shows that standalone R-085 (6.5) still requires the low endpoint, once-only Cameron--Martin payment, and an upper form for the five unshifted families. An exact production-coefficient fibre has negative ridge deficit but is not a torus/control counterexample. For two oppositely oriented subvisits refining one source-block traverse and sharing the same fixed target heat and root derivative, each squared Cartan far atom is order `A^2` while the mixed `X^(1/2)Y^(1/2)` payload is only order `A`; the signed atoms cancel exactly before squaring. Hence refinement-stable nonnegative per-subvisit atomization is retired, while distinct temporal roots/heats, once-only pure-`X` payment, and the regular one-shot class are untouched. Derivative-free causal resampling supplies the bare kernel `<2^(-3k)`, but the signed grouped posterior form, standalone Cartan (4.11), rational (6.5), complete `H_N`, REG, arbitrary progressive assembly, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-097](#r-097) | Full-frame terminalization and posterior-covariance bracket boundary | Scoped T4 analytic/exact/executed reduction: complete heat-lifted Gram rows obey a backward-heat martingale identity, so all predictable rational baselines telescope in signed expectation after the necessary diagonal heat correction. The terminal endpoint plus one allocated matrix payment has an exact theta-zero Schur completion. Conditioning on the complete control and terminal Gram coefficient reduces its signed part to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick rows also terminalize into one aggregate coefficient and cross-Doob ledger without differentiating adapted selectors. Exact Rademacher, Gaussian-forest, repeated-H2, and moving-perspective fixtures refute automatic bracket positivity and predictability-only root-uniform aggregate control, but are not production torus counterexamples. The next target is one production-weighted full-frame posterior-covariance lower form retaining every owner once. Cartan one-use (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-096](#r-096) | Gram-first predictable-baseline support collapse and low-Hermite Wick boundary | Scoped T4 analytic/exact/executed reduction: complete R-077 fresh-root cancellation must precede rational projection. On each resulting regular strict-past no-revisit predictable baseline, the R-086 rough partners are supported below `k+C_supp`, so after a fixed widened payable collar the genuine coefficient-dominant `T_Q^>,T_G^>` regions are empty. The remaining problem is the once-only global payment at the moving adapted base `X_(k-1)+A^(k-1)`, not terminal large-gap resonance. Independently, an arbitrary same-root raw quadratic Wick contraction sees only coordinate Hermite ranks zero through two; centered raw Wick, coefficient mean `q`, and transformed mean `r` occupy distinct rank-two/rank-one owners. Hermite compression creates no spatial gain, and direct Stein differentiation exposes uncontrolled adapted-selector derivatives. The next target is one global adapted-prefix payable form with all heat, low, trace, forest, and non-rational owners retained once. Complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-095](#r-095) | Fractional feedback-square perspective and near-Cartan ownership boundary | Scoped T4 analytic/exact/executed boundary: the rootwise future-feedback reserve differs from the global terminal derivative square by an exact moving-prefix defect containing low, present-prefix, and present--future cross terms with no sign; a scalar fixture gives `-1/4`. Retaining only `1-theta` of the endpoint coefficient square leaves a PSD matrix perspective exactly when `2R>=theta B`, while conditioning creates an explicit resolvent-gap debt and an indispensable terminal mean energy. The production Gram is unbounded, so no fixed reserve enforces the new domination globally. Under the actually proved prefix and absolute mean ledgers, a decaying `theta_j` requires simultaneously `alpha<1` and `alpha>1`. The surviving near-root `T_G^>` has an exact divergence-plus-bounded-Cartan-curvature homotopy and is disjoint from regular Cartan FAR. These are ownership and method boundaries, not a counterexample to the complete action; the full signed rootwise heat--Wick--forest packet, `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -116,6 +117,109 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-098"></a>
+### R-098 -- Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary
+
+**Result ID.**
+`A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY`.
+
+**Tier.** T4 scoped analytic/exact/executed advance and method boundary. No
+tier promotion.
+
+**Payment-split posterior theorem.** On one conditional fibre, let
+`C(B;R)=E_F[B:(G tensor G-Gamma)]
+-q_B^T(E_F B+2R)^(-1)q_B`, where `q_B=E_F(BG)`. If
+`B=sum_a B_a` and the actual matrix payment is split correspondingly as
+`R=sum_a R_a`, with `B_a>=0` and `R_a>0`, then
+
+`C(B;R)>=sum_a C(B_a;R_a)`.
+
+Indeed, for `A_a=E_F B_a+2R_a`, `q_a=E_F(B_aG)`,
+`A=sum_a A_a`, `q=sum_a q_a`, and `y=A^(-1)q`, the Schur difference is
+
+`sum_a q_a^T A_a^(-1)q_a-q^T A^(-1)q
+ =sum_a |A_a^(-1/2)q_a-A_a^(1/2)y|^2>=0`.
+
+The matching payment split is load-bearing: this result neither reuses the
+full `R` in every row nor proves positivity of any row.
+
+**Rational ridge and standalone-recovery boundary.** For the production
+rank-one row `B_R=b tensor b`, with `s_i=b^TG_i`,
+`K=E_F(bb^T)`, and `q_i=E_F(bs_i)`, the posterior row is exactly
+
+`C_i(B_R;R)
+ =inf_h {E_F(s_i-b^Th)^2+2h^TRh-E_F(b^T Gamma_i b)}`,
+
+with minimizer `h=(K+2R)^(-1)q_i`. Restoring all owners in the R-097
+terminal identity gives
+
+`E_F F_6.5
+ =square/2+C_post(B_R;R)/2
+ -sum_i int c_i^TRc_i-E_F W_0-E_F U_R`.
+
+Thus a lower form for `F_6.5` requires a suitable upper form for the five
+unshifted families `U_R`; their currently recorded lower form is not enough.
+On the exact pure-doublet production coefficient, a bounded symmetric
+three-atom fibre gives `q=r=0` and
+`C(B_R;R)=-560e/(21125P)<0`. This is a coefficient-fibre sign obstruction,
+not an admissible paid torus control.
+
+**Partition-refinement obstruction.** In the anisotropic production Cartan
+slice `S=diag(1,-1)` and
+`f_epsilon(theta)=(sin theta,epsilon cos theta)`, refine one source-block
+traverse into two oppositely oriented subvisits with shifts
+`a_+=Af_epsilon`, `a_-=-Af_epsilon`. The two subvisits share the same fixed
+target heat and the same root derivative. Their Cartan atoms obey the exact
+pathwise identity `T_A^-=-T_A^+`. Nevertheless,
+
+`T_A^+/(A N_j sqrt(lambda_(n_j))) -> tau_epsilon`
+
+in `L2`, and every harmonic `k>=2` has coefficient
+
+`[sin(k phi)]tau_epsilon
+ =-2epsilon(1-rho^2)rho^(k-1) != 0`,
+`rho=(1-epsilon)/(1+epsilon)`.
+
+At `epsilon=1/2` the corrected coefficient is `-8/3^(k+1)`, giving
+`-8/27` and `-8/81` for `k=2,3`. For every fixed spatial gap, a nonzero far
+Littlewood--Paley block therefore gives a squared atom at least `cA^2` for
+each subvisit. The zero-terminal loop has `X=2kappa A^2`, terminal sextic
+`Y` independent of `A`, and mixed payload
+`1+E[X^(1/2)Y^(1/2)]=O(1+A)`. Consequently no uniform, nonnegative
+per-subvisit R-085/R-088 atom ledger can be stable under this refinement
+while using only that mixed payload. Signed grouping cancels the two atoms
+before squaring. The argument does not apply to distinct temporal visits
+with different roots or target heats, and a once-only pure-`X` payment would
+be critical rather than contradictory.
+
+**Derivative-free successor.** The complete production frame satisfies
+
+`||B_fr(z)-B_fr(w)||_F
+ <=3||Q_II||_op sqrt(20*68)(|z|+|w|)|z-w|`.
+
+Independent-root resampling avoids derivatives of adapted selectors and has
+the exact bare Hardy mass
+
+`sum_(j=j0)^(k-1) 2^j 2^(-4k)
+ =(2^k-2^j0)2^(-4k)<2^(-3k)`.
+
+This does not yet supply a once-only ANOVA ledger or control the spatial
+multiplier, Schur mean, sextic growth, Wick/trace, heat, low endpoint, and
+R-063 forest.
+
+**Evidence.** Proof note
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-signed-first-cartan-rational-ridge-boundary-260727-v1.0.tex.txt`
+and its paired PDF; primary and standard-library independent executables,
+hash-pinned integrated verifier, manifest, and JSON artefacts under the A13
+runs tree.
+
+**Boundary.** R-098 does not prove a production posterior lower form,
+standalone Cartan one-use (4.11), rational shifted-Hessian form (6.5),
+complete coefficient-unconditioned `H_N`, REG, arbitrary progressive/revisit
+assembly, `OVERLAP_src`, the `q=10/9` Nelson estimate, cutoff or floor
+removal, an interacting measure, Sector-A closure, or a higher tier.
+R-092's regular no-revisit one-shot `H_C` theorem remains intact.
 
 <a id="r-097"></a>
 ### R-097 -- Full-frame terminalization and posterior-covariance bracket boundary

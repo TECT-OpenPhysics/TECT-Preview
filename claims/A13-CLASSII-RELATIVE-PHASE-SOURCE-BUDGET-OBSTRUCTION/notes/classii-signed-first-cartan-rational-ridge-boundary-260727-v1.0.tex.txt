@@ -1,0 +1,635 @@
+% Title: Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY; SIGNED-FIRST NECESSITY AND RATIONAL RIDGE NORMAL FORM CLOSED; PRODUCTION POSTERIOR FORM, H_N, OVERLAP_SRC, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY
+% Ledger: R-098
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\dd}{\,\mathrm d}
+
+\section{Purpose and scope}
+
+R-097 reduced the complete heat-lifted current problem to one terminal
+posterior bracket
+\[
+ \mathfrak C_{\rm post}(B;R)
+ =\sum_i\int\left\{
+   \E_{\cF}[B:(G_i^{\otimes2}-\Gamma_i)]
+   -q_i^T(\overline B+2R)^{-1}q_i
+ \right\}\dd x,                                         \tag{1.1}
+\]
+where $\overline B=\E_{\cF}B$ and $q_i=\E_{\cF}(BG_i)$.
+It also left the standalone Cartan one-use ledger R-085 (4.11) and the
+rational shifted-Hessian form R-085 (6.5) open.  This note tests those three
+surfaces together, with the complete signed endpoint retained.
+
+Five exact conclusions result.
+
+First, the posterior bracket is superadditive under a matching split of the
+matrix payment.  This makes a rowwise lower estimate legal, although it may
+discard helpful cross-row compensation and gives no positivity.
+
+Second, the production rational rank-one Gram has an exact conditional
+ridge-regression form.  It identifies the missing analytic estimate without
+revealing the coefficient or differentiating an adapted selector.
+
+Third, R-085 (6.5) is recovered exactly from the R-097 terminal identity only
+after the five unshifted families, the low endpoint, and the Cameron--Martin
+matrix payment are restored once.  A lower estimate for the unshifted
+families is not the upper estimate needed by this recovery.
+
+Fourth, a genuine production Cartan slice gives an anisotropic reverse
+partition of one source-block visit.  Each oppositely oriented subvisit has a
+nonzero arbitrarily far harmonic whose squared atom is order $A^2$, while the
+mixed energy--terminal-sextic budget is only order $A$.  The two signed atoms
+cancel exactly before squaring.  Therefore no per-subvisit nonnegative
+R-085/R-088 atomization can be stable under this partition refinement while
+retaining only the mixed payload.  This does not address two visits carrying
+distinct temporal roots or heat operators, and it does not touch the regular
+one-shot theorem.
+
+Fifth, independent-root resampling gives a derivative-free successor.  The
+production Gram obeys a global finite-difference inequality and the bare
+future-control kernel is
+\[
+ \sum_{j<k}2^j2^{-4k}<2^{-3k}.                           \tag{1.2}
+\]
+The remaining work is to prove the spatial mixed-norm estimate with the
+Schur mean, sextic multiplier, trace, heat, low endpoint, and R-063 forest
+each retained once.
+
+These statements do not prove the production posterior lower form, the
+standalone Cartan one-shot ledger, rational (6.5), complete $H_N$, REG,
+arbitrary progressive assembly, $\mathrm{OVERLAP}_{\rm src}$, the
+$q=10/9$ Nelson estimate, a measure theorem, or Sector-A closure.  Tier
+stays T4.
+
+\section{Posterior bracket and payment-split superadditivity}
+
+Fix one conditional fibre and suppress $i,x$.  For a random positive
+semidefinite matrix $B$, a deterministic $R\succ0$, and a square-integrable
+vector $G$, assume that every displayed expectation below is finite (this is
+automatic at finite production cutoff), and put
+\[
+ \mathcal C(B;R)
+ =\E_{\cF}[B:(G^{\otimes2}-\Gamma)]
+  -q_B^T(\overline B+2R)^{-1}q_B,
+ \qquad q_B=\E_{\cF}(BG).                               \tag{2.1}
+\]
+This is the shorter form of the R-097 identity
+$J_B+\E_{\cF}[B:(V_B-\Gamma)]$.
+
+% evidence-anchor: theorem-2.1-payment-split-superadditivity
+\subsection*{Theorem 2.1 (payment-split posterior superadditivity)}
+
+Let $B=\sum_{a=1}^rB_a$ and $R=\sum_{a=1}^rR_a$, with
+$B_a\succeq0$ and $R_a\succ0$.  Then
+\[
+ \boxed{\mathcal C(B;R)\geq
+        \sum_{a=1}^r\mathcal C(B_a;R_a).}               \tag{2.2}
+\]
+
+\emph{Proof.}
+Set $A_a=\E_{\cF}B_a+2R_a$, $q_a=\E_{\cF}(B_aG)$,
+$A=\sum_aA_a$, and $q=\sum_aq_a$.  With $y=A^{-1}q$,
+\[
+ \begin{aligned}
+ \sum_aq_a^TA_a^{-1}q_a-q^TA^{-1}q
+ &=\sum_a\left\{
+ q_a^TA_a^{-1}q_a-2y^Tq_a+y^TA_ay\right\}\\
+ &=\sum_a\|A_a^{-1/2}q_a-A_a^{1/2}y\|^2\geq0.
+ \end{aligned}                                           \tag{2.3}
+\]
+The Wick part of (2.1) is linear in $B$, so (2.3) proves (2.2).
+\hfill$\square$
+
+The same calculation shows that increasing $R$ increases $\mathcal C$.
+This is not a free improvement in the original action: the terminal Schur
+identity simultaneously spends the actual term $\int c^TRc$.  Equation
+(2.2) permits a lower proof by rows, but the full bracket can be strictly
+larger because it keeps cross-row regression compensation.
+
+\section{The rational row is an exact ridge deficit}
+
+For the production rational row write
+\[
+ B_R=b\otimes b,\qquad
+ b=2\sqrt{c_1}\,g(Z_*),\qquad s_i=b^TG_i.              \tag{3.1}
+\]
+Condition on a sigma-field making the terminal control and $R$ measurable,
+assume the displayed conditional moments are finite, and put
+\[
+ K=\E_{\cF}(bb^T),\qquad
+ q_i=\E_{\cF}(b s_i),\qquad A_R=K+2R.                  \tag{3.2}
+\]
+
+% evidence-anchor: theorem-3.1-rational-ridge-deficit
+\subsection*{Theorem 3.1 (conditional rational ridge normal form)}
+
+For every derivative direction $i$,
+\[
+ \boxed{
+ \begin{aligned}
+ \mathcal C_i(B_R;R)
+ &=\E_{\cF}[s_i^2-b^T\Gamma_i b]-q_i^TA_R^{-1}q_i\\
+ &=\inf_{h\in\mathbb R^6}\left\{
+   \E_{\cF}(s_i-b^Th)^2+2h^TRh
+   -\E_{\cF}(b^T\Gamma_i b)\right\}.
+ \end{aligned}}                                         \tag{3.3}
+\]
+
+\emph{Proof.}
+The first equality is (2.1) with $B=b\otimes b$.  Expanding the expression
+inside the infimum gives
+\[
+ \E_{\cF}s_i^2-2h^Tq_i+h^T(K+2R)h
+ -\E_{\cF}(b^T\Gamma_i b).                             \tag{3.4}
+\]
+Its unique minimizer is $h=A_R^{-1}q_i$, which gives (3.3).
+\hfill$\square$
+
+Thus the missing sign is a weighted conditional ridge deficit: how much of
+the derivative carrier $s_i=b^TG_i$ can be predicted by the random ridge
+$b^Th$, compared with the covariance-normal trace.  Positivity of $B_R$ does
+not decide that deficit.
+
+\section{Exact recovery boundary for R-085 (6.5)}
+
+Use the R-085 notation
+\[
+ F_{6.5}=\mathcal H_R+{1\over2}\sum_i\int c_i^TB_1c_i\dd x,
+ \qquad
+ W_0={1\over2}\sum_i\int
+ B_0:(G_i^{\otimes2}-\Gamma_i)\dd x,                   \tag{4.1}
+\]
+and let $\mathcal U_R$ be the sum of the five unshifted families.  The exact
+Taylor identity is
+\[
+ \Delta W_R=\mathcal U_R+F_{6.5}.                       \tag{4.2}
+\]
+
+% evidence-anchor: theorem-4.1-rational-standalone-recovery
+\subsection*{Theorem 4.1 (standalone recovery from the terminal bracket)}
+
+With $\overline{\mathcal A}=\E_{\cF}B_1+2R$ and
+$q_i=\E_{\cF}(B_1G_i)$,
+\[
+ \boxed{
+ \begin{aligned}
+ \E_{\cF}F_{6.5}
+={}&{1\over2}\sum_i\int
+ \|c_i+\overline{\mathcal A}^{-1}q_i
+ \|_{\overline{\mathcal A}}^2\dd x
+ +{1\over2}\mathfrak C_{\rm post}(B_R;R)\\
+ &-\sum_i\int c_i^TRc_i\dd x
+ -\E_{\cF}W_0-\E_{\cF}\mathcal U_R.
+ \end{aligned}}                                         \tag{4.3}
+\]
+
+\emph{Proof.}
+The R-097 terminal Schur identity says
+\[
+ \E_{\cF}W_R(A^*)+\sum_i\int c_i^TRc_i
+ ={1\over2}\sum_i\int
+ \|c_i+\overline{\mathcal A}^{-1}q_i
+ \|_{\overline{\mathcal A}}^2
+ +{1\over2}\mathfrak C_{\rm post}.                    \tag{4.4}
+\]
+Insert $W_R(A^*)=W_0+\mathcal U_R+F_{6.5}$ from (4.2) and rearrange.
+\hfill$\square$
+
+Every owner in (4.3) occurs once.  In particular, a lower bound on
+$F_{6.5}$ requires an \emph{upper} form bound on $\mathcal U_R$, because it
+appears with a minus sign.  R-085 records a lower bound for its five-family
+sum.  Its familywise absolute estimates suggest a two-sided statement, but
+that upper statement is not a current accepted authority and is not inferred
+here.  R-097 terminalizes $\mathcal U_R+F_{6.5}$, not $F_{6.5}$ alone.
+
+% evidence-anchor: exact-rational-production-fibre-sign
+\section{Exact rational production-fibre sign}
+
+On the pure-doublet ray the rational coefficient is
+\[
+ B_R(u)=4c_1\left(u-{5\over9}{u^3\over u^2+e}\right)^2,
+ \qquad c_1={243\over8000P}.                            \tag{5.1}
+\]
+It is strictly increasing for $u>0$: after writing $u=t\sqrt e$, the
+derivative of the dimensionless squared factor is
+\[
+ {2t(4t^2+9)(2t^2-3t+3)(2t^2+3t+3)
+  \over81(t^2+1)^3}>0\qquad(t>0).
+\]
+At the two audit points
+$u_-={1\over2}\sqrt e$ and $u_+={3\over2}\sqrt e$,
+\[
+ B_-={3e\over125P},\qquad
+ B_+={2187e\over21125P},\qquad
+ \Delta=B_+-B_-={1680e\over21125P}.                    \tag{5.2}
+\]
+Use the positive-branch inverse to construct the bounded even selector for
+which
+\[
+ B_R(u(G^2))=B_-+{\Delta\over1+G^2}.                    \tag{5.3}
+\]
+Let $G=0$ with probability $1/2$ and $G=\pm\sqrt2$ with probability $1/4$
+each.  Then $\Gamma=1$ and symmetry gives $q=r=0$ for every $R>0$.  Hence
+\[
+ \boxed{
+ \mathcal C(B_R;R)
+ =\E[B_R(u(G^2))(G^2-1)]
+ =-{\Delta\over3}=-{560e\over21125P}<0.}               \tag{5.4}
+\]
+This is an exact production-coefficient fibre obstruction to automatic
+ridge positivity.  It has no torus control map, spatial derivative
+$c=Da$, heat/low packet, or Cameron--Martin realization, and therefore is
+not a counterexample to a paid production lower form.
+
+The complete four-row pure-doublet coefficient from R-093 gives an even
+stronger already accepted sign test.  The R-097 posterior identity shows
+that it is literally a negative $\mathfrak C_{\rm post}$ example with
+$J_B=r=0$, not merely a negative fragment of the earlier perspective
+formula.  This transfer adds no torus counterexample.
+
+\section{An anisotropic Cartan partition-refinement obstruction}
+
+Fix the production Cartan generator
+\[
+ S=\operatorname{diag}(1,-1)                            \tag{6.1}
+\]
+inside one active real doublet.  Let $n_j\in\mathbb Z\setminus\{0\}$ be an
+admissible torus carrier whose physical frequency
+$N_j=2\pi|n_j|/L$ lies in shell $j$, let $0<\epsilon<1$, and set
+\[
+ f_\epsilon(\theta)=(\sin\theta,\epsilon\cos\theta),
+ \qquad \theta={2\pi n_jx_1\over L}.                   \tag{6.2}
+\]
+Since $|f_\epsilon|\geq\epsilon$, this path remains uniformly away from the
+cone tip at every fixed positive floor.  Refine one deterministic source-
+block secant into two oppositely oriented subvisits, both evaluated with the
+same fixed target heat and the same root derivative, with
+\[
+ a_+=Af_\epsilon,\qquad a_-=-Af_\epsilon,              \tag{6.3}
+\]
+and use the fresh Cameron--Martin direction
+$v=\sqrt{\lambda_{n_j}}f_\epsilon$.
+
+For the production heat-lifted Cartan one-form
+$\mathcal C_\Phi(z)=\Phi(z)^TDz$, define
+\[
+ \begin{aligned}
+ T_A^+&=\mathbb D_j[\mathcal C_\Phi(w+Af_\epsilon)
+                     -\mathcal C_\Phi(w)][v],\\
+ T_A^-&=\mathbb D_j[\mathcal C_\Phi(w)
+                     -\mathcal C_\Phi(w+Af_\epsilon)][v].
+ \end{aligned}                                          \tag{6.4}
+\]
+Endpoint reversal gives the pathwise identity
+\[
+ \boxed{T_A^-=-T_A^+.}                                  \tag{6.5}
+\]
+
+Put
+\[
+ d_\epsilon(\theta)=\sin^2\theta+\epsilon^2\cos^2\theta,
+ \qquad
+ q_\epsilon(\theta)
+ ={\sin^2\theta-\epsilon^2\cos^2\theta
+   \over d_\epsilon(\theta)}.                          \tag{6.6}
+\]
+
+% evidence-anchor: theorem-6.1-cartan-reverse-visit
+\subsection*{Theorem 6.1 (nonzero far harmonic and signed cancellation)}
+
+At fixed cutoff, fixed future heat, and fixed positive floor,
+\[
+ {T_A^+\over AN_j\sqrt{\lambda_{n_j}}}
+ \longrightarrow
+ \tau_\epsilon(\theta)
+ :=q_\epsilon(\theta)d_\epsilon'(\theta)
+ \quad\hbox{in }L^2(\Omega\times\mathbb T^3)           \tag{6.7}
+\]
+as $A\to\infty$.  If
+\[
+ \rho={1-\epsilon\over1+\epsilon},\qquad \phi=2\theta,
+\]
+then
+\[
+ q_\epsilon
+ =\rho-{4\epsilon\over1-\epsilon^2}
+       \sum_{n\geq1}\rho^n\cos(n\phi),                \tag{6.8}
+\]
+and, for every $k\geq2$, the sine-series coefficient is
+\[
+ \boxed{
+ [\sin(k\phi)]\tau_\epsilon
+ =-2\epsilon(1-\rho^2)\rho^{k-1}\neq0.}               \tag{6.9}
+\]
+
+\emph{Proof.}
+Write the positive production floor as $\eta>0$ and
+$n_\epsilon=\sin^2\theta-\epsilon^2\cos^2\theta$, so the actual scalar
+coefficient on the radial slice is
+$A^2n_\epsilon/(A^2d_\epsilon+\eta)$.  At zero base and zero fixed heat
+displacement, direct radial differentiation of the complete one-form gives
+the finite-$A$ identity
+\[
+ {T_A^+\over AN_j\sqrt{\lambda_{n_j}}}
+ =\tau_\epsilon(\theta)
+  \left\{1-{\eta^2\over(A^2d_\epsilon(\theta)+\eta)^2}\right\}. \tag{6.7a}
+\]
+Thus the floor correction is nonzero at finite $A$---the floorless
+homogeneity shortcut would be false---but it is uniformly $O(A^{-4})$
+because $d_\epsilon\geq\epsilon^2$.  In the leading floorless limit the two
+chain-rule lines $D\Phi[v]^TDz$ and $\Phi^TDv$ each contribute half of
+$AN_j\sqrt{\lambda_{n_j}}q_\epsilon d_\epsilon'$.  A fixed base and fixed
+heat displacement are lower order on $|Af_\epsilon|\geq A\epsilon$; the
+global production derivative bounds and the finite-cutoff moment bounds give
+$L^2$ domination.  This proves (6.7).
+
+Writing $d_\epsilon$ as an affine function of $\cos\phi$ and using the
+Poisson-kernel series gives (6.8).  Multiplication by
+$d_\epsilon'=(1-\epsilon^2)\sin\phi$ and the elementary product-to-sum
+identity gives (6.9) for $k\geq2$. \hfill$\square$
+
+For the audit value $\epsilon=1/2$, $\rho=1/3$ and the corrected closed form
+is
+\[
+ [\sin(2k\theta)]\tau_{1/2}=-{8\over3^{k+1}},
+ \qquad k\geq2.                                        \tag{6.10}
+\]
+In particular the $k=2,3$ coefficients are $-8/27$ and $-8/81$.  The
+power $k+1$ in (6.10) is independently recomputed rather than inferred from
+a decimal fit.
+
+Fix a gap $C\geq5$.  Choose $k_C$ so that the physical carrier $2k_CN_j$ lies in a
+nonzero smooth Littlewood--Paley block $\Pi_m$ with $m\geq j+C$.  The leading
+term in (6.7) is independent of the fresh probability root, so its OU image
+is unchanged.  Since $\int_0^\infty e^{-2t}\dd t=1/2$, (6.7)--(6.9) imply
+that for all sufficiently large finite $A$,
+\[
+ \int_0^\infty e^{-2t}
+ \E\|\Pi_mP_t^{(j)}T_A^\pm\|_{\rm HS}^2\dd t
+ \geq c_{C,\epsilon,n_j}A^2,                           \tag{6.11}
+\]
+where $c_{C,\epsilon,n_j}>0$.  The one-direction limiting coefficient before
+the fixed LP multiplier is
+\[
+ N_j^2\lambda_{n_j}\epsilon^2(1-\rho^2)^2
+ \rho^{2(k_C-1)}.                                      \tag{6.12}
+\]
+
+% evidence-anchor: corollary-6.2-nonnegative-per-subvisit-no-go
+\subsection*{Corollary 6.2 (nonnegative per-subvisit atomization fails)}
+
+Suppose an extension of R-085 (4.10)--(4.11), or of the corrected R-088
+direct-root analogue, assigns nonnegative atom ledgers $q_+,q_-$ to these
+two subvisits, is stable under refinement of one source-block secant, and has
+a constant uniform in $A$.  Equation (6.11) forces
+\[
+ q_++q_-\geq cA^2.                                     \tag{6.13}
+\]
+The complete loop has terminal shift zero.  With the fixed positive source-
+cost coefficient
+\[
+ \kappa_{n_j,\epsilon}:=\|K_{n_j}^{-1}f_\epsilon\|_{\mathcal H}^2,
+\]
+its cost is $X=2\kappa_{n_j,\epsilon}A^2$, while its terminal sextic $Y$ is
+independent of $A$.
+Consequently
+\[
+ 1+\E[X^{1/2}Y^{1/2}]=O(1+A),                          \tag{6.14}
+\]
+contradicting a uniform bound of $q_++q_-$ by (6.14).
+
+There is no contradiction after signed grouping: (6.5) gives
+$T_A^++T_A^-=0$ before any square.  Nor is there a contradiction if one
+allows a once-only pure $X$ payment, since (6.13) is then critical rather
+than supercritical.  Distinct temporal visits need not share the target heat
+or derivative root, so (6.5) is not asserted for them.  The result is exactly
+a no-go for refinement-stable nonnegative per-subvisit atomization;
+R-085's regular physical-shell one-shot target and R-092's regular $H_C$
+theorem remain intact.
+
+% evidence-anchor: derivative-free-causal-finite-differences
+\section{Derivative-free causal finite differences}
+
+The exact production frame bounds are
+\[
+ \|M_A(z)\|_F\leq\sqrt{20}|z|,
+ \qquad
+ \|M_A(z)-M_A(w)\|_F\leq\sqrt{68}|z-w|.                \tag{7.1}
+\]
+For
+\[
+ B_{\rm fr}(z)=\sum_{A=1}^3M_A(z)Q_{\rm II}M_A(z)^T,   \tag{7.2}
+\]
+polarization gives the global secant estimate
+\[
+ \boxed{
+ \|B_{\rm fr}(z)-B_{\rm fr}(w)\|_F
+ \leq C_B(|z|+|w|)|z-w|,
+ \quad C_B=3\|Q_{\rm II}\|_{\rm op}\sqrt{20\cdot68}.} \tag{7.3}
+\]
+
+Let $h_k^{(j)}$ be obtained from a strict-past source $h_k$ by independently
+resampling root $j<k$.  Here $\operatorname{Var}_j$ is the Efron--Stein
+conditional variance with all roots other than $j$ held fixed; it is not the
+Doob variance conditional only on $\mathcal F_{j-1}$.  Conditional variance
+gives
+\[
+ \E\|h_k-h_k^{(j)}\|^2
+ =2\E\operatorname{Var}_j(h_k)\leq2\E\|h_k\|^2.       \tag{7.4}
+\]
+If $a_k=K_kh_k$ and $\|K_k\|_{L^2\to L^2}\leq
+\kappa_K2^{-2k}$, then
+\[
+ \E\|a_k-a_k^{(j)}\|_2^2
+ \leq2\kappa_K^2 2^{-4k}\E\|h_k\|^2.                \tag{7.5}
+\]
+For $k>j_0$, after the displayed resampling prefactor $2\kappa_K^2$ is kept
+outside, the derivative-root covariance weights have the exact scalar Hardy
+mass
+\[
+ \boxed{
+ \sum_{j=j_0}^{k-1}2^j2^{-4k}
+ =(2^k-2^{j_0})2^{-4k}<2^{-3k}.}                        \tag{7.6}
+\]
+
+Equations (7.3)--(7.6) require no Malliavin derivative of $h_k$.  They provide
+a candidate successor to per-subvisit nonnegative atomization, but are not
+yet an ANOVA decomposition or a once-only covariance ledger: summing raw
+root influences counts a Hoeffding component once for every root in its
+support.  They also do not control the product multiplier
+$|Z|+|Z^{(j)}|$, the conditional Schur mean
+$q^T(\overline B+2R)^{-1}q$, or the spatial low-Hermite/Wick pairing.  The
+next theorem must combine those objects before using (7.6).
+
+\section{Proof and failure map}
+
+\begin{center}
+\begin{tabular}{p{0.28\linewidth}|p{0.17\linewidth}|p{0.45\linewidth}}
+Route & Verdict & Exact boundary / successor \\ \hline
+Posterior row split & proved & Superadditive only with a matching payment split; no row positivity.\\
+Rational rank-one packet & proved reduction & Exact ridge deficit (3.3); spatial paid bound remains open.\\
+R-085 (6.5) from R-097 & repaired reduction & Requires the low endpoint, CM cost, and an upper form for the five unshifted families.\\
+Rational automatic sign & failed & Exact production fibre gives (5.4); not a torus/control counterexample.\\
+Per-subvisit nonnegative Cartan $q$ & failed & Opposite refinements cost $A^2$ separately but cancel signed; mixed budget is only $A$.\\
+Signed-first grouping & required & Reverse-refinement cancellation and R-097 terminalization agree exactly.\\
+Causal resampling & advanced & Frame secant and bare $2^{-3k}$ scalar mass proved; once-only decomposition, mixed spatial norm, and owner assembly open.\\
+\end{tabular}
+\end{center}
+
+The dependency order is now
+\[
+ \boxed{
+ \begin{gathered}
+ \text{complete R-077 cancellation}
+ \longrightarrow\text{R-097 Gram terminalization}\\
+ \longrightarrow\text{signed grouped posterior/resampling form}
+ \longrightarrow H_N\text{ and lossless temporal assembly}\\
+ \longrightarrow\mathrm{OVERLAP}_{\rm src}
+ \equiv\text{the }q=10/9\text{ Nelson objective.}
+ \end{gathered}}                                        \tag{8.1}
+\]
+The standalone one-shot Cartan and rational statements remain useful
+sufficient modules, but nonnegative revisit atomization is no longer a valid
+route to the last line.
+
+\section{Devil's-advocate self-test}
+
+\begin{enumerate}
+\item \textbf{Objection: posterior superadditivity proves positivity.}
+\textbf{DISMISSED.}  It only compares the full bracket with the sum of row
+brackets.  The rational production fibre (5.4) is negative.
+
+\item \textbf{Objection: a larger matrix payment makes the bracket positive
+for free.}  \textbf{DISMISSED.}  The bracket is monotone in $R$, but the
+original action simultaneously subtracts the once-only cost $\int c^TRc$.
+
+\item \textbf{Objection: R-097 already proves R-085 (6.5).}
+\textbf{UPHELD as false.}  It terminalizes
+$\mathcal U_R+F_{6.5}$.  Equation (4.3) retains
+$-\E\mathcal U_R$, so a suitable upper form is still required.
+
+\item \textbf{Objection: the rational sign fixture disproves the paid torus
+packet.}  \textbf{DISMISSED.}  It has no spatial control realization, low
+endpoint, heat packet, forest, or Cameron--Martin cost.
+
+\item \textbf{Objection: reverse subvisits contradict the exact full action.}
+\textbf{DISMISSED.}  The two atoms cancel identically in (6.5).  The
+contradiction applies only after squaring and assigning nonnegative ledgers
+to the visits separately.
+
+\item \textbf{Objection: the far harmonic disappears at a positive floor or
+after target heat.}  \textbf{DISMISSED.}  The anisotropic path stays at
+distance at least $A\epsilon$ from the tip, and (6.7) is an $L^2$ limit with
+fixed heat and floor.  Every fixed gap has a nonzero coefficient (6.9).
+
+\item \textbf{Objection: at $\epsilon=1/2$ the coefficient is
+$-8/3^{k+2}$.}  \textbf{DISMISSED BY INDEPENDENT FACTOR AUDIT.}  Substitution
+in (6.9) gives $-8/3^{k+1}$; direct quadrature gives $-8/27$ at $k=2$ and
+$-8/81$ at $k=3$.
+
+\item \textbf{Objection: the resampling kernel closes the posterior form.}
+\textbf{UPHELD as premature.}  Equation (7.6) is the bare covariance/control
+kernel.  The spatial multiplier, low-Hermite pairing, Schur mean, sextic
+growth, trace, heat, low endpoint, and forest still require one integrated
+estimate.
+
+\item \textbf{Objection: the new no-go withdraws R-092 regular $H_C$.}
+\textbf{DISMISSED.}  The fixture refines one source-block secant into opposite
+subvisits with the same heat/root direction.  R-092 is explicitly a mutually
+orthogonal no-revisit one-shot theorem.
+\end{enumerate}
+
+External review should focus on the radial-chain factor in (6.7), the
+Fourier normalization in (6.9)--(6.10), the payment split in (2.2), and the
+minus sign on $\mathcal U_R$ in (4.3).
+
+\section{Authorities and executable verification}
+
+The load-bearing repository authorities are R-066 for the production frame
+bounds, R-079 for exact endpoint ownership, R-085 for the Cartan and rational
+targets, R-088 for the corrected direct-root ledger, R-092 for regular
+Cartan closure, R-093 for the complete production sign slice, R-096 for
+cancellation-first ordering, and R-097 for terminal Gram/posterior form.
+A targeted search of the external Contents archive found no theorem matching
+the production posterior/ridge or reverse-visit estimate.
+
+The primary executable uses exact rational arithmetic, high-resolution
+Fourier quadrature, random positive matrices, and deliberate sign/factor
+mutations.  The independent executable uses only the Python standard library
+and separately recomputes the fractions, Fourier coefficients, scalar and
+matrix ridge identities, superadditivity, reverse-loop exponents, and Hardy
+kernel.  The integrated verifier pins all authorities, sources, the proof
+PDF, exploration records, negative-result entry, public surfaces, and
+assertion counts.
+
+Run from the repository root:
+\begin{verbatim}
+python codes/foundations/
+  a13_classii_signed_first_cartan_rational_ridge_boundary_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-SIGNED-FIRST-CARTAN-RATIONAL-RIDGE-BOUNDARY
+Ledger:    R-098.
+Title:     Signed-first Cartan partition-refinement obstruction and rational
+           ridge-deficit boundary.
+Precise statement:
+           The terminal posterior bracket is superadditive under a matching
+           row/payment split. The rational rank-one row is exactly a
+           conditional ridge deficit, and standalone R-085 (6.5) has the
+           once-only recovery identity (4.3). An exact rational production
+           fibre remains negative. A production anisotropic Cartan reverse
+           partition has nonzero far harmonics of squared size A^2 at each
+           subvisit, while the mixed X^(1/2)Y^(1/2) budget is O(A); the signed
+           atoms cancel exactly. Production frame resampling has the bare
+           derivative-free Hardy kernel below 2^(-3k).
+Scope:     Finite cutoff and fixed positive floor. Posterior identities are
+           conditional finite-dimensional forms. The Cartan obstruction is
+           a deterministic opposite refinement of one source-block secant,
+           sharing its target heat and root derivative, for every fixed gap.
+           It does not assert cancellation for distinct temporal roots/heats
+           and does not apply to the regular one-shot class. The rational sign
+           fixture is not an admissible torus control.
+Dependencies:
+           R-066; R-079; R-085; R-088; R-092; R-093; R-096; R-097.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:
+           python codes/foundations/a13_classii_signed_first_cartan_
+           rational_ridge_boundary_verify.py
+Expected output:
+           Manifest-pinned primary, standard-library independent,
+           integrated, and aggregate PASS; exit zero.
+Negative result:
+           NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION.
+Falsification gate:
+           Failure of posterior superadditivity, the rational ridge or
+           recovery identity, any exact fraction, the Cartan Fourier
+           coefficient/reverse cancellation/scaling, resampling/Hardy
+           kernel, authority, hash, PDF, exploration, registry, public
+           surface, count, or T4 scope check.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No production posterior lower form, standalone Cartan (4.11),
+           rational (6.5), complete H_N, REG, arbitrary progressive/revisit
+           assembly, OVERLAP_src, Nelson, cutoff/floor removal, measure,
+           T5--T7, or Sector-A closure is proved.
+Next required action:
+           Prove a signed grouped causal-resampling posterior form in spatial
+           mixed norms, retaining the Schur mean, sextic multiplier, trace,
+           heat, low endpoint, CM payment, and R-063 forest once.
+\end{verbatim}
+\endgroup
