@@ -985,7 +985,8 @@ variations, the complete R-063 forest, R-066/R-070 trace transport, and the
 paid subtraction must remain coupled. The conditional low current and complete
 low safe endpoint are distinct and must be bounded separately.
 
-**Status:** OPEN CURRENT CHILD (2026-07-25), narrowed through R-091
+**Status:** OPEN CURRENT CHILD (2026-07-25), narrowed through R-092; regular
+one-shot `H_C` closed, complete `H_N` and progressive/revisit `H_A` open
 `A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`.
 R-079 proves
 the exact expectation-level full-current and canonical safe-packet identity,
@@ -1184,14 +1185,12 @@ has a negative expectation but is covariance matched only unconditionally.
 R-089 also corrects the final implication order. R-087 CORE says full
 OVERLAP is exactly equivalent to the `q=10/9` Nelson bound. R-066
 controlled-shell one-use and every temporal packet are therefore inputs to
-the full OVERLAP lower bound, not a separate step after it. The current gate
-is narrowed by R-090 as follows. The chain rule gives `b=grad c`, compressing
-the exact Cartan trace to one conservative coefficient. A fixed active-shell,
-current-root first-chaos witness proves that the global unprojected R-089
-ledger (3.12) diverges linearly for every `s>0`, but the relative FAR
-projector removes that witness. The Cartan obligation `H_C` is therefore the
-expectation-inside projected coefficient-tail estimate with
-`Q_(j,C-2)^coef` retained through the root sum.
+the full OVERLAP lower bound, not a separate step after it. R-090's claim
+`b=grad c` and its conservative one-coefficient trace are audited as false by
+R-092: actual `b` uses transposed production Jacobians while `grad c` does
+not. The independent R-090 active-shell witness still rejects the global
+unprojected R-089 ledger, while the relative FAR projector removes that
+witness.
 
 For rational/linear NEAR, R-063 lower chaoses reconstruct the literal Wick
 product and may not be appended to an already complete endpoint. R-066/R-070
@@ -1216,13 +1215,15 @@ fires `NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT` and rejects
 only that majorant route.
 
 The same scalar one-mode fixture is positively repaired by the exact
-production series: its fixed-gap expected trace is `O(N^-4)`, and its
-linearized harmonics are nonzero at every dyadic gap with superexponential
-gap tail. Thus the revised Cartan load-bearing target is the saturation-aware,
-expectation-inside cumulative vector estimate
-`B_(7/12)^out <= 1+E sqrt(XY)`, or a form-sufficient version with an
-absorbable `E X` term, retaining target heat and coherent multimode outputs.
-No projected CFAR or one-use bound is yet proved.
+production series, but scalar superexponential decay is not vector-uniform.
+R-092 instead writes the production Jacobian as a finite polynomial in the
+bounded normalized lift and uses the exact R-089 two-tail trace. Actual `b`
+and `g=grad c` satisfy the same whole-product estimate, while the `g` channel
+gains `2^(-2(m-j))`. At
+`(gamma,sigma,theta,p,q)=(1/4,4/15,3/10,6,3)`, root surplus `7/30`, Young
+slack `1/30`, and the R-075/R-079 physical-prefix ledger, this closes the
+cutoff-uniform arbitrary-budget regular no-revisit one-shot `H_C` bound with
+gap `2^(-(C-5)/2)`. It does not cover progressive/revisit controls.
 
 For NEAR, R-091 stacks the three linear rows and rational row before
 conditioning. It proves the exact conditional Schur formula and, at the
@@ -1231,9 +1232,13 @@ predictable-root sigma-field, the same-root residual containing both
 `2 eta I` while production `B0` is unbounded, so no fixed eta gives universal
 positivity; the exact local full-frame loss is
 `-(3708/(21125P))e phi(1)<0`. These fire only a positivity-method no-go. The
-revised NEAR target is a signed Schur--Carleson estimate for the complete
-R-079 future/low/paid packet, not an absolute termwise estimate and not a
-post-paid counterexample.
+R-092 Doob-decomposes the terminal `Theta_R(B_1)` energy and proves that the
+inseparable density is
+`K_k+P_(k-1)|d_k y|^2-B_(k-1):DeltaGamma_k`. It vanishes for frozen
+coefficients and is nonnegative in a coefficient-conditioned moment-matched
+one-reveal branch. The remaining NEAR target is the weighted conditional-
+covariance deficit and multistep derivative feedback inside the complete
+R-079 future/low/paid packet, not an absolute termwise estimate.
 
 Finally, R-091 proves the terminal Bony/Doob nonduplication identity once
 `R_<=` is declared as an exact terminal paid functional. This closes endpoint
@@ -1243,13 +1248,18 @@ only sufficient regular architecture. Fixed-cutoff CORE plus the full uniform
 packet lower bound is equivalent to `q=10/9` Nelson; a regular one-shot Cartan
 bound cannot substitute for overlap-stable temporal control.
 
+R-092 also proves exact covariance union and strict-triangular entropy
+disintegration. These remove overlap multiplicity and retain kernel/revisit
+cost as nonnegative fibre entropy, but the resulting free-energy lower bound
+contains exactly the open Nelson quantity.
+
 Finally `H_A` must assemble the complete packet uniformly in cutoff,
 partition, and revisit inside full OVERLAP, preserving R-079 future feedback
 and R-080 low/revisit cancellation. `H_C`, `H_N`, and `H_A` are
 non-interchangeable sufficient obligations, not a pairwise-independence or iff
-theorem. R-091 sharpens all three targets without changing the gate status.
-Projected CFAR,
-complete signed NEAR, assembly, OVERLAP, and Nelson remain open.
+theorem. R-092 closes regular one-shot `H_C` and sharpens the remaining two
+targets without changing the host claim tier. Complete signed NEAR,
+progressive/revisit assembly, OVERLAP, and Nelson remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 
@@ -1263,7 +1273,7 @@ is admissible but is not required for the Nelson application.
 
 **Status:** REDUCED-NOT-CLOSED; FIXED-CUTOFF VARIATIONAL CORE PROVED,
 OVERLAP OPEN (reviewed 2026-07-25). The gate was exposed by R-080 and
-sharpened by R-081--R-091
+sharpened by R-081--R-092
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1274,12 +1284,12 @@ conditional-low loss quartic while final charge is fixed and control cost is
 quadratic; cancellation, if present, must occur in the complete later packet.
 This is a method and scope obstruction, not a counterexample to the full
 action. R-090 names this complete recombination obligation `H_A`; R-091
-proves only its terminal nonduplication algebra and confirms that the temporal
-estimate is still load-bearing. It retains
-the regular projected FAR obligation `H_C`, the complete signed NEAR
-obligation `H_N`, R-066 one-use, and all temporal/low companions inside full
-OVERLAP. It is not bookkeeping after separately completed pieces. Once full
-OVERLAP is proved, R-087 CORE gives `q=10/9` Nelson directly.
+proves terminal nonduplication, and R-092 closes only the regular one-shot
+`H_C` branch. R-092's covariance/entropy-union identity accounts exactly for
+overlap and kernel/revisit cost, but its free-energy term is already the open
+Nelson quantity. Complete `H_N`, R-066 one-use, and all temporal/low
+companions therefore remain inside full OVERLAP. Once full OVERLAP is proved,
+R-087 CORE gives `q=10/9` Nelson directly.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

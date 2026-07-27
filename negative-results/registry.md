@@ -6,6 +6,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE](#audit-2026-07-25-a13-r090-conservative-transpose) | R-090 `b=grad c` and R-091 single-`q` conservative output trace | the actual current coefficient uses transposed production Jacobians while the endpoint gradient uses untransposed Jacobians; `J^T-J=2(SP-PS)` is generally nonzero. R-092 replaces the false compression by the exact R-089 two-tail trace and still closes only regular one-shot `H_C` |
+| [NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY](#ng-2026-07-25-a13-scalar-superexponential-vector-uniformity) | R-091 scalar one-mode superexponential Cartan tail promoted uniformly to the production vector/multimode class | an anisotropic two-component production ray has geometric ratio `(1-epsilon)/(1+epsilon)->1`; R-092 replaces scalar-uniform decay by a normalized-lift whole-product fractional estimate and closes only regular one-shot `H_C` |
+| [NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY](#ng-2026-07-25-a13-perspective-innovation-termwise-positivity) | A13 `H_N` closed by separate positivity of Schur debt, covariance mismatch, `r_C`, `J_D`, or a newly adaptive derivative payment | the companions form one exact matrix-perspective telescope; a positive-frame all-residual fixture has completed expectation `-623/5440`, and changing the payment at each filtration level introduces a new sign-indefinite inverse-matrix defect |
+| [NG-2026-07-25-A13-TERMINAL-POLAR-CAUSAL-PROMOTION](#ng-2026-07-25-a13-terminal-polar-causal-promotion) | A13 full progressive/revisit assembly inferred from terminal Douglas/polar minimality | covariance union removes overlap multiplicity exactly, but for source blocks `(1/sqrt(2),1/sqrt(2))` and triangular control `(0,f(xi_1))` the polar-minimal representative is `(f/2,f/2)`, whose first coordinate anticipates `xi_1` |
+| [NG-2026-07-25-A13-NEGATIVE-FLOW-CAT0-SHORTCUT](#ng-2026-07-25-a13-negative-flow-cat0-shortcut) | A13 Nelson/assembly closure from a positive-Jacobian negative flow or conditional CAT(0) barycentering alone | the flow trades the Ramer determinant zero for a signed material derivative and possible high-field non-surjectivity, while a scaled exactly barycentered reset model diverges negatively for every fixed CM/sextic allocation |
 | [NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT](#ng-2026-07-25-a13-projected-cartan-cumulative-z6-majorant) | R-091 projected Cartan output ledger closed through an extracted cumulative translated-model `Z^6` norm | a predictable rare single-mode control makes the extracted majorant grow like `N^3` while CM, terminal sextic, and mixed budgets stay bounded; the exact saturated scalar Cartan trace instead decays like `N^-4`, so only the premature majorant is retired |
 | [NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY](#ng-2026-07-25-a13-full-frame-conditional-positivity) | R-091 raw full linear--rational conditional endpoint made positive by one fixed derivative payment | the exact Schur complement is `2 eta B1(B1+2 eta I)^(-1)-B0`, whose positive part is bounded by `2 eta I` while `B0` is not; an exact local full-frame fixture remains strictly negative |
 | [AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE](#audit-2026-07-25-a13-reg-overlap-temporal-scope) | R-091 terminal nonduplication and regular one-shot estimates promoted to arbitrary progressive overlap/revisit assembly | terminal algebra is exact, but covariance ranges can overlap and be revisited; REG is only a sufficient architecture, while full OVERLAP is already equivalent through CORE to the `q=10/9` Nelson bound |
@@ -101,6 +106,128 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
 
+<a id="audit-2026-07-25-a13-r090-conservative-transpose"></a>
+### AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE -- current Jacobian transpose is load-bearing
+
+**Failure mode:** R-090 identified the actual current coefficient
+`b_i=(Delta J)^T partial_i x+J_+^T partial_i a` with the spatial derivative
+of the vector endpoint `c=F(x+a)-F(x)`, and R-091 consequently replaced the
+exact two-field Fourier trace by one `|q|^2|c_hat|^2` trace.
+
+**Evidence:** Direct differentiation gives
+`partial_i c=Delta J partial_i x+J_+ partial_i a`. For the normalized
+production map, `J^T-J=2(SP-PS)`, which is nonzero for generic symmetric
+`S` and vector `x`. Primary and non-importing independent finite-difference
+fixtures verify `b!=grad c` and the exact commutator defect. R-092 retains the
+R-089 trace
+`|b_hat_i(r)+i p_i c_hat(r)|^2`, introduces `g=grad c`, and uses the safe
+coefficient-band estimate
+`||Pi_m c||_2^2<=16 2^(-2m)||Pi_m g||_2^2`. Both actual `b` and `g` obey the
+same normalized whole-product bound. The extra gradient tail factor is
+`32 kappa_1 2^(-j)2^(-2(m-j))`, so the root surplus `7/30`, Young slack
+`1/30`, and regular gap `2^(-(C-5)/2)` survive.
+
+**Consequence:** Withdraw the conservative identity and the second equality
+in R-091's block formula outside symmetric Jacobian slices. Preserve the
+definition-level nonnegative output ledger and its lossless weight
+extraction. R-092 closes regular mutually orthogonal no-revisit one-shot
+`H_C` through the corrected two-field trace; progressive/revisit `H_A`,
+complete `H_N`, OVERLAP, Nelson, and Sector A remain open.
+
+<a id="ng-2026-07-25-a13-scalar-superexponential-vector-uniformity"></a>
+### NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY -- scalar tail ratio is not vector-uniform
+
+**Failure mode:** Promote the exact R-091 scalar one-mode superexponential
+harmonic decay to a uniform production vector/multimode Cartan estimate.
+
+**Evidence:** At zero floor, take
+`S=diag(1,-1)` and
+`v_epsilon=(sin(Nx),epsilon cos(Nx))`. The homogeneous quotient denominator
+has geometric Fourier ratio
+`rho_epsilon=(1-epsilon)/(1+epsilon)`, which tends to one as
+`epsilon` tends to zero. At positive floor the same loss appears above the
+scale `A epsilon >= sqrt(e)`. Thus no scalar-uniform exponential ratio
+survives arbitrary vector ellipticity. R-092 instead writes the production
+Jacobian as a degree-at-most-four polynomial in the bounded normalized lift
+`n_e(x)=x/sqrt(e+|x|^2)` and estimates the complete product fractionally.
+
+**Consequence:** Retire only the scalar-uniform extension. The R-092
+whole-product estimate includes coherent vector collisions and proves a
+cutoff-uniform arbitrary-budget bound for the R-079 regular mutually
+orthogonal no-revisit one-shot class. General progressive/revisit assembly
+remains open.
+
+<a id="ng-2026-07-25-a13-perspective-innovation-termwise-positivity"></a>
+### NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY -- conditional companions have no separate sign
+
+**Failure mode:** Close `H_N` by assigning independent signs or payments to
+the Schur debt, covariance mismatch, coefficient covariance `r_C`, quadratic
+residual `J_D`, or the positive matrix-perspective Jensen defect.
+
+**Evidence:** R-092 proves that all these quantities remain in one exact
+completed matrix-perspective identity. After the once-only baseline is
+restored, the terminal positive energy must also be split by Doob
+Pythagoras. The smallest inseparable density is
+`K_k+P_(k-1)|d_k y|^2-B_(k-1):DeltaGamma_k`. It is zero for frozen
+predictable coefficients and nonnegative for a coefficient-conditioned
+moment-matched one-reveal branch. In general a weighted conditional-
+covariance deficit remains. A finite positive-frame conditional
+fixture with every residual nonzero has exact branch minima `-13/272` and
+`-29/160`, hence total completed expectation `-623/5440`. Choosing a new
+matrix payment at each filtration level adds the uncontrolled defect
+`x_(k-1)^T(bar A_k^(-1)-A_(k-1)^(-1))x_(k-1)` unless the payments obey a
+backward Loewner condition.
+
+**Consequence:** Automatic local or termwise positivity is retired. The
+fixture is not a post-paid production counterexample. The exact successor is
+one augmented perspective--Carleson form bound retaining the complete
+low/paid packet; the special moment-matched one-reveal branch is closed, but
+the multistep production derivative-feedback branch is not.
+
+<a id="ng-2026-07-25-a13-terminal-polar-causal-promotion"></a>
+### NG-2026-07-25-A13-TERMINAL-POLAR-CAUSAL-PROMOTION -- minimal terminal source is generally nonadapted
+
+**Failure mode:** Use the global terminal Douglas/polar contraction to turn a
+regular one-shot packet estimate into a causal theorem for arbitrary temporal
+overlap and revisits.
+
+**Evidence:** For source blocks
+`S_1=S_2=1/sqrt(2)` and the triangular control
+`h=(0,f(xi_1))`, the terminal shift is valid and the covariance-union
+contraction is exact. Its polar-minimal source representative is
+`(f(xi_1)/2,f(xi_1)/2)`. The first coordinate is not measurable before
+`xi_1` is revealed. A same-range revisit loop `(t,-t)` also has zero terminal
+shift while its return increment for `W(a)=a^4/2` has magnitude `t^4/2`, so
+separate temporal estimation loses the exact cancellation.
+
+**Consequence:** Overlap itself carries no multiplicity loss, but terminal
+polar minimization does not preserve progression. R-092's exact triangular
+entropy disintegration bypasses the polar representative and retains kernel
+cost as fibre entropy; its remaining free-energy term is exactly Nelson, so
+the required `H_A` theorem is still open and must retain complete signed
+revisit packets.
+
+<a id="ng-2026-07-25-a13-negative-flow-cat0-shortcut"></a>
+### NG-2026-07-25-A13-NEGATIVE-FLOW-CAT0-SHORTCUT -- determinant-free geometry retains the analytic obstruction
+
+**Failure mode:** Replace the signed packet proof by either a negative flow
+with positive Jacobian or conditional CAT(0) barycentric convexity alone.
+
+**Evidence:** For a compactly supported localization, the negative flow has
+an exact Liouville identity, but its defect is the signed material derivative
+`|b|^2+delta_gamma(Db b)+Tr(Db^2)`. For the untruncated scalar model
+`b(x)=x^3`, the exact flow
+`x/sqrt(1+2t x^2)` has positive Jacobian everywhere yet maps only onto
+`(-1/sqrt(2t),1/sqrt(2t))`, leaving a positive high-field complement.
+Separately, the scaled flat reset target remains exactly conditionally
+barycentered while its paid ledger is
+`[-lambda^2/2+eta+120 zeta](J-1)+15 zeta`, which diverges negatively after
+choosing `lambda^2>2(eta+120 zeta)` for any fixed allocations.
+
+**Consequence:** A flow must still control the material derivative and
+surjectivity/cutoff boundary, while CAT(0) geometry still needs production
+spatial/source coupling. Neither shortcut proves `H_A`, OVERLAP, or Nelson.
+
 <a id="ng-2026-07-25-a13-projected-cartan-cumulative-z6-majorant"></a>
 ### NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT -- extracted translated-model growth erases saturation
 
@@ -185,26 +312,31 @@ overlap-stable temporal `H_C+H_N` packet estimate before CORE can be invoked.
 Cartan trace by a full global Sobolev norm and claim the cutoff-uniform R-089
 bound (3.12) for some `s>0` on the full stated control class.
 
-**Evidence:** The exact chain rule gives `b=grad c`. Choose a deterministic
-control in one fixed active shell, a separate finite-low background, and the
-current root first Gaussian chaos. Gaussian-heat injectivity supplies a
-nonzero smoothed mixed Hessian; A1's two-sided order-four sharp-cube symbol
-gives
+**Evidence:** Corrected by R-092, no conservative chain rule is used. The
+proposed global R-089 ledger already contains the positive `c` summand of the
+exact two-field trace. Choose a deterministic control in one fixed active
+shell, a separate finite-low background, and the current-root first Gaussian
+chaos. Gaussian-heat injectivity supplies a nonzero smoothed mixed Hessian;
+A1's two-sided order-four sharp-cube symbol gives
 
 `E||c_(j,t)||_(H^s)^2 >= K_s exp(-2t) 2^((2s-1)j)`.
 
-The R-089 weight `2^((1-2s)j)` cancels this shell power, and the gradient
-channel cancels identically. The current-root OU factor gives time integral
-`1/4`, so `E_(s,J)>=c_s(J-j_*)` for every `s>0`, while the fixed smooth
-control has uniform CM and terminal `L6` budgets. Primary and independent
-executables verify the exact exponent arithmetic and near-root support.
+The R-089 weight `2^((1-2s)j)` cancels this shell power. Because this is a
+positive summand, no assertion about the transposed `b` channel is needed.
+The current-root OU factor gives time integral `1/4`, so the proposed global
+ledger is at least `c_s(J-j_*)` for every `s>0`, while the fixed smooth
+control has uniform CM and terminal `L6` budgets. The R-090 executables verify
+the exponent arithmetic and near-root support; R-092 separately records that
+`b=grad c` is false.
 
 **Consequence:** R-089 (3.12) is retired as a global cutoff-uniform target.
 The witness lies at coefficient frequency `j+O(1)` and is killed by
-`Q_(j,C-2)^coef` at fixed large gap. This does not refute R-089 (3.9), the
-exact conservative Cartan trace, projected CFAR, A13, or Sector A. The
-successor must retain the relative projector until after expectation and the
-root sum.
+`Q_(j,C-2)^coef` at fixed large gap. This does not refute R-089 (3.9), its
+exact two-field Cartan trace, A13, or Sector A. R-092 closes the relative
+projected estimate only for the regular mutually orthogonal strict-past
+no-revisit one-shot class; general progressive/revisit Cartan remains open.
+The successor must retain the relative projector until after expectation and
+the root sum.
 
 <a id="audit-2026-07-25-a13-r089-rational-forest-disjointness"></a>
 ### AUDIT-2026-07-25-A13-R089-RATIONAL-FOREST-DISJOINTNESS -- reconstruct the Wick endpoint exactly once

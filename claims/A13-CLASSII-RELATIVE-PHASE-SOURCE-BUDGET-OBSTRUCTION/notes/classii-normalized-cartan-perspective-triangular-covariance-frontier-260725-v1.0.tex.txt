@@ -1,0 +1,1158 @@
+% Title: Normalized Cartan closure, compensated perspective innovation, and triangular covariance frontier
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-25; this version issued 2026-07-25
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE; REGULAR CARTAN H_C CLOSED; COMPENSATED PERSPECTIVE H_N AND TRIANGULAR COVARIANCE H_A REDUCED; FULL PROGRESSIVE/REVISIT ASSEMBLY, OVERLAP, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-NORMALIZED-CARTAN-COMPENSATED-PERSPECTIVE-TRIANGULAR-COVARIANCE-FRONTIER
+% Ledger: R-092
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\section{Purpose and scope}
+
+R-091 left three named sufficient obligations.  The projected Cartan FAR
+estimate was denoted $H_C$, the complete signed linear--rational NEAR estimate
+was denoted $H_N$, and the overlap/revisit-uniform progressive assembly was
+denoted $H_A$.  This note advances all three without identifying them with
+the logically stronger full-OVERLAP theorem.
+
+The main positive result is a closure of the \emph{regular} Cartan branch,
+after correcting a transpose error in R-090 and R-091.  The production
+Jacobian is not symmetric in general.  Consequently the actual first-order
+coefficient $b$ is not the spatial gradient of the endpoint coefficient
+$c$.  This note replaces the false conservative compression by the exact
+R-089 two-tail trace and controls both $b$ and $g=\nabla c$ with the same
+normalized whole-product estimate.  No conclusion below uses
+$b=\nabla c$.
+
+For the R-079 regular mutually orthogonal, strict-past, no-revisit, one-shot
+whole-shell control class and every $C\ge5$,
+\[
+ \boxed{
+ \mathcal H_C^{\rm reg}(C)
+ \le C_{e,L}\,2^{-(C-5)/2}
+ \left\{C_{\varepsilon,\delta,e,L}
+       +\varepsilon\,\mathbb EX+\delta\,\mathbb EY\right\}.}
+ \tag{1.1}
+\]
+Here $e=\epsilon_\rho>0$ is fixed, $X$ is the accepted Cameron--Martin
+energy, and $Y=\|U+A^*\|_6^6$.  The constants are cutoff-uniform.  The proof
+uses a normalized lift of the production quotient.  Its Jacobian is a finite
+polynomial of degree at most four in a bounded vector, so the infinite
+rational Taylor forest disappears before the FAR estimate.  A fractional
+largest-input argument gives the positive output exponent, and the physical
+sharp-shell square function controls every regular prefix exactly once.
+
+The second result compresses every R-091 conditional companion in $H_N$ into
+one matrix-perspective martingale telescope.  After the already required
+baseline endpoint is restored, the only intrinsically signed high-root
+density is
+\[
+ \widetilde{\mathcal C}_k
+ =\mathcal K_k+P_{k-1}|d_ky|^2
+  -B_{k-1}:\Delta\Gamma_k.                            \tag{1.2}
+\]
+The terminal $\Theta_R(B_1)$ energy supplies the new Doob term and cannot be
+discarded.  A coefficient-conditioned moment-matched one-reveal branch is
+nonnegative; in general the sign compresses to a weighted conditional-
+covariance deficit plus coefficient-reveal variances.  An exact finite
+fixture makes the fully completed local expression equal $-623/5440$, so no
+fixed or newly chosen adaptive derivative payment creates automatic
+termwise positivity.
+
+The third result proves the exact covariance-union contraction and a causal
+entropy-union identity for arbitrary overlapping temporal source ranges.
+Overlap itself creates no multiplicity constant, and kernel/revisit cost is
+retained as a positive fibre-entropy surplus.  The polar-minimal source
+representative is generally nonadapted, while the entropy identity avoids
+that representative.  Its free-energy term is exactly the still-open Nelson
+quantity, so the $H_A$ successor remains a triangular covariance-union
+signed-packet theorem in source coordinates.
+
+Finally, two tempting global shortcuts are audited.  A negative flow removes
+the one-shot Ramer determinant zero but replaces it by a high-field
+non-surjectivity complement and a signed material derivative.  Conditional
+CAT(0) barycentering alone fails on a scaled reset model for every fixed
+allocation.  These are method no-gos, not production counterexamples.
+
+The result does not prove the complete signed $H_N$ estimate, the triangular
+$H_A$ estimate, general progressive/revisit Cartan control, REG as a complete
+packet theorem, full OVERLAP, the $q=10/9$ Nelson estimate, an interacting
+measure, or Sector-A closure.  Tier stays T4.
+
+The load-bearing authorities are R-075, R-079, R-084, R-087, and
+R-089--R-091.  R-075
+supplies the physical sharp-shell graph norm.  R-079 supplies the exact
+regular control class and complete current.  R-084 supplies the root OU
+identity.  The exact two-field trace is the R-089 trace retained in R-090's
+predecessor data.  R-092 audits R-090's conservative identity and the
+corresponding second equality in R-091 as false outside a symmetric Jacobian
+slice.  R-091's first, definition-level nonnegative output block, lossless
+weight extraction, and terminal nonduplication identities remain valid.
+
+\section{The normalized production Jacobian is a finite forest}
+
+Let $S=S^T$, $\|S\|\le1$, and put
+\[
+ d_x=e+|x|^2,\qquad n_x={x\over\sqrt{d_x}},\qquad
+ q_x=n_x^TSn_x,\qquad P_x=n_xn_x^T.                    \tag{2.1}
+\]
+The production quotient vector is
+\[
+ F_S(x)=q_xx.                                           \tag{2.2}
+\]
+
+\subsection*{Theorem 2.1 (finite normalized Jacobian)}
+
+In the fixed six-real convention,
+\[
+ \boxed{
+ J_S(x):=DF_S(x)=q_xI+2P_x(S-q_xI)
+ =q_xI+2P_xS-2q_xP_x.}                                 \tag{2.3}
+\]
+Consequently $J_S$ is a polynomial of degrees two and four in the bounded
+variable $n_x$, and
+\[
+ \boxed{J_S(x)^T-J_S(x)=2(SP_x-P_xS).}                 \tag{2.4}
+\]
+In particular, the Cartan antisymmetric part is the quadratic commutator
+$SP_x-P_xS$.
+
+\emph{Proof.}
+Since
+\[
+ Dq_x[h]={2\over\sqrt{d_x}}(S-q_xI)n_x\cdot h,
+\]
+one has
+$DF_S(x)[h]=q_xh+2n_xn_x^T(S-q_xI)h$, which is (2.3).
+Taking the transpose cancels both scalar terms and gives (2.4).
+The accepted production variance identity also gives
+$\|(S-q_xI)n_x\|\le\|n_x\|$, hence $\|J_S(x)\|\le3$.
+\hfill$\square$
+
+For $x_-=x$, $x_+=x+a$, write
+\[
+ n_\pm=n_e(x_\pm),\qquad \delta n=n_+-n_-,\qquad
+ \Delta q=q_+-q_-,\qquad \Delta P=P_+-P_-.             \tag{2.5}
+\]
+Then
+\[
+ \Delta q=(n_++n_-)^TS\delta n,\qquad
+ \Delta P=\delta n\,n_+^T+n_-\delta n^T,               \tag{2.6}
+\]
+and
+\[
+ \boxed{
+ \Delta J
+ =\Delta q I+2\Delta P S-2\Delta q P_+-2q_-\Delta P.} \tag{2.7}
+\]
+Every term in (2.7) contains exactly one $\delta n$ and at most three other
+bounded normalized factors.  Thus
+\[
+ \boxed{\|\Delta J\|\le14|\delta n|.}                 \tag{2.8}
+\]
+The antisymmetric increment is even simpler:
+\[
+ {\Delta(J^T-J)\over2}=S\Delta P-\Delta P S.            \tag{2.9}
+\]
+
+\section{Exact normalized secant and saturation}
+
+The normalized difference has the exact resolvent formula
+\[
+ \boxed{
+ \delta n=
+ \left[
+ {I\over\sqrt{d_+}}
+ -{x(x_++x_-)^T\over
+ \sqrt{d_-d_+}(\sqrt{d_-}+\sqrt{d_+})}
+ \right]a.}                                             \tag{3.1}
+\]
+Indeed, subtract $x/\sqrt{d_-}$ from $(x+a)/\sqrt{d_+}$ and use
+\[
+ \sqrt{d_+}-\sqrt{d_-}
+ ={a\cdot(x_++x_-)\over\sqrt{d_+}+\sqrt{d_-}}.
+\]
+
+There is also a coordinate-free chord proof of the sharp useful bound.  Lift
+$x$ to $X=(x,\sqrt e)$ and $y$ to $Y=(y,\sqrt e)$.  For nonzero vectors,
+\[
+ \left|{X\over|X|}-{Y\over|Y|}\right|
+ \le {2|X-Y|\over|X|+|Y|}.                              \tag{3.2}
+\]
+After projecting onto the first six coordinates and taking $y=x+a$,
+\[
+ \boxed{
+ |\delta n|
+ \le2\min\left\{1,{|a|\over\sqrt{d_-}+\sqrt{d_+}}\right\}
+ \le\min\{2,e^{-1/2}|a|\}.}                           \tag{3.3}
+\]
+This is the vector and multimode saturation missing from the cumulative
+$Z^6$ majorant rejected in R-091.
+
+For a centered target-value heat variable $\zeta\sim N(0,\Sigma)$, couple
+the same $\zeta$ at both endpoints.  Then
+\[
+ D(P_\Sigma F_S)(x)=\mathbb E_\zeta J_S(x+\zeta).       \tag{3.4}
+\]
+If
+\[
+ c_\Sigma(x,a)=P_\Sigma F_S(x+a)-P_\Sigma F_S(x),
+\]
+then $|c_\Sigma|\le3|a|$ and the exact chain rule is
+\[
+ \boxed{
+ \partial_i c_\Sigma
+ =\mathbb E_\zeta\!\left[
+ \Delta J(x+\zeta,x+a+\zeta)\partial_i x
+ +J_S(x+a+\zeta)\partial_i a\right].}                 \tag{3.5}
+\]
+The actual R-084/R-089 current coefficient instead is
+\[
+ \boxed{
+ b_i=\mathbb E_\zeta\!\left[
+ \Delta J(x+\zeta,x+a+\zeta)^T\partial_i x
+ +J_S(x+a+\zeta)^T\partial_i a\right].}               \tag{3.6}
+\]
+Therefore, with $g=\nabla c_\Sigma$,
+\[
+ |b|+|g|
+ \le6|Da|+28\mathbb E_\zeta[|\delta n|\,|Dx|].        \tag{3.7}
+\]
+No complete translated $|x|^6$ multiplier occurs.
+
+The transpose cannot be removed.  In fact
+\[
+ \boxed{
+ b_i-g_i=\mathbb E_\zeta\!\left[
+ (\Delta J^T-\Delta J)\partial_i x
+ +(J_+^T-J_+)\partial_i a\right],}                    \tag{3.8}
+\]
+and (2.5) shows that the right side is a generally nonzero Cartan
+commutator.  This is the audit correction to R-090 (2.4) and R-091 (2.1).
+
+For later fractional estimates it is important not to insert a spurious
+$|a||Da|$ term.  The exact identity is
+\[
+ \boxed{
+ D\delta n=Dn_e(x+a)Da+\{Dn_e(x+a)-Dn_e(x)\}Dx.}       \tag{3.9}
+\]
+Since $\|Dn_e\|\le e^{-1/2}$ and $\|D^2n_e\|\le C_e$,
+\[
+ |D\delta n|\le C_e\{|Da|+|a||Dx|\}.                  \tag{3.10}
+\]
+
+\section{Exact two-field output trace and the transpose audit}
+
+The equality claimed in R-090 (2.4) is false for a nonsymmetric production
+Jacobian.  Retain instead the exact R-089 first-order form
+\[
+ (L_{A,j,t}v)_i=b_{A,j,t,i}^Tv+c_{A,j,t}^T\partial_i v.
+\]
+For a root mode $v_{p,\mu}=\sqrt{\lambda_{j,p}}e^{ipx}e_\mu$, put
+$r=q-p$.  The definition-level nonnegative output block is exactly
+\[
+ \begin{aligned}
+ \mathcal E_{A,j,m}:={}&\int_0^\infty e^{-2t}\mathbb E
+ \sum_{\mu,p}\lambda_{j,p}\sum_q|\pi_m(q)|^2\\
+ &\quad\times\sum_i
+ \left|\widehat b_{A,j,t,i}(r)^Te_\mu
+       +ip_i\widehat c_{A,j,t}(r)^Te_\mu\right|^2dt .
+ \end{aligned}                                         \tag{4.1}
+\]
+This is the first equality in the R-091 block definition.  Its replacement
+there by a single $q$-weighted $c$ trace is the audited false step.
+
+Let $g_{A,j,t}=\nabla c_{A,j,t}$.  Suppose
+$|p|_\infty\le2^j$, $|q|_\infty>2^{m-1}$, and $m\ge j+5$.  Then
+\[
+ |r|_\infty>15\,2^j.                                  \tag{4.2}
+\]
+The enlarged coefficient projector used in R-089 is supported where
+$|r|_\infty>2^{m-2}$.  Consequently Plancherel gives the safe
+coefficient-band Poincare estimate
+\[
+ \|\widetilde\Pi_m c\|_2^2
+ \le16\,2^{-2m}\|\widetilde\Pi_m g\|_2^2.            \tag{4.3}
+\]
+Using $|u+v|^2\le2|u|^2+2|v|^2$ and the pinned root moments
+\[
+ \Lambda_{0,j}\le\kappa_02^{-j},\qquad
+ \Lambda_{1,j}\le\kappa_12^j,
+\]
+the exact trace obeys
+\[
+ \boxed{
+ \begin{aligned}
+ \mathcal E_{A,j,m}\le\int_0^\infty e^{-2t}\mathbb E\bigg[&
+ 2\kappa_02^{-j}\|\widetilde\Pi_m b_{A,j,t}\|_2^2\\
+ &+32\kappa_1\,2^{-j}2^{-2(m-j)}
+   \|\widetilde\Pi_m g_{A,j,t}\|_2^2\bigg]dt .
+ \end{aligned}}                                        \tag{4.4}
+\]
+Thus the omitted antisymmetric remainder is not discarded: it stays in
+$b$.  The derivative channel is paid separately through $g$, and its
+current-root covariance carries the additional gap factor
+$2^{-2(m-j)}$.
+
+\section{Fractional normalized-lift and whole-product estimate}
+
+\subsection*{Lemma 5.1 (bounded fractional lift)}
+
+Let $0<\sigma<\theta<1$, $p\theta>1$, and let $u$ be spatially
+differentiable on the fixed torus.  Then
+\[
+ \boxed{
+ [n_e(u)]_{W^{\sigma,p}}
+ \le C_{e,L,\sigma,\theta,p}
+ \|Du\|_{L^{p\theta}}^\theta.}                         \tag{5.1}
+\]
+If $\delta n=n_e(x+a)-n_e(x)$, then
+\[
+ \boxed{
+ [\delta n]_{W^{\sigma,p}}
+ \le C_{e,L,\sigma,\theta,p}
+ \left\{
+ \|Da\|_{L^{p\theta}}^\theta
+ +\||a||Dx|\|_{L^{p\theta}}^\theta
+ \right\}.}                                           \tag{5.2}
+\]
+
+\emph{Proof.}
+The chord bound gives
+\[
+ |n_e(u(x+h))-n_e(u(x))|
+ \le C\min\{1,e^{-1/2}|\delta_hu(x)|\}
+ \le C_e|\delta_hu(x)|^\theta.                         \tag{5.3}
+\]
+The translation estimate
+$\|\delta_hu\|_{p\theta}\le|h|\|Du\|_{p\theta}$
+and the fractional difference quotient converge exactly because
+$\theta>\sigma$.  This proves (5.1).  Apply the same bounded-function
+argument to $\delta n$ and use (3.9)--(3.10) to prove (5.2).
+\hfill$\square$
+
+Let $Dx$, $Da$ have physical Fourier support in the sharp cube $Q_j$, and
+let $m\ge j+5$.  For a fixed target-value heat sample $\zeta$, which has no
+spatial derivative, set
+\[
+ N_\pm=[n_e(x_\pm+\zeta)]_{W^{\sigma,p}},\qquad
+ D_\sigma=[\delta n]_{W^{\sigma,p}},\qquad
+ D_\infty=\|\delta n\|_\infty,                         \tag{5.4}
+\]
+and choose $q$ by $1/2=1/p+1/q$.  Because (2.3) and (2.7) contain only
+finitely many bounded normalized factors, the fractional product rule gives
+\[
+ [J_+]_{W^{\sigma,p}}\le C N_+,\qquad
+ [\Delta J]_{W^{\sigma,p}}
+ \le C\{D_\sigma+D_\infty(N_++N_-)\}.                 \tag{5.5}
+\]
+All Fourier convolutions are retained before this bound is applied.  A high
+output of a product with a $Q_j$ factor must therefore come from the
+coefficient, and
+\[
+ \boxed{
+ \|\widetilde\Pi_m b_{A,j,t}\|_2^2
+ +\|\widetilde\Pi_m g_{A,j,t}\|_2^2
+ \le C_e2^{-2\sigma m}
+       \mathbb E_\zeta\mathfrak R_{A,j,t}(\zeta)^2,}  \tag{5.6}
+\]
+where
+\[
+ \boxed{
+ \begin{aligned}
+ \mathfrak R_{A,j,t}(\zeta)={}&N_+\|Da\|_q\\
+ &+\{D_\sigma+D_\infty(N_++N_-)\}\|Dx\|_q.
+ \end{aligned}}                                        \tag{5.7}
+\]
+Before squaring, each heat-averaged field is bounded by
+$C_e2^{-\sigma m}\mathbb E_\zeta\mathfrak R(\zeta)$;
+Jensen gives (5.6).  The same proof applies to $b$, which uses transposed coefficient matrices,
+and $g$, which uses untransposed matrices; transposition preserves every
+operator and fractional coefficient norm.  This is a whole-product
+largest-input estimate.  It assumes neither output orthogonality nor scalar
+alignment and includes coherent high--high-to-low collisions.
+
+\section{Regular Cartan $H_C$ closes}
+
+Let $\mathcal B_\gamma^{\rm out}$ be the exact R-091 weighted output ledger.
+Use its definition-level block (4.1), insert (5.6) into the corrected
+two-field estimate (4.4), multiply output offset $m-j-5$ by
+$2^{2\gamma(m-j-5)}$, and sum first in $m$.  For
+$0<\gamma<\sigma$,
+\[
+ \boxed{
+ \mathcal B_\gamma^{\rm out}
+ \le C_e\left\{
+ {2\kappa_0\,2^{-10\sigma}\over1-2^{-2(\sigma-\gamma)}}
+ +{32\kappa_1\,2^{-10(1+\sigma)}\over
+       1-2^{-2(1+\sigma-\gamma)}}\right\}
+ \sum_{A,j}2^{-(1+2\sigma)j}
+ \mathbb E\int_0^\infty e^{-2t}
+ \mathbb E_\zeta\mathfrak R_{A,j,t}(\zeta)^2dt.}
+ \tag{6.1}
+\]
+
+Choose
+\[
+ \boxed{
+ \gamma={1\over4},\qquad \sigma={4\over15},\qquad
+ \theta={3\over10},\qquad p=6,\qquad q=3.}             \tag{6.2}
+\]
+Then $p\theta=9/5>1$, $\sigma<\theta$, and
+\[
+ \begin{aligned}
+ 2^{-(1+2\sigma)j}&=2^{-23j/15},\\
+ 1-2^{-2(\sigma-\gamma)}&=1-2^{-1/30}>0,\\
+ 1-2^{-2(1+\sigma-\gamma)}&=1-2^{-61/30}>0.
+ \end{aligned}                                        \tag{6.3}
+\]
+
+For the cutoff Gaussian prefix, every fixed moment of
+$\|DU_j\|_{L^r}$ is bounded by a constant times $2^{j/2}$.  Expanding
+(5.7) with (5.1)--(5.2), the largest Gaussian power is
+$2+2\theta=13/5$, hence the worst shell growth is
+\[
+ 2^{(13/5)j/2}=2^{13j/10}.                              \tag{6.4}
+\]
+The remaining geometric factor is strictly summable:
+\[
+ \boxed{2^{-23j/15}2^{13j/10}=2^{-7j/30}.}             \tag{6.5}
+\]
+
+Write for a control prefix
+\[
+ X_a=\|a\|_{H^2}^2,\qquad Y_a=\|a\|_6^6.
+\]
+The interpolation
+$\|Da\|_3^2\lesssim X_a^{1/2}Y_a^{1/6}$ and the
+normalized-lift powers in (5.1)--(5.2) give an exhaustive ledger after
+$Dx=DU+Da$ and $2uv\le u^2+v^2$ are used.  Constants and Gaussian factors
+are suppressed in the middle column:
+\[
+\begin{array}{c|c|c}
+\text{source in }\mathfrak R^2&\text{control monomial}&
+ \text{total exponent}\\ \hline
+\|Da\|_3^2&X_a^{1/2}Y_a^{1/6}&2/3\\
+N_{+,\rm ctrl}^2\|Da\|_3^2&X_a^{4/5}Y_a^{1/6}&29/30\\
+\text{fractional }Da\text{ pieces}&X_a^{3/10}&3/10\\
+\|aDa\|_{9/5}^{2\theta}\|Da\|_3^2
+  &X_a^{3/5}Y_a^{1/3}&14/15\\
+\|aDU\|_{9/5}^{2\theta}\|Da\|_3^2
+  &X_a^{1/2}Y_a^{4/15}&23/30\\
+\|aDa\|_{9/5}^{2\theta}\|DU\|_3^2
+  &X_a^{1/10}Y_a^{1/6}&4/15\\
+\|aDU\|_{9/5}^{2\theta}\|DU\|_3^2
+  &Y_a^{1/10}&1/10
+\end{array}                                             \tag{6.6}
+\]
+Indeed $N_{+,\rm ctrl}^2\lesssim X_a^{3/10}$.  For the terms in (5.2),
+put $r=p\theta=9/5$, choose $s$ by $1/r=1/6+1/s$, and set
+\[
+ s={6\theta\over1-\theta}={18\over7},\qquad
+ \alpha=2-{1\over2\theta}={1\over3}.
+\]
+The three-dimensional Gagliardo--Nirenberg and Holder inequalities give
+\[
+ \|Da\|_s\lesssim
+ \|a\|_{H^2}^{\alpha}\|a\|_6^{1-\alpha},\qquad
+ \|aDa\|_r^{2\theta}
+ \lesssim X_a^{\theta\alpha}
+ Y_a^{\theta(2-\alpha)/3}
+ =X_a^{1/10}Y_a^{1/6}.
+\]
+For the inner $aDU$ branch, the cutoff Gaussian factor has every fixed
+moment and the control factor is only
+$\|a\|_6^{2\theta}=Y_a^{\theta/3}=Y_a^{1/10}$.
+Multiplying each inner branch by the outer $DU$ or $Da$, and using
+$2uv\le u^2+v^2$, gives all four rows displayed above.  Thus every cross
+term is dominated by two entries of the table.
+The largest total power is
+\[
+ {4\over5}+{1\over6}={29\over30}<1.                   \tag{6.7}
+\]
+All mixed Gaussian factors are handled pointwise by generalized Young and
+then by the accepted Gaussian moments.  Thus every allocation
+$\varepsilon,\delta>0$ is admissible.
+
+It remains to justify that a prefix uses the terminal budgets only once.
+This is true on the exact regular class and is false as a formal inference
+for arbitrary revisits.  Write
+\[
+ A^*=A^0+\sum_{k=j_0}^Ja_k,\qquad a_k=K_kh_k,\qquad
+ A^{(j)}-A^0=\sum_{k=j_0}^ja_k.                         \tag{6.8}
+\]
+The last sum is the \emph{physical sharp-shell} prefix
+$P^{\rm phys}_{[j_0,j]}(A^*-A^0)$; it is not identified with the auxiliary
+smooth analytic LP used to test outputs.  R-075 (8.1)--(8.4) gives
+\[
+ \boxed{
+ \begin{aligned}
+ \|A^{(j)}-A^0\|_6
+ &\lesssim\|S_jh\|_6\le\|S_Jh\|_6
+ \lesssim\|A^*-A^0\|_6,\\
+ \|A^{(j)}-A^0\|_{H^2}^2
+ &\lesssim\sum_{k\le j}\|h_k\|_{\mathcal H_k}^2
+ \le X.
+ \end{aligned}}                                        \tag{6.9}
+\]
+Adaptation does not affect these pathwise spatial inequalities.  The fixed
+low object is paid by R-080, while
+$\|A^*\|_6^6\lesssim Y+\|U\|_6^6$ and the Gaussian term has a uniform
+moment.  Therefore (6.1)--(6.9) prove
+\[
+ \boxed{
+ \mathcal B_{1/4}^{\rm out}
+ \le C_{e,L}\{C_{\varepsilon,\delta,e,L}
+ +\varepsilon\mathbb EX+\delta\mathbb EY\}.}           \tag{6.10}
+\]
+R-091's lossless output extraction now yields (1.1):
+\[
+ \mathcal H_C^{\rm reg}(C)
+ \le2^{-(C-5)/2}\mathcal B_{1/4}^{\rm out}.            \tag{6.11}
+\]
+
+This closes the regular Cartan FAR obligation.  It does not close a
+progressive revisit prefix.  For example, the temporal source sequence
+$tf,-tf$ has zero terminal shift but a prefix of size $t\|f\|_6$.  The
+terminal Douglas contraction controls its Cameron--Martin endpoint, not this
+intermediate $L^6$ norm.  A different signed temporal argument is required
+inside $H_A$.
+
+\section{Vector tail boundary}
+
+R-091's scalar one-mode superexponential tail is not uniform over vector
+ellipticity.  At zero floor, take
+\[
+ S=\operatorname{diag}(1,-1),\qquad
+ v_\epsilon(x)=(\sin Nx,\epsilon\cos Nx).
+\]
+The denominator of the homogeneous quotient has the Fourier-geometric ratio
+\[
+ \rho_\epsilon={1-\epsilon\over1+\epsilon}\longrightarrow1
+ \quad(\epsilon\downarrow0).                            \tag{7.1}
+\]
+At positive floor the same boundary appears above the scale
+$A\epsilon\gtrsim\sqrt e$.  Hence no scalar-uniform exponential ratio may be
+inserted into the vector proof.  The whole-product fractional estimate
+(5.6), which is uniform in direction and allows coherent collisions, is the
+correct repair.  This fires the narrowly scoped method result
+\texttt{NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY}.
+
+\section{Exact conditional perspective compression}
+
+Let $P_k$ be a finite filtration and consider the conditional endpoint
+\[
+ \mathcal E={1\over2}D:Q+G^TCc+{1\over2}c^TBc,\qquad
+ Q=GG^T-\Gamma,                                         \tag{8.1}
+\]
+with $c\in\mathcal F_\ell$.  Allow one terminally allocated matrix payment
+$c^TRc$, $R\succ0$, and set
+\[
+ x=C^TG,\qquad A=B+2R,\qquad
+ x_k=P_kx,\quad A_k=P_kA,\quad m_k=A_k^{-1}x_k.       \tag{8.2}
+\]
+Completing the conditional square gives
+\[
+ \boxed{
+ P_\ell[\mathcal E+c^TRc]
+ ={1\over2}\|c+m_\ell\|_{A_\ell}^2
+ +{1\over2}P_\ell[D:Q]
+ -{1\over2}x_\ell^TA_\ell^{-1}x_\ell.}               \tag{8.3}
+\]
+
+The R-091 same-root companions are the exact martingale cross-brackets
+\[
+ \boxed{
+ r_C=P_\ell\sum_{k>\ell}(d_kC)^T(d_kG),\qquad
+ 2J_D=P_\ell\sum_{k>\ell}d_kD:d_kQ.}                  \tag{8.4}
+\]
+Thus they are not independent error terms.
+
+\subsection*{Theorem 8.1 (matrix-perspective telescope)}
+
+Define $\Phi_k=x_k^TA_k^{-1}x_k$.  Then
+\[
+ \boxed{
+ P_{k-1}\Phi_k-\Phi_{k-1}=\mathcal K_k,\qquad
+ \mathcal K_k=P_{k-1}
+ [(m_k-m_{k-1})^TA_k(m_k-m_{k-1})]\ge0.}               \tag{8.5}
+\]
+Consequently
+\[
+ \boxed{
+ 2\mathfrak S_{\ell,R}
+ =P_\ell\left[D:Q-x^TA^{-1}x+
+ \sum_{k>\ell}\mathcal K_k\right].}                  \tag{8.6}
+\]
+
+\emph{Proof.}
+Expand the square in (8.5).  Conditional expectation gives
+$P_{k-1}(A_km_k)=x_{k-1}$ and $P_{k-1}A_k=A_{k-1}$.
+The cross and old-square terms therefore reduce to
+$x_{k-1}^TA_{k-1}^{-1}x_{k-1}$.  Telescoping and (8.3) prove (8.6).
+\hfill$\square$
+
+The positive $\mathcal K_k$ terms partition the terminal perspective
+endpoint.  Appending them to that endpoint as new positivity would count the
+same square twice.
+
+\section{Baseline restoration and the augmented perspective density}
+
+For the complete linear--rational frame,
+\[
+ D=B_1-B_0,\qquad C=B=B_1.                              \tag{9.1}
+\]
+Put
+\[
+ \Theta_R(B)=B-B(B+2R)^{-1}B\succeq0.                  \tag{9.2}
+\]
+After restoring the once-only baseline
+$W_0=\frac12B_0:Q$, (8.3)--(8.6) become
+\[
+ \boxed{
+ \begin{aligned}
+ P_\ell[W_0+\Delta W_{LR}+c^TRc]
+ ={}&{1\over2}\|c+m_\ell\|_{A_\ell}^2\\
+ &+{1\over2}P_\ell\left[
+ G^T\Theta_R(B_1)G-B_1:\Gamma+
+ \sum_{k>\ell}\mathcal K_k\right].
+ \end{aligned}}                                        \tag{9.3}
+\]
+The apparent $-B_0$ Schur debt has disappeared because it was the baseline
+endpoint, not a new local error.
+
+Let
+$\Gamma=\Gamma_\ell+\sum_{k>\ell}\Delta\Gamma_k$ and
+$B_k=P_kB_1$.  Conditional chronology gives
+\[
+ P_\ell[B_1:\Gamma]
+ =B_\ell:\Gamma_\ell
+ +P_\ell\sum_{k>\ell}B_{k-1}:\Delta\Gamma_k.           \tag{9.4}
+\]
+Therefore
+\[
+ \boxed{
+ \begin{aligned}
+ P_\ell[W_0+\Delta W_{LR}+c^TRc]
+ ={}&{1\over2}\|c+m_\ell\|_{A_\ell}^2
+ +{1\over2}P_\ell[G^T\Theta_R(B_1)G]\\
+ &-{1\over2}B_\ell:\Gamma_\ell
+ +{1\over2}P_\ell\sum_{k>\ell}\mathcal C_k^{\rm Schur},
+ \end{aligned}}                                        \tag{9.5}
+\]
+where
+\[
+ \boxed{\mathcal C_k^{\rm Schur}
+ =\mathcal K_k-B_{k-1}:\Delta\Gamma_k.}                \tag{9.6}
+\]
+This intermediate density is not the smallest inseparable object.  Define
+\[
+ Y=\Theta_R(B_1)^{1/2}G,\qquad y_k=P_kY.
+\]
+Doob Pythagoras gives
+\[
+ P_\ell|Y|^2=|y_\ell|^2+
+ P_\ell\sum_{k>\ell}P_{k-1}|d_ky|^2.                  \tag{9.7}
+\]
+Hence (9.5) is exactly
+\[
+ \boxed{
+ \begin{aligned}
+ P_\ell[W_0+\Delta W_{LR}+c^TRc]
+ ={}&{1\over2}\|c+m_\ell\|_{A_\ell}^2
+ +{1\over2}|y_\ell|^2-{1\over2}B_\ell:\Gamma_\ell\\
+ &+{1\over2}P_\ell\sum_{k>\ell}
+       \widetilde{\mathcal C}_k,
+ \end{aligned}}                                        \tag{9.8}
+\]
+where
+\[
+ \boxed{
+ \widetilde{\mathcal C}_k
+ =\mathcal K_k+P_{k-1}|d_ky|^2
+  -B_{k-1}:\Delta\Gamma_k.}                           \tag{9.9}
+\]
+For frozen predictable $B,R$ and a fresh covariance increment,
+$\mathcal C_k^{\rm Schur}=-\Theta_R(B):\Delta\Gamma_k\le0$, whereas
+$P_{k-1}|d_ky|^2=\Theta_R(B):\Delta\Gamma_k$ and
+$\widetilde{\mathcal C}_k=0$.  Thus the terminal positive energy is
+load-bearing and cannot merely be set aside.
+
+There is an exact one-reveal criterion.  Let $\mathcal F$ be the past,
+$G=G_0+g$, let $B\succeq0$ be revealed at the new level, and let
+$R\succ0$ be $\mathcal F$-measurable.  Put
+\[
+ \begin{gathered}
+ \mu_B=\mathbb E[g\mid\mathcal F,B],\qquad
+ V_B=\operatorname{Cov}(g\mid\mathcal F,B),\\
+ A=B+2R,\quad \bar B=\mathbb E[B\mid\mathcal F],
+ \quad\bar A=\bar B+2R,\\
+ u_B=A^{-1}B(G_0+\mu_B),\qquad
+ m_0=\bar A^{-1}\mathbb E[B(G_0+\mu_B)\mid\mathcal F],\\
+ h_B=\Theta_R(B)^{1/2}(G_0+\mu_B).
+ \end{gathered}                                        \tag{9.10}
+\]
+For $m=A^{-1}B(G_0+g)$ and
+$Y=\Theta_R(B)^{1/2}(G_0+g)$, direct conditional expansion and
+$BA^{-1}B+\Theta_R(B)=B$ yield
+\[
+ \boxed{
+ \begin{aligned}
+ &\mathbb E\!\left[(m-m_0)^TA(m-m_0)
+       +|Y-\mathbb E[Y\mid\mathcal F]|^2\mid\mathcal F\right]
+       -\bar B:\Delta\Gamma\\
+ &\quad=\mathbb E[(u_B-m_0)^TA(u_B-m_0)\mid\mathcal F]
+       +\operatorname{Var}_{\mathcal F}(h_B)
+       +\mathbb E[B:V_B\mid\mathcal F]-\bar B:\Delta\Gamma.
+ \end{aligned}}                                        \tag{9.11}
+\]
+In particular, if $\mu_B=0$ and $V_B=\Delta\Gamma$ independently of $B$,
+the augmented one-step density is nonnegative.  This closes the frozen and
+coefficient-conditioned moment-matched value-only branch.  It does not
+cover the multistep production derivative-feedback correlation.
+
+The coefficient bracket $r_C$ is encoded in $x_k=P_k(C^TG)$ and hence in
+the perspective telescope.  The quadratic bracket $J_D$ remains in
+$P_\ell[D:Q]$ until the full-frame baseline identity is used; it is not an
+extra copy of $\mathcal K_k$.  Heat is contained in the chosen terminal
+coefficient martingale, and the R-063 forest reconstructs $B_1:Q$ rather
+than adding another endpoint.
+
+\section{Perspective positivity fails, but the target sharpens}
+
+For $R=\eta I$, the minimized local remainder is
+\[
+ \mathfrak S_\eta=\kappa_\ell
+ -{1\over2}h^T(\widehat B+2\eta I)^{-1}h,\qquad
+ \kappa_\ell={1\over2}P_\ell[D:Q].                    \tag{10.1}
+\]
+It is increasing and concave in $\eta$:
+\[
+ \mathfrak S_\eta'
+ =h^T(\widehat B+2\eta I)^{-2}h,\qquad
+ \mathfrak S_\eta''
+ =-4h^T(\widehat B+2\eta I)^{-3}h.                    \tag{10.2}
+\]
+If $\kappa_\ell<0$, no derivative payment restores a local sign.  Choosing
+fresh $R_k$ at each filtration level is not a cure: the telescope acquires
+\[
+ x_{k-1}^T(\bar A_k^{-1}-A_{k-1}^{-1})x_{k-1},\qquad
+ \bar A_k=P_{k-1}A_k,                                  \tag{10.3}
+\]
+with uncontrolled sign unless
+$R_{k-1}\succeq P_{k-1}R_k$.
+
+An exact finite fixture contains all conditional companions.  Let
+$H\in\{0,1\}$ equiprobably and set
+\[
+ V_0={1\over2},\qquad V_1={3\over2},\qquad\Gamma=1.
+\]
+Conditionally on $H$, let $G=0$ with probability $1/2$ and
+$G=\pm\sqrt{2V_H}$ with probability $1/4$ each.  Put
+\[
+ R_G=G^2-V_H,\qquad m_H=-{1\over4}(V_H-1),              \tag{10.4}
+\]
+\[
+ B_0=1,\qquad B_1=C=B
+ =1+m_H-{1\over8}R_G+{1\over8}G,\qquad
+ D=B_1-B_0,\qquad\eta={1\over2}.                       \tag{10.5}
+\]
+Then $B_1\ge(11-2\sqrt3)/16>0$,
+\[
+ r_C={V_H\over8},\qquad J_D=-{V_H^2\over16},           \tag{10.6}
+\]
+and the exact conditional minima are
+\[
+ \mathfrak S_0=-{13\over272},\qquad
+ \mathfrak S_1=-{29\over160}.                          \tag{10.7}
+\]
+Consequently
+\[
+ \boxed{
+ \mathbb E\!\left[\inf_{c\in L^2(\mathcal F_H)}
+       \{\mathcal E+\eta c^2\}\right]
+ =-{623\over5440}<0.}                                  \tag{10.8}
+\]
+The infimum is attained by the explicit branchwise optimizer from the
+completed square in (8.3).
+The covariance is matched after averaging, while covariance mismatch,
+$r_C$, $J_D$, and Schur debt are all nonzero conditionally.  This is an
+algebraic no-go, not a post-paid production counterexample.  It fires
+\texttt{NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY}.
+
+The moment-matching premise in (9.11) is essential.  With trivial past,
+$G_0=0$, $B=1,2$ equiprobably, and centered conditional increments of
+variances $2,1$ respectively, $\Delta\Gamma=3/2$ but
+\[
+ \mathbb E[BV_B]-\mathbb E[B]\Delta\Gamma=-{1\over4}.
+ \tag{10.9}
+\]
+Both positive coefficient-reveal terms in (9.11) vanish, for every
+$R\succ0$.  Thus a weighted conditional-covariance deficit is the genuine
+remaining sign mechanism.
+
+The sharp nonduplicating $H_N$ successor is a form bound for
+\[
+ \boxed{
+ \Lambda_{\rm low-paid}
+ +{1\over2}|y_\ell|^2
+ -{1\over2}B_\ell:\Gamma_\ell
+ +{1\over2}\sum_{k>\ell}
+ \widetilde{\mathcal C}_k.}                           \tag{10.10}
+\]
+The completion square is retained.  Formula (9.11) proves the
+moment-matched one-reveal subcase and compresses the general failure to a
+weighted conditional-covariance deficit plus coefficient-reveal terms.  No
+current authority proves (10.10) for the full multistep derivative-feedback
+packet, so $H_N$ remains open.
+
+\section{Exact covariance union and its causal boundary}
+
+Let $\mathcal K=\bigoplus_{k=1}^N\mathcal K_k$ and let
+$S_k:\mathcal K_k\to H$ be finite-dimensional source blocks.  Define
+\[
+ S_\pi(h_1,\ldots,h_N)=\sum_kS_kh_k,\qquad
+ C=S_\pi S_\pi^*=\sum_kS_kS_k^*.                      \tag{11.1}
+\]
+
+\subsection*{Theorem 11.1 (covariance-union contraction)}
+
+For standard independent $\xi_k\in\mathcal K_k$,
+$X=\sum_kS_k\xi_k$ is centered Gaussian with covariance $C$, and
+\[
+ \boxed{
+ \|C^{\dagger/2}S_\pi h\|^2
+ =\|P_{(\ker S_\pi)^\perp}h\|^2
+ \le\sum_k\|h_k\|^2.}                                 \tag{11.2}
+\]
+For every common terminal operator $L$,
+\[
+ \boxed{
+ \sum_k\|LS_k\|_{\rm HS}^2
+ =\operatorname{Tr}(LCL^*)=\|LC^{1/2}\|_{\rm HS}^2.} \tag{11.3}
+\]
+
+\emph{Proof.}
+The covariance identity follows from independence.  The polar decomposition
+$S_\pi=C^{1/2}R$ makes
+$C^{\dagger/2}S_\pi$ the orthogonal projection of $R$ onto
+$\operatorname{Ran}C$, proving (11.2).  Taking the Hilbert--Schmidt trace of
+$LC L^*$ proves (11.3). \hfill$\square$
+
+Repeated identical ranges saturate (11.2)--(11.3) exactly; overlap by itself
+is not a multiplicity obstruction.  Polar minimization, however, is not a
+causal operation.  If
+$S_1=S_2=1/\sqrt2$ and $h=(0,f(\xi_1))$, the polar-minimal representative is
+\[
+ (f(\xi_1)/2,f(\xi_1)/2),                               \tag{11.4}
+\]
+whose first coordinate is not $\mathcal F_0$-measurable.  Terminal polar
+compression therefore cannot promote a regular graph proof to a progressive
+one.  This fires
+\texttt{NG-2026-07-25-A13-TERMINAL-POLAR-CAUSAL-PROMOTION}.
+
+A revisit loop makes the termwise danger explicit.  For $S_1=S_2=1$ and
+$h=(t,-t)$, the terminal shift and terminal CM norm vanish but the time cost
+is $2t^2$.  Along $W(a)=a^4/2$, the return increment is $-t^4/2$, whose ratio
+to the total time cost is $t^2/4$.  The complete signed packet cancels the
+outgoing and return increments; estimating the return alone cannot be
+uniform.
+
+There is nevertheless an exact causal entropy-union identity which avoids
+the polar representative.  Let
+$\gamma=\bigotimes_k\gamma_k$ be standard Gaussian source measure and let
+\[
+ T_h(\xi)=\xi+h(\xi),\qquad
+ h_k=h_k(\xi_1,\ldots,\xi_{k-1})
+\]
+be bounded, smooth, and strictly triangular.  The map $T_h$ is a recursive
+diffeomorphism and its block-lower-triangular Jacobian has determinant one.
+For $\rho_h=(T_h)_\#\gamma$ this gives
+\[
+ \boxed{
+ H(\rho_h\mid\gamma)
+ ={1\over2}\mathbb E_\gamma\sum_k\|h_k\|^2.}          \tag{11.5}
+\]
+Set $\mu_C=(S_\pi)_\#\gamma$ and
+$\nu_h=(S_\pi)_\#\rho_h$.  Relative-entropy disintegration along the
+fibres of $S_\pi$ yields
+\[
+ \boxed{
+ {1\over2}\mathbb E\sum_k\|h_k\|^2
+ =H(\nu_h\mid\mu_C)+\mathcal F_h,\qquad
+ \mathcal F_h\ge0,}                                   \tag{11.6}
+\]
+where
+\[
+ \mathcal F_h=\int H\!\left(
+ \rho_h(\,\cdot\mid S_\pi=z)\mid
+ \gamma(\,\cdot\mid S_\pi=z)\right)\nu_h(dz).
+\]
+Singular $C$ causes no difficulty when the physical measures are read on
+$\operatorname{Ran}S_\pi$.  For the kernel loop $S_1=S_2=1$ and
+$h=(t,-t)$, $\nu_h=\mu_C$ and $\mathcal F_h=t^2$: the entire source cost is
+retained as positive fibre entropy.
+
+At $q=10/9$, (11.6) and the entropy variational inequality give the exact
+diagnostic
+\[
+ \boxed{
+ \begin{aligned}
+ &\mathbb E G_J(S_\pi(\xi+h))
+ +{9\over20}\mathbb E\sum_k\|h_k\|^2\\
+ &\quad\ge-{9\over10}\log
+   \mathbb E_{\mu_C}e^{-(10/9)G_J}
+   +{9\over10}\mathcal F_h.
+ \end{aligned}}                                        \tag{11.7}
+\]
+This closes the overlap, kernel, and causal entropy accounting.  It does
+not prove Nelson: the first term on the right is precisely the open Nelson
+free energy.  Nor need a fixed finite strict-triangular class attain the
+full Gibbs variational infimum; with one source block it contains only
+translations.
+
+The exact source-coordinate successor is the triangular covariance-union
+theorem.  For every decomposition $C=\sum_kS_kS_k^*$ and every bounded smooth
+triangular $h_k=h_k(\xi_1,\ldots,\xi_{k-1})$, prove uniformly that
+\[
+ \boxed{
+ \mathbb E G_J\!\left(\sum_kS_k(\xi_k+h_k)\right)
+ +{9\over20}\mathbb E\sum_k\|h_k\|^2\ge-C_A.}         \tag{11.8}
+\]
+R-081 temporal factorization shows that (11.8) is the class-faithful source
+coordinate form of $H_A$.  It is invariant under coincident ranges and
+temporal refinement, preserves the cost of $\ker S_\pi$ loops, and does not
+require noncausal polar minimization.  It remains unproved.
+
+\section{Negative flow and CAT(0) shortcuts do not close the frontier}
+
+Let $\gamma_n$ be standard Gaussian measure and
+$A=\delta_\gamma b=x\cdot b-\operatorname{div}b=2V$.  First localize to a
+$C^2$ compactly supported $b_R$ and solve
+\[
+ \dot\Psi_s=-b_R(\Psi_s),\qquad\Psi_0=I.                \tag{12.1}
+\]
+The flow is a global orientation-preserving diffeomorphism.  With
+\[
+ D_t^R=\int_0^t s\,L_{b_R}A_R(\Psi_sX)ds,\qquad
+ A_R=\delta_\gamma b_R,                                 \tag{12.2}
+\]
+change of variables gives the exact identity
+\[
+ \boxed{
+ \int e^{-tA_R-q\epsilon W}\,d\gamma
+ =\mathbb E\exp\{D_t^R-q\epsilon W(\Psi_tX)\},
+ \qquad q=2t.}                                          \tag{12.3}
+\]
+Thus $q=10/9$ corresponds to $t=5/9$.  The one-shot determinant zero has
+disappeared, but
+\[
+ \boxed{
+ L_b(\delta_\gamma b)
+ =|b|^2+\delta_\gamma(Db\,b)+\operatorname{Tr}(Db)^2.} \tag{12.4}
+\]
+Writing $Db=S+K$ gives
+$\operatorname{Tr}(Db)^2=\|S\|_{\rm HS}^2-\|K\|_{\rm HS}^2$;
+the signed curl obstruction remains.
+
+For the untruncated negative production flow, radial dissipation gives
+forward completeness but not surjectivity.  The exact scalar model
+$b(x)=x^3$ has
+\[
+ \Psi_t(x)={x\over\sqrt{1+2tx^2}},\qquad
+ \operatorname{Im}\Psi_t=\left(-{1\over\sqrt{2t}},
+ {1\over\sqrt{2t}}\right).                              \tag{12.5}
+\]
+Its Jacobian is positive everywhere, yet change of variables misses a
+positive high-field complement.  Compact localization restores surjectivity
+but introduces the uncontrolled boundary term
+$-(\nabla\chi_R)\cdot b$.  An exact Gibbs-tilt flow would require a correction
+$w_s$ solving a weighted divergence equation under the still-open tilted
+law.  The flow route is therefore not a noncircular Nelson proof.
+
+Nor does conditional CAT(0) barycentering suffice.  Scale the R-069 flat
+reset target by $\Phi_\lambda(z)=\lambda\sum_kz_k$.  The fresh target remains
+exactly conditionally barycentered, while the paid ledger is
+\[
+ \left(-{\lambda^2\over2}+\eta+120\zeta\right)(J-1)+15\zeta. \tag{12.6}
+\]
+For every fixed allocations $\eta,\zeta$, choose
+$\lambda^2>2(\eta+120\zeta)$; the ledger diverges negatively.  Production
+spatial/source coupling is indispensable.  These two failures are registered
+together as
+\texttt{NG-2026-07-25-A13-NEGATIVE-FLOW-CAT0-SHORTCUT}.
+
+\section{Attempt, failure, and evidence map}
+
+\begin{enumerate}
+\item \textbf{Cumulative translated $Z^6$ majorant --- already rejected.}
+It destroys saturation and repeats a critical budget.
+\item \textbf{R-090 conservative coefficient compression --- rejected and
+repaired.}  The actual current uses $J^T$ while $\nabla c$ uses $J$; the
+exact two-field trace (4.4) retains both and preserves the regular closure.
+\item \textbf{Normalized production lift --- proved.}  The Jacobian is a
+finite bounded polynomial and every secant Jacobian term contains one
+$\delta n$.
+\item \textbf{Scalar superexponential tail as a vector theorem --- rejected.}
+The anisotropic ratio (7.1) approaches one.
+\item \textbf{Whole-product fractional largest input --- proved.}  It keeps
+coherent collisions and gives the $2^{-7j/30}$ root surplus.
+\item \textbf{Regular physical-prefix one-use --- proved.}  The R-075 square
+function gives uniform prefix $H^2/L^6$ bounds and closes regular $H_C$.
+\item \textbf{Terminal-prefix domination for revisits --- rejected.}  A
+return loop has zero terminal displacement but a large intermediate field.
+\item \textbf{Separate $r_C$, $J_D$, covariance, and Schur estimates ---
+retired.}  They remain in one completed identity, with $r_C$ in the
+perspective filtration and $J_D$ in the full-frame baseline row.
+\item \textbf{Terminal positive energy set aside --- rejected.}  Its Doob
+increments convert the signed Schur density into the augmented density
+(9.9), which vanishes exactly in the frozen case.
+\item \textbf{Coefficient-conditioned moment-matched one reveal --- proved.}
+Equation (9.11) is nonnegative; general feedback reduces to a weighted
+conditional-covariance deficit and coefficient-reveal terms.
+\item \textbf{Fixed or freshly adaptive derivative payment positivity ---
+rejected.}  The exact all-residual expectation is $-623/5440$ and varying
+$R_k$ introduces (10.3).
+\item \textbf{Covariance overlap as multiplicity loss --- rejected.}
+Equations (11.2)--(11.3) are exact and overlap-uniform.
+\item \textbf{Terminal polar compression as a causal proof --- rejected.}
+The minimum representative (11.4) anticipates the first source coordinate.
+\item \textbf{Triangular entropy union --- proved as exact accounting.}
+Equation (11.6) stores overlap and kernel-loop cost in nonnegative fibre
+entropy, but (11.7) retains the open Nelson free energy.
+\item \textbf{Negative flow --- exact reduction, failed closure.}  The
+determinant zero becomes a material derivative plus a high-field complement.
+\item \textbf{CAT(0) barycenter alone --- rejected.}  The scaled reset model
+defeats every fixed allocation.
+\end{enumerate}
+
+The remaining direct route is now
+\[
+ \boxed{
+ H_C^{\rm reg}\ \text{closed}
+ \quad+\quad H_N\ \text{as (10.10)}
+ \quad+\quad H_A\ \text{as (11.8)}
+ \quad\Longrightarrow\quad\text{full packet/OVERLAP}.} \tag{13.1}
+\]
+R-087 CORE then identifies a uniform full-OVERLAP bound with the
+$q=10/9$ Nelson estimate.  The two remaining analytic gates are coupled and
+may ultimately be proved by one triangular signed-packet theorem.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} The normalized formula is only scalar.
+\textbf{DISMISSED.}  Equations (2.3)--(2.9) hold for every symmetric
+six-real production generator with operator norm at most one.
+\item \textbf{Objection:} Coherent Fourier collisions invalidate (5.6).
+\textbf{DISMISSED.}  The finite products are formed before the fractional
+norm is taken; no product-family orthogonality is assumed.
+\item \textbf{Objection:} The production Jacobian may be transposed in the
+chain rule.  \textbf{UPHELD; PREDECESSOR CORRECTED.}  Equations
+(3.5)--(3.8) separate actual $b$ from $g=\nabla c$, and (4.4) uses the exact
+two-tail trace.  No conservative identity is invoked.
+\item \textbf{Objection:} The secant derivative contains an omitted
+$|a||Da|$ term.  \textbf{DISMISSED.}  The exact chain rule (3.9) has only
+$Dn(x+a)Da$ and the $Dx$-weighted derivative difference.
+\item \textbf{Objection:} The exponent endpoint is critical.
+\textbf{DISMISSED.}  The worst control total is $29/30$ and the worst root
+surplus is $2^{-7j/30}$.
+\item \textbf{Objection:} Equation (1.1) covers arbitrary progressive
+revisits.  \textbf{UPHELD as an overclaim.}  The proof uses the R-075/R-079
+physical one-shot prefix.  General progression remains in (11.8).
+\item \textbf{Objection:} The terminal $G^T\Theta_R(B_1)G$ energy may be
+ignored after isolating $\mathcal K_k$.  \textbf{UPHELD as a sign error.}
+Its Doob increments are load-bearing in (9.9); the frozen augmented density
+is zero while the unaugmented density is negative.
+\item \textbf{Objection:} The negative fixture disproves production $H_N$.
+\textbf{DISMISSED.}  It lacks the complete spatial low/paid classification;
+it refutes only algebraic termwise positivity.
+\item \textbf{Objection:} Covariance and entropy union prove $H_A$.
+\textbf{UPHELD as an overclaim.}  They close overlap and fibre accounting,
+but (11.7) contains the open Nelson free energy and does not prove (11.8).
+\item \textbf{Objection:} A positive flow Jacobian resolves Ramer.
+\textbf{DISMISSED.}  Equation (12.5) has a positive Jacobian and still misses
+a positive-measure complement.
+\end{enumerate}
+
+\section{Executable verification and no-overclaim statement}
+
+The primary executable checks the normalized Jacobian and commutator,
+the transpose audit, corrected two-tail constants, secant/resolvent
+identities, both geometric denominators, fractional exponent inequalities,
+root and Young margins, physical-prefix finite models, matrix-perspective
+and augmented-density identities, the exact all-residual and covariance-
+deficit fixtures, covariance/entropy union, noncausal polar compression,
+negative-flow Liouville identity, and scaled CAT(0) ledger.
+
+The non-importing independent executable uses random symmetric contractions,
+finite differences, independent matrix conditional ensembles, direct
+enumeration of the all-residual fixture, random overlapping source maps,
+flow quadrature, and a separate exponent reconstruction.  The integrated
+verifier pins both scripts, the proof note, PDF contract, authority hashes,
+registry entries, claim surface, and all downstream false flags.  Run
+\begin{verbatim}
+python codes/foundations/a13_classii_normalized_cartan_perspective_covariance_frontier_verify.py
+\end{verbatim}
+
+R-092 closes only the regular one-shot Cartan $H_C$ branch through the
+corrected two-field trace.  It reduces $H_N$ to the augmented perspective
+density and weighted conditional-covariance deficit, and gives exact causal
+entropy-union accounting for $H_A$.  Complete signed NEAR,
+progressive/revisit assembly, full OVERLAP, Nelson, an interacting measure,
+and Sector A remain open.  Tier stays T4.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-NORMALIZED-CARTAN-COMPENSATED-
+           PERSPECTIVE-TRIANGULAR-COVARIANCE-FRONTIER
+Ledger:                  R-092.
+Precise statement:       The normalized production Jacobian is a bounded
+                         finite forest. The exact actual-b / gradient-c
+                         two-field trace and exhaustive fractional ledger
+                         close regular one-shot H_C with gap
+                         2^{-(C-5)/2}. The augmented perspective density
+                         closes frozen and coefficient-conditioned moment-
+                         matched one-reveal branches. Covariance union and
+                         strict-triangular entropy union are exact.
+Scope:                   Finite cutoff and positive floor under pinned A1,
+                         R-075, R-079, R-084, R-087, R-089 conventions.
+                         H_C uses only the R-079 mutually orthogonal strict-
+                         past no-revisit one-shot class. Perspective uses a
+                         finite filtration. Entropy uses bounded smooth
+                         finite-dimensional strict-triangular shifts.
+Dependencies:            A1; R-063; R-075; R-079; R-084; R-087; R-089;
+                         audited R-090 and R-091 boundary identities.
+Evidence grade:          ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:    python codes/foundations/a13_classii_normalized_
+                         cartan_perspective_covariance_frontier_verify.py
+Expected output:         Primary 83/83; independent 46/46; integrated
+                         147/147; aggregate 276/276; exit zero.
+Negative results:        AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE;
+                         NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-
+                         VECTOR-UNIFORMITY;
+                         NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-
+                         TERMWISE-POSITIVITY;
+                         NG-2026-07-25-A13-TERMINAL-POLAR-CAUSAL-
+                         PROMOTION;
+                         NG-2026-07-25-A13-NEGATIVE-FLOW-CAT0-SHORTCUT.
+Falsification gate:      Failure of the transpose audit, two-field trace,
+                         constants 16 or 32, any of the seven control
+                         monomials, 29/30 worst exponent, 1/30 Young slack,
+                         augmented perspective identities, exact fixtures,
+                         covariance/entropy union, hashes, PDF, or counts.
+Tier before / after:     T4 / T4; no promotion.
+No-overclaim statement:  No general progressive/revisit H_C, complete H_N,
+                         progressive H_A, controlled-shell one-use, complete
+                         REG, full OVERLAP, Nelson, floor removal, interacting
+                         measure, tier promotion, or Sector-A closure.
+Next required action:    Prove the augmented weighted conditional-covariance
+                         and multistep derivative-feedback H_N bound; prove
+                         triangular progressive/revisit H_A; then assemble
+                         full OVERLAP and invoke R-087 CORE for Nelson.
+\end{verbatim}
+\endgroup

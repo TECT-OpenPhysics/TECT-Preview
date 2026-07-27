@@ -45,6 +45,11 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-25-A13-R090-CONSERVATIVE-TRANSPOSE | current Jacobian transpose is load-bearing | R-090 identified the actual current coefficient |
+| NG-2026-07-25-A13-SCALAR-SUPEREXPONENTIAL-VECTOR-UNIFORMITY | scalar tail ratio is not vector-uniform | Promote the exact R-091 scalar one-mode superexponential |
+| NG-2026-07-25-A13-PERSPECTIVE-INNOVATION-TERMWISE-POSITIVITY | conditional companions have no separate sign | Close `H_N` by assigning independent signs or payments to |
+| NG-2026-07-25-A13-TERMINAL-POLAR-CAUSAL-PROMOTION | minimal terminal source is generally nonadapted | Use the global terminal Douglas/polar contraction to turn a |
+| NG-2026-07-25-A13-NEGATIVE-FLOW-CAT0-SHORTCUT | determinant-free geometry retains the analytic obstruction | Replace the signed packet proof by either a negative flow |
 | NG-2026-07-25-A13-PROJECTED-CARTAN-CUMULATIVE-Z6-MAJORANT | extracted translated-model growth erases saturation | Bound the exact output-projected Cartan excess ledger by |
 | NG-2026-07-25-A13-FULL-FRAME-CONDITIONAL-POSITIVITY | no fixed derivative payment makes the raw endpoint positive | Choose one fixed `eta>0` and infer universal conditional |
 | AUDIT-2026-07-25-A13-REG-OVERLAP-TEMPORAL-SCOPE | terminal bookkeeping is not progressive temporal assembly | Promote the regular orthogonal one-shot Cartan estimates or |

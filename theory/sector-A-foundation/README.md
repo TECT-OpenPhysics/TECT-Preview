@@ -154,15 +154,20 @@ OVERLAP exactly equivalent to `q=10/9` Nelson, so controlled-shell one-use
 and every complete temporal packet must be assembled before/inside OVERLAP.
 R-090,
 A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY,
-proves `b=grad c` and compresses the Cartan trace to one conservative
-coefficient. A fixed active-shell/current-root first-chaos witness falsifies
+claimed `b=grad c`; R-092 audits that transpose step as false and restores
+the exact R-089 two-tail trace. A fixed active-shell/current-root first-chaos witness falsifies
 the global unprojected R-089 ledger for every `s>0`, while the relative FAR
 projector deletes that witness; projected CFAR remains open. R-090 also
 corrects conditional covariance, proves the local raw rational endpoint sign,
 and records that R-063 forests reconstruct once while R-079 gives the
 nonduplicating temporal target. The remaining sufficient frontier is
 projected Cartan `H_C`, complete signed rational/linear NEAR `H_N`, and
-progressive assembly `H_A` inside full OVERLAP. REG, Nelson, and Sector A
+progressive assembly `H_A` inside full OVERLAP. R-092's normalized-lift
+whole-product theorem closes regular no-revisit one-shot `H_C` with gap
+`2^(-(C-5)/2)`. Its augmented perspective density closes only the frozen and
+moment-matched one-reveal `H_N` subcases, while exact covariance/entropy union
+accounts for overlap and kernel cost but retains the open Nelson free energy.
+Complete `H_N`, progressive/revisit `H_A`, OVERLAP, Nelson, and Sector A
 remain open.
 
 Working notes remain under `claims/<ID>/notes/`; runs remain at claim level.

@@ -339,8 +339,10 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   Sector A remains open.
   R-090,
   `A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`,
-  proves `b=grad c` and compresses the Cartan trace to one conservative
-  coefficient. It then falsifies the global unprojected cutoff-uniform
+  claimed `b=grad c` and a conservative one-coefficient trace. R-092 audits
+  that step as false for nonsymmetric production Jacobians: actual `b` uses
+  transposed Jacobians while `grad c` does not. The independent R-090 witness
+  still falsifies the global unprojected cutoff-uniform
   Sobolev relaxation R-089 (3.12) for every `s>0`: a fixed active-shell,
   current-root first-chaos component contributes once per root. That witness
   is root-diagonal and removed by the relative FAR projector, so projected
@@ -381,6 +383,26 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   Projected Cartan `H_C`, complete signed NEAR `H_N`, assembly `H_A`, REG,
   and full OVERLAP remain. Once full OVERLAP is proved, R-087 CORE gives
   `q=10/9` Nelson directly.
+  R-092,
+  `A13-CLASSII-NORMALIZED-CARTAN-COMPENSATED-PERSPECTIVE-TRIANGULAR-COVARIANCE-FRONTIER`,
+  repairs the transpose audit with the exact R-089 two-tail trace. The actual
+  transposed `b` and `g=grad c` obey the same finite normalized-lift
+  whole-product estimate; the `g` channel gains `2^(-2(m-j))`. At
+  `(gamma,sigma,theta,p,q)=(1/4,4/15,3/10,6,3)`, root surplus `7/30` and
+  Young slack `1/30`, the R-075/R-079 physical-prefix ledger proves the
+  cutoff-uniform arbitrary-budget regular no-revisit one-shot `H_C` bound
+  with gap `2^(-(C-5)/2)`. General progressive/revisit Cartan remains in
+  `H_A`.
+  On NEAR, R-092 Doob-decomposes the terminal `Theta_R(B_1)` energy and
+  replaces the incomplete signed density by
+  `K_k+P_(k-1)|d_k y|^2-B_(k-1):DeltaGamma_k`. The frozen and
+  coefficient-conditioned moment-matched one-reveal branches close; the
+  multistep derivative-feedback target is a weighted conditional-covariance
+  deficit inside the complete packet. On assembly, exact covariance union
+  and triangular entropy disintegration remove overlap multiplicity and
+  retain kernel/revisit cost as fibre entropy, but the remaining free energy
+  is exactly Nelson. Thus regular `H_C` is closed; complete `H_N`, triangular
+  `H_A`, full OVERLAP, Nelson, and Sector A remain open.
 The historical `A11-CLASSII-TRUE-INCREMENT-STABILISED-LOG-LAPLACE` formulation
 is blocked pending that redesign. The separate
 branch-aware bare-concentration theorem also remains open. Parameter identity,

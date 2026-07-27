@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FUTURE-CONTROL-WEIGHTED-INNOVATION-BRACKET)_
-  - R-091 proves the exact output-gap reduction H_C(C)<=2^(-2 gamma(C-5)) B_gamma^out, falsifies only the extracted cumulative Z^6 majorant, and shows exact scalar saturation repairs that fixture. It also proves the complete full-frame conditional Schur/Jensen identity and terminal nonduplication, while fixed-eta positivity fails. Next prove saturation-aware vector/multimode H_C, signed Schur--Carleson H_N, and overlap-stable temporal H_A. REG, full OVERLAP, Nelson, and Sector A remain open.
+  - R-092 audits the R-090 transpose error and closes regular mutually orthogonal no-revisit one-shot H_C through the exact two-tail normalized-lift estimate (gap 2^(-(C-5)/2), root surplus 7/30, Young slack 1/30). Next: control the augmented H_N density via its weighted conditional-covariance/multistep derivative-feedback deficit, then prove the complete triangular H_A packet. Covariance/entropy union now accounts exactly for overlap and kernel/revisit cost but leaves the Nelson free energy open.
   - _updated 2026-07-25_
 
 ## Next up

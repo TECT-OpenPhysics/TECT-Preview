@@ -402,7 +402,8 @@ endpoint theorem.
     Summing the R-088 sequential telescope before squaring yields one exact
     first-order Cartan operator. Its Fourier trace retains all physical-shell
     cross terms and reduces direct integrated CFAR to the explicit nonlinear
-    coefficient energy (3.12), still open. The `s=1/4` quartic route has
+    coefficient energy (3.12). R-092 later closes the relative version only
+    for the regular no-revisit one-shot class. The `s=1/4` quartic route has
     powers `5/16,9/16` and slack `1/8`, while an exact frequency-32 harmonic
     rules out a homogeneous quartic-only replacement. The rational packet
     diagonalises in Taylor coordinates; covariance-matched universal
@@ -411,31 +412,60 @@ endpoint theorem.
     fixture is negative, so the complete heat/lower-chaos forest remains.
     R-087 CORE also makes full OVERLAP exactly equivalent to `q=10/9` Nelson.
     Complete temporal packets and controlled-shell assembly therefore belong
-    before/inside OVERLAP. Nonlinear Cartan coefficient energy, the complete
+    before/inside OVERLAP. General progressive/revisit Cartan, the complete
     same-root rational residual, REG, OVERLAP, Nelson, and Sector A remain
-    open. R-090 should attack the coupled coefficient/forest frontier without
-    re-proving the terminal compression lemma. R-090 subsequently corrects
-    the global-ledger and conditional-covariance attributions below.
+    open. R-090 attacks the global coefficient/forest frontier without
+    re-proving the terminal compression lemma; R-092 later audits R-090's
+    conservative-transpose attribution while preserving the independent
+    global-ledger no-go.
 31. **Global unprojected Cartan coefficient-ledger no-go and rational forest
     boundary.** R-090,
     `A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY`,
-    proves the exact conservative identity `b=grad c`; the full R-089 Fourier
-    multiplier is therefore `i q c_hat(q-p)`, a single coefficient rather
-    than two independent tails. A fixed active-shell/current-root first-chaos
-    construction then makes the global unprojected R-089 Sobolev ledger grow
-    linearly with cutoff for every `s>0`. Its support is root-diagonal and is
-    removed by the relative FAR projector, so projected CFAR survives as the
-    open obligation `H_C`. On the rational side, the R-089 switch has
-    conditional variances `2.525135276160981...` and
-    `0.291125094772793...`, not one. The complete local scalar raw endpoint
-    has expectation `-(35840/13689)c1 e phi(1)<0`. R-063 lower chaoses
-    reconstruct the literal Wick product and cannot be appended to it again;
-    R-079 provides the canonical nonduplicating temporal target for complete
-    signed NEAR `H_N`. The remaining progressive recombination is `H_A`,
-    retaining low/revisit and future-feedback terms inside full OVERLAP.
-    These are non-interchangeable sufficient obligations, not an iff
-    decomposition. REG, OVERLAP, Nelson, measure construction, and Sector A
-    remain open; tier stays T4.
+    is audited by R-092: its claimed conservative identity `b=grad c` is
+    false because the physical current uses transposed production Jacobians
+    while `grad c` uses untransposed ones. The global unprojected Sobolev
+    ledger no-go nevertheless survives through the positive `c` summand of
+    the exact R-089 two-field trace. A fixed active-shell/current-root
+    first-chaos construction makes that proposed global ledger grow linearly
+    with cutoff for every `s>0`; its support is removed by the relative FAR
+    projector. On the rational side, the R-089 switch has conditional
+    variances `2.525135276160981...` and `0.291125094772793...`, not one. The
+    complete local scalar raw endpoint has expectation
+    `-(35840/13689)c1 e phi(1)<0`. R-063 lower chaoses reconstruct the literal
+    Wick product and cannot be appended again; R-079 provides the canonical
+    nonduplicating temporal target. The conservative trace is withdrawn, but
+    the global-ledger no-go, conditional-covariance audit, rational sign, and
+    forest nonduplication remain reusable.
+32. **Projected Cartan and full-frame temporal boundary.** R-091,
+    `A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY`,
+    proves the definition-level lossless output-gap extraction, scalar
+    saturation model, exact full-frame Schur/Jensen identities, local sign
+    fixture, and terminal paid nonduplication. Its displayed single-`q`
+    coefficient replacement inherits the false R-090 conservative identity
+    and is withdrawn by R-092. The cumulative translated-model majorant is a
+    method no-go, not an exact Cartan counterexample. The remaining structure
+    is explicitly separated into regular Cartan `H_C`, complete signed NEAR
+    `H_N`, and progressive/revisit assembly `H_A`.
+33. **Normalized regular Cartan closure and compensated perspective/covariance
+    frontier.** R-092,
+    `A13-CLASSII-NORMALIZED-CARTAN-COMPENSATED-PERSPECTIVE-TRIANGULAR-COVARIANCE-FRONTIER`,
+    restores the exact R-089 two-field trace and proves the normalized
+    production Jacobian and every secant are finite bounded forests. A
+    whole-product fractional largest-input theorem controls both the
+    transposed current coefficient and the endpoint gradient. The exhaustive
+    control ledger includes the adversarially recovered mixed branches with
+    totals `14/15`, `23/30`, and `4/15`; the worst remains `29/30`, so the
+    R-079 regular mutually orthogonal strict-past no-revisit one-shot Cartan
+    estimate closes with gap `2^(-(C-5)/2)`. General progressive/revisit
+    Cartan remains open. For `H_N`, terminal perspective energy is
+    load-bearing and yields an exact augmented density; frozen and
+    coefficient-conditioned moment-matched one-reveal branches close, while
+    weighted conditional covariance and multistep derivative feedback remain.
+    For `H_A`, covariance union and strict-triangular entropy disintegration
+    account exactly for overlap, kernel, and causal source costs but retain
+    the Nelson free energy. Full signed `H_N`, progressive/revisit `H_A`,
+    complete REG/OVERLAP, controlled-shell one-use, Nelson, floor removal,
+    measure construction, and Sector A remain open; tier stays T4.
 
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-092 normalized Cartan closure and augmented perspective/entropy frontier] - 2026-07-25
+
+Corrected the R-090 current/gradient transpose error and retained the exact R-089 two-field trace. Proved the bounded normalized production finite-forest and an exhaustive whole-product fractional ledger, including hostile-review mixed branches with totals 14/15, 23/30, and 4/15; the worst remains 29/30, closing only the R-079 regular mutually orthogonal strict-past no-revisit one-shot H_C branch with gap 2^(-(C-5)/2). Proved the augmented matrix-perspective density, its frozen and coefficient-conditioned moment-matched one-reveal subcases, covariance-union contraction, and strict-triangular entropy disintegration. Complete signed H_N, general progressive/revisit H_C and H_A, full REG/OVERLAP, Nelson, floor removal, an interacting measure, and Sector A remain open. Primary 83/83 and non-importing independent 46/46 checks pass; the 15-page PDF passed render and visual QA.
+
 ## [R-091 A13-CLASSII-PROJECTED-CARTAN-FULL-FRAME-SCHUR-JENSEN-TEMPORAL-BOUNDARY] - 2026-07-25
 
 R-091 records the exact lossless output-gap Cartan reduction, the sharp cumulative Z^6-majorant no-go, the exact scalar saturation repair and arbitrary-gap harmonic tail, the complete full-frame conditional Schur--Jensen identity, the fixed-eta conditional-positivity no-go, and terminal endpoint nonduplication. The primary 72-assertion and independent 24-assertion executables pass; the integrated count is finalized after generated-ledger synchronization. Tier remains T4. Projected one-use, signed NEAR, overlap-stable progressive assembly, REG, full OVERLAP, q=10/9 Nelson, and Sector-A closure remain open.

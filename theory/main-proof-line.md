@@ -172,7 +172,8 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   all complete temporal packets therefore belong inside/before OVERLAP.
   R-090,
   A13-CLASSII-GLOBAL-UNPROJECTED-CARTAN-COEFFICIENT-LEDGER-NOGO-RATIONAL-FOREST-BOUNDARY,
-  proves `b=grad c` and compresses the trace to one conservative coefficient.
+  claimed `b=grad c`; R-092 audits that transpose step as false and replaces
+  the conservative compression by the exact R-089 two-tail trace.
   It falsifies only the global unprojected R-089 ledger (3.12) for every
   `s>0`; the root-diagonal witness is removed by the relative FAR projector,
   so projected CFAR remains open. It corrects the branch conditioning,
@@ -183,6 +184,17 @@ the complete packet algebra to overlapping bounded-simple packets, while a
   progressive assembly `H_A` inside full OVERLAP, R-087 CORE, and Nelson.
   These are non-interchangeable sufficient obligations, not an iff
   decomposition.
+  R-092,
+  A13-CLASSII-NORMALIZED-CARTAN-COMPENSATED-PERSPECTIVE-TRIANGULAR-COVARIANCE-FRONTIER,
+  closes regular mutually orthogonal no-revisit one-shot `H_C` by a bounded
+  normalized-lift whole-product estimate, with root surplus `7/30`, Young
+  slack `1/30`, and gap `2^(-(C-5)/2)`. It augments the `H_N` perspective
+  density with the Doob increments of the terminal positive energy, closing
+  frozen and coefficient-conditioned moment-matched one-reveal subcases but
+  not multistep derivative feedback. Exact covariance/entropy union removes
+  overlap multiplicity and retains kernel cost as fibre entropy, but its
+  remaining free energy is exactly Nelson. Complete `H_N`, progressive
+  `H_A`, OVERLAP, Nelson, and Sector A remain open.
 Sector A remains open. This family is not a new premise of A5 and has no
 current PUBLISHED measure theorem.
 
