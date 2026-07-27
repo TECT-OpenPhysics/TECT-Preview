@@ -1,0 +1,603 @@
+% Title: Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-27; this version issued 2026-07-27
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY; MOVING HEAT-BASELINE DEBT, H_N, REG, OVERLAP_SRC, NELSON, AND SECTOR A OPEN
+% Result: A13-CLASSII-OWNER-GAUGE-HEAT-CENTERED-COVARIANCE-DEBT-REDUCTION
+% Ledger: R-100
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\hspace{0.75em}}
+\makeatother
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Cov}{\operatorname{Cov}}
+
+\section{Purpose and scope}
+
+R-099 reduced rational (6.5) to a lower form for the complete conditional
+owner
+\[
+ S_R+\frac12\mathfrak C_{\rm post}-P_R-W_0.              \tag{1.1}
+\]
+This note determines exactly which parts of (1.1) are genuine analytic
+content and closes one nonlinear reveal channel in the regular strict-past
+class.
+
+There are four advances.
+\begin{enumerate}
+\item The complete owner is independent of its matching matrix payment.  The
+Schur mean, posterior rebate, and paid subtraction are coordinates of one
+terminal Wick increment, not three positivity reserves.
+
+\item With a matching split of both coefficient and payment, the complete
+owner is exactly row-additive.  The R-098 cross-row posterior Schur gain is
+real for the bracket alone, but an equal and opposite square gap cancels it
+once the complete owner is restored.  Finer coefficient revelation has the
+same exchange law: covariance mass becomes posterior-mean mass without
+creating net positivity.
+
+\item The complete target has an exact posterior covariance-debt normal form.
+This isolates the remaining theorem as a production-weighted domination of
+covariance depletion by the posterior-mean current and the once-only
+Cameron--Martin/sextic budgets.
+
+\item For regular mutually orthogonal strict-past no-revisit controls, a
+heat-centred coefficient reveal absorbs the entire future-control/Jensen
+residual into a full-Wick extension of R-094.  This uses the signed cross sum,
+not an absolute frame square, and does not differentiate a selector.
+\end{enumerate}
+
+The result is finite-cutoff and fixed-floor except for one explicitly labelled
+zero-floor reduced production-ray diagnostic.  It does not prove the moving
+heat-baseline covariance-debt bound, rational (6.5), complete $H_N$, REG,
+arbitrary progressive/revisit $H_A$, $\mathrm{OVERLAP}_{\rm src}$, Nelson,
+floor removal, an interacting measure, or Sector A.  Tier stays T4.
+
+\section{Complete-owner gauge collapse}
+
+Fix a conditional fibre $\cF$.  Let $B=B^T\succeq0$ be a random Gram
+coefficient, let $G$ be the derivative carrier, and let $c,R,\Gamma$ be
+$\cF$-measurable with $R=R^T\succ0$.  Put
+\[
+ K=\E_{\cF}B,\qquad q=\E_{\cF}(BG),\qquad
+ A=K+2R,                                                   \tag{2.1}
+\]
+and use the R-097--R-099 coordinates
+\[
+ S_R={1\over2}\|c+A^{-1}q\|_A^2,\qquad P_R=c^TRc,         \tag{2.2}
+\]
+\[
+ \mathfrak C_{\rm post}
+ =\E_{\cF}[B:(G^{\otimes2}-\Gamma)]-q^TA^{-1}q.           \tag{2.3}
+\]
+
+% evidence-anchor: theorem-2.1-complete-owner-gauge-collapse
+\subsection*{Theorem 2.1 (complete-owner gauge identity)}
+
+On every such fibre,
+\[
+\boxed{
+ S_R+{1\over2}\mathfrak C_{\rm post}-P_R
+ ={1\over2}\E_{\cF}
+ \left[B:\bigl((G+c)^{\otimes2}-\Gamma\bigr)\right].}    \tag{2.4}
+\]
+Consequently the complete owner after the once-only baseline subtraction is
+\[
+\boxed{
+ \mathcal O_{\cF}(B,R)
+ :=S_R+{1\over2}\mathfrak C_{\rm post}-P_R-W_0
+ ={1\over2}\E_{\cF}
+ \left[B:\bigl((G+c)^{\otimes2}-\Gamma\bigr)\right]-W_0.} \tag{2.5}
+\]
+In particular, the right side is independent of $R$.
+
+\paragraph{Proof.}
+Expanding the Schur square gives
+\[
+ S_R={1\over2}c^TAc+c^Tq+{1\over2}q^TA^{-1}q.             \tag{2.6}
+\]
+The last term cancels the rebate in half of (2.3).  Since
+$A=K+2R$, subtracting $P_R$ leaves $c^TKc/2+c^Tq$.
+Adding the raw Wick term in (2.3) produces exactly the expansion of the
+right side of (2.4).  Subtract $W_0$ to obtain (2.5). \qed
+
+This theorem sharpens the interpretation of the R-099 payment gauge.  A new
+choice of ridge can improve an intermediate Schur coordinate, but the
+matching square and actual payment change by the opposite amount.  Payment
+tuning cannot improve the sign of the physical owner.
+
+\section{Rows and revelations exchange, but do not create mass}
+
+Let $B=\sum_aB_a$, $R=\sum_aR_a$, and $W_0=\sum_aW_{0,a}$ be matching
+splits.  Define
+\[
+ A_a=\E_{\cF}B_a+2R_a,\qquad q_a=\E_{\cF}(B_aG),         \tag{3.1}
+\]
+\[
+ D_{\rm row}=\sum_aq_a^TA_a^{-1}q_a-q^TA^{-1}q\ge0.      \tag{3.2}
+\]
+The nonnegativity is the R-098 posterior superadditivity theorem.
+
+% evidence-anchor: theorem-3.1-exact-complete-owner-row-additivity
+\subsection*{Theorem 3.1 (exact complete-owner row additivity)}
+
+The bracket and square gaps are
+\[
+ \mathfrak C_{\rm post}(B;R)
+ -\sum_a\mathfrak C_{\rm post}(B_a;R_a)=D_{\rm row},      \tag{3.3}
+\]
+\[
+ S_R(B)-\sum_aS_{R_a}(B_a)=-{1\over2}D_{\rm row}.         \tag{3.4}
+\]
+Therefore
+\[
+\boxed{
+ \mathcal O_{\cF}(B,R)=\sum_a\mathcal O_{\cF}(B_a,R_a).} \tag{3.5}
+\]
+
+\paragraph{Proof.}
+The raw Wick part of (2.3), $K$, the $c^TKc$ term, $c^Tq$, the payment, and
+the baseline are linear under the matching split.  The only nonlinear
+quantity is the inverse-matrix rebate.  Comparing it gives (3.3), while the
+same comparison in (2.6) gives (3.4).  Their half-weighted sum vanishes.
+Equivalently, apply (2.5), whose right side is visibly row-linear. \qed
+
+Thus the cross-row Schur compensation is available for the stronger
+bracket-only target, but not as an additional reserve in the complete owner.
+Counting it after retaining the full square duplicates ownership.  This is
+registered as
+\texttt{NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE}.
+
+There is an analogous conditioning exchange.  Let
+$\cH_0\subset\cH_1$ both contain $\cF\vee\sigma(B)$ and define
+\[
+ \mu_r=\E[G\mid\cH_r],\qquad V_r=\Cov(G\mid\cH_r),
+ \qquad r=0,1.                                           \tag{3.6}
+\]
+Conditional Pythagoras gives
+\[
+ D_{\rm rev}
+ =\E_{\cF}\bigl[(\mu_1-\mu_0)^TB(\mu_1-\mu_0)\bigr]
+ \ge0,                                                   \tag{3.7}
+\]
+\[
+ \E_{\cF}[B:V_1]-\E_{\cF}[B:V_0]=-D_{\rm rev},          \tag{3.8}
+\]
+\[
+ \E_{\cF}[(\mu_1+c)^TB(\mu_1+c)]
+ -\E_{\cF}[(\mu_0+c)^TB(\mu_0+c)]=D_{\rm rev}.          \tag{3.9}
+\]
+Finer revelation transfers exactly the same mass from covariance to mean.
+It creates neither a sign nor free Gaussian entropy; the information-cost
+boundary of R-093 remains in force.
+
+An exact four-atom regression fixture makes both cancellations nontrivial.
+With equiprobable
+\[
+ G=(-2,-1,1,2),\quad B=(1,4,2,5),\quad
+ \Gamma={5\over2},\quad c={2\over3},\quad R={3\over5},   \tag{3.10}
+\]
+and the matching split
+\[
+ B_1=\left({1\over2},1,{3\over2},2\right),\qquad
+ R_1={1\over5},\qquad R_2={2\over5},                    \tag{3.11}
+\]
+the posterior gap is $320/3927$, the square gap is $-160/3927$, and the
+complete gap is zero.  Refining into the first and last two atoms gives block
+owners $-185/72$ and $425/72$, whose average is the coarse owner $5/3$.
+
+\section{Posterior covariance-debt normal form}
+
+Let $\cH\supset\cF\vee\sigma(B)$, and write
+\[
+ \mu_{\cH}=\E[G\mid\cH],\qquad
+ V_{\cH}=\Cov(G\mid\cH).                                \tag{4.1}
+\]
+
+% evidence-anchor: theorem-4.1-posterior-covariance-debt-normal-form
+\subsection*{Theorem 4.1 (posterior covariance-debt normal form)}
+
+The complete pre-baseline owner equals
+\[
+\boxed{
+ S_R+{1\over2}\mathfrak C_{\rm post}-P_R
+ ={1\over2}\E_{\cF}\left[
+ B:(V_{\cH}-\Gamma)
+ +(\mu_{\cH}+c)^TB(\mu_{\cH}+c)
+ \right].}                                               \tag{4.2}
+\]
+
+\paragraph{Proof.}
+Because $B$ is $\cH$-measurable,
+\[
+ \E[G^{\otimes2}\mid\cH]
+ =V_{\cH}+\mu_{\cH}^{\otimes2}.                        \tag{4.3}
+\]
+Insert (4.3) into the right side of (2.4) and expand the shifted mean. \qed
+
+After summing spatially and over derivative directions, define
+\[
+ \mathcal M_{\cH}
+ =\E\sum_i\int(\mu_{\cH,i}+c_i)^TB
+                (\mu_{\cH,i}+c_i)\dd x,                \tag{4.4}
+\]
+\[
+ \mathcal D_{\cH}
+ =\E\sum_i\int B:(\Gamma_i-V_{\cH,i})\dd x
+  +2\E W_0.                                              \tag{4.5}
+\]
+Then the target is exactly
+\[
+\boxed{\mathcal T={1\over2}
+       (\mathcal M_{\cH}-\mathcal D_{\cH}).}             \tag{4.6}
+\]
+Hence the missing coefficient-unconditioned theorem is equivalent to
+\[
+\boxed{
+ \mathcal D_{\cH}\le
+ \mathcal M_{\cH}+2\eta\E X+2\zeta\E Y+C_{\eta,\zeta}.} \tag{4.7}
+\]
+A stronger useful version would place $(1-\delta)\mathcal M_{\cH}$ on the
+right, leaving a positive posterior-mean reserve.  Equation (4.7), rather
+than positivity of $\mathfrak C_{\rm post}$, is the exact frontier.
+
+For the production frame
+\[
+ B_{\rm fr}(Z)=\sum_\alpha
+ M_\alpha(Z)Q_{\rm II}M_\alpha(Z)^T,                    \tag{4.8}
+\]
+the two sides have the geometric forms
+\[
+ \mathcal M_{\cH}
+ =\E\sum_{\alpha,i}\int
+ \left\|Q_{\rm II}^{1/2}M_\alpha(Z)^T
+       (\mu_{\cH,i}+c_i)\right\|^2\dd x,               \tag{4.9}
+\]
+\[
+ \mathcal D_{\cH}-2\E W_0
+ =\E\sum_{\alpha,i}\int
+ \operatorname{tr}\left[
+ Q_{\rm II}M_\alpha(Z)^T(\Gamma_i-V_{\cH,i})
+ M_\alpha(Z)\right]\dd x.                              \tag{4.10}
+\]
+The R-063 forest is already the reconstruction of the raw Wick factor in
+this endpoint.  It may not be appended a second time.
+
+\section{Heat-centred full-Wick reveal residual}
+
+Now impose the R-094 regular mutually orthogonal strict-past one-shot
+hypotheses.  Let $U_j$ be the Gaussian value prefix and let
+\[
+ A^{(j)}=A^0+\sum_{k\le j}a_k,\qquad
+ A_{>j}=A^*-A^{(j)},                                    \tag{5.1}
+\]
+where $a_k\in\cF_{k-1}$.  Define
+\[
+ Z_*=U_J+A^*,\qquad Z_j=U_J+A^{(j)}=Z_*-A_{>j}.          \tag{5.2}
+\]
+For one derivative direction put
+\[
+ G_j=D U_j,\qquad Q_j=G_j^{\otimes2}-\Gamma_j,          \tag{5.3}
+\]
+and let $d_j=Dg_j$ be the fresh derivative root.  Its full Wick increment is
+\[
+ \Delta Q_j=Q_j-Q_{j-1}
+ =2G_{j-1}\mathbin\odot d_j
+  +(d_j^{\otimes2}-\Delta\Gamma_j).                     \tag{5.4}
+\]
+
+The terminal coefficient martingale and its heat-centred prefix are
+\[
+ F_j=\E_jB(Z_*),                                        \tag{5.5}
+\]
+\[
+ L_j=\E_jB(Z_j)
+ =P_{\Sigma_{j+1:J}}B(U_j+A^{(j)}),                    \tag{5.6}
+\]
+and the future-control reveal residual is
+\[
+ H_j=\E_j[B(Z_*)-B(Z_j)].                               \tag{5.7}
+\]
+Thus $F_j=L_j+H_j$ exactly.
+
+% evidence-anchor: theorem-5.1-heat-centered-full-wick-residual
+\subsection*{Theorem 5.1 (heat-centred full-Wick residual)}
+
+At finite cutoff,
+\[
+\boxed{
+ \E\langle H_j-H_{j-1},\Delta Q_j\rangle
+ =\E\langle B(Z_*)-B(Z_j),\Delta Q_j\rangle.}           \tag{5.8}
+\]
+Moreover, uniformly in the terminal cutoff,
+\[
+\boxed{
+ \sum_{j=j_0}^J\left|
+ \E\int[B(Z_*)-B(Z_j)]:\Delta Q_j\dd x\right|
+ \le C_{\rm full}2^{-j_0}X^{1/2}(1+Y)^{1/6}.}           \tag{5.9}
+\]
+Consequently, for every $\eta,\zeta\in(0,1]$,
+\[
+\boxed{
+ \sum_j\left|
+ \E\int[B(Z_*)-B(Z_j)]:\Delta Q_j\dd x\right|
+ \le\eta X+\zeta Y+C_{\eta,\zeta},}                  \tag{5.10}
+\]
+with the same Young-loss type as R-094,
+\[
+ C_{\eta,\zeta}\le
+ C\{1+\eta^{-1}+\eta^{-3/2}\zeta^{-1/2}\}.            \tag{5.11}
+\]
+
+\paragraph{Proof of the identity.}
+The increment $\Delta Q_j$ is $\cF_j$-measurable and satisfies
+$\E_{j-1}\Delta Q_j=0$.  Hence the $H_{j-1}$ term vanishes, and the tower
+property gives
+\[
+ \E\langle H_j,\Delta Q_j\rangle
+ =\E\langle B(Z_*)-B(Z_j),\Delta Q_j\rangle.            \tag{5.12}
+\]
+
+\paragraph{Proof of the estimate.}
+R-094 assumes
+\[
+ \|d_j\|_6\le\kappa_1 2^{j/2},\qquad
+ \|d_j^{\otimes2}-\Delta\Gamma_j\|_3
+ \le\kappa_Q2^j.                                       \tag{5.13}
+\]
+For a centred Gaussian vector of covariance $C$,
+\[
+ \E|G|^6=(\operatorname{tr}C)^3
+ +6(\operatorname{tr}C)(\operatorname{tr}C^2)
+ +8\operatorname{tr}C^3
+ \le15(\operatorname{tr}C)^3.                          \tag{5.14}
+\]
+The cumulative derivative covariance therefore gives, after absorbing the
+fixed low block,
+\[
+ \|G_{j-1}\|_6\le C_G2^{j/2},\qquad
+ C_G=15^{1/6}\kappa_\Gamma^{1/2}.                       \tag{5.15}
+\]
+Equations (5.4), (5.13), and (5.15) imply
+\[
+ \|\Delta Q_j\|_3
+ \le(2C_G\kappa_1+\kappa_Q)2^j.                        \tag{5.16}
+\]
+Apply the R-094 Gram secant
+\[
+ |B(z+a)-B(z)|
+ \le L_B\{(1+|z|)|a|+|a|^2\}                           \tag{5.17}
+\]
+with $a=A_{>j}$.  The proof of R-094 (4.5)--(4.9) now applies verbatim with
+the constant in (5.16): the linear tail uses the strict-past $L^2$ control
+decay, and the quadratic tail uses the weighted Hardy constant
+$3+2\sqrt2$, product-space $L^2$--$L^6$ interpolation, and the accepted
+Littlewood--Paley sixth-moment sum.  This proves (5.9).  The mixed exponents
+$1/2$ and $1/6$ leave Young slack $1/3$, proving (5.10)--(5.11). \qed
+
+The theorem closes the nonlinear future-control reveal/Jensen residual as a
+signed cross.  It does not control $\sum_j\|H_j\|^2$ and therefore respects
+the R-099 product/spike no-go.  It consumes the R-094 secant allowance once.
+The heat baseline $L_j$ has no standalone centering: only its complete
+R-077/R-097 covariance-normal row, including square, diagonal heat
+correction, trace, low endpoint, paid term, and R-063 forest, telescopes.
+
+\section{Adversarial boundary and reduced production diagnostic}
+
+% evidence-anchor: theorem-6.1-abstract-xy-covariance-debt-no-go
+\subsection*{Theorem 6.1 (abstract $X/Y$ data do not control the debt)}
+
+For every integer $N\ge2$, take the centred three-atom fibre
+\[
+ \Pr[(Z,G)=(N,0)]=N^{-6},\qquad
+ \Pr[(Z,G)=(0,\pm N^3)]={1-N^{-6}\over2}.               \tag{6.1}
+\]
+Set $B=Z^2$, $c=0$, $W_0=0$, and choose any $R>0$.  Then
+\[
+ \Gamma=N^6-1,\quad K=N^{-4},\quad q=0,                 \tag{6.2}
+\]
+\[
+ \mathfrak C_{\rm post}=-N^2+N^{-4},\qquad
+ \mathcal O=-{N^2\over2}+{N^{-4}\over2},               \tag{6.3}
+\]
+while the generous proxies obey
+\[
+ X=\E Z^2=N^{-4},\qquad Y=\E Z^6=1.                    \tag{6.4}
+\]
+Thus no cutoff-independent bound
+\[
+ \mathcal O\ge-\kappa X-\zeta Y-C                     \tag{6.5}
+\]
+follows from positive Gram structure, matched payment, and $X/Y$ moments
+alone.
+
+This is
+\texttt{NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT}.
+It is not a production counterexample: the fibre is non-Gaussian, its
+$\Gamma$ grows independently, and it has no spatial derivative or adapted
+source graph.  It proves that the successor must exploit production
+scale-weighted covariance coupling, spatial paracomposition, or an equivalent
+signed Wick/forest estimate.
+
+The production frame itself supplies a useful directional diagnostic.  On
+the normalized one-dimensional torus, in the six-real production order, take
+\[
+ u=e_1,\qquad v={e_4+e_6\over\sqrt2},                   \tag{6.6}
+\]
+\[
+ z_0=\xi\sin(mx+3\pi/4)v,\qquad
+ a=\lambda\xi^2\cos(2mx)u,\qquad \xi\sim N(0,1).       \tag{6.7}
+\]
+The actual derivative $c=Da$ is retained.  At zero floor, using
+\[
+ c_0={3\over250P},\qquad c_1={243\over8000P},
+ \qquad\alpha={5\over9},                                \tag{6.8}
+\]
+the three linear production rows have zero quadratic coefficient, while the
+rational row gives
+\[
+ \E\Delta W=-{9m^2\over400P}\lambda^2+O(\lambda^4).     \tag{6.9}
+\]
+For $m=2$, $P=4$, the coefficient is $-9/400$.  The Bessel $H^2$ proxy has
+quadratic coefficient
+\[
+ {3\over2}(1+4m^2)^2={867\over2},                       \tag{6.10}
+\]
+so the infinitesimal reserve ratio is only $3/57800$ and decays like
+$m^{-2}$.  This ray confirms that a negative rational quadratic atom is real,
+but points toward spatial $H^2$/root-weight absorption rather than a
+counterexample.  It omits the remaining production Gaussian roots and exact
+$K^{-1}$ preimage normalization; no positive-floor or cutoff-uniform
+counterexample claim is made.
+
+\section{Evidence-map roadmap}
+
+The R-100 route decisions are summarized below.  The complete append-only
+records live in \texttt{explorations/log.jsonl}; failed routes are promoted to
+the negative-result registry.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}p{0.22\textwidth}Yp{0.22\textwidth}@{}}
+\toprule
+Route & Verdict and load-bearing reason & Successor \\
+\midrule
+Tune $R$ for positivity & Failed: (2.5) is exactly $R$-independent & Work on the physical owner \\
+Count cross-row Schur gain & Failed for the complete owner: (3.3) cancels (3.4) & Split rows only by exact additivity \\
+Refine coefficient conditioning & Boundary: covariance becomes mean with zero net change & Use revelation for analysis, not payment \\
+Heat-centred future reveal & Advanced: (5.8)--(5.10) pay the signed full-Wick residual & Retain the complete moving heat row \\
+PSD plus separate $X/Y$ moments & Failed abstractly by (6.1)--(6.4) & Prove production scale-weighted coupling \\
+Reduced production ray & Diagnostic: negative rational atom is $H^2$-subcritical & Seek rowwise spatial/root Wick estimate \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The unique regular successor is now sharper than the R-099 target:
+\begin{quote}
+Prove (4.7) for the moving heat-centred production rows, using the exact row
+additivity (3.5) and the R-094 full-Wick residual payment (5.10).  Keep the
+posterior-mean current, low endpoint, diagonal heat correction, covariance
+trace, $q/r$ means, actual Cameron--Martin payment, and R-063 forest once.
+\end{quote}
+Only after this closes the regular complete $H_N$ packet may REG be assembled.
+Arbitrary progressive/revisit $H_A$ and $\mathrm{OVERLAP}_{\rm src}$ require
+the separate R-080/R-081 temporal assembly and cannot be inferred from the
+regular theorem.
+
+\section{Executable verification}
+
+The primary executable uses random noncommuting positive matrices, exact
+fractions, a 216-atom strict-past product filtration, analytic Gaussian
+moments, dyadic kernels, the abstract divergent fibre, and the reduced
+production ray.  The independent executable imports no numerical or symbolic
+package and no primary module; it rederives the identities with hand-written
+two-by-two rational linear algebra and an independent exact finite filtration.
+The integrated verifier pins both routes, all authorities, the proof note and
+PDF, both negative results, exploration decisions, generated ledgers, and the
+honest open frontier.
+
+Run from the repository root:
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+  a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_verify.py
+\end{verbatim}
+
+\section{Devil's-advocate}
+
+\paragraph{Objection 1: the payment gauge has proved positivity.}
+\textbf{DISMISSED.}  Equation (2.5) proves the opposite: matching payment is
+a coordinate choice, and the physical owner can have either sign.
+
+\paragraph{Objection 2: R-098 posterior superadditivity supplies an extra
+cross-row reserve.}
+\textbf{VALID-with-mitigation.}  It supplies a reserve for the bracket-only
+target.  Equation (3.4) cancels it exactly in the complete owner, and the new
+negative record forbids double counting.
+
+\paragraph{Objection 3: finer revelation makes posterior covariance smaller
+and therefore improves the estimate.}
+\textbf{DISMISSED.}  Equations (3.8)--(3.9) show an equal mean-current
+increase.  Net ownership is invariant, and R-093 still charges information.
+
+\paragraph{Objection 4: R-094 only treated the fresh quadratic Wick tensor,
+so (5.9) silently changes the theorem.}
+\textbf{DISMISSED.}  The new proof explicitly expands the full increment in
+(5.4), derives its $L^3$ scale in (5.14)--(5.16), and only then reuses the
+R-094 secant/Hardy argument.  This extension is independently executed.
+
+\paragraph{Objection 5: (5.10) squares the nonlinear frame and contradicts
+R-099.}
+\textbf{DISMISSED.}  The estimate is for the absolute value of each expected
+signed cross $[B(Z_*)-B(Z_j)]:\Delta Q_j$, not for
+$\sum_j\|H_j\|^2$ or a pathwise frame square.
+
+\paragraph{Objection 6: the abstract fibre disproves the production theorem.}
+\textbf{UPHELD against that reading.}  It has no production Gaussian/spatial
+graph and is only a method no-go.  Its purpose is to prove that PSD and
+separate moments are insufficient inputs.
+
+\paragraph{Objection 7: the reduced production ray closes the missing bound
+because its ratio is small.}
+\textbf{UPHELD.}  It omits production roots and the exact source preimage, and
+is at zero floor.  It is a direction finder and falsifier, not a theorem for
+all controls.
+
+\paragraph{Objection 8: the heat baseline $L_j$ is itself a centred
+martingale and can be dropped.}
+\textbf{DISMISSED.}  Only the complete R-077/R-097 covariance-normal row
+centres and telescopes.  Separating its coefficient fragment would again
+duplicate or delete heat, trace, square, low, payment, and forest owners.
+
+\section*{Result footer}
+
+\begingroup\footnotesize
+\begin{verbatim}
+Result ID: A13-CLASSII-OWNER-GAUGE-HEAT-CENTERED-
+           COVARIANCE-DEBT-REDUCTION
+Ledger:    R-100.
+Title:     Owner gauge, heat-centred full-Wick reveal, and
+           covariance-debt frontier.
+Precise statement:
+           The complete R-099 owner is payment-gauge invariant and exactly
+           row-additive; Schur row gains and revelation gains exchange with
+           equal opposite square/covariance terms. The target is exactly
+           posterior mean minus covariance debt. In the regular strict-past
+           no-revisit class, the future-control reveal residual is bounded
+           by a full-Wick R-094 secant with one X/Y allocation.
+Scope:     Finite cutoff and fixed positive floor for the theorem. Regular
+           mutually orthogonal strict-past one-shot controls for the
+           full-Wick residual. The reduced production ray is a separately
+           labelled zero-floor diagnostic only.
+Dependencies:
+           R-063; R-077; R-079; R-092; R-094; R-097; R-098; R-099.
+Evidence grade:
+           ANALYTIC, EXACT, EXECUTED, BOUNDARY.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/
+           a13_classii_owner_gauge_heat_centered_
+           covariance_debt_reduction_verify.py
+Expected output:
+           Manifest-pinned primary, standard-library independent,
+           integrated, and aggregate PASS; exit zero.
+Negative results:
+           NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE;
+           NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT.
+Falsification gate:
+           Failure of owner collapse, ridge invariance, exact row or
+           revelation exchange, covariance-debt normal form, full-Wick
+           reveal identity/moment scale/secant estimate, exact fixtures,
+           authority/hash/PDF/ledger/count, or T4 scope check.
+Tier before / after:
+           T4 / T4; no promotion.
+No-overclaim statement:
+           No moving heat-baseline production debt bound, rational (6.5),
+           complete H_N, REG, progressive H_A, OVERLAP_src, Nelson, floor
+           removal, measure, T5--T7, or Sector-A closure is proved.
+Next required action:
+           Prove the rowwise scale-weighted moving heat-baseline covariance-
+           debt bound (4.7), then close regular H_N and REG before the
+           separate progressive/revisit assembly.
+\end{verbatim}
+\endgroup

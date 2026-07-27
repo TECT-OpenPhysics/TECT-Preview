@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE | the bracket gap cancels in the complete owner | Use the R-098 matching-payment posterior superadditivity |
+| NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT | PSD and separate X/Y moments do not control abstract covaria | Prove the complete posterior/source-action lower form from |
 | NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD | terminal mixed payload cannot pay arbitrary progressive Cart | Extend the R-085 (4.11)-type Cartan one-use estimate from |
 | NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER | causal control ownership does not imply an absolute nonlinea | After proving the causal Doob--Hardy one-use theorem for the |
 | NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION | nonnegative Cartan atoms are not stable under opposite subvi | Extend the R-085 (4.10)--(4.11), or corrected R-088 |

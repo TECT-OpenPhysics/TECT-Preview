@@ -1337,18 +1337,29 @@ Martin matrix payment, paid subtraction, `q/r` means, covariance trace, Wick
 terms, and the complete R-063 forest in one identity, with every owner used
 exactly once.
 
-**Status:** OPEN CURRENT CHILD (2026-07-27). R-097 proves the complete
-backward-heat Gram telescope, terminal `theta=0` Schur identity, posterior
-normal form, and derivative-free predictable Wick/cross-Doob terminalisation.
-It also proves two exact method boundaries: predictability alone cannot
-control repeated second-Hermite rows uniformly, and posterior covariance
-positivity is not automatic in abstract finite fibres. Neither fixture is a
-production torus counterexample. A valid proof must exploit the retained
-full-frame signed structure and genuine production spatial/root weights.
-The standalone Cartan one-use atom (4.11), rational shifted-Hessian atom
-(6.5), coefficient-unconditioned `H_N`, REG, lossless `H_A` assembly,
-`OVERLAP_src`, Nelson, interacting-measure construction, and Sector A remain
-open.
+**Status:** OPEN CURRENT CHILD (reviewed 2026-07-27 after R-100). R-097 proves
+the complete backward-heat Gram telescope and posterior normal form; R-098 and
+R-099 identify the matching-payment and complete-owner coordinates. R-100 now
+proves that `S_R+C_post/2-P_R-W_0` is exactly the ridge-independent terminal
+Wick increment. It is exactly additive under matching coefficient/payment/
+baseline row splits: the R-098 posterior Schur gap is canceled by an equal
+opposite complete-square gap. Finer coefficient revelation likewise exchanges
+covariance mass with posterior mean without changing the owner. The target is
+exactly `T=(M_H-D_H)/2`. In the regular mutually orthogonal strict-past no-
+revisit class, the heat-centred split `F_j=L_j+H_j` and a full-Wick extension
+of the R-094 secant theorem pay the entire future-control/Jensen `H_j` residual
+from one `eta X+zeta Y+C` allocation. The remaining regular theorem is the
+production scale-weighted moving heat-baseline bound
+`D_H<=M_H+2 eta X+2 zeta Y+C`, with the complete `L_j` covariance-normal row,
+low endpoint, diagonal heat correction, trace, `q/r`, actual payment, and
+R-063 forest retained once. PSD Gram structure and separate `X/Y` moments are
+insufficient by an exact abstract fibre, but that fibre is not a production
+counterexample. A reduced complete-frame ray with `c=Da` has a negative
+rational quadratic atom yet is `H2`-subcritical; it is a zero-floor direction
+diagnostic only. The standalone Cartan one-use atom (4.11), rational shifted-
+Hessian atom (6.5), coefficient-unconditioned `H_N`, REG, lossless `H_A`
+assembly, `OVERLAP_src`, Nelson, interacting-measure construction, and Sector
+A remain open.
 
 ### **A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION**
 

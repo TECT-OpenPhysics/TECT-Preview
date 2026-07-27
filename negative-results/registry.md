@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE](#ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve) | use R-098 posterior superadditivity as an additional positive reserve after restoring the complete R-099 Schur square and matching payment owner | for `B=sum B_a`, `R=sum R_a`, the posterior gap is `D_row>=0` but the complete-square gap is exactly `-D_row/2`; since the bracket enters with weight `1/2`, the two gaps cancel and the physical owner is exactly row-additive. R-098 bracket-only superadditivity remains valid, but counting it again in the complete owner duplicates ownership |
+| [NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT](#ng-2026-07-27-a13-abstract-fibre-xy-covariance-debt) | derive the complete posterior/source-action lower form from positive Gram structure, matching payment, and separate quadratic/sextic moment bounds alone | a centred three-atom family has `B=Z^2`, `X=E Z^2=N^-4`, `Y=E Z^6=1`, `q=0`, but complete owner `-N^2/2+N^-4/2`. This is an abstract non-Gaussian method no-go, not a production counterexample; the missing theorem must use production scale-weighted spatial/root covariance coupling or an equivalent signed Wick/forest estimate |
 | [NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD](#ng-2026-07-27-a13-progressive-revisit-cartan-mixed-payload) | arbitrary-progressive extension of the R-085 Cartan one-use ledger using only the terminal `X^(1/2)Y^(1/2)` payload | an accepted repeated-range loop inserts `A f_epsilon` before one root and later reverses it, so `A*=0` and terminal `Y` is fixed, yet the first root retains a genuine production CFAR square `c_C A^2`; the mixed payload is only `O(A)`. Only the terminal mixed-only progressive extension is false: a once-only pure-`X` allowance, the complete signed packet, and R-092 regular no-revisit `H_C` remain available |
 | [NG-2026-07-27-A13-ABSOLUTE-LAST-ROOT-FRAME-TRANSFER](#ng-2026-07-27-a13-absolute-last-root-frame-transfer) | close the nonlinear frame by same-level mean shifts or by squaring the R-098 secant before its signed cross pairing | the exact ordered reveal contains a Jensen/covariance increment. A bounded product has frame martingale mass `4^n-1` but same-level shift mass one; independently, unit control, sextic, and linear mixed budgets coexist with square multiplier `N^2` on a rare event. The causal Doob--Hardy control-coordinate theorem remains valid, and a signed linear complete-posterior estimate is not excluded |
 | [NG-2026-07-27-A13-NONNEGATIVE-PER-SUBVISIT-CARTAN-ATOMIZATION](#ng-2026-07-27-a13-nonnegative-per-subvisit-cartan-atomization) | refinement-stable nonnegative per-subvisit extension of the R-085/R-088 Cartan atom ledger using only the mixed energy--terminal-sextic payload | two opposite subvisits of one source-block traverse, sharing the same fixed target heat and root derivative, cancel exactly when grouped signed but each has a nonzero far harmonic with squared size `cA^2`; the mixed payload is only `O(A)`. Only this per-subvisit architecture is retired: distinct temporal roots/heats, a once-only pure-`X` payment, the complete signed form, and the regular one-shot class remain open or intact |
@@ -124,6 +126,87 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve"></a>
+### NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE -- the bracket gap cancels in the complete owner
+
+**Failure mode:** Use the R-098 matching-payment posterior superadditivity
+gap as an extra positive reserve after retaining the complete R-099 Schur
+square, posterior bracket, actual payment, and baseline subtraction.
+
+**Evidence:** On one conditional fibre, let
+`A_a=E_F B_a+2R_a`, `q_a=E_F(B_a G)`, and
+
+`D_row=sum_a q_a^T A_a^(-1)q_a-q^T A^(-1)q>=0`.
+
+R-098 gives
+
+`C_post(B;R)-sum_a C_post(B_a;R_a)=D_row`.
+
+Direct expansion of the matching Schur squares gives the equal and opposite
+identity
+
+`S_R(B)-sum_a S_(R_a)(B_a)=-D_row/2`.
+
+The payment and baseline are additive, so the complete owner
+`S_R+C_post/2-P_R-W_0` is exactly row-additive. In the exact equiprobable
+four-atom fixture recorded by R-100, the posterior gap is `320/3927`, the
+square gap is `-160/3927`, and the complete-owner gap is zero. Random
+noncommuting positive-matrix fixtures and a standard-library rational
+implementation independently reproduce the cancellation.
+
+**Consequence:** R-098 posterior superadditivity remains a valid and useful
+theorem for the bracket-only target. It cannot be counted again as positivity
+after the full square and matching payment have been restored. The successor
+may split the physical production rows losslessly, but must prove a rowwise
+scale-weighted signed Wick/covariance estimate rather than seek a cross-row
+Schur bonus. This does not refute rational (6.5), complete `H_N`, REG,
+`OVERLAP_src`, Nelson, or Sector A.
+
+**Evidence:** R-100 proof note, Theorems 2.1 and 3.1; primary `167/167` and
+standard-library independent `84/84` pre-integration certificates.
+
+---
+
+<a id="ng-2026-07-27-a13-abstract-fibre-xy-covariance-debt"></a>
+### NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT -- PSD and separate X/Y moments do not control abstract covariance debt
+
+**Failure mode:** Prove the complete posterior/source-action lower form from
+positive-semidefinite Gram structure, matching matrix payment, `q/r`
+ownership, and separate quadratic/sextic moment bounds, without a production
+spatial/root covariance coupling.
+
+**Evidence:** For every integer `N>=2`, take the centred three-atom fibre
+
+`P[(Z,G)=(N,0)]=N^-6`,
+
+`P[(Z,G)=(0,+/-N^3)]=(1-N^-6)/2`.
+
+With `B=Z^2`, `c=W_0=0`, and any `R>0`, one has
+`Gamma=N^6-1`, `K=N^-4`, `q=0`, and
+
+`C_post=-N^2+N^-4`,
+
+`O=S_R+C_post/2-P_R-W_0=-N^2/2+N^-4/2`.
+
+Nevertheless the generous proxies are `X=E Z^2=N^-4` and `Y=E Z^6=1`.
+Thus no cutoff-independent `O>=-kappa X-zeta Y-C` follows from those abstract
+inputs. Both R-100 executables verify the formulas exactly for a growing
+sequence of `N`.
+
+**Consequence:** This is an abstract method no-go, not a production torus or
+paid-action counterexample. The fibre is non-Gaussian, its covariance grows
+without the production shell relation, and it has no spatial derivative or
+adapted-source graph. The missing theorem must exploit production
+scale-weighted covariance coupling, spatial paracomposition/Hardy gain, or an
+equivalent complete signed Wick/forest estimate. Payment tuning and finer
+coefficient revelation cannot supply that missing input. Rational (6.5),
+complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open.
+
+**Evidence:** R-100 proof note, Theorem 6.1; primary `167/167` and
+standard-library independent `84/84` pre-integration certificates.
+
+---
 
 <a id="ng-2026-07-27-a13-progressive-revisit-cartan-mixed-payload"></a>
 ### NG-2026-07-27-A13-PROGRESSIVE-REVISIT-CARTAN-MIXED-PAYLOAD -- terminal mixed payload cannot pay arbitrary progressive Cartan revisits

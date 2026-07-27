@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-100](#r-100) | Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier | Scoped T4 analytic/exact/executed advance and method boundary: the complete R-099 owner is exactly the conditional terminal Wick increment and is independent of its matching ridge/payment coordinate. Under matching coefficient, payment, and baseline splits it is exactly row-additive: the R-098 posterior Schur gap cancels an equal opposite complete-square gap. Finer coefficient revelation likewise exchanges covariance mass with posterior-mean mass without changing the owner. The target is exactly posterior mean current minus covariance debt. For regular mutually orthogonal strict-past no-revisit controls, the heat-centred split `F_j=L_j+H_j` and a full-Wick extension of the R-094 secant estimate pay the entire future-control/Jensen `H_j` residual with one `X/Y` allocation. A three-atom family proves that PSD Gram structure and separate `X/Y` moments alone cannot control abstract covariance debt, while a reduced complete-production-frame ray retains `c=Da`, has rational quadratic coefficient `-9/400`, and is `H2`-subcritical with ratio `3/57800`; it is a zero-floor diagnostic, not a production counterexample. The moving heat-baseline production debt bound, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-099](#r-099) | Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete value plus target-heat Cartan edges telescope exactly inside one common Malliavin root before common linear differentiation, OU evolution, FAR projection, and squaring. A production repeated-range loop proves that terminal `X^(1/2)Y^(1/2)` alone cannot support an arbitrary-progressive extension: the first root retains a positive `c_C A^2` square although a later inverse visit makes `A*=0` and the mixed payload is only `O(A)`. This leaves a once-only pure-`X` allowance and R-092 regular `H_C` intact. Chronological Doob differences give a sharp derivative-free one-use Hardy ledger for the control coordinate, while the exact complete-frame ordered reveal retains a mandatory Jensen/covariance residual; product and spike fixtures exclude same-level-only and absolute frame-square transfers. The five rational unshifted families now have a two-sided form on the regular one-shot class, and an exact payment-gauge identity reduces (6.5) to the complete owner lower form. That production posterior/source-action lower form, rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, measure construction, and Sector A remain open |
 | [R-098](#r-098) | Signed-first Cartan partition-refinement obstruction and rational ridge-deficit boundary | Scoped T4 analytic/exact/executed advance and method boundary: the terminal posterior bracket is superadditive under, and only claims a theorem for, a matching split `B=sum_a B_a`, `R=sum_a R_a`; the production rational rank-one row is exactly a conditional ridge deficit. An exact recovery identity shows that standalone R-085 (6.5) still requires the low endpoint, once-only Cameron--Martin payment, and an upper form for the five unshifted families. An exact production-coefficient fibre has negative ridge deficit but is not a torus/control counterexample. For two oppositely oriented subvisits refining one source-block traverse and sharing the same fixed target heat and root derivative, each squared Cartan far atom is order `A^2` while the mixed `X^(1/2)Y^(1/2)` payload is only order `A`; the signed atoms cancel exactly before squaring. Hence refinement-stable nonnegative per-subvisit atomization is retired, while distinct temporal roots/heats, once-only pure-`X` payment, and the regular one-shot class are untouched. Derivative-free causal resampling supplies the bare kernel `<2^(-3k)`, but the signed grouped posterior form, standalone Cartan (4.11), rational (6.5), complete `H_N`, REG, arbitrary progressive assembly, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
 | [R-097](#r-097) | Full-frame terminalization and posterior-covariance bracket boundary | Scoped T4 analytic/exact/executed reduction: complete heat-lifted Gram rows obey a backward-heat martingale identity, so all predictable rational baselines telescope in signed expectation after the necessary diagonal heat correction. The terminal endpoint plus one allocated matrix payment has an exact theta-zero Schur completion. Conditioning on the complete control and terminal Gram coefficient reduces its signed part to `C_post=J_B+E[B:(V_B-Gamma)]=D_R+|r|^2`, with `J_B>=0`; predictable Wick rows also terminalize into one aggregate coefficient and cross-Doob ledger without differentiating adapted selectors. Exact Rademacher, Gaussian-forest, repeated-H2, and moving-perspective fixtures refute automatic bracket positivity and predictability-only root-uniform aggregate control, but are not production torus counterexamples. The next target is one production-weighted full-frame posterior-covariance lower form retaining every owner once. Cartan one-use (4.11), rational (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, a measure, and Sector A remain open |
@@ -118,6 +119,111 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-100"></a>
+### R-100 -- Owner gauge, heat-centred full-Wick reveal, and covariance-debt frontier
+
+**Result ID.**
+`A13-CLASSII-OWNER-GAUGE-HEAT-CENTERED-COVARIANCE-DEBT-REDUCTION`.
+
+**Tier.** T4 scoped analytic/exact/executed advance and method boundary. No
+tier promotion.
+
+**Complete-owner gauge theorem.** On one conditional fibre let
+`K=E_F B`, `q=E_F(BG)`, `A=K+2R`,
+`S_R=|c+A^(-1)q|_A^2/2`, `P_R=c^TRc`, and
+`C_post=E_F[B:(G tensor G-Gamma)]-q^TA^(-1)q`. Then
+
+`S_R+C_post/2-P_R
+ =E_F[B:((G+c) tensor (G+c)-Gamma)]/2`.
+
+After subtracting the once-only baseline `W_0`, this is the physical terminal
+Wick increment. It is independent of the matching ridge/payment coordinate;
+payment tuning can only repartition its square, posterior rebate, and paid
+subtraction.
+
+**Exact row and revelation exchange.** For a matching split
+`B=sum_a B_a`, `R=sum_a R_a`, `W_0=sum_a W_(0,a)`, define the R-098 gap
+
+`D_row=sum_a q_a^T A_a^(-1)q_a-q^TA^(-1)q>=0`.
+
+The posterior gap is `D_row`, but the complete-square gap is exactly
+`-D_row/2`; because the bracket has weight one half, the complete owner is
+exactly row-additive. Thus R-098 bracket-only superadditivity remains valid,
+but its gap cannot be counted after restoring the full square. If
+`H_0 subset H_1` both reveal `B`, conditional Pythagoras gives an equal and
+opposite exchange between `E[B:V_H]` and
+`E[(mu_H+c)^TB(mu_H+c)]`; finer revelation creates no net sign or free
+entropy.
+
+**Covariance-debt normal form.** For any `H` revealing `B`, the target is
+
+`T=(M_H-D_H)/2`,
+
+where `M_H` is the nonnegative production posterior-mean current and `D_H`
+is the weighted covariance depletion plus twice the low baseline. Therefore
+the exact successor is
+
+`D_H<=M_H+2 eta E X+2 zeta E Y+C_(eta,zeta)`.
+
+This is the physical theorem; positivity of `C_post`, a favorable ridge, or
+finer conditioning is neither necessary nor sufficient.
+
+**Heat-centred full-Wick residual.** In the R-094 regular mutually orthogonal
+strict-past no-revisit class, put
+`Z_*=U_J+A*`, `Z_j=U_J+A^(j)`,
+`F_j=E_j B(Z_*)`, `L_j=E_j B(Z_j)`, and
+`H_j=E_j[B(Z_*)-B(Z_j)]`. Then `F_j=L_j+H_j`, and for
+`Delta Q_j=2G_(j-1) sym d_j+(d_j tensor d_j-Delta Gamma_j)`,
+
+`E<d_jH,Delta Q_j>
+ =E<[B(Z_*)-B(Z_j)],Delta Q_j>`.
+
+The Gaussian identity
+`E|G|^6=(tr C)^3+6(tr C)(tr C^2)+8tr C^3<=15(tr C)^3`
+gives `||Delta Q_j||_3<=C 2^j`. Reusing the R-094 Gram secant, weighted Hardy
+constant `3+2sqrt(2)`, product-space `L2`--`L6` interpolation, and Young
+slack `1/3` yields
+
+`sum_j |E int [B(Z_*)-B(Z_j)]:Delta Q_j|
+ <=eta X+zeta Y+C_(eta,zeta)`.
+
+This closes the signed future-control/Jensen residual, not
+`sum_j||H_j||^2`. It consumes the R-094 secant allowance once. The moving
+heat baseline `L_j` has no standalone centering; only its complete R-077/R-097
+covariance-normal row telescopes.
+
+**Adversarial boundaries.** A centred three-atom family has `B=Z^2`,
+`X=E Z^2=N^-4`, `Y=E Z^6=1`, and complete owner
+`-N^2/2+N^-4/2`. Hence PSD Gram structure and separate `X/Y` moments cannot
+control an abstract covariance debt without production spatial/root coupling.
+This is not a production counterexample. In a reduced complete-production-
+frame two-frequency ray retaining the actual `c=Da`, the zero-floor rational
+quadratic coefficient is `-9/400` at `m=2,P=4`; the three linear rows vanish
+quadratically and the Bessel `H2` coefficient is `867/2`, giving reserve ratio
+`3/57800`. This diagnostic points toward scale-weighted spatial absorption
+but omits production roots and the exact source preimage.
+
+**Evidence.** The self-contained referee note is
+`claims/A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION/notes/classii-owner-gauge-heat-centered-covariance-debt-reduction-260727-v1.0.tex.txt`
+and its paired nine-page PDF. Primary and standard-library independent
+executables, the hash-pinned integrated verifier, manifest, and JSON artifacts
+sit under the A13 code and runs trees. Primary `167/167`, independent `84/84`,
+integrated `202/202`, and aggregate `453/453` assertions pass and are pinned by
+the manifest; the PDF passed form, zero-overfull, extraction, and all-page
+Poppler visual QA.
+
+**Negative results.**
+`NG-2026-07-27-A13-COMPLETE-OWNER-CROSS-ROW-SCHUR-RESERVE` and
+`NG-2026-07-27-A13-ABSTRACT-FIBRE-XY-COVARIANCE-DEBT`.
+
+**Boundary.** R-100 does not prove the moving heat-baseline production
+covariance-debt lower form, rational shifted-Hessian (6.5), complete `H_N`,
+REG, arbitrary progressive/revisit `H_A`, `OVERLAP_src`, the `q=10/9` Nelson
+estimate, cutoff or floor removal, an interacting measure, Sector-A closure,
+or a higher tier. The next target is a rowwise scale-weighted bound for the
+complete moving heat row with mean, low, heat, trace, `q/r`, actual payment,
+and R-063 forest retained exactly once.
 
 <a id="r-099"></a>
 ### R-099 -- Extended-state Cartan telescope, causal Doob one-use, and rational recovery boundary

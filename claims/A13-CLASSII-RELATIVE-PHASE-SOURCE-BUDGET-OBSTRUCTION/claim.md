@@ -660,6 +660,30 @@ the following structural results and proof-architecture boundaries hold.
     `S_R+C_post/2-P_R-W_0` lower form. That production form, rational (6.5),
     complete `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, a measure,
     and Sector A remain open.
+43. `A13-CLASSII-OWNER-GAUGE-HEAT-CENTERED-COVARIANCE-DEBT-REDUCTION` is
+    R-100. It proves that the complete R-099 owner
+    `S_R+C_post/2-P_R-W_0` is exactly the conditional terminal Wick increment
+    and therefore independent of its matched ridge/payment coordinate. Under
+    a matching coefficient/payment/baseline split it is exactly row-additive:
+    the R-098 posterior Schur gap is canceled by an equal opposite complete-
+    square gap. Finer coefficient revelation likewise transfers covariance
+    mass to posterior-mean mass without changing the complete owner or
+    creating free entropy. The remaining target is exactly posterior mean
+    current minus covariance debt. In the regular mutually orthogonal strict-
+    past no-revisit class, the heat-centred reveal
+    `F_j=L_j+H_j` converts the entire future-control/Jensen residual into the
+    signed full-Wick secant
+    `E<[B(Z*)-B(Z_j)],Delta Q_j>`. A new Gaussian sixth-moment estimate extends
+    the R-094 Hardy proof to the full Wick increment and pays this residual by
+    one `eta X+zeta Y+C` allocation. An abstract three-atom family proves that
+    PSD Gram structure and separate `X/Y` moments alone cannot control the
+    covariance debt, while a reduced complete-production-frame ray retains
+    the actual `c=Da`, has rational quadratic coefficient `-9/400`, and is
+    `H2`-subcritical with reserve ratio `3/57800`. The ray is a zero-floor
+    direction finder, not a production counterexample. The moving heat-
+    baseline production covariance-debt bound, rational (6.5), complete
+    `H_N`, REG, progressive `H_A`, `OVERLAP_src`, Nelson, a measure, and
+    Sector A remain open.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -709,6 +733,7 @@ is a scoped T4 subproof and does not promote A13.
 | Global Gram terminalization / posterior-covariance boundary | Complete Gram-row backward-heat telescope, theta-zero terminal Schur completion, posterior bracket `J_B+E[B:(V_B-Gamma)]`, derivative-free predictable terminalization, complete forest ownership, and exact accumulation/positivity no-gos | T4 analytic/exact/executed reduction; production full-frame posterior lower form, Cartan (4.11), rational (6.5), complete `H_N`, REG, progression, and Nelson open |
 | Signed-first Cartan / rational ridge boundary | Matching-payment posterior superadditivity, exact rational ridge and R-085 (6.5) recovery identities, rational sign fixture, same-heat/root opposite-subvisit Cartan harmonic obstruction, finite-floor radial correction, and bare causal-resampling Hardy mass | T4 analytic/exact/executed advance and method boundary; signed grouped posterior spatial form, Cartan (4.11), rational (6.5), complete `H_N`, REG, progression, and Nelson open |
 | Extended-state Cartan / causal Doob / rational recovery | Common-root value-plus-heat telescope, production heat-defect diagnostic, progressive terminal-mixed-only no-go, sharp last-root Doob--Hardy ownership, exact frame reveal with mandatory Jensen residual, absolute frame-transfer no-go, rational five-family two-sided form, and payment-gauge identity | T4 analytic/exact/executed advance and method boundary; coefficient-unconditioned complete signed posterior/source-action lower form, rational (6.5), `H_N`, REG, progression, and Nelson open |
+| Owner gauge / heat-centred full-Wick / covariance debt | Exact payment-gauge collapse, complete-owner row additivity, revelation mean/covariance exchange, posterior covariance-debt normal form, regular heat-centred full-Wick residual payment, abstract X/Y-only debt no-go, and reduced production-ray direction diagnostic | T4 analytic/exact/executed advance and method boundary; moving heat-baseline production debt bound, rational (6.5), `H_N`, REG, progression, and Nelson open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -939,24 +964,26 @@ Current subordinate order:
    low endpoint and paying the matrix cost from one actual Cameron--Martin
    reserve. Keep `q`, `r`, trace, and the complete R-063 forest in their
    unique owners;
-4. use R-098 payment superadditivity only with a matching split
-    `B=sum_a B_a`, `R=sum_a R_a`; never duplicate the full payment across
-    rows. For the rational row retain the exact ridge deficit and the R-098
-    recovery identity. R-099 now supplies the required two-sided form for the
-    five unshifted families on the regular strict-past one-shot class and shows
-    that the exact remaining target is the complete
-    `S_R+C_post/2-P_R-W_0` lower form. Do not infer positivity from a positive
-    Gram or change the ridge without changing its matched payment;
+4. use R-100 complete-owner row additivity with a matching split
+   `B=sum_a B_a`, `R=sum_a R_a`, and `W_0=sum_a W_(0,a)`. R-098 posterior
+   superadditivity remains valid for the bracket alone, but its Schur gap is
+   canceled by the R-100 square gap after the complete owner is restored.
+   Never count both. For the rational row retain the R-098 recovery identity
+   and the R-099 two-sided form for the five unshifted regular families. The
+   physical target is ridge-invariant, so payment tuning cannot create a sign;
 5. group every common-root value edge with its target-heat compensator before
     any derivative, OU operator, FAR projection, square, or root allocation.
     For distinct roots, use R-099 chronological Doob--Hardy ownership to group
     all future smoothing shells before squaring the control coordinate. Do not
     extend the terminal mixed-only Cartan ledger to arbitrary revisits and do
-    not square the nonlinear frame secant. Prove one cutoff-uniform signed
-    lower form for the complete posterior/source-action packet, retaining the
-    mean frame secant and Jensen residual linearly paired with `d_jQ`, plus the
-    global Schur mean, pure `X`, sextic growth, trace, heat, low endpoint,
-    `q/r`, matrix payment, and R-063 forest exactly once;
+    not square the nonlinear frame secant. In the regular class, use the R-100
+    heat-centred split `F_j=L_j+H_j` and spend the R-094 secant allowance once
+    on the signed full-Wick `H_j` residual. Then prove the remaining moving
+    heat-baseline covariance-debt inequality
+    `D_H<=M_H+2 eta X+2 zeta Y+C`, retaining the posterior-mean current,
+    low endpoint, diagonal heat correction, trace, `q/r`, actual matrix
+    payment, and R-063 forest exactly once. PSD and separate `X/Y` moments are
+    insufficient without production spatial/root coupling;
 6. assemble the complete R-079 packet into the temporally faithful refinement-
    union action without loss or duplication. This assembly is `H_A`; the
    resulting union inequality is `OVERLAP_src`, not a separate weaker module;
@@ -970,19 +997,19 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_extended_state_cartan_doob_rational_recovery_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_verify.py
 ```
 
 Expected output:
 
-- primary `183/183`;
-- standard-library exact independent `124/124`;
-- integrated `240/240` and aggregate `547/547`;
-- exact extended-state Cartan and heat-defect identities, progressive
-  quadratic/linear scaling separation, last-root Doob--Hardy and Hoeffding
-  ownership, complete-frame reveal and Jensen/product/spike boundaries,
-  rational five-family exponent/Young ledger, payment gauge, abstract Gram
-  recovery, predecessor/source/PDF/surface contracts, and T4 firewalls;
+- primary `167/167`;
+- standard-library exact independent `84/84`;
+- integrated `202/202` and aggregate `453/453`;
+- exact complete-owner gauge, matching-row additivity and cancellation,
+  revelation exchange, posterior covariance-debt normal form, regular
+  heat-centred full-Wick residual, abstract three-atom no-go, reduced
+  production-ray direction diagnostic, predecessor/source/PDF/surface
+  contracts, and T4 firewalls;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -992,19 +1019,19 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_extended_state_cartan_doob_rational_recovery_manifest.json`
-- `notes/classii-extended-state-cartan-doob-rational-recovery-260727-v1.0.tex.txt`
-- `notes/classii-extended-state-cartan-doob-rational-recovery-260727-v1.0.pdf`
-- `../../codes/foundations/a13_classii_extended_state_cartan_doob_rational_recovery.py`
-- `../../codes/foundations/a13_classii_extended_state_cartan_doob_rational_recovery_independent.py`
-- `../../codes/foundations/a13_classii_extended_state_cartan_doob_rational_recovery_verify.py`
-- `runs/2026-07-27-primary-extended-state-cartan-doob-rational-recovery/result.json`
-- `runs/2026-07-27-independent-extended-state-cartan-doob-rational-recovery/result.json`
-- `runs/2026-07-27-integrated-extended-state-cartan-doob-rational-recovery/result.json`
-- `../../RESULTS-LEDGER.md#r-099`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-progressive-revisit-cartan-mixed-payload`
-- `../../negative-results/registry.md#ng-2026-07-27-a13-absolute-last-root-frame-transfer`
-- `../../explorations/log.jsonl` (`EXP-000226`--`EXP-000234`)
+- `classii_owner_gauge_heat_centered_covariance_debt_reduction_manifest.json`
+- `notes/classii-owner-gauge-heat-centered-covariance-debt-reduction-260727-v1.0.tex.txt`
+- `notes/classii-owner-gauge-heat-centered-covariance-debt-reduction-260727-v1.0.pdf`
+- `../../codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction.py`
+- `../../codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_independent.py`
+- `../../codes/foundations/a13_classii_owner_gauge_heat_centered_covariance_debt_reduction_verify.py`
+- `runs/2026-07-27-primary-owner-gauge-heat-centered-covariance-debt-reduction/result.json`
+- `runs/2026-07-27-independent-owner-gauge-heat-centered-covariance-debt-reduction/result.json`
+- `runs/2026-07-27-integrated-owner-gauge-heat-centered-covariance-debt-reduction/result.json`
+- `../../RESULTS-LEDGER.md#r-100`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-complete-owner-cross-row-schur-reserve`
+- `../../negative-results/registry.md#ng-2026-07-27-a13-abstract-fibre-xy-covariance-debt`
+- `../../explorations/log.jsonl` (`EXP-000235`--`EXP-000242`)
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1836,6 +1863,22 @@ square theorem, the production posterior/source-action lower form, rational
 (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, measure, Sector-A closure,
 or a higher tier.
 
+The R-100 continuation is additionally falsified by failure of the complete-
+owner gauge identity or ridge invariance; exact row additivity, the
+`D_row/(-D_row/2)` bracket/square exchange, or revelation mean/covariance
+exchange; the posterior covariance-debt normal form; the heat-centred
+`F_j=L_j+H_j` decomposition, full-Wick increment formula, tower cross
+identity, Gaussian sixth-moment bound, `2^j` scale, R-094 Hardy transfer, or
+Young slack `1/3`; the exact `320/3927`, `-160/3927`, `5/3`, `-185/72`, and
+`425/72` fixtures; the abstract three-atom divergence; the reduced production
+ray coefficients `-9/400`, `867/2`, and `3/57800`; any deliberate mutation,
+authority, source, note, PDF, manifest, registry, exploration, or public-
+surface pin; or any promotion of the abstract fibre or zero-floor ray to a
+production counterexample, of the signed cross estimate to an absolute frame
+square/revisit theorem, or of R-100 to the still-open moving heat-baseline
+debt bound, rational (6.5), complete `H_N`, REG, `H_A`, `OVERLAP_src`, Nelson,
+measure, Sector-A closure, or a higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2067,6 +2110,21 @@ unconditioned production posterior/source-action lower form, rational (6.5),
 complete `H_N`, REG, arbitrary progressive `H_A`, `OVERLAP_src`, Nelson,
 cutoff or floor removal, a measure theorem, Sector-A closure, or T5--T7. Tier
 stays T4.
+
+R-100 proves that the complete R-099 owner is payment-gauge invariant and
+exactly row-additive, that finer coefficient revelation only exchanges
+posterior covariance and mean mass, and that the target is posterior mean
+current minus covariance debt. It closes the regular strict-past future-
+control/Jensen reveal residual by a signed full-Wick extension of R-094. It
+does not center the moving heat coefficient fragment, control an absolute
+frame square, extend to arbitrary revisits, or prove the remaining production
+scale-weighted moving heat-baseline debt inequality. The cross-row negative
+result does not withdraw R-098 bracket-only superadditivity. The abstract
+three-atom family and reduced zero-floor production ray are method/direction
+diagnostics, not production torus or paid-action counterexamples. R-100 does
+not prove rational (6.5), complete `H_N`, REG, arbitrary progressive `H_A`,
+`OVERLAP_src`, Nelson, cutoff or floor removal, a measure theorem, Sector-A
+closure, or T5--T7. Tier stays T4.
 
 ## History
 
@@ -2531,3 +2589,18 @@ stays T4.
   reject a wrong-sign mutant, and use an actual block direct sum. EXP-000234
   records the append-only correction; theorem tier and open frontier are
   unchanged.
+- 2026-07-27: Registered R-100. The complete R-099 owner is now an exact
+  ridge-independent terminal Wick increment and is exactly additive across
+  matching production rows; the R-098 bracket Schur gain cancels against the
+  complete-square gap. Finer coefficient revelation has an equal
+  mean/covariance exchange, and the target is posterior mean current minus
+  covariance debt. The heat-centred split `F_j=L_j+H_j` plus the Gaussian
+  sixth-moment extension of R-094 pays the regular strict-past future-control/
+  Jensen residual as one signed full-Wick cross with Young slack `1/3`.
+  Exact noncommuting, fraction, 216-atom filtration, abstract divergent-fibre,
+  and reduced production-ray checks pass independently. The abstract fibre
+  retires PSD-plus-separate-moments closure, while the production ray retains
+  `c=Da` and points toward an `H2`/root-weight estimate without constituting a
+  counterexample. The moving heat-baseline production debt bound, rational
+  (6.5), complete `H_N`, REG, `OVERLAP_src`, Nelson, and Sector A remain open;
+  tier stays T4.

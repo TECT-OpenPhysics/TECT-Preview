@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [[R-100] Owner gauge and heat-centred covariance-debt reduction] - 2026-07-27
+
+Register R-100 at T4. The complete R-099 owner is the ridge-independent conditional terminal Wick increment and is exactly additive across matching coefficient/payment/baseline rows; the bracket-only Schur gain and complete-square gap cancel. Finer coefficient revelation exchanges posterior covariance and mean mass exactly. The target is posterior mean current minus covariance debt. In the regular strict-past no-revisit class, the heat-centred split and full-Wick R-094 extension pay the future-control/Jensen residual once. Exact three-atom and reduced production-ray diagnostics rule out PSD-plus-separate-moments closure and point toward scale-weighted spatial/root absorption without constituting production counterexamples. Primary 167/167, independent 84/84, integrated 202/202, aggregate 453/453; the nine-page PDF passed form, extraction, zero-overfull, and all-page Poppler visual QA. The moving heat-baseline covariance-debt bound, rational (6.5), complete H_N, REG, H_A, OVERLAP_src, Nelson, measure construction, and Sector A remain open.
+
 ## [R-099 adversarial boundary and certificate repair] - 2026-07-27
 
 Adversarial review repaired three scope/evidence defects without changing the R-099 theorem tier or open frontier. Equality of both extended heat/value endpoints is now stated only as a sufficient cancellation condition: noninjectivity permits distinct states with equal current values, while equal value endpoints alone do not generically cancel a heat change. The payment-gauge theorem now explicitly assumes a positive-semidefinite Gram so A is positive definite, and consistent joint ridge updates are sufficient but not necessary in degenerate fibres. Primary and independent reversal fixtures now construct actual opposite visits and reject a wrong-sign mutant; the independent certificate constructs an actual block direct sum. EXP-000234 records the append-only correction to EXP-000226. Full verification, PDF QA, regeneration, and release checks are rerun before publication.
