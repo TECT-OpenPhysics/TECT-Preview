@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-112 closes the covariance-simplex compactification, analytic radial tail, factored uniform projective boundary through D2, existential large-amplitude theorem, origin cusp, and slice-wise face patches. Next: implement a directed-rounding certificate on the strict residual domain (2x+tau)^2<=32x+20tau, 0<c<1, 0<x<=8, 0<tau<=20 using the combined phase exponent and erfcx radial primitive. If and only if the mixed scalar target closes, embed it into the owner-preserving full-A1 one-fresh-root cluster and then prove the separate one-use source/sextic aggregation. R-103 REG and R-087 fixed-cutoff CORE remain prior owners; mixed all-q, OVERLAP_src, Nelson, removals, measure, and Sector A remain open.
+  - R-113 makes four projective wedges, eight origin cones, four covariance-face widths, and the zero-amplitude tau>=13 region effective, and two endpoint-union Arb implementations certify one strict mixed box. The global residual cover remains open: run a restartable fail-closed branch-and-bound, accept closure only after a finite certified cover, and retain every unresolved or nonpositive box. Only then attempt the full A1 owner cluster and separate one-use source/sextic aggregation.
   - _updated 2026-07-28_
 
 ## Next up

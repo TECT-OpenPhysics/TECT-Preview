@@ -4,6 +4,23 @@ Gates are promotion conditions; hypotheses are named assumptions that T6 claims
 may rest on. Every `open_gates` / `hypotheses` entry in any `status.json` must
 exist here. Last updated: 2026-07-28.
 
+## Current Sector-A frontier (R-113)
+
+`A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE` remains **OPEN**. R-103 already
+owns REG and R-087 already owns fixed-cutoff variational CORE. R-113 makes the
+R-112 scalar `k:2k` projective, origin, and covariance-face patches effective,
+proves the full zero-amplitude simplex for `tau>=13`, and certifies one
+complete genuinely mixed box by two independent outward-rounded Arb programs.
+The residual compact set is separated from `c=0`, `c=1`, and `tau=0` but
+retains `x=0`, `16/285418875<=tau<13`. The global mixed interval cover remains
+open and may close only after a fail-closed branch-and-bound returns a finite
+accepted cover; every unresolved or nonpositive box remains open. A successful
+scalar theorem would still require the full A1 one-fresh-root owner-preserving
+conditional cluster and a separate one-use source/sextic aggregation before
+`OVERLAP_src`, Nelson, removals, the interacting measure, or Sector A can
+close. The historical R-085 weighted/labelled-owner formulas are
+non-load-bearing under R-088/R-103/R-105.
+
 ## A6/A7 full derivative Class-II composite and renormalisation gates
 
 ### **A6-CLASSII-COUNTERTERM-CLOSURE**

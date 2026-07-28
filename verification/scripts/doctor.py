@@ -16,11 +16,12 @@ verification-first workflow. No physics constants are hardcoded; the only
 literal is the minimum supported Python version (a tooling requirement, not a
 result).
 """
-__version__ = "1.3.0"
+__version__ = "1.4.0"
 __first_issued__ = "2026-06-07"
-__version_issued__ = "2026-07-24"
+__version_issued__ = "2026-07-28"
 
 import importlib.util
+import importlib.metadata
 import shutil
 import subprocess
 import sys
@@ -74,6 +75,16 @@ def main() -> int:
            else "MISSING -- run: pip install -r requirements.txt")
     record(importlib.util.find_spec("pytest") is not None, "test-runtime",
            "import pytest OK" if importlib.util.find_spec("pytest")
+           else "MISSING -- run: pip install -r requirements.txt")
+    sympy_present = importlib.util.find_spec("sympy") is not None
+    sympy_version = importlib.metadata.version("sympy") if sympy_present else None
+    record(sympy_version == "1.14.0", "symbolic-runtime",
+           f"sympy {sympy_version} (pinned 1.14.0)" if sympy_present
+           else "MISSING -- run: pip install -r requirements.txt")
+    flint_present = importlib.util.find_spec("flint") is not None
+    flint_version = importlib.metadata.version("python-flint") if flint_present else None
+    record(flint_version == "0.9.0", "directed-rounding-runtime",
+           f"python-flint {flint_version} with Arb (pinned 0.9.0)" if flint_present
            else "MISSING -- run: pip install -r requirements.txt")
     pdf_packages = ("pypdf", "pdfplumber", "reportlab")
     missing_pdf = [name for name in pdf_packages if importlib.util.find_spec(name) is None]

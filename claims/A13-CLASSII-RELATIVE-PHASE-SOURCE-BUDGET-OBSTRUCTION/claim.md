@@ -1006,6 +1006,29 @@ the following structural results and proof-architecture boundaries hold.
     aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, or
     Sector A follows. `EXP-000313--EXP-000317` preserve the route decisions;
     tier stays T4.
+56. `A13-CLASSII-SCALAR-K2K-EFFECTIVE-BOUNDARY-DIRECTED-ROUNDING-SEED`
+    is R-113. It turns the R-112 projective theorem into four rational
+    `tau/x` wedges with `G>=x^3/960`, joins eight dyadic origin cones to cover
+    `0<=x,tau<=16/285418875`, and makes both covariance-face widths explicit.
+    The resulting rational compact residual is separated from `c=0`, `c=1`,
+    and `tau=0`, but it retains the zero-amplitude segment `x=0`,
+    `16/285418875<=tau<13`. Two exact phase completions improve the high-`q`
+    floor, and an exact Sturm certificate proves the whole zero-amplitude
+    covariance simplex for `tau>=13`. Two non-importing implementations,
+    using outward-rounded Arb endpoint unions and different radial partitions,
+    prove the complete genuinely mixed box `c in [49/100,51/100]` and
+    `x,tau in [99/100,101/100]`; their normalized upper endpoints are below
+    `0.966850` and `0.976002`. This is one box, not the missing global cover.
+    The Bessel cross-contraction surrogate has mean `-c(8b+9s)/16`, so a
+    proof globally replacing the original factor by that surrogate cannot
+    close the origin without an additional mean-debt cancellation. The target
+    is not refuted. R-103 REG and R-087 fixed-cutoff CORE retain their owners;
+    the historical R-085 weighted/labelled-owner formulas remain
+    non-load-bearing. `EXP-000318--EXP-000324` preserve the authority audit,
+    advances, failure, inconclusive route, and scope correction. The global
+    mixed scalar cover, full A1 owner cluster, one-use aggregation,
+    `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain
+    open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1068,6 +1091,7 @@ is a scoped T4 subproof and does not promote A13.
 | Random-W Skorohod / trace-corrected diagonal / scalar k:2k frontier | Exact double-divergence assembly and Young-optimized moment form; static covariance-norm no-go; chaos--Sobolev sufficient gate; exact trace-corrected interpolation and nonlinear mean-debt no-go; stationary scalar k:2k exact moments, strict right-small-q margin, two-order finite falsifiers, and architecture-sharp but globally nonsummable pointwise payment | T4 analytic/exact/executed advance and method boundary; no full A1 embedding or bare all-q scalar theorem, and the adapted complete production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Scalar k:2k degenerate faces / projective boundary / compact-core reduction | Exact all-q theorem on `vw=0`; positive fixed-shape projective limit and first correction; algebraic high-q cutoff; sharp Bessel and factorized tails; three exact route no-gos | T4 analytic/exact/executed advance and method boundary; genuinely mixed all-q, uniform projective/local/face patching, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Scalar k:2k covariance simplex / uniform projective / strict compact-core reduction | Closed covariance simplex; exact compact semialgebraic domain and analytic radial tail; uniform factored projective expansion through `D2`; existential large-amplitude theorem; exact origin and slice-wise face patches; negative exact `D3` method boundary | T4 analytic/exact/executed advance and method boundary; effective threshold, strict-core interval certificate, genuinely mixed all-q, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Scalar k:2k effective boundaries / directed-rounding seed | Four explicit projective wedges; eight origin cones; quantitative covariance-face widths; sharper phase floors; exact zero-amplitude `tau>=13` theorem; two independent outward-rounded certificates for one strict mixed box; corrected residual-boundary and Bessel-surrogate scope | T4 analytic/exact/executed advance and method boundary; global mixed interval cover, genuinely mixed all-q, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1080,10 +1104,10 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
 - Fixed `L=16` torus.
 - Three complex fields in the A7 six-real convention.
 - A1 production symbol and coefficients.
-- R-112 puts the R-110/R-111 stationary scalar two-frequency problem on one
-  closed covariance simplex, proves a uniform factored projective expansion
-  and an exact compact residual domain, but does not certify its strict mixed
-  interior or embed it as the full A1 production tensor.
+- R-113 makes the R-112 projective, origin, and covariance-face patches
+  effective, sharpens the phase floor, and certifies one complete strict
+  mixed Arb box. It does not cover the remaining rational compact set or
+  embed the scalar normalizer as the full A1 production tensor.
 - Fixed positive `rho_regularizer=1e-12`.
 - Common entrywise-real-even scalar Fourier cutoffs.
 - Same-cutoff covariance-normal Wick subtraction.
@@ -1415,20 +1439,19 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_scalar_k2k_covariance_simplex_uniform_compact_core_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_scalar_k2k_effective_boundary_interval_seed_verify.py
 ```
 
 Expected output:
 
-- primary `69/69`;
-- non-importing independent `50/50`;
-- manifest-pinned integrated `152/152` and aggregate `271/271` PASS;
-- exact covariance-simplex packet, local reserve, global floors, compact
-  semialgebraic domain, analytic radial tail, uniform projective `D0/D1/D2`
-  and remainder, origin and slice-wise face patches, exact negative `D3`,
-  PDF/surface contracts, and T4 firewalls;
-- explicit preservation of the open effective-threshold, strict mixed-core
-  interval, mixed all-`q`, full A1, one-use aggregation,
+- primary `75/75`;
+- non-importing independent `64/64`;
+- manifest-pinned integrated `180/180` and aggregate `319/319` PASS;
+- exact projective wedges, origin cones, face margins and widths, phase
+  floors, endpoint-union square-root tests, and two strict outward-rounded
+  mixed-box upper sums, plus PDF/surface contracts and T4 firewalls;
+- explicit preservation of the open global mixed cover, mixed all-`q`, full
+  A1, one-use aggregation,
   `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
 
@@ -1437,7 +1460,23 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The latest R-112 subproof package is:
+The latest R-113 subproof package is:
+
+- `classii_scalar_k2k_effective_boundary_interval_seed_manifest.json`
+- `notes/classii-scalar-k2k-effective-boundary-and-directed-rounding-seed-260728-v1.0.tex.txt`
+- `notes/classii-scalar-k2k-effective-boundary-and-directed-rounding-seed-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_scalar_k2k_effective_boundary_interval_seed.py`
+- `../../codes/foundations/a13_classii_scalar_k2k_effective_boundary_interval_seed_independent.py`
+- `../../codes/foundations/a13_classii_scalar_k2k_effective_boundary_interval_seed_verify.py`
+- `runs/2026-07-28-primary-scalar-k2k-effective-boundary-interval-seed/result.json`
+- `runs/2026-07-28-independent-scalar-k2k-effective-boundary-interval-seed/result.json`
+- `runs/2026-07-28-integrated-scalar-k2k-effective-boundary-interval-seed/result.json`
+- `../../RESULTS-LEDGER.md#r-113`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt`
+- `../../explorations/log.jsonl` (`EXP-000318`--`EXP-000324`)
+- R-063, R-087, R-103, R-105, R-111, and R-112 remain hash-pinned.
+
+The immediate R-112 predecessor remains binding:
 
 - `classii_scalar_k2k_covariance_simplex_uniform_compact_core_manifest.json`
 - `notes/classii-scalar-k2k-covariance-simplex-uniform-projective-compact-core-reduction-260728-v1.0.tex.txt`
@@ -2067,6 +2106,27 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     completion can be summed.** Its expected baseline has three-dimensional
     shell mass `2^j` under positive-density bounded-multiplicity allocation.
     Sparse or larger signed clusters remain possible.
+96. **UPHELD AGAINST R-113 GLOBAL PROMOTION: one successful Arb box covers
+    the mixed scalar core.** It certifies the full displayed parameter box,
+    not a point sample, but the rest of the rational compact set has no finite
+    accepted interval cover.
+97. **DISMISSED: the square-root ranges are midpoint approximations.** The
+    repaired programs form each range as the outward Arb union of the two
+    endpoint balls and assert containment on a width-`2^-200` stress interval
+    and an interval beginning at zero.
+98. **VALID WITH MITIGATION: effective origin and covariance-face patches
+    make the residual boundary-free.** They separate `c=0`, `c=1`, and
+    `tau=0`, but the zero-amplitude segment `x=0`,
+    `16/285418875<=tau<13` remains unresolved and is retained explicitly.
+99. **UPHELD AGAINST AN OVERBROAD NO-GO: the surrogate mean proves that no
+    refinement of the Bessel contraction can work.** It rules out only a
+    proof globally replacing the original factor by the contracted surrogate
+    without an additional mean-debt cancellation; it is not a target
+    counterexample.
+100. **UPHELD AGAINST HISTORICAL-ATOM PROMOTION: R-113 proves R-085
+    (4.10)--(4.11) and (6.5).** Those historical weighted/labelled-owner
+    formulas remain non-load-bearing under R-088/R-103/R-105 and are neither
+    proved nor required by the scalar calculation.
 
 ## Falsifier
 
@@ -2524,6 +2584,20 @@ promotion of compactification to a strict-core interval certificate, mixed
 all-`q` theorem, full A1 cluster, one-use aggregation, `OVERLAP_src`, Nelson,
 removal, measure, Sector-A, or higher-tier theorem.
 
+The R-113 continuation is additionally falsified by failure of any explicit
+projective constant or wedge, dyadic origin threshold or square dichotomy,
+face-margin translation, `c`-Lipschitz derivative bound, one of the four face
+widths, either exact phase completion, the `K0>=1/13` Sturm certificate, the
+zero-amplitude `tau>=13` implication, either endpoint-union containment stress
+test, either strict Arb upper endpoint, the independent partition contract,
+or the radius-50/80 tails. It is also falsified by a source, note, PDF,
+manifest, run, runtime-version, registry, exploration, assertion-count, hash,
+or public-surface mismatch, including `EXP-000318--EXP-000324`; by restoration
+of the corrected “boundary-free” wording or an overbroad contraction no-go;
+or by promotion of the one seed box to a global mixed cover, mixed all-`q`
+theorem, full A1 cluster, one-use aggregation, `OVERLAP_src`, Nelson, removal,
+measure, Sector-A, or higher-tier theorem.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2934,6 +3008,20 @@ R-085 formulas remain non-load-bearing. No full A1 embedding, adapted
 production cluster, one-use source/sextic aggregation, `OVERLAP_src`, Nelson,
 removal, interacting measure, Sector-A closure, or T5--T7 promotion follows.
 Tier stays T4.
+
+R-113 makes the R-112 analytic boundary patches effective, proves a sharper
+phase-floor region including the full zero-amplitude simplex for `tau>=13`,
+and certifies one complete strict mixed parameter box by two independent
+outward-rounded programs. It does not cover the remaining rational compact
+set; that set is separated from both covariance faces and `tau=0` but retains
+`x=0`, `16/285418875<=tau<13`. The repaired endpoint-union implementation is
+part of the evidence contract. The Bessel surrogate calculation retires only
+the uncorrected global replacement route and is not a target counterexample.
+R-103 REG and R-087 fixed-cutoff CORE retain their prior owners, while the
+historical R-085 weighted/labelled-owner formulas remain non-load-bearing. No
+mixed all-`q` scalar theorem, full A1 owner cluster, one-use source/sextic
+aggregation, `OVERLAP_src`, Nelson, removal, interacting measure, Sector-A
+closure, or T5--T7 promotion follows. Tier stays T4.
 
 ## History
 
@@ -3622,3 +3710,22 @@ Tier stays T4.
   and all-page Poppler visual QA. The mixed strict-core certificate, full A1
   production cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals,
   interacting measure, and Sector A remain open; tier stays T4.
+- 2026-07-28: Registered R-113. Four rational projective wedges now retain
+  `G>=x^3/960`; eight dyadic origin cones cover a complete rational square;
+  and exact face margins plus a verified `c`-Lipschitz bound provide four
+  explicit face widths. Two phase completions sharpen the high-`q` floor and
+  prove the entire zero-amplitude simplex for `tau>=13`. Two non-importing
+  Arb programs, after replacing a shared midpoint square-root helper by an
+  outward endpoint union and stress-testing it at width `2^-200` and at zero,
+  certify one complete genuinely mixed box with upper endpoints below
+  `0.966850` and `0.976002`. The residual set is separated from `c=0`, `c=1`,
+  and `tau=0`, but the zero-amplitude segment below `tau=13` remains. The
+  Bessel surrogate no-go is scoped to global replacement without a new
+  mean-debt cancellation. `EXP-000318--EXP-000324` preserve the authority
+  audit, advances, failure, inconclusive route, and correction. Primary
+  `75/75`, non-importing independent `64/64`, integrated `180/180`, and
+  aggregate `319/319` checks are manifest-pinned; the final
+  seven-page PDF passes form, zero-overfull, extraction, no-literal-`qquad`,
+  and all-page Poppler visual QA. The global mixed interval cover, full A1
+  cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting
+  measure, and Sector A remain open; tier stays T4.

@@ -18,7 +18,9 @@ research state lives in the cowork app; it all lives in tracked files here.
    pip install -r requirements.txt
    ```
 
-   Install either a venv-local `tectonic` executable or a TeX distribution
+   The requirements include `sympy` and `python-flint`; the latter supplies
+   outward-rounded Arb balls for fail-closed interval certificates. Install
+   either a venv-local `tectonic` executable or a TeX distribution
    providing `pdflatex`. Proof-note PDF generation is part of the readiness
    gate, so `doctor.py` reports NOT READY when neither engine is available.
 

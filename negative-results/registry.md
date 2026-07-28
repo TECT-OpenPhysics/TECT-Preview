@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT](#ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt) | close the mixed scalar `k:2k` normalizer by contracting the Bessel cross term pointwise with `I_0(z)<=e^z` and one quadratic Young inequality | the contracted positive quadratic surrogate has exact mean `-c(8b+9s)/16<0` in the mixed interior, so its centered log-Laplace upper bound acquires an artificial positive `O(tau)` origin debt while the target begins at `O(tau^2)`. The contraction remains a stable one-dimensional `erfcx` majorant away from the origin and is not a target counterexample |
 | [NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY](#ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity) | prove the mixed scalar `k:2k` projective boundary by showing every inverse-amplitude coefficient of the exact logarithmic gap is nonnegative | the exact third coefficient at `c=3/5`, `s=2/5`, `x=24/25` is `-627811338105359170693920/190578044621571595050427561<0`. The leading gap and first two corrections remain positive there, so only coefficientwise sign induction is retired; the target and a controlled remainder/interval proof remain live |
 | [NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION](#ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination) | prove the mixed scalar `k:2k` all-`q` theorem by inserting the local Gaussian envelope `I_0(z)<=exp(z^2/4)` into the exact radial integral | the envelope creates `+9q^2A^2R^2S`; on `R=S=L` this positive cubic dominates every original quadratic damping term, so the proposed upper integral is infinite whenever `qA!=0`. The sharp linear-growth Bessel majorant remains valid and useful |
 | [NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION](#ng-2026-07-28-a13-k2k-conditional-scalar-tensorization) | condition on one mixed frequency and apply the positive-coefficient scalar degenerate-face theorem to the other frequency | conditioning on `S` produces `alpha_eff=(A^2+10S-4w)/v`, which can be arbitrarily negative. For `alpha_eff=-B`, the exact packet is `(X-B-1)^2-(B^2+1)` and fixed `0<s<1/2` has log-Laplace leading term `sB^2`, exceeding the blindly extended proxy `2s^2B^2`. The positive-coefficient face theorem remains exact on its declared faces |
@@ -154,6 +155,33 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt"></a>
+### NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT -- the stable cross contraction creates a false linear origin debt
+
+**Failure mode:** combine `I_0(z)<=e^z` with `2sqrt(ab)<=a+b` to replace the
+mixed Bessel cross term by a positive-definite quadratic radial exponent, and
+then use that majorant as a global proof of the centered scalar normalizer.
+
+**Evidence:** the exact contraction is
+
+`e^(-x rho-10 tau rho sigma) I_0(6 sqrt(x tau) rho sqrt(sigma)) <= e^(-tau rho sigma)`.
+
+The resulting surrogate packet has the exact expectation
+
+`E F_tilde_b=-c(8b+9s)/16<0`
+
+whenever `0<c<1`.  Its normalized negative log-Laplace transform therefore
+contains an artificial positive term linear in `tau`, whereas the desired
+covariance-square target begins quadratically in `tau`.  No proof that
+globally replaces the original Bessel factor by this contracted surrogate,
+without an additional mean-debt cancellation, can close the equality origin.
+
+**Consequence:** the contraction is retired only as a standalone global
+origin proof.  It remains a valid stable quadratic/`erfcx` majorant away from
+the origin.  R-113 supplies effective projective and origin patches and one
+directed-rounding mixed box; neither the target nor the remaining finite
+central interval cover is refuted.
 
 <a id="ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity"></a>
 ### NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY -- the third exact projective coefficient changes sign

@@ -161,8 +161,14 @@ domain and analytic radial tail, and establishes a factored simplex-uniform
 projective expansion through the positive second correction, an existential
 large-amplitude theorem, an origin cusp, and slice-wise face patches. Its
 negative exact third coefficient retires all-order coefficient sign induction
-without refuting the target. The next scalar theorem is a directed-rounding
-certificate for the strict residual compact core. Any
+without refuting the target. R-113 makes the projective, origin, and
+covariance-face patches effective, proves a sharper phase floor including the
+whole zero-amplitude simplex for `tau>=13`, and certifies one genuinely mixed
+box by two independent outward-rounded Arb programs. The residual is separated
+from `c=0`, `c=1`, and `tau=0` but still contains the zero-amplitude segment
+below `tau=13`. The next scalar theorem is a fail-closed directed-rounding
+branch-and-bound; closure requires a finite accepted cover and unresolved or
+nonpositive boxes remain open. Any
 surviving normalizer must then be embedded into a full A1 one-fresh-root
 cluster with owner-preserving trace/mean, random-W forest, rational recovery,
 visits, source, and one-terminal-sextic ledgers, followed by a separate one-use

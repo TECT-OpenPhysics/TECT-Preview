@@ -1,0 +1,611 @@
+{
+  "assertion_names": [
+    "projective::independent absolute-Q plus coefficient majorant",
+    "projective::independent absolute-Q minus coefficient majorant",
+    "projective::independent rational B-star enlargement",
+    "projective::X=1 independent constant",
+    "projective::X=1 independent upper",
+    "projective::X=1 q-star gate",
+    "projective::X=1 half-leading-margin",
+    "projective::X=2 independent constant",
+    "projective::X=2 independent upper",
+    "projective::X=2 q-star gate",
+    "projective::X=2 half-leading-margin",
+    "projective::X=4 independent constant",
+    "projective::X=4 independent upper",
+    "projective::X=4 q-star gate",
+    "projective::X=4 half-leading-margin",
+    "projective::X=8 independent constant",
+    "projective::X=8 independent upper",
+    "projective::X=8 q-star gate",
+    "projective::X=8 half-leading-margin",
+    "origin::independent theta 0",
+    "origin::independent theta 1",
+    "origin::independent theta 2",
+    "origin::independent theta 3",
+    "origin::independent theta 4",
+    "origin::independent theta 5",
+    "origin::independent theta 6",
+    "origin::independent theta 7",
+    "origin::independent origin/projective square dichotomy",
+    "faces::independent kappa",
+    "faces::independent c=0 small margin",
+    "faces::independent c=0 large margin",
+    "faces::independent c=1 small margin",
+    "faces::independent c=1 large margin",
+    "faces::independent c=0 branch translation",
+    "faces::independent c=1 branch translation",
+    "faces::independent L-c derivative",
+    "faces::independent Q-c grouped derivative",
+    "faces::independent centered exponential absolute-moment bound",
+    "faces::independent Q-c expectation bound",
+    "faces::independent L-c expectation bound",
+    "faces::independent Bessel c-polynomial bound",
+    "faces::independent Bessel score coefficient",
+    "faces::independent K2 derivative bound",
+    "faces::independent K1 derivative bound",
+    "faces::independent K0 derivative Bernstein reconstruction and bound",
+    "faces::independent rational e upper",
+    "faces::independent exponential tilt cap",
+    "faces::independent global Lambda bound",
+    "faces::independent small Lambda/tau bound",
+    "faces::independent all four face widths",
+    "tails::independent e lower for radius comparison",
+    "tails::independent radius-80 tail",
+    "floor::independent six completion",
+    "floor::independent ten completion",
+    "floor::independent K0 Sturm variation",
+    "floor::independent K0 endpoint positivity",
+    "floor::independent zero-amplitude tau>=13 implication",
+    "interval::independent sqrt hull contains narrow lower",
+    "interval::independent sqrt hull contains narrow upper",
+    "interval::independent sqrt hull contains zero",
+    "interval::independent sqrt hull contains positive endpoint from zero",
+    "interval::independent central residual",
+    "interval::independent central target",
+    "interval::independent central cells"
+  ],
+  "assertions": [
+    {
+      "actual": "{(0, 1): shape/8, (0, 2): shape**2/16 - shape/8 + 1/8, (1, 0): 1/2 - shape/2, (1, 1): -5*shape**2/8 + 5*shape/8 + 5/8, (2, 0): shape**2/4 + 1/4}",
+      "expected": "all coefficients nonnegative on the simplex",
+      "group": "projective",
+      "name": "independent absolute-Q plus coefficient majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(0, 1): 1/4 - shape/8, (0, 2): -shape**2/16 + shape/8, (1, 0): shape/2 + 1/2, (1, 1): 5*shape**2/8 - 5*shape/8 + 5/8, (2, 0): 1/4 - shape**2/4}",
+      "expected": "all coefficients nonnegative on the simplex",
+      "group": "projective",
+      "name": "independent absolute-Q minus coefficient majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "24/144",
+      "expected": "<25/144",
+      "group": "projective",
+      "name": "independent rational B-star enlargement",
+      "status": "PASS"
+    },
+    {
+      "actual": "181292201822646474659735/273593677362757632",
+      "expected": "181292201822646474659735/273593677362757632",
+      "group": "projective",
+      "name": "X=1 independent constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "181292201822646474659735/273593677362757632",
+      "expected": "<700000",
+      "group": "projective",
+      "name": "X=1 independent upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/32",
+      "expected": "<=9/256",
+      "group": "projective",
+      "name": "X=1 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "672000000",
+      "expected": "<=1509949440",
+      "group": "projective",
+      "name": "X=1 half-leading-margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "267774784673603525005/79164837199872",
+      "expected": "267774784673603525005/79164837199872",
+      "group": "projective",
+      "name": "X=2 independent constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "267774784673603525005/79164837199872",
+      "expected": "<3500000",
+      "group": "projective",
+      "name": "X=2 independent upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/64",
+      "expected": "<=1/64",
+      "group": "projective",
+      "name": "X=2 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "3360000000",
+      "expected": "<=12079595520",
+      "group": "projective",
+      "name": "X=2 half-leading-margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "274770569726043833586365/1068725302198272",
+      "expected": "274770569726043833586365/1068725302198272",
+      "group": "projective",
+      "name": "X=4 independent constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "274770569726043833586365/1068725302198272",
+      "expected": "<260000000",
+      "group": "projective",
+      "name": "X=4 independent upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/256",
+      "expected": "<=1/256",
+      "group": "projective",
+      "name": "X=4 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "249600000000",
+      "expected": "<=773094113280",
+      "group": "projective",
+      "name": "X=4 half-leading-margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "5748965910841593523942194993404275/373546567492618420224",
+      "expected": "5748965910841593523942194993404275/373546567492618420224",
+      "group": "projective",
+      "name": "X=8 independent constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "5748965910841593523942194993404275/373546567492618420224",
+      "expected": "<16000000000000",
+      "group": "projective",
+      "name": "X=8 independent upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/8192",
+      "expected": "<=9/65536",
+      "group": "projective",
+      "name": "X=8 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "15360000000000000",
+      "expected": "<=25332747903959040",
+      "group": "projective",
+      "name": "X=8 half-leading-margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/3575",
+      "expected": "48/3575",
+      "group": "origin",
+      "name": "independent theta 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/3675",
+      "expected": "16/3675",
+      "group": "origin",
+      "name": "independent theta 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/49025",
+      "expected": "48/49025",
+      "group": "origin",
+      "name": "independent theta 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/94875",
+      "expected": "16/94875",
+      "group": "origin",
+      "name": "independent theta 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/1931825",
+      "expected": "48/1931825",
+      "group": "origin",
+      "name": "independent theta 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/4743675",
+      "expected": "16/4743675",
+      "group": "origin",
+      "name": "independent theta 5",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/109255025",
+      "expected": "48/109255025",
+      "group": "origin",
+      "name": "independent theta 6",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/285418875",
+      "expected": "16/285418875",
+      "group": "origin",
+      "name": "independent theta 7",
+      "status": "PASS"
+    },
+    {
+      "actual": "x/tau<=128 or tau/x<=1/128",
+      "expected": "complete origin square",
+      "group": "origin",
+      "name": "independent origin/projective square dichotomy",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/100552401097327200",
+      "expected": "1/100552401097327200",
+      "group": "faces",
+      "name": "independent kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*tau_face**2/1792",
+      "expected": "5*tau_face**2/1792",
+      "group": "faces",
+      "name": "independent c=0 small margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau_face/(16*(3*tau_face/16 + 12))",
+      "expected": "tau_face/(3*tau_face + 192)",
+      "group": "faces",
+      "name": "independent c=0 large margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*tau_face**2/112",
+      "expected": "5*tau_face**2/112",
+      "group": "faces",
+      "name": "independent c=1 small margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau_face/(4*(3*tau_face/4 + 12))",
+      "expected": "tau_face/(3*tau_face + 48)",
+      "group": "faces",
+      "name": "independent c=1 large margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "universal branch",
+      "expected": "16*x+5*tau<=16 or >16",
+      "group": "faces",
+      "name": "independent c=0 branch translation",
+      "status": "PASS"
+    },
+    {
+      "actual": "universal branch",
+      "expected": "4*x+5*tau<=4 or >4",
+      "group": "faces",
+      "name": "independent c=1 branch translation",
+      "status": "PASS"
+    },
+    {
+      "actual": "T/2 - U/2",
+      "expected": "(T-U)/2",
+      "group": "faces",
+      "name": "independent L-c derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "T**2*shape/2 - 5*T*U*shape/4 + 5*T*U/8 - T/2 + U**2*shape/8 - U**2/8 + U/8",
+      "expected": "T*U*(5/8 - 5*shape/4) - T*(1 - shape)/2 + U*shape/8 + shape*(T**2 - T)/2 - (1 - shape)*(U**2 - U)/8",
+      "group": "faces",
+      "name": "independent Q-c grouped derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/24",
+      "expected": ">8/3, hence -1+6/e<5/4",
+      "group": "faces",
+      "name": "independent centered exponential absolute-moment bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/32",
+      "expected": "<9/4<5/2",
+      "group": "faces",
+      "name": "independent Q-c expectation bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "E|T-U|/2=1/2",
+      "expected": "<=1",
+      "group": "faces",
+      "name": "independent L-c expectation bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(shape - 1)*(3*shape + 1)",
+      "expected": "|2c-3c^2|<=1",
+      "group": "faces",
+      "name": "independent Bessel c-polynomial bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/16",
+      "expected": "9/16",
+      "group": "faces",
+      "name": "independent Bessel score coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*shape - 1",
+      "expected": "absolute value <=1",
+      "group": "faces",
+      "name": "independent K2 derivative bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(9*shape**2 - 10*shape - 1)/4",
+      "expected": "0<=K1'<=17/18<1",
+      "group": "faces",
+      "name": "independent K1 derivative bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(-1, 16), Fraction(19, 24), Fraction(-19, 24), Fraction(19, 4))",
+      "expected": "(Fraction(-1, 16), Fraction(19, 24), Fraction(-19, 24), Fraction(19, 4))",
+      "group": "faces",
+      "name": "independent K0 derivative Bernstein reconstruction and bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "11743/4320",
+      "expected": "<87/32",
+      "group": "faces",
+      "name": "independent rational e upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "8280780473047856283/281474976710656",
+      "expected": "<60000",
+      "group": "faces",
+      "name": "independent exponential tilt cap",
+      "status": "PASS"
+    },
+    {
+      "actual": "8880531",
+      "expected": "<=8880531",
+      "group": "faces",
+      "name": "independent global Lambda bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "157275721/20",
+      "expected": "<=7863787",
+      "group": "faces",
+      "name": "independent small Lambda/tau bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 100552401097327200), Fraction(1, 6284525068582950), Fraction(2, 159684283547625375), Fraction(2, 68436121520410875))",
+      "expected": "(Fraction(1, 100552401097327200), Fraction(1, 6284525068582950), Fraction(2, 159684283547625375), Fraction(2, 68436121520410875))",
+      "group": "faces",
+      "name": "independent all four face widths",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/24",
+      "expected": ">5/2",
+      "group": "tails",
+      "name": "independent e lower for radius comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "232113757366008801543585792/132348898008484427979425390731194056570529937744140625",
+      "expected": "<2e-27",
+      "group": "tails",
+      "name": "independent radius-80 tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "independent six completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "independent ten completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "independent K0 Sturm variation",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1/64, 61/4)",
+      "expected": "both >0",
+      "group": "floor",
+      "name": "independent K0 endpoint positivity",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau*K0/4 at tau=13",
+      "expected": ">=1/4 phase-floor slope",
+      "group": "floor",
+      "name": "independent zero-amplitude tau>=13 implication",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.000000000000000000000000000000000000000 +/- 2.30e-41]",
+      "expected": "contains sqrt(lower)",
+      "group": "interval",
+      "name": "independent sqrt hull contains narrow lower",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.000000000000000000000000000000000000000 +/- 2.30e-41]",
+      "expected": "contains sqrt(upper)",
+      "group": "interval",
+      "name": "independent sqrt hull contains narrow upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "[+/- 9.54e-7]",
+      "expected": "contains 0",
+      "group": "interval",
+      "name": "independent sqrt hull contains zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "[+/- 9.54e-7]",
+      "expected": "contains sqrt(2^-40)",
+      "group": "interval",
+      "name": "independent sqrt hull contains positive endpoint from zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-42.29909999389201402664184570312500000000",
+      "expected": "<0",
+      "group": "interval",
+      "name": "independent central residual",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9760013963281331486747252354472230248658 +/- 3.55e-41]",
+      "expected": "<1",
+      "group": "interval",
+      "name": "independent central target",
+      "status": "PASS"
+    },
+    {
+      "actual": "30000",
+      "expected": "30000",
+      "group": "interval",
+      "name": "independent central cells",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 64,
+  "assertions_total": 64,
+  "results": {
+    "directed_rounding_seed": {
+      "cells": 30000,
+      "core_upper": "[0.97600139632813314867403743279128000 +/- 3.32e-36]",
+      "initial_partition": "0,1/2,1,3/2,2,3,4,6,8,12,16,24,32,40,50",
+      "normalized_total_upper": "[0.9760013963281331486747252354472230248658 +/- 3.55e-41]",
+      "parameter_box": {
+        "c": "[49/100,51/100]",
+        "tau": "[99/100,101/100]",
+        "x": "[99/100,101/100]"
+      },
+      "precision_dps": 40,
+      "radial_radius": 50,
+      "refinement_priority": "cell upper times longest side",
+      "residual_ball": "[-4.3e+1 +/- 0.701]",
+      "residual_strict": true,
+      "residual_upper": "-42.29909999389201402664184570312500000000",
+      "tail_upper": "[6.878026559430215470855076356973063595816e-22 +/- 8.94e-63]",
+      "target_strict": true
+    },
+    "effective_projective_patches": [
+      {
+        "certified_gap_lower": "x^3/960",
+        "derivative_envelope_q_star_cap": "3/16",
+        "exact_sixth_log_constant": "181292201822646474659735/273593677362757632",
+        "tau_over_x_max": "1/128",
+        "x_interval": "(0,1]"
+      },
+      {
+        "certified_gap_lower": "x^3/960",
+        "derivative_envelope_q_star_cap": "1/8",
+        "exact_sixth_log_constant": "267774784673603525005/79164837199872",
+        "tau_over_x_max": "1/256",
+        "x_interval": "(1,2]"
+      },
+      {
+        "certified_gap_lower": "x^3/960",
+        "derivative_envelope_q_star_cap": "1/16",
+        "exact_sixth_log_constant": "274770569726043833586365/1068725302198272",
+        "tau_over_x_max": "1/1024",
+        "x_interval": "(2,4]"
+      },
+      {
+        "certified_gap_lower": "x^3/960",
+        "derivative_envelope_q_star_cap": "3/256",
+        "exact_sixth_log_constant": "5748965910841593523942194993404275/373546567492618420224",
+        "tau_over_x_max": "1/32768",
+        "x_interval": "(4,8]"
+      }
+    ],
+    "global_interval_cover_complete": false,
+    "origin_square_threshold": "16/285418875",
+    "quantitative_faces": {
+      "four_width_lower_bounds": [
+        "1/100552401097327200",
+        "1/6284525068582950",
+        "2/159684283547625375",
+        "2/68436121520410875"
+      ],
+      "lipschitz": "60000*(x+5*tau/2+9*x*tau/16)+x^2/4+x*tau/4+19*tau^2/16",
+      "margins": {
+        "c=0_large": "tau/(3*(tau+64)) when 16*x+5*tau>16",
+        "c=0_small": "5*tau^2/1792 when 16*x+5*tau<=16",
+        "c=1_large": "tau/(3*(tau+16)) when 4*x+5*tau>4",
+        "c=1_small": "5*tau^2/112 when 4*x+5*tau<=4"
+      }
+    },
+    "runtime_versions": {
+      "python-flint": "0.9.0",
+      "sympy": "1.14.0"
+    },
+    "sharper_phase_floors": {
+      "B10": "b/2+(1-b/10)_+^2/4+(1-4*b)_+^2/16",
+      "B6": "b**2/16+3*b/4+1/4",
+      "zero_amplitude_uniform_tau": ">=13"
+    },
+    "target_counterexample": false,
+    "uniform_c_interior_floor": "1/100552401097327200"
+  },
+  "results_sha256": "7b0e26b1046f31348e15f81be8d90af90049d0c91f56e4b61b663b159cb3be6f",
+  "route_verdicts": {
+    "effective_boundaries": "proved-independent",
+    "first_strict_mixed_arb_box": "proved-independent-partition",
+    "global_mixed_scalar_interval_cover": "open",
+    "sector_a": "open",
+    "sharper_global_floor": "proved-independent"
+  },
+  "schema": "tect/a13-scalar-k2k-effective-boundary-interval-seed-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

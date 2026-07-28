@@ -1,0 +1,760 @@
+{
+  "assertion_names": [
+    "normal_form::local reserve floor identity",
+    "projective::absolute-Q plus coefficient majorant",
+    "projective::absolute-Q minus coefficient majorant",
+    "projective::simplex phase-amplitude bound",
+    "projective::rational B-star enlargement",
+    "projective::X=1 exact sixth-log constant",
+    "projective::X=1 convenient constant bound",
+    "projective::X=1 q-star gate",
+    "projective::X=1 remainder leaves half D0",
+    "projective::X=2 exact sixth-log constant",
+    "projective::X=2 convenient constant bound",
+    "projective::X=2 q-star gate",
+    "projective::X=2 remainder leaves half D0",
+    "projective::X=4 exact sixth-log constant",
+    "projective::X=4 convenient constant bound",
+    "projective::X=4 q-star gate",
+    "projective::X=4 remainder leaves half D0",
+    "projective::X=8 exact sixth-log constant",
+    "projective::X=8 convenient constant bound",
+    "projective::X=8 q-star gate",
+    "projective::X=8 remainder leaves half D0",
+    "origin::K1 upper factorization",
+    "origin::K0 upper factorization",
+    "origin::dyadic cone 0 threshold",
+    "origin::dyadic cone 1 threshold",
+    "origin::dyadic cone 2 threshold",
+    "origin::dyadic cone 3 threshold",
+    "origin::dyadic cone 4 threshold",
+    "origin::dyadic cone 5 threshold",
+    "origin::dyadic cone 6 threshold",
+    "origin::dyadic cone 7 threshold",
+    "origin::global origin square threshold",
+    "origin::origin/projective square dichotomy",
+    "faces::c=0 small margin",
+    "faces::c=0 large margin",
+    "faces::c=1 small margin",
+    "faces::c=1 large margin",
+    "faces::c=0 branch condition translation",
+    "faces::c=1 branch condition translation",
+    "faces::L-c derivative",
+    "faces::Q-c grouped derivative",
+    "faces::centered exponential absolute-moment rational bound",
+    "faces::Q-c absolute expectation bound",
+    "faces::L-c absolute expectation bound",
+    "faces::Bessel c-derivative polynomial bound",
+    "faces::Bessel score expectation coefficient",
+    "faces::K2 derivative bound",
+    "faces::K1 derivative bound",
+    "faces::K0 derivative Bernstein reconstruction and bound",
+    "faces::rational e upper",
+    "faces::exponential tilt cap",
+    "faces::central c-width floor",
+    "faces::comparison face width 0 exceeds kappa",
+    "faces::comparison face width 1 exceeds kappa",
+    "faces::comparison face width 2 exceeds kappa",
+    "faces::global Lambda bound",
+    "faces::small-branch Lambda/tau bound",
+    "faces::all four residual face widths",
+    "tails::e lower for radius comparison",
+    "tails::radius-80 rational tail",
+    "floor::six-completion identity",
+    "floor::ten-completion identity",
+    "floor::low-branch crossover",
+    "floor::K0-1/13 Sturm polynomial",
+    "floor::K0-1/13 quartic has no real roots",
+    "floor::K0-1/13 quartic positive at zero",
+    "floor::zero-amplitude tau>=13 implication",
+    "method_boundary::Bessel contraction surrogate mean",
+    "interval::sqrt hull contains narrow lower endpoint",
+    "interval::sqrt hull contains narrow upper endpoint",
+    "interval::sqrt hull contains zero endpoint",
+    "interval::sqrt hull contains positive endpoint from zero",
+    "interval::central residual strict",
+    "interval::central normalized integral strict",
+    "interval::central cell count"
+  ],
+  "assertions": [
+    {
+      "actual": "16*c**4 + 16*c**2*s**2 + s**4",
+      "expected": "(4*c^2+s^2)^2+8*c^2*s^2",
+      "group": "normal_form",
+      "name": "local reserve floor identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(0, 1): c/8, (0, 2): c**2/16 - c/8 + 1/8, (1, 0): 1/2 - c/2, (1, 1): -5*c**2/8 + 5*c/8 + 5/8, (2, 0): c**2/4 + 1/4}",
+      "expected": "all declared coefficients nonnegative on 0<=c<=1",
+      "group": "projective",
+      "name": "absolute-Q plus coefficient majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(0, 1): 1/4 - c/8, (0, 2): -c**2/16 + c/8, (1, 0): c/2 + 1/2, (1, 1): 5*c**2/8 - 5*c/8 + 5/8, (2, 0): 1/4 - c**2/4}",
+      "expected": "all declared coefficients nonnegative on 0<=c<=1",
+      "group": "projective",
+      "name": "absolute-Q minus coefficient majorant",
+      "status": "PASS"
+    },
+    {
+      "actual": "(3*c - 2)**2*(3*c + 1)/27",
+      "expected": "(3*c-2)^2*(3*c+1)/27",
+      "group": "projective",
+      "name": "simplex phase-amplitude bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(9/8)*(4/27)=24/144",
+      "expected": "<25/144=(5/12)^2",
+      "group": "projective",
+      "name": "rational B-star enlargement",
+      "status": "PASS"
+    },
+    {
+      "actual": "181292201822646474659735/273593677362757632",
+      "expected": "181292201822646474659735/273593677362757632",
+      "group": "projective",
+      "name": "X=1 exact sixth-log constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "181292201822646474659735/273593677362757632",
+      "expected": "<700000",
+      "group": "projective",
+      "name": "X=1 convenient constant bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/32",
+      "expected": "<=9/256",
+      "group": "projective",
+      "name": "X=1 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "672000000",
+      "expected": "<=1509949440",
+      "group": "projective",
+      "name": "X=1 remainder leaves half D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "267774784673603525005/79164837199872",
+      "expected": "267774784673603525005/79164837199872",
+      "group": "projective",
+      "name": "X=2 exact sixth-log constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "267774784673603525005/79164837199872",
+      "expected": "<3500000",
+      "group": "projective",
+      "name": "X=2 convenient constant bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/64",
+      "expected": "<=1/64",
+      "group": "projective",
+      "name": "X=2 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "3360000000",
+      "expected": "<=12079595520",
+      "group": "projective",
+      "name": "X=2 remainder leaves half D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "274770569726043833586365/1068725302198272",
+      "expected": "274770569726043833586365/1068725302198272",
+      "group": "projective",
+      "name": "X=4 exact sixth-log constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "274770569726043833586365/1068725302198272",
+      "expected": "<260000000",
+      "group": "projective",
+      "name": "X=4 convenient constant bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/256",
+      "expected": "<=1/256",
+      "group": "projective",
+      "name": "X=4 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "249600000000",
+      "expected": "<=773094113280",
+      "group": "projective",
+      "name": "X=4 remainder leaves half D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "5748965910841593523942194993404275/373546567492618420224",
+      "expected": "5748965910841593523942194993404275/373546567492618420224",
+      "group": "projective",
+      "name": "X=8 exact sixth-log constant",
+      "status": "PASS"
+    },
+    {
+      "actual": "5748965910841593523942194993404275/373546567492618420224",
+      "expected": "<16000000000000",
+      "group": "projective",
+      "name": "X=8 convenient constant bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/8192",
+      "expected": "<=9/65536",
+      "group": "projective",
+      "name": "X=8 q-star gate",
+      "status": "PASS"
+    },
+    {
+      "actual": "15360000000000000",
+      "expected": "<=25332747903959040",
+      "group": "projective",
+      "name": "X=8 remainder leaves half D0",
+      "status": "PASS"
+    },
+    {
+      "actual": "(c - 1)*(3*c**2 - 2*c - 3)/4",
+      "expected": "(1-c)*(3+2*c-3*c^2)/4",
+      "group": "origin",
+      "name": "K1 upper factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(c - 1)*(153*c**3 - 3*c**2 + 79*c + 75)/64",
+      "expected": "(1-c)*(153*c^3-3*c^2+79*c+75)/64",
+      "group": "origin",
+      "name": "K0 upper factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/3575",
+      "expected": "48/3575",
+      "group": "origin",
+      "name": "dyadic cone 0 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/3675",
+      "expected": "16/3675",
+      "group": "origin",
+      "name": "dyadic cone 1 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/49025",
+      "expected": "48/49025",
+      "group": "origin",
+      "name": "dyadic cone 2 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/94875",
+      "expected": "16/94875",
+      "group": "origin",
+      "name": "dyadic cone 3 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/1931825",
+      "expected": "48/1931825",
+      "group": "origin",
+      "name": "dyadic cone 4 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/4743675",
+      "expected": "16/4743675",
+      "group": "origin",
+      "name": "dyadic cone 5 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "48/109255025",
+      "expected": "48/109255025",
+      "group": "origin",
+      "name": "dyadic cone 6 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/285418875",
+      "expected": "16/285418875",
+      "group": "origin",
+      "name": "dyadic cone 7 threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/285418875",
+      "expected": "16/285418875",
+      "group": "origin",
+      "name": "global origin square threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "x/tau<=128 or tau/x<=1/128; tau<=theta(128)",
+      "expected": "complete square, with tau=0 handled by the projective edge and (0,0) by equality",
+      "group": "origin",
+      "name": "origin/projective square dichotomy",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*tau**2/1792",
+      "expected": "5*tau**2/1792",
+      "group": "faces",
+      "name": "c=0 small margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau/(3*(tau + 64))",
+      "expected": "tau/(3*tau + 192)",
+      "group": "faces",
+      "name": "c=0 large margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*tau**2/112",
+      "expected": "5*tau**2/112",
+      "group": "faces",
+      "name": "c=1 small margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau/(3*(tau + 16))",
+      "expected": "tau/(3*tau + 48)",
+      "group": "faces",
+      "name": "c=1 large margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*tau + 16*x - 16",
+      "expected": "16*x+5*tau-16",
+      "group": "faces",
+      "name": "c=0 branch condition translation",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*tau + 4*x - 4",
+      "expected": "4*x+5*tau-4",
+      "group": "faces",
+      "name": "c=1 branch condition translation",
+      "status": "PASS"
+    },
+    {
+      "actual": "T/2 - U/2",
+      "expected": "(T-U)/2",
+      "group": "faces",
+      "name": "L-c derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "(4*T**2*c - 10*T*U*c + 5*T*U - 4*T + U**2*c - U**2 + U)/8",
+      "expected": "(4*T**2*c - 10*T*U*c + 5*T*U - 4*T + U**2*c - U**2 + U)/8",
+      "group": "faces",
+      "name": "Q-c grouped derivative",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/24",
+      "expected": ">8/3, hence -1+6/e<5/4",
+      "group": "faces",
+      "name": "centered exponential absolute-moment rational bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/32",
+      "expected": "<9/4<5/2",
+      "group": "faces",
+      "name": "Q-c absolute expectation bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "E|T-U|/2=1/2",
+      "expected": "<=1",
+      "group": "faces",
+      "name": "L-c absolute expectation bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-(c - 1)*(3*c + 1), -8)",
+      "expected": "|2c-3c^2|<=1",
+      "group": "faces",
+      "name": "Bessel c-derivative polynomial bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/16",
+      "expected": "9/16",
+      "group": "faces",
+      "name": "Bessel score expectation coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*c - 1",
+      "expected": "absolute value <=1",
+      "group": "faces",
+      "name": "K2 derivative bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(9*c**2 - 10*c - 1)/4",
+      "expected": "0<=K1'<=17/18<1",
+      "group": "faces",
+      "name": "K1 derivative bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(-1/16, 19/24, -19/24, 19/4)",
+      "expected": "(-1/16, 19/24, -19/24, 19/4)",
+      "group": "faces",
+      "name": "K0 derivative Bernstein reconstruction and bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "11743/4320",
+      "expected": "<87/32",
+      "group": "faces",
+      "name": "rational e upper",
+      "status": "PASS"
+    },
+    {
+      "actual": "8280780473047856283/281474976710656",
+      "expected": "<60000",
+      "group": "faces",
+      "name": "exponential tilt cap",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/100552401097327200",
+      "expected": "1/100552401097327200",
+      "group": "faces",
+      "name": "central c-width floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/6284525068582950",
+      "expected": ">1/100552401097327200",
+      "group": "faces",
+      "name": "comparison face width 0 exceeds kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/159684283547625375",
+      "expected": ">1/100552401097327200",
+      "group": "faces",
+      "name": "comparison face width 1 exceeds kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/68436121520410875",
+      "expected": ">1/100552401097327200",
+      "group": "faces",
+      "name": "comparison face width 2 exceeds kappa",
+      "status": "PASS"
+    },
+    {
+      "actual": "8880531",
+      "expected": ">= direct endpoint sum",
+      "group": "faces",
+      "name": "global Lambda bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "7863787",
+      "expected": ">=157275721/20",
+      "group": "faces",
+      "name": "small-branch Lambda/tau bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1/100552401097327200, 1/6284525068582950, 2/159684283547625375, 2/68436121520410875)",
+      "expected": "(1/100552401097327200, 1/6284525068582950, 2/159684283547625375, 2/68436121520410875)",
+      "group": "faces",
+      "name": "all four residual face widths",
+      "status": "PASS"
+    },
+    {
+      "actual": "65/24",
+      "expected": ">5/2",
+      "group": "tails",
+      "name": "e lower for radius comparison",
+      "status": "PASS"
+    },
+    {
+      "actual": "232113757366008801543585792/132348898008484427979425390731194056570529937744140625",
+      "expected": "<2e-27",
+      "group": "tails",
+      "name": "radius-80 rational tail",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "six-completion identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "ten-completion identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "low-branch crossover",
+      "status": "PASS"
+    },
+    {
+      "actual": "1989*c**4 - 2028*c**3 + 1066*c**2 - 52*c + 1",
+      "expected": "declared quartic",
+      "group": "floor",
+      "name": "K0-1/13 Sturm polynomial",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "K0-1/13 quartic has no real roots",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "floor",
+      "name": "K0-1/13 quartic positive at zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau*K0/4 at tau=13 and K0=1/13",
+      "expected": ">=1/4 phase-floor slope",
+      "group": "floor",
+      "name": "zero-amplitude tau>=13 implication",
+      "status": "PASS"
+    },
+    {
+      "actual": "-c*(8*b - 9*c + 9)/16",
+      "expected": "-c*(8*b+9*s)/16",
+      "group": "method_boundary",
+      "name": "Bessel contraction surrogate mean",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.000000000000000000000000000000000000000 +/- 2.30e-41]",
+      "expected": "contains sqrt(lower)",
+      "group": "interval",
+      "name": "sqrt hull contains narrow lower endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[1.000000000000000000000000000000000000000 +/- 2.30e-41]",
+      "expected": "contains sqrt(upper)",
+      "group": "interval",
+      "name": "sqrt hull contains narrow upper endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[+/- 9.54e-7]",
+      "expected": "contains 0",
+      "group": "interval",
+      "name": "sqrt hull contains zero endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "[+/- 9.54e-7]",
+      "expected": "contains sqrt(2^-40)",
+      "group": "interval",
+      "name": "sqrt hull contains positive endpoint from zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-42.29909999389201402664184570312500000000",
+      "expected": "<0",
+      "group": "interval",
+      "name": "central residual strict",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.9668493729327744570528721595375646806384 +/- 4.99e-41]",
+      "expected": "<1",
+      "group": "interval",
+      "name": "central normalized integral strict",
+      "status": "PASS"
+    },
+    {
+      "actual": "20000",
+      "expected": "20000",
+      "group": "interval",
+      "name": "central cell count",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 75,
+  "assertions_total": 75,
+  "results": {
+    "central_residual_set": {
+      "c": "[1/100552401097327200,1-1/100552401097327200]",
+      "constraint": "(2*x+tau)^2<=32*x+20*tau",
+      "global_interval_cover_complete": false,
+      "tau": "[16/285418875,20]",
+      "x": "[0,8]"
+    },
+    "directed_rounding_seed": {
+      "cells": 20000,
+      "core_upper": "[0.96684937293277445705218435688162166 +/- 2.57e-36]",
+      "normalized_total_upper": "[0.9668493729327744570528721595375646806384 +/- 4.99e-41]",
+      "parameter_box": {
+        "c": "[49/100,51/100]",
+        "tau": "[99/100,101/100]",
+        "x": "[99/100,101/100]"
+      },
+      "precision_dps": 40,
+      "radial_radius": 50,
+      "residual_ball": "[-4.3e+1 +/- 0.701]",
+      "residual_strict": true,
+      "residual_upper": "-42.29909999389201402664184570312500000000",
+      "tail_upper": "[6.878026559430215470855076356973063595816e-22 +/- 8.94e-63]",
+      "target_strict": true
+    },
+    "effective_projective_patches": [
+      {
+        "certified_gap_lower": "x^3/960",
+        "convenient_upper": 700000,
+        "derivative_envelope_q_star_cap": "3/16",
+        "exact_sixth_log_constant": "181292201822646474659735/273593677362757632",
+        "tau_over_x_max": "1/128",
+        "x_interval": "(0,1]"
+      },
+      {
+        "certified_gap_lower": "x^3/960",
+        "convenient_upper": 3500000,
+        "derivative_envelope_q_star_cap": "1/8",
+        "exact_sixth_log_constant": "267774784673603525005/79164837199872",
+        "tau_over_x_max": "1/256",
+        "x_interval": "(1,2]"
+      },
+      {
+        "certified_gap_lower": "x^3/960",
+        "convenient_upper": 260000000,
+        "derivative_envelope_q_star_cap": "1/16",
+        "exact_sixth_log_constant": "274770569726043833586365/1068725302198272",
+        "tau_over_x_max": "1/1024",
+        "x_interval": "(2,4]"
+      },
+      {
+        "certified_gap_lower": "x^3/960",
+        "convenient_upper": 16000000000000,
+        "derivative_envelope_q_star_cap": "3/256",
+        "exact_sixth_log_constant": "5748965910841593523942194993404275/373546567492618420224",
+        "tau_over_x_max": "1/32768",
+        "x_interval": "(4,8]"
+      }
+    ],
+    "method_boundary": {
+      "bessel_cross_contraction": "creates a negative surrogate mean and an O(tau) origin debt",
+      "surrogate_mean": "-c*(8*b + 9*s)/16",
+      "target_counterexample": false
+    },
+    "origin_cones": [
+      {
+        "cone": 0,
+        "ratio_cap": 1,
+        "tau_cap": "48/3575"
+      },
+      {
+        "cone": 1,
+        "ratio_cap": 2,
+        "tau_cap": "16/3675"
+      },
+      {
+        "cone": 2,
+        "ratio_cap": 4,
+        "tau_cap": "48/49025"
+      },
+      {
+        "cone": 3,
+        "ratio_cap": 8,
+        "tau_cap": "16/94875"
+      },
+      {
+        "cone": 4,
+        "ratio_cap": 16,
+        "tau_cap": "48/1931825"
+      },
+      {
+        "cone": 5,
+        "ratio_cap": 32,
+        "tau_cap": "16/4743675"
+      },
+      {
+        "cone": 6,
+        "ratio_cap": 64,
+        "tau_cap": "48/109255025"
+      },
+      {
+        "cone": 7,
+        "ratio_cap": 128,
+        "tau_cap": "16/285418875"
+      }
+    ],
+    "origin_square_threshold": "16/285418875",
+    "quantitative_faces": {
+      "four_width_lower_bounds": [
+        "1/100552401097327200",
+        "1/6284525068582950",
+        "2/159684283547625375",
+        "2/68436121520410875"
+      ],
+      "lipschitz": "60000*(x+5*tau/2+9*x*tau/16)+x^2/4+x*tau/4+19*tau^2/16",
+      "margins": {
+        "c=0_large": "tau/(3*(tau+64)) when 16*x+5*tau>16",
+        "c=0_small": "5*tau^2/1792 when 16*x+5*tau<=16",
+        "c=1_large": "tau/(3*(tau+16)) when 4*x+5*tau>4",
+        "c=1_small": "5*tau^2/112 when 4*x+5*tau<=4"
+      },
+      "uniform_c_interior_floor": "1/100552401097327200"
+    },
+    "runtime_versions": {
+      "python-flint": "0.9.0",
+      "sympy": "1.14.0"
+    },
+    "sharper_phase_floors": {
+      "B10": "b/2+(1-b/10)_+^2/4+(1-4*b)_+^2/16",
+      "B6": "b**2/16 + 3*b/4 + 1/4",
+      "crossover": "20/47 - 45*sqrt(2)/188",
+      "zero_amplitude_uniform_tau": ">=13"
+    }
+  },
+  "results_sha256": "f059f50c8af8b291b49396e946998dc5ff49213b87a5c73ff45ac411551b8f00",
+  "route_verdicts": {
+    "bessel_cross_contraction_global_closure": "failed-origin-linear-debt",
+    "effective_covariance_face_widths": "proved-explicit",
+    "effective_origin_cover": "proved-explicit",
+    "effective_projective_boundary": "proved-explicit",
+    "first_strict_mixed_arb_box": "proved-directed-rounding",
+    "full_a1_embedding": "open",
+    "global_mixed_scalar_interval_cover": "open",
+    "nelson": "open",
+    "overlap_src": "open",
+    "sector_a": "open",
+    "sharper_global_floor": "proved-exact"
+  },
+  "schema": "tect/a13-scalar-k2k-effective-boundary-interval-seed-primary/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -312,8 +312,14 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   projective expansion through the positive second correction, an existential
   large-amplitude theorem, an origin cusp, and slice-wise face patches. The
   exact negative third coefficient retires all-order sign induction without
-  refuting the target. The remaining scalar work is a directed-rounding
-  certificate for the strict residual compact core. Even scalar
+  refuting the target. R-113 now makes four projective wedges, eight origin
+  cones, and both covariance-face widths explicit; sharpens the phase floor
+  through the full zero-amplitude `tau>=13` theorem; and certifies one complete
+  genuinely mixed box by two non-importing outward-rounded Arb programs. The
+  residual is separated from both covariance faces and `tau=0` but retains
+  `x=0`, `16/285418875<=tau<13`. The remaining scalar work is a fail-closed
+  directed-rounding branch-and-bound whose closure requires a finite accepted
+  cover; unresolved or nonpositive boxes stay open. Even scalar
   closure would still need a full A1 embedding and separate owner-preserving
   one-use source/sextic aggregation. `OVERLAP_src`, Nelson, removals, the
   interacting measure, and Sector A remain open. R-080,
@@ -889,8 +895,11 @@ preserved in git/changelog rather than treated as current gates.
    faces, and R-112 proves the closed covariance-simplex compactification,
    factored uniform projective boundary through `D2`, analytic tail, origin
    cusp, and slice-wise face patches. The negative exact `D3` retires only
-   coefficient-sign induction. Continue with directed-rounding certification
-   of the strict residual mixed core, then with the owner-preserving full-A1 conditional
+   coefficient-sign induction. R-113 adds effective rational projective,
+   origin, and face classifiers, the sharper zero-amplitude `tau>=13` region,
+   and two independent directed-rounding certificates for one strict mixed
+   box. Continue with a fail-closed global parameter cover, retaining every
+   unresolved or nonpositive box, then with the owner-preserving full-A1 conditional
    cluster and the separate one-use source/sextic aggregation.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed

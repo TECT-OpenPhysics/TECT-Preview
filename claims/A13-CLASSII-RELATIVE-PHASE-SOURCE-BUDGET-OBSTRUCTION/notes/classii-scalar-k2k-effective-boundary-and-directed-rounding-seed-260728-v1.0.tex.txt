@@ -1,0 +1,504 @@
+% =============================================================================
+% Title: Scalar k:2k effective boundary patches and directed-rounding seed
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed advance; Sector A remains open
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Izeroe}{\operatorname{i0e}}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-113 makes every analytic boundary patch in R-112 effective,
+proves a sharper global phase-minimum floor, and executes the first rigorous
+Arb certificate on a genuinely mixed three-parameter box.  It does not cover
+the remaining central compact set and therefore does not prove the mixed
+all-$q$ scalar theorem, $\mathrm{OVERLAP}_{\rm src}$, Nelson, or Sector A.}
+
+The historical R-085 formulas (4.10)--(4.11) and (6.5) are not reopened.
+R-088 removed the spurious outer $2^j$ weight, R-092/R-103 close the declared
+regular complete-packet and REG owners, and R-105 shows that visitwise Cartan
+and rational atoms do not descend under subdivision.  The live frontier is
+the R-112 stationary scalar $k{:}2k$ normalizer, followed---only if that
+normalizer closes---by the full A1 one-fresh-root owner cluster and a separate
+one-use source/sextic aggregation.
+
+This note advances that live scalar frontier in three ways.  First, it
+extracts explicit rational projective wedges, eight explicit origin cones,
+and explicit covariance-face widths.  Second, two exact completions improve
+the high-$q$ phase floor, including a uniform zero-amplitude theorem for
+$\tau\ge13$.  Third, outward-rounded Arb sums prove one strict mixed box by
+two independent radial partitions.  The unfilled central cover is recorded
+as open, not hidden behind the successful seed box.
+}}
+\end{center}
+
+Both executables exactly reconstruct every newly derived arithmetic constant
+assigned to their audit.  Analytic inequalities not reducible to finite
+arithmetic are proved in the text; in particular, the face analysis below
+extends the R-111 argument, while the executables check its four substitutions
+and branch translations.  The only decimal-like output is an Arb interval
+endpoint whose outward rounding is part of the proof.  Preliminary
+Gauss--Laguerre scans are not evidence and are not used below.
+
+\section{R-112 compact target}
+
+Retain the R-112 coordinates
+\[
+ c={v\over v+4w},\qquad s=1-c,\qquad
+ b={A^2\over v+4w},\qquad \tau=q(v+4w)^2,
+ \qquad x=b\tau.                                      \tag{1.1}
+\]
+For independent unit exponentials $T,U$, set
+\[
+ \rho={cT\over2},\qquad \sigma={sU\over8},           \tag{1.2}
+\]
+and
+\[
+ L=\rho+4\sigma-{1\over2},\quad
+ Q=\rho^2+10\rho\sigma+4\sigma^2-\rho-\sigma,
+ \quad B=6\rho\sqrt\sigma\cos\phi.                 \tag{1.3}
+\]
+The normalized packet and deterministic covariance square are
+\[
+ F=bL+\sqrt b\,B+Q,\qquad
+ K=b^2K_2+bK_1+K_0,                                   \tag{1.4}
+\]
+where
+\[
+ K_2={c^2+s^2\over2},                                  \tag{1.5}
+\]
+\[
+ K_1=c^3+{5\over2}c^2s+cs^2+{s^3\over4},             \tag{1.6}
+\]
+\[
+ K_0={5c^4\over4}+{c^3s\over4}+{25c^2s^2\over16}
+       +{cs^3\over4}+{5s^4\over64}.                  \tag{1.7}
+\]
+The exact reserve is
+\[
+ \Delta=K-2\Var(F)={c^4\over4}+{c^2s^2\over4}
+                     +{s^4\over64}\ge{1\over100}.   \tag{1.8}
+\]
+With
+\[
+ M(c,x,\tau)=\E\left[e^{-xL-\tau Q}
+ I_0\!\left(6\sqrt{x\tau}\,\rho\sqrt\sigma\right)\right],
+                                                               \tag{1.9}
+\]
+the target gap is
+\[
+ G(c,x,\tau)={x^2K_2+x\tau K_1+\tau^2K_0\over4}
+              -\log M(c,x,\tau).                     \tag{1.10}
+\]
+R-112 already proves the target outside
+\[
+ (2x+\tau)^2\le32x+20\tau,\qquad
+ 0\le c\le1,\quad0\le x\le8,\quad0\le\tau\le20,    \tag{1.11}
+\]
+and supplies $D_0\ge x^3/480$, $D_1\ge0$, and
+$D_2\ge x^2\Delta/4$ in the projective expansion.
+
+\section{Effective projective wedges}
+
+For $x>0$, put $\delta=\tau/x$ and $\varepsilon=\sqrt\delta$.  Under the leading
+$xL$ tilt, phase symmetry makes the logarithm even in $\varepsilon$.  For
+$Y=\sqrt U$ use the uniform bounds
+\[
+ |B|\le B_*={5\over12}TY,                              \tag{2.1}
+\]
+\[
+ |Q|\le Q_*={T^2\over4}+{5TY^2\over8}+{Y^4\over16}
+             +{T\over2}+{Y^2\over8}.                  \tag{2.2}
+\]
+Indeed
+\[
+ {4\over27}-c^2(1-c)={(3c-2)^2(3c+1)\over27},         \tag{2.3}
+\]
+and the slightly enlarged rational coefficient $5/12$ avoids any irrational
+moment oracle.
+
+For $q_*\ge2\varepsilon$ let $R_*=B_*+q_*Q_*$.  The R-112 floor and
+$b=\varepsilon^{-2}\ge10$ imply
+\[
+ e^{-x(L+\varepsilon B+\varepsilon^2Q)}\le e^{x/2}.   \tag{2.4}
+\]
+For $p_k=\lceil k/2\rceil$, differentiation and the exponential Bell
+polynomial give
+\[
+ |M^{(k)}(\varepsilon)|\le A_kx^{p_k},                 \tag{2.5}
+\]
+where
+\[
+ A_k=E_X\sum_{j=0}^{\lfloor k/2\rfloor}
+ {k!\over(k-2j)!j!}X^{k-j-p_k}
+ \overline\E\!\left[R_*^{\,k-2j}Q_*^j\right].        \tag{2.6}
+\]
+Here $x\le X$, $e^{x/2}\le E_X$, and the rational moment majorant is
+\[
+ \overline\E[T^aY^{2n}]=a!n!,                         \tag{2.7}
+\]
+\[
+ \overline\E[T^aY^{2n+1}]
+ =2a!{(2n+2)!\over4^{n+1}(n+1)!}.                     \tag{2.8}
+\]
+Equation (2.8) uses only $\sqrt\pi<2$.
+
+Jensen gives $M\ge1$.  Substitution of (2.5) into the exact sixth derivative
+of $\log M$ yields
+\[
+ |(\log M)^{(6)}(\varepsilon)|\le C_Xx^3.             \tag{2.9}
+\]
+The independently reconstructed rational constants are
+\[
+\begin{array}{c|c|c|c}
+X&E_X&q_*&C_X\\ \hline
+1&2&3/16&181292201822646474659735/273593677362757632\\
+2&3&1/8&267774784673603525005/79164837199872\\
+4&8&1/16&274770569726043833586365/1068725302198272\\
+8&55&3/256&5748965910841593523942194993404275/
+373546567492618420224
+\end{array}                                             \tag{2.10}
+\]
+They are respectively below
+\[
+ 700000,\quad3500000,\quad260000000,\quad16000000000000.
+                                                               \tag{2.11}
+\]
+Taylor's theorem and evenness now give
+\[
+ G=D_0+D_1\delta+D_2\delta^2+\mathcal R_3,\qquad
+ |\mathcal R_3|\le {C_X\over720}x^3\delta^3.          \tag{2.12}
+\]
+Exact integer comparisons with $D_0\ge x^3/480$ prove
+\[
+ \boxed{G\ge{x^3\over960}>0}                          \tag{2.13}
+\]
+on the four effective wedges
+\[
+\begin{array}{c|c}
+0<x\le1&\tau/x\le2^{-7}\\
+1<x\le2&\tau/x\le2^{-8}\\
+2<x\le4&\tau/x\le2^{-10}\\
+4<x\le8&\tau/x\le2^{-15}.
+\end{array}                                             \tag{2.14}
+\]
+
+\section{Effective origin and covariance faces}
+
+On $s=1-c$ one has
+\[
+ K_2\le{1\over2},\qquad K_1\le1,\qquad K_0\le{5\over4}.  \tag{3.1}
+\]
+Combining these with $\Delta\ge1/100$ in the R-112 Bernstein--MGF
+condition proves the following.  If $\tau>0$, $x/\tau\le R$, and
+\[
+ \tau\le\theta(R):={48\over25(8R+5)(2R^2+4R+5)},      \tag{3.2}
+\]
+then $G\ge0$.  The eight dyadic cone thresholds for $R=2^j$ are
+\[
+ {48\over3575},\ {16\over3675},\ {48\over49025},\
+ {16\over94875},\ {48\over1931825},\ {16\over4743675},
+                                                               \tag{3.3}
+\]
+\[
+ {48\over109255025},\qquad {16\over285418875}.        \tag{3.4}
+\]
+Together with the first wedge in (2.14), they cover the complete square
+\[
+ 0\le x,\tau\le\theta,\qquad
+ \theta={16\over285418875}.                            \tag{3.5}
+\]
+Here $\tau=0,x>0$ belongs to the projective edge, while $(x,\tau)=(0,0)$
+is the exact equality point.
+
+The exact R-111 face theorem can also be made quantitative.  At $c=0$ use
+\[
+ m_0(x,\tau)=
+ \begin{cases}
+ 5\tau^2/1792,&16x+5\tau\le16,\\
+ \tau/[3(\tau+64)],&16x+5\tau>16,
+ \end{cases}                                           \tag{3.6}
+\]
+and at $c=1$ use
+\[
+ m_1(x,\tau)=
+ \begin{cases}
+ 5\tau^2/112,&4x+5\tau\le4,\\
+ \tau/[3(\tau+16)],&4x+5\tau>4.
+ \end{cases}                                           \tag{3.7}
+\]
+Here is the additional reserve behind the large branches.  For $\tau>0$, in
+the universal one-frequency face put $h=\tau/16$, $\alpha=4x/\tau$ for $c=0$, and
+$h=\tau/4$, $\alpha=x/\tau$ for $c=1$.  With
+$\ell=1+2\alpha h$, $X\sim\operatorname{Exp}(\ell)$, and
+$W=(X-1)^2-1$,
+\[
+ \log\E_\ell e^{-hW}=h+\log\E_\ell e^{-h(X-1)^2}.
+\]
+On $A=\{X\le1/2\}$, $(X-1)^2\ge1/4$, and
+\[
+ \Pr_\ell(A)=1-e^{-\ell/2}\ge{\ell\over\ell+2}\ge{1\over3},
+ \qquad 1-e^{-h/4}\ge{h\over h+4}.
+\]
+Thus $\log\E_\ell e^{-hW}\le h-h/[3(h+4)]$.  Writing
+$d(y)=y^2/2-y+\log(1+y)\ge0$, the R-111 tilted identity gives, whenever
+$(4\alpha+5)h\ge1$,
+\[
+ G_{\rm face}\ge d(2\alpha h)+h((4\alpha+5)h-1)
+                    +{h\over3(h+4)}
+             \ge {h\over3(h+4)}.
+\]
+We used $1-e^{-y}\ge y/(1+y)$ and $\log(1-z)\le-z$.
+On $(4\alpha+5)h\le1$, the R-111 quadratic estimate instead leaves
+$5h^2/7$.  Equality is assigned to this small branch in (3.6)--(3.7),
+although the large estimate is also valid there.  These two universal margins
+give exactly the four displayed substitutions.
+
+For the interior derivative, $I_1(z)\le zI_0(z)/2$ coefficientwise and the
+R-112 phase floor give
+\[
+ |\partial_cG|\le\Lambda(x,\tau),                      \tag{3.8}
+\]
+\[
+ \Lambda=60000\left(x+{5\tau\over2}+{9x\tau\over16}\right)
+ +{x^2\over4}+{x\tau\over4}+{19\tau^2\over16}.       \tag{3.9}
+\]
+Therefore, whenever $\Lambda>0$,
+\[
+ c\le{m_0\over2\Lambda}\ \Longrightarrow\ G\ge{m_0\over2},
+ \qquad
+ 1-c\le{m_1\over2\Lambda}\ \Longrightarrow\ G\ge{m_1\over2}.
+                                                               \tag{3.10}
+\]
+After removing (2.14), (3.2), and (3.10), every unresolved point lies in
+\[
+ \boxed{
+ \kappa\le c\le1-\kappa,\quad0\le x\le8,\quad
+ \theta\le\tau\le20,\quad(2x+\tau)^2\le32x+20\tau,}
+                                                               \tag{3.11}
+\]
+where
+\[
+ \kappa={1\over100552401097327200}.                    \tag{3.12}
+\]
+This very conservative width separates the residual problem from both
+covariance faces and from $\tau=0$, and leaves a rational compact set.
+It does not remove the zero-amplitude boundary: the segment $x=0$,
+$\theta\le\tau<13$ remains unresolved.  At radial cutoff $80$, the uniform
+tail is below
+\[
+ 120000(2/5)^{80}<2\times10^{-27}.                     \tag{3.13}
+\]
+
+\section{Sharper phase-minimum floors}
+
+Minimize the phase by taking $B=-6\rho\sqrt\sigma$.  Two independent exact
+completions are
+\[
+\begin{aligned}
+F_-={}&(\rho+2\sigma)^2-\left(1+{b\over2}\right)
+ (\rho+2\sigma)+(5b+1)\sigma\\
+&+6\rho\left(\sqrt\sigma-{\sqrt b\over2}\right)^2-{b\over2},
+\end{aligned}                                           \tag{4.1}
+\]
+and
+\[
+\begin{aligned}
+F_-={}&\rho^2+(b/10-1)\rho+4\sigma^2+(4b-1)\sigma\\
+&+10\rho\left(\sqrt\sigma-{3\sqrt b\over10}\right)^2-{b\over2}.
+\end{aligned}                                           \tag{4.2}
+\]
+Consequently
+\[
+ F\ge-B_6(b),\qquad
+ B_6(b)={1\over4}+{3b\over4}+{b^2\over16},            \tag{4.3}
+\]
+and
+\[
+ F\ge-B_{10}(b),\quad
+ B_{10}(b)={b\over2}+{(1-b/10)_+^2\over4}
+                         +{(1-4b)_+^2\over16}.         \tag{4.4}
+\]
+Thus, with $B_{\rm new}=\min(B_6,B_{10})$, the scalar target holds whenever
+\[
+ \tau\ge{4B_{\rm new}(b)\over b^2K_2+bK_1+K_0}.       \tag{4.5}
+\]
+At $b=0$, $Q\ge-1/4$ is sharp.  Moreover
+\[
+ K_0(c)={153c^4-156c^3+82c^2-4c+5\over64}\ge{1\over13}.
+                                                               \tag{4.6}
+\]
+The exact Sturm check uses
+\[
+ 1989c^4-2028c^3+1066c^2-52c+1,                       \tag{4.7}
+\]
+which has no real roots and is positive at zero.  Therefore the entire
+zero-amplitude covariance simplex is proved for
+\[
+ \boxed{b=0,\qquad\tau\ge13.}                          \tag{4.8}
+\]
+
+\section{First directed-rounding mixed box}
+
+Let
+\[
+ \mathcal R={x^2K_2+x\tau K_1+\tau^2K_0\over4},\qquad
+ z=6\sqrt{x\tau}\rho\sqrt\sigma.                    \tag{5.1}
+\]
+The exact sum-of-squares coordinate
+\[
+\begin{aligned}
+D={}&\tau(\rho-1/2)^2+4\tau(\sigma-1/8)^2+4x\sigma\\
+&+\rho\{(\sqrt x-3\sqrt{\tau\sigma})^2+\tau\sigma\}
+ -{x\over2}-{5\tau\over16}
+\end{aligned}                                           \tag{5.2}
+\]
+satisfies $D=xL+\tau Q-z$.  With
+$\Izeroe(z)=e^{-z}I_0(z)$,
+\[
+ e^{-\mathcal R}M
+ =\int_0^\infty\!\int_0^\infty
+ e^{-T-U-D-\mathcal R}\Izeroe(z)\,dT\,dU.             \tag{5.3}
+\]
+Since $\Izeroe$ decreases on $[0,\infty)$, a parameter box $P$ and radial
+rectangle $C$ have the rigorous upper contribution
+\[
+ |C|\exp\!\left(\sup_{P\times C}[-T-U-D-\mathcal R]\right)
+ \Izeroe\!\left(\inf_{P\times C}z\right).             \tag{5.4}
+\]
+Every operation in (5.4) is an Arb ball operation with outward rounding.
+In particular, every square-root range is the Arb union of its two outward-
+rounded endpoint balls; both executables test a width-$2^{-200}$ interval and
+an interval starting at zero.  The floating heap key changes only the order
+of valid dyadic subdivisions.
+
+The primary partition uses $20000$ cells and proves the complete box
+\[
+ (c,x,\tau)\in[49/100,51/100]
+ \times[99/100,101/100]^2.                              \tag{5.5}
+\]
+Its normalized total upper endpoint is
+\[
+ 0.9668493729327744570528721595375646806384<1.          \tag{5.6}
+\]
+The independent implementation uses a different initial partition,
+refinement priority, and $30000$ cells.  It obtains
+\[
+ 0.9760013963281331486747252354472230248658<1.          \tag{5.7}
+\]
+Both enclose the radius-$50$ exterior analytically and verify that the whole
+parameter box lies strictly inside (1.11).  Thus (5.5) is the first certified
+genuinely mixed strict-core box.  It is a seed for a global cover, not that
+cover itself.
+
+\section{Failed contraction and remaining theorem}
+
+The exact cross contraction
+\[
+ e^{-x\rho-10\tau\rho\sigma}I_0(6\sqrt{x\tau}\rho\sqrt\sigma)
+ \le e^{-\tau\rho\sigma}                               \tag{6.1}
+\]
+follows from $I_0(z)\le e^z$ and $2\sqrt{ab}\le a+b$.
+It reduces the Bessel integral to a positive quadratic radial integral and
+then to one stable $\operatorname{erfcx}$ integral.  However, the contracted
+surrogate has
+\[
+ \E\widetilde F_b=-{c(8b+9s)\over16}<0                \tag{6.2}
+\]
+in the mixed interior.  Its normalized log-Laplace transform therefore has
+an artificial positive $O(\tau)$ origin debt, whereas the target begins at
+$O(\tau^2)$.  A proof that globally replaces the original Bessel factor by
+this contracted surrogate cannot close the origin without an additional
+mean-debt cancellation.  The failure is registered as
+\[
+ \texttt{NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT}.
+                                                               \tag{6.3}
+\]
+It is not a target counterexample.
+
+The remaining scalar decision problem is a fail-closed directed-rounding
+branch-and-bound on (3.11) after subtracting the certified box (5.5) and the
+analytic high-$q$ region (4.5).  A proof requires a finite accepted cover;
+any unresolved or nonpositive box must be retained rather than inferred
+positive.  Even a successful scalar closure would not identify the full A1
+one-fresh-root owner cluster or prove the separate source/sextic one-use
+ledger.  R-103 REG and R-087 fixed-cutoff CORE retain their accepted scopes.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} A positive numerical sample was promoted to a
+theorem.  \textbf{Verdict: DISMISSED.}  Equations (5.3)--(5.4) are upper
+Riemann sums evaluated by directed-rounding Arb balls; both programs assert
+an upper endpoint strictly below one.  Ordinary quadrature scans are absent
+from the evidence contract.
+
+\item \textbf{Objection:} The successful box proves the entire mixed scalar
+normalizer.  \textbf{Verdict: UPHELD AS A FORBIDDEN READING.}  Only (5.5) is
+certified.  The manifest, status card, footer, and integrated verifier all
+require the global compact-cover flag to remain false.
+
+\item \textbf{Objection:} The projective Taylor remainder silently assumes
+irrational half-moments or a sign for every coefficient.
+\textbf{Verdict: DISMISSED.}  Odd half-moments are enlarged using
+$\sqrt\pi<2$, the sixth logarithmic derivative is bounded by a rational Bell
+table, and only the already proved $D_0,D_1,D_2$ signs are used.  R-112's
+negative $D_3$ fixture remains valid.
+
+\item \textbf{Objection:} The face widths vanish at the equality origin, so
+the stated central set is not compact.  \textbf{Verdict: DISMISSED.}  The
+eight origin cones and effective projective wedge first impose
+$\tau\ge\theta>0$ on every unresolved point; only then is the explicit
+$c$-width floor $\kappa>0$ taken.
+
+\item \textbf{Objection:} The sharper floor closes Sector A.
+\textbf{Verdict: UPHELD AS A FORBIDDEN READING.}  It closes only the
+explicit scalar high-$q$ subregion.  Full A1 embedding, one-use aggregation,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, the interacting measure, and
+Sector A remain open.
+
+\item \textbf{Objection:} The old R-085 Cartan and rational atoms are now
+proved by the scalar calculation.  \textbf{Verdict: UPHELD AS A FORBIDDEN
+READING.}  Those historical weighted/labelled-owner atoms are non-load-bearing
+or representation dependent under R-088/R-105.  This result neither proves
+nor needs their literal historical forms.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SCALAR-K2K-EFFECTIVE-BOUNDARY-
+           DIRECTED-ROUNDING-SEED
+Precise statement: R-113 makes the R-112 projective, origin, and
+  covariance-face patches explicit; proves sharper phase floors including
+  b=0, tau>=13; and certifies one strict mixed Arb box.  The global mixed
+  compact cover remains open.
+Scope: Stationary scalar k:2k model only; finite compact reduction and one
+  certified mixed box, not a global mixed all-q theorem or full A1 embedding.
+Dependencies: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION;
+  R-103; R-105; R-111; R-112.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command:
+  E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_scalar_k2k_effective_boundary_interval_seed_verify.py
+Expected output: Integrated R-113 PASS; primary 75/75 and independent 64/64;
+  both Arb normalized upper endpoints are below one; global-cover flag false.
+Falsification gate: Any failed exact identity, rational threshold, Sturm
+  check, Arb upper endpoint, source/PDF hash, or a claim that the remaining
+  central cover is complete.
+Tier before / after: T4 / T4.
+No-overclaim statement: No mixed all-q scalar theorem, full A1 owner cluster,
+  one-use source/sextic aggregation, OVERLAP_src, Nelson bound, removal limit,
+  interacting measure, Sector-A closure, or higher tier is established.
+Next required action: Run a fail-closed directed-rounding branch-and-bound
+  on the residual set (3.11), accepting scalar closure only after a finite
+  certified cover; then attempt owner-preserving full-A1 embedding and the
+  separate one-use aggregation.
+\end{verbatim}
