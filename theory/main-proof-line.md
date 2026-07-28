@@ -106,6 +106,20 @@ output-frequency square is a legal prioritized coordinate, not yet a bound and
 not claimed unique; the equivalent direct complete source-action route remains
 live. Uniform `OVERLAP_src`, Nelson, removals, the interacting measure, and
 Sector A remain open.
+R-107 closes the multi-row coherent-output likelihood only for jointly frozen
+maps and closes the whole-output determinant for one fresh root with a past-
+measurable map and mixed baseline. Rowwise predictability does not license one
+global frozen backward resolvent: an exact bounded two-root fixture has mass
+`1.070433115292664...>1`, and a smooth `tanh` companion has a strict defect.
+R-107 also proves positive output trace allocation and the exact complete
+predictable-baseline source-action normal form. Exact fixtures retire output
+singletons, independent row normalizers, termwise adapted second-jet bounds,
+and a pure carrier-KL diagonal bridge. The live theorem is a subdivision-
+invariant same-root adapted contraction-closed cluster or equivalent matrix-
+Carleson lower bound retaining heat, trace, mixed baseline, future feedback,
+rational recovery, the complete R-063 forest, and one terminal root sextic.
+Uniform `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
+remain open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

@@ -847,6 +847,39 @@ the following structural results and proof-architecture boundaries hold.
     failures, successor, and R-105 v1.1 correction audit; in particular,
     `EXP-000274` records the coherent-output candidate coordinate. `OVERLAP_src`, Nelson,
     removals, a measure, and Sector A remain open; tier stays T4.
+50. `A13-CLASSII-COHERENT-OUTPUT-CLUSTER-PREDICTABLE-BASELINE-BOUNDARY` is
+    R-107. The endpoint likelihood tilt has exact forward/reverse
+    entropy-production integrals and a root-martingale variance decomposition,
+    but these identities return the same unknown free-energy difference.
+    Jointly frozen coherent-output Gaussian rows have an exact
+    backward-resolvent density martingale. Separately, one fresh root with a
+    past-measurable output map has the whole-output `det2` formula retaining
+    the mixed baseline and all cross-output covariance blocks; each legal
+    conditional entropy inequality is saturable. Rowwise predictability does
+    not license the global frozen determinant: a bounded two-root row has
+    exact candidate mass `1.070433115292664...>1`, and a smooth `tanh`
+    companion has a strict small-amplitude defect. The heat-lifted trace has a
+    positive output allocation, yet the exact current `J=X dX` for one
+    Gaussian Fourier pair has expected singleton packets
+    `-sigma^4/4,+sigma^4/8,+sigma^4/8`. Thus the smallest legal output atom is
+    closed under shared-root covariance and Wick contractions, potentially
+    the entire root. Independently normalized output rows lose determinant
+    slack linear in repeated rank-one multiplicity, so sequential Schur is
+    mandatory. The equivalent direct action is exactly the complete
+    predictable-baseline sum plus one terminal `3/20` sextic and one `9/20`
+    source-energy payment; predictable deterministic covariance mass is
+    subdivision invariant. An adapted sine fixture retires termwise absolute
+    second-jet/forest estimates, and carrier information
+    `-(d/2)log t` retires a pure KL diagonal bridge. The exact convexified
+    Gaussian-divergence identity is retained, but its naive inward-flow route
+    is parked with an unfavorable remainder sign. `EXP-000276--EXP-000284`
+    preserve all successes, failures, the adaptive-row correction, and the
+    inconclusive flow route. The
+    remaining theorem is one subdivision-invariant adapted complete
+    contraction-closed cluster, or equivalent complete predictable-baseline
+    matrix-Carleson, bound with all owners retained once. `OVERLAP_src`,
+    Nelson, removals, an interacting measure, and Sector A remain open; tier
+    stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -903,6 +936,7 @@ is a scoped T4 subproof and does not promote A13.
 | Fixed-chart progressive owner assembly | Zero endpoint-owner defect on each temporally faithful fixed chart, recombined-total invariance under representation-preserving subdivision, exact nonnegative Douglas cost slack, and anticipative-heat no-general-extension boundary | T4 analytic/exact/executed algebraic identity; fixed-chart assembly closed, while uniform `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Cartan/rational subdivision and static-source boundary | Common-root complete-heat endpoint quotient, exact rational labelled-owner sign flip with invariant complete endpoint, generic A9 and critical-Young no-gos, one-pair predictable-source determinant bound, and cross-mode factorization obstruction | T4 analytic/exact/executed advance and method boundary; exact source-action/relative-bracket theorem, Nelson, removals, measure construction, and Sector A remain open |
 | Gibbs endpoint likelihood / production input-merge boundary | Exact endpoint likelihood, dual KL and thermodynamic identities; pointwise likelihood no-go; exact radial Fierz coefficient; unbounded 1:2 raw input merge and leafwise sextic boundary; coherent output-frequency candidate coordinate | T4 analytic/exact/executed boundary; root-local coherent-output/source-action estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Coherent output cluster / predictable-baseline boundary | Exact likelihood-tilt entropy production, jointly frozen backward-resolvent martingale, one-fresh-root past-measurable whole-output determinant, rowwise-predictable global-normalizer no-go, output trace allocation and singleton-output no-go, sequential determinant boundary, direct predictable-baseline action, covariance-mass invariance, adapted second-jet and carrier-KL no-gos, and parked convexified-divergence route | T4 analytic/exact/executed boundary; adapted complete-cluster/matrix-Carleson estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1198,24 +1232,36 @@ Current subordinate order:
     R-063 forest, and the sextic once at the root. The live A9 route is
     Gibbs-specific/time-integrated and root-local; the equivalent live source
     route is the direct complete signed cross-mode/forest packet. R-106 proves
-    neither bound and does not assert uniqueness.
+    neither bound and does not assert uniqueness. R-107 closes the complete
+    Gaussian likelihood only for jointly frozen multi-row maps and closes the
+    whole-output determinant for one fresh root with a past-measurable map.
+    Rowwise predictability does not license the global frozen determinant.
+    Output singletons, independent row normalizers, termwise adapted second
+    jets, and a pure carrier-KL bridge are retired. The direct action is now
+    the exact complete predictable-baseline sum plus one terminal sextic and
+    one source payment. The remaining theorem is the subdivision-invariant
+    adapted contraction-closed cluster or matrix-Carleson lower bound.
 
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `46/46`;
-- standard-library exact independent `59/59`;
-- manifest-pinned integrated `337/337` and aggregate `442/442` PASS;
-- exact endpoint likelihood, dual KL and thermodynamic-integration identities,
-  pointwise likelihood boundary, exact production radial coefficient, `1:2`
-  raw merge and leafwise sextic no-gos, coherent output-frequency candidate,
-  and the immutable R-105 v1.1 correction audit,
-  predecessor/source/PDF/surface contracts, and T4 firewalls;
+- primary `80/80`;
+- standard-library independent `139/139`;
+- manifest-pinned integrated `239/239` and aggregate `458/458` PASS;
+- exact entropy-production and root-martingale identities, jointly frozen
+  backward-resolvent likelihood, one-fresh-root predictable whole-output
+  determinant, positive trace allocation, adaptive multi-row normalization
+  boundary, contraction-connected cluster and sequential/global determinant
+  boundary, complete predictable-baseline action normal form, deterministic
+  covariance-mass identity, scoped method no-gos, PDF/surface contracts, and
+  T4 firewalls;
+- explicit preservation of the open adapted same-root complete-cluster,
+  `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1225,23 +1271,24 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_gibbs_endpoint_production_merge_boundary_manifest.json`
-- `notes/classii-gibbs-endpoint-production-merge-boundary-260728-v1.0.tex.txt`
-- `notes/classii-gibbs-endpoint-production-merge-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary.py`
-- `../../codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_independent.py`
-- `../../codes/foundations/a13_classii_gibbs_endpoint_production_merge_boundary_verify.py`
-- `runs/2026-07-28-primary-gibbs-endpoint-production-merge-boundary/result.json`
-- `runs/2026-07-28-independent-gibbs-endpoint-production-merge-boundary/result.json`
-- `runs/2026-07-28-integrated-gibbs-endpoint-production-merge-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-106`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-total-a9-time-integration-identity`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-pointwise-endpoint-likelihood-coercivity`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-production-input-mode-merge-tensorization`
-- `../../negative-results/registry.md#audit-2026-07-28-a13-r105-sextic-coefficient-cutoff-notation`
-- `../../explorations/log.jsonl` (`EXP-000270`--`EXP-000275`)
-- R-105 v1.1 correction package and immutable correction runs pinned by the
-  R-105 and R-106 manifests.
+- `classii_coherent_output_cluster_predictable_baseline_boundary_manifest.json`
+- `notes/classii-coherent-output-cluster-predictable-baseline-boundary-260728-v1.0.tex.txt`
+- `notes/classii-coherent-output-cluster-predictable-baseline-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary.py`
+- `../../codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_independent.py`
+- `../../codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_verify.py`
+- `runs/2026-07-28-primary-coherent-output-cluster-predictable-baseline-boundary/result.json`
+- `runs/2026-07-28-independent-coherent-output-cluster-predictable-baseline-boundary/result.json`
+- `runs/2026-07-28-integrated-coherent-output-cluster-predictable-baseline-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-107`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-predictable-multirow-backward-resolvent`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-single-output-frequency-packet`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-independent-output-determinant-normalization`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-adapted-second-jet-termseparation`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-pure-carrier-kl-diagonal-bridge`
+- `../../explorations/log.jsonl` (`EXP-000276`--`EXP-000284`)
+- R-106 and the R-105 v1.1 correction package remain pinned by the R-107
+  authority chain.
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -1790,6 +1837,33 @@ manifest, and 2026-07-22 v1.1 runs are the joint-source authority.
     the packet after heat, covariance trace, mixed baseline, R-063 forest, and
     one root sextic are restored. `OVERLAP_src`, Nelson, and Sector A remain
     open.
+85. **DISMISSED: the frozen whole-output determinant already closes the true
+    production coefficient.** R-107's global martingale requires every row to
+    be jointly frozen before all roots are integrated; the predictable theorem
+    covers only one genuinely fresh root with a past-measurable map and
+    baseline. Rowwise predictability fails by an exact bounded two-root
+    normalization defect. The actual same-root coefficient leaves the exact
+    residual `Re<b+Axi,R>+||R||^2/2-delta_tau/2`, including the complete R-063
+    forest and future feedback.
+86. **DISMISSED: positive output trace allocation makes singleton output
+    packets positive.** The exact one-pair fixture has a negative zero-output
+    packet compensated only by the two side outputs. A legal signed atom must
+    be contraction closed.
+87. **DISMISSED: independent output normalizers are merely conservative.**
+    Their determinant slack grows linearly under repeated rank-one rows and
+    cannot be discarded at the summability scale. Sequential Schur is the
+    exact replacement.
+88. **DISMISSED: termwise derivative-square estimates can pay the adapted
+    forest.** Bounded adapted sine shifts have two separated second-jet
+    companions of order `+/-M^2`; only their complete signed sum cancels.
+89. **DISMISSED: pure carrier entropy reaches the same-root diagonal.** Its
+    exact cost `-(d/2)log t` diverges as `t` tends to zero and is non-summable
+    across growing root dimension.
+90. **UPHELD AGAINST R-107 CLOSURE: the convexified Gaussian-divergence
+    identity gives a monotone transport estimate.** The identity is exact,
+    but the audited inward linear flow has a positive remainder of the wrong
+    discard sign. A production-specific domination is unproved, so the route
+    is parked rather than promoted.
 
 ## Falsifier
 
@@ -2151,6 +2225,27 @@ root-local Gibbs/coherent-output lower bound, exclusion of the direct complete
 source-action route, `OVERLAP_src`, Nelson, removals, a measure, Sector-A
 closure, or a higher tier.
 
+The R-107 continuation is additionally falsified by failure of either
+entropy-production weight or root-martingale variance decomposition; the
+jointly frozen backward-resolvent density martingale, normalized likelihood,
+conditional Gaussian integration, or saturable entropy orientation; the
+one-fresh-root whole-output `det2` formula, mixed-baseline resolvent term, or
+Hilbert--Schmidt bound; either exact bounded predictable-row normalization
+defect, its error-function value, or the smooth monotone-covariance companion;
+the exact heat/output trace allocation, one-pair current coefficients, three
+trace allocations, singleton packet signs, cluster cancellation, or cluster
+infimum; either sequential Schur order, combined determinant, positive or
+linear repeated-row normalizer slack; the complete predictable-baseline
+source-action normal form, one terminal sextic, covariance-mass or
+subdivision identity, or same-root random-heat guard; any adapted sine
+second-jet or carrier-information formula; the convexified Gaussian-divergence
+or linear inward-flow identity; any R-107 authority, source, note, PDF,
+manifest, negative authority, exploration, assertion count, or public-surface
+pin including `EXP-000276--EXP-000284`; or any promotion to a global
+rowwise-predictable frozen martingale, a proved adapted complete-cluster/
+matrix-Carleson bound, `OVERLAP_src`, Nelson, removals, an interacting measure,
+Sector-A closure, or a higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2484,6 +2579,18 @@ identified candidate coordinate, not a proved or unique closure route. R-106
 does not prove a root-local Gibbs or direct source-action estimate,
 `OVERLAP_src`, Nelson, cutoff/floor removal, a measure theorem, Sector-A
 closure, or T5--T7. Tier stays T4.
+
+R-107 proves exact finite-cutoff likelihood-tilt entropy production, the
+jointly frozen multi-row Gaussian likelihood, the one-fresh-root
+past-measurable whole-output determinant, coherent trace allocation, a
+contraction-connected output-cluster boundary, sequential determinant
+necessity, the complete predictable-baseline action and covariance-mass
+identities, and scoped second-jet/carrier/divergence route verdicts. Rowwise
+predictability does not license the global frozen likelihood, and neither
+positive Gaussian branch controls the true same-root state-dependent
+coefficient. It proves no adapted complete-cluster or matrix-Carleson
+estimate, `OVERLAP_src`, Nelson, cutoff/floor removal, interacting measure,
+Sector-A closure, or T5--T7 promotion. Tier stays T4.
 
 ## History
 
@@ -3073,3 +3180,24 @@ closure, or T5--T7. Tier stays T4.
   form, zero-overfull, extraction, and all-page Poppler QA. `OVERLAP_src`,
   Nelson, removals, measure construction, and Sector A remain open; tier stays
   T4.
+- 2026-07-28: Registered R-107. Exact endpoint entropy production and the
+  jointly frozen backward-resolvent martingale plus the one-fresh-root
+  past-measurable whole-output determinant close their respective Gaussian
+  branches, while saturation isolates the same-root state-dependent defect.
+  Final adversarial review found and repaired an overextension: a bounded
+  rowwise-predictable future map has exact global normalization mass
+  `1.070433115292664...>1`, with a smooth `tanh` companion, so one global
+  frozen determinant is illegal for general progressive rows. An exact
+  one-pair fixture proves that output singletons are illegal;
+  a contraction-connected cluster and sequential/global determinant are
+  required. The direct action reduces to the complete predictable-baseline
+  sum with one terminal sextic, and covariance mass is subdivision invariant.
+  Exact adapted-sine and carrier-information fixtures retire termwise forest
+  separation and a pure KL diagonal bridge; the convexified-divergence route
+  is parked. `EXP-000276--EXP-000284` preserve all decisions and the
+  adversarial correction. Primary `80/80`, standard-library independent
+  `139/139`, integrated `239/239`, and aggregate `458/458` checks are
+  manifest-pinned. The corrected PDF passes
+  form, zero-overfull, extraction, and all-page Poppler visual QA. The adapted
+  complete-cluster/matrix-Carleson estimate, `OVERLAP_src`, Nelson, removals,
+  interacting measure, and Sector A remain open; tier stays T4.

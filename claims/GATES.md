@@ -1368,6 +1368,19 @@ authority bounds that packet or makes it unique. The equivalent direct
 complete source-action route remains live, and uniform `OVERLAP_src` remains
 the unresolved gate.
 
+R-107 closes the R-082 Gaussian coordinate only in two precise regimes: the
+multi-row backward-resolvent likelihood requires jointly frozen output maps,
+and the whole-output `det2` formula permits one fresh root with a past-
+measurable map and mixed baseline. Rowwise predictability does not license one
+global frozen determinant; a bounded two-root row has exact mass
+`1.070433115292664...>1`, with a smooth `tanh` companion. Output singletons,
+independent row normalizers, termwise adapted second jets, and a pure carrier-
+KL bridge are retired. The direct action is exactly the complete predictable-
+baseline sum plus one terminal sextic and one source-energy payment. Thus the
+unresolved gate is the same-root adapted contraction-closed cluster or
+equivalent matrix-Carleson lower bound, namely the remaining
+`OVERLAP_src`/Nelson inequality.
+
 ### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
 
 **Statement:** Uniformly in the terminal cutoff, prove a production-weighted
@@ -1406,10 +1419,11 @@ controls. A stronger direct packetwise all-control or all-tilted-law theorem
 is admissible but is not required for the Nelson application.
 
 **Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; R-104 FIXED-CHART ASSEMBLY,
-R-105 COMMON-ROOT REPRESENTATION AUDIT, AND R-106 GIBBS-ENDPOINT/PRODUCTION-
-MERGE BOUNDARY COMPLETE; UNIFORM `OVERLAP_src`/NELSON INEQUALITY OPEN
-(reviewed 2026-07-28 after R-106). The gate was exposed by R-080 and sharpened
-by R-081--R-106
+R-105 COMMON-ROOT REPRESENTATION AUDIT, R-106 GIBBS-ENDPOINT/PRODUCTION-MERGE
+BOUNDARY, AND R-107 JOINTLY-FROZEN/ONE-STEP COHERENT-OUTPUT BOUNDARY COMPLETE;
+ADAPTED SAME-ROOT COMPLETE-CLUSTER/`OVERLAP_src`/NELSON INEQUALITY OPEN
+(reviewed 2026-07-28 after R-107). The gate was exposed by R-080 and sharpened
+by R-081--R-107
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1475,6 +1489,17 @@ square with heat, covariance trace, mixed baseline, R-063 forest, and one
 parent/root sextic kept together. That packet has no proved root-local lower
 bound, is not asserted unique, and the direct complete source-action route
 remains equally admissible.
+
+R-107 closes the multi-row likelihood only for jointly frozen output maps and
+closes the determinant for one fresh root with a past-measurable map. Rowwise
+predictability does not license a global frozen backward resolvent: its exact
+bounded counterfixture and smooth companion have positive normalization
+defects. Positive output trace allocation, contraction-connected clusters,
+one sequential/global determinant, and the exact direct predictable-baseline
+action are now the legal coordinates. The adapted second-jet and pure carrier-
+information shortcuts are retired, while the convexified-divergence flow
+route is parked rather than closed. The complete same-root cluster residual
+and uniform `OVERLAP_src`/Nelson bound remain open.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

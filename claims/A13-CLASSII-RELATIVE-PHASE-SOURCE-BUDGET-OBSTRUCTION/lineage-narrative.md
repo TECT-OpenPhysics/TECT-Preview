@@ -646,6 +646,24 @@ endpoint theorem.
     reissued v1.1 with `u_6=3L^3/64` and physical radius `N`; its ratio and
     verdicts are unchanged. Sector A remains open at T4.
 
+48. **Frozen coherent-output closure and adaptive complete-cluster
+    boundary.** R-107,
+    `A13-CLASSII-COHERENT-OUTPUT-CLUSTER-PREDICTABLE-BASELINE-BOUNDARY`,
+    proves the endpoint entropy-production identities and closes the multi-row
+    backward-resolvent likelihood only for jointly frozen output maps. The
+    whole-output `det2` formula remains exact for one fresh root with a past-
+    measurable map and mixed baseline. Rowwise predictability does not license
+    one global frozen determinant: an exact bounded two-root fixture has mass
+    `1.070433115292664...>1`, and a smooth `tanh` companion has a strict
+    small-amplitude defect. A one-pair current proves that output singletons
+    are illegal; the legal atom is contraction connected and uses one
+    sequential/global determinant. The direct action reduces exactly to the
+    complete predictable-baseline sum, one terminal sextic, and one source-
+    energy payment. Termwise adapted second jets and a pure carrier-KL bridge
+    are retired. The same-root adapted complete-cluster/matrix-Carleson bound,
+    `OVERLAP_src`, Nelson, removals, interacting-measure construction, and
+    Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

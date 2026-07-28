@@ -8,8 +8,8 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-106 proves the exact Gibbs endpoint-likelihood, KL, thermodynamic-integration, and production radial merge identities. Do not retry total time integration as a standalone estimate, pointwise endpoint-likelihood coercivity, bounded raw input-mode leaf tensorization, or its leafwise sextic repair. Prove one summable root-local complete coherent output-frequency signed estimate with heat, covariance trace, mixed baseline, the R-063 forest, and one parent/root sextic retained. The equivalent direct complete source-action route remains live; OVERLAP_src, Nelson, removals, the interacting measure, and Sector A remain open.
-  - _updated 2026-07-27_
+  - R-107 closes the jointly frozen multi-row coherent-output likelihood and the one-fresh-root past-measurable whole-output determinant. Rowwise predictability does not license one global frozen backward resolvent: an exact bounded two-root fixture has normalization mass 1.070433115292664...>1, with a smooth tanh companion. R-107 also proves exact output trace allocation and the direct predictable-baseline source-action normal form, and retires singleton output packets, independent row determinants, termwise adapted second-jet estimates, and a pure carrier-KL diagonal bridge. Prove a subdivision-invariant same-root adapted complete contraction-closed cluster or matrix-Carleson lower bound after all visits and inputs are combined, retaining heat, trace, mixed baseline, future feedback, rational recovery, the complete R-063 forest, and exactly one terminal root sextic. OVERLAP_src, Nelson, removals, the interacting measure, and Sector A remain open.
+  - _updated 2026-07-28_
 
 ## Next up
 

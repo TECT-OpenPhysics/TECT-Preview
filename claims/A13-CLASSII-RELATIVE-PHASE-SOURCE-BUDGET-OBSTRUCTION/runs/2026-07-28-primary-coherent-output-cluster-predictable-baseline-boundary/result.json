@@ -1,0 +1,727 @@
+{
+  "assertion_names": [
+    "q times source budget",
+    "q times sextic budget",
+    "normalized scalar likelihood",
+    "tilt variance formula",
+    "forward entropy production",
+    "reverse entropy production",
+    "forward entropy positive",
+    "reverse entropy positive",
+    "forward derivative weight",
+    "reverse derivative weight",
+    "scalar total determinant",
+    "scalar tail determinant",
+    "M0 equals one",
+    "MJ equals endpoint likelihood",
+    "M1 quadratic coefficient",
+    "fresh second root Gaussian integral",
+    "conditional M2 equals M1",
+    "mean M1 equals one",
+    "adaptive inner precision",
+    "adaptive outer precision",
+    "adaptive combined mass exact",
+    "adaptive erf arguments ordered",
+    "adaptive row normalization defect positive",
+    "adaptive defect numerical bracket",
+    "fixed zero-row normalization guard",
+    "fixed one-row normalization guard",
+    "likelihood centered form",
+    "determinant debt positive",
+    "whole-output det2 identity",
+    "baseline resolvent term nonpositive",
+    "whole-output Hilbert-Schmidt bound",
+    "scalar determinant remainder starts zero",
+    "scalar determinant remainder derivative nonpositive",
+    "first row determinant",
+    "second row determinant",
+    "combined determinant",
+    "order 1 then 2 ratio",
+    "order 2 then 1 ratio",
+    "sequential products invariant",
+    "independent normalizer slack positive",
+    "slack exact ratio",
+    "four-row slack positive",
+    "four-row slack exact ratio",
+    "repeated-row slack grows linearly",
+    "zero output current vanishes",
+    "positive output current",
+    "negative output current",
+    "zero output trace allocation",
+    "positive output trace allocation",
+    "negative output trace allocation",
+    "second radial moment",
+    "fourth radial moment",
+    "zero output packet negative",
+    "positive output packet positive",
+    "negative output packet positive",
+    "cluster expectation cancels",
+    "cluster packet minimum",
+    "centered base action normal form",
+    "single terminal sextic owner",
+    "source payment owner",
+    "predictable covariance mass",
+    "Pythagorean subdivision covariance",
+    "Pythagorean subdivision mass",
+    "same-root random heat guard",
+    "signed derivative companions",
+    "Hermite second-jet pairing",
+    "bounded source cost limit",
+    "positive companion quadratic growth",
+    "negative companion quadratic growth",
+    "complete companion cancellation",
+    "conditional KL decomposition",
+    "bridge vanishes at independent endpoint",
+    "one-dimensional quarter bridge",
+    "six-dimensional ninth bridge",
+    "dyadic root dimension sum",
+    "carrier bridge diverges at diagonal",
+    "convexified Gaussian divergence identity",
+    "degree-six Euler identity",
+    "inward linear-flow remainder positive",
+    "linear-flow change of variables"
+  ],
+  "assertions": [
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "budget",
+      "name": "q times source budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/6",
+      "expected": "1/6",
+      "group": "budget",
+      "name": "q times sextic budget",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "entropy",
+      "name": "normalized scalar likelihood",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/(2*s + 3)**2",
+      "expected": "2/(9*(2*s/3 + 1)**2)",
+      "group": "entropy",
+      "name": "tilt variance formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/5 + log(sqrt(15)/3)",
+      "expected": "-1/5 + log(5/3)/2",
+      "group": "entropy",
+      "name": "forward entropy production",
+      "status": "PASS"
+    },
+    {
+      "actual": "log(sqrt(15)/5) + 1/3",
+      "expected": "1/3 - log(5/3)/2",
+      "group": "entropy",
+      "name": "reverse entropy production",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/5 + log(sqrt(15)/3)",
+      "expected": ">0",
+      "group": "entropy",
+      "name": "forward entropy positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "log(sqrt(15)/5) + 1/3",
+      "expected": ">0",
+      "group": "entropy",
+      "name": "reverse entropy positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*s/(9*(2*s/3 + 1)**2)",
+      "expected": "2*s/(2*s + 3)**2",
+      "group": "entropy",
+      "name": "forward derivative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*(s - 1)/(9*(2*s/3 + 1)**2)",
+      "expected": "2*(s - 1)/(2*s + 3)**2",
+      "group": "entropy",
+      "name": "reverse derivative weight",
+      "status": "PASS"
+    },
+    {
+      "actual": "59/9",
+      "expected": "59/9",
+      "group": "martingale",
+      "name": "scalar total determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "49/9",
+      "expected": "49/9",
+      "group": "martingale",
+      "name": "scalar tail determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "martingale",
+      "name": "M0 equals one",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5*(x1 + 2*x2)**2/9 + log(59/9)/2",
+      "expected": "-5*(x1 + 2*x2)**2/9 + log(59/9)/2",
+      "group": "martingale",
+      "name": "MJ equals endpoint likelihood",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5/49",
+      "expected": "-5/49",
+      "group": "martingale",
+      "name": "M1 quadratic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*exp(-5*x1**2/49)/7",
+      "expected": "3*exp(-5*x1**2/49)/7",
+      "group": "martingale",
+      "name": "fresh second root Gaussian integral",
+      "status": "PASS"
+    },
+    {
+      "actual": "sqrt(59)*exp(-5*x1**2/49)/7",
+      "expected": "sqrt(59)*exp(-5*x1**2/49)/7",
+      "group": "martingale",
+      "name": "conditional M2 equals M1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "martingale",
+      "name": "mean M1 equals one",
+      "status": "PASS"
+    },
+    {
+      "actual": "19/9",
+      "expected": "19/9",
+      "group": "martingale-boundary",
+      "name": "adaptive inner precision",
+      "status": "PASS"
+    },
+    {
+      "actual": "29/19",
+      "expected": "29/19",
+      "group": "martingale-boundary",
+      "name": "adaptive outer precision",
+      "status": "PASS"
+    },
+    {
+      "actual": "-erf(sqrt(1102)/38) + erf(sqrt(38)/6) + 1",
+      "expected": "-erf(sqrt(1102)/38) + erf(sqrt(38)/6) + 1",
+      "group": "martingale-boundary",
+      "name": "adaptive combined mass exact",
+      "status": "PASS"
+    },
+    {
+      "actual": "19/18",
+      "expected": "29/38",
+      "group": "martingale-boundary",
+      "name": "adaptive erf arguments ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": "-erf(sqrt(1102)/38) + erf(sqrt(38)/6)",
+      "expected": ">0",
+      "group": "martingale-boundary",
+      "name": "adaptive row normalization defect positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.070433115292664194468",
+      "expected": "(0.0704,0.0705)",
+      "group": "martingale-boundary",
+      "name": "adaptive defect numerical bracket",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "martingale-boundary",
+      "name": "fixed zero-row normalization guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "martingale-boundary",
+      "name": "fixed one-row normalization guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5*(x1 + 2*x2)**2/9 + log(59/9)/2",
+      "expected": "-5*(x1 + 2*x2)**2/9 + log(59/9)/2",
+      "group": "martingale",
+      "name": "likelihood centered form",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/9 - log(59/9)/2",
+      "expected": ">0",
+      "group": "martingale",
+      "name": "determinant debt positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1235/1353 - log(451/81)/2",
+      "expected": "1235/1353 - log(451/81)/2",
+      "group": "frozen",
+      "name": "whole-output det2 identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-340/451",
+      "expected": "<0",
+      "group": "frozen",
+      "name": "baseline resolvent term nonpositive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.054277308176158848885",
+      "expected": "2.1604938271604938272",
+      "group": "frozen",
+      "name": "whole-output Hilbert-Schmidt bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "frozen",
+      "name": "scalar determinant remainder starts zero",
+      "status": "PASS"
+    },
+    {
+      "actual": "-u + 1 - 1/(u + 1)",
+      "expected": "-u**2/(u + 1)",
+      "group": "frozen",
+      "name": "scalar determinant remainder derivative nonpositive",
+      "status": "PASS"
+    },
+    {
+      "actual": "19/9",
+      "expected": "19/9",
+      "group": "schur",
+      "name": "first row determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "29/9",
+      "expected": "29/9",
+      "group": "schur",
+      "name": "second row determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/81",
+      "expected": "451/81",
+      "group": "schur",
+      "name": "combined determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/171",
+      "expected": "451/171",
+      "group": "schur",
+      "name": "order 1 then 2 ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/261",
+      "expected": "451/261",
+      "group": "schur",
+      "name": "order 2 then 1 ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/81",
+      "expected": "451/81",
+      "group": "schur",
+      "name": "sequential products invariant",
+      "status": "PASS"
+    },
+    {
+      "actual": "log(551/451)/2",
+      "expected": ">0",
+      "group": "schur",
+      "name": "independent normalizer slack positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "551/451",
+      "expected": "551/451",
+      "group": "schur",
+      "name": "slack exact ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "-log(11/3)/2 + 2*log(5/3)",
+      "expected": ">0",
+      "group": "schur",
+      "name": "four-row slack positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "625/297",
+      "expected": "625/297",
+      "group": "schur",
+      "name": "four-row slack exact ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "log(5/3)/2",
+      "expected": "log(5/3)/2",
+      "group": "schur",
+      "name": "repeated-row slack grows linearly",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "cluster",
+      "name": "zero output current vanishes",
+      "status": "PASS"
+    },
+    {
+      "actual": "I*(a - I*b)**2/4",
+      "expected": "I*(a/2 - I*b/2)**2",
+      "group": "cluster",
+      "name": "positive output current",
+      "status": "PASS"
+    },
+    {
+      "actual": "-I*(a + I*b)**2/4",
+      "expected": "-I*(a/2 + I*b/2)**2",
+      "group": "cluster",
+      "name": "negative output current",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2*(a**2 + b**2)/4",
+      "expected": "sigma2*(a**2/4 + b**2/4)",
+      "group": "cluster",
+      "name": "zero output trace allocation",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2*(a**2 + b**2)/8",
+      "expected": "sigma2*(a**2/4 + b**2/4)/2",
+      "group": "cluster",
+      "name": "positive output trace allocation",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2*(a**2 + b**2)/8",
+      "expected": "sigma2*(a**2/4 + b**2/4)/2",
+      "group": "cluster",
+      "name": "negative output trace allocation",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2/2",
+      "expected": "sigma2/2",
+      "group": "cluster",
+      "name": "second radial moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2**2/2",
+      "expected": "sigma2**2/2",
+      "group": "cluster",
+      "name": "fourth radial moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "-sigma2**2/4",
+      "expected": "-sigma2**2/4",
+      "group": "cluster",
+      "name": "zero output packet negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2**2/8",
+      "expected": "sigma2**2/8",
+      "group": "cluster",
+      "name": "positive output packet positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma2**2/8",
+      "expected": "sigma2**2/8",
+      "group": "cluster",
+      "name": "negative output packet positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "cluster",
+      "name": "cluster expectation cancels",
+      "status": "PASS"
+    },
+    {
+      "actual": "-sigma2**2/4",
+      "expected": "-sigma2**2/4",
+      "group": "cluster",
+      "name": "cluster packet minimum",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*E/20 + P1 + P2 + P3 + 3*Y/20",
+      "expected": "9*E/20 + P1 + P2 + P3 + 3*Y/20",
+      "group": "baseline",
+      "name": "centered base action normal form",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/20",
+      "expected": "3/20",
+      "group": "baseline",
+      "name": "single terminal sextic owner",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/20",
+      "expected": "9/20",
+      "group": "baseline",
+      "name": "source payment owner",
+      "status": "PASS"
+    },
+    {
+      "actual": "23",
+      "expected": "23",
+      "group": "covariance",
+      "name": "predictable covariance mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "Matrix([[1, 0], [0, 4]])",
+      "expected": "Matrix([[1, 0], [0, 4]])",
+      "group": "covariance",
+      "name": "Pythagorean subdivision covariance",
+      "status": "PASS"
+    },
+    {
+      "actual": "14",
+      "expected": "14",
+      "group": "covariance",
+      "name": "Pythagorean subdivision mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "covariance",
+      "name": "same-root random heat guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "amplitude**2*frequency**2*exp(-2*frequency**2)",
+      "expected": "amplitude**2*frequency**2*exp(-2*frequency**2)",
+      "group": "second_jet",
+      "name": "signed derivative companions",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*amplitude**2*frequency**2*exp(-2*frequency**2)",
+      "expected": "2*amplitude**2*frequency**2*exp(-2*frequency**2)",
+      "group": "second_jet",
+      "name": "Hermite second-jet pairing",
+      "status": "PASS"
+    },
+    {
+      "actual": "amplitude**2/2",
+      "expected": "amplitude**2/2",
+      "group": "second_jet",
+      "name": "bounded source cost limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "amplitude**2/2",
+      "expected": "amplitude**2/2",
+      "group": "second_jet",
+      "name": "positive companion quadratic growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "-amplitude**2/2",
+      "expected": "-amplitude**2/2",
+      "group": "second_jet",
+      "name": "negative companion quadratic growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "second_jet",
+      "name": "complete companion cancellation",
+      "status": "PASS"
+    },
+    {
+      "actual": "dimension*(1 - t)/2 + dimension*(t - log(t) - 1)/2",
+      "expected": "-dimension*log(t)/2",
+      "group": "carrier",
+      "name": "conditional KL decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "carrier",
+      "name": "bridge vanishes at independent endpoint",
+      "status": "PASS"
+    },
+    {
+      "actual": "log(4)/2",
+      "expected": "log(2)",
+      "group": "carrier",
+      "name": "one-dimensional quarter bridge",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*log(9)",
+      "expected": "6*log(3)",
+      "group": "carrier",
+      "name": "six-dimensional ninth bridge",
+      "status": "PASS"
+    },
+    {
+      "actual": "8**(dimension + 1)/7 - 1/7",
+      "expected": "8**(dimension + 1)/7 - 1/7",
+      "group": "carrier",
+      "name": "dyadic root dimension sum",
+      "status": "PASS"
+    },
+    {
+      "actual": "oo",
+      "expected": "oo",
+      "group": "carrier",
+      "name": "carrier bridge diverges at diagonal",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "divergence",
+      "name": "convexified Gaussian divergence identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "6*coupling*x**6",
+      "expected": "6*coupling*x**6",
+      "group": "divergence",
+      "name": "degree-six Euler identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*flow_time*exp(-2*flow_time)",
+      "expected": ">0",
+      "group": "divergence",
+      "name": "inward linear-flow remainder positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(flow_time)/sqrt(2*flow_time + 1)",
+      "expected": "exp(flow_time)/sqrt(2*flow_time + 1)",
+      "group": "divergence",
+      "name": "linear-flow change of variables",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 80,
+  "assertions_total": 80,
+  "derived": {
+    "adapted_second_jet_signed_sum": "amplitude**2*frequency**2*exp(-2*frequency**2)",
+    "adaptive_row_normalization_defect": "-erf(sqrt(1102)/38) + erf(sqrt(38)/6)",
+    "carrier_mutual_information": "-dimension*log(t)/2",
+    "complete_cluster_packet_infimum": "-sigma2**2/4",
+    "convexified_divergence_residual": "0",
+    "forward_gaussian_kl": "-1/5 + log(sqrt(15)/3)",
+    "independent_row_slack": "log(551/451)/2",
+    "matrix_combined_determinant": "451/81",
+    "one_pair_packet_expectations": [
+      "-sigma2**2/4",
+      "sigma2**2/8",
+      "sigma2**2/8"
+    ],
+    "q": "10/9",
+    "reverse_gaussian_kl": "log(sqrt(15)/5) + 1/3",
+    "scalar_tail_determinant": "49/9",
+    "scalar_total_determinant": "59/9",
+    "sextic_budget": "3/20",
+    "source_budget": "9/20"
+  },
+  "results": {
+    "derived": {
+      "adapted_second_jet_signed_sum": "amplitude**2*frequency**2*exp(-2*frequency**2)",
+      "adaptive_row_normalization_defect": "-erf(sqrt(1102)/38) + erf(sqrt(38)/6)",
+      "carrier_mutual_information": "-dimension*log(t)/2",
+      "complete_cluster_packet_infimum": "-sigma2**2/4",
+      "convexified_divergence_residual": "0",
+      "forward_gaussian_kl": "-1/5 + log(sqrt(15)/3)",
+      "independent_row_slack": "log(551/451)/2",
+      "matrix_combined_determinant": "451/81",
+      "one_pair_packet_expectations": [
+        "-sigma2**2/4",
+        "sigma2**2/8",
+        "sigma2**2/8"
+      ],
+      "q": "10/9",
+      "reverse_gaussian_kl": "log(sqrt(15)/5) + 1/3",
+      "scalar_tail_determinant": "49/9",
+      "scalar_total_determinant": "59/9",
+      "sextic_budget": "3/20",
+      "source_budget": "9/20"
+    },
+    "route_verdicts": {
+      "adapted_complete_cluster_matrix_carleson": "open",
+      "convexified_divergence_flow": "parked-unfavourable-sign",
+      "endpoint_entropy_production": "exact-identity-not-free-energy-bound",
+      "independent_output_determinant_normalization": "failed-linear-slack",
+      "jointly_frozen_whole_output": "closed-by-det2",
+      "nelson": "open",
+      "overlap_src": "open",
+      "predictable_covariance_mass": "exact-subdivision-invariant",
+      "progressive_future_row_backward_resolvent": "failed-positive-normalization-defect",
+      "pure_carrier_kl_diagonal_bridge": "failed-dimensional-divergence",
+      "sector_a": "open",
+      "single_output_frequency_positivity": "failed-exact-one-pair-fixture",
+      "termwise_adapted_second_jet": "failed-quadratic-derivative-growth"
+    }
+  },
+  "results_sha256": "bbc6a2e5911b03c105d4a8cad59359f3232e7a8495c93535f9d470ea5f599ddd",
+  "route_verdicts": {
+    "adapted_complete_cluster_matrix_carleson": "open",
+    "convexified_divergence_flow": "parked-unfavourable-sign",
+    "endpoint_entropy_production": "exact-identity-not-free-energy-bound",
+    "independent_output_determinant_normalization": "failed-linear-slack",
+    "jointly_frozen_whole_output": "closed-by-det2",
+    "nelson": "open",
+    "overlap_src": "open",
+    "predictable_covariance_mass": "exact-subdivision-invariant",
+    "progressive_future_row_backward_resolvent": "failed-positive-normalization-defect",
+    "pure_carrier_kl_diagonal_bridge": "failed-dimensional-divergence",
+    "sector_a": "open",
+    "single_output_frequency_positivity": "failed-exact-one-pair-fixture",
+    "termwise_adapted_second_jet": "failed-quadratic-derivative-growth"
+  },
+  "schema": "tect/a13-coherent-output-cluster-predictable-baseline-boundary-primary/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -268,7 +268,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   complete coherent output-frequency square is therefore a prioritized legal
   candidate coordinate, not a proved or unique bound; the direct complete
   source-action route remains live. Uniform `OVERLAP_src`, Nelson, removals,
-  the interacting measure, and Sector A remain open. R-080,
+  the interacting measure, and Sector A remain open. R-107 now closes the
+  multi-row likelihood only for jointly frozen coefficients and closes one
+  fresh-root determinant for a past-measurable map and mixed baseline. Rowwise
+  predictability does not license the global frozen resolvent: an exact bounded
+  two-root fixture has mass `1.070433115292664...>1`, with a smooth companion.
+  Positive trace allocation remains subdivision compatible.
+  Singleton output frequencies and independently normalized output rows fail;
+  contraction-connected output clusters are mandatory. The direct action is
+  reduced exactly to the complete predictable-baseline sum, one root sextic,
+  and one source-energy payment, but its same-root adapted lower bound is still
+  open. Termwise second-jet estimates and a pure carrier-KL diagonal bridge are
+  retired. The narrowed target is a subdivision-invariant adapted complete-
+  cluster/matrix-Carleson estimate with the full R-063 forest and rational
+  recovery retained once. Sector A remains open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -659,7 +672,15 @@ preserved in git/changelog rather than treated as current gates.
    pointwise-likelihood and raw input-leaf merge repairs. The prioritized
    coordinate is now a complete coherent output-frequency packet, with the
    direct complete source action still live. The uniform source-action/Nelson
-   inequality remains open. The route to the regular closure was narrowed by
+   inequality remains open. R-107 closes the jointly frozen multi-row
+   likelihood and the one-fresh-root past-measurable determinant. Rowwise
+   predictability does not license their replacement by one global frozen
+   resolvent. R-107 also proves that singleton output atoms and independent row
+   normalizers are invalid and reduces the direct action to the complete
+   predictable-baseline sum. Its adapted same-root
+   complete-cluster/matrix-Carleson estimate remains the active target; the
+   exact second-jet and carrier fixtures rule out only termwise or pure-KL
+   shortcuts. Sector A remains open. The route to the regular closure was narrowed by
    R-080--R-102.
    R-080 closes the two distinct low objects for regular
    no-revisit controls. Far-shell square completion retains both feedback
@@ -794,10 +815,16 @@ preserved in git/changelog rather than treated as current gates.
    but shows that the total time integral by itself merely restates the open
    endpoint gap. Pointwise endpoint coercivity and bounded raw input-leaf
    merge tensorization, including the leafwise sextic repair, are now retired.
-   Continue with a root-local complete coherent output-frequency packet, while
-   retaining the equivalent direct complete source-action formulation as a
-   live alternative. `OVERLAP_src`, Nelson, removals, the interacting measure,
-   and Sector A remain open.
+   R-107 proves the jointly frozen complete-output likelihood, the one-fresh-
+   root past-measurable determinant, positive trace allocation, and exact
+   direct source-action normal form. Rowwise predictability does not license a
+   global frozen determinant. It also proves that legal atoms must be contraction-connected output
+   clusters, that their determinant must be sequential/global, and that the
+   adapted second jet cannot be split termwise. Continue with the same-root
+   adapted complete-cluster/matrix-Carleson lower bound, retaining heat, trace,
+   baseline, future feedback, rational recovery, the complete R-063 forest,
+   and exactly one terminal root sextic. `OVERLAP_src`, Nelson, removals, the
+   interacting measure, and Sector A remain open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

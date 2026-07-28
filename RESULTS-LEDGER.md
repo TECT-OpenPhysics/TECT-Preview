@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-107](#r-107) | Coherent output clusters, frozen likelihood, and the adapted predictable-baseline boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact endpoint likelihood tilt has positive entropy production and a root-martingale variance decomposition, but it returns the same unknown free-energy difference. Jointly frozen coherent-output Gaussian rows have an exact backward-resolvent density martingale, and one fresh root with a past-measurable map has the whole-output `det2` formula with mixed baseline. Rowwise predictability does not license one global frozen determinant: a bounded two-root fixture has exact total mass `1.070433115292664...>1`, with a smooth `tanh` companion. The coefficient trace has an exact positive output allocation, yet a one-pair fixture has expected singleton packets `-sigma^4/4,+sigma^4/8,+sigma^4/8`, so only a contraction-connected output cluster is legal. Independently normalized outputs lose linearly growing determinant slack; sequential Schur is mandatory. The direct action is exactly the complete predictable-baseline sum plus one terminal sextic and one source-energy payment, and covariance mass against one deterministic predictable PSD weight is subdivision invariant. Exact adapted-sine and carrier-information fixtures retire termwise second-jet/forest estimates and a pure carrier-KL diagonal bridge. The remaining theorem is one subdivision-invariant adapted complete-cluster or equivalent predictable-baseline matrix-Carleson estimate with every owner retained once. `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open |
 | [R-106](#r-106) | Gibbs endpoint likelihood and exact production radial merge boundary | Scoped T4 analytic/exact/executed boundary: the actual finite-cutoff Gibbs endpoints have exact likelihood, dual relative-entropy, variational, and thermodynamic-integration identities. The total A9 time integral is exactly the unknown endpoint free-energy difference and supplies no estimate by itself. A constant active-doublet ray rules out fixed pointwise likelihood domination by sextic plus Cameron--Martin payments without refuting the Gibbs integral. The exact production radial Fierz coefficient yields a same-root `1:2` input merge defect `<=-c lambda^4+O(lambda^2)` and negative leafwise sextic merge, retiring universal bounded raw input-leaf reassembly. R-082's complete coherent output-frequency square remains a legal candidate coordinate only after the nonlinear current is fully assembled with heat, trace, baseline, R-063 forest, and one parent/root sextic. No bound on that packet is proved; both actual-Gibbs/time-integrated and direct complete source-action formulations remain open, as do `OVERLAP_src`, Nelson, removals, a measure, and Sector A |
 | [R-105](#r-105) | Cartan endpoint quotient, rational subdivision boundary, and A9 route boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete common-root value-plus-heat Cartan edges telescope before the expectation-inside grouped square, so representation-preserving subdivisions have one endpoint quotient and no edge multiplicity. On the normalized active production fibre `c1=e=Gamma0=1`, the historical rational `F_6.5` and fixed-chart `K_R` change sign under an exact subdivision, while the complete R-101 endpoint remains `1600/81` because its three labelled defects cancel; general parameters supply one common positive factor. Generic A9 monotonicity, the registered pathwise/absolute critical-Young extraction, and the all-law pointwise relative bracket fail. The last failure is production-specific at one fixed cutoff and forces `b(t)>=3/t`, but it is not a Gibbs-path or Nelson counterexample. An exact determinant bound survives only in an artificial scalar quadratic one-pair mode-diagonal model; a sign-indefinite two-mode cross-mode resonance blocks tensorization. The remaining theorem is the uniform complete source action, equivalently the full signed `OVERLAP_src`/Nelson target, through a complete signed packet or a Gibbs-specific/time-integrated A9 argument. Nelson, removals, a measure, and Sector A remain open |
 | [R-104](#r-104) | Fixed-chart endpoint-owner assembly and Douglas-slack boundary | Scoped T4 analytic/exact/executed algebraic identity and method boundary: every finite-cutoff bounded smooth cylindrical-simple progressive control has a temporally faithful strict-triangular source representation with the same terminal displacement. On each fixed chart, the exact R-079/R-081/R-091 endpoint reconstruction followed by the exact R-083 and R-100--R-102 algebra has zero endpoint-owner defect; R-103 supplies the seven-NEAR/eight-REG owner nomenclature and incidence template, not progressive visitwise estimates. A representation-preserving subdivision preserves only the recombined endpoint, not individual Doob or owner summands. The physical action equals the source action plus the nonnegative Douglas slack `(9/20) E[int ||u_t||^2 dt-sum_k ||h_k||^2]`. Predictable fresh-root-independent heat may be disintegrated, while an exact same-root PSD fixture proves that no automatic extension to arbitrary anticipative heat exists. This proves no uniform `OVERLAP_src` lower bound, Nelson estimate, removals, measure, or Sector A |
@@ -125,6 +126,85 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-107"></a>
+### R-107 -- Coherent output clusters, frozen likelihood, and the adapted predictable-baseline boundary
+
+**Result ID.**
+`A13-CLASSII-COHERENT-OUTPUT-CLUSTER-PREDICTABLE-BASELINE-BOUNDARY`.
+
+**Exact positive branch.** Exponentially tilting the R-106 endpoint likelihood
+gives `psi''(s)=Var_(rho_s)(L)`. Forward and reverse relative entropies are
+the exact `s`- and `(1-s)`-weighted variance integrals, and every finite root
+filtration decomposes that variance into martingale-difference squares. For
+jointly frozen coherent-output maps `A_j`, the normalized Gaussian likelihood
+has the exact backward-resolvent martingale
+
+`log M_j=(1/2)log det(I+qK)-(1/2)log det(I+qK_>j)
+         -(q/2)<s_j,(I+qK_>j)^(-1)s_j>`.
+
+Separately, with one fresh root and a complete past-measurable mixed baseline,
+one whole-output Gaussian square gives
+
+`log E exp(-qL_fr)=-(1/2)log det_2(I+qAA*)
+                    -(q/2)<b,(I+qAA*)^(-1)b>
+                 <=(q^2/4)||AA*||_HS^2`.
+
+The conditional entropy inequality for each legal normalized increment is
+exactly saturable, so this frozen/one-step branch has no unspent reserve for
+the same-root state-dependent coefficient. Rowwise predictability is not
+backward freezing: for `A1=1`, `A2=1_{|xi1|>1}`, the global frozen candidate
+has total mass
+`erf(sqrt(19/18))+erfc(sqrt(29/38))=1.070433115292664...>1`.
+A bounded smooth `epsilon tanh(xi1)` row has a strictly positive small-
+amplitude normalization defect. Thus progressive use must retain actual
+one-fresh-root conditional normalizers.
+
+**Smallest legal output atom.** The heat-lifted coefficient trace has a
+canonical positive output allocation. Nevertheless, for
+`X=a cos x+b sin x` and `J=X dX`, the half-weighted output packets have
+expectations `-sigma^4/4` at zero and `+sigma^4/8` at each of `+/-2`. Only the
+contraction-connected cluster `{0,+/-2}` cancels. Independent output
+normalizers also lose slack
+`[m log(1+q lambda)-log(1+qm lambda)]/2`, which grows linearly for repeated
+rank-one rows. Thus a legal determinant packet is sequential/global on a
+contraction-closed output cluster, potentially the whole root.
+
+**Equivalent direct action.** R-077/R-104 reconstruction gives exactly
+
+`A_J(h)=sum_k E P_k+(3/20)E||Z_K||_6^6
+                    +(9/20)E sum_k||h_k||^2`,
+
+where each `P_k` is the complete predictable baseline after the full fresh-
+root packet and R-063 forest have been recombined. For deterministic
+predictable PSD `D`, covariance mass is subdivision invariant:
+`sum_k||D^(1/2)S_k||_HS^2=Tr(DC_J)`. A same-root random coefficient has no
+automatic extension.
+
+**Scoped method boundaries.** For `h_M(G)=a sin(MG)`, the source cost stays
+bounded while the separated second-jet companions grow as
+`+/-a^2M^2/2`; their signed sum tends to zero. Termwise absolute forest
+estimation is therefore invalid. For
+`z_t=sqrt(1-t)x+sqrt(t)y`, the carrier information is
+`-(d/2)log t`, diverges at the diagonal, and is non-summable in growing root
+dimension. A convexified Gaussian-divergence identity is exact, but its naive
+inward-flow sign is unfavorable and the route is only parked.
+
+**Evidence.** The corrected proof note and PDF, exact symbolic primary
+certificate, non-importing standard-library finite-tree/Fraction/quadrature
+certificate, integrated verifier, manifest, five negative authorities, and
+`EXP-000276--EXP-000284`. The pinned contract is primary `80/80`, independent
+`139/139`, integrated `239/239`, and aggregate `458/458` PASS. The final PDF
+passes form, zero-overfull, extraction, and all-page Poppler visual QA.
+
+**Boundary.** The irreducible object is the same-root residual
+`Re<b+Axi,R>+||R||^2/2-delta_tau/2` on a contraction-closed output cluster,
+equivalently the complete predictable-baseline sum. No subdivision-invariant
+adapted complete-cluster/matrix-Carleson bound is proved. R-107 proves no
+uniform `OVERLAP_src`, Nelson estimate, cutoff/floor removal, interacting
+measure, Sector-A closure, or T5--T7 promotion. Tier remains T4.
+
+---
 
 <a id="r-106"></a>
 ### R-106 -- Gibbs endpoint likelihood and exact production radial merge boundary

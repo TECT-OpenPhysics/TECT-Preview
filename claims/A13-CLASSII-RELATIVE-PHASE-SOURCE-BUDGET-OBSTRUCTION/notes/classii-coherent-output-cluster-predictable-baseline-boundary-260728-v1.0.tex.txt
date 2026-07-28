@@ -1,0 +1,876 @@
+% =============================================================================
+% Title: Coherent output clusters, frozen likelihood, and the adapted predictable-baseline boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED BOUNDARY; NELSON AND SECTOR A OPEN
+% Result: A13-CLASSII-COHERENT-OUTPUT-CLUSTER-PREDICTABLE-BASELINE-BOUNDARY
+% Ledger: R-107
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\dd}{\,\mathrm d}
+
+\section{Purpose and scope}
+
+R-106 left the complete coherent output-frequency current as a legal
+coordinate for the remaining finite-cutoff, fixed-positive-floor
+$q=10/9$ production problem.  The present note determines the smallest
+coordinate on which that suggestion can be correct and audits the two
+equivalent Gibbs and direct-source formulations before another owner split is
+introduced.
+
+The result has ten exact parts.
+\begin{enumerate}
+\item The endpoint likelihood tilt has a positive entropy-production identity
+      and an exact root-martingale variance decomposition.  These are
+      identities, not a new free-energy bound.
+\item A jointly frozen family of coherent-output Gaussian rows has an exact
+      backward-resolvent density martingale.  Its conditional entropy
+      inequality is saturable and therefore has no spare reserve for revealing
+      a same-root nonlinear coefficient.
+\item One fresh-root packet with a past-measurable output map and mixed
+      baseline closes by one $\det_2$ formula without output factorisation.
+\item A bounded predictable future row has a strictly positive normalization
+      defect, so rowwise predictability does not license the global frozen
+      backward-resolvent formula.  Stepwise conditional normalizers remain
+      legal.
+\item The coefficient trace has a canonical positive output allocation, but
+      an exact one-Fourier-pair fixture proves that a single output frequency
+      is not a signed atom.  Cancellation occurs only across the
+      contraction-connected cluster $\{0,2,-2\}$.
+\item Independent output determinant normalisers lose positive slack which
+      grows linearly under repeated rank-one rows.  Sequential Schur updates
+      are mandatory.
+\item The direct source action reduces exactly to the sum of complete
+      predictable baselines plus one terminal sextic and one source-energy
+      payment.  Covariance mass against one deterministic predictable PSD
+      weight is subdivision invariant.
+\item An adapted sine fixture proves that separating the second-jet/forest
+      companions creates two $M^2$ costs although their signed combination
+      tends to zero.
+\item A pure carrier-information bridge costs $-(d/2)\log t$ and is therefore
+      unusable at the diagonal and across growing root dimension.
+\item A useful Gaussian-divergence convexification identity is exact, but its
+      natural inward-flow remainder has the unfavourable sign.  That route is
+      parked, not declared impossible.
+\end{enumerate}
+
+The remaining theorem is one subdivision-invariant adapted complete-cluster
+or matrix-Carleson estimate after all visits, all input convolutions, the
+entire R-063 forest, the mixed baseline, and future feedback have been
+recombined.  No such estimate is proved here.  Hence
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, the interacting measure, and
+Sector A remain open.  Tier stays T4.
+
+\section{Endpoint likelihood tilt and entropy production}
+
+Use the R-106 convention: $\nu_{J,0}$ is the self-coupled endpoint,
+$\nu_{J,1}$ is the controlled independent-carrier endpoint, and
+\[
+ {\dd\nu_{J,0}\over\dd\nu_{J,1}}
+ =\exp\{\mathcal L_J-(\Phi_{J,0}-\Phi_{J,1})\}.       \tag{2.1}
+\]
+To avoid confusing the new exponential parameter with the A9 interpolation
+time, define for $0\le s\le1$
+\[
+ \psi_J(s):=\log\E_{\nu_{J,1}}e^{s\mathcal L_J},
+ \qquad
+ {\dd\rho_{J,s}\over\dd\nu_{J,1}}
+ :=e^{s\mathcal L_J-\psi_J(s)}.                      \tag{2.2}
+\]
+Then $\rho_{J,0}=\nu_{J,1}$, $\rho_{J,1}=\nu_{J,0}$, and
+$\psi_J(1)=\Phi_{J,0}-\Phi_{J,1}$.
+
+% evidence-anchor: theorem-2.1-endpoint-entropy-production
+\subsection*{Theorem 2.1 (exact endpoint entropy production)}
+
+At every finite cutoff,
+\[
+ \psi_J'(s)=\E_{\rho_{J,s}}\mathcal L_J,
+ \qquad
+ \psi_J''(s)=\Var_{\rho_{J,s}}(\mathcal L_J)\ge0.   \tag{2.3}
+\]
+Moreover
+\[
+ H(\nu_{J,0}\mid\nu_{J,1})
+ =\int_0^1s\,\Var_{\rho_{J,s}}(\mathcal L_J)\dd s,  \tag{2.4}
+\]
+\[
+ H(\nu_{J,1}\mid\nu_{J,0})
+ =\int_0^1(1-s)\,\Var_{\rho_{J,s}}(\mathcal L_J)\dd s,\tag{2.5}
+\]
+and hence
+\[
+ \Phi_{J,0}-\Phi_{J,1}
+ =\E_{\nu_{J,0}}\mathcal L_J
+  -\int_0^1s\,\Var_{\rho_{J,s}}(\mathcal L_J)\dd s, \tag{2.6}
+\]
+\[
+ \Phi_{J,0}-\Phi_{J,1}
+ =\E_{\nu_{J,1}}\mathcal L_J
+  +\int_0^1(1-s)\,\Var_{\rho_{J,s}}(\mathcal L_J)\dd s.\tag{2.7}
+\]
+
+\emph{Proof.}
+Differentiate (2.2).  The two intermediate entropies are
+\[
+ H(\rho_{J,s}\mid\nu_{J,1})=s\psi_J'(s)-\psi_J(s), \tag{2.8}
+\]
+\[
+ H(\rho_{J,s}\mid\nu_{J,0})
+ =(s-1)\psi_J'(s)-\psi_J(s)+\psi_J(1).              \tag{2.9}
+\]
+Their derivatives are respectively $s\psi_J''(s)$ and
+$(s-1)\psi_J''(s)$.  Integrating from zero to one proves
+(2.4)--(2.7). \hfill$\square$
+
+Let $(\mathcal F_j)$ be any finite root-reveal filtration exhausting the
+cutoff source, and define the $\rho_{J,s}$ martingale differences
+\[
+ d_j^{(s)}F
+ :=\E_{\rho_{J,s}}[F\mid\mathcal F_j]
+  -\E_{\rho_{J,s}}[F\mid\mathcal F_{j-1}].           \tag{2.10}
+\]
+Orthogonality gives
+\[
+ \boxed{
+ \Var_{\rho_{J,s}}(\mathcal L_J)
+ =\sum_j\E_{\rho_{J,s}}|d_j^{(s)}\mathcal L_J|^2.}  \tag{2.11}
+\]
+Thus entropy production has a positive root decomposition.  It does not
+bound the endpoint difference: the conditional laws in (2.10) depend on the
+unknown tilt, and (2.6)--(2.7) are exact rewritings of R-106's endpoint
+identity.
+
+\section{Jointly frozen coherent-output likelihood martingale}
+
+Let independent standard Gaussian roots be $\xi_1,\ldots,\xi_N$, and let
+$A_r:E_r\to\mathcal H_{\rm out}$ be jointly frozen maps into the complete
+coherent heat/output Hilbert space: conditionally on an initial sigma-field
+$\mathcal F_0$, every $A_r$ is fixed and independent of all roots.  Put
+\[
+ K:=\sum_{r=1}^N A_rA_r^*,\quad
+ K_{>j}:=\sum_{r>j}A_rA_r^*,\quad
+ R_{>j}:=(\Id+qK_{>j})^{-1},                         \tag{3.1}
+\]
+\[
+ s_j:=\sum_{r\le j}A_r\xi_r.                         \tag{3.2}
+\]
+The normalized Gaussian likelihood is
+\[
+ \mathcal L_A
+ ={1\over2}\log\det(\Id+qK)-{q\over2}\|s_N\|^2.  \tag{3.3}
+\]
+If
+\[
+ Q_A={1\over2}(\|s_N\|^2-\Tr K),\qquad
+ D_q(K)={1\over2}\{q\Tr K-\log\det(\Id+qK)\},      \tag{3.4}
+\]
+then
+\[
+ \mathcal L_A=-qQ_A-D_q(K),\qquad
+ \E[e^{\mathcal L_A}\mid\mathcal F_0]=1.            \tag{3.5}
+\]
+
+% evidence-anchor: theorem-3.1-backward-resolvent-likelihood-martingale
+\subsection*{Theorem 3.1 (backward-resolvent density martingale)}
+
+Let $\mathcal F_j=\mathcal F_0\vee\sigma(\xi_1,\ldots,\xi_j)$.  For
+$0\le j\le N$,
+\[
+ \boxed{
+ \log M_j
+ ={1\over2}\log\det(\Id+qK)
+  -{1\over2}\log\det(\Id+qK_{>j})
+  -{q\over2}\langle s_j,R_{>j}s_j\rangle .}         \tag{3.6}
+\]
+Then
+\[
+ M_j=\E[e^{\mathcal L_A}\mid\mathcal F_j],\qquad
+ M_0=1,\qquad M_N=e^{\mathcal L_A}.                  \tag{3.7}
+\]
+Writing $m_j=\log(M_j/M_{j-1})$ gives
+\[
+ \E[e^{m_j}\mid\mathcal F_{j-1}]=1.                \tag{3.8}
+\]
+For every conditional law $\lambda_j$ of the fresh root with finite entropy
+relative to its standard Gaussian law $\gamma_j$,
+\[
+ \E_{\lambda_j}m_j-H(\lambda_j\mid\gamma_j)\le0,    \tag{3.9}
+\]
+and equality is attained by the exact conditional exponential tilt.
+
+\emph{Proof.}
+Integrate the unrevealed Gaussian sum in (3.3).  This gives (3.6).
+One more Gaussian integration, or the determinant lemma together with the
+Woodbury identity, proves (3.7)--(3.8).  Equation (3.9) is the conditional
+Gibbs variational formula; its normalizing logarithm is zero by (3.8).
+\hfill$\square$
+
+The saturation in (3.9) is load-bearing.  Frozen determinant entropy cannot
+be spent again on the difference between a fixed $A_r$ and the true
+same-root state-dependent production coefficient.
+
+% evidence-anchor: proposition-3.2-progressive-future-row-normalization-defect
+\subsection*{Proposition 3.2 (a predictable future row breaks the frozen normaliser)}
+
+The jointly frozen hypothesis cannot be replaced by the usual progressive
+condition $A_r\in\mathcal F_{r-1}$.  Let $\xi_1,\xi_2$ be independent standard
+Gaussians and take the bounded scalar rows
+\[
+ A_1=1,\qquad A_2=c(\xi_1),\qquad
+ c(x)={\bf1}_{\{|x|>1\}}.                                           \tag{3.10}
+\]
+Inserting the random total and tail covariances into the frozen candidate
+(3.6) gives, at the first reveal,
+\[
+ \widetilde M_1(x)
+ =\left({1+q(1+c(x))\over1+qc(x)}\right)^{1/2}
+   \exp\left\{-{qx^2\over2(1+qc(x))}\right\}.                      \tag{3.11}
+\]
+After multiplication by the standard Gaussian density, the inner region has
+precision $\beta_0=1+q=19/9$ and the outer region has precision
+$\beta_1=(1+2q)/(1+q)=29/19$.  Hence
+\[
+ \E\widetilde M_1
+ =\operatorname{erf}\sqrt{19\over18}+\operatorname{erfc}\sqrt{29\over38}
+ =1+\operatorname{erf}\sqrt{19\over18}-\operatorname{erf}\sqrt{29\over38}>1, \tag{3.12}
+\]
+because $19/18>29/38$ and $\operatorname{erf}$ is strictly increasing.  The independent
+executable obtains
+\[
+ \E\widetilde M_1=1.070433115292664\ldots                            \tag{3.13}
+\]
+from both the closed error-function formula and direct piecewise quadrature.
+The discontinuity is inessential.  For the bounded smooth choice
+$A_2=\epsilon\tanh\xi_1$, with $v=(1+q)^{-1}$ and
+$\delta=\epsilon^2$, the same candidate satisfies
+\[
+ {d\over d\delta}\E\widetilde M_1\big|_{\delta=0}
+ ={q^2\over2}\Cov_{N(0,v)}(X^2,\tanh^2X)>0.                          \tag{3.14}
+\]
+Indeed $y\mapsto\tanh^2\sqrt y$ is strictly increasing and
+$2\Cov(Y,g(Y))=\E[(Y-Y')(g(Y)-g(Y'))]>0$.  Thus the global
+backward-resolvent expression is not a density martingale for general smooth
+predictable future rows either.  This is a method no-go, not a negative
+complete-action fixture.  A genuinely progressive construction must multiply
+the actual one-fresh-root conditional normalisers rather than substitute
+random future rows into one frozen global determinant.
+
+\section{Coherent heat/output trace and root packet}
+
+Use R-082's heat lift
+\[
+ \Xi_\Sigma(z,y)(r)=C(z+r)y
+ \in L^2(\mu_\Sigma;\R^4),\qquad B=C^TC.             \tag{4.1}
+\]
+For endpoint $H$, root $j$, derivative direction $i$, and an independent
+root copy $G_j$ of covariance $\Delta\Gamma_j$, define
+\[
+ \tau_{H,j,i,n}
+ :=\int\E_{G_j}
+ \left|\widehat{C_H(\cdot,r)\partial_iG_j}(n)\right|^2
+ \mu_\Sigma(\dd r).                                 \tag{4.2}
+\]
+
+% evidence-anchor: proposition-4.1-coherent-output-trace-allocation
+\subsection*{Proposition 4.1 (exact positive output allocation)}
+
+Parseval gives
+\[
+ \boxed{
+ \sum_n\tau_{H,j,i,n}
+ =\int_{\T^3}(P_\Sigma B_H):\Delta\Gamma_{j,i}\,\dd x.}
+                                                               \tag{4.3}
+\]
+In Fourier coordinates, if $Q_{j,i}(p)$ is the derivative-root covariance,
+\[
+ \tau_{H,j,i,n}
+ =\int\sum_p\Tr\{\widehat C_H(n-p,r)Q_{j,i}(p)
+                    \widehat C_H(n-p,r)^*\}\mu_\Sigma(\dd r). \tag{4.4}
+\]
+
+The summands in (4.2) are nonnegative.  They are not the conditional
+variances of the actual current when $C_H$ depends on the same root.  In that
+case R-082 (8.4) retains a signed posterior covariance defect.
+
+Let
+\[
+ a_j=d_j\Xi_0,\qquad
+ f_j=d_j(\Xi_j-\Xi_0),\qquad
+ \iota_j=d_j(\Xi_*-\Xi_j).                           \tag{4.5}
+\]
+Conditional expectation commutes with deterministic Fourier projection.
+Therefore R-079 (3.3)--(3.5) becomes the complete packet
+\[
+\begin{aligned}
+ \mathfrak P_j
+={}&\sum_{i,n}\E\Big[
+ \operatorname{Re}\langle\widehat a_{j,i,n},
+                         \widehat f_{j,i,n}\rangle
+ +{1\over2}|\widehat f_{j,i,n}|^2\\
+&\quad+
+ \operatorname{Re}\langle
+   \widehat a_{j,i,n}+\widehat f_{j,i,n},
+   \widehat\iota_{j,i,n}\rangle
+ +{1\over2}|\widehat\iota_{j,i,n}|^2\Big]\\
+&-{1\over2}\sum_{i,n}\E(
+  \tau_{j,j,i,n}-\tau_{0,j,i,n})\\
+&-{1\over2}\sum_{i,n}\E(
+  \tau_{*,j,i,n}-\tau_{j,j,i,n}).
+\end{aligned}
+\tag{4.6}
+\]
+All input convolutions reaching $n$ are summed before the square.  The mixed
+$f_j$--$\iota_j$ term is inside the second inner product.  Expanding the two
+trace increments through R-063 (5.5) produces exactly the
+$P_3/P_1$ and
+$P_4/P_2^{\rm cross}/\Sigma_jQ_j/P_0^{\rm cross}/\mathcal R_{3,j}$
+forest.  The forest is an alternative realization of part of (4.6); adding
+it separately would double count it.
+
+\section{One-step predictable whole-output determinant with baseline}
+
+Let $A:E_j\to\mathcal H_{\rm out}$ and
+$b\in\mathcal H_{\rm out}$ be measurable before the one fresh root $\xi$,
+put $S=AA^*$, and define
+\[
+ L_{\rm fr}={1\over2}\|A\xi+b\|^2-{1\over2}\Tr S. \tag{5.1}
+\]
+
+% evidence-anchor: theorem-5.1-frozen-whole-output-det2
+\subsection*{Theorem 5.1 (whole-output det2 formula)}
+
+\[
+ \boxed{
+ \begin{aligned}
+ \log\E[e^{-qL_{\rm fr}}\mid\mathcal F_{\rm past}]
+ ={}&-{1\over2}\log\det{}_2(\Id+qS)\\
+ &-{q\over2}\langle b,(\Id+qS)^{-1}b\rangle
+ \end{aligned}}                                      \tag{5.2}
+\]
+and
+\[
+ \log\E[e^{-qL_{\rm fr}}\mid\mathcal F_{\rm past}]
+ \le {q^2\over4}\|S\|_{\mathfrak S_2}^2.           \tag{5.3}
+\]
+
+\emph{Proof.}
+Complete the finite-dimensional Gaussian square.  Then use
+$\det_2(\Id+qS)=\det(\Id+qS)e^{-q\Tr S}$ and
+$u-\log(1+u)\le u^2/2$ for $u\ge0$. \hfill$\square$
+
+No output-frequency factorisation occurs in (5.2).  If $P_n$ is an output
+projection, $S$ retains every off-diagonal block $P_nSP_m$.  Thus one
+past-measurable fresh-root step closes, and jointly frozen rows may be iterated
+by Theorem 3.1.  Proposition 3.2 forbids replacing the stepwise normalisers by
+one global frozen determinant when future rows depend on revealed roots.
+Cross-output same-root dependence remains in the nonfrozen defect.
+
+\section{A single output frequency is not a signed atom}
+
+% evidence-anchor: proposition-6.1-one-pair-output-cluster
+\subsection*{Proposition 6.1 (exact one-pair cluster fixture)}
+
+On the normalized circle take
+\[
+ X(x)=a\cos x+b\sin x,\qquad
+ a,b\mathrel{\mathop\sim}^{\rm iid}N(0,\sigma^2),
+ \qquad z={a-ib\over2},                              \tag{6.1}
+\]
+and the scalar linear-row current $J=X\partial_xX$.  Then
+\[
+ \widehat J(0)=0,\qquad
+ \widehat J(2)=iz^2,\qquad
+ \widehat J(-2)=-i\overline z^{\,2}.                \tag{6.2}
+\]
+The independent-copy trace allocation is
+\[
+ \tau_0=\sigma^2|z|^2,\qquad
+ \tau_2=\tau_{-2}={\sigma^2\over2}|z|^2.            \tag{6.3}
+\]
+With the physical outer factor $1/2$, the expected output packets are
+\[
+ n=0:-{\sigma^4\over4},\qquad
+ n=2:{\sigma^4\over8},\qquad
+ n=-2:{\sigma^4\over8}.                             \tag{6.4}
+\]
+Only the complete cluster $\{0,2,-2\}$ cancels:
+\[
+ {1\over2}\sum_n(|\widehat J(n)|^2-\tau_n)
+ =|z|^4-\sigma^2|z|^2,                              \tag{6.5}
+\]
+\[
+ \E[\text{(6.5)}]=0,\qquad
+ \inf\text{(6.5)}=-{\sigma^4\over4}.               \tag{6.6}
+\]
+
+\emph{Proof.}
+Write $X=ze^{ix}+\overline z e^{-ix}$, convolve its two Fourier coefficients,
+and replace the differentiated factor by an independent copy for (6.3).
+Finally use
+$\E|z|^2=\sigma^2/2$ and $\E|z|^4=\sigma^4/2$.
+\hfill$\square$
+
+The fixture embeds, up to a positive constant, in a linear Pauli--Fierz row.
+It refutes single-output positivity.  It is not a negative complete-action or
+Nelson example.
+
+\section{Why independent output normalisers fail}
+
+For a positive semidefinite covariance $T$, let
+\[
+ D_q(T)={1\over2}\{q\Tr T-\log\det(\Id+qT)\}.        \tag{7.1}
+\]
+For positive semidefinite blocks $T_a$,
+\[
+ \log\det(\Id+q\sum_aT_a)
+ \le\sum_a\log\det(\Id+qT_a),                       \tag{7.2}
+\]
+and therefore
+\[
+ D_q(\sum_aT_a)\ge\sum_aD_q(T_a).                   \tag{7.3}
+\]
+The lost determinant slack is not harmless.  For $m$ copies of one rank-one
+block $\lambda P$,
+\[
+ S_m={1\over2}\{m\log(1+q\lambda)
+                  -\log(1+qm\lambda)\},             \tag{7.4}
+\]
+\[
+ {S_m\over m}\longrightarrow {1\over2}\log(1+q\lambda)>0.\tag{7.5}
+\]
+
+This fires the scoped output-normalisation no-go: multiplying independently
+normalised row or output likelihoods can lose a linear amount.  The exact
+replacement is the sequential Schur identity.  With
+$K_m=\sum_{a\le m}T_a$ and $R_{m-1}=(\Id+qK_{m-1})^{-1}$,
+\[
+ \boxed{
+ \log\det(\Id+qK_m)-\log\det(\Id+qK_{m-1})
+ =\log\det\{\Id+qR_{m-1}^{1/2}T_mR_{m-1}^{1/2}\}.} \tag{7.6}
+\]
+The increments depend on the reveal order, but their sum is the invariant
+whole-output determinant.
+
+\section{The irreducible same-root residual}
+
+Write the complete current, after the predictable part is frozen, as
+\[
+ Y(\xi)=b+A\xi+R(\xi).                               \tag{8.1}
+\]
+Let $\delta\tau(\xi)$ be the difference between the complete heat-lifted
+trace and $\Tr(AA^*)$.
+
+% evidence-anchor: proposition-8.1-coherent-same-root-residual
+\subsection*{Proposition 8.1 (exact frozen/nonfrozen split)}
+
+The complete covariance-normal packet is
+\[
+ L_{\rm full}=L_{\rm fr}+\mathfrak R_{\rm coh},      \tag{8.2}
+\]
+where
+\[
+ \boxed{
+ \mathfrak R_{\rm coh}
+ =\operatorname{Re}\langle b+A\xi,R(\xi)\rangle
+  +{1\over2}\|R(\xi)\|^2
+  -{1\over2}\delta\tau(\xi).}                     \tag{8.3}
+\]
+
+\emph{Proof.}
+Expand $\|b+A\xi+R\|^2$ and subtract the frozen packet (5.1).
+\hfill$\square$
+
+After the same-root Taylor/Wick conversion, $\delta\tau$ is precisely the
+complete R-063 forest.  Future feedback belongs in $R$ and its mixed pairing,
+not in an independently paid owner.  Formula (8.3), coherently summed over a
+contraction-connected output cluster, is the minimal unresolved local object.
+
+\section{Direct predictable-baseline source-action normal form}
+
+On an R-104 temporally faithful chart, write
+\[
+ Z_k=S_\pi\xi+\sum_{\ell\le k}S_\ell h_\ell,
+ \qquad Z_0=S_\pi\xi,                               \tag{9.1}
+\]
+and
+\[
+ \Delta_kV=V_J^{\rm ren}(Z_k)-V_J^{\rm ren}(Z_{k-1}),
+ \qquad
+ P_k=\E[\Delta_kV\mid\mathcal F_{k-1}].             \tag{9.2}
+\]
+R-077's complete backward-heat Doob reconstruction retains every fresh-root
+packet, including its R-063 forest, and gives it conditional expectation
+zero.  Since $\E V_J^{\rm ren}(Z_0)=0$, the source action has the exact form
+\[
+ \boxed{
+ \mathcal A_J(h)
+ =\sum_k\E P_k
+  +{3\over20}\E\|Z_K\|_6^6
+  +{9\over20}\E\sum_k\|h_k\|^2.}                  \tag{9.3}
+\]
+
+Equation (9.3) is the direct counterpart of the Gibbs defect after the frozen
+martingale (3.6) is removed.  It proves no lower bound on $\sum_k\E P_k$.
+It does show that a successful argument must retain the terminal sextic once,
+not once per visit, input leaf, or output frequency.
+
+There is one exact subdivision-invariant predictable quantity.  If
+$S_kS_k^*=\Delta C_k$, $\sum_k\Delta C_k=C_J$, and $D$ is deterministic
+positive semidefinite, then
+\[
+ \boxed{
+ \sum_k\|D^{1/2}S_k\|_{\rm HS}^2
+ =\sum_k\Tr(D\Delta C_k)=\Tr(DC_J).}                \tag{9.4}
+\]
+This does not extend automatically to a same-root random $D$.  The scalar
+fixture $D(G)=G^2$, $Q(G)=G^2-1$ gives
+\[
+ \E[D(G)Q(G)]=3-1=2.                                \tag{9.5}
+\]
+
+\section{Termwise adapted second-jet estimates fail}
+
+Let $G\sim N(0,1)$ and
+\[
+ h_M(G)=a\sin(MG),\qquad r_M=e^{-2M^2}.              \tag{10.1}
+\]
+Direct Gaussian calculation gives
+\[
+ \E h_M^2={a^2\over2}(1-r_M),                       \tag{10.2}
+\]
+\[
+ \E(h_M')^2={a^2M^2\over2}(1+r_M),\qquad
+ \E(h_Mh_M'')=-{a^2M^2\over2}(1-r_M),              \tag{10.3}
+\]
+\[
+ \E\{(h_M')^2+h_Mh_M''\}=a^2M^2r_M,               \tag{10.4}
+\]
+and the Gaussian second-order Stein identity gives
+\[
+ \E[h_M^2(G)(G^2-1)]
+ =\E[(h_M^2)'']=2a^2M^2r_M.                         \tag{10.5}
+\]
+Thus the source cost (10.2) stays bounded, while the two terms in (10.3)
+separately approach $\pm a^2M^2/2$.  Their signed sum (10.4) tends to zero.
+Termwise absolute or derivative-square control of the adapted forest is
+therefore impossible from the source cost alone.  This is a method no-go;
+the complete signed second jet remains live.
+
+\section{Pure carrier information is not a diagonal bridge}
+
+For independent $x,y\sim N(0,\Id_d)$ let
+\[
+ z_t=\sqrt{1-t}\,x+\sqrt t\,y,\qquad0<t\le1.       \tag{11.1}
+\]
+Then $z_t$ is standard Gaussian and
+\[
+ \boxed{I(x;z_t)=-{d\over2}\log t.}                 \tag{11.2}
+\]
+Indeed, conditionally on $x$, $z_t$ has covariance $t\Id_d$, and its
+covariance and mean contributions to the averaged Gaussian relative entropy
+are
+\[
+ {d\over2}(t-1-\log t),\qquad {d\over2}(1-t).        \tag{11.3}
+\]
+Their sum is (11.2).  The cost diverges as $t\downarrow0$.  If a root block
+has dimension comparable to $2^{3j}$, even a fixed $t<1$ gives a
+non-summable dimensional cost.  Hence pure carrier KL cannot identify the
+independent and same-root diagonal.  This does not refute a coupled
+heat/covariance/forest interpolation.
+
+\section{A parked convexified Gaussian-divergence route}
+
+Use
+\[
+ \operatorname{div}_\gamma F=\operatorname{div}F-x\cdot F. \tag{12.1}
+\]
+Suppose $\operatorname{div}_\gamma b=-2V$, let $U$ be homogeneous of degree
+six, and set
+\[
+ F=b+{1\over3}\nabla U.                             \tag{12.2}
+\]
+Euler's identity $x\cdot\nabla U=6U$ gives the exact convexification
+\[
+ \boxed{
+ V+U=-{1\over2}\operatorname{div}_\gamma F
+       +{1\over6}\Delta U.}                         \tag{12.3}
+\]
+This identity is useful but does not have the desired exponential sign by
+itself.
+
+To audit the most tempting flow shortcut, let
+$A=-\operatorname{div}_\gamma F$ and follow the inward flow
+$\dot\Psi_s=-F(\Psi_s)$.  Under the usual finite-dimensional smooth
+diffeomorphism hypotheses, the change-of-variables remainder is
+\[
+\begin{aligned}
+ D_t={}&\int_0^t A(\Psi_sX)\dd s\\
+      &-tA(\Psi_tX).
+\end{aligned}
+\tag{12.4}
+\]
+Already for $F(x)=x$, $U=0$, and $A=x^2-1$,
+\[
+ \Psi_sx=e^{-s}x,\qquad
+ D_t=c_tx^2,\qquad
+ c_t={1-(1+2t)e^{-2t}\over2}>0.                     \tag{12.5}
+\]
+Indeed
+\[
+ \E e^{D_t}={1\over\sqrt{1-2c_t}}
+ ={e^t\over\sqrt{1+2t}}
+ =\E e^{-t(X^2-1)}.                                 \tag{12.6}
+\]
+The natural contractive flow therefore produces a positive remainder which
+cannot be discarded for an upper bound.  The negative
+$-(q/6)\Delta U(\Psi_tX)$ term may still help in the production problem, but
+no accepted theorem currently dominates (12.4) with it.  We record the route
+as inconclusive and parked, not as a general flow no-go.
+
+\section{Minimal remaining adapted cluster theorem}
+
+Join two output frequencies when they share a root input, an R-063
+contraction, or an off-diagonal covariance block.  A legal output atom is a
+union of connected components of this graph.  Proposition 6.1 proves that
+arbitrary singleton outputs are illegal; in the worst case the legal cluster
+is the whole root output.
+
+% evidence-anchor: target-13.1-adapted-complete-cluster-matrix-carleson
+\subsection*{Conditional target 13.1 (complete adapted cluster bound)}
+
+A sufficient new theorem would assign to each root its complete
+contraction-closed packet $\mathfrak P_j$, nonnegative allocations
+$\eta_j,\zeta_j$, and deterministic loss $c_j$, such that
+\[
+ \E\left[
+ \mathfrak P_j+\eta_j\mathcal E_j
+ +\zeta_j\mathcal Y_{\operatorname{parent}(j)}
+ \right]\ge-c_j,                                    \tag{13.1}
+\]
+\[
+ \sum_j\eta_j\le{9\over20},\qquad
+ \sum_j\zeta_j\le{3\over20},\qquad
+ \sum_jc_j<\infty.                                  \tag{13.2}
+\]
+The sextic in (13.1) is one unfragmented parent/root payment.
+
+Equivalently, in the direct source-action form, one may prove constants
+$\eta<9/20$, $\zeta<3/20$, and $C<\infty$, uniform in cutoff, chart, and
+representation-preserving subdivision, for which
+\[
+ \sum_k\E P_k^{\rm comp}
+ \ge-\eta\E\sum_k\|h_k\|^2
+     -\zeta\E\|Z_K\|_6^6-C.                         \tag{13.3}
+\]
+Here $P_k^{\rm comp}$ contains the complete heat, covariance trace, mixed
+baseline, future feedback, rational current, all visits, and the full R-063
+forest exactly once.
+
+A determinant-compatible stronger form would prove for every
+contraction-closed cluster $\mathcal C$
+\[
+\begin{aligned}
+ &\log\E\left[
+ e^{-q(\mathfrak P_{j,\mathcal C}
+       +\eta_j\mathcal E_j
+       +\zeta_j\mathcal Y_{\operatorname{parent}(j)})}
+ \mid\mathcal F_{\rm past}\right]\\
+ &\qquad\le {q^2\over4}\|S_{j,\mathcal C}\|_{\mathfrak S_2}^2
+      +r_{j,\mathcal C}.
+\end{aligned}
+\tag{13.4}
+\]
+with a summable matrix-Carleson ledger
+\[
+ \sum_{j,\mathcal C}
+ \{\|S_{j,\mathcal C}\|_{\mathfrak S_2}^2+r_{j,\mathcal C}\}
+ <\infty.                                            \tag{13.5}
+\]
+
+Equations (13.1), (13.3), and (13.4) are targets, not theorems of this note.
+The operations must occur in this order: sum all visits, assemble every input
+convolution coherently at its output, restore the complete forest, and retain
+the terminal sextic once.  Only then may one estimate.
+
+\section{Routes audited in this package}
+
+\begin{enumerate}
+\item Endpoint entropy production: advanced as the exact formulas
+      (2.4)--(2.11), but it returns the unknown endpoint free energy.
+\item Jointly frozen multi-row likelihood: closed by (3.6); one
+      past-measurable fresh-root determinant closes by (5.2).  Their entropy
+      inequalities are exactly saturable.
+\item Global frozen normalisation for progressively predictable future rows:
+      failed by the positive defect (3.12).  Stepwise conditional
+      normalisers remain legal.
+\item Single-output positivity: failed by (6.4).
+\item Independent output determinant normalisation: failed by the extensive
+      slack (7.4)--(7.5); sequential Schur (7.6) survives.
+\item Predictable-baseline direct action: advanced to the exact normal form
+      (9.3); the complete baseline sum remains unbounded.
+\item Termwise adapted forest: failed by (10.2)--(10.5).
+\item Pure carrier KL identification: failed by (11.2).
+\item Convexified Gaussian divergence: exact identity (12.3) advanced, but the
+      naive inward-flow sign-dropping argument is parked by (12.5)--(12.6).
+\end{enumerate}
+
+These verdicts refine the proof route.  None is a counterexample to the
+complete production action or Nelson.
+
+\section{Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: the positive trace allocation makes each output
+packet nonnegative.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Proposition 6.1 gives a strictly negative
+zero-output packet, compensated only by the two nonzero outputs.
+
+\item \textbf{Objection: predictability alone licenses the global frozen
+backward-resolvent determinant, or one may condition on the same-root
+coefficient.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Proposition 3.2 gives a bounded
+$\mathcal F_1$-predictable future row for which the candidate density has mean
+greater than one; its smooth $\tanh$ companion has the same strict defect.
+Same-root conditioning also changes the root covariance: R-082 (8.4) leaves
+the signed posterior covariance defect, and R-093 shows that deterministic
+non-atomic coefficient revelation can have infinite information cost.  Only
+jointly frozen multi-row formulas and one-fresh-root past-measurable
+conditional formulas are proved.
+
+\item \textbf{Objection: the positive entropy production supplies an unused
+root budget.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Equations (2.6)--(2.7) are the two exact
+orientations of the same endpoint difference.  The frozen conditional
+entropy inequality (3.9) is saturable.
+
+\item \textbf{Objection: the R-063 forest may be appended as an additional
+repair to (4.6).}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  R-063 (5.5) is the exact Taylor/Wick
+realization of the trace/coefficient-curvature part already present in
+(4.6).  Appending it duplicates ownership.
+
+\item \textbf{Objection: independent output normalisers are conservative and
+therefore harmless.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Their lost slack is positive and grows
+linearly by (7.5), precisely at the scale where summability is needed.
+
+\item \textbf{Objection: derivative-square bounds can estimate the adapted
+forest term by term.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  The two companions in (10.3) have
+opposite $M^2$ growth under bounded source cost.  Only the signed complete
+second jet cancels.
+
+\item \textbf{Objection: R-063's continuum bounds already imply (13.5).}
+
+\textbf{UPHELD AS UNSUPPORTED.}  The accepted weighted Sobolev convergence
+does not provide the unweighted, adapted, contraction-closed output
+matrix-Carleson sum.  Available absolute dyadic majorants do not establish it.
+
+\item \textbf{Objection: the convexified divergence identity proves a
+monotone transport bound.}
+
+\textbf{UPHELD AS UNSUPPORTED.}  The exact linear fixture (12.5) gives the
+natural inward-flow remainder the opposite sign from the desired discard.
+No production-specific domination of that remainder has been proved.
+\end{enumerate}
+
+\section{Authorities and scope firewall}
+
+The load-bearing authorities are R-063 (balanced Taylor/Wick forest), R-077
+(complete backward-heat Doob packet), R-079 (exact root packet and ownership),
+R-082 (Pauli--Fierz square, heat lift, and covariance criterion), R-093
+(source-union/Gibbs boundary), R-097 and R-100 (terminal covariance debt),
+R-104 (fixed-chart source-action assembly), R-105 (frozen determinant and
+subdivision boundary), and R-106 (endpoint likelihood and coherent-output
+successor).
+
+Proved here are the exact finite-cutoff entropy-production identities, the
+jointly frozen backward-resolvent likelihood martingale, the one-fresh-root
+past-measurable determinant with mixed baseline, and the progressive-future-
+row normalisation no-go; coherent trace allocation, the one-pair output-
+cluster fixture, sequential determinant boundary, predictable-baseline action
+and covariance-mass identities, adapted second-jet and pure carrier-KL method
+no-gos, the convexified divergence identity, and the exact same-root residual.
+
+Not proved here are (13.1), (13.3), (13.4), or any equivalent production
+adapted complete-cluster estimate; $\mathrm{OVERLAP}_{\rm src}$; the
+$q=10/9$ Nelson estimate; cutoff or floor removal; an interacting measure;
+Sector-A closure; or a T5--T7 promotion.  The next proof must establish one
+subdivision-invariant signed complete-cluster/matrix-Carleson inequality, not
+create another visit, leaf, output, forest, entropy, or sextic owner.
+
+\section{Executable verification}
+
+The primary certificate uses exact symbolic Gaussian, Fourier, determinant,
+covariance, second-jet, information, and divergence algebra.  The independent
+certificate imports no symbolic, array, scientific, or primary module: it
+uses exact fractions, a finite-tree Doob reconstruction, hand $2\times2$
+determinants, radial Gaussian moments, and direct Gaussian quadrature.
+
+Run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_verify.py
+\end{verbatim}
+from the repository root.  The integrated verifier reruns both certificates
+and checks the note, PDF, manifest, authority pins, public surfaces,
+exploration ledger, negative registry, and no-overclaim firewall.
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-COHERENT-OUTPUT-CLUSTER-PREDICTABLE-BASELINE-BOUNDARY
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-107
+Status:    T4 ANALYTIC/EXACT/EXECUTED BOUNDARY; NELSON AND SECTOR A OPEN
+Scope:     Finite cutoff, fixed positive floor, q=10/9; jointly frozen
+           multi-row or one-step past-measurable coherent-output Gaussian
+           rows and exact scoped method fixtures.
+Precise statement: exact likelihood-tilt entropy production, frozen
+           backward-resolvent martingale, progressive-row normalisation
+           boundary, and one-step whole-output det2 bound,
+           coherent trace allocation, one-pair output-cluster theorem,
+           sequential determinant boundary, predictable-baseline action,
+           covariance mass, second-jet and carrier-KL method no-gos, and
+           convexified Gaussian-divergence identity.
+Dependencies: A9; R-063, R-077, R-079, R-082, R-093, R-097, R-100,
+              R-104, R-105, R-106.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_verify.py
+Expected output:
+           Primary 80/80; independent 139/139; integrated 239/239;
+           aggregate 458/458 PASS.
+Negative results: NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT;
+           NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET;
+           NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION;
+           NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION;
+           NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE.
+Falsification gate: failure of any entropy, martingale, determinant, trace,
+           cluster, baseline, covariance, second-jet, information,
+           divergence, evidence, hash, PDF, ledger, or scope assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           the adapted complete-cluster/matrix-Carleson inequality is open;
+           no OVERLAP_src, Nelson, removal, interacting-measure, Sector-A,
+           or T5--T7 conclusion follows.
+Next required action: prove one subdivision-invariant adapted complete
+           contraction-closed cluster estimate with all owners retained once.
+\end{verbatim}
+\endgroup

@@ -45,6 +45,11 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT | rowwise predictability does not freeze a backward Gaussian r |  |
+| NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET | output trace allocation does not make singleton packets posi |  |
+| NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION | separate output normalizers lose extensive determinant slack |  |
+| NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION | absolute forest companions create artificial quadratic deriv |  |
+| NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE | standalone carrier information diverges at self-coupling |  |
 | NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY | total thermodynamic integration is the endpoint target |  |
 | NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY | fixed pointwise sextic and Cameron--Martin payments cannot d |  |
 | NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION | exact production 1:2 merge defeats a universal bounded input |  |

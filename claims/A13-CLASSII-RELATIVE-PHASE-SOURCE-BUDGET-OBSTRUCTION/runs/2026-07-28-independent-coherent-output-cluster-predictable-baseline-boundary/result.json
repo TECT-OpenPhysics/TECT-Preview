@@ -1,0 +1,1193 @@
+{
+  "assertion_names": [
+    "independent q source coefficient",
+    "independent q sextic coefficient",
+    "two-atom likelihood normalizer",
+    "two-atom self first mass",
+    "two-atom self second mass",
+    "two-atom forward entropy production",
+    "two-atom reverse entropy production",
+    "two-atom forward KL closed form",
+    "two-atom reverse KL closed form",
+    "independent scalar total determinant",
+    "independent scalar tail determinant",
+    "conditional M2 equals M1 sample 0",
+    "conditional M2 equals M1 sample 1",
+    "conditional M2 equals M1 sample 2",
+    "conditional M2 equals M1 sample 3",
+    "conditional M2 equals M1 sample 4",
+    "independent mean M1",
+    "independent determinant debt positive",
+    "hand adaptive inner precision",
+    "hand adaptive outer precision",
+    "adaptive erf arguments ordered",
+    "adaptive combined closed-form oracle",
+    "adaptive normalization defect bracket",
+    "fixed zero-row normalization guard",
+    "fixed one-row normalization guard",
+    "adaptive piecewise quadrature",
+    "adaptive row mean exceeds one",
+    "hand first determinant",
+    "hand second determinant",
+    "hand combined determinant",
+    "hand first Schur ratio",
+    "hand second Schur ratio",
+    "hand sequential products",
+    "hand independent normalizer ratio",
+    "hand independent normalizer slack",
+    "hand repeated-row ratio",
+    "hand repeated-row slack",
+    "repeated slack slope approach 10",
+    "repeated slack slope approach 100",
+    "repeated slack slope approach 1000",
+    "repeated slack slope approach 10000",
+    "independent radial second moment 0",
+    "independent radial fourth moment 0",
+    "independent zero output negative 0",
+    "independent side output positive 0",
+    "independent cluster cancellation 0",
+    "independent radial second moment 1",
+    "independent radial fourth moment 1",
+    "independent zero output negative 1",
+    "independent side output positive 1",
+    "independent cluster cancellation 1",
+    "independent radial second moment 2",
+    "independent radial fourth moment 2",
+    "independent zero output negative 2",
+    "independent side output positive 2",
+    "independent cluster cancellation 2",
+    "finite-tree endpoint telescope (-1, -1, -1)",
+    "finite-tree endpoint telescope (-1, -1, 1)",
+    "finite-tree endpoint telescope (-1, 1, -1)",
+    "finite-tree endpoint telescope (-1, 1, 1)",
+    "finite-tree endpoint telescope (1, -1, -1)",
+    "finite-tree endpoint telescope (1, -1, 1)",
+    "finite-tree endpoint telescope (1, 1, -1)",
+    "finite-tree endpoint telescope (1, 1, 1)",
+    "finite-tree Doob reconstruction step 1 atom (-1, -1, -1)",
+    "finite-tree Doob reconstruction step 1 atom (-1, -1, 1)",
+    "finite-tree Doob reconstruction step 1 atom (-1, 1, -1)",
+    "finite-tree Doob reconstruction step 1 atom (-1, 1, 1)",
+    "finite-tree Doob reconstruction step 1 atom (1, -1, -1)",
+    "finite-tree Doob reconstruction step 1 atom (1, -1, 1)",
+    "finite-tree Doob reconstruction step 1 atom (1, 1, -1)",
+    "finite-tree Doob reconstruction step 1 atom (1, 1, 1)",
+    "finite-tree Doob reconstruction step 2 atom (-1, -1, -1)",
+    "finite-tree Doob reconstruction step 2 atom (-1, -1, 1)",
+    "finite-tree Doob reconstruction step 2 atom (-1, 1, -1)",
+    "finite-tree Doob reconstruction step 2 atom (-1, 1, 1)",
+    "finite-tree Doob reconstruction step 2 atom (1, -1, -1)",
+    "finite-tree Doob reconstruction step 2 atom (1, -1, 1)",
+    "finite-tree Doob reconstruction step 2 atom (1, 1, -1)",
+    "finite-tree Doob reconstruction step 2 atom (1, 1, 1)",
+    "finite-tree Doob reconstruction step 3 atom (-1, -1, -1)",
+    "finite-tree Doob reconstruction step 3 atom (-1, -1, 1)",
+    "finite-tree Doob reconstruction step 3 atom (-1, 1, -1)",
+    "finite-tree Doob reconstruction step 3 atom (-1, 1, 1)",
+    "finite-tree Doob reconstruction step 3 atom (1, -1, -1)",
+    "finite-tree Doob reconstruction step 3 atom (1, -1, 1)",
+    "finite-tree Doob reconstruction step 3 atom (1, 1, -1)",
+    "finite-tree Doob reconstruction step 3 atom (1, 1, 1)",
+    "finite-tree innovation centered 1-1",
+    "finite-tree innovation centered 2-1",
+    "finite-tree innovation centered 3-1",
+    "finite-tree innovation centered 2-2",
+    "finite-tree innovation centered 3-2",
+    "finite-tree innovation centered 3-3",
+    "finite-tree centered base",
+    "finite-tree predictable action identity",
+    "finite-tree nonvacuous predictable packet",
+    "finite-tree nonvacuous innovation",
+    "independent covariance mass",
+    "independent subdivision mass",
+    "independent same-root random heat guard",
+    "quadrature h2 0",
+    "quadrature dh2 0",
+    "quadrature h hdd 0",
+    "quadrature Hermite pairing 0",
+    "signed companion formula 0",
+    "quadrature h2 1",
+    "quadrature dh2 1",
+    "quadrature h hdd 1",
+    "quadrature Hermite pairing 1",
+    "signed companion formula 1",
+    "quadrature h2 2",
+    "quadrature dh2 2",
+    "quadrature h hdd 2",
+    "quadrature Hermite pairing 2",
+    "signed companion formula 2",
+    "separated companion growth",
+    "signed companion decay",
+    "carrier routes agree 0",
+    "carrier routes agree 1",
+    "carrier routes agree 2",
+    "carrier routes agree 3",
+    "independent quarter bridge",
+    "independent six-dimensional ninth bridge",
+    "carrier diagonal divergence sequence",
+    "independent convexified identity 0",
+    "independent convexified identity 1",
+    "independent convexified identity 2",
+    "independent convexified identity 3",
+    "independent convexified identity 4",
+    "independent flow coefficient positive 0",
+    "independent flow identity 0",
+    "independent flow coefficient positive 1",
+    "independent flow identity 1",
+    "independent flow coefficient positive 2",
+    "independent flow identity 2",
+    "independent flow coefficient positive 3",
+    "independent flow identity 3",
+    "independent flow remainder increases"
+  ],
+  "assertions": [
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "budget",
+      "name": "independent q source coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/6",
+      "expected": "1/6",
+      "group": "budget",
+      "name": "independent q sextic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": "1.0",
+      "group": "entropy",
+      "name": "two-atom likelihood normalizer",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.25",
+      "expected": "0.25",
+      "group": "entropy",
+      "name": "two-atom self first mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.75",
+      "expected": "0.75",
+      "group": "entropy",
+      "name": "two-atom self second mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.13081203594113697",
+      "expected": "0.13081203594113697",
+      "group": "entropy",
+      "name": "two-atom forward entropy production",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.14384103622589048",
+      "expected": "0.14384103622589042",
+      "group": "entropy",
+      "name": "two-atom reverse entropy production",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.13081203594113697",
+      "expected": "0.130812035941137",
+      "group": "entropy",
+      "name": "two-atom forward KL closed form",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.14384103622589042",
+      "expected": "0.14384103622589042",
+      "group": "entropy",
+      "name": "two-atom reverse KL closed form",
+      "status": "PASS"
+    },
+    {
+      "actual": "59/9",
+      "expected": "59/9",
+      "group": "martingale",
+      "name": "independent scalar total determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "49/9",
+      "expected": "49/9",
+      "group": "martingale",
+      "name": "independent scalar tail determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7295665470116376",
+      "expected": "0.7295665470116376",
+      "group": "martingale",
+      "name": "conditional M2 equals M1 sample 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0696680522670237",
+      "expected": "1.0696680522670237",
+      "group": "martingale",
+      "name": "conditional M2 equals M1 sample 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0973065354098013",
+      "expected": "1.0973065354098013",
+      "group": "martingale",
+      "name": "conditional M2 equals M1 sample 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9355878762551385",
+      "expected": "0.9355878762551386",
+      "group": "martingale",
+      "name": "conditional M2 equals M1 sample 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.43801208658599555",
+      "expected": "0.43801208658599555",
+      "group": "martingale",
+      "name": "conditional M2 equals M1 sample 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": "1.0",
+      "group": "martingale",
+      "name": "independent mean M1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.8376213444930276",
+      "expected": ">0",
+      "group": "martingale",
+      "name": "independent determinant debt positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "19/9",
+      "expected": "19/9",
+      "group": "martingale-boundary",
+      "name": "hand adaptive inner precision",
+      "status": "PASS"
+    },
+    {
+      "actual": "29/19",
+      "expected": "29/19",
+      "group": "martingale-boundary",
+      "name": "hand adaptive outer precision",
+      "status": "PASS"
+    },
+    {
+      "actual": "(1.0274023338281628, 0.8735890880367281)",
+      "expected": "inner>outer",
+      "group": "martingale-boundary",
+      "name": "adaptive erf arguments ordered",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.070433115292664",
+      "expected": "1.070433115292664",
+      "group": "martingale-boundary",
+      "name": "adaptive combined closed-form oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.07043311529266405",
+      "expected": "(0.0704,0.0705)",
+      "group": "martingale-boundary",
+      "name": "adaptive normalization defect bracket",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.9999999999999998",
+      "expected": "1.0",
+      "group": "martingale-boundary",
+      "name": "fixed zero-row normalization guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0",
+      "expected": "1.0",
+      "group": "martingale-boundary",
+      "name": "fixed one-row normalization guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.070433115292664",
+      "expected": "1.070433115292664",
+      "group": "martingale-boundary",
+      "name": "adaptive piecewise quadrature",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.070433115292664",
+      "expected": ">1.07",
+      "group": "martingale-boundary",
+      "name": "adaptive row mean exceeds one",
+      "status": "PASS"
+    },
+    {
+      "actual": "19/9",
+      "expected": "19/9",
+      "group": "schur",
+      "name": "hand first determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "29/9",
+      "expected": "29/9",
+      "group": "schur",
+      "name": "hand second determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/81",
+      "expected": "451/81",
+      "group": "schur",
+      "name": "hand combined determinant",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/171",
+      "expected": "451/171",
+      "group": "schur",
+      "name": "hand first Schur ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "451/261",
+      "expected": "451/261",
+      "group": "schur",
+      "name": "hand second Schur ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(451, 81), Fraction(451, 81))",
+      "expected": "451/81",
+      "group": "schur",
+      "name": "hand sequential products",
+      "status": "PASS"
+    },
+    {
+      "actual": "551/451",
+      "expected": "551/451",
+      "group": "schur",
+      "name": "hand independent normalizer ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.10013373482511805",
+      "expected": ">0",
+      "group": "schur",
+      "name": "hand independent normalizer slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "625/297",
+      "expected": "625/297",
+      "group": "schur",
+      "name": "hand repeated-row ratio",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.3720097554668509",
+      "expected": ">0",
+      "group": "schur",
+      "name": "hand repeated-row slack",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.15356871551994336",
+      "expected": "(0,0.2554128118829953)",
+      "group": "schur",
+      "name": "repeated slack slope approach 10",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.23433984343112696",
+      "expected": "(0,0.2554128118829953)",
+      "group": "schur",
+      "name": "repeated slack slope approach 100",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.25216091735949653",
+      "expected": "(0,0.2554128118829953)",
+      "group": "schur",
+      "name": "repeated slack slope approach 1000",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2549725606203644",
+      "expected": "(0,0.2554128118829953)",
+      "group": "schur",
+      "name": "repeated slack slope approach 10000",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "cluster",
+      "name": "independent radial second moment 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "1/2",
+      "group": "cluster",
+      "name": "independent radial fourth moment 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/4",
+      "expected": "-1/4",
+      "group": "cluster",
+      "name": "independent zero output negative 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/8",
+      "expected": "1/8",
+      "group": "cluster",
+      "name": "independent side output positive 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "cluster",
+      "name": "independent cluster cancellation 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/4",
+      "expected": "3/4",
+      "group": "cluster",
+      "name": "independent radial second moment 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/8",
+      "expected": "9/8",
+      "group": "cluster",
+      "name": "independent radial fourth moment 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-9/16",
+      "expected": "-9/16",
+      "group": "cluster",
+      "name": "independent zero output negative 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "9/32",
+      "expected": "9/32",
+      "group": "cluster",
+      "name": "independent side output positive 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "cluster",
+      "name": "independent cluster cancellation 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "7/6",
+      "expected": "7/6",
+      "group": "cluster",
+      "name": "independent radial second moment 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "49/18",
+      "expected": "49/18",
+      "group": "cluster",
+      "name": "independent radial fourth moment 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-49/36",
+      "expected": "-49/36",
+      "group": "cluster",
+      "name": "independent zero output negative 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "49/72",
+      "expected": "49/72",
+      "group": "cluster",
+      "name": "independent side output positive 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "cluster",
+      "name": "independent cluster cancellation 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-304787843489/2520473760000",
+      "expected": "-304787843489/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (-1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-46207831169/2520473760000",
+      "expected": "-46207831169/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (-1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "40350054511/2520473760000",
+      "expected": "40350054511/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (-1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-117073169/2520473760000",
+      "expected": "-117073169/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (-1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "59513311/2520473760000",
+      "expected": "59513311/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "233740917631/2520473760000",
+      "expected": "233740917631/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "905246770831/2520473760000",
+      "expected": "905246770831/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "4418738767951/2520473760000",
+      "expected": "4418738767951/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree endpoint telescope (1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-119443/270000",
+      "expected": "-119443/270000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (-1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1033/16875",
+      "expected": "-1033/16875",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (-1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-5423/270000",
+      "expected": "-5423/270000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (-1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "73/67500",
+      "expected": "73/67500",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (-1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-13/270000",
+      "expected": "-13/270000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "5551/135000",
+      "expected": "5551/135000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "27607/270000",
+      "expected": "27607/270000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "78761/135000",
+      "expected": "78761/135000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 1 atom (1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "6557903/13122000",
+      "expected": "6557903/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (-1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "922373/13122000",
+      "expected": "922373/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (-1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "307463/13122000",
+      "expected": "307463/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (-1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-14467/13122000",
+      "expected": "-14467/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (-1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "3497/13122000",
+      "expected": "3497/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "1103027/13122000",
+      "expected": "1103027/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "2365937/13122000",
+      "expected": "2365937/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "11111867/13122000",
+      "expected": "11111867/13122000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 2 atom (1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-9987087461/56010528000",
+      "expected": "-9987087461/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (-1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1535264501/56010528000",
+      "expected": "-1535264501/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (-1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "709260971/56010528000",
+      "expected": "709260971/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (-1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1424389/56010528000",
+      "expected": "-1424389/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (-1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-10907429/56010528000",
+      "expected": "-10907429/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (1, -1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1817036789/56010528000",
+      "expected": "-1817036789/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (1, -1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "4290751499/56010528000",
+      "expected": "4290751499/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (1, 1, -1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "18086436059/56010528000",
+      "expected": "18086436059/56010528000",
+      "group": "baseline",
+      "name": "finite-tree Doob reconstruction step 3 atom (1, 1, 1)",
+      "status": "PASS"
+    },
+    {
+      "actual": "{Fraction(0, 1)}",
+      "expected": "{Fraction(0, 1)}",
+      "group": "baseline",
+      "name": "finite-tree innovation centered 1-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "{Fraction(0, 1)}",
+      "expected": "{Fraction(0, 1)}",
+      "group": "baseline",
+      "name": "finite-tree innovation centered 2-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "{Fraction(0, 1)}",
+      "expected": "{Fraction(0, 1)}",
+      "group": "baseline",
+      "name": "finite-tree innovation centered 3-1",
+      "status": "PASS"
+    },
+    {
+      "actual": "{Fraction(0, 1)}",
+      "expected": "{Fraction(0, 1)}",
+      "group": "baseline",
+      "name": "finite-tree innovation centered 2-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "{Fraction(0, 1)}",
+      "expected": "{Fraction(0, 1)}",
+      "group": "baseline",
+      "name": "finite-tree innovation centered 3-2",
+      "status": "PASS"
+    },
+    {
+      "actual": "{Fraction(0, 1)}",
+      "expected": "{Fraction(0, 1)}",
+      "group": "baseline",
+      "name": "finite-tree innovation centered 3-3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "baseline",
+      "name": "finite-tree centered base",
+      "status": "PASS"
+    },
+    {
+      "actual": "655877909551/2520473760000",
+      "expected": "655877909551/2520473760000",
+      "group": "baseline",
+      "name": "finite-tree predictable action identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "nonzero",
+      "expected": "nonzero",
+      "group": "baseline",
+      "name": "finite-tree nonvacuous predictable packet",
+      "status": "PASS"
+    },
+    {
+      "actual": "nonzero",
+      "expected": "nonzero",
+      "group": "baseline",
+      "name": "finite-tree nonvacuous innovation",
+      "status": "PASS"
+    },
+    {
+      "actual": "23",
+      "expected": "23",
+      "group": "covariance",
+      "name": "independent covariance mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "14",
+      "expected": "14",
+      "group": "covariance",
+      "name": "independent subdivision mass",
+      "status": "PASS"
+    },
+    {
+      "actual": "2",
+      "expected": "2",
+      "group": "covariance",
+      "name": "independent same-root random heat guard",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6755193099713964",
+      "expected": "0.6755193099713963",
+      "group": "second_jet",
+      "name": "quadrature h2 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.8869806900286038",
+      "expected": "0.8869806900286038",
+      "group": "second_jet",
+      "name": "quadrature dh2 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-0.6755193099713964",
+      "expected": "-0.6755193099713963",
+      "group": "second_jet",
+      "name": "quadrature h hdd 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.4229227601144147",
+      "expected": "0.4229227601144147",
+      "group": "second_jet",
+      "name": "quadrature Hermite pairing 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.2114613800572075",
+      "expected": "0.21146138005720735",
+      "group": "second_jet",
+      "name": "signed companion formula 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7809879198219511",
+      "expected": "0.7809879198219511",
+      "group": "second_jet",
+      "name": "quadrature h2 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.126048320712196",
+      "expected": "3.126048320712195",
+      "group": "second_jet",
+      "name": "quadrature dh2 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-3.1239516792878046",
+      "expected": "-3.1239516792878046",
+      "group": "second_jet",
+      "name": "quadrature h hdd 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.004193282848781397",
+      "expected": "0.004193282848781398",
+      "group": "second_jet",
+      "name": "quadrature Hermite pairing 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.0020966414243903664",
+      "expected": "0.002096641424390699",
+      "group": "second_jet",
+      "name": "signed companion formula 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.7812499999999901",
+      "expected": "0.7812499999999901",
+      "group": "second_jet",
+      "name": "quadrature h2 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "12.500000000000158",
+      "expected": "12.500000000000158",
+      "group": "second_jet",
+      "name": "quadrature dh2 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-12.499999999999842",
+      "expected": "-12.499999999999842",
+      "group": "second_jet",
+      "name": "quadrature h hdd 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.33211075347023e-13",
+      "expected": "6.332082774547088e-13",
+      "group": "second_jet",
+      "name": "quadrature Hermite pairing 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.161915174132446e-13",
+      "expected": "3.166041387273544e-13",
+      "group": "second_jet",
+      "name": "signed companion formula 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "7812.5",
+      "expected": ">1000",
+      "group": "second_jet",
+      "name": "separated companion growth",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.1623383230261524e-85",
+      "expected": "<1e-80",
+      "group": "second_jet",
+      "name": "signed companion decay",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6931471805599453",
+      "expected": "0.6931471805599453",
+      "group": "carrier",
+      "name": "carrier routes agree 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.1588830833596715",
+      "expected": "4.1588830833596715",
+      "group": "carrier",
+      "name": "carrier routes agree 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.591673732008658",
+      "expected": "6.591673732008658",
+      "group": "carrier",
+      "name": "carrier routes agree 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "4.1588830833596715",
+      "expected": "4.158883083359672",
+      "group": "carrier",
+      "name": "carrier routes agree 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.6931471805599453",
+      "expected": "0.6931471805599453",
+      "group": "carrier",
+      "name": "independent quarter bridge",
+      "status": "PASS"
+    },
+    {
+      "actual": "6.591673732008658",
+      "expected": "6.591673732008658",
+      "group": "carrier",
+      "name": "independent six-dimensional ninth bridge",
+      "status": "PASS"
+    },
+    {
+      "actual": "(6.907755278982137, 13.815510557964274, 20.72326583694641, 27.631021115928547, 34.538776394910684, 41.44653167389282, 48.35428695287496)",
+      "expected": "strictly increasing",
+      "group": "carrier",
+      "name": "carrier diagonal divergence sequence",
+      "status": "PASS"
+    },
+    {
+      "actual": "28529/4928",
+      "expected": "28529/4928",
+      "group": "divergence",
+      "name": "independent convexified identity 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "-30416/280665",
+      "expected": "-30416/280665",
+      "group": "divergence",
+      "name": "independent convexified identity 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "-1/5",
+      "expected": "-1/5",
+      "group": "divergence",
+      "name": "independent convexified identity 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "-16547/240625",
+      "expected": "-16547/240625",
+      "group": "divergence",
+      "name": "independent convexified identity 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "3024913/225280",
+      "expected": "3024913/225280",
+      "group": "divergence",
+      "name": "independent convexified identity 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.008761548153210952",
+      "expected": ">0",
+      "group": "divergence",
+      "name": "independent flow coefficient positive 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0088784028812103",
+      "expected": "1.0088784028812103",
+      "group": "divergence",
+      "name": "independent flow identity 0",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.13212055882855767",
+      "expected": ">0",
+      "group": "divergence",
+      "name": "independent flow coefficient positive 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.165821990798562",
+      "expected": "1.165821990798562",
+      "group": "divergence",
+      "name": "independent flow identity 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.29699707514508095",
+      "expected": ">0",
+      "group": "divergence",
+      "name": "independent flow coefficient positive 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.569400745394098",
+      "expected": "1.569400745394098",
+      "group": "divergence",
+      "name": "independent flow identity 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.45421090277816456",
+      "expected": ">0",
+      "group": "divergence",
+      "name": "independent flow coefficient positive 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "3.304486345353669",
+      "expected": "3.304486345353669",
+      "group": "divergence",
+      "name": "independent flow identity 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "[0.008761548153210952, 0.13212055882855767, 0.29699707514508095, 0.45421090277816456]",
+      "expected": "strictly increasing",
+      "group": "divergence",
+      "name": "independent flow remainder increases",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 139,
+  "assertions_total": 139,
+  "derived": {
+    "adaptive_row_mean": "1.070433115292664",
+    "adaptive_row_normalization_defect": "0.07043311529266405",
+    "carrier_six_dimensional_ninth": "6.591673732008658",
+    "covariance_mass": "23",
+    "finite_tree_expected_baseline": "655877909551/2520473760000",
+    "independent_normalizer_ratio": "551/451",
+    "matrix_combined_determinant": "451/81",
+    "q": "10/9",
+    "repeated_row_ratio": "625/297",
+    "scalar_tail_determinant": "49/9",
+    "scalar_total_determinant": "59/9",
+    "sextic_budget": "3/20",
+    "source_budget": "9/20",
+    "two_atom_forward_kl": "0.13081203594113697",
+    "two_atom_reverse_kl": "0.14384103622589042"
+  },
+  "results": {
+    "derived": {
+      "adaptive_row_mean": "1.070433115292664",
+      "adaptive_row_normalization_defect": "0.07043311529266405",
+      "carrier_six_dimensional_ninth": "6.591673732008658",
+      "covariance_mass": "23",
+      "finite_tree_expected_baseline": "655877909551/2520473760000",
+      "independent_normalizer_ratio": "551/451",
+      "matrix_combined_determinant": "451/81",
+      "q": "10/9",
+      "repeated_row_ratio": "625/297",
+      "scalar_tail_determinant": "49/9",
+      "scalar_total_determinant": "59/9",
+      "sextic_budget": "3/20",
+      "source_budget": "9/20",
+      "two_atom_forward_kl": "0.13081203594113697",
+      "two_atom_reverse_kl": "0.14384103622589042"
+    },
+    "route_verdicts": {
+      "adapted_complete_cluster_matrix_carleson": "open",
+      "convexified_divergence_flow": "parked-unfavourable-sign",
+      "endpoint_entropy_production": "exact-identity-not-free-energy-bound",
+      "independent_output_determinant_normalization": "failed-positive-extensive-slack",
+      "jointly_frozen_whole_output": "closed-by-gaussian-likelihood",
+      "nelson": "open",
+      "overlap_src": "open",
+      "predictable_baseline_action": "exact-reduction",
+      "predictable_covariance_mass": "exact-subdivision-invariant",
+      "progressive_future_row_backward_resolvent": "failed-positive-normalization-defect",
+      "pure_carrier_kl_diagonal_bridge": "failed-dimensional-divergence",
+      "sector_a": "open",
+      "single_output_frequency_positivity": "failed-exact-moment-fixture",
+      "termwise_adapted_second_jet": "failed-quadratic-growth"
+    }
+  },
+  "results_sha256": "e2c8e77e36871d5a8a39097abd8d9095759472eebc7653a82788e35ba6ab26bd",
+  "route_verdicts": {
+    "adapted_complete_cluster_matrix_carleson": "open",
+    "convexified_divergence_flow": "parked-unfavourable-sign",
+    "endpoint_entropy_production": "exact-identity-not-free-energy-bound",
+    "independent_output_determinant_normalization": "failed-positive-extensive-slack",
+    "jointly_frozen_whole_output": "closed-by-gaussian-likelihood",
+    "nelson": "open",
+    "overlap_src": "open",
+    "predictable_baseline_action": "exact-reduction",
+    "predictable_covariance_mass": "exact-subdivision-invariant",
+    "progressive_future_row_backward_resolvent": "failed-positive-normalization-defect",
+    "pure_carrier_kl_diagonal_bridge": "failed-dimensional-divergence",
+    "sector_a": "open",
+    "single_output_frequency_positivity": "failed-exact-moment-fixture",
+    "termwise_adapted_second_jet": "failed-quadratic-growth"
+  },
+  "schema": "tect/a13-coherent-output-cluster-predictable-baseline-boundary-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

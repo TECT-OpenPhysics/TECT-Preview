@@ -6,6 +6,11 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT](#ng-2026-07-28-a13-predictable-multirow-backward-resolvent) | substitute rowwise predictable future Gaussian maps into the jointly frozen global backward-resolvent determinant and treat the result as a density martingale | with `A1=1` and bounded `A2=1_{|xi1|>1}`, the candidate total mass is `erf(sqrt(19/18))+erfc(sqrt(29/38))=1.070433115292664...>1`; a bounded smooth `epsilon tanh(xi1)` row has the same strict small-amplitude defect. Jointly frozen multi-row and one-fresh-root past-measurable formulas remain exact |
+| [NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET](#ng-2026-07-28-a13-single-output-frequency-packet) | prove positivity or an independent signed estimate at each coherent output frequency after allocating the trace outputwise | for `X=a cos x+b sin x`, `J=X dX`, the half-weighted packets have expectations `-sigma^4/4` at output zero and `+sigma^4/8` at each of outputs `+/-2`; only the contraction-connected cluster `{0,+/-2}` cancels. This is not a complete-root or Nelson counterexample |
+| [NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION](#ng-2026-07-28-a13-independent-output-determinant-normalization) | normalize coherent output rows independently and multiply their Gaussian determinant estimates | for `m` repeated rank-one PSD rows the lost slack is `[m log(1+q lambda)-log(1+qm lambda)]/2`, whose value divided by `m` tends to `log(1+q lambda)/2>0`. Sequential Schur increments retain the exact whole-output determinant |
+| [NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION](#ng-2026-07-28-a13-adapted-second-jet-termseparation) | bound the complete adapted R-063 second-jet/forest companions term by term through source cost and absolute derivative squares | for `h(G)=a sin(MG)`, the source cost stays bounded while `E(h')^2` and `E(hh'')` grow as `+/-a^2M^2/2`; their signed sum is only `a^2M^2 exp(-2M^2)`. The complete signed forest remains live |
+| [NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE](#ng-2026-07-28-a13-pure-carrier-kl-diagonal-bridge) | identify independent and self-coupled Gaussian carriers through a standalone relative-entropy payment | for `z_t=sqrt(1-t)x+sqrt(t)y`, `I(x;z_t)=-(d/2)log t`; it diverges at the diagonal and is non-summable across growing dyadic root dimension. Coupled heat/covariance/forest interpolation is not excluded |
 | [NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY](#ng-2026-07-28-a13-total-a9-time-integration-identity) | use the exact total A9 thermodynamic integral itself as the missing uniform estimate | `(q/2) int_0^1 E_(nu_t) B_t dt=Phi_1-Phi_0` is exactly the unknown self-coupled versus controlled endpoint difference. R-093 rewrites the same equality in source coordinates; near minimizers leave no independent entropy reserve. A new root-local bound is still required |
 | [NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY](#ng-2026-07-28-a13-pointwise-endpoint-likelihood-coercivity) | upper-bound the endpoint likelihood pointwise by fixed sextic plus Cameron--Martin payments | the constant active-doublet production ray has likelihood at least `c A^2 N`; taking `A=sigma N^(1/4)` with small fixed `sigma` makes likelihood minus any fixed sextic/CM payment diverge. The field is Gaussian-null, so this is a pointwise-method no-go, not a Nelson counterexample |
 | [NG-2026-07-28-A13-PRODUCTION-INPUT-MODE-MERGE-TENSORIZATION](#ng-2026-07-28-a13-production-input-mode-merge-tensorization) | reassemble deterministic production input leaves through a universal bounded inclusion--exclusion raw covariance-normal correction, or repair it by leafwise sextic splitting | an exact same-root `1:2` Fourier merge has raw correction `<=-c lambda^4+O(lambda^2)` and sextic merge `-15r^2(9r^2+2)/32<0`. This does not refute the complete coherent output square, complete action, or Nelson |
@@ -138,6 +143,109 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-predictable-multirow-backward-resolvent"></a>
+### NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT -- rowwise predictability does not freeze a backward Gaussian recursion
+
+**Failure mode.** Insert future rows that are merely measurable with respect
+to earlier revealed roots into the one global covariance, determinant, and
+backward resolvent of the jointly frozen Gaussian likelihood, and assert that
+the resulting process starts at mass one.
+
+**Evidence.** Let `xi1,xi2` be independent standard Gaussians, `q=10/9`,
+`A1=1`, and `A2=1_{|xi1|>1}`. After integrating the second root, the candidate
+first density has precision `19/9` on `|xi1|<=1` and `29/19` on
+`|xi1|>1`. Its exact total mass is
+`erf(sqrt(19/18))+erfc(sqrt(29/38))`, which is strictly greater than one
+because `19/18>29/38`; independently evaluated, it is
+`1.070433115292664...`. The discontinuity is not essential: for
+`A2=epsilon tanh(xi1)`, the derivative with respect to `epsilon^2` at zero is
+`(q^2/2) Cov_(N(0,(1+q)^-1))(X^2,tanh^2 X)>0` by strict monotone covariance.
+
+**Consequence.** The multi-row backward-resolvent density martingale is valid
+only when all rows are jointly frozen before the roots are integrated.
+Separately, the whole-output `det2` formula remains exact for one fresh root
+with a past-measurable map and baseline, and products of actual stepwise
+conditional normalizers remain legal. This is not a complete-action,
+`OVERLAP_src`, Nelson, or Sector-A counterexample.
+
+<a id="ng-2026-07-28-a13-single-output-frequency-packet"></a>
+### NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET -- output trace allocation does not make singleton packets positive
+
+**Failure mode.** Prove positivity, or multiply signed estimates, separately
+for every output frequency after the complete nonlinear current has been
+formed and its coefficient trace has been allocated outputwise.
+
+**Evidence.** R-107 Proposition 6.1 takes
+`X=a cos x+b sin x`, with independent centred Gaussian coefficients of
+variance `sigma^2`, and `J=X dX`. The only current outputs are `+/-2`, while
+the independent-copy trace also has output zero. With the physical outer
+factor one half, the expected packets are `-sigma^4/4` at zero and
+`+sigma^4/8` at each side output. Their sum cancels exactly. The complete
+cluster packet is `|z|^4-sigma^2|z|^2`, has mean zero, and has infimum
+`-sigma^4/4`.
+
+**Consequence.** A legal signed atom must be closed under the covariance and
+Wick contractions joining its outputs; in the worst case it is the entire
+root output. This is not a negative complete-root packet, production-action,
+`OVERLAP_src`, or Nelson example.
+
+<a id="ng-2026-07-28-a13-independent-output-determinant-normalization"></a>
+### NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION -- separate output normalizers lose extensive determinant slack
+
+**Failure mode.** Replace the coherent whole-output determinant by the
+product of independently normalized row or output determinants.
+
+**Evidence.** For positive semidefinite blocks,
+`log det(I+q sum T_a)<=sum log det(I+qT_a)`. With `m` repeated rank-one blocks
+`lambda P`, the lost normalizing slack is exactly
+`S_m=[m log(1+q lambda)-log(1+qm lambda)]/2`, and
+`S_m/m -> log(1+q lambda)/2>0`. The independent primary and hand `2x2`
+certificates also verify the noncommuting determinant ratios
+`451/171`, `451/261`, and the positive slack ratio `551/451`.
+
+**Consequence.** Independent normalization is not a summable conservative
+replacement. The sequential Schur determinant identity remains exact and is
+mandatory. This fixture is positive-semidefinite Gaussian algebra, not a
+production or Nelson counterexample.
+
+<a id="ng-2026-07-28-a13-adapted-second-jet-termseparation"></a>
+### NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION -- absolute forest companions create artificial quadratic derivative cost
+
+**Failure mode.** Estimate the adapted second-jet/R-063 forest companions
+term by term, using absolute values or derivative squares paid only by the
+source cost.
+
+**Evidence.** For `G~N(0,1)` and `h_M(G)=a sin(MG)`, R-107 proves
+`E h_M^2=(a^2/2)(1-e^(-2M^2))`, while
+`E(h_M')^2=(a^2M^2/2)(1+e^(-2M^2))` and
+`E(h_Mh_M'')=-(a^2M^2/2)(1-e^(-2M^2))`. The separated terms grow as
+`+/-a^2M^2/2`, but their signed sum is
+`a^2M^2e^(-2M^2)` and tends to zero. Direct Gaussian quadrature independently
+checks the formulas.
+
+**Consequence.** Source cost cannot control either separated derivative
+companion uniformly. The complete signed second jet and complete R-063 forest
+are not refuted; they must be retained before estimation.
+
+<a id="ng-2026-07-28-a13-pure-carrier-kl-diagonal-bridge"></a>
+### NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE -- standalone carrier information diverges at self-coupling
+
+**Failure mode.** Transfer the independent-carrier determinant estimate to
+the self-coupled diagonal through a standalone relative-entropy payment for
+identifying the two Gaussian carriers.
+
+**Evidence.** If `x,y` are independent standard Gaussians in dimension `d`
+and `z_t=sqrt(1-t)x+sqrt(t)y`, then R-107 proves exactly
+`I(x;z_t)=-(d/2)log t`. The same value is recovered from the conditional
+covariance and mean KL terms. It diverges as `t` tends to zero and, for any
+fixed `t<1`, grows linearly with dimension; dyadic production root dimensions
+grow like `2^(3j)`.
+
+**Consequence.** Pure carrier entropy cannot be the missing diagonal bridge.
+A coupled heat, covariance-debt, complete-forest, or actual-Gibbs estimate is
+not excluded. No complete-action, Nelson, or Sector-A counterexample is
+asserted.
 
 <a id="ng-2026-07-28-a13-total-a9-time-integration-identity"></a>
 ### NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY -- total thermodynamic integration is the endpoint target

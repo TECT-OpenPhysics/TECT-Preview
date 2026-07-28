@@ -5,6 +5,14 @@ not pillar counts.
 
 ---
 
+## [Correct R-107 predictable multi-row likelihood scope] - 2026-07-28
+
+Final adversarial review corrected the initial R-107 wording. The multi-row backward-resolvent density martingale requires all output rows to be jointly frozen before the roots are integrated. Rowwise predictability does not suffice: for A1=1 and A2=1_{|xi1|>1}, the candidate mass is erf(sqrt(19/18))+erfc(sqrt(29/38))=1.070433115292664...>1; a bounded smooth tanh companion has a strict small-amplitude defect. The one-fresh-root whole-output det2 formula with a past-measurable map and baseline remains exact, as do the direct predictable-baseline action, trace allocation, and all other scoped R-107 identities. EXP-000284 supersedes the overbroad part of EXP-000277. The adapted complete-cluster bound, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open.
+
+## [R-107 coherent-output cluster and predictable-baseline boundary] - 2026-07-28
+
+Accepted R-107 at T4. The fixed/predictable coherent-output Gaussian packet closes by an exact likelihood-tilt entropy identity, backward-resolvent martingale, whole-output det2 estimate with mixed baseline, and output trace allocation. The direct source action is reduced exactly to the complete predictable-baseline sum plus one terminal sextic and one source-energy payment. Exact fixtures show that singleton output atoms, independent output normalizers, termwise adapted second-jet estimates, and a pure carrier-KL diagonal bridge fail. The adapted same-root complete contraction-closed cluster or matrix-Carleson bound, OVERLAP_src, Nelson, removals, interacting-measure construction, and Sector A remain open. EXP-000276--EXP-000283 preserve the route decisions; the eleven-page PDF passed full Poppler visual QA.
+
 ## [R-106 Gibbs endpoint likelihood and production merge boundary] - 2026-07-28
 
 R-106 proves the exact actual-Gibbs endpoint likelihood, dual KL, variational, thermodynamic-integration, and production radial Fierz identities. It records that total time integration alone is circular, and retires pointwise endpoint-likelihood coercivity plus the tested bounded raw input-mode production merge and leafwise sextic repairs. The complete coherent output-frequency packet is an identified candidate only; the equivalent direct source-action route, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open. R-105 is immutably reissued as v1.1 with top-shell coefficient 3L^3/64 and physical radius N=2^J; its 3/t ratio, verdicts, and tier are unchanged.

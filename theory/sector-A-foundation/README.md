@@ -85,6 +85,20 @@ repair. The complete coherent output-frequency square from R-082 is the
 prioritized legal candidate coordinate, not a proved or unique theorem; the
 direct complete source-action route remains live. Uniform `OVERLAP_src`,
 Nelson, removals, the interacting measure, and Sector A remain open.
+R-107 closes the coherent-output likelihood only for jointly frozen multi-row
+maps and closes the whole-output determinant for one fresh root with a past-
+measurable map and mixed baseline. Rowwise predictability does not license one
+global frozen backward resolvent: an exact bounded two-root fixture has mass
+`1.070433115292664...>1`, and a smooth `tanh` companion has the same strict
+small-amplitude defect. Positive trace allocation and the complete direct
+predictable-baseline action normal form are exact. Output singletons,
+independent row normalizers, termwise adapted second jets, and a pure carrier-
+KL diagonal bridge are retired. The remaining theorem is a subdivision-
+invariant same-root adapted contraction-closed cluster or equivalent matrix-
+Carleson lower bound with every heat, trace, baseline, future-feedback,
+rational, forest, and terminal-sextic owner retained once. Uniform
+`OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
+open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the
