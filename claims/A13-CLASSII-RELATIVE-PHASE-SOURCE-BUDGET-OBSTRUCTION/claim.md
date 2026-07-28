@@ -880,6 +880,33 @@ the following structural results and proof-architecture boundaries hold.
     matrix-Carleson, bound with all owners retained once. `OVERLAP_src`,
     Nelson, removals, an interacting measure, and Sector A remain open; tier
     stays T4.
+51. `A13-CLASSII-COMPLETE-CLUSTER-QUOTIENT-CARLESON-FRONTIER` is R-108. It
+    first separates the historical weighted R-085 Cartan contract from the
+    exact R-084 target: R-088's actual sufficient bridge is unweighted and
+    needs only positive spatial gain, but its sequential production estimate
+    remains open. The historical rational `F_6.5` and visitwise fixed-chart
+    `K_R` change sign under a representation-preserving subdivision, whereas
+    the complete endpoint is invariant. The complete endpoint has an exact
+    conditional mean/covariance identity and an exact `q=10/9` Cameron--
+    Martin minimization; the surviving mean and covariance debts have no
+    sign. Every contraction-closed output cluster likewise has an exact
+    signed conditional normal form coupling its mean square to the
+    covariance/trace defect. On the exact one-pair fixture, averaging the
+    covariance before the Hilbert--Schmidt square supplies `3/32` against the
+    required `1/4` leading coefficient, while square-before-average supplies
+    `5/16` and remains viable. An oscillatory future-feedback selector has
+    bounded source energy and sextic but an unbounded positive tangent square;
+    its complete signed second jet cancels. Thus a bare average-first ledger
+    fails unless its explicit nonlinear/sextic remainder tradeoff is paid;
+    square-before-average remains viable only on the one-pair fixture. Only an
+    absolute arbitrary-selector future-feedback PSD/Carleson ledger paid from
+    source energy and one terminal sextic is retired, not every PSD
+    construction or the signed complete source action. The nonvacuous successor must prove a cutoff-,
+    chart-, control-, and subdivision-uniform complete-cluster lower bound, or
+    a legally normalized square-before-average conditional determinant that
+    implies it. `EXP-000285--EXP-000290` preserve the successful and failed
+    routes. `OVERLAP_src`, Nelson, removals, an interacting measure, and
+    Sector A remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -937,6 +964,7 @@ is a scoped T4 subproof and does not promote A13.
 | Cartan/rational subdivision and static-source boundary | Common-root complete-heat endpoint quotient, exact rational labelled-owner sign flip with invariant complete endpoint, generic A9 and critical-Young no-gos, one-pair predictable-source determinant bound, and cross-mode factorization obstruction | T4 analytic/exact/executed advance and method boundary; exact source-action/relative-bracket theorem, Nelson, removals, measure construction, and Sector A remain open |
 | Gibbs endpoint likelihood / production input-merge boundary | Exact endpoint likelihood, dual KL and thermodynamic identities; pointwise likelihood no-go; exact radial Fierz coefficient; unbounded 1:2 raw input merge and leafwise sextic boundary; coherent output-frequency candidate coordinate | T4 analytic/exact/executed boundary; root-local coherent-output/source-action estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Coherent output cluster / predictable-baseline boundary | Exact likelihood-tilt entropy production, jointly frozen backward-resolvent martingale, one-fresh-root past-measurable whole-output determinant, rowwise-predictable global-normalizer no-go, output trace allocation and singleton-output no-go, sequential determinant boundary, direct predictable-baseline action, covariance-mass invariance, adapted second-jet and carrier-KL no-gos, and parked convexified-divergence route | T4 analytic/exact/executed boundary; adapted complete-cluster/matrix-Carleson estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Complete-cluster quotient / covariance-order / Carleson frontier | Historical-versus-direct Cartan contract audit; exact rational subdivision quotient; quotient-safe endpoint conditional identity and CM minimization; complete-cluster signed normal form; bare average-before-square deficit with explicit repair tradeoff; absolute arbitrary-selector future-feedback HS/PSD one-sextic no-go; exact `q=10/9` budget | T4 analytic/exact/executed synthesis and method boundary; square-before-average remains viable only on one fixture, while the uniform signed complete-cluster estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1241,26 +1269,32 @@ Current subordinate order:
     the exact complete predictable-baseline sum plus one terminal sextic and
     one source payment. The remaining theorem is the subdivision-invariant
     adapted contraction-closed cluster or matrix-Carleson lower bound.
+    R-108 fixes the quotient and order constraints of that route: use the
+    complete endpoint, keep the conditional mean square coupled to the signed
+    covariance/trace defect, and, for a bare determinant ledger, square each
+    realized legal cluster covariance before the outer average. An average-
+    first route requires the explicit nonlinear/sextic remainder tradeoff;
+    an absolute arbitrary-selector future-feedback PSD ledger cannot be paid
+    only by source energy and one terminal sextic. This does not prove the
+    cutoff/chart/control/subdivision-uniform signed complete-cluster bound.
 
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_verify.py
 ```
 
 Expected output:
 
-- primary `80/80`;
-- standard-library independent `139/139`;
-- manifest-pinned integrated `239/239` and aggregate `458/458` PASS;
-- exact entropy-production and root-martingale identities, jointly frozen
-  backward-resolvent likelihood, one-fresh-root predictable whole-output
-  determinant, positive trace allocation, adaptive multi-row normalization
-  boundary, contraction-connected cluster and sequential/global determinant
-  boundary, complete predictable-baseline action normal form, deterministic
-  covariance-mass identity, scoped method no-gos, PDF/surface contracts, and
-  T4 firewalls;
-- explicit preservation of the open adapted same-root complete-cluster,
+- primary `66/66`;
+- standard-library independent `90/90`;
+- manifest-pinned integrated `230/230` and aggregate `386/386` PASS;
+- exact historical/direct Schur constants, subdivision-owner table and
+  quotient cancellation, complete endpoint conditional identity and exact
+  CM minimization, complete-cluster signed normal form, square-before-average
+  order audit, future-feedback signed-jet cancellation, exact `q=10/9`
+  budget, PDF/surface contracts, and T4 firewalls;
+- explicit preservation of the open uniform signed complete-cluster,
   `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
 
@@ -1271,23 +1305,22 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_coherent_output_cluster_predictable_baseline_boundary_manifest.json`
-- `notes/classii-coherent-output-cluster-predictable-baseline-boundary-260728-v1.0.tex.txt`
-- `notes/classii-coherent-output-cluster-predictable-baseline-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary.py`
-- `../../codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_independent.py`
-- `../../codes/foundations/a13_classii_coherent_output_cluster_predictable_baseline_boundary_verify.py`
-- `runs/2026-07-28-primary-coherent-output-cluster-predictable-baseline-boundary/result.json`
-- `runs/2026-07-28-independent-coherent-output-cluster-predictable-baseline-boundary/result.json`
-- `runs/2026-07-28-integrated-coherent-output-cluster-predictable-baseline-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-107`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-predictable-multirow-backward-resolvent`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-single-output-frequency-packet`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-independent-output-determinant-normalization`
+- `classii_complete_cluster_quotient_carleson_frontier_manifest.json`
+- `notes/classii-complete-cluster-quotient-carleson-frontier-260728-v1.0.tex.txt`
+- `notes/classii-complete-cluster-quotient-carleson-frontier-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier.py`
+- `../../codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_independent.py`
+- `../../codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_verify.py`
+- `runs/2026-07-28-primary-complete-cluster-quotient-carleson-frontier/result.json`
+- `runs/2026-07-28-independent-complete-cluster-quotient-carleson-frontier/result.json`
+- `runs/2026-07-28-integrated-complete-cluster-quotient-carleson-frontier/result.json`
+- `../../RESULTS-LEDGER.md#r-108`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-rational-taylor-owner-subdivision`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-averaged-covariance-before-hs-square`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-absolute-future-feedback-cartan-carleson`
 - `../../negative-results/registry.md#ng-2026-07-28-a13-adapted-second-jet-termseparation`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-pure-carrier-kl-diagonal-bridge`
-- `../../explorations/log.jsonl` (`EXP-000276`--`EXP-000284`)
-- R-106 and the R-105 v1.1 correction package remain pinned by the R-107
+- `../../explorations/log.jsonl` (`EXP-000285`--`EXP-000290`)
+- R-107 and the R-105 v1.1 correction package remain pinned by the R-108
   authority chain.
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
@@ -2246,6 +2279,23 @@ rowwise-predictable frozen martingale, a proved adapted complete-cluster/
 matrix-Carleson bound, `OVERLAP_src`, Nelson, removals, an interacting measure,
 Sector-A closure, or a higher tier.
 
+The R-108 continuation is additionally falsified by failure of either
+historical or direct Schur constant, their respective weighted/unweighted
+contracts, or the R-088 target correction; any exact one-chart/subdivision
+rational owner, labelled defect, or complete-endpoint cancellation; the
+complete endpoint conditional mean/covariance identity or its exact
+`q=10/9` Cameron--Martin minimization; the complete-cluster signed normal
+form; any one-pair moment, cumulant, covariance eigenvalue, leading
+coefficient, finite erfc moment, square-order comparison, or sextic tradeoff;
+the oscillatory feedback energy, sextic, tangent, rank-one HS square, or
+signed second-jet cancellation; the exact source-budget arithmetic; any R-108
+authority, source, note, PDF, manifest, negative authority, exploration,
+assertion count, or public-surface pin including `EXP-000285--EXP-000290`; or
+any promotion of the identities to positivity/lower bounds, the viable
+square-before-average fixture to a theorem, or the scoped no-gos to failure of
+the signed complete source action, `OVERLAP_src`, Nelson, removals, an
+interacting measure, Sector-A closure, or a higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2591,6 +2641,19 @@ positive Gaussian branch controls the true same-root state-dependent
 coefficient. It proves no adapted complete-cluster or matrix-Carleson
 estimate, `OVERLAP_src`, Nelson, cutoff/floor removal, interacting measure,
 Sector-A closure, or T5--T7 promotion. Tier stays T4.
+
+R-108 proves only a historical-authority correction, a rational subdivision
+quotient audit, exact complete-endpoint and complete-cluster conditional
+identities, an exact budget audit, and two scoped order-of-operations/method
+no-gos. The conditional identities are re-expressions, not lower bounds. The
+one-pair square-before-average comparison is viability evidence, not a
+determinant theorem. The oscillatory selector refutes an absolute positive
+future-feedback HS/PSD ledger paid only by source energy and one sextic; its
+signed second-jet cancellation expressly prevents promotion to a
+counterexample against the complete action. R-108 proves no cutoff/chart/
+control/subdivision-uniform signed cluster estimate, adapted complete-cluster
+or matrix-Carleson theorem, `OVERLAP_src`, Nelson, cutoff/floor removal,
+interacting measure, Sector-A closure, or T5--T7 promotion. Tier stays T4.
 
 ## History
 
@@ -3201,3 +3264,22 @@ Sector-A closure, or T5--T7 promotion. Tier stays T4.
   form, zero-overfull, extraction, and all-page Poppler visual QA. The adapted
   complete-cluster/matrix-Carleson estimate, `OVERLAP_src`, Nelson, removals,
   interacting measure, and Sector A remain open; tier stays T4.
+- 2026-07-28: Registered R-108. The historical weighted R-085 Cartan contract
+  is separated from the direct unweighted R-088 sufficient target, whose
+  sequential production bridge remains open. Historical `F_6.5` and visitwise
+  `K_R` fail the subdivision quotient, while the complete endpoint has exact
+  conditional mean/covariance and Cameron--Martin-minimized identities. A
+  contraction-closed cluster has the corresponding signed normal form. The
+  exact one-pair fixture shows that a bare average-before-square ledger needs
+  the explicit nonlinear/sextic repair; square-before-average has room only as
+  viability evidence. The oscillatory feedback fixture retires only an
+  absolute arbitrary-selector HS/PSD ledger paid by source energy and one
+  terminal sextic, while the complete signed second jet cancels.
+  `EXP-000285--EXP-000290` preserve the authority correction, exact advances,
+  two scoped failures, and the nonvacuous surviving theorem target. Primary
+  `66/66`, non-importing standard-library independent `90/90`, integrated
+  `230/230`, and aggregate `386/386` checks are manifest-pinned. The final
+  eleven-page PDF passes form, zero-overfull, extraction, and all-page Poppler
+  visual QA. The uniform signed complete-cluster estimate, `OVERLAP_src`,
+  Nelson, removals, interacting-measure construction, and Sector A remain
+  open; tier stays T4.

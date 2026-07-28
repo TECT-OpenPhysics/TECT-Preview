@@ -120,6 +120,20 @@ Carleson lower bound retaining heat, trace, mixed baseline, future feedback,
 rational recovery, the complete R-063 forest, and one terminal root sextic.
 Uniform `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
 remain open.
+R-108 identifies the quotient-safe and order-correct version of that frontier.
+Historical `F_6.5` and visitwise `K_R` fail representation-preserving
+subdivision, whereas the complete endpoint has exact conditional mean/
+covariance and CM-minimized identities with no sign. A complete cluster has
+the corresponding signed normal form. The one-pair fixture rules out only a
+bare average-before-square ledger unless its explicit nonlinear/sextic repair
+is paid; square-before-average remains merely viable there. An oscillatory
+selector rules out only an absolute arbitrary-selector positive future-
+feedback HS/PSD ledger paid solely from source energy and one sextic because
+the complete signed second jet cancels. A determinant successor may square the realized
+conditional cluster covariance before outer averaging. The cutoff/chart/
+control/subdivision-uniform signed complete-cluster lower bound,
+`OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
+open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

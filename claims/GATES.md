@@ -1381,6 +1381,19 @@ unresolved gate is the same-root adapted contraction-closed cluster or
 equivalent matrix-Carleson lower bound, namely the remaining
 `OVERLAP_src`/Nelson inequality.
 
+R-108 audits the exact coordinate of that gate. The historical weighted
+R-085 bridge is not the exact current target; the direct R-088 target is
+unweighted, but its sequential production bridge is still open. Historical
+`F_6.5` and visitwise `K_R` do not descend to the subdivision quotient, while
+the complete endpoint has exact conditional mean/covariance and Cameron--
+Martin-minimized identities with no sign. A bare average-before-square
+covariance ledger fails unless the explicit nonlinear/sextic repair is paid.
+An absolute arbitrary-selector future-feedback HS/PSD ledger paid solely by
+source energy plus one terminal sextic fails. A legal determinant successor may
+square the realized conditional cluster covariance
+before averaging. None of these identities proves the required uniform signed
+complete-cluster lower bound; Sector A remains open.
+
 ### **A13-CLASSII-FULL-FRAME-POSTERIOR-COVARIANCE-BRACKET**
 
 **Statement:** Uniformly in the terminal cutoff, prove a production-weighted
@@ -1420,10 +1433,11 @@ is admissible but is not required for the Nelson application.
 
 **Status:** CURRENT CHILD; REDUCED-NOT-CLOSED; R-104 FIXED-CHART ASSEMBLY,
 R-105 COMMON-ROOT REPRESENTATION AUDIT, R-106 GIBBS-ENDPOINT/PRODUCTION-MERGE
-BOUNDARY, AND R-107 JOINTLY-FROZEN/ONE-STEP COHERENT-OUTPUT BOUNDARY COMPLETE;
+BOUNDARY, R-107 JOINTLY-FROZEN/ONE-STEP COHERENT-OUTPUT BOUNDARY, AND R-108
+COMPLETE-CLUSTER QUOTIENT/COVARIANCE-ORDER AUDIT COMPLETE;
 ADAPTED SAME-ROOT COMPLETE-CLUSTER/`OVERLAP_src`/NELSON INEQUALITY OPEN
-(reviewed 2026-07-28 after R-107). The gate was exposed by R-080 and sharpened
-by R-081--R-107
+(reviewed 2026-07-28 after R-108). The gate was exposed by R-080 and sharpened
+by R-081--R-108
 `A13-CLASSII-CARTAN-TAIL-ADAPTED-NEAR-TEMPORAL-REDUCTION` (after R-080
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`). R-075 proves
 fixed-cutoff recovery only in its declared Cameron--Martin/terminal-`L6` graph
@@ -1500,6 +1514,19 @@ action are now the legal coordinates. The adapted second-jet and pure carrier-
 information shortcuts are retired, while the convexified-divergence flow
 route is parked rather than closed. The complete same-root cluster residual
 and uniform `OVERLAP_src`/Nelson bound remain open.
+
+R-108 further proves that the quotient-safe rational coordinate is the
+complete endpoint, derives its exact conditional mean/covariance and optimized
+forms, and derives the exact signed normal form for a contraction-closed
+cluster. The one-pair order audit shows that a bare average-before-square
+ledger needs the explicit nonlinear/sextic tradeoff; square-before-average is
+only viable on that fixture. The oscillatory feedback fixture retires only an
+absolute arbitrary-selector positive HS/PSD ledger paid from source energy and
+one terminal sextic because its complete signed second jet cancels. The surviving theorem
+must be nonvacuous and uniform in cutoff, chart, control, and subdivision, and
+must either use the direct signed packet or a legally normalized realized-
+cluster square-before-average determinant. That theorem, `OVERLAP_src`,
+Nelson, removals, an interacting measure, and Sector A remain open.
 
 R-081 proves the exact positive temporal algebra and the exact density
 obstruction. For every bounded simple progressive time packet,

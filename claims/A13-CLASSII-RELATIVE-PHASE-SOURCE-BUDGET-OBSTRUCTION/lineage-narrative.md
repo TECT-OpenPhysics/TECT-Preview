@@ -664,6 +664,26 @@ endpoint theorem.
     `OVERLAP_src`, Nelson, removals, interacting-measure construction, and
     Sector A remain open at T4.
 
+49. **Complete-cluster quotient, covariance order, and nonvacuous Carleson
+    frontier.** R-108,
+    `A13-CLASSII-COMPLETE-CLUSTER-QUOTIENT-CARLESON-FRONTIER`, separates the
+    historical weighted R-085 Cartan contract from R-088's actual unweighted
+    sufficient target, without claiming the missing sequential bridge. It
+    proves that historical `F_6.5` and visitwise `K_R` fail the subdivision
+    quotient while the complete rational endpoint survives, then derives its
+    exact conditional mean/covariance and Cameron--Martin-minimized forms.
+    The same Pythagorean audit gives an exact signed normal form for every
+    contraction-closed output cluster. The one-pair cluster proves that the
+    realized conditional covariance must be squared before outer averaging;
+    average-before-square misses the leading log-Laplace coefficient. An
+    oscillatory future-feedback selector separately rules out an absolute
+    positive HS/PSD-Carleson ledger from source energy plus one sextic, while
+    the complete signed second jet cancels. The surviving target is a cutoff-,
+    chart-, control-, and subdivision-uniform signed complete-cluster lower
+    bound or a legally normalized square-before-average determinant implying
+    it. `OVERLAP_src`, Nelson, removals, interacting-measure construction, and
+    Sector A remain open at T4.
+
 The stable evidence paths remain flat under this claim. The generated
 `INDEX.md` supplies the logical subproof grouping without moving manifests,
 notes, PDFs, or run artefacts.

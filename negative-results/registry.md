@@ -10,6 +10,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET](#ng-2026-07-28-a13-single-output-frequency-packet) | prove positivity or an independent signed estimate at each coherent output frequency after allocating the trace outputwise | for `X=a cos x+b sin x`, `J=X dX`, the half-weighted packets have expectations `-sigma^4/4` at output zero and `+sigma^4/8` at each of outputs `+/-2`; only the contraction-connected cluster `{0,+/-2}` cancels. This is not a complete-root or Nelson counterexample |
 | [NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION](#ng-2026-07-28-a13-independent-output-determinant-normalization) | normalize coherent output rows independently and multiply their Gaussian determinant estimates | for `m` repeated rank-one PSD rows the lost slack is `[m log(1+q lambda)-log(1+qm lambda)]/2`, whose value divided by `m` tends to `log(1+q lambda)/2>0`. Sequential Schur increments retain the exact whole-output determinant |
 | [NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION](#ng-2026-07-28-a13-adapted-second-jet-termseparation) | bound the complete adapted R-063 second-jet/forest companions term by term through source cost and absolute derivative squares | for `h(G)=a sin(MG)`, the source cost stays bounded while `E(h')^2` and `E(hh'')` grow as `+/-a^2M^2/2`; their signed sum is only `a^2M^2 exp(-2M^2)`. The complete signed forest remains live |
+| [NG-2026-07-28-A13-AVERAGED-COVARIANCE-BEFORE-HS-SQUARE](#ng-2026-07-28-a13-averaged-covariance-before-hs-square) | interpret the R-107 complete-cluster determinant covariance as an already averaged matrix and use `||E S||_HS^2` without an explicit nonlinear remainder or sextic tradeoff | the exact one-pair packet has log-Laplace leading coefficient `q^2 sigma^8/4`, while `(q^2/4)||E S||_HS^2=3q^2 sigma^8/32`; the missing `5q^2 sigma^8/32` is also visible at `q=1,sigma=1/2`. Squaring the realized conditional covariance before averaging has leading room and remains viable |
+| [NG-2026-07-28-A13-ABSOLUTE-FUTURE-FEEDBACK-CARTAN-CARLESON](#ng-2026-07-28-a13-absolute-future-feedback-cartan-carleson) | extend the strict-past R-088 atom ledger to arbitrary same-root future-feedback selectors by positively squaring their Cartan tangents and paying only source energy plus one terminal sextic | for `z=a sin(MG) cos(Nx)`, source energy and sextic are bounded in `M`, but `E||Pi_{+/-2N} d_G(zD_xz)||_2^2=a^4M^2N^2(1-e^-8M^2)/16`. The signed second jet cancels, so this is not a complete-action or Nelson counterexample |
 | [NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE](#ng-2026-07-28-a13-pure-carrier-kl-diagonal-bridge) | identify independent and self-coupled Gaussian carriers through a standalone relative-entropy payment | for `z_t=sqrt(1-t)x+sqrt(t)y`, `I(x;z_t)=-(d/2)log t`; it diverges at the diagonal and is non-summable across growing dyadic root dimension. Coupled heat/covariance/forest interpolation is not excluded |
 | [NG-2026-07-28-A13-TOTAL-A9-TIME-INTEGRATION-IDENTITY](#ng-2026-07-28-a13-total-a9-time-integration-identity) | use the exact total A9 thermodynamic integral itself as the missing uniform estimate | `(q/2) int_0^1 E_(nu_t) B_t dt=Phi_1-Phi_0` is exactly the unknown self-coupled versus controlled endpoint difference. R-093 rewrites the same equality in source coordinates; near minimizers leave no independent entropy reserve. A new root-local bound is still required |
 | [NG-2026-07-28-A13-POINTWISE-ENDPOINT-LIKELIHOOD-COERCIVITY](#ng-2026-07-28-a13-pointwise-endpoint-likelihood-coercivity) | upper-bound the endpoint likelihood pointwise by fixed sextic plus Cameron--Martin payments | the constant active-doublet production ray has likelihood at least `c A^2 N`; taking `A=sigma N^(1/4)` with small fixed `sigma` makes likelihood minus any fixed sextic/CM payment diverge. The field is Gaussian-null, so this is a pointwise-method no-go, not a Nelson counterexample |
@@ -227,6 +229,56 @@ checks the formulas.
 **Consequence.** Source cost cannot control either separated derivative
 companion uniformly. The complete signed second jet and complete R-063 forest
 are not refuted; they must be retained before estimation.
+
+<a id="ng-2026-07-28-a13-averaged-covariance-before-hs-square"></a>
+### NG-2026-07-28-A13-AVERAGED-COVARIANCE-BEFORE-HS-SQUARE -- average-before-square loses the complete-cluster determinant scale
+
+**Failure mode.** Interpret the covariance in the R-107 determinant-compatible
+target as an already outer-averaged matrix and substitute
+`||E S||_HS^2` for the realized conditional-cluster square, without retaining
+an explicit nonlinear remainder or parent-sextic tradeoff.
+
+**Evidence.** In the exact one-pair cluster, with
+`P=R^2-sigma^2 R` and `2R/sigma^2` exponential of mean one,
+`E P=0`, `Var(P)=sigma^8/2`, and
+`log E exp(-qP)=q^2 sigma^8/4+O(sigma^12)`. The realized independent-copy
+covariance obeys `E||S_z||_HS^2=5sigma^8/4`, whereas
+`||E S_z||_HS^2=3sigma^8/8`. Thus average-first supplies only
+`3q^2sigma^8/32` and misses `5q^2sigma^8/32`. At `q=1,sigma=1/2`, the exact
+log moment is `0.0008505852754225884...`, strictly above the average-first
+cost `3/8192` and below the square-first cost `5/4096`.
+
+**Consequence.** Any determinant-compatible continuation must square the
+realized legal conditional-cluster covariance before the outer expectation,
+or retain an explicit remainder. With parent sextic `Y=20R^3`, an
+average-first route needs
+`r+15q zeta sigma^6 >= 5q^2 sigma^8/32+o(sigma^8)`; for `r=0`,
+`zeta>=q sigma^2/96+o(sigma^2)`. This is not a counterexample to the signed
+complete-cluster target or to a legal square-first sequential determinant.
+
+<a id="ng-2026-07-28-a13-absolute-future-feedback-cartan-carleson"></a>
+### NG-2026-07-28-A13-ABSOLUTE-FUTURE-FEEDBACK-CARTAN-CARLESON -- bounded action budgets do not control an arbitrary positive selector tangent
+
+**Failure mode.** Extend the strict-past R-088 positive atom ledger to an
+arbitrary same-root future-feedback selector by squaring its Cartan tangent
+and paying that absolute HS/PSD quantity only with Cameron--Martin source
+energy and one terminal sextic.
+
+**Evidence.** On the normalized circle take `G~N(0,1)`,
+`h_M=a sin(MG)`, `f_N=cos(Nx)`, and `z=h_M f_N`. Then
+`d_G(zD_xz)=2h_M h'_M f_ND_xf_N` and exactly
+`E||Pi_{+/-2N}d_G(zD_xz)||_2^2
+=a^4M^2N^2(1-exp(-8M^2))/16`. In contrast,
+`E||z||_(H2)^2=a^2(1-exp(-2M^2))(1+N^2)^2/4` and
+`E||z||_6^6=5a^6(10-15exp(-2M^2)+6exp(-8M^2)-exp(-18M^2))/512`
+are bounded in `M`. Exact symbolic algebra and independent Gaussian
+quadrature agree.
+
+**Consequence.** No uniform absolute positive future-feedback tangent ledger
+of this form exists for arbitrary selectors. The original R-088 strict-past
+hypothesis has zero same-root selector derivative and is untouched. Moreover
+`E[(h'_M)^2+h_Mh''_M]=a^2M^2exp(-2M^2)` tends to zero, so the complete signed
+R-063 forest, direct source action, `OVERLAP_src`, and Nelson remain live.
 
 <a id="ng-2026-07-28-a13-pure-carrier-kl-diagonal-bridge"></a>
 ### NG-2026-07-28-A13-PURE-CARRIER-KL-DIAGONAL-BRIDGE -- standalone carrier information diverges at self-coupling

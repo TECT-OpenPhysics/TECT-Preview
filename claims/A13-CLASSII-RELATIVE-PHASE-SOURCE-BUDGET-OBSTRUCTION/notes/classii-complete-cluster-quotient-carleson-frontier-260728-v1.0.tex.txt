@@ -1,0 +1,762 @@
+% =============================================================================
+% Title: Complete-cluster quotient, conditional covariance, and the nonvacuous Carleson frontier
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED SYNTHESIS AND BOUNDARY; NELSON AND SECTOR A OPEN
+% Result: A13-CLASSII-COMPLETE-CLUSTER-QUOTIENT-CARLESON-FRONTIER
+% Ledger: R-108
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\dd}{\,\mathrm d}
+
+\section{Purpose and scope}
+
+R-107 left a same-root adapted complete-cluster or equivalent direct
+source-action lower bound as the finite-cutoff, fixed-positive-floor frontier.
+The present package does not close that estimate.  It performs the necessary
+quotient audit before another atom is proposed and gives the strongest exact
+normal form presently available.
+
+The result has seven parts.
+\begin{enumerate}
+\item The historical R-085 Cartan estimate (4.10)--(4.11) is separated from
+      the exact R-084 target.  R-087 closed its regular spatial half, while
+      R-088 removed an outer root weight and reduced the actual sufficient
+      bridge to an unweighted one with any positive spatial gain.  Neither
+      historical nor direct sequential bridge is proved for progressive
+      same-root feedback.
+\item The historical rational form $F_{6.5}$ and the later fixed-chart
+      coordinate $K_R$ do not descend to the progressive subdivision
+      quotient.  They change sign on two representations of one exact
+      production-fibre endpoint.  The complete endpoint is invariant.
+\item The quotient-safe complete rational endpoint has an exact conditional
+      mean/covariance identity and an exact Cameron--Martin minimization.  Its
+      two surviving debts have no algebraic sign.
+\item Every complete Hilbert-space cluster packet has an exact conditional
+      mean/covariance normal form.  This forces the mean square and signed
+      covariance/trace defect to remain coupled.
+\item The R-107 one-pair cluster proves that a covariance must be squared at
+      the realized conditional-cluster level before the outer expectation.
+      Averaging first misses the exact log-Laplace leading term.  A parent
+      sextic can repair the fixture only through an explicit quantified
+      tradeoff.
+\item An oscillatory adapted selector has bounded source energy and terminal
+      sextic but an unbounded positive future-feedback tangent square.  Thus
+      no absolute future-feedback HS/PSD-Carleson extension can be paid from
+      those two budgets alone.  The complete signed second jet cancels, so
+      this is not a counterexample to the signed action target.
+\item The remaining direct and determinant-compatible targets are rewritten
+      with the missing uniformity, sign, measurability, and order-of-
+      operations requirements.  The exact $q=10/9$ budget is recorded.
+\end{enumerate}
+
+The conclusion is a quotient-safe exact synthesis and method boundary, not a
+new lower-bound theorem.  $\mathrm{OVERLAP}_{\rm src}$, Nelson, cutoff and
+floor removals, the interacting measure, and Sector A remain open.  Tier stays
+T4.
+
+\section{The historical R-085 Cartan contract is not the current target}
+
+R-085 introduced the complete mixed production atom $u_{A,j,k,t}$ and asked
+for
+\[
+ \sum_A\int_0^\infty e^{-2t}
+ \E\|\Pi_m u_{A,j,k,t}\|_{\mathfrak S_2}^2\dd t
+ \le K2^{-2s(m-k)}q_k,
+ \qquad s>{1\over2},                                  \tag{2.1}
+\]
+\[
+ \sum_k2^kq_k\lesssim1+\E[X^{1/2}Y^{1/2}].           \tag{2.2}
+\]
+Its weighted Schur constant is
+\[
+ C_{s,\eta}^{\rm old}
+ ={1\over(1-2^{-\eta})(1-2^{-2s})(1-2^{1+\eta-2s})}.
+                                                               \tag{2.3}
+\]
+At $s=7/12$, $\eta=1/12$ this equals
+\[
+ C_{7/12,1/12}^{\rm old}=572.4472106721531\ldots .    \tag{2.4}
+\]
+
+R-087 proves the spatial estimate (2.1) for the regular strict-past model.
+It does not prove (2.2): extracting a pathwise translated-model norm creates
+the registered rare-event growth.  More importantly, R-088 audits the exact
+R-084 OU target and removes the outer $2^j$ weight which generated (2.2).
+The direct sufficient architecture is instead
+\[
+ \sum_A\int_0^\infty e^{-2t}
+ \E\|\Pi_m v_{A,j,k,t}\|_{\mathfrak S_2}^2\dd t
+ \le K2^{-2s(m-k)}q_k,
+ \qquad s>0,                                           \tag{2.5}
+\]
+\[
+ \sum_kq_k\lesssim1+\E[X^{1/2}Y^{1/2}],              \tag{2.6}
+\]
+with
+\[
+ C_{s,\eta}^{\rm dir}
+ ={1\over(1-2^{-\eta})(1-2^{-2s})(1-2^{\eta-2s})}.
+                                                               \tag{2.7}
+\]
+At the balanced $s=\eta=7/12$,
+\[
+ C_{7/12,7/12}^{\rm dir}=16.30295538482827\ldots .    \tag{2.8}
+\]
+Multiplication by $q=10/9$ gives respectively
+$636.0524563023923\ldots$ and $18.11439487203141\ldots$.
+
+Equations (2.5)--(2.6) are a corrected sufficient target, not a theorem of
+this note.  Their exact sequential production bridge remains open.  R-105
+further proves that a common-root source subdivision must be recombined to
+one coarse endpoint before a square is taken.  Therefore a positive
+per-subvisit extension of either (2.2) or (2.6) is not legal.
+
+\section{Historical rational owners versus the subdivision quotient}
+
+Use the corrected R-105 notation
+\[
+ B_T=B_0+DB_0[a]+{1\over2}D^2B_0[a,a],
+ \qquad L=B_1-B_T,                                    \tag{3.1}
+\]
+\[
+ Q=G^{\otimes2}-\Gamma,
+ \qquad Q^a=(G+c)^{\otimes2}-\Gamma.                 \tag{3.2}
+\]
+The labelled fixed-chart owners are
+\[
+ \mathcal R_Q={1\over2}(B_1-B_0):Q,
+ \qquad \mathcal M_U=G^TB_Tc,                         \tag{3.3}
+\]
+\[
+ \mathcal K_R=G^TLc+{1\over2}c^TB_1c.                \tag{3.4}
+\]
+
+% evidence-anchor: proposition-3.1-historical-f65-versus-complete-endpoint
+\subsection*{Proposition 3.1 (the historical form is not the complete owner)}
+
+On one fixed chart,
+\[
+ \boxed{
+ F_{6.5}
+ ={1\over2}L:Q^a+{1\over2}c^TB_Tc
+ ={1\over2}L:Q+\mathcal K_R.}                        \tag{3.5}
+\]
+The quotient-safe complete endpoint is
+\[
+ \boxed{
+ \Delta W_R
+ ={1\over2}B_1:Q^a-{1\over2}B_0:Q
+ =\mathcal R_Q+\mathcal M_U+\mathcal K_R.}           \tag{3.6}
+\]
+Moreover
+\[
+ \mathcal R_Q={1\over2}
+ \left(DB_0[a]+{1\over2}D^2B_0[a,a]+L\right):Q.     \tag{3.7}
+\]
+Thus $L:Q/2$ already belongs to the indivisible raw-Wick endpoint owner.
+Retaining $\mathcal R_Q$ and separately charging $F_{6.5}$ duplicates this
+term.  Equation (3.5) remains a valid one-chart identity; it is superseded as
+a progressive owner.
+
+\subsection*{Exact production-fibre subdivision fixture}
+
+Put
+\[
+ b(x)={4x^2(4x^2+9)^2\over81(1+x^2)^2}.              \tag{3.8}
+\]
+Then
+\[
+ b(0)=b'(0)=0,\quad b''(0)=8,
+\]
+\[
+ b(1)={169\over81},\quad b'(1)={208\over81},
+ \quad b''(1)=-{2\over81},\quad b(2)={400\over81}.  \tag{3.9}
+\]
+Compare the single chart
+\[
+ (u,G)=(0,1),\qquad(a,c)=(2,2),\qquad\Gamma=1,
+\]
+with the two-step representation
+\[
+ (0,1)\mathop{\longrightarrow}^{(1,1)}(1,2)
+ \mathop{\longrightarrow}^{(1,1)}(2,3).              \tag{3.10}
+\]
+Direct substitution gives the following table, denoted (3.11):
+\[
+\begin{array}{c|r|r|r}
+ &\hbox{one chart}&\hbox{two-step sum}&\hbox{one minus sum}\\ \hline
+ \mathcal R_Q&0&77/18&-77/18\\
+ \mathcal M_U&32&1076/81&1516/81\\
+ \mathcal K_R&-992/81&355/162&-2339/162\\
+ F_{6.5}&-992/81&427/162&-2411/162\\
+ \Delta W_R&1600/81&1600/81&0.
+\end{array}
+\]
+The labelled defects cancel exactly:
+\[
+ -{77\over18}+{1516\over81}-{2339\over162}=0.        \tag{3.12}
+\]
+Hence both $F_{6.5}$ and $\mathcal K_R$ change sign under a
+representation-preserving subdivision, whereas $\Delta W_R$ is invariant.
+The production floor and covariance rescaling multiply the table by one
+positive factor and preserve these conclusions.  This is a coordinate
+method no-go, not a complete torus-action counterexample.
+
+\section{Quotient-safe complete endpoint conditional identity}
+
+Let $\mathcal H$ contain the complete endpoint operators $B_0,B_1$, the
+shift $c$, and the reference covariance $\Gamma$.  Set
+\[
+ \mu=\E[G\mid\mathcal H],
+ \qquad V=\Cov(G\mid\mathcal H).                     \tag{4.1}
+\]
+All output contractions inside the cluster are retained in the block
+operators and in $V$.
+
+% evidence-anchor: theorem-4.1-complete-endpoint-conditional-mean-covariance
+\subsection*{Theorem 4.1 (complete endpoint conditional mean/covariance)}
+
+For the complete endpoint (3.6),
+\[
+\boxed{
+\begin{aligned}
+ \E[\Delta W_R\mid\mathcal H]
+ ={}&{1\over2}(c+\mu)^TB_1(c+\mu)
+      -{1\over2}\mu^TB_0\mu\\
+ &+{1\over2}(B_1-B_0):(V-\Gamma).
+\end{aligned}}                                       \tag{4.2}
+\]
+
+\emph{Proof.}
+Conditional Pythagoras gives
+\[
+ \E[G^{\otimes2}\mid\mathcal H]=V+\mu^{\otimes2},
+\]
+\[
+ \E[(G+c)^{\otimes2}\mid\mathcal H]
+ =V+(c+\mu)^{\otimes2}.                              \tag{4.3}
+\]
+Insert (4.3) into (3.6).  No owner is split. \hfill$\square$
+
+% evidence-anchor: corollary-4.2-exact-cm-minimization
+\subsection*{Corollary 4.2 (exact Cameron--Martin minimization)}
+
+For $\eta>0$,
+\[
+\boxed{
+\begin{aligned}
+ \inf_c\E[\Delta W_R+\eta\|c\|^2\mid\mathcal H]
+ ={}&{1\over2}(B_1-B_0):(V-\Gamma)\\
+ &+{1\over2}\mu^T
+ \left[2\eta B_1(B_1+2\eta\Id)^{-1}-B_0\right]\mu.
+\end{aligned}}                                       \tag{4.4}
+\]
+Indeed the unique minimum on the active range is attained at
+\[
+ c_* =-(B_1+2\eta\Id)^{-1}B_1\mu.                   \tag{4.5}
+\]
+At $q=10/9$ and $\eta=1/(2q)=9/20$,
+\[
+\boxed{
+\begin{aligned}
+ \inf_c\left\{
+ q\E[\Delta W_R\mid\mathcal H]+{1\over2}\|c\|^2
+ \right\}
+ ={}&{5\over9}(B_1-B_0):(V-\Gamma)\\
+ &+{5\over9}\mu^T
+ \left[{9\over10}B_1(B_1+{9\over10}\Id)^{-1}-B_0\right]\mu.
+\end{aligned}}                                       \tag{4.6}
+\]
+Neither term in (4.6) has a fixed sign.  This formula identifies the exact
+mean and covariance debts; it does not bound them.
+
+Because (4.2)--(4.6) use only the complete endpoint, they survive internal
+representation-preserving subdivisions in the fixed common-heat scope.
+They do not license conditioning on an anticipative same-root random heat,
+nor do they combine distinct temporal roots.
+
+\section{The complete-cluster signed normal form}
+
+Let $\mathcal C$ be a contraction-closed output cluster, let $b_{\mathcal C}$
+be its past-measurable baseline, let $Y_{\mathcal C}$ be the fully assembled
+current including all visits and future-feedback terms, and let
+$\tau_{\mathcal C}$ be its once-owned trace/forest scalar.  Define
+\[
+ \mu_{\mathcal C}=\E[Y_{\mathcal C}\mid\mathcal F_{\rm past}],
+ \qquad
+ \Sigma_{\mathcal C}=\Cov(Y_{\mathcal C}\mid\mathcal F_{\rm past}).
+                                                               \tag{5.1}
+\]
+
+% evidence-anchor: theorem-5.1-complete-cluster-signed-normal-form
+\subsection*{Theorem 5.1 (exact signed cluster identity)}
+
+One has
+\[
+\boxed{
+\begin{aligned}
+ &\E\left[
+ {1\over2}\|b_{\mathcal C}+Y_{\mathcal C}\|^2
+ -{1\over2}\tau_{\mathcal C}
+ \mid\mathcal F_{\rm past}\right]\\
+ &\qquad={1\over2}\|b_{\mathcal C}+\mu_{\mathcal C}\|^2
+ +{1\over2}\Tr\Sigma_{\mathcal C}
+ -{1\over2}\E[\tau_{\mathcal C}\mid\mathcal F_{\rm past}].
+\end{aligned}}                                       \tag{5.2}
+\]
+If $T_{\mathcal C}$ denotes the complete conditional trace operator with
+$\Tr T_{\mathcal C}=\E[\tau_{\mathcal C}\mid\mathcal F_{\rm past}]$, then
+the signed part is
+\[
+ {1\over2}\Tr(\Sigma_{\mathcal C}-T_{\mathcal C}).  \tag{5.3}
+\]
+The positive mean square and the signed covariance defect are coupled; a
+negative part may not be taken before they are added.
+
+For the R-107 frozen/nonfrozen split, write
+\[
+ Y=b+A\xi+R(\xi),\qquad S=AA^*,                      \tag{5.4}
+\]
+and
+\[
+ L_{\rm full}
+ ={1\over2}\|Y\|^2-{1\over2}\Tr S
+ -{1\over2}\delta\tau.                              \tag{5.5}
+\]
+Then (5.2) gives exactly
+\[
+ \E[L_{\rm full}\mid\mathcal F_{\rm past}]
+ ={1\over2}\|\E[Y\mid\mathcal F_{\rm past}]\|^2
+ +{1\over2}\Tr(\Cov(Y\mid\mathcal F_{\rm past})-S)
+ -{1\over2}\E[\delta\tau\mid\mathcal F_{\rm past}].
+                                                               \tag{5.6}
+\]
+This is the smallest exact signed normal form obtained by the present audit.
+It is an identity, not positivity, a lower bound, or an exponential estimate.
+
+\section{Square the realized cluster covariance before averaging}
+
+The R-107 one-pair cluster is an exact order-of-operations test.  Let
+\[
+ R=|z|^2={\sigma^2\over2}T,
+ \qquad T\sim\operatorname{Exp}(1),
+ \qquad P=R^2-\sigma^2R
+ ={\sigma^4\over4}(T^2-2T).                          \tag{6.1}
+\]
+Since $\E T^n=n!$,
+\[
+ \E P=0,
+ \qquad \E P^2={\sigma^8\over2},
+ \qquad \E P^3={15\sigma^{12}\over4}.              \tag{6.2}
+\]
+The fourth cumulant is $213\sigma^{16}/4$, and therefore
+\[
+ \log\E e^{-qP}
+ ={q^2\sigma^8\over4}
+ -{5q^3\sigma^{12}\over8}
+ +{71q^4\sigma^{16}\over32}
+ +O(\sigma^{20}).                                    \tag{6.3}
+\]
+
+% evidence-anchor: proposition-6.1-square-before-average
+\subsection*{Proposition 6.1 (average-before-square misses leading order)}
+
+For the realized independent-copy output covariance $S_z$,
+\[
+ \E\|S_z\|_{\mathfrak S_2}^2={5\over4}\sigma^8.     \tag{6.4}
+\]
+In the real output basis
+$(1,\sqrt2\cos2x,\sqrt2\sin2x)$,
+\[
+ \E S_z=\operatorname{diag}
+ \left({\sigma^4\over2},{\sigma^4\over4},{\sigma^4\over4}\right),
+\]
+and hence
+\[
+ \|\E S_z\|_{\mathfrak S_2}^2={3\over8}\sigma^8.  \tag{6.5}
+\]
+Consequently the three leading coefficients satisfy
+\[
+ {q^2\over4}{3\sigma^8\over8}
+ ={3q^2\sigma^8\over32}
+ <{q^2\sigma^8\over4}
+ <{5q^2\sigma^8\over16}
+ ={q^2\over4}\E\|S_z\|_{\mathfrak S_2}^2.          \tag{6.6}
+\]
+The averaged covariance misses $5q^2\sigma^8/32$ at leading order.  The
+realized square has $q^2\sigma^8/16$ of leading room.  The latter observation
+only preserves the route; it is not a general theorem.
+
+For a finite check, take $q=1$, $\sigma=1/2$, and $A=q\sigma^4/4=1/64$.
+Direct integration gives
+\[
+ \E e^{-P}
+ =4\sqrt\pi e^{961/64}\operatorname{erfc}(31/8)
+ =1.0008509471256655\ldots,                           \tag{6.7}
+\]
+\[
+ \log\E e^{-P}=0.0008505852754225884\ldots .         \tag{6.8}
+\]
+The average-first cost is $3/8192=0.0003662109375$, while
+the square-first cost is $5/4096=0.001220703125$.
+
+This does not by itself refute a determinant route with a sextic or nonlinear
+remainder.  If the parent sextic is normalized as
+$\mathcal Y=20R^3$, then $\E\mathcal Y=15\sigma^6$ and
+\[
+ \log\E e^{-q(P+\zeta\mathcal Y)}
+ =-15q\zeta\sigma^6+{q^2\sigma^8\over4}
+ +O(\zeta\sigma^{10}+\zeta^2\sigma^{12}+\sigma^{12}).
+                                                               \tag{6.9}
+\]
+An average-first ledger must therefore satisfy
+\[
+ r+15q\zeta\sigma^6
+ \ge {5q^2\sigma^8\over32}+o(\sigma^8).             \tag{6.10}
+\]
+With $r=0$ this forces
+\[
+ \zeta\ge {q\sigma^2\over96}+o(\sigma^2),           \tag{6.11}
+\]
+which is $5\sigma^2/432+o(\sigma^2)$ at $q=10/9$.
+
+\section{Absolute future-feedback HS/PSD ledgers fail}
+
+Work on the normalized circle and let
+\[
+ G\sim N(0,1),\qquad h_M(G)=a\sin(MG),
+ \qquad f_N(x)=\cos(Nx),\qquad z=h_Mf_N.             \tag{7.1}
+\]
+For the scalar chart $\Phi(z)=z$, the nonlinear current is
+$C(z)=zD_xz$ and
+\[
+ \partial_GC=2h_Mh'_M f_ND_xf_N.                    \tag{7.2}
+\]
+The exact spatial constants are
+\[
+ \|f_N\|_{H^2}^2={(1+N^2)^2\over2},
+ \qquad \|f_N\|_6^6={5\over16},
+ \qquad \|f_ND_xf_N\|_2^2={N^2\over8}.             \tag{7.3}
+\]
+The last factor is supported at outputs $\{+2N,-2N\}$.
+
+% evidence-anchor: proposition-7.1-absolute-future-feedback-carleson-nogo
+\subsection*{Proposition 7.1 (bounded budgets, divergent positive tangent)}
+
+Exact Gaussian trigonometric moments give
+\[
+ \E\|z\|_{H^2}^2
+ ={a^2(1-e^{-2M^2})(1+N^2)^2\over4},                 \tag{7.4}
+\]
+\[
+ \E\|z\|_6^6
+ ={5a^6\over512}
+ (10-15e^{-2M^2}+6e^{-8M^2}-e^{-18M^2}),             \tag{7.5}
+\]
+but
+\[
+ \boxed{
+ \E\|\Pi_{\{\pm2N\}}\partial_GC\|_2^2
+ ={a^4M^2N^2\over16}(1-e^{-8M^2}).}                  \tag{7.6}
+\]
+Thus the source energy and terminal sextic remain bounded in $M$, whereas
+the positive tangent square grows as $M^2$.  A rank-one HS square built from
+this tangent grows as $M^4$; before the fixed spatial factor its Gaussian
+coefficient is
+\[
+ {a^8M^4\over8}
+ (3-4e^{-8M^2}+e^{-32M^2}).                           \tag{7.7}
+\]
+
+The signed forest behaves differently:
+\[
+ \E(h'_M)^2={a^2M^2\over2}(1+e^{-2M^2}),             \tag{7.8}
+\]
+\[
+ \E(h_Mh''_M)=-{a^2M^2\over2}(1-e^{-2M^2}),          \tag{7.9}
+\]
+\[
+ \E\{(h'_M)^2+h_Mh''_M\}=a^2M^2e^{-2M^2}\longrightarrow0.
+                                                               \tag{7.10}
+\]
+Hence (7.6) rejects an absolute positive HS/PSD-Carleson ledger for arbitrary
+future-feedback selectors paid only by source energy and one terminal
+sextic.  It does not reject the complete signed R-063 forest or the direct
+source action.
+
+At $a=1$, $N=32$, $M=1024$, the exact-underflow values are
+\[
+X=262656.25,\qquad Y=0.09765625,
+ \qquad \E[X(G)^{1/2}Y(G)^{1/2}]
+ =151.93755945340263\ldots,                           \tag{7.11}
+\]
+while the tangent square is $67108864$.  The two separated second-jet terms
+are $524288$ and $-524288$ to machine precision.
+
+The original R-088 strict-past theorem has $D_ja_k=0$ and is not refuted by
+this fixture.  The failure concerns an attempted same-root future-feedback
+extension after R-107.
+
+\section{A nonvacuous statement of the remaining theorem}
+
+The direct formulation is already the cleanest legal target.  There must
+exist fixed constants
+\[
+ 0\le\eta<{9\over20},\qquad
+ 0\le\zeta<{3\over20},\qquad C<\infty,               \tag{8.1}
+\]
+independent of cutoff, temporally faithful chart, admissible control, and
+representation-preserving subdivision, such that
+\[
+\boxed{
+ \sum_k\E P_k^{\rm comp}
+ \ge-\eta\E\sum_k\|h_k\|^2
+     -\zeta\E\|Z_K\|_6^6-C.}                        \tag{8.2}
+\]
+Here $P_k^{\rm comp}$ contains complete heat, covariance trace, mixed
+baseline, future feedback, rational recovery, all visits, and the full R-063
+forest exactly once.  Equation (8.2) is \textbf{TARGET, NOT THEOREM}.
+
+A determinant-compatible route must first form a legal contraction-closed
+conditional cluster and then prove a genuine one-step normalizer inequality
+of the form
+\[
+\begin{aligned}
+ &\log\E\left[
+ e^{-q(\mathfrak P_{j,\mathcal C}
+       +\eta_{j,\mathcal C}\mathcal E_j
+       +\zeta_{j,\mathcal C}\mathcal Y_{\operatorname{parent}(j)})}
+ \mid\mathcal F_{j-1}\right]\\
+ &\qquad\le {q^2\over4}
+ \|S_{j,\mathcal C}^{\rm real}\|_{\mathfrak S_2}^2
+ +r_{j,\mathcal C}.
+\end{aligned}                                        \tag{8.3}
+\]
+The data on the right must be legal at the conditioning step,
+$r_{j,\mathcal C}\ge0$, and not chosen after observing the inequality's
+deficit.  One unambiguously sufficient, though possibly stronger than
+necessary, global specification is a pathwise or deterministic ledger
+\[
+ \sum_{j,\mathcal C}
+ \left\{{q^2\over4}\|S_{j,\mathcal C}^{\rm real}\|_{\mathfrak S_2}^2
+       +r_{j,\mathcal C}\right\}
+ \le C+\epsilon\sum_j\|h_j\|^2+\delta\|Z_K\|_6^6,  \tag{8.4}
+\]
+uniformly in the same four parameters, with
+\[
+ q\sum_{j,\mathcal C}\eta_{j,\mathcal C}+\epsilon<{1\over2},
+ \qquad
+ q\sum_{j,\mathcal C}\zeta_{j,\mathcal C}+\delta<{1\over6}.
+                                                               \tag{8.5}
+\]
+An equivalent conditional-supermartingale ledger is also admissible.  A
+mere finite-cutoff assertion $\sum r<\infty$ is vacuous because $r$ could be
+defined to equal the observed deficit.  Equations (8.3)--(8.5) are
+\textbf{TARGETS, NOT THEOREMS}.
+
+Proposition 6.1 fixes the order in (8.3): form the realized legal conditional
+cluster covariance, square its HS norm, and only then take the outer
+expectation.  Replacing it by $\|\E S\|^2$ is false without the explicit
+remainder/sextic tradeoff (6.10).
+
+\subsection*{Exact $q=10/9$ budget audit}
+
+The conservative R-103 regular allocation supplies the following arithmetic
+witness (8.6), not a progressive theorem:
+\[
+\begin{array}{c|c|c}
+ &\hbox{action scale}&\hbox{after multiplication by }q=10/9\\ \hline
+ \hbox{full source coefficient}&9/20&1/2\\
+ \hbox{full sextic coefficient}&3/20&1/6\\
+ \eta_*&1/440&1/396\\
+ \zeta_*&3/100&1/30\\
+ \hbox{source reserve}&197/440&197/396\\
+ \hbox{sextic reserve}&3/25&2/15\\
+ \hbox{each of seven source shares}&1/3080&1/2772\\
+ \hbox{each of seven sextic shares}&3/700&1/210\\
+ \hbox{each of eight source shares}&1/3520&1/3168\\
+ \hbox{each of eight sextic shares}&3/800&1/240.
+\end{array}
+\]
+In particular
+\[
+ {1\over2}-{1\over396}={197\over396},
+ \qquad {1\over6}-{1\over30}={2\over15}.            \tag{8.7}
+\]
+These positive reserves show that $q$-inflation itself is not the current
+obstruction.  No assertion is made that the progressive theorem must fit the
+particular trial values $\eta_*,\zeta_*$.
+
+\section{Proof-route ledger}
+
+\begin{enumerate}
+\item Historical R-085 weighted Cartan bridge: superseded as the exact current
+      target and still unproved.  R-087's regular spatial half remains valid.
+\item Direct R-088 unweighted sequential bridge: open.  It is not refuted by
+      the future-feedback fixture because its strict-past derivative
+      hypothesis is deliberately violated.
+\item Historical $F_{6.5}$ or fixed-chart $K_R$ temporalized visit by visit:
+      failed by the exact sign-changing subdivision table (3.11).
+\item Complete endpoint conditional mean/covariance: advanced as the exact
+      quotient-safe identities (4.2) and (4.4).  Their sign is open.
+\item Complete-cluster signed normal form: advanced as (5.2)--(5.6).  It
+      prevents premature separation but supplies no lower bound.
+\item Average covariance before HS square: failed at both leading order and
+      the finite sample (6.7)--(6.8), unless an explicit nonlinear/sextic
+      remainder obeys (6.10).
+\item Realized cluster square before outer averaging: survives the one-pair
+      test with room.  This is viability evidence, not a theorem.
+\item Absolute future-feedback HS/PSD ledger from source energy plus one
+      sextic: failed by (7.4)--(7.10).  Signed forest cancellation survives.
+\item Direct uniform complete source action (8.2) and the legally normalized
+      determinant route (8.3)--(8.5): open.
+\end{enumerate}
+
+These entries record reusable route decisions, not private search traces.
+
+\section{Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: the direct R-088 constant is small enough to close
+the progressive theorem.}
+
+\textbf{UPHELD AS UNSUPPORTED.}  The smaller constant changes the sufficient
+spatial summation but does not prove the expectation-inside sequential bridge
+or control the same-root future-feedback selector.
+
+\item \textbf{Objection: $F_{6.5}$ may still be estimated on every visit and
+summed conservatively.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  It changes from $-992/81$ to $427/162$
+on two representations of the same endpoint.  The complete endpoint, not
+$F_{6.5}$, is the quotient coordinate.
+
+\item \textbf{Objection: retaining both $\mathcal R_Q$ and $F_{6.5}$ gives
+extra safety.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Equation (3.7) shows that $L:Q/2$ is
+already inside $\mathcal R_Q$; the proposed safety is double counting.
+
+\item \textbf{Objection: (4.6) proves positivity after optimizing the
+control.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Both the mean bracket and the covariance
+pairing are sign-indefinite.  Exact scalar fixtures attain both signs.
+
+\item \textbf{Objection: the cluster covariance can be averaged before
+applying the determinant because Jensen is conservative.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Squaring is convex in the wrong order for
+this purpose.  The averaged quantity supplies $3/32$ while the exact
+log-Laplace term needs $1/4$ at leading order.
+
+\item \textbf{Objection: the one-pair failure disproves every determinant
+route.}
+
+\textbf{DISMISSED.}  The realized square supplies $5/16$ and therefore has
+leading room.  A legal sequential conditional determinant remains possible.
+
+\item \textbf{Objection: the oscillatory tangent disproves the signed source
+action.}
+
+\textbf{DISMISSED.}  The separated $M^2$ second jets cancel to
+$a^2M^2e^{-2M^2}$.  Only the absolute positive-tangent architecture is
+refuted.
+
+\item \textbf{Objection: summability at each finite cutoff makes (8.3)
+nonvacuous.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  A post-hoc remainder can always equal the
+finite deficit.  Uniform dependence, sign, measurability, and a cutoff/chart/
+control/subdivision-independent ledger are essential.
+\end{enumerate}
+
+\section{Authorities and scope firewall}
+
+The load-bearing authorities are R-063 (complete Taylor/Wick forest), R-085
+(historical weighted Cartan and rational forms), R-087 (regular spatial half
+and failed translated-model extraction), R-088 (exact direct unweighted OU
+target), R-103 (regular $H_N$/REG allocation), R-104 (fixed-chart endpoint
+assembly), R-105 v1.1 (subdivision quotient), and R-107 (coherent cluster and
+direct source-action frontier).
+
+Proved here are only the authority audit, the exact subdivision table, the
+complete endpoint conditional and optimized identities, the abstract
+complete-cluster mean/covariance identity, the one-pair square-before-average
+obstruction and quantified sextic tradeoff, the arbitrary-selector absolute
+future-feedback obstruction, and the exact arithmetic budget.
+
+Not proved here are the direct bridge (2.5)--(2.6), any sign for (4.6), the
+uniform lower bound (8.2), the determinant targets (8.3)--(8.5), an arbitrary
+same-root random-heat extension, progressive/revisit $H_A$,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, cutoff or floor removal, an interacting
+measure, Sector-A closure, or a T5--T7 promotion.
+
+\section{Executable verification}
+
+The primary certificate derives all rational owners and conditional forms in
+exact symbolic algebra and derives every Gaussian moment from its generating
+identities.  The independent certificate imports no symbolic, array,
+scientific, or primary module.  It uses a second-order rational dual number,
+exact finite distributions, factorial cumulants, hand matrix algebra, the
+closed erfc moment, and direct Gaussian quadrature.
+
+Run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+  codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_verify.py
+\end{verbatim}
+from the repository root.  The integrated verifier reruns both certificates
+and checks the note, PDF, manifest, authority pins, negative and exploration
+ledgers, public surfaces, and the no-overclaim firewall.
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-COMPLETE-CLUSTER-QUOTIENT-CARLESON-FRONTIER
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-108
+Status:    T4 ANALYTIC/EXACT/EXECUTED SYNTHESIS AND BOUNDARY;
+           NELSON AND SECTOR A OPEN
+Scope:     Finite cutoff, fixed positive floor, q=10/9; exact historical-
+           atom quotient audit, complete endpoint/cluster identities, and
+           scoped order-of-operations method fixtures.
+Precise statement: historical R-085 (4.11) is not the exact current target;
+           F_6.5 and visitwise K_R do not descend under subdivision; the
+           complete endpoint has exact conditional mean/covariance and CM-
+           optimized forms; realized covariance must be squared before the
+           outer average; absolute arbitrary future-feedback HS ledgers fail.
+Dependencies: R-063, R-085, R-087, R-088, R-103, R-104, R-105, R-107.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_verify.py
+Expected output:
+           primary 66/66; independent 90/90; integrated 230/230;
+           aggregate 386/386 PASS.
+Negative results: NG-2026-07-28-A13-RATIONAL-TAYLOR-OWNER-SUBDIVISION;
+           NG-2026-07-28-A13-AVERAGED-COVARIANCE-BEFORE-HS-SQUARE;
+           NG-2026-07-28-A13-ABSOLUTE-FUTURE-FEEDBACK-CARTAN-CARLESON;
+           NG-2026-07-28-A13-ADAPTED-SECOND-JET-TERMSEPARATION.
+Falsification gate: failure of any quotient, conditional endpoint, cluster,
+           moment, covariance-order, feedback, budget, evidence, hash, PDF,
+           ledger, or scope assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           identities are re-expressions, not lower bounds; the complete
+           adapted cluster/source-action inequality, OVERLAP_src, Nelson,
+           removals, measure, and Sector A remain open.
+Next required action: prove the cutoff/chart/control/subdivision-uniform
+           signed complete-cluster lower bound (8.2), or a legally normalized
+           square-before-average conditional determinant implying it.
+\end{verbatim}
+\endgroup

@@ -99,6 +99,17 @@ Carleson lower bound with every heat, trace, baseline, future-feedback,
 rational, forest, and terminal-sextic owner retained once. Uniform
 `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
 open.
+R-108 sharpens the surviving coordinate without closing it. Historical
+`F_6.5` and visitwise `K_R` fail the subdivision quotient, while the complete
+endpoint has exact conditional mean/covariance and Cameron--Martin-minimized
+forms. Their remaining debts have no sign. The exact one-pair fixture shows
+that a bare average-before-square ledger needs the explicit nonlinear/sextic
+repair, while square-before-average is only viable on that fixture. The
+oscillatory feedback fixture retires only an absolute arbitrary-selector
+positive HS/PSD-Carleson ledger paid solely by source energy and one terminal
+sextic because its signed second jet cancels. The required uniform signed complete-cluster estimate,
+`OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
+open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the

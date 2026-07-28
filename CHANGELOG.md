@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-108 complete-cluster quotient and covariance-order frontier] - 2026-07-28
+
+R-108 separates the historical weighted R-085 contract from the direct unweighted R-088 target, proves the rational subdivision quotient and exact quotient-safe complete endpoint and cluster conditional identities, and records the exact q=10/9 budget. A bare average-before-square covariance ledger requires the explicit nonlinear/sextic repair; square-before-average remains viable only on the one-pair fixture. An absolute arbitrary-selector future-feedback HS/PSD ledger paid solely by source energy and one terminal sextic fails while the complete signed second jet cancels. The uniform complete-cluster lower bound, OVERLAP_src, Nelson, removals, interacting-measure construction, and Sector A remain open at T4.
+
 ## [Correct R-107 predictable multi-row likelihood scope] - 2026-07-28
 
 Final adversarial review corrected the initial R-107 wording. The multi-row backward-resolvent density martingale requires all output rows to be jointly frozen before the roots are integrated. Rowwise predictability does not suffice: for A1=1 and A2=1_{|xi1|>1}, the candidate mass is erf(sqrt(19/18))+erfc(sqrt(29/38))=1.070433115292664...>1; a bounded smooth tanh companion has a strict small-amplitude defect. The one-fresh-root whole-output det2 formula with a past-measurable map and baseline remains exact, as do the direct predictable-baseline action, trace allocation, and all other scoped R-107 identities. EXP-000284 supersedes the overbroad part of EXP-000277. The adapted complete-cluster bound, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open.

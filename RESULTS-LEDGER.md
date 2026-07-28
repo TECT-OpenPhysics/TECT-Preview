@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-108](#r-108) | Complete-cluster quotient, conditional covariance, and the nonvacuous Carleson frontier | Scoped T4 analytic/exact/executed synthesis and method boundary: the historical weighted R-085 Cartan bridge is stronger than the exact R-084 target; R-088's corrected sufficient bridge is unweighted and needs only positive spatial gain, but its sequential production estimate remains open. The historical rational `F_6.5` and visitwise fixed-chart `K_R` change sign under a representation-preserving subdivision, whereas the complete endpoint is invariant. That quotient-safe complete endpoint has an exact conditional mean/covariance identity and exact Cameron--Martin minimization, with no sign. Every contraction-closed output cluster likewise has an exact signed mean/covariance normal form. On the exact one-pair cluster, a bare average-before-square covariance ledger supplies `3/32` against the required `1/4` leading coefficient; square-before-average supplies `5/16` and survives this test. The average-first route can survive only with the explicit nonlinear/sextic remainder tradeoff. An oscillatory future-feedback selector has bounded source energy and sextic but an unbounded positive tangent HS square, while the complete signed second jet cancels. Thus only an absolute arbitrary-selector future-feedback PSD/Carleson ledger paid solely by source energy and one terminal sextic is retired, not every PSD construction or the signed complete source action. The remaining theorem is a cutoff/chart/control/subdivision-uniform signed complete-cluster lower bound, or a legally normalized square-before-average conditional determinant implying it. `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open |
 | [R-107](#r-107) | Coherent output clusters, frozen likelihood, and the adapted predictable-baseline boundary | Scoped T4 analytic/exact/executed advance and method boundary: the exact endpoint likelihood tilt has positive entropy production and a root-martingale variance decomposition, but it returns the same unknown free-energy difference. Jointly frozen coherent-output Gaussian rows have an exact backward-resolvent density martingale, and one fresh root with a past-measurable map has the whole-output `det2` formula with mixed baseline. Rowwise predictability does not license one global frozen determinant: a bounded two-root fixture has exact total mass `1.070433115292664...>1`, with a smooth `tanh` companion. The coefficient trace has an exact positive output allocation, yet a one-pair fixture has expected singleton packets `-sigma^4/4,+sigma^4/8,+sigma^4/8`, so only a contraction-connected output cluster is legal. Independently normalized outputs lose linearly growing determinant slack; sequential Schur is mandatory. The direct action is exactly the complete predictable-baseline sum plus one terminal sextic and one source-energy payment, and covariance mass against one deterministic predictable PSD weight is subdivision invariant. Exact adapted-sine and carrier-information fixtures retire termwise second-jet/forest estimates and a pure carrier-KL diagonal bridge. The remaining theorem is one subdivision-invariant adapted complete-cluster or equivalent predictable-baseline matrix-Carleson estimate with every owner retained once. `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open |
 | [R-106](#r-106) | Gibbs endpoint likelihood and exact production radial merge boundary | Scoped T4 analytic/exact/executed boundary: the actual finite-cutoff Gibbs endpoints have exact likelihood, dual relative-entropy, variational, and thermodynamic-integration identities. The total A9 time integral is exactly the unknown endpoint free-energy difference and supplies no estimate by itself. A constant active-doublet ray rules out fixed pointwise likelihood domination by sextic plus Cameron--Martin payments without refuting the Gibbs integral. The exact production radial Fierz coefficient yields a same-root `1:2` input merge defect `<=-c lambda^4+O(lambda^2)` and negative leafwise sextic merge, retiring universal bounded raw input-leaf reassembly. R-082's complete coherent output-frequency square remains a legal candidate coordinate only after the nonlinear current is fully assembled with heat, trace, baseline, R-063 forest, and one parent/root sextic. No bound on that packet is proved; both actual-Gibbs/time-integrated and direct complete source-action formulations remain open, as do `OVERLAP_src`, Nelson, removals, a measure, and Sector A |
 | [R-105](#r-105) | Cartan endpoint quotient, rational subdivision boundary, and A9 route boundary | Scoped T4 analytic/exact/executed advance and method boundary: complete common-root value-plus-heat Cartan edges telescope before the expectation-inside grouped square, so representation-preserving subdivisions have one endpoint quotient and no edge multiplicity. On the normalized active production fibre `c1=e=Gamma0=1`, the historical rational `F_6.5` and fixed-chart `K_R` change sign under an exact subdivision, while the complete R-101 endpoint remains `1600/81` because its three labelled defects cancel; general parameters supply one common positive factor. Generic A9 monotonicity, the registered pathwise/absolute critical-Young extraction, and the all-law pointwise relative bracket fail. The last failure is production-specific at one fixed cutoff and forces `b(t)>=3/t`, but it is not a Gibbs-path or Nelson counterexample. An exact determinant bound survives only in an artificial scalar quadratic one-pair mode-diagonal model; a sign-indefinite two-mode cross-mode resonance blocks tensorization. The remaining theorem is the uniform complete source action, equivalently the full signed `OVERLAP_src`/Nelson target, through a complete signed packet or a Gibbs-specific/time-integrated A9 argument. Nelson, removals, a measure, and Sector A remain open |
@@ -126,6 +127,90 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-108"></a>
+### R-108 -- Complete-cluster quotient, conditional covariance, and the nonvacuous Carleson frontier
+
+**Result ID.**
+`A13-CLASSII-COMPLETE-CLUSTER-QUOTIENT-CARLESON-FRONTIER`.
+
+**Authority correction and quotient.** Historical R-085 (4.10)--(4.11)
+uses a weighted `sum_k 2^k q_k` contract and `s>1/2`. R-088 audits the exact
+R-084 OU square: the current sufficient contract is the unweighted
+`sum_k q_k` bridge with any `s>0`. The corresponding balanced Schur constant
+falls from `572.4472106721531...` to `16.30295538482827...`; neither constant
+proves the missing sequential production bridge. Separately, the historical
+rational form `F_6.5` and visitwise `K_R` do not descend to the progressive
+subdivision quotient. On the exact R-105 production-fibre fixture they change
+from `-992/81` to `427/162` and `355/162`, respectively, while the complete
+endpoint stays `1600/81` because all labelled defects cancel.
+
+**Exact conditional identities.** If the complete cluster endpoint is
+
+`Delta W_R=(1/2)B_1:((G+c)^(tensor 2)-Gamma)
+          -(1/2)B_0:(G^(tensor 2)-Gamma)`,
+
+then, conditionally on its complete endpoint data with
+`mu=E[G|H]` and `V=Cov(G|H)`,
+
+`E[Delta W_R|H]=(1/2)(c+mu)^T B_1(c+mu)
+                 -(1/2)mu^T B_0 mu
+                 +(1/2)(B_1-B_0):(V-Gamma)`.
+
+At `q=10/9`, exact Cameron--Martin minimization gives
+
+`inf_c {q E[Delta W_R|H]+||c||^2/2}
+ = (5/9)(B_1-B_0):(V-Gamma)
+   +(5/9)mu^T[(9/10)B_1(B_1+(9/10)I)^(-1)-B_0]mu`.
+
+Neither surviving term has a sign. For a general contraction-closed output
+cluster, conditional Pythagoras likewise couples the positive conditional
+mean square to the signed covariance/trace defect. These are exact quotient-
+safe re-expressions, not lower bounds.
+
+**Order-of-operations and feedback boundaries.** On the exact one-pair
+cluster, the log-Laplace leading coefficient is `q^2 sigma^8/4`. Squaring the
+averaged conditional covariance supplies only `3q^2 sigma^8/32`; it misses
+`5q^2 sigma^8/32`. Squaring the realized covariance before the outer
+expectation supplies `5q^2 sigma^8/16` and therefore has room on this fixture.
+At `q=1,sigma=1/2`, the exact log moment is
+`0.0008505852754225884...`, the average-first cost is `3/8192`, and the
+square-first cost is `5/4096`. A sextic repair of the average-first route must
+obey the explicit leading tradeoff
+`r+15q zeta sigma^6 >= 5q^2 sigma^8/32+o(sigma^8)`.
+
+For `h_M(G)=a sin(MG)` and `z=h_M cos(Nx)`, source energy and one terminal
+sextic stay bounded in `M`, but the separated positive future-feedback tangent
+square grows like `M^2` and its rank-one HS square like `M^4`. The complete
+signed second jet cancels to `a^2 M^2 exp(-2M^2)`. This retires only an
+absolute arbitrary-selector future-feedback PSD/HS-Carleson extension paid
+solely by source energy and one terminal sextic; it does not refute the
+signed complete R-063 forest, R-088's strict-past theorem, or the direct
+complete source action.
+
+**Boundary.** A usable successor must fix nonnegative remainders before the
+deficit is observed and prove a cutoff-, chart-, control-, and subdivision-
+uniform complete-cluster ledger. Its determinant version must form the legal
+realized conditional cluster, square its covariance, and only then average.
+The quotient-safe identities and arithmetic budget do not prove this uniform
+lower bound. `OVERLAP_src`, Nelson, cutoff/floor removal, interacting-measure
+construction, Sector-A closure, and T5--T7 promotion remain open. Tier stays
+T4.
+
+**Proven in.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-complete-cluster-quotient-carleson-frontier-260728-v1.0`, with
+primary `66/66` and non-importing standard-library independent `90/90`
+certificates.
+
+**Reuse scope.** Subdivision-quotient audits for stochastic Taylor owners,
+exact conditional quadratic endpoint/cluster normal forms, covariance-before-
+determinant order tests, and selector-based no-go tests for absolute PSD/
+Carleson budgets.
+
+**Publication target.** Constructive stochastic-field methods note with
+R-105--R-107 after the uniform signed complete-cluster/Nelson theorem is
+resolved.
 
 <a id="r-107"></a>
 ### R-107 -- Coherent output clusters, frozen likelihood, and the adapted predictable-baseline boundary
