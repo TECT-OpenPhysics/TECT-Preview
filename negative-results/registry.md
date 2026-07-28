@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY](#ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity) | prove the mixed scalar `k:2k` projective boundary by showing every inverse-amplitude coefficient of the exact logarithmic gap is nonnegative | the exact third coefficient at `c=3/5`, `s=2/5`, `x=24/25` is `-627811338105359170693920/190578044621571595050427561<0`. The leading gap and first two corrections remain positive there, so only coefficientwise sign induction is retired; the target and a controlled remainder/interval proof remain live |
 | [NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION](#ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination) | prove the mixed scalar `k:2k` all-`q` theorem by inserting the local Gaussian envelope `I_0(z)<=exp(z^2/4)` into the exact radial integral | the envelope creates `+9q^2A^2R^2S`; on `R=S=L` this positive cubic dominates every original quadratic damping term, so the proposed upper integral is infinite whenever `qA!=0`. The sharp linear-growth Bessel majorant remains valid and useful |
 | [NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION](#ng-2026-07-28-a13-k2k-conditional-scalar-tensorization) | condition on one mixed frequency and apply the positive-coefficient scalar degenerate-face theorem to the other frequency | conditioning on `S` produces `alpha_eff=(A^2+10S-4w)/v`, which can be arbitrarily negative. For `alpha_eff=-B`, the exact packet is `(X-B-1)^2-(B^2+1)` and fixed `0<s<1/2` has log-Laplace leading term `sB^2`, exceeding the blindly extended proxy `2s^2B^2`. The positive-coefficient face theorem remains exact on its declared faces |
 | [NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY](#ng-2026-07-28-a13-k2k-tilted-variance-monotonicity) | prove the mixed scalar `k:2k` target by showing its variance decreases under every negative exponential tilt | at the exact normalized fixture `a=0,r=7,t=1/10`, adaptive integration gives tilted third centered moment `-24382.8010903952...`, so `psi'''(t)>0` and tilted variance is increasing there. Independent Gauss--Laguerre orders 96 and 128 retain the sign. The target gap is still `132.60095258...>0`, so this retires only the monotonicity proof route |
@@ -153,6 +154,32 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity"></a>
+### NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY -- the third exact projective coefficient changes sign
+
+**Failure mode:** expand the exact covariance-simplex logarithmic gap in
+inverse amplitude and attempt to prove the full mixed projective theorem by
+induction on nonnegative coefficients at every order.
+
+**Evidence:** the primary and non-importing independent exact moment engines
+agree that at
+
+`c=3/5`, `s=2/5`, `x=24/25`,
+
+the order-`b^-3` coefficient is
+
+`D3=-627811338105359170693920/190578044621571595050427561<0`.
+
+At the same rational fixture the limiting gap `D0`, first correction `D1`,
+and second correction `D2` are strictly positive.
+
+**Consequence:** all-order coefficientwise positivity is false, so a sign
+induction cannot replace a uniform remainder or directed-rounding certificate.
+This is not a counterexample to the scalar target: R-112's exact simplex
+compactification, `D0/D1/D2` bounds, existential large-amplitude theorem,
+origin and slice-wise face patches, and strict mixed-core interval successor
+remain valid.
 
 <a id="ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination"></a>
 ### NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION -- the local Gaussian Bessel envelope destroys radial integrability

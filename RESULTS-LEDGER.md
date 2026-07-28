@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-112](#r-112) | Covariance-simplex compactification and uniform projective compact-core reduction | Scoped T4 analytic/exact/executed advance and method boundary: the unbounded mixed stationary scalar `k:2k` parameter space is written on the closed covariance simplex `c+s=1` and reduced outside the exact residual domain `(2x+tau)^2<=32x+20tau`, hence to `0<=c<=1`, `0<=x<=8`, `0<=tau<=20`, with a rigorous radius-50 radial tail below `1.091e-17`. The projective gap has a simplex-uniform expansion through `b^-2`; `D0>=x^3/480`, `D1>=0`, and an exact degree-twelve Bernstein certificate gives `D2>=x^2 Delta/4>=x^2/400`, with a factored `O(x^3 b^-3)` remainder and an existential uniform large-amplitude all-`q` theorem. A Bernstein-MGF condition supplies an origin cusp and the exact R-111 faces give slice-wise face patches. Exact `D3<0` retires all-order coefficientwise positivity without refuting the target. An effective amplitude threshold, a directed-rounding certificate for the strict mixed core, the genuinely mixed all-`q` theorem, full A1 embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-111](#r-111) | Scalar k:2k degenerate-face theorem, projective boundary, and mixed compact-core reduction | Scoped T4 analytic/exact/executed advance and method boundary: for the exact stationary scalar two-frequency packet of R-110, `log E exp(-qP)<=q^2 H/4` holds for every `q>=0` and every amplitude on both degenerate covariance faces `vw=0`. The genuinely mixed face has an exact `I_0` radial normalizer. At fixed projective shape its large-amplitude limit is the sum of two nonnegative centered-exponential gaps, and the complete first inverse-amplitude correction has a coefficientwise-positive numerator. Exact phase minimization yields a finite algebraic candidate set and removes sufficiently large `q` shape-wise; `log I_0(z)<=sqrt(4+z^2)-2` and a square completion give factorized tails. Three shortcuts are rigorously retired: the quadratic Bessel envelope creates a nonintegrable positive cubic exponent, conditioning produces negative effective scalar coefficients that falsify positive-coefficient tensorization, and tilted variance need not decrease. A uniform projective remainder, uniform local/two-chart face patching, and interval certification of the mixed compact core remain open. R-103 REG and R-087 fixed-cutoff CORE retain their prior owners; no full A1 embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, or Sector-A closure follows |
 | [R-110](#r-110) | Random-covariance Skorohod completion, trace-corrected diagonal interpolation, and a stationary scalar cross-mode frontier | Scoped T4 analytic/exact/executed advance and method boundary: for a symmetric same-root Gaussian-dependent PSD matrix `W` in the domain of the double divergence, the complete signed second jet equals both `E[||h||^2 delta^2W]/2` and `E<h,Dh(Wxi-div W)>`. It has the Young-optimized form cost `q^2 E[(delta^2W)^2]/(128 sqrt(eta zeta))`, bounded by the declared chaos--Sobolev norm of `W`; fixed `W` recovers R-109 exactly. Static HS/trace/rank control fails even for uniformly positive scalar weights and rotating rank-one projections. A trace-compatible diagonal coupling has the exact interpolation derivative `Phi'(rho)=q^2 E_nu Gamma_rho` and an explicit decoupled endpoint, but a nonlinear Gaussian fixture shows that tangent-covariance square alone cannot pay an uncentred mean debt. For the stationary scalar two-frequency `k:2k` whole-output model, exact mean, variance, third moment, and covariance square give the strict right-small-`q` margin `H-2 Var(P)=(v^4+16v^2w^2+16w^4)/4`; four declared points have positive margins at quadrature orders 24 and 48, but neither convergence nor the bare all-`q` inequality is proved. The architecture-sharp local pointwise completion needs a `9A^2v/20` expected baseline whose three-dimensional positive-density bounded-multiplicity production shell mass grows like `2^j`, so that payment cannot globalize. No full A1 embedding of the scalar model is asserted. The adapted production cluster, owner-preserving trace/mean and tilted cross-score ledger, bare all-`q` scalar-model estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open |
 | [R-109](#r-109) | Square-first pair normalizer, signed score transfer, and filtration boundary | Scoped T4 analytic/exact/executed advance and method boundary: a centered random variable with upper floor `beta` and second moment at most `8 beta^2` obeys the all-`q` Bennett bound `log E exp(qZ)<=5q^2 beta^2`. Consequently the exact contraction-closed one-pair packet `P=lambda sigma^4(T^2-2T)/4`, `T~Exp(1)`, satisfies the square-before-average estimate `log E exp(-qP)<=(q^2/4)E||S_real||_HS^2` at every amplitude, and sequential fresh pairs form a nonnegative predictable-cost supermartingale. The R-108 covariance square is legal only inside a past conditional expectation; revealing the root and applying an auxiliary-copy determinant produces an outer exponential cost and normalizes a decoupled packet. The pure quartic selector has a pathwise summable floor in the diagonal submodel, but the full pair has a linearly divergent baseline floor and physical cross-mode resonances, so determinant cancellation remains necessary. For fixed past-measurable PSD `W`, the complete signed second jet transfers exactly to the centered Gaussian quadratic score and costs `q^2||W||_HS^2/(64 sqrt(eta zeta))`; at `q=10/9` the coefficient is `25/1296`, and the production derivative-covariance shell squares are summable. Replacing the raw Wick coordinate by this Stein derivative representative inside an exponential is false: an oscillatory family has derivative log-Laplace cost growing linearly while the raw Wick exponential cost tends to zero. The adapted production `W`, Cameron--Martin/covariance/forest coupling, no-multiplicity global ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open |
@@ -130,6 +131,64 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-112"></a>
+### R-112 -- Covariance-simplex compactification and uniform projective compact-core reduction
+
+**Result ID.**
+`A13-CLASSII-SCALAR-K2K-COVARIANCE-SIMPLEX-UNIFORM-PROJECTIVE-COMPACT-CORE-REDUCTION`.
+
+**Exact compactification.** Set `gamma=v+4w`, `c=v/gamma`,
+`s=4w/gamma`, `b=A^2/gamma`, `tau=q gamma^2`, and `x=b tau`.  Then
+`c+s=1`, and the exact normalized packet is
+`F=bL+sqrt(b)B+Q`.  Its covariance square is
+`K=b^2 K2+b K1+K0`, with strict local reserve
+`Delta=K-2 Var(F)>=1/100`.  A global sum of squares gives
+`F>=-b/2-5/16`, while exact positive identities give
+`K>=(2b+1)^2/16`.  The target is therefore already proved outside
+
+`(2x+tau)^2<=32x+20tau`,
+
+so the unresolved set lies in the compact box
+`0<=c<=1`, `0<=x<=8`, `0<=tau<=20`.  The complete radial tail outside
+`T,U<=50` is below `1.091e-17` by an analytic bound.
+
+**Uniform projective theorem.** Uniformly on the closed covariance simplex and
+`0<=x<=8`, the target gap has
+
+`G_b=D0+D1/b+D2/b^2+O(x^3/b^3)`.
+
+Here `D0>=x^3/480`, the exact numerator of `D1` is coefficientwise
+nonnegative, and two exact degree-twelve Bernstein tables prove
+`D2>=x^2 Delta/4>=x^2/400`.  A common phase-minimum dominator and the
+factored logarithmic remainder yield a finite, universal but presently
+non-effective `b_*` for which the all-`q` scalar inequality holds whenever
+`b>=b_*`.  A one-sided Bernstein-MGF condition supplies an exact origin cusp;
+after removing origin and projective patches, compact closed slices inherit
+positive face neighborhoods from the exact R-111 face theorem.
+
+**Method boundary.** At the exact rational point
+`c=3/5`, `s=2/5`, `x=24/25`, the third inverse-amplitude coefficient equals
+
+`-627811338105359170693920/190578044621571595050427561<0`.
+
+Thus an induction asserting positivity of every projective coefficient is
+false.  This is not a target counterexample: `D0,D1,D2` remain positive at
+the fixture.  The strict mixed compact core still needs a directed-rounding
+certificate.
+
+**Owner and theorem boundary.** R-103 REG and R-087 fixed-cutoff CORE retain
+their prior owners, and the old R-085 formulas are not reopened.  R-112 proves
+no effective `b_*`, genuinely mixed all-`q` scalar theorem, full A1 embedding,
+adapted production cluster, one-use source/sextic aggregation,
+`OVERLAP_src`, Nelson, removals, interacting measure, or Sector-A closure.
+Tier remains T4.
+
+**Proof and reproduction.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-scalar-k2k-covariance-simplex-uniform-projective-compact-core-reduction-260728-v1.0.tex.txt`,
+manifest `classii_scalar_k2k_covariance_simplex_uniform_compact_core_manifest.json`,
+and the primary, independent, and integrated R-112 executables.
 
 <a id="r-111"></a>
 ### R-111 -- Scalar k:2k degenerate-face theorem, projective boundary, and mixed compact-core reduction

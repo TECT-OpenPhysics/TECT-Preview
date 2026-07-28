@@ -1,0 +1,588 @@
+% =============================================================================
+% Title: Scalar k:2k covariance-simplex compactification, uniform projective
+%        patch, and interval-core boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed advance; Sector A remains open
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Exp}{\operatorname{Exp}}
+\newcommand{\erfcx}{\operatorname{erfcx}}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{The unbounded mixed scalar $k{:}2k$ parameter space is reduced exactly
+to one compact covariance simplex and one explicit compact semialgebraic
+$(x,\tau)$ domain with a rigorous radial tail.  The projective boundary is
+uniformly safe and its first two inverse-amplitude corrections are
+nonnegative, and strict for positive projective coordinate.
+The remaining strict mixed core still requires directed-rounding interval
+certification; the mixed all-$q$ theorem and Sector A are not closed.}
+
+R-111 used $a=A^2/v$ and $r=w/v$.  Those coordinates are exact when $v>0$,
+but $r\to\infty$ obscures the second covariance face.  This note replaces
+them by the closed simplex
+\[
+ c={v\over v+4w},\qquad s={4w\over v+4w},\qquad c+s=1.
+\]
+The complete packet, covariance square, projective limit, and radial tails
+then extend continuously to both faces.
+
+An exact sum of squares gives a global packet floor, and three exact positive
+identities give a uniform covariance-square floor.  Therefore the exterior
+of
+\[
+ (2x+\tau)^2\le32x+20\tau,\qquad
+ 0\le c\le1,\quad0\le x\le8,\quad0\le\tau\le20
+\]
+is already proved.  On this compact domain the complete radial tail outside
+$T,U\le50$ is below $1.1\times10^{-17}$.
+
+On the projective boundary the gap has a uniform expansion through order
+$b^{-2}$ with remainder $O(x^3b^{-3})$.  The leading gap, the $b^{-1}$
+coefficient, and the $b^{-2}$ coefficient are nonnegative; the second one has
+an exact degree-twelve Bernstein certificate and retains one quarter of the
+strict R-110 local margin.  The third coefficient is negative at one exact
+rational point.  Thus positivity of every projective coefficient is a false
+shortcut, not a counterexample to the target.
+
+R-103 REG and R-087 fixed-cutoff variational CORE retain their accepted
+owners.  Nothing here proves the full A1 one-fresh-root cluster, the separate
+one-use source/sextic aggregation, $\mathrm{OVERLAP}_{\rm src}$, Nelson,
+removals, an interacting measure, or Sector-A closure.  Tier remains T4.
+}}
+\end{center}
+
+All polynomial and rational identities below are exact.  The formal numerical
+scans used to choose adversarial fixtures are not evidence and are not cited.
+The only displayed decimal is an exact analytic tail expression evaluated at
+the declared truncation radius.
+
+\section{Closed covariance-simplex normal form}
+
+Let $\gamma=v+4w>0$ and set
+\[
+ c={v\over\gamma},\qquad s={4w\over\gamma},\qquad
+ b={A^2\over\gamma},\qquad \tau=q\gamma^2,
+ \qquad x=b\tau.                                      \tag{1.1}
+\]
+Thus $c,s\ge0$ and $c+s=1$.  Let $T,U$ be independent unit exponentials and
+put
+\[
+ \rho={cT\over2},\qquad \sigma={sU\over8}.             \tag{1.2}
+\]
+At $c=0$ or $s=0$ the zero-weight exponential is a harmless dummy variable.
+The relative phase $\phi$ is uniform.  With
+\[
+ L=\rho+4\sigma-{1\over2},\qquad
+ Q=\rho^2+10\rho\sigma+4\sigma^2-\rho-\sigma,
+ \qquad B=6\rho\sqrt\sigma\cos\phi,                  \tag{1.3}
+\]
+the exact R-110 packet and covariance square become
+\[
+ \boxed{F:={P\over\gamma^2}=bL+\sqrt b\,B+Q,}          \tag{1.4}
+\]
+\[
+ \boxed{K:={H\over\gamma^4}=b^2K_2+bK_1+K_0,}         \tag{1.5}
+\]
+where
+\[
+ K_2={c^2+s^2\over2},                                   \tag{1.6}
+\]
+\[
+ K_1=c^3+{5\over2}c^2s+cs^2+{s^3\over4},              \tag{1.7}
+\]
+\[
+ K_0={5\over4}c^4+{1\over4}c^3s+{25\over16}c^2s^2
+       +{1\over4}cs^3+{5\over64}s^4.                   \tag{1.8}
+\]
+The packet is centered.  The exact local margin is
+\[
+ \boxed{\Delta(c,s):=K-2\Var(F)
+ ={c^4\over4}+{c^2s^2\over4}+{s^4\over64}.}            \tag{1.9}
+\]
+It has the elementary uniform lower bound
+\[
+ 64\Delta=(4c^2+s^2)^2+8c^2s^2,\qquad
+ 4c^2+s^2={4\over5}+5\left(c-{1\over5}\right)^2,
+ \qquad \Delta\ge {1\over100}.                         \tag{1.10}
+\]
+
+The phase-integrated Laplace transform is best written directly in the
+compact variables:
+\[
+ \boxed{
+ M(c,x,\tau)=\E\!\left[e^{-xL-\tau Q}
+ I_0\!\left(6\sqrt{x\tau}\,\rho\sqrt\sigma\right)\right].}
+                                                                  \tag{1.11}
+\]
+The desired scalar theorem is
+\[
+ \boxed{\log M(c,x,\tau)\le
+ {x^2K_2+x\tau K_1+\tau^2K_0\over4}.}                  \tag{1.12}
+\]
+For finite $b$ one has $x=b\tau$.  Allowing $\tau=0$ and $x>0$ adds the
+large-amplitude projective boundary and makes the parameter space compact.
+
+\section{Exact global exterior and a compact interval core}
+
+Minimizing the phase in (1.4) gives
+\[
+\begin{aligned}
+ F_-={}&\rho^2+10\rho\sigma+4\sigma^2
+ +(b-1)\rho+(4b-1)\sigma-{b\over2}
+ -6\sqrt b\,\rho\sqrt\sigma.
+\end{aligned}                                             \tag{2.1}
+\]
+
+% evidence-anchor: theorem-2.1-global-floor-compact-semialgebraic-core
+\subsection*{Theorem 2.1 (global floor and compact semialgebraic reduction)}
+
+For every $b,\rho,\sigma\ge0$,
+\[
+\boxed{
+\begin{aligned}
+ F_-={}&\left(\rho-{1\over2}\right)^2
+ +4\left(\sigma-{1\over8}\right)^2\\
+ &+\rho\left[(\sqrt b-3\sqrt\sigma)^2+\sigma\right]
+ +4b\sigma-{b\over2}-{5\over16}.
+\end{aligned}}                                           \tag{2.2}
+\]
+Hence
+\[
+ F\ge-{b\over2}-{5\over16}.                            \tag{2.3}
+\]
+On the covariance side,
+\[
+ K_2={1+(c-s)^2\over4},                                  \tag{2.4}
+\]
+\[
+ K_1={1\over4}+{c(1+5c-3c^2)\over4},                   \tag{2.5}
+\]
+\[
+ K_0={1\over16}+{s^4+76c^2s^2+76c^4\over64}.           \tag{2.6}
+\]
+Every remainder is nonnegative on $c+s=1$, so
+\[
+ \boxed{K\ge{(2b+1)^2\over16}.}                         \tag{2.7}
+\]
+The floor proves (1.12) whenever
+\[
+ \tau\ge R(b):={32b+20\over(2b+1)^2}.                  \tag{2.8}
+\]
+Indeed $\log M\le\tau(b/2+5/16)$, and the right side of (1.12) is at
+least $\tau^2(2b+1)^2/64$.
+
+Moreover,
+\[
+ 20(2b+1)^2-(32b+20)=16b(5b+3)\ge0,                    \tag{2.9}
+\]
+\[
+ 8(2b+1)^2-b(32b+20)=4(3b+2)>0.                         \tag{2.10}
+\]
+Thus only $0\le\tau\le20$ and $0\le x=b\tau\le8$ remain.  Eliminating
+$b=x/\tau$ gives the exact closed residual condition
+\[
+ \boxed{(2x+\tau)^2\le32x+20\tau.}                     \tag{2.11}
+\]
+This proves the claimed compactification. \hfill$\square$
+
+% evidence-anchor: theorem-2.2-uniform-radial-tail
+\subsection*{Theorem 2.2 (uniform complete radial tail)}
+
+Using $I_0(z)\le e^z$ and the same squares,
+\begin{equation}
+\begin{aligned}
+ &xL+\tau Q-6\sqrt{x\tau}\,\rho\sqrt\sigma\\
+ &\quad=\tau(\rho^2-\rho)+\tau(4\sigma^2-\sigma)-{x\over2}
+ +4x\sigma\\
+ &\qquad\quad
+ +\rho\left[(\sqrt x-3\sqrt{\tau\sigma})^2+\tau\sigma\right]
+ \ge-{x\over2}-{5\tau\over16}.
+\end{aligned}                                             \tag{2.12}
+\end{equation}
+Therefore the contribution of
+$\{T>R\}\cup\{U>R\}$ to the complete phase/Bessel integral obeys
+\[
+ \boxed{
+ M_{\rm tail}(R)\le e^{x/2+5\tau/16}
+                 \left(2e^{-R}-e^{-2R}\right).}         \tag{2.13}
+\]
+On (2.11), $R=50$ gives
+\[
+ M_{\rm tail}(50)<1.091\times10^{-17}.                  \tag{2.14}
+\]
+This is an analytic tail bound, not quadrature convergence evidence.
+\hfill$\square$
+
+\section{Uniform projective boundary}
+
+For $b>0$, let $\delta=b^{-1}=\tau/x$ and keep $x$ fixed.  Then
+\[
+ \tau F=x(L+\sqrt\delta\,B+\delta Q).                  \tag{3.1}
+\]
+Under the leading tilt, $T$ and $U$ remain independent exponentials with
+rates
+\[
+ \alpha=1+{cx\over2},\qquad \beta=1+{sx\over2}.         \tag{3.2}
+\]
+The limiting transform and gap are
+\[
+ M_\infty={e^{x/2}\over(1+cx/2)(1+sx/2)},               \tag{3.3}
+\]
+\[
+ \boxed{D_0=d(cx/2)+d(sx/2),\qquad
+ d(u)={u^2\over2}-u+\log(1+u).}                         \tag{3.4}
+\]
+Since $d'(u)=u^2/(1+u)$, $D_0>0$ for $x>0$.  On $0\le x\le8$,
+\[
+ d(u)\ge{u^3\over15}\quad(0\le u\le4),\qquad
+ c^3+s^3\ge{1\over4},
+\]
+and hence
+\[
+ \boxed{D_0\ge{x^3\over480}.}                           \tag{3.5}
+\]
+
+% evidence-anchor: theorem-3.1-uniform-projective-expansion
+\subsection*{Theorem 3.1 (uniform expansion through the second correction)}
+
+Uniformly for $c+s=1$ and $0\le x\le8$,
+\[
+ \boxed{
+ G_b:={\tau^2K\over4}-\log M
+ =D_0+{D_1\over b}+{D_2\over b^2}
+   +O\!\left({x^3\over b^3}\right).}                   \tag{3.6}
+\]
+The first coefficient is
+\[
+ \boxed{D_1={x^3N_1(c,s,x)\over
+ 16(2+cx)^2(2+sx)^2}\ge0,}                              \tag{3.7}
+\]
+where
+\begin{equation}
+\begin{aligned}
+N_1={}&4c^5s^2x^3+16c^5sx^2+16c^5x
++10c^4s^3x^3+56c^4s^2x^2+104c^4sx+64c^4\\
+&+4c^3s^4x^3+56c^3s^3x^2+172c^3s^2x+152c^3s\\
+&+c^2s^5x^3+20c^2s^4x^2+88c^2s^3x+112c^2s^2\\
+&+4cs^5x^2+32cs^4x+32cs^3+4s^5x+16s^4.
+\end{aligned}                                                \tag{3.8}
+\end{equation}
+All coefficients are positive.
+
+The second coefficient satisfies the stronger exact bound
+\[
+ \boxed{D_2\ge{x^2\Delta(c,s)\over4}\ge{x^2\over400}.} \tag{3.9}
+\]
+
+\emph{Uniform remainder.}
+Write $\varepsilon=b^{-1/2}$.  For $0<\theta\le1$ and $b\ge10$, put
+$b_\theta=(\theta\varepsilon)^{-2}\ge10$.  The intermediate exponent
+$L+\theta\varepsilon B+\theta^2\varepsilon^2Q$ is $F_{b_\theta}/b_\theta$.
+The sharper phase-minimum identity
+\[
+ b_\theta-1+10\sigma-6\sqrt{b_\theta\sigma}
+ =10\left(\sqrt\sigma-{3\sqrt{b_\theta}\over10}\right)^2
+   +{b_\theta\over10}-1\ge0
+\]
+gives $F_{b_\theta}\ge-b_\theta/2$ and hence the common dominator
+$e^{x/2}e^{-T-U}$; the endpoint $\theta=0$ follows by continuity.  The sixth
+$\varepsilon$ derivative is a Bell polynomial
+in $-xB-2x\varepsilon Q$ and $-2xQ$.  Every monomial has $x$-degree at least
+three, and $B,Q$ have simplex-uniform polynomial coefficients.  Thus the
+integrated sixth derivative is bounded by
+\[
+ Cx^3(1+T+U)^Ne^{-T-U}                                  \tag{3.10}
+\]
+for one finite constant on $x\le8$.  Phase symmetry removes odd powers.
+
+If
+\[
+ A_1=\E_x\left[{x^2B^2\over2}-xQ\right],               \tag{3.11}
+\]
+\[
+ A_2=\E_x\left[{x^4B^4\over24}-{x^3B^2Q\over2}
+                         +{x^2Q^2\over2}\right],        \tag{3.12}
+\]
+then
+\[
+ D_1={x^2K_1\over4}-A_1,\qquad
+ D_2={x^2K_0\over4}-\left(A_2-{A_1^2\over2}\right).   \tag{3.13}
+\]
+The centered identity $\E_0Q=0$ and smooth tilted moments give
+$A_1=O(x^2)$ and $A_2=O(x^2)$.  Thus the logarithmic sixth-order combinations
+$A_1A_2$ and $A_1^3$ are respectively $O(x^4)$ and $O(x^6)$, hence
+$O_8(x^3)$.  Together with (3.10), this proves that passing from the raw
+transform to its logarithm preserves the factored $O(x^3b^{-3})$ remainder.
+
+Exact exponential moments give (3.7).  After $s=1-c$, the exact positive
+denominators for $D_2/x^2$ and
+$(D_2-x^2\Delta/4)/x^3$ are respectively
+\[
+ 256(2+cx)^4(2+(1-c)x)^4,
+ \qquad 64(2+cx)^4(2+(1-c)x)^4.
+\]
+They are strictly positive on $0\le c\le1$, $x\ge0$.  Clear these
+denominators and express both numerators in the degree-twelve Bernstein basis
+in $c$.  Each of the thirteen Bernstein coefficients is coefficientwise
+nonnegative in $x$.  The minimum power coefficients for the margin reserve are
+\[
+ 16,{8\over3},{4\over11},{2\over55},{1\over495},{1\over198},
+ {1\over44},{1\over198},{16\over495},{32\over55},
+ {64\over11},{128\over3},256.                            \tag{3.14}
+\]
+This is a finite exact polynomial certificate.  Equations (3.10)--(3.14)
+prove (3.6)--(3.9). \hfill$\square$
+
+% evidence-anchor: corollary-3.2-uniform-large-amplitude-all-q
+\subsection*{Corollary 3.2 (existential uniform large-amplitude theorem)}
+
+There exists a finite universal $b_*$ such that, for every covariance-simplex
+point and every $\tau\ge0$, (1.12) holds whenever $b\ge b_*$.  On $x\le8$,
+(3.5)--(3.9) and the factored remainder prove the result for all sufficiently
+large $b$, uniformly down to $x=0$.  For $x\ge8$, the sharper consequence of
+(2.1),
+\[
+ b\ge10\quad\Longrightarrow\quad F\ge-{b\over2},       \tag{3.15}
+\]
+and $K_2\ge1/4$ close the target directly.  The theorem is analytic but
+non-effective because the constant in (3.10) has not yet been extracted.
+\hfill$\square$
+
+\section{Origin and face patches}
+
+% evidence-anchor: theorem-4.1-origin-bernstein-mgf-patch
+\subsection*{Theorem 4.1 (rigorous origin cusp)}
+
+Let $X_0=-F$.  From (2.3),
+\[
+ X_0\le B_0={b\over2}+{5\over16},\qquad
+ \Var(F)={K-\Delta\over2}.                              \tag{4.1}
+\]
+The one-sided Bernstein MGF inequality gives
+\[
+ \log\E e^{\tau X_0}
+ \le {\tau^2(K-\Delta)\over4(1-\tau B_0/3)}.           \tag{4.2}
+\]
+Consequently (1.12) holds whenever
+\[
+ \tau B_0\le{3\Delta\over K}.                          \tag{4.3}
+\]
+In compact coordinates this is the exact polynomial condition
+\[
+ \boxed{
+ (8x+5\tau)(x^2K_2+x\tau K_1+\tau^2K_0)
+ \le48\Delta\tau^2.}                                   \tag{4.4}
+\]
+This supplies a certified cusp at the equality point $(x,\tau)=(0,0)$.
+\hfill$\square$
+
+% evidence-anchor: proposition-4.2-face-and-interior-reduction
+\subsection*{Proposition 4.2 (face patch and strict residual interior)}
+
+R-111 proves (1.12) strictly for $\tau>0$ on $c=0$ and $c=1$.  Remove the
+open interiors of the origin set certified by Theorem 4.1 and the projective
+set certified by Corollary 3.2.  Any closed residual slice separated from
+their common equality boundaries is compact after the tail (2.13) is removed,
+and the complete integral (1.11) is continuous there.  Strictness on each
+face and a finite-subcover argument then supply positive face neighborhoods
+on that slice.  Equivalently, after a finite closed-slice decomposition, the
+unresolved interval problem is confined to strict compact interiors in
+$c,x,\tau$.  No single uniform face width across the equality origin is
+claimed.  The slice widths are presently existential rather than
+machine-certified, so this proposition is a reduction, not the mixed all-$q$
+theorem. \hfill$\square$
+
+\section{A necessary failed route at third order}
+
+% evidence-anchor: proposition-5.1-third-projective-coefficient-nogo
+\subsection*{Proposition 5.1 (all-order coefficient positivity is false)}
+
+The order $b^{-3}$ coefficient is
+\[
+ D_3=-\left(A_3-A_1A_2+{A_1^3\over3}\right),           \tag{5.1}
+\]
+where
+\[
+ A_3=\E_x\left[-{x^3Q^3\over6}+{x^4B^2Q^2\over4}
+ -{x^5B^4Q\over24}+{x^6B^6\over720}\right].           \tag{5.2}
+\]
+At the exact rational simplex point
+\[
+ c={3\over5},\qquad s={2\over5},\qquad x={24\over25}, \tag{5.3}
+\]
+one obtains
+\[
+ \boxed{
+ D_3=-{627811338105359170693920\over
+ 190578044621571595050427561}<0.}                        \tag{5.4}
+\]
+At the same point $D_0,D_1,D_2$ are positive.  Thus (5.4) retires only the
+claim that every inverse-amplitude coefficient is nonnegative.  It is not a
+counterexample to (1.12).  This is registered as
+\[
+ \texttt{NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY}.
+                                                                  \tag{5.5}
+\]
+
+\section{Directed-rounding successor}
+
+After Theorems 2.1--4.1 and the exact R-111 faces, the remaining scalar task
+is finite.  A suitable certificate must:
+\begin{enumerate}
+\item use the compact coordinates $(c,x,\tau)$ and the constraint (2.11);
+\item keep the combined phase exponent rather than bounding a huge isolated
+$I_0$ value on the radial box;
+\item use (2.13) at $R=40$ or $50$ for the exterior;
+\item use Theorem 4.1 near the origin and Theorem 3.1 near $\tau=0$;
+\item use the exact R-111 faces near $c=0,1$;
+\item apply directed-rounding Taylor or interval cubature only to the strict
+residual interior.
+\end{enumerate}
+For fixed $U$ and phase $\theta$, the $T$ integral has the stable exact form
+\[
+ \int_0^\infty e^{-aT^2-dT}\,dT
+ ={\sqrt\pi\over2\sqrt a}\,
+ \erfcx\!\left({d\over2\sqrt a}\right),                \tag{6.1}
+\]
+with its continuous $a\downarrow0$ limit when $d>0$; that condition holds on
+the intended $\tau=0$ and $c=0$ degeneracies after the linear terms are
+combined.  This reduces validated cubature to
+$(U,\theta)$ and avoids the separate exponential growth of $I_0$.  Arb or an
+equivalent directed-rounding backend is the recommended next implementation.
+No finite Gauss--Laguerre scan is promoted to evidence here.
+
+Even a successful certificate for (1.12) would close only the stationary
+scalar normalizer.  The next production theorem would still be the complete
+one-fresh-root, contraction-connected A1 cluster retaining heat, mean,
+covariance trace, mixed baseline, rational recovery, every visit, random-$W$
+double divergence, and the R-063 forest once.  The source energy and terminal
+sextic must then be aggregated in a separate one-use ledger.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: the $r\to\infty$ face destroys the projective
+remainder.}
+
+\textbf{DISMISSED.}  The simplex coefficients are continuous at $c=0$ and
+$s=0$.  Dummy unit exponentials carry zero weight, and the exact common floor
+supplies the derivative dominator on the closed simplex.
+
+\item \textbf{Objection: $D_0=O(x^3)$ can be swamped at $x\to0$.}
+
+\textbf{VALID WITH MITIGATION.}  A bare
+$D_0+D_1/b+O(b^{-2})$ statement is insufficient.  The proof retains $D_2$,
+certifies $D_2\ge x^2\Delta/4$, and factors the remainder as
+$O(x^3b^{-3})$.  The finite-$b$ origin uses the separate Bernstein-MGF cusp.
+
+\item \textbf{Objection: the projective expansion is being exchanged with
+$x\to\infty$.}
+
+\textbf{UPHELD AGAINST THAT EXCHANGE.}  The expansion is used only on
+$x\le8$.  The exact floor closes the exterior before the expansion is
+invoked.
+
+\item \textbf{Objection: every projective coefficient is positive.}
+
+\textbf{UPHELD AS FALSE.}  Equation (5.4) is an exact negative third
+coefficient.  The proof uses a remainder enclosure, not sign induction.
+
+\item \textbf{Objection: the compact box itself proves the theorem.}
+
+\textbf{UPHELD AS AN OVERCLAIM.}  Compactness and a small tail make a finite
+certificate possible; they do not supply it.  The strict mixed interior is
+still open.
+
+\item \textbf{Objection: signs, factors, units, or hard-coded decimals hide
+the result.}
+
+\textbf{DISMISSED FOR THE CLAIMED SCOPE.}  Two non-importing scripts derive
+the quotient, $K_2,K_1,K_0$, both Bernstein tables, the floor identities, and
+the rational $D_3$ fixture.  The tail decimal is recomputed from its exact
+formula and declared radius.  The exploratory scans are excluded from the
+evidence contract.  External adversarial review of the interval successor is
+explicitly invited.
+\end{enumerate}
+
+\section{Authorities and scope firewall}
+
+This note depends directly on R-110 for the exact stationary packet and on
+R-111 for the degenerate-face theorem and the first fixed-chart projective
+calculation.  R-063, R-087, R-101, R-103--R-105, and R-108--R-111 retain the
+production owner map.
+
+Proved here are the exact simplex quotient, Theorems 2.1--2.2, Theorem 3.1,
+Corollary 3.2, Theorem 4.1, Proposition 4.2, and the method no-go in
+Proposition 5.1.  Not proved are a directed-rounding certificate for the
+strict mixed core, the genuinely mixed scalar all-$q$ theorem, an effective
+$b_*$, a full A1 embedding, the owner-preserving production cluster, the
+one-use source/sextic aggregation, $\mathrm{OVERLAP}_{\rm src}$, Nelson,
+removals, an interacting measure, Sector-A closure, or a tier promotion.
+
+\section{Executable verification}
+
+The primary certificate reconstructs the compact packet from radial
+variables, transforms $H$ and the local margin, computes the first three
+projective coefficients, and proves both degree-twelve Bernstein tables by
+exact rational arithmetic.  The independent certificate imports no primary
+code: it expands
+\[
+ e^{-x\delta Q}I_0(x\sqrt\delta\,B)
+\]
+coefficient by coefficient and reconstructs the logarithm separately.  It
+also independently checks the global sum of squares, compact domain, tail,
+origin polynomial, and rational third-order failure.
+
+The primary contract is 69/69 and the non-importing independent contract is
+50/50.  The manifest-pinned verifier reruns both children and checks source,
+result, authority, PDF, ledger, negative, exploration, and scope contracts.
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-SCALAR-K2K-COVARIANCE-SIMPLEX-UNIFORM-PROJECTIVE-COMPACT-CORE-REDUCTION
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-112
+Status:    T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY;
+           MIXED ALL-Q, NELSON, AND SECTOR A OPEN
+Scope:     Exact stationary scalar circle k:2k model inherited from R-110.
+           Closed covariance simplex and compact (c,x,tau) reduction; no
+           full A1 production embedding.
+Precise statement: the unbounded mixed scalar parameter space has an exact
+           compact semialgebraic reduction with a rigorous radial tail; the
+           projective boundary has a uniform factored expansion, positive
+           D0,D1,D2, and an existential all-q large-amplitude theorem; D3 can
+           be negative, so all-order coefficient positivity is false.
+Dependencies: R-063, R-087, R-101, R-103--R-105, R-108--R-111.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_scalar_k2k_covariance_simplex_uniform_compact_core_verify.py
+Expected output:
+           primary 69/69; independent 50/50; manifest-pinned integrated and
+           aggregate contracts; PASS.
+Negative record:
+           NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY.
+Falsification gate: failure of any simplex, scaling, local-margin, projective,
+           Bernstein, remainder, floor, compact-domain, radial-tail, origin,
+           third-coefficient, independent, hash, PDF, ledger, or scope check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           no strict mixed-core interval certificate, mixed all-q theorem,
+           full A1 cluster, OVERLAP_src, Nelson, removals, measure, or Sector
+           A closure is proved.
+Next required action: implement a directed-rounding interval certificate on
+           the strict compact core using the analytic origin, face,
+           projective, high-q, and radial-tail patches; only after scalar
+           closure attempt the owner-preserving full-A1 conditional cluster
+           and separate one-use source/sextic aggregation ledger.
+\end{verbatim}
+\endgroup

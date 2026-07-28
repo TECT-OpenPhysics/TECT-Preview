@@ -154,14 +154,15 @@ divergence and supplies a dimension-free chaos--Sobolev sufficient gate. It
 also derives the exact trace-corrected diagonal interpolation, while exact
 fixtures retire static covariance-norm control and any universal uncentred
 nonlinear tangent-square normalizer. R-111 proves the associated stationary
-scalar two-frequency `k:2k` square-first inequality for every `q` on both
-degenerate covariance faces. On the genuinely mixed face it gives the exact
-radial normalizer, a positive fixed-shape projective limiting gap and first
-inverse-amplitude correction, an exact high-`q` cutoff, and rigorous
-factorized tails. Quadratic-Bessel domination, sign-blind conditional scalar
-tensorization, and monotone tilted variance are exact method no-gos. The next
-scalar theorem is a uniform projective remainder, uniform local/two-chart face
-patching, and interval certification of the residual compact core. Any
+scalar two-frequency `k:2k` square-first inequality on both degenerate
+covariance faces. R-112 then replaces the singular mixed quotient by one
+closed covariance simplex, proves the exact compact semialgebraic residual
+domain and analytic radial tail, and establishes a factored simplex-uniform
+projective expansion through the positive second correction, an existential
+large-amplitude theorem, an origin cusp, and slice-wise face patches. Its
+negative exact third coefficient retires all-order coefficient sign induction
+without refuting the target. The next scalar theorem is a directed-rounding
+certificate for the strict residual compact core. Any
 surviving normalizer must then be embedded into a full A1 one-fresh-root
 cluster with owner-preserving trace/mean, random-W forest, rational recovery,
 visits, source, and one-terminal-sextic ledgers, followed by a separate one-use

@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY | the third exact projective coefficient changes sign | expand the exact covariance-simplex logarithmic gap in |
 | NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION | the local Gaussian Bessel envelope destroys radial integrabi | insert `I_0(z)<=exp(z^2/4)` into the exact phase-averaged |
 | NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION | conditioning creates a false negative-coefficient scalar pro | condition on the second-frequency radius `S`, treat the |
 | NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY | the mixed tilted variance can increase | prove the mixed all-`q` target by asserting |

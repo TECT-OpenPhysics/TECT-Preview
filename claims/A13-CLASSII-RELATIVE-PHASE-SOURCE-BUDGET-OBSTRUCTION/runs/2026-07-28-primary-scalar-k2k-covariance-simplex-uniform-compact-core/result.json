@@ -1,0 +1,677 @@
+{
+  "assertion_names": [
+    "simplex::radial packet equals compact packet",
+    "simplex::covariance square equals compact polynomial",
+    "simplex::compact packet is centered",
+    "local::R-110 local margin transforms exactly",
+    "local::local margin square decomposition",
+    "local::simplex quadratic has exact four-fifths floor",
+    "local::uniform local margin lower bound is positive",
+    "projective::packet splits as bL plus sqrt-b B plus Q",
+    "projective::limiting target gap",
+    "projective::centered-exponential derivative identity",
+    "projective::simplex cubic floor",
+    "projective::first coefficient closed form on simplex",
+    "projective::first coefficient numerator is coefficientwise positive",
+    "projective::first coefficient c-zero face",
+    "projective::first coefficient c-one face",
+    "projective_second::second coefficient Bernstein degree",
+    "projective_second::Bernstein coefficient 0 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 1 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 2 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 3 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 4 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 5 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 6 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 7 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 8 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 9 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 10 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 11 is y-coefficientwise positive",
+    "projective_second::Bernstein coefficient 12 is y-coefficientwise positive",
+    "projective_second::second coefficient denominator has the positive simplex factorization",
+    "projective_second::second coefficient local limit is one quarter of the exact margin",
+    "projective_second::second coefficient margin reserve Bernstein degree",
+    "projective_second::margin-reserve Bernstein coefficient 0 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 1 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 2 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 3 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 4 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 5 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 6 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 7 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 8 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 9 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 10 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 11 is nonnegative",
+    "projective_second::margin-reserve Bernstein coefficient 12 is nonnegative",
+    "projective_second::second coefficient margin-reserve denominator has the positive simplex factorization",
+    "floor::radial coefficient square completion",
+    "floor::uniform exact-floor amplitude threshold",
+    "floor::sigma remainder is nonnegative above the floor threshold",
+    "floor::phase minimum separates from the exact floor",
+    "floor::global phase-minimum sum-of-squares identity",
+    "floor::global algebraic floor is finite for every amplitude",
+    "floor::leading covariance-square floor",
+    "floor::linear covariance-square coefficient floor",
+    "floor::constant covariance-square coefficient floor on simplex",
+    "floor::complete covariance square dominates the uniform quadratic floor",
+    "floor::uniform large-y cutoff",
+    "compact_core::global floor-to-target sufficient cutoff",
+    "compact_core::global tau cutoff is at most twenty",
+    "compact_core::global projective coordinate cutoff is below eight",
+    "compact_core::residual semialgebraic condition after x=b tau",
+    "compact_core::radius-fifty union tail is below the declared tolerance",
+    "compact_core::Bernstein-MGF origin patch is an exact polynomial condition",
+    "compact_core::transformed R-111 tail constant is finite on finite b intervals",
+    "compact_core::constant covariance-square simplex lower bound",
+    "all_order_nogo::third inverse-amplitude coefficient is negative at the rational fixture",
+    "all_order_nogo::limiting gap remains positive at the same fixture",
+    "all_order_nogo::first coefficient remains positive at the same fixture",
+    "all_order_nogo::second coefficient remains positive at the same fixture"
+  ],
+  "assertions": [
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "simplex",
+      "name": "radial packet equals compact packet",
+      "status": "PASS"
+    },
+    {
+      "actual": "(32*b**2*c**2 + 32*b**2*s**2 + 64*b*c**3 + 160*b*c**2*s + 64*b*c*s**2 + 16*b*s**3 + 80*c**4 + 16*c**3*s + 100*c**2*s**2 + 16*c*s**3 + 5*s**4)/64",
+      "expected": "b**2*(c**2/2 + s**2/2) + b*(c**3 + 5*c**2*s/2 + c*s**2 + s**3/4) + 5*c**4/4 + c**3*s/4 + 25*c**2*s**2/16 + c*s**3/4 + 5*s**4/64",
+      "group": "simplex",
+      "name": "covariance square equals compact polynomial",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "simplex",
+      "name": "compact packet is centered",
+      "status": "PASS"
+    },
+    {
+      "actual": "(16*c**4 + 16*c**2*s**2 + s**4)/64",
+      "expected": "c**4/4 + c**2*s**2/4 + s**4/64",
+      "group": "local",
+      "name": "R-110 local margin transforms exactly",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "local",
+      "name": "local margin square decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "(5*c - 1)**2/5",
+      "expected": "5*(c - 1/5)**2",
+      "group": "local",
+      "name": "simplex quadratic has exact four-fifths floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/100",
+      "expected": ">0",
+      "group": "local",
+      "name": "uniform local margin lower bound is positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "projective",
+      "name": "packet splits as bL plus sqrt-b B plus Q",
+      "status": "PASS"
+    },
+    {
+      "actual": "y**2*(c**2 + (c - 1)**2)/8 - y/2 + log(c*y/2 + 1) + log(-y*(c - 1)/2 + 1)",
+      "expected": "c**2*y**2/8 - c*y/2 + y**2*(1 - c)**2/8 - y*(1 - c)/2 + log(c*y/2 + 1) + log(y*(1 - c)/2 + 1)",
+      "group": "projective",
+      "name": "limiting target gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "z - 1 + 1/(z + 1)",
+      "expected": "z**2/(z + 1)",
+      "group": "projective",
+      "name": "centered-exponential derivative identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*(2*c - 1)**2/4",
+      "expected": "3*(c - 1/2)**2",
+      "group": "projective",
+      "name": "simplex cubic floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "-y**3*(3*c**7*y**3 - 11*c**6*y**3 + 12*c**5*y**3 - 12*c**5*y**2 - 24*c**5*y - 4*c**4*y**3 + 32*c**4*y**2 + 84*c**4*y - 8*c**4 + c**3*y**3 - 16*c**3*y**2 - 60*c**3*y + 40*c**3 - c**2*y**3 - 112*c**2 - 4*c*y**2 - 12*c*y + 32*c - 4*y - 16)/(16*(c*y + 2)**2*(c*y - y - 2)**2)",
+      "expected": "-y**3*(3*c**7*y**3 - 11*c**6*y**3 + 12*c**5*y**3 - 12*c**5*y**2 - 24*c**5*y - 4*c**4*y**3 + 32*c**4*y**2 + 84*c**4*y - 8*c**4 + c**3*y**3 - 16*c**3*y**2 - 60*c**3*y + 40*c**3 - c**2*y**3 - 112*c**2 - 4*c*y**2 - 12*c*y + 32*c - 4*y - 16)/(16*(c*y + 2)**2*(c*y - y - 2)**2)",
+      "group": "projective",
+      "name": "first coefficient closed form on simplex",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "projective",
+      "name": "first coefficient numerator is coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "y**3*(y + 4)/(16*(y + 2)**2)",
+      "expected": "y**3*(y + 4)/(16*(y + 2)**2)",
+      "group": "projective",
+      "name": "first coefficient c-zero face",
+      "status": "PASS"
+    },
+    {
+      "actual": "y**3*(y + 4)/(4*(y + 2)**2)",
+      "expected": "y**3*(y + 4)/(4*(y + 2)**2)",
+      "group": "projective",
+      "name": "first coefficient c-one face",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "projective_second",
+      "name": "second coefficient Bernstein degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "80",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 0 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "40/3",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 1 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "20/11",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 2 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/11",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 3 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/99",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 4 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/99",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 5 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/231",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 6 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/99",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 7 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/99",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 8 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/11",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 9 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "320/11",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 10 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "640/3",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 11 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1280",
+      "expected": ">0",
+      "group": "projective_second",
+      "name": "Bernstein coefficient 12 is y-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "256*(c*y + 2)**4*(c*y - y - 2)**4",
+      "expected": "256*(2+c*y)^4*(2+(1-c)*y)^4>0",
+      "group": "projective_second",
+      "name": "second coefficient denominator has the positive simplex factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "(33*c**4 - 36*c**3 + 22*c**2 - 4*c + 1)/256",
+      "expected": "(33*c**4 - 36*c**3 + 22*c**2 - 4*c + 1)/256",
+      "group": "projective_second",
+      "name": "second coefficient local limit is one quarter of the exact margin",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "projective_second",
+      "name": "second coefficient margin reserve Bernstein degree",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 0 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/3",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 1 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/11",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 2 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/55",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 3 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/495",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 4 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/198",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 5 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/44",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 6 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/198",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 7 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/495",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 8 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/55",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 9 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "64/11",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 10 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "128/3",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 11 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "256",
+      "expected": ">=0",
+      "group": "projective_second",
+      "name": "margin-reserve Bernstein coefficient 12 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "64*(c*y + 2)**4*(c*y - y - 2)**4",
+      "expected": "64*(2+c*y)^4*(2+(1-c)*y)^4>0",
+      "group": "projective_second",
+      "name": "second coefficient margin-reserve denominator has the positive simplex factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6*sqrt(b)*sqrt(sigma) + b + 10*sigma - 1",
+      "expected": "-6*sqrt(b)*sqrt(sigma) + b + 10*sigma - 1",
+      "group": "floor",
+      "name": "radial coefficient square completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "10",
+      "expected": "10",
+      "group": "floor",
+      "name": "uniform exact-floor amplitude threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "sigma*(4*sigma + 39)",
+      "expected": "sigma*(4*sigma + 39)",
+      "group": "floor",
+      "name": "sigma remainder is nonnegative above the floor threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6*sqrt(b)*rho*sqrt(sigma) + rho**2 + 10*rho*sigma + rho*(b - 1) + 4*sigma**2 + sigma*(4*b - 1)",
+      "expected": "rho**2 + rho*(-6*sqrt(b)*sqrt(sigma) + b + 10*sigma - 1) + 4*sigma**2 + sigma*(4*b - 1)",
+      "group": "floor",
+      "name": "phase minimum separates from the exact floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "global phase-minimum sum-of-squares identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-b/2 - 5/16",
+      "expected": "finite for finite b",
+      "group": "floor",
+      "name": "global algebraic floor is finite for every amplitude",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "leading covariance-square floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "linear covariance-square coefficient floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "floor",
+      "name": "constant covariance-square coefficient floor on simplex",
+      "status": "PASS"
+    },
+    {
+      "actual": "(64*b**2*c**2 - 64*b**2*c + 16*b**2 - 48*b*c**3 + 80*b*c**2 + 16*b*c + 153*c**4 - 156*c**3 + 82*c**2 - 4*c + 1)/64",
+      "expected": ">=0",
+      "group": "floor",
+      "name": "complete covariance square dominates the uniform quadratic floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "8",
+      "expected": "8",
+      "group": "floor",
+      "name": "uniform large-y cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "b/2 + 5/16",
+      "expected": "b/2 + 5/16",
+      "group": "compact_core",
+      "name": "global floor-to-target sufficient cutoff",
+      "status": "PASS"
+    },
+    {
+      "actual": "16*b*(5*b + 3)",
+      "expected": "16*b*(5*b + 3)",
+      "group": "compact_core",
+      "name": "global tau cutoff is at most twenty",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*(3*b + 2)",
+      "expected": "12*b + 8",
+      "group": "compact_core",
+      "name": "global projective coordinate cutoff is below eight",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau**2 + 4*tau*x - 20*tau + 4*x**2 - 32*x",
+      "expected": "(2*x+tau)^2-32*x-20*tau",
+      "group": "compact_core",
+      "name": "residual semialgebraic condition after x=b tau",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0909989685775844442863971068235678980194338477620e-17",
+      "expected": "<11/1000000000000000000",
+      "group": "compact_core",
+      "name": "radius-fifty union tail is below the declared tolerance",
+      "status": "PASS"
+    },
+    {
+      "actual": "(400*c**4*tau**3 + 640*c**4*tau**2*x - 768*c**4*tau**2 + 80*c**3*s*tau**3 + 128*c**3*s*tau**2*x + 320*c**3*tau**2*x + 512*c**3*tau*x**2 + 500*c**2*s**2*tau**3 + 800*c**2*s**2*tau**2*x - 768*c**2*s**2*tau**2 + 800*c**2*s*tau**2*x + 1280*c**2*s*tau*x**2 + 160*c**2*tau*x**2 + 256*c**2*x**3 + 80*c*s**3*tau**3 + 128*c*s**3*tau**2*x + 320*c*s**2*tau**2*x + 512*c*s**2*tau*x**2 + 25*s**4*tau**3 + 40*s**4*tau**2*x - 48*s**4*tau**2 + 80*s**3*tau**2*x + 128*s**3*tau*x**2 + 160*s**2*tau*x**2 + 256*s**2*x**3)/64",
+      "expected": "polynomial in c,s,x,tau",
+      "group": "compact_core",
+      "name": "Bernstein-MGF origin patch is an exact polynomial condition",
+      "status": "PASS"
+    },
+    {
+      "actual": "b/2 + (7*b + 1/2)**2/2 + Max(0, 1 - b)**2",
+      "expected": "finite for every finite b",
+      "group": "compact_core",
+      "name": "transformed R-111 tail constant is finite on finite b intervals",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/16",
+      "expected": ">0",
+      "group": "compact_core",
+      "name": "constant covariance-square simplex lower bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "-627811338105359170693920/190578044621571595050427561",
+      "expected": "<0",
+      "group": "all_order_nogo",
+      "name": "third inverse-amplitude coefficient is negative at the rational fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "-6564/15625 + log(149/125) + log(161/125)",
+      "expected": ">0",
+      "group": "all_order_nogo",
+      "name": "limiting gap remains positive at the same fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "3073496746464/44958759453125",
+      "expected": ">0",
+      "group": "all_order_nogo",
+      "name": "first coefficient remains positive at the same fixture",
+      "status": "PASS"
+    },
+    {
+      "actual": "8523491487176222249688/129362563300093219140625",
+      "expected": ">0",
+      "group": "all_order_nogo",
+      "name": "second coefficient remains positive at the same fixture",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 69,
+  "assertions_total": 69,
+  "results": {
+    "all_order_projective_nogo": {
+      "fixture": {
+        "c": "3/5",
+        "s": "2/5",
+        "y": "24/25"
+      },
+      "target_counterexample": false,
+      "third_coefficient": "-627811338105359170693920/190578044621571595050427561",
+      "third_coefficient_negative": true
+    },
+    "compact_core": {
+      "constant_covariance_square_lower": "1/16",
+      "covariance_square_floor": "(2*b + 1)**2/16",
+      "global_floor": "-b/2 - 5/16",
+      "global_tau_cutoff": "4*(8*b + 5)/(2*b + 1)**2",
+      "interval_certificate_complete": false,
+      "origin_patch_condition": "(400*c**4*tau**3 + 640*c**4*tau**2*x - 768*c**4*tau**2 + 80*c**3*s*tau**3 + 128*c**3*s*tau**2*x + 320*c**3*tau**2*x + 512*c**3*tau*x**2 + 500*c**2*s**2*tau**3 + 800*c**2*s**2*tau**2*x - 768*c**2*s**2*tau**2 + 800*c**2*s*tau**2*x + 1280*c**2*s*tau*x**2 + 160*c**2*tau*x**2 + 256*c**2*x**3 + 80*c*s**3*tau**3 + 128*c*s**3*tau**2*x + 320*c*s**2*tau**2*x + 512*c*s**2*tau*x**2 + 25*s**4*tau**3 + 40*s**4*tau**2*x - 48*s**4*tau**2 + 80*s**3*tau**2*x + 128*s**3*tau*x**2 + 160*s**2*tau*x**2 + 256*s**2*x**3)/64<=0",
+      "radial_tail_radius": "50",
+      "radial_tail_worst_bound": "1.0909989685775844442863971068235678980194338477620e-17",
+      "residual_box": {
+        "c": "[0,1]",
+        "tau": "[0,20]",
+        "x": "[0,8]"
+      },
+      "residual_semialgebraic_condition": "(2*x+tau)^2<=32*x+20*tau",
+      "residual_variables": [
+        "compact c",
+        "compact x=b*tau",
+        "compact tau"
+      ],
+      "tail_constant": "b/2 + (7*b + 1/2)**2/2 + Max(0, 1 - b)**2",
+      "tail_lower_template": "-b/2 + rho**2/4 + sigma**2/2 - (7*b + 1/2)**2/2 - Max(0, 1 - b)**2"
+    },
+    "compact_normal_form": {
+      "covariance_square": "b**2*(c**2/2 + s**2/2) + b*(c**3 + 5*c**2*s/2 + c*s**2 + s**3/4) + 5*c**4/4 + c**3*s/4 + 25*c**2*s**2/16 + c*s**3/4 + 5*s**4/64",
+      "local_margin": "c**4/4 + c**2*s**2/4 + s**4/64",
+      "local_margin_uniform_lower": "1/100",
+      "packet": "T**2*c**2/4 + 3*sqrt(2)*T*sqrt(U)*sqrt(b)*c*phase*sqrt(s)/4 + 5*T*U*c*s/8 - T*c/2 + U**2*s**2/16 - U*s/8 + b*(T*c + U*s - 1)/2",
+      "variables": [
+        "c=v/(v+4w)",
+        "s=4w/(v+4w)",
+        "b=A^2/(v+4w)",
+        "tau=q*(v+4w)^2",
+        "x=b*tau (symbol y in the exact projective algebra)"
+      ]
+    },
+    "uniform_large_amplitude": {
+      "effective_threshold_certified": false,
+      "exact_floor": "F_star=-b/2 for b>=10",
+      "exact_floor_threshold_b": "10",
+      "existential_all_q_threshold": true,
+      "uniform_high_y_cutoff": "8"
+    },
+    "uniform_projective": {
+      "first_coefficient": "y**3*(4*c**5*s**2*y**3 + 16*c**5*s*y**2 + 16*c**5*y + 10*c**4*s**3*y**3 + 56*c**4*s**2*y**2 + 104*c**4*s*y + 64*c**4 + 4*c**3*s**4*y**3 + 56*c**3*s**3*y**2 + 172*c**3*s**2*y + 152*c**3*s + c**2*s**5*y**3 + 20*c**2*s**4*y**2 + 88*c**2*s**3*y + 112*c**2*s**2 + 4*c*s**5*y**2 + 32*c*s**4*y + 32*c*s**3 + 4*s**5*y + 16*s**4)/(16*(c*y + 2)**2*(s*y + 2)**2)",
+      "first_numerator_terms": 20,
+      "limiting_gap": "c**2*y**2/8 - c*y/2 + s**2*y**2/8 - s*y/2 + log(c*y/2 + 1) + log(s*y/2 + 1)",
+      "limiting_mgf": "exp(y/2)/((c*y/2 + 1)*(s*y/2 + 1))",
+      "second_bernstein_degree": 12,
+      "second_bernstein_min_coefficients": [
+        "80",
+        "40/3",
+        "20/11",
+        "2/11",
+        "1/99",
+        "2/99",
+        "25/231",
+        "2/99",
+        "16/99",
+        "32/11",
+        "320/11",
+        "640/3",
+        "1280"
+      ],
+      "second_global_lower": "D2>=x^2*local_margin/4>=x^2/400",
+      "second_local_limit": "(33*c**4 - 36*c**3 + 22*c**2 - 4*c + 1)/256",
+      "second_margin_reserve_bernstein_min_coefficients": [
+        "16",
+        "8/3",
+        "4/11",
+        "2/55",
+        "1/495",
+        "1/198",
+        "1/44",
+        "1/198",
+        "16/495",
+        "32/55",
+        "64/11",
+        "128/3",
+        "256"
+      ],
+      "uniform_remainder": "O_Y(y^3/b^3)"
+    }
+  },
+  "results_sha256": "f411dc90dd486d9b9caebbd480ce87cbff3e185eb80c96da0fdaeaae3fa6e35a",
+  "route_verdicts": {
+    "all_order_coefficientwise_positivity": "failed-at-third-coefficient",
+    "all_parameter_compact_semialgebraic_reduction": "proved-effective-domain-and-tail",
+    "covariance_simplex_compactification": "proved-exact",
+    "effective_large_amplitude_threshold": "open",
+    "first_inverse_amplitude_coefficient": "proved-nonnegative",
+    "full_a1_embedding": "open",
+    "local_and_face_patching": "proved-existential",
+    "mixed_all_q_scalar_k2k": "open",
+    "mixed_compact_core": "open-interval-certificate-required",
+    "nelson": "open",
+    "overlap_src": "open",
+    "second_inverse_amplitude_coefficient": "proved-positive-by-Bernstein-certificate",
+    "sector_a": "open",
+    "uniform_large_amplitude_all_q": "proved-existential-threshold",
+    "uniform_projective_remainder": "proved-asymptotic-with-factored-remainder"
+  },
+  "schema": "tect/a13-scalar-k2k-covariance-simplex-uniform-compact-core-primary/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

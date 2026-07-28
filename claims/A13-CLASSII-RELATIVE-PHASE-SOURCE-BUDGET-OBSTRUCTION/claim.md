@@ -986,6 +986,26 @@ the following structural results and proof-architecture boundaries hold.
     decisions. The full A1 embedding, owner-preserving one-use source/sextic
     aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and
     Sector A remain open; tier stays T4.
+55. `A13-CLASSII-SCALAR-K2K-COVARIANCE-SIMPLEX-UNIFORM-PROJECTIVE-COMPACT-CORE-REDUCTION`
+    is R-112. It replaces the singular R-111 quotient by the closed simplex
+    `c=v/(v+4w)`, `s=4w/(v+4w)`, proves the exact normalized packet and
+    covariance square, and retains the strict uniform local reserve
+    `Delta>=1/100`. A global packet sum of squares and exact covariance floors
+    prove the target outside `(2x+tau)^2<=32x+20tau`; the residual lies in
+    `0<=c<=1`, `0<=x<=8`, `0<=tau<=20`, with a uniform radius-50 tail below
+    `1.091e-17`. The projective gap has a simplex-uniform expansion
+    `D0+D1/b+D2/b^2+O(x^3/b^3)`, where `D0>=x^3/480`, `D1>=0`, and exact
+    degree-twelve Bernstein certificates give
+    `D2>=x^2 Delta/4>=x^2/400`. This proves an existential uniform
+    large-amplitude all-`q` theorem. An exact Bernstein-MGF condition supplies
+    the origin cusp and R-111 supplies slice-wise face patches. The strict
+    mixed core still needs a directed-rounding certificate. At the rational
+    fixture `c=3/5,s=2/5,x=24/25`, `D3<0`, so all-order coefficient sign
+    induction is false without giving a target counterexample. R-103 REG and
+    R-087 fixed-cutoff CORE retain their owners; no full A1 cluster, one-use
+    aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, or
+    Sector A follows. `EXP-000313--EXP-000317` preserve the route decisions;
+    tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1047,6 +1067,7 @@ is a scoped T4 subproof and does not promote A13.
 | Square-first pair normalizer / signed score transfer / filtration boundary | Global conditional Bennett normalizer; all-amplitude one-pair square-before-average bound and fresh-pair supermartingale; realized-covariance filtration repair; selector-independent centered quartic floor and divergent full-pair baseline boundary; fixed-predictable-PSD signed score transfer; exponential Stein-substitution no-go | T4 analytic/exact/executed advance and method boundary; adapted cross-mode production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Random-W Skorohod / trace-corrected diagonal / scalar k:2k frontier | Exact double-divergence assembly and Young-optimized moment form; static covariance-norm no-go; chaos--Sobolev sufficient gate; exact trace-corrected interpolation and nonlinear mean-debt no-go; stationary scalar k:2k exact moments, strict right-small-q margin, two-order finite falsifiers, and architecture-sharp but globally nonsummable pointwise payment | T4 analytic/exact/executed advance and method boundary; no full A1 embedding or bare all-q scalar theorem, and the adapted complete production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Scalar k:2k degenerate faces / projective boundary / compact-core reduction | Exact all-q theorem on `vw=0`; positive fixed-shape projective limit and first correction; algebraic high-q cutoff; sharp Bessel and factorized tails; three exact route no-gos | T4 analytic/exact/executed advance and method boundary; genuinely mixed all-q, uniform projective/local/face patching, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Scalar k:2k covariance simplex / uniform projective / strict compact-core reduction | Closed covariance simplex; exact compact semialgebraic domain and analytic radial tail; uniform factored projective expansion through `D2`; existential large-amplitude theorem; exact origin and slice-wise face patches; negative exact `D3` method boundary | T4 analytic/exact/executed advance and method boundary; effective threshold, strict-core interval certificate, genuinely mixed all-q, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1059,9 +1080,10 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
 - Fixed `L=16` torus.
 - Three complex fields in the A7 six-real convention.
 - A1 production symbol and coefficients.
-- R-111 proves the R-110 stationary scalar two-frequency cross-output theorem
-  for all `q` only on `vw=0`. Its mixed projective expansion is fixed-shape,
-  and no embedding as the full A1 production tensor is asserted.
+- R-112 puts the R-110/R-111 stationary scalar two-frequency problem on one
+  closed covariance simplex, proves a uniform factored projective expansion
+  and an exact compact residual domain, but does not certify its strict mixed
+  interior or embed it as the full A1 production tensor.
 - Fixed positive `rho_regularizer=1e-12`.
 - Common entrywise-real-even scalar Fourier cutoffs.
 - Same-cutoff covariance-normal Wick subtraction.
@@ -1378,10 +1400,12 @@ Current subordinate order:
     miss current-root rotation. Its trace-corrected interpolation leaves a
     tilted cross-score and a genuine mean-owner obligation. R-111 proves the
     stationary scalar two-frequency `k:2k` inequality on both degenerate faces
-    for every `q`, and reduces the genuinely mixed face to fixed-shape
-    projective, high-`q`, tail, local, and compact-interior components. The live
-    scalar target is now a uniform projective remainder, uniform local/face-
-    chart patching, and an interval certificate for the remaining mixed core.
+    for every `q`. R-112 then replaces the singular shape quotient by one
+    closed covariance simplex, proves an exact compact semialgebraic domain
+    and analytic tail, a factored simplex-uniform projective expansion through
+    the positive second correction, an existential large-amplitude theorem,
+    an origin cusp, and slice-wise face patches. The live scalar target is now
+    a directed-rounding certificate for the strict residual compact interior.
     Even a complete scalar result would still require one adapted contraction-
     closed production
     cluster coupling the Cameron--Martin mean, realized covariance, trace,
@@ -1391,20 +1415,20 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_scalar_k2k_projective_compact_core_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_scalar_k2k_covariance_simplex_uniform_compact_core_verify.py
 ```
 
 Expected output:
 
-- primary `46/46`;
-- non-importing independent `35/35`;
-- manifest-pinned integrated `152/152` and aggregate `233/233` PASS;
-- normalized packet, both all-`q` degenerate-face proofs, fixed-shape
-  projective limit and first correction, exact high-`q` floor, factorized
-  tails, rational near-tight boundary fixture, three method no-gos,
+- primary `69/69`;
+- non-importing independent `50/50`;
+- manifest-pinned integrated `152/152` and aggregate `271/271` PASS;
+- exact covariance-simplex packet, local reserve, global floors, compact
+  semialgebraic domain, analytic radial tail, uniform projective `D0/D1/D2`
+  and remainder, origin and slice-wise face patches, exact negative `D3`,
   PDF/surface contracts, and T4 firewalls;
-- explicit preservation of the open mixed all-`q`, uniform projective/local/
-  face patching, compact-interior, full A1, one-use aggregation,
+- explicit preservation of the open effective-threshold, strict mixed-core
+  interval, mixed all-`q`, full A1, one-use aggregation,
   `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
 
@@ -1413,7 +1437,23 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 ## Current evidence
 
-The latest subproof package is:
+The latest R-112 subproof package is:
+
+- `classii_scalar_k2k_covariance_simplex_uniform_compact_core_manifest.json`
+- `notes/classii-scalar-k2k-covariance-simplex-uniform-projective-compact-core-reduction-260728-v1.0.tex.txt`
+- `notes/classii-scalar-k2k-covariance-simplex-uniform-projective-compact-core-reduction-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_scalar_k2k_covariance_simplex_uniform_compact_core.py`
+- `../../codes/foundations/a13_classii_scalar_k2k_covariance_simplex_uniform_compact_core_independent.py`
+- `../../codes/foundations/a13_classii_scalar_k2k_covariance_simplex_uniform_compact_core_verify.py`
+- `runs/2026-07-28-primary-scalar-k2k-covariance-simplex-uniform-compact-core/result.json`
+- `runs/2026-07-28-independent-scalar-k2k-covariance-simplex-uniform-compact-core/result.json`
+- `runs/2026-07-28-integrated-scalar-k2k-covariance-simplex-uniform-compact-core/result.json`
+- `../../RESULTS-LEDGER.md#r-112`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity`
+- `../../explorations/log.jsonl` (`EXP-000313`--`EXP-000317`)
+- R-063, R-087, R-101, R-103--R-105, and R-108--R-111 remain hash-pinned.
+
+The immediate R-111 predecessor remains binding:
 
 - `classii_scalar_k2k_projective_compact_core_boundary_manifest.json`
 - `notes/classii-scalar-k2k-degenerate-face-projective-compact-core-boundary-260728-v1.0.tex.txt`
@@ -2471,6 +2511,19 @@ face theorem to the mixed interior, the pointwise projective expansion to a
 uniform chart theorem, or R-111 to a full A1 cluster, one-use aggregation,
 `OVERLAP_src`, Nelson, removal, measure, Sector-A, or higher-tier theorem.
 
+The R-112 continuation is additionally falsified by failure of the exact
+covariance-simplex packet or covariance square; the local identity
+`Delta>=1/100`; either global floor; the eliminated compact condition
+`(2x+tau)^2<=32x+20tau`; the radius-50 analytic tail; the factored uniform
+projective remainder; any `D0`, `D1`, `D2`, denominator, or degree-twelve
+Bernstein certificate; the origin condition or closed-slice face argument;
+the exact negative `D3` fixture; disagreement between the two non-importing
+executables; any R-112 source, note, PDF, manifest, run, registry,
+`EXP-000313--EXP-000317`, assertion, hash, or public-surface pin; or any
+promotion of compactification to a strict-core interval certificate, mixed
+all-`q` theorem, full A1 cluster, one-use aggregation, `OVERLAP_src`, Nelson,
+removal, measure, Sector-A, or higher-tier theorem.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2868,6 +2921,18 @@ Cartan/rational formulas are not reopened. R-111 proves no uniform projective
 or local/face-chart patch, full A1 embedding, adapted production cluster,
 one-use source/sextic aggregation, `OVERLAP_src`, Nelson estimate, cutoff/
 floor removal, interacting measure, Sector-A closure, or T5--T7 promotion.
+Tier stays T4.
+
+R-112 proves a uniform projective remainder, exact compact semialgebraic
+reduction, analytic radial tail, origin cusp, and slice-wise face patches for
+the stationary scalar model. It does not extract an effective amplitude
+threshold or certify the strict mixed compact interior. Compactness and a
+small tail are not the mixed all-`q` theorem. The exact negative third
+coefficient refutes only all-order coefficientwise positivity, not the target.
+R-103 REG and R-087 fixed-cutoff CORE retain their prior owners, and the old
+R-085 formulas remain non-load-bearing. No full A1 embedding, adapted
+production cluster, one-use source/sextic aggregation, `OVERLAP_src`, Nelson,
+removal, interacting measure, Sector-A closure, or T5--T7 promotion follows.
 Tier stays T4.
 
 ## History
@@ -3543,3 +3608,17 @@ Tier stays T4.
   and fixed-cutoff CORE retain their prior owners; full A1, one-use
   aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and
   Sector A remain open; tier stays T4.
+- 2026-07-28: Registered R-112. The mixed scalar parameter space is now one
+  closed covariance simplex and one exact compact semialgebraic residual
+  domain with a uniform analytic radial tail. A factored uniform projective
+  expansion proves nonnegative `D0/D1`, a strictly reserved `D2`, and an
+  existential all-`q` large-amplitude theorem; exact origin and slice-wise
+  face patches isolate the strict interval core. The exact negative `D3`
+  retires all-order coefficient sign induction without refuting the target.
+  `EXP-000313--EXP-000317` preserve all advanced, failed, and inconclusive
+  routes. Primary `69/69`, non-importing independent `50/50`, integrated
+  `152/152`, and aggregate `271/271` checks are manifest-pinned. The final
+  nine-page PDF passes form, zero-overfull, extraction, no-literal-`qquad`,
+  and all-page Poppler visual QA. The mixed strict-core certificate, full A1
+  production cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals,
+  interacting measure, and Sector A remain open; tier stays T4.

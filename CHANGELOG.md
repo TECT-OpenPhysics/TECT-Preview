@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-112 covariance-simplex uniform projective compact-core reduction] - 2026-07-28
+
+Registered R-112 at T4. The exact stationary scalar k:2k problem now has a closed covariance-simplex normal form, an exact compact semialgebraic residual domain, a uniform analytic radial tail, and a factored simplex-uniform projective expansion through D2. Exact Bernstein certificates give D2>=x^2 Delta/4 and an existential large-amplitude all-q theorem; an origin cusp and slice-wise R-111 face patches isolate the strict mixed core. The exact negative D3 fixture retires all-order coefficientwise positivity without refuting the target. Directed-rounding certification of the strict mixed core, the genuinely mixed all-q theorem, full A1 embedding, one-use aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open. R-103 REG and R-087 fixed-cutoff CORE retain their prior owners.
+
 ## [R-111 scalar k2k degenerate-face theorem and mixed compact-core boundary] - 2026-07-28
 
 R-111 proves the stationary scalar two-frequency k:2k square-first inequality for every q and amplitude on both degenerate covariance faces. On the genuinely mixed face it gives the exact I_0 radial normalizer, a positive fixed-shape projective limiting gap and positive first inverse-amplitude correction with a dominated remainder, an exact algebraic high-q cutoff, sharp Bessel and factorized-tail majorants, and three registered method no-gos. Uniform projective/local/two-chart face patching and the residual compact-interior certificate remain open. R-103 REG and R-087 fixed-cutoff CORE retain their prior owners; the old R-085 formulas are not reopened. Primary 46/46, independent 35/35, integrated 152/152, and aggregate 233/233 are pinned. No full A1 embedding, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, or Sector-A closure is proved; tier remains T4.

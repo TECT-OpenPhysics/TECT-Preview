@@ -1,0 +1,505 @@
+{
+  "assertion_names": [
+    "normal_form::linear coordinate",
+    "normal_form::quadratic coordinate",
+    "normal_form::leading H identity",
+    "normal_form::linear H identity",
+    "normal_form::constant H identity",
+    "normal_form::uniform H floor",
+    "normal_form::uniform local margin floor",
+    "series::zeroth phase-integrated coefficient",
+    "series::first coefficient agrees with independently transformed R-111 formula",
+    "series::old first-coefficient numerator remains coefficientwise positive",
+    "series::second denominator has the positive simplex factorization",
+    "series::second coefficient has degree-twelve Bernstein certificate",
+    "series::second Bernstein coefficient 0 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 1 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 2 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 3 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 4 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 5 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 6 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 7 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 8 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 9 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 10 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 11 is x-coefficientwise positive",
+    "series::second Bernstein coefficient 12 is x-coefficientwise positive",
+    "series::margin-reserve denominator has the positive simplex factorization",
+    "series::second margin reserve has degree-twelve Bernstein certificate",
+    "series::reserve Bernstein coefficient 0 is nonnegative",
+    "series::reserve Bernstein coefficient 1 is nonnegative",
+    "series::reserve Bernstein coefficient 2 is nonnegative",
+    "series::reserve Bernstein coefficient 3 is nonnegative",
+    "series::reserve Bernstein coefficient 4 is nonnegative",
+    "series::reserve Bernstein coefficient 5 is nonnegative",
+    "series::reserve Bernstein coefficient 6 is nonnegative",
+    "series::reserve Bernstein coefficient 7 is nonnegative",
+    "series::reserve Bernstein coefficient 8 is nonnegative",
+    "series::reserve Bernstein coefficient 9 is nonnegative",
+    "series::reserve Bernstein coefficient 10 is nonnegative",
+    "series::reserve Bernstein coefficient 11 is nonnegative",
+    "series::reserve Bernstein coefficient 12 is nonnegative",
+    "series::second local limit",
+    "series_boundary::second coefficient fixture is positive",
+    "series_boundary::third coefficient fixture is negative",
+    "compact_core::global floor SOS",
+    "compact_core::cutoff meets floor against H floor",
+    "compact_core::cutoff tau ceiling",
+    "compact_core::cutoff projective ceiling",
+    "compact_core::residual compact polynomial",
+    "compact_core::independent radius-fifty tail bound",
+    "compact_core::origin Bernstein-MGF patch is polynomial"
+  ],
+  "assertions": [
+    {
+      "actual": "T*c/2 + U*s/2 - 1/2",
+      "expected": "T*c/2 + U*s/2 - 1/2",
+      "group": "normal_form",
+      "name": "linear coordinate",
+      "status": "PASS"
+    },
+    {
+      "actual": "T**2*c**2/4 + 5*T*U*c*s/8 - T*c/2 + U**2*s**2/16 - U*s/8",
+      "expected": "declared compact Q",
+      "group": "normal_form",
+      "name": "quadratic coordinate",
+      "status": "PASS"
+    },
+    {
+      "actual": "c**2/2 + s**2/2",
+      "expected": "[1+(c-s)^2]/4",
+      "group": "normal_form",
+      "name": "leading H identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "c**3 + 5*c**2*s/2 + c*s**2 + s**3/4",
+      "expected": "1/4+c(1+5c-3c^2)/4",
+      "group": "normal_form",
+      "name": "linear H identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "5*c**4/4 + c**3*s/4 + 25*c**2*s**2/16 + c*s**3/4 + 5*s**4/64",
+      "expected": "1/16+(s^4+76c^2s^2+76c^4)/64",
+      "group": "normal_form",
+      "name": "constant H identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "(64*b**2*c**2 - 64*b**2*c + 16*b**2 - 48*b*c**3 + 80*b*c**2 + 16*b*c + 153*c**4 - 156*c**3 + 82*c**2 - 4*c + 1)/64",
+      "expected": ">=0",
+      "group": "normal_form",
+      "name": "uniform H floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "c**4/4 + c**2*s**2/4 + s**4/64",
+      "expected": ">=1/100 on c+s=1",
+      "group": "normal_form",
+      "name": "uniform local margin floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": "1",
+      "group": "series",
+      "name": "zeroth phase-integrated coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "-x**3*(3*c**7*x**3 - 11*c**6*x**3 + 12*c**5*x**3 - 12*c**5*x**2 - 24*c**5*x - 4*c**4*x**3 + 32*c**4*x**2 + 84*c**4*x - 8*c**4 + c**3*x**3 - 16*c**3*x**2 - 60*c**3*x + 40*c**3 - c**2*x**3 - 112*c**2 - 4*c*x**2 - 12*c*x + 32*c - 4*x - 16)/(16*(c*x + 2)**2*(c*x - x - 2)**2)",
+      "expected": "-x**3*(3*c**7*x**3 - 11*c**6*x**3 + 12*c**5*x**3 - 12*c**5*x**2 - 24*c**5*x - 4*c**4*x**3 + 32*c**4*x**2 + 84*c**4*x - 8*c**4 + c**3*x**3 - 16*c**3*x**2 - 60*c**3*x + 40*c**3 - c**2*x**3 - 112*c**2 - 4*c*x**2 - 12*c*x + 32*c - 4*x - 16)/(16*(c*x + 2)**2*(c*x - x - 2)**2)",
+      "group": "series",
+      "name": "first coefficient agrees with independently transformed R-111 formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "1",
+      "expected": ">0",
+      "group": "series",
+      "name": "old first-coefficient numerator remains coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "256*(c*x + 2)**4*(c*x - x - 2)**4",
+      "expected": "256*(2+c*x)^4*(2+(1-c)*x)^4>0",
+      "group": "series",
+      "name": "second denominator has the positive simplex factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "series",
+      "name": "second coefficient has degree-twelve Bernstein certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "80",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 0 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "40/3",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 1 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "20/11",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 2 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/11",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 3 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/99",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 4 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/99",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 5 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "25/231",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 6 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/99",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 7 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/99",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 8 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/11",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 9 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "320/11",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 10 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "640/3",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 11 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1280",
+      "expected": ">0",
+      "group": "series",
+      "name": "second Bernstein coefficient 12 is x-coefficientwise positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "64*(c*x + 2)**4*(c*x - x - 2)**4",
+      "expected": "64*(2+c*x)^4*(2+(1-c)*x)^4>0",
+      "group": "series",
+      "name": "margin-reserve denominator has the positive simplex factorization",
+      "status": "PASS"
+    },
+    {
+      "actual": "12",
+      "expected": "12",
+      "group": "series",
+      "name": "second margin reserve has degree-twelve Bernstein certificate",
+      "status": "PASS"
+    },
+    {
+      "actual": "16",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 0 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "8/3",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 1 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "4/11",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 2 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "2/55",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 3 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/495",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 4 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/198",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 5 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/44",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 6 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/198",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 7 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "16/495",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 8 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "32/55",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 9 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "64/11",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 10 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "128/3",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 11 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "256",
+      "expected": ">=0",
+      "group": "series",
+      "name": "reserve Bernstein coefficient 12 is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "(33*c**4 - 36*c**3 + 22*c**2 - 4*c + 1)/256",
+      "expected": "(33*c**4 - 36*c**3 + 22*c**2 - 4*c + 1)/256",
+      "group": "series",
+      "name": "second local limit",
+      "status": "PASS"
+    },
+    {
+      "actual": "8523491487176222249688/129362563300093219140625",
+      "expected": ">0",
+      "group": "series_boundary",
+      "name": "second coefficient fixture is positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-627811338105359170693920/190578044621571595050427561",
+      "expected": "<0",
+      "group": "series_boundary",
+      "name": "third coefficient fixture is negative",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "compact_core",
+      "name": "global floor SOS",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*(8*b + 5)/(2*b + 1)**2",
+      "expected": "4*(b/2+5/16)/K_floor",
+      "group": "compact_core",
+      "name": "cutoff meets floor against H floor",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*(8*b + 5)/(2*b + 1)**2",
+      "expected": "<=20",
+      "group": "compact_core",
+      "name": "cutoff tau ceiling",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*b*(8*b + 5)/(2*b + 1)**2",
+      "expected": "<8",
+      "group": "compact_core",
+      "name": "cutoff projective ceiling",
+      "status": "PASS"
+    },
+    {
+      "actual": "tau**2 + 4*tau*x - 20*tau + 4*x**2 - 32*x",
+      "expected": "<=0 on the residual domain",
+      "group": "compact_core",
+      "name": "residual compact polynomial",
+      "status": "PASS"
+    },
+    {
+      "actual": "1.0909989685775844442863971068235678980194338477620e-17",
+      "expected": "<11/1000000000000000000",
+      "group": "compact_core",
+      "name": "independent radius-fifty tail bound",
+      "status": "PASS"
+    },
+    {
+      "actual": "(400*c**4*tau**3 + 640*c**4*tau**2*x - 768*c**4*tau**2 + 80*c**3*s*tau**3 + 128*c**3*s*tau**2*x + 320*c**3*tau**2*x + 512*c**3*tau*x**2 + 500*c**2*s**2*tau**3 + 800*c**2*s**2*tau**2*x - 768*c**2*s**2*tau**2 + 800*c**2*s*tau**2*x + 1280*c**2*s*tau*x**2 + 160*c**2*tau*x**2 + 256*c**2*x**3 + 80*c*s**3*tau**3 + 128*c*s**3*tau**2*x + 320*c*s**2*tau**2*x + 512*c*s**2*tau*x**2 + 25*s**4*tau**3 + 40*s**4*tau**2*x - 48*s**4*tau**2 + 80*s**3*tau**2*x + 128*s**3*tau*x**2 + 160*s**2*tau*x**2 + 256*s**2*x**3)/64",
+      "expected": "polynomial in c,s,x,tau",
+      "group": "compact_core",
+      "name": "origin Bernstein-MGF patch is polynomial",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 50,
+  "assertions_total": 50,
+  "results": {
+    "all_order_projective_nogo": {
+      "fixture": {
+        "c": "3/5",
+        "s": "2/5",
+        "x": "24/25"
+      },
+      "second_coefficient": "8523491487176222249688/129362563300093219140625",
+      "target_counterexample": false,
+      "third_coefficient": "-627811338105359170693920/190578044621571595050427561",
+      "third_coefficient_negative": true
+    },
+    "compact_core": {
+      "covariance_square_floor": "(2*b+1)^2/16",
+      "global_floor": "-b/2-5/16",
+      "global_tau_cutoff": "4*(8*b + 5)/(2*b + 1)**2",
+      "interval_certificate_complete": false,
+      "origin_patch_condition": "(400*c**4*tau**3 + 640*c**4*tau**2*x - 768*c**4*tau**2 + 80*c**3*s*tau**3 + 128*c**3*s*tau**2*x + 320*c**3*tau**2*x + 512*c**3*tau*x**2 + 500*c**2*s**2*tau**3 + 800*c**2*s**2*tau**2*x - 768*c**2*s**2*tau**2 + 800*c**2*s*tau**2*x + 1280*c**2*s*tau*x**2 + 160*c**2*tau*x**2 + 256*c**2*x**3 + 80*c*s**3*tau**3 + 128*c*s**3*tau**2*x + 320*c*s**2*tau**2*x + 512*c*s**2*tau*x**2 + 25*s**4*tau**3 + 40*s**4*tau**2*x - 48*s**4*tau**2 + 80*s**3*tau**2*x + 128*s**3*tau*x**2 + 160*s**2*tau*x**2 + 256*s**2*x**3)/64<=0",
+      "radial_tail_radius": "50",
+      "radial_tail_worst_bound": "1.0909989685775844442863971068235678980194338477620e-17",
+      "residual_box": {
+        "c": "[0,1]",
+        "tau": "[0,20]",
+        "x": "[0,8]"
+      },
+      "residual_semialgebraic_condition": "(2*x+tau)^2<=32*x+20*tau"
+    },
+    "compact_normal_form": {
+      "covariance_square": "b**2*(c**2/2 + s**2/2) + b*(c**3 + 5*c**2*s/2 + c*s**2 + s**3/4) + 5*c**4/4 + c**3*s/4 + 25*c**2*s**2/16 + c*s**3/4 + 5*s**4/64",
+      "local_margin": "c**4/4 + c**2*s**2/4 + s**4/64",
+      "local_margin_uniform_lower": "1/100",
+      "packet": "T**2*c**2/4 + 3*sqrt(2)*T*sqrt(U)*sqrt(b)*c*sqrt(s)*zeta/4 + 5*T*U*c*s/8 - T*c/2 + U**2*s**2/16 - U*s/8 + b*(T*c/2 + U*s/2 - 1/2)",
+      "variables": [
+        "c=v/(v+4w)",
+        "s=4w/(v+4w)",
+        "b=A^2/(v+4w)",
+        "tau=q*(v+4w)^2",
+        "x=b*tau"
+      ]
+    },
+    "uniform_projective": {
+      "first_coefficient": "x*(4*c**5*s**2*x**5 + 16*c**5*s*x**4 + 16*c**5*x**3 + 10*c**4*s**3*x**5 + 56*c**4*s**2*x**4 + 104*c**4*s*x**3 + 64*c**4*x**2 + 4*c**3*s**4*x**5 + 56*c**3*s**3*x**4 + 192*c**3*s**2*x**3 + 224*c**3*s*x**2 + 64*c**3*x + c**2*s**5*x**5 + 20*c**2*s**4*x**4 + 108*c**2*s**3*x**3 - 20*c**2*s**2*x**3 + 232*c**2*s**2*x**2 - 72*c**2*s*x**2 + 224*c**2*s*x - 64*c**2*x + 128*c**2 + 4*c*s**5*x**4 + 32*c*s**4*x**3 + 80*c*s**3*x**2 - 48*c*s**2*x**2 + 176*c*s**2*x - 160*c*s*x + 160*c*s - 128*c + 4*s**5*x**3 + 16*s**4*x**2 + 16*s**3*x - 16*s**2*x + 32*s**2 - 32*s)/(16*(c*x + 2)**2*(s*x + 2)**2)",
+      "limiting_mgf": "exp(x/2)/((c*x/2 + 1)*(s*x/2 + 1))",
+      "second_bernstein_degree": 12,
+      "second_bernstein_min_coefficients": [
+        "80",
+        "40/3",
+        "20/11",
+        "2/11",
+        "1/99",
+        "2/99",
+        "25/231",
+        "2/99",
+        "16/99",
+        "32/11",
+        "320/11",
+        "640/3",
+        "1280"
+      ],
+      "second_global_lower": "D2>=x^2*local_margin/4>=x^2/400",
+      "second_local_limit": "(33*c**4 - 36*c**3 + 22*c**2 - 4*c + 1)/256",
+      "second_margin_reserve_bernstein_min_coefficients": [
+        "16",
+        "8/3",
+        "4/11",
+        "2/55",
+        "1/495",
+        "1/198",
+        "1/44",
+        "1/198",
+        "16/495",
+        "32/55",
+        "64/11",
+        "128/3",
+        "256"
+      ],
+      "uniform_remainder": "O_X(x^3/b^3)"
+    }
+  },
+  "results_sha256": "eef78b9585ec3d88ab70b350bdd980ae1d43420d92a4e71fd784ff946aaaa521",
+  "route_verdicts": {
+    "all_order_projective_coefficient_positivity": "failed-at-third-order",
+    "compact_semialgebraic_reduction": "proved-exact",
+    "full_a1_embedding": "open",
+    "mixed_all_q_scalar_k2k": "open",
+    "mixed_compact_core": "open-directed-rounding-interval-certificate",
+    "nelson": "open",
+    "origin_patch": "proved-sufficient-polynomial-condition",
+    "overlap_src": "open",
+    "second_projective_coefficient": "proved-positive",
+    "sector_a": "open",
+    "uniform_radial_tail": "proved-exact"
+  },
+  "schema": "tect/a13-scalar-k2k-covariance-simplex-uniform-compact-core-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

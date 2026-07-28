@@ -305,14 +305,15 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   and Sector A remain open. R-110 now assembles a same-root random covariance
   exactly through its Gaussian double divergence and derives a trace-corrected
   diagonal-to-decoupled interpolation. Static covariance norms and an
-  unowned nonlinear tangent square are retired. R-111 now proves the
-  stationary scalar two-frequency `k:2k` inequality for every `q` on both
-  degenerate covariance faces. On the mixed face it gives the exact radial
-  normalizer, positive fixed-shape projective limit and first correction,
-  exact high-`q` cutoff, and factorized tails, while retiring quadratic-Bessel,
-  sign-blind conditional tensorization, and monotone-tilted-variance routes.
-  The remaining scalar work is a uniform projective remainder, uniform local/
-  two-chart face patching, and a certified residual compact core. Even scalar
+  unowned nonlinear tangent square are retired. R-111 proves the exact
+  degenerate faces, and R-112 now places the genuinely mixed stationary scalar
+  `k:2k` problem on one closed covariance simplex. It proves an exact compact
+  semialgebraic residual domain and analytic radial tail, a factored uniform
+  projective expansion through the positive second correction, an existential
+  large-amplitude theorem, an origin cusp, and slice-wise face patches. The
+  exact negative third coefficient retires all-order sign induction without
+  refuting the target. The remaining scalar work is a directed-rounding
+  certificate for the strict residual compact core. Even scalar
   closure would still need a full A1 embedding and separate owner-preserving
   one-use source/sextic aggregation. `OVERLAP_src`, Nelson, removals, the
   interacting measure, and Sector A remain open. R-080,
@@ -884,12 +885,12 @@ preserved in git/changelog rather than treated as current gates.
    `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
    remain open. R-110 gives the exact random-W double-divergence and trace-
    corrected interpolation coordinates, while static-HS and uncentred
-   nonlinear tangent-square shortcuts fail. R-111 proves its stationary
-   scalar `k:2k` inequality for every `q` on `vw=0`; on `v,w>0` it proves the
-   fixed-shape projective boundary, high-`q` cutoff, and rigorous tails and
-   records three exact method failures. Continue with a uniform projective
-   remainder, local/two-chart face patching, and interval certification of the
-   residual mixed core, then with the owner-preserving full-A1 conditional
+   nonlinear tangent-square shortcuts fail. R-111 proves the exact covariance
+   faces, and R-112 proves the closed covariance-simplex compactification,
+   factored uniform projective boundary through `D2`, analytic tail, origin
+   cusp, and slice-wise face patches. The negative exact `D3` retires only
+   coefficient-sign induction. Continue with directed-rounding certification
+   of the strict residual mixed core, then with the owner-preserving full-A1 conditional
    cluster and the separate one-use source/sextic aggregation.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
