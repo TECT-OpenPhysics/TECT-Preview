@@ -45,6 +45,9 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION | the local Gaussian Bessel envelope destroys radial integrabi | insert `I_0(z)<=exp(z^2/4)` into the exact phase-averaged |
+| NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION | conditioning creates a false negative-coefficient scalar pro | condition on the second-frequency radius `S`, treat the |
+| NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY | the mixed tilted variance can increase | prove the mixed all-`q` target by asserting |
 | NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER | a same-root random PSD score weight is not controlled by its | extend the R-109 fixed-past score-transfer estimate to a |
 | NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER | a nonlinear tangent-covariance square does not pay an uncent | infer a universal square-first conditional normalizer for a |
 | NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT | the sharp local k:2k completion spends a nonsummable baselin | close each physical resonant `k:2k` complete-output packet |

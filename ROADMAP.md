@@ -305,13 +305,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   and Sector A remain open. R-110 now assembles a same-root random covariance
   exactly through its Gaussian double divergence and derives a trace-corrected
   diagonal-to-decoupled interpolation. Static covariance norms and an
-  unowned nonlinear tangent square are retired. The stationary scalar
-  two-frequency `k:2k` whole-output model has an exact strict right-small-`q`
-  margin, but its bare all-`q` inequality remains open; the architecture-sharp
-  pointwise payment recreates a nonsummable production baseline. No full A1
-  embedding of the scalar model is asserted. First settle that bare all-`q`
-  signed scalar cluster, then lift only a proved mechanism to the adapted
-  owner-preserving production forest. `OVERLAP_src`, Nelson, removals, the
+  unowned nonlinear tangent square are retired. R-111 now proves the
+  stationary scalar two-frequency `k:2k` inequality for every `q` on both
+  degenerate covariance faces. On the mixed face it gives the exact radial
+  normalizer, positive fixed-shape projective limit and first correction,
+  exact high-`q` cutoff, and factorized tails, while retiring quadratic-Bessel,
+  sign-blind conditional tensorization, and monotone-tilted-variance routes.
+  The remaining scalar work is a uniform projective remainder, uniform local/
+  two-chart face patching, and a certified residual compact core. Even scalar
+  closure would still need a full A1 embedding and separate owner-preserving
+  one-use source/sextic aggregation. `OVERLAP_src`, Nelson, removals, the
   interacting measure, and Sector A remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
@@ -881,12 +884,13 @@ preserved in git/changelog rather than treated as current gates.
    `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
    remain open. R-110 gives the exact random-W double-divergence and trace-
    corrected interpolation coordinates, while static-HS and uncentred
-   nonlinear tangent-square shortcuts fail. Its stationary scalar `k:2k`
-   model has strict right-small-`q` room and two-order finite sign checks, but
-   no all-`q` theorem or full A1 embedding; its local pointwise repair is
-   nonsummable for the declared production allocation. Continue first with an
-   analytic proof or certified-tail falsification of the bare all-`q` scalar
-   cluster, then with the owner-preserving adapted production lift.
+   nonlinear tangent-square shortcuts fail. R-111 proves its stationary
+   scalar `k:2k` inequality for every `q` on `vw=0`; on `v,w>0` it proves the
+   fixed-shape projective boundary, high-`q` cutoff, and rigorous tails and
+   records three exact method failures. Continue with a uniform projective
+   remainder, local/two-chart face patching, and interval certification of the
+   residual mixed core, then with the owner-preserving full-A1 conditional
+   cluster and the separate one-use source/sextic aggregation.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

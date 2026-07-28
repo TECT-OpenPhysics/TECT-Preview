@@ -1,0 +1,351 @@
+{
+  "assertion_names": [
+    "normal_form::packet is centered at first moment",
+    "normal_form::Bessel phase coefficient",
+    "projective::independent exponential transform",
+    "projective::limiting RHS minus log M",
+    "projective::gap derivative is nonnegative",
+    "projective::independent first-correction numerator",
+    "projective::first-correction coefficients are all positive",
+    "projective_fixture::positive first correction at r=1/4, x=1/3",
+    "projective_fixture::positive first correction at r=2/3, x=5/4",
+    "projective_fixture::positive first correction at r=3, x=7/5",
+    "projective::floor saturation discriminant",
+    "projective::saturation shape retains positive limiting gap",
+    "floor::independent active stationary cubic",
+    "floor::radial minimizer square completion",
+    "tail::independent low-a tail square decomposition",
+    "tail::independent high-a tail square decomposition",
+    "bessel::independent Bessel-ratio contact identity",
+    "bessel::contact numerator comparison squares to bessel_z fourth power",
+    "boundary_theorem::independent tilted W mean",
+    "boundary_theorem::independent tilted W variance",
+    "boundary_theorem::variance-eight defect factors positively from unit rate",
+    "boundary_theorem::small-t exponential-series coefficient fits five",
+    "boundary_theorem::small and large branches meet at the floor threshold",
+    "separated_nogo::independent negative-effective-coefficient identity",
+    "separated_nogo::conditional proxy leading gap is positive below one half",
+    "separated_nogo::independent quadratic-Bessel cubic coefficient",
+    "boundary::direct integral agrees with erfc formula",
+    "boundary::independent near-tight boundary gap is positive",
+    "variance_route::negative tilted third moment at Laguerre order 96",
+    "variance_route::tilted variance stable at Laguerre order 96",
+    "variance_route::negative tilted third moment at Laguerre order 128",
+    "variance_route::tilted variance stable at Laguerre order 128",
+    "variance_route::independent tilted third signs agree",
+    "variance_route::tilted fixture remains far inside target at order 96",
+    "variance_route::tilted fixture remains far inside target at order 128"
+  ],
+  "assertions": [
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "normal_form",
+      "name": "packet is centered at first moment",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*sqrt(2)*T*sqrt(U)*sqrt(a)*sqrt(r)/2",
+      "expected": "3*sqrt(2)*T*sqrt(U)*sqrt(a)*sqrt(r)/2",
+      "group": "normal_form",
+      "name": "Bessel phase coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "exp(x*(4*r + 1)/2)/((x/2 + 1)*(2*r*x + 1))",
+      "expected": "exp(x*(4*r + 1)/2)/((x/2 + 1)*(2*r*x + 1))",
+      "group": "projective",
+      "name": "independent exponential transform",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*r**2*x**2 + x**2/8 - x*(4*r + 1)/2 + log(x/2 + 1) + log(2*r*x + 1)",
+      "expected": "2*r**2*x**2 - 2*r*x + x**2/8 - x/2 + log(x/2 + 1) + log(2*r*x + 1)",
+      "group": "projective",
+      "name": "limiting RHS minus log M",
+      "status": "PASS"
+    },
+    {
+      "actual": "y - 1 + 1/(y + 1)",
+      "expected": "y**2/(y + 1)",
+      "group": "projective",
+      "name": "gap derivative is nonnegative",
+      "status": "PASS"
+    },
+    {
+      "actual": "64*r**5*x**3 + 256*r**5*x**2 + 256*r**5*x + 64*r**4*x**3 + 320*r**4*x**2 + 512*r**4*x + 256*r**4 + 40*r**3*x**3 + 224*r**3*x**2 + 352*r**3*x + 128*r**3 + 4*r**2*x**3 + 56*r**2*x**2 + 172*r**2*x + 112*r**2 + 4*r*x**2 + 26*r*x + 38*r + x + 4",
+      "expected": "64*r**5*x**3 + 256*r**5*x**2 + 256*r**5*x + 64*r**4*x**3 + 320*r**4*x**2 + 512*r**4*x + 256*r**4 + 40*r**3*x**3 + 224*r**3*x**2 + 352*r**3*x + 128*r**3 + 4*r**2*x**3 + 56*r**2*x**2 + 172*r**2*x + 112*r**2 + 4*r*x**2 + 26*r*x + 38*r + x + 4",
+      "group": "projective",
+      "name": "independent first-correction numerator",
+      "status": "PASS"
+    },
+    {
+      "actual": "[64, 64, 40, 4, 256, 320, 224, 56, 4, 256, 512, 352, 172, 26, 1, 256, 128, 112, 38, 4]",
+      "expected": "all positive",
+      "group": "projective",
+      "name": "first-correction coefficients are all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2053/49392",
+      "expected": ">0",
+      "group": "projective_fixture",
+      "name": "positive first correction at r=1/4, x=1/3",
+      "status": "PASS"
+    },
+    {
+      "actual": "138875/22464",
+      "expected": ">0",
+      "group": "projective_fixture",
+      "name": "positive first correction at r=2/3, x=5/4",
+      "status": "PASS"
+    },
+    {
+      "actual": "18505347693/63840100",
+      "expected": ">0",
+      "group": "projective_fixture",
+      "name": "positive first correction at r=3, x=7/5",
+      "status": "PASS"
+    },
+    {
+      "actual": "(4*r - 1)**2",
+      "expected": "(4*r - 1)**2",
+      "group": "projective",
+      "name": "floor saturation discriminant",
+      "status": "PASS"
+    },
+    {
+      "actual": "x**2/4 - x + 2*log(x/2 + 1)",
+      "expected": "x**2/4 - x + 2*log(x/2 + 1)",
+      "group": "projective",
+      "name": "saturation shape retains positive limiting gap",
+      "status": "PASS"
+    },
+    {
+      "actual": "3*a**(3/2) - 12*sqrt(a)*r + 90*sqrt(a)*y**2 - 3*sqrt(a) - 20*a*y + 32*r*y - 84*y**3 + 8*y",
+      "expected": "90*sqrt(a)*y**2 - 3*sqrt(a)*(-a + 4*r + 1) - 84*y**3 - y*(20*a - 32*r - 8)",
+      "group": "floor",
+      "name": "independent active stationary cubic",
+      "status": "PASS"
+    },
+    {
+      "actual": "R**2 + R*(-6*sqrt(a)*y + a - 4*r + 10*y**2 - 1)",
+      "expected": "-(-6*sqrt(a)*y + a - 4*r + 10*y**2 - 1)**2/4 + (R - 3*sqrt(a)*y + a/2 - 2*r + 5*y**2 - 1/2)**2",
+      "group": "floor",
+      "name": "radial minimizer square completion",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "tail",
+      "name": "independent low-a tail square decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "group": "tail",
+      "name": "independent high-a tail square decomposition",
+      "status": "PASS"
+    },
+    {
+      "actual": "-(bessel_z**2 - 4*sqrt(bessel_z**2 + 4) + 8)/(bessel_z**2 + 4)**(3/2)",
+      "expected": "(-bessel_z**2 + 4*sqrt(bessel_z**2 + 4) - 8)/(bessel_z**2 + 4)**(3/2)",
+      "group": "bessel",
+      "name": "independent Bessel-ratio contact identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "bessel_z**4",
+      "expected": "bessel_z**4",
+      "group": "bessel",
+      "name": "contact numerator comparison squares to bessel_z fourth power",
+      "status": "PASS"
+    },
+    {
+      "actual": "2*(1 - lambda_exp)/lambda_exp**2",
+      "expected": "(2 - 2*lambda_exp)/lambda_exp**2",
+      "group": "boundary_theorem",
+      "name": "independent tilted W mean",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*(lambda_exp**2 - 4*lambda_exp + 5)/lambda_exp**4",
+      "expected": "(4*lambda_exp**2 - 16*lambda_exp + 20)/lambda_exp**4",
+      "group": "boundary_theorem",
+      "name": "independent tilted W variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "4*(lambda_exp - 1)*(2*lambda_exp**3 + 2*lambda_exp**2 + lambda_exp + 5)",
+      "expected": "(4*lambda_exp - 4)*(2*lambda_exp**3 + 2*lambda_exp**2 + lambda_exp + 5)",
+      "group": "boundary_theorem",
+      "name": "variance-eight defect factors positively from unit rate",
+      "status": "PASS"
+    },
+    {
+      "actual": "30/7",
+      "expected": "<5",
+      "group": "boundary_theorem",
+      "name": "small-t exponential-series coefficient fits five",
+      "status": "PASS"
+    },
+    {
+      "actual": "(2*a**2 + 4*a + 5)/(4*a + 5)",
+      "expected": "2*a**2/(4*a + 5) + 1",
+      "group": "boundary_theorem",
+      "name": "small and large branches meet at the floor threshold",
+      "status": "PASS"
+    },
+    {
+      "actual": "-2*B*T + 2*B + T**2 - 2*T",
+      "expected": "-2*B*T + 2*B + T**2 - 2*T",
+      "group": "separated_nogo",
+      "name": "independent negative-effective-coefficient identity",
+      "status": "PASS"
+    },
+    {
+      "actual": "-t_fixed*(2*t_fixed - 1)",
+      "expected": "t_fixed*(1 - 2*t_fixed)",
+      "group": "separated_nogo",
+      "name": "conditional proxy leading gap is positive below one half",
+      "status": "PASS"
+    },
+    {
+      "actual": "9*amplitude_positive**2*q_positive**2",
+      "expected": "9*amplitude_positive**2*q_positive**2",
+      "group": "separated_nogo",
+      "name": "independent quadratic-Bessel cubic coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "2.13408825749191244082381549436e-78",
+      "expected": "<1e-70",
+      "group": "boundary",
+      "name": "direct integral agrees with erfc formula",
+      "status": "PASS"
+    },
+    {
+      "actual": "0.000000002168675295031123195145370256744767588854",
+      "expected": ">2e-9",
+      "group": "boundary",
+      "name": "independent near-tight boundary gap is positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "-24382.865044401857",
+      "expected": "<-24000",
+      "group": "variance_route",
+      "name": "negative tilted third moment at Laguerre order 96",
+      "status": "PASS"
+    },
+    {
+      "actual": "440.66370213752737",
+      "expected": "in (440,441)",
+      "group": "variance_route",
+      "name": "tilted variance stable at Laguerre order 96",
+      "status": "PASS"
+    },
+    {
+      "actual": "-24382.85205984772",
+      "expected": "<-24000",
+      "group": "variance_route",
+      "name": "negative tilted third moment at Laguerre order 128",
+      "status": "PASS"
+    },
+    {
+      "actual": "440.65395666423785",
+      "expected": "in (440,441)",
+      "group": "variance_route",
+      "name": "tilted variance stable at Laguerre order 128",
+      "status": "PASS"
+    },
+    {
+      "actual": "[-24382.865044401857, -24382.85205984772]",
+      "expected": "same negative sign",
+      "group": "variance_route",
+      "name": "independent tilted third signs agree",
+      "status": "PASS"
+    },
+    {
+      "actual": "132.6009521550005",
+      "expected": ">100",
+      "group": "variance_route",
+      "name": "tilted fixture remains far inside target at order 96",
+      "status": "PASS"
+    },
+    {
+      "actual": "132.6009526406843",
+      "expected": ">100",
+      "group": "variance_route",
+      "name": "tilted fixture remains far inside target at order 128",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 35,
+  "assertions_total": 35,
+  "results": {
+    "boundary": {
+      "a": "27",
+      "gap": "0.00000000216867529503112319514537025674476758885361004923543152724986",
+      "log_mgf": "0.00000121002268272966023482954598776794659043583774797545592649744",
+      "t": "1/9000"
+    },
+    "degenerate_face_theorem": {
+      "target_coefficient": "2*a**2 + 4*a + 5",
+      "tilted_W_mean": "2*(1 - lambda_exp)/lambda_exp**2",
+      "tilted_W_variance": "4*(lambda_exp**2 - 4*lambda_exp + 5)/lambda_exp**4",
+      "v_zero_all_q": true,
+      "w_zero_all_q": true
+    },
+    "floor_tail": {
+      "active_cubic": "-90*sqrt(a)*y**2 + 3*sqrt(a)*(-a + 4*r + 1) + 84*y**3 + y*(20*a - 32*r - 8)",
+      "tail_lower_bound": "p_minus>=T^2/16+r^2*U^2/2-C(a,r)"
+    },
+    "normal_form": {
+      "covariance_square": "a**2*(8*r**2 + 1/2) + a*(16*r**3 + 16*r**2 + 10*r + 1) + 20*r**4 + 16*r**3 + 25*r**2 + r + 5/4",
+      "packet": "T**2/4 + 3*sqrt(2)*T*sqrt(U)*sqrt(a)*cosine*sqrt(r)/2 + 5*T*U*r/2 + U**2*r**2 + a*(T/2 + 2*U*r - 2*r - 1/2) - (T + U*r)*(4*r + 1)/2"
+    },
+    "projective": {
+      "first_gap_correction": "x**3*(64*r**5*x**3 + 256*r**5*x**2 + 256*r**5*x + 64*r**4*x**3 + 320*r**4*x**2 + 512*r**4*x + 256*r**4 + 40*r**3*x**3 + 224*r**3*x**2 + 352*r**3*x + 128*r**3 + 4*r**2*x**3 + 56*r**2*x**2 + 172*r**2*x + 112*r**2 + 4*r*x**2 + 26*r*x + 38*r + x + 4)/(4*(x + 2)**2*(2*r*x + 1)**2)",
+      "first_gap_numerator": "64*r**5*x**3 + 256*r**5*x**2 + 256*r**5*x + 64*r**4*x**3 + 320*r**4*x**2 + 512*r**4*x + 256*r**4 + 40*r**3*x**3 + 224*r**3*x**2 + 352*r**3*x + 128*r**3 + 4*r**2*x**3 + 56*r**2*x**2 + 172*r**2*x + 112*r**2 + 4*r*x**2 + 26*r*x + 38*r + x + 4",
+      "limiting_gap": "2*r**2*x**2 - 2*r*x + x**2/8 - x/2 + log(x/2 + 1) + log(2*r*x + 1)",
+      "limiting_mgf": "exp(x*(4*r + 1)/2)/((x/2 + 1)*(2*r*x + 1))"
+    },
+    "separated_route_nogos": {
+      "conditional_scalar": "negative effective coefficient defeats the positive-a scalar proxy",
+      "quadratic_bessel": "nonintegrable positive cubic radial exponent"
+    },
+    "tilted_variance_route": {
+      "128": {
+        "log_mgf": 4.252172359315724,
+        "mean": -53.84753981754047,
+        "third_centered": -24382.85205984772,
+        "variance": 440.65395666423785
+      },
+      "96": {
+        "log_mgf": 4.252172844999534,
+        "mean": -53.84765445563219,
+        "third_centered": -24382.865044401857,
+        "variance": 440.66370213752737
+      }
+    }
+  },
+  "results_sha256": "99841674003531bf5dbfd00806c821834a1acc305cffadc52e163c31320a9aeb",
+  "route_verdicts": {
+    "adapted_production_cluster": "open",
+    "bare_all_q_scalar_k2k": "open",
+    "certified_tail_enclosure": "advanced",
+    "conditional_scalar_tensorization": "failed",
+    "degenerate_frequency_faces": "proved-all-q",
+    "projective_boundary": "advanced",
+    "quadratic_bessel_domination": "failed",
+    "sector_a": "open",
+    "tilted_variance_monotonicity": "failed"
+  },
+  "schema": "tect/a13-scalar-k2k-projective-compact-core-boundary-independent/1.0",
+  "status": "PASS",
+  "version": "1.0.0"
+}

@@ -153,18 +153,20 @@ R-110 replaces the fixed score weight by the exact same-root Gaussian double
 divergence and supplies a dimension-free chaos--Sobolev sufficient gate. It
 also derives the exact trace-corrected diagonal interpolation, while exact
 fixtures retire static covariance-norm control and any universal uncentred
-nonlinear tangent-square normalizer. In the stationary scalar two-frequency
-`k:2k` whole-output model, exact moments give a strict right-small-`q`
-square-first margin; four finite points have positive margins at quadrature
-orders 24 and 48, but neither convergence nor the bare all-`q` inequality is
-proved. The architecture-sharp pointwise repair is nonsummable under the
-declared positive-density bounded-multiplicity production allocation. No full
-A1 embedding of the scalar model is asserted. The next local theorem is the
-bare all-`q` scalar signed cluster or a certified counterexample; any surviving
-mechanism must then be lifted with owner-preserving trace/mean, random-W
-forest, rational recovery, visit, source, and one-terminal-sextic ledgers.
-`OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
-open.
+nonlinear tangent-square normalizer. R-111 proves the associated stationary
+scalar two-frequency `k:2k` square-first inequality for every `q` on both
+degenerate covariance faces. On the genuinely mixed face it gives the exact
+radial normalizer, a positive fixed-shape projective limiting gap and first
+inverse-amplitude correction, an exact high-`q` cutoff, and rigorous
+factorized tails. Quadratic-Bessel domination, sign-blind conditional scalar
+tensorization, and monotone tilted variance are exact method no-gos. The next
+scalar theorem is a uniform projective remainder, uniform local/two-chart face
+patching, and interval certification of the residual compact core. Any
+surviving normalizer must then be embedded into a full A1 one-fresh-root
+cluster with owner-preserving trace/mean, random-W forest, rational recovery,
+visits, source, and one-terminal-sextic ledgers, followed by a separate one-use
+aggregation. `OVERLAP_src`, Nelson, removals, the interacting measure, and
+Sector A remain open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-111 scalar k2k degenerate-face theorem and mixed compact-core boundary] - 2026-07-28
+
+R-111 proves the stationary scalar two-frequency k:2k square-first inequality for every q and amplitude on both degenerate covariance faces. On the genuinely mixed face it gives the exact I_0 radial normalizer, a positive fixed-shape projective limiting gap and positive first inverse-amplitude correction with a dominated remainder, an exact algebraic high-q cutoff, sharp Bessel and factorized-tail majorants, and three registered method no-gos. Uniform projective/local/two-chart face patching and the residual compact-interior certificate remain open. R-103 REG and R-087 fixed-cutoff CORE retain their prior owners; the old R-085 formulas are not reopened. Primary 46/46, independent 35/35, integrated 152/152, and aggregate 233/233 are pinned. No full A1 embedding, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, or Sector-A closure is proved; tier remains T4.
+
 ## [R-110 random-W Skorohod and stationary scalar cross-mode boundary] - 2026-07-28
 
 R-110 proves the exact same-root random-W double-divergence assembly, its Young-optimized conditional moment-form cost and chaos--Sobolev sufficient gate, and the exact trace-corrected diagonal interpolation. Exact fixtures retire static covariance-norm control and a universal uncentred nonlinear tangent-square normalizer. In a stationary scalar two-frequency k:2k whole-output model, exact moments give the strict right-small-q margin H-2Var(P)=(v^4+16v^2w^2+16w^4)/4; four finite points retain positive margins at quadrature orders 24 and 48, without a convergence or all-q claim. The architecture-sharp pointwise repair is locally exact but nonsummable under the declared positive-density bounded-multiplicity production allocation. Primary 40/40, independent 49/49, integrated 111/111, and aggregate 200/200 pass. No full A1 embedding, bare all-q scalar theorem, adapted production-cluster bound, OVERLAP_src, Nelson, removals, interacting measure, or Sector-A closure is proved; tier remains T4.

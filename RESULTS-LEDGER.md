@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-111](#r-111) | Scalar k:2k degenerate-face theorem, projective boundary, and mixed compact-core reduction | Scoped T4 analytic/exact/executed advance and method boundary: for the exact stationary scalar two-frequency packet of R-110, `log E exp(-qP)<=q^2 H/4` holds for every `q>=0` and every amplitude on both degenerate covariance faces `vw=0`. The genuinely mixed face has an exact `I_0` radial normalizer. At fixed projective shape its large-amplitude limit is the sum of two nonnegative centered-exponential gaps, and the complete first inverse-amplitude correction has a coefficientwise-positive numerator. Exact phase minimization yields a finite algebraic candidate set and removes sufficiently large `q` shape-wise; `log I_0(z)<=sqrt(4+z^2)-2` and a square completion give factorized tails. Three shortcuts are rigorously retired: the quadratic Bessel envelope creates a nonintegrable positive cubic exponent, conditioning produces negative effective scalar coefficients that falsify positive-coefficient tensorization, and tilted variance need not decrease. A uniform projective remainder, uniform local/two-chart face patching, and interval certification of the mixed compact core remain open. R-103 REG and R-087 fixed-cutoff CORE retain their prior owners; no full A1 embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, or Sector-A closure follows |
 | [R-110](#r-110) | Random-covariance Skorohod completion, trace-corrected diagonal interpolation, and a stationary scalar cross-mode frontier | Scoped T4 analytic/exact/executed advance and method boundary: for a symmetric same-root Gaussian-dependent PSD matrix `W` in the domain of the double divergence, the complete signed second jet equals both `E[||h||^2 delta^2W]/2` and `E<h,Dh(Wxi-div W)>`. It has the Young-optimized form cost `q^2 E[(delta^2W)^2]/(128 sqrt(eta zeta))`, bounded by the declared chaos--Sobolev norm of `W`; fixed `W` recovers R-109 exactly. Static HS/trace/rank control fails even for uniformly positive scalar weights and rotating rank-one projections. A trace-compatible diagonal coupling has the exact interpolation derivative `Phi'(rho)=q^2 E_nu Gamma_rho` and an explicit decoupled endpoint, but a nonlinear Gaussian fixture shows that tangent-covariance square alone cannot pay an uncentred mean debt. For the stationary scalar two-frequency `k:2k` whole-output model, exact mean, variance, third moment, and covariance square give the strict right-small-`q` margin `H-2 Var(P)=(v^4+16v^2w^2+16w^4)/4`; four declared points have positive margins at quadrature orders 24 and 48, but neither convergence nor the bare all-`q` inequality is proved. The architecture-sharp local pointwise completion needs a `9A^2v/20` expected baseline whose three-dimensional positive-density bounded-multiplicity production shell mass grows like `2^j`, so that payment cannot globalize. No full A1 embedding of the scalar model is asserted. The adapted production cluster, owner-preserving trace/mean and tilted cross-score ledger, bare all-`q` scalar-model estimate, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open |
 | [R-109](#r-109) | Square-first pair normalizer, signed score transfer, and filtration boundary | Scoped T4 analytic/exact/executed advance and method boundary: a centered random variable with upper floor `beta` and second moment at most `8 beta^2` obeys the all-`q` Bennett bound `log E exp(qZ)<=5q^2 beta^2`. Consequently the exact contraction-closed one-pair packet `P=lambda sigma^4(T^2-2T)/4`, `T~Exp(1)`, satisfies the square-before-average estimate `log E exp(-qP)<=(q^2/4)E||S_real||_HS^2` at every amplitude, and sequential fresh pairs form a nonnegative predictable-cost supermartingale. The R-108 covariance square is legal only inside a past conditional expectation; revealing the root and applying an auxiliary-copy determinant produces an outer exponential cost and normalizes a decoupled packet. The pure quartic selector has a pathwise summable floor in the diagonal submodel, but the full pair has a linearly divergent baseline floor and physical cross-mode resonances, so determinant cancellation remains necessary. For fixed past-measurable PSD `W`, the complete signed second jet transfers exactly to the centered Gaussian quadratic score and costs `q^2||W||_HS^2/(64 sqrt(eta zeta))`; at `q=10/9` the coefficient is `25/1296`, and the production derivative-covariance shell squares are summable. Replacing the raw Wick coordinate by this Stein derivative representative inside an exponential is false: an oscillatory family has derivative log-Laplace cost growing linearly while the raw Wick exponential cost tends to zero. The adapted production `W`, Cameron--Martin/covariance/forest coupling, no-multiplicity global ledger, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector A remain open |
 | [R-108](#r-108) | Complete-cluster quotient, conditional covariance, and the nonvacuous Carleson frontier | Scoped T4 analytic/exact/executed synthesis and method boundary: the historical weighted R-085 Cartan bridge is stronger than the exact R-084 target; R-088's corrected sufficient bridge is unweighted and needs only positive spatial gain, but its sequential production estimate remains open. The historical rational `F_6.5` and visitwise fixed-chart `K_R` change sign under a representation-preserving subdivision, whereas the complete endpoint is invariant. That quotient-safe complete endpoint has an exact conditional mean/covariance identity and exact Cameron--Martin minimization, with no sign. Every contraction-closed output cluster likewise has an exact signed mean/covariance normal form. On the exact one-pair cluster, a bare average-before-square covariance ledger supplies `3/32` against the required `1/4` leading coefficient; square-before-average supplies `5/16` and survives this test. The average-first route can survive only with the explicit nonlinear/sextic remainder tradeoff. An oscillatory future-feedback selector has bounded source energy and sextic but an unbounded positive tangent HS square, while the complete signed second jet cancels. Thus only an absolute arbitrary-selector future-feedback PSD/Carleson ledger paid solely by source energy and one terminal sextic is retired, not every PSD construction or the signed complete source action. The remaining theorem is a cutoff/chart/control/subdivision-uniform signed complete-cluster lower bound, or a legally normalized square-before-average conditional determinant implying it. `OVERLAP_src`, Nelson, removals, an interacting measure, and Sector A remain open |
@@ -129,6 +130,80 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-111"></a>
+### R-111 -- Scalar k:2k degenerate-face theorem, projective boundary, and mixed compact-core reduction
+
+**Result ID.**
+`A13-CLASSII-SCALAR-K2K-DEGENERATE-FACE-PROJECTIVE-COMPACT-CORE-BOUNDARY`.
+
+**Exact face theorem.** In the stationary scalar model
+
+`X=A+a_1 cos x+b_1 sin x+a_2 cos 2x+b_2 sin 2x`,
+
+let `(a_1,b_1)` and `(a_2,b_2)` have variances `v` and `w`. For the complete
+R-110 packet `P` and covariance-square expectation `H`,
+
+`log E exp(-qP)<=q^2 H/4`
+
+for every `q>=0` and amplitude whenever `vw=0`. On `w=0`, set
+`alpha=A^2/v`, `X_1=2R/v~Exp(1)`, and `s=qv^2/4`. Then
+
+`P=(v^2/4)Z_alpha`, `Z_alpha=2alpha(X_1-1)+W`,
+`W=X_1^2-2X_1>=-1`.
+
+A linear tilt has rate `ell=1+2alpha s`, with exact
+`E_ell W=-2(ell-1)/ell^2` and
+`Var_ell(W)=4(ell^2-4ell+5)/ell^4<=8`. The floor proves the large-`s`
+branch and a one-sided Bennett estimate proves the complementary branch. The
+`v=0` face is the same theorem after exact rescaling.
+
+**Mixed projective and compact-core reduction.** For `v>0`, the quotient
+variables `a=A^2/v`, `r=w/v`, and `t=qv^2` leave a three-shape-variable exact
+radial/phase normalizer. Phase averaging gives an `I_0` integral. At fixed
+`x,r` with `t=x/a`,
+
+`M_infty=exp(x(1+4r)/2)/[(1+x/2)(1+2rx)]`,
+
+and the limiting target gap is `d(x/2)+d(2rx)` where
+`d(y)=y^2/2-y+log(1+y)>=0`. The complete `1/a` correction is
+`x^3 Pi/[4(x+2)^2(1+2rx)^2]`, where every coefficient of `Pi` is positive.
+A fixed-shape exponential dominator makes the displayed `O(a^-2)` remainder
+rigorous, but no covariance-chart-uniform remainder is claimed.
+
+Exact phase minimization reduces the floor to a one-variable quartic with a
+finite algebraic candidate set, proving the target for
+`t>=4(-p_star)/h`. The sharp global comparison
+
+`log I_0(z)<=sqrt(4+z^2)-2`
+
+and an exact square decomposition give factorized erfc radial tails. These
+are the high-`t` and tail components of a compact certificate; uniform local-
+`t`, two-chart face patching, and an interval proof on the residual finite box
+remain open.
+
+**Method boundaries.** The Gaussian Bessel bound inserts
+`+9q^2A^2R^2S` and makes the upper integral divergent. Conditioning on one
+frequency produces `alpha_eff=(A^2+10S-4w)/v`, and the negative-coefficient
+family has the wrong leading Laplace scale, so positive-coefficient scalar
+tensorization is false. At the exact normalized fixture `a=0,r=7,t=1/10`,
+the tilted third centered moment is negative while the target gap remains
+positive; hence tilted variance need not decrease, without furnishing a
+counterexample to the target.
+
+**Owner and theorem boundary.** R-103 already closes REG in its stated
+regular scope and R-087 already closes fixed-cutoff variational CORE. The old
+R-085 Cartan equations and rational form are not reopened or made
+load-bearing. R-111 proves no genuinely mixed all-`q` theorem, full A1
+embedding, adapted production cluster, one-use source/sextic aggregation,
+`OVERLAP_src`, Nelson, removals, interacting measure, or Sector-A closure.
+Tier remains T4.
+
+**Proof and reproduction.** Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-scalar-k2k-degenerate-face-projective-compact-core-boundary-260728-v1.0.tex.txt`,
+manifest `classii_scalar_k2k_projective_compact_core_boundary_manifest.json`,
+and the primary, independent, and integrated R-111 executables.
 
 <a id="r-110"></a>
 ### R-110 -- Random-covariance Skorohod completion, trace-corrected diagonal interpolation, and a stationary scalar cross-mode frontier

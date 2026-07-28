@@ -1,0 +1,780 @@
+% =============================================================================
+% Title: Scalar k:2k degenerate-face theorem, projective boundary, and mixed
+%        compact-core reduction
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed advance; Sector A remains open
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\HS}{\mathfrak S_2}
+\newcommand{\erfc}{\operatorname{erfc}}
+\newcommand{\erfcx}{\operatorname{erfcx}}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{The bare stationary scalar $k{:}2k$ square-first inequality is now
+proved on both degenerate frequency faces and reduced, on the genuinely mixed
+face, to an explicit compact-interior problem with certified tails.  The
+mixed all-$q$ theorem and every production conclusion remain open.}
+
+R-110 computed the exact complete two-frequency packet $P$, its whole-output
+realized covariance square $H$, and the strict right-small-$q$ margin.  This
+note first takes the exact scaling quotient.  On $w=0$, a linear exponential
+tilt followed by a one-sided Bennett/floor split proves
+$\log\E e^{-qP}\le q^2H/4$ for every $q\ge0$ and every amplitude.  The $v=0$
+face is the same theorem after rescaling.  This is a genuine all-$q$ result,
+not a finite quadrature statement.
+
+For $v,w>0$, the phase is integrated exactly into $I_0$.  The dangerous
+$A\to\infty$, $q\to0$ projective corner is safe: its limiting gap is the sum
+of two positive centered-exponential gaps, and the complete first inverse-
+amplitude correction has a coefficientwise positive numerator.  The exact
+phase minimum gives a finite algebraic candidate set and removes all
+sufficiently large $q$.  A square decomposition supplies explicit factorized
+tails, while a sharp Bessel comparison supplies a second globally integrable
+majorant.
+
+Three tempting shortcuts are retired.  The quadratic Bessel envelope is
+nonintegrable, conditioning one frequency produces negative effective scalar
+coefficients for which positive-coefficient tensorization is false, and the
+tilted variance need not decrease.  None of these failures is a counterexample
+to the mixed all-$q$ target.
+
+R-103 already closes REG in its declared regular scope, and R-087 already
+closes the fixed-cutoff variational CORE.  The old R-085 equations
+(4.10)--(4.11) and (6.5) are not reopened or retroactively proved here.  The
+live production theorem is still a subdivision-invariant full-A1 conditional
+cluster estimate plus a one-use source/sextic aggregation ledger.  Hence
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, an interacting measure, and
+Sector-A closure remain open at T4.
+}}
+\end{center}
+
+The scalar model is the R-110 stationary circle model.  It is not asserted to
+be an embedded full A1 six-real production cluster.  Polynomial identities are
+exact.  The two numerical fixtures are adversarial verification data only:
+one demonstrates near-tightness on an exactly evaluable boundary, and one
+falsifies a proof route while remaining far inside the target.  Neither is
+used to certify the unbounded mixed parameter domain.
+
+\section{Exact scaling quotient and radial normal form}
+
+Let
+\[
+ X(x)=A+a_1\cos x+b_1\sin x+a_2\cos2x+b_2\sin2x,          \tag{1.1}
+\]
+where $(a_1,b_1)\sim N(0,v\mathrm I_2)$ and
+$(a_2,b_2)\sim N(0,w\mathrm I_2)$ independently.  As in R-110, put
+\[
+ R={a_1^2+b_1^2\over4},\qquad
+ S={a_2^2+b_2^2\over4},\qquad
+ C=\operatorname{Re}(z^2\bar u),\qquad \gamma=v+4w.       \tag{1.2}
+\]
+The complete covariance-normal packet is
+\[
+\begin{aligned}
+ P={}&A^2R+4A^2S-\frac{\gamma A^2}{2}+6AC\\
+ &+R^2+10RS+4S^2-\gamma(R+S),
+\end{aligned}                                              \tag{1.3}
+\]
+and
+\[
+\begin{aligned}
+ H={}&A^4\left({v^2\over2}+8w^2\right)
+ +A^2(v^3+10v^2w+16vw^2+16w^3)\\
+ &+{5\over4}v^4+v^3w+25v^2w^2+16vw^3+20w^4.
+\end{aligned}                                              \tag{1.4}
+\]
+
+Under
+\[
+ A=\sqrt\lambda\,\bar A,\quad
+ v=\lambda\bar v,\quad w=\lambda\bar w,\quad
+ (R,S,C)=\left(\lambda\bar R,\lambda\bar S,
+                   \lambda^{3/2}\bar C\right),             \tag{1.5}
+\]
+one has
+\[
+ P\stackrel d=\lambda^2\bar P,\qquad H=\lambda^4\bar H.  \tag{1.6}
+\]
+Thus only $q\lambda^2$ remains.
+
+Assume first $v>0$ and define
+\[
+ a={A^2\over v},\qquad r={w\over v},\qquad t=qv^2,
+ \qquad T={2R\over v},\qquad U={2S\over w}.                \tag{1.7}
+\]
+For $w>0$, $T,U$ are independent unit exponentials and the relative phase
+$\phi$ is uniform.  Then $P=v^2p$ and $H=v^4h$, where
+\[
+\boxed{
+\begin{aligned}
+ p={}&{T^2\over4}+r^2U^2+{5\over2}rTU
+ +a\left({T\over2}+2rU-{1+4r\over2}\right)\\
+ &-{1+4r\over2}(T+rU)
+ +3\sqrt{ar/2}\,T\sqrt U\cos\phi,
+\end{aligned}}                                             \tag{1.8}
+\]
+\[
+\boxed{
+\begin{aligned}
+ h={}&a^2\left({1\over2}+8r^2\right)
+ +a(1+10r+16r^2+16r^3)\\
+ &+{5\over4}+r+25r^2+16r^3+20r^4.
+\end{aligned}}                                             \tag{1.9}
+\]
+Writing $p_0$ for (1.8) without its cosine term gives the exact integral
+\[
+\boxed{
+ M(a,r,t)=\E e^{-tp}
+ =\int_0^\infty\!\int_0^\infty
+ e^{-T-U-tp_0(T,U)}
+ I_0\!\left(3t\sqrt{ar/2}\,T\sqrt U\right)dT\,dU.}       \tag{1.10}
+\]
+This is the canonical mixed compact-core object.
+
+The R-110 local identity becomes
+\[
+ h-2\Var(p)={1+16r^2+16r^4\over4}>0.                      \tag{1.11}
+\]
+Moreover, every coefficient of $\E p^3$ is positive.  Therefore
+\[
+ {t^2h\over4}-\log M(a,r,t)
+ ={t^2\over16}(1+16r^2+16r^4)+{t^3\over6}\E p^3+O(t^4)
+                                                                    \tag{1.12}
+\]
+is positive on a right neighborhood of zero for each fixed shape.  Equation
+(1.12) is not by itself uniform as $a\to\infty$.
+
+\section{All-$q$ theorem on both degenerate frequency faces}
+
+% evidence-anchor: theorem-2.1-degenerate-frequency-faces-all-q
+\subsection*{Theorem 2.1 (exact all-$q$ closure for $vw=0$)}
+
+For every $A\in\R$, $v,w\ge0$ with $vw=0$, and every $q\ge0$,
+\[
+ \boxed{\log\E e^{-qP}\le {q^2\over4}H.}                 \tag{2.1}
+\]
+
+\emph{Proof on $w=0$.}
+Assume $v>0$, let
+\[
+ \alpha={A^2\over v},\qquad X={2R\over v}\sim\operatorname{Exp}(1),
+ \qquad s={qv^2\over4}.                                   \tag{2.2}
+\]
+Then
+\[
+ P={v^2\over4}Z_\alpha,\qquad
+ Z_\alpha=2\alpha(X-1)+W,\qquad W=X^2-2X\ge-1,           \tag{2.3}
+\]
+and (2.1) is exactly
+\[
+ \log\E e^{-sZ_\alpha}
+ \le(2\alpha^2+4\alpha+5)s^2.                            \tag{2.4}
+\]
+
+Tilt first by the centered linear exponential.  With
+\[
+ \ell=1+2\alpha s,                                        \tag{2.5}
+\]
+one has the exact identity
+\[
+ \log\E e^{-sZ_\alpha}
+ =2\alpha s-\log\ell
+  +\log\E_{\operatorname{Exp}(\ell)}e^{-sW}.              \tag{2.6}
+\]
+The first two terms obey
+\[
+ 2\alpha s-\log(1+2\alpha s)\le2\alpha^2s^2.             \tag{2.7}
+\]
+Under $\operatorname{Exp}(\ell)$, direct moments give
+\[
+ \E_\ell W=-{2(\ell-1)\over\ell^2},\qquad
+ \Var_\ell(W)={4(\ell^2-4\ell+5)\over\ell^4}\le8.     \tag{2.8}
+\]
+The last inequality follows from
+\[
+ 8\ell^4-4(\ell^2-4\ell+5)
+ =4(\ell-1)(2\ell^3+2\ell^2+\ell+5)\ge0.                \tag{2.9}
+\]
+
+If $s\ge(4\alpha+5)^{-1}$, the floor $W\ge-1$ gives
+\[
+ \log\E_\ell e^{-sW}\le s\le(4\alpha+5)s^2.           \tag{2.10}
+\]
+Together with (2.7), this proves (2.4) on the large-$s$ branch.
+
+If $s\le(4\alpha+5)^{-1}\le1/5$, put
+$Y=\E_\ell W-W$.  Then $\E_\ell Y=0$, $Y\le1$, and
+$\E_\ell Y^2\le8$.  The one-sided exponential estimate gives
+\[
+\begin{aligned}
+ \log\E_\ell e^{-sW}
+ &=-s\E_\ell W+\log\E_\ell e^{sY}\\
+ &\le {4\alpha s^2\over\ell^2}+8(e^s-1-s)\\
+ &\le\left(4\alpha+{30\over7}\right)s^2
+ <(4\alpha+5)s^2.
+\end{aligned}                                              \tag{2.11}
+\]
+Here the last estimate uses
+$e^s-1-s\le s^2/[2(1-s/3)]$ for $0\le s\le1/5$.
+Equations (2.7) and (2.11) prove (2.4) on the small-$s$ branch.
+
+\emph{The $v=0$ face.}
+If $w>0$, set $X=2S/w$ and $\alpha=A^2/w$.  Then
+\[
+ P=w^2 Z_\alpha,\qquad
+ H=w^4(8\alpha^2+16\alpha+20).                            \tag{2.12}
+\]
+With $s=qw^2$, inequality (2.1) is again exactly (2.4).  Finally,
+$v=w=0$ is trivial. \hfill$\square$
+
+\paragraph{Boundary closed form.}
+On $w=0$, direct integration also gives, with $t=qv^2$ and
+$\beta=1+t(\alpha-1)/2$,
+\[
+\boxed{
+ \log M_0(\alpha,t)
+ ={t\alpha\over2}+{1\over2}\log{\pi\over t}
+ +{\beta^2\over t}
+ +\log\erfc\!\left({\beta\over\sqrt t}\right).}        \tag{2.13}
+\]
+The exact rational fixture $\alpha=27$, $t=1/9000$ has
+\[
+ {t^2h\over4}-\log M_0
+ =2.1686752950311231951453702567\ldots\times10^{-9}>0,     \tag{2.14}
+\]
+and ratio $0.9982109464147929\ldots$.  This demonstrates the near-tight
+large-amplitude/small-$q$ corner; it is not needed in the proof of Theorem 2.1.
+
+\section{Large-amplitude projective boundary}
+
+Write
+\[
+ p=aL+\sqrt a\,B+Q,                                       \tag{3.1}
+\]
+where
+\[
+ L={T-1\over2}+2r(U-1),\qquad
+ B=3T\sqrt{rU/2}\cos\phi,                                 \tag{3.2}
+\]
+\[
+ Q={T^2\over4}+r^2U^2+{5\over2}rTU
+   -{1+4r\over2}(T+rU).                                   \tag{3.3}
+\]
+
+% evidence-anchor: theorem-3.1-projective-large-amplitude-boundary
+\subsection*{Theorem 3.1 (positive projective limit)}
+
+Fix $x,r\ge0$ and set $t=x/a$.  Then
+\[
+ M(a,r,x/a)\longrightarrow
+ M_\infty(x,r)
+ ={e^{x(1+4r)/2}\over(1+x/2)(1+2rx)}.                    \tag{3.4}
+\]
+The limiting target gap is
+\[
+\boxed{
+ D_0(x,r)=d(x/2)+d(2rx),\qquad
+ d(y)={y^2\over2}-y+\log(1+y)\ge0.}                      \tag{3.5}
+\]
+Indeed,
+\[
+ d'(y)={y^2\over1+y}\ge0,\qquad d(0)=0.                 \tag{3.6}
+\]
+Thus $D_0(x,r)>0$ for $x>0$. \hfill$\square$
+
+% evidence-anchor: proposition-3.2-positive-first-projective-correction
+\subsection*{Proposition 3.2 (positive first inverse-amplitude correction)}
+
+For fixed $x,r$,
+\[
+ {x^2h\over4a^2}-\log M(a,r,x/a)
+ =D_0(x,r)+{D_1(x,r)\over a}+O(a^{-2}),                   \tag{3.7}
+\]
+where
+\[
+ \boxed{D_1(x,r)={x^3\Pi(x,r)\over
+ 4(x+2)^2(1+2rx)^2}>0}                                    \tag{3.8}
+\]
+for $x>0$, and
+\[
+\begin{aligned}
+\Pi={}&64r^5x^3+256r^5x^2+256r^5x
+ +64r^4x^3+320r^4x^2+512r^4x+256r^4\\
+&+40r^3x^3+224r^3x^2+352r^3x+128r^3
+ +4r^2x^3+56r^2x^2+172r^2x+112r^2\\
+&+4rx^2+26rx+38r+x+4.
+\end{aligned}                                              \tag{3.9}
+\]
+
+\emph{Proof.}
+Under the limiting tilted product law, $T$ and $U$ remain independent
+exponentials with rates $1+x/2$ and $1+2rx$.  Since the phase mean of $B$
+vanishes,
+\[
+ \log M=\log M_\infty+{1\over a}
+ \E_x\left[{x^2\over2}B^2-xQ\right]+O(a^{-2}).            \tag{3.10}
+\]
+Here the remainder is analytic rather than formal.  In the unscaled $v=1$
+radial variables, for $a\ge20\gamma$,
+\[
+ a+10S-6\sqrt{aS}\ge {a\over10},
+ \qquad
+ p_-\ge R^2+{a\over20}R+4S^2+{79a\over20}S
+              -{\gamma a\over2}.                          \tag{3.10a}
+\]
+At $t=x/a$ this lower bound gives an $a$-uniform exponential dominator for
+the integrand and for every polynomial factor used below.  With
+$\varepsilon=a^{-1/2}$ the phase-averaged integrand is even in
+$\varepsilon$ (shift $\phi$ by $\pi$), so dominated Taylor expansion through
+$\varepsilon^2$ has remainder $O(\varepsilon^4)=O(a^{-2})$ for fixed $x,r$.
+Insert the exponential moments $\E T^n=n!/(1+x/2)^n$ and
+$\E U^n=n!/(1+2rx)^n$, subtract the linear coefficient of $h$, and clear the
+positive denominators.  The result is (3.8)--(3.9), whose coefficients are
+all positive. \hfill$\square$
+
+The leading floor-to-$\sqrt h$ shape satisfies
+\[
+ 2+32r^2-(1+4r)^2=(4r-1)^2\ge0.                           \tag{3.11}
+\]
+The unique saturation ratio is $r=1/4$, but then
+\[
+ M_\infty(x,1/4)={e^x\over(1+x/2)^2},\qquad
+ D_0(x,1/4)=2d(x/2)>0.                                    \tag{3.12}
+\]
+
+Proposition 3.2 is a pointwise projective expansion.  A uniform remainder
+bound is still required before one may replace the entire large-$a$ region by
+a finite certified threshold.  This boundary is explicit in the next-action
+list and prevents an overclaim of compactness already completed.
+
+\section{Exact phase floor, large-$q$ cutoff, and rigorous tails}
+
+Use the normalized $v=1$ variables $R=T/2$, $S=rU/2$ and put $y=\sqrt S$.
+Minimizing the phase gives
+\[
+\begin{aligned}
+ p_-(R,S)={}&R^2+10RS+4S^2+(a-\gamma)R+(4a-\gamma)S\\
+ &-6\sqrt a\,R\sqrt S-{\gamma a\over2},\qquad
+ \gamma=1+4r.
+\end{aligned}                                              \tag{4.1}
+\]
+
+% evidence-anchor: theorem-4.1-phase-minimum-high-q-reduction
+\subsection*{Theorem 4.1 (finite algebraic floor and exact high-$q$ cutoff)}
+
+For fixed $y$, the minimizing radial coordinate is
+\[
+ R_*(y)={1\over2}
+ [\gamma-a-10y^2+6\sqrt a\,y]_+.                          \tag{4.2}
+\]
+Consequently
+\[
+\boxed{
+ p_* =\min_{y\ge0}\left[
+ 4y^4+(4a-\gamma)y^2-{\gamma a\over2}
+ -{1\over4}[\gamma-a-10y^2+6\sqrt a\,y]_+^2
+ \right].}                                                \tag{4.3}
+\]
+The candidate set consists of $y=0$, the roots of the positive-part bracket,
+the inactive quartic vertex, and the nonnegative roots of
+\[
+\boxed{
+ 84y^3-90\sqrt a\,y^2+(20a-8\gamma)y
+ +3\sqrt a(\gamma-a)=0.}                                  \tag{4.4}
+\]
+Since $p\ge p_*$,
+\[
+ \log M(a,r,t)\le-tp_*.
+\]
+Therefore
+\[
+ \boxed{t\ge{4(-p_*)\over h}\quad\Longrightarrow\quad
+ \log M(a,r,t)\le {t^2h\over4}.}                         \tag{4.5}
+\]
+Thus no fixed shape can fail at arbitrarily large $t$. \hfill$\square$
+
+% evidence-anchor: theorem-4.2-bessel-and-factorized-tail-majorants
+\subsection*{Theorem 4.2 (two globally integrable majorants)}
+
+First, the modified Bessel function obeys
+\[
+\boxed{\log I_0(z)\le\sqrt{4+z^2}-2,\qquad z\ge0.}       \tag{4.6}
+\]
+To prove it, put $g=I_1/I_0$ and $h=z/\sqrt{z^2+4}$.  The Riccati identity is
+$g'=1-g/z-g^2$.  At the origin,
+\[
+ g={z\over2}-{z^3\over16}+{z^5\over96}+O(z^7),\qquad
+ h={z\over2}-{z^3\over16}+{3z^5\over256}+O(z^7),
+\]
+so $h-g=z^5/768+O(z^7)>0$ initially.  At a first positive contact,
+\[
+ g'-h'={4\sqrt{z^2+4}-z^2-8\over(z^2+4)^{3/2}}<0,         \tag{4.7}
+\]
+because
+\[
+ (z^2+8)^2-16(z^2+4)=z^4>0.                               \tag{4.8}
+\]
+An upward first crossing is impossible, so $g\le h$.  Integrate from zero to
+obtain (4.6).  This bound has the correct quadratic/quartic expansion at zero
+and linear growth at infinity.
+
+Second, let $b=3\sqrt{ar/2}\,T\sqrt U$ and let $p_-=p_0-b$.  Exact square
+completion gives
+\[
+\boxed{
+ p_-\ge {T^2\over16}+{r^2U^2\over2}-C(a,r),}              \tag{4.9}
+\]
+where
+\[
+ C(a,r)={a\gamma\over2}+(\gamma-a)_+^2
+ +{1\over2}\left(7a+{\gamma\over2}\right)^2.            \tag{4.10}
+\]
+Indeed, after subtracting the right side of (4.9), the low-$a$ branch is the
+sum
+\[
+ \left({T\over2\sqrt2}-3\sqrt{arU}\right)^2
+ +\left({T\over4}-(\gamma-a)\right)^2
+ +{1\over2}\left(rU-7a-{\gamma\over2}\right)^2
+ +{5\over2}rTU,                                           \tag{4.11}
+\]
+and on $a\ge\gamma$ the middle square is replaced by
+$T^2/16+(a-\gamma)T/2$.
+
+Since $I_0(tb)\le e^{tb}$, the exact integrand in (1.10) is at most
+\[
+ e^{tC(a,r)}e^{-T-tT^2/16}e^{-U-tr^2U^2/2}.               \tag{4.12}
+\]
+Every rectangular tail is therefore bounded by products of explicit
+\[
+ \int_L^\infty e^{-z-cz^2}dz
+ ={\sqrt\pi\over2\sqrt c}e^{1/(4c)}
+ \erfc\left(\sqrt cL+{1\over2\sqrt c}\right).             \tag{4.13}
+\]
+Equations (4.3)--(4.13) provide the algebraic high-$t$ and radial-tail pieces
+of a finite-box certificate.  Completion still requires a uniform projective
+remainder together with uniform local-$t$ and two-chart face patching as
+$r\to0$ and $r\to\infty$. \hfill$\square$
+
+\section{Failed routes and their exact boundaries}
+
+% evidence-anchor: proposition-5.1-separated-conditional-domination-nogos
+\subsection*{Proposition 5.1 (separated conditional domination fails)}
+
+Three direct separations cannot prove the mixed theorem.
+
+\paragraph{Quadratic Bessel envelope.}
+The valid inequality $I_0(z)\le e^{z^2/4}$ inserts
+\[
+ +9q^2A^2R^2S                                             \tag{5.1}
+\]
+into the exponent.  Along $R=S=L$, this is positive cubic growth, while the
+original coercive part is only $-15qL^2$.  The proposed upper integral is
+infinite whenever $qA\ne0$.  The sharp linear-growth bound (4.6) is required.
+
+\paragraph{Dropping the $S$ quartic.}
+The elementary transform
+$\int_0^\infty e^{-\alpha S}I_0(c\sqrt S)dS$ requires
+\[
+ \alpha={2\over w}+q(4A^2-\gamma+10R)>0.                  \tag{5.2}
+\]
+At $v=w=q=1$, $A=R=0$, it equals $-3$.  Thus one cannot discard $4qS^2$
+before applying that transform.
+
+\paragraph{Conditional scalar tensorization.}
+Conditioning on $S$ creates the effective scalar coefficient
+\[
+ \alpha_{\rm eff}={A^2+10S-4w\over v},                    \tag{5.3}
+\]
+which is unbounded below across mixed shapes.  For
+$\alpha_{\rm eff}=-B$,
+\[
+ Z_{-B}=(X-B-1)^2-(B^2+1).                                \tag{5.4}
+\]
+For fixed $0<s<1/2$, exact completion of the one-dimensional integral gives
+\[
+ \log\E e^{-sZ_{-B}}=sB^2-B+O(1),                         \tag{5.5}
+\]
+whereas blindly extending the positive-$\alpha$ proxy would give
+\[
+ (2B^2-4B+5)s^2=2s^2B^2+O(B).                             \tag{5.6}
+\]
+Because $s-2s^2>0$, (5.6) is false for large $B$.  Theorem 2.1 may not be
+applied after this conditioning. \hfill$\square$
+
+The first and third failures are registered as
+\[
+\begin{gathered}
+ \texttt{NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION},\\
+ \texttt{NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION}.
+\end{gathered}                                             \tag{5.7}
+\]
+
+% evidence-anchor: proposition-5.2-tilted-variance-monotonicity-nogo
+\subsection*{Proposition 5.2 (tilted variance need not decrease)}
+
+Let $\psi(t)=\log\E e^{-tp}$.  Then
+\[
+ \psi''(t)=\Var_t(p),\qquad
+ \psi'''(t)=-\E_t[(p-\E_t p)^3].                          \tag{5.8}
+\]
+A tempting proof would show $\psi''(t)\le\psi''(0)$ for all $t\ge0$.  It is
+false.  At the exact declared fixture
+\[
+ a=0,\qquad r=7,\qquad t={1\over10},                       \tag{5.9}
+\]
+adaptive integration after exact elimination of $T$ gives
+\[
+\begin{aligned}
+ \E_t p&=-53.84754430669265763309\ldots,\\
+ \Var_t(p)&=440.65392463518411475448\ldots,\\
+ \E_t[(p-\E_t p)^3]&=-24382.80109039520660173\ldots.
+\end{aligned}                                              \tag{5.10}
+\]
+Independent tensor Gauss--Laguerre orders 96 and 128 retain the same negative
+sign.  Hence $\psi'''(t)>0$ there.  The target gap at this fixture is
+$132.60095258\ldots>0$, so this is a proof-route no-go, not a counterexample.
+
+This failure is registered as
+\[
+ \texttt{NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY}. \tag{5.11}
+\]
+
+\section{Correct owner map: REG, OVERLAP, and CORE}
+
+% evidence-anchor: theorem-6.1-owner-map-scope
+\subsection*{Theorem 6.1 (what the scalar theorem can and cannot own)}
+
+Theorem 2.1 closes exactly the $vw=0$ faces of the R-110 scalar target.  A
+future proof of the mixed face, if uniform in strict-past $A,v,w$, would give a
+legal one-fresh-root scalar cluster normalizer after the square is conditionally
+averaged as required by R-109.  It would not by itself prove a production
+owner theorem.
+
+\paragraph{REG is already closed in its scope.}
+R-103 proves the complete regular $H_N$ and REG lower forms using the exact
+nonduplicating owners from R-080--R-102.  The old R-085 averaged Cartan atom
+(4.11) and old rational form (6.5) are explicitly non-load-bearing there.
+Adding the scalar packet as a ninth REG owner would risk duplication and is
+forbidden.
+
+\paragraph{The old R-085 statements are not consequences.}
+R-085 (4.10)--(4.11) is an OU/output-shell decay contract with $\Pi_m$,
+$m-k$ decay, and a $q_k$ ledger.  The scalar theorem has none of these
+objects.  R-108 also corrects the live sufficient Cartan bridge to an
+unweighted positive-gain statement.  The old rational (6.5) was replaced by
+the exact R-101 endpoint
+\[
+ \Delta W_R=R_Q+M_U+K_R.                                  \tag{6.1}
+\]
+Its summands change under representation-preserving subdivision while the
+complete endpoint does not.  The scalar theorem proves no rational owner
+identity.
+
+\paragraph{CORE is already closed at fixed cutoff.}
+R-087 proves equality of the Boue--Dupuis infimum on the full finite-energy
+class and the bounded cylindrical-simple core in the declared graph topology.
+The missing estimate is not another CORE density theorem.
+
+\paragraph{$\mathrm{OVERLAP}_{\rm src}$ remains open.}
+The live target is a cutoff-, chart-, control-, partition-, revisit-, and
+subdivision-uniform complete source-action lower bound.  Its one-root packet
+must retain complete heat, mean, covariance trace, mixed baseline, rational
+recovery, every visit, the random-$W$ double divergence, and the full R-063
+forest once.  The smallest honest local successor has the schematic form
+\[
+\begin{aligned}
+ \mathcal L_{j,\mathcal C}
+ &:={\log}\E_{j-1}\exp[-q(P^{\rm A1}_{j,\mathcal C}
+       +\eta_{j,\mathcal C}E_j\\
+ &\hspace{43mm}+\zeta_{j,\mathcal C}Y_{\rm parent})],\\
+ \mathcal L_{j,\mathcal C}
+ &\le {q^2\over4}\E_{j-1}
+       \|S^{\rm real}_{j,\mathcal C}\|_{\HS}^2
+       +r^{\rm pred}_{j,\mathcal C},
+\end{aligned}                                              \tag{6.2}
+\]
+with an $\mathcal F_{j-1}$-measurable right side and exact subdivision
+invariance.  A separate one-use theorem must then prove
+\[
+ \sum_{j,\mathcal C}\left\{{q^2\over4}\E_{j-1}
+ \|S^{\rm real}_{j,\mathcal C}\|_{\HS}^2
+ +r^{\rm pred}_{j,\mathcal C}\right\}
+ \le C+\epsilon\sum_j\|h_j\|_2^2+\delta\|Z_K\|_6^6.      \tag{6.3}
+\]
+Only (6.2) plus (6.3), with the accepted owner arithmetic, can feed the
+R-087 CORE and yield $q=10/9$ Nelson.
+
+\section{Proof and failure map}
+
+\begin{center}
+\begin{tabular}{p{0.29\textwidth}p{0.17\textwidth}p{0.43\textwidth}}
+\hline
+Route & Verdict & Reusable boundary \\
+\hline
+Scale quotient and Bessel normal form & proved & Three shape variables
+$(a,r,t)$ remain in the $v$ chart.\\
+Degenerate frequency faces & proved all-$q$ & Linear exponential tilt plus
+small-$t$ Bennett and large-$t$ floor.\\
+Right-small-$q$ mixed face & proved & Strict R-110 variance and cubic margins.\\
+Large-amplitude projective face & advanced & Positive limiting gap and
+positive first inverse-amplitude correction; uniform remainder open.\\
+Large-$q$ face & proved shape-wise & Exact algebraic floor cutoff.\\
+Tail certification & proved & Sharp Bessel comparison and factorized erfc
+tails.\\
+Quadratic Bessel domination & failed & Positive cubic radial exponent makes
+the upper integral infinite.\\
+Conditional scalar tensorization & failed & Negative effective coefficient
+has the wrong $B^2$ Laplace scale.\\
+Monotone tilted variance & failed & Exact declared fixture has negative
+tilted third centered moment.\\
+Mixed compact interior & open & Uniform projective remainder and interval or
+new analytic comparison required.\\
+Full A1 production lift & open & Mean, heat, rational, visits, random-$W$
+forest, source, and sextic owners must remain once.\\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: the face theorem silently assumes a positive
+effective coefficient.}
+
+\textbf{DISMISSED ON THE DECLARED FACES; UPHELD AGAINST CONDITIONING.}
+Theorem 2.1 has $\alpha=A^2/v\ge0$ or $A^2/w\ge0$.  Proposition 5.1 proves
+that conditioning the mixed packet can create $\alpha_{\rm eff}<0$, and the
+face theorem is not applied there.
+
+\item \textbf{Objection: the small-$t$ proof reuses the floor budget.}
+
+\textbf{DISMISSED.}  The branches are disjoint.  For
+$s\le(4\alpha+5)^{-1}$, the centered Bennett estimate spends variance at most
+eight and $-s\E_\ell W$.  For the complementary branch, only $W\ge-1$ is
+used.  Both meet at the declared threshold.
+
+\item \textbf{Objection: the projective calculation proves the whole
+large-amplitude region.}
+
+\textbf{VALID WITH AN OPEN MITIGATION.}  The limiting and first-correction
+coefficients are exact and positive for fixed $(x,r)$.  A uniform remainder
+over a compactified covariance-shape chart is not yet proved.  The mixed
+all-$q$ theorem remains open.
+
+\item \textbf{Objection: the Bessel upper bound has the wrong asymptotic.}
+
+\textbf{DISMISSED.}  Equation (4.6) agrees through the quadratic and quartic
+terms at zero and grows linearly.  The primary and independent certificates
+check the Riccati first-contact identity and exact comparison square.  The
+quadratic exponential bound is separately rejected as nonintegrable.
+
+\item \textbf{Objection: finite quadrature is being used to certify the
+mixed interior.}
+
+\textbf{DISMISSED.}  No finite scan enters a positive theorem.  The
+Gauss--Laguerre calculation only independently confirms the sign of the
+tilted-variance method fixture, whose primary value comes from a different
+adaptive one-dimensional integral after exact elimination of $T$.
+
+\item \textbf{Objection: the scalar result closes REG or CORE.}
+
+\textbf{DISMISSED AS A SCOPE ERROR.}  Those results already have their
+accepted scoped authorities.  The scalar theorem is neither an OU Cartan
+atom nor a rational owner.  It is a local cross-resonance normalizer candidate
+for the still-open full-A1 $\mathrm{OVERLAP}_{\rm src}$ architecture.
+
+\item \textbf{Objection: signs, factors, units, or hard-coded numbers could
+mask the result.}
+
+\textbf{DISMISSED FOR THE CLAIMED SCOPE.}  Scaling weights make every term in
+$P$ degree two and every term in $H$ degree four.  Both scripts independently
+reconstruct the normalized packet, projective moments, floor cubic, and tail
+squares.  The primary tilted fixture uses adaptive high-precision integration;
+the independent route uses tensor Gauss--Laguerre orders 96 and 128.  The
+only decimal assertions are declared adversarial fixtures, not derived
+theorem constants.
+\end{enumerate}
+
+\section{Authorities and scope firewall}
+
+The load-bearing authorities are R-063 (complete coefficient-jet/Wick forest),
+R-087 (fixed-cutoff variational CORE), R-101 (nonduplicating rational owner),
+R-103 (complete regular $H_N$/REG closure), R-104 (lossless fixed-chart owner
+assembly and Douglas slack), R-105 (common-root quotient and physical
+cross-mode boundary), R-108 (complete-cluster quotient/covariance order),
+R-109 (legal square-first filtration and one-pair theorem), and R-110 (exact
+random-$W$ and stationary scalar $k{:}2k$ packet).
+
+Proved here are Theorem 2.1, Theorem 3.1, Proposition 3.2, Theorems 4.1--4.2,
+and the exact owner-map statement of Theorem 6.1.  Propositions 5.1--5.2
+retire only their named proof architectures.  Not proved are the genuinely
+mixed $v,w>0$ all-$q$ inequality, a uniform projective remainder, the compact
+interior interval certificate, a full A1 embedding, a subdivision-invariant
+production cluster estimate, the one-use aggregation (6.3),
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, cutoff/floor removal, an interacting
+measure, Sector-A closure, or any tier promotion.
+
+\section{Executable verification}
+
+The primary certificate uses exact symbolic scaling, exponential moments,
+projective expansion, floor differentiation, Bessel comparison, tail square
+completion, the closed-form boundary MGF, and adaptive high-precision tilted
+moments.  The independent certificate imports no primary code.  It reconstructs
+the projective correction separately, verifies the boundary erfc formula
+against direct adaptive quadrature, and uses tensor Gauss--Laguerre orders 96
+and 128 for the tilted method fixture.
+
+The primary contract is 46/46 and the non-importing independent contract is
+35/35.  The manifest-pinned verifier reruns both children, checks all hashes,
+the negative and exploration surfaces, the PDF, and the no-overclaim boundary.
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-SCALAR-K2K-DEGENERATE-FACE-PROJECTIVE-COMPACT-CORE-BOUNDARY
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-111
+Status:    T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY;
+           MIXED ALL-Q, NELSON, AND SECTOR A OPEN
+Scope:     Stationary scalar circle k:2k model. All-q theorem only on vw=0;
+           exact projective/floor/tail reductions for v,w>0. No full A1
+           production embedding is asserted.
+Precise statement: both degenerate frequency faces obey the bare square-first
+           inequality for every q and amplitude; the large-A mixed projective
+           limit and first correction are positive; an exact algebraic floor
+           removes large q and explicit tails reduce the remaining work;
+           three separated proof shortcuts fail without refuting the target.
+Dependencies: R-063, R-087, R-101, R-103--R-105, R-108--R-110.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_scalar_k2k_projective_compact_core_boundary_verify.py
+Expected output:
+           primary 46/46; independent 35/35; manifest-pinned integrated and
+           aggregate contracts; PASS.
+Negative records:
+           NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION;
+           NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION;
+           NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY.
+Falsification gate: failure of any scaling, face-theorem, exponential-moment,
+           projective, positive-coefficient, floor, Bessel, tail, conditional
+           no-go, tilted-moment, independent, hash, PDF, ledger, or scope check.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           the mixed v,w>0 all-q inequality, full A1 cluster, OVERLAP_src,
+           Nelson, removals, measure, and Sector A remain open.
+Next required action: prove a uniform projective remainder and certify the
+           remaining compact mixed core by interval tails, or find a new
+           analytic comparison; only then attempt the owner-preserving full-A1
+           conditional cluster and one-use source/sextic aggregation ledger.
+\end{verbatim}
+\endgroup

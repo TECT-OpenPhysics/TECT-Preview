@@ -6,6 +6,9 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION](#ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination) | prove the mixed scalar `k:2k` all-`q` theorem by inserting the local Gaussian envelope `I_0(z)<=exp(z^2/4)` into the exact radial integral | the envelope creates `+9q^2A^2R^2S`; on `R=S=L` this positive cubic dominates every original quadratic damping term, so the proposed upper integral is infinite whenever `qA!=0`. The sharp linear-growth Bessel majorant remains valid and useful |
+| [NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION](#ng-2026-07-28-a13-k2k-conditional-scalar-tensorization) | condition on one mixed frequency and apply the positive-coefficient scalar degenerate-face theorem to the other frequency | conditioning on `S` produces `alpha_eff=(A^2+10S-4w)/v`, which can be arbitrarily negative. For `alpha_eff=-B`, the exact packet is `(X-B-1)^2-(B^2+1)` and fixed `0<s<1/2` has log-Laplace leading term `sB^2`, exceeding the blindly extended proxy `2s^2B^2`. The positive-coefficient face theorem remains exact on its declared faces |
+| [NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY](#ng-2026-07-28-a13-k2k-tilted-variance-monotonicity) | prove the mixed scalar `k:2k` target by showing its variance decreases under every negative exponential tilt | at the exact normalized fixture `a=0,r=7,t=1/10`, adaptive integration gives tilted third centered moment `-24382.8010903952...`, so `psi'''(t)>0` and tilted variance is increasing there. Independent Gauss--Laguerre orders 96 and 128 retain the sign. The target gap is still `132.60095258...>0`, so this retires only the monotonicity proof route |
 | [NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER](#ng-2026-07-28-a13-random-w-hs-only-score-transfer) | extend the fixed-predictable-PSD R-109 score-transfer cost to a same-root random PSD matrix using only its pathwise Hilbert--Schmidt size | a uniformly positive scalar weight has signed score of order `M` and double-divergence cost of order `M^4`, and a rotating rank-one projection has constant trace/HS/operator norms but the same derivative growth. Random `W` requires its full Gaussian double divergence, not a static HS norm |
 | [NG-2026-07-28-A13-UNIVERSAL-NONLINEAR-TANGENT-SQUARE-FIRST-NORMALIZER](#ng-2026-07-28-a13-universal-nonlinear-tangent-square-first-normalizer) | control every nonlinear diagonal packet by one quarter of its realized tangent-covariance square without first proving centering or paying the mean debt | for `Y=epsilon(G^2+aG-1)` the complete trace-corrected packet has mean `-epsilon^2`; at `q=10/9,a=1,epsilon=1/10`, Jensen gives `1/90` while the proposed square cost is only `73/32400`, leaving the exact violation `287/32400` |
 | [NG-2026-07-28-A13-CROSS-RESONANCE-POINTWISE-BASELINE-PAYMENT](#ng-2026-07-28-a13-cross-resonance-pointwise-baseline-payment) | close the physical `k:2k` complete cluster by a termwise nonnegative pointwise payment at each resonant pair | the sharp completion in this architecture needs `(9A^2/10+4w)R+vS`; its expectation contains `9A^2v/20`, whose three-dimensional production shell mass grows like `2^j`. The local completion is exact but its baseline cannot be summed globally |
@@ -150,6 +153,79 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination"></a>
+### NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION -- the local Gaussian Bessel envelope destroys radial integrability
+
+**Failure mode:** insert `I_0(z)<=exp(z^2/4)` into the exact phase-averaged
+mixed `k:2k` radial normalizer and try to integrate the resulting positive
+majorant.
+
+**Evidence:** the exact Bessel argument is `z=6q|A|R sqrt(S)`. The Gaussian
+envelope therefore adds
+
+`+9q^2 A^2 R^2 S`
+
+to the exponent. Along `R=S=L`, this is positive cubic growth, while the
+original coercive exponent contains only quadratic terms, with leading
+`-15qL^2`. Hence the proposed upper integral diverges whenever `qA!=0`.
+
+**Consequence:** the quadratic Bessel envelope is valid pointwise but cannot
+be used as a global radial dominator. The sharp comparison
+`log I_0(z)<=sqrt(4+z^2)-2`, exact `erfcx` integration, interval tails, and the
+mixed all-`q` target remain live. This is not a counterexample to R-111's
+degenerate-face theorem or to the mixed target itself.
+
+<a id="ng-2026-07-28-a13-k2k-conditional-scalar-tensorization"></a>
+### NG-2026-07-28-A13-K2K-CONDITIONAL-SCALAR-TENSORIZATION -- conditioning creates a false negative-coefficient scalar proxy
+
+**Failure mode:** condition on the second-frequency radius `S`, treat the
+first-frequency packet as a scalar degenerate-face packet, and apply the
+positive-coefficient theorem without controlling the sign of its effective
+coefficient.
+
+**Evidence:** the conditional coefficient is
+
+`alpha_eff=(A^2+10S-4w)/v`,
+
+which is unbounded below across mixed shapes. For `alpha_eff=-B`, the exact
+normalized scalar packet is
+
+`Z_(-B)=(X-B-1)^2-(B^2+1)`.
+
+At any fixed `0<s<1/2`, direct completion of the integral gives
+`log E exp(-sZ_(-B))=sB^2-B+O(1)`, whereas the blindly extended positive-
+coefficient proxy is `(2B^2-4B+5)s^2=2s^2B^2+O(B)`. Since
+`s-2s^2>0`, the proposed conditional bound fails for large `B`.
+
+**Consequence:** Theorem 2.1 of R-111 remains exact for its actual
+nonnegative face coefficient `A^2/v` or `A^2/w`, but it cannot be tensorized
+through this sign-blind conditioning. A coupled mixed comparison or certified
+compact-core proof is still required; no mixed-target counterexample follows.
+
+<a id="ng-2026-07-28-a13-k2k-tilted-variance-monotonicity"></a>
+### NG-2026-07-28-A13-K2K-TILTED-VARIANCE-MONOTONICITY -- the mixed tilted variance can increase
+
+**Failure mode:** prove the mixed all-`q` target by asserting
+`psi''(t)<=psi''(0)` for `psi(t)=log E exp(-tp)` at every normalized shape.
+
+**Evidence:** at the exact declared fixture `a=0`, `r=7`, `t=1/10`, adaptive
+one-dimensional integration after exact elimination of `T` gives
+
+`E_t p=-53.8475443066927...`, `Var_t(p)=440.653924635184...`,
+
+and
+
+`E_t[(p-E_t p)^3]=-24382.8010903952...`.
+
+Thus `psi'''(t)=-E_t[(p-E_t p)^3]>0`: the tilted variance is increasing at
+this point. Independent tensor Gauss--Laguerre orders 96 and 128 preserve the
+negative third-moment sign.
+
+**Consequence:** global monotone tilted variance is not a valid proof route.
+The target gap at this fixture is nevertheless `132.600952583...>0`, so the
+fixture does not refute the mixed square-first inequality. The projective,
+floor, tail, and compact-interval routes remain live.
 
 <a id="ng-2026-07-28-a13-random-w-hs-only-score-transfer"></a>
 ### NG-2026-07-28-A13-RANDOM-W-HS-ONLY-SCORE-TRANSFER -- a same-root random PSD score weight is not controlled by its static HS norm

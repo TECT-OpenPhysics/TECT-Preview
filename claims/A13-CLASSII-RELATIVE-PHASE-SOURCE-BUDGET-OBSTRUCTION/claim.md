@@ -964,6 +964,28 @@ the following structural results and proof-architecture boundaries hold.
     ledger, adapted production cluster, `OVERLAP_src`, Nelson, removals,
     interacting-measure construction, and Sector A remain open; tier stays
     T4.
+54. `A13-CLASSII-SCALAR-K2K-DEGENERATE-FACE-PROJECTIVE-COMPACT-CORE-BOUNDARY`
+    is R-111. In the exact stationary scalar two-frequency `k:2k` packet of
+    R-110, a linear exponential tilt followed by a one-sided Bennett/floor
+    split proves `log E exp(-qP)<=q^2 H/4` for every `q>=0` and every amplitude
+    on both degenerate covariance faces `vw=0`. On the genuinely mixed face,
+    the exact radial normalizer is an `I_0` integral. Its large-amplitude
+    projective limit is the sum of two positive centered-exponential gaps,
+    and the complete first inverse-amplitude correction has a coefficientwise
+    positive numerator for each fixed projective shape. Exact phase
+    minimization removes all sufficiently large `q` shape-wise, while the
+    sharp global bound `log I_0(z)<=sqrt(4+z^2)-2` and a square decomposition
+    give factorized Gaussian tails. A uniform projective remainder, uniform
+    local/face-chart patching, and an interval certificate for the remaining
+    mixed compact core are still required. Three shortcuts are rigorously
+    retired: quadratic Bessel domination is nonintegrable, conditional scalar
+    tensorization fails for negative effective coefficients, and tilted
+    variance need not decrease. R-103 already owns REG and R-087 already owns
+    fixed-cutoff variational CORE; the old R-085 Cartan equations and rational
+    form are not reopened. `EXP-000305--EXP-000312` preserve all route
+    decisions. The full A1 embedding, owner-preserving one-use source/sextic
+    aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and
+    Sector A remain open; tier stays T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -1024,6 +1046,7 @@ is a scoped T4 subproof and does not promote A13.
 | Complete-cluster quotient / covariance-order / Carleson frontier | Historical-versus-direct Cartan contract audit; exact rational subdivision quotient; quotient-safe endpoint conditional identity and CM minimization; complete-cluster signed normal form; bare average-before-square deficit with explicit repair tradeoff; absolute arbitrary-selector future-feedback HS/PSD one-sextic no-go; exact `q=10/9` budget | T4 analytic/exact/executed synthesis and method boundary; square-before-average remains viable only on one fixture, while the uniform signed complete-cluster estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Square-first pair normalizer / signed score transfer / filtration boundary | Global conditional Bennett normalizer; all-amplitude one-pair square-before-average bound and fresh-pair supermartingale; realized-covariance filtration repair; selector-independent centered quartic floor and divergent full-pair baseline boundary; fixed-predictable-PSD signed score transfer; exponential Stein-substitution no-go | T4 analytic/exact/executed advance and method boundary; adapted cross-mode production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Random-W Skorohod / trace-corrected diagonal / scalar k:2k frontier | Exact double-divergence assembly and Young-optimized moment form; static covariance-norm no-go; chaos--Sobolev sufficient gate; exact trace-corrected interpolation and nonlinear mean-debt no-go; stationary scalar k:2k exact moments, strict right-small-q margin, two-order finite falsifiers, and architecture-sharp but globally nonsummable pointwise payment | T4 analytic/exact/executed advance and method boundary; no full A1 embedding or bare all-q scalar theorem, and the adapted complete production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Scalar k:2k degenerate faces / projective boundary / compact-core reduction | Exact all-q theorem on `vw=0`; positive fixed-shape projective limit and first correction; algebraic high-q cutoff; sharp Bessel and factorized tails; three exact route no-gos | T4 analytic/exact/executed advance and method boundary; genuinely mixed all-q, uniform projective/local/face patching, full A1 embedding, one-use aggregation, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1036,8 +1059,9 @@ this chain is recorded as an A13 subproof rather than a new numbered claim.
 - Fixed `L=16` torus.
 - Three complex fields in the A7 six-real convention.
 - A1 production symbol and coefficients.
-- R-110 Section 5 is only a stationary scalar two-frequency cross-output
-  model; no embedding as the full A1 production tensor is asserted.
+- R-111 proves the R-110 stationary scalar two-frequency cross-output theorem
+  for all `q` only on `vw=0`. Its mixed projective expansion is fixed-shape,
+  and no embedding as the full A1 production tensor is asserted.
 - Fixed positive `rho_regularizer=1e-12`.
 - Common entrywise-real-even scalar Fourier cutoffs.
 - Same-cutoff covariance-normal Wick subtraction.
@@ -1352,14 +1376,14 @@ Current subordinate order:
     replaces the fixed weight by the exact same-root double divergence and a
     chaos--Sobolev sufficient cost, while proving that static covariance norms
     miss current-root rotation. Its trace-corrected interpolation leaves a
-    tilted cross-score and a genuine mean-owner obligation. In the stationary
-    scalar two-frequency `k:2k` model the complete packet has a strict right-
-    small-`q` margin, but the bare all-`q` inequality remains open and the
-    architecture-sharp pointwise repair is globally nonsummable under the
-    declared production allocation. No full A1 embedding of that scalar model
-    is asserted. The live target is therefore first the bare all-`q` scalar
-    signed cluster theorem or a decisive counterexample, and then one adapted
-    contraction-closed production
+    tilted cross-score and a genuine mean-owner obligation. R-111 proves the
+    stationary scalar two-frequency `k:2k` inequality on both degenerate faces
+    for every `q`, and reduces the genuinely mixed face to fixed-shape
+    projective, high-`q`, tail, local, and compact-interior components. The live
+    scalar target is now a uniform projective remainder, uniform local/face-
+    chart patching, and an interval certificate for the remaining mixed core.
+    Even a complete scalar result would still require one adapted contraction-
+    closed production
     cluster coupling the Cameron--Martin mean, realized covariance, trace,
     mixed baseline, future feedback, rational recovery, and full raw forest
     with every source and sextic owner retained once.
@@ -1367,22 +1391,21 @@ Current subordinate order:
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_scalar_k2k_projective_compact_core_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `40/40`;
-- standard-library independent `49/49`;
-- manifest-pinned integrated `111/111` and aggregate `200/200` PASS;
-- random-W double-divergence and chaos--Sobolev contracts, exact trace-
-  corrected interpolation, static-covariance and nonlinear-mean-debt no-gos,
-  stationary scalar `k:2k` exact moments and right-small-`q` margin, two-order
-  finite-falsifier sign stability, architecture-sharp but nonsummable
-  pointwise payment, PDF/surface contracts, and T4 firewalls;
-- explicit preservation of the open uniform signed complete-cluster,
-  bare all-`q` scalar model, full A1 embedding, `OVERLAP_src`, Nelson,
-  removal, measure, and Sector-A targets;
+- primary `46/46`;
+- non-importing independent `35/35`;
+- manifest-pinned integrated `152/152` and aggregate `233/233` PASS;
+- normalized packet, both all-`q` degenerate-face proofs, fixed-shape
+  projective limit and first correction, exact high-`q` floor, factorized
+  tails, rational near-tight boundary fixture, three method no-gos,
+  PDF/surface contracts, and T4 firewalls;
+- explicit preservation of the open mixed all-`q`, uniform projective/local/
+  face patching, compact-interior, full A1, one-use aggregation,
+  `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
 
 The current proof note must pass the standard form check, zero-overfull gate,
@@ -1392,21 +1415,21 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_random_w_skorohod_diagonal_crossmode_boundary_manifest.json`
-- `notes/classii-random-w-skorohod-diagonal-crossmode-boundary-260728-v1.0.tex.txt`
-- `notes/classii-random-w-skorohod-diagonal-crossmode-boundary-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary.py`
-- `../../codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_independent.py`
-- `../../codes/foundations/a13_classii_random_w_skorohod_diagonal_crossmode_boundary_verify.py`
-- `runs/2026-07-28-primary-random-w-skorohod-diagonal-crossmode-boundary/result.json`
-- `runs/2026-07-28-independent-random-w-skorohod-diagonal-crossmode-boundary/result.json`
-- `runs/2026-07-28-integrated-random-w-skorohod-diagonal-crossmode-boundary/result.json`
-- `../../RESULTS-LEDGER.md#r-110`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-random-w-hs-only-score-transfer`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-universal-nonlinear-tangent-square-first-normalizer`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-cross-resonance-pointwise-baseline-payment`
-- `../../explorations/log.jsonl` (`EXP-000298`--`EXP-000304`)
-- R-063 and R-104--R-109 remain pinned by the R-110 authority chain.
+- `classii_scalar_k2k_projective_compact_core_boundary_manifest.json`
+- `notes/classii-scalar-k2k-degenerate-face-projective-compact-core-boundary-260728-v1.0.tex.txt`
+- `notes/classii-scalar-k2k-degenerate-face-projective-compact-core-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_scalar_k2k_projective_compact_core_boundary.py`
+- `../../codes/foundations/a13_classii_scalar_k2k_projective_compact_core_boundary_independent.py`
+- `../../codes/foundations/a13_classii_scalar_k2k_projective_compact_core_boundary_verify.py`
+- `runs/2026-07-28-primary-scalar-k2k-projective-compact-core-boundary/result.json`
+- `runs/2026-07-28-independent-scalar-k2k-projective-compact-core-boundary/result.json`
+- `runs/2026-07-28-integrated-scalar-k2k-projective-compact-core-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-111`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-k2k-conditional-scalar-tensorization`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-k2k-tilted-variance-monotonicity`
+- `../../explorations/log.jsonl` (`EXP-000305`--`EXP-000312`)
+- R-063, R-087, R-101, R-103--R-105, and R-108--R-110 remain hash-pinned.
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -2435,6 +2458,19 @@ pointwise payment to a summable production owner, or R-110 to an adapted
 complete-cluster, `OVERLAP_src`, Nelson, removal, measure, Sector-A, or higher-
 tier theorem.
 
+The R-111 continuation is additionally falsified by failure of the exact
+scale quotient or radial `I_0` normal form; either all-`q` degenerate-face
+tilt/Bennett/floor proof; the closed-form face fixture; the positive
+projective limiting gap, positive first inverse-amplitude correction, or its
+fixed-shape dominated remainder; the exact phase minimum, active cubic,
+high-`q` cutoff, sharp Bessel comparison, tail square, or erfc enclosure; any
+of the three registered method no-gos or tilted-moment fixture; any R-111
+source, note, PDF, manifest, run, registry, exploration, assertion count, or
+public-surface pin including `EXP-000305--EXP-000312`; or any promotion of the
+face theorem to the mixed interior, the pointwise projective expansion to a
+uniform chart theorem, or R-111 to a full A1 cluster, one-use aggregation,
+`OVERLAP_src`, Nelson, removal, measure, Sector-A, or higher-tier theorem.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2822,6 +2858,17 @@ proves no bare all-`q` scalar-model normalizer, adapted production-cluster
 identification, uniform complete-cluster lower bound, `OVERLAP_src`, Nelson
 estimate, cutoff/floor removal, interacting measure, Sector-A closure, or
 T5--T7 promotion. Tier stays T4.
+
+R-111 proves the bare scalar `k:2k` square-first inequality only on the two
+degenerate covariance faces. Its projective limit and first correction are
+pointwise at fixed projective shape; the exact floor and tails reduce but do
+not certify the genuinely mixed compact interior. R-103 REG and R-087 fixed-
+cutoff CORE were already closed in their declared scopes, and the old R-085
+Cartan/rational formulas are not reopened. R-111 proves no uniform projective
+or local/face-chart patch, full A1 embedding, adapted production cluster,
+one-use source/sextic aggregation, `OVERLAP_src`, Nelson estimate, cutoff/
+floor removal, interacting measure, Sector-A closure, or T5--T7 promotion.
+Tier stays T4.
 
 ## History
 
@@ -3483,3 +3530,16 @@ T5--T7 promotion. Tier stays T4.
   No full A1 embedding of the scalar model, adapted production-cluster bound,
   `OVERLAP_src`, Nelson, removals, interacting-measure construction, or
   Sector A closure follows; tier stays T4.
+- 2026-07-28: Registered R-111. The stationary scalar `k:2k` square-first
+  inequality is proved for every `q` on both degenerate covariance faces.
+  The mixed face now has an exact radial normalizer, positive fixed-shape
+  projective limit and first correction, an exact high-`q` algebraic cutoff,
+  sharp Bessel/tail majorants, and three registered method no-gos. Uniform
+  projective/local/face patching and compact-interior certification remain
+  open. `EXP-000305--EXP-000312` preserve all route decisions. Primary
+  `46/46`, non-importing independent `35/35`, integrated `152/152`, and
+  aggregate `233/233` checks are manifest-pinned. The final eleven-page PDF
+  passes form, zero-overfull, extraction, and all-page Poppler visual QA. REG
+  and fixed-cutoff CORE retain their prior owners; full A1, one-use
+  aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and
+  Sector A remain open; tier stays T4.
