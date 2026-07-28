@@ -1,0 +1,695 @@
+% =============================================================================
+% Title: Square-first pair normalizer, signed score transfer, and filtration boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY; NELSON AND SECTOR A OPEN
+% Result: A13-CLASSII-SQUARE-FIRST-PAIR-SCORE-TRANSFER-FILTRATION-BOUNDARY
+% Ledger: R-109
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\dd}{\,\mathrm d}
+
+\section{Purpose and scope}
+
+R-108 reduced the active A13 theorem to a cutoff-, chart-, control-, and
+subdivision-uniform signed complete-cluster lower bound, or to a legal
+square-before-average conditional normalizer which implies it.  On the
+smallest contraction-closed Fourier pair, R-108 established only a small-
+amplitude expansion and one finite viability check.  The present package
+turns that viability check into an all-amplitude theorem and then audits
+exactly which parts survive same-root feedback.
+
+The result has six parts.
+\begin{enumerate}
+\item A conditional one-sided Bennett lemma converts a centered lower floor
+      and a variance-to-floor ratio into a global quadratic log-Laplace
+      cost.  No smallness assumption remains.
+\item The complete one-pair cluster $\{0,+2,-2\}$ satisfies that lemma for
+      every predictable scale, every nonnegative weight, and every $q\ge0$.
+      Its exact cost is bounded by one quarter of the conditional expectation
+      of the squared realized whole-cluster covariance.  Legal fresh pairs
+      therefore iterate to a supermartingale.
+\item The R-108 target schema is repaired at the filtration level.  A
+      covariance revealed by the current root cannot appear raw on the
+      right of an $\mathcal F_{j-1}$ conditional normalizer.  The legal cost
+      is its conditional expectation, or a proved predictable envelope.
+\item The pure quartic pair has a selector-independent pathwise floor whose
+      production diagonal sum is cutoff-uniform.  The complete pair's
+      baseline floor nevertheless diverges; its determinant conversion is
+      indispensable, and physical cross-mode resonances prevent pairwise
+      tensorization.
+\item A complete signed second jet with one past-measurable covariance
+      operator admits exact Gaussian score transfer and a source/sextic
+      form bound.  This proves uniform control of the signed oscillatory
+      companion left open by R-108, but only for that fixed-operator owner.
+\item Gaussian score transfer is expectation-only.  An exact oscillatory
+      family has a derivative-representative log-Laplace cost growing
+      linearly while the raw Wick coordinate tends to zero exponentially in
+      the relevant Orlicz sense.  Thus the derivative representative may
+      not be substituted inside a conditional exponential normalizer.
+\end{enumerate}
+
+These are genuine analytic advances and one target correction.  They do not
+identify the full adapted production forest with one predictable fixed-
+operator second jet, control cross-mode same-root feedback, prove the uniform
+complete-cluster bound, establish $\mathrm{OVERLAP}_{\rm src}$ or Nelson,
+remove any cutoff or floor, construct an interacting measure, close Sector A,
+or change the tier from T4.
+
+\section{A conditional one-sided normalizer lemma}
+
+% evidence-anchor: theorem-2.1-conditional-floor-variance-normalizer
+\subsection*{Theorem 2.1 (conditional floor--variance normalizer)}
+
+Let $\mathcal F$ be a sigma algebra.  Suppose $Z$ is real, $\beta\ge0$ is
+$\mathcal F$-measurable, and conditionally on $\mathcal F$,
+\[
+ \E[Z\mid\mathcal F]=0,\qquad Z\le\beta,\qquad
+ \E[Z^2\mid\mathcal F]\le8\beta^2.                 \tag{2.1}
+\]
+Then for every $q\ge0$,
+\[
+ \boxed{
+ \log\E[e^{qZ}\mid\mathcal F]\le5q^2\beta^2.}     \tag{2.2}
+\]
+
+\emph{Proof.}
+The event $\{\beta=0\}$ is immediate.  Else set
+$X=Z/\beta\le1$ and $a=q\beta$.  For every $x\le1$,
+\[
+ e^{ax}\le1+ax+(e^a-1-a)x^2.                        \tag{2.3}
+\]
+For $0\le x\le1$, (2.3) follows term by term from the exponential series.
+For $x<0$, use $e^{ax}\le1+ax+a^2x^2/2$ and
+$a^2/2\le e^a-1-a$.  Taking conditional expectations gives
+\[
+ \log\E e^{aX}\le8(e^a-1-a).                        \tag{2.4}
+\]
+If $0\le a\le1/5$, then $n!\ge2\,3^{n-2}$ for $n\ge2$, so
+\[
+ e^a-1-a\le {a^2\over2(1-a/3)},
+ \qquad
+ 8(e^a-1-a)\le {30\over7}a^2<5a^2.                 \tag{2.5}
+\]
+If $a\ge1/5$, the pointwise bound $X\le1$ gives
+\[
+ \log\E e^{aX}\le a\le5a^2.                       \tag{2.6}
+\]
+The two intervals cover $[0,\infty)$. \hfill$\square$
+
+The constants are deliberately compatible with the realized covariance of
+the production one-pair fixture.  The infinitesimal coefficient in that
+fixture is $4$, so a universal coefficient below $4$ is impossible.  The
+coefficient $5$ has one unit, or twenty percent, of leading room.
+
+\section{The all-amplitude complete one-pair theorem}
+
+Let $\mathcal F_{j-1}$ be the strict past.  Assume $\lambda,\sigma\ge0$ are
+$\mathcal F_{j-1}$-measurable and, conditionally on the past,
+$\xi,\eta$ are independent standard Gaussians.  Put
+\[
+ z={\sigma\over2}(\xi-i\eta),\qquad
+ R=|z|^2={\sigma^2\over2}T,\qquad T\sim\operatorname{Exp}(1), \tag{3.1}
+\]
+and retain the complete output cluster $\{0,+2,-2\}$.  Its diagonal packet is
+\[
+ P_{\lambda,\sigma}
+ =\lambda(R^2-\sigma^2R)
+ ={\lambda\sigma^4\over4}(T^2-2T).                  \tag{3.2}
+\]
+
+% evidence-anchor: theorem-3.1-all-amplitude-one-pair-square-first
+\subsection*{Theorem 3.1 (all-amplitude square-before-average normalizer)}
+
+Let $S_z^\lambda$ be the R-107/R-108 realized independent-copy covariance of
+the whole cluster after the current is scaled by $\sqrt\lambda$.  Then for
+every $q\ge0$,
+\[
+ \boxed{
+ \log\E[e^{-qP_{\lambda,\sigma}}\mid\mathcal F_{j-1}]
+ \le {q^2\over4}
+ \E[\|S_z^\lambda\|_{\mathfrak S_2}^2
+       \mid\mathcal F_{j-1}].}                       \tag{3.3}
+\]
+
+\emph{Proof.}
+Set
+\[
+ \beta={\lambda\sigma^4\over4},\qquad
+ U=2T-T^2=1-(T-1)^2.                                 \tag{3.4}
+\]
+Then $-P=\beta U$, $U\le1$, and the exact exponential moments
+$\E T^n=n!$ give
+\[
+ \E U=0,\qquad \E U^2=8.                            \tag{3.5}
+\]
+Theorem 2.1 yields
+\[
+ \log\E e^{-qP}\le5q^2\beta^2.                     \tag{3.6}
+\]
+The two nonzero eigenvalues of $S_z^\lambda$ are
+\[
+ {3\over2}\lambda\sigma^2R,\qquad
+ {1\over2}\lambda\sigma^2R.                        \tag{3.7}
+\]
+Since $\E R^2=\sigma^4/2$,
+\[
+ \E\|S_z^\lambda\|_{\mathfrak S_2}^2
+ ={5\over4}\lambda^2\sigma^8,                      \tag{3.8}
+\]
+and the right side of (3.3) is exactly
+\[
+ {5q^2\lambda^2\sigma^8\over16}=5q^2\beta^2.
+\]
+\hfill$\square$
+
+This theorem upgrades the R-108 small-$\sigma$ expansion and
+$(q,\sigma)=(1,1/2)$ check to every amplitude.  Indeed
+\[
+ \log\E e^{-qP}=4a^2-40a^3+O(a^4),
+ \qquad a={q\lambda\sigma^4\over4},                 \tag{3.9}
+\]
+while the square-first cost is $5a^2$.
+
+% evidence-anchor: corollary-3.2-fresh-pair-supermartingale
+\subsection*{Corollary 3.2 (legal sequential fresh-pair product)}
+
+Suppose $P_j$ has the form (3.2) conditionally on $\mathcal F_{j-1}$ and
+define the predictable cost
+\[
+ C_j={q^2\over4}
+ \E[\|S_j^{\rm real}\|_{\mathfrak S_2}^2
+       \mid\mathcal F_{j-1}].                        \tag{3.10}
+\]
+Then
+\[
+ M_n=\exp\bigl(-q\sum_{j\le n}P_j-\sum_{j\le n}C_j\bigr) \tag{3.11}
+\]
+is a nonnegative supermartingale.  This is the legal triangular iteration
+which the global frozen future-row determinant of R-107 cannot replace.
+
+The hypotheses are exact: the pair is fresh; its scale and nonnegative weight
+are strict-past measurable; every contraction-connected output remains in
+one cluster; and no same-root selector, cross-mode resonance, or rational
+coefficient variation is hidden in $P_j$.  No injectivity of the rectangular
+root-to-output row is required.  The identity operator in the frozen
+determinant makes singular covariance harmless.
+
+\section{Filtration repair of the R-108 target schema}
+
+% evidence-anchor: audit-4.1-realized-covariance-filtration
+\subsection*{Audit 4.1 (square first, then condition)}
+
+R-108 (8.3) is a target schema, not an asserted determinant.  Its right-hand
+cost must be measurable at the conditioning step.  If
+$S_{j,\mathcal C}$ is the covariance of a strict-past affine row, then
+$\|S_{j,\mathcal C}\|_{\mathfrak S_2}^2$ is already
+$\mathcal F_{j-1}$-measurable and the displayed R-108 form is legal.
+
+If instead $S_{j,\mathcal C}^{\rm real}$ depends on the root being integrated,
+the legal square-before-average target is
+\[
+\begin{aligned}
+ &\log\E\left[
+ e^{-q(\mathfrak P_{j,\mathcal C}+\text{payments})}
+ \mid\mathcal F_{j-1}\right]\\
+ &\qquad\le {q^2\over4}
+ \E[\|S_{j,\mathcal C}^{\rm real}\|_{\mathfrak S_2}^2
+       \mid\mathcal F_{j-1}]
+ +r_{j,\mathcal C}^{\rm pred},
+\end{aligned}                                        \tag{4.1}
+\]
+where $r^{\rm pred}\ge0$ is $\mathcal F_{j-1}$-measurable, or the conditional
+cost is replaced by an explicitly proved predictable envelope.  Equation
+(4.1) keeps the square inside and the averaging after, as R-108 Proposition
+6.1 requires.  It remains a target for a general production cluster.
+
+There is a subtle but essential two-stage boundary.  After revealing the
+root, an auxiliary independent copy gives the frozen R-107 determinant
+\[
+ \log\E_w e^{-q(\|A_zw\|^2-\Tr S_z)/2}
+ \le {q^2\over4}\|S_z\|_{\mathfrak S_2}^2.          \tag{4.2}
+\]
+Returning to $\mathcal F_{j-1}$ generally produces
+\[
+ \log\E\left[
+  \exp\left\{{q^2\over4}\|S_z\|_{\mathfrak S_2}^2+r_z\right\}
+  \mid\mathcal F_{j-1}\right],                      \tag{4.3}
+\]
+not the cheaper conditional mean in (4.1).  Moreover, (4.2) normalizes the
+auxiliary decoupled packet, not the original diagonal current.  As
+$R\downarrow0$, the original negative exponent is linear in $R$, whereas the
+determinant cost in (4.2) is quadratic in $R$; no pointwise comparison exists.
+Theorem 3.1 is the separate diagonal-cluster lemma which justifies (4.1) in
+the one-pair case.
+
+This audit does not withdraw any exact R-108 endpoint, covariance, quotient,
+or order-of-operations result.  It makes the target's admissible
+measurability interpretation explicit.
+
+\section{Selector-independent quartic floor and its exact limitation}
+
+% evidence-anchor: proposition-5.1-arbitrary-selector-quartic-floor
+\subsection*{Proposition 5.1 (arbitrary same-root selector floor)}
+
+For every $R\ge0$, $\sigma\ge0$, and nonnegative weight $\lambda$, without
+any Gaussianity, independence, differentiability, or filtration assumption,
+\[
+ \boxed{
+ \lambda(R^2-\sigma^2R)
+ =\lambda\left(R-{\sigma^2\over2}\right)^2
+  -{\lambda\sigma^4\over4}
+ \ge-{\lambda\sigma^4\over4}.}                      \tag{5.1}
+\]
+Thus any sequential family satisfies
+\[
+ \sum_{j\le J}\lambda_jP_j
+ \ge-{1\over4}\sum_{j\le J}\lambda_j\sigma_j^4.  \tag{5.2}
+\]
+If the right side is deterministically bounded, (5.2) gives a uniform direct
+and exponential bound.  If it is random, only
+$\log\E\exp(q\sum\lambda_j\sigma_j^4/4)$ is justified; its expectation is
+not enough.
+
+For the artificial R-105 diagonal pair, put
+\[
+ R={\sigma_k^2\over4}S_h,\qquad
+ \mu_k={\beta_0k^2\sigma_k^4\over16}.                \tag{5.3}
+\]
+Then
+\[
+ \mu_k(S_h^2-4S_h)=\beta_0k^2(R^2-\sigma_k^2R)       \tag{5.4}
+\]
+has floor $-4\mu_k$.  Since
+$\sigma_k^2\lesssim\langle k\rangle^{-4}$ in three dimensions,
+\[
+ \sum_k4\mu_k
+ \lesssim\sum_k\langle k\rangle^{-6}<\infty.       \tag{5.5}
+\]
+The shell decay is $2^{-3j}$.  Hence the pure centered quartic diagonal
+submodel is cutoff-uniform even for an arbitrary same-root selector.
+
+% evidence-anchor: proposition-5.2-full-pair-floor-boundary
+\subsection*{Proposition 5.2 (the full direct pair floor still diverges)}
+
+The complete artificial pair of R-105 is
+\[
+ V(S)=\alpha(S-2)+\mu(S^2-4S),\qquad S\ge0.          \tag{5.6}
+\]
+For $\mu>0$ its exact minimum is
+\[
+ \inf_{S\ge0}V(S)=
+ \begin{cases}
+  -2\alpha, & \alpha\ge4\mu,\\[2mm]
+  -4\mu-\alpha^2/(4\mu), & 0\le\alpha<4\mu.
+ \end{cases}                                         \tag{5.7}
+\]
+For $\mu=0$ the first line remains.  In R-105,
+\[
+ {\alpha_k\over\mu_k}={4A^2\over\sigma_k^2}\longrightarrow\infty
+ \quad(A\ne0),                                      \tag{5.8}
+\]
+so the high modes are forced onto the $-2\alpha_k$ branch, and
+\[
+ \sum_k\alpha_k\asymp
+ A^2\sum_k\langle k\rangle^{-2}=\infty.             \tag{5.9}
+\]
+The determinant changes this nonsummable linear loss to
+$t-\log(1+t)=O(t^2)$, whose shell cost is $2^{-j}$ and is summable.
+
+The physical action cannot be closed by multiplying these pair estimates.
+R-105 (8.10)--(8.11) gives a sign-indefinite $k{:}2k$ resonance, while R-107
+requires contraction-connected outputs, covariance blocks, mixed baseline,
+trace, and forest owners to remain in one atom.  Equations (5.5) and (5.7)
+are therefore a positive diagonal submodel theorem and an exact limitation,
+not a production cluster decomposition.
+
+\section{Signed second-jet score transfer}
+
+Let $\mathcal F_{\rm past}$ be fixed.  Conditionally on it, let
+$\xi\sim N(0,\Id_d)$ be fresh, let $W=W^*\succeq0$ be finite-rank and
+$\mathcal F_{\rm past}$-measurable, and let
+$h=h(\mathcal F_{\rm past},\xi)$ be a twice differentiable cylindrical map
+into a real Hilbert space.  Assume the displayed terms are integrable and
+define
+\[
+\begin{aligned}
+ \mathfrak F_W(h)=\E_\xi\big[&
+ \|D_\xi h\,W^{1/2}\|_{\mathfrak S_2}^2\\
+ &+\langle h,\Tr_{\R^d}(W D_\xi^2h)\rangle
+ \mid\mathcal F_{\rm past}\big].
+\end{aligned}                                        \tag{6.1}
+\]
+
+% evidence-anchor: theorem-6.1-complete-second-jet-score-transfer
+\subsection*{Theorem 6.1 (exact score transfer and form bound)}
+
+One has the exact identity
+\[
+ \boxed{
+ \mathfrak F_W(h)
+ ={1\over2}\E_\xi\left[
+ (\xi^TW\xi-\Tr W)\|h\|^2
+ \mid\mathcal F_{\rm past}\right].}                \tag{6.2}
+\]
+Writing
+\[
+ X=\E_\xi[\|h\|^2\mid\mathcal F_{\rm past}],
+ \qquad
+ Y=\E_\xi[\|h\|^6\mid\mathcal F_{\rm past}],     \tag{6.3}
+\]
+gives
+\[
+ \boxed{
+ |\mathfrak F_W(h)|
+ \le {\|W\|_{\mathfrak S_2}\over\sqrt2}
+       X^{1/4}Y^{1/4}.}                              \tag{6.4}
+\]
+Consequently, for every $q,\eta,\zeta>0$,
+\[
+ \boxed{
+ -{q\over2}\mathfrak F_W(h)
+ \ge-\eta X-\zeta Y
+ -{q^2\|W\|_{\mathfrak S_2}^2
+    \over64\sqrt{\eta\zeta}}.}                    \tag{6.5}
+\]
+
+\emph{Proof.}
+The Hilbert chain rule gives
+\[
+ {1\over2}D^2\|h\|^2
+ =(Dh)^*Dh+\langle h,D^2h\rangle.                   \tag{6.6}
+\]
+Contract (6.6) with $W$ and apply Gaussian integration by parts twice.  This
+proves (6.2).  Also
+\[
+ \E_\xi(\xi^TW\xi-\Tr W)^2=2\|W\|_{\mathfrak S_2}^2. \tag{6.7}
+\]
+Cauchy--Schwarz and interpolation
+$\E\|h\|^4\le X^{1/2}Y^{1/2}$ give (6.4).  Finally
+\[
+ A x^{1/4}y^{1/4}
+ \le\eta x+\zeta y+{A^2\over8\sqrt{\eta\zeta}}     \tag{6.8}
+\]
+is sharp at
+\[
+ x={A^2\over16\eta^{3/2}\zeta^{1/2}},
+ \qquad
+ y={A^2\over16\eta^{1/2}\zeta^{3/2}}.              \tag{6.9}
+\]
+Use $A=q\|W\|_{\mathfrak S_2}/(2\sqrt2)$. \hfill$\square$
+
+At $q=10/9$, the coefficient $q^2/64$ in (6.5) is exactly $25/1296$.
+For an R-063 derivative-root covariance shell,
+\[
+ W_{i,j}(k)=\mathbf1_{\{|k|\sim2^j\}}
+ k_i^2r_\Lambda(k)^2\widehat C(k),                  \tag{6.10}
+\]
+the A1 bound $\|\widehat C(k)\|_{\rm op}\lesssim
+\langle k\rangle^{-4}$ gives
+\[
+ \|W_{i,j}\|_{\mathfrak S_2}^2
+ \lesssim\sum_{|k|\sim2^j}\langle k\rangle^{-4}
+ \lesssim2^{-j}.                                    \tag{6.11}
+\]
+Thus a genuinely fixed, past-measurable $W$ has cutoff-uniform HS cost after
+complete aggregation.
+
+The missing production identification is load-bearing.  R-063 proves the
+deterministic-shift reconstruction of the $P_3/P_1/P_4/P_2/\Sigma Q/P_0$
+forest.  R-107 and R-108 do not prove for arbitrary same-root future feedback
+that the whole contraction-closed trace defect equals one
+$\mathfrak F_{W_{\mathcal C}}(h_{\mathcal C})$ with $W_{\mathcal C}$ past
+measurable, nor that its $X,Y$ use the canonical source energy and terminal
+sextic without visit multiplicity.  If $W=W(\xi)$, integration by parts also
+differentiates $W$ and creates the unmapped $DW,D^2W$ forest terms.
+
+\subsection*{Corollary 6.2 (the R-108 oscillatory signed owner closes)}
+
+For $d=1$, $W=1$, and $h_M(G)=a\sin(MG)$,
+\[
+ \mathfrak F_1(h_M)
+ =\E\{(h_M')^2+h_Mh_M''\}
+ =a^2M^2e^{-2M^2}.                                  \tag{6.12}
+\]
+Thus Theorem 6.1 uniformly controls the complete signed second-jet owner, not
+merely its particular asymptotic cancellation.  It does not control the
+positive tangent square, its rank-one HS square, the mixed current, or the
+full complete packet, so the R-108 absolute-ledger no-go remains intact.
+
+\section{Score transfer may not be exponentiated}
+
+% evidence-anchor: proposition-7.1-stein-second-jet-exponentiation-nogo
+\subsection*{Proposition 7.1 (expectation cancellation is not exponential cancellation)}
+
+Let $G\sim N(0,1)$ and scale
+\[
+ h_M(G)=M^{-1/2}\sin(MG).                            \tag{7.1}
+\]
+The derivative representative is
+\[
+ K_M=(h_M')^2+h_Mh_M''=M\cos(2MG),
+ \qquad \E K_M=Me^{-2M^2}.                          \tag{7.2}
+\]
+For every fixed $\theta\ne0$, the Fourier--Bessel expansion gives
+\[
+ \E e^{\theta M\cos(2MG)}
+ =I_0(\theta M)+2\sum_{n\ge1}I_n(\theta M)e^{-2n^2M^2}. \tag{7.3}
+\]
+Therefore
+\[
+ \boxed{
+ \log\E e^{\theta(K_M-\E K_M)}
+ =|\theta|M-{1\over2}\log(2\pi|\theta|M)+o(1).}    \tag{7.4}
+\]
+The centered derivative-representative log-Laplace cost diverges linearly.
+
+The raw Wick coordinate on the other side of the Stein identity is
+\[
+ W_M=h_M(G)^2(G^2-1),
+ \qquad \E W_M=2\E K_M.                             \tag{7.5}
+\]
+But
+\[
+ |W_M|\le {G^2+1\over M},                            \tag{7.6}
+\]
+and for $M>2|\theta|$,
+\[
+ \boxed{
+ \log\E e^{|\theta||W_M|}
+ \le {|\theta|\over M}
+ -{1\over2}\log\left(1-{2|\theta|\over M}\right)
+ \longrightarrow0.}                                 \tag{7.7}
+\]
+
+Equations (7.4)--(7.7) prove that the expectation identity (6.2) cannot be
+used as a pathwise substitution inside a conditional exponential estimate.
+A determinant or log-Laplace proof must remain in the raw Wick and complete-
+endpoint coordinate until after the exponential step, unless a separate
+pathwise full-cluster identity is proved.  This is not a counterexample to
+the direct expectation bound (6.5), Theorem 3.1, the raw complete packet, or
+the Nelson objective.
+
+\section{Why the remaining mean/covariance debt is not closed}
+
+R-108 (4.6) is already sharp enough to exclude a PSD-only completion.  Put
+$B_0=B_1=B\succeq0$ and $V=\Gamma$.  The $q=10/9$ optimized mean debt becomes
+\[
+ -{5\over9}\mu^T B^2(B+{9\over10}\Id)^{-1}\mu.    \tag{8.1}
+\]
+On a $B$-eigenvector of eigenvalue $\lambda$, its coefficient is
+\[
+ -{5\over9}{\lambda^2\over\lambda+9/10}
+ \sim-{5\over9}\lambda.                             \tag{8.2}
+\]
+Thus common deterministic heat and PSD alone provide no fixed source
+coefficient.  The covariance debt also has no sign because positivity gives
+neither $B_1\succeq B_0$ nor $V\succeq\Gamma$.
+
+Gaussian Poincare has the wrong orientation:
+\[
+ \Cov(Y)\preceq\E[DY(DY)^*],                         \tag{8.3}
+\]
+whereas R-108 needs a lower estimate on $\Cov(Y)-T$.  Theorem 6.1 repairs one
+signed fixed-$W$ second jet only after the two Hessian companions are summed.
+It does not couple (8.1), the random covariance defect, mixed current,
+rational recovery, heat, visits, and the full R-063 forest.
+
+The exact remaining production object is therefore narrower than R-108 but
+still nontrivial: prove a diagonal-to-decoupled or direct signed estimate for
+one contraction-closed same-root cluster in raw endpoint coordinates, with
+the conditional covariance cost predictable, every random-$W$ derivative
+forest retained, and canonical source/sextic domination without multiplicity.
+
+\section{Proof-route evidence map}
+
+\begin{center}
+\begin{tabular}{p{0.28\textwidth}p{0.18\textwidth}p{0.43\textwidth}}
+\hline
+Route & Verdict & Reusable reason \\
+\hline
+One-pair square-first normalizer & proved & Conditional Bennett plus the
+exact whole-cluster covariance gives the cost for all amplitudes.\\
+Sequential fresh-pair product & proved & The conditional costs are
+predictable, so the normalized exponentials form a supermartingale.\\
+Raw realized cost at a pre-root step & repaired & Use the conditional
+expectation of the squared realized cost or a predictable envelope.\\
+Auxiliary-copy determinant for the diagonal packet & failed & It normalizes
+a decoupled packet and produces an exponential of the random cost one level
+earlier.\\
+Arbitrary-selector pure quartic floor & proved in the diagonal submodel &
+The floor mass is $O(\langle k\rangle^{-6})$ per mode.\\
+Full pair direct floor & failed & The high-frequency baseline is forced onto
+the nonsummable $-2\alpha_k$ branch.\\
+Fixed-$W$ signed second jet & proved & Two Gaussian integrations by parts and
+one exact Young optimization give (6.5).\\
+Stein derivative inside a normalizer & failed & Its log-Laplace cost is
+linear in $M$, while the raw Wick coordinate tends to zero.\\
+PSD, common heat, or Poincare alone & failed as a closure & The mean debt is
+negative and linearly unbounded; Poincare has the wrong sign.\\
+Full production complete cluster & open & Cross-mode, same-root random-$W$,
+mixed, covariance, rational, visit, and forest owners remain coupled.\\
+\hline
+\end{tabular}
+\end{center}
+
+These are researcher-reusable route decisions, not private search traces.
+Their exact questions, finite checks, boundaries, and revisit conditions are
+also recorded in the append-only exploration ledger.
+
+\section{Devil's-advocate audit}
+
+\begin{enumerate}
+\item \textbf{Objection: R-108 already proved the one-pair determinant.}
+
+\textbf{UPHELD AS A SCOPE CORRECTION.}  R-108 proved the leading expansion,
+one finite value, and viability of the square-first coefficient.  Theorem 3.1
+is the first global-in-amplitude inequality for the actual diagonal packet.
+
+\item \textbf{Objection: the raw realized covariance can remain on the right
+because it is eventually averaged.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  A pre-root conditional logarithm is
+$\mathcal F_{j-1}$-measurable.  A root-dependent raw cost is not a legal
+iterable normalizer.  Equation (4.1) is the corrected target.
+
+\item \textbf{Objection: reveal the root, use an independent copy, and then
+average the determinant cost.}
+
+\textbf{UPHELD AGAINST THE SHORTCUT.}  The outer operation is the logarithm
+of an exponential moment of the random cost, as in (4.3), and the auxiliary
+packet is not the original diagonal packet.
+
+\item \textbf{Objection: the selector-independent quartic floor closes the
+physical production action.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  The full pair baseline has the divergent
+$-2\alpha_k$ branch, and physical $k{:}2k$ resonances prohibit multiplication
+of isolated pair floors.
+
+\item \textbf{Objection: Theorem 6.1 overturns the R-108 future-feedback
+Carleson no-go.}
+
+\textbf{DISMISSED.}  The theorem controls only the signed second-jet sum with
+one predictable $W$.  R-108 refutes the separated positive tangent square
+and its HS square, which remain unbounded in that architecture.
+
+\item \textbf{Objection: once score transfer is exact, the Wick forest can be
+replaced before the exponential estimate.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Proposition 7.1 gives a linear versus
+vanishing log-Laplace separation.  Score transfer is expectation-only.
+
+\item \textbf{Objection: PSD and Gaussian Poincare finish the remaining
+covariance debt.}
+
+\textbf{UPHELD AGAINST THE CLAIM.}  Equations (8.1)--(8.3) give the exact
+negative mean coefficient and the wrong Poincare orientation.
+\end{enumerate}
+
+\section{Authorities and scope firewall}
+
+The load-bearing authorities are R-063 (balanced forest reconstruction),
+R-077 (fresh-root complete-packet cancellation), R-082 (coherent output and
+covariance boundary), R-104 (temporally faithful source charts), R-105
+(artificial one-pair determinant and cross-mode boundary), R-107 (fresh-root
+whole-output determinant and same-root residual), and R-108 (complete-cluster
+normal form and covariance-order audit).
+
+Proved here are Theorem 2.1, the all-amplitude complete one-pair normalizer,
+its fresh-pair supermartingale, the filtration audit, the arbitrary-selector
+pure quartic floor and exact full-pair floor split, the fixed-predictable-$W$
+score-transfer theorem, its oscillatory corollary, and the exact
+Stein-exponentiation no-go.
+
+Not proved here are a tensorization across physical Fourier pairs, the
+diagonal-to-decoupled theorem for a general contraction-connected cluster,
+the adapted random-$W$ R-063 forest identification, a uniform complete
+source-action lower bound, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, an
+interacting measure, Sector-A closure, or a T5--T7 promotion.
+
+\section{Executable verification}
+
+The primary certificate derives the exponential and Gaussian moments,
+Bennett split, covariance eigenvalues, floor minima, score-transfer constants,
+shell power counts, oscillatory asymptotics, CM debt, and filtration
+dependencies.  The independent certificate imports neither the primary nor
+symbolic/scientific array libraries; it repeats the exact arithmetic with
+standard-library fractions and finite exact-log-mgf checks.  The integrated
+verifier pins both outputs, all authorities, the note, PDF, manifest, audit
+and negative records, exploration decisions, public ledgers, and scope
+firewall.
+
+Run
+\begin{verbatim}
+E:\Dev\TECT.venv\Scripts\python.exe `
+codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_verify.py
+\end{verbatim}
+
+\section*{Result footer}
+
+\begingroup\small
+\begin{verbatim}
+Result ID: A13-CLASSII-SQUARE-FIRST-PAIR-SCORE-TRANSFER-FILTRATION-BOUNDARY
+Claim:     A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+Ledger ID: R-109
+Status:    T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND METHOD BOUNDARY;
+           NELSON AND SECTOR A OPEN
+Scope:     Finite cutoff, fixed positive floor; exact all-amplitude fresh-pair
+           normalizer, conditional filtration audit, diagonal selector floor,
+           and fixed-predictable-W signed second-jet score transfer.
+Precise statement: the complete one-pair cluster obeys the square-first
+           conditional cost for all q and amplitudes; the R-108 root-realized
+           cost must be conditionally averaged before use at the prior step;
+           one complete fixed-W second jet has a direct form bound; Stein
+           differentiation cannot be substituted inside a log-Laplace bound.
+Dependencies: R-063, R-077, R-082, R-104, R-105, R-107, R-108.
+Evidence grade: ANALYTIC/EXACT/EXECUTED; TWO NON-IMPORTING ROUTES.
+Reproduction command:
+           E:\Dev\TECT.venv\Scripts\python.exe `
+           codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_verify.py
+Expected output:
+           primary 39/39; independent 93/93; integrated count manifest-pinned;
+           aggregate count manifest-pinned; PASS.
+Negative/audit records:
+           AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION;
+           NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION.
+Falsification gate: failure of any Bennett, covariance-square, floor,
+           score-transfer, Young, shell, oscillatory, filtration, authority,
+           hash, PDF, ledger, count, or scope assertion.
+Tier before / after: T4 / T4; no promotion.
+No-overclaim statement:
+           the full adapted production cluster, OVERLAP_src, Nelson, removals,
+           measure, and Sector A remain open.
+Next required action: prove the raw complete same-root diagonal-to-decoupled
+           or direct signed cluster estimate with predictable square cost,
+           random-W derivative forest, cross-mode baseline/current, and one-
+           use source/sextic domination retained together.
+\end{verbatim}
+\endgroup

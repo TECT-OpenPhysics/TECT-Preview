@@ -290,7 +290,19 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   energy and one terminal sextic also fails, while the signed jet cancels.
   Square-before-average remains viable only on the one-pair fixture. The required uniform
   signed complete-cluster lower bound remains open, as do `OVERLAP_src`,
-  Nelson, removals, the interacting measure, and Sector A. R-080,
+  Nelson, removals, the interacting measure, and Sector A.
+  R-109 now proves the exact one-pair square-before-average normalizer at all
+  amplitudes and its legal fresh-pair supermartingale, repairs the R-108
+  realized-covariance filtration order, and proves a fixed-predictable-PSD
+  signed second-jet score-transfer form bound. The centered diagonal quartic
+  floor is uniform, but the full mixed-baseline floor diverges and physical
+  cross-mode resonances prohibit tensorization. Stein transfer is expectation-
+  only and cannot replace the raw Wick coordinate inside an exponential. The
+  remaining target is one adapted raw complete production cluster coupling
+  Cameron--Martin mean, realized covariance, trace, baseline, rational
+  recovery, all visits, and the random-W forest with source and one terminal
+  sextic paid once. `OVERLAP_src`, Nelson, removals, the interacting measure,
+  and Sector A remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -848,6 +860,16 @@ preserved in git/changelog rather than treated as current gates.
    on the one-pair fixture. R-108 rewrites the successor as a nonvacuous uniform
    square-before-average or direct signed complete-cluster bound. It does not
    prove that bound; Sector A remains open.
+   R-109 upgrades the one-pair square-before-average coordinate to an all-
+   amplitude conditional theorem and fresh-pair supermartingale, repairs the
+   strict-past covariance-cost placement, and closes the fixed-predictable-W
+   signed second-jet owner. It simultaneously records the divergent full-pair
+   direct floor and the exponential Stein-substitution no-go. Continue with
+   one raw adapted same-root diagonal-to-decoupled or direct signed cluster
+   estimate retaining cross-mode baseline/current, rational recovery, every
+   visit, the full random-W forest, and one-use source/sextic ownership.
+   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
+   remain open.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION](#audit-2026-07-28-a13-r108-realized-covariance-filtration) | R-108 realized-covariance square-first target schema | a current-root-dependent `||S_real||_HS^2` cannot appear raw as an `F_(j-1)` conditional-normalizer cost; its square must first be formed and then conditionally averaged, or replaced by a proved predictable envelope. An auxiliary-copy determinant instead creates an outer exponential moment of the random cost. R-108's exact identities and covariance-order verdict remain valid |
+| [NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION](#ng-2026-07-28-a13-stein-second-jet-exponentiation) | replace a raw R-063 Wick coordinate by its Gaussian-integration-by-parts derivative representative inside a conditional exponential normalizer | for `h_M=M^(-1/2)sin(MG)`, the centred derivative representative has log-Laplace asymptotic `|theta|M-(1/2)log(2pi|theta|M)+o(1)`, while the raw Wick coordinate has vanishing exponential scale. The exact score-transfer expectation bound remains valid |
 | [NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT](#ng-2026-07-28-a13-predictable-multirow-backward-resolvent) | substitute rowwise predictable future Gaussian maps into the jointly frozen global backward-resolvent determinant and treat the result as a density martingale | with `A1=1` and bounded `A2=1_{|xi1|>1}`, the candidate total mass is `erf(sqrt(19/18))+erfc(sqrt(29/38))=1.070433115292664...>1`; a bounded smooth `epsilon tanh(xi1)` row has the same strict small-amplitude defect. Jointly frozen multi-row and one-fresh-root past-measurable formulas remain exact |
 | [NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET](#ng-2026-07-28-a13-single-output-frequency-packet) | prove positivity or an independent signed estimate at each coherent output frequency after allocating the trace outputwise | for `X=a cos x+b sin x`, `J=X dX`, the half-weighted packets have expectations `-sigma^4/4` at output zero and `+sigma^4/8` at each of outputs `+/-2`; only the contraction-connected cluster `{0,+/-2}` cancels. This is not a complete-root or Nelson counterexample |
 | [NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION](#ng-2026-07-28-a13-independent-output-determinant-normalization) | normalize coherent output rows independently and multiply their Gaussian determinant estimates | for `m` repeated rank-one PSD rows the lost slack is `[m log(1+q lambda)-log(1+qm lambda)]/2`, whose value divided by `m` tends to `log(1+q lambda)/2>0`. Sequential Schur increments retain the exact whole-output determinant |
@@ -145,6 +147,64 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="audit-2026-07-28-a13-r108-realized-covariance-filtration"></a>
+### AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION -- a realized covariance square must be conditioned before pre-root iteration
+
+**Failure mode.** Read the target schema R-108 (8.3) as permitting a covariance
+depending on the root currently being integrated to remain raw on the
+right-hand side of an `F_(j-1)` conditional log-Laplace estimate. Such a cost
+is not measurable at the conditioning step and cannot be iterated as a
+predictable normalizer.
+
+**Evidence.** If `S_(j,C)` is already strict-past measurable, the displayed
+R-108 form is legal. If `S_(j,C)^real` depends on the current root, the legal
+square-before-average cost is
+`(q^2/4)E[||S_(j,C)^real||_HS^2|F_(j-1)]` plus a predictable nonnegative
+remainder, or an explicitly proved predictable envelope. Revealing the root
+and applying the frozen auxiliary-copy determinant gives a bound with random
+cost `(q^2/4)||S_z||_HS^2`; returning to `F_(j-1)` generally produces the
+logarithm of its exponential moment, not its conditional mean. That
+determinant also normalizes the auxiliary decoupled packet, not the original
+diagonal current. R-109 separately proves the required conditioned cost for
+the exact one-pair diagonal cluster.
+
+**Consequence.** This is a filtration clarification of a target, not a
+withdrawal of any R-108 endpoint, quotient, covariance identity, or average-
+before-square no-go. The general adapted production-cluster normalizer remains
+open and must use a predictable conditioned covariance cost with every
+remainder declared in advance.
+
+<a id="ng-2026-07-28-a13-stein-second-jet-exponentiation"></a>
+### NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION -- Stein expectation transfer does not survive exponentiation
+
+**Failure mode.** Replace the raw Wick coordinate of a complete R-063
+second-jet owner by its Gaussian-integration-by-parts derivative
+representative inside a conditional determinant or log-Laplace estimate,
+using their equality after expectation as if it were a pathwise identity.
+
+**Evidence.** For `G~N(0,1)` and
+`h_M(G)=M^(-1/2)sin(MG)`, the derivative representative is
+`K_M=(h_M')^2+h_Mh_M''=M cos(2MG)`, with
+`E K_M=M exp(-2M^2)`. The exact Fourier--Bessel expansion yields, for every
+fixed `theta!=0`,
+`log E exp(theta(K_M-EK_M))
+ =|theta|M-(1/2)log(2pi|theta|M)+o(1)`.
+The raw Wick coordinate is
+`W_M=h_M(G)^2(G^2-1)`, with `E W_M=2E K_M`, but
+`|W_M|<=(G^2+1)/M`; hence, for `M>2|theta|`,
+`log E exp(|theta||W_M|)
+ <=|theta|/M-(1/2)log(1-2|theta|/M)->0`.
+Thus equal expectations coexist with radically different exponential scales.
+
+**Consequence.** Gaussian score transfer is expectation-only. A conditional
+normalizer must remain in raw Wick and complete-endpoint coordinates until
+after the exponential estimate, unless a separate pathwise full-cluster
+identity is proved. This does not refute the fixed-predictable-`W` expectation
+bound, the R-109 one-pair square-first theorem, the raw complete packet, the
+direct signed source action, or Nelson. It is distinct from the earlier low-
+Hermite Stein-derivative no-go: the present fixture fails even when the
+expectation transfer itself is exact.
 
 <a id="ng-2026-07-28-a13-predictable-multirow-backward-resolvent"></a>
 ### NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT -- rowwise predictability does not freeze a backward Gaussian recursion

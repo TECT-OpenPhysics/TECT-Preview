@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-109 square-first pair normalizer and score-transfer filtration boundary] - 2026-07-28
+
+R-109 proves the all-amplitude exact one-pair square-before-average normalizer and legal fresh-pair supermartingale, repairs the R-108 realized-covariance filtration order, proves the selector-independent centered quartic floor and fixed-predictable-PSD signed second-jet score-transfer form bound, and records the divergent full-pair direct floor plus exponential Stein-substitution no-go. Primary 39/39, independent 93/93, integrated 106/106, and aggregate 238/238 are pinned. The adapted production cluster, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open at T4.
+
 ## [R-108 complete-cluster quotient and covariance-order frontier] - 2026-07-28
 
 R-108 separates the historical weighted R-085 contract from the direct unweighted R-088 target, proves the rational subdivision quotient and exact quotient-safe complete endpoint and cluster conditional identities, and records the exact q=10/9 budget. A bare average-before-square covariance ledger requires the explicit nonlinear/sextic repair; square-before-average remains viable only on the one-pair fixture. An absolute arbitrary-selector future-feedback HS/PSD ledger paid solely by source energy and one terminal sextic fails while the complete signed second jet cancels. The uniform complete-cluster lower bound, OVERLAP_src, Nelson, removals, interacting-measure construction, and Sector A remain open at T4.

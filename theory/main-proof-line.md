@@ -134,6 +134,21 @@ conditional cluster covariance before outer averaging. The cutoff/chart/
 control/subdivision-uniform signed complete-cluster lower bound,
 `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
 open.
+R-109 promotes the exact one-pair square-before-average fixture to an all-
+amplitude conditional normalizer and a legal fresh-pair supermartingale. It
+also repairs the filtration order: a same-root realized covariance must be
+squared and conditionally averaged onto the strict past, or replaced by a
+proved predictable envelope. The centered diagonal quartic has a uniform
+selector-independent floor, but the full mixed-baseline pair has a divergent
+linear floor and physical cross-mode resonances prevent tensorization. For a
+fixed past-measurable PSD matrix, the complete signed second jet transfers to
+a summable Gaussian score form; an oscillatory family proves that this Stein
+representative cannot replace the raw Wick coordinate inside an exponential.
+The remaining theorem is one adapted raw complete cluster coupling the
+Cameron--Martin mean, realized covariance, trace, baseline, rational recovery,
+all visits, and the random-W R-063 forest with source energy and one terminal
+sextic paid once. `OVERLAP_src`, Nelson, removals, the interacting measure,
+and Sector A remain open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the declared no-revisit one-shot class, reduces far feedback to

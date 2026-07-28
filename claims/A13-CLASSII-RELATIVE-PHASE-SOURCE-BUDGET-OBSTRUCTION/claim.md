@@ -907,6 +907,36 @@ the following structural results and proof-architecture boundaries hold.
     implies it. `EXP-000285--EXP-000290` preserve the successful and failed
     routes. `OVERLAP_src`, Nelson, removals, an interacting measure, and
     Sector A remain open; tier stays T4.
+52. `A13-CLASSII-SQUARE-FIRST-PAIR-SCORE-TRANSFER-FILTRATION-BOUNDARY` is
+    R-109. A conditional one-sided Bennett lemma proves that, conditionally
+    on the strict past, `E Z=0`, `Z<=beta`, and `E Z^2<=8 beta^2` imply
+    `log E exp(qZ)<=5q^2 beta^2` for every `q>=0`. Consequently the exact
+    contraction-closed one-pair packet
+    `P=(lambda sigma^4/4)(T^2-2T)`, `T~Exp(1)`, satisfies
+    `log E exp(-qP)<=(q^2/4)E||S_real||_HS^2` at every amplitude, and
+    genuinely fresh pairs iterate to a predictable-cost supermartingale.
+    The R-108 realized-covariance schema is repaired at the filtration level:
+    if `S_real` sees the current root, its squared norm must remain inside the
+    strict-past conditional expectation or be replaced by a proved
+    predictable envelope; a post-reveal auxiliary-copy determinant
+    normalizes a decoupled packet, not the diagonal current. Independently,
+    `lambda(R^2-sigma^2 R)>=-lambda sigma^4/4` for every same-root selector,
+    making the centered diagonal quartic floor cutoff-uniform, while the full
+    pair has a high-frequency `-2alpha` branch whose sum diverges like
+    `sum <k>^-2`; determinant cancellation and cross-mode assembly therefore
+    remain indispensable. For one fixed past-measurable PSD `W`, the complete
+    signed second jet transfers exactly to the centered Gaussian quadratic
+    score and obeys the source/sextic form cost
+    `q^2||W||_HS^2/(64 sqrt(eta zeta))`, with coefficient `25/1296` at
+    `q=10/9`; the production derivative-covariance shell squares are
+    summable. An oscillatory family proves that this Stein transfer is only
+    an expectation identity and cannot replace the raw Wick coordinate
+    inside an exponential estimate. `EXP-000291--EXP-000297` preserve the
+    route decisions. The adapted production-cluster identification,
+    cross-mode Cameron--Martin/covariance/trace/baseline/forest coupling,
+    no-multiplicity global payment, `OVERLAP_src`, Nelson, removals,
+    interacting-measure construction, and Sector A remain open; tier stays
+    T4.
 
 The broad one-use/Nelson theorem remains open. The balanced continuum result
 is a scoped T4 subproof and does not promote A13.
@@ -965,6 +995,7 @@ is a scoped T4 subproof and does not promote A13.
 | Gibbs endpoint likelihood / production input-merge boundary | Exact endpoint likelihood, dual KL and thermodynamic identities; pointwise likelihood no-go; exact radial Fierz coefficient; unbounded 1:2 raw input merge and leafwise sextic boundary; coherent output-frequency candidate coordinate | T4 analytic/exact/executed boundary; root-local coherent-output/source-action estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Coherent output cluster / predictable-baseline boundary | Exact likelihood-tilt entropy production, jointly frozen backward-resolvent martingale, one-fresh-root past-measurable whole-output determinant, rowwise-predictable global-normalizer no-go, output trace allocation and singleton-output no-go, sequential determinant boundary, direct predictable-baseline action, covariance-mass invariance, adapted second-jet and carrier-KL no-gos, and parked convexified-divergence route | T4 analytic/exact/executed boundary; adapted complete-cluster/matrix-Carleson estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Complete-cluster quotient / covariance-order / Carleson frontier | Historical-versus-direct Cartan contract audit; exact rational subdivision quotient; quotient-safe endpoint conditional identity and CM minimization; complete-cluster signed normal form; bare average-before-square deficit with explicit repair tradeoff; absolute arbitrary-selector future-feedback HS/PSD one-sextic no-go; exact `q=10/9` budget | T4 analytic/exact/executed synthesis and method boundary; square-before-average remains viable only on one fixture, while the uniform signed complete-cluster estimate, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
+| Square-first pair normalizer / signed score transfer / filtration boundary | Global conditional Bennett normalizer; all-amplitude one-pair square-before-average bound and fresh-pair supermartingale; realized-covariance filtration repair; selector-independent centered quartic floor and divergent full-pair baseline boundary; fixed-predictable-PSD signed score transfer; exponential Stein-substitution no-go | T4 analytic/exact/executed advance and method boundary; adapted cross-mode production cluster, `OVERLAP_src`, Nelson, removals, measure construction, and Sector A remain open |
 | Controlled-shell one-use | Future-control weighted innovation bracket, umbrella one-use, and Nelson synthesis | OPEN umbrella gate |
 
 The long-term theorem anchor is
@@ -1277,23 +1308,38 @@ Current subordinate order:
     an absolute arbitrary-selector future-feedback PSD ledger cannot be paid
     only by source energy and one terminal sextic. This does not prove the
     cutoff/chart/control/subdivision-uniform signed complete-cluster bound.
+    R-109 promotes the isolated one-pair square-before-average fixture to an
+    all-amplitude conditional theorem and a legal fresh-pair supermartingale.
+    A realized same-root covariance may enter the strict-past normalizer only
+    after its Hilbert--Schmidt square is conditionally averaged, or through a
+    proved predictable envelope; a post-reveal auxiliary determinant is not
+    the original diagonal packet. The selector-independent floor closes only
+    the centered diagonal quartic submodel: the mixed-baseline full-pair floor
+    diverges, and physical cross-mode resonances prevent tensorization.
+    Complete signed second-jet score transfer is available only for a fixed
+    past-measurable PSD operator, and the resulting Stein representative
+    cannot replace the raw Wick forest inside an exponential estimate. The
+    live target is therefore still one adapted contraction-closed production
+    cluster coupling the Cameron--Martin mean, realized covariance, trace,
+    mixed baseline, future feedback, rational recovery, and full raw forest
+    with every source and sextic owner retained once.
 
 ## Latest reproduction
 
 ```powershell
-E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_verify.py
+E:\Dev\TECT.venv\Scripts\python.exe codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_verify.py
 ```
 
 Expected output:
 
-- primary `66/66`;
-- standard-library independent `90/90`;
-- manifest-pinned integrated `230/230` and aggregate `386/386` PASS;
-- exact historical/direct Schur constants, subdivision-owner table and
-  quotient cancellation, complete endpoint conditional identity and exact
-  CM minimization, complete-cluster signed normal form, square-before-average
-  order audit, future-feedback signed-jet cancellation, exact `q=10/9`
-  budget, PDF/surface contracts, and T4 firewalls;
+- primary `39/39`;
+- standard-library independent `93/93`;
+- manifest-pinned integrated `106/106` and aggregate `238/238` PASS;
+- conditional Bennett normalizer, exact all-amplitude one-pair square-first
+  theorem and fresh-pair supermartingale, realized-covariance filtration
+  repair, selector-independent quartic floor and full-pair boundary,
+  fixed-predictable-PSD score transfer, exponential Stein-substitution no-go,
+  PDF/surface contracts, and T4 firewalls;
 - explicit preservation of the open uniform signed complete-cluster,
   `OVERLAP_src`, Nelson, removal, measure, and Sector-A targets;
 - exit code zero.
@@ -1305,23 +1351,20 @@ extracted-text debris check, and all-page Poppler visual QA.
 
 The latest subproof package is:
 
-- `classii_complete_cluster_quotient_carleson_frontier_manifest.json`
-- `notes/classii-complete-cluster-quotient-carleson-frontier-260728-v1.0.tex.txt`
-- `notes/classii-complete-cluster-quotient-carleson-frontier-260728-v1.0.pdf`
-- `../../codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier.py`
-- `../../codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_independent.py`
-- `../../codes/foundations/a13_classii_complete_cluster_quotient_carleson_frontier_verify.py`
-- `runs/2026-07-28-primary-complete-cluster-quotient-carleson-frontier/result.json`
-- `runs/2026-07-28-independent-complete-cluster-quotient-carleson-frontier/result.json`
-- `runs/2026-07-28-integrated-complete-cluster-quotient-carleson-frontier/result.json`
-- `../../RESULTS-LEDGER.md#r-108`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-rational-taylor-owner-subdivision`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-averaged-covariance-before-hs-square`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-absolute-future-feedback-cartan-carleson`
-- `../../negative-results/registry.md#ng-2026-07-28-a13-adapted-second-jet-termseparation`
-- `../../explorations/log.jsonl` (`EXP-000285`--`EXP-000290`)
-- R-107 and the R-105 v1.1 correction package remain pinned by the R-108
-  authority chain.
+- `classii_square_first_pair_score_transfer_filtration_boundary_manifest.json`
+- `notes/classii-square-first-pair-score-transfer-filtration-boundary-260728-v1.0.tex.txt`
+- `notes/classii-square-first-pair-score-transfer-filtration-boundary-260728-v1.0.pdf`
+- `../../codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary.py`
+- `../../codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_independent.py`
+- `../../codes/foundations/a13_classii_square_first_pair_score_transfer_filtration_boundary_verify.py`
+- `runs/2026-07-28-primary-square-first-pair-score-transfer-filtration-boundary/result.json`
+- `runs/2026-07-28-independent-square-first-pair-score-transfer-filtration-boundary/result.json`
+- `runs/2026-07-28-integrated-square-first-pair-score-transfer-filtration-boundary/result.json`
+- `../../RESULTS-LEDGER.md#r-109`
+- `../../negative-results/registry.md#audit-2026-07-28-a13-r108-realized-covariance-filtration`
+- `../../negative-results/registry.md#ng-2026-07-28-a13-stein-second-jet-exponentiation`
+- `../../explorations/log.jsonl` (`EXP-000291`--`EXP-000297`)
+- R-105--R-108 remain pinned by the R-109 authority chain.
 
 The audited R-090 predecessor remains binding subject to the R-092 transpose
 correction:
@@ -2296,6 +2339,22 @@ square-before-average fixture to a theorem, or the scoped no-gos to failure of
 the signed complete source action, `OVERLAP_src`, Nelson, removals, an
 interacting measure, Sector-A closure, or a higher tier.
 
+The R-109 continuation is additionally falsified by failure of the conditional
+one-sided Bennett hypotheses or global `5q^2 beta^2` bound; the exact one-pair
+law, centering, second moment, realized-covariance Hilbert--Schmidt square, or
+all-amplitude coefficient; the fresh-pair supermartingale; the requirement
+that a same-root realized covariance be squared before strict-past averaging;
+the selector-independent quartic floor, its `O(<k>^-6)` diagonal summability,
+the exact full-pair minimum, or its `sum <k>^-2` baseline divergence; the
+fixed-PSD Gaussian score identity, interpolation/form bound, `25/1296`
+coefficient, or derivative-covariance shell summability; the oscillatory
+derivative/raw-Wick log-Laplace separation; any R-109 source, note, PDF,
+manifest, run, registry, exploration, assertion count, or public-surface pin
+including `EXP-000291--EXP-000297`; or any promotion of the one-pair or fixed-
+operator results to an adapted cross-mode production-cluster theorem,
+`OVERLAP_src`, Nelson, removals, an interacting measure, Sector-A closure, or
+a higher tier.
+
 ## No-overclaim
 
 The balanced theorem proves continuum convergence only for its declared
@@ -2654,6 +2713,19 @@ counterexample against the complete action. R-108 proves no cutoff/chart/
 control/subdivision-uniform signed cluster estimate, adapted complete-cluster
 or matrix-Carleson theorem, `OVERLAP_src`, Nelson, cutoff/floor removal,
 interacting measure, Sector-A closure, or T5--T7 promotion. Tier stays T4.
+
+R-109 proves the all-amplitude square-first normalizer only for the exact
+one-pair complete cluster and the signed score-transfer lemma only for a fixed
+past-measurable PSD operator. The selector-independent cutoff-uniform floor
+belongs only to the centered diagonal quartic submodel; the complete mixed-
+baseline pair has a divergent direct floor, and physical cross-mode
+resonances prevent pairwise tensorization. The R-108 filtration audit repairs
+the legal conditional order without withdrawing its algebraic identities,
+and Gaussian score transfer is expectation-only, not a pathwise substitution
+inside an exponential estimate. R-109 proves no adapted production-cluster
+identification, uniform complete-cluster lower bound, `OVERLAP_src`, Nelson
+estimate, cutoff/floor removal, interacting measure, Sector-A closure, or
+T5--T7 promotion. Tier stays T4.
 
 ## History
 
@@ -3283,3 +3355,17 @@ interacting measure, Sector-A closure, or T5--T7 promotion. Tier stays T4.
   visual QA. The uniform signed complete-cluster estimate, `OVERLAP_src`,
   Nelson, removals, interacting-measure construction, and Sector A remain
   open; tier stays T4.
+- 2026-07-28: Registered R-109. A conditional Bennett lemma promotes the
+  exact one-pair square-before-average fixture to an all-amplitude theorem and
+  fresh-pair supermartingale. The R-108 realized-covariance target is repaired
+  by keeping the Hilbert--Schmidt square inside strict-past averaging. The
+  centered quartic selector floor is cutoff-uniform, while the complete
+  baseline floor diverges. A fixed-predictable-PSD signed second jet admits
+  exact Gaussian score transfer and a summable form cost, but an oscillatory
+  family forbids substituting its Stein representative inside an exponential
+  estimate. `EXP-000291--EXP-000297` preserve the route decisions. Primary
+  `39/39`, non-importing standard-library independent `93/93`, integrated
+  `106/106`, and aggregate `238/238` checks are manifest-pinned. The final
+  ten-page PDF passes form, zero-overfull, extraction, and all-page Poppler
+  visual QA. The adapted production cluster, `OVERLAP_src`, Nelson, removals,
+  interacting-measure construction, and Sector A remain open; tier stays T4.

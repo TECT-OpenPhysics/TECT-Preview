@@ -45,6 +45,8 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| AUDIT-2026-07-28-A13-R108-REALIZED-COVARIANCE-FILTRATION | a realized covariance square must be conditioned before pre- |  |
+| NG-2026-07-28-A13-STEIN-SECOND-JET-EXPONENTIATION | Stein expectation transfer does not survive exponentiation |  |
 | NG-2026-07-28-A13-PREDICTABLE-MULTIROW-BACKWARD-RESOLVENT | rowwise predictability does not freeze a backward Gaussian r |  |
 | NG-2026-07-28-A13-SINGLE-OUTPUT-FREQUENCY-PACKET | output trace allocation does not make singleton packets posi |  |
 | NG-2026-07-28-A13-INDEPENDENT-OUTPUT-DETERMINANT-NORMALIZATION | separate output normalizers lose extensive determinant slack |  |

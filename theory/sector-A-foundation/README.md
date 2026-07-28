@@ -110,6 +110,19 @@ positive HS/PSD-Carleson ledger paid solely by source energy and one terminal
 sextic because its signed second jet cancels. The required uniform signed complete-cluster estimate,
 `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
 open.
+R-109 turns the exact one-pair square-before-average check into an all-
+amplitude conditional normalizer and a legal fresh-pair supermartingale. A
+same-root realized covariance must be squared and conditionally averaged onto
+the strict past before iteration. The centered diagonal quartic floor is
+uniform, but the complete mixed-baseline pair has a divergent direct floor and
+physical cross-mode resonances block tensorization. A fixed past-measurable
+PSD matrix admits exact signed second-jet score transfer with summable shell
+cost; the transfer is expectation-only and cannot replace the raw Wick forest
+inside an exponential. The live target is one adapted raw complete cluster
+coupling mean, covariance, trace, baseline, rational recovery, all visits, and
+the random-W forest with no duplicated source or terminal-sextic payment.
+`OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A remain
+open.
 R-080,
 `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
 objects for the regular no-revisit class, reduces far feedback to the
