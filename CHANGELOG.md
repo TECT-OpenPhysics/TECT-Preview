@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 R-115 closes the stationary scalar k:2k theorem] - 2026-07-28
+
+R-115 closes the original R-112 stationary scalar k:2k normalizer for every c in [0,1], b>=0, and tau>=0, strictly for tau>0. R-114 supplies b<=643/200. A four-moment left Gauss--Radau majorant and packet-specific all-tilt three-atom skew theorem close the complementary half-line. The primary centered Arb cover records 46714 evaluations, 23613 accepted leaves, zero pending, and outward margin >0.0019. A non-importing exact Bernstein/radical route certifies 8298 structural, 4231 weight-order, and 16170 Phi coefficients. Two further non-importing exact engines preserve the fifth-order extension and the exact KS and generic reserve-only method failures. The integrated verifier passes 126/126, and the eight-page PDF passed all-page Poppler visual QA. Full A1 embedding, one-use aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open.
+
 ## [R-114 extends the exact scalar cone to b=643/200] - 2026-07-28
 
 Proves the original R-112 stationary scalar k:2k log-Laplace gap strictly for tau>0 and 0<=x<=643 tau/200, with origin equality, using the sharp support floor F_b>=-b/2 for b>=6/5 and a support--two-moment Hermite--Bernoulli dichotomy. Two non-importing implementations reconstruct 3981/3981 positive exact Bernstein coefficients; primary, independent, and integrated contracts pass 155/155, 133/133, and 140/140. A witness only 3/800 beyond the endpoint retires the same cubic proxy without refuting the target. The strict residual, full A1 embedding, one-use aggregation, and Sector A remain open.

@@ -316,19 +316,20 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   cones, and both covariance-face widths explicit; sharpens the phase floor
   through the full zero-amplitude `tau>=13` theorem; and certifies one complete
   genuinely mixed box by two non-importing outward-rounded Arb programs. The
-  residual was separated from both covariance faces and `tau=0`. R-114 now
-  closes the complete `x=0` axis and proves the original packet strictly on
-  `tau>0`, `0<=x<=643tau/200`. Its sharp `F_b>=-b/2` floor and two
-  non-importing exact engines reconstruct `3981/3981` positive rational
-  Bernstein coefficients. The strict residual has `b=x/tau>643/200` and
-  `tau<1228800/552049`. A witness only `3/800` beyond the endpoint retires
-  the same cubic proxy, not the target. First prove or refute the four-moment
-  Gauss--Radau all-tilt step; otherwise run the fail-closed corrected-Bessel/
-  exact-Bessel branch-and-bound, retaining every unresolved or nonpositive
-  box. Even scalar
-  closure would still need a full A1 embedding and separate owner-preserving
-  one-use source/sextic aggregation. `OVERLAP_src`, Nelson, removals, the
-  interacting measure, and Sector A remain open. R-080,
+  residual was separated from both covariance faces and `tau=0`. R-114 closes
+  the complete `x=0` axis and the cone `0<=b=x/tau<=643/200`. R-115 now
+  closes the complementary half-line and therefore the original R-112
+  stationary scalar theorem for every covariance shape, amplitude, and
+  `tau>=0`, strictly away from `tau=0`. Its four-moment left Gauss--Radau
+  majorant and exact three-atom skew lemma are certified both by a complete
+  outward Arb cover and by a structurally independent exact Bernstein/radical
+  proof. The next gate is no longer a scalar classifier: embed this theorem
+  into the full A1 one-fresh-root, contraction-closed, owner-preserving
+  conditional cluster, retaining random-W double divergence, heat, mean,
+  trace, mixed baseline, rational recovery, forest, and every visit exactly
+  once. Then prove the separate one-use source/sextic aggregation.
+  `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
+  remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
   objects for the declared no-revisit one-shot class, reduces the far feedback
   loss to one localized predictable base-current tail, and narrows the near
@@ -905,13 +906,13 @@ preserved in git/changelog rather than treated as current gates.
    origin, and face classifiers, the sharper zero-amplitude `tau>=13` region,
    and two independent directed-rounding certificates for one strict mixed
    box. R-114 closes the entire zero-amplitude axis and the exact cone
-   `0<=b=x/tau<=643/200` by a sharp support floor, a two-moment Hermite--
-   Bernoulli argument, and `3981/3981` exact Bernstein signs in each of two
-   non-importing engines. Continue only on `b>643/200`: test the four-moment
-   Gauss--Radau all-tilt step first, then use corrected-Bessel and exact-Bessel
-   fail-closed classifiers while retaining every unresolved or nonpositive
-   box. After scalar closure, build the owner-preserving full-A1 conditional
-   cluster and the separate one-use source/sextic aggregation.
+   `0<=b=x/tau<=643/200`. R-115 closes `b>=643/200` by the moment-sharp
+   four-moment left Radau majorant and packet-specific all-tilt skew geometry,
+   proved once by a zero-pending outward Arb cover and independently by exact
+   Bernstein/radical signs. The complete stationary scalar theorem is now
+   closed. Continue with the owner-preserving full-A1 one-fresh-root
+   conditional cluster, not another scalar classifier, and then the separate
+   one-use source/sextic aggregation.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

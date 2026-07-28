@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-115](#r-115) | Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem | Scoped T4 analytic/exact/executed theorem: the original R-112 scalar gap is strict for every `c in [0,1]`, every amplitude `b>=0`, and every `tau>0`, with equality at `tau=0`. R-114 covers `b<=643/200`; on the complementary compact reciprocal-amplitude rectangle, a left three-node Gauss--Radau majorant, an exact all-tilt three-atom skew lemma, a complete outward Arb cover, and a structurally independent exact Bernstein/radical certificate prove decreasing proxy variance. This closes only the stationary scalar theorem. The full A1 one-fresh-root owner-preserving embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-114](#r-114) | Support--two-moment closure of the scalar physical cone | Scoped T4 analytic/exact/executed theorem and method boundary: for the original R-112 stationary scalar `k:2k` packet, the exact gap is strict for every `c in [0,1]`, `tau>0`, and `0<=x<=643tau/200`, with equality at the origin. A sharp large-`b` floor and two non-importing exact implementations reconstruct 3,981 positive rational Bernstein coefficients. This closes the complete zero-amplitude axis and subsumes the R-113 Arb seed. The strict `b=x/tau>643/200` scalar residual, mixed all-`b` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-113](#r-113) | Effective scalar boundary patches and first directed-rounding mixed box | Scoped T4 analytic/exact/executed advance: four explicit projective wedges, eight origin cones, quantitative covariance-face widths, two sharper phase floors (including the whole zero-amplitude simplex for `tau>=13`), and two non-importing outward-rounded Arb certificates for one genuinely mixed parameter box. The remaining compact scalar decision problem, mixed all-`q` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-112](#r-112) | Covariance-simplex compactification and uniform projective compact-core reduction | Scoped T4 analytic/exact/executed advance and method boundary: the unbounded mixed stationary scalar `k:2k` parameter space is written on the closed covariance simplex `c+s=1` and reduced outside the exact residual domain `(2x+tau)^2<=32x+20tau`, hence to `0<=c<=1`, `0<=x<=8`, `0<=tau<=20`, with a rigorous radius-50 radial tail below `1.091e-17`. The projective gap has a simplex-uniform expansion through `b^-2`; `D0>=x^3/480`, `D1>=0`, and an exact degree-twelve Bernstein certificate gives `D2>=x^2 Delta/4>=x^2/400`, with a factored `O(x^3 b^-3)` remainder and an existential uniform large-amplitude all-`q` theorem. A Bernstein-MGF condition supplies an origin cusp and the exact R-111 faces give slice-wise face patches. Exact `D3<0` retires all-order coefficientwise positivity without refuting the target. An effective amplitude threshold, a directed-rounding certificate for the strict mixed core, the genuinely mixed all-`q` theorem, full A1 embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -133,6 +134,68 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-115"></a>
+### R-115 -- Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem
+
+**Result ID.**
+`A13-CLASSII-SCALAR-K2K-FOUR-MOMENT-RADAU-ALL-AMPLITUDE-CLOSURE`.
+
+**Exact theorem.**  For the original R-112 stationary scalar packet, every
+covariance shape `c in [0,1]`, every amplitude `b>=0`, and every `tau>=0`,
+
+`log E exp(-tau F_b) <= K(c,b) tau^2/4`.
+
+Equality holds at `tau=0`, and the inequality is strict for `tau>0`.  R-114
+supplies the closed cone `b<=643/200`.  For `b>=643/200`, its sharp floor
+gives `Z=F_b+b/2>=0`.
+
+**Four-moment transfer.**  The left three-node Gauss--Radau law on
+`{0,r_1,r_2}` matches the first four moments of `Z`.  The degree-four Hermite
+remainder for `exp(-tau z)` is nonpositive on `z>=0`, so its Laplace transform
+majorizes that of `Z`.  An exact three-atom identity reduces monotonicity of
+the tilted proxy variance to positivity of one dimensionless skew margin.
+Packet-specific node and weight geometry gives `r_2>=2r_1` and
+`w_2<=min(w_0,w_1)`.  The primary outward-rounded Arb engine covers the full
+compact rectangle `0<=1/b<=200/643`, `0<=c<=1` with `46,714` evaluations,
+`23,613` accepted leaves, zero pending leaves, and weakest certified positive
+margin greater than `0.0019`.
+
+A structurally independent exact engine replaces the adverse exponential
+maximum by the analytic bound
+`F <= (q/p) exp(9/e)/9 < 25q/(8p)`.  After clearing the already certified
+positive denominator, its remaining radical expression is `A+B sqrt(D)`.
+Exact tensor-Bernstein tables prove `A>0`, `-B>0`, and
+`A^2-D B^2>0` with respectively `2850/2850`, `2145/2145`, and
+`11175/11175` positive coefficients.  Thus the proxy's tilted variance never
+exceeds its initial variance `V=(K-Delta)/2<K/2`; two integrations and the
+Radau majorant prove the theorem.
+
+**Method boundaries retained.**  A fifth-order exact `atanh` proxy extends
+the earlier two-moment cone through `b=103/32`, but the full sharp
+Kearns--Saul coefficient fails at the exact fixture
+`(b,c)=(3219/1000,31/100)`.  Separately, a three-atom law proves that lower
+support, four moments, and positive covariance reserve do not imply the
+target distribution-free.  Neither is a counterexample to the actual packet;
+its certified Radau geometry is load-bearing.
+
+**Proof and reproduction.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-scalar-k2k-four-moment-radau-all-amplitude-closure-260728-v1.0.tex.txt`,
+manifest `classii_scalar_k2k_four_moment_radau_all_amplitude_manifest.json`,
+the primary and independent all-amplitude executables, two non-importing exact
+method-boundary executables, and the integrated R-115 verifier.  The verifier
+passes `126/126` fail-closed assertions and hash-pins all four child engines,
+their deterministic run artifacts, the note, and the final PDF.
+
+**Scope boundary.**  This is a complete stationary scalar theorem only.  It
+does not identify or bound the full A1 tensor owner cluster, repeated visits,
+random-`W` double divergence, heat/mean/trace/mixed-baseline/rational/forest
+companions, or the separate one-use source/sextic aggregation.  Therefore
+`OVERLAP_src`, Nelson, removals, the interacting measure, Sector A, and any
+tier promotion remain open.  R-103 REG and R-087 fixed-cutoff CORE keep their
+accepted owners; historical R-085 weighted/labelled-owner formulas remain
+non-load-bearing.
 
 <a id="r-114"></a>
 ### R-114 -- Support--two-moment closure of the scalar physical cone

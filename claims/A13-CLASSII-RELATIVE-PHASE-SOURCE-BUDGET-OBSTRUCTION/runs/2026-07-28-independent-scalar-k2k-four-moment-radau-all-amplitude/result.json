@@ -1,0 +1,908 @@
+{
+  "abstract_identity_assertions": {
+    "constant_radical_coefficient": true,
+    "linear_radical_coefficient": true,
+    "positive_denominator_formula": true
+  },
+  "adversarial_counterexample": {
+    "a": "1/10",
+    "k": "1",
+    "p": "1/100",
+    "purpose": "shows p<=min(a,q) and k>=1 alone do not force nonnegative skew",
+    "q": "89/100",
+    "tilt_zero_third_numerator": "-30879/500000"
+  },
+  "assertion_groups": {
+    "abstract_radical_identity": 3,
+    "adversarial_controls": 2,
+    "calculus_outward_bounds": 3,
+    "joint_weight_cover": 1,
+    "moment_oracle_equalities": 3,
+    "phi_polynomial_sign_tables": 3,
+    "structural_polynomial_sign_tables": 21
+  },
+  "calculus_bound": {
+    "arb_value": "[3.0455770579489427213189073910980604068718297190963036918802203032069344929251748 +/- 7.40e-80]",
+    "derivative": "d(log g)/dk=log(9/(k+1))-1",
+    "function": "g(k)=(9/(k+1))^k/(k+1)",
+    "maximizer": "k=9/e-1 in (2,6)",
+    "safe_bound": "25/8",
+    "unsafe_bound_3_rejected": true
+  },
+  "coordinate": "x=(643/200)/b",
+  "domain": "b>=643/200, c in [0,1]",
+  "implication": "all Radau prerequisites hold; F<=25q/(8p); A>0, -B>0, A^2-D B^2>0 imply Phi_bar>0 and hence Phi>0",
+  "moment_reconstruction": {
+    "algorithm": "factorial exponential moments plus exact even uniform-phase moments",
+    "degrees": {
+      "mu2": [
+        2,
+        4
+      ],
+      "mu3": [
+        3,
+        6
+      ],
+      "mu4": [
+        4,
+        8
+      ]
+    },
+    "hashes": {
+      "mu2": "94d84d59c0af8d86d352f232f36b8c4cf1ecc5a7852adccc6ef355a8d393cb53",
+      "mu3": "7eeaeb1de10f3e952b60df63942cb1a4e0c265a918970982a146257cf25101cb",
+      "mu4": "6db656a4bb27e216a065caf7c9aa64aee291a4ee4a484dfbb4793488b01f331e"
+    },
+    "oracle_equalities": {
+      "mu2": true,
+      "mu3": true,
+      "mu4": true
+    }
+  },
+  "phi_certificates": {
+    "A": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 2850,
+          "depth": 0,
+          "minimum": "2166807963691267351459488647837530160330966690585472731668864656945219138142222964282040972903422340523115033613693295548321/25164393468422912291119715522886133350400000000000000000000000000000000000000000000000000000000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 2850,
+          "sha256": "f0299230e3b8c646a5d6ff4b3d32f33df893849f9965b3ec06f20ad9562d13fa",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "A2_minus_DB2": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 11175,
+          "depth": 0,
+          "minimum": "2175861487921470296111927534465065454836558846041962924796249817280291578707639965382487721544991342051811491278498642046789852181207976929961480181048356975721917939100196415614821295825759598260552345301641855867469940677136094817310635103197/2089643750256004208756556405850845942894304971928336077852666177215528960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 11175,
+          "sha256": "a62af661d7f4af9e35d9499624e90d8c79f1f7444b87e600859ab68af266d8db",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "minus_B": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 2145,
+          "depth": 0,
+          "minimum": "24434899538785243126984534911294385140104696144249651276091876749257933021030534287605526174887360536009/4826552864479079573718594643558400000000000000000000000000000000000000000000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 2145,
+          "sha256": "18ff73c987cd0c1b74dd95958cada6f014ee2ab9f1231239bd2b87ff11e51b54",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    }
+  },
+  "polynomial_degrees": {
+    "A": [
+      37,
+      74
+    ],
+    "A2_minus_DB2": [
+      74,
+      148
+    ],
+    "minus_B": [
+      32,
+      64
+    ]
+  },
+  "polynomial_hashes": {
+    "A": "0d88a9efb50fa5189aa5b1f05cffd6d1e974d6c0954055846a90e8597254bcd2",
+    "A2_minus_DB2": "b664cc6fc5a8b1e2943d4f4c337f9a208b761665e141f0cc999b1d1a08272c1d",
+    "minus_B": "b3ab0bafc4612ea2d11653800d824e157d17416483eab95fc815cae66986a127"
+  },
+  "schema": "tect/a13-scalar-k2k-four-moment-radau-all-amplitude-independent/1.0",
+  "source": {
+    "path": "E:\\Dev\\TECT\\codes\\foundations\\a13_classii_scalar_k2k_four_moment_radau_all_amplitude_independent.py",
+    "sha256": "56c91ba873ab8d6fd9778a524727fde15c62229dae5c64bbcd2708a68ab4fb4c"
+  },
+  "status": "PASS",
+  "structural_certificates": {
+    "D": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 0,
+          "minimum": "4747907831183404175984643103857/24216338432000000000000000000",
+          "negative_count": 0,
+          "positive_count": 231,
+          "sha256": "966c5c346356be43268604068f34ff00afbfad512cbeca38268aad22a73e6c0e",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "E": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 91,
+          "depth": 0,
+          "minimum": "2049575096197577621/78848000000000000",
+          "negative_count": 0,
+          "positive_count": 91,
+          "sha256": "dde2ab9cfde0c3cd8e6f053ae369447aada47db7534b74952164f3e3cd7addb7",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "H": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 45,
+          "depth": 0,
+          "minimum": "1538460680409/448000000000",
+          "negative_count": 0,
+          "positive_count": 45,
+          "sha256": "feddde5f54f78982a197aa0234cc69f67753f0673e91da51505e5e5c0788413f",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "J": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 66,
+          "depth": 0,
+          "minimum": "109914468611443/5120000000000",
+          "negative_count": 0,
+          "positive_count": 66,
+          "sha256": "8969107f575f6244ab9ab89a9659ccdbee149d6343411f29d2597fed6b29895b",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "J2_minus_D": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 0,
+          "minimum": "45413194751700804828311128313991/75676057600000000000000000000",
+          "negative_count": 0,
+          "positive_count": 231,
+          "sha256": "35f8dd45c3d5bf70c02bda06771090b3ea43ef4499752d1bdadbf2f5e2389175",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "W": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 91,
+          "depth": 0,
+          "minimum": "2614975122734840413/118272000000000000",
+          "negative_count": 0,
+          "positive_count": 91,
+          "sha256": "4271d2199708d85634b7f8a811112b3fb6be51e2266b3bf99c3de9c66269b6bc",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "a_ge_1_over_6": {
+      "leaf_count": 2,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1/2"
+          ],
+          "coefficient_count": 91,
+          "depth": 1,
+          "minimum": "0",
+          "negative_count": 0,
+          "positive_count": 89,
+          "sha256": "47d70e1599cd984bd8e44a32549dae6741400c5537e873836d21e2183c914c0b",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 2
+        },
+        {
+          "c_interval": [
+            "1/2",
+            "1"
+          ],
+          "coefficient_count": 91,
+          "depth": 1,
+          "minimum": "0",
+          "negative_count": 0,
+          "positive_count": 89,
+          "sha256": "265d3a54523f8567a41f88626b31b2c02256840251f1875728e8224b81f858ac",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 2
+        }
+      ],
+      "max_depth": 1
+    },
+    "k_ge_2": {
+      "leaf_count": 2,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1/2"
+          ],
+          "coefficient_count": 231,
+          "depth": 1,
+          "minimum": "0",
+          "negative_count": 0,
+          "positive_count": 229,
+          "sha256": "65d4eae21224300114ac55a971b374586b89295da6788f8ea0fdd8eb4c2cc680",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 2
+        },
+        {
+          "c_interval": [
+            "1/2",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 1,
+          "minimum": "0",
+          "negative_count": 0,
+          "positive_count": 229,
+          "sha256": "3f155801215e3668ea60bfae0b7e34625830bee1a27d5722a81a717e5ca83bdf",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 2
+        }
+      ],
+      "max_depth": 1
+    },
+    "k_le_6": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 0,
+          "minimum": "2438866151665362216841088695432377/605408460800000000000000000000",
+          "negative_count": 0,
+          "positive_count": 231,
+          "sha256": "7a556e39c273b82d0fb246aa42db2b80614ac48fc03b8bc172ff4cdd2172901d",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "kq_le_9a": {
+      "leaf_count": 2,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1/2"
+          ],
+          "coefficient_count": 1035,
+          "depth": 1,
+          "minimum": "0",
+          "negative_count": 0,
+          "positive_count": 1033,
+          "sha256": "0c2f0c41d9b95ad3ed62e9946431700f62b0eeda4019f0bb6de9c6ef9aab9e06",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 2
+        },
+        {
+          "c_interval": [
+            "1/2",
+            "1"
+          ],
+          "coefficient_count": 1035,
+          "depth": 1,
+          "minimum": "0",
+          "negative_count": 0,
+          "positive_count": 1033,
+          "sha256": "f536efa18a7ff454f82fe962613b5fca2089f3f9cddbd664e74cc8289bd6ab8f",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 2
+        }
+      ],
+      "max_depth": 1
+    },
+    "kq_le_9a_side": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 276,
+          "depth": 0,
+          "minimum": "164522822880700312617719949869480153/154103971840000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 276,
+          "sha256": "7b039c98520173045ccfcefbe7234539be12285bd349acc9f6fe8bcd5801edf6",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "minus_Z": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 276,
+          "depth": 0,
+          "minimum": "48155105483614015671998015451197293/154103971840000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 276,
+          "sha256": "9cede8ac59599fd86e575b35a970dbf7973e9dc82a4ba999eb1d185e1a176fcf",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "nine_D_minus_J2": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 0,
+          "minimum": "36642250513942149785652474641217/37838028800000000000000000000",
+          "negative_count": 0,
+          "positive_count": 231,
+          "sha256": "fc52b01d0c98ae6b3d86cc7b01688117c6c382cf06a27e360a358601ea6afb5f",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "p_ge_1_over_200": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 1035,
+          "depth": 0,
+          "minimum": "175765683434095284913101543801309362443136059005878080852301901866678653541/240987632979330413363200000000000000000000000000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 1035,
+          "sha256": "359b4184eab164edcfd59e42f5aa6b3715100a0c2c76f1ec9b0946df30bd9c12",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "p_side_M": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 91,
+          "depth": 0,
+          "minimum": "516846299258375349737/236544000000000000",
+          "negative_count": 0,
+          "positive_count": 91,
+          "sha256": "e4f486467b8ed11bbd59e4ff7e58f84c4ce96164c0b5d081eeb212b983ad1454",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "q_ge_15_over_32": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 1035,
+          "depth": 0,
+          "minimum": "609233717465897446500027161771696549491459186881861343441575595001208583/18537510229179262566400000000000000000000000000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 1035,
+          "sha256": "06050b0e27cf6714641bbea5308b524522d7cd815369de7b7bf72738207ab0ab",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "q_side_N": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 91,
+          "depth": 0,
+          "minimum": "777425036488736339/21504000000000000",
+          "negative_count": 0,
+          "positive_count": 91,
+          "sha256": "b62f3a76cbf009ec06339a47abd6aa4c347122cf1c7bd7a0621e0147bf487c14",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "u_ge_b_over_2": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 0,
+          "minimum": "172676454532072254166281180364957/302704230400000000000000000000",
+          "negative_count": 0,
+          "positive_count": 231,
+          "sha256": "e99fe3f1346c4b43e3e2f4bf12413dbfc810d06b5ec446131db4359056124bce",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "v_ge_b_over_4": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 231,
+          "depth": 0,
+          "minimum": "293778307203274400375110855868933/1210816921600000000000000000000",
+          "negative_count": 0,
+          "positive_count": 231,
+          "sha256": "ebdaab153f0d33f2a8348cf694f05d5a7f08fce8164fd6122076f381ef94ad22",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "v_side_L": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 66,
+          "depth": 0,
+          "minimum": "109914468611443/7168000000000",
+          "negative_count": 0,
+          "positive_count": 66,
+          "sha256": "847607c15130a409262b3dc1cae5b41d6b1f52b0f3286f54ee214e3703edfd8b",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    },
+    "weight_product": {
+      "leaf_count": 1,
+      "leaves": [
+        {
+          "c_interval": [
+            "0",
+            "1"
+          ],
+          "coefficient_count": 1035,
+          "depth": 0,
+          "minimum": "9387819715434944976530051071506684620083164375442282397906361128490451/120493816489665206681600000000000000000000000000000000000000000000",
+          "negative_count": 0,
+          "positive_count": 1035,
+          "sha256": "1fab1db7e248f72eacc9e8a6d612d54e1d3ad671cd9fa541e4b24bd76406bc9b",
+          "x_interval": [
+            "0",
+            "1"
+          ],
+          "zero_count": 0
+        }
+      ],
+      "max_depth": 0
+    }
+  },
+  "structural_implications": {
+    "node_geometry": "v>=b/4, u>=b/2, 2<=k=u/v<=6",
+    "positive_denominator": "H,D,J,J^2-D,E,W,DW^2-Z^2 are positive",
+    "positive_weights": "a>=1/6, p>=1/200, q>=15/32",
+    "power_guard": "kq<=9a, hence h=kq/((k+1)a)<=9/(k+1)",
+    "weight_order": "-Z>0 gives p<q; the joint cover gives p<=a"
+  },
+  "structural_polynomial_degrees": {
+    "D": [
+      10,
+      20
+    ],
+    "E": [
+      6,
+      12
+    ],
+    "H": [
+      4,
+      8
+    ],
+    "J": [
+      5,
+      10
+    ],
+    "J2_minus_D": [
+      10,
+      20
+    ],
+    "W": [
+      6,
+      12
+    ],
+    "a_ge_1_over_6": [
+      6,
+      12
+    ],
+    "k_ge_2": [
+      10,
+      20
+    ],
+    "k_le_6": [
+      10,
+      20
+    ],
+    "kq_le_9a": [
+      22,
+      44
+    ],
+    "kq_le_9a_side": [
+      11,
+      22
+    ],
+    "minus_Z": [
+      11,
+      22
+    ],
+    "nine_D_minus_J2": [
+      10,
+      20
+    ],
+    "p_ge_1_over_200": [
+      22,
+      44
+    ],
+    "p_side_M": [
+      6,
+      12
+    ],
+    "q_ge_15_over_32": [
+      22,
+      44
+    ],
+    "q_side_N": [
+      6,
+      12
+    ],
+    "u_ge_b_over_2": [
+      10,
+      20
+    ],
+    "v_ge_b_over_4": [
+      10,
+      20
+    ],
+    "v_side_L": [
+      5,
+      10
+    ],
+    "weight_product": [
+      22,
+      44
+    ]
+  },
+  "structural_polynomial_hashes": {
+    "D": "9f0866847884f738a63925b11b87792d3a09a20e77e37cb2fb2798226bad0c9f",
+    "E": "04118c91ffad34465ba6b4e961f99ea5464669379ed5e2823db0d6e92068b2c1",
+    "H": "301321d07fc5eca83fb888282945ae90411ff76f770aeed3e36e7a3434059792",
+    "J": "81bb3dffe92affcf91b309138e4c40b6e48cda28bfff91bd7853763ebb800cbe",
+    "J2_minus_D": "896da7ca189f1e18fc778b4e4930964adbf7476d1e129e63ac49fd686a191a21",
+    "W": "4be512c7087b5c77e04e157c68aff4f01c4380d9f519a705f213d27d36c7ee50",
+    "a_ge_1_over_6": "2471229977d7d417c3325ba9c5e7b9cbef13b0784cf8e0e0101de21ef89a3723",
+    "k_ge_2": "6a36904d3511c34040d82102980b1e55a99a2adfa3208442057e94e7a3d45b85",
+    "k_le_6": "e3b270c7ccd9db25f738a26c3dcd9751bb9d598ee2609c839edd6c05c01d231b",
+    "kq_le_9a": "3432e05ebb2e5986bac721c13554105c77b4a08cb3467a42fe7656c9b923830b",
+    "kq_le_9a_side": "1afaa7dd2c755c9bbd2617163f5028f4e14f89c72b0ac44b48a1aae59717b831",
+    "minus_Z": "5d6f631c5552a02b3567ed439f7c9659f37be2d91cb91a3c03e60711f1169845",
+    "nine_D_minus_J2": "764aab2411eb6511674fd8b4f5b4464d54891ea38b91e9ca6d8ad43400465538",
+    "p_ge_1_over_200": "c9fcb6a75ae0156caec9a23cd47e12a87330eb02c25d65232a95191438f70f43",
+    "p_side_M": "148e8c3a90936a81a2f776b424b73e7cf1cdb8c375d07dadb3519280020f16f0",
+    "q_ge_15_over_32": "40bb467ace63799c265abd6353d67eb495307c2e8fb4e68aa377bf4739453380",
+    "q_side_N": "454577923ee3e83cc3b815addf019e8c6fc1b3513662141a99850d5669bd523f",
+    "u_ge_b_over_2": "855c7ee4e7d48f7ab912e851236e52c5ad784412de5418ca0099b1f57412529c",
+    "v_ge_b_over_4": "926370a39b23c502647169a592d4b87c796c084dcba1002e7671f7051f7440d4",
+    "v_side_L": "0a40892662b91e838733ee52460304ab544747d64c53a20c219acf318dff9b47",
+    "weight_product": "2824edfb2b697c9756936ddab6f240f8a16000666e7cd7c0ee5f5d92d820cbda"
+  },
+  "version": "1.0.0",
+  "weight_order_joint_certificate": {
+    "claim": "p<=a from R0=3C-E>=0 or P_weight=Z^2-D(E-3C)^2>=0, given Z<0",
+    "leaf_count": 5,
+    "leaves": [
+      {
+        "c_interval": [
+          "0",
+          "1/2"
+        ],
+        "certificate": "P_weight",
+        "coefficient_count": 1035,
+        "depth": 1,
+        "minimum": "34215623879467308618227190205326638676406772792813912997033599583/450359962737049600000000000000000000000000000000000000000000",
+        "negative_count": 0,
+        "positive_count": 1035,
+        "sha256": "2a8e49a6c1980925febd15274e209ea67abb7018f6c42492f04fbb614ed4b9b1",
+        "x_interval": [
+          "0",
+          "1"
+        ],
+        "zero_count": 0
+      },
+      {
+        "c_interval": [
+          "1/2",
+          "3/4"
+        ],
+        "certificate": "P_weight",
+        "coefficient_count": 1035,
+        "depth": 2,
+        "minimum": "34215623879467308618227190205326638676406772792813912997033599583/450359962737049600000000000000000000000000000000000000000000",
+        "negative_count": 0,
+        "positive_count": 1035,
+        "sha256": "2fb1d862521b618578ee15cc501908cc4b26c0af2fa021da286fb8fea5559b7b",
+        "x_interval": [
+          "0",
+          "1"
+        ],
+        "zero_count": 0
+      },
+      {
+        "c_interval": [
+          "3/4",
+          "1"
+        ],
+        "certificate": "P_weight",
+        "coefficient_count": 1035,
+        "depth": 3,
+        "minimum": "3217856706369357827074615397578087742088300120878855002466773584985464681/1888946593147858085478400000000000000000000000000000000000000000000",
+        "negative_count": 0,
+        "positive_count": 1035,
+        "sha256": "98d2d9d7e040238aa1d72646271872bb20d83f665e4eb02953804fa39156fbc0",
+        "x_interval": [
+          "0",
+          "1/2"
+        ],
+        "zero_count": 0
+      },
+      {
+        "c_interval": [
+          "3/4",
+          "7/8"
+        ],
+        "certificate": "P_weight",
+        "coefficient_count": 1035,
+        "depth": 4,
+        "minimum": "1682638045200781886062243265678470042376212029801303420285861230645976593550650134077231/2076918743413931051412198531688038400000000000000000000000000000000000000000000",
+        "negative_count": 0,
+        "positive_count": 1035,
+        "sha256": "847875d8a943808f02fed8e0a838b66bd6001c2dc4b579326cf152040fcf36c4",
+        "x_interval": [
+          "1/2",
+          "1"
+        ],
+        "zero_count": 0
+      },
+      {
+        "c_interval": [
+          "7/8",
+          "1"
+        ],
+        "certificate": "R0",
+        "coefficient_count": 91,
+        "depth": 4,
+        "minimum": "441347583646405506891295881/8796093022208000000000000",
+        "negative_count": 0,
+        "positive_count": 91,
+        "sha256": "0bea5dcddf5ebf76efbf14cc30b9e8cbf2a17107c806f656dca11f135b623c73",
+        "x_interval": [
+          "1/2",
+          "1"
+        ],
+        "zero_count": 0
+      }
+    ],
+    "max_depth": 4
+  }
+}

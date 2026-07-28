@@ -6,6 +6,8 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION](#ng-2026-07-28-a13-k2k-exact-ks-post-extension) | continue the support--two-moment route beyond its fifth-order exact extension by using the full sharp Kearns--Saul coefficient | at `(b,c)=(3219/1000,31/100)`, only `1/4000` beyond `103/32`, an exact rational upper bound makes the sharp-coefficient margin strictly negative while its equality time remains inside the live compact time range. This retires every proof based only on the selected support floor and first two moments there; it is not a counterexample to the scalar target, which R-115 closes by packet-specific four-moment Radau geometry |
+| [NG-2026-07-28-A13-FOUR-MOMENT-RESERVE-ONLY](#ng-2026-07-28-a13-four-moment-reserve-only) | infer the scalar quadratic log-Laplace target for every lower-supported law from four moments and a positive covariance reserve alone | the three-atom law `X in {-1,0,2}` with weights `(1/2,1/4,1/4)` has `Var(X)=3/2`, admits `K=16/5>2 Var(X)`, yet at `t=1/2` its Laplace transform exceeds `exp(1/5)` by an explicit positive rational lower gap. The blanket theorem is false; R-115 instead uses the actual packet's Radau-node, weight, and all-tilt skew inequalities |
 | [NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE](#ng-2026-07-28-a13-k2k-cubic-ks-proxy-beyond-cone) | extend the R-114 support--two-moment cone globally using the sharp floor `beta=b/2` and only the cubic lower bound `atanh(y)>=y+y^3/3` | only `3/800` beyond the certified endpoint, at `(b,c)=(103/32,5/16)`, the variance branch has `Q_beta=-24109/65536<0` and the cleared cubic proxy has `S_beta=-127544381197984065/18446744073709551616<0`. This retires only that sufficient polynomial proxy beyond the proved `b<=643/200` cone; it is not a counterexample to the exact Kearns--Saul coefficient, higher moments, or the scalar target |
 | [NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT](#ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt) | close the mixed scalar `k:2k` normalizer by contracting the Bessel cross term pointwise with `I_0(z)<=e^z` and one quadratic Young inequality | the contracted positive quadratic surrogate has exact mean `-c(8b+9s)/16<0` in the mixed interior, so its centered log-Laplace upper bound acquires an artificial positive `O(tau)` origin debt while the target begins at `O(tau^2)`. The contraction remains a stable one-dimensional `erfcx` majorant away from the origin and is not a target counterexample |
 | [NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY](#ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity) | prove the mixed scalar `k:2k` projective boundary by showing every inverse-amplitude coefficient of the exact logarithmic gap is nonnegative | the exact third coefficient at `c=3/5`, `s=2/5`, `x=24/25` is `-627811338105359170693920/190578044621571595050427561<0`. The leading gap and first two corrections remain positive there, so only coefficientwise sign induction is retired; the target and a controlled remainder/interval proof remain live |
@@ -157,6 +159,64 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
 
+<a id="ng-2026-07-28-a13-k2k-exact-ks-post-extension"></a>
+### NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION -- the sharp two-moment coefficient fails immediately after its exact fifth-order extension
+
+**Claim / route.**  Continue the R-114 support--two-moment proof by retaining
+the sharp floor `beta=b/2` and using the complete centered-Bernoulli
+Kearns--Saul coefficient, rather than a finite lower Taylor proxy.
+
+**Failure mode.**  The fifth-order inequality
+`atanh(y)/y >= 1+y^2/3+y^4/5` gives a separate exact Bernstein extension
+through `b=103/32`.  But at
+`(b,c)=(3219/1000,31/100)`, only `1/4000` farther in amplitude, the exact
+sharp-coefficient margin is strictly negative.  The rational enclosure
+`atanh(y)/y <= 1+y^2/3+y^4/[5(1-y^2)]` yields the upper margin
+
+`-72442776419046601199446847233957478399499392897 /
+392881140792574918584021697067765836104000000000000000 < 0`.
+
+The sharp equality time is below `1/8`, whereas the inherited live compact
+time cap is above `2`; the failure therefore occurs inside the relevant time
+range.
+
+**Evidence.**  R-115 reconstructs the rational fixture, the fifth-order
+`1655/1655` positive Bernstein signs, the upper bound above, and the time
+comparison in two non-importing executable paths.
+
+**Consequence.**  No theorem based only on the selected lower support and
+the first two moments can close the residual by the sharp Kearns--Saul
+constant.  This is a method failure, not a target counterexample.  R-115
+closes the actual scalar target instead through four-moment Radau majorization
+and packet-specific three-atom skew geometry.
+
+<a id="ng-2026-07-28-a13-four-moment-reserve-only"></a>
+### NG-2026-07-28-A13-FOUR-MOMENT-RESERVE-ONLY -- lower support, four moments, and positive reserve do not imply the target for every law
+
+**Claim / route.**  Promote the R-115 moment data to a distribution-free
+theorem: any lower-supported law with four finite moments and
+`K>2 Var(X)` should obey `log E exp(tX) <= Kt^2/4`.
+
+**Failure mode.**  Let `X` take values `-1,0,2` with respective weights
+`1/2,1/4,1/4`, and set `Y=-X`.  Then `Y>=-2`,
+`Var(X)=Var(Y)=3/2`, and `K=16/5>3`.  Nevertheless, at `t=1/2`,
+
+`E exp(tX)=exp(-1/2)/2+1/4+exp(1)/4 > exp(1/5)`.
+
+The elementary rational bounds `exp(-1/2)>29/48`,
+`exp(1)>1957/720`, and `exp(1/5)<61/50+2/1425` leave the strictly positive
+gap `2789/273600`.
+
+**Evidence.**  R-115 checks every rational bound and reconstructs the
+support, moments, reserve, and violated inequality exactly.  Its primary
+implementation also includes an adverse three-atom skew fixture so a blanket
+tilted-variance premise cannot pass silently.
+
+**Consequence.**  The generic four-moment-reserve theorem is false.  This
+does not affect R-115, whose load-bearing step certifies the actual packet's
+Radau nodes, weights, and all-tilt skew gate over the complete parameter
+rectangle.
+
 <a id="ng-2026-07-28-a13-k2k-cubic-ks-proxy-beyond-cone"></a>
 ### NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE -- the cubic Bernoulli proxy does not extend the selected floor globally
 
@@ -184,7 +244,9 @@ while the cleared cubic Kearns--Saul sufficient condition is
 global.  This does not refute the exact Kearns--Saul coefficient, a
 higher-moment Hermite majorant, the corrected three-phase Bessel classifier,
 or the scalar log-Laplace target.  The strict `b>643/200` residual remains
-open and must be treated fail-closed.  The rational endpoint is not asserted
+open at the R-114 checkpoint and had to be treated fail-closed there.  R-115
+subsequently closes that residual by four-moment Radau majorization and
+packet-specific all-tilt skew geometry.  The rational endpoint is not asserted
 optimal.
 
 <a id="ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt"></a>

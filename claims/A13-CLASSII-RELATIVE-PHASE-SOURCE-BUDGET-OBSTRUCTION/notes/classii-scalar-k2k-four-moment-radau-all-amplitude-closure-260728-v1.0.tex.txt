@@ -1,0 +1,533 @@
+% =============================================================================
+% Title: Scalar k:2k four-moment Radau all-amplitude closure
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed scalar theorem; Sector A remains open
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\atanh}{\operatorname{atanh}}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-115 closes the original R-112 stationary scalar $k{:}2k$
+log-Laplace inequality for every covariance shape, every amplitude, and every
+$\tau\ge0$.}  R-114 already covers $0\le b\le643/200$.  On the complementary
+half-line $b\ge643/200$, a degree-four left Gauss--Radau majorant transfers the
+original Laplace transform to a three-atom law.  An exact three-atom skew
+lemma and a finite outward-rounded Arb cover prove that the tilted variance of
+that law never exceeds its initial variance.  The covariance reserve then
+gives a strict gap for $\tau>0$ and equality only at $\tau=0$.
+
+This is a complete theorem for the stationary scalar model, not yet a theorem
+for the production A1 tensor.  The full one-fresh-root owner-preserving A1
+embedding, all visits and inputs, random-$W$ double divergence, complete heat,
+mixed baseline, trace and rational recovery, and the separate one-use
+source/sextic aggregation remain open.  Consequently
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, the interacting measure, and
+Sector A remain open.  R-103 REG and R-087 fixed-cutoff CORE keep their
+accepted owners.  Historical R-085 weighted/labelled-owner formulas remain
+non-load-bearing.
+}}
+\end{center}
+
+All displayed algebraic identities are exact.  The primary executable
+reconstructs the packet from its phase/exponential definition and runs a
+finite directed-rounding cover.  A structurally independent executable
+reconstructs the same moments and replaces that cover by an exact
+Bernstein/radical certificate.  Ordinary floating-point scans are used only
+to choose adversarial fixtures and are not theorem evidence.
+
+\section{Exact scalar packet and inherited cone}
+
+Retain the R-112 variables
+\[
+ c={v\over v+4w},\qquad s=1-c,\qquad
+ b={A^2\over v+4w},\qquad \tau=q(v+4w)^2,\qquad x=b\tau .       \tag{1.1}
+\]
+Let $T,U$ be independent unit exponentials, let $\phi$ be uniform, and set
+\[
+ \rho={cT\over2},\qquad \sigma={sU\over8},                    \tag{1.2}
+\]
+\[
+ L=\rho+4\sigma-{1\over2},\quad
+ Q=\rho^2+10\rho\sigma+4\sigma^2-\rho-\sigma,
+ \quad B=6\rho\sqrt\sigma\cos\phi .                          \tag{1.3}
+\]
+The exact centered packet and covariance square are
+\[
+ F_b=bL+\sqrt b\,B+Q,\qquad \E F_b=0,                         \tag{1.4}
+\]
+\[
+ K=b^2K_2+bK_1+K_0,                                          \tag{1.5}
+\]
+where
+\[
+ K_2=c^2-c+{1\over2},\qquad
+ K_1={-3c^3+5c^2+c+1\over4},                                 \tag{1.6}
+\]
+\[
+ K_0={153c^4-156c^3+82c^2-4c+5\over64}.                     \tag{1.7}
+\]
+Its variance has the exact reserve
+\[
+ V:=\Var(F_b)={K-\Delta\over2},\qquad
+ \Delta={33c^4-36c^3+22c^2-4c+1\over64}\ge {1\over100}.    \tag{1.8}
+\]
+The target is
+\[
+ \boxed{\log\E e^{-\tau F_b}\le {K\tau^2\over4}.}          \tag{1.9}
+\]
+R-114 proves (1.9), strictly for $\tau>0$, on the complete closed
+cone $0\le b\le643/200$.  It also proves the sharp support floor
+\[
+ \boxed{F_b\ge-{b\over2}\qquad(b\ge6/5),}                   \tag{1.10}
+\]
+with equality only at $\rho=\sigma=0$.  Thus the complementary proof may set
+\[
+ \beta={b\over2},\qquad Z=F_b+\beta\ge0.                     \tag{1.11}
+\]
+
+\section{Four exact moments}
+
+Write $\mu_j=\E F_b^j$.  Phase symmetry and
+$\E\cos^{2j}\phi=\binom{2j}{j}/4^j$ give
+\[
+ \mu_n=\sum_{j=0}^{\lfloor n/2\rfloor}
+ \binom n{2j}{\binom{2j}{j}\over4^j}
+ \E\!\left[(bL+Q)^{n-2j}(36b\rho^2\sigma)^j\right].        \tag{2.1}
+\]
+The exponential moments $\E T^iU^j=i!j!$ make (2.1) a finite exact
+polynomial.  In particular,
+\[
+ 32\mu_2={}
+ 16b^2c^2-16b^2c+8b^2-12bc^3+20bc^2+4bc+4b
+ +30c^4-30c^3+15c^2+1,                                    \tag{2.2}
+\]
+and $\mu_2=V$.  The third moment is
+\[
+\begin{aligned}
+256\mu_3={}&192b^3c^2-192b^3c+64b^3
+ +48b^2c^4-240b^2c^3+672b^2c^2-192b^2c+96b^2\\
+&+1404bc^5-1860bc^4+912bc^3+552bc^2-108bc+60b\\
+&+990c^6+108c^5-375c^4+66c^3+186c^2-30c+15 .
+\end{aligned}                                               \tag{2.3}
+\]
+For later independent reconstruction, the fourth moment is
+\[
+\begin{aligned}
+\mu_4={}&{3b^4\over16}(8c^4-16c^3+20c^2-12c+3)\\
+&-{3b^3\over16}(18c^5-62c^4+61c^3-61c^2+23c-7)\\
+&+{3b^2\over64}(480c^6-558c^5+262c^4+10c^3+373c^2-102c+31)\\
+&+{3b\over128}(99c^7+4041c^6-4248c^5+2068c^4-107c^3
+                   +543c^2-128c+36)\\
+&+{3\over512}(12474c^8-9486c^7+9213c^6-4788c^5+1768c^4
+                   -518c^3+661c^2-144c+36).
+\end{aligned}                                               \tag{2.4}
+\]
+No fifth moment is used.  As a useful boundary check, put
+$d=1/b=(200/643)y$.  The tensor Bernstein expansion of
+$256d^3\mu_3$ on $(y,c)\in[0,1]^2$ has $28/28$ positive rational
+coefficients, with minimum $32/5$.  Therefore
+\[
+ \boxed{\mu_3(F_b)\ge {b^3\over40}\qquad(b\ge643/200).}     \tag{2.5}
+\]
+This proves that the original tilted variance initially decreases.  It is not
+the all-tilt proof: at $(b,c)=(643/200,1/2)$ the fourth cumulant is
+$4376252798439/51200000000>0$.
+
+The shifted moments needed below are
+\[
+ m_1=\beta,\quad m_2=\beta^2+\mu_2,\quad
+ m_3=\beta^3+3\beta\mu_2+\mu_3,                            \tag{2.6}
+\]
+\[
+ m_4=\beta^4+6\beta^2\mu_2+4\beta\mu_3+\mu_4.             \tag{2.7}
+\]
+
+\section{The sharp four-moment Gauss--Radau majorant}
+
+% evidence-anchor: lemma-3.1-four-moment-left-radau-majorant
+\subsection*{Lemma 3.1 (left Radau majorant)}
+
+Let $Z\ge0$ have finite fourth moment and a nondegenerate Stieltjes moment
+matrix.  Define
+\[
+ D_0=m_1m_3-m_2^2,\qquad
+ A_0={m_1m_4-m_2m_3\over D_0},\qquad
+ B_0={m_2m_4-m_3^2\over D_0}.                              \tag{3.1}
+\]
+Let $0<r_1<r_2$ be the roots of $z^2-A_0z+B_0$.  There are unique positive
+weights $w_0,w_1,w_2$ on $0,r_1,r_2$ matching $m_0,\ldots,m_4$; explicitly
+\[
+ w_1={m_1r_2-m_2\over r_1(r_2-r_1)},\qquad
+ w_2={m_2-m_1r_1\over r_2(r_2-r_1)},\qquad
+ w_0=1-w_1-w_2.                                           \tag{3.2}
+\]
+Then, for every $t\ge0$,
+\[
+ \boxed{\E e^{-tZ}\le w_0+w_1e^{-r_1t}+w_2e^{-r_2t}.}      \tag{3.3}
+\]
+
+\emph{Proof.}
+The polynomial $z^2-A_0z+B_0$ is the monic degree-two orthogonal polynomial
+for the positive measure $z\,d\Pr_Z$.  Hence its roots lie in $(0,\infty)$.
+The Radau rule is exact through degree four, and each quadrature weight is
+positive because it equals the expectation of the square of its cardinal
+polynomial.  Let $H_t$ be the degree-four Hermite interpolant of $e^{-tz}$,
+matching once at zero and twice at each $r_i$.  Its remainder is
+\[
+ e^{-tz}-H_t(z)={-t^5e^{-t\xi_z}\over5!}
+ z(z-r_1)^2(z-r_2)^2\le0.                                \tag{3.4}
+\]
+Taking expectations and using degree-four exactness proves (3.3).
+The bound is moment-sharp: the three-atom Radau law has the same four moments
+and attains equality. \hfill$\square$
+
+Applied to (1.11), Lemma 3.1 gives
+\[
+ \E e^{-tF_b}\le e^{\beta t}
+ \{w_0+w_1e^{-r_1t}+w_2e^{-r_2t}\}.                       \tag{3.5}
+\]
+
+\section{A three-atom all-tilt skew lemma}
+
+Write
+\[
+ v=r_1,\qquad u=r_2-r_1,\qquad
+ a=w_0,\quad q=w_1,\quad p=w_2.                            \tag{4.1}
+\]
+
+% evidence-anchor: lemma-4.1-three-atom-negative-tilt-skew
+\subsection*{Lemma 4.1 (sufficient nonnegative skew)}
+
+Assume
+\[
+ u\ge v>0,\qquad p\le\min(a,q).                           \tag{4.2}
+\]
+If $q\le a$, the third centered moment of the law on $0,v,v+u$ remains
+nonnegative under every negative exponential tilt.  If $q>a$, put
+\[
+ k={u\over v},\qquad h={kq\over(k+1)a},                    \tag{4.3}
+\]
+\[
+ F=\begin{cases}
+ (q-a)/p,&h\le1,\\[2mm]
+ {q\over p(k+1)}h^k,&h\ge1,
+ \end{cases}                                               \tag{4.4}
+\]
+and
+\[
+ \Phi=(k-1)(k+2)(2k+1)
+       +k^3{q-p\over q}+(k+1)^3{a-p\over q}-F.             \tag{4.5}
+\]
+Then $\Phi\ge0$ is sufficient for the same all-tilt conclusion.
+
+\emph{Proof.}
+Under the tilt, write
+\[
+ A=a,\qquad B=qe^{-vt},\qquad C=pe^{-(u+v)t},\qquad S=A+B+C.
+\]
+Direct expansion gives
+\[
+\begin{aligned}
+S^3\mu_{3,t}={}&AB(A-B)v^3+AC(A-C)(u+v)^3+BC(B-C)u^3\\
+&+ABC(u-v)(u+2v)(2u+v).
+\end{aligned}                                               \tag{4.6}
+\]
+If $q\le a$, every term is nonnegative.  Otherwise the only adverse interval
+has $B>A$.  On that interval, division by $ABC$ and (4.2) give
+\[
+{S^3\mu_{3,t}\over ABCv^3}\ge
+-{B-A\over C}+k^3{q-p\over q}+(k+1)^3{a-p\over q}
+ +(k-1)(k+2)(2k+1).                                      \tag{4.7}
+\]
+Indeed $B>A$ implies $e^{-vt}>a/q$, which yields
+$(B-C)/A\ge(q-p)/q$; the other pair is bounded similarly.
+With $s=e^{vt}\in[1,q/a]$,
+\[
+ {B-A\over C}={(q-as)s^k\over p}.                         \tag{4.8}
+\]
+Its derivative has the sign of $kq-(k+1)as$, so its exact maximum is (4.4).
+Equations (4.5)--(4.8) prove the claim. \hfill$\square$
+
+If $\Psi(t)$ is the logarithm of the right side of (3.5), then
+\[
+ \Psi''(t)=\Var_t(Z),\qquad \Psi'''(t)=-\mu_{3,t}(Z).      \tag{4.9}
+\]
+Thus Lemma 4.1 makes $\Psi''$ nonincreasing.
+
+\section{Finite exact and outward-rounded certificate}
+
+Put $d=1/b$ and divide $m_j$ by $b^j$.  Every scaled moment is an exact
+polynomial in $(d,c)$, including the endpoint $d=0$.  The residual half-line
+becomes the compact rectangle
+\[
+ \boxed{0\le d\le {200\over643},\qquad 0\le c\le1.}        \tag{5.1}
+\]
+The executables reconstruct the degree-two Radau polynomial from (2.1), not
+from hardcoded derived nodes or weights.
+
+For an exact algebraic cross-check, let $H,N_A,N_B$ be the coefficients of
+the two free nodes in the endpoint coordinate $X=-F_b\le b/2$:
+\[
+\begin{aligned}
+H&=\beta^2\mu_2+\beta\mu_3-\mu_2^2,\\
+N_A&=\beta^2\mu_3-\beta\mu_2^2+\beta\mu_4-\mu_2\mu_3,\\
+N_B&=-\beta^2\mu_2^2-\beta\mu_2\mu_3+\mu_2\mu_4-\mu_3^2.
+\end{aligned}                                               \tag{5.2}
+\]
+Set $D=N_A^2-4HN_B$ and $J=2H\beta+N_A$.  Exact tensor-Bernstein tables prove
+\[
+ H>0,\quad D>0,\quad J^2-D>0,\quad9D-J^2>0,                 \tag{5.3}
+\]
+so $r_1>0$ and $r_2>2r_1$.  Further exact radical reductions prove
+\[
+ p<q,\qquad p<a,\qquad
+ p\ge{1\over200},\quad q\ge{15\over32},\quad a\ge{1\over6},
+ \quad 2\le k\le6,\quad kq\le9a,\quad h\le3.          \tag{5.4}
+\]
+The $p\le a$ proof needs only five de Casteljau leaves; no box is unresolved.
+These polynomial checks independently protect every denominator and radical
+used by the interval proof.  The independent engine reconstructs 21
+structural polynomials and certifies them on 24 exact leaves: 8298 rational
+coefficients consist of 8286 strict positives and 12 retained endpoint
+zeros.  Its disjunctive $p\le a$ cover has five leaves and 4231/4231 positive
+coefficients.  Thus no prerequisite is imported from the Arb engine.
+
+The same exact path also closes the remaining skew margin.  Indeed, for
+\[
+ g(k)={1\over k+1}\left({9\over k+1}\right)^k,
+\]
+both branches of (4.4), using $kq\le9a$, obey
+\[
+ F\le {q\over p}g(k),\qquad
+ \max_{2\le k\le6}g(k)={e^{9/e}\over9}<{25\over8}.        \tag{5.5}
+\]
+The first inequality on the $h\le1$ branch follows from
+$q-a\le q/(k+1)$; on the $h\ge1$ branch it follows directly from
+$h\le9/(k+1)$.  The derivative of $\log g$ is
+$\log(9/(k+1))-1$, and elementary directed interval bounds certify the final
+strict comparison in (5.5).
+
+Replace $F$ in (4.5) by $25q/(8p)$ and call the smaller margin
+$\overline\Phi$.  After clearing the already certified positive denominator,
+the independent engine reduces its numerator to
+$A+B\sqrt D$.  On the whole rectangle (5.1), exact tensor-Bernstein tables
+prove $A>0$, $-B>0$, and $A^2-DB^2>0$ with respectively
+$2850/2850$, $2145/2145$, and $11175/11175$ positive rational
+coefficients.  Hence $A+B\sqrt D>0$, so
+\[
+ \boxed{\Phi\ge\overline\Phi>0}                           \tag{5.6}
+\]
+without interval subdivision.
+
+The load-bearing transcendental check uses python-flint Arb balls.  The
+primary implementation starts from a deterministic $16\times32$ rational
+grid on (5.1), evaluates exact scaled-moment polynomials by Horner arithmetic,
+and propagates first-order centered forms, recentered after every operation.
+Each leaf must prove all inequalities in (4.2), and then either $q\le a$, or
+the applicable branch of $\Phi>0$.  A leaf crossing $h=1$ must prove both
+branches.  Failed or nonfinite leaves are bisected; none is discarded.
+
+The structurally different primary directed-rounding cover has
+\[
+ \boxed{46714\ \hbox{evaluations},\qquad23613\ \hbox{accepted leaves},
+ \qquad0\ \hbox{pending leaves}.}                          \tag{5.7}
+\]
+Its weakest outward lower enclosure for an accepted $\Phi$ branch is
+\[
+ \boxed{\Phi>0.0019>0.}                                    \tag{5.8}
+\]
+The exact independent engine and the primary Arb engine share no source
+imports and are hash-pinned separately by the integrated verifier.
+
+% evidence-anchor: theorem-5.1-all-amplitude-stationary-scalar-closure
+\subsection*{Theorem 5.1 (all-amplitude scalar closure)}
+
+For every $b\ge0$, $c\in[0,1]$, and $\tau\ge0$,
+\[
+ \boxed{\log\E e^{-\tau F_b}\le {K(c,b)\tau^2\over4}.}     \tag{5.9}
+\]
+Equality holds at $\tau=0$; the inequality is strict for $\tau>0$.
+
+\emph{Proof.}
+R-114 covers $0\le b\le643/200$.  On $b\ge643/200$, the finite certificate
+proves Lemma 4.1 for the Radau law.  Hence (4.9) and moment matching give
+\[
+ \Psi''(t)\le\Psi''(0)=\Var(F_b)=V={K-\Delta\over2}<{K\over2}. \tag{5.10}
+\]
+Since $\Psi(0)=\Psi'(0)=0$, two integrations yield
+$\Psi(t)\le Vt^2/2<Kt^2/4$ for $t>0$.  Lemma 3.1 transfers this upper bound
+to the original packet. \hfill$\square$
+
+\section{Auxiliary two-moment endpoint and exact method failures}
+
+The proof search also sharpened the R-114 two-moment boundary.  For
+$\beta=b/2$, set
+\[
+ A=\beta^2+V,\qquad D_1=\beta^2-V,\qquad y={D_1\over A}.     \tag{6.1}
+\]
+The self-contained lower bound
+\[
+ {\atanh y\over y}\ge1+{y^2\over3}+{y^4\over5},            \tag{6.2}
+\]
+follows because the derivative of
+$\atanh y-y-y^3/3-y^5/5$ is $y^6/(1-y^2)$.  The cleared sufficient
+polynomial is
+\[
+ T_4=30K\beta^2A^4+10K\beta^2D_1^2A^2+6K\beta^2D_1^4-15A^6. \tag{6.3}
+\]
+Seven rational cells give $1655/1655$ positive exact Bernstein coefficients,
+extending that route to
+\[
+ {643\over200}\le b\le {103\over32}.                       \tag{6.4}
+\]
+This extension is independent confirmation, but Theorem 5.1 no longer needs
+it.
+
+The exact Kearns--Saul coefficient itself fails immediately afterward.  At
+\[
+ b={3219\over1000},\qquad c={31\over100},\qquad
+ y={7333898609\over96285711391},                            \tag{6.5}
+\]
+the variance branch is unavailable and
+\[
+{\atanh y\over y}\le1+{y^2\over3}+{y^4\over5(1-y^2)}.      \tag{6.6}
+\]
+Substitution makes the exact KS margin at most
+\[
+-{72442776419046601199446847233957478399499392897\over
+392881140792574918584021697067765836104000000000000000}<0. \tag{6.7}
+\]
+Its sharp equality time lies below $1/8$, while the live compact cap exceeds
+$2$.  Thus the failure occurs in the relevant time range.  It retires only
+every proof using the support and first two moments through the exact KS
+constant; it is not a target counterexample.
+
+Nor do support, four moments, and a positive covariance reserve imply the
+target for an arbitrary law.  Let $X=-Y$ take values $-1,0,2$ with weights
+$1/2,1/4,1/4$.  Then $Y\ge-2$, $\Var(Y)=3/2$, and $K=16/5>3$.  At $t=1/2$,
+\[
+ \E e^{tX}={e^{-1/2}\over2}+{1\over4}+{e\over4}>e^{1/5}.    \tag{6.8}
+\]
+Indeed $e^{-1/2}>29/48$, $e>1957/720$, and
+$e^{1/5}<61/50+2/1425$, leaving the rational gap
+$2789/273600>0$.  This proves that the actual-packet inequalities in Section
+5, rather than a blanket four-moment principle, are load-bearing.
+
+The primary SymPy and independent standard-library \texttt{Fraction}
+method-boundary children each reconstruct all $1655/1655$ extension signs,
+the exact KS failure margin and live-time comparison, and the rational gap in
+(6.8).  Neither child imports either Radau implementation.
+
+Finally, the corrected symmetric Bessel route remains reusable.  With
+$\sigma=(1-c)U/8$ and suitable $A,B_0,\delta,C_0$, exact integration in $T$
+reduces the cancellation-preserving surrogate to
+\[
+\int_0^\infty e^{-U-\tau C_0}
+\left\{{J_0(A,B_0)\over2}+{J_0(A,B_0-\delta)+J_0(A,B_0+\delta)\over4}
+-{\delta^4J_4(A,B_0)\over192}\right\}\,dU,                 \tag{6.9}
+\]
+where $2AJ_{n+1}+B_0J_n=nJ_{n-1}$.  It is no longer needed for the scalar
+closure and is parked for possible full-A1 comparison.
+
+\section{Proof-evidence roadmap}
+
+The successful path and the retired branches are now separated as follows:
+\begin{enumerate}
+\item R-110 identifies the exact stationary scalar packet and local reserve.
+R-111 closes both covariance faces.  R-112 compactifies the mixed problem,
+R-113 makes its boundaries effective, and R-114 closes $b\le643/200$.
+\item The fifth-order $\atanh$ term gives a small exact cone extension, but
+the full KS witness (6.7) prevents further two-moment work from being useful.
+\item Four-moment Radau is the correct moment-sharp replacement.  A blanket
+four-moment reserve theorem is false by (6.8), so the proof retains the actual
+packet's node, weight, and skew geometry.
+\item Lemma 4.1 compresses the all-time problem to one two-parameter function.
+The finite outward cover of (5.1) proves that function positive and closes the
+stationary scalar theorem.
+\item The next proof object is not another scalar classifier.  It is the full
+A1 one-fresh-root, contraction-closed conditional owner cluster, followed by
+the separate one-use source/sextic aggregation.  No stationary scalar result
+may silently replace that embedding.
+\end{enumerate}
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} The quadrature rule approximates the original
+Laplace transform without a one-sided error.  \textbf{Verdict: DISMISSED.}
+The Hermite remainder (3.4) has a fixed nonpositive sign on $Z\ge0$, and the
+Radau rule is exact through degree four.  The direction in (3.3) is analytic,
+not numerical.
+
+\item \textbf{Objection:} Positivity at sampled $(b,c,t)$ points was promoted
+to an all-time theorem.  \textbf{Verdict: DISMISSED.}  Lemma 4.1 maximizes the
+only adverse exponential ratio over every $t\ge0$ exactly.  The remaining
+$(d,c)$ rectangle is covered by outward Arb balls with zero pending leaves.
+
+\item \textbf{Objection:} Interval subdivision discarded nonfinite or
+nonpositive cells.  \textbf{Verdict: DISMISSED.}  Every failed leaf is bisected
+and retained.  Completion requires an empty pending queue.  Exact Bernstein
+geometry independently protects the radicals, weights, and denominators.
+
+\item \textbf{Objection:} The old global tilted-variance counterexample
+refutes this proof.  \textbf{Verdict: DISMISSED.}  That counterexample applies
+to a different packet.  R-115 proves nonnegative skew for the three-atom
+Radau law of the actual R-112 packet using the packet-specific certificate
+(5.1)--(5.6); no blanket monotonicity assertion is made.
+
+\item \textbf{Objection:} Four moments and $K>2V$ alone prove the result.
+\textbf{Verdict: UPHELD AS FALSE.}  The exact law (6.8) violates that claim.
+The actual-packet skew inequalities are essential and are pinned as evidence.
+
+\item \textbf{Objection:} Scalar closure proves the A13 one-use theorem or
+Sector A.  \textbf{Verdict: UPHELD AS A FORBIDDEN READING.}  The stationary
+scalar model has not yet been embedded into the full A1 owner tensor, and the
+separate one-use source/sextic aggregation is unproved.  Tier stays T4.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SCALAR-K2K-FOUR-MOMENT-RADAU-ALL-AMPLITUDE-CLOSURE
+Precise statement: R-115 proves the original R-112 stationary scalar k:2k
+  log-Laplace inequality for every covariance shape c in [0,1], every
+  amplitude b>=0, and every tau>=0, strictly for tau>0. R-114 covers
+  b<=643/200; a four-moment Radau majorant, exact three-atom skew lemma,
+  exact algebraic guards, and a complete outward Arb cover close b>=643/200.
+Scope: The original stationary scalar model only; not the full A1 tensor
+  embedding or the one-use source/sextic aggregation.
+Dependencies: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION;
+  R-087; R-103; R-105; R-110--R-114.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command:
+  E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_scalar_k2k_four_moment_radau_all_amplitude_verify.py
+Expected output: Integrated R-115 PASS; primary and independent children
+  PASS. The primary enforces 46714 evaluations, 23613 accepted leaves,
+  zero pending leaves, and a positive outward margin. The independent child
+  enforces the 2850, 2145, and 11175 exact positive Bernstein counts and
+  their canonical hashes. Two method-boundary children independently enforce
+  1655/1655 extension signs, the exact KS failure inside the live time range,
+  and the generic reserve-only gap 2789/273600.
+Falsification gate: Any failed moment, Radau/Hermite identity, skew identity,
+  exact geometry guard, directed-rounding leaf, child/source/note/PDF hash,
+  nonempty pending queue, or promotion beyond the stationary scalar scope.
+Tier before / after: T4 / T4.
+No-overclaim statement: No full A1 owner-preserving embedding, adapted
+  production cluster, one-use source/sextic aggregation, OVERLAP_src,
+  Nelson bound, removal limit, interacting measure, Sector-A closure, or
+  higher tier is established.
+Next required action: Embed only this proved scalar normalizer into the full
+  A1 one-fresh-root contraction-closed conditional owner cluster, retaining
+  complete heat, mean, trace, mixed baseline, rational recovery, every visit,
+  random-W double divergence, and the R-063 forest exactly once; then prove
+  the separate one-use source/sextic aggregation.
+\end{verbatim}

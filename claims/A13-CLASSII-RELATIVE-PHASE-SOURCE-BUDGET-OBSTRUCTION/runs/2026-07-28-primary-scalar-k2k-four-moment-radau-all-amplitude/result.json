@@ -1,0 +1,111 @@
+{
+  "assertions": {
+    "complete_cover": true,
+    "moment_and_identity_self_tests": true,
+    "regression_counts_match": true,
+    "strict_outward_margin": true
+  },
+  "cover": {
+    "accepted_leaves": 23613,
+    "algorithm_regression_oracles": {
+      "accepted_leaves_match": true,
+      "evaluations_match": true,
+      "expected_accepted_leaves": 23613,
+      "expected_evaluations": 46714
+    },
+    "evaluations": 46714,
+    "initial_c_splits": 32,
+    "initial_d_splits": 16,
+    "pending_boxes": 0,
+    "weakest_outward_lower": "[0.00193664695235720454091328466444054820087751873508912075684754 +/- 4.46e-63]"
+  },
+  "domain": {
+    "b": "[643/200,+infinity)",
+    "c": "[0,1]",
+    "d_equals_inverse_b": "[0,200/643]"
+  },
+  "environment": {
+    "arb_decimal_digits": 60,
+    "python": "3.12.9",
+    "python_flint": "0.9.0",
+    "source_path": "E:\\Dev\\TECT\\codes\\foundations\\a13_classii_scalar_k2k_four_moment_radau_all_amplitude.py",
+    "source_sha256": "796137d283a98e3a802859c776e0b87fcacd7421e05cf06f095af0634afeaaef",
+    "sympy": "1.14.0"
+  },
+  "failure_reasons_this_run": {
+    "margin::second_branch_margin": 15266,
+    "nonfinite::p": 279,
+    "nonfinite::q": 620,
+    "nonfinite::second_branch_margin": 2639,
+    "nonfinite::stationary": 4290,
+    "nonfinite::v": 7
+  },
+  "schema": "tect/a13-scalar-k2k-four-moment-radau-all-amplitude-primary/1.0",
+  "self_tests": {
+    "derived_polynomial_term_counts": {
+      "H": 33,
+      "J": 48,
+      "N": 70,
+      "discriminant_numerator": 176
+    },
+    "exact_adverse_fixture": {
+      "base_weights": [
+        "1/10",
+        "4/5",
+        "1/10"
+      ],
+      "normalized_third_central_moment": "-16/343",
+      "support": [
+        "0",
+        "1",
+        "2"
+      ],
+      "tilt": "log(2)",
+      "tilted_masses": [
+        "1/10",
+        "2/5",
+        "1/40"
+      ]
+    },
+    "identity_checks": {
+      "centered_mean_zero": true,
+      "scaled_mass_one": true,
+      "scaled_mean_half": true,
+      "variance_identity": true
+    },
+    "projective_moment_checks": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "scaled_moment_term_counts": [
+      1,
+      1,
+      11,
+      21,
+      35
+    ],
+    "scaled_moment_total_degrees": [
+      0,
+      0,
+      6,
+      9,
+      12
+    ],
+    "three_point_skew_identity": true
+  },
+  "status": "PASS",
+  "theorem_gate": {
+    "base_conditions": [
+      "u>=v>0",
+      "p<=q",
+      "p<=a"
+    ],
+    "certified_conclusion": "the sufficient all-negative-tilt third-central-moment gate is strictly positive",
+    "consequence": "the Radau proxy tilted variance is nonincreasing for every tilt t>=0",
+    "support": "{0,v,v+u}"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,178 @@
+{
+  "certificates": {
+    "Q_HIGH": {
+      "c_interval": [
+        "5/8",
+        "1"
+      ],
+      "coefficient_count": 15,
+      "degree": [
+        2,
+        4
+      ],
+      "minimum": "3891/65536",
+      "reconstructed_power_terms": 12,
+      "reconstruction": "PASS",
+      "sha256": "f63253bce8f4c983a3cac33ed2426c8d2251c4e40cebdcf4b3ab066da24e9956"
+    },
+    "Q_LOW": {
+      "c_interval": [
+        "0",
+        "1/10"
+      ],
+      "coefficient_count": 15,
+      "degree": [
+        2,
+        4
+      ],
+      "minimum": "6219/204800",
+      "reconstructed_power_terms": 11,
+      "reconstruction": "PASS",
+      "sha256": "7dd2f3f049c4ee9b4c8f3a848e1a1ecdb141fa9b84f4487ea26c5fcd660a7d46"
+    },
+    "T4_A": {
+      "c_interval": [
+        "1/10",
+        "37/160"
+      ],
+      "coefficient_count": 325,
+      "degree": [
+        12,
+        24
+      ],
+      "minimum": "2728092736192253444284895703695658643414263274518284651277/17014118346046923173168730371588410572800000000000000000",
+      "reconstructed_power_terms": 247,
+      "reconstruction": "PASS",
+      "sha256": "5b17ee585048919695677e650476d3c95c520d968efd6a661536aabe46c86ba2"
+    },
+    "T4_B": {
+      "c_interval": [
+        "37/160",
+        "19/64"
+      ],
+      "coefficient_count": 325,
+      "degree": [
+        12,
+        24
+      ],
+      "minimum": "2003248098796735491563070704588642113739758686780105/374144419156711147060143317175368453031918731001856",
+      "reconstructed_power_terms": 247,
+      "reconstruction": "PASS",
+      "sha256": "63e61e9e8a5872d03c98483f12717e4b7b9faef43b00c9359b84fb205dd93e5d"
+    },
+    "T4_C1": {
+      "c_interval": [
+        "19/64",
+        "211/640"
+      ],
+      "coefficient_count": 325,
+      "degree": [
+        12,
+        24
+      ],
+      "minimum": "7772656108980053481671212084244616346050890819271643735303317909/305747077890672782266078517362539346133153667787406704640000000000",
+      "reconstructed_power_terms": 247,
+      "reconstruction": "PASS",
+      "sha256": "4508666055eb09be3b162e6c9d68f1a734f64c5cc9128bc17bd2d75097bc2593"
+    },
+    "T4_C2": {
+      "c_interval": [
+        "211/640",
+        "29/80"
+      ],
+      "coefficient_count": 325,
+      "degree": [
+        12,
+        24
+      ],
+      "minimum": "52234261130319893893566916150207422165991045632214448695154430074144997/4789048565205902682369834459844716198808559756823756800000000000000000",
+      "reconstructed_power_terms": 247,
+      "reconstruction": "PASS",
+      "sha256": "5d3d14e28ee3f226a091a574d60dc21d7417935ba5a11e2dfb5afdfdeb917627"
+    },
+    "T4_D": {
+      "c_interval": [
+        "29/80",
+        "5/8"
+      ],
+      "coefficient_count": 325,
+      "degree": [
+        12,
+        24
+      ],
+      "minimum": "19549169346075828112431193416274769327211257493/247588007857076054979824844800000000000000000",
+      "reconstructed_power_terms": 247,
+      "reconstruction": "PASS",
+      "sha256": "f96a801312eab04228cc3fe152c6c01a80387ffd790a8cafdc28faadd6c8cb90"
+    }
+  },
+  "engine": "stdlib fractions.Fraction sparse bivariate polynomial; no SymPy",
+  "exact_KS_failure_witness": {
+    "A": "96285711391/20000000000",
+    "D": "7333898609/20000000000",
+    "K": "714380717081/160000000000",
+    "Q": "-7333898609/20000000000",
+    "V": "44475906391/20000000000",
+    "atanh_ratio_upper": "428087390852632516645873315352297898647684161/427258240611925223960123595561195346763100000",
+    "atanh_upper_derivation": "atanh(y)/y=sum_{n>=0} y^(2n)/(2n+1) <=1+y^2/3+y^4/[5(1-y^2)] for 0<y<1",
+    "b": "3219/1000",
+    "beta": "3219/2000",
+    "c": "31/100",
+    "distance_above_certified_endpoint": "1/4000",
+    "r": "96285711391/32190000000",
+    "residual_tau_cap": "30752000/13830961",
+    "residual_tau_cap_above_two_gap": "3090078/13830961",
+    "sharp_KS_equality_time": "tau_star=4*atanh(y)/r, with 0<tau_star<1/8<R(b)",
+    "tau_star_rational_upper": "14667797218000/143167942672629",
+    "tau_star_upper_below_one_eighth_gap": "25825564928629/1145343541381032",
+    "upper_KS_margin": "-72442776419046601199446847233957478399499392897/392881140792574918584021697067765836104000000000000000",
+    "verdict": "full exact Kearns-Saul coefficient cannot certify this point",
+    "y": "7333898609/96285711391"
+  },
+  "generic_four_moment_reserve_counterexample": {
+    "K": "16/5",
+    "exp_minus_half_lower": "29/48",
+    "exp_one_fifth_upper": "3481/2850",
+    "exp_one_lower": "1957/720",
+    "lower_support_for_minus_X": "-2",
+    "mean": "0",
+    "positive_rational_gap": "2789/273600",
+    "support_X": [
+      "-1",
+      "0",
+      "2"
+    ],
+    "t": "1/2",
+    "variance": "3/2",
+    "verdict": "support, four moments, and K>2 Var do not imply the target distribution-free",
+    "weights": [
+      "1/2",
+      "1/4",
+      "1/4"
+    ]
+  },
+  "identities": {
+    "atanh_lower_remainder_derivative": "y^6/(1-y^2)",
+    "every_Bernstein_power_reconstruction": "PASS",
+    "fifth_proxy": "30*K*B*(B+V)^4 + 10*K*B*(B-V)^2*(B+V)^2 + 6*K*B*(B-V)^4 - 15*(B+V)^6"
+  },
+  "schema": "tect/a13-scalar-k2k-four-moment-radau-method-boundaries-independent/1.0",
+  "scope": {
+    "b_interval": [
+      "643/200",
+      "103/32"
+    ],
+    "c_interval": [
+      "0",
+      "1"
+    ],
+    "classifier": "Q>=0 or fifth-order atanh T4>0"
+  },
+  "source": {
+    "path": "E:\\Dev\\TECT\\codes\\foundations\\a13_classii_scalar_k2k_four_moment_radau_method_boundaries_independent.py",
+    "sha256": "7bd326fc03728ef66deb6fba248ceddc20515c984c6c1620349772deb6162c1f"
+  },
+  "status": "PASS",
+  "total_exact_positive_coefficients": 1655,
+  "version": "1.0.0"
+}
