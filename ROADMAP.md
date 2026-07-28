@@ -323,11 +323,22 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   `tau>=0`, strictly away from `tau=0`. Its four-moment left Gauss--Radau
   majorant and exact three-atom skew lemma are certified both by a complete
   outward Arb cover and by a structurally independent exact Bernstein/radical
-  proof. The next gate is no longer a scalar classifier: embed this theorem
-  into the full A1 one-fresh-root, contraction-closed, owner-preserving
-  conditional cluster, retaining random-W double divergence, heat, mean,
-  trace, mixed baseline, rational recovery, forest, and every visit exactly
-  once. Then prove the separate one-use source/sextic aggregation.
+  proof. R-116 now proves that same-root visits descend to one complete
+  endpoint square-minus-trace quotient, fixes the partial-Wick Sigma-Q owner,
+  absorbs fresh first chaos into the frozen determinant, and gives the exact
+  optimized conditional-Holder composition. For finite-dimensional polynomial
+  homogeneous quadratic roots it also gives the exact parabolic-tangent
+  recession classifier, including the codimension-sensitive equality case,
+  and classifies the active R-082 finite-Fourier nulls as plane waves. The
+  remaining production gate is not another scalar classifier: extend this
+  recession control to the rational-homogeneous R-082 root or prove a stronger
+  cutoff/floor-uniform trace-null metric margin, then embed it into the full A1
+  one-fresh-root, contraction-closed, owner-preserving conditional cluster.
+  Retain random-W double divergence, heat, mean, trace, mixed baseline,
+  rational recovery, forest, and every visit exactly once. Then prove the
+  separate one-use source/sextic aggregation. Centering-only covariance cost,
+  full-Wick tensorization, derivative-range-only recession, and a standalone
+  gauge plane-wave rank-two root are now registered method boundaries.
   `OVERLAP_src`, Nelson, removals, the interacting measure, and Sector A
   remain open. R-080,
   `A13-CLASSII-LOW-OBJECT-FAR-SQUARE-PROGRESSIVE-BOUNDARY`, closes both low
@@ -910,9 +921,16 @@ preserved in git/changelog rather than treated as current gates.
    four-moment left Radau majorant and packet-specific all-tilt skew geometry,
    proved once by a zero-pending outward Arb cover and independently by exact
    Bernstein/radical signs. The complete stationary scalar theorem is now
-   closed. Continue with the owner-preserving full-A1 one-fresh-root
-   conditional cluster, not another scalar classifier, and then the separate
-   one-use source/sextic aggregation.
+   closed. R-116 supplies the exact same-root endpoint quotient, partial-Wick
+   owner firewall, first-chaos determinant absorption, optimized conditional-
+   Holder composition, finite-dimensional parabolic-tangent recession
+   classifier, and exact R-082 plane-wave null classification. Continue by
+   proving a cutoff/floor-uniform rational-homogeneous parabolic-tangent or
+   trace-null metric margin and embedding it into the owner-preserving full-A1
+   one-fresh-root conditional cluster. Then prove the separate one-use
+   source/sextic aggregation. Do not substitute a centered abstract tensor,
+   full-Wick tensor normalizer, derivative-range test, or standalone gauge
+   plane wave for that production root.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed
    endpoint block, pay terminal raw energy and injection separately, assume

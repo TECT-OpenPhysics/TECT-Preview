@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-116](#r-116) | One-fresh-root owner quotient, exact parabolic-tangent recession, and the centered null-cone boundary | Scoped T4 analytic/exact/executed advance and method boundary: every same-root visit packet with fixed reveal sigma-field, target heat, covariance, and contraction-closed projection telescopes to one endpoint square-minus-trace quotient, so internal visits and the fresh--future cross are owned exactly once. Full Wick ordering is only a diagnostic: the physical partial-Wick XY packet differs by the load-bearing Sigma Q owner. First chaos absorbs into the frozen whole-output determinant; actual conditional packets compose by optimized Holder; tilted random-W costs require a doubled-tilt normalizer. For finite-dimensional homogeneous quadratic output, the exact Gaussian tail classifier is lambda_q=inf_(v,z)[1-q tau(v)+q||Av+z||^2] over the common null cone and full parabolic tangent image. Positive lambda_q gives integrability, negative gives divergence, and equality depends on critical-stratum codimension. Exact centered and full-Wick tensor fixtures disprove universal centering-only and covariance-cost normalizers. The R-082 pointwise null set is classified; active finite-Fourier nulls are constant-polarization plane waves with an explicit real-linearized symbol, but no cutoff-uniform near-null metric bound follows. The plane-wave face is not a standalone legal production root. Full A1 progressive/revisit normalization, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-115](#r-115) | Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem | Scoped T4 analytic/exact/executed theorem: the original R-112 scalar gap is strict for every `c in [0,1]`, every amplitude `b>=0`, and every `tau>0`, with equality at `tau=0`. R-114 covers `b<=643/200`; on the complementary compact reciprocal-amplitude rectangle, a left three-node Gauss--Radau majorant, an exact all-tilt three-atom skew lemma, a complete outward Arb cover, and a structurally independent exact Bernstein/radical certificate prove decreasing proxy variance. This closes only the stationary scalar theorem. The full A1 one-fresh-root owner-preserving embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-114](#r-114) | Support--two-moment closure of the scalar physical cone | Scoped T4 analytic/exact/executed theorem and method boundary: for the original R-112 stationary scalar `k:2k` packet, the exact gap is strict for every `c in [0,1]`, `tau>0`, and `0<=x<=643tau/200`, with equality at the origin. A sharp large-`b` floor and two non-importing exact implementations reconstruct 3,981 positive rational Bernstein coefficients. This closes the complete zero-amplitude axis and subsumes the R-113 Arb seed. The strict `b=x/tau>643/200` scalar residual, mixed all-`b` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-113](#r-113) | Effective scalar boundary patches and first directed-rounding mixed box | Scoped T4 analytic/exact/executed advance: four explicit projective wedges, eight origin cones, quantitative covariance-face widths, two sharper phase floors (including the whole zero-amplitude simplex for `tau>=13`), and two non-importing outward-rounded Arb certificates for one genuinely mixed parameter box. The remaining compact scalar decision problem, mixed all-`q` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
@@ -134,6 +135,81 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-116"></a>
+### R-116 -- One-fresh-root owner quotient, exact parabolic-tangent recession, and the centered null-cone boundary
+
+**Result ID.**
+A13-CLASSII-ONE-FRESH-ROOT-OWNER-QUOTIENT-WICK-NULLCONE-BOUNDARY.
+
+**Exact owner quotient.**  For one root, one contraction-closed cluster, and
+any same-root visit path whose reveal sigma-field, target heat, common
+covariance, and projection are fixed, the sum of
+Re<x,Delta x>+||Delta x||^2/2-Delta tau/2 equals the terminal
+(||x_*||^2-||x_0||^2)/2-(tau_*-tau_0)/2.  Internal visits cancel and the
+fresh--future cross occurs exactly once.  This is quotient descent, not a
+normalizer.
+
+**Wick and composition boundary.**  The finite-polynomial identity
+F diamond G=sum_r (-1)^r <D^rF,D^rG>/r! gives an exact partial-Wick
+decomposition.  For F=XY, the physical production subtraction F^2-X^2
+differs from the full Wick square by Y^2-1, a load-bearing Sigma Q owner.
+Residual first chaos instead merges into the frozen whole-output determinant
+and obeys its exact det2 bound.  Conditional Holder composes valid packet
+normalizers with optimized cost (q^2/4)(sum sqrt(H_i))^2; a same-root random-W
+tilted score requires the doubled normalizer Phi(2q)-2Phi(q).
+
+**Exact tail theorem.**  For finite-dimensional homogeneous quadratic Q,
+linear A, baseline b, and homogeneous quadratic trace tau, define
+U_q=(|x|^2-q tau+q||b+Ax+Q(x)||^2)/2.  On the common null cone, let T_Q(v)
+be the full parabolic tangent image of limits r Q(v_r).  Then
+
+liminf_(|x|->infinity) 2U_q(x)/|x|^2
+= inf_(v,z) [1-q tau(v)+q||Av+z||^2].
+
+A strictly positive value implies Gaussian integrability and a strictly
+negative value implies divergence.  Equality is undecided: the exact model
+Q(t,y)=ty, tau=t^2/q is divergent in normal codimension one and finite above
+it.  Replacing T_Q(v) by Ran DQ(v) requires an explicit local metric error
+bound; singular quadratic nulls show that the replacement otherwise fails.
+
+**Method no-gos and production boundary.**  An exactly centered tensor with
+Q=U^2-V^2, b=2, tau=4(U^2+V^2) has finite covariance and double-divergence
+costs 128 and 1088, yet its negative Laplace transform diverges for q>=1/4.
+A separate exactly centered full-Wick two-output tensor has sharp domain
+q epsilon^2<1/4 and explicitly violates the proposed covariance target at
+q=10/9.  These are abstract tensor no-gos, not A1 embeddings.
+
+The exact R-082 null set is also classified.  On a connected torus, every
+active finite-Fourier null is u=p exp(ik.x), chi=c exp(i ell.x); the
+pure-singlet branch remains unrestricted.  The real-linearized
+Pauli--Fierz symbol is explicit, but real phase modulations lie in its kernel,
+so exact Laurent rigidity does not prove near-null metric stability or a
+cutoff-uniform recession margin.  The plane-wave gauge face is a deterministic
+face of a full legal production root, not a separately revealable rank-two
+root atom.  The full stationary root restores expectation centering.  A
+terminal sextic repairs the face only at fixed cutoff with a nonuniform
+derivative-covariance loss.
+
+**Proven in.**  Claim
+A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION, note
+classii-one-fresh-root-owner-quotient-wick-nullcone-boundary-260728-v1.0,
+primary 30/30, non-importing independent 23/23, and manifest-pinned integrated
+verification.
+
+**Reuse scope.**  Gaussian polynomial tail classification, same-root endpoint
+quotients, partial-Wick owner audits, critical null-cone tests, finite-Fourier
+constant-modulus rigidity, and production gauge-kernel audits.
+
+**Boundary.**  The polynomial theorem does not automatically cover the
+rational-homogeneous A1 row.  A cutoff/floor-uniform parabolic-tangent or
+stronger trace margin for the complete owner-preserving progressive/revisit
+root remains open, followed by the separate one-use source/sextic aggregation.
+OVERLAP_src, Nelson, removals, the interacting measure, and Sector A remain
+open.  Tier stays T4.
+
+**Publication target.**  Gaussian analysis and stochastic-geometric
+renormalisation methods note, after the production uniformity gate is resolved.
 
 <a id="r-115"></a>
 ### R-115 -- Four-moment Radau all-amplitude closure of the stationary scalar `k:2k` theorem

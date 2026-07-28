@@ -6,6 +6,10 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER](#ng-2026-07-28-a13-centered-quadratic-null-cone-normalizer) | infer a nonlinear root normalizer from exact centering, PSD tangent covariance, and finite unweighted covariance/double-divergence costs | for independent U,V, the exactly centered packet L=((2+U^2-V^2)^2-4(U^2+V^2))/2 has H=128 and K_W=1088, yet E exp(-qL) diverges for every q>=1/4 along a common-null-cone tube. A strict parabolic-tangent recession margin or a critical-stratum theorem is indispensable. This is an abstract trace-compatible tensor no-go, not an A1 production counterexample |
+| [NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER](#ng-2026-07-28-a13-full-wick-tensor-normalizer) | repair the nonlinear root by replacing the physical partial-Wick owner with an abstract exactly centered full-Wick square and paying only its realized tangent-covariance cost | the two-output tensor R=(2 epsilon UV,2 kappa epsilon H2(V)) has exact full-Wick mean zero and finite covariance cost, but its normalizer has the sharp domain q epsilon^2<1/4. At q=10/9, kappa=1/100 and an explicit amplitude below the boundary give a Laplace lower bound above 9 while the proposed exponent is below 21/10. The fixture is abstract and does not embed a legal A1 row |
+| [NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET](#ng-2026-07-28-a13-separated-interpolation-cross-score-budget) | bound the trace-corrected interpolation endpoint and its tilted cross-score as separate positive costs independent of the predictable baseline | the affine scalar A=C=1 endpoint increment contains a positive multiple of b^2 while its tangent covariance costs are baseline-independent; the negative resolvent baseline term cancels it only in the complete endpoint. The endpoint and cross-score must remain coupled |
+| [AUDIT-2026-07-28-A13-GAUGE-NULL-RANKTWO-ROOT-SCOPE](#audit-2026-07-28-a13-gauge-null-ranktwo-root-scope) | earlier interpretation of the R-082 plane-wave gauge face as a standalone legal rank-two production root | deleting the equal-variance sine/cosine partners violates componentwise value-gradient parity. The plane wave is a genuine pointwise full-current null face with positive full-root trace, but not an independently revealable temporally faithful root atom. The full stationary root restores exact expectation centering; only pointwise coercivity is refuted |
 | [NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION](#ng-2026-07-28-a13-k2k-exact-ks-post-extension) | continue the support--two-moment route beyond its fifth-order exact extension by using the full sharp Kearns--Saul coefficient | at `(b,c)=(3219/1000,31/100)`, only `1/4000` beyond `103/32`, an exact rational upper bound makes the sharp-coefficient margin strictly negative while its equality time remains inside the live compact time range. This retires every proof based only on the selected support floor and first two moments there; it is not a counterexample to the scalar target, which R-115 closes by packet-specific four-moment Radau geometry |
 | [NG-2026-07-28-A13-FOUR-MOMENT-RESERVE-ONLY](#ng-2026-07-28-a13-four-moment-reserve-only) | infer the scalar quadratic log-Laplace target for every lower-supported law from four moments and a positive covariance reserve alone | the three-atom law `X in {-1,0,2}` with weights `(1/2,1/4,1/4)` has `Var(X)=3/2`, admits `K=16/5>2 Var(X)`, yet at `t=1/2` its Laplace transform exceeds `exp(1/5)` by an explicit positive rational lower gap. The blanket theorem is false; R-115 instead uses the actual packet's Radau-node, weight, and all-tilt skew inequalities |
 | [NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE](#ng-2026-07-28-a13-k2k-cubic-ks-proxy-beyond-cone) | extend the R-114 support--two-moment cone globally using the sharp floor `beta=b/2` and only the cubic lower bound `atanh(y)>=y+y^3/3` | only `3/800` beyond the certified endpoint, at `(b,c)=(103/32,5/16)`, the variance branch has `Q_beta=-24109/65536<0` and the cleared cubic proxy has `S_beta=-127544381197984065/18446744073709551616<0`. This retires only that sufficient polynomial proxy beyond the proved `b<=643/200` cone; it is not a counterexample to the exact Kearns--Saul coefficient, higher moments, or the scalar target |
@@ -158,6 +162,116 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-centered-quadratic-null-cone-normalizer"></a>
+### NG-2026-07-28-A13-CENTERED-QUADRATIC-NULL-CONE-NORMALIZER -- exact centering and finite unweighted tensor costs do not control a common null cone
+
+**Claim / route.**  Prove a universal nonlinear one-root bound from exact
+centering, positive semidefinite tangent covariance, finite
+E||W||_HS^2, and finite E(delta^2W)^2, without a separate coercive tail
+margin.
+
+**Failure mode.**  For independent standard U,V set
+Q=U^2-V^2, b=2, tau=4(U^2+V^2), and
+L=((2+Q)^2-tau)/2.  Exact Gaussian moments give E L=0.  With
+W=DQ tensor DQ,
+
+E||W||_HS^2=128,
+delta^2W=4(U^2-V^2)^2-12(U^2+V^2)+8,
+E(delta^2W)^2=1088.
+
+In rotated coordinates u=(U+V)/sqrt(2), v=(U-V)/sqrt(2),
+L<=8-2v^2 on |u|<=1/|v|.  After including the Gaussian density, the
+exponential rate is (2q-1/2)v^2.  It is positive for q>1/4, while equality
+leaves the nonintegrable tube width 1/|v|.  Hence E exp(-qL)=infinity for
+every q>=1/4.
+
+**Evidence.**  R-116 proof note, Proposition 6.1; primary exact moments and
+tube threshold 30/30; independent Gauss--Hermite reconstruction 23/23;
+integrated manifest-pinned verifier.
+
+**Consequence.**  Centering, PSD, and finite unweighted H/K_W cannot replace
+a strict common-null-cone recession margin.  This is an abstract
+trace-compatible tensor no-go, not a legal A1 production counterexample.
+
+<a id="ng-2026-07-28-a13-full-wick-tensor-normalizer"></a>
+### NG-2026-07-28-A13-FULL-WICK-TENSOR-NORMALIZER -- exact full-Wick centering retains a sharp null-cone domain
+
+**Claim / route.**  Change the physical partial-Wick endpoint to an abstract
+full-Wick square and infer
+log E exp(-qP)<=(q^2/4)E||DR DR*||_HS^2 from exact centering alone.
+
+**Failure mode.**  For independent U,V let
+R=(2 epsilon UV,2 kappa epsilon H2(V)).  Its full-Wick packet has exact mean
+zero and
+
+E||DR DR*||_HS^2=128 epsilon^4(1+kappa^2+6kappa^4).
+
+With alpha=q epsilon^2, conditioning on V gives a denominator
+sqrt(1+4 alpha(V^2-1)), so the exact normalizer domain is alpha<1/4.
+At q=10/9, kappa=1/100, delta=10^-50,
+alpha=(1-delta)/4, and epsilon^2=9(1-delta)/40, the target exponent is below
+21/10.  Direct integration over sqrt(delta)<=|V|<=1 gives the lower bound
+25 log(10)/(e sqrt(pi))>115/12>9>exp(21/10).
+
+**Evidence.**  R-116 proof note, Proposition 6.2; primary symbolic covariance
+cost and exact rational threshold; independent Gauss--Hermite cost; integrated
+verifier.
+
+**Consequence.**  Even the changed abstract full-Wick packet needs a strict
+null-cone/amplitude margin or a divergent boundary remainder.  The fixture
+has no verified A1 Cartan/Fierz tensor, Fourier ownership, heat trace,
+chronology, rational recovery, or R-063 forest, so it is not a production
+counterexample.
+
+<a id="ng-2026-07-28-a13-separated-interpolation-cross-score-budget"></a>
+### NG-2026-07-28-A13-SEPARATED-INTERPOLATION-CROSS-SCORE-BUDGET -- the baseline cancellation belongs to the complete endpoint
+
+**Claim / route.**  Estimate the trace-corrected diagonal interpolation
+endpoint and its tilted cross-score by separate nonnegative covariance costs
+that do not retain the predictable baseline.
+
+**Failure mode.**  In the affine scalar fixture A=C=1 with
+t_rho=2+2rho,
+
+Phi_rho=(q t_rho-log(1+q t_rho))/2
+        -q b^2/(2(1+q t_rho)).
+
+The rho=0 to rho=1 increment contains a strictly positive multiple of b^2,
+while the tangent covariance costs are independent of b.  The complete
+endpoint remains controlled because its negative resolvent baseline term is
+the compensating owner.
+
+**Evidence.**  R-116 proof note, equation (4.7), together with the R-110 exact
+trace-corrected interpolation.
+
+**Consequence.**  The endpoint, cross-score, trace forest, and baseline
+resolvent must remain in one coupled normalizer.  This retires only the
+separated positive budget, not the complete interpolation.
+
+<a id="audit-2026-07-28-a13-gauge-null-ranktwo-root-scope"></a>
+### AUDIT-2026-07-28-A13-GAUGE-NULL-RANKTWO-ROOT-SCOPE -- a gauge-null face is not an independently revealable production root
+
+**Type.**  Self-caught scope correction; pointwise null algebra retained,
+standalone-root wording withdrawn.
+
+**Failure mode.**  The field
+u_1=x_1 cos(kx)+i x_2 sin(kx), u_2=chi=0 has every R-082 current row zero on
+x_1=+/-x_2.  An earlier interpretation retained only the real-cosine and
+imaginary-sine covariance coordinates and treated them as a rank-two root.
+That deletion breaks the required componentwise production parity
+E[X^c partial X^a]=0.  The omitted equal-variance sine/cosine partners are
+load-bearing.
+
+**Evidence.**  R-116 proof note, Section 7; exact complex-coordinate
+plane-wave and real-linearized-symbol checks in both executable routes.
+
+**Consequence.**  The plane wave remains a genuine pointwise null face with
+positive full-root heat trace, so it refutes pointwise current-square
+coercivity.  It is not a standalone R-104 root atom or conditional-normalizer
+counterexample.  The full stationary root restores exact expectation
+centering.  Complementary polarizations, all shared outputs, future feedback,
+rational harmonics, and the R-063 forest must remain in the same cluster.
 
 <a id="ng-2026-07-28-a13-k2k-exact-ks-post-extension"></a>
 ### NG-2026-07-28-A13-K2K-EXACT-KS-POST-EXTENSION -- the sharp two-moment coefficient fails immediately after its exact fifth-order extension

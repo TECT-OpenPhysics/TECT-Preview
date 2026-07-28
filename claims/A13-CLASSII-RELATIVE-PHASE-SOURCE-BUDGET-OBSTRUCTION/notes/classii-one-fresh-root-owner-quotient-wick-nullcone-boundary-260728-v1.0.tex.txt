@@ -1,0 +1,849 @@
+% =============================================================================
+% Title: One-fresh-root owner quotient and null-cone recession boundary
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: T4 ANALYTIC/EXACT/EXECUTED ADVANCE AND BOUNDARY; SECTOR A OPEN
+% Result: A13-CLASSII-ONE-FRESH-ROOT-OWNER-QUOTIENT-WICK-NULLCONE-BOUNDARY
+% Ledger: R-116
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Id}{\mathrm I}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\HS}{\mathfrak S_2}
+\newcommand{\cF}{\mathcal F}
+
+\section{Purpose and scope firewall}
+
+R-115 closed the original stationary scalar $k{:}2k$ normalizer, but the
+full one-fresh-root A1 production cluster still contains every visit, every
+input, complete target heat, mean and trace, mixed predictable baseline,
+rational recovery, random-$W$ double divergence, and the R-063 contraction
+forest.  The present result pushes that frontier in the complete owner
+coordinate and identifies the exact finite-dimensional tail condition that
+any nonlinear root theorem must satisfy.
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{What is proved.}
+The same-root visit packet descends exactly to one endpoint quotient.  The
+abstract Gaussian partial-Wick decomposition identifies which higher
+contractions are absent from the physical R-063/R-107 packet.  Fresh-root
+first chaos is absorbed into the frozen whole-output determinant.  Actual
+R-115 conditional packets compose by optimized conditional Holder, and a
+tilted random-$W$ term is reduced to a doubled-tilt normalizer.
+
+For a finite-dimensional homogeneous quadratic output, the exact Gaussian
+integrability classifier is a common-null-cone recession number involving
+the full parabolic tangent image $\mathcal T_Q(v)$.  Strictly positive
+recession gives integrability, strictly negative recession gives divergence,
+and equality genuinely depends on critical-stratum codimension.  Two exact
+centered tensor fixtures show that neither centering nor full Wick ordering
+alone supplies the required margin.
+
+The exact R-082 pointwise null set is classified.  In the finite-Fourier
+active branch it consists of constant-polarization plane waves, and its
+real-linearized Pauli--Fierz symbol is explicit.  This classification does
+not prove a quantitative near-null stability estimate or a cutoff-uniform
+recession margin.
+
+\textbf{What is not proved.}
+The abstract quadratic theorem is not automatically the rational A1 row.
+The plane-wave null is a face of a legal production root, not an independently
+revealable rank-two root atom.  No full progressive/revisit production
+normalizer, one-use source/sextic aggregation, $\mathrm{OVERLAP}_{\rm src}$,
+Nelson estimate, removal limit, interacting measure, Sector-A closure, or
+tier promotion is claimed.  A13 remains T4.
+}}
+\end{center}
+
+The fixed-dimensional algebra is at finite cutoff and fixed positive floor.
+The exact recession theorem below assumes a polynomial homogeneous quadratic
+map.  The recession of the rational R-082 row is homogeneous of degree two
+on the sphere but is not globally a quadratic polynomial; applying the same
+architecture there requires a separately stated homogeneous-map extension
+and uniform regularity constants.
+
+\section{One fresh root: the owner-preserving endpoint quotient}
+
+Fix one Gaussian root $j$, a contraction-closed output cluster $C$, and a
+same-root visit path
+\[
+ H_0=A_0,H_1,\ldots,H_L=A_* .                         \tag{2.1}
+\]
+Let
+\[
+ x_H=\Pi_C d_j\Xi_H,
+ \qquad t_H=P_j\tau_{H,j,C},                           \tag{2.2}
+\]
+where the reveal sigma-field, target heat, common covariance, and cluster
+projection remain unchanged along the path.  Put
+\[
+ \Delta x_\ell=x_{H_\ell}-x_{H_{\ell-1}},             \tag{2.3}
+\]
+\[
+ \pi_\ell=
+ \Re\langle x_{H_{\ell-1}},\Delta x_\ell\rangle
+ +{1\over2}\|\Delta x_\ell\|^2
+ -{1\over2}(t_{H_\ell}-t_{H_{\ell-1}}).              \tag{2.4}
+\]
+
+% evidence-anchor: theorem-2.1-same-root-visit-endpoint-quotient
+\subsection*{Theorem 2.1 (same-root visit endpoint quotient)}
+
+The complete visit packet telescopes exactly:
+\[
+ \boxed{
+ \sum_{\ell=1}^L\pi_\ell
+ ={1\over2}\bigl(\|x_{A_*}\|^2-\|x_{A_0}\|^2\bigr)
+ -{1\over2}(t_{A_*}-t_{A_0}).}                         \tag{2.5}
+\]
+
+\emph{Proof.}
+For every visit,
+\[
+ \Re\langle x,\Delta x\rangle+{1\over2}\|\Delta x\|^2
+ ={1\over2}(\|x+\Delta x\|^2-\|x\|^2).              \tag{2.6}
+\]
+Sum (2.6) and the trace increments.  Every internal endpoint occurs once
+with each sign and cancels. \hfill$\square$
+
+For two visits write $a=x_{A_0}$, $f=\Delta x_1$, and
+$\iota=\Delta x_2$.  The square part is
+\[
+ \Re\langle a,f\rangle+{1\over2}\|f\|^2
+ +\Re\langle a+f,\iota\rangle+{1\over2}\|\iota\|^2. \tag{2.7}
+\]
+Thus the fresh--future cross $\Re\langle f,\iota\rangle$ occurs exactly
+once.  Formula (2.7), together with the two trace increments, is precisely
+the R-107 $a/f/\iota$ packet.  This proves quotient descent, not a sign or a
+normalizer.  It also explains why a positive estimate visit by visit is not
+representation invariant.
+
+\section{Partial Wick is a diagnostic, not a replacement owner}
+
+Let $W$ be a finite-dimensional isonormal Gaussian process.  For scalar
+polynomials $F,G$ the full Wick product satisfies
+\[
+ \boxed{
+ F\diamond G
+ =\sum_{r\ge0}{(-1)^r\over r!}
+   \langle D^rF,D^rG\rangle.}                         \tag{3.1}
+\]
+The sum terminates.  For Hilbert-valued polynomials the same formula applies
+componentwise and is basis independent.
+
+\emph{Proof.}
+For the exponential vector
+\[
+ \mathcal E(h)=\exp\{W(h)-\|h\|^2/2\},               \tag{3.2}
+\]
+one has
+\[
+ \mathcal E(h)\diamond\mathcal E(k)=\mathcal E(h+k).
+\]
+On the other hand, $D^r\mathcal E(h)=h^{\otimes r}\mathcal E(h)$, so the
+right side of (3.1) becomes
+\[
+ \mathcal E(h)\mathcal E(k)e^{-\langle h,k\rangle}
+ =\mathcal E(h+k).                                    \tag{3.3}
+\]
+Differentiate in $h,k$ at zero to obtain every polynomial chaos. \hfill$\square$
+
+If only root $j$ is Wick ordered and $F$ has root degree $N$, then for any
+declared trace owner $\tau$,
+\[
+\boxed{
+ {1\over2}(\|F\|^2-\tau)
+ ={1\over2}\langle F\diamond_jF\rangle
+ +{1\over2}(\|D_jF\|^2-\tau)
+ +{1\over2}\sum_{r=2}^N{(-1)^{r+1}\over r!}
+   \|D_j^rF\|^2.}                                    \tag{3.4}
+\]
+Conditionally on the other roots,
+\[
+ \E_j\langle F\diamond_jF\rangle=\|\E_jF\|^2.       \tag{3.5}
+\]
+For affine $F$ and $\tau=\|D_jF\|_{\HS}^2$, every remainder in (3.4)
+vanishes.  This is the frozen R-107 situation.
+
+% evidence-anchor: proposition-3.1-xy-owner-firewall
+\subsection*{Proposition 3.1 (the $XY$ owner firewall)}
+
+For independent standard $X,Y$ and $F=XY$,
+\[
+ F\diamond F=(X^2-1)(Y^2-1),                          \tag{3.6}
+\]
+whereas the production-oriented subtraction of the $Y$-derivative trace is
+\[
+ F^2-X^2=X^2(Y^2-1).                                  \tag{3.7}
+\]
+Their difference is
+\[
+ (F^2-X^2)-(F\diamond F)=Y^2-1.                       \tag{3.8}
+\]
+This is exactly a covariance times the remaining raw-Wick coordinate, the
+kind of $\Sigma Q$ term retained by R-063.  Therefore full Wick ordering
+changes the physical endpoint unless a new production owner theorem proves
+that all R-063 $P_4/P_2/\Sigma Q/P_0$, $P_3/P_1$, trace, and rational
+companions have recombined to it.
+
+For the R-110 scalar output
+\[
+ Y=\varepsilon\{H_2(G)+aH_1(G)\},                    \tag{3.9}
+\]
+the physical partial-Wick packet is
+\[
+ {1\over2}\{Y^2-(Y')^2\}
+ ={1\over2}(Y\diamond Y)-\varepsilon^2.              \tag{3.10}
+\]
+Full-Wick notation exposes the mean debt $-\varepsilon^2$; it does not pay
+that debt.
+
+\subsection*{Affine absorption}
+
+If the apparently nonlinear fresh-root remainder is actually first chaos,
+$R(z)=Cz$, it must be merged into the frozen map.  With $B=A+C$ and
+$\delta_0=\Tr(CC^*)$, the $\rho=1$ endpoint has the exact form
+\[
+ \Phi(1)
+ =-{1\over2}\log\det{}_2(\Id+qBB^*)
+  -{q\over2}\langle b,(\Id+qBB^*)^{-1}b\rangle.      \tag{3.11}
+\]
+Since $x-\log(1+x)\le x^2/2$ for $x\ge0$,
+\[
+ \boxed{\Phi(1)\le {q^2\over4}\|BB^*\|_{\HS}^2.}  \tag{3.12}
+\]
+Hence all residual first chaos belongs in the frozen whole-output
+determinant.  Only genuine nonlinear chaos needs a new theorem.
+
+\section{Composition and the doubled-tilt random-$W$ bridge}
+
+Suppose actual conditionally centered packets $P_i$ satisfy, for all $t\ge0$,
+\[
+ \log\E[e^{-tP_i}\mid\cF_{i-1}]\le {t^2H_i\over4}.  \tag{4.1}
+\]
+Conditional Holder with weights $\theta_i>0$, $\sum_i\theta_i=1$, gives
+\[
+ \log\E e^{-q\sum_iP_i}
+ \le {q^2\over4}\sum_i{H_i\over\theta_i}.            \tag{4.2}
+\]
+The optimizer is $\theta_i=\sqrt{H_i}/\sum_k\sqrt{H_k}$, hence
+\[
+ \boxed{
+ \log\E e^{-q\sum_iP_i}
+ \le {q^2\over4}\left(\sum_i\sqrt{H_i}\right)^2.}   \tag{4.3}
+\]
+At $q=10/9$, $q^2/4=25/81$.  Conditional independence improves the right
+side to $(25/81)\sum_iH_i$.  Identical same-root copies show that this
+additive improvement cannot follow from marginal R-115 estimates alone.
+
+Let $\ell$ be the complete nonlinear packet and let $W$ be the same-root
+random covariance from R-110.  With
+\[
+ d\nu={e^{-q\ell}\over\E e^{-q\ell}}d\gamma,
+\]
+Gaussian integration by parts gives
+\[
+ q^2\E_\nu\langle D\ell,W D\ell\rangle
+ -q\E_\nu\Tr(WD^2\ell)
+ =\E_\nu\delta^2W.                                   \tag{4.4}
+\]
+Writing $K_W=\E(\delta^2W)^2$, Cauchy--Schwarz under the original Gaussian
+law yields
+\[
+ \boxed{
+ |\E_\nu\delta^2W|
+ \le\sqrt{K_W}\exp\left\{{\Phi(2q)-2\Phi(q)\over2}\right\}.} \tag{4.5}
+\]
+If $\Phi(t)\le t^2H_*/4$, then
+\[
+ |\E_\nu\delta^2W|\le\sqrt{K_W}e^{q^2H_*/2}.         \tag{4.6}
+\]
+The exponent is $50H_*/81$ at $q=10/9$.  Thus the random-$W$ bridge requires
+the same doubled-tilt normalizer that the root theorem is meant to provide;
+$K_W$ alone is not a tilted bound.
+
+The interpolation endpoint and its cross-score also cannot be budgeted as
+independent positive objects.  Already for the affine scalar fixture with
+$A=C=1$ and trace path $t_\rho=2+2\rho$,
+\[
+ \Phi_\rho
+ ={qt_\rho-\log(1+qt_\rho)\over2}
+ -{qb^2\over2(1+qt_\rho)}.                            \tag{4.7}
+\]
+The increment from $\rho=0$ to $1$ contains a positive multiple of $b^2$,
+although the tangent covariance costs do not depend on $b$.  The negative
+resolvent term in the total endpoint is the cancellation.  Separating it
+from the interpolation cross-score destroys that cancellation.
+
+\section{Exact quadratic recession classifier}
+
+Let $X\sim N(0,\Id_n)$, let $Q:\R^n\to H$ be homogeneous quadratic, let
+$A:\R^n\to H$ be linear, let $b\in H$, and let $\tau$ be a continuous scalar
+homogeneous quadratic form.  Define
+\[
+ L(x)={1\over2}\{\|b+Ax+Q(x)\|^2-\tau(x)\},          \tag{5.1}
+\]
+\[
+ U_q(x)={1\over2}\{|x|^2-q\tau(x)
+                  +q\|b+Ax+Q(x)\|^2\}.              \tag{5.2}
+\]
+Then $\E e^{-qL(X)}$ is a constant times $\int e^{-U_q(x)}dx$.
+
+Put $Z_Q=Q^{-1}(0)$.  For $v\in Z_Q\cap S^{n-1}$ define the parabolic tangent
+image
+\[
+ \mathcal T_Q(v)=\left\{z:\ \exists r_j\to\infty,
+ v_j\to v,\ |v_j|=1,\ r_jQ(v_j)\to z\right\}.        \tag{5.3}
+\]
+
+% evidence-anchor: theorem-5.1-exact-parabolic-tangent-recession
+\subsection*{Theorem 5.1 (exact parabolic-tangent recession)}
+
+With $\inf\varnothing=+\infty$,
+\[
+\boxed{
+ \lambda_q:=\liminf_{|x|\to\infty}{2U_q(x)\over|x|^2}
+ =\inf_{\substack{v\in Z_Q\cap S^{n-1}\\z\in\mathcal T_Q(v)}}
+ \left\{1-q\tau(v)+q\|Av+z\|^2\right\}.}            \tag{5.4}
+\]
+Moreover:
+\[
+ \lambda_q>0\quad\Longrightarrow\quad \E e^{-qL(X)}<\infty, \tag{5.5}
+\]
+\[
+ \lambda_q<0\quad\Longrightarrow\quad \E e^{-qL(X)}=\infty. \tag{5.6}
+\]
+The case $\lambda_q=0$ is not decided by quadratic recession.
+
+\emph{Proof.}
+For $x=rv$, $|v|=1$,
+\[
+ {2U_q(rv)\over r^2}
+ =1-q\tau(v)+q\left\|Av+rQ(v)+{b\over r}\right\|^2. \tag{5.7}
+\]
+Along a finite recession sequence, compactness supplies a convergent
+subsequence $v_j\to v$.  Finiteness forces $Q(v_j)\to0$ and boundedness of
+$r_jQ(v_j)$, producing (5.3).  Conversely, every sequence in (5.3) inserted
+in (5.7) realizes its displayed recession value.  This proves (5.4).  If
+$Z_Q\cap S^{n-1}$ is empty, compactness gives $\inf_S\|Q\|>0$, and both sides
+are $+\infty$.
+
+If $\lambda_q>0$, then outside a ball
+$U_q(x)\ge\lambda_q|x|^2/4$, proving (5.5).  If $\lambda_q<0$, select
+$x_j$ with $U_q(x_j)\le-c|x_j|^2$.  Since $U_q$ is a polynomial of degree at
+most four, $|\nabla U_q|\le C|x|^3$ on comparable-radius annuli.  A ball of
+radius $\delta/|x_j|$ therefore retains $U_q\le-c|x_j|^2/2$.  Pass to a
+disjoint subsequence.  Its integral is bounded below by
+\[
+ \sum_j C|x_j|^{-n}e^{c|x_j|^2/2}=\infty,             \tag{5.8}
+\]
+which proves (5.6). \hfill$\square$
+
+The predictable baseline $b$ disappears only from strict quadratic
+recession.  It can decide the equality case through lower-order terms.
+
+\subsection*{Why the derivative range is not enough}
+
+Always
+\[
+ \Ran DQ(v)\subseteq\mathcal T_Q(v).                  \tag{5.9}
+\]
+At a singular null, if $DQ(v)\zeta=0$, then second-order approaches can also
+produce
+\[
+ DQ(v)\eta+Q(\zeta)\in\mathcal T_Q(v).                \tag{5.10}
+\]
+For example,
+\[
+ Q(x_1,x_2,x_3)=(x_1x_2,x_3^2),\qquad v=e_1,          \tag{5.11}
+\]
+has $\Ran DQ(v)=\operatorname{span}\{(1,0)\}$, while
+\[
+ v_r=(\sqrt{1-r^{-1}},0,r^{-1/2})
+\]
+gives $rQ(v_r)\to(0,1)$.  Thus replacing $\mathcal T_Q(v)$ by the derivative
+range is false without an error bound.
+
+A sufficient local hypothesis is the metric regularity estimate
+\[
+ \dist(w,Z_Q\cap S^{n-1})\le C\|Q(w)\|               \tag{5.12}
+\]
+near $v$, together with continuity of $DQ$.  Then
+\[
+ \mathcal T_Q(v)=\Ran DQ(v),                           \tag{5.13}
+\]
+and the inner infimum becomes
+\[
+ \dist\{-Av,\Ran DQ(v)\}^2
+ =\dist\{Av,\Ran DQ(v)\}^2.                          \tag{5.14}
+\]
+Without linearity of the tangent image, the safe expression is
+$\dist(-Av,\mathcal T_Q(v))^2$; its sign cannot be silently changed.
+
+An unconditional but stronger sufficient condition is
+\[
+ \sup_{v\in Z_Q\cap S^{n-1}}q\tau(v)<1.              \tag{5.15}
+\]
+
+% evidence-anchor: proposition-5.2-equality-codimension-model
+\subsection*{Proposition 5.2 (equality depends on codimension)}
+
+Let $x=(t,y)\in\R\times\R^k$ and
+\[
+ Q(t,y)=ty,\qquad A=b=0,\qquad \tau(t,y)=t^2/q.       \tag{5.16}
+\]
+Then $\lambda_q=0$ and, up to a finite dimensional constant,
+\[
+ \E e^{-qL}=\int_\R(1+qt^2)^{-k/2}dt.                \tag{5.17}
+\]
+This diverges for $k=1$ and is finite for $k>1$.  Thus a zero recession
+margin requires the critical-stratum dimension, normal rank, lower-order
+terms, and singular strata; a sign check alone cannot close the endpoint.
+
+\section{Two centered tensor no-gos}
+
+The following fixtures are abstract Gaussian output tensors.  They are not
+claimed to be legal A1 rows.  Their role is to eliminate universal routes
+before production ownership is distorted to fit them.
+
+% evidence-anchor: proposition-6.1-centered-quadratic-nullcone-divergence
+\subsection*{Proposition 6.1 (exactly centered quadratic null-cone divergence)}
+
+Let $U,V$ be independent standard Gaussians and set
+\[
+ Q(U,V)=U^2-V^2,\qquad b=2,\qquad
+ \tau(U,V)=4(U^2+V^2),                                \tag{6.1}
+\]
+\[
+ L={1\over2}\{(2+Q)^2-\tau\}.                        \tag{6.2}
+\]
+Then
+\[
+ \E L=0.                                             \tag{6.3}
+\]
+With $W=DQ\otimes DQ$,
+\[
+ W=4\begin{pmatrix}U^2&-UV\\-UV&V^2\end{pmatrix},  \tag{6.4}
+\]
+\[
+ \E\|W\|_{\HS}^2=128,                              \tag{6.5}
+\]
+\[
+ \delta^2W=4(U^2-V^2)^2-12(U^2+V^2)+8,              \tag{6.6}
+\]
+\[
+ \E(\delta^2W)^2=1088.                              \tag{6.7}
+\]
+Nevertheless
+\[
+ \boxed{\E e^{-qL}=\infty\quad\hbox{for every }q\ge{1\over4}.} \tag{6.8}
+\]
+
+\emph{Proof.}
+Put $u=(U+V)/\sqrt2$ and $v=(U-V)/\sqrt2$.  Then
+\[
+ L=2+4uv+2u^2v^2-2u^2-2v^2.                          \tag{6.9}
+\]
+On $|u|\le|v|^{-1}$,
+\[
+ L\le8-2v^2.                                         \tag{6.10}
+\]
+After including the Gaussian density, the lower exponential rate is
+$(2q-1/2)v^2$.  It is positive for $q>1/4$.  At equality the tube width is
+proportional to $1/|v|$, giving logarithmic divergence.  Exact Gaussian
+moments give (6.3), (6.5), and (6.7). \hfill$\square$
+
+Thus exact centering, positive semidefinite $W$, and finite unweighted
+$H$ and $K_W$ do not imply the target normalizer.  A strict common-null-cone
+margin or an equality-stratum theorem is indispensable.
+
+% evidence-anchor: proposition-6.2-full-wick-centered-tensor-nogo
+\subsection*{Proposition 6.2 (full Wick ordering still has a sharp boundary)}
+
+Let
+\[
+ R(U,V)=\bigl(2\varepsilon UV,
+              2\kappa\varepsilon H_2(V)\bigr).       \tag{6.11}
+\]
+Its abstract full-Wick packet is
+\[
+ \mathcal P_\kappa
+ =2\varepsilon^2\{H_2(U)H_2(V)+\kappa^2H_4(V)\},    \tag{6.12}
+\]
+so $\E\mathcal P_\kappa=0$, and
+\[
+ \E\|DR,DR^*\|_{\HS}^2
+ =128\varepsilon^4(1+\kappa^2+6\kappa^4).            \tag{6.13}
+\]
+Writing $\alpha=q\varepsilon^2$, conditioning on $V$ gives
+\[
+ M_\kappa(\alpha)=
+ \E_V{\exp\{2\alpha(V^2-1)-2\alpha\kappa^2H_4(V)\}
+ \over\sqrt{1+4\alpha(V^2-1)}}.                      \tag{6.14}
+\]
+Its exact domain is
+\[
+ \boxed{0\le\alpha<{1\over4}.}                      \tag{6.15}
+\]
+At equality the integrand is proportional to $1/|V|$ near zero; above it the
+conditional $U$ integral diverges on a positive-measure interval.
+
+For a completely explicit $q=10/9$ violation take
+\[
+ \kappa={1\over100},\qquad\delta=10^{-50},\qquad
+ \alpha={1-\delta\over4},\qquad
+ \varepsilon^2={9(1-\delta)\over40}.                 \tag{6.16}
+\]
+The proposed covariance target is
+\[
+ {q^2\over4}\E\|DR,DR^*\|_{\HS}^2
+ =32\alpha^2(1+\kappa^2+6\kappa^4)<{21\over10}.      \tag{6.17}
+\]
+On $\sqrt\delta\le|V|\le1$, the denominator in (6.14) is at most
+$\sqrt2|V|$ and the exponent including the Gaussian density is greater than
+$-1$.  Hence
+\[
+ M_\kappa(\alpha)
+ >{25\log10\over e\sqrt\pi}
+ >{115\over12}>9>e^{21/10}.                           \tag{6.18}
+\]
+This disproves the universal full-Wick covariance target despite exact
+centering.  It does not embed an A1 Cartan/Fierz tensor, heat trace, Fourier
+owner, chronology, rational recovery, or R-063 forest.
+
+\section{The exact R-082 null set and the production scope correction}
+
+Write the doublet as $u=(u_1,u_2)\in\mathbb C^2$, the singlet as
+$\chi\in\mathbb C$, and a tangent as $(v,w)$.  Put
+\[
+ r=|u|^2,\qquad\rho=r+|\chi|^2,\qquad d=\rho+e,       \tag{7.1}
+\]
+\[
+ dr=2\Re(u^*v),\qquad d\rho=dr+2\Re(\bar\chi w),
+ \qquad h=u_1v_2-u_2v_1.                             \tag{7.2}
+\]
+With $c_0,c_1>0$ and $\alpha=5/9$, the R-082 current coordinate is
+\[
+ \Xi(u,\chi;v,w)=
+ \begin{pmatrix}
+ \sqrt{c_0},dr\\
+ \sqrt{c_1}\{dr-\alpha(r/d)d\rho\}\\
+ 2\sqrt{c_0+c_1}\Re h\\
+ 2\sqrt{c_0+c_1}\Im h
+ \end{pmatrix}.                                      \tag{7.3}
+\]
+
+% evidence-anchor: theorem-7.1-r082-exact-null-classification
+\subsection*{Theorem 7.1 (pointwise and finite-Fourier null classification)}
+
+At one point,
+\[
+ \Xi=0\quad\Longleftrightarrow\quad
+ dr=0,\quad h=0,\quad {r\over d}d\rho=0.             \tag{7.4}
+\]
+Consequently:
+\begin{enumerate}
+\item if $u=0$, every tangent $(v,w)$ is null;
+\item if $u\ne0$, then $v=i\theta u$ for real $\theta$ and
+      $\Re(\bar\chi w)=0$; when $\chi\ne0$, $w=i\eta\chi$ for real $\eta$.
+\end{enumerate}
+
+Let a smooth field on a connected torus satisfy
+$\Xi(\Psi,\partial_i\Psi)=0$ in every spatial direction.  Either
+$u\equiv0$, in which case $\chi$ is unrestricted, or
+\[
+ u(x)=p f(x),\quad |f(x)|=\hbox{constant},\quad
+ |\chi(x)|=\hbox{constant}.                            \tag{7.5}
+\]
+If $f$ and $\chi$ have exact finite Laurent support, then the active branch is
+\[
+ \boxed{u(x)=p e^{ik\cdot x},\qquad
+        \chi(x)=c e^{i\ell\cdot x},}                  \tag{7.6}
+\]
+with independent lattice wavevectors and with $c=0$ allowed.
+
+\emph{Proof.}
+Positivity of the four weights proves (7.4).  If $u\ne0$, $h=0$ makes $v$
+complex-collinear with $u$, while $dr=0$ makes its coefficient purely
+imaginary.  Along a field, $dr_i=0$ makes $|u|$ constant.  On the active
+branch $h_i=0$ fixes the projective direction, and the rational row fixes
+$|\chi|$.  For a finite Laurent polynomial $f$, constant modulus on the torus
+gives
+\[
+ f(z)f^\#(z)=c^2                                      \tag{7.7}
+\]
+as a Laurent-polynomial identity.  Thus $f/c$ is a unit of
+$\mathbb C[z_1^{\pm1},\ldots,z_d^{\pm1}]$.  Laurent units are monomials:
+equivalently, the Newton polytope of a product is the Minkowski sum, and the
+sum in (7.7) is a point only when each polytope is a point.  Apply the same
+argument to a nonzero $\chi$. \hfill$\square$
+
+This theorem uses every spatial derivative direction, the full unprojected
+current, a connected torus, exact finite Laurent support, and non-aliased
+products.  It is false as stated for one direction, a projected output
+cluster, or the pure-singlet branch.
+
+\subsection*{The real-linearized null symbol}
+
+At (7.6), for a perturbation $(a,s)$ define
+\[
+ R_i=2\Re\{u^*(\partial_i-ik_i)a\},                   \tag{7.8}
+\]
+\[
+ T_i=R_i+2\Re\{\bar\chi(\partial_i-i\ell_i)s\},      \tag{7.9}
+\]
+\[
+ H_i=u_1(\partial_i-ik_i)a_2-u_2(\partial_i-ik_i)a_1.\tag{7.10}
+\]
+Then
+\[
+ \boxed{
+ D\Xi_i(a,s)=
+ \begin{pmatrix}
+ \sqrt{c_0}R_i\\
+ \sqrt{c_1}(R_i-\alpha\vartheta T_i)\\
+ 2\sqrt{c_0+c_1}\Re H_i\\
+ 2\sqrt{c_0+c_1}\Im H_i
+ \end{pmatrix},}                                      \tag{7.11}
+\]
+where $\vartheta=r/(\rho+e)$ for the exact floor and $\vartheta=r/\rho$ for
+the homogeneous recession row.
+
+This symbol is real-linear: the real parts couple Fourier modes $m$ and $-m$.
+Its kernel is larger than the exact finite-Laurent null manifold.  For real
+phase modulations $a=i\varphi u$, $s=i\psi\chi$, all rows in (7.11) vanish.
+Such phase-modulated fields need not remain in the same finite Fourier space.
+Therefore Laurent rigidity does not imply first-order coercivity and does
+not establish $\mathcal T_Q(v)=\Ran DQ(v)$.  A quantitative metric error
+bound must be proved separately, uniformly in the cutoff.
+
+\subsection*{The gauge face is not a standalone production root}
+
+The deterministic field
+\[
+ u_1=x_1\cos(kx)+i x_2\sin(kx),\qquad u_2=\chi=0      \tag{7.12}
+\]
+has
+\[
+ dr=k(x_2^2-x_1^2)\sin(2kx),\qquad d\rho=dr,
+ \qquad h=0.                                         \tag{7.13}
+\]
+On $x_1=\pm x_2=a$ it is the exact plane wave
+$u_1=ae^{\pm ikx}$ and all four rows vanish.  The positive floor does not
+lift this phase-gauge kernel.
+
+However, retaining only the real-cosine and imaginary-sine coordinates
+violates the componentwise common-even production parity
+\[
+ \E[X^c\partial_iX^a]=0.                              \tag{7.14}
+\]
+The omitted equal-variance sine/cosine partners restore (7.14).  Hence the
+rank-two face is not an admissible independently revealed R-104 root.  Every
+complementary polarization, internal component, shared output, future
+feedback, rational harmonic, and R-063 contraction from the same root must
+remain in one conditional cluster.
+
+Let $D_{aa,j,i}$ be the complex derivative covariance of the full legal root.
+In the six-real convention
+$\Gamma_{\R}={1\over2}\operatorname{realify}(D_{\mathbb C})$.  On the null
+field, the full-root trace is
+\[
+ \boxed{
+ \tau_{j,\rm null}(a)=a^2\sum_i
+ \left[2A(a)D_{11,j,i}+4(c_0+c_1)D_{22,j,i}\right],} \tag{7.15}
+\]
+\[
+ A(a)=c_0+c_1\left(1-{5\over9}{a^2\over a^2+e}\right)^2. \tag{7.16}
+\]
+The packet is $P_{j,\rm null}=-\tau_{j,\rm null}/2$.  This refutes pointwise
+current-square coercivity, but not the full-root Gaussian normalizer.
+
+Indeed, for the uncontrolled full stationary production Gaussian,
+componentwise value--gradient parity and joint Gaussianity make the value and
+gradient independent.  With the rational row included,
+\[
+ \boxed{
+ \E\left[{1\over2}|\Xi(U,\partial U)|^2
+          -{1\over2}B(U):\Gamma\right]=0.}            \tag{7.17}
+\]
+The complementary root coordinates restore centering in expectation.
+
+Since
+\[
+ c_0+c_1={339\over8000P},                             \tag{7.18}
+\]
+define
+\[
+ K_j^{\max}=2(c_0+c_1)\sum_iD_{11,j,i}
+             +4(c_0+c_1)\sum_iD_{22,j,i}.             \tag{7.19}
+\]
+At fixed cutoff,
+\[
+ P_{j,\rm null}(a)+{3\over20}a^6
+ \ge {3\over20}a^6-{1\over2}K_j^{\max}a^2
+ \ge-{3\over10}\left({10\over9}K_j^{\max}\right)^{3/2}. \tag{7.20}
+\]
+The derivative point covariance grows with cutoff, so this loss is not
+uniform; it may scale as the cutoff radius to the $3/2$ power.  Spending the
+terminal sextic once for every root would also duplicate its owner.
+
+\section{The exact remaining certificate}
+
+For a fixed standardized polynomial quadratic root packet, Theorem 5.1 says
+that the strict finite-dimensional target is
+\[
+ \inf_{\substack{v\in Z_{Q_N},\ \|v\|_\gamma=1\\
+                  z\in\mathcal T_{Q_N}(v)}}
+ \left[1-{10\over9}\tau_N(v)
+       +{10\over9}\|A_Nv+z\|_{\rm PF}^2\right]>0.   \tag{8.1}
+\]
+Sector A needs far more than positivity at each cutoff.  It needs one
+predictable margin uniform in cutoff and floor, together with uniform
+derivative and error-bound constants.  It must cover:
+\begin{enumerate}
+\item the pure-singlet null subspace and its degeneration from the active branch;
+\item every active plane-wave parameter $p,c,k,\ell$ and the realified
+      $m/-m$ coupling;
+\item singular parabolic tangent images, not merely $\Ran DQ_N(v)$;
+\item covariance standardization and the complete heat-lifted trace;
+\item mixed predictable baselines, every visit and input, rational recovery,
+      random-$W$ double divergence, and the R-063 forest exactly once;
+\item a single global use of source energy and terminal sextic.
+\end{enumerate}
+
+For the rational-homogeneous R-082 recession map, (8.1) is a target schema,
+not yet an application of the polynomial theorem.  A valid proof may instead
+establish the stronger trace margin
+\[
+ \sup_N\sup_{Q_N(v)=0,\ \|v\|_\gamma=1}\tau_N(v)<{9\over10}, \tag{8.2}
+\]
+or extend Theorem 5.1 to the smooth homogeneous rational map and prove its
+full parabolic-tangent margin.  Equality in either route still requires a
+critical-stratum normal-rank analysis.
+
+This isolates the remaining A13 work into two load-bearing gates:
+\begin{enumerate}
+\item the complete contraction-closed progressive/revisit production cluster
+      with all endpoint owners retained;
+\item the global one-use source/sextic aggregation after that local cluster is
+      controlled.
+\end{enumerate}
+Only after those gates can $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, and
+the interacting measure be resumed.
+
+\section{Proof-route evidence map}
+
+\begin{center}
+\begin{tabular}{p{0.24\textwidth}|p{0.24\textwidth}|p{0.39\textwidth}}
+Route & Verdict & Research-reusable reason \\ \hline
+same-root positive subvisits & superseded & only the recombined endpoint (2.5) descends to the representation quotient \\
+full Wick replacement & failed & it changes the R-063 owner; (3.8) is a missing $\Sigma Q$ term \\
+absorb first chaos & accepted & merge it into $B=A+C$ and use the exact whole-output determinant \\
+marginal packet multiplication & boundary & Holder gives square-of-sum cost; additive cost needs conditional independence \\
+unweighted random-$W$ cost & boundary & the tilted term requires the doubled normalizer in (4.5) \\
+centering alone & failed & Proposition 6.1 has exact mean zero and divergent normalizer \\
+full-Wick centering & failed & Proposition 6.2 reaches the sharp $\alpha=1/4$ null boundary \\
+ray-only tail test & superseded & the exact classifier uses the full parabolic tangent image (5.4) \\
+Laurent null rigidity & accepted with boundary & exact nulls are classified, but near-null metric stability is still open \\
+rank-two gauge root & withdrawn & it is a deterministic face, not a temporally faithful independently revealable production root \\
+rootwise sextic repair & finite-cutoff only & (7.20) is not cutoff uniform and duplicates the terminal owner if repeated
+\end{tabular}
+\end{center}
+
+The executable evidence checks the endpoint identities, Wick owner defect,
+affine determinant, Holder and doubled-tilt constants, both centered tensor
+moments and thresholds, critical-codimension integrals, R-082 plane-wave
+null, real-linearized symbol, and finite-cutoff sextic minimum.  A structurally
+independent route reconstructs them without importing the primary program.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection: ``The endpoint quotient proves a normalizer.''}
+      \textbf{VALID WITH MITIGATION.}  Equation (2.5) is an exact owner
+      identity only.  No sign or exponential estimate follows from it.
+
+\item \textbf{Objection: ``Full Wick ordering repairs the physical packet.''}
+      \textbf{UPHELD AGAINST THAT ROUTE.}  Equations (3.6)--(3.8) exhibit the
+      missing $\Sigma Q$ owner, and Proposition 6.2 shows that even the changed
+      abstract endpoint has a sharp null boundary.
+
+\item \textbf{Objection: ``Exact centering and finite $H,K_W$ are enough.''}
+      \textbf{UPHELD AGAINST THAT ROUTE.}  Proposition 6.1 has mean zero,
+      $H=128$, $K_W=1088$, and divergence already at $q=1/4$.
+
+\item \textbf{Objection: ``The ray value $\|Av\|$ is the tail criterion.''}
+      \textbf{UPHELD AGAINST THAT ROUTE.}  Singular second-order approaches
+      enlarge $\mathcal T_Q(v)$, as (5.11) shows.  The exact sign is (5.4).
+
+\item \textbf{Objection: ``The derivative-range distance formula is always
+      equivalent.''}  \textbf{UPHELD AGAINST THAT ROUTE.}  It requires the
+      metric error bound (5.12).  Without a linear tangent image the safe
+      distance is to $-Av$, not to $Av$.
+
+\item \textbf{Objection: ``The finite-Laurent null classification supplies
+      coercivity.''}  \textbf{UPHELD AGAINST THAT ROUTE.}  Real phase
+      modulations lie in the linearized kernel, and near-null parabolic
+      sequences are not controlled by exact-zero rigidity.
+
+\item \textbf{Objection: ``The plane-wave face is a legal rank-two root
+      counterexample.''}  \textbf{UPHELD AGAINST THE EARLIER WORDING.}
+      Componentwise parity fails after that coordinate deletion.  The face
+      proves pointwise noncoercivity only; the full stationary root is centered.
+
+\item \textbf{Objection: ``The six-real trace lost a factor two.''}
+      \textbf{DISMISSED.}  Formula (7.15) uses
+      $\Gamma_\R=\operatorname{realify}(D_{\mathbb C})/2$, includes the
+      complementary $u_1$ polarization, and retains the $u_2$ determinant
+      derivative even at realized $u_2=0$.
+
+\item \textbf{Objection: ``The terminal sextic repairs every root.''}
+      \textbf{UPHELD AGAINST THAT ROUTE.}  The exact fixed-cutoff minimum is
+      (7.20), but $K_j^{\max}$ is not cutoff uniform and the terminal sextic
+      is a one-use global owner.
+
+\item \textbf{Objection: ``The polynomial recession theorem already covers
+      the A1 rational row.''}  \textbf{UPHELD AGAINST THAT WORDING.}  The
+      rational row is only degree-two homogeneous at recession.  A smooth
+      homogeneous extension with uniform constants remains to be proved.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-ONE-FRESH-ROOT-OWNER-QUOTIENT-WICK-NULLCONE-BOUNDARY
+Ledger: R-116.
+Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION.
+Precise statement: Theorems 2.1, 5.1, and 7.1; Propositions 3.1,
+  5.2, 6.1, and 6.2; affine absorption (3.11)--(3.12); conditional
+  composition (4.1)--(4.6); production scope correction (7.12)--(7.20).
+Scope: finite-dimensional polynomial quadratic recession theorem; finite
+  cutoff and fixed floor for A1 null algebra; abstract tensor no-gos are
+  not production embeddings.
+Dependencies: R-063, R-072, R-079, R-082, R-105, R-107, R-110, R-115.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command:
+  E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_one_fresh_root_owner_quotient_wick_nullcone_boundary_verify.py
+Expected output: Integrated R-116 PASS; primary 30/30 and independent
+  23/23 children PASS, with all source, note, PDF, and manifest pins valid.
+Falsification gate: any failed endpoint, Wick, recession, tensor-moment,
+  critical-codimension, production-symbol, trace-factor, child/source/note,
+  PDF, or manifest assertion; any use beyond the stated scope.
+Tier before / after: T4 / T4.
+Open gates: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION;
+  A13-CLASSII-CONTROLLED-SHELL-ENERGY-ONE-USE.
+No-overclaim statement: No full A1 conditional normalizer, one-use
+  source/sextic aggregation, OVERLAP_src, Nelson estimate, removal limit,
+  interacting measure, Sector-A closure, or tier promotion is established.
+Next required action: Prove a cutoff-uniform parabolic-tangent or stronger
+  trace margin for the complete rational-homogeneous production root while
+  retaining all owners, then aggregate source and terminal sextic once.
+\end{verbatim}

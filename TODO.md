@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-115 closes the original R-112 stationary scalar k:2k log-Laplace theorem for every covariance shape c in [0,1], amplitude b>=0, and tau>=0, strictly for tau>0. R-114 covers b<=643/200; the complementary half-line is proved by a four-moment left Gauss--Radau majorant, an exact three-atom all-tilt skew lemma, a zero-pending outward Arb cover, and a structurally independent exact Bernstein/radical certificate. The scalar classifier gate is complete. Next embed only this theorem into the full A1 one-fresh-root contraction-closed owner-preserving conditional cluster, retaining random-W double divergence, heat, mean, trace, mixed baseline, rational recovery, every visit, and the R-063 forest exactly once; then prove the separate one-use source/sextic aggregation. OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open.
+  - R-116 proves the same-root endpoint quotient, partial-Wick owner firewall, optimized conditional-Holder composition, exact finite-dimensional parabolic-tangent recession classifier, and R-082 plane-wave null classification. Next: establish a cutoff/floor-uniform metric margin for the complete rational-homogeneous R-082 root, embed every owner exactly once in the full A1 one-fresh-root conditional cluster, then prove the separate one-use source/sextic aggregation.
   - _updated 2026-07-28_
 
 ## Next up

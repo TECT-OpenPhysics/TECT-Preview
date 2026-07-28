@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-116: one-fresh-root owner quotient and null-cone boundary] - 2026-07-28
+
+Accepted at T4: exact same-root endpoint square-minus-trace quotient, partial-Wick Sigma-Q owner firewall, fresh first-chaos determinant absorption, optimized conditional-Holder composition, finite-dimensional polynomial quadratic parabolic-tangent recession classifier with critical codimension boundary, and exact R-082 finite-Fourier plane-wave null classification. Primary 30/30, independent 23/23, and integrated 27/27 pass. The rational-homogeneous cutoff/floor-uniform metric margin, full A1 progressive/revisit conditional embedding, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open.
+
 ## [A13 R-115 closes the stationary scalar k:2k theorem] - 2026-07-28
 
 R-115 closes the original R-112 stationary scalar k:2k normalizer for every c in [0,1], b>=0, and tau>=0, strictly for tau>0. R-114 supplies b<=643/200. A four-moment left Gauss--Radau majorant and packet-specific all-tilt three-atom skew theorem close the complementary half-line. The primary centered Arb cover records 46714 evaluations, 23613 accepted leaves, zero pending, and outward margin >0.0019. A non-importing exact Bernstein/radical route certifies 8298 structural, 4231 weight-order, and 16170 Phi coefficients. Two further non-importing exact engines preserve the fifth-order extension and the exact KS and generic reserve-only method failures. The integrated verifier passes 126/126, and the eight-page PDF passed all-page Poppler visual QA. Full A1 embedding, one-use aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open.
