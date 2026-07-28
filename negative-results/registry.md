@@ -6,6 +6,7 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 
 | Tag | Branch / claim | Summary |
 |---|---|---|
+| [NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE](#ng-2026-07-28-a13-k2k-cubic-ks-proxy-beyond-cone) | extend the R-114 support--two-moment cone globally using the sharp floor `beta=b/2` and only the cubic lower bound `atanh(y)>=y+y^3/3` | only `3/800` beyond the certified endpoint, at `(b,c)=(103/32,5/16)`, the variance branch has `Q_beta=-24109/65536<0` and the cleared cubic proxy has `S_beta=-127544381197984065/18446744073709551616<0`. This retires only that sufficient polynomial proxy beyond the proved `b<=643/200` cone; it is not a counterexample to the exact Kearns--Saul coefficient, higher moments, or the scalar target |
 | [NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT](#ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt) | close the mixed scalar `k:2k` normalizer by contracting the Bessel cross term pointwise with `I_0(z)<=e^z` and one quadratic Young inequality | the contracted positive quadratic surrogate has exact mean `-c(8b+9s)/16<0` in the mixed interior, so its centered log-Laplace upper bound acquires an artificial positive `O(tau)` origin debt while the target begins at `O(tau^2)`. The contraction remains a stable one-dimensional `erfcx` majorant away from the origin and is not a target counterexample |
 | [NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY](#ng-2026-07-28-a13-k2k-all-order-projective-coefficient-positivity) | prove the mixed scalar `k:2k` projective boundary by showing every inverse-amplitude coefficient of the exact logarithmic gap is nonnegative | the exact third coefficient at `c=3/5`, `s=2/5`, `x=24/25` is `-627811338105359170693920/190578044621571595050427561<0`. The leading gap and first two corrections remain positive there, so only coefficientwise sign induction is retired; the target and a controlled remainder/interval proof remain live |
 | [NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION](#ng-2026-07-28-a13-k2k-quadratic-bessel-upper-domination) | prove the mixed scalar `k:2k` all-`q` theorem by inserting the local Gaussian envelope `I_0(z)<=exp(z^2/4)` into the exact radial integral | the envelope creates `+9q^2A^2R^2S`; on `R=S=L` this positive cubic dominates every original quadratic damping term, so the proposed upper integral is infinite whenever `qA!=0`. The sharp linear-growth Bessel majorant remains valid and useful |
@@ -155,6 +156,36 @@ result, `F-` fired falsification gate, `NG-` no-go finding.
 | [NG-2026-07-23-A13-SHELLWISE-HEAT-AND-CHARGE](#ng-2026-07-23-a13-shellwise-heat-and-charge) | A13 shellwise heat-modulus, charge-alone, and terminal-only routes | exact scalar and production plateaux force a backward telescope and retained square |
 | [NG-2026-07-23-A13-SHELLWISE-RAW-SECANT-POSITIVITY](#ng-2026-07-23-a13-shellwise-raw-secant-positivity) | A13 shellwise raw-secant positivity and geometry-only one-use routes | a positive-floor production witness is negative despite its retained square, and a flat CAT(0) reset model diverges without production target-coupling decay |
 | [NG-2026-07-23-A13-ABSOLUTE-SCORE-AND-FULL-REMAINDER](#ng-2026-07-23-a13-absolute-score-and-full-remainder) | A13 direct absolute-score and uniform full-remainder routes | inserted-shell score integration cannot meet arbitrary budgets, and the coefficient-curvature remainder lacks the claimed standalone N^-3/2 gain |
+
+<a id="ng-2026-07-28-a13-k2k-cubic-ks-proxy-beyond-cone"></a>
+### NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE -- the cubic Bernoulli proxy does not extend the selected floor globally
+
+**Claim / route.**  Extend the R-114 support--two-moment proof past its
+certified cone by retaining the sharp floor `beta=b/2` and replacing the
+exact Kearns--Saul coefficient only by
+`atanh(y)>=y+y^3/3`.
+
+**Failure mode.**  At the exact rational fixture `b=103/32`, `c=5/16`, only
+`3/800` above the certified endpoint, the selected floor and moments are
+`beta=103/64`, `K=18714321/4194304`, `Delta=73041/4194304`, and
+`V=145635/65536`.  The variance-case polynomial is
+
+`Q_beta=V-beta^2=-24109/65536<0`,
+
+while the cleared cubic Kearns--Saul sufficient condition is
+
+`S_beta=-127544381197984065/18446744073709551616<0`.
+
+**Evidence.**  Both values are reconstructed independently by the R-114 SymPy and sparse
+`Fraction` implementations.
+
+**Consequence.**  The exact certificate proves the complete closed cone
+`0<=b<=643/200`, but the same cubic proxy and floor cannot simply be declared
+global.  This does not refute the exact Kearns--Saul coefficient, a
+higher-moment Hermite majorant, the corrected three-phase Bessel classifier,
+or the scalar log-Laplace target.  The strict `b>643/200` residual remains
+open and must be treated fail-closed.  The rational endpoint is not asserted
+optimal.
 
 <a id="ng-2026-07-28-a13-k2k-bessel-cross-contraction-origin-debt"></a>
 ### NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT -- the stable cross contraction creates a false linear origin debt

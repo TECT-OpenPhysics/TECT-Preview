@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [R-114 extends the exact scalar cone to b=643/200] - 2026-07-28
+
+Proves the original R-112 stationary scalar k:2k log-Laplace gap strictly for tau>0 and 0<=x<=643 tau/200, with origin equality, using the sharp support floor F_b>=-b/2 for b>=6/5 and a support--two-moment Hermite--Bernoulli dichotomy. Two non-importing implementations reconstruct 3981/3981 positive exact Bernstein coefficients; primary, independent, and integrated contracts pass 155/155, 133/133, and 140/140. A witness only 3/800 beyond the endpoint retires the same cubic proxy without refuting the target. The strict residual, full A1 embedding, one-use aggregation, and Sector A remain open.
+
 ## [R-113 effective scalar boundary and directed-rounding seed] - 2026-07-28
 
 Made the R-112 projective, origin, and covariance-face patches effective; proved the zero-amplitude tau>=13 region; and certified one complete strict mixed box with two independent endpoint-union Arb implementations. The global mixed interval cover, full A1 owner cluster, one-use aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector A remain open. EXP-000324 records the corrected residual-boundary and Bessel-surrogate scope.

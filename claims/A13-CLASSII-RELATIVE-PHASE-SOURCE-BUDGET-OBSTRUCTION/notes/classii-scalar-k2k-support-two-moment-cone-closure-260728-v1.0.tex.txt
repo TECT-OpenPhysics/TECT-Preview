@@ -1,0 +1,614 @@
+% =============================================================================
+% Title: Scalar k:2k support--two-moment cone closure
+% Claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION
+% Version: v1.0 -- first issued 2026-07-28; this version issued 2026-07-28
+% Status: scoped T4 analytic/exact/executed advance; Sector A remains open
+% =============================================================================
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\atanh}{\operatorname{atanh}}
+
+\section*{Purpose and scope}
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{R-114 proves the exact R-112 stationary scalar $k{:}2k$
+log-Laplace target for every covariance shape, every $\tau>0$, and the
+closed physical cone $0\le x\le643\tau/200$.  The gap is strict away from
+the origin.  In particular, the complete zero-amplitude axis is closed and
+the R-113 directed-rounding seed box is subsumed.}
+
+The proof acts on the original uniform-phase packet.  It combines a
+support--two-moment Hermite majorant, a self-contained centered-Bernoulli
+inequality, the exact R-113 phase floors, a new sharp support floor
+$F_b\ge-b/2$ for $b\ge6/5$, and $3981$ strictly positive exact rational
+Bernstein coefficients.  No Bessel surrogate or floating-point quadrature
+enters the theorem.
+
+This is not the all-$b$ scalar theorem.  The remaining scalar gate lies in
+$x>643\tau/200$ after the inherited projective, origin, covariance-face, and
+phase-floor classifiers.  Full A1 owner embedding, the separate one-use
+source/sextic aggregation, $\mathrm{OVERLAP}_{\rm src}$, Nelson, removals,
+the interacting measure, and Sector A remain open.  R-103 REG and R-087
+fixed-cutoff CORE keep their accepted owners.  Historical R-085 (4.11) and
+(6.5) remain non-load-bearing and are not reopened.
+}}
+\end{center}
+
+The two executables are non-importing.  The primary uses SymPy power-to-
+Bernstein conversion.  The independent implementation uses sparse
+\texttt{Fraction} polynomials without SymPy and obtains selected cells by
+exact de Casteljau subdivision.  Both reconstruct every coefficient sign,
+minimum, and canonical list hash.  Analytic inequalities that are not finite
+polynomial identities are proved below.
+
+\section{Exact scalar normal form}
+
+Retain the R-112 covariance-simplex variables
+\[
+ c={v\over v+4w},\qquad s=1-c,\qquad
+ b={A^2\over v+4w},\qquad \tau=q(v+4w)^2,
+ \qquad x=b\tau.                                      \tag{1.1}
+\]
+For independent unit exponentials $T,U$ and uniform phase $\phi$, put
+\[
+ \rho={cT\over2},\qquad \sigma={sU\over8},             \tag{1.2}
+\]
+\[
+ L=\rho+4\sigma-{1\over2},\quad
+ Q=\rho^2+10\rho\sigma+4\sigma^2-\rho-\sigma,
+ \quad B=6\rho\sqrt\sigma\cos\phi.                   \tag{1.3}
+\]
+The centered packet and covariance square are
+\[
+ F_b=bL+\sqrt b\,B+Q,\qquad \E F_b=0,                 \tag{1.4}
+\]
+\[
+ K=b^2K_2+bK_1+K_0,                                   \tag{1.5}
+\]
+where
+\[
+ K_2=c^2-c+{1\over2},\quad
+ K_1={-3c^3+5c^2+c+1\over4},                          \tag{1.6}
+\]
+\[
+ K_0={153c^4-156c^3+82c^2-4c+5\over64}.              \tag{1.7}
+\]
+Direct exponential and phase moments give
+\[
+ V:=\Var(F_b)={K-\Delta\over2},\qquad
+ \Delta={33c^4-36c^3+22c^2-4c+1\over64}.             \tag{1.8}
+\]
+The reserve has the useful exact minorant
+\[
+ \Delta\ge
+ \left({c^2\over2}+{(1-c)^2\over8}\right)^2
+ \ge {1\over100}.                                    \tag{1.9}
+\]
+Indeed the first difference is $c^2(1-c)^2/8$, and the expression inside
+the square differs from $1/10$ by $5(c-1/5)^2/8$.
+
+Writing
+\[
+ M(c,x,\tau)=\E e^{-\tau F_b}\quad (x=b\tau),        \tag{1.10}
+\]
+the exact target is
+\[
+ G(c,b\tau,\tau)={\tau^2K\over4}-\log M(c,b\tau,\tau)
+ \ge0.                                                \tag{1.11}
+\]
+
+\section{Exact support floors}
+
+The phase minimum is attained at $\cos\phi=-1$.  R-113 proved the two
+identities
+\[
+\begin{aligned}
+F_-={}&(\rho+2\sigma)^2-\left(1+{b\over2}\right)
+ (\rho+2\sigma)+(5b+1)\sigma\\
+&+6\rho\left(\sqrt\sigma-{\sqrt b\over2}\right)^2-{b\over2},
+\end{aligned}                                         \tag{2.1}
+\]
+\[
+\begin{aligned}
+F_-={}&\rho^2+(b/10-1)\rho+4\sigma^2+(4b-1)\sigma\\
+&+10\rho\left(\sqrt\sigma-{3\sqrt b\over10}\right)^2-{b\over2}.
+\end{aligned}                                         \tag{2.2}
+\]
+Completing the remaining one-variable quadratics yields the valid floors
+\[
+ F_b\ge-\beta_6(b),\qquad
+ \beta_6={b^2+12b+4\over16},                          \tag{2.3}
+\]
+and
+\[
+ F_b\ge-\beta_{10}(b),\qquad
+ \beta_{10}={b\over2}+{(1-b/10)_+^2\over4}
+                         +{(1-4b)_+^2\over16}.        \tag{2.4}
+\]
+The polynomial branches used below are
+\[
+ \beta_{10,a}={401b^2-20b+125\over400}
+       \quad(0\le b\le1/4),                           \tag{2.5}
+\]
+\[
+ \beta_{10,b}={b^2+180b+100\over400}
+       \quad(1/4\le b<10).                            \tag{2.6}
+\]
+They agree at $b=1/4$.  All selected floors are positive, so every division
+below is legal.  At the transition to the new floor,
+\[
+ \beta_{10,b}(3/2)={1489\over1600}.                   \tag{2.7}
+\]
+
+There is a sharper floor on the large-$b$ side.  Put $y=\sqrt\sigma$.  A
+direct expansion of the phase minimum gives
+\[
+ F_-+{b\over2}=\rho^2+a_b(y)\rho
+       +y^2(4y^2+4b-1),                              \tag{2.8}
+\]
+\[
+ a_b(y)=10y^2-6\sqrt b\,y+b-1.                       \tag{2.9}
+\]
+For $b\ge6/5$, define
+\[
+ q_b(y)=a_b(y)+2y\sqrt{4b-1}.                        \tag{2.10}
+\]
+Its discriminant as a quadratic in $y$ is
+\[
+ 12\{b+3-2\sqrt{b(4b-1)}\}.                          \tag{2.11}
+\]
+This is strictly negative on $b\ge6/5$: all quantities being squared are
+positive, and
+\[
+ 4b(4b-1)-(b+3)^2
+ =15b^2-10b-9
+ ={3\over5}+{(5b-6)(15b+8)\over5}>0.                \tag{2.12}
+\]
+Thus $q_b(y)>0$.  If $a_b(y)\ge0$, every term in (2.8) is nonnegative.  If
+$a_b(y)<0$, minimization over $\rho\ge0$ gives
+\[
+ y^2(4y^2+4b-1)-{a_b(y)^2\over4}
+ ={(2\sqrt d-a_b(y))(2\sqrt d+a_b(y))\over4}>0,
+ \quad d=y^2(4y^2+4b-1),                             \tag{2.13}
+\]
+because $2\sqrt d+a_b(y)\ge q_b(y)>0$.  At $y=0$ the right side of
+(2.8) is $\rho(\rho+b-1)$.  Consequently
+\[
+ \boxed{F_b\ge-{b\over2}\quad(b\ge6/5)},            \tag{2.14}
+\]
+with equality only at $\rho=\sigma=0$.  The floor is therefore sharp (an
+attained support minimum), not merely a convenient estimate.  The rational
+cut $6/5$ is a safe proof cutoff; it is not asserted to be the optimal onset
+of the floor.  Below we use
+\[
+ \beta_\sharp(b)={b\over2}                            \tag{2.15}
+\]
+on the two new slabs.
+
+\section{The support--two-moment majorant}
+
+\subsection{Hermite reduction}
+
+\textbf{Lemma 3.1.}  Let $Y$ be centered, $Y\ge-\beta$ almost surely,
+$\beta>0$, and $V=\E Y^2>0$.  For $t\ge0$, define
+\[
+ r={\beta^2+V\over\beta},\qquad
+ p={\beta^2\over\beta^2+V}.                          \tag{3.1}
+\]
+Then
+\[
+ \E e^{-tY}\le e^{t\beta}\{1-p+pe^{-tr}\}.          \tag{3.2}
+\]
+
+\emph{Proof.}  Set $Z=Y+\beta\ge0$.  Let $H$ be the quadratic Hermite
+interpolant of $f(z)=e^{-tz}$ at the nodes $0,r,r$.  For every $z\ge0$,
+the Hermite remainder is
+\[
+ f(z)-H(z)={f'''(\xi)\over3!}\,z(z-r)^2\le0,          \tag{3.3}
+\]
+because $f'''<0$.  The two-point law with mass $p$ at $r$ and mass $1-p$
+at zero has the same first two moments as $Z$:
+\[
+ pr=\beta,\qquad pr^2=\beta^2+V.                     \tag{3.4}
+\]
+Since the expectation of a quadratic depends only on these moments,
+$\E H(Z)=1-p+pe^{-tr}$.  Multiplication by $e^{t\beta}$ proves (3.2).
+\hfill$\square$
+
+Put
+\[
+ \Phi(t)=t\beta+\log(1-p+pe^{-tr}),\qquad
+ p_t={pe^{-rt}\over1-p+pe^{-rt}}.                    \tag{3.5}
+\]
+Then $\Phi(0)=\Phi'(0)=0$ and
+\[
+ \Phi''(t)=r^2p_t(1-p_t).                             \tag{3.6}
+\]
+If $\beta^2\le V$, then $p\le1/2$ and
+$0\le p_t\le p\le1/2$.  Hence
+\[
+ \Phi''(t)\le r^2p(1-p)=V,\qquad
+ \Phi(t)\le {Vt^2\over2}.                            \tag{3.7}
+\]
+
+\subsection{A self-contained centered-Bernoulli bound}
+
+For completeness, we prove the only non-polynomial estimate used in the
+other case.  Define the centered Bernoulli log moment-generating function by
+\[
+ g(\lambda)=\log\{(1-p)e^{p\lambda}+p e^{-(1-p)\lambda}\}.
+\]
+It satisfies
+\[
+ g(\lambda)\le
+ {1-2p\over4\log((1-p)/p)}\lambda^2                  \tag{3.8}
+\]
+for $0<p<1$, with the continuous value $1/8$ at $p=1/2$.
+
+By exchanging the atoms and reversing $\lambda$, assume $p<1/2$.  Put
+$m=1-2p$, $a=\atanh m$, and $u=-\lambda/2$.  Direct algebra gives
+\[
+ g(\lambda)=mu+\log\cosh(u-a)-\log\cosh a.           \tag{3.9}
+\]
+Thus (3.8) is equivalent to $h(u)\ge0$, where
+\[
+ h(u)={mu^2\over2a}-mu-\log\cosh(u-a)+\log\cosh a.  \tag{3.10}
+\]
+Writing $v=(u-a)/a$ gives
+\[
+ h'(u)=mv-\tanh(av).                                  \tag{3.11}
+\]
+The function $\tanh z/z$ decreases for $z>0$, because
+$z\operatorname{sech}^2z-\tanh z<0$.  Consequently $h'$ has signs
+$-,+,-,+$ on the four intervals cut by $v=-1,0,1$.  The two global minima
+are $u=0$ and $u=2a$, and direct substitution gives $h=0$ at both.  The
+case $p=1/2$ follows by the limit, equivalently $\log\cosh u\le u^2/2$.
+
+Return now to (3.5).  If $\beta^2\ge V$, set
+\[
+ y={\beta^2-V\over\beta^2+V}\in[0,1).                \tag{3.12}
+\]
+Equation (3.8), after rescaling by $r$, gives
+\[
+ \Phi(t)\le {r^2y\over8\atanh y}\,t^2.              \tag{3.13}
+\]
+Since
+\[
+ \atanh y\ge y+{y^3\over3},                          \tag{3.14}
+\]
+it is sufficient that
+\[
+ r^2\le2K\left(1+{y^2\over3}\right).                \tag{3.15}
+\]
+The derivative of the difference in (3.14) is
+$y^4/(1-y^2)\ge0$, so no external inequality is being imported.
+
+\section{Polynomial certificate and cone theorem}
+
+For any selected floor $\beta=\beta(b)$, define
+\[
+ Q_\beta=V-\beta^2,                                   \tag{4.1}
+\]
+\[
+\begin{aligned}
+ S_\beta={}&6K\beta^2(\beta^2+V)^2
+ +2K\beta^2(\beta^2-V)^2\\
+ &-3(\beta^2+V)^4.
+\end{aligned}                                         \tag{4.2}
+\]
+Clearing the positive denominator in (3.15) gives the exact identity
+\[
+ S_\beta=3\beta^2(\beta^2+V)^2
+ \left\{2K\left(1+{y^2\over3}\right)-r^2\right\}.  \tag{4.3}
+\]
+At a point with $Q_\beta\ge0$, (3.7) applies.  At a point with
+$Q_\beta<0$, condition $S_\beta>0$ implies (3.15).  It is therefore enough
+to cover each rectangle by a high-$c$ certificate $Q_\beta>0$ and a low-$c$
+certificate $S_\beta>0$.  The low-$c$ region need not have
+$\beta^2\ge V$ everywhere: where it does not, (3.7) already applies.
+
+After affine transport to $[0,1]^2$, every polynomial is written in the
+tensor Bernstein basis.  If
+\[
+ P(u,v)=\sum_{m,n}a_{mn}u^mv^n
+\]
+has bidegree $(d,e)$, its Bernstein coefficients are
+\[
+ \widehat P_{ij}=\sum_{m\le i,\,n\le j}
+ a_{mn}{\binom{i}{m}\over\binom{d}{m}}
+       {\binom{j}{n}\over\binom{e}{n}}.              \tag{4.4}
+\]
+Strict positivity of all coefficients proves strict positivity on the whole
+closed rectangle.
+
+The exact cover is as follows.
+\[
+\begin{array}{c|c|c|c|c}
+\text{slab}&b\text{-interval}&\beta& S_\beta\text{ region}
+ &Q_\beta\text{ region}\\ \hline
+I_1&[0,1/10]&\beta_6&c\in[0,1/2]&c\in[1/2,1]\\
+I_2&[1/10,1/4]&\beta_{10,a}&c\in[0,1/2]&c\in[1/2,1]\\
+I_3&[1/4,1]&\beta_{10,b}&c\in[0,1/2]&c\in[1/2,1]\\
+I_4&[1,3/2]&\beta_{10,b}&c\in[0,3/5]&c\in[3/5,1]\\
+I_5&[3/2,2]&\beta_\sharp&\text{not needed}&c\in[0,1]\\
+I_6&[2,643/200]&\beta_\sharp&\text{four cells}&\text{two cells}
+\end{array}                                           \tag{4.5}
+\]
+For $I_1,I_2,I_3$, each $S$ rectangle has $289$ bidegree-$(16,16)$
+coefficients and each $Q$ rectangle has $25$ bidegree-$(4,4)$ coefficients.
+For $I_4$, the low-$c$ interval is divided into the eight closed cells
+\[
+ \left[{3j\over40},{3(j+1)\over40}\right],\qquad
+ j=0,\ldots,7,                                        \tag{4.6}
+\]
+giving $8\cdot289=2312$ positive $S$ coefficients; its high-$c$ rectangle
+has $25$ positive $Q$ coefficients.  This original part contributes $3279$
+signs.
+
+For $I_5$, $Q_{\beta_\sharp}$ is positive on the four closed quarter-cells
+$[j/4,(j+1)/4]$, $j=0,\ldots,3$.  Its bidegree is $(2,4)$, hence this adds
+$4\cdot15=60$ signs.  For $I_6$, use $Q_{\beta_\sharp}$ on
+\[
+ [0,1/10]\quad\hbox{and}\quad[5/8,1],               \tag{4.7}
+\]
+and $S_{\beta_\sharp}$ on the four consecutive cells
+\[
+ [1/10,37/160],\quad [37/160,19/64],\quad
+ [19/64,29/80],\quad [29/80,5/8].                    \tag{4.8}
+\]
+The $Q$ and $S$ bidegrees are respectively $(2,4)$ and $(8,16)$, so $I_6$
+adds $2\cdot15+4\cdot153=642$ signs.  Altogether
+\[
+ 3279+60+642=3981                                    \tag{4.9}
+\]
+exact rational coefficient signs are positive.  Both implementations also
+reconstruct the exact minima and canonical coefficient-list hashes recorded
+in their JSON artefacts.  One load-bearing new minimum, on the second $I_5$
+quarter-cell, is
+\[
+ {181\over4096}>0.                                   \tag{4.10}
+\]
+The smallest $I_6$ coefficient is likewise retained exactly in the result
+JSON, rather than rounded in the proof contract.
+
+\textbf{Theorem 4.1 (closed physical cone).}  For every
+$c\in[0,1]$, $\tau>0$, and $0\le x\le643\tau/200$,
+\[
+ \boxed{G(c,x,\tau)>0.}                              \tag{4.11}
+\]
+At $(x,\tau)=(0,0)$, $G=0$.
+
+\emph{Proof.}  Set $b=x/\tau$.  The six slabs cover
+$0\le b\le643/200$, including every endpoint.  Lemma 3.1 and the pointwise
+$Q/S$ dichotomy give
+\[
+ \log\E e^{-\tau F_b}\le{\tau^2K\over4}.           \tag{4.12}
+\]
+In the variance case, the unused margin is
+\[
+ {K\over4}-{V\over2}={\Delta\over4}>0.              \tag{4.13}
+\]
+In the other case the relevant Bernstein coefficient minimum is strictly
+positive, so (3.15) itself is strict.  Hence the gap is strict for
+$\tau>0$.  Direct evaluation gives equality at the origin.  Points with
+$\tau=0,x>0$ are outside this ratio chart and retain their R-113 projective
+owner. \hfill$\square$
+
+\section{A reusable symmetric Bessel majorant}
+
+Although Theorem 4.1 uses the original packet directly, the proof search
+also produced a stable future classifier:
+\[
+ \boxed{I_0(z)\le {1+\cosh z\over2}.}                 \tag{5.1}
+\]
+Indeed the coefficient of $z^{2n}$ on the two sides is respectively
+\[
+ {1\over4^n(n!)^2},\qquad {1\over2(2n)!}.             \tag{5.2}
+\]
+Writing $r_n=\binom{2n}{n}/4^n$, one has $r_1=1/2$ and
+\[
+ {r_{n+1}\over r_n}={2n+1\over2n+2}<1.              \tag{5.3}
+\]
+Thus (5.1) is coefficientwise, with first defect $z^4/192$.  In fact
+\[
+ I_0(z)\le {1+\cosh z\over2}-{z^4\over192},           \tag{5.4}
+\]
+because every remaining defect coefficient is nonnegative.
+
+The uncorrected right side is the moment-generating function of the
+three-point phase law with weights $1/4,1/2,1/4$ at $-1,0,1$.  It preserves
+the physical-ray mean and variance and creates no linear origin debt.
+However, it changes the fixed-$x$ projective second coefficient; one must not
+import the R-112 $D_2$ certificate into that bare surrogate.  The correction
+in (5.4) matches through the $z^4$ term and is the appropriate future
+one-dimensional $\operatorname{erfcx}$ classifier.  Neither surrogate is
+needed for, nor extends the scope of, Theorem 4.1 here.
+
+\section{Exact remaining scalar frontier}
+
+R-112 confined any unresolved point to
+\[
+ \mathcal D_{112}=\left\{0\le c\le1,\ 0\le x\le8,\
+ 0\le\tau\le20,\ (2x+\tau)^2\le32x+20\tau\right\}.  \tag{6.1}
+\]
+R-114 removes the closed cone $\tau>0$, $x\le643\tau/200$.  Consequently the
+live set is
+\[
+ \mathcal D_{112}\cap\{\tau>0,\ x>643\tau/200\}
+ \setminus(\mathcal W_{\rm proj}\cup\mathcal O_{\rm origin}
+ \cup\mathcal F_{\rm face}\cup\mathcal H_{\rm phase}),              \tag{6.2}
+\]
+with the four inherited R-113 classifiers understood exactly as defined
+there.  A simple certified container is
+\[
+ \kappa\le c\le1-\kappa,\qquad
+ \theta\le\tau<{1228800\over552049},\qquad
+ {643\tau\over200}<x\le8,                           \tag{6.3}
+\]
+together with the quadratic constraint in (6.1), where
+\[
+ \kappa={1\over100552401097327200},\qquad
+ \theta={16\over285418875}.                           \tag{6.4}
+\]
+To obtain the new upper bound, substitute $x=b\tau$ in (6.1):
+\[
+ \tau\le R(b):={32b+20\over(2b+1)^2}.                \tag{6.5}
+\]
+The function $R$ decreases for $b\ge0$, and
+\[
+ R(643/200)={1228800\over552049}.                    \tag{6.6}
+\]
+
+Both coordinate axes are therefore closed: $x=0,\tau>0$ by Theorem 4.1,
+the origin by equality, and $\tau=0,x>0$ by the inherited projective theorem.
+The R-113 Arb seed is also subsumed, since its maximal ratio is
+$(101/100)/(99/100)=101/99<643/200$.  It remains valid independent evidence
+but is no longer load-bearing.
+
+\section{Method boundary and proof roadmap}
+
+The cubic $\atanh$ proxy is not a global all-$b$ argument with the selected
+support floor.  Only $3/800$ beyond the certified endpoint, at the exact
+point
+\[
+ (b,c)=\left({103\over32},{5\over16}\right),\quad
+ \beta={103\over64},\quad K={18714321\over4194304},
+ \quad V={145635\over65536},                          \tag{7.1}
+\]
+one has
+\[
+ Q_\beta=-{24109\over65536}<0,                       \tag{7.2}
+\]
+and
+\[
+ S_\beta=-{127544381197984065\over
+ 18446744073709551616}<0.                             \tag{7.3}
+\]
+This is an exact failure of this sufficient polynomial proxy, not a
+counterexample to the exact log-Laplace target, the full Kearns--Saul
+coefficient, a sharper support floor, or a higher-moment majorant.
+It also does not prove optimality of the rational endpoint $643/200$.
+
+The other proof-search branches are retained with their present status:
+\begin{itemize}
+\item Exact integration of the base $e^{-T-U}$ weight makes the R-113
+two-dimensional Bessel cubature substantially tighter at fixed cell count.
+It remains a sound fallback, but outer parameter dependency still prevents a
+finite global cover; no exploratory endpoint is theorem evidence here.
+\item Exact fourth-order Taylor moment patches show prototype margins, while
+a four-moment Gauss--Radau Hermite majorant repairs nearby post-cone tests.
+Neither has a replayable global cover; Gauss--Radau still needs a uniform
+all-tilt certificate, since blanket variance monotonicity is false.  It is
+the preferred analytic target, with exact intervals as fallback.
+\item The symmetric majorant (5.1) permits exact elimination of the $T$
+integral and a one-dimensional $\operatorname{erfcx}$ integral in $U$.
+Keeping the three branches as one mixture preserves their cancellation;
+bounding them separately loses it.  Outer splitting is still required.
+\item On the residual, the coordinates
+$r=x+\tau$ and $p=x/(x+\tau)$ turn the quadratic exterior constraint into
+$r(1+p)^2\le20+12p$ and place the new cone boundary at $p=643/843$.
+They reduce repeated-variable inflation and are preferred for the next
+branch-and-bound.
+\end{itemize}
+
+The next fail-closed proof route is therefore:
+\begin{enumerate}
+\item use Theorem 4.1 as the first classifier and discard every box with
+$x\le643\tau/200$;
+\item retain the R-113 projective, origin, face, and high-$q$ classifiers;
+\item first prove or refute the four-moment Gauss--Radau all-tilt step, then
+try the corrected symmetric Bessel classifier and exact low-order
+moment/Bernstein patches on the strict residual;
+\item use weighted exact-Bessel outward-rounded integration only as the
+fallback;
+\item accept scalar closure only after every residual leaf has a finite
+analytic or strict directed-rounding certificate.
+\end{enumerate}
+
+Only after that global scalar gate closes may the proof return to the full
+A1 one-fresh-root contraction-closed owner cluster and then to the separate
+one-use source/sextic Carleson aggregation.
+
+\section{Devil's-advocate review}
+
+\begin{enumerate}
+\item \textbf{Objection:} The Hermite remainder has the wrong sign outside
+the interpolation interval.  \textbf{Verdict: DISMISSED.}  For every
+$z\ge0$, including $z>r$, the factor $z(z-r)^2$ is nonnegative and
+$f'''(\xi)<0$.  Thus the quadratic is a global majorant on the entire support.
+
+\item \textbf{Objection:} The low-$c$ slabs silently assume
+$\beta^2\ge V$.  \textbf{Verdict: VALID WITH EXPLICIT MITIGATION.}  That
+sign does change inside the slabs.  The proof uses a pointwise dichotomy:
+$Q_\beta\ge0$ invokes (3.7), while only $Q_\beta<0$ invokes the globally
+positive $S_\beta$ certificate.  No uniform sign assumption is made.
+
+\item \textbf{Objection:} A decimal scan was promoted to a continuum proof.
+\textbf{Verdict: DISMISSED.}  All $3981$ signs are exact rational Bernstein
+coefficients.  The independent program reconstructs them with a different
+sparse-polynomial engine and de Casteljau subdivision.  Sampling is absent
+from the evidence contract.
+
+\item \textbf{Objection:} The Bessel surrogate supplies the missing theorem
+but changes the projective coefficient.  \textbf{Verdict: DISMISSED.}
+Theorem 4.1 applies Lemma 3.1 directly to the original uniform-phase packet.
+Section 5 is explicitly non-load-bearing and records the fixed-$x$ caveat.
+
+\item \textbf{Objection:} The equality and chart boundaries were omitted.
+\textbf{Verdict: DISMISSED.}  Every $b$ and $c$ slab is closed and overlaps
+at its endpoints, $b=643/200$ is included, $\tau>0$ gives strict gap, and
+the origin is checked directly.  The separate $\tau=0,x>0$ boundary retains
+its R-113 owner.
+
+\item \textbf{Objection:} The negative witness (7.3) refutes the scalar
+target.  \textbf{Verdict: UPHELD AS A FORBIDDEN READING.}  It refutes only
+the displayed cubic sufficient proxy with the selected floor.  The exact
+target remains numerically unrefuted and mathematically open for part of
+$b>643/200$.
+
+\item \textbf{Objection:} Closing both scalar axes closes Sector A.
+\textbf{Verdict: UPHELD AS A FORBIDDEN READING.}  The strict residual
+$b>643/200$, full A1 owner embedding, one-use source/sextic aggregation,
+$\mathrm{OVERLAP}_{\rm src}$, Nelson, removals, and the interacting measure
+remain open.  Tier stays T4.
+
+\item \textbf{Objection:} The rational cutoff $6/5$ or the cone endpoint
+$643/200$ was proved optimal.  \textbf{Verdict: VALID WITH EXPLICIT
+MITIGATION.}  They are convenient certified bounds.  The nearby witness
+blocks only the chosen cubic proxy; no optimal onset, maximal cone, or target
+failure is asserted.
+\end{enumerate}
+
+\section{Result footer}
+
+\begin{verbatim}
+Result ID: A13-CLASSII-SCALAR-K2K-SUPPORT-TWO-MOMENT-CONE-CLOSURE
+Precise statement: R-114 proves the original R-112 scalar target strictly
+  for every c in [0,1], tau>0, and 0<=x<=643*tau/200.  The origin is equality.
+  Exact support/Hermite/Bernoulli analysis plus 3981 positive rational
+  Bernstein coefficients provide the certificate.
+Scope: Stationary scalar k:2k model and the stated physical cone only; not
+  the remaining b>643/200 scalar core or a full A1 theorem.
+Dependencies: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION;
+  R-087; R-103; R-105; R-112; R-113.
+Evidence grade: ANALYTIC, EXACT, EXECUTED.
+Reproduction command:
+  E:\Dev\TECT.venv\Scripts\python.exe
+  codes/foundations/
+  a13_classii_scalar_k2k_support_two_moment_cone_verify.py
+Expected output: Integrated R-114 PASS; both non-importing children PASS;
+  each reconstructs 3981/3981 positive exact Bernstein coefficients.
+Falsification gate: Any failed moment, floor, Hermite/Kearns--Saul identity,
+  coefficient sign/minimum/hash, child run, source/PDF hash, or a claim that
+  the residual b>643/200 compact core is closed.
+Tier before / after: T4 / T4.
+No-overclaim statement: No mixed all-b scalar theorem, full A1 owner cluster,
+  one-use source/sextic aggregation, OVERLAP_src, Nelson bound, removal
+  limit, interacting measure, Sector-A closure, or higher tier is established.
+Next required action: Run the fail-closed classifier/branch-and-bound only on
+  b>643/200; after scalar closure, build the full A1 owner cluster and the
+  separate one-use aggregation.
+\end{verbatim}

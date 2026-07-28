@@ -45,6 +45,7 @@ _None linked to this sector._
 
 | Tag | Branch / claim | Failure mode |
 |---|---|---|
+| NG-2026-07-28-A13-K2K-CUBIC-KS-PROXY-BEYOND-CONE | the cubic Bernoulli proxy does not extend the selected floor |  |
 | NG-2026-07-28-A13-K2K-BESSEL-CROSS-CONTRACTION-ORIGIN-DEBT | the stable cross contraction creates a false linear origin d | combine `I_0(z)<=e^z` with `2sqrt(ab)<=a+b` to replace the |
 | NG-2026-07-28-A13-K2K-ALL-ORDER-PROJECTIVE-COEFFICIENT-POSITIVITY | the third exact projective coefficient changes sign | expand the exact covariance-simplex logarithmic gap in |
 | NG-2026-07-28-A13-K2K-QUADRATIC-BESSEL-UPPER-DOMINATION | the local Gaussian Bessel envelope destroys radial integrabi | insert `I_0(z)<=exp(z^2/4)` into the exact phase-averaged |

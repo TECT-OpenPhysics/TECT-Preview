@@ -1,0 +1,1222 @@
+{
+  "assertion_names": [
+    "normal_form::K2 reconstructed from simplex",
+    "normal_form::Delta reconstructed from three squares",
+    "normal_form::variance identity by construction",
+    "normal_form::reserve square remainder",
+    "support::beta6 positive at endpoints",
+    "support::beta10 branches join",
+    "support::endpoint beta",
+    "support::sharp-floor threshold at six-fifths",
+    "support::sharp-floor threshold increment factors positively",
+    "support::sharp floor endpoint beta",
+    "normal_form::variance coefficient count",
+    "normal_form::variance strictly positive on cone",
+    "normal_form::variance minimum coefficient",
+    "bernstein::I1 all S coefficients positive",
+    "bernstein::I1 all Q coefficients positive",
+    "bernstein::I1 S count",
+    "bernstein::I1 Q count",
+    "bernstein::I1 S minimum oracle",
+    "bernstein::I1 Q minimum oracle",
+    "bernstein::I1 S hash",
+    "bernstein::I1 Q hash",
+    "bernstein::I2 all S coefficients positive",
+    "bernstein::I2 all Q coefficients positive",
+    "bernstein::I2 S count",
+    "bernstein::I2 Q count",
+    "bernstein::I2 S minimum oracle",
+    "bernstein::I2 Q minimum oracle",
+    "bernstein::I2 S hash",
+    "bernstein::I2 Q hash",
+    "bernstein::I3 all S coefficients positive",
+    "bernstein::I3 all Q coefficients positive",
+    "bernstein::I3 S count",
+    "bernstein::I3 Q count",
+    "bernstein::I3 S minimum oracle",
+    "bernstein::I3 Q minimum oracle",
+    "bernstein::I3 S hash",
+    "bernstein::I3 Q hash",
+    "de_casteljau::I4 cell 0 coefficient count",
+    "de_casteljau::I4 cell 0 all positive",
+    "de_casteljau::I4 cell 1 coefficient count",
+    "de_casteljau::I4 cell 1 all positive",
+    "de_casteljau::I4 cell 2 coefficient count",
+    "de_casteljau::I4 cell 2 all positive",
+    "de_casteljau::I4 cell 3 coefficient count",
+    "de_casteljau::I4 cell 3 all positive",
+    "de_casteljau::I4 cell 4 coefficient count",
+    "de_casteljau::I4 cell 4 all positive",
+    "de_casteljau::I4 cell 5 coefficient count",
+    "de_casteljau::I4 cell 5 all positive",
+    "de_casteljau::I4 cell 6 coefficient count",
+    "de_casteljau::I4 cell 6 all positive",
+    "de_casteljau::I4 cell 7 coefficient count",
+    "de_casteljau::I4 cell 7 all positive",
+    "bernstein::I4 Q all positive",
+    "bernstein::I4 Q count",
+    "bernstein::I4 S minimum oracle",
+    "bernstein::I4 Q minimum oracle",
+    "bernstein::I4 S hash",
+    "bernstein::I4 Q hash",
+    "de_casteljau::I5 cell 0 coefficient count",
+    "de_casteljau::I5 cell 0 all positive",
+    "de_casteljau::I5 cell 1 coefficient count",
+    "de_casteljau::I5 cell 1 all positive",
+    "de_casteljau::I5 cell 2 coefficient count",
+    "de_casteljau::I5 cell 2 all positive",
+    "de_casteljau::I5 cell 3 coefficient count",
+    "de_casteljau::I5 cell 3 all positive",
+    "bernstein::I5 Q minimum oracle",
+    "bernstein::I5 Q hash",
+    "bernstein::I6 Q_LOW count",
+    "bernstein::I6 Q_LOW all positive",
+    "bernstein::I6 Q_LOW minimum oracle",
+    "bernstein::I6 Q_LOW hash",
+    "bernstein::I6 S_A count",
+    "bernstein::I6 S_A all positive",
+    "bernstein::I6 S_A minimum oracle",
+    "bernstein::I6 S_A hash",
+    "bernstein::I6 S_B count",
+    "bernstein::I6 S_B all positive",
+    "bernstein::I6 S_B minimum oracle",
+    "bernstein::I6 S_B hash",
+    "bernstein::I6 S_C count",
+    "bernstein::I6 S_C all positive",
+    "bernstein::I6 S_C minimum oracle",
+    "bernstein::I6 S_C hash",
+    "bernstein::I6 S_D count",
+    "bernstein::I6 S_D all positive",
+    "bernstein::I6 S_D minimum oracle",
+    "bernstein::I6 S_D hash",
+    "bernstein::I6 Q_HIGH count",
+    "bernstein::I6 Q_HIGH all positive",
+    "bernstein::I6 Q_HIGH minimum oracle",
+    "bernstein::I6 Q_HIGH hash",
+    "bernstein::total exact coefficient signs",
+    "mutant::witness covariance square",
+    "mutant::witness reserve",
+    "mutant::witness variance",
+    "mutant::variance branch unavailable at beyond-cone witness",
+    "mutant::variance branch exact negative witness",
+    "mutant::cubic proxy exact negative witness",
+    "mutant::reserve-sign mutant changes variance",
+    "bessel::central coefficient order 1",
+    "bessel::central coefficient order 2",
+    "bessel::central coefficient order 3",
+    "bessel::central coefficient order 4",
+    "bessel::central coefficient order 5",
+    "bessel::central coefficient order 6",
+    "bessel::central coefficient order 7",
+    "bessel::central coefficient order 8",
+    "bessel::central coefficient order 9",
+    "bessel::central coefficient order 10",
+    "bessel::central coefficient order 11",
+    "bessel::central coefficient order 12",
+    "bessel::central coefficient order 13",
+    "bessel::central coefficient order 14",
+    "bessel::central coefficient order 15",
+    "bessel::central coefficient order 16",
+    "bessel::central coefficient order 17",
+    "bessel::central coefficient order 18",
+    "bessel::central coefficient order 19",
+    "bessel::central coefficient order 20",
+    "bessel::central coefficient order 21",
+    "bessel::central coefficient order 22",
+    "bessel::central coefficient order 23",
+    "bessel::central coefficient order 24",
+    "bessel::central coefficient order 25",
+    "bessel::central coefficient order 26",
+    "bessel::central coefficient order 27",
+    "bessel::central coefficient order 28",
+    "bessel::central coefficient order 29",
+    "bessel::central coefficient order 30",
+    "bessel::central coefficient order 31",
+    "bessel::central coefficient order 32"
+  ],
+  "assertions": [
+    {
+      "actual": "{(0, 2): Fraction(1, 1), (0, 0): Fraction(1, 2), (0, 1): Fraction(-1, 1)}",
+      "expected": "{(0, 2): Fraction(1, 1), (0, 1): Fraction(-1, 1), (0, 0): Fraction(1, 2)}",
+      "group": "normal_form",
+      "name": "K2 reconstructed from simplex",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(0, 4): Fraction(33, 64), (0, 2): Fraction(11, 32), (0, 3): Fraction(-9, 16), (0, 0): Fraction(1, 64), (0, 1): Fraction(-1, 16)}",
+      "expected": "{(0, 4): Fraction(33, 64), (0, 3): Fraction(-9, 16), (0, 2): Fraction(11, 32), (0, 1): Fraction(-1, 16), (0, 0): Fraction(1, 64)}",
+      "group": "normal_form",
+      "name": "Delta reconstructed from three squares",
+      "status": "PASS"
+    },
+    {
+      "actual": "2V+Delta",
+      "expected": "K",
+      "group": "normal_form",
+      "name": "variance identity by construction",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(0, 4): Fraction(1, 8), (0, 2): Fraction(1, 8), (0, 3): Fraction(-1, 4)}",
+      "expected": "c^2*s^2/8",
+      "group": "normal_form",
+      "name": "reserve square remainder",
+      "status": "PASS"
+    },
+    {
+      "actual": "(Fraction(1, 4), Fraction(521, 1600))",
+      "expected": ">0",
+      "group": "support",
+      "name": "beta6 positive at endpoints",
+      "status": "PASS"
+    },
+    {
+      "actual": "2321/6400",
+      "expected": "2321/6400",
+      "group": "support",
+      "name": "beta10 branches join",
+      "status": "PASS"
+    },
+    {
+      "actual": "1489/1600",
+      "expected": "1489/1600",
+      "group": "support",
+      "name": "endpoint beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/5",
+      "expected": "3/5",
+      "group": "support",
+      "name": "sharp-floor threshold at six-fifths",
+      "status": "PASS"
+    },
+    {
+      "actual": "{(2, 0): Fraction(15, 1), (1, 0): Fraction(-10, 1), (0, 0): Fraction(-48, 5)}",
+      "expected": "{(2, 0): Fraction(15, 1), (1, 0): Fraction(-10, 1), (0, 0): Fraction(-48, 5)}",
+      "group": "support",
+      "name": "sharp-floor threshold increment factors positively",
+      "status": "PASS"
+    },
+    {
+      "actual": "643/400",
+      "expected": "643/400",
+      "group": "support",
+      "name": "sharp floor endpoint beta",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "normal_form",
+      "name": "variance coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/32",
+      "expected": ">0",
+      "group": "normal_form",
+      "name": "variance strictly positive on cone",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/32",
+      "expected": "1/32",
+      "group": "normal_form",
+      "name": "variance minimum coefficient",
+      "status": "PASS"
+    },
+    {
+      "actual": "3228828189276149229671/128849018880000000000000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I1 all S coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "37759/2560000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I1 all Q coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "bernstein",
+      "name": "I1 S count",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "25",
+      "group": "bernstein",
+      "name": "I1 Q count",
+      "status": "PASS"
+    },
+    {
+      "actual": "3228828189276149229671/128849018880000000000000000",
+      "expected": "3228828189276149229671/128849018880000000000000000",
+      "group": "bernstein",
+      "name": "I1 S minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "37759/2560000",
+      "expected": "37759/2560000",
+      "group": "bernstein",
+      "name": "I1 Q minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "d711d87e3c04b4836449000565eda5162473717967be9498720520026bd554b7",
+      "expected": "d711d87e3c04b4836449000565eda5162473717967be9498720520026bd554b7",
+      "group": "bernstein",
+      "name": "I1 S hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "5c6d7857a1d9b89065e0a633e4846d61f972a63c58b3b57fc38e13b5cd81e19a",
+      "expected": "5c6d7857a1d9b89065e0a633e4846d61f972a63c58b3b57fc38e13b5cd81e19a",
+      "group": "bernstein",
+      "name": "I1 Q hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "824289456286443058922316607955591/19660800000000000000000000000000000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I2 all S coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "31934599/1600000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I2 all Q coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "bernstein",
+      "name": "I2 S count",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "25",
+      "group": "bernstein",
+      "name": "I2 Q count",
+      "status": "PASS"
+    },
+    {
+      "actual": "824289456286443058922316607955591/19660800000000000000000000000000000000",
+      "expected": "824289456286443058922316607955591/19660800000000000000000000000000000000",
+      "group": "bernstein",
+      "name": "I2 S minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "31934599/1600000000",
+      "expected": "31934599/1600000000",
+      "group": "bernstein",
+      "name": "I2 Q minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "1f5fb8125d7ea09bba0c0499733f72eadd915c40cd677ababf9ae6482b4a7a31",
+      "expected": "1f5fb8125d7ea09bba0c0499733f72eadd915c40cd677ababf9ae6482b4a7a31",
+      "group": "bernstein",
+      "name": "I2 S hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "6ffad311b8242e6aca74e09f03cbd7e081f007635f07e9919f6485769f6a5ee2",
+      "expected": "6ffad311b8242e6aca74e09f03cbd7e081f007635f07e9919f6485769f6a5ee2",
+      "group": "bernstein",
+      "name": "I2 Q hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "1678113425694930246248812151/8444249301319680000000000000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I3 all S coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "1457/80000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I3 all Q coefficients positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "bernstein",
+      "name": "I3 S count",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "25",
+      "group": "bernstein",
+      "name": "I3 Q count",
+      "status": "PASS"
+    },
+    {
+      "actual": "1678113425694930246248812151/8444249301319680000000000000000",
+      "expected": "1678113425694930246248812151/8444249301319680000000000000000",
+      "group": "bernstein",
+      "name": "I3 S minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "1457/80000",
+      "expected": "1457/80000",
+      "group": "bernstein",
+      "name": "I3 Q minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "0b901c8781be10704eef1af62f4fca4378234f91f2cbf5160538dd3168c14043",
+      "expected": "0b901c8781be10704eef1af62f4fca4378234f91f2cbf5160538dd3168c14043",
+      "group": "bernstein",
+      "name": "I3 S hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "4a5eadf2900a0644ca2def6929e318af5b7f996bb45b3876109c842c847d8331",
+      "expected": "4a5eadf2900a0644ca2def6929e318af5b7f996bb45b3876109c842c847d8331",
+      "group": "bernstein",
+      "name": "I3 Q hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 0 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "31830335436293883565581815773/2814749767106560000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 0 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 1 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "381837784443361993600177217/44667659878400000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 1 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 2 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "4089930819610437346252570751/982688517324800000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 2 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 3 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "37424481924211099425569370013/2814749767106560000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 3 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 4 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "9526536030228050369/327680000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 4 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 5 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "138303536701051243035310623517/2814749767106560000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 5 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 6 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "3230797565323302063967213/42949672960000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 6 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "289",
+      "expected": "289",
+      "group": "de_casteljau",
+      "name": "I4 cell 7 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "300771236726684590554372804253/2814749767106560000000000000000",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I4 cell 7 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "157279/2560000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I4 Q all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "25",
+      "expected": "25",
+      "group": "bernstein",
+      "name": "I4 Q count",
+      "status": "PASS"
+    },
+    {
+      "actual": "4089930819610437346252570751/982688517324800000000000000000",
+      "expected": "4089930819610437346252570751/982688517324800000000000000000",
+      "group": "bernstein",
+      "name": "I4 S minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "157279/2560000",
+      "expected": "157279/2560000",
+      "group": "bernstein",
+      "name": "I4 Q minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "4689649754369a75e1e6540665d40eb7beee9c8c274690cb215ccf6b913cf59c",
+      "expected": "4689649754369a75e1e6540665d40eb7beee9c8c274690cb215ccf6b913cf59c",
+      "group": "bernstein",
+      "name": "I4 S hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "928c95b03d5a392238a016d4d761be85fc69941ae3a9143e5ef998552c8d016d",
+      "expected": "928c95b03d5a392238a016d4d761be85fc69941ae3a9143e5ef998552c8d016d",
+      "group": "bernstein",
+      "name": "I4 Q hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "de_casteljau",
+      "name": "I5 cell 0 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "219/4096",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I5 cell 0 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "de_casteljau",
+      "name": "I5 cell 1 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "181/4096",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I5 cell 1 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "de_casteljau",
+      "name": "I5 cell 2 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "47/256",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I5 cell 2 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "de_casteljau",
+      "name": "I5 cell 3 coefficient count",
+      "status": "PASS"
+    },
+    {
+      "actual": "2471/4096",
+      "expected": ">0",
+      "group": "de_casteljau",
+      "name": "I5 cell 3 all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "181/4096",
+      "expected": "181/4096",
+      "group": "bernstein",
+      "name": "I5 Q minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "978b92c967332621d3911620b1d3d8ad42d1fefafe3aaa47bc8cd69efc554a55",
+      "expected": "978b92c967332621d3911620b1d3d8ad42d1fefafe3aaa47bc8cd69efc554a55",
+      "group": "bernstein",
+      "name": "I5 Q hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "bernstein",
+      "name": "I6 Q_LOW count",
+      "status": "PASS"
+    },
+    {
+      "actual": "123657/4000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I6 Q_LOW all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "123657/4000000",
+      "expected": "123657/4000000",
+      "group": "bernstein",
+      "name": "I6 Q_LOW minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "1035b2320a0c9c3acfcc4e55a4b66da105edb4f7888a458d4617f2c83ab4d177",
+      "expected": "1035b2320a0c9c3acfcc4e55a4b66da105edb4f7888a458d4617f2c83ab4d177",
+      "group": "bernstein",
+      "name": "I6 Q_LOW hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "153",
+      "expected": "153",
+      "group": "bernstein",
+      "name": "I6 S_A count",
+      "status": "PASS"
+    },
+    {
+      "actual": "161577960237532077/1048576000000000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I6 S_A all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "161577960237532077/1048576000000000000",
+      "expected": "161577960237532077/1048576000000000000",
+      "group": "bernstein",
+      "name": "I6 S_A minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "ab46bd57906672aa0d1896dd39bfc0cf1bbfd13602fd6a5cba379bd870c6c6f9",
+      "expected": "ab46bd57906672aa0d1896dd39bfc0cf1bbfd13602fd6a5cba379bd870c6c6f9",
+      "group": "bernstein",
+      "name": "I6 S_A hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "153",
+      "expected": "153",
+      "group": "bernstein",
+      "name": "I6 S_B count",
+      "status": "PASS"
+    },
+    {
+      "actual": "2530755391442237982218571711234415259638533/31691265005705735037417580134400000000000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I6 S_B all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "2530755391442237982218571711234415259638533/31691265005705735037417580134400000000000000",
+      "expected": "2530755391442237982218571711234415259638533/31691265005705735037417580134400000000000000",
+      "group": "bernstein",
+      "name": "I6 S_B minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "3ee962f158c3c40f21c61a0d6ae3e3ad177f169b132c26eea64a63874df3556f",
+      "expected": "3ee962f158c3c40f21c61a0d6ae3e3ad177f169b132c26eea64a63874df3556f",
+      "group": "bernstein",
+      "name": "I6 S_B hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "153",
+      "expected": "153",
+      "group": "bernstein",
+      "name": "I6 S_C count",
+      "status": "PASS"
+    },
+    {
+      "actual": "265576965141887076438339040964644393830604077/9671406556917033397649408000000000000000000000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I6 S_C all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "265576965141887076438339040964644393830604077/9671406556917033397649408000000000000000000000",
+      "expected": "265576965141887076438339040964644393830604077/9671406556917033397649408000000000000000000000",
+      "group": "bernstein",
+      "name": "I6 S_C minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "3c7add20fe823d9094ec88ac54b5a0bcadcfde21de4cdf91cd01d46edd8dc3dc",
+      "expected": "3c7add20fe823d9094ec88ac54b5a0bcadcfde21de4cdf91cd01d46edd8dc3dc",
+      "group": "bernstein",
+      "name": "I6 S_C hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "153",
+      "expected": "153",
+      "group": "bernstein",
+      "name": "I6 S_D count",
+      "status": "PASS"
+    },
+    {
+      "actual": "3810070004416673757/18446744073709551616",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I6 S_D all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "3810070004416673757/18446744073709551616",
+      "expected": "3810070004416673757/18446744073709551616",
+      "group": "bernstein",
+      "name": "I6 S_D minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "c68025064cac89ca3608937c5ea62d3671ddb1eeee36138653ad3594be495af1",
+      "expected": "c68025064cac89ca3608937c5ea62d3671ddb1eeee36138653ad3594be495af1",
+      "group": "bernstein",
+      "name": "I6 S_D hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "15",
+      "expected": "15",
+      "group": "bernstein",
+      "name": "I6 Q_HIGH count",
+      "status": "PASS"
+    },
+    {
+      "actual": "498609/8192000",
+      "expected": ">0",
+      "group": "bernstein",
+      "name": "I6 Q_HIGH all positive",
+      "status": "PASS"
+    },
+    {
+      "actual": "498609/8192000",
+      "expected": "498609/8192000",
+      "group": "bernstein",
+      "name": "I6 Q_HIGH minimum oracle",
+      "status": "PASS"
+    },
+    {
+      "actual": "53d1e00735e09662f0c53b95ee4fe1b5f5d02267dc032e5e849474fa81c1861f",
+      "expected": "53d1e00735e09662f0c53b95ee4fe1b5f5d02267dc032e5e849474fa81c1861f",
+      "group": "bernstein",
+      "name": "I6 Q_HIGH hash",
+      "status": "PASS"
+    },
+    {
+      "actual": "3981",
+      "expected": "3981",
+      "group": "bernstein",
+      "name": "total exact coefficient signs",
+      "status": "PASS"
+    },
+    {
+      "actual": "18714321/4194304",
+      "expected": "18714321/4194304",
+      "group": "mutant",
+      "name": "witness covariance square",
+      "status": "PASS"
+    },
+    {
+      "actual": "73041/4194304",
+      "expected": "73041/4194304",
+      "group": "mutant",
+      "name": "witness reserve",
+      "status": "PASS"
+    },
+    {
+      "actual": "145635/65536",
+      "expected": "145635/65536",
+      "group": "mutant",
+      "name": "witness variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "-24109/65536",
+      "expected": "<0",
+      "group": "mutant",
+      "name": "variance branch unavailable at beyond-cone witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "-24109/65536",
+      "expected": "-24109/65536",
+      "group": "mutant",
+      "name": "variance branch exact negative witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "-127544381197984065/18446744073709551616",
+      "expected": "-127544381197984065/18446744073709551616",
+      "group": "mutant",
+      "name": "cubic proxy exact negative witness",
+      "status": "PASS"
+    },
+    {
+      "actual": "557/1024",
+      "expected": "131/256",
+      "group": "mutant",
+      "name": "reserve-sign mutant changes variance",
+      "status": "PASS"
+    },
+    {
+      "actual": "1/2",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 1",
+      "status": "PASS"
+    },
+    {
+      "actual": "3/8",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 2",
+      "status": "PASS"
+    },
+    {
+      "actual": "5/16",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 3",
+      "status": "PASS"
+    },
+    {
+      "actual": "35/128",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 4",
+      "status": "PASS"
+    },
+    {
+      "actual": "63/256",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 5",
+      "status": "PASS"
+    },
+    {
+      "actual": "231/1024",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 6",
+      "status": "PASS"
+    },
+    {
+      "actual": "429/2048",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 7",
+      "status": "PASS"
+    },
+    {
+      "actual": "6435/32768",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 8",
+      "status": "PASS"
+    },
+    {
+      "actual": "12155/65536",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 9",
+      "status": "PASS"
+    },
+    {
+      "actual": "46189/262144",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 10",
+      "status": "PASS"
+    },
+    {
+      "actual": "88179/524288",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 11",
+      "status": "PASS"
+    },
+    {
+      "actual": "676039/4194304",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 12",
+      "status": "PASS"
+    },
+    {
+      "actual": "1300075/8388608",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 13",
+      "status": "PASS"
+    },
+    {
+      "actual": "5014575/33554432",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 14",
+      "status": "PASS"
+    },
+    {
+      "actual": "9694845/67108864",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 15",
+      "status": "PASS"
+    },
+    {
+      "actual": "300540195/2147483648",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 16",
+      "status": "PASS"
+    },
+    {
+      "actual": "583401555/4294967296",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 17",
+      "status": "PASS"
+    },
+    {
+      "actual": "2268783825/17179869184",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 18",
+      "status": "PASS"
+    },
+    {
+      "actual": "4418157975/34359738368",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 19",
+      "status": "PASS"
+    },
+    {
+      "actual": "34461632205/274877906944",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 20",
+      "status": "PASS"
+    },
+    {
+      "actual": "67282234305/549755813888",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 21",
+      "status": "PASS"
+    },
+    {
+      "actual": "263012370465/2199023255552",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 22",
+      "status": "PASS"
+    },
+    {
+      "actual": "514589420475/4398046511104",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 23",
+      "status": "PASS"
+    },
+    {
+      "actual": "8061900920775/70368744177664",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 24",
+      "status": "PASS"
+    },
+    {
+      "actual": "15801325804719/140737488355328",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 25",
+      "status": "PASS"
+    },
+    {
+      "actual": "61989816618513/562949953421312",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 26",
+      "status": "PASS"
+    },
+    {
+      "actual": "121683714103007/1125899906842624",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 27",
+      "status": "PASS"
+    },
+    {
+      "actual": "956086325095055/9007199254740992",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 28",
+      "status": "PASS"
+    },
+    {
+      "actual": "1879204156221315/18014398509481984",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 29",
+      "status": "PASS"
+    },
+    {
+      "actual": "7391536347803839/72057594037927936",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 30",
+      "status": "PASS"
+    },
+    {
+      "actual": "14544636039226909/144115188075855872",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 31",
+      "status": "PASS"
+    },
+    {
+      "actual": "916312070471295267/9223372036854775808",
+      "expected": "<=1/2",
+      "group": "bessel",
+      "name": "central coefficient order 32",
+      "status": "PASS"
+    }
+  ],
+  "assertions_failed": 0,
+  "assertions_passed": 133,
+  "assertions_total": 133,
+  "results": {
+    "certificates": {
+      "I1": {
+        "Q_count": 25,
+        "Q_minimum": "37759/2560000",
+        "Q_sha256": "5c6d7857a1d9b89065e0a633e4846d61f972a63c58b3b57fc38e13b5cd81e19a",
+        "S_count": 289,
+        "S_minimum": "3228828189276149229671/128849018880000000000000000",
+        "S_sha256": "d711d87e3c04b4836449000565eda5162473717967be9498720520026bd554b7"
+      },
+      "I2": {
+        "Q_count": 25,
+        "Q_minimum": "31934599/1600000000",
+        "Q_sha256": "6ffad311b8242e6aca74e09f03cbd7e081f007635f07e9919f6485769f6a5ee2",
+        "S_count": 289,
+        "S_minimum": "824289456286443058922316607955591/19660800000000000000000000000000000000",
+        "S_sha256": "1f5fb8125d7ea09bba0c0499733f72eadd915c40cd677ababf9ae6482b4a7a31"
+      },
+      "I3": {
+        "Q_count": 25,
+        "Q_minimum": "1457/80000",
+        "Q_sha256": "4a5eadf2900a0644ca2def6929e318af5b7f996bb45b3876109c842c847d8331",
+        "S_count": 289,
+        "S_minimum": "1678113425694930246248812151/8444249301319680000000000000000",
+        "S_sha256": "0b901c8781be10704eef1af62f4fca4378234f91f2cbf5160538dd3168c14043"
+      },
+      "I4": {
+        "Q_count": 25,
+        "Q_minimum": "157279/2560000",
+        "Q_sha256": "928c95b03d5a392238a016d4d761be85fc69941ae3a9143e5ef998552c8d016d",
+        "S_cell_minima": [
+          "31830335436293883565581815773/2814749767106560000000000000000",
+          "381837784443361993600177217/44667659878400000000000000000",
+          "4089930819610437346252570751/982688517324800000000000000000",
+          "37424481924211099425569370013/2814749767106560000000000000000",
+          "9526536030228050369/327680000000000000000",
+          "138303536701051243035310623517/2814749767106560000000000000000",
+          "3230797565323302063967213/42949672960000000000000000",
+          "300771236726684590554372804253/2814749767106560000000000000000"
+        ],
+        "S_count": 2312,
+        "S_minimum": "4089930819610437346252570751/982688517324800000000000000000",
+        "S_sha256": "4689649754369a75e1e6540665d40eb7beee9c8c274690cb215ccf6b913cf59c",
+        "construction": "de Casteljau subdivision of c in [0,3/5] into eight equal cells"
+      },
+      "I5": {
+        "Q_cell_minima": [
+          "219/4096",
+          "181/4096",
+          "47/256",
+          "2471/4096"
+        ],
+        "Q_count": 60,
+        "Q_minimum": "181/4096",
+        "Q_sha256": "978b92c967332621d3911620b1d3d8ad42d1fefafe3aaa47bc8cd69efc554a55",
+        "construction": "de Casteljau subdivision of c in [0,1] into four equal cells"
+      },
+      "I6": {
+        "b_interval": [
+          "2",
+          "643/200"
+        ],
+        "floor": "b/2",
+        "regions": {
+          "Q_HIGH": {
+            "c_interval": [
+              "5/8",
+              "1"
+            ],
+            "coefficient_count": 15,
+            "minimum": "498609/8192000",
+            "sha256": "53d1e00735e09662f0c53b95ee4fe1b5f5d02267dc032e5e849474fa81c1861f"
+          },
+          "Q_LOW": {
+            "c_interval": [
+              "0",
+              "1/10"
+            ],
+            "coefficient_count": 15,
+            "minimum": "123657/4000000",
+            "sha256": "1035b2320a0c9c3acfcc4e55a4b66da105edb4f7888a458d4617f2c83ab4d177"
+          },
+          "S_A": {
+            "c_interval": [
+              "1/10",
+              "37/160"
+            ],
+            "coefficient_count": 153,
+            "minimum": "161577960237532077/1048576000000000000",
+            "sha256": "ab46bd57906672aa0d1896dd39bfc0cf1bbfd13602fd6a5cba379bd870c6c6f9"
+          },
+          "S_B": {
+            "c_interval": [
+              "37/160",
+              "19/64"
+            ],
+            "coefficient_count": 153,
+            "minimum": "2530755391442237982218571711234415259638533/31691265005705735037417580134400000000000000",
+            "sha256": "3ee962f158c3c40f21c61a0d6ae3e3ad177f169b132c26eea64a63874df3556f"
+          },
+          "S_C": {
+            "c_interval": [
+              "19/64",
+              "29/80"
+            ],
+            "coefficient_count": 153,
+            "minimum": "265576965141887076438339040964644393830604077/9671406556917033397649408000000000000000000000",
+            "sha256": "3c7add20fe823d9094ec88ac54b5a0bcadcfde21de4cdf91cd01d46edd8dc3dc"
+          },
+          "S_D": {
+            "c_interval": [
+              "29/80",
+              "5/8"
+            ],
+            "coefficient_count": 153,
+            "minimum": "3810070004416673757/18446744073709551616",
+            "sha256": "c68025064cac89ca3608937c5ea62d3671ddb1eeee36138653ad3594be495af1"
+          }
+        }
+      }
+    },
+    "cone": "tau>0 and 0<=x<=643*tau/200",
+    "engine": "non-importing sparse Fraction polynomials; I4 and I5 by exact de Casteljau subdivision",
+    "exact_coefficient_signs": 3981,
+    "method_boundary_witness": {
+      "Delta": "73041/4194304",
+      "K": "18714321/4194304",
+      "Q": "-24109/65536",
+      "S": "-127544381197984065/18446744073709551616",
+      "V": "145635/65536",
+      "b": "103/32",
+      "c": "5/16"
+    },
+    "origin_equality": true,
+    "runtime_versions": {
+      "python": "3.12.9"
+    },
+    "strict_gap": true
+  },
+  "results_sha256": "085a424c757afc5dfe94154fba79da57403a7b1368a812447323111d4bf9f5e1",
+  "route_verdicts": {
+    "cubic_proxy_beyond_cone": "fails-at-exact-witness",
+    "mixed_all_q_scalar_k2k": "open",
+    "sector_a": "open",
+    "support_two_moment_cone": "independently-reproduced-through-b=643/200"
+  },
+  "schema": "tect/a13-scalar-k2k-support-two-moment-cone-independent/1.0",
+  "status": "PASS",
+  "version": "1.1.0"
+}

@@ -316,10 +316,16 @@ scalar diagnostic and the derivative-demanding Stein route retire those two
   cones, and both covariance-face widths explicit; sharpens the phase floor
   through the full zero-amplitude `tau>=13` theorem; and certifies one complete
   genuinely mixed box by two non-importing outward-rounded Arb programs. The
-  residual is separated from both covariance faces and `tau=0` but retains
-  `x=0`, `16/285418875<=tau<13`. The remaining scalar work is a fail-closed
-  directed-rounding branch-and-bound whose closure requires a finite accepted
-  cover; unresolved or nonpositive boxes stay open. Even scalar
+  residual was separated from both covariance faces and `tau=0`. R-114 now
+  closes the complete `x=0` axis and proves the original packet strictly on
+  `tau>0`, `0<=x<=643tau/200`. Its sharp `F_b>=-b/2` floor and two
+  non-importing exact engines reconstruct `3981/3981` positive rational
+  Bernstein coefficients. The strict residual has `b=x/tau>643/200` and
+  `tau<1228800/552049`. A witness only `3/800` beyond the endpoint retires
+  the same cubic proxy, not the target. First prove or refute the four-moment
+  Gauss--Radau all-tilt step; otherwise run the fail-closed corrected-Bessel/
+  exact-Bessel branch-and-bound, retaining every unresolved or nonpositive
+  box. Even scalar
   closure would still need a full A1 embedding and separate owner-preserving
   one-use source/sextic aggregation. `OVERLAP_src`, Nelson, removals, the
   interacting measure, and Sector A remain open. R-080,
@@ -898,8 +904,13 @@ preserved in git/changelog rather than treated as current gates.
    coefficient-sign induction. R-113 adds effective rational projective,
    origin, and face classifiers, the sharper zero-amplitude `tau>=13` region,
    and two independent directed-rounding certificates for one strict mixed
-   box. Continue with a fail-closed global parameter cover, retaining every
-   unresolved or nonpositive box, then with the owner-preserving full-A1 conditional
+   box. R-114 closes the entire zero-amplitude axis and the exact cone
+   `0<=b=x/tau<=643/200` by a sharp support floor, a two-moment Hermite--
+   Bernoulli argument, and `3981/3981` exact Bernstein signs in each of two
+   non-importing engines. Continue only on `b>643/200`: test the four-moment
+   Gauss--Radau all-tilt step first, then use corrected-Bessel and exact-Bessel
+   fail-closed classifiers while retaining every unresolved or nonpositive
+   box. After scalar closure, build the owner-preserving full-A1 conditional
    cluster and the separate one-use source/sextic aggregation.
    Do not spatially differentiate the heat dummy, reuse uncontrolled tails for
    an adapted coefficient, separate the shifted multiplier from its signed

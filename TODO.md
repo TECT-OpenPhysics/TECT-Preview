@@ -8,7 +8,7 @@ Counts: In progress 1 · Next up 1 · Blocked 2 · Backlog 3 · Done (recent) 44
 ## In progress
 
 - **T-050** A13: prove the controlled-shell energy one-use bound  _(owner: Codex; claim: A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION; gate: A13-CLASSII-FULL-PROGRESSIVE-REVISIT-EXTENSION)_
-  - R-113 makes four projective wedges, eight origin cones, four covariance-face widths, and the zero-amplitude tau>=13 region effective, and two endpoint-union Arb implementations certify one strict mixed box. The global residual cover remains open: run a restartable fail-closed branch-and-bound, accept closure only after a finite certified cover, and retain every unresolved or nonpositive box. Only then attempt the full A1 owner cluster and separate one-use source/sextic aggregation.
+  - R-114 closes the complete zero-amplitude axis and proves the original R-112 scalar packet on tau>0, 0<=b=x/tau<=643/200 using the sharp floor F_b>=-b/2 and 3981/3981 exact Bernstein signs in each of two non-importing implementations. The strict b>643/200 residual remains open. First prove or refute the four-moment Gauss--Radau all-tilt step; otherwise run a restartable fail-closed corrected-Bessel/exact-Bessel classifier, retain every unresolved or nonpositive leaf, and accept scalar closure only after a finite cover. Only then attempt the full A1 owner cluster and separate one-use source/sextic aggregation.
   - _updated 2026-07-28_
 
 ## Next up

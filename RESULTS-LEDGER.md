@@ -19,6 +19,7 @@ policy in `governance/development-history.md`.
 
 | ID | Result | Summary |
 |---|---|---|
+| [R-114](#r-114) | Support--two-moment closure of the scalar physical cone | Scoped T4 analytic/exact/executed theorem and method boundary: for the original R-112 stationary scalar `k:2k` packet, the exact gap is strict for every `c in [0,1]`, `tau>0`, and `0<=x<=643tau/200`, with equality at the origin. A sharp large-`b` floor and two non-importing exact implementations reconstruct 3,981 positive rational Bernstein coefficients. This closes the complete zero-amplitude axis and subsumes the R-113 Arb seed. The strict `b=x/tau>643/200` scalar residual, mixed all-`b` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-113](#r-113) | Effective scalar boundary patches and first directed-rounding mixed box | Scoped T4 analytic/exact/executed advance: four explicit projective wedges, eight origin cones, quantitative covariance-face widths, two sharper phase floors (including the whole zero-amplitude simplex for `tau>=13`), and two non-importing outward-rounded Arb certificates for one genuinely mixed parameter box. The remaining compact scalar decision problem, mixed all-`q` theorem, full A1 owner cluster, one-use aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-112](#r-112) | Covariance-simplex compactification and uniform projective compact-core reduction | Scoped T4 analytic/exact/executed advance and method boundary: the unbounded mixed stationary scalar `k:2k` parameter space is written on the closed covariance simplex `c+s=1` and reduced outside the exact residual domain `(2x+tau)^2<=32x+20tau`, hence to `0<=c<=1`, `0<=x<=8`, `0<=tau<=20`, with a rigorous radius-50 radial tail below `1.091e-17`. The projective gap has a simplex-uniform expansion through `b^-2`; `D0>=x^3/480`, `D1>=0`, and an exact degree-twelve Bernstein certificate gives `D2>=x^2 Delta/4>=x^2/400`, with a factored `O(x^3 b^-3)` remainder and an existential uniform large-amplitude all-`q` theorem. A Bernstein-MGF condition supplies an origin cusp and the exact R-111 faces give slice-wise face patches. Exact `D3<0` retires all-order coefficientwise positivity without refuting the target. An effective amplitude threshold, a directed-rounding certificate for the strict mixed core, the genuinely mixed all-`q` theorem, full A1 embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, and Sector-A closure remain open |
 | [R-111](#r-111) | Scalar k:2k degenerate-face theorem, projective boundary, and mixed compact-core reduction | Scoped T4 analytic/exact/executed advance and method boundary: for the exact stationary scalar two-frequency packet of R-110, `log E exp(-qP)<=q^2 H/4` holds for every `q>=0` and every amplitude on both degenerate covariance faces `vw=0`. The genuinely mixed face has an exact `I_0` radial normalizer. At fixed projective shape its large-amplitude limit is the sum of two nonnegative centered-exponential gaps, and the complete first inverse-amplitude correction has a coefficientwise-positive numerator. Exact phase minimization yields a finite algebraic candidate set and removes sufficiently large `q` shape-wise; `log I_0(z)<=sqrt(4+z^2)-2` and a square completion give factorized tails. Three shortcuts are rigorously retired: the quadratic Bessel envelope creates a nonintegrable positive cubic exponent, conditioning produces negative effective scalar coefficients that falsify positive-coefficient tensorization, and tilted variance need not decrease. A uniform projective remainder, uniform local/two-chart face patching, and interval certification of the mixed compact core remain open. R-103 REG and R-087 fixed-cutoff CORE retain their prior owners; no full A1 embedding, one-use source/sextic aggregation, `OVERLAP_src`, Nelson, removals, interacting measure, or Sector-A closure follows |
@@ -132,6 +133,59 @@ policy in `governance/development-history.md`.
 | [R-013](#r-013) | Direct dressing-variance endpoint evaluation | T4 |
 | [R-015](#r-015) | Curvature-certified controlled-error selection margin | T4 |
 | [R-014](#r-014) | Convention-free per-transfer form-factor reduction | T4 |
+
+<a id="r-114"></a>
+### R-114 -- Support--two-moment closure of the scalar physical cone
+
+**Result ID.**
+`A13-CLASSII-SCALAR-K2K-SUPPORT-TWO-MOMENT-CONE-CLOSURE`.
+
+**Exact cone theorem.**  For the original R-112 stationary scalar `k:2k`
+packet and every covariance shape `c in [0,1]`,
+
+`G(c,x,tau)>0` whenever `tau>0` and `0<=x<=643tau/200`.
+
+At `(x,tau)=(0,0)` the gap is zero.  The proof applies a global quadratic
+Hermite majorant to the exact centered packet using the R-113 support floors,
+the sharp support floor `F_b>=-b/2` for `b>=6/5`, and exact variance
+`V=(K-Delta)/2`.  The matching two-point law is controlled either by its
+tilted variance or by a self-contained Kearns--Saul bound.
+
+**Exact polynomial certificate.**  Six rational `b=x/tau` slabs use the
+R-113 `beta_6`, `beta_10a`, and `beta_10b` floors and then `beta=b/2`.  On each parameter point,
+either `Q_beta=V-beta^2>=0`, or the cleared Bernoulli sufficient polynomial
+`S_beta` is positive.  The primary SymPy implementation and a non-importing
+sparse-`Fraction` implementation independently reconstruct `3981/3981`
+strictly positive tensor-Bernstein coefficients, identical exact minima, and
+identical canonical coefficient-list hashes.  The independent implementation
+uses exact de Casteljau subdivision on selected cells rather than only direct
+re-expansion.
+
+**Consequences and route boundary.**  The complete zero-amplitude axis is
+closed, and the R-113 Arb seed box is subsumed.  The coefficientwise bound
+`I_0(z)<=(1+cosh z)/2`, and its corrected form subtracting `z^4/192`, give a
+reusable symmetric three-phase classifier but are not used in the cone
+theorem.  At `(b,c)=(103/32,5/16)`, only `3/800` beyond the certified
+endpoint, exact negative `Q_beta` and `S_beta` values retire only the cubic
+`atanh` proxy with the selected floor.  They are not a counterexample to the
+exact target, and the rational endpoint is not asserted optimal.
+
+The remaining scalar region is strictly `b>643/200` after the inherited R-113
+projective, origin, covariance-face, and phase-floor classifiers; it lies in
+`tau<1228800/552049`.  A finite fail-closed cover is still required.  No mixed all-`b`
+scalar theorem, full A1 owner cluster, one-use source/sextic aggregation,
+`OVERLAP_src`, Nelson, removal, interacting measure, Sector-A closure, or
+tier promotion follows.
+
+**Proof and reproduction.**  Claim
+`A13-CLASSII-RELATIVE-PHASE-SOURCE-BUDGET-OBSTRUCTION`, note
+`classii-scalar-k2k-support-two-moment-cone-closure-260728-v1.0.tex.txt`,
+manifest `classii_scalar_k2k_support_two_moment_cone_manifest.json`, and the
+primary, independent, and integrated R-114 executables.  Their contracts pass
+`155/155`, `133/133`, and `140/140` (`428/428` aggregate); each child
+reconstructs all `3981` exact coefficient signs.  The final nine-page PDF
+passes form, zero overfull boxes, text extraction, and all-page Poppler visual
+QA.
 
 <a id="r-113"></a>
 ### R-113 -- Effective scalar boundary patches and first directed-rounding mixed box
