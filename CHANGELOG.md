@@ -5,6 +5,10 @@ not pillar counts.
 
 ---
 
+## [A13 proof-front loop audit and route reset after R-117] - 2026-07-28
+
+Audited R-094 through R-117 and found genuine local progress followed by a structural cycle at the unchanged complete-adapted-packet and one-use aggregation burdens. Selected the direct owner-complete source-action inequality as the primary architecture, isolated centered canonical det2 high-shell summability as a scoped support route, and imposed fold-first and sign-first stop rules on transport alternatives. Added EXP-000351 through EXP-000356; no claim tier or gate status changed.
+
 ## [R-117 rational horizon and uniform dyadic-root trace margin boundary] - 2026-07-28
 
 Accepted at T4: a full finite-dimensional rational-horizon classifier, uniform fixed-cutoff R-082 positive-floor horizon, the exact sharp joint Pauli--Fierz frame constant, and strict canonical all-direction dyadic-shell trace margins at q=10/9 and 2q=20/9. Both frozen bare-root normalizers therefore exist. A same-shell phase fixture disproves local Lipschitz metric regularity without affecting the trace route. Primary 42/42, independent 36/36, and integrated 40/40 pass; the ten-page PDF passed all-page Poppler QA. The legal complete adapted owner packet, cutoff-summable conditional log-normalizer ledger, one-use source/sextic aggregation, OVERLAP_src, Nelson, removals, interacting measure, and Sector-A closure remain open.

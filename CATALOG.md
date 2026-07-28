@@ -6,7 +6,7 @@
 
 Generated: 2026-07-29
 
-**2825 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
+**2826 artefacts** · superseded versions kept: 130 · machine-readable twin: `verification/catalog.json`
 
 Dates follow the two-date filename rule (`governance/naming-and-versioning.md` §3): first-issue anchors the
 lineage; version-issue shows currency. Files without encoded dates show —.
@@ -2719,7 +2719,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | Path | Claims | First issued | Version issued | Ver | Lifecycle | sha256/12 |
 |---|---|---|---|---|---|---|
 | `verification/README.md` | — | — | — | — | ACTIVE | `da6f8dc0c475` |
-| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `4ead71218397` |
+| `verification/proof-evidence-map.json` | — | — | — | — | ACTIVE | `f668e01ca2f0` |
 | `verification/requirements.txt` | — | — | — | — | ACTIVE | `101e9e176f7a` |
 | `verification/scripts/build_catalog.py` | — | — | — | — | ACTIVE | `c35c7327b5ed` |
 | `verification/scripts/build_dossier.py` | — | — | — | v1.0.1 | ACTIVE | `0606af696b63` |
@@ -2802,7 +2802,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `claims/INDEX.md` | — | — | — | — | ACTIVE | `26fe01a072e8` |
 | `negative-results/registry.md` | — | — | — | — | ACTIVE | `3a42876901b9` |
 | `predictions/prediction-ledger.md` | — | — | — | — | ACTIVE | `e4dad70406a4` |
-| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `83bfdd2f5b48` |
+| `strategy/INDEX.md` | — | — | — | — | ACTIVE | `ce52f8b27463` |
 | `theory/sectors/INDEX.md` | — | — | — | — | ACTIVE | `cff4e6dca4b9` |
 
 ## Governance policies
@@ -2834,7 +2834,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 |---|---|---|---|---|---|---|
 | `.gitignore` | — | — | — | — | ACTIVE | `b4bebb52f666` |
 | `AGENTS.md` | — | — | — | — | ACTIVE | `7f2740428029` |
-| `CHANGELOG.md` | — | — | — | — | ACTIVE | `2c538f1ddb1c` |
+| `CHANGELOG.md` | — | — | — | — | ACTIVE | `a7a73caa62b2` |
 | `CLAIMS.md` | — | — | — | — | ACTIVE | `d6547c66d810` |
 | `CLAUDE.md` | — | — | — | — | ACTIVE | `4d5d26c1949d` |
 | `GOVERNANCE.md` | — | — | — | — | ACTIVE | `ad8b22e1437d` |
@@ -2843,7 +2843,7 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `REVIEWING.md` | — | — | — | — | ACTIVE | `b5e54659ddf5` |
 | `ROADMAP.md` | — | — | — | — | ACTIVE | `790a3e73fd00` |
 | `SESSION.md` | — | — | — | — | ACTIVE | `46caafa99347` |
-| `TODO.md` | — | — | — | — | ACTIVE | `a4e8d340c192` |
+| `TODO.md` | — | — | — | — | ACTIVE | `3fc833cb289f` |
 | `requirements.txt` | — | — | — | — | ACTIVE | `a142ca8b90c2` |
 
 ## Other tracked files
@@ -2853,8 +2853,8 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `.github/workflows/pages.yml` | — | — | — | — | ACTIVE | `31c9d356a943` |
 | `.github/workflows/verify.yml` | — | — | — | — | ACTIVE | `ed57955eb81c` |
 | `archive/README.md` | — | — | — | — | ACTIVE | `30c81d1a5327` |
-| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `864d23ede168` |
-| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `7b48cf9b8250` |
+| `changelog/log.jsonl` | — | — | — | — | ACTIVE | `79028ea9e304` |
+| `explorations/log.jsonl` | — | — | — | — | ACTIVE | `d4cca98b32bb` |
 | `reviews/2026-06-06-b1-nearcap-userires-review.md` | — | — | — | — | ACTIVE | `afc6bcf76120` |
 | `reviews/2026-06-06-b5-adversarial-review.md` | — | — | — | — | ACTIVE | `c417973fd97d` |
 | `reviews/2026-06-06-ha0-docs-review.md` | — | — | — | — | ACTIVE | `1d0c6ee514f9` |
@@ -2890,13 +2890,14 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `reviews/n001-q1a-bcc-bridge-freeze-260716/README.md` | — | — | — | — | ACTIVE | `37623733b745` |
 | `reviews/n001-q1a-bcc-bridge-freeze-260716/RUNBOOK.md` | — | — | — | — | ACTIVE | `dea7a2d916c2` |
 | `reviews/n001-q1a-bcc-bridge-freeze-260716/SHA256SUMS.txt` | — | — | — | — | ACTIVE | `ecb48ed407a9` |
+| `strategy/a13-proof-front-loop-audit-route-reset-260728.md` | — | — | — | — | ACTIVE | `b2084299e88a` |
 | `strategy/dr2-external-research-assessment-260608.md` | — | — | — | — | ACTIVE | `7fc0afc0b0f6` |
 | `strategy/dr2-impact-analysis-260606.md` | — | — | — | — | ACTIVE | `3929c3ab7c17` |
 | `strategy/numerical-programme-status-and-plan-260614.md` | — | — | — | — | ACTIVE | `4cfafb391dfb` |
 | `strategy/sector-a-claim-taxonomy-and-subproof-plan-260722.md` | — | — | — | — | ACTIVE | `515c895f0a44` |
 | `theory/README.md` | — | — | — | — | ACTIVE | `7784fbab38fd` |
 | `theory/main-proof-line.md` | — | — | — | — | ACTIVE | `040b82294d5d` |
-| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `c44f5a069fae` |
+| `theory/proof-evidence-map.md` | — | — | — | — | ACTIVE | `af46789af5a5` |
 | `theory/sector-A-foundation/README.md` | — | — | — | — | ACTIVE | `afab579d7ddf` |
 | `theory/sector-B-vacuum/README.md` | — | — | — | — | ACTIVE | `032be5a305e8` |
 | `theory/sector-C-spacetime/README.md` | — | — | — | — | ACTIVE | `0b91e1109bb1` |
@@ -2909,5 +2910,5 @@ lineage; version-issue shows currency. Files without encoded dates show —.
 | `theory/sectors/D.md` | — | — | — | — | ACTIVE | `59afc4ceccc6` |
 | `theory/sectors/E.md` | — | — | — | — | ACTIVE | `c22a362480ee` |
 | `theory/sectors/F.md` | — | — | — | — | ACTIVE | `5e65f7f63d2e` |
-| `todo/todo.json` | — | — | — | — | ACTIVE | `fd75ea7e490a` |
+| `todo/todo.json` | — | — | — | — | ACTIVE | `425eb9fb1c81` |
 
